@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Visual C# 功能存取 Office Interop 物件 - C# 程式設計指南
+title: 如何：使用視覺C#功能存取 Office Interop 物件-程式C#設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 3399d1aad8a2118775f7779727d4d03ee2002547
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: f0b763ad6b65c74b8c406fe006ef4036e70a99d4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834200"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523560"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>HOW TO：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)
+# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>如何：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)
 
 Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名引數和選擇性引數、稱為 `dynamic` 的新類型，以及傳遞引數以像是實值參數的形式，參考 COM 方法中參數的能力。
 
@@ -31,7 +31,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
 
 1. 啟動 Visual Studio。
 
-2. 在 [檔案] 功能表中，指向 [新增]，然後按一下 [專案]。 [ **新增專案** ] 對話方塊隨即出現。
+2. 在 [檔案] **Deploying Office Solutions** 功能表中，指向 [新增]，然後按一下 [專案]。 [ **新增專案** ] 對話方塊隨即出現。
 
 3. 在 [已安裝的範本] 窗格中，展開 [Visual C#]，然後按一下 [Windows]。
 
@@ -43,13 +43,13 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
 
 7. 按一下 [確定]。
 
-     新的專案隨即會出現在方案總管中。
+     新的專案隨即出現在方案總管中。
 
 ## <a name="to-add-references"></a>加入參考
 
-1. 在方案總管中，於專案名稱上按一下滑鼠右鍵，然後按一下 [新增參考]。 [加入參考] 對話方塊隨即出現。
+1. 在**方案總管**中，以滑鼠右鍵按一下您的專案名稱，然後按一下 [加入參考]。 [加入參考] 對話方塊隨即出現。
 
-2. 在 [組件] 頁面的 [元件名稱] 清單中，選取 [Microsoft.Office.Interop.Word]，然後按住 CTRL 鍵並選取 [Microsoft.Office.Interop.Excel]。  如果您看不到元件，則可能需要確定它們已安裝並顯示。 請參閱[如何：安裝 Office 主要 Interop 元件 @ no__t-0。
+2. 在 [組件] 頁面的 [元件名稱] 清單中，選取 [Microsoft.Office.Interop.Word]，然後按住 CTRL 鍵並選取 [Microsoft.Office.Interop.Excel]。  如果您看不到元件，則可能需要確定它們已安裝並顯示。 請參閱[如何：安裝 Office 主要 Interop 元件](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)。
 
 3. 按一下 [確定]。
 
@@ -95,7 +95,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     如果 [/link](../../language-reference/compiler-options/link-compiler-option.md) 編譯器選項參考組件；或者，同樣地，如果 Excel [內嵌 Interop 型別] 屬性設定為 true，C# 4 和更新版本會自動將傳回的 `Object` 轉換為 `dynamic`。 這個屬性的預設值為 True。
+     C#4和更新版本會將傳回的 `Object` 轉換成如果元件是由[-link](../../language-reference/compiler-options/link-compiler-option.md)編譯器選項參考，則會自動 `dynamic`，如果 [Excel**內嵌 Interop 類型**] 屬性設定為 true，則會使用同樣的方式。 這個屬性的預設值為 True。
 
 ## <a name="to-run-the-project"></a>執行專案
 
@@ -137,7 +137,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
 
 ## <a name="to-set-the-embed-interop-types-property"></a>設定內嵌 Interop 類型屬性
 
-1. 當您在執行階段呼叫不需要主要 Interop 組件 (PIA) 的 COM 類型時，可以使用其他增強功能。 移除與 PIA 的相依性，可達成版本獨立且更容易進行部署。 如需沒有 PIA 的程式設計優點詳細資訊，請參閱[逐步解說：從 Managed 組件內嵌類型](../../../standard/assembly/embed-types-visual-studio.md)。
+1. 當您在執行階段呼叫不需要主要 Interop 組件 (PIA) 的 COM 類型時，可以使用其他增強功能。 移除與 PIA 的相依性，可達成版本獨立且更容易進行部署。 如需沒有 PIA 的程式設計優點的詳細資訊，請參閱[逐步解說：從 Managed 組件內嵌類型](../../../standard/assembly/embed-types-visual-studio.md)。
 
      此外，程式設計會更為容易，因為 COM 方法所需和所傳回的類型可以使用類型 `dynamic` 而非 `Object` 加以呈現。 除非處於執行階段，否則不會評估類型為 `dynamic` 的變數，如此即無須明確轉型。 如需詳細資訊，請參閱[使用動態類型](../types/using-type-dynamic.md)。
 
@@ -149,7 +149,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
 
 3. 如果看不到 [屬性] 視窗，請按 **F4** 鍵。
 
-4. 在屬性清單中尋找 [內嵌 Interop 類型]，並將其值變更為 **False**。 同樣地，也可以在命令提示字元處使用 [/reference](../../language-reference/compiler-options/reference-compiler-option.md) 編譯器選項，而非 [/link](../../language-reference/compiler-options/link-compiler-option.md) 進行編譯。
+4. 在屬性清單中尋找 [內嵌 Interop 類型]，並將其值變更為 **False**。 同樣地，您可以在命令提示字元中使用[-reference](../../language-reference/compiler-options/reference-compiler-option.md)編譯器選項，而不是[-link](../../language-reference/compiler-options/link-compiler-option.md)來進行編譯。
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>加入表格的其他格式
 
@@ -173,7 +173,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
 
 [!code-csharp[csProgGuideOfficeHowTo#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/walkthrough.cs#18)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
 - [dynamic](../../language-reference/keywords/dynamic.md)

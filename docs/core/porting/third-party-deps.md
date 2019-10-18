@@ -4,12 +4,12 @@ description: 了解如何分析外部相依性，以將您的專案從 .NET Fram
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6c0f55150a4a1c4d0fb8b3125565c9ab8ade3117
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
-ms.translationtype: HT
+ms.openlocfilehash: 36d1c1d2090a0fb9e6f48fe519d15897579df2d5
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904339"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521479"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>分析您的相依性以將程式碼移植到 .NET Core
 
@@ -20,8 +20,8 @@ ms.locfileid: "55904339"
 如果您在專案中參考 NuGet 套件，您需要確認其是否與 .NET Core 相容。
 有兩種方法可達成該目標：
 
-* [使用 NuGet 套件總管應用程式](#analyze-nuget-packages-using-nuget-package-explorer)
-* [使用 nuget.org 網站](#analyze-nuget-packages-using-nugetorg)
+- [使用 NuGet 套件總管應用程式](#analyze-nuget-packages-using-nuget-package-explorer)
+- [使用 nuget.org 網站](#analyze-nuget-packages-using-nugetorg)
 
 分析套件之後，如果這些套件與 .NET Core 不相容並只以 .NET Framework 為目標，您可以檢查 [.NET Framework 相容性模式](#net-framework-compatibility-mode)是否可以協助您的移植程序。
 
@@ -104,7 +104,7 @@ portable-net45-win8-wpa8-wpa81
 如果您依賴的 NuGet 套件在 .NET Core 上不執行，您可以做幾件事：
 
 1. 如果專案是開放原始碼並裝載在 GitHub 等位置，您可以直接連絡開發人員。
-2. 您可以在 [nuget.org](https://www.nuget.org/) 上直接連絡作者。搜尋套件，然後按一下套件頁面左邊的 [Contact Owners] (連絡擁有者)。
+2. 您可以直接在[nuget.org](https://www.nuget.org/)上聯絡作者。搜尋封裝，然後按一下套件頁面左側的 [**連絡人擁有**者]。
 3. 您可以搜尋在 .NET Core 上執行並與您所用套件達成相同工作的其他套件。
 4. 您可以嘗試自行撰寫封裝執行工作的程式碼。
 5. 您可以變更應用程式的功能，消除封裝的相依性，至少等到有可用的相容版本封裝。

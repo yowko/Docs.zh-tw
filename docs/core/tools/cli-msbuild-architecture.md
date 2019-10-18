@@ -2,18 +2,19 @@
 title: .NET Core 命令列工具架構
 description: 深入了解 .NET Core 工具層級，以及最新版本中已變更的內容。
 ms.date: 03/06/2017
-ms.openlocfilehash: e9226a314932eb73c6474c0fd17c77c87683e6db
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: HT
+ms.openlocfilehash: 05183a9edc26615e00d6383043fd10d8bec06f2b
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675689"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521304"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 工具中變更的高階概觀
 
 本文件說明從 *project.json* 移轉至 MSBuild 以及 *csproj* 專案系統相關聯的變更，包含 .NET Core 工具分層與 CLI 命令實作之變更的相關資訊。 2017 年 3 月 7 日發行的 .NET Core SDK 1.0 與 Visual Studio 2017 會進行這些變更 (請參閱[公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-tools-1-0/))，但一開始是隨 .NET Core SDK Preview 3 版本實作。
 
 ## <a name="moving-away-from-projectjson"></a>從 project.json 移開
+
 .NET Core 的工具中最大的變更，絕對是將專案系統[從 project.json 改為使用 csproj](https://devblogs.microsoft.com/dotnet/changes-to-project-json/)。 命令列工具的最新版本不支援 *project.json* 檔案。 這表示它無法用來建置、執行或發佈以 project.json 為基礎的應用程式與程式庫。 若要使用此版本的工具，您必須移轉您現有的專案，或開始新的專案。 
 
 做為移動的一部分，開發用來建置 project.json 專案的自訂建置引擎會以成熟且功能完整、名稱為 [MSBuild](https://github.com/Microsoft/msbuild) 的建置引擎取代。 MSBuild 是 .NET 社群中眾所周知的引擎，因為它從該平台首次發行以來一直就是關鍵技術。 當然，因為它需要建置 .NET Core 應用程式，MSBuild 已經移植到 .NET Core，且可以在執行 .NET Core 的任何平台上使用。 .NET Core 其中一個主要承諾就是跨平台開發堆疊，而我們也以確認此移動不會中斷該承諾。
@@ -22,6 +23,7 @@ ms.locfileid: "57675689"
 > 如果您不熟悉 MSBuild 且希望深入了解它，您可以透過閱讀 [MSBuild 概念](/visualstudio/msbuild/msbuild-concepts)一文開始。 
 
 ## <a name="the-tooling-layers"></a>工具分層
+
 離開現有的專案系統以及轉換建置引擎，接下來很自然的問題就是這些變更是否會變更完整 .NET Core 工具生態系統的整體「分層」呢？ 有新的項目和元件嗎？
 
 讓我們開始快速複習 Preview 2 分層，如下列圖片所示︰
@@ -34,7 +36,7 @@ ms.locfileid: "57675689"
 
 ![.NET Core SDK 1.0.0 高階架構](media/cli-msbuild-architecture/p3-arch.png)
 
-主要差異就是 CLI 不再是基本層；此角色現在會填入「共用的 SDK 元件」。 共用的 SDK 元件是負責編譯您的程式碼、發行程式碼，封裝 NuGet 套件等的一組目標和關聯工作。SDK 本身是開放原始碼，而且您可以在 GitHub 的 [SDK 存放庫](https://github.com/dotnet/sdk)上找到它。 
+主要差異就是 CLI 不再是基本層；此角色現在會填入「共用的 SDK 元件」。 這個共用的 SDK 元件是一組目標和相關聯的工作，負責編譯您的程式碼、發佈、封裝 NuGet 套件等等。SDK 本身是開放原始碼，並可在 GitHub 上的[sdk](https://github.com/dotnet/sdk)存放庫中取得。 
 
 > [!NOTE]
 > 「目標」是表示 MSBuild 可叫用之具名作業的 MSBuild 詞彙。 它通常會搭配執行目標應該要執行之某些邏輯的一或多個工作。 MSBuild 支援許多現成的目標，例如 `Copy` 或 `Execute`；它也允許使用者使用受管理程式碼撰寫自己的工作，並定義目標以執行那些工作。 如需詳細資訊，請參閱 [MSBuild 工作](/visualstudio/msbuild/msbuild-tasks)。 
@@ -46,23 +48,27 @@ ms.locfileid: "57675689"
 
 從使用方式觀點來看，它不會變更您使用 CLI 的方式。 CLI 仍然具備存在於 Preview 2 版本中的核心命令：
 
-* `new`
-* `restore`
-* `run` 
-* `build`
-* `publish`
-* `test`
-* `pack` 
+- `new`
+- `restore`
+- `run` 
+- `build`
+- `publish`
+- `test`
+- `pack` 
 
 這些命令仍然可以執行您所期望的動作 (新建專案、建置專案、發行專案、封裝專案等)。 大部分的選項都沒有變更，且仍然存在，而您可以查閱命令的說明畫面 (使用 `dotnet <command> --help`) 或此網站上的文件，以熟悉任何變更。 
 
 從執行觀點而言，CLI 命令會接受輸入參數並建構對「原始」MSBuild 的呼叫，這會設定所需的屬性，並執行所需的目標。 為進一步說明這一點，請考慮下列命令︰ 
 
-   `dotnet publish -o pub -c Release`
+   ```dotnetcli
+   dotnet publish -o pub -c Release
+   ```
     
 此命令會使用「發行」組態，將應用程式發佈至 `pub` 資料夾中。 就內部而言，此命令會轉譯成下列 MSBuild 引動過程︰ 
 
-   `dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release`
+   ```dotnetcli
+   dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release
+   ```
 
 此規則值得注意的例外狀況為 `new` 和 `run` 命令，因為它們尚未實作為 MSBuild 目標。
 

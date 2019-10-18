@@ -3,12 +3,12 @@ title: 使用 XML 註解記錄您的程式碼
 description: 了解如何使用 XML 文件註解記錄您的程式碼，並在編譯時期產生 XML 文件檔案。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: b6744921f4703f53a16b6bdadcfbf375c2fb3332
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 048546407dbf94f274dd8c9c39e83c103efd75e1
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104777"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521166"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 註解記錄您的程式碼
 
@@ -32,9 +32,9 @@ XML 文件註解具特殊性，因為編譯器可以處理它們以在編譯時�
    <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
    ```
 
-- 如果您正在使用 Visual Studio 開發應用程式，請以滑鼠右鍵按一下專案，然後選取 [屬性]  。 在屬性對話方塊中，選取 [建置]  索引標籤，然後檢查 [XML 文件檔案]  。 您也可以變更編譯器寫入檔案的位置。
+- 如果您正在使用 Visual Studio 開發應用程式，請以滑鼠右鍵按一下專案，然後選取 [屬性]。 在屬性對話方塊中，選取 [建置] 索引標籤，然後檢查 [XML 文件檔案]。 您也可以變更編譯器寫入檔案的位置。
 
-- 如果您正在從命令列編譯 .NET Framework 應用程式，請在編譯時新增 [/doc 編譯器選項](language-reference/compiler-options/doc-compiler-option.md)。  
+- 如果您要從命令列編譯 .NET Framework 應用程式，請在編譯時新增[-doc 編譯器選項](language-reference/compiler-options/doc-compiler-option.md)。  
 
 XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 例如:
 
@@ -136,7 +136,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 ## <a name="param"></a>\<param>
 
-您可以使用 `<param>` 標記來描述方法的參數。 以下是雙精度浮點數 `Add` 方法的範例：標記所描述參數指定於**必要的** `name` 屬性中。
+您可以使用 `<param>` 標記來描述方法的參數。 以下是雙 `Add` 方法的範例：標記所描述的屬性指定於**必要的** `name` 屬性中。
 
 [!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
@@ -220,7 +220,7 @@ Sandcastle 這類工具會支援 [`<event>`](https://ewsoftware.github.io/XMLCom
 - 編譯器會驗證 `<exception>`、`<include>`、`<param>`、`<see>`、`<seealso>` 和 `<typeparam>` 標記的語法。
 - 編譯器會驗證包含程式碼其他部分的檔案路徑和參考的參數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 文件註解 (C# 程式設計手冊)](programming-guide/xmldoc/index.md)
 - [建議使用的文件註解標記 (C# 程式設計手冊)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

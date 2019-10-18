@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1017801346e65940e4dc075ef72f7a00d7e6bcd9
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
-ms.translationtype: HT
+ms.openlocfilehash: e5355387d5cb6d9e6de89f5b85e64bc100b32ae1
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394132"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522674"
 ---
 ### <a name="spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger"></a>Spa： SpaServices 和 NodeServices 不再回到主控台記錄器
 
@@ -16,7 +16,7 @@ ms.locfileid: "72394132"
 
 #### <a name="old-behavior"></a>舊的行為
 
-`Microsoft.AspNetCore.SpaServices` 和 `Microsoft.AspNetCore.NodeServices`，用於在未設定記錄時自動建立主控台記錄器。 
+`Microsoft.AspNetCore.SpaServices` 和 `Microsoft.AspNetCore.NodeServices`，用於在未設定記錄時自動建立主控台記錄器。
 
 #### <a name="new-behavior"></a>新的行為
 
@@ -28,17 +28,17 @@ ms.locfileid: "72394132"
 
 #### <a name="recommended-action"></a>建議的動作
 
-如果需要舊的行為，若要設定主控台記錄，請將 `services.AddLogging(builder => builder.AddConsole())` 新增至您的 @no__t 1 方法。
+如果需要舊的行為，若要設定主控台記錄，請將 `services.AddLogging(builder => builder.AddConsole())` 新增至您的 `Setup.ConfigureServices` 方法。
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>Category
 
 ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-無
+None
 
-<!-- 
+<!--
 
 #### Affected APIs
 

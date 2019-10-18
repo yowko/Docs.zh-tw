@@ -3,24 +3,24 @@ title: 建立具有外掛程式的 .NET Core 應用程式
 description: 了解如何建立支援外掛程式的 .NET Core 應用程式。
 author: jkoritzinsky
 ms.author: jekoritz
-ms.date: 01/28/2019
-ms.openlocfilehash: 54f616a7b2b20b7682963e9f5d503878bb512c90
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
-ms.translationtype: MT
+ms.date: 10/16/2019
+ms.openlocfilehash: 92c219817ad27fbc906ee3778d3f5372d61151ac
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250166"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523202"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>建立具有外掛程式的 .NET Core 應用程式
 
-本教學課程會示範如何：
+本教學課程會示範如何建立自訂 <xref:System.Runtime.Loader.AssemblyLoadContext> 來載入外掛程式。 @No__t_0 可用來解析外掛程式的相依性。 本教學課程會正確地隔離外掛程式與主控應用程式的相依性。 您將了解如何：
 
 - 建構專案以支援外掛程式。
 - 建立自訂 <xref:System.Runtime.Loader.AssemblyLoadContext> 以載入每個外掛程式。
-- 使用 `System.Runtime.Loader.AssemblyDependencyResolver` 類型以允許外掛程式具有相依性。
+- 使用 <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName> 類型以允許外掛程式具有相依性。
 - 撰寫只要複製組建成品即可輕鬆部署的外掛程式。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 安裝[.Net Core 3.0](https://dotnet.microsoft.com/download)或更新版本。
 
@@ -185,11 +185,11 @@ static IEnumerable<ICommand> CreateCommands(Assembly assembly)
 
 ## <a name="load-plugins"></a>載入外掛程式
 
-現在應用程式可以從載入的外掛程式組件正確地載入並具現化命令，但仍然無法載入外掛程式組件。 在 *AppWithPlugin* 資料夾中，使用下列內容來建立名為 *PluginLoadContext.cs* 的檔案：
+現在，應用程式可以從載入的外掛程式元件正確載入並具現化命令，但仍然無法載入外掛程式元件。 在 *AppWithPlugin* 資料夾中，使用下列內容來建立名為 *PluginLoadContext.cs* 的檔案：
 
 [!code-csharp[loading-plugins](~/samples/core/extensions/AppWithPlugin/AppWithPlugin/PluginLoadContext.cs)]
 
-`PluginLoadContext` 類型衍生自 <xref:System.Runtime.Loader.AssemblyLoadContext>。 `AssemblyLoadContext` 類型是執行階段中的一種特殊類型，可讓開發人員將載入的組件隔離到不同的群組，以確保組件版本不會衝突。 此外，自訂 `AssemblyLoadContext` 可以選擇要從中載入組件的不同路徑，並覆寫預設行為。 `PluginLoadContext` 使用 .NET Core 3.0 中引進的 `AssemblyDependencyResolver` 類型執行個體，將組件名稱解析為路徑。 `AssemblyDependencyResolver` 物件是以 .NET 類別庫路徑所建構。 它會根據其路徑已傳遞至 `AssemblyDependencyResolver` 建構函式之類別庫的 *deps.json* 檔案，將組件和原生程式庫解析至其相對路徑。 自訂 `AssemblyLoadContext` 可讓外掛程式具有自己的相依性，而 `AssemblyDependencyResolver` 可讓您輕鬆正確地載入相依性。
+`PluginLoadContext` 類型衍生自 <xref:System.Runtime.Loader.AssemblyLoadContext>。 @No__t_0 類型是執行時間中的特殊類型，可讓開發人員將載入的元件隔離到不同的群組，以確保元件版本不會衝突。 此外，自訂 `AssemblyLoadContext` 可以選擇要從中載入組件的不同路徑，並覆寫預設行為。 `PluginLoadContext` 使用 .NET Core 3.0 中引進的 `AssemblyDependencyResolver` 類型執行個體，將組件名稱解析為路徑。 `AssemblyDependencyResolver` 物件是以 .NET 類別庫路徑所建構。 它會根據其路徑已傳遞至 `AssemblyDependencyResolver` 建構函式之類別庫的 *deps.json* 檔案，將組件和原生程式庫解析至其相對路徑。 自訂 `AssemblyLoadContext` 可讓外掛程式具有自己的相依性，而 `AssemblyDependencyResolver` 可讓您輕鬆正確地載入相依性。
 
 現在 `AppWithPlugin` 專案具有 `PluginLoadContext` 類型，請以下列主體更新 `Program.LoadPlugin` 方法：
 
@@ -213,7 +213,7 @@ static Assembly LoadPlugin(string relativePath)
 
 藉由對每個外掛程式使用不同的 `PluginLoadContext` 執行個體，外掛程式就可以有不同或甚至衝突的相依性，而不會發生問題。
 
-## <a name="create-a-simple-plugin-with-no-dependencies"></a>建立沒有相依性的簡單外掛程式
+## <a name="simple-plugin-with-no-dependencies"></a>無相關性的簡單外掛程式
 
 回到根資料夾，執行下列動作：
 
@@ -256,19 +256,19 @@ static Assembly LoadPlugin(string relativePath)
 </ItemGroup>
 ```
 
-`<Private>false</Private>` 項目非常重要。 這會指示 MSBuild 不要將 *PluginBase.dll* 複製到 HelloPlugin 的輸出目錄。 如果 *PluginBase.dll* 組件存在於輸出目錄中，`PluginLoadContext` 會在其中尋找組件，並在載入 *HelloPlugin.dll* 組件時將它載入。 此時，`HelloPlugin.HelloCommand` 類型會從 `HelloPlugin` 專案輸出目錄中的 *PluginBase.dll* 實作 `ICommand` 介面，而不是實作預設載入內容中所載入的 `ICommand` 介面。 因為執行階段將這兩種類型視為不同組件的不同類型，所以 `AppWithPlugin.Program.CreateCommands` 方法將找不到命令。 因此，需要 `<Private>false</Private>` 中繼資料才能參考含有外掛程式介面的組件。
+@No__t_0 元素很重要。 這會指示 MSBuild 不要將 *PluginBase.dll* 複製到 HelloPlugin 的輸出目錄。 如果 *PluginBase.dll* 組件存在於輸出目錄中，`PluginLoadContext` 會在其中尋找組件，並在載入 *HelloPlugin.dll* 組件時將它載入。 此時，`HelloPlugin.HelloCommand` 類型會從 `HelloPlugin` 專案輸出目錄中的 *PluginBase.dll* 實作 `ICommand` 介面，而不是實作預設載入內容中所載入的 `ICommand` 介面。 由於執行時間會將這兩個型別視為不同的元件，因此 `AppWithPlugin.Program.CreateCommands` 的方法將找不到命令。 因此，需要 `<Private>false</Private>` 中繼資料才能參考含有外掛程式介面的組件。
 
 現在 `HelloPlugin` 專案已完成，我們應該更新 `AppWithPlugin` 專案以了解何處可以找到 `HelloPlugin` 外掛程式。 在 `// Paths to plugins to load` 註解後面，新增 `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` 作為 `pluginPaths` 陣列的項目。
 
-## <a name="create-a-plugin-with-library-dependencies"></a>建立具有程式庫相依性的外掛程式
+## <a name="plugin-with-library-dependencies"></a>具有程式庫相依性的外掛程式
 
-幾乎所有外掛程式都比簡單的 "Hello World" 還要複雜，且許多外掛程式都會相依於其他程式庫。 範例中的 `JsonPlugin` 和 `OldJson` 外掛程式專案示範兩個外掛程式，其中包含相依於 `Newtonsoft.Json` 的 NuGet 套件相依性。 專案檔本身並沒有專案參考的任何特殊資訊，且 (在新增 `pluginPaths` 陣列的外掛程式路徑之後) 外掛程式會完美執行，即使在執行相同的 AppWithPlugin 應用程式同時執行也一樣。 不過，這些專案不會將參考的組件複製到其輸出目錄，因此組件必須存在於使用者的電腦上，外掛程式才能正常運作。 此問題有兩個解決方法。 第一個選項是使用 `dotnet publish` 命令來發佈類別庫。 或者，如果您想要能夠使用外掛程式的 `dotnet build` 輸出，您可以在外掛程式專案檔的 `<PropertyGroup>` 標籤之間新增 `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` 屬性。 如需範例，請參閱 `XcopyablePlugin` 外掛程式專案。
+幾乎所有外掛程式都比簡單的 "Hello World" 還要複雜，且許多外掛程式都會相依於其他程式庫。 範例中的 `JsonPlugin` 和 `OldJson` 外掛程式專案示範兩個外掛程式，其中包含相依於 `Newtonsoft.Json` 的 NuGet 套件相依性。 專案檔本身不會有專案參考的任何特殊資訊，而且（將外掛程式路徑加入至 `pluginPaths` 陣列之後）外掛程式會順利執行，即使在相同的 AppWithPlugin 應用程式執行中執行也是如此。 不過，這些專案不會將參考的元件複製到其輸出目錄，因此元件必須存在於使用者的電腦上，外掛程式才能正常執行。 此問題有兩個解決方法。 第一個選項是使用 `dotnet publish` 命令來發佈類別庫。 或者，如果您想要能夠使用外掛程式的 `dotnet build` 輸出，您可以在外掛程式專案檔的 `<PropertyGroup>` 標籤之間新增 `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` 屬性。 如需範例，請參閱 `XcopyablePlugin` 外掛程式專案。
 
-## <a name="other-plugin-examples-in-the-sample"></a>範例中的其他外掛程式示範
+## <a name="other-examples-in-the-sample"></a>範例中的其他範例
 
 在 [the dotnet/samples 存放庫](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)中可以找到此教學課程的完整原始程式碼。 完整的範例包含 `AssemblyDependencyResolver` 行為的一些其他範例。 例如，`AssemblyDependencyResolver` 物件也可以解析 NuGet 套件隨附的原生程式庫，以及當地語系化附屬組件。 範例存放庫中的 `UVPlugin` 和 `FrenchPlugin` 示範了這些案例。
 
-## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>如何參考 NuGet 套件中所定義的外掛程式介面組件
+## <a name="reference-a-plugin-from-a-nuget-package"></a>從 NuGet 套件參考外掛程式
 
 假設應用程式 A 在 NuGet 套件中定義了名為 `A.PluginBase` 的外掛程式介面。 如何在您的外掛程式專案中正確地參考套件？ 針對專案參考，在專案檔中的 `ProjectReference` 項目上使用 `<Private>false</Private>` 中繼資料可防止將 DLL 複製到輸出。
 

@@ -1,19 +1,19 @@
 ---
-title: <returns> (Visual Basic)
+title: <returns> （Visual Basic）
 ms.date: 07/20/2015
 helpviewer_keywords:
 - returns XML tag
 - <returns> XML tag
 ms.assetid: a03a6469-d907-425d-882f-083187950e7e
-ms.openlocfilehash: 5a0ff0da7cf26a1cea75a5b2e4678593d9b72f54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b220c2a9aa544413c3692485f6c1eb2b64e54389
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940786"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524691"
 ---
-# <a name="returns-visual-basic"></a>\<傳回 > (Visual Basic)
-指定屬性或函式的傳回值。  
+# <a name="returns-visual-basic"></a>\<returns > （Visual Basic）
+指定屬性或函數的傳回值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,15 +26,15 @@ ms.locfileid: "61940786"
  傳回值的描述。  
   
 ## <a name="remarks"></a>備註  
- 使用`<returns>`標記來描述傳回值的方法宣告的註解中。  
+ 在方法宣告的批註中使用 `<returns>` 標記，以描述傳回值。  
   
- 編譯搭配 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 可處理檔案的文件註解。  
+ 使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 編譯可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
- 這個範例會使用`<returns>`標記來解釋什麼`DoesRecordExist`函式會傳回。  
+ 這個範例會使用 `<returns>` 標記來說明 `DoesRecordExist` 函數傳回的內容。  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)

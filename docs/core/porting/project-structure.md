@@ -4,33 +4,33 @@ description: 協助想要同時針對 .NET Framework 及 .NET Core 編譯解決�
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 1e120e1aee60e88ea33a8290f3bf36eb93bfc91c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 701aa64be8d6c712ef635411ad6c226a3c3ab8ed
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698940"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522978"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>組織專案以同時支援 .NET Framework 及 .NET Core
 
 了解如何建立一個並行編譯 .NET Framework 和 .NET Core 的解決方案。 請參閱數個選項，以組織專案來協助開發人員達成此目標。 以下是當您決定如何使用 .NET Core 設定專案配置時，要考量的一些典型案例。 此清單不一定涵蓋您想要的所有項目，根據專案需求決定優先順序。
 
-* [**將現有的專案和 .NET Core 專案合併成單一專案**](#replace-existing-projects-with-a-multi-targeted-net-core-project)
+- [**將現有的專案和 .NET Core 專案合併成單一專案**](#replace-existing-projects-with-a-multi-targeted-net-core-project)
 
   *適用於︰*
-  * 藉由編譯單一專案而非編譯多個專案，每個都會以不同的 .NET Framework 版本或平台為目標，以簡化建置流程。
-  * 因為您必須管理單一專案檔，所以簡化多目標專案的來源檔案管理。 新增/移除來源檔案時，替代方案需要您手動同步處理這些專案與其他專案。
-  * 輕鬆產生 NuGet 封裝以供耗用。
-  * 讓您使用編譯器指示詞，在程式庫中針對特定的 .NET Framework 版本撰寫程式碼。
+  - 藉由編譯單一專案而非編譯多個專案，每個都會以不同的 .NET Framework 版本或平台為目標，以簡化建置流程。
+  - 因為您必須管理單一專案檔，所以簡化多目標專案的來源檔案管理。 新增/移除來源檔案時，替代方案需要您手動同步處理這些專案與其他專案。
+  - 輕鬆產生 NuGet 封裝以供耗用。
+  - 讓您使用編譯器指示詞，在程式庫中針對特定的 .NET Framework 版本撰寫程式碼。
 
   *不支援的情節：*
-  * 需要開發人員使用 Visual Studio 2017 開啟現有的專案。 若要支援舊版的 Visual Studio，[將專案檔放在不同的資料夾](#support-vs)是較好的選擇。
+  - 需要開發人員使用 Visual Studio 2017 開啟現有的專案。 若要支援舊版的 Visual Studio，[將專案檔放在不同的資料夾](#support-vs)是較好的選擇。
 
-* <a name="support-vs"></a>[**將現有的專案和新的 .NET Core 專案分開**](#keep-existing-projects-and-create-a-net-core-project)
+- <a name="support-vs"></a>[**將現有的專案和新的 .NET Core 專案分開**](#keep-existing-projects-and-create-a-net-core-project)
 
   *適用於︰*
-  * 繼續支援現有專案的開發，但不必升級可能沒有 Visual Studio 2017 的開發人員/參與者。
-  * 減少現有專案中製造新Bug 的可能性，因為這些專案不需要任何程式碼變換。
+  - 繼續支援現有專案的開發，但不必升級可能沒有 Visual Studio 2017 的開發人員/參與者。
+  - 減少現有專案中製造新Bug 的可能性，因為這些專案不需要任何程式碼變換。
 
 ## <a name="example"></a>範例
 
@@ -52,7 +52,7 @@ ms.locfileid: "71698940"
 
 要注意的變更如下︰
 
-* 以新的 [.NET Core *\*.csproj*](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj) 取代 *packages.config* 和 *\*.csproj*。 NuGet 套件是使用 `<PackageReference> ItemGroup` 所指定。
+- 以新的 [.NET Core *\*.csproj*](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj) 取代 *packages.config* 和 *\*.csproj*。 NuGet 套件是使用 `<PackageReference> ItemGroup` 所指定。
 
 ## <a name="keep-existing-projects-and-create-a-net-core-project"></a>保留現有的專案並建立 .NET Core 專案
 
@@ -64,9 +64,9 @@ ms.locfileid: "71698940"
 
 要注意的變更如下︰
 
-* .NET Core 和現有的專案保存在不同的資料夾中。
-  * 將專案放在不同的資料夾中，可避免強迫使用 Visual Studio 2017。 您可以建立不同的解決方案只開啟舊的專案。
+- .NET Core 和現有的專案保存在不同的資料夾中。
+  - 將專案保留在不同的資料夾中，可避免強制您擁有 Visual Studio 2017 或更新版本。 您可以建立不同的解決方案只開啟舊的專案。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Core 移植檔](index.md)

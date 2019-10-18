@@ -4,12 +4,12 @@ description: 了解獨立式部署的 dotnet publish 變更。
 author: KathleenDollard
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9af1454ede03b277f9b1a10e1d99a997e38809ea
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
-ms.translationtype: HT
+ms.openlocfilehash: 6a0cdfb34973822c2f40cdb37d4038d3b7ad8e2a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656293"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522097"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>獨立式部署執行階段向前復原
 
@@ -28,8 +28,8 @@ ms.locfileid: "53656293"
 
 執行 `restore` 作為 `publish` 作業的一部分有時候可能不適用於您的情況。 若要在建立獨立式應用程式時避免在 `publish` 期間進行 `restore`，請執行下列動作：
 
-* 將 `RuntimeIdentifiers` 屬性設定為要發佈之所有 [RID](../rid-catalog.md) 的分號分隔清單。
-* 將 `TargetLatestRuntimePatch` 屬性設定為 `true`。
+- 將 `RuntimeIdentifiers` 屬性設定為要發佈之所有 [RID](../rid-catalog.md) 的分號分隔清單。
+- 將 `TargetLatestRuntimePatch` 屬性設定為 `true`。
 
 ## <a name="no-restore-argument-with-dotnet-publish-options"></a>No-restore 引數搭配 dotnet publish 選項
 

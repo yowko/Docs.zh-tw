@@ -4,19 +4,19 @@ description: 支援的 Linux 版本和 .NET Core 的相依性，以在 Linux 電
 author: leecow
 ms.author: leecow
 ms.date: 10/11/2019
-ms.openlocfilehash: bb9049059de9d8208fc92234b28acdfb3d7f0cb3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
-ms.translationtype: HT
+ms.openlocfilehash: 0e798e86fcf88a1b7a67f50c2301e10ad725fad8
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318336"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521483"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的必要條件
 
 本文會說明在 Linux 開發 .NET Core 應用程式所需的相依性。 支援的 Linux 發行版本/版本和跟隨的相依性，適用於在 Linux 開發 .NET Core 應用程式的兩種方式：
 
-* [使用命令列搭配您偏好的編輯器](tutorials/using-with-xplat-cli.md)
-* [Visual Studio Code](https://code.visualstudio.com/)
+- [使用命令列搭配您偏好的編輯器](tutorials/using-with-xplat-cli.md)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 > [!NOTE]
 > 實際執行伺服器/生產環境不需要 .NET Core SDK 套件。 僅需要.NET Core 執行階段套件，即可將應用程式部署到生產環境。 .NET Core 執行階段將應用程式作為獨立部署的一部分進行部署，不過，針對架構相依的部署應用程式必須單獨加以部署。 如需架構相依部署類型和獨立部署類型的詳細資訊，請參閱 [.NET Core 應用程式部署](./deploying/index.md)。 另請參閱[獨立式 Linux 應用程式](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)以了解特定指導方針。
@@ -112,21 +112,21 @@ ms.locfileid: "72318336"
 
 Ubuntu 發行版本需要安裝下列程式庫：
 
-* liblttng-ust0
-* libcurl3 (適用於 14.x 及 16.x)
-* libcurl4 (適用於 18.x)
-* libssl1.0.0
-* libkrb5-3
-* zlib1g
-* libicu52 (適用於 14.x)
-* libicu55 (適用於 16.x)
-* libicu57 (適用於 17.x)
-* libicu60 (適用於 18.x)
+- liblttng-ust0
+- libcurl3 (適用於 14.x 及 16.x)
+- libcurl4 (適用於 18.x)
+- libssl1.0.0
+- libkrb5-3
+- zlib1g
+- libicu52 (適用於 14.x)
+- libicu55 (適用於 16.x)
+- libicu57 (適用於 17.x)
+- libicu60 (適用於 18.x)
 
 針對 .NET Core 2.1 之前的版本，還需要下列的相依性：
 
-* libunwind8
-* libuuid1
+- libunwind8
+- libuuid1
 
 針對使用*system.web*元件的 .net Core 應用程式，您也需要下列相依性：
 
@@ -139,19 +139,19 @@ Ubuntu 發行版本需要安裝下列程式庫：
 
 CentOS 發行版本需要安裝下列程式庫：
 
-* lttng-ust
-* libcurl
-* openssl-libs
-* krb5-libs
-* libicu
-* zlib
+- lttng-ust
+- libcurl
+- openssl-libs
+- krb5-libs
+- libicu
+- zlib
 
 Fedora 使用者：如果您的 openssl 版本 >= 1.1，則必須安裝 compat-openssl10。
 
 針對 .NET Core 2.1 之前的版本，還需要下列的相依性：
 
-* libunwind
-* libuuid
+- libunwind
+- libuuid
 
 如需有關相依性的詳細資訊，請參閱[獨立式 Linux 應用程式](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) \(英文\)。
 
@@ -168,8 +168,8 @@ Fedora 使用者：如果您的 openssl 版本 >= 1.1，則必須安裝 compat-o
 
 Linux 上有兩個安裝程式套件選擇：
 
-* 使用摘要型套件管理員，例如 Ubuntu 的 apt get 或 CentOS/RHEL 的 yum。
-* 使用套件本身，DEB 或 RPM。
+- 使用摘要型套件管理員，例如 Ubuntu 的 apt get 或 CentOS/RHEL 的 yum。
+- 使用套件本身，DEB 或 RPM。
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>使用 .NET Core 安裝程式指令碼以指令碼進行安裝
 
@@ -187,8 +187,8 @@ Linux 上有兩個安裝程式套件選擇：
 
 如果您在支援的 Linux 發行版本/版本上安裝 .NET Core 的相關問題，請參閱已安裝之發行版本/版本的下列主題：
 
-* [.NET Core 3.0 的已知問題](https://github.com/dotnet/core/tree/master/release-notes/3.0)
-* [.NET Core 2.2 的已知問題](https://github.com/dotnet/core/tree/master/release-notes/2.2)
-* [.NET Core 2.1 的已知問題](https://github.com/dotnet/core/tree/master/release-notes/2.1)
-* [.NET Core 1.1 的已知問題](https://github.com/dotnet/core/blob/master/release-notes/1.1)
-* [.NET Core 1.0 的已知問題](https://github.com/dotnet/core/blob/master/release-notes/1.0)
+- [.NET Core 3.0 的已知問題](https://github.com/dotnet/core/tree/master/release-notes/3.0)
+- [.NET Core 2.2 的已知問題](https://github.com/dotnet/core/tree/master/release-notes/2.2)
+- [.NET Core 2.1 的已知問題](https://github.com/dotnet/core/tree/master/release-notes/2.1)
+- [.NET Core 1.1 的已知問題](https://github.com/dotnet/core/blob/master/release-notes/1.1)
+- [.NET Core 1.0 的已知問題](https://github.com/dotnet/core/blob/master/release-notes/1.0)

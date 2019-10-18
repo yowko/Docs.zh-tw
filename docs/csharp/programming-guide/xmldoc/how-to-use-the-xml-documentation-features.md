@@ -1,19 +1,19 @@
 ---
-title: HOW TO：使用 XML 文件功能 - C# 程式設計指南
+title: 如何：使用 XML 檔功能-程式C#設計指南
 ms.custom: seodec18
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 06b0c3b7877337d8a5703403af98dbacdf3ea93c
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3e59783a7f306d3d2a510fe3337a4c6490dcb3e8
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834168"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523459"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a>HOW TO：使用 XML 文件功能
+# <a name="how-to-use-the-xml-documentation-features"></a>如何：使用 XML 文件功能
 
 下列範例提供已記載之類型的基本概觀。
 
@@ -132,10 +132,10 @@ XML 文件是以 /// 開頭。 當您建立新的專案時，精靈會為您在�
     > [!NOTE]
     > XML 檔案不會提供類型和成員的完整資訊 (例如，它不會包含任何類型資訊)。 若要取得類型或成員的完整資訊，文件檔案在使用時必須能夠反映實際類型或成員。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
-- [/doc (C# 編譯器選項)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [-doc (C# 編譯器選項)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [XML 文件註解](./index.md)
 - [DocFX 檔處理器](https://dotnet.github.io/docfx/)
 - [Sandcastle 這類檔處理器](https://github.com/EWSoftware/SHFB)

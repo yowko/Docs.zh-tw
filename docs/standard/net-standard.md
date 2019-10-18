@@ -1,5 +1,5 @@
 ---
-title: .NET Standard
+title: .NET 標準
 description: 了解 .NET Standard、其版本及支援的 .NET 實作。
 author: mairaw
 ms.author: mairaw
@@ -7,14 +7,14 @@ ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 026224ca2941e7694fc1b80939e6d283d75db32e
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
-ms.translationtype: MT
+ms.openlocfilehash: bb07df382974bdbb185ce7d52117729eaa638869
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214447"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523871"
 ---
-# <a name="net-standard"></a>.NET Standard
+# <a name="net-standard"></a>.NET 標準
 
 [.NET Standard](https://github.com/dotnet/standard) 是計劃在所有 .NET 實作提供的 .NET API 型式規格。 .NET Standard 背後的動機是在 .NET 生態系統中建立更高的一致性。 [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) 會繼續建立 .NET 實作行為的一致性，但對 .NET 程式庫實作之 .NET Base 類別庫 (BCL) 沒有類似規格。
 
@@ -58,7 +58,7 @@ ms.locfileid: "71214447"
 有兩個主要的版本控制規則：
 
 - 累加：.NET Standard 版本就邏輯而言是同心圓：較新的版本會包含來自較舊版本的所有 API。 版本之間並沒有任何重大變更。
-- 固定：.NET Standard 在交付後，版本便已凍結。 新的 API 將先在特定的 .NET 實作 (例如 .NET Core) 中提供。 如果 .NET Standard 審查委員會認為應該為所有 .NET 實作，提供新的 API，即會在新的 .NET Standard 版本中加入這些 API。
+- 固定：.NET Standard 在出貨後，版本即凍結。 新的 API 將先在特定的 .NET 實作 (例如 .NET Core) 中提供。 如果 .NET Standard 審查委員會認為應該為所有 .NET 實作，提供新的 API，即會在新的 .NET Standard 版本中加入這些 API。
 
 ## <a name="specification"></a>規格
 
@@ -147,7 +147,7 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standa
 
 您會看到與 .NET Standard 相容的 PCL 設定檔集合：
 
-| PCL 設定檔 | .NET Standard | PCL 平台
+| PCL 設定檔 | .NET 標準 | PCL 平台
 |:-----------:|:-------------:|------------------------------------------------------------------------------
 | Profile7    | 1.1           | .NET Framework 4.5、Windows 8
 | Profile31   | 1.0           | Windows 8.1、Windows Phone Silverlight 8.1
@@ -161,6 +161,7 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standa
 | Profile157  | 1.0           | Windows 8.1、Windows Phone 8.1、Windows Phone Silverlight 8.1
 | Profile259  | 1.0           | .NET Framework 4.5、Windows 8、Windows Phone 8.1、Windows Phone Silverlight 8
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Standard 版本](https://github.com/dotnet/standard/blob/master/docs/versions.md)
+- [建立 .NET Standard 程式庫](../core/tutorials/library-with-visual-studio.md)

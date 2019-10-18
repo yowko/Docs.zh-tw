@@ -11,12 +11,12 @@ helpviewer_keywords:
 - c C# XML tag
 - <c> C# XML tag
 ms.assetid: aad5b16e-a29e-445e-bd0d-eea0b138d7b2
-ms.openlocfilehash: c881b9ec577fb04381f9e10c7df8f9d0da44cd66
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 9454ef8cc4b72d1d6bdcac26faf76eb17080328c
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588179"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523541"
 ---
 # <a name="c-c-programming-guide"></a>\<c> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  
@@ -32,12 +32,12 @@ ms.locfileid: "69588179"
 ## <a name="remarks"></a>備註  
  \<c> 標記可讓您在一段描述中指出應該標記為程式碼的文字。 請使用 [\<code>](./code.md) 將多行指定為程式碼。  
   
- 編譯搭配 [/doc](../../language-reference/compiler-options/doc-compiler-option.md) 可處理檔案的文件註解。  
+ 使用 [-doc](../../language-reference/compiler-options/doc-compiler-option.md) 編譯可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideDocComments#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#2)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [建議使用的文件註解標籤](./recommended-tags-for-documentation-comments.md)

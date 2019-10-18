@@ -1,18 +1,18 @@
 ---
-title: 作法：建立已簽署的 friend 元件
+title: 如何：建立已簽署的 friend 元件
 ms.date: 08/19/2019
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 19c301c6b96e1070447401af9105fba2e0f0837f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3bf71adc694f3c6e072990717198b4f2003cd503
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973359"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523880"
 ---
-# <a name="how-to-create-signed-friend-assemblies"></a>作法：建立已簽署的 friend 元件
+# <a name="how-to-create-signed-friend-assemblies"></a>如何：建立已簽署的 friend 元件
 此範例示範如何搭配具有強式名稱的組件使用 friend 組件。 這兩個組件都必須具有強式名稱。 雖然此範例中的兩個組件使用相同的金鑰，但您可以針對這兩個組件使用不同的金鑰。  
   
 ## <a name="create-a-signed-assembly-and-a-friend-assembly"></a>建立已簽署的元件和 friend 元件  
@@ -33,7 +33,7 @@ ms.locfileid: "70973359"
   
          `sn -tp FriendAssemblies.publickey`  
   
-3. 建立名C#為*friend_signed_A*的或 Visual Basic 檔案，其中包含下列程式碼。 程式碼會使用<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>屬性，將*friend_signed_B*宣告為 friend 元件。  
+3. 建立名C#為*friend_signed_A*的或 Visual Basic 檔案，其中包含下列程式碼。 程式碼會使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性，將*friend_signed_B*宣告為 friend 元件。  
    
    強式名稱工具會在每次執行時產生新的公開金鑰。 因此，您必須將下列程式碼中的公開金鑰取代為剛產生的公開金鑰，如下列範例所示。  
    
@@ -79,7 +79,7 @@ ms.locfileid: "70973359"
    Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
    ```  
    
-5. 建立名C#為*friend_signed_B*的或 Visual Basic 檔案，其中包含下列程式碼。 由於*friend_signed_A*會將*friend_signed_B*指定為 friend 元件，因此*friend_signed_B*中的程式`internal`代碼C#可以從`Friend` *friend_signed_A*存取（）或（Visual Basic）類型和成員。 該檔案包含下列程式碼。  
+5. 建立名C#為*friend_signed_B*的或 Visual Basic 檔案，其中包含下列程式碼。 由於*friend_signed_A*會將*friend_signed_B*指定為 Friend 元件，因此*friend_signed_B*中的程式碼可以C#存取來自*friend_signed_A*的 `internal` （）或 `Friend` （Visual Basic）類型和成員。 該檔案包含下列程式碼。  
    
    ```csharp  
    // friend_signed_B.cs  
@@ -117,22 +117,22 @@ ms.locfileid: "70973359"
    vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
    ```  
    
-   編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您必須使用`/out`編譯器選項，明確指定輸出元件（ *.exe*或 *.dll*）的名稱。 如需詳細資訊，請參閱[/out （C#編譯器選項）](../../csharp/language-reference/compiler-options/out-compiler-option.md)或[-out （Visual Basic）](../../visual-basic/reference/command-line-compiler/out.md)。  
+   編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您必須使用 `/out` 編譯器選項，明確指定輸出元件（ *.exe*或 *.dll*）的名稱。 如需詳細資訊，請參閱[/out （C#編譯器選項）](../../csharp/language-reference/compiler-options/out-compiler-option.md)或[-out （Visual Basic）](../../visual-basic/reference/command-line-compiler/out.md)。  
    
 7. 執行*friend_signed_B* 。  
    
    程式會輸出字串**Class1。 Test**。  
   
 ## <a name="net-security"></a>.NET 安全性  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。 主要的差異<xref:System.Security.Permissions.StrongNameIdentityPermission>在於，可以要求安全性許可權來執行特定的程式碼區段`Friend` ， <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>而`internal`屬性則控制（C#）或（Visual Basic）類型和成員的可見度。  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。 主要差異在於 <xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全性許可權來執行特定的程式碼區段，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性則控制 `internal` （C#）或 `Friend` （Visual Basic）類型和成員的可見度。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET 中的組件](index.md)
 - [Friend 元件](friend.md)
 - [如何：建立未簽署的 friend 元件](create-unsigned-friend.md)
-- [/keyfile （C#）](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [-keyfile （C#）](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
 - [-keyfile （Visual Basic）](../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Sn.exe （強式名稱工具）](../../framework/tools/sn-exe-strong-name-tool.md)
 - [建立和使用強式名稱的元件](create-use-strong-named.md)

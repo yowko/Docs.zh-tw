@@ -4,12 +4,12 @@ description: 新增 .NET Core 和 ASP.NET Core 專案功能的 Microsoft WCF Web
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 11a18161db0fde522442e2412c4522811c5dd40a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5c5759dcc0f428c763eddb84f3d3652fbc548cb2
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926465"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522229"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>使用 WCF Web Service Reference Provider 工具
 
@@ -18,18 +18,18 @@ ms.locfileid: "70926465"
 > [!IMPORTANT]
 > 您只應該參考來自信任來源的服務。 新增不信任來源的參考可能會危及安全性。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-* [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 或更新版本
+- [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 或更新版本
 
 ## <a name="how-to-use-the-extension"></a>如何使用延伸模組
 
 > [!NOTE]
 > **WCF Web Service Reference** 選項適用於使用下列專案範本建立的專案：
 >
-> * **Visual C#**  >  **.NET Core**
-> * **Visual C#**  >  **.NET Standard**
-> * **Visual C#**  > **Web** > **ASP.NET Core Web 應用程式**
+> - **Visual C#**  >  **.NET Core**
+> - **Visual C#**  >  **.NET Standard**
+> - **Visual C#**  > **Web** > **ASP.NET Core Web 應用程式**
 
 使用 **ASP.NET Core Web 應用程式** 專案範本作為範例，本文會引導您完成將 WCF 服務參考新增至專案：
 
@@ -68,9 +68,9 @@ ms.locfileid: "70926465"
 
 顯示進度時，此工具會：
 
-* 從 WCF 服務下載中繼資料。
-* 在名為 *reference.cs* 的檔案中產生服務參考程式碼，並將它新增至 [已連線的服務] 節點下方的專案。
-* 使用在目標平台上編譯和執行所需的 NuGet 套件參考來更新專案檔 (.csproj)。
+- 從 WCF 服務下載中繼資料。
+- 在名為 *reference.cs* 的檔案中產生服務參考程式碼，並將它新增至 [已連線的服務] 節點下方的專案。
+- 使用在目標平台上編譯和執行所需的 NuGet 套件參考來更新專案檔 (.csproj)。
 
 ![Visual Studio 進度視窗](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
 
@@ -84,4 +84,4 @@ ms.locfileid: "70926465"
 
 ### <a name="release-notes"></a>版本資訊
 
-* 如需已更新的版本資訊，請參閱[版本資訊](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md) (包含已知問題)。
+- 如需已更新的版本資訊，請參閱[版本資訊](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md) (包含已知問題)。

@@ -4,12 +4,12 @@ description: 尋找資源以了解如何在 Windows、Linux 和 macOS 上建置 
 author: thraka
 ms.author: adegeo
 ms.date: 09/19/2019
-ms.openlocfilehash: 7dc134696e7dacf531fa6c7f4d84b63eb785ef25
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 9dbc3ebc8d43fe2570a90f4e10fd155a5b114351
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151512"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521634"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 使用者入門
 
@@ -21,7 +21,7 @@ ms.locfileid: "71151512"
 
 首先，在您的電腦上下載並安裝 [.NET Core SDK](https://dotnet.microsoft.com/download)。
 
-接下來，開啟終端機，例如 **PowerShell**、**命令提示字元**或 **bash**。 鍵入下列 `dotnet` 命令以建立並執行 C# 應用程式。
+接下來，開啟終端機，例如 **PowerShell**、**命令提示字元**或 **bash**。 輸入下列 `dotnet` 命令來建立和執行C#應用程式：
 
 ```dotnetcli
 dotnet new console --output sample1
@@ -44,45 +44,34 @@ Hello World!
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-* [在 Visual Studio 2017 中使用 .NET Core 建置 C# "Hello World" 應用程式。](./tutorials/with-visual-studio.md)
-
-* [在 Visual Studio 2017 中使用 .NET Core 建置 C# 類別庫。](./tutorials/library-with-visual-studio.md)
-
-* [在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic "Hello World" 應用程式。](./tutorials/vb-with-visual-studio.md)
-
-* [在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫。](./tutorials/vb-library-with-visual-studio.md)  
-
-* 觀看影片以了解[如何安裝及使用 Visual Studio Code 和 .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/)。
-
-* 觀看影片以了解[如何安裝及使用 Visual Studio 2017 和 .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/)。
-
-* [使用命令列開始使用 .NET Core。](tutorials/using-with-xplat-cli.md)
+- [在 Visual Studio 2017 中使用 .NET Core 建置 C# "Hello World" 應用程式。](./tutorials/with-visual-studio.md)
+- [在 Visual Studio 2017 中使用 .NET Core 建置 C# 類別庫。](./tutorials/library-with-visual-studio.md)
+- [在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic "Hello World" 應用程式。](./tutorials/vb-with-visual-studio.md)
+- [在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫。](./tutorials/vb-library-with-visual-studio.md)  
+- 觀看影片以了解[如何安裝及使用 Visual Studio Code 和 .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/)。
+- 觀看影片以了解[如何安裝及使用 Visual Studio 2017 和 .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/)。
+- [使用命令列開始使用 .NET Core。](tutorials/using-with-xplat-cli.md)
 
 如需支援的 Windows 版本清單，請參閱 [Windows 開發的必要條件](windows-prerequisites.md)一文。
 
 # <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
-遵循這些逐步教學課程就可以開始開發 .NET Core 應用程式。
+依照下列逐步教學課程，您可以開始開發 .NET Core 應用程式：
 
-* [使用命令列開始使用 .NET Core。](tutorials/using-with-xplat-cli.md)
-
-* 觀看影片以了解[使用 C# 和 .NET Core 在 Ubuntu 上開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)。
+- [使用命令列開始使用 .NET Core。](tutorials/using-with-xplat-cli.md)
+- 觀看影片以了解[使用 C# 和 .NET Core 在 Ubuntu 上開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)。
 
 如需支援的 Linux 發行和版本清單，請參閱 [Linux 開發的必要條件](linux-prerequisites.md)一文。
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-遵循這些逐步教學課程就可以開始開發 .NET Core 應用程式。
+依照下列逐步教學課程，您可以開始開發 .NET Core 應用程式：
 
-* 觀看影片以了解[使用 C# 和 .NET Core 在 macOS 上開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)。
-
-* [使用 Visual Studio Code 在 macOS 上開始使用 .NET Core。](tutorials/using-on-macos.md)
-
-* [使用命令列開始使用 .NET Core。](tutorials/using-with-xplat-cli.md)
-
-* [使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core。](tutorials/using-on-mac-vs.md)
-
-* [使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 方案。](tutorials/using-on-mac-vs-full-solution.md)
+- 觀看影片以了解[使用 C# 和 .NET Core 在 macOS 上開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)。
+- [使用 Visual Studio Code 在 macOS 上開始使用 .NET Core。](tutorials/using-on-macos.md)
+- [使用命令列開始使用 .NET Core。](tutorials/using-with-xplat-cli.md)
+- [使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core。](tutorials/using-on-mac-vs.md)
+- [使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 方案。](tutorials/using-on-mac-vs-full-solution.md)
 
 如需支援的 OS X/macOS 版本清單，請參閱 [macOS 開發的必要條件](macos-prerequisites.md)一文。
 

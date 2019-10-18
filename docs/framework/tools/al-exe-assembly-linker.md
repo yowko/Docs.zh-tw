@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7fdb364769be6d8c7c53ca05a7d7cb967678123a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3e46934d9156bf3adebc010fb99ade10a1a35e09
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044896"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523813"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (組件連結器)
 
@@ -23,7 +23,7 @@ ms.locfileid: "71044896"
 > [!NOTE]
 > 從 Visual Studio 2008 開始，C# 和 Visual Basic 編譯器都會自動將 Win32 資訊清單嵌入組件中。 如需詳細資訊，請參閱 [/win32manifest (C# 編譯器選項)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。
 
-此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
+此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
 
 在命令提示字元下輸入下列命令：
 
@@ -37,11 +37,11 @@ al sources options
 
 您可以指定一個或多個下列 `sources`。
 
-| Source | 描述 |
+| 原始程式檔 | 描述 |
 | ------ | ----------- |
 |`file`[,`target`]|將 `file` (模組) 的內容複製到 `target` 所指定的檔案名稱中。 複製完成後，*Al.exe* 會將 `target` 編譯成組件。|
-|**/embed[resource]:** `file`[,`name`[,`private`]]|將 `file` 所指定的資源嵌入包含組件資訊清單的映像中，*Al.exe* 會將 `file` 的內容複製到可攜式執行檔 (PE) 映像中。<br /><br /> `name` 參數是資源的內部識別項。 根據預設，組件中的資源為公用 (其他組件也可看見)。 指定 `private` 會使其他組件無法看見資源。<br /><br /> 例如，如果 `file` 是由[資源檔產生器 (*Resgen.exe*)](resgen-exe-resource-file-generator.md) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 中的成員進行存取。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager>。 至於其他所有資源，請使用 `GetManifestResource` 中的 <xref:System.Reflection.Assembly>* 方法在執行階段存取資源。<br /><br /> 如果只將資源檔傳遞至 *Al.exe*，則輸出檔案會是附屬資源組件。|
-|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|將資源檔連結至組件。 `file` 所指定的資源會變成組件的一部分，但是不會複製檔案。 `file` 參數可以是任何檔案格式。 例如，您可以指定原生 DLL 做為 `file` 參數。 這樣就會產生組件的原生 DLL 部分，以便安裝到全域組件快取中，並從組件的 Managed 程式碼存取。 您也可以利用 **/linkresource** 編譯器選項，進行上述作業。 如需詳細資訊，請參閱 [/linkresource (C# 編譯器選項)](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)。<br /><br /> `name` 參數是資源的內部識別項。 `target` 參數會指定 *Al.exe* 要在其中複製 `file` 的路徑和檔案名稱 *。* 複製完成後，*Al.exe* 會將 `target` 編譯成組件。 根據預設，組件中的資源為公用 (其他組件也可看見)。 指定 `private` 會使其他組件無法看見資源。<br /><br /> 例如，如果 `file` 是由資源檔產生器 (*Resgen.exe*) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 命名空間中的成員進行存取。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager>。 至於其他所有資源，請使用 `GetManifestResource` 類別中的 <xref:System.Reflection.Assembly>* 方法在執行階段存取資源。<br /><br /> 如果只將資源檔傳遞至 *Al.exe*，則輸出檔案會是附屬資源組件。|
+|**/embed[resource]:** `file`[,`name`[,`private`]]|將 `file` 所指定的資源嵌入包含組件資訊清單的映像中，*Al.exe* 會將 `file` 的內容複製到可攜式執行檔 (PE) 映像中。<br /><br /> `name` 參數是資源的內部識別項。 根據預設，組件中的資源為公用 (其他組件也可看見)。 指定 `private` 會使其他組件無法看見資源。<br /><br /> 例如，如果 `file` 是由[資源檔產生器 (*Resgen.exe*)](resgen-exe-resource-file-generator.md) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 中的成員進行存取。 如需詳細資訊，請參閱<xref:System.Resources.ResourceManager>。 至於其他所有資源，請使用 `GetManifestResource` 中的 <xref:System.Reflection.Assembly>* 方法在執行階段存取資源。<br /><br /> 如果只將資源檔傳遞至 *Al.exe*，則輸出檔案會是附屬資源組件。|
+|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|將資源檔連結至組件。 `file` 所指定的資源會變成組件的一部分，但是不會複製檔案。 `file` 參數可以是任何檔案格式。 例如，您可以指定原生 DLL 做為 `file` 參數。 這樣就會產生組件的原生 DLL 部分，以便安裝到全域組件快取中，並從組件的 Managed 程式碼存取。 您也可以利用 **/linkresource** 編譯器選項，進行上述作業。 如需詳細資訊，請參閱[-C# Linkresource （編譯器選項）](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)。<br /><br /> `name` 參數是資源的內部識別項。 `target` 參數會指定 *Al.exe* 要在其中複製 `file` 的路徑和檔案名稱 *。* 複製完成後，*Al.exe* 會將 `target` 編譯成組件。 根據預設，組件中的資源為公用 (其他組件也可看見)。 指定 `private` 會使其他組件無法看見資源。<br /><br /> 例如，如果 `file` 是由資源檔產生器 (*Resgen.exe*) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 命名空間中的成員進行存取。 如需詳細資訊，請參閱<xref:System.Resources.ResourceManager>。 至於其他所有資源，請使用 `GetManifestResource` 類別中的 <xref:System.Reflection.Assembly>* 方法在執行階段存取資源。<br /><br /> 如果只將資源檔傳遞至 *Al.exe*，則輸出檔案會是附屬資源組件。|
 
 您可以指定下列 `options`，但是必須指定 **/out**。
 
@@ -54,7 +54,7 @@ al sources options
 |**/config[uration]:** `text`|為組件中的 [組態] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如果文字為空字串，Win32 Configuration 資源會顯示為單一空格。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyConfigurationAttribute>)。|
 |**/copy[right]:** `text`|為組件中的 [著作權] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管會將 **/copyright** 顯示為 Win32 Copyright 資源。<br /><br /> 如果文字為空字串，Win32 Copyright 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**， **/copyright** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyCopyrightAttribute>)。|
 |**/c[ulture]:** `text`|指定與組件相關聯的文化特性字串。 文化特性的有效值為標題＜Tags for the Identification of Languages＞的＜Internet Requests for Comments (RFC) 1766＞文件中定義的值。<br /><br /> 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 沒有預設的文化特性字串。 這個字串可使用反映進行檢視。<br /><br /> 如需有效 `text` 字串的詳細資訊，請參閱 <xref:System.Globalization.CultureInfo>。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyCultureAttribute>)。|
-|**/delay[sign][+&#124;-]**|指定將要完整簽署還是部分簽署組件。 如果需要完整簽署的組件，請使用 **/delaysign-** 。 如果只想在組件中包含公開金鑰，請使用 **/delaysign+** 。<br /><br /> 當您要求完整簽署的組件時，*Al.exe* 會雜湊包含資訊清單 (組件中繼資料) 的檔案，並使用私密金鑰簽署該雜湊。 所產生的數位簽章會儲存在包含資訊清單的檔案中。 當組件延遲簽署時，*Al.exe* 不會計算和儲存該簽章，只會在檔案中保留空間，以便之後再新增該簽章。<br /><br /> 預設值為 **/delaysign-** 。<br /><br /> **/delaysign** 選項必須搭配 **/keyfile** 或 **/keyname** 才有作用。<br /><br /> 例如，使用 **/delaysign+** 時，可讓測試人員將組件放入全域快取中。 測試過後，您就可以將私密金鑰包含在組件內，藉此完整簽署組件。<br /><br /> 注意:在使用 [*Gacutil.exe* (全域組件快取工具)](gacutil-exe-gac-tool.md) 將延遲簽署的組件放入全域快取之前，請先使用 [*Sn.exe* (強式名稱工具)](sn-exe-strong-name-tool.md) 註冊這個組件，以略過驗證。 例如： `Sn.exe –Vr delaySignedAssembly` 。 這種方式僅適用於開發工作。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyDelaySignAttribute>)。|
+|**/delay[sign][+&#124;-]**|指定將要完整簽署還是部分簽署組件。 如果需要完整簽署的組件，請使用 **/delaysign-** 。 如果只想在組件中包含公開金鑰，請使用 **/delaysign+** 。<br /><br /> 當您要求完整簽署的組件時，*Al.exe* 會雜湊包含資訊清單 (組件中繼資料) 的檔案，並使用私密金鑰簽署該雜湊。 所產生的數位簽章會儲存在包含資訊清單的檔案中。 當組件延遲簽署時，*Al.exe* 不會計算和儲存該簽章，只會在檔案中保留空間，以便之後再新增該簽章。<br /><br /> 預設值為 **/delaysign-** 。<br /><br /> **/delaysign** 選項必須搭配 **/keyfile** 或 **/keyname** 才有作用。<br /><br /> 例如，使用 **/delaysign+** 時，可讓測試人員將組件放入全域快取中。 測試過後，您就可以將私密金鑰包含在組件內，藉此完整簽署組件。<br /><br /> 注意：在使用 [*Gacutil.exe* (全域組件快取工具)](gacutil-exe-gac-tool.md) 將延遲簽署的組件放入全域快取之前，請先使用 [*Sn.exe* (強式名稱工具)](sn-exe-strong-name-tool.md) 註冊這個組件，以略過驗證。 例如，`Sn.exe –Vr delaySignedAssembly`。 這種方式僅適用於開發工作。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyDelaySignAttribute>)。|
 |**/descr[iption]:** `text`|為組件中的 [<xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A>] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管會將 **/description** 顯示為 Win32 **Comments** 資源。<br /><br /> 如果文字為空字串，Win32 **Comments** 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**， **/description** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A>)。|
 |**/e[vidence]:** `file`|使用 Security.Evidence 的資源名稱將 `file` 嵌入組件中。<br /><br /> Security.Evidence 無法用於一般資源。|
 |**/fileversion:** `version`|為組件中的 [檔案版本] 欄位指定字串。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，系統會將 **/fileversion** 作為 Win32 **File Version** 資源。 如不指定 **/fileversion**，系統會在 Win32 **File Version** 資源中填入 Win32 **Assembly Version** 資源。<br /><br /> 如果指定 **/win32res**，則 **/fileversion** 不會影響 Win32 資源。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中指定這個選項做為自訂屬性 (AssemblyFileVersionAttribute)。|
@@ -73,7 +73,7 @@ al sources options
 |**/template:** `filename`|指定要從其中繼承所有組件中繼資料的組件 `filename`，但不包括 [文化特性] 欄位。<br /><br /> 使用 **/template** 建立的組件會是附屬組件。|
 |**/title:** `text`|為組件中的 [標題] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管會將 **/title** 顯示為 Win32 **Description** 資源，而殼層將使用此資源作為應用程式的易記名稱。 如果檔案類型具有多個支援應用程式，則該檔案類型之捷徑功能表的 [開啟方式] 子功能表中也會顯示此項目。<br /><br /> 如果文字為空字串，Win32 **Description** 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**， **/title** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyTitleAttribute>)。|
 |**/trade[mark]:** `text`|為組件中的 [商標] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管會將 **/trademark** 顯示為 Win32 **Trademark** 資源。<br /><br /> 如果文字為空字串，Win32 **Trademark** 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**， **/trademark** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyTrademarkAttribute>)。|
-|**/v[ersion]:** `version`|指定這個組件的版本資訊。 版本字串的格式為 `major`.`minor`.`build`.`revision`。預設值為 0。<br /><br /> 如果指定 **/version**，則必須同時指定 `major`。 如果您指定 `major` 和 `minor`，則可以指定星號 (\*) 代表 `build`。 這樣一來，`build` 就相當於自當地時間 2000 年 1 月 1 日起算的天數，而 `revision` 則等於自當地時間當天午夜起算的秒數除以 2。<br /><br /> 如果您指定 `major`、`minor` 和 `build`，則可以指定星號代表 `revision`。 這樣一來，`revision` 就等於自當地時間當天午夜起算的秒數除以 2。<br /><br /> 簡單來說，有效的版本字串如下：<br /><br /> X<br /><br /> X.X<br /><br /> X.X.\*<br /><br /> X.X.X<br /><br /> X.X.X.\*<br /><br /> X.X.X.X<br /><br /> 其中 X 是指任何不帶正負號的簡短常數，但 65535 除外 (0-65534)。<br /><br /> 如不指定 **/win32res**，系統會將 **/version** 作為 Win32 **Assembly Version** 資源。<br /><br /> 如不指定 **/win32res**、 **/productversion** 和 **/fileversion**，系統會將 **/version** 作為 Win32 **Assembly Version**、File Version 和 **Product Version** 資源。<br /><br /> 如果指定 **/win32res**， **/version** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyVersionAttribute>)。|
+|**/v[ersion]:** `version`|指定這個組件的版本資訊。 版本字串的格式為 `major`。`minor`。`build`。`revision`。預設值為0。<br /><br /> 如果指定 **/version**，則必須同時指定 `major`。 如果您指定 `major` 和 `minor`，則可以指定星號 (\*) 代表 `build`。 這樣一來，`build` 就相當於自當地時間 2000 年 1 月 1 日起算的天數，而 `revision` 則等於自當地時間當天午夜起算的秒數除以 2。<br /><br /> 如果您指定 `major`、`minor` 和 `build`，則可以指定星號代表 `revision`。 這樣一來，`revision` 就等於自當地時間當天午夜起算的秒數除以 2。<br /><br /> 簡單來說，有效的版本字串如下：<br /><br /> x<br /><br /> X.X<br /><br /> X.X.\*<br /><br /> X.X.X<br /><br /> X.X.X.\*<br /><br /> X.X.X.X<br /><br /> 其中 X 是指任何不帶正負號的簡短常數，但 65535 除外 (0-65534)。<br /><br /> 如不指定 **/win32res**，系統會將 **/version** 作為 Win32 **Assembly Version** 資源。<br /><br /> 如不指定 **/win32res**、 **/productversion** 和 **/fileversion**，系統會將 **/version** 作為 Win32 **Assembly Version**、File Version 和 **Product Version** 資源。<br /><br /> 如果指定 **/win32res**， **/version** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyVersionAttribute>)。|
 |**/win32icon:** `filename`|將 .ico 檔案插入組件中。 .ico 檔案會讓輸出檔在檔案總管中以所要的外觀顯示。|
 |**/win32res:** `filename`|將 Win32 資源 (.res 檔案) 插入輸出檔中。 您可以使用資源編譯器建立 Win32 資源檔。 資源編譯器是在編譯 Visual C++ 程式時叫用，而 .res 檔案則是從 .rc 檔案建立。|
 |`@filename`|指定包含 *Al.exe* 命令的回應檔。<br /><br /> 回應檔中的命令可顯示為一行一個，也可以全部顯示在同一行，並以一個或多個空格加以分隔。|
@@ -89,9 +89,9 @@ al sources options
 
 下表列出 *Al.exe* 所產生的錯誤。
 
-| Error | 描述 |
+| 錯誤 | 描述 |
 | ----- | ----------- |
-|al1001|編譯器內部錯誤<br /><br /> 請嘗試判斷 *Al.exe* 失敗的原因是否為無法剖析未預期的語法。 然後，請連絡 Microsoft 產品支援服務。|
+|al1001|內部編譯器錯誤<br /><br /> 請嘗試判斷 *Al.exe* 失敗的原因是否為無法剖析未預期的語法。 然後，請連絡 Microsoft 產品支援服務。|
 |al1002|記憶體不足<br /><br /> *Al.exe* 因記憶體不足而停止。 請增加可用記憶體的數量。|
 |al1003|編譯器選項 'option' 後面必須使用引數<br /><br /> *Al.exe* 必須有傳遞至命令列選項的引數。 例如，如果指定 **/algid:** ，則必須傳遞演算法識別項。|
 |al1004|未預期的 Common Language Runtime 初始化錯誤 — 'reason'<br /><br /> *Al.exe* 回報因指定的原因而造成 Visual Studio 或通用語言執行平台安裝錯誤。|
@@ -100,7 +100,7 @@ al sources options
 |al1007|開啟回應檔 'file' 時發生錯誤 — 'reason'<br /><br /> *Al.exe* 因指定的原因而無法開啟指定的回應檔。|
 |al1008|遺漏 'option' 命令列選項的檔案規格<br /><br /> *Al.exe* 必須有傳遞至命令列選項的檔案。 例如，如果指定 **/out** 選項，則必須指定檔案。|
 |al1009|無法開啟 'file' 進行寫入<br /><br /> *Al.exe* 無法寫入檔案，例如輸出組件檔。 可能是磁碟已滿、檔案為唯讀，或沒有檔案的權限。|
-|al1010|命令列語法錯誤：'option' 選項遺漏 ':text'<br /><br /> *Al.exe* 必須有傳遞至命令列選項的引數。 例如，如果指定 **/title** 選項，則必須傳遞字串。|
+|al1010|命令列語法錯誤: 遺漏 'option' 選項的 ':text'<br /><br /> *Al.exe* 必須有傳遞至命令列選項的引數。 例如，如果指定 **/title** 選項，則必須傳遞字串。|
 |al1011|檔案 'file' 是可執行檔，無法當做文字檔開啟<br /><br /> 必須是文字檔，但卻指定了二進位檔。 例如，如果在命令列上將二進位檔當做回應檔傳遞，便會發生這個錯誤。|
 |al1012|'value' 不是選項 'option' 的有效設定<br /><br /> 傳遞至命令列選項的值是未預期的值。 例如，如果指定給 **/target** 選項的值無效，便會發生這個錯誤。|
 |al1013|無法辨認的命令列選項: 'option'<br /><br /> 指定的命令列選項無效。|
@@ -129,7 +129,7 @@ al sources options
 |al1039|全域組件快取管理員初始化失敗 — 原因<br /><br /> 重新安裝 Visual Studio 或 Windows SDK。|
 |al1040|無法將組件安裝至快取 — 原因<br /><br /> 只有簽署的組件才能安裝至快取。 如需詳細資訊，請參閱[全域組件快取](../app-domains/gac.md)。|
 |al1041|'method': 因為簽章或可見度不正確，或者其為泛型，所以無法成為進入點<br /><br /> 已使用 **/main** 選項指定方法，但是該方法不是靜態、未傳回 `int` 或 `void`、為泛型，或具有無效的引數。|
-|al1042|'exe'：無法為 EXE 新增模組<br /><br /> 已將不含組件的 *.exe* 檔指定為 *Al.exe* 的輸入檔。 *Al.exe* 只能將不含組件的 *.dll* 檔案當作輸入檔。|
+|al1042|'exe': 無法將 EXE 加入模組<br /><br /> 已將不含組件的 *.exe* 檔指定為 *Al.exe* 的輸入檔。 *Al.exe* 只能將不含組件的 *.dll* 檔案當作輸入檔。|
 |al1043|資訊清單檔名 'name' 不可與任何模組相同<br /><br /> 使用 **/out** 選項指定的名稱不能與指定為 *Al.exe* 輸入的任何一個檔案名稱相同。|
 |al1044|讀取金鑰檔 'file' 時發生錯誤 — 原因<br /><br /> 從使用 **/keyfile** 或 <xref:System.Reflection.AssemblyKeyFileAttribute> 指定的檔案中開啟或讀取時發生錯誤。|
 |al1045|檔名 'file' 太長或無效<br /><br /> 傳遞至 *Al.exe* 的檔案名稱超過 260 個字元。 請選擇字元較少或路徑較短的檔名，或重新命名檔案。|
@@ -173,7 +173,7 @@ al sources options
 al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [工具](index.md)
 - [*Sn.exe* (強式名稱工具)](sn-exe-strong-name-tool.md)

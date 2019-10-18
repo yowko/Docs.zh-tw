@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將參考新增至型別程式庫
+title: 如何：將參考加入至類型程式庫
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a666c0e079fb30ecdd32aad64f44434d8253acf4
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4908653b650f05bd25a7893d104040802f34d7e4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971896"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523815"
 ---
-# <a name="how-to-add-references-to-type-libraries"></a>作法：將參考新增至型別程式庫
+# <a name="how-to-add-references-to-type-libraries"></a>如何：將參考加入至類型程式庫
 Visual Studio 會產生內含新增類型程式庫參考時所產生之中繼資料的 interop 組件。 如有提供主要的 Interop 組件，Visual Studio 便會先使用現有的組件，然後再產生新的 Interop 組件。  
   
 ### <a name="to-add-a-reference-to-a-type-library-in-visual-studio"></a>新增 Visual Studio 中之類型程式庫的參考  
@@ -40,14 +40,14 @@ Visual Studio 會產生內含新增類型程式庫參考時所產生之中繼資
   
 ### <a name="to-add-a-reference-to-a-type-library-for-command-line-compilation"></a>新增類型程式庫參考供命令列編譯時使用  
   
-1. 依以下連結所述產生 Interop 組件：[如何：從型別程式庫產生 Interop 組件](how-to-generate-interop-assemblies-from-type-libraries.md)。  
+1. 產生[如何：從型別程式庫產生 Interop 組件](how-to-generate-interop-assemblies-from-type-libraries.md)中所述的 Interop 組件。  
   
-2. 使用 [/link (C# 編譯器選項)](../../csharp/language-reference/compiler-options/link-compiler-option.md) 或 [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) 編譯器選項加上 Interop 組件名稱，將 COM 類型的類型資訊嵌入您的可執行檔中。  
+2. 使用[-link （C#編譯器選項）](../../csharp/language-reference/compiler-options/link-compiler-option.md)或[-link （Visual Basic）](../../visual-basic/reference/command-line-compiler/link.md)編譯器選項加上 interop 元件名稱，將 COM 類型的類型資訊內嵌到可執行檔中。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [匯入類型程式庫做為組件](importing-a-type-library-as-an-assembly.md)
 - [將 COM 元件公開給 .NET Framework](exposing-com-components.md)
-- [逐步解說：在 Visual Studio 中，從 Managed 元件內嵌類型](../../standard/assembly/embed-types-visual-studio.md) 
-- [/link (C# 編譯器選項)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
+- [逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的型別](../../standard/assembly/embed-types-visual-studio.md) 
+- [-link (C# 編譯器選項)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [-link （Visual Basic）](../../visual-basic/reference/command-line-compiler/link.md)

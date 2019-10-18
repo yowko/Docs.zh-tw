@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: 4d67da34cf692133df95480a7f0215943337a34e
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3d0a90a57c2b1c2759b8420e74c284668d54e9cb
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003019"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72526733"
 ---
 ### <a name="duplicated-apis-removed-from-windows-forms"></a>已從 Windows Forms 移除重複的 Api
 
-從 .NET Core 3.0 Preview 4 開始，在 @no__t 0 命名空間中不小心重複的一些 Api，已在 .NET Core 3.0 RC1 中移除。 
+從 .NET Core 3.0 Preview 4 開始，在 <xref:System.Windows.Forms?displayProperty=fullName> 命名空間中不小心重複的一些 Api，已在 .NET Core 3.0 RC1 中移除。
 
 #### <a name="change-description"></a>變更描述
 
-.NET Core 3.0 Preview 4 不小心複製了已存在於 @no__t 1 命名空間中的 <xref:System.Windows.Forms?displayProperty=fullName> 命名空間中的數種類型。 從 .NET Core 3.0 RC1 開始，這些重複的類型已無法再使用。 下表顯示原始類型和其重複類型的清單：
+.NET Core 3.0 Preview 4 不小心複製 <xref:System.ComponentModel.Design?displayProperty=fullName> 命名空間中已存在的 <xref:System.Windows.Forms?displayProperty=fullName> 命名空間中的數種類型。 從 .NET Core 3.0 RC1 開始，這些重複的類型已無法再使用。 下表顯示原始類型和其重複類型的清單：
 
 |原始類型|重複的類型|
 |---|---|
@@ -38,7 +38,7 @@ Windows Forms
 
 - 無法透過 API 分析來偵測。
 
-<!-- 
+<!--
 
 ### Affected APIs
 

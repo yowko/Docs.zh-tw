@@ -13,12 +13,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: 3ddaa7efec2b4bf5ffa53971aa6f380a1be9bad8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 430270c170f2829d9bf9b90d258c948176b9c086
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587666"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523321"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  
@@ -36,12 +36,12 @@ ms.locfileid: "69587666"
 ## <a name="remarks"></a>備註  
  \<seealso> 標記可讓您指定要顯示在＜請參閱＞一節中的文字。 使用 [\<see>](./see.md)，以在文字內指定連結。  
   
- 編譯搭配 [/doc](../../language-reference/compiler-options/doc-compiler-option.md) 可處理檔案的文件註解。  
+ 使用 [-doc](../../language-reference/compiler-options/doc-compiler-option.md) 編譯可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
  如需使用 \<seealso> 的範例，請參閱 [\<summary>](./summary.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [建議使用的文件註解標籤](./recommended-tags-for-documentation-comments.md)

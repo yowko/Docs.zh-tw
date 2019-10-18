@@ -1,28 +1,28 @@
 ---
-title: 逐步解說：在 Visual Studio 中，從 managed 元件內嵌類型
+title: 逐步解說：從 Visual Studio 中的 managed 元件內嵌類型
 ms.date: 08/19/2019
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1f32bd840efa97b62097a2d051c25d519785b381
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1a37a3bcc3b1bc352d6a2f59691819e0b2403d3d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973268"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523904"
 ---
-# <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>逐步解說：在 Visual Studio 中，從 managed 元件內嵌類型
+# <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>逐步解說：從 Visual Studio 中的 managed 元件內嵌類型
 
 若要內嵌來自強式名稱 Managed 組件的類型資訊，您可以鬆散地結合應用程式中的類型以確保版本獨立。 也就是說，您的程式可以撰寫成使用來自任何版本之 managed 程式庫的類型，而不需要針對每個新版本重新編譯。
 
 內嵌型別時，通常會搭配使用 COM Interop (例如從 Microsoft Office 使用 Automation 物件的應用程式)。 當您內嵌類型資訊時，可讓相同組建的程式使用不同電腦上版本各異的 Microsoft Office。 不過，您也可以將類型內嵌用於完全受控的解決方案。
 
-在您指定可以內嵌的公用介面之後，就可以建立執行這些介面的執行時間類別。 用戶端程式可以藉由參考包含公用介面的元件，並將參考的`Embed Interop Types`屬性設定為`True`，在設計階段內嵌介面的類型資訊。 然後，用戶端程式可以載入以這些介面類別型輸入之執行時間物件的實例。 這相當於使用命令列編譯器，並使用 `/link` 編譯器選項來參考組件。 
+在您指定可以內嵌的公用介面之後，就可以建立執行這些介面的執行時間類別。 用戶端程式可以藉由參考包含公用介面的元件，並將參考的 `Embed Interop Types` 屬性設定為 `True`，在設計階段內嵌介面的類型資訊。 然後，用戶端程式可以載入以這些介面類別型輸入之執行時間物件的實例。 這相當於使用命令列編譯器，並使用 `/link` 編譯器選項來參考組件。 
 
 如果您建立新版本的強式名稱執行時間元件，則不需要重新編譯用戶端程式。 用戶端程式會繼續使用任何版本的執行時間元件，並使用公用介面的內嵌類型資訊。
 
-在本逐步解說中, 您會:
+在本逐步解說中，您會：
 
 1. 建立具有公用介面的強式名稱元件，其中包含可內嵌的類型資訊。
 1. 建立強式名稱的執行時間元件，以執行公用介面。
@@ -37,8 +37,8 @@ ms.locfileid: "70973268"
 在下列情況下，您可以從元件內嵌類型資訊： 
 
 - 組件已公開至少一個公用介面。
-- 內嵌的介面會以`ComImport`具有唯一 guid 的屬性和`Guid`屬性來標注。
-- 您可以使用 `ImportedFromTypeLib` 屬性或 `PrimaryInteropAssembly` 屬性及組件層級 `Guid` 屬性，來標註組件 根據預設C# ，視覺效果和 Visual Basic 專案範本包含元件`Guid`層級屬性。
+- 內嵌的介面會以 `ComImport` 屬性加上批註，並 `Guid` 具有唯一 Guid 的屬性。
+- 您可以使用 `ImportedFromTypeLib` 屬性或 `PrimaryInteropAssembly` 屬性及組件層級 `Guid` 屬性，來標註組件 根據預設C# ，視覺效果和 Visual Basic 專案範本包含元件層級 `Guid` 屬性。
 
 因為內嵌類型的主要功能是支援 COM Interop 元件，所以當您在完全受控的方案中嵌入類型資訊時，會有下列限制：
 
@@ -57,7 +57,7 @@ ms.locfileid: "70973268"
    
 1. 在 [**設定您的新專案**] 對話方塊的 [**專案名稱**] 下，輸入*TypeEquivalenceInterface*，然後選取 [**建立**]。 隨即會建立新專案。
    
-1. 在**方案總管**中，以滑鼠右鍵按一下*Class1.cs*或*Class1*檔案，選取 [**重新命名**]，然後將檔案從*Class1*重新命名為*ISampleInterface*。 在提示中回應 **[是]** ，也會將`ISampleInterface`類別重新命名為。 此類別代表類別的公用介面。
+1. 在**方案總管**中，以滑鼠右鍵按一下*Class1.cs*或*Class1*檔案，選取 [**重新命名**]，然後將檔案從*Class1*重新命名為*ISampleInterface*。 在提示中回應 **[是]** 也會將類別重新命名為 `ISampleInterface`。 此類別代表類別的公用介面。
    
 1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceInterface**專案，然後選取 [**屬性**]。 
    
@@ -67,7 +67,7 @@ ms.locfileid: "70973268"
    
 1. 在 [**建立強式名稱金鑰**] 對話方塊中的 [**金鑰檔名稱**] 下，輸入 [*金鑰 .snk*]。 取消選取 [**以密碼保護我的金鑰**檔] 核取方塊，然後選取 **[確定]** 。
    
-1. 在程式碼編輯器中開啟*ISampleInterface*類別檔案，並以下列程式碼取代其內容以建立`ISampleInterface`介面：
+1. 在程式碼編輯器中開啟*ISampleInterface*類別檔案，並以下列程式碼取代其內容，以建立 `ISampleInterface` 介面：
    
    ```csharp
    using System;
@@ -98,7 +98,7 @@ ms.locfileid: "70973268"
    
 1. 在 [**工具**] 功能表上，選取 [**建立 guid**]，然後在 [**建立 guid** ] 對話方塊中，選取 [登錄**格式**]。 選取 [**複製**]，然後選取 [結束 **]。**
    
-1. 在您`Guid`程式碼的屬性中，以您複製的 guid 取代範例 guid，並移除大括弧（ **{}** ）。
+1. 在程式碼的 `Guid` 屬性中，以您複製的 GUID 取代範例 GUID，並移除大括弧（ **{}** ）。
    
 1. 在**方案總管**中，展開 [**屬性**] 資料夾，然後選取 [ *AssemblyInfo.cs* ] 或 [ *AssemblyInfo* ] 檔案。 在 [程式碼編輯器] 中，將下列屬性新增至檔案：
    
@@ -110,7 +110,7 @@ ms.locfileid: "70973268"
    <Assembly: ImportedFromTypeLib("")>
    ```
    
-1. + +選取 [檔案] [全部儲存] 或按 Ctrl Shift S 以儲存檔案和專案。 > 
+1. 選取 **[** 檔案]  >  [**全部儲存**]，或按**Ctrl** +**Shift** + S 以儲存**盤**案和專案。
    
 1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceInterface**專案，然後選取 [**建立**]。 類別庫 DLL 檔案會經過編譯並儲存到指定的組建輸出路徑，例如*C:\TypeEquivalenceSample*。
 
@@ -124,7 +124,7 @@ ms.locfileid: "70973268"
    
 1. 在 [**設定您的新專案**] 對話方塊的 [**專案名稱**] 下，輸入*TypeEquivalenceRuntime*，然後選取 [**建立**]。 隨即會建立新專案。
    
-1. 在**方案總管**中，以滑鼠右鍵按一下*Class1.cs*或*Class1*檔案，選取 [**重新命名**]，然後將檔案從*Class1*重新命名為*SampleClass*。 在提示中回應 **[是]** ，也會將`SampleClass`類別重新命名為。 這個類別會實作 `ISampleInterface` 介面。
+1. 在**方案總管**中，以滑鼠右鍵按一下*Class1.cs*或*Class1*檔案，選取 [**重新命名**]，然後將檔案從*Class1*重新命名為*SampleClass*。 在提示中回應 **[是]** 也會將類別重新命名為 `SampleClass`。 這個類別會實作 `ISampleInterface` 介面。
    
 1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceInterface**專案，然後選取 [**屬性**]。 
    
@@ -134,13 +134,13 @@ ms.locfileid: "70973268"
    
 1. 在 [**建立強式名稱金鑰**] 對話方塊中的 [**金鑰檔名稱**] 下，輸入 [*金鑰 .snk*]。 取消選取 [**以密碼保護我的金鑰**檔] 核取方塊，然後選取 **[確定]** 。
    
-1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceRuntime**專案，然後選取 [**加入** > **參考**]。 
+1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceRuntime**專案，然後選取 [**新增** > **參考**]。 
    
 1. 在 [**參考管理員**] 對話方塊中，選取 **[流覽**] 並流覽至 [輸出路徑] 資料夾。 選取 [ *TypeEquivalenceInterface* ] 檔案，選取 [**新增**]，然後選取 **[確定]** 。
    
 1. 在**方案總管**中，展開 [**參考**] 資料夾，然後選取 [ **TypeEquivalenceInterface** ] 參考。 在 [**屬性**] 窗格中，將 [**特定版本**] 設為 [ **False** ] （如果尚未設定）。
    
-1. 在程式碼編輯器中開啟*SampleClass*類別檔案，並以下列程式碼取代其內容，以建立`SampleClass`類別：
+1. 在程式碼編輯器中開啟*SampleClass*類別檔案，並以下列程式碼取代其內容，以建立 `SampleClass` 類別：
    
    ```csharp
    using System;
@@ -185,7 +185,7 @@ ms.locfileid: "70973268"
    End Class
    ```
    
-1. + +選取 [檔案] [全部儲存] 或按 Ctrl Shift S 以儲存檔案和專案。 > 
+1. 選取 **[** 檔案]  >  [**全部儲存**]，或按**Ctrl** +**Shift** + S 以儲存**盤**案和專案。
    
 1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceRuntime**專案，然後選取 [**建立**]。 類別庫 DLL 檔案會經過編譯並儲存到指定的組建輸出路徑。
 
@@ -203,7 +203,7 @@ ms.locfileid: "70973268"
    
 1. 在 [**屬性**] 畫面的左窗格中選取 [**建立**]，然後將**輸出路徑**設定為您用於 TypeEquivalenceInterface 專案的相同位置，例如*C:\TypeEquivalenceSample*。
    
-1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceClient**專案，然後選取 [**加入** > **參考**]。 
+1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceClient**專案，然後選取 [**新增** > **參考**]。 
    
 1. 在 [**參考管理員**] 對話方塊中，如果已列出 [ **TypeEquivalenceInterface** ] 檔案，請選取它。 如果沒有，請選取 **[流覽]** ，流覽至 [輸出路徑] 資料夾，選取 [ *TypeEquivalenceInterface* ] 檔案（而非*TypeEquivalenceRuntime*），然後選取 [**新增**]。 選取 [確定]。
    
@@ -256,15 +256,15 @@ ms.locfileid: "70973268"
    End Module
    ```
    
-1. + +選取 [檔案] [全部儲存] 或按 Ctrl Shift S 以儲存檔案和專案。 > 
+1. 選取 **[** 檔案]  >  [**全部儲存**]，或按**Ctrl** +**Shift** + S 以儲存**盤**案和專案。
    
-1. 按**Ctrl** + **F5**以建立並執行程式。 請注意，主控台輸出會傳回元件版本**1.0.0.0**。 
+1. 按**Ctrl** +**F5**以建立並執行程式。 請注意，主控台輸出會傳回元件版本**1.0.0.0**。 
    
 ## <a name="modify-the-interface"></a>修改介面
 
 現在，修改介面元件，並變更其版本。 
 
-1. 在 Visual Studio 中，**選取** > [檔案] [**開啟** > **專案/方案**]，然後開啟 [ **TypeEquivalenceInterface** ] 專案。
+1. 在 Visual Studio 中，**選取** 檔案  > **開啟** > **專案/方案**，然後開啟  **TypeEquivalenceInterface**  專案。
    
 1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceInterface**專案，然後選取 [**屬性**]。 
    
@@ -272,7 +272,7 @@ ms.locfileid: "70973268"
    
 1. 在 [**元件資訊**] 對話方塊中，將 [**元件版本**] 和 [檔案**版本**] 值變更為*2.0.0.0*，然後選取 **[確定]** 。
    
-1. 開啟*SampleInterface.cs*或*SampleInterface*檔案，然後將下列程式`ISampleInterface`程式碼新增至介面：
+1. 開啟*SampleInterface.cs*或*SampleInterface*檔案，然後將下列程式程式碼新增至 `ISampleInterface` 介面：
    
    ```csharp
    DateTime GetDate();
@@ -282,7 +282,7 @@ ms.locfileid: "70973268"
    Function GetDate() As Date
    ```
    
-1. + +選取 [檔案] [全部儲存] 或按 Ctrl Shift S 以儲存檔案和專案。 > 
+1. 選取 **[** 檔案]  >  [**全部儲存**]，或按**Ctrl** +**Shift** + S 以儲存**盤**案和專案。
    
 1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceInterface**專案，然後選取 [**建立**]。 類別庫 DLL 檔案的新版本會進行編譯，並儲存至組建輸出路徑。
 
@@ -290,7 +290,7 @@ ms.locfileid: "70973268"
 
 同時修改執行時間類別並更新其版本。 
 
-1. 在 Visual Studio 中，**選取** > [檔案] [**開啟** > **專案/方案**]，然後開啟 [ **TypeEquivalenceRuntime** ] 專案。
+1. 在 Visual Studio 中，**選取** 檔案  > **開啟** > **專案/方案**，然後開啟  **TypeEquivalenceRuntime**  專案。
    
 1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceRuntime**專案，然後選取 [**屬性**]。 
    
@@ -298,7 +298,7 @@ ms.locfileid: "70973268"
    
 1. 在 [**元件資訊**] 對話方塊中，將 [**元件版本**] 和 [檔案**版本**] 值變更為*2.0.0.0*，然後選取 **[確定]** 。
    
-1. 開啟*SampleClass.cs*或*SampleClass*檔案，然後將下列程式`SampleClass`代碼新增至類別：
+1. 開啟*SampleClass.cs*或*SampleClass*檔案，然後將下列程式碼新增至 `SampleClass` 類別：
    
    ```csharp
     public DateTime GetDate()
@@ -313,18 +313,18 @@ ms.locfileid: "70973268"
    End Function
    ```
    
-1. + +選取 [檔案] [全部儲存] 或按 Ctrl Shift S 以儲存檔案和專案。 > 
+1. 選取 **[** 檔案]  >  [**全部儲存**]，或按**Ctrl** +**Shift** + S 以儲存**盤**案和專案。
    
 1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceRuntime**專案，然後選取 [**建立**]。 類別庫 DLL 檔案的新版本會進行編譯，並儲存至組建輸出路徑。
 
 ## <a name="run-the-updated-client-program"></a>執行更新的用戶端程式 
 
-移至組建輸出檔案夾位置，並執行*TypeEquivalenceClient*。 請注意，主控台輸出現在會反映新版本的`TypeEquivalenceRuntime`元件*2.0.0.0*，而不會重新編譯程式。
+移至組建輸出檔案夾位置，並執行*TypeEquivalenceClient*。 請注意，主控台輸出現在會反映新版本的 `TypeEquivalenceRuntime` 元件*2.0.0.0*，而不需要重新編譯程式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [/link (C# 編譯器選項)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
+- [-link (C# 編譯器選項)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [-link （Visual Basic）](../../visual-basic/reference/command-line-compiler/link.md)
 - [C# 程式設計指南](../../csharp/programming-guide/index.md)
 - [程式設計概念（Visual Basic）](../../visual-basic/programming-guide/concepts/index.md)
 - [具有元件的程式](program.md)

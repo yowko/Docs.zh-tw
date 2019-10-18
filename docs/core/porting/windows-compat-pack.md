@@ -4,12 +4,12 @@ description: 了解 Windows 相容性套件，以及如何使用它將現有的 
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 71e390881d4e9c7836622abeed49c0ea2e5f7526
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: adf2aaab27b5a8afcc89fceac67184d3b1974037
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202558"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521275"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>使用 Windows 相容性套件將程式碼移植到 .NET Core
 
@@ -17,31 +17,31 @@ ms.locfileid: "70202558"
 
 此套件是邏輯的 [.NET Standard 2.0 延伸模組](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)，可大幅增加 API 集和現有的程式碼編譯，幾乎不需要修改。 但為信守 .NET Standard 的承諾 (「它是所有 .NET 實作提供的 API 集」)，這不包括無法跨所有平台的技術，例如登錄、Windows Management Instrumentation (WMI) 或反映發出 API。
 
-「Windows 相容性套件」  位階高於 .NET Standard，並提供存取僅限 Windows 的技術。 它特別適合想要移至 .NET Core，但第一個步驟計劃停留在 Windows 的客戶。 在這種情況下，無法使用僅限 Windows 技術只是無架構優勢的移轉障礙。
+「Windows 相容性套件」位階高於 .NET Standard，並提供存取僅限 Windows 的技術。 它特別適合想要移至 .NET Core，但第一個步驟計劃停留在 Windows 的客戶。 在這種情況下，無法使用僅限 Windows 技術只是無架構優勢的移轉障礙。
 
 ## <a name="package-contents"></a>套件內容
 
-「Windows 相容性套件」  透過 NuGet 套件 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) 提供，可從以 .NET Core 或 .NET Standard 為目標的專案參考。
+「Windows 相容性套件」透過 NuGet 套件 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) 提供，可從以 .NET Core 或 .NET Standard 為目標的專案參考。
 
 它提供約 20,000 個 API，包括僅限 Windows 以及來自下列技術領域的跨平台 API：
 
-* 字碼頁
-* CodeDom
-* Configuration
-* 目錄服務
-* 繪圖
-* ODBC
-* 權限
-* 連接埠
-* Windows 存取控制清單 (ACL)
-* Windows Communication Foundation (WCF)
-* Windows 加密
-* Windows EventLog
-* Windows Management Instrumentation (WMI)
-* Windows 效能計數器
-* Windows 登錄
-* Windows 執行階段快取
-* Windows 服務
+- 字碼頁
+- CodeDom
+- Configuration
+- 目錄服務
+- 繪圖
+- ODBC
+- 權限
+- 連接埠
+- Windows 存取控制清單 (ACL)
+- Windows Communication Foundation (WCF)
+- Windows 加密
+- Windows EventLog
+- Windows Management Instrumentation (WMI)
+- Windows 效能計數器
+- Windows 登錄
+- Windows 執行階段快取
+- Windows 服務
 
 如需詳細資訊，請參閱[相容性套件規格](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)。
 
