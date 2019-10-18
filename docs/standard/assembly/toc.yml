@@ -15,8 +15,10 @@
       href: side-by-side-execution.md
     - name: 組件檔格式
       href: file-format.md
-    - name: 作法：使用 .NET Core 中的組件卸載功能及為其偵錯
+    - name: HOW TO：使用 .NET Core 中的組件卸載功能及為其偵錯
       href: unloadability.md
+    - name: 參考組件
+      href: reference-assemblies.md
     - name: 解析組件負載
       href: resolve-loads.md
     - name: 具有組件的程式
@@ -43,7 +45,7 @@
               href: enhanced-strong-naming.md
             - name: 作法：參考強式命名的組件
               href: reference-strong-named.md
-            - name: 作法：停用強式名稱略過功能
+            - name: HOW TO：停用強式名稱略過功能
               href: disable-strong-name-bypass-feature.md
         - name: 延遲簽署組件
           href: delay-sign.md
@@ -56,7 +58,7 @@
           items:
             - name: 作法：建立未簽署的 Friend 組件
               href: create-unsigned-friend.md
-            - name: 作法：建立已簽署的 Friend 組件
+            - name: HOW TO：建立已簽署的 Friend 組件
               href: create-signed-friend.md
         - name: 作法：判斷檔案是否為組件
           href: identify.md
