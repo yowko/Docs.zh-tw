@@ -1,15 +1,15 @@
 ---
-title: HOW TO：尋找正前面的同層級 (XPATH-LINQ to XML) (Visual Basic)
+title: 如何：尋找緊接在的正則的兄弟（XPath-LINQ to XML）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: ec046283-9fe2-4440-b295-860bf700099d
-ms.openlocfilehash: ca3602a24b80d9002a639d9a319a731541aeb2df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc54239d2ddaafcc46413ed13c274449daaba0c7
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61854993"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320594"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>HOW TO：尋找正前面的同層級 (XPATH-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>如何：尋找緊接在的正則的兄弟（XPath-LINQ to XML）（Visual Basic）
 有時候您會想要尋找節點正前面的同層級。 由於前面同層級座標軸的位置性述詞語意 (Semantics) 在 XPath 中與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 相反的這個差異，這是其中一個更有趣的比較。  
   
 ## <a name="example"></a>範例  
@@ -43,11 +43,11 @@ Console.WriteLine(el1)
   
  這個範例會產生下列輸出：  
   
-```  
+```console
 Results are identical  
 <Child3 />  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [LINQ to XML (Visual Basic) 的 XPath 使用者適用的](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 使用者的 LINQ to XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

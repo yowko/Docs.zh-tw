@@ -1,25 +1,25 @@
 ---
-title: HOW TO：從 Office Open XML 文件 (Visual Basic) 擷取段落
+title: 如何：從 Office Open XML 檔取出段落（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-ms.openlocfilehash: 325f0d981c4988379938385fbfff5d36d0f5bff8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42b6779fd3f9254fb1d57c44282809de462078db
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054467"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320447"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>HOW TO：從 Office Open XML 文件 (Visual Basic) 擷取段落
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>如何：從 Office Open XML 檔取出段落（Visual Basic）
 本主題顯示的範例可開啟 Office Open XML 文件，並在文件中擷取所有段落的集合。  
   
- 如需有關 Office Open XML 的詳細資訊，請參閱 < [Eric White 部落格](http://www.ericwhite.com)。  
+ 如需 Office Open XML 的詳細資訊，請參閱[Eric 白的 Blog](http://www.ericwhite.com)。  
   
 ## <a name="example"></a>範例  
  此範例會開啟 Office Open XML 封裝，並使用 Open XML 封裝內的關聯性來尋找文件與樣式部分。 接著，它會查詢文件，投影包含段落 <xref:System.Xml.Linq.XElement> 節點、每個段落之樣式名稱，以及每個段落之文字的匿名型別結合。  
   
  此範例會使用名稱為 `StringConcatenate` 的擴充方法，這個方法也隨附的範例中。  
   
- 說明此範例中的運作方式的詳細教學課程，請參閱[純功能性轉換的 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)。  
+ 如需說明此範例如何運作的詳細教學課程，請參閱[XML 的純功能性轉換（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)。  
   
  這個範例會使用在 WindowsBase 組件中找到的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。  
   
@@ -152,9 +152,9 @@ Module Module1
 End Module  
 ```  
   
- 當執行中所述的範例 Open XML 文件[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)，此範例會產生下列輸出：  
+ 當以[建立來源 Office OPEN Xml 檔（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)中所述的範例 Open xml 檔執行時，此範例會產生下列輸出：  
   
-```  
+```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  
@@ -172,6 +172,6 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [進階查詢技術 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [先進的查詢技術（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

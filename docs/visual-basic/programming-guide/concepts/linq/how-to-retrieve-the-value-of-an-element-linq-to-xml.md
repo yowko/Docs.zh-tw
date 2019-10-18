@@ -1,15 +1,15 @@
 ---
-title: HOW TO：擷取值的項目 (LINQ to XML) (Visual Basic)
+title: 如何：取出元素的值（LINQ to XML）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-ms.openlocfilehash: a52ebf437b8c1254b3a8c30558e14a254bb1fe5d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cbeda0b7f4b1c1161b14c0ecf8c0971139405a75
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592484"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320414"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>作法：擷取值的項目 (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>如何：取出元素的值（LINQ to XML）（Visual Basic）
 本主題顯示如何取得項目的值。 以下有兩種主要的方式可達成此目標。 其中一種方式為，將 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 轉型為所需的型別。 然後，明確的轉換運算子會將項目或屬性的內容轉換為指定的型別，並將其指派給您的變數。 或者，您可以使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 屬性。  
   
  使用 Visual Basic 時，最好的方法是使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性。  
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>範例  
- 即使您不確定項目是否存在，您有時候還是會嘗試擷取項目的值。 在此情況下，當您將指派轉換的項目為 null 的類型 (請`string`或其中一個.NET Framework 中可為 null 的型別)，如果項目不存在，被指派變數只會設定為`Nothing`。 下列程式碼顯示，項目可能存在或可能不存在時，使用轉型比使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性更為容易。  
+ 即使您不確定項目是否存在，您有時候還是會嘗試擷取項目的值。 在這個情況下，當您將已轉換項目指派給可為 Null 的型別 (`string` 或 .NET Framework 其中一個可為 Null 的型別) 時，如果項目不存在，則被指派的變數只會設定為 `Nothing`。 下列程式碼顯示，項目可能存在或可能不存在時，使用轉型比使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性更為容易。  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -135,7 +135,7 @@ Console.WriteLine("v4:{0}", IIf(Not (v4.HasValue), "element does not exist", v4)
   
  此程式碼會產生下列輸出：  
   
-```  
+```console  
 c1:child 1 content  
 c2:2  
 c3:element does not exist  
@@ -149,6 +149,6 @@ v4:element does not exist
   
  一般而言，使用轉換擷取元素及屬性內容時，您可以撰寫較簡易的程式碼。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

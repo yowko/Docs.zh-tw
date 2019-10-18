@@ -1,15 +1,15 @@
 ---
-title: HOW TO：尋找根項目 (XPATH-LINQ to XML) (Visual Basic)
+title: 如何：尋找根項目（XPath-LINQ to XML）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 72c3aed5-9522-4454-a876-2070aad13f2e
-ms.openlocfilehash: 0936300a51c697eaff5a1aeafff70e37b04a2a96
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8ac28b698b0c61a4d9e3beea61ff8a8e1074b88
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780454"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320590"
 ---
-# <a name="how-to-find-the-root-element-xpath-linq-to-xml-visual-basic"></a>HOW TO：尋找根項目 (XPATH-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-the-root-element-xpath-linq-to-xml-visual-basic"></a>如何：尋找根項目（XPath-LINQ to XML）（Visual Basic）
 本主題顯示如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 取得根項目。  
   
  XPath 運算式為：  
@@ -19,7 +19,7 @@ ms.locfileid: "61780454"
 ## <a name="example"></a>範例  
  這個範例會尋找根項目。  
   
- 此範例使用下列 XML 文件：[XML 範例檔：多個訂購單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：多份採購單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -40,11 +40,11 @@ Console.WriteLine(el1.Name)
   
  這個範例會產生下列輸出：  
   
-```  
+```console  
 Results are identical  
 PurchaseOrders  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [LINQ to XML (Visual Basic) 的 XPath 使用者適用的](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 使用者的 LINQ to XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

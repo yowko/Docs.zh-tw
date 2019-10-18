@@ -5,24 +5,24 @@ helpviewer_keywords:
 - clients [WCF], building
 - clients [WCF]
 ms.assetid: 28dfff47-d95b-4cc2-9d5c-b3b9ba71fd50
-ms.openlocfilehash: b5661c5aaa08d91c3944c4c108b23b03b012439a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16eaafe6b95b1e5142d055c2c95b52ba27cd2514
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608862"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320743"
 ---
 # <a name="building-clients"></a>建置用戶端
-在本節中的主題將示範如何建立和使用 Windows Communication Foundation (WCF) 用戶端。  
+本節中的主題將示範如何建立和使用 Windows Communication Foundation （WCF）用戶端。  
   
-## <a name="in-this-section"></a>本節內容  
- [WCF 用戶端概觀](../../../docs/framework/wcf/wcf-client-overview.md)  
- 提供 WCF 用戶端和其運作方式的概觀。  
+## <a name="in-this-section"></a>本章節內容  
+ [WCF 用戶端概觀](wcf-client-overview.md)  
+ 提供 WCF 用戶端及其使用方式的總覽。  
   
- [使用 WCF 用戶端存取服務](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- 概述建立 WCF 用戶端物件，用於在用戶端應用程式的基本方法。  
+ [使用 WCF 用戶端存取服務](accessing-services-using-a-wcf-client.md)  
+ 概述建立要在用戶端應用程式中使用之 WCF 用戶端物件的基本方法。  
   
- [保護用戶端安全](../../../docs/framework/wcf/securing-clients.md)  
+ [保護用戶端安全](securing-clients.md)  
  描述如何設定 WCF 用戶端的安全性。  
   
 ## <a name="reference"></a>參考資料  
@@ -41,6 +41,6 @@ ms.locfileid: "61608862"
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
   
 ## <a name="related-sections"></a>相關章節  
- [裝載服務](../../../docs/framework/wcf/hosting-services.md)  
+ [裝載服務](hosting-services.md)  
   
- [設計與實作服務](../../../docs/framework/wcf/designing-and-implementing-services.md)
+ [設計與實作服務](designing-and-implementing-services.md)

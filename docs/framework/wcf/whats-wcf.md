@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 21a01c5d59d30ac89f6baa19dbcdcf718a1b7d88
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 01470bd7f317acca068b3c1be1c751e3050ee7e8
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834856"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320206"
 ---
 # <a name="what-is-windows-communication-foundation"></a>何謂 Windows Communication Foundation
 Windows Communication Foundation （WCF）是用來建立服務導向應用程式的架構。 使用 WCF 時，您可以將資料當做非同步訊息，從一個服務端點傳送到另一個。 服務端點可能是由 IIS 裝載之持續上線服務的一部分，或為應用程式中裝載的服務。 端點則大致是某項服務的用戶端，會向該服務端點要求資料。 訊息可為簡單的單一字元或以 XML 傳送的字組，乃至如二進位資料的資料流這般複雜的形式都沒問題。 其中幾個範例案例包括：
@@ -32,7 +32,7 @@ Windows Communication Foundation （WCF）是用來建立服務導向應用程�
 
 ## <a name="features-of-wcf"></a>WCF 的功能
 
-WCF 包含下列功能集。 如需詳細資訊，請參閱[WCF 功能詳細資料](../../../docs/framework/wcf/feature-details/index.md)。
+WCF 包含下列功能集。 如需詳細資訊，請參閱[WCF 功能詳細資料](./feature-details/index.md)。
 
 - **服務導向**
 
@@ -40,39 +40,39 @@ WCF 包含下列功能集。 如需詳細資訊，請參閱[WCF 功能詳細資�
 
 - **互通性**
 
-     WCF 會針對 Web 服務互通性實行現代化的業界標準。 如需所支援標準的詳細資訊，請參閱[互通性與整合](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)。
+     WCF 會針對 Web 服務互通性實行現代化的業界標準。 如需所支援標準的詳細資訊，請參閱[互通性與整合](./feature-details/interoperability-and-integration.md)。
 
 - **多種訊息模式**
 
-     訊息將以數種模式的其中一種進行交換。 最常見的模式為要求/回覆模式，即某端點向另一端點要求資料， 然後由該另一端點予以回覆。 其他模式還包括單向訊息，則是僅由單一端點傳送訊息，但從不期待會收到回覆。 更複雜的模式為雙工交換模式，其中會由兩個端點建立連線，並相互往返傳送資料，類似立即訊息程式。 如需如何使用 WCF 來執行不同訊息交換模式的詳細資訊，請參閱[合約](../../../docs/framework/wcf/feature-details/contracts.md)。
+     訊息將以數種模式的其中一種進行交換。 最常見的模式為要求/回覆模式，即某端點向另一端點要求資料， 然後由該另一端點予以回覆。 其他模式還包括單向訊息，則是僅由單一端點傳送訊息，但從不期待會收到回覆。 更複雜的模式為雙工交換模式，其中會由兩個端點建立連線，並相互往返傳送資料，類似立即訊息程式。 如需如何使用 WCF 來執行不同訊息交換模式的詳細資訊，請參閱[合約](./feature-details/contracts.md)。
 
 - **服務中繼資料**
 
-     WCF 支援使用業界標準（如 WSDL、XML 架構和 WS 原則）中指定的格式來發行服務中繼資料。 此中繼資料可用於自動產生及設定用戶端，以存取 WCF 服務。 您可以透過 HTTP 及 HTTPS，或者使用 Web 服務中繼資料交換標準來發行中繼資料。 如需詳細資訊，請參閱[中繼資料](../../../docs/framework/wcf/feature-details/metadata.md)。
+     WCF 支援使用業界標準（如 WSDL、XML 架構和 WS 原則）中指定的格式來發行服務中繼資料。 此中繼資料可用於自動產生及設定用戶端，以存取 WCF 服務。 您可以透過 HTTP 及 HTTPS，或者使用 Web 服務中繼資料交換標準來發行中繼資料。 如需詳細資訊，請參閱[中繼資料](./feature-details/metadata.md)。
 
 - **資料合約**
 
      因為 WCF 是使用 .NET Framework 所建立，所以它也包含提供您想要強制執行之合約的程式碼易懂方法。 其中一種通用的合約類型就是資料合約。 基本上，當您使用 Visual C# 或 Visual Basic 撰寫服務程式碼時，處理資料最簡單的做法，就是建立類別，以屬於資料實體的屬性來表示資料實體。 WCF 包含完整的系統，可讓您以這種簡單的方式處理資料。 一旦表示資料的類別已建立，您的服務便會自動產生中繼資料，而讓用戶端能夠遵照您所設計的資料型別。 如需詳細資訊，請參閱[使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。
 
-- **安全性**
+- **Security**
 
-     訊息經過加密後可以保護隱私權，而您也可以要求使用者必須先驗證才能接收訊息。 使用諸如 SSL 或 WS-SecureConversation 等公認的標準即可實作安全性。 如需詳細資訊，請參閱[安全性](../../../docs/framework/wcf/feature-details/security.md)。
+     訊息經過加密後可以保護隱私權，而您也可以要求使用者必須先驗證才能接收訊息。 使用諸如 SSL 或 WS-SecureConversation 等公認的標準即可實作安全性。 如需詳細資訊，請參閱[安全性](./feature-details/security.md)。
 
 - **多重傳輸與編碼**
 
-     訊息可以透過數種內建傳輸通訊協定與編碼的任何方式進行傳送。 最常見的通訊協定和編碼方式，就是使用超文字傳輸通訊協定（HTTP）傳送文字編碼的 SOAP 訊息，以便在萬維網上使用。 或者，WCF 可讓您透過 TCP、具名管道或 MSMQ 來傳送訊息。 這些訊息可編碼為文字，或採用最佳化的二進位格式。  使用 MTOM 標準將能有效傳送二進位資料。 如果所提供的傳輸或編碼都無法滿足您的需求，您還可以建立自己的自訂傳輸或編碼。 如需 WCF 支援的傳輸和編碼的詳細資訊，請參閱[傳輸](../../../docs/framework/wcf/feature-details/transports.md)。
+     訊息可以透過數種內建傳輸通訊協定與編碼的任何方式進行傳送。 最常見的通訊協定和編碼方式，就是使用超文字傳輸通訊協定（HTTP）傳送文字編碼的 SOAP 訊息，以便在萬維網上使用。 或者，WCF 可讓您透過 TCP、具名管道或 MSMQ 來傳送訊息。 這些訊息可編碼為文字，或採用最佳化的二進位格式。  使用 MTOM 標準將能有效傳送二進位資料。 如果所提供的傳輸或編碼都無法滿足您的需求，您還可以建立自己的自訂傳輸或編碼。 如需 WCF 支援的傳輸和編碼的詳細資訊，請參閱[傳輸](./feature-details/transports.md)。
 
 - **可靠的佇列訊息**
 
-     WCF 支援可靠的訊息交換，其使用可靠的會話，並透過 WS-TRUST 訊息和 MSMQ 來執行。 如需 WCF 中可靠和佇列訊息支援的詳細資訊，請參閱[佇列和可靠會話](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。
+     WCF 支援可靠的訊息交換，其使用可靠的會話，並透過 WS-TRUST 訊息和 MSMQ 來執行。 如需 WCF 中可靠和佇列訊息支援的詳細資訊，請參閱[佇列和可靠會話](./feature-details/queues-and-reliable-sessions.md)。
 
 - **永久性的訊息**
 
-     永久性的訊息是指不會因為通訊中斷而遺失的訊息。 處於永久性訊息模式的訊息一律儲存至資料庫。 萬一發生中斷，資料庫可以讓您在恢復連線後繼續進行訊息交換。 您也可以使用 Windows Workflow Foundation （WF）來建立持久的訊息。 如需詳細資訊，請參閱[工作流程服務](../../../docs/framework/wcf/feature-details/workflow-services.md)。
+     永久性的訊息是指不會因為通訊中斷而遺失的訊息。 處於永久性訊息模式的訊息一律儲存至資料庫。 萬一發生中斷，資料庫可以讓您在恢復連線後繼續進行訊息交換。 您也可以使用 Windows Workflow Foundation （WF）來建立持久的訊息。 如需詳細資訊，請參閱[工作流程服務](./feature-details/workflow-services.md)。
 
 - **異動**
 
-     WCF 也支援使用下列三種交易模型之一的交易：AtomicTransactions、@no__t 0 命名空間中的 Api，以及 Microsoft 分散式交易協調器。 如需 WCF 中交易支援的詳細資訊，請參閱[交易](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)。
+     WCF 也支援使用下列三種交易模型之一的交易： AtomicTransactions、<xref:System.Transactions> 命名空間中的 Api，以及 Microsoft 分散式交易協調器。 如需 WCF 中交易支援的詳細資訊，請參閱[交易](./feature-details/transactions-in-wcf.md)。
 
 - **AJAX 與 REST 支援**
 
@@ -80,7 +80,7 @@ WCF 包含下列功能集。 如需詳細資訊，請參閱[WCF 功能詳細資�
 
 - **擴充性**
 
-     WCF 架構具有許多擴充點。 如果需要額外的功能，有數個進入點可讓您自訂服務的行為。 如需可用擴充點的詳細資訊，請參閱[延伸 WCF](../../../docs/framework/wcf/extending/index.md)。
+     WCF 架構具有許多擴充點。 如果需要額外的功能，有數個進入點可讓您自訂服務的行為。 如需可用擴充點的詳細資訊，請參閱[延伸 WCF](./extending/index.md)。
 
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>WCF 與其他 Microsoft 技術的整合
 
@@ -94,13 +94,13 @@ Microsoft Silverlight 為可供建立高互通性多樣化 Web 應用程式的�
 
 Windows Server AppFabric 應用程式伺服器的裝載功能是特別設計來部署和管理使用 WCF 進行通訊的應用程式。 裝載功能包括專為啟用 WCF 之應用程式設計的豐富工具和設定選項。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel>
-- [Windows Communication Foundation 的基本概念](../../../docs/framework/wcf/fundamental-concepts.md)
-- [Windows Communication Foundation 架構](../../../docs/framework/wcf/architecture.md)
-- [方針及最佳做法](../../../docs/framework/wcf/guidelines-and-best-practices.md)
-- [快速入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)
-- [文件指南](../../../docs/framework/wcf/guide-to-the-documentation.md)
-- [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Windows Communication Foundation 的基本概念](fundamental-concepts.md)
+- [Windows Communication Foundation 架構](architecture.md)
+- [方針及最佳做法](guidelines-and-best-practices.md)
+- [快速入門教學課程](getting-started-tutorial.md)
+- [文件指南](guide-to-the-documentation.md)
+- [基本 WCF 程式設計](basic-wcf-programming.md)
 - [Windows Communication Foundation 範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751514%28v=vs.90%29)

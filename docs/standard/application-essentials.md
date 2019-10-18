@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f05f66af71b86ccaefe19c0ddce2bfe7572f1084
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d993042cbb435826b92bbcc62f1320a310a02627
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567571"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320011"
 ---
 # <a name="net-framework-application-essentials"></a>.NET Framework 應用程式基本概念
 這部分的 .NET Framework 說明文件提供 .NET Framework 中基本應用程式開發工作的相關資訊。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [基底類型](../../docs/standard/base-types/index.md)  
  討論如何格式化和剖析基底資料類型，以及使用規則運算式來處理文字。  
   
@@ -54,8 +54,7 @@ ms.locfileid: "33567571"
  [全球化和當地語系化](../../docs/standard/globalization-localization/index.md)  
  提供資訊以協助您設計及開發全球化整備應用程式。  
   
- 協助工具選項  
- 提供 Microsoft UI 自動化的相關資訊，這是一種存取範圍架構，可讓您以程式設計方式存取使用者介面 (UI) 的相關資訊，以滿足輔助性技術產品和自動化測試架構的需求。  
+ [協助工具](../../docs/framework/ui-automation/index.md)提供 Microsoft 使用者介面自動化的相關資訊，這是一個協助工具架構，可提供以程式設計方式存取使用者介面（UI）的相關資訊，滿足輔助技術產品和自動化測試架構的需求。  
   
  [屬性](../../docs/standard/attributes/index.md)  
  說明如何使用屬性來自訂中繼資料。  
@@ -67,5 +66,5 @@ ms.locfileid: "33567571"
  [開發指南](../../docs/framework/development-guide.md)  
  提供應用程式開發所有主要技術領域和工作的指引，包括建立、設定、偵錯、保護及部署您的應用程式，以及有關動態程式設計、互通性、擴充性、記憶體管理和執行緒的資訊。  
   
- [安全性](../../docs/standard/security/index.md)  
+ [Security](../../docs/standard/security/index.md)  
  提供通用語言執行平台和 .NET Framework 中，可加強應用程式開發安全性的類別和服務相關資訊。

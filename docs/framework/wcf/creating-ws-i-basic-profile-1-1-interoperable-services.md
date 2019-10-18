@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-ms.openlocfilehash: 06a59c7457c0367d421cb46e33cb67f8fa039c7d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: eb1cd12c45a276d5c3cb14f89205fff618121abc
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879188"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320134"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>建立 WS-I Basic Profile 1.1 互通服務
-若要設定為與 ASP.NET Web 服務用戶端互通的 WCF 服務端點：  
+若要將 WCF 服務端點設定為可與 ASP.NET Web 服務用戶端互通：  
   
 - 使用 <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> 型別作為服務端點的繫結型別。  
   
@@ -29,18 +29,18 @@ ms.locfileid: "65879188"
   
 - <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> 值所控制的訊息安全性，提供符合 WS-I Basic Security Profile 1.0 的 WS-Security 支援。 將此屬性保留為預設值，也就是 <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType> 不使用 WS-Security。  
   
- 若要將 WCF 服務的中繼資料提供給 ASP.NET，使用 Web 服務用戶端產生工具：[Web 服務描述語言工具 (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6%28v=vs.100%29)， [Web 服務探索工具 (Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs%28v=vs.100%29)，和`Add Web Reference`功能在 Visual Studio 中，您必須啟用發行中繼資料。 如需詳細資訊，請參閱 <<c0> [ 發行中繼資料端點](../../../docs/framework/wcf/publishing-metadata-endpoints.md)。  
+ 若要讓 WCF 服務的中繼資料可供 ASP.NET，請使用 Web 服務用戶端產生工具： [web 服務描述語言工具（wsdl.exe）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6%28v=vs.100%29)、 [Web 服務探索工具（Disco）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs%28v=vs.100%29)和 Visual Studio 中的 `Add Web Reference` 功能;您必須啟用中繼資料發行。 如需詳細資訊，請參閱[發行中繼資料端點](publishing-metadata-endpoints.md)。  
   
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 下列程式碼範例示範如何新增適用於 ASP.NET Web 服務用戶端程式碼中，或者，在組態檔中的 WCF 端點。  
+ 下列範例程式碼示範如何在程式碼中新增與 ASP.NET Web 服務用戶端相容的 WCF 端點，或者在設定檔中加入。  
   
 ### <a name="code"></a>程式碼  
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)]
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)]  
  [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [與 ASP.NET Web 服務的互通性](../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)
+- [與 ASP.NET Web 服務的互通性](./feature-details/interop-with-aspnet-web-services.md)

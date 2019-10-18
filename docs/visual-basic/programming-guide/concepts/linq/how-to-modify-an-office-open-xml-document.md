@@ -1,18 +1,18 @@
 ---
-title: HOW TO：修改 Office Open XML 文件 (Visual Basic)
+title: 如何：修改 Office Open XML 檔（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: 5ec5451112855b687abded3ec64dda18423881f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0eb8704608fa7d529b32e44e754c0274d7a67b1d
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942554"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319952"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>HOW TO：修改 Office Open XML 文件 (Visual Basic)
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>如何：修改 Office Open XML 檔（Visual Basic）
 這個主題顯示會開啟、修改以及儲存 Office Open XML 文件的範例。  
   
- 如需有關 Office Open XML 的詳細資訊，請參閱 < [Eric White 部落格](http://www.ericwhite.com)。  
+ 如需 Office Open XML 的詳細資訊，請參閱[Eric 白的 Blog](http://www.ericwhite.com)。  
   
 ## <a name="example"></a>範例  
  這個範例會尋找文件中的第一個段落元件。 它會從段落擷取文字，然後刪除段落中的所有文字執行。 它所建立的新文字執行包含已轉換為大寫的第一個段落文字。 接著，它會將變更的 XML 序列化為 Open XML 封裝並加以關閉。  
@@ -137,12 +137,12 @@ End Module
   
  如果您在執行此程式後開啟 `SampleDoc.docx`，就可以看到此程式已將文件中第一個段落轉換成大寫。  
   
- 當執行中所述的範例 Open XML 文件[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)，此範例會產生下列輸出：  
+ 當以[建立來源 Office OPEN Xml 檔（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)中所述的範例 Open xml 檔執行時，此範例會產生下列輸出：  
   
-```  
+```console  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [進階查詢技術 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [先進的查詢技術（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

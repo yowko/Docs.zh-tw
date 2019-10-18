@@ -1,15 +1,15 @@
 ---
-title: HOW TO：列出樹狀結構 (Visual Basic) 中的所有節點
+title: 如何：列出樹狀結構中的所有節點（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-ms.openlocfilehash: 6576beaaed00905ce7a09f338251934ea375cb7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c736f7e3a92e8aa92ac91ef4c32141128eff5db
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021618"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320543"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>HOW TO：列出樹狀結構 (Visual Basic) 中的所有節點
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>如何：列出樹狀結構中的所有節點（Visual Basic）
 列出樹狀中的所有節點有時候很有幫助。 這在精確了解方法或屬性如何影響樹狀結構時相當實用。 以文字格式列出所有節點的其中一個方法為產生正確而且明確識別樹狀結構中任何節點的 XPath 運算式。  
   
  若是使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 執行 XPath 運算式，則不會特別有幫助。 XPath 運算式的效能比 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的效能差，而且 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的功能更為強大。 不過，若是要識別 XML 樹狀中的節點，XPath 就非常適合。  
@@ -39,7 +39,7 @@ ms.locfileid: "62021618"
   
  下列為上述 XML 樹狀結構中的節點清單，以 XPath 運算式表示：  
   
-```  
+```console
 /processing-instruction()  
 /Root  
 /Root/@AttName  
@@ -263,6 +263,6 @@ End Module
 /Root/aw:ElementInNamespace/aw:ChildInNamespace  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [進階查詢技術 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [先進的查詢技術（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

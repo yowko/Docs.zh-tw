@@ -7,26 +7,26 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 0b0c22737e9407ebe2cb56c15fb7ff75d16b50a4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bf6bfb10123223bf689945ef93ff09219a68092c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040314"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319919"
 ---
 # <a name="endpoint-creation-overview"></a>端點建立概觀
 
-所有與 Windows Communication Foundation (WCF) 服務的通訊都是透過服務的*端點*進行。 端點可讓用戶端存取 WCF 服務所提供的功能。 本章節說明端點的結構，並且摘要說明如何透過組態與程式碼來定義端點。
+所有與 Windows Communication Foundation （WCF）服務的通訊都是透過服務的*端點*進行。 端點可讓用戶端存取 WCF 服務所提供的功能。 本章節說明端點的結構，並且摘要說明如何透過組態與程式碼來定義端點。
 
 ## <a name="the-structure-of-an-endpoint"></a>端點結構
 
 每個端點都包含一個位址用以指出該到何處尋找端點、一個指定用戶端與端點如何進行通訊的繫結，以及一個可識別可用方法的合約。
 
-- **位址**。 位址會唯一識別端點並告訴潛在取用者服務的位置。 它在 WCF 物件模型<xref:System.ServiceModel.EndpointAddress>中是以位址表示, 其中包含統一資源識別元 (URI) 和位址屬性, 其中包括身分識別、某些 Web 服務描述語言 (WSDL) 元素, 以及選擇性的集合標題. 選用標頭會提供額外的詳細位址資訊來識別端點或與端點互動。 如需詳細資訊, 請參閱[指定端點位址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。
+- **位址**。 位址會唯一識別端點並告訴潛在取用者服務的位置。 它在 WCF 物件模型中是以 <xref:System.ServiceModel.EndpointAddress> 位址表示，其中包含統一資源識別元（URI）和位址屬性，其中包括身分識別、某些 Web 服務描述語言（WSDL）元素，以及選擇性標頭的集合。 選用標頭會提供額外的詳細位址資訊來識別端點或與端點互動。 如需詳細資訊，請參閱[指定端點位址](specifying-an-endpoint-address.md)。
 
-- **Binding**。 繫結會指定與端點的通訊方式。 繫結程序會指定端點與世界的通訊方式，包括要使用的傳輸通訊協定 (例如，TCP 或 HTTP)、訊息使用的編碼 (例如，文字或二進位)，以及必要的安全性要求有哪些 (例如，Secure Sockets Layer [SSL] 或 SOAP 訊息安全性)。 如需詳細資訊, 請參閱使用系結[來設定服務和用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。
+- **Binding**。 繫結會指定與端點的通訊方式。 繫結程序會指定端點與世界的通訊方式，包括要使用的傳輸通訊協定 (例如，TCP 或 HTTP)、訊息使用的編碼 (例如，文字或二進位)，以及必要的安全性要求有哪些 (例如，Secure Sockets Layer [SSL] 或 SOAP 訊息安全性)。 如需詳細資訊，請參閱使用系結[來設定服務和用戶端](using-bindings-to-configure-services-and-clients.md)。
 
-- **服務合約**。 服務合約會概略說明端點公開哪些功能給用戶端。 合約指定了用戶端可以呼叫的作業、訊息格式與輸入參數型別或是呼叫作業時必要的資料，以及用戶端能夠預期的處理或回應訊息類型。 三種基本合約型別都對應至基本的訊息交換模式 (MEP)：資料包 (單向)、要求/回覆，與雙工 (雙向)。 當服務合約遭到存取，也能使用資料與訊息合約來要求特定資料類型與訊息格式。 如需如何定義服務合約的詳細資訊, 請參閱[設計服務](../../../docs/framework/wcf/designing-service-contracts.md)合約。 請注意，用戶端可能也會被要求實作服務定義合約 (稱為回呼合約)，以便在雙工 MEP 中從服務接收訊息。 如需詳細資訊, 請參閱[雙工服務](../../../docs/framework/wcf/feature-details/duplex-services.md)。
+- **服務合約**。 服務合約會概略說明端點公開哪些功能給用戶端。 合約指定了用戶端可以呼叫的作業、訊息格式與輸入參數型別或是呼叫作業時必要的資料，以及用戶端能夠預期的處理或回應訊息類型。 三種基本合約型別都對應至基本的訊息交換模式 (MEP)：資料包 (單向)、要求/回覆，與雙工 (雙向)。 當服務合約遭到存取，也能使用資料與訊息合約來要求特定資料類型與訊息格式。 如需如何定義服務合約的詳細資訊，請參閱[設計服務](designing-service-contracts.md)合約。 請注意，用戶端可能也會被要求實作服務定義合約 (稱為回呼合約)，以便在雙工 MEP 中從服務接收訊息。 如需詳細資訊，請參閱[雙工服務](./feature-details/duplex-services.md)。
 
 您可以透過命令式程式碼或是宣告式組態來指定服務端點。 如果沒有指定端點，則執行階段會針對服務所實作的每個服務合約，為每個基底位址加入一個預設端點，藉以提供預設端點。 在程式碼中定義端點通常不太實用，因為部署之服務的繫結和位址通常與開發服務時所使用的繫結和位址不同。 一般來說，透過組態來定義服務端點會比透過程式碼來得實際一些。 將繫結和位址資訊留在程式碼外面可讓它們直接進行變更，而不需要重新編譯或重新部署應用程式。
 
@@ -37,11 +37,11 @@ ms.locfileid: "70040314"
 
 下列範例將說明如何使用下列各項在程式碼中指定端點：
 
-- 定義服務`IEcho`類型的合約, 以接受具有回應 "Hello \<name >!" 的某人名稱和 echo。
+- 定義 `IEcho` 類型服務的合約，以接受具有回應 "Hello \<name >！" 的某人名稱和 echo。
 
 - 實作由 `Echo` 合約定義的 `IEcho` 服務型別。
 
-- 指定服務的端點位址`http://localhost:8000/Echo` 。
+- 指定服務 `http://localhost:8000/Echo` 的端點位址。
 
 - 使用 `Echo` 繫結來設定 <xref:System.ServiceModel.WSHttpBinding> 服務。
 
@@ -133,10 +133,10 @@ serviceHost.Open()
 
 ## <a name="defining-endpoints-in-configuration"></a>在組態中定義端點
 
-建立應用程式時，您經常會想要延遲負責部署應用程式之系統管理員的決定。 例如，經常無法預先得知服務位址 (URI) 會是怎樣。 這時候，為位址進行硬式編碼並不是理想的作法，較好的作法是讓系統管理員在建立服務後再處理。 這樣的靈活性是透過組態達成。 如需詳細資訊, 請參閱設定[服務](../../../docs/framework/wcf/configuring-services.md)。
+建立應用程式時，您經常會想要延遲負責部署應用程式之系統管理員的決定。 例如，經常無法預先得知服務位址 (URI) 會是怎樣。 這時候，為位址進行硬式編碼並不是理想的作法，較好的作法是讓系統管理員在建立服務後再處理。 這樣的靈活性是透過組態達成。 如需詳細資訊，請參閱設定[服務](configuring-services.md)。
 
 > [!NOTE]
-> 使用[system.servicemodel 中繼資料公用程式工具 (Svcutil)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) `/config:`搭配*檔案名*`[,` *filename* `]`參數, 以快速建立設定檔。
+> 使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](servicemodel-metadata-utility-tool-svcutil-exe.md)搭配 `/config:`*filename* `[,`*filename* `]` 參數，以快速建立設定檔。
 
 ## <a name="using-default-endpoints"></a>使用預設端點
 
@@ -201,8 +201,8 @@ Dim echoUri As Uri = New Uri("http://localhost:8000/")
 serviceHost.Open()
 ```
 
- 如果沒有明確提供端點，在呼叫 <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> 之前，仍可藉由在 <xref:System.ServiceModel.ServiceHost> 上呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 來加入預設端點。 如需預設端點的詳細資訊, 請參閱[簡化](../../../docs/framework/wcf/simplified-configuration.md)的設定和[WCF 服務的簡化](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)設定。
+ 如果沒有明確提供端點，在呼叫 <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> 之前，仍可藉由在 <xref:System.ServiceModel.ServiceHost> 上呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 來加入預設端點。 如需預設端點的詳細資訊，請參閱[簡化](simplified-configuration.md)的設定和[WCF 服務的簡化](./samples/simplified-configuration-for-wcf-services.md)設定。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [履行服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [履行服務合約](implementing-service-contracts.md)

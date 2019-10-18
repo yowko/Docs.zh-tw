@@ -8,15 +8,15 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: 37ded0aad547df616d2b8b73e7cb145514da080d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 840d26e4543d2c90c99ebba05b5bca7a48cbdeda
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972360"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320038"
 ---
 # <a name="defining-and-specifying-faults"></a>定義並指定錯誤
-SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案例中，則是以互通的方式從用戶端傳送到服務。 本主題討論何時及如何定義自訂錯誤內容，並指定可以傳回它們的作業。 如需服務或雙工用戶端如何傳送這些錯誤，以及用戶端或服務應用程式如何處理這些錯誤的詳細資訊，請參閱傳送[和接收錯誤](../../../docs/framework/wcf/sending-and-receiving-faults.md)。 如需 Windows Communication Foundation （WCF）應用程式中錯誤處理的總覽，請參閱[指定和處理合約和服務中](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)的錯誤。  
+SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案例中，則是以互通的方式從用戶端傳送到服務。 本主題討論何時及如何定義自訂錯誤內容，並指定可以傳回它們的作業。 如需服務或雙工用戶端如何傳送這些錯誤，以及用戶端或服務應用程式如何處理這些錯誤的詳細資訊，請參閱傳送[和接收錯誤](sending-and-receiving-faults.md)。 如需 Windows Communication Foundation （WCF）應用程式中錯誤處理的總覽，請參閱[指定和處理合約和服務中](specifying-and-handling-faults-in-contracts-and-services.md)的錯誤。  
   
 ## <a name="overview"></a>總覽  
  已宣告的 SOAP 錯誤是其中作業具有指定自訂 SOAP 錯誤類型之 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>的 SOAP 錯誤。 未宣告的 SOAP 錯誤則是在作業的合約中未指定的 SOAP 錯誤。 本主題將協助您識別這些錯誤狀況，並為您的服務建立錯誤合約，讓用戶端在收到自訂 SOAP 錯誤的通知時，可以用於正確處理這些錯誤狀況。 基本的工作依序為：  
@@ -64,7 +64,7 @@ End Class
  [!code-csharp[Faults#2](../../../samples/snippets/csharp/VS_Snippets_CFX/faults/cs/service.cs#2)]
  [!code-vb[Faults#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faults/vb/service.vb#2)]  
   
- 如需如何確保您的資料可序列化的詳細資訊，請參閱[在服務合約中指定資料傳輸](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。 如需所<xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>提供之序列化支援的清單，請參閱[資料合約序列化程式支援的類型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
+ 如需如何確保您的資料可序列化的詳細資訊，請參閱[在服務合約中指定資料傳輸](./feature-details/specifying-data-transfer-in-service-contracts.md)。 如需 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 所提供之序列化支援的清單，請參閱[資料合約序列化程式支援的類型](./feature-details/types-supported-by-the-data-contract-serializer.md)。  
   
 ### <a name="mark-operations-to-establish-the-fault-contract"></a>標示作業以建立錯誤合約  
  在定義傳回做為自訂 SOAP 錯誤一部分的可序列化資料之後，最後一個步驟就是將您的作業合約標示為擲回該類型的 SOAP 錯誤。 如果要執行這項操作，請使用 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> 屬性，並傳遞您所建構之自訂資料型別的型別。 下列程式碼範例將示範如何使用 <xref:System.ServiceModel.FaultContractAttribute> 屬性來指定 `Divide` 作業可以傳回型別 `MathFault` 的 SOAP 錯誤。 其他以數學為基礎的作業現在也可以指定它們可以傳回 `MathFault`。  
@@ -74,7 +74,7 @@ End Class
   
  作業可以使用一個以上的 <xref:System.ServiceModel.FaultContractAttribute> 屬性來標示該作業，以指定傳回一個以上的自訂錯誤。  
   
- 下一步，若要在您的作業執行中執行錯誤合約，請參閱傳送[和接收錯誤](../../../docs/framework/wcf/sending-and-receiving-faults.md)主題。  
+ 下一步，若要在您的作業執行中執行錯誤合約，請參閱傳送[和接收錯誤](sending-and-receiving-faults.md)主題。  
   
 #### <a name="soap-wsdl-and-interoperability-considerations"></a>SOAP、WSDL 和互通性考量  
  在某些情況中，特別是在與其他平台互通時，控制錯誤在 SOAP 訊息中出現的方式或在 WSDL 中繼資料中描述的方式可能會很重要。  
@@ -85,14 +85,14 @@ End Class
   
  當存取產生錯誤的非服務時，會有特定限制。 WCF 僅支援架構所描述且與資料合約相容之詳細類型的錯誤。 例如，如上所述，WCF 不支援在其詳細資料類型中使用 XML 屬性的錯誤，或在詳細資料區段中具有多個最上層元素的錯誤。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [指定及處理合約與服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
-- [傳送及接收錯誤](../../../docs/framework/wcf/sending-and-receiving-faults.md)
-- [如何：在服務合約中宣告錯誤](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
-- [了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)
-- [如何：設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [指定服務合約中的資料傳輸](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [指定及處理合約與服務中的錯誤](specifying-and-handling-faults-in-contracts-and-services.md)
+- [傳送及接收錯誤](sending-and-receiving-faults.md)
+- [如何：在服務合約中宣告錯誤](how-to-declare-faults-in-service-contracts.md)
+- [了解保護層級](understanding-protection-level.md)
+- [如何：設定 ProtectionLevel 屬性](how-to-set-the-protectionlevel-property.md)
+- [指定服務合約中的資料傳輸](./feature-details/specifying-data-transfer-in-service-contracts.md)
