@@ -1,65 +1,67 @@
 ---
-title: 作法：計數的某個字在字串 (LINQ) (Visual Basic) 中的項目
+title: 如何：計算某個單字在字串中出現的次數（LINQ）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-ms.openlocfilehash: 2292b0b943eefb5e837256f273db73699de30a2d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3a2ae52a3380e4a0d8df4adb580e84362e3f13f3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593224"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524159"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a><span data-ttu-id="0a650-102">HOW TO：計數的某個字在字串 (LINQ) (Visual Basic) 中的項目</span><span class="sxs-lookup"><span data-stu-id="0a650-102">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="0a650-103">本例示範如何使用 LINQ 查詢計算字串中指定單字的出現次數。</span><span class="sxs-lookup"><span data-stu-id="0a650-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="0a650-104">請注意，執行計數要先呼叫 <xref:System.String.Split%2A> 方法來建立文字陣列。</span><span class="sxs-lookup"><span data-stu-id="0a650-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="0a650-105"><xref:System.String.Split%2A> 方法有效能成本。</span><span class="sxs-lookup"><span data-stu-id="0a650-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="0a650-106">如果字串上唯一的作業是計算字數，您應該考慮改用 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 或 <xref:System.String.IndexOf%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="0a650-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="0a650-107">不過，如果效能不是重要的問題，或您已分割句子對它執行其他類型的查詢，則使用 LINQ 計算單字或詞組才有意義。</span><span class="sxs-lookup"><span data-stu-id="0a650-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="0a650-108">範例</span><span class="sxs-lookup"><span data-stu-id="0a650-108">Example</span></span>  
-  
-```vb  
-Class CountWords  
-  
-    Shared Sub Main()  
-  
-        Dim text As String = "Historically, the world of data and the world of objects" &   
-                  " have not been well integrated. Programmers work in C# or Visual Basic" &   
-                  " and also in SQL or XQuery. On the one side are concepts such as classes," &   
-                  " objects, fields, inheritance, and .NET Framework APIs. On the other side" &   
-                  " are tables, columns, rows, nodes, and separate languages for dealing with" &   
-                  " them. Data types often require translation between the two worlds; there are" &   
-                  " different standard functions. Because the object world has no notion of query, a" &   
-                  " query can only be represented as a string without compile-time type checking or" &   
-                  " IntelliSense support in the IDE. Transferring data from SQL tables or XML trees to" &   
-                  " objects in memory is often tedious and error-prone."  
-  
-        Dim searchTerm As String = "data"  
-  
-        ' Convert the string into an array of words.  
-        Dim dataSource As String() = text.Split(New Char() {" ", ",", ".", ";", ":"},   
-                                                 StringSplitOptions.RemoveEmptyEntries)  
-  
-        ' Create and execute the query. It executes immediately   
-        ' because a singleton value is produced.  
-        ' Use ToLower to match "data" and "Data"   
-        Dim matchQuery = From word In dataSource   
-                      Where word.ToLowerInvariant() = searchTerm.ToLowerInvariant()   
-                      Select word  
-  
-        ' Count the matches.  
-        Dim count As Integer = matchQuery.Count()  
-        Console.WriteLine(count & " occurrence(s) of the search term """ &   
-                          searchTerm & """ were found.")  
-  
-        ' Keep console window open in debug mode.  
-        Console.WriteLine("Press any key to exit.")  
-        Console.ReadKey()  
-    End Sub  
-End Class  
-' Output:  
-' 3 occurrence(s) of the search term "data" were found.  
-```  
-  
-## <a name="compiling-the-code"></a><span data-ttu-id="0a650-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="0a650-109">Compiling the Code</span></span>  
-<span data-ttu-id="0a650-110">建立 VB.NET 的主控台應用程式專案，使用`Imports`System.Linq 命名空間陳述式。</span><span class="sxs-lookup"><span data-stu-id="0a650-110">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
-  
-## <a name="see-also"></a><span data-ttu-id="0a650-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0a650-111">See also</span></span>
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a><span data-ttu-id="82512-102">如何：計算某個單字在字串中出現的次數（LINQ）（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="82512-102">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>
 
-- [<span data-ttu-id="0a650-112">LINQ 和字串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a650-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+<span data-ttu-id="82512-103">本例示範如何使用 LINQ 查詢計算字串中指定單字的出現次數。</span><span class="sxs-lookup"><span data-stu-id="82512-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="82512-104">請注意，執行計數要先呼叫 <xref:System.String.Split%2A> 方法來建立文字陣列。</span><span class="sxs-lookup"><span data-stu-id="82512-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="82512-105"><xref:System.String.Split%2A> 方法有效能成本。</span><span class="sxs-lookup"><span data-stu-id="82512-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="82512-106">如果字串上唯一的作業是計算字數，您應該考慮改用 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 或 <xref:System.String.IndexOf%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="82512-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="82512-107">不過，如果效能不是重要的問題，或您已分割句子對它執行其他類型的查詢，則使用 LINQ 計算單字或詞組才有意義。</span><span class="sxs-lookup"><span data-stu-id="82512-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>
+
+## <a name="example"></a><span data-ttu-id="82512-108">範例</span><span class="sxs-lookup"><span data-stu-id="82512-108">Example</span></span>
+
+```vb
+Class CountWords
+
+    Shared Sub Main()
+
+        Dim text As String = "Historically, the world of data and the world of objects" &
+                  " have not been well integrated. Programmers work in C# or Visual Basic" &
+                  " and also in SQL or XQuery. On the one side are concepts such as classes," &
+                  " objects, fields, inheritance, and .NET Framework APIs. On the other side" &
+                  " are tables, columns, rows, nodes, and separate languages for dealing with" &
+                  " them. Data types often require translation between the two worlds; there are" &
+                  " different standard functions. Because the object world has no notion of query, a" &
+                  " query can only be represented as a string without compile-time type checking or" &
+                  " IntelliSense support in the IDE. Transferring data from SQL tables or XML trees to" &
+                  " objects in memory is often tedious and error-prone."
+
+        Dim searchTerm As String = "data"
+
+        ' Convert the string into an array of words.
+        Dim dataSource As String() = text.Split(New Char() {" ", ",", ".", ";", ":"},
+                                                 StringSplitOptions.RemoveEmptyEntries)
+
+        ' Create and execute the query. It executes immediately
+        ' because a singleton value is produced.
+        ' Use ToLower to match "data" and "Data"
+        Dim matchQuery = From word In dataSource
+                      Where word.ToLowerInvariant() = searchTerm.ToLowerInvariant()
+                      Select word
+
+        ' Count the matches.
+        Dim count As Integer = matchQuery.Count()
+        Console.WriteLine(count & " occurrence(s) of the search term """ &
+                          searchTerm & """ were found.")
+
+        ' Keep console window open in debug mode.
+        Console.WriteLine("Press any key to exit.")
+        Console.ReadKey()
+    End Sub
+End Class
+' Output:
+' 3 occurrence(s) of the search term "data" were found.
+```
+
+## <a name="compiling-the-code"></a><span data-ttu-id="82512-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="82512-109">Compiling the Code</span></span>
+
+<span data-ttu-id="82512-110">建立 VB.NET 主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。</span><span class="sxs-lookup"><span data-stu-id="82512-110">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="82512-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="82512-111">See also</span></span>
+
+- [<span data-ttu-id="82512-112">LINQ 和字串（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="82512-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
