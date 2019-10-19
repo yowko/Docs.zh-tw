@@ -1,59 +1,70 @@
 ---
 title: using 陳述式 - C# 參考
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 10/15/2019
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: e1a1a960fa69be593ea01cab51be576b0055fd5e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 7e6d1b663007d430f71f81923f343f1c43f5dd2d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632904"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579173"
 ---
-# <a name="using-statement-c-reference"></a><span data-ttu-id="7c98d-102">using 陳述式 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="7c98d-102">using statement (C# Reference)</span></span>
+# <a name="using-statement-c-reference"></a><span data-ttu-id="c450f-102">using 陳述式 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="c450f-102">using statement (C# Reference)</span></span>
 
-<span data-ttu-id="7c98d-103">提供方便的語法，以確保正確使用 <xref:System.IDisposable> 物件。</span><span class="sxs-lookup"><span data-stu-id="7c98d-103">Provides a convenient syntax that ensures the correct use of <xref:System.IDisposable> objects.</span></span>
+<span data-ttu-id="c450f-103">提供方便的語法，以確保正確使用 <xref:System.IDisposable> 物件。</span><span class="sxs-lookup"><span data-stu-id="c450f-103">Provides a convenient syntax that ensures the correct use of <xref:System.IDisposable> objects.</span></span>
 
-## <a name="example"></a><span data-ttu-id="7c98d-104">範例</span><span class="sxs-lookup"><span data-stu-id="7c98d-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c450f-104">範例</span><span class="sxs-lookup"><span data-stu-id="c450f-104">Example</span></span>
 
-<span data-ttu-id="7c98d-105">下列範例顯示如何使用 `using` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="7c98d-105">The following example shows how to use the `using` statement.</span></span>
+<span data-ttu-id="c450f-105">下列範例顯示如何使用 `using` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="c450f-105">The following example shows how to use the `using` statement.</span></span>
 
 [!code-csharp[csrefKeywordsNamespace#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#4)]
 
-## <a name="remarks"></a><span data-ttu-id="7c98d-106">備註</span><span class="sxs-lookup"><span data-stu-id="7c98d-106">Remarks</span></span>
+<span data-ttu-id="c450f-106">從C# 8.0 開始，您可以針對不需要大括弧的 `using` 語句使用下列替代語法：</span><span class="sxs-lookup"><span data-stu-id="c450f-106">Beginning with C# 8.0, you can use the following alternative syntax for the `using` statement that doesn't require braces:</span></span>
 
-<span data-ttu-id="7c98d-107"><xref:System.IO.File> 和 <xref:System.Drawing.Font> 是 Managed 類型的範例，這些類型會存取 Unmanaged 資源 (在本例中為檔案控制代碼和裝置內容)。</span><span class="sxs-lookup"><span data-stu-id="7c98d-107"><xref:System.IO.File> and <xref:System.Drawing.Font> are examples of managed types that access unmanaged resources (in this case file handles and device contexts).</span></span> <span data-ttu-id="7c98d-108">還有許多其他類型的 Unmanaged 資源，以及封裝這些資源的類別庫類型。</span><span class="sxs-lookup"><span data-stu-id="7c98d-108">There are many other kinds of unmanaged resources and class library types that encapsulate them.</span></span> <span data-ttu-id="7c98d-109">所有這些類型都會實作 <xref:System.IDisposable> 介面。</span><span class="sxs-lookup"><span data-stu-id="7c98d-109">All such types must implement the <xref:System.IDisposable> interface.</span></span>
+[!code-csharp[csrefKeywordsNamespace#New](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#ModernUsing)]
 
-<span data-ttu-id="7c98d-110">當 `IDisposable` 物件的存留期限制為單一方法時，您應該在 `using` 陳述式中宣告它並加以具現化。</span><span class="sxs-lookup"><span data-stu-id="7c98d-110">When the lifetime of an `IDisposable` object is limited to a single method, you should declare and instantiate it in the `using` statement.</span></span> <span data-ttu-id="7c98d-111">`using` 陳述式會以正確的方式呼叫物件上的 <xref:System.IDisposable.Dispose%2A> 方法，而且 (當您如稍早所示使用它時) 它也會在一呼叫 <xref:System.IDisposable.Dispose%2A> 時讓物件本身超出範圍。</span><span class="sxs-lookup"><span data-stu-id="7c98d-111">The `using` statement calls the <xref:System.IDisposable.Dispose%2A> method on the object in the correct way, and (when you use it as shown earlier) it also causes the object itself to go out of scope as soon as <xref:System.IDisposable.Dispose%2A> is called.</span></span> <span data-ttu-id="7c98d-112">在 `using` 區塊內，物件是唯讀的，而且無法加以修改或重新指派。</span><span class="sxs-lookup"><span data-stu-id="7c98d-112">Within the `using` block, the object is read-only and cannot be modified or reassigned.</span></span>
+## <a name="remarks"></a><span data-ttu-id="c450f-107">備註</span><span class="sxs-lookup"><span data-stu-id="c450f-107">Remarks</span></span>
 
-<span data-ttu-id="7c98d-113">`using` 陳述式可確保會呼叫 <xref:System.IDisposable.Dispose%2A>，即使在 `using` 區塊內發生例外狀況也一樣。</span><span class="sxs-lookup"><span data-stu-id="7c98d-113">The `using` statement ensures that <xref:System.IDisposable.Dispose%2A> is called even if an exception occurs within the `using` block.</span></span> <span data-ttu-id="7c98d-114">您可以將物件放在 `try` 區塊內，然後在 `finally` 區塊中呼叫 <xref:System.IDisposable.Dispose%2A>，來達到相同的結果；事實上，這就是編譯器轉譯 `using` 陳述式的方式。</span><span class="sxs-lookup"><span data-stu-id="7c98d-114">You can achieve the same result by putting the object inside a `try` block and then calling <xref:System.IDisposable.Dispose%2A> in a `finally` block; in fact, this is how the `using` statement is translated by the compiler.</span></span> <span data-ttu-id="7c98d-115">稍早的程式碼範例會在編譯時期展開為下列程式碼 (注意額外的大括號是為了建立物件的有限範圍)：</span><span class="sxs-lookup"><span data-stu-id="7c98d-115">The code example earlier expands to the following code at compile time (note the extra curly braces to create the limited scope for the object):</span></span>
+<span data-ttu-id="c450f-108"><xref:System.IO.File> 和 <xref:System.Drawing.Font> 是 Managed 類型的範例，這些類型會存取 Unmanaged 資源 (在本例中為檔案控制代碼和裝置內容)。</span><span class="sxs-lookup"><span data-stu-id="c450f-108"><xref:System.IO.File> and <xref:System.Drawing.Font> are examples of managed types that access unmanaged resources (in this case file handles and device contexts).</span></span> <span data-ttu-id="c450f-109">還有許多其他類型的 Unmanaged 資源，以及封裝這些資源的類別庫類型。</span><span class="sxs-lookup"><span data-stu-id="c450f-109">There are many other kinds of unmanaged resources and class library types that encapsulate them.</span></span> <span data-ttu-id="c450f-110">所有這些類型都會實作 <xref:System.IDisposable> 介面。</span><span class="sxs-lookup"><span data-stu-id="c450f-110">All such types must implement the <xref:System.IDisposable> interface.</span></span>
+
+<span data-ttu-id="c450f-111">當 `IDisposable` 物件的存留期限制為單一方法時，您應該在 `using` 陳述式中宣告它並加以具現化。</span><span class="sxs-lookup"><span data-stu-id="c450f-111">When the lifetime of an `IDisposable` object is limited to a single method, you should declare and instantiate it in the `using` statement.</span></span> <span data-ttu-id="c450f-112">`using` 陳述式會以正確的方式呼叫物件上的 <xref:System.IDisposable.Dispose%2A> 方法，而且 (當您如稍早所示使用它時) 它也會在一呼叫 <xref:System.IDisposable.Dispose%2A> 時讓物件本身超出範圍。</span><span class="sxs-lookup"><span data-stu-id="c450f-112">The `using` statement calls the <xref:System.IDisposable.Dispose%2A> method on the object in the correct way, and (when you use it as shown earlier) it also causes the object itself to go out of scope as soon as <xref:System.IDisposable.Dispose%2A> is called.</span></span> <span data-ttu-id="c450f-113">在 `using` 區塊內，物件是唯讀的，而且無法加以修改或重新指派。</span><span class="sxs-lookup"><span data-stu-id="c450f-113">Within the `using` block, the object is read-only and cannot be modified or reassigned.</span></span>
+
+<span data-ttu-id="c450f-114">`using` 陳述式可確保會呼叫 <xref:System.IDisposable.Dispose%2A>，即使在 `using` 區塊內發生例外狀況也一樣。</span><span class="sxs-lookup"><span data-stu-id="c450f-114">The `using` statement ensures that <xref:System.IDisposable.Dispose%2A> is called even if an exception occurs within the `using` block.</span></span> <span data-ttu-id="c450f-115">您可以將物件放在 `try` 區塊內，然後在 `finally` 區塊中呼叫 <xref:System.IDisposable.Dispose%2A>，來達到相同的結果；事實上，這就是編譯器轉譯 `using` 陳述式的方式。</span><span class="sxs-lookup"><span data-stu-id="c450f-115">You can achieve the same result by putting the object inside a `try` block and then calling <xref:System.IDisposable.Dispose%2A> in a `finally` block; in fact, this is how the `using` statement is translated by the compiler.</span></span> <span data-ttu-id="c450f-116">稍早的程式碼範例會在編譯時期展開為下列程式碼 (注意額外的大括號是為了建立物件的有限範圍)：</span><span class="sxs-lookup"><span data-stu-id="c450f-116">The code example earlier expands to the following code at compile time (note the extra curly braces to create the limited scope for the object):</span></span>
 
 [!code-csharp[csrefKeywordsNamespace#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#5)]
 
-<span data-ttu-id="7c98d-116">如需 `try`-`finally` 陳述式的詳細資訊，請參閱 [try-finally](try-finally.md) 主題。</span><span class="sxs-lookup"><span data-stu-id="7c98d-116">For more information about the `try`-`finally` statement, see the [try-finally](try-finally.md) topic.</span></span>
+<span data-ttu-id="c450f-117">較新的 `using` 語句語法會轉譯成非常類似的程式碼。</span><span class="sxs-lookup"><span data-stu-id="c450f-117">The newer `using` statement syntax translates to very similar code.</span></span> <span data-ttu-id="c450f-118">@No__t_0 區塊會在宣告變數的位置開啟。</span><span class="sxs-lookup"><span data-stu-id="c450f-118">The `try` block opens where the variable is declared.</span></span> <span data-ttu-id="c450f-119">@No__t_0 區塊會在封閉區塊的結尾處新增，通常是在方法的結尾處。</span><span class="sxs-lookup"><span data-stu-id="c450f-119">The `finally` block is added at the close of the enclosing block, typically at the end of a method.</span></span>
 
-<span data-ttu-id="7c98d-117">您可以在 `using` 陳述式中宣告一種類型的多個執行個體，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="7c98d-117">Multiple instances of a type can be declared in the `using` statement, as shown in the following example:</span></span>
+<span data-ttu-id="c450f-120">如需 `try`-`finally` 陳述式的詳細資訊，請參閱 [try-finally](try-finally.md) 主題。</span><span class="sxs-lookup"><span data-stu-id="c450f-120">For more information about the `try`-`finally` statement, see the [try-finally](try-finally.md) topic.</span></span>
+
+<span data-ttu-id="c450f-121">您可以在 `using` 陳述式中宣告一種類型的多個執行個體，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="c450f-121">Multiple instances of a type can be declared in the `using` statement, as shown in the following example:</span></span>
 
 [!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#6)]
 
-<span data-ttu-id="7c98d-118">您可以具現化資源物件，然後將變數傳遞至 `using` 陳述式，但這不是最佳做法。</span><span class="sxs-lookup"><span data-stu-id="7c98d-118">You can instantiate the resource object and then pass the variable to the `using` statement, but this is not a best practice.</span></span> <span data-ttu-id="7c98d-119">在此情況下，控制權離開 `using` 區塊之後，物件仍會留在範圍內，不過它可能無法再存取其非受控資源。</span><span class="sxs-lookup"><span data-stu-id="7c98d-119">In this case, after control leaves the `using` block, the object remains in scope but probably has no access to its unmanaged resources.</span></span> <span data-ttu-id="7c98d-120">換句話說，它不再是完全初始化。</span><span class="sxs-lookup"><span data-stu-id="7c98d-120">In other words, it's not fully initialized anymore.</span></span> <span data-ttu-id="7c98d-121">如果您嘗試在 `using` 區塊外部使用該物件，則會有導致擲回例外狀況的風險。</span><span class="sxs-lookup"><span data-stu-id="7c98d-121">If you try to use the object outside the `using` block, you risk causing an exception to be thrown.</span></span> <span data-ttu-id="7c98d-122">因此，通常最好在 `using` 陳述式中具現化物件，並將其範圍限制為 `using` 區塊。</span><span class="sxs-lookup"><span data-stu-id="7c98d-122">For this reason, it's generally better to instantiate the object in the `using` statement and limit its scope to the `using` block.</span></span>
+<span data-ttu-id="c450f-122">您也可以使用C# 8 引進的新語法，結合相同類型的多個宣告。</span><span class="sxs-lookup"><span data-stu-id="c450f-122">You can combine multiple declarations of the same type using the new syntax introduced with C# 8 as well.</span></span> <span data-ttu-id="c450f-123">下列範例會顯示這一點：</span><span class="sxs-lookup"><span data-stu-id="c450f-123">This is shown in the following example:</span></span>
+
+[!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#MultipleUsing)]
+
+<span data-ttu-id="c450f-124">您可以具現化資源物件，然後將變數傳遞至 `using` 陳述式，但這不是最佳做法。</span><span class="sxs-lookup"><span data-stu-id="c450f-124">You can instantiate the resource object and then pass the variable to the `using` statement, but this is not a best practice.</span></span> <span data-ttu-id="c450f-125">在此情況下，控制權離開 `using` 區塊之後，物件仍會留在範圍內，不過它可能無法再存取其非受控資源。</span><span class="sxs-lookup"><span data-stu-id="c450f-125">In this case, after control leaves the `using` block, the object remains in scope but probably has no access to its unmanaged resources.</span></span> <span data-ttu-id="c450f-126">換句話說，它不再是完全初始化。</span><span class="sxs-lookup"><span data-stu-id="c450f-126">In other words, it's not fully initialized anymore.</span></span> <span data-ttu-id="c450f-127">如果您嘗試在 `using` 區塊外部使用該物件，則會有導致擲回例外狀況的風險。</span><span class="sxs-lookup"><span data-stu-id="c450f-127">If you try to use the object outside the `using` block, you risk causing an exception to be thrown.</span></span> <span data-ttu-id="c450f-128">因此，通常最好在 `using` 陳述式中具現化物件，並將其範圍限制為 `using` 區塊。</span><span class="sxs-lookup"><span data-stu-id="c450f-128">For this reason, it's generally better to instantiate the object in the `using` statement and limit its scope to the `using` block.</span></span>
 
 [!code-csharp[csrefKeywordsNamespace#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#7)]
 
-<span data-ttu-id="7c98d-123">如需處置 `IDisposable` 物件的詳細資訊，請參閱[使用實作 IDisposable 的物件](../../../standard/garbage-collection/using-objects.md)。</span><span class="sxs-lookup"><span data-stu-id="7c98d-123">For more information about disposing of `IDisposable` objects, see [Using objects that implement IDisposable](../../../standard/garbage-collection/using-objects.md).</span></span>
+<span data-ttu-id="c450f-129">如需處置 `IDisposable` 物件的詳細資訊，請參閱[使用實作 IDisposable 的物件](../../../standard/garbage-collection/using-objects.md)。</span><span class="sxs-lookup"><span data-stu-id="c450f-129">For more information about disposing of `IDisposable` objects, see [Using objects that implement IDisposable](../../../standard/garbage-collection/using-objects.md).</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="7c98d-124">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="7c98d-124">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="c450f-130">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="c450f-130">C# language specification</span></span>
 
-<span data-ttu-id="7c98d-125">如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)中的 [using 陳述式](~/_csharplang/spec/statements.md#the-using-statement)。</span><span class="sxs-lookup"><span data-stu-id="7c98d-125">For more information, see [The using statement](~/_csharplang/spec/statements.md#the-using-statement) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="7c98d-126">語言規格是 C# 語法及用法的限定來源。</span><span class="sxs-lookup"><span data-stu-id="7c98d-126">The language specification is the definitive source for C# syntax and usage.</span></span>
+<span data-ttu-id="c450f-131">如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)中的 [using 陳述式](~/_csharplang/spec/statements.md#the-using-statement)。</span><span class="sxs-lookup"><span data-stu-id="c450f-131">For more information, see [The using statement](~/_csharplang/spec/statements.md#the-using-statement) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="c450f-132">語言規格是 C# 語法及用法的限定來源。</span><span class="sxs-lookup"><span data-stu-id="c450f-132">The language specification is the definitive source for C# syntax and usage.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="7c98d-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7c98d-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c450f-133">請參閱</span><span class="sxs-lookup"><span data-stu-id="c450f-133">See also</span></span>
 
-- [<span data-ttu-id="7c98d-128">C# 參考</span><span class="sxs-lookup"><span data-stu-id="7c98d-128">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="7c98d-129">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="7c98d-129">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="7c98d-130">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="7c98d-130">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="7c98d-131">using 指示詞</span><span class="sxs-lookup"><span data-stu-id="7c98d-131">using Directive</span></span>](using-directive.md)
-- [<span data-ttu-id="7c98d-132">記憶體回收</span><span class="sxs-lookup"><span data-stu-id="7c98d-132">Garbage Collection</span></span>](../../../standard/garbage-collection/index.md)
-- [<span data-ttu-id="7c98d-133">使用實作 IDisposable 的物件</span><span class="sxs-lookup"><span data-stu-id="7c98d-133">Using objects that implement IDisposable</span></span>](../../../standard/garbage-collection/using-objects.md)
-- [<span data-ttu-id="7c98d-134">IDisposable 介面</span><span class="sxs-lookup"><span data-stu-id="7c98d-134">IDisposable interface</span></span>](xref:System.IDisposable)
+- [<span data-ttu-id="c450f-134">C# 參考</span><span class="sxs-lookup"><span data-stu-id="c450f-134">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="c450f-135">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="c450f-135">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="c450f-136">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="c450f-136">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="c450f-137">using 指示詞</span><span class="sxs-lookup"><span data-stu-id="c450f-137">using Directive</span></span>](using-directive.md)
+- [<span data-ttu-id="c450f-138">記憶體回收</span><span class="sxs-lookup"><span data-stu-id="c450f-138">Garbage Collection</span></span>](../../../standard/garbage-collection/index.md)
+- [<span data-ttu-id="c450f-139">使用實作 IDisposable 的物件</span><span class="sxs-lookup"><span data-stu-id="c450f-139">Using objects that implement IDisposable</span></span>](../../../standard/garbage-collection/using-objects.md)
+- [<span data-ttu-id="c450f-140">IDisposable 介面</span><span class="sxs-lookup"><span data-stu-id="c450f-140">IDisposable interface</span></span>](xref:System.IDisposable)
+- [<span data-ttu-id="c450f-141">使用8.0 中C#的語句</span><span class="sxs-lookup"><span data-stu-id="c450f-141">using statement in C# 8.0</span></span>](~/_csharplang/proposals/csharp-8.0/using.md)
