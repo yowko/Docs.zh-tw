@@ -3,14 +3,14 @@ title: 產生及使用非同步資料流
 description: 這個進階教學課程說明產生及取用非同步資料流提供更自然的方式來處理能以非同步方式產生之資料序列的案例。
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: 04c4fe1c7e33138273c5b49c6985efc60767a724
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 6c013d1b589367b77c6f77f88334317a6f3bc657
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216548"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579211"
 ---
-# <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>教學課程：使用 C# 8.0 與 .NET Core 3.0 產生及取用非同步資料流
+# <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>教學課程：使用C# 8.0 和 .net Core 3.0 產生和取用非同步資料流程
 
 C# 8.0 引進了**非同步資料流**，當能以非同步方式擷取或產生資料流中的元素時，它會建構資料來源資料流處理模型。 非同步資料流仰賴 .NET Standard 2.1 中引進並在 .NET Core 3.0 中實作的新介面來針對非同步資料流處理資料來源提供自然程式設計模型。
 
@@ -22,7 +22,7 @@ C# 8.0 引進了**非同步資料流**，當能以非同步方式擷取或產生
 > - 以非同步方式取用資料來源。
 > - 識別何時應該使用新的介面與資料來源，而非先前的同步資料來源。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 您必須設定電腦以執行 .NET Core，包括C# 8.0 編譯器。 從C# [Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.net Core 3.0 SDK](https://dotnet.microsoft.com/download)開始，可以使用8個編譯器。
 
@@ -58,7 +58,7 @@ C# 8.0 引進了**非同步資料流**，當能以非同步方式擷取或產生
 
 [!code-csharp[RunPagedQueryStarter](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
 
-讓我們專注在分頁上述程式碼的演算法與非同步結構。 (您可以查閱 [GitHub GraphQL 文件](https://developer.github.com/v4/guides/)以取得有關 GitHub GraphQL API 的詳細資料。)`runPagedQueryAsync` 方法會依從最新到最舊的順序列舉議題。 它會要求每頁 25 個議題，並檢查回應的 `pageInfo` 結構以使用上一頁繼續。 這遵循 GraphQL 對多頁回應的標準分頁支援。 回應包括 `pageInfo` 物件，此物件包括 `hasPreviousPages` 值與用來要求上一頁的 `startCursor` 值。 議題位於 `nodes` 陣列中。 `runPagedQueryAsync` 方法會將這些節點附加到包含來自所有頁面之結果的陣列。
+讓我們專注在分頁上述程式碼的演算法與非同步結構。 （如需 GitHub GraphQL API 的詳細資訊，您可以參閱[Github GraphQL 檔](https://developer.github.com/v4/guides/)）。@No__t_1 方法會列舉最新到最舊的問題。 它會要求每頁 25 個議題，並檢查回應的 `pageInfo` 結構以使用上一頁繼續。 這遵循 GraphQL 對多頁回應的標準分頁支援。 回應包括 `pageInfo` 物件，此物件包括 `hasPreviousPages` 值與用來要求上一頁的 `startCursor` 值。 議題位於 `nodes` 陣列中。 `runPagedQueryAsync` 方法會將這些節點附加到包含來自所有頁面之結果的陣列。
 
 擷取並還原一頁的結果之後，`runPagedQueryAsync` 會回報進度並檢查取消。 若已要求取消，`runPagedQueryAsync` 會擲回 <xref:System.OperationCanceledException>。
 
@@ -135,7 +135,7 @@ namespace System
 
 ## <a name="run-the-finished-application"></a>執行已完成的應用程式
 
-再次執行應用程式。 將其行為與入門應用程式的行為進行比較。 當第一個結果頁面可用時會儘快列舉。 您會發現要求並擷取每個新頁面時會暫停一些時間，燃後快速列舉下一個頁面的結果。 不需要 `try` / `catch` 區塊就能處理取消：呼叫者可以停止列舉集合。 系統會明確回報進度，因為非同步資料流會在下載每個頁面時產生結果。
+再次執行應用程式。 將其行為與入門應用程式的行為進行比較。 當第一個結果頁面可用時會儘快列舉。 您會發現要求並擷取每個新頁面時會暫停一些時間，燃後快速列舉下一個頁面的結果。 不需要 `try` / `catch` 區塊就能處理取消：呼叫者可以停止列舉集合。 系統會明確回報進度，因為非同步資料流會在下載每個頁面時產生結果。 傳回之每個問題的狀態會順暢地包含在 `await foreach` 迴圈中。 您不需要回呼物件來追蹤進度。
 
 您可以透過檢查程式碼看到記憶體使用狀況的改進。 您再也不需要在列舉結果之前配置集合以儲存所有結果。 呼叫者可以決定如何取用結果，以及是否需要儲存體集合。
 

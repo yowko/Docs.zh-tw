@@ -1,7 +1,7 @@
 ---
 title: 整數的數字型別 - C# 參考
 description: 了解每個整數數字型別的範圍、儲存體大小和用法。
-ms.date: 06/25/2019
+ms.date: 10/18/2019
 f1_keywords:
 - byte
 - byte_CSharpKeyword
@@ -32,22 +32,22 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: dfb1298abaff0cfe8eae7536f94511a30012a4a9
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
-ms.translationtype: HT
+ms.openlocfilehash: 3d4f3164d67a000123417619f3be6be455d5ab87
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236081"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579187"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整數的數字型別 (C# 參考)
 
-**整數數字型別**是**簡單型別**的子集，且可使用[*常值*](#integral-literals)初始化。 所有的整數型別也都是實值型別。 所有整數的數字型別都支援[算術](../operators/arithmetic-operators.md)、[位元邏輯](../operators/bitwise-and-shift-operators.md)、[比較和等號](../operators/equality-operators.md)運算子。
+**整數數字型別**是**簡單型別**的子集，且可使用[*常值*](#integer-literals)初始化。 所有的整數型別也都是實值型別。 所有整數數數值型別都支援[算術](../operators/arithmetic-operators.md)、[位邏輯](../operators/bitwise-and-shift-operators.md)、比較和[等號](../operators/equality-operators.md)[比較](../operators/comparison-operators.md)運算子。
 
 ## <a name="characteristics-of-the-integral-types"></a>整數型別的特性
 
 C# 支援下列預先定義的整數型別：
 
-|C# 型別/關鍵字|範圍|大小|.NET 型別|
+|C# 型別/關鍵字|Range|大小|.NET 型別|
 |----------|-----------|----------|-------------|
 |`sbyte`|-128 到 127|帶正負號的 8 位元整數|<xref:System.SByte?displayProperty=nameWithType>|
 |`byte`|0 到 255|不帶正負號的 8 位元整數|<xref:System.Byte?displayProperty=nameWithType>|
@@ -69,9 +69,15 @@ System.Int32 b = 123;
 
 使用 <xref:System.Numerics.BigInteger?displayProperty=nameWithType> 結構來表示帶正負號的整數，無上下限。
 
-## <a name="integral-literals"></a>整數常值
+## <a name="integer-literals"></a>整數常值
 
-整數常值可指定為*十進位常值*、*十六進位常值*或*二進位常值*。 各自的範例如下所示：
+整數常值可以是
+
+- *decimal*：不含任何前置詞
+- *十六進位*：使用 `0x` 或 `0X` 前置詞
+- *binary*：具有 `0b` 或 `0B` 前置詞（可在C# 7.0 和更新版本中取得）
+
+下列程式碼示範每個的範例：
 
 ```csharp
 var decimalLiteral = 42;
@@ -79,49 +85,52 @@ var hexLiteral = 0x2A;
 var binaryLiteral = 0b_0010_1010;
 ```
 
-十進位常值不需要任何前置詞。 `x` 或 `X` 前置詞表示*十六進位常值*。 `b` 或 `B` 前置詞表示*二進位常值*。 `binaryLiteral` 宣告示範使用 `_` 作為*數字分隔符號*。 數字分隔符號可搭配所有數字常值使用。 自 C# 7.0 開始，支援二進位常值和數字分隔符號 `_`。
+上述範例也會示範如何使用 `_` 做為*數位分隔符號*，從C# 7.0 開始支援。 您可以使用數位分隔符號搭配所有類型的數值常值。
 
-### <a name="literal-suffixes"></a>常值後置詞
+整數常值的類型是由其後綴決定，如下所示：
 
-`l` 或 `L` 後置詞會指定整數常值應為 `long` 型別。 `ul` 或 `UL` 後置詞指定 `ulong` 型別。 如果大於 9,223,372,036,854,775,807 的常值使用 `L` 後置詞 (`long` 的最大值)，則該值會轉換成 `ulong` 型別。 如果整數常值所代表的值超出 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>，就會發生編譯錯誤 [CS1021](../../misc/cs1021.md)。 
+- 如果常值沒有後置詞，其類型會是下列類型中可表示其值的第一個型別： `int`、`uint`、`long`、`ulong`。
+- 如果常值是以 `U` 或 `u` 為後置字元，則其類型會是下列類型中可表示其值的第一個型別： `uint`、`ulong`。
+- 如果常值是以 `L` 或 `l` 為後置字元，則其類型會是下列類型中可表示其值的第一個型別： `long`、`ulong`。
 
-> [!NOTE]
-> 您可以使用小寫字母 "l" 作為後置詞。 不過，因為字母 "l" 很容易與數字 "1" 混淆，所以這會產生編譯器警告。 為了清楚起見，請使用 "L"。
+  > [!NOTE]
+  > 您可以使用小寫字母 `l` 做為尾碼。 不過，這會產生編譯器警告，因為字母 `l` 可以與數位 `1` 混淆。 為了清楚起見，請使用 `L`。
 
-### <a name="type-of-an-integral-literal"></a>整數常值的型別
+- 如果常值是以 `UL`、`Ul`、`uL`、`ul`、`LU`、`Lu`、`lU` 或 `lu` 為尾碼，則其類型為 `ulong`。
 
-如果整數常值沒有後置詞，則其型別會是下列可表示值型別中的第一個：
+如果整數常值所代表的值超出 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>，就會發生編譯錯誤 [CS1021](../../misc/cs1021.md)。
 
-1. `int`
-1. `uint`
-1. `long`
-1. `ulong`
-
-您可以使用指派或轉換，將整數常值轉換成範圍比預設小的型別：
+整數常值所代表的值可以隱含地轉換成範圍小於所決定之常數值型別的類型。 當此值在目的地類型的範圍內時，就可能發生這種情況：
 
 ```csharp
-byte byteVariable = 42; // type is byte
-var signedByte = (sbyte)42; // type is sbyte.
+byte a = 17;
+byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
 ```
 
-您可以使用指派、轉換或常數後置詞，將整數常值轉換成範圍比預設大的型別：
+如上述範例所示，如果常值不在目的地類型的範圍內，就會發生編譯器錯誤[CS0031](../../misc/cs0031.md) 。
+
+您也可以使用轉型，將整數常值所代表的值轉換為類型，而不是常值的判斷型別：
 
 ```csharp
-var unsignedLong = 42UL;
-var longVariable = 42L;
-ulong anotherUnsignedLong = 42;
-var anotherLong = (long)42;
+var signedByte = (sbyte)42;
+var longVariable = (long)42;
 ```
 
 ## <a name="conversions"></a>轉換
 
-在目的地型別可以儲存來源型別全部值的整數型別中，任兩者之間都具有隱含轉換 (稱為「擴展轉換」  )。 例如，`int` 到 `long` 有隱含轉換，因為 `int` 值範圍是適當的 `long` 子集。 較小的不帶正負號整數型別可隱含轉換成較大帶正負號整數型別。 任一整數型別也皆可隱含轉換成任一浮點型別。  任一帶正負號的整數型別不會隱含轉換成任一不帶正負號的整數型別。
+在目的地型別可以儲存來源型別全部值的整數型別中，任兩者之間都具有隱含轉換 (稱為「擴展轉換」)。 例如，`int` 到 `long` 有隱含轉換，因為 `int` 值範圍是適當的 `long` 子集。 較小的不帶正負號整數型別可隱含轉換成較大帶正負號整數型別。 任一整數型別也皆可隱含轉換成任一浮點型別。  任一帶正負號的整數型別不會隱含轉換成任一不帶正負號的整數型別。
 
-當來源型別未定義隱含轉換成目的地型別時，您必須使用明確轉換將一種整數型別轉換成另一種整數型別。 這稱為「縮小轉換」  。 因為轉換會導致資料遺失，所以需要明確轉換。
+當來源型別未定義隱含轉換成目的地型別時，您必須使用明確轉換將一種整數型別轉換成另一種整數型別。 這稱為「縮小轉換」。 因為轉換會導致資料遺失，所以需要明確轉換。
 
-## <a name="see-also"></a>另請參閱
+## <a name="c-language-specification"></a>C# 語言規格
 
-- [C# 語言規格 - 整數型別](~/_csharplang/spec/types.md#integral-types)
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的下列幾節：
+
+- [整數型別](~/_csharplang/spec/types.md#integral-types)
+- [整數常值](~/_csharplang/spec/lexical-structure.md#integer-literals)
+
+## <a name="see-also"></a>請參閱
+
 - [C# 參考](../index.md)
 - [浮點類型](floating-point-numeric-types.md)
 - [預設值表](../keywords/default-values-table.md)

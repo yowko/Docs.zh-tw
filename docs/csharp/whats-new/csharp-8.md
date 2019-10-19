@@ -2,12 +2,12 @@
 title: C# 8.0 的新功能- C#指南
 description: 大致了解 C# 8.0 中可用的新功能。
 ms.date: 09/20/2019
-ms.openlocfilehash: 6b5602db6ee61b1d9db4c906d6a14ea2f918ad0a
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 12e41a3bca981d04f7b29970eba1f737254f2b58
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275778"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579141"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
@@ -261,25 +261,36 @@ static Quadrant GetQuadrant(Point point) => point switch
 **using 宣告**為以 `using` 關鍵字開頭的變數宣告。 其會告知編譯器，應在括住的範圍結尾處置所宣告的變數。 例如，試想下列寫入文字檔的程式碼：
 
 ```csharp
-static void WriteLinesToFile(IEnumerable<string> lines)
+static int WriteLinesToFile(IEnumerable<string> lines)
 {
     using var file = new System.IO.StreamWriter("WriteLines2.txt");
+    // Notice how we declare skippedLines after the using statement.
+    int skippedLines = 0;
     foreach (string line in lines)
     {
         if (!line.Contains("Second"))
         {
             file.WriteLine(line);
         }
+        else
+        {
+            skippedLines++;
+        }
     }
-// file is disposed here
+    // Notice how skippedLines is in scope here.
+    return skippedLines;
+    // file is disposed here
 }
 ```
 
 在上述範例中，到達方法的右大括號時，就會處置檔案。 這是宣告 `file` 之範圍的結尾。 上述程式碼相當於使用傳統 [using 陳述式](../language-reference/keywords/using-statement.md)的下列程式碼：
 
 ```csharp
-static void WriteLinesToFile(IEnumerable<string> lines)
+static int WriteLinesToFile(IEnumerable<string> lines)
 {
+    // We must declare the variable outside of the using block
+    // so that it is in scope to be returned.
+    int skippedLines = 0;
     using (var file = new System.IO.StreamWriter("WriteLines2.txt"))
     {
         foreach (string line in lines)
@@ -288,8 +299,13 @@ static void WriteLinesToFile(IEnumerable<string> lines)
             {
                 file.WriteLine(line);
             }
+            else
+            {
+                skippedLines++;
+            }
         }
     } // file is disposed here
+    return skippedLines;
 }
 ```
 
@@ -380,7 +396,7 @@ await foreach (var number in GenerateSequence())
 此語言支援依賴兩個新的類型和兩個新的運算子：
 
 - <xref:System.Index?displayProperty=nameWithType> 代表序列的索引。
-- End 運算子的索引 `^`，指定索引相對於序列結尾。
+- 從 end 運算子 `^` 的索引，指定索引相對於序列結尾。
 - <xref:System.Range?displayProperty=nameWithType> 代表序列的子範圍。
 - 範圍運算子 `..`，指定範圍的開始和結束，做為其運算元。
 
@@ -445,13 +461,13 @@ Range phrase = 1..4;
 var text = words[phrase];
 ```
 
-不只有陣列支援索引和範圍。 您也可以使用[字串](../language-reference/builtin-types/reference-types.md#the-string-type)、<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601> 的索引和範圍。 如需詳細資訊，請參閱[索引和範圍的類型支援](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)。
+不只有陣列支援索引和範圍。 您也可以使用具有[字串](../language-reference/builtin-types/reference-types.md#the-string-type)、<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601> 的索引和範圍。 如需詳細資訊，請參閱[索引和範圍的類型支援](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)。
 
 您可以在[索引及範圍](../tutorials/ranges-indexes.md)上的教學課程中探索更多關於索引及範圍的資訊。
 
 ## <a name="null-coalescing-assignment"></a>Null 聯合指派
 
-C#8.0 引進 null 聯合指派運算子 `??=`。 只有當左運算元評估為 `null` 時，才可以使用 `??=` 運算子，將其右運算元的值指派給其左邊的運算元。
+C#8.0 引進了 null 聯合指派運算子 `??=`。 只有當左運算元評估為 `null` 時，才能使用 `??=` 運算子，將其右運算元的值指派給其左邊的運算元。
 
 ```csharp
 List<int> numbers = null;
@@ -506,4 +522,4 @@ Console.WriteLine(ind);  // output: 1
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>增強內插逐字字串
 
-內[插](../language-reference/tokens/interpolated.md)逐字字串中的 `$` 和 @no__t 1 token 的順序可以是 any： `$@"..."` 和 `@$"..."` 都是有效的內插逐字字串。 在舊版C#中，@no__t 1 token 必須出現在 `@` token 之前。
+內[插](../language-reference/tokens/interpolated.md)逐字字串中的 `$` 和 `@` token 的順序可以是 any： `$@"..."` 和 `@$"..."` 都是有效的內插逐字字串。 在舊版C#中，`$` token 必須出現在 `@` token 前面。

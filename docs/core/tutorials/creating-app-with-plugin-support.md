@@ -4,12 +4,12 @@ description: 了解如何建立支援外掛程式的 .NET Core 應用程式。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 92c219817ad27fbc906ee3778d3f5372d61151ac
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: HT
+ms.openlocfilehash: 5267a56d0742d8e1cae4a81c058bc4ee05e83b4e
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523202"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579509"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>建立具有外掛程式的 .NET Core 應用程式
 
@@ -22,7 +22,7 @@ ms.locfileid: "72523202"
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- 安裝[.Net Core 3.0](https://dotnet.microsoft.com/download)或更新版本。
+- 安裝[.Net Core 3.0 SDK](https://dotnet.microsoft.com/download)或更新版本。
 
 ## <a name="create-the-application"></a>建立應用程式
 

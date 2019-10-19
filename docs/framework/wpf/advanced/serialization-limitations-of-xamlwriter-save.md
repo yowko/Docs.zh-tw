@@ -6,27 +6,27 @@ helpviewer_keywords:
 - limitations of XamlWriter.Save
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
-ms.openlocfilehash: f743f3de505904854be8aab59e9d3ad14ee64581
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 0416b92a6264e6a8261355197b4ab2fa61f80ef2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238612"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582585"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>XamlWriter.Save 的序列化限制
-API<xref:System.Windows.Markup.XamlWriter.Save%2A>可以用來序列化的內容[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式中[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]檔案。 不過，究竟要將哪些項目序列化，則有一些值得注意的限制。 本主題將說明這些限制及一些一般考量。  
+您可以使用 API <xref:System.Windows.Markup.XamlWriter.Save%2A>，將 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式的內容序列化為 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 檔。 不過，究竟要將哪些項目序列化，則有一些值得注意的限制。 本主題將說明這些限制及一些一般考量。  
 
 <a name="Run_Time__Not_Design_Time_Representation"></a>   
 ## <a name="run-time-not-design-time-representation"></a>執行階段而非設計階段的表示法  
- 藉由呼叫項目序列化的基本原理<xref:System.Windows.Markup.XamlWriter.Save%2A>結果就是要序列化的在執行階段物件的表示法。 許多設計階段屬性的原始[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]檔案可能已最佳化或遺失時，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]載入為記憶體中的物件，並呼叫時，不會保留<xref:System.Windows.Markup.XamlWriter.Save%2A>序列化。 序列化的結果是有效呈現應用程式建構的邏輯樹狀結構，但不一定是產生它的原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 這些問題會變得使用非常難<xref:System.Windows.Markup.XamlWriter.Save%2A>一部分非常龐大的序列化[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]設計介面。  
+ @No__t_0 的呼叫所序列化的基本原理是，在執行時間，結果會是要序列化之物件的標記法。 原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案的許多設計階段屬性可能已經在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 載入為記憶體內建物件時優化或遺失，而且當您呼叫 <xref:System.Windows.Markup.XamlWriter.Save%2A> 序列化時，並不會保留。 序列化的結果是有效呈現應用程式建構的邏輯樹狀結構，但不一定是產生它的原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 這些問題使得在廣泛的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 設計介面中使用 <xref:System.Windows.Markup.XamlWriter.Save%2A> 序列化變得非常困難。  
   
 <a name="Serialization_is_Self_Contained"></a>   
 ## <a name="serialization-is-self-contained"></a>序列化是獨立的  
- 序列化的輸出<xref:System.Windows.Markup.XamlWriter.Save%2A>是獨立; 內部所包含的所有項目會序列化[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]單一頁面上，具有單一根項目和以外沒有外部參考[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]。 例如，如果您的頁面會參考來自應用程式資源的資源，這些資源的顯示方式，就像它們是要序列化的頁面元件一樣。  
+ @No__t_0 的序列化輸出是獨立的;序列化的所有專案都包含在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 單一頁面中，其中包含單一根項目，而且沒有 Uri 以外的外部參考。 例如，如果您的頁面會參考來自應用程式資源的資源，這些資源的顯示方式，就像它們是要序列化的頁面元件一樣。  
   
 <a name="Extension_References_are_Dereferenced"></a>   
 ## <a name="extension-references-are-dereferenced"></a>延伸模組參考已取值  
- 透過各種不同標記延伸格式 (例如 `StaticResource` 或 `Binding`) 對物件所做的一般參考，將透過序列化程序來取值。 這些已取值的時間，記憶體中的物件所建立的應用程式執行階段中，而<xref:System.Windows.Markup.XamlWriter.Save%2A>邏輯不會重新瀏覽原始[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]還原序列化輸出的這類參考。 這可能會凍結任何資料繫結或資源取得的值，以做為執行階段表示法上一次使用的值，只透過有限或間接的方式來區分這類值與本機設定的任何其他值。 映像也會序列化為對映像的物件參考 (當它們存在於專案中，而不是原始來源參考)，會遺失原本所參考的任何檔名或 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。 實際上已將在同一個頁面內宣告的資源序列化至參考它們的點，而不是保留為資源集合的關鍵字。  
+ 透過各種不同標記延伸格式 (例如 `StaticResource` 或 `Binding`) 對物件所做的一般參考，將透過序列化程序來取值。 當應用程式執行時間建立記憶體內建物件時，這些已解除引用，而 <xref:System.Windows.Markup.XamlWriter.Save%2A> 邏輯並不會重新流覽原始的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 來還原序列化輸出的這類參考。 這可能會凍結任何資料繫結或資源取得的值，以做為執行階段表示法上一次使用的值，只透過有限或間接的方式來區分這類值與本機設定的任何其他值。 影像也會序列化為影像的物件參考，因為它們存在於專案中，而不是原始來源參考，因而遺失原本參考的任何檔案名或 URI。 實際上已將在同一個頁面內宣告的資源序列化至參考它們的點，而不是保留為資源集合的關鍵字。  
   
 <a name="Event_Handling_is_Not_Preserved"></a>   
 ## <a name="event-handling-is-not-preserved"></a>不會保留事件處理  
@@ -34,10 +34,10 @@ API<xref:System.Windows.Markup.XamlWriter.Save%2A>可以用來序列化的內容
   
 <a name="Realistic_Scenarios_for_Use_of_XAMLWriter_Save"></a>   
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>使用 XAMLWriter.Save 的真實案例  
- 雖然限制列出如下相當多，還有數個使用的適當案例<xref:System.Windows.Markup.XamlWriter.Save%2A>進行序列化。  
+ 雖然此處所列的限制相當可觀，但仍有幾個適當的案例可使用 <xref:System.Windows.Markup.XamlWriter.Save%2A> 進行序列化。  
   
-- 向量或圖形輸出：轉譯區域的輸出可用來重新產生相同的向量或圖形時重新載入。  
+- 向量或圖形輸出︰重新載入時，可以使用轉譯區域的輸出，重新產生相同的向量或圖形。  
   
-- 豐富的文字和非固定格式文件：文字和所有項目格式設定和項目內含項目內會保留在輸出中。 這適用於估計剪貼簿功能的機制。  
+- Rich Text 格式和非固定格式文件︰輸出中會保留文字與所有已格式化的元素及其內部的元素內含項目。 這適用於估計剪貼簿功能的機制。  
   
-- 保留商務物件資料：如果您將資料儲存在自訂的項目，例如[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料，只要您的商務物件遵循基本[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]等提供自訂建構函式和傳址屬性值的轉換規則，這些商務物件可以是永久存在於透過序列化。
+- 保留商務物件資料︰如果您已將資料儲存於自訂元素中 (例如 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料)，只要您的商務物件遵循基本的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 規則 (例如，提供適用於傳址屬性值的自訂建構函式和轉換)，就可透過序列化永久保存這些商務物件。

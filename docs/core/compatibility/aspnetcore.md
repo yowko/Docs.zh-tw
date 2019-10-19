@@ -1,20 +1,17 @@
 ---
 title: ASP.NET Core 的重大變更-.NET Core
 description: 列出 ASP.NET Core 中的重大變更。
-ms.date: 10/16/2019
+ms.date: 10/17/2019
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 2b9ef4cd53772e30198ab2b4171f78503088ae83
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: HT
+ms.openlocfilehash: 4a382fc94eac656605260f628f3eaa5b41bc24da
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522883"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579990"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 的重大變更
-
-> [!IMPORTANT]
-> 本文的結構如下。 這不是 ASP.NET Core 重大變更的完整清單。 如需 ASP.NET Core 重大變更的詳細資訊，您可以在 GitHub 上的 dotnet/檔存放庫中檢查個別的[重大變更問題](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)。
 
 以下是 ASP.NET Core 版本的 ASP.NET Core 重大變更清單。 ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 

@@ -1,7 +1,7 @@
 ---
 title: 浮點數值型別 - C# 參考
 description: 內建 C# 浮點數型別的概觀
-ms.date: 06/30/2019
+ms.date: 10/18/2019
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 17ae154780679dd1f42f43f1ec345cdc722815d3
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: fa6cbb869d90113414cc6f8ffe231386c3596b1d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002189"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579375"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮點數值型別 (C# 參考)
 
-**浮點數型別**是**簡單型別**的子集，並可使用[*常值*](#floating-point-literals)初始化。 所有浮點數型別也是實值型別。 所有浮點數型別都支援[算術](../operators/arithmetic-operators.md)、[比較和等號](../operators/equality-operators.md)運算子。
+**浮點數型別**是**簡單型別**的子集，並可使用[*常值*](#real-literals)初始化。 所有浮點數型別也是實值型別。 所有浮點數數值型別都支援[算術](../operators/arithmetic-operators.md)、比較和[等號](../operators/equality-operators.md)[比較](../operators/comparison-operators.md)運算子。
 
 ## <a name="characteristics-of-the-floating-point-types"></a>浮點數型別的特性
 
 C# 支援下列預先定義的浮點數型別：
   
-|C# 型別/關鍵字|大概範圍|精確度|Size|.NET 型別|
+|C# 型別/關鍵字|大概範圍|精確度|大小|.NET 型別|
 |----------|-----------------------|---------------|--------------|--------------|
 |`float`|±1.5 x 10<sup>−45</sup> 到 ±3.4 x 10<sup>38</sup>|~6-9 位數|4 個位元組|<xref:System.Single?displayProperty=nameWithType>|
 |`double`|±5.0 × 10<sup>−324</sup> 至 ±1.7 × 10<sup>308</sup>|~15-17 位數|8 個位元組|<xref:System.Double?displayProperty=nameWithType>|
@@ -52,8 +52,8 @@ System.Double b = 12.3;
 
 您可以在運算式中混合使用[整數](integral-numeric-types.md)型別與浮點數型別。 在此情況下，整數型別會轉換成浮點類型。 運算式的評估會根據下列規則來執行：
 
-- 如果其中一個浮點數型別是 `double`，運算式會評估為 `double` 或 [bool](../keywords/bool.md) (在關聯或相等比較中)。
-- 如果運算式中沒有 `double` 型別，則運算式會評估為 `float` 或 [bool](../keywords/bool.md) (在關聯或相等比較中)。
+- 如果其中一個浮點類型是 `double`，則運算式會評估為 `double`，或在關聯式和相等比較中為[bool](../keywords/bool.md) 。
+- 如果運算式中沒有 `double` 類型，則運算式會評估為 `float`，或在關聯式和相等比較中為[bool](../keywords/bool.md) 。
 
 浮點運算式可以包含下列值的集合：
 
@@ -66,23 +66,41 @@ System.Double b = 12.3;
 
 您可以使用[標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)或[自訂數值格式字串](../../../standard/base-types/custom-numeric-format-strings.md)，設定浮點數值格式。
 
-## <a name="floating-point-literals"></a>浮點數常值
+## <a name="real-literals"></a>實際常值
 
-預設會將指派運算子右邊的浮點數值常值視為 `double`。 您可以使用尾碼，將浮點數或整數常值轉換成特定型別：
+實際常值的類型取決於其後置詞，如下所示：
 
-- `d` 或 `D` 尾碼會將常值轉換為 `double`。
-- `f` 或 `F` 尾碼會將常值轉換為 `float`。
-- `m` 或 `M` 尾碼會將常值轉換為 `decimal`。
+- 不含尾碼或具有 `d` 或 `D` 尾碼的常值屬於類型 `double`
+- 具有 `f` 或 `F` 尾碼的常值屬於類型 `float`
+- 具有 `m` 或 `M` 尾碼的常值屬於類型 `decimal`
 
-下列範例顯示每種尾碼：
+下列程式碼示範每個的範例：
 
 ```csharp
 double d = 3D;
 d = 4d;
-float f = 3.5F;
+d = 3.934_001;
+
+float f = 3_000.5F;
 f = 5.4f;
-decimal myMoney = 300.5m;
+
+decimal myMoney = 3_000.5m;
 myMoney = 400.75M;
+```
+
+上述範例也會示範如何使用 `_` 做為*數位分隔符號*，從C# 7.0 開始支援。 您可以使用數位分隔符號搭配所有類型的數值常值。
+
+您也可以使用科學記號標記法，也就是指定實際常值的指數部分，如下列範例所示：
+
+```csharp-interactive
+double d = 0.42e2;
+Console.WriteLine(d);  // output 42;
+
+float f = 134.45E-2f;
+Console.WriteLine(f);  // output: 1.3445
+
+decimal m = 1.5E6m;
+Console.WriteLine(m);  // output: 1500000
 ```
 
 ## <a name="conversions"></a>轉換
@@ -95,15 +113,21 @@ myMoney = 400.75M;
 
 如需明確數值轉換的詳細資訊，請參閱[明確數值轉換表](../keywords/explicit-numeric-conversions-table.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="c-language-specification"></a>C# 語言規格
+
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的下列幾節：
+
+- [浮點類型](~/_csharplang/spec/types.md#floating-point-types)
+- [Decimal 類型](~/_csharplang/spec/types.md#the-decimal-type)
+- [實際常值](~/_csharplang/spec/lexical-structure.md#real-literals)
+
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [整數型別](integral-numeric-types.md)
 - [內建型別表](../keywords/built-in-types-table.md)
 - [.NET 中的數值](../../../standard/numerics.md)
 - [轉換和型別轉換](../../programming-guide/types/casting-and-type-conversions.md)
-- [隱含數值轉換表](../keywords/implicit-numeric-conversions-table.md)
-- [明確數值轉換表](../keywords/explicit-numeric-conversions-table.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>
 - [格式化數值結果表](../keywords/formatting-numeric-results-table.md)
-- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
+- [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)
