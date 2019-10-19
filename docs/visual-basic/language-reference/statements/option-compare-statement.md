@@ -1,5 +1,5 @@
 ---
-title: Option Compare 陳述式 (Visual Basic)
+title: Option Compare 語句（Visual Basic）
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Compare
@@ -18,19 +18,19 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 77f208a0ce94925f1f968d4949f591ccab43e582
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43d3faf3a6630cd308913ce2325a5f7fe96e474c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583508"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581577"
 ---
 # <a name="option-compare-statement"></a>Option Compare 陳述式
 宣告比較字串資料時要使用的預設比較方法。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb  
 Option Compare { Binary | Text }  
 ```  
   
@@ -38,17 +38,17 @@ Option Compare { Binary | Text }
   
 |詞彙|定義|  
 |---|---|  
-|`Binary`|選擇性。 字串比較為基礎的排序次序中的結果衍生自內部的二進位表示的字元。<br /><br /> 這種類型是比較的很有用，特別是比較的當字串可以包含的字元不比較的解譯為文字。 在此情況下，您不想偏差的比較，以依字母順序排列的對等，例如不區分大小寫。|  
-|`Text`|選擇性。 在您的系統地區設定所決定的不區分大小寫文字排序順序為基礎的字串比較的結果。<br /><br /> 如果您的字串包含所有文字字元，而且您想要考慮到例如不區分大小寫和密切相關的字母的帳戶是英文字母的對等進行比較，這種比較很有用。 比方說，您可能要考慮`A`和`a`相等，並`Ä`並`ä`排在前面`B`和`b`。|  
+|`Binary`|選擇項。 會根據衍生自字元內部二進位標記法的排序次序，產生字串比較。<br /><br /> 這種類型的比較非常有用，尤其是當字串可以包含不會被視為文字的字元時。 在此情況下，您不想要使用字母順序 equivalences 來進行偏差比較，例如不區分大小寫。|  
+|`Text`|選擇項。 會根據您的系統地區設定所決定的區分大小寫文字排序次序，產生字串比較。<br /><br /> 如果您的字串包含所有文字字元，而您想要比較它們考慮字母 equivalences （例如不區分大小寫和緊密相關的字母），這種比較就很有用。 例如，您可能會想要考慮 `A` 和 `a` 相等，並在 `B` 和 `b` 之前，`Ä` 和 `ä`。|  
   
 ## <a name="remarks"></a>備註  
- 如果使用，`Option Compare`陳述式必須出現在任何其他來源的程式碼陳述式之前的檔案。  
+ 如果使用的話，`Option Compare` 語句必須出現在檔案中的任何其他原始程式碼語句之前。  
   
- `Option Compare`陳述式指定的字串比較方法 (`Binary`或`Text`)。  預設文字比較方法是`Binary`。  
+ @No__t_0 語句會指定字串比較方法（`Binary` 或 `Text`）。  預設的文字比較方法為 `Binary`。  
   
- A`Binary`比較比較每個字串中的每個字元的數字 Unicode 值。 A`Text`比較比較根據其語彙的意義，目前的文化特性中的每個 Unicode 字元。  
+ @No__t_0 比較會比較每個字串中每個字元的數值 Unicode 值。 @No__t_0 比較會根據其在目前文化特性中的詞法意義來比較每個 Unicode 字元。  
   
- 在 Microsoft Windows 字碼頁會決定排序次序。 如需詳細資訊，請參閱[字碼頁](/cpp/c-runtime-library/code-pages)。  
+ 在 Microsoft Windows 中，排序次序是由字碼頁所決定。 如需詳細資訊，請參閱[字碼頁](/cpp/c-runtime-library/code-pages)。  
   
  在下列範例中，英文/歐語系字碼頁 (ANSI 1252) 中的字元是使用 `Option Compare Binary` 來排序，這會產生一般的二進位排序順序。  
   
@@ -59,7 +59,7 @@ Option Compare { Binary | Text }
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
 ## <a name="when-an-option-compare-statement-is-not-present"></a>Option Compare 陳述式不存在時  
- 如果原始程式碼不包含`Option Compare`陳述式中， **Option Compare**上設定[編譯的 Page，Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)用。 如果您使用命令列編譯器時，所指定的設定[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)編譯器選項使用。  
+ 如果原始程式碼不包含 `Option Compare` 語句，則會使用 [編譯] 頁面上的 [**選項比較**] 設定[（[專案設計工具] （Visual Basic））](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 。 如果您使用命令列編譯器，則會使用[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)編譯器選項所指定的設定。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -69,13 +69,13 @@ Option Compare { Binary | Text }
   
 2. 按一下 [編譯] 索引標籤。  
   
-3. 在設定的值**Option Compare**  方塊中。  
+3. 在 [**選項比較**] 方塊中設定值。  
   
- 當您建立專案時， **Option Compare**上設定**編譯**索引標籤設定為**Option Compare**中設定**選項** 對話方塊。 若要變更這項設定，在**工具**功能表上，按一下**選項**。 在 [選項] 對話方塊中，展開 [專案和方案]，然後按一下 [VB 預設值]。 中的初始預設設定**VB 預設值**是**二進位**。  
+ 當您建立專案時，[**編譯**] 索引標籤上的 [**選項比較**] 設定會設定為 [**選項**] 對話方塊中的 [**選項比較**] 設定。 若要變更此設定，請在 [**工具**] 功能表上按一下 [**選項**]。 在 [選項] 對話方塊中，展開 [專案和方案]，然後按一下 [VB 預設值]。 **VB 預設值**中的初始預設設定為**Binary**。  
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>在命令列上設定選項比較  
   
-- 包含[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)中的編譯器選項**vbc**命令。  
+- 在**vbc**命令中包含[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)編譯器選項。  
   
 ## <a name="example"></a>範例  
  下列範例會使用 `Option Compare` 陳述式來將二進位比較設為預設字串比較方法。 若要使用這段程式碼，請取消註解 `Option Compare Binary` 陳述式，並將其放置在原始程式檔的頂端。  
@@ -87,7 +87,7 @@ Option Compare { Binary | Text }
   
  [!code-vb[VbVbalrStatements#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#46)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>
 - <xref:Microsoft.VisualBasic.Strings.InStrRev%2A>
@@ -96,7 +96,7 @@ Option Compare { Binary | Text }
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [比較運算子](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [在 Visual Basic 中的比較運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic 中的比較運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Like 運算子](../../../visual-basic/language-reference/operators/like-operator.md)
 - [字串函式](../../../visual-basic/language-reference/functions/string-functions.md)
 - [Option Explicit 陳述式](../../../visual-basic/language-reference/statements/option-explicit-statement.md)

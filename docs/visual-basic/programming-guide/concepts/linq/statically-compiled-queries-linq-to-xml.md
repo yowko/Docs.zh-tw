@@ -2,24 +2,24 @@
 title: 靜態編譯的查詢（LINQ to XML）（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
-ms.openlocfilehash: ed701f57821c18f4cfa75a3bb7cd5a652ab384d8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: f295e8aa8b747b90933d6a35e5352f66740ef071
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373740"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582912"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>靜態編譯的查詢（LINQ to XML）（Visual Basic）
 
 相對於 <xref:System.Xml.XmlDocument> 而言，LINQ to XML 其中一個最重要的效能優勢在於，LINQ to XML 中的查詢是靜態編譯的查詢，而 XPath 查詢則必須在執行階段解譯。 由於這項功能是 LINQ to XML 內建的，所以您不需要進行額外步驟，即可運用此功能，但是在選擇這兩項技術時了解其差異會有所幫助。 本主題將說明兩者的差異。
 
-## <a name="statically-compiled-queries-vs-xpath"></a>靜態編譯查詢與XPath
+## <a name="statically-compiled-queries-vs-xpath"></a>靜態編譯查詢與 XPath 的比較
 
 下列範例將顯示如何取得具有指定之名稱以及具有指定值之屬性的子代項目。
 
 下面是對等的 XPath 運算式：
 
-```
+```vb
 //Address[@Type='Shipping']
 ```
 
@@ -92,6 +92,6 @@ reader.Close()
 
 這點明顯比對應 LINQ to XML 查詢所完成的工作還多。 雖然特定效能差異會因不同類型的查詢而異，不過一般而言，相較於使用 <xref:System.Xml.XmlDocument> 來評估 XPath 運算式，LINQ to XML 查詢會進行較少工作，因此具有較佳的執行效能。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [效能（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

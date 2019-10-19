@@ -2,21 +2,21 @@
 title: .NET for Apache Spark 教學課程
 description: 探索 .NET.NET for Apache Spark 教學課程，以了解如何將 Apache Spark 整合到 .NET 應用程式。
 ms.date: 05/17/2019
-ms.openlocfilehash: 856de5086f63e163dff6a510a4e804a5176c91b0
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: HT
+ms.openlocfilehash: fde70dfbe5d8c09c4af63ecae5608ff0f3bb2b9b
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "69620060"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583491"
 ---
 # <a name="net-for-apache-spark-tutorials"></a>.NET for Apache Spark 教學課程
 
 您可利用下列教學課程，了解如何使用 [.NET for Apache Spark](../index.yml) 量身打造巨量資料解決方案，並將其整合到 .NET 應用程式中：
 
-- [開始使用](get-started.md)：示範如何建置並執行簡易的 .NET for Apache Spark 應用程式。
-- [將 .NET for Apache Spark 應用程式部署到 Azure HDInsight](hdinsight-deployment.md)：示範如何將 .NET for Apache Spark 應用程式部署到 Azure HDInsight。
-- [將 .NET for Apache Spark 應用程式部署到 Amazon EMR Spark](amazon-emr-spark-deployment.md)：示範如何將 .NET for Apache Spark 應用程式部署到 Amazon EMR Spark。
-- [將 .NET for Apache Spark 應用程式部署到 Databricks](databricks-deployment.md)：示範如何將 .NET for Apache Spark 應用程式部署到 Databricks。
+* [開始使用](get-started.md)：示範如何建置並執行簡易的 .NET for Apache Spark 應用程式。
+* [將 .NET for Apache Spark 應用程式部署到 Azure HDInsight](hdinsight-deployment.md)：示範如何將 .NET for Apache Spark 應用程式部署到 Azure HDInsight。
+* [將 .NET for Apache Spark 應用程式部署到 Amazon EMR Spark](amazon-emr-spark-deployment.md)：示範如何將 .NET for Apache Spark 應用程式部署到 Amazon EMR Spark。
+* [將 .NET for Apache Spark 應用程式部署到 Databricks](databricks-deployment.md)：示範如何將 .NET for Apache Spark 應用程式部署到 Databricks。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -17,20 +17,20 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: 880570c714292b0c11eef4e2cd4c4b410bb075f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0cfbb5109d5b49f995028944e735c96440c9ab2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784146"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583513"
 ---
 # <a name="of-clause-visual-basic"></a>Of 子句 (Visual Basic)
-導入了`Of`子句中，用來識別*型別參數*上*泛型*類別、 結構、 介面、 委派或程序。 如需泛型型別資訊，請參閱[在 Visual Basic 中的泛型型別](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。  
+引進了一個 `Of` 子句，它會識別*泛型*類別、結構、介面、委派或程式上的*型別參數*。 如需泛型型別的詳細資訊，請參閱[Visual Basic 中的泛型型別](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。  
   
-## <a name="using-the-of-keyword"></a>使用的關鍵字  
- 下列程式碼範例使用`Of`關鍵字來定義外框的兩個類型參數的類別。 它*限制*`keyType`參數<xref:System.IComparable>介面，這表示使用的程式碼必須提供實作的類型引數<xref:System.IComparable>。 這是必要的讓`add`程序可以呼叫<xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType>方法。 如需條件約束的詳細資訊，請參閱 [Type List](../../../visual-basic/language-reference/statements/type-list.md)。  
+## <a name="using-the-of-keyword"></a>使用 of 關鍵字  
+ 下列程式碼範例會使用 `Of` 關鍵字來定義接受兩個型別參數之類別的外框。 它會*限制*<xref:System.IComparable> 介面的 `keyType` 參數，這表示取用的程式碼必須提供實作為 <xref:System.IComparable> 的型別引數。 這是必要的，因此 `add` 程式可以呼叫 <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> 方法。 如需條件約束的詳細資訊，請參閱 [Type List](../../../visual-basic/language-reference/statements/type-list.md)。  
   
-```  
+```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
     Public Sub add(ByVal e As entryType, ByVal k As keyType)  
         Dim dk As keyType  
@@ -42,11 +42,11 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- 如果您完成上述的類別定義，您可以建構各種`dictionary`從它的類別。 您提供的型別`entryType`和`keyType`判斷何種項目類別保存，而且它與每個項目關聯的索引鍵類型。 將條件約束，因為您必須提供給`keyType`可實作型別<xref:System.IComparable>。  
+ 如果您完成上述類別定義，您可以從它建立各種不同的 `dictionary` 類別。 您提供給 `entryType` 的型別，`keyType` 會決定類別所保存的專案類型，以及與每個專案相關聯的索引鍵類型。 由於條件約束的原因，您必須提供來 `keyType` 可執行 <xref:System.IComparable> 的類型。  
   
- 下列程式碼範例會建立物件，持有`String`項目並將相關聯`Integer`每個索引鍵。 `Integer` 會實作<xref:System.IComparable>因此在符合條件約束和`keyType`。  
+ 下列程式碼範例會建立一個物件，它會保存 `String` 專案，並將 `Integer` 索引鍵與每一個金鑰相關聯。 `Integer` 會執行 <xref:System.IComparable>，因此滿足 `keyType` 上的條件約束。  
   
-```  
+```vb  
 Dim d As New dictionary(Of String, Integer)  
 ```  
   
@@ -64,7 +64,7 @@ Dim d As New dictionary(Of String, Integer)
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IComparable>
 - [類型清單](../../../visual-basic/language-reference/statements/type-list.md)

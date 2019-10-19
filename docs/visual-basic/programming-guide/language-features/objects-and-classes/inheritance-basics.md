@@ -20,129 +20,134 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: a31f69459465368dc7519b5126c6c4eb72e25d29
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a75b75ef9acb4c89f4c7d05f1410d4ca70e680b
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663000"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582753"
 ---
 # <a name="inheritance-basics-visual-basic"></a>繼承基本概念 (Visual Basic)
-`Inherits`陳述式用來宣告新的類別，叫做*衍生類別*根據現有的類別，稱為*基底類別*。 在衍生的類別繼承，且可以擴充，屬性、 方法、 事件、 欄位和基底類別中定義的常數。 下節描述一些繼承規則，以及修飾詞，可用來變更方法的類別繼承，或會繼承：  
-  
-- 根據預設，除非標記為可繼承的所有類別都都會`NotInheritable`關鍵字。 類別可以繼承自其他類別，在您的專案，或從您的專案參考其他組件中的類別。  
-  
-- 不同於允許多個繼承的語言，Visual Basic，請允許類別; 中的只有單一繼承也就是在衍生的類別可以有只有一個基底類別。 雖然在類別中不允許多重繼承，類別可以實作多個介面，可以有效地達成相同的目的。  
-  
-- 若要避免公開受限制的項目中的基底類別，衍生類別的存取類型必須等於或限制性大於其基底類別。 例如，`Public`類別無法繼承`Friend`或`Private`類別，和`Friend`類別無法繼承`Private`類別。  
-  
-## <a name="inheritance-modifiers"></a>繼承修飾詞  
- 下列類別層級的陳述式和修飾詞，以支援繼承，導入了 Visual Basic:  
-  
-- `Inherits` 陳述式，指定基底類別。  
-  
-- `NotInheritable` 修飾詞，可讓程式設計人員使用類別作為基底類別。  
-  
-- `MustInherit` 修飾詞，指定類別，適用於做為基底類別。 執行個體`MustInherit`類別不能直接建立; 他們只能建立衍生的類別為基底類別執行個體。 (其他程式設計語言，例如C++和C#，使用詞彙*抽象類別*來說明這種類別。)  
-  
-## <a name="overriding-properties-and-methods-in-derived-classes"></a>屬性和方法在衍生類別中的覆寫  
- 根據預設，在衍生的類別會從其基底類別繼承屬性和方法。 如果繼承的屬性或方法的衍生類別中有不同的行為很*覆寫*。 也就是說，您可以定義新的實作方法的衍生類別中。 下列修飾詞是用來控制如何覆寫屬性及方法：  
-  
-- `Overridable` — 可讓衍生類別中覆寫類別中的屬性或方法。  
-  
-- `Overrides` -覆寫`Overridable`屬性或方法的基底類別中定義。  
-  
-- `NotOverridable` 可防止遭到覆寫繼承的類別中的屬性或方法。 根據預設，`Public`方法都是`NotOverridable`。  
-  
-- `MustOverride` -需要在衍生的類別覆寫屬性或方法。 當`MustOverride`關鍵字時，包含方法定義只`Sub`， `Function`，或`Property`陳述式。 不允許使用任何其他陳述式，而且特別是沒有任何`End Sub`或`End Function`陳述式。 `MustOverride` 方法必須宣告在`MustInherit`類別。  
-  
- 假設您想要定義類別，來處理薪資。 您可以定義為泛型`Payroll`類別，其中包含`RunPayroll`計算薪資典型的一週的方法。 您接著可以使用`Payroll`更具特製化的基底類別為`BonusPayroll`散發員工加分時可以使用的類別。  
-  
- `BonusPayroll`類別可以繼承並覆寫，請`PayEmployee`定義在基底方法`Payroll`類別。  
-  
- 下列範例會定義基底類別`Payroll,`和衍生的類別中， `BonusPayroll`，這會覆寫繼承的方法， `PayEmployee`。 程序中， `RunPayroll`、 建立，並接著傳遞`Payroll`物件並`BonusPayroll`函式物件`Pay`，執行`PayEmployee`這兩個物件的方法。  
-  
- [!code-vb[VbVbalrOOP#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#28)]  
-  
-## <a name="the-mybase-keyword"></a>MyBase 關鍵字  
- `MyBase`關鍵字的行為就像類別的目前執行個體的基底類別是指的物件變數。 `MyBase` 經常用來存取所覆寫或遮蔽衍生類別中的基底類別成員。 特別是，`MyBase.New`用來明確地從衍生的類別建構函式呼叫的基底類別建構函式。  
-  
- 例如，假設您正在設計衍生的類別會覆寫繼承自基底類別方法。 覆寫的方法可以呼叫基底類別中的方法，並修改的傳回值，如下列程式碼片段所示：  
-  
- [!code-vb[VbVbalrOOP#109](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#109)]  
-  
- 下列清單描述限制使用`MyBase`:  
-  
-- `MyBase` 是指直接基底類別和其繼承的成員。 它不能用來存取`Private`類別中的成員。  
-  
-- `MyBase` 是關鍵字，而不是真正的物件。 `MyBase` 無法指派給變數，傳遞至程序，或用於`Is`比較。  
-  
-- 此方法，`MyBase`限定並沒有直接的基底類別; 中定義它可能會改為在間接繼承的基底類別中定義。 為了讓所限定的參考`MyBase`正確編譯，某些基底類別必須包含比對出現在呼叫的參數類型與名稱的方法。  
-  
-- 您無法使用`MyBase`呼叫`MustOverride`基底類別方法。  
-  
-- `MyBase` 不用來限定本身。 因此，下列程式碼不是有效的：  
-  
-     `MyBase.MyBase.BtnOK_Click()`  
-  
-- `MyBase` 不能在模組中。  
-  
-- `MyBase` 不能用來存取基底類別成員標記為`Friend`如果基底類別位於不同的組件。  
-  
- 如需詳細資訊和另一個範例，請參閱[How to:存取衍生類別所隱藏的變數](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)。  
-  
-## <a name="the-myclass-keyword"></a>MyClass 關鍵字  
- `MyClass`關鍵字的行為就像以原始實作類別的目前執行個體是指的物件變數。 `MyClass` 類似於`Me`，但每個方法和屬性上呼叫`MyClass`會被視為方法或屬性所[NotOverridable](../../../../visual-basic/language-reference/modifiers/notoverridable.md)。 因此，不會影響方法或屬性藉由衍生類別中覆寫。  
-  
-- `MyClass` 是關鍵字，而不是真正的物件。 `MyClass` 無法指派給變數，傳遞至程序，或用於`Is`比較。  
-  
-- `MyClass` 是指包含類別和其繼承的成員。  
-  
-- `MyClass` 可用來當做限定詞`Shared`成員。  
-  
-- `MyClass` 不能在`Shared`方法，但是可以在執行個體方法內用來存取共用的成員的類別。  
-  
-- `MyClass` 不能在標準模組。  
-  
-- `MyClass` 可用來限定，定義於基底類別，而該類別中提供的方法沒有實作的方法。 這類參考具有相同的意義`MyBase.`*方法*。  
-  
- 下列範例會比較`Me`和`MyClass`。  
-  
+
+@No__t_0 語句是用來根據現有的類別（稱為「*基類*」）來宣告新的類別，稱為「*衍生類別*」。 衍生類別會繼承和擴充、屬性、方法、事件、欄位，以及在基類中定義的常數。 下一節將描述繼承的一些規則，以及您可以用來變更類別繼承或繼承方式的修飾詞：
+
+- 根據預設，所有類別都是可繼承的，除非以 `NotInheritable` 關鍵字標記。 類別可以繼承自您專案中的其他類別，或從您的專案所參考之其他元件中的類別。
+
+- 不同于允許多個繼承的語言，Visual Basic 只允許類別中的單一繼承;也就是說，衍生的類別只能有一個基類。 雖然類別中不允許多個繼承，但類別可以實作用多個介面，這可以有效地完成相同的結束。
+
+- 若要避免公開基類中受限制的專案，衍生類別的存取類型必須等於或大於其基類的限制。 例如，`Public` 類別無法繼承 `Friend` 或 `Private` 類別，而且 `Friend` 類別無法繼承 `Private` 類別。
+
+## <a name="inheritance-modifiers"></a>繼承修飾詞
+
+Visual Basic 引進下列類別層級語句和修飾詞，以支援繼承：
+
+- `Inherits` 語句-指定基類。
+
+- `NotInheritable` 修飾詞-防止程式設計人員使用類別做為基類。
+
+- `MustInherit` 修飾詞-指定類別僅供做為基類使用。 無法直接建立 `MustInherit` 類別的實例;它們只能建立為衍生類別的基類實例。 （其他程式設計語言（例如C++和C#）會使用「*抽象類別*」一詞來描述這類類別）。
+
+## <a name="overriding-properties-and-methods-in-derived-classes"></a>覆寫衍生類別中的屬性和方法
+
+根據預設，衍生類別會繼承其基類的屬性和方法。 如果繼承的屬性或方法在衍生類別中必須有不同的行為，則可以覆*寫*它。 也就是說，您可以在衍生類別中定義方法的新執行。 下列修飾詞是用來控制如何覆寫屬性及方法：
+
+- `Overridable`-允許在衍生類別中覆寫類別中的屬性或方法。
+
+- `Overrides`-覆寫在基類中定義的 `Overridable` 屬性或方法。
+
+- `NotOverridable`-防止在繼承類別中覆寫屬性或方法。 根據預設，會 `NotOverridable` `Public` 方法。
+
+- `MustOverride`-需要衍生類別覆寫屬性或方法。 使用 `MustOverride` 關鍵字時，方法定義只會包含 `Sub`、`Function` 或 `Property` 語句。 不允許其他語句，特別是沒有 `End Sub` 或 `End Function` 的語句。 `MustOverride` 的方法必須在 `MustInherit` 類別中宣告。
+
+假設您想要定義用來處理薪資的類別。 您可以定義泛型 `Payroll` 類別，其中包含的 `RunPayroll` 方法會計算一般周的薪資。 接著，您可以使用 `Payroll` 做為更特殊化 `BonusPayroll` 類別的基類，以便在散發員工獎金時使用。
+
+@No__t_0 類別可以繼承和覆寫在基底 `Payroll` 類別中定義的 `PayEmployee` 方法。
+
+下列範例會定義基類、`Payroll,` 和衍生類別，`BonusPayroll`，它會覆寫繼承的方法，`PayEmployee`。 程式 `RunPayroll`，會建立 `Payroll` 物件，然後將 `BonusPayroll` 物件傳遞至函式 `Pay`，以執行這兩個物件的 `PayEmployee` 方法。
+
+[!code-vb[VbVbalrOOP#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#28)]
+
+## <a name="the-mybase-keyword"></a>MyBase 關鍵字
+
+@No__t_0 關鍵字的行為就像是參考類別目前實例之基類的物件變數。 `MyBase` 經常用來存取在衍生類別中覆寫或遮蔽的基類成員。 特別是，`MyBase.New` 是用來從衍生類別的「函式」明確呼叫基類的「函數」（base class）。
+
+例如，假設您設計的衍生類別會覆寫繼承自基類的方法。 覆寫的方法可以呼叫基類中的方法，並修改傳回值，如下列程式碼片段所示：
+
+[!code-vb[VbVbalrOOP#109](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#109)]
+
+下列清單描述使用 `MyBase` 的限制：
+
+- `MyBase` 指的是直接基類及其繼承的成員。 它不能用來存取類別中 `Private` 成員。
+
+- `MyBase` 是關鍵字，而不是真正的物件。 `MyBase` 無法指派給變數、傳遞至程式，或用於 `Is` 比較。
+
+- @No__t_0 限定的方法不需要在直接基類中定義;它可以改為在間接繼承的基類中定義。 為了讓 `MyBase` 限定的參考正確編譯，某些基類必須包含符合呼叫中所出現之參數名稱和類型的方法。
+
+- 您無法使用 `MyBase` 來呼叫 `MustOverride` 基類方法。
+
+- `MyBase` 不能用來限定自己。 因此，下列程式碼無效：
+
+  `MyBase.MyBase.BtnOK_Click()`
+
+- `MyBase` 不能用在模組中。
+
+- 如果基類位於不同的元件中，`MyBase` 不能用來存取標示為 `Friend` 的基類成員。
+
+如需詳細資訊和另一個範例，請參閱[如何：存取衍生類別所隱藏的變數](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)。
+
+## <a name="the-myclass-keyword"></a>MyClass 關鍵字
+
+@No__t_0 關鍵字的行為就像是物件變數，它會參考原本實作為之類別的目前實例。 `MyClass` 類似 `Me`，但 `MyClass` 上的每個方法和屬性呼叫都會被視為[NotOverridable](../../../../visual-basic/language-reference/modifiers/notoverridable.md)方法或屬性。 因此，方法或屬性不會受到在衍生類別中覆寫的影響。
+
+- `MyClass` 是關鍵字，而不是真正的物件。 `MyClass` 無法指派給變數、傳遞至程式，或用於 `Is` 比較。
+
+- `MyClass` 是指包含的類別及其繼承的成員。
+
+- `MyClass` 可用來做為 `Shared` 成員的限定詞。
+
+- `MyClass` 不能用在 `Shared` 方法內，但是可以在實例方法內用來存取類別的共用成員。
+
+- `MyClass` 不能用於標準模組。
+
+- `MyClass` 可用來限定在基類中定義的方法，而且不會執行該類別中提供的方法。 這類參考與 `MyBase.`*方法*具有相同的意義。
+
+下列範例會比較 `Me` 和 `MyClass`。
+
 ```vb
-Class baseClass  
-    Public Overridable Sub testMethod()  
-        MsgBox("Base class string")  
-    End Sub  
-    Public Sub useMe()  
-        ' The following call uses the calling class's method, even if   
-        ' that method is an override.  
-        Me.testMethod()  
-    End Sub  
-    Public Sub useMyClass()  
-        ' The following call uses this instance's method and not any  
-        ' override.  
-        MyClass.testMethod()  
-    End Sub  
-End Class  
-Class derivedClass : Inherits baseClass  
-    Public Overrides Sub testMethod()  
-        MsgBox("Derived class string")  
-    End Sub  
-End Class  
-Class testClasses  
-    Sub startHere()  
-        Dim testObj As derivedClass = New derivedClass()  
-        ' The following call displays "Derived class string".  
-        testObj.useMe()  
-        ' The following call displays "Base class string".  
-        testObj.useMyClass()  
-    End Sub  
-End Class  
-```  
-  
- 即使`derivedClass`會覆寫`testMethod`，則`MyClass`中的關鍵字`useMyClass`nullifies 的覆寫，且編譯器會解析效果的基底類別版本呼叫`testMethod`。  
-  
-## <a name="see-also"></a>另請參閱
+Class baseClass
+    Public Overridable Sub testMethod()
+        MsgBox("Base class string")
+    End Sub
+    Public Sub useMe()
+        ' The following call uses the calling class's method, even if
+        ' that method is an override.
+        Me.testMethod()
+    End Sub
+    Public Sub useMyClass()
+        ' The following call uses this instance's method and not any
+        ' override.
+        MyClass.testMethod()
+    End Sub
+End Class
+Class derivedClass : Inherits baseClass
+    Public Overrides Sub testMethod()
+        MsgBox("Derived class string")
+    End Sub
+End Class
+Class testClasses
+    Sub startHere()
+        Dim testObj As derivedClass = New derivedClass()
+        ' The following call displays "Derived class string".
+        testObj.useMe()
+        ' The following call displays "Base class string".
+        testObj.useMyClass()
+    End Sub
+End Class
+```
+
+雖然 `derivedClass` 覆寫 `testMethod`，`useMyClass` 中的 `MyClass` 關鍵字會 nullifies 覆寫的效果，而編譯器會解析基類版本 `testMethod` 的呼叫。
+
+## <a name="see-also"></a>請參閱
 
 - [Inherits 陳述式](../../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

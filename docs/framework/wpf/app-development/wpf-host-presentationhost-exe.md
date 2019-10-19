@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: c1c26b49a33a58189f66e7b938333f362e467853
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: ec8ec42c174d87834af5d4c651c1e8c8bde3b3e2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002159"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581694"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF 主應用程式 (PresentationHost.exe)
-Windows Presentation Foundation （WPF）主機（Presentationhost.exe）是一種應用程式，可讓 @no__t 0 應用程式裝載在相容的瀏覽器中（包括 Microsoft Internet Explorer 6 和更新版本）。 根據預設，Windows Presentation Foundation （WPF）主機會註冊為瀏覽器裝載 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 內容的 shell 和 MIME 處理常式，其中包括：  
+Windows Presentation Foundation （WPF）主機（Presentationhost.exe）是一種應用程式，可讓 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的應用程式裝載在相容的瀏覽器中（包括 Microsoft Internet Explorer 6 和更新版本）。 根據預設，Windows Presentation Foundation （WPF）主機會註冊為瀏覽器主控 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 內容的 shell 和 MIME 處理常式，其中包括：  
   
 - 鬆散 (未編譯) 的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案 (.xaml)。  
   
@@ -29,14 +29,14 @@ Windows Presentation Foundation （WPF）主機（Presentationhost.exe）是一�
   
  本主題說明可以搭配使用 PresentationHost.exe 的命令列參數。  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
  `PresentationHost.exe [parameters] uri|filename`  
   
 ## <a name="parameters"></a>參數  
   
 |參數|描述|  
 |---------------|-----------------|  
-|filename|要啟動的檔案路徑。 也可以是 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。|  
+|filename|要啟動的檔案路徑。 也可以是 URI。|  
 |-debug|當啟動應用程式時，不會從存放區認可或執行應用程式。 這只有在已啟動本機檔案時才有用。|  
 |-debugSecurityZoneURL \<url>|與 URL 值搭配使用，以指示 Presentationhost.exe 應用程式應該進行調試，如同從指定的 URL 部署一樣。 這會決定部署區域與原始站台。|  
 |-embedding|為 OLE 的必要項。 如果已指定 `-event` 或 `-debug` 參數，就不需要指定 `-embedding` 參數，因為該參數已在內部設定。|  
@@ -57,6 +57,6 @@ Windows Presentation Foundation （WPF）主機（Presentationhost.exe）是一�
 ### <a name="visual-studio-debugging-in-zone"></a>Visual Studio 區域中偵錯  
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [安全性](../security-wpf.md)
+- [Security](../security-wpf.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 64f8d536212cd379337ad437c1e15ae356890ddb
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835255"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581969"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新功能
 
@@ -26,34 +26,49 @@ Visual Basic 16.0/Visual Studio 2019 版本16。0
 
 ## <a name="previous-versions"></a>舊版本
 
-Visual Basic 15.8/Visual Studio 2017 15.8 版以取得新功能，請參閱[Visual Basic 15.8](#visual-basic-158)。
+Visual Basic 15.8 / Visual Studio 2017 15.8 版  
+如需新功能，請參閱[Visual Basic 15.8](#visual-basic-158)。
 
-Visual Basic 15.5/Visual Studio 2017 15.5 版以取得新功能，請參閱[Visual Basic 15.5](#visual-basic-155)。
+Visual Basic 15.5 / Visual Studio 2017 15.5 版  
+如需新功能，請參閱[Visual Basic 15.5](#visual-basic-155)。
 
-Visual Basic 15.3/Visual Studio 2017 15.3 版以取得新功能，請參閱[Visual Basic 15.3](#visual-basic-153)。
+Visual Basic 15.3 / Visual Studio 2017 15.3 版  
+如需新功能，請參閱[Visual Basic 15.3](#visual-basic-153)。
 
-Visual Basic 2017/Visual Studio 2017 以取得新功能，請參閱[Visual Basic 2017](#visual-basic-2017)。
+Visual Basic 2017 / Visual Studio 2017  
+如需新功能，請參閱[Visual Basic 2017](#visual-basic-2017)。
 
-Visual Basic/Visual Studio 2015 以瞭解新功能，請參閱[Visual Basic 14](#visual-basic-14)。
+Visual Basic / Visual Studio 2015  
+如需新功能，請參閱[Visual Basic 14](#visual-basic-14)。
 
-Visual Basic / Visual Studio 2013 .NET 編譯器平台 ("Roslyn") 的技術預覽
+Visual Basic / Visual Studio 2013  
+.NET 編譯器平台 ("Roslyn") 的技術預覽
 
-Visual Basic / Visual Studio 2012 `Async` 和 `await` 關鍵字、迭代器、呼叫端資訊屬性
+Visual Basic / Visual Studio 2012  
+`Async` 和 `await` 關鍵字、迭代器、呼叫端資訊屬性
 
-Visual Basic, Visual Studio 2010 自動實作的屬性、集合初始設定式、隱含行接續符號、動態、泛型共變數/反變數、全域命名空間存取
+Visual Basic / Visual Studio 2010  
+自動實作的屬性、集合初始設定式、隱含行接續符號、動態、泛型共變數/反變數、全域命名空間存取
 
-Visual Basic / Visual Studio 2008 Language Integrated Query (LINQ)、XML 常值、區域類型推斷、物件初始設定式、匿名類型、擴充方法、區域 `var` 類型推斷、Lambda 運算式、`if` 運算子、部分方法、可為 Null 的實值型別
+Visual Basic / Visual Studio 2008  
+Language Integrated Query (LINQ)、XML 常值、區域類型推斷、物件初始設定式、匿名類型、擴充方法、區域 `var` 類型推斷、Lambda 運算式、`if` 運算子、部分方法、可為 Null 的實值類型
 
-Visual Basic / Visual Studio 2005 `My` 類型和協助程式類型 (應用程式、電腦、檔案系統、網路的存取)
+Visual Basic / Visual Studio 2005  
+`My` 類型和協助程式類型 (應用程式、電腦、檔案系統、網路的存取)
 
-Visual Basic / Visual Studio .NET 2003 位元移位運算子、迴圈變數宣告
+Visual Basic / Visual Studio .NET 2003  
+位元移位運算子、迴圈變數宣告
 
-Visual Basic / Visual Studio .NET 2002 第一版的 Visual Basic .NET
+Visual Basic / Visual Studio .NET 2002  
+第一版的 Visual Basic .NET
 
 ## <a name="visual-basic-160"></a>Visual Basic 16。0
-Visual Basic 16.0 著重于為 .NET Core 提供 Visual Basic 執行時間（microsoft）的更多功能，而且是著重于 .NET Core Visual Basic 的第一個版本。 Visual Basic 執行時間的許多部分都取決於 WinForms，而這些會在較新版本的 Visual Basic 中新增。 
 
-**語句中的多個位置允許的批註**在 Visual Basic 15.8 和更早版本中，只允許在空白行、語句結尾，或在允許隱含行接續的語句中的特定位置使用批註。 從 Visual Basic 16.0 開始，在明確的行接續之後，以及在行首加上底線的空格後面的語句內，也允許批註。
+Visual Basic 16.0 著重于為 .NET Core 提供 Visual Basic 執行時間（microsoft）的更多功能，而且是著重于 .NET Core Visual Basic 的第一個版本。 Visual Basic 執行時間的許多部分都取決於 WinForms，而這些會在較新版本的 Visual Basic 中新增。
+
+**語句中的多個位置允許的批註**
+
+在 Visual Basic 15.8 和更早版本中，只允許在空白行、語句結尾，或在允許隱含行接續的語句中的特定位置使用批註。 從 Visual Basic 16.0 開始，在明確的行接續之後，以及在行首加上底線的空格後面的語句內，也允許批註。
 
 ```vb
 Public Sub Main()
@@ -275,6 +290,6 @@ End Interface
 
 現在，編譯器會使用一般多載解析規則來選擇要呼叫的最適合 `GetDetails`，而且您可以在 Visual Basic 中宣告介面關聯性 (如範例所示)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Studio 2017 的新功能](/visualstudio/ide/whats-new-in-visual-studio)

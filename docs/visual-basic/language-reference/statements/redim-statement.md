@@ -26,19 +26,19 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: e8689820d13db173950f8df45431011968899bed
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a9384ba118df2a84fbd2581e6a8bacb58e41ddcc
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582904"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582089"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim 陳述式 (Visual Basic)
 重新配置陣列變數的儲存空間。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb  
 ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]  
 ```  
   
@@ -46,7 +46,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 |詞彙|定義|  
 |----------|----------------|  
-|`Preserve`|選擇性。 僅變更最後維度的大小時，用來保留現有陣列資料的修飾詞。|  
+|`Preserve`|選擇項。 僅變更最後維度的大小時，用來保留現有陣列資料的修飾詞。|  
 |`name`|必要項。 陣列變數的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
 |`boundlist`|必要項。 重新定義之陣列各維度的界限清單。|  
   
@@ -59,31 +59,31 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="rules"></a>規則  
   
-- **多個變數。** 您可以調整相同宣告陳述式中數個陣列變數的大小，並為每個變數指定 `name` 和 `boundlist` 組件。 以逗號分隔多個變數。  
+- **多個變數。** 您可以在相同的宣告語句中調整數個數組變數的大小，並指定每個變數的 `name` 和 `boundlist` 部分。 以逗號分隔多個變數。  
   
-- **陣列界限。** `boundlist` 中的每個項目都可以指定該維度的上下限。 下限一律為 0 (零)。 上限是該維度可能的最高索引值，不是維度長度 (上限加 1)。 每個維度的索引從 0 到上限值不等。  
+- **陣列界限。** @No__t_0 中的每個專案都可以指定該維度的下限和上限。 下限一律為 0 (零)。 上限是該維度可能的最高索引值，不是維度長度 (上限加 1)。 每個維度的索引從 0 到上限值不等。  
   
      `boundlist` 中的維度數目必須符合陣列的原始維度 (陣序) 數目。  
   
-- **資料類型。** `ReDim` 陳述式不能變更其項目陣列變數的資料類型。  
+- **資料類型。** @No__t_0 語句無法變更陣列變數或其元素的資料類型。  
   
-- **初始化。** `ReDim` 陳述式不能提供陣列項目的新初始化值。  
+- **初始.** @No__t_0 語句無法為陣列元素提供新的初始化值。  
   
-- **順位。** `ReDim` 陳述式不能變更陣列的陣序 (維度數目)。  
+- **等級.** @No__t_0 語句無法變更陣列的順位（維度數目）。  
   
-- **以 Preserve 調整大小。** 如果使用 `Preserve`，您也可以只調整陣列的最後一個維度。 至於其他每個維度，您必須指定現有陣列的界限。  
+- **使用 [保留] 調整大小。** 如果您使用 `Preserve`，您可以只調整陣列的最後一個維度。 至於其他每個維度，您必須指定現有陣列的界限。  
   
      例如，如果您的陣列只有一個維度，您可以調整該維度的大小，但仍保留陣列的所有內容，因為您變更的只有最後一個維度。 不過，如果您的陣列有兩個或以上的維度，如果使用 `Preserve`，就只能變更最後一個維度的大小。  
   
-- **屬性。** `ReDim` 可以用在保存值陣列的屬性。  
+- **屬性.** 您可以在保存值陣列的屬性上使用 `ReDim`。  
   
 ## <a name="behavior"></a>行為  
   
-- **陣列取代。** `ReDim` 釋放現有的陣列，並使用相同的陣序建立新的陣列。 新的陣列會取代陣列變數中已釋放的陣列。  
+- **陣列取代。** `ReDim` 會釋放現有的陣列，並建立具有相同次序的新陣列。 新的陣列會取代陣列變數中已釋放的陣列。  
   
-- **不使用 Preserve 的初始化。** 如果不指定 `Preserve`，`ReDim` 會使用其資料類型的預設值，初始化新的陣列項目。  
+- **初始化但不保留。** 如果您未指定 `Preserve`，`ReDim` 會使用其資料類型的預設值，初始化新陣列的元素。  
   
-- **使用 Preserve 的初始化。** 如果指定 `Preserve`，Visual Basic 會將現有陣列的項目複製到新陣列。  
+- **具有 Preserve 的初始化。** 如果您指定 `Preserve`，Visual Basic 會將元素從現有的陣列複製到新的陣列。  
   
 ## <a name="example"></a>範例  
  下列範例會增加動態陣列最後一個維度的大小，但不會遺失陣列現有的任何資料，再以遺失部分資料的方式減少大小。 最後，大小減少回其原始值，並重新初始化所有陣列項目。  
@@ -98,9 +98,9 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  第三個 `ReDim` 建立另一個新的陣列，並從每個圖層的每一列結尾移除另外五欄。 這次不複製任何現有的項目。 這個陳述式會將陣列還原成原始大小。 因為陳述式不包含 `Preserve` 修飾詞，所以所有的陣列項目都設為原始預設值。  
   
- 如需其他範例，請參閱 <<c0> [ 陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+ 如需其他範例，請參閱[陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IndexOutOfRangeException>
 - [Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md)

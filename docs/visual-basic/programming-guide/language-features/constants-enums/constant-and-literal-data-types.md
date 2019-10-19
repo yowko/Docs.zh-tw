@@ -9,43 +9,43 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 50e36aa13439bafcca27a7153a8c5d6043f03975
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9db7fa3f36021a39fafe6cf3da5af7070f0b5b0d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906967"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582969"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>常數和常值資料類型 (Visual Basic)
-常值是表示為本身，而不是為變數的值或運算式，例如數字 3 或字串"Hello"的結果值。 常數是有意義的名稱，會取代常值，並保留在整個程式，而不是變數，可能會變更其值，這個相同的值。  
+常值是以本身的形式表示，而不是以變數的值或運算式的結果（例如數位3或字串 "Hello"）。 常數是一個有意義的名稱，它會取代常值，並在整個程式中保留這個相同的值，而不是變數，其值可能會變更。  
   
- 當[Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)是`Off`並[Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)是`On`，您必須明確宣告的所有常數，與資料型別。 在下列範例中，資料類型`MyByte`明確宣告資料類型為`Byte`:  
+ 當[Option 推斷](../../../../visual-basic/language-reference/statements/option-infer-statement.md)為 `Off`，且[option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)為 `On` 時，您必須使用資料類型明確宣告所有常數。 在下列範例中，`MyByte` 的資料類型會明確宣告為資料類型 `Byte`：  
   
  [!code-vb[VbVbalrConstants#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#1)]  
   
- 當`Option Infer`是`On`或是`Option Strict`是`Off`，您可以宣告但未指定的資料類型的常數`As`子句。 編譯器會判斷運算式的類型從常數的類型。 預設會將轉換的數字的整數常值`Integer`資料型別。 預設資料類型是浮點數`Double`，和關鍵字`True`並`False`指定`Boolean`常數。  
+ 當 `Option Infer` `On` 或 `Option Strict` `Off` 時，您可以宣告常數，而不需使用 `As` 子句來指定資料類型。 編譯器會從運算式的類型判斷常數的類型。 數值整數常值預設會轉換成 `Integer` 的資料類型。 浮點數字的預設資料類型是 `Double`，而關鍵字 `True` 和 `False` 指定 `Boolean` 常數。  
   
 ## <a name="literals-and-type-coercion"></a>常值和類型強制型轉  
- 在某些情況下，您可能想要的常值強制為特定的資料類型;例如，當將特別大的整數常值指派給類型的變數`Decimal`。 下列範例會產生錯誤：  
+ 在某些情況下，您可能會想要強制將常值指定為特定的資料類型。例如，將特別大的整數常值指派給 `Decimal` 類型的變數時。 下列範例會產生錯誤：  
   
-```  
+```vb  
 Dim myDecimal as Decimal  
 myDecimal = 100000000000000000000   ' This causes a compiler error.  
 ```  
   
- 從常值的表示法會產生錯誤。 `Decimal`資料類型可以保留值，這種大小，但常值隱含地表示為`Long`，哪些不可。  
+ 此錯誤會因常值的標記法而產生。 @No__t_0 資料類型可以保留這個大的值，但是常值會隱含表示為 `Long`，這不是。  
   
- 您可以將兩種方式為特定的資料類型的常值的強制轉型： 將型別字元附加到它，或將其放在封入字元。 類型字元或封入字元必須立即在之前和/或遵循常值，不含空格或任何種類的字元。  
+ 您可以透過兩種方式將常值強制轉型為特定的資料類型：將類型字元附加至其中，或將它放在封入字元中。 類型字元或封入字元必須緊接在常值的前面和/或後面，不含任何類型的中間空格或字元。  
   
- 若要讓上述範例運作，您可以將附加`D`型別字元常值，這會導致它表示成`Decimal`:  
+ 若要讓先前的範例正常執行，您可以將 `D` 型別字符附加到常值，這會使其表示為 `Decimal`：  
   
  [!code-vb[VbVbalrConstants#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#2)]  
   
- 下列範例會示範正確的使用方式的型別字元及封入字元：  
+ 下列範例示範如何正確使用類型字元和封入字元：  
   
  [!code-vb[VbVbalrConstants#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#3)]  
   
- 下表顯示封入字元和 Visual Basic 提供的類型字元。  
+ 下表顯示 Visual Basic 中可用的封閉字元和類型字元。  
   
 |資料類型|封入字元|附加的類型字元|  
 |---|---|---|  
@@ -53,15 +53,15 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 |`Byte`|(無)|(無)|  
 |`Char`|"|C|  
 |`Date`|#|(無)|  
-|`Decimal`|(無)|D 或使用 @|  
-|`Double`|(無)|R 或 #|  
-|`Integer`|(無)|I 或 %|  
-|`Long`|(無)|L 或 （& s)|  
+|`Decimal`|(無)|D 或@|  
+|`Double`|(無)|R 或#|  
+|`Integer`|(無)|I 或%|  
+|`Long`|(無)|L 或 &|  
 |`Short`|(無)|S|  
-|`Single`|(無)|F 或 ！|  
+|`Single`|(無)|F 或！|  
 |`String`|"|(無)|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用者定義的常數](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
 - [如何：宣告常數](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)

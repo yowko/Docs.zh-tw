@@ -7,12 +7,12 @@ ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: bb07df382974bdbb185ce7d52117729eaa638869
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: HT
+ms.openlocfilehash: 4fa0153cfa9dd52f4d80301d228dde3f16225bfd
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523871"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582029"
 ---
 # <a name="net-standard"></a>.NET 標準
 
@@ -165,3 +165,4 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standa
 
 - [.NET Standard 版本](https://github.com/dotnet/standard/blob/master/docs/versions.md)
 - [建立 .NET Standard 程式庫](../core/tutorials/library-with-visual-studio.md)
+- [跨平台目標](./library-guidance/cross-platform-targeting.md)

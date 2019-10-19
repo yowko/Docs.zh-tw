@@ -28,20 +28,20 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 3a6184164fdc6f2517caf45f7b5e1455c9299666
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 046a3a7d50d15cd3e59205998554a4c330d4552c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754729"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581840"
 ---
 # <a name="function-statement-visual-basic"></a>Function 陳述式 (Visual Basic)
 
-宣告名稱、 參數和定義的程式碼`Function`程序。
+宣告定義 `Function` 程式的名稱、參數和程式碼。
 
 ## <a name="syntax"></a>語法
 
-```
+```vb
 [ <attributelist> ] [ accessmodifier ] [ proceduremodifiers ] [ Shared ] [ Shadows ] [ Async | Iterator ]
 Function name [ (Of typeparamlist) ] [ (parameterlist) ] [ As returntype ] [ Implements implementslist | Handles eventlist ]
     [ statements ]
@@ -54,11 +54,11 @@ End Function
 
 - `attributelist`
 
-  選擇性。 請參閱[屬性清單](attribute-list.md)。
+  選擇項。 請參閱[屬性清單](attribute-list.md)。
 
 - `accessmodifier`
 
-  選擇性。 可以是下列其中一項：
+  選擇項。 可以是下列其中一項：
 
   - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 
@@ -76,7 +76,7 @@ End Function
 
 - `proceduremodifiers`
 
-  選擇性。 可以是下列其中一項：
+  選擇項。 可以是下列其中一項：
 
   - [多載](../../../visual-basic/language-reference/modifiers/overloads.md)
 
@@ -86,7 +86,7 @@ End Function
 
   - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 
-  - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+  - [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 
   - `MustOverride Overrides`
 
@@ -94,39 +94,39 @@ End Function
 
 - `Shared`
 
-  選擇性。 請參閱[共用](../../../visual-basic/language-reference/modifiers/shared.md)。
+  選擇項。 請參閱[共用](../../../visual-basic/language-reference/modifiers/shared.md)。
 
 - `Shadows`
 
-  選擇性。 請參閱[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。
+  選擇項。 請參閱[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。
 
 - `Async`
 
-  選擇性。 請參閱[非同步](../../../visual-basic/language-reference/modifiers/async.md)。
+  選擇項。 請參閱[Async](../../../visual-basic/language-reference/modifiers/async.md)。
 
 - `Iterator`
 
-  選擇性。 請參閱[迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)。
+  選擇項。 請參閱[Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)。
 
 - `name`
 
-  必要項。 程序的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。
+  必要項。 程式的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。
 
 - `typeparamlist`
 
-  選擇性。 泛型程序中的型別參數的清單。 請參閱[輸入清單](type-list.md)。
+  選擇項。 泛型程式的類型參數清單。 請參閱[類型清單](type-list.md)。
 
 - `parameterlist`
 
-  選擇性。 本機變數的名稱，表示此程序的參數清單。 請參閱[參數清單](parameter-list.md)。
+  選擇項。 本機變數名稱的清單，代表此程式的參數。 請參閱[參數清單](parameter-list.md)。
 
 - `returntype`
 
-  需要`Option Strict`是`On`。 這個程序所傳回之值的資料型別。
+  如果 `Option Strict` `On`，則為必要。 這個程式所傳回之值的資料類型。
 
 - `Implements`
 
-  選擇性。 表示此程序會實作一或多個`Function`程序，每一個都在此程序包含類別或結構所實作的介面中定義。 請參閱[實作陳述式](implements-statement.md)。
+  選擇項。 指出此程式會執行一或多個 `Function` 程式，其中每一個都是在由這個程式的包含類別或結構所實的介面中定義。 請參閱[Implements 語句](implements-statement.md)。
 
 - `implementslist`
 
@@ -140,16 +140,16 @@ End Function
 
   |組件|描述|
   |---|---|
-  |`interface`|必要項。 這個程序所實作的介面名稱的包含類別或結構。|
+  |`interface`|必要項。 此程式的包含類別或結構所實作為介面的名稱。|
   |`definedname`|必要項。 名稱，據以在 `interface` 中定義程序。|
 
 - `Handles`
 
-  選擇性。 表示此程序可以處理一或多個特定的事件。 請參閱[處理](handles-clause.md)。
+  選擇項。 指出此程式可以處理一或多個特定事件。 請參閱[控制碼](handles-clause.md)。
 
 - `eventlist`
 
-  如果使用 `Handles`，則為必要項。 此程序處理的事件清單。
+  如果使用 `Handles`，則為必要項。 此程式處理的事件清單。
 
   `eventspecifier [ , eventspecifier ... ]`
 
@@ -159,112 +159,112 @@ End Function
 
   |組件|描述|
   |---|---|
-  |`eventvariable`|必要項。 宣告的類別或結構，會引發事件的資料類型的物件變數。|
-  |`event`|必要項。 此程序處理事件的名稱。|
+  |`eventvariable`|必要項。 以引發事件之類別或結構的資料類型宣告的物件變數。|
+  |`event`|必要項。 這個程式處理的事件名稱。|
 
 - `statements`
 
-  選擇性。 若要在此程序內執行的陳述式區塊。
+  選擇項。 要在此程式中執行的語句區塊。
 
 - `End Function`
 
-  結束這個程序的定義。
+  終止這個程式的定義。
 
 ## <a name="remarks"></a>備註
 
-所有的可執行程式碼必須在程序。 每個程序，接著，在宣告類別、 結構或就是包含類別、 結構或模組的模組。
+所有可執行檔程式碼都必須在程式內。 接著，每個程式都會在類別、結構或稱為包含類別、結構或模組的模組中宣告。
 
-若要將值傳回給呼叫程式碼，使用`Function`程序; 否則，請使用`Sub`程序。
+若要將值傳回給呼叫程式碼，請使用 `Function` 程式。否則，請使用 `Sub` 程式。
 
-## <a name="defining-a-function"></a>定義函式
+## <a name="defining-a-function"></a>定義函數
 
-您可以定義`Function`只能在模組層級的程序。 因此，函式的宣告內容必須是類別、 結構、 模組或介面，而且不能是原始程式檔、 命名空間、 程序或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](declaration-contexts-and-default-access-levels.md)。
+您只能在模組層級定義 `Function` 程式。 因此，函式的宣告內容必須是類別、結構、模組或介面，而且不能是原始程式檔、命名空間、程式或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](declaration-contexts-and-default-access-levels.md)。
 
-`Function` 程序預設為公用存取。 您可以調整它們的存取層級，使用存取修飾詞。
+`Function` 程式預設為公開存取。 您可以使用存取修飾詞來調整其存取層級。
 
-A`Function`程序可以宣告此程序傳回值的資料類型。 您可以指定任何資料類型或列舉、 結構、 類別或介面的名稱。 如果您未指定`returntype`參數，此程序傳回`Object`。
+@No__t_0 程式可以宣告此程式所傳回值的資料類型。 您可以指定任何資料類型或列舉的名稱、結構、類別或介面。 如果您未指定 `returntype` 參數，程式會傳回 `Object`。
 
-如果使用此程序`Implements`關鍵字、 包含類別或結構也必須`Implements`緊接在後面的陳述式及其`Class`或`Structure`陳述式。 `Implements`陳述式必須包含在指定的每個介面`implementslist`。 不過，由此介面定義的名稱`Function`(在`definedname`) 不需要符合此程序名稱 (在`name`)。
+如果此程式使用 `Implements` 關鍵字，則包含的類別或結構也必須有緊接在其 `Class` 或 `Structure` 語句後面的 `Implements` 語句。 @No__t_0 語句必須包含 `implementslist` 中指定的每個介面。 不過，介面用來定義 `Function` （在 `definedname` 中）的名稱不需要符合此程式的名稱（在 `name` 中）。
 
 > [!NOTE]
-> 您可以使用 lambda 運算式來定義函式運算式內嵌。 如需詳細資訊，請參閱 <<c0> [ 函式運算式](../../../visual-basic/language-reference/operators/function-expression.md)並[Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。
+> 您可以使用 lambda 運算式來定義內嵌函數運算式。 如需詳細資訊，請參閱[函數運算式](../../../visual-basic/language-reference/operators/function-expression.md)和[Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。
 
-## <a name="returning-from-a-function"></a>傳回從函式
+## <a name="returning-from-a-function"></a>從函式傳回
 
-當`Function`程序傳回給呼叫程式碼，會繼續執行呼叫程序的陳述式之後的陳述式。
+當 `Function` 程式回到呼叫程式碼時，執行會繼續進行呼叫程式之語句後面的語句。
 
-若要從函式傳回值，您可以將值指派給函式名稱，或將它併入`Return`陳述式。
+若要從函式傳回值，您可以將值指派給函數名稱，或將它包含在 `Return` 語句中。
 
-`Return`陳述式同時指派傳回值，並結束函式，如下列範例所示。
+@No__t_0 語句會同時指派傳回值並結束函式，如下列範例所示。
 
 [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]
 
-下列範例會將傳回的值指派給函式名稱`myFunction`，然後使用`Exit Function`陳述式來傳回。
+下列範例會將傳回值指派給函數名稱 `myFunction`，然後使用 `Exit Function` 語句傳回。
 
 [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]
 
-`Exit Function`並`Return`陳述式會導致立即結束`Function`程序。 任意數目的`Exit Function`並`Return`陳述式可以出現在任何位置的程序中，您可以混合`Exit Function`和`Return`陳述式。
+@No__t_0 和 `Return` 語句會導致立即離開 `Function` 程式。 任何數目的 `Exit Function` 和 `Return` 語句都可以出現在程式中的任何位置，而且您可以混合 `Exit Function` 和 `Return` 語句。
 
-如果您使用`Exit Function`而不指派值給`name`，程序會傳回中所指定的資料類型的預設值`returntype`。 如果`returntype`未指定，此程序傳回`Nothing`，這是預設值`Object`。
+如果您使用 `Exit Function`，但未指派值給 `name`，則程式會傳回 `returntype` 中指定之資料類型的預設值。 如果未指定 `returntype`，程式會傳回 `Nothing`，這是 `Object` 的預設值。
 
 ## <a name="calling-a-function"></a>呼叫函式
 
-您呼叫`Function`使用程序名稱，後面接著在運算式中括號括住的引數清單的程序。 只有當您未提供任何引數，您可以省略括號。 不過，您的程式碼是如果您加上括號的更容易閱讀。
+您可以在運算式中使用程式名稱，後面接著以括弧括住的引數清單，來呼叫 `Function` 程式。 只有在未提供任何引數時，才可以省略括弧。 不過，如果您一律包含括弧，則程式碼會更容易閱讀。
 
-您呼叫`Function`相同的方式，您可以呼叫任何程式庫這類函式的程序`Sqrt`， `Cos`，或`ChrW`。
+呼叫 `Function` 程式的方式，與呼叫任何程式庫函式（例如 `Sqrt`、`Cos` 或 `ChrW`）相同。
 
-您也可以呼叫函式使用`Call`關鍵字。 在此情況下，會忽略傳回值。 使用`Call`關鍵字不建議在大部分情況下。 如需詳細資訊，請參閱 < [Call 陳述式](call-statement.md)。
+您也可以使用 `Call` 關鍵字來呼叫函數。 在此情況下，會忽略傳回值。 在大部分的情況下，不建議使用 `Call` 關鍵字。 如需詳細資訊，請參閱[Call 語句](call-statement.md)。
 
-Visual Basic 中有時重新排列算術運算式，以提高內部的效率。 基於這個理由，您不應該使用`Function`函式變更同一個運算式中的變數的值時的算術運算式中的程序。
+Visual Basic 有時會重新排列算術運算式，以提高內部效率。 基於這個理由，當函數變更同一個運算式中的變數值時，您不應該在算術運算式中使用 `Function` 程式。
 
-## <a name="async-functions"></a>非同步函式
+## <a name="async-functions"></a>Async 函式
 
-*非同步*功能可讓您叫用的非同步函式，而不使用明確回呼或手動將您的程式碼分散到多個函式或 lambda 運算式。
+*非同步*功能可讓您在不使用明確回呼的情況下叫用非同步函式，或在多個函式或 lambda 運算式中手動分割程式碼。
 
-如果您將標記的函式[非同步](../../../visual-basic/language-reference/modifiers/async.md)修飾詞，您可以使用[Await](../../../visual-basic/language-reference/operators/await-operator.md)函式中的運算子。 當控制項到達`Await`中的運算式`Async`函式，控制權回到呼叫端，並且函式中的進度會暫停，直到等候的工作完成。 工作完成時，可以繼續執行，函式中。
+如果您使用[Async](../../../visual-basic/language-reference/modifiers/async.md)修飾詞來標示函式，您可以在函式中使用[Await](../../../visual-basic/language-reference/operators/await-operator.md)運算子。 當控制項到達 `Async` 函式中的 `Await` 運算式時，控制項會回到呼叫端，而函式中的進度會暫停，直到等候的工作完成為止。 當工作完成時，可以在函式中繼續執行。
 
 > [!NOTE]
-> `Async`程序會傳回給呼叫者，可能會在遇到尚未完成，第一個等候的物件或是到達結尾`Async`程序中，何者先發生。
+> @No__t_0 程式會在遇到第一個尚未完成的等候物件，或到達 `Async` 程式結尾（以先發生者為准）時，將它傳回給呼叫端。
 
-`Async`函式可以有傳回型別<xref:System.Threading.Tasks.Task%601>或<xref:System.Threading.Tasks.Task>。 舉例`Async`函式的傳回類型為<xref:System.Threading.Tasks.Task%601>如下所示。
+@No__t_0 函式的傳回型別可以是 <xref:System.Threading.Tasks.Task%601> 或 <xref:System.Threading.Tasks.Task>。 以下提供具有 <xref:System.Threading.Tasks.Task%601> 傳回類型之 `Async` 函式的範例。
 
-`Async`函式不可以宣告任何[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)參數。
+@No__t_0 函數不能宣告任何[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)參數。
 
-A [Sub 陳述式](sub-statement.md)也會以標記`Async`修飾詞。 這主要用於事件處理常式，不會傳回的值。 `Async` `Sub`無法等候程序，和呼叫端`Async``Sub`程序無法攔截所擲回的例外狀況`Sub`程序。
+[Sub 語句](sub-statement.md)也可以使用 `Async` 修飾詞來標記。 這主要用於事件處理常式，無法傳回值。 無法等候 `Async` `Sub` 程式，而且 `Async` `Sub` 程式的呼叫端無法攔截 `Sub` 程式擲回的例外狀況。
 
-如需詳細資訊`Async`函式，請參閱[使用 Async 和 Await 進行非同步程式設計](../../../visual-basic/programming-guide/concepts/async/index.md)，[非同步程式中的控制流程](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)，和[非同步傳回型別](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
+如需 `Async` 函式的詳細資訊，請參閱[使用 async 和 Await 進行非同步程式設計](../../../visual-basic/programming-guide/concepts/async/index.md)、[非同步程式中的控制流程](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)和[非同步傳回類型](../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。
 
-## <a name="iterator-functions"></a>迭代器函式
+## <a name="iterator-functions"></a>Iterator 函式
 
-*迭代器*函式會執行自訂反覆項目集合，例如清單或陣列。 迭代器函式會使用[產生](yield-statement.md)陳述式來傳回每個項目一次。 當[產生](yield-statement.md)到達陳述式時，會記住在程式碼中的目前位置。 下次呼叫迭代器函式時，便會從這個位置重新開始執行。
+*Iterator*函式會對集合執行自訂反復專案，例如清單或陣列。 Iterator 函數會使用[Yield](yield-statement.md)語句，一次傳回一個元素。 當達到[Yield](yield-statement.md)語句時，會記住程式碼中的目前位置。 下次呼叫迭代器函式時，便會從這個位置重新開始執行。
 
-從用戶端程式碼呼叫迭代器使用[每個...下一步](for-each-next-statement.md)陳述式。
+您可以從用戶端程式代碼呼叫反覆運算器，方法是使用[For Each 。下一個](for-each-next-statement.md)語句。
 
-迭代器函式的傳回型別可以是<xref:System.Collections.IEnumerable>， <xref:System.Collections.Generic.IEnumerable%601>， <xref:System.Collections.IEnumerator>，或<xref:System.Collections.Generic.IEnumerator%601>。
+Iterator 函數的傳回類型可以是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。
 
-如需詳細資訊，請參閱 [Iterator](../../programming-guide/concepts/iterators.md)。
+如需詳細資訊，請參閱[迭代器](../../programming-guide/concepts/iterators.md)。
 
 ## <a name="example"></a>範例
 
-下列範例會使用`Function`陳述式來宣告名稱、 參數和構成的主體的程式碼`Function`程序。 `ParamArray`修飾詞可讓要接受可變數目的引數的函式。
+下列範例會使用 `Function` 語句，宣告構成 `Function` 程式主體的名稱、參數和程式碼。 @No__t_0 修飾詞可讓函式接受可變數目的引數。
 
 [!code-vb[VbVbalrStatements#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#25)]
 
 ## <a name="example"></a>範例
 
-下列範例會叫用在上述範例中宣告的函式。
+下列範例會叫用上述範例中所宣告的函式。
 
 [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]
 
 ## <a name="example"></a>範例
 
-在下列範例中，`DelayAsync`已`Async``Function`具有傳回型別<xref:System.Threading.Tasks.Task%601>。 `DelayAsync` 具有傳回整數的 `Return` 陳述式。 因此函式的宣告`DelayAsync`必須有傳回型別`Task(Of Integer)`。 因為傳回類型是`Task(Of Integer)`，評估`Await`中的運算式`DoSomethingAsync`會產生整數。 此陳述式所示： `Dim result As Integer = Await delayTask`。
+在下列範例中，`DelayAsync` 是具有 <xref:System.Threading.Tasks.Task%601> 傳回類型的 `Async` `Function`。 `DelayAsync` 具有傳回整數的 `Return` 陳述式。 因此，`DelayAsync` 的函式宣告必須具有 `Task(Of Integer)` 的傳回類型。 因為傳回型別是 `Task(Of Integer)`，所以 `DoSomethingAsync` 中 `Await` 運算式的評估會產生整數。 這會在此語句中示範： `Dim result As Integer = Await delayTask`。
 
-`startButton_Click`程序是範例`Async Sub`程序。 因為`DoSomethingAsync`已`Async`函式，呼叫工作`DoSomethingAsync`必須等候，如下列陳述式所示： `Await DoSomethingAsync()`。 `startButton_Click` `Sub`程序都必須定義`Async`修飾詞因為它有`Await`運算式。
+@No__t_0 的程式是 `Async Sub` 程式的範例。 因為 `DoSomethingAsync` 是 `Async` 函式，所以必須等候 `DoSomethingAsync` 呼叫的工作，如下列語句所示： `Await DoSomethingAsync()`。 @No__t_0 `Sub` 程式必須使用 `Async` 修飾詞加以定義，因為它有 `Await` 運算式。
 
 [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Sub 陳述式](sub-statement.md)
 - [函式程序](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)

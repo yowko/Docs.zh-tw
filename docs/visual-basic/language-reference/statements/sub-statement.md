@@ -29,20 +29,20 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 00e2f313e283259ea44dd6da71530bed4bff31c5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7dc0ea1f1b30f5ffb0db8917538adf440c5ef891
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751170"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583193"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub 陳述式 (Visual Basic)
 
-宣告名稱、 參數和定義的程式碼`Sub`程序。
+宣告定義 `Sub` 程式的名稱、參數和程式碼。
 
 ## <a name="syntax"></a>語法
 
-```
+```vb
 [ <attributelist> ] [ Partial ] [ accessmodifier ] [ proceduremodifiers ] [ Shared ] [ Shadows ] [ Async ]
 Sub name [ (Of typeparamlist) ] [ (parameterlist) ] [ Implements implementslist | Handles eventlist ]
     [ statements ]
@@ -55,15 +55,15 @@ End Sub
 
 - `attributelist`
 
-  選擇性。 請參閱[屬性清單](attribute-list.md)。
+  選擇項。 請參閱[屬性清單](attribute-list.md)。
 
 - `Partial`
 
-  選擇性。 表示定義部分方法。 請參閱[部分方法](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)。
+  選擇項。 表示部分方法的定義。 請參閱[部分方法](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)。
 
 - `accessmodifier`
 
-  選擇性。 可以是下列其中一項：
+  選擇項。 可以是下列其中一項：
 
   - [Public](../modifiers/public.md)
 
@@ -81,7 +81,7 @@ End Sub
 
 - `proceduremodifiers`
 
-  選擇性。 可以是下列其中一項：
+  選擇項。 可以是下列其中一項：
 
   - [多載](../modifiers/overloads.md)
 
@@ -91,7 +91,7 @@ End Sub
 
   - [NotOverridable](../modifiers/notoverridable.md)
 
-  - [MustOverride](../modifiers/mustoverride.md)
+  - [New](../modifiers/mustoverride.md)
 
   - `MustOverride Overrides`
 
@@ -99,31 +99,31 @@ End Sub
 
 - `Shared`
 
-  選擇性。 請參閱[共用](../modifiers/shared.md)。
+  選擇項。 請參閱[共用](../modifiers/shared.md)。
 
 - `Shadows`
 
-  選擇性。 請參閱[Shadows](../modifiers/shadows.md)。
+  選擇項。 請參閱[Shadows](../modifiers/shadows.md)。
 
 - `Async`
 
-  選擇性。 請參閱[非同步](../modifiers/async.md)。
+  選擇項。 請參閱[Async](../modifiers/async.md)。
 
 - `name`
 
-  必要項。 程序的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。 若要建立類別的建構函式程序，將名稱設定`Sub`程序`New`關鍵字。 如需詳細資訊，請參閱[物件存留期：如何建立和終結物件](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。
+  必要項。 程式的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。 若要建立類別的函式程式，請將 `Sub` 程式的名稱設定為 `New` 關鍵字。 如需詳細資訊，請參閱[物件存留期：物件的建立和終結方式](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。
 
 - `typeparamlist`
 
-  選擇性。 泛型程序中的型別參數的清單。 請參閱[輸入清單](type-list.md)。
+  選擇項。 泛型程式的類型參數清單。 請參閱[類型清單](type-list.md)。
 
 - `parameterlist`
 
-  選擇性。 本機變數的名稱，表示此程序的參數清單。 請參閱[參數清單](parameter-list.md)。
+  選擇項。 本機變數名稱的清單，代表此程式的參數。 請參閱[參數清單](parameter-list.md)。
 
 - `Implements`
 
-  選擇性。 表示此程序會實作一或多個`Sub`程序，每一個都在此程序包含類別或結構所實作的介面中定義。 請參閱[實作陳述式](implements-statement.md)。
+  選擇項。 指出此程式會執行一或多個 `Sub` 程式，其中每一個都是在由這個程式的包含類別或結構所實的介面中定義。 請參閱[Implements 語句](implements-statement.md)。
 
 - `implementslist`
 
@@ -137,16 +137,16 @@ End Sub
 
   |組件|描述|
   |---|---|
-  |`interface`|必要項。 這個程序所實作的介面名稱的包含類別或結構。|
+  |`interface`|必要項。 此程式的包含類別或結構所實作為介面的名稱。|
   |`definedname`|必要項。 名稱，據以在 `interface` 中定義程序。|
 
 - `Handles`
 
-  選擇性。 表示此程序可以處理一或多個特定的事件。 請參閱[處理](handles-clause.md)。
+  選擇項。 指出此程式可以處理一或多個特定事件。 請參閱[控制碼](handles-clause.md)。
 
 - `eventlist`
 
-  如果使用 `Handles`，則為必要項。 此程序處理的事件清單。
+  如果使用 `Handles`，則為必要項。 此程式處理的事件清單。
 
   `eventspecifier [ , eventspecifier ... ]`
 
@@ -156,34 +156,34 @@ End Sub
 
   |組件|描述|
   |---|---|
-  |`eventvariable`|必要項。 宣告的類別或結構，會引發事件的資料類型的物件變數。|
-  |`event`|必要項。 此程序處理事件的名稱。|
+  |`eventvariable`|必要項。 以引發事件之類別或結構的資料類型宣告的物件變數。|
+  |`event`|必要項。 這個程式處理的事件名稱。|
 
 - `statements`
 
-  選擇性。 若要執行此程序內的陳述式區塊。
+  選擇項。 要在此程式內執行的語句區塊。
 
 - `End Sub`
 
-  結束這個程序的定義。
+  終止這個程式的定義。
 
 ## <a name="remarks"></a>備註
 
-所有的可執行程式碼必須在程序。 使用`Sub`程序，當您不想要將值傳回給呼叫程式碼。 使用`Function`程序，當您想要傳回的值。
+所有可執行檔程式碼都必須在程式內。 當您不想要將值傳回給呼叫程式碼時，請使用 `Sub` 程式。 當您想要傳回值時，請使用 `Function` 程式。
 
-## <a name="defining-a-sub-procedure"></a>定義 Sub 程序
+## <a name="defining-a-sub-procedure"></a>定義 Sub 程式
 
-您可以定義`Sub`只能在模組層級的程序。 Sub 程序的宣告內容，因此，必須類別、 結構、 模組或介面，且不能是原始程式檔、 命名空間、 程序或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](declaration-contexts-and-default-access-levels.md)。
+您只能在模組層級定義 `Sub` 程式。 Sub 程式的宣告內容必須是類別、結構、模組或介面，而且不能是原始程式檔、命名空間、程式或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](declaration-contexts-and-default-access-levels.md)。
 
-`Sub` 程序預設為公用存取。 您可以使用存取修飾詞，以調整其存取層級。
+`Sub` 程式預設為公開存取。 您可以使用存取修飾詞來調整其存取層級。
 
-如果程序會使用`Implements`關鍵字、 包含類別或結構必須`Implements`緊接在後面的陳述式及其`Class`或`Structure`陳述式。 `Implements`陳述式必須包含在指定的每個介面`implementslist`。 不過，由此介面定義的名稱`Sub`(在`definedname`) 不需符合此程序名稱 (在`name`)。
+如果程式使用 `Implements` 關鍵字，則包含的類別或結構必須具有緊接在其 `Class` 或 `Structure` 語句後面的 `Implements` 語句。 @No__t_0 語句必須包含 `implementslist` 中指定的每個介面。 不過，介面用來定義 `Sub` （在 `definedname` 中）的名稱不一定要符合此程式的名稱（在 `name` 中）。
 
-## <a name="returning-from-a-sub-procedure"></a>傳回從 Sub 程序
+## <a name="returning-from-a-sub-procedure"></a>從 Sub 程式傳回
 
-當`Sub`程序傳回給呼叫程式碼，執行會繼續進行呼叫它的陳述式之後的陳述式。
+當 `Sub` 程式傳回呼叫程式碼時，會在呼叫它的語句後面繼續執行語句。
 
-下列範例顯示傳回`Sub`程序。
+下列範例顯示從 `Sub` 程式傳回的。
 
 ```vb
 Sub mySub(ByVal q As String)
@@ -191,50 +191,50 @@ Sub mySub(ByVal q As String)
 End Sub
 ```
 
-`Exit Sub`並`Return`陳述式會導致立即結束`Sub`程序。 任意數目的`Exit Sub`並`Return`陳述式可以出現在任何位置的程序中，您可以混合`Exit Sub`和`Return`陳述式。
+@No__t_0 和 `Return` 語句會導致立即離開 `Sub` 程式。 任何數目的 `Exit Sub` 和 `Return` 語句都可以出現在程式中的任何位置，而且您可以混合 `Exit Sub` 和 `Return` 語句。
 
-## <a name="calling-a-sub-procedure"></a>呼叫子函數程序
+## <a name="calling-a-sub-procedure"></a>呼叫 Sub 程式
 
-您呼叫`Sub`陳述式中使用的程序名稱，並接著遵循和它的引數清單括號括住該名稱的程序。 只有當您未提供任何引數，您可以省略括號。 不過，您的程式碼是如果您加上括號的更容易閱讀。
+您可以使用語句中的程式名稱來呼叫 `Sub` 程式，然後在該名稱後面加上括弧中的引數清單。 只有在未提供任何引數時，才可以省略括弧。 不過，如果您一律包含括弧，則程式碼會更容易閱讀。
 
-A`Sub`程序和`Function`程序可以有參數，並且執行一系列的陳述式。 不過，`Function`程序傳回的值，以及`Sub`程序不會。 因此，您無法使用`Sub`在運算式中的程序。
+@No__t_0 程式和 `Function` 程式都可以有參數，並執行一連串的語句。 不過，`Function` 程式會傳回值，而 `Sub` 程式則不會。 因此，您不能在運算式中使用 `Sub` 程式。
 
-您可以使用`Call`關鍵字，當您呼叫`Sub`程序，但該關鍵字，不建議用於大部分用途。 如需詳細資訊，請參閱 < [Call 陳述式](call-statement.md)。
+當您呼叫 `Sub` 程式時，可以使用 `Call` 關鍵字，但不建議在大部分的情況下使用該關鍵字。 如需詳細資訊，請參閱[Call 語句](call-statement.md)。
 
-Visual Basic 中有時重新排列算術運算式，以提高內部的效率。 基於這個理由，如果您的引數清單包含運算式呼叫其他程序，您不應假設特定的順序，將會呼叫這些運算式。
+Visual Basic 有時會重新排列算術運算式，以提高內部效率。 基於這個理由，如果您的引數清單包含呼叫其他程式的運算式，您就不應該假設這些運算式會以特定順序呼叫。
 
-## <a name="async-sub-procedures"></a>Async Sub 程序
+## <a name="async-sub-procedures"></a>非同步 Sub 程式
 
-使用非同步功能，可以叫用非同步的函數，而不使用明確回呼或手動將您的程式碼分散到多個函式或 lambda 運算式。
+藉由使用非同步功能，您可以叫用非同步函式，而不需使用明確回呼，或手動將程式碼分割成多個函數或 lambda 運算式。
 
-如果您將標記的程序[非同步](../modifiers/async.md)修飾詞，您可以使用[Await](../../../visual-basic/language-reference/operators/await-operator.md)程序中的運算子。 當控制項到達`Await`中的運算式`Async`程序中，控制項會傳回給呼叫者，並在程序的進度會暫停，直到等候的工作完成。 工作完成時，可以在程序繼續執行。
+如果您使用[Async](../modifiers/async.md)修飾詞來標記程式，您可以在程式中使用[Await](../../../visual-basic/language-reference/operators/await-operator.md)運算子。 當控制項到達 `Async` 程式中的 `Await` 運算式時，控制項會回到呼叫端，而程式中的進度會暫停，直到等候的工作完成為止。 當工作完成時，可以在程式中繼續執行。
 
 > [!NOTE]
-> `Async`程序傳回給呼叫端在遇到可能是第一次的等候的物件尚未完成時或結尾`Async`達到程序時，何者先發生。
+> 當遇到第一個尚未完成的等候物件或到達 `Async` 程式的結尾（以先發生者為准）時，`Async` 程式會傳回呼叫端。
 
-您也可以將標記[Function 陳述式](function-statement.md)使用`Async`修飾詞。 `Async`函式可以有傳回型別<xref:System.Threading.Tasks.Task%601>或<xref:System.Threading.Tasks.Task>。 範例稍後在本主題說明`Async`函式具有傳回型別<xref:System.Threading.Tasks.Task%601>。
+您也可以使用 `Async` 修飾詞來標記[函數語句](function-statement.md)。 @No__t_0 函式的傳回型別可以是 <xref:System.Threading.Tasks.Task%601> 或 <xref:System.Threading.Tasks.Task>。 本主題稍後的範例會顯示具有 <xref:System.Threading.Tasks.Task%601> 傳回類型的 `Async` 函式。
 
-`Async` `Sub` 程序主要用於事件處理常式，不會傳回的值。 `Async` `Sub`無法等候程序，和呼叫端`Async``Sub`程序無法攔截例外狀況，`Sub`程序會擲回。
+`Async` `Sub` 程式主要用於事件處理常式，因此無法傳回值。 無法等候 `Async` `Sub` 程式，`Async` `Sub` 程式的呼叫端無法攔截 `Sub` 程式擲回的例外狀況。
 
-`Async`程序不可以宣告任何[ByRef](../modifiers/byref.md)參數。
+@No__t_0 程式無法宣告任何[ByRef](../modifiers/byref.md)參數。
 
-如需詳細資訊`Async`程序，請參閱[使用 Async 和 Await 進行非同步程式設計](../../../visual-basic/programming-guide/concepts/async/index.md)，[非同步程式中的控制流程](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)，和[非同步傳回型別](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
+如需 `Async` 程式的詳細資訊，請參閱[使用 async 和 Await 進行非同步程式設計](../../../visual-basic/programming-guide/concepts/async/index.md)、[非同步程式中的控制流程](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)和[非同步傳回類型](../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。
 
 ## <a name="example"></a>範例
 
-下列範例會使用`Sub`陳述式來定義名稱、 參數和構成的主體的程式碼`Sub`程序。
+下列範例會使用 `Sub` 語句來定義構成 `Sub` 程式主體的名稱、參數和代碼。
 
 [!code-vb[VbVbalrStatements#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#58)]
 
 ## <a name="example"></a>範例
 
-在下列範例中，`DelayAsync`已`Async``Function`具有傳回型別<xref:System.Threading.Tasks.Task%601>。 `DelayAsync` 具有傳回整數的 `Return` 陳述式。 因此，函式的宣告`DelayAsync`必須具有傳回型別`Task(Of Integer)`。 因為傳回類型是`Task(Of Integer)`，評估`Await`中的運算式`DoSomethingAsync`會產生整數，下列陳述式所示： `Dim result As Integer = Await delayTask`。
+在下列範例中，`DelayAsync` 是具有 <xref:System.Threading.Tasks.Task%601> 傳回類型的 `Async` `Function`。 `DelayAsync` 具有傳回整數的 `Return` 陳述式。 因此，`DelayAsync` 的函式宣告必須具有 `Task(Of Integer)` 的傳回類型。 因為傳回型別是 `Task(Of Integer)`，所以 `DoSomethingAsync` 中 `Await` 運算式的評估會產生整數，如下列語句所示： `Dim result As Integer = Await delayTask`。
 
-`startButton_Click`程序是範例`Async Sub`程序。 因為`DoSomethingAsync`已`Async`函式，呼叫工作`DoSomethingAsync`必須等候，下列陳述式所示： `Await DoSomethingAsync()`。 `startButton_Click` `Sub`程序都必須定義`Async`修飾詞因為它有`Await`運算式。
+@No__t_0 的程式是 `Async Sub` 程式的範例。 因為 `DoSomethingAsync` 是 `Async` 函式，所以必須等候 `DoSomethingAsync` 呼叫的工作，如下列語句所示： `Await DoSomethingAsync()`。 @No__t_0 `Sub` 程式必須使用 `Async` 修飾詞加以定義，因為它有 `Await` 運算式。
 
 [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Implements 陳述式](implements-statement.md)
 - [Function 陳述式](function-statement.md)

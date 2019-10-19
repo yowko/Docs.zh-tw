@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 0a761c39b51a8d71919a84cbbbf6739fc1f5bcea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: be1780b00b4d58964e1de5ec199cb80dc0f9dba5
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754614"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583399"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum 陳述式 (Visual Basic)
 
@@ -24,7 +24,7 @@ ms.locfileid: "64754614"
 
 ## <a name="syntax"></a>語法
 
-```
+```vb
 [ <attributelist> ] [ accessmodifier ]  [ Shadows ]
 Enum enumerationname [ As datatype ]
    memberlist
@@ -35,13 +35,13 @@ End Enum
 
 - `attributelist`
 
-  選擇性。 這個列舉型別所套用的屬性清單。 您必須將括[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)角括弧 ("`<`"和"`>`")。
+  選擇項。 套用至此列舉的屬性清單。 您必須將[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)放在角括弧中（「`<`」和「`>`」）。
 
-  <xref:System.FlagsAttribute>屬性表示列舉型別的執行個體的值可以包含多個列舉成員，而且每個成員，代表在列舉值的位元欄位。
+  @No__t_0 屬性指出列舉實例的值可以包含多個列舉成員，而且每個成員都代表列舉值中的位欄位。
 
 - `accessmodifier`
 
-  選擇性。 指定哪些程式碼可以存取此列舉型別。 可以是下列其中一項：
+  選擇項。 指定哪些程式碼可以存取此列舉。 可以是下列其中一項：
 
   - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 
@@ -57,26 +57,26 @@ End Enum
 
 - `Shadows`
 
-  選擇性。 指定此列舉型別重新宣告，並隱藏的名稱相同的程式設計項目或一組多載的項目，基底類別中。 您可以指定[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)只在列舉型別本身，而不是在它的任何成員。
+  選擇項。 指定在基類中，這個列舉會重新宣告並隱藏名稱相同的程式設計項目，或一組多載元素。 您只能在列舉本身（而不是其任何成員）上指定[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) 。
 
 - `enumerationname`
 
-  必要項。 列舉型別的名稱。 如需有效的名稱，請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。
+  必要項。 列舉的名稱。 如需有效名稱的資訊，請參閱宣告的[元素名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。
 
 - `datatype`
 
-  選擇性。 列舉型別及其所有成員的資料型別。
+  選擇項。 列舉及其所有成員的資料類型。
 
 - `memberlist`
 
-  必要項。 此陳述式所宣告的成員常數的清單。 多個成員會出現在個別的原始程式碼行。
+  必要項。 在此語句中宣告的成員常數清單。 多個成員會出現在個別的源程式碼上。
 
-  每個`member`具有下列語法和組成部分： `[<attribute list>] member name [ = initializer ]`
+  每個 `member` 都具有下列語法和部分： `[<attribute list>] member name [ = initializer ]`
 
   |組件|描述|
   |---|---|
   |`membername`|必要項。 這個成員的名稱。|
-  |`initializer`|選擇性。 在編譯時期評估，以及指派給這個成員的運算式。|
+  |`initializer`|選擇項。 在編譯時期評估並指派給這個成員的運算式。|
 
 - `End` `Enum`
 
@@ -84,107 +84,107 @@ End Enum
 
 ## <a name="remarks"></a>備註
 
-如果您有一組彼此邏輯相關的不變值時，可以在列舉型別一起定義它們。 這會提供有意義的名稱，列舉型別和其成員，也就是容易記住它們的值。 然後，您可以使用在許多地方列舉型別成員在您的程式碼。
+如果您有一組不變的值是以邏輯方式相互關聯，您可以在列舉中將它們定義在一起。 這會為列舉及其成員提供有意義的名稱，這比它們的值更容易記住。 然後您可以在程式碼中的許多地方使用列舉成員。
 
-使用列舉的優點包括：
+使用列舉的優點包括下列各項：
 
-- 減少調換，或輸入數字的錯誤所造成的錯誤。
+- 減少因轉置或錯誤的數位而造成的錯誤。
 
-- 可讓您輕鬆地在未來變更的值。
+- 可讓您在未來輕鬆變更值。
 
-- 讓程式碼更方便閱讀，這表示它不太可能會導入錯誤。
+- 可讓程式碼更容易閱讀，這表示不太可能會引進錯誤。
 
-- 可確保往後相容性。 如果您使用列舉型別時，您的程式碼是比較不可能失敗，如果有人在未來變更為成員名稱的對應值。
+- 確保向前相容性。 如果您使用列舉，當未來有人變更對應至成員名稱的值時，您的程式碼較不可能失敗。
 
-列舉型別具有名稱、 基礎資料類型和一組的成員。 每一個成員代表的常數。
+列舉具有名稱、基礎資料類型和一組成員。 每個成員都代表一個常數。
 
-在類別、 結構、 模組或介面層級，任何程序中，外部宣告的列舉型別是*成員的列舉型別*。 它是類別、 結構、 模組或介面會宣告它的成員。
+在任何程式之外的類別、結構、模組或介面層級宣告的列舉是*成員列舉*。 它是宣告它的類別、結構、模組或介面的成員。
 
-成員的列舉型別可以從任何位置內存取他們的類別、 結構、 模組或介面。 程式碼類別之外，結構或模組必須限定成員列舉型別的名稱，該類別、 結構或模組的名稱。 您可以避免需要使用完整限定的名稱加上[匯入](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)原始程式檔陳述式。
+成員列舉可以從其類別、結構、模組或介面中的任何位置存取。 類別、結構或模組之外的程式碼必須使用該類別、結構或模組的名稱來限定成員列舉的名稱。 您可以藉由將[Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)語句加入至原始程式檔，來避免需要使用完整名稱。
 
-在命名空間層級，任何類別、 結構、 模組或介面外部宣告的列舉型別是在出現的命名空間的成員。
+在命名空間層級（在任何類別、結構、模組或介面外）宣告的列舉，是其出現所在之命名空間的成員。
 
-*宣告內容*列舉型別必須是原始程式檔、 命名空間、 類別、 結構、 模組或介面，並不是程序。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。
+列舉的宣告*內容*必須是原始程式檔、命名空間、類別、結構、模組或介面，而且不能是程式。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。
 
-您可以將屬性套用至整個列舉型別而非其成員個別。 屬性會提供資訊給組件的中繼資料。
+您可以將屬性套用至整個列舉，但不能個別套用到其成員。 屬性會將資訊提供給元件的中繼資料。
 
 ## <a name="data-type"></a>資料類型
 
-`Enum`陳述式可以宣告列舉的資料類型。 每個成員會在列舉的資料類型。 您可以指定`Byte`， `Integer`， `Long`， `SByte`， `Short`， `UInteger`， `ULong`，或`UShort`。
+@No__t_0 語句可以宣告列舉的資料類型。 每個成員都會採用列舉的資料類型。 您可以指定 `Byte`、`Integer`、`Long`、`SByte`、`Short`、`UInteger`、`ULong` 或 `UShort`。
 
-如果您未指定`datatype`列舉中，每個成員都會採用的資料型別其`initializer`。 如果您同時指定`datatype`並`initializer`的資料類型`initializer`必須可轉換成`datatype`。 如果既未`datatype`也`initializer`已存在，將資料類型會預設為`Integer`。
+如果您未指定列舉的 `datatype`，每個成員都會接受其 `initializer` 的資料類型。 如果您同時指定 `datatype` 和 `initializer`，`initializer` 的資料類型必須可轉換為 `datatype`。 如果 `datatype` 或 `initializer` 都不存在，則資料類型會預設為 [`Integer`]。
 
 ## <a name="initializing-members"></a>初始化成員
 
-`Enum`陳述式可以初始化中的所選成員的內容`memberlist`。 您使用`initializer`提供要指派給成員的運算式。
+@No__t_0 語句可以初始化 `memberlist` 中所選取成員的內容。 您可以使用 `initializer` 來提供要指派給成員的運算式。
 
-如果您未指定`initializer`成員，Visual Basic 將它初始化為零 (如果它是第一個`member`中`memberlist`)，或值比前一大`member`。
+如果您未指定成員的 `initializer`，Visual Basic 會將它初始化為零（如果它是 `memberlist` 中的第一個 `member`），或設為大於前一個 `member` 的值。
 
-在每個所提供的運算式`initializer`可以是常值、 已定義，其他常數和列舉成員已定義，包括先前的成員，這個列舉型別的任何組合。 您可以使用算術和邏輯運算子來結合這類項目。
+每個 `initializer` 中提供的運算式可以是常值的任何組合、其他已定義的常數，以及已定義的列舉成員，包括此列舉的上一個成員。 您可以使用算術和邏輯運算子來結合這類元素。
 
-您無法使用變數或函式中的`initializer`。 不過，您可以使用轉換關鍵字這類`CByte`和`CShort`。 您也可以使用`AscW`如果您呼叫它具有常數`String`或`Char`引數，因為，可以在編譯時期評估。
+您不能在 `initializer` 中使用變數或函數。 不過，您可以使用轉換關鍵字，例如 `CByte` 和 `CShort`。 如果您以常數 `String` 或 `Char` 引數呼叫它，您也可以使用 `AscW`，因為這可以在編譯時期進行評估。
 
-列舉型別不能有浮點值。 如果將成員指派為浮點數值和`Option Strict`設定為 on，就會發生編譯器錯誤。 如果`Option Strict`已關閉，值會自動轉換為`Enum`型別。
+列舉不能有浮點值。 如果將浮點值指派給成員，且 `Option Strict` 設為 on，就會發生編譯器錯誤。 如果 `Option Strict` 為 off，則此值會自動轉換成 `Enum` 類型。
 
-如果成員的值超過允許的範圍為基礎的資料類型，或如果您初始化任何成員為基礎的資料類型所允許的最大值時，編譯器會回報錯誤。
+如果成員的值超過基礎資料類型允許的範圍，或是您將任何成員初始化為基礎資料類型所允許的最大值，則編譯器會報告錯誤。
 
 ## <a name="modifiers"></a>修飾詞
 
-類別、 結構、 模組和介面成員列舉型別的預設值為公用存取。 您可以調整它們的存取層級，使用存取修飾詞。 命名空間成員列舉型別預設為 friend 存取權限。 您可以調整其存取層級 public，但不是屬於私用或受保護。 如需詳細資訊，請參閱 <<c0> [ 存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
+類別、結構、模組和介面成員列舉預設為公用存取。 您可以使用存取修飾詞來調整其存取層級。 命名空間成員列舉預設為 friend 存取。 您可以將其存取層級調整為 [公用]，而不是 [私人] 或 [受保護]。 如需詳細資訊，請參閱[Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
 
-所有的列舉型別成員具有公用存取，而且您無法使用任何存取修飾詞在其上。 不過，如果列舉型別本身具有更具限制性的存取層級，指定的列舉存取層級會優先。
+所有列舉成員都具有公用存取權，而且您不能在其上使用任何存取修飾詞。 不過，如果列舉本身具有更受限制的存取層級，則會優先使用指定的列舉存取層級。
 
-根據預設，所有列舉都是型別，而且其欄位都是常數。 因此`Shared`， `Static`，和`ReadOnly`宣告列舉型別或其成員時，就無法使用關鍵字。
+根據預設，所有列舉都是類型，而其欄位是常數。 因此，在宣告列舉或其成員時，不能使用 `Shared`、`Static` 和 `ReadOnly` 關鍵字。
 
 ## <a name="assigning-multiple-values"></a>指派多個值
 
-列舉型別通常代表互斥的值。 加<xref:System.FlagsAttribute>屬性中`Enum`宣告中，您可以改為將指派多個值給列舉型別的執行個體。 <xref:System.FlagsAttribute>屬性會指定列舉型別視為位元欄位，也就是一組旗標。 這些稱為*位元*列舉型別。
+列舉通常代表互斥的值。 藉由在 `Enum` 宣告中包含 <xref:System.FlagsAttribute> 屬性，您可以改為將多個值指派給列舉的實例。 @No__t_0 屬性指定將列舉視為位欄位，也就是一組旗標。 這些稱為*位*列舉。
 
-當您使用宣告列舉<xref:System.FlagsAttribute>屬性，我們建議您使用 2，可為、 1、 2、 4、 8、 16，並依此類推的次方的值。 我們也建議 「 無 」 是的成員，其值為 0 的名稱。 如需其他指導方針，請參閱<xref:System.FlagsAttribute>和<xref:System.Enum>。
+當您使用 <xref:System.FlagsAttribute> 屬性宣告列舉時，我們建議您使用2的乘冪（也就是1、2、4、8、16等等）來取得值。 我們也建議 "None" 是值為0的成員名稱。 如需其他指導方針，請參閱 <xref:System.FlagsAttribute> 和 <xref:System.Enum>。
 
 ## <a name="example"></a>範例
 
-下列範例顯示如何使用 `Enum` 陳述式。 請注意，成員指`EggSizeEnum.Medium`，而不是`Medium`。
+下列範例顯示如何使用 `Enum` 陳述式。 請注意，成員稱為 `EggSizeEnum.Medium`，而不是 `Medium`。
 
 [!code-vb[VbEnumsTask#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#41)]
 
 ## <a name="example"></a>範例
 
-下列範例中的方法將會超出`Egg`類別。 因此，`EggSizeEnum`完整限定為`Egg.EggSizeEnum`。
+下列範例中的方法是在 `Egg` 類別之外。 因此，`EggSizeEnum` 完全符合 `Egg.EggSizeEnum`。
 
 [!code-vb[VbEnumsTask#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#42)]
 
 ## <a name="example"></a>範例
 
-下列範例會使用`Enum`陳述式來定義一組相關的具名常數的值。 在此情況下，值會是您可能會選擇設計資料庫的資料輸入表單的色彩。
+下列範例會使用 `Enum` 語句來定義一組相關的已命名常數值。 在此情況下，這些值是您可能選擇用來設計資料庫之資料輸入表單的色彩。
 
 [!code-vb[VbEnumsTask#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#30)]
 
 ## <a name="example"></a>範例
 
-下列範例顯示包含正數和負數數字的值。
+下列範例會顯示包含正數和負數的值。
 
 [!code-vb[VbEnumsTask#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#31)]
 
 ## <a name="example"></a>範例
 
-在下列範例中，`As`子句來指定`datatype`的列舉型別。
+在下列範例中，會使用 `As` 子句來指定列舉的 `datatype`。
 
 [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用的位元列舉。 多個值可以指派給位元的列舉型別的執行個體。 `Enum`宣告包含<xref:System.FlagsAttribute>屬性，表示列舉型別，可以視為一組旗標。
+下列範例顯示如何使用位列舉。 可以將多個值指派給位列舉的實例。 @No__t_0 宣告包含 <xref:System.FlagsAttribute> 屬性，這表示列舉可視為一組旗標。
 
 [!code-vb[VbEnumsTask#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#61)]
 
 ## <a name="example"></a>範例
 
-下列範例會逐一列舉型別。 它會使用<xref:System.Enum.GetNames%2A>方法來擷取列舉的成員名稱的陣列和<xref:System.Enum.GetValues%2A>擷取成員值的陣列。
+下列範例會逐一查看列舉。 它會使用 <xref:System.Enum.GetNames%2A> 方法來抓取列舉中的成員名稱陣列，並 <xref:System.Enum.GetValues%2A> 來抓取成員值的陣列。
 
 [!code-vb[VbEnumsTask#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#51)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Enum>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: a02c482db81d9d76752cfe66a292dc57c48b2acb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 660cebadc78d260350f2849f7f4926f9cef7c8d2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698898"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582190"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>擴充索引子屬性 (Visual Basic)
 提供集合中個別項目的存取。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb  
 object(index)  
 ```  
   
@@ -29,25 +29,25 @@ object(index)
   
 |詞彙|定義|  
 |---|---|  
-|`object`|必要項。 可查詢的集合。 也就是集合，實作<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。|  
+|`object`|必要項。 可查詢的集合。 也就是，會執行 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Linq.IQueryable%601> 的集合。|  
 |(|必要項。 表示索引子屬性的開頭。|  
-|`index`|必要項。 整數運算式，指定集合中項目的以零為起始的位置。|  
+|`index`|必要項。 指定集合專案之以零為基底之位置的整數運算式。|  
 |)|必要項。 表示索引子屬性的結尾。|  
   
 ## <a name="return-value"></a>傳回值  
- 從指定的位置，集合中的物件或`Nothing`如果索引超出範圍。  
+ 集合中指定位置的物件，如果索引超出範圍，則為 `Nothing`。  
   
 ## <a name="remarks"></a>備註  
- 您可以使用擴充索引子屬性來存取集合中的個別項目。 這個索引子屬性通常是 XML 軸屬性的輸出。 XML 子代和 XML 子代 axis 屬性傳回的集合<xref:System.Xml.Linq.XElement>物件或屬性值。  
+ 您可以使用擴充索引子屬性來存取集合中的個別元素。 此索引子屬性通常用於 XML 軸屬性的輸出。 XML 子系和 XML 子代軸屬性會傳回 <xref:System.Xml.Linq.XElement> 物件或屬性值的集合。  
   
- Visual Basic 編譯器會將呼叫中的擴充索引子屬性`ElementAtOrDefault`方法。 不同於陣列索引子`ElementAtOrDefault`方法會傳回`Nothing`如果索引超出範圍。 當您無法輕易判斷集合中的項目數，則此行為會有所幫助。  
+ Visual Basic 編譯器會將擴充索引子屬性轉換為 `ElementAtOrDefault` 方法的呼叫。 與陣列索引子不同的是，如果索引超出範圍，`ElementAtOrDefault` 方法會傳回 `Nothing`。 當您無法輕鬆地判斷集合中的專案數目時，這個行為會很有用。  
   
- 這個索引子屬性就像延伸模組屬性實作的集合<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>： 集合並沒有索引子或預設屬性時，才使用它。  
+ 此索引子屬性就像是執行 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Linq.IQueryable%601> 之集合的延伸模組屬性：只有在集合沒有索引子或預設屬性時，才會使用此屬性。  
   
- 若要存取的集合中的第一個元素的值<xref:System.Xml.Linq.XElement>或是<xref:System.Xml.Linq.XAttribute>物件，您可以使用 XML`Value`屬性。 如需詳細資訊，請參閱 < [XML Value 屬性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。  
+ 若要存取 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 物件集合中第一個元素的值，您可以使用 XML `Value` 屬性。 如需詳細資訊，請參閱[XML Value 屬性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用擴充索引子來存取集合中的第二個的子節點<xref:System.Xml.Linq.XElement>物件。 集合會使用子軸屬性，它會取得所有子項目來存取`phone`在`contact`物件。  
+ 下列範例示範如何使用延伸模組索引子來存取 <xref:System.Xml.Linq.XElement> 物件集合中的第二個子節點。 您可以使用 [子軸] 屬性來存取集合，這會取得 `contact` 物件中名為 `phone` 的所有子項目。  
   
  [!code-vb[VbXMLSamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#24)]  
   
@@ -55,7 +55,7 @@ object(index)
   
  `Second phone number: 425-555-0145`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Linq.XElement>
 - [XML 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)

@@ -7,37 +7,37 @@ helpviewer_keywords:
 - Erase keyword [Visual Basic]
 - Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
-ms.openlocfilehash: bf3eb6476dc1485faeddab475f29e508175d3378
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dec2a859f664ee8dcbb305082ec33aeacbaccb4
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638183"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583392"
 ---
 # <a name="erase-statement-visual-basic"></a>Erase 陳述式 (Visual Basic)
-用以釋放陣列變數，並解除配置其元素所使用的記憶體。  
+用來釋放陣列變數，並解除配置其元素所使用的記憶體。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb  
 Erase arraylist  
 ```  
   
 ## <a name="parts"></a>組件  
  `arraylist`  
- 必要項。 要清除的陣列變數的清單。 以逗號分隔多個變數。  
+ 必要項。 要清除的陣列變數清單。 以逗號分隔多個變數。  
   
 ## <a name="remarks"></a>備註  
- `Erase`陳述式只可以出現在程序層級。 這表示您可以釋放程序內，但不是在類別或模組層級的陣列。  
+ @No__t_0 語句只能出現在程式層級。 這表示您可以在程式中釋放陣列，而不是在類別或模組層級。  
   
- `Erase`陳述式相當於指派`Nothing`到每個陣列變數。  
+ @No__t_0 語句相當於將 `Nothing` 指派給每個陣列變數。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`Erase`陳述式來清除這兩個陣列，並釋放其記憶體 (1000年和 100 個儲存體項目，分別)。 `ReDim`陳述式，然後將新的陣列執行個體指派給三維陣列。  
+ 下列範例會使用 `Erase` 語句來清除兩個數組，並釋放其記憶體（分別是1000和100儲存元素）。 接著 `ReDim` 語句會將新的陣列實例指派給三維陣列。  
   
  [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Nothing](../../../visual-basic/language-reference/nothing.md)
 - [ReDim 陳述式](../../../visual-basic/language-reference/statements/redim-statement.md)

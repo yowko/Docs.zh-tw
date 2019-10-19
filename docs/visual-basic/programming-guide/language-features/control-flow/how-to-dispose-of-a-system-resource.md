@@ -1,5 +1,5 @@
 ---
-title: HOW TO：處置系統資源 (Visual Basic)
+title: 如何：處置系統資源 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c780ee1a174ad044593960bc30a3ee2e1f929390
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906733"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583149"
 ---
-# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>HOW TO：處置系統資源 (Visual Basic)
-您可以使用`Using`區塊，以確保系統處置資源的程式碼結束該區塊時。 這非常有用，如果您使用的，會耗用大量記憶體，或其他元件也會想要使用的系統資源。  
+# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>如何：處置系統資源 (Visual Basic)
+您可以使用 `Using` 區塊，確保當您的程式碼結束區塊時，系統會處置資源。 如果您使用的系統資源會耗用大量的記憶體，或其他元件也想要使用，這就很有用。  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>若要結束您的程式碼時，在資料庫連接的處理  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>若要在程式碼完成時處置資料庫連接  
   
-1. 請確定您包含適當[Imports 陳述式 （.NET 命名空間和類型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)原始程式檔的開頭資料庫連接 (在此情況下， <xref:System.Data.SqlClient>)。  
+1. 請確定您在來源檔案的開頭包含資料庫連接的適當[Imports 語句（.Net 命名空間和類型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) （在此案例中為 <xref:System.Data.SqlClient>）。  
   
-2. 建立`Using`含有區塊`Using`和`End Using`陳述式。 在區塊內，將資料庫連接處理的程式碼。  
+2. 使用 `Using` 和 `End Using` 語句來建立 `Using` 區塊。 在區塊內，放入處理資料庫連接的程式碼。  
   
-3. 宣告連接並建立它的執行個體的一部分`Using`陳述式。  
+3. 宣告連接，並建立它的實例做為 `Using` 語句的一部分。  
   
-    ```  
+    ```vb  
     ' Insert the following line at the beginning of your source file.  
     Imports System.Data.SqlClient  
     Public Sub AccessSql(ByVal s As String)  
@@ -38,13 +38,13 @@ ms.locfileid: "61906733"
     End Sub  
     ```  
   
-     系統會處置的資源，無論您如何結束區塊中，包括處理的例外狀況的情況。  
+     無論您如何結束區塊，系統都會處置資源，包括未處理之例外狀況的情況。  
   
-     請注意，您無法存取`sqc`從外部`Using`封鎖，因為其範圍僅限於該區塊。  
+     請注意，您無法從 `Using` 區塊外部存取 `sqc`，因為它的範圍限制為區塊。  
   
-     您可以使用這項技術的系統資源，例如檔案控制代碼或 COM 包裝函式。 您使用`Using`當您想要確定保留資源供其他元件之後結束, 時，封鎖`Using`區塊。  
+     您可以在系統資源（例如檔案控制代碼或 COM 包裝函式）上使用這項相同的技術。 當您想要在結束 [`Using`] 區塊之後，保留其他元件的可用資源時，請使用 `Using` 區塊。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Data.SqlClient.SqlConnection>
 - [控制流程](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)

@@ -14,18 +14,18 @@ helpviewer_keywords:
 - type boundaries
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 903a553b5383620f15cce274c61a440b7bbb1d7d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5fb809b564df17d6320b7ffce3d757fa0fee7639
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970019"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583015"
 ---
 # <a name="assemblies-in-net"></a>.NET 中的組件
 
 元件會形成部署、版本控制、重複使用、啟用範圍和安全性許可權的基本單位。以網路為基礎的應用程式。 組件是建置來共同運作及構成一個功能邏輯單位的型別與資源集合。 元件採用可執行檔（ *.exe*）或動態連結程式庫（ *.dll*）檔案的形式，而且是 .net 應用程式的建立區塊。 它們為通用語言執行平台提供了感知型別實作所需的資訊。 您可以將組件視為型別和資源的集合，其構成功能的邏輯單元，而且是為了共同運作而建置。
 
-在 .NET Core 和 .NET Framework 中，您可以從一或多個原始程式碼檔建立元件。 在 .NET Framework 中，組件可以包含一或多個模組。 這可讓您規劃更大的專案，讓數個開發人員可以使用個別的原始程式碼檔案或模組，這些檔案會結合以建立單一元件。 如需模組的詳細資訊，請參閱[如何：建立多檔案元件](../../framework/app-domains/build-multifile-assembly.md)。
+在 .NET Core 和 .NET Framework 中，您可以從一或多個原始程式碼檔建立元件。 在 .NET Framework 中，組件可以包含一或多個模組。 這可讓您規劃更大的專案，讓數個開發人員可以使用個別的原始程式碼檔案或模組，這些檔案會結合以建立單一元件。 如需模組的詳細資訊，請參閱[如何：建立](../../framework/app-domains/build-multifile-assembly.md)多檔案元件。
 
 組件包含下列屬性：
 
@@ -37,7 +37,7 @@ ms.locfileid: "70970019"
 
 - 藉由使用反映，您能以程式設計方式取得組件的相關資訊。 如需詳細資訊，請參閱[反映 (C#)](../../csharp/programming-guide/concepts/reflection.md) 或 [Reflection (Visual Basic)](../../visual-basic/programming-guide/concepts/reflection.md) (反映 (Visual Basic))。
 
-- 您可以載入元件，只要使用 .net core 中的<xref:System.Reflection.MetadataLoadContext>類別，以及 .net core 和 .NET Framework 中的<xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType>或<xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType>方法，即可加以檢查。
+- 您可以載入元件，只使用 .NET Core 中的 <xref:System.Reflection.MetadataLoadContext> 類別，以及 .NET Core 和 .NET Framework 中的 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> 方法來加以檢查。
 
 ## <a name="assemblies-in-the-common-language-runtime"></a>Common language runtime 中的元件
 
@@ -45,7 +45,7 @@ ms.locfileid: "70970019"
 
 元件會定義下列資訊：  
   
-- Common language runtime 所執行的程式碼。 請注意，每個元件只能有一個進入點`DllMain`： `WinMain`、或`Main`。
+- Common language runtime 所執行的程式碼。 請注意，每個元件只能有一個進入點： `DllMain`、`WinMain` 或 `Main`。
   
 - 安全性界限。 組件是要求和授與權限的單位。 如需元件中安全性界限的詳細資訊，請參閱[元件安全性考慮](security-considerations.md)。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "70970019"
 若要在應用程式中使用元件，您必須加入它的參考。 參考元件之後，所有可存取的類型、屬性、方法和其命名空間的其他成員，都可供您的應用程式使用，就像其程式碼屬於您的來源檔案。
 
 > [!NOTE]
-> 系統會自動參考 .NET 類別庫中的大多數組件。 如果未自動參考系統元件，則針對 .NET Core，您可以加入包含元件之 NuGet 套件的參考。 請使用 Visual Studio 中的 NuGet 套件管理員，或將元件的[ \<PackageReference >](../../core/tools/dependencies.md#the-new-packagereference-element)元素新增至 *.csproj*或 *. vbproj*專案。 在 .NET Framework 中，您可以使用 Visual Studio 中的 [**加入參考**] 對話方塊，或使用`-reference` [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md)或[Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)編譯器的命令列選項，將參考加入至元件。
+> 系統會自動參考 .NET 類別庫中的大多數組件。 如果未自動參考系統元件，則針對 .NET Core，您可以加入包含元件之 NuGet 套件的參考。 在 Visual Studio 中使用 NuGet 套件管理員，或將元件的[\<PackageReference >](../../core/tools/dependencies.md#the-new-packagereference-element)專案新增至 *.csproj*或 *. vbproj*專案。 在 .NET Framework 中，您可以使用 Visual Studio 中的 [**加入參考**] 對話方塊，或使用[C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md)或[Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)編譯器的 `-reference` 命令列選項，加入元件的參考。
 
 在C#中，您可以在單一應用程式中使用相同元件的兩個版本。 如需詳細資訊，請參閱[外部別名](../../csharp/language-reference/keywords/extern-alias.md)。
 
@@ -110,11 +110,12 @@ ms.locfileid: "70970019"
 ## <a name="reference"></a>參考資料  
  <xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 組件檔格式](file-format.md)
 - [.NET 中的組件](index.md)
 - [Friend 元件](friend.md)
+- [參考元件](reference-assemblies.md)
 - [如何：載入和卸載元件](load-unload.md)
-- [如何：在 .NET Core 中使用和 debug assembly 卸載功能](unloadability.md)
+- [如何：在 .NET Core 中使用和 debug 元件卸載功能](unloadability.md)
 - [如何：判斷檔案是否為元件](identify.md)

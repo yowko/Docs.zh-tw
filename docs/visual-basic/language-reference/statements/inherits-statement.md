@@ -1,5 +1,5 @@
 ---
-title: Inherits 陳述式 (Visual Basic)
+title: Inherits 語句（Visual Basic）
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Inherits
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: c39272d53fea136c83a5a09444b65a594fe3b7a7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e92e12908c89bb7a0bf385a2122b0c8f1eb8a6f7
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625515"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581747"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
-會導致目前的類別或介面從另一個類別或介面集合繼承屬性、 變數、 屬性、 程序和事件。  
+導致目前的類別或介面繼承另一個類別或一組介面的屬性、變數、屬性、程式和事件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb  
 Inherits basetypenames  
 ```  
   
@@ -28,42 +28,42 @@ Inherits basetypenames
   
 |詞彙|定義|  
 |---|---|  
-|`basetypenames`|必要項。 從這個類別衍生的類別名稱。<br /><br /> -或-<br /><br /> 從這個介面衍生的介面名稱。 使用逗號來分隔多個名稱。|  
+|`basetypenames`|必要項。 這個類別衍生來源的類別名稱。<br /><br /> -或-<br /><br /> 這個介面衍生自的介面名稱。 使用逗號來分隔多個名稱。|  
   
 ## <a name="remarks"></a>備註  
- 如果使用，`Inherits`陳述式必須是類別或介面定義中的第一個非空白的非註解一行。 它應該緊接`Class`或`Interface`陳述式。  
+ 如果使用，則 `Inherits` 語句必須是類別或介面定義中第一個非空白的非批註行。 它應該緊接在 `Class` 或 `Interface` 語句後面。  
   
- 您可以使用`Inherits`只能在類別或介面中。 這表示原始程式檔、 命名空間、 結構、 模組、 程序或區塊，不能繼承的宣告內容。  
+ 您只能在類別或介面中使用 `Inherits`。 這表示繼承的宣告內容不能是原始程式檔、命名空間、結構、模組、程式或區塊。  
   
 ## <a name="rules"></a>規則  
   
-- **類別繼承。** 如果類別會使用`Inherits`陳述式中，您可以指定只有一個基底類別。  
+- **類別繼承。** 如果類別使用 `Inherits` 語句，您只能指定一個基類。  
   
-     類別無法繼承自巢狀類別。  
+     類別無法繼承自其內嵌套的類別。  
   
-- **介面繼承。** 如果介面使用`Inherits`陳述式中，您可以指定一或多個基底介面。 您可以繼承自兩個介面，即使它們都各自定義具有相同名稱的成員。 如果您這樣做時，實作程式碼必須使用名稱限定性條件來指定它所實作的成員。  
+- **介面繼承。** 如果介面使用 `Inherits` 語句，您可以指定一或多個基底介面。 您可以從兩個介面繼承，即使它們各自訂具有相同名稱的成員。 如果您這樣做，則執行程式碼必須使用名稱限定性來指定它所要執行的成員。  
   
-     介面無法繼承自另一個介面具有更嚴格的存取層級。 例如，`Public`介面無法繼承自`Friend`介面。  
+     介面無法繼承自具有更嚴格存取層級的另一個介面。 例如，`Public` 介面無法繼承自 `Friend` 介面。  
   
-     介面無法繼承自的巢狀介面。  
+     介面無法繼承自其內所嵌套的介面。  
   
- 舉例來說，.NET Framework 中的類別繼承<xref:System.ArgumentException>類別，繼承自<xref:System.SystemException>類別。 這提供<xref:System.ArgumentException>所有預先定義的屬性和程序所需的系統例外狀況，例如<xref:System.Exception.Message%2A>屬性和<xref:System.Exception.ToString%2A>方法。  
+ .NET Framework 中的類別繼承範例是 <xref:System.ArgumentException> 類別，它繼承自 <xref:System.SystemException> 類別。 這會提供 <xref:System.ArgumentException> 系統例外狀況所需的所有預先定義屬性和程式，例如 <xref:System.Exception.Message%2A> 屬性和 <xref:System.Exception.ToString%2A> 方法。  
   
- 舉例來說，.NET Framework 中的介面繼承<xref:System.Collections.ICollection>介面，繼承自<xref:System.Collections.IEnumerable>介面。 這會導致<xref:System.Collections.ICollection>繼承需要周遊集合的列舉值的定義。  
+ .NET Framework 中的介面繼承範例是 <xref:System.Collections.ICollection> 介面，它會繼承自 <xref:System.Collections.IEnumerable> 介面。 這會導致 <xref:System.Collections.ICollection> 繼承遍歷集合所需的列舉值定義。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`Inherits`陳述式來顯示類別的命名方式`thisClass`可以繼承的基底類別，名為的所有成員`anotherClass`。  
+ 下列範例會使用 `Inherits` 語句，顯示名為 `thisClass` 的類別如何繼承名為 `anotherClass` 之基類的所有成員。  
   
  [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
 ## <a name="example"></a>範例  
- 下列範例顯示多個介面的繼承。  
+ 下列範例會顯示多個介面的繼承。  
   
  [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  
   
- 名為介面`thisInterface`現在包含中的所有定義<xref:System.IComparable>， <xref:System.IDisposable>，和<xref:System.IFormattable>介面繼承的成員分別提供針對特定類型的比較的兩個物件，釋放配置的資源表示為物件的值和`String`。 類別若實作`thisInterface`必須實作每個基底介面的每個成員。  
+ 名為 `thisInterface` 的介面現在包含 <xref:System.IComparable>、<xref:System.IDisposable> 和 <xref:System.IFormattable> 介面中的所有定義，而繼承的成員會分別針對兩個物件的類型特定比較提供，釋出已配置的資源，並表示的值做為 `String` 的物件。 執行 `thisInterface` 的類別必須實作為每一個基底介面的每個成員。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)

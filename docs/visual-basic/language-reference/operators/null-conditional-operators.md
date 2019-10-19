@@ -1,36 +1,36 @@
 ---
-title: Null 條件運算子 (Visual Basic)
+title: Null 條件運算子（Visual Basic）
 ms.date: 10/19/2018
 helpviewer_keywords:
 - null-conditional operators [Visual Basic]
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: 4815fe7ad337634cfb56127fbd24a47a37fdd74b
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 40cb63705eda563b4c3cfd30fa9836a8f632dccf
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062938"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581640"
 ---
-# <a name="-and--null-conditional-operators-visual-basic"></a>?. 和嗎？（） null 條件運算子 (Visual Basic)
+# <a name="-and--null-conditional-operators-visual-basic"></a>?. 和?（） null 條件運算子（Visual Basic）
 
-測試的左運算元為 null 的值 (`Nothing`) 之前執行成員存取 (`?.`) 或索引 (`?()`) 作業; 會傳回`Nothing`如果左運算元評估為`Nothing`。 請注意，在正常情況下傳回實值類型的運算式中，null 條件運算子傳回<xref:System.Nullable%601>。
+在執行成員存取（`?.`）或索引（`?()`）作業之前，先測試左邊運算元的值是否為 null （`Nothing`）;如果左運算元評估為 `Nothing`，則傳回 `Nothing`。 請注意，在通常會傳回實數值型別的運算式中，null 條件運算子會傳回 <xref:System.Nullable%601>。
 
-這些運算子可協助您撰寫較少的程式碼來處理 null 檢查，尤其是遞減至資料結構。 例如：
+這些運算子可協助您撰寫較少的程式碼來處理 null 檢查，特別是當遞減至資料結構時。 例如:
 
 ```vb
-' Nothing if customers is Nothing  
-Dim length As Integer? = customers?.Length  
+' Nothing if customers is Nothing
+Dim length As Integer? = customers?.Length
 
 ' Nothing if customers is Nothing
 Dim first As Customer = customers?(0)
 
 ' Nothing if customers, the first customer, or Orders is Nothing
-Dim count As Integer? = customers?(0)?.Orders?.Count()   
+Dim count As Integer? = customers?(0)?.Orders?.Count()
 ```
 
-相較之下，這些運算式沒有 null 條件運算子的第一個替代程式碼是：
+為了進行比較，這些運算式中第一個不含 null 條件運算子的替代程式碼為：
 
 ```vb
 Dim length As Integer
@@ -39,35 +39,35 @@ If customers IsNot Nothing Then
 End If
 ```
 
-有時候您需要採取動作，可能是 null，該物件的布林成員的值為基礎的物件上 (例如布林值屬性`IsAllowedFreeShipping`在下列範例中):
+有時候，您需要在可能是 null 的物件上採取動作，這是根據該物件上布林值成員的值（例如，下列範例中的布林值屬性 `IsAllowedFreeShipping`）：
 
 ```vb
-  Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
-  
-  If customer IsNot Nothing AndAlso customer.IsAllowedFreeShipping Then
-   ApplyFreeShippingToOrders(customer)
-  End If
+Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+
+If customer IsNot Nothing AndAlso customer.IsAllowedFreeShipping Then
+  ApplyFreeShippingToOrders(customer)
+End If
 ```
 
-您可以縮短您的程式碼，並避免以手動方式檢查為 null，如下所示使用 null 條件運算子：
+您可以使用 null 條件運算子來縮短您的程式碼，並避免手動檢查 null，如下所示：
 
 ```vb
- Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
- 
- If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
+Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+
+If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
-Null 條件運算子會執行最少運算。  如果在條件式成員存取和索引作業鏈結中的一項作業會傳回`Nothing`，其餘的鏈結的執行會停止。  在下列範例中，`C(E)`如果不評估`A`， `B`，或`C`評估為`Nothing`。
+Null 條件運算子會執行最少運算。  如果條件式成員存取和索引作業鏈中的一項作業傳回 `Nothing`，則會停止執行鏈的其餘部分。  在下列範例中，如果 `A`、`B` 或 `C` 評估為 `Nothing`，則不會評估 `C(E)`。
 
 ```vb
 A?.B?.C?(E);
 ```
 
-Null 條件成員存取的另一個用途是要以更少的程式碼以執行緒安全的方式叫用委派。  下列範例會定義兩種類型，`NewsBroadcaster`和`NewsReceiver`。 新聞項目會傳送至由接收者`NewsBroadcaster.SendNews`委派。
+Null 條件式成員存取的另一個用法是以更少的程式碼，以安全線程的方式叫用委派。  下列範例會定義兩個類型： `NewsBroadcaster` 和 `NewsReceiver`。 @No__t_0 委派會將新聞專案傳送給接收者。
 
 ```vb
 Public Module NewsBroadcaster
-   Dim SendNews As Action(Of String) 
+   Dim SendNews As Action(Of String)
 
    Public Sub Main()
       Dim rec As New NewsReceiver()
@@ -91,26 +91,26 @@ Public Class NewsReceiver
 End Class
 ```
 
-如果在沒有項目`SendNews`引動過程清單`SendNews`委派擲回<xref:System.NullReferenceException>。 Null 條件運算子之前機器碼，類似下列確保委派引動過程清單不是`Nothing`:
+如果 `SendNews` 調用清單中沒有任何元素，則 `SendNews` 委派會擲回 <xref:System.NullReferenceException>。 在 null 條件運算子之前，如下所示的程式碼可確保委派調用清單不 `Nothing`：
 
-```vb  
-SendNews = SendNews.Combine({SendNews, client})  
-If SendNews IsNot Nothing Then 
+```vb
+SendNews = SendNews.Combine({SendNews, client})
+If SendNews IsNot Nothing Then
    SendNews("Just in...")
 End If
 ```
 
-新方法則更簡單：  
+新方法則更簡單：
 
 ```vb
-SendNews = SendNews.Combine({SendNews, client})  
+SendNews = SendNews.Combine({SendNews, client})
 SendNews?.Invoke("Just in...")
 ```
 
-新的方法可以保障執行緒安全，因為編譯器產生的程式碼只會評估 `SendNews` 一次，並將結果保留在暫存變數中。 由於沒有 Null 條件式委派引動過程語法 `SendNews?(String)`，因此您必須明確呼叫 `Invoke` 方法。  
+新的方法可以保障執行緒安全，因為編譯器產生的程式碼只會評估 `SendNews` 一次，並將結果保留在暫存變數中。 由於沒有 Null 條件式委派引動過程語法 `SendNews?(String)`，因此您必須明確呼叫 `Invoke` 方法。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [運算子 (Visual Basic)](index.md)
-- [Visual Basic 程式設計手冊](../../../visual-basic/programming-guide/index.md)
+- [運算子（Visual Basic）](index.md)
+- [Visual Basic 程式設計指南](../../../visual-basic/programming-guide/index.md)
 - [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)

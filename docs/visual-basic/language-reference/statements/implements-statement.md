@@ -1,5 +1,5 @@
 ---
-title: Implements 陳述式 (Visual Basic)
+title: Implements 語句（Visual Basic）
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Implements
@@ -9,54 +9,54 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: 1f0c6b052ead303e0b43465dac2067422abc4ef8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 865e99aa0e27591d10fde1465047a2e6bf183bbf
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637735"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581797"
 ---
 # <a name="implements-statement"></a>Implements 陳述式
-指定一個或多個介面，或介面成員必須實作在類別中出現的結構定義。  
+指定一個或多個介面或介面成員，必須在其出現所在的類別或結構定義中執行。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb  
 Implements interfacename [, ...]  
--or-  
+' -or-  
 Implements interfacename.interfacemember [, ...]  
 ```  
   
 ## <a name="parts"></a>組件  
  `interfacename`  
- 必要項。 其屬性、 程序和事件會由對應的成員，在類別或結構實作介面。  
+ 必要項。 介面，其屬性、程式和事件會由類別或結構中的對應成員來執行。  
   
  `interfacemember`  
- 必要項。 目前正在實作介面成員。  
+ 必要項。 正在執行之介面的成員。  
   
 ## <a name="remarks"></a>備註  
- 介面是集合的原型代表的成員 （屬性、 程序和事件） 封裝的介面。 介面包含宣告的成員;類別和結構實作這些成員。 如需詳細資訊，請參閱[介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。  
+ 「介面」（interface）是原型的集合，代表介面封裝的成員（屬性、程式和事件）。 介面只包含成員的宣告;類別和結構會執行這些成員。 如需詳細資訊，請參閱[介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。  
   
- `Implements`陳述式必須緊接`Class`或`Structure`陳述式。  
+ @No__t_0 語句必須緊接在 `Class` 或 `Structure` 語句之後。  
   
- 當您實作的介面時，您必須實作的介面中宣告的所有成員。 省略任何成員會被視為語法錯誤。 若要實作的個別成員，指定[Implements](../../../visual-basic/language-reference/statements/implements-clause.md)關鍵字 (這是分開`Implements`陳述式) 當您宣告類別或結構中的成員。 如需詳細資訊，請參閱[介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。  
+ 當您執行介面時，您必須執行介面中宣告的所有成員。 省略任何成員會被視為語法錯誤。 若要執行個別成員，當您在類別或結構中宣告成員時，可以指定[Implements](../../../visual-basic/language-reference/statements/implements-clause.md)關鍵字（與 `Implements` 語句分開）。 如需詳細資訊，請參閱[介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。  
   
- 類別可以使用[私人](../../../visual-basic/language-reference/modifiers/private.md)實作的屬性和程序，但這些成員都只能由實作類別的執行個體放入變數宣告為介面的型別轉型存取。  
+ 類別可以使用屬性和程式的[私](../../../visual-basic/language-reference/modifiers/private.md)用實作為，但只有將實做類別的實例轉換成宣告為介面類別型的變數，才能存取這些成員。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`Implements`陳述式來實作介面的成員。 它會定義名為的介面`ICustomerInfo`事件、 屬性，與程序。 此類別`customerInfo`實作介面中定義的所有成員。  
+ 下列範例顯示如何使用 `Implements` 語句來執行介面的成員。 它會定義名為 `ICustomerInfo` 的介面，其中包含事件、屬性和程式。 類別 `customerInfo` 會執行介面中定義的所有成員。  
   
  [!code-vb[VbVbalrStatements#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#33)]  
   
- 請注意，類別`customerInfo`會使用`Implements`陳述式來指示此類別會實作的所有成員的個別的原始程式碼行上`ICustomerInfo`介面。 接著會使用類別中的每個成員`Implements`關鍵字做為其成員宣告，以表示它會實作該介面成員的一部分。  
+ 請注意，類別 `customerInfo` 在不同的源程式碼上使用 `Implements` 語句，表示該類別會執行 `ICustomerInfo` 介面的所有成員。 然後，類別中的每個成員都會使用 `Implements` 關鍵字做為其成員宣告的一部分，以表示它會實作為該介面成員。  
   
 ## <a name="example"></a>範例  
- 下列兩個程序顯示如何使用在上述範例中實作的介面。 若要測試實作，將這些程序新增到專案，並呼叫`testImplements`程序。  
+ 下列兩個程式顯示如何使用上述範例中所實的介面。 若要測試執行，請將這些程式新增至您的專案，並呼叫 `testImplements` 程式。  
   
  [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)
+- [Sub New](../../../visual-basic/language-reference/statements/implements-clause.md)
 - [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)
 - [介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

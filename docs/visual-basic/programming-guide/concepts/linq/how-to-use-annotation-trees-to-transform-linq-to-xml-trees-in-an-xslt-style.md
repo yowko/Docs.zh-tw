@@ -2,12 +2,12 @@
 title: 如何：使用注釋轉換 XSLT 樣式中的 LINQ to XML 樹狀結構（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: b950f823b65299689f4ed829138a6689f6789c18
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b8f15c4dc6016e48619d26e7cc8717a2a3c5acd5
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395953"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581982"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>如何：使用注釋轉換 XSLT 樣式中的 LINQ to XML 樹狀結構（Visual Basic）
 
@@ -85,7 +85,7 @@ End Module
 
 ## <a name="a-more-complicated-transform"></a>更複雜的轉換
 
- 下列範例會查詢樹狀結構並計算 `Data` 項目的平均值和總和，然後將它們加入為樹狀結構中的新項目。
+下列範例會查詢樹狀結構並計算 `Data` 項目的平均值和總和，然後將它們加入為樹狀結構中的新項目。
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -133,10 +133,10 @@ Module Module1
         Console.WriteLine("----------------")
         Console.WriteLine(newData)
     End Sub
-End Module 
+End Module
 ```
 
- 這個範例會產生下列輸出：
+這個範例會產生下列輸出：
 
 ```console
 Before Transform
@@ -165,7 +165,7 @@ After Transform
 函式的虛擬程式碼相當簡單：
 
 > 函式會採用 System.xml.linq.xelement> 做為引數，並傳回 System.xml.linq.xelement>。
-> 
+>
 > 如果元素具有 System.xml.linq.xelement> 注釋，則會傳回新的 System.xml.linq.xelement>：
 >
 > - 新 System.xml.linq.xelement> 的名稱是 annotation 元素的名稱。
@@ -338,7 +338,7 @@ Module Module1
         Console.WriteLine("----------------")
         Console.WriteLine(newRoot)
     End Sub
-End Module 
+End Module
 ```
 
 這個範例會產生下列輸出：

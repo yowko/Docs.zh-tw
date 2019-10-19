@@ -2,15 +2,15 @@
 title: 處理全域命名空間 (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: 9aab6f7175c905fcb3e82829f131f52b3d9368ac
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 93c7c654e43b579456633dea90ba6a362ff095f7
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710376"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582352"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>處理全域命名空間 (Visual Basic) (LINQ to XML)
-Visual Basic 中 xml 常值的其中一個重要功能, 就是使用`Imports`語句宣告 xml 命名空間的功能。 利用這個功能，您可以宣告使用前置詞的 XML 命名空間，或者，您可以宣告預設的 XML 命名空間。  
+Visual Basic 中 XML 常值的其中一個重要功能，就是使用 `Imports` 語句來宣告 XML 命名空間的功能。 利用這個功能，您可以宣告使用前置詞的 XML 命名空間，或者，您可以宣告預設的 XML 命名空間。  
   
  這項功能在兩種情況下很有用。 第一，在 XML 常值中宣告的命名空間不會延續到內嵌的運算式中。 宣告全域命名空間會減少您必須做的工作量，以便搭配命名空間使用內嵌的運算式。 第二，您必須宣告全域命名空間，才能搭配 XML 使用命名空間。  
   
@@ -134,7 +134,7 @@ Console.WriteLine(root.<Child>.Count())
   
  這個範例表示沒有 `Child` 項目。 它會產生下列輸出：  
   
-```  
+```console  
 0  
 ```  
   
@@ -156,7 +156,7 @@ End Module
   
  這個範例表示有一個 `Child` 項目， 它會產生下列輸出：  
   
-```  
+```console  
 1  
 ```  
   
@@ -193,10 +193,10 @@ End Module
   
  這個範例會產生下列輸出：  
   
-```  
+```console  
 http://www.adventure-works.com  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [命名空間總覽 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [命名空間總覽（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)

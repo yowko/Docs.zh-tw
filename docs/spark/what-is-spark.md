@@ -4,12 +4,12 @@ description: 瞭解 Apache Spark 和 big data 案例。
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
-ms.openlocfilehash: ccf41f08df3c68a039210320f14219e6b6229a64
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 187a37897c23809d91820bd79b476e775fb5b99b
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72396233"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583476"
 ---
 # <a name="what-is-apache-spark"></a>什麼是 Apache Spark？
 
@@ -69,30 +69,30 @@ ms.locfileid: "72396233"
 
 叢集管理員會與驅動程式和執行程式通訊，以進行下列動作：
 
-- 管理資源配置
-- 管理程式部門
-- 管理程式執行
+* 管理資源配置
+* 管理程式部門
+* 管理程式執行
 
 ## <a name="language-support"></a>語言支援
 
 Apache Spark 支援下列程式設計語言：
 
-- Scala
-- Python
-- Java
-- SQL
-- R
-- .NET
+* Scala
+* Python
+* Java
+* SQL
+* R
+* .NET
 
 ## <a name="spark-apis"></a>Spark Api
 
 Apache Spark 支援下列 Api：
 
-- [Spark Scala API](https://spark.apache.org/docs/2.2.0/api/scala/index.html)
-- [Spark JAVA API](https://spark.apache.org/docs/2.2.0/api/java/index.html)
-- [Spark Python API](https://spark.apache.org/docs/2.2.0/api/python/index.html)
-- [Spark R API](https://spark.apache.org/docs/2.2.0/api/R/index.html)
-- [SPARK SQL](https://spark.apache.org/docs/latest/api/sql/index.html)，內建函數
+* [Spark Scala API](https://spark.apache.org/docs/2.2.0/api/scala/index.html)
+* [Spark JAVA API](https://spark.apache.org/docs/2.2.0/api/java/index.html)
+* [Spark Python API](https://spark.apache.org/docs/2.2.0/api/python/index.html)
+* [Spark R API](https://spark.apache.org/docs/2.2.0/api/R/index.html)
+* [SPARK SQL](https://spark.apache.org/docs/latest/api/sql/index.html)，內建函數
 
 ## <a name="next-steps"></a>後續步驟
 
