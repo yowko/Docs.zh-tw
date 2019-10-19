@@ -2,24 +2,24 @@
 title: 利用無伺服器函式
 description: 利用雲端原生應用程式中的無伺服器和 Azure Functions
 ms.date: 06/30/2019
-ms.openlocfilehash: 61bf4db6d61160c7ec11ffa3f178cc3917ae6cf9
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: c79f611b83f63079634fb2bac037c99f851f18ab
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182822"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72578918"
 ---
 # <a name="leveraging-serverless-functions"></a>利用無伺服器函式
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-在管理完整機器和作業系統以利用雲端功能的範圍中，無伺服器的最大目的在於您的程式碼，而您只需要為程式碼執行時才需要付費。 Azure Functions 提供一種方式，可在您的應用程式中建立無伺服器功能。 
+在管理完整機器和作業系統以利用雲端功能的範圍中，無伺服器的最大目的在於您的程式碼，而您只需支付程式碼執行時的費用。 Azure Functions 提供一種方式，可在您的應用程式中建立無伺服器功能。 
 
 ## <a name="what-is-serverless"></a>什麼是無伺服器？
 
 無伺服器運算並不表示執行您的應用程式時，不會有一台伺服器，那就是程式碼仍會在某個伺服器上執行。 差別在於應用程式開發小組不再需要自行顧慮管理伺服器基礎結構。 無伺服器運算解決方案（例如 Azure Functions 協助小組提高生產力，並可讓組織將其資源優化，並將焦點放在提供解決方案。
 
-無伺服器運算會使用事件觸發的無狀態容器來裝載您的應用程式或部分應用程式。 無伺服器平臺可以視需要相應增加和減少，以符合需求。 像 Azure Functions 的平臺可以輕鬆直接存取其他 Azure 服務，例如佇列、事件和儲存體。
+無伺服器運算會使用事件觸發的無狀態容器來裝載您的應用程式或部分應用程式。 無伺服器平臺可以視需要相應放大和縮小以符合需求。 像 Azure Functions 的平臺可以輕鬆直接存取其他 Azure 服務，例如佇列、事件和儲存體。
 
 ## <a name="what-challenges-are-solved-by-serverless"></a>無伺服器可解決哪些挑戰？
 
@@ -45,9 +45,9 @@ ms.locfileid: "71182822"
 
 ## <a name="when-should-you-avoid-serverless"></a>何時應該避免無伺服器？
 
-無伺服器運算最適合用於不會封鎖使用者介面的工作。 這表示它們不是直接裝載 web 應用程式或 web Api 的理想選擇。 其主要原因是無伺服器解決方案會依需求布建和調整。 當需要新的函式實例時（稱為*冷啟動*），需要一些時間來布建。 這次通常是幾秒鐘的時間，但可能會因為各種不同的因素而變長。 單一實例通常可以無限期地維護（例如，定期向其提出要求），但如果實例數目需要相應增加，則會保留冷啟動問題。
+無伺服器運算最適合用於不會封鎖使用者介面的工作。 這表示它們不是直接裝載 web 應用程式或 web Api 的理想選擇。 其主要原因是無伺服器解決方案會依需求布建和調整。 當需要新的函式實例時（稱為*冷啟動*），需要一些時間來布建。 這次通常是幾秒鐘的時間，但可能會因為各種不同的因素而變長。 單一實例通常會無限期地保持運作（例如，定期向其提出要求），但如果實例數目需要相應增加，則會保留冷啟動問題。
 
-![冷與暖開機](./media/cold-start-warm-start.png)
+![Cold 與暖啟動 ](./media/cold-start-warm-start.png)
 **圖 3-10**。 冷啟動和暖開機。
 
 如果您需要避免冷啟動，您可以選擇從取用[方案切換到專用的方案](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)。 您也可以使用 premium 方案[設定一或多個預先準備就緒的實例](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances)，因此當您需要新增另一個實例時，它已經啟動並準備就緒。 這些選項可以減輕與無伺服器運算相關的其中一個重要考慮。

@@ -2,12 +2,12 @@
 title: 使用 HttpClientFactory 實作復原 HTTP 要求
 description: 了解如何使用 HttpClientFactory，自 .NET Core 2.1 開始提供，可用來建立 `HttpClient` 執行個體，方便您在應用程式中使用。
 ms.date: 08/08/2019
-ms.openlocfilehash: 6c862171ee6b5eda6f95694878bfa43518a9bdfa
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3f9b3b18cede07e4c5c56600634ae230c0e251bb
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039967"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72578916"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 實作復原 HTTP 要求
 
@@ -15,13 +15,13 @@ ms.locfileid: "71039967"
 
 ## <a name="issues-with-the-original-httpclient-class-available-in-net-core"></a>.NET Core 中原始 HttpClient 類別的問題
 
-您可以輕鬆地使用原始<xref:System.Net.Http.HttpClient>和知名的類別，但是在某些情況下，許多開發人員並不會正確地使用它。
+您可以輕鬆地使用原始和知名的 <xref:System.Net.Http.HttpClient> 類別，但是在某些情況下，許多開發人員並不會正確地使用它。
 
 第一個問題是，這個類別是可處置項目，將它與 `using` 陳述式搭配使用不是最好的選擇，因為即使您處置 `HttpClient` 物件，底層通訊端也不會立即釋出，而且可能會導致所謂「通訊端耗盡」的嚴重問題。 如需有關此問題的詳細資訊，請參閱[您使用 HttpClient 的方法錯誤而導致軟體不穩定](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) 部落格文章 (英文)。
 
 因此，您應該將 `HttpClient` 具現化一次，然後在整個應用程式生命週期中重複使用。 為每個要求具現化 `HttpClient` 類別將會在負載過重時耗盡可用的通訊端數目。 該問題會導致 `SocketException` 錯誤。 解決該問題的可能方法為建立 `HttpClient` 物件做為單一物件或靜態物件，如 [Microsoft 關於 HttpClient 用法的文章](../../../csharp/tutorials/console-webapiclient.md)中所述。
 
-但是將 `HttpClient` 做為單一物件或靜態物件時會出現第二個問題。 在此情況下，單一或靜態`HttpClient`不會遵守 DNS 變更，如 dotnet/corefx GitHub 存放庫中的[問題](https://github.com/dotnet/corefx/issues/11224)中所述。 
+但是將 `HttpClient` 做為單一物件或靜態物件時會出現第二個問題。 在此情況下，單一或靜態 `HttpClient` 不會遵守 DNS 變更，如 dotnet/corefx GitHub 存放庫中的[問題](https://github.com/dotnet/corefx/issues/11224)中所述。 
 
 為解決所述的那些問題並更輕鬆地管理 `HttpClient` 執行個體，.NET Core 2.1 引進了一個新的 `HttpClientFactory`，它也可與 Polly 整合來實作復原 HTTP 呼叫。
 
@@ -31,10 +31,10 @@ ms.locfileid: "71039967"
 
 `HttpClientFactory` 的設計宗旨是：
 
-- 提供用來命名和設定邏輯`HttpClient`物件的中央位置。 例如，您可以設定一個已預先設定為存取特定微服務的用戶端 (服務代理程式)。
+- 提供用來命名和設定邏輯 `HttpClient` 物件的中央位置。 例如，您可以設定一個已預先設定為存取特定微服務的用戶端 (服務代理程式)。
 - 透過委派 `HttpClient` 中的處理常式和實作 Polly 型中介軟體以利用 Polly 原則用於復原，來編纂連出中介軟體的概念。
 - `HttpClient` 已經有委派可針對傳出 HTTP 要求連結在一起之處理常式的概念。 您會將 HTTP 用戶端註冊到處理站，而且您可以使用 Polly 處理常式將 Polly 原則用於重試、斷路器等等。
-- 管理的存留期`HttpClientMessageHandlers` ，以避免所提及的問題/在自行管理`HttpClient`生命週期時可能發生的問題。
+- 管理 `HttpClientMessageHandlers` 的存留期，以避免所提及的問題/在自行管理 `HttpClient` 存留期時可能發生的問題。
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>使用 HttpClientFactory 的多種方式
 
@@ -45,7 +45,7 @@ ms.locfileid: "71039967"
 - 使用具型別用戶端
 - 使用產生的用戶端
 
-為了簡潔起見，本指南說明最具結構化的使用`HttpClientFactory`方式，也就是使用型別用戶端（服務代理程式模式）。 不過，所有選項都已記載，而且目前列于本文中，[涵蓋 HttpClientFactory 的使用](/aspnet/core/fundamentals/http-requests#consumption-patterns)方式。
+為了簡潔起見，本指南說明使用 `HttpClientFactory` 的最結構化方式，也就是使用具型別用戶端（服務代理程式模式）。 不過，所有選項都已記載，而且目前列于本文中，[涵蓋 HttpClientFactory 的使用](/aspnet/core/fundamentals/http-requests#consumption-patterns)方式。
 
 ## <a name="how-to-use-typed-clients-with-httpclientfactory"></a>如何搭配 HttpClientFactory 使用具型別用戶端
 
@@ -57,7 +57,7 @@ ms.locfileid: "71039967"
 
 **圖 8-4**。 搭配具型別用戶端類別使用 HttpClientFactory。
 
-首先， `HttpClientFactory` `AddHttpClient()`安裝包含之擴充方法的`Microsoft.Extensions.Http` NuGet 套件，以在您的應用程式中設定。 `IServiceCollection` 這個擴充方法註冊將用來做為介面 `IHttpClientFactory` 之單一物件的 `DefaultHttpClientFactory`。 它為 `HttpMessageHandlerBuilder` 定義暫時性設定。 此訊息處理常式 (`HttpMessageHandler` 物件) 取自集區，供處理站傳回的 `HttpClient` 使用。
+首先，安裝包含 `IServiceCollection` `AddHttpClient()` 擴充方法的 `Microsoft.Extensions.Http` NuGet 封裝，以在您的應用程式中安裝 `HttpClientFactory`。 這個擴充方法註冊將用來做為介面 `IHttpClientFactory` 之單一物件的 `DefaultHttpClientFactory`。 它為 `HttpMessageHandlerBuilder` 定義暫時性設定。 此訊息處理常式 (`HttpMessageHandler` 物件) 取自集區，供處理站傳回的 `HttpClient` 使用。
 
 在下一個程式碼中，您可以看到如何使用 `AddHttpClient()` 來註冊需要使用 `HttpClient` 的具型別用戶端 (服務代理程式)。
 
@@ -69,14 +69,14 @@ services.AddHttpClient<IBasketService, BasketService>();
 services.AddHttpClient<IOrderingService, OrderingService>();
 ```
 
-如先前的程式碼所示註冊用戶端服務，會`DefaultClientFactory`使每個`HttpClient`服務的建立一個標準。
+如先前的程式碼所示註冊用戶端服務，會讓 `DefaultClientFactory` 為每個服務建立標準 `HttpClient`。
 
 您也可以在註冊中新增實例特定設定，例如設定基底位址，然後新增一些復原原則，如下列程式碼所示：
 
 ```csharp
 services.AddHttpClient<ICatalogService, CatalogService>(client =>
 {
-    client.BaseAddress = new Uri(Configuration["BaseUrl"])
+    client.BaseAddress = new Uri(Configuration["BaseUrl"]);
 })
     .AddPolicyHandler(GetRetryPolicy())
     .AddPolicyHandler(GetCircuitBreakerPolicy());
@@ -114,7 +114,7 @@ services.AddHttpClient<ICatalogService, CatalogService>()
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>實作使用已插入和已設定之 HttpClient 的具型別用戶端類別
 
-在上一個步驟中，您必須先定義具型別用戶端類別，例如範例程式碼中的類別，像是 'BasketService'、'CatalogService'、'OrderingService' 等等，具型別用戶端是接受 `HttpClient` 物件 (透過建構函式插入) 並使用該物件來呼叫某些遠端 HTTP 服務的類別。 例如：
+在上一個步驟中，您必須先定義具型別用戶端類別，例如範例程式碼中的類別，像是 'BasketService'、'CatalogService'、'OrderingService' 等等，具型別用戶端是接受 `HttpClient` 物件 (透過建構函式插入) 並使用該物件來呼叫某些遠端 HTTP 服務的類別。 例如:
 
 ```csharp
 public class CatalogService : ICatalogService
@@ -147,7 +147,7 @@ public class CatalogService : ICatalogService
 
 ### <a name="use-your-typed-client-classes"></a>使用具型別用戶端類別
 
-最後，一旦您將具`AddHttpClient()`類型的類別實作為，並將它們註冊之後，您就可以在任何可使用 DI 插入服務的地方使用它們。 例如，在 Razor 頁面程式碼或 MVC web 應用程式的控制器中，如下列 eShopOnContainers 程式碼所示：
+最後，一旦您將具型別類別實並讓它們向 `AddHttpClient()` 註冊後，您就可以在任何可使用 DI 插入服務的地方使用它們。 例如，在 Razor 頁面程式碼或 MVC web 應用程式的控制器中，如下列 eShopOnContainers 程式碼所示：
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC.Controllers
