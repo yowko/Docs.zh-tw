@@ -3,12 +3,12 @@ title: 雲端原生的定義
 description: 瞭解為雲端原生系統提供探源的基本要素
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 4236f0d6aca9d4348d4ead33f552f9a8a2c8c461
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: c99a99ec2cd7a8c4263ae3321d5a836bc40da087
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291206"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315940"
 ---
 # <a name="defining-cloud-native"></a>定義雲端原生
 
@@ -22,9 +22,9 @@ ms.locfileid: "72291206"
 
 雲端原生運算基礎提供[官方定義](https://github.com/cncf/foundation/blob/master/charter.md)：
 
-> @no__t 0Cloud 原生技術讓組織能夠在現代化的動態環境（例如公用、私人和混合式雲端）中建立並執行可擴充的應用程式。容器、服務網格、微服務、不可變的基礎結構和宣告式 Api 會範例說明點此方法。 *
+> *雲端原生技術讓組織能夠在現代化的動態環境（例如公用、私人和混合式雲端）中建立並執行可擴充的應用程式。容器、服務網格、微服務、不可變的基礎結構和宣告式 Api 會範例說明點此方法。*
 
-> @no__t 0These 的技術可啟用具有彈性、容易管理和觀察的鬆散耦合系統。結合強大的自動化功能，讓工程師能夠以最少的辛勞，經常而以可預測的方式進行高影響力的變更。 *
+> *這些技術可讓您以具有彈性、容易管理和觀察的鬆散耦合系統。結合強大的自動化功能，讓工程師能夠以最少的辛勞，經常且可預測的方式進行高影響力的變更。*
 
 隨著使用者的需求越來越多，應用程式也變得越來越複雜。 使用者預期快速回應能力、創新功能和零停機時間。 效能問題、週期性錯誤和無法移動的速度已不再接受。 他們可以輕鬆地移到您的競爭對手。
 
@@ -54,7 +54,7 @@ ms.locfileid: "72291206"
 
 這些系統是設計成在動態、虛擬化的雲端環境中，可廣泛使用[平臺即服務（PaaS）](https://azure.microsoft.com/overview/what-is-paas/)計算基礎結構和受控服務。 它們會在幾分鐘內將基礎結構視為可*處置*布建，並在需要時調整大小、縮放、移動或損毀–透過自動化。
 
-請考慮 @no__t 0Pets 的廣為接受 DevOps 概念與牛群完全轉換 @ no__t-0。 在傳統的資料中心，伺服器會被視為*寵物*：實體機器、指定有意義的名稱，以及的關心。 您可以將更多資源新增至同一部電腦（相應增加）來調整規模。 如果伺服器變成病假，您會將它返回健康狀態。 萬一伺服器變得無法使用，每個人都會注意到。
+請考慮已廣泛接受的[寵物與牛群完全轉換](https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313)DevOps 概念。 在傳統的資料中心，伺服器會被視為*寵物*：實體機器、指定有意義的名稱，以及的關心。 您可以將更多資源新增至同一部電腦（相應增加）來調整規模。 如果伺服器變成病假，您會將它返回健康狀態。 萬一伺服器變得無法使用，每個人都會注意到。
 
 *牛群完全轉換*服務模型不同。 您會將每個實例布建為虛擬機器或容器。 它們是相同的，而且指派了系統識別碼，例如，服務-01、Service-02 等等。 您可以藉由建立更多專案來進行調整（向外延展）。 當其中一個變成無法使用時，沒有人會注意到。
 
@@ -125,7 +125,7 @@ Azure 雲端平臺支援這種高度彈性的基礎結構，其中包含自動�
 
 分散式資料詳述于第5章，也就是*雲端原生資料模式*。
 
-*身分識別*
+*識別*
 
 您的服務如何識別誰正在存取它，以及他們有哪些許可權？
 
@@ -154,7 +154,7 @@ Azure 雲端平臺支援這種高度彈性的基礎結構，其中包含自動�
 
 請注意，微服務如何從[十二個要素的應用程式](https://12factor.net/)升級「一個程式碼基底，一個應用程式」原則，這章節稍早所討論。
 
-> @no__t 0Factor \#1 會針對每個微服務指定「單一程式碼基底」，並儲存在自己的存放庫中。以版本控制進行追蹤，它可以部署到多個環境 "*
+> *因素 \#1 指定每個微服務的單一程式碼基底，並儲存在其本身的存放庫中。以版本控制進行追蹤，它可以部署到多個環境。」*
 
 ### <a name="why-microservices"></a>為什麼要微服務？
 
@@ -166,7 +166,7 @@ Azure 雲端平臺支援這種高度彈性的基礎結構，其中包含自動�
 
 - 每個微服務都可以獨立調整。 您不會將整個應用程式調整為單一單位，而是只向外延展那些需要更多處理能力或網路頻寬的服務。 這個更細緻的調整方法可提供更好的系統控制，並在您調整系統的部分（而非所有專案）時，協助降低整體成本。
 
-@No__t-0.NET 微服務是瞭解微服務的絕佳參考指南：容器化 .NET 應用程式的架構](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)。 本書深入探討微服務的設計與架構。 這是隨附于 Microsoft 免費下載的[完整堆疊微服務參考架構](https://github.com/dotnet-architecture/eShopOnContainers)。
+瞭解微服務的絕佳參考指南是[.Net 微服務：容器化 .Net 應用程式的架構](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)。 本書深入探討微服務的設計與架構。 這是隨附于 Microsoft 免費下載的[完整堆疊微服務參考架構](https://github.com/dotnet-architecture/eShopOnContainers)。
 
 ### <a name="developing-microservices"></a>開發微服務
 
@@ -174,13 +174,13 @@ Azure 雲端平臺支援這種高度彈性的基礎結構，其中包含自動�
 
 Microsoft .NET Core 平臺是絕佳的選擇。 免費且開放的原始碼提供許多內建功能，可簡化微服務的開發。 .NET Core 是跨平臺。 應用程式可以在 Windows、macOS 及大部分的 Linux 類別上建立和執行。
 
-.NET Core 的效能非常高效，相較于 node.js 和其他正在完成的平臺，其計分程度也相當良好。 有趣的是， [TechEmpower](https://www.techempower.com/)在許多 web 應用程式平臺和架構上執行了一組廣泛的[效能基準](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext)檢驗。 .NET Core 在前10大-良好的 node.js 和其他競爭平臺上評分。 
+.NET Core 的效能非常高效，相較于 node.js 和其他競爭平臺，其計分程度相當良好。 有趣的是， [TechEmpower](https://www.techempower.com/)在許多 web 應用程式平臺和架構上執行了一組廣泛的[效能基準](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext)檢驗。 .NET Core 在前10大-良好的 node.js 和其他競爭平臺上評分。 
 
 .NET Core 是由 Microsoft 和 GitHub 上的 .NET 社區維護。 
 
 ## <a name="containers"></a>容器
 
-現今，它很自然地知道任何關於*雲端原生*的交談中所述的「*容器*」一詞。 在本書中，[雲端原生模式](https://www.manning.com/books/cloud-native-patterns)，作者 Cornelia Davis 會觀察到「容器是雲端原生軟體的絕佳促成者」。 雲端原生運算基礎將微服務容器化作為其[雲端原生線索對應](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png)的第一個步驟-開始進行雲端原生旅程的企業指導方針。
+現今，很自然地聽到任何關於*雲端原生*的交談中所提到的「*容器*」一詞。 在本書中，[雲端原生模式](https://www.manning.com/books/cloud-native-patterns)，作者 Cornelia Davis 會觀察到「容器是雲端原生軟體的絕佳促成者」。 雲端原生運算基礎將微服務容器化作為其[雲端原生線索對應](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png)的第一個步驟-開始進行雲端原生旅程的企業指導方針。
 
 容器化微服務簡單明瞭。 程式碼、其相依性和執行時間會封裝成稱為[容器映射](https://docs.docker.com/glossary/?term=image)的二進位檔。 映射會儲存在[容器](https://caylent.com/container-registries/)登錄中，作為映射的存放庫或程式庫。 登錄可以位於您的開發電腦、資料中心或公用雲端中。 Docker 本身會透過[Docker Hub](https://hub.docker.com/)維護公用登錄。 Azure 雲端具有[容器](https://azure.microsoft.com/services/container-registry/)登錄，可將容器映射儲存在即將執行它們的雲端應用程式附近。
 
@@ -229,15 +229,15 @@ Microsoft .NET Core 平臺是絕佳的選擇。 免費且開放的原始碼提�
 | 健康狀態監視 | 自動偵測並更正失敗。|
 | 容錯移轉 | 自動將失敗的實例重新布建至狀況良好的機器。|
 | 縮放 | 自動新增或移除容器實例以符合需求。|
-| 網路 | 管理容器通訊的網路重迭。|
+| 網路功能 | 管理容器通訊的網路重迭。|
 | 服務探索 | 讓容器彼此尋找。|
 | 輪流升級 | 協調增量升級，而不需要停機部署。 自動復原有問題的變更。|
 
 請注意，協調器如何從[十二個要素的應用程式](https://12factor.net/)中採用 disposability 和並行原則，這章節稍早討論過。
 
-> @no__t 0Factor \#9 指定「服務實例應可處置，優先列出快速新創公司」，以增加擴充性機會和正常關機，讓系統處於正確狀態。Docker 容器和協調器原本就能滿足這項需求。」*
+> *因素 \#9 指定「服務實例應可處置，優先列出快速新創公司」，以增加擴充性機會和正常關機，讓系統處於正確的狀態。Docker 容器和協調器原本就能滿足這項需求。」*
 
-> *因素 \#8 指定「服務在大量的小型相同進程（複本）上相應放大，而不是在最強大的電腦上相應增加單一大型實例。」*
+> *因素 \#8 指定「服務向外延展到大量的小型相同進程（複本），而不是相應增加最強大電腦上的單一大型實例。」*
 
 雖然有數個容器協調器存在，但[Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)已經成為雲端原生世界的既定標準。 它是一種可移植、可擴充的開放原始碼平臺，用於管理容器化的工作負載。 
 
@@ -269,7 +269,7 @@ Azure Kubernetes Services 的詳細資訊請在第2章（*調整雲端原生應�
 
 >*因素 \#4*指定應該透過可定址的 URL 公開支援服務。 這麼做會將資源與應用程式分離，讓它能夠互換。」
 
->*因素 \#3*指定在程式碼以外的設定管理工具中，已將微服務和外部化的設定資訊移出。
+>*因素 \#3*指定在程式碼以外的設定管理工具中，微服務和外部化會移出 configuration 資訊。」
 
 使用此模式時，可以附加及卸離支援服務，而不需要變更程式碼。 您可以將微服務從 QA 升級至預備環境。 您可以更新微服務設定，以指向預備環境中的支援服務，並透過環境變數將設定插入您的容器中。
 
@@ -287,7 +287,7 @@ Azure Kubernetes Services 的詳細資訊請在第2章（*調整雲端原生應�
 
 ### <a name="automating-infrastructure"></a>自動化基礎結構
 
-[Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/)、[Terraform] 和[Azure CLI](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)等工具，可讓您以宣告方式編寫腳本所需的雲端基礎結構。 [資源名稱]、[位置]、[容量] 和 [密碼] 是參數化和動態。 腳本會進行版本設定，並簽入原始檔控制做為專案的成品。 您叫用腳本以在系統內容中布建一致且可重複的基礎結構，例如 QA、預備及生產。 
+[Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/)、Terraform 和[Azure CLI](https://docs.microsoft.com/cli/azure/)等工具，可讓您以宣告方式編寫腳本所需的雲端基礎結構。 [資源名稱]、[位置]、[容量] 和 [密碼] 是參數化和動態。 腳本會進行版本設定，並簽入原始檔控制做為專案的成品。 您叫用腳本以在系統內容中布建一致且可重複的基礎結構，例如 QA、預備及生產。 
 
 實際上，IaC 是等冪的，這表示您可以執行相同的腳本，而不會產生副作用。 如果小組需要進行變更，他們會編輯並重新執行腳本。 只有更新的資源會受到影響。
 

@@ -2,18 +2,18 @@
 title: 使用 Polly 以指數輪詢實作 HTTP 呼叫重試
 description: 了解如何使用 Polly 和 HttpClientFactory 處理 HTTP 失敗。
 ms.date: 01/07/2019
-ms.openlocfilehash: d5e0b6c830422990aaf1a5e3b6ae257eb3dae99c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 82b3b0d37815e2f16ed3be1b1e7de37019b08ee8
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696908"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318415"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>使用 HttpClientFactory 和 Polly 原則以指數輪詢實作 HTTP 呼叫重試
 
 使用指數輪詢重試的建議方法是利用更進階的 .NET 程式庫，例如開放原始碼 [Polly 程式庫](https://github.com/App-vNext/Polly)。
 
-Polly 是 .NET 程式庫，提供恢復功能和暫時性錯誤處理功能。 您可以藉由套用重試、斷路器、艙壁隔離 (Bulkhead Isolation)、逾時和後援等 Polly 原則，來實作這些功能。 Polly 以 .NET 4.x 和 .NET Standard Library 1.0 (其支援 .NET Core) 為目標。
+Polly 是 .NET 程式庫，提供恢復功能和暫時性錯誤處理功能。 您可以藉由套用重試、斷路器、艙壁隔離 (Bulkhead Isolation)、逾時和後援等 Polly 原則，來實作這些功能。 Polly 是 .NET Framework 4.x 和 .NET Standard 1.0、1.1 和2.0 （支援 .NET Core）的目標。
 
 不過，撰寫您自己的自訂程式碼以搭配 HttpClient 使用 Polly 的程式庫可能會很複雜。 在 eShopOnContainers 的原始版本中，已有採用 Polly 的 [ResilientHttpClient 建置組塊](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10)。 但隨著[HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md)的發行，使用 Polly 執行彈性的 HTTP 通訊變得更簡單，因此建立區塊已從 eShopOnContainers 中淘汰。 
 
@@ -76,7 +76,7 @@ Policy
 - **Polly (.NET 復原和暫時性錯誤處理程式庫)**  
   <https://github.com/App-vNext/Polly>
 
-- **Marc Brooker：Jitter:利用隨機性更臻完美**  
+- **Marc Brooker:。抖動：使用隨機性讓事情更好**  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]

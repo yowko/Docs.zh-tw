@@ -2,12 +2,12 @@
 title: 利用容器和協調器
 description: 在 Azure 中利用 Docker 容器和 Kubernetes 協調器
 ms.date: 06/30/2019
-ms.openlocfilehash: 4008a14e4db28e07d5fda0a1f175aada9ffe6734
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 62aaa68b2ada0725f33df62e97f1ca3216b91ccf
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182878"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315887"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>利用容器和協調器
 
@@ -29,7 +29,7 @@ ms.locfileid: "71182878"
 
 部署到整合型應用程式通常需要重新開機整個應用程式，即使只更換一個小模組也一樣。 視裝載應用程式的機器數目而定，這可能會導致部署期間的停機時間。
 
-### <a name="hosting"></a>裝載
+### <a name="hosting"></a>架設
 
 整合型應用程式完全裝載于單一機器實例上。 這可能需要更高功能的硬體，而不是分散式應用程式所需的任何模組。 此外，如果應用程式有任何部分變成瓶頸，則整個應用程式必須部署到其他電腦節點，才能相應放大。
 
@@ -53,8 +53,8 @@ Docker 是最受歡迎的容器管理和映射處理平臺，可讓您快速使�
 
 容器是不可變的。 一旦有了容器的定義，您就可以重新建立該容器，而且它會以完全相同的方式執行。 這種不會將其本身用於以元件為基礎的設計。 如果應用程式的某些部分不會經常變更，當您可以直接部署最常變更的元件時，為什麼要重新部署整個應用程式？ 應用程式的不同功能和跨領域考慮可能會分成不同的單位。 圖3-2 顯示單一應用程式如何藉由委派特定的功能來利用容器和微服務。 應用程式本身的其餘功能也已容器化。
 
-![將整合型應用程式分解成在後端使用微服務。**圖 3-2**。 ](./media/breaking-up-monolith-with-backend-microservices.png)
- 將整合型應用程式分解成在後端使用微服務。
+![Breaking 整合型應用程式，以在後端使用微服務。](./media/breaking-up-monolith-with-backend-microservices.png)
+**圖 3-2**。 將整合型應用程式分解成在後端使用微服務。
 
 使用個別容器所建立的雲端原生應用程式，可讓您視需要部署最多或最少的應用程式。 個別服務可以裝載于節點上，並具有適用于每個服務的資源。 在中執行的每個服務都是不可變的，可以在開發、測試和生產環境之間共用，而且可以輕鬆地進行版本設定。 應用程式的不同區域之間的結合，會明確成為服務之間的呼叫或訊息，而不是單體內的編譯時間相依性。 整體應用程式的任何特定部分都可以選擇最適合該功能或功能的技術，而不需要變更應用程式的其餘部分。
 
@@ -62,14 +62,14 @@ Docker 是最受歡迎的容器管理和映射處理平臺，可讓您快速使�
 
 以容器為基礎的服務可以利用協調流程工具（例如 Kubernetes）所提供的調整優勢。 根據設計，容器只知道自己的關係。 一旦您開始有多個需要共同作業的容器，就可以在較高的層級進行組織。 組織大量的容器及其共用的相依性（例如網路設定）就是協調流程工具的儲存時間！ Kubernetes 是一種容器協調流程平臺，專門設計來自動化部署、調整和管理容器化應用程式。 它會在容器群組之上建立抽象層，並將其*組織成 pod*。 Pod 會在稱為*節點*的工作者機器上執行。 整個組織的群組稱為「叢集」（ *cluster*）。 圖3-3 顯示 Kubernetes 叢集的不同元件。
 
-![Kubernetes 叢集元件。**圖 3-3**。 ](./media/kubernetes-cluster-components.png)
- Kubernetes 叢集元件。
+![Kubernetes 叢集元件。](./media/kubernetes-cluster-components.png)
+**圖 3-3**。 Kubernetes 叢集元件。
 
 Kubernetes 有內建支援，可調整叢集以符合需求。 相較于容器化微服務，這可讓雲端原生應用程式能夠快速且有效率地回應需求尖峰，並在需要時使用其他資源。
 
 ### <a name="declarative-versus-imperative"></a>宣告式與命令式
 
-Kubernetes 支援宣告式和命令式物件設定。 命令式方法牽涉到執行各種命令，告訴 Kubernetes 該怎麼做的每個步驟。 *執行*此映射。 *刪除*此 pod。 *公開*此埠。 使用宣告式方法時，您可以使用設定檔來描述*您想要的內容*，而不是*要執行*的動作，並 Kubernetes 瞭解要怎麼做才能達成所要的結束狀態。 如果您已經使用命令式命令來設定您的叢集，您可以使用`kubectl get svc SERVICENAME -o yaml > service.yaml`來匯出宣告式資訊清單。 這會產生資訊清單檔案，如下所示：
+Kubernetes 支援宣告式和命令式物件設定。 命令式方法牽涉到執行各種命令，告訴 Kubernetes 該怎麼做的每個步驟。 *執行*此映射。 *刪除*此 pod。 *公開*此埠。 使用宣告式方法時，您可以使用設定檔來描述*您想要的內容*，而不是*要執行*的動作，並 Kubernetes 瞭解要怎麼做才能達成所要的結束狀態。 如果您已經使用命令式命令來設定叢集，您可以使用 `kubectl get svc SERVICENAME -o yaml > service.yaml` 匯出宣告式資訊清單。 這會產生資訊清單檔案，如下所示：
 
 ```yaml
 apiVersion: v1
@@ -97,7 +97,7 @@ status:
   loadBalancer: {}
 ```
 
-使用宣告式設定時，您可以使用`kubectl diff -f FOLDERNAME` ，針對設定檔所在的資料夾，先預覽將進行的變更。 一旦您確定要套用變更，請執行`kubectl apply -f FOLDERNAME`。 新增`-R`以遞迴方式處理資料夾階層。
+使用宣告式設定時，您可以使用 `kubectl diff -f FOLDERNAME` 針對設定檔所在的資料夾，來預覽將在認可之前進行的變更。 一旦您確定要套用變更，請執行 `kubectl apply -f FOLDERNAME`。 新增 `-R` 以遞迴方式處理資料夾階層。
 
 除了服務以外，您還可以針對其他 Kubernetes 功能（例如*部署*）使用宣告式設定。 部署控制器會使用宣告式部署來更新叢集資源。 部署是用來推出新的變更、相應增加以支援更多負載，或復原到先前的修訂版本。 如果叢集不穩定，宣告式部署會提供一種機制，讓叢集自動復原成所需的狀態。
 
@@ -121,7 +121,7 @@ status:
 
 ## <a name="development-resources"></a>開發資源
 
-本節顯示的開發資源簡短清單，可協助您開始使用容器和協調器來進行下一個應用程式。 如果您要尋找如何設計雲端原生微服務架構應用程式的指引，請閱讀這本書的[.net 微服務：容器化 .NET 應用程式的架構](https://aka.ms/microservicesebook)。
+本節顯示的開發資源簡短清單，可協助您開始使用容器和協調器來進行下一個應用程式。 如果您要尋找如何設計雲端原生微服務架構應用程式的指引，請閱讀這本書隨附的[.Net 微服務：容器化 .Net 應用程式的架構](https://aka.ms/microservicesebook)。
 
 ### <a name="local-kubernetes-development"></a>本機 Kubernetes 開發
 
@@ -135,11 +135,11 @@ Kubernetes 部署在生產環境中提供絕佳價值，但您也可以在本機
 - NodePorts
 - ConfigMaps 和秘密
 - 儀表板
-- 容器執行時間：Docker、rkt、CRI 和 containerd
+- 容器執行時間： Docker、rkt、CRI-O 和 containerd
 - 啟用容器網路介面（CNI）
 - 站
 
-安裝 Minikube 之後，您可以執行`minikube start`命令快速開始使用它，這會下載映射並啟動本機 Kubernetes 叢集。 啟動叢集之後，您可以使用標準 Kubernetes `kubectl`命令與它互動。
+安裝 Minikube 之後，您可以藉由執行 `minikube start` 命令快速開始使用它，這會下載映射並啟動本機 Kubernetes 叢集。 啟動叢集之後，您可以使用標準的 Kubernetes `kubectl` 命令來與它互動。
 
 ### <a name="docker-desktop"></a>Docker Desktop
 
@@ -159,7 +159,7 @@ Visual Studio 支援 web 應用程式的 Docker 開發。 當您建立新的 ASP
 
 **圖 3-5**。 Visual Studio 啟用 Docker 支援
 
-選取此選項時，會`Dockerfile`使用其根目錄中的建立專案，這可用來在 Docker 容器中建立和裝載應用程式。 範例 Dockerfile 如圖3-6 所示。
+選取此選項時，會使用其根目錄中的 `Dockerfile` 建立專案，這可用來在 Docker 容器中建立和裝載應用程式。 範例 Dockerfile 如圖3-6 所示。
 
 ```docker
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-stretch-slim AS base
@@ -192,15 +192,15 @@ ENTRYPOINT ["dotnet", "WebApplication3.dll"]
 
 **圖 3-7**。 Visual Studio Docker 執行選項
 
-除了本機開發以外， [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/)提供便利的方式讓多個開發人員在 Azure 內使用自己的 Kubernetes 設定。 如 [圖 3-10] 所示，您也可以在 Azure Dev Spaces 中執行應用程式。
+除了本機開發以外， [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/)提供便利的方式讓多個開發人員在 Azure 內使用自己的 Kubernetes 設定。 如 [圖 3-7] 所示，您也可以在 Azure Dev Spaces 中執行應用程式。
 
-如果您在建立時未將 Docker 支援新增至 ASP.NET Core 應用程式，您可以隨時將其新增。 在 Visual Studio 方案總管中，以滑鼠右鍵按一下專案，然後選取 **新增** >  **Docker 支援**，如圖3-8 所示。
+如果您在建立時未將 Docker 支援新增至 ASP.NET Core 應用程式，您可以隨時將其新增。 在 Visual Studio 方案總管中，以滑鼠右鍵按一下專案，然後選取 **新增**  >  **Docker 支援**，如圖3-8 所示。
 
 ![Visual Studio 新增 Docker 支援](./media/visual-studio-add-docker-support.png)
 
 **圖 3-8**。 Visual Studio 新增 Docker 支援
 
-除了 Docker 支援以外，您也可以新增容器協調流程支援，如圖3-11 所示。 根據預設，orchestrator 會使用 Kubernetes 和 Helm。 一旦您選擇協調器， `azds.yaml`檔案就會新增至專案根目錄，並加入一個`charts`資料夾，其中包含用來設定和部署應用程式至 Kubernetes 的 Helm 圖表。 圖3-9 顯示新專案中產生的檔案。
+除了 Docker 支援以外，您也可以新增容器協調流程支援，如圖3-8 所示。 根據預設，orchestrator 會使用 Kubernetes 和 Helm。 選擇協調器之後，會將 `azds.yaml` 檔案新增至專案根目錄，並加入 `charts` 資料夾，其中包含用來設定應用程式並將其部署至 Kubernetes 的 Helm 圖表。 圖3-9 顯示新專案中產生的檔案。
 
 ![Visual Studio 新增協調器支援](./media/visual-studio-add-orchestrator-support.png)
 

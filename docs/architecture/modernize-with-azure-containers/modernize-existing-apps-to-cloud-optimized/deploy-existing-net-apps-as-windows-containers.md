@@ -2,12 +2,12 @@
 title: 將現有 .NET 應用程式部署為 Windows 容器
 description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |將現有的 .NET 應用程式部署為 Windows 容器
 ms.date: 04/29/2018
-ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926466"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318621"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>將現有 .NET 應用程式部署為 Windows 容器
 
@@ -51,7 +51,7 @@ ms.locfileid: "70926466"
 
 [Docker](https://www.docker.com/)是一個[開放原始碼專案](https://github.com/docker/docker)，可將應用程式自動化部署為可在雲端或內部部署中執行的可移植、自我充分的容器。 Docker 也是升級及發展這項技術的[公司](https://www.docker.com/)。 該公司與雲端、Linux 和 Windows 廠商（包括 Microsoft）合作。
 
-![Docker 將容器部署在混合式雲端的所有圖層](./media/image6.png)
+![此圖顯示 Docker 如何在混合式雲端中部署容器。](./media/deploy-existing-net-apps-as-windows-containers/docker-deploys-containers-all-layers.png)
 
 **圖4-6。** Docker 將容器部署在混合式雲端的所有圖層
 
@@ -83,7 +83,7 @@ Docker 容器（為了簡單起見，*容器*）可以在 Linux 和 Windows 上�
 
 圖4-7 顯示您可以設為目標的作業系統版本，視應用程式的 .NET Framework 版本而定。
 
-![根據 .NET Framework 版本目標的作業系統](./media/image7.png)
+![圖表，顯示根據 .NET Framework 版本的目標作業系統。](./media/deploy-existing-net-apps-as-windows-containers/dotnet-framework-operating-systems.png)
 
 **圖4-7。** 根據 .NET Framework 版本目標的作業系統
 
@@ -93,15 +93,15 @@ Docker 容器（為了簡單起見，*容器*）可以在 Linux 和 Windows 上�
 
 > | **標記** | **系統和版本** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x-windowsservercore** | Windows Server Core 上的 .NET Framework 4。x |
-> | **microsoft/aspnet:4.x-windowsservercore** | 在 Windows Server Core 上使用其他 ASP.NET 自訂的 .NET Framework 4。x |
+> | **microsoft/dotnet-framework： 4.x-windowsservercore** | Windows Server Core 上的 .NET Framework 4。x |
+> | **microsoft/aspnet： 4. x-windowsservercore** | 在 Windows Server Core 上使用其他 ASP.NET 自訂的 .NET Framework 4。x |
 
 針對 .NET Core （適用于 Linux 和 Windows 的跨平臺），標記看起來會像下面這樣：
 
 > | **標記** | **系統和版本**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | .NET Core 2.0 執行時間-僅適用于 Linux |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET Core 2.0 執行時間-僅適用于 Windows Nano Server |
+> | **microsoft/dotnet： 2.0.0-runtime** | .NET Core 2.0 執行時間-僅適用于 Linux |
+> | **microsoft/dotnet： 2.0.0-runtime-nanoserver** | .NET Core 2.0 執行時間-僅適用于 Windows Nano Server |
 
 ### <a name="multi-arch-images"></a>多架構映射
 
@@ -129,7 +129,7 @@ Docker 容器（為了簡單起見，*容器*）可以在 Linux 和 Windows 上�
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
-- **資訊圖Microsoft 和容器**
+- **資訊圖： Microsoft 和容器**
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -138,15 +138,15 @@ Docker 容器（為了簡單起見，*容器*）可以在 Linux 和 Windows 上�
 在先前的章節中，我們已說明 Docker 容器的優點，以及 .NET 應用程式的特定容器映射的詳細資料。 一般資訊都是開發或容器化應用程式的基礎。
 不過，在考慮生產部署環境或甚至是 QA 和開發/測試環境時，Microsoft Azure 提供了一種開放且廣泛的選擇，也就是雲端中的完整容器生態系統（如下圖所示）。 根據您的特定應用程式需求，您應該選擇一個或另一個 Azure 產品。
 
-![Azure 中的容器生態系統](./media/image7.5.png)
+![Azure 中的容器生態系統圖表。](./media/deploy-existing-net-apps-as-windows-containers/azure-container-ecosystem.png)
 
 **圖 4-7.5。** Azure 中的容器生態系統
 
 從 Azure 中的容器生態系統，下列產品支援被視為基礎結構的容器：
 
-- **Azure 容器執行個體 (ACI)**
-- **Azure 虛擬機器**（有容器的支援）
-- **Azure 虛擬機器擴展集**（有容器的支援）
+- **Azure 容器實例（ACI）**
+- **Azure 虛擬機器**（含容器的支援）
+- **Azure 虛擬機器擴展集**（含容器的支援）
 
 從這三種方式來看，ACI 提供了絕佳的優勢，這就是您不需要維護基礎作業系統、不需要升級/修補等等的事實。但 ACI 仍然位於基礎結構層級，如本書後續章節中所述。
 

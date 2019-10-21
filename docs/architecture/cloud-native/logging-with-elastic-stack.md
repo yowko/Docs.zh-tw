@@ -2,12 +2,12 @@
 title: 使用彈性堆疊記錄
 description: 使用彈性堆疊、Logstash 和 Kibana 進行記錄
 ms.date: 09/23/2019
-ms.openlocfilehash: b3fd3ea30f46914e6513be79f7d949499142b381
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 62115edc3f64d87d2c3e84a7b5319ce42cbe729b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182829"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315796"
 ---
 # <a name="logging-with-elastic-stack"></a>使用彈性堆疊記錄 
 
@@ -17,7 +17,7 @@ ms.locfileid: "71182829"
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>彈性堆疊有哪些優點？
 
-彈性堆疊以低成本、可擴充且可供雲端使用的方式來提供集中式記錄。 其使用者介面可簡化資料分析，讓您可以花時間從資料中搜集深入解析，而不是使用沒錯笨拙介面來對抗。 它支援各種不同的輸入，因此當您的分散式應用程式跨越更多類型的服務時，您可以預期會繼續將記錄和計量資料摘要到系統中。 彈性堆疊也支援跨大型資料集的快速搜尋，因此甚至可以讓大型應用程式記錄詳細資料，而且仍然能夠以高效能的方式來查看它。
+彈性堆疊以低成本、可擴充且可供雲端使用的方式來提供集中式記錄。 其使用者介面可簡化資料分析，讓您可以花時間從資料中搜集深入解析，而不是使用沒錯笨拙介面來對抗。 它支援各種不同的輸入，因此當您的分散式應用程式跨越更多類型的服務時，您可以預期會繼續將記錄和計量資料摘要到系統中。 彈性堆疊也支援跨大型資料集的快速搜尋，讓大型應用程式甚至可以記錄詳細資料，而且仍然能夠以高效能的方式查看它。
 
 ## <a name="logstash"></a>Logstash
 
@@ -63,7 +63,7 @@ Logstash 收集到記錄檔之後，就需要在某個位置放置它們。 雖�
 
 已製作成包含參數或已透過 Logstash 處理將參數從它們分割的記錄訊息，可以直接查詢，因為 Elasticsearch 會保留此資訊。
 
-`jill@example.com`如圖7-4 所示，搜尋流覽過前10頁的查詢。
+如圖7-4 所示，搜尋 `jill@example.com` 流覽過前10頁的查詢。
 
 ```
 "query": {

@@ -2,12 +2,12 @@
 title: 具有復原性的通訊
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |復原通訊
 ms.date: 06/30/2019
-ms.openlocfilehash: d7fd4552059f527ad5166dcb6be04248bfad8e4a
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 324f5426af1c892db73aa6fc2336a19b7a8e499e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214498"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315800"
 ---
 # <a name="resilient-communications"></a>復原通訊
 
@@ -20,7 +20,7 @@ ms.locfileid: "71214498"
 - *恢復.* 如何管理短期失敗並讓系統穩定？
 - *負載平衡。* 輸入流量如何分散到服務的多個實例？
 - *安全性。* 如何強制執行傳輸層級加密和憑證管理等安全性考慮？
-- \* 分散式監視。 -如何讓多個取用服務的單一要求相互關聯和捕捉追蹤性和監視？
+- *分散式監視。* -如何讓多個取用服務的單一要求相互關聯和捕捉追蹤性和監視？
 
 雖然這些問題可以透過各種程式庫和架構來處理，但在程式碼基底中執行它們可能既昂貴又複雜又耗時。 此外，您最後會得到一個解決方案，其中的基礎結構顧慮會結合商務邏輯。
 

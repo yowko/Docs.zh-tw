@@ -2,12 +2,12 @@
 title: 雲端原生應用程式呢？
 description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |那麼，雲端原生應用程式呢？
 ms.date: 04/28/2018
-ms.openlocfilehash: 86153b04790eb21276e58b3fe33c0a680d9ea1c4
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373923"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318416"
 ---
 # <a name="what-about-cloud-native-applications"></a>雲端原生應用程式呢？
 
@@ -15,7 +15,7 @@ ms.locfileid: "70373923"
 
 圖4-3 在應用程式現代化成熟度層級中放置雲端原生應用程式：
 
-![定位雲端原生應用程式](./media/image3.png)
+![此圖顯示如何定位雲端原生應用程式。](./media/what-about-cloud-native-applications/positioning-cloud-native-applications.png)
 
 **圖4-3。** 定位雲端原生應用程式
 
@@ -25,7 +25,7 @@ ms.locfileid: "70373923"
 
 圖4-4 顯示雲端原生模型的主要特性。
 
-![雲端原生特性為微服務、容器、雲端復原、協調器和無伺服器](./media/image4.png)
+![列出主要雲端原生特性的圖表。](./media/what-about-cloud-native-applications/cloud-native-characteristics.png)
 
 **圖4-4。** 雲端原生特性
 
@@ -41,7 +41,7 @@ ms.locfileid: "70373923"
 
 [雲端原生運算基礎（由 cncf）](https://www.cncf.io/)是雲端原生原則的主要升級程式。 Microsoft 是[由 cncf 的成員](https://azure.microsoft.com/blog/announcing-cncf/)。
 
-如需範例定義，以及有關雲端原生應用程式特性的詳細資訊，請參閱 Gartner 文章：[如何架構和設計雲端原生應用程式](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)。 如需有關如何執行雲端原生應用程式的 Microsoft 特定指引，請[參閱 .net 微服務：容器化 .NET 應用程式](https://aka.ms/microservicesebook)的架構。
+如需範例定義，以及有關雲端原生應用程式特性的詳細資訊，請參閱 Gartner 文章：[如何架構和設計雲端原生應用程式](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)。 如需 Microsoft 關於如何執行雲端原生應用程式的特定指引，請參閱[.net 微服務：容器化 .net 應用程式的架構](https://aka.ms/microservicesebook)。
 
 如果您將完整應用程式遷移至雲端原生模型，最重要的因素就是您必須重新架構至以微服務為基礎的架構。 這很明顯地需要在開發方面投入大量的精力，因為涉及的大型重構程式。 此選項通常是針對需要新的擴充性層級和長期彈性的任務關鍵性應用程式而選擇的。 但是，您可以藉由在幾個新案例中新增微服務，開始轉向雲端原生，最後再將應用程式重構為微服務。 這是一種累加的方法，在某些情況下是最佳選擇。
 
@@ -55,7 +55,7 @@ ms.locfileid: "70373923"
 
 針對以自發服務形式的多個獨立子系統為基礎的分散式和大型或複雜任務關鍵性應用程式，微服務架構會成為慣用的方法。 在以微服務為基礎的架構中，應用程式是以可獨立開發、測試、建立版本、部署及調整的服務集合來建立。 這可包含每個微服務的任何相關、自發的資料庫。
 
-如需您可以使用 .net Core 來執行之微服務架構的詳細探討，請參閱可下載的 PDF 電子書[.net 微服務：容器化 .NET 應用程式](https://aka.ms/microservicesebook)的架構。 本指南也可以使用[線上](../../microservices/index.md)。
+如需您可以使用 .NET Core 來執行之微服務架構的詳細探討，請參閱可下載的 PDF 電子書[.net 微服務：容器化 .net 應用程式的架構](https://aka.ms/microservicesebook)。 本指南也可在[線上](../../microservices/index.md)取得。
 
 但即使在微服務提供強大的功能獨立部署、強大的子系統界限和技術多樣性的案例中，它們也會引發許多新的挑戰。 挑戰與分散式應用程式開發有關，例如分散和獨立的資料模型;達到微服務之間的復原通訊;最終一致性的需求;和操作複雜度。 相較于傳統的整合型應用程式，微服務引進了更高的複雜度。
 

@@ -2,12 +2,12 @@
 title: 應用程式復原模式
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |應用程式復原模式
 ms.date: 06/30/2019
-ms.openlocfilehash: 8455584fe1d5b02f6d9543c3bad32cca7369c158
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67ae20f14a67f3a96d6c74cad727afe680ff3178
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183718"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315950"
 ---
 # <a name="application-resiliency-patterns"></a>應用程式復原模式
 
@@ -27,7 +27,7 @@ ms.locfileid: "71183718"
 
 **圖 6-3**. 要重試的 HTTP 狀態碼
 
-問題：是否要重試 HTTP 狀態碼 403-禁止？ 否。 在這裡，系統會正常運作，但會通知呼叫者未獲授權執行要求的作業。 請務必小心，只重試失敗所造成的作業。
+問題：您是否要重試 HTTP 狀態碼 403-禁止？ 否。 在這裡，系統會正常運作，但會通知呼叫者未獲授權執行要求的作業。 請務必小心，只重試失敗所造成的作業。
 
 如第1章所建議，建立雲端原生應用程式的 Microsoft 開發人員應該以 .NET Core 為目標。 2\.1 版引進了[HTTPClientFactory](https://www.stevejgordon.co.uk/introduction-to-httpclientfactory-aspnetcore)程式庫，可用於建立與 URL 型資源互動的 HTTP 用戶端實例。 取代原始的 HTTPClient 類別，factory 類別支援許多增強功能，其中一個與 Polly 復原程式庫[緊密整合](../microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md)。 有了這項功能，您就可以在應用程式啟動類別中輕鬆定義復原原則，以處理部分失敗和連接問題。
 
@@ -45,7 +45,7 @@ ms.locfileid: "71183718"
 
 在上圖中，已針對要求作業實作為重試模式。 它會設定為在失敗後的輪詢間隔（等待時間）後最多允許四次重試，每次後續嘗試會以指數方式加倍。
 
-- 第一個調用失敗，並傳回 HTTP 狀態碼500。 應用程式會等待兩秒，並 reties 呼叫。
+- 第一個調用失敗，並傳回 HTTP 狀態碼500。 應用程式會等待兩秒，然後重試呼叫。
 - 第二個調用也會失敗，並傳回 HTTP 狀態碼500。 應用程式現在會將輪詢間隔加倍到四秒，然後重試呼叫。
 - 最後，第三個呼叫會成功。
 - 在此案例中，重試作業最多會嘗試四次重試，同時將輪詢持續時間加倍，再使呼叫失敗。
