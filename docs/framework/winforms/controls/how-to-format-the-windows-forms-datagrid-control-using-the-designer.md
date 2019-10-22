@@ -86,7 +86,7 @@ ms.locfileid: "69666165"
 
      對應名稱是用來指定應該搭配哪一個資料表使用哪一個資料表樣式。
 
-5. 在 [ **DataGridTableStyle 集合編輯器**] 中， <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>選取屬性，然後按一下省略號按鈕![（Visual Studio 的屬性視窗中的省略號按鈕（...](./media/visual-studio-ellipsis-button.png)））。
+5. 在 [ **DataGridTableStyle 集合編輯器**] 中， <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>選取屬性，然後按一下省略號按鈕(![Visual Studio 的屬性視窗中的省略號按鈕](./media/visual-studio-ellipsis-button.png)）。
 
 6. 在 [ **System.windows.forms.datagridcolumnstyle> 集合編輯器**] 對話方塊中，將資料行樣式加入至您所建立的資料表樣式。
 
