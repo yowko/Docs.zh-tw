@@ -2,12 +2,12 @@
 title: 容器化整合型應用程式
 description: 容器化整合型應用程式雖然無法從微服務架構獲得所有好處，但可立即提供重要部署優勢。
 ms.date: 09/20/2018
-ms.openlocfilehash: 9e457fba56c8fdf946618fca10285f4c0a343af4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 5b38ba1c2954f4fd4064723b1316afbf09d25bf2
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673215"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771483"
 ---
 # <a name="containerizing-monolithic-applications"></a>容器化整合型應用程式
 
@@ -23,7 +23,7 @@ ms.locfileid: "68673215"
 
 如果應用程式成長而需要擴充，此方法的缺點會變得很明顯。 若可調整整個應用程式，則不成問題。 不過，在大多數情況下，應用程式只需要擴充幾個造成阻礙的部分，其他元件則較少使用。
 
-例如，在典型電子商務應用程式中，您可能需要擴充產品資訊子系統，因為比起購買產品，會有更多客戶瀏覽產品。 比起使用付款管道，會有更多客戶使用其購物籃。 新增留言或檢視其購買歷程記錄的客戶較少。 而且您可能只有少數幾個員工需要管理內容和行銷活動。 如果您擴充整合型設計，這些不同工作的所有程式碼會部署多次並等比例擴充。
+例如，在典型電子商務應用程式中，您可能需要擴充產品資訊子系統，因為比起購買產品，會有更多客戶瀏覽產品。 比起使用付款管道，會有更多客戶使用其購物籃。 新增留言或檢視其購買歷程記錄的客戶較少。 而且您可能只有少數幾名員工需要管理內容和行銷活動。 如果您擴充整合型設計，這些不同工作的所有程式碼會部署多次並等比例擴充。
 
 調整應用程式的方式有許多種：水平複製、分割應用程式的不同區域，以及分割類似的商務概念或資料。 但除了擴充所有元件的問題之外，每個元件的變更都需要完整重新測試整個應用程式，並完整重新部署所有執行個體。
 
@@ -33,7 +33,7 @@ ms.locfileid: "68673215"
 
 ![主機可以執行數個整合型應用程式，每一個應用程式都在不同的容器上。](./media/image2.png)
 
-**圖 4-2**： 整合型方法：執行多個應用程式的主機，每個應用程式都作為容器來執行
+**圖 4-2**： 整合型方法：執行多個應用程式的主機，每個應用程式會當做容器來執行
 
 您可以針對每個執行個體使用專用 VM，在 Microsoft Azure 中部署整合型應用程式。 此外，您還可以使用 [Azure 虛擬機器擴展集](https://azure.microsoft.com/documentation/services/virtual-machine-scale-sets/)輕鬆地調整 VM。 [Azure App Service](https://azure.microsoft.com/services/app-service/) 也可以執行整合型應用程式並輕鬆地擴充執行個體，而不需要您管理 VM。 從 2016 年開始，Azure App Service 也可以執行 Docker 容器的單一執行個體，以簡化部署。
 

@@ -2,12 +2,12 @@
 title: 測試 ASP.NET Core 服務和 Web 應用程式
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 探索在容器中用於測試 ASP.NET Core 服務和 Web 應用程式的架構。
 ms.date: 10/02/2018
-ms.openlocfilehash: 042f7a6171a88025d3d4a8e37c4deceb416e5711
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 278d12b8215195351673a41149db5af6fcecddfb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291279"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772021"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>測試 ASP.NET Core 服務和 Web 應用程式
 
@@ -101,10 +101,10 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>其他資源
 
-- **Steve Smith.測試控制器** (ASP.NET Core) \
+- **Steve Smith。測試控制器**（ASP.NET Core） \
     [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](/aspnet/core/mvc/controllers/testing)
 
-- **Steve Smith.整合測試** (ASP.NET Core) \
+- **Steve Smith。整合測試**（ASP.NET Core） \
     [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
 - **使用 dotnet test 的 .NET Core 單元測試** \
@@ -138,9 +138,9 @@ compose 應用程式啟動且執行之後，如果您正在執行 Visual Studio�
 
 2. **微服務功能/整合測試**，其中測試案例涉及每個微服務的基礎結構，但會與其他項目隔離，且包含在 **{MicroserviceName}.FunctionalTests** 專案中。
 
-3. **應用程式功能/整合測試**，著重在微服務整合，其中測試案例會使用數個微服務。 這些測試位於 **Application.FunctionalTests** 專案中。
+3. **應用程式功能/整合測試**，著重于微服務整合，並具有會進行數個微服務的測試案例。 這些測試位於 **Application.FunctionalTests** 專案中。
 
-4. **負載測試**，著重在每個微服務的回應時間。 這些測試位於 **LoadTest** 專案中，且需要 Visual Studio 2017 Enterprise Edition。
+4. **負載測試**，著重于每個微服務的回應時間。 這些測試位於 **LoadTest** 專案中，且需要 Visual Studio 2017 Enterprise Edition。
 
 每個微服務的單元測試和整合測試都包含在每個微服務和應用程式中測試資料夾中。負載測試則包含在解決方案資料夾中的測試資料夾中，如圖 6-25 所示。
 

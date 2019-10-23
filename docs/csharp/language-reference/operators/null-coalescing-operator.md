@@ -1,5 +1,5 @@
 ---
-title: ?? 還有？= 運算子- C#參考
+title: ?? 與 ??= 運算子- C#參考
 ms.custom: seodec18
 ms.date: 09/10/2019
 f1_keywords:
@@ -18,7 +18,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 09/12/2019
 ms.locfileid: "70924686"
 ---
-# <a name="-and--operators-c-reference"></a>?? 還有？= 運算子（C#參考）
+# <a name="-and--operators-c-reference"></a>?? 還有 ??= 運算子（C#參考）
 
 如果 Null 聯合運算子 `??` 不是 `null`，會傳回其左方運算元的值；否則它會評估右方運算元，並傳回其結果。 如果左方運算元評估為非 Null，`??` 運算子不會評估其右方運算元。
 

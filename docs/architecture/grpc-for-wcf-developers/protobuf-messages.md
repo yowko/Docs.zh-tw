@@ -3,22 +3,22 @@ title: Protobuf 訊息-WCF 開發人員的 gRPC
 description: 瞭解 Protobuf 訊息如何定義于 IDL 中，以及如何在C#中產生。
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: f6bb67fe3bc37fcb49c0e69b7960a00d584307b8
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1fdbedaadb33ac3eb99ca360018beb36ac7a8d78
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184201"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771625"
 ---
 # <a name="protobuf-messages"></a>Protobuf 訊息
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-本節涵蓋如何在檔案中`.proto`宣告 Protobuf 訊息、說明欄位編號和類型的基本概念，以及查看`protoc`編譯器所產生的C#程式碼。 本章的其餘部分將詳細說明 Protobuf 中不同類型資料的呈現方式。
+本節說明如何在 `.proto` 檔案中宣告 Protobuf 訊息、解釋欄位編號和類型的基本概念，並查看 `protoc` 編譯器所產生C#的程式碼。 本章的其餘部分將詳細說明 Protobuf 中不同類型資料的呈現方式。
 
 ## <a name="declaring-a-message"></a>宣告訊息
 
-在 WCF 中， `Stock`股票市場貿易應用程式的類別可能會如下列範例所定義：
+在 WCF 中，股票市場貿易應用程式的 `Stock` 類別，可能會如下列範例所示定義：
 
 ```csharp
 namespace TraderSys
@@ -38,7 +38,7 @@ namespace TraderSys
 }
 ```
 
-若要在 Protobuf 中執行對等的類別，它必須在`.proto`檔案中宣告。 然後`protoc`編譯器會在組建程式中產生 .net 類別。
+若要在 Protobuf 中執行對等的類別，它必須在 `.proto` 檔案中宣告。 然後 `protoc` 編譯器會在組建程式中產生 .NET 類別。
 
 ```protobuf
 syntax "proto3";
@@ -49,17 +49,17 @@ message Stock {
 
     int32 id = 1;
     string symbol = 2;
-    string displayName = 3;
-    int32 marketId = 4;
+    string display_name = 3;
+    int32 market_id = 4;
 
 }  
 ```
 
 第一行會宣告所使用的語法版本。 第3版語言已于2016發行，而且是建議的 gRPC 服務版本。
 
-這一行會指定要用於產生C#之類型的命名空間。 `option csharp_namespace` 針對其他語言編譯檔案時， `.proto`將會忽略此選項。 Protobuf 檔案通常會包含數種語言的語言特定選項。
+@No__t_0 行指定要用於產生C#之類型的命名空間。 針對其他語言編譯 `.proto` 檔案時，將會忽略此選項。 Protobuf 檔案通常會包含數種語言的語言特定選項。
 
-`Stock`訊息定義會指定四個欄位，各有一個類型、一個名稱和一個欄位編號。
+@No__t_0 訊息定義會指定四個欄位，每一個都有一個類型、一個名稱和一個欄位編號。
 
 ## <a name="field-numbers"></a>欄位編號
 
@@ -72,11 +72,11 @@ message Stock {
 類型宣告使用 Protobuf 的原生純量資料類型，將在[下一節](protobuf-data-types.md)中更詳細地討論。 本章的其餘部分將涵蓋 Protobuf 的內建型別，並說明它們與常見 .NET 類型的關聯性。
 
 > [!NOTE]
-> Protobuf 原本就不支援`decimal`型別，因此會改用 double。 對於需要完整十進位數精確度的應用程式，請參閱本章下一節中的[小數章節](protobuf-data-types.md#decimals)。
+> Protobuf 原本就不支援 `decimal` 類型，因此會改用 double。 對於需要完整十進位數精確度的應用程式，請參閱本章下一節中的[小數章節](protobuf-data-types.md#decimals)。
 
 ## <a name="the-generated-code"></a>產生的程式碼
 
-當您建立應用程式時，Protobuf 會為您的每個訊息建立類別，並將C#其原生類型對應至類型。 產生`Stock`的類型會具有下列簽章：
+當您建立應用程式時，Protobuf 會為您的每個訊息建立類別，並將C#其原生類型對應至類型。 產生的 `Stock` 類型會具有下列簽章：
 
 ```csharp
 public class Stock
@@ -92,7 +92,7 @@ public class Stock
 
 ### <a name="property-names"></a>屬性名稱
 
-請注意，Protobuf 編譯器`PascalCase`會套用至屬性名稱，但它們是`camelCase`在`.proto`檔案中。 最好是在訊息定義`camelCase`中使用，如此一來，其他平臺的程式碼產生就會針對其慣例產生預期的大小寫。
+請注意，Protobuf 編譯器 `PascalCase` 套用至屬性名稱，雖然它們 `snake_case` 在 `.proto` 檔案中。 [Protobuf 樣式指南](https://developers.google.com/protocol-buffers/docs/style)會建議在您的訊息定義中使用 `snake_case`，讓其他平臺的程式碼產生會針對其慣例產生預期的大小寫。
 
 >[!div class="step-by-step"]
 >[上一頁](protocol-buffers.md)
