@@ -3,12 +3,12 @@ title: 使用 Infer.NET 與概率程式設計建立遊戲配對清單應用程�
 description: 了解如何使用 Infer.NET 進行概率程式設計，以 TrueSkill 的簡化版本為基礎，建立遊戲配對清單應用程式。
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: f6f91aecfe7fdeffb7e8913309046c7942ecbab7
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 69515c7b3518c35bf84335c453408b1466f93f34
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957205"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774535"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>使用 Infer.NET 與概率程式設計建立遊戲配對清單應用程式
 
@@ -18,7 +18,7 @@ ms.locfileid: "71957205"
 
 概率程式設計可讓您建立真實世界處理的統計模型。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 本機開發環境設定
 
@@ -45,7 +45,7 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 ## <a name="design-your-model"></a>設計您的模型
 
-使用在辦公室玩的乒乓球或桌上足球比賽作為範例。 您有每場比賽的參賽者和結果。  您想從此資料中推斷出玩家的技巧。 假設每位玩家有常態分佈的潛在技巧，並且他們在指定比賽中的表現是該技巧的嘈雜版本。 資料限制為優勝者的表現大於失敗者的表現。 這是熱門 [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) 模型的簡化版本，它還支援組隊、抽籤，與其他延伸用途。 此模型的[進階版本](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/)用於暢銷遊戲作品「最後一戰」和「戰爭機器」中的配對。
+使用在辦公室玩的乒乓球或桌上足球比賽作為範例。 您有每場比賽的參賽者和結果。  您想從此資料中推斷出玩家的技巧。 假設每位玩家有常態分佈的潛在技巧，並且他們在指定比賽中的表現是該技巧的嘈雜版本。 資料限制為優勝者的表現大於失敗者的表現。 這是熱門 [TrueSkill](https://www.microsoft.com/research/project/trueskill-ranking-system/) 模型的簡化版本，它還支援組隊、抽籤，與其他延伸用途。 此模型的[進階版本](https://www.microsoft.com/research/publication/trueskill-2-improved-bayesian-skill-rating-system/)用於暢銷遊戲作品「最後一戰」和「戰爭機器」中的配對。
 
 您需要列出推斷的玩家技巧，以及他們的差異，也就是技能不確定性的度量。
 

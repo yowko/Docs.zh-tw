@@ -3,12 +3,12 @@ title: 使用 .NET Compiler Platform SDK 語法模型
 description: 此概觀說明您使用的類型，以了解與管理語法節點。
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: a48d48168dffdb439c984f5b4209019514b3b970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 940d2756ef7735ee96d38d0286f99fadf7b81dc6
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353295"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774093"
 ---
 # <a name="work-with-syntax"></a>使用語法
 
@@ -19,31 +19,31 @@ ms.locfileid: "33353295"
 
 ## <a name="syntax-trees"></a>語法樹
 
-語法樹是用於編譯、程式碼分析、繫結、重構、IDE 功能與產生程式碼的主要結構。 若不先找到並分類成許多已知的結構化語言項目之一，原始程式碼的任何部分均無法解讀。 
+語法樹是用於編譯、程式碼分析、繫結、重構、IDE 功能與產生程式碼的主要結構。 若不先找到並分類成許多已知的結構化語言項目之一，原始程式碼的任何部分均無法解讀。
 
-語法樹有三個索引鍵屬性。 第一個屬性是語法樹完整保存所有來源資訊不失真。 這表示語法樹包含在原始程式文字中找到的所有資訊片段、所有文法建構、所有語彙權杖，以及介於兩者之間的所有其他項目，包括空白字元、註解和前置處理器指示詞。 例如，來源中提及的每個常值都和鍵入的一般無二。 當程式因為表示語法樹中的略過或遺漏權杖而不完整或格式不正確時，語法樹也代表原始程式碼中的錯誤。  
+語法樹有三個索引鍵屬性。 第一個屬性是語法樹完整保存所有來源資訊不失真。 這表示語法樹包含在原始程式文字中找到的所有資訊片段、所有文法建構、所有語彙權杖，以及介於兩者之間的所有其他項目，包括空白字元、註解和前置處理器指示詞。 例如，來源中提及的每個常值都和鍵入的一般無二。 當程式因為表示語法樹中的略過或遺漏權杖而不完整或格式不正確時，語法樹也代表原始程式碼中的錯誤。
 
-這會啟用語法樹的第二個屬性。 從剖析器取得的語法樹會產生其剖析來源的確切文字。 從任何語法節點，都有可能取得以該節點為根的子樹狀結構的文字表示。 這表示語法樹可以用來建構和編輯原始程式文字。 建立以隱含方式建立對等文字的樹狀結構，以及編輯語法樹，從現有的樹狀結構變更中製造新的樹狀結構，實際上即已編輯文字。 
+這會啟用語法樹的第二個屬性。 從剖析器取得的語法樹會產生其剖析來源的確切文字。 從任何語法節點，都有可能取得以該節點為根的子樹狀結構的文字表示。 這表示語法樹可以用來建構和編輯原始程式文字。 建立以隱含方式建立對等文字的樹狀結構，以及編輯語法樹，從現有的樹狀結構變更中製造新的樹狀結構，實際上即已編輯文字。
 
 語法樹的第三個屬性是它們為不可變且具備執行緒安全。  這表示取得樹狀結構之後，它就是目前程式碼狀態的快照集，永遠不會變更。 這可讓多位使用者在不同的執行緒中同時與同一語法樹互動，不會鎖定或重複。 因為樹狀結構是不變的，而且不能直接對樹狀結構進行任何修改，所以 Factory 方法透過建立樹狀結構的其他快照集來協助建立和修改語法樹。 樹狀結構重複使用基礎節點很有效率，因此新版本重建迅速且只佔一點額外的記憶體。
 
-語法樹實際上是樹狀資料結構，在此，其他項目的父代為非結尾結構化項目。 每一個語法樹都是由節點、權杖和邏輯所組成。  
+語法樹實際上是樹狀資料結構，在此，其他項目的父代為非結尾結構化項目。 每一個語法樹都是由節點、權杖和邏輯所組成。
 
 ## <a name="syntax-nodes"></a>語法節點
 
-語法節點是語法樹主要項目的其中之一。 這些節點代表語法建構，例如宣告、陳述式、子句和運算式。 每個語法節點類別都是由衍生自 <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> 的個別類別代表。 節點類別集不可擴充。 
+語法節點是語法樹主要項目的其中之一。 這些節點代表語法建構，例如宣告、陳述式、子句和運算式。 每個語法節點類別都是由衍生自 <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> 的個別類別代表。 節點類別集不可擴充。
 
-所有語法節點都是語法樹中的非結尾節點，這表示它們一律有其他子系節點和權杖。 身為另一個節點的子系，每個節點都有父節點，可透過 <xref:Microsoft.CodeAnalysis.SyntaxNode.Parent?displayProperty=nameWithType> 屬性存取。 因為節點和樹狀結構不可變，所以節點的父代永遠不會變更。 樹狀結構的根有 null 父代。  
+所有語法節點都是語法樹中的非結尾節點，這表示它們一律有其他子系節點和權杖。 身為另一個節點的子系，每個節點都有父節點，可透過 <xref:Microsoft.CodeAnalysis.SyntaxNode.Parent?displayProperty=nameWithType> 屬性存取。 因為節點和樹狀結構不可變，所以節點的父代永遠不會變更。 樹狀結構的根有 null 父代。
 
-每個節點都有 <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType> 方法，根據子節點在原始程式文字中的位置，傳回它們的循序清單。 本清單不包含權杖。 每個節點也有方法可檢查子系，例如 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>、<xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A> 或 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A>，代表所有節點、權杖或邏輯的清單，存在於以該節點為根的子樹狀結構中。  
+每個節點都有 <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType> 方法，根據子節點在原始程式文字中的位置，傳回它們的循序清單。 本清單不包含權杖。 每個節點也有可檢查子系的方法，例如 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>、<xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A> 或 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A>-代表存在於該節點根樹中的所有節點、權杖或邏輯的清單。
 
 此外，每個語法節點的子類別會透過強型別屬性公開所有相同的子系。 例如，<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> 節點類別有三個針對二元運算子的額外屬性：<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 和 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>。 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left> 和 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> 的類型是 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax>，<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 的類型是 <xref:Microsoft.CodeAnalysis.SyntaxToken>。
 
-某些語法節點有選擇性的子系。 例如，<xref:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax> 有選擇性的 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax>。 如果子系不存在，則屬性會傳回 null。 
+某些語法節點有選擇性的子系。 例如，<xref:Microsoft.CodeAnalysis.CSharp.Syntax.IfStatementSyntax> 有選擇性的 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ElseClauseSyntax>。 如果子系不存在，則屬性會傳回 null。
 
 ## <a name="syntax-tokens"></a>語法權杖
 
-語法權杖是語言文法的結尾，代表最小的程式碼語法片段。 它們永遠不是其他節點或權杖的父代。 語法權杖是由關鍵字、識別碼、常值和標點符號所組成。 
+語法權杖是語言文法的結尾，代表最小的程式碼語法片段。 它們永遠不是其他節點或權杖的父代。 語法權杖是由關鍵字、識別碼、常值和標點符號所組成。
 
 基於效率考量，<xref:Microsoft.CodeAnalysis.SyntaxToken> 類型是 CLR 值類型。 因此，不像語法節點，所有種類的混合屬性權杖只有一種結構，這些屬性具有依賴要代表之權杖種類的意義。
 
@@ -65,13 +65,13 @@ ms.locfileid: "33353295"
 
 每個節點、權杖或邏輯都知道其在原始程式文字內的位置及其組成字元數。 文字位置是以 32 位元的整數表示，也就是以零起始的 `char` 索引。 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 物件是起始位置和字元計數，兩個都以整數表示。 如果 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 長度為零，即指兩個字元之間的位置。
 
-每個節點均有兩個 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 屬性：<xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 與 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>。 
+每個節點均有兩個 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 屬性：<xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 與 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>。
 
 <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 屬性是從節點子樹狀結構的第一個權杖開頭到最後一個權杖結尾的文字。 此範圍不包含任何開頭或尾端邏輯。
 
 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> 屬性是包含節點正常範圍的文字範圍，加上任何開頭或尾端邏輯的範圍。
 
-例如:  
+例如:
 
 ``` csharp
       if (x > 3)
@@ -87,7 +87,7 @@ ms.locfileid: "33353295"
 
 每個節點、權杖或邏輯都有 <xref:System.Int32?displayProperty=nameWithType> 類型的 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 屬性，可識別所代表的確切語法項目。 這個值可以轉換成特定語言的列舉。每種語言，C# 或 VB，都有單一 `SyntaxKind` 列舉 (分別是 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 和 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>)，會列出文法中所有可能的節點、權杖和邏輯項目。 可透過存取 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> 或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> 擴充方法來自動完成這項轉換。
 
-<xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> 屬性允許共用相同節點類別的語法節點類型簡單去除混淆。 對權杖和邏輯而言，這個屬性是區別某項目類型的唯一方式。 
+<xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> 屬性允許共用相同節點類別的語法節點類型簡單去除混淆。 對權杖和邏輯而言，這個屬性是區別某項目類型的唯一方式。
 
 例如，單一 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> 類別有 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 和 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> 子系。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> 屬性可區別其為 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> 或 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> 種類的語法節點。
 

@@ -3,12 +3,12 @@ title: 如何使用 ML.NET 自動化的 ML API
 description: ML.NET 自動化的 ML API 會自動化模型建置程序，並產生隨時可供部署的模型。 了解您可用來設定自動化機器學習工作的選項。
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: a7057337fb6ff19a1e402d7bf74a766b246ea3c1
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: bb1cd66e7341f2ada57d533d8b2dcbb48f08f726
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332724"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774557"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>如何使用 ML.NET 自動化的機器學習 API
 
@@ -89,7 +89,7 @@ using Microsoft.ML.AutoML;
     ```
 
 1. `CacheDirectory` 設定是目錄的指標，所有在 AutoML 工作期間定型的模型都儲存在此目錄。 如果 `CacheDirectory` 設為 null，則模型會保留在記憶體中，而不是寫入磁碟。
- 
+
     ```csharp
     experimentSettings.CacheDirectory = null;
     ```
@@ -128,7 +128,7 @@ using Microsoft.ML.AutoML;
 ## <a name="data-pre-processing-and-featurization"></a>資料前置處理與特徵化
 
 > [!NOTE]
-> [功能] 資料行僅支援[`Boolean`](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)、 [`Single`](https://docs.microsoft.com/en-us/dotnet/api/system.single)和[`String`](https://docs.microsoft.com/en-us/dotnet/api/system.string)的類型。
+> [功能] 資料行僅支援 <xref:System.Boolean>、<xref:System.Single> 和 <xref:System.String> 的類型。
 
 根據預設，資料予以前置處理，並為您自動執行下列步驟：
 
@@ -141,10 +141,10 @@ using Microsoft.ML.AutoML;
     以資料類型的預設值填入遺漏值資料格。 以和輸入資料行相同的插槽數附加指標特性。 如果輸入資料行中的值遺漏，則附加指標特性中的值是 `1`；否則為 `0`。
 
 1. 產生其他特性
-    
-    針對文字特性：使用單字母組和三字元字母組的一堆字詞特性。
-    
-    針對類別特性：適用於低基數特性的 One-Hot 編碼，和適用於高基數類別特性的 One-Hot 雜湊編碼。
+
+    針對文字功能：使用 unigrams 和三字元-克的字組功能。
+
+    針對分類功能：適用于低基數功能的一種經常性編碼，以及高基數類別功能的一種熱雜湊編碼。
 
 1. 轉換和編碼
 
@@ -191,7 +191,7 @@ ExperimentResult<RegressionMetrics> experimentResult = experiment
 AutoML 提供多載的實驗執行方法，讓您提供定型資料。 就內部而言，自動化的 ML 會將資料分成定型驗證分割。
 
 ```csharp
-experiment.Execute(trainDataView);   
+experiment.Execute(trainDataView);
 ```
 
 ### <a name="custom-validation-dataset"></a>自訂的驗證資料集
@@ -199,7 +199,7 @@ experiment.Execute(trainDataView);
 如不接受隨機分割，請使用自訂的驗證資料集，時間序列資料通常是這種情況。 您可以指定自己的驗證資料集。 針對指定的驗證資料集評估模型，而不是一或多個隨機資料集。
 
 ```csharp
-experiment.Execute(trainDataView, validationDataView);   
+experiment.Execute(trainDataView, validationDataView);
 ```
 
 ## <a name="explore-model-metrics"></a>探索模型計量
@@ -220,6 +220,6 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 * [多元分類計量](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
 * [迴歸計量](xref:Microsoft.ML.AutoML.RegressionMetric)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 如需完整的程式碼範例和更多範例，請瀏覽 GitHub 存放庫的 [ 範例](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state)。

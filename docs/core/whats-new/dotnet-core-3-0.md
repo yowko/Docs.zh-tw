@@ -7,18 +7,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 09/22/2019
-ms.openlocfilehash: c10023cf8cee358db41a3b90a9a0a1020c5462eb
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 758c8fd30fbd2e5ce8ace997005b91d6872a06d1
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395440"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773888"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
 本文說明 .NET Core 3.0 中的新功能。 其中一個最大的增強功能是對 Windows 傳統型應用程式的支援 (僅限 Windows)。 您可以使用 .NET Core 3.0 SDK 元件「Windows 傳統型」來移植 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式。 具體而言，只有在 Windows 上才支援並包含「Windows 傳統型」元件。 如需詳細資訊，請參閱本文稍後的 [Windows 傳統型](#windows-desktop)一節。
 
-.NET Core 3.0 新增 C# 8.0 支援。 強烈建議您使用[Visual Studio 2019 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)、 [Visual Studio for Mac 8.3](/visualstudio/mac/install-preview)或使用 **C#延伸**模組的[Visual Studio Code](https://code.visualstudio.com/) 。
+.NET Core 3.0 新增 C# 8.0 支援。 強烈建議您使用[Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更新版本（ [Visual Studio for Mac 8.3](/visualstudio/mac/install-preview)或更新版本），或使用最新 **C#的擴充**功能[Visual Studio Code](https://code.visualstudio.com/) 。
 
 立即在 Windows、macOS 或 Linux 上[下載並開始使用 .Net Core 3.0](https://aka.ms/netcore3download) 。
 
@@ -38,7 +38,7 @@ C#8.0 也是此版本的一部分，其中包括可為 null 的參考型別功�
 
 ## <a name="net-standard-21"></a>.NET Standard 2.1
 
-雖然 .NET Core 3.0 支援 **.NET Standard 2.1**，但預設的 @no__t 1 範本會產生仍以 **.NET Standard 2.0**為目標的專案。 若要以 **.NET Standard 2.1** 為目標，請編輯您的專案檔並將 `TargetFramework` 屬性變更為 `netstandard2.1`：
+雖然 .NET Core 3.0 支援 **.NET Standard 2.1**，但預設的 `dotnet new classlib` 範本會產生仍以 **.NET Standard 2.0**為目標的專案。 若要以 **.NET Standard 2.1** 為目標，請編輯您的專案檔並將 `TargetFramework` 屬性變更為 `netstandard2.1`：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 2e66534cac1edcc6759321c3024effa4990faeda
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 17ab7317ff1147dc79fae4ef3068cd9bc2143907
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044499"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774197"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (授權編譯器)
 授權編譯器可以讀取包含授權資訊的文字檔，並產生可內嵌於通用語言執行平台可執行檔的二進位檔案做為資源。  
@@ -26,7 +26,7 @@ ms.locfileid: "71044499"
   
  使用授權編譯器建置您的專案時，不支援 32 位元與 64 位元之間的跨平台編譯。 這是因為授權編譯器必須載入組件，卻不允許從 32 位元應用程式載入 64 位元組件，反之亦然。 在這種情況下，請使用授權編譯器，以手動方式從命令列編譯授權，並指定對應的架構。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
@@ -34,7 +34,7 @@ ms.locfileid: "71044499"
   
 ```console
       lc /target:  
-targetPE /complist:filename [/outdir:path]  
+targetPE /complist:filename [-outdir:path]  
 /i:modules [/nologo] [/v]  
 ```  
   
@@ -92,7 +92,7 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
 lc @response.rsp  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [工具](index.md)
 - [Al.exe (組件連結器)](al-exe-assembly-linker.md)

@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 011793006f2aff32486fbe4537b46517e0a2b888
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7a76c378038a19d3edb9fe0c5e61012cc854c1b7
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252296"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773935"
 ---
-# <a name="supportportability-element"></a>\<Supportportability> > 元素
+# <a name="supportportability-element"></a>\<supportPortability > 元素
 指定應用程式可以在兩個不同的 .NET Framework 實作中參考相同的組件，方法是停用將組件視為同等的預設行為 (此預設行為是基於應用程式可攜性的考量)。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Supportportability> >**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \<supportPortability **>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,9 +44,9 @@ ms.locfileid: "70252296"
 |值|描述|  
 |-----------|-----------------|  
 |true|啟用指定 .NET Framework 元件的執行之間的可攜性支援。 這是預設值。|  
-|false|停用指定之 .NET Framework 元件的執行之間的可攜性支援。 這可讓應用程式參考指定元件的多個執行。|  
+|False|停用指定之 .NET Framework 元件的執行之間的可攜性支援。 這可讓應用程式參考指定元件的多個執行。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
 
 無。  
   
@@ -60,16 +60,16 @@ ms.locfileid: "70252296"
   
 ## <a name="remarks"></a>備註  
 
-從 .NET Framework 4 開始，會自動為可使用 .NET Framework 的兩個實作為之一的應用程式提供支援，例如，.NET Framework 的執行或 Silverlight 執行的 .NET Framework。 元件系結器會將這兩個特定 .NET Framework 元件的執行視為對等。 在少數情況下，此應用程式可攜性功能會造成問題。 在這些情況下， `<supportPortability>`可以使用專案來停用此功能。  
+從 .NET Framework 4 開始，會自動為可使用 .NET Framework 的兩個實作為之一的應用程式提供支援，例如，.NET Framework 的執行或 Silverlight 執行的 .NET Framework。 元件系結器會將這兩個特定 .NET Framework 元件的執行視為對等。 在少數情況下，此應用程式可攜性功能會造成問題。 在這些情況下，可以使用 `<supportPortability>` 元素來停用此功能。  
   
 其中一個案例是必須同時參考 .NET Framework 執行的元件，以及特定參考元件的 Silverlight 執行 .NET Framework。 例如，以 Windows Presentation Foundation （WPF）撰寫的 XAML 設計工具可能需要參考 WPF 桌上型電腦的程式設計人員的使用者介面，以及包含在 Silverlight 執行中的 WPF 子集。 根據預設，不同的參考會導致編譯器錯誤，因為組件繫結關係會將兩個組件視為對等項目。 這個元素會停用預設行為，並允許編譯成功。  
   
 > [!IMPORTANT]
-> 為了讓編譯器將資訊傳遞給 common language runtime 的元件系結邏輯，您必須使用`/appconfig`編譯器選項來指定 app.config 檔案中包含此專案的位置。  
+> 為了讓編譯器將資訊傳遞給通用語言執行平臺的元件系結邏輯，您必須使用 `/appconfig` 編譯器選項來指定 app.config 檔案的位置，此檔案包含此元素。  
   
 ## <a name="example"></a>範例  
 
-下列範例可讓應用程式同時參考同時存在於兩個執行中之任何 .NET Framework 元件的 .NET Framework 實和 .NET Framework。 `/appconfig`編譯器選項必須用來指定此 app.config 檔案的位置。  
+下列範例可讓應用程式同時參考同時存在於兩個執行中之任何 .NET Framework 元件的 .NET Framework 實和 .NET Framework。 @No__t_0 編譯器選項必須用來指定此 app.config 檔案的位置。  
   
 ```xml  
 <configuration>  
@@ -82,7 +82,7 @@ ms.locfileid: "70252296"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [/appconfig （C#編譯器選項）](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [-appconfig (C# 編譯器選項)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
 - [.NET Framework 元件統一總覽](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

@@ -1,6 +1,6 @@
 ---
 title: IMetaDataTables::GetColumnInfo 方法
-ms.date: 03/30/2017
+ms.date: 10/10/2019
 api_name:
 - IMetaDataTables.GetColumnInfo
 api_location:
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0755cb2a91d61725338562cb1fe249a9cfacc38
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dd67d9faafedf4fb92c69618d4464ebb2ce47dcc
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781520"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774251"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo 方法
-取得指定的資料表中指定的資料行的相關的資料。  
+取得指定資料表中指定之資料行的相關資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,35 +40,63 @@ HRESULT GetColumnInfo (
 );  
 ```  
   
-## <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數
+=======
+
  `ixTbl`  
- [in]所需的資料表索引。  
+ 在所需資料表的索引。  
   
  `ixCol`  
- [in]所需的資料行的索引。  
+ 在所需資料行的索引。  
   
  `poCol`  
- [out]資料列中的資料行位移的指標。  
+ 脫銷資料列中資料行位移的指標。  
   
  `pcbCol`  
- [out]大小 （位元組），資料行的指標。  
+ 脫銷資料行大小的指標，以位元組為單位。  
   
  `pType`  
- [out]資料行中值的類型指標。  
+ 脫銷資料行中數值型別的指標。  
   
  `ppName`  
- [out]指標的資料行名稱的指標。  
-  
+ 脫銷指向資料行名稱之指標的指標。  
+ 
+## <a name="remarks"></a>備註
+
+傳回的資料行類型落在值的範圍內：
+
+| pType                    | 描述   | Helper 函式                   |
+|--------------------------|---------------|-----------------------------------|
+| `0`。`iRidMax`<br>（0到63）   | 掉           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`。`iCodedTokenMax`<br>（64. 95） | 程式碼標記 | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `iSHORT` （96）            | Int16         | **IsFixedType**                   |
+| `iUSHORT` （97）           | UInt16        | **IsFixedType**                   |
+| `iLONG` （98）             | Int32         | **IsFixedType**                   |
+| `iULONG` （99）            | UInt32        | **IsFixedType**                   |
+| `iBYTE` （100）            | Byte          | **IsFixedType**                   |
+| `iSTRING` （101）          | String        | **IsHeapType**                    |
+| `iGUID` （102）            | GUID          | **IsHeapType**                    |
+| `iBLOB` （103）            | Blob          | **IsHeapType**                    |
+
+您可以使用下列方式來讀取儲存在*堆積*中的值（也就是 `IsHeapType == true`）：
+
+- `iSTRING`： **IMetadataTables. GetString**
+- `iGUID`： **IMetadataTables. GetGUID**
+- `iBLOB`： **IMetadataTables. GetBlob**
+
+> [!IMPORTANT]
+> 若要使用上表中所定義的常數，請包含*cor*標頭檔所提供的指示詞 `#define _DEFINE_META_DATA_META_CONSTANTS`。
+
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **標頭：** Cor。h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

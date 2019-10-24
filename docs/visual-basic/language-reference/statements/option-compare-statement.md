@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 43d3faf3a6630cd308913ce2325a5f7fe96e474c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: efd033e6c12637b8dc12fb886f46a267e677aa42
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581577"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775511"
 ---
 # <a name="option-compare-statement"></a>Option Compare 陳述式
 宣告比較字串資料時要使用的預設比較方法。  
@@ -59,7 +59,7 @@ Option Compare { Binary | Text }
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
 ## <a name="when-an-option-compare-statement-is-not-present"></a>Option Compare 陳述式不存在時  
- 如果原始程式碼不包含 `Option Compare` 語句，則會使用 [編譯] 頁面上的 [**選項比較**] 設定[（[專案設計工具] （Visual Basic））](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 。 如果您使用命令列編譯器，則會使用[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)編譯器選項所指定的設定。  
+ 如果原始程式碼不包含 `Option Compare` 語句，則會使用 [編譯] 頁面上的 [**選項比較**] 設定[（[專案設計工具] （Visual Basic））](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 。 如果您使用命令列編譯器，則會使用[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)編譯器選項所指定的設定。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -75,7 +75,7 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>在命令列上設定選項比較  
   
-- 在**vbc**命令中包含[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)編譯器選項。  
+- 在**vbc**命令中包含[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)編譯器選項。  
   
 ## <a name="example"></a>範例  
  下列範例會使用 `Option Compare` 陳述式來將二進位比較設為預設字串比較方法。 若要使用這段程式碼，請取消註解 `Option Compare Binary` 陳述式，並將其放置在原始程式檔的頂端。  
@@ -94,7 +94,7 @@ Option Compare { Binary | Text }
 - <xref:Microsoft.VisualBasic.Strings.Replace%2A>
 - <xref:Microsoft.VisualBasic.Strings.Split%2A>
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
-- [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [比較運算子](../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [Visual Basic 中的比較運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Like 運算子](../../../visual-basic/language-reference/operators/like-operator.md)
