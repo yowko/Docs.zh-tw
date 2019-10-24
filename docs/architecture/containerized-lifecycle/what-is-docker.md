@@ -2,12 +2,12 @@
 title: 什麼是 Docker？
 description: 進一步增進您對 Docker 的理解，以下提供的簡單比喻或許能幫上您。
 ms.date: 02/15/2019
-ms.openlocfilehash: 7747c4985af27be0a073fad2f22622f697f4ce27
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 7fd3c599afda2d59e0d56756bd61495f2d0370a0
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673425"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770711"
 ---
 # <a name="what-is-docker"></a>什麼是 Docker？
 
@@ -19,7 +19,7 @@ ms.locfileid: "68673425"
 
 Docker 映像容器可以原生方式在 Linux 及 Windows 上執行。 不過，Windows 映像只能在 Windows 主機上執行，而 Linux 映像可以在 Linux 主機和 Windows 主機上執行 (目前是使用 Hyper-V Linux VM)，其中主機是指伺服器或 VM。
 
-開發人員可以使用 Windows、Linux 或 macOS 上的開發環境。 在開發電腦上，開發人員執行的 Docker 主機是 Docker 映像部署所在，包括應用程式及其相依性。 在 Linux 或 Mac 上工作的開發人員會使用 Linux 型的 Docker 主機，他們只能建立適用於 Linux 容器的映像。 (在 Mac 上工作的開發人員可以編輯程式碼或者從 macOS 執行 Docker 命令列介面 (CLI)，但是在撰寫時，不會直接在 macOS 上執行容器。)在 Windows 上工作的開發人員可以建立適用於 Linux 或 Windows 容器的映像。
+開發人員可以使用 Windows、Linux 或 macOS 上的開發環境。 在開發電腦上，開發人員執行的 Docker 主機是 Docker 映像部署所在，包括應用程式及其相依性。 在 Linux 或 Mac 上工作的開發人員會使用 Linux 型的 Docker 主機，他們只能建立適用於 Linux 容器的映像。 （在 Mac 上工作的開發人員可以編輯程式碼，或從 macOS 執行 Docker 命令列介面（CLI），但在撰寫本文時，容器不會直接在 macOS 上執行）。在 Windows 上工作的開發人員可以建立 Linux 或 Windows 容器的映射。
 
 為了在開發環境中裝載容器並且提供其他開發人員工具，Docker 提供適用於 Windows 或 macOS 的 [Docker Community Edition (CE)](https://www.docker.com/community-edition)。 這些產品都會安裝必要的 VM (Docker 主機) 以裝載容器。 Docker 也提供 [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition)，這是專為企業開發所設計的，由在生產環境中建置、交付及執行大型商務關鍵性應用程式的 IT 小組來使用。
 
@@ -35,7 +35,7 @@ Docker 映像容器可以原生方式在 Linux 及 Windows 上執行。 不過�
 
 圖 1-3 比較了 VM 和 Docker 容器。
 
-![針對 VM，在主機伺服器中有三個基礎層，從下到上分別是：基礎結構、主機作業系統和 Hypervisor，每部 VM 在頂端都具有各自的作業系統和所有必要的程式庫。 此外就 Docker 而言，主機伺服器只有基礎結構和作業系統，在上方則是容器引擎，該引擎會讓容器保持隔離，但是共用基礎作業系統服務。](./media/image3.png)
+![針對 VM，在主機伺服器中有三個基礎層，從下到上分別是：基礎結構、主機作業系統和 Hypervisor，每部 VM 在頂端都具有各自的作業系統和所有必要的程式庫。 相反地，針對 Docker，主機伺服器只有基礎結構和作業系統，而在其上，容器引擎會讓容器保持隔離，但是共用基礎作業系統服務。](./media/image3.png)
 
 **圖 1-3**。 傳統虛擬機器與 Docker 容器的比較
 
