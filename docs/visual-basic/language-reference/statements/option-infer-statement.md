@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 52da5d059369f8f5a85c23d1ed5ade97523a0e78
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4dcca0f0ed9989577ded27bab7cf3b16f3036964
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582636"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775449"
 ---
 # <a name="option-infer-statement"></a>Option Infer 陳述式
 
@@ -62,7 +62,7 @@ Option Infer { On | Off }
 
 ## <a name="when-an-option-infer-statement-is-not-present"></a>Option Infer 陳述式不存在時
 
-如果原始程式碼不包含 `Option Infer` 語句，則會使用 [[編譯] Visual Basic 頁面](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)上的 [推斷設定]**選項**。 如果使用命令列編譯器，則會使用[/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)編譯器選項。
+如果原始程式碼不包含 `Option Infer` 語句，則會使用 [[編譯] Visual Basic 頁面](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)上的 [推斷設定]**選項**。 如果使用命令列編譯器，則會使用[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)編譯器選項。
 
 #### <a name="to-set-option-infer-in-the-ide"></a>在 IDE 中設定 Option Infer
 
@@ -76,7 +76,7 @@ Option Infer { On | Off }
 
 #### <a name="to-set-option-infer-on-the-command-line"></a>在命令列上設定 Option Infer
 
-在**vbc**命令中包含[/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)編譯器選項。
+在**vbc**命令中包含[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)編譯器選項。
 
 ## <a name="default-data-types-and-values"></a>預設資料類型和值
 
@@ -109,5 +109,5 @@ Option Infer { On | Off }
 - [Option Explicit 陳述式](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [選項對話方塊、專案、Visual Basic 預設值](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
-- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [Boxing 和 Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

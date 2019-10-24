@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: c6fc7e9dcfbce938ad75b0f357c2bfa9cd10703a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: d7209e431b84e52e487bccbf73bd633a346efde0
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005319"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775612"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 可讓您在變數宣告中使用區域類型推斷。  
@@ -28,7 +28,7 @@ ms.locfileid: "72005319"
   
 |詞彙|定義|  
 |---|---|  
-|`+` &#124; `-`|選擇性。 指定 `-optioninfer+` 以啟用區域類型推斷，或是指定 `-optioninfer-` 以封鎖它。 未指定值的 `-optioninfer` 選項與 `-optioninfer+` 相同。 不存在 `-optioninfer` 參數時的預設值也是 `-optioninfer+`。 預設值是在 Vbc.rsp 回應檔中設定。|  
+|`+` &#124; `-`|選擇項。 指定 `-optioninfer+` 以啟用區域類型推斷，或是指定 `-optioninfer-` 以封鎖它。 未指定值的 `-optioninfer` 選項與 `-optioninfer+` 相同。 不存在 `-optioninfer` 參數時的預設值也是 `-optioninfer+`。 預設值是在 Vbc.rsp 回應檔中設定。|  
   
 > [!NOTE]
 > 您可以使用 `-noconfig` 選項來保留編譯器的內部預設值而不是 vbc.rsp 中所指定的預設值。 這個選項的編譯器預設值是 `-optioninfer-`。  
@@ -49,7 +49,7 @@ ms.locfileid: "72005319"
 vbc -optioninfer+ test.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
@@ -60,5 +60,5 @@ vbc -optioninfer+ test.vb
 - [區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [選項對話方塊、專案、Visual Basic 預設值](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [專案設計工具、編譯頁面 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
-- [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)

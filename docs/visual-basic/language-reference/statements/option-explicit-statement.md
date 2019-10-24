@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: 19ff8cf1dbcdb941e38f23be4cb68d3a5e5b83a8
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 0405814efecbdff5769af36b27dce1cd3305aab5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582572"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775488"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit 陳述式 (Visual Basic)
 強制明確宣告檔案中的所有變數，或允許變數的隱含宣告。  
@@ -43,7 +43,7 @@ Option Explicit { On | Off }
 > 將 `Option Explicit` 設定為 `Off` 通常不是很好的作法。 一或多個位置中的變數名稱可能有拼字錯誤，這會在程式執行時造成非預期的結果。  
   
 ## <a name="when-an-option-explicit-statement-is-not-present"></a>當 Option Explicit 語句不存在時  
- 如果原始程式碼不包含 `Option Explicit` 語句，則會使用 [編譯] 頁面上的 [**選項明確**設定]，也就是 [[專案設計工具（Visual Basic）](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) ]。 如果使用命令列編譯器，則會使用[/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)編譯器選項。  
+ 如果原始程式碼不包含 `Option Explicit` 語句，則會使用 [編譯] 頁面上的 [**選項明確**設定]，也就是 [[專案設計工具（Visual Basic）](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) ]。 如果使用命令列編譯器，則會使用[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)編譯器選項。  
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>若要在 IDE 中設定 Option Explicit  
   
@@ -57,7 +57,7 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-on-the-command-line"></a>若要在命令列上設定 Option Explicit  
   
-- 在**vbc**命令中包含[/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)編譯器選項。  
+- 在**vbc**命令中包含[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)編譯器選項。  
   
 ## <a name="example"></a>範例  
  下列範例會使用 `Option Explicit` 語句來強制執行所有變數的明確宣告。 嘗試使用未宣告的變數會在編譯時期導致錯誤。  
@@ -72,7 +72,7 @@ Option Explicit { On | Off }
 - [ReDim 陳述式](../../../visual-basic/language-reference/statements/redim-statement.md)
 - [Option Compare 陳述式](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
+- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [選項對話方塊、專案、Visual Basic 預設值](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

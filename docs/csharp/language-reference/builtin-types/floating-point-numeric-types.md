@@ -1,7 +1,7 @@
 ---
 title: 浮點數值型別 - C# 參考
 description: 內建 C# 浮點數型別的概觀
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: fa6cbb869d90113414cc6f8ffe231386c3596b1d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4d71f7eea3f574e483dc4250f5c87e1ffd551f2f
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579375"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771896"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮點數值型別 (C# 參考)
 
@@ -105,13 +105,7 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>轉換
 
-從 `float` 到 `double` 有隱含轉換 (稱為「擴展轉換」)，而由於 `float` 值的範圍是 `double` 的適當子集，因此從 `float` 至 `double` 不會失去精確度。
-
-如果未定義從來源型別到目的地型別的隱含轉換，則必須使用明確轉換，將某種浮點數型別轉換成另一種浮點數型別。 這稱為「縮小轉換」。 因為轉換會導致資料遺失，所以需要明確轉換。 其他浮點數型別和 `decimal` 型別之間沒有隱含轉換，因為 `decimal` 型別的精確度較 `float` 或 `double` 來得高。
-
-如需隱含數值轉換的詳細資訊，請參閱[隱含數值轉換表](../keywords/implicit-numeric-conversions-table.md)。
-
-如需明確數值轉換的詳細資訊，請參閱[明確數值轉換表](../keywords/explicit-numeric-conversions-table.md)。
+浮點數數值型別之間只有一個隱含轉換：從 `float` 到 `double`。 不過，您可以使用[明確轉換](../operators/type-testing-and-cast.md#cast-operator-)，將任何浮點類型轉換成任何其他浮點類型。 如需詳細資訊，請參閱[內建數值轉換](numeric-conversions.md)。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -124,10 +118,9 @@ Console.WriteLine(m);  // output: 1500000
 ## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
-- [整數型別](integral-numeric-types.md)
 - [內建型別表](../keywords/built-in-types-table.md)
-- [.NET 中的數值](../../../standard/numerics.md)
-- [轉換和型別轉換](../../programming-guide/types/casting-and-type-conversions.md)
-- <xref:System.Numerics.Complex?displayProperty=nameWithType>
+- [整數型別](integral-numeric-types.md)
 - [格式化數值結果表](../keywords/formatting-numeric-results-table.md)
 - [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)
+- [.NET 中的數值](../../../standard/numerics.md)
+- <xref:System.Numerics.Complex?displayProperty=nameWithType>
