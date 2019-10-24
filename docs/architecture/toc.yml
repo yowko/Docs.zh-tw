@@ -5,6 +5,8 @@
   items:
     - name: 使用 ASP.NET Core 和 Microsoft Azure 來架構現代化 Web 應用程式
       href: modern-web-apps-azure/
+    - name: 適用於 WCF 開發人員的 ASP.NET Core gRPC
+      href: grpc-for-wcf-developers/
     - name: 使用 Azure 雲端及 Windows 容器將現有 .NET 應用程式現代化
       href: modernize-with-azure-containers/
     - name: Microsoft 平台與工具上已容器化的 Docker 應用程式生命週期
@@ -20,5 +22,3 @@
       href: cloud-native/
     - name: 適用於 ASP.NET Web Forms 的 Blazor 開發人員
       href: blazor-for-web-forms-developers/
-    - name: 適用於 WCF 開發人員的 ASP.NET Core gRPC
-      href: grpc-for-wcf-developers/
