@@ -4,14 +4,14 @@ description: 了解如何建置產品銷售資料的異常偵測應用程式。 
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ed75f1ba0b102ba73eb5671667b5731519c12eb0
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: ed4c24fac2348c021982ad593417b33d50347dd1
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929047"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774432"
 ---
-# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>教學課程：使用 ML.NET 偵測產品銷售中的異常
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>教學課程：使用 ML.NET 偵測產品銷售額中的異常
 
 了解如何建置產品銷售資料的異常偵測應用程式。 此教學課程會示範如何在 Visual Studio 中使用 C# 建立 .NET Core 主控台應用程式。
 
@@ -26,9 +26,9 @@ ms.locfileid: "70929047"
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection) 存放庫中找到本教學課程的原始程式碼。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-* 已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 15.6 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。
+* 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)版本。
 
 * [product-sales.csv 資料集](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
 
@@ -40,7 +40,7 @@ ms.locfileid: "70929047"
 
 1. 建立稱為 "ProductSalesAnomalyDetection" 的 **.NET Core 主控台應用程式**。
 
-2. 在您專案中建立名為 *Data* 的目錄以儲存資料集檔案。
+2. 在專案中建立一個名為 *Data* 的目錄以儲存資料集檔案。
 
 3. 安裝「Microsoft.ML NuGet 套件」：
 
@@ -62,7 +62,7 @@ ms.locfileid: "70929047"
 
 下表是 \*.csv 檔案的資料預覽：
 
-|Month  |ProductSales |
+|月份  |ProductSales |
 |-------|-------------|
 |1 月 1 日  |    271      |
 |1 月 2 日  |    150.9    |
@@ -133,8 +133,8 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 異常偵測適用於許多方面。 若是執行個體：
 
-如果您有一輛汽車，您可能想知道：油量表的讀數是否正常，還是漏油了？
-如果您要監視的耗電量，您可能想知道：是否斷電？
+如果您有車輛，您可能會想知道：此石油量測計是否正常閱讀，或是否有流失？
+如果您要監視電源耗用量，您會想知道：是否有中斷？
 
 可偵測到的時間序列異常有兩種：
 

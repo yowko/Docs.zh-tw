@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: afe2181e031a651767e6a6eec0397300b03fce50
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 8b7dfcfa394ed2c45adec9661ee1ea5823435223
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582561"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775447"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 將隱含資料類型轉換限制為僅限擴輾轉換、不允許晚期繫結，而且不允許導致 `Object` 類型的隱含類型。  
@@ -104,7 +104,7 @@ Option Strict { On | Off }
 ## <a name="when-an-option-strict-statement-is-not-present"></a>當 Option Strict 語句不存在時  
  如果原始程式碼不包含 `Option Strict` 語句，則會使用 [編譯] 頁面上的 [ **Option strict** ] 設定[（[專案設計工具] （Visual Basic））](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 。 [**編譯] 頁面**有一些設定，可對產生錯誤的條件提供額外的控制。  
   
- 如果您使用命令列編譯器，您可以使用[/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)編譯器選項來指定 `Option Strict` 的設定。  
+ 如果您使用命令列編譯器，您可以使用[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)編譯器選項來指定 `Option Strict` 的設定。  
   
 ### <a name="to-set-option-strict-in-the-ide"></a>若要在 IDE 中設定 Option Strict  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -132,7 +132,7 @@ Option Strict { On | Off }
  若要在此對話方塊中設定 `Option Strict`，請在 [**工具**] 功能表上按一下 [**選項**]。 在 [選項] 對話方塊中，展開 [專案和方案]，然後按一下 [VB 預設值]。 **VB 預設值**中的初始預設設定是 `Off`。  
   
 ### <a name="to-set-option-strict-on-the-command-line"></a>若要在命令列上設定 Option Strict  
- 在**vbc**命令中包含[/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)編譯器選項。  
+ 在**vbc**命令中包含[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)編譯器選項。  
   
 ## <a name="example"></a>範例  
  下列範例示範以縮小轉換的隱含類型轉換所造成的編譯時期錯誤。 這個錯誤類別會對應至 [**編譯] 頁面**上的**隱含轉換**條件。  
@@ -162,5 +162,5 @@ Option Strict { On | Off }
 - [XML 中內嵌的運算式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [寬鬆委派轉換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Office 方案中的晚期繫結](/visualstudio/vsto/late-binding-in-office-solutions)
-- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [選項對話方塊、專案、Visual Basic 預設值](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

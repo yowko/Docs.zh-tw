@@ -4,12 +4,12 @@ description: 此教學課程示範如何使用 C# 字串插補功能，在較大
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: e142c48cd944fd6119c697a299308dc9ce1203ca
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 813623f4036813d7c1af440a60387f5d8e889354
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834140"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774042"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>使用字串插補來建構格式化的字串
 
@@ -38,7 +38,7 @@ Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 
 這個簡單範例包含每個插入字串都必須要有的兩個項目：
 
-- 左引號字元之前開頭為 `$` 字元的字串常值。 `$` 符號與引號字元之間不能有任何空格。 (如果您想要查看包含空格時會發生什麼情況，請在 `$` 字元後面插入空格、儲存檔案，然後在主控台視窗中鍵入 `dotnet run` 以重新執行程式。 C# 編譯器會顯示錯誤訊息「錯誤 CS1056:未預期的字元 '$'」。)
+- 左引號字元之前開頭為 `$` 字元的字串常值。 `$` 符號與引號字元之間不能有任何空格。 (如果您想要查看包含空格時會發生什麼情況，請在 `$` 字元後面插入空格、儲存檔案，然後在主控台視窗中鍵入 `dotnet run` 以重新執行程式。 C# 編譯器會顯示錯誤訊息「錯誤 CS1056: 未預期的字元 '$'」)。
 
 - 一或多個「插入運算式」。 插入運算式是以左右大括弧 (`{` 和 `}`) 指出。 您可以放置任何 C# 運算式，以傳回大括號內的值 (包含 `null`)。
 
@@ -68,9 +68,9 @@ using System;
 public class Vegetable
 {
    public Vegetable(string name) => Name = name;
-   
+
    public string Name { get; }
-   
+
    public override string ToString() => Name;
 }
 
@@ -107,7 +107,7 @@ Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}."
 
 在插入運算式後面接著冒號 (":") 和格式字串，即可指定格式字串。 "d" 是[標準日期和時間格式字串](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)，可呈現簡短日期格式。 "C2" 是[標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)，可將數字呈現為小數點後面有兩位數的貨幣值。
 
-.NET 程式庫中有多種類型都支援一組預先定義的格式字串。 其中包含所有數值類型以及日期和時間類型。 如需支援格式字串之類型的完整清單，請參閱[在 .NET 中格式化類型](../../../standard/base-types/formatting-types.md)一文中的[格式字串和 .NET 類別庫類型](../../../standard/base-types/formatting-types.md#stringRef)。
+.NET 程式庫中有多種類型都支援一組預先定義的格式字串。 其中包含所有數值類型以及日期和時間類型。 如需支援格式字串之類型的完整清單，請參閱[在 .NET 中格式化類型](../../../standard/base-types/formatting-types.md)一文中的[格式字串和 .NET 類別庫類型](../../../standard/base-types/formatting-types.md#format-strings-and-net-types)。
 
 嘗試在文字編輯器中修改格式字串，並在每次進行變更時，重新執行程式以查看變更對日期和時間以及數值格式的影響。 將 `{date:d}` 中的 "d" 變更為 "t" (顯示簡短時間格式)、"y" (顯示年份和月份) 以及 "yyyy" (將年份顯示為四位數)。 將 `{price:C2}` 中的 "C2" 變更為 "e" (適用於指數標記法) 和 "F3" (適用於小數點後面有三位數的數值)。
 

@@ -1,5 +1,5 @@
 ---
-title: C# 參考
+title: C#證明
 ms.date: 02/14/2017
 helpviewer_keywords:
 - Visual C#, language reference
@@ -8,17 +8,19 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: df56287d161f7760e136eb80aa1a9171966df794
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 4fed33272dbed50100a37aa9fcd30befc46435f9
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275809"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771831"
 ---
-# <a name="c-reference"></a>C# 參考
+# <a name="c-reference"></a>C#證明
+
 本節提供有關 C# 關鍵字、運算子、特殊字元、前置處理器指示詞、編譯器選項以及編譯器錯誤和警告的參考資料。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本節內容
+
  [C# 關鍵字](./keywords/index.md)  
  提供有關 C# 關鍵字和語法的資訊連結。  
   

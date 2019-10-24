@@ -5,23 +5,23 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 06/21/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: b0d45ab7807bf84b98c58e85580d5aa04d0c5f7d
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: a1034d294012b8df5ec778fc40602fe52223961d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306318"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774573"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>了解如何安裝 ML.NET 模型建立器
 
 了解如何安裝 ML.NET 模型建立器，將機器學習服務新增至您的 .NET 應用程式。
 
 > [!NOTE]
-> 模型建立器目前為預覽版。
+> 模型產生器目前為預覽版。
 
-## <a name="pre-requisites"></a>先決條件
+## <a name="pre-requisites"></a>必要條件
 
-- Visual Studio 2017 15.9.12 或更新版本 / Visual Studio 2019
+- Visual Studio 2017 15.9.12 版或更新版本/Visual Studio 2019
 - .NET Core 2.1 或更新版本的 SDK
 
 ## <a name="limitations"></a>限制
@@ -33,7 +33,7 @@ ms.locfileid: "71306318"
 
 ## <a name="install"></a>安裝
 
-您可透過 Visual Studio Marketplace，或從 Visual Studio 安裝 ML.NET 模型建立器。 
+您可透過 Visual Studio Marketplace，或從 Visual Studio 安裝 ML.NET 模型建立器。
 
 ### <a name="visual-studio-marketplace"></a>Visual Studio Marketplace
 

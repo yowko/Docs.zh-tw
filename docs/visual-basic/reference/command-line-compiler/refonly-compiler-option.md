@@ -1,5 +1,5 @@
 ---
-title: -refonly (Visual Basic)
+title: -refonly （Visual Basic）
 ms.date: 03/16/2018
 f1_keywords:
 - -refonly
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /refonly compiler option [Visual Basic]
 - -refonly compiler option [Visual Basic]
 - refonly compiler option [Visual Basic]
-ms.openlocfilehash: 4093e98738cf6e41cd450229d82e3672fe9687ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e64989ac1410b51991027ffcb33e8dae0c0284b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788865"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775558"
 ---
-# <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
+# <a name="-refonly-visual-basic"></a>-refonly （Visual Basic）
 
-**-Refonly**選項表示編譯的主要輸出應為參考組件，而不是實作組件。 `-refonly` 參數以無訊息模式停用輸出 PDB，因為無法執行參考組件。
+**-Refonly**選項指出編譯的主要輸出應該是參考元件，而不是實作為元件。 `-refonly` 參數以無訊息模式停用輸出 PDB，因為無法執行參考組件。
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -28,15 +28,13 @@ ms.locfileid: "61788865"
 
 ## <a name="remarks"></a>備註
 
-Visual Basic 支援`-refout`切換 15.3 版開始。
+Visual Basic 支援從15.3 版開始的 `-refonly` 交換器。
 
-參考組件是僅中繼資料的組件包含中繼資料，但沒有實作程式碼。 它們包含匿名型別以外的所有項目的型別和成員資訊。 使用 `throw null` 主體的原因 (相對於沒有主體)，是這樣 PEVerify 便可執行和傳遞 (因此驗證中繼資料的完整性)。
-
-參考組件包含組件層級[ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute)屬性。 這個屬性可在來源中指定 (然後編譯器就不需要合成它)。 因為此屬性中，執行階段會拒絕載入參考組件的執行 （但仍可載入僅限反映的內容中）。 在組件反映的工具需要確保它們載入參考組件為僅限反映的;否則，執行階段會擲回<xref:System.BadImageFormatException>。
+參考元件是一種特殊類型的元件，其中只包含代表程式庫公用 API 介面所需的最小中繼資料量。 其中包括在建立工具中參考元件時，所有重要成員的宣告，但會排除所有成員的執行，以及對其 API 合約沒有明顯影響的私用成員宣告。 如需詳細資訊，請參閱 .NET 中的[參考元件](../../../standard/assembly/reference-assemblies.md)指南。
 
 `-refonly` 和 [`-refout`](refout-compiler-option.md) 選項互斥。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [-refout](refout-compiler-option.md)
 - [Visual Basic 命令列編譯器](index.md)

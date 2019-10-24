@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22e1ae495276b0c474ad47f695d8410288289f83
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cfea1d5ee19d9fb61094b60e0175ddfd2f120494
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053729"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774276"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework 協助工具的新功能
 
@@ -24,7 +24,7 @@ ms.locfileid: "71053729"
 
 如果您的應用程式是以 .NET Framework 4.7 或較早版本為目標，但是在 .NET Framework 4.7.1 或更新版本上執行，您可以將其設定為選擇加入協助工具功能。 如果您的應用程式是以 .NET Framework 4.7.1 或更新版本為目標，您也可以將其設定為使用舊版的功能 (且不利用協助工具功能)。 包含協助工具功能的每個 .NET Framework 版本都有版本特定的協助工具參數，您可以新增到應用程式組態檔 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 區段中的 [`<AppContextSwitchOverrides>` ](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 項目。 以下是支援的參數：
 
-|Version|參數|
+|版本|參數|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -427,7 +427,7 @@ Windows 10 引進 `SizeOfSet` 和 `PositionInSet` 這兩個新的 UIAutomation �
 
 - 從 .NET Framework 4.7.1 開始，螢幕助讀程式會宣告可編輯 <xref:System.Windows.Controls.ComboBox> 的名稱。
 
-- 在 .NET Framework 4.7 和舊版本中，螢幕助讀程式會將 <xref:System.Windows.Controls.PasswordBox> 控制項宣告為「檢視中沒有項目」或具有不正確的行為。 從 .NET Framework 4.7.1 開始，已修正此問題。
+- 在 .NET Framework 4.7 和舊版本中，螢幕助讀程式會將 <xref:System.Windows.Controls.PasswordBox> 控制項宣告為「檢視中沒有項目」或具有不正確的行為。 從 .NET Framework 4.7.1 開始已修正此問題。
 
 **UIAutomation LiveRegion 支援**
 
@@ -447,10 +447,10 @@ Windows 10 引進 `SizeOfSet` 和 `PositionInSet` 這兩個新的 UIAutomation �
 
 - <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> 列舉，可以定義下列可能的 **LiveSetting** 值：
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. 如果即時區域的內容變更，項目不會傳送通知。
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. 如果即時區域的內容變更，項目會傳送不中斷通知。
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType> 如果即時區域的內容變更，項目不會傳送通知。
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType> 如果即時區域的內容變更，項目會傳送不中斷通知。
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. 如果即時區域的內容變更，項目會傳送中斷通知。
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType> 如果即時區域的內容變更，項目會傳送中斷通知。
 
 您可以在感興趣的項目上設定 **AutomationProperties.LiveSetting** 屬性，以建立 LiveRegion，如下列範例所示：
 
@@ -478,7 +478,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - <xref:System.Windows.Controls.Expander> 控制項
 
-  現在會顯示 <xref:System.Windows.Controls.Expander> 控制項的焦點視覺效果。 現在也會顯示 <xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ListBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項的鍵盤視覺效果。 例如：
+  現在會顯示 <xref:System.Windows.Controls.Expander> 控制項的焦點視覺效果。 現在也會顯示 <xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ListBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項的鍵盤視覺效果。 例如:
 
   之前： 
 
@@ -490,7 +490,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - <xref:System.Windows.Controls.CheckBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項
 
-  在高對比佈景主題中選取時，<xref:System.Windows.Controls.CheckBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項中的文字現在更容易出現。 例如：
+  在高對比佈景主題中選取時，<xref:System.Windows.Controls.CheckBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項中的文字現在更容易出現。 例如:
 
   之前： 
 
@@ -502,7 +502,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - <xref:System.Windows.Controls.ComboBox> 控制項
 
-  從 .NET Framework 4.7.1 開始，已停用的 <xref:System.Windows.Controls.ComboBox> 控制項框線色彩與已停用的文字色彩相同。 例如：
+  從 .NET Framework 4.7.1 開始，已停用的 <xref:System.Windows.Controls.ComboBox> 控制項框線色彩與已停用的文字色彩相同。 例如:
 
   之前： 
 
@@ -522,7 +522,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   ![協助工具改善之後的按鈕佈景主題色彩](./media/button-themes-after.png) 
 
-  最後，在 .NET Framework 4.7 和舊版本中將 <xref:System.Windows.Controls.ComboBox> 控制項的樣式設定為 `Toolbar.ComboBoxStyleKey` 會導致無法看到下拉式箭號。 從 .NET Framework 4.7.1 開始已修正此問題。 例如：
+  最後，在 .NET Framework 4.7 和舊版本中將 <xref:System.Windows.Controls.ComboBox> 控制項的樣式設定為 `Toolbar.ComboBoxStyleKey` 會導致無法看到下拉式箭號。 從 .NET Framework 4.7.1 開始已修正此問題。 例如:
 
   之前： 
 
@@ -534,7 +534,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - <xref:System.Windows.Controls.DataGrid> 控制項
 
-  從 .NET Framework 4.7.1 開始，<xref:System.Windows.Controls.DataGrid> 控制項中的排序指標箭號現在會使用正確佈景主題色彩。 例如：
+  從 .NET Framework 4.7.1 開始，<xref:System.Windows.Controls.DataGrid> 控制項中的排序指標箭號現在會使用正確佈景主題色彩。 例如:
 
   之前： 
 
@@ -579,7 +579,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - 所選取 <xref:System.Windows.Forms.Button> 控制項中的文字會與選取色彩成對比。
 
-- 已停用的文字較容易閱讀。 例如：
+- 已停用的文字較容易閱讀。 例如:
 
   之前：
 
@@ -628,7 +628,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 ### <a name="aspnet-web-controls"></a>ASP.NET Web 控制項
 
-從 .NET Framework 4.7.1 和 Visual Studio 2017 15.3 開始，ASP.NET 改善 ASP.NET Web 控制項搭配 Visual Studio 協助工具技術的方式。 變更包括下列項目：
+從 .NET Framework 4.7.1 和 Visual Studio 2017 15.3 版開始，ASP.NET 改善了 ASP.NET web 控制項如何與 Visual Studio 中的協助工具技術搭配使用。 變更包括下列項目：
 
 - 在控制項中，實作遺漏 UI 協助工具模式的變更，例如在 [詳細資料檢視精靈] 的 [新增欄位] 對話方塊或 [ListView 精靈] 的 [設定 ListView] 對話方塊。
 
@@ -709,6 +709,6 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - 選擇高對比佈景主題的使用者會看到工作流程設計工具和其控制項在可見性方面的許多改善，例如項目之間的更佳對比比例以及用於焦點項目的更明顯選取方塊。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Framework 的新功能](whats-new.md)

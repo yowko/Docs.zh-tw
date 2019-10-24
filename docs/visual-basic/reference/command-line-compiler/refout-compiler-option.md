@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: c11d83ff37da41faa3dc6b66a87e2c52c5f6c7ac
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 552e611f222bfcc3ce12520ecdb891fd7b8b21de
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582865"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775554"
 ---
 # <a name="-refout-visual-basic"></a>-refout （Visual Basic）
 
@@ -35,9 +35,7 @@ ms.locfileid: "72582865"
 
 Visual Basic 支援從15.3 版開始的 `-refout` 交換器。
 
-參考元件是僅限中繼資料的元件，其中包含中繼資料，但沒有任何實作為程式碼。 其中包括匿名型別以外所有專案的類型和成員資訊。 其方法主體會取代為單一 `throw null` 語句。 使用 `throw null` 方法主體（而不是任何主體）的原因，是為了讓 PEVerify 能夠執行和傳遞（藉此驗證中繼資料的完整性）。
-
-參考元件包含元件層級的[ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute)屬性。 這個屬性可在來源中指定 (然後編譯器就不需要合成它)。 由於這個屬性，執行時間會拒絕載入參考元件以執行（但仍可在僅限反映的內容中載入）。 在元件上反映的工具必須確保它們將參考元件載入為僅限反映;否則，執行時間會擲回 <xref:System.BadImageFormatException>。
+參考元件是一種特殊類型的元件，其中只包含代表程式庫公用 API 介面所需的最小中繼資料量。 其中包括在建立工具中參考元件時，所有重要成員的宣告，但會排除所有成員的執行，以及對其 API 合約沒有明顯影響的私用成員宣告。 如需詳細資訊，請參閱 .NET 中的[參考元件](../../../standard/assembly/reference-assemblies.md)指南。
 
 `-refout` 和 [`-refonly`](refonly-compiler-option.md) 選項互斥。
 

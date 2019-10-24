@@ -6,16 +6,16 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a0e94f40a9dc861b32e6a1c12935faadda9921b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 2db08bd89b5e0fc612599f83cb02178aef5ee5fb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921799"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774174"
 ---
 # <a name="expressions-c-programming-guide"></a>運算式 (C# 程式設計手冊)
 
-「運算式」  是一連串的一或多個運算元以及零或多個[運算子](../../language-reference/operators/index.md)，可以評估為單一值、物件、方法或命名空間。 運算式可以包含常值、方法呼叫、運算子和其運算元，或「簡單名稱」  。 簡單名稱可以是變數、型別成員、方法參數、命名空間或型別的名稱。  
+「運算式」是一連串的一或多個運算元以及零或多個[運算子](../../language-reference/operators/index.md)，可以評估為單一值、物件、方法或命名空間。 運算式可以包含常值、方法呼叫、運算子和其運算元，或「簡單名稱」。 簡單名稱可以是變數、型別成員、方法參數、命名空間或型別的名稱。  
   
  運算式可以使用運算子 (後者又可能使用其他運算式當作參數) 或方法呼叫 (它的參數又可能是其他方法呼叫)，因此運算式的範圍可以從簡單到非常複雜。 下列是兩個運算式範例：  
   
@@ -33,7 +33,7 @@ System.Convert.ToInt32("35");
   
 ## <a name="overflows"></a>溢位
 
- 如果值大於實值型別的最大值，則數值運算式可能會造成溢位。 如需詳細資訊，請參閱 [Checked 與 Unchecked](../../language-reference/keywords/checked-and-unchecked.md) 以及[明確數值轉換表](../../language-reference/keywords/explicit-numeric-conversions-table.md)。  
+ 如果值大於實值型別的最大值，則數值運算式可能會造成溢位。 如需詳細資訊，請參閱[已檢查和未核](../../language-reference/keywords/checked-and-unchecked.md)取，以及[內建數值轉換](../../language-reference/builtin-types/numeric-conversions.md)一文的[明確數值轉換](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions)一節。
   
 ## <a name="operator-precedence-and-associativity"></a>運算子優先順序和關聯性
 
@@ -77,7 +77,7 @@ DoWork();
   
 ## <a name="expression-body-definitions"></a>運算式主體定義
 
-C# 支援「運算式主體成員」  ，可讓您提供方法、建構函式、完成項、屬性和索引子的精簡運算式主體定義。 如需詳細資訊，請參閱[運算式主體成員](expression-bodied-members.md)。
+C# 支援「運算式主體成員」，可讓您提供方法、建構函式、完成項、屬性和索引子的精簡運算式主體定義。 如需詳細資訊，請參閱[運算式主體成員](expression-bodied-members.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -87,7 +87,7 @@ C# 支援「運算式主體成員」  ，可讓您提供方法、建構函式、
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[運算式](~/_csharplang/spec/expressions.md)一節。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [運算子](../../language-reference/operators/index.md)

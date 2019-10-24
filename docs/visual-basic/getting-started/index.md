@@ -5,21 +5,22 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: bb1ce118bd46b2db840138a7ca13e9d1f5d75231
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
-ms.translationtype: HT
+ms.openlocfilehash: e07ded52d76e027127ad41c14c39730648c0ca12
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053656"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775190"
 ---
 # <a name="get-started-with-visual-basic"></a>開始使用 Visual Basic
-本文的這一節可協助您開始進行 Visual Basic 應用程式開發。  
-  
+
+本文的這一節可協助您開始進行 Visual Basic 應用程式開發。
+
 ## <a name="get-started-with-visual-basic-and-net-core"></a>開始使用 Visual Basic 和.NET Core
 
 [在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式](../../core/tutorials/vb-with-visual-studio.md)
 
-[在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫](../../core/tutorials/vb-library-with-visual-studio.md)  
+[在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫](../../core/tutorials/vb-library-with-visual-studio.md)
 
 ## <a name="additional-information"></a>其他資訊
 
@@ -32,13 +33,10 @@ ms.locfileid: "66053656"
 - [Visual Basic 程式設計人員的其他資源](additional-resources.md)\
 提供網站和新聞群組清單，協助您找到常見問題的解答。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [取得 Visual Basic](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)\
+- [取得 Visual Basic](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)  
 提供含有 Visual Basic 支援的 Visual Studio 版本下載連結 (包括免費版本)。
-
-- [適合無基礎新手參加的 Visual Basic 基礎課程](https://mva.microsoft.com/en-us/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)\
-Microsoft Virtual Academy 課程介紹 Visual Basic 程式設計的基礎。
 
 - [物件導向程式設計](../programming-guide/concepts/object-oriented-programming.md)\
 提供頁面的連結，這些頁面會介紹物件導向程式設計，並且描述如何建立自己的物件，以及如何使用物件簡化您的編碼。
@@ -49,7 +47,7 @@ Microsoft Virtual Academy 課程介紹 Visual Basic 程式設計的基礎。
 - [逐步解說](../../visual-basic/walkthroughs.md)\
 提供示範 Visual Basic 語言相關方面的 [說明] 頁清單。
 
-- [告訴我們](/visualstudio/ide/talk-to-us)\
+- [Visual Studio \ 的意見反應選項](/visualstudio/ide/feedback-options)
 說明如何接受支援和提供意見。
 
 - [Visual Studio](/visualstudio/)\

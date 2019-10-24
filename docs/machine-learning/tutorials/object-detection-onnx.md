@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f31c5155dd3ca59b1a370599b3ffabb2648791b1
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 6d13e7e4788dfd2bad6fd26015d76342b38f1142
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318524"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774456"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教學課程：在 ML.NET 中使用 ONNX 偵測物件
 
@@ -30,7 +30,7 @@ ms.locfileid: "72318524"
 
 ## <a name="pre-requisites"></a>必要條件
 
-- 已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 15.6 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
+- 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)版本。
 - [Microsoft.ML NuGet 套件](https://www.nuget.org/packages/Microsoft.ML/)
 - [Microsoft.ML.ImageAnalytics NuGet 套件](https://www.nuget.org/packages/Microsoft.ML.ImageAnalytics/)
 - [Microsoft.ML.OnnxTransformer NuGet 套件](https://www.nuget.org/packages/Microsoft.ML.OnnxTransformer/)

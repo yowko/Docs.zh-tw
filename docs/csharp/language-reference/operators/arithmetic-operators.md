@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: ac04ba72ed0c25aa576bf10150fc80410890eda0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9760be0fcfe29d2c11cbb1f4d4d81c5a79261a0d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608363"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771727"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術運算子 (C# 參考)
 
@@ -51,13 +51,13 @@ ms.locfileid: "69608363"
 
 ### <a name="postfix-increment-operator"></a>後置遞增運算子
 
-`x++` 的結果為運算「之前」  的 `x` 值，如下列範例所示：
+`x++` 的結果為運算「之前」的 `x` 值，如下列範例所示：
 
 [!code-csharp-interactive[postfix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixIncrement)]
 
 ### <a name="prefix-increment-operator"></a>前置遞增運算子
 
-`++x` 的結果為運算「之後」  的 `x` 值，如下列範例所示：
+`++x` 的結果為運算「之後」的 `x` 值，如下列範例所示：
 
 [!code-csharp-interactive[prefix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixIncrement)]
 
@@ -69,13 +69,13 @@ ms.locfileid: "69608363"
 
 ### <a name="postfix-decrement-operator"></a>後置遞減運算子
 
-`x--` 的結果為運算「之前」  的 `x` 值，如下列範例所示：
+`x--` 的結果為運算「之前」的 `x` 值，如下列範例所示：
 
 [!code-csharp-interactive[postfix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixDecrement)]
 
 ### <a name="prefix-decrement-operator"></a>前置遞減運算子
 
-`--x` 的結果為運算「之後」  的 `x` 值，如下列範例所示：
+`--x` 的結果為運算「之後」的 `x` 值，如下列範例所示：
 
 [!code-csharp-interactive[prefix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixDecrement)]
 
@@ -115,7 +115,7 @@ ms.locfileid: "69608363"
 
 [!code-csharp-interactive[floating-point division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointDivision)]
 
-如果其中一個運算元是 `decimal`，則另一個運算元便不可以是 `float` 或 `double`，因為 `float` 或 `double` 都無法隱含轉換為 `decimal`。 您必須明確地將 `float` 或 `double` 運算元轉換為 `decimal` 型別。 如需在數值型別之間進行隱含轉換的詳細資訊，請參閱[隱含數值轉換表](../keywords/implicit-numeric-conversions-table.md)。
+如果其中一個運算元是 `decimal`，則另一個運算元便不可以是 `float` 或 `double`，因為 `float` 或 `double` 都無法隱含轉換為 `decimal`。 您必須明確地將 `float` 或 `double` 運算元轉換為 `decimal` 型別。 如需有關數數值型別之間轉換的詳細資訊，請參閱[內建數值轉換](../builtin-types/numeric-conversions.md)。
 
 ## <a name="remainder-operator-"></a>餘數運算子 %
 
@@ -262,7 +262,7 @@ x = x op y
 - [checked 和 unchecked 運算子](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
 - [數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)
