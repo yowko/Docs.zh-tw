@@ -4,12 +4,12 @@ description: .NET 微服務和 Web 應用程式中的安全性 - 了解 ASP.NET 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 0894465858e3503e2eddb5299b404f7ba95fdd6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: f405b4199e8239e86c4799a649c3d87811d99828
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296472"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798850"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>製作安全的 .NET 微服務和 Web 應用程式
 
@@ -25,9 +25,9 @@ ms.locfileid: "70296472"
 
 **圖 9-1**. 使用 API 閘道的集中式驗證
 
-如果服務可供直接存取，則可以使用 Azure Active Directory 等驗證服務或作為 Security Token Service (STS) 的專用驗證微服務來驗證使用者。 信任決策會透過安全性權杖或 Cookie 在服務之間共用 (如果有需要，可以透過實作 [Cookie 共用](/aspnet/core/security/cookie-sharing)以在 ASP.NET Core 應用程式之間共用這些權杖。)圖 9-2 說明的就是這種模式。
+如果服務可供直接存取，則可以使用 Azure Active Directory 等驗證服務或作為 Security Token Service (STS) 的專用驗證微服務來驗證使用者。 信任決策會透過安全性權杖或 Cookie 在服務之間共用 （如有需要，可以在 ASP.NET Core 應用程式之間共用這些權杖，方法是執行[cookie 共用](/aspnet/core/security/cookie-sharing)）。此模式如圖9-2 所示。
 
-![有人直接存取微服務時，包含驗證和授權的信任將由專用微服務發行的安全性權杖處理，於微服務間共用。](./media/image2.png)
+![直接存取微服務時，包含驗證和授權的信任會由專用微服務所發行的安全性權杖（在微服務之間共用）來處理。](./media/image2.png)
 
 **圖 9-2**： 由識別微服務驗證並透過授權權杖共用信任
 
@@ -119,7 +119,7 @@ else
 }
 ```
 
-如果當您在 Visual Studio 中建立 ASP.NET Code Web 應用程式專案時，選擇 [Individual User Account] \(個別使用者帳戶\)  驗證選項，專案中已有使用外部提供者登入所需的所有程式碼，如圖 9-3 所示。
+如果當您在 Visual Studio 中建立 ASP.NET Code Web 應用程式專案時，選擇 [Individual User Account] \(個別使用者帳戶\) 驗證選項，專案中已有使用外部提供者登入所需的所有程式碼，如圖 9-3 所示。
 
 ![新 ASP.NET Core Web 應用程式的對話方塊，反白顯示了變更驗證的按鈕。](./media/image3.png)
 
@@ -282,22 +282,19 @@ JWT 持有人驗證中介軟體也可以支援更進階的案例；例如，在�
 - **身分識別簡介** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/identity](/aspnet/core/security/authentication/identity)
 
-- **Rick Anderson，使用 SMS 的雙因素驗證** \
+- **Rick Anderson。使用 SMS  \ 的雙因素驗證**
   [https://docs.microsoft.com/aspnet/core/security/authentication/2fa](/aspnet/core/security/authentication/2fa)
 
 - **使用 Facebook、Google 和其他外部提供者啟用驗證** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
-- **Michell Anicas，OAuth 2 簡介** \
+- **Michell anicas,。OAuth 2  \ 簡介**
   <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
 - **AspNet.Security.OAuth.Providers** (ASP.NET OAuth 提供者的 GitHub 存放庫) \
   <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
 
-- **Danny Strockis，將 Azure AD 整合到 ASP.NET Core Web 應用程式** \
-  <https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/>
-
-- **IdentityServer4，正式文件** \
+- **IdentityServer4。官方檔** \
   <https://identityserver4.readthedocs.io/en/latest/>
 
 >[!div class="step-by-step"]
