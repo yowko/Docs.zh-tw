@@ -55,6 +55,10 @@
           items:
             - name: m_ConnectionList 欄位
               href: m_connectionlist.md
+        - name: ConnectStream 類別
+          items:
+            - name: ConnectStream 屬性
+              href: system.net.connectstream.connection.md
         - name: CoreResponseData 類別
           href: coreresponsedata.md
           items:
@@ -70,12 +74,26 @@
               href: httpwebrequest__coreresponse.md
             - name: _HttpResponse 欄位
               href: _httpresponse.md
+        - name: PooledStream 類別
+          items:
+            - name: NetworkStream 屬性
+              href: system.net.pooledstream.networkstream.md
         - name: ServicePoint 類別
           items:
             - name: m_ConnectionGroupList 欄位
               href: m_connectiongrouplist.md
             - name: s_ServicePointTable 欄位
               href: s_servicepointtable.md
+        - name: TlsStream 類別
+          items:
+            - name: m_Worker 欄位
+              href: system.net.tlsstream.m_worker.md
+    - name: System.Net.Security
+      items:
+        - name: SslState 類別
+          items:
+            - name: SslProtocol 屬性
+              href: system.net.security.sslstate.sslprotocol.md
     - name: System.Windows.Diagnostics
       items:
         - name: VisualDiagnostics 類別
