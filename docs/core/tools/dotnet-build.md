@@ -1,13 +1,13 @@
 ---
 title: dotnet build 命令
 description: dotnet build 命令會建置專案和其所有相依性。
-ms.date: 10/07/2019
-ms.openlocfilehash: 0a3e2c0e441cfdd1cb8266bc77dc1aba08af84d6
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.date: 10/14/2019
+ms.openlocfilehash: fe2135c150be46997699f756f7f0c9bc18bbb529
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522786"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846818"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -32,9 +32,17 @@ dotnet build [-h|--help]
 
 ## <a name="description"></a>描述
 
-`dotnet build` 命令會將專案及其相依性建置成一組二進位檔。 二進位檔將專案程式碼包含在副檔名為 *.dll* 的中繼語言 (IL) 檔案中，以及副檔名為 *.pdb* 且用於偵錯的符號檔。 產生相依性 JSON 檔案 ( *.deps.json*)，其中會列出應用程式的相依性。 產生 *.runtimeconfig.json* 檔案，其中會指定應用程式的共用執行階段及其版本。
+`dotnet build` 命令會將專案及其相依性建置成一組二進位檔。 二進位檔會將專案的程式碼包含在副檔名為 *.dll*的中繼語言（IL）檔案中。  視專案類型和設定而定，可能會包含其他檔案，例如：
 
-如果專案對於第三方有相依性 (例如來自 NuGet 的程式庫)，這些相依性將會從 NuGet 快取解析，而不會透過專案的建置輸出提供。 因此，`dotnet build` 產生的結果尚未準備好轉移到另一部電腦來執行。 這與 .NET Framework 的行為相反。在 .NET Framework 中，建置可執行檔專案 (應用程式) 所產生的輸出，可在任何已安裝 .NET Framework 的電腦上執行。 若要在 .NET Core 中擁有類似體驗，您需要使用 [dotnet publish](dotnet-publish.md) 命令。 如需詳細資訊，請參閱 [.NET Core 應用程式部署](../deploying/index.md)。
+- 如果專案類型是以 .NET Core 3.0 或更新版本為目標的可執行檔，則可以用來執行應用程式。
+- 用來以 *.pdb*副檔名進行偵錯工具的符號檔。
+- *.Deps.json json*檔案，其中會列出應用程式或程式庫的相依性。
+- *.Runtimeconfig.json json*檔案，指定應用程式的共用執行時間及其版本。
+- 專案相依的其他程式庫（透過專案參考或 NuGet 套件參考）。
+
+針對以 .NET Core 3.0 之前版本為目標的可執行檔專案，NuGet 的程式庫相依性通常不會複製到輸出檔案夾。  它們會在執行時間從 [NuGet 全域套件] 資料夾加以解析。 因此，`dotnet build` 產生的結果尚未準備好轉移到另一部電腦來執行。 若要建立可部署的應用程式版本，您必須將它發佈（例如，使用[dotnet publish](dotnet-publish.md)命令）。 如需詳細資訊，請參閱 [.NET Core 應用程式部署](../deploying/index.md)。
+
+針對以 .NET Core 3.0 和更新版本為目標的可執行專案，會將程式庫相依性複製到輸出檔案夾。 這表示，如果沒有任何其他發佈特定邏輯（例如 Web 專案），則組建輸出應該是可部署的。
 
 建置會需要 *project.assets.json* 檔案，其中列出您應用程式的相依性。 檔案會在 [`dotnet restore`](dotnet-restore.md) 執行時建立。 如果沒有資產檔案，工具就會因為無法解析參考組件而發生錯誤。 使用 .NET Core 1.x SDK 時，您必須在執行 `dotnet build` 之前明確地執行 `dotnet restore`。 自 .NET Core 2.0 SDK 開始，`dotnet restore` 會在您執行 `dotnet build` 時以隱含方式執行。 如果您想要在執行 build 命令時停用隱含還原，您可以跳過 `--no-restore` 選項。
 
@@ -48,7 +56,7 @@ dotnet build [-h|--help]
 </PropertyGroup>
 ```
 
-若要產生程式庫，只要省略 `<OutputType>` 屬性即可。 建置輸出的主要差別在於，程式庫的 IL DLL 不包含進入點，而且無法執行。
+若要產生程式庫，請省略 `<OutputType>` 屬性，或將其值變更為 `Library`。 程式庫的 IL DLL 不包含進入點，因此無法執行。
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -56,7 +64,7 @@ dotnet build [-h|--help]
 
 除了其選項，`dotnet build` 命令也接受 MSBuild 選項，例如用於設定屬性的 `-p`，以及用於定義記錄器的 `-l`。 如需這些選項的詳細資訊，請參閱 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。 或者，您也可以使用 [dotnet msbuild](dotnet-msbuild.md) 命令。
 
-執行 `dotnet build` 相當於 `dotnet msbuild -restore -target:Build`。
+執行 `dotnet build` 相當於執行 `dotnet msbuild -restore`;不過，輸出的預設詳細資訊是不同的。
 
 ## <a name="arguments"></a>引數
 
@@ -104,7 +112,7 @@ dotnet build [-h|--help]
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  在其中放置已建置的二進位檔的目錄。 當您指定這個選項時，也需要定義 `--framework`。 如果未指定，則預設路徑為 `./bin/<configuration>/<framework>/`。
+  在其中放置已建置的二進位檔的目錄。 如果未指定，則預設路徑為 `./bin/<configuration>/<framework>/`。  針對具有多個目標 framework 的專案（透過 `TargetFrameworks` 屬性），您也需要在指定此選項時定義 `--framework`。
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 

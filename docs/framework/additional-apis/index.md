@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 809ac026244b24aee69ec0d6c40c10a1248c234c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4b47847e9d6e9424d4442d655c40a637383c7229
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579108"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72847074"
 ---
 # <a name="additional-class-libraries-and-apis"></a>其他類別庫和 API
 
@@ -57,18 +57,22 @@ ms.locfileid: "72579108"
 * [SqlTypes. SqlStreamChars. SetLength 方法](system.data.sqltypes.sqlstreamchars.setlength.md)
 * [SqlTypes. SqlStreamChars. Write 方法](system.data.sqltypes.sqlstreamchars.write.md)
 * [系統 .Net. Connection 類別](connection.md)
-* [[系統 .Net. 連接] \_WriteList 欄位](m_writelist.md)
+* [[系統 .Net]\_WriteList 欄位](m_writelist.md)
 * [ConnectionGroup 類別](connectiongroup.md)
-* [系統 .Net. ConnectionGroup \_ConnectionList 欄位](m_connectionlist.md)
+* [System .Net. ConnectionGroup\_ConnectionList 欄位](m_connectionlist.md)
+* [ConnectStream 連接屬性](system.net.connectstream.connection.md)
 * [CoreResponseData 類別](coreresponsedata.md)
-* [系統 .Net. CoreResponseData \_ResponseHeaders 欄位](coreresponsedata_m_responseheaders.md)
-* [系統 .Net. CoreResponseData \_StatusCode 欄位](coreresponsedata_m_statuscode.md)
-* [[系統 HttpWebRequest] \_AutoRedirects 欄位](_autoredirects.md)
-* [[系統 HttpWebRequest] \_CoreResponse 欄位](httpwebrequest__coreresponse.md)
-* [[系統 HttpWebRequest] \_HttpResponse 欄位](_httpresponse.md)
-* [系統 .Net. ServicePoint \_ConnectionGroupList 欄位](m_connectiongrouplist.md)
-* [System .Net. ServicePointManager \_ServicePointTable 欄位](s_servicepointtable.md)
-* [[VisualDiagnostics \_isDebuggerCheckDisabledForTestPurposes] 欄位](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [System .Net. CoreResponseData\_ResponseHeaders 欄位](coreresponsedata_m_responseheaders.md)
+* [系統 .Net. CoreResponseData\_StatusCode 欄位](coreresponsedata_m_statuscode.md)
+* [[System .Net. HttpWebRequest.\_AutoRedirects] 欄位](_autoredirects.md)
+* [[System .Net. HttpWebRequest.\_CoreResponse] 欄位](httpwebrequest__coreresponse.md)
+* [[System .Net. HttpWebRequest.\_HttpResponse] 欄位](_httpresponse.md)
+* [System .Net. PooledStream. NetworkStream 屬性](system.net.pooledstream.networkstream.md)
+* [System .Net. ServicePoint\_ConnectionGroupList 欄位](m_connectiongrouplist.md)
+* [[System .Net. ServicePointManager\_ServicePointTable] 欄位](s_servicepointtable.md)
+* [[系統 .Net. TlsStream. m_Worker] 欄位](system.net.tlsstream.m_worker.md)
+* [SslState. SslProtocol 屬性](system.net.security.sslstate.sslprotocol.md)
+* [VisualDiagnostics [\_isDebuggerCheckDisabledForTestPurposes] 欄位](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [System.web. DataMemberFieldEditor 類別](datamemberfieldeditor-class.md)
 * [System.web. DataMemberListEditor 類別](datamemberlisteditor-class.md)
 * [System.web. CreateSqlReader 方法](system.xml.xmlreader.createsqlreader.md)

@@ -1,5 +1,5 @@
 ---
-title: 作法：建立發行者原則
+title: 如何：建立發行者原則
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 5484dfeb8cf5292fb43393bb39b9878114119d29
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991187"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846842"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>HOW TO：建立發行者原則
+# <a name="how-to-create-a-publisher-policy"></a>如何：建立發行者原則
 
 元件的廠商可以指出應用程式應該使用較新版本的元件，方法是包含發行者原則檔案與已升級的元件。 發行者原則檔會指定元件重新導向和程式碼基底設定，並使用與應用程式佈建檔相同的格式。 發行者原則檔會編譯成元件，並放在全域組件快取中。
 
@@ -26,7 +26,7 @@ ms.locfileid: "70991187"
 
 3. 將發行者原則元件加入至全域組件快取。
 
-重新導向[元件版本](redirect-assembly-versions.md)中會描述發行者原則的架構。 下列範例顯示將某個版本重新導向至另一個版本的`myAssembly`發行者原則檔。
+重新導向[元件版本](redirect-assembly-versions.md)中會描述發行者原則的架構。 下列範例顯示將一個 `myAssembly` 版本重新導向至另一個版本的發行者原則檔。
 
 ```xml
 <configuration>
@@ -55,7 +55,7 @@ ms.locfileid: "70991187"
 
 在命令提示字元中輸入下列命令：
 
-**al/link：** *publisherPolicyFile* **/out：** *publisherPolicyAssemblyFile* **/keyfile：** *keyPairFile* **/platform：** *processorArchitecture*
+**al/link：** *publisherPolicyFile* **/Out：** *publisherPolicyAssemblyFile* **/keyfile：** *keyPairFile* **/platform：** *processorArchitecture*
 
 在此命令中：
 
@@ -63,7 +63,7 @@ ms.locfileid: "70991187"
 
 - *PublisherPolicyAssemblyFile*引數是此命令所產生之發行者原則元件的名稱。 元件檔案名的格式必須如下：
 
-  **策略.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**
+  **策略.** *majorNumber* **。** *minorNumber* **。** *mainAssemblyName* **.dll**
 
 - *KeyPairFile*引數是包含金鑰組的檔案名。 您必須使用相同的金鑰組來簽署元件和發行者原則元件。
 
@@ -72,13 +72,13 @@ ms.locfileid: "70991187"
   > [!NOTE]
   > 從 .NET Framework 2.0 開始，可以取得以特定處理器架構為目標的功能。
 
-從 .NET Framework 2.0 開始，提供特定處理器架構的功能。下列命令會從名`policy.1.0.myAssembly` `pub.config`為的發行者原則檔建立名為的發行者原則元件，並將強式名稱指派給元件會使用檔案中`sgKey.snk`的金鑰組，並指定以 x86 處理器架構為目標的元件。
+從 .NET Framework 2.0 開始，可以取得以特定處理器架構為目標的功能。 下列命令會從名為 `pub.config`的發行者原則檔案建立名為 `policy.1.0.myAssembly` 的發行者原則元件，並使用 `sgKey.snk` 檔案中的金鑰組，將強式名稱指派給元件，並指定元件以 x86 處理器為目標結構.
 
 ```
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
-發行者原則元件必須符合其適用之元件的處理器架構。 因此，如果您的元件具有<xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A>的<xref:System.Reflection.ProcessorArchitecture.MSIL>值，則必須使用`/platform:anycpu`來建立該元件的發行者原則元件。 您必須為每個處理器特定的元件提供個別的發行者原則元件。
+發行者原則元件必須符合其適用之元件的處理器架構。 因此，如果您的元件具有 <xref:System.Reflection.ProcessorArchitecture.MSIL>的 <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> 值，則必須使用 `/platform:anycpu`來建立該元件的發行者原則元件。 您必須為每個處理器特定的元件提供個別的發行者原則元件。
 
 這項規則的結果是，若要變更元件的處理器架構，您必須變更版本號碼的主要或次要元件，讓您可以使用正確的處理器架構來提供新的發行者原則元件。 當您的元件有不同的處理器架構時，舊的發行者原則元件無法服務您的元件。
 
@@ -92,9 +92,9 @@ al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:
 
 在命令提示字元中輸入下列命令：
 
-**gacutil/i**  *publisherPolicyAssemblyFile*
+**gacutil/I**  *publisherPolicyAssemblyFile*
 
-下列命令會將`policy.1.0.myAssembly.dll`新增至全域組件快取。
+下列命令會將 `policy.1.0.myAssembly.dll` 新增至全域組件快取。
 
 ```
 gacutil /i policy.1.0.myAssembly.dll
@@ -103,7 +103,7 @@ gacutil /i policy.1.0.myAssembly.dll
 > [!IMPORTANT]
 > 發行者原則元件無法加入至全域組件快取，除非原始發行者原則檔位於與元件相同的目錄中。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用組件設計程式](../../standard/assembly/program.md)
 - [執行階段如何找出組件](../deployment/how-the-runtime-locates-assemblies.md)
