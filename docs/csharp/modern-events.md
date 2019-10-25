@@ -3,16 +3,16 @@ title: 更新的 .NET Core 事件模式
 description: 了解 .NET Core 事件模式如何啟用回溯相容性的彈性，以及如何使用非同步訂閱者來實作安全事件處理。
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 158295215932f54c75afdf1e96d48453434129fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 85fa4fd111a9eab01c1d32949d9fcc5f6300e33c
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751780"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798888"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>更新的 .NET Core 事件模式
 
-[上一步](event-pattern.md)
+[上一篇](event-pattern.md)
 
 前一篇文章討論最常見的事件模式。 .NET Core 有比較寬鬆的模式。 在本版中，`EventHandler<TEventArgs>` 定義不再具有 `TEventArgs` 必須是 `System.EventArgs` 衍生類別的條件約束。
 
@@ -51,7 +51,7 @@ internal struct SearchDirectoryArgs
 
 ## <a name="events-with-async-subscribers"></a>有非同步訂閱者的事件
 
-您還有最後一個要了解的模式：如何正確撰寫呼叫非同步程式碼的事件訂閱者。 [async 和 await](async.md) 一文中會說明此挑戰。 非同步方法可以有 void 傳回型別，但強烈建議不要使用。 當您的事件訂閱者程式碼呼叫 async 方法時，您一定要建立 `async void` 方法。 事件處理常式簽章需要它。
+最後一個需要學習的模式︰如何正確撰寫呼叫非同步程式碼的事件訂閱者。 [async 和 await](async.md) 一文中會說明此挑戰。 非同步方法可以有 void 傳回型別，但強烈建議不要使用。 當您的事件訂閱者程式碼呼叫 async 方法時，您一定要建立 `async void` 方法。 事件處理常式簽章需要它。
 
 您需要調解此相反的指導方針。 不過，您還是必須得建立安全的 `async void` 方法。 您需要實作的模式基本概念如下︰
 
@@ -71,7 +71,7 @@ worker.StartWorking += async (sender, eventArgs) =>
 };
 ```
 
-首先，請注意處理常式會標示為非同步處理常式。 因為它被指派給事件處理常式委派型別，所以會有 void 傳回型別。 這表示您必須遵循處理常式中示範的模式，不允許從非同步處理常式的內容中擲回任何例外狀況。 因為它不會傳回工作，所以沒有任何工作會進入錯誤狀態來報告錯誤。 因為是非同步方法，所以方法不能只擲回例外狀況。 (呼叫方法會持續直執行，因為它是 `async`。)實際執行階段行為會針對不同的環境以不同的方式定義。 它可能會終止執行緒、可能會結束程式，或可能令程式處於未定狀態中。 以上這些都不是好結果。
+首先，請注意處理常式會標示為非同步處理常式。 因為它被指派給事件處理常式委派型別，所以會有 void 傳回型別。 這表示您必須遵循處理常式中示範的模式，不允許從非同步處理常式的內容中擲回任何例外狀況。 因為它不會傳回工作，所以沒有任何工作會進入錯誤狀態來報告錯誤。 因為是非同步方法，所以方法不能只擲回例外狀況。 （呼叫方法已繼續執行，因為它是 `async`）。實際的執行時間行為將會針對不同的環境以不同的方式定義。 它可能會終止執行緒或擁有線程的進程，或讓進程處於不定狀態。 所有這些可能的結果都非常不希望。
 
 這就是為什麼您應該將非同步工作的 await 陳述式包裝在自己的 try 區塊中。 如果它真的導致錯誤的工作，您可以記錄錯誤。 如果是您的應用程式無法復原的錯誤，您可以快速且正常地結束程式。
 

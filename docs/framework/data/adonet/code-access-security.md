@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6340bc3fb2291601ba2a9812e0a438839f0718bc
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 41a0885f828e45e1216805533a977fc3d5eaf5cb
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971826"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798898"
 ---
 # <a name="code-access-security-and-adonet"></a>程式碼存取安全性和 ADO.NET
 .NET Framework 會提供以角色為基礎的安全性和程式碼存取安全性 (CAS)，而這兩種安全性都是使用 Common Language Runtime (CLR) 所提供的通用基礎結構所實作的。 在 Unmanaged 程式碼的作用範圍內，大多數應用程式都是以使用者或主體的權限執行。 因此，當擁有更高權限的使用者執行惡意或充滿錯誤的軟體時，就可能損害電腦系統和竊取私人資料。  
@@ -71,9 +71,9 @@ ms.locfileid: "70971826"
 |-----------------------------------|-----------------|  
 |`Action`|取得或設定安全性動作。 繼承自 <xref:System.Security.Permissions.SecurityAttribute>。|  
 |`AllowBlankPassword`|啟用或停用在連接字串中使用空白密碼。 有效值為 `true` (表示啟用空白密碼) 和 `false` (表示停用空白密碼)。 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
-|`ConnectionString`|識別允許的連接字串。 可識別多個連接字串。 **注意：** 不要在連接字串中包含使用者 ID 或密碼。 在這個發行版本中，您無法使用 .NET Framework 組態工具變更連接字串限制。 <br /><br /> 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
-|`KeyRestrictions`|識別是否為允許的連接字串參數。 在表單中所識別的連接字串參數 *\<參數名稱>=* 。 也可以指定多個參數，只要以分號 (;) 將其分隔即可。 **注意：** 如果您沒有指定 `KeyRestrictions`，卻將 `KeyRestrictionBehavior` 屬性設為 `AllowOnly` 或 `PreventUsage`，則不允許使用其他連接字串參數。 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
-|`KeyRestrictionBehavior`|將連接字串參數識別為唯一允許的其他參數 (`AllowOnly`)，或識別不允許的其他參數 (`PreventUsage`)。 `AllowOnly`是預設值。 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
+|`ConnectionString`|識別允許的連接字串。 可識別多個連接字串。 **注意：** 請勿在您的連接字串中包含使用者識別碼或密碼。 在這個發行版本中，您無法使用 .NET Framework 組態工具變更連接字串限制。 <br /><br /> 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
+|`KeyRestrictions`|識別是否為允許的連接字串參數。 連接字串參數的識別格式為 *\<參數名稱 > =* 。 也可以指定多個參數，只要以分號 (;) 將其分隔即可。 **注意：** 如果您未指定 `KeyRestrictions`，但您將 `KeyRestrictionBehavior` 屬性設定為 `AllowOnly` 或 `PreventUsage`，則不允許其他連接字串參數。 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
+|`KeyRestrictionBehavior`|將連接字串參數識別為唯一允許的其他參數 (`AllowOnly`)，或識別不允許的其他參數 (`PreventUsage`)。 `AllowOnly` 是預設值。 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
 |`TypeID`|在衍生類別中實作時，取得唯一識別項。 繼承自 <xref:System.Attribute>。|  
 |`Unrestricted`|指示是否針對資源，宣告不受限的使用權限。 繼承自 <xref:System.Security.Permissions.SecurityAttribute>。|  
   
@@ -89,7 +89,7 @@ ms.locfileid: "70971826"
 ```  
   
 #### <a name="keyrestrictions-syntax"></a>KeyRestrictions 語法  
- 下列範例會啟用相同的連接字串，啟用`Encrypt`和`Packet Size`連接字串選項，但限制使用任何其他連接字串選項。  
+ 下列範例會啟用相同的連接字串、允許使用 `Encrypt` 和 `Packet Size` 連接字串選項，但限制使用任何其他連接字串選項。  
   
 ```xml  
 <connectionStrings>  
@@ -136,7 +136,7 @@ ms.locfileid: "70971826"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>以自訂的使用權限集啟用部份信任  
- 若要啟用特定區域的 <xref:System.Data.SqlClient> 使用權限，系統管理員必須建立自訂的使用權限集合，並將其設定為特定區域的使用權限集合。 不可修改預設的使用權限集合 (例如 `LocalIntranet`)。 例如，若要包含<xref:System.Data.SqlClient> <xref:System.Security.Policy.Zone>具有之的`LocalIntranet`程式碼的許可權， `LocalIntranet`系統管理員可以複製的許可權集合、將它重新命名為 "CustomLocalIntranet"、新增<xref:System.Data.SqlClient>許可權、匯入使用[caspol.exe （代碼啟用安全性原則工具）](../../tools/caspol-exe-code-access-security-policy-tool.md)設定的 CustomLocalIntranet 許可權，並將的許可權`LocalIntranet_Zone`集合設定為 CustomLocalIntranet。  
+ 若要啟用特定區域的 <xref:System.Data.SqlClient> 使用權限，系統管理員必須建立自訂的使用權限集合，並將其設定為特定區域的使用權限集合。 不可修改預設的使用權限集合 (例如 `LocalIntranet`)。 例如，若要包含具有 <xref:System.Security.Policy.Zone> `LocalIntranet`之程式碼的 <xref:System.Data.SqlClient> 許可權，系統管理員可以複製 `LocalIntranet`的許可權集合，將它重新命名為 "CustomLocalIntranet"，新增 <xref:System.Data.SqlClient> 許可權，匯入 CustomLocalIntranet使用[caspol.exe （代碼啟用安全性原則工具）](../../tools/caspol-exe-code-access-security-policy-tool.md)設定的許可權，並將 `LocalIntranet_Zone` 的許可權集合設定為 CustomLocalIntranet。  
   
 ### <a name="sample-permission-set"></a>使用權限集合範例  
  下列是部分受信任案例中的「SQL Server 的 .NET Framework 資料提供者」使用權限集合範例。 如需建立自訂許可權集合的相關資訊，請參閱[使用 Caspol.exe 設定許可權集合](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100))。  
@@ -192,9 +192,9 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>與 Unmanaged 程式碼的互通性  
  在 CLR 外部執行的程式碼稱為 Unmanaged 程式碼。 因此，CAS 等安全性機制無法套用至 Unmanaged 程式碼。 COM 元件、ActiveX 介面及 Windows API 函式都是 Unmanaged 程式碼的範例。 執行 Unmanaged 程式碼時，您應該套用特殊安全性考量，以免危及整體應用程式安全性。 如需詳細資訊，請參閱[與 Unmanaged 程式碼互通](../../interop/index.md)。  
   
- .NET Framework 也透過 COM Interop 提供存取，藉以支援現有 COM 元件的回溯相容性 (Backward Compatibility)。 您可以使用 COM Interop 工具來匯入相關的 COM 型別，以便將 COM 元件併入 .NET Framework 應用程式中。 一旦匯入之後，COM 型別便可供使用。 COM Interop 也會將組件中繼資料匯出至型別程式庫並將 Managed 元件註冊為 COM 元件，藉以讓 COM 用戶端存取 Managed 程式碼。 如需詳細資訊，請參閱[ADVANCED COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)。  
+ .NET Framework 也透過 COM Interop 提供存取，藉以支援現有 COM 元件的回溯相容性 (Backward Compatibility)。 您可以使用 COM Interop 工具來匯入相關的 COM 型別，以便將 COM 元件併入 .NET Framework 應用程式中。 一旦匯入之後，COM 型別便可供使用。 COM Interop 也會將組件中繼資料匯出至型別程式庫並將 Managed 元件註冊為 COM 元件，藉以讓 COM 用戶端存取 Managed 程式碼。 如需詳細資訊，請參閱[ADVANCED COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [設定 ADO.NET 應用程式的安全性](securing-ado-net-applications.md)
 - [原生和 .NET Framework 程式碼中的安全性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))

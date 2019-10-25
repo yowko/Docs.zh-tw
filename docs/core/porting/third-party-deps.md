@@ -2,28 +2,40 @@
 title: 分析相依性以將程式碼移植到 .NET Core
 description: 了解如何分析外部相依性，以將您的專案從 .NET Framework 移植到 .NET Core。
 author: cartermp
-ms.date: 12/07/2018
+ms.date: 10/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 36d1c1d2090a0fb9e6f48fe519d15897579df2d5
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5fa5a20e9a2b5427401835a0c1c6e1845d86c3ef
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521479"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798790"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>分析您的相依性以將程式碼移植到 .NET Core
 
-要將程式碼移植到 .NET Core 或 .NET Standard，您必須了解您的相依性。 外部依賴項是您在專案中參考的 [NuGet 套件](#analyze-referenced-nuget-packages-in-your-projects)或 [DLL](#analyze-dependencies-that-arent-nuget-packages)，但您不建置它們。 評估每個相依性，並針對與 .NET Core 不相容的相依性開發應變計劃。 以下是如何判斷相依性是否與 .NET Core 相容。
+要將程式碼移植到 .NET Core 或 .NET Standard，您必須了解您的相依性。 外部相依性是您在專案中參考的 NuGet 套件或 `.dll`，但您不會自行建立。
 
-## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>分析專案中參考的 NuGet 套件
+## <a name="migrate-your-nuget-packages-to-packagereference"></a>將 NuGet 套件遷移至 `PackageReference`
 
-如果您在專案中參考 NuGet 套件，您需要確認其是否與 .NET Core 相容。
-有兩種方法可達成該目標：
+.NET Core 使用 [PackageReference](/nuget/consume-packages/package-references-in-project-files) 來指定套件相依性。 如果您使用[config.xml](/nuget/reference/packages-config)來指定專案中的封裝，您需要將它轉換成 `PackageReference` 格式，因為 .net Core 不支援 `packages.config`。
 
-- [使用 NuGet 套件總管應用程式](#analyze-nuget-packages-using-nuget-package-explorer)
-- [使用 nuget.org 網站](#analyze-nuget-packages-using-nugetorg)
+若要瞭解如何遷移，請參閱[從封裝遷移至 PackageReference](/nuget/reference/migrate-packages-config-to-package-reference)一文。
 
-分析套件之後，如果這些套件與 .NET Core 不相容並只以 .NET Framework 為目標，您可以檢查 [.NET Framework 相容性模式](#net-framework-compatibility-mode)是否可以協助您的移植程序。
+## <a name="upgrade-your-nuget-packages"></a>升級您的 NuGet 套件
+
+將專案遷移至 `PackageReference` 格式之後，您必須確認您的套件是否與 .NET Core 相容。
+
+首先，將您的套件升級至您可以的最新版本。 您可以使用 Visual Studio 中的 NuGet 套件管理員 UI 來完成這項作業。 較新版本的套件相依性可能已經與 .NET Core 相容。
+
+## <a name="analyze-your-package-dependencies"></a>分析您的套件相依性
+
+如果您尚未驗證您已轉換和升級的封裝相依性是否可在 .NET Core 上執行，有幾種方式可以達到此目的：
+
+### <a name="analyze-nuget-packages-using-nugetorg"></a>使用 nuget.org 分析 NuGet 套件
+
+您[可以在 [](https://www.nuget.org/)封裝] 頁面的 [相依性 **]** 區段底下，看到每個封裝支援的目標 Framework 名字標記（tfm）。
+
+雖然使用網站是驗證相容性的較簡單**方法，但**不會在網站上提供所有套件的相依性資訊。
 
 ### <a name="analyze-nuget-packages-using-nuget-package-explorer"></a>使用 NuGet 套件總管分析 NuGet 套件
 
@@ -37,27 +49,7 @@ NuGet 套件本身是一組包含平台特定組件的資料夾。 因此，您�
 4. 從搜尋結果選取套件名稱，然後按一下 [開啟]。
 5. 展開右邊的 *lib* 資料夾，並查看資料夾名稱。
 
-尋找具有下列任何名稱的資料夾：
-
-```
-netstandard1.0
-netstandard1.1
-netstandard1.2
-netstandard1.3
-netstandard1.4
-netstandard1.5
-netstandard1.6
-netstandard2.0
-netcoreapp1.0
-netcoreapp1.1
-netcoreapp2.0
-netcoreapp2.1
-netcoreapp2.2
-portable-net45-win8
-portable-win8-wpa8
-portable-net451-win81
-portable-net45-win8-wpa8-wpa81
-```
+使用下列其中一種模式尋找名稱為的資料夾： `netstandardX.Y` 或 `netcoreappX.Y`。
 
 這些值是對應至 [.NET Standard](../../standard/net-standard.md)、.NET Core 以及與 .NET Core 相容之傳統可攜式類別庫 (PCL) 設定檔版本的[目標 Framework Moniker (TFM)](../../standard/frameworks.md)。
 
@@ -65,15 +57,9 @@ portable-net45-win8-wpa8-wpa81
 > 查看套件支援的 TFM 時，請注意，`netcoreapp*` 雖然相容，但只適用於 .NET Core 專案而不適用於 .NET Standard 專案。
 > 其他 .NET Core 應用程式只可取用以 `netcoreapp*` (而不是 `netstandard*`) 為目標的程式庫。
 
-### <a name="analyze-nuget-packages-using-nugetorg"></a>使用 nuget.org 分析 NuGet 套件
+## <a name="net-framework-compatibility-mode"></a>.NET Framework 相容性模式
 
-或者，您可以在 [nuget.org](https://www.nuget.org/) 上，於套件頁面的 [相依性] 區段下，查看每個套件支援的 TFM。
-
-雖然使用網站是確認相容性的較簡單方法，但網站上不會提供所有套件的**相依性**資訊。
-
-### <a name="net-framework-compatibility-mode"></a>.NET Framework 相容性模式
-
-分析 NuGet 套件之後，您可能會發現這些套件只會以 .NET Framework 為目標，如同大多數 NuGet 套件一樣。
+分析 NuGet 套件之後，您可能會發現它們僅以 .NET Framework 為目標。
 
 從 .NET Standard 2.0 開始，引進了 .NET Framework 相容性模式。 此相容性模式可讓 .NET Standard 和 .NET Core 專案參考 .NET Framework 程式庫。 並非所有專案都適合參考 .NET Framework 程式庫 (例如，如果程式庫使用 Windows Presentation Foundation (WPF) API)，但它確實會解決許多移植案例。
 
@@ -92,12 +78,6 @@ portable-net45-win8-wpa8-wpa81
 ```
 
 如需如何在 Visual Studio 中隱藏編譯器警告的詳細資訊，請參閱[隱藏 NuGet 套件的警告](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages)。
-
-## <a name="port-your-packages-to-packagereference"></a>將您的套件移植到 `PackageReference`
-
-.NET Core 使用 [PackageReference](/nuget/consume-packages/package-references-in-project-files) 來指定套件相依性。 如果您使用 [packages.config](/nuget/reference/packages-config) 指定您的套件，則需要轉換成 `PackageReference`。
-
-您可以在[從 packages.config 移轉至 PackageReference](/nuget/reference/migrate-packages-config-to-package-reference) 深入了解。
 
 ## <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet 封裝相依性在 .NET Core 上不執行時該怎麼辦
 

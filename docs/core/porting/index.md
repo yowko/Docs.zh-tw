@@ -1,54 +1,52 @@
 ---
-title: 將程式碼從 .NET Framework 移植到 .NET Core
+title: 從 .NET Framework 到 .NET Core 的埠
 description: 了解移植程序，並探索可協助將 .NET Framework 移植到 .NET Core 的工具。
 author: cartermp
-ms.date: 09/13/2019
+ms.date: 10/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: c349f7df3726e7a9814e5ad5e738742ab1bb9ff8
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 0684be25cee6ae3f778e7134b4c3a29ac87caf25
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522995"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798803"
 ---
-# <a name="port-your-code-from-net-framework-to-net-core"></a>將您的程式碼從 .NET Framework 移植到 .NET Core
+# <a name="overview-of-the-porting-process-from-net-framework-to-net-core"></a>從 .NET Framework 到 .NET Core 的移植程式總覽
 
-如果您有在 .NET Framework 上執行的程式碼，您可能也想要在 .NET Core 上執行程式碼。 此處提供移轉程序的概觀，以及將您的程式碼移轉到 .NET Core 時可能覺得有用的工具清單。
+您的程式碼可能目前是在您想要移植到 .NET Core 的 .NET Framework 上執行。 本文提供：
+
+* 移植程式的總覽。
+* 當您將程式碼移植到 .NET Core 時，您可能會覺得有用的工具清單。
 
 ## <a name="overview-of-the-porting-process"></a>移轉程序概觀
 
-這是將您的程式碼移植到 .NET Core 的建議程序。 此程序的每個步驟未來會在其他文章中進一步討論。
+將您的專案移植到 .NET Core 時，建議您使用下列進程：
 
-1. 識別及說明協力廠商相依性。
-
-   此步驟涉及了解程式協力廠商相依性是什麼、依賴它們的方式、查看它們是否也在 .NET Core 上執行的方式，以及不在 .NET Core 上執行時可以採取的步驟。 它涵蓋將您的相依性移轉到 .NET Core 中使用之 [PackageReference](/nuget/consume-packages/package-references-in-project-files) 格式的方式。
-
-2. 將所有想要移轉到目標 .NET Framework 4.7.2 或更新版本的專案重定為目標。
+1. 將所有想要移轉到目標 .NET Framework 4.7.2 或更新版本的專案重定為目標。
 
    此步驟可確保當 .NET Core 無法支援特定 API 時，您可以使用 .NET Framework 特定目標的 API 替代方案。
 
-3. 使用 [.NET 可攜性分析工具](../../standard/analyzers/portability-analyzer.md)來分析組件，並且根據結果開發移轉計劃。
+2. 使用[.net 可攜性分析器](../../standard/analyzers/portability-analyzer.md)來分析您的元件，並查看它們是否可移植到 .net Core。
 
-   API 可攜性分析器工具會分析您已編譯的元件，並產生報表，其中顯示高層級的可攜性摘要，以及您所使用且在目標 .NET Core 平臺公用介面上未提供的每個 API 的細目。 您可以使用此報告與程式碼基底分析，開發移轉程式碼的計劃。
+   API 可攜性分析器工具會分析已編譯的元件，並產生報表。 此報告會顯示高階的可攜性摘要，以及您所使用的每個 API 在 NET Core 上無法取得的明細。
 
-4. 將專案檔轉換成目標 .NET Core 版本之後，您就可以使用以 Roslyn 為基礎的[.NET API 分析器](../../standard/analyzers/api-analyzer.md)來識別在某些平臺上擲回 <xref:System.PlatformNotSupportedException> 的 api，以及一些其他潛在的相容性問題。
+3. 將[.NET API 分析器](../../standard/analyzers/api-analyzer.md)安裝到您的專案，以識別在某些平臺上擲回 <xref:System.PlatformNotSupportedException> 的 api，以及一些其他潛在的相容性問題。
 
-5. 移轉測試程式碼。
+   這項工具與可攜性分析器類似，但不會分析是否可以在 .NET Core 上建立，而是會分析您是否以在執行時間擲回 <xref:System.PlatformNotSupportedException> 的方式來使用 API。 雖然這在您從 .NET Framework 4.7.2 或更高版本中移動時並不常見，但仍可進行檢查。
 
-   因為移轉到 .NET Core 對程式碼基底是巨變，所以強烈建議您移轉測試，以便在移轉您的程式碼時執行測試。 MSTest、xUnit 與 NUnit 都支援 .NET Core。
+4. 使用[Visual Studio 中的轉換工具](/nuget/consume-packages/migrate-packages-config-to-package-reference)，將所有 `packages.config` 相依性轉換為[PackageReference](/nuget/consume-packages/package-references-in-project-files)格式。
 
-6. 執行移轉計劃！
+   此步驟牽涉到從舊版 `packages.config` 格式轉換相依性。 `packages.config` 無法在 .NET Core 上執行，因此如果您有封裝相依性，就需要進行這項轉換。
 
-下列清單顯示您在移轉程序期間可能會發現有用的工具：
+5. 為 .NET Core 建立新的專案，並複製原始程式檔，或嘗試使用工具轉換現有的專案檔。
 
-- .NET 可攜性分析器-[命令列工具](https://github.com/Microsoft/dotnet-apiport/releases)或[Visual Studio 擴充](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)功能，這項工具可以產生一份報告，說明您的程式碼在 .NET Framework 與目標 .net Core 平臺之間的可攜性。 此報表包含目標 .NET Core 平台上所缺少的類型和 API 各組件細項。 如需詳細資訊，請參閱 [.NET 可攜性分析器](../../standard/analyzers/portability-analyzer.md)。 建議您在開始移植之前執行 .NET 可攜性分析器工具，因為它可協助您識別特定目標 .NET 平臺公用介面中遺漏 Api 的任何差距。
-- .NET API 分析器：一種 Roslyn 分析器，可探索在某些平台上擲出 <xref:System.PlatformNotSupportedException> 的 .NET Standard API、偵測對已淘汰 API 的呼叫，以及探索不同平台上 C# API 的其他潛在相容性風險。 如需詳細資訊，請參閱 [.NET API 分析器](../../standard/analyzers/api-analyzer.md)。 在您已建立 .NET Core 專案後，此分析器有助於找出不同平台上的執行階段行為差異。
-- 反向封裝搜尋：[有用的 Web 服務](https://packagesearch.azurewebsites.net)，可讓您搜尋類型，以及尋找包含該類型的封裝。
+   .NET Core 使用簡化的（和不同的）[專案檔案格式](../tools/csproj.md)，而不是 .NET Framework。 您必須將專案檔轉換成此格式才能繼續。
 
-此外，您也可以嘗試使用 [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) 工具將較小的解決方案或個別專案移植到 .NET Core 專案檔案格式。
+6. 移植您的測試程式碼。
 
-> [!WARNING]
-> CsprojToVs2017 是第三方工具。 不保證它可搭配您的所有專案運作，而且它可能會導致您所依賴的行為發生些微變更。 CsprojToVs2017 應該當作將可自動化之基本事項自動化的「起點」使用。 它不是可以用來移轉專案檔格式保證解決方案。
+   因為移轉到 .NET Core 對程式碼基底是巨變，所以強烈建議您移轉測試，以便在移轉您的程式碼時執行測試。 MSTest、xUnit 和 NUnit 全都適用于 .NET Core。
+
+此外，您可以在單一作業中，使用 dotnet 的 [[嘗試轉換](https://github.com/dotnet/try-convert)] 工具，嘗試將較小的方案或個別專案移植到 .net Core 專案檔案格式。 `dotnet try-convert` 不會 guaranteedto 您所有專案的工作，而且可能會導致您所依賴之行為的細微變更。 它應該做為_起點_，以自動化可以自動化的基本事項。 這不是可供遷移專案的保證解決方案。
 
 >[!div class="step-by-step"]
 >[下一步](net-framework-tech-unavailable.md)

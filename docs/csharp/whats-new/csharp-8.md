@@ -2,12 +2,12 @@
 title: C# 8.0 的新功能- C#指南
 description: 大致了解 C# 8.0 中可用的新功能。
 ms.date: 09/20/2019
-ms.openlocfilehash: 12e41a3bca981d04f7b29970eba1f737254f2b58
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 335ae37b20f752f4181a4d1828cb2a1f02c0fa9e
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579141"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798928"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
@@ -28,7 +28,7 @@ C#8.0 新增下列功能和增強的C#語言：
 - [索引和範圍](#indices-and-ranges)
 - [Null 聯合指派](#null-coalescing-assignment)
 - [非受控的結構化類型](#unmanaged-constructed-types)
-- [在嵌套運算式中 stackalloc](#stackalloc-in-nested-expressions)
+- [在嵌套運算式中 Stackalloc](#stackalloc-in-nested-expressions)
 - [增強內插逐字字串](#enhancement-of-interpolated-verbatim-strings)
 
 本文的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。 您可以使用 `dotnet try` 全域工具，在您的環境中探索這些功能：
@@ -73,7 +73,9 @@ warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonl
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-請注意，`readonly` 修飾詞在唯讀屬性上是必要的。 編譯器不會假設 `get` 存取子不會修改狀態；您必須明確地宣告 `readonly`。 編譯器會強制 `readonly` 成員不得修改狀態的規則。 除非您移除 `readonly` 修飾詞，否則下列方法將不會編譯：
+請注意，`readonly` 修飾詞在唯讀屬性上是必要的。 編譯器不會假設 `get` 存取子不會修改狀態；您必須明確地宣告 `readonly`。 自動實作為屬性的例外狀況;編譯器會將所有自動執行的 getter 視為唯讀，因此，您不需要將 `readonly` 修飾詞加入 `X` 和 `Y` 屬性。
+
+編譯器會強制 `readonly` 成員不得修改狀態的規則。 除非您移除 `readonly` 修飾詞，否則下列方法將不會編譯：
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -396,7 +398,7 @@ await foreach (var number in GenerateSequence())
 此語言支援依賴兩個新的類型和兩個新的運算子：
 
 - <xref:System.Index?displayProperty=nameWithType> 代表序列的索引。
-- 從 end 運算子 `^` 的索引，指定索引相對於序列結尾。
+- 從 end 運算子 `^`的索引，指定索引相對於序列結尾。
 - <xref:System.Range?displayProperty=nameWithType> 代表序列的子範圍。
 - 範圍運算子 `..`，指定範圍的開始和結束，做為其運算元。
 
@@ -461,7 +463,7 @@ Range phrase = 1..4;
 var text = words[phrase];
 ```
 
-不只有陣列支援索引和範圍。 您也可以使用具有[字串](../language-reference/builtin-types/reference-types.md#the-string-type)、<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601> 的索引和範圍。 如需詳細資訊，請參閱[索引和範圍的類型支援](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)。
+不只有陣列支援索引和範圍。 您也可以使用具有[字串](../language-reference/builtin-types/reference-types.md#the-string-type)、<xref:System.Span%601>或 <xref:System.ReadOnlySpan%601>的索引和範圍。 如需詳細資訊，請參閱[索引和範圍的類型支援](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)。
 
 您可以在[索引及範圍](../tutorials/ranges-indexes.md)上的教學課程中探索更多關於索引及範圍的資訊。
 
@@ -512,7 +514,7 @@ Span<Coords<int>> coordinates = stackalloc[]
 
 ## <a name="stackalloc-in-nested-expressions"></a>在嵌套運算式中 stackalloc
 
-從C# 8.0 開始，如果[stackalloc](../language-reference/operators/stackalloc.md)運算式的結果為 <xref:System.Span%601?displayProperty=nameWithType> 或 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> 類型，您可以在其他運算式中使用 `stackalloc` 運算式：
+從C# 8.0 開始，如果[stackalloc](../language-reference/operators/stackalloc.md)運算式的結果為<xref:System.Span%601?displayProperty=nameWithType>或<xref:System.ReadOnlySpan%601?displayProperty=nameWithType>類型，您可以在其他運算式中使用`stackalloc`運算式：
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
