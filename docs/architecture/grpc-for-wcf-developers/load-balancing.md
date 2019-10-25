@@ -3,16 +3,14 @@ title: 適用于 WCF 開發人員的負載平衡 gRPC-gRPC
 description: 選擇要使用 gRPC 服務的負載平衡器。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 5d4a9be9b8f4e511a72af6b68d8a005604fd984d
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 18965b9c4765ac693c6ba36ad3ea9848ce858a5c
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184390"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846625"
 ---
 # <a name="load-balancing-grpc"></a>負載平衡 gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 GRPC 應用程式的一般部署包含許多相同的服務實例，提供復原能力和水準擴充性。 對這些實例之間的分散式傳入要求進行負載平衡，以提供所有可用資源的完整使用量。 若要讓用戶端看不到此負載平衡，通常會使用 proxy 負載平衡器伺服器來處理用戶端的要求，並將它們路由傳送至後端實例。
 

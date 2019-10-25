@@ -3,16 +3,14 @@ title: GRPC 應用程式中的安全性-WCF 開發人員適用的 gRPC
 description: GRPC 中的呼叫和通道驗證和授權的總覽。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 5f3d32817ccb5d9f278d256c0ee135f0e2a17cf2
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d0b7ff5bef755c5eeb9b3c419dcda1cb75ac4031
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184138"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846235"
 ---
-# <a name="security-in-grpc-applications"></a>GRPC 應用程式中的安全性
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="security-in-grpc-applications"></a>gRPC 應用程式中的安全性
 
 在任何真實世界的案例中，保護應用程式和服務都是不可或缺的。 安全性涵蓋三個主要領域：加密網路流量以防止不良執行者攔截它;驗證用戶端和伺服器以建立身分識別和信任;和會授權用戶端控制系統的存取權，並根據身分識別套用許可權。
 
@@ -23,7 +21,7 @@ ms.locfileid: "71184138"
 
 ## <a name="wcf-authentication-and-authorization"></a>WCF 驗證和授權
 
-在 WCF 中，驗證和授權是以不同的方式處理，視使用的傳輸和系結而定。 WCF 支援各種 WS-\*安全性標準，以及 windows 驗證，適用于在 IIS 中執行的 HTTP 服務或 windows 系統之間的 NetTCP 服務。
+在 WCF 中，驗證和授權是以不同的方式處理，視使用的傳輸和系結而定。 WCF 支援各種 WS-\* 安全性標準，以及在 IIS 中執行的 HTTP 服務或 Windows 系統之間 NetTCP 服務的 Windows 驗證。
 
 ## <a name="grpc-authentication-and-authorization"></a>gRPC 驗證與授權
 

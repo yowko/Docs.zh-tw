@@ -3,16 +3,14 @@ title: 適用于 WCF 開發人員的 Kubernetes-gRPC
 description: 在 Kubernetes 叢集中執行 ASP.NET Core gRPC 服務。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 8a04e59bb23b802af6907a369e2c278f64f3fa9d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 819c761a7a55485612b7fb0c8b392971751d8724
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770504"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846634"
 ---
 # <a name="kubernetes"></a>Kubernetes
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 雖然可以在 Docker 主機上手動執行容器，但在可靠的生產系統中，最好是使用容器協調流程引擎來管理多個在叢集中多部伺服器執行的實例。 有各種不同的容器協調流程引擎可供使用，包括 Kubernetes、Docker Swarm 和 Apache Mesos。 但在這些引擎中，Kubernetes 遠低於最廣泛使用的，因此將會成為本章的重點。
 
@@ -41,7 +39,7 @@ metadata:
   # Object properties
 ```
 
-@No__t_0 屬性是用來指定檔案的目標版本（以及哪個 API）。 @No__t_0 屬性會指定 YAML 代表的物件種類。 @No__t_0 屬性包含物件屬性，例如 `name`、`namespace` 或 `labels`。
+`apiVersion` 屬性是用來指定檔案的目標版本（以及哪個 API）。 `kind` 屬性會指定 YAML 代表的物件種類。 `metadata` 屬性包含物件屬性，例如 `name`、`namespace`或 `labels`。
 
 大部分的 Kubernetes YAML 檔也會有一個 `spec` 區段，描述建立物件所需的資源和設定。
 
@@ -81,11 +79,11 @@ Client Version: version.Info{Major:"1", Minor:"14", GitVersion:"v1.14.6", GitCom
 Server Version: version.Info{Major:"1", Minor:"14", GitVersion:"v1.14.6", GitCommit:"96fac5cd13a5dc064f7d9f4f23030a6aeface6cc", GitTreeState:"clean", BuildDate:"2019-08-19T11:05:16Z", GoVersion:"go1.12.9", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
-在此範例中，`kubectl` CLI 和 Kubernetes 伺服器都是執行版本1.14.6。 @No__t_0 的每個版本都應該支援伺服器的上一個和下一個版本，因此 `kubectl` 1.14 也應該與伺服器版本1.13 和1.15 搭配運作。
+在此範例中，`kubectl` CLI 和 Kubernetes 伺服器都是執行版本1.14.6。 `kubectl` 的每個版本都應該支援伺服器的上一個和下一個版本，因此 `kubectl` 1.14 也應該與伺服器版本1.13 和1.15 搭配運作。
 
 ## <a name="run-services-on-kubernetes"></a>在 Kubernetes 上執行服務
 
-範例應用程式有一個 `kube` 目錄，其中包含三個 YAML 檔案。 @No__t_0 檔案會宣告自訂命名空間，`stocks`。 @No__t_0 檔案會宣告 gRPC 應用程式的部署和服務，而 `stockweb.yml` 檔案則會針對使用 gRPC 服務的 ASP.NET Core 3.0 MVC web 應用程式宣告部署和服務。
+範例應用程式有一個 `kube` 目錄，其中包含三個 YAML 檔案。 `namespace.yml` 檔案會宣告自訂命名空間，`stocks`。 `stockdata.yml` 檔案會宣告 gRPC 應用程式的部署和服務，而 `stockweb.yml` 檔案則會針對使用 gRPC 服務的 ASP.NET Core 3.0 MVC web 應用程式宣告部署和服務。
 
 若要使用具有 `kubectl` 的 `YAML` 檔案，請使用 `apply -f` 命令。
 
@@ -93,7 +91,7 @@ Server Version: version.Info{Major:"1", Minor:"14", GitVersion:"v1.14.6", GitCom
 kubectl apply -f object.yml
 ```
 
-@No__t_0 命令會檢查 YAML 檔案的有效性，並顯示從 API 收到的任何錯誤，但不會等到檔案中宣告的所有物件都已建立，因為這可能需要一些時間。 使用 `kubectl get` 命令搭配相關的物件類型，以檢查叢集中的物件建立。
+`apply` 命令會檢查 YAML 檔案的有效性，並顯示從 API 收到的任何錯誤，但不會等到檔案中宣告的所有物件都已建立，因為這可能需要一些時間。 使用 `kubectl get` 命令搭配相關的物件類型，以檢查叢集中的物件建立。
 
 ### <a name="the-namespace-declaration"></a>命名空間宣告
 
@@ -119,7 +117,7 @@ stocks            Active   2m53s
 
 ### <a name="the-stockdata-application"></a>StockData 應用程式
 
-@No__t_0 檔案會宣告兩個物件：部署和服務。
+`stockdata.yml` 檔案會宣告兩個物件：部署和服務。
 
 #### <a name="the-stockdata-deployment"></a>StockData 部署
 
@@ -153,16 +151,16 @@ spec:
         - containerPort: 80
 ```
 
-@No__t_0 屬性是用來將執行中的 pod 與部署進行比對。 Pod 的 `metadata.labels` 屬性必須符合 `matchLabels` 屬性，否則 API 呼叫將會失敗。
+`spec.selector` 屬性是用來將執行中的 pod 與部署進行比對。 Pod 的 `metadata.labels` 屬性必須符合 `matchLabels` 屬性，否則 API 呼叫將會失敗。
 
-@No__t_0 區段會宣告要執行的容器。 使用本機 Kubernetes 叢集（例如 Docker Desktop 提供的叢集）時，您可以指定在本機建立的映射，只要它們有版本戳記即可。
+`template.spec` 區段會宣告要執行的容器。 使用本機 Kubernetes 叢集（例如 Docker Desktop 提供的叢集）時，您可以指定在本機建立的映射，只要它們有版本戳記即可。
 
 > [!IMPORTANT]
 > 根據預設，Kubernetes 一律會檢查並嘗試提取新的映射。 如果它在其已知的存放庫中找不到映射，Pod 建立將會失敗。 若要使用本機影像，請將 `imagePullPolicy` 設定為 [`Never`]。
 
-@No__t_0 屬性會指定要在 Pod 上發佈的容器埠。  @No__t_0 映射會在標準 HTTP 埠上執行服務，因此會發佈埠80。
+`ports` 屬性會指定要在 Pod 上發佈的容器埠。  `stockservice` 映射會在標準 HTTP 埠上執行服務，因此會發佈埠80。
 
-@No__t_0 區段會將資源限制套用至在 pod 中執行的容器。 這是很好的作法，因為它會防止個別 pod 耗用節點上的所有可用 CPU 或記憶體。
+`resources` 區段會將資源限制套用至在 pod 中執行的容器。 這是很好的作法，因為它會防止個別 pod 耗用節點上的所有可用 CPU 或記憶體。
 
 > [!NOTE]
 > ASP.NET Core 3.0 已優化並微調為在資源限制的容器中執行，而 `dotnet/core/aspnet` Docker 映射會設定環境變數，以告知 `dotnet` 執行時間它在容器中。
@@ -206,7 +204,7 @@ stockdata   ClusterIP   10.97.132.103   <none>        80/TCP    33s
 
 ### <a name="the-stockweb-application"></a>StockWeb 應用程式
 
-@No__t_0 檔案會宣告 MVC 應用程式的部署和服務。
+`stockweb.yml` 檔案會宣告 MVC 應用程式的部署和服務。
 
 ```yaml
 apiVersion: apps/v1
@@ -261,7 +259,7 @@ spec:
 
 由於 EnvironmentVariables 設定提供者的不同， **`StockData__Address`** 環境變數將會對應到 `StockData:Address` 設定。 此設定會在名稱之間使用雙底線來分隔區段。 此位址會使用在相同 Kubernetes 命名空間中執行之 `stockdata` 服務的服務名稱。
 
-**@No__t_1**環境變數會設定 <xref:System.AppContext> 交換器，以啟用 <xref:System.Net.Http.HttpClient> 的未加密 HTTP/2 連接。 此環境變數相當於在程式碼中設定參數，如下所示。
+**`DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT`** 環境變數會設定 <xref:System.AppContext> 交換器，以啟用 <xref:System.Net.Http.HttpClient>的未加密 HTTP/2 連接。 此環境變數相當於在程式碼中設定參數，如下所示。
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
@@ -273,7 +271,7 @@ AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport
 
 若要讓 Web 應用程式可從叢集外部存取，則會使用 `type: NodePort` 屬性。 此屬性類型會導致 Kubernetes 將服務上的埠80發佈至叢集的外部網路通訊端上的任意埠。 您可以使用 `kubectl get service` 命令來找到指派的埠。
 
-@No__t_0 服務不應從叢集外部存取，因此它使用預設類型 [`ClusterIP`]。
+`stockdata` 服務不應從叢集外部存取，因此它使用預設類型 [`ClusterIP`]。
 
 生產系統很可能會使用整合式負載平衡器向外部取用者公開公用應用程式。 以這種方式公開的服務應該使用 `LoadBalancer` 類型。
 
@@ -297,7 +295,7 @@ NAME       TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
 stockweb   NodePort   10.106.141.5   <none>        80:32564/TCP   13s
 ```
 
-@No__t_0 命令的輸出顯示 HTTP 埠已發佈至外部網路上的埠 `32564`;對於 Docker Desktop，這會是 localhost。 您可以藉由流覽至 `http://localhost:32564` 來存取應用程式。
+`get service` 命令的輸出顯示 HTTP 埠已發佈至外部網路上的埠 `32564`;對於 Docker Desktop，這會是 localhost。 您可以藉由流覽至 `http://localhost:32564` 來存取應用程式。
 
 ### <a name="testing-the-application"></a>測試應用程式
 

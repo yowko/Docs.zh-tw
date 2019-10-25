@@ -3,16 +3,14 @@ title: 通道認證-適用于 WCF 開發人員的 gRPC
 description: 如何在 ASP.NET Core 3.0 中執行和使用 gRPC 通道認證。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 61305ee47a2c09a0b2a0fd866beb9b7c102ffeaa
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 61141dc4143f36f9ac511c3369c3fde668c9d703
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184579"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846704"
 ---
 # <a name="channel-credentials"></a>通道認證
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 如其名稱所示，通道認證會附加至基礎 gRPC 通道。 通道認證的標準形式使用用戶端憑證驗證，在此情況下，用戶端會在建立連線時提供 TLS 憑證，在允許進行任何呼叫之前，伺服器會先驗證該憑證。
 
@@ -28,7 +26,7 @@ ms.locfileid: "71184579"
 
 ### <a name="configuring-certificate-validation-on-kestrel"></a>在 Kestrel 上設定憑證驗證
 
-您可以將 Kestrel （ASP.NET Core HTTP 伺服器）設定為需要用戶端憑證，並選擇性地在接受連入連線之前，先執行所提供憑證的一些驗證。 這項設定是在`CreateWebHostBuilder` `Program`類別的方法中完成，而不是`Startup`在中。
+您可以將 Kestrel （ASP.NET Core HTTP 伺服器）設定為需要用戶端憑證，並選擇性地在接受連入連線之前，先執行所提供憑證的一些驗證。 這項設定是在 `Program` 類別的 `CreateWebHostBuilder` 方法中完成，而不是在 `Startup`中進行。
 
 ```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -51,13 +49,13 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 ```
 
-此`ClientCertificateMode.RequireCertificate`設定會導致 Kestrel 立即拒絕未提供用戶端憑證的任何連線要求，但它不會驗證憑證。 新增回呼可讓 Kestrel 在連線時驗證用戶端憑證（在此案例中，確保它是由與伺服器憑證相同的*憑證授權單位*單位所發行），然後才 ASP.NET Core `ClientCertificateValidation`管線正在參與。
+`ClientCertificateMode.RequireCertificate` 設定會導致 Kestrel 立即拒絕未提供用戶端憑證的任何連線要求，但它不會驗證憑證。 新增 `ClientCertificateValidation` 回呼可讓 Kestrel 驗證用戶端憑證（在此案例中，確保它是由與伺服器憑證相同的*憑證授權單位*單位）在建立連線時，在 ASP.NET Core 管線之前為參與。
 
 ### <a name="adding-aspnet-core-certificate-authentication"></a>新增 ASP.NET Core 憑證驗證
 
 憑證驗證是由 AspNetCore 所提供。[憑證](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Certificate)NuGet 套件。
 
-在`ConfigureServices`方法中新增憑證驗證服務，並在`Configure`方法中將驗證和授權新增至 ASP.NET Core 管線。
+在 `ConfigureServices` 方法中新增憑證驗證服務，然後在 `Configure` 方法中，將驗證和授權新增至 ASP.NET Core 管線。
 
 ```csharp
 public class Startup
@@ -98,7 +96,7 @@ public class Startup
 
 ## <a name="providing-channel-credentials-in-the-client-application"></a>在用戶端應用程式中提供通道認證
 
-使用封裝時，會<xref:System.Net.Http.HttpClient>在提供給用於連接之的`GrpcChannel`實例上設定憑證。 `Grpc.Net.Client`
+使用 `Grpc.Net.Client` 封裝時，會在提供給用於連接之 `GrpcChannel` 的 <xref:System.Net.Http.HttpClient> 實例上設定憑證。
 
 ```csharp
 class Program
@@ -129,7 +127,7 @@ class Program
 
 您可以將憑證變更套用至 Kestrel 伺服器，並在 ASP.NET Core 中使用 JWT 持有人中介軟體，將伺服器設定為使用憑證和權杖驗證。
 
-若要在用戶端上同時提供 ChannelCredentials 和 CallCredentials， `ChannelCredentials.Create`請使用方法來套用呼叫認證。 您仍然需要使用<xref:System.Net.Http.HttpClient>實例來套用憑證驗證：如果您將任何引數傳遞`SslCredentials`至函式，內部用戶端程式代碼就會擲回例外狀況。 參數只會包含`Grpc.Net.Client`在封裝的`Create`方法中，以維持與`Grpc.Core`封裝的相容性。 `SslCredentials`
+若要在用戶端上同時提供 ChannelCredentials 和 CallCredentials，請使用 `ChannelCredentials.Create` 方法來套用呼叫認證。 您仍然必須使用 <xref:System.Net.Http.HttpClient> 實例來套用憑證驗證：如果您將任何引數傳遞至 `SslCredentials` 的「檢查程式」，則內部用戶端程式代碼會擲回例外狀況。 `SslCredentials` 參數只會包含在 `Grpc.Net.Client` 套件的 `Create` 方法中，以維持與 `Grpc.Core` 套件的相容性。
 
 ```csharp
 var handler = new HttpClientHandler();
@@ -154,7 +152,7 @@ var grpc = new Portfolios.PortfoliosClient(channel);
 ```
 
 > [!TIP]
-> 您可以針對沒有`ChannelCredentials.Create`憑證驗證的用戶端使用方法，這是一個實用的方法，可讓您在通道上進行每次呼叫時傳遞權杖認證。
+> 您可以將 `ChannelCredentials.Create` 方法用於沒有憑證驗證的用戶端，這是使用通道上的每個呼叫來傳遞權杖認證的實用方法。
 
 GitHub 上已[加入憑證驗證的 FullStockTicker 範例 gRPC 應用程式](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/FullStockTickerSample/grpc/FullStockTickerAuth/FullStockTicker)版本。
 

@@ -3,16 +3,14 @@ title: WCF 開發人員的 gRPC-gRPC 總覽
 description: 瞭解指導開發 gRPC 的原則集合。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 489b91f6aa279d9c457e2e8fccd4438885076779
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 6980b473a6f9852a4e4f396355e98e2d3300cabe
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770457"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846649"
 ---
 # <a name="grpc-overview"></a>gRPC 總覽
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 在查看上一章中 WCF 和 gRPC 的創世之後，本章將會考慮 gRPC 的一些重要功能，以及它們與 WCF 之間的比較。
 

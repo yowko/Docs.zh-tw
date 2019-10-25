@@ -3,16 +3,14 @@ title: 為什麼為 WCF 開發人員建議使用 gRPC-針對 WCF 開發人員 gR
 description: 討論為什麼 gRPC 是適合想要遷移至現代化架構和平臺的 WCF 開發人員。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 7e80936eb36bbba92958c349b5f1c0cb389d6b8d
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: f96e9a059dc9f12a13c9eb5bb7184ee75d602458
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184033"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846073"
 ---
-# <a name="why-grpc-is-recommended-for-wcf-developers"></a>為什麼為 WCF 開發人員建議使用 gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="why-grpc-is-recommended-for-wcf-developers"></a>為什麼建議 WCF 開發人員使用 gRPC
 
 在深入探討 gRPC 的語言和技術之前，值得一提的是，對於想要遷移至 .NET Core 的 WCF 開發人員而言，gRPC 是正確的解決方案，但有提供替代方案。
 

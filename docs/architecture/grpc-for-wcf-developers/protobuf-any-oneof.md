@@ -3,24 +3,22 @@ title: Protobuf 適用于 variant 類型的 Any 和一個欄位-WCF 開發人員
 description: 瞭解如何使用 Any 型別和一個關鍵字來代表訊息中的 variant 物件類型。
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 9e730e96bfdb25ef6e07ee10967921408c6f2e84
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 10f55288eb4a6aa603228da5b4850317d6bde614
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184278"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846385"
 ---
 # <a name="protobuf-any-and-oneof-fields-for-variant-types"></a>Protobuf variant 類型的 Any 和一個欄位
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+在 WCF 中處理動態屬性類型（也就是類型 `object`的屬性）很複雜。 必須指定序列化程式，必須提供[KnownType](xref:System.Runtime.Serialization.KnownTypeAttribute)屬性，依此類推。
 
-在 WCF 中處理動態屬性類型（也就是`object`類型的屬性）很複雜。 必須指定序列化程式，必須提供[KnownType](xref:System.Runtime.Serialization.KnownTypeAttribute)屬性，依此類推。
-
-Protobuf 提供兩個較簡單的選項，可處理可能屬於一種以上類型的值。 型別可以代表任何已知的 Protobuf 訊息型別， `oneof`而關鍵字可讓您指定在任何指定的訊息中只能設定一個欄位範圍的其中一個。 `Any`
+Protobuf 提供兩個較簡單的選項，可處理可能屬於一種以上類型的值。 `Any` 類型可以代表任何已知的 Protobuf 訊息類型，而 `oneof` 關鍵字可讓您指定在任何指定的訊息中只能設定一個範圍的欄位。
 
 ## <a name="any"></a>Any
 
-`Any`是 Protobuf 的「知名型別」之一，這是一組有用、可重複使用的訊息型別，並以所有支援的語言執行。 若要使用`Any`類型，您必須匯`google/protobuf/any.proto`入定義。
+`Any` 是 Protobuf 的「知名型別」之一，這是一組有用、可重複使用的訊息型別，並以所有支援的語言執行。 若要使用 `Any` 類型，您必須匯入 `google/protobuf/any.proto` 定義。
 
 ```protobuf
 syntax "proto3"
@@ -41,7 +39,7 @@ message ChangeNotification {
 }
 ```
 
-在程式C#代碼中， `Any`類別會提供方法來設定欄位、將訊息解壓縮，以及檢查類型。
+在程式C#代碼中，`Any`類別提供了設定欄位、將訊息解壓縮，以及檢查類型的方法。
 
 ```csharp
 public void FormatChangeNotification(ChangeNotification change)
@@ -61,11 +59,11 @@ public void FormatChangeNotification(ChangeNotification change)
 }
 ```
 
-Protobuf `Descriptor`的內部反映程式碼會使用每個產生之類型上的靜態欄位`Any`來解析欄位類型。 另外還有`TryUnpack<T>`方法，但即使失敗，也會建立未初始化`T`的實例，因此最好使用`Is`方法，如上所示。
+Protobuf 的內部反映程式碼會使用每個產生之類型上的 `Descriptor` 靜態欄位，來解析 `Any` 欄位類型。 另外還有 `TryUnpack<T>` 方法，但即使失敗，也會建立未初始化的 `T` 實例，因此最好使用如上所示的 `Is` 方法。
 
 ## <a name="oneof"></a>一個
 
-一個欄位是一種語言功能： `oneof`編譯器會在產生 message 類別時處理關鍵字。 使用`oneof` 來`ChangeNotification`指定訊息可能如下所示：
+一個欄位是一種語言功能：編譯器在產生 message 類別時，會處理 `oneof` 關鍵字。 使用 `oneof` 來指定 `ChangeNotification` 訊息可能如下所示：
 
 ```protobuf
 message Stock {
@@ -85,9 +83,9 @@ message ChangeNotification {
 }
 ```
 
-`oneof`集合內的欄位在整體訊息宣告中必須有唯一的欄位編號。
+`oneof` 集內的欄位在整體訊息宣告中必須有唯一的欄位編號。
 
-當您使用`oneof`時，產生C#的程式碼會包含列舉，以指定已設定的欄位。 您可以測試列舉以尋找已設定的欄位。 未設定的欄位會`null`傳回或預設值，而不會擲回例外狀況。
+當您使用 `oneof`時，產生C#的程式碼會包含列舉，以指定已設定的欄位。 您可以測試列舉以尋找已設定的欄位。 未設定的欄位會傳回 `null` 或預設值，而不是擲回例外狀況。
 
 ```csharp
 public void FormatChangeNotification(ChangeNotification change)
@@ -108,7 +106,7 @@ public void FormatChangeNotification(ChangeNotification change)
 }
 ```
 
-設定屬於`oneof`集合之一部分的任何欄位，將會自動清除該集合中的任何其他欄位。 您無法搭配`repeated`使用`oneof`。 相反地，您可以建立具有重複欄位或`oneof`集合的嵌套訊息，以解決這項限制。
+設定屬於 `oneof` 集之一部分的任何欄位，將會自動清除該集合中的任何其他欄位。 您無法搭配 `oneof`使用 `repeated`。 相反地，您可以建立具有重複欄位或 `oneof` 設定的嵌套訊息，以解決這項限制。
 
 >[!div class="step-by-step"]
 >[上一頁](protobuf-reserved.md)

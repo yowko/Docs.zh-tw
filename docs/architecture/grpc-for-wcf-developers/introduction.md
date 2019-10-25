@@ -3,16 +3,14 @@ title: 簡介-WCF 開發人員的 gRPC
 description: 簡介
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 2782f28e8a99fa7c0bde69f757d14e96e91f5cd4
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 9eb12d5060ddf4f345ebe095738c98238c6caab7
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184418"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846630"
 ---
 # <a name="introduction"></a>簡介
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 協助機器彼此通訊的方式，是數位年齡的主要 preoccupations 之一。 特別是，我們會持續致力於判斷符合目前基礎結構之互通性需求的最佳遠端通訊機制。 您可以想像，這項機制會隨著需求或基礎結構的發展而改變。
 

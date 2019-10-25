@@ -3,16 +3,14 @@ title: 應用程式效能管理-WCF 開發人員的 gRPC
 description: ASP.NET Core gRPC 應用程式的記錄、計量和追蹤。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6e4c32d057c1ac143e18a4a3ddc83dd8b1f62800
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 6ba67fd069e7efc232f912e50c0e283facb79e9c
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184607"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846724"
 ---
 # <a name="application-performance-management"></a>應用程式效能管理
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 在 Kubernetes 這類現代化生產環境中，必須能夠監視應用程式以確保其以最佳狀態執行，這點非常重要。 記錄和計量等顧慮也不重要。 ASP.NET Core （包括 gRPC）具有產生和記錄管理檔訊息和計量資料的一流支援，以及*追蹤*資料。 本節將更詳細地探索這些區域。
 
@@ -56,7 +54,7 @@ ASP.NET Core 和 gRPC framework 元件會提供許多有關要求、例外狀況
 
 ## <a name="metrics-in-aspnet-core-grpc"></a>ASP.NET Core gRPC 中的計量
 
-.Net Core 執行時間提供一組元件，用於發出和觀察包含 api （例如<xref:System.Diagnostics.Tracing.EventSource>和<xref:System.Diagnostics.Tracing.EventCounter>類別）的計量。 這些 Api 可用來發出可供外部進程使用的基本數值資料，例如[dotnet 計數器通用工具](https://github.com/dotnet/diagnostics/blob/master/documentation/dotnet-counters-instructions.md)或 Windows 事件追蹤。 如需在您自己`EventCounter`的程式碼中使用的詳細資訊，請參閱[EventCounter 簡介](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)教學課程。
+.NET Core 執行時間提供一組元件，用於發出和觀察包含 Api （例如 <xref:System.Diagnostics.Tracing.EventSource> 和 <xref:System.Diagnostics.Tracing.EventCounter> 類別）的計量。 這些 Api 可用來發出可供外部進程使用的基本數值資料，例如[dotnet 計數器通用工具](https://github.com/dotnet/diagnostics/blob/master/documentation/dotnet-counters-instructions.md)或 Windows 事件追蹤。 如需在您自己的程式碼中使用 `EventCounter` 的詳細資訊，請參閱[EventCounter 簡介](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)教學課程。
 
 針對更先進的計量，以及將度量資料寫入更廣泛的資料存放區，有一個絕佳的開放原始碼專案，稱為[應用程式計量](https://www.app-metrics.io)。 此程式庫套件提供一組豐富的類型來檢測您的程式碼。 它也提供封裝，以將計量寫入包含時間序列資料庫的不同目標型別，例如 Prometheus 和 InfluxDB、 [Azure 應用程式 Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)等等。 [AspNetCore](https://www.nuget.org/packages/App.Metrics.AspNetCore.Mvc/) NuGet 套件甚至會新增一組完整的基本計量，這些度量是透過與 ASP.NET Core 架構的整合自動產生的，而網站則提供[範本](https://www.app-metrics.io/samples/grafana/)來顯示這些計量使用[Grafana](https://grafana.com/)視覺化平臺。
 
@@ -74,7 +72,7 @@ ASP.NET Core 和 gRPC framework 元件會提供許多有關要求、例外狀況
 | 計數器       | 測量事件在各種時間範圍內發生的速率。 |
 | 計時器       | 追蹤事件的持續時間，以及其發生的速率（儲存為長條圖）。 |
 
-使用*應用程式計量*， `IMetrics`您可以透過相依性插入來取得介面，並用來記錄 gRPC 服務的任何這些計量。 下列範例示範如何計算經過一`Get`段時間後所提出的要求數目：
+使用*應用程式計量*，您可以透過相依性插入來取得 `IMetrics` 介面，並用來記錄 gRPC 服務的任何這些計量。 下列範例示範如何計算經過一段時間後所提出的 `Get` 要求數目：
 
 ```csharp
 public class StockData : Stocks.StocksBase
@@ -127,9 +125,9 @@ public class StockData : Stocks.StocksBase
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>使用 DiagnosticSource 進行分散式追蹤
 
-.NET Core 具有可妥善對應至分散式追蹤和範圍的內部模組：[DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide)。 除了提供一個簡單的方法來產生和取用進程內的診斷， `DiagnosticSource`模組具有*活動*的概念，這實際上是分散式追蹤的執行，或是追蹤內的範圍。 模組的內部會負責處理父系/子活動，包括配置識別碼。 如需使用`Activity`類型的詳細資訊，請參閱[GitHub 上的活動使用者指南](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)
+.NET Core 有一個內部模組，可妥善對應到分散式追蹤和涵蓋範圍： [DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide)。 和提供一個簡單的方法來產生和取用程式中的診斷，`DiagnosticSource` 模組具有*活動*的概念，這實際上是分散式追蹤的執行，或是追蹤內的範圍。 模組的內部會負責處理父系/子活動，包括配置識別碼。 如需使用 `Activity` 類型的詳細資訊，請參閱[GitHub 上的活動使用者指南](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)
 
-由於 DiagnosticSource 是核心架構的一部分，因此支援數個核心元件，包括<xref:System.Net.Http.HttpClient>、Entity Framework Core 和 ASP.NET Core，包括 gRPC 架構中的明確支援。 當 ASP.NET Core 收到要求時，它會檢查是否有一對符合[W3C 追蹤內容](https://www.w3.org/TR/trace-context)標準的 HTTP 標頭。 如果找到標頭，則會使用標頭中的識別值和內容來啟動活動。 如果找不到任何標頭，則會啟動活動，並產生符合標準格式的識別值。 在此活動的存留期內，架構或應用程式程式碼所產生的任何診斷，都可以使用追蹤和範圍識別碼來標記。 `HttpClient`支援會藉由檢查每個要求的目前活動，並自動將追蹤標頭新增至傳出要求，進一步擴充此功能。
+由於 DiagnosticSource 是核心架構的一部分，因此支援數個核心元件，包括 <xref:System.Net.Http.HttpClient>、Entity Framework Core 和 ASP.NET Core，包括 gRPC 架構中的明確支援。 當 ASP.NET Core 收到要求時，它會檢查是否有一對符合[W3C 追蹤內容](https://www.w3.org/TR/trace-context)標準的 HTTP 標頭。 如果找到標頭，則會使用標頭中的識別值和內容來啟動活動。 如果找不到任何標頭，則會啟動活動，並產生符合標準格式的識別值。 在此活動的存留期內，架構或應用程式程式碼所產生的任何診斷，都可以使用追蹤和範圍識別碼來標記。 `HttpClient` 支援會藉由檢查每個要求的目前活動，並自動將追蹤標頭新增至傳出要求，進一步擴充此功能。
 
 ASP.NET Core gRPC 用戶端和伺服器程式庫包括明確支援 DiagnosticSource 和活動，並會建立活動並自動套用和使用標頭資訊。
 
@@ -138,7 +136,7 @@ ASP.NET Core gRPC 用戶端和伺服器程式庫包括明確支援 DiagnosticSou
 
 ### <a name="add-your-own-diagnosticsources-and-activities"></a>新增您自己的 DiagnosticSources 和活動
 
-雖然良好的資料量會由 ASP.NET Core 自動產生（包括 gRPC），以及 Entity Framework Core 和`HttpClient`，但您可能會想要新增自己的診斷，或在應用程式程式碼中建立明確的範圍。 如需如何執行自己的診斷的詳細資訊，請參閱[DiagnosticSource 使用者指南](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#instrumenting-with-diagnosticsourcediagnosticlistener)和[活動使用者指南](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-usage)。
+雖然 ASP.NET Core 會自動產生良好的資料量（包括 gRPC），以及 Entity Framework Core 和 `HttpClient`，但您可能會想要新增自己的診斷，或在應用程式程式碼中建立明確的範圍。 如需如何執行自己的診斷的詳細資訊，請參閱[DiagnosticSource 使用者指南](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#instrumenting-with-diagnosticsourcediagnosticlistener)和[活動使用者指南](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-usage)。
 
 ### <a name="store-distributed-trace-data"></a>儲存分散式追蹤資料
 
@@ -148,7 +146,7 @@ OpenTracing API 如下所述。 如果您想要在應用程式中使用較新的
 
 #### <a name="use-the-opentracing-package-to-store-distributed-trace-data"></a>使用 OpenTracing 封裝來儲存分散式追蹤資料
 
-[OpenTracing NuGet 套件](https://www.nuget.org/packages/OpenTracing/)，支援所有符合 OpenTracing 標準的`DiagnosticSource`後端（可獨立使用）。 還有一個來自 OpenTracing API 投稿專案[OpenTracing. Contrib](https://www.nuget.org/packages/OpenTracing.Contrib.NetCore/)的額外套件，它會新增`DiagnosticSource`接聽程式，並自動將事件和活動寫入後端。 啟用此套件的方式很簡單，只要從 NuGet 安裝它，再將它新增為`Startup`類別中的服務即可。
+[OpenTracing NuGet 套件](https://www.nuget.org/packages/OpenTracing/)，支援所有符合 OpenTracing 標準的後端（可獨立于 `DiagnosticSource`）。 還有一個來自 OpenTracing API 投稿專案[OpenTracing. Contrib](https://www.nuget.org/packages/OpenTracing.Contrib.NetCore/)的額外套件，它會新增 `DiagnosticSource` 接聽程式，並自動將事件和活動寫入後端。 啟用此套件的方式很簡單，只要從 NuGet 安裝它，再將它新增為 `Startup` 類別中的服務即可。
 
 ```csharp
 public class Startup
@@ -162,7 +160,7 @@ public class Startup
 
 OpenTracing 套件是抽象層，因此它需要後端特定的執行。 下列開放原始碼後端可以使用 OpenTracing API 部署。
 
-| 名稱 | Package | 網站 |
+| [屬性] | 封裝 | 網站 |
 | ---- | ------- | -------- |
 | Jaeger | [Jaeger](https://www.nuget.org/packages/Jaeger/) | [jaegertracing.io](https://jaegertracing.io) |
 | 彈性 APM | [NetCoreAll 的彈性](https://www.nuget.org/packages/Elastic.Apm.NetCoreAll/) | [elastic.co/products/apm](https://www.elastic.co/products/apm) |

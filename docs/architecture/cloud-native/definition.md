@@ -3,12 +3,12 @@ title: 雲端原生的定義
 description: 瞭解為雲端原生系統提供探源的基本要素
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: c99a99ec2cd7a8c4263ae3321d5a836bc40da087
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: aec199aee52a4ab3202c3ec0ceb769fecd168cfe
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315940"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846734"
 ---
 # <a name="defining-cloud-native"></a>定義雲端原生
 
@@ -95,7 +95,7 @@ Azure 雲端平臺支援這種高度彈性的基礎結構，其中包含自動�
 
 |    |  新因素 | 說明  |
 | :-------- | :-------- | :-------- |
-| 13 | API 第一個 | 將所有專案變成一項服務。 假設您的程式碼將由前端用戶端使用。 閘道或其他服務。 |
+| 13 | API 第一個 | 將所有專案變成一項服務。 假設您的程式碼將由前端用戶端、閘道或其他服務使用。 |
 | 14 | 遙測 | 在工作站上，您可以深入瞭解您的應用程式及其行為。 在雲端中，您不會這麼做。 請確定您的設計包含「監視」、「網域特定」和「健康情況/系統」資料的集合。 |
 | 15 | 驗證/授權  | 從起始處執行身分識別。 請考慮公用雲端中可用的[RBAC （角色型存取控制）](https://docs.microsoft.com/azure/role-based-access-control/overview)功能。  |
 

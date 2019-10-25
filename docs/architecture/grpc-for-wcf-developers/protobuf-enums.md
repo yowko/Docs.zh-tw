@@ -3,16 +3,14 @@ title: Protobuf 列舉-適用于 WCF 開發人員的 gRPC
 description: 瞭解如何在 Protobuf 中宣告和使用列舉。
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 37fd55e4cbc3c1e1e96e32875ddb3dcae0ca8355
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: f18196f54caba824d7101782a88cf3bf699560d5
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771648"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846346"
 ---
 # <a name="protobuf-enumerations"></a>Protobuf 列舉
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Protobuf 支援列舉類型，如上一節中所示，列舉是用來判斷 `oneof` 欄位的類型。 您可以定義自己的列舉類型，而 Protobuf 會將它們C#編譯成列舉類型。 由於 Protobuf 可以與不同的C#語言搭配使用，因此列舉的命名慣例與慣例不同。 不過，程式碼產生器非常聰明，而且會將名稱轉換C#成傳統案例。 如果與此功能變數名稱相等的 Pascal 大小寫是以列舉名稱開頭，則會將它移除。
 
@@ -41,7 +39,7 @@ public enum AccountStatus
 }
 ```
 
-Protobuf 列舉定義**必須**有零常數做為其第一個欄位。 如同在C#中，您可以宣告多個具有相同值的欄位，但您必須使用列舉中的 `allow_alias` 選項明確啟用此選項：
+Protobuf 列舉定義**必須**有零常數做為其第一個欄位。 如同在C#中，您可以宣告多個具有相同值的欄位，但您必須使用列舉中的`allow_alias`選項明確啟用此選項：
 
 ```protobuf
 enum AccountStatus {

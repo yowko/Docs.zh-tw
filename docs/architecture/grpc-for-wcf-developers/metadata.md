@@ -3,16 +3,14 @@ title: WCF 開發人員的中繼資料 gRPC
 description: 如何在 gRPC 中使用中繼資料來傳遞用戶端與伺服器之間的其他內容
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 71ac60cd4c389277675dd452430735fb698fd342
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 32559b3404b12f366fc1624299d04cff9faad9d6
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770485"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846619"
 ---
 # <a name="metadata"></a>中繼資料
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 「中繼資料」指的是處理要求和回應時可能有用的其他資料，但不屬於實際的應用程式資料。 中繼資料可能包含驗證權杖、要求識別碼和標記以供監視之用，或是資料集內的記錄數目等相關資訊。
 

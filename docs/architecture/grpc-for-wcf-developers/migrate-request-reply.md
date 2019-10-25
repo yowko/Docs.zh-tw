@@ -3,16 +3,14 @@ title: 將 WCF 要求-回復服務遷移至 WCF 開發人員的 gRPC-gRPC
 description: 瞭解如何將簡單的要求-回復服務從 WCF 遷移至 gRPC。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 183e3b0ab1ce5c63714ced064f0d0901f59819c7
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 12e042e8e7e3683cc4da1fedce2482e7199b04a7
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770398"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846606"
 ---
 # <a name="migrate-a-wcf-request-reply-service-to-a-grpc-unary-rpc"></a>將 WCF 要求-回復服務遷移至 gRPC 一元 RPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 本節說明如何在 ASP.NET Core gRPC 中，將 WCF 中的基本要求-回復服務遷移至一元 RPC 服務。 這些服務是 Windows Communication Foundation （WCF）和 gRPC 中最簡單的服務類型，因此是很好的起點。 遷移服務之後，您將瞭解如何從相同的 `.proto` 檔案產生用戶端程式庫，以便從 .NET 用戶端應用程式取用服務。
 
@@ -32,7 +30,7 @@ public interface IPortfolioService
 }
 ```
 
-@No__t_0 模型是以[DataContract](xref:System.Runtime.Serialization.DataContractAttribute)標記C#的簡單類別，包括 `PortfolioItem` 物件的清單。 這些模型會定義在 `TraderSys.PortfolioData` 專案中，以及代表資料存取抽象的儲存機制類別。
+`Portfolio` 模型是以[DataContract](xref:System.Runtime.Serialization.DataContractAttribute)標記C#的簡單類別，包括`PortfolioItem`物件的清單。 這些模型會定義在 `TraderSys.PortfolioData` 專案中，以及代表資料存取抽象的儲存機制類別。
 
 ```csharp
 [DataContract]
@@ -65,7 +63,7 @@ public class PortfolioItem
 }
 ```
 
-@No__t_0 的執行會使用透過相依性插入所提供的存放庫類別，以傳回 `DataContract` 類型的實例。
+`ServiceContract` 的執行會使用透過相依性插入所提供的存放庫類別，以傳回 `DataContract` 類型的實例。
 
 ```csharp
 public class PortfolioService : IPortfolioService
@@ -109,7 +107,7 @@ service Portfolios {
 
 ## <a name="convert-the-datacontracts-to-grpc-messages"></a>將 DataContracts 轉換為 gRPC 訊息
 
-@No__t_0 類別會先轉換成 Protobuf 訊息，因為 `Portfolio` 類別相依于它。 類別非常簡單，而三個屬性會直接對應至 gRPC 資料類型。 [@No__t_0] 屬性（代表購買的共用的價格）是 [`decimal`] 欄位，而 [gRPC] 僅支援實際數位的 `float` 或 `double`，不適用於貨幣。 由於共用價格的差異最少一美分，因此成本會以一 `int32` 美分來表示。
+`PortfolioItem` 類別會先轉換成 Protobuf 訊息，因為 `Portfolio` 類別相依于它。 類別非常簡單，而三個屬性會直接對應至 gRPC 資料類型。 [`Cost`] 屬性（代表購買的共用的價格）是 [`decimal`] 欄位，而 [gRPC] 僅支援實際數位的 `float` 或 `double`，不適用於貨幣。 由於共用價格的差異最少一美分，因此成本會以一 `int32` 美分來表示。
 
 > [!NOTE]
 > 請記得在 `.proto` 檔案中使用 `camelCase` 做為功能變數名稱;程式C#代碼產生器會將它們轉換成 `PascalCase`，而其他語言的使用者則會感謝您遵守其不同的編碼標準。
@@ -123,7 +121,7 @@ message PortfolioItem {
 }
 ```
 
-@No__t_0 類別稍微複雜一點。 在 WCF 程式碼中，開發人員使用 `TraderId` 屬性的 `Guid`，並包含 `List<PortfolioItem>`。 在沒有第一級 `UUID` 類型的 Protobuf 中，您應該使用 `traderId` 欄位的 `string`，並在您自己的程式碼中進行剖析。 針對專案清單，請使用欄位上的 `repeated` 關鍵字。
+`Portfolio` 類別稍微複雜一點。 在 WCF 程式碼中，開發人員使用 `TraderId` 屬性的 `Guid`，並包含 `List<PortfolioItem>`。 在沒有第一級 `UUID` 類型的 Protobuf 中，您應該使用 `traderId` 欄位的 `string`，並在您自己的程式碼中進行剖析。 針對專案清單，請使用欄位上的 `repeated` 關鍵字。
 
 ```protobuf
 message Portfolio {
@@ -256,7 +254,7 @@ public class Startup
 }
 ```
 
-@No__t_0 的執行現在可以指定為 `PortfolioService` 類別中的「函數參數」，如下所示：
+`IPortfolioRepository` 的執行現在可以指定為 `PortfolioService` 類別中的「函數參數」，如下所示：
 
 ```csharp
 public class PortfolioService : Protos.Portfolios.PortfoliosBase
@@ -372,7 +370,7 @@ public override async Task<GetResponse> Get(GetRequest request, ServerCallContex
 
 ```
 
-@No__t_0 方法的實作為相似之處。 請注意，Protobuf 訊息上的 `repeated` 欄位會產生為 `RepeatedField<T>` 類型的 `readonly` 屬性，因此您必須使用 `AddRange` 方法將專案新增至其中，如下列範例所示：
+`GetAll` 方法的實作為相似之處。 請注意，Protobuf 訊息上的 `repeated` 欄位會產生為 `RepeatedField<T>` 類型的 `readonly` 屬性，因此您必須使用 `AddRange` 方法將專案新增至其中，如下列範例所示：
 
 ```csharp
 public override async Task<GetAllResponse> GetAll(GetAllRequest request, ServerCallContext context)
@@ -411,7 +409,7 @@ public override async Task<GetAllResponse> GetAll(GetAllRequest request, ServerC
 > [!TIP]
 > 請注意，此對話方塊也會提供 [URL] 欄位。 如果您的組織維護 `.proto` 檔案的 web 可存取目錄，您就可以藉由設定此 URL 位址來建立用戶端。
 
-使用 Visual Studio**加入已連接服務**功能時，會將 `portfolios.proto` 檔案新增至類別庫專案做為*連結*的檔案，而不是複製，因此服務專案中檔案的變更會自動套用至用戶端專案. @No__t_1 檔案中的 `<Protobuf>` 元素看起來像這樣：
+使用 Visual Studio**加入已連接服務**功能時，會將 `portfolios.proto` 檔案新增至類別庫專案做為*連結*的檔案，而不是複製，因此服務專案中檔案的變更會自動套用至用戶端專案. `csproj` 檔案中的 `<Protobuf>` 元素看起來像這樣：
 
 ```xml
 <Protobuf Include="..\TraderSys.Portfolios\Protos\portfolios.proto" GrpcServices="Client">

@@ -3,16 +3,14 @@ title: 網路通訊協定-WCF 開發人員的 gRPC
 description: GRPC 網路通訊協定的總覽。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: a176d3e84f5f454f746273c9cc7e7afe7c7f9d8a
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: cf99b2608d576765856c992679b93b6f21e796cf
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184285"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846390"
 ---
 # <a name="network-protocols"></a>網路通訊協定
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 與 WCF 不同的是，gRPC 會使用 HTTP/2 作為其網路的基礎。 這在 WCF 和 SOAP 上提供顯著的優點，這只會在 HTTP/1.1 上運作。 對於想要使用 gRPC 的開發人員而言，假設沒有 HTTP/2 的替代方案，那麼最好的時機是探索 HTTP/2，並找出使用 gRPC 的其他好處。
 

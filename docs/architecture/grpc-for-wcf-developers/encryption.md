@@ -3,22 +3,20 @@ title: WCF 開發人員的加密和網路安全性 gRPC
 description: GRPC 中網路安全性和加密的一些注意事項
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 8a115b59337003669b4e5436edffe239489ca79e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67ee1ffaf00ea0cc6b771ede9f49b6a691af0968
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184460"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846671"
 ---
 # <a name="encryption-and-network-security"></a>加密和網路安全性
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 WCF 的網路安全性模型是廣泛且複雜的，包括使用 HTTPS 或 TLS over TCP 的傳輸層級安全性，以及使用 WS-Security 規格來加密個別訊息的訊息層級安全性。
 
 gRPC 會將安全的網路功能保留在基礎 HTTP/2 通訊協定中，這可以使用一般 TLS 憑證來加以保護。
 
-Web 瀏覽器會堅持使用 HTTP/2 的 TLS 連線，但大部分的程式設計用戶端（包括）都是如此。NET 的`HttpClient`，可以透過未加密的連接使用 HTTP/2。 `HttpClient`預設*需要加密*，但您可以使用<xref:System.AppContext>參數覆寫此項。
+Web 瀏覽器會堅持使用 HTTP/2 的 TLS 連線，但大部分的程式設計用戶端（包括）都是如此。NET 的 `HttpClient`，可以透過未加密的連接使用 HTTP/2。 `HttpClient`*預設*需要加密，但是您可以使用 <xref:System.AppContext> 交換器來覆寫此項。
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);

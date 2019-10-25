@@ -3,16 +3,14 @@ title: WCF 系結和傳輸-WCF 開發人員的 gRPC
 description: 瞭解不同的 WCF 系結和傳輸與 gRPC 之間的比較。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: f1866fe379dd307ede8128b43cf8f70c8b4caf69
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
-ms.translationtype: HT
+ms.openlocfilehash: 34321395ddd7059ac7e3c268e313a03251662911
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771603"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846055"
 ---
 # <a name="wcf-bindings-and-transports"></a>WCF 繫結和傳輸
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 WCF 有許多不同的內建系結 *，這些系*結會指定不同的網路通訊協定、電傳格式和其他的執行詳細資料。 gRPC 實際上只有一個網路通訊協定和一個電傳格式（技術上來說，*可以*自訂電傳格式，但這不在本書的討論範圍內）。 在大部分情況下，您可能會發現 gRPC 提供最佳的解決方案。 接下來是關於最相關的 WCF 系結，以及它們如何與 gRPC 中的對等項進行比較的簡短討論。
 

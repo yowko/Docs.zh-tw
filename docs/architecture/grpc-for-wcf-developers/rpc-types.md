@@ -3,16 +3,14 @@ title: WCF 開發人員的 RPC gRPC 類型
 description: 瞭解 WCF 支援的遠端程序呼叫類型，以及它們在 gRPC 中的對等專案
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 4fed4ca7fa4ae6a0f861185719917ff0ed5929fd
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: ce5bf03b01dff3f7bb201ff08c9065abc2e58360
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184159"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846224"
 ---
-# <a name="types-of-rpc"></a>RPC 的類型
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="types-of-rpc"></a>RPC 類型
 
 身為 Windows Communication Foundation （WCF）開發人員，您可能會用來處理下列類型的遠端程序呼叫（RPC）：
 
@@ -60,11 +58,11 @@ public async Task ShowThing(int thingId)
 }
 ```
 
-如您所見，實 gRPC 一元 RPC 服務方法與執行 WCF 作業非常類似，不同之處在于 gRPC 會覆寫基類方法，而不是執行介面。 請注意，在伺服器上，gRPC 基底方法一律<xref:System.Threading.Tasks.Task%601>會傳回，雖然用戶端同時提供非同步和封鎖方法來呼叫服務。
+如您所見，實 gRPC 一元 RPC 服務方法與執行 WCF 作業非常類似，不同之處在于 gRPC 會覆寫基類方法，而不是執行介面。 請注意，在伺服器上，gRPC 基底方法一律會傳回 <xref:System.Threading.Tasks.Task%601>，雖然用戶端同時提供非同步和封鎖方法來呼叫服務。
 
 ## <a name="wcf-duplex-one-way-to-client"></a>WCF 雙工，單向至用戶端
 
-WCF 應用程式（具有特定系結）可以在用戶端與伺服器之間建立持續連線，而伺服器可以使用指定<xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>的*回呼介面*，以非同步方式將資料傳送至用戶端，直到關閉連接為止。property.
+WCF 應用程式（具有特定系結）可以在用戶端與伺服器之間建立持續性連接，而伺服器可以使用指定的*回呼介面*，以非同步方式將資料傳送至用戶端，直到關閉連接為止 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>property.
 
 gRPC 服務提供與訊息資料流程類似的功能。 在執行方面，資料流程不會*完全*對應到 WCF 雙工服務，但也可以達成相同的結果。
 
@@ -116,17 +114,17 @@ public async Task TellTheTimeAsync(CancellationToken token)
 ```
 
 > [!NOTE]
-> 伺服器串流 Rpc 適用于訂用帳戶式服務，也適用于在記憶體中建立整個資料集時，傳送非常大型的資料集。 不過，串流回應與在單一訊息中`repeated`傳送欄位的速度一樣快，因為不應針對小型資料集使用規則串流。
+> 伺服器串流 Rpc 適用于訂用帳戶式服務，也適用于在記憶體中建立整個資料集時，傳送非常大型的資料集。 不過，串流回應與在單一訊息中傳送 `repeated` 欄位的速度一樣快，因為規則串流處理不應用於小型資料集。
 
 ### <a name="differences-to-wcf"></a>WCF 的差異
 
 WCF 雙工服務使用的用戶端回呼介面可以有多個方法。 GRPC 伺服器串流服務只能透過單一資料流程傳送訊息。 如果您需要多個方法，請使用具有[任何欄位或欄位之一的](protobuf-any-oneof.md)訊息類型來傳送不同的訊息，並在用戶端中撰寫程式碼來處理它們。
 
-在 WCF 中，具有會話的[ServiceContract](xref:System.ServiceModel.ServiceContractAttribute)類別會保持運作，直到連接關閉為止，而且可以在會話內呼叫多個方法。 在 gRPC 中， `Task`由實方法所傳回的不應完成，直到連接關閉為止。
+在 WCF 中，具有會話的[ServiceContract](xref:System.ServiceModel.ServiceContractAttribute)類別會保持運作，直到連接關閉為止，而且可以在會話內呼叫多個方法。 在 gRPC 中，執行方法所傳回的 `Task` 不應完成，直到連接關閉為止。
 
 ## <a name="wcf-one-way-operations-and-grpc-client-streaming"></a>WCF 單向作業和 gRPC 用戶端串流
 
-WCF 提供單向作業（以標示）， `[OperationContract(IsOneWay = true)]`其會傳回傳輸特定的通知。 gRPC 服務方法一律會傳迴響應，即使它是空的，而且用戶端應該一律等待該回應。 如需 gRPC 中的「火災」樣式訊息，您可以建立用戶端串流服務。
+WCF 提供單向作業（以 `[OperationContract(IsOneWay = true)]`標記），其會傳回傳輸特定的通知。 gRPC 服務方法一律會傳迴響應，即使它是空的，而且用戶端應該一律等待該回應。 如需 gRPC 中的「火災」樣式訊息，您可以建立用戶端串流服務。
 
 ### <a name="thing_logproto"></a>thing_log. proto
 
@@ -190,11 +188,11 @@ public class ThingLogger : IAsyncDisposable
 }
 ```
 
-同樣地，用戶端串流處理 Rpc 也可以用於如前一個範例所示的引發和忘記訊息，但也適用于將非常大型的資料集傳送至伺服器。 適用于效能的相同警告：對於較小的資料`repeated`集，請使用一般訊息中的欄位。
+同樣地，用戶端串流處理 Rpc 也可以用於如前一個範例所示的引發和忘記訊息，但也適用于將非常大型的資料集傳送至伺服器。 適用于效能的相同警告：對於較小的資料集，請在一般訊息中使用 `repeated` 欄位。
 
 ## <a name="wcf-full-duplex-services"></a>WCF 全雙工服務
 
-WCF 雙工系結支援服務介面和用戶端回呼介面上的多個單向作業，讓用戶端與伺服器之間進行的交談得以進行。 gRPC 支援類似于雙向串流 rpc 的專案，其中兩個參數都是`stream`以修飾詞標記。
+WCF 雙工系結支援服務介面和用戶端回呼介面上的多個單向作業，讓用戶端與伺服器之間進行的交談得以進行。 gRPC 支援類似于雙向串流 Rpc 的專案，其中兩個參數都以 `stream` 修飾詞標記。
 
 ### <a name="chatproto"></a>聊天. proto
 

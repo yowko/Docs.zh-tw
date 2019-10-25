@@ -3,24 +3,22 @@ title: WS-* 通訊協定-適用于 WCF 開發人員的 gRPC
 description: 檢查 WCF 支援的 WS-* 通訊協定，以及 gRPC 所提供的替代專案
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: cd9af401fc46297fc0c67f5b3e5d6b34177d6a87
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 4e7b80df182fb69cc51e14738e59ad87efaf5dd2
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184026"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846035"
 ---
-# <a name="ws--protocols"></a>WS-\*通訊協定
+# <a name="ws--protocols"></a>WS-\* 通訊協定
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-使用 Windows Communication Foundation （WCF）的其中一項真正優點，就是支援許多現有的_WS\*_ 標準通訊協定。 本節將簡短說明 gRPC 如何管理相同的 WS\*通訊協定，並討論沒有替代方案時可用的選項。
+使用 Windows Communication Foundation （WCF）的其中一項真正優點，就是支援許多現有的_WS\*_ 標準通訊協定。 本節將簡短說明 gRPC 如何管理相同的 WS\* 通訊協定，並討論沒有替代方案時可用的選項。
 
 ## <a name="metadata-exchange---ws-policy-ws-discovery-and-so-on"></a>中繼資料交換-WS-原則、WS-Discovery 等等
 
 SOAP 服務會公開 Web 服務描述語言（WSDL）架構檔，其中包含資料格式、作業或通訊選項等資訊。 此架構可用來產生用戶端程式代碼。
 
-從相同`.proto`的檔案產生伺服器和用戶端時，gRPC 的效果最佳，但是伺服器反映選用的延伸模組則提供了一種方式，可以從執行中的伺服器公開動態資訊。 如需詳細資訊，請參閱[Grpc](https://nuget.org/packages/Grpc.Reflection) NuGet 套件和[ C# Grpc Server 反映](https://github.com/grpc/grpc/blob/master/doc/csharp/server_reflection.md)一文。
+從相同的 `.proto` 檔案產生伺服器和用戶端時，gRPC 的效果最佳，但是伺服器反映選用的延伸模組則提供了一種方式，可以從執行中的伺服器公開動態資訊。 如需詳細資訊，請參閱[Grpc](https://nuget.org/packages/Grpc.Reflection) NuGet 套件和[ C# Grpc Server 反映](https://github.com/grpc/grpc/blob/master/doc/csharp/server_reflection.md)一文。
 
 WS-探索通訊協定可用來尋找區域網路上的服務。 gRPC 服務通常是使用 DNS 或服務登錄（例如 Consul 或 ZooKeeper）來找出。
 

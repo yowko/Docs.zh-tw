@@ -3,16 +3,14 @@ title: 呼叫認證-WCF 開發人員的 gRPC
 description: 如何在 ASP.NET Core 3.0 中執行和使用 gRPC 呼叫認證。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 483f540a0ed3849883c07cc70f0e3d45a6b121ad
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 5f29d69ec37fe60bcd7ca01391001ea9eb71e7e4
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184593"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846689"
 ---
 # <a name="call-credentials"></a>呼叫認證
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 呼叫認證全都是以每個要求傳入中繼資料的某種權杖為基礎。
 
@@ -60,7 +58,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-屬性需要以驗證已簽署`Microsoft.IdentityModels.Tokens.SecurityKey`權杖所需的密碼編譯資料來執行。 `IssuerSigningKey` 此權杖應安全地儲存在*秘密伺服器*（例如 Azure KeyVault）中。
+`IssuerSigningKey` 屬性需要使用驗證已簽署權杖所需的密碼編譯資料來執行 `Microsoft.IdentityModels.Tokens.SecurityKey`。 此權杖應安全地儲存在*秘密伺服器*（例如 Azure KeyVault）中。
 
 接下來，新增授權服務，以控制對系統的存取。
 
@@ -79,7 +77,7 @@ public void ConfigureServices(IServiceCollection services)
 > [!TIP]
 > 驗證和授權是兩個不同的步驟。 驗證是用來判斷使用者的身分識別。 授權會決定是否允許該使用者存取系統的各個部分。
 
-現在，將驗證和授權中介軟體新增至`Configure`方法中的 ASP.NET Core 管線。
+現在，在 `Configure` 方法中，將驗證和授權中介軟體新增至 ASP.NET Core 管線。
 
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -102,7 +100,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-最後，將`[Authorize]`屬性套用至要保護的任何服務或方法，並`User`使用基礎`HttpContext`的屬性來確認許可權。
+最後，將 `[Authorize]` 屬性套用至要保護的任何服務或方法，並使用基礎 `HttpContext` 的 `User` 屬性來確認許可權。
 
 ```csharp
 [Authorize]

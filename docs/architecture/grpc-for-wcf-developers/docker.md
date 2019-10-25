@@ -3,16 +3,14 @@ title: 適用于 WCF 開發人員的 Docker gRPC
 description: 建立 ASP.NET Core gRPC 應用程式的 Docker 映射
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 2ed3e823c83d8f11fb7290ba6c343b4b47e68e0b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: cc369da9494ade532187dfc8d19a94a3a037ebab
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770542"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846677"
 ---
 # <a name="docker"></a>Docker
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 本節將討論如何為 ASP.NET Core gRPC 應用程式建立 Docker 映射，並準備好在 Docker、Kubernetes 或其他容器環境中執行。 使用 ASP.NET Core MVC web 應用程式和 gRPC 服務的範例應用程式，可在 GitHub 上的[dotnet 架構/gRPC-wcf 開發人員](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/KubernetesSample)存放庫中取得。
 
@@ -133,7 +131,7 @@ docker build --tag stockdata --file src/StockData/Dockerfile .
 docker run -ti -p 5000:80 stockdata
 ```
 
-@No__t_0 旗標會將您目前的終端機連接到容器的終端機，並在互動模式中執行。 @No__t_0 會將容器上的埠80發佈（連結）至 localhost 網路介面上的埠80。
+`-ti` 旗標會將您目前的終端機連接到容器的終端機，並在互動模式中執行。 `-p 5000:80` 會將容器上的埠80發佈（連結）至 localhost 網路介面上的埠80。
 
 ## <a name="push-the-image-to-a-registry"></a>將映射推送至登錄
 
