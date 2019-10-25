@@ -1,16 +1,16 @@
 ---
-title: 迭代器
+title: Iterators
 description: 了解如何使用內建 C# 迭代器，以及如何建立您自己的自訂迭代器方法。
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: e816af698a39a4b44aefa92017efdbc9e3c8cc1d
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: HT
+ms.openlocfilehash: c378ceb651eed7e7a3d8c738bd4b2b3cf7de2a0f
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613430"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773881"
 ---
-# <a name="iterators"></a>迭代器
+# <a name="iterators"></a>Iterators
 
 您撰寫的幾乎所有程式或多或少都需要逐一查看集合。 您將會撰寫程式碼，以查看集合中的每個項目。
 
@@ -27,7 +27,7 @@ C# 語言會為上述兩個案例提供功能。 本文將概述這些功能。
 
 ## <a name="iterating-with-foreach"></a>使用 foreach 逐一查看
 
-列舉集合很簡單：`foreach` 關鍵字會列舉集合，並對集合中的每個元素執行一次內嵌陳述式：
+列舉集合很簡單︰`foreach` 關鍵字會列舉集合，並對集合中的每個項目執行一次內嵌陳述式：
 
 ```csharp
 foreach (var item in collection)
@@ -69,8 +69,8 @@ public IEnumerable<int> GetSingleDigitNumbers()
 public IEnumerable<int> GetSingleDigitNumbers()
 {
     int index = 0;
-    while (index++ < 10)
-        yield return index;
+    while (index < 10)
+        yield return index++;
 }
 ```
 
@@ -80,14 +80,14 @@ public IEnumerable<int> GetSingleDigitNumbers()
 public IEnumerable<int> GetSingleDigitNumbers()
 {
     int index = 0;
-    while (index++ < 10)
-        yield return index;
+    while (index < 10)
+        yield return index++;
 
     yield return 50;
 
     index = 100;
-    while (index++ < 110)
-        yield return index;
+    while (index < 110)
+        yield return index++;
 }
 ```
 
@@ -111,8 +111,8 @@ public static IEnumerable<T> Sample(this IEnumerable<T> sourceSequence, int inte
 public IEnumerable<int> GetSingleDigitNumbers()
 {
     int index = 0;
-    while (index++ < 10)
-        yield return index;
+    while (index < 10)
+        yield return index++;
 
     yield return 50;
 
@@ -130,8 +130,8 @@ public IEnumerable<int> GetSingleDigitNumbers()
 public IEnumerable<int> GetSingleDigitNumbers()
 {
     int index = 0;
-    while (index++ < 10)
-        yield return index;
+    while (index < 10)
+        yield return index++;
 
     yield return 50;
 
@@ -155,9 +155,12 @@ public IEnumerable<int> GetSingleDigitOddNumbers(bool getCollection)
 private IEnumerable<int> IteratorMethod()
 {
     int index = 0;
-    while (index++ < 10)
+    while (index < 10)
+    {
         if (index % 2 == 1)
             yield return index;
+        index++;
+    }
 }
 ```
 

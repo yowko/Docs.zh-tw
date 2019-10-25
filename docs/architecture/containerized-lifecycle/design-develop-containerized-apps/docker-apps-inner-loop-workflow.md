@@ -2,18 +2,18 @@
 title: Docker 應用程式的內部迴圈開發工作流程
 description: 了解用於開發 Docker 應用程式的「內部迴圈」工作流程。
 ms.date: 02/15/2019
-ms.openlocfilehash: 565852511f3a837066d5da5cf0e3ab0a902dd7da
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 5f534b23f5e0042e68343deb0c1e9e0ee2e64600
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956504"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394769"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 應用程式的內部迴圈開發工作流程
 
 在觸發跨越整個 DevOps 循環的外部迴圈工作流程之前，所有項目都從每個開發人員的機器開始，使用其慣用語言或平台對應用程式本身編碼，並在本機進行測試 (圖 4-21)。 但不論何種情況，不論您選擇何種語言、架構或平台，您都會有一個重要的共同點。 在此特定的工作流程中，您將一律開發並測試 Docker 容器，但僅在本機。
 
-![此圖顯示內部迴圈開發環境的概念。](./media/docker-apps-inner-loop-workflow/inner-loop-development-context.png)
+![顯示內部迴圈開發環境概念的圖表。](./media/docker-apps-inner-loop-workflow/inner-loop-development-context.png)
 
 **圖 4-21**： 內部迴圈開發內容
 
@@ -209,7 +209,7 @@ Redis 服務會使用從 Docker Hub 登錄提取的[最新公用 redis 映像](h
 
 如果您的應用程式只有單一容器，您只需要將其部署至您的 Docker 主機 (VM 或實體伺服器) 來執行。 不過，如果您的應用程式由多個服務組成，您也需要「撰寫」該應用程式。 讓我們看看不同的選項。
 
-@no__t 0Option：執行單一容器或服務***
+***Option：執行單一容器或服務***
 
 您可以使用 docker run 命令執行 Docker 映像，如下所示：
 
@@ -266,7 +266,7 @@ Visual Studio Code 支援對 Docker 的偵錯，如果您使用 Node.js 和像�
 在使用適用於 Windows 或 Mac 的 Visual Studio 時，您也可以對 Docker 中的 .NET Core 或 .NET Framework 容器進行偵錯，如下一節中所述。
 
 > [!TIP]
->@no__t 0To 深入瞭解如何對 node.js Docker 容器進行調試，請參閱 <https://blog.docker.com/2016/07/live-debugging-docker/> 和 <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>。
+> 若要深入瞭解如何調試 node.js Docker 容器，請參閱 <https://blog.docker.com/2016/07/live-debugging-docker/> 和 <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>。
 
 >[!div class="step-by-step"]
 >[上一頁](docker-apps-development-environment.md)

@@ -2,12 +2,12 @@
 title: Docker 應用程式的開發工作流程
 description: 了解開發 Docker 應用程式的工作流程詳細資料。 一開始會逐步了解一些用以最佳化 Dockerfile 的詳細資料，最後將取得使用 Visual Studio 時可用的簡化工作流程。
 ms.date: 01/07/2019
-ms.openlocfilehash: f7c7252edc82400e2af4b96a75ed040e11df392f
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: cd599753a5e89504f11226e89837df7665bca641
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031878"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771492"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 應用程式的開發工作流程
 
@@ -23,11 +23,11 @@ ms.locfileid: "72031878"
 
 ## <a name="workflow-for-developing-docker-container-based-applications"></a>開發 Docker 容器型應用程式的工作流程
 
-本節描述 Docker 容器型應用程式的「內部迴圈」開發工作流程。 內部迴圈工作流程表示不考慮更廣泛的 DevOps 工作流程 (最多可包含生產環境部署)，只著重於在開發人員電腦上完成的開發工作。 設定環境的初始步驟不包含在內，因為這些步驟只執行一次。
+本節描述 Docker 容器型應用程式的「內部迴圈」開發工作流程。 內部迴圈工作流程表示不考慮更廣泛的 DevOps 工作流程，這可能包含最多生產部署，而且只著重于開發人員電腦上完成的開發工作。 設定環境的初始步驟不包含在內，因為這些步驟只執行一次。
 
 應用程式是由您自己的服務加上額外的程式庫 (相依性) 所組成。 以下是組建 Docker 應用程式時通常會採用的基本步驟，如圖 5-1 所示。
 
-![Docker 應用程式的開發程序：1 - 撰寫應用程式的程式碼，2 - 寫入 Dockerfile，3 - 建立定義於 Dockerfile 的映像，4 -(選擇性) 在 docker-compose.yml 檔案中撰寫服務，5 - 執行容器或 docker-compose 應用程式，6 - 測試應用程式或微服務，7 - 推送至存放庫並重複執行。 ](./media/image1.png)
+![Docker 應用程式的開發程式： 1-撰寫應用程式的程式碼，2-寫入 Dockerfile/s，3-建立在 Dockerfile/s 定義的映射，4-（選擇性）在 docker-compose.dev.debug.yml yml 檔案中撰寫服務，5-執行容器或 Docker 組成應用程式，6-測試您的應用程式或微服務，7-推送至存放庫並重複。 ](./media/image1.png)
 
 **圖 5-1。** 開發 Docker 容器化應用程式的逐步工作流程
 
@@ -110,7 +110,7 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-在此情況下，映像是以 2.2 版的官方 ASP.NET Core Docker 映像為基礎 (適用於 Linux 和 Windows 的多架構)。 這是 `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2` 設定。 (如需這個基底映像的詳細資訊，請參閱 [.NET Core Docker 映像](https://hub.docker.com/_/microsoft-dotnet-core/)頁面。)在 Dockerfile 中，您也需要指示 Docker 接聽您會在執行階段使用的 TCP 通訊埠 (本例中為通訊埠 80，如 EXPOSE 設定的設定)。
+在此情況下，映像是以 2.2 版的官方 ASP.NET Core Docker 映像為基礎 (適用於 Linux 和 Windows 的多架構)。 這是 `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2` 設定。 （如需此基底映射的詳細資訊，請參閱[.Net Core Docker 映射](https://hub.docker.com/_/microsoft-dotnet-core/)頁面。）在 Dockerfile 中，您也需要指示 Docker 接聽您將在執行時間使用的 TCP 埠（在此案例中為埠80，如同使用 [公開] 設定所設定）。
 
 您可在 Dockerfile 中指定其他的組態設定，視您使用的語言和架構而定。 例如，ENTRYPOINT 行中有 `["dotnet", "MySingleContainerWebApp.dll"]` 會指示 Docker 執行 .NET Core 應用程式。 如果您使用 SDK 和 .NET Core CLI (dotnet CLI) 建置及執行 .NET 應用程式，此設定會有所不同。 重點是 ENTRYPOINT 行與其他設定會不一樣，視您選擇的應用程式語言和平台而定。
 
@@ -204,19 +204,19 @@ Dockerfile 類似於批次指令碼。 類似於必須從命令列設定電腦�
 
 以下逐行詳細說明：
 
-- **行 #1：** 以僅限執行階段的「小型」基底映像開始一個階段，並將它稱為**基底**以供參考。
+- **行 #1：** 使用「小型」僅限執行時間基底映射來開始階段，並呼叫它做為參考的**基底**。
 
 - **行 #2：** 在映射中建立 **/app**目錄。
 
-- **行 #3：** 公開連接埠 **80**。
+- **行 #3：** 公開端口**80**。
 
 - **行 #5：** 開始新的階段，其中包含「大型」映射以供建立/發行。 呼叫它**組建**以供參考。
 
-- **行 #6：** 在映像中建立目錄 **/src**。
+- **行 #6：** 在映射中建立目錄 **/src** 。
 
 - **行 #7：** 最多第16行，複製參考**的 .csproj**專案檔，以便之後能夠還原封裝。
 
-- **行 #17：** 還原 **Catalog.API** 專案和參考專案的套件。
+- **行 #17：** 還原目錄的套件 **。 API**專案和參考的專案。
 
 - **行 #18：** 將**解決方案的所有目錄樹狀結構**（包含在 **.dockerignore**檔案中的檔案/目錄除外）複製到映射中的 **/src**目錄。
 
@@ -234,7 +234,7 @@ Dockerfile 類似於批次指令碼。 類似於必須從命令列設定電腦�
 
 - **行 #27：** 將 **/app**目錄從階段**發行**複製到目前的目錄。
 
-- **行 #28：** 定義啟動容器時要執行的命令。
+- **行 #28：** 定義要在容器啟動時執行的命令。
 
 現在讓我們來探索一些可改善整體程序效能的最佳化，以 eShopOnContainers 為例，則表示在 Linux 容器中建置完整方案需要約 22 分鐘或更多的時間。
 
@@ -533,14 +533,14 @@ docker-compose up 和 docker run 命令 (在 Visual Studio 中執行和偵錯容
 - **對本機 Docker 容器中的應用程式偵錯** \
   [https://docs.microsoft.com/visualstudio/containers/edit-and-refresh](/visualstudio/containers/edit-and-refresh)
 
-- **Steve Lasker。使用 Docker 組建、偵錯、部署 ASP.NET Core 應用程式。** 影片。 \
+- **Steve Lasker。使用 Docker 建立、Debug、部署 ASP.NET Core 應用程式。** 影片。 \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115>
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>使用 Visual Studio 開發容器時的簡化工作流程
 
 實際上，使用 Visual Studio 時的工作流程時遠比您使用編輯器/CLI 方法更簡單。 Visual Studio 會隱藏或簡化與 Dockerfile 和 docker-compose.yml 檔案有關，為 Docker 所需的大部分步驟，如圖 5-15 所示。
 
-![使用 Visual Studio 的簡化容器開發工作流程：1 - 撰寫應用程式的程式碼，2 - 將 Docker 支援新增至專案 (只要一次)，3 - 執行容器或 docker-compose 應用程式，4 - 測試應用程式或微服務，5 - 推送至存放庫並重複執行。](./media/image20.png)
+![使用 Visual Studio 的簡化容器開發工作流程： 1-撰寫您的應用程式程式碼 2-將 Docker 支援新增至專案（僅限一次）、3-執行容器或 Docker 撰寫應用程式、4-測試您的應用程式或微服務，5-推送至存放庫並重複執行。](./media/image20.png)
 
 **圖 5-15**。 使用 Visual Studio 開發時的簡化工作流程
 

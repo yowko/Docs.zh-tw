@@ -5,12 +5,12 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 42f8d51f2547cd6f3240a05420b2da10b7cf52e3
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: b85d77900c5d9227ecc6fe81b8a8d68171dd9ef5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179386"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774513"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>在 ASP.NET Core Web API 中部署模型
 
@@ -19,9 +19,9 @@ ms.locfileid: "72179386"
 > [!NOTE]
 > `PredictionEnginePool` 服務延伸模組目前處於預覽狀態。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-- 已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 15.6 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
+- 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)版本。
 - PowerShell。
 - 預先定型的模型。 使用 [ML.NET 情感分析教學課程](../tutorials/sentiment-analysis.md)來建置您自己的模型，或是下載這個[預先定型的情感分析機器學習模型](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
 
@@ -62,9 +62,9 @@ ms.locfileid: "72179386"
     ```csharp
     using Microsoft.ML.Data;
     ```
-    
+
     移除現有的類別定義，然後將下列程式碼新增至 **SentimentData.cs** 檔案：
-    
+
     ```csharp
     public class SentimentData
     {
@@ -83,9 +83,9 @@ ms.locfileid: "72179386"
     ```csharp
     using Microsoft.ML.Data;
     ```
-    
+
     移除現有的類別定義，然後將下列程式碼新增至 *SentimentPrediction.cs* 檔案：
-    
+
     ```csharp
     public class SentimentPrediction : SentimentData
     {
@@ -99,11 +99,11 @@ ms.locfileid: "72179386"
     }
     ```
 
-    `SentimentPrediction` 繼承自 `SentimentData`。 這可讓您更輕易地看到 `SentimentText` 屬性中的原始資料，以及模型所產生的輸出。 
+    `SentimentPrediction` 繼承自 `SentimentData`。 這可讓您更輕易地看到 `SentimentText` 屬性中的原始資料，以及模型所產生的輸出。
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>登錄 PredictionEnginePool 以在應用程式中使用
 
-若要進行單一預測，您必須建立[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全執行緒。 此外，您必須在應用程式內需要的任何地方建立它的實例。 當您的應用程式成長時，此進程可能會變得難以管理。 為了改善效能和執行緒安全性，請使用相依性插入和 `PredictionEnginePool` 服務的組合，這會建立[@no__t 4](xref:Microsoft.ML.PredictionEngine%602)物件的[@no__t 2](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) ，以便在整個應用程式中使用。
+若要進行單一預測，您必須建立[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全執行緒。 此外，您必須在應用程式內需要的任何地方建立它的實例。 當您的應用程式成長時，此進程可能會變得難以管理。 為了改善效能和執行緒安全性，請使用相依性插入和 `PredictionEnginePool` 服務的組合，這會建立[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)物件的[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) ，以便在整個應用程式中使用。
 
 如果您想要深入瞭解[ASP.NET Core 中的](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)相依性插入，下列連結提供詳細資訊。
 
@@ -130,22 +130,22 @@ ms.locfileid: "72179386"
     }
     ```
 
-概括而言，此程式碼會自動初始化物件和服務，以供稍後在應用程式要求時使用，而不需要手動執行。 
+概括而言，此程式碼會自動初始化物件和服務，以供稍後在應用程式要求時使用，而不需要手動執行。
 
-機器學習模型不是靜態的。 當有新的定型資料可供使用時，就會重新訓練並重新部署模型。 將模型的最新版本取得至應用程式的方法之一，就是重新部署整個應用程式。 不過，這會引進應用程式停機時間。 @No__t-0 服務提供一種機制，可重載已更新的模型，而不需要讓應用程式關閉。 
+機器學習模型不是靜態的。 當有新的定型資料可供使用時，就會重新訓練並重新部署模型。 將模型的最新版本取得至應用程式的方法之一，就是重新部署整個應用程式。 不過，這會引進應用程式停機時間。 @No__t_0 服務提供一種機制，可重載已更新的模型，而不需要讓應用程式關閉。
 
-將 `watchForChanges` 參數設定為 `true`，而 `PredictionEnginePool` 啟動一個[`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) ，接聽檔案系統變更通知，並在檔案變更時引發事件。 這會提示 `PredictionEnginePool` 會自動重載模型。
+將 [`watchForChanges`] 參數設定為 [`true`]，`PredictionEnginePool` 會啟動一個接聽檔案系統變更通知的[`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) ，並在檔案變更時引發事件。 這會提示 `PredictionEnginePool` 自動重載模型。
 
-此模型是由 `modelName` 參數所識別，因此，每個應用程式可以在變更時重載一個以上的模型。 
+模型是由 `modelName` 參數所識別，因此，每個應用程式可以在變更時重載一個以上的模型。
 
 > [!TIP]
-> 或者，當您使用遠端儲存的模型時，可以使用 `FromUri` 方法。 @No__t-0 會輪詢遠端位置以進行變更，而不是監看檔案已變更的事件。 輪詢間隔預設為5分鐘。 您可以根據應用程式的需求來增加或減少輪詢間隔。 在下面的程式碼範例中，`PredictionEnginePool` 會每分鐘輪詢儲存在指定 URI 的模型。
->    
+> 或者，當您使用遠端儲存的模型時，可以使用 `FromUri` 方法。 @No__t_0 輪詢遠端位置以進行變更，而不是監看檔案變更的事件。 輪詢間隔預設為5分鐘。 您可以根據應用程式的需求來增加或減少輪詢間隔。 在下面的程式碼範例中，`PredictionEnginePool` 會每分鐘輪詢儲存在指定 URI 的模型。
+>
 >```csharp
 >builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
->       modelName: "SentimentAnalysisModel", 
->       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip", 
+>       modelName: "SentimentAnalysisModel",
+>       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
 >       period: TimeSpan.FromMinutes(1));
 >```
 
@@ -165,7 +165,7 @@ ms.locfileid: "72179386"
     ```
 
     移除現有的類別定義，然後將下列程式碼新增至 *PredictController.cs* 檔案：
-    
+
     ```csharp
     public class PredictController : ControllerBase
     {
@@ -193,7 +193,7 @@ ms.locfileid: "72179386"
     }
     ```
 
-此程式碼會透過將預測服務傳遞至控制器的建構函式 (透過相依性插入取得) 來指派 `PredictionEnginePool`。 然後，`Predict` 控制器的 @no__t 1 方法會使用 `PredictionEnginePool`，利用在 `Startup` 類別中註冊的 `SentimentAnalysisModel` 進行預測，並在成功時將結果傳回給使用者。
+此程式碼會透過將預測服務傳遞至控制器的建構函式 (透過相依性插入取得) 來指派 `PredictionEnginePool`。 然後，`Predict` 控制器的 `Post` 方法會使用 `PredictionEnginePool`，以在 `Startup` 類別中註冊的 `SentimentAnalysisModel` 進行預測，並在成功時將結果傳回給使用者。
 
 ## <a name="test-web-api-locally"></a>在本機測試 Web API
 
@@ -207,7 +207,7 @@ ms.locfileid: "72179386"
     ```
 
     如果成功，輸出看起來應該類似下列文字：
-    
+
     ```powershell
     Negative
     ```

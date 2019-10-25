@@ -2,12 +2,12 @@
 title: 設計微服務導向應用程式
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解微服務導向應用程式的優點和缺點，讓您能夠採取明智的決策。
 ms.date: 10/02/2018
-ms.openlocfilehash: dc3c8ccd95505cb828383f499b9bf950e7c12a30
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1c2fe341c62111e915df35aab818b8a980004834
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039820"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772052"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>設計微服務導向應用程式
 
@@ -65,7 +65,7 @@ ms.locfileid: "71039820"
 
 此應用程式包含多個子系統，包括數個存放區 UI 前端 (Web 應用程式和原生行動應用程式)，以及用來執行所有必要伺服器端作業的後端微服務和容器 (使用數個 API 閘道作為內部微服務的合併進入點)。 圖 6-1 顯示參考應用程式的架構。
 
-![行動和 SPA 用戶端會與單一 API 閘道端點通訊，而該閘道端點接著可與微服務通訊。 傳統的 Web 用戶端會與 MVC 微服務通訊，而該微服務可與其他微服務通訊](./media/image1.png)
+![Mobile 和 SPA 用戶端會與單一 API 閘道端點通訊，然後再與微服務通訊。 傳統 web 用戶端會與 MVC 微服務通訊，這會與微服務通訊。](./media/image1.png)
 
 **圖 6-1**. 開發環境的 eShopOnContainers 參考應用程式架構
 
@@ -89,7 +89,7 @@ ms.locfileid: "71039820"
 
 ### <a name="additional-resources"></a>其他資源
 
-- **eShopOnContainers GitHub 存放庫：參考應用程式的原始程式碼** \
+- **EShopOnContainers GitHub 存放庫。參考應用程式  \ 的原始程式碼**
   <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>微服務架構解決方案的優點

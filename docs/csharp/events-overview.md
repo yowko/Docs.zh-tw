@@ -3,12 +3,12 @@ title: 事件簡介
 description: 透過此概觀了解 .NET Core 中的事件，以及事件的語言設計目標。
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: e2944100d648d90e7aa5ea5798a351b8fd382cf7
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
-ms.translationtype: HT
+ms.openlocfilehash: b1fd2ebe2ae91b55c9179f280d8894f6b40ced9b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051945"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771909"
 ---
 # <a name="introduction-to-events"></a>事件簡介
 
@@ -49,7 +49,7 @@ public event EventHandler<FileListArgs> Progress;
 
 事件類型 (本例中為 `EventHandler<FileListArgs>`) 必須是委派類型。 宣告事件時應該遵循一些慣例。 一般而言，事件委派類型具有 void 傳回。
 事件宣告應該是動詞或動詞片語。
-當事件報告發生過事件時，請使用過去式 (如本例)。 報告將要發生的事件時，請使用現在式動詞 (例如，`Closing`)。 通常使用現在式是表示您的類別支援某類的自訂行為。 最常見的情況之一就是支援取消。 例如，`Closing` 事件可包括一個引數，指出關閉作業是否應該繼續。  其他情況可讓呼叫端更新事件引數的屬性以修改行為。 您可引發事件，指出演算法會採用的下一個提議動作。 事件處理常式可透過修改事件引數的屬性來要求不同的動作。
+當附隨報告已發生的專案時，請使用過去的時態。 報告將要發生的事件時，請使用現在式動詞 (例如，`Closing`)。 通常使用現在式是表示您的類別支援某類的自訂行為。 最常見的情況之一就是支援取消。 例如，`Closing` 事件可包括一個引數，指出關閉作業是否應該繼續。  其他情況可讓呼叫端更新事件引數的屬性以修改行為。 您可引發事件，指出演算法會採用的下一個提議動作。 事件處理常式可透過修改事件引數的屬性來要求不同的動作。
 
 當您想要引發事件時，可使用委派引動過程語法呼叫事件處理常式︰
 
@@ -82,4 +82,4 @@ fileLister.Progress -= onProgress;
 
 在下一篇文章中，您會深入了解一般的事件模式，以及本例的不同變化。
 
-[下一篇](event-pattern.md)
+[下一步](event-pattern.md)

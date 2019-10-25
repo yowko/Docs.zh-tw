@@ -2,12 +2,12 @@
 title: 使用 Web API 實作微服務應用程式層
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解相依性插入和中繼程序模式，以及它們在 Web API 應用程式層的實作詳細資料。
 ms.date: 10/08/2018
-ms.openlocfilehash: df304ffbe2406323e3dcf42b9eb989b02a62b28b
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 38c0bdb32666ab727c573d466d3e30d739bdd3b3
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249739"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771108"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 實作微服務應用程式層
 
@@ -109,10 +109,10 @@ public void ConfigureServices(IServiceCollection services)
 
 #### <a name="additional-resources"></a>其他資源
 
-- **Matthew King：使用 Scrutor 註冊服務** \
+- **Matthew k。向 Scrutor  \ 註冊服務**
   <https://www.mking.net/blog/registering-services-with-scrutor>
 
-- **Kristian Hellang：Scrutor.** GitHub 存放庫。 \
+- **Kristian Hellang。Scrutor.** GitHub 存放庫。 \
   <https://github.com/khellang/Scrutor>
 
 #### <a name="use-autofac-as-an-ioc-container"></a>使用 Autofac 作為 IoC 容器
@@ -181,7 +181,7 @@ Autofac 也有功能可[掃描組件以及按命名慣例註冊類型](https://a
 
 如圖 7-24 所示，模式的基礎是接受來自用戶端的命令，然後根據領域模型規則處理它們，最後保持交易狀態。
 
-![CQRS 的寫入端高層級檢視：UI 應用程式透過連接到 CommandHandler 的 API 來傳送命令，這依賴領域模型和基礎結構來更新資料庫。](./media/image21.png)
+![CQRS 中寫入端的高階視圖： UI 應用程式會透過取得 CommandHandler 的 API 傳送命令，這取決於網域模型和基礎結構來更新資料庫。](./media/image21.png)
 
 **圖 7-24**. CQRS 模式中命令或「交易端」的高階檢視
 
@@ -394,7 +394,7 @@ public class CreateOrderCommandHandler
 
 #### <a name="additional-resources"></a>其他資源
 
-- **Mark Seemann：應用程式在界限不是物件導向的** \
+- **Mark Seemann。就界限而言，應用程式並不是物件導向** \
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **命令和事件** \
@@ -403,10 +403,10 @@ public class CreateOrderCommandHandler
 - **命令處理常式有何作用？** \
   <http://cqrs.nu/Faq/command-handlers>
 
-- **Jimmy Bogard：網域命令模式 – 處理常式** \
+- **Jimmy Bogard。網域命令模式–處理常式** \
   <https://jimmybogard.com/domain-command-patterns-handlers/>
 
-- **Jimmy Bogard：網域命令模式 – 驗證** \
+- **Jimmy Bogard。網域命令模式–驗證** \
   <https://jimmybogard.com/domain-command-patterns-validation/>
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>命令處理序管道：如何觸發命令處理常式
@@ -471,7 +471,7 @@ public class CreateOrderCommandHandler
 
 檢閱本指南時，Jimmy Bogard 會說明另一個使用中繼程序模式的好理由：
 
-> 我認為您可能需要注意這裡的測試 - 它提供不錯的一致窗口，讓您查看系統的行為。 要求進，回應出。我們發現層面在建置行為一致的測試時相當重要。
+> 我認為您可能需要注意這裡的測試 - 它提供不錯的一致窗口，讓您查看系統的行為。 要求傳入，回應輸出。我們發現在建立一致運作的測試方面相當有價值。
 
 首先，讓我們看一下您實際使用中繼程序物件的範例 WebAPI 控制器。 如果您未使用中繼程式物件，則需要插入該控制器的所有相依性，例如記錄器物件和其他專案。 因此，建構函式可能會相當複雜。 另一方面，如果您使用中繼程序物件，則控制器的建構函式可能會較為簡單，即只有一些相依性而不是許多相依性 (如果一個跨領域作業有一個相依性)，如下列範例所示：
 
@@ -833,7 +833,7 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 
 ##### <a name="fluent-validation"></a>Fluent 驗證
 
-- **Jeremy Skinner：FluentValidation.** GitHub 存放庫。 \
+- **Jeremy Skinner。FluentValidation.** GitHub 存放庫。 \
   <https://github.com/JeremySkinner/FluentValidation>
 
 > [!div class="step-by-step"]

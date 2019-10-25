@@ -3,12 +3,12 @@ title: WCF 開發人員的 gRPC-gRPC 總覽
 description: 瞭解指導開發 gRPC 的原則集合。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: b372cc9dcdb2efd605b3d9b688513e4ff8530b01
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 489b91f6aa279d9c457e2e8fccd4438885076779
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184439"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770457"
 ---
 # <a name="grpc-overview"></a>gRPC 總覽
 
@@ -20,7 +20,7 @@ ASP.NET Core 3.0 是 ASP.NET 的第一版，以原生方式支援 gRPC 作為第
 
 ## <a name="key-principles"></a>主要原則
 
-如第1章所述，Google 想要使用 HTTP/2 的引進來修改 Stubby，其內部的一般用途 RPC 基礎結構。 Stubby，重新命名的 gRPC 現在可以利用標準化，並擴充其對行動運算、雲端和物聯網的適用性。
+如第1章所述，Google 想要使用 HTTP/2 的引進來取代 Stubby，其內部的一般用途 RPC 基礎結構。 gRPC 以 Stubby 為基礎，現在可以利用標準化，並擴充其對行動運算、雲端和物聯網的適用性。
 
 為了達到此目的，[雲端原生運算基礎（由 cncf）](https://www.cncf.io/)建立了一組可管理 gRPC 的原則。 下列清單顯示最相關的內容，主要關心最大化協助工具和可用性：
 

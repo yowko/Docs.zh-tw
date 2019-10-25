@@ -3,12 +3,12 @@ title: 從 project.json 進行的 .NET Core 移轉
 description: 了解如何使用 project.json 來移轉舊版 .NET Core 專案
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: 167f0707bbaf34ce12a1c56ee2320e7cc4f48bd3
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 2912262d1191114d2314fed89e31c91c114f1935
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698923"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773904"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>從 project.json 移轉 .NET Core 專案
 
@@ -40,7 +40,7 @@ Visual Studio 會自動遷移選取的專案。 在遷移方案時，如果您�
 已遷移的檔案（*專案. json*、 *global.asax*、 *xproj*和方案檔）會移至*備份*資料夾。 遷移的方案檔會升級為 Visual Studio 2017 或 Visual Studio 2019，而且您將無法在 Visual Studio 2015 或更早版本中開啟該方案檔。 系統也會自動儲存並開啟名為*UpgradeLog*的檔案，其中包含遷移報表。
 
 > [!IMPORTANT]
-> 您無法使用 Visual Studio 2015 來遷移專案。
+> 在 Visual Studio 2019 16.3 版和更新版本中，您無法載入或遷移*xproj*檔案。 此外，Visual Studio 2015 不提供遷移*xproj*檔案的功能。 如果您使用其中一個 Visual Studio 版本，請安裝適當版本的 Visual Studio，或使用接下來所述的命令列遷移工具。
 
 ### <a name="dotnet-migrate"></a>dotnet migrate
 
@@ -49,17 +49,17 @@ Visual Studio 會自動遷移選取的專案。 在遷移方案時，如果您�
 已遷移的檔案（xproj）會移至*備份*資料夾中（*專案. json*、 *global.asax*和 *.* ）。
 
 > [!NOTE]
-> 如果您使用 Visual Studio Code，`dotnet migrate` 命令不會修改 Visual Studio Code 特定的檔案，例如 `tasks.json`。 這些檔案必須以手動方式變更。
-> 這也適用於使用 Project Ryder 或是 Visual Studio 以外的任何編輯器或整合式開發環境 (IDE) 的情況。
+> 如果您使用 Visual Studio Code，`dotnet migrate` 命令不會修改 Visual Studio Code 特定的檔案，例如*tasks。* 這些檔案必須以手動方式變更。
+> 如果您使用 Visual Studio 以外的編輯器或整合式開發環境（IDE），也會發生這種情況。
 
-如需 project.json 和 csproj 格式的比較，請參閱 [project.json 與 csproj 屬性的對應](../tools/project-json-to-csproj.md)。
+如需有關*專案. json*和 *.csproj*格式的比較，請參閱[project. json 與 .csproj 屬性之間的對應](../tools/project-json-to-csproj.md)。
 
-### <a name="common-issues"></a>常見問題
+如果您收到錯誤：
 
-- 如果您收到錯誤：「找不到符合命令 dotnet-migrate 的可執行檔」：
+> 找不到符合命令 dotnet 的可執行檔-遷移
 
-執行 `dotnet --version` 以查看您所使用的版本。 [`dotnet migrate`](../tools/dotnet-migrate.md) 需要 .NET Core CLI RC3 或更高版本。
-如果您目前的目錄或父目錄中有 *global.json* 檔案且 `sdk` 版本設定為舊版，則會收到此錯誤。
+執行 `dotnet --version` 以查看您所使用的版本。 [`dotnet migrate`](../tools/dotnet-migrate.md)是在 .NET Core SDK 1.0.0 中引進，並已在版本3.0.100 中移除。
+如果目前或父目錄中有一個*global. json*檔案，而且其指定的 `sdk` 版本超出此範圍，您就會收到這個錯誤。
 
 ## <a name="migration-from-dnx-to-csproj"></a>從 DNX 移轉至 csproj
 
@@ -87,6 +87,6 @@ Visual Studio 會自動遷移選取的專案。 在遷移方案時，如果您�
 
 如需從舊的 csproj 格式移轉至新格式的前後範例，請參閱 .NET 部落格上的 [Updating Visual Studio 2017 RC - .NET Core Tooling improvements](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/) (更新 Visual Studio 2017 RC - .NET Core 工具改進) 文章。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [移植、移轉及升級 Visual Studio 專案](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)

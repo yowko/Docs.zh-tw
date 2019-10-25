@@ -5,12 +5,12 @@ ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6387e93bcd4efeec57ada9228dcaf015d053dbf7
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: bf1cb28a6e3096a42aae1c777f6d2d6f9cc16c49
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973233"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774335"
 ---
 # <a name="friend-assemblies"></a>Friend 組件
 
@@ -22,10 +22,10 @@ ms.locfileid: "70973233"
 
 ## <a name="remarks"></a>備註
 
-您可以使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性找出指定組件的一或多個 Friend 組件。 下列範例會使用<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> *元件 A*中的屬性，並將元件*AssemblyB*指定為 friend 元件。 這可讓元件*AssemblyB*存取*元件 A*中的所有類型和成員，並將`internal`其C#標示為 Visual Basic 中的或`Friend` 。
+您可以使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性找出指定組件的一或多個 Friend 組件。 下列範例會使用*元件 A*中的 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性，並將元件*AssemblyB*指定為 friend 元件。 這可讓元件*AssemblyB*存取*元件 A*中標示為 `internal` 的C#所有類型和成員，或 Visual Basic 中的 `Friend`。
 
 > [!NOTE]
-> 當您編譯的元件（例如*AssemblyB* ）將存取另一個元件的內部類型或內部成員（例如*元件 A*）時，您必須使用/out 明確指定輸出檔（ *.exe*或 *.dll*）的名稱。編譯器選項。 因為編譯器尚未針對在繫結至外部參考時所建立的組件產生名稱，所以這是必要動作。 如需詳細資訊，請參閱 [/out (C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) 或 [/out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)。
+> 當您編譯的元件（例如*AssemblyB* ）將存取另一個元件的內部類型或內部成員（例如*元件 A*）時，您必須使用-out 明確指定輸出檔（ *.exe*或 *.dll*）的名稱。編譯器選項。 因為編譯器尚未針對在繫結至外部參考時所建立的組件產生名稱，所以這是必要動作。 如需詳細資訊，請參閱[-C#out （）](../../csharp/language-reference/compiler-options/out-compiler-option.md)或[-out （Visual Basic）](../../visual-basic/reference/command-line-compiler/out.md)。
 
 ```csharp
 using System.Runtime.CompilerServices;
@@ -73,29 +73,29 @@ Public Class ClassWithFriendMethod
 End Class
 ```
 
-只有明確指定為 friend 的元件可以存取`internal` （C#）或`Friend` （Visual Basic）類型和成員。 例如，如果*AssemblyB*是*元件 a*的 friend，而*元件 c*參考*AssemblyB*，則*元件 c*無法`internal`存取元件 a 中的（C#） `Friend`或（Visual Basic）類型.
+只有明確指定為 friend 的元件可以存取 `internal` （C#）或 `Friend` （Visual Basic）類型和成員。 例如，如果*AssemblyB*是*元件 a*的 Friend，而*元件 c*參考*AssemblyB*，則*元件 c*無法存取*元件 a*中的 `internal`C#（）或 `Friend` （Visual Basic）類型。
 
 編譯器會執行一些被傳遞給 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱的基本驗證。 如果*元件 A*宣告*AssemblyB*為 friend 元件，則驗證規則如下所示：
 
 - 如果*元件 A*是強式名稱，則*AssemblyB*也必須是強式名稱。 傳遞至屬性的 friend 元件名稱必須包含用來簽署*AssemblyB*之強式名稱金鑰的元件名稱和公開金鑰。
 
-     傳遞至<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>屬性的 friend 元件名稱不可以是*AssemblyB*的強式名稱。 請勿包含元件版本、文化特性、架構或公開金鑰 token。
+     傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 friend 元件名稱不可以是*AssemblyB*的強式名稱。 請勿包含元件版本、文化特性、架構或公開金鑰 token。
 
-- 如果*元件 A*不是強式名稱，friend 元件名稱應該只包含元件名稱。 如需詳細資訊，請參閱[如何：建立未簽署的](create-unsigned-friend.md)friend 元件。
+- 如果*元件 A*不是強式名稱，friend 元件名稱應該只包含元件名稱。 如需詳細資訊，請參閱[如何：建立未簽署的 friend 元件](create-unsigned-friend.md)。
 
-- 如果*AssemblyB*是強式名稱，您必須使用專案設定或命令列`/keyfile`編譯器選項，為*AssemblyB*指定強式名稱索引鍵。 如需詳細資訊，請參閱[如何：建立已簽署的](create-signed-friend.md)friend 元件。
+- 如果*AssemblyB*為強式名稱，您必須使用專案設定或命令列 `/keyfile` 編譯器選項，為*AssemblyB*指定強式名稱索引鍵。 如需詳細資訊，請參閱[如何：建立已簽署的 friend 元件](create-signed-friend.md)。
 
  <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別也會提供共用類型的功能，但有下列差異：
 
 - <xref:System.Security.Permissions.StrongNameIdentityPermission> 適用於個別類型，而 Friend 組件適用於整個組件。
 
-- 如果您想要與*AssemblyB*共用的<xref:System.Security.Permissions.StrongNameIdentityPermission> *元件 A*中有數百個類型，您必須將新增至所有專案。 如果使用 friend 組件，您只需要宣告 friend 關聯性一次。
+- 如果您想要與*AssemblyB*共用*元件 A*中的數百個類型，您必須將 <xref:System.Security.Permissions.StrongNameIdentityPermission> 新增至所有專案。 如果使用 friend 組件，您只需要宣告 friend 關聯性一次。
 
-- 如果您使用 <xref:System.Security.Permissions.StrongNameIdentityPermission>，則您想要共用的類型必須宣告為公用。 如果您使用 friend 元件，共用的類型會宣告為`internal` （C#）或`Friend` （Visual Basic）。
+- 如果您使用 <xref:System.Security.Permissions.StrongNameIdentityPermission>，則您想要共用的類型必須宣告為公用。 如果您使用 friend 元件，共用類型會宣告為 `internal` （C#）或 `Friend` （Visual Basic）。
 
-如需如何從模組檔案（副檔名為`internal` *.netmodule*的檔案`Friend` ）存取元件（C#）或（Visual Basic）類型和方法的詳細資訊，請參閱[/moduleassemblyname （C#）](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md)或[/moduleassemblyname （Visual Basic）](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)。
+如需如何從模組檔案（副檔名為 *.netmodule*的C#檔案）存取元件之 `internal` （）或 `Friend` （Visual Basic）類型和方法的詳細資訊，請參閱[-moduleassemblyname （C#）](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md)或[-moduleassemblyname （Visual Basic）](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - <xref:System.Security.Permissions.StrongNameIdentityPermission>

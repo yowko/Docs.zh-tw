@@ -2,12 +2,12 @@
 title: 建立簡單資料驅動 CRUD 微服務
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解如何在微服務應用程式的內容中建立簡單的 CRUD (資料驅動) 微服務。
 ms.date: 01/07/2019
-ms.openlocfilehash: 74d9022ffa70ade6ae6e7d405403524dfbc2145a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: db179d9d7d5be5b03f8409b823ee87e71e1c7135
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039919"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771211"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>建立簡單資料驅動 CRUD 微服務
 
@@ -43,7 +43,7 @@ eShopOnContainers 應用程式範例的目錄微服務即為這種簡單資料�
 
 建立專案之後，您可以使用 Entity Framework API 或其他 API，利用您在任何其他 Web API 專案上相同的方式，實作您的 MVC 控制器。 在新的 Web API 專案中，您可以看到該微服務的唯一相依性即是 ASP.NET Core 本身。 就內部而言，在*AspNetCore*中，它會參考 Entity Framework 和其他許多 .Net Core NuGet 套件，如圖6-7 所示。
 
-![API 專案包含對 Microsoft.AspNetCore.App NuGet 套件的參考，其中包含對所有必要套件的參考。 這也可能包含某些其他套件。](./media/image8.png)
+![此 API 專案包含 AspNetCore 的參考，其中包含所有基本套件的參考。 這也可能包含某些其他套件。](./media/image8.png)
 
 **圖 6-7**。 簡單 CRUD Web API 微服務的相依性
 
@@ -118,7 +118,7 @@ public class CatalogController : ControllerBase
         ICatalogIntegrationEventService catalogIntegrationEventService)
     {
         _catalogContext = context ?? throw new ArgumentNullException(nameof(context));
-        _catalogIntegrationEventService = catalogIntegrationEventService 
+        _catalogIntegrationEventService = catalogIntegrationEventService
             ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
 
         _settings = settings.Value;
@@ -289,13 +289,13 @@ public class CatalogController : ControllerBase
 
 ### <a name="additional-resources"></a>其他資源
 
-- **Scott Hanselman。ASP.NET Core RESTful Web API 版本設定變得更加容易** \
+- **Scott Hanselman。ASP.NET Core RESTful Web API 版本設定變得更容易** \
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 - **進行 RESTful web API 的版本設定** \
   <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
-- **Roy Fielding。版本設定、超媒體及 REST** \
+- **Roy。版本控制、超媒體和 REST**  \
   <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>從您的 ASP.NET Core Web API 產生 Swagger 描述中繼資料
@@ -328,7 +328,7 @@ Microsoft Flow、PowerApps 及 Azure Logic Apps 都使用 Swagger 的中繼資�
 
 有許多選項可用來依據 *swagger-ui*，以功能 API 說明頁面的形式為 ASP.NET Core REST API 應用程式自動產生 Swagger 中繼資料。
 
-最為人知的大概是目前用於 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) \(英文\) 中的 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) \(英文\) (我們會在此指南中提到其部份細節)，但您也可以選擇使用 [NSwag](https://github.com/RSuter/NSwag) \(英文\)，其可以從 Swagger 或 OpenAPI 規格，甚至藉由使用 [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio) \(英文\) 掃描包含控制器的 .dll，來產生 Typescript 及 C\# API 用戶端，以及 C\# 控制器。
+最棒的是，我們目前在[eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)中使用的[Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) ，我們將在本指南中討論一些詳細資料，但也有使用[NSwag](https://github.com/RSuter/NSwag)的選項，它可以產生 Typescript 和 C \# API 用戶端，以及C \# 控制器，從 Swagger 或 OpenAPI 規格，甚至是使用[NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio)掃描包含控制器的 .dll。
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>如何使用 Swashbuckle NuGet 套件來自動化產生 API Swagger 中繼資料
 

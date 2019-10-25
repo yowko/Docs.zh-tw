@@ -10,10 +10,10 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: da8f3e592e47c9482d4395b81627c1582e2354f7
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 10/22/2019
 ms.locfileid: "72005246"
 ---
 # <a name="opentype-font-features"></a>OpenType 字型功能
@@ -37,7 +37,7 @@ ms.locfileid: "72005246"
 - 進階印刷樣式控制項的廣泛支援。  
   
 > [!NOTE]
-> Windows SDK 包含一組可與 @no__t 0 應用程式搭配使用的範例 OpenType 字型。 本主題後文會說明這些字型提供的大部分功能。 如需詳細資訊，請參閱[範例 OpenType 字型套件](sample-opentype-font-pack.md)。  
+> Windows SDK 包含一組您可以搭配 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式使用的範例 OpenType 字型。 本主題後文會說明這些字型提供的大部分功能。 如需詳細資訊，請參閱[範例 OpenType 字型套件](sample-opentype-font-pack.md)。  
   
  如需 OpenType 字型格式的詳細資訊，請參閱[Opentype 規格](https://go.microsoft.com/fwlink/?LinkId=96731)。  
   
@@ -59,11 +59,11 @@ ms.locfileid: "72005246"
  用來轉譯不同印刷樣式的變數，例如上標和下標。  
   
 ### <a name="superscripts-and-subscripts"></a>上標和下標  
- @No__t-0 屬性可讓您設定 OpenType 字型的上標和下標值。  
+ @No__t_0 屬性可讓您設定 OpenType 字型的上標和下標值。  
   
  下列文字顯示上標 Palatino Linotype 字型。  
   
- 使用(./media/opentype-font-features/opentype-superscripts.gif "opentype 上標文字")的![文字]  
+ ![使用 OpenType 上標的文字](./media/opentype-font-features/opentype-superscripts.gif "使用 OpenType 上標的文字")  
   
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，為 Palatino Linotype 字型定義上標。  
   
@@ -71,16 +71,16 @@ ms.locfileid: "72005246"
   
  下列文字顯示下標 Palatino Linotype 字型。  
   
- 使用 opentype 注標文字的![文字]使用(./media/opentype-font-features/opentype-subscripts.gif "opentype 下標")  
+ ![使用 OpenType 下標的文字](./media/opentype-font-features/opentype-subscripts.gif "使用 OpenType 下標的文字")  
   
- 下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性定義 Palatino Linotype 字型的注標。  
+ 下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，定義 Palatino Linotype 字型的注標。  
   
  [!code-xaml[OpenTypeFontSamples#13](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#13)]  
   
 ### <a name="decorative-uses-of-superscripts-and-subscripts"></a>上標和下標的裝飾性用途  
  您也可以使用上標和下標建立混合大小寫文字的裝飾效果。 下列文字顯示 Palatino Linotype 字型的上下標文字。 請注意，大寫字不受影響。  
   
- 使用 opentype 上標和下標的![文字]使用(./media/opentype-font-features/opentype-superscripts-subscripts.gif "opentype 上標和下標的")文字  
+ ![使用 OpenType 上標和下標的文字](./media/opentype-font-features/opentype-superscripts-subscripts.gif "使用 OpenType 上標和下標的文字")  
 
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，為字型定義上標和下標。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "72005246"
   
  下列文字顯示 Pescadero 字型的標準大寫字母，後面接著樣式設定為 "SmallCaps" 和 "AllSmallCaps" 的字母。 在此情況下，三個單字全都使用相同的字型大小。  
   
- ![使用](./media/opentype-font-features/opentype-capitals.gif "opentype 大寫文字")的文字  
+ ![使用 OpenType 大寫的文字](./media/opentype-font-features/opentype-capitals.gif "使用 OpenType 大寫的文字")  
   
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，定義 Pescadero 字型的大寫字母。 使用 "SmallCaps" 格式時會略過任何開頭的大寫字母。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "72005246"
 ### <a name="titling-capitals"></a>標題大寫字  
  標題大寫字的加權和比例較輕，設計目的是為了比正常大寫字母看起來更雅緻。 標題大寫字通常用於較大的字型大小作為標題。 下列文字顯示 Pescadero 字型的正常和標題大寫字。 請注意第二行文字較窄的主體寬度。  
   
- ![文字使用 opentype 標題大寫](./media/opentype-font-features/opentype-titling-capitals.gif "文字使用 opentype 標題大寫")  
+ ![使用 OpenType 標題用大寫的文字](./media/opentype-font-features/opentype-titling-capitals.gif "使用 OpenType 標題用大寫的文字")  
   
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，定義 Pescadero 字型的標題大寫。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "72005246"
 ### <a name="capital-spacing"></a>大寫字母間距  
  大寫字母間距功能可讓您在全部使用大寫字的文字中，提供更多的間距。 大寫字母通常會設計為與小寫字母混合在一起。 大寫字母和小寫字母間看起來很不錯的間距，在全部使用大寫字母時會看起來很擠。 下列文字顯示 Pescadero 字型的正常和大寫字間距。  
   
- 使用 opentype 大寫間距(./media/opentype-font-features/opentype-capital-spacing.gif "文字")的![文字]  
+ ![使用 OpenType 大寫留空的文字](./media/opentype-font-features/opentype-capital-spacing.gif "使用 OpenType 大寫留空的文字")  
  
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，定義 Pescadero 字型的大寫字母間距。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "72005246"
   
  下列文字顯示 Pericles 字型的標準連音符號字符。  
   
- ![使用]opentype 標準(./media/opentype-font-features/opentype-standard-ligatures.gif "連字的")文字  
+ ![使用 OpenType 標準連音符號的文字](./media/opentype-font-features/opentype-standard-ligatures.gif "使用 OpenType 標準連字的文字")  
   
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，為 Pericles 字型定義標準的連字號字型。  
   
@@ -138,19 +138,19 @@ ms.locfileid: "72005246"
   
  下列文字顯示 Pericles 字型 Discretionary 連音符號。  
   
- 使用(./media/opentype-font-features/opentype-discretionary-ligatures.gif "opentype 任意連")字的![文字]  
+ ![使用 OpenType Discretionary 連音符號的文字](./media/opentype-font-features/opentype-discretionary-ligatures.gif "使用 OpenType Discretionary 連字的文字")  
   
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，為 Pericles 字型定義任意的連字號圖像。  
   
  [!code-xaml[OpenTypeFontSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
   
- 根據預設，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 OpenType 字型會啟用標準連字。 例如，如果您使用 Palatino Linotype 字型，標準連音符號 "fi"、"ff" 和 "fl" 會顯示為合併的字元字符。 請注意，每個標準連音符號的成對字元都彼此相鄰。  
+ 根據預設，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 OpenType 字型會啟用標準的連字。 例如，如果您使用 Palatino Linotype 字型，標準連音符號 "fi"、"ff" 和 "fl" 會顯示為合併的字元字符。 請注意，每個標準連音符號的成對字元都彼此相鄰。  
   
- 使用 opentype![標準連字搭配 Palatino Linotype]Text 的文字搭配(./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "使用 opentype 標準連字與 Palatino Linotype")    
+ ![搭配 Palatino Linotype 使用 OpenType 標準連字的文字](./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "搭配 Palatino Linotype 使用 OpenType 標準連字的文字")    
    
  不過，您可以停用標準連音符號功能，讓 "ff" 等標準連音符號顯示為兩個分開的字符，而不是合併的字元字符。  
   
- 使用停用之 opentype 標準連字的![文字]使用停用的(./media/opentype-font-features/disabled-opentype-standard-ligatures.gif "opentype 標準連字")  
+ ![使用已停用之 OpenType 標準連音符號的文字](./media/opentype-font-features/disabled-opentype-standard-ligatures.gif "使用已停用之 OpenType 標準連字的文字")  
     
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，停用 Palatino Linotype 字型的標準連字號符號。  
   
@@ -160,11 +160,11 @@ ms.locfileid: "72005246"
 ## <a name="swashes"></a>花飾字  
  花飾字是裝飾性字符，使用精心設計且通常與書寫體相關聯的裝飾。 下列文字顯示 Pescadero 字型的標準和花飾字字符。  
   
- 使用 opentype 標準和花飾字(./media/opentype-font-features/opentype-standard-swash-glyphs.gif "字元文字")的![文字]  
+ ![使用 OpenType 標準和花飾字字符的文字](./media/opentype-font-features/opentype-standard-swash-glyphs.gif "使用 OpenType 標準和勾耳圖像的文字")  
 
  花飾字通常用為簡短片語中的裝飾項目，例如事件宣告。 下列文字使用花飾字強調大寫字母的事件名稱。  
   
- 使用(./media/opentype-font-features/opentype-swashes.gif "opentype 花飾")字的![文字]  
+ ![使用 OpenType 花飾字的文字](./media/opentype-font-features/opentype-swashes.gif "使用 OpenType 勾耳的文字")  
   
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，為字型定義花飾字。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "72005246"
 ### <a name="contextual-swashes"></a>內容花飾字  
  某些花飾字字符的組合會導致不討喜的外觀，例如相鄰字母的伸尾部分重疊。 使用內容花飾字可讓您使用會產生更佳外觀的替代花飾字字符。 下列文字顯示套用內容花飾字之前和之後的相同字組。  
   
- 使用 opentype 內容花飾字的![文字]使用(./media/opentype-font-features/opentype-contextual-swashes.gif "opentype 內容")花飾字  
+ ![使用 OpenType 內容花飾字的文字](./media/opentype-font-features/opentype-contextual-swashes.gif "使用 OpenType 視內容來勾耳的文字")  
   
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，定義 Pescadero 字型的內容花飾字。  
   
@@ -183,11 +183,11 @@ ms.locfileid: "72005246"
 ## <a name="alternates"></a>替代項目  
  替代項目是可以取代標準字符的字符。 OpenType 字型（例如下列範例中使用的 Pericles 字型）可以包含替代字元，您可以用來建立不同的文字外觀。 下列文字顯示 Pericles 字型的標準字符。  
   
- ![使用]opentype 標準字元文字的文字使用(./media/opentype-font-features/opentype-standard-glyphs.gif "opentype 標準字型")  
+ ![使用 OpenType 標準字符的文字](./media/opentype-font-features/opentype-standard-glyphs.gif "使用 OpenType 標準圖像的文字")  
 
  Pericles OpenType 字型包含額外的圖像，可為標準的圖像集提供樣式替代。 下列文字顯示文體替代字符。  
   
- ![使用]opentype 樣式替代字元文字的文字(./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "使用 opentype 樣式替代字元")  
+ ![使用 OpenType 文體替代字符的文字](./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "使用 OpenType 文體替代圖像的文字")  
   
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，定義 Pericles 字型的樣式替代字元。  
   
@@ -195,7 +195,7 @@ ms.locfileid: "72005246"
   
  下列文字顯示數個 Pericles 字型的其他文體替代字符。  
   
- 針對![Pericles 字型文字使用 opentype 樣式替代字元的文字](./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "使用 Pericles 字型的 opentype 樣式替代")字元
+ ![針對 Pericles 字型使用 OpenType 樣式替代字元的文字](./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "針對 Pericles 字型使用 OpenType 樣式替代字元的文字")
 
  下列標記範例示範如何定義這些其他文體替代字符。  
   
@@ -204,7 +204,7 @@ ms.locfileid: "72005246"
 ### <a name="random-contextual-alternates"></a>隨機內容替代項目  
  隨機內容替代項目提供單一字元的多個替代字符。 以書寫體字型實作時，這項功能可以使用一組隨機選擇的字符，在外觀上略加變動來模擬手寫。 下列文字使用 Lindsey 字型的隨機內容替代項目。 請注意，字母 "a" 的外觀略有不同。  
   
- 使用 opentype 隨機內容替代文字的![文字](./media/opentype-font-features/opentype-random-contextual-alternates.gif "使用 opentype 隨機內容替代")字  
+ ![使用 OpenType 隨機內容替代項目的文字](./media/opentype-font-features/opentype-random-contextual-alternates.gif "使用 OpenType 隨機內容替代的文字")  
   
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，為 Lindsey 字型定義隨機內容的替代項。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "72005246"
 ### <a name="historical-forms"></a>古體形式  
  古體形式是過去常用的印刷樣式慣例。 下列文字使用 Palatino Linotype 字型的古體形式字符顯示 "Boston, Massachusetts" 片語。  
   
- 使用 opentype 歷程記錄表單(./media/opentype-font-features/opentype-historical-forms.gif "文字")的![文字]  
+ ![使用 OpenType 古體形式的文字](./media/opentype-font-features/opentype-historical-forms.gif "使用 OpenType 古體形式的文字")  
    
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，定義 Palatino Linotype 字型的歷程記錄表單。  
   
@@ -228,7 +228,7 @@ ms.locfileid: "72005246"
   
  下列文字顯示 Palatino Linotype 字型的分數樣式。  
   
- 使用 opentype 帶![斜線和堆疊分數]文字的文字（(./media/opentype-font-features/opentype-slashed-stacked-fractions.gif "使用 opentype 帶斜線和堆疊分數")）  
+ ![使用 OpenType 斜式和直式分數的文字](./media/opentype-font-features/opentype-slashed-stacked-fractions.gif "使用 OpenType 斜式和直式分數的文字")  
    
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，定義 Palatino Linotype 字型的分數樣式。  
   
@@ -237,11 +237,11 @@ ms.locfileid: "72005246"
 ### <a name="old-style-numerals"></a>舊樣式數字  
  OpenType 字型支援舊的樣式數位格式。 此格式適用於顯示樣式不再標準的數字。 下列文字使用 Palatino Linotype 字型的標準和舊樣式數字格式顯示 18 世紀的日期。  
   
- ![使用 opentype 舊]樣式數位(./media/opentype-font-features/opentype-old-style-numerals.gif "文字使用 opentype 舊樣式數位")的文字  
+ ![使用 OpenType 舊樣式數字的文字](./media/opentype-font-features/opentype-old-style-numerals.gif "使用 OpenType 舊樣式數字的文字")  
     
  下列文字顯示 Palatino Linotype 字型的標準數字，後面接著舊樣式數字的數字。  
   
- ![使用 opentype 舊樣式數位的文字](./media/opentype-font-features/opentype-old-style-numeral-sets.gif "使用 opentype 舊樣式數位集來設定文字")  
+ ![使用 OpenType 舊樣式數字集的文字](./media/opentype-font-features/opentype-old-style-numeral-sets.gif "使用 OpenType 舊樣式數字集的文字")  
   
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，為 Palatino Linotype 字型定義舊的樣式數位。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "72005246"
   
  下列文字在第一個資料行中顯示使用 Miramonte 字型的兩個調和間距數字。 請注意數字 "5" 和 "1" 之間的寬度差異。 第二個資料行顯示相同的兩個數值，使用表格式數字功能調整其寬度。  
   
- ![使用 opentype 比例 & 表格式的文字](./media/opentype-font-features/opentype-proportional-tabular-figures.gif "使用 opentype 比例和表格式圖表的")文字  
+ ![使用 OpenType 調和間距與表格式數字的文字](./media/opentype-font-features/opentype-proportional-tabular-figures.gif "使用 OpenType 調和間距與表格式數字的文字")  
     
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，定義 Miramonte 字型的比例和表格式數位。  
   
@@ -263,7 +263,7 @@ ms.locfileid: "72005246"
   
  下列文字顯示使用 Miramonte 字型的範例訂單識別碼。 第一行使用標準的數字。 第二行使用加斜線的零數字，以突顯與大寫字母 "O" 的對比。  
   
- ![使用]opentype 帶斜線零數位文字的文字(./media/opentype-font-features/opentype-slashed-zero-numerals.gif "使用 opentype 的零數位")  
+ ![使用 OpenType 加斜線之零數字的文字](./media/opentype-font-features/opentype-slashed-zero-numerals.gif "使用 OpenType 零帶有斜線之數字的文字")  
     
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，為 Miramonte 字型定義以斜線為零的數位。  
   
@@ -271,11 +271,11 @@ ms.locfileid: "72005246"
   
 <a name="typography_class"></a>   
 ## <a name="typography-class"></a>印刷樣式類別  
- @No__t-0 物件會公開 OpenType 字型支援的一組功能。 藉由在標記中設定 <xref:System.Windows.Documents.Typography> 的屬性，您可以輕鬆地撰寫利用 OpenType 功能的檔。  
+ @No__t_0 物件會公開 OpenType 字型支援的一組功能。 藉由在標記中設定 <xref:System.Windows.Documents.Typography> 的屬性，您可以輕鬆地撰寫利用 OpenType 功能的檔。  
   
  下列文字顯示 Pescadero 字型的標準大寫字母，後面接著樣式設定為 "SmallCaps" 和 "AllSmallCaps" 的字母。 在此情況下，三個單字全都使用相同的字型大小。  
   
- ![使用](./media/opentype-font-features/opentype-capitals.gif "opentype 大寫文字")的文字  
+ ![使用 OpenType 大寫的文字](./media/opentype-font-features/opentype-capitals.gif "使用 OpenType 大寫的文字")  
     
  下列標記範例示範如何使用 <xref:System.Windows.Documents.Typography> 物件的屬性，定義 Pescadero 字型的大寫字母。 使用 "SmallCaps" 格式時會略過任何開頭的大寫字母。  
   
@@ -287,12 +287,12 @@ ms.locfileid: "72005246"
  [!code-vb[TypographyCodeSnippets#TypographyCodeSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TypographyCodeSnippets/visualbasic/page1.xaml.vb#typographycodesnippet1)]  
   
 ### <a name="typography-class-properties"></a>印刷樣式類別屬性  
- 下表列出 @no__t 0 物件的屬性、值和預設設定。  
+ 下表列出 <xref:System.Windows.Documents.Typography> 物件的屬性、值和預設設定。  
   
-|屬性|值|Default Value|  
+|屬性|值|預設值|  
 |--------------|----------------|-------------------|  
 |<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|數值 - 位元組|0|  
-|<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> &#124; <xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; &#124; 0 2|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.CapitalSpacing%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.CaseSensitiveForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.ContextualAlternates%2A>|<xref:System.Boolean>|`true`|  
@@ -300,8 +300,8 @@ ms.locfileid: "72005246"
 |<xref:System.Windows.Documents.Typography.ContextualSwashes%2A>|數值 - 位元組|0|  
 |<xref:System.Windows.Documents.Typography.DiscretionaryLigatures%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.EastAsianExpertForms%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis04> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis78> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis83> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis90> &#124; <xref:System.Windows.FontEastAsianLanguage.NlcKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Normal> &#124; <xref:System.Windows.FontEastAsianLanguage.Simplified> &#124; <xref:System.Windows.FontEastAsianLanguage.Traditional> &#124; <xref:System.Windows.FontEastAsianLanguage.TraditionalNames>|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
-|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; <xref:System.Windows.FontEastAsianWidths.Third>|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis04> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis78> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis83> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis90> &#124; &#124; &#124; 0 &#124; 4 &#124; 6 8|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; 0|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.Fraction%2A>|<xref:System.Windows.FontFraction.Normal> &#124; <xref:System.Windows.FontFraction.Slashed> &#124; <xref:System.Windows.FontFraction.Stacked>|<xref:System.Windows.FontFraction.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.HistoricalForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.HistoricalLigatures%2A>|<xref:System.Boolean>|`false`|  
@@ -333,9 +333,9 @@ ms.locfileid: "72005246"
 |<xref:System.Windows.Documents.Typography.StylisticSet18%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet19%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet20%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; 0|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Documents.Typography>
 - [OpenType 規格](https://go.microsoft.com/fwlink/?LinkId=96731)

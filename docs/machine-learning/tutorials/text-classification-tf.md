@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: e25e884769ad62d3d888986b1475000b543b24b1
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 417abb5052df95c8496d97894d3e11d2956d7a1a
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700932"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774404"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>教學課程：在 ML.NET 中使用預先定型的 TensorFlow 模型來分析電影評論的情感
 
@@ -28,9 +28,9 @@ ms.locfileid: "71700932"
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF) 存放庫中找到本教學課程的原始程式碼。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-* 已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 15.6 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。
+* 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)版本。
 
 ## <a name="setup"></a>安裝程式
 
@@ -42,7 +42,7 @@ ms.locfileid: "71700932"
 
 3. 安裝「Microsoft.ML NuGet 套件」：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為套件來源，然後選取 [瀏覽] 索引標籤。搜尋 **Microsoft.ML**，選取您想要的套件，然後選取 [安裝] 按鈕。 同意您所選套件的授權條款，以繼續進行安裝。 針對**TensorFlow**重複這些步驟。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為套件來源，然後選取 [**流覽**] 索引標籤。搜尋**Microsoft.ML**，選取您想要的套件，然後選取 [**安裝**] 按鈕。 同意您所選套件的授權條款，以繼續進行安裝。 針對**TensorFlow**重複這些步驟。
 
 ### <a name="add-the-tensorflow-model-to-the-project"></a>將 TensorFlow 模型加入至專案
 
@@ -56,11 +56,11 @@ ms.locfileid: "71700932"
     * `saved_model.pb`： TensorFlow 模型本身。 此模型會採用固定長度（大小600）整數陣列的特徵，代表 IMDB 審核字串中的文字，並輸出兩個加總為1的機率：輸入評論具有正面情感的機率，以及輸入審核的機率負面情感。
     * `imdb_word_index.csv`：從個別單字到整數值的對應。 對應是用來產生 TensorFlow 模型的輸入特徵。
 
-2. 將最內層`sentiment_model`目錄的內容複寫到您的*TextClassificationTF*專案`sentiment_model`目錄。 此目錄包含本教學課程所需的模型和其他支援檔案，如下圖所示：
+2. 將最內層 `sentiment_model` 目錄的內容複寫到您的*TextClassificationTF*專案 `sentiment_model` 目錄。 此目錄包含本教學課程所需的模型和其他支援檔案，如下圖所示：
 
    ![sentiment_model 目錄內容](./media/text-classification-tf/sentiment-model-files.png)
 
-3. 在方案總管中，以滑鼠右鍵按一下目錄和子目錄中`sentiment_model`的每個檔案，然後選取 [**屬性**]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
+3. 在方案總管中，以滑鼠右鍵按一下 `sentiment_model` 目錄和子目錄中的每個檔案，然後選取 [**屬性**]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
 
 ### <a name="add-using-statements-and-global-variables"></a>加入 using 語句和全域變數
 
@@ -68,12 +68,12 @@ ms.locfileid: "71700932"
 
    [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TextClassificationTF/Program.cs#AddUsings "Add necessary usings")]
 
-1. 在`Main`方法上方建立兩個全域變數，以保存已儲存的模型檔案路徑和功能向量長度。
+1. 在 `Main` 方法上方建立兩個全域變數，以保存已儲存的模型檔案路徑和功能向量長度。
 
    [!code-csharp[DeclareGlobalVariables](../../../samples/machine-learning/tutorials/TextClassificationTF/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
-    * `_modelPath`這是定型模型的檔案路徑。
-    * `FeatureLength`這是模型所預期的整數功能陣列長度。
+    * `_modelPath` 是已定型模型的檔案路徑。
+    * `FeatureLength` 是模型所預期的整數功能陣列長度。
 
 ### <a name="model-the-data"></a>建立資料模型
 
@@ -81,46 +81,46 @@ ms.locfileid: "71700932"
 
 第一種方式是將文字分割成不同的字組，然後使用提供的對應檔案，將每個單字對應到整數編碼。 此轉換的結果是可變長度的整數陣列，其長度會對應到句子中的單字數目。
 
-|屬性| 值|Type|
+|屬性| 值|輸入|
 |-------------|-----------------------|------|
-|ReviewText|這部電影真的不錯|string|
+|ReviewText|這部電影真的不錯|字串|
 |VariableLengthFeatures|14、22、9、66、78,。 |int []|
 
 然後，可變長度功能陣列會調整為固定長度的600。 這是 TensorFlow 模型所預期的長度。
 
-|屬性| 值|Type|
+|屬性| 值|輸入|
 |-------------|-----------------------|------|
-|ReviewText|這部電影真的不錯|string|
+|ReviewText|這部電影真的不錯|字串|
 |VariableLengthFeatures|14、22、9、66、78,。 |int []|
 |功能|14、22、9、66、78,。 |int [600]|
 
-1. 在`Main`方法之後，為您的輸入資料建立類別：
+1. 在 `Main` 方法之後，為您的輸入資料建立類別：
 
     [!code-csharp[MovieReviewClass](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#MovieReviewClass "Declare movie review type")]
 
-    輸入資料類別`MovieReview` `string`具有使用者批註的（`ReviewText`）。
+    @No__t_0 的輸入資料類別具有使用者批註的 `string` （`ReviewText`）。
 
-1. 在`Main`方法之後，建立變數長度功能的類別：
+1. 在 `Main` 方法之後，建立變數長度功能的類別：
 
     [!code-csharp[VariableLengthFeatures](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#VariableLengthFeatures "Declare variable length features type")]
 
-    屬性具有 [VectorType](xref:Microsoft.ML.Data.VectorTypeAttribute.%23ctor%2A) 屬性，可將它指定為向量。`VariableLengthFeatures`  所有向量元素都必須是相同的類型。 在具有大量資料行的資料集內，將多個資料行當做單一向量載入，可減少套用資料轉換時的資料傳遞數目。
+    @No__t_0 屬性具有[VectorType](xref:Microsoft.ML.Data.VectorTypeAttribute.%23ctor%2A)屬性，可將它指定為向量。  所有向量元素都必須是相同的類型。 在具有大量資料行的資料集內，將多個資料行當做單一向量載入，可減少套用資料轉換時的資料傳遞數目。
 
-    這個類別會用於`ResizeFeatures`動作中。 其屬性的名稱（在此案例中只有一個）用來指示 DataView 中的哪些資料行可以當做自訂對應動作的_輸入_使用。
+    這個類別會在 `ResizeFeatures` 動作中使用。 其屬性的名稱（在此案例中只有一個）用來指示 DataView 中的哪些資料行可以當做自訂對應動作的_輸入_使用。
 
-1. 在`Main`方法之後，建立固定長度功能的類別：
+1. 在 `Main` 方法之後，建立固定長度功能的類別：
 
     [!code-csharp[FixedLengthFeatures](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#FixedLengthFeatures)]
 
-    這個類別會用於`ResizeFeatures`動作中。 其屬性的名稱（在此案例中只有一個）用來指示 DataView 中的哪些資料行可以當做自訂對應動作的_輸出_使用。
+    這個類別會在 `ResizeFeatures` 動作中使用。 其屬性的名稱（在此案例中只有一個）用來指示 DataView 中的哪些資料行可以當做自訂對應動作的_輸出_使用。
 
-    請注意，屬性`Features`的名稱是由 TensorFlow 模型所決定。 您無法變更此屬性名稱。
+    請注意，`Features` 屬性的名稱是由 TensorFlow 模型所決定。 您無法變更此屬性名稱。
 
-1. 在`Main`方法之後，建立預測的類別：
+1. 在 `Main` 方法之後，建立預測的類別：
 
     [!code-csharp[Prediction](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Prediction "Declare prediction class")]
 
-    `MovieReviewSentimentPrediction` 是在模型定型後所使用的預測類別。 `MovieReviewSentimentPrediction`具有單一`float`陣列（`Prediction`）和`VectorType`屬性。
+    `MovieReviewSentimentPrediction` 是在模型定型後所使用的預測類別。 `MovieReviewSentimentPrediction` 具有單一 `float` 陣列（`Prediction`）和 `VectorType` 屬性。
 
 ### <a name="create-the-mlcontext-lookup-dictionary-and-action-to-resize-features"></a>建立 MLCoNtext、查閱字典，以及調整功能大小的動作
 
@@ -130,7 +130,7 @@ ms.locfileid: "71700932"
 
    [!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreateMLContext "Create the ML Context")]
 
-1. 建立字典，使用[`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A)方法從檔案載入對應資料，以將單字編碼為整數，如下表所示：
+1. 建立字典，使用[`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A)方法從檔案載入對應資料，將單字編碼為整數，如下表所示：
 
     |字組     |索引    |
     |---------|---------|
@@ -144,7 +144,7 @@ ms.locfileid: "71700932"
 
     [!code-csharp[CreateLookupMap](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreateLookupMap)]
 
-1. `Action`加入以將可變長度的文字陣列大小調整為固定大小的整數陣列，並使用下一行程式碼：
+1. 新增 `Action`，將可變長度的字組整數陣列調整為固定大小的整數陣列，包含下一行程式碼：
 
    [!code-csharp[ResizeFeatures](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#ResizeFeatures)]
 
@@ -180,13 +180,13 @@ ms.locfileid: "71700932"
 
     [!code-csharp[ScoreTensorFlowModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#ScoreTensorFlowModel)]
 
-    會呼叫`Prediction/Softmax`TensorFlow 模型輸出。 請注意，此`Prediction/Softmax`名稱是由 TensorFlow 模型所決定。 您無法變更此名稱。
+    @No__t_0 會呼叫 TensorFlow 模型輸出。 請注意，`Prediction/Softmax` 的名稱是由 TensorFlow 模型所決定。 您無法變更此名稱。
 
 1. 為輸出預測建立新的資料行：
 
     [!code-csharp[SnippetCopyColumns](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCopyColumns)]
 
-    您必須將資料`Prediction/Softmax`行複製到一個，其名稱可做為C#類別中的屬性： `Prediction`。 屬性名稱中不允許字元。`/` C#
+    您必須將 `Prediction/Softmax` 的資料行複製到一個，其名稱可以當做C#類別中的屬性使用： `Prediction`。 C#屬性名稱中不允許 `/` 字元。
 
 ## <a name="create-the-mlnet-model-from-the-pipeline"></a>從管線建立 ML.NET 模型
 
@@ -194,11 +194,11 @@ ms.locfileid: "71700932"
 
     [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]
 
-    ML.NET 模型是藉由呼叫`Fit`方法，從管線中的估算器鏈建立而來。 在此情況下，我們不會調整任何資料來建立模型，因為 TensorFlow 模型先前已定型。 我們會提供空的資料檢視物件，以滿足`Fit`方法的需求。
+    ML.NET 模型是藉由呼叫 `Fit` 方法，從管線中的估算器鏈建立而來。 在此情況下，我們不會調整任何資料來建立模型，因為 TensorFlow 模型先前已定型。 我們會提供空的資料檢視物件，以滿足 `Fit` 方法的需求。
 
 ## <a name="use-the-model-to-make-a-prediction"></a>使用模型來進行預測
 
-1. `PredictSentiment` 在`Main`方法下方新增方法：
+1. 在 `Main` 方法底下新增 `PredictSentiment` 方法：
 
     ```csharp
     public static void PredictSentiment(MLContext mlContext, ITransformer model)
@@ -207,11 +207,11 @@ ms.locfileid: "71700932"
     }
     ```
 
-1. 新增下列程式碼，以建立`PredictionEngine`做為`PredictSentiment()`方法中的第一行：
+1. 新增下列程式碼，以建立 `PredictionEngine` 做為 `PredictSentiment()` 方法中的第一行：
 
     [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreatePredictionEngine)]
 
-    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API，可讓您在單一資料實例上執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全執行緒。 可接受在單一執行緒或原型環境中使用。 為了改善生產環境中的效能和執行緒安全，請使用 `PredictionEnginePool` 服務，這會建立[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)物件的[@no__t 2](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) ，以供整個應用程式使用。 請參閱本指南，以瞭解如何[在 ASP.NET Core WEB API 中使用 `PredictionEnginePool`](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API，可讓您在單一資料實例上執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全執行緒。 可接受在單一執行緒或原型環境中使用。 為了改善生產環境中的效能和執行緒安全，請使用 `PredictionEnginePool` 服務，這會建立[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)物件的[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) ，以便在整個應用程式中使用。 請參閱本指南，以瞭解如何[在 ASP.NET Core WEB API 中使用 `PredictionEnginePool`](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)。
 
     > [!NOTE]
     > `PredictionEnginePool` 服務延伸模組目前處於預覽狀態。
@@ -220,13 +220,13 @@ ms.locfileid: "71700932"
 
     [!code-csharp[CreateTestData](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreateTestData)]
 
-1. 藉`Prediction Engine`由在`PredictSentiment()`方法中新增下一行程式碼，將測試批註資料傳遞給：
+1. 藉由在 `PredictSentiment()` 方法中新增下一行程式碼，將測試批註資料傳遞至 `Prediction Engine`：
 
     [!code-csharp[Predict](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Predict)]
 
 1. [Predict （）](xref:Microsoft.ML.PredictionEngine%602.Predict%2A)函數會對單一資料列進行預測：
 
-    |屬性| 值|Type|
+    |屬性| 值|輸入|
     |-------------|-----------------------|------|
     |預測|[0.5459937，0.454006255]|float []|
 
@@ -234,7 +234,7 @@ ms.locfileid: "71700932"
 
     [!code-csharp[DisplayPredictions](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#DisplayPredictions)]
 
-1. `PredictSentiment`在`Main`方法的結尾新增對的呼叫：
+1. 將呼叫新增至 `Main` 方法結尾處的 `PredictSentiment`：
 
     [!code-csharp[CallPredictSentiment](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CallPredictSentiment)]
 
@@ -249,7 +249,7 @@ Number of classes: 2
 Is sentiment/review positive ? Yes
 ```
 
-恭喜您！ 您現在已成功建立機器學習模型，以在 ML.NET 中重複使用預先定型`TensorFlow`的模型來分類和預測訊息情感。
+恭喜您！ 您現在已成功建立機器學習模型來分類和預測訊息情感，方法是在 ML.NET 中重複使用預先定型的 `TensorFlow` 模型。
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF) 存放庫中找到本教學課程的原始程式碼。
 

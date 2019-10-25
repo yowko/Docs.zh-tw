@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 3e4e83b52cd6b275e68039693c774f6490f2b88f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 880e8c0b733afbf5c09f543e06a5a4a858d2b456
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606053"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771852"
 ---
 # <a name="bool-c-reference"></a>bool (C# 參考)
 
@@ -50,12 +50,10 @@ ms.locfileid: "69606053"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](./index.md)
 - [整數型別](../builtin-types/integral-numeric-types.md)
 - [內建型別表](./built-in-types-table.md)
-- [隱含數值轉換表](./implicit-numeric-conversions-table.md)
-- [明確數值轉換表](./explicit-numeric-conversions-table.md)

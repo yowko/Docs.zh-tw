@@ -3,14 +3,14 @@ title: GRPC 如何為 WCF 開發人員提供 RPC gRPC 的方法
 description: 比較 WCF 與 gRPC 的主要功能。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 65d61c8246569d81dfec3aeb8e3df4bea26258dc
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 36d51b96796f274811bfeea64c159afcc9bce301
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184600"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770680"
 ---
-# <a name="how-grpc-approaches-rpc"></a>GRPC 如何方法 RPC
+# <a name="how-grpc-approaches-rpc"></a>gRPC 如何處理 RPC
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -25,7 +25,7 @@ Windows Communication Foundation （WCF）和 gRPC 兩者都是*遠端程序呼�
 | 語言（第3-5 章） | 在或 Visual Basic C#中撰寫的合約 | 通訊協定緩衝區語言 |
 | 電傳格式（第3章） | 可設定，包括 SOAP/XML、純 XML、JSON、.NET 二進位檔等等。 | 通訊協定緩衝區二進位格式（雖然可以使用其他格式）。
 | 互通性（第4章） | 使用 SOAP over HTTP 時 | 正式支援： .NET、JAVA、Python、JavaScript、C/C++、Go、Rust、Ruby、Swift、DART、PHP。 來自社區的其他語言非官方支援。 |
-| 網路功能（第4章） | 在執行時間設定。 在 TCP、HTTP、MSMQ 等之間切換。 | 一律為 HTTP/2 |
+| 網路功能（第4章） | 在執行時間設定。 在 NetTCP、HTTP、MSMQ 等之間切換。 | HTTP/2，目前只有 TCP 與 ASP.NET Core gRPC。 |
 | 方法（第4章） | 在基類中產生序列化/deserialization 和網路程式碼的執行時間 | 基底類別中的組建階段產生序列化/deserialization 和網路程式碼 |
 | 安全性（第6章） | 驗證，WS-安全性，訊息加密 | 認證，ASP.NET Core 安全性，TLS 網路 |
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 552fbcf920be609de83708a995a87761f6080220
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 8f144dbd9376f15ac92e283472dac786a6972045
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005266"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775609"
 ---
 # <a name="-reference-visual-basic"></a>-reference （Visual Basic）
 讓編譯器將指定元件中的類型資訊提供給您目前編譯的專案。  
@@ -38,7 +38,7 @@ ms.locfileid: "72005266"
 |`fileList`|必要項。 以逗號分隔的組件檔案名稱清單。 如果檔案名稱包含空格，請用引號括住名稱。|  
   
 ## <a name="remarks"></a>備註  
- 您匯入的檔案必須包含元件中繼資料。 只有公用類型才會顯示在元件外部。 [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)選項會從模組匯入中繼資料。  
+ 您匯入的檔案必須包含元件中繼資料。 只有公用類型才會顯示在元件外部。 [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)選項會從模組匯入中繼資料。  
   
  如果您參考的元件（元件 A）本身參考另一個元件（元件 B），則在下列情況中，您必須參考元件 B：  
   
@@ -55,13 +55,13 @@ ms.locfileid: "72005266"
  `-reference` 的簡短形式為 `/r`。  
   
 ## <a name="example"></a>範例  
- 下列命令會從 `Metad1.dll` 和 `Metad2.dll` 編譯來源檔案 `Input.vb` 和參考元件，以產生 `Out.exe`。  
+ 下列命令會將原始程式檔 `Input.vb` 和參考元件從 `Metad1.dll` 和 `Metad2.dll` 編譯成產生 `Out.exe`。  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)

@@ -4,14 +4,14 @@ description: 探索如何在 Windows 上使用 .NET Core 執行適用於 Apache 
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c4dbce74d0d8c0a682250a8021d983ef2990971f
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 19efc8412d834d73069c61e1cc1ccd9e5eb8593b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250317"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774368"
 ---
-# <a name="tutorial-get-started-with-net-for-apache-spark"></a>教學課程：開始使用適用於 Apache Spark 的 .NET
+# <a name="tutorial-get-started-with-net-for-apache-spark"></a>教學課程：開始使用適用于 Apache Spark 的 .NET
 
 本教學課程將指導您如何在 Windows 上使用 .NET Core，執行適用於 Apache Spark 的 .NET 應用程式。
 
@@ -44,9 +44,9 @@ ms.locfileid: "72250317"
     * 使用 PowerShell 命令 `java -version` 驗證安裝。
 
 4. 安裝 [Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)。
-    * 下載 [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip)。
-    * 解壓縮到本機目錄。 例如，`c:\bin\apache-maven-3.6.0\`。
-    * 將 Apache Maven 新增到您的 [PATH 環境變數](https://www.java.com/en/download/help/path.xml)之中。 若解壓縮到 `c:\bin\apache-maven-3.6.0\`，就應將 `c:\bin\apache-maven-3.6.0\bin` 新增到您的 PATH 之中。
+    * 下載[Apache Maven 3.6.2](http://mirror.metrocast.net/apache/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.zip)。
+    * 解壓縮到本機目錄。 例如，`c:\bin\apache-maven-3.6.2\`。
+    * 將 Apache Maven 新增到您的 [PATH 環境變數](https://www.java.com/en/download/help/path.xml)之中。 若解壓縮到 `c:\bin\apache-maven-3.6.2\`，就應將 `c:\bin\apache-maven-3.6.2\bin` 新增到您的 PATH 之中。
     * 使用 PowerShell 命令 `mvn -version` 驗證安裝。
 
 5. 安裝 [Apache Spark 2.3+](https://spark.apache.org/downloads.html)。 不支援 Apache Spark 2.4+。

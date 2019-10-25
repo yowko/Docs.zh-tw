@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: fb11fb1a81b8407e2585e32d4217e08a75ea19b0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 417f02ce9e8ee88edeb2a4dab88111cae39a8a4b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605828"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771859"
 ---
 # <a name="enum-c-reference"></a>enum (C# 參考)
 
@@ -35,7 +35,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 在這個列舉中，項目的順序會強制從 `1` 開始，而不是 `0`。 不過，建議加入值為 0 的常數。 如需詳細資訊，請參閱[列舉類型](../../programming-guide/enumeration-types.md)。
 
-每個列舉型別都具有基礎型別，它可以是任何[整數數字型別](../builtin-types/integral-numeric-types.md)。 [Char](char.md) 型別不能是列舉的基礎型別。 預設基礎列舉項目類型是 [int](../builtin-types/integral-numeric-types.md)。若要宣告另一個整數類型的列舉，例如 [byte](../builtin-types/integral-numeric-types.md)，請在識別項後使用冒號，後面接著類型，如下列範例所示。
+每個列舉型別都具有基礎型別，它可以是任何[整數數字型別](../builtin-types/integral-numeric-types.md)。 [Char](char.md) 型別不能是列舉的基礎型別。 列舉元素的預設基礎類型為[int](../builtin-types/integral-numeric-types.md)。若要宣告另一個整數類型的列舉，例如[byte](../builtin-types/integral-numeric-types.md)，請在識別碼之後使用冒號，後面接著類型，如下列範例所示。
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
@@ -94,13 +94,11 @@ int x = (int)Day.Sun;
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [列舉型別](../../programming-guide/enumeration-types.md)
 - [C# 關鍵字](index.md)
 - [整數型別](../builtin-types/integral-numeric-types.md)
 - [內建型別表](built-in-types-table.md)
-- [隱含數值轉換表](implicit-numeric-conversions-table.md)
-- [明確數值轉換表](explicit-numeric-conversions-table.md)
 - [列舉命名慣例](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)

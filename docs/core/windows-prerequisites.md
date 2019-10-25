@@ -5,18 +5,18 @@ f1_keywords:
 - NETSDK1045
 ms.custom: updateeachvsrelease
 ms.date: 09/20/2019
-ms.openlocfilehash: b1557e6910cb6d0b6d7e2b3ce2aec97d3715fec7
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 6885f6c853efb0dcb2cb64b83f07e12b1dc2e3cf
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591676"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771959"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的必要條件
 
 本文會說明支援的 OS 版本，以便在 Windows 上執行 .NET Core 應用程式。 支援的作業系統版本和跟隨的相依性，適用於在 Windows 開發 .NET Core 應用程式的三種方式：
 
-* [命令列](./tutorials/using-with-xplat-cli.md)
+* [Command line](./tutorials/using-with-xplat-cli.md)
 * [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -51,7 +51,7 @@ ms.locfileid: "71591676"
 > 除了 KB2999226，請確定您也已經安裝 [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)。 如果沒有安裝此更新，當您啟動 .NET Core 應用程式時，將會看到如下的錯誤：`The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`。
 
 ## <a name="prerequisites-to-develop-net-core-apps-with-visual-studio"></a>使用 Visual Studio 開發 .NET Core 應用程式的必要條件
-    
+
 雖然您可以使用任何編輯器來開發使用 .NET Core SDK 的 .NET Core 應用程式，但 Visual Studio 2017 和更新版本為 Windows 上的 .NET Core 應用程式提供整合式開發環境。
 
 <a name="vs-mapping"></a>
@@ -86,7 +86,7 @@ ms.locfileid: "71591676"
 
 ![已選取 [.NET Core 跨平臺開發] 工作負載的 Visual Studio 2019 安裝螢幕擷取畫面](./media/windows-prerequisites/vs-2019-workloads.jpg)
 
-Visual Studio 2019 16.3 在安裝任何這些工作負載之後，預設會使用 .NET Core 3.0 SDK。
+Visual Studio 2019 16.3 版預設會在安裝任何這些工作負載之後，使用 .NET Core 3.0 SDK。
 
 如果您想要讓現有的專案使用最新的 .NET Core 執行時間，請使用下列指示，將每個現有的 .NET Core 專案的目標重定為 .NET Core 3.0：
 
@@ -111,7 +111,7 @@ Visual Studio 2019 16.3 在安裝任何這些工作負載之後，預設會使�
 ![已選取 [.NET Core 跨平台開發] 工作負載的 Visual Studio 2017 安裝螢幕擷取畫面](./media/windows-prerequisites/vs-2017-workloads.jpg)
 
 安裝 **.NET Core 跨平台開發**工具集之後，Visual Studio 通常會安裝舊版的 .NET Core SDK。
-例如，安裝工作負載之後，Visual Studio 2017 15.9 預設會使用 .NET Core 2.1 SDK。
+例如，在安裝工作負載之後，Visual Studio 2017 版本15.9 預設會使用 .NET Core 2.1 SDK。
 
 若要更新 Visual Studio 以使用 .NET Core 2.2 SDK：
 

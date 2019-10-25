@@ -3,14 +3,14 @@ title: WCF 系結和傳輸-WCF 開發人員的 gRPC
 description: 瞭解不同的 WCF 系結和傳輸與 gRPC 之間的比較。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 50bac73ee68d7156fc5fed55dfffb3ba7f2de924
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
-ms.translationtype: MT
+ms.openlocfilehash: f1866fe379dd307ede8128b43cf8f70c8b4caf69
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184054"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771603"
 ---
-# <a name="wcf-bindings-and-transports"></a>WCF 系結和傳輸
+# <a name="wcf-bindings-and-transports"></a>WCF 繫結和傳輸
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -22,13 +22,11 @@ WCF 的 NetTCP 系結允許持續連接、小型訊息和雙向訊息，但只�
 
 ## <a name="http"></a>HTTP
 
-WCF 的 BasicHttpBinding 通常是以文字為基礎，使用 SOAP 做為電傳格式，而且非常慢于新式網路應用程式的標準。 它只是用來提供跨平臺互通性，或透過網際網路基礎結構的連線。 GRPC 中的對等專案，因為它使用 HTTP/2 做為適用于訊息之 binary Protobuf 電傳格式的基礎傳輸層—可提供 NetTCP 服務層級效能，但具備所有新式程式設計語言的完整跨平臺互通性和集成.
+WCF 的 BasicHttpBinding 通常是以文字為基礎，使用 SOAP 做為電傳格式，而相較于 NetTCP 系結，它會變慢。 它通常用來提供跨平臺互通性，或透過網際網路基礎結構的連線。 GRPC 中的對等專案，因為它使用 HTTP/2 做為適用于訊息之 binary Protobuf 電傳格式的基礎傳輸層—可提供 NetTCP 服務層級效能，但具備所有新式程式設計語言的完整跨平臺互通性和集成.
 
 ## <a name="named-pipes"></a>具名管道
 
-WCF 提供了具名管道系結，以便在相同實體電腦上的進程之間進行通訊。 ASP.NET Core gRPC 的第一版不支援具名管道。
-
-在 Windows 之外，具名管道提供的功能，通常是由 Unix 網域通訊端提供。 這些通訊端是一般 TCP 類似的通訊端，以檔案系統位址表示， `/var/run/docker.sock`例如，gRPC 可以同時搭配用戶端和伺服器使用。 如果您需要在 Windows 上使用具名管道樣式功能，windows 10 和 Windows Server 的下一次更新 2019 Q4，會在 Windows 中新增網域通訊端做為完全支援的原生功能。 因此，在這些和更新版本的 Windows （或 Linux 上）上執行的 gRPC 服務可以使用網域通訊端，而不是具名管道。 不過，如果您的小組無法更新至最新版本的 Windows，則您必須使用 localhost TCP 通訊端。 使用本機 TCP 通訊端的安全性疑慮，可以透過在用戶端和伺服器之間使用憑證驗證來解決。
+WCF 提供了具名管道系結，以便在相同實體電腦上的進程之間進行通訊。 ASP.NET Core gRPC 的第一版不支援具名管道。 新增具名管道（和 Unix 網域通訊端）的用戶端和伺服器支援是未來版本的目標。
 
 ## <a name="msmq"></a>MSMQ
 
@@ -36,7 +34,7 @@ MSMQ 是專屬的 Windows 訊息佇列。 WCF 對 MSMQ 的系結可讓您從用�
 
 ## <a name="webhttpbinding"></a>WebHttpBinding
 
-WebHttpBinding （也稱為「WCF ReST」）具有`WebGet`和屬性，可讓您開發 ReSTful api，這在這種情況下並`WebInvoke`不常見，因此可能會一次說出 JSON。 因此，如果您有以 WCF REST 建立的 RESTful API，請考慮將它遷移至一般 ASP.NET Core MVC Web API 應用程式，這會提供對等的功能，而不是轉換成 gRPC。
+WebHttpBinding （也稱為「WCF ReST」）具有 `WebGet` 和 `WebInvoke` 屬性，可讓您開發 ReSTful Api，而這在這種情況下並不常見，可能會一次就說出 JSON。 因此，如果您有以 WCF REST 建立的 RESTful API，請考慮將它遷移至一般 ASP.NET Core MVC Web API 應用程式，這會提供對等的功能，而不是轉換成 gRPC。
 
 >[!div class="step-by-step"]
 >[上一頁](wcf-endpoints-grpc-methods.md)

@@ -2,12 +2,12 @@
 title: 使用 Ocelot 實作 API 閘道
 description: 了解如何使用 Ocelot 實作 API 閘道，並了解如何在以容器為基礎的環境中使用 Ocelot。
 ms.date: 10/02/2018
-ms.openlocfilehash: 2a1c7b0f4baa979864ac32d555f65397531884b8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: cb452c330712ecf536cdf09f41fdbf828a4e9314
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676185"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771177"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>使用 Ocelot 實作 API 閘道
 
@@ -30,7 +30,7 @@ ms.locfileid: "68676185"
 
 此外，基礎結構資產 (例如資料庫、快取和訊息代理程式) 應該從協調器卸載，並部署到基礎結構的高可用性系統，例如 Azure SQL Database、Azure Cosmos DB、Azure Redis、Azure 服務匯流排或任何內部部署 HA 叢集解決方案。
 
-您也可能在圖中注意到，擁有數個 API 閘道，可讓多個開發小組 (在本例中為行銷功能與購物功能) 獨立自主地開發和部署其微服務及其擁有的相關 API 閘道。
+您也可以在圖表中注意到，有數個 API 閘道可讓多個開發小組在開發和部署其微服務以及自己的相關 API 閘道時，自主（在此案例中為行銷功能與購物功能）。
 
 如果您有單一整合型 API 閘道，這會是要由多個開發小組更新的單一點，並可結合所有微服務與應用程式的單一組件。
 
@@ -390,7 +390,7 @@ webmarketingapigw:
 
 仔細看的話，您可以在以下影像的 “Shopping” 商務區域發現，在 API 閘道中使用彙總工具服務時，用戶端應用程式與微服務之間的對話頻繁度有所減少。
 
-![eShopOnContainers 架構放大圖，顯示彙總工具服務「合併」來自數個微服務的回應並「組合」成一個回應，來降低與終端用戶端的對話頻率。](./media/image38.png)
+![eShopOnContainers 架構放大，顯示匯總工具服務，這會「組合」來自數個微服務的回應「聯結」，以減少用戶端的對話。](./media/image38.png)
 
 **圖 6-38**。 放大檢視彙總工具服務
 
@@ -410,7 +410,7 @@ webmarketingapigw:
 
 不過，Ocelot 也支援將識別/驗證微服務放在 API 閘道界限內，如下面另一個圖所示。
 
-![向 API 閘道底下的使用身分識別微服務進行驗證：1) AG 向身分識別微服務要求驗證權杖、2) 身分識別微服務會將權杖傳回至 AG、3-4) AG 使用驗證權杖向微服務要求。](./media/image40.png)
+![利用 API 閘道 (AG) 下的身分識別微服務進行驗證：1) AG 向身分識別微服務要求驗證權杖，2) 身分識別微服務將權杖傳回給 AG，3-4) AG 使用驗證權杖向微服務發出要求。](./media/image40.png)
 
 **圖 6-40**。 Ocelot 的驗證
 
@@ -544,7 +544,7 @@ services.AddAuthentication(options =>
 
 **圖 6-41**。 部署至 Kubernetes 時之 eShopOnContainers 中的輸入層
 
-當您將 eShopOnContainers 部署到 Kubernetes 時，它只會透過「輸入」  公開一些服務或端點，基本上包括 URL 上的下列後置詞清單：
+當您將 eShopOnContainers 部署到 Kubernetes 時，它只會透過「輸入」公開一些服務或端點，基本上包括 URL 上的下列後置詞清單：
 
 - `/` 代表用戶端 SPA Web 應用程式
 - `/webmvc` 代表用戶端 MVC Web 應用程式

@@ -2,12 +2,12 @@
 title: Docker 容器、映像和登錄
 description: 了解在使用 Docker 部署應用程式的整個過程中，登錄扮演何種重要角色。
 ms.date: 02/15/2019
-ms.openlocfilehash: 32240ac4f6dec67531d8e618cff153d235c073c7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: bfef21cab7be89abaf33b89366d7cff2115a7cc6
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394615"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770923"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 容器、映像和登錄
 
@@ -15,7 +15,7 @@ ms.locfileid: "72394615"
 
 為了執行應用程式或服務，應用程式的映像會具現化以建立容器，並將在 Docker 主機上執行該容器。 這些容器一開始會在開發環境或電腦上進行測試。
 
-您可將映像儲存在登錄中，由該登錄作為映像庫。 若要部署至實際執行的協調器，您需要使用登錄。 Docker 會透過 [Docker Hub](https://hub.docker.com/) 維護公開登錄；其他廠商則會針對不同的映像集合提供登錄，包括 [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)。 或者，企業可以在內部部署有針對其專屬 Docker 映像的私人登錄。
+您會將影像儲存在作為映射程式庫的登錄中。 若要部署至實際執行的協調器，您需要使用登錄。 Docker 會透過 [Docker Hub](https://hub.docker.com/) 維護公開登錄；其他廠商則會針對不同的映像集合提供登錄，包括 [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)。 或者，企業可以在內部部署有針對其專屬 Docker 映像的私人登錄。
 
 圖 1-4 顯示 Docker 中映像和登錄與其他元件的關係。 它也顯示來自廠商的多個登錄供應項目。
 

@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e46934d9156bf3adebc010fb99ade10a1a35e09
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 746abee0861b32900e757f030ab6165f297b83ed
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523813"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774218"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (組件連結器)
 
 組件連結器 (Assembly Linker) 會從一個或多個模組或資源檔中產生一個包含組件資訊清單的檔案。 模組是不包含組件資訊清單的中繼語言 (IL) 檔案。
 
 > [!NOTE]
-> 從 Visual Studio 2008 開始，C# 和 Visual Basic 編譯器都會自動將 Win32 資訊清單嵌入組件中。 如需詳細資訊，請參閱 [/win32manifest (C# 編譯器選項)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。
+> 從 Visual Studio 2008 開始，C# 和 Visual Basic 編譯器都會自動將 Win32 資訊清單嵌入組件中。 如需詳細資訊，請參閱[-C# Win32manifest （編譯器選項）](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。
 
 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
 

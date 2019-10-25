@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c0fa0e2c59856beda65ec5804b8896352db98b3
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 2c1b73108227160aaff28525beeca7f3bd4cb5f8
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180186"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775330"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>記憶體回收的基本概念
 
@@ -86,7 +86,7 @@ CLR 初始化記憶體回收行程之後，記憶體回收行程就會配置用�
 
 每個 Managed 處理序都有一個 Managed 堆積。 處理序中的所有執行緒都會對相同堆積上的物件配置記憶體。
 
-為節省記憶體，記憶體回收行程會呼叫 Win32 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 函式，並且針對 Managed 應用程式一次保留一個記憶體區段。 記憶體回收行程也會視需要保留區段，並且透過呼叫 Win32 [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) 函式，將區段釋放回作業系統 (在清除任何物件的區段之後)。
+為節省記憶體，記憶體回收行程會呼叫 Win32 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 函式，並且針對受控應用程式一次保留一個記憶體區段。 記憶體回收行程也會視需要保留區段，並且透過呼叫 Win32 [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) 函式，將區段釋放回作業系統 (在清除任何物件的區段之後)。
 
 > [!IMPORTANT]
 > 記憶體回收行程所配置的區段大小是依實作而定，有可能在任何時間，包括在定期更新時做變更。 您的應用程式永遠都不應該對相關或根據特定區段的大小做出假設，也不應嘗試設定區段配置的可用記憶體數量。
@@ -125,7 +125,7 @@ CLR 初始化記憶體回收行程之後，記憶體回收行程就會配置用�
 
 沒有在記憶體回收中回收的物件稱為未回收物件，而且會提升至下一個層代。 在層代 0 記憶體回收中未被回收的物件會提升至層代 1、在層代 1 記憶體回收中未被回收的物件會提升至層代 2，而在層代 2 記憶體回收中未被回收的物件則保留在層代 2 中。
 
-當記憶體回收行程偵測出某個層代的未回收率很高時，它就會增加該層代的配置臨界值，因此下一次回收就會取得大量的回收記憶體。 CLR 會持續在兩個優先權之間取得平衡：不讓應用程式的工作集變得太大，而且不讓記憶體回收花費太多時間。
+當記憶體回收行程偵測出某個層代的未回收率很高時，它就會增加該層代的配置臨界值，因此下一次回收就會取得大量的回收記憶體。 CLR 會持續平衡兩個優先順序：不讓應用程式的工作集延遲垃圾收集，而不讓垃圾收集的執行頻率太高。
 
 ### <a name="ephemeral-generations-and-segments"></a>暫時層代和區段
 
@@ -176,7 +176,7 @@ CLR 初始化記憶體回收行程之後，記憶體回收行程就會配置用�
 
 下圖顯示觸發記憶體回收且造成其他執行緒暫停的執行緒。
 
-當執行緒(../../../docs/standard/garbage-collection/media/gc-triggered.png "觸發垃圾收集時") ![，執行緒觸發垃圾收集]時
+![當執行緒觸發垃圾收集時](../../../docs/standard/garbage-collection/media/gc-triggered.png "當執行緒觸發記憶體回收時")
 
 [回到頁首](#top)
 
@@ -208,7 +208,7 @@ Managed 物件的使用者無法處置此物件所使用的原生資源。 若�
 
 下圖顯示在伺服器上執行記憶體回收的專屬執行緒。
 
-![伺服器垃圾收集執行緒](../../../docs/standard/garbage-collection/media/gc-server.png "伺服器垃圾收集執行緒")
+![伺服器垃圾收集執行緒](../../../docs/standard/garbage-collection/media/gc-server.png "伺服器記憶體回收執行緒")
 
 ### <a name="configuring-garbage-collection"></a>設定記憶體回收
 
@@ -262,7 +262,7 @@ Managed 物件的使用者無法處置此物件所使用的原生資源。 若�
 
 下列圖例顯示在分開的專屬執行緒上執行的並行記憶體回收。
 
-![並行垃圾收集執行緒](../../../docs/standard/garbage-collection/media/gc-concurrent.png "並行垃圾收集執行緒")
+![並行垃圾收集執行緒](../../../docs/standard/garbage-collection/media/gc-concurrent.png "並行記憶體回收執行緒")
 
 [回到頁首](#top)
 
@@ -270,7 +270,7 @@ Managed 物件的使用者無法處置此物件所使用的原生資源。 若�
 
 ## <a name="background-workstation-garbage-collection"></a>背景工作站記憶體回收
 
-背景垃圾收集會取代從 .NET Framework 4 開始的並行工作站垃圾收集，它會取代從 .NET Framework 4.5 開始的並行伺服器垃圾收集。  在背景記憶體回收中，當層代 2 的回收正在進行時，會視需要回收暫時層代 (0 和 1)。 它是在專用的執行緒上執行，而且只適用于層代2回收。 背景垃圾收集預設會自動啟用，而且可以使用 .NET Framework 應用程式中的[@no__t 1gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)設定 設定來啟用或停用。 
+背景垃圾收集會取代從 .NET Framework 4 開始的並行工作站垃圾收集，它會取代從 .NET Framework 4.5 開始的並行伺服器垃圾收集。  在背景記憶體回收中，當層代 2 的回收正在進行時，會視需要回收暫時層代 (0 和 1)。 它是在專用的執行緒上執行，而且只適用于層代2回收。 背景垃圾收集預設會自動啟用，而且可以使用 .NET Framework 應用程式中的 [ [\<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) ] 設定來啟用或停用。 
 
 > [!NOTE]
 > 只有 .NET Framework 4 和更新版本才能使用背景記憶體回收。 而 .NET Framework 4 只支援將上述功能用於工作站記憶體回收。 從 .NET Framework 4.5 開始，背景記憶體回收可供工作站和伺服器記憶體回收使用。
@@ -283,7 +283,7 @@ Managed 物件的使用者無法處置此物件所使用的原生資源。 若�
 
 下圖顯示在工作站上另一個專用執行緒上執行的背景記憶體回收：
 
-![顯示背景工作站垃圾收集的圖表。](./media/fundamentals/background-workstation-garbage-collection.png "顯示背景工作站垃圾收集的圖表。")
+![顯示背景工作站垃圾收集的圖表。](./media/fundamentals/background-workstation-garbage-collection.png "顯示背景工作站記憶體回收的圖表。")
 
 [回到頁首](#top)
 
@@ -295,8 +295,8 @@ Managed 物件的使用者無法處置此物件所使用的原生資源。 若�
 
 下圖顯示在伺服器上另一個專用執行緒上執行的背景記憶體回收：
 
-![顯示背景伺服器垃圾收集的圖表。](./media/fundamentals/background-server-garbage-collection.png "顯示背景伺服器垃圾收集的圖表。")
+![顯示背景伺服器垃圾收集的圖表。](./media/fundamentals/background-server-garbage-collection.png "顯示背景伺服器記憶體回收的圖表。")
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [記憶體回收](../../../docs/standard/garbage-collection/index.md)

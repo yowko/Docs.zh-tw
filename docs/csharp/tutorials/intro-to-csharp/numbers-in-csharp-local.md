@@ -3,12 +3,12 @@ title: C# 中的數字 - C# 教學課程簡介
 description: 透過探索數值類型及其屬性和方法來了解 C#。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 731824fefcf4966a885c53be8f71e77140541383
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e9d8b09bde6e87edf9f483c0c296dbb256343f58
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834092"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774016"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>在 C\# 中操作整數和浮點數數字
 
@@ -31,7 +31,7 @@ Console.WriteLine(c);
 
 在命令視窗中輸入 `dotnet run` 來執行此程式碼。
 
-您看到的只是一種基本的整數數學運算。 @No__t-0 類型代表**整數**、零、正數或負整數。 您使用 `+` 符號來執行加法。 整數常用的其他數學運算包括：
+您看到的只是一種基本的整數數學運算。 @No__t_0 類型代表**整數**、零、正數或負整數。 您使用 `+` 符號來執行加法。 整數常用的其他數學運算包括：
 
 - `-` 用於減法
 - `*` 用於乘法
@@ -320,8 +320,6 @@ Console.WriteLine(c / d);
 
 您可以在下列主題中深入了解 C# 中的數字：
 
-- [整數型別](../../language-reference/builtin-types/integral-numeric-types.md)
-- [浮點型別表](../../language-reference/builtin-types/floating-point-numeric-types.md)
-- [內建型別表](../../language-reference/keywords/built-in-types-table.md)
-- [隱含數值轉換表](../../language-reference/keywords/implicit-numeric-conversions-table.md)
-- [明確數值轉換表](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [整數數數值型別](../../language-reference/builtin-types/integral-numeric-types.md)
+- [浮點數數值型別](../../language-reference/builtin-types/floating-point-numeric-types.md)
+- [內建數值轉換](../../language-reference/builtin-types/numeric-conversions.md)

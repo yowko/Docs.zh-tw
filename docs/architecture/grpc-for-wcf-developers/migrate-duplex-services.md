@@ -3,12 +3,12 @@ title: 將 WCF 雙工服務遷移至 WCF 開發人員的 gRPC-gRPC
 description: 瞭解如何將各種形式的 WCF 雙工服務遷移至 gRPC 串流服務。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 525dc3006c45f773242ab08b112dba72087a2e3f
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1c3f87b035cea367188e8357f4755c7b6786ab77
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834512"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770395"
 ---
 # <a name="migrate-wcf-duplex-services-to-grpc"></a>將 WCF 雙面服務移轉至 gRPC
 
@@ -37,7 +37,7 @@ public interface ISimpleStockTickerService
 }
 ```
 
-服務具有不具有傳回類型的單一方法，因為它會使用回呼介面`ISimpleStockTickerCallback` ，即時將資料傳送至用戶端。
+服務具有不具有傳回類型的單一方法，因為它會使用回呼介面 `ISimpleStockTickerCallback` 將資料即時傳送到用戶端。
 
 #### <a name="the-callback-interface"></a>回呼介面
 
@@ -56,7 +56,7 @@ public interface ISimpleStockTickerCallback
 
 處理即時資料的 gRPC 方式不同。 從用戶端到伺服器的呼叫可以建立持續性資料流程，可以針對以非同步方式到達的訊息進行監視。 雖然不同，資料流程可以是更直覺的方式來處理這項資料，而且在現代化的程式設計上更具相關性，並著重于 LINQ、回應式資料流程、功能性程式設計等等。
 
-服務定義需要兩個訊息：一個用於要求，另一個用於資料流程。 服務會在其`StockTickerUpdate` `return`宣告中使用關鍵字， `stream`以傳回訊息的資料流程。 建議您將新增`Timestamp`至更新，以顯示價格變更的確切時間。
+服務定義需要兩個訊息：一個用於要求，另一個用於資料流程。 服務會在其 `return` 宣告中使用 `stream` 關鍵字，傳回 `StockTickerUpdate` 訊息的資料流程。 建議您將 `Timestamp` 新增至更新，以顯示價格變更的確切時間。
 
 #### <a name="simple_stock_tickerproto"></a>simple_stock_ticker. proto
 
@@ -79,14 +79,14 @@ message SubscribeRequest {
 
 message StockTickerUpdate {
   string symbol = 1;
-  int32 priceCents = 2;
+  int32 price_cents = 2;
   google.protobuf.Timestamp time = 3;
 }
 ```
 
 ### <a name="implement-the-simplestockticker"></a>執行 SimpleStockTicker
 
-將`TraderSys.StockMarket`類別庫`StockPriceSubscriber`中的三個類別複製到目標方案中的新 .NET Standard 類別庫，以重複使用 WCF 專案中的假。 若要進一步遵循最佳做法，請`Factory`新增類型來建立其實例，並向`IStockPriceSubscriberFactory` ASP.NET Core 的相依性插入服務註冊。
+將 `TraderSys.StockMarket` 類別庫中的三個類別複製到目標方案中的新 .NET Standard 類別庫，以重複使用 WCF 專案中的假 `StockPriceSubscriber`。 若要進一步遵循最佳做法，請新增 `Factory` 類型來建立其實例，並向 ASP.NET Core 的相依性插入服務註冊 `IStockPriceSubscriberFactory`。
 
 #### <a name="the-factory-implementation"></a>Factory 的執行
 
@@ -166,19 +166,19 @@ public class StockTickerService : Protos.SimpleStockTicker.SimpleStockTickerBase
 }
 ```
 
-如您所見，雖然檔案中`.proto`的宣告指出方法會「傳回」 `StockTickerUpdate`訊息的資料流程，事實上它會傳回 vanilla `Task`。 建立資料流程的作業是由產生的程式碼和 gRPC 執行時間程式庫（可提供`IServerStreamWriter<StockTickerUpdate>`回應資料流程）來處理，以供使用。
+如您所見，雖然 `.proto` 檔案中的宣告指出方法會「傳回」 `StockTickerUpdate` 訊息的資料流程，事實上，它會傳回 vanilla `Task`。 建立資料流程的作業是由產生的程式碼和 gRPC 執行時間程式庫（可提供 `IServerStreamWriter<StockTickerUpdate>` 回應資料流程）處理，以供使用。
 
 不同于 WCF 雙工服務，在連接開啟時，服務類別的實例會保持運作狀態，而 gRPC 服務則會使用傳回的工作來保持服務的運作狀態。 工作不應完成，直到連接關閉為止。
 
-服務可以使用`CancellationToken` `ServerCallContext`從來判斷用戶端已關閉連接的時機。 簡單的靜態方法`AwaitCancellation`是用來建立在解除標記時完成的工作。
+服務可以使用 `ServerCallContext` 中的 `CancellationToken` 來判斷用戶端何時關閉連接。 簡單的靜態方法（`AwaitCancellation`）是用來建立在解除標記時完成的工作。
 
-在方法中，取得並加入事件處理常式，以寫入至回應資料流程。 `StockPriceSubscriber` `Subscribe` 然後在立即處置`subscriber`之前，等待連接關閉，以防止它嘗試將資料寫入已關閉的資料流程。
+在 `Subscribe` 方法中，取得 `StockPriceSubscriber` 並加入寫入回應資料流程的事件處理常式。 然後在立即處置 `subscriber` 以防止它嘗試將資料寫入已關閉的資料流程之前，先等候連接關閉。
 
-方法有一個`try` 區塊，可`catch`處理將訊息寫入資料流程時可能發生的任何錯誤。 / `WriteUpdateAsync` 這是透過網路的持續連線中的重要考慮，不論是刻意或因為發生失敗，都可以在任何毫秒中斷。
+@No__t_0 方法具有 `try` / `catch` 區塊，可處理將訊息寫入至資料流程時可能發生的任何錯誤。 這是透過網路的持續連線中的重要考慮，不論是刻意或因為發生失敗，都可以在任何毫秒中斷。
 
 ### <a name="using-the-stocktickerservice-from-a-client-application"></a>從用戶端應用程式使用 StockTickerService
 
-遵循上一節中的相同步驟，從`.proto`檔案建立可共用的用戶端類別庫。 在此範例中，有一個 .NET Core 3.0 主控台應用程式，示範如何使用用戶端。
+遵循上一節中的相同步驟，從 `.proto` 檔案建立可共用的用戶端類別庫。 在此範例中，有一個 .NET Core 3.0 主控台應用程式，示範如何使用用戶端。
 
 #### <a name="example-programcs"></a>範例 Program.cs
 
@@ -207,18 +207,18 @@ class Program
 }
 ```
 
-在此情況下， `Subscribe`產生的用戶端上的方法不是非同步。 資料流程會立即建立並可供使用，因為它`MoveNext`的方法是非同步，而且第一次呼叫它時，必須等到連接正常運作後才會完成。
+在此情況下，產生的用戶端上的 `Subscribe` 方法不是非同步。 資料流程會立即建立並可供使用，因為它的 `MoveNext` 方法是非同步，而且第一次呼叫它時，必須等到連接運作後才會完成。
 
-資料流程會傳遞至非同步`DisplayAsync`方法; 接著，應用程式會等待使用者按下某個按鍵，然後取消該`DisplayAsync`方法並等候工作完成後再結束。
+資料流程會傳遞至非同步 `DisplayAsync` 方法;應用程式接著會等待使用者按下某個按鍵，然後取消 `DisplayAsync` 方法，並等候工作完成後再結束。
 
 > [!NOTE]
-> 此程式碼會使用新C#的 8 "using 宣告" 語法來處置資料流程，並在`Main`方法結束時處理通道。 這是一項很小的變更，但可減少縮排和空白行的好處。
+> 此程式碼會使用新C#的 8 "using 宣告" 語法來處置資料流程，並在 `Main` 方法結束時處理通道。 這是一項很小的變更，但可減少縮排和空白行的好處。
 
 #### <a name="consume-the-stream"></a>使用資料流程
 
-WCF 使用的回呼介面，可讓伺服器直接呼叫用戶端上的方法。 gRPC 串流的工作方式不同。 用戶端會逐一查看傳回的資料流程並處理訊息，就像是從傳回的本機方法`IEnumerable`傳回的一樣。
+WCF 使用的回呼介面，可讓伺服器直接呼叫用戶端上的方法。 gRPC 串流的工作方式不同。 用戶端會逐一查看傳回的資料流程並處理訊息，就像是從傳回 `IEnumerable` 的本機方法傳回的一樣。
 
-類型的運作方式非常`IEnumerator<T>`類似：有一個`MoveNext`方法會在有更多資料時傳回 true，而`Current`屬性則會傳回最新的值。 `IAsyncStreamReader<T>` 唯一的差別在於， `MoveNext`方法`Task<bool>`會傳回，而不是只`bool`傳回。 擴充方法會將資料流程包裝在標準C#的 8 `IAsyncEnumerable`中，以用於新`await foreach`的語法。 `ReadAllAsync`
+@No__t_0 類型的運作方式很像 `IEnumerator<T>`：有一個 `MoveNext` 方法，只要有更多資料，就會傳回 true，而 `Current` 屬性則會傳回最新的值。 唯一的差別在於 `MoveNext` 方法會傳回 `Task<bool>`，而不只是 `bool`。 @No__t_0 擴充方法會將資料流程包裝在標準C# 8 `IAsyncEnumerable` 中，以搭配新的 `await foreach` 語法使用。
 
 ```csharp
 static async Task DisplayAsync(IAsyncStreamReader<StockTickerUpdate> stream, CancellationToken token)
@@ -242,19 +242,19 @@ static async Task DisplayAsync(IAsyncStreamReader<StockTickerUpdate> stream, Can
 ```
 
 > [!TIP]
-> 本章節結尾的[用戶端程式庫](client-libraries.md#iobservable)一節將探討如何新增擴充方法和類別，以包裝`IAsyncStreamReader<T>`在中，讓開發人員使用回應式的程式`IObservable<T>`設計模式。
+> 本章結尾的[用戶端程式庫](client-libraries.md#iobservable)一節將探討如何新增擴充方法和類別，以在使用回應式程式設計模式的開發人員 `IObservable<T>` 中包裝 `IAsyncStreamReader<T>`。
 
-同樣地，請小心在此處攔截例外狀況<xref:System.OperationCanceledException> ，因為可能發生網路失敗，以及可避免擲回的，因為程式碼<xref:System.Threading.CancellationToken>使用來中斷迴圈。 型別有許多關於 gRPC 執行時間錯誤的實用資訊， `StatusCode`包括。 `RpcException` 如需詳細資訊，請參閱[第4章中的*錯誤處理*](error-handling.md)。
+同樣地，請小心在此處攔截例外狀況，因為可能會發生網路失敗，以及可避免擲回的 <xref:System.OperationCanceledException>，因為程式碼使用 <xref:System.Threading.CancellationToken> 來中斷迴圈。 @No__t_0 型別有許多關於 gRPC 執行時間錯誤的實用資訊，包括 `StatusCode`。 如需詳細資訊，請參閱[第4章中的*錯誤處理*](error-handling.md)。
 
 ## <a name="bidirectional-streaming"></a>雙向串流
 
 WCF 全雙工服務可雙向進行非同步即時訊息傳遞。 在伺服器串流範例中，用戶端會啟動要求，然後接收更新的串流。 該服務的較佳版本可讓用戶端在清單中新增和移除股票，而不需要停止和建立新的訂用帳戶。 該功能已在[FullStockTicker 範例解決方案](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/FullStockTickerSample/wcf/FullStockTicker)中執行。
 
-`IFullStockTickerService`介面提供三種方法：
+@No__t_0 介面提供三種方法：
 
-- `Subscribe`啟動連接。
-- `AddSymbol`新增要監看的股票符號。
-- `RemoveSymbol`從監看清單中移除符號。
+- `Subscribe` 會啟動連接。
+- `AddSymbol` 新增要監看的股票符號。
+- `RemoveSymbol` 從監看清單中移除符號。
 
 ```csharp
 [ServiceContract(SessionMode = SessionMode.Required, CallbackContract = typeof(IFullStockTickerCallback))]
@@ -273,9 +273,9 @@ public interface IFullStockTickerService
 
 回呼介面保持不變。
 
-在 gRPC 中執行此模式較不簡單，因為現在有兩個數據串流會傳遞訊息：一個是從用戶端到伺服器，另一個則是從伺服器到用戶端。 您無法使用多個方法來執行新增和移除作業，但是可以在單一資料流程上傳遞多個類型的訊息，方法是使用[第3章](protobuf-any-oneof.md)所`Any`涵蓋的`oneof`類型或關鍵字。
+在 gRPC 中執行此模式較不簡單，因為現在有兩個數據串流會傳遞訊息：一個是從用戶端到伺服器，另一個則是從伺服器到用戶端。 您無法使用多個方法來執行新增和移除作業，但是可以在單一資料流程上傳遞多個類型的訊息，其方式是使用 `Any` 類型或 `oneof` 關鍵字，如[第3章](protobuf-any-oneof.md)所述。
 
-在有一組可接受的特定類型的情況下， `oneof`是較好的方式。 使用可以保存`AddSymbolRequest` 或`RemoveSymbolRequest`的。 `ActionMessage`
+在有一組可接受的特定類型的情況下，`oneof` 是較好的方式。 使用可以保存 `AddSymbolRequest` 或 `RemoveSymbolRequest` 的 `ActionMessage`。
 
 ```protobuf
 message ActionMessage {
@@ -294,7 +294,7 @@ message RemoveSymbolRequest {
 }
 ```
 
-宣告採用`ActionMessage`訊息資料流程的雙向串流服務。
+宣告採用 `ActionMessage` 訊息資料流程的雙向串流服務。
 
 ```protobuf
 service FullStockTicker {
@@ -302,7 +302,7 @@ service FullStockTicker {
 }
 ```
 
-這項服務的實作為與上一個範例`Subscribe`類似，但方法的第一個參數`IAsyncStreamReader<ActionMessage>`現在是，它可以用來處理`Add`和`Remove`要求。
+這項服務的執行與上一個範例類似，但 `Subscribe` 方法的第一個參數現在是一個 `IAsyncStreamReader<ActionMessage>`，可以用來處理 `Add` 和 `Remove` 要求。
 
 ```csharp
 public override async Task Subscribe(IAsyncStreamReader<ActionMessage> requestStream, IServerStreamWriter<StockTickerUpdate> responseStream, ServerCallContext context)
@@ -348,7 +348,7 @@ private static Task AwaitCancellation(CancellationToken token)
 }
 ```
 
-GRPC 為我們產生的`Add` `Remove` `null`類別可確保只有其中一個和屬性可以設定，並找出哪一個不是有效的方法來尋找所使用的訊息類型，但還有更好的方法`ActionMessage`. 程式`enum ActionOneOfCase`代碼產生也會`ActionMessage`在類別中建立，如下所示：
+GRPC 為我們產生的 `ActionMessage` 類別，保證只能設定其中一個 `Add` 和 `Remove` 屬性，並找出哪一個不 `null` 是尋找所使用之訊息類型的有效方式但還有更好的方法。 程式碼產生也會在 `ActionMessage` 類別中建立 `enum ActionOneOfCase`，如下所示：
 
 ```csharp
 public enum ActionOneofCase {
@@ -358,7 +358,7 @@ public enum ActionOneofCase {
 }
 ```
 
-物件上的`ActionCase` 屬性`switch`可以與語句搭配使用，以決定要設定的欄位。 `ActionMessage`
+@No__t_1 物件上 `ActionCase` 屬性可以與 `switch` 語句搭配使用，以判斷設定的欄位。
 
 ```csharp
 private async Task HandleActions(IAsyncStreamReader<ActionMessage> requestStream, IFullStockPriceSubscriber subscriber, CancellationToken token)
@@ -385,13 +385,13 @@ private async Task HandleActions(IAsyncStreamReader<ActionMessage> requestStream
 ```
 
 > [!TIP]
-> 語句有一個`default`案例，會在遇到未知`ActionOneOfCase`的值時記錄警告。 `switch` 這在表示用戶端正在使用較新版本`.proto`的檔案，而該檔案已新增更多動作時很有用。 這是使用的`switch`原因之一，比`null`在已知的欄位上測試更好。
+> @No__t_0 語句有一個 `default` 的案例，如果遇到未知的 `ActionOneOfCase` 值，就會記錄警告。 這在表示用戶端正在使用較新版本的 `.proto` 檔案，而該檔案已新增更多動作時很有用。 這是使用 `switch` 比測試已知欄位 `null` 更好的原因之一。
 
 ### <a name="use-the-fullstocktickerservice-from-a-client-application"></a>從用戶端應用程式使用 FullStockTickerService
 
 有一個簡單的 .NET Core 3.0 WPF 應用程式，示範如何使用這個更複雜的用戶端。 您可以[在 GitHub 上](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/FullStockTickerSample/grpc/FullStockTicker)找到完整的應用程式。
 
-用戶端是在`MainWindowViewModel`類別中使用，它會從相依性插入取得`FullStockTicker.FullStockTickerClient`類型的實例。
+用戶端是在 `MainWindowViewModel` 類別中使用，它會從相依性插入取得 `FullStockTicker.FullStockTickerClient` 類型的實例。
 
 ```csharp
 public class MainWindowViewModel : IAsyncDisposable, INotifyPropertyChanged
@@ -413,9 +413,9 @@ public class MainWindowViewModel : IAsyncDisposable, INotifyPropertyChanged
     }
 ```
 
-`client.Subscribe()`方法所傳回的物件現在是 gRPC 程式庫類型`AsyncDuplexStreamingCall<TRequest, TResponse>`的實例，它會提供`RequestStream`將要求傳送至伺服器的，以及`ResponseStream`用於處理回應的。
+@No__t_0 方法所傳回的物件現在是 gRPC 程式庫類型的實例 `AsyncDuplexStreamingCall<TRequest, TResponse>`，它會提供將要求傳送至伺服器的 `RequestStream`，以及處理回應的 `ResponseStream`。
 
-從某些 WPF `ICommand`方法使用要求資料流程來加入和移除符號。 針對每個作業，設定`ActionMessage`物件的相關欄位：
+從某些 WPF `ICommand` 方法中，會使用要求資料流程來加入和移除符號。 針對每個作業，設定 `ActionMessage` 物件上的相關欄位：
 
 ```csharp
 private async Task Add()
@@ -434,9 +434,9 @@ public async Task Remove(PriceViewModel priceViewModel)
 ```
 
 > [!IMPORTANT]
-> 在訊息上設定欄位的值會自動清除先前已設定的所有欄位。`oneof`
+> 在訊息上設定 `oneof` 欄位的值時，會自動清除先前已設定的任何欄位。
 
-回應的資料流程會在`async`方法中處理，而傳回的`Task`則會在視窗關閉時保持處置。
+回應的資料流程會在 `async` 方法中處理，而傳回的 `Task` 則會在視窗關閉時保留以進行處置。
 
 ```csharp
 private async Task HandleResponsesAsync(CancellationToken token)
@@ -465,7 +465,7 @@ private async Task HandleResponsesAsync(CancellationToken token)
 
 ### <a name="client-clean-up"></a>用戶端清理
 
-當視窗關閉`MainWindowViewModel`並處置（從的`Closed`事件`MainWindow`）時，建議您適當地處置`AsyncDuplexStreamingCall`物件。 特別的是， `CompleteAsync` `RequestStream`應該呼叫上的方法，以正常關閉伺服器上的資料流程。 下列範例顯示範例視圖`DisposeAsync`模型中的方法：
+當視窗關閉並處置 `MainWindowViewModel` （從 `MainWindow` 的 `Closed` 事件）時，建議您適當地處置 `AsyncDuplexStreamingCall` 物件。 特別是，應該呼叫 `RequestStream` 上的 `CompleteAsync` 方法，以正常地關閉伺服器上的資料流程。 下列範例顯示範例視圖模型中的 `DisposeAsync` 方法：
 
 ```csharp
 public ValueTask DisposeAsync()

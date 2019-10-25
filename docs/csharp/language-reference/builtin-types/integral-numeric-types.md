@@ -1,7 +1,7 @@
 ---
 title: 整數的數字型別 - C# 參考
 description: 了解每個整數數字型別的範圍、儲存體大小和用法。
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - byte
 - byte_CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 3d4f3164d67a000123417619f3be6be455d5ab87
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c255711e4b165fdca27d50c6bd0f2debfe15ae25
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579187"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773859"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整數的數字型別 (C# 參考)
 
@@ -100,7 +100,7 @@ var binaryLiteral = 0b_0010_1010;
 
 如果整數常值所代表的值超出 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>，就會發生編譯錯誤 [CS1021](../../misc/cs1021.md)。
 
-整數常值所代表的值可以隱含地轉換成範圍小於所決定之常數值型別的類型。 當此值在目的地類型的範圍內時，就可能發生這種情況：
+如果整數常值的判斷型別是 `int`，而該值是在目的地類型的範圍內，則常值所代表的值可以隱含地轉換成 `sbyte`、`byte`、`short`、`ushort`、`uint` 或 `ulong`：
 
 ```csharp
 byte a = 17;
@@ -118,9 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>轉換
 
-在目的地型別可以儲存來源型別全部值的整數型別中，任兩者之間都具有隱含轉換 (稱為「擴展轉換」)。 例如，`int` 到 `long` 有隱含轉換，因為 `int` 值範圍是適當的 `long` 子集。 較小的不帶正負號整數型別可隱含轉換成較大帶正負號整數型別。 任一整數型別也皆可隱含轉換成任一浮點型別。  任一帶正負號的整數型別不會隱含轉換成任一不帶正負號的整數型別。
-
-當來源型別未定義隱含轉換成目的地型別時，您必須使用明確轉換將一種整數型別轉換成另一種整數型別。 這稱為「縮小轉換」。 因為轉換會導致資料遺失，所以需要明確轉換。
+您可以將任何整數數數值型別轉換成任何其他整數數數值型別。 如果目的地類型可以儲存來源類型的所有值，則轉換是隱含的。 否則，您必須使用[cast 運算子 `()`](../operators/type-testing-and-cast.md#cast-operator-)來叫用明確轉換。 如需詳細資訊，請參閱[內建數值轉換](numeric-conversions.md)。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -132,8 +130,7 @@ var longVariable = (long)42;
 ## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
-- [浮點類型](floating-point-numeric-types.md)
-- [預設值表](../keywords/default-values-table.md)
-- [格式化數值結果表](../keywords/formatting-numeric-results-table.md)
 - [內建型別表](../keywords/built-in-types-table.md)
+- [浮點類型](floating-point-numeric-types.md)
+- [格式化數值結果表](../keywords/formatting-numeric-results-table.md)
 - [.NET 中的數值](../../../standard/numerics.md)

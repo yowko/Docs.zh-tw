@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: c18a06971887049a443f0bd1af7c77610a787a27
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
-ms.translationtype: HT
+ms.openlocfilehash: 0a251e8d04f31a736ee6acbf4b8e913cfb8ca6df
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609946"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771726"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>位元與移位運算子 (C# 參考)
 
@@ -136,7 +136,7 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
 
-由於[數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)的緣故，`op` 作業結果可能無法隱含轉換成 `x` 的 `T` 型別。 在此情況下，如果 `op` 是預先定義的運算子，且作業結果可以明確轉換成 `x` 的 `T` 型別，則形式 `x op= y` 的複合指派運算式相等於 `x = (T)(x op y)`，唯一的不同在於 `x` 只會評估一次。 下列範例示範了該行為：
+由於[數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)的緣故，`op` 作業的結果可能不會隱含轉換成 `x` 的 `T` 類型。 在此情況下，如果 `op` 是預先定義的運算子，且作業結果可以明確轉換成 `x` 的 `T` 型別，則形式 `x op= y` 的複合指派運算式相等於 `x = (T)(x op y)`，唯一的不同在於 `x` 只會評估一次。 下列範例示範了該行為：
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
 
@@ -158,13 +158,13 @@ x = x op y
 
 ## <a name="shift-count-of-the-shift-operators"></a>移位運算子的移位計數
 
-針對移位運算子 `<<` 和 `>>`，右邊運算元的型別必須是 [int](../builtin-types/integral-numeric-types.md) 或具有[預先定義隱含數值轉換](../keywords/implicit-numeric-conversions-table.md)至 `int` 的型別。
+針對移位運算子 `<<` 和 `>>`，右邊運算元的型別必須是 [int](../builtin-types/integral-numeric-types.md) 或具有[預先定義隱含數值轉換](../builtin-types/numeric-conversions.md#implicit-numeric-conversions)至 `int` 的型別。
 
 針對 `x << count` 和 `x >> count` 運算式，實際的移位計數取決於 `x` 的型別，如下所示：
 
-- 若 `x` 的型別是 [int](../builtin-types/integral-numeric-types.md) 或 [uint](../builtin-types/integral-numeric-types.md)，則移位計數會由右邊運算元低位的「五個」  位元定義。 也就是說，位移計數是從 `count & 0x1F` (或 `count & 0b_1_1111`) 所計算。
+- 若 `x` 的型別是 [int](../builtin-types/integral-numeric-types.md) 或 [uint](../builtin-types/integral-numeric-types.md)，則移位計數會由右邊運算元低位的「五個」位元定義。 也就是說，位移計數是從 `count & 0x1F` (或 `count & 0b_1_1111`) 所計算。
 
-- 若 `x` 的型別是 [long](../builtin-types/integral-numeric-types.md) 或 [ulong](../builtin-types/integral-numeric-types.md)，則移位計數會由右邊運算元低位的「六個」  位元定義。 也就是說，位移計數是從 `count & 0x3F` (或 `count & 0b_11_1111`) 所計算。
+- 若 `x` 的型別是 [long](../builtin-types/integral-numeric-types.md) 或 [ulong](../builtin-types/integral-numeric-types.md)，則移位計數會由右邊運算元低位的「六個」位元定義。 也就是說，位移計數是從 `count & 0x3F` (或 `count & 0b_11_1111`) 所計算。
 
 下列範例示範了該行為：
 
@@ -192,7 +192,7 @@ x = x op y
 - [複合指派](~/_csharplang/spec/expressions.md#compound-assignment)
 - [數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)

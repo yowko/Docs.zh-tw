@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 21526484b8423f9b366da64307bc44f8fb061fe9
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 741c36473d80b2581718d969a7037f6c81ff4bf5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005289"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775592"
 ---
 # <a name="-platform-visual-basic"></a>-platform （Visual Basic）
 指定通用語言執行平台 (CLR) 的哪個平台版本可以執行輸出檔。  
@@ -81,8 +81,8 @@ ms.locfileid: "72005289"
 vbc -platform:x86 myFile.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [/target （Visual Basic）](target.md)
+- [-target （Visual Basic）](target.md)
 - [Visual Basic 命令列編譯器](index.md)
 - [編譯命令列範例](sample-compilation-command-lines.md)

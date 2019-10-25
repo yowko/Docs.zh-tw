@@ -6,18 +6,18 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 476b6047fe9872f13f2f0298fb331eb7d888a73d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f69dfe77e5d485c4c7ffcbf2b98657eab87d452d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117856"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775225"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard 的新功能
 
 .NET Standard 是定義 API 的版本集正式規格，必須能在遵守該版本標準的 .NET 實作中取得。 .NET Standard 是以程式庫開發人員為目標。 以 .NET Standard 版本為目標的程式庫可以用於任何支援該標準的版本之 .NET Framework、.NET Core 或 Xamarin 實作。
 
-.NET Standard 的最新版本為 2.0。 它包含在 .NET Core 2.0 SDK 中，也包含在已安裝 .NET Core 工作負載的 Visual Studio 2017 15.3 版中。
+.NET Standard 的最新版本為 2.0。 它隨附于 .NET Core 2.0 SDK，以及已安裝 .NET Core 工作負載的 Visual Studio 2017 15.3 版。
 
 ## <a name="supported-net-implementations"></a>支援的 .NET 實作
 
@@ -61,7 +61,7 @@ ms.locfileid: "71117856"
 
 ### <a name="support-for-visual-basic"></a>Visual Basic 的支援
 
-您現在可以在 Visual Basic 中開發 .NET Standard 程式庫。 對於使用已安裝 .NET Core 工作負載的 Visual Studio 2017 15.3 版或更新版本的 Visual Basic 開發人員，Visual Studio 現在包含 .NET Standard Class Library 範本。 對於使用其他開發工具和環境的 Visual Basic 開發人員，您可以使用 [dotnet new](../../core/tools/dotnet-new.md) 命令來建立 .NET Standard 程式庫專案。 如需詳細資訊，請參閱 [.NET Standard 程式庫的工具支援](#tooling-support-for-net-standard-libraries)。
+您現在可以在 Visual Basic 中開發 .NET Standard 程式庫。 針對使用已安裝 .NET Core 工作負載之 Visual Studio 2017 15.3 版或更新版本的 Visual Basic 開發人員，Visual Studio 現在包含 .NET Standard 類別庫範本。 對於使用其他開發工具和環境的 Visual Basic 開發人員，您可以使用 [dotnet new](../../core/tools/dotnet-new.md) 命令來建立 .NET Standard 程式庫專案。 如需詳細資訊，請參閱 [.NET Standard 程式庫的工具支援](#tooling-support-for-net-standard-libraries)。
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>.NET Standard 程式庫的工具支援
 
@@ -93,7 +93,7 @@ dotnet new classlib -lang vb
 
 ---
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Standard](../net-standard.md)
 - [.NET Standard 簡介](https://devblogs.microsoft.com/dotnet/introducing-net-standard/)
