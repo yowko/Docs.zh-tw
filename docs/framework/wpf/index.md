@@ -14,18 +14,24 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF]
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
-ms.openlocfilehash: 35a936cbc34bf10219099090e1af8c145d7fb23d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69cdae86a295793c8da6b7f663b22846ae2c32b2
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764539"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919360"
 ---
 # <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
-Windows Presentation Foundation (WPF) 在 Visual Studio 提供開發人員統一的程式設計模型，建置在 Windows 上的特定業務桌面應用程式。  
-  
- [使用 Windows Presentation Foundation 建立桌面應用程式](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
- [在 Visual Studio 和 Blend for Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)  
-  
- [取得 Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+Windows Presentation Foundation （WPF）為開發人員提供了統一的程式設計模型，可在 Windows 上建立企業營運桌面應用程式。
+
+- [WPF 簡介](introduction-to-wpf.md)
+- [使用者入門](getting-started/index.md)
+- [應用程式開發](app-development/index.md)
+- [進階](advanced/index.md)
+- [控制項](controls/index.md)
+- [Data](data/index.md)
+- [圖形和多媒體](graphics-multimedia/index.md)
+- [Security](security-wpf.md)
+- [WPF 範例](wpf-samples.md)
+- [類別庫](class-library-wpf.md)

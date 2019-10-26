@@ -3,16 +3,14 @@ title: WCF 開發人員的 ASP.NET Core gRPC-WCF 開發人員的 gRPC
 description: 要寫入的
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: dc39fc96e7154fb50acd0b65a58586b3fa12ab50
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 6a5b4f6d0b47a272f7a753e22bfd61b06202944a
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696912"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919383"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>適用於 WCF 開發人員的 ASP.NET Core gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ![封面影像](./media/cover.png)
 
@@ -36,7 +34,7 @@ Copyright © 2019 by Microsoft Corporation
 
 Microsoft 與列於 https://www.microsoft.com 「商標」網頁的商標是 Microsoft 集團的商標。
 
-Docker 鯨魚標誌是 Docker, Inc. 的註冊商標。使用需要許可。
+Docker whale 標誌是 Docker，Inc. 的注冊商標，由許可權使用。
 
 所有其他商標和標誌屬於其各自擁有者的財產。
 
@@ -62,7 +60,7 @@ TODO
 
 **更新此**
 
-本指南的物件是 WCF 開發人員、開發組長和架構設計人員，有興趣將 .NET 4 和更早版本的 WCF 方案遷移到使用 gRPC services ASP.NET Core 3.0。
+本指南的物件是 WCF 開發人員、開發組長和架構設計人員，有興趣使用 gRPC services，將 .NET Framework 4 和更早版本的 WCF 解決方案遷移至 ASP.NET Core 3.0。
 
 ## <a name="how-you-can-use-this-guide"></a>此指南的使用方式
 
@@ -72,7 +70,7 @@ TODO
 
 請隨意將本指南轉寄給您的小組，協助確保對這些考量和機會有共同的了解。 讓所有人都使用一組共用術語和基礎原則，有助確保套用一致的架構模式和做法。
 
-## <a name="references"></a>參考
+## <a name="references"></a>reference
 
 - **gRPC 網站**  
   <https://grpc.io>
