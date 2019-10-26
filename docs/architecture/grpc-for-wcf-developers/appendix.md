@@ -3,16 +3,14 @@ title: 附錄-適用于 WCF 開發人員的 gRPC
 description: 討論分散式交易及其在現代化微服務架構中的執行方式。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 10c4e77794c5ffe1aa6d5a629ce0b6cdf92f4ada
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d181eb07dd50ed338d02edb1908626e6ca3fb56c
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184614"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846727"
 ---
 # <a name="appendix-a---transactions"></a>附錄 A-交易
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Windows Communication Foundation （WCF）支援的分散式交易，允許跨多個服務執行不可部分完成的作業。 此功能是以[Microsoft 分散式交易協調器](https://docs.microsoft.com/previous-versions/windows/desktop/ms684146(v=vs.85))為基礎。
 
@@ -24,7 +22,7 @@ WCF 分散式交易是所謂的[兩階段認可（2pc）](https://en.wikipedia.o
 
 如果無法這麼做，則其中一種替代方式是使用[Saga 模式](https://microservices.io/patterns/data/saga.html)。 在 saga 中，更新會依序進行處理;當每個更新成功時，就會觸發下一個更新。 這些觸發程式可以從服務傳播到服務，或由 saga 協調器或「orchestrator」進行管理。 如果在程式中的任何時間點發生更新失敗，已完成其更新的服務會套用特定邏輯來將它們反轉。
 
-另一個選項是使用網域導向設計（DDD）和命令/查詢責任隔離（CQRS），如[.Net 微服務電子書](https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/)中所述。 特別是，使用領域事件或[事件來源](https://martinfowler.com/eaaDev/EventSourcing.html)有助於確保更新在不會立即&mdash; &mdash;套用的情況下仍會一致。
+另一個選項是使用網域導向設計（DDD）和命令/查詢責任隔離（CQRS），如[.Net 微服務電子書](https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/)中所述。 特別是，使用領域事件或[事件來源](https://martinfowler.com/eaaDev/EventSourcing.html)有助於確保更新會一致地&mdash;（如果未立即&mdash;套用）。
 
 >[!div class="step-by-step"]
->[上一步](application-performance-management.md)
+>[上一篇](application-performance-management.md)
