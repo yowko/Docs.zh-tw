@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Studio 中的 WPF 應用程式中建立 InkCanvas
+title: 在 Visual Studio 的 WPF 應用程式中建立 InkCanvas
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: d633111c5abc572b0fc27c1a5b32050681504073
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebbf25037921e7802b2bfcb6ffa562d16a849ffa
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753016"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920244"
 ---
-# <a name="get-started-with-ink-in-wpf"></a>開始使用 WPF 中的筆墨
+# <a name="get-started-with-ink-in-wpf"></a>開始使用 WPF 中的筆跡
 
-Windows Presentation Foundation (WPF) 具有筆跡功能，可讓您輕鬆地將您的應用程式的數位筆跡。
+Windows Presentation Foundation （WPF）有一項筆墨功能，可讓您輕鬆地將數位筆跡併入應用程式中。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-若要使用下列的範例，請先安裝[Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 它也有助於了解如何撰寫基本的 WPF 應用程式。 開始使用 WPF 的協助，請參閱[逐步解說：我第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。
+若要使用下列範例，請先安裝[Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 它也有助於知道如何撰寫基本的 WPF 應用程式。 如需 WPF 入門的說明，請參閱[逐步解說：我的第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。
 
 ## <a name="quick-start"></a>快速入門
 
-本節可協助您撰寫簡單的 WPF 應用程式會收集筆跡。
+本節可協助您撰寫可收集筆跡的簡單 WPF 應用程式。
 
 ### <a name="got-ink"></a>有筆墨嗎？
 
@@ -34,25 +34,25 @@ Windows Presentation Foundation (WPF) 具有筆跡功能，可讓您輕鬆地將
 
 1. 開啟 Visual Studio。
 
-2. 建立新**WPF 應用程式**。
+2. 建立新的**WPF 應用程式**。
 
-   在 [**新的專案**] 對話方塊中，展開**已安裝** > **Visual C#** 或**Visual Basic**  >  **Windows 桌面**類別目錄。 然後，選取**WPF 應用程式 (.NET Framework)** 應用程式範本。 輸入名稱，然後按**確定**。
+   在 [**新增專案**] 對話方塊中，展開 [**已安裝**的 > **視覺效果C#**  ] 或 [ **Visual Basic** > **Windows 桌面**] 類別。 然後，選取 [ **WPF 應用程式（.NET Framework）** ] 應用程式範本。 輸入 [名稱]，然後選取 **[確定]** 。
 
-   Visual Studio 建立專案，並*MainWindow.xaml*會在設計工具中開啟。
+   Visual Studio 會建立專案，而*mainwindow.xaml*會在設計工具中開啟。
 
-3. 型別`<InkCanvas/>`之間`<Grid>`標記。
+3. 在 `<Grid>` 標記之間輸入 `<InkCanvas/>`。
 
-   ![InkCanvas 標記的 XAML 設計工具](./media/getting-started-with-ink/inkcanvas-xaml.png)
+   ![具有 InkCanvas 標記的 XAML 設計工具](./media/getting-started-with-ink/inkcanvas-xaml.png)
 
-4. 按下**F5**來啟動您的應用程式偵錯工具。
+4. 按**F5**以在偵錯工具中啟動您的應用程式。
 
-5. 使用手寫筆或滑鼠，撰寫**hello world**  視窗中。
+5. 使用手寫筆或滑鼠，在視窗中寫入**hello world** 。
 
-您已撰寫筆墨相當於只有 12 的按鍵輸入的"hello world"應用程式 ！
+您撰寫了與 "hello world" 應用程式相同的筆墨，只需12次按鍵！
 
-### <a name="spice-up-your-app"></a>為您的應用程式增添
+### <a name="spice-up-your-app"></a>Spice 您的應用程式
 
-讓我們好好利用 WPF 的某些功能。 取代所有項目之間的開頭和結尾\<視窗 > 標記，以下列標記：
+讓我們利用 WPF 的一些功能。 以下列標記取代開頭和結尾 \<視窗 > 標記之間的所有內容：
 
 ```xaml
 <Page>
@@ -68,47 +68,47 @@ Windows Presentation Foundation (WPF) 具有筆跡功能，可讓您輕鬆地將
 </Page>
 ```
 
-此 XAML 會建立漸層筆刷背景筆跡的介面上。
+此 XAML 會在您的筆跡表面上建立漸層筆刷背景。
 
-![在筆跡介面在 WPF 應用程式中的漸層色彩](./media/getting-started-with-ink/gradient-colors.png)
+![WPF 應用程式中筆跡表面的漸層色彩](./media/getting-started-with-ink/gradient-colors.png)
 
-### <a name="add-some-code-behind-the-xaml"></a>加入一些程式碼背後的 XAML
+### <a name="add-some-code-behind-the-xaml"></a>在 XAML 後面新增一些程式碼
 
-XAML 可以很容易就能設計使用者介面，而任何實際的應用程式必須加入程式碼來處理事件。 以下是簡單的範例，以滑鼠右鍵按一下的滑鼠回應中的筆墨會放大。
+雖然 XAML 可以讓您輕鬆地設計使用者介面，但任何真實世界的應用程式都必須加入程式碼來處理事件。 以下是一個簡單的範例，它會放大筆墨以回應滑鼠右鍵按一下。
 
-1. 設定`MouseRightButtonUp`在您的 XAML 中的處理常式：
+1. 在您的 XAML 中設定 `MouseRightButtonUp` 處理常式：
 
    [!code-xaml[DigitalInkTopics#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
 
-1. 在 [**方案總管] 中**、 展開 MainWindow.xaml 並開啟程式碼後置檔案 （MainWindow.xaml.cs 或 MainWindow.xaml.vb）。 新增下列事件處理常式程式碼：
+1. 在**方案總管**中，展開 mainwindow.xaml，然後開啟程式碼後置檔案（MainWindow.xaml.cs 或 mainwindow.xaml）。 新增下列事件處理常式程式碼：
 
    [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
    [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
-1. 執行應用程式。 新增一些墨水，然後以滑鼠右鍵按一下滑鼠或手寫筆使用中執行按保留對等項目。
+1. 執行應用程式。 新增一些筆墨，然後以滑鼠右鍵按一下滑鼠，或執行與手寫筆的按住等動作。
 
-   顯示您以滑鼠右鍵按一下 每次會放大。
+   每次按一下滑鼠右鍵時，畫面就會縮放。
 
-### <a name="use-procedural-code-instead-of-xaml"></a>使用程序程式碼，而不是 XAML
+### <a name="use-procedural-code-instead-of-xaml"></a>使用程式性程式碼，而不是 XAML
 
-您可以存取所有的 WPF 功能從程序性程式碼。 請遵循下列步驟來建立不使用任何 XAML 的 WPF 的"Hello 筆墨 World"應用程式。
+您可以從程式性程式碼存取所有 WPF 功能。 請遵循下列步驟來建立 WPF 的 "Hello Ink World" 應用程式，完全不使用任何 XAML。
 
-1. Visual Studio 中建立新的主控台應用程式專案。
+1. 在 Visual Studio 中建立新的主控台應用程式專案。
 
-   在 [**新的專案**] 對話方塊中，展開**已安裝** > **Visual C#** 或**Visual Basic**  >  **Windows 桌面**類別目錄。 然後，選取**主控台應用程式 (.NET Framework)** 應用程式範本。 輸入名稱，然後按**確定**。
+   在 [**新增專案**] 對話方塊中，展開 [**已安裝**的 > **視覺效果C#**  ] 或 [ **Visual Basic** > **Windows 桌面**] 類別。 然後，選取 [**主控台應用程式（.NET Framework）** ] 應用程式範本。 輸入 [名稱]，然後選取 **[確定]** 。
 
-1. 將下列程式碼貼到 Program.cs 或 Program.vb 檔案中：
+1. 將下列程式碼貼入 Program.cs 或 Program .vb 檔案：
 
    [!code-csharp[InkCanvasConsoleApp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
    [!code-vb[InkCanvasConsoleApp#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
 
-1. 新增 PresentationCore、 PresentationFramework、 與 WindowsBase 組件的參考，以滑鼠右鍵按一下**參考**中**方案總管**，然後選擇**加入參考**.
+1. 以滑鼠右鍵按一下**方案總管**中的**參考**，然後選擇 [**加入參考**]，即可加入 PresentationCore、PresentationFramework 和 WindowsBase 元件的參考。
 
-   ![顯示 PresentationCore 與 PresentationFramework 參考管理員](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
+   ![顯示 PresentationCore 和 PresentationFramework 的參考管理員](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
 
-1. 建置應用程式藉由按下**F5**。
+1. 按**F5**來建立應用程式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [數位筆跡](digital-ink.md)
 - [收集筆墨](collecting-ink.md)

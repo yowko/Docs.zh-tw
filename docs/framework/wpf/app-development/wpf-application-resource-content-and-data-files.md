@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 2bf815a5b34726b8316eea53786811abec00f5bb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: e50f542086aadc2f61412fe409d7df0f49422718
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581720"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920368"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 應用程式資源、內容和資料檔案
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 的應用程式通常取決於包含非可執行資料的檔案，例如 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、影像、影片和音訊。 Windows Presentation Foundation （WPF）提供設定、識別和使用這些類型的資料檔案（稱為「應用程式資料檔案」）的特殊支援。 這項支援是以一組特定的應用程式資料檔案類型為中心，包括：  
@@ -55,7 +55,7 @@ ms.locfileid: "72581720"
 > 本節所述的資源檔與[XAML 資源](../advanced/xaml-resources.md)中所述的資源檔不同，而且不同于[管理應用程式資源（.net）](/visualstudio/ide/managing-application-resources-dotnet)中所述的內嵌或連結的資源。  
   
 ### <a name="configuring-resource-files"></a>設定資源檔  
- 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中，資源檔是包含在 Microsoft build engine （MSBuild）專案中做為 `Resource` 專案的檔案。  
+ 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，資源檔是包含在 Microsoft build engine （MSBuild）專案中做為 `Resource` 專案的檔案。  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -68,7 +68,7 @@ ms.locfileid: "72581720"
 ```  
   
 > [!NOTE]
-> 在 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 中，您可以藉由將檔案新增至專案，並將其 `Build Action` 設定為 `Resource` 來建立資源檔。  
+> 在 Visual Studio 中，您可以藉由將檔案新增至專案，並將其 `Build Action` 設定為 `Resource`來建立資源檔。  
   
  建立專案時，MSBuild 會將資源編譯成元件。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "72581720"
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
- 呼叫 <xref:System.Windows.Application.GetResourceStream%2A> 可讓您存取 <xref:System.IO.Stream> 時，您必須執行其他工作，將它轉換成您將設定它的屬性類型。 相反地，您可以讓 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用程式碼，將資源檔直接載入至類型的屬性，以處理開啟和轉換 <xref:System.IO.Stream>。  
+ 呼叫 <xref:System.Windows.Application.GetResourceStream%2A> 可讓您存取 <xref:System.IO.Stream>時，您必須執行其他工作，將它轉換成您將設定它的屬性類型。 相反地，您可以讓 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用程式碼，將資源檔直接載入至類型的屬性，以處理開啟和轉換 <xref:System.IO.Stream>。  
   
  下列範例顯示如何使用程式碼，將 <xref:System.Windows.Controls.Page> 直接載入至 <xref:System.Windows.Controls.Frame> （`pageFrame`）。  
   
@@ -109,12 +109,12 @@ ms.locfileid: "72581720"
 ```  
   
 > [!NOTE]
-> 在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中，您會在專案中加入新的 <xref:System.Windows.Window>、<xref:System.Windows.Navigation.NavigationWindow>、<xref:System.Windows.Controls.Page>、<xref:System.Windows.Documents.FlowDocument> 或 <xref:System.Windows.ResourceDictionary>，標記檔案的 `Build Action` 會預設為 `Page`。  
+> 在 Visual Studio 中，您會在專案中加入新的 <xref:System.Windows.Window>、<xref:System.Windows.Navigation.NavigationWindow>、<xref:System.Windows.Controls.Page>、<xref:System.Windows.Documents.FlowDocument>或 <xref:System.Windows.ResourceDictionary>，標記檔案的 `Build Action` 會預設為 `Page`。  
   
  編譯具有 `Page` 專案的專案時，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 專案會轉換成二進位格式，並編譯成相關聯的元件。 因此，這些檔案可以比照一般資源檔的方式來使用。  
   
 > [!NOTE]
-> 如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案已設定為 `Resource` 專案，而且沒有程式碼後置檔案，則原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 會編譯成元件，而不是原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的二進位版本。  
+> 如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案已設定為 `Resource` 專案，而且沒有程式碼後置檔案，則原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 會編譯成元件，而不是原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]的二進位版本。  
   
 <a name="Content_Files"></a>   
 ## <a name="content-files"></a>內容檔  
@@ -140,17 +140,17 @@ ms.locfileid: "72581720"
 ```  
   
 > [!NOTE]
-> 在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中，您可以藉由將檔案新增至專案，並將其 `Build Action` 設定為 [`Content`] 來建立內容檔案，並將其 `Copy to Output Directory` 設為 [`Copy always`] （與 `Always` 相同）和 [`Copy if newer`] （與 `PreserveNewest` 相同）。  
+> 在 Visual Studio 中，您可以藉由將檔案新增至專案，並將其 `Build Action` 設定為 [`Content`] 來建立內容檔案，並將其 `Copy to Output Directory` 設為 [`Copy always`] （與 `Always`相同）和 [`Copy if newer`] （與 `PreserveNewest`相同）。  
   
  建立專案時，會針對每個內容檔，將 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 屬性編譯成元件的中繼資料。  
   
  `[assembly: AssemblyAssociatedContentFile("ContentFile.xaml")]`  
   
- @No__t_0 的值意指內容檔案相對於專案中位置的路徑。 例如，如果內容檔案位於專案子資料夾中，則會將其他路徑資訊併入 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 值中。  
+ <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 的值意指內容檔案相對於專案中位置的路徑。 例如，如果內容檔案位於專案子資料夾中，則會將其他路徑資訊併入 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 值中。  
   
  `[assembly: AssemblyAssociatedContentFile("Resources/ContentFile.xaml")]`  
   
- @No__t_0 值也是 [組建輸出] 資料夾中內容檔案的路徑值。  
+ <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 值也是 [組建輸出] 資料夾中內容檔案的路徑值。  
   
 ### <a name="using-content-files"></a>使用內容檔  
  若要載入內容檔案，您可以呼叫 <xref:System.Windows.Application> 類別的 <xref:System.Windows.Application.GetContentStream%2A> 方法，傳遞識別所需內容檔案的 pack URI。 <xref:System.Windows.Application.GetContentStream%2A> 會傳回 <xref:System.Windows.Resources.StreamResourceInfo> 物件，它會以 <xref:System.IO.Stream> 的形式公開內容檔案，並描述其內容類型。  
@@ -160,7 +160,7 @@ ms.locfileid: "72581720"
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
- 呼叫 <xref:System.Windows.Application.GetContentStream%2A> 可讓您存取 <xref:System.IO.Stream> 時，您必須執行其他工作，將它轉換成您將設定它的屬性類型。 相反地，您可以讓 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用程式碼，將資源檔直接載入至類型的屬性，以處理開啟和轉換 <xref:System.IO.Stream>。  
+ 呼叫 <xref:System.Windows.Application.GetContentStream%2A> 可讓您存取 <xref:System.IO.Stream>時，您必須執行其他工作，將它轉換成您將設定它的屬性類型。 相反地，您可以讓 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用程式碼，將資源檔直接載入至類型的屬性，以處理開啟和轉換 <xref:System.IO.Stream>。  
   
  下列範例顯示如何使用程式碼，將 <xref:System.Windows.Controls.Page> 直接載入至 <xref:System.Windows.Controls.Frame> （`pageFrame`）。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "72581720"
 ```  
   
 > [!NOTE]
-> 在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中，您可以將檔案新增至專案，並將其 `Build Action` 設定為 `None`，藉以建立原始網站檔案。  
+> 在 Visual Studio 中，您可以將檔案新增至專案，並將其 `Build Action` 設定為 `None`，藉以建立原始網站檔案。  
   
  建立專案時，MSBuild 會將指定的檔案複製到組建輸出檔案夾。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "72581720"
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
- 呼叫 <xref:System.Windows.Application.GetRemoteStream%2A> 可讓您存取 <xref:System.IO.Stream> 時，您必須執行其他工作，將它轉換成您將設定它的屬性類型。 相反地，您可以讓 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用程式碼，將資源檔直接載入至類型的屬性，以處理開啟和轉換 <xref:System.IO.Stream>。  
+ 呼叫 <xref:System.Windows.Application.GetRemoteStream%2A> 可讓您存取 <xref:System.IO.Stream>時，您必須執行其他工作，將它轉換成您將設定它的屬性類型。 相反地，您可以讓 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用程式碼，將資源檔直接載入至類型的屬性，以處理開啟和轉換 <xref:System.IO.Stream>。  
   
  下列範例顯示如何使用程式碼，將 <xref:System.Windows.Controls.Page> 直接載入至 <xref:System.Windows.Controls.Frame> （`pageFrame`）。  
   
