@@ -4,137 +4,187 @@ description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署�
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2e8da5497035a83fde75bf91a7d21437d510b480
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 2cb91032e0ce1d320b266772e8f9f1431df4a298
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117974"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960964"
 ---
-# <a name="deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a><span data-ttu-id="f483e-103">將適用於 Apache Spark 的 .NET 應用程式部署到 Azure HDInsight</span><span class="sxs-lookup"><span data-stu-id="f483e-103">Deploy a .NET for Apache Spark application to Azure HDInsight</span></span>
+# <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a><span data-ttu-id="f0712-103">教學課程：將適用于 Apache Spark 應用程式的 .NET 部署至 Azure HDInsight</span><span class="sxs-lookup"><span data-stu-id="f0712-103">Tutorial: Deploy a .NET for Apache Spark application to Azure HDInsight</span></span>
 
-<span data-ttu-id="f483e-104">本教學課程會教導如何將適用於 Apache Spark 的 .NET 應用程式部署到 Azure HDInsight。</span><span class="sxs-lookup"><span data-stu-id="f483e-104">This tutorial teaches how to deploy a .NET for Apache Spark application to Azure HDInsight.</span></span>
+<span data-ttu-id="f0712-104">本教學課程會教您如何透過 Azure HDInsight 叢集，將 Apache Spark 應用程式的 .NET 部署至雲端。</span><span class="sxs-lookup"><span data-stu-id="f0712-104">This tutorial teaches you how to deploy your .NET for Apache Spark app to the cloud through an Azure HDInsight cluster.</span></span> <span data-ttu-id="f0712-105">HDInsight 可讓您更輕鬆地在 Azure 中建立和設定 Spark 叢集，因為 HDInsight 中的 Spark 叢集與 Azure 儲存體和 Azure Data Lake Storage 相容。</span><span class="sxs-lookup"><span data-stu-id="f0712-105">HDInsight makes it easier to create and configure a Spark cluster in Azure since Spark clusters in HDInsight are compatible with Azure Storage and Azure Data Lake Storage.</span></span> 
 
-<span data-ttu-id="f483e-105">在本教學課程中，您將了解如何：</span><span class="sxs-lookup"><span data-stu-id="f483e-105">In this tutorial, you learn how to:</span></span>
+<span data-ttu-id="f0712-106">在本教學課程中，您將了解如何：</span><span class="sxs-lookup"><span data-stu-id="f0712-106">In this tutorial, you learn how to:</span></span>
 
 > [!div class="checklist"]
 >
-> * <span data-ttu-id="f483e-106">準備 Microsoft.Spark.Worker</span><span class="sxs-lookup"><span data-stu-id="f483e-106">Prepare Microsoft.Spark.Worker</span></span>
-> * <span data-ttu-id="f483e-107">發佈您的 Spark .NET 應用程式</span><span class="sxs-lookup"><span data-stu-id="f483e-107">Publish your Spark .NET app</span></span>
-> * <span data-ttu-id="f483e-108">將您的應用程式部署到 Azure HDInsight</span><span class="sxs-lookup"><span data-stu-id="f483e-108">Deploy your app to Azure HDInsight</span></span>
-> * <span data-ttu-id="f483e-109">執行應用程式</span><span class="sxs-lookup"><span data-stu-id="f483e-109">Run your app</span></span>
+> * <span data-ttu-id="f0712-107">使用 Azure 儲存體總管存取儲存體帳戶。</span><span class="sxs-lookup"><span data-stu-id="f0712-107">Access your storage accounts using Azure Storage Explorer.</span></span>
+> * <span data-ttu-id="f0712-108">建立 Azure HDInsight 叢集。</span><span class="sxs-lookup"><span data-stu-id="f0712-108">Create an Azure HDInsight cluster.</span></span>
+> * <span data-ttu-id="f0712-109">發行您的 .NET for Apache Spark 應用程式。</span><span class="sxs-lookup"><span data-stu-id="f0712-109">Publish your .NET for Apache Spark app.</span></span>
+> * <span data-ttu-id="f0712-110">建立並執行 HDInsight 腳本動作。</span><span class="sxs-lookup"><span data-stu-id="f0712-110">Create and run an HDInsight script action.</span></span>
+> * <span data-ttu-id="f0712-111">在 HDInsight 叢集上執行適用于 Apache Spark 應用程式的 .NET。</span><span class="sxs-lookup"><span data-stu-id="f0712-111">Run a .NET for Apache Spark app on an HDInsight cluster.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="f483e-110">必要條件</span><span class="sxs-lookup"><span data-stu-id="f483e-110">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="f0712-112">Prerequisites</span><span class="sxs-lookup"><span data-stu-id="f0712-112">Prerequisites</span></span>
 
-<span data-ttu-id="f483e-111">開始之前，請執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="f483e-111">Before you start, do the following:</span></span>
+<span data-ttu-id="f0712-113">開始之前，請執行下列工作：</span><span class="sxs-lookup"><span data-stu-id="f0712-113">Before you start, do the following tasks:</span></span>
 
-* <span data-ttu-id="f483e-112">下載 [Azure 儲存體總管](https://azure.microsoft.com/features/storage-explorer/)。</span><span class="sxs-lookup"><span data-stu-id="f483e-112">Download [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/).</span></span>
-* <span data-ttu-id="f483e-113">將 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 下載到您的本機電腦。</span><span class="sxs-lookup"><span data-stu-id="f483e-113">Download [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) to your local machine.</span></span> <span data-ttu-id="f483e-114">這是您稍後用來將適用於 Apache Spark 的 .NET 應用程式相依檔案複製到您 Spark 叢集背景工作節點的協助程式指令碼。</span><span class="sxs-lookup"><span data-stu-id="f483e-114">This is a helper script that you use later to copy .NET for Apache Spark dependent files into your Spark cluster's worker nodes.</span></span>
+* <span data-ttu-id="f0712-114">如果您沒有 Azure 訂用帳戶，請建立[免費帳戶](https://azure.microsoft.com/free/)。</span><span class="sxs-lookup"><span data-stu-id="f0712-114">If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/).</span></span>
+* <span data-ttu-id="f0712-115">登入 [Azure 入口網站](https://portal.azure.com/)。</span><span class="sxs-lookup"><span data-stu-id="f0712-115">Sign in to the [Azure portal](https://portal.azure.com/).</span></span>
+* <span data-ttu-id="f0712-116">在您的[Windows](https://go.microsoft.com/fwlink/?LinkId=708343&clcid=0x409)、 [Linux](https://go.microsoft.com/fwlink/?LinkId=722418&clcid=0x409)或[MacOS](https://go.microsoft.com/fwlink/?LinkId=708342&clcid=0x409)電腦上安裝 Azure 儲存體總管。</span><span class="sxs-lookup"><span data-stu-id="f0712-116">Install Azure Storage Explorer on your [Windows](https://go.microsoft.com/fwlink/?LinkId=708343&clcid=0x409), [Linux](https://go.microsoft.com/fwlink/?LinkId=722418&clcid=0x409), or [MacOS](https://go.microsoft.com/fwlink/?LinkId=708342&clcid=0x409) computer.</span></span>
+* <span data-ttu-id="f0712-117">完成[Apache Spark 的 .net-在10分鐘內開始](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)使用教學課程。</span><span class="sxs-lookup"><span data-stu-id="f0712-117">Complete the [.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) tutorial.</span></span>
 
-## <a name="prepare-worker-dependencies"></a><span data-ttu-id="f483e-115">準備背景工作相依性</span><span class="sxs-lookup"><span data-stu-id="f483e-115">Prepare worker dependencies</span></span>
+## <a name="access-your-storage-accounts"></a><span data-ttu-id="f0712-118">存取您的儲存體帳戶</span><span class="sxs-lookup"><span data-stu-id="f0712-118">Access your storage accounts</span></span>
 
-<span data-ttu-id="f483e-116">**Microsoft.Spark.Worker** 是一種後端元件，其存在於您 Spark 叢集的個別背景工作節點上。</span><span class="sxs-lookup"><span data-stu-id="f483e-116">**Microsoft.Spark.Worker** is a backend component that lives on the individual worker nodes of your Spark cluster.</span></span> <span data-ttu-id="f483e-117">當您想要執行 C# UDF (使用者定義函式) 時，Spark 需要了解如何啟動 .NET CLR 來執行 UDF。</span><span class="sxs-lookup"><span data-stu-id="f483e-117">When you want to execute a C# UDF (user-defined function), Spark needs to understand how to launch the .NET CLR to execute the UDF.</span></span> <span data-ttu-id="f483e-118">**Microsoft.Spark.Worker** 會向 Spark 提供類別集合，其會啟用此功能。</span><span class="sxs-lookup"><span data-stu-id="f483e-118">**Microsoft.Spark.Worker** provides a collection of classes to Spark that enable this functionality.</span></span>
+1. <span data-ttu-id="f0712-119">開啟 Azure 儲存體總管。</span><span class="sxs-lookup"><span data-stu-id="f0712-119">Open Azure Storage Explorer.</span></span>
 
-1. <span data-ttu-id="f483e-119">選取要部署在您叢集上的 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp 版本。</span><span class="sxs-lookup"><span data-stu-id="f483e-119">Select a [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp release to be deployed on your cluster.</span></span>
+2. <span data-ttu-id="f0712-120">選取左側功能表上的 [**新增帳戶**]，然後登入您的 Azure 帳戶。</span><span class="sxs-lookup"><span data-stu-id="f0712-120">Select **Add Account** on the left menu, and sign in to your Azure account.</span></span>
 
-   <span data-ttu-id="f483e-120">例如，若您想要使用 `netcoreapp2.1` 的 `.NET for Apache Spark v0.1.0`，您可以下載 [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz)。</span><span class="sxs-lookup"><span data-stu-id="f483e-120">For example, if you want `.NET for Apache Spark v0.1.0` using `netcoreapp2.1`, you'd download [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).</span></span>
+    ![從儲存體總管登入 Azure 帳戶](./media/hdinsight-deployment/signin-azure-storage-explorer.png)
 
-2. <span data-ttu-id="f483e-121">將 `Microsoft.Spark.Worker.<release>.tar.gz` 和 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 上傳到您叢集可以存取的分散式檔案系統 (例如 HDFS、WASB、ADLS)。</span><span class="sxs-lookup"><span data-stu-id="f483e-121">Upload `Microsoft.Spark.Worker.<release>.tar.gz` and [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) to a distributed file system (e.g., HDFS, WASB, ADLS) that your cluster has access to.</span></span>
+   <span data-ttu-id="f0712-122">登入之後，您應該會看到您擁有的所有儲存體帳戶，以及已上傳至儲存體帳戶的任何資源。</span><span class="sxs-lookup"><span data-stu-id="f0712-122">After you sign in, you should see all storage accounts you have and any resources you have uploaded to your storage accounts.</span></span>
 
-## <a name="prepare-your-net-for-apache-spark-app"></a><span data-ttu-id="f483e-122">準備適用於 Apache Spark 的 .NET 應用程式</span><span class="sxs-lookup"><span data-stu-id="f483e-122">Prepare your .NET for Apache Spark app</span></span>
+## <a name="create-an-hdinsight-cluster"></a><span data-ttu-id="f0712-123">建立 HDInsight 叢集</span><span class="sxs-lookup"><span data-stu-id="f0712-123">Create an HDInsight cluster</span></span>
 
-1. <span data-ttu-id="f483e-123">遵循[開始使用](get-started.md)教學課程來建置您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="f483e-123">Follow the [Get Started](get-started.md) tutorial to build your app.</span></span>
+> [!IMPORTANT]  
+> <span data-ttu-id="f0712-124">HDInsight 叢集的計費是以每分鐘為單位，即使您不使用它們也一樣。</span><span class="sxs-lookup"><span data-stu-id="f0712-124">Billing for HDInsight clusters is prorated per minute, even if you're not using them.</span></span> <span data-ttu-id="f0712-125">在您完成使用叢集之後，請務必刪除叢集。</span><span class="sxs-lookup"><span data-stu-id="f0712-125">Be sure to delete your cluster after you have finished using it.</span></span> <span data-ttu-id="f0712-126">如需詳細資訊，請參閱本教學課程的[清理資源](#clean-up-resources)一節。</span><span class="sxs-lookup"><span data-stu-id="f0712-126">For more information, see the [Clean up resources](#clean-up-resources) section of this tutorial.</span></span>
 
-2. <span data-ttu-id="f483e-124">將您的 Spark .NET 應用程式發佈為獨立式應用程式。</span><span class="sxs-lookup"><span data-stu-id="f483e-124">Publish your Spark .NET app as self-contained.</span></span>
+1. <span data-ttu-id="f0712-127">請造訪[Azure 入口網站](https://portal.azure.com)。</span><span class="sxs-lookup"><span data-stu-id="f0712-127">Visit the [Azure portal](https://portal.azure.com).</span></span>
 
-   <span data-ttu-id="f483e-125">您可以在 Linux 上執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="f483e-125">You can run the following command on Linux.</span></span>
+2. <span data-ttu-id="f0712-128">選取 [ **+ 建立資源**]。</span><span class="sxs-lookup"><span data-stu-id="f0712-128">Select **+ Create a resource**.</span></span> <span data-ttu-id="f0712-129">然後，從 [**分析**] 類別中選取 [ **HDInsight** ]。</span><span class="sxs-lookup"><span data-stu-id="f0712-129">Then, select **HDInsight** from the **Analytics** category.</span></span>
 
-   ```dotnetcli
-   dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
+    ![從 Azure 入口網站建立 HDInsight 資源](./media/hdinsight-deployment/create-hdinsight-resource.png)
+
+3. <span data-ttu-id="f0712-131">在 [**基本**] 底下，提供下列值：</span><span class="sxs-lookup"><span data-stu-id="f0712-131">Under **Basics**, provide the following values:</span></span>
+
+    |<span data-ttu-id="f0712-132">屬性</span><span class="sxs-lookup"><span data-stu-id="f0712-132">Property</span></span>  |<span data-ttu-id="f0712-133">描述</span><span class="sxs-lookup"><span data-stu-id="f0712-133">Description</span></span>  |
+    |---------|---------|
+    |<span data-ttu-id="f0712-134">訂用帳戶</span><span class="sxs-lookup"><span data-stu-id="f0712-134">Subscription</span></span>  | <span data-ttu-id="f0712-135">從下拉式選單中，選擇其中一個作用中的 Azure 訂用帳戶。</span><span class="sxs-lookup"><span data-stu-id="f0712-135">From the drop-down, choose one of your active Azure subscriptions.</span></span> |
+    |<span data-ttu-id="f0712-136">資源群組</span><span class="sxs-lookup"><span data-stu-id="f0712-136">Resource group</span></span> | <span data-ttu-id="f0712-137">指定您要建立新的資源群組，還是使用現有的。</span><span class="sxs-lookup"><span data-stu-id="f0712-137">Specify whether you want to create a new resource group or use an existing one.</span></span> <span data-ttu-id="f0712-138">資源群組是保存 Azure 解決方案相關資源的容器。</span><span class="sxs-lookup"><span data-stu-id="f0712-138">A resource group is a container that holds related resources for an Azure solution.</span></span> |
+    |<span data-ttu-id="f0712-139">叢集名稱</span><span class="sxs-lookup"><span data-stu-id="f0712-139">Cluster name</span></span> | <span data-ttu-id="f0712-140">提供 HDInsight Spark 叢集的名稱。</span><span class="sxs-lookup"><span data-stu-id="f0712-140">Give a name to your HDInsight Spark cluster.</span></span>|
+    |<span data-ttu-id="f0712-141">位置</span><span class="sxs-lookup"><span data-stu-id="f0712-141">Location</span></span>   | <span data-ttu-id="f0712-142">選取資源群組的 [位置]。</span><span class="sxs-lookup"><span data-stu-id="f0712-142">Select a location for the resource group.</span></span> <span data-ttu-id="f0712-143">此範本會使用此位置來建立叢集，以及針對預設叢集儲存體。</span><span class="sxs-lookup"><span data-stu-id="f0712-143">The template uses this location for creating the cluster as well as for the default cluster storage.</span></span> |
+    |<span data-ttu-id="f0712-144">叢集類型</span><span class="sxs-lookup"><span data-stu-id="f0712-144">Cluster type</span></span>| <span data-ttu-id="f0712-145">選取 [ **Spark** ] 作為 [叢集類型]。</span><span class="sxs-lookup"><span data-stu-id="f0712-145">Select **Spark** as the cluster type.</span></span>|
+    |<span data-ttu-id="f0712-146">叢集版本</span><span class="sxs-lookup"><span data-stu-id="f0712-146">Cluster version</span></span>|<span data-ttu-id="f0712-147">一旦選取叢集類型，此欄位將會以預設版本自動填入。</span><span class="sxs-lookup"><span data-stu-id="f0712-147">This field will autopopulate with the default version once the cluster type has been selected.</span></span> <span data-ttu-id="f0712-148">選取 [2.3] 或 [2.4] 版本的 Spark。</span><span class="sxs-lookup"><span data-stu-id="f0712-148">Select a 2.3 or 2.4 version of Spark.</span></span>|
+    |<span data-ttu-id="f0712-149">叢集登入使用者名稱</span><span class="sxs-lookup"><span data-stu-id="f0712-149">Cluster login username</span></span>| <span data-ttu-id="f0712-150">輸入叢集登入使用者名稱。</span><span class="sxs-lookup"><span data-stu-id="f0712-150">Enter the cluster login username.</span></span>  <span data-ttu-id="f0712-151">預設名稱為*admin*。</span><span class="sxs-lookup"><span data-stu-id="f0712-151">The default name is *admin*.</span></span> |
+    |<span data-ttu-id="f0712-152">叢集登入密碼</span><span class="sxs-lookup"><span data-stu-id="f0712-152">Cluster login password</span></span>| <span data-ttu-id="f0712-153">輸入任何登入密碼。</span><span class="sxs-lookup"><span data-stu-id="f0712-153">Enter any login password.</span></span> |
+    |<span data-ttu-id="f0712-154">安全殼層（SSH）使用者名稱</span><span class="sxs-lookup"><span data-stu-id="f0712-154">Secure Shell (SSH) username</span></span>| <span data-ttu-id="f0712-155">輸入 [SSH 使用者名稱]。</span><span class="sxs-lookup"><span data-stu-id="f0712-155">Enter the SSH username.</span></span> <span data-ttu-id="f0712-156">根據預設，此帳戶會與叢集登入使用者*名稱*帳戶共用相同的密碼。</span><span class="sxs-lookup"><span data-stu-id="f0712-156">By default, this account shares the same password as the *Cluster Login username* account.</span></span> |
+
+4. <span data-ttu-id="f0712-157">選取 **[下一步]：儲存體 > >** 繼續前往 [**儲存體**] 頁面。</span><span class="sxs-lookup"><span data-stu-id="f0712-157">Select **Next: Storage >>** to continue to the **Storage** page.</span></span> <span data-ttu-id="f0712-158">在 [**儲存體**] 底下，提供下列值：</span><span class="sxs-lookup"><span data-stu-id="f0712-158">Under **Storage**, provide the following values:</span></span>
+
+    |<span data-ttu-id="f0712-159">屬性</span><span class="sxs-lookup"><span data-stu-id="f0712-159">Property</span></span>  |<span data-ttu-id="f0712-160">描述</span><span class="sxs-lookup"><span data-stu-id="f0712-160">Description</span></span>  |
+    |---------|---------|
+    |<span data-ttu-id="f0712-161">主要儲存體類型</span><span class="sxs-lookup"><span data-stu-id="f0712-161">Primary storage type</span></span>|<span data-ttu-id="f0712-162">使用預設值**Azure 儲存體**。</span><span class="sxs-lookup"><span data-stu-id="f0712-162">Use the default value **Azure Storage**.</span></span>|
+    |<span data-ttu-id="f0712-163">選取方法</span><span class="sxs-lookup"><span data-stu-id="f0712-163">Selection method</span></span>|<span data-ttu-id="f0712-164">使用 [**從清單中選取**預設值]。</span><span class="sxs-lookup"><span data-stu-id="f0712-164">Use the default value **Select from list**.</span></span>|
+    |<span data-ttu-id="f0712-165">主要儲存體帳戶</span><span class="sxs-lookup"><span data-stu-id="f0712-165">Primary storage account</span></span>|<span data-ttu-id="f0712-166">選擇您的訂用帳戶，以及該訂用帳戶內的其中一個作用中儲存體帳戶。</span><span class="sxs-lookup"><span data-stu-id="f0712-166">Choose your subscription and one of your active storage accounts within that subscription.</span></span>|
+    |<span data-ttu-id="f0712-167">容器</span><span class="sxs-lookup"><span data-stu-id="f0712-167">Container</span></span>|<span data-ttu-id="f0712-168">此容器是儲存體帳戶中的特定 blob 容器，您的叢集會在此尋找檔案以在雲端中執行您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="f0712-168">This container is the specific blob container in your storage account where your cluster looks for files to run your app in the cloud.</span></span> <span data-ttu-id="f0712-169">您可以為它提供任何可用的名稱。</span><span class="sxs-lookup"><span data-stu-id="f0712-169">You can give it any available name.</span></span>|
+
+5. <span data-ttu-id="f0712-170">在 [**審查 + 建立**] 底下，選取 [**建立**]。</span><span class="sxs-lookup"><span data-stu-id="f0712-170">Under **Review + create**, select **Create**.</span></span> <span data-ttu-id="f0712-171">建立叢集大約需要20分鐘的時間。</span><span class="sxs-lookup"><span data-stu-id="f0712-171">It takes about 20 minutes to create the cluster.</span></span> <span data-ttu-id="f0712-172">您必須先建立叢集，才能繼續進行下一個步驟。</span><span class="sxs-lookup"><span data-stu-id="f0712-172">The cluster must be created before you can continue to the next step.</span></span>
+
+## <a name="publish-your-app"></a><span data-ttu-id="f0712-173">發行您的應用程式</span><span class="sxs-lookup"><span data-stu-id="f0712-173">Publish your app</span></span>
+
+<span data-ttu-id="f0712-174">接下來，您會發佈在 .Net 中建立[Apache Spark-開始使用10分鐘](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)教學課程的*mySparkApp* ，這可讓您的 Spark 叢集存取執行應用程式所需的所有檔案。</span><span class="sxs-lookup"><span data-stu-id="f0712-174">Next, you publish the *mySparkApp* created in the [.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) tutorial, which gives your Spark cluster access to all the files it needs to run your app.</span></span> 
+
+1. <span data-ttu-id="f0712-175">執行下列命令以發佈*mySparkApp*：</span><span class="sxs-lookup"><span data-stu-id="f0712-175">Run the following commands to publish the *mySparkApp*:</span></span>
+
+   <span data-ttu-id="f0712-176">**在 Windows 上**：</span><span class="sxs-lookup"><span data-stu-id="f0712-176">**On Windows:**</span></span>
+
+   ```console
+   cd mySparkApp
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x6
    ```
 
-3. <span data-ttu-id="f483e-126">為發佈的檔案產生 `<your app>.zip`。</span><span class="sxs-lookup"><span data-stu-id="f483e-126">Produce `<your app>.zip` for the published files.</span></span>
-
-   <span data-ttu-id="f483e-127">您可以使用 `zip`，在 Linux 上執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="f483e-127">You can run the following command on Linux using `zip`.</span></span>
+   <span data-ttu-id="f0712-177">**在 Linux 上：**</span><span class="sxs-lookup"><span data-stu-id="f0712-177">**On Linux:**</span></span>
 
    ```bash
-   zip -r <your app>.zip .
+   cd mySparkApp
+   foo@bar:~/path/to/app$ dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
 
-4. <span data-ttu-id="f483e-128">將下列項目上傳到您叢集可存取的分散式檔案系統 (例如 HDFS、WASB、ADLS)：</span><span class="sxs-lookup"><span data-stu-id="f483e-128">Upload the following to a distributed file system (e.g., HDFS, WASB, ADLS) that your cluster has access to:</span></span>
+2. <span data-ttu-id="f0712-178">請執行下列工作來壓縮已發佈的應用程式檔，讓您可以輕鬆地將它們上傳到您的 HDInsight 叢集。</span><span class="sxs-lookup"><span data-stu-id="f0712-178">Do the following tasks to zip your published app files so that you can easily upload them to your HDInsight cluster.</span></span>
 
-   * <span data-ttu-id="f483e-129">`microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`：此 jar 已作為 [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 套件的一部分包含在其中，且已共置於您應用程式的建置輸出目錄。</span><span class="sxs-lookup"><span data-stu-id="f483e-129">`microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: This jar is included as part of the [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet package and is colocated in your app's build output directory.</span></span>
-   * `<your app>.zip`
-   * <span data-ttu-id="f483e-130">要放在每個執行程式中工作目錄的檔案 (例如相依性檔案或每個背景工作都可存取的通用資料) 或組件 (例如包含您使用者定義函式或您 `app` 相依程式庫的 DLL)。</span><span class="sxs-lookup"><span data-stu-id="f483e-130">Files (like dependency files or common data accessible to every worker) or Assemblies (like DLLs that contain your user-defined functions or libraries that your `app` depends on) to be placed in the working directory of each executor.</span></span>
+   <span data-ttu-id="f0712-179">**在 Windows 上**：</span><span class="sxs-lookup"><span data-stu-id="f0712-179">**On Windows:**</span></span>
 
-## <a name="deploy-to-azure-hdinsight-spark"></a><span data-ttu-id="f483e-131">部署至 Azure HDInsight Spark</span><span class="sxs-lookup"><span data-stu-id="f483e-131">Deploy to Azure HDInsight Spark</span></span>
+   <span data-ttu-id="f0712-180">流覽至*mySparkApp/bin/Release/netcoreapp 3.0/ubuntu. 16.04-x64*。</span><span class="sxs-lookup"><span data-stu-id="f0712-180">Navigate to *mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64*.</span></span> <span data-ttu-id="f0712-181">然後，在 [**發行**資料夾] 上按一下滑鼠右鍵，然後選取 **[傳送至 > 壓縮的（zipped）資料夾**]。</span><span class="sxs-lookup"><span data-stu-id="f0712-181">Then, right-click on **Publish** folder and select **Send to > Compressed (zipped) folder**.</span></span> <span data-ttu-id="f0712-182">將新資料夾命名為**publish .zip**。</span><span class="sxs-lookup"><span data-stu-id="f0712-182">Name the new folder **publish.zip**.</span></span>
 
-<span data-ttu-id="f483e-132">[Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview) 是 Microsoft 在雲端中的 Apache Spark 實作，可讓使用者在 Azure 中啟動和設定 Spark 叢集。</span><span class="sxs-lookup"><span data-stu-id="f483e-132">[Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview) is the Microsoft implementation of Apache Spark in the cloud that allows users to launch and configure Spark clusters in Azure.</span></span> <span data-ttu-id="f483e-133">您可以使用 HDInsight Spark 叢集來處理您儲存在 [Azure 儲存體](https://azure.microsoft.com/services/storage/)或 [Azure Data Lake Storage](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-use-data-lake-storage-gen2) 中的資料。</span><span class="sxs-lookup"><span data-stu-id="f483e-133">You can use HDInsight Spark clusters to process your data stored in [Azure Storage](https://azure.microsoft.com/services/storage/) or [Azure Data Lake Storage](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-use-data-lake-storage-gen2).</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="f483e-134">Azure HDInsight Spark 是以 Linux 為基礎。</span><span class="sxs-lookup"><span data-stu-id="f483e-134">Azure HDInsight Spark is Linux-based.</span></span> <span data-ttu-id="f483e-135">若您想要將應用程式部署到 Azure HDInsight Spark，請確認應用程式與 .NET Standard 相容，且您是使用 [.NET Core 編譯器](https://dotnet.microsoft.com/download)來編譯應用程式。</span><span class="sxs-lookup"><span data-stu-id="f483e-135">If you are interested in deploying your app to Azure HDInsight Spark, make sure your app is .NET Standard compatible and that you use the [.NET Core compiler](https://dotnet.microsoft.com/download) to compile your app.</span></span>
-
-### <a name="deploy-microsoftsparkworker"></a><span data-ttu-id="f483e-136">部署 Microsoft.Spark.Worker</span><span class="sxs-lookup"><span data-stu-id="f483e-136">Deploy Microsoft.Spark.Worker</span></span>
-
-<span data-ttu-id="f483e-137">針對您的叢集，此步驟只需要一次。</span><span class="sxs-lookup"><span data-stu-id="f483e-137">This step is only required once for your cluster.</span></span>
-
-<span data-ttu-id="f483e-138">使用 [HDInsight 指令碼動作](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)在叢集上執行 `install-worker.sh`。</span><span class="sxs-lookup"><span data-stu-id="f483e-138">Run `install-worker.sh` on the cluster using [HDInsight Script Actions](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux).</span></span>
-
-|<span data-ttu-id="f483e-139">設定</span><span class="sxs-lookup"><span data-stu-id="f483e-139">Setting</span></span>|<span data-ttu-id="f483e-140">值</span><span class="sxs-lookup"><span data-stu-id="f483e-140">Value</span></span>|
-|-------|-----|
-|<span data-ttu-id="f483e-141">腳本類型</span><span class="sxs-lookup"><span data-stu-id="f483e-141">Script type</span></span>|<span data-ttu-id="f483e-142">自訂</span><span class="sxs-lookup"><span data-stu-id="f483e-142">Custom</span></span>|
-|<span data-ttu-id="f483e-143">名稱</span><span class="sxs-lookup"><span data-stu-id="f483e-143">Name</span></span>|<span data-ttu-id="f483e-144">安裝 Microsoft.Spark.Worker</span><span class="sxs-lookup"><span data-stu-id="f483e-144">Install Microsoft.Spark.Worker</span></span>|
-|<span data-ttu-id="f483e-145">Bash 腳本 URI</span><span class="sxs-lookup"><span data-stu-id="f483e-145">Bash script URI</span></span>|<span data-ttu-id="f483e-146">您上傳 `install-worker.sh` 的目標 URI。</span><span class="sxs-lookup"><span data-stu-id="f483e-146">The URI to which you uploaded `install-worker.sh`.</span></span> <span data-ttu-id="f483e-147">例如： `abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/install-worker.sh`</span><span class="sxs-lookup"><span data-stu-id="f483e-147">For example, `abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/install-worker.sh`</span></span>|
-|<span data-ttu-id="f483e-148">節點類型</span><span class="sxs-lookup"><span data-stu-id="f483e-148">Node type(s)</span></span>|<span data-ttu-id="f483e-149">工作</span><span class="sxs-lookup"><span data-stu-id="f483e-149">Worker</span></span>|
-|<span data-ttu-id="f483e-150">參數</span><span class="sxs-lookup"><span data-stu-id="f483e-150">Parameters</span></span>|<span data-ttu-id="f483e-151">`install-worker.sh` 的參數。</span><span class="sxs-lookup"><span data-stu-id="f483e-151">Parameters to `install-worker.sh`.</span></span> <span data-ttu-id="f483e-152">例如，若您將 `install-worker.sh` 上傳到 Azure Data Lake Gen 2，它便會是 `azure abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/Microsoft.Spark.Worker.<release>.tar.gz /usr/local/bin`。</span><span class="sxs-lookup"><span data-stu-id="f483e-152">For example, if you uploaded `install-worker.sh` to Azure Data Lake Gen 2 then it would be `azure abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/Microsoft.Spark.Worker.<release>.tar.gz /usr/local/bin`.</span></span>|
-
-![指令碼動作影像](./media/hdinsight-deployment/deployment-hdi-action-script.png)
-
-## <a name="run-your-app"></a><span data-ttu-id="f483e-154">執行應用程式</span><span class="sxs-lookup"><span data-stu-id="f483e-154">Run your app</span></span>
-
-<span data-ttu-id="f483e-155">您可以使用 `spark-submit` 或 Apache Livy 將作業提交到 Azure HDInsight。</span><span class="sxs-lookup"><span data-stu-id="f483e-155">You can submit your job to Azure HDInsight using `spark-submit` or Apache Livy.</span></span>
-
-### <a name="use-spark-submit"></a><span data-ttu-id="f483e-156">使用 spark-submit</span><span class="sxs-lookup"><span data-stu-id="f483e-156">Use spark-submit</span></span>
-
-<span data-ttu-id="f483e-157">您可以使用 [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) 命令將適用於 Apache Spark 的 .NET 作業提交到 Azure HDInsight。</span><span class="sxs-lookup"><span data-stu-id="f483e-157">You can use the [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) command to submit .NET for Apache Spark jobs to Azure HDInsight.</span></span>
- 
-1. <span data-ttu-id="f483e-158">`ssh` 到您叢集中的其中一個前端節點。</span><span class="sxs-lookup"><span data-stu-id="f483e-158">`ssh` into one of the head nodes in your cluster.</span></span>
-
-1. <span data-ttu-id="f483e-159">執行`spark-submit`：</span><span class="sxs-lookup"><span data-stu-id="f483e-159">Run `spark-submit`:</span></span>
+   <span data-ttu-id="f0712-183">**在 Linux 上，執行下列命令：**</span><span class="sxs-lookup"><span data-stu-id="f0712-183">**On Linux, run the following command:**</span></span>
 
    ```bash
-   spark-submit \
+   zip -r publish.zip
+   ```
+
+## <a name="upload-files-to-azure"></a><span data-ttu-id="f0712-184">將檔案上傳至 Azure</span><span class="sxs-lookup"><span data-stu-id="f0712-184">Upload files to Azure</span></span>
+
+<span data-ttu-id="f0712-185">接下來，您可以使用 Azure 儲存體總管，將下列五個檔案上傳至您為叢集儲存體選擇的 blob 容器：</span><span class="sxs-lookup"><span data-stu-id="f0712-185">Next, you use the Azure Storage Explorer to upload the following five files to the blob container you chose for your cluster's storage:</span></span> 
+
+* <span data-ttu-id="f0712-186">Microsoft. Spark. 背景工作角色</span><span class="sxs-lookup"><span data-stu-id="f0712-186">Microsoft.Spark.Worker</span></span>
+* <span data-ttu-id="f0712-187">install-worker.sh</span><span class="sxs-lookup"><span data-stu-id="f0712-187">install-worker.sh</span></span>
+* <span data-ttu-id="f0712-188">發行 .zip</span><span class="sxs-lookup"><span data-stu-id="f0712-188">publish.zip</span></span>
+* <span data-ttu-id="f0712-189">microsoft-spark-2.3. x-0.3.0 .jar</span><span class="sxs-lookup"><span data-stu-id="f0712-189">microsoft-spark-2.3.x-0.3.0.jar</span></span>
+* <span data-ttu-id="f0712-190">輸入 .txt。</span><span class="sxs-lookup"><span data-stu-id="f0712-190">input.txt.</span></span>
+
+1. <span data-ttu-id="f0712-191">開啟 Azure 儲存體總管，然後從左側功能表流覽至您的儲存體帳戶。</span><span class="sxs-lookup"><span data-stu-id="f0712-191">Open Azure Storage Explorer and navigate to your storage account from the left menu.</span></span> <span data-ttu-id="f0712-192">向下切入至儲存體帳戶中**Blob 容器**下的叢集 blob 容器。</span><span class="sxs-lookup"><span data-stu-id="f0712-192">Drill down to the blob container for your cluster under **Blob Containers** in your storage account.</span></span>
+
+2. <span data-ttu-id="f0712-193">Apache Spark*可協助執行*您的應用程式，例如您可能已撰寫的任何使用者定義函數（udf）。</span><span class="sxs-lookup"><span data-stu-id="f0712-193">*Microsoft.Spark.Worker* helps Apache Spark execute your app, such as any user-defined functions (UDFs) you may have written.</span></span> <span data-ttu-id="f0712-194">下載[Microsoft. Spark. Worker](https://github.com/dotnet/spark/releases/download/v0.3.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.3.0.tar.gz)。</span><span class="sxs-lookup"><span data-stu-id="f0712-194">Download [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.3.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.3.0.tar.gz).</span></span> <span data-ttu-id="f0712-195">然後，選取 [**上傳**] Azure 儲存體總管中傳背景工作角色。</span><span class="sxs-lookup"><span data-stu-id="f0712-195">Then, select **Upload** in Azure Storage Explorer to upload the worker.</span></span>
+
+   ![將檔案上傳至 Azure 儲存體總管](./media/hdinsight-deployment/upload-files-to-storage.png)
+
+3. <span data-ttu-id="f0712-197">*Install-worker.sh*是一個腳本，可讓您將 Apache Spark 相依檔案的 .net 複製到叢集的節點中。</span><span class="sxs-lookup"><span data-stu-id="f0712-197">The *install-worker.sh* is a script that lets you copy .NET for Apache Spark dependent files into the nodes of your cluster.</span></span> 
+
+   <span data-ttu-id="f0712-198">在您的本機電腦上建立名為**install-worker.sh**的新檔案，並貼上位於 GitHub 的[install-worker.sh 內容](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)。</span><span class="sxs-lookup"><span data-stu-id="f0712-198">Create a new file named **install-worker.sh** your local computer, and paste the [install-worker.sh contents](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) located on GitHub.</span></span> <span data-ttu-id="f0712-199">然後，將*install-worker.sh*上傳至您的 blob 容器。</span><span class="sxs-lookup"><span data-stu-id="f0712-199">Then, upload *install-worker.sh* to your blob container.</span></span>
+
+4. <span data-ttu-id="f0712-200">您的叢集需要包含應用程式已發佈檔案的發佈 .zip 檔案。</span><span class="sxs-lookup"><span data-stu-id="f0712-200">Your cluster needs the publish.zip file that contains your app's published files.</span></span> <span data-ttu-id="f0712-201">流覽至您已發行的資料夾， **mySparkApp/bin/Release/netcoreapp 3.0/ubuntu. 16.04-x64**，然後找出**publish. zip**。</span><span class="sxs-lookup"><span data-stu-id="f0712-201">Navigate to your published folder, **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64**, and locate **publish.zip**.</span></span> <span data-ttu-id="f0712-202">然後將*publish*上傳至您的 blob 容器。</span><span class="sxs-lookup"><span data-stu-id="f0712-202">Then upload *publish.zip* to your blob container.</span></span>
+
+5. <span data-ttu-id="f0712-203">您的叢集需要封裝成 jar 檔案的應用程式代碼。</span><span class="sxs-lookup"><span data-stu-id="f0712-203">Your cluster needs the application code that was packaged into a jar file.</span></span> <span data-ttu-id="f0712-204">流覽至您已發行的資料夾**mySparkApp/bin/Release/netcoreapp 3.0/ubuntu. 16.04-x64**，然後找出**microsoft-spark-2.3. x-0.3.0。**</span><span class="sxs-lookup"><span data-stu-id="f0712-204">Navigate to your published folder, **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64**, and locate **microsoft-spark-2.3.x-0.3.0.jar**.</span></span> <span data-ttu-id="f0712-205">然後，將 jar 檔案上傳到您的 blob 容器。</span><span class="sxs-lookup"><span data-stu-id="f0712-205">Then, upload the jar file to your blob container.</span></span>
+
+   <span data-ttu-id="f0712-206">可能有多個 .jar 檔案（適用于版本 2.3. x 和 2.4. x 版的 Spark）。</span><span class="sxs-lookup"><span data-stu-id="f0712-206">There may be multiple .jar files (for versions 2.3.x and 2.4.x of Spark).</span></span> <span data-ttu-id="f0712-207">您必須選擇與叢集建立期間所選擇的 Spark 版本相符的 .jar 檔案。</span><span class="sxs-lookup"><span data-stu-id="f0712-207">You need to choose the .jar file that matches the version of Spark you chose during cluster creation.</span></span> <span data-ttu-id="f0712-208">例如，如果您在叢集建立期間選擇 Spark 2.3.2，請選擇 [ *microsoft-spark-2.3 x-0.3.0* ]。</span><span class="sxs-lookup"><span data-stu-id="f0712-208">For example, choose *microsoft-spark-2.3.x-0.3.0.jar* if you chose Spark 2.3.2 during cluster creation.</span></span>
+
+6. <span data-ttu-id="f0712-209">您的叢集需要您應用程式的輸入。</span><span class="sxs-lookup"><span data-stu-id="f0712-209">Your cluster needs the input to your app.</span></span> <span data-ttu-id="f0712-210">流覽至您的**mySparkApp**目錄，並找出 [**輸入 .txt**]。</span><span class="sxs-lookup"><span data-stu-id="f0712-210">Navigate to your **mySparkApp** directory and locate **input.txt**.</span></span> <span data-ttu-id="f0712-211">將您的輸入檔案上傳至 blob 容器中的**使用者/sshuser**目錄。</span><span class="sxs-lookup"><span data-stu-id="f0712-211">Upload your input file to the **user/sshuser** directory in your blob container.</span></span> <span data-ttu-id="f0712-212">您將透過 ssh 連線到您的叢集，而此資料夾是您的叢集尋找其輸入的位置。</span><span class="sxs-lookup"><span data-stu-id="f0712-212">You will be connecting to your cluster through ssh, and this folder is where your cluster looks for its input.</span></span> <span data-ttu-id="f0712-213">*輸入 .txt*檔案是上傳至特定目錄的唯一檔案。</span><span class="sxs-lookup"><span data-stu-id="f0712-213">The *input.txt* file is the only file uploaded to a specific directory.</span></span>
+
+## <a name="run-the-hdinsight-script-action"></a><span data-ttu-id="f0712-214">執行 HDInsight 腳本動作</span><span class="sxs-lookup"><span data-stu-id="f0712-214">Run the HDInsight script action</span></span>
+
+<span data-ttu-id="f0712-215">一旦您的叢集正在執行，且您已將檔案上傳至 Azure，您就可以在叢集上執行**install-worker.sh**腳本。</span><span class="sxs-lookup"><span data-stu-id="f0712-215">Once your cluster is running and you've uploaded your files to Azure, you run the **install-worker.sh** script on the cluster.</span></span> 
+
+1. <span data-ttu-id="f0712-216">在 Azure 入口網站中，流覽至您的 HDInsight Spark 叢集，然後選取 [**腳本動作**]。</span><span class="sxs-lookup"><span data-stu-id="f0712-216">Navigate to your HDInsight Spark cluster in Azure portal, and then select **Script actions**.</span></span>
+
+2. <span data-ttu-id="f0712-217">選取 [ **+ 提交新**的]，並提供下列值：</span><span class="sxs-lookup"><span data-stu-id="f0712-217">Select **+ Submit new** and provide the following values:</span></span>
+
+   |<span data-ttu-id="f0712-218">屬性</span><span class="sxs-lookup"><span data-stu-id="f0712-218">Property</span></span>  |<span data-ttu-id="f0712-219">描述</span><span class="sxs-lookup"><span data-stu-id="f0712-219">Description</span></span>  |
+   |---------|---------|
+   | <span data-ttu-id="f0712-220">腳本類型</span><span class="sxs-lookup"><span data-stu-id="f0712-220">Script type</span></span> |<span data-ttu-id="f0712-221">自訂</span><span class="sxs-lookup"><span data-stu-id="f0712-221">Custom</span></span>|
+   | <span data-ttu-id="f0712-222">[屬性]</span><span class="sxs-lookup"><span data-stu-id="f0712-222">Name</span></span> | <span data-ttu-id="f0712-223">安裝背景工作</span><span class="sxs-lookup"><span data-stu-id="f0712-223">Install Worker</span></span>|
+   | <span data-ttu-id="f0712-224">Bash 腳本 URI</span><span class="sxs-lookup"><span data-stu-id="f0712-224">Bash script URI</span></span> |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> <span data-ttu-id="f0712-225">若要確認此 URI，請以滑鼠右鍵按一下 Azure 儲存體總管中的 [install-worker.sh]，然後選取 [屬性]。</span><span class="sxs-lookup"><span data-stu-id="f0712-225">To confirm this URI, right-click on install-worker.sh in Azure Storage Explorer and select Properties.</span></span> |
+   | <span data-ttu-id="f0712-226">節點類型</span><span class="sxs-lookup"><span data-stu-id="f0712-226">Node type(s)</span></span>| <span data-ttu-id="f0712-227">工作</span><span class="sxs-lookup"><span data-stu-id="f0712-227">Worker</span></span>|
+   | <span data-ttu-id="f0712-228">參數</span><span class="sxs-lookup"><span data-stu-id="f0712-228">Parameters</span></span> | <span data-ttu-id="f0712-229">azure</span><span class="sxs-lookup"><span data-stu-id="f0712-229">azure</span></span> </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> <span data-ttu-id="f0712-230">/usr/local/bin</span><span class="sxs-lookup"><span data-stu-id="f0712-230">/usr/local/bin</span></span> 
+
+3. <span data-ttu-id="f0712-231">選取 [**建立**] 以提交您的腳本。</span><span class="sxs-lookup"><span data-stu-id="f0712-231">Select **Create** to submit your script.</span></span>
+
+## <a name="run-your-app"></a><span data-ttu-id="f0712-232">執行應用程式</span><span class="sxs-lookup"><span data-stu-id="f0712-232">Run your app</span></span>
+
+1. <span data-ttu-id="f0712-233">在 Azure 入口網站中，流覽至您的 HDInsight Spark 叢集，然後選取 **[SSH + 叢集登**入]。</span><span class="sxs-lookup"><span data-stu-id="f0712-233">Navigate to your HDInsight Spark cluster in Azure portal, and then select **SSH + Cluster login**.</span></span>
+
+2. <span data-ttu-id="f0712-234">複製 ssh 登入資訊，並將登入貼入終端機。</span><span class="sxs-lookup"><span data-stu-id="f0712-234">Copy the ssh login information and paste the login into a terminal.</span></span> <span data-ttu-id="f0712-235">使用您在叢集建立期間所設定的密碼來登入您的叢集。</span><span class="sxs-lookup"><span data-stu-id="f0712-235">Sign in to your cluster using the password you set during cluster creation.</span></span> <span data-ttu-id="f0712-236">您應該會看到歡迎您前往 Ubuntu 和 Spark 的訊息。</span><span class="sxs-lookup"><span data-stu-id="f0712-236">You should see messages welcoming you to Ubuntu and Spark.</span></span>
+
+3. <span data-ttu-id="f0712-237">使用**spark-submit**命令在 HDInsight 叢集上執行您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="f0712-237">Use the **spark-submit** command to run your app on your HDInsight cluster.</span></span> <span data-ttu-id="f0712-238">請記得以您的 blob 容器和儲存體帳戶的實際名稱取代範例腳本中的**mycontainer**和**mystorageaccount** 。</span><span class="sxs-lookup"><span data-stu-id="f0712-238">Remember to replace **mycontainer** and **mystorageaccount** in the example script with the actual names of your blob container and storage account.</span></span>
+
+   ```bash
+   $SPARK_HOME/bin/spark-submit \
    --master yarn \
-   --class org.apache.spark.deploy.dotnet.DotnetRunner \
-   --files <comma-separated list of assemblies that contain UDF definitions, if any> \
-   abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar \
-   abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<your app>.zip <your app> <app arg 1> <app arg 2> ... <app arg n>
+   --class org.apache.spark.deploy.DotnetRunner \
+   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
+   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
 
-### <a name="use-apache-livy"></a><span data-ttu-id="f483e-160">使用 Apache Livy</span><span class="sxs-lookup"><span data-stu-id="f483e-160">Use Apache Livy</span></span>
+   <span data-ttu-id="f0712-239">當您的應用程式執行時，您會看到寫入主控台的「快速入門」本機執行中的相同字數統計表。</span><span class="sxs-lookup"><span data-stu-id="f0712-239">When your app runs, you see the same word count table from the getting started local run written to the console.</span></span> <span data-ttu-id="f0712-240">恭喜，您已在雲端中執行 Apache Spark 應用程式的第一個 .NET！</span><span class="sxs-lookup"><span data-stu-id="f0712-240">Congratulations, you've run your first .NET for Apache Spark application in the cloud!</span></span>
 
-<span data-ttu-id="f483e-161">您可以使用 [Apache Livy](https://livy.incubator.apache.org/) (Apache Spark REST API) 來將適用於 Apache Spark 的 .NET 作業提交到 Azure HDInsight Spark 叢集。</span><span class="sxs-lookup"><span data-stu-id="f483e-161">You can use [Apache Livy](https://livy.incubator.apache.org/), the Apache Spark REST API, to submit .NET for Apache Spark jobs to an Azure HDInsight Spark cluster.</span></span> <span data-ttu-id="f483e-162">如需詳細資訊，請參閱 [Remote jobs with Apache Livy](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface) (使用 Apache Livy 的遠端作業)。</span><span class="sxs-lookup"><span data-stu-id="f483e-162">For more information, see [Remote jobs with Apache Livy](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface).</span></span>
+## <a name="clean-up-resources"></a><span data-ttu-id="f0712-241">清除資源</span><span class="sxs-lookup"><span data-stu-id="f0712-241">Clean up resources</span></span>
 
-<span data-ttu-id="f483e-163">您可以使用 `curl`，在 Linux 上執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="f483e-163">You can run the following command on Linux using `curl`:</span></span>
+<span data-ttu-id="f0712-242">HDInsight 會將您的資料儲存在 Azure 儲存體中，因此您可以放心地刪除未使用的叢集。</span><span class="sxs-lookup"><span data-stu-id="f0712-242">HDInsight saves your data in Azure Storage, so you can safely delete a cluster when it is not in use.</span></span> <span data-ttu-id="f0712-243">即使 HDInsight 叢集不在使用中，您也必須支付該叢集的費用。</span><span class="sxs-lookup"><span data-stu-id="f0712-243">You are also charged for an HDInsight cluster, even when it is not in use.</span></span> <span data-ttu-id="f0712-244">由於叢集的費用比儲存體費用多倍，因此在不使用叢集的情況下，刪除叢集會變得經濟合理。</span><span class="sxs-lookup"><span data-stu-id="f0712-244">Since the charges for the cluster are many times more than the charges for storage, it makes economic sense to delete clusters when they are not in use.</span></span>
 
-```bash
-curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches" \
--u "<hdinsight username>:<hdinsight password>" \
--H "Content-Type: application/json" \
--H "X-Requested-By: <hdinsight username>" \
--d @- << EOF
-{
-    "file":"abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar",
-    "className":"org.apache.spark.deploy.dotnet.DotnetRunner",
-    "files":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<udf assembly>", "abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<file>"],
-    "args":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<your app>.zip","<your app>","<app arg 1>","<app arg 2>,"...","<app arg n>"]
-}
-EOF
-```
+<span data-ttu-id="f0712-245">您也可以選取資源組名來開啟 [資源群組] 頁面，然後選取 [**刪除資源群組**]。</span><span class="sxs-lookup"><span data-stu-id="f0712-245">You can also select the resource group name to open the resource group page, and then select **Delete resource group**.</span></span> <span data-ttu-id="f0712-246">藉由刪除資源群組，您可以同時刪除 HDInsight Spark 叢集和預設儲存體帳戶。</span><span class="sxs-lookup"><span data-stu-id="f0712-246">By deleting the resource group, you delete both the HDInsight Spark cluster, and the default storage account.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="f483e-164">後續步驟</span><span class="sxs-lookup"><span data-stu-id="f483e-164">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="f0712-247">後續步驟</span><span class="sxs-lookup"><span data-stu-id="f0712-247">Next steps</span></span>
 
-<span data-ttu-id="f483e-165">在本教學課程中，您已將適用於 Apache Spark 的 .NET 應用程式部署到 Azure HDInsight。</span><span class="sxs-lookup"><span data-stu-id="f483e-165">In this tutorial, you deployed your .NET for Apache Spark application to Azure HDInsight.</span></span> <span data-ttu-id="f483e-166">若要深入了解 HDInsight，請繼續前往 Azure HDInsight 文件。</span><span class="sxs-lookup"><span data-stu-id="f483e-166">To learn more about HDInsight, continue to the Azure HDInsight Documentation.</span></span>
+<span data-ttu-id="f0712-248">在本教學課程中，您已將適用於 Apache Spark 的 .NET 應用程式部署到 Azure HDInsight。</span><span class="sxs-lookup"><span data-stu-id="f0712-248">In this tutorial, you deployed your .NET for Apache Spark application to Azure HDInsight.</span></span> <span data-ttu-id="f0712-249">若要深入了解 HDInsight，請繼續前往 Azure HDInsight 文件。</span><span class="sxs-lookup"><span data-stu-id="f0712-249">To learn more about HDInsight, continue to the Azure HDInsight Documentation.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="f483e-167">Azure HDInsight 檔</span><span class="sxs-lookup"><span data-stu-id="f483e-167">Azure HDInsight Documentation</span></span>](https://docs.microsoft.com/azure/hdinsight/)
+> [<span data-ttu-id="f0712-250">Azure HDInsight 檔</span><span class="sxs-lookup"><span data-stu-id="f0712-250">Azure HDInsight Documentation</span></span>](https://docs.microsoft.com/azure/hdinsight/)
