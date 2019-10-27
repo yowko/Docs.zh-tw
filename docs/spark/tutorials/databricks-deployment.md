@@ -4,170 +4,221 @@ description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署�
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 55fa9b42e04a540deb245887d601e6cce0e6e623
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9e338886c68845d5f95e7beb0cd7ac3a729d3281
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583514"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72961010"
 ---
-# <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>將適用於 Apache Spark 的 .NET 應用程式部署到 Databricks
+# <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>教學課程：將適用于 Apache Spark 應用程式的 .NET 部署至 Databricks
 
-本教學課程會教導如何將適用於 Apache Spark 的 .NET 應用程式部署到 Databricks。
+本教學課程將教您如何透過 Azure Databricks （以 Apache Spark 為基礎的分析平臺），將您的應用程式部署到雲端，其中包含單鍵設定、簡化的工作流程，以及啟用共同作業的互動式工作區。
 
 在本教學課程中，您將了解如何：
 
 > [!div class="checklist"]
->
-> * 準備 Microsoft.Spark.Worker
-> * 發佈您的 Spark .NET 應用程式
-> * 將您的應用程式部署到 Databricks
-> * 執行應用程式
+> 建立 Azure Databricks 工作區。
+> 發行您的 .NET for Apache Spark 應用程式。
+> 建立 Spark 作業和 Spark 叢集。
+> 在 Spark 叢集上執行您的應用程式。
 
 ## <a name="prerequisites"></a>Prerequisites
 
-開始之前，請執行下列動作：
+開始之前，請執行下列工作：
 
-* 下載 [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)。
-* 將 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 下載到您的本機電腦。 這是您稍後用來將適用於 Apache Spark 的 .NET 應用程式相依檔案複製到您 Spark 叢集背景工作節點的協助程式指令碼。
+* 如果您沒有 Azure 帳戶，請建立[免費帳戶](https://azure.microsoft.com/free/)。
+* 登入 [Azure 入口網站](https://portal.azure.com/)。
+* 完成[Apache Spark 的 .net-在10分鐘內開始](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)使用教學課程。
 
-## <a name="prepare-worker-dependencies"></a>準備背景工作相依性
+## <a name="create-an-azure-databricks-workspace"></a>建立 Azure Databricks 工作區
 
-**Microsoft.Spark.Worker** 是一種後端元件，存在於您 Spark 叢集的個別背景工作節點上。 當您想要執行 C# UDF (使用者定義函式) 時，Spark 需要了解如何啟動 .NET CLR 來執行 UDF。 **Microsoft.Spark.Worker** 會向 Spark 提供類別集合，其會啟用此功能。
+> [!Note]
+> 本教學課程無法使用**Azure 免費試用訂**用帳戶來執行。
+> 如果您有免費帳戶，請移至您的設定檔，並將您的訂用帳戶變更為**隨用隨付**。 如需詳細資訊，請參閱[Azure 免費帳戶](https://azure.microsoft.com/free/)。 然後，[移除消費限制](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit)，並為您的區域中的個 vcpu[要求增加配額](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request)。 當您建立 Azure Databricks 工作區時，您可以選取 [**試用（Premium-14 天免費 dbu）** ] 定價層，讓工作區能夠存取免費的 Premium Azure Databricks dbu 14 天。
 
-1. 選取要部署在您叢集上的 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp 版本。
+在本節中，您會使用 Azure 入口網站建立 Azure Databricks 工作區。
 
-   例如，若您想要使用 `netcoreapp2.1` 的 `.NET for Apache Spark v0.1.0`，您可以下載 [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz)。
+1. 在 [Azure 入口網站中，選取 [**建立資源**] > **分析** > **Azure Databricks**]。
 
-2. 將 `Microsoft.Spark.Worker.<release>.tar.gz` 和 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 上傳到您叢集可以存取的分散式檔案系統 (例如 DBFS)。
+   ![在 Azure 入口網站中建立 Azure Databricks 資源](./media/databricks-deployment/create-databricks-resource.png)
 
-## <a name="prepare-your-net-for-apache-spark-app"></a>準備適用於 Apache Spark 的 .NET 應用程式
+2. 在 [ **Azure Databricks 服務**] 底下，提供值以建立 Databricks 工作區。
+    
+    |屬性  |描述  |
+    |---------|---------|
+    |**工作區名稱**     | 為您的 Databricks 工作區提供名稱。        |
+    |**訂用帳戶**     | 從下拉式選單中，選取您的 Azure 訂用帳戶。        |
+    |**資源群組**     | 指定您要建立新的資源群組，還是使用現有的。 資源群組是保存 Azure 解決方案相關資源的容器。 如需詳細資訊，請參閱[Azure 資源群組總覽](/azure/azure-databricks/azure-resource-manager/resource-group-overview)。 |
+    |**位置**     | 選取您慣用的區域。 如需可用區域的詳細資訊，請參閱[依區域提供的 Azure 服務](https://azure.microsoft.com/regions/services/)。        |
+    |**定價層**     |  選擇 [**標準**]、[ **Premium**] 或 [**試用**]。 如需這些層級的詳細資訊，請參閱[Databricks 定價頁面](https://azure.microsoft.com/pricing/details/databricks/)。       |
+    |**虛擬網路**     |   否       |
 
-1. 遵循[開始使用](get-started.md)教學課程來建置您的應用程式。
+3. 選取 [建立]。 建立工作區需要幾分鐘的時間。 建立工作區期間，您可以在 [**通知**] 中查看部署狀態。
 
-2. 將您的 Spark .NET 應用程式發佈為獨立式應用程式。
+## <a name="install-azure-databricks-tools"></a>安裝 Azure Databricks 工具
 
-   您可以在 Linux 上執行下列命令。
+您可以使用**DATABRICKS CLI**來連線到 Azure Databricks 叢集，並從本機電腦將檔案上傳到其中。 Databricks 叢集會透過 DBFS （Databricks 檔案系統）存取檔案。 
 
-   ```dotnetcli
-   dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
-   ```
+1. Databricks CLI 需要 Python 3.6 或更新版本。 如果您已經安裝 Python，可以略過此步驟。
+ 
+   **若為 Windows：**
 
-3. 為發佈的檔案產生 `<your app>.zip`。
+   [下載適用于 Windows 的 Python](https://www.python.org/ftp/python/3.7.4/python-3.7.4.exe)
 
-   您可以使用 `zip`，在 Linux 上執行下列命令。
-
-   ```bash
-   zip -r <your app>.zip .
-   ```
-
-4. 將下列項目上傳到您叢集可存取的分散式檔案系統 (例如 DBFS)：
-
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`：此 jar 會包含在[Microsoft Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 套件中，並且會在應用程式的組建輸出目錄中共存。
-   * `<your app>.zip`
-   * 要放在每個執行程式中工作目錄的檔案 (例如相依性檔案或每個背景工作都可存取的通用資料) 或組件 (例如包含您使用者定義函式或您應用程式相依程式庫的 DLL)。
-
-## <a name="deploy-to-databricks"></a>部署至 Databricks
-
-[Databricks](https://databricks.com) 是一種平台，提供使用 Apache Spark 的雲端式巨量資料處理。
-
-> [!NOTE]
-> [Azure Databricks](https://azure.microsoft.com/services/databricks/) 和 [AWS Databricks](https://databricks.com/aws) 都是以 Linux 為基礎。 因此，若您想要將應用程式部署到 Databricks，請確認應用程式與 .NET Standard 相容，且您是使用 [.NET Core 編譯器](https://dotnet.microsoft.com/download)來編譯應用程式。
-
-Databricks 可讓您將適用於 Apache Spark 的 .NET 應用程式部署到現有使用中叢集，或在您每次啟動作業時建立新的叢集。 這需要在您提交適用於 Apache Spark 的 .NET 應用程式前，先安裝 **Microsoft.Spark.Worker**。
-
-### <a name="deploy-microsoftsparkworker"></a>部署 Microsoft.Spark.Worker
-
-針對叢集，此步驟只需要一次。
-
-1. 下載 [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) 和 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh
-) 到您的本機電腦。
-
-2. 修改 **db-init.sh** 以指向您要下載和在您叢集上安裝的 **Microsoft.Spark.Worker** 版本。
-
-3. 安裝 [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)。
-
-4. Databricks CLI 的[設定驗證](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication)詳細資料。
-
-5. 使用下列命令將檔案上傳到您的 Databricks 叢集：
+   若**為 Linux：** Python 已預先安裝于大部分的 Linux 發行版本上。 執行下列命令，以查看您已安裝的版本：
 
    ```bash
-   cd <path-to-db-init-and-install-worker>
+   python3 --version
+   ```
+
+2. 使用 pip 安裝 Databricks CLI。 根據預設，Python 3.4 和更新版本包含 pip。 使用適用于 Python 3 的 pip3。 執行下列命令：
+
+   ```bash
+   pip3 install databricks-cli
+   ```
+
+3. 安裝 Databricks CLI 之後，請開啟新的命令提示字元，然後執行命令 `databricks`。 如果您收到「 **databricks」無法辨識為內部或外部命令錯誤**，請確定您已開啟新的命令提示字元。
+
+## <a name="set-up-azure-databricks"></a>設定 Azure Databricks
+
+既然您已安裝 Databricks CLI，您必須設定驗證詳細資料。
+
+1. `databricks configure --token`執行 Databricks CLI 命令。
+
+2. 執行 [設定] 命令之後，系統會提示您輸入主機。 您的主機 URL 使用的格式為 HTTPs：/ **/< \Location >. azuredatabricks. net**。 例如，如果您在 Azure Databricks 服務建立期間選取了 [ **eastus2** ]，則會 **https://eastus2.azuredatabricks.net** 主機。
+
+3. 進入主機之後，系統會提示您輸入權杖。 在 Azure 入口網站中，選取 **啟動工作區** 以啟動您的 Azure Databricks 工作區。
+
+   ![啟動 Azure Databricks 工作區](./media/databricks-deployment/launch-databricks-workspace.png)
+
+4. 在工作區的 [首頁] 頁面上，選取 [**使用者設定**]。
+
+   ![Azure Databricks 工作區中的使用者設定](./media/databricks-deployment/databricks-user-settings.png)
+
+5. 在 [使用者設定] 頁面上，您可以產生新的權杖。 複製產生的權杖，並將它貼回命令提示字元。
+
+   ![在 Azure Databricks 工作區中產生新的存取權杖](./media/databricks-deployment/generate-token.png)
+
+您現在應該能夠存取您建立的任何 Azure Databricks 叢集，並將檔案上傳到 DBFS。
+
+## <a name="download-worker-dependencies"></a>下載背景工作相依性
+
+1. Apache Spark 可協助執行您的應用程式，例如您可能已撰寫的任何使用者定義函數（Udf）。 下載[Microsoft. Spark. Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz)。
+
+2. *Install-worker.sh*是一個腳本，可讓您將 Apache Spark 相依檔案的 .net 複製到叢集的節點中。 
+
+   在您的本機電腦上建立名為**install-worker.sh**的新檔案，並貼上位於 GitHub 的[install-worker.sh 內容](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)。 
+
+3. *Db-init.sh*是將相依性安裝在您的 Databricks Spark 叢集上的腳本。
+
+   在您的本機電腦上建立名為**db-init.sh**的新檔案，並貼上位於 GitHub 的[db-init.sh 內容](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh)。 
+   
+   在您剛才建立的檔案中，將 `DOTNET_SPARK_RELEASE` 變數設為 `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`。 保留*db-init.sh*檔案的其餘部分。
+
+> [!Note]
+> 如果您使用的是 Windows，請確認您的*install-worker.sh*和*db-init.sh*腳本中的行尾結束符號為 Unix 樣式（LF）。 您可以透過 [記事本 + +] 和 [Atom] 之類的文字編輯器來變更行尾結束符號。
+
+## <a name="publish-your-app"></a>發行您的應用程式
+
+接下來，您會發佈在 .Net 中建立[Apache Spark-開始使用10分鐘](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)的教學課程中的*mySparkApp* ，以確保您的 Spark 叢集能夠存取執行應用程式所需的所有檔案。 
+
+1. 執行下列命令以發佈*mySparkApp*：
+
+   **在 Windows 上**：
+
+   ```console
+   cd mySparkApp
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x6
+   ```
+
+   **在 Linux 上：**
+
+   ```bash
+   cd mySparkApp
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
+   ```
+
+2. 執行下列工作以壓縮已發佈的應用程式檔，讓您可以輕鬆地將它們上傳到您的 Databricks Spark 叢集。
+
+   **在 Windows 上**：
+
+   流覽至 mySparkApp/bin/Release/netcoreapp 3.0/ubuntu. 16.04-x64。 然後，在 [**發行**資料夾] 上按一下滑鼠右鍵，然後選取 **[傳送至 > 壓縮的（zipped）資料夾**]。 將新資料夾命名為**publish .zip**。
+
+   **在 Linux 上，執行下列命令：**
+
+   ```bash
+   zip -r publish.zip .
+   ```
+
+## <a name="upload-files"></a>上傳檔案
+
+在本節中，您會將數個檔案上傳至 DBFS，讓您的叢集具備在雲端中執行應用程式所需的所有專案。 每次您將檔案上傳到 DBFS 時，請確定您位於電腦上該檔案所在的目錄中。
+
+1. 執行下列命令，將*db-init.sh*、 *install-worker.sh*和 DBFS 上傳*至*：
+
+   ```console
    databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
    databricks fs cp install-worker.sh dbfs:/spark-dotnet/install-worker.sh
+   databricks fs cp Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
-6. 移至您的 Databricks 工作區。 從左側功能表中選取 [Clusters] \(叢集\)，然後選取 [Create Cluster] \(建立叢集\)。
+2. 執行下列命令，上傳您的叢集執行應用程式所需的其餘檔案：壓縮的 publish 資料夾、 *input .txt*和*microsoft-spark-2.4. x-0.3.0 .jar*。 
 
-7. 適當地設定叢集後，請設定**初始指令碼**並建立叢集。
+   ```console
+   cd mySparkApp 
+   databricks fs cp input.txt dbfs:/input.txt
+   
+   cd mySparkApp\bin\Release\netcoreapp3.0\ubuntu.16.04-x64 directory 
+   databricks fs cp mySparkApp.zip dbfs:/spark-dotnet/publish.zip
+   databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
+   ```
 
-   ![指令碼動作影像](./media/databricks-deployment/deployment-databricks-init-script.png)
+## <a name="create-a-job"></a>建立作業
+
+您的應用程式會透過執行**spark 提交**的作業在 Azure Databricks 上執行，這是您用來針對 Apache Spark 作業執行 .net 的命令。
+
+1. 在您的 Azure Databricks 工作區中，選取 [**作業**] 圖示，然後選取 [ **+ 建立作業**]。 
+
+   ![建立 Azure Databricks 作業](./media/databricks-deployment/create-job.png)
+
+2. 選擇您的作業標題，然後選取 [**設定 spark-提交**]。
+
+   ![設定 spark-提交 Databricks 作業](./media/databricks-deployment/configure-spark-submit.png)
+
+3. 在作業設定中貼上下列參數。 然後選取 [**確認**]。
+
+   ```
+   ["--class","org.apache.spark.deploy.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
+   ```
+
+## <a name="create-a-cluster"></a>建立叢集
+
+1. 流覽至您的作業，然後選取 [**編輯**] 來設定作業的叢集。
+
+2. 將您的叢集設定為**Spark 2.4.1**。 然後，選取  **Advanced Options**  > **Init Scripts**。 將 [Init 腳本路徑] 設定為 `dbfs:/spark-dotnet/db-init.sh`。 
+
+   ![在 Azure Databricks 中設定 spark 叢集](./media/databricks-deployment/cluster-config.png)
+
+3. 選取 [**確認**] 以確認您的叢集設定。
 
 ## <a name="run-your-app"></a>執行應用程式
 
-您可以使用 `set JAR` 或 `spark-submit` 來將您的作業提交到 Databricks。
+1. 流覽至您的作業，然後選取 [**立即執行**]，在新設定的 Spark 叢集上執行您的作業。
 
-### <a name="use-set-jar"></a>使用 Set JAR
+2. 建立作業的叢集需要幾分鐘的時間。 建立之後，將會提交您的作業，而且您可以查看輸出。
 
-[Set JAR](https://docs.databricks.com/user-guide/jobs.html#create-a-job) 可讓您將作業提交到現有使用中叢集。
+3. 從左側功能表**中選取 [** 叢集]，然後從 [名稱] 和 [執行您的作業]。 
 
-#### <a name="one-time-setup"></a>一次性設定
+4. 選取 [**驅動程式記錄**] 以查看作業的輸出。 當您的應用程式完成執行時，您會看到寫入標準輸出主控台的「快速入門」本機執行中的相同字數統計表。
 
-1. 前往您的 Databricks 叢集，並從左側功能表中選取 [Jobs] \(作業\)。 然後選取 [Set JAR]。
+   ![Azure Databricks 作業輸出資料表](./media/databricks-deployment/table-output.png)
 
-2. 上傳適當的 `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar` 檔案。
+   恭喜，您已在雲端中執行 Apache Spark 應用程式的第一個 .NET！
 
-3. 適當地設定參數。
+## <a name="clean-up-resources"></a>清除資源
 
-   | 參數   | 值                                                |
-   |-------------|------------------------------------------------------|
-   | Main 類別  | dotnet. DotnetRunner 的部署          |
-   | 引數   | /dbfs/apps/\<your-應用程式名稱 > .zip \<your-應用程式-主要類別 > |
-
-4. 設定 [Cluster] \(叢集\) 以指向您在前一節中為其建立**初始指令碼**的現有叢集。
-
-#### <a name="publish-and-run-your-app"></a>發佈和執行您的應用程式
-
-1. 使用 [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) 來將應用程式上傳到您的 Databricks 叢集。
-
-    ```bash
-    cd <path-to-your-app-publish-directory>
-    databricks fs cp <your-app-name>.zip dbfs:/apps/<your-app-name>.zip
-    ```
-
-2. 此步驟只有在應用程式組件 (例如包含使用者定義函式及其相依性的 DLL) 需要放置在每個 **Microsoft.Spark.Worker** 的工作目錄時才需要。
-
-   * 將應用程式組件上傳到您的 Databricks 叢集
-
-      ```bash
-      cd <path-to-your-app-publish-directory>
-      databricks fs cp <assembly>.dll dbfs:/apps/dependencies
-      ```
-
-   * 取消註解並修改 [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) 中的應用程式相依性區段，以指向應用程式相依性路徑並上傳到您的 Databricks 叢集。
-
-      ```bash
-      cd <path-to-db-init-and-install-worker>
-      databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
-      ```
-
-   * 重新啟動您的叢集。
-
-3. 前往您位於 Databricks 工作區中的 Databricks 叢集。 在 [Jobs] \(作業\) 下方，選取作業，然後選取 [Run Now] \(立即執行\) 來執行您的作業。
-
-### <a name="use-spark-submit"></a>使用 spark-submit
-
-[spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) 命令可讓您將作業提交到新的叢集。
-
-1. [建立作業](https://docs.databricks.com/user-guide/jobs.html)並選取 [Configure spark-submit] \(設定 spark-submit\)。
-
-2. 搭配下列參數設定 `spark-submit`：
-
-    ```bash
-    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
-    ```
-
-3. 前往您位於 Databricks 工作區中的 Databricks 叢集。 在 [Jobs] \(作業\) 下方，選取作業，然後選取 [Run Now] \(立即執行\) 來執行您的作業。
+如果您不再需要 Databricks 工作區，您可以在 Azure 入口網站中刪除您的 Azure Databricks 資源。 您也可以選取資源組名來開啟 [資源群組] 頁面，然後選取 [**刪除資源群組**]。
 
 ## <a name="next-steps"></a>後續步驟
 
