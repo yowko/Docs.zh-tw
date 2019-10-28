@@ -52,11 +52,11 @@
           items:
             - name: DataGrid 控制項中的預設鍵盤和滑鼠行為
               href: default-keyboard-and-mouse-behavior-in-the-datagrid-control.md
-            - name: HOW TO：將資料列詳細資料新增至 DataGrid 控制項
+            - name: 作法：將資料列詳細資料新增至 DataGrid 控制項
               href: how-to-add-row-details-to-a-datagrid-control.md
-            - name: HOW TO：在 DataGrid 控制項中分組、排序和篩選資料
+            - name: 作法：在 DataGrid 控制項中分組、排序和篩選資料
               href: how-to-group-sort-and-filter-data-in-the-datagrid-control.md
-            - name: HOW TO：使用 DataGrid 控制項實作驗證
+            - name: 作法：使用 DataGrid 控制項實作驗證
               href: how-to-implement-validation-with-the-datagrid-control.md
             - name: 逐步解說：在 DataGrid 控制項中顯示來自 SQL Server 資料庫的資料
               href: walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md
@@ -396,7 +396,7 @@
           href: styling-and-templating.md
         - name: 透過建立 ControlTemplate 自訂現有控制項的外觀
           href: customizing-the-appearance-of-an-existing-control.md
-        - name: HOW TO：尋找 ControlTemplate 產生的元素
+        - name: 作法：尋找 ControlTemplate 產生的元素
           href: how-to-find-controltemplate-generated-elements.md
     - name: 控制項自訂
       href: control-customization.md
@@ -497,7 +497,7 @@
         - name: 逐步解說：建立自訂動畫按鈕
           href: walkthroughs-create-a-custom-animated-button.md
           items:
-            - name: 使用 Microsoft Expression Blend 建立按鈕
+            - name: 使用 Blend 建立按鈕
               href: walkthrough-create-a-button-by-using-microsoft-expression-blend.md
             - name: 使用 XAML 建立按鈕
               href: walkthrough-create-a-button-by-using-xaml.md

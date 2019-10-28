@@ -6,45 +6,41 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: d7fca92f541ffeca7a6e8267260d3b665271e90a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97933a9d014a54d5b6e333090cddccace99fcc3c
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014190"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960949"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>使用 Visual Basic 自訂專案和擴充 My 物件
-您可以自訂專案範本，以提供額外`My`物件。 這可輕鬆尋找並使用您物件的其他開發人員。  
-  
-## <a name="in-this-section"></a>本節內容  
- [擴充 Visual Basic 中的 My 命名空間](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
- 描述如何新增自訂的成員和值`My`Visual Basic 中的命名空間。  
-  
- [封裝和部署自訂的 My 擴充](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)  
- 描述如何將發行自訂`My`使用 Visual Studio 範本的命名空間延伸模組。  
-  
- [擴充 Visual Basic 應用程式模型](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
- 描述如何藉由覆寫的成員指定自己的延伸模組，應用程式模型<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>類別。  
-  
- [自訂 My 中可用的物件](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
- 描述如何控制哪個`My`物件會藉由設定您的專案啟用\_MYTYPE 條件式編譯常數。  
-  
-## <a name="related-sections"></a>相關章節  
- [使用 My 進行開發](../../../visual-basic/developing-apps/development-with-my/index.md)  
- 描述這`My`物件都在預設的不同專案類型。  
-  
- [Visual Basic 應用程式模型概觀](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- 描述 Visual Basic 的模型，用於控制 Windows Forms 應用程式的行為。  
-  
- [My 如何相依於專案類型](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
- 描述這`My`物件都在預設的不同專案類型。  
-  
- [條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- 討論如何編譯器用來選取特定的編譯，並排除其他章節的程式碼區段的條件式編譯。  
-  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- 描述`My`提供屬性、 方法和事件的物件與目前的應用程式。  
-  
-## <a name="see-also"></a>另請參閱
 
-- [使用 Visual Basic 開發應用程式](../../../visual-basic/developing-apps/index.md)
+您可以自訂專案範本，以提供額外的 `My` 物件。 這可讓其他開發人員輕鬆地尋找和使用您的物件。
+
+## <a name="in-this-section"></a>本節內容
+
+- [擴充 Visual Basic 中的 My 命名空間](extending-the-my-namespace.md)  
+ 描述如何將自訂成員和值新增至 Visual Basic 中的 `My` 命名空間。
+- [封裝和部署自訂的 My 擴充](packaging-and-deploying-custom-my-extensions.md)  
+ 描述如何使用 Visual Studio 範本發行自訂 `My` 命名空間延伸模組。
+- [擴充 Visual Basic 應用程式模型](extending-the-visual-basic-application-model.md)  
+ 描述如何藉由覆寫 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 類別的成員，來指定您自己的應用程式模型延伸模組。
+- [自訂 My 中可用的物件](customizing-which-objects-are-available-in-my.md)  
+ 描述如何設定專案的 \_MYTYPE 條件式編譯常數，以控制要啟用哪些 `My` 物件。
+
+## <a name="related-sections"></a>相關章節
+
+- [使用 My 進行開發](../development-with-my/index.md)  
+ 描述預設會在不同的專案類型中提供哪些 `My` 物件。
+- [Visual Basic 應用程式模型概觀](../development-with-my/overview-of-the-visual-basic-application-model.md)  
+ 描述 Visual Basic 的模型，以控制 Windows Forms 應用程式的行為。
+- [My 如何相依於專案類型](../development-with-my/how-my-depends-on-project-type.md)  
+ 描述預設會在不同的專案類型中提供哪些 `My` 物件。
+- [條件式編譯](../../programming-guide/program-structure/conditional-compilation.md)  
+ 討論編譯器如何使用條件式編譯來選取特定的程式碼區段，以編譯和排除其他區段。
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
+ 描述提供與目前應用程式相關之屬性、方法和事件的 `My` 物件。
+
+## <a name="see-also"></a>請參閱
+
+- [使用 Visual Basic 開發應用程式](../index.md)

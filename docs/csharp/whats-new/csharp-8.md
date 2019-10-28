@@ -2,12 +2,12 @@
 title: C# 8.0 的新功能- C#指南
 description: 大致了解 C# 8.0 中可用的新功能。
 ms.date: 09/20/2019
-ms.openlocfilehash: 335ae37b20f752f4181a4d1828cb2a1f02c0fa9e
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: e6a2357f4405b4eb31b12a1e3faa6896a31c21a1
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798928"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960823"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
@@ -40,7 +40,7 @@ C#8.0 新增下列功能和增強的C#語言：
 
 ## <a name="readonly-members"></a>唯讀成員
 
-您可以套用 `readonly` 修飾詞到結構的任何成員。 它指出成員不會修改狀態。 它比套用 `readonly` 修飾詞到 `struct` 宣告更為精細。  假設您有下列可變動結構：
+您可以將 `readonly` 修飾詞套用至結構的成員。 這表示成員不會修改狀態。 它比套用 `readonly` 修飾詞到 `struct` 宣告更為精細。  假設您有下列可變動結構：
 
 ```csharp
 public struct Point
@@ -54,28 +54,28 @@ public struct Point
 }
 ```
 
-就像大部分的結構一樣，`ToString()` 方法不會修改狀態。 您可以透過新增 `readonly` 修飾詞到 `ToString()` 的宣告來指出此情況：
+就像大多數結構一樣，`ToString()` 方法不會修改狀態。 您可以透過新增 `readonly` 修飾詞到 `ToString()` 的宣告來指出此情況：
 
 ```csharp
 public readonly override string ToString() =>
     $"({X}, {Y}) is {Distance} from the origin";
 ```
 
-上述變更會產生編譯器警告，因為 `ToString` 會存取 `Distance` 屬性，但此屬性未標示為 `readonly`：
+上述變更會產生編譯器警告，因為 `ToString` 存取 `Distance` 屬性，但未標示為 `readonly`：
 
 ```console
 warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
 ```
 
-當它需要建立防禦性複本時，編譯器會警告您。  `Distance` 屬性不會變更狀態，因此您可以透過新增 `readonly` 修飾詞到宣告以修正此警告：
+當它需要建立防禦性複本時，編譯器會警告您。  `Distance` 屬性不會變更狀態，因此您可以藉由將 `readonly` 修飾詞加入至宣告來修正此警告：
 
 ```csharp
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-請注意，`readonly` 修飾詞在唯讀屬性上是必要的。 編譯器不會假設 `get` 存取子不會修改狀態；您必須明確地宣告 `readonly`。 自動實作為屬性的例外狀況;編譯器會將所有自動執行的 getter 視為唯讀，因此，您不需要將 `readonly` 修飾詞加入 `X` 和 `Y` 屬性。
+請注意，唯讀屬性上需要 `readonly` 修飾詞。 編譯器不會假設 `get` 存取子不會修改狀態;您必須明確宣告 `readonly`。 自動實作為屬性的例外狀況;編譯器會將所有自動執行的 getter 視為唯讀，因此，您不需要將 `readonly` 修飾詞加入 `X` 和 `Y` 屬性。
 
-編譯器會強制 `readonly` 成員不得修改狀態的規則。 除非您移除 `readonly` 修飾詞，否則下列方法將不會編譯：
+編譯器會強制執行 `readonly` 成員不修改狀態的規則。 除非您移除 `readonly` 修飾詞，否則無法編譯下列方法：
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -85,7 +85,7 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-此功能可讓您指定您的設計意圖，以便編譯器可以強制套用，並根據該意圖進行最佳化。
+此功能可讓您指定您的設計意圖，以便編譯器可以強制套用，並根據該意圖進行最佳化。 您可以在[`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples)的語言參考文章中深入瞭解 readonly 成員。
 
 ## <a name="default-interface-methods"></a>預設介面方法
 
@@ -171,7 +171,7 @@ public static RGBColor FromRainbowClassic(Rainbow colorBand)
 
 ### <a name="property-patterns"></a>屬性模式
 
-**屬性模式**使您得以比對所檢查物件的屬性。 試想必須根據購買者地址計算營業稅的電子商務網站。 `Address` 類別的核心功能並非負責進行該計算。 這項計算會隨著時間變更，而且可能比地址格式的變更更加頻繁。 營業稅額取決於地址的 `State` 屬性。 下列方法會使用屬性模式，從地址及價格計算營業稅：
+**屬性模式**使您得以比對所檢查物件的屬性。 試想必須根據購買者地址計算營業稅的電子商務網站。 該計算不是 `Address` 類別的核心責任。 這項計算會隨著時間變更，而且可能比地址格式的變更更加頻繁。 營業稅額取決於地址的 `State` 屬性。 下列方法會使用屬性模式，從地址及價格計算營業稅：
 
 ```csharp
 public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
@@ -254,7 +254,7 @@ static Quadrant GetQuadrant(Point point) => point switch
 };
 ```
 
-當 `x` 或 `y` 為 0 (非兩者) 時，上述 switch 中的捨棄模式就會符合。 switch 運算式必須產生值或者擲回例外狀況。 若沒有任何案例符合，則 switch 運算式會擲回例外狀況。 若您未在 switch 運算式中涵蓋所有可能的案例，則編譯器會對您產生警告。
+當 `x` 或 `y` 為 0 (非兩者) 時，上述 switch 中的捨棄模式就會符合。 switch 運算式必須產生值或者擲回例外狀況。 若沒有任何案例符合，則 switch 運算式會擲回例外狀況。 如果您未涵蓋 switch 運算式中的所有可能案例，編譯器會為您產生警告。
 
 您可以在此[模式比對進階教學課程](../tutorials/pattern-matching.md)中探索模式比對技巧。
 
@@ -313,7 +313,7 @@ static int WriteLinesToFile(IEnumerable<string> lines)
 
 在上述範例中，到達與 `using` 陳述式相關的結尾右大括號時，就會處置檔案。
 
-在這兩個案例中，編譯器皆會產生對 `Dispose()` 的呼叫。 若無法處置 `using` 陳述式中的運算式，編譯器會產生錯誤。
+在這兩個案例中，編譯器皆會產生對 `Dispose()` 的呼叫。 如果 `using` 語句中的運算式無法處置，編譯器會產生錯誤。
 
 ## <a name="static-local-functions"></a>靜態區域函式
 
@@ -347,13 +347,13 @@ int M()
 
 ## <a name="disposable-ref-structs"></a>可處置的 ref struct
 
-使用 `ref` 修飾詞宣告的 `struct` 不會實作任何介面，故無法實作 <xref:System.IDisposable>。 因此，若要讓 `ref struct` 可處置，其必須具有可存取的 `void Dispose()` 方法。 這也適用於 `readonly ref struct` 宣告。
+使用 `ref` 修飾詞宣告的 `struct` 可能不會實作為任何介面，因此無法執行 <xref:System.IDisposable>。 因此，若要讓 `ref struct` 可處置，其必須具有可存取的 `void Dispose()` 方法。 這項功能也適用于 `readonly ref struct` 宣告。
 
 ## <a name="nullable-reference-types"></a>可為 Null 的參考型別
 
 在可為 Null 的註解內容中，參考型別的任何變數皆視為**不可為 Null 的參考型別**。 若您要表示變數可能為 Null，則必須使用 `?` 來附加類型名稱，以將變數宣告為**可為 Null 的參考型別**。
 
-對於不可為 Null 的參考型別，編譯器會使用流程分析來確保將區域變數在宣告時，初始化為非 Null 的值。 必須在建構期間將欄位初始化。 若變數不是由對任何可用建構函式的呼叫，或是初始設定式所設定，則編譯器會產生警告。 此外，也不能對不可為 Null 的參考型別指派可為 Null 的值。
+對於不可為 Null 的參考型別，編譯器會使用流程分析來確保將區域變數在宣告時，初始化為非 Null 的值。 必須在建構期間將欄位初始化。 如果未呼叫任何可用的函式或初始化運算式來設定變數，編譯器會產生警告。 此外，也不能對不可為 Null 的參考型別指派可為 Null 的值。
 
 系統不會檢查可為 Null 的參考型別，來確保其不會指派或初始化為 Null。 不過，編譯器會在將變數存取或指派至不可為 Null 的參考型別之前，使用流程分析來確保已對可為 Null 參考型別的所有變數檢查可 Null 性。
 
@@ -404,7 +404,7 @@ await foreach (var number in GenerateSequence())
 
 讓我們從索引的規則開始。 假設有一個陣列 `sequence`。 `0` 索引與 `sequence[0]` 相同。 `^0` 索引與 `sequence[sequence.Length]` 相同。 請注意，`sequence[^0]` 會擲回例外狀況，就樣 `sequence[sequence.Length]` 會這樣做一樣。 針對任何數字 `n`，索引 `^n` 與 `sequence.Length - n` 相同。
 
-指定範圍「開頭」與「結尾」的範圍。 範圍的開頭會包含在內，但範圍的結尾是獨佔的，這表示開始包含在範圍內，但結束不包含在範圍內。 範圍 `[0..^0]` 代整個範圍，就像 `[0..sequence.Length]` 代表整個範圍一樣。
+指定範圍「開頭」與「結尾」的範圍。 範圍的開頭是包含的，但範圍的結尾是獨佔的，這表示*開頭*會包含在範圍內，但*結尾*不會包含在範圍內。 範圍 `[0..^0]` 代整個範圍，就像 `[0..sequence.Length]` 代表整個範圍一樣。
 
 讓我們來看以下幾個範例。 試想下列使用其索引從開頭或從結尾標註的陣列：
 
@@ -431,7 +431,7 @@ Console.WriteLine($"The last word is {words[^1]}");
 // writes "dog"
 ```
 
-下列程式碼會建立具有 "quick"、"brown" 和 "fox" 字組的子範圍。 其會包含 `words[1]` 到 `words[3]`。 元素 `words[4]` 則不在範圍內。
+下列程式碼會建立具有 "quick"、"brown" 和 "fox" 字組的子範圍。 其會包含 `words[1]` 到 `words[3]`。 項目 `words[4]` 不在範圍內。
 
 ```csharp
 var quickBrownFox = words[1..4];

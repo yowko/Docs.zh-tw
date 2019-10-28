@@ -3,12 +3,12 @@ title: 撰寫安全且有效率的 C# 程式碼
 description: 最近對 C# 語言的增強功能，可讓您撰寫可驗證的安全程式碼，獲得先前使用不安全程式碼時的效能。
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 73ad7a84d2ad47f0e0242825d250247ffb39928e
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
-ms.translationtype: HT
+ms.openlocfilehash: 89a0bcf28c3c398865082e120ca9c16fe2c00651
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832936"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960834"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>撰寫安全且有效率的 C# 程式碼
 
@@ -21,9 +21,10 @@ C# 中的新功能可讓您撰寫可驗證的安全程式碼，取得更佳的�
 本文聚焦於下列資源管理技術：
 
 - 宣告 [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example) 來表達型別為**固定**，並可讓編譯器在使用 [`in`](language-reference/keywords/in-parameter-modifier.md) 參數時儲存複本。
+- 如果類型不可為固定，請宣告 `struct` 成員 `readonly`，以指出該成員不會修改狀態。
 - 當傳回值為大於 <xref:System.IntPtr.Size?displayProperty=nameWithType> 的 `struct`，且儲存體存留期大於傳回值的方法時，使用 [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) 傳回。
 - 當 `readonly struct` 的大小大於 <xref:System.IntPtr.Size?displayProperty=nameWithType> 時，基於效能原因，您應將它作為 `in` 參數傳遞。
-- 除非已使用 `readonly` 修飾詞宣告，否則請永遠不要將 `struct` 作為 `in` 參數傳遞，因為這可能會對效能產生負面影響，並引發難以理解的行為。
+- 絕對不要傳遞 `struct` 做為 `in` 參數，除非它是以 `readonly` 修飾詞進行宣告，或方法只呼叫結構的 `readonly` 成員。 違反本指引可能會對效能造成負面影響，而且可能會導致不明確的行為。
 - 使用 [`ref struct`](language-reference/keywords/ref.md#ref-struct-types) 或 `readonly ref struct` (例如 <xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>) 來將記憶體作為位元組序列使用。
 
 這些技術會強迫您考慮在**參考**及**實值**這兩個競爭目標之間取得平衡。 [參考型別](programming-guide/types/index.md#reference-types)的變數會保留記憶體位置的參考。 [實值型別](programming-guide/types/index.md#value-types)的變數則會直接包含其值。 這些差異凸顯管理記憶體資源時關鍵的不同點。 **實值型別**通常會在傳遞至方法，或是從方法傳回時複製。 此行為包含在呼叫實值型別成員時，複製 `this` 的值。 複製成本與型別的大小相關。 **參考型別**則配置在受控堆積上。 每個新物件都需要新的配置，且之後都必須進行回收。 這些作業都需要時間。 參考會在參考型別作為方法的引數或從方法傳回時複製。
@@ -67,6 +68,51 @@ readonly public struct ReadonlyPoint3D
 ```
 
 每當您的設計意圖是要建立固定實值型別時，請遵循此建議。 任何效能上的改善都會帶來效益。 `readonly struct` 明確表達您的設計意圖。
+
+## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>當結構不能為不可變時，宣告 readonly 成員
+
+在C# 8.0 和更新版本中，當結構類型可變動時，您應該宣告不會導致`readonly`變動的成員。 例如，下列是3D 點結構的可變變化：
+
+```csharp
+public struct Point3D
+{
+    public Point3D(double x, double y, double z)
+    {
+        this.X = x;
+        this.Y = y;
+        this.Z = z;
+    }
+
+    private double _x;
+    public double X 
+    { 
+        readonly get { return _x;}; 
+        set { _x = value; }
+    }
+    
+    private double _y;
+    public double Y 
+    { 
+        readonly get { return _y;}; 
+        set { _y = value; }
+    }
+
+    private double _z;
+    public double Z 
+    { 
+        readonly get { return _z;}; 
+        set { _z = value; }
+    }
+
+    public readonly double Distance => Math.Sqrt(X * X + Y * Y + Z * Z);
+
+    public readonly override string ToString() => $"{X, Y, Z }";
+}
+```
+
+前面的範例會顯示您可以套用 `readonly` 修飾詞的許多位置：方法、屬性和屬性存取子。 如果您使用自動執行的屬性，編譯器會將 `readonly` 修飾詞加入至讀寫屬性的 `get` 存取子。 編譯器會針對只有 `get` 存取子的屬性，將 `readonly` 修飾詞加入至自動執行的屬性宣告。
+
+將 `readonly` 修飾詞新增至不會改變狀態的成員，會提供兩個相關的優點。 首先，編譯器會強制執行您的意圖。 該成員無法改變結構的狀態，也無法存取也不會標示 `readonly`的成員。 第二，當存取 `readonly` 成員時，編譯器不會建立 `in` 參數的防禦性複本。 編譯器可以安全地進行這項優化，因為它可確保 `readonly` 成員不會修改 `struct`。
 
 ## <a name="use-ref-readonly-return-statements-for-large-structures-when-possible"></a>在可能的情況下，針對大型結構使用 `ref readonly return` 陳述式
 
@@ -123,9 +169,9 @@ public struct Point3D
 該新增功能提供完整的詞彙能表達您的設計目的。
 當您未在下列方法簽章中指定下列任一修飾詞時，會在傳遞至呼叫的方法時，複製實值型別。 每個修飾詞都會指定以參考型式來傳遞變數以避免複製。 每個修飾詞皆表示不同之目的：
 
-- `out`：此方法會設定用來作為此參數的引數值。
-- `ref`：此方法可設定用來作為此參數的引數值。
-- `in`：此方法不會修改用來作為此參數的引數值。
+- `out`：此方法會設定用作為此參數的引數值。
+- `ref`：此方法會設定用作為此參數的引數值。
+- `in`：這個方法不會修改當做此參數使用之引數的值。
 
 當您新增 `in` 修飾詞來利用參考傳遞引數時，即表明您的設計目的是利用參考傳遞引數，來避免不必要的複製。 您不打算修改用來作為該引數的物件。
 
@@ -173,15 +219,15 @@ public struct Point3D
 
 [!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
-`Point3D` 結構「不是」  唯讀結構。 此方法的主體中有六個不同屬性存取呼叫。 在第一次檢查中，您可能會認為這些存取都是安全的。 畢竟，`get` 存取子應該不會修改物件的狀態。 但是沒有任何語言規則強制該行為。 它只是一個常見的慣例。 任何型別都可實作修改內部狀態的 `get` 存取子。 若沒有任何語言保證，編譯器必須先建立引數的暫時複本，再呼叫任何成員。 暫存位置會在堆疊上建立，引數的值則會複製到暫存位置，而該值則會針對每個成員存取，作為 `this` 引數複製到堆疊。 在許多情況下，當引數型別並非 `readonly struct` 時，這些複本會危害效能，使得以值型式傳遞的速度高於以唯讀參考型式傳遞。
+`Point3D` 結構「不是」唯讀結構。 此方法的主體中有六個不同屬性存取呼叫。 在第一次檢查中，您可能會認為這些存取都是安全的。 畢竟，`get` 存取子應該不會修改物件的狀態。 但是沒有任何語言規則強制該行為。 它只是一個常見的慣例。 任何型別都可實作修改內部狀態的 `get` 存取子。 若沒有任何語言保證，編譯器必須先建立引數的暫時複本，再呼叫任何成員。 暫存位置會在堆疊上建立，引數的值則會複製到暫存位置，而該值則會針對每個成員存取，作為 `this` 引數複製到堆疊。 在許多情況下，當引數型別並非 `readonly struct` 時，這些複本會危害效能，使得以值型式傳遞的速度高於以唯讀參考型式傳遞。
 
-相反的，若距離計算使用固定結構 (`ReadonlyPoint3D`)，便不需要暫存物件：
+相反地，如果距離計算使用不可變的結構，`ReadonlyPoint3D`，就不需要暫存物件：
 
 [!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
-編譯器會在您呼叫 `readonly struct` 的成員時，產生更有效率的程式碼：`this` 參考 (而非接收器的複本) 一律都是以參考型式傳遞至成員方法的 `in` 參數。 當您使用 `readonly struct` 作為 `in` 引數時，這項最佳化可避免進行複製。
+當您呼叫 `readonly struct`的成員時，編譯器會產生更有效率的程式碼： `this` 參考，而不是接收者複本，一律是以傳址方式傳遞至成員方法的 `in` 參數。 當您使用 `readonly struct` 作為 `in` 引數時，這項最佳化可避免進行複製。
 
-您不應將可為 Null 的實值型別作為 `in` 參數傳遞。 <xref:System.Nullable%601> 類型不會宣告為唯讀結構。 這表示，編譯器編譯器必須針對使用參數宣告上 `in` 修飾詞傳遞給方法之任何可為 Null 的實值型別引數來產生防禦性複本。
+您不應該傳遞可為 null 的實值型別做為 `in` 引數。 <xref:System.Nullable%601> 類型未宣告為唯讀結構。 這表示，編譯器編譯器必須針對使用參數宣告上 `in` 修飾詞傳遞給方法之任何可為 Null 的實值型別引數來產生防禦性複本。
 
 您可以在我們於 GitHub 上的[範例存放庫](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark)中，查看使用 [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) 示範效能差異的範例程式。 它會比較以值型式和以參考型式傳遞可變動結構，以及以值型式和以參考型式傳遞固定結構的差異。 使用固定結構並以參考型式傳遞的速度最快。
 
@@ -215,7 +261,7 @@ public struct Point3D
 
 這些 C# 語言的增強功能專為注重效能的演算法設計，對於這些演算法來說，最小化記憶體配置在達到所需效能的過程中扮演了重要角色。 您會發現到您不常在您撰寫的程式碼中使用這些功能。 但是，您已透過 .NET 採用了這些增強功能。 隨著愈來愈多的 API 利用這些功能，您會發現自己的應用程式效能有所改善。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ref 關鍵字](language-reference/keywords/ref.md)
 - [ref 傳回值和 ref 區域變數](programming-guide/classes-and-structs/ref-returns.md)
