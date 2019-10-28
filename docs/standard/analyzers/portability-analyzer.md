@@ -13,17 +13,17 @@ ms.locfileid: "72774382"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
-要讓您的程式庫支援多平台？ 想要查看需要多少工作才能讓您的 .NET Framework 應用程式在 .NET Core 上執行？ [.Net 可攜性分析器](https://github.com/microsoft/dotnet-apiport)是一種工具，可分析元件，並提供有關 .net api 的詳細報表，這些應用程式或程式庫在您指定的目標 .net 平臺上是可移植的。 可攜性分析器以[Visual Studio 延伸](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)模組的形式提供，它會分析每個專案的一個元件，並作為[ApiPort 主控台應用程式](https://aka.ms/apiportdownload)，以根據指定的檔案或目錄來分析元件。
+要讓您的程式庫支援多平台？ 想要查看需要多少工作才能讓您的 .NET Framework 應用程式在 .NET Core 上執行？ [.NET 可攜性分析器](https://github.com/microsoft/dotnet-apiport)是一種工具，可分析元件，並提供有關 .NET API 的詳細報表，這些應用程式或程式庫在您指定的目標 .NET 平臺上是可移植的。 可攜性分析器以[Visual Studio 延伸](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)模組的形式提供，它會分析每個專案的一個元件，並作為[ApiPort 主控台應用程式](https://aka.ms/apiportdownload)，以根據指定的檔案或目錄來分析元件。
 
-當您將專案轉換成以新平臺（例如 .NET Core）為目標時，您可以使用以 Roslyn 為基礎的[Api 分析器工具](api-analyzer.md)來識別會擲回 <xref:System.PlatformNotSupportedException> 例外狀況和其他相容性問題的 api。
+當您將專案轉換成以新平臺（例如 .NET Core）為目標時，您可以使用以 Roslyn 為基礎的[API 分析器工具](api-analyzer.md)來識別會擲回 <xref:System.PlatformNotSupportedException> 例外狀況和其他相容性問題的 API。
 
 ## <a name="common-targets"></a>常見目標
 
-- [.NET core](../../core/index.md)︰具有模組化的設計，採用並存，並且適合在跨平台的情況下使用。 並存可讓您採用新的 .NET Core 版本，而不會中斷其他應用程式。 如果您的目標，是要將應用程式移植到 .NET Core 來支援跨平台，這是建議的目標。
-- .[NET Standard](../../standard/net-standard.md)：包含適用于所有 .net 部署的 .NET Standard api。 如果您的目標，是讓程式庫在所有支援 .NET 的平台上執行，這是建議的目標。
-- [ASP.NET Core](/aspnet/core)：以 .Net Core 為基礎的新式 web 架構。 如果您的目標，是要將 Web 應用程式移植到 .NET Core 來支援多平台，這是建議的目標。
-- .NET Core +[平臺延伸](../../core/porting/windows-compat-pack.md)模組：除了 Windows 相容性套件以外，還包含 .Net core api，提供許多可用的 .NET Framework 技術。 如需將您的應用程式從 .NET Framework 移植到 Windows 上的 .NET Core，這是建議的目標。
-- .NET Standard +[平臺擴充](../../core/porting/windows-compat-pack.md)功能：除了 Windows 相容性套件以外，還包括 .NET Standard api，其提供許多 .NET Framework 可用的技術。 如需將您的程式庫從 .NET Framework 移植到 Windows 上的 .NET Core，這是建議的目標。
+- [.NET Core](../../core/index.md)︰具有模組化的設計，採用並存，並且適合在跨平台的情況下使用。 並存可讓您採用新的 .NET Core 版本，而不會中斷其他應用程式。 如果您的目標，是要將應用程式移植到 .NET Core 來支援跨平台，這是建議的目標。
+- .[NET Standard](../../standard/net-standard.md)：包含適用于所有 .NET 部署的 .NET Standard API。 如果您的目標，是讓程式庫在所有支援 .NET 的平台上執行，這是建議的目標。
+- [ASP.NET Core](/aspnet/core)：以 .NET Core 為基礎的新式 web 架構。 如果您的目標，是要將 Web 應用程式移植到 .NET Core 來支援多平台，這是建議的目標。
+- .NET Core +[平臺延伸](../../core/porting/windows-compat-pack.md)模組：除了 Windows 相容性套件以外，還包含 .NET Core API，提供許多可用的 .NET Framework 技術。 如需將您的應用程式從 .NET Framework 移植到 Windows 上的 .NET Core，這是建議的目標。
+- .NET Standard +[平臺擴充](../../core/porting/windows-compat-pack.md)功能：除了 Windows 相容性套件以外，還包括 .NET Standard API，其提供許多 .NET Framework 可用的技術。 如需將您的程式庫從 .NET Framework 移植到 Windows 上的 .NET Core，這是建議的目標。
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>如何使用 .NET 可攜性分析器
 
