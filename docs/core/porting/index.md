@@ -46,7 +46,7 @@ ms.locfileid: "72798803"
 
    因為移轉到 .NET Core 對程式碼基底是巨變，所以強烈建議您移轉測試，以便在移轉您的程式碼時執行測試。 MSTest、xUnit 和 NUnit 全都適用于 .NET Core。
 
-此外，您可以在單一作業中，使用 dotnet 的 [[嘗試轉換](https://github.com/dotnet/try-convert)] 工具，嘗試將較小的方案或個別專案移植到 .net Core 專案檔案格式。 `dotnet try-convert` 不會 guaranteedto 您所有專案的工作，而且可能會導致您所依賴之行為的細微變更。 它應該做為_起點_，以自動化可以自動化的基本事項。 這不是可供遷移專案的保證解決方案。
+此外，您可以在單一作業中，使用 [[dotnet try-convert](https://github.com/dotnet/try-convert)] 工具，嘗試將較小的方案或個別專案移植到 .NET Core 專案檔案格式。`dotnet try-convert` 不保證適用於您的所有專案，而且可能會導致您所依賴之行為發生細微變更。它應該做為自動化可以自動化之基本事項的「起點」。它不是可移轉專案的保證解決方案。
 
 >[!div class="step-by-step"]
 >[下一步](net-framework-tech-unavailable.md)
