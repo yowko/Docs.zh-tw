@@ -13,7 +13,7 @@ ms.locfileid: "72774382"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
-要讓您的程式庫支援多平台？ 想要查看需要多少工作才能讓您的 .NET Framework 應用程式在 .NET Core 上執行？ [.NET 可攜性分析器](https://github.com/microsoft/dotnet-apiport)是一種工具，可分析元件，並提供有關 .NET API 的詳細報表，這些應用程式或程式庫在您指定的目標 .NET 平臺上是可移植的。 可攜性分析器以[Visual Studio 延伸](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)模組的形式提供，它會分析每個專案的一個元件，並作為[ApiPort 主控台應用程式](https://aka.ms/apiportdownload)，以根據指定的檔案或目錄來分析元件。
+要讓您的程式庫支援多平台？ 想要查看需要多少工作才能讓您的 .NET Framework 應用程式在 .NET Core 上執行？ [.Net 可攜性分析器](https://github.com/microsoft/dotnet-apiport)是一種工具，可分析元件，並提供有關 .net api 的詳細報表，這些應用程式或程式庫在您指定的目標 .net 平臺上是可移植的。 可攜性分析器以[Visual Studio 延伸](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)模組的形式提供，它會分析每個專案的一個元件，並作為[ApiPort 主控台應用程式](https://aka.ms/apiportdownload)，以根據指定的檔案或目錄來分析元件。
 
 當您將專案轉換成以新平臺（例如 .NET Core）為目標時，您可以使用以 Roslyn 為基礎的[API 分析器工具](api-analyzer.md)來識別會擲回 <xref:System.PlatformNotSupportedException> 例外狀況和其他相容性問題的 API。
 
