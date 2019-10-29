@@ -2,12 +2,12 @@
 title: 訂閱事件
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解發佈及訂閱整合事件的詳細資料。
 ms.date: 10/02/2018
-ms.openlocfilehash: ac9715c7c282be845e1e47516d06945c31f70209
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039786"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035643"
 ---
 # <a name="subscribing-to-events"></a>訂閱事件
 
@@ -32,7 +32,7 @@ eventBus.Subscribe<OrderStartedIntegrationEvent,
 
 ## <a name="publishing-events-through-the-event-bus"></a>透過事件匯流排發行事件
 
-最後，訊息傳送者 (來源微服務) 會使用類似下列範例的程式碼發行整合事件 (這是經過簡化的範例，不可部分完成性不在考量範圍內)。只要必須在多個微服務之間傳播事件 (通常是在從來源微服務認可資料或交易之後)，您就會實作類似的程式碼。
+最後，訊息傳送者 (來源微服務) 會使用類似下列範例的程式碼發行整合事件 （這是一個簡化的範例，不會將不可部分完成的部分納入考慮）。每當事件必須傳播到多個微服務（通常是在從原始微服務認可資料或交易之後）時，您就會執行類似的程式碼。
 
 首先，事件匯流排實作物件 (採用 RabbitMQ 或採用服務匯流排) 會插入控制器建構函式，如下列程式碼所示：
 
@@ -105,7 +105,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 - 使用[交易記錄採礦](https://www.scoop.it/t/sql-server-transaction-log-mining)。
 
-- 使用[寄件匣模式](http://gistlabs.com/2014/05/the-outbox/)。 這是交易式資料表，可儲存整合事件 (以延伸本機交易)。
+- 使用[寄件匣模式](https://www.kamilgrzybek.com/design/the-outbox-pattern/)。 這是交易式資料表，可儲存整合事件 (以延伸本機交易)。
 
 在此案例中，使用完整的事件溯源 (ES) 模式即使不是「最佳」方法，也是最佳方法之一。 不過，在許多應用程式案例中，您可能無法實作完整的 ES 系統。 ES 表示只會將領域事件儲存在您的交易式資料庫中，而不會儲存目前的狀態資料。 只儲存領域事件可能有許多好處，例如提供系統歷程記錄，以及能夠判斷過去任何時間的系統狀態。 不過，實作完整的 ES 系統需要您重新架構大部分的系統，因而引進許多其他的複雜度和需求。 例如，您會想要使用專為事件溯源所建立的資料庫 (例如[事件存放區](https://eventstore.org/))，或文件導向資料庫 (例如 Azure Cosmos DB、MongoDB、Cassandra、CouchDB 或 RavenDB)。 ES 是解決這個問題的最好方法，但除非您已熟悉事件溯源，否則並不是最簡單的解決方法。
 
@@ -326,9 +326,9 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://go.particular.net/eShopOnContainers>
 
 - **事件驅動傳訊** \
-    [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
+    <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
-- **Jimmy Bogard：重構以提高彈性：評估結合程度** \
+- **Jimmy Bogard。重構以提高彈性：評估**結合  \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 - **發佈訂閱通道** \
@@ -340,13 +340,13 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 - **最終一致性** \
     [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
-- **Philip Brown：整合已繫結內容的策略** \
+- **Philip 棕色。整合限定內容 \ 的策略**
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
 
-- **Chris Richardson：使用彙總、事件溯源及 CQRS 開發交易微服務 - 第 2 部分** \
+- **Chris Richardson。使用匯總、事件來源和 CQRS 開發交易微服務-第2部分** \
     <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson>
 
-- **Chris Richardson：事件溯源模式** \
+- **Chris Richardson。事件來源模式** \
     <https://microservices.io/patterns/data/event-sourcing.html>
 
 - **事件溯源簡介** \
@@ -355,7 +355,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 - **Event Store 資料庫**. 官方網站。 \
     <https://geteventstore.com/>
 
-- **Patrick Nommensen：微服務的事件驅動資料管理** \
+- **派翠克 nommensen:。微服務 \ 的事件驅動資料管理**
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 - **CAP 定理** \
@@ -367,13 +367,13 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 - **資料一致性入門** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Rick Saling：CAP 定理：為何雲端及網際網路的「一切都不同」**  \
+- **Rick Saling。CAP 定理：為什麼雲端和網際網路的「每個專案都不同**」 \
     <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
-- **Eric Brewer：十二年後的 CAP：「規則」變更的方式** \
+- **Eric Brewer。上限12年後：「規則」變更的方式** \
     <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
 
-- **Azure 服務匯流排：代理傳訊：重複項目偵測**  \
+- **Azure 服務匯流排。代理訊息：重複偵測**  \
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **可靠性指南** (RabbitMQ 文件) \
