@@ -108,7 +108,7 @@
       href: programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md
     - name: 作法：摺疊及隱藏程式碼區段
       href: programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md
-    - name: HOW TO：Label 陳述式
+    - name: 作法：Label 陳述式
       href: programming-guide/program-structure/how-to-label-statements.md
     - name: 程式碼中的特殊字元
       href: programming-guide/program-structure/special-characters-in-code.md
@@ -237,7 +237,7 @@
       href: programming-guide/com-interop/walkthrough-calling-windows-apis.md
     - name: 作法：呼叫 Windows API
       href: programming-guide/com-interop/how-to-call-windows-apis.md
-    - name: HOW TO：呼叫不帶正負號的類型的 Windows 函式
+    - name: 作法：呼叫不帶正負號的類型的 Windows 函式
       href: programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md
     - name: 逐步解說：建立 COM 物件
       href: programming-guide/com-interop/walkthrough-creating-com-objects.md
@@ -961,10 +961,10 @@
           href: language-reference/error-messages/bad-file-name-or-number.md
         - name: 不正確的資料錄長度
           href: language-reference/error-messages/bad-record-length.md
-        - name: 因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前方法
-          href: language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md
-        - name: 無法將匿名類型轉換為運算式樹狀架構，因為該類型含有的欄位是用來初始化其他欄位
-          href: language-reference/error-messages/cannot-convert-anonymous-type-to-expression-tree.md
+        - name: 因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前的方法。
+          href: language-reference/error-messages/bc42358.md
+        - name: 無法將匿名類型轉換成運算式樹狀結構，因為類型的屬性會用以初始化另一個屬性
+          href: language-reference/error-messages/bc36548.md
         - name: 無法建立 ActiveX 元件
           href: language-reference/error-messages/cannot-create-activex-component.md
         - name: 無法參考至 '<name>'，因為它是類別 '<name>' 的實值類型欄位 '<classname>' 的成員，它把 'System.MarshalByRefObject' 當做基底類別

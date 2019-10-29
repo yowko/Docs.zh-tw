@@ -30,6 +30,8 @@
         - name: 推薦的電影 (矩陣因式分解)
           href: tutorials/movie-recommendation.md
         - name: 影像分類 (遷移式學習)
+          href: tutorials/image-classification-api-transfer-learning.md
+        - name: 分類影像 (模型組合)
           href: tutorials/image-classification.md
         - name: 產品銷售分析 (異常偵測)
           href: tutorials/sales-anomaly-detection.md
@@ -93,6 +95,8 @@
               href: how-to-guides/serve-model-web-api-ml-net.md
     - name: 工具
       items:
+        - name: 將資料載入到模型建立器
+          href: how-to-guides/load-data-model-builder.md
         - name: 安裝模型建立器
           href: how-to-guides/install-model-builder.md
         - name: 安裝 CLI
