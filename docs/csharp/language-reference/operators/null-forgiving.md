@@ -39,12 +39,11 @@ Null 容許運算子的其中一個使用案例是測試引數驗證邏輯。 �
 
 如果沒有 null 容許運算子，編譯器會為 `p.Name` 程式碼產生下列警告： `Warning CS8602: Dereference of a possibly null reference`。
 
-如果您可以修改 `IsValid` 方法，您可以使用[NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute)屬性，讓編譯器知道當方法傳回 `true` 時，無法 `null` `IsValid` 方法的引數：
+如果您可以修改 `IsValid` 方法，您可以使用 [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) 屬性，讓編譯器知道當方法傳回 `true` 時，`IsValid` 方法的引數無法為 `null`：
 
 [!code-csharp[Use an attribute](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#UseAttribute)]
 
-在上述範例中，您不需要使用 null 容許運算子，因為編譯器有足夠的資訊可找出在 `if` 語句內無法 `null` `p`。 如需可讓您指定變數之 null 狀態的其他資訊之屬性的詳細資訊，請參閱[使用屬性升級 api 以定義 null 預期](../../nullable-attributes.md)。
-
+在上述範例中，您不需要使用 Null 容許運算子，因為編譯器有足夠的資訊可知道 `if` 陳述式內的 `p` 無法為 `null`。如需可讓您指定變數之 Null 狀態的其他資訊之屬性的詳細資訊，請參閱[使用屬性升級 API 以定義 Null 預期](../../nullable-attributes.md)。
 ## <a name="c-language-specification"></a>C# 語言規格
 
 如需詳細資訊，請參閱[可為 null 的參考型別規格之草稿](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)的[null-容許運算子](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator)一節。
