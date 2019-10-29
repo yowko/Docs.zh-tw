@@ -1560,15 +1560,16 @@
       items:
         - name: 總覽
           href: language-reference/operators/index.md
+          displayName: 'operator precedence, operator associativity'
         - name: 算術運算子
           href: language-reference/operators/arithmetic-operators.md
           displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'
         - name: 布林值邏輯運算子
           href: language-reference/operators/boolean-logical-operators.md
-          displayName: '!, &&, ||, &, |, ^, &=, |=, ^='
+          displayName: '!, &&, ||, &, |, ^, &=, |=, ^=, AND, XOR, OR'
         - name: 位元與移位運算子
           href: language-reference/operators/bitwise-and-shift-operators.md
-          displayName: '~, &, |, ^, <<, >>, &=, |=, ^=, <<=, >>='
+          displayName: '~, &, |, ^, <<, >>, &=, |=, ^=, <<=, >>=, AND, XOR, OR'
         - name: 等號比較運算子
           href: language-reference/operators/equality-operators.md
           displayName: '==, !='
@@ -1580,16 +1581,16 @@
           displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
         - name: 型別測試和轉換運算子
           href: language-reference/operators/type-testing-and-cast.md
-          displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
+          displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), explicit, conversion'
         - name: 使用者定義轉換運算子
           href: language-reference/operators/user-defined-conversion-operators.md
           displayName: 'implicit, explicit'
         - name: 指標相關運算子
           href: language-reference/operators/pointer-related-operators.md
           displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
-        - name: = 運算子
+        - name: 指派運算子
           href: language-reference/operators/assignment-operator.md
-          displayName: 'assignment, ref'
+          displayName: '=, ref, compound'
         - name: + 及 += 運算子
           href: language-reference/operators/addition-operator.md
           displayName: 'string concatenation, delegate combination, event subscription'
@@ -1607,7 +1608,7 @@
           displayName: 'null-coalescing, assignment'
         - name: => 運算子
           href: language-reference/operators/lambda-operator.md
-          displayName: lambda
+          displayName: 'lambda, expression body definition'
         - name: ':: 運算子'
           href: language-reference/operators/namespace-alias-qualifier.md
           displayName: 'namespace alias qualifier, global namespace'
@@ -1624,6 +1625,7 @@
           href: language-reference/operators/nameof.md
         - name: new 運算子
           href: language-reference/operators/new-operator.md
+          displayName: constructor
         - name: sizeof 運算子
           href: language-reference/operators/sizeof.md
         - name: stackalloc 運算子
