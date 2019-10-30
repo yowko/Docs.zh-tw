@@ -2,12 +2,12 @@
 title: 使用 HttpClientFactory 實作復原 HTTP 要求
 description: 了解如何使用 HttpClientFactory，自 .NET Core 2.1 開始提供，可用來建立 `HttpClient` 執行個體，方便您在應用程式中使用。
 ms.date: 08/08/2019
-ms.openlocfilehash: 3f9b3b18cede07e4c5c56600634ae230c0e251bb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: e32ffdd43ce8968ef9a0694873870b61510d7300
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578916"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093991"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 實作復原 HTTP 要求
 
@@ -21,7 +21,7 @@ ms.locfileid: "72578916"
 
 因此，您應該將 `HttpClient` 具現化一次，然後在整個應用程式生命週期中重複使用。 為每個要求具現化 `HttpClient` 類別將會在負載過重時耗盡可用的通訊端數目。 該問題會導致 `SocketException` 錯誤。 解決該問題的可能方法為建立 `HttpClient` 物件做為單一物件或靜態物件，如 [Microsoft 關於 HttpClient 用法的文章](../../../csharp/tutorials/console-webapiclient.md)中所述。
 
-但是將 `HttpClient` 做為單一物件或靜態物件時會出現第二個問題。 在此情況下，單一或靜態 `HttpClient` 不會遵守 DNS 變更，如 dotnet/corefx GitHub 存放庫中的[問題](https://github.com/dotnet/corefx/issues/11224)中所述。 
+但是將 `HttpClient` 做為單一物件或靜態物件時會出現第二個問題。 在此情況下，單一或靜態 `HttpClient` 不會遵守 DNS 變更，如 dotnet/corefx GitHub 存放庫中的[問題](https://github.com/dotnet/corefx/issues/11224)中所述。
 
 為解決所述的那些問題並更輕鬆地管理 `HttpClient` 執行個體，.NET Core 2.1 引進了一個新的 `HttpClientFactory`，它也可與 Polly 整合來實作復原 HTTP 呼叫。
 
@@ -35,6 +35,9 @@ ms.locfileid: "72578916"
 - 透過委派 `HttpClient` 中的處理常式和實作 Polly 型中介軟體以利用 Polly 原則用於復原，來編纂連出中介軟體的概念。
 - `HttpClient` 已經有委派可針對傳出 HTTP 要求連結在一起之處理常式的概念。 您會將 HTTP 用戶端註冊到處理站，而且您可以使用 Polly 處理常式將 Polly 原則用於重試、斷路器等等。
 - 管理 `HttpClientMessageHandlers` 的存留期，以避免所提及的問題/在自行管理 `HttpClient` 存留期時可能發生的問題。
+
+> [!NOTE]
+> `HttpClientFactory` 緊密系結至 `Microsoft.Extensions.DependencyInjection` NuGet 封裝中的相依性插入（DI）實作為關聯性。 如需使用其他相依性插入容器的詳細資訊，請參閱此[GitHub 討論](https://github.com/aspnet/Extensions/issues/1345)。
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>使用 HttpClientFactory 的多種方式
 
@@ -63,7 +66,7 @@ ms.locfileid: "72578916"
 
 ```csharp
 // Startup.cs
-//Add http client services at ConfigureServices(IServiceCollection services) 
+//Add http client services at ConfigureServices(IServiceCollection services)
 services.AddHttpClient<ICatalogService, CatalogService>();
 services.AddHttpClient<IBasketService, BasketService>();
 services.AddHttpClient<IOrderingService, OrderingService>();
@@ -105,7 +108,7 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 集區中的 `HttpMessageHandler` 物件有存留期，也就是集區中該 `HttpMessageHandler` 執行個體可重複使用的時間長度。 預設值為 2 分鐘，但是可針對各個具型別用戶端分別覆寫。 若要覆寫它，請在建立用戶端時所傳回的 `IHttpClientBuilder` 上呼叫 `SetHandlerLifetime()`，如下列程式碼所示：
 
 ```csharp
-//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client 
+//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client
 services.AddHttpClient<ICatalogService, CatalogService>()
     .SetHandlerLifetime(TimeSpan.FromMinutes(5));
 ```
@@ -127,10 +130,10 @@ public class CatalogService : ICatalogService
         _httpClient = httpClient;
     }
 
-    public async Task<Catalog> GetCatalogItems(int page, int take, 
+    public async Task<Catalog> GetCatalogItems(int page, int take,
                                                int? brand, int? type)
     {
-        var uri = API.Catalog.GetAllCatalogItems(_remoteServiceBaseUrl, 
+        var uri = API.Catalog.GetAllCatalogItems(_remoteServiceBaseUrl,
                                                  page, take, brand, type);
 
         var responseString = await _httpClient.GetStringAsync(uri);
@@ -180,14 +183,17 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 
 ## <a name="additional-resources"></a>其他資源
 
-- **使用 .NET Core 中的 HttpClientFactory** \
+- **在 .NET Core 中使用 HttpClientFactory**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- **HttpClientFactory GitHub 存放庫** \
+- **`aspnet/Extensions` GitHub 存放庫中的 HttpClientFactory 原始程式碼**  
   <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
 
-- **Polly (.NET 復原和暫時性錯誤處理程式庫)**  \
+- **Polly (.NET 復原和暫時性錯誤處理程式庫)**  
   <http://www.thepollyproject.org/>
+  
+- **使用不具相依性插入的 HttpClientFactory （GitHub 問題）**  
+  <https://github.com/aspnet/Extensions/issues/1345>
 
 >[!div class="step-by-step"]
 >[上一頁](explore-custom-http-call-retries-exponential-backoff.md)

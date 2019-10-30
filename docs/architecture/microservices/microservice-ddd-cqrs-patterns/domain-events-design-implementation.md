@@ -2,12 +2,12 @@
 title: 領域事件： 設計和實作
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 深入了解領域事件，這是用來在彙總之間建立通訊的重要概念。
 ms.date: 10/08/2018
-ms.openlocfilehash: 4fe0c1fa04bbecb64783e070838ab796de4f90d6
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: eea72633d3460f51821e8a939b14acff2f17965c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031847"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093960"
 ---
 # <a name="domain-events-design-and-implementation"></a>領域事件：設計和實作
 
@@ -130,7 +130,7 @@ public class OrderStartedDomainEvent : INotification
 
 下一個問題是如何引發領域事件，使它抵達其相關的事件處理常式。 您可以使用多個方法。
 
-Udi Dahan 原本建議使用靜態類別來管理及引發事件 (如數篇相關的文章所示，例如 [Domain Events - Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/) (領域事件 - 續篇))。 這可能包含名為 DomainEvents 的靜態類別，該類別會在呼叫時，使用 `DomainEvents.Raise(Event myEvent)` 等語法立即引發領域事件。 Jimmy Bogard 已撰寫一篇部落格文章 ([Strengthening your domain:Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/))，建議類似方法。
+Udi Dahan 原本建議使用靜態類別來管理及引發事件 (如數篇相關的文章所示，例如 [Domain Events - Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/) (領域事件 - 續篇))。 這可能包含名為 DomainEvents 的靜態類別，該類別會在呼叫時，使用 `DomainEvents.Raise(Event myEvent)` 等語法立即引發領域事件。 Jimmy Bogard 所撰寫的部落格文章 ([Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/) (增強您的領域：領域事件)) 建議類似的方法。
 
 不過，當領域事件類別為靜態時，它也會立即分派至處理常式。 這會使得測試和偵錯更加困難，因為在引發事件之後會立即執行具有副作用邏輯的事件處理常式。 當您進行測試和偵錯時，您只想要專注於目前彙總類別中正在發生的事件，而不想要因為與其他彙總或應用程式邏輯相關的副作用，而突然被重新導向至其他事件處理常式。 這就是其他方法進化的原因，如下一節中所述。
 
@@ -145,9 +145,9 @@ eShopOnContainers 使用延後方法。 首先，您會將實體中正在發生�
 ```csharp
 public abstract class Entity
 {
-     //... 
+     //...
      private List<INotification> _domainEvents;
-     public List<INotification> DomainEvents => _domainEvents; 
+     public List<INotification> DomainEvents => _domainEvents;
 
      public void AddDomainEvent(INotification eventItem)
      {
@@ -194,7 +194,7 @@ public class OrderingContext : DbContext, IUnitOfWork
         // handlers that are using the same DbContext with Scope lifetime
         // B) Right AFTER committing data (EF SaveChanges) into the DB. This makes
         // multiple transactions. You will need to handle eventual consistency and
-        // compensatory actions in case of failures.        
+        // compensatory actions in case of failures.
         await _mediator.DispatchDomainEventsAsync(this);
 
         // After this line runs, all the changes (from the Command Handler and Domain
@@ -208,7 +208,7 @@ public class OrderingContext : DbContext, IUnitOfWork
 
 整體結果是您將引發領域事件 (記憶體內部清單中的一個簡單新增)，與將它分派至事件處理常式的職責分離。 此外，根據您使用的發送器類型，您可以利用同步或非同步方式來分派事件。
 
-請注意，交易界限在此扮演重要的角色。 如果您的工作單位和交易可跨多個彙總 (如同使用 EF Core 和關聯式資料庫時)，則會正常運作。 但如果交易不可跨多個彙總 (例如當您使用 Azure CosmosDB 等 NoSQL 資料庫時)，您必須實作額外的步驟，才能達到一致性。 這是永續性無知不通用的另一個原因，它需要您使用的儲存體系統。 
+請注意，交易界限在此扮演重要的角色。 如果您的工作單位和交易可跨多個彙總 (如同使用 EF Core 和關聯式資料庫時)，則會正常運作。 但如果交易不可跨多個彙總 (例如當您使用 Azure CosmosDB 等 NoSQL 資料庫時)，您必須實作額外的步驟，才能達到一致性。 這是永續性無知不通用的另一個原因，它需要您使用的儲存體系統。
 
 ### <a name="single-transaction-across-aggregates-versus-eventual-consistency-across-aggregates"></a>跨彙總的單一交易與跨彙總的最終一致性之比較
 
@@ -216,15 +216,15 @@ public class OrderingContext : DbContext, IUnitOfWork
 
 > 任何跨彙總的規則不必總是處於最新狀態。 透過事件處理、批次處理或其他更新機制，即可解析一段特定時間內的其他相依性 (第 128 頁)。
 
-Vaughn Vernon 在 [Effective Aggregate DesignPart II:Making Aggregates Work Together](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) (有效彙總設計第二部分：讓彙總搭配運作) 中表示下列看法：
+Vaughn Vernon 在有效的匯總設計中指出下列各項[。第二部分：讓匯總共同作業](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)：
 
-> 因此，如果在一個彙總執行個體上執行命令需要在一或多個彙總上執行其他商務規則，請使用最終一致性 \[...\]沒有支援 DDD 模型中最終一致性的可行方法。 彙總方法會發行領域事件，及時傳遞至一或多個非同步訂閱者。
+> 因此，如果在一個匯總實例上執行命令需要在一或多個匯總上執行額外的商務規則，請使用最終一致性 \[...\] 可以在 DDD 模型中支援最終一致性。 彙總方法會發行領域事件，及時傳遞至一或多個非同步訂閱者。
 
 此原理是以更細緻的交易為基礎，而不是以跨許多彙總或實體的交易為基礎。 其概念是在第二個案例中，資料庫鎖定數目在具有高延展性需求的大型應用程式中會很大。 可高度擴充的應用程式不需要在多個彙總之間有立即交易一致性，認清這點事實有助於接受最終一致性概念。 企業通常不需要不可部分完成變更，而且在任何情況下，領域專家都有責任指出特定作業是否需要不可部分完成交易。 如果作業一律需要在多個彙總之間有不可部分完成交易，您可能會詢問彙總是否應該更大或設計是否不正確。
 
 不過，其他開發人員以及像是 Jimmy Bogard 的架構設計人員接受單一交易橫跨數個彙總，但僅限於這些額外的彙總與相同原始命令的副作用相關時。 例如，Bogard 在 [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/) (更佳的領域事件模式) 中表示：
 
-> 一般而言，我希望領域事件的副作用出現在相同的邏輯交易內，但不一定要在引發領域事件的相同範圍內 \[...\]在我們認可交易之前，我們會將事件分派至其各自的處理常式。
+> 一般來說，我想要讓領域事件的副作用發生在相同的邏輯交易中，但不一定是在我們認可交易之前，\[...\] 的相同範圍內，我們會將事件分派給他們的個別處理常式。
 
 如果您在認可原始交易「之前」分派領域事件，這是因為您想要將這些事件的副作用包含在相同的交易中。 例如，如果 EF DbContext SaveChanges 方法失敗，交易將會復原所有變更，包括相關領域事件處理常式所實作之任何副作用作業的結果。 這是因為 DbContext 存留期範圍預設會定義為 "scoped"。 因此，DbContext 物件會在相同範圍或物件圖形內要具現化的多個儲存機制物件之間共用。 開發 Web API 或 MVC 應用程式時，這會與 HttpRequest 範圍一致。
 
@@ -303,7 +303,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
     public async Task Handle(OrderStartedDomainEvent orderStartedEvent)
     {
-        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;        
+        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;
         var userGuid = _identityService.GetUserIdentity();
         var buyer = await _buyerRepository.FindAsync(userGuid);
         bool buyerOriginallyExisted = (buyer == null) ? false : true;
@@ -321,7 +321,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
                                        orderStartedEvent.CardExpiration,
                                        orderStartedEvent.Order.Id);
 
-        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer) 
+        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer)
                                                                       : _buyerRepository.Add(buyer);
 
         await _buyerRepository.UnitOfWork
@@ -344,37 +344,37 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
 ## <a name="additional-resources"></a>其他資源
 
-- **Greg Young。What is a Domain Event?** (什麼是領域事件？) \
+- **Greg 年輕什麼是領域事件？** \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf#page=25>
 
-- **Jan Stenberg：Domain Events and Eventual Consistency** (領域事件與最終一致性) \
+- **Jan Stenberg。領域事件和最終一致性** \
   <https://www.infoq.com/news/2015/09/domain-events-consistency>
 
-- **Jimmy Bogard：A better domain events pattern** (更佳的領域事件模式) \
+- **Jimmy Bogard。更好的領域事件模式** \
   <https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/>
 
-- **Vaughn Vernon：Effective Aggregate Design Part II:Making Aggregates Work Together** (有效彙總設計第二部分：讓彙總搭配運作) \
+- **Vaughn Vernon。有效的匯總設計第二部分：讓匯總一起工作** \
   [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
-- **Jimmy Bogard：Strengthening your domain:Domain Events** (加強您的領域：領域事件) \
+- **Jimmy Bogard。加強您的領域：領域事件** \
   <https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>
 
-- **Tony Truong：Domain Events Pattern Example** (領域事件模式範例) \
+- **Tony Truong。領域事件模式範例** \
   <https://www.tonytruong.net/domain-events-pattern-example/>
 
-- **Udi Dahan.How to create fully encapsulated Domain Models** (如何建立完整封裝式領域模型) \
+- **Udi Dahan。如何建立完全封裝的網域模型** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
-- **Udi Dahan.Domain Events – Take 2** (領域事件 - 第 2 步) \
+- **Udi Dahan。領域事件– Take 2** \
   <http://udidahan.com/2008/08/25/domain-events-take-2/>
 
-- **Udi Dahan.Domain Events – Salvation** (領域事件 - 解答) \
+- **Udi Dahan。領域事件–解答** \
   <http://udidahan.com/2009/06/14/domain-events-salvation/>
 
-- **Jan Kronquist：Don't publish Domain Events, return them!** (別發佈領域事件，傳回它們！) \
+- **Jan Kronquist。不要發佈領域事件，傳回它們！** \
   <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
-- **Cesar de la Torre：Domain Events vs.Integration Events in DDD and microservices architectures** (DDD 與微服務架構中的整合事件) \
+- **Cesar de La Torre。網域事件與 DDD 和微服務架構中的整合事件** \
   <https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
 
 >[!div class="step-by-step"]

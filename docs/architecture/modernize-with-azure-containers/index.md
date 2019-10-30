@@ -2,12 +2,12 @@
 title: 利用 Azure 雲端服務及 Windows 容器將現有的 .NET 應用程式現代化 (第 2 版)
 description: 了解如何利用這本電子書，將現有的應用程式原形移轉到 Azure 雲端及容器並加以現代化。
 ms.date: 04/28/2018
-ms.openlocfilehash: 99265e6179554214ae1684b6ea266693be7f80c1
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 67b1c7743697832684e96225e3d365da625ce6a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374169"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089760"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>利用 Azure 雲端服務及 Windows 容器將現有的 .NET 應用程式現代化 (第 2 版)
 
@@ -56,7 +56,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 ## <a name="about-this-guide"></a>關於本指南
 
-本指南主要著重於現有 Microsoft .NET Framework Web 應用程式或服務導向應用程式的第一次現代化，意即將工作負載移至較新或更現代化環境的動作，所以不會大幅改變應用程式的程式碼與基本架構。 
+本指南主要著重於現有 Microsoft .NET Framework Web 應用程式或服務導向應用程式的第一次現代化，意即將工作負載移至較新或更現代化環境的動作，所以不會大幅改變應用程式的程式碼與基本架構。
 
 本指南也摘要列出將應用程式移至雲端，以及使用特定一組新技術及方法 (例如 Windows 容器及 Azure 支援之 Windows 容器中的相關計算平台)，將應用程式局部現代化的好處。
 
@@ -78,14 +78,14 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 以下是每個應用程式成熟度等級的定義及簡短說明：
 
-**等級 1：已具備雲端基礎結構的**應用程式：使用此移轉方式，您只需要將目前的內部部署應用程式移轉或重新裝載至基礎結構即服務 ([IaaS](https://azure.microsoft.com/overview/what-is-iaas/)) 平台即可。 您的應用程式結構和以前幾乎相同，但您現已將其部署到雲端中的 VM。
+**層級1：雲端基礎結構就緒的**應用程式：在此遷移方法中，您只需將目前的內部部署應用程式遷移或重新裝載至基礎結構即服務（[IaaS](https://azure.microsoft.com/overview/what-is-iaas/)）平臺即可。 您的應用程式結構和以前幾乎相同，但您現已將其部署到雲端中的 VM。
 這種簡單的移轉類型在業界我們稱為「原形移轉」。
 
-**等級 2：雲端最佳化**應用程式：此等級仍無須重新架構或改變重要的程式碼。您可以利用容器和其他雲端管理的服務等現代化技術，在雲端中執行您的應用程式，從而獲取更多好處。 您可藉由精簡企業開發營運 (DevOps) 程序來增加應用程式的靈活度，加快出貨速度。 您可以使用採用 Docker 引擎的 Windows 容器等技術來達到此目的。 容器免除了在多個階段部署時，因應用程式相依性而引起的衝突。 在此成熟度模型中，您一方面可以在 IaaS 或 PaaS 上部署容器，一方面可以利用更多雲端管的資料庫服務、快取即服務、監視及持續整合/持續部署 (CI/CD) 管線服務等等。
+**層級2：雲端優化**應用程式：在此層級中，但仍未重新架構或改變大量程式碼，您可以使用容器等新式技術，在雲端中執行您的應用程式，以獲得更多好處。雲端管理的服務。 您可藉由精簡企業開發營運 (DevOps) 程序來增加應用程式的靈活度，加快出貨速度。 您可以使用採用 Docker 引擎的 Windows 容器等技術來達到此目的。 容器免除了在多個階段部署時，因應用程式相依性而引起的衝突。 在此成熟度模型中，您一方面可以在 IaaS 或 PaaS 上部署容器，一方面可以利用更多雲端管的資料庫服務、快取即服務、監視及持續整合/持續部署 (CI/CD) 管線服務等等。
 
 第三等級的成熟度是雲端的終極目標，但對大多數應用程式而言並非必要，且非本指南的主要重點：
 
-**等級 3：雲端原生**應用程式：此移轉方式通常是為了因應業務需求，並將目標放在將任務關鍵性應用程式現代化上。 在此等級中，您可使用 PaaS 服務將您的應用程式移至 PaaS 運算平台上。 您可以實作[雲端原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)應用程式及微服務架構，來發展具長期靈活度的應用程式，以及擴展新界限。 這種類型的現代化通常需要專為雲端設計的架構。 尤其在移至雲端原生應用程式及微服務式模型的時候，通常會需要撰寫新的程式碼。 這項方法可協助您取得在整合型及內部部署應用程式環境中難以達到的優點。
+**層級3：雲端原生**應用程式：此遷移方法通常是由商務需求所驅動，而目標現代化您的任務關鍵性應用程式。 在此等級中，您可使用 PaaS 服務將您的應用程式移至 PaaS 運算平台上。 您可以實作[雲端原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)應用程式及微服務架構，來發展具長期靈活度的應用程式，以及擴展新界限。 這種類型的現代化通常需要專為雲端設計的架構。 尤其在移至雲端原生應用程式及微服務式模型的時候，通常會需要撰寫新的程式碼。 這項方法可協助您取得在整合型及內部部署應用程式環境中難以達到的優點。
 
 表 1-1 描述了選擇各項移轉或現代化方法的主要優點及理由。
 
@@ -96,9 +96,9 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 | **資料目標** |
 | SQL 或 VM 上的任何關聯式資料庫 | Azure SQL Database 受控執行個體或雲端中其他的受控資料庫。 | 依據 Azure SQL Database、Azure Cosmos DB 或雲端中其他受控資料庫上的微服務微調資料庫 |
 | **優點**|
-| <li>無須重新架構，也無須增加新的程式碼 <li> 以最少心力快速移轉 <li> Azure 中支援的最普及選項 <li> 保證基本可用性 <li> 移至雲端後更容易現代化 | <li> 無須重新架構 <li> 最少的程式碼/設定變更 <li> 因容器而獲得改善的部署及 DevOps 發行靈活度 <li> 增加密度並降低部署成本 <li> 應用程式及相依性的可攜性 <li> 彈性的主機目標：PaaS 方法或 IaaS | <li> 雲端架構，可以發揮雲端最大效益，但需要編寫新的程式碼 <li> 微服務雲端原生方法 <li> 現代化的任務關鍵性應用程式，具備可高度靈活調整的雲端復原能力 <li> 完整受控的服務 <li> 經最佳化以調整規模 <li> 為子系統的自主靈活度最佳化 <li> 建基於部署及 DevOps |
+| <li>無須重新架構，也無須增加新的程式碼 <li> 以最少心力快速移轉 <li> Azure 中支援的最普及選項 <li> 保證基本可用性 <li> 移至雲端後更容易現代化 | <li> 無須重新架構 <li> 最少的程式碼/設定變更 <li> 因容器而獲得改善的部署及 DevOps 發行靈活度 <li> 增加密度並降低部署成本 <li> 應用程式及相依性的可攜性 <li> 主機目標的彈性： PaaS 方法或 IaaS | <li> 雲端架構，可以發揮雲端最大效益，但需要編寫新的程式碼 <li> 微服務雲端原生方法 <li> 現代化的任務關鍵性應用程式，具備可高度靈活調整的雲端復原能力 <li> 完整受控的服務 <li> 經最佳化以調整規模 <li> 為子系統的自主靈活度最佳化 <li> 建基於部署及 DevOps |
 | **挑戰** |
-| <li> 除了轉入營業費用或關閉資料中心之外，雲端價值較低 <li> 幾乎不需要管理：沒有 OS 或中介軟體修補；可能會使用基礎結構解決方案，像是 Terraform、Spinnaker 或 Puppet | <li> 對於開發人員與 IT 營運來說，容器化是學習曲線之外的另一個步驟 <li> DevOps 與 CI/CD 管線通常是此方式的必備條件。 若目前的組織文化中沒有這兩項，就可能形成另一項挑戰| <li> 需要重新架構雲端原生應用程式及微服務架構，而且在現代化時，通常需要重新分解或重新編寫重要的程式碼 (增加時間及預算)|
+| <li> 除了轉入營業費用或關閉資料中心之外，雲端價值較低 <li> 管理的小部分：不會修補 OS 或中介軟體;可能會使用基礎結構解決方案，例如 Terraform、Spinnaker 或 Puppet | <li> 對於開發人員與 IT 營運來說，容器化是學習曲線之外的另一個步驟 <li> DevOps 與 CI/CD 管線通常是此方式的必備條件。 若目前的組織文化中沒有這兩項，就可能形成另一項挑戰| <li> 需要重新架構雲端原生應用程式及微服務架構，而且在現代化時，通常需要重新分解或重新編寫重要的程式碼 (增加時間及預算)|
 > **表 1-1。** 現有 .NET 應用程式及服務現代化路徑的優點與挑戰
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>依成熟度等級分階的主要技術及架構
@@ -111,19 +111,20 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 ![各個成熟度等級將現有 .NET Web 應用程式現代化時使用的主要技術](./media/image1-2.png)
 
-**圖 1-2。** 將現有 .NET Web 應用程式現代化時，各個成熟度等級使用的主要技術
+**圖 1-2。** 各個成熟度等級將現有 .NET Web 應用程式現代化時使用的主要技術
 
 圖 1-2 強調了大多數常見案例，然而在架構方面有可能會出現許多混合變化。 比方說，成熟度模型不僅適用現有 Web 應用程式中的整合型架構，也適用於服務導向、多層式架構 (N-Tier) 及其他架構樣式變化。 依賴其中任何一種架構類型及相關技術的程度高低，決定應用程式的整體成熟度等級。
 
 現代化程序中的每個成熟度等級都與下列主要技術和方法相關：
 
-- **具備雲端基礎結構** (重新裝載或基本原形移轉)：許多組織一開始都只想要快速執行雲端移轉策略。 因此會選擇重新裝載應用程式。 大多數重新裝載作業都能透過使用 [Azure Migrate](https://aka.ms/azuremigrate) 自動執行，此服務會提供必要的指導、深入解析及機制，協助您透過 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/) 及 [Azure 資料庫移轉服務](https://azure.microsoft.com/campaigns/database-migration/)等雲端工具移轉到雲端。 您也可以手動設定重新裝載，使您能在將舊版應用程式移至雲端時，了解有關您資產的基礎結構詳細資料。 比方說將應用程式移至 Azure 上的 VM，您可能幾乎完全不需要修改，或可能只需小幅度變更設定即可。 在此情況中的網路功能與內部部署環境相似，特別是當您在 Azure 中建立虛擬網路的時候。
+- **雲端基礎結構就緒**（重新裝載或基本增益 & shift）：在第一個步驟中，許多組織只想要快速執行雲端遷移策略。 因此會選擇重新裝載應用程式。 大多數重新裝載作業都能透過使用 [Azure Migrate](https://aka.ms/azuremigrate) 自動執行，此服務會提供必要的指導、深入解析及機制，協助您透過 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/) 及 [Azure 資料庫移轉服務](https://azure.microsoft.com/campaigns/database-migration/)等雲端工具移轉到雲端。 您也可以手動設定重新裝載，使您能在將舊版應用程式移至雲端時，了解有關您資產的基礎結構詳細資料。 比方說將應用程式移至 Azure 上的 VM，您可能幾乎完全不需要修改，或可能只需小幅度變更設定即可。 在此情況中的網路功能與內部部署環境相似，特別是當您在 Azure 中建立虛擬網路的時候。
 
-- **雲端最佳化** (受控服務及 Windows 容器)：此模型的重點在於，完全不需要變更應用程式的核心架構，只需要最佳化一些重要的部署，就能發揮雲端的最大效益。 基本步驟是將 [Windows 容器](https://docs.microsoft.com/virtualization/windowscontainers/about/)支援新增至您現有的 .NET Framework 應用程式。 這項重要的步驟 (容器化) 不會影響程式碼，因此投入原形移轉的整體資源不大。 您可以使用 [Image2Docker](https://github.com/docker/communitytools-image2docker-win)、Visual Studio 以及 Visual Studio Tools for [Docker](https://www.docker.com/)。 Visual Studio 會自動選擇 ASP.NET 應用程式及 Windows 容器映像的智慧型預設。 這些工具提供了迅速的內部迴圈，以及容器到 Azure 的快速路徑， 並改善您部署到多個環境時的靈活度。 接著進入生產環境，若您偏好 IaaS 方式，您可以將 Windows 容器部署到 [Azure Web App for Containers](https://azure.microsoft.com/services/app-service/containers/)、[Azure 容器執行個體 (ACI)](https://azure.microsoft.com/services/container-instances/)，以及搭載 Windows Server 2016 與容器的 Azure VM。 對於更複雜的多容器應用程式，請考慮使用 [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) 這類的協調器。 
+- **雲端優化**（受控服務和 Windows 容器）：此模型是關於進行幾項重要的部署優化，以從雲端獲得更大的好處，而不需要變更應用程式的核心架構。 基本步驟是將 [Windows 容器](https://docs.microsoft.com/virtualization/windowscontainers/about/)支援新增至您現有的 .NET Framework 應用程式。 這項重要的步驟 (容器化) 不會影響程式碼，因此投入原形移轉的整體資源不大。 您可以使用 [Image2Docker](https://github.com/docker/communitytools-image2docker-win)、Visual Studio 以及 Visual Studio Tools for [Docker](https://www.docker.com/)。 Visual Studio 會自動選擇 ASP.NET 應用程式及 Windows 容器映像的智慧型預設。 這些工具提供了迅速的內部迴圈，以及容器到 Azure 的快速路徑， 並改善您部署到多個環境時的靈活度。
+接著進入生產環境，若您偏好 IaaS 方式，您可以將 Windows 容器部署到 [Azure Web App for Containers](https://azure.microsoft.com/services/app-service/containers/)、[Azure 容器執行個體 (ACI)](https://azure.microsoft.com/services/container-instances/)，以及搭載 Windows Server 2016 與容器的 Azure VM。 對於更複雜的多容器應用程式，請考慮使用 [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) 這類的協調器。
 
 在第一次現代化期間，您也可以從雲端新增資產，像是使用 [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview) 之類的工具執行監視；CI/CD 管線應用在 [Azure DevOps Services](https://azure.microsoft.com/services/devops/) 的應用程式生命週期；以及 Azure 所提供其他更多的資料資源服務。 比方說，您可以修改原先使用傳統 [ASP.NET Web Forms](https://www.asp.net/web-forms) 或 [ASP.NET MVC](https://www.asp.net/mvc) 開發的整合型 Web 應用程式，而您現在可以使用 Windows 容器進行部署。 當您使用 Windows 容器時，也應該將資料移轉到 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/)中的資料庫，這完全不需要變更您應用程式的核心架構。
 
-- **雲端原生**：一如介紹所述，若您的目標是與多個獨立開發團隊 (專注在可以自主開發及部署的各種微服務) 合作大型而複雜的應用程式，您可以考慮架構[雲端原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)應用程式。 此外還有每項微服務的微調與獨立調整能力。 這些架構方式雖然面臨十分重大的挑戰和複雜度，但可以藉由使用雲端 PaaS 和協調器 (像是 [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) (受控 Kubernetes)) 大幅簡化，以及在無伺服器方法中使用 [Azure Functions](https://azure.microsoft.com/services/functions/)。 這所有的方法 (例如微服務及無伺服器) 通常會需要雲端架構及編寫適用於特定 PaaS 平台的程式碼，或是編寫符合特定架構 (例如微服務) 的程式碼。
+- **雲端原生**：如所述，當您以多個獨立開發小組處理的大型複雜應用程式時，您應該考慮架構[雲端原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)應用程式，其可在不同微服務上運作自主開發和部署。 此外還有每項微服務的微調與獨立調整能力。 這些架構方式雖然面臨十分重大的挑戰和複雜度，但可以藉由使用雲端 PaaS 和協調器 (像是 [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) (受控 Kubernetes)) 大幅簡化，以及在無伺服器方法中使用 [Azure Functions](https://azure.microsoft.com/services/functions/)。 這所有的方法 (例如微服務及無伺服器) 通常會需要雲端架構及編寫適用於特定 PaaS 平台的程式碼，或是編寫符合特定架構 (例如微服務) 的程式碼。
 
 圖 1-3 顯示了您可在每個成熟度等級使用的內部技術：
 
@@ -165,14 +166,14 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 本指南的重點很明確。 主要在說明如何不重新架構及變更程式碼，就能原形移轉您現有 .NET 應用程式。 最後還說明了如何將您的應用程式移轉成雲端最佳化。
 
-本指南並未說明如何建立雲端原生應用程式，例如如何演變成微服務架構。 若要重新架構您的應用程式，或建立採用微服務的全新應用程式，請參閱電子書 [.NET Microservices: Architecture for containerized .NET applications](https://aka.ms/microservicesebook) (.NET 微服務: 容器化之 .NET 應用程式的架構)。
+本指南並未說明如何建立雲端原生應用程式，例如如何演變成微服務架構。 若要重新架構您的應用程式，或建立以微服務為基礎的全新應用程式，請參閱[適用于容器化 .net 應用程式的電子書 .Net 微服務：架構](https://aka.ms/microservicesebook)。
 
 ### <a name="additional-resources"></a>其他資源
 
 - **Containerized Docker application lifecycle with Microsoft platform and tools** (Microsoft 平台與工具上容器化之 Docker 應用程式的生命週期) (可供下載的電子書) \
   <https://aka.ms/dockerlifecycleebook>
 
-- **.NET 微服務：Architecture for containerized .NET applications** (容器化之 .NET 應用程式的架構) (可供下載的電子書) \
+- **.Net 微服務：容器化 .net 應用程式的架構**（可下載的電子書） \
   <https://aka.ms/microservicesebook>
 
 - **Architecting modern web applications with ASP.NET Core and Azure** (使用 ASP.NET Core 與 Azure 架構現代化 Web 應用程式) (可供下載的電子書) \

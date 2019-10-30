@@ -3,12 +3,12 @@ title: REST 和 gRPC
 description: 瞭解 gRPC、其在雲端原生應用程式中的角色，以及它與 HTTP REST 的差異
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: fed8e7d86a8ddc268f1264728d9631a561c1b310
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: ba15bb1c5ee7c2cd48d75867512539190c80b0e5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291327"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094543"
 ---
 # <a name="rest-and-grpc"></a>REST 和 gRPC
 
@@ -28,7 +28,7 @@ gRPC 是現代化的 RPC 架構，它既輕量又高效能。 它會使用 HTTP/
 - 串流內建于 HTTP/2，這表示要求和回應都可以非同步地串流處理大型資料集。
 - 結合 gRPC 和 HTTP/2，效能會大幅增加。 在[Windows Communication Foundation （WCF）](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf)用語中中，gPRC 效能符合並超過[NetTCP](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)系結的速度和效率。 不過，不同于 NetTCP，gRPC 不受限於 Microsoft 語言， C#例如或 VB.NET。
 
-所有熱門平臺（包括 JAVA、 C#、Golang 和 NodeJS）都支援 gRPC。 
+所有熱門平臺（包括 JAVA、 C#、Golang 和 NodeJS）都支援 gRPC。
 
 ## <a name="protocol-buffers"></a>通訊協定緩衝區
 
@@ -44,7 +44,7 @@ Microsoft .NET Core framework 3.0 包含 gRPC 的工具和原生支援。 圖4-2
 
 **圖 4-20**： Visual Studio 2019 中的 gRPC 支援
 
-.NET Core 3.0 順暢地將 gRPC 整合到其架構中，包括端點路由、內建 IoC 支援和記錄。 開放原始碼 Kestrel web 伺服器完全支援 HTTP/2 連接。 
+.NET Core 3.0 順暢地將 gRPC 整合到其架構中，包括端點路由、內建 IoC 支援和記錄。 開放原始碼 Kestrel web 伺服器完全支援 HTTP/2 連接。
 
 圖4-21 顯示 Visual Studio 2019 中的 gRPC 服務結構。 請注意資料夾結構如何包含適用于 proto 檔案和服務程式代碼的資料夾。
 
@@ -69,7 +69,7 @@ gRPC 適用于下列案例：
 
 請注意，上圖中的前端流量會以 HTTP 叫用，而後端微服務至微服務會使用 gRPC。
 
-期待 gRPC，在 dethroning 雲端原生系統的 REST 支配方面，可能扮演著重要的角色。 效能優勢和開發的便利性也太好了。 不過，請不要犯任何錯誤，其餘部分仍會持續一段時間。 它仍然是針對公開公開的 Api 擅長，基於回溯相容性的理由。 
+期待 gRPC，在 dethroning 雲端原生系統的 REST 支配方面，可能扮演著重要的角色。 效能優勢和開發的便利性也太好了。 不過，請不要犯任何錯誤，其餘部分仍會持續一段時間。 它仍然是針對公開公開的 Api 擅長，基於回溯相容性的理由。
 
 >[!div class="step-by-step"]
 >[上一頁](service-to-service-communication.md)

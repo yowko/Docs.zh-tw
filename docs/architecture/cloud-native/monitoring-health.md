@@ -1,19 +1,19 @@
 ---
-title: 監視和健全狀況
+title: 監視與健康狀態
 description: 監視和健全狀況
 ms.date: 09/23/2019
-ms.openlocfilehash: 6e62c0dad3bdac9bed8eccfadd9011f9b6256efc
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 6274040318b5442478e9cc291c4f223bdf533110
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184971"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094506"
 ---
-# <a name="monitoring-and-health"></a>監視和健全狀況
+# <a name="monitoring-and-health"></a>監視與健康狀態
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-微服務和雲端原生應用程式會手邊提供良好的 DevOps 實務。 DevOps 對許多人而言都是很多，但可能是來自雲端提倡者和 DevOps 推廣人員 Donovan 棕色的其中一項較佳定義： 
+微服務和雲端原生應用程式會手邊提供良好的 DevOps 實務。 DevOps 對許多人而言都是很多，但可能是來自雲端提倡者和 DevOps 推廣人員 Donovan 棕色的其中一項較佳定義：
 
 「DevOps 是人員、程式和產品的聯集，可以持續傳遞價值給我們的終端使用者。」
 

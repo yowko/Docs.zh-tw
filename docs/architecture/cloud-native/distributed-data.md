@@ -2,12 +2,12 @@
 title: 分散式資料
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |雲端原生應用程式的分散式資料
 ms.date: 06/30/2019
-ms.openlocfilehash: 92086c52b02360e90461aea9ad23a2068224e187
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: b715ae5203264a023bc9f911aa74ee222afe3d68
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183130"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087450"
 ---
 # <a name="distributed-data-for-cloud-native-apps"></a>雲端原生應用程式的分散式資料
 
@@ -15,7 +15,7 @@ ms.locfileid: "71183130"
 
 當您在建立由許多獨立微服務所組成的雲端原生系統時，您認為資料儲存體的變更方式。
 
-傳統的整合型應用程式偏好如圖5-1 所示的集中式資料存放區。 
+傳統的整合型應用程式偏好如圖5-1 所示的集中式資料存放區。
 
 ![單一整合型資料庫](./media/single-monolithic-database.png)
 
@@ -32,7 +32,7 @@ ms.locfileid: "71183130"
 **圖 5-2**。 跨微服務的多個資料庫
 
 請注意，在上圖中，每個微服務會擁有並封裝它的資料存放區，而且只會從其公用 API 向外界公開資料。
- 
+
 此模型可讓每個微服務獨立發展，而不需要協調其他微服務的資料架構變更。 每個微服務都可以自由地執行最符合其需求的資料存放區（關係資料庫、檔資料庫、索引鍵/值存放區）類型。 在執行時間，每個微服務都可以據以調整其資料。 如圖5-3 所示：
 
 ![多語言資料持續性](./media/polyglot-data-persistence.png)

@@ -2,16 +2,16 @@
 title: 將您的關係資料庫移轉至 azure
 description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |將您的關係資料庫移轉至 azure
 ms.date: 04/28/2018
-ms.openlocfilehash: b2153e65a12706b97fae11c5f23846c83bcd6642
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: efd1548c3f74fc27450f4949d71a1c4d61907ba5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374102"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093620"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>將您的關係資料庫移轉至 azure
 
-願景：Azure 提供最完整的資料庫移轉。
+願景： Azure 提供最全面的資料庫移轉。
 
 在 Azure 中，您可以將資料庫伺服器直接遷移到 IaaS Vm （單純的隨即轉移），或者您可以遷移到 Azure SQL Database，以獲得更多好處。 Azure SQL Database 提供受控實例和完整的資料庫即服務（DBaaS）選項。 圖3-1 顯示 Azure 中提供的多個關係資料庫移轉路徑。
 
@@ -21,7 +21,7 @@ ms.locfileid: "70374102"
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>遷移至 Azure SQL Database 受控執行個體的時機
 
-在大部分情況下，當您將資料移轉至 Azure 時，Azure SQL Database 受控執行個體會是您最好考慮的選項。 如果您要遷移 SQL Server 資料庫，而且需要幾乎 100% 保證，而不需要重新架構您的應用程式或變更您的資料或資料存取程式碼，請選擇 Azure SQL Database 的受控執行個體功能。
+在大部分情況下，當您將資料移轉至 Azure 時，Azure SQL Database 受控執行個體會是您最好考慮的選項。 如果您要遷移 SQL Server 資料庫，而且需要幾乎100% 保證，而不需要重新架構您的應用程式或變更您的資料或資料存取程式碼，請選擇 Azure SQL Database 的受控執行個體功能。
 
 如果您有 SQL Server 實例層級功能的額外需求，或超出標準 Azure SQL Database （單一資料庫模型）所提供之功能的隔離需求，Azure SQL Database 受控執行個體是最佳選項。 最後一個是 PaaS 導向的選擇，但它並不提供與傳統 SQL server 相同的功能。 遷移可能會呈現摩擦。
 
@@ -47,7 +47,7 @@ Azure SQL Database 中的受控執行個體具有下列特性：
 
   - 原生備份和還原，以及記錄傳送
 
-有了這些功能，當您將現有的應用程式資料庫移轉至 Azure SQL Database 時，受控執行個體模型可為 SQL Server 的 PaaS 提供將近 100% 的優勢。 受控執行個體是一個 SQL Server 的環境，您可以繼續使用實例層級的功能，而不需要變更應用程式設計。
+有了這些功能，當您將現有的應用程式資料庫移轉至 Azure SQL Database 時，受控執行個體模型可為 SQL Server 的 PaaS 提供將近100% 的優勢。 受控執行個體是一個 SQL Server 的環境，您可以繼續使用實例層級的功能，而不需要變更應用程式設計。
 
 受控執行個體可能最適合目前使用 SQL Server 的企業，而且需要在雲端的網路安全性中提供彈性。 就像是為您的 SQL 資料庫提供私人虛擬網路。
 
@@ -90,7 +90,7 @@ Azure SQL Database 提供下列優點：
 
 在一些情況下，您仍然需要以一般 VM 的方式遷移至 SQL Server。 例如，如果您需要使用 SQL Server Reporting Services，就會發生這種情況。 不過，在大多數情況下，Azure SQL Database 受控執行個體可以提供從內部部署 SQL 伺服器進行遷移所需的所有專案，因此您必須先嘗試遷移至 SQL Server VM。
 
-## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>使用 Azure 資料庫移轉服務，將您的關係資料庫移轉至 Azure 
+## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>使用 Azure 資料庫移轉服務，將您的關係資料庫移轉至 Azure
 
 您可以使用 Azure 資料庫移轉服務，將 SQL Server、Oracle 和 MySQL 之類的關係資料庫移轉至 Azure，不論您的目標資料庫是在 Azure VM 上 Azure SQL Database、Azure SQL Database 受控執行個體或 SQL Server。
 
@@ -104,7 +104,7 @@ Azure SQL Database 提供下列優點：
 
 ## <a name="additional-resources"></a>其他資源
 
-- **選擇雲端 SQL Server 選項：在 Azure VM （IaaS）上 Azure SQL Database （PaaS）或 SQL Server**
+- **選擇雲端 SQL Server 選項： Azure SQL Database （PaaS）或 Azure VM （IaaS）上的 SQL Server**
 
     <https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas>
 

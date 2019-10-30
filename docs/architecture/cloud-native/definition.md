@@ -3,12 +3,12 @@ title: 雲端原生的定義
 description: 瞭解為雲端原生系統提供探源的基本要素
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: aec199aee52a4ab3202c3ec0ceb769fecd168cfe
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 27191a67b2964ac2e1636a4d7dc55d5314b78439
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846734"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087538"
 ---
 # <a name="defining-cloud-native"></a>定義雲端原生
 
@@ -18,7 +18,7 @@ ms.locfileid: "72846734"
 
 雲端原生的重點在於改變我們對建立重要商務系統的想法。
 
-雲端原生系統的設計目的是要採用快速的變更、大規模和復原能力。 
+雲端原生系統的設計目的是要採用快速的變更、大規模和復原能力。
 
 雲端原生運算基礎提供[官方定義](https://github.com/cncf/foundation/blob/master/charter.md)：
 
@@ -28,14 +28,14 @@ ms.locfileid: "72846734"
 
 隨著使用者的需求越來越多，應用程式也變得越來越複雜。 使用者預期快速回應能力、創新功能和零停機時間。 效能問題、週期性錯誤和無法移動的速度已不再接受。 他們可以輕鬆地移到您的競爭對手。
 
-雲端原生的*速度*與*靈活性*很多。 商務系統的發展，是讓商業功能能夠在策略轉型的武器，加速業務速度和成長。 請務必立即將想法推向市場。 
+雲端原生的*速度*與*靈活性*很多。 商務系統的發展，是讓商業功能能夠在策略轉型的武器，加速業務速度和成長。 請務必立即將想法推向市場。
 
 以下是一些已實行這些技術的公司。 思考他們所達成的速度、靈活性和擴充性。
 
-| 公司 | 遇到 | 
+| 公司 | 遇到 |
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | 在生產環境中有600個以上的服務。 每天部署一百次。 |
-| [Uber](https://eng.uber.com/micro-deploy/) | 在生產環境中儲存了1000項以上的服務。 每週部署數千個組建。 | 
+| [Uber](https://eng.uber.com/micro-deploy/) | 在生產環境中儲存了1000項以上的服務。 每週部署數千個組建。 |
 | [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | 在生產環境中有300個以上的服務。 每天會進行大約1000的變更。 |
 
 如您所見，Netflix、Uber 和 WeChat 會公開由數百個獨立微服務所組成的系統。 此架構樣式可讓他們快速回應市場狀況。 他們可以立即更新即時、複雜應用程式的小型區域，並視需要個別調整這些區域。
@@ -132,6 +132,7 @@ Azure 雲端平臺支援這種高度彈性的基礎結構，其中包含自動�
 身分識別詳述于第8章，身分*識別*。
 
 ## <a name="microservices"></a>微服務
+
 雲端原生系統採用微服務，這是用來建立現代化應用程式的熱門架構樣式。
 
 建立為一組分散式的小型獨立服務，透過共用網狀架構進行互動，微服務會共用下列特性：
@@ -160,7 +161,7 @@ Azure 雲端平臺支援這種高度彈性的基礎結構，其中包含自動�
 
 微服務提供靈活性。
 
-稍早在章節中，我們比較了以單體建立的電子商務應用程式與微服務。 在此範例中，我們看到一些清楚的好處： 
+稍早在章節中，我們比較了以單體建立的電子商務應用程式與微服務。 在此範例中，我們看到一些清楚的好處：
 
 - 每個微服務都有自發的生命週期，而且可以獨立且經常地進行部署。 您不需要等候每季版本來部署新功能或更新。 您可以更新複雜應用程式的小型區域，降低中斷整個系統的風險。
 
@@ -174,9 +175,9 @@ Azure 雲端平臺支援這種高度彈性的基礎結構，其中包含自動�
 
 Microsoft .NET Core 平臺是絕佳的選擇。 免費且開放的原始碼提供許多內建功能，可簡化微服務的開發。 .NET Core 是跨平臺。 應用程式可以在 Windows、macOS 及大部分的 Linux 類別上建立和執行。
 
-.NET Core 的效能非常高效，相較于 node.js 和其他競爭平臺，其計分程度相當良好。 有趣的是， [TechEmpower](https://www.techempower.com/)在許多 web 應用程式平臺和架構上執行了一組廣泛的[效能基準](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext)檢驗。 .NET Core 在前10大-良好的 node.js 和其他競爭平臺上評分。 
+.NET Core 的效能非常高效，相較于 node.js 和其他競爭平臺，其計分程度相當良好。 有趣的是， [TechEmpower](https://www.techempower.com/)在許多 web 應用程式平臺和架構上執行了一組廣泛的[效能基準](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext)檢驗。 .NET Core 在前10大-良好的 node.js 和其他競爭平臺上評分。
 
-.NET Core 是由 Microsoft 和 GitHub 上的 .NET 社區維護。 
+.NET Core 是由 Microsoft 和 GitHub 上的 .NET 社區維護。
 
 ## <a name="containers"></a>容器
 
@@ -188,11 +189,11 @@ Microsoft .NET Core 平臺是絕佳的選擇。 免費且開放的原始碼提�
 
 圖1-5 顯示三個不同的微服務，每個都在自己的容器中，在單一主機上執行。
 
-![在容器主機上執行的多個容器](./media/hosting-mulitple-containers.png)  
+![在容器主機上執行的多個容器](./media/hosting-mulitple-containers.png)
 
 **圖 1-5**。 在容器主機上執行的多個容器
 
-請注意，每個容器如何維護自己的相依性和執行時間集合，這可能會有所不同。 在這裡，我們會看到在相同主機上執行的不同版本的產品微服務。 每個容器會共用基礎主機作業系統、記憶體和處理器的配量，但會彼此隔離。 
+請注意，每個容器如何維護自己的相依性和執行時間集合，這可能會有所不同。 在這裡，我們會看到在相同主機上執行的不同版本的產品微服務。 每個容器會共用基礎主機作業系統、記憶體和處理器的配量，但會彼此隔離。
 
 請注意，容器模型從[十二個要素應用程式](https://12factor.net/)中納入「相依性」原則的效果。
 
@@ -204,7 +205,7 @@ Microsoft .NET Core 平臺是絕佳的選擇。 免費且開放的原始碼提�
 
 ### <a name="why-containers"></a>為何選擇容器？
 
-容器提供可攜性，並確保環境之間的一致性。 藉由將所有專案封裝成單一套件，您可以*隔離*微服務及其相依性與基礎結構。 
+容器提供可攜性，並確保環境之間的一致性。 藉由將所有專案封裝成單一套件，您可以*隔離*微服務及其相依性與基礎結構。
 
 您可以在任何具有 Docker 執行時間引擎的環境中部署該相同容器。 容器化工作負載也可消除使用架構、軟體程式庫和執行時間引擎預先設定各個環境的費用。
 
@@ -212,7 +213,7 @@ Microsoft .NET Core 平臺是絕佳的選擇。 免費且開放的原始碼提�
 
 ### <a name="container-orchestration"></a>容器協調流程
 
-雖然 Docker 之類的工具會建立映射和執行容器，但您也需要工具來管理它們。 容器管理是以稱為容器協調器的特殊軟體程式來完成。 在大規模運作時，容器協調流程是不可或缺的。 
+雖然 Docker 之類的工具會建立映射和執行容器，但您也需要工具來管理它們。 容器管理是以稱為容器協調器的特殊軟體程式來完成。 在大規模運作時，容器協調流程是不可或缺的。
 
 圖1-6 顯示 container 協調器所提供的管理工作。
 
@@ -239,7 +240,7 @@ Microsoft .NET Core 平臺是絕佳的選擇。 免費且開放的原始碼提�
 
 > *因素 \#8 指定「服務向外延展到大量的小型相同進程（複本），而不是相應增加最強大電腦上的單一大型實例。」*
 
-雖然有數個容器協調器存在，但[Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)已經成為雲端原生世界的既定標準。 它是一種可移植、可擴充的開放原始碼平臺，用於管理容器化的工作負載。 
+雖然有數個容器協調器存在，但[Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)已經成為雲端原生世界的既定標準。 它是一種可移植、可擴充的開放原始碼平臺，用於管理容器化的工作負載。
 
 您可以裝載自己的 Kubernetes 實例，但是您會負責布建和管理其資源，這可能很複雜。 Azure 雲端功能 Kubernetes 為受控服務， [Azure Kubernetes Service （AKS）](https://azure.microsoft.com/services/kubernetes-service/)。 受控服務可讓您充分利用其功能，而不需要安裝及維護它。
 
@@ -287,7 +288,7 @@ Azure Kubernetes Services 的詳細資訊請在第2章（*調整雲端原生應�
 
 ### <a name="automating-infrastructure"></a>自動化基礎結構
 
-[Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/)、Terraform 和[Azure CLI](https://docs.microsoft.com/cli/azure/)等工具，可讓您以宣告方式編寫腳本所需的雲端基礎結構。 [資源名稱]、[位置]、[容量] 和 [密碼] 是參數化和動態。 腳本會進行版本設定，並簽入原始檔控制做為專案的成品。 您叫用腳本以在系統內容中布建一致且可重複的基礎結構，例如 QA、預備及生產。 
+[Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/)、Terraform 和[Azure CLI](https://docs.microsoft.com/cli/azure/)等工具，可讓您以宣告方式編寫腳本所需的雲端基礎結構。 [資源名稱]、[位置]、[容量] 和 [密碼] 是參數化和動態。 腳本會進行版本設定，並簽入原始檔控制做為專案的成品。 您叫用腳本以在系統內容中布建一致且可重複的基礎結構，例如 QA、預備及生產。
 
 實際上，IaC 是等冪的，這表示您可以執行相同的腳本，而不會產生副作用。 如果小組需要進行變更，他們會編輯並重新執行腳本。 只有更新的資源會受到影響。
 
@@ -299,7 +300,7 @@ Azure Kubernetes Services 的詳細資訊請在第2章（*調整雲端原生應�
 
 > *因素 \#5*指定「每個版本都必須在組建、發行和執行階段之間強制執行嚴格的分隔。 每個都應該以唯一識別碼標記，並支援復原的能力。」
 
-新式 CI/CD 系統有助於滿足此原則。 它們提供個別的部署步驟，並協助確保可立即提供給使用者的一致和品質程式碼。 
+新式 CI/CD 系統有助於滿足此原則。 它們提供個別的部署步驟，並協助確保可立即提供給使用者的一致和品質程式碼。
 
 圖1-8 顯示整個部署程式的分隔。
 
@@ -307,17 +308,17 @@ Azure Kubernetes Services 的詳細資訊請在第2章（*調整雲端原生應�
 
 **圖 1-8**。 CI/CD 管線中的部署步驟
 
-在上圖中，請特別注意工作的分隔。 
+在上圖中，請特別注意工作的分隔。
 
-開發人員會在其開發環境中建立功能，逐一查看程式碼的「內部迴圈」、執行和 debug。 完成時，會將該程式碼*推送*至程式碼存放庫，例如 GitHub、Azure DevOps 或 BitBucket。 
+開發人員會在其開發環境中建立功能，逐一查看程式碼的「內部迴圈」、執行和 debug。 完成時，會將該程式碼*推送*至程式碼存放庫，例如 GitHub、Azure DevOps 或 BitBucket。
 
-推送會觸發將程式碼轉換成二進位成品的組建階段。 此工作是透過[持續整合（CI）](https://martinfowler.com/articles/continuousIntegration.html)管線來執行。 它會自動建立、測試和封裝應用程式。 
+推送會觸發將程式碼轉換成二進位成品的組建階段。 此工作是透過[持續整合（CI）](https://martinfowler.com/articles/continuousIntegration.html)管線來執行。 它會自動建立、測試和封裝應用程式。
 
 發行階段會挑選二進位成品、套用外部應用程式和環境設定資訊，並產生不可變的版本。 發行會部署到指定的環境。 此工作會使用[持續傳遞（CD）](https://martinfowler.com/bliki/ContinuousDelivery.html)管線來執行。 每個版本都應該是可辨識的。 您可以說：「這個部署正在執行應用程式的版本2.1.1」。
 
-最後，已釋放的功能會在目標執行環境中執行。 版本是不可變的，這表示任何變更都必須建立新的版本。 
+最後，已釋放的功能會在目標執行環境中執行。 版本是不可變的，這表示任何變更都必須建立新的版本。
 
-套用這些實務後，組織就已經徹底演變出軟體的方式。 許多已從季度版本移至隨選更新。 其目標是要及早在開發週期中攔截問題，而不需要修正這項成本。 整合之間的持續時間愈長，解決的問題就愈昂貴。  隨著整合程式的一致性，小組可以更頻繁地認可程式碼變更，進而提供更好的共同作業和軟體品質。  
+套用這些實務後，組織就已經徹底演變出軟體的方式。 許多已從季度版本移至隨選更新。 其目標是要及早在開發週期中攔截問題，而不需要修正這項成本。 整合之間的持續時間愈長，解決的問題就愈昂貴。  隨著整合程式的一致性，小組可以更頻繁地認可程式碼變更，進而提供更好的共同作業和軟體品質。
 
 ### <a name="azure-pipelines"></a>Azure Pipelines
 

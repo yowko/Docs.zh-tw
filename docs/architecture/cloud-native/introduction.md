@@ -3,12 +3,12 @@ title: 雲端原生應用程式簡介
 description: 瞭解雲端原生計算
 author: robvet
 ms.date: 08/26/2019
-ms.openlocfilehash: a99e4b5599efee8b171c48a5b17e75b9e6cd63ca
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1d3679c7f1ab940d7ab3e194c200483b63276883
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182850"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087240"
 ---
 # <a name="introduction-to-cloud-native-applications"></a>雲端原生應用程式簡介
 
@@ -18,7 +18,7 @@ ms.locfileid: "71182850"
 
 您的行動電話環形。 這是您好用的招聘人員，也就是一天呼叫您一次的新作業。
 
-但這次不同：啟動、股東權益，以及許多資金。
+但這次並不相同：啟動、股東權益和大量資金。
 
 提到雲端和最尖端的技術會將您帶到邊緣。
 
@@ -38,7 +38,7 @@ ms.locfileid: "71182850"
 
 並非全部都是錯誤的。 是開化「提供一些獨特的優勢。 例如，它們很容易 。
 
-- build 
+- build
 - 測試
 - 將
 - 疑難排解
@@ -76,7 +76,7 @@ ms.locfileid: "71182850"
 
 不同于驅動我們產業的連續 hype，雲端原生是「*真實*」。 請考慮使用[雲端原生運算基礎](https://www.cncf.io/)（由 cncf），這是超過300個主要企業的聯盟，可讓雲端原生運算在技術和雲端堆疊上普及。 作為其中一個最具影響力的開放原始碼群組，它會在 GitHub 中裝載許多最快速成長的開放原始碼專案。 其中包括[Kubernetes](https://kubernetes.io/)、 [Prometheus](https://prometheus.io/)、 [Helm](https://helm.sh/)、 [Envoy](https://www.envoyproxy.io/)和[gRPC](https://grpc.io/)等專案。
 
-由 CNCF 會促進開放原始碼和廠商中立的生態系統。 之後，我們會提供雲端原生原則、模式和最佳做法，這是技術中立的。 同時，我們也會討論 Microsoft Azure 雲端中可用來建立雲端原生系統的服務和基礎結構。 
+由 CNCF 會促進開放原始碼和廠商中立的生態系統。 之後，我們會提供雲端原生原則、模式和最佳做法，這是技術中立的。 同時，我們也會討論 Microsoft Azure 雲端中可用來建立雲端原生系統的服務和基礎結構。
 
 那麼，雲端原生到底是什麼？ 請放心，放鬆，讓我們協助您探索這個新世界。
 

@@ -4,12 +4,12 @@ description: 瞭解 ASP.NET Web Forms 和 Blazor 專案的專案結構如何比�
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: aa9157bd8627e7a03e33872c3023f91ba3d66951
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2c383e86ff22f5a3460476998992b66e9417cc11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520227"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087858"
 ---
 # <a name="project-structure-for-blazor-apps"></a>Blazor 應用程式的專案結構
 
@@ -92,7 +92,7 @@ public class Program
 
 Blazor WebAssembly apps 也會定義*Program.cs*中的進入點。 程式碼看起來稍有不同。 程式碼很類似，因為它會設定 app 主機，以提供相同的主機層級服務給應用程式。 不過，WebAssembly 應用程式主機不會設定 HTTP 伺服器，因為它會直接在瀏覽器中執行。
 
-Blazor apps 具有 `Startup` 類別，而不是*global.asax*檔案，以定義應用程式的啟動邏輯。 @No__t_0 類別是用來設定應用程式和任何應用程式特定服務。 在 Blazor 伺服器應用程式中，`Startup` 類別是用來針對用戶端瀏覽器與伺服器之間的 Blazor 所使用的即時連接設定端點。 在 Blazor WebAssembly 應用程式中，`Startup` 類別會定義應用程式的根元件和應該呈現的位置。 我們將深入探討[應用程式啟動](./app-startup.md)一節中的 `Startup` 類別。
+Blazor apps 具有 `Startup` 類別，而不是*global.asax*檔案，以定義應用程式的啟動邏輯。 `Startup` 類別是用來設定應用程式和任何應用程式特定服務。 在 Blazor 伺服器應用程式中，`Startup` 類別是用來針對用戶端瀏覽器與伺服器之間的 Blazor 所使用的即時連接設定端點。 在 Blazor WebAssembly 應用程式中，`Startup` 類別會定義應用程式的根元件和應該呈現的位置。 我們將深入探討[應用程式啟動](./app-startup.md)一節中的 `Startup` 類別。
 
 ## <a name="static-files"></a>靜態檔案
 
@@ -145,7 +145,7 @@ Blazor apps 中的頁面在哪裡？ Blazor 不會為可定址頁面定義個別
 @page "/counter"
 ```
 
-Blazor 中的路由是在用戶端處理，而不是在伺服器上。 當使用者在瀏覽器中導覽時，Blazor 會攔截導覽，然後以相符的路由呈現元件。 
+Blazor 中的路由是在用戶端處理，而不是在伺服器上。 當使用者在瀏覽器中導覽時，Blazor 會攔截導覽，然後以相符的路由呈現元件。
 
 元件路由目前不是由元件的檔案位置推斷，像是使用 *.aspx*頁面。 未來可能會加入這項功能。 每個路由都必須在元件上明確指定。 將可路由的元件儲存在*Pages*資料夾中沒有特殊意義，而且純粹是慣例。
 
@@ -162,7 +162,7 @@ Blazor 中的路由是在用戶端處理，而不是在伺服器上。 當使用
 - 指定頁面上要呈現根元件（*Razor*）的位置。
 - 新增對應的 Blazor framework 腳本。
 
-在 Blazor 伺服器應用程式中，根元件的 [主機] 頁面會定義在 *_Host*檔中。 這個檔案會定義 Razor 頁面，而不是元件。 Razor Pages 使用 Razor 語法定義伺服器可定址的頁面，非常類似于 *.aspx*頁面。 @No__t_0 方法是用來定義應該呈現根層級元件的位置。 @No__t_0 選項會指出元件的呈現方式。 下表概述支援的 `RenderMode` 選項。
+在 Blazor 伺服器應用程式中，根元件的 [主機] 頁面會定義在 *_Host*檔中。 這個檔案會定義 Razor 頁面，而不是元件。 Razor Pages 使用 Razor 語法定義伺服器可定址的頁面，非常類似于 *.aspx*頁面。 `Html.RenderComponentAsync<TComponent>(RenderMode)` 方法是用來定義應該呈現根層級元件的位置。 `RenderMode` 選項會指出元件的呈現方式。 下表概述支援的 `RenderMode` 選項。
 
 |選項                        |描述       |
 |------------------------------|------------------|
@@ -197,7 +197,7 @@ Blazor 中的路由是在用戶端處理，而不是在伺服器上。 當使用
 </html>
 ```
 
-在 Blazor WebAssembly 應用程式中，[主機] 頁面是*wwwroot/index.html*底下的簡單靜態 HTML 檔案。 @No__t_0 元素是用來指出應該呈現根元件的位置。
+在 Blazor WebAssembly 應用程式中，[主機] 頁面是*wwwroot/index.html*底下的簡單靜態 HTML 檔案。 `<app>` 元素是用來指出應該呈現根元件的位置。
 
 ```html
 <!DOCTYPE html>

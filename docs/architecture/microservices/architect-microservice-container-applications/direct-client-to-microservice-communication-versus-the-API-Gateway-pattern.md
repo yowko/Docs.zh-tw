@@ -2,12 +2,12 @@
 title: API 閘道模式與直接用戶端對微服務通訊
 description: 了解 API 閘道模式和直接用戶端對微服務通訊的差異與使用方式。
 ms.date: 01/07/2019
-ms.openlocfilehash: 6b42650b2dbce093f12fe02b1605c95076dc8592
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 47e9a383c1fcb6c9fec38cb376b60a4ab839077d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522961"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090126"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 閘道模式與直接用戶端對微服務通訊
 
@@ -132,7 +132,7 @@ API 閘道可以提供多個功能。 視產品而定，它可以提供更豐富
 
 **圖 4-14**. 將 Azure API 管理用於 API 閘道
 
-Azure API 管理可解決您的 API 閘道和管理需求，例如記錄、安全性、計量等等。在此情況下，使用 Azure API 管理這類產品時，您可能會有單一 API 閘道不會有風險，因為這類 API 閘道是「精簡」的，這表示您不會C#執行可能演變成的自訂程式碼整合型元件。 
+Azure API 管理可解決您的 API 閘道和管理需求，例如記錄、安全性、計量等等。在此情況下，使用 Azure API 管理這類產品時，您可能會有單一 API 閘道不會有風險，因為這類 API 閘道是「精簡」的，這表示您不會C#執行可能演變成的自訂程式碼整合型元件。
 
 API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以篩選內部微服務的 API，以及在此單一階層中將授權套用至已發行的 API。
 

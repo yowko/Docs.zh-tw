@@ -2,12 +2,12 @@
 title: Seedwork (網域模型的可重複使用基底類別和介面)
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 使用 seedwork 概念作為起點，開始實作 DDD 導向的領域模型。
 ms.date: 10/08/2018
-ms.openlocfilehash: a49f9e0b40ea306a846d9fb472bac388eedbfe02
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 87cbc5ce96b66a9ac3e1c2bfc8c863d1b20714db
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660766"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093808"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (網域模型的可重複使用基底類別和介面)
 
@@ -15,7 +15,7 @@ ms.locfileid: "69660766"
 
 圖 7-12 顯示了組成 Ordering 微服務中領域模型 seedwork 的類別。 它有幾個自訂的基底類別，像是 Entity、ValueObject 及 Enumeration，以及其他幾個介面。 這些介面 (IRepository 和 IUnitOfWork) 會通知基礎結構層需要實作的內容。 這些介面也會透過來自應用程式層的相依性插入使用。
 
-![SeedWork 資料夾的詳細內容包含基底類別及介面：Entity.cs、Enumeration.cs、IAggregateRoot.cs、IRepository.cs、IUnitOfWork.cs 及 ValueObject.cs](./media/image13.PNG)
+![SeedWork 資料夾的詳細內容，包含基底類別和介面：Entity.cs、Enumeration.cs、IAggregateRoot.cs、IRepository.cs、IUnitOfWork.cs，及 ValueObject.cs](./media/image13.PNG)
 
 **圖 7-12**。 領域模型 “seedwork" 基底類別與介面的範例組
 
@@ -30,9 +30,9 @@ ms.locfileid: "69660766"
 public abstract class Entity
 {
     int? _requestedHashCode;
-    int _Id;    
+    int _Id;
     private List<INotification> _domainEvents;
-    public virtual int Id 
+    public virtual int Id
     {
         get
         {
@@ -44,7 +44,7 @@ public abstract class Entity
         }
     }
 
-    public List<INotification> DomainEvents => _domainEvents;        
+    public List<INotification> DomainEvents => _domainEvents;
     public void AddDomainEvent(INotification eventItem)
     {
         _domainEvents = _domainEvents ?? new List<INotification>();
@@ -137,7 +137,7 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ## <a name="additional-resources"></a>其他資源
 
-- **Martin Fowler：分離的介面。** \
+- **聖馬丁 Fowler。分隔的介面。** \
   <https://www.martinfowler.com/eaaCatalog/separatedInterface.html>
 
 >[!div class="step-by-step"]

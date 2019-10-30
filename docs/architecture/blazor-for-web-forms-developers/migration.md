@@ -4,12 +4,12 @@ description: 瞭解如何將現有的 ASP.NET Web Forms 應用程式遷移至 Bl
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: 78742fc0d998a70c6e3992041d1fa62f2fe53f39
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 1680c3ccd496029cbdefc38119cf89bae0a777a7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520278"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087923"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>從 ASP.NET Web Forms 遷移至 Blazor
 
@@ -72,7 +72,7 @@ ms.locfileid: "72520278"
 </packages>
 ```
 
-@No__t_0 元素包含所有必要的相依性。 因為您需要這些套件，所以很難以識別其中包含哪些封裝。 有些 `<package>` 元素只會列出，以滿足您所需的相依性需求。
+`<packages>` 元素包含所有必要的相依性。 因為您需要這些套件，所以很難以識別其中包含哪些封裝。 有些 `<package>` 元素只會列出，以滿足您所需的相依性需求。
 
 Blazor 專案會在專案檔的 `<ItemGroup>` 元素中列出您需要的相依性：
 
@@ -552,12 +552,12 @@ namespace eShopLegacyWebForms.Catalog
             <ValidationMessage For="(() => _item.Name)" />
         </div>
     </div>
-    
+
     ...
 </EditForm>
 ```
 
-@No__t_0 內容包含驗證支援，而且可以包裝在輸入前後。 資料批註是新增驗證的常見方式。 這類驗證支援可以透過 `DataAnnotationsValidator` 元件來新增。 如需此機制的詳細資訊，請參閱[ASP.NET Core Blazor 表單和驗證](/aspnet/core/blazor/forms-validation)。
+`EditForm` 內容包含驗證支援，而且可以包裝在輸入前後。 資料批註是新增驗證的常見方式。 這類驗證支援可以透過 `DataAnnotationsValidator` 元件來新增。 如需此機制的詳細資訊，請參閱[ASP.NET Core Blazor 表單和驗證](/aspnet/core/blazor/forms-validation)。
 
 ## <a name="migrate-built-in-web-forms-controls"></a>遷移內建的 Web Forms 控制項
 
@@ -614,7 +614,7 @@ public class Startup
 }
 ```
 
-根據預設，環境變數、JSON 檔案（*appsettings. json*和*appsettings. {環境}. json*），而命令列選項會在設定物件中註冊為有效的設定來源。 設定來源可以透過 `Configuration[key]` 來存取。 更先進的技術是使用選項模式將設定資料系結至物件。 如需設定和選項模式的詳細資訊，請分別參閱 ASP.NET Core 中的[ASP.NET Core](/aspnet/core/fundamentals/configuration/)和[選項模式](/aspnet/core/fundamentals/configuration/options)中的設定。
+根據預設，環境變數、JSON 檔案（*appsettings. json*和*appsettings. {環境}. json*），而命令列選項會在設定物件中註冊為有效的設定來源。 設定來源可以透過 `Configuration[key]`來存取。 更先進的技術是使用選項模式將設定資料系結至物件。 如需設定和選項模式的詳細資訊，請分別參閱 ASP.NET Core 中的[ASP.NET Core](/aspnet/core/fundamentals/configuration/)和[選項模式](/aspnet/core/fundamentals/configuration/options)中的設定。
 
 ## <a name="migrate-data-access"></a>遷移資料存取
 

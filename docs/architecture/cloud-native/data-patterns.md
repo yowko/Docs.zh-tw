@@ -2,12 +2,12 @@
 title: 雲端原生資料模式
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |雲端原生資料模式
 ms.date: 06/30/2019
-ms.openlocfilehash: 8fc5a09dca61e6644fdcaa692ff1a21f40ebf179
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 0d251f3046fcd3f3a2f5d856a123a35d3f7ecff2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183410"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087695"
 ---
 # <a name="cloud-native-data-patterns"></a>雲端原生資料模式
 
@@ -127,15 +127,15 @@ NoSQL 資料庫會散佈在不同的商用伺服器上，而且通常會相應�
 
 這是已知的[最終一致性](https://www.cloudcomputingpatterns.org/eventual_consistency/)，也就是不支援 ACID 交易的分散式資料系統特性。 資料項目目的更新和將該更新傳播到每個複本節點所需的時間之間，會有短暫的延遲。 如果您在美國的 NoSQL 資料庫中更新產品專案，但同時從歐洲的複本節點查詢該相同資料項目，您可能會抓取先前的產品資訊-直到歐洲節點已更新產品變更為止。 取捨是藉由提供[強式一致性](https://en.wikipedia.org/wiki/Strong_consistency)，等待所有複本節點更新後，再傳回查詢結果，您可以支援龐大的規模和流量，但可能會呈現較舊的資料。
 
-NoSQL 資料庫可透過下列四個模型來分類： 
+NoSQL 資料庫可透過下列四個模型來分類：
 
 - *檔存放區*（MongoDB、CouchDB、Couchbase）：資料（和對應的中繼資料）會在資料庫內以不正規化 JSON 為基礎的檔中儲存非 relationally。
 
-- 索引*鍵/值存放區*（Redis，Riak，memcached）：資料會儲存為簡單的索引鍵/值組，並針對對應至使用者資料值的唯一存取金鑰來執行系統作業。
+- 索引*鍵/值存放區*（Redis、Riak、memcached）：資料會儲存為簡單的索引鍵/值組，並針對對應至使用者資料值的唯一存取金鑰來執行系統作業。
 
-- *寬資料行存放區*（HBase，Cassandra）：相關資料會以單欄式格式儲存為單一資料行中的一組嵌套索引鍵/值組，其中資料通常會以單一單位的形式抓取，而不需要將多個資料表聯結在一起。
+- *寬資料行存放區*（HBase、Cassandra）：相關資料會以單欄式格式儲存為單一資料行中的一組嵌套索引鍵/值組，其中資料通常會以單一單位的形式抓取，而不需要同時聯結多個資料表。
 
-- *圖形商店*（neo4j，titan）：資料會儲存為節點內的圖形表示，以及指定節點之間關聯性的邊緣。
+- *圖形存放區*（neo4j、titan）：資料會儲存為節點內的圖形表示，以及指定節點之間關聯性的邊緣。
 
 NoSQL 資料庫可以優化來處理大規模的資料，特別是當資料相當簡單時。 當下列情況時，請考慮 NoSQL 資料庫：
 

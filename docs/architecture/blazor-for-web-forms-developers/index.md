@@ -4,12 +4,12 @@ description: 瞭解如何以簡單且熟悉的方式，使用 Blazor 和 .NET Co
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 936f85d4fda9c5396a6586810735877488226157
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 394d11038b59f4cbe9e9955df43b6198eb5daaf8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696937"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088121"
 ---
 # <a name="blazor-for-aspnet-web-forms-developers"></a>適用於 ASP.NET Web Forms 的 Blazor 開發人員
 
@@ -75,11 +75,11 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 
 ### <a name="additional-resources"></a>其他資源
 
-您可以在<https://blazor.net>中找到官方 Blazor 首頁和檔。
+您可以在 <https://blazor.net>中找到官方的 Blazor 首頁和檔。
 
 ## <a name="send-your-feedback"></a>傳送您的意見反應
 
 這本書與相關範例不斷演進，所以您的意見反應歡迎！ 如果您有關于如何改進這本書的意見，請使用[GitHub 問題](https://github.com/dotnet/docs/issues)上任何網頁底部的 [意見反應] 區段。
 
 >[!div class="step-by-step"]
->[下一個](introduction.md)
+>[下一步](introduction.md)

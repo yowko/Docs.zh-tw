@@ -3,12 +3,12 @@ title: 前端用戶端通訊
 description: 瞭解前端用戶端如何與雲端原生系統通訊
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: 67410bf9b5c76acc472018197bb64aa7662dc439
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: a488337b48e30b99bfcc9894a780350f32af864f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183123"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087451"
 ---
 # <a name="front-end-client-communication"></a>前端用戶端通訊
 
@@ -39,7 +39,7 @@ ms.locfileid: "71183123"
 
 **圖4-3。** API 閘道模式
 
-在上圖中，請注意 API 閘道服務如何抽象化後端核心微服務。 實作為 Web API，它會作為*反向 proxy*，將連入流量路由傳送至內部微服務。 
+在上圖中，請注意 API 閘道服務如何抽象化後端核心微服務。 實作為 Web API，它會作為*反向 proxy*，將連入流量路由傳送至內部微服務。
 
 閘道會將用戶端與內部服務分割和重構隔離。 如果您變更後端服務，您可以在閘道上容納它，而不會中斷用戶端。 這也是您跨領域考慮的第一道防線，例如身分識別、快取、復原、計量和節流。 許多跨領域關注都可以從後端核心服務關閉到閘道，簡化後端服務。
 
@@ -55,7 +55,7 @@ ms.locfileid: "71183123"
 
 ## <a name="ocelot-gateway"></a>Ocelot 閘道
 
-針對簡單的 .NET 雲端原生應用程式，您可以考慮[Ocelot 閘道](https://github.com/ThreeMammals/Ocelot)。 Ocelot 是針對 .NET 微服務所建立的開放原始碼 API 閘道，需要在其系統中整合進入點。 它是輕量、快速、可調整的。 
+針對簡單的 .NET 雲端原生應用程式，您可以考慮[Ocelot 閘道](https://github.com/ThreeMammals/Ocelot)。 Ocelot 是針對 .NET 微服務所建立的開放原始碼 API 閘道，需要在其系統中整合進入點。 它是輕量、快速、可調整的。
 
 就像任何 API 閘道，其主要功能是將傳入的 HTTP 要求轉送到下游服務。 此外，它也支援可在 .NET Core 中介軟體管線中設定的各種功能。 下表提供其功能集。
 
@@ -71,13 +71,13 @@ ms.locfileid: "71183123"
 
 每個 Ocelot 閘道都會在 JSON 設定檔中指定上游和下游位址，以及可設定的功能。 用戶端會將 HTTP 要求傳送至 Ocelot 閘道。 一旦收到，Ocelot 會透過其管線將 HttpRequest 物件傳遞至其設定所指定的狀態。 在管線的結尾，Ocelot 會建立新的 HTTPResponseObject，並將它傳遞至下游服務。 針對回應，Ocelot 會反轉管線，並將回應傳回給用戶端。
 
-Ocelot 是以 NuGet 套件的形式提供。 其以 NET Standard 2.0 為目標，使其與 .NET Core 2.0 + 和 .NET Framework 4.6.1 + 執行時間相容。 Ocelot 與在 .NET Core 支援的平臺上說出 HTTP 並執行的任何專案整合：Linux、macOS 和 Windows。 Ocelot 是可擴充的，可支援許多現代化平臺，包括 Docker 容器、Azure Kubernetes Services 或其他公用雲端。  Ocelot 整合了開放原始碼套件，例如[Consul](https://www.consul.io)、 [GraphQL](https://graphql.org)和 Netflix 的[Eureka](https://github.com/Netflix/eureka)。 
+Ocelot 是以 NuGet 套件的形式提供。 其以 NET Standard 2.0 為目標，使其與 .NET Core 2.0 + 和 .NET Framework 4.6.1 + 執行時間相容。 Ocelot 與在 .NET Core 支援的平臺（Linux、macOS 和 Windows）上說 HTTP 並執行的任何專案整合。 Ocelot 是可擴充的，可支援許多現代化平臺，包括 Docker 容器、Azure Kubernetes Services 或其他公用雲端。  Ocelot 整合了開放原始碼套件，例如[Consul](https://www.consul.io)、 [GraphQL](https://graphql.org)和 Netflix 的[Eureka](https://github.com/Netflix/eureka)。
 
 針對不需要商用 API 閘道豐富功能集的簡單雲端原生應用程式，請考慮使用 Ocelot。
 
 ## <a name="azure-application-gateway"></a>Azure 應用程式閘道
 
-針對簡單的閘道需求，您可以考慮[Azure 應用程式閘道](https://docs.microsoft.com/azure/application-gateway/overview)。 以 Azure [PaaS 服務](https://azure.microsoft.com/overview/what-is-paas/)的形式提供，其中包含基本的閘道功能，例如 URL 路由、SSL 終止和 Web 應用程式防火牆。 此服務支援[第7層負載平衡](https://www.nginx.com/resources/glossary/layer-7-load-balancing/)功能。 有了第7層，您可以根據 HTTP 訊息的實際內容來路由傳送要求，而不只是低層級的 TCP 網路封包。 
+針對簡單的閘道需求，您可以考慮[Azure 應用程式閘道](https://docs.microsoft.com/azure/application-gateway/overview)。 以 Azure [PaaS 服務](https://azure.microsoft.com/overview/what-is-paas/)的形式提供，其中包含基本的閘道功能，例如 URL 路由、SSL 終止和 Web 應用程式防火牆。 此服務支援[第7層負載平衡](https://www.nginx.com/resources/glossary/layer-7-load-balancing/)功能。 有了第7層，您可以根據 HTTP 訊息的實際內容來路由傳送要求，而不只是低層級的 TCP 網路封包。
 
 在本書中，我們宣導了在[Kubernetes](https://www.infoworld.com/article/3268073/what-is-kubernetes-your-next-application-platform.html)中裝載雲端原生系統的功能。 容器協調器，Kubernetes 會將容器化工作負載的部署、調整和操作方面的顧慮自動化。 Azure 應用程式閘道可以設定為[Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/)叢集的 API 閘道。
 
@@ -91,17 +91,17 @@ Kubernetes 包含支援 HTTP （層級7）負載平衡的內建功能[，稱為�
 
 ## <a name="azure-api-management"></a>Azure API 管理
 
-針對適中到大規模的雲端原生系統，您可以考慮[AZURE API 管理](https://azure.microsoft.com/services/api-management/)。 這是一種雲端式服務，不僅能解決您的 API 閘道需求，還提供功能完整的開發人員和系統管理體驗。 API 管理如圖4-6 所示。 
+針對適中到大規模的雲端原生系統，您可以考慮[AZURE API 管理](https://azure.microsoft.com/services/api-management/)。 這是一種雲端式服務，不僅能解決您的 API 閘道需求，還提供功能完整的開發人員和系統管理體驗。 API 管理如圖4-6 所示。
 
 ![Azure API 管理](./media/azure-api-management.png)
 
 **圖4-6。** Azure API 管理
 
-若要開始，API 管理會公開閘道伺服器，讓您可以根據可設定的規則和原則來控制後端服務的存取權。 這些服務可以在 Azure 雲端、您的內部內部部署資料中心或其他公用雲端中。 API 金鑰和 JWT 權杖會決定誰可以執行哪些動作。 記錄所有流量以供分析之用。 
+若要開始，API 管理會公開閘道伺服器，讓您可以根據可設定的規則和原則來控制後端服務的存取權。 這些服務可以在 Azure 雲端、您的內部內部部署資料中心或其他公用雲端中。 API 金鑰和 JWT 權杖會決定誰可以執行哪些動作。 記錄所有流量以供分析之用。
 
-對於開發人員而言，API 管理提供開發人員入口網站，可讓您存取服務、檔和用來叫用它們的範例程式碼。 開發人員可以使用 Swagger/Open API 來檢查服務端點，並分析其使用方式。 此服務可跨主要開發平臺運作： .NET、JAVA、Golang 等等。 
+對於開發人員而言，API 管理提供開發人員入口網站，可讓您存取服務、檔和用來叫用它們的範例程式碼。 開發人員可以使用 Swagger/Open API 來檢查服務端點，並分析其使用方式。 此服務可跨主要開發平臺運作： .NET、JAVA、Golang 等等。
 
-發行者入口網站會公開管理儀表板，其中系統管理員會公開 Api 並管理其行為。 可以授與服務存取權、監視服務健全狀況，以及收集服務遙測。 系統管理員會將*原則*套用至每個端點，以影響行為。 [原則](https://docs.microsoft.com/azure/api-management/api-management-howto-policies)是預先建立的語句，會針對每個服務呼叫循序執行。  原則會針對輸入呼叫、輸出呼叫或在發生錯誤時叫用。 原則可以套用至不同的服務範圍，以在結合原則時啟用決定性順序。 產品隨附許多預先建立的[原則](https://docs.microsoft.com/azure/api-management/api-management-policies)。 
+發行者入口網站會公開管理儀表板，其中系統管理員會公開 Api 並管理其行為。 可以授與服務存取權、監視服務健全狀況，以及收集服務遙測。 系統管理員會將*原則*套用至每個端點，以影響行為。 [原則](https://docs.microsoft.com/azure/api-management/api-management-howto-policies)是預先建立的語句，會針對每個服務呼叫循序執行。  原則會針對輸入呼叫、輸出呼叫或在發生錯誤時叫用。 原則可以套用至不同的服務範圍，以在結合原則時啟用決定性順序。 產品隨附許多預先建立的[原則](https://docs.microsoft.com/azure/api-management/api-management-policies)。
 
 以下範例說明原則會如何影響您的雲端原生服務的行為：  
 
@@ -122,7 +122,7 @@ Azure API 管理可跨[四個不同層級](https://azure.microsoft.com/pricing/d
 - 標準
 - 溢價
 
-開發人員層適用于非生產工作負載和評估。 另一層則提供更多的電源、功能和更高的服務等級協定（Sla）。 高階層提供[Azure 虛擬網路](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview)和[多區域支援](https://docs.microsoft.com/azure/api-management/api-management-howto-deploy-multi-region)。 所有層都有每小時固定的價格。 
+開發人員層適用于非生產工作負載和評估。 另一層則提供更多的電源、功能和更高的服務等級協定（Sla）。 高階層提供[Azure 虛擬網路](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview)和[多區域支援](https://docs.microsoft.com/azure/api-management/api-management-howto-deploy-multi-region)。 所有層都有每小時固定的價格。
 
 Microsoft 最近宣佈了 Azure API 管理的[API 管理無伺服器層](https://azure.microsoft.com/blog/announcing-azure-api-management-for-serverless-architectures/)。 所謂的「取用」*定價層*，服務是以無伺服器運算模型為中心設計之 API 管理的變異。 不同于先前所顯示的「預先配置」定價層，取用層提供立即布建和按動作付費的定價。
 
@@ -130,7 +130,7 @@ Microsoft 最近宣佈了 Azure API 管理的[API 管理無伺服器層](https:/
 
 - 微服務使用無伺服器技術（例如[Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview)和[Azure Logic Apps](https://azure.microsoft.com/services/logic-apps/)）來實行。
 - Azure 支援的服務資源，例如服務匯流排佇列和主題、Azure 儲存體等。
-- 微服務，其中的流量偶爾會發生大量的尖峰，但大部分的時間都保持不變。 
+- 微服務，其中的流量偶爾會發生大量的尖峰，但大部分的時間都保持不變。
 
 取用層會使用相同的基礎服務 API 管理元件，但是會根據動態配置的資源來採用完全不同的架構。 它完美地配合無伺服器運算模型：
 
@@ -138,19 +138,19 @@ Microsoft 最近宣佈了 Azure API 管理的[API 管理無伺服器層](https:/
 - 沒有閒置容量。
 - 高可用性。
 - 自動調整。
-- 成本是以實際使用量為基礎。 
+- 成本是以實際使用量為基礎。
   
-新的耗用量層是雲端原生系統的絕佳選擇，會將無伺服器資源公開為 Api。 
+新的耗用量層是雲端原生系統的絕佳選擇，會將無伺服器資源公開為 Api。
 
 > 在撰寫本文時，取用層會在 Azure 雲端中處於預覽狀態。
 
 ## <a name="real-time-communication"></a>即時通訊
 
-對於透過 HTTP 與後端雲端原生系統進行通訊的前端應用程式，即時或推播是另一個選項。 應用程式（例如，金融部門、線上教育、遊戲和作業進度更新）需要來自後端的瞬間、即時回應。 使用一般 HTTP 通訊時，用戶端無法得知何時可以使用新資料。 用戶端必須持續*輪詢*或傳送要求到伺服器。 使用*即時*通訊時，伺服器可以隨時將新資料推送至用戶端。 
+對於透過 HTTP 與後端雲端原生系統進行通訊的前端應用程式，即時或推播是另一個選項。 應用程式（例如，金融部門、線上教育、遊戲和作業進度更新）需要來自後端的瞬間、即時回應。 使用一般 HTTP 通訊時，用戶端無法得知何時可以使用新資料。 用戶端必須持續*輪詢*或傳送要求到伺服器。 使用*即時*通訊時，伺服器可以隨時將新資料推送至用戶端。
 
-即時系統通常是以高頻率的資料流程和大量的並行用戶端連線為特色。 手動執行即時連線可能很快就會變得複雜，而需要非一般的基礎結構，以確保連線用戶端的擴充性和可靠的訊息。 您可以自行管理 Azure Redis 快取的實例，以及一組以用戶端親和性的粘滯會話設定的負載平衡器。 
+即時系統通常是以高頻率的資料流程和大量的並行用戶端連線為特色。 手動執行即時連線可能很快就會變得複雜，而需要非一般的基礎結構，以確保連線用戶端的擴充性和可靠的訊息。 您可以自行管理 Azure Redis 快取的實例，以及一組以用戶端親和性的粘滯會話設定的負載平衡器。
 
-[Azure SignalR Service](https://azure.microsoft.com/services/signalr-service/)是完全受控的 Azure 服務，可為您的雲端原生應用程式簡化即時通訊。 如容量布建、調整和持續連線等技術執行詳細資料，將會被抽象化。 系統會為您處理 99.9% 服務等級協定。 您將焦點放在應用程式功能，而不是基礎結構的管道。 
+[Azure SignalR Service](https://azure.microsoft.com/services/signalr-service/)是完全受控的 Azure 服務，可為您的雲端原生應用程式簡化即時通訊。 如容量布建、調整和持續連線等技術執行詳細資料，將會被抽象化。 系統會為您處理99.9% 服務等級協定。 您將焦點放在應用程式功能，而不是基礎結構的管道。
 
 啟用之後，雲端式 HTTP 服務就可以直接將內容更新推送至連線的用戶端，包括瀏覽器、行動和桌面應用程式。 用戶端會在不需要輪詢伺服器的情況下進行更新。 Azure SignalR 會將建立即時連線的傳輸技術抽象化，包括 Websocket、伺服器端事件和長時間輪詢。 開發人員著重于將訊息傳送至已連線用戶端的所有或特定子集。
 

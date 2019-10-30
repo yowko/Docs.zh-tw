@@ -2,12 +2,12 @@
 title: .NET 微服務。 容器化 .NET 應用程式的架構
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務是模組化的獨立可部署服務。 適用於 Linux 與 Windows 的 Docker 容器，可統合服務及其相依性到單一個單位，簡化部署及測試，然後即可於隔離的環境中執行。
 ms.date: 01/07/2019
-ms.openlocfilehash: dcfff8b06dc77b47e6586ea82c82acc30a5cf3df
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7fa4935fe56ca873a5311812637964083e34170e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848873"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089902"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服務：容器化 .NET 應用程式的架構
 
@@ -15,16 +15,16 @@ ms.locfileid: "70848873"
 
 **版本 v2.2** - 更新至 ASP.NET Core 2.2
 
-本指南介紹如何開發微服務應用程式及使用容器進行管理， 並討論使用 .NET Core 和 Docker 容器的架構設計和實作方法。 
+本指南介紹如何開發微服務應用程式及使用容器進行管理， 並討論使用 .NET Core 和 Docker 容器的架構設計和實作方法。
 
 為了讓您更輕鬆地開始使用，本指南將重點放在您可以探索的容器化和微服務應用程式。 此參考應用程式位於 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) GitHub 存放庫中。
 
 ## <a name="action-links"></a>動作連結
 
-- 以您選擇的格式下載這本電子書：| [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
+- 以您選擇的格式下載這本電子書（僅限英文版）： |[PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
 
 - 複製/派生 [GitHub 上的 eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 參考應用程式
- 
+
 - 觀賞 [Channel 9 上的介紹影片](https://aka.ms/microservices-video)
 
 - 立即了解[微服務架構](https://aka.ms/MicroservicesArchitecture)
@@ -33,7 +33,7 @@ ms.locfileid: "70848873"
 
 企業透過容器，逐漸實現成本節約、解決部署問題，以及改善 DevOps 和生產環境作業。 Microsoft 藉由建立 Azure Kubernetes Service 和 Azure Service Fabric 等產品，以及藉由與 Docker、Mesosphere 和 Kubernetes 等業界領導者合作，不斷為 Windows 和 Linux 創新容器。 這些產品提供容器解決方案，可協助公司以雲端速度和規模建置及部署應用程式，而不論其選擇的平台或工具為何。
 
-Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系統中最重要廠商的支援 (Microsoft 是其中一個支援 Docker 的主要雲端廠商)。未來，Docker 可能會在雲端或內部部署的任何資料中心廣泛運用。
+Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系統中最重要廠商的支援 （Microsoft 是支援 Docker 的主要雲端廠商之一）。在未來，Docker 可能會在雲端或內部部署的任何資料中心內普及。
 
 此外，[微服務](https://martinfowler.com/articles/microservices.html)架構已躍升為分散式關鍵任務應用程式的重要方法。 在微服務架構中，應用程式會建置在一組可獨立開發、測試、部署及設定版本的服務之上。
 
@@ -41,13 +41,13 @@ Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系
 
 本指南介紹如何開發微服務應用程式及使用容器進行管理， 並討論使用 .NET Core 和 Docker 容器的架構設計和實作方法。 為了讓您更輕鬆地開始使用容器和微服務，本指南將重點放在您可以探索的容器化和微服務應用程式。 此範例應用程式位於 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) GitHub 存放庫中。
 
-此指南提供主要在開發環境層級的基本開發和架構指引，並著重於兩項技術：Docker 與 .NET Core。 我們的用意是讓您在思考應用程式設計，但不想要將重點放在生產環境的基礎結構 (雲端或內部部署) 時，可以閱讀本指南。 稍後，當您建立可實際執行的應用程式時，您將會制定基礎結構的相關決策。 因此，本指南與基礎結構無關，而是偏重開發環境。
+本指南提供主要在開發環境層級的基本開發和架構指引，並著重於兩項技術：Docker 和 .NET Core。 我們的用意是讓您在思考應用程式設計，但不想要將重點放在生產環境的基礎結構 (雲端或內部部署) 時，可以閱讀本指南。 稍後，當您建立可實際執行的應用程式時，您將會制定基礎結構的相關決策。 因此，本指南與基礎結構無關，而是偏重開發環境。
 
 研讀本指南之後，您的下一個步驟是了解 Microsoft Azure 上可實際執行的微服務。
 
-## <a name="version"></a>Version
+## <a name="version"></a>版本
 
-本指南已經過修訂，涵蓋了 **.NET Core 2.2** 版，加上許多和 .NET Core 2.2 同時期， 同一波科技「浪潮」相關的更新 (亦即 Azure 加上其他第三方技術)。 這也是同步將書籍版本更新為 **2.2** 版的原因。 
+本指南已經過修訂，涵蓋了 **.NET Core 2.2** 版，加上許多和 .NET Core 2.2 同時期， 同一波科技「浪潮」相關的更新 (亦即 Azure 加上其他第三方技術)。 這也是同步將書籍版本更新為 **2.2** 版的原因。
 
 ## <a name="what-this-guide-does-not-cover"></a>本指南未涵蓋的內容
 
@@ -72,7 +72,7 @@ Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系
 
 ## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>相關微服務和容器參考應用程式：eShopOnContainers
 
-eShopOnContainers 應用程式是 .NET Core 和微服務的開放原始碼參考應用程式，專為使用 Docker 容器進行部署所設計。 此應用程式是由多個子系統所組成，包括數個電子商店 UI 前端 (Web MVC 應用程式、Web SPA 和原生行動應用程式)。 它也包含用來執行所有必要伺服器端作業的後端微服務和容器。 
+eShopOnContainers 應用程式是 .NET Core 和微服務的開放原始碼參考應用程式，專為使用 Docker 容器進行部署所設計。 此應用程式是由多個子系統所組成，包括數個電子商店 UI 前端 (Web MVC 應用程式、Web SPA 和原生行動應用程式)。 它也包含用來執行所有必要伺服器端作業的後端微服務和容器。
 
 應用程式的目的是要展示架構模式。 **這不是用於生產環境的範本**，無法用來啟動真實世界應用程式。 事實上，應用程式永久處於 beta 版狀態，因為在出現可能有興趣的新技術時，也會使用它來進行測試。
 
@@ -174,7 +174,7 @@ Microsoft 與列於 <https://www.microsoft.com> 「商標」網頁的商標是 M
 
 Mac 與 macOS 是 Apple Inc. 的商標。
 
-Docker 鯨魚標誌是 Docker, Inc. 的註冊商標。使用需要許可。
+Docker whale 標誌是 Docker，Inc. 的注冊商標，由許可權使用。
 
 所有其他商標和標誌屬於其各自擁有者的財產。
 

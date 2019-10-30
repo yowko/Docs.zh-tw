@@ -2,12 +2,12 @@
 title: Azure 中的資料儲存體
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |Azure 中的資料儲存體
 ms.date: 06/30/2019
-ms.openlocfilehash: 6834e47e11c4941735343e3f6bfbfe4cb642e0dd
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 1a86cecf005c6dbdfda5cf4cacfafaad4711c076
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521117"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087761"
 ---
 # <a name="data-storage-in-azure"></a>Azure 中的資料儲存體
 
@@ -15,7 +15,7 @@ ms.locfileid: "72521117"
 
 如我們在本書中所見，雲端正在改變應用程式的設計、部署和管理方式。 當您移至雲端時，重要的問題是如何移動資料？ 幸運的是，Azure 雲端提供許多選項。
 
-您可以直接布建 Azure 虛擬機器，並安裝您選擇的資料庫。 這就是所謂的[基礎結構即服務（IaaS）](https://www.techopedia.com/definition/141/infrastructure-as-a-service-iaas)。 這種方法可簡化將內部部署資料庫移至雲端的工作，但會將管理虛擬機器和資料庫的負擔轉移給您。  
+您可以直接布建 Azure 虛擬機器，並安裝您選擇的資料庫。 這就是所謂的[基礎結構即服務（IaaS）](https://www.techopedia.com/definition/141/infrastructure-as-a-service-iaas)。 這種方法可簡化將內部部署資料庫移至雲端的工作，但會將管理虛擬機器和資料庫的負擔轉移給您。
 
 取而代之的是，完全受控的[資料庫即服務（DBaaS）](https://www.stratoscale.com/blog/dbaas/what-is-database-as-a-service/)是較好的選擇。 您可以取得許多內建功能，而裝載、維護和授權是由 Microsoft 所管理。 Azure 具備不同種類的完全受控資料儲存選項，每個都有特定的優點。 它們全都支援即時容量和隨用隨付模型。
 
@@ -23,7 +23,7 @@ ms.locfileid: "72521117"
 
 ## <a name="azure-sql-database"></a>Azure SQL Database
 
-[Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)是以 Microsoft SQL Server 資料庫引擎為基礎的功能豐富、一般用途的關係資料庫即服務（DBaaS）。 它完全由 Microsoft 管理，而且是高效能、可靠且安全的雲端資料庫。 服務會共用在內部部署版本的 SQL Server 中找到的許多功能。 
+[Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)是以 Microsoft SQL Server 資料庫引擎為基礎的功能豐富、一般用途的關係資料庫即服務（DBaaS）。 它完全由 Microsoft 管理，而且是高效能、可靠且安全的雲端資料庫。 服務會共用在內部部署版本的 SQL Server 中找到的許多功能。
 
 您可以在幾分鐘內布建 SQL Database 伺服器和資料庫。 當您的應用程式需求從幾個客戶成長到百萬個時，Azure SQL Database 在最短的停機時間內即時調整規模。 您可以動態新增或移除資源，包括 CPU 電源、記憶體、IO 輸送量和配置給資料庫的儲存體。
 
@@ -39,15 +39,15 @@ ms.locfileid: "72521117"
 
 - 一種[彈性](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool)集區，其中 SQL 資料庫的集合會以設定的價格共用單一 SQL Database 伺服器。 您可以視需要在彈性集區中移動或移出單一資料庫，以優化一組資料庫的價格效能。
 
-- [受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)，其中是系統和使用者資料庫的集合，可提供與內部部署 SQL Server 近乎 100% 的相容性。 此選項支援較大的資料庫，最高可達 35 TB，並放在[Azure 虛擬網路](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview)中，以獲得更好的隔離。
+- [受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)，其中是系統和使用者資料庫的集合，可提供與內部部署 SQL Server 近乎100% 的相容性。 此選項支援較大的資料庫，最高可達 35 TB，並放在[Azure 虛擬網路](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview)中，以獲得更好的隔離。
 
-Azure SQL Database 是完全受控的[平臺即服務（PaaS）資料庫引擎](https://docs.microsoft.com/azure/sql-database/sql-database-paas)，可在不需要使用者介入的情況下，處理升級、修補、備份和監視。 它一律會執行最新穩定版本的 SQL Server 資料庫引擎和修補的作業系統，並保證 99.99% 的可用性。 其中一項功能是[主動式異地](https://docs.microsoft.com/azure/sql-database/sql-database-active-geo-replication)複寫，可讓您在相同或不同的 Azure 資料中心內建立可讀取的次要資料庫。 失敗時，可以起始容錯移轉至次要資料庫。 此時，其他次要複本會自動連結到新的主要複本。 在相同或不同的區域中，最多可支援四個次要複本，而且這些次要資料庫也可以用於唯讀存取查詢。
+Azure SQL Database 是完全受控的[平臺即服務（PaaS）資料庫引擎](https://docs.microsoft.com/azure/sql-database/sql-database-paas)，可在不需要使用者介入的情況下，處理升級、修補、備份和監視。 它一律會執行最新穩定版本的 SQL Server 資料庫引擎和修補的作業系統，並保證99.99% 的可用性。 其中一項功能是[主動式異地](https://docs.microsoft.com/azure/sql-database/sql-database-active-geo-replication)複寫，可讓您在相同或不同的 Azure 資料中心內建立可讀取的次要資料庫。 失敗時，可以起始容錯移轉至次要資料庫。 此時，其他次要複本會自動連結到新的主要複本。 在相同或不同的區域中，最多可支援四個次要複本，而且這些次要資料庫也可以用於唯讀存取查詢。
 
 Azure SQL Database 包含[內建的監視和智慧型調整](https://docs.microsoft.com/azure/sql-database/sql-database-monitoring-tuning-index)功能，可協助您將效能最大化並降低營運成本。 例如，[自動調整](https://docs.microsoft.com/azure/sql-database/sql-database-automatic-tuning)功能可根據 AI 和機器學習提供持續的效能微調。 服務會從您執行中的工作負載學習，並且可以套用微調建議。 Azure SQL Database 在啟用自動調整的情況下執行的時間越長，效能就愈好。
 
 [Azure SQL Database 無伺服器](https://docs.microsoft.com/azure/sql-database/sql-database-serverless)（在本文撰寫時可供預覽）是單一資料庫的計算層，可根據工作負載需求自動調整，並以每秒使用的計算量來計費。 無伺服器計算層也會在非使用中期間自動暫停資料庫，因此只會收取儲存體費用。 當活動傳回時，它會自動繼續。
 
-最後，有新的[Azure SQL Database 超大規模資料庫](https://azure.microsoft.com/services/sql-database/)定價層。 它是由可高度擴充的儲存體架構所提供，可讓您的資料庫視需要成長，而不必預先布建儲存體資源。 您可以獨立調整計算和儲存體資源，為每個工作負載提供優化效能的彈性。 Azure SQL Database 超大規模資料庫已針對[OLTP](https://en.wikipedia.org/wiki/Online_transaction_processing)處理和高輸送量分析工作負載進行優化，儲存體最多可達 100 TB。  透過大量讀取的工作負載，超大規模資料庫會視需要布建額外的讀取複本來提供快速相應放大，以卸載讀取工作負載。 
+最後，有新的[Azure SQL Database 超大規模資料庫](https://azure.microsoft.com/services/sql-database/)定價層。 它是由可高度擴充的儲存體架構所提供，可讓您的資料庫視需要成長，而不必預先布建儲存體資源。 您可以獨立調整計算和儲存體資源，為每個工作負載提供優化效能的彈性。 Azure SQL Database 超大規模資料庫已針對[OLTP](https://en.wikipedia.org/wiki/Online_transaction_processing)處理和高輸送量分析工作負載進行優化，儲存體最多可達 100 TB。  透過大量讀取的工作負載，超大規模資料庫會視需要布建額外的讀取複本來提供快速相應放大，以卸載讀取工作負載。
 
 除了傳統的 Microsoft SQL Server 堆疊之外，Azure 也提供數個熱門開放原始碼資料庫的受控版本。
 
@@ -59,7 +59,7 @@ Azure SQL Database 包含[內建的監視和智慧型調整](https://docs.micros
 
 - 內建[高可用性](https://docs.microsoft.com/azure/mysql/concepts-high-availability)。
 
-- 可預測的效能，使用內含的[隨用隨付定價](https://docs.microsoft.com/azure/mysql/concepts-pricing-tiers)。 
+- 可預測的效能，使用內含的[隨用隨付定價](https://docs.microsoft.com/azure/mysql/concepts-pricing-tiers)。
 
 - 在幾秒內視需要進行[調整](https://docs.microsoft.com/azure/mysql/concepts-high-availability)。
 
@@ -69,7 +69,7 @@ Azure SQL Database 包含[內建的監視和智慧型調整](https://docs.micros
 
 - 企業級安全性與合規性。
 
-這些內建 PaaS 功能對於在其資料中心具有數百個「策略性」（非策略性）資料庫，但沒有執行修補、備份、安全性和效能監視的資源的組織而言非常重要。 
+這些內建 PaaS 功能對於在其資料中心具有數百個「策略性」（非策略性）資料庫，但沒有執行修補、備份、安全性和效能監視的資源的組織而言非常重要。
 
 此外， [Azure 資料移轉服務](https://azure.microsoft.com/services/database-migration/)可以將多個資料庫來源的資料移轉至 Azure 資料平臺，並將停機時間降到最低。 服務會產生評量報告，並提供建議以引導您完成執行遷移所需的變更，也就是小型或大型。
 
@@ -87,8 +87,8 @@ Azure SQL Database 包含[內建的監視和智慧型調整](https://docs.micros
 
 - 內建[高可用性](https://docs.microsoft.com/azure/mariadb/concepts-high-availability)。
 
-- 可預測的效能，使用內含的[隨用隨付定價](https://docs.microsoft.com/azure/mariadb/concepts-pricing-tiers)。 
- 
+- 可預測的效能，使用內含的[隨用隨付定價](https://docs.microsoft.com/azure/mariadb/concepts-pricing-tiers)。
+
 - 在幾秒內視需要進行[調整](https://docs.microsoft.com/azure/mariadb/concepts-high-availability)。
 
 - 保護待用和移動中敏感性資料的安全。
@@ -97,7 +97,7 @@ Azure SQL Database 包含[內建的監視和智慧型調整](https://docs.micros
 
 - 企業級安全性與合規性。
 
-## <a name="azure-database-for-postgresql"></a>適用於 PostgreSQL 的 Azure 資料庫 
+## <a name="azure-database-for-postgresql"></a>適用於 PostgreSQL 的 Azure 資料庫
 
 [于 postgresql](https://www.postgresql.org/)是另一個受歡迎的開放原始碼關係資料庫，有超過30年的作用中開發。 這是一般用途和物件關係資料庫管理系統。 其授權被視為「自由」，而產品可免費使用、修改及散佈任何形式。 許多大型企業（包括 Apple、Red Hat 和 Fujitsu）都有使用於 postgresql 的建立產品。
 
@@ -163,7 +163,7 @@ Cosmos DB 是*多模型資料平臺*，可讓您使用數個支援的 NoSQL 模�
 
 大部分的分散式資料庫可讓開發人員在兩種一致性模型之間做選擇： [強式一致性](https://en.wikipedia.org/wiki/Strong_consistency)和 [最終一致性](https://en.wikipedia.org/wiki/Eventual_consistency)。 *強式一致性*是資料可程式性的黃金標準。 它保證查詢結果一律會傳回最新的資料，即使系統必須產生延遲，等待更新在所有資料庫複本之間複寫。 另一方面，設定為*最終一致性*的系統會立即傳回資料，即使該資料不是最新的複本也一樣。 此選項可提供更高的可用性、更高的規模，並提升效能。
 
-Azure Cosmos DB 提供一系列[五個定義完善的一致性模型](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)，如圖5-16 所示。 這些選項可讓您根據應用程式的需求，針對可用性和效能做出精確的選擇和細微的取捨。 這些模型已妥善定義、直覺化，並受到服務等級協定（Sla）的支援。 
+Azure Cosmos DB 提供一系列[五個定義完善的一致性模型](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)，如圖5-16 所示。 這些選項可讓您根據應用程式的需求，針對可用性和效能做出精確的選擇和細微的取捨。 這些模型已妥善定義、直覺化，並受到服務等級協定（Sla）的支援。
 
 ![Cosmos DB 一致性層級](./media/cosmos-db-consistency-levels.png)
 
@@ -171,7 +171,7 @@ Azure Cosmos DB 提供一系列[五個定義完善的一致性模型](https://do
 
 ### <a name="partitioning"></a>資料分割
 
-Azure Cosmos DB 會使用自動[分割](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview)來調整資料庫，以符合您應用程式的效能需求。 
+Azure Cosmos DB 會使用自動[分割](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview)來調整資料庫，以符合您應用程式的效能需求。
 
 您可以藉由建立[資料庫、容器和專案](https://docs.microsoft.com/azure/cosmos-db/databases-containers-items)來管理 Cosmos DB 資料中的資料，如圖5-17 所示。
 
@@ -193,7 +193,7 @@ Azure Cosmos DB 會使用自動[分割](https://docs.microsoft.com/azure/cosmos-
 
 ## <a name="azure-redis-cache"></a>Azure Redis 快取
 
-瞭解快取以改善效能和擴充性的優點很容易理解。 
+瞭解快取以改善效能和擴充性的優點很容易理解。
 
 針對雲端原生應用程式，新增快取的常見位置是在 API 閘道上。 閘道可做為所有傳入要求的前端。 藉由新增快取，您可以藉由傳回快取的資料，並避免往返本機資料庫或下游服務，來提升效能和回應性。 圖5-19 顯示雲端原生應用程式的快取架構。
 

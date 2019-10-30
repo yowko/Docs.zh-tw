@@ -2,18 +2,18 @@
 title: 應用程式復原模式
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |應用程式復原模式
 ms.date: 06/30/2019
-ms.openlocfilehash: 67ae20f14a67f3a96d6c74cad727afe680ff3178
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 13811efaa88e0bd2824add1c8712b78b18d46375
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315950"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087754"
 ---
 # <a name="application-resiliency-patterns"></a>應用程式復原模式
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-第一道防線是具備軟體功能的應用程式恢復功能。 
+第一道防線是具備軟體功能的應用程式恢復功能。
 
 雖然您可以投入相當長的時間來撰寫自己的復原架構，但這類產品已經存在。 例如， [Polly](http://www.thepollyproject.org/)是完整的 .net 復原和暫時性錯誤處理程式庫，可讓開發人員以流暢且安全線程的方式來表示復原原則。 Polly 是以完整 .NET Framework 或 .NET Core 所建立的應用程式為目標。 圖6-2 顯示可從 Polly 程式庫取得的復原原則（也就是功能）。 這些原則可以個別套用或結合在一起。
 

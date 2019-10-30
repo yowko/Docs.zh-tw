@@ -2,12 +2,12 @@
 title: 健康狀態監視
 description: 瀏覽實作健康情況監視的其中一種方式。
 ms.date: 01/07/2019
-ms.openlocfilehash: 3b81537ca8e0c5cc7ce15ab64ab3235b699dc7a9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2d43efa7b6cfb855a033ee4d766c64c2472ceb36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040070"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094073"
 ---
 # <a name="health-monitoring"></a>健康狀態監視
 
@@ -110,7 +110,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     //…
     app.UseHealthChecks("/hc");
     //…
-} 
+}
 ```
 
 叫用端點 `<yourmicroservice>/hc` 時，它會執行啟動類別中 `AddHealthChecks()` 方法內所設定的所有健康狀態檢查，並顯示結果。

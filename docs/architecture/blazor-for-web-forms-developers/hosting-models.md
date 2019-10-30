@@ -4,12 +4,12 @@ description: 瞭解裝載 Blazor 應用程式的不同方式，包括在 WebAsse
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 82628976bcb1f1cee3089aa25488396af44d0f1a
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5bf55fa686691acc25508d3d9a6dfaf8aca321ca
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520295"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088050"
 ---
 # <a name="blazor-app-hosting-models"></a>Blazor 應用程式裝載模型
 
@@ -18,13 +18,13 @@ ms.locfileid: "72520295"
 Blazor apps 可以裝載于 IIS 中，就像 ASP.NET Web Forms 應用程式一樣。 Blazor apps 也可透過下列其中一種方式來裝載：
 
 - 在 WebAssembly 的瀏覽器中的用戶端。
-- ASP.NET Core 應用程式中的伺服器端。 
+- ASP.NET Core 應用程式中的伺服器端。
 
 ## <a name="blazor-webassembly-apps"></a>Blazor WebAssembly 應用程式
 
-Blazor WebAssembly apps 會直接在 WebAssembly 型 .NET 執行時間的瀏覽器中執行。 Blazor WebAssembly apps 的運作方式類似于前端 JavaScript 架構，例如角度或反應。 不過，不是撰寫您撰寫C#的 JavaScript。 .NET 執行時間會隨應用程式一起下載，以及應用程式元件和任何必要的相依性。 不需要瀏覽器外掛程式或擴充功能。 
+Blazor WebAssembly apps 會直接在 WebAssembly 型 .NET 執行時間的瀏覽器中執行。 Blazor WebAssembly apps 的運作方式類似于前端 JavaScript 架構，例如角度或反應。 不過，不是撰寫您撰寫C#的 JavaScript。 .NET 執行時間會隨應用程式一起下載，以及應用程式元件和任何必要的相依性。 不需要瀏覽器外掛程式或擴充功能。
 
-下載的元件是一般的 .NET 元件，就像您會在任何其他 .NET 應用程式中使用一樣。 由於執行時間支援 .NET Standard，因此您可以使用現有的 .NET Standard 程式庫搭配 Blazor WebAssembly 應用程式。 不過，這些元件仍然會在瀏覽器安全性沙箱中執行。 某些功能可能會擲回 <xref:System.PlatformNotSupportedException>，像是嘗試存取檔案系統或開啟任意的網路連接。 
+下載的元件是一般的 .NET 元件，就像您會在任何其他 .NET 應用程式中使用一樣。 由於執行時間支援 .NET Standard，因此您可以使用現有的 .NET Standard 程式庫搭配 Blazor WebAssembly 應用程式。 不過，這些元件仍然會在瀏覽器安全性沙箱中執行。 某些功能可能會擲回 <xref:System.PlatformNotSupportedException>，像是嘗試存取檔案系統或開啟任意的網路連接。
 
 當應用程式載入時，.NET 執行時間會啟動並指向應用程式元件。 應用程式啟動邏輯會執行，而根元件則會呈現。 Blazor 會根據元件所呈現的輸出來計算 UI 更新。 接著會套用 DOM 更新。
 
@@ -42,7 +42,7 @@ Blazor WebAssembly 應用程式純粹是以用戶端執行。 這類應用程式
 
 ![Blazor 伺服器](media/hosting-models/blazor-server.png)
 
-如果您已使用 ASP.NET AJAX 和 <xref:System.Web.UI.UpdatePanel> 控制項，則 Blazor 伺服器裝載模型可能會很熟悉。 @No__t_0 控制項會處理套用部分頁面更新，以回應頁面上的觸發程式事件。 當觸發時，`UpdatePanel` 會要求部分更新，然後套用它，而不需要重新整理頁面。 UI 的狀態是使用 `ViewState` 來管理。 Blazor 伺服器應用程式稍有不同，因為應用程式需要與用戶端使用中的連接。 此外，所有 UI 狀態都會保留在伺服器上。 除了這些差異之外，這兩個模型在概念上類似。
+如果您已使用 ASP.NET AJAX 和 <xref:System.Web.UI.UpdatePanel> 控制項，則 Blazor 伺服器裝載模型可能會很熟悉。 `UpdatePanel` 控制項會處理套用部分頁面更新，以回應頁面上的觸發程式事件。 當觸發時，`UpdatePanel` 會要求部分更新，然後套用它，而不需要重新整理頁面。 UI 的狀態是使用 `ViewState` 來管理。 Blazor 伺服器應用程式稍有不同，因為應用程式需要與用戶端使用中的連接。 此外，所有 UI 狀態都會保留在伺服器上。 除了這些差異之外，這兩個模型在概念上類似。
 
 ## <a name="how-to-choose-the-right-blazor-hosting-model"></a>如何選擇正確的 Blazor 裝載模型
 

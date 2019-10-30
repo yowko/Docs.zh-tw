@@ -2,12 +2,12 @@
 title: 將現有 .NET 應用程式部署為 Windows 容器
 description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |將現有的 .NET 應用程式部署為 Windows 容器
 ms.date: 04/29/2018
-ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318621"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089551"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>將現有 .NET 應用程式部署為 Windows 容器
 
@@ -154,11 +154,11 @@ Azure 中支援同時位於 PaaS （平臺即服務）層級之容器的產品�
 
 - **Azure App Service**
 - **Azure Kubernetes Service （AKS 和 ACS）**
-- **Azure Batch** 
+- **Azure Batch**
 
 然後，Azure Container Registry 是 Azure 中託管的高擴充性容器登錄，您可以在註冊和部署自訂容器映射時，從所有先前的產品使用這些登錄。
 
-此外，您可以從容器使用 Azure 中的其他受控服務，例如 Azure SQL Database、Azure Redis 快取、Azure Cosmos DB 等。 另外還有協力廠商解決方案/平臺，Azure Marketplace 例如 Cloud Foundry 和 OpenShift，您也可以在其中使用 Azure 中的容器。 
+此外，您可以從容器使用 Azure 中的其他受控服務，例如 Azure SQL Database、Azure Redis 快取、Azure Cosmos DB 等。 另外還有協力廠商解決方案/平臺，Azure Marketplace 例如 Cloud Foundry 和 OpenShift，您也可以在其中使用 Azure 中的容器。
 
 在接下來的章節中，您可以探索 Microsoft 對於以 Windows 容器為目標時特別使用每個 Azure 產品和解決方案的建議。
 

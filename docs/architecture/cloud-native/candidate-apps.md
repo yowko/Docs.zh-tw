@@ -3,12 +3,12 @@ title: 適用于雲端原生的候選應用程式
 description: 瞭解哪些類型的應用程式可從雲端原生方法獲益
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: e8d520e0a1ad5ab8854d0628daa56a390de523cd
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 127dca45ce8a5e025ca7511e6513afffe64e592d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291227"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087684"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>適用于雲端原生的候選應用程式
 
@@ -30,7 +30,7 @@ ms.locfileid: "72291227"
 
 - 具有必須獨立調整之元件的應用程式
 
-那就是舊版系統。 雖然我們想要建立新的應用程式，但我們通常會負責現代化對企業而言非常重要的舊版工作負載。 一段時間後，繼承應用程式可能會分解成微服務、容器化，最後是「replatformed」到雲端原生架構中。  
+那就是舊版系統。 雖然我們想要建立新的應用程式，但我們通常會負責現代化對企業而言非常重要的舊版工作負載。 一段時間後，繼承應用程式可能會分解成微服務、容器化，最後是「replatformed」到雲端原生架構中。
 
 ### <a name="modernizing-legacy-apps"></a>現代化繼承應用程式
 
@@ -40,7 +40,7 @@ ms.locfileid: "72291227"
 
 **圖 1-10**。 遷移舊版工作負載的策略
 
-非關鍵的整合型應用程式，主要受益于快速隨即轉移（[雲端基礎結構就緒](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)）的遷移。 在這裡，內部部署工作負載會重新裝載至雲端式 VM，而不會變更。 此方法使用[IaaS （基礎結構即服務）模型](https://azure.microsoft.com/overview/what-is-iaas/)。 Azure 包含數個工具，例如（[Azure Migrate](https://aka.ms/azuremigrate)、 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)和[Azure 資料庫移轉服務](https://azure.microsoft.com/campaigns/database-migration/)），讓這類移動變得更容易。 雖然此策略可以節省一些成本，但這類應用程式通常無法解除鎖定並運用雲端運算的優點。 
+非關鍵的整合型應用程式，主要受益于快速隨即轉移（[雲端基礎結構就緒](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)）的遷移。 在這裡，內部部署工作負載會重新裝載至雲端式 VM，而不會變更。 此方法使用[IaaS （基礎結構即服務）模型](https://azure.microsoft.com/overview/what-is-iaas/)。 Azure 包含數個工具，例如（[Azure Migrate](https://aka.ms/azuremigrate)、 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)和[Azure 資料庫移轉服務](https://azure.microsoft.com/campaigns/database-migration/)），讓這類移動變得更容易。 雖然此策略可以節省一些成本，但這類應用程式通常無法解除鎖定並運用雲端運算的優點。
 
 對企業而言至關重要的整合型應用程式，往往受益于增強的隨即轉移（*雲端優化*）遷移。 此方法包含可啟用重要雲端服務的部署優化，而不需變更應用程式的核心架構。 例如，您可能會[容器化](https://docs.microsoft.com/virtualization/windowscontainers/about/)應用程式，並將它部署到容器協調器（例如[Azure Kubernetes Services](https://azure.microsoft.com/services/kubernetes-service/)），這本書稍後會討論到。 一旦進入雲端，應用程式可能會耗用其他雲端服務，例如資料庫、訊息佇列、監視和分散式快取。
 
@@ -70,11 +70,11 @@ ms.locfileid: "72291227"
 
 隨著背後的介紹，我們現在深入探討雲端原生的詳細探討。
 
-### <a name="references"></a>參考
+### <a name="references"></a>reference
 
 - [雲端原生運算基礎](https://www.cncf.io/)
 
-- [.NET 微服務：容器化 .NET 應用程式的架構 @ no__t-0
+- [.NET 微服務：容器化 .NET 應用程式的架構](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 
 - [使用 Azure 雲端和 Windows 容器將現有的 .NET 應用程式現代化](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)
 
@@ -84,7 +84,7 @@ ms.locfileid: "72291227"
 
 - [什麼是基礎結構即程式碼](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)
 
-- @no__t 0Uber 工程的微部署：每日自信地部署 @ no__t-0
+- [Uber 工程的微部署：自信地每天部署](https://eng.uber.com/micro-deploy/)
 
 - [Netflix 如何部署程式碼](https://www.infoq.com/news/2013/06/netflix/)
 

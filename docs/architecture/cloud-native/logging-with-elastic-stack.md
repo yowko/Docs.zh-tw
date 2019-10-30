@@ -2,18 +2,19 @@
 title: 使用彈性堆疊記錄
 description: 使用彈性堆疊、Logstash 和 Kibana 進行記錄
 ms.date: 09/23/2019
-ms.openlocfilehash: 62115edc3f64d87d2c3e84a7b5319ce42cbe729b
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 989834925bc08541bf484e1a4567a56ac324872f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315796"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087069"
 ---
-# <a name="logging-with-elastic-stack"></a>使用彈性堆疊記錄 
+# <a name="logging-with-elastic-stack"></a>使用彈性堆疊記錄
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-有許多良好的集中式記錄工具，其成本會因免費的開放原始碼工具而有所不同，以提供更昂貴的選項。 在許多情況下，免費的工具會比付費供應專案更好或更好。 其中一項工具是三個開放原始碼元件的組合：彈性搜尋、Logstash 和 Kibana。 這些工具統稱為彈性堆疊或 ELK 堆疊。
+有許多良好的集中式記錄工具，其成本會因免費的開放原始碼工具而有所不同，以提供更昂貴的選項。 在許多情況下，免費的工具會比付費供應專案更好或更好。 其中一項工具是三個開放原始碼元件的組合：彈性搜尋、Logstash 和 Kibana。
+這些工具統稱為彈性堆疊或 ELK 堆疊。
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>彈性堆疊有哪些優點？
 
@@ -21,19 +22,19 @@ ms.locfileid: "72315796"
 
 ## <a name="logstash"></a>Logstash
 
-第一個元件是[Logstash](https://www.elastic.co/products/logstash)。 這項工具是用來從各種不同的來源收集記錄資訊。 例如，Logstash 可以從磁片讀取記錄，也會接收來自記錄程式庫（例如[Serilog](https://serilog.net/)）的訊息。 Logstash 可以在記錄檔抵達時，對其進行一些基本的篩選和擴充。 例如，如果您的記錄包含 IP 位址，則 Logstash 可能會設定為執行地理查閱，並取得該訊息的國家/地區或甚至是來源的城市。 
+第一個元件是[Logstash](https://www.elastic.co/products/logstash)。 這項工具是用來從各種不同的來源收集記錄資訊。 例如，Logstash 可以從磁片讀取記錄，也會接收來自記錄程式庫（例如[Serilog](https://serilog.net/)）的訊息。 Logstash 可以在記錄檔抵達時，對其進行一些基本的篩選和擴充。 例如，如果您的記錄包含 IP 位址，則 Logstash 可能會設定為執行地理查閱，並取得該訊息的國家/地區或甚至是來源的城市。
 
 Serilog 是 .NET 語言的記錄程式庫，可讓您進行參數化記錄。 不會產生內嵌欄位的文字記錄訊息，而是會個別保留參數。 這可讓您進行更聰明的篩選和搜尋。 [圖 7-2] 顯示寫入 Logstash 的範例 Serilog 設定。
 
 ```csharp
-var log = new LoggerConfiguration()   
+var log = new LoggerConfiguration()
          .WriteTo.Http("http://localhost:8080")
          .CreateLogger();
 ```
 
 **圖 7-2**Serilog config，用於透過 HTTP 將記錄資訊直接寫入 logstash
 
-Logstash 會使用如圖7-3 所示的設定。 
+Logstash 會使用如圖7-3 所示的設定。
 
 ```
 input {
@@ -59,7 +60,7 @@ Logstash 收集到記錄檔之後，就需要在某個位置放置它們。 雖�
 
 ## <a name="elastic-search"></a>彈性搜尋
 
-彈性搜尋是一種功能強大的搜尋引擎，可在記錄檔抵達時編制索引。 它會對記錄檔快速執行查詢。 彈性搜尋可以處理大量的記錄檔，而且在極端的情況下，可以跨多個節點相應放大。 
+彈性搜尋是一種功能強大的搜尋引擎，可在記錄檔抵達時編制索引。 它會對記錄檔快速執行查詢。 彈性搜尋可以處理大量的記錄檔，而且在極端的情況下，可以跨多個節點相應放大。
 
 已製作成包含參數或已透過 Logstash 處理將參數從它們分割的記錄訊息，可以直接查詢，因為 Elasticsearch 會保留此資訊。
 
@@ -85,11 +86,11 @@ Logstash 收集到記錄檔之後，就需要在某個位置放置它們。 雖�
 
 ## <a name="visualizing-information-with-kibana-web-dashboards"></a>使用 Kibana web 儀表板將資訊視覺化
 
-堆疊的最後一個元件是 Kibana。 這項工具是用來在 web 儀表板中提供互動式視覺效果。 即使是非技術的使用者，也可以製作儀表板。 大部分位於 Elasticsearch 索引中的資料都可以包含在 Kibana 儀表板中。 個別使用者可能會有不同的儀表板需求，而 Kibana 可透過允許使用者特定的儀表板來進行這項自訂。 
+堆疊的最後一個元件是 Kibana。 這項工具是用來在 web 儀表板中提供互動式視覺效果。 即使是非技術的使用者，也可以製作儀表板。 大部分位於 Elasticsearch 索引中的資料都可以包含在 Kibana 儀表板中。 個別使用者可能會有不同的儀表板需求，而 Kibana 可透過允許使用者特定的儀表板來進行這項自訂。
 
 ## <a name="installing-elastic-stack-on-azure"></a>在 Azure 上安裝彈性堆疊
 
-彈性堆疊可以透過數種方式安裝在 Azure 上。 一如往常，您可以布建[虛擬機器，並直接在其上安裝彈性堆疊](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)。 這是一些經驗豐富的使用者慣用的選項，因為它提供最高程度的自訂能力。 在基礎結構即服務上部署時，會帶來顯著的管理額外負荷，以強制採用該路徑的人員取得與基礎結構即服務相關聯之所有工作的擁有權，例如保護機器安全，以及保持最新的修補程式。 
+彈性堆疊可以透過數種方式安裝在 Azure 上。 一如往常，您可以布建[虛擬機器，並直接在其上安裝彈性堆疊](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)。 這是一些經驗豐富的使用者慣用的選項，因為它提供最高程度的自訂能力。 在基礎結構即服務上部署時，會帶來顯著的管理額外負荷，以強制採用該路徑的人員取得與基礎結構即服務相關聯之所有工作的擁有權，例如保護機器安全，以及保持最新的修補程式。
 
 較少額外負荷的選項是使用已設定彈性堆疊的其中一個 Docker 容器。 這些容器可以放入現有的 Kubernetes 叢集中，並與應用程式程式碼一起執行。 [Sebp/elk](https://elk-docker.readthedocs.io/)容器是記載良好且經過測試的彈性堆疊容器。
 

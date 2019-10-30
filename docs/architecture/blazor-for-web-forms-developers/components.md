@@ -4,12 +4,12 @@ description: 瞭解如何使用 Blazor 建立可重複使用的 UI 元件，以�
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: ab9697bcb12ec17528415b3ad4d850803f472b36
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 79919b183a4eb759f0b27c97500ee71c9378770b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520330"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088097"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>使用 Blazor 建立可重複使用的 UI 元件
 
@@ -28,7 +28,7 @@ Blazor 也支援透過*元件*的 UI 封裝。 元件：
 
 Razor 是以 HTML 和C#為基礎的輕量標記範本化語言。 使用 Razor，您可以在標記和C#程式碼之間順暢地轉換，以定義您的元件轉譯邏輯。 編譯*razor*檔案時，會在 .net 類別中以結構化的方式來捕獲轉譯邏輯。 已編譯類別的名稱取自*razor*檔案名。 命名空間取自專案的預設命名空間和資料夾路徑，或者您可以使用 `@namespace` 指示詞明確指定命名空間（以下的 Razor 指示詞會有更多）。
 
-元件的轉譯邏輯是使用標準的 HTML 標籤撰寫的，並使用新增C#的動態邏輯。 @No__t_0 字元是用來轉換到C#。 Razor 通常會在您切換回 HTML 時，聰明地找出。 例如，下列元件會呈現目前時間的 `<p>` 標記：
+元件的轉譯邏輯是使用標準的 HTML 標籤撰寫的，並使用新增C#的動態邏輯。 `@` 字元是用來轉換到C#。 Razor 通常會在您切換回 HTML 時，聰明地找出。 例如，下列元件會呈現目前時間的 `<p>` 標記：
 
 ```razor
 <p>@DateTime.Now</p>
@@ -218,7 +218,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-在 Blazor 中，您可以直接使用 `@on{event}` 格式的指示詞屬性來註冊 DOM UI 事件的處理常式。 @No__t_0 預留位置代表事件的名稱。 例如，您可以聆聽按鈕的點擊方式，如下所示：
+在 Blazor 中，您可以直接使用 `@on{event}` 格式的指示詞屬性來註冊 DOM UI 事件的處理常式。 `{event}` 預留位置代表事件的名稱。 例如，您可以聆聽按鈕的點擊方式，如下所示：
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -237,7 +237,7 @@ public partial class Counter : System.Web.UI.UserControl
 <button @onclick="OnClick">Click me!</button>
 
 @code {
-    void OnClick(MouseEventArgs e) 
+    void OnClick(MouseEventArgs e)
     {
         Console.WriteLine($"Mouse clicked at {e.ScreenX}, {e.ScreenY}.");
     }
@@ -259,7 +259,7 @@ public partial class Counter : System.Web.UI.UserControl
 <button @onclick="OnClick">Click me!</button>
 
 @code {
-    async Task OnClick() 
+    async Task OnClick()
     {
         var result = await Http.GetAsync("api/values");
     }
@@ -283,7 +283,7 @@ public partial class Counter : System.Web.UI.UserControl
     }
 }
 
-@code 
+@code
 {
     bool showMessage = false;
     string message;
@@ -343,9 +343,9 @@ Blazor 提供簡單的機制，可將 UI 元件的資料系結至元件的狀態
 *PasswordBox razor*
 
 ```razor
-Password: <input 
-    value="@Password" 
-    @oninput="OnPasswordChanged" 
+Password: <input
+    value="@Password"
+    @oninput="OnPasswordChanged"
     type="@(showPassword ? "text" : "password")" />
 
 <label><input type="checkbox" @bind="showPassword" />Show password</label>
@@ -431,13 +431,13 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-Blazor 元件也有定義完善的生命週期。 元件的生命週期可用來初始化元件狀態和執行 advanced 元件行為。 
+Blazor 元件也有定義完善的生命週期。 元件的生命週期可用來初始化元件狀態和執行 advanced 元件行為。
 
 所有 Blazor 的元件生命週期方法都有同步和非同步版本。 元件呈現是同步的。 您無法在元件轉譯過程中執行非同步邏輯。 所有非同步邏輯都必須當做 `async` 生命週期方法的一部分來執行。
 
 ### <a name="oninitialized"></a>OnInitialized
 
-@No__t_0 和 `OnInitializedAsync` 方法是用來初始化元件。 元件通常會在第一次呈現之後初始化。 元件初始化之後，它可能會轉譯多次，最後才會被處置。 @No__t_0 方法類似于 ASP.NET Web Forms 頁面和控制項中的 `Page_Load` 事件。
+`OnInitialized` 和 `OnInitializedAsync` 方法是用來初始化元件。 元件通常會在第一次呈現之後初始化。 元件初始化之後，它可能會轉譯多次，最後才會被處置。 `OnInitialized` 方法類似于 ASP.NET Web Forms 頁面和控制項中的 `Page_Load` 事件。
 
 ```csharp
 protected override void OnInitialized() { ... }
@@ -455,7 +455,7 @@ protected override async Task OnParametersSetAsync() { await ... }
 
 ### <a name="onafterrender"></a>OnAfterRender
 
-在元件完成呈現之後，會呼叫 `OnAfterRender` 和 `OnAfterRenderAsync` 方法。 此時會填入元素和元件參考（以下是這些概念的詳細資訊）。 此時會啟用與瀏覽器的互動。 可以安全地進行與 DOM 的互動和 JavaScript 的執行。 
+在元件完成呈現之後，會呼叫 `OnAfterRender` 和 `OnAfterRenderAsync` 方法。 此時會填入元素和元件參考（以下是這些概念的詳細資訊）。 此時會啟用與瀏覽器的互動。 可以安全地進行與 DOM 的互動和 JavaScript 的執行。
 
 ```csharp
 protected override void OnAfterRender(bool firstRender)
@@ -525,9 +525,9 @@ Blazor 元件可以捕捉元素的參考。 不同于 ASP.NET Web Forms 中的 H
 
 ## <a name="templated-components"></a>樣板化元件
 
-在 ASP.NET Web Forms 中，您可以建立樣板*化控制項*。 樣板化控制項可讓開發人員指定用來呈現容器控制項的 HTML 部分。 建立樣板化伺服器控制項的機制很複雜，但它們可以讓您以可自訂的方式呈現資料的強大案例。 樣板化控制項的範例包括 `Repeater` 和 `DataList`。 
+在 ASP.NET Web Forms 中，您可以建立樣板*化控制項*。 樣板化控制項可讓開發人員指定用來呈現容器控制項的 HTML 部分。 建立樣板化伺服器控制項的機制很複雜，但它們可以讓您以可自訂的方式呈現資料的強大案例。 樣板化控制項的範例包括 `Repeater` 和 `DataList`。
 
-您也可以藉由定義 `RenderFragment` 或 `RenderFragment<T>` 類型的元件參數，將 Blazor 元件樣板化。 @No__t_0 代表 Razor 標記的區塊，可由元件轉譯。 @No__t_0 是 Razor 標記的區塊，它會接受呈現轉譯片段時可指定的參數。
+您也可以藉由定義 `RenderFragment` 或 `RenderFragment<T>` 類型的元件參數，將 Blazor 元件樣板化。 `RenderFragment` 代表 Razor 標記的區塊，可由元件轉譯。 `RenderFragment<T>` 是 Razor 標記的區塊，它會接受呈現轉譯片段時可指定的參數。
 
 ### <a name="child-content"></a>子內容
 
@@ -626,7 +626,7 @@ Blazor 元件通常是在單一的*razor*檔案中撰寫。 不過，也可以�
 *Counter.razor.cs*
 
 ```csharp
-public class CounterBase : ComponentBase 
+public class CounterBase : ComponentBase
 {
     protected int currentCount = 0;
 

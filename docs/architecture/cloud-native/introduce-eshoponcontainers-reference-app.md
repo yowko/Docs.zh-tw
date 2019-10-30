@@ -2,12 +2,12 @@
 title: EShopOnContainers 參考應用程式簡介
 description: 介紹適用于 ASP.NET Core 和 Azure 的 eShopOnContainers Cloud Native 微服務 Reference 應用程式。
 ms.date: 06/30/2019
-ms.openlocfilehash: 20f9175ada2e5439be363781a2b187c10ba86d37
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 0d55f248acbc34bcc76d38987d7e1d537cf6065a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182857"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087249"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>EShopOnContainers 參考應用程式簡介
 
@@ -38,10 +38,10 @@ Microsoft 與領先的社區專家合作，已產生全功能的雲端原生微�
 
 應用程式也具有下列非功能性需求：
 
-- 它必須具有高度可用性，而且必須自動調整以符合增加的流量（並在流量 contosoconcerthall 後相應減少）。 
-- 它應該提供容易使用的監視其健康情況和診斷記錄，以協助疑難排解其遇到的任何問題。 
-- 它應該支援 agile 開發流程，包括支援持續整合和部署（CI/CD）。 
-- 除了兩個 web 前端（傳統和單頁應用程式）之外，應用程式也必須支援執行不同種類作業系統的行動用戶端應用程式。 
+- 它必須具有高度可用性，而且必須自動調整以符合增加的流量（並在流量 contosoconcerthall 後相應減少）。
+- 它應該提供容易使用的監視其健康情況和診斷記錄，以協助疑難排解其遇到的任何問題。
+- 它應該支援 agile 開發流程，包括支援持續整合和部署（CI/CD）。
+- 除了兩個 web 前端（傳統和單頁應用程式）之外，應用程式也必須支援執行不同種類作業系統的行動用戶端應用程式。
 - 它應該支援跨平臺裝載和跨平臺開發。
 
 ![eShopOnContainers 參考應用程式開發架構。](./media/eshoponcontainers-development-architecture.png)
@@ -70,7 +70,7 @@ EShopOnContainers 應用程式可從透過 HTTPS 存取應用程式的 web 或�
 
 ## <a name="understanding-microservices"></a>瞭解微服務
 
-本書著重在使用 Azure 技術建立的雲端原生應用程式。 若要深入瞭解微服務的最佳做法，以及如何架構微服務型應用程式，請閱讀隨附書[，.net 微服務：容器化 .NET 應用程式的架構](https://dotnet.microsoft.com/learn/aspnet/microservices-architecture)。 本書可從線上、PDF 或 eReader 格式取得。
+本書著重在使用 Azure 技術建立的雲端原生應用程式。 若要深入瞭解微服務的最佳做法，以及如何架構微服務型應用程式，請閱讀隨附的《 [.Net 微服務：容器化 .Net 應用程式的架構](https://dotnet.microsoft.com/learn/aspnet/microservices-architecture)》一書。 本書可從線上、PDF 或 eReader 格式取得。
 
 >[!div class="step-by-step"]
 >[上一頁](candidate-apps.md)

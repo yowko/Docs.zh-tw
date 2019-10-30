@@ -2,12 +2,12 @@
 title: 使用 NoSQL 資料庫作為持續性基礎結構
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解一般的 NoSql 資料庫用法和特定的 Azure Cosmos DB 用法，作為實作持續性選項。
 ms.date: 10/08/2018
-ms.openlocfilehash: d96d72fe675dfa830029e4311f2cf165a305c328
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b184586dede6331e0babfa976c6fd641933d018e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039951"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089874"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>使用 NoSQL 資料庫作為持續性基礎結構
 
@@ -122,7 +122,7 @@ await client.CreateDocumentAsync(collectionUri, newOrder);
 
 您可以透過容器中所執行的 .NET 程式碼來存取 Azure Cosmos DB 資料庫，例如來自任何其他 .NET 應用程式。 例如，實作 eShopOnContainers 中的 Locations.API 和 Marketing.API 微服務，讓它們可以利用 Azure Cosmos DB 資料庫。
 
-不過，從 Docker 開發環境觀點，Azure Cosmos DB 有一些限制。 甚至有可以在本機開發電腦 (例如 PC) 中執行的內部部署 [Azure Cosmos DB 模擬器](https://docs.microsoft.com/azure/cosmos-db/local-emulator) 時，到 2017 年晚期，它只支援 Windows，而非 Linux。 
+不過，從 Docker 開發環境觀點，Azure Cosmos DB 有一些限制。 甚至有可以在本機開發電腦 (例如 PC) 中執行的內部部署 [Azure Cosmos DB 模擬器](https://docs.microsoft.com/azure/cosmos-db/local-emulator) 時，到 2017 年晚期，它只支援 Windows，而非 Linux。
 
 也可能在 Docker 上執行此模擬器，但只能在 Windows 容器上，而非 Linux 容器上。 如果您的應用程式部署為 Linux 容器，則這是開發環境的初始障礙，因為您目前無法在 Docker for Windows 上同時部署 Linux 和 Windows 容器。 所有要部署的容器都必須適用於 Linux 或 Windows。
 
@@ -150,9 +150,9 @@ Cosmos DB 資料庫支援 MongoDB API for .NET 以及原生 MongoDB 有線通訊
 
 使用 MongoDB API 的清楚優點在於您的解決方案可以透過資料庫引擎 (MongoDB 或 Azure Cosmos DB) 執行，因此，移轉至不同環境應該相當簡單。 不過，有時值得使用原生 API (即原生 Cosmos DB API) 來充分利用特定資料庫引擎的功能。
 
-如需進一步比較只在雲端中使用 MongoDB 與 Cosmos DB，請參閱[在此頁面中使用 Azure Cosmos DB 的優點](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)。 
+如需進一步比較只在雲端中使用 MongoDB 與 Cosmos DB，請參閱[在此頁面中使用 Azure Cosmos DB 的優點](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)。
 
-### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>分析用於生產應用程式的方法：MongoDB API 與Cosmos DB API
+### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>分析適用于生產應用程式的方法： MongoDB API 與 Cosmos DB API
 
 在 eShopOnContainers 中，我們將使用 MongoDB API，因為我們的優先順序本質上是擁有使用也可處理 Azure Cosmos DB 之 NoSQL 資料庫的一致開發/測試環境。
 
@@ -194,12 +194,12 @@ public class Locations
     public string Description { get; set; }
     public double Latitude { get; set; }
     public double Longitude { get; set; }
-    public GeoJsonPoint<GeoJson2DGeographicCoordinates> Location 
+    public GeoJsonPoint<GeoJson2DGeographicCoordinates> Location
                                                              { get; private set; }
-    public GeoJsonPolygon<GeoJson2DGeographicCoordinates> Polygon 
+    public GeoJsonPolygon<GeoJson2DGeographicCoordinates> Polygon
                                                              { get; private set; }
     public void SetLocation(double lon, double lat) => SetPosition(lon, lat);
-    public void SetArea(List<GeoJson2DGeographicCoordinates> coordinatesList) 
+    public void SetArea(List<GeoJson2DGeographicCoordinates> coordinatesList)
                                                     => SetPolygon(coordinatesList);
 
     private void SetPosition(double lon, double lat)
@@ -246,7 +246,7 @@ public class LocationsContext
         {
             return _database.GetCollection<Locations>("Locations");
         }
-    }       
+    }
 }
 ```
 
@@ -280,7 +280,7 @@ services:
 
 ```
 
-`ConnectionString` 環境變數以這種方式解析：如果在 `.env` 檔案中使用了 Azure Cosmos DB 連接字串來定義 `ESHOP_AZURE_COSMOSDB` 全域變數，則會用以在雲端中存取 Azure Cosmos DB 資料庫。 如果未定義，則會接受`mongodb://nosql.data`值，並使用開發 mongodb 容器。
+`ConnectionString` 環境變數是使用這種方式解決：如果 `ESHOP_AZURE_COSMOSDB` 全域變數定義於 Azure Cosmos DB 連接字串的 `.env` 檔案，則會使用它來存取雲端中的 Azure Cosmos DB 資料庫。 如果未定義，則會採用 `mongodb://nosql.data` 值，並使用開發 mongodb 容器。
 
 下列程式碼示範含 Azure Cosmos DB 連接字串全域環境變數的 `.env` 檔案，如 eShopOnContainers 中所實作：
 
@@ -301,7 +301,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 
 您應該取消註解 ESHOP_AZURE_COSMOSDB 行，並使用取自 Azure 入口網站的 Azure Cosmos DB 連接字串進行更新，如[將 MongoDB 應用程式連接到 Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)中所說明。
 
-如果 `ESHOP_AZURE_COSMOSDB` 全域變數是空的，表示它在 `.env` 檔案中已取消註解，則容器會使用預設的 MongoDB 連接字串，指向部署在名為 `nosql.data` 且在 Docker-Compose 檔案中定義之 eShopOnContainers 中的本機 MongoDB 容器，如下列 .yml 程式碼所示。 
+如果 `ESHOP_AZURE_COSMOSDB` 全域變數是空的，表示它在 `.env` 檔案中已取消註解，則容器會使用預設的 MongoDB 連接字串，指向部署在名為 `nosql.data` 且在 Docker-Compose 檔案中定義之 eShopOnContainers 中的本機 MongoDB 容器，如下列 .yml 程式碼所示。
 
 ``` yml
 # docker-compose.yml
@@ -317,13 +317,13 @@ services:
 - **將 NoSQL 資料庫的文件資料模組化** \
   <https://docs.microsoft.com/azure/cosmos-db/modeling-data>
 
-- **Vaughn Vernon：理想的領域驅動設計彙總存放區？** \
+- **Vaughn Vernon。理想的領域驅動設計匯總存放區？** \
   <https://kalele.io/blog-posts/the-ideal-domain-driven-design-aggregate-store/>
 
 - **Azure Cosmos DB 簡介：適用於 MongoDB 的 API**  \
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction>
 
-- **Azure Cosmos DB：使用 .NET 與 Azure 入口網站建置 MongoDB API Web 應用程式**  \
+- **Azure Cosmos DB：透過 .NET 與 Azure 入口網站建置 MongoDB API Web 應用程式**  \
   <https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet>
 
 - **將 Azure Cosmos DB 模擬器用於本機開發及測試**  \
@@ -338,7 +338,7 @@ services:
 - **MongoDB Docker 映像 (Linux 與 Windows 容器)**   \
   <https://hub.docker.com/_/mongo/>
 
-- **搭配 Azure Cosmos DB 使用 MongoChef (Studio 3T)：適用於 MongoDB 的 API 帳戶**  \
+- **搭配 Azure Cosmos DB 使用 MongoChef (Studio 3T)：適用於 MongoDB 帳戶的 API**  \
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef>
 
 >[!div class="step-by-step"]

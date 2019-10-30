@@ -2,12 +2,12 @@
 title: 微服務中的復原和高可用性
 description: 微服務必須設計為能夠承受暫時性的網路和相依性失敗，他們必須能夠復原才能達到高可用性。
 ms.date: 09/20/2018
-ms.openlocfilehash: 6c110b0fe7a80842f12779494e5b0bdd29c5fb64
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1c0f75a8c68d1f84ba24c550e854edc5372cf7f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834344"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094220"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>微服務中的復原和高可用性
 
@@ -31,8 +31,8 @@ ms.locfileid: "71834344"
 
 您也可以選擇使用名為 Beat Pulse 的優異開放原始碼程式庫，可在 [GitHub](https://github.com/Xabaril/BeatPulse) 上取得，並為 [NuGet 套件](https://www.nuget.org/packages/BeatPulse/)的形式。 此程式庫也會執行健康狀態檢查，但它會處理兩種檢查：
 
-- **活躍度**：檢查微服務是否保持運作，也就是是否可以接受要求和回應。 
-- **整備度**：檢查微服務的相依性 (資料庫、佇列服務等) 是否已就緒，以便微服務可執行應進行的作業。 
+- **活躍度**：檢查微服務是否保持運作，也就是是否可以接受要求和回應。
+- **整備度**：檢查微服務的相依性 (資料庫、佇列服務等) 是否已就緒，以便微服務可執行應進行的作業。
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>使用診斷和記錄檔事件資料流
 
@@ -56,7 +56,7 @@ ms.locfileid: "71834344"
 
 ## <a name="additional-resources"></a>其他資源
 
-- **十二要素應用程式。XI.記錄檔：將記錄檔視為事件資料流** \
+- **十二因素應用程式. XI。記錄檔：將記錄視為事件資料流程** \
   <https://12factor.net/logs>
 
 - **Microsoft 診斷 EventFlow 程式庫** GitHub 存放庫 \

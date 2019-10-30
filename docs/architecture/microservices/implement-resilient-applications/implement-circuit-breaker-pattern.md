@@ -2,20 +2,20 @@
 title: 實作斷路器模式
 description: 了解如何實作斷路器模式作為 Http 重試的互補系統。
 ms.date: 10/16/2018
-ms.openlocfilehash: eec14273cb9480df51d6e5865106ccfc045845c4
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: a1a24094ae98d8c767ccf692fe8ded6e28d47854
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181936"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094108"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>實作斷路器模式
 
 如稍早所述，您應該處理復原所需的時間可能不確定的錯誤，當您嘗試連接到遠端服務或資源時，可能會發生此錯誤。 處理這種類型的錯誤可改善應用程式的穩定性和復原。
 
-在分散式環境中，呼叫遠端資源和服務可能會由於暫時性錯誤 (例如網路連線太慢和逾時)，或是資源回應緩慢或暫時無法使用而失敗。 這些錯誤通常會在很短的時間內自我修正，而且強大的雲端應用程式應該能夠使用「重試模式」之類的策略來處理錯誤。 
+在分散式環境中，呼叫遠端資源和服務可能會由於暫時性錯誤 (例如網路連線太慢和逾時)，或是資源回應緩慢或暫時無法使用而失敗。 這些錯誤通常會在很短的時間內自我修正，而且強大的雲端應用程式應該能夠使用「重試模式」之類的策略來處理錯誤。
 
-不過有時候，錯誤是由於非預期的事件所致，可能需要更長時間來修正。 這些錯誤的嚴重性可能從失去部分連線到服務完全失敗。 在這些情況下，讓應用程式持續重試不太可能會成功的作業可能毫無意義。 
+不過有時候，錯誤是由於非預期的事件所致，可能需要更長時間來修正。 這些錯誤的嚴重性可能從失去部分連線到服務完全失敗。 在這些情況下，讓應用程式持續重試不太可能會成功的作業可能毫無意義。
 
 相反地，應用程式應該設計成接受作業失敗並據以處理失敗。
 
@@ -57,11 +57,11 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 在上述程式碼範例中，斷路器原則設定為在重試 Http 要求時，若連續五次失敗，則會中斷或開啟網路。 發生此情況時，網路會中斷 30 秒：在這段期間，斷路器會立即使呼叫失敗，而不是實際發出。  原則會自動將[相關的例外狀況和 HTTP 狀態碼](/aspnet/core/fundamentals/http-requests#handle-transient-faults)解釋為錯誤。  
 
-如果您部署在與執行 HTTP 呼叫的用戶端應用程式或服務不同之環境中的特定資源發生問題，也應該使用斷路器將要求重新導向至後援基礎結構。 這樣一來，如果資料中心的中斷只會影響您的後端微服務，但不會影響您的用戶端應用程式，用戶端應用程式就可以重新導向至後援服務。 Polly 正在規劃新的原則來自動化此[容錯移轉原則](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy)案例。 
+如果您部署在與執行 HTTP 呼叫的用戶端應用程式或服務不同之環境中的特定資源發生問題，也應該使用斷路器將要求重新導向至後援基礎結構。 這樣一來，如果資料中心的中斷只會影響您的後端微服務，但不會影響您的用戶端應用程式，用戶端應用程式就可以重新導向至後援服務。 Polly 正在規劃新的原則來自動化此[容錯移轉原則](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy)案例。
 
-相對於由 Azure 為您自動管理，上述所有功能適用於從 .NET 程式碼管理容錯移轉的情況，並提供位置透明度。 
+相對於由 Azure 為您自動管理，上述所有功能適用於從 .NET 程式碼管理容錯移轉的情況，並提供位置透明度。
 
-從使用觀點來看，使用 HttpClient 時，不需要在此新增任何項目，因為使用 HttpClient 時的程式碼與 HttpClientFactory 相同，如先前章節所示。 
+從使用觀點來看，使用 HttpClient 時，不需要在此新增任何項目，因為使用 HttpClient 時的程式碼與 HttpClientFactory 相同，如先前章節所示。
 
 ## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>在 eShopOnContainers 中測試 Http 重試和斷路器
 
@@ -69,7 +69,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 當應用程式正在部署至雲端時，您也可能會在啟動時看到這種錯誤類型。 在此情況下，平衡叢集節點之間的容器數目時，協調器可能會將容器從一個節點或 VM 移至另一個 (也就是啟動新的執行個體)。
 
-啟動所有容器時，'eShopOnContainers' 解決這些問題的方法是使用稍早所述的重試模式。 
+啟動所有容器時，'eShopOnContainers' 解決這些問題的方法是使用稍早所述的重試模式。
 
 ### <a name="test-the-circuit-breaker-in-eshoponcontainers"></a>在 eShopOnContainers 中測試斷路器
 
@@ -90,7 +90,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 例如，應用程式開始執行之後，您可以在任何瀏覽器中使用下列 URI 提出要求，來啟用中介軟體。 請注意，訂購微服務會使用連接埠 5103。
 
-`http://localhost:5103/failing?enable` 
+`http://localhost:5103/failing?enable`
 
 您可以接著使用 URI `http://localhost:5103/failing` 來檢查狀態，如圖 8-5 所示。
 
@@ -100,7 +100,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 此時，只要您呼叫/叫用它，購物籃微服務就會以狀態碼 500 回應。
 
-中介軟體開始執行之後，您可以嘗試從 MVC Web 應用程式下訂單。 由於要求失敗，因此會開啟網路。 
+中介軟體開始執行之後，您可以嘗試從 MVC Web 應用程式下訂單。 由於要求失敗，因此會開啟網路。
 
 在下列範例中，您可以看到 MVC Web 應用程式在下訂單的邏輯中有一個 catch 區塊。  如果程式碼攔截到開路例外狀況，它會向使用者顯示易懂訊息以通知他們等候。
 
@@ -138,7 +138,7 @@ public class CartController : Controller
 
 **圖 8-6**。 斷路器傳回錯誤至 UI
 
-您可以實作何時開啟/中斷網路的不同邏輯。 或者，如有後援資料中心或備援後端系統，您可以嘗試對不同後端微服務提出 HTTP 要求。 
+您可以實作何時開啟/中斷網路的不同邏輯。 或者，如有後援資料中心或備援後端系統，您可以嘗試對不同後端微服務提出 HTTP 要求。
 
 最後，`CircuitBreakerPolicy` 的另一個可能性是使用 `Isolate` (這會強制開啟並保持開啟網路) 和 `Reset` (這會再次將它關閉)。 這些可用來建置公用程式 HTTP 端點，以直接在原則上叫用 Isolate 和 Reset。  您也可以在生產環境中使用這類 HTTP 端點 (經過適當保護)，來暫時隔離下游系統，例如當您想要將它升級時。 或者，它可以手動啟動網路，來保護疑似故障的下游系統。
 

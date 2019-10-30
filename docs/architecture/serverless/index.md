@@ -4,12 +4,12 @@ description: 無伺服器架構指南。 了解實作企業應用程式的無伺
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: af930ba3d704e9bbf22f03ad6a4a547c5fbff4d3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 9dea7dbccb5c9e125f792e6a7287a7dd2fad26f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522840"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093540"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>無伺服器應用程式：架構、模式和 Azure 實作
 
@@ -43,17 +43,17 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 
 作者:
 
-> **[Jeremy Likness](https://twitter.com/jeremylikness)** ，Microsoft Corp. APEX 資深雲端開發大使。
+> Microsoft Corp 的資深雲端提倡者 **[Jeremy Likness](https://twitter.com/jeremylikness)** 。
 
 參與者：
 
-> **[Cecil Phillip](https://twitter.com/cecilphillip)** ，Microsoft Corp. APEX 雲端開發大使 II
+> Microsoft Corp 的資深雲端提倡者 **[Cecil Phillip](https://twitter.com/cecilphillip)** 。
 
 編輯者：
 
-> **[Bill Wagner](https://twitter.com/billwagner)** ，Microsoft Corp. APEX 資深內容開發人員
+> **[Bill Wagner](https://twitter.com/billwagner)** ，Microsoft Corp 的資深內容開發人員。
 
-> **[Maira Wenzel](https://twitter.com/mairacw)** ，Microsoft Corp. APEX 資深內容開發人員
+> Microsoft Corp 的資深內容開發人員 **[Maira Wenzel](https://twitter.com/mairacw)** 。
 
 參與者和檢閱者：
 

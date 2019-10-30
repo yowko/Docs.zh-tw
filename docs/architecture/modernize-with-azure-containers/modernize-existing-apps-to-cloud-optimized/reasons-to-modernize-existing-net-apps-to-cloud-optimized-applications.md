@@ -2,12 +2,12 @@
 title: 將現有 .NET 應用程式現代化為雲端優化應用程式的原因
 description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |將現有 .NET 應用程式現代化為雲端優化應用程式的原因
 ms.date: 04/28/2018
-ms.openlocfilehash: 3154f9a9e11b42330fcc753ffd961316e4ada335
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 55eb3fb9b0b6c91e25bcdb23056a8a8e51463ef7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522930"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093625"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>將現有 .NET 應用程式現代化為雲端優化應用程式的原因
 
@@ -19,7 +19,7 @@ ms.locfileid: "72522930"
 
 重點在於，當組織建立和管理已進行雲端優化的應用程式時，它可以更快地將解決方案放在客戶手中，並在其相關時，將新的想法帶入市場。
 
-## <a name="cloud-optimized-application-principles-and-tenets"></a>雲端優化應用程式原則和原則 
+## <a name="cloud-optimized-application-principles-and-tenets"></a>雲端優化應用程式原則和原則
 
 雲端的改良主要著重于滿足兩個目標：藉由改善彈性，降低成本並提升業務成長。 這些目標是藉由簡化程式來達成，並在您發行和發行應用程式時減少摩擦。
 

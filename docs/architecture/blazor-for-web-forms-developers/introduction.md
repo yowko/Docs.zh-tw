@@ -4,12 +4,12 @@ description: 使用 .NET Blazor 和撰寫完整堆疊 web 應用程式的簡介
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 66b6d57b718c19b0f271c6b3a62a9d4a22d77ae0
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 6c045cd9c4378bd19f97dd722db054c969491d0b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520307"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087929"
 ---
 # <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>Blazor for ASP.NET Web Forms 開發人員簡介
 
@@ -21,7 +21,7 @@ ASP.NET Web form 架構已經是 .NET Web 程式開發的裝訂，因為 .NET Fr
 
 在撰寫本文時，將近一百萬個 網頁程式開發人員每個月會使用 ASP.NET Web Forms。 ASP.NET Web form 架構的重點是，十年前的檔、範例、書籍和 blog 文章仍然有用且相關。 對於許多 .NET 網頁程式開發人員而言，"ASP.NET" 仍與 .NET 初次構想時的「ASP.NET Web form」同義。 相較于其他新 .NET Web 架構，ASP.NET Web form 優缺點的引數可能會開始風行在上。 ASP.NET Web Forms 仍然是建立 web 應用程式的熱門架構。
 
-就算如此，軟體發展的創新也不會變慢。 所有軟體發展人員都必須掌握新技術和趨勢的步伐。 特別值得考慮的兩個趨勢： 
+就算如此，軟體發展的創新也不會變慢。 所有軟體發展人員都必須掌握新技術和趨勢的步伐。 特別值得考慮的兩個趨勢：
 
 1. 轉移到開放原始碼和跨平臺
 2. 應用程式邏輯對用戶端的轉換

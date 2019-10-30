@@ -2,18 +2,18 @@
 title: Azure 監視器
 description: 使用 Azure 監視器來取得系統的可見度。
 ms.date: 09/23/2019
-ms.openlocfilehash: 4d7d556f030500ea6e0f608e3bdfd16d22d9eb1d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: fa7b4e103f4d1245710f88319271a9e8b7a24b04
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521032"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087687"
 ---
-# <a name="azure-monitor"></a>Azure 監視器 
+# <a name="azure-monitor"></a>Azure 監視器
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-沒有其他雲端提供者的雲端應用程式監視解決方案成熟，如同在 Azure 中找到的一樣。 Azure 監視器是一組工具集合的資訊，其設計目的是要提供系統狀態的可見度，並深入瞭解您的應用程式的任何問題與優化。 
+沒有其他雲端提供者的雲端應用程式監視解決方案成熟，如同在 Azure 中找到的一樣。 Azure 監視器是一組工具集合的資訊，其設計目的是要提供系統狀態的可見度，並深入瞭解您的應用程式的任何問題與優化。
 
 ![Azure 監視器，這是工具的集合，可讓您深入瞭解雲端原生應用程式的運作方式。](./media/azure-monitor.png)
 **圖 7-9**。 Azure 監視器，這是工具的集合，可讓您深入瞭解雲端原生應用程式的運作方式。
@@ -35,28 +35,28 @@ ms.locfileid: "72521032"
 Application Insights 提供一種強大的查詢語言，稱為 Kusto，可用來尋找記錄、匯總它們，甚至繪製圖表。 例如，此查詢會找出2007年11月的所有記錄、依州/省分組，然後將前10個圖繪製為圓形圖。
 
 ```
-StormEvents 
+StormEvents
 | where StartTime >= datetime(2007-11-01) and StartTime < datetime(2007-12-01)
 | summarize count() by State
 | top 10 by count_
-| render piechart 
+| render piechart
 ```
 
-Application Insights 查詢的 ![The 結果 ](./media/azure-monitor.png)
+![Application Insights 查詢的結果](./media/azure-monitor.png)
 **圖 7-10**。 Application Insights 查詢的結果。
 
 有一個[遊樂場可用於實驗 Kusto](https://dataexplorer.azure.com/clusters/help/databases/Samples)查詢，這是一個很棒的地方來花上一小時或兩個。 閱讀[範例查詢](https://docs.microsoft.com/azure/kusto/query/samples)也會有意義。
 
 ## <a name="dashboards"></a>儀表板
 
-有數種不同的儀表板技術可用來呈現 Azure 監視器的資訊。 最簡單的方式，就是只在 Application Insights 中執行查詢，並將[資料繪製到圖表](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards)中。 
+有數種不同的儀表板技術可用來呈現 Azure 監視器的資訊。 最簡單的方式，就是只在 Application Insights 中執行查詢，並將[資料繪製到圖表](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards)中。
 
-Application Insights 內嵌在主要 Azure 儀表板中的圖表 ![An 範例 ](./media/azure-monitor.png)
+![在主要 Azure 儀表板中內嵌 Application Insights 圖表的範例](./media/azure-monitor.png)
 **圖 7-11**。 內嵌在主要 Azure 儀表板中 Application Insights 圖表的範例。
 
 然後您可以使用儀表板功能，將這些圖表內嵌在 Azure 入口網站中。 對於具有更嚴格需求的使用者，例如能夠向下切入到數個資料層 Azure 監視器資料可供[Power BI](https://powerbi.microsoft.com/)。 Power BI 是業界領先的企業級商業智慧工具，可以從許多不同的資料來源匯總資料。
 
-![An Power BI 儀表板範例 ](./media/azure-monitor.png)
+![Power BI 儀表板範例](./media/azure-monitor.png)
 **圖 7-12**。 Power BI 儀表板範例。
 
 ## <a name="alerts"></a>警示
@@ -71,9 +71,9 @@ Application Insights 內嵌在主要 Azure 儀表板中的圖表 ![An 範例 ](.
 
 觸發時，警示可以執行各種不同的工作。 在簡單的情況下，警示可能只會傳送電子郵件通知給郵寄清單或文字訊息給個人。 更多相關警示可能會在 PagerDuty 之類的工具中觸發工作流程，這知道誰正在呼叫特定應用程式。 警示可以在[Microsoft Flow](https://flow.microsoft.com/)解除鎖定工作流程幾乎無限制的可能性中觸發動作。
 
-當識別出常見的警示原因時，可以利用警示的常見原因和解決這些警示的步驟，來增強警示。 成熟的雲端原生應用程式部署可能會選擇啟動自我修復工作，這些工作會執行一些動作，例如從擴展集移除失敗的節點或觸發自動調整活動。 最後，您可能不再需要在12AM-2AM 喚醒待命人員以解決即時網站問題，因為系統能夠自行調整以補償或至少 limp，直到有人在下一個早上抵達工作為止。 
+當識別出常見的警示原因時，可以利用警示的常見原因和解決這些警示的步驟，來增強警示。 成熟的雲端原生應用程式部署可能會選擇啟動自我修復工作，這些工作會執行一些動作，例如從擴展集移除失敗的節點或觸發自動調整活動。 最後，您可能不再需要在12AM-2AM 喚醒待命人員以解決即時網站問題，因為系統能夠自行調整以補償或至少 limp，直到有人在下一個早上抵達工作為止。
 
-Azure 監視器會自動利用機器學習服務來瞭解已部署應用程式的一般指令引數。 這可讓它偵測在其一般參數之外運作的服務。 例如，網站上的一般工作日流量可能是每分鐘10000個要求。 然後，在指定的一周，突然要求數達到每分鐘非常不尋常的20000要求。 [智慧型偵測](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics)會注意到此偏差與標準，並觸發警示。 同時，趨勢分析的智慧足以避免在預期流量負載時引發誤報。  
+Azure 監視器會自動利用機器學習服務來瞭解已部署應用程式的一般指令引數。 這可讓它偵測在其一般參數之外運作的服務。 例如，網站上的一般工作日流量可能是每分鐘10000個要求。 然後，在指定的一周，突然要求數達到每分鐘非常不尋常的20000要求。 [智慧型偵測](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics)會注意到此偏差與標準，並觸發警示。 同時，趨勢分析的智慧足以避免在預期流量負載時引發誤報。
 
 >[!div class="step-by-step"]
 >[上一頁](monitoring-azure-kubernetes.md)

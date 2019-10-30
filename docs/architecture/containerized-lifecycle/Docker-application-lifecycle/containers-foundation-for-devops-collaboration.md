@@ -2,12 +2,12 @@
 title: 作為 DevOps 共同作業基礎的容器
 description: 了解容器用以簡化 DevOps 的重要角色。
 ms.date: 02/15/2019
-ms.openlocfilehash: 16cccef0545f0da14128e31dc8f7ad78369cf23a
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8258f4331212d92376d64fef318adcdff492f61f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394789"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094493"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>作為 DevOps 共同作業基礎的容器
 
@@ -51,7 +51,7 @@ DevOps 支柱部分使用程式碼存放庫中提供的 Dockerfile 定義組建 
 
 - 我們要如何在 Microsoft Azure 中針對容器使用開放原始碼工具/平台？
 
-如果您可以回答所有這些問題，就表示您充分準備好將您的應用程式 (現有或新的應用程式) 移到 Docker 容器。 
+如果您可以回答所有這些問題，就表示您充分準備好將您的應用程式 (現有或新的應用程式) 移到 Docker 容器。
 
 ## <a name="introduction-to-a-generic-end-to-end-docker-application-life-cycle-workflow"></a>泛型端對端 Docker 應用程式生命週期工作流程簡介
 

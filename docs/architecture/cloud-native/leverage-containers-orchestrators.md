@@ -2,12 +2,12 @@
 title: 利用容器和協調器
 description: 在 Azure 中利用 Docker 容器和 Kubernetes 協調器
 ms.date: 06/30/2019
-ms.openlocfilehash: 62aaa68b2ada0725f33df62e97f1ca3216b91ccf
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 7b136ed2760ea471f42ff82d20298ff8714c6dee
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315887"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087227"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>利用容器和協調器
 
@@ -53,7 +53,7 @@ Docker 是最受歡迎的容器管理和映射處理平臺，可讓您快速使�
 
 容器是不可變的。 一旦有了容器的定義，您就可以重新建立該容器，而且它會以完全相同的方式執行。 這種不會將其本身用於以元件為基礎的設計。 如果應用程式的某些部分不會經常變更，當您可以直接部署最常變更的元件時，為什麼要重新部署整個應用程式？ 應用程式的不同功能和跨領域考慮可能會分成不同的單位。 圖3-2 顯示單一應用程式如何藉由委派特定的功能來利用容器和微服務。 應用程式本身的其餘功能也已容器化。
 
-![Breaking 整合型應用程式，以在後端使用微服務。](./media/breaking-up-monolith-with-backend-microservices.png)
+![中斷整合型應用程式，以在後端使用微服務。](./media/breaking-up-monolith-with-backend-microservices.png)
 **圖 3-2**。 將整合型應用程式分解成在後端使用微服務。
 
 使用個別容器所建立的雲端原生應用程式，可讓您視需要部署最多或最少的應用程式。 個別服務可以裝載于節點上，並具有適用于每個服務的資源。 在中執行的每個服務都是不可變的，可以在開發、測試和生產環境之間共用，而且可以輕鬆地進行版本設定。 應用程式的不同區域之間的結合，會明確成為服務之間的呼叫或訊息，而不是單體內的編譯時間相依性。 整體應用程式的任何特定部分都可以選擇最適合該功能或功能的技術，而不需要變更應用程式的其餘部分。
@@ -117,7 +117,7 @@ status:
 
 ## <a name="when-should-you-avoid-using-containers-and-orchestrators"></a>何時應避免使用容器和協調器？
 
-如果您不願意或無法遵循12因素應用程式原則來建立應用程式，您可能會更有效地避免容器和協調器。 在這些情況下，最好是使用以 VM 為基礎的裝載平臺，或可能是一些混合式系統，您可以在其中將特定功能關閉到個別容器或甚至無伺服器功能。 
+如果您不願意或無法遵循12因素應用程式原則來建立應用程式，您可能會更有效地避免容器和協調器。 在這些情況下，最好是使用以 VM 為基礎的裝載平臺，或可能是一些混合式系統，您可以在其中將特定功能關閉到個別容器或甚至無伺服器功能。
 
 ## <a name="development-resources"></a>開發資源
 
