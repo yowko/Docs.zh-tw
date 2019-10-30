@@ -7,155 +7,136 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f0e4002ae248022a9e4380c79174109494b5e4ca
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6e1c2a38be6f2c15a118b35925570119b474f096
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046774"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040571"
 ---
-# <a name="application-domain-resource-monitoring-arm-etw-events"></a><span data-ttu-id="8b355-102">應用程式定義域資源監視 (ARM) ETW 事件</span><span class="sxs-lookup"><span data-stu-id="8b355-102">Application Domain Resource Monitoring (ARM) ETW Events</span></span>
-<a name="top"></a> <span data-ttu-id="8b355-103">這些事件可提供有關應用程式網域狀態的詳細診斷資訊。</span><span class="sxs-lookup"><span data-stu-id="8b355-103">These events provide detailed diagnostic information about the state of an application domain.</span></span> <span data-ttu-id="8b355-104">您可以使用這些事件或使用應用程式網域資源監視 (ARM) 功能，取得相同的資訊。</span><span class="sxs-lookup"><span data-stu-id="8b355-104">You can use these events or use the application domain resource monitoring (ARM) feature to obtain the same information.</span></span>  
-  
- <span data-ttu-id="8b355-105">這個類別包含下列事件：</span><span class="sxs-lookup"><span data-stu-id="8b355-105">This category consists of the following events:</span></span>  
-  
-- [<span data-ttu-id="8b355-106">ThreadCreated 事件</span><span class="sxs-lookup"><span data-stu-id="8b355-106">ThreadCreated Event</span></span>](#threadcreated_event)  
-  
-- [<span data-ttu-id="8b355-107">AppDomainMemAllocated 事件</span><span class="sxs-lookup"><span data-stu-id="8b355-107">AppDomainMemAllocated Event</span></span>](#appdomainmemallocated_event)  
-  
-- [<span data-ttu-id="8b355-108">AppDomainMemSurvived 事件</span><span class="sxs-lookup"><span data-stu-id="8b355-108">AppDomainMemSurvived Event</span></span>](#appdomainmemsurvived_event)  
-  
-- [<span data-ttu-id="8b355-109">ThreadAppDomainEnter 事件</span><span class="sxs-lookup"><span data-stu-id="8b355-109">ThreadAppDomainEnter Event</span></span>](#threadappdomainenter_event)  
-  
-- [<span data-ttu-id="8b355-110">ThreadTerminated 事件</span><span class="sxs-lookup"><span data-stu-id="8b355-110">ThreadTerminated Event</span></span>](#threadterminated_event)  
-  
-<a name="threadcreated_event"></a>   
-## <a name="threadcreated-event"></a><span data-ttu-id="8b355-111">ThreadCreated 事件</span><span class="sxs-lookup"><span data-stu-id="8b355-111">ThreadCreated Event</span></span>  
- <span data-ttu-id="8b355-112">此事件在取消提供者之下也會引發為 `ThreadDC` (在 `AppDomainResourceManagementRundownKeyword` 關鍵字之下)。</span><span class="sxs-lookup"><span data-stu-id="8b355-112">This event is also raised  under the rundown provider as `ThreadDC` (under the `AppDomainResourceManagementRundownKeyword` keyword).</span></span> <span data-ttu-id="8b355-113">此為在這類取消提供者之下引發的唯一事件</span><span class="sxs-lookup"><span data-stu-id="8b355-113">This is the only event that is raised under the rundown provider in this category.</span></span>  
-  
- <span data-ttu-id="8b355-114">下表說明關鍵字和層級。</span><span class="sxs-lookup"><span data-stu-id="8b355-114">The following table shows the keyword and level.</span></span> <span data-ttu-id="8b355-115">(如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。</span><span class="sxs-lookup"><span data-stu-id="8b355-115">(For more information, see [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)</span></span>  
-  
-|<span data-ttu-id="8b355-116">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="8b355-116">Keyword for raising the event</span></span>|<span data-ttu-id="8b355-117">層級</span><span class="sxs-lookup"><span data-stu-id="8b355-117">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="8b355-118">`AppDomainResourceManagementKeyword` (0x800)</span><span class="sxs-lookup"><span data-stu-id="8b355-118">`AppDomainResourceManagementKeyword` (0x800)</span></span>|<span data-ttu-id="8b355-119">Informational(4)</span><span class="sxs-lookup"><span data-stu-id="8b355-119">Informational(4)</span></span>|  
-|<span data-ttu-id="8b355-120">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="8b355-120">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="8b355-121">Informational(4)</span><span class="sxs-lookup"><span data-stu-id="8b355-121">Informational(4)</span></span>|  
-  
- <span data-ttu-id="8b355-122">下表說明事件資訊。</span><span class="sxs-lookup"><span data-stu-id="8b355-122">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="8b355-123">Event - 事件</span><span class="sxs-lookup"><span data-stu-id="8b355-123">Event</span></span>|<span data-ttu-id="8b355-124">事件 ID</span><span class="sxs-lookup"><span data-stu-id="8b355-124">Event ID</span></span>|<span data-ttu-id="8b355-125">引發的時機</span><span class="sxs-lookup"><span data-stu-id="8b355-125">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`ThreadCreated`|<span data-ttu-id="8b355-126">85</span><span class="sxs-lookup"><span data-stu-id="8b355-126">85</span></span>|<span data-ttu-id="8b355-127">已為應用程式網域建立執行緒。</span><span class="sxs-lookup"><span data-stu-id="8b355-127">A thread was created for the application domain.</span></span>|  
-  
- <span data-ttu-id="8b355-128">下表說明事件資料。</span><span class="sxs-lookup"><span data-stu-id="8b355-128">The following table shows the event data.</span></span>  
-  
-|<span data-ttu-id="8b355-129">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="8b355-129">Field name</span></span>|<span data-ttu-id="8b355-130">資料類型</span><span class="sxs-lookup"><span data-stu-id="8b355-130">Data type</span></span>|<span data-ttu-id="8b355-131">描述</span><span class="sxs-lookup"><span data-stu-id="8b355-131">Description</span></span>|  
-|----------------|---------------|-----------------|  
-|<span data-ttu-id="8b355-132">ThreadID</span><span class="sxs-lookup"><span data-stu-id="8b355-132">ThreadID</span></span>|<span data-ttu-id="8b355-133">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="8b355-133">win:UInt64</span></span>|<span data-ttu-id="8b355-134">已建立執行緒的識別碼。</span><span class="sxs-lookup"><span data-stu-id="8b355-134">ID of the thread that was created.</span></span>|  
-|<span data-ttu-id="8b355-135">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="8b355-135">AppDomainID</span></span>|<span data-ttu-id="8b355-136">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="8b355-136">win:UInt64</span></span>|<span data-ttu-id="8b355-137">目前回報其執行緒活動之應用程式網域的識別項。</span><span class="sxs-lookup"><span data-stu-id="8b355-137">Identifier of the application domain for which thread activity is being reported.</span></span>|  
-|<span data-ttu-id="8b355-138">旗標</span><span class="sxs-lookup"><span data-stu-id="8b355-138">Flags</span></span>|<span data-ttu-id="8b355-139">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="8b355-139">win:UInt32</span></span>|<span data-ttu-id="8b355-140">執行緒建立旗標。</span><span class="sxs-lookup"><span data-stu-id="8b355-140">Thread creation flags.</span></span>|  
-|<span data-ttu-id="8b355-141">ManagedThreadIndex</span><span class="sxs-lookup"><span data-stu-id="8b355-141">ManagedThreadIndex</span></span>|<span data-ttu-id="8b355-142">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="8b355-142">win:UInt32</span></span>|<span data-ttu-id="8b355-143">已建立之執行緒的 Managed 索引。</span><span class="sxs-lookup"><span data-stu-id="8b355-143">Managed index of the thread that was created.</span></span>|  
-|<span data-ttu-id="8b355-144">OSThreadID</span><span class="sxs-lookup"><span data-stu-id="8b355-144">OSThreadID</span></span>|<span data-ttu-id="8b355-145">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="8b355-145">win:UInt32</span></span>|<span data-ttu-id="8b355-146">已建立之執行緒的作業系統識別碼。</span><span class="sxs-lookup"><span data-stu-id="8b355-146">Operating system ID of the thread that was created.</span></span>|  
-|<span data-ttu-id="8b355-147">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="8b355-147">ClrInstanceID</span></span>|<span data-ttu-id="8b355-148">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="8b355-148">win:UInt16</span></span>|<span data-ttu-id="8b355-149">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="8b355-149">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
-  
- [<span data-ttu-id="8b355-150">回到頁首</span><span class="sxs-lookup"><span data-stu-id="8b355-150">Back to top</span></span>](#top)  
-  
-<a name="appdomainmemallocated_event"></a>   
-## <a name="appdomainmemallocated-event"></a><span data-ttu-id="8b355-151">AppDomainMemAllocated 事件</span><span class="sxs-lookup"><span data-stu-id="8b355-151">AppDomainMemAllocated Event</span></span>  
- <span data-ttu-id="8b355-152">下表說明關鍵字和層級。</span><span class="sxs-lookup"><span data-stu-id="8b355-152">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="8b355-153">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="8b355-153">Keyword for raising the event</span></span>|<span data-ttu-id="8b355-154">層級</span><span class="sxs-lookup"><span data-stu-id="8b355-154">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="8b355-155">`AppDomainResourceManagementKeyword` (0x800)</span><span class="sxs-lookup"><span data-stu-id="8b355-155">`AppDomainResourceManagementKeyword` (0x800)</span></span>|<span data-ttu-id="8b355-156">Informational(4)</span><span class="sxs-lookup"><span data-stu-id="8b355-156">Informational(4)</span></span>|  
-  
- <span data-ttu-id="8b355-157">下表說明事件資訊。</span><span class="sxs-lookup"><span data-stu-id="8b355-157">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="8b355-158">Event - 事件</span><span class="sxs-lookup"><span data-stu-id="8b355-158">Event</span></span>|<span data-ttu-id="8b355-159">事件 ID</span><span class="sxs-lookup"><span data-stu-id="8b355-159">Event ID</span></span>|<span data-ttu-id="8b355-160">引發的時機</span><span class="sxs-lookup"><span data-stu-id="8b355-160">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`AppDomainMemAllocated`|<span data-ttu-id="8b355-161">83</span><span class="sxs-lookup"><span data-stu-id="8b355-161">83</span></span>|<span data-ttu-id="8b355-162">每 4 MB 的記憶體 (大約)，配置於應用程式網域中。</span><span class="sxs-lookup"><span data-stu-id="8b355-162">Every 4 MB of memory (approximately) is allocated in the application domain.</span></span>|  
-  
- <span data-ttu-id="8b355-163">下表說明事件資料。</span><span class="sxs-lookup"><span data-stu-id="8b355-163">The following table shows the event data.</span></span>  
-  
-|<span data-ttu-id="8b355-164">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="8b355-164">Field name</span></span>|<span data-ttu-id="8b355-165">資料類型</span><span class="sxs-lookup"><span data-stu-id="8b355-165">Data type</span></span>|<span data-ttu-id="8b355-166">描述</span><span class="sxs-lookup"><span data-stu-id="8b355-166">Description</span></span>|  
-|----------------|---------------|-----------------|  
-|<span data-ttu-id="8b355-167">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="8b355-167">AppDomainID</span></span>|<span data-ttu-id="8b355-168">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="8b355-168">win:UInt64</span></span>|<span data-ttu-id="8b355-169">已回報其資源使用量之應用程式網域的識別項。</span><span class="sxs-lookup"><span data-stu-id="8b355-169">Identifier of the application domain for which resource usage is being reported.</span></span>|  
-|<span data-ttu-id="8b355-170">已配置</span><span class="sxs-lookup"><span data-stu-id="8b355-170">Allocated</span></span>|<span data-ttu-id="8b355-171">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="8b355-171">win:UInt64</span></span>|<span data-ttu-id="8b355-172">建立應用程式網域以來，配置於其中的位元組總數 (未減去釋放的記憶體總數)。</span><span class="sxs-lookup"><span data-stu-id="8b355-172">The total number of bytes allocated in this application domain since the application domain was created (the amount of freed memory is not subtracted).</span></span>|  
-|<span data-ttu-id="8b355-173">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="8b355-173">ClrInstanceID</span></span>|<span data-ttu-id="8b355-174">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="8b355-174">win:UInt16</span></span>|<span data-ttu-id="8b355-175">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="8b355-175">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
-  
- [<span data-ttu-id="8b355-176">回到頁首</span><span class="sxs-lookup"><span data-stu-id="8b355-176">Back to top</span></span>](#top)  
-  
-<a name="appdomainmemsurvived_event"></a>   
-## <a name="appdomainmemsurvived-event"></a><span data-ttu-id="8b355-177">AppDomainMemSurvived 事件</span><span class="sxs-lookup"><span data-stu-id="8b355-177">AppDomainMemSurvived Event</span></span>  
- <span data-ttu-id="8b355-178">下表說明關鍵字和層級。</span><span class="sxs-lookup"><span data-stu-id="8b355-178">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="8b355-179">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="8b355-179">Keyword for raising the event</span></span>|<span data-ttu-id="8b355-180">層級</span><span class="sxs-lookup"><span data-stu-id="8b355-180">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="8b355-181">`AppDomainResourceManagementKeyword` (0x800)</span><span class="sxs-lookup"><span data-stu-id="8b355-181">`AppDomainResourceManagementKeyword` (0x800)</span></span>|<span data-ttu-id="8b355-182">Informational(4)</span><span class="sxs-lookup"><span data-stu-id="8b355-182">Informational(4)</span></span>|  
-  
- <span data-ttu-id="8b355-183">下表說明事件資訊。</span><span class="sxs-lookup"><span data-stu-id="8b355-183">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="8b355-184">Event - 事件</span><span class="sxs-lookup"><span data-stu-id="8b355-184">Event</span></span>|<span data-ttu-id="8b355-185">事件 ID</span><span class="sxs-lookup"><span data-stu-id="8b355-185">Event ID</span></span>|<span data-ttu-id="8b355-186">引發的時機</span><span class="sxs-lookup"><span data-stu-id="8b355-186">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`AppDomainMemSurvived`|<span data-ttu-id="8b355-187">84</span><span class="sxs-lookup"><span data-stu-id="8b355-187">84</span></span>|<span data-ttu-id="8b355-188">已結束回收每個記憶體。</span><span class="sxs-lookup"><span data-stu-id="8b355-188">Each garbage collection has ended.</span></span>|  
-  
- <span data-ttu-id="8b355-189">下表說明事件資料。</span><span class="sxs-lookup"><span data-stu-id="8b355-189">The following table shows the event data.</span></span>  
-  
-|<span data-ttu-id="8b355-190">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="8b355-190">Field name</span></span>|<span data-ttu-id="8b355-191">資料類型</span><span class="sxs-lookup"><span data-stu-id="8b355-191">Data type</span></span>|<span data-ttu-id="8b355-192">描述</span><span class="sxs-lookup"><span data-stu-id="8b355-192">Description</span></span>|  
-|----------------|---------------|-----------------|  
-|<span data-ttu-id="8b355-193">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="8b355-193">AppDomainID</span></span>|<span data-ttu-id="8b355-194">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="8b355-194">win:UInt64</span></span>|<span data-ttu-id="8b355-195">已回報其資源使用量的網域識別項。</span><span class="sxs-lookup"><span data-stu-id="8b355-195">Identifier of the domain for which resource usage is being reported.</span></span>|  
-|<span data-ttu-id="8b355-196">存活的</span><span class="sxs-lookup"><span data-stu-id="8b355-196">Survived</span></span>|<span data-ttu-id="8b355-197">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="8b355-197">win:UInt64</span></span>|<span data-ttu-id="8b355-198">自上次回收作業後存留下來，且已知此應用程式網域持有之位元組的數目。</span><span class="sxs-lookup"><span data-stu-id="8b355-198">The number of bytes that survived after the last collection and that are known to be held by this application domain.</span></span> <span data-ttu-id="8b355-199">在完整收集之後，此數字即會正確且完整，但在短暫收集後可能會是不完整的。</span><span class="sxs-lookup"><span data-stu-id="8b355-199">This number is accurate and complete after a full collection, but may be incomplete after an ephemeral collection.</span></span>|  
-|<span data-ttu-id="8b355-200">ProcessSurvived</span><span class="sxs-lookup"><span data-stu-id="8b355-200">ProcessSurvived</span></span>|<span data-ttu-id="8b355-201">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="8b355-201">win:UInt64</span></span>|<span data-ttu-id="8b355-202">從最後一次集合中存活下來的位元組總數。</span><span class="sxs-lookup"><span data-stu-id="8b355-202">The total bytes that survived from the last collection.</span></span> <span data-ttu-id="8b355-203">收集完成後，此數字代表存在於 Managed 堆積中的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="8b355-203">After a full collection, this number represents the number of bytes being held live in managed heaps.</span></span> <span data-ttu-id="8b355-204">暫時收集之後，此數字代表存在於短暫世代中的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="8b355-204">After an ephemeral collection, this number represents the number of bytes held live in ephemeral generations.</span></span>|  
-|<span data-ttu-id="8b355-205">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="8b355-205">ClrInstanceID</span></span>|<span data-ttu-id="8b355-206">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="8b355-206">win:UInt16</span></span>|<span data-ttu-id="8b355-207">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="8b355-207">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
-  
- [<span data-ttu-id="8b355-208">回到頁首</span><span class="sxs-lookup"><span data-stu-id="8b355-208">Back to top</span></span>](#top)  
-  
-<a name="threadappdomainenter_event"></a>   
-## <a name="threadappdomainenter-event"></a><span data-ttu-id="8b355-209">ThreadAppDomainEnter 事件</span><span class="sxs-lookup"><span data-stu-id="8b355-209">ThreadAppDomainEnter Event</span></span>  
- <span data-ttu-id="8b355-210">下表說明關鍵字和層級。</span><span class="sxs-lookup"><span data-stu-id="8b355-210">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="8b355-211">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="8b355-211">Keyword for raising the event</span></span>|<span data-ttu-id="8b355-212">層級</span><span class="sxs-lookup"><span data-stu-id="8b355-212">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="8b355-213">`AppDomainResourceManagementKeyword` (0x800)</span><span class="sxs-lookup"><span data-stu-id="8b355-213">`AppDomainResourceManagementKeyword` (0x800)</span></span>|<span data-ttu-id="8b355-214">Informational(4)</span><span class="sxs-lookup"><span data-stu-id="8b355-214">Informational(4)</span></span>|  
-|<span data-ttu-id="8b355-215">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="8b355-215">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="8b355-216">Informational(4)</span><span class="sxs-lookup"><span data-stu-id="8b355-216">Informational(4)</span></span>|  
-  
- <span data-ttu-id="8b355-217">下表說明事件資訊。</span><span class="sxs-lookup"><span data-stu-id="8b355-217">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="8b355-218">Event - 事件</span><span class="sxs-lookup"><span data-stu-id="8b355-218">Event</span></span>|<span data-ttu-id="8b355-219">事件 ID</span><span class="sxs-lookup"><span data-stu-id="8b355-219">Event ID</span></span>|<span data-ttu-id="8b355-220">引發的時機</span><span class="sxs-lookup"><span data-stu-id="8b355-220">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`ThreadAppDomainEnter`|<span data-ttu-id="8b355-221">87</span><span class="sxs-lookup"><span data-stu-id="8b355-221">87</span></span>|<span data-ttu-id="8b355-222">進入應用程式網域的執行緒。</span><span class="sxs-lookup"><span data-stu-id="8b355-222">A thread enters an application domain.</span></span>|  
-  
- <span data-ttu-id="8b355-223">下表說明事件資料。</span><span class="sxs-lookup"><span data-stu-id="8b355-223">The following table shows the event data.</span></span>  
-  
-|<span data-ttu-id="8b355-224">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="8b355-224">Field name</span></span>|<span data-ttu-id="8b355-225">資料類型</span><span class="sxs-lookup"><span data-stu-id="8b355-225">Data type</span></span>|<span data-ttu-id="8b355-226">說明</span><span class="sxs-lookup"><span data-stu-id="8b355-226">Description</span></span>|  
-|----------------|---------------|-----------------|  
-|<span data-ttu-id="8b355-227">ThreadID</span><span class="sxs-lookup"><span data-stu-id="8b355-227">ThreadID</span></span>|<span data-ttu-id="8b355-228">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="8b355-228">win:UInt64</span></span>|<span data-ttu-id="8b355-229">執行緒識別碼。</span><span class="sxs-lookup"><span data-stu-id="8b355-229">The thread identifier.</span></span>|  
-|<span data-ttu-id="8b355-230">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="8b355-230">AppDomainID</span></span>|<span data-ttu-id="8b355-231">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="8b355-231">win:UInt64</span></span>|<span data-ttu-id="8b355-232">應用程式網域識別項。</span><span class="sxs-lookup"><span data-stu-id="8b355-232">The application domain identifier.</span></span>|  
-|<span data-ttu-id="8b355-233">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="8b355-233">ClrInstanceID</span></span>|<span data-ttu-id="8b355-234">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="8b355-234">win:UInt16</span></span>|<span data-ttu-id="8b355-235">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="8b355-235">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
-  
- [<span data-ttu-id="8b355-236">回到頁首</span><span class="sxs-lookup"><span data-stu-id="8b355-236">Back to top</span></span>](#top)  
-  
-<a name="threadterminated_event"></a>   
-## <a name="threadterminated-event"></a><span data-ttu-id="8b355-237">ThreadTerminated 事件</span><span class="sxs-lookup"><span data-stu-id="8b355-237">ThreadTerminated Event</span></span>  
- <span data-ttu-id="8b355-238">下表說明關鍵字和層級。</span><span class="sxs-lookup"><span data-stu-id="8b355-238">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="8b355-239">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="8b355-239">Keyword for raising the event</span></span>|<span data-ttu-id="8b355-240">層級</span><span class="sxs-lookup"><span data-stu-id="8b355-240">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="8b355-241">`AppDomainResourceManagementKeyword` (0x800)</span><span class="sxs-lookup"><span data-stu-id="8b355-241">`AppDomainResourceManagementKeyword` (0x800)</span></span>|<span data-ttu-id="8b355-242">Informational(4)</span><span class="sxs-lookup"><span data-stu-id="8b355-242">Informational(4)</span></span>|  
-|<span data-ttu-id="8b355-243">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="8b355-243">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="8b355-244">Informational(4)</span><span class="sxs-lookup"><span data-stu-id="8b355-244">Informational(4)</span></span>|  
-  
- <span data-ttu-id="8b355-245">下表說明事件資訊。</span><span class="sxs-lookup"><span data-stu-id="8b355-245">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="8b355-246">Event - 事件</span><span class="sxs-lookup"><span data-stu-id="8b355-246">Event</span></span>|<span data-ttu-id="8b355-247">事件 ID</span><span class="sxs-lookup"><span data-stu-id="8b355-247">Event ID</span></span>|<span data-ttu-id="8b355-248">引發的時機</span><span class="sxs-lookup"><span data-stu-id="8b355-248">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`ThreadTerminated`|<span data-ttu-id="8b355-249">86</span><span class="sxs-lookup"><span data-stu-id="8b355-249">86</span></span>|<span data-ttu-id="8b355-250">一個執行緒終止。</span><span class="sxs-lookup"><span data-stu-id="8b355-250">A thread terminates.</span></span>|  
-  
- <span data-ttu-id="8b355-251">下表說明事件資料：</span><span class="sxs-lookup"><span data-stu-id="8b355-251">The following table shows the event data:</span></span>  
-  
-|<span data-ttu-id="8b355-252">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="8b355-252">Field name</span></span>|<span data-ttu-id="8b355-253">資料類型</span><span class="sxs-lookup"><span data-stu-id="8b355-253">Data type</span></span>|<span data-ttu-id="8b355-254">描述</span><span class="sxs-lookup"><span data-stu-id="8b355-254">Description</span></span>|  
-|----------------|---------------|-----------------|  
-|<span data-ttu-id="8b355-255">ThreadID</span><span class="sxs-lookup"><span data-stu-id="8b355-255">ThreadID</span></span>|<span data-ttu-id="8b355-256">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="8b355-256">win:UInt64</span></span>|<span data-ttu-id="8b355-257">執行緒識別碼。</span><span class="sxs-lookup"><span data-stu-id="8b355-257">The thread identifier.</span></span>|  
-|<span data-ttu-id="8b355-258">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="8b355-258">AppDomainID</span></span>|<span data-ttu-id="8b355-259">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="8b355-259">win:UInt64</span></span>|<span data-ttu-id="8b355-260">應用程式網域識別項。</span><span class="sxs-lookup"><span data-stu-id="8b355-260">The application domain identifier.</span></span>|  
-|<span data-ttu-id="8b355-261">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="8b355-261">ClrInstanceID</span></span>|<span data-ttu-id="8b355-262">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="8b355-262">win:UInt16</span></span>|<span data-ttu-id="8b355-263">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="8b355-263">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
-  
-## <a name="see-also"></a><span data-ttu-id="8b355-264">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8b355-264">See also</span></span>
+# <a name="application-domain-resource-monitoring-arm-etw-events"></a><span data-ttu-id="5f4ed-102">應用程式定義域資源監視 (ARM) ETW 事件</span><span class="sxs-lookup"><span data-stu-id="5f4ed-102">Application Domain Resource Monitoring (ARM) ETW Events</span></span>
 
-- [<span data-ttu-id="8b355-265">CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="8b355-265">CLR ETW Events</span></span>](clr-etw-events.md)
+<span data-ttu-id="5f4ed-103">這些事件可提供有關應用程式網域狀態的詳細診斷資訊。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-103">These events provide detailed diagnostic information about the state of an application domain.</span></span> <span data-ttu-id="5f4ed-104">您可以使用這些事件或使用應用程式網域資源監視 (ARM) 功能，取得相同的資訊。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-104">You can use these events or use the application domain resource monitoring (ARM) feature to obtain the same information.</span></span>
+
+## <a name="threadcreated-event"></a><span data-ttu-id="5f4ed-105">ThreadCreated 事件</span><span class="sxs-lookup"><span data-stu-id="5f4ed-105">ThreadCreated Event</span></span>
+
+<span data-ttu-id="5f4ed-106">此事件在取消提供者之下也會引發為 `ThreadDC` (在 `AppDomainResourceManagementRundownKeyword` 關鍵字之下)。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-106">This event is also raised  under the rundown provider as `ThreadDC` (under the `AppDomainResourceManagementRundownKeyword` keyword).</span></span> <span data-ttu-id="5f4ed-107">此為在這類取消提供者之下引發的唯一事件</span><span class="sxs-lookup"><span data-stu-id="5f4ed-107">This is the only event that is raised under the rundown provider in this category.</span></span>
+
+<span data-ttu-id="5f4ed-108">下表說明關鍵字和層級。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-108">The following table shows the keyword and level.</span></span> <span data-ttu-id="5f4ed-109">如需詳細資訊，請參閱[CLR ETW 關鍵字和層級](clr-etw-keywords-and-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-109">For more information, see [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).</span></span>
+
+|<span data-ttu-id="5f4ed-110">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="5f4ed-110">Keyword for raising the event</span></span>|<span data-ttu-id="5f4ed-111">層級</span><span class="sxs-lookup"><span data-stu-id="5f4ed-111">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="5f4ed-112">`AppDomainResourceManagementKeyword` (0x800)</span><span class="sxs-lookup"><span data-stu-id="5f4ed-112">`AppDomainResourceManagementKeyword` (0x800)</span></span>|<span data-ttu-id="5f4ed-113">Informational(4)</span><span class="sxs-lookup"><span data-stu-id="5f4ed-113">Informational(4)</span></span>|
+|<span data-ttu-id="5f4ed-114">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="5f4ed-114">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="5f4ed-115">Informational(4)</span><span class="sxs-lookup"><span data-stu-id="5f4ed-115">Informational(4)</span></span>|
+
+<span data-ttu-id="5f4ed-116">下表說明事件資訊：</span><span class="sxs-lookup"><span data-stu-id="5f4ed-116">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="5f4ed-117">Event - 事件</span><span class="sxs-lookup"><span data-stu-id="5f4ed-117">Event</span></span>|<span data-ttu-id="5f4ed-118">事件 ID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-118">Event ID</span></span>|<span data-ttu-id="5f4ed-119">引發的時機</span><span class="sxs-lookup"><span data-stu-id="5f4ed-119">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`ThreadCreated`|<span data-ttu-id="5f4ed-120">85</span><span class="sxs-lookup"><span data-stu-id="5f4ed-120">85</span></span>|<span data-ttu-id="5f4ed-121">已為應用程式網域建立執行緒。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-121">A thread was created for the application domain.</span></span>|
+
+<span data-ttu-id="5f4ed-122">下表說明事件資料：</span><span class="sxs-lookup"><span data-stu-id="5f4ed-122">The following table shows the event data:</span></span>
+
+|<span data-ttu-id="5f4ed-123">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="5f4ed-123">Field name</span></span>|<span data-ttu-id="5f4ed-124">資料類型</span><span class="sxs-lookup"><span data-stu-id="5f4ed-124">Data type</span></span>|<span data-ttu-id="5f4ed-125">描述</span><span class="sxs-lookup"><span data-stu-id="5f4ed-125">Description</span></span>|
+|----------------|---------------|-----------------|
+|<span data-ttu-id="5f4ed-126">ThreadID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-126">ThreadID</span></span>|<span data-ttu-id="5f4ed-127">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="5f4ed-127">win:UInt64</span></span>|<span data-ttu-id="5f4ed-128">已建立執行緒的識別碼。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-128">ID of the thread that was created.</span></span>|
+|<span data-ttu-id="5f4ed-129">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-129">AppDomainID</span></span>|<span data-ttu-id="5f4ed-130">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="5f4ed-130">win:UInt64</span></span>|<span data-ttu-id="5f4ed-131">目前回報其執行緒活動之應用程式網域的識別項。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-131">Identifier of the application domain for which thread activity is being reported.</span></span>|
+|<span data-ttu-id="5f4ed-132">旗標</span><span class="sxs-lookup"><span data-stu-id="5f4ed-132">Flags</span></span>|<span data-ttu-id="5f4ed-133">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="5f4ed-133">win:UInt32</span></span>|<span data-ttu-id="5f4ed-134">執行緒建立旗標。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-134">Thread creation flags.</span></span>|
+|<span data-ttu-id="5f4ed-135">ManagedThreadIndex</span><span class="sxs-lookup"><span data-stu-id="5f4ed-135">ManagedThreadIndex</span></span>|<span data-ttu-id="5f4ed-136">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="5f4ed-136">win:UInt32</span></span>|<span data-ttu-id="5f4ed-137">已建立之執行緒的 Managed 索引。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-137">Managed index of the thread that was created.</span></span>|
+|<span data-ttu-id="5f4ed-138">OSThreadID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-138">OSThreadID</span></span>|<span data-ttu-id="5f4ed-139">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="5f4ed-139">win:UInt32</span></span>|<span data-ttu-id="5f4ed-140">已建立之執行緒的作業系統識別碼。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-140">Operating system ID of the thread that was created.</span></span>|
+|<span data-ttu-id="5f4ed-141">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-141">ClrInstanceID</span></span>|<span data-ttu-id="5f4ed-142">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="5f4ed-142">win:UInt16</span></span>|<span data-ttu-id="5f4ed-143">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-143">Unique ID for the instance of CLR or CoreCLR.</span></span>|
+
+## <a name="appdomainmemallocated-event"></a><span data-ttu-id="5f4ed-144">AppDomainMemAllocated 事件</span><span class="sxs-lookup"><span data-stu-id="5f4ed-144">AppDomainMemAllocated Event</span></span>
+
+<span data-ttu-id="5f4ed-145">下表說明關鍵字和層級：</span><span class="sxs-lookup"><span data-stu-id="5f4ed-145">The following table shows the keyword and level:</span></span>
+
+|<span data-ttu-id="5f4ed-146">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="5f4ed-146">Keyword for raising the event</span></span>|<span data-ttu-id="5f4ed-147">層級</span><span class="sxs-lookup"><span data-stu-id="5f4ed-147">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="5f4ed-148">`AppDomainResourceManagementKeyword` (0x800)</span><span class="sxs-lookup"><span data-stu-id="5f4ed-148">`AppDomainResourceManagementKeyword` (0x800)</span></span>|<span data-ttu-id="5f4ed-149">Informational(4)</span><span class="sxs-lookup"><span data-stu-id="5f4ed-149">Informational(4)</span></span>|
+
+<span data-ttu-id="5f4ed-150">下表說明事件資訊：</span><span class="sxs-lookup"><span data-stu-id="5f4ed-150">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="5f4ed-151">Event - 事件</span><span class="sxs-lookup"><span data-stu-id="5f4ed-151">Event</span></span>|<span data-ttu-id="5f4ed-152">事件 ID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-152">Event ID</span></span>|<span data-ttu-id="5f4ed-153">引發的時機</span><span class="sxs-lookup"><span data-stu-id="5f4ed-153">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`AppDomainMemAllocated`|<span data-ttu-id="5f4ed-154">83</span><span class="sxs-lookup"><span data-stu-id="5f4ed-154">83</span></span>|<span data-ttu-id="5f4ed-155">每 4 MB 的記憶體 (大約)，配置於應用程式網域中。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-155">Every 4 MB of memory (approximately) is allocated in the application domain.</span></span>|
+
+<span data-ttu-id="5f4ed-156">下表說明事件資料：</span><span class="sxs-lookup"><span data-stu-id="5f4ed-156">The following table shows the event data:</span></span>
+
+|<span data-ttu-id="5f4ed-157">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="5f4ed-157">Field name</span></span>|<span data-ttu-id="5f4ed-158">資料類型</span><span class="sxs-lookup"><span data-stu-id="5f4ed-158">Data type</span></span>|<span data-ttu-id="5f4ed-159">描述</span><span class="sxs-lookup"><span data-stu-id="5f4ed-159">Description</span></span>|
+|----------------|---------------|-----------------|
+|<span data-ttu-id="5f4ed-160">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-160">AppDomainID</span></span>|<span data-ttu-id="5f4ed-161">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="5f4ed-161">win:UInt64</span></span>|<span data-ttu-id="5f4ed-162">已回報其資源使用量之應用程式網域的識別項。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-162">Identifier of the application domain for which resource usage is being reported.</span></span>|
+|<span data-ttu-id="5f4ed-163">已配置</span><span class="sxs-lookup"><span data-stu-id="5f4ed-163">Allocated</span></span>|<span data-ttu-id="5f4ed-164">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="5f4ed-164">win:UInt64</span></span>|<span data-ttu-id="5f4ed-165">建立應用程式網域以來，配置於其中的位元組總數 (未減去釋放的記憶體總數)。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-165">The total number of bytes allocated in this application domain since the application domain was created (the amount of freed memory is not subtracted).</span></span>|
+|<span data-ttu-id="5f4ed-166">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-166">ClrInstanceID</span></span>|<span data-ttu-id="5f4ed-167">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="5f4ed-167">win:UInt16</span></span>|<span data-ttu-id="5f4ed-168">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-168">Unique ID for the instance of CLR or CoreCLR.</span></span>|
+
+## <a name="appdomainmemsurvived-event"></a><span data-ttu-id="5f4ed-169">AppDomainMemSurvived 事件</span><span class="sxs-lookup"><span data-stu-id="5f4ed-169">AppDomainMemSurvived Event</span></span>
+
+<span data-ttu-id="5f4ed-170">下表說明關鍵字和層級：</span><span class="sxs-lookup"><span data-stu-id="5f4ed-170">The following table shows the keyword and level:</span></span>
+
+|<span data-ttu-id="5f4ed-171">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="5f4ed-171">Keyword for raising the event</span></span>|<span data-ttu-id="5f4ed-172">層級</span><span class="sxs-lookup"><span data-stu-id="5f4ed-172">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="5f4ed-173">`AppDomainResourceManagementKeyword` (0x800)</span><span class="sxs-lookup"><span data-stu-id="5f4ed-173">`AppDomainResourceManagementKeyword` (0x800)</span></span>|<span data-ttu-id="5f4ed-174">Informational(4)</span><span class="sxs-lookup"><span data-stu-id="5f4ed-174">Informational(4)</span></span>|
+
+<span data-ttu-id="5f4ed-175">下表說明事件資訊：</span><span class="sxs-lookup"><span data-stu-id="5f4ed-175">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="5f4ed-176">Event - 事件</span><span class="sxs-lookup"><span data-stu-id="5f4ed-176">Event</span></span>|<span data-ttu-id="5f4ed-177">事件 ID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-177">Event ID</span></span>|<span data-ttu-id="5f4ed-178">引發的時機</span><span class="sxs-lookup"><span data-stu-id="5f4ed-178">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`AppDomainMemSurvived`|<span data-ttu-id="5f4ed-179">84</span><span class="sxs-lookup"><span data-stu-id="5f4ed-179">84</span></span>|<span data-ttu-id="5f4ed-180">已結束回收每個記憶體。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-180">Each garbage collection has ended.</span></span>|
+
+<span data-ttu-id="5f4ed-181">下表說明事件資料：</span><span class="sxs-lookup"><span data-stu-id="5f4ed-181">The following table shows the event data:</span></span>
+
+|<span data-ttu-id="5f4ed-182">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="5f4ed-182">Field name</span></span>|<span data-ttu-id="5f4ed-183">資料類型</span><span class="sxs-lookup"><span data-stu-id="5f4ed-183">Data type</span></span>|<span data-ttu-id="5f4ed-184">描述</span><span class="sxs-lookup"><span data-stu-id="5f4ed-184">Description</span></span>|
+|----------------|---------------|-----------------|
+|<span data-ttu-id="5f4ed-185">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-185">AppDomainID</span></span>|<span data-ttu-id="5f4ed-186">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="5f4ed-186">win:UInt64</span></span>|<span data-ttu-id="5f4ed-187">已回報其資源使用量的網域識別項。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-187">Identifier of the domain for which resource usage is being reported.</span></span>|
+|<span data-ttu-id="5f4ed-188">存活的</span><span class="sxs-lookup"><span data-stu-id="5f4ed-188">Survived</span></span>|<span data-ttu-id="5f4ed-189">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="5f4ed-189">win:UInt64</span></span>|<span data-ttu-id="5f4ed-190">自上次回收作業後存留下來，且已知此應用程式網域持有之位元組的數目。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-190">The number of bytes that survived after the last collection and that are known to be held by this application domain.</span></span> <span data-ttu-id="5f4ed-191">在完整收集之後，此數字即會正確且完整，但在短暫收集後可能會是不完整的。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-191">This number is accurate and complete after a full collection, but may be incomplete after an ephemeral collection.</span></span>|
+|<span data-ttu-id="5f4ed-192">ProcessSurvived</span><span class="sxs-lookup"><span data-stu-id="5f4ed-192">ProcessSurvived</span></span>|<span data-ttu-id="5f4ed-193">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="5f4ed-193">win:UInt64</span></span>|<span data-ttu-id="5f4ed-194">從最後一次集合中存活下來的位元組總數。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-194">The total bytes that survived from the last collection.</span></span> <span data-ttu-id="5f4ed-195">收集完成後，此數字代表存在於 Managed 堆積中的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-195">After a full collection, this number represents the number of bytes being held live in managed heaps.</span></span> <span data-ttu-id="5f4ed-196">暫時收集之後，此數字代表存在於短暫世代中的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-196">After an ephemeral collection, this number represents the number of bytes held live in ephemeral generations.</span></span>|
+|<span data-ttu-id="5f4ed-197">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-197">ClrInstanceID</span></span>|<span data-ttu-id="5f4ed-198">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="5f4ed-198">win:UInt16</span></span>|<span data-ttu-id="5f4ed-199">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-199">Unique ID for the instance of CLR or CoreCLR.</span></span>|
+
+## <a name="threadappdomainenter-event"></a><span data-ttu-id="5f4ed-200">ThreadAppDomainEnter 事件</span><span class="sxs-lookup"><span data-stu-id="5f4ed-200">ThreadAppDomainEnter Event</span></span>
+
+<span data-ttu-id="5f4ed-201">下表說明關鍵字和層級：</span><span class="sxs-lookup"><span data-stu-id="5f4ed-201">The following table shows the keyword and level:</span></span>
+
+|<span data-ttu-id="5f4ed-202">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="5f4ed-202">Keyword for raising the event</span></span>|<span data-ttu-id="5f4ed-203">層級</span><span class="sxs-lookup"><span data-stu-id="5f4ed-203">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="5f4ed-204">`AppDomainResourceManagementKeyword` (0x800)</span><span class="sxs-lookup"><span data-stu-id="5f4ed-204">`AppDomainResourceManagementKeyword` (0x800)</span></span>|<span data-ttu-id="5f4ed-205">Informational(4)</span><span class="sxs-lookup"><span data-stu-id="5f4ed-205">Informational(4)</span></span>|
+|<span data-ttu-id="5f4ed-206">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="5f4ed-206">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="5f4ed-207">Informational(4)</span><span class="sxs-lookup"><span data-stu-id="5f4ed-207">Informational(4)</span></span>|
+
+<span data-ttu-id="5f4ed-208">下表說明事件資訊：</span><span class="sxs-lookup"><span data-stu-id="5f4ed-208">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="5f4ed-209">Event - 事件</span><span class="sxs-lookup"><span data-stu-id="5f4ed-209">Event</span></span>|<span data-ttu-id="5f4ed-210">事件 ID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-210">Event ID</span></span>|<span data-ttu-id="5f4ed-211">引發的時機</span><span class="sxs-lookup"><span data-stu-id="5f4ed-211">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`ThreadAppDomainEnter`|<span data-ttu-id="5f4ed-212">87</span><span class="sxs-lookup"><span data-stu-id="5f4ed-212">87</span></span>|<span data-ttu-id="5f4ed-213">進入應用程式網域的執行緒。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-213">A thread enters an application domain.</span></span>|
+
+<span data-ttu-id="5f4ed-214">下表說明事件資料：</span><span class="sxs-lookup"><span data-stu-id="5f4ed-214">The following table shows the event data:</span></span>
+
+|<span data-ttu-id="5f4ed-215">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="5f4ed-215">Field name</span></span>|<span data-ttu-id="5f4ed-216">資料類型</span><span class="sxs-lookup"><span data-stu-id="5f4ed-216">Data type</span></span>|<span data-ttu-id="5f4ed-217">描述</span><span class="sxs-lookup"><span data-stu-id="5f4ed-217">Description</span></span>|
+|----------------|---------------|-----------------|
+|<span data-ttu-id="5f4ed-218">ThreadID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-218">ThreadID</span></span>|<span data-ttu-id="5f4ed-219">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="5f4ed-219">win:UInt64</span></span>|<span data-ttu-id="5f4ed-220">執行緒識別碼。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-220">The thread identifier.</span></span>|
+|<span data-ttu-id="5f4ed-221">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-221">AppDomainID</span></span>|<span data-ttu-id="5f4ed-222">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="5f4ed-222">win:UInt64</span></span>|<span data-ttu-id="5f4ed-223">應用程式網域識別項。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-223">The application domain identifier.</span></span>|
+|<span data-ttu-id="5f4ed-224">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-224">ClrInstanceID</span></span>|<span data-ttu-id="5f4ed-225">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="5f4ed-225">win:UInt16</span></span>|<span data-ttu-id="5f4ed-226">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-226">Unique ID for the instance of CLR or CoreCLR.</span></span>|
+
+## <a name="threadterminated-event"></a><span data-ttu-id="5f4ed-227">ThreadTerminated 事件</span><span class="sxs-lookup"><span data-stu-id="5f4ed-227">ThreadTerminated Event</span></span>
+
+<span data-ttu-id="5f4ed-228">下表說明關鍵字和層級：</span><span class="sxs-lookup"><span data-stu-id="5f4ed-228">The following table shows the keyword and level:</span></span>
+
+|<span data-ttu-id="5f4ed-229">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="5f4ed-229">Keyword for raising the event</span></span>|<span data-ttu-id="5f4ed-230">層級</span><span class="sxs-lookup"><span data-stu-id="5f4ed-230">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="5f4ed-231">`AppDomainResourceManagementKeyword` (0x800)</span><span class="sxs-lookup"><span data-stu-id="5f4ed-231">`AppDomainResourceManagementKeyword` (0x800)</span></span>|<span data-ttu-id="5f4ed-232">Informational(4)</span><span class="sxs-lookup"><span data-stu-id="5f4ed-232">Informational(4)</span></span>|
+|<span data-ttu-id="5f4ed-233">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="5f4ed-233">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="5f4ed-234">Informational(4)</span><span class="sxs-lookup"><span data-stu-id="5f4ed-234">Informational(4)</span></span>|
+
+<span data-ttu-id="5f4ed-235">下表說明事件資訊：</span><span class="sxs-lookup"><span data-stu-id="5f4ed-235">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="5f4ed-236">Event - 事件</span><span class="sxs-lookup"><span data-stu-id="5f4ed-236">Event</span></span>|<span data-ttu-id="5f4ed-237">事件 ID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-237">Event ID</span></span>|<span data-ttu-id="5f4ed-238">引發的時機</span><span class="sxs-lookup"><span data-stu-id="5f4ed-238">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`ThreadTerminated`|<span data-ttu-id="5f4ed-239">86</span><span class="sxs-lookup"><span data-stu-id="5f4ed-239">86</span></span>|<span data-ttu-id="5f4ed-240">一個執行緒終止。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-240">A thread terminates.</span></span>|
+
+<span data-ttu-id="5f4ed-241">下表說明事件資料：</span><span class="sxs-lookup"><span data-stu-id="5f4ed-241">The following table shows the event data:</span></span>
+
+|<span data-ttu-id="5f4ed-242">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="5f4ed-242">Field name</span></span>|<span data-ttu-id="5f4ed-243">資料類型</span><span class="sxs-lookup"><span data-stu-id="5f4ed-243">Data type</span></span>|<span data-ttu-id="5f4ed-244">描述</span><span class="sxs-lookup"><span data-stu-id="5f4ed-244">Description</span></span>|
+|----------------|---------------|-----------------|
+|<span data-ttu-id="5f4ed-245">ThreadID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-245">ThreadID</span></span>|<span data-ttu-id="5f4ed-246">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="5f4ed-246">win:UInt64</span></span>|<span data-ttu-id="5f4ed-247">執行緒識別碼。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-247">The thread identifier.</span></span>|
+|<span data-ttu-id="5f4ed-248">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-248">AppDomainID</span></span>|<span data-ttu-id="5f4ed-249">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="5f4ed-249">win:UInt64</span></span>|<span data-ttu-id="5f4ed-250">應用程式網域識別項。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-250">The application domain identifier.</span></span>|
+|<span data-ttu-id="5f4ed-251">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="5f4ed-251">ClrInstanceID</span></span>|<span data-ttu-id="5f4ed-252">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="5f4ed-252">win:UInt16</span></span>|<span data-ttu-id="5f4ed-253">CLR 或 CoreCLR 執行個體的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="5f4ed-253">Unique ID for the instance of CLR or CoreCLR.</span></span>|
+
+## <a name="see-also"></a><span data-ttu-id="5f4ed-254">請參閱</span><span class="sxs-lookup"><span data-stu-id="5f4ed-254">See also</span></span>
+
+- [<span data-ttu-id="5f4ed-255">CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="5f4ed-255">CLR ETW Events</span></span>](clr-etw-events.md)
