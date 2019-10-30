@@ -5,12 +5,12 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 4008f38bf4a20113a3f5c865e38222e5b82f2acc
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 82a4d19a6296faa6d195e301016b1bf97d483a2c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991368"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040808"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>從檔案和其他來源載入資料
 
@@ -110,15 +110,16 @@ IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubF
 > [!NOTE]
 > DatabaseLoader 目前為預覽狀態。 它可以藉由參考[SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) NuGet[套件的方式](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview)來使用。
 
-ML.NET 支援從支援[`System.Data`](xref:System.Data)的各種關係資料庫載入資料，其中包括 SQL Server、Azure SQL Database、Oracle、SQLite、于 postgresql、進度、IBM DB2 及其他許多。
+ML.NET 支援從[`System.Data`](xref:System.Data)所支援的各種關係資料庫載入資料，其中包括 SQL Server、Azure SQL Database、Oracle、SQLite、于 postgresql、進度、IBM DB2 等等。
 
-假設資料庫具有名為`House`的資料表和下列架構：
+假設資料庫具有名為 `House` 的資料表和下列架構：
 
 ```SQL
 CREATE TABLE [House] (
-    [HouseId] int NOT NULL IDENTITY,
-    [Size] real NOT NULL,
-    [Price] real NOT NULL
+    [HouseId] INT NOT NULL IDENTITY,
+    [Size] INT NOT NULL,
+    [NumBed] INT NOT NULL,
+    [Price] REAL NOT NULL
     CONSTRAINT [PK_House] PRIMARY KEY ([HouseId])
 );
 ```
@@ -129,12 +130,14 @@ CREATE TABLE [House] (
 public class HouseData
 {
     public float Size { get; set; }
+    
+    public float NumBed { get; set; }
 
     public float Price { get; set; }
 }
 ```
 
-然後，在您的應用程式內建立`DatabaseLoader`。
+然後，在您的應用程式內建立 `DatabaseLoader`。
 
 ```csharp
 MLContext mlContext = new MLContext();
@@ -142,17 +145,19 @@ MLContext mlContext = new MLContext();
 DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
 ```
 
-定義您的連接字串，以及要在資料庫上執行的 SQL 命令，並建立`DatabaseSource`實例。 這個範例會使用具有檔案路徑的 LocalDB SQL Server 資料庫。 不過，DatabaseLoader 會針對內部部署和雲端中的資料庫支援任何其他有效的連接字串。
+定義您的連接字串，以及要在資料庫上執行的 SQL 命令，並建立 `DatabaseSource` 實例。 這個範例會使用具有檔案路徑的 LocalDB SQL Server 資料庫。 不過，DatabaseLoader 會針對內部部署和雲端中的資料庫支援任何其他有效的連接字串。
 
 ```csharp
 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
 
-string sqlCommand = "SELECT Size,Price FROM House";
+string sqlCommand = "SELECT Size, CAST(NumBed as REAL) as NumBed, Price FROM House";
 
-DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance,connectionString,sqlCommand);
+DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
 ```
 
-最後，使用`Load`方法將資料載入[`IDataView`](xref:Microsoft.ML.IDataView)中。
+不屬於[`Real`](xref:System.Data.SqlDbType)類型的數值資料必須轉換成[`Real`](xref:System.Data.SqlDbType)。 [`Real`](xref:System.Data.SqlDbType)型別會以單精確度浮點數或[`Single`](xref:System.Single)（ML.NET 演算法所預期的輸入型別）來表示。 在此範例中，`NumBed` 資料行是資料庫中的一個整數。 使用 `CAST` 內建函數，它會轉換成[`Real`](xref:System.Data.SqlDbType)。 因為 `Price` 屬性已經是型別， [`Real`](xref:System.Data.SqlDbType)它會載入為。
+
+使用 `Load` 方法，將資料載入[`IDataView`](xref:Microsoft.ML.IDataView)。
 
 ```csharp
 IDataView data = loader.Load(dbSource);
@@ -205,3 +210,7 @@ MLContext mlContext = new MLContext();
 //Load Data
 IDataView data = mlContext.Data.LoadFromEnumerable<HousingData>(inMemoryCollection);
 ```
+
+## <a name="next-steps"></a>後續步驟
+
+如果您使用模型產生器來定型機器學習模型，請參閱將[定型資料載入模型](load-data-model-builder.md)產生器。

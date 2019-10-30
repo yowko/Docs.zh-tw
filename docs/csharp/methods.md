@@ -2,15 +2,15 @@
 title: 方法 - C# 手冊
 description: 方法、方法參數和方法傳回值的概觀
 author: rpetrusha
-ms.author: ronpet
+ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: b95818e06d37b0e98bf55428ff97dd476f92fac7
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: b25fad09b530967c9bbfc83412632fc876842dcc
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168506"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035800"
 ---
 # <a name="methods"></a>方法
 
@@ -18,22 +18,6 @@ ms.locfileid: "70168506"
 
 > [!NOTE]
 > 本主題討論具名的方法。 如需匿名函式的資訊，請參閱[匿名函式 (C# 程式設計手冊)](programming-guide/statements-expressions-operators/anonymous-functions.md)。
-
-此主題包括下列章節：
-
-- [方法簽章](#signatures)
-- [方法引動過程](#invocation)
-- [繼承和覆寫方法](#inherited)
-- [傳遞參數](#passing)
-  - [以傳值方式傳遞參數](#byval)
-  - [以傳址方式傳遞參數](#byref)
-  - [參數陣列](#paramarray)
-- [選擇性參數和引數](#optional)
-- [傳回值](#return)
-- [擴充方法](#extension)
-- [非同步方法](#async)
-- [運算式主體成員](#expr)
-- [迭代器](#iterators)
 
 <a name="signatures"></a>
 
@@ -62,7 +46,7 @@ ms.locfileid: "70168506"
 
 ## <a name="method-invocation"></a>方法引動過程
 
-方法可以是「執行個體」  或「靜態」  。 叫用執行個體方法需要您具現化物件並針對該物件呼叫方法，執行個體方法會在該執行個體及資料上運作。 您可以參考方法所屬的類型名稱來叫用靜態方法，靜態方法不操作執行個體資料。 嘗試透過物件執行個體呼叫靜態方法會產生編譯器錯誤。
+方法可以是「執行個體」或「靜態」。 叫用執行個體方法需要您具現化物件並針對該物件呼叫方法，執行個體方法會在該執行個體及資料上運作。 您可以參考方法所屬的類型名稱來叫用靜態方法，靜態方法不操作執行個體資料。 嘗試透過物件執行個體呼叫靜態方法會產生編譯器錯誤。
 
 呼叫方法就像是存取欄位。 在物件名稱後 (如果呼叫的是執行個體方法) 或型別名稱後 (如果呼叫的是 `static` 方法)，加上句點、方法名稱及括弧。 引數會在括號中列出，並以逗號分隔。
 
@@ -74,7 +58,7 @@ ms.locfileid: "70168506"
 
 [!code-csharp[csSnippets.Methods#41](../../samples/snippets/csharp/concepts/methods/methods40.cs#41)]
 
-叫用方法時，您也可以使用「具名引數」  ，而不是使用位置引數。 使用具名引數時，您指定參數名稱，後面接著冒號 (":") 和引數。 方法的引數會以任意順序出現，只要有所有必要的引數。 下例使用具名引數來叫用 `TestMotorcycle.Drive` 方法。 本例中，具名引數的傳遞順序與方法參數清單的順序相反。
+叫用方法時，您也可以使用「具名引數」，而不是使用位置引數。 使用具名引數時，您指定參數名稱，後面接著冒號 (":") 和引數。 方法的引數會以任意順序出現，只要有所有必要的引數。 下例使用具名引數來叫用 `TestMotorcycle.Drive` 方法。 本例中，具名引數的傳遞順序與方法參數清單的順序相反。
 
 [!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]
 
@@ -98,7 +82,7 @@ ms.locfileid: "70168506"
 
 ## <a name="passing-parameters"></a>傳遞參數
 
-C# 中的類型為「實值型別」  「參考型別」  。 如需內建實值型別的清單，請參閱[類型與變數](./tour-of-csharp/types-and-variables.md)。 根據預設，實值型別和參考型別都會以傳值方式傳遞至方法。
+C# 中的類型為「實值型別」「參考型別」。 如需內建實值型別的清單，請參閱[類型與變數](./tour-of-csharp/types-and-variables.md)。 根據預設，實值型別和參考型別都會以傳值方式傳遞至方法。
 
 <a name="byval"></a>
 
@@ -157,7 +141,7 @@ C# 中的類型為「實值型別」  「參考型別」  。 如需內建實值
 參數的預設值必須由下列運算式種類之一指派︰
 
 - 常數，例如常值字串或數字。
-- `new ValType` 形式的運算式，其中 `ValType` 是實值型別。 請注意，這會叫用實值型別的隱含無參數建構函式，它不是該型別的實際成員。
+- `new ValType()` 形式的運算式，其中 `ValType` 是實值型別。 請注意，這會叫用實值型別的隱含無參數建構函式，它不是該型別的實際成員。
 - `default(ValType)` 形式的運算式，其中 `ValType` 是實值型別。
 
 如果方法同時包含必要和選擇性參數，則選擇性參數會定義在參數清單結尾，在所有必要參數的後面。
@@ -174,7 +158,7 @@ C# 中的類型為「實值型別」  「參考型別」  。 如需內建實值
 
 [!code-csharp[csSnippets.Methods#22](../../samples/snippets/csharp/concepts/methods/optional1.cs#22)]
 
-使用選擇性參數會影響「多載解析」  ，或 C# 編譯器判斷依方法呼叫應叫用哪個特定多載的方式，如下所示︰
+使用選擇性參數會影響「多載解析」，或 C# 編譯器判斷依方法呼叫應叫用哪個特定多載的方式，如下所示︰
 
 - 如果每個參數都是選擇性或為依名稱或位置對應要呼叫之陳述式的單一引數，且該引數可以轉換成參數的型別，則方法、索引子或建構函式就是執行的候選項目。
 - 如果找到多個候選項目，則慣用轉換的多載解析規則會套用至明確指定的引數。 會忽略選擇性參數的省略引數。
@@ -200,7 +184,7 @@ C# 中的類型為「實值型別」  「參考型別」  。 如需內建實值
 
 使用區域變數，在此情況下的 `result`來儲存值是選擇性的。 它有助於程式碼的可讀性，或如果您需要儲存方法的整個範圍引數的原始值，則可能為必要。
 
-有時候，您希望自己的方法傳回的不止單一值。 從 C# 7.0 開始，您可以使用「Tuple 型別」  和「Tuple 常值」  輕鬆達到這個目標。 Tuple 型別會定義 Tuple 項目的資料類型。 Tuple 常值會提供傳回 Tuple 的實際值。 在下列範例中，`(string, string, string, int)` 會定義由 `GetPersonalInfo` 方法所傳回的 Tuple 類型。 運算式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 是 Tuple 常值，方法會傳回 `PersonInfo` 物件的名字、中間名和姓氏以及年齡。
+有時候，您希望自己的方法傳回的不止單一值。 從 C# 7.0 開始，您可以使用「Tuple 型別」和「Tuple 常值」輕鬆達到這個目標。 Tuple 型別會定義 Tuple 項目的資料類型。 Tuple 常值會提供傳回 Tuple 的實際值。 在下列範例中，`(string, string, string, int)` 會定義由 `GetPersonalInfo` 方法所傳回的 Tuple 類型。 運算式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 是 Tuple 常值，方法會傳回 `PersonInfo` 物件的名字、中間名和姓氏以及年齡。
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)
@@ -291,15 +275,15 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 <a name="iterators"></a>
 
-## <a name="iterators"></a>迭代器
+## <a name="iterators"></a>Iterators
 
 迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](language-reference/keywords/yield.md) 陳述式一次傳回一個項目。 達到 `yield return` 陳述式時，即會記住目前的位置，讓呼叫端可以要求序列中的下一個項目。
 
-迭代器的傳回類型可以是 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>或 <xref:System.Collections.Generic.IEnumerator%601>。
+迭代器的傳回類型可以是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。
 
-如需詳細資訊，請參閱 [Iterator](programming-guide/concepts/iterators.md)。
+如需詳細資訊，請參閱[迭代器](programming-guide/concepts/iterators.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [存取修飾詞](language-reference/keywords/access-modifiers.md)
 - [靜態類別和靜態類別成員](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
