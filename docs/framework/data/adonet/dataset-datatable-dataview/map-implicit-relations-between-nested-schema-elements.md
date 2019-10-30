@@ -2,12 +2,12 @@
 title: 在巢狀結構描述項目之間進行隱含關聯對應
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: f4b1b9e45f0cda976719b991c336463e0af05f12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 25fc2c427727273038f7b4267376d6ba6446b811
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784431"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040381"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>在巢狀結構描述項目之間進行隱含關聯對應
 XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型別。 在這樣的情況下，對應處理序會在 <xref:System.Data.DataSet> 內套用預設對應並建立下列各項：  
@@ -58,14 +58,14 @@ XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型
   
 - **Order**和**OrderDetail**資料表。  
   
-    ```  
+    ```text  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
 - **Order**資料表上的 unique 條件約束。 請注意， **IsPrimaryKey**屬性設定為**True**。  
   
-    ```  
+    ```text  
     ConstraintName: Constraint1  
     Type: UniqueConstraint  
     Table: Order  
@@ -75,7 +75,7 @@ XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型
   
 - **OrderDetail**資料表上的 foreign key 條件約束。  
   
-    ```  
+    ```text  
     ConstraintName: Order_OrderDetail  
     Type: ForeignKeyConstraint  
     Table: OrderDetail  
@@ -86,7 +86,7 @@ XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型
   
 - **Order**和**OrderDetail**資料表之間的關聯性。 此關聯性的**Nested**屬性會設定為**True** ，因為**Order**和**OrderDetail**專案會嵌套在架構中。  
   
-    ```  
+    ```text  
     ParentTable: Order  
     ParentColumns: Order_Id   
     ChildTable: OrderDetail  
@@ -97,7 +97,7 @@ XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型
     Nested: True  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [從 XML 結構描述 (XSD) 產生資料集關聯](generating-dataset-relations-from-xml-schema-xsd.md)
 - [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)

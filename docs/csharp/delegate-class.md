@@ -2,17 +2,18 @@
 title: System.Delegate 和 `delegate` 關鍵字
 description: 了解 .NET Framework 中支援委派的類別，以及這些類別與 'delegate' 關鍵字的對應關係。
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
+ms.openlocfilehash: 7aca2d3ba7aefd103ac927a6ce905938262ae39c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465772"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037442"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 和 `delegate` 關鍵字
 
-[上一步](delegates-overview.md)
+[上一篇](delegates-overview.md)
 
 本文將介紹 .NET Framework 中支援委派的類別，以及這些類別與 `delegate` 關鍵字的對應關係。
 
@@ -67,7 +68,7 @@ int result = comparator(left, right);
 在上述該行中，程式碼會「叫用」附加至委派的方法。
 您可將變數視為方法名稱，並使用一般方法呼叫語法加以叫用。
 
-該程式碼做了一個不安全的假設：無法保證已將目標新增至委派。 如果未附加任何目標，上述行會導致系統擲回 `NullReferenceException`。 我們會在本[系列](delegates-patterns.md)稍後說明可用來解決這個問題的慣用語，這些慣用語比簡單的 null 檢查更複雜。
+該行程式碼會進行不安全的假設︰因此無法保證目標已新增至委派。 如果未附加任何目標，上述行會導致系統擲回 `NullReferenceException`。 我們會在本[系列](delegates-patterns.md)稍後說明可用來解決這個問題的慣用語，這些慣用語比簡單的 null 檢查更複雜。
 
 ## <a name="assigning-adding-and-removing-invocation-targets"></a>指派、加入和移除引動過程的目標
 
@@ -132,4 +133,4 @@ Sort() 範例通常會將單一的目標方法附加至委派。 即便如此，
 
 現在，您已了解支援委派的語言語法與類別，讓我們來查看如何使用、建立及叫用強型別的委派。
 
-[下一個](delegates-strongly-typed.md)
+[下一步](delegates-strongly-typed.md)

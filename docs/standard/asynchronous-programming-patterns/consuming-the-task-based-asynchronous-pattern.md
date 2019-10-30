@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e89545b5fa29f6e5bf99bb9b85322d7ee14422a4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 73cf0c09ab41fa7b1e4ee974d62ff8cbee59653b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929015"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038123"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>使用以工作為基礎的非同步模式
 
@@ -247,7 +247,7 @@ catch(Exception exc)
 ### <a name="taskwhenany"></a>Task.WhenAny
  您可以使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法，在多個以工作表示的非同步作業中，只以非同步方式等候其中一個完成。  這個方法適用於四種主要的使用案例：
 
-- 備援：多次執行某項作業並選擇最先完成的作業 (例如，連絡會產生單一結果之提供股價報價服務的多個網站，且選擇最快完成的那一個)。
+- 備援：多次執行某項作業並選擇最先完成的作業 (例如，連絡多個會產生單一結果的提供股價報價服務的網站，並且選擇最快完成的那一個)。
 
 - 交錯：啟動多項作業並等候所有作業完成，不過，會在作業完成時才進行處理。
 
@@ -290,7 +290,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- 此外，即使第一個工作成功完成，後續工作可能失敗。  此時，您有幾個處理例外狀況的選項：您可以等待所有啟動的工作完成，在這種情況下，您可以使用 <xref:System.Threading.Tasks.Task.WhenAll%2A> 方法，或者您可以決定所有例外狀況都很重要且必須全部記錄。  對此，您可以使用接續，在工作完成時以非同步方式接收通知︰
+ 此外，即使第一個工作成功完成，後續工作可能失敗。  此時，您有幾個處理例外狀況的選項：您可以等待所有啟動的工作完成，在這種情況下，您可以使用 <xref:System.Threading.Tasks.Task.WhenAll%2A> 方法，或者您可以決定所有例外狀況都很重要，必須全部記錄。  對此，您可以使用接續，在工作完成時以非同步方式接收通知︰
 
 ```csharp
 foreach(Task recommendation in recommendations)
@@ -633,7 +633,7 @@ double currentPrice = await NeedOnlyOne(
 ```
 
 ### <a name="interleaved-operations"></a>交錯作業
- 當您處理非常大量的工作時，使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法來支援交錯案例會有潛在的效能問題。  對 <xref:System.Threading.Tasks.Task.WhenAny%2A> 發出的每個呼叫會導致向每個工作登錄接續。 以 N 個工作為例，這會導致在交錯作業的存留期建立 O(N2) 個接續。  如果您要處理的工作量很大，可以使用組合器 (如下列範例中的 `Interleaved`) 來解決效能問題：
+ 當您處理非常大量的工作時，使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法來支援交錯案例會有潛在的效能問題。 對 <xref:System.Threading.Tasks.Task.WhenAny%2A> 發出的每個呼叫會導致向每個工作登錄接續。 對於 N 個工作數目，這會導致在交錯作業的存留期間建立的 O （N<sup>2</sup>）接續。 如果您正在處理大量工作，可以使用結合（在下列範例中`Interleaved`）來解決效能問題：
 
 ```csharp
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)
@@ -835,7 +835,7 @@ private static void Produce(int data)
 > [!NOTE]
 > .NET Framework 4.5 有提供 <xref:System.Threading.Tasks.Dataflow> 命名空間，可透過 **NuGet** 取得。 若要安裝包含 <xref:System.Threading.Tasks.Dataflow> 命名空間的組件，請在 Visual Studio 中開啟您的專案，從 [專案] 功能表中選擇 [管理 NuGet 套件]，然後在線上搜尋 Microsoft.Tpl.Dataflow 套件。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [工作式非同步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
 - [實作以工作為基礎的非同步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)

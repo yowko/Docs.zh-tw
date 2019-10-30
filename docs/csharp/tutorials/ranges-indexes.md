@@ -2,13 +2,14 @@
 title: 使用索引和範圍探索資料範圍
 description: 此進階教學課程將教導您使用索引和範圍探索資料，以檢查連續資料集的配量。
 ms.date: 09/20/2019
+ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: 1be144560d2b20bafc66cd68de0735e6dc7f0124
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: bbf3f257db9079c4f69f25c9ea08e7711b5ea04b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699929"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039677"
 ---
 # <a name="indices-and-ranges"></a>索引和範圍
 
@@ -27,9 +28,9 @@ ms.locfileid: "71699929"
 此語言支援依賴兩個新的類型和兩個新的運算子：
 
 - <xref:System.Index?displayProperty=nameWithType> 代表序列的索引。
-- End 運算子`^`的索引，指定索引相對於序列結尾。
+- 從 end 運算子 `^`的索引，指定索引相對於序列結尾。
 - <xref:System.Range?displayProperty=nameWithType> 代表序列的子範圍。
-- 範圍運算子`..`，指定範圍的開始和結束作為其運算元。
+- 範圍運算子 `..`，指定範圍的開始和結束，做為其運算元。
 
 讓我們從索引的規則開始。 假設有一個陣列 `sequence`。 `0` 索引與 `sequence[0]` 相同。 `^0` 索引與 `sequence[sequence.Length]` 相同。 請注意，`sequence[^0]` 會擲回例外狀況，就樣 `sequence[sequence.Length]` 會這樣做一樣。 針對任何數字 `n`，索引 `^n` 與 `sequence[sequence.Length - n]` 相同。
 
@@ -77,11 +78,11 @@ string[] words = new string[]
 
 ## <a name="type-support-for-indices-and-ranges"></a>索引和範圍的類型支援
 
-如果型別提供具有 <xref:System.Index> 或 <xref:System.Range> 參數的[索引子](../programming-guide/indexers/index.md)，則會分別明確支援索引或範圍。
+如果型別提供具有 <xref:System.Index> 或 <xref:System.Range> 參數的[索引子](../programming-guide/indexers/index.md)，它會分別明確支援索引或範圍。
 
-如果類型具有名為 `Length` 的屬性，或具有可存取 getter 的 `Count`，且傳回型別為 `int`，則型別為**計算**。 未明確支援索引或範圍的計算類型可能會為其提供隱含支援。 如需詳細資訊，請參閱[功能提案注意事項](~/_csharplang/proposals/csharp-8.0/ranges.md)的[隱含索引支援](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support)和[隱含範圍支援](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support)章節。
+如果類型具有名為 `Length` 的屬性，或具有可存取 getter 的 `Count` 和 `int`的傳回型別，則該型別為**計算**。 未明確支援索引或範圍的計算類型可能會為其提供隱含支援。 如需詳細資訊，請參閱[功能提案注意事項](~/_csharplang/proposals/csharp-8.0/ranges.md)的[隱含索引支援](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support)和[隱含範圍支援](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support)章節。
 
-例如，下列 .NET 類型支援索引和範圍： <xref:System.Array>、<xref:System.String>、<xref:System.Span%601> 和 <xref:System.ReadOnlySpan%601>。 @No__t-0 支援索引，但不支援範圍。
+例如，下列 .NET 類型支援索引和範圍： <xref:System.Array>、<xref:System.String>、<xref:System.Span%601>和 <xref:System.ReadOnlySpan%601>。 <xref:System.Collections.Generic.List%601> 支援索引，但不支援範圍。
 
 ## <a name="scenarios-for-indices-and-ranges"></a>索引和範圍的案例
 

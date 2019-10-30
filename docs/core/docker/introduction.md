@@ -3,12 +3,12 @@ title: Docker 簡介
 description: 本文在 .NET Core 應用程式內容中提供了 Docker 的簡介及概觀。
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3f40d2723feb5a31066115ae11cafba11981f1b4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: af1213eefb013f8911a865e7e2e318a8beadc9a5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523008"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038468"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 簡介
 
@@ -40,7 +40,7 @@ Microsoft 容器登錄 (MCR) 是 Microsoft 提供容器映像的官方來源。 
 
 ### <a name="dockerfile"></a>Dockerfile
 
-**Dockerfile** 是一個檔案，定義了一組建立映像的指示。 **Dockerfile** 中的每個指示都會在映像中建立一個圖層。 在大部分的情況下，當您重建映像時，系統只會重建已變更的圖層。 **Dockerfile** 可以散發給其他人，並讓他們以和您相同的方式重新建立新的映像。 雖然這可讓您散發映像建立方式的*指示*，但散發映像的主要方式是將它發行至登錄。
+**Dockerfile** 是一個檔案，定義了一組建立映像的指示。 **Dockerfile** 中的每個指示都會在映像中建立一個圖層。 在大部分的情況下，當您重建映射時，只會重建已變更的圖層。 **Dockerfile**可散發給其他人，並可讓他們以您建立的相同方式來重新建立新的映射。 雖然這可讓您散發映像建立方式的*指示*，但散發映像的主要方式是將它發行至登錄。
 
 ## <a name="net-core-images"></a>.NET Core 映像
 
@@ -61,7 +61,7 @@ Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET 
 - [Azure 容器執行個體](https://azure.microsoft.com/services/container-instances/)
 在沒有任何較高層級管理服務的情況下，將容器裝載於雲端。
 
- [Azure Batch](https://azure.microsoft.com/services/batch/)\
+ [Azure Batch](https://azure.microsoft.com/services/batch/)
 使用容器執行重複的計算工作。
 
 - [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)

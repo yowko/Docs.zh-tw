@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: fc0ae67c0ebc11a0428ffc18c8db103b619e27ec
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: aaf5a95edb9cba9726163be3925b006a7641597c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524800"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040848"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 
-@No__t_0 修飾詞表示它修改的方法或[lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)是非同步。 這類方法稱為「*非同步方法*」。
+`Async` 修飾詞表示它修改的方法或[lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)是非同步。 這類方法稱為「*非同步方法*」。
 
 非同步方法提供了方便進行可能需要長時間執行之工作的方式，而不需封鎖呼叫端的執行緒。 非同步方法的呼叫端可以繼續其工作，而不需要等待非同步方法完成。
 
@@ -43,13 +43,13 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function
 ```
 
-一般來說，`Async` 關鍵字所修改的方法至少包含一個[Await](../../../visual-basic/language-reference/modifiers/async.md)運算式或語句。 方法會以同步方式執行，直到達到第一個 `Await`，此時它會暫止，直到等候的工作完成。 同時，控制權會返回方法的呼叫端。 如果方法未包含 `Await` 運算式或陳述式，則方法就不會暫止，並且會像同步方法一樣執行。 編譯器警告會對未包含 `Await` 的任何非同步方法發出警示，因為這種情況可能表示發生錯誤。 如需詳細資訊，請參閱[編譯器錯誤](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md)。
+一般來說，`Async` 關鍵字所修改的方法至少包含一個[Await](../../../visual-basic/language-reference/modifiers/async.md)運算式或語句。 方法會以同步方式執行，直到達到第一個 `Await`，此時它會暫止，直到等候的工作完成。 同時，控制權會返回方法的呼叫端。 如果方法不包含 `Await` 運算式或語句，則方法不會暫止，而且會以同步方法執行。 編譯器警告會對未包含 `Await` 的任何非同步方法發出警示，因為這種情況可能表示發生錯誤。 如需詳細資訊，請參閱[編譯器錯誤](../error-messages/bc42358.md)。
 
 `Async` 關鍵字是未保留的關鍵字。 它是修飾方法或 Lambda 運算式時的關鍵字。 在所有其他內容中，它會解譯為識別項。
 
 ## <a name="return-types"></a>傳回型別
 
-非同步方法可以是[Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)程式，或是傳回類型為 <xref:System.Threading.Tasks.Task> 或[<xref:System.Threading.Tasks.Task%601> 的函](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)式程式。 方法無法宣告任何[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)參數。
+非同步方法可以是[Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)程式，或是傳回類型為 <xref:System.Threading.Tasks.Task> 或[<xref:System.Threading.Tasks.Task%601>的函](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)式程式。 方法無法宣告任何[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)參數。
 
 如果方法的[return](../../../visual-basic/language-reference/statements/return-statement.md)語句有類型為 TResult 的運算元，您可以為非同步方法的傳回類型指定 `Task(Of TResult)`。 如果方法完成時未傳回任何有意義的值，則使用 `Task`。 也就是說，呼叫方法會傳回 `Task`，但是當 `Task` 完成時，任何等候 `Await` 的 `Task` 陳述式都不會產生結果值。
 

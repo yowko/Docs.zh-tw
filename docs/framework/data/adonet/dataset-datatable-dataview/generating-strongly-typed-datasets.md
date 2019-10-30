@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: ce7e5ad53f7aa5dad457ca1aa6ab76716086c0c3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 25419f8a810b52103e6b862cfe2fe6ab5a1fd981
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833997"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040082"
 ---
 # <a name="generating-strongly-typed-datasets"></a>產生強類型資料集
 假設 XML 架構符合 XML 架構定義語言（XSD）標準，您可以使用 Windows 軟體發展工具組（SDK）所提供的 XSD.EXE 工具來產生強型別 <xref:System.Data.DataSet>。  
   
- （若要從資料庫資料表建立 xsd，請參閱 <xref:System.Data.DataSet.WriteXmlSchema%2A>，或使用[Visual Studio 中的資料集](/visualstudio/data-tools/dataset-tools-in-visual-studio)）。  
+ （若要從資料庫資料表建立 xsd，請參閱 <xref:System.Data.DataSet.WriteXmlSchema%2A> 或使用[Visual Studio 中的資料集](/visualstudio/data-tools/dataset-tools-in-visual-studio)）。  
   
  下列程式碼顯示使用此工具產生**資料集**的語法。  
   
-```  
+```console  
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
@@ -27,7 +27,7 @@ xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace
   
  下列程式碼顯示使用 C# 編譯器 (csc.exe)，將產生的程式碼編譯成程式庫的語法。  
   
-```  
+```console  
 csc.exe /t:library XSDSchemaFileName.cs /r:System.dll /r:System.Data.dll  
 ```  
   
@@ -94,7 +94,7 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>

@@ -2,13 +2,14 @@
 title: C# 版本控制 - C# 手冊
 description: 了解 C# 和 .NET 的版本控制運作方式
 ms.date: 01/08/2017
+ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: dcfe373312b88c8ddd8587e27c566a90b25e3c13
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3fadbc1257ae758fc220685fa074a4fa68b20ba1
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834050"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039661"
 ---
 # <a name="versioning-in-c"></a>C\# 中的版本控制
 
@@ -38,11 +39,11 @@ SemVer 最基本的方法是 3 元件格式 `MAJOR.MINOR.PATCH`，其中：
 
 以下是嘗試維持與舊版文件庫的相容性時要考慮的一些事項︰
 
-- 虛擬方法：當您在新版本中將虛擬方法變成非虛擬，表示必須更新覆寫該方法的專案。 這是一項極重大的變更，強烈建議您不要這麼做。
-- 方法簽章：更新方法行為時，如果您也需要變更其簽章，您應該改為建立多載，讓呼叫該方法的程式碼仍然可以運作。
+- 虛擬方法︰當您在新版本中將虛擬方法變成非虛擬，表示必須更新覆寫該方法的專案。 這是一項極重大的變更，強烈建議您不要這麼做。
+- 方法簽章：更新方法行為時，您也需要變更其簽章，您應該改為建立多載，讓呼叫該方法的程式碼仍然可以運作。
 您可以一直使用舊的方法簽章呼叫新方法簽章，讓實作保持一致。
-- [Obsolete 屬性](programming-guide/concepts/attributes/common-attributes.md#Obsolete)：您可以在程式碼中使用這個屬性，指定未來版本中要淘汰及可能移除的類別或類別成員。 這可確保使用您文件庫的開發人員在面對重大變更時有更完善的準備。
-- 選擇性方法引數：當您將先前的選擇性方法引數變為強制，或是變更其預設值後，所有不提供這些引數的程式碼都需要更新。
+- [Obsolete 屬性](programming-guide/concepts/attributes/common-attributes.md#Obsolete)︰您可以在程式碼中使用這個屬性，指定未來版本中要取代及可能移除的類別或類別成員。 這可確保使用您文件庫的開發人員在面對重大變更時有更完善的準備。
+- 選擇性的方法引數︰當您將先前的選擇性方法引數變為強制，或是變更其預設值後，所有不提供這些引數的程式碼都需要更新。
 
 > [!NOTE]
 > 將強制引數設為選擇性的效果，特別是當它不會變更方法的行為時。
@@ -52,7 +53,7 @@ SemVer 最基本的方法是 3 元件格式 `MAJOR.MINOR.PATCH`，其中：
 ### <a name="application-configuration-file"></a>應用程式組態檔
 
 身為 .NET 開發人員，您在大多數的專案類型中，有很大的機會遇到[`app.config` 檔案](../framework/configure-apps/file-schema/index.md)。
-這個簡單的組態檔要很長時間才能改善推出新的更新。 一般來說，您應該以這種方式設計程式庫，讓可能定期變更的資訊儲存在 @no__t 0 檔案中，如此一來，當更新這類資訊時，較舊版本的設定檔就必須以新的檔案取代，而不需要需要重新編譯程式庫。
+這個簡單的組態檔要很長時間才能改善推出新的更新。 一般來說，您應該以這種方式設計程式庫，讓可能定期變更的資訊儲存在 `app.config` 檔案中，如此一來，當更新這類資訊時，較舊版本的設定檔就必須以新的檔案取代，而不需要需要重新編譯程式庫。
 
 ## <a name="consuming-libraries"></a>使用文件庫
 
@@ -62,7 +63,7 @@ SemVer 最基本的方法是 3 元件格式 `MAJOR.MINOR.PATCH`，其中：
 
 ### <a name="assembly-binding-redirection"></a>組件繫結重新導向
 
-您可以*使用 app.config 檔案*來更新應用程式使用的程式庫版本。 藉由新增所謂的系結重新[*導向*](../framework/configure-apps/redirect-assembly-versions.md)，您可以使用新的程式庫版本，而不需要重新編譯應用程式。 下列範例會示範如何更新應用*程式的 app.config*檔案，以使用 `ReferencedLibrary` 的 @no__t 1 修補程式版本，而不是原本用來編譯的 `1.0.0` 版。
+您可以*使用 app.config 檔案*來更新應用程式使用的程式庫版本。 藉由新增所謂的系結重新[*導向*](../framework/configure-apps/redirect-assembly-versions.md)，您可以使用新的程式庫版本，而不需要重新編譯應用程式。 下列範例顯示如何更新應用*程式的 app.config*檔案，以使用 `ReferencedLibrary` 的 `1.0.1` 修補程式版本，而不是原本用來編譯的 `1.0.0` 版本。
 
 ```xml
 <dependentAssembly>
@@ -83,7 +84,7 @@ SemVer 最基本的方法是 3 元件格式 `MAJOR.MINOR.PATCH`，其中：
 
 [!code-csharp[Sample usage of the 'new' modifier](~/samples/csharp/versioning/new/Program.cs#sample)]
 
-**輸出**
+**Output**
 
 ```console
 A base method
@@ -95,13 +96,13 @@ A derived method
 
 未指定任何 `new` 修飾詞時，衍生類別預設會隱藏基底類別中發生衝突的成員，雖然會產生編譯器警告，但程式碼仍會編譯。 這表示，只要將新成員新增至現有的類別，即可讓新版文件庫與與相依於它的程式碼為來源和二進位相容。
 
-### <a name="override"></a>override
+### <a name="override"></a>覆寫
 
 `override` 修飾詞表示衍生的實作會擴充基底類別成員的實作，而非隱藏它。 基底類別成員需要套用 `virtual` 修飾詞。
 
 [!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
 
-**輸出**
+**Output**
 
 ```console
 Base Method One: Method One

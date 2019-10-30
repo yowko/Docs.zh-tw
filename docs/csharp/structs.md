@@ -2,17 +2,18 @@
 title: 結構 - C# 手冊
 description: 了解結構類型和其建立方式
 ms.date: 10/12/2016
+ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: e0974b7dcf3c0888cb52bea81b07a58e3a98640b
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a7cdd84677cb84038aae89da9774c6e365275963
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396119"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039733"
 ---
 # <a name="structs"></a>結構
 
-*struct* 是實值型別。 建立結構時，指派結構的變數會保留結構的實際資料。 將結構指派至新的變數時，將會複製結構。 因此，新的變數和原始變數會各自包含一份相同的資料。 針對其中一個複本所做的變更，並不會影響到另一個複本。
+*struct* 是實值型別。 當建立結構時，結構指派至的變數會保留結構的實際資料。 將結構指派至新的變數時，將會複製結構。 因此，新的變數和原始變數會各自包含一份相同的資料。 針對其中一個複本所做的變更，並不會影響到另一個複本。
 
 實值型別變數會直接包含其值，這表示配置的記憶體內嵌在宣告該變數的內容中。 實值型別變數不會有任何個別的堆積配置或記憶體回收額外負荷。  
   
@@ -54,7 +55,7 @@ ms.locfileid: "71396119"
 
 ## <a name="literal-values"></a>常值
 
-在 C# 中，常值會接收來自編譯器的類型。 您可以在數字後面附加一個字母，指定應如何輸入數值常值。 例如，若要指定應該將值 4.56 視為浮點數時，請在數字之後附加 "f" 或 "F"︰`4.56f`。 如果未附加任何字母，則編譯器會推斷 `double` 類型的常值。 如需您可以使用字母後置字元指定哪些類型的詳細資訊，請參閱參考頁面中個別類型的[實值型別](./language-reference/keywords/value-types.md)。  
+在 C# 中，常值會接收來自編譯器的型別。 您可以在數字後面附加一個字母，指定應如何輸入數值常值。 例如，若要指定應該將值 4.56 視為浮點數時，請在數字之後附加 "f" 或 "F"︰`4.56f`。 如果未附加任何字母，則編譯器會推斷 `double` 類型的常值。 如需您可以使用字母後置字元指定哪些類型的詳細資訊，請參閱參考頁面中個別類型的[實值型別](./language-reference/keywords/value-types.md)。  
   
 因為輸入的是常值且所有類型最終都衍生自 <xref:System.Object>，所以您可以如下所示來撰寫和編譯程式碼：  
   
@@ -66,9 +67,9 @@ ms.locfileid: "71396119"
 
 ## <a name="nullable-value-types"></a>可為 Null 的實值型別
 
-一般的實值型別值不能為 [null](language-reference/keywords/null.md)。 不過，您可以在該型別後面添加 `?`，建立可為 null 的實值型別。 例如，`int?` 就是也能有 [null](./language-reference/keywords/null.md) 值的 `int` 型別。 可為 null 的實數值型別是泛型結構類型 <xref:System.Nullable%601> 的實例。 可為 null 的實值型別在您將資料傳遞至資料庫，且其中的數值可能為 null 或未定義時，特別有用。 如需詳細資訊，請參閱[可為 null 的實數值型別](programming-guide/nullable-types/index.md)。
+一般的實值型別值不能為 [null](language-reference/keywords/null.md)。 不過，您可以在該型別後面添加 `?`，建立可為 null 的實值型別。 例如，`int?` 就是也能有 [null](./language-reference/keywords/null.md) 值的 `int` 型別。 可為 null 的實數值型別是 <xref:System.Nullable%601>泛型結構類型的實例。 可為 null 的實值型別在您將資料傳遞至資料庫，且其中的數值可能為 null 或未定義時，特別有用。 如需詳細資訊，請參閱[可為 null 的實數值型別](programming-guide/nullable-types/index.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [類別](classes.md)
 - [基本類型](basic-types.md)

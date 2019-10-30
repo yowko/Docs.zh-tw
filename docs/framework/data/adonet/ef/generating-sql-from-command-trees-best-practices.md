@@ -2,12 +2,12 @@
 title: 從命令樹產生 SQL - 最佳作法
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 869722b91550855a184a74e706271c3e2d417b84
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855010"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039991"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>從命令樹產生 SQL - 最佳作法
 
@@ -31,7 +31,7 @@ ORDER BY …
 
 例如，請考量下列查詢命令樹：
 
-```
+```csharp
 Project (
 a.x,
    a = Filter(
@@ -68,7 +68,7 @@ WHERE b.y = 5
 
 您可以更輕鬆地將左背面聯結 (顯示為另一個聯結之左子系的聯結) 扁平化為單一 SQL SELECT 陳述式。 例如，請考量下列查詢命令樹：
 
-```
+```csharp
 InnerJoin(
    a = LeftOuterJoin(
    b = Extent("TableA")
@@ -90,7 +90,7 @@ INNER JOIN TableC as d ON b.y = d.z
 
 不過，您無法輕鬆地扁平化非左背面聯結，而且不應該嘗試扁平化這些聯結。 例如，下列查詢命令樹中的聯結：
 
-```
+```csharp
 InnerJoin(
    a = Extent("TableA")
    b = LeftOuterJoin(
@@ -145,8 +145,8 @@ ON b.y = d.z
 
 ## <a name="mapping-primitive-types"></a>對應基本型別
 
-將概念 (EDM) 型別對應至提供者型別時，您應該對應至最廣泛的型別 (Int32)，以便容納所有可能的值。 此外，請避免對應至無法用於許多作業的型別，例如 BLOB 型別（ `ntext`如 SQL Server 中的）。
+將概念 (EDM) 型別對應至提供者型別時，您應該對應至最廣泛的型別 (Int32)，以便容納所有可能的值。 此外，請避免對應至無法用於許多作業的型別，例如 BLOB 型別（如 SQL Server 中的 `ntext`）。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [SQL 產生](sql-generation.md)

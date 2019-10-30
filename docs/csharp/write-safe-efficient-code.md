@@ -2,13 +2,14 @@
 title: 撰寫安全且有效率的 C# 程式碼
 description: 最近對 C# 語言的增強功能，可讓您撰寫可驗證的安全程式碼，獲得先前使用不安全程式碼時的效能。
 ms.date: 10/23/2018
+ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 89a0bcf28c3c398865082e120ca9c16fe2c00651
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 3dc3213cf24f4cdd8f0f1b7752263b4a609b2fa2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960834"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039634"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>撰寫安全且有效率的 C# 程式碼
 
@@ -229,7 +230,7 @@ public struct Point3D
 
 您不應該傳遞可為 null 的實值型別做為 `in` 引數。 <xref:System.Nullable%601> 類型未宣告為唯讀結構。 這表示，編譯器編譯器必須針對使用參數宣告上 `in` 修飾詞傳遞給方法之任何可為 Null 的實值型別引數來產生防禦性複本。
 
-您可以在我們於 GitHub 上的[範例存放庫](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark)中，查看使用 [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) 示範效能差異的範例程式。 它會比較以值型式和以參考型式傳遞可變動結構，以及以值型式和以參考型式傳遞固定結構的差異。 使用固定結構並以參考型式傳遞的速度最快。
+您可以在 GitHub 上的[範例存放庫](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark)中查看使用[BenchmarkDotNet](https://www.nuget.org/packages/BenchmarkDotNet/)來示範效能差異的範例程式。 它會比較以值型式和以參考型式傳遞可變動結構，以及以值型式和以參考型式傳遞固定結構的差異。 使用固定結構並以參考型式傳遞的速度最快。
 
 ## <a name="use-ref-struct-types-to-work-with-blocks-or-memory-on-a-single-stack-frame"></a>使用 `ref struct` 型別來使用單一堆疊框架上的區塊或記憶體
 

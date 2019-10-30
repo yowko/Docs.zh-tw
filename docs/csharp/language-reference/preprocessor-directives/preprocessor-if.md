@@ -1,22 +1,22 @@
 ---
 title: '#if 前置處理器指示詞 - C# 參考'
 ms.custom: seodec18
-ms.date: 06/30/2018
+ms.date: 10/27/2019
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: d0297094fbb8098b706cb8c6338fa123afc0753b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 561a628c60888a8d4f3c50c8413784e1ed210599
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605695"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035997"
 ---
 # <a name="if-c-reference"></a>#if (C# 參考)
 
-當 C# 編譯器遇到 `#if` 指示詞，且其後接著 [#endif](preprocessor-endif.md) 指示詞時，只有在定義了指定的符號時，它才會編譯指示詞之間的程式碼。 不同於 C 和 C++，您無法將數值指派給符號。 C# 中的 #if 陳述式是布林值，且只測試是否已經定義符號。 例如：
+當 C# 編譯器遇到 `#if` 指示詞，且其後接著 [#endif](preprocessor-endif.md) 指示詞時，只有在定義了指定的符號時，它才會編譯指示詞之間的程式碼。 不同於 C 和 C++，您無法將數值指派給符號。 C# 中的 #if 陳述式是布林值，且只測試是否已經定義符號。 例如:
 
 ```csharp
 #if DEBUG
@@ -40,9 +40,12 @@ ms.locfileid: "69605695"
 
 使用 `#define` 建立的符號範圍是定義它的檔案。
 
-建置系統也能分辨代表不同[目標 Framework](../../../standard/frameworks.md) 的預先定義前置處理器符號。 若要建立能以多個 .NET 實作或版本為目標的應用程式，這些符號就很實用。
+組建系統也會留意代表 SDK 樣式專案中不同[目標 framework](../../../standard/frameworks.md)的預先定義預處理器符號。 若要建立能以多個 .NET 實作或版本為目標的應用程式，這些符號就很實用。
 
 [!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+
+> [!NOTE]
+> 針對傳統 .NET Framework 專案，您必須透過專案的 [屬性] 頁面，手動設定 Visual Studio 中不同目標 framework 的條件式編譯符號。
 
 其他預先定義符號包括 DEBUG 和 TRACE 常數。 您可以使用 `#define` 來覆寫為專案所設定的值。 例如，DEBUG 符號會根據您的組建組態屬性 ("Debug" 或 "Release" 模式) 而自動設定。
 
@@ -87,7 +90,7 @@ public class MyClass
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

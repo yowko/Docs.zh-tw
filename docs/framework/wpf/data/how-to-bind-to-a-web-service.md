@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 72638101b73e6b43fa225885b2e1f27d87b22826
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d752f4815de16daa466302881116e80aceec6edf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920151"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040912"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>如何：繫結至 Web 服務
 這個範例示範如何系結至 Web 服務方法呼叫所傳回的物件。  
@@ -32,18 +32,18 @@ ms.locfileid: "72920151"
   
 4. 按 [**移至**]，然後按一下 [**新增參考**]。  
   
- 接下來，您可以呼叫 Web 服務方法，並將適當控制項或視窗的 <xref:System.Windows.FrameworkElement.DataContext%2A> 設定為傳回的物件。 MTPS 服務的**GetContent**方法會接受**getContentRequest**物件的參考。 因此，下列範例會先設定 request 物件：  
+ 接下來，您可以呼叫 Web 服務方法，並將適當控制項或視窗的 <xref:System.Windows.FrameworkElement.DataContext%2A> 設定為傳回的物件。 MTPS 服務的 `GetContent` 方法會接受 `getContentRequest` 物件的參考。 因此，下列範例會先設定 request 物件：  
   
  [!code-csharp[BindToWebService#Namespace](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
  [!code-vb[BindToWebService#Namespace](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
 [!code-csharp[BindToWebService#WebServiceCall](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
 [!code-vb[BindToWebService#WebServiceCall](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
   
- 設定 <xref:System.Windows.FrameworkElement.DataContext%2A> 之後，您可以建立已設定 <xref:System.Windows.FrameworkElement.DataContext%2A> 之物件屬性的系結。 在此範例中，<xref:System.Windows.FrameworkElement.DataContext%2A> 設定為**GetContent**方法所傳回的**getContentResponse**物件。 在下列範例中，<xref:System.Windows.Controls.ItemsControl> 系結至，並顯示**GetContentResponse** **availableVersionsAndLocales**的**地區**設定值。  
+ 設定 <xref:System.Windows.FrameworkElement.DataContext%2A> 之後，您可以建立已設定 <xref:System.Windows.FrameworkElement.DataContext%2A> 之物件屬性的系結。 在此範例中，<xref:System.Windows.FrameworkElement.DataContext%2A> 設定為 `GetContent` 方法所傳回的 `getContentResponse` 物件。 在下列範例中，<xref:System.Windows.Controls.ItemsControl> 系結至，並顯示 `getContentResponse``availableVersionsAndLocales` 的 `locale` 值。  
   
  [!code-xaml[BindToWebService#Binding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
   
- 如需**getContentResponse**結構的詳細資訊，請參閱[內容服務檔](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)。  
+ 如需 `getContentResponse`結構的詳細資訊，請參閱[內容服務檔](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)。  
   
 ## <a name="see-also"></a>請參閱
 

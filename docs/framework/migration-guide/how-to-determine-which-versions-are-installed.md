@@ -1,5 +1,5 @@
 ---
-title: HOW TO：判斷安裝的 .NET Framework 版本
+title: 如何：判斷安裝的 .NET Framework 版本
 ms.date: 04/18/2019
 dev_langs:
 - csharp
@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abfa42be4b8c759da3fb34a2204058143e39689c
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: fd2558d854986d3dc541a9adf3c15abd553ce2ea
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956661"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039562"
 ---
-# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>HOW TO：判斷安裝的 .NET Framework 版本
+# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：判斷安裝的 .NET Framework 版本
 
-使用者可以在電腦上[安裝](https://docs.microsoft.com/dotnet/framework/install)及執行多個版本的 .NET Framework。 當您開發或部署應用程式時，您可能需要知道使用者電腦上安裝的 .NET Framework 版本。
+使用者可以在電腦上[安裝](../install/index.md)及執行多個版本的 .NET Framework。 當您開發或部署應用程式時，您可能需要知道使用者電腦上安裝的 .NET Framework 版本。
 
 .NET Framework 包含兩個主要元件，各有各的版本控制：
 
 - 組件集合，這是為應用程式提供功能的類型與資源集合。 .NET Framework 和組件會共用相同的版本號碼。
 
-- 通用語言執行平台 (CLR)，負責管理和執行應用程式的程式碼。 CLR 是透過自己的版本號碼加以識別 (請參閱[版本和相依性](versions-and-dependencies.md))。
+- 通用語言執行平台 (CLR)，負責管理和執行應用程式的程式碼。 CLR 是透過自己的版本號碼加以識別（請參閱[版本和](versions-and-dependencies.md)相依性）。
 
 > [!NOTE]
 > 每一個新的 .NET Framework 版本都會保留舊版的功能並增加新的功能。 您可同時在一部電腦上載入多個版本的 .NET Framework，這表示您可以安裝 .NET Framework，卻不必解除安裝舊版。 一般而言，您不應該解除安裝舊版的 .NET Framework，因為您使用的應用程式可能依賴某個特定版本，而若移除該版本則應用程式可能會中斷。
@@ -34,7 +34,7 @@ ms.locfileid: "71956661"
 > .NET Framework 版本和 CLR 版本之間有差異：
 >
 > - .NET Framework 版本是以構成 .NET Framework Class Library 的組件集為基礎。 例如，.NET Framework 版本包含 4.5、4.6.1 和 4.7.2。
->- CLR 版本是以 .NET Framework 應用程式執行所在的執行階段為基礎。 單一的 CLR 版本通常會支援多個 .NET Framework 版本。 例如，CLR 4.0.30319.*xxxxx* 版支援 .NET Framework 4 到 4.5.2 版，其中 *xxxxx* 會小於 42000，而 CLR 4.0.30319.42000 版支援從 .NET Framework 4.6 起的 .NET Framework 版本。
+> - CLR 版本是以 .NET Framework 應用程式執行所在的執行階段為基礎。 單一的 CLR 版本通常會支援多個 .NET Framework 版本。 例如，CLR 4.0.30319.*xxxxx* 版支援 .NET Framework 4 到 4.5.2 版，其中 *xxxxx* 會小於 42000，而 CLR 4.0.30319.42000 版支援從 .NET Framework 4.6 起的 .NET Framework 版本。
 >
 > 如需版本的詳細資訊，請參閱 [.NET Framework 版本和相依性](versions-and-dependencies.md)。
 
@@ -53,7 +53,7 @@ ms.locfileid: "71956661"
 - [使用 Clrver 工具](#clr_a)
 - [使用程式碼查詢 Environment 類別](#clr_b)
 
-如需偵測每一版 .NET Framework 已安裝更新的資訊，請參閱[如何：判斷已安裝的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)。
+如需偵測每個 .NET Framework 版本之已安裝更新的詳細資訊，請參閱[如何：判斷已安裝的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)。
 
 ## <a name="find-newer-net-framework-versions-45-and-later"></a>尋找新版的 .NET Framework (4.5 和更新版本)
 
@@ -65,14 +65,14 @@ ms.locfileid: "71956661"
 
      您必須具有系統管理認證才能執行 regedit。
 
-2. 在 [登錄編輯程式] 中，開啟下列子機碼：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full**。 如果 **Full** 子機碼不存在，即表示未安裝 .NET Framework 4.5 或更新版本。
+2. 在 [登錄編輯程式] 中，開啟下列子機碼： **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full**。 如果 **Full** 子機碼不存在，即表示未安裝 .NET Framework 4.5 或更新版本。
 
     > [!NOTE]
     > 登錄中的 **NET Framework Setup** 資料夾「不是」以英文句號開頭。
 
 3. 檢查是否有名為 **Release** 的 DWORD 項目。 若有，則表示已安裝 .NET Framework 4.5 或更新版本。 其值為對應至 .NET Framework 特定版本的版本機碼。 例如，下圖中 **Release** 項目的值是 *378389*，也就是 .NET Framework 4.5 的版本機碼。
 
-     ![.NET Framework 4.5 的登錄項目](./media/clr-installdir.png ".NET Framework 4.5 的登錄項目")
+     ![.NET Framework 4.5 的登錄專案](./media/clr-installdir.png ".NET Framework 4.5 的登錄專案")
 
 下表列出 .NET Framework 4.5 及更新版本個別作業系統上 **Release** DWORD 的值。
 
@@ -83,15 +83,15 @@ ms.locfileid: "71956661"
 |.NET Framework 版本|Release DWORD 的值|
 |--------------------------------|-------------|
 |.NET Framework 4.5|所有 Windows 作業系統：378389|
-|.NET Framework 4.5.1|Windows 8.1 和 Windows Server 2012 R2 上：378675<br />其他所有 Windows 作業系統上：378758|
+|.NET Framework 4.5.1|在 Windows 8.1 和 Windows Server 2012 R2 上：378675<br />在其他所有 Windows 作業系統上：378758|
 |.NET Framework 4.5.2|所有 Windows 作業系統：379893|
-|.NET Framework 4.6|Windows 10 上：393295<br />其他所有 Windows 作業系統上：393297|
-|.NET Framework 4.6.1|Windows 10 11 月更新系統上：394254<br />其他所有 Windows 作業系統 (包括 Windows 10) 上：394271|
-|.NET Framework 4.6.2|Windows 10 年度更新版及 Windows Server 2016：394802<br />其他所有 Windows 作業系統 (包括其他 Windows 10 作業系統) 上：394806|
-|.NET Framework 4.7|Windows 10 Creators Update 上：460798<br />其他所有 Windows 作業系統 (包括其他 Windows 10 作業系統) 上：460805|
-|.NET Framework 4.7.1|Windows 10 Fall Creators Update 和 Windows Server 版本 1709 上：461308<br/>其他所有 Windows 作業系統 (包括其他 Windows 10 作業系統) 上：461310|
-|.NET Framework 4.7.2|Windows 10 2018 年 4 月更新和 Windows Server 版本 1803 上：461808<br/>Windows 10 2018 年 4 月更新及 Windows Server 1803 版以外的所有 OS 版本上：461814|
-|.NET Framework 4.8|在 Windows 10 2019 年 5 月更新上：528040<br/>在其他所有 Windows 作業系統 (包括其他 Windows 10 作業系統) 上：528049|
+|.NET Framework 4.6|在 Windows 10: 393295 上<br />在其他所有 Windows 作業系統上：393297|
+|.NET Framework 4.6.1|Windows 10 11 月更新系統：394254<br />在所有其他 Windows 作業系統上（包括 Windows 10）：394271|
+|.NET Framework 4.6.2|Windows 10 年度更新版及 Windows Server 2016：394802<br />在所有其他 Windows 作業系統（包括其他 Windows 10 作業系統）上：394806|
+|.NET Framework 4.7|Windows 10 Creators Update：460798<br />在所有其他 Windows 作業系統（包括其他 Windows 10 作業系統）上：460805|
+|.NET Framework 4.7.1|Windows 10 秋季建立者更新和 Windows Server，版本1709：461308<br/>在所有其他 Windows 作業系統（包括其他 Windows 10 作業系統）上：461310|
+|.NET Framework 4.7.2|Windows 10 2018 年4月更新和 Windows Server，版本1803：461808<br/>在 Windows 10 2018 年4月更新和 Windows Server 的所有 Windows 作業系統上，版本1803：461814|
+|.NET Framework 4.8|在 Windows 10 5 月2019更新和 Windows 10 十一月2019更新：528040<br/>在所有其他 Windows 作業系統（包括其他 Windows 10 作業系統）上：528049|
 
 您可以依照下列方式使用這些值：
 
@@ -146,7 +146,7 @@ ms.locfileid: "71956661"
 
     您必須具有系統管理認證才能執行 regedit。
 
-2. 在 [登錄編輯程式] 中，開啟下列子機碼：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP**：
+2. 在 [登錄編輯程式] 中，開啟下列子機碼： **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP**：
 
     - 針對 .NET Framework 1.1 到 3.5 版，每個安裝的版本都會列為 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP** 子機碼下的子機碼。 例如，**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v3.5**。 版本號碼儲存為版本子機碼 **Version** 項目中的值。
 
@@ -157,7 +157,7 @@ ms.locfileid: "71956661"
 
     下圖顯示 .NET Framework 3.5 的子機碼及其 **Version** 項目。
 
-    ![.NET Framework 3.5 的登錄項目。](./media/net-4-and-earlier.png ".NET framework 3.5 和舊版")
+    ![.NET Framework 3.5 的登錄專案。](./media/net-4-and-earlier.png ".NET Framework 3.5 和更早版本")
 
 <a name="net_c"></a>
 
@@ -178,7 +178,7 @@ ms.locfileid: "71956661"
 
 使用 [CLR 版本工具 (Clrver.exe)](../tools/clrver-exe-clr-version-tool.md) 以判斷電腦上安裝了哪些 CLR 版本：
 
-- 從 [Visual Studio 的開發人員命令提示字元](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs)輸入 `clrver`。
+- 從 [Visual Studio 的開發人員命令提示字元](../tools/developer-command-prompt-for-vs.md)輸入 `clrver`。
 
     範例輸出：
 
@@ -214,8 +214,8 @@ ms.locfileid: "71956661"
 [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
 [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [如何：判斷安裝的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)
+- [如何：判斷已安裝的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)
 - [安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)
 - [.NET Framework 版本和相依性](versions-and-dependencies.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846842"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040195"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>如何：建立發行者原則
 
@@ -55,26 +55,28 @@ ms.locfileid: "72846842"
 
 在命令提示字元中輸入下列命令：
 
-**al/link：** *publisherPolicyFile* **/Out：** *publisherPolicyAssemblyFile* **/keyfile：** *keyPairFile* **/platform：** *processorArchitecture*
+```console
+al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFile /platform:processorArchitecture
+```
 
 在此命令中：
 
-- *PublisherPolicyFile*引數是發行者原則檔的名稱。
+- `publisherPolicyFile` 引數是發行者原則檔的名稱。
 
-- *PublisherPolicyAssemblyFile*引數是此命令所產生之發行者原則元件的名稱。 元件檔案名的格式必須如下：
+- `publisherPolicyAssemblyFile` 引數是此命令所產生之發行者原則元件的名稱。 元件檔案名的格式必須如下：
 
-  **策略.** *majorNumber* **。** *minorNumber* **。** *mainAssemblyName* **.dll**
+  ' majorNumber. minorNumber. mainAssemblyName .dll '
 
-- *KeyPairFile*引數是包含金鑰組的檔案名。 您必須使用相同的金鑰組來簽署元件和發行者原則元件。
+- `keyPairFile` 引數是包含金鑰組的檔案名。 您必須使用相同的金鑰組來簽署元件和發行者原則元件。
 
-- *ProcessorArchitecture*引數會識別特定處理器元件的目標平臺。
+- `processorArchitecture` 引數會識別特定處理器元件的目標平臺。
 
   > [!NOTE]
   > 從 .NET Framework 2.0 開始，可以取得以特定處理器架構為目標的功能。
 
 從 .NET Framework 2.0 開始，可以取得以特定處理器架構為目標的功能。 下列命令會從名為 `pub.config`的發行者原則檔案建立名為 `policy.1.0.myAssembly` 的發行者原則元件，並使用 `sgKey.snk` 檔案中的金鑰組，將強式名稱指派給元件，並指定元件以 x86 處理器為目標結構.
 
-```
+```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
@@ -92,11 +94,13 @@ al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:
 
 在命令提示字元中輸入下列命令：
 
-**gacutil/I**  *publisherPolicyAssemblyFile*
+```console
+gacutil /i publisherPolicyAssemblyFile
+```
 
 下列命令會將 `policy.1.0.myAssembly.dll` 新增至全域組件快取。
 
-```
+```console
 gacutil /i policy.1.0.myAssembly.dll
 ```
 

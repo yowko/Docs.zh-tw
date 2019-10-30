@@ -32,22 +32,22 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: e355a89e27ea5bd6e4335b39c4e669610c4b0553
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 4a3e6986060b8e22d49110b8b9f275f41b743af2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319099"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036397"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布林值邏輯運算子 (C# 參考)
 
-下列運算子會搭配 [bool](../keywords/bool.md) 運算元執行邏輯作業：
+下列運算子會使用[bool](../keywords/bool.md)運算元執行邏輯作業：
 
 - 一元 [`!` (邏輯否定)](#logical-negation-operator-) 運算子。
 - 二元 [`&` (邏輯 AND)](#logical-and-operator-)、[`|` (邏輯 OR)](#logical-or-operator-) 及 [`^` (邏輯互斥 OR)](#logical-exclusive-or-operator-) 運算子。 那些運算子一律會評估兩個運算元。
 - 二元 [`&&` (條件邏輯 AND)](#conditional-logical-and-operator-) 及 [`||` (條件邏輯 OR)](#conditional-logical-or-operator-) 運算子。 那些運算子只會在必要時才評估右邊的運算元。
 
-針對[整數](../builtin-types/integral-numeric-types.md)型別的運算元，`&`、`|` 和 `^` 運算子都會執行位元邏輯運算。 如需詳細資訊，請參閱[位元與移位運算子](bitwise-and-shift-operators.md)。
+對於[整數數數值型別](../builtin-types/integral-numeric-types.md)的運算元，`&`、`|`和 `^` 運算子會執行位邏輯運算。 如需詳細資訊，請參閱[位元與移位運算子](bitwise-and-shift-operators.md)。
 
 ## <a name="logical-negation-operator-"></a>邏輯否定運算子 !
 
@@ -55,13 +55,13 @@ ms.locfileid: "72319099"
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-從C# 8.0 開始，一元後置 `!` 運算子是[null 容許運算子](null-forgiving.md)。
+從C# 8.0 開始，一元後置`!`運算子是[null 容許運算子](null-forgiving.md)。
 
 ## <a name="logical-and-operator-"></a> 邏輯 AND 運算子 &amp;
 
 `&` 運算子會計算其運算元的邏輯 AND。 若 `x` 及 `y` 皆求出 `true`，那麼 `x & y` 的結果會是 `true`。 否則，結果為 `false`。
 
-即使左邊運算元的值為 `false`，`&` 運算子仍會求這兩個運算元的值，所以不論右邊運算元的值為何，其結果必定為 `false`。
+即使左側運算元評估為 `false`，`&` 運算子也會評估這兩個運算元，如此一來，不論右邊運算元的值為何，都會 `false` 運算結果。
 
 在下列範例中，`&` 運算子的右邊運算元是方法呼叫；無論左邊運算元的值為何，系統都會執行該呼叫：
 
@@ -69,7 +69,7 @@ ms.locfileid: "72319099"
 
 [條件邏輯 AND 運算子](#conditional-logical-and-operator-) `&&` 也會計算其運算元的邏輯 AND，但如果右邊運算元的值評估為 `false`，系統便不會評估左邊運算元。
 
-針對整數型別的運算元，`&` 運算子會計算其運算元的[位元邏輯 AND](bitwise-and-shift-operators.md#logical-and-operator-)。 一元的 `&` 運算子是 [address-of 運算子](pointer-related-operators.md#address-of-operator-)。
+對於[整數數數值型別](../builtin-types/integral-numeric-types.md)的運算元，`&` 運算子會計算其運算元的[位邏輯 and](bitwise-and-shift-operators.md#logical-and-operator-) 。 一元的 `&` 運算子是 [address-of 運算子](pointer-related-operators.md#address-of-operator-)。
 
 ## <a name="logical-exclusive-or-operator-"></a>邏輯互斥 OR 運算子 ^
 
@@ -77,13 +77,13 @@ ms.locfileid: "72319099"
 
 [!code-csharp-interactive[logical exclusive OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Xor)]
 
-針對整數型別的運算元，`^` 運算子會計算其運算元的[位元邏輯互斥 OR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)。
+對於[整數數數值型別](../builtin-types/integral-numeric-types.md)的運算元，`^` 運算子會計算其運算元的[位邏輯互斥 OR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) 。
 
 ## <a name="logical-or-operator-"></a>邏輯 OR 運算子 |
 
 `|` 運算子會計算其運算元的邏輯 OR。 若 `x` 或 `y` 其中一項的值為 `true`，`x | y` 的結果會是 `true`。 否則，結果為 `false`。
 
-即使左邊運算元的值為 `true`，`|` 運算子仍會求這兩個運算元的值，所以不論右邊運算元的值為何，其結果必定為 `true`。
+即使左側運算元評估為 `true`，`|` 運算子也會評估這兩個運算元，如此一來，不論右邊運算元的值為何，都會 `true` 運算結果。
 
 在下列範例中，`|` 運算子的右邊運算元是方法呼叫；無論左邊運算元的值為何，系統都會執行該呼叫：
 
@@ -91,7 +91,7 @@ ms.locfileid: "72319099"
 
 [條件式邏輯 OR 運算子](#conditional-logical-or-operator-) `||` 也會計算其運算元的邏輯 OR，但如果左邊運算元的值評估為 `true`，系統便不會評估右邊運算元。
 
-針對整數型別的運算元，`|` 運算子會計算其運算元的[位元邏輯 OR](bitwise-and-shift-operators.md#logical-or-operator-)。
+對於[整數數數值型別](../builtin-types/integral-numeric-types.md)的運算元，`|` 運算子會計算其運算元的[位邏輯 or](bitwise-and-shift-operators.md#logical-or-operator-) 。
 
 ## <a name="conditional-logical-and-operator-"></a> 條件式邏輯 AND 運算子 &amp;&amp;
 
@@ -129,13 +129,13 @@ ms.locfileid: "72319099"
 |null|False|False|null|  
 |null|null|null|null|  
 
-那些運算子的行為和具有可為 Null 實值類型之一般運算子的行為並不相同。 一般而言，已針對某個實值類型之運算元定義的運算子，也可以搭配相對應可為 Null 實值類型的運算元使用。 這種運算子會在其任何一個運算元為 `null` 的情況下產生 `null`。 不過，就算其中一個運算元是 `null`，`&` 和 `|` 運算子仍可以產生非 Null。 如需可為 null 的實數值型別之運算子行為的詳細資訊，請參閱[使用可為 null 的實數值型別](../../programming-guide/nullable-types/using-nullable-types.md)一文中的[運算子](../../programming-guide/nullable-types/using-nullable-types.md#operators)一節。
+那些運算子的行為和具有可為 Null 實值類型之一般運算子的行為並不相同。 一般而言，已針對某個實值類型之運算元定義的運算子，也可以搭配相對應可為 Null 實值類型的運算元使用。 如果它的任何運算元評估為 `null`，這類運算子就會產生 `null`。 不過，即使其中一個運算元評估為 `null`，`&` 和 `|` 運算子也可以產生非 null。 如需可為 null 的實數值型別之運算子行為的詳細資訊，請參閱[使用可為 null 的實數值型別](../../programming-guide/nullable-types/using-nullable-types.md)一文中的[運算子](../../programming-guide/nullable-types/using-nullable-types.md#operators)一節。
 
-您也可以使用 `!` 和 `^` 運算子搭配 `bool?` 運算元，如下列範例所示︰
+您也可以使用 `!` 和 `^` 運算子搭配 `bool?` 的運算元，如下列範例所示：
 
 [!code-csharp-interactive[lifted negation and xor](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#WithNullableBoolean)]
 
-條件邏輯運算子 `&&` 和 `||` 不支援 `bool?` 運算元。
+條件式邏輯運算子 `&&` 和 `||` 不支援 `bool?` 運算元。
 
 ## <a name="compound-assignment"></a>複合指派
 
@@ -174,7 +174,7 @@ x = x op y
 
 [!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Precedence)]
 
-如需按優先順序層級排序的 C# 運算子完整清單，請參閱 [C# 運算子](index.md)。
+如需依優先順序層C#級排序的完整運算子清單，請參閱[ C#運算子](index.md)一文的[運算子優先順序](index.md#operator-precedence)一節。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 

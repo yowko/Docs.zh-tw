@@ -6,13 +6,13 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 09/22/2019
-ms.openlocfilehash: 758c8fd30fbd2e5ce8ace997005b91d6872a06d1
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.date: 10/22/2019
+ms.openlocfilehash: 712e1644ea21e500265bc2a9bf9b4df9d20450a6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773888"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037788"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
@@ -26,19 +26,18 @@ ms.locfileid: "72773888"
 
 .NET Core RC1 被視為 Microsoft 準備好的生產環境，並受到完整支援。 如果您使用的是預覽版本，您必須移至 RTM 版本以繼續支援。
 
-## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
+## <a name="language-improvements-c-80"></a>語言改進C# 8。0
 
-Windows 的 MSI 安裝程式從 .NET Core 3.0 開始即已變更。 SDK 安裝程式現在會就地升級 SDK 功能帶版本。 功能帶是在版本號碼「修補程式」部分以「一百」為單位的群組中定義。 例如，**3.0._101_** 和 **3.0._201_** 便是位於兩個不同功能帶中的版本，而 **3.0._101_** 和 **3.0._199_** 則位於相同的功能帶。 此外，安裝 .NET Core SDK **3.0._101_** 時，.NET Core SDK **3.0._100_** 便會從電腦移除 (若存在的話)。 在相同電腦上安裝 .NET Core SDK **3.0._200_** 時，不會移除 .NET Core SDK **3.0._101_** 。
+C#8.0 也是此版本的一部分，其中包括[可為 null 的參考型別](../../csharp/tutorials/nullable-reference-types.md)功能、[非同步資料流程](../../csharp/tutorials/generate-consume-asynchronous-stream.md)和[其他模式](../../csharp/tutorials/pattern-matching.md)。 如需 C# 8.0 功能的詳細資訊，請參閱 [C# 8.0 的新功能](../../csharp/whats-new/csharp-8.md)。
 
-如需版本設定的詳細資訊，請參閱 [.NET Core 版本設定概觀](../versions/index.md)。
+已新增語言增強功能，以支援以下詳述的下列 API 功能：
 
-## <a name="c-80"></a>C# 8.0
-
-C#8.0 也是此版本的一部分，其中包括可為 null 的參考型別功能、非同步資料流程和其他模式。 如需 C# 8.0 功能的詳細資訊，請參閱 [C# 8.0 的新功能](../../csharp/whats-new/csharp-8.md)。
+- [範圍和索引](#ranges-and-indices)
+- [非同步資料流程](#async-streams)
 
 ## <a name="net-standard-21"></a>.NET Standard 2.1
 
-雖然 .NET Core 3.0 支援 **.NET Standard 2.1**，但預設的 `dotnet new classlib` 範本會產生仍以 **.NET Standard 2.0**為目標的專案。 若要以 **.NET Standard 2.1** 為目標，請編輯您的專案檔並將 `TargetFramework` 屬性變更為 `netstandard2.1`：
+.NET Core 3.0 會實行 **.NET Standard 2.1**。 不過，預設 `dotnet new classlib` 範本會產生仍以 **.NET Standard 2.0**為目標的專案。 若要以 **.NET Standard 2.1** 為目標，請編輯您的專案檔並將 `TargetFramework` 屬性變更為 `netstandard2.1`：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -52,42 +51,9 @@ C#8.0 也是此版本的一部分，其中包括可為 null 的參考型別功�
 
 如果目前使用 Visual Studio，您需要 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)，因為 Visual Studio 2017 不支援 **.NET Standard 2.1** 或 **.NET Core 3.0**。
 
-## <a name="improved-net-core-version-apis"></a>改善的 .NET Core 版本 API
+## <a name="compiledeploy"></a>編譯/部署
 
-從 .NET Core 3.0 開始，.NET Core 所提供版本 API 現在會傳回您預期的資訊。 例如:
-
-```csharp
-System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");
-
-// Old result
-//   Environment.Version: 4.0.30319.42000
-//
-// New result
-//   Environment.Version: 3.0.0
-```
-
-```csharp
-System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription}");
-
-// Old result
-//   RuntimeInformation.FrameworkDescription: .NET Core 4.6.27415.71
-//
-// New result
-//   RuntimeInformation.FrameworkDescription: .NET Core 3.0.0-preview4-27615-11
-```
-
-> [!WARNING]
-> 重大變更。 這是技術上的重大變更，因為版本設定配置已變更。
-
-## <a name="net-platform-dependent-intrinsics"></a>.NET 平台相依內建
-
-已新增 API，允許存取特定效能導向的 CPU 指令，例如 **SIMD** 或**位元操作指令**集合。 這些指令可協助您在某些情況 (例如有效率地平行處理資料) 下大幅提升效能。
-
-.NET 程式庫 (如果適用) 已開始使用這些指令來提升效能。
-
-如需詳細資訊，請參閱 [.NET Platform Dependent Intrinsics](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md) (.NET 平台相依內建)。
-
-## <a name="default-executables"></a>預設可執行檔
+### <a name="default-executables"></a>預設可執行檔
 
 .NET Core 現在預設會建置[架構相依可執行檔](../deploying/index.md#framework-dependent-executables-fde)。 這對於使用 .NET Core 全域安裝版本的應用程式來說，是一項新行為。 先前，只有[獨立式部署](../deploying/index.md#self-contained-deployments-scd)會產生可執行檔。
 
@@ -96,7 +62,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 - 您可以按兩下可執行檔。
 - 您可以直接從命令提示字元啟動應用程式，例如在 Windows 上為 `myapp.exe`，在 Linux 和 macOS 上為 `./myapp`。
 
-## <a name="single-file-executables"></a>單一檔案可執行檔
+### <a name="single-file-executables"></a>單一檔案可執行檔
 
 `dotnet publish` 命令支援將您的應用程式封裝成平台特定單一檔案可執行檔。 可執行檔會自我解壓縮，並包含執行應用程式所需的所有相依性 (包括原生)。 第一次執行應用程式時，系統會將應用程式解壓縮到以應用程式名稱和組建識別碼為基礎的目錄。 再次執行應用程式時的啟動速度會更快。 除非使用新版本，否則應用程式不需要再次自我解壓縮。
 
@@ -117,7 +83,7 @@ dotnet publish -r win10-x64 -p:PublishSingleFile=true
 
 如需單一檔案發佈的詳細資訊，請參閱[單一檔案搭配程式設計文件](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md)。
 
-## <a name="assembly-linking"></a>組件連結
+### <a name="assembly-linking"></a>組件連結
 
 .NET Core 3.0 SDK 隨附能透過分析 IL 並修剪未使用的組件來減少應用程式大小的工具。
 
@@ -145,7 +111,7 @@ dotnet publish -r <rid> -c Release
 
 如需 IL 連結器工具的詳細資訊，請參閱[文件](https://aka.ms/dotnet-illink) \(英文\) 或造訪 [mono/linker]( https://github.com/mono/linker) \(英文\) 存放庫。
 
-## <a name="tiered-compilation"></a>階層式編譯
+### <a name="tiered-compilation"></a>階層式編譯
 
 .NET Core 3.0 預設會開啟[階層式編譯](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC)。 這項功能可讓執行階段更彈性地使用 Just-In-Time (JIT) 編譯器來獲得更佳的效能。
 
@@ -165,7 +131,7 @@ TC 的主要優點是能夠啟用較慢品質但較快層級，或較高品質�
 <TieredCompilation>false</TieredCompilation>
 ```
 
-## <a name="readytorun-images"></a>ReadyToRun 映像
+### <a name="readytorun-images"></a>ReadyToRun 映像
 
 您可以透過將應用程式組件編譯為 ReadyToRun (R2R) 格式，來改善 .NET Core 應用程式的啟動時間。 R2R 是一種預先(AOT) 編譯。
 
@@ -173,7 +139,7 @@ R2R 二進位檔會透過減少 Just-In-Time (JIT) 編譯器在應用程式載�
 
 若要將您的專案編譯為 ReadyToRun，請執行下列操作：
 
-01. 將 `<PublishReadyToRun>` 設定新增至專案
+01. 將 [`<PublishReadyToRun>`] 設定新增至您的專案：
 
     ```xml
     <PropertyGroup>
@@ -184,10 +150,10 @@ R2R 二進位檔會透過減少 Just-In-Time (JIT) 編譯器在應用程式載�
 01. 發佈自封式應用程式。 例如，此命令會針對 64 位元版本的 Windows 建立自封式應用程式：
 
     ```dotnetcli
-    dotnet publish -c Release -r win-x64 --self-contained true
+    dotnet publish -c Release -r win-x64 --self-contained
     ```
 
-### <a name="cross-platformarchitecture-restrictions"></a>跨平台/架構限制
+#### <a name="cross-platformarchitecture-restrictions"></a>跨平台/架構限制
 
 ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上進行編譯。 例如，如果您想要適用於 Windows x64 的 R2R 映像，便需要在該環境上執行發佈命令。
 
@@ -197,28 +163,9 @@ ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上�
 - Windows x86 可以用來編譯 Windows ARM32 映像。
 - Linux x64 可以用來編譯 Linux ARM32 和 ARM64 映像。
 
-## <a name="build-copies-dependencies"></a>組建複本相依性
+## <a name="runtimesdk"></a>執行時間/SDK
 
-`dotnet build` 命令現在會從 NuGet 快取將您應用程式的 NuGet 相依性複製到組建輸出資料夾。 先前，只有在進行 `dotnet publish` 的過程中，才會複製相依性。
-
-有些作業 (例如連結和 Razor 頁面發佈) 仍然需要發佈。
-
-## <a name="local-tools"></a>本機工具
-
-.NET Core 3.0 引進本機工具。 本機工具與[全域工具](../tools/global-tools.md)類似，但與磁碟上的某個特定位置立建立關聯。 本機工具並非全域可用，而是以 NuGet 套件形式散發。
-
-> [!WARNING]
-> 如果您在 .NET Core 3.0 Preview 1 中嘗試本機工具 (例如執行 `dotnet tool restore` 或 `dotnet tool install`)，請刪除本機工具快取資料夾。 否則，本機工具將無法在任何較新版本中運作。 此資料夾位於：
->
-> 在 macOS 上，Linux：`rm -r $HOME/.dotnet/toolResolverCache`
->
-> 在 Windows 上：`rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
-
-本機工具會倚賴您目前目錄中名為 `dotnet-tools.json` 的資訊清單檔。 此資訊清單檔定義可在該資料夾和以下資料夾提供的工具。 您可以隨程式碼散發資訊清單檔，確保使用您程式碼的任何人都能進行還原並使用相同工具。
-
-不論是全域工具還是區域工具，都需要一個相容的執行階段版本。 NuGet.org 上目前許多工具都以 .NET Core 執行階段 2.1 為目標。 若要在全域或本機安裝這些工具，您仍然需要安裝 [.NET Core 2.1 執行階段](https://dotnet.microsoft.com/download/dotnet-core/2.1)。
-
-## <a name="major-version-roll-forward"></a>主要版本向前復原
+### <a name="major-version-roll-forward"></a>主要版本向前復原
 
 .NET Core 3.0 引進選擇性功能，可讓您的應用程式向前復原到 .NET Core 最新主要版本。 此外，也已新增設定來控制如何將向前復原套用至您的應用程式。 這可透過下列方式進行設定：
 
@@ -244,7 +191,46 @@ ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上�
 
 除了 **Disable** 設定，所有設定都會使用最高可用的修補程式版本。
 
-## <a name="windows-desktop"></a>Windows 桌面
+### <a name="build-copies-dependencies"></a>組建複本相依性
+
+`dotnet build` 命令現在會從 NuGet 快取將您應用程式的 NuGet 相依性複製到組建輸出資料夾。 先前，只有在進行 `dotnet publish` 的過程中，才會複製相依性。
+
+有些作業 (例如連結和 Razor 頁面發佈) 仍然需要發佈。
+
+### <a name="local-tools"></a>本機工具
+
+.NET Core 3.0 引進本機工具。 本機工具與[全域工具](../tools/global-tools.md)類似，但與磁碟上的某個特定位置立建立關聯。 本機工具並非全域可用，而是以 NuGet 套件形式散發。
+
+> [!WARNING]
+> 如果您在 .NET Core 3.0 Preview 1 中嘗試本機工具 (例如執行 `dotnet tool restore` 或 `dotnet tool install`)，請刪除本機工具快取資料夾。 否則，本機工具將無法在任何較新版本中運作。 此資料夾位於：
+>
+> 在 macOS 上，Linux：`rm -r $HOME/.dotnet/toolResolverCache`
+>
+> 在 Windows 上：`rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
+
+本機工具會倚賴您目前目錄中名為 `dotnet-tools.json` 的資訊清單檔。 此資訊清單檔定義可在該資料夾和以下資料夾提供的工具。 您可以隨程式碼散發資訊清單檔，確保使用您程式碼的任何人都能進行還原並使用相同工具。
+
+不論是全域工具還是區域工具，都需要一個相容的執行階段版本。 NuGet.org 上目前許多工具都以 .NET Core 執行階段 2.1 為目標。 若要在全域或本機安裝這些工具，您仍然需要安裝 [.NET Core 2.1 執行階段](https://dotnet.microsoft.com/download/dotnet-core/2.1)。
+
+### <a name="smaller-garbage-collection-heap-sizes"></a>較小的記憶體回收堆積大小
+
+已減少記憶體回收行程的預設堆積大小，而導致 .NET Core 使用較少的記憶體。 這項變更較符合使用新式處理器快取大小的層代 0 配置預算。
+
+### <a name="garbage-collection-large-page-support"></a>記憶體回收大型頁面支援
+
+大型頁面 (Large Page，在 Linux 上又稱為 Huge Page) 是一項功能，其中作業系統能夠建立大於原生頁面大小 (通常為 4K) 的記憶體區域，以提升要求這些大型頁面的應用程式效能。
+
+記憶體回收行程現在可以設定 **GCLargePages** 設定作為選擇性功能，來選擇在 Windows 上配置大型頁面。
+
+## <a name="windows-desktop--com"></a>Windows 桌面 & COM
+
+### <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
+
+Windows 的 MSI 安裝程式從 .NET Core 3.0 開始即已變更。 SDK 安裝程式現在會就地升級 SDK 功能帶版本。 功能帶是在版本號碼「修補程式」部分以「一百」為單位的群組中定義。 例如，**3.0._101_** 和 **3.0._201_** 便是位於兩個不同功能帶中的版本，而 **3.0._101_** 和 **3.0._199_** 則位於相同的功能帶。 此外，安裝 .NET Core SDK **3.0._101_** 時，.NET Core SDK **3.0._100_** 便會從電腦移除 (若存在的話)。 在相同電腦上安裝 .NET Core SDK **3.0._200_** 時，不會移除 .NET Core SDK **3.0._101_** 。
+
+如需版本設定的詳細資訊，請參閱 [.NET Core 版本設定概觀](../versions/index.md)。
+
+### <a name="windows-desktop"></a>Windows 桌面
 
 .NET Core 3.0 支援使用 Windows Presentation Foundation (WPF) 和 Windows Forms 的 Windows 傳統型應用程式。 這些架構也支援透過 [XAML 島](/windows/uwp/xaml-platform/xaml-host-controls)使用來自 Windows UI XAML 程式庫 (WinUI) 的新式控制項和 Fluent 樣式。
 
@@ -261,27 +247,7 @@ Visual Studio 2019 會新增 [新增專案] 範本，供 .NET Core 3.0 Windows F
 
 如需如何移植現有 .NET Framework 應用程式的詳細資訊，請參閱[移植 WPF 專案](../porting/wpf.md)和[移植 Windows Forms 專案](../porting/winforms.md)。
 
-## <a name="com-callable-components---windows-desktop"></a>COM 可呼叫元件 - Windows 傳統型
-
-您現在可以在 Windows 上建立 COM 可呼叫受控元件。 此功能對於搭配 COM 增益集模型使用 .NET Core 很重要，也提供 .NET Framework 同位。
-
-不同於 .NET Framework (其中使用 *mscoree.dll* 作為 COM 伺服器)，.NET Core 會在您建置 COM 元件時，將原生啟動器 DLL 新增至 *bin* 目錄。
-
-如需如何建立及取用 COM 元件的範例，請參閱 [COM Demo](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) (COM 示範)。
-
-## <a name="msix-deployment---windows-desktop"></a>MSIX 部署 - Windows 傳統型
-
-[MSIX](https://docs.microsoft.com/windows/msix/) 是新的 Windows 應用程式套件格式。 它可以用來將 .NET Core 3.0 桌面應用程式部署至 Windows 10。
-
-Visual Studio 2019 中提供的 [Windows 應用程式套件專案](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net) \(機器翻譯\) 可讓您利用[獨立式](../deploying/index.md#self-contained-deployments-scd) .NET Core 應用程式建立 MSIX 套件。
-
-.NET Core 專案檔必須指定在 `<RuntimeIdentifiers>` 屬性中支援的執行階段：
-
-```xml
-<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
-```
-
-## <a name="winforms-high-dpi"></a>WinForms 高 DPI
+#### <a name="winforms-high-dpi"></a>WinForms 高 DPI
 
 .NET Core Windows Forms 應用程式可以使用 <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType> 設定高 DPI 模式。 除非已透過其他方法 (例如在 `Application.Run` 前面加上 `App.Manifest` 或 P/Invoke) 進行設定，否則 `SetHighDpiMode` 方法可以設定對應的高 DPI 模式。
 
@@ -295,7 +261,122 @@ Visual Studio 2019 中提供的 [Windows 應用程式套件專案](https://docs.
 
 如需高 DPI 模式的詳細資訊，請參閱 [Windows 上的高 DPI 傳統型應用程式開發](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows)。
 
-## <a name="ranges-and-indices"></a>範圍和索引
+### <a name="create-com-components"></a>建立 COM 元件
+
+您現在可以在 Windows 上建立 COM 可呼叫受控元件。 此功能對於搭配 COM 增益集模型使用 .NET Core 很重要，也提供 .NET Framework 同位。
+
+不同於 .NET Framework (其中使用 *mscoree.dll* 作為 COM 伺服器)，.NET Core 會在您建置 COM 元件時，將原生啟動器 DLL 新增至 *bin* 目錄。
+
+如需如何建立及取用 COM 元件的範例，請參閱 [COM Demo](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) (COM 示範)。
+
+### <a name="windows-native-interop"></a>Windows 原生 Interop
+
+Windows 提供豐富的原生 API，其採用的形式為一般 C API、COM 和 WinRT。 除了 .NET Core 3.0 支援 **P/Invoke** 之外，.NET Core 3.0 還新增 **CoCreate COM API** 和 **Activate WinRT API** 的功能。 如需程式碼範例，請參閱 [Excel Demo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo) (Excel 示範)。
+
+### <a name="msix-deployment"></a>MSIX 部署
+
+[MSIX](https://docs.microsoft.com/windows/msix/) 是新的 Windows 應用程式套件格式。 它可以用來將 .NET Core 3.0 桌面應用程式部署至 Windows 10。
+
+Visual Studio 2019 中提供的 [Windows 應用程式套件專案](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net) \(機器翻譯\) 可讓您利用[獨立式](../deploying/index.md#self-contained-deployments-scd) .NET Core 應用程式建立 MSIX 套件。
+
+.NET Core 專案檔必須指定在 `<RuntimeIdentifiers>` 屬性中支援的執行階段：
+
+```xml
+<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+```
+
+## <a name="linux-improvements"></a>Linux 改良功能
+
+### <a name="serialport-for-linux"></a>適用於 Linux 的 SerialPort
+
+.NET Core 3.0 提供 Linux 上 <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> 的基本支援。
+
+先前，.NET Core 僅支援在 Windows 上使用 `SerialPort`。
+
+如需 Linux 上序列埠有限支援的詳細資訊，請參閱 [GitHub 問題 #33146](https://github.com/dotnet/corefx/issues/33146)。
+
+### <a name="docker-and-cgroup-memory-limits"></a>Docker 和 cgroup 記憶體限制
+
+在 Linux 上使用 Docker 執行 .NET Core 3.0，會有更好的 cgroup 記憶體限制。 使用記憶體限制 (例如使用 `docker run -m`) 執行 Docker 容器會變更 .NET Core 的運作方式。
+
+- 預設記憶體回收行程 (GC) 堆積大小：上限為 20 MB，或容器上 75% 的記憶體限制。
+- 可將明確大小設定為 cgroup 限制的絕對數目或百分比。
+- 每個 GC 堆積的保留區段大小下限為 16 MB。 此大小可減少電腦上所建立的堆積數目。
+
+### <a name="gpio-support-for-raspberry-pi"></a>Raspberry Pi 的 GPIO 支援
+
+兩個套件已發佈至您可以用於 GPIO 程式設計的 NuGet：
+
+- [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
+- [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
+
+GPIO 套件包含 *GPIO*、*SPI*、*I2C* 和 *PWM* 裝置的 API。 IoT 繫結套件包含裝置繫結。 如需詳細資訊，請參閱[裝置 GitHub 存放庫](https://github.com/dotnet/iot/blob/master/src/devices/)。
+
+### <a name="arm64-linux-support"></a>ARM64 Linux 支援
+
+.NET Core 3.0 新增 ARM64 for Linux 的支援。 ARM64 的主要使用案例目前是搭配 IoT 案例。 如需詳細資訊，請參閱 [.NET Core ARM64 Status](https://github.com/dotnet/announcements/issues/82) (.NET Core ARM64 狀態)。
+
+[ARM64 上適用於 .NET Core 的 Docker 映像](https://hub.docker.com/r/microsoft/dotnet/)可供 Alpine、Debian 和 Ubuntu 使用。
+
+> [!NOTE]
+> 目前尚未提供 **ARM64** Windows 支援。
+
+## <a name="security"></a>安全性
+
+### <a name="tls-13--openssl-111-on-linux"></a>Linux 上的 TLS 1.3 和 OpenSSL 1.1.1
+
+.NET Core 現在會利用 [OpenSSL 1.1.1 中的 TLS 1.3 支援](https://www.openssl.org/blog/blog/2018/09/11/release111/) (當在指定的環境中有提供時)。 透過 TLS 1.3：
+
+- 因為用戶端與伺服器之間所需的來回行程次數減少，所以改善了連線時間。
+- 因為移除各種已淘汰和不安全的密碼編譯演算法，所以提升了安全性。
+
+.NET Core 3.0 在 Linux 系統上使用 **OpenSSL 1.1.1**、**OpenSSL 1.1.0** 或 **OpenSSL 1.0.2** (若可供使用)。 當 **OpenSSL 1.1.1** 可供使用時，<xref:System.Net.Security.SslStream?displayProperty=nameWithType> 和 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 類型就會使用 **TLS 1.3** (假設用戶端和伺服器都支援 **TLS 1.3**)。
+
+>[!IMPORTANT]
+>Windows 和 macOS 尚未支援 **TLS 1.3**。 .NET Core 3.0 將在有支援可用時，在這些作業系統上支援 **TLS 1.3**。
+
+下列 C# 8.0 範例示範連線至 <https://www.cloudflare.com> 之 Ubuntu 18.10 上的 .NET Core 3.0：
+
+[!CODE-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
+
+### <a name="cryptography-ciphers"></a>密碼編譯加密方式
+
+.NET 3.0 新增對 **AES-GCM** 和 **AES-CCM** 加密方式的支援，分別透過 <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> 和 <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType> 來實作。 這些演算法都是[搭配關聯資料的驗證加密 (AEAD) 演算法](https://en.wikipedia.org/wiki/Authenticated_encryption)。
+
+下列程式碼示範如何使用 `AesGcm` 加密方式將隨機資料加密和解密。
+
+[!CODE-csharp[AesGcm](~/samples/snippets/core/whats-new/whats-new-in-30/cs/Cipher.cs#AesGcm)]
+
+### <a name="cryptographic-key-importexport"></a>密碼編譯金鑰匯入/匯出
+
+.NET Core 3.0 支援從標準格式匯入及匯出非對稱式公開金鑰與私密金鑰。 您無須使用 X.509 憑證。
+
+所有金鑰類型 (例如 *RSA*、*DSA*、*ECDsa* 和 *ECDiffieHellman*) 都支援下列格式：
+
+- **公開金鑰**
+  - X.509 SubjectPublicKeyInfo
+
+- **私密金鑰**
+  - PKCS#8 PrivateKeyInfo
+  - PKCS#8 EncryptedPrivateKeyInfo
+
+RSA 金鑰也支援：
+
+- **公開金鑰**
+  - PKCS#1 RSAPublicKey
+
+- **私密金鑰**
+  - PKCS#1 RSAPrivateKey
+
+匯出方法會產生 DER 編碼的二進位資料，而匯入方法也是如此。 如果金鑰是以適合文字的 PEM 格式儲存的，呼叫端在呼叫匯入方法之前，就必須先對內容進行 Base64 解碼。
+
+[!CODE-csharp[RSA](~/samples/snippets/core/whats-new/whats-new-in-30/cs/RSA.cs#Rsa)]
+
+**PKCS#8** 檔案可以使用 <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?displayProperty=nameWithType> 來檢查，而 **PFX/PKCS#12** 檔案可以使用 <xref:System.Security.Cryptography.Pkcs.Pkcs12Info?displayProperty=nameWithType> 來檢查。 **PFX/PKCS#12** 檔案可以使用 <xref:System.Security.Cryptography.Pkcs.Pkcs12Builder?displayProperty=nameWithType> 來操作。
+
+## <a name="net-core-30-api-changes"></a>.NET Core 3.0 API 變更
+
+### <a name="ranges-and-indices"></a>範圍和索引
 
 新的 <xref:System.Index?displayProperty=nameWithType> 類型可用於編製索引。 您可以從會從開頭算起的 `int` 或使用會從結尾算起的前置詞 `^` 運算子 (C#)，來建立一個索引：
 
@@ -314,7 +395,7 @@ var slice = a[i1..i2]; // { 3, 4, 5 }
 
 如需詳細資訊，請參閱[範圍和索引教學課程](../../csharp/tutorials/ranges-indexes.md)。
 
-## <a name="async-streams"></a>非同步資料流
+### <a name="async-streams"></a>非同步資料流
 
 <xref:System.Collections.Generic.IAsyncEnumerable%601> 類型是 <xref:System.Collections.Generic.IEnumerable%601> 的新非同步版本。 此語言可讓您透過 `IAsyncEnumerable<T>` 執行 `await foreach` 以取用其元素，然後對它們使用 `yield return` 以產生元素。
 
@@ -334,7 +415,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 如需詳細資訊，請參閱[非同步資料流教學課程](../../csharp/tutorials/generate-consume-asynchronous-stream.md)。
 
-## <a name="ieee-floating-point-improvements"></a>IEEE 浮點增強功能
+### <a name="ieee-floating-point"></a>IEEE 浮點
 
 正在更新浮點 API，以遵守 [IEEE 754-2008 修訂](https://en.wikipedia.org/wiki/IEEE_754-2008_revision)。 這些變更的目標是要公開所有**必要**的作業，並確保其行為上與 IEEE 規格相容。如需浮點改良功能的詳細資訊，請參閱[.Net Core 3.0 中的浮點剖析和格式改進](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/)文章。
 
@@ -367,63 +448,48 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 - <xref:System.Math.CopySign(System.Double,System.Double)>\
 對應至 `copySign` IEEE 作業，它會傳回 `x` 的值，但具有 `y` 的符號。
 
-## <a name="fast-built-in-json-support"></a>快速的內建 JSON 支援
+### <a name="net-platform-dependent-intrinsics"></a>.NET 平台相依內建
+
+已新增 API，允許存取特定效能導向的 CPU 指令，例如 **SIMD** 或**位元操作指令**集合。 這些指令可協助您在某些情況 (例如有效率地平行處理資料) 下大幅提升效能。
+
+.NET 程式庫 (如果適用) 已開始使用這些指令來提升效能。
+
+如需詳細資訊，請參閱 [.NET Platform Dependent Intrinsics](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md) (.NET 平台相依內建)。
+
+### <a name="improved-net-core-version-apis"></a>改善的 .NET Core 版本 API
+
+從 .NET Core 3.0 開始，.NET Core 所提供版本 API 現在會傳回您預期的資訊。 例如:
+
+```csharp
+System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");
+
+// Old result
+//   Environment.Version: 4.0.30319.42000
+//
+// New result
+//   Environment.Version: 3.0.0
+```
+
+```csharp
+System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription}");
+
+// Old result
+//   RuntimeInformation.FrameworkDescription: .NET Core 4.6.27415.71
+//
+// New result (notice the value includes any preview release information)
+//   RuntimeInformation.FrameworkDescription: .NET Core 3.0.0-preview4-27615-11
+```
+
+> [!WARNING]
+> 重大變更。 這是技術上的重大變更，因為版本設定配置已變更。
+
+### <a name="fast-built-in-json-support"></a>快速的內建 JSON 支援
 
 .NET 使用者大幅倚賴 [**Json.NET**](https://www.newtonsoft.com/json) 及其他熱門的 JSON 程式庫 (這些仍持續是絕佳的選擇)。 **Json.NET** 使用 .NET 字串作為其基底資料類型，實際上就是 UTF-16。
 
-新的內建 JSON 支援是高效能、低配置，並以 `Span<byte>` 為基礎。 三個新的主要 JSON 相關類型已新增到 .NET Core 3.0 <xref:System.Text.Json?displayProperty=nameWithType> 命名空間。 這些類型「尚未」支援簡單的 CLR 物件 (POCO) 序列化與還原序列化。
+新的內建 JSON 支援是高效能、低配置，並以 `Span<byte>` 為基礎。 如需 <xref:System.Text.Json> 命名空間和類型的詳細資訊，請參閱[.net 中的 JSON 序列化-總覽](../../standard/serialization/system-text-json-overview.md)。 如需常見 JSON 序列化案例的教學課程，請參閱[如何在 .net 中序列化和還原序列化 JSON](../../standard/serialization/system-text-json-how-to.md)。
 
-### <a name="utf8jsonreader"></a>Utf8JsonReader
-
-<xref:System.Text.Json.Utf8JsonReader?displayProperty=nameWithType> 是一個高效能、低配置、只能順向讀取的 UTF-8 編碼 JSON 文字讀取器，會從 `ReadOnlySpan<byte>` 開始讀取。 `Utf8JsonReader` 是一個基礎的低階類型，可用來建置自訂剖析器和還原序列化程式。 使用新的 `Utf8JsonReader` 來讀取 JSON 承載會比使用來自 **Json.NET** 的讀取器快兩倍。 它會等到您需要將 JSON 權杖實現為 (UTF-16) 字串時，才進行配置。
-
-以下是完整閱讀 Visual Studio Code 所建立 [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) 檔案的範例：
-
-[!CODE-csharp[Utf8JsonReader](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#PrintJson)]
-
-[!CODE-csharp[Utf8JsonReader](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#PrintJsonCall)]
-
-### <a name="utf8jsonwriter"></a>Utf8JsonWriter
-
-<xref:System.Text.Json.Utf8JsonWriter?displayProperty=nameWithType> 提供高效能、非快取、僅轉接方式，從常見的 .NET 類型 (像是 `String`、`Int32` 和 `DateTime`) 撰寫 UTF-8 編碼的 JSON 文字。 如同讀取器，寫入器是一個基礎的低階類型，可用來建置自訂序列化程式。 使用新的 `Utf8JsonWriter` 撰寫 JSON 承載，其速度比從 **Json.NET** 使用寫入器還要快 30-80%，且不會配置。
-
-### <a name="jsondocument"></a>JsonDocument
-
-<xref:System.Text.Json.JsonDocument?displayProperty=nameWithType> 是組建在 `Utf8JsonReader` 之上。 `JsonDocument` 可讓您剖析 JSON 資料和組建唯讀文件物件模型 (DOM)，而您可以查詢此模型來支援隨機存取和列舉。 撰寫資料的 JSON 項目可以透過 <xref:System.Text.Json.JsonElement> 類型來存取，而此類型被 `JsonDocument` 公開為稱為 `RootElement` 的屬性。 `JsonElement` 包含 JSON 陣列和物件列舉程式，以及將 JSON 文字轉換為一般.NET 類型的 API。 使用 `JsonDocument` 剖析一般 JSON 承載，並存取其所有成員，速度比 **Json.NET** 還要快 2-3 倍，且極少配置合理大小 (亦即 < 1 MB) 的資料。
-
-以下是 `JsonDocument` 和 `JsonElement` 的使用方式樣本，其可作為起點：
-
-[!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJson)]
-
-以下是完整閱讀 Visual Studio Code 所建立 [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) 檔案的 C# 8.0 範例：
-
-[!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJsonCall)]
-
-### <a name="jsonserializer"></a>JsonSerializer
-
-<xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> 建置在 <xref:System.Text.Json.Utf8JsonReader> 和 <xref:System.Text.Json.Utf8JsonWriter> 之上，以在使用 JSON 文件和片段時，提供快速的低記憶體序列化選項。
-
-以下是將物件序列化成 JSON 的範例：
-
-[!CODE-csharp[JsonSerializer](~/samples/snippets/core/whats-new/whats-new-in-30/cs/JSON.cs#JsonSerialize)]
-
-以下是將 JSON 字串還原序列化成物件的範例。 您可以使用上述範例所產生的 JSON 字串：
-
-[!CODE-csharp[JsonDeserializer](~/samples/snippets/core/whats-new/whats-new-in-30/cs/JSON.cs#JsonDeserialize)]
-
-## <a name="interop-improvements"></a>Interop 增強功能
-
-.NET Core 3.0 改善原生 API Interop。
-
-### <a name="type-nativelibrary"></a>類型： NativeLibrary
-
-<xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> 提供封裝來載入原生程式庫 (使用與 .NET Core P/Invoke 相同的負載邏輯)，並提供相關的 Helper 函式 (例如 `getSymbol`)。 如需程式碼範例，請參閱 [DLLMap Demo](https://github.com/dotnet/samples/tree/master/core/extensions/DllMapDemo) (DLLMap 示範)。
-
-### <a name="windows-native-interop"></a>Windows 原生 Interop
-
-Windows 提供豐富的原生 API，其採用的形式為一般 C API、COM 和 WinRT。 除了 .NET Core 3.0 支援 **P/Invoke** 之外，.NET Core 3.0 還新增 **CoCreate COM API** 和 **Activate WinRT API** 的功能。 如需程式碼範例，請參閱 [Excel Demo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo) (Excel 示範)。
-
-## <a name="http2-support"></a>HTTP/2 支援
+### <a name="http2-support"></a>HTTP/2 支援
 
 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 類型支援 HTTP/2 通訊協定。 如果啟用 HTTP/2，則會透過 TLS/ALPN 交涉 HTTP 通訊協定版本，並會在伺服器選擇使用它時使用 HTTP/2。
 
@@ -439,97 +505,7 @@ Windows 提供豐富的原生 API，其採用的形式為一般 C API、COM 和 
 
 [!CODE-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
 
-## <a name="tls-13--openssl-111-on-linux"></a>Linux 上的 TLS 1.3 和 OpenSSL 1.1.1
+## <a name="next-steps"></a>後續步驟
 
-.NET Core 現在會利用 [OpenSSL 1.1.1 中的 TLS 1.3 支援](https://www.openssl.org/blog/blog/2018/09/11/release111/) (當在指定的環境中有提供時)。 透過 TLS 1.3：
-
-- 因為用戶端與伺服器之間所需的來回行程次數減少，所以改善了連線時間。
-- 因為移除各種已淘汰和不安全的密碼編譯演算法，所以提升了安全性。
-
-.NET Core 3.0 在 Linux 系統上使用 **OpenSSL 1.1.1**、**OpenSSL 1.1.0** 或 **OpenSSL 1.0.2** (若可供使用)。 當 **OpenSSL 1.1.1** 可供使用時，<xref:System.Net.Security.SslStream?displayProperty=nameWithType> 和 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 類型就會使用 **TLS 1.3** (假設用戶端和伺服器都支援 **TLS 1.3**)。
-
->[!IMPORTANT]
->Windows 和 macOS 尚未支援 **TLS 1.3**。 .NET Core 3.0 將在有支援可用時，在這些作業系統上支援 **TLS 1.3**。
-
-下列 C# 8.0 範例示範連線至 <https://www.cloudflare.com> 之 Ubuntu 18.10 上的 .NET Core 3.0：
-
-[!CODE-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
-
-## <a name="cryptography-ciphers"></a>密碼編譯加密方式
-
-.NET 3.0 新增對 **AES-GCM** 和 **AES-CCM** 加密方式的支援，分別透過 <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> 和 <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType> 來實作。 這些演算法都是[搭配關聯資料的驗證加密 (AEAD) 演算法](https://en.wikipedia.org/wiki/Authenticated_encryption)。
-
-下列程式碼示範如何使用 `AesGcm` 加密方式將隨機資料加密和解密。
-
-[!CODE-csharp[AesGcm](~/samples/snippets/core/whats-new/whats-new-in-30/cs/Cipher.cs#AesGcm)]
-
-## <a name="cryptographic-key-importexport"></a>密碼編譯金鑰匯入/匯出
-
-.NET Core 3.0 支援從標準格式匯入及匯出非對稱式公開金鑰與私密金鑰。 您無須使用 X.509 憑證。
-
-所有金鑰類型 (例如 *RSA*、*DSA*、*ECDsa* 和 *ECDiffieHellman*) 都支援下列格式：
-
-- **公開金鑰**
-  - X.509 SubjectPublicKeyInfo
-
-- **私密金鑰**
-  - PKCS#8 PrivateKeyInfo
-  - PKCS#8 EncryptedPrivateKeyInfo
-
-RSA 金鑰也支援：
-
-- **公開金鑰**
-  - PKCS#1 RSAPublicKey
-
-- **私密金鑰**
-  - PKCS#1 RSAPrivateKey
-
-匯出方法會產生 DER 編碼的二進位資料，而匯入方法也是如此。 如果金鑰是以適合文字的 PEM 格式儲存的，呼叫端在呼叫匯入方法之前，就必須先對內容進行 Base64 解碼。
-
-[!CODE-csharp[RSA](~/samples/snippets/core/whats-new/whats-new-in-30/cs/RSA.cs#Rsa)]
-
-**PKCS#8** 檔案可以使用 <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?displayProperty=nameWithType> 來檢查，而 **PFX/PKCS#12** 檔案可以使用 <xref:System.Security.Cryptography.Pkcs.Pkcs12Info?displayProperty=nameWithType> 來檢查。 **PFX/PKCS#12** 檔案可以使用 <xref:System.Security.Cryptography.Pkcs.Pkcs12Builder?displayProperty=nameWithType> 來操作。
-
-## <a name="serialport-for-linux"></a>適用於 Linux 的 SerialPort
-
-.NET Core 3.0 提供 Linux 上 <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> 的基本支援。
-
-先前，.NET Core 僅支援在 Windows 上使用 `SerialPort`。
-
-如需 Linux 上序列埠有限支援的詳細資訊，請參閱 [GitHub 問題 #33146](https://github.com/dotnet/corefx/issues/33146)。
-
-## <a name="docker-and-cgroup-memory-limits"></a>Docker 和 cgroup 記憶體限制
-
-在 Linux 上使用 Docker 執行 .NET Core 3.0，會有更好的 cgroup 記憶體限制。 使用記憶體限制 (例如使用 `docker run -m`) 執行 Docker 容器會變更 .NET Core 的運作方式。
-
-- 預設記憶體回收行程 (GC) 堆積大小：上限為 20 MB，或容器上 75% 的記憶體限制。
-- 可將明確大小設定為 cgroup 限制的絕對數目或百分比。
-- 每個 GC 堆積的保留區段大小下限為 16 MB。 此大小可減少電腦上所建立的堆積數目。
-
-## <a name="smaller-garbage-collection-heap-sizes"></a>較小的記憶體回收堆積大小
-
-已減少記憶體回收行程的預設堆積大小，而導致 .NET Core 使用較少的記憶體。 這項變更較符合使用新式處理器快取大小的層代 0 配置預算。
-
-## <a name="garbage-collection-large-page-support"></a>記憶體回收大型頁面支援
-
-大型頁面 (Large Page，在 Linux 上又稱為 Huge Page) 是一項功能，其中作業系統能夠建立大於原生頁面大小 (通常為 4K) 的記憶體區域，以提升要求這些大型頁面的應用程式效能。
-
-記憶體回收行程現在可以設定 **GCLargePages** 設定作為選擇性功能，來選擇在 Windows 上配置大型頁面。
-
-## <a name="gpio-support-for-raspberry-pi"></a>Raspberry Pi 的 GPIO 支援
-
-兩個套件已發佈至您可以用於 GPIO 程式設計的 NuGet：
-
-- [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
-- [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
-
-GPIO 套件包含 *GPIO*、*SPI*、*I2C* 和 *PWM* 裝置的 API。 IoT 繫結套件包含裝置繫結。 如需詳細資訊，請參閱[裝置 GitHub 存放庫](https://github.com/dotnet/iot/blob/master/src/devices/)。
-
-## <a name="arm64-linux-support"></a>ARM64 Linux 支援
-
-.NET Core 3.0 新增 ARM64 for Linux 的支援。 ARM64 的主要使用案例目前是搭配 IoT 案例。 如需詳細資訊，請參閱 [.NET Core ARM64 Status](https://github.com/dotnet/announcements/issues/82) (.NET Core ARM64 狀態)。
-
-[ARM64 上適用於 .NET Core 的 Docker 映像](https://hub.docker.com/r/microsoft/dotnet/)可供 Alpine、Debian 和 Ubuntu 使用。
-
-> [!NOTE]
-> 目前尚未提供 **ARM64** Windows 支援。
+- [檢查 .NET Core 2.2 和3.0 之間的重大變更。](../compatibility/2.2-3.0.md)
+- [查看 .NET Framework 與 .NET Core 3.0 之間的重大變更。](../compatibility/framework-core.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8d7942ef6c36c01a9ae7ae2a9739f26dfcda5813
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: c5e4b5619394f99a419fe48aee190ad741ea8c0d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393900"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73041655"
 ---
 ### <a name="identity-ui-uses-static-web-assets-feature"></a>身分識別： UI 使用靜態 web 資產功能
 
@@ -23,11 +23,11 @@ ASP.NET Core 3.0 引進了靜態 web 資產功能，且身分識別 UI 已採用
 
 #### <a name="old-behavior"></a>舊的行為
 
-身分識別 UI 的預設 UI 架構是**啟動程式 3**。 您可以在 `Startup.ConfigureServices` 中使用參數，將 UI 架構設定為 `AddIdentityUI` 方法呼叫。
+身分識別 UI 的預設 UI 架構是**啟動程式 3**。 您可以使用 `Startup.ConfigureServices`中 `AddDefaultUI` 方法呼叫的參數來設定 UI 架構。
 
 #### <a name="new-behavior"></a>新的行為
 
-身分識別 UI 的預設 UI 架構是**啟動程式 4**。 UI 架構必須設定在您的專案檔中，而不是在 `AddIdentityUI` 方法呼叫中。
+身分識別 UI 的預設 UI 架構是**啟動程式 4**。 UI 架構必須在專案檔中設定，而不是在 `AddDefaultUI` 方法呼叫中。
 
 #### <a name="reason-for-change"></a>變更的原因
 
@@ -41,18 +41,18 @@ ASP.NET Core 3.0 引進了靜態 web 資產功能，且身分識別 UI 已採用
 <IdentityUIFrameworkVersion>Bootstrap3</IdentityUIFrameworkVersion>
 ```
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>Category
 
 ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-<xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)?displayProperty=nameWithType>
+<xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder,Microsoft.AspNetCore.Identity.UI.UIFramework)?displayProperty=nameWithType>
 
 <!-- 
 
 #### Affected APIs
 
-`M:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)`
+`M:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder,Microsoft.AspNetCore.Identity.UI.UIFramework)`
 
 -->

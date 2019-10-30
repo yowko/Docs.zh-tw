@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 830aef8546191df3df4a70e350ba561367a9e474
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
-ms.translationtype: HT
+ms.openlocfilehash: 9851fcd056eeee33b8f3d7e9d541f9fa43b36d29
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512359"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036156"
 ---
 # <a name="pointer-related-operators-c-reference"></a>指標相關運算子 (C# 參考)
 
@@ -48,7 +48,7 @@ ms.locfileid: "68512359"
 
 [!code-csharp[address of local](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOf)]
 
-`&` 運算子的運算元必須是固定的變數。 「固定」  變數是位在不受[記憶體回收行程](../../../standard/garbage-collection/index.md)作業影響之儲存位置的變數。 在前述範例中，區域變數 `number` 是固定的變數，因為它位於堆疊上。 會受到記憶體回收行程影響且位在儲存位置的變數 (例如重新配置)，稱為「可移動」  變數。 物件欄位和陣列元素是可移動變數的範例。 如果以 [fixed](../keywords/fixed-statement.md) 陳述式來「修正」或「釘選」它，則您可取得可移動變數的位址。 取得的地址僅在 `fixed` 陳述式區塊持續期間有效。 下例顯示如何使用 `fixed` 陳述式和 `&` 運算子：
+`&` 運算子的運算元必須是固定的變數。 「固定」變數是位在不受[記憶體回收行程](../../../standard/garbage-collection/index.md)作業影響之儲存位置的變數。 在前述範例中，區域變數 `number` 是固定的變數，因為它位於堆疊上。 會受到記憶體回收行程影響且位在儲存位置的變數 (例如重新配置)，稱為「可移動」變數。 物件欄位和陣列元素是可移動變數的範例。 如果您使用[`fixed` 語句](../keywords/fixed-statement.md)來 [修正] 或 [釘選]，可以取得可移動變數的位址。 取得的位址只在 `fixed` 語句的區塊內有效。 下列範例顯示如何使用 `fixed` 語句和 `&` 運算子：
 
 [!code-csharp[address of fixed](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOfFixed)]
 
@@ -70,7 +70,7 @@ ms.locfileid: "68512359"
 
 ## <a name="pointer-member-access-operator--"></a>指標成員存取運算子 ->
 
-`->` 運算子結合[指標間接](#pointer-indirection-operator-)和[成員存取](member-access-operators.md#member-access-operator-)。 亦即，如果 `x` 是 `T*` 型別的指標，而 `y` 是 `T` 的可存取成員，則運算式格式為
+`->` 運算子結合[指標間接](#pointer-indirection-operator-)和[成員存取](member-access-operators.md#member-access-operator-)。 也就是說，如果 `x` 是 `T*` 類型的指標，而 `y` 是 `T`類型的可存取成員，則為格式的運算式
 
 ```csharp
 x->y
@@ -142,7 +142,7 @@ x->y
 
 `++` 遞增運算子在其指標運算元中[加](#addition-or-subtraction-of-an-integral-value-to-or-from-a-pointer) 1。 `--` 遞減運算子從其指標運算元中[減](#addition-or-subtraction-of-an-integral-value-to-or-from-a-pointer) 1。
 
-這兩個運算子都支援兩種形式：後置 (`p++` 和 `p--`) 及前置 (`++p` 和 `--p`)。 `p++` 和 `p--` 的結果是運算「前」  的 `p` 值。 `++p` 和 `--p` 的結果是運算「後」  的 `p` 值。
+這兩個運算子都支援兩種形式：後置 (`p++` 和 `p--`) 及前置 (`++p` 和 `--p`)。 `p++` 和 `p--` 的結果是運算「前」的 `p` 值。 `++p` 和 `--p` 的結果是運算「後」的 `p` 值。
 
 下例示範前置和後置遞增運算子的行為：
 
@@ -166,7 +166,7 @@ x->y
 
 使用括弧 `()` 變更由運算子優先順序強制執行的評估順序。
 
-如需按優先順序層級排序的 C# 運算子完整清單，請參閱 [C# 運算子](index.md)。
+如需依優先順序層C#級排序的完整運算子清單，請參閱[ C#運算子](index.md)一文的[運算子優先順序](index.md#operator-precedence)一節。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
@@ -185,7 +185,7 @@ x->y
 - [指標遞增和遞減](~/_csharplang/spec/unsafe-code.md#pointer-increment-and-decrement)
 - [指標比較](~/_csharplang/spec/unsafe-code.md#pointer-comparison)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)

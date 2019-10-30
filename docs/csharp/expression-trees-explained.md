@@ -2,20 +2,21 @@
 title: 說明運算式樹狀架構
 description: 了解運算式樹狀架構，以及它們在轉譯演算法中對處理外部執行和在執行前檢查程式碼的幫助。
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: c5d4b2ad54fab547567d430f11a31542a11d03f3
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 12093e9c9246c87cc5ea3aedaca6ba34acacce4d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104800"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036999"
 ---
 # <a name="expression-trees-explained"></a>說明運算式樹狀架構
 
 [上一個主題 -- 概觀](expression-trees.md)
 
 運算式樹狀架構是一種定義程式碼的資料結構。 其所依據的結構，與編譯器分析程式碼和產生編譯輸出所使用的結構相同。 當您閱讀完本教學課程之後，您將會發現運算式樹狀架構與 Roslyn API 中用來建立[分析器和程式碼修正](https://github.com/dotnet/roslyn-analyzers)的類型相當類似
-(分析器和程式碼修正是 NuGet 套件，可在程式碼上執行靜態分析，並為開發人員建議可能的修正)。這些概念很類似，最後都會產生允許以有意義的方式來查看原始程式碼的資料結構。 不過，運算式樹狀架構是根據一組與 Roslyn API 完全不同的類別和 API。
+（分析器和程式碼修正是 NuGet 套件，可對程式碼執行靜態分析，並為開發人員建議可能的修正）。概念很類似，而最終結果是可讓您以有意義的方式檢查原始程式碼的資料結構。 不過，運算式樹狀架構是根據一組與 Roslyn API 完全不同的類別和 API。
 
 讓我們來看一個簡單的範例。
 程式碼行如下：
@@ -28,7 +29,7 @@ var sum = 1 + 2;
 最外側節點是具有指派的變數宣告陳述式 (`var sum = 1 + 2;`)。該最外側節點包含數個子節點︰變數宣告、指派運算子，以及代表等號右邊的運算式。 此運算式會進一步細分為代表加法運算，以及加法左右運算元的運算式。
 
 讓我們向下切入以深入了解構成等號右邊的運算式。
-此運算式為 `1 + 2`。 這是二元運算式。 更具體來說，這是二元加法運算式。 二元加法運算式具有兩個子系，分別代表加法運算式的左右節點。 在這裡，這兩個節點都是常數運算式：左運算元是值 `1`，右運算元是值 `2`。
+此運算式為 `1 + 2`。 這是二元運算式。 更具體來說，這是二元加法運算式。 二元加法運算式具有兩個子系，分別代表加法運算式的左右節點。 在這裡，這兩個節點都是常數運算式︰左運算元是值 `1`，右運算元是值 `2`。
 
 從外表來看，整個陳述式就是一個樹狀︰您可以從根節點開始，然後周遊樹狀中的每個節點，以查看構成陳述式的程式碼：
 

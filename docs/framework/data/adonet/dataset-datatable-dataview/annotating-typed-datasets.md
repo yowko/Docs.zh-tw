@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 351175b96d354a264a9280018ce21de8870beda2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: df6da84dfc120e3f6c3cb0e46729ca2cecc9fe3a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784800"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040405"
 ---
 # <a name="annotating-typed-datasets"></a>註釋具類型資料集
 註釋可讓您在無需修改基礎結構描述的情況下，修改具型別之 <xref:System.Data.DataSet> 中的項目名稱。 修改基礎架構中的元素名稱，會導致具類型的**資料集**參考不存在於資料來源中的物件，也會遺失資料來源中的物件參考。  
   
- 您可以使用批註，以更有意義的名稱自訂具類型**資料集**內物件的名稱，使程式碼更容易閱讀，並讓用戶端更輕鬆地使用具類型的**資料集**，同時讓基礎架構保持不變。 例如， **Northwind**資料庫的**Customers**資料表的下列 schema 元素會產生**DataRow**物件<xref:System.Data.DataRowCollection>名稱**CustomersRow**和名為**Customers**。  
+ 您可以使用批註，以更有意義的名稱自訂具類型**資料集**內物件的名稱，使程式碼更容易閱讀，並讓用戶端更輕鬆地使用具類型的**資料集**，同時讓基礎架構保持不變。 例如， **Northwind**資料庫之**Customers**資料表的下列 Schema 元素會產生**DataRow**物件名稱**CustomersRow**和名為**Customers**的 <xref:System.Data.DataRowCollection>。  
   
 ```xml  
 <xs:element name="Customers">  
@@ -53,7 +53,7 @@ ms.locfileid: "70784800"
   
  下表顯示可針對**nullValue**注釋指定的值。  
   
-|nullValue 值|說明|  
+|nullValue 值|描述|  
 |---------------------|-----------------|  
 |*取代值*|指定要傳回的值。 傳回值必須與項目的型別相符。 例如，使用 `nullValue="0"` 可為 null 整數欄位傳回 0。|  
 |**_throw**|擲回例外狀況。 這是預設值。|  
@@ -62,9 +62,9 @@ ms.locfileid: "70784800"
   
  下表顯示具類型**資料集**內物件的預設值，以及可用的注釋。  
   
-|物件/方法/事件|預設|註釋|  
+|物件/方法/事件|Default|註釋|  
 |---------------------------|-------------|----------------|  
-|**DataTable**|TableNameDataTable|typedPlural|  
+|**資料表**|TableNameDataTable|typedPlural|  
 |**DataTable**方法|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
@@ -74,9 +74,9 @@ ms.locfileid: "70784800"
 |**父系**存取|TableNameRow|typedParent|  
 |**資料集**事件|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- 若要使用具類型的**資料集**批註，您必須在 XML 架構定義語言（XSD）架構中包含下列**xmlns**參考。 若要從資料庫資料表建立 xsd，請<xref:System.Data.DataSet.WriteXmlSchema%2A>參閱或使用[Visual Studio 中的資料集](/visualstudio/data-tools/dataset-tools-in-visual-studio)。  
+ 若要使用具類型的**資料集**批註，您必須在 XML 架構定義語言（XSD）架構中包含下列**xmlns**參考。 若要從資料庫資料表建立 xsd，請參閱 <xref:System.Data.DataSet.WriteXmlSchema%2A> 或使用[Visual Studio 中的資料集](/visualstudio/data-tools/dataset-tools-in-visual-studio)。  
   
-```  
+```xml  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- 下列程式碼範例使用從範例架構建立的強型別**資料集**。 它會使用<xref:System.Data.SqlClient.SqlDataAdapter>其中一個填入**Customers**資料表，另<xref:System.Data.SqlClient.SqlDataAdapter>一個用來填入**Orders**資料表。 強型別**資料集**會定義**datarelation**。  
+ 下列程式碼範例使用從範例架構建立的強型別**資料集**。 它會使用一個 <xref:System.Data.SqlClient.SqlDataAdapter> 來填入**Customers**資料表，而另一個 <xref:System.Data.SqlClient.SqlDataAdapter> 用來填入**Orders**資料表。 強型別**資料集**會定義**datarelation**。  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  
@@ -222,7 +222,7 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
     }  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>

@@ -13,17 +13,17 @@ helpviewer_keywords:
 - WPF [WPF], interoperability
 - migration [WPF]
 ms.assetid: d655de05-bf63-4814-bc64-6b3be01c70a2
-ms.openlocfilehash: 7576c8631a39a6dcf234f15b93fd5714f493276e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcb7ece1081ae0858148cef883429b205478689b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053323"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040896"
 ---
 # <a name="migration-and-interoperability"></a>移轉和互通性
-此頁面包含連結至文件會討論如何實作之間的互通性[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式和其他類型的[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]應用程式。  
+此頁面包含的檔連結，會討論如何在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式與其他類型的 Microsoft Windows 應用程式之間執行互通性。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [WPF 和 Windows Forms 互通](wpf-and-windows-forms-interoperation.md)  
  [WPF 和 Win32 交互操作](wpf-and-win32-interoperation.md)  
  [WPF 和 Direct3D9 互通](wpf-and-direct3d9-interoperation.md)  
@@ -32,10 +32,10 @@ ms.locfileid: "62053323"
   
 |詞彙|定義|  
 |----------|----------------|  
-|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|您可以使用的項目到主機[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項的項目[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面。|  
-|<xref:System.Windows.Forms.Integration.ElementHost>|A[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]您可以使用的控制項來裝載[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控制項。|  
-|<xref:System.Windows.Interop.HwndSource>|主機[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內的區域[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]應用程式。|  
-|<xref:System.Windows.Interop.HwndHost>|基底類別<xref:System.Windows.Forms.Integration.WindowsFormsHost>，定義時由所有 HWND 型技術所都使用的一些基本功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 子類別來裝載這[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗內[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。|  
-|<xref:System.Windows.Interop.BrowserInteropHelper>|協助程式類別，可報告的瀏覽器環境的狀況[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]瀏覽器裝載應用程式。|  
+|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|專案，可讓您將 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項裝載為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 頁面的元素。|  
+|<xref:System.Windows.Forms.Integration.ElementHost>|您可以用來裝載 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 控制項的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項。|  
+|<xref:System.Windows.Interop.HwndSource>|在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 應用程式中裝載 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 區域。|  
+|<xref:System.Windows.Interop.HwndHost>|<xref:System.Windows.Forms.Integration.WindowsFormsHost>的基類，會定義一些以 HWND 為基礎的技術在由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式裝載時所使用的基本功能。 將此設為子類別，以在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式中裝載 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗。|  
+|<xref:System.Windows.Interop.BrowserInteropHelper>|協助程式類別，用於針對瀏覽器所裝載的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式，報告瀏覽器環境的條件。|  
   
 ## <a name="related-sections"></a>相關章節

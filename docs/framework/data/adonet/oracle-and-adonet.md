@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: ccfe40f218e3f09de53d6cb596a31b2520d9ff9b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a49634f712e32f873df8e47fbcb0c91dbe33fa94
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783481"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039829"
 ---
 # <a name="oracle-and-adonet"></a>Oracle 和 ADO.NET
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "70783481"
   
  Oracle 的 .NET Framework Data Provider 可讓您使用 oracle 用戶端軟體所提供的 Oracle 呼叫介面（OCI）來存取 Oracle 資料庫。 資料提供者的功能設計類似于 SQL Server、OLE DB 和 ODBC 的 .NET Framework 資料提供者。  
   
- 若要使用 Oracle 的 .NET Framework Data Provider，應用程式必須參考<xref:System.Data.OracleClient>命名空間，如下所示：  
+ 若要使用 Oracle 的 .NET Framework Data Provider，應用程式必須參考 <xref:System.Data.OracleClient> 命名空間，如下所示：  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -32,11 +32,11 @@ using System.Data.OracleClient;
   
  當您編譯程式碼時，還必須將參考併入 DLL 中。 例如，如果編譯 C# 程式，則命令列應包括：  
   
-```  
+```console
 csc /r:System.Data.OracleClient.dll  
 ```  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [系統需求](system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
  描述使用 Oracle 的 .NET Framework Data Provider 的需求，並說明使用時要注意的一些問題。  
   
@@ -77,7 +77,7 @@ csc /r:System.Data.OracleClient.dll
  [DbProviderFactories](dbproviderfactories.md)  
  說明可讓您在 ADO.NET 中撰寫提供者獨立程式碼的泛用類別。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ADO.NET](index.md)
 - [ADO.NET 概觀](ado-net-overview.md)

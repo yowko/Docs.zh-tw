@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: b9aa3f4e386ca5de79fe028b10d0d68343aba06b
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: e62825a88858a63984860cbc8a1c570f784f663f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920025"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040869"
 ---
 # <a name="wpf-windows-overview"></a>WPF 視窗概觀
 使用者透過 Windows 與 Windows Presentation Foundation （WPF）獨立應用程式互動。 視窗的主要用途是裝載內容，以視覺化方式檢視資料，並讓使用者可以與資料互動。 獨立 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式會使用 <xref:System.Windows.Window> 類別來提供自己的視窗。 本主題介紹在獨立應用程式中建立和管理 windows 的基本概念之前的 <xref:System.Windows.Window>。  
@@ -442,7 +442,7 @@ ms.locfileid: "72920025"
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
   
 #### <a name="non-rectangular-window-style"></a>非矩形視窗樣式  
- 在某些情況下，<xref:System.Windows.Window.WindowStyle%2A> 的框線樣式可讓您的不足夠。 例如，您可能會想要建立具有非矩形框線的應用程式，例如 [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 使用。  
+ 在某些情況下，<xref:System.Windows.Window.WindowStyle%2A> 的框線樣式可讓您的不足夠。 例如，您可能會想要建立具有非矩形框線的應用程式，例如 Microsoft Windows 媒體播放機使用。  
   
  例如，請考慮下圖所示的語音反升視窗：  
   

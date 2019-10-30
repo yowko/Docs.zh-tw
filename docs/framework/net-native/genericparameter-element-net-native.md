@@ -1,15 +1,15 @@
 ---
-title: <GenericParameter>元素（.NET Native）
+title: <GenericParameter> 元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2898d804f7a351045b2fbce42042f9fd322ebb0a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cf2b06b14252f152c1eece6f9c0d317482a24b27
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049751"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039520"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter > 元素（.NET Native）
 將原則套用到泛型類型或方法的參數類型。  
@@ -27,7 +27,7 @@ ms.locfileid: "71049751"
                   XmlSerializer="policy_type"  
                   MarshalObject="policy_type"  
                   MarshalDelegate="policy_type"  
-                  MarshalStructure="policy_type"  
+                  MarshalStructure="policy_type" />
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -61,12 +61,12 @@ ms.locfileid: "71049751"
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<Method>](method-element-net-native.md)|將執行階段反映原則套用到建構函式或方法。|  
 |[\<Type>](type-element-net-native.md)|將執行階段反映原則套用至特定類型，例如類別或結構。|  
@@ -86,10 +86,10 @@ ms.locfileid: "71049751"
 </Directives>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [\<Method> 項目](method-element-net-native.md)
-- [\<輸入 > 元素](type-element-net-native.md)
+- [\<類型 > 元素](type-element-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞原則設定](runtime-directive-policy-settings.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)

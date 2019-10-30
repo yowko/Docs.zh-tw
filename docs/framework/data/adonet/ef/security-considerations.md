@@ -2,15 +2,15 @@
 title: 安全性考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 1865afb384cfff41ede953c00f01cc96aea9a080
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d9adf4ed9e340ff589117f160e370c7d1595a207
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854256"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039872"
 ---
 # <a name="security-considerations-entity-framework"></a>安全性考量 (Entity Framework)
-本主題說明開發、部署和執行 Entity Framework 應用程式特有的安全性考慮。 您也應該遵循建立安全 .NET Framework 應用程式的建議。 如需詳細資訊, 請參閱[安全性總覽](../security-overview.md)。  
+本主題說明開發、部署和執行 Entity Framework 應用程式特有的安全性考慮。 您也應該遵循建立安全 .NET Framework 應用程式的建議。 如需詳細資訊，請參閱[安全性總覽](../security-overview.md)。  
   
 ## <a name="general-security-considerations"></a>一般安全性考量  
  下列安全性考慮適用于所有使用 Entity Framework 的應用程式。  
@@ -73,7 +73,7 @@ ms.locfileid: "70854256"
   
 - <xref:System.Security.Permissions.SecurityPermission>：<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> (用以使用 <xref:System.Runtime.Serialization.ISerializable> 介面來序列化例外狀況 (Exception))。  
   
-- 開啟資料庫連接以及對資料庫執行命令<xref:System.Data.SqlClient.SqlClientPermission>的許可權，例如 SQL Server 資料庫。  
+- 開啟資料庫連接以及對資料庫執行命令的許可權，例如 SQL Server 資料庫的 <xref:System.Data.SqlClient.SqlClientPermission>。  
   
  如需詳細資訊，請參閱 [Code Access Security and ADO.NET](../code-access-security.md)。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "70854256"
  Entity Framework 不會強制執行任何安全性許可權，而且將會叫用進程中任何使用者提供的資料物件程式碼，不論其是否受信任。 請確定資料存放區和應用程式都會執行用戶端的驗證與授權。  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>限制所有組態檔的存取權。  
- 系統管理員必須限制指定應用程式之設定的所有檔案的寫入存取權，包括 enterprisesec .config、security .config、machine.config 和應用程式佈建檔\<案*應用*程式 >。config.xml。  
+ 系統管理員必須限制指定應用程式之設定的所有檔案的寫入存取權，包括 enterprisesec*應用程式*> 的 config、security .config、machine.config 和應用程式佈建 \<檔案。config.xml。  
   
- 提供者非變異名稱可在 app.config 中修改。用戶端應用程式必須負責使用強式名稱 (Strong Name) 透過標準提供者 Factory 模型存取基礎提供者。  
+ 在 app.config 中可修改提供者不變名稱。用戶端應用程式必須負責透過標準提供者 factory 模型存取基礎提供者，方法是使用強式名稱。  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>限制模型和對應檔的權限。  
  管理員必須將模型和對應檔 (.edmx、.csdl、.ssdl 和 .msl) 的寫入存取權限制為只有修改模型或對應的使用者。 Entity Framework 只需要在執行時間讀取這些檔案的許可權。 系統管理員也應該限制存取由實體資料模型工具產生的物件層和預先編譯的視圖原始程式碼檔。  
@@ -102,7 +102,7 @@ ms.locfileid: "70854256"
   
 - LINQ to Entities 的插入式攻擊：  
   
-     雖然可以在 LINQ to Entities 中撰寫查詢，但它是透過物件模型 API 來執行。 不同[!INCLUDE[esql](../../../../../includes/esql-md.md)]于查詢，LINQ to Entities 查詢不是使用字串操作或串連所撰寫，而且它們不會受到傳統 SQL 插入式攻擊的影響。  
+     雖然可以在 LINQ to Entities 中撰寫查詢，但它是透過物件模型 API 來執行。 不同于 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢，LINQ to Entities 查詢不是使用字串操作或串連所撰寫，而且它們不會受到傳統 SQL 插入式攻擊的影響。  
   
 #### <a name="prevent-very-large-result-sets"></a>避免非常龐大的結果集。  
  如果用戶端正在執行耗用資源與結果集大小成正比的作業，非常龐大的結果集可能會導致用戶端系統關閉。 意外龐大的結果集可能會在下列狀況下發生：  
@@ -113,18 +113,18 @@ ms.locfileid: "70854256"
   
 - 在巢狀 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢中。  
   
- 接受使用者輸入時，您必須確定輸入不會導致結果集變成超過系統能夠處理的大小。 您也可以使用 LINQ to Entities <xref:System.Linq.Queryable.Take%2A>中的方法或中 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 的 [LIMIT](./language-reference/limit-entity-sql.md) 運算子，以限制結果集的大小。  
+ 接受使用者輸入時，您必須確定輸入不會導致結果集變成超過系統能夠處理的大小。 您也可以使用 LINQ to Entities 中的 <xref:System.Linq.Queryable.Take%2A> 方法或 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 中的[limit](./language-reference/limit-entity-sql.md)運算子，來限制結果集的大小。  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>避免在將方法公開至可能未受信任的呼叫端時傳回 IQueryable 結果。  
  基於下列原因，應避免從公開至可能未受信任之呼叫端的方法傳回 <xref:System.Linq.IQueryable%601> 類型：  
   
 - 會公開 <xref:System.Linq.IQueryable%601> 類型的查詢消費者可能會針對結果呼叫方法，而該些方法會公開安全資料或增加結果集的大小。 例如，請考慮下列方法簽章：  
   
-    ```  
+    ```csharp  
     public IQueryable<Customer> GetCustomer(int customerId)  
     ```  
   
-     此查詢的消費者可能會針對傳回的 `.Include("Orders")`呼叫 `IQueryable<Customer>` ，以擷取查詢未打算公開的資料。 將方法的傳回型別變更為 <xref:System.Collections.Generic.IEnumerable%601> 並呼叫會具體化結果的方法 (例如 `.ToList()`)，便可以避免發生此情況。  
+    此查詢的消費者可能會針對傳回的 `.Include("Orders")`呼叫 `IQueryable<Customer>` ，以擷取查詢未打算公開的資料。 將方法的傳回型別變更為 <xref:System.Collections.Generic.IEnumerable%601> 並呼叫會具體化結果的方法 (例如 `.ToList()`)，便可以避免發生此情況。  
   
 - 因為 <xref:System.Linq.IQueryable%601> 查詢會在反覆查看結果時執行，所以會公開 <xref:System.Linq.IQueryable%601> 型別的查詢消費者可以攔截被擲回的例外狀況。 例外狀況可能包含消費者不適用的資訊。  
   
@@ -145,13 +145,13 @@ ms.locfileid: "70854256"
 當您使用 ASP.NET 應用程式中的路徑時，應該考慮下列各項。  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>確認主應用程式 (Host) 是否執行路徑檢查。  
- 當使用`|DataDirectory|` （以分隔號符號括住）替代字串時，ADO.NET 會確認是否支援已解析的路徑。 例如，不允許在 `DataDirectory` 後面使用 ".."。 解析 Web 應用程式根運算子（`~`）的相同檢查是由裝載 ASP.NET 的進程所執行。 IIS 會執行這項檢查。不過，IIS 以外的主應用程式可能不會確認是否支援已解析的路徑。 您應該知道部署 Entity Framework 應用程式之主機的行為。  
+ 當使用 `|DataDirectory|` （以分隔號符號括住）替代字串時，ADO.NET 會確認是否支援已解析的路徑。 例如，不允許在 `DataDirectory` 後面使用 ".."。 解析 Web 應用程式根運算子（`~`）的相同檢查是由裝載 ASP.NET 的進程所執行。 IIS 會執行這項檢查。不過，IIS 以外的主應用程式可能不會確認是否支援已解析的路徑。 您應該知道部署 Entity Framework 應用程式之主機的行為。  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>請勿針對已解析的路徑名稱提出任何假設。  
- 雖然根運算子（`~`） `DataDirectory`和替代字串解析的值應該在應用程式的執行時間期間保持不變，但 Entity Framework 不會限制主機修改這些值。  
+ 雖然根運算子（`~`）和 `DataDirectory` 替代字串解析的值，在應用程式的執行時間期間應該保持不變，但 Entity Framework 不會限制主控制項修改這些值。  
   
 #### <a name="verify-the-path-length-before-deployment"></a>在部署之前確認路徑長度。  
- 部署 Entity Framework 應用程式之前，您應該確定根運算子（~）和`DataDirectory`替代字串的值不會超過作業系統中路徑長度的限制。 ADO.NET 資料提供者不會確定路徑長度是否在有效的限制範圍內。  
+ 部署 Entity Framework 應用程式之前，您應該確定根運算子（~）和 `DataDirectory` 替代字串的值不會超過作業系統中路徑長度的限制。 ADO.NET 資料提供者不會確定路徑長度是否在有效的限制範圍內。  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>ADO.NET 中繼資料的安全性考量  
  下列安全性考量會在產生和使用模型與對應檔時適用。  
@@ -162,7 +162,7 @@ ADO.NET 中繼資料服務元件不會記錄任何私用資訊。 如果存在�
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>請勿接受來自未受信任來源的 MetadataWorkspace 物件。  
  應用程式不應該接受來自未受信任來源之 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 類別的執行個體 (Instance)。 您應該改為根據這類來源明確建構並填入工作區 (Workspace)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [設定 ADO.NET 應用程式的安全性](../securing-ado-net-applications.md)
 - [部署考量](deployment-considerations.md)

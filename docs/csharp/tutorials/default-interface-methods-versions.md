@@ -2,15 +2,16 @@
 title: 在中使用預設介面方法安全地更新介面C#
 description: 本進階教學課程探討如何安全地將新功能新增至現有的介面定義，而不會中斷實作該介面的所有類別和結構。
 ms.date: 05/06/2019
+ms.technlogy: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 71fce2594dbf5ef3175a6b9bdf4e6edba754bb84
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: b9194b769a3ba6d2906d6177c2363d6093b85188
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275998"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039242"
 ---
-# <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>教學課程：以8.0 中C#的預設介面方法更新介面
+# <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>教學課程：在8.0 中C#使用預設介面方法更新介面
 
 從 C# 8.0 開始，您可以在宣告介面成員時，於 .NET Core 3.0 上定義實作。 最常見的情節是安全地將成員新增至已發行並由無數個用戶端所使用的介面。
 
@@ -22,7 +23,7 @@ ms.locfileid: "72275998"
 > * 建立參數化實作以提高彈性。
 > * 讓實作者提供覆寫形式的更特定實作。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 您必須設定電腦以執行 .NET Core，包括C# 8.0 編譯器。 從C# [Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.net Core 3.0 SDK](https://dotnet.microsoft.com/download)開始，可以使用8.0 編譯器。
 
@@ -38,9 +39,9 @@ ms.locfileid: "72275998"
 
 針對這些介面，小組可以建置適用於其使用者的程式庫，來為其客戶打造更好的體驗。 其目標是加深與現有客戶的關係，並改善與新客戶的關係。
 
-現在，您可以將程式庫升級到下一版。 其中一項所要求功能是讓擁有許多訂單的客戶享有忠誠度折扣。 此新的忠誠度折扣會在每次客戶下單時套用。 此特定折扣屬於每個個別客戶。 @No__t-0 的每個執行都可以設定不同的忠誠度折扣規則。 
+現在，您可以將程式庫升級到下一版。 其中一項所要求功能是讓擁有許多訂單的客戶享有忠誠度折扣。 此新的忠誠度折扣會在每次客戶下單時套用。 此特定折扣屬於每個個別客戶。 `ICustomer` 的每個執行都可以針對忠誠度折扣設定不同的規則。 
 
-新增此功能的最自然方式，就是使用方法來增強 `ICustomer` 介面以套用任何忠誠度折扣。 此設計建議在有經驗的開發人員之間引起顧慮：「介面一旦發行，就不可改變！ 這是中斷性變更！」 C# 8.0 新增「預設介面實作」來升級介面。 程式庫作者可以將新成員新增至介面，並為這些成員提供預設實作。
+新增此功能的最自然方式，就是使用方法來增強 `ICustomer` 介面以套用任何忠誠度折扣。 這種設計建議會造成經驗豐富的開發人員的問題：「介面在發行後不變！ 這是中斷性變更！」 C# 8.0 新增「預設介面實作」來升級介面。 程式庫作者可以將新成員新增至介面，並為這些成員提供預設實作。
 
 預設介面實作可讓開發人員升級介面，同時仍可讓任何實作者覆寫該實作。 程式庫使用者可以接受預設實作作為非中斷性變更。 如果他們的商務規則不同，則可以進行覆寫。
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7c282157639a6a60270ce8dbebbc91dd0e0a3f3
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: HT
+ms.openlocfilehash: b336834dcc021b986d79f09d2a9440de0b102f78
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826612"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039768"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>運算式主體成員 (C# 程式設計手冊)
 
@@ -59,7 +59,7 @@ PropertyType PropertyName => expression;
 
 如需屬性的詳細資訊，請參閱[屬性 (C# 程式設計手冊)](../classes-and-structs/properties.md)。
 
-## <a name="properties"></a>屬性
+## <a name="properties"></a>內容
 
 從 C# 7.0 開始，您可以使用運算式主體定義來實作屬性 `get` 和 `set` 存取子。 下列範例示範如何進行這項操作：
 
@@ -89,9 +89,9 @@ PropertyType PropertyName => expression;
 
 ## <a name="indexers"></a>索引子
 
-如同屬性，如果 get 存取子所包含的單一陳述式傳回值，或 set 存取子執行簡單指派，則索引子的 get 和 set 存取子會包含運算式主體定義。
+如同屬性，索引子 `get` 和 `set` 存取子包含運算式主體定義（如果 `get` 存取子包含傳回值的單一運算式），或 `set` 存取子會執行簡單的指派。
 
-下列範例會定義名為 `Sports` 的類別，這個類別包括內含數個運動名稱的內部 <xref:System.String> 陣列。 索引子的 get 和 set 存取子會實作為運算式主體定義。
+下列範例會定義名為 `Sports` 的類別，這個類別包括內含數個運動名稱的內部 <xref:System.String> 陣列。 索引子 `get` 和 `set` 存取子都會實作為運算式主體定義。
 
 [!code-csharp[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)]
 

@@ -2,12 +2,12 @@
 title: XML 結構描述條件約束和關聯性
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 76af1c2e9d85d18a68b8c0a947dfba3b3291326c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 47b1a3e81cfbc4eb58531b1633dd29becbe497a2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784196"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040038"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML 結構描述條件約束和關聯性
 在 XML 架構定義語言（XSD）架構中，您可以指定條件約束（unique、key 和 keyref 條件約束）和關聯性（使用**msdata： Relationship**注釋）。 這個主題會說明 XML 結構描述中指定的條件約束和關聯性如何經過解譯以產生 <xref:System.Data.DataSet>。  
@@ -15,7 +15,7 @@ ms.locfileid: "70784196"
  一般來說，在 XML 架構中，如果您只想要在**資料集中**產生關聯性，您可以指定**msdata： Relationship**注釋。 如需詳細資訊，請參閱[從 XML 架構（XSD）產生資料集](generating-dataset-relations-from-xml-schema-xsd.md)關聯。 如果您想要在**資料集中**產生條件約束，您可以指定條件約束（unique、key 和 keyref）。 請注意，索引鍵條件約束和 keyref 條件約束也用於產生關聯性，詳情請見這個主題的後續說明。  
   
 ## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>從索引鍵條件約束和 keyref 條件約束產生關聯性  
- 您可以指定**msdata： Relationship**注釋，而不是指定 [索引鍵] 和 [keyref 條件約束]，而在 XML 架構對應進程期間，它不僅會產生條件約束，也會產生**資料集**內的關聯性。 不過，如果您在`msdata:ConstraintOnly="true"` **keyref**專案中指定，**資料集**只會包含條件約束，而且不會包含關聯性。  
+ 您可以指定**msdata： Relationship**注釋，而不是指定 [索引鍵] 和 [keyref 條件約束]，而在 XML 架構對應進程期間，它不僅會產生條件約束，也會產生**資料集**內的關聯性。 不過，如果您在**keyref**專案中指定 `msdata:ConstraintOnly="true"`，**資料集**就只會包含條件約束，而且不會包含關聯性。  
   
  下列範例顯示的 XML 架構包含不是嵌套的**Order**和**OrderDetail**元素。 結構描述也指定索引鍵條件約束和 keyref 條件約束。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "70784196"
   
  XML 架構對應進程期間所產生的**資料集**包含**Order**和**OrderDetail**資料表。 此外，**資料集**還包含關聯性和條件約束。 下列範例會顯示這些關聯性和條件約束。 請注意，此架構不會指定**msdata： Relationship**注釋;相反地，key 和 keyref 條件約束是用來產生關聯。  
   
-```  
+```text
 ....ConstraintName: OrderNumberKey  
 ....Type: UniqueConstraint  
 ....Table: Order  
@@ -131,14 +131,14 @@ ms.locfileid: "70784196"
   
  XML 架構對應進程所產生的**資料集**包含兩個數據表：  
   
-```  
+```text  
 Order(OrderNumber, EmpNumber, Order_Id)  
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
  **DataSet**也包含兩個關聯性（一個以**msdata： relationship**注釋為基礎，另一個依據索引鍵和 keyref 條件約束）和各種條件約束。 下列範例顯示關聯和條件約束。  
   
-```  
+```text
 ..RelationName: Order_OrderDetail  
 ..ParentTable: Order  
 ..ParentColumns: Order_Id  
@@ -186,7 +186,7 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
   
  如果參考嵌套資料表的 keyref 條件約束包含**msdata： IsNested = "true"** 注釋，**資料集**將會建立以 keyref 條件約束和相關 unique/key 條件約束為基礎的單一嵌套關聯性。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [從 XML 結構描述 (XSD) 衍生資料集關聯式結構](deriving-dataset-relational-structure-from-xml-schema-xsd.md)
 - [ADO.NET 概觀](../ado-net-overview.md)

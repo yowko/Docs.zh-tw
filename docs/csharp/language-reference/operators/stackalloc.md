@@ -6,22 +6,22 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: 9ef5f98f2b4973c5873417ecc9a71c187e7299b9
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 82fc1649bac66c0e934db13c50390b977432c34c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182426"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036135"
 ---
 # <a name="stackalloc-operator-c-reference"></a>stackalloc 運算子 (C# 參考)
 
-`stackalloc` 運算子會在堆疊上配置記憶體區塊。 在方法執行期間建立的堆疊配置的記憶體區塊，會在該方法傳回時自動被捨棄。 您無法明確釋放搭配 `stackalloc` 運算子配置的記憶體。 堆疊配置的記憶體區塊不會被[記憶體回收](../../../standard/garbage-collection/index.md)，且不需要以 [`fixed` 陳述式](../keywords/fixed-statement.md)固定。
+`stackalloc` 運算子會在堆疊上配置記憶體區塊。 在方法執行期間建立的堆疊配置的記憶體區塊，會在該方法傳回時自動被捨棄。 您無法明確釋放搭配 `stackalloc` 運算子配置的記憶體。 堆疊配置的記憶體區塊不受[垃圾收集](../../../standard/garbage-collection/index.md)，也不需要使用[`fixed` 語句](../keywords/fixed-statement.md)來釘選。
 
 在運算式 `stackalloc T[E]` 中，`T` 必須是 [ unmanaged 型別](../builtin-types/unmanaged-types.md)，且 `E` 必須是 `int` 型別的運算式。
 
 您可以將 `stackalloc` 運算子的結果指派至下列其中一個類型的變數：
 
-- <xref:System.Span%601?displayProperty=nameWithType> 或 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> (從 C# 7.2 開始)，如下列範例所示：
+- 從C# 7.2 開始，<xref:System.Span%601?displayProperty=nameWithType>或<xref:System.ReadOnlySpan%601?displayProperty=nameWithType>，如下列範例所示：
 
   [!code-csharp[stackalloc span](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToSpan)]
 
@@ -31,7 +31,7 @@ ms.locfileid: "71182426"
 
   [!code-csharp[stackalloc expression](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
 
-  從C# 8.0 開始，只要允許`stackalloc` <xref:System.Span%601>或<xref:System.ReadOnlySpan%601>變數，您就可以在其他運算式內使用運算式，如下列範例所示：
+  從C# 8.0 開始，只要允許<xref:System.Span%601>或<xref:System.ReadOnlySpan%601>變數，您就可以在其他運算式內使用`stackalloc`運算式，如下列範例所示：
 
   [!code-csharp[stackalloc in nested expressions](~/samples/csharp/language-reference/operators/StackallocOperator.cs#Nested)]
 
@@ -44,9 +44,9 @@ ms.locfileid: "71182426"
 
   如先前的範例所示，您在使用指標類型時必須使用 `unsafe` 內容。
 
-  在指標類型的情況下，您只能使用`stackalloc`區域變數宣告中的運算式來初始化變數。
+  在指標類型的情況下，您只能使用區域變數宣告中的 `stackalloc` 運算式來初始化變數。
 
-新配置記憶體的內容尚未被定義。 從 C# 7.3 開始，您可以使用陣列初始設定式語法來定義新配置記憶體的內容。 下列範例示範進行該操作的數種方法：
+新配置記憶體的內容尚未被定義。 從C# 7.3 開始，您可以使用陣列初始化運算式語法來定義新配置之記憶體的內容。 下列範例示範進行該操作的數種方法：
 
 [!code-csharp[stackalloc initialization](~/samples/csharp/language-reference/operators/StackallocOperator.cs#StackallocInit)]
 
@@ -58,7 +58,7 @@ ms.locfileid: "71182426"
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[堆疊配置](~/_csharplang/spec/unsafe-code.md#stack-allocation)一節。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)

@@ -2,12 +2,12 @@
 title: 修改 SQL 產生
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b6c1b71effba17d33c035d0f1df386bf56d405b5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854286"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039890"
 ---
 # <a name="modification-sql-generation"></a>修改 SQL 產生
 
@@ -62,9 +62,7 @@ Returning 值會根據插入或更新的資料列，指定要傳回的結果投�
 
 SetClauses 會指定可定義插入或更新作業的插入或更新 SET 子句清單。
 
-```
-The elements of the list are specified as type DbModificationClause, which specifies a single clause in an insert or update modification operation. DbSetClause inherits from DbModificationClause and specifies the clause in a modification operation that sets the value of a property. Beginning in version 3.5 of the .NET Framework, all elements in SetClauses are of type SetClause.
-```
+清單的元素會指定為類型 DbModificationClause，這會指定插入或更新修改作業中的單一子句。 DbSetClause 繼承自 DbModificationClause，並在設定屬性值的修改作業中指定子句。 從 .NET Framework 的3.5 版開始，SetClauses 中的所有元素都屬於 SetClause 類型。
 
 Property 會指定應該更新的屬性。 它一定是透過 DbVariableReferenceExpression 的 DbPropertyExpression，代表對應之 DbModificationCommandTree 的目標參考。
 
@@ -94,7 +92,7 @@ Predicate 會指定用來判斷所應該更新或刪除之目標集合成員的�
 
 範例提供者的修改 SQL 產生模組 (位於 SQL Generation\DmlSqlGenerator.cs 檔案中) 會採用 DbModificationCommandTree 輸入，並產生單一修改 SQL 陳述式，後面可能接著 select 陳述式來傳回讀取器 (如果 DbModificationCommandTree 有指定)。 請注意，產生之命令的形狀會受到目標 SQL Server 資料庫所影響。
 
-### <a name="helper-classes-expressiontranslator"></a>Helper 類別：ExpressionTranslator
+### <a name="helper-classes-expressiontranslator"></a>協助程式類別：ExpressionTranslator
 
 ExpressionTranslator 會當做 DbExpression 型別之所有修改命令樹屬性的常用輕量型轉譯程式。 它只支援修改命令樹屬性所限制之運算式型別的轉譯，而且會根據特定的條件約束來建置。
 
@@ -116,7 +114,7 @@ ExpressionTranslator 會當做 DbExpression 型別之所有修改命令樹屬性
 
 如果範例提供者中有提供 DbInsertCommandTree，產生的插入命令會遵循底下的其中一個插入範本。
 
-第一個範本有一個命令可在提供 SetClauses 清單中的值時執行插入，也有一個 SELECT 陳述式，可在 Returning 屬性不是 null 時，傳回 Returning 屬性中針對插入的資料列所指定的屬性。 如果插入資料列\@ ，則述詞元素 "@ROWCOUNT > 0" 為 true。 只有當 Scope_identity 是存放區產生&#124;的索引鍵時，述詞元素 "KeyMemberI = keyValueI scope_identity （）" 才會採用 "keyMemberI = keyMemberI （）" 圖形，因為 scope_identity （）會傳回插入至身分識別的最後一個識別值（儲存區產生的）資料行。
+第一個範本有一個命令可在提供 SetClauses 清單中的值時執行插入，也有一個 SELECT 陳述式，可在 Returning 屬性不是 null 時，傳回 Returning 屬性中針對插入的資料列所指定的屬性。 如果插入資料列，則述詞元素 "\@@ROWCOUNT > 0" 為 true。 只有當 Scope_identity 是存放區產生&#124;的索引鍵時，述詞元素 "KeyMemberI = keyValueI scope_identity （）" 才會採用 "keyMemberI = keyMemberI （）" 圖形，因為 scope_identity （）會傳回插入至身分識別的最後一個識別值（儲存區產生的）資料行。
 
 ```sql
 -- first insert Template
@@ -160,7 +158,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 此程式碼會產生傳遞給提供者的下列命令樹：
 
-```
+```output
 DbInsertCommandTree
 |_Parameters
 |_Target : 'target'
@@ -212,7 +210,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-只有在未指定 set 子句的情況之下，@i set 子句才會有假的 set 子句（"= 0"）。 這是為了確保任何存放區計算的資料行都會重新計算。
+只有在未指定 set 子句的情況之下，set 子句才會有假的 set 子句（"@i = 0"）。 這是為了確保任何存放區計算的資料行都會重新計算。
 
 只有當 Returning 屬性不是 null 時，才會產生 select 陳述式來傳回 Returning 屬性中指定的屬性。
 
@@ -230,7 +228,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 此使用者程式碼會產生傳遞給提供者的下列命令樹：
 
-```
+```output
 DbUpdateCommandTree
 |_Parameters
 |_Target : 'target'
@@ -281,7 +279,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 此使用者程式碼會產生傳遞給提供者的下列命令樹。
 
-```
+```output
 DbDeleteCommandTree
 |_Parameters
 |_Target : 'target'
@@ -300,6 +298,6 @@ delete [dbo].[Categories]
 where ([CategoryID] = @p0)
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [撰寫 Entity Framework 資料提供者](writing-an-ef-data-provider.md)

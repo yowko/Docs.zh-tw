@@ -4,12 +4,12 @@ description: 了解移植程序，並探索可協助將 .NET Framework 移植到
 author: cartermp
 ms.date: 10/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 0684be25cee6ae3f778e7134b4c3a29ac87caf25
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 89f00e5c6ce7f3cea7a3135c9b2856c54a70da40
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798803"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038523"
 ---
 # <a name="overview-of-the-porting-process-from-net-framework-to-net-core"></a>從 .NET Framework 到 .NET Core 的移植程式總覽
 
@@ -26,7 +26,7 @@ ms.locfileid: "72798803"
 
    此步驟可確保當 .NET Core 無法支援特定 API 時，您可以使用 .NET Framework 特定目標的 API 替代方案。
 
-2. 使用[.net 可攜性分析器](../../standard/analyzers/portability-analyzer.md)來分析您的元件，並查看它們是否可移植到 .NET Core。
+2. 使用[.net 可攜性分析器](../../standard/analyzers/portability-analyzer.md)來分析您的元件，並查看它們是否可移植到 .net Core。
 
    API 可攜性分析器工具會分析已編譯的元件，並產生報表。 此報告會顯示高階的可攜性摘要，以及您所使用的每個 API 在 NET Core 上無法取得的明細。
 
@@ -46,7 +46,7 @@ ms.locfileid: "72798803"
 
    因為移轉到 .NET Core 對程式碼基底是巨變，所以強烈建議您移轉測試，以便在移轉您的程式碼時執行測試。 MSTest、xUnit 和 NUnit 全都適用于 .NET Core。
 
-此外，您可以在單一作業中，使用 [[dotnet try-convert](https://github.com/dotnet/try-convert)] 工具，嘗試將較小的方案或個別專案移植到 .NET Core 專案檔案格式。`dotnet try-convert` 不保證適用於您的所有專案，而且可能會導致您所依賴之行為發生細微變更。它應該做為自動化可以自動化之基本事項的「起點」。它不是可移轉專案的保證解決方案。
+此外，您可以在單一作業中，使用 dotnet 的 [[嘗試轉換](https://github.com/dotnet/try-convert)] 工具，嘗試將較小的方案或個別專案移植到 .net Core 專案檔案格式。 `dotnet try-convert` 不保證適用于您所有的專案，而且可能會對您可能發現相依的行為造成細微的變更。 它應該做為_起點_，以自動化可以自動化的基本事項。 這不是可供遷移專案的保證解決方案。
 
 >[!div class="step-by-step"]
 >[下一步](net-framework-tech-unavailable.md)

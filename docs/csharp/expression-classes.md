@@ -2,13 +2,14 @@
 title: 支援運算式樹狀架構的架構類型
 description: 了解支援運算式樹狀架構的架構類型、建立運算式樹狀架構，以及使用運算式樹狀架構 API 的技術。
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: d11a13000019faf2ab5c35d41d48fa199e901d1c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 157e97594f27345ac96fe91f7dd6f29907c2c7ac
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925974"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037611"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>支援運算式樹狀架構的架構類型
 
@@ -18,7 +19,7 @@ ms.locfileid: "70925974"
 您可以在 <xref:System.Linq.Expressions> 查看完整清單。
 讓我們了解架構類別是如何設計的，而不是執行完整的清單。
 
-在語言設計中，運算式是估算並傳回值的程式碼本文。 運算式可以非常簡單︰常數運算式 `1` 傳回常數值 1。 它們可能會更加複雜：運算式 `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` 會傳回一個二次方程式的根 (在方程式有解決方案的情況下)。  
+在語言設計中，運算式是估算並傳回值的程式碼本文。 運算式可以非常簡單︰常數運算式 `1` 傳回常數值 1。 它們可以很複雜︰運算式 `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` 傳回一個二次方程式的根 (方程式有解決方案的情況下)。  
 
 ## <a name="it-all-starts-with-systemlinqexpression"></a>一切都從 System.Linq.Expression 開始
 

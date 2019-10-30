@@ -2,17 +2,18 @@
 title: 標準的 .NET 事件模式
 description: 了解 .NET 事件模式、如何建立標準事件來源，以及如何訂閱和處理程式碼中的標準事件。
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: cd1ead318529d1afc5b27ff8710cebcaae9b7bc3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: a050dc9a11470ff3b71488ce2ab4b92e607aa9b0
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062950"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037176"
 ---
 # <a name="standard-net-event-patterns"></a>標準的 .NET 事件模式
 
-[上一步](events-overview.md)
+[上一篇](events-overview.md)
 
 .NET 事件通常會遵循少數已知的模式。 這些模式的標準化表示開發人員可以利用這些標準模式的知識，它們可套用至任何 .NET 事件程式。
 
@@ -30,7 +31,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 引數清單包含兩個引數︰寄件者及事件引數。 `sender` 的編譯時間類型是 `System.Object`，即使您可能知道一向正確之衍生程度較高的類型。 依照慣例使用 `object`。
 
-第二個引數一向是衍生自 `System.EventArgs` 的類型。 (您會在[下一篇](modern-events.md)看到此慣例已不再強制執行。)如果您的事件類型不需要任何其他引數，您仍要提供兩個引數。
+第二個引數一向是衍生自 `System.EventArgs` 的類型。 （您會在下一[節](modern-events.md)看到此慣例已不再強制執行）。如果您的事件種類不需要任何其他引數，您仍然可以同時提供這兩個引數。
 您應該使用特殊值 `EventArgs.Empty` 來表示您的事件不包含任何額外的資訊。
 
 我們要組建一個類別，列出目錄中的檔案，或其遵循模式的任一子目錄。 每次找到符合模式的檔案，此元件都會引發事件。
@@ -69,7 +70,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 ## <a name="returning-values-from-event-subscribers"></a>從事件訂閱者傳回值
 
-您的簡單版本運作得很好。 讓我們新增另一個功能︰取消。
+您的簡單版本運作得很好。 讓我們新增另一項功能︰取消。
 
 當您引發找到的事件時，接聽程式應該能夠停止進一步的處理，如果此檔案是搜尋到的最後一個檔案。
 

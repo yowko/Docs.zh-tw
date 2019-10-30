@@ -2,24 +2,24 @@
 title: 架構與設計
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 50fc643fecf4b188123c556d754b3cbfa529e5e9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 35fbc39db23a2b08ab926e122d2f1eb1806a369b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251723"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040016"
 ---
 # <a name="architecture-and-design"></a>架構與設計
 
 [範例提供者](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)中的 SQL 產生模組會實作為表示命令樹之運算式樹狀結構的訪客。 此產生作業是透過運算式樹狀結構，在單一行程中完成。
 
-樹狀結構節點的處理方式是由下而上。 首先，會產生中繼結構：SqlSelectStatement 或 SqlBuilder，這兩個都是執行 ISqlFragment。 接著，系統會根據該結構產生 SQL 陳述式字串。 使用中繼結構的原因有兩個：
+樹狀結構節點的處理方式是由下而上。 首先，系統會產生中繼結構：SqlSelectStatement 或 SqlBuilder (都會實作 ISqlFragment)。 接著，系統會根據該結構產生 SQL 陳述式字串。 使用中繼結構的原因有兩個：
 
 - 就邏輯上來說，SQL SELECT 陳述式會以不按照順序的方式擴展。 系統會先造訪參與 FROM 子句的節點，然後再造訪參與 WHERE、GROUP BY 和 ORDER BY 子句的節點。
 
 - 若要重新命名別名，您必須識別所有使用的別名，才能避免在重新命名期間發生衝突。 若要在 SqlBuilder 中延後重新命名選擇，請使用 Symbol 物件來代表成為重新命名候選的資料行。
 
-![Diagram](./media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")
+![圖表](./media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")
 
 在第一個階段中，造訪運算式樹狀時，運算式會組成 SqlSelectStatement、聯結會扁平化，而且聯結別名也會扁平化。 在這個行程中，Symbol 物件代表可重新命名的資料行或輸入別名。
 
@@ -229,13 +229,13 @@ IsParentAJoin 屬性有助於判斷給定的聯結是否能夠扁平化。 尤�
 
 若要說明輸入別名重新導向，請參閱[從命令樹產生 SQL-最佳作法](generating-sql-from-command-trees-best-practices.md)中的第一個範例。  在該範例中，"a" 必須重新導向至投影中的 "b"。
 
-建立 SqlSelectStatement 物件時，屬於節點之輸入的範圍就會放入 SqlSelectStatement 的 From 屬性。 會根據輸入\<系結名稱（"b"）來建立符號（symbol_b >）來表示該範圍，並將 "AS" \<+ symbol_b > 附加至 from 子句。  此符號也會加入至 FromExtents 屬性。
+建立 SqlSelectStatement 物件時，屬於節點之輸入的範圍就會放入 SqlSelectStatement 的 From 屬性。 會根據輸入系結名稱（"b"）來建立符號（\<symbol_b >）來表示該範圍，並將 "AS" + \<symbol_b > 附加至 From 子句。  此符號也會加入至 FromExtents 屬性。
 
-符號也會加入符號表中，以將輸入系結名稱連結到它（"b"、 \<symbol_b >）。
+符號也會加入符號表中，以將輸入系結名稱連結到它（"b"，\<symbol_b >）。
 
-如果後續節點重複使用該 SqlSelectStatement，它就會在符號表中加入一個項目，以便將其輸入繫結名稱連結至該符號。 在我們的範例中，輸入系結名稱為 "a" 的 DbProjectExpression 會重複使用 SqlSelectStatement，並將（"a \< "，symbol_b >）新增至資料表。
+如果後續節點重複使用該 SqlSelectStatement，它就會在符號表中加入一個項目，以便將其輸入繫結名稱連結至該符號。 在我們的範例中，輸入系結名稱為 "a" 的 DbProjectExpression 會重複使用 SqlSelectStatement，並將（"a"，\< symbol_b >）新增至資料表。
 
-當運算式參考正在重複使用 SqlSelectStatement 之節點的輸入繫結名稱時，就會使用符號表，將該參考解析成正確的重新導向符號。 當您在造訪代表 "a" 的 DbVariableReferenceExpression 時解析 "a" 中的 "a" 時，它會解析為\<符號 symbol_b >。
+當運算式參考正在重複使用 SqlSelectStatement 之節點的輸入繫結名稱時，就會使用符號表，將該參考解析成正確的重新導向符號。 當造訪代表 "a" 的 DbVariableReferenceExpression 時，解析 "a" 中的 "a"，它會解析為符號 \<symbol_b >。
 
 ### <a name="join-alias-flattening"></a>聯結別名扁平化
 
@@ -243,9 +243,9 @@ IsParentAJoin 屬性有助於判斷給定的聯結是否能夠扁平化。 尤�
 
 ### <a name="column-name-and-extent-alias-renaming"></a>資料行名稱和範圍別名重新命名
 
-資料行名稱和範圍別名重新命名的問題是藉由使用只在第二個階段中以別名取代的符號來處理，如下列章節所述： SQL 產生的第二個階段。產生字串命令。
+資料行名稱和範圍別名重新命名的問題是使用只在產生的第二個階段中由別名取代的符號來處理，如＜SQL 產生的第二個階段：產生字串命令＞一節所述。
 
-## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>SQL 產生的第一個階段：造訪運算式樹狀架構
+## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>SQL 產生的第一個階段：造訪運算式樹狀
 
 本節將描述 SQL 產生的第一個階段，這個階段會造訪代表查詢的運算式並且產生中繼結構：SqlSelectStatement 或 SqlBuilder。
 
@@ -345,7 +345,7 @@ ORDER BY sk1, sk2, ...
 <leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>
 ```
 
-其中\<leftSqlSelectStatement > 和\<rightSqlSelectStatement > 會藉由造訪每個輸入而經由 sqlselectstatement 取得， \<而 p > 則是對應的作業（例如 UNION ALL）。
+其中 \<leftSqlSelectStatement > 和 \<rightSqlSelectStatement > 會藉由造訪每個輸入而經由 sqlselectstatement 取得，而 \<p > 是對應的作業（例如 UNION ALL）。
 
 ### <a name="dbscanexpression"></a>DbScanExpression
 
@@ -375,9 +375,9 @@ ORDER BY sk1, sk2, ...
 
 - 如果 DbNewInstanceExpression 具有 DbElementExpression 當做唯一的引數，它就會轉譯成：
 
-    ```
-    NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X
-    ```
+```sql
+NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X
+```
 
 如果 DbNewInstanceExpression 沒有任何引數 (代表空的資料表)，DbNewInstanceExpression 就會轉譯成：
 
@@ -409,18 +409,18 @@ UNION ALL SELECT <visit-result-argN> as X
 
 ### <a name="dbquantifierexpression"></a>DbQuantifierExpression
 
-根據運算式型別 (Any 或 All)，DbQuantifierExpression 會轉譯成：
+視運算式類型（Any 或 All）而定，DbQuantifierExpression 會轉譯為：
 
-```
+```sql
 Any(input, x) => Exists(Filter(input,x))
 All(input, x) => Not Exists(Filter(input, not(x))
 ```
 
 ### <a name="dbnotexpression"></a>DbNotExpression
 
-在某些情況下，您可以使用 DbNotExpression 的輸入運算式來摺疊其轉譯。 例如：
+在某些情況下，您可以使用 DbNotExpression 的輸入運算式來摺疊其轉譯。 例如:
 
-```
+```sql
 Not(IsNull(a)) =>  "a IS NOT NULL"
 Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(input, not(x))
 ```
@@ -431,7 +431,7 @@ Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(inp
 
 DbIsEmptyExpression 會轉譯成：
 
-```
+```sql
 IsEmpty(input) = Not Exists(input)
 ```
 
@@ -443,8 +443,8 @@ IsEmpty(input) = Not Exists(input)
 
 資料行重新命名是在將 Symbol 物件寫入字串時進行。 在第一個階段中，AddDefaultColumns 已經判斷出特定資料行符號是否必須重新命名。 在第二個階段中，只會進行重新命名作業，確保產生的名稱不會與 AllColumnNames 中使用的任何名稱發生衝突。
 
-若要針對範圍別名和資料行產生唯一的名稱， \<請使用 existing_name > _n，其中 n 是尚未使用的最小別名。 所有別名的全域清單會增加串聯重新命名的需求。
+若要為範圍別名和資料行產生唯一的名稱，請使用 \<existing_name > _n，其中 n 是尚未使用的最小別名。 所有別名的全域清單會增加串聯重新命名的需求。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [範例提供者中的 SQL 產生](sql-generation-in-the-sample-provider.md)

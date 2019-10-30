@@ -2,14 +2,14 @@
 title: Discard - C# 指南
 description: 說明 C# 的 discard 支援，這是未指派且可捨棄的變數，並說明 discard 的使用方式。
 author: rpetrusha
-ms.author: ronpet
+ms.technology: csharp-fundamentals
 ms.date: 07/21/2017
-ms.openlocfilehash: 761fb69d3bc774975caf63b8aa665f8c19c0430a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
+ms.openlocfilehash: 783266b6893a597d790af82db50b4f52a00ad0bf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143593"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037338"
 ---
 # <a name="discards---c-guide"></a>Discard - C# 指南
 
@@ -68,19 +68,19 @@ ms.locfileid: "53143593"
 
 請注意，`_` 也是有效的識別項。 在支援的內容之外使用時，`_` 會視為有效的變數，而不是 discard。 如果範圍內已有名為 `_` 的識別項，使用 `_` 作為獨立 discard 可能會導致：
 
-- 將預定的 dscard 值指派給範圍內的 `_` 變數，而意外修改變數的值。 例如：
+- 將預定的 dscard 值指派給範圍內的 `_` 變數，而意外修改變數的值。 例如:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
 
-- 違反型別安全的編譯器錯誤。 例如：
+- 違反型別安全的編譯器錯誤。 例如:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
 
-- 編譯器錯誤 CS0136：「無法在此範圍宣告名為 '\_' 的區域變數或參數，因為該名稱已用於封入區域變數範圍，以定義區域變數或參數」。 例如：
+- 編譯器錯誤 CS0136：「無法在此範圍宣告名為 '\_' 的區域變數或參數，因為該名稱已用於封入區域變數範圍，以定義區域變數或參數」。 例如:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [解構 Tuple 和其他型別](deconstruct.md)
 - [`is` 關鍵字](language-reference/keywords/is.md)

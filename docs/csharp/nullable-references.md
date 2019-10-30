@@ -1,13 +1,14 @@
 ---
 title: 可為 Null 的參考型別
 description: 本文提供可為 null 的參考型別總覽，已C#在8.0 中新增。 您會了解此功能如何為新及現有的專案，針對 Null 參考例外狀況提供安全。
+ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: 2c2148b3ae50ce6c00e523390ea02686d9106b8b
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e20ea6efa389ba1aa0d8432a408c0b2a06a61c30
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846752"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039773"
 ---
 # <a name="nullable-reference-types"></a>可為 Null 的參考型別
 
@@ -66,6 +67,12 @@ name!.Length;
   - 參考型別的變數（例如字串）不可為 null。 停用所有可 NULL 性警告。
 - `disable`：可為 null 注釋內容已**停用**。 可為 Null 警告內容為**停用**。
   - 參考型別變數為遺忘式，與先前版本的 C# 相似。 停用所有可 NULL 性警告。
+
+**範例**：
+
+```xml
+<Nullable>enable</Nullable>
+```
 
 您也可以使用指示詞，在您專案中的任何位置設定相同內容：
 

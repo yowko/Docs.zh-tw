@@ -2,13 +2,14 @@
 title: 使用模式比對功能來擴充資料類型
 description: 此進階教學課程示範如何使用模式比對技術，以個別建立的資料和演算法來建立功能。
 ms.date: 03/13/2019
+ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: 036a6bcda04771eb8cf3699af8756e83bb144389
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332357"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039198"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>教學課程：使用模式比對功能來擴充資料類型
 
@@ -22,7 +23,7 @@ C# 7 引進基本的模式比對功能。 那些功能已在 C# 8 中擴充，�
 > - 使用模式比對運算式根據類型和屬性值實作行為。
 > - 結合模式比對與其他技術，建立完整的演算法。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 您必須設定電腦以執行 .NET Core，包括C# 8.0 編譯器。 從C# [Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.net Core 3.0 SDK](https://dotnet.microsoft.com/download)開始，可以使用8個編譯器。
 
@@ -137,7 +138,7 @@ namespace toll_calculator
 }
 ```
 
-該程式碼包含在入門專案中，但已經標記為註解。移除註解，您就可以測試您撰寫的程式碼。
+該程式碼包含在入門專案中，但已標記為批註。移除批註，您可以測試您所撰寫的內容。
 
 您已經開始了解模式能如何協助您在程式碼和資料分離的情況下建立演算法。 `switch` 運算式會測試型別，並根據結果產生不同的值。 這只是個開頭。
 
@@ -297,7 +298,7 @@ public decimal CalculateToll(object vehicle) =>
 
 下表顯示輸入值和尖峰時段計費乘數的組合：
 
-| Day        | Time         | Direction | 溢價 |
+| Day        | 時間         | 方向 | 溢價 |
 | ---------- | ------------ | --------- |--------:|
 | 工作日    | 早上尖峰時段 | 進入   | x 2.00  |
 | 工作日    | 早上尖峰時段 | 離開  | x 1.00  |

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 923591634599a6bbac74d43b105f4e46b492fa1a
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
-ms.translationtype: HT
+ms.openlocfilehash: 7397c5b2b2278f487a98b029b00924d3151913db
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796473"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036297"
 ---
 # <a name="-operator-c-reference"></a>?: 運算子 (C# 參考)
 
-條件運算子 `?:` (通稱為三元條件運算子) 會評估布林運算式，然後根據布林運算式評估為 `true` 或 `false`，傳回評估兩個運算式其中之一的結果。 從 C# 7.2 開始，[條件 ref 運算式](#conditional-ref-expression)會傳回兩個運算式其中之一結果的參考。
+條件運算子 `?:`（也稱為三元條件運算子）會評估布林運算式，並根據布林運算式是否評估為 `true` 或 `false`，傳回兩個運算式其中之一的結果。 從 C# 7.2 開始，[條件 ref 運算式](#conditional-ref-expression)會傳回兩個運算式其中之一結果的參考。
 
 條件運算子的語法如下：
 
@@ -27,7 +27,7 @@ ms.locfileid: "68796473"
 condition ? consequent : alternative
 ```
 
-`condition` 運算式必須評估為 `true` 或 `false`。 如果 `condition` 評估為 `true`，就會接著評估 `consequent` 運算式，且其結果會成為運算的結果。 如果 `condition` 評估為 `false`，則會接著評估 `alternative` 運算式，且其結果會成為運算的結果。 系統只會評估 `consequent` 或 `alternative`。
+`condition` 運算式必須評估為 `true` 或 `false`。 如果 `condition` 評估為 `true`，則會接著評估 `consequent` 運算式，且其結果會成為運算的結果。 如果 `condition` 評估為 `false`，則會接著評估 `alternative` 運算式，且其結果會成為運算的結果。 系統只會評估 `consequent` 或 `alternative`。
 
 `consequent` 和 `alternative` 的型別必須相同，或是必須有從一個型別轉換成另一型別的隱含轉換。
 
@@ -37,7 +37,7 @@ condition ? consequent : alternative
 a ? b : c ? d : e
 ```
 
-評估為
+會評估為
 
 ```csharp
 a ? b : (c ? d : e)
@@ -72,27 +72,27 @@ condition ? ref consequent : ref alternative
 
 [!code-csharp-interactive[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
 
-如需詳細資訊，請參閱[功能提案注意事項](~/_csharplang/proposals/csharp-7.2/conditional-ref.md) \(英文\)。
-
 ## <a name="conditional-operator-and-an-ifelse-statement"></a>條件運算子和 `if..else` 陳述式
 
-當您需要依據條件計算某個值時，透過 [if-else](../keywords/if-else.md) 陳述式使用條件運算子可能使程式碼更為簡潔。 下列範例示範兩種將整數分類為負值或非負值的方法：
+當您需要有條件地計算值時，使用條件運算子（而不是[else 語句）](../keywords/if-else.md)可能會導致更簡潔的程式碼。 下列範例示範兩種將整數分類為負值或非負值的方法：
 
 [!code-csharp[conditional and if-else](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#CompareWithIf)]
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-條件運算子不能多載。
+使用者定義型別無法多載條件運算子。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[條件運算子](~/_csharplang/spec/expressions.md#conditional-operator)一節。
 
-## <a name="see-also"></a>另請參閱
+如需條件 ref 運算式的詳細資訊，請參閱[功能提案注意事項](~/_csharplang/proposals/csharp-7.2/conditional-ref.md)。
+
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)
 - [if-else 陳述式](../keywords/if-else.md)
 - [?. 和 ?[] 運算子](member-access-operators.md#null-conditional-operators--and-)
-- [?? 運算子](null-coalescing-operator.md)
+- [??還有？= 運算子](null-coalescing-operator.md)
 - [ref 關鍵字](../keywords/ref.md)

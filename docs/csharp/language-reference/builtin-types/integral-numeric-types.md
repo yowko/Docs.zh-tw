@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: c255711e4b165fdca27d50c6bd0f2debfe15ae25
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 058e75c81c18f0ec73140f6fc13a91f4e0012a61
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773859"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036364"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整數的數字型別 (C# 參考)
 
@@ -100,7 +100,7 @@ var binaryLiteral = 0b_0010_1010;
 
 如果整數常值所代表的值超出 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>，就會發生編譯錯誤 [CS1021](../../misc/cs1021.md)。
 
-如果整數常值的判斷型別是 `int`，而該值是在目的地類型的範圍內，則常值所代表的值可以隱含地轉換成 `sbyte`、`byte`、`short`、`ushort`、`uint` 或 `ulong`：
+如果整數常值的判斷型別是 `int`，而常值所代表的值是在目的地類型的範圍內，則該值可以隱含地轉換成 `sbyte`、`byte`、`short`、`ushort`、`uint`或 `ulong`：
 
 ```csharp
 byte a = 17;

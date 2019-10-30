@@ -1,13 +1,14 @@
 ---
 title: 升級具有屬性的 Api 以定義 null 預期
 description: 本文說明加入描述性屬性的動機和技術，以描述引數的 null 狀態和 Api 的傳回值
+ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: c51ec81f77bb1d31168848d8d51e68a08965d42c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 102598843b091ea25e6456aeedcccf43f056250d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319072"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039374"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>更新程式庫以使用可為 null 的參考型別，並將可為 null 的規則與呼叫
 
@@ -23,7 +24,7 @@ bool TryGetMessage(string key, out string message)
 - 呼叫端可以傳遞一個變數，其值 `null` 為 `message` 的引數。
 - 如果 `TryGetMessage` 方法傳回 `true`，`message` 的值就不會是 null。 如果傳回值為 `false,` `message` 的值（和其 null 狀態）為 null。
 
-@No__t_0 的規則可由變數類型完全表示： `key` 應該是不可為 null 的參考型別。 @No__t_0 參數較複雜。 它允許 `null` 做為引數，但可保證在成功時，`out` 引數不是 null。 在這些情況下，您需要更豐富的詞彙來描述預期。
+`key` 的規則可由變數類型完全表示： `key` 應該是不可為 null 的參考型別。 `message` 參數較複雜。 它允許 `null` 做為引數，但可保證在成功時，`out` 引數不是 null。 在這些情況下，您需要更豐富的詞彙來描述預期。
 
 更新您的程式庫以取得可為 null 的參考，在某些變數和類型名稱上需要超過隨處揮灑 threadpool.queueuserworkitem `?`。 上述範例顯示您需要檢查您的 Api，並考慮每個輸入引數的預期。 請考慮傳回值的保證，以及方法傳回時的任何 `out` 或 `ref` 引數。 然後將這些規則傳達給編譯器，而編譯器會在呼叫者不遵守這些規則時提供警告。
 
@@ -119,7 +120,7 @@ public string ScreenName
 private string screenName = GenerateRandomScreenName();
 ```
 
-您可能需要加入 <xref:System.Diagnostics.CodeAnalysis> 的 `using` 指示詞，以使用此文章和本文中討論的其他屬性。 屬性會套用至屬性，而不是 `set` 存取子。 @No__t_0 屬性會指定*前置條件*，而且只適用于輸入。 @No__t_0 存取子具有傳回值，但沒有輸入引數。 因此，`AllowNull` 屬性僅適用于 `set` 存取子。
+您可能需要加入 <xref:System.Diagnostics.CodeAnalysis> 的 `using` 指示詞，以使用此文章和本文中討論的其他屬性。 屬性會套用至屬性，而不是 `set` 存取子。 `AllowNull` 屬性會指定*前置條件*，而且只適用于輸入。 `get` 存取子具有傳回值，但沒有輸入引數。 因此，`AllowNull` 屬性僅適用于 `set` 存取子。
 
 上述範例示範在引數上加入 `AllowNull` 屬性時要尋找的事項：
 
@@ -151,14 +152,14 @@ public string? ReviewComment
 string? _comment;
 ```
 
-在可為 null 的內容中，`ReviewComment` `get` 存取子可能會傳回 `null` 的預設值。 編譯器會警告您必須在存取之前先檢查它。 此外，它會警告呼叫端，即使它可以 `null`，呼叫端也不應該明確地將它設定為 `null`。 @No__t_0 屬性也會指定*前置條件*，而不會影響 `get` 存取子。 當您觀察下列有關的特性時，應該選擇使用 `DisallowNull` 屬性：
+在可為 null 的內容中，`ReviewComment` `get` 存取子可能會傳回 `null` 的預設值。 編譯器會警告您必須在存取之前先檢查它。 此外，它會警告呼叫端，即使它可以 `null`，呼叫端也不應該明確地將它設定為 `null`。 `DisallowNull` 屬性也會指定*前置條件*，而不會影響 `get` 存取子。 當您觀察下列有關的特性時，應該選擇使用 `DisallowNull` 屬性：
 
 1. 變數可以在核心案例中 `null`，通常是在第一次具現化時。
 1. 變數不應明確設定為 `null`。
 
 這些情況在原本是*null 遺忘式*的程式碼中很常見。 這可能是在兩個不同的初始化作業中設定物件屬性。 這可能是某些屬性只有在一些非同步工作完成後才會設定。
 
-@No__t_0 和 `DisallowNull` 屬性可讓您指定變數上的前置條件可能不符合那些變數上的可為 null 注釋。 這些會提供 API 特性的更多詳細資料。 此額外資訊可協助呼叫者正確地使用您的 API。 請記住，您可以使用下列屬性來指定前置條件：
+`AllowNull` 和 `DisallowNull` 屬性可讓您指定變數上的前置條件可能不符合那些變數上的可為 null 注釋。 這些會提供 API 特性的更多詳細資料。 此額外資訊可協助呼叫者正確地使用您的 API。 請記住，您可以使用下列屬性來指定前置條件：
 
 - [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute)：不可為 null 的輸入引數可能是 null。
 - [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute)：可為 null 的輸入引數絕對不應為 null。
@@ -171,7 +172,7 @@ string? _comment;
 public Customer FindCustomer(string lastName, string firstName)
 ```
 
-當找不到所尋找的名稱時，您可能會撰寫如下所示的方法，以傳回 `null`。 @No__t_0 清楚地指出找不到記錄。 在此範例中，您可能會將傳回型別從 `Customer` 變更為 `Customer?`。 將傳回值宣告為可為 null 的參考型別，可以清楚地指定這個 API 的意圖。 
+當找不到所尋找的名稱時，您可能會撰寫如下所示的方法，以傳回 `null`。 `null` 清楚地指出找不到記錄。 在此範例中，您可能會將傳回型別從 `Customer` 變更為 `Customer?`。 將傳回值宣告為可為 null 的參考型別，可以清楚地指定這個 API 的意圖。 
 
 基於[泛型定義和 null](#generic-definitions-and-nullability)屬性所涵蓋的原因，這項技術無法與泛型方法搭配使用。 您的泛型方法可能會遵循類似的模式：
 
@@ -209,7 +210,7 @@ EnsureCapacity<string>(messages, 50);
 public void EnsureCapacity<T>([NotNull]ref T[]? storage, int size)
 ```
 
-上述程式碼非常清楚地表示現有的合約：呼叫端可以傳遞具有 `null` 值的變數，但傳回值保證永遠不會是 null。 @No__t_0 屬性最適用于 `ref` 和 `out` 引數，其中 `null` 可能會當做引數傳遞，但當方法傳回時，該引數保證不會是 null。
+上述程式碼非常清楚地表示現有的合約：呼叫端可以傳遞具有 `null` 值的變數，但傳回值保證永遠不會是 null。 `NotNull` 屬性最適用于 `ref` 和 `out` 引數，其中 `null` 可能會當做引數傳遞，但當方法傳回時，該引數保證不會是 null。
 
 您可以使用下列屬性來指定無條件的後置條件：
 
@@ -237,7 +238,7 @@ if (!(string.IsNullOrEmpty(userInput))
 
 針對 .NET Core 3.0，<xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType> 方法將標注為如上所示。 您的程式碼基底中可能會有類似的方法，可檢查物件的狀態是否為 null 值。 編譯器不會辨識自訂的 null 檢查方法，您必須自行新增批註。 當您新增屬性時，編譯器的靜態分析會知道已檢查過測試的變數何時已進行 null。
 
-這些屬性的另一個用法是 `Try*` 模式。 @No__t_0 和 `out` 變數的後置條件會透過傳回值進行通訊。 請考慮稍早所示的這個方法：
+這些屬性的另一個用法是 `Try*` 模式。 `ref` 和 `out` 變數的後置條件會透過傳回值進行通訊。 請考慮稍早所示的這個方法：
 
 ```csharp
 bool TryGetMessage(string key, out string message)
@@ -282,9 +283,9 @@ string? GetTopLevelDomainFromFullUrl(string? url);
 
 ## <a name="generic-definitions-and-nullability"></a>泛型定義和 null 屬性
 
-正確地傳達泛型型別和泛型方法的 null 狀態需要特別小心。 這源自于可為 null 的實值型別和可為 null 的參考型別，基本上是不同的事實。 @No__t_0 是 `Nullable<int>` 的同義字，而 `string?` 則是由編譯器新增的屬性所 `string`。 結果是編譯器無法產生 `T?` 的正確程式碼，而不知道 `T` 是 `class` 還是 `struct`。 
+正確地傳達泛型型別和泛型方法的 null 狀態需要特別小心。 這源自于可為 null 的實值型別和可為 null 的參考型別，基本上是不同的事實。 `int?` 是 `Nullable<int>`的同義字，而 `string?` 則是由編譯器新增的屬性所 `string`。 結果是編譯器無法產生 `T?` 的正確程式碼，而不知道 `T` 是 `class` 還是 `struct`。 
 
-這並不表示您無法使用可為 null 的類型（實數值型別或參考型別）做為封閉式泛型型別的類型引數。 @No__t_0 和 `List<int?>` 都是 `List<T>` 的有效具現化。 
+這並不表示您無法使用可為 null 的類型（實數值型別或參考型別）做為封閉式泛型型別的類型引數。 `List<string?>` 和 `List<int?>` 都是 `List<T>`的有效具現化。 
 
 這表示您不能在泛型類別或方法宣告中使用 `T?`，而不會有條件約束。 例如，<xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D)?displayProperty=nameWithType> 不會變更為傳回 `T?`。 您可以藉由加入 `struct` 或 `class` 條件約束來克服這項限制。 透過上述任一條件約束，編譯器知道如何產生 `T` 和 `T?` 的程式碼。
 

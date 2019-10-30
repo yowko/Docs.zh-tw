@@ -1,13 +1,14 @@
 ---
 title: 使用預設介面方法建立 mixin 類型
 description: 使用預設介面成員，您可以使用實作者的選擇性預設實作為擴充介面。
+ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: 4dee97226420139d9cd09ad75d7c8caf4967273d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 798413f0071159893de39f3e190a9b2693571bb7
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321621"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039280"
 ---
 # <a name="tutorial-mix-in-functionality-when-creating-classes-using-interfaces-with-default-interface-methods"></a>教學課程：使用具有預設介面方法的介面建立類別時混用功能
 
@@ -94,7 +95,7 @@ public class OverheadLight : ITimerLight { }
 
 [!code-csharp[Override the blink function](~/samples/csharp/tutorials/mixins-with-interfaces/LEDLight.cs?name=SnippetLEDLight)]
 
-@No__t_0 可能會直接支援閃爍和計時器函式：
+`ExtraFancyLight` 可能會直接支援閃爍和計時器函式：
 
 [!code-csharp[Override the blink and timer function](~/samples/csharp/tutorials/mixins-with-interfaces/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
 
@@ -106,7 +107,7 @@ public class OverheadLight : ITimerLight { }
 
 [!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetTestLightFunctions)]
 
-@No__t_0 方法中的下列程式碼會依序建立每個光源類型，並測試該光線：
+`Main` 方法中的下列程式碼會依序建立每個光源類型，並測試該光線：
 
 [!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetMainMethod)]
 

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 357812aa95ea731fe86fbe49b2cb1b2806e3915a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a9c81c8554c0fb393c10ed69f84c8b2d936ec1e6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784860"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040120"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable 和 DataColumn 對應
-**DataAdapter**在其 TableMappings 屬性中包含零個<xref:System.Data.Common.DataTableMapping>或多個物件的集合。 **DataTableMapping**會在從查詢傳回的資料與資料來源之間提供主要對應，以及<xref:System.Data.DataTable>。 **DataTableMapping**名稱可以代替**DataTable**名稱傳遞到**DataAdapter**的**Fill**方法。 下列範例會為**作者**資料表建立名為**AuthorsMapping**的**DataTableMapping** 。  
+**DataAdapter**在其**TableMappings**屬性中包含零個或多個 <xref:System.Data.Common.DataTableMapping> 物件的集合。 **DataTableMapping**會在針對資料來源查詢所傳回的資料與 <xref:System.Data.DataTable>之間提供主要的對應。 **DataTableMapping**名稱可以代替**DataTable**名稱傳遞到**DataAdapter**的**Fill**方法。 下列範例會為**作者**資料表建立名為**AuthorsMapping**的**DataTableMapping** 。  
   
 ```vb  
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors")  
@@ -27,7 +27,7 @@ workAdapter.TableMappings.Add("AuthorsMapping", "Authors");
   
  如果您在呼叫**DataAdapter**的**Fill**或**Update**方法時未指定**TableName**或**DataTableMapping**名稱， **dataadapter**會尋找名為 "Table" 的**DataTableMapping** 。 如果該**DataTableMapping**不存在， **DataTable**的**TableName**就是 "Table"。 您可以藉由建立名為 "Table" 的**DataTableMapping**來指定預設**DataTableMapping** 。  
   
- 下列程式碼範例會建立**DataTableMapping** （從<xref:System.Data.Common>命名空間），並將它命名為 "Table"，使其成為指定**DataAdapter**的預設對應。 然後，此範例會將查詢結果（ **northwind**資料庫的**Customers**資料表）中第一個資料表的資料行對應至中**Northwind** <xref:System.Data.DataSet>Customers 資料表內的一組更好的使用者名稱。 未被對應的資料行會使用來自資料來源的資料行名稱。  
+ 下列程式碼範例會建立**DataTableMapping** （從 <xref:System.Data.Common> 命名空間），並將它命名為 "Table"，使其成為指定**DataAdapter**的預設對應。 然後，此範例會將查詢結果（ **northwind**資料庫的**Customers**資料表）中第一個資料表的資料行對應至 <xref:System.Data.DataSet>中**Northwind Customers**資料表內的一組更好的使用者名稱。 未被對應的資料行會使用來自資料來源的資料行名稱。  
   
 ```vb  
 Dim mapping As DataTableMapping = _  
@@ -86,18 +86,27 @@ adapter.Fill(custDS, "Customers");
 ## <a name="handling-multiple-result-sets"></a>處理多重結果集  
  如果您的**SelectCommand**傳回多個資料表， **Fill**會自動針對**資料集**內的資料表產生具有累加值的資料表名稱，並以指定的資料表名稱作為開頭，並在表單**TableName**中繼續進行。*N*，從**TableName1**開始。 您可以使用資料表對應，將自動產生的資料表名稱對應至您想要在**資料集中**為數據表指定的名稱。 例如，針對傳回兩個數據表（ **Customers**和**Orders**）的**SelectCommand** ，請發出下列呼叫以進行**填滿**。  
   
-```  
+```vb  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
-  
- **資料集**內會建立兩個數據表：**客戶**和**Customers1**。 您可以使用資料表對應來確保第二個數據表的名稱是**Orders** ，而不是**Customers1**。 若要這樣做，請將**Customers1**的來源資料表對應至**資料集**資料表**訂單**，如下列範例所示。  
-  
+
+```csharp  
+adapter.Fill(customersDataSet, "Customers");  
 ```  
+
+ **資料集**內會建立兩個數據表： **Customers**和**Customers1**。 您可以使用資料表對應來確保第二個數據表的名稱是**Orders** ，而不是**Customers1**。 若要這樣做，請將**Customers1**的來源資料表對應至**資料集**資料表**訂單**，如下列範例所示。  
+  
+```vb  
 adapter.TableMappings.Add("Customers1", "Orders")  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
+
+```csharp  
+adapter.TableMappings.Add("Customers1", "Orders");  
+adapter.Fill(customersDataSet, "Customers");  
+```
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [DataAdapter 和 DataReader](dataadapters-and-datareaders.md)
 - [在 ADO.NET 中擷取和修改資料](retrieving-and-modifying-data.md)

@@ -8,30 +8,30 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 3b3a5c2e96e92271da66cbd8f1039a9ec97544fa
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
-ms.translationtype: HT
+ms.openlocfilehash: b8d1a4e3971eb30e76bf543497931ce029c5541d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971224"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036370"
 ---
 # <a name="-operator-c-reference"></a>=> 運算子 (C# 參考)
 
-支援兩種形式的 `=>` 語彙基元：作為 Lambda 運算子，以及作為運算式主體定義中成員名稱和成員實作的分隔符號。
+`=>` token 支援兩種形式：做為[Lambda 運算子](#lambda-operator)，以及做為成員名稱的分隔符號，以及[運算式主體定義](#expression-body-definition)中的成員執行。
 
 ## <a name="lambda-operator"></a>Lambda 運算子
 
-在 [Lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)中，Lambda 運算子 `=>` 會分開右邊的 Lambda 主體和左邊的輸入變數。
+在[lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)中，Lambda 運算子 `=>` 會將左側的輸入參數與右側的 lambda 主體分開。
 
 下列範例使用 [LINQ](../../programming-guide/concepts/linq/index.md) 功能並搭配方法語法來示範 Lambda 運算式的使用方式：
 
 [!code-csharp-interactive[infer types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#InferredTypes)]
 
-Lambda 運算式的輸入變數在編譯時間為強型別。 當編譯器可以推斷輸入變數的類型時 (如上述範例所示)，您可以省略型別宣告。 如果您需要指定輸入變數的類型，您必須針對每個變數執行，如下列範例所示：
+Lambda 運算式的輸入參數是在編譯時期的強型別。 當編譯器可以推斷輸入參數的類型（如上述範例所示）時，您可能會省略類型宣告。 如果您需要指定輸入參數的類型，您必須針對每個參數執行此動作，如下列範例所示：
 
 [!code-csharp-interactive[specify types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#ExplicitTypes)]
 
-下列範例示範如何定義 Lambda 運算式而不需要輸入變數：
+下列範例顯示如何定義不含輸入參數的 lambda 運算式：
 
 [!code-csharp-interactive[without input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#WithoutInput)]
 
@@ -45,7 +45,7 @@ Lambda 運算式的輸入變數在編譯時間為強型別。 當編譯器可以
 member => expression;
 ```
 
-其中 `expression` 是有效的運算式。 `expression` 的傳回型別必須可以隱含地轉換為成員的傳回型別。 如果成員的傳回型別為 `void`，或成員為建構函式、完成項或屬性 `set` 存取子，`expression` 必須是[陳述式運算式](~/_csharplang/spec/statements.md#expression-statements)  ；它可以是任何型別。
+其中 `expression` 是有效的運算式。 `expression` 的傳回型別必須可以隱含地轉換為成員的傳回型別。 如果成員的傳回型別是 `void` 或成員是一個函式、完成項或屬性 `set` 存取子，`expression` 必須是[*語句運算式*](~/_csharplang/spec/statements.md#expression-statements)，它可以是任何型別。
 
 下列範例顯示 `Person.ToString` 方法的運算式主體定義：
 
@@ -62,7 +62,7 @@ public override string ToString()
 }
 ```
 
-從 C# 6 開始支援方法和唯讀屬性的運算式主體定義。 從 C# 7.0 開始支援建構函式、完成項、屬性存取子和索引子的運算式主體定義。
+從C# 6 開始，支援方法、運算子和唯讀屬性的運算式主體定義。 從C# 7.0 開始支援函式、完成項和屬性和索引子存取子的運算式主體定義。
 
 如需詳細資訊，請參閱[運算式主體成員](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)。
 
@@ -72,11 +72,9 @@ public override string ToString()
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[匿名函式運算式](~/_csharplang/spec/expressions.md#anonymous-function-expressions)一節。
+如需 Lambda 運算子的詳細資訊，請參閱[ C#語言規格](~/_csharplang/spec/introduction.md)的[匿名函數運算式](~/_csharplang/spec/expressions.md#anonymous-function-expressions)一節。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)
-- [Lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)
-- [運算式主體成員](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)

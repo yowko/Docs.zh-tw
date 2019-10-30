@@ -2,13 +2,14 @@
 title: 模式比對 - C# 手冊
 description: 了解 C# 中的模式比對運算式
 ms.date: 04/10/2019
+ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 5ace3c4552184b848b90dee3516d549ca8fd5806
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ff84ddd4f07fb77dc9fe648a495a441ed8f9198b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61652022"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039371"
 ---
 # <a name="pattern-matching"></a>模式比對
 
@@ -36,7 +37,7 @@ ms.locfileid: "61652022"
 
 [!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
-上述程式碼為「類型模式」的傳統運算式：您會測試變數以判斷其類型，並根據該類型採取不同的動作。
+上述程式碼是「型別模式」的傳統運算式︰您要測試變數，以判斷其型別並根據該型別採取不同的動作。
 
 如果測試成功，使用 `is` 運算式的延伸模組來指派變數，此程式碼會變得更簡單：
 
@@ -46,7 +47,7 @@ ms.locfileid: "61652022"
 
 模式比對運算式的語言規則可協助您避免誤用比對運算式的結果。 在上例中，當個別的模式比對運算式有 `true` 結果時，變數 `s`、`c` 和 `r` 只能在範圍內且要確實指派。 如果您嘗試在另一個位置使用任一變數，您的程式碼就會產生編譯器錯誤。
 
-讓我們仔細檢查這兩項規則，就從範圍開始。 變數 `c` 只有在第一個 `if` 陳述式的 `else` 分支中時才在範圍內。 `s` 變數位於 `ComputeAreaModernIs` 方法的範圍中。 這是因為 `if` 陳述式的每個分支都會建立變數的個別範圍。 不過，`if` 陳述式本身並不會。 這表示在 `if` 陳述式中宣告的變數和 `if` 陳述式 (本例中的方法) 是在相同範圍中。此行為並非特定於模式比對，不過是變數範圍以及 `if` 和 `else` 陳述式的定義行為。
+讓我們仔細檢查這兩項規則，就從範圍開始。 變數 `c` 只有在第一個 `if` 陳述式的 `else` 分支中時才在範圍內。 `s` 變數位於 `ComputeAreaModernIs` 方法的範圍中。 這是因為 `if` 陳述式的每個分支都會建立變數的個別範圍。 不過，`if` 陳述式本身並不會。 這表示在 `if` 語句中宣告的變數，與 `if` 的語句（在此案例中為方法）位於相同的範圍內。這種行為不是針對模式比對所特有，而是針對變數範圍和 `if` 和 `else` 語句所定義的行為。
 
 當個別的 `if` 陳述式為 true 時會指派變數 `c` 和 `s`，因為 true 機制時會明確指派。
 
@@ -111,7 +112,7 @@ ms.locfileid: "61652022"
 
 導入 `var` 作為比對運算式之一，為模式比對導入了一些新規則。
 
-第一個規則是 `var` 宣告會遵循正常的類型推斷規則：類型被推斷為 switch 運算式的靜態類型。 根據該規則，類型永遠符合。
+第一個規則是 `var` 宣告遵循正常的類型推斷規則：該類型被推斷為 switch 運算式的靜態類型。 根據該規則，類型永遠符合。
 
 第二個規則是 `var` 宣告不具有其他類型模式運算式所包含的 Null 檢查。 這表示變數可能是 null，並且在這種情況下需要 null 檢查。
 

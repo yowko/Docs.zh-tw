@@ -2,12 +2,12 @@
 title: OLE DB、ODBC 和 Oracle 連接共用
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: b83b53550964b3149f3bc711eaf119e749d1834b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4b801032e67d1c4c51fed8556ff1fea05c214aff
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794688"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039837"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC 和 Oracle 連接共用
 共用連接可顯著提高應用程式的效能及延展性。 本節說明 OLE DB、ODBC 和 Oracle 的 .NET Framework 資料提供者的連接共用 (Connection Pooling)。  
@@ -15,7 +15,7 @@ ms.locfileid: "70794688"
 ## <a name="connection-pooling-for-oledb"></a>OleDb 的連接共用  
  OLE DB 的 .NET Framework 資料提供者會自動使用 OLE DB 工作階段共用來共用連接。 連接字串引數可用於啟用或停用 OLE DB 服務 (包括共用)。 例如，下列連接字串會停用 OLE DB 工作階段共用及自動異動登記。  
   
-```  
+```csharp
 Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=SSPI;  
 ```  
   
@@ -51,16 +51,16 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  請不要在您類別之 `Close` 方法中的 `Dispose`、`Connection` 或任何其他 Managed 物件上呼叫 `DataReader` 或 `Finalize`。 在完成項中，只需釋放類別直接擁有的 Unmanaged 資源。 如果類別未擁有任何 Unmanaged 資源，請不要在類別定義中包含 `Finalize` 方法。 如需詳細資訊，請參閱[垃圾收集](../../../standard/garbage-collection/index.md)。  
   
 ### <a name="transaction-support"></a>異動支援  
- 從集區中描繪連接，並根據交易內容進行指派。 要求執行緒的內容必須與指派的連接相符。 因此，每個連接集區實際上會細分成不具有相關聯交易內容的連接，並分成*N*個子分割，其中每個都包含與特定交易內容的連接。  
+ 從集區中描繪連接，並根據異動內容進行指派。 要求執行緒的內容必須與指派的連接相符。 因此，每個連接集區實際上會細分成不具有相關聯交易內容的連接，並分成*N*個子分割，其中每個都包含與特定交易內容的連接。  
   
- 連接關閉時，會根據其交易內容將其釋放回集區，並置於適當的子區塊中。 因此，即使分散式交易仍處於暫止狀態，您仍可以關閉連接，而不會產生錯誤。 這可讓您稍後認可或中止分散式異動。  
+ 連接關閉時，會根據其異動內容將其釋放回集區，並置於適當的子區塊中。 因此，即使分散式交易仍處於暫止狀態，您仍可以關閉連接，而不會產生錯誤。 這可讓您稍後認可或中止分散式異動。  
   
 ### <a name="controlling-connection-pooling-with-connection-string-keywords"></a>使用連接字串關鍵字控制連接共用  
  <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> 物件的 <xref:System.Data.OracleClient.OracleConnection> 屬性支援連接字串索引鍵/值配對，這些配對可用於調整連接共用邏輯的行為。  
   
  下表說明可用於調整連接共用行為的 <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> 值。  
   
-|名稱|預設|描述|  
+|[屬性]|Default|描述|  
 |----------|-------------|-----------------|  
 |`Connection Lifetime`|0|當連接傳回集區時，會將其建立時間與目前時間進行比較，如果該時間範圍 (秒) 超過 `Connection Lifetime` 指定的值，則會損毀連接。 這在叢集組態中很有用，可在執行中伺服器與剛連線的伺服器之間強制負載平衡。<br /><br /> 值零 (0) 將導致共用的連接具有最大逾時。|  
 |`Enlist`|'true'|為 `true` 時，如果交易內容存在，則共用器會自動在建立執行緒之目前交易內容中登記連接。|  
@@ -68,7 +68,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 |`Min Pool Size`|0|集區中保留的最小連接數。|  
 |`Pooling`|'true'|為 `true` 時，會從適當的集區描繪連接，或視需要在適當的集區中建立及加入連接。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [連接共用](connection-pooling.md)
 - [效能計數器](performance-counters.md)

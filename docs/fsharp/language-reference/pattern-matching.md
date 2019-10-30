@@ -1,13 +1,13 @@
 ---
 title: 模式比對
 description: 瞭解如何在中F#使用模式來比較資料與邏輯結構、將資料分解成組成元件，或從資料中提取資訊。
-ms.date: 05/16/2016
-ms.openlocfilehash: 0e14fa00103742bbf5f054f8c04a7669ed767e63
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.date: 10/27/2019
+ms.openlocfilehash: 1acb795cbe5581898ae5e1439098f906a8a16b93
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216795"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73041016"
 ---
 # <a name="pattern-matching"></a>模式比對
 
@@ -15,9 +15,9 @@ ms.locfileid: "71216795"
 
 ## <a name="remarks"></a>備註
 
-模式用於許多語言結構，例如`match`運算式。 當您要在`let`系結、lambda 運算式和`try...with`與運算式相關聯的例外狀況處理常式中處理函式的引數時，會使用這些函數。 如需詳細資訊，請參閱[Match 運算式](match-expressions.md)、 [let](./functions/let-bindings.md)系結、 [Lambda 運算式：`fun` 關鍵字](./functions/lambda-expressions-the-fun-keyword.md)和例外[狀況：`try...with`運算式。](./exception-handling/the-try-with-expression.md)
+模式用於許多語言結構，例如 `match` 運算式。 當您在 `let` 系結、lambda 運算式和與 `try...with` 運算式相關聯的例外狀況處理常式中處理函式的引數時，會使用這些參數。 如需詳細資訊，請參閱[Match 運算式](match-expressions.md)、 [let](./functions/let-bindings.md)系結、 [Lambda 運算式： `fun` 關鍵字](./functions/lambda-expressions-the-fun-keyword.md)和[例外狀況： `try...with` 運算式](./exception-handling/the-try-with-expression.md)。
 
-例如，在`match`運算式中，*模式*就是管道符號後面的內容。
+例如，在 `match` 運算式中，*模式*就是管道符號後面的內容。
 
 ```fsharp
 match expression with
@@ -25,32 +25,32 @@ match expression with
 ...
 ```
 
-每個模式都是以某種方式轉換輸入的規則。 `match`在運算式中，會接著檢查每個模式，以查看輸入資料是否與模式相容。 如果找到相符的，則會執行結果運算式。 如果找不到相符的，則會測試下一個模式規則。 [Match 運算式](match-expressions.md)中說明了*條件*部分時的選擇性時機。
+每個模式都是以某種方式轉換輸入的規則。 在 `match` 運算式中，會接著檢查每個模式，以查看輸入資料是否與模式相容。 如果找到相符的，則會執行結果運算式。 如果找不到相符的，則會測試下一個模式規則。 [Match 運算式](match-expressions.md)中說明了*條件*部分時的選擇性時機。
 
 下表顯示支援的模式。 在執行時間，系統會依照表格中所列的順序，針對下列每個模式測試輸入，並以遞迴方式套用模式，從第一次到最後，和出現在您的程式碼中，以及從左至右套用到每一行上的模式。
 
-|名稱|描述|範例|
+|[屬性]|描述|範例|
 |----|-----------|-------|
-|常數模式|任何數值、字元或字串常值、列舉常數或定義的常值識別碼|`1.0`, `"test"`, `30`, `Color.Red`|
+|常數模式|任何數值、字元或字串常值、列舉常數或定義的常值識別碼|`1.0`、`"test"`、`30``Color.Red`|
 |識別碼模式|區分聯集、例外狀況標籤或作用中模式案例的大小寫值|`Some(x)`<br /><br />`Failure(msg)`|
 |變數模式|*identifier*|`a`|
-|`as`pattern|*模式*作為*識別碼*|`(a, b) as tuple1`|
+|`as` 模式|*模式*作為*識別碼*|`(a, b) as tuple1`|
 |OR 模式|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |AND 模式|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
 |缺點模式|*identifier* ：： *list-identifier*|`h :: t`|
-|清單模式|[ *pattern_1*; ... ; *pattern_n* ]|`[ a; b; c ]`|
-|陣列模式|[&#124; *pattern_1*; ...;*pattern_n*&#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|清單模式|[ *pattern_1*; ...;*pattern_n* ]|`[ a; b; c ]`|
+|陣列模式|[&#124; *pattern_1*; ...;*pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
 |以括弧括住的模式|（*模式*）|`( a )`|
 |元組模式|（ *pattern_1*，...， *pattern_n* ）|`( a, b )`|
-|記錄模式|{ *identifier1*  =  *pattern_1*; ...;*identifier_n* =  *pattern_n* }|`{ Name = name; }`|
+|記錄模式|{ *identifier1* = *pattern_1*; ...;*identifier_n* = *pattern_n* }|`{ Name = name; }`|
 |萬用字元模式|_|`_`|
 |搭配類型注釋的模式|*模式*：*類型*|`a : int`|
-|類型測試模式|:? *類型*[as *identifier* ]|`:? System.DateTime as dt`|
+|類型測試模式|:? *輸入*[as *identifier* ]|`:? System.DateTime as dt`|
 |Null 模式|null|`null`|
 
 ## <a name="constant-patterns"></a>常數模式
 
-常數模式是數值、字元和字串常值、列舉常數（包含列舉型別名稱）。 只有常數模式的運算式可以與其他語言中的case語句進行比較。`match` 輸入會與常值進行比較，而如果值相等，則會符合模式。 常值的型別必須與輸入的型別相容。
+常數模式是數值、字元和字串常值、列舉常數（包含列舉型別名稱）。 只有常數模式的 `match` 運算式，可以與其他語言中的 case 語句進行比較。 輸入會與常值進行比較，而如果值相等，則會符合模式。 常值的型別必須與輸入的型別相容。
 
 下列範例示範如何使用常值模式，而且也會使用變數模式和或模式。
 
@@ -66,11 +66,11 @@ match expression with
 
 區分聯集模式可以是簡單的命名案例，或者可以有值，或包含多個值的元組。 如果有值，您必須指定值的識別碼。 在元組的情況下，您必須為元組的每個專案提供一個識別碼，或為一個或多個命名聯集欄位指定具有功能變數名稱的識別碼。 如需範例，請參閱本節中的程式碼範例。
 
-此`option`類型是有兩個`Some`案例的區分聯集： `None`和。 其中一個案例`Some`（）具有值，但另一個（`None`）只是一個名為的大小寫。 因此， `Some` `Some`與案例相關聯的值需要有變數，但`None`必須單獨顯示。 在下列程式碼中，會`var1`提供變數比`Some`對案例所取得的值。
+`option` 類型是有兩個案例的區分聯集，`Some` 和 `None`。 其中一個案例（`Some`）具有值，但另一個（`None`）只是一個名為的案例。 因此，`Some` 需要有與 `Some` 案例相關聯之值的變數，但 `None` 必須本身才會出現。 在下列程式碼中，變數 `var1` 會提供比對 `Some` 案例所取得的值。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4803.fs)]
 
-在下列範例中， `PersonName` 「區分聯集」包含字串和字元的混合，表示可能的名稱形式。 區分聯集的案例為`FirstOnly`、 `LastOnly`和`FirstLast`。
+在下列範例中，「`PersonName` 區分聯集」包含字串和字元的混合，表示可能的名稱形式。 區分聯集的案例是 `FirstOnly`、`LastOnly`和 `FirstLast`。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4804.fs)]
 
@@ -91,7 +91,7 @@ let matchShape shape =
     | Circle(r) -> printfn "Circle with radius %f" r
 ```
 
-使用命名欄位是選擇性的，因此在前一個範例中，和`Circle(r)` `Circle(radius = r)`都具有相同的效果。
+使用命名欄位是選擇性的，因此在前一個範例中，`Circle(r)` 和 `Circle(radius = r)` 都有相同的效果。
 
 當您指定多個欄位時，請使用分號（;)作為分隔符號。
 
@@ -103,11 +103,11 @@ match shape with
 
 現用模式可讓您定義更複雜的自訂模式比對。 如需現用模式的詳細資訊，請參閱[現用模式](active-patterns.md)。
 
-在例外狀況處理常式內容中的模式比對中，會使用識別碼為例外狀況的情況。 如需例外狀況處理中的模式比對[的詳細資訊，請參閱例外狀況：`try...with`運算式。](./exception-handling/the-try-with-expression.md)
+在例外狀況處理常式內容中的模式比對中，會使用識別碼為例外狀況的情況。 如需例外狀況處理中的模式比對的詳細資訊，請參閱[例外狀況： `try...with` 運算式](./exception-handling/the-try-with-expression.md)。
 
 ## <a name="variable-patterns"></a>變數模式
 
-變數模式會指派符合變數名稱的值，然後可以在`->`符號右邊的執行運算式中使用。 變數模式本身會符合任何輸入，但變數模式通常會出現在其他模式中，因此可讓更複雜的結構（例如元組和陣列）分解為變數。
+變數模式會指派符合變數名稱的值，然後可在 `->` 符號右邊的執行運算式中使用。 變數模式本身會符合任何輸入，但變數模式通常會出現在其他模式中，因此可讓更複雜的結構（例如元組和陣列）分解為變數。
 
 下列範例示範在元組模式內的變數模式。
 
@@ -115,9 +115,9 @@ match shape with
 
 ## <a name="as-pattern"></a>as 模式
 
-模式是一個`as`已附加子句的模式。 `as` 子句會將相符的值系結至可在`match`運算式的執行運算式中使用的名稱，或者，如果在系結中`let`使用此模式，則會將名稱當做系結加入至本機範圍。 `as`
+`as` 模式是已附加 `as` 子句的模式。 `as` 子句會將相符的值系結至可在 `match` 運算式的執行運算式中使用的名稱，或在 `let` 系結中使用此模式的情況下，將名稱新增為本機範圍的系結。
 
-下列範例會使用`as`模式。
+下列範例會使用 `as` 模式。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4806.fs)]
 
@@ -133,7 +133,7 @@ match shape with
 
 和模式需要輸入符合兩個模式。 和模式的兩邊類型都必須相容。
 
-下列範例如`detectZeroTuple`本主題稍後的「[元組模式](https://msdn.microsoft.com/library/#tuple)」一節所示`var1` ，但在此，我們會使用和模式，將和`var2`都當做值來取得。
+下列範例類似于本主題稍後的「[元組模式](https://msdn.microsoft.com/library/#tuple)」一節中所示 `detectZeroTuple`，但此處 `var1` 和 `var2` 都是使用和模式來取得值。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
 
@@ -177,7 +177,7 @@ match shape with
 
 ## <a name="wildcard-pattern"></a>萬用字元模式
 
-萬用字元模式是以底線（`_`）字元表示並比對任何輸入，就像變數模式一樣，不同的是會捨棄輸入，而不是指派給變數。 萬用字元模式通常用於其他模式中，做為`->`符號右邊運算式中不需要的值預留位置。 萬用字元模式也經常用於模式清單的結尾，以符合任何不相符的輸入。 本主題的許多程式碼範例會示範萬用字元模式。 如需其中一個範例，請參閱上述程式碼。
+萬用字元模式是以底線（`_`）字元表示並比對任何輸入，就像變數模式一樣，不同的是會捨棄輸入，而不是指派給變數。 在其他模式中，萬用字元模式通常用於 `->` 符號右邊運算式中不需要的值的預留位置。 萬用字元模式也經常用於模式清單的結尾，以符合任何不相符的輸入。 本主題的許多程式碼範例會示範萬用字元模式。 如需其中一個範例，請參閱上述程式碼。
 
 ## <a name="patterns-that-have-type-annotations"></a>具有類型注釋的模式
 
@@ -193,15 +193,29 @@ match shape with
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4816.fs)]
 
+如果您只是要檢查識別碼是否為特定衍生類型，則不需要模式的 `as identifier` 部分，如下列範例所示：
+
+```fsharp
+type A() = class end
+type B() = inherit A()
+type C() = inherit A()
+
+let m (a: A) =
+    match a with
+    | :? B -> printfn "It's a B"
+    | :? C -> printfn "It's a C"
+    | _ -> ()
+```
+
 ## <a name="null-pattern"></a>Null 模式
 
-Null 模式符合當您使用允許 null 值的類型時，可能會出現的 null 值。 當與 .NET Framework 的程式碼互通時，經常會使用 Null 模式。 例如，.net API 的傳回值可能是`match`運算式的輸入。 您可以根據傳回值是否為 null，以及所傳回值的其他特性，來控制程式流程。 您可以使用 null 模式來防止 null 值傳播到程式的其餘部分。
+Null 模式符合當您使用允許 null 值的類型時，可能會出現的 null 值。 當與 .NET Framework 的程式碼互通時，經常會使用 Null 模式。 例如，.NET API 的傳回值可能是 `match` 運算式的輸入。 您可以根據傳回值是否為 null，以及所傳回值的其他特性，來控制程式流程。 您可以使用 null 模式來防止 null 值傳播到程式的其餘部分。
 
 下列範例會使用 null 模式和變數模式。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [比對運算式](match-expressions.md)
 - [使用中模式](active-patterns.md)

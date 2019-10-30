@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7d69528804cf0cee1302fd62fa2301e06076897a
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 78233b9a18f4369ebb086f2016af3f945b6a654a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579209"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039020"
 ---
 # <a name="c-operators-c-reference"></a>C# 運算子 (C# 參考)
 
@@ -57,7 +57,7 @@ Console.WriteLine(a); //  output: 8
 | [x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) | 條件式 OR |
 | [x ?? y](null-coalescing-operator.md) | Null 聯合運算子 |
 | [c ? t : f](conditional-operator.md) | 條件運算子 |
-| [x = y](assignment-operator.md)， [x + = y](arithmetic-operators.md#compound-assignment)， [x-= y](arithmetic-operators.md#compound-assignment)， [x * = y](arithmetic-operators.md#compound-assignment)， [x/= y](arithmetic-operators.md#compound-assignment)， [x% = y](arithmetic-operators.md#compound-assignment)， [x & = y](boolean-logical-operators.md#compound-assignment)， [x &#124;= y](boolean-logical-operators.md#compound-assignment)， [x ^ = y](boolean-logical-operators.md#compound-assignment)， [x < < = y](bitwise-and-shift-operators.md#compound-assignment)， [x > > = y](bitwise-and-shift-operators.md#compound-assignment)， [x？？= y](null-coalescing-operator.md)， [4](lambda-operator.md) | 指派和 Lambda 宣告 |
+| [x = y](assignment-operator.md)， [x + = y](arithmetic-operators.md#compound-assignment)， [x-= y](arithmetic-operators.md#compound-assignment)， [x * = y](arithmetic-operators.md#compound-assignment)， [x/= y](arithmetic-operators.md#compound-assignment)， [x% = y](arithmetic-operators.md#compound-assignment)， [x & = y](boolean-logical-operators.md#compound-assignment)， [x &#124;= y](boolean-logical-operators.md#compound-assignment)， [x ^ = y](boolean-logical-operators.md#compound-assignment)， [x < < = y](bitwise-and-shift-operators.md#compound-assignment)， [x > > = y](bitwise-and-shift-operators.md#compound-assignment)， [x？？= y](null-coalescing-operator.md)， [=>](lambda-operator.md) | 指派和 Lambda 宣告 |
 
 ## <a name="operator-associativity"></a>運算子關聯性
 
@@ -85,7 +85,7 @@ Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
 |`a / b + c * d`|a，b，/，c，d，*，+|
 |`a / (b + c) * d`|a，b，c，+，/，d，*|
 
-通常會評估所有運算子運算元。 有些運算子會視條件評估運算元。 也就是說，這類運算子第一個運算元的值會定義是否應該評估 (或要評估的) 其他運算元。 這些運算子是條件式邏輯[AND （`&&`）](boolean-logical-operators.md#conditional-logical-and-operator-)和[OR （`||`）](boolean-logical-operators.md#conditional-logical-or-operator-)運算子、 [null 聯合運算子 `??` 和 `??=`](null-coalescing-operator.md)、 [null 條件運算子 `?.` 和 `?[]`](member-access-operators.md#null-conditional-operators--and-)，以及[條件運算子 1](conditional-operator.md)。 如需更多詳細資料，請參閱每個運算子的說明。
+通常會評估所有運算子運算元。 不過，有些運算子會有條件地評估運算元。 也就是說，這類運算子最左邊的運算元值會定義是否應該評估其他運算元。 這些運算子是條件式邏輯[AND （`&&`）](boolean-logical-operators.md#conditional-logical-and-operator-)和[OR （`||`）](boolean-logical-operators.md#conditional-logical-or-operator-)運算子、 [null 聯合運算子 `??` 和 `??=`](null-coalescing-operator.md)、 [null 條件運算子 `?.` 和 `?[]`](member-access-operators.md#null-conditional-operators--and-)，以及[條件運算子 `?:`](conditional-operator.md)。 如需詳細資訊，請參閱每個運算子的說明。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 26b7e3a287c00f103129632ae8b0db882d468ef3
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a634667ec8d963ef52abbdbe517a57d10e4a60fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352984"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040223"
 ---
 # <a name="handling-null-values"></a>處理 Null 值
 當資料行中的值未知或遺失時，便會使用關聯式資料庫中的 Null 值。 Null 既不是空字串 (針對字元或 datetime 資料型別)，也不是零值 (針對數值資料型別)。 根據 ANSI SQL-92 規格的內容，對所有的資料型別而言，Null 必須都是相同的，以便可一致處理所有的 Null。 藉由實作 <xref:System.Data.SqlTypes> 介面，<xref:System.Data.SqlTypes.INullable> 命名空間可以提供 Null 語意。 <xref:System.Data.SqlTypes> 中的每個資料型別都具有自己的 `IsNull` 屬性及 `Null` 值，而該值可以指派給該資料型別的執行個體 (Instance)。  
@@ -23,7 +23,7 @@ ms.locfileid: "71352984"
   
 - True  
   
-- 偽  
+- False  
   
 - 不明  
   
@@ -35,23 +35,23 @@ ms.locfileid: "71352984"
  ![事實資料表](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansi_nulls-option"></a>瞭解 ANSI_NULLS 選項  
- <xref:System.Data.SqlTypes> 提供的語意與在 SQL Server 中設定 ANSI_NULLS 選項時的語意相同。 所有算術運算子（+、-、\*、/、%）、位運算子（~、&、\|）和大部分函式會在任何運算元或引數為 null 時傳回 null，但屬性 `IsNull` 除外。  
+ <xref:System.Data.SqlTypes> 提供的語意與在 SQL Server 中設定 ANSI_NULLS 選項時的語意相同。 如果任何運算元或引數為 null （屬性 `IsNull`除外），則所有算術運算子（+、-、\*、/、%）、位運算子（~、&、\|）和大部分函數都會傳回 null。  
   
  ANSI SQL-92 標準不支援 WHERE 子句中的*columnName* = Null。 在 SQL Server 中，ANSI_NULLS 選項可控制資料庫中的預設 Null 屬性及針對 Null 值的比較評估。 如果啟用 ANSI_NULLS (預設值)，則當測試 Null 值時，必須在運算式中使用 IS NULL 運算子。 例如，當啟用 ANSI_NULLS 時，下列比較永遠會產生 Unknown：  
   
-```  
+```sql
 colname > NULL  
 ```  
   
  對包含 Null 值的變數進行比較也會產生 Unknown：  
   
-```  
+```sql
 colname > @MyVariable  
 ```  
   
  使用 IS NULL 或 IS NOT NULL 述詞來測試 Null 值。 如此會增加 WHERE 子句的複雜性。 例如，AdventureWorks Customer 資料表中的 TerritoryID 資料行允許 Null 值。 如果 SELECT 陳述式除測試其他項目之外，還要測試 Null 值，則其必須包括 IS NULL 述詞：  
   
-```  
+```sql
 SELECT CustomerID, AccountNumber, TerritoryID  
 FROM AdventureWorks.Sales.Customer  
 WHERE TerritoryID IN (1, 2, 3)  
@@ -87,7 +87,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  此外，下列規則可套用至 `DataRow.["columnName"]` Null 指派的執行個體：  
   
-1. 除了強型別 null 資料行（其為適當的強型別 null 值）以外，所有的預設*預設*值都是 `DbNull.Value`。  
+1. 除了強型別 null 資料行（其為適當的強型別 null 值）以外，所有的預設*預設*值都會 `DbNull.Value`。  
   
 2. 在序列化為 XML 檔案期間永遠不會寫出 Null 值 (如同在 xsi:nil 中)。  
   
@@ -112,7 +112,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  此範例會顯示出下列結果：  
   
-```  
+```output
 isColumnNull=False, ID=123, Description=Side Mirror  
 isColumnNull=True, ID=Null, Description=Null  
 ```  
@@ -127,7 +127,7 @@ isColumnNull=True, ID=Null, Description=Null
   
  該程式碼會產生下列輸出：  
   
-```  
+```output
 SqlString.Equals shared/static method:  
   Two nulls=Null  
   
@@ -141,7 +141,7 @@ String.Equals instance method:
   Two empty strings=True   
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [SQL Server 資料類型和 ADO.NET](sql-server-data-types.md)
 - [ADO.NET 概觀](../ado-net-overview.md)

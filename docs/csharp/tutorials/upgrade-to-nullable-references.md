@@ -2,15 +2,16 @@
 title: 使用可為 Null 的參考類型進行設計
 description: 本進階教學課程提供可為 Null 的參考類型簡介。 您將了解如何在參考值可能為 Null 時表達您的設計意圖，以及在它們不能為 Null 時強制執行編譯器。
 ms.date: 02/19/2019
+ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 842b1bb6e0d3032c6181cccf77934541754ff8ec
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 9cb9ac1b292e61d6a8a5f84be29a6a6c323725fc
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332324"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039678"
 ---
-# <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教學課程：使用可為 Null 的參考型別遷移現有程式碼
+# <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教學課程：使用可為 null 的參考型別來遷移現有程式碼
 
 C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實值類型補充實值類型的相同方式來補充參考類型。 您可以藉由將 `?` 附加至類型，來將變數宣告為**可為 Null 的參考類型**。 例如，`string?` 代表可為 Null 的 `string`。 您可以使用這些新類型更清楚地表達設計意圖：部分變數「永遠都必須有值」，而其他變數「可能會遺漏值」。 任何參考型別的現有變數都會解譯成不可為 Null 的參考型別。 
 
@@ -23,7 +24,7 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 > - 管理啟用可為 Null 內容及停用可為 Null 內容之間的介面。
 > - 控制可為 Null 的註釋內容。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 您必須設定電腦以執行 .NET Core，包括C# 8.0 編譯器。 從C# [Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.net Core 3.0 SDK](https://dotnet.microsoft.com/download)開始，可以使用8個編譯器。
 
@@ -93,7 +94,7 @@ public class NewsStoryViewModel
 }
 ```
 
-將 `Title` 和 `Uri` 指派為 `default` (針對 `string` 型別為 `null`) 不會變更程式的執行階段行為。 `NewsStoryViewModel` 仍然會使用 Null 值建構，但現在編譯器不會再回報警告。 **Null 寬恕運算子** (即跟隨在 `default` 後方的 `!` 字元) 會告知編譯器先前的運算式並非 Null。 這項技術在其他變更對程式碼基底強制產生較大的變更時非常方便，但在此應用程式中，有另外一種相較之下更快且更好的解決方案：將 `NewsStoryViewModel` 設為固定型別，並在建構函式中設定所有屬性。 對 `NewsStoryViewModel` 進行下列變更：
+將 `Title` 和 `Uri` 指派為 `default` (針對 `string` 型別為 `null`) 不會變更程式的執行階段行為。 `NewsStoryViewModel` 仍然會使用 Null 值建構，但現在編譯器不會再回報警告。 **Null 寬恕運算子** (即跟隨在 `default` 後方的 `!` 字元) 會告知編譯器先前的運算式並非 Null。 當其他變更對程式碼基底強制執行較大的變更時，這項技術可能會很方便，但在此應用程式中，有一個相對快速且更好的解決方案：使 `NewsStoryViewModel` 成為不變的型別，其中所有屬性都是在此函式中設定。 對 `NewsStoryViewModel` 進行下列變更：
 
 [!code-csharp[FinishedViewModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#FinishedViewModel)]
 
@@ -125,7 +126,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[StarterIndexModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Index.cshtml.cs#IndexModelStart)]
 
-新增 `#nullable enable` 指示詞，您便會看到兩個警告。 `ErrorText` 屬性或 `NewsItems` 屬性都並未初始化。 檢查此類別，可能會讓您相信兩個屬性都應是可為 Null 參考型別：兩個屬性都具有私人 setter。 其中剛好有一個已在 `OnGet` 方法中指派。 在進行變更前，請先觀察兩個屬性的消費者。 在頁面本身中，會在為任何錯誤產生標記前再度檢查 `ErrorText` 是否為 Null。 `NewsItems` 集合也會受到檢查是否為 `null`，以及檢查其是否具有項目。 一種快速修正的方式，便是將兩個屬性設為可為 Null 的參考型別。 更佳修正方式是將集合設為不可為 Null 的參考型別，並在擷取新聞時將項目新增到現有集合。 第一個修正是將 `?` 新增到 `ErrorText` 的 `string` 型別：
+新增 `#nullable enable` 指示詞，您便會看到兩個警告。 `ErrorText` 屬性或 `NewsItems` 屬性都並未初始化。 檢查這個類別會導致您認為這兩個屬性都應該是可為 null 的參考型別：兩者都有私用 setter。 其中剛好有一個已在 `OnGet` 方法中指派。 在進行變更前，請先觀察兩個屬性的消費者。 在頁面本身中，會在為任何錯誤產生標記前再度檢查 `ErrorText` 是否為 Null。 `NewsItems` 集合也會受到檢查是否為 `null`，以及檢查其是否具有項目。 一種快速修正的方式，便是將兩個屬性設為可為 Null 的參考型別。 更佳修正方式是將集合設為不可為 Null 的參考型別，並在擷取新聞時將項目新增到現有集合。 第一個修正是將 `?` 新增到 `ErrorText` 的 `string` 型別：
 
 [!code-csharp[UpdateErrorText](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#UpdateErrorText)]
 

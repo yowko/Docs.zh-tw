@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 395081640815f00ce4ae8e83f25b37de567adc01
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 959bc7942eaae91c0a7a72124f6ab1ab92a3553f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920192"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040830"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>逐步解說：在 WPF 中裝載 ActiveX 控制項
-若要改善與瀏覽器的互動，您可以在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式中使用 Microsoft ActiveX 控制項。 本逐步解說示範如何將 [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 裝載為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 頁面上的控制項。
+若要改善與瀏覽器的互動，您可以在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式中使用 Microsoft ActiveX 控制項。 本逐步解說會示範如何在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 頁面上裝載 Microsoft Windows 媒體播放機做為控制項。
 
  這個逐步解說中所述的工作包括：
 
@@ -31,7 +31,7 @@ ms.locfileid: "72920192"
 ## <a name="prerequisites"></a>Prerequisites
  您需要下列元件才能完成此逐步解說：
 
-- [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 安裝在安裝 Visual Studio 的電腦上。
+- 安裝 Visual Studio 的電腦上安裝了 Microsoft Windows 媒體播放機。
 
 - Visual Studio 2010。
 

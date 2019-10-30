@@ -10,18 +10,18 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 8788883a6c60032de2ffab658fcf2721654fc6f7
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
-ms.translationtype: HT
+ms.openlocfilehash: 25f042dec5fd5594b7e166cc064394e90db01c27
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566671"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036109"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>使用者定義轉換運算子 (C# 參考)
 
 使用者定義型別可定義要互換型別的自訂隱含轉換和明確轉換。
 
-隱含轉換不需要特殊的語法即可叫用，且可能在各種不同的情況下發生，例如在指派和方法引動過程中發生。 預先定義的 C# 隱含轉換一定會成功，且絕對不會擲回例外狀況，也不會遺失資訊。 使用者定義的隱含轉換也應該以類似方式運作。 如果自訂的轉換可能擲回例外狀況或遺失資訊，請將其定義為明確轉換。
+隱含轉換不需要特殊的語法即可叫用，且可能在各種不同的情況下發生，例如在指派和方法引動過程中發生。 預先C#定義的隱含轉換一律會成功，而且永遠不會擲回例外狀況。 使用者定義的隱含轉換也應該以類似方式運作。 如果自訂的轉換可能擲回例外狀況或遺失資訊，請將其定義為明確轉換。
 
 [is](type-testing-and-cast.md#is-operator) 和 [as](type-testing-and-cast.md#as-operator) 運算子不會考慮使用者定義的轉換。 使用[轉換運算子 ()](type-testing-and-cast.md#cast-operator-) 叫用使用者定義的明確轉換。
 
@@ -42,7 +42,7 @@ ms.locfileid: "69566671"
 - [隱含轉換](~/_csharplang/spec/conversions.md#implicit-conversions)
 - [明確轉換](~/_csharplang/spec/conversions.md#explicit-conversions)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)

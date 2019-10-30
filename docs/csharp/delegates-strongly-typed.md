@@ -2,17 +2,18 @@
 title: 強類型委派
 description: 了解如何在建立需要委派的功能時，使用泛型委派類型來宣告自訂類型。
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
-ms.openlocfilehash: 2e4cc1c7bfa0aaa90f3aaefa0da64c5486a9d10f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: efdbef39d0e6bf2f07cde2c9621cec173e921752
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215160"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037352"
 ---
 # <a name="strongly-typed-delegates"></a>強類型委派
 
-[上一步](delegate-class.md)
+[上一篇](delegate-class.md)
 
 在前一篇文章中，您看到您使用 `delegate` 關鍵字來建立特定委派類型。 
 
@@ -54,7 +55,8 @@ public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
 
 針對任何傳回值的委派類型，使用其中一個 `Func` 類型。
 
-針對在單一值上傳回測試的委派，也有特殊的 <xref:System.Predicate%601> 類型：
+另外還有一個專門的 <xref:System.Predicate%601> 
+針對在單一值上傳回測試的委派輸入：
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);

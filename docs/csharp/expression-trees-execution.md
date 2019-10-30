@@ -2,13 +2,14 @@
 title: 執行運算式樹狀架構
 description: 將運算式樹狀架構轉換成可執行檔的中繼語言 (IL) 指令，以了解執行運算式樹狀架構。
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: f6dca5a3965924e8eb6e1c04fe7ffc3c78c7df93
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: HT
+ms.openlocfilehash: 9af4b346962cb743daddf774e8b3c1f8fa722ae4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201842"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037106"
 ---
 # <a name="executing-expression-trees"></a>執行運算式樹狀架構
 
@@ -19,7 +20,7 @@ ms.locfileid: "57201842"
 
 ## <a name="lambda-expressions-to-functions"></a>將 Lambda 運算式轉換成函式
 
-您可以將任何 LambdaExpression 或衍生自 LambdaExpression 的任何類型，轉換成可執行 IL。 其他運算式類型則無法直接轉換成程式碼。 這項限制實際上不會造成太大影響。 Lambda 運算式是您想要轉換成可執行中繼語言 (IL) 以便執行的唯一運算式類型。 (想想直接執行 `ConstantExpression` 的用意。 是否有任何用處？)任何 `LambdaExpression` 的運算式樹狀架構或衍生自 `LambdaExpression` 的類型，都可以轉換成 IL。
+您可以將任何 LambdaExpression 或衍生自 LambdaExpression 的任何類型，轉換成可執行 IL。 其他運算式類型則無法直接轉換成程式碼。 這項限制實際上不會造成太大影響。 Lambda 運算式是您想要轉換成可執行中繼語言 (IL) 以便執行的唯一運算式類型。 (想想直接執行 `ConstantExpression` 的用意。 這是否表示任何有用的？）任何是 `LambdaExpression`的運算式樹狀架構，或是從 `LambdaExpression` 衍生的類型，都可以轉換成 IL。
 運算式類型 `Expression<TDelegate>` 是 .NET Core 程式庫中唯一的具體範例。 它可用來表示對應至任何委派類型的運算式。 因為此類型對應至委派類型，所以 .NET 可以查看運算式，並為符合 Lambda 運算式簽章的適當委派產生 IL。 
 
 在大多數情況下，這會在運算式和其對應委派之間建立一個簡單的對應。 例如，由 `Expression<Func<int>>` 表示的運算式樹狀架構會轉換成 `Func<int>` 類型的委派。 針對具有任何傳回型別和引數清單的 Lambda 運算式，會有一個委派類型，它是由該 Lambda 運算式表示之可執行程式碼的目標類型。
