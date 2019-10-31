@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 37118465-ddf3-41f0-bf27-335b72777e63
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31d93ac427ec67726c9456d623aeb683c9029ccd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d39e15a2ba71ba0c0147482259f5618dcb5d298b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773769"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192100"
 ---
-# <a name="callfunctionshim-function"></a><span data-ttu-id="72212-102">CallFunctionShim 函式</span><span class="sxs-lookup"><span data-stu-id="72212-102">CallFunctionShim Function</span></span>
-<span data-ttu-id="72212-103">會指定程式庫中具有指定的名稱和參數的函式呼叫。</span><span class="sxs-lookup"><span data-stu-id="72212-103">Makes a call to the function that has the specified name and parameters in the specified library.</span></span>  
+# <a name="callfunctionshim-function"></a><span data-ttu-id="1d5bb-102">CallFunctionShim 函式</span><span class="sxs-lookup"><span data-stu-id="1d5bb-102">CallFunctionShim Function</span></span>
+<span data-ttu-id="1d5bb-103">呼叫在指定的程式庫中具有指定名稱和參數的函式。</span><span class="sxs-lookup"><span data-stu-id="1d5bb-103">Makes a call to the function that has the specified name and parameters in the specified library.</span></span>  
   
- <span data-ttu-id="72212-104">此函式已被取代，在.NET Framework 4。</span><span class="sxs-lookup"><span data-stu-id="72212-104">This function has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="1d5bb-104">此函式在 .NET Framework 4 中已被取代。</span><span class="sxs-lookup"><span data-stu-id="1d5bb-104">This function has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="72212-105">語法</span><span class="sxs-lookup"><span data-stu-id="72212-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1d5bb-105">語法</span><span class="sxs-lookup"><span data-stu-id="1d5bb-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT CallFunctionShim (  
@@ -41,34 +39,34 @@ HRESULT CallFunctionShim (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="72212-106">參數</span><span class="sxs-lookup"><span data-stu-id="72212-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1d5bb-106">參數</span><span class="sxs-lookup"><span data-stu-id="1d5bb-106">Parameters</span></span>  
  `szDllName`  
- <span data-ttu-id="72212-107">[in]包含函式的程式庫名稱。</span><span class="sxs-lookup"><span data-stu-id="72212-107">[in] The name of the library containing the function.</span></span>  
+ <span data-ttu-id="1d5bb-107">在包含函數之程式庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="1d5bb-107">[in] The name of the library containing the function.</span></span>  
   
  `szFunctionName`  
- <span data-ttu-id="72212-108">[in]函式的名稱。</span><span class="sxs-lookup"><span data-stu-id="72212-108">[in] The name of the function.</span></span>  
+ <span data-ttu-id="1d5bb-108">在函式的名稱。</span><span class="sxs-lookup"><span data-stu-id="1d5bb-108">[in] The name of the function.</span></span>  
   
  `lpvArgument1`  
- <span data-ttu-id="72212-109">[in]第一個引數傳遞給函式。</span><span class="sxs-lookup"><span data-stu-id="72212-109">[in] The first argument to pass to the function.</span></span>  
+ <span data-ttu-id="1d5bb-109">在要傳遞至函式的第一個引數。</span><span class="sxs-lookup"><span data-stu-id="1d5bb-109">[in] The first argument to pass to the function.</span></span>  
   
  `lpvArgument2`  
- <span data-ttu-id="72212-110">[in]第二個引數傳遞給函式。</span><span class="sxs-lookup"><span data-stu-id="72212-110">[in] The second argument to pass to the function.</span></span>  
+ <span data-ttu-id="1d5bb-110">在要傳遞至函式的第二個引數。</span><span class="sxs-lookup"><span data-stu-id="1d5bb-110">[in] The second argument to pass to the function.</span></span>  
   
  `szVersion`  
- <span data-ttu-id="72212-111">[in]包含此函式的程式庫版本。</span><span class="sxs-lookup"><span data-stu-id="72212-111">[in] The version of the library that contains the function.</span></span>  
+ <span data-ttu-id="1d5bb-111">在包含函數的程式庫版本。</span><span class="sxs-lookup"><span data-stu-id="1d5bb-111">[in] The version of the library that contains the function.</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="72212-112">[in]保留供日後使用。</span><span class="sxs-lookup"><span data-stu-id="72212-112">[in] Reserved for future use.</span></span> <span data-ttu-id="72212-113">傳遞此參數中的零。</span><span class="sxs-lookup"><span data-stu-id="72212-113">Pass zero in this parameter.</span></span>  
+ <span data-ttu-id="1d5bb-112">在保留供日後使用。</span><span class="sxs-lookup"><span data-stu-id="1d5bb-112">[in] Reserved for future use.</span></span> <span data-ttu-id="1d5bb-113">在此參數中傳遞零。</span><span class="sxs-lookup"><span data-stu-id="1d5bb-113">Pass zero in this parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="72212-114">需求</span><span class="sxs-lookup"><span data-stu-id="72212-114">Requirements</span></span>  
- <span data-ttu-id="72212-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="72212-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1d5bb-114">需求</span><span class="sxs-lookup"><span data-stu-id="1d5bb-114">Requirements</span></span>  
+ <span data-ttu-id="1d5bb-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1d5bb-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="72212-116">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="72212-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="1d5bb-116">**標頭：** Mscoree.dll. h</span><span class="sxs-lookup"><span data-stu-id="1d5bb-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="72212-117">**LIBRARY:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="72212-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="1d5bb-117">連結**庫：** Mscoree.dll .dll</span><span class="sxs-lookup"><span data-stu-id="1d5bb-117">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="72212-118">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="72212-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1d5bb-118">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1d5bb-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="72212-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="72212-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1d5bb-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="1d5bb-119">See also</span></span>
 
-- [<span data-ttu-id="72212-120">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="72212-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="1d5bb-120">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="1d5bb-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
