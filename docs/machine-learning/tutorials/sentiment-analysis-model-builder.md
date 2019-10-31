@@ -60,9 +60,9 @@ ms.locfileid: "72180276"
 
 | 情感 | SentimentText |
 | :---: | :---: |
-1 | = = 「強制」 = = Dude，您可以將 carl 的上傳放回，或其他。
-1 | = = OK！ = = IM 即將 VANDALIZE 萬用字元 WIKI 然後!!!
-0 | 我希望這有説明。
+1 | ==RUDE== Dude, you are rude upload that carl picture back, or else.
+1 | == OK! ==  IM GOING TO VANDALIZE WILD ONES WIKI THEN!!!
+0 | I hope this helps.
 
 ## <a name="choose-a-scenario"></a>選擇案例
 
