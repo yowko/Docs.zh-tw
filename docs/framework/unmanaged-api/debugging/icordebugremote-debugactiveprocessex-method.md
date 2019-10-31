@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 13371d15c8b29f9ef93cc4af87acf85029404644
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 83cc4eadca7c337c06c5fbf9f0e74306c2b9cb99
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744761"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131279"
 ---
-# <a name="icordebugremotedebugactiveprocessex-method"></a><span data-ttu-id="83b4d-102">ICorDebugRemote::DebugActiveProcessEx 方法</span><span class="sxs-lookup"><span data-stu-id="83b4d-102">ICorDebugRemote::DebugActiveProcessEx Method</span></span>
-<span data-ttu-id="83b4d-103">啟動處理序在偵錯工具在遠端電腦上。</span><span class="sxs-lookup"><span data-stu-id="83b4d-103">Launches a process on a remote machine under the debugger.</span></span>  
+# <a name="icordebugremotedebugactiveprocessex-method"></a><span data-ttu-id="9e759-102">ICorDebugRemote::DebugActiveProcessEx 方法</span><span class="sxs-lookup"><span data-stu-id="9e759-102">ICorDebugRemote::DebugActiveProcessEx Method</span></span>
+<span data-ttu-id="9e759-103">在偵錯工具下的遠端電腦上啟動進程。</span><span class="sxs-lookup"><span data-stu-id="9e759-103">Launches a process on a remote machine under the debugger.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="83b4d-104">語法</span><span class="sxs-lookup"><span data-stu-id="83b4d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9e759-104">語法</span><span class="sxs-lookup"><span data-stu-id="9e759-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DebugActiveProcessEx (  
@@ -38,41 +36,41 @@ HRESULT DebugActiveProcessEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="83b4d-105">參數</span><span class="sxs-lookup"><span data-stu-id="83b4d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9e759-105">參數</span><span class="sxs-lookup"><span data-stu-id="9e759-105">Parameters</span></span>  
  `pRemoteTarget`  
- <span data-ttu-id="83b4d-106">[in]指標[ICorDebugRemoteTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="83b4d-106">[in] Pointer to an [ICorDebugRemoteTarget Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md).</span></span> <span data-ttu-id="83b4d-107">這個參數用來判斷處理程序執行所在的機器。</span><span class="sxs-lookup"><span data-stu-id="83b4d-107">This parameter is used to determine the machine on which the process is running.</span></span>  
+ <span data-ttu-id="9e759-106">在[ICorDebugRemoteTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)的指標。</span><span class="sxs-lookup"><span data-stu-id="9e759-106">[in] Pointer to an [ICorDebugRemoteTarget Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md).</span></span> <span data-ttu-id="9e759-107">這個參數是用來判斷進程執行所在的電腦。</span><span class="sxs-lookup"><span data-stu-id="9e759-107">This parameter is used to determine the machine on which the process is running.</span></span>  
   
  `id`  
- <span data-ttu-id="83b4d-108">[in]偵錯工具後要附加到處理序的識別碼。</span><span class="sxs-lookup"><span data-stu-id="83b4d-108">[in] The ID of the process to which the debugger is to be attached.</span></span>  
+ <span data-ttu-id="9e759-108">在要附加偵錯工具之進程的識別碼。</span><span class="sxs-lookup"><span data-stu-id="9e759-108">[in] The ID of the process to which the debugger is to be attached.</span></span>  
   
  `win32Attach`  
- <span data-ttu-id="83b4d-109">[in]`true`如果偵錯工具應該做為處理序的 Win32 偵錯工具，並分派 unmanaged 的回呼中; 否則`false`。</span><span class="sxs-lookup"><span data-stu-id="83b4d-109">[in] `true` if the debugger should behave as the Win32 debugger for the process and dispatch the unmanaged callbacks; otherwise, `false`.</span></span>  
+ <span data-ttu-id="9e759-109">[in] `true` 如果偵錯工具的行為應該是進程的 Win32 偵錯工具，並分派非受控回呼，則為，否則，`false`。</span><span class="sxs-lookup"><span data-stu-id="9e759-109">[in] `true` if the debugger should behave as the Win32 debugger for the process and dispatch the unmanaged callbacks; otherwise, `false`.</span></span>  
   
  `ppProcess`  
- <span data-ttu-id="83b4d-110">[out]表示要附加偵錯工具的程序的"ICorDebugProcess 」 物件的位址指標。</span><span class="sxs-lookup"><span data-stu-id="83b4d-110">[out] A pointer to the address of an "ICorDebugProcess" object that represents the process to which the debugger has been attached.</span></span>  
+ <span data-ttu-id="9e759-110">脫銷"ICorDebugProcess" 物件位址的指標，表示已附加偵錯工具的進程。</span><span class="sxs-lookup"><span data-stu-id="9e759-110">[out] A pointer to the address of an "ICorDebugProcess" object that represents the process to which the debugger has been attached.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="83b4d-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="83b4d-111">Return Value</span></span>  
- <span data-ttu-id="83b4d-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="83b4d-112">S_OK</span></span>  
- <span data-ttu-id="83b4d-113">已成功附加至遠端電腦上的處理序。</span><span class="sxs-lookup"><span data-stu-id="83b4d-113">Successfully attached to the process on the remote machine.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9e759-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="9e759-111">Return Value</span></span>  
+ <span data-ttu-id="9e759-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="9e759-112">S_OK</span></span>  
+ <span data-ttu-id="9e759-113">已成功連接到遠端電腦上的進程。</span><span class="sxs-lookup"><span data-stu-id="9e759-113">Successfully attached to the process on the remote machine.</span></span>  
   
- <span data-ttu-id="83b4d-114">E_FAIL (或其他 E_ 傳回碼)</span><span class="sxs-lookup"><span data-stu-id="83b4d-114">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="83b4d-115">無法附加至遠端電腦上的處理序。</span><span class="sxs-lookup"><span data-stu-id="83b4d-115">Unable to attach to the process on the remote machine.</span></span>  
+ <span data-ttu-id="9e759-114">E_FAIL (或其他 E_ 傳回碼)</span><span class="sxs-lookup"><span data-stu-id="9e759-114">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="9e759-115">無法附加至遠端電腦上的進程。</span><span class="sxs-lookup"><span data-stu-id="9e759-115">Unable to attach to the process on the remote machine.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="83b4d-116">備註</span><span class="sxs-lookup"><span data-stu-id="83b4d-116">Remarks</span></span>  
- <span data-ttu-id="83b4d-117">在 Silverlight 中不支援混合模式偵錯。</span><span class="sxs-lookup"><span data-stu-id="83b4d-117">Mixed-mode debugging is not supported in Silverlight.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9e759-116">備註</span><span class="sxs-lookup"><span data-stu-id="9e759-116">Remarks</span></span>  
+ <span data-ttu-id="9e759-117">Silverlight 中不支援混合模式的調試。</span><span class="sxs-lookup"><span data-stu-id="9e759-117">Mixed-mode debugging is not supported in Silverlight.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="83b4d-118">需求</span><span class="sxs-lookup"><span data-stu-id="83b4d-118">Requirements</span></span>  
- <span data-ttu-id="83b4d-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="83b4d-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9e759-118">需求</span><span class="sxs-lookup"><span data-stu-id="9e759-118">Requirements</span></span>  
+ <span data-ttu-id="9e759-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9e759-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="83b4d-120">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="83b4d-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9e759-120">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9e759-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="83b4d-121">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="83b4d-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9e759-121">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9e759-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="83b4d-122">**.NET framework 版本：** 4.5，4，3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="83b4d-122">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
+ <span data-ttu-id="9e759-122">**.NET Framework 版本：** 4.5、4、3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="9e759-122">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83b4d-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="83b4d-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e759-123">請參閱</span><span class="sxs-lookup"><span data-stu-id="9e759-123">See also</span></span>
 
-- [<span data-ttu-id="83b4d-124">ICorDebugRemote 介面</span><span class="sxs-lookup"><span data-stu-id="83b4d-124">ICorDebugRemote Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [<span data-ttu-id="83b4d-125">ICorDebug 介面</span><span class="sxs-lookup"><span data-stu-id="83b4d-125">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="9e759-124">ICorDebugRemote 介面</span><span class="sxs-lookup"><span data-stu-id="9e759-124">ICorDebugRemote Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [<span data-ttu-id="9e759-125">ICorDebug 介面</span><span class="sxs-lookup"><span data-stu-id="9e759-125">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 
-- [<span data-ttu-id="83b4d-126">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="83b4d-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="9e759-126">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="9e759-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
