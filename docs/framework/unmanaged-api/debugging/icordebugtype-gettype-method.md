@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6e64534-4d47-4ad0-a340-7590e07e2b4a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 78f2733584e07433171c91d6a2674d3a67c8e283
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7f3010cccc584288608b3f6ba95efbeb95f271fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772513"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132052"
 ---
 # <a name="icordebugtypegettype-method"></a>ICorDebugType::GetType 方法
-取得描述 common language runtime (CLR) 的原生類型 CorElementType 值<xref:System.Type>此 ICorDebugType 所表示。  
+取得 CorElementType 值，描述此 ICorDebugType 所表示之 common language runtime （CLR） <xref:System.Type> 的原生類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,16 +35,16 @@ HRESULT GetType (
   
 ## <a name="parameters"></a>參數  
  `ty`  
- [out]值的指標`CorElementType`列舉，指出 CLR<xref:System.Type>這個`ICorDebugType`表示。  
+ 脫銷`CorElementType` 列舉值的指標，表示此 `ICorDebugType` 所代表的 CLR <xref:System.Type>。  
   
 ## <a name="remarks"></a>備註  
- 如果值`ty`ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE， [icordebugtype:: Getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)方法可能會呼叫以取得泛型型別未具現化的型別; 否則請勿呼叫`ICorDebugType::GetClass`。  
+ 如果 `ty` 的值是 ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE，則可以呼叫[ICorDebugType：： GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)方法來取得泛型型別的未具現化型別。否則，請勿呼叫 `ICorDebugType::GetClass`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

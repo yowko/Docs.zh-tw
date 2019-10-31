@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7212d9f4-989b-44e3-b8d4-ffc35922f6a0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 88277be93d3a0e445e97217655d3d524962dd01d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1216629fc7e1c3e720d5f296b9293b3c4b7f8721
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764229"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127899"
 ---
 # <a name="icordebugmodule2getjitcompilerflags-method"></a>ICorDebugModule2::GetJITCompilerFlags 方法
-取得控制此 ICorDebugModule2-just-in-time (JIT) 編譯的旗標。  
+取得旗標，控制這個 ICorDebugModule2 的即時（JIT）編譯。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,13 +35,13 @@ HRESULT GetJITCompilerFlags (
   
 ## <a name="parameters"></a>參數  
  `pdwFlags`  
- [out]值的指標[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)列舉，用於控制 JIT 編譯。  
+ 脫銷控制 JIT 編譯之[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)列舉值的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

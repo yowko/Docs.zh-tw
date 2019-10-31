@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3af1575-cbe6-457a-bc08-c53460edcbc8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: be66e0e2c9aff788d1003878891b8d64d6353500
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0530ba742a739003bfa33079ad75cb1e6f5f5e59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754705"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124011"
 ---
 # <a name="icordebugfunctiongetcurrentversionnumber-method"></a>ICorDebugFunction::GetCurrentVersionNumber 方法
-取得最新的編輯這個 ICorDebugFunction 物件所表示的函式的版本號碼。  
+取得此 ICorDebugFunction 物件所代表之函式的最新編輯版本號碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,16 +35,16 @@ HRESULT GetCurrentVersionNumber (
   
 ## <a name="parameters"></a>參數  
  `pnCurrentVersion`  
- [out]是最新的編輯，此函式的版本號碼的整數指標。  
+ 脫銷整數值的指標，這是對此函式進行最新編輯的版本號碼。  
   
 ## <a name="remarks"></a>備註  
- 最新的編輯，此函式的版本號碼可能大於函式本身的版本號碼。 使用任何一種[ICorDebugFunction2::GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md)方法或[icordebugcode:: Getversionnumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md)方法來擷取函式的版本號碼。  
+ 對此函式進行的最新編輯版本號碼，可能會大於函式本身的版本號碼。 請使用[ICorDebugFunction2：： GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md)方法或[ICorDebugCode：： GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md)方法來取出函式的版本號碼。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

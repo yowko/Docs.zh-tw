@@ -14,14 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b5e49e9d575ae2ec9b48b18f839d469632ffa769
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 67cba143957b50e8e8d7fa68e62b52775ca2f144
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770405"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131624"
 ---
 # <a name="handling-and-raising-events"></a>處理和引發事件
 
@@ -29,7 +27,7 @@ ms.locfileid: "61770405"
   
  如需處理 Windows 8.x Microsoft Store 應用程式中事件的詳細資訊，請參閱[事件和路由事件概觀](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10))。  
   
-## <a name="events"></a>事件
+## <a name="events"></a>「事件」
 
 事件是由物件傳送的訊息，用以表示發生動作。 這個動作可能是因使用者互動所造成，例如按一下按鈕，也可能起因於其他程式邏輯，如變更屬性值。 引發事件的物件稱為「事件發送者」。 事件發送者並不清楚哪個物件或方法會接收 (處理) 它所引發的事件。 事件通常是事件發送者的成員，例如，<xref:System.Web.UI.WebControls.Button.Click> 事件是 <xref:System.Web.UI.WebControls.Button> 類別的成員，而 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件是實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面之類別的成員。  
   
@@ -90,14 +88,14 @@ ms.locfileid: "61770405"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
-|[如何：引發和使用事件](how-to-raise-and-consume-events.md)|包含引發和使用事件的範例。|  
-|[如何：使用事件屬性處理多個事件](how-to-handle-multiple-events-using-event-properties.md)|示範如何使用事件屬性處理多個事件。|  
+|[操作說明：引發和使用事件](how-to-raise-and-consume-events.md)|包含引發和使用事件的範例。|  
+|[操作說明：使用事件屬性處理多個事件](how-to-handle-multiple-events-using-event-properties.md)|示範如何使用事件屬性處理多個事件。|  
 |[觀察者設計模式](observer-design-pattern.md)|描述設計模式，可讓訂閱者向提供者註冊，並且接收通知。|  
-|[如何：使用 Web Forms 應用程式中的事件](how-to-consume-events-in-a-web-forms-application.md)|示範如何處理 Web Form 控制項所引發的事件。|  
+|[操作說明：使用 Web Form 應用程式中的事件](how-to-consume-events-in-a-web-forms-application.md)|示範如何處理 Web Form 控制項所引發的事件。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.EventHandler>
 - <xref:System.EventHandler%601>

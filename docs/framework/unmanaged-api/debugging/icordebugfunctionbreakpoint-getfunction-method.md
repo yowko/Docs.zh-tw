@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a62dae5-dd8a-4696-b817-0e1e586c24a0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4f9ea741e545cc424dff450325c3f8d271c8554
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b53c80157bfd99a766eb691e8a8a2e6b9659a95
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755585"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137753"
 ---
 # <a name="icordebugfunctionbreakpointgetfunction-method"></a>ICorDebugFunctionBreakpoint::GetFunction 方法
-取得參考函式設定中斷點 ICorDebugFunction 介面指標。  
+取得參考已設定中斷點之函數的 ICorDebugFunction 介面指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,13 +35,13 @@ HRESULT GetFunction (
   
 ## <a name="parameters"></a>參數  
  `ppFunction`  
- [out]設定中斷點的函式的位址指標。  
+ 脫銷設定中斷點之函式位址的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

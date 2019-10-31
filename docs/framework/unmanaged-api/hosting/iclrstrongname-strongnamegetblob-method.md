@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: a24218f8-7196-44be-b7a2-ee9cdd7a85c4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cbc0262062eddb363b0a00535a2d099100124b67
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d7f1a71658b53a1b4167c767eb89c873308421b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748073"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135119"
 ---
 # <a name="iclrstrongnamestrongnamegetblob-method"></a>ICLRStrongName::StrongNameGetBlob 方法
 使用位於所指定位址之可執行檔的二進位表示法填滿指定的緩衝區。  
@@ -40,27 +38,27 @@ HRESULT StrongNameGetBlob (
   
 ## <a name="parameters"></a>參數  
  `wszFilePath`  
- [in]可執行檔載入有效的路徑。  
+ 在要載入之可執行檔的有效路徑。  
   
  `pbBlob`  
- [in]在其中載入可執行檔的緩衝區。  
+ 在要載入可執行檔的緩衝區。  
   
  `pcbBlob`  
- [in、 out]所要求大小上限，以位元組為單位， `pbBlob`。 傳回時，實際的大小，以位元組為單位的`pbBlob`。  
+ [in、out]`pbBlob`的要求大小上限（以位元組為單位）。 傳回時，`pbBlob`的實際大小（以位元組為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
+ 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MetaHost.h  
+ **標頭：** MetaHost。h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [StrongNameGetBlobFromImage 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
 - [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

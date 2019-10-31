@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a2995ff-5f02-4b49-84dc-3a5f9cfd7d55
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 09895294c4678cdb1dd033076cfb42853aa06b2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9ae1aa6590366468166916e6a92d0b356eb37c27
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780494"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133146"
 ---
 # <a name="idebuggerthreadcontrolreleaseallruntimethreads-method"></a>IDebuggerThreadControl::ReleaseAllRuntimeThreads 方法
-主應用程式的偵錯的服務是即將要釋放所有封鎖的執行緒。  
+通知主機偵錯工具即將釋放所有封鎖的執行緒。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,17 +32,17 @@ HRESULT ReleaseAllRuntimeThreads ( );
 ```  
   
 ## <a name="remarks"></a>備註  
- `ReleaseAllRuntimeThreads`絕不會在執行階段的執行緒上呼叫方法。 如果主機有執行階段的執行緒封鎖，它應該立即釋放。  
+ 不會在運行時間表程上呼叫 `ReleaseAllRuntimeThreads` 方法。 如果主機已封鎖運行時間表程，它就應該立即發行。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IDebuggerThreadControl 介面](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)

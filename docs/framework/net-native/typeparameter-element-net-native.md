@@ -1,15 +1,13 @@
 ---
-title: <TypeParameter>元素（.NET Native）
+title: <TypeParameter> 元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0de00b9313b60b3a527dd0380ae90d82731a8c02
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c69b535f3a01c287d30189138130066fc10a77e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049054"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128930"
 ---
 # <a name="typeparameter-element-net-native"></a>\<TypeParameter > 元素（.NET Native）
 將原則套用至傳遞給某個方法之類型引數所代表的類型。  
@@ -61,7 +59,7 @@ ms.locfileid: "71049054"
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -94,7 +92,7 @@ Object obj = JsonConvert.DeserializeObject(data, t);
   
  反映指示詞會在執行階段，將 `StockQuote` 類型的中繼資料提供給 NewtonSoft JSON 序列化程式。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [\<Method> 項目](method-element-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)

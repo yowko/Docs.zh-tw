@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0766e29-e573-4f9a-a928-167d1de5aa7e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b42cb2bff677963c44bfc04f8bdd6c60497e4731
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a0482ff451b05ec50c199a75a3c3fabd68c28e21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909892"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134000"
 ---
 # <a name="icordebugassembly2-interface"></a>ICorDebugAssembly2 介面
 
@@ -31,7 +29,7 @@ ms.locfileid: "69909892"
   
 |方法|描述|  
 |------------|-----------------|  
-|[IsFullyTrusted 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly2-isfullytrusted-method.md)|取得值, 指出執行時間安全性系統是否已授與元件完全信任。|  
+|[IsFullyTrusted 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly2-isfullytrusted-method.md)|取得值，指出執行時間安全性系統是否已授與元件完全信任。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -43,10 +41,10 @@ ms.locfileid: "69909892"
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

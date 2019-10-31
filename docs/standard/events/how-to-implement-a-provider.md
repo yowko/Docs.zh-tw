@@ -1,5 +1,5 @@
 ---
-title: HOW TO：實作提供者
+title: 如何：實作提供者
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,17 +10,15 @@ helpviewer_keywords:
 - providers [.NET Framework], in observer design pattern
 - observables [.NET Framework], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12c229b3a1436f9794258fec13905cce0fb767aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: f5bb3cda0caa39ba3fd094b80e0b769a4bfc1f85
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324769"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141550"
 ---
-# <a name="how-to-implement-a-provider"></a>HOW TO：實作提供者
-觀察者設計模式需要提供者和一個或多個觀察者之間的分區，其中提供者會監視資料並傳送通知，而觀察者會接收來自提供者的通知 (回呼)。 本主題討論如何建立提供者。 相關主題為[如何：實作觀察者](../../../docs/standard/events/how-to-implement-an-observer.md)，討論如何建立觀察者。  
+# <a name="how-to-implement-a-provider"></a>如何：實作提供者
+觀察者設計模式需要提供者和一個或多個觀察者之間的分區，其中提供者會監視資料並傳送通知，而觀察者會接收來自提供者的通知 (回呼)。 本主題討論如何建立提供者。 相關主題為[操作說明：實作觀察器](../../../docs/standard/events/how-to-implement-an-observer.md)，討論如何建立觀察者。  
   
 ### <a name="to-create-a-provider"></a>建立提供者  
   
@@ -60,9 +58,9 @@ ms.locfileid: "59324769"
  [!code-csharp[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#7)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#7)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IObservable%601>
 - [觀察者設計模式](../../../docs/standard/events/observer-design-pattern.md)
-- [如何：實作觀察者](../../../docs/standard/events/how-to-implement-an-observer.md)
+- [操作說明：實作觀察者](../../../docs/standard/events/how-to-implement-an-observer.md)
 - [觀察者設計模式最佳做法](../../../docs/standard/events/observer-design-pattern-best-practices.md)

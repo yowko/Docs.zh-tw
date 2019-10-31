@@ -14,33 +14,31 @@ helpviewer_keywords:
 ms.assetid: 368881ab-c4ea-4731-bf22-c596aac7c66c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e2c3a3057003d0035bfcb096a94c84d610e3056f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf4fa9c5ec35391a0e772e25112f305bfa6e1564
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985503"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126894"
 ---
 # <a name="iappdomainbinding-interface"></a>IAppDomainBinding 介面
-提供 common language runtime (CLR)，以通知主應用程式已建立的應用程式定義域所呼叫的方法。  
+提供通用語言執行時間（CLR）所呼叫的方法，以通知主應用程式已建立應用程式域。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[OnAppDomain 方法](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|由 common language runtime (CLR)，以通知主機已建立的應用程式定義域呼叫。|  
+|[OnAppDomain 方法](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|由 common language runtime （CLR）呼叫，以通知主機已建立應用程式域。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

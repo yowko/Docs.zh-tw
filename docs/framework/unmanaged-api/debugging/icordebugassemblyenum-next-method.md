@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3e7d0c2-3baa-4ef8-8e3f-b865cf252940
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 00adc852a0940766cdd4188ffa5d6be2b472e51f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86fa44b609b4b89cfaa28f0bfa7bbdce6217623f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744885"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122862"
 ---
 # <a name="icordebugassemblyenumnext-method"></a>ICorDebugAssemblyEnum::Next 方法
-從集合中，從目前游標位置開始，取得指定的組件數目。  
+從目前的資料指標位置開始，取得集合中指定的元件數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,19 +38,19 @@ HRESULT Next (
   
 ## <a name="parameters"></a>參數  
  `celt`  
- [in]要擷取的組件數目。  
+ 在要抓取的元件數目。  
   
  `values`  
- [out]指標的陣列，其中每一個指向 ICorDebugAssembly 物件，表示組件。  
+ 脫銷指標陣列，其中每一個都會指向代表元件的 ICorDebugAssembly 物件。  
   
  `pceltFetched`  
- [out]實際傳回的組件數目指標。 此值可能為 null 如果`celt`是其中一個。  
+ 脫銷實際傳回之元件數目的指標。 如果 `celt` 是一個，這個值可能會是 null。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

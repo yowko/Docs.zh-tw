@@ -37,14 +37,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b890ac02d54a9092bf2ad24e31367ef1d487c01f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: HT
+ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593502"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132850"
 ---
 # <a name="net-class-library-overview"></a>.NET 類別庫概觀
 
@@ -86,7 +84,7 @@ ms.locfileid: "65593502"
   
  下表列出 .NET 所提供基底類型的清單、簡要描述各類型，並且指示 Visual Basic、C#、C++ 和 F# 中的對應類型。  
   
-|分類|類別名稱|說明|Visual Basic 資料型別|C# 資料型別|C++/CLI 資料類型|F# 資料類型|  
+|Category|類別名稱|描述|Visual Basic 資料型別|C# 資料型別|C++/CLI 資料類型|F# 資料類型|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |整數|<xref:System.Byte>|8 位元不帶正負號的整數。|**Byte**|**byte**|**unsigned char**|**byte**|  
 ||<xref:System.SByte>|8 位元帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**SByte**|**sbyte**|**char**<br /> -或-<br /> **signed** **char**|**sbyte**|  
@@ -110,7 +108,7 @@ ms.locfileid: "65593502"
   
  如需命名空間的詳細資訊，請使用 [.NET API 瀏覽器](https://docs.microsoft.com/dotnet/api)來瀏覽 .NET 類別庫。 API 參考文件提供每個命名空間、其類型及其每個成員的相關文件。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [一般類型系統](../../docs/standard/base-types/common-type-system.md)
 - [.NET API 瀏覽器](../../api/index.md)

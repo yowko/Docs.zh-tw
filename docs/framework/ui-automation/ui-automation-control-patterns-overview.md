@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 548828f8e9948e000a15fd19a4475ef715e110d8
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a3daf75417260d7e761da2e90c595471b2a4b2a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039457"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131505"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 自動化控制項模式概觀
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.locfileid: "73039457"
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|用於可停駐在停駐容器中的控制項。 例如工具列或工具板。|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|用於可展開或摺疊的控制項。 例如，應用程式中的功能表項目，像是 [檔案] 功能表。|  
 |<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|用於支援格線功能 (例如調整大小及移動至指定的儲存格) 的控制項。 例如，Windows 檔案總管中的大圖示檢視，或是 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]中沒有標題的簡單表格。|  
-|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|用於格線中有儲存格的控制項。 個別儲存格應該支援 GridItem 模式。 例如， [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)] 詳細資料檢視中的每一個儲存格。|  
+|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|用於格線中有儲存格的控制項。 個別儲存格應該支援 GridItem 模式。 例如，Microsoft Windows Explorer 詳細資料檢視中的每個儲存格。|  
 |<xref:System.Windows.Automation.InvokePattern>|<xref:System.Windows.Automation.Provider.IInvokeProvider>|用於可以叫用的控制項，例如按鈕。|  
 |<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|用於可以在相同資訊、資料或子系的集合中，切換多種表示方式的控制項。 例如，清單檢視控制項，資料就在縮圖、並排顯示、圖示、清單或詳細資料檢視中。|  
 |<xref:System.Windows.Automation.RangeValuePattern>|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|用於範圍值可以套用至控制項的控制項。 例如，包含年份之微調控制項的範圍可能是 1900 到 2010，而另一個代表月份的微調控制項的範圍值則是 1 至 12。|  
@@ -70,7 +70,7 @@ ms.locfileid: "73039457"
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|用於可切換狀態的控制項。 例如，核取方塊及可勾選的功能表項目。|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|用於可以調整大小、移動和旋轉的控制項。 轉換控制項模式通常使用於設計工具、表單、圖形編輯器，以及繪圖應用程式。|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|允許用戶端對不支援範圍值的控制項，取得或設定一個值。 例如日期時間選擇器。|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|公開 windows 特有的資訊，這是 Microsoft Windows 作業系統的基本概念。 Windows 控制項的範例包括最上層應用程式視窗（[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]、[!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]等等）、多重文件介面（MDI）子視窗和對話方塊。|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|公開 windows 特有的資訊，這是 Microsoft Windows 作業系統的基本概念。 Windows 控制項的範例包括最上層應用程式視窗（[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]、Microsoft Windows Explorer 等等）、多重文件介面（MDI）子視窗和對話方塊。|  
   
 ## <a name="see-also"></a>請參閱
 

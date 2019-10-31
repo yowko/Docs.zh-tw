@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55cb673a-e240-43a6-a406-6912e7c0fe66
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3aa76b88d89e83c400b3f372d846c1a31add255
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6d77ff1393bc0ba4884dfa34810fee5316e33ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761487"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130739"
 ---
 # <a name="icordebugmanagedcallbackloadassembly-method"></a>ICorDebugManagedCallback::LoadAssembly 方法
-已成功載入 common language runtime (CLR) 組件會告知偵錯工具。  
+通知偵錯工具已成功載入 common language runtime （CLR）元件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,21 +36,21 @@ HRESULT LoadAssembly (
   
 ## <a name="parameters"></a>參數  
  `pAppDomain`  
- [in]表示應用程式定義域到其中的組件已載入的 ICorDebugAppDomain 物件指標。  
+ 在ICorDebugAppDomain 物件的指標，表示已載入元件的應用程式域。  
   
  `pAssembly`  
- [in]代表組件 ICorDebugAssembly 物件的指標。  
+ 在表示元件之 ICorDebugAssembly 物件的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [UnloadAssembly 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadassembly-method.md)
 - [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

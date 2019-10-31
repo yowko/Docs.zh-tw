@@ -1,15 +1,13 @@
 ---
-title: <Property>元素（.NET Native）
+title: <Property> 元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54daf15c593327bf3255f40f6eb6931ffc8bd3c6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049304"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128203"
 ---
 # <a name="property-element-net-native"></a>\<屬性 > 元素（.NET Native）
 將執行階段反映原則套用至屬性。  
@@ -28,7 +26,7 @@ ms.locfileid: "71049304"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|屬性類型|說明|  
+|屬性|屬性類型|描述|  
 |---------------|--------------------|-----------------|  
 |`Name`|一般|必要屬性。 指定屬性名稱。|  
 |`Browse`|反射|選擇性屬性。 控制對屬性相關資訊的查詢，或控制屬性的列舉，但不會在執行階段啟用任何動態存取。|  
@@ -47,7 +45,7 @@ ms.locfileid: "71049304"
 |-----------|-----------------|  
 |*policy_setting*|要為屬性套用此原則類型的設定。 可能的值為 `Auto`、`Excluded`、`Included` 和 `Required`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -75,7 +73,7 @@ ms.locfileid: "71049304"
   
  檔案會針對 `All` 類別，將 `Activate` 值套用至 `Book` 原則，如此可允許透過反映來存取類別建構函式。 `Browse` 類別的 `Book` 原則繼承自其父命名空間。 其設定為 `Required Public`，讓中繼資料在執行階段可供使用。  
   
- 以下是範例的原始程式碼。 `outputBlock` 變數<xref:Windows.UI.Xaml.Controls.TextBlock>代表控制項。  
+ 以下是範例的原始程式碼。 `outputBlock` 變數代表 <xref:Windows.UI.Xaml.Controls.TextBlock> 控制項。  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   
@@ -99,7 +97,7 @@ ms.locfileid: "71049304"
     </Directives>  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)

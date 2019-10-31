@@ -2,14 +2,12 @@
 title: 執行階段指示詞原則設定
 ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 33253c249842824a529f4e8b24d4ca4228733041
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6001e3855610e7da5262c46413b775da3bea305c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049222"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128156"
 ---
 # <a name="runtime-directive-policy-settings"></a>執行階段指示詞原則設定
 
@@ -34,7 +32,7 @@ ms.locfileid: "71049222"
 
   下表列出反映原則類型，以及可與其搭配使用的程式元素。
 
-  |元素|啟動|瀏覽|動態|
+  |項目|啟動|瀏覽|動態|
   |-------------|--------------|------------|-------------|
   |[\<Application>](application-element-net-native.md)|✓|✓|✓|
   |[\<Assembly>](assembly-element-net-native.md)|✓|✓|✓|
@@ -65,7 +63,7 @@ ms.locfileid: "71049222"
 
   下表列出序列化原則類型，以及可與其搭配使用的程式元素。
 
-  |元素|序列化|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|
+  |項目|序列化|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|
   |-------------|---------------|----------------------------|--------------------------------|-------------------|
   |[\<Application>](application-element-net-native.md)|✓|✓|✓|✓|
   |[\<Assembly>](assembly-element-net-native.md)|✓|✓|✓|✓|
@@ -94,7 +92,7 @@ ms.locfileid: "71049222"
 
   下表列出 interop 原則類型，以及可與其搭配使用的程式元素。
 
-  |元素|MarshalObject|MarshalDelegate|MarshalStructure|
+  |項目|MarshalObject|MarshalDelegate|MarshalStructure|
   |-------------|-------------------|---------------------|----------------------|
   |[\<Application>](application-element-net-native.md)|✓|✓|✓|
   |[\<Assembly>](assembly-element-net-native.md)|✓|✓|✓|
@@ -117,7 +115,7 @@ ms.locfileid: "71049222"
 
 每個原則類型都可以設定為下表列出的其中一個值。 請注意，代表類型成員的元素可支援不同於其他元素的原則設定集。
 
-|原則設定|說明|`Assembly`、`Namespace`、`Type` 和 `TypeInstantiation` 元素|`Event`、`Field`、`Method`、`MethodInstantiation` 和 `Property` 元素|
+|原則設定|描述|`Assembly`、`Namespace`、`Type` 和 `TypeInstantiation` 元素|`Event`、`Field`、`Method`、`MethodInstantiation` 和 `Property` 元素|
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|
 |`All`|針對 .NET Native 工具鏈未移除的所有類型和成員啟用原則。|✓||
 |`Auto`|指定應將預設原則用於該程式元素的原則類型。 此設定如同省略該原則類型的原則。 `Auto` 通常是用來指示從父元素繼承原則。|✓|✓|
@@ -130,7 +128,7 @@ ms.locfileid: "71049222"
 |`Required PublicAndInternal`|啟用公用及內部類型或成員的原則，並確保公用及內部類型和成員的中繼資料一律可供使用。 此設定不同於 `PublicAndInternal`，後者只會在工具鏈判斷為必要時，才會讓公用及內部類型和成員的中繼資料可供使用。|✓||
 |`Required All`|需要工具鏈保留所有類型和成員 (無論是否使用)，並為其啟用原則。|✓||
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)

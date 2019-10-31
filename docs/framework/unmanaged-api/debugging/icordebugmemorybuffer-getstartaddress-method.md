@@ -1,17 +1,15 @@
 ---
-title: 'ICorDebugMemoryBuffer:: GetStartAddress 方法'
+title: ICorDebugMemoryBuffer：： GetStartAddress 方法
 ms.date: 03/30/2017
 ms.assetid: f804d9ab-8c88-44f0-b278-5fcca7f87726
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1394624051baa9e7dd21e29788d5fab28332081b
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: e2876398ceaf863bbb3c7e576d59b89c52f1bdaf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987555"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127994"
 ---
-# <a name="icordebugmemorybuffergetstartaddress-method"></a>ICorDebugMemoryBuffer:: GetStartAddress 方法
+# <a name="icordebugmemorybuffergetstartaddress-method"></a>ICorDebugMemoryBuffer：： GetStartAddress 方法
 取得記憶體緩衝區的起始位址。  
   
 ## <a name="syntax"></a>語法  
@@ -36,11 +34,11 @@ HRESULT GetStartAddress(
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugMemoryBuffer 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

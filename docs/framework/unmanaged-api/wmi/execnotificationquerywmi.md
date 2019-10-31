@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ExecNotificationQueryWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cfe54c7c9b7ae707b2d3591afbd830bac171f0b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3d8a7683eef52a5e91bf7aa84d5aa7db7dbdac8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798640"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130444"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi 函式
 
@@ -64,7 +62,7 @@ HRESULT ExecNotificationQueryWmi (
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 函數會傳回順向列舉值。 一般來說，順向列舉值的速度較快，而且使用的記憶體比傳統的列舉值少，但它們不允許[複製](clone.md)的呼叫。 |
 
 `pCtx`\
-在通常，此值為`null`。 否則，它是[IWbemCoNtext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)實例的指標，可供提供所要求事件的提供者使用。
+在通常，此值為 `null`。 否則，它是[IWbemCoNtext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)實例的指標，可供提供所要求事件的提供者使用。
 
 `ppEnum`\
 脫銷如果沒有發生錯誤，則會接收列舉值的指標，允許呼叫者抓取查詢結果集中的實例。 如需詳細資訊，請參閱[備註](#remarks)一節。
@@ -98,7 +96,7 @@ HRESULT ExecNotificationQueryWmi (
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數無效。 |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | 查詢指定了不存在的類別。 |
 | `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | 要求傳遞事件的精確度太高。 必須指定較大的輪詢容錯。 |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | 查詢要求的資訊比 Windows 管理所能提供的還要多。 當`HRESULT`事件查詢產生輪詢命名空間中所有物件的要求時，就會傳回此專案。 |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | 查詢要求的資訊比 Windows 管理所能提供的還要多。 當事件查詢產生輪詢命名空間中所有物件的要求時，就會傳回這個 `HRESULT`。 |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | 查詢發生語法錯誤。 |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | 不支援要求的查詢語言。 |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | 查詢太複雜。 |
@@ -112,9 +110,9 @@ HRESULT ExecNotificationQueryWmi (
 
 此函式會包裝對[IWbemServices：： ExecNotificationQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execnotificationquery)方法的呼叫。
 
-函式傳回之後，呼叫端會定期將傳回`ppEnum`的物件傳遞至[下一個](next.md)函式，以查看是否有任何可用的事件。
+函式傳回之後，呼叫端會定期將傳回的 `ppEnum` 物件傳遞至[下一個](next.md)函式，以查看是否有任何可用的事件。
 
-可以在 WQL 查詢中使用的`AND`和`OR`關鍵字數目有所限制。 複雜查詢中使用的大量 WQL 關鍵字可能會使 WMI `WBEM_E_QUOTA_VIOLATION`傳回（或0x8004106c）錯誤碼`HRESULT`做為值。 WQL 關鍵字的限制取決於查詢的複雜程度。
+可以在 WQL 查詢中使用的 `AND` 數目和 `OR` 關鍵字有一些限制。 複雜查詢中使用的大量 WQL 關鍵字可能會使 WMI 以 `HRESULT` 值的形式傳回 `WBEM_E_QUOTA_VIOLATION` （或0x8004106c）錯誤碼。 WQL 關鍵字的限制取決於查詢的複雜程度。
 
 如果函式呼叫失敗，您可以藉由呼叫[GetErrorInfo](geterrorinfo.md)函數來取得其他錯誤資訊。
 
@@ -122,10 +120,10 @@ HRESULT ExecNotificationQueryWmi (
 
 **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
-**標頭：** WMINet_Utils.idl
+**標頭：** WMINet_Utils .idl
 
 **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WMI 和效能計數器（非受控 API 參考）](index.md)

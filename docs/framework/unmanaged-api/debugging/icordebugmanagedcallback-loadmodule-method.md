@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 66ec04e9-87cb-42ce-9720-81522abb5d5a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dde8971f9f08cc9e0930f6ea133d9a06b22e4c96
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d13c5be314dc39f3e7b42a8d6b13f6a25751067d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761416"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130719"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>ICorDebugManagedCallback::LoadModule 方法
-已成功載入的 common language runtime (CLR) 模組會告知偵錯工具。  
+通知偵錯工具已成功載入 common language runtime （CLR）模組。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,24 +36,24 @@ HRESULT LoadModule (
   
 ## <a name="parameters"></a>參數  
  `pAppDomain`  
- [in]表示模組已經載入的應用程式定義域的 ICorDebugAppDomain 物件指標。  
+ 在代表已載入模組之應用程式域的 ICorDebugAppDomain 物件指標。  
   
  `pModule`  
- [in]ICorDebugModule 物件，表示 CLR 模組指標。  
+ 在代表 CLR 模組之 ICorDebugModule 物件的指標。  
   
 ## <a name="remarks"></a>備註  
- `LoadModule`回呼提供適當的時間，檢查模組的中繼資料、 設定在 just-in-time (JIT) 編譯器旗標，或啟用或停用類別的載入模組的回呼。  
+ `LoadModule` 回呼會提供適當時間來檢查模組的中繼資料、設定及時（JIT）編譯器旗標，或啟用或停用模組的類別載入回呼。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [UnloadModule 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)
 - [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

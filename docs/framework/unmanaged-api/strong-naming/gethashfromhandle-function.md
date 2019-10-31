@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e00337f-b307-4602-9bc3-965a8dbf02cd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3eac353252f5a97402cbd883895b3e397c39edd6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dc241324f5844610d7b86b7cb9668f84d4525395
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799176"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140660"
 ---
 # <a name="gethashfromhandle-function"></a>GetHashFromHandle 函式
 使用指定的雜湊演算法產生以指定檔案控制代碼指定之檔案的雜湊。  
@@ -51,21 +49,21 @@ HRESULT GetHashFromHandle (
  脫銷傳回的雜湊緩衝區。  
   
  `cchHash`  
- 在要求的大小`pbHash`上限。  
+ 在`pbHash`的要求大小上限。  
   
  `pchHash`  
- 脫銷傳回`pbHash`之的大小（以位元組為單位）。  
+ 脫銷傳回之 `pbHash`的大小（以位元組為單位）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Stackexchange.redis.strongname。h  
   
- **LIBRARY:** 包含為 Mscoree.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [GetHashFromHandle 方法](../hosting/iclrstrongname-gethashfromhandle-method.md)
 - [ICLRStrongName 介面](../hosting/iclrstrongname-interface.md)

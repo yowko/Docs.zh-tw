@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 61f4e057a487462feb385ca0e3ca977fdd165f56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9bcc03cc97a62b4c1cadacd7c0b2bc46b9fec470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739101"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134134"
 ---
-# <a name="efngetmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack Function
+# <a name="_efn_getmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack 函式
 給予 Managed 例外狀況物件位址後，會傳回內部包含堆疊追蹤版本的字串。  
   
 ## <a name="syntax"></a>語法  
@@ -39,27 +37,27 @@ HRESULT _EFN_GetManagedExcepStack(
   
 ## <a name="parameters"></a>參數  
  `Client`  
- [in]正在進行偵錯用戶端。  
+ 在正在進行調試的用戶端。  
   
  `StackObjAddr`  
- [in]Managed 的物件指標，衍生自<xref:System.Exception>。  
+ 在Managed 物件指標，衍生自 <xref:System.Exception>。  
   
  szStackString  
- [out]傳回的字串。  
+ 脫銷傳回的字串。  
   
  `cbString`  
- [out]字串緩衝區中有可用的字元數。  
+ 脫銷字串緩衝區中可用的字元數。  
   
 ## <a name="remarks"></a>備註  
- 如果沒有任何 managed 程式碼的執行緒上目前內容中，則函數會傳回 HRESULT SOS_E_NOMANAGEDCODE 0xa0 設備值與 0x1000 錯誤碼。  
+ 如果目前在內容中的執行緒上沒有 managed 程式碼，則函式會傳回具有設備值0xa0 的 HRESULT SOS_E_NOMANAGEDCODE，以及錯誤碼為0x1000。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** SOS_Stacktrace.h  
+ **標頭：** SOS_Stacktrace。h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯全域靜態函式](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

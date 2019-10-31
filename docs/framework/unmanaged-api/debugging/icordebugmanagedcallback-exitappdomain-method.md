@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d815486e-b3bd-4fe8-ba28-02abdb4d67ba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1e045c475b57f863071eb81194868b7db3c5a3c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5ba6ce4e59057442a9f17338ec7bfff787bd5d05
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755804"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130799"
 ---
 # <a name="icordebugmanagedcallbackexitappdomain-method"></a>ICorDebugManagedCallback::ExitAppDomain 方法
-已結束應用程式定義域會告知偵錯工具。  
+通知偵錯工具，應用程式域已結束。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,20 +36,20 @@ HRESULT ExitAppDomain (
   
 ## <a name="parameters"></a>參數  
  `pProcess`  
- [in]ICorDebugProcess 物件，表示包含指定的應用程式定義域的處理序的指標。  
+ 在ICorDebugProcess 物件的指標，代表包含指定之應用程式域的進程。  
   
  `pAppDomain`  
- [in]表示已結束的應用程式定義域的 ICorDebugAppDomain 物件指標。  
+ 在ICorDebugAppDomain 物件的指標，表示已結束的應用程式域。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

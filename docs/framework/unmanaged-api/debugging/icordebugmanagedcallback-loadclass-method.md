@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e58dac7b-85c3-41ca-b9aa-3a7fc9ae6680
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5619dea17b9a7140238fd559d2f6b1a5d190ac33
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d23b695550c8444264934f7aca4fa185064e89c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761892"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130733"
 ---
 # <a name="icordebugmanagedcallbackloadclass-method"></a>ICorDebugManagedCallback::LoadClass 方法
-已載入類別會告知偵錯工具。  
+通知偵錯工具已載入類別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,26 +36,26 @@ HRESULT LoadClass (
   
 ## <a name="parameters"></a>參數  
  `pAppDomain`  
- [in]表示已載入類別所在的應用程式定義域的 ICorDebugAppDomain 物件指標。  
+ 在ICorDebugAppDomain 物件的指標，表示已載入類別的應用程式域。  
   
  `c`  
- [in]ICorDebugClass 物件，代表的類別指標。  
+ 在表示類別之 ICorDebugClass 物件的指標。  
   
 ## <a name="remarks"></a>備註  
- 只有當類別載入已啟用模組包含類別，就會發生這個回呼。 類別載入一定會啟用動態模組。  
+ 只有在已針對包含類別的模組啟用類別載入時，才會發生此回呼。 動態模組的類別載入一律為啟用狀態。  
   
- `LoadClass`回呼會提供適當的時間，來將中斷點繫結至新產生的類別，在動態模組中。  
+ `LoadClass` 回呼會提供適當的時間，將中斷點系結至動態模組中新產生的類別。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [UnloadClass 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)
 - [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - task parallelism in .NET
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0192e12c86b21eb126293bbd220e093b334768b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: HT
+ms.openlocfilehash: 665490601cad9ccd7881042aed576b95bbc07115
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837059"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139724"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>如何：使用 Parallel.Invoke 執行平行作業
 
@@ -38,7 +36,7 @@ ms.locfileid: "48837059"
 
 將整個範例複製並貼到 Microsoft Visual Studio 專案中，然後按 **F5** 鍵。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平行程式設計](../../../docs/standard/parallel-programming/index.md)
 - [操作說明：取消工作及其子系](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)

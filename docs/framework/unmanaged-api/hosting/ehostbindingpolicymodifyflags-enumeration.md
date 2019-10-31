@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0339af16-ee1d-48ec-837d-a79d9a9c89f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d70f7dd872cefbadce56c577ce2ecc9cbcb663b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a2faf22b48dd0b809d6c3668a37f2119733a9b18
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765844"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129441"
 ---
 # <a name="ehostbindingpolicymodifyflags-enumeration"></a>EHostBindingPolicyModifyFlags 列舉
-可讓主應用程式指定的重新導向套用原則的修改從來源組件的目標組件時，應該執行 common language runtime (CLR) 型別。  
+允許主機指定將原則修改從來源元件套用至目標群組件時，common language runtime （CLR）應執行的重新導向類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,28 +35,28 @@ typedef enum _hostBindingPolicyModifyFlags {
 } EHostBindingPolicyModifyFlags;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`HOST_BINDING_POLICY_MODIFY_CHAIN`|指定 CLR 會鏈結至目標組件的來源組件的原則值。|  
-|`HOST_BINDING_POLICY_MODIFY_DEFAULT`|指定 CLR 會執行預設動作。|  
-|`HOST_BINDING_POLICY_MODIFY_MAX`|指定 CLR 會設定此原則的值之目標組件的最大值。|  
-|`HOST_BINDING_POLICY_MODIFY_REMOVE`|指定 CLR 將會取代之目標組件的原則值，與來源組件。|  
+|`HOST_BINDING_POLICY_MODIFY_CHAIN`|指定 CLR 會將來源元件的原則值鏈到目標群組件的。|  
+|`HOST_BINDING_POLICY_MODIFY_DEFAULT`|指定 CLR 將會執行預設動作。|  
+|`HOST_BINDING_POLICY_MODIFY_MAX`|指定 CLR 將目標群組件的原則值設定為最大值。|  
+|`HOST_BINDING_POLICY_MODIFY_REMOVE`|指定 CLR 將會以來源元件的原則值取代目標群組件。|  
   
 ## <a name="remarks"></a>備註  
- [Iclrhostbindingpolicymanager:: Modifyapplicationpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md)方法會採用類型參數的`EHostBindingPolicyModifyFlags`。  
+ [ICLRHostBindingPolicyManager：： ModifyApplicationPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md)方法會接受 `EHostBindingPolicyModifyFlags`類型的參數。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** MSCorEE.dll  
+ 連結**庫：** Mscoree.dll .dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRHostBindingPolicyManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
 - [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

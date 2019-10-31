@@ -2,27 +2,26 @@
 title: 如何：使用當地語系化例外狀況訊息來建立使用者定義的例外狀況
 description: 瞭解如何使用當地語系化的例外狀況訊息來建立使用者定義的例外狀況
 author: Youssef1313
-ms.author: ronpet
 ms.date: 09/13/2019
-ms.openlocfilehash: b4aa567fccda9354bc5959d6b9838d678d53abef
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 453e332541628770932da2a6802fdcaee5211a84
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696708"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141520"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>如何：使用當地語系化例外狀況訊息來建立使用者定義的例外狀況
 
-在本文中，您將瞭解如何使用附屬元件，建立繼承自基底 @no__t 0 類別的使用者自訂例外狀況和當地語系化的例外狀況訊息。
+在本文中，您將瞭解如何使用附屬元件，建立繼承自基底 <xref:System.Exception> 類別的使用者定義例外狀況，以及當地語系化的例外狀況訊息。
 
 ## <a name="create-custom-exceptions"></a>建立自訂例外狀況
 
 .NET 包含許多您可以使用的不同例外狀況。 不過，在某些情況下，如果它們都不符合您的需求，您可以建立自己的自訂例外狀況。
 
-假設您想要建立包含 `StudentName` 屬性的 @no__t 0。
+假設您想要建立包含 `StudentName` 屬性的 `StudentNotFoundException`。
 若要建立自訂例外狀況，請遵循下列步驟：
 
-1. 建立繼承自 <xref:System.Exception> 的可序列化類別。 類別名稱的結尾應該是 "Exception"：
+1. 建立繼承自 <xref:System.Exception>的可序列化類別。 類別名稱的結尾應該是 "Exception"：
 
     ```csharp
     [Serializable]
@@ -83,7 +82,7 @@ throw new StudentNotFoundException("The student cannot be found.", "John");
 若要建立當地語系化的例外狀況訊息：
 
 1. 建立名為*Resources*的新資料夾來存放資源檔。
-1. 在其中加入新的資源檔。 若要在 Visual Studio 中這樣做，請在**方案總管**的資料夾上按一下滑鼠右鍵，**然後選取 [新增 @no__t**-2**新專案**]  >  個 [**資源檔**]。 將檔案命名為*ExceptionMessages .resx*。 這是預設的資源檔。
+1. 在其中加入新的資源檔。 若要在 Visual Studio 中執行此動作，請以滑鼠右鍵按一下**方案總管**中的資料夾，**然後選取 [** 新增 > **新專案** > **資源檔**]。 將檔案命名為*ExceptionMessages .resx*。 這是預設的資源檔。
 1. 新增例外狀況訊息的名稱/值組，如下圖所示：
 
    ![將資源新增至預設文化特性](media/add-resources-to-default-culture.jpg)
@@ -102,9 +101,9 @@ throw new StudentNotFoundException("The student cannot be found.", "John");
     ```
 
   > [!NOTE]
-  > 如果專案名稱為 `TestProject`，而資源檔*ExceptionMessages*位於專案的*Resources*資料夾中，則資源檔的完整名稱會是 `TestProject.Resources.ExceptionMessages`。
+  > 如果專案名稱是 `TestProject`，而資源檔*ExceptionMessages*位於專案的*Resources*資料夾中，則資源檔的完整名稱會是 `TestProject.Resources.ExceptionMessages`。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [如何建立使用者定義的例外狀況](how-to-create-user-defined-exceptions.md)
 - [建立桌面應用程式的附屬元件](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

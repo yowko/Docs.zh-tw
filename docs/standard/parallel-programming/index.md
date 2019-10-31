@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 07b5426f5af9cd6ca919d8da0de0acfed76a2e63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ae129ef0cb2b331c1eb0220282f21fec6f6fb77d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954062"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134152"
 ---
 # <a name="parallel-programming-in-net"></a>.NET 的平行程式設計
 
@@ -26,7 +24,7 @@ ms.locfileid: "61954062"
 
 ## <a name="related-topics"></a>相關主題
 
-|技術|說明|
+|技術|描述|
 |----------------|-----------------|
 |[工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|提供 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 類別 (包含平行版本的 `For` 和 `ForEach` 迴圈) 及 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別 (表示表達非同步作業較好的方式) 的文件。|
 |[平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|平行實作的 LINQ to Objects，在許多情節中可大幅改善效能。|
@@ -37,7 +35,7 @@ ms.locfileid: "61954062"
 |[PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|提供 C# 和 Visual Basic 中之 Lambda 運算式的簡短概觀，並且顯示如何在 PLINQ 和工作平行程式庫中使用這些運算式。|
 |[進一步閱讀](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|提供以 .NET 進行平行程式設計的額外資訊和範例資源連結。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [非同步總覽](../async.md)
 - [受控執行緒處理](../threading/index.md)

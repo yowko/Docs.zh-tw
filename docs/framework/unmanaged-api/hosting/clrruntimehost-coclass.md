@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ac9cbf5-8a2d-4e4f-8831-0dad8ef0a897
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 841b05ca1037d82046820554878d883f94687d34
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1e595e1a4f1b462437f47207b998829a8bd774d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779142"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129457"
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost Coclass
-提供介面來管理執行程式碼執行階段。  
+提供介面，以供運行時間管理程式碼執行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,18 +37,18 @@ coclass CLRRuntimeHost {
   
 |介面|描述|  
 |---------------|-----------------|  
-|[ICLRRuntimeHost 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|提供方法來控制執行階段應用程式的執行。|  
-|[ICLRValidator 介面](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|提供用於驗證的可攜式執行檔的影像及詳細的報告驗證錯誤的方法。|  
+|[ICLRRuntimeHost 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|提供方法來控制執行時間的應用程式執行。|  
+|[ICLRValidator 介面](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|提供可移植可執行映射的驗證方法，以及詳細的驗證錯誤報表。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.idl  
+ **標頭：** Mscoree.dll .idl  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [裝載 Coclass](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

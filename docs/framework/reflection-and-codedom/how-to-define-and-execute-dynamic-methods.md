@@ -1,5 +1,5 @@
 ---
-title: 作法：定義和執行動態方法
+title: 如何：定義和執行動態方法
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b5c6de2bde111ae459dbcfa1c0a7363d406f5f80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 7da9d0bea755b90f73077fcd56558ed66a80e2eb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928249"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130143"
 ---
-# <a name="how-to-define-and-execute-dynamic-methods"></a>作法：定義和執行動態方法
+# <a name="how-to-define-and-execute-dynamic-methods"></a>如何：定義和執行動態方法
 下列程序顯示如何定義及執行簡單的動態方法及繫結至類別執行個體的動態方法。 如需動態方法的詳細資訊，請參閱 <xref:System.Reflection.Emit.DynamicMethod> 類別和[反映發出動態方法案例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))。  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>定義和執行動態方法  
@@ -114,7 +112,7 @@ ms.locfileid: "69928249"
  [!code-csharp[DynamicMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#1)]
  [!code-vb[DynamicMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#1)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Reflection.Emit.DynamicMethod>
 - [使用反映發出](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))

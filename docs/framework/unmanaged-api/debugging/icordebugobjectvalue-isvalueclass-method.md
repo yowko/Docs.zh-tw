@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 13d89a4a-5d9d-4a79-9600-5e2a98c3d166
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b08937182797c8e94048d734d65473fad21b85cc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0682c0786182422587adb976ff6bc2455b9e5cdc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766306"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128940"
 ---
 # <a name="icordebugobjectvalueisvalueclass-method"></a>ICorDebugObjectValue::IsValueClass 方法
-取得值，指出這個物件的值是否為實值型別。  
+取得值，指出這個物件值是否為實值型別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,15 +35,15 @@ HRESULT IsValueClass (
   
 ## <a name="parameters"></a>參數  
  `pbIsValueClass`  
- [out]為的布林值的指標`true`如果物件值，表示這個 「 ICorDebugObjectValue 」，是實值型別，而不是參考型別; 否則`pbIsValueClass`是`false`。  
+ 脫銷布林值的指標，如果物件值（由這個 "ICorDebugObjectValue" 表示）是實數值型別，而不是參考型別，則為 `true`。否則，會 `false``pbIsValueClass`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
