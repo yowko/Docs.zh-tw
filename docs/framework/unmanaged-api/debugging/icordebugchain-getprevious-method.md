@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 58eed4c8-d80c-4c6a-a875-967a90dd926c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31c795c2fbbfdc45b6e1aac6684f730f55fc106a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7598a9d93631ca93187886fd8929ba10726dad7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746413"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124728"
 ---
-# <a name="icordebugchaingetprevious-method"></a><span data-ttu-id="1ba35-102">ICorDebugChain::GetPrevious 方法</span><span class="sxs-lookup"><span data-stu-id="1ba35-102">ICorDebugChain::GetPrevious Method</span></span>
-<span data-ttu-id="1ba35-103">取得執行緒先前的框架鏈結。</span><span class="sxs-lookup"><span data-stu-id="1ba35-103">Gets the previous chain of frames for the thread.</span></span>  
+# <a name="icordebugchaingetprevious-method"></a><span data-ttu-id="68116-102">ICorDebugChain::GetPrevious 方法</span><span class="sxs-lookup"><span data-stu-id="68116-102">ICorDebugChain::GetPrevious Method</span></span>
+<span data-ttu-id="68116-103">取得執行緒的先前框架鏈。</span><span class="sxs-lookup"><span data-stu-id="68116-103">Gets the previous chain of frames for the thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1ba35-104">語法</span><span class="sxs-lookup"><span data-stu-id="1ba35-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="68116-104">語法</span><span class="sxs-lookup"><span data-stu-id="68116-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetPrevious (  
@@ -35,15 +33,15 @@ HRESULT GetPrevious (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1ba35-105">參數</span><span class="sxs-lookup"><span data-stu-id="1ba35-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="68116-105">參數</span><span class="sxs-lookup"><span data-stu-id="68116-105">Parameters</span></span>  
  `ppChain`  
- <span data-ttu-id="1ba35-106">[out]ICorDebugChain 物件，表示這個執行緒的畫面格的上一個鏈結的位址指標。</span><span class="sxs-lookup"><span data-stu-id="1ba35-106">[out] A pointer to the address of an ICorDebugChain object that represents the previous chain of frames for this thread.</span></span> <span data-ttu-id="1ba35-107">如果這個鏈結的第一個鏈結，`ppChain`為 null。</span><span class="sxs-lookup"><span data-stu-id="1ba35-107">If this chain is the first chain, `ppChain` is null.</span></span>  
+ <span data-ttu-id="68116-106">脫銷ICorDebugChain 物件位址的指標，表示此執行緒先前的框架鏈。</span><span class="sxs-lookup"><span data-stu-id="68116-106">[out] A pointer to the address of an ICorDebugChain object that represents the previous chain of frames for this thread.</span></span> <span data-ttu-id="68116-107">如果這個鏈是第一個鏈，`ppChain` 是 null。</span><span class="sxs-lookup"><span data-stu-id="68116-107">If this chain is the first chain, `ppChain` is null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1ba35-108">需求</span><span class="sxs-lookup"><span data-stu-id="1ba35-108">Requirements</span></span>  
- <span data-ttu-id="1ba35-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1ba35-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="68116-108">需求</span><span class="sxs-lookup"><span data-stu-id="68116-108">Requirements</span></span>  
+ <span data-ttu-id="68116-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="68116-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1ba35-110">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1ba35-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="68116-110">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="68116-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1ba35-111">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1ba35-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="68116-111">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="68116-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1ba35-112">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1ba35-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="68116-112">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="68116-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

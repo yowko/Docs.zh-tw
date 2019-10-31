@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: a3ccdf18-4ec6-494d-9024-48e5c8c724f5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce252f5a4b5fbcdbbc7b70c8b1c829490f8f63e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1ff36e8ef6b7c02eea5b02bc22587bc3889df093
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739523"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133697"
 ---
-# <a name="cordebugthreadstate-enumeration"></a><span data-ttu-id="263ad-102">CorDebugThreadState 列舉</span><span class="sxs-lookup"><span data-stu-id="263ad-102">CorDebugThreadState Enumeration</span></span>
-<span data-ttu-id="263ad-103">指定要偵錯的執行緒狀態。</span><span class="sxs-lookup"><span data-stu-id="263ad-103">Specifies the state of a thread for debugging.</span></span>  
+# <a name="cordebugthreadstate-enumeration"></a><span data-ttu-id="a326b-102">CorDebugThreadState 列舉</span><span class="sxs-lookup"><span data-stu-id="a326b-102">CorDebugThreadState Enumeration</span></span>
+<span data-ttu-id="a326b-103">指定要偵錯的執行緒狀態。</span><span class="sxs-lookup"><span data-stu-id="a326b-103">Specifies the state of a thread for debugging.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="263ad-104">語法</span><span class="sxs-lookup"><span data-stu-id="263ad-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a326b-104">語法</span><span class="sxs-lookup"><span data-stu-id="a326b-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorDebugThreadState {  
@@ -35,27 +33,27 @@ typedef enum CorDebugThreadState {
 } CorDebugThreadState;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="263ad-105">成員</span><span class="sxs-lookup"><span data-stu-id="263ad-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a326b-105">Members</span><span class="sxs-lookup"><span data-stu-id="a326b-105">Members</span></span>  
   
-|<span data-ttu-id="263ad-106">成員</span><span class="sxs-lookup"><span data-stu-id="263ad-106">Member</span></span>|<span data-ttu-id="263ad-107">說明</span><span class="sxs-lookup"><span data-stu-id="263ad-107">Description</span></span>|  
+|<span data-ttu-id="a326b-106">成員</span><span class="sxs-lookup"><span data-stu-id="a326b-106">Member</span></span>|<span data-ttu-id="a326b-107">描述</span><span class="sxs-lookup"><span data-stu-id="a326b-107">Description</span></span>|  
 |------------|-----------------|  
-|`THREAD_RUN`|<span data-ttu-id="263ad-108">除非偵錯事件，就會發生，則執行緒會執行免費。</span><span class="sxs-lookup"><span data-stu-id="263ad-108">The thread runs freely, unless a debug event occurs.</span></span>|  
-|`THREAD_SUSPEND`|<span data-ttu-id="263ad-109">無法執行執行緒。</span><span class="sxs-lookup"><span data-stu-id="263ad-109">The thread cannot run.</span></span>|  
+|`THREAD_RUN`|<span data-ttu-id="a326b-108">除非發生 debug 事件，否則執行緒會自由執行。</span><span class="sxs-lookup"><span data-stu-id="a326b-108">The thread runs freely, unless a debug event occurs.</span></span>|  
+|`THREAD_SUSPEND`|<span data-ttu-id="a326b-109">無法執行執行緒。</span><span class="sxs-lookup"><span data-stu-id="a326b-109">The thread cannot run.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="263ad-110">備註</span><span class="sxs-lookup"><span data-stu-id="263ad-110">Remarks</span></span>  
- <span data-ttu-id="263ad-111">偵錯工具會使用`CorDebugThreadState`列舉來控制執行緒的執行。</span><span class="sxs-lookup"><span data-stu-id="263ad-111">The debugger uses the `CorDebugThreadState` enumeration to control a thread's execution.</span></span> <span data-ttu-id="263ad-112">可以透過設定執行緒的狀態[icordebugthread:: Setdebugstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md)或是[icordebugcontroller:: Setallthreadsdebugstate](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="263ad-112">The state of a thread can be set by using the [ICorDebugThread::SetDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) or [ICorDebugController::SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a326b-110">備註</span><span class="sxs-lookup"><span data-stu-id="a326b-110">Remarks</span></span>  
+ <span data-ttu-id="a326b-111">偵錯工具會使用 `CorDebugThreadState` 列舉來控制執行緒的執行。</span><span class="sxs-lookup"><span data-stu-id="a326b-111">The debugger uses the `CorDebugThreadState` enumeration to control a thread's execution.</span></span> <span data-ttu-id="a326b-112">您可以使用[ICorDebugThread：： SetDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md)或[ICorDebugController：： SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md)方法來設定執行緒的狀態。</span><span class="sxs-lookup"><span data-stu-id="a326b-112">The state of a thread can be set by using the [ICorDebugThread::SetDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) or [ICorDebugController::SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) method.</span></span>  
   
- <span data-ttu-id="263ad-113">提供給回呼[裝載 API](../../../../docs/framework/unmanaged-api/hosting/index.md)啟用訊息幫浦，因此不需要中斷的狀態。</span><span class="sxs-lookup"><span data-stu-id="263ad-113">A callback provided to the [hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md) enables message pumping, so an interrupted state is not needed.</span></span>  
+ <span data-ttu-id="a326b-113">提供給[裝載 API](../../../../docs/framework/unmanaged-api/hosting/index.md)的回呼可啟用訊息提取，因此不需要中斷的狀態。</span><span class="sxs-lookup"><span data-stu-id="a326b-113">A callback provided to the [hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md) enables message pumping, so an interrupted state is not needed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="263ad-114">需求</span><span class="sxs-lookup"><span data-stu-id="263ad-114">Requirements</span></span>  
- <span data-ttu-id="263ad-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="263ad-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a326b-114">需求</span><span class="sxs-lookup"><span data-stu-id="a326b-114">Requirements</span></span>  
+ <span data-ttu-id="a326b-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a326b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="263ad-116">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="263ad-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a326b-116">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a326b-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="263ad-117">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="263ad-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a326b-117">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a326b-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="263ad-118">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="263ad-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a326b-118">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a326b-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="263ad-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="263ad-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a326b-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="a326b-119">See also</span></span>
 
-- [<span data-ttu-id="263ad-120">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="263ad-120">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="a326b-120">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="a326b-120">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

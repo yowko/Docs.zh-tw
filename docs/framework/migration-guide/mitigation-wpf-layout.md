@@ -1,43 +1,41 @@
 ---
-title: 風險降低：WPF 配置
+title: 風險降低：WPF 版面配置
 ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d266ad33110d2bda8f7911d89981c372624c3f36
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3e08a2d11e815248d0fe73f804e9ef7edb7c04da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779062"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126105"
 ---
-# <a name="mitigation-wpf-layout"></a><span data-ttu-id="16f47-102">風險降低：WPF 配置</span><span class="sxs-lookup"><span data-stu-id="16f47-102">Mitigation: WPF Layout</span></span>
-<span data-ttu-id="16f47-103">WPF 控制項的版面配置可能略有不同。</span><span class="sxs-lookup"><span data-stu-id="16f47-103">The layout of WPF controls can change slightly.</span></span>  
+# <a name="mitigation-wpf-layout"></a><span data-ttu-id="9fca0-102">風險降低：WPF 版面配置</span><span class="sxs-lookup"><span data-stu-id="9fca0-102">Mitigation: WPF Layout</span></span>
+<span data-ttu-id="9fca0-103">WPF 控制項的版面配置可能略有不同。</span><span class="sxs-lookup"><span data-stu-id="9fca0-103">The layout of WPF controls can change slightly.</span></span>  
   
-## <a name="impact"></a><span data-ttu-id="16f47-104">影響</span><span class="sxs-lookup"><span data-stu-id="16f47-104">Impact</span></span>  
- <span data-ttu-id="16f47-105">此變更的結果：</span><span class="sxs-lookup"><span data-stu-id="16f47-105">As a result of this change:</span></span>  
+## <a name="impact"></a><span data-ttu-id="9fca0-104">影響</span><span class="sxs-lookup"><span data-stu-id="9fca0-104">Impact</span></span>  
+ <span data-ttu-id="9fca0-105">此變更的結果：</span><span class="sxs-lookup"><span data-stu-id="9fca0-105">As a result of this change:</span></span>  
   
-- <span data-ttu-id="16f47-106">項目寬度或高度的增減最多不超過一個像素。</span><span class="sxs-lookup"><span data-stu-id="16f47-106">The width or height of elements may grow or shrink by at most one pixel.</span></span>  
+- <span data-ttu-id="9fca0-106">項目寬度或高度的增減最多不超過一個像素。</span><span class="sxs-lookup"><span data-stu-id="9fca0-106">The width or height of elements may grow or shrink by at most one pixel.</span></span>  
   
-- <span data-ttu-id="16f47-107">物件的位置的位最多不超過一個像素。</span><span class="sxs-lookup"><span data-stu-id="16f47-107">The placement of an object can move by at most one pixel.</span></span>  
+- <span data-ttu-id="9fca0-107">物件的位置的位最多不超過一個像素。</span><span class="sxs-lookup"><span data-stu-id="9fca0-107">The placement of an object can move by at most one pixel.</span></span>  
   
-- <span data-ttu-id="16f47-108">置中項目的垂直或水平位移最多不超過一個像素。</span><span class="sxs-lookup"><span data-stu-id="16f47-108">Centered elements can be vertically or horizontally off center by at most one pixel.</span></span>  
+- <span data-ttu-id="9fca0-108">置中項目的垂直或水平位移最多不超過一個像素。</span><span class="sxs-lookup"><span data-stu-id="9fca0-108">Centered elements can be vertically or horizontally off center by at most one pixel.</span></span>  
   
- <span data-ttu-id="16f47-109">預設只有以 .NET Framework 4.6 為目標的應用程式才會啟用此新版面配置。</span><span class="sxs-lookup"><span data-stu-id="16f47-109">By default, this new layout is enabled only for apps that target the .NET Framework 4.6.</span></span>  
+ <span data-ttu-id="9fca0-109">預設只有以 .NET Framework 4.6 為目標的應用程式才會啟用此新版面配置。</span><span class="sxs-lookup"><span data-stu-id="9fca0-109">By default, this new layout is enabled only for apps that target the .NET Framework 4.6.</span></span>  
   
-## <a name="mitigation"></a><span data-ttu-id="16f47-110">緩和</span><span class="sxs-lookup"><span data-stu-id="16f47-110">Mitigation</span></span>  
- <span data-ttu-id="16f47-111">由於此修改會停用高 DPI 之 WPF 控制項右側或底端的裁剪功能，因此，應用程式若是以舊版 .NET Framework 為目標，但要在 .NET Framework 4.6 上執行，可將下行加入 app.config 檔案中的 `<runtime>` 區段來選擇使用此新行為：</span><span class="sxs-lookup"><span data-stu-id="16f47-111">Since this modification tends to eliminate clipping of the right or bottom of WPF controls at high DPIs, apps that target earlier versions of the .NET Framework but are running on the .NET Framework 4.6 can opt into this new behavior by adding the following line to the `<runtime>` section of the app.config file:</span></span>  
+## <a name="mitigation"></a><span data-ttu-id="9fca0-110">風險降低</span><span class="sxs-lookup"><span data-stu-id="9fca0-110">Mitigation</span></span>  
+ <span data-ttu-id="9fca0-111">由於此修改會停用高 DPI 之 WPF 控制項右側或底端的裁剪功能，因此，應用程式若是以舊版 .NET Framework 為目標，但要在 .NET Framework 4.6 上執行，可將下行加入 app.config 檔案中的 `<runtime>` 區段來選擇使用此新行為：</span><span class="sxs-lookup"><span data-stu-id="9fca0-111">Since this modification tends to eliminate clipping of the right or bottom of WPF controls at high DPIs, apps that target earlier versions of the .NET Framework but are running on the .NET Framework 4.6 can opt into this new behavior by adding the following line to the `<runtime>` section of the app.config file:</span></span>  
   
 ```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=false" />  
 ```  
   
- <span data-ttu-id="16f47-112">應用程式若是以 .NET Framework 4.6 為目標，但想使用先前的配置演算法來呈現 WPF 控制項，可將下行加入 app.config 檔案中的 `<runtime>` 區段，以執行此作業：</span><span class="sxs-lookup"><span data-stu-id="16f47-112">Apps that target the .NET Framework 4.6 but want WPF controls to render using the previous layout algorithm can do so by adding the following line to the  `<runtime>` section of the app.config file:</span></span>  
+ <span data-ttu-id="9fca0-112">應用程式若是以 .NET Framework 4.6 為目標，但想使用先前的配置演算法來呈現 WPF 控制項，可將下行加入 app.config 檔案中的 `<runtime>` 區段，以執行此作業：</span><span class="sxs-lookup"><span data-stu-id="9fca0-112">Apps that target the .NET Framework 4.6 but want WPF controls to render using the previous layout algorithm can do so by adding the following line to the  `<runtime>` section of the app.config file:</span></span>  
   
 ```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=true" />  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="16f47-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="16f47-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9fca0-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="9fca0-113">See also</span></span>
 
-- [<span data-ttu-id="16f47-114">重定目標變更</span><span class="sxs-lookup"><span data-stu-id="16f47-114">Retargeting Changes</span></span>](retargeting-changes-in-the-net-framework-4-6.md)
+- [<span data-ttu-id="9fca0-114">重定目標變更</span><span class="sxs-lookup"><span data-stu-id="9fca0-114">Retargeting Changes</span></span>](retargeting-changes-in-the-net-framework-4-6.md)

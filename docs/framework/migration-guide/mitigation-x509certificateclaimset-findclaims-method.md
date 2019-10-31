@@ -2,25 +2,23 @@
 title: 風險降低：X509CertificateClaimSet.FindClaims 方法
 ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ffc03e6c88a2aabb967587d8b1ee7d0b784b4e7d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5591ecebeb924f84cc0efdaf78f40f9d835d2d02
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70778943"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126090"
 ---
-# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a><span data-ttu-id="3b0ea-102">風險降低：X509CertificateClaimSet.FindClaims 方法</span><span class="sxs-lookup"><span data-stu-id="3b0ea-102">Mitigation: X509CertificateClaimSet.FindClaims Method</span></span>
-<span data-ttu-id="3b0ea-103">從以 .NET Framework 4.6.1 為目標的應用程式開始，<xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> 方法會嘗試使 `claimType` 引數符合其 SAN 欄位中的所有 DNS 項目。</span><span class="sxs-lookup"><span data-stu-id="3b0ea-103">Starting with apps that target the .NET Framework 4.6.1,  the <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> method will attempt to match the `claimType` argument with all the DNS entries in its SAN field.</span></span>  
+# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a><span data-ttu-id="faaa3-102">風險降低：X509CertificateClaimSet.FindClaims 方法</span><span class="sxs-lookup"><span data-stu-id="faaa3-102">Mitigation: X509CertificateClaimSet.FindClaims Method</span></span>
+<span data-ttu-id="faaa3-103">從以 .NET Framework 4.6.1 為目標的應用程式開始，<xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> 方法會嘗試使 `claimType` 引數符合其 SAN 欄位中的所有 DNS 項目。</span><span class="sxs-lookup"><span data-stu-id="faaa3-103">Starting with apps that target the .NET Framework 4.6.1,  the <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> method will attempt to match the `claimType` argument with all the DNS entries in its SAN field.</span></span>  
   
-## <a name="impact"></a><span data-ttu-id="3b0ea-104">影響</span><span class="sxs-lookup"><span data-stu-id="3b0ea-104">Impact</span></span>  
- <span data-ttu-id="3b0ea-105">這項變更只會影響以 .NET Framework 4.6.1 和更新版本為目標的應用程式。</span><span class="sxs-lookup"><span data-stu-id="3b0ea-105">This change only affects apps that target versions of the .NET Framework starting with the .NET Framework 4.6.1.</span></span>  
+## <a name="impact"></a><span data-ttu-id="faaa3-104">影響</span><span class="sxs-lookup"><span data-stu-id="faaa3-104">Impact</span></span>  
+ <span data-ttu-id="faaa3-105">這項變更只會影響以 .NET Framework 4.6.1 和更新版本為目標的應用程式。</span><span class="sxs-lookup"><span data-stu-id="faaa3-105">This change only affects apps that target versions of the .NET Framework starting with the .NET Framework 4.6.1.</span></span>  
   
- <span data-ttu-id="3b0ea-106">若是以舊版 .NET Framework 為目標的應用程式，則 <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> 方法僅會嘗試使 `claimType` 引數符合最後一個 DNS 項目。</span><span class="sxs-lookup"><span data-stu-id="3b0ea-106">For apps that target previous versions of the .NET Framework, the <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> method attempts to match the `claimType` argument only with the last  DNS entry.</span></span>  
+ <span data-ttu-id="faaa3-106">若是以舊版 .NET Framework 為目標的應用程式，則 <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> 方法僅會嘗試使 `claimType` 引數符合最後一個 DNS 項目。</span><span class="sxs-lookup"><span data-stu-id="faaa3-106">For apps that target previous versions of the .NET Framework, the <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> method attempts to match the `claimType` argument only with the last  DNS entry.</span></span>  
   
-## <a name="mitigation"></a><span data-ttu-id="3b0ea-107">緩和</span><span class="sxs-lookup"><span data-stu-id="3b0ea-107">Mitigation</span></span>  
- <span data-ttu-id="3b0ea-108">如果這不是您要的變更，以 .NET Framework 4.6.1 和更新版本為目標的應用程式，可以藉由將下列組態設定新增至應用程式組態檔的[\<執行階段>](../configure-apps/file-schema/runtime/runtime-element.md) 區段，來選擇退出這項行為：</span><span class="sxs-lookup"><span data-stu-id="3b0ea-108">If this change is undesirable, apps that target versions of the .NET Framework starting with the .NET Framework 4.6.1 can opt out of it by adding the following configuration setting to the [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) section of the app’s configuration file:</span></span>  
+## <a name="mitigation"></a><span data-ttu-id="faaa3-107">風險降低</span><span class="sxs-lookup"><span data-stu-id="faaa3-107">Mitigation</span></span>  
+ <span data-ttu-id="faaa3-108">如果這不是您要的變更，以 .NET Framework 4.6.1 和更新版本為目標的應用程式，可以藉由將下列組態設定新增至應用程式組態檔的[\<執行階段>](../configure-apps/file-schema/runtime/runtime-element.md) 區段，來選擇退出這項行為：</span><span class="sxs-lookup"><span data-stu-id="faaa3-108">If this change is undesirable, apps that target versions of the .NET Framework starting with the .NET Framework 4.6.1 can opt out of it by adding the following configuration setting to the [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) section of the app’s configuration file:</span></span>  
   
 ```xml  
 <runtime>  
@@ -28,7 +26,7 @@ ms.locfileid: "70778943"
 </runtime>  
 ```  
   
- <span data-ttu-id="3b0ea-109">此外，以舊版 .NET Framework 為目標，但在 .NET Framework 4.6.1 和更新版本下執行的應用程式，可以藉由將下列組態設定新增至應用程式組態檔的[\<執行階段>](../configure-apps/file-schema/runtime/runtime-element.md) 區段，來選擇加入這項行為：</span><span class="sxs-lookup"><span data-stu-id="3b0ea-109">In addition, apps that target previous versions of the .NET Framework but are running under the .NET Framework 4.6.1 and later versions can opt in to this behavior by adding the following configuration setting to the [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) section of the app’s configuration file:</span></span>  
+ <span data-ttu-id="faaa3-109">此外，以舊版 .NET Framework 為目標，但在 .NET Framework 4.6.1 和更新版本下執行的應用程式，可以藉由將下列組態設定新增至應用程式組態檔的[\<執行階段>](../configure-apps/file-schema/runtime/runtime-element.md) 區段，來選擇加入這項行為：</span><span class="sxs-lookup"><span data-stu-id="faaa3-109">In addition, apps that target previous versions of the .NET Framework but are running under the .NET Framework 4.6.1 and later versions can opt in to this behavior by adding the following configuration setting to the [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) section of the app’s configuration file:</span></span>  
   
 ```xml  
 <runtime>  
@@ -36,6 +34,6 @@ ms.locfileid: "70778943"
 </runtime>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3b0ea-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3b0ea-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="faaa3-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="faaa3-110">See also</span></span>
 
-- [<span data-ttu-id="3b0ea-111">重定目標變更</span><span class="sxs-lookup"><span data-stu-id="3b0ea-111">Retargeting Changes</span></span>](retargeting-changes-in-the-net-framework-4-6-1.md)
+- [<span data-ttu-id="faaa3-111">重定目標變更</span><span class="sxs-lookup"><span data-stu-id="faaa3-111">Retargeting Changes</span></span>](retargeting-changes-in-the-net-framework-4-6-1.md)

@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: a5ff40b0-d04e-40d5-a007-cc6ee7c3a9ae
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 88f3c270d2ab0adc0b683fda0e0f4bc1d474fb09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de292b4631e1bcf9f0d31e2e2acaa5fdff96f4f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765442"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124225"
 ---
-# <a name="icordebugerrorinfoenum-interface"></a><span data-ttu-id="ec95c-102">ICorDebugErrorInfoEnum 介面</span><span class="sxs-lookup"><span data-stu-id="ec95c-102">ICorDebugErrorInfoEnum Interface</span></span>
+# <a name="icordebugerrorinfoenum-interface"></a><span data-ttu-id="551a8-102">ICorDebugErrorInfoEnum 介面</span><span class="sxs-lookup"><span data-stu-id="551a8-102">ICorDebugErrorInfoEnum Interface</span></span>
 
-<span data-ttu-id="ec95c-103">`ICorDebugErrorInfoEnum` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="ec95c-103">`ICorDebugErrorInfoEnum` is obsolete.</span></span> <span data-ttu-id="ec95c-104">請勿使用這個介面。</span><span class="sxs-lookup"><span data-stu-id="ec95c-104">Do not use this interface.</span></span>  
+<span data-ttu-id="551a8-103">`ICorDebugErrorInfoEnum` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="551a8-103">`ICorDebugErrorInfoEnum` is obsolete.</span></span> <span data-ttu-id="551a8-104">請勿使用這個介面。</span><span class="sxs-lookup"><span data-stu-id="551a8-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec95c-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ec95c-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="551a8-105">請參閱</span><span class="sxs-lookup"><span data-stu-id="551a8-105">See also</span></span>
 
-- [<span data-ttu-id="ec95c-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="ec95c-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="551a8-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="551a8-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

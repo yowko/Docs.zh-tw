@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 10093e3d-26b6-4ad7-8ef3-bbf66243fc02
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a1c0f7deb2ef24893530797b4507e2dcc540ad2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: adcfbf1207ad7895ab55f7e5cf9581905cb826bf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757044"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096100"
 ---
-# <a name="icordebugobjectenumnext-method"></a><span data-ttu-id="c7f7d-102">ICorDebugObjectEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="c7f7d-102">ICorDebugObjectEnum::Next Method</span></span>
-<span data-ttu-id="c7f7d-103">取得列舉型別，從目前位置開始的指定數目物件的相對虛擬位址 (Rva)。</span><span class="sxs-lookup"><span data-stu-id="c7f7d-103">Gets the relative virtual addresses (RVAs) of the specified number of objects from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugobjectenumnext-method"></a><span data-ttu-id="f4dfa-102">ICorDebugObjectEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="f4dfa-102">ICorDebugObjectEnum::Next Method</span></span>
+<span data-ttu-id="f4dfa-103">從目前位置開始，取得列舉中指定物件數目的相對虛擬位址（Rva）。</span><span class="sxs-lookup"><span data-stu-id="f4dfa-103">Gets the relative virtual addresses (RVAs) of the specified number of objects from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c7f7d-104">語法</span><span class="sxs-lookup"><span data-stu-id="c7f7d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f4dfa-104">語法</span><span class="sxs-lookup"><span data-stu-id="f4dfa-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next (  
@@ -38,23 +36,23 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c7f7d-105">參數</span><span class="sxs-lookup"><span data-stu-id="c7f7d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f4dfa-105">參數</span><span class="sxs-lookup"><span data-stu-id="f4dfa-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="c7f7d-106">[in] 要擷取的物件數目。</span><span class="sxs-lookup"><span data-stu-id="c7f7d-106">[in] The number of objects to be retrieved.</span></span>  
+ <span data-ttu-id="f4dfa-106">[in] 要擷取的物件數目。</span><span class="sxs-lookup"><span data-stu-id="f4dfa-106">[in] The number of objects to be retrieved.</span></span>  
   
  `objects`  
- <span data-ttu-id="c7f7d-107">[out]指標的陣列，其中每一個指向 CORDB_ADDRESS 物件。</span><span class="sxs-lookup"><span data-stu-id="c7f7d-107">[out] An array of pointers, each of which points to a CORDB_ADDRESS object.</span></span>  
+ <span data-ttu-id="f4dfa-107">脫銷指標陣列，其中每一個都會指向 CORDB_ADDRESS 物件。</span><span class="sxs-lookup"><span data-stu-id="f4dfa-107">[out] An array of pointers, each of which points to a CORDB_ADDRESS object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="c7f7d-108">[out]實際傳回的物件數目的指標。</span><span class="sxs-lookup"><span data-stu-id="c7f7d-108">[out] Pointer to the number of objects actually returned.</span></span> <span data-ttu-id="c7f7d-109">此值可能為 null 如果`celt`是其中一個。</span><span class="sxs-lookup"><span data-stu-id="c7f7d-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="f4dfa-108">脫銷實際傳回之物件數目的指標。</span><span class="sxs-lookup"><span data-stu-id="f4dfa-108">[out] Pointer to the number of objects actually returned.</span></span> <span data-ttu-id="f4dfa-109">如果 `celt` 是一個，這個值可能會是 null。</span><span class="sxs-lookup"><span data-stu-id="f4dfa-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c7f7d-110">需求</span><span class="sxs-lookup"><span data-stu-id="c7f7d-110">Requirements</span></span>  
- <span data-ttu-id="c7f7d-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c7f7d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f4dfa-110">需求</span><span class="sxs-lookup"><span data-stu-id="f4dfa-110">Requirements</span></span>  
+ <span data-ttu-id="f4dfa-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f4dfa-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c7f7d-112">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c7f7d-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f4dfa-112">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f4dfa-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c7f7d-113">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c7f7d-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f4dfa-113">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f4dfa-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c7f7d-114">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c7f7d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f4dfa-114">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f4dfa-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c7f7d-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c7f7d-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f4dfa-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="f4dfa-115">See also</span></span>

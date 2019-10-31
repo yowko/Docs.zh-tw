@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 542cdd81-5ae7-4361-b0ef-1ae4775df258
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cd2add7e96a8edaff8509563ae1846e80132001
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: faa2082d31c5fa47b87e2238017066b477fdc191
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740095"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132179"
 ---
-# <a name="cordebugexceptionobjectstackframe-structure"></a><span data-ttu-id="aaf6d-102">CorDebugExceptionObjectStackFrame 結構</span><span class="sxs-lookup"><span data-stu-id="aaf6d-102">CorDebugExceptionObjectStackFrame Structure</span></span>
-<span data-ttu-id="aaf6d-103">代表例外狀況物件所產生的堆疊框架資訊。</span><span class="sxs-lookup"><span data-stu-id="aaf6d-103">Represents stack frame information from an exception object.</span></span>  
+# <a name="cordebugexceptionobjectstackframe-structure"></a><span data-ttu-id="afeb4-102">CorDebugExceptionObjectStackFrame 結構</span><span class="sxs-lookup"><span data-stu-id="afeb4-102">CorDebugExceptionObjectStackFrame Structure</span></span>
+<span data-ttu-id="afeb4-103">代表例外狀況物件所產生的堆疊框架資訊。</span><span class="sxs-lookup"><span data-stu-id="afeb4-103">Represents stack frame information from an exception object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aaf6d-104">語法</span><span class="sxs-lookup"><span data-stu-id="aaf6d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="afeb4-104">語法</span><span class="sxs-lookup"><span data-stu-id="afeb4-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct CorDebugExceptionObjectStackFrame {  
@@ -37,28 +35,28 @@ typedef struct CorDebugExceptionObjectStackFrame {
 } CorDebugExceptionObjectStackFrame;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="aaf6d-105">成員</span><span class="sxs-lookup"><span data-stu-id="aaf6d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="afeb4-105">Members</span><span class="sxs-lookup"><span data-stu-id="afeb4-105">Members</span></span>  
   
-|<span data-ttu-id="aaf6d-106">成員</span><span class="sxs-lookup"><span data-stu-id="aaf6d-106">Member</span></span>|<span data-ttu-id="aaf6d-107">描述</span><span class="sxs-lookup"><span data-stu-id="aaf6d-107">Description</span></span>|  
+|<span data-ttu-id="afeb4-106">成員</span><span class="sxs-lookup"><span data-stu-id="afeb4-106">Member</span></span>|<span data-ttu-id="afeb4-107">描述</span><span class="sxs-lookup"><span data-stu-id="afeb4-107">Description</span></span>|  
 |------------|-----------------|  
-|`pModule`|<span data-ttu-id="aaf6d-108">ICorDebugModule 物件目前畫面格指標。</span><span class="sxs-lookup"><span data-stu-id="aaf6d-108">A pointer to the ICorDebugModule object for the current frame.</span></span>|  
-|`ip`|<span data-ttu-id="aaf6d-109">指令指標 (EIP/RIP) 目前畫面格的值。</span><span class="sxs-lookup"><span data-stu-id="aaf6d-109">The value of the instruction pointer (EIP/RIP) for the current frame.</span></span>|  
-|`methodDef`|<span data-ttu-id="aaf6d-110">目前的框架方法語彙基元。</span><span class="sxs-lookup"><span data-stu-id="aaf6d-110">The method token for the current frame.</span></span>|  
-|`isLastForeignExceptionFrame`|<span data-ttu-id="aaf6d-111">值，指出框架是否為外部例外狀況的最後一個框架。</span><span class="sxs-lookup"><span data-stu-id="aaf6d-111">A value that indicates whether the frame is the last frame in a foreign exception.</span></span>|  
+|`pModule`|<span data-ttu-id="afeb4-108">目前框架的 ICorDebugModule 物件指標。</span><span class="sxs-lookup"><span data-stu-id="afeb4-108">A pointer to the ICorDebugModule object for the current frame.</span></span>|  
+|`ip`|<span data-ttu-id="afeb4-109">目前框架的指令指標（EIP/RIP）的值。</span><span class="sxs-lookup"><span data-stu-id="afeb4-109">The value of the instruction pointer (EIP/RIP) for the current frame.</span></span>|  
+|`methodDef`|<span data-ttu-id="afeb4-110">目前框架的方法 token。</span><span class="sxs-lookup"><span data-stu-id="afeb4-110">The method token for the current frame.</span></span>|  
+|`isLastForeignExceptionFrame`|<span data-ttu-id="afeb4-111">值，指出框架是否為外部例外狀況中的最後一個框架。</span><span class="sxs-lookup"><span data-stu-id="afeb4-111">A value that indicates whether the frame is the last frame in a foreign exception.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="aaf6d-112">備註</span><span class="sxs-lookup"><span data-stu-id="aaf6d-112">Remarks</span></span>  
- <span data-ttu-id="aaf6d-113">呼叫端必須釋放 ICorDebugModule 物件的指標之後就無法再使用中。</span><span class="sxs-lookup"><span data-stu-id="aaf6d-113">The caller must release the pointer to the ICorDebugModule object once it is no longer in use.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="afeb4-112">備註</span><span class="sxs-lookup"><span data-stu-id="afeb4-112">Remarks</span></span>  
+ <span data-ttu-id="afeb4-113">呼叫端不再使用時，必須釋放 ICorDebugModule 物件的指標。</span><span class="sxs-lookup"><span data-stu-id="afeb4-113">The caller must release the pointer to the ICorDebugModule object once it is no longer in use.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aaf6d-114">需求</span><span class="sxs-lookup"><span data-stu-id="aaf6d-114">Requirements</span></span>  
- <span data-ttu-id="aaf6d-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="aaf6d-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="afeb4-114">需求</span><span class="sxs-lookup"><span data-stu-id="afeb4-114">Requirements</span></span>  
+ <span data-ttu-id="afeb4-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="afeb4-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aaf6d-116">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="aaf6d-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="afeb4-116">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="afeb4-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="aaf6d-117">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aaf6d-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="afeb4-117">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="afeb4-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="aaf6d-118">**.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aaf6d-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="afeb4-118">**.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="afeb4-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aaf6d-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aaf6d-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="afeb4-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="afeb4-119">See also</span></span>
 
-- [<span data-ttu-id="aaf6d-120">偵錯結構</span><span class="sxs-lookup"><span data-stu-id="aaf6d-120">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="aaf6d-121">偵錯</span><span class="sxs-lookup"><span data-stu-id="aaf6d-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="afeb4-120">偵錯結構</span><span class="sxs-lookup"><span data-stu-id="afeb4-120">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="afeb4-121">偵錯</span><span class="sxs-lookup"><span data-stu-id="afeb4-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

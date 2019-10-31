@@ -1,20 +1,18 @@
 ---
-title: ICorDebugMergedAssemblyRecord::GetVersion 方法
+title: ICorDebugMergedAssemblyRecord：： GetVersion 方法
 ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7d9133ab1b7d3985d3a383bb36dcbea315548c00
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0c89d0749281da412bbf71400d51bee1ed651fbe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939933"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129775"
 ---
-# <a name="icordebugmergedassemblyrecordgetversion-method"></a><span data-ttu-id="92791-102">ICorDebugMergedAssemblyRecord::GetVersion 方法</span><span class="sxs-lookup"><span data-stu-id="92791-102">ICorDebugMergedAssemblyRecord::GetVersion Method</span></span>
-<span data-ttu-id="92791-103">取得組件的版本資訊。</span><span class="sxs-lookup"><span data-stu-id="92791-103">Gets the assembly's version information.</span></span>  
+# <a name="icordebugmergedassemblyrecordgetversion-method"></a><span data-ttu-id="94970-102">ICorDebugMergedAssemblyRecord：： GetVersion 方法</span><span class="sxs-lookup"><span data-stu-id="94970-102">ICorDebugMergedAssemblyRecord::GetVersion Method</span></span>
+<span data-ttu-id="94970-103">取得組件的版本資訊。</span><span class="sxs-lookup"><span data-stu-id="94970-103">Gets the assembly's version information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="92791-104">語法</span><span class="sxs-lookup"><span data-stu-id="92791-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94970-104">語法</span><span class="sxs-lookup"><span data-stu-id="94970-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetVersion(  
@@ -25,35 +23,35 @@ HRESULT GetVersion(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="92791-105">參數</span><span class="sxs-lookup"><span data-stu-id="92791-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="94970-105">參數</span><span class="sxs-lookup"><span data-stu-id="94970-105">Parameters</span></span>  
  `pMajor`  
- <span data-ttu-id="92791-106">[out] 主要版本號碼的指標。</span><span class="sxs-lookup"><span data-stu-id="92791-106">[out] A pointer to the major version number.</span></span>  
+ <span data-ttu-id="94970-106">[out] 主要版本號碼的指標。</span><span class="sxs-lookup"><span data-stu-id="94970-106">[out] A pointer to the major version number.</span></span>  
   
  `pMinor`  
- <span data-ttu-id="92791-107">[out] 次要版本號碼的指標。</span><span class="sxs-lookup"><span data-stu-id="92791-107">[out] A pointer to the minor version number.</span></span>  
+ <span data-ttu-id="94970-107">[out] 次要版本號碼的指標。</span><span class="sxs-lookup"><span data-stu-id="94970-107">[out] A pointer to the minor version number.</span></span>  
   
  `pBuild`  
- <span data-ttu-id="92791-108">[out] 組建編號的指標。</span><span class="sxs-lookup"><span data-stu-id="92791-108">[out] A pointer to the build number.</span></span>  
+ <span data-ttu-id="94970-108">[out] 組建編號的指標。</span><span class="sxs-lookup"><span data-stu-id="94970-108">[out] A pointer to the build number.</span></span>  
   
  `pRevision`  
- <span data-ttu-id="92791-109">[out] 修訂編號的指標。</span><span class="sxs-lookup"><span data-stu-id="92791-109">[out] A pointer to the revision number.</span></span>  
+ <span data-ttu-id="94970-109">[out] 修訂編號的指標。</span><span class="sxs-lookup"><span data-stu-id="94970-109">[out] A pointer to the revision number.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="92791-110">備註</span><span class="sxs-lookup"><span data-stu-id="92791-110">Remarks</span></span>  
- <span data-ttu-id="92791-111">如需組件版本號碼的相關資訊，請參閱 <xref:System.Version> 類別主題。</span><span class="sxs-lookup"><span data-stu-id="92791-111">For information on assembly version numbers, see the <xref:System.Version> class topic.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="94970-110">備註</span><span class="sxs-lookup"><span data-stu-id="94970-110">Remarks</span></span>  
+ <span data-ttu-id="94970-111">如需組件版本號碼的相關資訊，請參閱 <xref:System.Version> 類別主題。</span><span class="sxs-lookup"><span data-stu-id="94970-111">For information on assembly version numbers, see the <xref:System.Version> class topic.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="92791-112">這個方法僅適用於 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="92791-112">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="94970-112">這個方法僅適用於 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="94970-112">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="92791-113">需求</span><span class="sxs-lookup"><span data-stu-id="92791-113">Requirements</span></span>  
- <span data-ttu-id="92791-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="92791-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="94970-113">需求</span><span class="sxs-lookup"><span data-stu-id="94970-113">Requirements</span></span>  
+ <span data-ttu-id="94970-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="94970-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="92791-115">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="92791-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="94970-115">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="94970-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="92791-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="92791-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="94970-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="94970-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="92791-117">**.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="92791-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="94970-117">**.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="94970-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="92791-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="92791-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="94970-118">請參閱</span><span class="sxs-lookup"><span data-stu-id="94970-118">See also</span></span>
 
-- [<span data-ttu-id="92791-119">ICorDebugMergedAssemblyRecord 介面</span><span class="sxs-lookup"><span data-stu-id="92791-119">ICorDebugMergedAssemblyRecord Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [<span data-ttu-id="92791-120">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="92791-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="94970-119">ICorDebugMergedAssemblyRecord 介面</span><span class="sxs-lookup"><span data-stu-id="94970-119">ICorDebugMergedAssemblyRecord Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
+- [<span data-ttu-id="94970-120">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="94970-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

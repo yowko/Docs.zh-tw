@@ -16,19 +16,17 @@ helpviewer_keywords:
 ms.assetid: 5e3c3958-80bb-43b1-a96b-dd3e6dbd9cd7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a05a779d4a56eb8f881da1824d5ffaa363b5a01
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 1d42292705dae03e9bf1a1555508dfb69cebde82
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274286"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132428"
 ---
-# <a name="closeclrenumeration-function"></a><span data-ttu-id="73943-102">CloseCLREnumeration 函式</span><span class="sxs-lookup"><span data-stu-id="73943-102">CloseCLREnumeration Function</span></span>
-<span data-ttu-id="73943-103">關閉位於[EnumerateCLRs](enumerateclrs-function.md)函式所傳回之控制碼陣列中的任何有效 common language RUNTIME （CLR）繼續-啟動事件，並釋放控制碼和字串路徑陣列的記憶體。</span><span class="sxs-lookup"><span data-stu-id="73943-103">Closes any valid common language runtime (CLR) continue-startup events located in an array of handles returned by the [EnumerateCLRs function](enumerateclrs-function.md), and frees the memory for the handle and string path arrays.</span></span>  
+# <a name="closeclrenumeration-function"></a><span data-ttu-id="2d56d-102">CloseCLREnumeration 函式</span><span class="sxs-lookup"><span data-stu-id="2d56d-102">CloseCLREnumeration Function</span></span>
+<span data-ttu-id="2d56d-103">關閉位於[EnumerateCLRs](enumerateclrs-function.md)函式所傳回之控制碼陣列中的任何有效 common language RUNTIME （CLR）繼續-啟動事件，並釋放控制碼和字串路徑陣列的記憶體。</span><span class="sxs-lookup"><span data-stu-id="2d56d-103">Closes any valid common language runtime (CLR) continue-startup events located in an array of handles returned by the [EnumerateCLRs function](enumerateclrs-function.md), and frees the memory for the handle and string path arrays.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="73943-104">語法</span><span class="sxs-lookup"><span data-stu-id="73943-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2d56d-104">語法</span><span class="sxs-lookup"><span data-stu-id="2d56d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CloseCLREnumeration (  
@@ -38,31 +36,31 @@ HRESULT CloseCLREnumeration (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="73943-105">參數</span><span class="sxs-lookup"><span data-stu-id="73943-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2d56d-105">參數</span><span class="sxs-lookup"><span data-stu-id="2d56d-105">Parameters</span></span>  
  `pHandleArray`  
- <span data-ttu-id="73943-106">在從[EnumerateCLRs 函數](enumerateclrs-function.md)傳回之事件控制碼陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="73943-106">[in] Pointer to the array of event handles returned from the [EnumerateCLRs function](enumerateclrs-function.md).</span></span>  
+ <span data-ttu-id="2d56d-106">在從[EnumerateCLRs 函數](enumerateclrs-function.md)傳回之事件控制碼陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="2d56d-106">[in] Pointer to the array of event handles returned from the [EnumerateCLRs function](enumerateclrs-function.md).</span></span>  
   
  `pStringArray`  
- <span data-ttu-id="73943-107">在從[EnumerateCLRs 函數](enumerateclrs-function.md)傳回之 CLR 字串路徑陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="73943-107">[in] Pointer to the array of CLR string paths returned from the [EnumerateCLRs function](enumerateclrs-function.md).</span></span>  
+ <span data-ttu-id="2d56d-107">在從[EnumerateCLRs 函數](enumerateclrs-function.md)傳回之 CLR 字串路徑陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="2d56d-107">[in] Pointer to the array of CLR string paths returned from the [EnumerateCLRs function](enumerateclrs-function.md).</span></span>  
   
  `dwArrayLength`  
- <span data-ttu-id="73943-108">[in] 包含 `pHandleArray` 或 `pStringArray` 之大小 (長度) (兩者相同) 的 DWORD。</span><span class="sxs-lookup"><span data-stu-id="73943-108">[in] DWORD that contains the size (length) of either `pHandleArray` or `pStringArray` (they are the same).</span></span>  
+ <span data-ttu-id="2d56d-108">[in] 包含 `pHandleArray` 或 `pStringArray` 之大小 (長度) (兩者相同) 的 DWORD。</span><span class="sxs-lookup"><span data-stu-id="2d56d-108">[in] DWORD that contains the size (length) of either `pHandleArray` or `pStringArray` (they are the same).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="73943-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="73943-109">Return Value</span></span>  
- <span data-ttu-id="73943-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="73943-110">S_OK</span></span>  
- <span data-ttu-id="73943-111">[EnumerateCLRs](enumerateclrs-function.md)函式所開啟的控制碼已關閉，而且配置給控制碼和字串陣列的記憶體會被釋放。</span><span class="sxs-lookup"><span data-stu-id="73943-111">Handles opened by the [EnumerateCLRs function](enumerateclrs-function.md) are closed, and memory allocated for the handle and string arrays is freed.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2d56d-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="2d56d-109">Return Value</span></span>  
+ <span data-ttu-id="2d56d-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="2d56d-110">S_OK</span></span>  
+ <span data-ttu-id="2d56d-111">[EnumerateCLRs](enumerateclrs-function.md)函式所開啟的控制碼已關閉，而且配置給控制碼和字串陣列的記憶體會被釋放。</span><span class="sxs-lookup"><span data-stu-id="2d56d-111">Handles opened by the [EnumerateCLRs function](enumerateclrs-function.md) are closed, and memory allocated for the handle and string arrays is freed.</span></span>  
   
- <span data-ttu-id="73943-112">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="73943-112">E_INVALIDARG</span></span>  
- <span data-ttu-id="73943-113">`pHandleArray` 的長度不符合以 `dwArrayLength` 傳遞的長度。</span><span class="sxs-lookup"><span data-stu-id="73943-113">The length of `pHandleArray` does not match the length that is passed in `dwArrayLength`.</span></span>  
+ <span data-ttu-id="2d56d-112">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="2d56d-112">E_INVALIDARG</span></span>  
+ <span data-ttu-id="2d56d-113">`pHandleArray` 的長度不符合以 `dwArrayLength` 傳遞的長度。</span><span class="sxs-lookup"><span data-stu-id="2d56d-113">The length of `pHandleArray` does not match the length that is passed in `dwArrayLength`.</span></span>  
   
- <span data-ttu-id="73943-114">E_FAIL (或其他 E_ 傳回碼)</span><span class="sxs-lookup"><span data-stu-id="73943-114">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="73943-115">這個函式無法釋放用於 `pHandleArray` 和 `pStringArray` 的記憶體。</span><span class="sxs-lookup"><span data-stu-id="73943-115">The function is unable to free the memory for `pHandleArray` and `pStringArray`.</span></span>  
+ <span data-ttu-id="2d56d-114">E_FAIL (或其他 E_ 傳回碼)</span><span class="sxs-lookup"><span data-stu-id="2d56d-114">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="2d56d-115">這個函式無法釋放用於 `pHandleArray` 和 `pStringArray` 的記憶體。</span><span class="sxs-lookup"><span data-stu-id="2d56d-115">The function is unable to free the memory for `pHandleArray` and `pStringArray`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="73943-116">需求</span><span class="sxs-lookup"><span data-stu-id="73943-116">Requirements</span></span>  
- <span data-ttu-id="73943-117">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="73943-117">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2d56d-116">需求</span><span class="sxs-lookup"><span data-stu-id="2d56d-116">Requirements</span></span>  
+ <span data-ttu-id="2d56d-117">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2d56d-117">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="73943-118">**標頭：** dbgshim。h</span><span class="sxs-lookup"><span data-stu-id="73943-118">**Header:** dbgshim.h</span></span>  
+ <span data-ttu-id="2d56d-118">**標頭：** dbgshim。h</span><span class="sxs-lookup"><span data-stu-id="2d56d-118">**Header:** dbgshim.h</span></span>  
   
- <span data-ttu-id="73943-119">連結**庫：** dbgshim</span><span class="sxs-lookup"><span data-stu-id="73943-119">**Library:** dbgshim.dll</span></span>  
+ <span data-ttu-id="2d56d-119">連結**庫：** dbgshim</span><span class="sxs-lookup"><span data-stu-id="2d56d-119">**Library:** dbgshim.dll</span></span>  
   
- <span data-ttu-id="73943-120">**.NET Framework 版本：** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="73943-120">**.NET Framework Versions:** 3.5 SP1</span></span>
+ <span data-ttu-id="2d56d-120">**.NET Framework 版本：** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="2d56d-120">**.NET Framework Versions:** 3.5 SP1</span></span>

@@ -40,9 +40,6 @@
       items:
         - name: HTTP
           href: http.md
-          items:
-            - name: HttpListener
-              href: httplistener.md
         - name: 作法：存取 HTTP 特定屬性
           href: how-to-access-http-specific-properties.md
         - name: 管理連接

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 035a9035-ac66-4953-b48a-99652b42b7fe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db34d56fd4d074551ca4823681bc5d94e76df758
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0fbff178efd4d0dff3593907b3d40e946be2ff6e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756613"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121301"
 ---
-# <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a><span data-ttu-id="773dc-102">ICorDebugHeapValue3::GetMonitorEventWaitList 方法</span><span class="sxs-lookup"><span data-stu-id="773dc-102">ICorDebugHeapValue3::GetMonitorEventWaitList Method</span></span>
-<span data-ttu-id="773dc-103">提供的監視器鎖定相關聯的事件的執行緒已排入佇列的已排序的清單。</span><span class="sxs-lookup"><span data-stu-id="773dc-103">Provides an ordered list of threads that are queued on the event that is associated with a monitor lock.</span></span>  
+# <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a><span data-ttu-id="3f11f-102">ICorDebugHeapValue3::GetMonitorEventWaitList 方法</span><span class="sxs-lookup"><span data-stu-id="3f11f-102">ICorDebugHeapValue3::GetMonitorEventWaitList Method</span></span>
+<span data-ttu-id="3f11f-103">提供在與監視器鎖定相關聯的事件上排入佇列之執行緒的已排序清單。</span><span class="sxs-lookup"><span data-stu-id="3f11f-103">Provides an ordered list of threads that are queued on the event that is associated with a monitor lock.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="773dc-104">語法</span><span class="sxs-lookup"><span data-stu-id="773dc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f11f-104">語法</span><span class="sxs-lookup"><span data-stu-id="3f11f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMonitorEventWaitList (  
@@ -35,41 +33,41 @@ HRESULT GetMonitorEventWaitList (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="773dc-105">參數</span><span class="sxs-lookup"><span data-stu-id="773dc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3f11f-105">參數</span><span class="sxs-lookup"><span data-stu-id="3f11f-105">Parameters</span></span>  
  `ppThreadEnum`  
- <span data-ttu-id="773dc-106">[out]ICorDebugThreadEnum 列舉程式，可用的執行緒已排序的清單。</span><span class="sxs-lookup"><span data-stu-id="773dc-106">[out] The ICorDebugThreadEnum enumerator that provides the ordered list of threads.</span></span>  
+ <span data-ttu-id="3f11f-106">脫銷提供執行緒之已排序清單的 ICorDebugThreadEnum 列舉值。</span><span class="sxs-lookup"><span data-stu-id="3f11f-106">[out] The ICorDebugThreadEnum enumerator that provides the ordered list of threads.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="773dc-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="773dc-107">Return Value</span></span>  
- <span data-ttu-id="773dc-108">這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="773dc-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3f11f-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="3f11f-107">Return Value</span></span>  
+ <span data-ttu-id="3f11f-108">這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="3f11f-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="773dc-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="773dc-109">HRESULT</span></span>|<span data-ttu-id="773dc-110">說明</span><span class="sxs-lookup"><span data-stu-id="773dc-110">Description</span></span>|  
+|<span data-ttu-id="3f11f-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3f11f-109">HRESULT</span></span>|<span data-ttu-id="3f11f-110">描述</span><span class="sxs-lookup"><span data-stu-id="3f11f-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="773dc-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="773dc-111">S_OK</span></span>|<span data-ttu-id="773dc-112">list 不是空的。</span><span class="sxs-lookup"><span data-stu-id="773dc-112">The list is not empty.</span></span>|  
-|<span data-ttu-id="773dc-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="773dc-113">S_FALSE</span></span>|<span data-ttu-id="773dc-114">清單是空的。</span><span class="sxs-lookup"><span data-stu-id="773dc-114">The list is empty.</span></span>|  
+|<span data-ttu-id="3f11f-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="3f11f-111">S_OK</span></span>|<span data-ttu-id="3f11f-112">list 不是空的。</span><span class="sxs-lookup"><span data-stu-id="3f11f-112">The list is not empty.</span></span>|  
+|<span data-ttu-id="3f11f-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="3f11f-113">S_FALSE</span></span>|<span data-ttu-id="3f11f-114">清單是空的。</span><span class="sxs-lookup"><span data-stu-id="3f11f-114">The list is empty.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="773dc-115">例外狀況</span><span class="sxs-lookup"><span data-stu-id="773dc-115">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="3f11f-115">例外狀況</span><span class="sxs-lookup"><span data-stu-id="3f11f-115">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="773dc-116">備註</span><span class="sxs-lookup"><span data-stu-id="773dc-116">Remarks</span></span>  
- <span data-ttu-id="773dc-117">在清單中的第一個執行緒已發行的下一個呼叫的第一個執行緒<xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="773dc-117">The first thread in the list is the first thread that is released by the next call to <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>.</span></span> <span data-ttu-id="773dc-118">在清單中的下一個執行緒已發行下列呼叫，等等。</span><span class="sxs-lookup"><span data-stu-id="773dc-118">The next thread in the list is released on the following call, and so on.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3f11f-116">備註</span><span class="sxs-lookup"><span data-stu-id="3f11f-116">Remarks</span></span>  
+ <span data-ttu-id="3f11f-117">清單中的第一個執行緒是 <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>下一次呼叫所釋放的第一個執行緒。</span><span class="sxs-lookup"><span data-stu-id="3f11f-117">The first thread in the list is the first thread that is released by the next call to <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>.</span></span> <span data-ttu-id="3f11f-118">清單中的下一個執行緒會在下列呼叫中釋放，依此類推。</span><span class="sxs-lookup"><span data-stu-id="3f11f-118">The next thread in the list is released on the following call, and so on.</span></span>  
   
- <span data-ttu-id="773dc-119">如果清單不是空的則這個方法會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="773dc-119">If the list is not empty, this method returns S_OK.</span></span> <span data-ttu-id="773dc-120">如果清單是空的則方法會傳回 S_FALSE。在此情況下，列舉型別是仍然有效，雖然是空的。</span><span class="sxs-lookup"><span data-stu-id="773dc-120">If the list is empty, the method returns S_FALSE; in this case, the enumeration is still valid, although it is empty.</span></span>  
+ <span data-ttu-id="3f11f-119">如果清單不是空的，則這個方法會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="3f11f-119">If the list is not empty, this method returns S_OK.</span></span> <span data-ttu-id="3f11f-120">如果清單是空的，方法會傳回 S_FALSE;在此情況下，列舉仍然有效，但它是空的。</span><span class="sxs-lookup"><span data-stu-id="3f11f-120">If the list is empty, the method returns S_FALSE; in this case, the enumeration is still valid, although it is empty.</span></span>  
   
- <span data-ttu-id="773dc-121">在任一情況下，列舉型別介面是可使用僅針對目前的同步處理狀態的持續時間。</span><span class="sxs-lookup"><span data-stu-id="773dc-121">In either case, the enumeration interface is usable only for the duration of the current synchronized state.</span></span> <span data-ttu-id="773dc-122">不過，執行緒的介面從中鈔票都有效，直到執行緒結束為止。</span><span class="sxs-lookup"><span data-stu-id="773dc-122">However, the thread's interfaces dispensed from it are valid until the thread exits.</span></span>  
+ <span data-ttu-id="3f11f-121">在任一情況下，列舉介面僅適用于目前已同步處理狀態的持續時間。</span><span class="sxs-lookup"><span data-stu-id="3f11f-121">In either case, the enumeration interface is usable only for the duration of the current synchronized state.</span></span> <span data-ttu-id="3f11f-122">不過，從它所分配的執行緒介面是有效的，直到執行緒結束為止。</span><span class="sxs-lookup"><span data-stu-id="3f11f-122">However, the thread's interfaces dispensed from it are valid until the thread exits.</span></span>  
   
- <span data-ttu-id="773dc-123">如果`ppThreadEnum`不是有效的指標，結果為未定義。</span><span class="sxs-lookup"><span data-stu-id="773dc-123">If `ppThreadEnum` is not a valid pointer, the result is undefined.</span></span>  
+ <span data-ttu-id="3f11f-123">如果 `ppThreadEnum` 不是有效的指標，則結果會是未定義的。</span><span class="sxs-lookup"><span data-stu-id="3f11f-123">If `ppThreadEnum` is not a valid pointer, the result is undefined.</span></span>  
   
- <span data-ttu-id="773dc-124">如果發生錯誤，它無法判別，如果有的話，執行緒等候的監視器，則這個方法會傳回指出失敗的 HRESULT。</span><span class="sxs-lookup"><span data-stu-id="773dc-124">If an error occurs such that it cannot be determined which, if any, threads are waiting for the monitor, the method returns an HRESULT that indicates failure.</span></span>  
+ <span data-ttu-id="3f11f-124">如果發生錯誤，因此無法判斷線程是否正在等候監視器，此方法會傳回表示失敗的 HRESULT。</span><span class="sxs-lookup"><span data-stu-id="3f11f-124">If an error occurs such that it cannot be determined which, if any, threads are waiting for the monitor, the method returns an HRESULT that indicates failure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="773dc-125">需求</span><span class="sxs-lookup"><span data-stu-id="773dc-125">Requirements</span></span>  
- <span data-ttu-id="773dc-126">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="773dc-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f11f-125">需求</span><span class="sxs-lookup"><span data-stu-id="3f11f-125">Requirements</span></span>  
+ <span data-ttu-id="3f11f-126">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3f11f-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="773dc-127">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="773dc-127">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3f11f-127">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3f11f-127">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="773dc-128">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="773dc-128">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3f11f-128">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3f11f-128">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="773dc-129">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="773dc-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="3f11f-129">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f11f-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="773dc-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="773dc-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f11f-130">請參閱</span><span class="sxs-lookup"><span data-stu-id="3f11f-130">See also</span></span>
 
-- [<span data-ttu-id="773dc-131">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="773dc-131">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="773dc-132">偵錯</span><span class="sxs-lookup"><span data-stu-id="773dc-132">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="3f11f-131">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="3f11f-131">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="3f11f-132">偵錯</span><span class="sxs-lookup"><span data-stu-id="3f11f-132">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

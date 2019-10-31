@@ -2,27 +2,25 @@
 title: CoreFx 重大變更-.NET Core
 description: 列出 .NET CoreFx （基類庫）中的重大變更。
 ms.date: 09/20/2019
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7681dadbbbae737cb1cbc260613baea9d34527a8
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 04ae857b5f46748ad57c742b6ccf421f57bc3138
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002449"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093420"
 ---
-# <a name="corefx-breaking-changes"></a><span data-ttu-id="a219f-103">CoreFx 重大變更</span><span class="sxs-lookup"><span data-stu-id="a219f-103">CoreFx breaking changes</span></span>
+# <a name="corefx-breaking-changes"></a><span data-ttu-id="2f481-103">CoreFx 重大變更</span><span class="sxs-lookup"><span data-stu-id="2f481-103">CoreFx breaking changes</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="a219f-104">本文的結構如下。</span><span class="sxs-lookup"><span data-stu-id="a219f-104">This article is under construction.</span></span> <span data-ttu-id="a219f-105">這不是 .NET Core 重大變更的完整清單。</span><span class="sxs-lookup"><span data-stu-id="a219f-105">This is not a complete list of .NET Core breaking changes.</span></span> <span data-ttu-id="a219f-106">如需 .NET Core 重大變更的詳細資訊，您可以在 GitHub 上的 dotnet/檔存放庫中檢查個別的[重大變更問題](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)。</span><span class="sxs-lookup"><span data-stu-id="a219f-106">For more information on .NET Core breaking changes, you can examine individual [breaking changes issues](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) in the dotnet/docs repository on GitHub.</span></span>
+> <span data-ttu-id="2f481-104">本文的結構如下。</span><span class="sxs-lookup"><span data-stu-id="2f481-104">This article is under construction.</span></span> <span data-ttu-id="2f481-105">這不是 .NET Core 重大變更的完整清單。</span><span class="sxs-lookup"><span data-stu-id="2f481-105">This is not a complete list of .NET Core breaking changes.</span></span> <span data-ttu-id="2f481-106">如需 .NET Core 重大變更的詳細資訊，您可以在 GitHub 上的 dotnet/檔存放庫中檢查個別的[重大變更問題](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)。</span><span class="sxs-lookup"><span data-stu-id="2f481-106">For more information on .NET Core breaking changes, you can examine individual [breaking changes issues](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) in the dotnet/docs repository on GitHub.</span></span>
 
-<span data-ttu-id="a219f-107">以下是 .NET Core 版本的 CoreFx 重大變更清單。</span><span class="sxs-lookup"><span data-stu-id="a219f-107">The following is a list of CoreFx breaking changes by .NET Core version.</span></span> <span data-ttu-id="a219f-108">CoreFx 提供 .NET Core 所使用的基本和其他一般類型。</span><span class="sxs-lookup"><span data-stu-id="a219f-108">CoreFx provides the primitives and other general types used by .NET Core.</span></span>
+<span data-ttu-id="2f481-107">以下是 .NET Core 版本的 CoreFx 重大變更清單。</span><span class="sxs-lookup"><span data-stu-id="2f481-107">The following is a list of CoreFx breaking changes by .NET Core version.</span></span> <span data-ttu-id="2f481-108">CoreFx 提供 .NET Core 所使用的基本和其他一般類型。</span><span class="sxs-lookup"><span data-stu-id="2f481-108">CoreFx provides the primitives and other general types used by .NET Core.</span></span>
 
-## <a name="net-core-30-preview-7"></a><span data-ttu-id="a219f-109">.NET Core 3.0 Preview 7</span><span class="sxs-lookup"><span data-stu-id="a219f-109">.NET Core 3.0 Preview 7</span></span>
+## <a name="net-core-30-preview-7"></a><span data-ttu-id="2f481-109">.NET Core 3.0 Preview 7</span><span class="sxs-lookup"><span data-stu-id="2f481-109">.NET Core 3.0 Preview 7</span></span>
 
 [!INCLUDE[JsonElement API changes](~/includes/core-changes/corefx/jsonelement-api-changes.md)]
 
-## <a name="net-core-30-preview-8"></a><span data-ttu-id="a219f-110">.NET Core 3.0 Preview 8</span><span class="sxs-lookup"><span data-stu-id="a219f-110">.NET Core 3.0 Preview 8</span></span>
+## <a name="net-core-30-preview-8"></a><span data-ttu-id="2f481-110">.NET Core 3.0 Preview 8</span><span class="sxs-lookup"><span data-stu-id="2f481-110">.NET Core 3.0 Preview 8</span></span>
 
 [!INCLUDE[Change in semantics of (string)null in Utf8JsonWriter](~/includes/core-changes/corefx/change-in-null-in-utf8jsonwriter.md)]
 
@@ -34,11 +32,11 @@ ms.locfileid: "72002449"
 
 [!INCLUDE[JsonFactoryConverter.CreateConverter signature changed](~/includes/core-changes/corefx/jsonfactoryconverter-createconverter.md)]
 
-## <a name="net-core-30-preview-9"></a><span data-ttu-id="a219f-111">.NET Core 3.0 Preview 9</span><span class="sxs-lookup"><span data-stu-id="a219f-111">.NET Core 3.0 Preview 9</span></span>
+## <a name="net-core-30-preview-9"></a><span data-ttu-id="2f481-111">.NET Core 3.0 Preview 9</span><span class="sxs-lookup"><span data-stu-id="2f481-111">.NET Core 3.0 Preview 9</span></span>
 
 [!INCLUDE[Json serializer exception type changed from JsonException to NotSupportedException](~/includes/core-changes/corefx/serializer-throws-notsupportedexception.md)]
 
-## <a name="net-core-30"></a><span data-ttu-id="a219f-112">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="a219f-112">.NET Core 3.0</span></span>
+## <a name="net-core-30"></a><span data-ttu-id="2f481-112">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="2f481-112">.NET Core 3.0</span></span>
 
 [!INCLUDE[APIs that report version now report product and not file version](~/includes/core-changes/corefx/version-information-changes.md)]
 

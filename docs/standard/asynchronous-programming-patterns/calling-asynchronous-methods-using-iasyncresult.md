@@ -11,27 +11,25 @@ helpviewer_keywords:
 - IAsyncResult interface, calling asynchronous methods
 - stopping asynchronous operations
 ms.assetid: 07fba116-045b-473c-a0b7-acdbeb49861f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f943633f554433d30598f11e8611d3e837d94280
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 2a9ce8bc2d2edd09ef79c060b9bb173d4d054d02
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628822"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121319"
 ---
-# <a name="calling-asynchronous-methods-using-iasyncresult"></a><span data-ttu-id="1d470-102">使用 IAsyncResult 呼叫非同步方法</span><span class="sxs-lookup"><span data-stu-id="1d470-102">Calling Asynchronous Methods Using IAsyncResult</span></span>
-<span data-ttu-id="1d470-103">.NET Framework 和協力廠商類別程式庫中的型別提供的方法，可讓應用程式在主應用程式執行緒以外的執行緒中執行非同步作業時繼續執行。</span><span class="sxs-lookup"><span data-stu-id="1d470-103">Types in the .NET Framework and third-party class libraries can provide methods that allow an application to continue executing while performing asynchronous operations in threads other than the main application thread.</span></span> <span data-ttu-id="1d470-104">下列各節說明並提供示範不同方式的程式碼範例，您可以呼叫使用 <xref:System.IAsyncResult> 設計模式的非同步方法。</span><span class="sxs-lookup"><span data-stu-id="1d470-104">The following sections describe and provide code examples that demonstrate the different ways you can call asynchronous methods that use the <xref:System.IAsyncResult> design pattern.</span></span>  
+# <a name="calling-asynchronous-methods-using-iasyncresult"></a><span data-ttu-id="6a7d6-102">使用 IAsyncResult 呼叫非同步方法</span><span class="sxs-lookup"><span data-stu-id="6a7d6-102">Calling Asynchronous Methods Using IAsyncResult</span></span>
+<span data-ttu-id="6a7d6-103">.NET Framework 和協力廠商類別程式庫中的型別提供的方法，可讓應用程式在主應用程式執行緒以外的執行緒中執行非同步作業時繼續執行。</span><span class="sxs-lookup"><span data-stu-id="6a7d6-103">Types in the .NET Framework and third-party class libraries can provide methods that allow an application to continue executing while performing asynchronous operations in threads other than the main application thread.</span></span> <span data-ttu-id="6a7d6-104">下列各節說明並提供示範不同方式的程式碼範例，您可以呼叫使用 <xref:System.IAsyncResult> 設計模式的非同步方法。</span><span class="sxs-lookup"><span data-stu-id="6a7d6-104">The following sections describe and provide code examples that demonstrate the different ways you can call asynchronous methods that use the <xref:System.IAsyncResult> design pattern.</span></span>  
   
-- <span data-ttu-id="1d470-105">[以結束非同步作業的方式封鎖應用程式執行](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)。</span><span class="sxs-lookup"><span data-stu-id="1d470-105">[Blocking Application Execution by Ending an Async Operation](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).</span></span>  
+- <span data-ttu-id="6a7d6-105">[以結束非同步作業的方式封鎖應用程式執行](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)。</span><span class="sxs-lookup"><span data-stu-id="6a7d6-105">[Blocking Application Execution by Ending an Async Operation](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).</span></span>  
   
-- <span data-ttu-id="1d470-106">[使用 AsyncWaitHandle 封鎖應用程式執行](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)。</span><span class="sxs-lookup"><span data-stu-id="1d470-106">[Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).</span></span>  
+- <span data-ttu-id="6a7d6-106">[使用 AsyncWaitHandle 封鎖應用程式執行](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)。</span><span class="sxs-lookup"><span data-stu-id="6a7d6-106">[Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).</span></span>  
   
-- <span data-ttu-id="1d470-107">[輪詢非同步作業的狀態](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md)。</span><span class="sxs-lookup"><span data-stu-id="1d470-107">[Polling for the Status of an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).</span></span>  
+- <span data-ttu-id="6a7d6-107">[輪詢非同步作業的狀態](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md)。</span><span class="sxs-lookup"><span data-stu-id="6a7d6-107">[Polling for the Status of an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).</span></span>  
   
-- <span data-ttu-id="1d470-108">[使用 AsyncCallback 委派結束非同步作業](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)。</span><span class="sxs-lookup"><span data-stu-id="1d470-108">[Using an AsyncCallback Delegate to End an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).</span></span>  
+- <span data-ttu-id="6a7d6-108">[使用 AsyncCallback 委派結束非同步作業](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)。</span><span class="sxs-lookup"><span data-stu-id="6a7d6-108">[Using an AsyncCallback Delegate to End an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1d470-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1d470-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6a7d6-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="6a7d6-109">See also</span></span>
 
-- [<span data-ttu-id="1d470-110">事件架構非同步模式 (EAP)</span><span class="sxs-lookup"><span data-stu-id="1d470-110">Event-based Asynchronous Pattern (EAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
-- [<span data-ttu-id="1d470-111">事件架構非同步模式概觀</span><span class="sxs-lookup"><span data-stu-id="1d470-111">Event-based Asynchronous Pattern Overview</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [<span data-ttu-id="6a7d6-110">事件架構非同步模式 (EAP)</span><span class="sxs-lookup"><span data-stu-id="6a7d6-110">Event-based Asynchronous Pattern (EAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [<span data-ttu-id="6a7d6-111">事件架構非同步模式概觀</span><span class="sxs-lookup"><span data-stu-id="6a7d6-111">Event-based Asynchronous Pattern Overview</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
