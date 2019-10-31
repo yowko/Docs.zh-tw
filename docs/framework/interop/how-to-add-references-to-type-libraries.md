@@ -7,14 +7,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4908653b650f05bd25a7893d104040802f34d7e4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b4b78d377cf3ff2b43f7776567583c71c479054c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523815"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123947"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>如何：將參考加入至類型程式庫
 Visual Studio 會產生內含新增類型程式庫參考時所產生之中繼資料的 interop 組件。 如有提供主要的 Interop 組件，Visual Studio 便會先使用現有的組件，然後再產生新的 Interop 組件。  

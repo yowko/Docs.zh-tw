@@ -17,17 +17,15 @@ helpviewer_keywords:
 ms.assetid: 898f76e2-16f4-4a63-b7d9-dad2d3824d8a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f97e90e3953a01f07d77e604628fbdb79eb9efa0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8541e7761e2f8e1839d028fdaea3eb71307ba615
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779172"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131205"
 ---
-# <a name="corexemain-function"></a>_CorExeMain 函式
-初始化 common language runtime (CLR)，在可執行組件的 CLR 標頭，尋找 managed 的進入點，並開始執行。  
+# <a name="_corexemain-function"></a>_CorExeMain 函式
+初始化 common language runtime （CLR），尋找可執行元件的 CLR 標頭中的 managed 進入點，然後開始執行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,23 +34,23 @@ __int32 STDMETHODCALLTYPE _CorExeMain ();
 ```  
   
 ## <a name="remarks"></a>備註  
- 從受管理的可執行組件建立的處理序中載入器會呼叫此函式。 DLL 的組件，載入器會呼叫[_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)函式。  
+ 此函式是由 managed 可執行元件所建立之進程中的載入器所呼叫。 對於 DLL 元件，載入器會改為呼叫[_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)函式。  
   
- 作業系統載入器會呼叫這個方法，不論映像檔中指定的進入點。  
+ 無論影像檔案中指定的進入點為何，作業系統載入器都會呼叫這個方法。  
   
- 在 Windows 98、 Windows ME、 Windows NT 和 Windows 2000`_CorExeMain`修復作業系統載入器中透過間接呼叫函式。 在所有其他 Windows 版本，它會呼叫直接由作業系統載入器。  
+ 在 Windows 98、Windows ME、Windows NT 和 Windows 2000 中，會透過作業系統載入器中的修復來間接呼叫 `_CorExeMain` 函式。 在所有其他版本的 Windows 中，作業系統載入器會直接呼叫它。  
   
- 如需詳細資訊，請參閱 < 備註 > 一節[_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)主題。  
+ 如需詳細資訊，請參閱[_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)主題中的「備註」一節。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **標頭：** Cor。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料全域靜態函式](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

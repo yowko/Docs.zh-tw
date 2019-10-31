@@ -12,14 +12,12 @@ helpviewer_keywords:
 - culture-sensitive string operations
 - culture-insensitive string operations
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e7ca35f73590f8a7c58a0044136c05f341796dfc
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: HT
+ms.openlocfilehash: 06c46033936e16355b8d2eb6650e8731a04af6e9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441654"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141284"
 ---
 # <a name="culture-insensitive-string-operations"></a>不區分文化特性 (Culture) 的字串作業
 
@@ -33,6 +31,6 @@ ms.locfileid: "56441654"
 
 不論您是否要開發含有處理當地語系化和全球化問題之程式碼的應用程式，您應該知道預設情況下會擷取區分文化特性結果的 .NET Framework 方法。 本主題的目的在說明當您的應用程式想要取得不區分文化特性的結果時，使用這些方法的正確方式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)

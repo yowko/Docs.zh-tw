@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d993042cbb435826b92bbcc62f1320a310a02627
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 494f3305f225e0130df30433f3fa0d06ca218068
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320011"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122554"
 ---
 # <a name="net-framework-application-essentials"></a>.NET Framework 應用程式基本概念
 這部分的 .NET Framework 說明文件提供 .NET Framework 中基本應用程式開發工作的相關資訊。  
