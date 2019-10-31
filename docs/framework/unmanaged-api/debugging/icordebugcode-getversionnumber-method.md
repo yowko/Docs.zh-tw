@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8e02518-679f-4e9f-8a28-ba4a89a3876f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4b6fd6e8043f1c62da8994b43a9b9af45fb2e3c0
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 646c20ca1b78ff0ce513b8a3c9b578c3b1b9a696
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700814"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125607"
 ---
 # <a name="icordebugcodegetversionnumber-method"></a>ICorDebugCode::GetVersionNumber 方法
 
@@ -51,6 +49,6 @@ HRESULT GetVersionNumber (
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

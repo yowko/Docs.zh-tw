@@ -1,5 +1,5 @@
 ---
-title: 作法：參考強式名稱的元件
+title: 如何：參考強式名稱的元件
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, compile-time references
@@ -7,20 +7,18 @@ helpviewer_keywords:
 - assemblies [.NET Framework], strong-named
 - assembly binding, strong-named
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 324cd42a2781202f19e7e1cb5055d571f0c58cf5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 427550e1fbeb38cefbb4afe97d80e198ac2d6cb0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973128"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127639"
 ---
-# <a name="how-to-reference-a-strong-named-assembly"></a>HOW TO：參考強式名稱的元件
+# <a name="how-to-reference-a-strong-named-assembly"></a>如何：參考強式名稱的元件
 參考強式名稱組件中類型或資源的程序通常十分簡單。 您可以在編譯時間 (早期繫結) 或執行階段進行參考。  
   
 當您向編譯器指出要編譯的元件明確參考另一個元件時，就會發生編譯時間參考。 當您使用編譯時間參考時，編譯器會自動取得目標強式名稱組件的公開金鑰，並將它放在所編譯組件的組件參考中。
@@ -44,11 +42,11 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
 
 ## <a name="make-a-run-time-reference-to-a-strong-named-assembly"></a>建立強式名稱元件的執行時間參考  
   
-當您對強式名稱元件（例如使用<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>或<xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>方法）進行執行時間參考時，您必須使用參考之強式名稱元件的顯示名稱。 顯示名稱的語法如下：  
+當您使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 方法來建立強式名稱元件的執行時間參考時，您必須使用所參考之強式名稱元件的顯示名稱。 顯示名稱的語法如下：  
 
 \<組件名稱> **,** \<版本號碼> **,** \<文化特性> **,** \<公開金鑰權杖>  
 
-例如：  
+例如:  
 
 ```console
 myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   
@@ -81,6 +79,6 @@ Dim myDll As Assembly = _
 
 **sn -tp \<** *公開金鑰檔* **>**  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [建立和使用強式名稱的元件](create-use-strong-named.md)

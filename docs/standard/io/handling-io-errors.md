@@ -8,29 +8,27 @@ dev_langs:
 helpviewer_keywords:
 - I/O, exception handling
 - I/O, errors
-author: rpetrusha
-ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d2ff4e69596e721f485d107317f261231615c5a6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
+ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126871"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120747"
 ---
 # <a name="handling-io-errors-in-net"></a>在 .NET 中處理 I/O 錯誤
 
 除了在任何方法呼叫中擲回的例外狀況以外 (例如系統負荷過高造成的 <xref:System.OutOfMemoryException>，或程式設計人員出錯造成的 <xref:System.NullReferenceException>)，.NET 檔案系統方法還會擲回下列例外狀況：
 
 - <xref:System.IO.IOException?displayProperty=nameWithType>，所有 <xref:System.IO> 例外狀況類型的基底類別。 之所以會擲回此例外狀況，是因為來自作業系統的錯誤傳回碼沒有直接對應到任何其他例外狀況類型。
-- <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>.
-- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>.
-- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>.
-- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>.
-- <xref:System.OperationCanceledException?displayProperty=nameWithType>.
-- <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>.
+- <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>
+- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>
+- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>
+- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>
+- <xref:System.OperationCanceledException?displayProperty=nameWithType>
+- <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>
 - <xref:System.ArgumentException?displayProperty=nameWithType>，針對 .NET Framework 和 .NET Core 2.0 及更早版本上的無效路徑字元擲回。
 - <xref:System.NotSupportedException?displayProperty=nameWithType>，針對 .NET Framework 中的無效冒號擲回。
 - <xref:System.Security.SecurityException?displayProperty=nameWithType>，此例外狀況是因為應用程式在有限信任中執行而擲回，其缺少僅在 .NET Framework 上適用的必要權限。 (.NET Framework 上預設是完全信任。)
@@ -49,14 +47,14 @@ ms.locfileid: "53126871"
 
 | 例外狀況類型 | .NET Core | .NET Framework |
 |---|---|---|
-| <xref:System.IO.IOException> | 是 | [是] |
-| <xref:System.IO.FileNotFoundException> | 是 | 是 |
-| <xref:System.IO.DirectoryNotFoundException> | 是 | 是 |
-| <xref:System.IO.DriveNotFoundException?> | [是] | 是 |
-| <xref:System.IO.PathTooLongException> | 是 | [是] |
-| <xref:System.OperationCanceledException> | [是] | 是 |
+| <xref:System.IO.IOException> | [是] | [是] |
+| <xref:System.IO.FileNotFoundException> | [是] | [是] |
+| <xref:System.IO.DirectoryNotFoundException> | [是] | [是] |
+| <xref:System.IO.DriveNotFoundException?> | [是] | [是] |
+| <xref:System.IO.PathTooLongException> | [是] | [是] |
+| <xref:System.OperationCanceledException> | [是] | [是] |
 | <xref:System.UnauthorizedAccessException> | [是] | [是] |
-| <xref:System.ArgumentException> | .NET Core 2.0 及更早版本| 是 |
+| <xref:System.ArgumentException> | .NET Core 2.0 及更早版本| [是] |
 | <xref:System.NotSupportedException> | 否 | [是] |
 | <xref:System.Security.SecurityException> | 否 | 僅限有限信任 |
 
@@ -73,7 +71,7 @@ ms.locfileid: "53126871"
 
 若是 <xref:System.IO.IOException>，您可以從 [IOException.HResult](xref:System.Exception.HResult) 屬性取得額外的錯誤資訊。 若要將 HResult 值轉換為 Win32 錯誤碼，您要去除 32 位元值的前 16 位元。 下表列出可能包裝在 <xref:System.IO.IOException> 中的錯誤碼。
 
-| HResult | 常數 | 說明 |
+| HResult | 常數 | 描述 |
 | --- | --- | --- |
 | ERROR_SHARING_VIOLATION | 32 | 遺漏檔案名稱，或者檔案或目錄正在使用中。 |
 | ERROR_FILE_EXISTS | 80 | 檔案已存在。 |
@@ -85,7 +83,7 @@ ms.locfileid: "53126871"
 [!code-csharp[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/cs/io-exceptions.cs)]
 [!code-vb[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/vb/io-exceptions.vb)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [在 .NET 中處理和擲回例外狀況](../exceptions/index.md)
 - [例外狀況處理 (工作平行程式庫)](../parallel-programming/exception-handling-task-parallel-library.md)

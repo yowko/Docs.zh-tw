@@ -11,20 +11,18 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8d1ad081c8d783cd18054078a6eeb82428faa4d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cb995e78e534048043886070536ef0dd0a45c057
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044627"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105097"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL 組譯工具)
 
-IL Assembler 可從中繼語言 (IL) 中產生可攜式執行檔 (PE) (如需 IL 的詳細資訊，請參閱 [Managed 執行程序](../../standard/managed-execution-process.md))。您可以執行產生的可執行檔 (包含 IL 和所需的中繼資料)，來判斷 IL 是否如預期般地執行。
+IL Assembler 可從中繼語言 (IL) 中產生可攜式執行檔 (PE) （如需 IL 的詳細資訊，請參閱[Managed 執行](../../standard/managed-execution-process.md)程式）。您可以執行產生的可執行檔（其中包含 IL 和必要的中繼資料），以判斷 IL 是否如預期般執行。
 
-此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
+此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
 
 在命令提示字元下輸入下列命令：
 
@@ -36,9 +34,9 @@ ilasm [options] filename [[options]filename...]
 
 ## <a name="parameters"></a>參數
 
-| 引數 | 說明 |
+| 引數 | 描述 |
 | -------- | ----------- |
-|`filename`|.il 原始程式檔的名稱。 這個檔案由中繼資料宣告指示詞和符號 IL 指令組成。 您可以提供多個來源檔案引數來使用 *Ilasm.exe* 產生單一 PE 檔。 **注意：** 確定 .il 原始程式檔中程式碼的最後一行具有尾端空白或行結尾字元。|
+|`filename`|.il 原始程式檔的名稱。 這個檔案由中繼資料宣告指示詞和符號 IL 指令組成。 您可以提供多個來源檔案引數來使用 *Ilasm.exe* 產生單一 PE 檔。 **注意：** 請確認 .il 原始程式檔的最後一行有後置空白字元或行結尾字元。|
 
 | 選項 | 描述 |
 | ------ | ----------- |
@@ -47,7 +45,7 @@ ilasm [options] filename [[options]filename...]
 |**/appcontainer**|產生在 Windows 應用程式容器中執行的 *.dll* 或 *.exe* 檔案，作為輸出。|
 |**/arm**|指定進階 RISC 機器 (ARM) 為目標處理器。<br /><br /> 如果沒有指定映像位元，則預設為 **/32bitpreferred**。|
 |**/base:** `integer`|將 ImageBase 設定為 NT Optional 標頭中 `integer` 指定的值。 如果在檔案中指定了 .imagebase IL 指示詞，這個選項會覆寫它。|
-|**/clock**|對指定的 .il 原始程式檔以毫秒為單位測量並且報告下列編譯時間：<br /><br /> **總執行時間**：執行所有後續特定作業所花費的總時間。<br /><br /> **啟動**：載入和開啟檔案。<br /><br /> **發出 MD**：發出中繼資料。<br /><br /> **定義參考解析**：解析檔案中的定義參考。<br /><br /> **產生 CEE 檔案**：在記憶體中產生檔案映像。<br /><br /> **寫入 PE 檔案**：將映像寫入 PE 檔案。|
+|**/clock**|對指定的 .il 原始程式檔以毫秒為單位測量並且報告下列編譯時間：<br /><br /> **總共執行**：執行所有緊接在後之特定作業所花費的總時間。<br /><br /> **啟動**：載入和開啟檔案。<br /><br /> **發出 MD**：發出中繼資料。<br /><br /> **定義參考解析**：解析檔案中的定義參考。<br /><br /> **產生 CEE 檔案**：在記憶體中產生檔案映像。<br /><br /> **撰寫 PE 檔案**：撰寫 PE 檔案的映像。|
 |**/debug**[:**IMPL**&#124;**OPT**]|包含偵錯資訊 (區域變數和引數名稱以及行號)。 建立 PDB 檔案。<br /><br /> 不帶其他值的 **/debug** 會停用 JIT 最佳化，並使用 PDB 檔案的序列點。<br /><br /> **IMPL** 會停用 JIT 最佳化，並使用隱含序列點。<br /><br /> **OPT** 會啟用 JIT 最佳化，並使用隱含序列點。|
 |**/dll**|產生 *.dll* 檔案作為輸出。|
 |**/enc:** `file`|從指定的原始程式檔建立編輯後繼續差異。<br /><br /> 這個引數僅供教育使用，而不支援商業用途。|
@@ -79,7 +77,7 @@ ilasm [options] filename [[options]filename...]
 |**/?**|顯示工具的命令語法和選項。|
 
 > [!NOTE]
-> *Ilasm.exe* 的所有選項都不區分大小寫，並以前三個字母來辨識。 例如， **/lis** 相當於 **/listing**，而 **/res**:myresfile.res 相當於 **/resource**:myresfile.res。指定引數的選項可以接受冒號 (:) 或等號 (=) 做為選項與引數之間的分隔符號。 例如， **/output**:*file.ext* 等同於 **/output=** =*file.ext*。
+> *Ilasm.exe* 的所有選項都不區分大小寫，並以前三個字母來辨識。 例如， **/lis**相當於 **/listing** ，而 **/res**： myresfile.res 相當於 **/resource**： myresfile.res. .res。指定引數的選項會接受冒號（:)或等號（=）做為選項和引數之間的分隔符號。 例如， **/output**:*file.ext* 等同於 **/output=** =*file.ext*。
 
 ## <a name="remarks"></a>備註
 
@@ -227,7 +225,7 @@ public class Hello
 } // end of class Hello
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [工具](index.md)
 - [*Ildasm.exe* (IL 反組譯工具)](ildasm-exe-il-disassembler.md)

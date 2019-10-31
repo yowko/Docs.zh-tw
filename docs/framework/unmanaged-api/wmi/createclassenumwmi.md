@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CreateClassEnumWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a696a6f02f6d3a5afbcb45e5566e4b667739e2c5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1d637479bd140e635ee647a1e30d03343d8b0dcd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798737"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107525"
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi 函式
 傳回滿足所指定選取條件之所有類別的列舉程式。
@@ -48,12 +46,12 @@ HRESULT CreateClassEnumWmi (
 ## <a name="parameters"></a>參數
 
 `strSuperclass`\
-在如果不`null`是或空白，會指定父類別的名稱; 枚舉器只會傳回這個類別的子類別。 如果是`null`或空白，而且`lFlags`是 WBEM_FLAG_SHALLOW，則只會傳回最上層類別（沒有父類別的類別）。 如果是`null`或空白，而且`lFlags`為`WBEM_FLAG_DEEP`，則會傳回命名空間中的所有類別。
+在如果不 `null` 或空白，則指定父類別的名稱;列舉值只會傳回這個類別的子類別。 如果 `null` 或空白，而且 `lFlags` 為 WBEM_FLAG_SHALLOW，則只會傳回最上層的類別（沒有父類別的類別）。 如果 `null` 或空白，而且 `lFlags` `WBEM_FLAG_DEEP`，則會傳回命名空間中的所有類別。
 
 `lFlags`\
 在會影響此函式行為的旗標組合。 下列值定義于*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數：
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果設定，函式會抓取已修改的限定詞，並儲存在目前連接地區設定的當地語系化命名空間中。 <br/> 如果未設定，此函式只會抓取立即命名空間中儲存的限定詞。 |
 | `WBEM_FLAG_DEEP` | 0 | 列舉包括階層中的所有子類別，但不包含這個類別。 |
@@ -62,10 +60,10 @@ HRESULT CreateClassEnumWmi (
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 函數會傳回順向列舉值。 一般來說，順向列舉值的速度較快，而且使用的記憶體比傳統的列舉值少，但它們不允許[複製](clone.md)的呼叫。 |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI 會保留列舉中物件的指標，直到釋放它們為止。 |
 
-建議的旗標`WBEM_FLAG_RETURN_IMMEDIATELY`為`WBEM_FLAG_FORWARD_ONLY` ，以達到最佳效能。
+建議的旗標是 `WBEM_FLAG_RETURN_IMMEDIATELY` 和 `WBEM_FLAG_FORWARD_ONLY` 以獲得最佳效能。
 
 `pCtx`\
-在通常，此值為`null`。 否則，它是[IWbemCoNtext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)實例的指標，可供提供所要求之類別的提供者使用。
+在通常，此值為 `null`。 否則，它是[IWbemCoNtext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)實例的指標，可供提供所要求之類別的提供者使用。
 
 `ppEnum`\
 脫銷接收列舉值的指標。
@@ -113,10 +111,10 @@ HRESULT CreateClassEnumWmi (
 
 **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
-**標頭：** WMINet_Utils.idl
+**標頭：** WMINet_Utils .idl
 
 **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WMI 和效能計數器（非受控 API 參考）](index.md)

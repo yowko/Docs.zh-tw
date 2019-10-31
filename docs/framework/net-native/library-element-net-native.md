@@ -1,15 +1,13 @@
 ---
-title: <Library>元素（.NET Native）
+title: <Library> 元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc3c85ab99574c96d8a68d4221f218a1340e4122
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f94bfe047fa7a95b6f24264bae0b27112c589dfd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049639"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128360"
 ---
 # <a name="library-element-net-native"></a>\<程式庫 > 元素（.NET Native）
 定義包含類型和類型成員的組件，這些類型和類型成員的中繼資料可在執行階段用於反映。  
@@ -34,11 +32,11 @@ ms.locfileid: "71049639"
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*assembly_name*|組件的簡單名稱，不包含其副檔名。 這個屬性 (Attribute) 會對應至 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 屬性 (Property)。 例如，名為 Extensions.dll 之組件的名稱是 "Extensions"。 如需支援從組件條件式包含中繼資料之 *assembly_name* 的特殊格式，請參閱＜備註＞一節。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -58,7 +56,7 @@ ms.locfileid: "71049639"
   
  `<Library>` 項目可當做容器來使用，以定義在執行階段需要中繼資料的程式項目；這個項目不會表示原則。 在編譯時期，編譯器工具只會在 `<Library>` 項目所指定的程式庫中，搜尋其子項目所識別的程式項目。 在其他情況下，編譯器工具會在所有程式庫 (包含 .NET Framework 核心程式庫) 中，搜尋 [\<Application>](application-element-net-native.md) 項目的子項目所識別的程式項目。  
   
- 您可以有條件地利用 `<Library>` 指示詞。 如果專案名稱`<Library>`的開頭和結尾都是星號（\*），則`<Library>`只有在應用程式參考星號之間指定的元件時，指示詞才會生效。 例如，下列執行時間指示詞僅適用于應用程式參考的公用程式 .dll 元件。  
+ 您可以有條件地利用 `<Library>` 指示詞。 如果 `<Library>` 專案的名稱的開頭和結尾都是星號（\*），只有在應用程式參考星號之間指定的元件時，`<Library>` 指示詞才會生效。 例如，下列執行時間指示詞僅適用于應用程式參考的公用程式 .dll 元件。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -68,9 +66,9 @@ ms.locfileid: "71049639"
 </Directives>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [\<應用程式 > 元素](application-element-net-native.md)
-- [\<> 元素的指示詞](directives-element-net-native.md)
+- [\<指示詞 > 元素](directives-element-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)

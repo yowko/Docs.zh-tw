@@ -6,14 +6,12 @@ helpviewer_keywords:
 - asynchronous design patterns, .NET
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 36798fabcd42cf7e04b0a6f288736503eecad88b
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: dfce69ee18b8346cd802b4934de63bf0a39c72f0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169117"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124262"
 ---
 # <a name="asynchronous-programming-patterns"></a>非同步程式設計模式
 
@@ -67,7 +65,7 @@ public class MyClass
 }  
 ```  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [深入了解非同步](../async-in-depth.md)
 - [C# 中的非同步程式設計](../../csharp/async.md)

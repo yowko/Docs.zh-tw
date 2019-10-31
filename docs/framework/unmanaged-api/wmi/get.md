@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17304dc8330e4f8571f25b8544f1049dff229f2b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 60f29b91000fd3c07efea88dcc319eb283a4af78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798588"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120330"
 ---
 # <a name="get-function"></a>Get 函式
 
@@ -58,19 +56,19 @@ HRESULT Get (
 [in] 保留。 這個參數必須是0。
 
 `pVal`\
-脫銷如果函數傳回成功，則包含`wszName`屬性的值。 已針對限定詞指派正確的類型和值給引數。`pval`
+脫銷如果函數傳回成功，則包含 `wszName` 屬性的值。 `pval` 引數已指派辨識符號的正確類型和值。
 
 `pvtType`\
-脫銷如果函式傳回成功，則包含表示屬性類型的[CIM 類型常數](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration)。 其值也可以是`null`。 
+脫銷如果函式傳回成功，則包含表示屬性類型的[CIM 類型常數](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration)。 它的值也可以 `null`。 
 
 `plFlavor`\
-脫銷如果函式傳回成功，會接收屬性來源的相關資訊。 其值可以是`null`，或是*WbemCli*標頭檔中所定義的下列其中一個 WBEM_FLAVOR_TYPE 常數： 
+脫銷如果函式傳回成功，會接收屬性來源的相關資訊。 其值可以是 `null`，或是*WbemCli*標頭檔中所定義的下列其中一個 WBEM_FLAVOR_TYPE 常數： 
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | 屬性是標準的系統屬性。 |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 若為類別：屬性繼承自父類別。 <br> 針對實例：繼承自父類別的屬性尚未由實例修改。  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 若為類別：屬性屬於衍生類別。 <br> 針對實例：屬性會由實例修改;也就是，已提供值，或已新增或修改限定詞。 |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 針對類別：此屬性繼承自父類別。 <br> 針對實例：實例並未修改繼承自父類別的屬性。  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 針對類別：屬性屬於衍生類別。 <br> 針對實例：屬性會由實例修改;也就是，已提供值，或已新增或修改限定詞。 |
 
 ## <a name="return-value"></a>傳回值
 
@@ -88,18 +86,18 @@ HRESULT Get (
 
 此函式會包裝對[IWbemClassObject：： Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get)方法的呼叫。
 
-`Get`函數也可以傳回系統屬性。
+`Get` 函數也可以傳回系統屬性。
 
-已針對限定詞和 COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit)函數指派正確的類型和值給引數`pVal`
+`pVal` 引數已指派辨識符號和 COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit)函數的正確類型和值
 
 ## <a name="requirements"></a>需求
 
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
- **標頭：** WMINet_Utils.idl
+ **標頭：** WMINet_Utils .idl
 
  **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WMI 和效能計數器（非受控 API 參考）](index.md)

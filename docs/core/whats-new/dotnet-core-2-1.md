@@ -4,15 +4,13 @@ description: 了解 .NET Core 2.1 所提供的新功能。
 dev_langs:
 - csharp
 - vb
-author: rpetrusha
-ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 18c8d566c3b79c131a3d031e5bdf3b37996d9115
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: 603e7ae4ffb9e6a4bb477af9597d6948bd63f55e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031860"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100755"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新功能
 
@@ -25,7 +23,7 @@ ms.locfileid: "72031860"
 - [JIT 編譯改進功能](#jit-compiler-improvements)
 - [API 變更](#api-changes)
 
-## <a name="tooling"></a>工具
+## <a name="tooling"></a>Tooling
 
 隨附於 .NET Core 2.1 的工具 .NET Core 2.1 SDK (2.1.300 版) 包含下列變更與增強功能：
 
@@ -128,7 +126,7 @@ dotnet tool install -g dotnetsay
 
 `dotnet publish` 現在會搭配服務執行階段版本發佈獨立應用程式。 當您搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈獨立應用程式時，應用程式就會包含該 SDK 已知的最新服務執行階段版本。 當您升級至最新的 SDK 時，將會搭配最新的 .NET Core 執行階段版本一起發佈。 這適用於 .NET Core 1.0 執行階段和更新版本。
 
-獨立發佈會仰賴 NuGet.org 上的執行階段版本。您的電腦上不需要有服務執行階段。
+獨立發行版本依賴 NuGet.org 上的執行階段版本。您的電腦上不需要有服務執行時間。
 
 使用 .NET Core 2.0 SDK 時，獨立應用程式會搭配 .NET Core 2.0.0 執行階段一起發佈，除非有透過 `RuntimeFrameworkVersion` 屬性指定其他版本。 藉由這項新行為，您將不再需要設定此屬性來為獨立應用程式選取較新的執行階段版本。 從現在起，最簡單的方法將會是一律搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈。
 
@@ -247,7 +245,7 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 
 在 Linux 和 macOS 上，您只能針對個別處理序設定 <xref:System.Net.Http.HttpClient>。 在 Linux 上，如果您要使用舊的 <xref:System.Net.Http.HttpClient> 實作，便需要部署 [libcurl](https://curl.haxx.se/libcurl/) \(英文\)。 (它會隨 .NET Core 2.0 一起安裝)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Core 的新功能](index.md)
 - [EF Core 2.1 的新功能](/ef/core/what-is-new/ef-core-2.1)

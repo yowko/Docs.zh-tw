@@ -7,14 +7,12 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c7a3548cb0d7e841f32824eda52565e64279536e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b5dacad4511df0476dded6ac3784014665234077
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051993"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123239"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework 的概觀
 
@@ -91,7 +89,7 @@ Runtime 是為增強效能所設計的。 雖然 Common Language Runtime 提供�
 
 Windows Forms 類別是一組完整且可重複使用的類型，可大幅簡化 Windows GUI 的開發。 如果要撰寫 ASP.NET Web Form 應用程式，即可使用 Web Form 類別。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [系統需求](system-requirements.md)
 - [安裝指南 (英文)](../install/index.md)

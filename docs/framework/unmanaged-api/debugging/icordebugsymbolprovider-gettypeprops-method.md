@@ -1,17 +1,15 @@
 ---
-title: 'ICorDebugSymbolProvider:: GetTypeProps 方法'
+title: ICorDebugSymbolProvider：： GetTypeProps 方法
 ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8c8ea3a201cc94ef7bdf679371ef43ab2641b791
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c87d9f6d0a719dae5e532e9c0369a7f9fc03748a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955535"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133672"
 ---
-# <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider:: GetTypeProps 方法
+# <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider：： GetTypeProps 方法
 根據 vtable 中指定的相對虛擬位址 (RVA)，傳回類型之屬性的相關資訊，例如其泛型參數的簽章數目。  
   
 ## <a name="syntax"></a>語法  
@@ -39,7 +37,7 @@ HRESULT GetTypeProps(
  [out] 保留所有泛型參數之 TypeSpec 簽章的緩衝區。  
   
 ## <a name="remarks"></a>備註  
- 若要取得`signature`類型陣列所需的大小, 請`cbSignature`將引數設為 0 `signature` , 並將設定為**null**。 當這個方法傳回時，`pcbSignature` 會包含 `signature` 陣列所需的位元組數目。  
+ 若要取得類型的 `signature` 陣列所需的大小，請將 `cbSignature` 引數設定為0，並將 `signature` 為**null**。 當這個方法傳回時，`pcbSignature` 會包含 `signature` 陣列所需的位元組數目。  
   
 > [!NOTE]
 > 這個方法僅適用於 .NET Native。  
@@ -49,11 +47,11 @@ HRESULT GetTypeProps(
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [GetMethodProps 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodprops-method.md)
 - [ICorDebugSymbolProvider 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)

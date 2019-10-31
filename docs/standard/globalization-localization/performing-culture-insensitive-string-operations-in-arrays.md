@@ -7,14 +7,12 @@ helpviewer_keywords:
 - arrays [.NET Framework], culture-insensitive string operations
 - comparer parameter
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b52ff8d72132c1076dfdece5e1ce47bbece37b81
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 051ee77ae5d6552e26e0216d58734d90188475f9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855989"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120812"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>在陣列中執行不區分文化特性的字串作業
 
@@ -23,7 +21,7 @@ ms.locfileid: "70855989"
 > [!NOTE]
 > 將**InvariantCulture**傳遞至比較方法，會執行不區分文化特性的比較。 不過，它不會讓某些項目進行非語言比較，例如檔案路徑、登錄機碼和環境變數。 它也不支援根據比較結果所做出的安全性決策。 若要進行非語言比較或需要支援根據結果的安全性決策，應用程式應該使用可接受 <xref:System.StringComparison> 值的比較方法。 接著，應用程式應該會傳遞 <xref:System.StringComparison.Ordinal>。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Array.Sort%2A?displayProperty=nameWithType>
 - <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType>

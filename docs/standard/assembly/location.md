@@ -1,20 +1,18 @@
 ---
-title: 元件位置
+title: 組件位置
 ms.date: 08/20/2019
 helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6427f7d005c43ef9e83387e865f71009b683a7c4
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: d44fb44db35b60f99583c20432c5998573298044
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973177"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107222"
 ---
-# <a name="assembly-location"></a>元件位置
+# <a name="assembly-location"></a>組件位置
 組件的位置可判斷 Common Language Runtime 是否可以在參考時找到它，也可以判斷是否可以與其他組件共用組件。 您可以在下列位置中部署組件：  
   
 - 應用程式的目錄或子目錄。  
@@ -29,7 +27,7 @@ ms.locfileid: "70973177"
   
      HTTP 伺服器上部署的組件必須具有強式名稱；您指向應用程式組態檔的程式碼基底區段中的組件。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [建立元件](create.md)
 - [全域組件快取](../../framework/app-domains/gac.md)

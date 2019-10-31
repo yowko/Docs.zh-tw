@@ -12,14 +12,12 @@ api_type:
 ms.assetid: 7a4e3085-8f95-40ef-a4be-7d6146f47ce2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4197b018ea85402762a8591b40f3503c02af3974
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dede4e5af702f1b86b430450db4a669c326c062
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673120"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131068"
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::GetInstrumentedILMap 方法
 [.NET Framework 4.5.2 與更新版本提供支援]  
@@ -41,15 +39,15 @@ HRESULT GetInstrumentedILMap(
  [in] `map` 陣列的儲存體容量。 如需詳細資訊，請參閱＜備註＞一節。  
   
  pcMap  
- [out]COR_IL_MAP 值寫入至對應陣列數目。  
+ 脫銷寫入地圖陣列的 COR_IL_MAP 值數目。  
   
  map  
- [out]可提供有關對應從分析工具檢測 IL 的原始方法 il COR_IL_MAP 值的陣列。  
+ 脫銷COR_IL_MAP 值的陣列，提供從分析工具檢測 IL 到原始方法之 IL 的對應資訊。  
   
 ## <a name="remarks"></a>備註  
- 如果分析工具藉由呼叫設定的對應[icorprofilerinfo:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)方法，偵錯工具可以呼叫此方法來擷取對應，並計算 IL 位移堆疊時，在內部使用對應追蹤及變數存留期。  
+ 如果分析工具藉由呼叫[ICorProfilerInfo：： SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)方法來設定對應，偵錯工具就可以呼叫這個方法來抓取對應，並在計算堆疊追蹤和變數的 IL 位移時，在內部使用對應。生命.  
   
- 如果`cMap`為 0 並`pcMap`是非**null**，`pcMap`設為 可用的 COR_IL_MAP 值數目。 如果 `cMap` 不是零，則代表 `map` 陣列的儲存體容量。 方法傳回時，`map`會包含最多`cMap`項目，並`pcMap`設定為實際寫入至 COR_IL_MAP 值數目`map`陣列。  
+ 如果 `cMap` 為0，且 `pcMap` 為非**null**，`pcMap` 會設定為可用 COR_IL_MAP 值的數目。 如果 `cMap` 不是零，則代表 `map` 陣列的儲存體容量。 當此方法傳回時，`map` 包含最多 `cMap` 個專案，而 `pcMap` 會設定為實際寫入 `map` 陣列的 COR_IL_MAP 值數目。  
   
  如果 IL 未經檢測，或是分析工具未提供對應，此方法會傳回 `S_OK`，並將 `pcMap` 設為 0。  
   
@@ -58,12 +56,12 @@ HRESULT GetInstrumentedILMap(
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
+- [ICorProfilerInfo：： SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
 - [ICorDebugILCode2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

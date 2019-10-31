@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c460bc644017f32fdb96d35e5f42981ac09f825
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cd43dce995c2bc9a45a0c8134a91b20cb1dec26e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738379"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111433"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess 方法
-取得對應至程序中載入 common language runtime (CLR) 模組 ICorDebugProcess 介面。  
+取得對應至在進程中載入之 common language runtime （CLR）模組的 ICorDebugProcess 介面。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,45 +41,45 @@ HRESULT OpenVirtualProcess(
   
 ## <a name="parameters"></a>參數  
  `moduleBaseAddress`  
- [in]目標處理序模組的基底位址。 如果指定的模組不是 CLR 模組，則會傳回 COR_E_NOT_CLR。  
+ 在目標進程中模組的基底位址。 如果指定的模組不是 CLR 模組，則會傳回 COR_E_NOT_CLR。  
   
  `pDataTarget`  
- [in]資料目標抽象概念，可讓 managed 偵錯工具來檢查處理狀態。 偵錯工具必須實作[ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)介面。 您應該實作[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)介面，以支援案例所偵錯 CLR 未安裝在本機電腦。  
+ 在資料目標抽象，可讓 managed 偵錯工具檢查進程狀態。 偵錯工具必須執行[ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)介面。 您應該執行[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)介面，以支援正在進行調試的 CLR 不會安裝在本機電腦上的案例。  
   
  `pLibraryProvider`  
- [in]程式庫提供者回呼介面，可讓特定版本的偵錯程式庫尋找並載入需求。 這個參數時才需要`ppProcess`或是`pFlags`不是`null`。  
+ 在程式庫提供者回呼介面，允許視需要尋找和載入版本特定的偵錯工具程式庫。 只有當 `ppProcess` 或 `pFlags` 不 `null`時，才需要此參數。  
   
  `pMaxDebuggerSupportedVersion`  
- [in]這個偵錯工具可以偵錯 CLR 最高的版本。 您應該指定主要、 次要和組建從這個偵錯工具支援，最新的 CLR 版本的版本，並設 65535 適應未來的就地 CLR 服務版本的修訂編號。  
+ 在此偵錯工具可以 debug 的最高 CLR 版本。 您應該從這個偵錯工具支援的最新 CLR 版本指定主要、次要和組建版本，並將修訂編號設定為65535，以配合未來的就地 CLR 服務版本。  
   
  `riidProcess`  
- [in]要擷取的 ICorDebugProcess 介面識別碼。 目前，唯一接受的值是 IID_CORDEBUGPROCESS3、 IID_CORDEBUGPROCESS2 和 IID_CORDEBUGPROCESS。  
+ 在要取出的 ICorDebugProcess 介面識別碼。 目前，唯一接受的值是 IID_CORDEBUGPROCESS3、IID_CORDEBUGPROCESS2 和 IID_CORDEBUGPROCESS。  
   
  `ppProcess`  
- [out]所識別的 COM 介面的指標`riidProcess`。  
+ 脫銷`riidProcess`所識別之 COM 介面的指標。  
   
  `pVersion`  
- [in、 out]CLR 版本。 輸入時，這個值可以是`null`。 它也可以指向[CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md)結構，在此情況下的結構`wStructVersion`欄位必須初始化為 0 （零）。  
+ [in、out]CLR 的版本。 在輸入時，這個值可以是 `null`。 它也可以指向[CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md)結構，在此情況下，結構的 `wStructVersion` 欄位必須初始化為0（零）。  
   
- 在輸出時，傳回`CLR_DEBUGGING_VERSION`結構時會被填入 CLR 的版本資訊。  
+ 輸出時，傳回的 `CLR_DEBUGGING_VERSION` 結構會填入 CLR 的版本資訊。  
   
  `pdwFlags`  
- [out]指定的執行階段的相關資訊的旗標。 請參閱[CLR_DEBUGGING_PROCESS_FLAGS](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md)旗標的說明主題。  
+ 脫銷有關指定執行時間的資訊旗標。 如需旗標的描述，請參閱[CLR_DEBUGGING_PROCESS_FLAGS](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md)主題。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |E_POINTER|`pDataTarget` 為 `null`。|  
-|CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)回呼會傳回錯誤，或未提供有效的控制代碼。|  
-|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` 未實作所需的資料目標介面，這個版本的執行階段。|  
-|CORDBG_E_NOT_CLR|指定的模組不是 CLR 模組。 無法偵測到 CLR 模組，因為記憶體已損毀、 模組無法使用，或 CLR 版本晚於填充碼版本時，也會傳回此 HRESULT。|  
-|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|這個執行階段版本不支援此偵錯的模型。 目前，.NET Framework 4 以前的 CLR 版本不支援偵錯的模型。 `pwszVersion`輸出參數仍然發生此錯誤後設定為正確的值。|  
-|CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|CLR 的版本大於宣告這個偵錯工具，以支援的版本。 `pwszVersion`輸出參數仍然發生此錯誤後設定為正確的值。|  
-|E_NO_INTERFACE|`riidProcess`不提供介面。|  
-|CORDBG_E_UNSUPPORTED_VERSION_STRUCT|`CLR_DEBUGGING_VERSION`結構沒有可辨識的值`wStructVersion`。 此時唯一接受的值為 0。|  
+|CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)回呼會傳回錯誤，或未提供有效的控制碼。|  
+|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` 不會針對這個版本的執行時間，執行必要的資料目標介面。|  
+|CORDBG_E_NOT_CLR|指出的模組不是 CLR 模組。 當無法偵測到 CLR 模組，因為記憶體已損毀、模組無法使用，或 CLR 版本晚于填充碼版本時，也會傳回此 HRESULT。|  
+|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|這個執行階段版本不支援此調試模型。 目前，CLR 版本不支援在 .NET Framework 4 之前的偵錯工具模型。 在此錯誤之後，`pwszVersion` 輸出參數仍然設定為正確的值。|  
+|CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|CLR 的版本大於此偵錯工具所宣告支援的版本。 在此錯誤之後，`pwszVersion` 輸出參數仍然設定為正確的值。|  
+|E_NO_INTERFACE|`riidProcess` 介面無法使用。|  
+|CORDBG_E_UNSUPPORTED_VERSION_STRUCT|`CLR_DEBUGGING_VERSION` 結構沒有可辨識的 `wStructVersion`值。 目前唯一接受的值是0。|  
   
 ## <a name="exceptions"></a>例外狀況  
   
@@ -92,11 +90,11 @@ HRESULT OpenVirtualProcess(
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

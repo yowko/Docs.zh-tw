@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 519389f2-0217-436c-99d4-93a76ebce5b5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7de5a6d38d43c20ce52f609ef6514a1f28022416
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1072026f92edbc646653c6dd74ec8e22d5b887e5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781143"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105912"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo 結構
-因為溢位而擲回的例外狀況，會儲存發生溢位和資訊的類型。  
+儲存發生的溢位類型，以及因溢位而擲回之例外狀況的資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,25 +33,25 @@ typedef struct _StackOverflowInfo {
 } StackOverflowInfo;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`soType`|值為[StackOverflowType](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md)列舉，指定的類型溢位。|  
-|`pExceptionInfo`|Win32 指標`EXCEPTION_POINTERS`物件，其中包含與不受機器限制的描述例外狀況的例外狀況記錄，以及內容記錄例外狀況當時的處理器內容的電腦相關描述。|  
+|`soType`|指定溢位類型的[StackOverflowType](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md)列舉值。|  
+|`pExceptionInfo`|Win32 `EXCEPTION_POINTERS` 物件的指標，其中包含例外狀況記錄，其中含有與電腦無關的例外狀況描述，以及具有在例外狀況時的處理器內容之電腦相依描述的內容記錄。|  
   
 ## <a name="remarks"></a>備註  
- A`StackOverflowInfo`物件會傳遞給[iactiononclrevent:: Onevent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)方法`Event_StackOverflow`事件。  
+ `StackOverflowInfo` 物件會傳遞給 `Event_StackOverflow` 事件的[IActionOnCLREvent：： OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.idl  
+ **標頭：** Mscoree.dll .idl  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

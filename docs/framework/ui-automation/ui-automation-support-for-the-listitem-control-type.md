@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-ms.openlocfilehash: 64431150969c25da9781871ad8dcd30e029cd62e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c2b1406519c80368cd00a888c541ec9abfce7faa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039443"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123087"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>ListItem 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -65,7 +65,7 @@ ms.locfileid: "73039443"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|視情況而定|如果可以操作項目隱藏或顯示資訊，則必須實作此控制項模式。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|視情況而定|如果項目可以編輯，則必須實作此控制項模式。 變更清單項目控制項時， <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>和 <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>的值也會跟著變更。|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|視情況而定|如果支援在清單容器內進行逐項空間巡覽，而且容器是以資料列和資料行的方式排列，則必須實作方格項目控制項模式。|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|視情況而定|如果項目有可以對其執行的命令 (選取除外)，則必須實作此模式。 這通常是與按兩下清單項目控制項相關聯的動作。 範例會從 [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]開機檔案，或在 Microsoft Windows 媒體播放機中播放音樂檔案。|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|視情況而定|如果項目有可以對其執行的命令 (選取除外)，則必須實作此模式。 這通常是與按兩下清單項目控制項相關聯的動作。 範例會從 Microsoft Windows Explorer 開機檔案，或在 Microsoft Windows 媒體播放機中播放音樂檔案。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  

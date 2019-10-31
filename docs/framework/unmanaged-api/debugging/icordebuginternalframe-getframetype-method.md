@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: da278a29-dc2e-4bf7-96ce-801bdc4d7025
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2a5461cc6a78347cdbe0d0b13f8111cb24c11006
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b7a33fd6e2178e0e9188b81f516b231702fb6460
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760054"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122720"
 ---
 # <a name="icordebuginternalframegetframetype-method"></a>ICorDebugInternalFrame::GetFrameType 方法
-取得這個內部框架的類型。  
+取得此內部框架的類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,16 +35,16 @@ HRESULT GetFrameType (
   
 ## <a name="parameters"></a>參數  
  `pType`  
- [out]CorDebugInternalFrameType 列舉，指出所表示的內部框架的類型值的指標`ICorDebugInternalFrame`物件。  
+ 脫銷CorDebugInternalFrameType 列舉值的指標，指出這個 `ICorDebugInternalFrame` 物件所表示之內部框架的類型。  
   
 ## <a name="remarks"></a>備註  
- 內部框架類型絕對不會 STUBFRAME_NONE。 偵錯工具應該依正常程序會忽略無法辨識內部的畫面格型別。  
+ 內部框架類型永遠不會 STUBFRAME_NONE。 偵錯工具應該會正常地忽略無法辨識的內部框架類型。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

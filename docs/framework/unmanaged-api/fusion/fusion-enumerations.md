@@ -6,19 +6,17 @@ helpviewer_keywords:
 - fusion enumerations [.NET Framework]
 - enumerations [.NET Framework fusion]
 ms.assetid: 5817b4bc-b0ba-4b2f-a11c-a03dd8cb8f84
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e7670e19d764518cc8d88f702f169610b72642a9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9a030d1f0ec6cc4fd7ca526574caa4c281e2573e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795326"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108496"
 ---
 # <a name="fusion-enumerations"></a>融合列舉
 本節說明融合 API 所使用的非受控列舉。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [ASM_CACHE_FLAGS 列舉](asm-cache-flags-enumeration.md)  
  指出全域組件快取中[IAssemblyCacheItem](iassemblycacheitem-interface.md)所代表之元件的來源。  
   
@@ -35,7 +33,7 @@ ms.locfileid: "70795326"
  表示由[CompareAssemblyIdentity](compareassemblyidentity-function.md)函式決定的兩個元件識別是否相等。  
   
  [CREATE_ASM_NAME_OBJ_FLAGS 列舉](create-asm-name-obj-flags-enumeration.md)  
- 指定物件由[CreateAssemblyNameObject](createassemblynameobject-function.md)函`IAssemblyName`式所建立時的屬性。  
+ 指定[CreateAssemblyNameObject](createassemblynameobject-function.md)函數所建立之 `IAssemblyName` 物件的屬性。  
   
 ## <a name="related-sections"></a>相關章節  
  [融合介面](fusion-interfaces.md)  

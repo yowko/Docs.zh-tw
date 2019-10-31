@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0e72d15ab4ca9b4468efb2a671022f30bfb3cc6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b9ec94184945c19b77247175e51bd5e8dc1ceee
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759951"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122670"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf 方法
-檢查是否`this`內部框架是接近 ICorDebugFrame 物件和指定的分葉。  
+檢查 `this` 的內部框架是否比指定的 ICorDebugFrame 物件更接近分葉。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,33 +34,33 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
 ## <a name="parameters"></a>參數  
  `pFrameToCompare`  
- [in]比較指標`ICorDebugFrame`物件。  
+ 在`ICorDebugFrame` 物件的比較指標。  
   
  `pIsCloser`  
- [out]`true`如果`this`內部框架是所指定的框架比接近分葉`pFrameToCompare`; 否則`false`。  
+ [out] `true` 如果 `this` 內部框架比 `pFrameToCompare`所指定的框架更接近分葉，否則，`false`。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功進行比較。|  
+|S_OK|已成功執行比較。|  
 |E_FAIL|無法執行比較。|  
 |E_INVALIDARG|`pFrameToCompare` 或 `pIsCloser` 為 null。|  
   
 ## <a name="remarks"></a>備註  
- `IsCloserToLeaf` 可用來實作交錯內部框架具有其他框架在堆疊上的原則。  
+ `IsCloserToLeaf` 可用來執行將內部框架與堆疊上的其他框架交錯的原則。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugInternalFrame2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

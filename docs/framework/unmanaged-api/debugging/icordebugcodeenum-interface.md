@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: b5589171-a4a0-4c00-bbdc-6e0a42233b75
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a771100ad4d63173fdb3b1ddea5ae3d67fbbc7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f4baaf5e4f5117ee936fa6d758798c340551c48b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960680"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121073"
 ---
 # <a name="icordebugcodeenum-interface"></a>ICorDebugCodeEnum 介面
 
-會執行 "ICorDebugEnum" 方法, 並列舉 "ICorDebugCode" 陣列。  
+會執行 "ICorDebugEnum" 方法，並列舉 "ICorDebugCode" 陣列。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-next-method.md)|從列舉中取得指定`ICorDebugCode`的實例數目, 從目前位置開始。|  
+|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-next-method.md)|從列舉中取得指定數目的 `ICorDebugCode` 實例，從目前位置開始。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -43,10 +41,10 @@ ms.locfileid: "69960680"
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

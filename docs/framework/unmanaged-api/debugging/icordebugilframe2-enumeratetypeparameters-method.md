@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 722d0d74-e0df-491f-98c4-62d501dfaf6f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f2e53bfb46579cc51b7ad88ef7de2b9f8d2f9390
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 715ff5d4a06b53361d550f04e5154023d0b641bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758764"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095115"
 ---
 # <a name="icordebugilframe2enumeratetypeparameters-method"></a>ICorDebugILFrame2::EnumerateTypeParameters 方法
-取得包含 ICorDebugTypeEnum 物件<xref:System.Type>這個框架中的參數。  
+取得 ICorDebugTypeEnum 物件，其中包含此框架中的 <xref:System.Type> 參數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,20 +35,20 @@ HRESULT EnumerateTypeParameters (
   
 ## <a name="parameters"></a>參數  
  `ppTyParEnum`  
- ICorDebugTypeEnum 介面物件，可讓列舉型別之型別參數的位址指標。  
+ 允許列舉型別參數之 ICorDebugTypeEnum 介面物件的位址指標。  
   
- 型別參數的清單中包含的類別型別參數 （如果有的話） 後接的方法類型參數 （如果有的話）。  
+ 型別參數的清單包含類別型別參數（如果有的話），後面接著方法型別參數（如果有的話）。  
   
 ## <a name="remarks"></a>備註  
- 使用[IMetaDataImport2::EnumGenericParams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md)方法來判斷多少類別型別參數和方法型別這份清單包含的參數。  
+ 請使用[IMetaDataImport2：： EnumGenericParams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md)方法來判斷此清單包含多少個類別類型參數和方法類型參數。  
   
- 型別參數不一定可用。  
+ 類型參數不一定可供使用。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

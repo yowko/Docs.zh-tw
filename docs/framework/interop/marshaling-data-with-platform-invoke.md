@@ -8,14 +8,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3167abd0c263a0a27573778d6f243bc824306a9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b8c4e9d835db044912d1cbed92a14dd05e7de658
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051692"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113934"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>使用平台叫用封送處理資料
 
@@ -33,7 +31,7 @@ ms.locfileid: "71051692"
 
 下表列出 Windows API 和 C 樣式函式中所使用的資料類型。 許多 Unmanaged 程式庫包含傳遞資料類型做為參數和傳回值的函式。 第三個行列出對應的 .NET Framework 內建實值類型或您在 Managed 程式碼中使用的類別。 在某些情況下，您可將本表格中所列的類型取代為相同大小的類型。
 
-|Windows API 中的 Unmanaged 類型|Unmanaged C 語言類型|Managed 類型|說明|
+|Windows API 中的 Unmanaged 類型|Unmanaged C 語言類型|Managed 類型|描述|
 |--------------------------------|-------------------------------|------------------------|-----------------|
 |`VOID`|`void`|<xref:System.Void?displayProperty=nameWithType>|套用至未傳回值的函式。|
 |`HANDLE`|`void *`|<xref:System.IntPtr?displayProperty=nameWithType> 或 <xref:System.UIntPtr?displayProperty=nameWithType>|在 32 位元 Windows 作業系統上為 32 位元，在 64 位元 Windows 作業系統上為 64 位元。|

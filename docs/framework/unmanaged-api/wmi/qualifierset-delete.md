@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Delete function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4bc26a16650a5beecc17898e0421e79536713deb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e7bedcb5c56f9976f8dfd2619081971075d0d809
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798332"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127305"
 ---
 # <a name="qualifierset_delete-function"></a>QualifierSet_Delete 函式
 依名稱刪除指定的限定詞。  
@@ -65,15 +63,15 @@ HRESULT QualifierSet_Delete (
 
 此函式會包裝對[IWbemQualifierSet：:D 刪除](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete)方法的呼叫。
 
-由於限定詞傳播規則的緣故，特定的辨識符號可能已經繼承自另一個物件，而且只會在目前的類別或實例中覆寫。 在此情況下， `QualifierSet_Delete`方法會將限定詞重設為其原始的繼承值。 在此情況下，函式會傳回`WBEM_S_RESET_TO_DEFAULT`狀態碼。
+由於限定詞傳播規則的緣故，特定的辨識符號可能已經繼承自另一個物件，而且只會在目前的類別或實例中覆寫。 在此情況下，`QualifierSet_Delete` 方法會將限定詞重設為其原始的繼承值。 在此情況下，函式會傳回狀態碼 `WBEM_S_RESET_TO_DEFAULT`。
 
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** WMINet_Utils.idl  
+ **標頭：** WMINet_Utils .idl  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WMI 和效能計數器（非受控 API 參考）](index.md)

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66a89acf-8c32-44c0-8787-960c99c7b3ec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2710d14d6e73879fd17a6b58659463ea205f2384
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 80979f0424469bb1d4771ad6507bb8c9d5364ab4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795373"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108601"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader 函式
 為指定的檔案建立記錄讀取器。  
@@ -48,15 +46,15 @@ HRESULT CreateHistoryReader (
 |傳回碼|描述|  
 |-----------------|-----------------|  
 |S_OK|表示方法已順利完成。|  
-|E_INVALIDARG|`wzFilePath`指出或`ppHistoryReader`設定為 null 參考。|  
+|E_INVALIDARG|表示 `wzFilePath` 或 `ppHistoryReader` 設定為 null 參考。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **LIBRARY:** 融合 .dll  
+ 連結**庫：** 融合 .dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [融合全域靜態函式](fusion-global-static-functions.md)

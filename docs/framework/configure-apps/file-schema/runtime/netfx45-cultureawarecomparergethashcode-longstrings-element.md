@@ -7,21 +7,19 @@ helpviewer_keywords:
 - GetHashCode method
 - hash codes, calculating
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ef814d1b5f32359033e8a19999d6271677315fff
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 193f9a15768e4060d977063117c07558bbb1d766
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252414"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116136"
 ---
 # <a name="netfx45_cultureawarecomparergethashcode_longstrings-element"></a>\<NetFx45_CultureAwareComparerGetHashCode_LongStrings > 元素
 
 指定執行階段是否使用固定的記憶體數量計算 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法的雜湊碼。
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<NetFx45_CultureAwareComparerGetHashCode_LongStrings >**  
 
 ## <a name="syntax"></a>語法
@@ -36,7 +34,7 @@ ms.locfileid: "70252414"
 
 ### <a name="attributes"></a>屬性
 
-|屬性|說明|
+|屬性|描述|
 |---------------|-----------------|
 |`enabled`|必要屬性。<br /><br /> 指定通用語言執行平台是否會在計算雜湊碼時配置固定數量的記憶體。|
 
@@ -47,7 +45,7 @@ ms.locfileid: "70252414"
 |0|通用語言執行平台會為 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法配置可變的記憶體數量來計算雜湊碼。 這是預設值。|
 |1|通用語言執行平台會為 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法配置固定的記憶體數量來計算雜湊碼。|
 
-### <a name="child-elements"></a>子元素
+### <a name="child-elements"></a>子項目
 
 無。
 
@@ -65,7 +63,7 @@ ms.locfileid: "70252414"
 > [!IMPORTANT]
 > `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` 項目不會在 [!INCLUDE[win8](../../../../../includes/win8-md.md)] (含) 以後版本中使用。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
 - [執行階段設定結構描述](index.md)

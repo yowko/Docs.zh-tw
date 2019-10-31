@@ -8,14 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c1a14f0ee36341c9579683f711ae78fc4df3f97
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8c4b328cdecb468af57fe699283584e901772175
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833647"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092001"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安裝適用於開發人員的 .NET Framework
 
@@ -28,7 +26,7 @@ ms.locfileid: "71833647"
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-如需 .NET Framework 版本以及如何判斷電腦上已安裝哪些版本的詳細資訊，請參閱[版本與相依關係](../migration-guide/versions-and-dependencies.md)和[作法：判斷安裝的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。
+如需 .NET Framework 的版本以及如何判斷電腦上已安裝哪些版本的詳細資訊，請參閱[版本和相依性](../migration-guide/versions-and-dependencies.md)及[如何：判斷安裝的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。
 
 > [!NOTE]
 > 如需 .NET Framework 3.5 的資訊，請參閱 [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](dotnet-35-windows-10.md)。
@@ -37,7 +35,7 @@ ms.locfileid: "71833647"
 
 |.NET Framework 版本|開發人員安裝|可轉散發安裝|平台支援|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.8**|[.NET Framework 4.8 開發人員套件](https://go.microsoft.com/fwlink/?linkid=2088517)|[下載中心 4.8 Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>[下載中心 4.8 離線安裝程式](https://go.microsoft.com/fwlink/?linkid=2088631)|**包含在：**<br/><br/>Windows 10 2019 年 5 月更新<br /><br /> **您可以安裝於：**<br/><br/>Windows 10 2018 年 10 月更新<br/>Windows 10 2018 4 月更新<br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 年度更新<br /> Windows 8.1 (含) 以前版本<br /> Windows Server 2019<br/>Windows Server，版本 1809<br/>Windows Server，版本 1803<br /><br/> (如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))||
+|**4.8**|[.NET Framework 4.8 開發人員套件](https://go.microsoft.com/fwlink/?linkid=2088517)|[下載中心 4.8 Web 安裝程式](https://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>[下載中心 4.8 離線安裝程式](https://go.microsoft.com/fwlink/?linkid=2088631)|**包含在：**<br/><br/>Windows 10 2019 年 5 月更新<br /><br /> **您可以安裝於：**<br/><br/>Windows 10 2018 年 10 月更新<br/>Windows 10 2018 4 月更新<br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 年度更新<br /> Windows 8.1 (含) 以前版本<br /> Windows Server 2019<br/>Windows Server，版本 1809<br/>Windows Server，版本 1803<br /><br/> (如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))||
 |**4.7.2**|[.NET Framework 4.7.2 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=874338)|[下載中心 4.7.2 Web 安裝程式](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[下載中心 4.7.2 離線安裝程式](https://go.microsoft.com/fwlink/?LinkId=863265)|**包含在：** <br/><br/>Windows 10 2018 年 10 月更新<br/>Windows 10 2018 4 月更新<br/>Windows Server 2019<br/>Windows Server，版本 1809<br/>Windows Server，版本 1803<br /><br /> **您可以安裝於：**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 年度更新<br /> Windows 8.1 (含) 以前版本<br /> Windows Server，1709 版 (含) 以前版本<br /><br/> (如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))||
 |**4.7.1**|[.NET Framework 4.7.1 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [4.7.1 離線安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=852107)|**包含在：** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server，版本 1709<br /><br /> **您可以安裝於：**<br/><br/> Windows 10 Creators Update <br /> Windows 10 年度更新<br /> Windows 8.1 (含) 以前版本<br /> Windows Server 2016 (含) 以前版本<br /> (如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))||
 |**4.7**|[.NET Framework 4.7 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=825319)|[4.7 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [4.7 離線安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=825303)|**包含在：** <br/><br/>Windows 10 Creators Update<br /><br /> **您可以安裝於：**<br /><br/> Windows 10 年度更新<br /> Windows 8.1 (含) 以前版本<br /> Windows Server 2016 (含) 以前版本<br /> (如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))||
@@ -170,7 +168,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 1. 開啟您已安裝之 .NET Framework 版本的語言套件下載頁面：
 
-    - [.NET Framework 4.8 語言套件](http://go.microsoft.com/fwlink/?LinkId=2053984)
+    - [.NET Framework 4.8 語言套件](https://go.microsoft.com/fwlink/?LinkId=2053984)
 
     - [.NET Framework 4.7.2 語言套件](https://go.microsoft.com/fwlink/?LinkID=863258)
 
@@ -237,7 +235,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 - 請參閱 [.NET Framework 參考來源](https://referencesource.microsoft.com/)在線上瀏覽 .NET Framework 原始程式碼。 [Github](https://github.com/Microsoft/referencesource) 亦提供該參考來源。 您可以[下載參考來源](https://referencesource.microsoft.com/download.html)供離線檢視，以及在偵錯期間逐步執行原始檔 (包含修補程式和更新) 之用。 如需詳細資訊，請參閱部落格文章：[.NET 參考來源的新風貌 (英文)](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [開發人員部署手冊](../deployment/deployment-guide-for-developers.md)
 - [系統管理員部署手冊](../deployment/guide-for-administrators.md)

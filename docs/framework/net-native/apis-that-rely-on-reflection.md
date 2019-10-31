@@ -2,14 +2,12 @@
 title: 依賴反映的 API
 ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d120dcf49f1c9097eee04434062a0363a7e144a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7329ac339912042fc5d2fb335faa3bf74ed03b8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049968"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128533"
 ---
 # <a name="apis-that-rely-on-reflection"></a>依賴反映的 API
 在某些情況下，在程式碼中使用反映並不明顯，因此 .NET Native 工具鏈並不會保留在執行時間所需的中繼資料。 本主題涵蓋一些常見的 API 或常見的程式設計模式，這些 API 或程式設計模式不是反映 API 的一部分，但依賴反映才能順利執行。 如果您在原始程式碼中使用這些 API 或程式設計模式，您可以將相關資訊加入至執行階段指示詞 (.rd.xml) 檔案，讓這些 API 的呼叫不會在執行階段擲回 [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外狀況或某個其他例外狀況。  
@@ -31,7 +29,7 @@ ms.locfileid: "71049968"
   
 無法執行這項作業，因為基於效能考慮，下列類型的中繼資料已移除：  
   
-`App1.AppClass`1 < 的 System.object > '。  
+`App1.AppClass`1 < System. Int32 > '。  
   
  您可以將下列執行階段指示詞加入至執行階段指示詞檔案，以加入 `Activate` 中繼資料，對 `AppClass<T>` 的 <xref:System.Int32?displayProperty=nameWithType> 進行特定具現化：  
   
@@ -90,7 +88,7 @@ Unfortunately, no further information is available.
 <Type Name="App1.Class1[]" Browse="Required Public" />  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [快速入門](getting-started-with-net-native.md)
+- [使用者入門](getting-started-with-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)

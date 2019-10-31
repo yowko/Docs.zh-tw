@@ -9,22 +9,20 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b2774c32b4ee3e67772f84d599ecc5dbeb6598b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4897462e20b193496c44d26923d0d0e2a13f7dd6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252585"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116803"
 ---
 # <a name="gcconcurrent-element"></a>\<gcConcurrent > 元素
 
 指定 Common Language Runtime 是否會在個別的執行緒執行記憶體回收。
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<gcConcurrent>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcConcurrent >**  
 
 ## <a name="syntax"></a>語法
 
@@ -35,7 +33,7 @@ ms.locfileid: "70252585"
 
 ## <a name="attributes-and-elements"></a>屬性和元素
 
-下列章節說明屬性、子元素和父元素。
+下列各節描述屬性、子項目和父項目。
 
 ### <a name="attributes"></a>屬性
 
@@ -45,7 +43,7 @@ ms.locfileid: "70252585"
 
 ## <a name="enabled-attribute"></a>enabled 屬性
 
-|值|說明|
+|值|描述|
 |-----------|-----------------|
 |`false`|不會同時執行垃圾收集。|
 |`true`|同時執行記憶體回收。 這是預設值。|
@@ -56,14 +54,14 @@ ms.locfileid: "70252585"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|項目|描述|
 |-------------|-----------------|
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|
 
 ## <a name="remarks"></a>備註
 
-在 .NET Framework 4 之前，工作站記憶體回收支援並行記憶體回收，這會在另一個執行緒上，在背景中執行記憶體回收。 在 .NET Framework 4 中，並行記憶體回收取代為背景 GC，這也會在另一個執行緒上，在背景中執行記憶體回收。 從 .NET Framework 4.5 開始，在伺服器記憶體回收中可以使用背景記憶體回收。 `<gcConcurrent>`元素會控制執行時間是否執行並行或背景垃圾收集 (如果有的話), 或是是否在前景執行垃圾收集。
+在 .NET Framework 4 之前，工作站記憶體回收支援並行記憶體回收，這會在另一個執行緒上，在背景中執行記憶體回收。 在 .NET Framework 4 中，並行記憶體回收取代為背景 GC，這也會在另一個執行緒上，在背景中執行記憶體回收。 從 .NET Framework 4.5 開始，在伺服器記憶體回收中可以使用背景記憶體回收。 `<gcConcurrent>` 元素會控制執行時間是否執行並行或背景垃圾收集（如果有的話），或是是否在前景執行垃圾收集。
 
 ### <a name="to-disable-background-garbage-collection"></a>若要停用背景垃圾收集
 
@@ -80,13 +78,13 @@ ms.locfileid: "70252585"
 </configuration>
 ```
 
- 如果電腦設定檔`<gcConcurrentSetting>`中有設定, 則會定義所有 .NET Framework 應用程式的預設值。 電腦組態檔設定會覆寫應用程式組態檔設定。
+ 如果電腦設定檔中有 `<gcConcurrentSetting>` 設定，它會定義所有 .NET Framework 應用程式的預設值。 電腦組態檔設定會覆寫應用程式組態檔設定。
 
- 如需並行和背景垃圾收集的詳細資訊, 請參閱[垃圾收集的基本](../../../../standard/garbage-collection/fundamentals.md)概念一文中的[並行垃圾收集](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection)一節。
+ 如需並行和背景垃圾收集的詳細資訊，請參閱[垃圾收集的基本](../../../../standard/garbage-collection/fundamentals.md)概念一文中的[並行垃圾收集](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection)一節。
 
 ## <a name="example"></a>範例
 
-下列範例會啟用並行垃圾收集:
+下列範例會啟用並行垃圾收集：
 
 ```xml
 <configuration>
@@ -96,7 +94,7 @@ ms.locfileid: "70252585"
 </configuration>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段設定結構描述](index.md)
 - [組態檔結構描述](../index.md)

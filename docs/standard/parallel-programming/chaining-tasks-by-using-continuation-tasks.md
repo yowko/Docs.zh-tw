@@ -8,17 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1f88308dcea250c02d9c6cd7f326570f8bc0133c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: bf8a1c028b7b987cb9a7340597087d799dfd4321
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630109"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123166"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>使用接續工作鏈結工作
-在非同步程式設計中，非同步作業完成時叫用第二個作業，並將資料傳遞給它，是很普遍的。 傳統上，會使用回呼方法完成接續。 在工作平行程式庫中，由 *「接續工作」*(continuation task) 提供相同的功能。 接續工作 (也只稱為接續) 是另一項稱為 *「前項」*(antecedent) 的工作所叫用的非同步工作，此時會完成前項。  
+在非同步程式設計中，非同步作業完成時叫用第二個作業，並將資料傳遞給它，是很普遍的。 傳統上，會使用回呼方法完成接續。 在工作平行程式庫中，由 *「接續工作」* (continuation task) 提供相同的功能。 接續工作 (也只稱為接續) 是另一項稱為 *「前項」* (antecedent) 的工作所叫用的非同步工作，此時會完成前項。  
   
  接續相對容易使用，但卻非常強大且有彈性。 例如，您可以：  
   
@@ -123,7 +121,7 @@ ms.locfileid: "64630109"
   
  當您為使用 TPL 而轉換現有之使用 [非同步程式設計模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 的程式碼時，接續狀態會很有用。 在 APM 中，您通常會在 **Begin**_Method_ 方法中提供物件狀態，並在稍後使用 <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> 屬性存取該狀態。 藉由使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 方法，當您轉換使用 APM 的程式碼為使用 TPL 時，您可以保留此狀態。  
   
- 當您使用 Visual Studio 偵錯工具中的 <xref:System.Threading.Tasks.Task> 物件時，接續狀態也相當有用。 例如，在 [平行工作]  視窗中，[工作]  資料行會顯示每項工作的狀態物件之字串表示。 如需 [平行工作] 視窗的詳細資訊，請參閱[使用工作視窗](/visualstudio/debugger/using-the-tasks-window)。  
+ 當您使用 Visual Studio 偵錯工具中的 <xref:System.Threading.Tasks.Task> 物件時，接續狀態也相當有用。 例如，在 [平行工作] 視窗中，[工作] 資料行會顯示每項工作的狀態物件之字串表示。 如需 [平行工作] 視窗的詳細資訊，請參閱[使用工作視窗](/visualstudio/debugger/using-the-tasks-window)。  
   
  下列範例示範如何使用接續狀態。 它會建立接續工作的鏈結。 每個工作會為 <xref:System.DateTime> 方法的 `state` 參數提供目前的時間，此為 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 物件。 每個 <xref:System.DateTime> 物件代表建立接續工作時的時間。 做為其結果，每一項工作會產生第二個 <xref:System.DateTime> 物件，表示工作完成時的時間。 所有工作都完成之後，此範例會顯示建立時間，以及顯示每個接續工作完成的時間。  
   
@@ -152,6 +150,6 @@ ms.locfileid: "64630109"
   
 - 如果接續是使用 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> 選項建立的附加子工作，則其父代會將例外狀況傳播回到呼叫的執行緒，如同任何附加之子系的情況。 如需詳細資訊，請參閱[附加與中斷連結的子工作](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

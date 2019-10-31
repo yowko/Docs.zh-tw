@@ -157,14 +157,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad4ea3b2d5fb828c425f30e76244772f5ca9a11a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5d75f60cb96ddb7bd9e24a7cdc4b8d2b61aff8f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043980"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104181"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe 錯誤訊息
 當您在 Visual Studio 2012 中使用 **Windows 執行階段元件**範本時，建置流程會呼叫 [Winmdexp.exe (Windows 執行階段中繼資料匯出工具)](winmdexp-exe-windows-runtime-metadata-export-tool.md)，因此 Winmdexp.exe 錯誤訊息就會出現在 [錯誤清單] 中。 Winmdexp.exe 會在使用 `/target:winmdobj` 選項編譯的模組上執行。 由於它需要編譯的模組做為輸入，因此除非編譯成功，否則其錯誤訊息不會出現。  
@@ -173,7 +171,7 @@ ms.locfileid: "71043980"
   
  如果該文件中沒有討論到您遇到的錯誤，而您認為訊息中包含的資訊不足，無法解決這個問題，請使用該文件中的意見反應連結並納入錯誤訊息。 或者，您也可以在 [Microsoft Connect 網站](https://go.microsoft.com/fwlink/p/?LinkId=251130)上提報 Bug。 您也可以在 [Microsoft 論壇](https://go.microsoft.com/fwlink/p/?LinkId=251129)上尋找詳細資訊。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Winmdexp.exe (Windows 執行階段中繼資料匯出工具)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
 - [診斷 Windows 執行階段元件錯誤條件](https://go.microsoft.com/fwlink/p/?LinkId=251127)

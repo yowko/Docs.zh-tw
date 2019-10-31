@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f9f62b9-113a-4a98-8f9b-b593cef27b03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0e5120b5fddf621d6f4c684c4c432fda4f5c0117
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e51ee2e4d44af547c82a21a782121976d07118c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745252"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124721"
 ---
 # <a name="icordebugchaingetreason-method"></a>ICorDebugChain::GetReason 方法
-取得這個呼叫鏈結發生的原因。  
+取得此呼叫鏈的創世原因。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,13 +35,13 @@ HRESULT GetReason (
   
 ## <a name="parameters"></a>參數  
  `pReason`  
- [out]CorDebugChainReason 列舉，指出此呼叫鏈結的發生原因的值 （位元的組合） 的指標。  
+ 脫銷CorDebugChainReason 列舉的值指標，指出這個呼叫鏈的創世原因。（位合）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

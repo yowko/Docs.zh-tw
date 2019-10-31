@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 625c3dd5-a3f0-442c-adde-310dadbb5054
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f5fab4ef0d67ab6b86510bd4b2f814d9456213fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a93d700c9c398076d87156cd2eb9c6d0d08cccfd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763988"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124480"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly 方法
-取得未參考的組件的參考[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)傳回[ihostassemblymanager:: Getnonhoststoreassemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)。 Common language runtime (CLR) 呼叫`ProvideAssembly`不會出現在清單中每個組件。  
+取得從[IHostAssemblyManager：： GetNonHostStoreAssemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)傳回之[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)未參考的元件參考。 Common language runtime （CLR）會針對每個未出現在清單中的元件呼叫 `ProvideAssembly`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,46 +39,46 @@ HRESULT ProvideAssembly (
   
 ## <a name="parameters"></a>參數  
  `pBindInfo`  
- [in]指標[AssemblyBindInfo](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)主機用來判斷特定繫結的特性，包括任何版本設定的原則，是否存在的執行個體和要繫結至哪個組件。  
+ 在[AssemblyBindInfo](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)實例的指標，可供主機用來判斷特定系結特性，包括是否有任何版本設定原則，以及要系結至哪個元件。  
   
  `pAssemblyId`  
- [out]此要求的組件的唯一識別碼的指標`IStream`。  
+ 脫銷這個 `IStream`之要求元件的唯一識別碼指標。  
   
  `pHostContext`  
- [out]用來判斷要求的組件，而不需要的平台的辨識項的主應用程式專屬資料的指標叫用呼叫。 `pHostContext` 對應至<xref:System.Reflection.Assembly.HostContext%2A>的 managed 屬性<xref:System.Reflection.Assembly>類別。  
+ 脫銷主機特定資料的指標，用來判斷所要求元件的辨識項，而不需要平台叫用呼叫。 `pHostContext` 對應至 managed <xref:System.Reflection.Assembly> 類別的 <xref:System.Reflection.Assembly.HostContext%2A> 屬性。  
   
  `ppStmAssemblyImage`  
- [out]位址指標`IStream`，包含要載入，或如果找不到組件，則為 null 的可攜式執行檔 (PE) 映像。  
+ 脫銷`IStream` 的位址指標，其中包含要載入的可移植執行檔（PE）影像，如果找不到元件，則為 null。  
   
  `ppStmPDB`  
- [out]位址指標`IStream`如果找不到.pdb 檔案包含的程式偵錯 (PDB) 的資訊或 null。  
+ 脫銷包含程式 debug （PDB）資訊之 `IStream` 位址的指標，如果找不到 .pdb 檔，則為 null。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`ProvideAssembly` 已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
-|HOST_E_TIMEOUT|呼叫已逾時。|  
-|HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL CLR 已不再可在此程序中使用。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
-|COR_E_FILENOTFOUND (0x80070002)|找不到要求的組件。|  
-|E_NOT_SUFFICIENT_BUFFER|所指定的緩衝區大小`pAssemblyId`不夠大，無法存放主機想要傳回的識別項。|  
+|S_OK|已成功傳回 `ProvideAssembly`。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫超時。|  
+|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
+|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
+|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|COR_E_FILENOTFOUND （0x80070002）|找不到要求的元件。|  
+|E_NOT_SUFFICIENT_BUFFER|`pAssemblyId` 所指定的緩衝區大小不夠大，無法容納主機想要傳回的識別碼。|  
   
 ## <a name="remarks"></a>備註  
- 針對傳回的識別值`pAssemblyId`由主應用程式。 在處理序的存留期內，識別碼必須是唯一的。 CLR 會使用此值的唯一識別碼做為資料流。 它會檢查每個值的值對`pAssemblyId`傳回的其他呼叫`ProvideAssembly`。 如果主應用程式會傳回相同`pAssemblyId`另一個值`IStream`，CLR 會檢查該資料流的內容是否已經對應。 如果是的話，則執行階段會載入而不是一個新的映像的現有副本。  
+ 針對 `pAssemblyId` 所傳回的識別值是由主機指定。 識別碼在進程的存留期間內必須是唯一的。 CLR 會使用此值做為資料流程的唯一識別碼。 它會根據 `ProvideAssembly`的其他呼叫所傳回的 `pAssemblyId` 值來檢查每個值。 如果主機針對另一個 `IStream`傳回相同的 `pAssemblyId` 值，則 CLR 會檢查該資料流程的內容是否已對應。 若是如此，執行時間就會載入影像的現有複本，而不是對應新的映射。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRAssemblyReferenceList 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
 - [IHostAssemblyManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)

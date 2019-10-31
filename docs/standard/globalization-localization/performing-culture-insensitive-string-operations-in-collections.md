@@ -15,21 +15,19 @@ helpviewer_keywords:
 - SortedList class, culture-insensitive string operations
 - culture parameter
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 222376e220bf74274082dfc6b76dc861d4f8ddc5
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 5bd6e49f23ca5b694664393f3eb18cc72ada7bdd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855979"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120821"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>在集合中執行不區分文化特性的字串作業
 
 <xref:System.Collections> 命名空間中有某些類別和成員依預設會提供區分文化特性的行為。 <xref:System.Collections.CaseInsensitiveComparer> 和 <xref:System.Collections.CaseInsensitiveHashCodeProvider> 類別的無參數建構函式會使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 屬性，初始化新的執行個體。 <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> 方法的所有多載預設都會使用 `Thread.CurrentCulture` 屬性，建立 <xref:System.Collections.Hashtable> 類別的新執行個體。 <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> 方法的多載預設會使用 `Thread.CurrentCulture` 來執行區分文化特性的排序。 當字串當作索引鍵使用時，<xref:System.Collections.SortedList> 中的排序和查閱作業可能會受到 `Thread.CurrentCulture` 的影響。 請遵循本節提供的使用建議，以從 `Collections` 命名空間中的這些類別和方法取得不區分文化特性的結果。
 
 > [!NOTE]
-> 傳遞<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>至比較方法會執行不區分文化特性的比較。 不過，它不會讓某些項目進行非語言比較，例如檔案路徑、登錄機碼和環境變數。 它也不支援根據比較結果所做出的安全性決策。 若要進行非語言比較或需要支援根據結果的安全性決策，應用程式應該使用可接受 <xref:System.StringComparison> 值的比較方法。 接著，應用程式應該會傳遞 <xref:System.StringComparison>。
+> 將 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 傳遞至比較方法，會執行不區分文化特性的比較。 不過，它不會讓某些項目進行非語言比較，例如檔案路徑、登錄機碼和環境變數。 它也不支援根據比較結果所做出的安全性決策。 若要進行非語言比較或需要支援根據結果的安全性決策，應用程式應該使用可接受 <xref:System.StringComparison> 值的比較方法。 接著，應用程式應該會傳遞 <xref:System.StringComparison>。
 
 ## <a name="using-the-caseinsensitivecomparer-and-caseinsensitivehashcodeprovider-classes"></a>使用 CaseInsensitiveComparer 和 CaseInsensitiveHashCodeProvider 類別
 
@@ -140,7 +138,7 @@ internal class InvariantComparer : IComparer
 
 `ArrayList.Sort` 方法的多載預設會使用 `Thread.CurrentCulture` 屬性來執行區分文化特性的排序。 由於排序次序不同，結果會因文化特性而異。 若要消除區分文化特性的行為，請使用此方法中可接受 `IComparer` 實作的多載。 至於 `comparer` 參數，請指定自訂的非變異值比較子類別，以使用 `CultureInfo.InvariantCulture`。 [使用 SortedList 類別](#cpconperformingculture-insensitivestringoperationsincollectionsanchor1)主題會提供自訂非變異值比較子類別的範例。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.CaseInsensitiveComparer>
 - <xref:System.Collections.CaseInsensitiveHashCodeProvider>

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c0f4836a3dc848b52ee7fe6947f350e6fab787f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c5199794098e4d83588728eeb165aee5f81fe4c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737560"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088506"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>ICorDebugArrayValue::GetDimensions 方法
-取得這個陣列的每個維度中的項目數目。  
+取得這個陣列的每個維度中的元素數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,18 +37,18 @@ HRESULT GetDimensions (
   
 ## <a name="parameters"></a>參數  
  `cdim`  
- [in]這個 ICorDebugArrayValue 物件的維度數目。  
+ 在這個 ICorDebugArrayValue 物件的維度數目。  
   
- 此值也是的大小`dims`因為其大小的維度數目等於陣列`ICorDebugArrayValue`物件。  
+ 這個值也是 `dims` 陣列的大小，因為它的大小等於 `ICorDebugArrayValue` 物件的維度數目。  
   
  `dims`  
- [out]整數的陣列，其中每個在此維度中指定的項目數`ICorDebugArrayValue`物件。  
+ 脫銷整數的陣列，其中每個都指定此 `ICorDebugArrayValue` 物件中維度的元素數目。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

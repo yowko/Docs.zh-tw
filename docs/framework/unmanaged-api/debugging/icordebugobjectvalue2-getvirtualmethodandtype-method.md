@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 621b4543-a8f7-4117-98e4-930992cd688a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bcbe9a701b91a063e19fec5aae9cc2687b1f279f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17cb3440c5b33d461b1624608ce115e1942d6beb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766141"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129723"
 ---
 # <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a>ICorDebugObjectValue2::GetVirtualMethodAndType 方法
 尚未實作這個方法。  
@@ -38,6 +36,6 @@ HRESULT GetVirtualMethodAndType (
 ```  
   
 ## <a name="remarks"></a>備註  
- 取得的介面指標 」 ICorDebugFunction"和"ICorDebugType 」 執行個體表示的最具衍生性的方法和指定的成員參考的型別。  
+ 取得 "ICorDebugFunction" 和 "ICorDebugType" 實例的介面指標，表示指定成員參考的最衍生方法和類型。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

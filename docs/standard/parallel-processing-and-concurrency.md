@@ -8,19 +8,17 @@ helpviewer_keywords:
 - concurrency [.NET]
 - asynchronous programming [.NET]
 ms.assetid: e573faa8-0212-44b1-a850-ce85dc54f47f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 896b572ef6a9b285787c39a41c99c8f0209b28cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 08a1b45759b1b78368f867161a13cf2af4db1a60
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582632"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123193"
 ---
 # <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>.NET 中的平行處理、並行和非同步程式設計
 .NET 提供數種方式，以供您撰寫非同步程式碼，讓應用程式對使用者更具回應，並撰寫使用多個執行緒執行的平行程式碼，將您使用者電腦的效能最大化。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [非同步程式設計](../../docs/standard/async.md)  
  描述 .NET 所提供之非同步程式設計的機制。  
   

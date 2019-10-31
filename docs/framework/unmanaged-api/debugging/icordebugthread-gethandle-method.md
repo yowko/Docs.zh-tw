@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 172ef8c4-2ead-4cfc-bd2e-dee4fb7191cd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54981be7104eb04ac6347ad13b61a69f40d4377c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 33219d9a67379244e23da49c13617a4c4a2fa66d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770618"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133458"
 ---
 # <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle 方法
-取得此 ICorDebugThread 作用中的部份目前的控制代碼。  
+取得此 ICorDebugThread 之使用中部分的目前控制碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,18 +35,18 @@ HRESULT GetHandle (
   
 ## <a name="parameters"></a>參數  
  `phThreadHandle`  
- [out]這個執行緒使用中部分的控制代碼 HTHREAD 指標。  
+ 脫銷HTHREAD 的指標，這是這個執行緒之作用中部分的控制碼。  
   
 ## <a name="remarks"></a>備註  
- 此程序執行，以及可能會因不同部分之執行緒的控制代碼可能會變更。  
+ 控制碼可能會在進程執行時變更，而且可能會因為執行緒的不同部分而有所不同。  
   
- 這個控制代碼是由偵錯 API 所擁有。 偵錯工具應該複製它後才能使用它。  
+ 這個控制碼是由偵錯工具 API 所擁有。 偵錯工具在使用它之前，應該先複製它。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

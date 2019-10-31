@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4d946ad4-3c19-42cb-bec9-8633325ba769
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b712ee0bb8e67f448b7ea2bee3c092367181abad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c927dcde99f5217ee7c160359385e0b953034380
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740220"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132233"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>CorDebugExceptionCallbackType 列舉
-表示一種從進行的回呼[ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件。  
+表示從[ICorDebugManagedCallback2：： Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件進行的回呼類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,13 +35,13 @@ typedef enum CorDebugExceptionCallbackType {
 } CorDebugExceptionCallbackType;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_FIRST_CHANCE`|擲回例外狀況。|  
-|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|例外狀況結束處理序已輸入使用者程式碼。|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|結束例外狀況的處理序已找到`catch`中使用者程式碼區塊。|  
+|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|例外狀況 windup 處理常式已進入使用者程式碼。|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|例外狀況 windup 進程在使用者程式碼中找到 `catch` 區塊。|  
 |`DEBUG_EXCEPTION_UNHANDLED`|未處理例外狀況。|  
   
 ## <a name="requirements"></a>需求  
@@ -51,10 +49,10 @@ typedef enum CorDebugExceptionCallbackType {
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

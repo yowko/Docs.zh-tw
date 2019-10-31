@@ -8,14 +8,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a460ac730db85dfa8d4a8ee6949a168bc228193d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 70ed4176872e18ccafa00808630fcc51337b8479
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631382"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123217"
 ---
 # <a name="runtime-callable-wrapper"></a>執行階段可呼叫包裝函式
 Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) 的 Proxy 來公開 COM 物件。 雖然 RCW 對 .NET 用戶端似乎是個普通物件，但其主要功能是在 .NET 用戶端與 COM 物件之間封送處理呼叫。  
@@ -43,7 +41,7 @@ Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) �
   
  RCW 使用下表中列出的介面，其包裝的物件會公開這些介面。  
   
-|介面|說明|  
+|介面|描述|  
 |---------------|-----------------|  
 |**IDispatch**|適用於透過反映，晚期繫結至 COM 物件。|  
 |**IErrorInfo**|提供錯誤的文字描述、其來源、說明檔、說明內容，以及定義錯誤之介面的 GUID (.NET 類別一律為 **GUID_NULL**)。|  
@@ -52,13 +50,13 @@ Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) �
   
  RCW 會選擇性使用下表列出的介面，其包裝的物件會公開這些介面。  
   
-|介面|說明|  
+|介面|描述|  
 |---------------|-----------------|  
 |**IConnectionPoint** 和 **IConnectionPointContainer**|RCW 會將公開連接點事件樣式的物件，轉換成委派架構的事件。|  
-|**IDispatchEx** (僅限 .NET Framework) |如果類別實作 **IDispatchEx**，RCW 就會實作 **IExpando**。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫呼叫。|  
+|**IDispatchEx** (僅限 .NET Framework) |如果類別實作 **IDispatchEx**，RCW 就會實作 **IExpando**。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸模組，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫的呼叫。|  
 |**IEnumVARIANT**|可讓支援列舉的 COM 類型被視為集合來處理。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [COM 包裝函式](com-wrappers.md)
 - [COM 可呼叫包裝函式](com-callable-wrapper.md)

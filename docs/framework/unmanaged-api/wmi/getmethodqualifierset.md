@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetMethodQualifierSet function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 86a7788736c3c12cfcfd405de88dfadfb14c1eca
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1a36200fd214d013a10ed21c22e1f652de2cbf17
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798524"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102579"
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet 函式
 
@@ -49,19 +47,19 @@ HRESULT GetMethodQualifierSet (
 在[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)實例的指標。
 
 `wszMethod`\
-在方法名稱。 `wszMethod`必須指向有效`LPCWSTR`的。
+在方法名稱。 `wszMethod` 必須指向有效的 `LPCWSTR`。
 
 `ppQualSet`\
-脫銷接收介面指標，允許存取方法的限定詞。 `ppQualSet` 不可以是 `null`。 如果發生錯誤，則不會傳回新的物件，並將指標設定為指向`null`。
+脫銷接收介面指標，允許存取方法的限定詞。 `ppQualSet` 不可以是 `null`。 如果發生錯誤，則不會傳回新的物件，而且指標會設定為指向 `null`。
 
 ## <a name="return-value"></a>傳回值
 
 這個函式所傳回的下列值會定義在*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數：
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定的方法不存在。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數為`null`。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數為 `null`。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
 
 ## <a name="remarks"></a>備註
@@ -76,10 +74,10 @@ HRESULT GetMethodQualifierSet (
 
 **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
-**標頭：** WMINet_Utils.idl
+**標頭：** WMINet_Utils .idl
 
 **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WMI 和效能計數器（非受控 API 參考）](index.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4244ef04d6789b7c17ccc8330cb0c26a6c9f3866
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 295deeec2e8eb42ccaa4d0cfb8b08b32438d047c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765555"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120244"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface 方法
-將 CLR 載入目前的處理序，並傳回執行階段介面指標，例如[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)， [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)，並[IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)。  
+將 CLR 載入目前的進程，並傳回執行時間介面指標，例如[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)、 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)和[IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)。  
   
- 這個方法會取代所有`CorBindTo`* 中的函式[已被取代 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)一節。  
+ 這個方法會取代已被取代的[CLR 裝載](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)函式一節中的所有 `CorBindTo`* 函數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,13 +38,13 @@ HRESULT GetInterface(
   
 ## <a name="parameters"></a>參數  
  `rclsid`  
- [in]Coclass 的 CLSID 的介面。  
+ 在Coclass 的 CLSID 介面。  
   
  `riid`  
- [in]要求 IID`rclsid`介面。  
+ 在要求之 `rclsid` 介面的 IID。  
   
  `ppUnk`  
- [out]查詢介面的指標。  
+ 脫銷所查詢介面的指標。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
@@ -55,18 +53,18 @@ HRESULT GetInterface(
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |E_POINTER|`ppUnk` 為 null。|  
-|E_OUTOFMEMORY|沒有足夠的記憶體是可用來處理要求。|  
-|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|不同的執行階段已經繫結到舊版的 CLR 版本 2 的啟用原則。|  
+|E_OUTOFMEMORY|沒有足夠的記憶體可用來處理要求。|  
+|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|不同的執行時間已系結至舊版 CLR 第2版啟用原則。|  
   
 ## <a name="remarks"></a>備註  
- 這個方法會導致 CLR 載入，但未初始化。  
+ 這個方法會載入 CLR，但不會初始化。  
   
- 下表顯示支援的組合，如`rclsid`和`riid`。  
+ 下表顯示支援的 `rclsid` 和 `riid`組合。  
   
 |`rclsid`|`riid`|  
 |--------------|------------|  
-|CLSID_CorMetaDataDispenser|IID_IMetaDataDispenser IID_IMetaDataDispenserEx|  
-|CLSID_CorMetaDataDispenserRuntime|IID_IMetaDataDispenser IID_IMetaDataDispenserEx|  
+|CLSID_CorMetaDataDispenser|IID_IMetaDataDispenser, IID_IMetaDataDispenserEx|  
+|CLSID_CorMetaDataDispenserRuntime|IID_IMetaDataDispenser, IID_IMetaDataDispenserEx|  
 |CLSID_CorRuntimeHost|IID_ICorRuntimeHost|  
 |CLSID_CLRRuntimeHost|IID_ICLRRuntimeHost|  
 |CLSID_TypeNameFactory|IID_ITypeNameFactory|  
@@ -77,13 +75,13 @@ HRESULT GetInterface(
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MetaHost.h  
+ **標頭：** MetaHost。h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRRuntimeInfo 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

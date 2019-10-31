@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3f1b6bc4-6efb-4b90-8be0-b1ba8d856ca0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 93b3ae8c83973c4d981fc42d4a8f616c62b1b28a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b9992ffc8e81356d96dd645faebd5a6d26a12ddd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672857"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124869"
 ---
 # <a name="itypenamebuilderaddbyref-method"></a>ITypeNameBuilder::AddByRef 方法
 
@@ -38,12 +36,12 @@ HRESULT AddByRef ( );
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**標頭：** MSCorEE.h
+**標頭：** Mscoree.dll. h
 
-**LIBRARY:** 包含做為 MSCorEE.dll 中的資源
+連結**庫：** 包含為 Mscoree.dll 中的資源
 
 **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

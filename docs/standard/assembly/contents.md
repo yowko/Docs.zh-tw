@@ -1,5 +1,5 @@
 ---
-title: 元件內容
+title: 組件內容
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - single-file assemblies
 - multifile assemblies [.NET Framework]
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6d9268b0ec1ea919730a2ebcd209507692284cc6
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9ca12ee4bd993db3dd200a3b340c220ce5188796
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973373"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122541"
 ---
-# <a name="assembly-contents"></a>元件內容
+# <a name="assembly-contents"></a>組件內容
 一般而言，靜態組件可包含四個項目：
 
 - [組件資訊清單](manifest.md)，其中含有組件中繼資料。
@@ -38,7 +36,7 @@ ms.locfileid: "70973373"
 
 目前在設計原始程式碼時，您必須明確決定要如何將應用程式的功能分割在一個或多個檔案中。 在設計 .NET Framework 程式碼時，您也必須做出如何將功能分割為一個或多個組件的類似決定。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 中的組件](index.md)
 - [組件資訊清單](manifest.md)

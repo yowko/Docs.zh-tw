@@ -1,20 +1,18 @@
 ---
-title: 具有元件的程式
+title: 具有組件的程式
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], programming
 - programming assemblies
 ms.assetid: 25918b15-701d-42c7-95fc-c290d08648d6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 03babe701b46eab54a76094c4728af80e6d9911e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9f07d36d9e47189d53e367fd1406e5684c024aa3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973135"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107061"
 ---
-# <a name="program-with-assemblies"></a>具有元件的程式
+# <a name="program-with-assemblies"></a>具有組件的程式
 組件是 .NET Framework 的建置組塊；它們構成部署、版本控制、重複使用、啟用範圍和安全性權限的基礎單位。 組件為通用語言執行平台提供了感知型別實作所需的資訊。 它是建置來共同運作及構成一個功能邏輯單位的類型與資源集合。 對於執行階段而言，型別不會存在於組件的內容以外。  
   
  本節描述如何建立模組、從模組建立組件、建立金鑰組並使用強式名稱來簽署組件，以及將組件安裝到全域組件快取中。 此外，本節還會描述如何使用 [MSIL 反組譯工具 (Ildasm.exe)](../../framework/tools/ildasm-exe-il-disassembler.md) 來檢視組件資訊清單資訊。  
@@ -29,7 +27,7 @@ ms.locfileid: "70973135"
  [元件名稱](names.md)  
  提供組件命名概觀。  
   
- [如何：決定元件的完整名稱](find-fully-qualified-name.md)  
+ [如何：判斷元件的完整名稱](find-fully-qualified-name.md)  
  描述如何決定組件的完整名稱。  
   
  [以完全信任的方式執行內部網路應用程式](../../framework/app-domains/running-intranet-applications-in-full-trust.md)  

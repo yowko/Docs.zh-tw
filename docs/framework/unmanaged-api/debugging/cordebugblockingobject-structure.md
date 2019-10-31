@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5944edd1-0914-4efa-aba0-d5a277c38b1a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57de11c1c40c05befcf3c99c31c2e07e1ecaec5a
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 21f90e06b3b02ebc6c97610b6edc35697601f0ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71273962"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132293"
 ---
 # <a name="cordebugblockingobject-structure"></a>CorDebugBlockingObject 結構
 定義封鎖執行緒的物件，以及執行緒遭到封鎖的特定原因。  
@@ -37,7 +35,7 @@ CorDebugBlockingReason blockingReason;
 }  CorDebugBlockingObject;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
@@ -50,13 +48,13 @@ CorDebugBlockingReason blockingReason;
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl  
+ **標頭：** Cordebug.h .idl  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯結構](debugging-structures.md)
 - [偵錯](index.md)

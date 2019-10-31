@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 5fb645d9-b818-401c-8c2c-c30d86de58ba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dcf63000de549b42d92ba157a7e550ac605bbfcd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 103ac75e7c3eaf9739c3a448ff1c052c158621db
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768386"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090899"
 ---
-# <a name="lpoverlappedcompletionroutine-function-pointer"></a>LPOVERLAPPED_COMPLETION_ROUTINE 函式指標
-指向主應用程式時之重疊的函式 (也就是非同步) 至裝置的 I/O 已完成。  
+# <a name="lpoverlapped_completion_routine-function-pointer"></a>LPOVERLAPPED_COMPLETION_ROUTINE 函式指標
+指向函式，當裝置的重迭（也就是非同步） i/o 完成時，會通知主機。  
   
- 在.NET Framework 4 中，已被取代此函式指標。  
+ 這個函式指標在 .NET Framework 4 中已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,28 +38,28 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
   
 ## <a name="parameters"></a>參數  
  `dwErrorCode`  
- [in]如果裝置已關閉; 為錯誤碼的值否則，此值為零。  
+ 在如果裝置已關閉，則為錯誤碼的值;否則，這個值會是零。  
   
- 關閉裝置，讓所有擱置 I/O 裝置中的立即完成。  
+ 關閉裝置會導致裝置的所有擱置中 i/o 立即完成。  
   
  `dwNumberOfBytesTransfered`  
- [in]I/O 作業所傳送的位元組數目。  
+ 在I/o 作業所傳輸的位元組數目。  
   
  `lpOverlapped`  
- [in]包含用來完成的 I/O 要求的資訊結構的指標。  
+ 在結構的指標，其中包含用來完成 i/o 要求的資訊。  
   
 ## <a name="remarks"></a>備註  
- 函式，其中`LPOVERLAPPED_COMPLETION_ROUTINE`點是回呼函式，而且必須在裝載應用程式寫入器實作。 回呼函式可讓主應用程式處理已完成的 I/O 要求。  
+ `LPOVERLAPPED_COMPLETION_ROUTINE` 點的函式是回呼函式，必須由主控應用程式的寫入器來執行。 回呼函式可讓主機處理已完成的 i/o 要求。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** MSCorWks.dll  
+ 連結**庫：** Mscorwks.dll .dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

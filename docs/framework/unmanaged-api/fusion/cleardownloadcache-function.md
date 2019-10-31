@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: df7595d1-430f-44b4-8160-4c2ba9df70b1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1fb752822cd406585f7f4a257ea4c51dab7b1f16
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0648ba9a35290543f485a67719c6adfeba9114b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795459"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108959"
 ---
 # <a name="cleardownloadcache-function"></a>ClearDownloadCache 函式
 清除已下載元件的全域組件快取。  
@@ -39,11 +37,11 @@ HRESULT ClearDownloadCache ();
   
  **標頭：** 融合。h  
   
- **LIBRARY:** 融合 .dll 和 Mscorwks.dll。 請使用 [Mscorwks.dll]，而不是 []，以確保您以正確的 .NET Framework 版本為目標。  
+ 連結**庫：** 融合 .dll 和 Mscorwks.dll。 請使用 [Mscorwks.dll]，而不是 []，以確保您以正確的 .NET Framework 版本為目標。  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [融合全域靜態函式](fusion-global-static-functions.md)
 - [全域組件快取](../../app-domains/gac.md)

@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e3c3958-80bb-43b1-a96b-dd3e6dbd9cd7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a05a779d4a56eb8f881da1824d5ffaa363b5a01
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 1d42292705dae03e9bf1a1555508dfb69cebde82
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274286"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132428"
 ---
 # <a name="closeclrenumeration-function"></a>CloseCLREnumeration 函式
 關閉位於[EnumerateCLRs](enumerateclrs-function.md)函式所傳回之控制碼陣列中的任何有效 common language RUNTIME （CLR）繼續-啟動事件，並釋放控制碼和字串路徑陣列的記憶體。  

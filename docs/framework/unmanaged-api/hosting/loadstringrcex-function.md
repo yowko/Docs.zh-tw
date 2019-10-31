@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4a0cac77d7bf7611acf6042298bfe6814d8f4352
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68332aee895f012bcf6ab6a72936c8dddc7f28a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768447"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122040"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx 函式
-將 HRESULT 值轉譯成適當的錯誤訊息指定的文化特性。  
+針對指定的文化特性，將 HRESULT 值轉譯為適當的錯誤訊息。  
   
- 此函式已被取代，在.NET Framework 4。  
+ 此函式在 .NET Framework 4 中已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,44 +41,44 @@ HRESULT LoadStringRCEx (
   
 ## <a name="parameters"></a>參數  
  `lcid`  
- [in]文化特性識別項。 傳遞 – 1`lcid`若要使用的預設文化特性。  
+ 在文化特性識別碼。 傳遞-1 表示 `lcid` 使用預設文化特性。  
   
  `iResourceID`  
- [in]HRESULT。  
+ 在HRESULT。  
   
  `szBuffer`  
- [out]這種緩衝區包含成功完成時的錯誤訊息。  
+ 脫銷一個緩衝區，其中包含成功完成時的錯誤訊息。  
   
  `iMax`  
- [in]錯誤訊息緩衝區的大小。  
+ 在錯誤訊息緩衝區的大小。  
   
  `bQuiet`  
- [in]略過。  
+ 在忽略.  
   
  `pcwchUsed`  
- [out]錯誤訊息的長度指標。  
+ 脫銷錯誤訊息長度的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 中所定義 WinError.h，除了下列的值，這個方法會傳回標準的 COM 錯誤代碼。  
+ 這個方法會傳回標準 COM 錯誤碼（如 Winerror.h 中所定義），以及下列值。  
   
-|傳回碼|說明|  
+|傳回碼|描述|  
 |-----------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|E_INVALIDARG|`szBuffer` 為 null，或`iMax`為零 (0)。|  
+|E_INVALIDARG|`szBuffer` 為 null，或 `iMax` 為零（0）。|  
   
 ## <a name="remarks"></a>備註  
- 如果方法未成功完成`szBuffer`包含空字串。  
+ 如果方法未順利完成，`szBuffer` 會包含空字串。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** MSCorEE.dll  
+ 連結**庫：** Mscoree.dll .dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
 - [LoadStringRC 函式](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)

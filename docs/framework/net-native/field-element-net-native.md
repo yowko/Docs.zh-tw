@@ -1,17 +1,15 @@
 ---
-title: <Field>元素（.NET Native）
+title: <Field> 元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6dfb6a07f9733ab1a01a1ce9917c6a4bb4ce793b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2a63b88c399a999cd00750dee1614352cea10e80
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049769"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128412"
 ---
-# <a name="field-element-net-native"></a>\<Field > 元素（.NET Native）
+# <a name="field-element-net-native"></a>\<欄位 > 元素（.NET Native）
 將執行階段反映原則套用至欄位。  
   
 ## <a name="syntax"></a>語法  
@@ -28,7 +26,7 @@ ms.locfileid: "71049769"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|屬性類型|說明|  
+|屬性|屬性類型|描述|  
 |---------------|--------------------|-----------------|  
 |`Name`|一般|必要屬性。 指定欄位名稱。|  
 |`Browse`|反射|選擇性屬性。 控制對欄位相關資訊的查詢，或控制欄位的列舉，但不會在執行階段啟用任何動態存取。|  
@@ -43,16 +41,16 @@ ms.locfileid: "71049769"
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*policy_setting*|要為欄位套用此原則類型的設定。 可能的值為 `Auto`、`Excluded`、`Included` 和 `Required`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|將反映原則套用至建構泛型類型及其所有成員。|  
@@ -60,7 +58,7 @@ ms.locfileid: "71049769"
 ## <a name="remarks"></a>備註  
  如果未明確定義欄位的原則，則會繼承其父元素的執行階段原則。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段指示詞項目](runtime-directive-elements.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)

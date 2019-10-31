@@ -6,42 +6,40 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], hosting
 - structures [.NET Framework hosting]
 ms.assetid: 492e010f-7493-4134-9505-f7008ccdaae6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 01b12af8c3c3a2f834827ff14665050e07b31467
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d43225574b8794733ee2e83562699276ddc5bab
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985591"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126930"
 ---
 # <a name="hosting-structures"></a>裝載結構
-本章節描述裝載 API 所使用的 unmanaged 的結構。  
+本節說明裝載 API 所使用的非受控結構。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [AssemblyBindInfo 結構](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)  
- 提供參考的組件的詳細的資訊。  
+ 提供有關所參考元件的詳細資訊。  
   
  [BucketParameters 結構](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md)  
- 儲存目前的例外狀況與事件相關聯的事件和參數的類型名稱。  
+ 儲存事件的型別名稱，以及與事件相關聯的目前例外狀況的參數。  
   
  [COR_GC_STATS 結構](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
- 提供 common language runtime (CLR) 記憶體回收機制的相關統計資料。  
+ 提供有關 common language runtime （CLR）之垃圾收集機制的統計資料。  
   
  [COR_GC_THREAD_STATS 結構](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md)  
- 包含有關記憶體回收的每個執行緒統計資料。  
+ 包含有關垃圾收集的每個執行緒統計資料。  
   
  [CustomDumpItem 結構](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)  
- 描述要新增至自訂的傾印，錯誤報告中的項目。  
+ 描述要在錯誤報表中新增至自訂傾印的專案。  
   
  [MDAInfo 結構](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md)  
- 提供有關的詳細資料`Event_MDAFired`事件，這會觸發建立的 managed 偵錯助理 (MDA)。  
+ 提供 `Event_MDAFired` 事件的詳細資料，這會觸發建立 managed 偵錯工具（MDA）。  
   
  [ModuleBindInfo 結構](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md)  
- 提供參考的模組和包含它的組件的詳細的資訊。  
+ 提供參考模組和包含它之元件的詳細資訊。  
   
  [StackOverflowInfo 結構](../../../../docs/framework/unmanaged-api/hosting/stackoverflowinfo-structure.md)  
- 因為溢位而擲回的例外狀況，會儲存發生溢位和資訊的類型。  
+ 儲存發生的溢位類型，以及因溢位而擲回之例外狀況的資訊。  
   
 ## <a name="related-sections"></a>相關章節  
  [裝載 Coclass](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  

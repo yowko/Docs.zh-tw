@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f21c1612-9c5d-4abc-a337-577086d29c17
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a69e32d418478071f9b99a391e6bef9095d6f4ad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8f479443e168c3fc7c627c3227e59f1e8b54f0e0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749915"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120509"
 ---
 # <a name="iclrreferenceassemblyenumget-method"></a>ICLRReferenceAssemblyEnum::Get 方法
-提供的索引處取得組件識別。  
+取得所提供索引處的元件識別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,40 +37,40 @@ HRESULT Get (
   
 ## <a name="parameters"></a>參數  
  `dwIndex`  
- [in]要傳回的組件身分識別以零為起始的索引。  
+ 在要傳回之元件身分識別的以零為起始的索引。  
   
  `pwzBuffer`  
- [out]包含組件身分識別資料的緩衝區。  
+ 脫銷包含元件識別資料的緩衝區。  
   
  `pcchBufferSize`  
- [in、 out]大小`pwzBuffer`緩衝區。  
+ [in、out]`pwzBuffer` 緩衝區的大小。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`Get` 已成功傳回。|  
-|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` 為太小。|  
-|ERROR_NO_MORE_ITEMS|列舉包含的任何其他項目。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
-|HOST_E_TIMEOUT|呼叫已逾時。|  
-|HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重錯誤。 如果方法會傳回 E_FAIL，CLR 不再使用舊的處理序內。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|S_OK|已成功傳回 `Get`。|  
+|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` 太小。|  
+|ERROR_NO_MORE_ITEMS|列舉不包含其他專案。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫超時。|  
+|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
+|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
+|E_FAIL|發生不明的嚴重失敗。 如果方法傳回 E_FAIL，則 CLR 在進程內將無法再使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- `Get` 通常會呼叫兩次。 第一次呼叫提供 null 值`pwzBuffer`，並設定`pcchBufferSize`適用於大小`pwzBuffer`。 第二個呼叫提供適當大小`pwzBuffer`，而且包含完成時的標準組件身分識別資料。  
+ `Get` 通常會被呼叫兩次。 第一個呼叫會為 `pwzBuffer`提供 null 值，並將 `pcchBufferSize` 設定為適用于 `pwzBuffer`的大小。 第二個呼叫會提供適當大小的 `pwzBuffer`，並在完成時包含標準的元件識別資料。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRAssemblyReferenceList 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
 - [ICLRReferenceAssemblyEnum 介面](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-interface.md)

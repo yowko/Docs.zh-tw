@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: da91c138-ee30-4fd4-a040-464d97d7e41a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 21aeceff72ea6222992cb6f3d055ed6f71cda9bf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: adb3b4e33edafe6d25c8259e316a9b62e339f896
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759250"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092675"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a>ICLRStrongName::StrongNameSignatureVerificationFromImage 方法
 驗證已對應到記憶體的組件對關聯的公開金鑰而言有效。  
@@ -40,43 +38,43 @@ HRESULT StrongNameSignatureVerificationFromImage (
   
 ## <a name="parameters"></a>參數  
  `pbBase`  
- [in]對應的組件資訊清單的相對虛擬位址。  
+ 在對應之組件資訊清單的相對虛擬位址。  
   
  `dwLength`  
- [in]以位元組為單位，對應的映像的大小。  
+ 在對應影像的大小（以位元組為單位）。  
   
  `dwInFlags`  
- [in]影響驗證行為的旗標。 支援下列值：  
+ 在會影響驗證行為的旗標。 支援下列值：  
   
-- `SN_INFLAG_FORCE_VER` (0x00000001)-強制執行驗證，即使它是需要覆寫登錄設定。  
+- `SN_INFLAG_FORCE_VER` （0x00000001）-即使需要覆寫登錄設定，也會強制執行驗證。  
   
-- `SN_INFLAG_INSTALL` (0x00000002)-指定此映像上執行的第一次驗證。  
+- `SN_INFLAG_INSTALL` （0x00000002）-指定這是在此影像上執行的第一次驗證。  
   
-- `SN_INFLAG_ADMIN_ACCESS` (0x00000004)-指定快取可讓具有系統管理權限的使用者存取。  
+- `SN_INFLAG_ADMIN_ACCESS` （0x00000004）-指定快取只允許具有系統管理許可權的使用者進行存取。  
   
-- `SN_INFLAG_USER_ACCESS` (0x00000008)-指定的組件都是僅供目前的使用者存取。  
+- `SN_INFLAG_USER_ACCESS` （0x00000008）-指定只有目前使用者可以存取元件。  
   
-- `SN_INFLAG_ALL_ACCESS` (0x00000010)-指定快取會提供任何保證的存取限制。  
+- `SN_INFLAG_ALL_ACCESS` （0x00000010）-指定快取不會提供存取限制的保證。  
   
-- `SN_INFLAG_RUNTIME` (0x80000000)-保留給內部偵錯。  
+- `SN_INFLAG_RUNTIME` （0x80000000）-保留供內部偵錯工具之用。  
   
  `pdwOutFlags`  
- [out]其他輸出資訊之旗標。 支援下列值：  
+ 脫銷其他輸出資訊的旗標。 支援下列值：  
   
-- `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-此值設為`false`，指定驗證成功，因為登錄設定。  
+- `SN_OUTFLAG_WAS_VERIFIED` （0x00000001）-此值設定為 `false`，指定驗證是因為登錄設定而成功。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
+ 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MetaHost.h  
+ **標頭：** MetaHost。h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

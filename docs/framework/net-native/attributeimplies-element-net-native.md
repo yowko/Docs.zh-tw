@@ -1,15 +1,13 @@
 ---
-title: <AttributeImplies>元素（.NET Native）
+title: <AttributeImplies> 元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d15d572ee70e9c7a8cb29010d6debbd1874e5ae2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 94f7813938e2179a2355e6ab2eff22479122d4b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049908"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128488"
 ---
 # <a name="attributeimplies-element-net-native"></a>\<AttributeImplies > 元素（.NET Native）
 定義套用包含屬性之程式碼元素的原則。  
@@ -53,7 +51,7 @@ ms.locfileid: "71049908"
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -67,9 +65,9 @@ ms.locfileid: "71049908"
   
  反映、序列化和 interop 屬性都是選用性，但至少要有一個屬性存在。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [\<輸入 > 元素](type-element-net-native.md)
+- [\<類型 > 元素](type-element-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)
 - [執行階段指示詞原則設定](runtime-directive-policy-settings.md)

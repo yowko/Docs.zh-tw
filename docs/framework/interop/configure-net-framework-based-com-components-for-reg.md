@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定 .NET Framework 架構 COM 元件進行免註冊啟用
+title: 如何：設定免註冊啟用的 .NET Framework 架構 COM 元件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: baabff187fb8a22aea37c4fb4c1dc11a680d3bb8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 61f5f0f3ec9a4386fa12e7511b4a518f2b56a21c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853848"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123672"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>作法：設定 .NET Framework 架構 COM 元件進行免註冊啟用
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：設定免註冊啟用的 .NET Framework 架構 COM 元件
 .NET Framework 型元件的免註冊啟用，只比 COM 元件的免註冊啟用略為複雜。 安裝程式需要兩個資訊清單：  
   
 - COM 應用程式必須有 Win32 樣式應用程式資訊清單，才能識別 Managed 元件。  
@@ -105,11 +103,11 @@ ms.locfileid: "70853848"
   
 4. 識別組件中的每個類別。 使用 `<clrClass>` 項目，唯一識別 Managed 組件中的每個類別。 項目 (即 `<assembly>` 項目的子項目) 具有下表所述的屬性。  
   
-    |屬性|描述|必要|  
+    |屬性|描述|必要項|  
     |---------------|-----------------|--------------|  
-    |`clsid`|指定要啟用之類別的識別碼。|是|  
+    |`clsid`|指定要啟用之類別的識別碼。|[是]|  
     |`description`|通知使用者有關元件的字串。 空字串為預設值。|否|  
-    |`name`|代表 Managed 類別的字串。|是|  
+    |`name`|代表 Managed 類別的字串。|[是]|  
     |`progid`|要用於晚期繫結啟用的識別碼。|否|  
     |`threadingModel`|COM 執行緒模型。 「兩者」都是預設值。|否|  
     |`runtimeVersion`|指定要使用的 Common Language Runtime (CLR) 版本。 如果您未指定此屬性，而且尚未載入 CLR，則會載入具有 CLR 第 4 版前之最新已安裝 CLR 的元件。 如果您指定 v1.0.3705、v1.1.4322 或 v2.0.50727，版本會自動向前復原至 CLR 版本 4 之前的最新已安裝 CLR 版本 (通常是 v2.0.50727)。 如果已載入另一個版本的 CLR，並且可以透過並存同處理序方式載入指定的版本，則會載入指定的版本；否則，會使用載入的 CLR。 這可能會造成載入失敗。|否|  
@@ -168,11 +166,11 @@ ms.locfileid: "70853848"
   
     `/win32res:myresource.res`  
   
-     同樣地`myresource.res` ，是包含內嵌資源的資源檔名稱。  
+     同樣地，`myresource.res` 是包含內嵌資源的資源檔名稱。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [免註冊的 COM Interop](registration-free-com-interop.md)
 - [免註冊 COM Interop 的需求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
 - [設定適用於免註冊啟用的 COM 元件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
-- [免註冊啟用 .NET 架構元件：逐步解說](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))
+- [免註冊啟用 .NET 元件：逐步解說](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))

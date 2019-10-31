@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84296b55-c2c5-424c-ac9c-8e28e2895945
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f6f5cd47abd4c17021bc324898a096ff70a3db2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a957a042875b546a18a17422f355b712756e91c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739988"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098176"
 ---
 # <a name="cordebughandletype-enumeration"></a>CorDebugHandleType 列舉
 指出控制代碼類型。  
@@ -35,22 +33,22 @@ typedef enum CorDebugHandleType {
 } CorDebugHandleType;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`HANDLE_STRONG`|控制代碼為強式，這可防止物件被記憶體回收所回收。|  
-|`HANDLE_WEAK_TRACK_RESURRECTION`|控制代碼是弱式，這不會防止物件被記憶體回收所回收。<br /><br /> 回收物件，此控制代碼就會變成無效。|  
+|`HANDLE_STRONG`|此控制碼為強式，可防止垃圾收集回收物件。|  
+|`HANDLE_WEAK_TRACK_RESURRECTION`|控制碼為弱式，不會防止垃圾收集回收物件。<br /><br /> 收集物件時，控制碼會變成無效。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

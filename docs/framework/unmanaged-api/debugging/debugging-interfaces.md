@@ -6,23 +6,21 @@ helpviewer_keywords:
 - debugging interfaces [.NET Framework]
 - interfaces [.NET Framework debugging]
 ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ff589285d81a3febf887bba976b62a9ae4a573c8
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 07b39666637628102e9ffafd2c059ba0d4b51b92
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025940"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097188"
 ---
 # <a name="debugging-interfaces"></a>偵錯介面
 本節說明 Unmanaged 介面，這類介面會處理通用語言執行平台 (CLR) 中所執行之程式的偵錯。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [ICLRDataEnumMemoryRegions 介面](iclrdataenummemoryregions-interface.md)\
  提供方法來列舉呼叫端所指定的記憶體區域。  
   
- [ICLRDataEnumMemoryRegionsCallback Interface](iclrdataenummemoryregionscallback-interface.md)\
+ [ICLRDataEnumMemoryRegionsCallback 介面](iclrdataenummemoryregionscallback-interface.md)\
  提供回呼方法，讓 `EnumMemoryRegions` 向偵錯工具報告嘗試列舉指定之記憶體區域的結果。  
   
  [ICLRDataTarget 介面](iclrdatatarget-interface.md)\
@@ -32,13 +30,13 @@ ms.locfileid: "67025940"
  `ICLRDataTarget` 的子類別，資料存取服務層會使用它來管理目標處理序中的虛擬記憶體區域。  
   
  [ICLRDataTarget3 介面](iclrdatatarget3-interface.md)\
- 子類別[ICLRDataTarget2](iclrdatatarget2-interface.md)提供例外狀況資訊的存取權。  
+ [ICLRDataTarget2](iclrdatatarget2-interface.md)的子類別，可提供例外狀況資訊的存取權。  
   
  [ICLRDebugging 介面](iclrdebugging-interface.md)\
  提供處理載入及卸載模組以進行偵錯的方法。  
   
  [ICLRDebuggingLibraryProvider 介面](iclrdebugginglibraryprovider-interface.md)\
- 包含[ProvideLibrary 方法](iclrdebugginglibraryprovider-providelibrary-method.md)方法，以取得程式庫提供者回呼介面，可讓通用語言執行階段版本特定偵錯程式庫尋找並載入需求。  
+ 包含[ProvideLibrary 方法](iclrdebugginglibraryprovider-providelibrary-method.md)方法，它會取得程式庫提供者回呼介面，允許視需要尋找和載入 common language runtime 版本特定的偵錯工具程式庫。  
   
  [ICLRMetadataLocator 介面](iclrmetadatalocator-interface.md)\
  由資料存取服務層用來尋找目標處理序中之組件中繼資料的介面。  
@@ -53,10 +51,10 @@ ms.locfileid: "67025940"
  提供方法來使用陣列、指標、函式指標和 ByRef 類型。 這個介面是 `ICorDebugAppDomain` 介面的擴充。  
   
  [ICorDebugAppDomain3 介面](icordebugappdomain3-interface.md)\
- 提供方法來使用應用程式定義域中的 Windows 執行階段類型。 這個介面是 `ICorDebugAppDomain` 和 `ICorDebugAppDomain2` 介面的擴充。  
+ 提供在應用程式域中使用 Windows 執行階段類型的方法。 這個介面是 `ICorDebugAppDomain` 和 `ICorDebugAppDomain2` 介面的擴充。  
   
  [ICorDebugAppDomain4 介面](icordebugappdomain4-interface.md)\
- 以邏輯方式擴充[ICorDebugAppDomain](icordebugappdomain-interface.md)從 COM 可呼叫包裝函式取得 managed 的物件的介面。  
+ 以邏輯方式擴充[ICorDebugAppDomain](icordebugappdomain-interface.md)介面，以從 COM 可呼叫包裝函式取得 managed 物件。  
   
  [ICorDebugAppDomainEnum 介面](icordebugappdomainenum-interface.md)\
  提供方法，此方法會傳回指定數目的 `ICorDebugAppDomain` 值 (從列舉類型中的下一個位置開始)。  
@@ -71,13 +69,13 @@ ms.locfileid: "67025940"
  表示組件。 這個介面是 `ICorDebugAssembly` 介面的擴充。  
   
  [ICorDebugAssembly3 介面](icordebugassembly3-interface.md)\
- 以邏輯方式擴充[ICorDebugAssembly](icordebugassembly-interface.md)介面，以提供支援給容器組件及其所包含的組件。 **適用於僅限.NET Native。**  
+ 以邏輯方式擴充[ICorDebugAssembly](icordebugassembly-interface.md)介面，以提供容器元件和其包含元件的支援。 **僅適用于 .NET Native。**  
   
  [ICorDebugAssemblyEnum 介面](icordebugassemblyenum-interface.md)\
  實作 `ICorDebugEnum` 方法，並列舉 `ICorDebugAssembly` 陣列。  
   
  [ICorDebugBlockingObjectEnum 介面](icordebugblockingobjectenum-interface.md)\
- 提供列舉值，取得一份[CorDebugBlockingObject](cordebugblockingobject-structure.md)結構。  
+ 提供[CorDebugBlockingObject](cordebugblockingobject-structure.md)結構清單的列舉值。  
   
  [ICorDebugBoxValue 介面](icordebugboxvalue-interface.md)\
  `ICorDebugHeapValue` 的子類別，表示 Boxed 值的類別物件。  
@@ -107,10 +105,10 @@ ms.locfileid: "67025940"
  提供方法來擴充 `ICorDebugCode` 的功能。  
   
  [ICorDebugCode3 介面](icordebugcode3-interface.md)\
- 提供擴充方法[ICorDebugCode](icordebugcode-interface1.md)並[ICorDebugCode2](icordebugcode2-interface.md)提供 managed 傳回值的相關資訊。  
+ 提供擴充[ICorDebugCode](icordebugcode-interface1.md)和[ICorDebugCode2](icordebugcode2-interface.md)的方法，以提供受控傳回值的相關資訊。  
   
  [ICorDebugCode4 介面](icordebugcode4-interface.md)\
- 提供方法，以允許列舉的本機變數和引數的函式中的偵錯工具。  
+ 提供一種方法，可讓偵錯工具列舉函式中的區域變數和引數。  
   
  [ICorDebugCodeEnum 介面](icordebugcodeenum-interface.md)\
  實作 `ICorDebugEnum` 方法，並列舉 `ICorDebugCode` 陣列。  
@@ -118,7 +116,7 @@ ms.locfileid: "67025940"
  [ICorDebugComObjectValue 介面](icordebugcomobjectvalue-interface.md)\
  提供擷取快取介面物件的方法。  
   
- [ICorDebugContext 介面](icordebugcontext-interface.md)\
+ [ICorDebugCoNtext 介面](icordebugcontext-interface.md)\
  表示內容物件。 尚未實作這個介面。  
   
  [ICorDebugController 介面](icordebugcontroller-interface.md)\
@@ -128,13 +126,13 @@ ms.locfileid: "67025940"
  提供回呼介面，該介面可供存取特定的目標處理序。  
   
  [ICorDebugDataTarget2 介面](icordebugdatatarget2-interface.md)\
- 以邏輯方式擴充[ICorDebugDataTarget](icordebugdatatarget-interface.md)介面。 **適用於僅限.NET Native。**  
+ 以邏輯方式擴充[ICorDebugDataTarget](icordebugdatatarget-interface.md)介面。 **僅適用于 .NET Native。**  
   
  [ICorDebugDataTarget3 介面](icordebugdatatarget3-interface.md)\
- 以邏輯方式擴充[ICorDebugDataTarget](icordebugdatatarget-interface.md)介面，以提供已載入模組的相關資訊。 **適用於僅限.NET Native。**  
+ 以邏輯方式擴充[ICorDebugDataTarget](icordebugdatatarget-interface.md)介面，以提供已載入模組的相關資訊。 **僅適用于 .NET Native。**  
   
  [ICorDebugDebugEvent 介面](icordebugdebugevent-interface.md)\
- 定義所有 `ICorDebug` 偵錯事件衍生的來源基底介面。 **適用於僅限.NET Native。**  
+ 定義所有 `ICorDebug` 偵錯事件衍生的來源基底介面。 **僅適用于 .NET Native。**  
   
  [ICorDebugEditAndContinueErrorInfo 介面](icordebugeditandcontinueerrorinfo-interface.md)\
  已過時。 請勿使用這個介面。  
@@ -155,13 +153,13 @@ ms.locfileid: "67025940"
  擴充 `ICorDebugEval` 來提供泛型類型的支援。  
   
  [ICorDebugExceptionDebugEvent 介面](icordebugexceptiondebugevent-interface.md)\
- 擴充[ICorDebugDebugEvent](icordebugdebugevent-interface.md)介面，以支援例外狀況事件。 **適用於僅限.NET Native。**  
+ 擴充[ICorDebugDebugEvent](icordebugdebugevent-interface.md)介面，以支援例外狀況事件。 **僅適用于 .NET Native。**  
   
  [ICorDebugExceptionObjectCallStackEnum 介面](icordebugexceptionobjectcallstackenum-interface.md)\
  提供例外狀況物件中內嵌之呼叫堆疊資訊的列舉值。  
   
  [ICorDebugExceptionObjectValue 介面](icordebugexceptionobjectvalue-interface.md)\
- 擴充[ICorDebugObjectValue](icordebugobjectvalue-interface.md)介面，以提供從 managed 例外狀況物件的堆疊追蹤資訊。  
+ 擴充[ICorDebugObjectValue](icordebugobjectvalue-interface.md)介面，以從 managed 例外狀況物件提供堆疊追蹤資訊。  
   
  [ICorDebugFrame 介面](icordebugframe-interface.md)\
  表示目前堆疊上的框架。  
@@ -176,7 +174,7 @@ ms.locfileid: "67025940"
  以邏輯方式擴充 `ICorDebugFunction`，為 Just My Code 逐步執行的偵錯提供支援。  
   
  [ICorDebugFunction3 介面](icordebugfunction3-interface.md)\
- 以邏輯方式擴充[ICorDebugFunction](icordebugfunction-interface1.md)介面，以從 ReJIT 要求提供存取權的程式碼。  
+ 以邏輯方式擴充[ICorDebugFunction](icordebugfunction-interface1.md)介面，以提供對 ReJIT 要求之程式碼的存取權。  
   
  [ICorDebugFunctionBreakpoint 介面](icordebugfunctionbreakpoint-interface.md)\
  擴充 `ICorDebugBreakpoint` 來支援函式內的中斷點。  
@@ -212,7 +210,7 @@ ms.locfileid: "67025940"
  代表中繼語言 (IL) 程式碼的區段。  
   
  [ICorDebugILCode2 介面](icordebugilcode2-interface.md)\
- 以邏輯方式擴充[ICorDebugILCode](icordebugilcode-interface.md)介面，以提供的方法，傳回的語彙基元函式的區域變數簽章，而且，它將對應的分析工具檢測中繼語言 (IL) 位移到原始方法 IL位移。  
+ 以邏輯方式擴充[ICorDebugILCode](icordebugilcode-interface.md)介面，以提供方法來傳回函式的區域變數簽章的 token，並將分析工具的檢測中繼語言（IL）位移對應至原始方法 IL 位移。  
   
  [ICorDebugILFrame 介面](icordebugilframe-interface.md)\
  表示 MSIL 程式碼的堆疊框架。  
@@ -227,34 +225,34 @@ ms.locfileid: "67025940"
  提供的方法可讓您在中繼語言 (IL) 程式碼的框架中，存取區域變數和程式碼。 參數可指定偵錯工具是否能夠存取在分析工具 ReJIT 檢測中加入的變數和程式碼。  
   
  [ICorDebugInstanceFieldSymbol 介面](icordebuginstancefieldsymbol-interface.md)\
- 代表執行個體欄位的偵錯符號資訊。 **適用於僅限.NET Native。**  
+ 代表執行個體欄位的偵錯符號資訊。 **僅適用于 .NET Native。**  
   
  [ICorDebugInternalFrame 介面](icordebuginternalframe-interface.md)\
  識別偵錯工具的框架類型。  
   
  [ICorDebugInternalFrame2 介面](icordebuginternalframe2-interface.md)\
- 提供內部框架，包括堆疊位址和位置的相關資訊[ICorDebugFrame](icordebugframe-interface.md)物件。  
+ 提供內部框架的相關資訊，包括堆疊位址和相對於[ICorDebugFrame](icordebugframe-interface.md)物件的位置。  
   
  [ICorDebugLoadedModule 介面](icordebugloadedmodule-interface.md)\
- 提供載入模組的相關資訊。 **適用於僅限.NET Native。**  
+ 提供載入模組的相關資訊。 **僅適用于 .NET Native。**  
   
- [ICorDebugManagedCallback Interface](icordebugmanagedcallback-interface.md)\
+ [ICorDebugManagedCallback 介面](icordebugmanagedcallback-interface.md)\
  提供方法來處理偵錯工具回呼。  
   
- [ICorDebugManagedCallback2 Interface](icordebugmanagedcallback2-interface.md)\
+ [ICorDebugManagedCallback2 介面](icordebugmanagedcallback2-interface.md)\
  提供方法來支援偵錯工具例外狀況處理和 Managed 偵錯助理 (MDA)。 `ICorDebugManagedCallback2` 是 `ICorDebugManagedCallback` 的邏輯擴充。  
   
- [ICorDebugManagedCallback3 Interface](icordebugmanagedcallback3-interface.md)\
+ [ICorDebugManagedCallback3 介面](icordebugmanagedcallback3-interface.md)\
  提供回呼方法，表示已引發啟用的自訂偵錯工具通知。  
   
  [ICorDebugMDA 介面](icordebugmda-interface.md)\
  表示 Managed 偵錯助理 (MDA) 訊息。  
   
  [ICorDebugMemoryBuffer 介面](icordebugmemorybuffer-interface.md)\
- 代表記憶體內部緩衝區。 **適用於僅限.NET Native。**  
+ 代表記憶體內部緩衝區。 **僅適用于 .NET Native。**  
   
  [ICorDebugMergedAssemblyRecord 介面](icordebugmergedassemblyrecord-interface.md)\
- 提供合併組件的相關資訊。 **適用於僅限.NET Native。**  
+ 提供合併組件的相關資訊。 **僅適用于 .NET Native。**  
   
  [ICorDebugMetaDataLocator 介面](icordebugmetadatalocator-interface.md)\
  提供中繼資料資訊給偵錯工具。  
@@ -272,7 +270,7 @@ ms.locfileid: "67025940"
  擴充 `ICorDebugBreakpoint`，以提供特定模組的存取權。  
   
  [ICorDebugModuleDebugEvent 介面](icordebugmoduledebugevent-interface.md)\
- 擴充[ICorDebugDebugEvent](icordebugdebugevent-interface.md)介面，以支援模組層級事件。 **適用於僅限.NET Native。**  
+ 擴充[ICorDebugDebugEvent](icordebugdebugevent-interface.md)介面，以支援模組層級事件。 **僅適用于 .NET Native。**  
   
  [ICorDebugModuleEnum 介面](icordebugmoduleenum-interface.md)\
  實作 `ICorDebugEnum` 方法，並列舉 `ICorDebugModule` 陣列。  
@@ -305,19 +303,19 @@ ms.locfileid: "67025940"
  控制自訂偵錯工具通知。
 
  [ICorDebugProcess4 介面](icordebugprocess4-interface.md)\
- 提供支援失控程序執行。
+ 提供進程外執行控制的支援。
   
  [ICorDebugProcess5 介面](icordebugprocess5-interface.md)\
- 擴充[ICorDebugProcess](icordebugprocess-interface.md)介面，以支援存取 managed 堆積，以提供受管理的物件，記憶體回收的相關資訊，以及判斷偵錯工具是否從應用程式載入影像的本機原生映像快取。  
+ 擴充[ICorDebugProcess](icordebugprocess-interface.md)介面以支援存取 managed 堆積，以提供有關受管理物件之垃圾收集的資訊，以及判斷偵錯工具是否從應用程式的本機原生映射快取中載入影像。  
   
  [ICorDebugProcess6 介面](icordebugprocess6-interface.md)\
- 以邏輯方式擴充[ICorDebugProcess](icordebugprocess-interface.md)介面，以啟用功能，例如解碼的編碼原生例外狀況偵錯事件，以及虛擬模組分割的 managed 偵錯事件。 **適用於僅限.NET Native。**  
+ 以邏輯方式擴充[ICorDebugProcess](icordebugprocess-interface.md)介面以啟用功能，例如解碼在原生例外狀況的 debug 事件和虛擬模組分割中編碼的 managed 偵錯工具事件。 **僅適用于 .NET Native。**  
   
  [ICorDebugProcess7 介面](icordebugprocess7-interface.md)\
  提供用來設定偵錯工具的方法，以控制代碼目標處理序中的記憶體中中繼資料更新。  
   
  [ICorDebugProcess8 介面](icordebugprocess8-interface.md)\
- 以邏輯方式擴充[ICorDebugProcess](icordebugprocess-interface.md)介面，以啟用或停用特定類型的[ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)例外狀況的回呼。  
+ 以邏輯方式擴充[ICorDebugProcess](icordebugprocess-interface.md)介面，以啟用或停用特定類型的[ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)例外狀況回呼。  
   
  [ICorDebugProcessEnum 介面](icordebugprocessenum-interface.md)\
  實作 `ICorDebugEnum` 方法，並列舉 `ICorDebugProcess` 陣列。  
@@ -344,7 +342,7 @@ ms.locfileid: "67025940"
  提供用來在執行緒堆疊上取得 Managed 方法或框架的方法。  
   
  [ICorDebugStaticFieldSymbol 介面](icordebugstaticfieldsymbol-interface.md)\
- 代表靜態欄位的偵錯符號資訊。 **適用於僅限.NET Native。**  
+ 代表靜態欄位的偵錯符號資訊。 **僅適用于 .NET Native。**  
   
  [ICorDebugStepper 介面](icordebugstepper-interface.md)\
  表示偵錯工具在程式碼執行作業中所執行的步驟，做為命令的發出和完成之間的識別項，並可提供方法來取消步驟。  
@@ -359,10 +357,10 @@ ms.locfileid: "67025940"
  套用至字串值之 `ICorDebugHeapValue` 的子類別。  
   
  [ICorDebugSymbolProvider 介面](icordebugsymbolprovider-interface.md)\
- 提供可用來擷取偵錯符號資訊的方法。 **適用於僅限.NET Native。**  
+ 提供可用來擷取偵錯符號資訊的方法。 **僅適用于 .NET Native。**  
   
  [ICorDebugSymbolProvider2 介面](icordebugsymbolprovider2-interface.md)\
- 以邏輯方式擴充[ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)來擷取其他偵錯符號資訊的介面。 **適用於僅限.NET Native。**  
+ 以邏輯方式擴充[ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)介面，以取得其他的 debug 符號資訊。 **僅適用于 .NET Native。**  
   
  [ICorDebugThread 介面](icordebugthread-interface.md)\
  表示處理序中的執行緒。 `ICorDebugThread` 執行個體的存留期與其所表示的執行緒之存留期相同。  
@@ -371,7 +369,7 @@ ms.locfileid: "67025940"
  當做 `ICorDebugThread` 的邏輯擴充。  
   
  [ICorDebugThread3 介面](icordebugthread3-interface.md)\
- 提供的進入點[ICorDebugStackWalk](icordebugstackwalk-interface.md)和對應的介面。  
+ 提供[ICorDebugStackWalk](icordebugstackwalk-interface.md)和對應介面的進入點。  
   
  [ICorDebugThread4 介面](icordebugthread4-interface.md)\
  提供執行緒封鎖資訊。  
@@ -383,7 +381,7 @@ ms.locfileid: "67025940"
  表示類型，可以是基本類型或複雜類型 (亦即，使用者定義類型)。 如果是泛型類型，則 `ICorDebugType` 表示具現化的泛型類型。  
   
  [ICorDebugType2 介面](icordebugtype2-interface.md)\
- 擴充[ICorDebugType](icordebugtype-interface.md)介面來擷取基底型別或複雜的 （使用者定義） 型別的型別識別項。  
+ 擴充[ICorDebugType](icordebugtype-interface.md)介面，以取得基底類型或複雜（使用者定義）類型的類型識別碼。  
   
  [ICorDebugTypeEnum 介面](icordebugtypeenum-interface.md)\
  實作 `ICorDebugEnum` 方法，並列舉 `ICorDebugType` 陣列。  
@@ -398,7 +396,7 @@ ms.locfileid: "67025940"
  擴充 `ICorDebugValue` 來提供 `ICorDebugType` 的支援。  
   
  [ICorDebugValue3 介面](icordebugvalue3-interface.md)\
- 擴充的 」 ICorDebugValue"和"ICorDebugValue2 」 介面以支援大於 2 GB 的陣列。  
+ 擴充 "ICorDebugValue" 和 "ICorDebugValue2" 介面，以提供大於 2 GB 的陣列支援。  
   
  [ICorDebugValueBreakpoint](icordebugvaluebreakpoint-interface.md)\
  擴充 `ICorDebugBreakpoint`，以提供特定值的存取權。  
@@ -407,16 +405,16 @@ ms.locfileid: "67025940"
  實作 `ICorDebugEnum` 方法，並列舉 `ICorDebugValue` 陣列。  
   
  [ICorDebugVariableHome 介面](icordebugvariablehome-interface.md)\
- 代表本機變數或函式的引數。  
+ 表示函數的區域變數或引數。  
   
  [ICorDebugVariableHomeEnum 介面](icordebugvariablehomeenum-interface.md)\
- 提供的本機變數和引數的函式中的列舉值。  
+ 提供函式中區域變數和引數的列舉值。  
   
  [ICorDebugVariableSymbol 介面](icordebugvariablesymbol-interface.md)\
- 擷取變數的偵錯符號資訊。 **適用於僅限.NET Native。**  
+ 擷取變數的偵錯符號資訊。 **僅適用于 .NET Native。**  
   
  [ICorDebugVirtualUnwinder 介面](icordebugvirtualunwinder-interface.md)\
- 提供可協助堆疊回溯的方法。 **適用於僅限.NET Native。**  
+ 提供可協助堆疊回溯的方法。 **僅適用于 .NET Native。**  
   
  [ICorPublish 介面](icorpublish-interface.md)\
  當做發行處理序的一般介面。  
@@ -427,32 +425,32 @@ ms.locfileid: "67025940"
  [ICorPublishAppDomainEnum 介面](icorpublishappdomainenum-interface.md)\
  提供方法來周遊目前存在於處理序中之 `ICorPublishAppDomain` 物件的集合。  
   
- [ICorPublishEnum Interface](icorpublishenum-interface.md)\
+ [ICorPublishEnum 介面](icorpublishenum-interface.md)\
  當做發行列舉值的抽象基底。  
   
  [ICorPublishProcess 介面](icorpublishprocess-interface.md)\
  提供存取處理序相關資訊的方法。  
   
- [ICorPublishProcessEnum Interface](icorpublishprocessenum-interface.md)\
+ [ICorPublishProcessEnum 介面](icorpublishprocessenum-interface.md)\
  提供方法來周遊 `ICorPublishProcess` 物件的集合。  
 
  [ISOSDacInterface 介面](isosdacinterface-interface.md)\
- 提供 helper 方法來存取資料，從`SOS`。
+ 提供 helper 方法，以從 `SOS`存取資料。
 
  [IXCLRDataMethodDefinition 介面](ixclrdatamethoddefinition-interface.md)\
- 提供方法來查詢方法定義的相關資訊。
+ 提供查詢方法定義相關資訊的方法。
  
  [IXCLRDataMethodInstance 介面](ixclrdatamethodinstance-interface.md)\
- 提供方法來查詢的方法執行個體的相關資訊。
+ 提供查詢方法實例相關資訊的方法。
  
  [IXCLRDataModule 介面](ixclrdatamodule-interface.md)\
- 提供方法來查詢載入模組的相關資訊。
+ 提供方法來查詢已載入模組的相關資訊。
  
  [IXCLRDataProcess 介面](ixclrdataprocess-interface.md)\
- 提供方法來查詢處理序的相關資訊。
+ 提供查詢處理常式相關資訊的方法。
   
 ## <a name="related-sections"></a>相關章節  
- [偵錯 Coclass](debugging-coclasses.md)\
- [偵錯全域靜態函式](debugging-global-static-functions.md)\
- [偵錯列舉](debugging-enumerations.md)\
- [偵錯結構](debugging-structures.md)\
+ [Coclass 的調試](debugging-coclasses.md)\
+ \ 的[全域靜態](debugging-global-static-functions.md)函式的調試
+ \ 的[調試](debugging-enumerations.md)
+ \ 的[調試結構](debugging-structures.md)

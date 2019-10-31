@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a7732bfc-689a-4926-88fd-4f81e6f9ed78
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c196eafbc2ff1d851471355a630b860c7c02ba1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cedda39aeebc62c6bf43f42ae2daf6f6f515fd27
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765535"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120279"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>ICLRRuntimeInfo::GetProcAddress 方法
-取得指定的函式匯出從 common language runtime (CLR) 與此介面相關聯的位址。  
+取得指定函式的位址，該函式是從與這個介面相關聯的 common language runtime （CLR）所匯出。  
   
- 這個方法會取代[GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)函式。  
+ 這個方法會取代[GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)函數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,10 +37,10 @@ HRESULT GetProcAddress(
   
 ## <a name="parameters"></a>參數  
  `pszProcName`  
- [in]匯出的函式的名稱。  
+ 在匯出函式的名稱。  
   
  `ppProc`  
- [out]匯出的函式的位址。  
+ 脫銷匯出函數的位址。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
@@ -51,21 +49,21 @@ HRESULT GetProcAddress(
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |E_POINTER|`pszProcName` 或 `ppProc` 為 null。|  
-|CLR_E_SHIM_RUNTIMEEXPORT|指定的函式不是匯出的函式。|  
+|CLR_E_SHIM_RUNTIMEEXPORT|指定的函數不是匯出的函式。|  
   
 ## <a name="remarks"></a>備註  
- 這個方法會導致 CLR 載入，但未初始化。  
+ 這個方法會載入 CLR，但不會初始化。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MetaHost.h  
+ **標頭：** MetaHost。h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRRuntimeInfo 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

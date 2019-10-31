@@ -12,14 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d9cfdcbe1e533f70cdd37b5d0512c781c6c05d22
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 4cc62696cb6589151e3abc59bbea64b693e8b3a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957360"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121723"
 ---
 # <a name="regular-expression-options"></a>規則運算式選項
 
@@ -35,7 +33,7 @@ ms.locfileid: "71957360"
 |<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|無法使用|將規則運算式編譯為組件。 如需詳細資訊，請參閱[編譯的規則運算式](#Compiled)。|
 |<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|在模式中排除未逸出的空白字元，並且在數字符號 (`#`) 後面啟用註解。 如需詳細資訊，請參閱[忽略空白字元](#Whitespace)。|
 |<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|無法使用|變更搜尋方向。 搜尋方向為由右至左，而不是由左至右。 如需詳細資訊，請參閱[由右至左模式](#RightToLeft)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|無法使用|為運算式啟用符合 ECMAScript 的行為。 如需詳細資訊，請參閱 [ECMAScript 相符行為](#ECMAScript)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|無法使用|為運算式啟用符合 ECMAScript 規範的行為。 如需詳細資訊，請參閱 [ECMAScript 相符行為](#ECMAScript)。|
 |<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|無法使用|忽略語言中的文化特性差異。 如需詳細資訊，請參閱[使用不因國別而異的文化特性比較](#Invariant)。|
 
 ## <a name="specifying-the-options"></a>指定選項
@@ -58,7 +56,7 @@ ms.locfileid: "71957360"
   [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
   [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
 
-- 使用語法 `(?imnsx-imnsx:`subexpression`)`，在規則運算式模式的特定群組建構中套用內嵌選項。 如果選項集前面沒有符號，會開啟選項集；如果選項集前面有減號，則會關閉選項集。 (`?` 是語言建構語法的固定部分，無論啟用或停用選項，都需要此部分。)此選項僅適用於該群組。 如需詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
+- 使用語法 `(?imnsx-imnsx:`subexpression`)`，在規則運算式模式的特定群組建構中套用內嵌選項。 如果選項集前面沒有符號，會開啟選項集；如果選項集前面有減號，則會關閉選項集。 （`?` 是語言結構的固定部分，無論啟用或停用選項，都需要此語法。）此選項只適用于該群組。 如需詳細資訊，請參閱[分組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
   下列範例提供一個實例。 其使用群組建構中的內嵌選項來啟用不區分大小寫比對，並且在識別以字母 "d" 開頭的文字時，忽略模式空白字元。
 
@@ -415,6 +413,6 @@ ECMAScript 的行為與標準規則運算式有三個不同層面：字元類別
 [!code-csharp[Conceptual.Regex.Language.Options#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#15)]
 [!code-vb[Conceptual.Regex.Language.Options#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#15)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

@@ -5,20 +5,18 @@ helpviewer_keywords:
 - forcePerformanceCounterUniqueSharedMemoryReads element
 - <forcePerformanceCounterUniqueSharedMemoryReads> element
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54bccd134a2f77925e80bfc681770b28c05f77a1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: efa6dce1035f7d2cf63b74c6a03d911b5dede722
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252596"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116958"
 ---
-# <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<Q s > 元素
+# <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads> Element
 指定 PerfCounter.dll 是否在 .NET Framework 1.1 版的應用程式中使用 CategoryOptions 登錄設定，以決定要從類別特定共用記憶體或從全域記憶體載入效能計數器資料。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<forcePerformanceCounterUniqueSharedMemoryReads>**  
   
 ## <a name="syntax"></a>語法  
@@ -33,43 +31,43 @@ enabled="true|false"/>
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
-|`enabled`|必要屬性。<br /><br /> 指出 PerfCounter 是否使用 CategoryOptions 登錄設定來判斷是否要從類別特定的共用記憶體或全域記憶體載入效能計數器資料。|  
+|`enabled`|必要屬性。<br /><br /> Indicates whether PerfCounter.dll uses the CategoryOptions registry setting to determine whether to load performance counter data from category-specific shared memory or global memory.|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
-|`false`|PerfCounter 不會使用 CategoryOptions 登錄設定, 這是預設值。|  
-|`true`|PerfCounter 會使用 CategoryOptions 登錄設定。|  
+|`false`|PerfCounter.dll does not use the CategoryOptions registry setting This is the default.|  
+|`true`|PerfCounter.dll does use the CategoryOptions registry setting.|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 在 .NET Framework 4 之前的 .NET Framework 版本中, 載入的 PerfCounter 版本會雖然該值至在進程中載入的執行時間。 如果電腦已安裝 .NET Framework 版本1.1 和 .NET Framework 2.0, 則 .NET Framework 1.1 應用程式會載入 .NET Framework 1.1 版本的 PerfCounter。 從 .NET Framework 4 開始, 會載入最新安裝的 PerfCounter 版本。 這表示如果電腦上已安裝 .NET Framework 4, .NET Framework 1.1 應用程式將會載入 .NET Framework 4 版的 PerfCounter。  
+ In versions of the .NET Framework before the .NET Framework 4, the version of PerfCounter.dll that was loaded corresponded to the runtime that was loaded in the process. If a computer had both the .NET Framework version 1.1 and the .NET Framework 2.0 installed, a .NET Framework 1.1 application would load the .NET Framework 1.1 version of PerfCounter.dll. Starting with the .NET Framework 4, the newest installed version of PerfCounter.dll is loaded. This means that a .NET Framework 1.1 application will load the .NET Framework 4 version of PerfCounter.dll if the .NET Framework 4 is installed on the computer.  
   
- 從 .NET Framework 4 開始, 使用效能計數器時, PerfCounter 會檢查每個提供者的 CategoryOptions 登錄專案, 以判斷它是否應該從類別特定的共用記憶體或全域共用記憶體中讀取。 .NET Framework 1.1 PerfCounter 不會讀取該登錄專案, 因為它並不知道類別特定的共用記憶體;它一律會從全域共用記憶體讀取。  
+ Starting with the .NET Framework 4, when consuming performance counters, PerfCounter.dll checks the CategoryOptions registry entry for each provider to determine whether it should read from category-specific shared memory or global shared memory. The .NET Framework 1.1 PerfCounter.dll does not read that registry entry, because it is not aware of category-specific shared memory; it always reads from global shared memory.  
   
- 為了與舊版相容, .NET Framework 4 PerfCounter 在 .NET Framework 1.1 應用程式中執行時, 不會檢查 CategoryOptions 登錄專案。 它只會使用全域共用記憶體, 如同 .NET Framework 1.1 PerfCounter。 不過, 您可以藉由啟用`<forcePerformanceCounterUniqueSharedMemoryReads>`元素, 指示 .NET Framework 4 PerfCounter 檢查登錄設定。  
+ For backward compatibility, the .NET Framework 4 PerfCounter.dll does not check the CategoryOptions registry entry when running in a .NET Framework 1.1 application. 它只會使用全域共用記憶體，如同 .NET Framework 1.1 PerfCounter。 不過，您可以藉由啟用 `<forcePerformanceCounterUniqueSharedMemoryReads>` 元素，指示 .NET Framework 4 PerfCounter 檢查登錄設定。  
   
 > [!NOTE]
-> `<forcePerformanceCounterUniqueSharedMemoryReads>`啟用元素並不保證會使用類別特定的共用記憶體。 將 [已`true`啟用] 設定為 [僅] 會導致 PerfCounter 參考 CategoryOptions 登錄設定。 CategoryOptions 的預設設定是使用類別特定的共用記憶體;不過, 您可以變更 CategoryOptions, 以指出應該使用全域共用記憶體。  
+> 啟用 `<forcePerformanceCounterUniqueSharedMemoryReads>` 元素並不保證會使用類別特定的共用記憶體。 將 [已啟用] 設定為 `true` 只會導致 PerfCounter 參考 CategoryOptions 登錄設定。 CategoryOptions 的預設設定是使用類別特定的共用記憶體;不過，您可以變更 CategoryOptions，以指出應該使用全域共用記憶體。  
   
- 包含 CategoryOptions 設定的登錄機碼是 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\< 類別名稱 \Performance.\> 根據預設, CategoryOptions 會設為 3, 指示 PerfCounter 使用類別特定的共用記憶體。 如果 CategoryOptions 設定為 0, 則 PerfCounter 會使用全域共用記憶體。 只有當所建立之實例的名稱與要重複使用的實例相同時, 才會重複使用實例資料。 所有版本都可以寫入類別目錄。 如果 CategoryOptions 設為 1, 則會使用全域共用記憶體, 但是如果類別目錄名稱的長度與要重複使用的類別相同, 就可以重複使用實例資料。  
+ 包含 CategoryOptions 設定的登錄機碼是 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\< 類別名稱\>\Performance。 根據預設，CategoryOptions 會設為3，指示 PerfCounter 使用類別特定的共用記憶體。 如果 CategoryOptions 設定為0，則 PerfCounter 會使用全域共用記憶體。 只有當所建立之實例的名稱與要重複使用的實例相同時，才會重複使用實例資料。 所有版本都可以寫入類別目錄。 如果 CategoryOptions 設為1，則會使用全域共用記憶體，但是如果類別目錄名稱的長度與要重複使用的類別相同，就可以重複使用實例資料。  
   
- 設定0和1可能會導致記憶體流失, 並填滿效能計數器記憶體。  
+ 設定0和1可能會導致記憶體流失，並填滿效能計數器記憶體。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何指定 PerfCounter 應該參考 CategoryOptions 登錄專案, 以判斷它是否應該使用類別特定的共用記憶體。  
+ 下列範例示範如何指定 PerfCounter 應該參考 CategoryOptions 登錄專案，以判斷它是否應該使用類別特定的共用記憶體。  
   
 ```xml  
 <configuration>  
@@ -79,7 +77,7 @@ enabled="true|false"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段設定結構描述](index.md)
 - [組態檔結構描述](../index.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0af312af-98e9-415e-b182-42e80a1aee51
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7cb58593a30b855c9fabf55a6ca0a50886dc371f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1e1d63ab28276f69e5b3a762520db8f8300d05bc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779482"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134766"
 ---
 # <a name="igcthreadcontrolsuspensionstarting-method"></a>IGCThreadControl::SuspensionStarting 方法
-通知記憶體回收執行緒暫止或其他暫停，正在開始執行階段主應用程式。  
+通知主機執行時間正在中止垃圾收集或其他暫停的執行緒。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,17 +32,17 @@ HRESULT SuspensionStarting ( );
 ```  
   
 ## <a name="remarks"></a>備註  
- 請勿重新排程在任何執行緒`SuspensionStarting`回呼。  
+ 請勿在 `SuspensionStarting` 回呼期間重新排定任何執行緒。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IGCThreadControl 介面](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)

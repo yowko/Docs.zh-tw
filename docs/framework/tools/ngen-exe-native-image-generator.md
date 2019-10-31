@@ -18,14 +18,12 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5079f0243faefaab6ada23cc98f5214a616c1d22
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e6c4baae854e5997b153e1363ca8ed4204e10e2b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044369"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085200"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (原生映像產生器)
 
@@ -59,7 +57,7 @@ Ngen.exe 在 .NET Framework 2.0 版中的變更：
 > [!NOTE]
 > 您可以在[原生映像產生器 (Ngen.exe) 舊版語法](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100))中找到 .NET Framework 1.0 和 1.1 版的 Ngen.exe 語法。
 
-此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
+此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
 
 在命令提示字元下輸入下列命令：
 
@@ -80,7 +78,7 @@ ngen /? | /help
 |動作|描述|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|產生組件的原生映像及其相依性，並在原生映像快取中安裝映像。<br /><br /> 如果已指定 `/queue`，原生映像服務的動作就會排入佇列。 預設優先權為 3。 請參閱[優先權層級](#PriorityTable)表格。|
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|從原生映像快取中刪除組件的原生映像和其相依性。<br /><br /> 若要解除安裝單一映像和其相依性，請使用安裝影像時所用的相同命令列引數。 **注意：** 從 .NET Framework 4 開始，不再支援 `uninstall` * 動作。|
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|從原生映像快取中刪除組件的原生映像和其相依性。<br /><br /> 若要解除安裝單一映像和其相依性，請使用安裝影像時所用的相同命令列引數。 **注意：** 從 .NET Framework 4 開始，不再支援動作 `uninstall` *。|
 |`update` [`/queue`]|更新已經變成無效的原生映像。<br /><br /> 如果已指定 `/queue`，原生映像服務的更新動作就會排入佇列。 更新動作一律會排在優先權 3，因此會在電腦為閒置時才執行。|
 |`display` [`assemblyName` &#124; `assemblyPath`]|顯示組件的原生映像狀態和其相依性。<br /><br /> 如果沒有提供任何引數，將顯示原生映像快取中的每個項目。|
 |`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> -或-<br /><br /> `eqi` [1&#124;2&#124;3]|執行排入佇列的編譯工作。<br /><br /> 如果已指定優先權，就會執行具有較大或相同優先權的編譯工作。 如果沒有指定優先權，將會執行所有排入佇列的編譯工作。|
@@ -92,14 +90,14 @@ ngen /? | /help
 
 |引數|描述|
 |--------------|-----------------|
-|`assemblyName`|組件的完整顯示名稱。 例如： `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"` 。 **注意：** 您可以提供組件的部分名稱 (例如 `myAssembly`) 以進行 `display` 和 `uninstall` 動作。 <br /><br /> 每一個 Ngen.exe 命令列只能指定一個組件。|
+|`assemblyName`|組件的完整顯示名稱。 例如，`"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`。 **附註：** 您可以提供組件的部分名稱 (例如 `myAssembly`) 以進行 `display` 和 `uninstall` 動作。 <br /><br /> 每一個 Ngen.exe 命令列只能指定一個組件。|
 |`assemblyPath`|組件的明確路徑。 您可以指定完整或相對路徑。<br /><br /> 如果指定檔案名稱但沒有指定路徑，則組件必須位於目前的目錄中。<br /><br /> 每一個 Ngen.exe 命令列只能指定一個組件。|
 
 <a name="PriorityTable"></a>
 
 ## <a name="priority-levels"></a>優先權層級
 
-|優先權|說明|
+|優先權|描述|
 |--------------|-----------------|
 |`1`|立即產生並安裝原生映像，不等待閒置時間。|
 |`2`|產生並安裝原生映像，不等待閒置時間，但在完成所有優先權為 1 的操作 (及其相依性) 之後。|
@@ -119,7 +117,7 @@ ngen /? | /help
 
 ## <a name="config"></a>組態
 
-|組態|說明|
+|Configuration|描述|
 |-------------------|-----------------|
 |`/ExeConfig:` `exePath`|使用指定之可執行組件的組態。<br /><br /> Ngen.exe 繫結至相依性時，必須做出與載入器一樣的決定。 在執行階段載入共用元件時，如果使用 <xref:System.Reflection.Assembly.Load%2A> 方法，應用程式的組態檔就會判斷為共用元件載入的相依性，例如，載入的相依性版本。 `/ExeConfig` 參數會對 Ngen.exe 提供在執行階段時載入的相依性指引。|
 |`/AppBase:` `directoryPath`|在尋找相依性時，使用指定的目錄做為應用程式基底。|
@@ -151,7 +149,7 @@ Ngen.exe 會產生 `install` 動作的 `assemblyname` 引數所指定組件的�
 
 Ngen.exe 會維護相依性的計數。 例如，假設 `MyAssembly.exe` 和 `YourAssembly.exe` 兩者都安裝在原生映像快取中，且兩者都有 `OurDependency.dll` 的參考。 如果 `MyAssembly.exe` 已解除安裝，則 `OurDependency.dll` 不會解除安裝。 只有在 `YourAssembly.exe` 也解除安裝時，才會將它移除。
 
-如果正在全域組件快取中產生組件的原生映像，請指定它的顯示名稱。 請參閱 <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>。
+如果正在全域組件快取中產生組件的原生映像，請指定它的顯示名稱。 請參閱<xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>.
 
 Ngen.exe 產生的原生映像可以在應用程式定義域之間共用。 這表示您可以在需要跨應用程式定義域共用組件的應用程式案例中使用 Ngen.exe。 若要指定定義域中立性：
 
@@ -376,7 +374,7 @@ Ngen.exe 會在產生原生映像時記錄這項資訊。 當您執行組件時�
 
      如果您對 .NET Framework 套用更新，則使用 Ngen.exe 建立的所有原生映像都會變成無效。 因此，.NET Framework 的所有更新都會執行 `Ngen Update` 命令，以確保重新產生所有的原生映像。 .NET Framework 會自動為它所安裝的 .NET Framework 程式庫建立新的原生映像。
 
-- 如果是從 Windows 9x 系列變更為 Windows NT 系列，則表示作業系統的版本。
+- 如果是從 Windows 9x 系列變更到 Windows NT 系列，則表示作業系統的版本。
 
      例如，如果電腦上執行的作業系統版本從 Windows 98 變更為 Windows XP，則存放在原生映像快取中的所有原生映像都會變成無效。 但是，如果作業系統從 Windows 2000 變更為 Windows XP，則映像不會失效。
 
@@ -463,7 +461,7 @@ ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
-若要在全域組件快取中建立組件的原生映像，請使用組件的顯示名稱。 例如：
+若要在全域組件快取中建立組件的原生映像，請使用組件的顯示名稱。 例如:
 
 ```console
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,
@@ -562,14 +560,14 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 
 ## <a name="native-image-task"></a>原生映像工作
 
-原生映像工作是產生及維護原生映像的 Windows 工作。 原生映像工作會自動為受支援的案例產生及回收原生映像。 它也可以讓安裝程式使用 [Ngen.exe (原生映像產生器)](ngen-exe-native-image-generator.md)，在延後的時間建立及更新原生映像。
+原生映像工作是產生及維護原生映像的 Windows 工作。 原生映像工作會自動為受支援的案例產生及回收原生映像。 它也可以讓安裝程式使用[ngen.exe （原生映射](ngen-exe-native-image-generator.md)產生器），在延遲的時間建立及更新原生映射。
 
 針對電腦上支援的每個 CPU 架構，會各註冊一次原生映像工作，以允許針對以各架構為目標的應用程式進行編譯：
 
 |工作名稱|32 位元電腦|64 位元電腦|
 |---------------|----------------------|----------------------|
-|NET Framework NGEN v4.0.30319|是|是|
-|NET Framework NGEN v4.0.30319 64|否|是|
+|NET Framework NGEN v4.0.30319|[是]|[是]|
+|NET Framework NGEN v4.0.30319 64|否|[是]|
 
 在 Windows 8 或更新版本上執行時，可在 .NET Framework 4.5 和更新版本中使用原生映像工作。 在舊版 Windows 中，.NET Framework 會使用 [原生映像服務](#native-image-service)。
 
@@ -637,7 +635,7 @@ ngen executeQueuedItems
 
 在 .NET Framework 2.0 版中，與原生映像服務的唯一互動，是透過命令列工具 Ngen.exe。 在安裝指令碼中使用命令列工具，將原生映像服務的動作加入佇列中，並與服務互動。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [工具](index.md)
 - [Managed 執行程序](../../standard/managed-execution-process.md)

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ff9bb537a31e28dbd4b878c1bc04c96262f85ac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f57dc9279c107ce751f71c2998670ab992db162
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927463"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118428"
 ---
-# <a name="remove-element-for-configsections"></a>\<移除 configSections > 的\<> 元素
+# <a name="remove-element-for-configsections"></a>\<移除 \<configSections 的 > 元素 >
 
 移除預先定義的區段或區段群組。
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
+&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<移除 >**
 
 ## <a name="syntax"></a>語法
 
@@ -32,7 +32,7 @@ ms.locfileid: "69927463"
 
 ## <a name="attribute"></a>屬性
 
-|           | 說明 |
+|           | 描述 |
 | --------- | ----------- |
 | **name**  | 必要屬性。<br><br>指定要移除之區段或區段群組的名稱。 |
 
@@ -40,7 +40,7 @@ ms.locfileid: "69927463"
 
 |     | 描述 |
 | --- | ----------- |
-| [ **configSections>\<** 元素](configsections-element-for-configuration.md) | 包含設定區段和命名空間宣告。 |
+| [ **\<configSections >** 元素](configsections-element-for-configuration.md) | 包含設定區段和命名空間宣告。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -48,13 +48,13 @@ None
 
 ## <a name="remarks"></a>備註
 
-您可以使用 **\<移除>** 區段和區段群組中移除您的應用程式組態檔階層架構中較高層級所定義的項目。
+您可以使用 **\<移除 >** 元素，從您的應用程式移除在設定檔階層中較高層級定義的區段和區段群組。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用 **\<移除>** 應用程式組態檔，以移除先前在電腦組態檔中定義的區段中的項目。
+下列範例示範如何使用應用程式佈建檔中的 **\<移除 >** 元素，以移除先前在電腦設定檔中定義的區段。
 
-下列電腦設定檔程式碼會宣告 **\<sampleSection >** 區段:
+下列電腦設定檔程式碼會宣告 **\<sampleSection >** 的區段：
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ None
 </configuration>
 ```
 
-下列應用程式佈建檔程式碼會移除 **\<sampleSection >** 區段。 移除之後, 應用程式就無法抓取 **\<sampleSection >** 中的設定。
+下列應用程式佈建檔案代碼會移除 **\<sampleSection >** 區段。 移除之後，應用程式就無法在 **\<sampleSection >** 中抓取設定。
 
 ```xml
 <!-- Application configuration file -->
@@ -82,8 +82,8 @@ None
 
 ## <a name="configuration-file"></a>組態檔
 
-此元素可用於應用程式佈建檔案、電腦設定檔案 (machine.config), 以及不在應用程式目錄層級的 web.config 檔案。
+此元素可用於應用程式佈建檔案 *、電腦設定檔案（machine.config*），以及不在應用程式目錄層級*的 web.config 檔案*。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Framework 的設定檔架構](index.md)

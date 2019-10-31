@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetPropertyOrigin function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c2d0f23f3dd2d52f73f09c32d4e3118a9ed5ea3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6cab3765f0359f5dd18831acaaa1aefce3fe1081
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798488"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101857"
 ---
 # <a name="getpropertyorigin-function"></a>GetPropertyOrigin 函式
 
@@ -72,16 +70,16 @@ HRESULT GetPropertyOrigin (
 
 因為類別可以繼承一或多個基類的屬性，所以開發人員通常會想要判斷定義了指定方法的屬性。
 
-在`pstrClassName`呼叫函式`out`之前，參數不得`BSTR`指向有效的，因為這是參數; 此指標不會在函式傳回之後解除配置。
+在呼叫函式之前，`pstrClassName` 參數不得指向有效的 `BSTR`，因為這是 `out` 參數。這個指標不會在函式傳回之後解除配置。
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
-**標頭：** WMINet_Utils.idl
+**標頭：** WMINet_Utils .idl
 
 **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WMI 和效能計數器（非受控 API 參考）](index.md)

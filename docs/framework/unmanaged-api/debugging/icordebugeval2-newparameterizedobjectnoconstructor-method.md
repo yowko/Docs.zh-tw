@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f15b5b78-94f4-4eb9-b3b3-a621272f357c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e4434f5d0eaa45c9cfcbadb20b29564f0643a2dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 770a9280d27c84b950e00e71328c9b28e61c9e7c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754442"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084814"
 ---
 # <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a>ICorDebugEval2::NewParameterizedObjectNoConstructor 方法
-產生指定類別的新參數化型的別物件，而不會嘗試呼叫建構函式方法。  
+Instantiates a new parameterized type object of the specified class without attempting to call a constructor method.  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,22 +37,22 @@ HRESULT NewParameterizedObjectNoConstructor (
   
 ## <a name="parameters"></a>參數  
  `pClass`  
- [in]ICorDebugClass 物件，表示要具現化物件類別的指標。  
+ [in] A pointer to an ICorDebugClass object that represents the class of the object to be instantiated.  
   
  `nTypeArgs`  
- [in]傳遞的類型引數數目。  
+ [in] The number of type arguments passed.  
   
  `ppTypeArgs`  
- [in]指標的陣列，其中每一個指向 ICorDebugType 物件，表示要具現化的物件型別引數。  
+ [in] An array of pointers, each of which points to an ICorDebugType object that represents a type argument for the object that is being instantiated.  
   
 ## <a name="remarks"></a>備註  
- `NewParameterizedObjectNoConstructor`方法將會失敗，如果型別引數數目不正確或錯誤類型的類型引數會傳遞。  
+ The `NewParameterizedObjectNoConstructor` method will fail if an incorrect number of type arguments or the wrong types of type arguments are passed.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

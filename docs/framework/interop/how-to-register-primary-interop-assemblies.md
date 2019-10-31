@@ -1,20 +1,18 @@
 ---
-title: 作法：登錄主要 Interop 組件
+title: 如何：登錄主要 Interop 組件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e0eeaee969eda5e4d0ea1a119991456668c7d44f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c799e4ead2932f1c376a57488df30390ad48b90f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051732"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107686"
 ---
-# <a name="how-to-register-primary-interop-assemblies"></a>作法：登錄主要 Interop 組件
+# <a name="how-to-register-primary-interop-assemblies"></a>如何：登錄主要 Interop 組件
 
 類別只能由 COM Interop 封送處理，並且一律會封送處理為介面。 在某些情況下，用來封送處理類別的介面就是所謂的類別介面。 如需以您選擇的介面來覆寫類別介面的資訊，請參閱 [COM 可呼叫包裝函式](../../standard/native-interop/com-callable-wrapper.md)。
 
@@ -36,7 +34,7 @@ ms.locfileid: "71051732"
 
 ## <a name="to-register-a-primary-interop-assembly"></a>註冊主要 Interop 組件
 
-1. 在命令提示字元中，輸入：
+1. 在命令提示中，輸入：
 
      **regasm** *assemblyname*
 
@@ -49,7 +47,7 @@ ms.locfileid: "71051732"
 regasm CompanyA.UtilLib.dll
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用主要 Interop 組件設計程式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
 - [找出主要 Interop 組件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))

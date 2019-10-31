@@ -13,14 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e8c26608115a22a5402d671c5f5e51c75442a0a5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: HT
+ms.openlocfilehash: 358e26957747073fec9dfe9eb0d404cb438afaf9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839520"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084185"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>規則運算式範例：變更日期格式
 下列程式碼範例會使用 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法，將 *mm*/*dd*/*yy* 格式的日期取代為 *dd*-*mm*-*yy* 格式的日期。  
@@ -57,6 +55,6 @@ ms.locfileid: "48839520"
 |`-`|加入連字號。|  
 |`$(year)`|加入 `year` 擷取群組所擷取的字串。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)

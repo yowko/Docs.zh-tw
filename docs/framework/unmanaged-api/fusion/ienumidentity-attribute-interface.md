@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c2ec2748-e9ae-4e1b-80db-6fcec5cb81a1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbb3ac150ebfe9fe3698427d8bb2bfb3e3347c07
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7e6bc57fb470a5c12549bb5f9445ecf1551425a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796461"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107834"
 ---
 # <a name="ienumidentity_attribute-interface"></a>IEnumIDENTITY_ATTRIBUTE 介面
 作為目前範圍中程式碼物件屬性的列舉值。  
@@ -30,10 +28,10 @@ ms.locfileid: "70796461"
   
 |方法|描述|  
 |------------|-----------------|  
-|`IEnumIDENTITY_ATTRIBUTE::Clone`|取得新`IEnumIDENTITY_ATTRIBUTE`的介面指標，其中包含與這個`IEnumIDENTITY_ATTRIBUTE`相同的成員。|  
-|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|將此`IEnumIDENTITY_ATTRIBUTE`專案中包含的資料寫入指定的資料緩衝區。|  
+|`IEnumIDENTITY_ATTRIBUTE::Clone`|取得新 `IEnumIDENTITY_ATTRIBUTE` 的介面指標，其中包含與此 `IEnumIDENTITY_ATTRIBUTE`相同的成員。|  
+|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|將此 `IEnumIDENTITY_ATTRIBUTE` 的元素中包含的資料寫入指定的資料緩衝區。|  
 |`IEnumIDENTITY_ATTRIBUTE::Next`|取得指定數目的屬性，從目前位置開始。|  
-|`IEnumIDENTITY_ATTRIBUTE::Reset`|將指令指標移至這個`IEnumIDENTITY_ATTRIBUTE`的開頭。|  
+|`IEnumIDENTITY_ATTRIBUTE::Reset`|將指令指標移至這個 `IEnumIDENTITY_ATTRIBUTE`的開頭。|  
 |`IEnumIDENTITY_ATTRIBUTE::Skip`|從目前位置開始，將指令指標向下移動指定的專案數。|  
   
 ## <a name="requirements"></a>需求  
@@ -43,6 +41,6 @@ ms.locfileid: "70796461"
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [融合介面](fusion-interfaces.md)

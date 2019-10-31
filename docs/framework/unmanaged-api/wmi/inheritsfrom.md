@@ -14,14 +14,12 @@ helpviewer_keywords:
 - InheritsFrom function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c32c54ec56ea0fe4f4039ca6438a91338edbadb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6bda63377251e3a208dfb1620896535ccdf8ccd8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798445"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127434"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom 函式
 判斷目前類別或執行個體衍生自指定的父類別。
@@ -47,7 +45,7 @@ HRESULT InheritsFrom (
 在[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)實例的指標。
 
 `wszAncestor`  
-在類別的名稱。 `wszAncestor`必須指向有效`LPCWSTR`的。
+在類別的名稱。 `wszAncestor` 必須指向有效的 `LPCWSTR`。
 
 ## <a name="return-value"></a>傳回值
 
@@ -55,8 +53,8 @@ HRESULT InheritsFrom (
 
 |常數  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_S_NO_ERROR` | 0 | 目前的物件繼承自`wszAncestor`。  |
-| `WBEM_S_FALSE` | 1 | 目前的物件不是繼承自`wszAncestor`。 |
+| `WBEM_S_NO_ERROR` | 0 | 目前的物件繼承自 `wszAncestor`。  |
+| `WBEM_S_FALSE` | 1 | 目前的物件不是繼承自 `wszAncestor`。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` 為 `null`。 |
   
 ## <a name="remarks"></a>備註
@@ -66,10 +64,10 @@ HRESULT InheritsFrom (
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** WMINet_Utils.idl  
+ **標頭：** WMINet_Utils .idl  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WMI 和效能計數器（非受控 API 參考）](index.md)

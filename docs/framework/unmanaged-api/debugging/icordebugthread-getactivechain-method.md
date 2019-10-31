@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f50de1f7-40ef-4949-b542-1d9a61f7bfef
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 59328c8b7e86694610de20ade72a98a4280b439d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 99a617ef21ee3c3319b1ebe7d3ab8367659b6ef8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762627"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133548"
 ---
 # <a name="icordebugthreadgetactivechain-method"></a>ICorDebugThread::GetActiveChain 方法
-取得這個 ICorDebugThread 物件上的作用中 （最新的） 堆疊鏈結的介面指標。  
+取得此 ICorDebugThread 物件上作用中（最新）堆疊鏈的介面指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,16 +35,16 @@ HRESULT GetActiveChain (
   
 ## <a name="parameters"></a>參數  
  `ppChain`  
- [out]ICorDebugChain 物件，表示堆疊鏈結的位址指標。  
+ 脫銷代表堆疊鏈之 ICorDebugChain 物件的位址指標。  
   
 ## <a name="remarks"></a>備註  
- `ppChain`參數為 null，如果沒有堆疊鏈結是目前作用中。  
+ 如果目前沒有作用中的堆疊鏈，則 `ppChain` 參數為 null。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

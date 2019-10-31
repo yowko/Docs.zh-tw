@@ -14,29 +14,27 @@ helpviewer_keywords:
 ms.assetid: 76a136b5-e444-417a-8ade-f1596d597dc7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a5509dd07bbb6c812a7ea2797c46002aaa161c46
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d083655326333f18ee98f8e84fff2ed182dde6d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619957"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103455"
 ---
 # <a name="icorpublishenum-interface"></a>ICorPublishEnum 介面
-可作為抽象的基底介面，可在發佈程序和應用程式定義域的相關資訊的列舉值。  
+做為列舉值的抽象基底介面，這些列舉值是用來發行進程和應用程式域的相關資訊。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Clone 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-clone-method.md)|建立一份這`ICorPublishEnum`物件。|  
-|[GetCount 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-getcount-method.md)|列舉中取得的項目數。|  
-|[Reset 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-reset-method.md)|移動資料指標的列舉型別的開頭。|  
-|[Skip 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-skip-method.md)|將游標移往前列舉中所指定的項目數。|  
+|[Clone 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-clone-method.md)|建立這個 `ICorPublishEnum` 物件的複本。|  
+|[GetCount 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-getcount-method.md)|取得列舉中的專案數。|  
+|[Reset 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-reset-method.md)|將的資料指標移至列舉的開頭。|  
+|[Skip 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-skip-method.md)|在列舉中，將資料指標向後移動指定的專案數。|  
   
 ## <a name="remarks"></a>備註  
- 下列的列舉值衍生自`ICorPublishEnum`:  
+ 下列枚舉器衍生自 `ICorPublishEnum`：  
   
 - [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)  
   
@@ -45,13 +43,13 @@ ms.locfileid: "64619957"
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorPub.idl CorPub.h  
+ **標頭：** CorPub .idl，CorPub。h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [CorpubPublish Coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

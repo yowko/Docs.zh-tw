@@ -1,15 +1,13 @@
 ---
-title: <Method>元素（.NET Native）
+title: <Method> 元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d741f51abf02f4bfda2b007efd4c859027e54d9b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7b0e77e6dea29cbd5218ab3f6f992002efd51656
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049580"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128341"
 ---
 # <a name="method-element-net-native"></a>\<方法 > 元素（.NET Native）
 將執行階段反映原則套用到建構函式或方法。  
@@ -28,7 +26,7 @@ ms.locfileid: "71049580"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|屬性類型|說明|  
+|屬性|屬性類型|描述|  
 |---------------|--------------------|-----------------|  
 |`Name`|一般|必要屬性。 指定方法名稱。|  
 |`Signature`|一般|選擇性屬性。 指定方法簽章。 如果有多個參數存在，會以逗號分隔。 例如，下列 `<Method>` 元素會定義 <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29> 方法的原則。<br /><br /> `<Type Name="System.DateTime">    <Method Name="ToString" Signature="System.String,System.IFormatProvider"            Dynamic="Required" /> </Type>`<br /><br /> 如果屬性不存在，執行階段指示詞會套用到方法的所有多載。|  
@@ -37,23 +35,23 @@ ms.locfileid: "71049580"
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*method_name*|方法名稱。 方法的類型是由父 [\<Type>](type-element-net-native.md) 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 項目所定義。|  
   
 ## <a name="signature-attribute"></a>簽章屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*method_signature*|構成方法簽章的參數類型。 若有多個參數，會以逗號分隔，例如，`"System.String,System.Int32,System.Int32)"`。 參數類型名稱應該是完整名稱。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `Auto`、`Excluded`、`Included` 和 `Required`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -64,7 +62,7 @@ ms.locfileid: "71049580"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|將反映原則套用至建構泛型類型及其所有成員。|  
@@ -145,7 +143,7 @@ ms.locfileid: "71049580"
 </Directives>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)

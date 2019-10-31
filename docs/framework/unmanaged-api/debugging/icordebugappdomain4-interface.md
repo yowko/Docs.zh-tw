@@ -2,17 +2,15 @@
 title: ICorDebugAppDomain4 介面
 ms.date: 03/30/2017
 ms.assetid: c536b9dc-148e-4924-bde1-1daa98d49d90
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c6077f16f07c5f1fc76b6525ccb036aa1e4fa06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db5c08f74795026d7c6f3b5872fb6fdabf88ee5d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922160"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088812"
 ---
 # <a name="icordebugappdomain4-interface"></a>ICorDebugAppDomain4 介面
-以邏輯方式擴充 ICorDebugAppDomain 介面，以從 COM 可呼叫包裝函式取得 managed 的物件。  
+以邏輯方式擴充 ICorDebugAppDomain 介面，以從 COM 可呼叫包裝函式取得 managed 物件。  
   
 ## <a name="method"></a>方法  
   
@@ -27,11 +25,11 @@ ms.locfileid: "61922160"
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

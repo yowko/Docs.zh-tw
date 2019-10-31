@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_BeginEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3b75c51ebddd78e447fed57b22a96c2d5c35004e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 79edbd876fc9992f088b9adb159e005c735a72cb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798342"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127331"
 ---
 # <a name="qualifierset_beginenumeration-function"></a>QualifierSet_BeginEnumeration 函式
 
@@ -57,7 +55,7 @@ HRESULT QualifierSet_BeginEnumeration (
 |常數  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lFlags` 參數無效。 |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | 第二次呼叫`QualifierSet_BeginEnumeration`時，不需要介入的[`QualifierSet_EndEnumeration`](qualifierset-endenumeration.md)呼叫。 |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | 對 `QualifierSet_BeginEnumeration` 進行第二次呼叫，而不需要呼叫[`QualifierSet_EndEnumeration`](qualifierset-endenumeration.md)。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可以開始新的列舉。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
 
@@ -67,22 +65,22 @@ HRESULT QualifierSet_BeginEnumeration (
 
 若要列舉物件上的所有限定詞，必須在第一次呼叫[QualifierSet_Next](qualifierset-next.md)之前，呼叫這個方法。 辨識限定詞的順序，保證對指定的列舉而言是不變的。
 
-可當做`lEnumFlags`引數傳遞的旗標會定義在*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數。
+可以當做 `lEnumFlags` 引數傳遞的旗標會定義在*WbemCli*標頭檔中，或者您可以在程式碼中將它們定義為常數。
 
 |常數  |值  |描述  |
 |---------|---------|---------|
 |  | 0 | 傳回所有限定詞的名稱。 |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 只傳回目前屬性或物件的特定限定詞名稱。 <br/> 若為屬性：只傳回屬性的特定限定詞（包括覆寫），而不是從類別定義傳播的限定詞。 <br/> 針對實例：只傳回實例特有的限定詞名稱。 <br/> 若為類別：只傳回衍生的類別特定的限定詞。
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | 只傳回從另一個物件傳播的限定詞名稱。 <br/> 若為屬性：只傳回從類別定義傳播到這個屬性的限定詞，而不是屬性本身的辨識符號。 <br/> 針對實例：只傳回從類別定義傳播的限定詞。 <br/> 若為類別：只傳回繼承自父類別的限定詞名稱。 |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 只傳回目前屬性或物件的特定限定詞名稱。 <br/> 對於屬性：只傳回屬性的特定限定詞（包括覆寫），而不是從類別定義傳播的限定詞。 <br/> 針對實例：只傳回實例特定的限定詞名稱。 <br/> 針對類別：只傳回所要衍生之類別的特定限定詞。
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | 只傳回從另一個物件傳播的限定詞名稱。 <br/> 對於屬性：只傳回從類別定義傳播到這個屬性的限定詞，而不是來自屬性本身的辨識符號。 <br/> 針對實例：只傳回從類別定義傳播的限定詞。 <br/> 針對類別：只傳回繼承自父類別的限定詞名稱。 |
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
-**標頭：** WMINet_Utils.idl
+**標頭：** WMINet_Utils .idl
 
 **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WMI 和效能計數器（非受控 API 參考）](index.md)

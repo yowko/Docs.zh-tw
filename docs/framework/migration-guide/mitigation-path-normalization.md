@@ -1,17 +1,15 @@
 ---
-title: 風險降低：路徑正規化
+title: 風險降低︰路徑正規化
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc5ea69d80a225adfc2f409e8303ee1c241398db
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9ec34d8215c88329066b1cb86da018db82e16c5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779341"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126216"
 ---
-# <a name="mitigation-path-normalization"></a>風險降低：路徑正規化
+# <a name="mitigation-path-normalization"></a>風險降低︰路徑正規化
 從以 .NET Framework 4.6.2 為目標的應用程式開始，.NET Framework 中的路徑正規化已有所變更。  
   
 ## <a name="what-is-path-normalization"></a>路徑正規化是什麼？  
@@ -44,7 +42,7 @@ ms.locfileid: "70779341"
   
 此變更不會影響以 .NET Framework 4.6.1 和舊版為目標但執行於 .NET Framework 4.6.2 或更新版本下的應用程式。  
   
-## <a name="mitigation"></a>緩和  
+## <a name="mitigation"></a>風險降低  
  以 .NET Framework 4.6.2 或更新版本為目標的應用程式，可透過在應用程式組態檔的[\<執行階段>](../configure-apps/file-schema/runtime/runtime-element.md) 區段中新增下列內容來選擇退出此變更，並使用舊版行為：  
   
 ```xml  
@@ -61,6 +59,6 @@ ms.locfileid: "70779341"
 </runtime>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [重定目標變更](retargeting-changes-in-the-net-framework-4-6-2.md)

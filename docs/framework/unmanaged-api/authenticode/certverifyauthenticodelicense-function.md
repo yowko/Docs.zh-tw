@@ -8,14 +8,12 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3d8ab96c758b946684af78bfa21822fdaf96530a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7cd25a24533b04dc45ee734f9e9639391311405a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786966"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099736"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>CertVerifyAuthenticodeLicense 函式
 驗證 Authenticode XrML 授權的有效性。  
@@ -65,7 +63,7 @@ HRESULT CertVerifyAuthenticodeLicense (
 ## <a name="return-value"></a>傳回值  
  若成功，會傳回 `S_OK`。 否則會傳回錯誤碼。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Authenticode](index.md)
 - [GetHashFromHandle 方法](../hosting/iclrstrongname-gethashfromhandle-method.md)

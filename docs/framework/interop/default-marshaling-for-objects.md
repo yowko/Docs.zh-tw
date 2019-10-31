@@ -8,14 +8,12 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b2c6e8a013d6486ec55723b91d6bfb6b838c9be5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: e0de715a3ed33eedf212fc3e0e9930c9cbaa0a38
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044172"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123583"
 ---
 # <a name="default-marshaling-for-objects"></a>物件的預設封送處理
 
@@ -312,7 +310,7 @@ COM Variant 的值是透過呼叫 **IConvertible.To** *Type* 介面所決定；�
 
 下表摘要說明 Variant 和物件的傳播規則。
 
-|從|以|變更傳播回|
+|From|若要|變更傳播回|
 |----------|--------|-----------------------------|
 |**Variant**  *v*|**物件**  *o*|永不|
 |**物件**  *o*|**Variant**  *v*|永不|
@@ -321,7 +319,7 @@ COM Variant 的值是透過呼叫 **IConvertible.To** *Type* 介面所決定；�
 |**Variant**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**物件**  *o*|永不|
 |**Variant**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Ref 物件**  *o*|只有當類型不變更時。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [預設的封送處理行為](default-marshaling-behavior.md)
 - [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)

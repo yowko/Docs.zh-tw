@@ -6,24 +6,22 @@ helpviewer_keywords:
 - unmanaged enumerations [.NET Framework], debugging
 - enumerations [.NET Framework debugging]
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5edd6dfb3dac05ce4614c43949f2ec4c19b5f742
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7948b78da1db5267ce53364af1e4a26ff73801e0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698508"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124324"
 ---
 # <a name="debugging-enumerations"></a>偵錯列舉
 本節說明偵錯 API 所使用的 Unmanaged 列舉。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [CLR_DEBUGGING_PROCESS_FLAGS 列舉](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md)  
- 提供值，可供[iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法。  
+ 提供[ICLRDebugging：： OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法所使用的值。  
   
  [CLRDataEnumMemoryFlags 列舉](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md)  
- 指出哪些記憶體區域呼叫[iclrdataenummemoryregions:: Enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)方法應該包含。  
+ 指出[ICLRDataEnumMemoryRegions：： EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)方法的呼叫應包含的記憶體區域。  
   
  [COR_PUB_ENUMPROCESS 列舉](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md)  
  識別所要列舉的類型。  
@@ -41,16 +39,16 @@ ms.locfileid: "61698508"
  描述匯出函式呼叫 Managed 程式碼的原因。  
   
  CorDebugCreateProcessFlags  
- 提供可用的呼叫中的其他偵錯選項[icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)方法。  
+ 提供可在[ICorDebug：： CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)方法的呼叫中使用的其他偵錯工具選項。  
   
  [CorDebugDebugEventKind 列舉](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)  
- 表示的事件解碼其資訊的型別[DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)方法。  
+ 表示[DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)方法解碼其資訊的事件種類。  
   
  [CorDebugDecodeEventFlagsWindows 列舉](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
  提供 Windows 平台上之偵錯事件的其他資訊。  
   
  CorDebugExceptionCallbackType  
- 表示一種從進行的回呼[ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件。  
+ 表示從[ICorDebugManagedCallback2：： Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件進行的回呼類型。  
   
  [CorDebugExceptionFlags 列舉](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)  
  提供例外狀況的其他資訊。  
@@ -83,7 +81,7 @@ ms.locfileid: "61698508"
  包含會影響 Managed Just-In-Time (JIT) 編譯器行為的值。  
   
  [CorDebugJITCompilerFlagsDeprecated 列舉](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflagsdeprecated-enumeration.md)  
- 已過時。 使用`CORDEBUG_JIT_DEFAULT`隸屬[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)列舉改。  
+ 已過時。 請改用[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)列舉的 `CORDEBUG_JIT_DEFAULT` 成員。  
   
  CorDebugMappingResult  
  提供如何取得指令指標 (IP) 值的詳細資料。  
@@ -95,7 +93,7 @@ ms.locfileid: "61698508"
  提供用來判定偵錯工具是否從原生影像快取載入原生 (NGen) 影像的值。  
   
  [CorDebugPlatform 列舉](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)  
- 提供所使用的目標平台值[icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法。  
+ 提供[ICorDebugDataTarget：： GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法所使用的目標平臺值。  
   
  [CorDebugRecordFormat 列舉](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
  描述包含原生例外狀況偵錯事件相關資訊之位元組陣列中的資料格式。  
@@ -134,7 +132,7 @@ ms.locfileid: "61698508"
  指出在切換偵錯/追蹤時所執行的作業。  
   
  [VariableLocationType 列舉](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)  
- 表示變數的原生位置型別。  
+ 表示變數的原生位置類型。  
   
  [WriteableMetadataUpdateMode 列舉](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md)  
  提供值來指定偵錯工具是否可以看見對中繼資料的記憶體中更新。 

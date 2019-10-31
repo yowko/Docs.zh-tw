@@ -1,5 +1,5 @@
 ---
-title: 作法：撰寫自訂 PLINQ 彙總函式
+title: 如何：撰寫自訂 PLINQ 彙總函式
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to create aggregate function
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 09e128c98b61ecc4ac673d8c9911f4bac476d521
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: 7bb4cc1b69f0b6b97c1cf6255ded5341304f3ee3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988439"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106762"
 ---
-# <a name="how-to-write-a-custom-plinq-aggregate-function"></a>作法：撰寫自訂 PLINQ 彙總函式
+# <a name="how-to-write-a-custom-plinq-aggregate-function"></a>如何：撰寫自訂 PLINQ 彙總函式
 此範例示範如何使用 <xref:System.Linq.ParallelEnumerable.Aggregate%2A> 方法，將自訂彙總函式套用至來源序列。  
   
 > [!WARNING]
@@ -33,7 +31,7 @@ ms.locfileid: "69988439"
   
  請注意，當 lambda 運算式主體包含單一運算式時，<xref:System.Func%602?displayProperty=nameWithType> 委派的傳回值即為運算式的值。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Linq.ParallelEnumerable>
 - [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

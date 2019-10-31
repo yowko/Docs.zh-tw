@@ -2,14 +2,12 @@
 title: 常見資料類型 (Unmanaged API 參考)
 ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b0a27eae744fb22c87634aaf6a0274a9825d981
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 86f3886b96d0156ec2f0431369c7a54954cd4cad
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776474"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132444"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>常見資料類型 (Unmanaged API 參考)
 本主題針對 C/C++ `typedef` 陳述式所定義的 .NET Framework，列出 Unmanaged API 所使用的簡單資料類型。 這些資料類型通常是 C/C++ 基本資料類型的別名。 一般而言，這些資料類型的值為不透明；因此，會由特定函式或方法傳回這些值，如此一來就能在未經修改的情況下將這些值傳遞至其他函式或方法。  
@@ -19,7 +17,7 @@ ms.locfileid: "70776474"
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|應用程式網域的識別項。|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|組件的識別項。|  
 |ClassID|`typedef UINT_PTR ClassID;`|corprof.h|Managed 類別的識別項。|  
-|CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|clrdata.h|64位的記憶體位址。|
+|CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|clrdata。h|64位的記憶體位址。|
 |CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|無法使用|64位的記憶體位址。|
 |CONNID|`typedef DWORD CONNID;`|cordebug.h、mscoree.h|連接至 Microsoft SQL Server 執行個體的執行緒的連接識別項。|  
 |ContextID|`typedef UINT_PTR ContextID;`|corprof.h|與特定 Managed 執行緒相關之內容的識別項。|  
@@ -41,6 +39,6 @@ ms.locfileid: "70776474"
 |TASKID|`typedef UINT64 TASKID;`|cordebug.h、mscoree.h|[ICLRTask](./hosting/iclrtask-interface.md)實例的識別碼。|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|Managed 執行緒的識別項。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Unmanaged API 參考](index.md)

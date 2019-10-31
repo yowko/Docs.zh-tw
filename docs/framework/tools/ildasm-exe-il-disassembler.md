@@ -9,20 +9,18 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d08d6164c00d2b5b750c9edda46a7be18153152
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f23f8c48a31dffa7d350c872aed7505da7a36861
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044650"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105063"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 反組譯工具)
 
 IL 反組譯工具是 IL 組譯工具 (*Ilasm.exe*) 的附屬工具。 *Ildasm.exe* 採用包含中繼語言 (IL) 程式碼的可攜式執行檔 (PE)，並建立適合用作 *Ilasm.exe* 輸入的文字檔。
 
-此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
+此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
 
 在命令提示字元下輸入下列命令：
 
@@ -63,7 +61,7 @@ ildasm [options] [PEfilename] [options]
 
 下列選項只對檔案或主控台輸出的 *.exe*、 *.dll* 和 *.winmd* 檔案有效。
 
-| 選項 | 說明 |
+| 選項 | 描述 |
 | ------ | ----------- |
 |**/all**|指定 **/header**、 **/bytes**、 **/stats**、 **/classlist** 與 **/tokens** 選項的組合。|
 |**/classlist**|包括模組中定義的類別清單。|
@@ -155,7 +153,7 @@ ildasm MyFile.exe /output:MyFile.il
 ildasm MyFile.exe /text
 ```
 
-如果檔案 `MyApp.exe` 包含內嵌的受控和非受控資源，則下列命令會產生四個檔案：*MyApp.il*、*MyApp.res*、*Icons.resources* 和 *Message.resources*：
+如果檔案 `MyApp.exe` 包含內嵌的 Managed 和 Unmanaged 資源，則下列命令會產生四個檔案：*MyApp.il*、*MyApp.res*、*Icons.resources*和 *Message.resources*：
 
 ```console
 ildasm MyApp.exe /output:MyApp.il
@@ -184,7 +182,7 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 
 巢狀類型的前面必須加上它的包含類別，並以正斜線分隔。 例如，如果 `MyNamespace.MyClass` 類別包含名為 `NestedClass` 的巢狀類別，則該巢狀類別的識別方式如下：`class MyNamespace.MyClass/NestedClass`。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [工具](index.md)
 - [Ilasm.exe (IL 組譯工具)](ilasm-exe-il-assembler.md)

@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80dbbbf8-54fc-4894-b74a-0179d3201083
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d696326ff8861ed8496474f76e9eaf89b4ead3e8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f089769f854bad5d3e572e0307734e06e72ca89c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795399"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108559"
 ---
 # <a name="createinstallreferenceenum-function"></a>CreateInstallReferenceEnum 函式
 取得[IInstallReferenceEnum](iinstallreferenceenum-interface.md)實例的指標，表示應用程式對指定元件的參考清單。  
@@ -41,7 +39,7 @@ HRESULT CreateInstallReferenceEnum (
   
 ## <a name="parameters"></a>參數  
  `ppRefEnum`  
- 脫銷傳回`IInstallReferenceEnum`的指標。  
+ 脫銷傳回的 `IInstallReferenceEnum` 指標。  
   
  `pName`  
  在識別要列舉參考之元件的[IAssemblyName](iassemblyname-interface.md) 。  
@@ -50,18 +48,18 @@ HRESULT CreateInstallReferenceEnum (
  在會影響列舉值行為的旗標。  
   
  `pvReserved`  
- 在保留以供未來擴充性之用。 `pvReserved`必須是 null 參考。  
+ 在保留以供未來擴充性之用。 `pvReserved` 必須是 null 參考。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** 融合。h  
   
- **LIBRARY:** 融合 .dll 和 Mscorwks.dll。 請使用 [Mscorwks.dll]，而不是 []，以確保您以正確的 .NET Framework 版本為目標。  
+ 連結**庫：** 融合 .dll 和 Mscorwks.dll。 請使用 [Mscorwks.dll]，而不是 []，以確保您以正確的 .NET Framework 版本為目標。  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IInstallReferenceEnum 介面](iinstallreferenceenum-interface.md)
 - [IAssemblyName 介面](iassemblyname-interface.md)

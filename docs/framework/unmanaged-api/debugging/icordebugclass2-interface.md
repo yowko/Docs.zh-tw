@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5416de70-43f2-4cdf-a11f-d570759c9c0c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1f6a8b0ead430ffdd0e4e30cacae54d68fa9d730
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb2ab28824d209dd1eed627600e30e9ddb0d7c7a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969267"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125715"
 ---
 # <a name="icordebugclass2-interface"></a>ICorDebugClass2 介面
 
@@ -29,10 +27,10 @@ ms.locfileid: "69969267"
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[GetParameterizedType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-getparameterizedtype-method.md)|取得這個類別的類型宣告。|  
-|[SetJMCStatus 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|針對這個類別的每個方法, 設定一個值, 指出此方法是否為使用者定義的程式碼。|  
+|[SetJMCStatus 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|針對這個類別的每個方法，設定一個值，指出此方法是否為使用者定義的程式碼。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -44,11 +42,11 @@ ms.locfileid: "69969267"
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugClass 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

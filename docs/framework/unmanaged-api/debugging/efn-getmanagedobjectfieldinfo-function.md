@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1de0b3b05d38c1fec38b9436c653973dfaa4136
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b68f24908a5b214d507da8e8a4636a7c55259604
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739008"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123021"
 ---
-# <a name="efngetmanagedobjectfieldinfo-function"></a>\_EFN\_GetManagedObjectFieldInfo Function
+# <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN\_GetManagedObjectFieldInfo Function
 使用所提供的物件指標和欄位名稱來取得從物件開始到欄位的位移以及欄位的值。  
   
 ## <a name="syntax"></a>語法  
@@ -40,32 +38,32 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
   
 ## <a name="parameters"></a>參數  
  `Client`  
- [in]偵錯用戶端指標。  
+ [in] A pointer to the debug client.  
   
  `objAddr`  
- [in]Managed 的物件指標。  
+ [in] A managed object pointer.  
   
  szFieldName  
- [in]Managed 的物件指標的欄位名稱。  
+ [in] A managed object pointer to the field name.  
   
  `pValue`  
- [out]欄位值。 此參數可以是 null。  
+ [out] The field value. 此參數可以是 null。  
   
  `pOffset`  
- [out]從位移`objAddr`欄位。 此參數可以是 null。  
+ [out] The offset from `objAddr` to the field. 此參數可以是 null。  
   
 ## <a name="remarks"></a>備註  
- 如果位移是 0，不會寫入位移。  
+ If the offset is 0, no offset is written.  
   
- 如果沒有任何 managed 程式碼的執行緒上目前內容中，則函數會傳回 HRESULT SOS_E_NOMANAGEDCODE 0xa0 設備值與 0x1000 錯誤碼。  
+ If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** SOS_Stacktrace.h  
+ **Header:** SOS_Stacktrace.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯全域靜態函式](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

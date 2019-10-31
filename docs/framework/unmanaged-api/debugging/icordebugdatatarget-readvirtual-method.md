@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c9d42c85502c12d4d77694626a533c69af97da67
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87316b20c5835d9b887355a1f9374fa5f2156e5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750257"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122177"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>ICorDebugDataTarget::ReadVirtual 方法
-取得從指定的位址、 開始的連續記憶體區塊，並傳回它在提供的緩衝區。  
+從指定的位址開始，取得連續記憶體的區塊，並將它傳回給提供的緩衝區。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,30 +38,30 @@ HRESULT ReadVirtual(
   
 ## <a name="parameters"></a>參數  
  `address`  
- [in]起始要求的記憶體位址。  
+ 在要求之記憶體的起始位址。  
   
  `pbuffer`  
- [out]將儲存記憶體緩衝區。  
+ 脫銷將儲存記憶體的緩衝區。  
   
  `bytesRequested`  
- [in]若要從目標位址取得的位元組數目。  
+ 在要從目標位址取得的位元組數目。  
   
  `pBytesRead`  
- [out]從目標位址實際讀取的位元組數目。 這可以是少於`bytesRequested`。  
+ 脫銷實際從目標位址讀取的位元組數目。 這可能少於 `bytesRequested`。  
   
 ## <a name="remarks"></a>備註  
- 如果可以讀取的第一個位元組 （在指定的開始位址），呼叫應該會傳回成功 （以支援有效讀取具有自我描述的長度，例如 null 結尾字串的資料結構）。  
+ 如果可以讀取第一個位元組（在指定的起始位址），則呼叫應該會傳回 success （以支援有效率地讀取具有自我描述長度的資料結構，例如以 null 終止的字串）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

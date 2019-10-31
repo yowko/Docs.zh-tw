@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 26fb69f8-1467-4711-bd24-cb117c63938f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6d51c445d6f375f805253b9f640ab61ab3dccc58
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c084a3fcbbc02504124a511c6e136be32f408d21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738482"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112330"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>ICLRDataTarget2::FreeVirtual 方法
-由通用語言執行平台 (CLR) 資料存取服務先前配置的目標處理序的位址空間中的可用記憶體來呼叫。  
+由 common language runtime （CLR）資料存取服務呼叫，以釋放先前在目標進程的位址空間中配置的記憶體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,29 +37,29 @@ HRESULT FreeVirtual(
   
 ## <a name="parameters"></a>參數  
  `addr`  
- [in]A`CLRDATA_ADDRESS`值，指定要釋放記憶體的起始位址。  
+ 在`CLRDATA_ADDRESS` 值，指定要釋放之記憶體的起始位址。  
   
  `size`  
- [in]以位元組為單位，以釋放記憶體的大小。  
+ 在要釋放的記憶體大小（以位元組為單位）。  
   
  `typeFlags`  
- [in]控制釋放記憶體的旗標。 請參閱 Win32`VirtualFree`函式。  
+ 在控制記憶體釋放的旗標。 請參閱 Win32 `VirtualFree` 函數。  
   
 ## <a name="remarks"></a>備註  
- `FreeVirtual`方法做為 Win32 的邏輯包裝函數`VirtualFree`函式。  
+ `FreeVirtual` 方法可做為 Win32 `VirtualFree` 函數的邏輯包裝函式。  
   
  此方法是由偵錯應用程式的作者來實作。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** ClrData.idl, ClrData.h  
+ **標頭：** ClrData .idl，ClrData。h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRDataTarget2 介面](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
 - [AllocVirtual 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)

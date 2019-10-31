@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 121b1c4b124ba07ff3bd312fd3832d3da592f486
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0695d5638589d1afe48553fe32b8d070e3938353
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921287"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119195"
 ---
-# <a name="remove-element-for-appsettings"></a>\<移除 appSettings > 的\<> 元素
+# <a name="remove-element-for-appsettings"></a>\<移除 \<appSettings 的 > 元素 >
 
 移除自訂應用程式設定。
 
 [ **\<configuration>** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<移除 >**
 
 ## <a name="syntax"></a>語法
 
@@ -46,11 +46,11 @@ ms.locfileid: "69921287"
 
 ## <a name="child-elements"></a>子元素
 
-無
+None
 
 ## <a name="example"></a>範例
 
-下列範例顯示如何移除的自訂設定`ApplicationName`:
+下列範例顯示如何移除 `ApplicationName`的自訂設定：
 
 ```xml
 <appSettings>
@@ -58,6 +58,6 @@ ms.locfileid: "69921287"
 </appSettings>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Framework 的設定檔架構](../index.md)

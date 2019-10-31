@@ -1,5 +1,5 @@
 ---
-title: ConnectionGroup.m_ConnectionList 欄位
+title: ConnectionGroup. m_ConnectionList 欄位
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d06968c844dc9187b973af156a29ded9ba7cde66
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a06e535c554f765161d619d97f2e70072fbd0d5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301399"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120010"
 ---
-# <a name="connectiongroupmconnectionlist-field"></a>ConnectionGroup.m\_ConnectionList 欄位
+# <a name="connectiongroupm_connectionlist-field"></a>ConnectionGroup\_ConnectionList 欄位
 
-`ConnectionGroup.m_ConnectionList` 是<xref:System.Collections.ArrayList>做相同的 URI 和共用的連接物件的其他一些屬性相同的值，例如到期日和驗證。
+`ConnectionGroup.m_ConnectionList` 是連線物件的 <xref:System.Collections.ArrayList>，它會提供相同的 URI，並針對某些其他屬性（例如到期和驗證）共用相同的值。
 
 ## <a name="syntax"></a>語法
   
@@ -30,14 +30,14 @@ private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> `ConnectionGroup.m_ConnectionList`欄位是私用，而不是直接在您的程式碼中使用。
+> [`ConnectionGroup.m_ConnectionList`] 欄位是私用的，不適合直接在程式碼中使用。
 > 
-> Microsoft 不支援在生產環境應用程式中任何情況下使用此欄位。
+> 在任何情況下，Microsoft 不支援在生產應用程式中使用此欄位。
 
 ## <a name="requirements"></a>需求
 
 **命名空間︰** <xref:System.Net>
 
-**組件：** （在 System.dll) 的系統
+**元件：** 系統（在 System .dll 中）
 
-**.NET framework 版本：** 自 2.0 起可用。
+**.NET Framework 版本：** 自2.0 開始提供。

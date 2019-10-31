@@ -1,5 +1,5 @@
 ---
-title: 建立元件
+title: 建立組件
 ms.date: 08/19/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -7,16 +7,14 @@ helpviewer_keywords:
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2dda45cca182d75bc77916cdf862ada9faead9ec
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 8a00784e6aa2d663c738339367b4076e79ed9c95
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973303"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122492"
 ---
-# <a name="create-assemblies"></a>建立元件
+# <a name="create-assemblies"></a>建立組件
 
 您可以使用 IDE (例如 Visual Studio) 或 Windows SDK 所提供的編譯器與工具來建立單一檔案或多檔案組件。 最簡單的組件是單一檔案，其具有簡單名稱並載入到單一應用程式定義域。 這個組件無法供應用程式目錄外部的其他組件參考，而且不會進行版本檢查。 若要解除安裝構成組件的應用程式，您只需要刪除其所在的目錄。 對許多開發人員而言，具有這些功能的組件就是部署應用程式所需的項目。
 
@@ -46,7 +44,7 @@ ms.locfileid: "70973303"
 
 將 common language runtime 元件提供給未受管理的 COM 應用程式時，有一些特殊的考慮。 如需使用非受控碼的詳細資訊，請參閱[將 .NET Framework 元件公開給 COM](../../framework/interop/exposing-dotnet-components-to-com.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [具有元件的程式](program.md)
 - [元件版本控制](versioning.md)

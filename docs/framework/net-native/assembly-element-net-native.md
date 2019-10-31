@@ -1,17 +1,15 @@
 ---
-title: <Assembly>元素（.NET Native）
+title: <Assembly> 元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1743264996680c6a0ce308619d7a5bafef5d07a5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bad2286c5306b9f8a8955ebef12e5e99aec5bb89
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049923"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128502"
 ---
-# <a name="assembly-element-net-native"></a>\<Assembly > 元素（.NET Native）
+# <a name="assembly-element-net-native"></a>\<元件 > 元素（.NET Native）
 將執行階段反映原則套用至指定組件中的所有類型。  
   
 ## <a name="syntax"></a>語法  
@@ -57,13 +55,13 @@ ms.locfileid: "71049923"
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*policy_setting*|針對組件中的所有類型，要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<Namespace>](namespace-element-net-native.md)|將反映原則套用至子命名空間中的所有類型。|  
 |[\<Type>](type-element-net-native.md)|將反映原則套用至類型。|  
@@ -71,10 +69,10 @@ ms.locfileid: "71049923"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<Application>](application-element-net-native.md)|做為容器，以包含整個應用程式的類型，以及中繼資料可在執行階段用於反映的類型成員。 [\<Application>](application-element-net-native.md) 元素可以有零、一或多個 `<Assembly>` 元素。|  
-|[\<程式庫>](library-element-net-native.md)|定義包含類型和類型成員的組件，這些類型和類型成員的中繼資料可在執行階段用於反映。 [\<Library>](library-element-net-native.md) 元素可以有零或一個 `<Assembly>` 元素。|  
+|[\<Library>](library-element-net-native.md)|定義包含類型和類型成員的組件，這些類型和類型成員的中繼資料可在執行階段用於反映。 [\<Library>](library-element-net-native.md) 元素可以有零或一個 `<Assembly>` 元素。|  
   
 ## <a name="remarks"></a>備註  
  `<Assembly>` 元素可定義組件中所有類型的執行階段原則。 其不同於 [\<Library>](library-element-net-native.md) 元素，後者會指定程式庫，但會依據其子元素來定義執行階段反映原則。 `<Assembly>` 元素會套用至組件中的所有類型，除非是被子元素覆寫。  
@@ -91,7 +89,7 @@ ms.locfileid: "71049923"
   
  `Activate`、`Browse`、`Dynamic` 和 `Serialize` 都是選用屬性。 不過，`<Assembly>` 元素必須包含至少其中一個屬性。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段指示詞原則設定](runtime-directive-policy-settings.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)

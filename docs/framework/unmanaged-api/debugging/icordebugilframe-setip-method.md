@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 23f38dc1-85e4-4263-9235-2d05bbb6a833
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2af3f58fa7714b3c2b0ba387b1da650f0638dd6c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 60273d7cf91be04c5fc3041260e4bb146ce9a45e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758783"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095424"
 ---
 # <a name="icordebugilframesetip-method"></a>ICorDebugILFrame::SetIP 方法
-設定指令指標到 Microsoft intermediate language (MSIL) 程式碼中指定的位移位置。  
+在 Microsoft 中繼語言（MSIL）程式碼中，將指令指標設定為指定的位移位置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,20 +35,20 @@ HRESULT SetIP (
   
 ## <a name="parameters"></a>參數  
  `nOffset`  
- MSIL 程式碼中的位移的位置。  
+ MSIL 程式碼中的位移位置。  
   
 ## <a name="remarks"></a>備註  
- 呼叫`SetIP`立即使其失效，所有的框架和目前執行緒的鏈結。 如果偵錯工具必須在呼叫之後的畫面格資訊`SetIP`，它必須執行新的堆疊追蹤。  
+ `SetIP` 的呼叫會立即使目前線程的所有框架和鏈失效。 如果偵錯工具在呼叫 `SetIP`之後需要框架資訊，則必須執行新的堆疊追蹤。  
   
- [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)會嘗試將保留的堆疊框架處於有效狀態。 不過，即使框架是處於有效狀態，仍可能有問題，例如未初始化的本機變數。 呼叫端會負責確保執行程式的一致性。  
+ [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)會嘗試將堆疊框架保持在有效的狀態。 不過，即使框架處於有效的狀態，仍然可能會有一些問題，例如未初始化的區域變數。 呼叫端負責確保正在執行之程式的一致性。  
   
- 在 64 位元平台，指令指標無法移出`catch`或`finally`區塊。 如果`SetIP`呼叫進行的 64 位元平台上的這類移動，它會傳回 HRESULT，指出失敗。  
+ 在64位平臺上，無法將指令指標移出 `catch` 或 `finally` 區塊。 如果呼叫 `SetIP` 以在64位平臺上進行這類移動，則會傳回表示失敗的 HRESULT。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

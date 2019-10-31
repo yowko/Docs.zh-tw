@@ -1,5 +1,5 @@
 ---
-title: ICorDebugType2::GetTypeID 方法
+title: ICorDebugType2：： GetTypeID 方法
 ms.date: 03/30/2017
 api_name:
 - ICorDebugType2.GetTypeID
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b933686-226e-4373-92b7-fac579ee7b1a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3098911bab2878876b93ee1ce23d9794d7e6cdbd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 944313893d88b8eff97291d2517e4863a5ae958a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772464"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092768"
 ---
-# <a name="icordebugtype2gettypeid-method"></a>ICorDebugType2::GetTypeID 方法
-取得[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)這種類型。  
+# <a name="icordebugtype2gettypeid-method"></a>ICorDebugType2：： GetTypeID 方法
+取得此類型的[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,31 +35,31 @@ HRESULT GetTypeID(
   
 ## <a name="parameters"></a>參數  
  `id`  
- [out]指標[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)此 icordebugtype。  
+ 脫銷此 ICorDebugType 之[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功，傳回值為 `S_OK`，如果失敗，則傳回失敗 `HRESULT` 程式碼。 `HRESULT`碼包括下列：  
+ 如果成功，傳回值為 `S_OK`，如果失敗，則傳回失敗 `HRESULT` 程式碼。 `HRESULT` 碼包括下列各項：  
   
 |傳回碼|描述|  
 |-----------------|-----------------|  
-|`S_OK`|方法成功。 此方法已擷取的有效[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)。|  
-|`CORDBG_E_CLASS_NOT_LOADED`|尚未載入的型別。|  
-|`CORDBG_E_UNSUPPORTED`|不支援的類型。|  
+|`S_OK`|方法成功。 方法已取出有效的[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)。|  
+|`CORDBG_E_CLASS_NOT_LOADED`|尚未載入類型。|  
+|`CORDBG_E_UNSUPPORTED`|不支援此類型。|  
   
 ## <a name="remarks"></a>備註  
- 這個方法提供 ICorDebugType，表示可能會或可能已載入至執行階段，為的類型對應[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)，這可充當不透明處理識別載入執行階段型別。  
+ 這個方法會提供 ICorDebugType 的對應，其代表可能或可能尚未載入執行時間中的類型到[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)，這是用來識別載入執行時間之類型的不透明控制碼。  
   
- 當 ICorDebugType 表示的型別尚未被載入，則這個方法會傳回`CORDBG_E_CLASS_NOT_LOADED`。  如果不支援的類型，它會傳回`CORDBG_E_UNSUPPORTED`。  
+ 當 ICorDebugType 所代表的類型尚未載入時，這個方法會傳回 `CORDBG_E_CLASS_NOT_LOADED`。  如果不支援此類型，它會傳回 `CORDBG_E_UNSUPPORTED`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugType2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)

@@ -1,19 +1,19 @@
 ---
-title: 教學課程：搭配模型產生器使用迴歸來預測價格
+title: 教學課程：使用模型產生器的回歸預測價格
 description: 本教學課程會特別示範如何使用 ML.NET 模型產生器來建置迴歸模型以預測紐約市的計程車費用。
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a851bf3c405d15243bc1457b8c3dff815d072ebe
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 314b637b4a43725f6daeefa6097544567dcaabc2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180289"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124294"
 ---
-# <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>教學課程：搭配模型產生器使用迴歸來預測價格
+# <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>教學課程：使用模型產生器的回歸預測價格
 
 瞭解如何使用 ML.NET 模型產生器來建立回歸模型，以預測價格。  在本教學課程中您所開發 .NET 主控台應用程式會根據紐約的歷史計程車費用資料來預測計程車費用。
 
@@ -32,7 +32,7 @@ ms.locfileid: "72180289"
 > [!NOTE]
 > 模型產生器目前為預覽版。
 
-## <a name="pre-requisites"></a>先決條件
+## <a name="pre-requisites"></a>必要條件
 
 如需必要條件和安裝指示清單，請瀏覽[模型產生器安裝指南](../how-to-guides/install-model-builder.md)。
 
@@ -83,8 +83,8 @@ ms.locfileid: "72180289"
 
 1. 在模型產生器工具的資料步驟中，從資料來源下拉式清單中選取 [檔案]。
 1. 選取 [選取檔案] 文字方塊旁邊的按鈕，然後使用 [檔案總管] 進行瀏覽，並選取 *Data* 目錄中的 *taxi-fare-test.csv*
-1. 在資料行中選擇 [ *fare_amount* ]*以預測（標籤）* 下拉式清單，然後流覽至模型產生器工具的 [定型] 步驟。
-1. 展開 [*輸入資料行（功能）* ] 下拉式清單，並取消核取 [ *trip_time_in_secs* ] 資料行，在定型期間將它排除為一項功能
+1. 在 [*要預測的資料行（標籤）* ] 下拉式清單中選擇 [ *fare_amount* ]。
+1. 展開 [*輸入資料行（功能）* ] 下拉式清單，並取消核取 [ *trip_time_in_secs* ] 資料行，在定型期間將它排除為一項功能  流覽至模型產生器工具的 [定型] 步驟。
 
 ## <a name="train-the-model"></a>將模型定型
 
@@ -114,8 +114,8 @@ ms.locfileid: "72180289"
 
 定型程序的結果會建立兩個專案。
 
-- TaxiFarePredictionML.ConsoleApp：.NET Core 主控台應用程式，其中包含模型定型和範例耗用量程式碼。
-- TaxiFarePredictionML.Model：.NET Standard 類別庫，其中包含定義輸入和輸出模型資料之架構的資料模型、定型期間儲存的最佳執行模型版本，以及稱為 `ConsumeModel` 的 helper 類別進行預測。
+- TaxiFarePredictionML. Consoleapp.exe： .NET Core 主控台應用程式，其中包含模型定型和範例耗用量程式碼。
+- TaxiFarePredictionML： .NET Standard 類別庫，其中包含定義輸入和輸出模型資料之架構的資料模型、定型期間儲存的最佳執行模型版本，以及稱為 `ConsumeModel` 以進行預測的 helper 類別。
 
 1. 在模型建立器工具的程式碼步驟中，選取 [新增專案] 來將自動產生的專案新增到解決方案。
 1. 開啟 *TaxiFarePrediction* 專案中的 *Program.cs* 檔案。
@@ -140,7 +140,7 @@ ms.locfileid: "72180289"
     };
     ```
 
-1. 使用 `ConsumeModel` 類別中的 `Predict` 方法。 @No__t-0 方法會載入定型的模型、為模型建立[@no__t 2](xref:Microsoft.ML.PredictionEngine%602) ，並使用它來對新資料進行預測。 
+1. 使用來自 `ConsumeModel` 類別的 `Predict` 方法。 `Predict` 方法會載入定型的模型、建立模型的[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ，並使用它來對新資料進行預測。 
 
     ```csharp
     // Make prediction

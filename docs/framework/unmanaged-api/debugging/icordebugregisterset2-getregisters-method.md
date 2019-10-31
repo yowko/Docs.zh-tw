@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3c1b90390689e709ee131935bd6417fa6b273eb2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8e5583acfe338c185200c0b8e41b7d6e051fa146
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769978"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131361"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2::GetRegisters 方法
-取得每個暫存器值 （適用於目前執行所在的程式碼的平台） 所指定的特定位元遮罩。  
+取得給定位元遮罩所指定之每個暫存器的值（適用于目前執行程式碼的平臺）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,36 +38,36 @@ HRESULT GetRegisters (
   
 ## <a name="parameters"></a>參數  
  `maskCount`  
- [in]大小，以位元組為單位的`mask`陣列。  
+ 在`mask` 陣列的大小（以位元組為單位）。  
   
  `mask`  
- [in]位元組陣列，其中每個位元對應暫存器。 如果位元為 1，將會擷取對應的暫存器值。  
+ 在位元組陣列，其中每個位對應至暫存器。 如果位為1，則會抓取對應的暫存器值。  
   
  `regCount`  
- [in]要擷取的暫存器值數目。  
+ 在要抓取的暫存器值數目。  
   
  `regBuffer`  
- [out]陣列`CORDB_REGISTER`物件，其中每個收到的暫存器值。  
+ 脫銷`CORDB_REGISTER` 物件的陣列，其中每一個都會接收暫存器的值。  
   
 ## <a name="remarks"></a>備註  
- `GetRegisters`方法會從遮罩所指定的暫存器傳回值的陣列。 陣列未包含暫存器未設定位元的遮罩的值。 因此，大小`regBuffer`必須等於遮罩中數字 1 的陣列。 如果值`regCount`為太小會從集合中截斷的遮罩，較高編號的暫存器的值所表示的暫存器數目。 如果`regCount`太大，未使用`regBuffer`項目將會是未修改。  
+ `GetRegisters` 方法會從遮罩所指定的暫存器中傳回值的陣列。 陣列不包含未設定其 mask 位的暫存器值。 因此，`regBuffer` 陣列的大小必須等於遮罩中的1。 如果 `regCount` 的值太小，用於遮罩所指示的暫存器數目，則較高編號的暫存器值將會從集合中截斷。 如果 `regCount` 太大，則不會修改未使用的 `regBuffer` 元素。  
   
- 如果無法使用的暫存器由遮罩，就會傳回不定值的一個該暫存器。  
+ 如果遮罩會指出無法使用的暫存器，則會傳回該暫存器的不定值。  
   
- `ICorDebugRegisterSet2::GetRegisters`方法是必要的平台具有 64 個以上的暫存器。 比方說，IA64 有 128 一般用途的暫存器和 128 的浮點數暫存器，因此您需要更大 64 位元的位元遮罩中。  
+ 若平臺具有64以上的暫存器，則需要 `ICorDebugRegisterSet2::GetRegisters` 方法。 例如，IA64 具有128一般用途暫存器和128浮點暫存器，因此您在位元遮罩中需要超過64位。  
   
- 如果您不需要 64 個以上的暫存器，在此情況下，例如 x86 平台上的`GetRegisters`方法實際上只會轉譯中的位元組`mask`位元組陣列`ULONG64`，然後呼叫[ICorDebugRegisterSet::GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md)方法，後者會採用`ULONG64`遮罩。  
+ 如果您沒有超過64暫存器（如 x86 之類的平臺），`GetRegisters` 方法實際上只會將 `mask` 位元組陣列中的位元組轉譯成 `ULONG64`，然後呼叫[ICorDebugRegisterSet：： GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md)方法，它會採用 `ULONG64` mask。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugRegisterSet2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
 - [ICorDebugRegisterSet 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)

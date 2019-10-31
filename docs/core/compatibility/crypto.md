@@ -2,14 +2,12 @@
 title: 密碼編譯的重大變更，版本2.2 至 3.0-.NET Core
 description: 列出 .NET Core、ASP.NET Core 和 EF Core 版本2.2 到3.0 版的重大變更。
 ms.date: 09/10/2019
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 44caf042404d44ec4c5cb7b7e25883d8460efeb5
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: ba330bdef4be8cfe0e74f5645adaf66b2e0051ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71217063"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089589"
 ---
 # <a name="breaking-changes-for-migration-from-version-22-to-30"></a>從2.2 版遷移至3.0 的突破性變更
 

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbade6c9-9d26-4a79-9fd2-46108edd12d7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8befdb454a564ec834532653dd44cf230fa43d79
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a34648bece3b14d6175168f45916ca04aeeef71d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795211"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109249"
 ---
 # <a name="asm_display_flags-enumeration"></a>ASM_DISPLAY_FLAGS 列舉
 表示[IAssemblyName：： GetDisplayName](iassemblyname-getdisplayname-method.md)方法將抓取其顯示名稱之元件的版本、組建、文化特性、簽章等。  
@@ -52,18 +50,18 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>備註  
- `ASM_DISPLAYF_FULL`反映對[IAssemblyName](iassemblyname-interface.md)物件版本所做的任何變更。 請不要假設傳回的值是不可變的。  
+ `ASM_DISPLAYF_FULL` 反映對[IAssemblyName](iassemblyname-interface.md)物件版本所做的任何變更。 請不要假設傳回的值是不可變的。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** 融合。h  
   
- **LIBRARY:** 包含為 Mscoree.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IAssemblyName 介面](iassemblyname-interface.md)
 - [融合列舉](fusion-enumerations.md)

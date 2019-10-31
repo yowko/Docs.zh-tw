@@ -5,21 +5,19 @@ helpviewer_keywords:
 - gcAllowVeryLargeObjects element
 - <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f638a880aaa21bc41d2575f3609dabae158c1a0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b6230833808ec45d702502e36f929db4e03173e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252575"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116796"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<Gcallowverylargeobjects> > 元素
 在 64 位元平台上，啟用總大小大於 2 GB 的陣列。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<gcAllowVeryLargeObjects>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcallowverylargeobjects> >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,9 +31,9 @@ ms.locfileid: "70252575"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
-|`enabled`|必要屬性。<br /><br /> 指定在64位平臺上, 是否已啟用大小總計大於 2 GB 的陣列。|  
+|`enabled`|必要屬性。<br /><br /> 指定在64位平臺上，是否已啟用大小總計大於 2 GB 的陣列。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
@@ -44,7 +42,7 @@ ms.locfileid: "70252575"
 |`false`|未啟用大小總計大於 2 GB 的陣列。 這是預設值。|  
 |`true`|64位平臺上已啟用大小總計大於 2 GB 的陣列。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -55,16 +53,16 @@ ms.locfileid: "70252575"
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 在您的應用程式佈建檔中使用此元素, 可讓大小大於 2 GB 的陣列, 但不會變更物件大小或陣列大小的其他限制:  
+ 在您的應用程式佈建檔中使用此元素，可讓大小大於 2 GB 的陣列，但不會變更物件大小或陣列大小的其他限制：  
   
-- 陣列中的元素數目上限為<xref:System.UInt32.MaxValue?displayProperty=nameWithType>。  
+- 陣列中的元素數目上限為 <xref:System.UInt32.MaxValue?displayProperty=nameWithType>。  
   
-- 任何單一維度中的最大索引為 2147483591 (0x7FFFFFC7), 適用于位元組陣列和單一位元組結構的陣列, 以及適用于其他類型的 2146435071 (0X7FEFFFFF)。  
+- 任何單一維度中的最大索引為2147483591（0x7FFFFFC7），適用于位元組陣列和單一位元組結構的陣列，以及適用于其他類型的2146435071（0X7FEFFFFF）。  
   
 - 字串和其他非陣列物件的大小上限不變。  
   
 > [!CAUTION]
-> 啟用這項功能之前, 請確定您的應用程式不包含不安全的程式碼, 其假設所有的陣列大小都小於 2 GB。 例如, 如果不安全的程式碼是以陣列做為緩衝區, 則可能會受到緩衝區溢位的影響, 假設陣列不會超過 2 GB。  
+> 啟用這項功能之前，請確定您的應用程式不包含不安全的程式碼，其假設所有的陣列大小都小於 2 GB。 例如，如果不安全的程式碼是以陣列做為緩衝區，則可能會受到緩衝區溢位的影響，假設陣列不會超過 2 GB。  
   
 ## <a name="example"></a>範例  
  下列範例顯示如何為應用程式啟用這項功能。  
@@ -81,7 +79,7 @@ ms.locfileid: "70252575"
 
 .NET Framework 4.5 和更新版本
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段設定結構描述](index.md)
 - [組態檔結構描述](../index.md)

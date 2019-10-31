@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e02ee1a-e495-4578-bfb5-b946274bede7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ad7dd3ae0e547933fdf7d579116dccc62ae579c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37a7d8fa4439d52db3cddfff22ac6580b19af58a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766154"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128906"
 ---
 # <a name="icordebugprocessclearcurrentexception-method"></a>ICorDebugProcess::ClearCurrentException 方法
-清除指定的執行緒上目前的 unmanaged 例外狀況。  
+清除指定執行緒上目前的非受控例外狀況。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,18 +33,18 @@ HRESULT ClearCurrentException([in] DWORD threadID);
   
 ## <a name="parameters"></a>參數  
  `threadID`  
- [in]將會清除目前的 unmanaged 例外狀況所在的執行緒識別碼。  
+ 在將清除目前非受控例外狀況之執行緒的識別碼。  
   
 ## <a name="remarks"></a>備註  
- 呼叫這個方法，然後再呼叫[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)執行緒時回報的未受管理的例外狀況，偵錯項目應該予以忽略。 這會清除未完成-頻外 (IB) 和指定的執行緒上的頻外 (OOB) 事件。 自動清除所有的 OOB 中斷點和逐步執行例外狀況。  
+ 呼叫這個方法，然後線上程已報告不應由偵錯工具忽略的非受控例外狀況時，再呼叫[ICorDebugController：： Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) 。 這會清除指定執行緒上的未處理頻外（IB）和頻外（OOB）事件。 系統會自動清除所有 OOB 中斷點和單一步驟的例外狀況。  
   
- 使用[ICorDebugThread2::InterceptCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md)攔截目前 managed 執行緒上的例外狀況。  
+ 請使用[ICorDebugThread2：： InterceptCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md)來攔截執行緒上目前的 managed 例外狀況。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

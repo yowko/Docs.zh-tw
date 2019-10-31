@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: a30102ff-c52e-48c9-b3a9-aa14286a42b2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 948e97064d12dc5b2044faf35aa374e5ba5f2592
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d67bee3ea0e57080179b3fbb7e0b4193860c44d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764777"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103281"
 ---
 # <a name="initdbgtransportmanager-function"></a>InitDbgTransportManager 函式
 針對處理序和執行階段列舉，初始化要與遠端目標連接的傳輸管理員。  
@@ -47,8 +45,8 @@ HRESULT InitDbgTransportManager ();
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CoreClrRemoteDebuggingInterfaces.h  
+ **標頭：** CoreClrRemoteDebuggingInterfaces。h  
   
- **程式庫：** mscordbi_macx86.dll  
+ 連結**庫：** mscordbi_macx86  
   
- **.NET framework 版本：** 3.5 SP1
+ **.NET Framework 版本：** 3.5 SP1

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Managed Extensibility Framework, overview
 - MEF, overview
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6fc66837dc31dc1697bcb4ad6dddfb57bfb99bd4
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
-ms.translationtype: HT
+ms.openlocfilehash: da73200513d451ee391fb6dd9c214a5b8ca771c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434089"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126341"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -42,7 +40,7 @@ Managed Extensibility Framework 或 MEF 是用來建立輕量型可擴充應用�
 
 <a name="what_mef_provides"></a>
 ## <a name="what-mef-provides"></a>MEF 提供的內容
- MEF 提供方法以透過「組合」  隱含地探索可用元件，而不是明確地註冊可用元件。 MEF 元件 (稱為「組件」  ) 會以宣告方式指定其相依性 (稱為「匯入」  ) 及其提供的功能 (稱為「匯出」  )。 建立組件時，MEF 組合引擎可滿足具有從其他組件取得之內容的匯入。
+ MEF 提供方法以透過「組合」隱含地探索可用元件，而不是明確地註冊可用元件。 MEF 元件 (稱為「組件」) 會以宣告方式指定其相依性 (稱為「匯入」) 及其提供的功能 (稱為「匯出」)。 建立組件時，MEF 組合引擎可滿足具有從其他組件取得之內容的匯入。
 
  這種方法解決前一節所討論的問題。 因為 MEF 組件是以宣告方式指定其功能，所以可以在執行階段找到它們，這表示應用程式可以使用組件，而不需要硬式編碼參考或易損壞的組態檔。 MEF 允許應用程式透過它們的中繼資料來探索和檢查組件 (part)，而不需要具現化應用程式，或甚至載入其組件 (assembly)。 因此，不需要仔細地指定何時以及應該如何載入擴充功能。
 
@@ -62,7 +60,7 @@ Managed Extensibility Framework 或 MEF 是用來建立輕量型可擴充應用�
 
 <a name="simplecalculator_an_example_application"></a>
 
-## <a name="simplecalculator-an-example-application"></a>SimpleCalculator：應用程式範例
+## <a name="simplecalculator-an-example-application"></a>SimpleCalculator：範例應用程式
 
 了解 MEF 用途的最簡單方式是建置一個簡單的 MEF 應用程式。 在這個範例中，您建置一個十分簡單的計算機 (名稱為 SimpleCalculator)。 SimpleCalculator 的目標是建立一個接受基本算術命令 (格式為 "5+3" 或 "6-2") 的主控台應用程式，並傳回正確的答案。 使用 MEF，您可以新增運算子，而不需要變更應用程式程式碼。
 
@@ -83,7 +81,7 @@ Managed Extensibility Framework 或 MEF 是用來建立輕量型可擴充應用�
 
 ## <a name="composition-container-and-catalogs"></a>組合容器和目錄
 
-MEF 組合模型的核心是「組合容器」  ，其中包含所有可用的組件並執行組合。 組合會將匯入往上對應至匯出。 最常見的組合容器類型是 <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>，而且您會將它用於 SimpleCalculator。
+MEF 組合模型的核心是「組合容器」，其中包含所有可用的組件並執行組合。 組合會將匯入往上對應至匯出。 最常見的組合容器類型是 <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>，而且您會將它用於 SimpleCalculator。
 
 如果您使用 Visual Basic，請在 Module1.vb 中新增名稱為 `Program` 的公用類別。
 
@@ -97,7 +95,7 @@ Dim _container As CompositionContainer
 private CompositionContainer _container;
 ```
 
-為了要探索可供組合容器使用的組件，組合容器會利用「目錄」  。 目錄是可從某個來源探索到可用組件的物件。 MEF 提供目錄 (catalog)，以從提供的類型、組件 (assembly) 或目錄 (directory) 探索組件 (part)。 應用程式開發人員可以輕鬆地建立新的目錄，以從其他來源 (例如 Web 服務) 探索組件。
+為了要探索可供組合容器使用的組件，組合容器會利用「目錄」。 目錄是可從某個來源探索到可用組件的物件。 MEF 提供目錄 (catalog)，以從提供的類型、組件 (assembly) 或目錄 (directory) 探索組件 (part)。 應用程式開發人員可以輕鬆地建立新的目錄，以從其他來源 (例如 Web 服務) 探索組件。
 
 將下列建構函式加入 `Program` 類別：
 
@@ -164,7 +162,7 @@ public ICalculator calculator;
 
  請注意，`calculator` 物件的宣告不是異常，而是它使用 <xref:System.ComponentModel.Composition.ImportAttribute> 屬性裝飾。 這個屬性會將某個項目宣告為匯入；也就是撰寫物件時，組合引擎將會填入它。
 
- 每個匯入都有「合約」  ，其會決定將與其相符的匯出。 合約可以是明確指定的字串，也可以由 MEF 透過指定類型自動產生，在此情況下為 `ICalculator` 介面。 任何已宣告相符合約的匯出都滿足此匯入。 請注意，`calculator` 物件的類型事際上是 `ICalculator` 時，這不是必要項目。 合約與匯入中物件的類型無關 (在此情況下，您可以遺漏 `typeof(ICalculator)`。 除非您明確地指定合約，否則 MEF 將會自動假設合約是根據匯入的類型。)
+ 每個匯入都有「合約」，其會決定將與其相符的匯出。 合約可以是明確指定的字串，也可以由 MEF 透過指定類型自動產生，在此情況下為 `ICalculator` 介面。 任何已宣告相符合約的匯出都滿足此匯入。 請注意，`calculator` 物件的類型事際上是 `ICalculator` 時，這不是必要項目。 合約與匯入中物件的類型無關 (在此情況下，您可以遺漏 `typeof(ICalculator)`。 除非您明確地指定合約，否則 MEF 將會自動假設合約是根據匯入的類型。)
 
  請將這個非常簡單的介面加入模組或 `SimpleCalculator` 命名空間：
 
@@ -253,7 +251,7 @@ Public Property operations As IEnumerable(Of Lazy(Of IOperation, IOperationData)
 IEnumerable<Lazy<IOperation, IOperationData>> operations;
 ```
 
- <xref:System.Lazy%602> 是 MEF 所提供的類型，用於保留要匯出的間接參考。 在這裡，除了匯出的物件本身之外，您也會取得「匯出中繼資料」  或描述所匯出物件的資訊。 每個 <xref:System.Lazy%602> 都會包含代表實際作業的 `IOperation` 物件以及代表其中繼資料的 `IOperationData` 物件。
+ <xref:System.Lazy%602> 是 MEF 所提供的類型，用於保留要匯出的間接參考。 在這裡，除了匯出的物件本身之外，您也會取得「匯出中繼資料」或描述所匯出物件的資訊。 每個 <xref:System.Lazy%602> 都會包含代表實際作業的 `IOperation` 物件以及代表其中繼資料的 `IOperationData` 物件。
 
  將下列簡單的介面加入模組或 `SimpleCalculator` 命名空間：
 
@@ -307,7 +305,7 @@ class Add: IOperation
 
  <xref:System.ComponentModel.Composition.ExportAttribute> 屬性的運作與以前一樣。 <xref:System.ComponentModel.Composition.ExportMetadataAttribute> 屬性會將中繼資料 (以名稱/值組的形式) 附加至該匯出。 雖然 `Add` 類別實作 `IOperation`，但是未明確地定義可實作 `IOperationData` 的類別。 相反地，類別由 MEF 所隱含建立，其屬性以提供的中繼資料名稱為基礎。 (這是在 MEF 存取中繼資料的數種方式中的一種。)
 
- MEF 中的組合是「遞迴的」  。 您已明確地撰寫 `Program` 物件，這樣會匯入結果為 `ICalculator` 類型的 `MySimpleCalculator`。 `MySimpleCalculator` 接著會匯入 `IOperation` 物件的集合，而且將會在建立 `MySimpleCalculator` 時填入該匯入，與 `Program` 匯入同時。 如果 `Add` 類別已宣告進一步的匯入，則也必須予以填入，以此類推。 任何未填入的匯入都會導致組合錯誤。 (不過，可能會將匯入宣告為選擇性，或指派預設值給它們。)
+ MEF 中的組合是「遞迴的」。 您已明確地撰寫 `Program` 物件，這樣會匯入結果為 `ICalculator` 類型的 `MySimpleCalculator`。 `MySimpleCalculator` 接著會匯入 `IOperation` 物件的集合，而且將會在建立 `MySimpleCalculator` 時填入該匯入，與 `Program` 匯入同時。 如果 `Add` 類別已宣告進一步的匯入，則也必須予以填入，以此類推。 任何未填入的匯入都會導致組合錯誤。 (不過，可能會將匯入宣告為選擇性，或指派預設值給它們。)
 
 <a name="calculator_logic"></a>
 ## <a name="calculator-logic"></a>計算機邏輯
@@ -432,7 +430,7 @@ class Subtract : IOperation
 
  將名為 `Extensions` 的新目錄加入至 SimpleCalculator 專案。 請務必在專案層級加入它，而非方案層級。 然後將新的類別庫專案加入至名為 `ExtendedOperations` 的方案。 新的專案將會編譯成不同的組件。
 
- 開啟 ExtendedOperations 專案的專案屬性設計工具，然後按一下 [編譯]  或 [建置]  索引標籤。變更**建置輸出路徑**或**輸出路徑**，使其指向 SimpleCalculator 專案目錄中的 Extensions 目錄 (..\SimpleCalculator\Extensions\\)。
+ 開啟 ExtendedOperations 專案的 [專案屬性設計工具]，然後按一下 [**編譯**] 或 [**組建**] 索引標籤。將**組建輸出路徑**或**輸出路徑**變更為指向 SimpleCalculator 專案中的 Extensions 目錄目錄（.。\SimpleCalculator\Extensions\\）。
 
  在 Module1.vb 或 Program.cs 中，將下列行加入 `Program` 建構函式：
 
@@ -444,7 +442,7 @@ catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\
 catalog.Catalogs.Add(new DirectoryCatalog("C:\\SimpleCalculator\\SimpleCalculator\\Extensions"));
 ```
 
- 請將範例路徑取代為 Extensions 目錄的路徑 。 (這個絕對路徑僅供偵錯用途。 在生產應用程式中，您將會使用相對路徑。)<xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> 現在會將 Extensions 目錄之任何組件 (assembly) 中找到的任何組件 (part) 加入組合容器。
+ 請將範例路徑取代為 Extensions 目錄的路徑 。 (這個絕對路徑僅供偵錯用途。 在生產應用程式中，您會使用相對路徑。）<xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> 現在會將 Extensions 目錄的任何元件中找到的任何元件新增至組合容器。
 
  在 ExtendedOperations 專案中，加入 SimpleCalculator 和 System.ComponentModel.Composition 的參考。 在 ExtendedOperations 類別檔案中，針對 System.ComponentModel.Composition 加入 `Imports` 或 `using` 陳述式。 在 Visual Basic 中，也會針對 SimpleCalculator 加入 `Imports` 陳述式。 然後將下列類別加入 ExtendedOperations 類別檔案：
 

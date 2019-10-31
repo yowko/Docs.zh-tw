@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 93232222-926e-42ac-b85d-8a6d33977672
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: adbbf94dc36c6d82360ed532b283cd666a1a52ed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1aabfad14ee2eb35916bbf115631602276cd1fc3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796857"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109898"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory 函式
 抓取應用程式歷程記錄目錄的路徑。  
@@ -48,21 +46,21 @@ HRESULT GetHistoryFileDirectory (
 |傳回碼|描述|  
 |-----------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|E_INVALIDARG|`wzDir`或`pdwSize`為 null，或版本字串不正確。|  
+|E_INVALIDARG|`wzDir` 或 `pdwSize` 為 null，或版本字串不正確。|  
   
 ## <a name="remarks"></a>備註  
- 成功完成時， `pdwSize`引數會設定為路徑字串的長度。  
+ 成功完成時，`pdwSize` 引數會設定為路徑字串的長度。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** 融合。h  
   
- **LIBRARY:** 融合 .dll 和 Mscorwks.dll。 請使用 [Mscorwks.dll]，而不是 []，以確保您以正確的 .NET Framework 版本為目標。  
+ 連結**庫：** 融合 .dll 和 Mscorwks.dll。 請使用 [Mscorwks.dll]，而不是 []，以確保您以正確的 .NET Framework 版本為目標。  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [CreateHistoryReader 函式](createhistoryreader-function.md)
 - [NukeDownloadedCache 函式](nukedownloadedcache-function.md)

@@ -1,17 +1,15 @@
 ---
-title: ICorDebugVariableSymbol::GetSlotIndex Method
+title: ICorDebugVariableSymbol：： GetSlotIndex 方法
 ms.date: 03/30/2017
 ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58bb2cc63f2336ca9cfbed8ebeac0d607c18b2c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a7a7ecf7d3e3d0d2125b03d3604c44138a2be0cc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968163"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120978"
 ---
-# <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol::GetSlotIndex Method
+# <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol：： GetSlotIndex 方法
 取得區域變數的 Managed 位置索引。  
   
 ## <a name="syntax"></a>語法  
@@ -40,11 +38,11 @@ HRESULT GetSlotIndex(
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugVariableSymbol 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

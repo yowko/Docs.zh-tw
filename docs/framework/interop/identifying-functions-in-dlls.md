@@ -11,14 +11,12 @@ helpviewer_keywords:
 - identifying DLL functions
 - DLL functions
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: deae99f5bdc7c187997d4bad4957b2fcdccdc166
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1a94bb2020b07ba8405d901f46ec4a0687e79700
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051720"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121981"
 ---
 # <a name="identifying-functions-in-dlls"></a>識別 DLL 中的函式
 DLL 函式的身分識別是由下列項目所組成：  
@@ -45,7 +43,7 @@ DLL 函式的身分識別是由下列項目所組成：
   
  如需 Windows API 的完整文件，請參閱 Platform SDK。 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用 Unmanaged DLL 函式](consuming-unmanaged-dll-functions.md)
 - [指定進入點](specifying-an-entry-point.md)

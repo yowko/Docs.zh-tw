@@ -14,14 +14,12 @@ helpviewer_keywords:
 - SpawnDerivedClass function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c213f311f1af1e56d0ce24eba3b76f33be541323
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f72e6b1c356077a94b141e40d6efe485e77e7a9e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798224"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120184"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass 函式
 從指定的物件建立新的衍生類別物件。    
@@ -50,7 +48,7 @@ HRESULT SpawnDerivedClass (
 [in] 保留。 這個參數必須是0。
 
 `ppNewClass`  
-脫銷接收新類別定義物件的指標。 如果發生錯誤，則不會傳回新的物件，且`ppNewClass`會將其保留為未修改。 其值不能`null`是。
+脫銷接收新類別定義物件的指標。 如果發生錯誤，則不會傳回新的物件，`ppNewClass` 會保留不修改的狀態。 其值不能 `null`。
 
 ## <a name="return-value"></a>傳回值
 
@@ -69,17 +67,17 @@ HRESULT SpawnDerivedClass (
 
 此函式會包裝對[IWbemClassObject：： SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone)方法的呼叫。
 
-`ptr`必須是類別定義，才會成為產生之物件的父類別。 傳回的物件會變成目前物件的子類別。
+`ptr` 必須是類別定義，才能成為衍生物件的父類別。 傳回的物件會變成目前物件的子類別。
 
-在中`ppNewClass`傳回的新物件會自動成為目前物件的子類別。 無法覆寫此行為。 沒有其他方法可建立子類別（衍生類別）。
+在 `ppNewClass` 中傳回的新物件會自動成為目前物件的子類別。 無法覆寫此行為。 沒有其他方法可建立子類別（衍生類別）。
 
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** WMINet_Utils.idl  
+ **標頭：** WMINet_Utils .idl  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WMI 和效能計數器（非受控 API 參考）](index.md)

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - callback function
 - platform invoke, calling unmanaged functions
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eb30e7daed938b14bd0d936352c7455db6975e73
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0fbf6df93e3ef9ee6380ed35f98018d157599e2a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051913"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123750"
 ---
 # <a name="callback-functions"></a>回呼函式
 回呼函式是 Managed 應用程式內的程式碼，協助未管理 DLL 函式完成工作。 回呼函式的呼叫會透過 DLL 函式從 Managed 應用程式間接傳遞，然後傳遞回 Managed 實作。 許多使用平台叫用所呼叫的 DLL 函式有一部分需要 Managed 程式碼中有回呼函式，才能正確執行。  
@@ -27,7 +25,7 @@ ms.locfileid: "71051913"
   
  回呼函式最適合用於重複執行工作的情況。 在 Windows API 中，另一個常見用法是列舉函式，例如 **EnumFontFamilies**、**EnumPrinters** 和 **EnumWindows**。 **EnumWindows** 函式會逐一列舉電腦上的所有現有視窗，以呼叫回呼函式來對每個視窗執行工作。 如需指示和範例，請參閱[如何：實作回呼函式](how-to-implement-callback-functions.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [如何：實作回呼函式](how-to-implement-callback-functions.md)
 - [呼叫 DLL 函式](calling-a-dll-function.md)

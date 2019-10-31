@@ -4,19 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ebbf0b28da04e2e70dd2d0a9689b80fcdbeee4be
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: abc392116aec8ffd8aa94f46ef97887c48516ca0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779534"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122473"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 開發指南
 本節說明如何建立、設定、偵錯、保護和部署 .NET Framework 應用程式。 本節也提供有關技術領域的資訊，例如動態程式設計、互通性、擴充性、記憶體管理和執行緒。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [應用程式基本概念](../standard/application-essentials.md)  
  提供基本應用程式開發工作的相關資訊，例如應用程式定義域和組件的程式設計、使用屬性、格式設定和分析基底類型、使用集合、處理事件和例外狀況、使用檔案和資料流，以及使用泛型。  
   
@@ -70,7 +68,7 @@ ms.locfileid: "70779534"
  為每個包含在 .NET Framework 命名空間中的類別，提供語法、程式碼範例及使用方式資訊。  
   
 ## <a name="related-sections"></a>相關章節  
- [快速入門](./get-started/index.md)  
+ [使用者入門](./get-started/index.md)  
  提供 .NET Framework 的完整概觀與其他資源的連結。  
   
  [新功能](./whats-new/index.md)  

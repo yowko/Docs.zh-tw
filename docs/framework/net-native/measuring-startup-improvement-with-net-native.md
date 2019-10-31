@@ -2,14 +2,12 @@
 title: 評估使用 .NET Native 的啟動改善
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 74011a4c70cc8f7da3973698a43b1e97cffb9f9b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 771bf8deba8e851eadf356c647169a21428ddcff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927073"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128347"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>評估使用 .NET Native 的啟動改善
 .NET Native 大幅改善了應用程式的啟動時間。 在可攜式、低電源的裝置上，以及用於複雜的應用程式時，這項改良功能尤其明顯。 本主題將協助您著手進行測量這項啟動改良功能所需的基本檢測。  
@@ -47,7 +45,7 @@ ms.locfileid: "70927073"
   
 - 您的應用程式已經完成同步處理新的報導時。  
   
- 檢測應用程式相當簡單：只要在衍生類別上呼叫適當的方法即可。 使用先前範例中的 `AppEventSource`，您可以檢測應用程式，如下所示：  
+ 檢測應用程式很簡單：只要在衍生的類別上呼叫適當的方法即可。 使用先前範例中的 `AppEventSource`，您可以檢測應用程式，如下所示：  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   
@@ -97,6 +95,6 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  藉由針對您的原始應用程式和使用 .NET Native 工具鏈所建立的版本來重複此程式，您可以比較效能差異。   .NET Native 應用程式的啟動速度通常比 non-.NET 原生應用程式更快。 如果您有挖掘更深入的資料，PerfView 也可以識別出程式碼中最耗時間的部分。 如需詳細資訊，請觀看 [PerfView 教學課程](https://channel9.msdn.com/Series/PerfView-Tutorial)或閱讀 [Vance Morrison 的部落格文章](https://blogs.msdn.microsoft.com/vancem/2011/12/28/publication-of-the-perfview-performance-analysis-tool/)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Diagnostics.Tracing.EventSource>

@@ -2,19 +2,17 @@
 title: Authenticode (Unmanaged API 參考)
 ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d2c0163d03a19a7bc00ae705fd633ef4f0880082
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1b8b2222950c75f7f9d2ec2704f722087645cd7e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776565"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132462"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (Unmanaged API 參考)
 支援 Authenticode XrML 授權的建立及驗證模組。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [_AxlGetIssuerPublicKeyHash 函式](axlgetissuerpublickeyhash-function.md)  
  擷取公開金鑰的 SHA-1 雜湊，該公開金鑰與用來簽署指定憑證的私密金鑰相關聯。  
   
@@ -42,6 +40,6 @@ ms.locfileid: "70776565"
  [AXL_AUTHENTICODE_TIMESTAMPER_INFO 結構](axl-authenticode-timestamper-info-structure.md)  
  定義 Authenticode 時間戳記程式資訊。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Unmanaged API 參考](../index.md)

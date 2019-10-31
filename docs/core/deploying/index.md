@@ -1,16 +1,14 @@
 ---
 title: .NET Core 應用程式部署
 description: 了解部署 .NET Core 應用程式的方式。
-author: rpetrusha
-ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6f88659fcef49eba9344d3c4b2f0245b4072d7ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fd15d41065b0a6ecb1a0bf04a0f0ab292a0a5fb7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613367"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089187"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 應用程式部署
 
@@ -48,7 +46,7 @@ ms.locfileid: "61613367"
 
 針對自封式部署，您不僅要部署自己的應用程式和所有協力廠商相依性，還要部署建置應用程式所用的 .NET Core 版本。 不過，建立 SCD 不包含各種平台的 [.NET Core 原生相依性](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)本身 (例如，macOS 上的 OpenSSL)，所以在執行應用程式前要先行安裝。 如需執行階段之版本繫結的詳細資訊，請參閱 [.NET Core 中的版本繫結](../versions/selection.md)上的文章。
 
-從 NET Core 2.1 SDK (2.1.300 版) 開始，.NET Core 就支援*修補版本向前復原*。 當您建立自封式部署時，.NET Core 工具會自動包括您的應用程式以其為目標的最新 .NET Core 維護執行階段版本 (最新的維護執行階段包括安全性修補程式與其他錯誤修正)。維護執行階段不需要存在於您的建置系統上，系統會自動從 NuGet.org 下載它。如需詳細資訊 (包括有關如何選擇退出修補版本向前復原的指示)，請參閱[自封式部署執行階段向前復原](runtime-patch-selection.md)。
+從 NET Core 2.1 SDK (2.1.300 版) 開始，.NET Core 就支援*修補版本向前復原*。 當您建立自封式部署時，.NET Core 工具會自動包括您的應用程式以其為目標的最新 .NET Core 維護執行階段版本 （最新的服務執行時間包含安全性修補程式和其他錯誤修正）。服務執行時間不一定要存在於您的組建系統上;它會自動從 NuGet.org 下載。如需詳細資訊，包括如何退出宣告修補程式版本向前復原的指示，請參閱[獨立部署執行時間向前](runtime-patch-selection.md)復原。
 
 FDD 和 SCD 使用不同的主機可執行檔，因此您可以使用自己的發行者簽章，為 SCD 簽署主機可執行檔。
 
@@ -96,7 +94,7 @@ FDD 和 SCD 使用不同的主機可執行檔，因此您可以使用自己的�
 
 如需使用 CLI 工具部署 .NET Core 應用程式的逐步說明範例，請參閱[使用 CLI 工具部署 .NET Core 應用程式](deploy-with-cli.md)。 如需使用 Visual Studio 部署 .NET Core 應用程式的逐步說明範例，請參閱[使用 Visual Studio 部署 .NET Core 應用程式](deploy-with-vs.md)。 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用 CLI 工具部署 .NET Core 應用程式](deploy-with-cli.md)
 - [使用 Visual Studio 部署 .NET Core 應用程式](deploy-with-vs.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 868b339b-acdb-4fe0-91c7-b85f4fba99eb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f4ecb700a19a4e06f9f0056881fe3cdb9753aae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e103401b85626e53db53e1894c22b161774e5163
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737603"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088680"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>ICorDebugArrayValue::GetBaseIndicies 方法
-取得陣列中的每個維度的基底的索引。  
+取得陣列中每個維度的基底索引。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,16 +37,16 @@ HRESULT GetBaseIndicies (
   
 ## <a name="parameters"></a>參數  
  `cdim`  
- [in]這個維度的數目`ICorDebugArrayValue`物件。 此值也是的大小`indicies`因為其大小的維度數目等於陣列`ICorDebugArrayValue`物件。  
+ 在這個 `ICorDebugArrayValue` 物件的維度數目。 這個值也是 `indicies` 陣列的大小，因為它的大小等於 `ICorDebugArrayValue` 物件的維度數目。  
   
  `indicies`  
- [out]整數的陣列，每個都是這個維度的基底的索引 （也就是說，起始的索引）`ICorDebugArrayValue`物件。  
+ 脫銷整數的陣列，其中每一個都是這個 `ICorDebugArrayValue` 物件之維度的基底索引（也就是起始索引）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

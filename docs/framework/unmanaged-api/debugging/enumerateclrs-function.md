@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae668a40ba1510e0e3d4f509643022ebe822a4f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 69288e995ec789091bf089368cd9a60f003df86e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738945"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122979"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs 函式
 提供在處理程序中列舉 CLRs 的機制。  
@@ -70,15 +68,15 @@ HRESULT EnumerateCLRs (
   
  在 Windows 作業系統上，`debuggeePID` 對應至 OS 處理序識別碼。  
   
- 記憶體 `ppHandleArrayOut` 和 `ppStringArrayOut` 由此函式所配置。 若要釋放配置的記憶體，您必須呼叫[CloseCLREnumeration 函式](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)。  
+ 記憶體 `ppHandleArrayOut` 和 `ppStringArrayOut` 由此函式所配置。 若要釋放配置的記憶體，您必須呼叫[CloseCLREnumeration](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)函式。  
   
  參數設定為 null 的兩個陣列都可以呼叫此函式，以傳回目標處理序中的 CLRs 計數。 從這個計數，呼叫端可以推斷將建立的緩衝區大小：`(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** dbgshim.h  
+ **標頭：** dbgshim。h  
   
- **程式庫：** dbgshim.dll  
+ 連結**庫：** dbgshim  
   
- **.NET framework 版本：** 3.5 SP1
+ **.NET Framework 版本：** 3.5 SP1

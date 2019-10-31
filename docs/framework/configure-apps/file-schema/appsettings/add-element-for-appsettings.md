@@ -7,22 +7,22 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 594ba4f289012e775e93acba98056b60bdd94cbd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09864ea8f174d0c23f26db49f8cc0d43608522a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927740"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119331"
 ---
-# <a name="add-element-for-appsettings"></a>\<新增 appSettings > 的\<> 元素
+# <a name="add-element-for-appsettings"></a>\<新增 \<appSettings 的 > 元素 >
 
 新增自訂應用程式設定。
 
 [ **\<configuration>** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<新增 >**
 
 ## <a name="syntax"></a>語法
 
@@ -34,10 +34,10 @@ ms.locfileid: "69927740"
 
 ## <a name="attributes"></a>屬性
 
-|           | 說明 |
+|           | 描述 |
 | --------- | ----------- |
 | **key**   | 必要屬性。<br><br>指定要加入之索引鍵的名稱。 |
-| **value** | 必要屬性。<br><br>指定要加入之索引鍵的值。 |
+| **值** | 必要屬性。<br><br>指定要加入之索引鍵的值。 |
 
 ## <a name="parent-element"></a>父項目
 
@@ -47,11 +47,11 @@ ms.locfileid: "69927740"
 
 ## <a name="child-elements"></a>子元素
 
-無
+None
 
 ## <a name="example"></a>範例
 
-下列範例顯示如何新增應用程式名稱的自訂設定:
+下列範例顯示如何新增應用程式名稱的自訂設定：
 
 ```xml
 <appSettings>
@@ -59,7 +59,7 @@ ms.locfileid: "69927740"
 </appSettings>
 ```
 
-下列範例會使用`<add>`元素, 在 ASP.NET 應用程式中定義兩個相容性設定:
+下列範例會使用 `<add>` 元素，在 ASP.NET 應用程式中定義兩個相容性設定：
 
 ```xml
 <appSettings>
@@ -68,6 +68,6 @@ ms.locfileid: "69927740"
 </appSettings>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Framework 的設定檔架構](../index.md)

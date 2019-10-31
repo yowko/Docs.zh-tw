@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 535d94688d02a7315529d17fae555fba457bbb86
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c9aa6792885c685195049948a540453b1f5235e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737880"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110315"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName 方法
-取得應用程式定義域的名稱。  
+取得應用程式域的名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,22 +38,22 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>參數  
  `cchName`  
- [in] `szName` 陣列的大小。 將此值設定為零，這個方法放置在查詢模式中。  
+ [in] `szName` 陣列的大小。 將此值設定為零，以將此方法置於查詢模式。  
   
  `pcchName`  
- [out]名稱或中實際傳回的字元數的大小的指標`szName`。 在查詢模式中，這個值會讓呼叫者知道如何多大的緩衝區配置的名稱。  
+ 脫銷`szName`中實際傳回的名稱大小或字元數的指標。 在查詢模式中，此值可讓呼叫者知道要為名稱配置的緩衝區大小。  
   
  `szName`  
- [out]陣列，其中會儲存應用程式定義域的名稱。  
+ 脫銷儲存應用程式功能變數名稱稱的陣列。  
   
 ## <a name="remarks"></a>備註  
- 偵錯工具呼叫`GetName`方法一次，若要取得之名稱所需的緩衝區大小。 偵錯工具會配置緩衝區，，然後再呼叫第二次的方法來填滿緩衝區。 第一次呼叫中，若要取得名稱的大小指*查詢模式*。  
+ 偵錯工具會呼叫 `GetName` 方法一次，以取得名稱所需的緩衝區大小。 偵錯工具會配置緩衝區，然後第二次呼叫方法來填滿緩衝區。 第一次呼叫，以取得名稱的大小，稱為「*查詢模式*」。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

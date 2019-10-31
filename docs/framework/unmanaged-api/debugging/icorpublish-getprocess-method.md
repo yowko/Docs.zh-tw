@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5143805-2eb7-45b8-85ed-c8fb34df1084
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b2dcdaed34044122dd2a61c9e0b5bb02f8cc0d9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a9d28243e9907fcc6320b2e09a49312bf35a70b4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774267"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121780"
 ---
 # <a name="icorpublishgetprocess-method"></a>ICorPublish::GetProcess 方法
-取得[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)執行個體，表示具有指定識別碼的程序。  
+取得[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)實例，表示具有指定之識別碼的進程。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,23 +36,23 @@ HRESULT GetProcess(
   
 ## <a name="parameters"></a>參數  
  `pid`  
- [in]處理序識別碼。  
+ 在進程的識別碼。  
   
  `ppProcess`  
- [out]位址指標`ICorPublishProcess`代表程序的執行個體。  
+ 脫銷代表進程之 `ICorPublishProcess` 實例位址的指標。  
   
 ## <a name="remarks"></a>備註  
- `GetProcess` 如果處理程序不存在，或未受管理的程序可由目前的使用者進行偵錯，就會失敗。  
+ 如果進程不存在，或不是目前使用者可以進行的 managed 進程，`GetProcess` 會失敗。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorPub.idl CorPub.h  
+ **標頭：** CorPub .idl，CorPub。h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorPublish 介面](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)

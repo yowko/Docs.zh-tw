@@ -14,52 +14,50 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a2c71f32dfd190e188bb28aad5d51c72160eb4bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b7cc41848e41976f388e38bf22c9ea0f90abbae
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603245"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121484"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager 介面
-提供方法，讓存取權和控制權的目前執行中執行緒的安全性內容。  
+提供的方法可讓您存取和控制目前執行之執行緒的安全性內容。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetSecurityContext 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)|取得要求[IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)從主應用程式。|  
-|[ImpersonateLoggedOnUser 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md)|要求執行程式碼會使用目前的使用者身分識別的認證。|  
-|[OpenThreadToken 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-openthreadtoken-method.md)|開啟與目前執行緒相關聯的 discretionary 存取權杖。|  
-|[RevertToSelf 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-reverttoself-method.md)|終止目前的使用者身分識別模擬，並傳回原始的執行緒 token。|  
-|[SetSecurityContext 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md)|設定目前執行中執行緒的安全性內容。|  
-|[SetThreadToken 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setthreadtoken-method.md)|設定目前執行中執行緒的控制代碼。|  
+|[GetSecurityContext 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)|從主機取得要求的[IHostSecurityCoNtext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) 。|  
+|[ImpersonateLoggedOnUser 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md)|要求使用目前使用者識別的認證來執行程式碼。|  
+|[OpenThreadToken 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-openthreadtoken-method.md)|開啟與目前線程相關聯的任意存取權杖。|  
+|[RevertToSelf 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-reverttoself-method.md)|終止目前使用者身分識別的模擬，並傳回原始的執行緒 token。|  
+|[SetSecurityContext 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md)|設定目前執行中線程的安全性內容。|  
+|[SetThreadToken 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setthreadtoken-method.md)|設定目前執行中線程的控制碼。|  
   
 ## <a name="remarks"></a>備註  
- 主機可以控制執行緒權杖的所有程式碼存取的通用語言執行平台 (CLR) 」 和 「 使用者程式碼。 它也可以確保完整的安全性內容資訊傳遞到非同步作業或受限制的程式碼存取的字碼指標。 `IHostSecurityContext` 封裝此資訊安全內容資訊，也就是對 CLR 不透明。  
+ 主機可以透過 common language runtime （CLR）和使用者程式碼，控制執行緒標記的所有程式碼存取。 它也可以確保以限制的程式碼存取，在非同步作業或程式碼點之間傳遞完整的安全性內容資訊。 `IHostSecurityContext` 封裝此安全性內容資訊，這對 CLR 而言是不透明的。  
   
- CLR 會在內部處理 managed 的執行緒內容。 它會查詢處理序專屬`IHostSecurityManager`在下列情況：  
+ CLR 會在內部處理 managed 執行緒內容。 在下列情況下，它會查詢進程特定的 `IHostSecurityManager`：  
   
-- 在完成項執行期間的完成項執行緒。  
+- 在完成項執行緒中，于完成項執行期間。  
   
-- 在類別和模組的建構函式執行。  
+- 在類別和模組的函式執行期間。  
   
-- 在背景工作執行緒的呼叫中的非同步點[ihostthreadpoolmanager:: Queueuserworkitem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)方法。  
+- 在背景工作執行緒上的非同步點上，呼叫[IHostThreadPoolManager：： QueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)方法。  
   
-- 在服務的 I/O 完成連接埠。  
+- I/o 完成通訊埠的服務。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IHostSecurityContext 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

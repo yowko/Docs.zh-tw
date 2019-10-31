@@ -1,15 +1,13 @@
 ---
 title: 中斷性變更類別 - .NET Core
 description: 了解 .NET Core 如何分類中斷性變更。
-author: rpetrusha
-ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: e15b0c566584571440eb09c7fb981874b7517c48
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 058f2c2cdeed1e3e984f1de8ab493971d3937876
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698449"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089434"
 ---
 # <a name="breaking-change-categories"></a>中斷性變更類別
 
@@ -47,6 +45,6 @@ ms.locfileid: "71698449"
 
 .NET Core 不會維護往後相容性。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [評估 .NET Core 中的中斷性變更](index.md)

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d231044e-2b53-4836-93f9-8117ff0e5c3a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ba0c2ea7733f098b7fac95f51b5eb16d083174e8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 302db0d029b3811d151473323a7a60bd16a00ec1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779374"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131241"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>EClrUnhandledException 列舉
-描述可用的選項，來管理使用者程式碼中未處理的例外狀況。  
+描述可用來管理使用者程式碼中未處理之例外狀況的選項。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,26 +33,26 @@ typedef enum {
 } EClrUnhandledException;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`eRuntimeDeterminedPolicy`|指定預設的行為就會發生。 此程序會終止。|  
-|`eHostDeterminedPolicy`|指定 common language runtime (CLR) 會忽略未處理例外狀況，並可讓主機判斷任何進一步的動作。|  
+|`eRuntimeDeterminedPolicy`|指定發生預設行為。 進程已損毀。|  
+|`eHostDeterminedPolicy`|指定 common language runtime （CLR）會忽略未處理的例外狀況，並讓主機判斷任何進一步的動作。|  
   
 ## <a name="remarks"></a>備註  
- 若要指定 CLR 表現較早版本，請使用`eHostDeterminedPolicy`成員。  
+ 若要指定 CLR 的行為與舊版相同，請使用 `eHostDeterminedPolicy` 成員。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** MSCorEE.dll  
+ 連結**庫：** Mscoree.dll .dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [EClrFailure 列舉](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
 - [EClrOperation 列舉](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)

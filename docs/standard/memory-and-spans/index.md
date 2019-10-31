@@ -7,14 +7,12 @@ helpviewer_keywords:
 - Span<T>
 - buffers"
 - pipeline processing
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fbfd091c821f59febfc8c7a203334454e7b59c12
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: b61b1dbbedf4658fe113986fbb4a792a2f574534
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666427"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121992"
 ---
 # <a name="memory--and-span-related-types"></a>記憶體與延伸相關類型
 
@@ -47,7 +45,7 @@ ms.locfileid: "69666427"
 
 因為記憶體與延伸相關類型通常用於將資料存放在處理管線中，開發人員在使用<xref:System.Span%601>、<xref:System.Memory%601> 與相關類型時務必依照一組最佳作法執行。 這些最佳做法記錄在[記憶體\<T>與延伸\<T> 使用指導方針](memory-t-usage-guidelines.md)中。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Memory%601?displayProperty=nameWithType>
 - <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>

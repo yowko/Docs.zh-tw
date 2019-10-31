@@ -8,14 +8,12 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d39d4dfd5413b95300b70f27437bd27ca2d67a20
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
-ms.translationtype: HT
+ms.openlocfilehash: 49f2d871a42db484e20f0bfc35634a0e8b959c2e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452380"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123553"
 ---
 # <a name="default-marshaling-for-strings"></a>字串的預設封送處理
 
@@ -29,7 +27,7 @@ ms.locfileid: "65452380"
 
 |列舉類型|Unmanaged 格式的描述|
 |----------------------|-------------------------------------|
-|`UnmanagedType.BStr` (預設)|具有前置長度和 Unicode 字元的 COM 樣式 `BSTR`。|
+|`UnmanagedType.BStr` (預設值)|具有前置長度和 Unicode 字元的 COM 樣式 `BSTR`。|
 |`UnmanagedType.LPStr`|ANSI 字元之 Null 終端陣列的指標。|
 |`UnmanagedType.LPWStr`|Unicode 字元之 Null 終端陣列的指標|
 
@@ -90,7 +88,7 @@ interface IStringWorker : IDispatch
 |----------------------|-------------------------------------|
 |`UnmanagedType.AnsiBStr`|具有前置長度和 ANSI 字元的 COM 樣式 `BSTR`。|
 |`UnmanagedType.BStr`|具有前置長度和 Unicode 字元的 COM 樣式 `BSTR`。|
-|`UnmanagedType.LPStr` (預設)|ANSI 字元之 Null 終端陣列的指標。|
+|`UnmanagedType.LPStr` (預設值)|ANSI 字元之 Null 終端陣列的指標。|
 |`UnmanagedType.LPTStr`|平台相依字元之 Null 終端陣列的指標。|
 |`UnmanagedType.LPUTF8Str`|UTF-8 編碼字元之 Null 終端陣列的指標。|
 |`UnmanagedType.LPWStr`|Unicode 字元之 Null 終端陣列的指標|
@@ -147,7 +145,7 @@ End Class
 |列舉類型|Unmanaged 格式的描述|
 |----------------------|-------------------------------------|
 |`UnmanagedType.BStr`|具有前置長度和 Unicode 字元的 COM 樣式 `BSTR`。|
-|`UnmanagedType.LPStr` (預設)|ANSI 字元之 Null 終端陣列的指標。|
+|`UnmanagedType.LPStr` (預設值)|ANSI 字元之 Null 終端陣列的指標。|
 |`UnmanagedType.LPTStr`|平台相依字元之 Null 終端陣列的指標。|
 |`UnmanagedType.LPUTF8Str`|UTF-8 編碼字元之 Null 終端陣列的指標。|
 |`UnmanagedType.LPWStr`|Unicode 字元之 Null 終端陣列的指標|
@@ -287,7 +285,7 @@ Public Class Window
 End Class
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [預設的封送處理行為](default-marshaling-behavior.md)
 - [封送處理字串](marshaling-strings.md)

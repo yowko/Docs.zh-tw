@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b22687a8-e9cf-4e65-a1b0-f92a81bc524e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 352a45a33a109570f100e91a24cd44dc4f6780e7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 198de0aed4e229d7ed8bb1679afc3a0102bd5368
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740143"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098457"
 ---
 # <a name="cordebugexceptionflags-enumeration"></a>CorDebugExceptionFlags 列舉
 提供例外狀況的其他資訊。  
@@ -35,9 +33,9 @@ typedef enum CorDebugExceptionFlags {
 } CorDebugExceptionFlags;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_NONE`|沒有例外狀況。|  
 |`DEBUG_EXCEPTION_CAN_BE_INTERCEPTED`|例外狀況為可攔截。<br /><br /> 例外狀況可能仍處於偵錯工具無法攔截的時機。 例如，連結 Just-in-time (JIT) 所產生的目前回呼或例外狀況事件下沒有 Managed 程式碼時，則無法攔截例外狀況。|  
@@ -50,10 +48,10 @@ typedef enum CorDebugExceptionFlags {
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

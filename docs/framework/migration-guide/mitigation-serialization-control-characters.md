@@ -1,5 +1,5 @@
 ---
-title: 風險降低：使用 DataContractJsonSerializer 將控制字元序列化
+title: 風險降低︰使用 DataContractJsonSerializer 序列化控制字元
 ms.date: 04/07/2017
 helpviewer_keywords:
 - .NET Framework 4.7 retargeting changes
@@ -7,16 +7,14 @@ helpviewer_keywords:
 - DataContractJsonSerializer changes
 - serialization changes
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12b26c8cc01b7af1c3b345d2f274a1d25a19d689
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5f8218d0f369f25b1add501fdc975d6dccfe90fa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789852"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126155"
 ---
-# <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>風險降低：使用 DataContractJsonSerializer 將控制字元序列化
+# <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>風險降低︰使用 DataContractJsonSerializer 序列化控制字元
 
 從 .NET Framework 4.7 開始，使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 序列化控制字元的方式已變更為符合 ECMAScript V6 和 V8。 
  
@@ -28,7 +26,7 @@ ms.locfileid: "70789852"
 
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 
 
-## <a name="mitigation"></a>緩和
+## <a name="mitigation"></a>風險降低
 
 對於以 .NET Framework 4.7 版開始的 .NET Framework 為目標的應用程式，此行為預設為啟用。
 
@@ -40,6 +38,6 @@ ms.locfileid: "70789852"
 </runtime>
 ```
  
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Framework 4.7 中的重定目標變更](retargeting-changes-in-the-net-framework-4-7.md)

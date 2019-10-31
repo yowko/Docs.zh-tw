@@ -11,15 +11,13 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 248628d9907a3984b2c06e5f2f3a1e5c2faa2a67
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 3ac5602c32ce0dcfe21e913868faa7ab356e4194
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040539"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120596"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字元編碼
 
@@ -29,7 +27,7 @@ ms.locfileid: "70040539"
 
 - 解碼器，可將位元組序列轉譯成字元序列。
 
-字元編碼描述編碼器和解碼器運作時所依據的規則。 例如， <xref:System.Text.UTF8Encoding> 類別描述編碼和解碼 8 位元 Unicode 轉換格式 (UTF-8) 的規則，該格式使用一到四個位元組來表示單一 Unicode 字元。 編碼和解碼也可包含驗證。 例如， <xref:System.Text.UnicodeEncoding> 類別會檢查所有 Surrogate，確定它們是由有效的 Surrogate 字組所組成。 (Surrogate 字組是由包含範圍從 U+D800 到 U+DBFF 之字碼指標的字元，後面接著包含範圍從 U+DC00 到 U+DFFF 之字碼指標的字元所組成)。後援策略決定編碼器如何處理無效的字元，或解碼器如何處理無效的位元組。
+字元編碼描述編碼器和解碼器運作時所依據的規則。 例如， <xref:System.Text.UTF8Encoding> 類別描述編碼和解碼 8 位元 Unicode 轉換格式 (UTF-8) 的規則，該格式使用一到四個位元組來表示單一 Unicode 字元。 編碼和解碼也可包含驗證。 例如， <xref:System.Text.UnicodeEncoding> 類別會檢查所有 Surrogate，確定它們是由有效的 Surrogate 字組所組成。 （代理組包含一個字元，其程式碼點的範圍是從 U + D800 到 U + DBFF，後面接著一個字元，而程式碼點的範圍是從 U + DC00 到 U + DFFF）。 回溯策略會決定編碼器如何處理不正確字元，或解碼器如何處理不正確位元組。
 
 > [!WARNING]
 > .NET 編碼類別提供儲存和轉換字元資料的方法。 這些類別不應用來儲存字串格式的二進位資料。 根據使用的編碼方式，使用編碼類別將二進位資料轉換成字串格式可能會導致未預期的行為，並且產生不正確或損毀的資料。 若要將二進位資料轉換成字串格式，請使用 <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> 方法。
@@ -69,7 +67,7 @@ ms.locfileid: "70040539"
 
 您可以藉由呼叫 <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> 方法，來擷取 .NET 中所有可用編碼的相關資訊。 .NET 支援下表所列的字元編碼系統。
 
-|編碼|類別|說明|優點/缺點|
+|編碼|執行個體|描述|優點/缺點|
 |--------------|-----------|-----------------|-------------------------------|
 |ASCII|<xref:System.Text.ASCIIEncoding>|使用位元組較低的七個位元編碼有限範圍的字元。|由於這個編碼僅支援 U+0000 到 U+007F 之間的字元值，因此大部分的情況下並不適用於國際化的應用程式。|
 |UTF-7|<xref:System.Text.UTF7Encoding>|以 7 位元 ASCII 字元序列表示字元。 非 ASCII 的 Unicode 字元則以 ASCII 字元的逸出序列表示。|UTF-7 支援電子郵件和新聞群組通訊協定之類的通訊協定。 不過，UTF-7 並沒有特別安全或穩固。 在某些情況下，變更一個位元便可能會徹底改變整個 UTF-7 字串的解譯。 而在其他情況下，不同的 UTF-7 字串可能會編碼為相同的文字。 對於包含非 ASCII 字元的序列而言，UTF-7 比 UTF-8 需要更多空間，而且編碼/解碼的速度比較慢。 因此，您應該盡可能使用 UTF-8，而不是 UTF-7。|
@@ -153,7 +151,7 @@ ms.locfileid: "70040539"
 
 ### <a name="best-fit-fallback"></a>Best-Fit Fallback
 
-當字元在目標編碼中沒有完全相符的字元時，編碼器可以嘗試將該字元對應至類似的字元 (自動調整後援大部分是針對編碼問題，而不是針對解碼問題。 很少有字碼頁包含無法成功對應至 Unicode 的字元)。自動調整後援是 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 和 <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType> 多載所擷取之字碼頁和雙位元組字元集編碼的預設值。
+當字元在目標編碼中沒有完全相符的字元時，編碼器可以嘗試將該字元對應至類似的字元 (自動調整後援大部分是針對編碼問題，而不是針對解碼問題。 有很少的字碼頁包含無法成功對應到 Unicode 的字元）。自動調整回溯是 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 和 <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType> 多載所抓取之字碼頁和雙位元組字元集編碼的預設值。
 
 > [!NOTE]
 > 理論上，.NET 中提供的 Unicode 編碼類別 (<xref:System.Text.UTF8Encoding>、<xref:System.Text.UnicodeEncoding> 和 <xref:System.Text.UTF32Encoding>) 支援每個字元集中的每個字元，因此這些類別可以用來解決自動調整後援的問題。
@@ -286,7 +284,7 @@ ms.locfileid: "70040539"
 [!code-csharp[Conceptual.Encoding#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/custom1.cs#7)]
 [!code-vb[Conceptual.Encoding#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/custom1.vb#7)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Text.Encoder>
 - <xref:System.Text.Decoder>

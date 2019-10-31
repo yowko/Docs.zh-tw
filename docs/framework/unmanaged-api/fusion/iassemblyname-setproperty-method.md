@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 496c3add-f60b-4073-943f-d1bcf33330cb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17e96f56c57d896397489e27bcc072d8e7df05ec
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ffa1fa2f5e141728a56f1b598a1aae9602b2ac86
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796534"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108212"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty 方法
 設定指定的屬性識別碼所參考之屬性的值。  
@@ -42,10 +40,10 @@ HRESULT SetProperty (
  在將設定其值之屬性的唯一識別碼。  
   
  `pvProperty`  
- 在要設定參考`PropertyId`之屬性的值。  
+ 在要設定 `PropertyId`所參考之屬性的值。  
   
  `cbProperty`  
- 在的大小（以位元組為單位`pvProperty`）。  
+ 在`pvProperty`的大小（以位元組為單位）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
@@ -54,6 +52,6 @@ HRESULT SetProperty (
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IAssemblyName 介面](iassemblyname-interface.md)

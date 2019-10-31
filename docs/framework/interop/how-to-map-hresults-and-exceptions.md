@@ -1,5 +1,5 @@
 ---
-title: 作法：對應 HRESULT 和例外狀況
+title: 如何：對應 HRESULT 和例外狀況
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: HT
+ms.openlocfilehash: 13dcca5f35750ad3e8bd6ea4f6dd443fe9a8ee94
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306543"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123871"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>作法：對應 HRESULT 和例外狀況
+# <a name="how-to-map-hresults-and-exceptions"></a>如何：對應 HRESULT 和例外狀況
 COM 方法是藉由傳回 HRESULT 來報告錯誤；.NET 方法則是藉由擲回例外狀況來報告錯誤。 執行階段則負責處理兩者之間的轉換。 .NET Framework 的每一個例外狀況類別都會對應到一個 HRESULT。  
   
  使用者定義的例外狀況類別可以指定任何適當的 HRESULT。 當例外狀況是藉由設定例外狀況物件上的 **HResult** 欄位而產生時，這些例外狀況類別可以動態地變更要傳回的 HRESULT。 例外狀況的其他資訊會透過 **IErrorInfo** 介面提供給用戶端，而該介面是實作於 Unmanaged 處理序中的 .NET 物件上。  
@@ -75,7 +73,7 @@ CMyClass::MethodThatThrows
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**例外**|  
+|**COR_E_EXCEPTION**|**例外狀況**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND 或 ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
@@ -84,7 +82,7 @@ CMyClass::MethodThatThrows
 |**COR_E_INVALIDCAST 或 E_NOINTERFACE**|**InvalidCastException**|  
 |**COR_E_INVALIDCOMOBJECT**|**InvalidComObjectException**|  
 |**COR_E_INVALIDFILTERCRITERIA**|**InvalidFilterCriteriaException**|  
-|**COR_E_INVALIDOLEVARIANTTYPE**|**InvalidOleVariantTypeException**|  
+|**COR_E_INVALIDOLEVariantTYPE**|**InvalidOleVariantTypeException**|  
 |**COR_E_INVALIDOPERATION**|**InvalidOperationException**|  
 |**COR_E_IO**|**IOException**|  
 |**COR_E_MEMBERACCESS**|**AccessException**|  
@@ -136,13 +134,13 @@ CMyClass::MethodThatThrows
 |**HelpLink**|如果 **IErrorInfo->HelpContext** 是非零值，則字串是由串連 **IErrorInfo->GetHelpFile**、"#" 和 **IErrorInfo->GetHelpContext** 所構成。 否則，字串是從 **IErrorInfo->GetHelpFile** 所傳回。|  
 |**InnerException**|一律為 Null 參考 (在 Visual Basic 中為 **Nothing**)。|  
 |**訊息**|從 **IErrorInfo->GetDescription** 傳回的字串。|  
-|**原始程式檔**|從 **IErrorInfo->GetSource** 傳回的字串。|  
+|**Source**|從 **IErrorInfo->GetSource** 傳回的字串。|  
 |**StackTrace**|堆疊追蹤。|  
 |**TargetSite**|傳回失敗 HRESULT 之方法的名稱。|  
   
  如 **Message**、**Source** 和 **StackTrace** 之類的例外狀況欄位，並不適用於 **StackOverflowException**。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [進階 COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [例外狀況](../../standard/exceptions/index.md)

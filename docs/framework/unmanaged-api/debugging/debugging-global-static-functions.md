@@ -6,19 +6,17 @@ helpviewer_keywords:
 - debugging global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], debugging
 ms.assetid: efc64414-77c3-48d0-881a-8594ed416aad
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e2403d736d031aab52525fc12b5071e764a8bde1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 965724c1e937fa62f05c33b0dcf8a5c8b9e1b029
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698521"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124321"
 ---
 # <a name="debugging-global-static-functions"></a>偵錯全域靜態函式
 本節說明偵錯 API 所使用的 Unmanaged 全域靜態函式。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [_EFN_GetManagedExcepStack 函式](../../../../docs/framework/unmanaged-api/debugging/efn-getmanagedexcepstack-function.md)  
  給予 Managed 例外狀況物件位址後，會傳回內部包含堆疊追蹤版本的字串。  
   

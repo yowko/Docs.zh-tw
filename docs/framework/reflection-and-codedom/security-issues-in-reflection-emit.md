@@ -11,14 +11,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f2bdaef52bbc4cac0abfcbf8724f3c5c602bc8f0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f04b40edde0755315f3b4fd4284fc7c804a54313
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045791"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130036"
 ---
 # <a name="security-issues-in-reflection-emit"></a>反映發出中的安全性問題
 .NET Framework 提供三種發出 Microsoft 中繼語言 (MSIL) 的方式，每種都有它自己的安全性問題：  
@@ -36,7 +34,7 @@ ms.locfileid: "71045791"
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>動態組件  
- 使用 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 方法的多載來建立動態組件。 由於刪除全機器安全性原則，因此這個方法的大部分多載已在 .NET Framework 4 中遭取代。 (請參閱[安全性變更](../security/security-changes.md)。)無論信任層級為何，剩餘的多載可由任何程式碼執行。 這些多載可分為兩個群組：當建立動態組件時，指定要套用至動態組件的屬性清單，以及不套用至動態組件的屬性清單。 當您建立組件時，如果您未套用 <xref:System.Security.SecurityRulesAttribute> 屬性來指定組件的透明度模型，則透明度模型會繼承自發出的組件。  
+ 使用 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 方法的多載來建立動態組件。 由於刪除全機器安全性原則，因此這個方法的大部分多載已在 .NET Framework 4 中遭取代。 （請參閱[安全性變更](../security/security-changes.md)。）無論信任層級為何，其餘的多載都可以由任何程式碼執行。 這些多載可分為兩個群組：當建立動態組件時，指定要套用至動態組件的屬性清單，以及不套用至動態組件的屬性清單。 當您建立組件時，如果您未套用 <xref:System.Security.SecurityRulesAttribute> 屬性來指定組件的透明度模型，則透明度模型會繼承自發出的組件。  
   
 > [!NOTE]
 > 動態組件建立後，使用 <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> 方法套用至動態組件的屬性並不會生效，直到組件已儲存至磁碟並再次載入記憶體中。  
@@ -68,7 +66,7 @@ ms.locfileid: "71045791"
 > [!NOTE]
 > 就觀念上而言，會在方法建構期間提出要求。 也就是當發出每個 MSIL 指示時，可提出要求。 在目前的實作中，當 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType> 方法被呼叫，或是當 Just-In-Time (JIT) 編譯器被叫用時，如果此方法被叫用卻沒有呼叫 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>，就會提出所有的要求。  
   
- 如果應用程式定義域允許，則匿名裝載的動態方法可以跳過 JIT 可見度檢查，且受下列限制：由匿名裝載動態方法存取的非公用類型和成員必須位於組件中，且該組件授權集與發出呼叫堆疊的授權集相等，或是為其子集。 如果應用程式定義域對 <xref:System.Security.Permissions.ReflectionPermission> 授與 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標，則會啟用這項跳過 JIT 可見度檢查的限制功能。  
+ 如果應用程式定義域允許，則匿名裝載的動態方法可以跳過 JIT 可見度檢查，且受下列限制：由匿名裝載的動態方法存取的非公用類型和成員必須位於組件中，且該組件的授權集與發出呼叫堆疊的授權集相等，或是為其子集。 如果應用程式定義域對 <xref:System.Security.Permissions.ReflectionPermission> 授與 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標，則會啟用這項跳過 JIT 可見度檢查的限制功能。  
   
 - 如果您的方法只使用公用類型和成員，則在建構期間不需要權限。  
   
@@ -153,7 +151,7 @@ ms.locfileid: "71045791"
 ### <a name="obtaining-information-on-types-and-members"></a>取得類型和成員資訊  
  從 .NET Framework 2.0 開始，取得非公開型別和成員的相關資訊不需要權限。 反映會用來取得發出動態方法需要的資訊。 例如，<xref:System.Reflection.MethodInfo> 物件會用來發出方法呼叫。 .NET Framework 先前版本需要具備 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 如需詳細資訊，請參閱[反映的安全性考量](security-considerations-for-reflection.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [反映的安全性考量](security-considerations-for-reflection.md)
 - [發出動態方法和組件](emitting-dynamic-methods-and-assemblies.md)

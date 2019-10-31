@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98320175-7c5e-4dbb-8683-86fa82e2641f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3582ebf2acee02d49aabafb03604c84249c4ce13
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9313fc58dec8099f42dbff07685ca14791fa324f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747383"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137168"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>ICorDebugProcess2::SetDesiredNGENCompilerFlags 方法
-設定必須內嵌在先行編譯的映像，以便將該映像載入目前的程序的執行階段旗標。  
+設定必須內嵌在先行編譯影像中的旗標，執行時間才會將該影像載入目前的進程中。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,25 +35,25 @@ HRESULT SetDesiredNGENCompilerFlags (
   
 ## <a name="parameters"></a>參數  
  `pdwFlags`  
- [in]值為[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)列舉，指定的編譯器旗標用來選取正確的先行編譯映像。  
+ 在[CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)列舉的值，指定用來選取正確預先編譯影像的編譯器旗標。  
   
 ## <a name="remarks"></a>備註  
- `SetDesiredNGENCompilerFlags`方法會指定必須內嵌在先行編譯的映像中，以便在執行階段會載入此程序的該映像的旗標。 這個方法所設定的旗標是只能用來選取正確的先行編譯映像。 如果沒有這類映像存在時，執行階段將 Microsoft intermediate language (MSIL) 映像，而且在 just-in-time (JIT) 編譯器改為載入。 在此情況下，仍然必須使用偵錯工具[ICorDebugModule2::SetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)方法，以進行 JIT 編譯，視需要設定之旗標。  
+ `SetDesiredNGENCompilerFlags` 方法會指定必須內嵌在先行編譯影像中的旗標，讓執行時間將該影像載入這個進程中。 這個方法所設定的旗標只能用來選取正確的先行編譯映射。 如果沒有這類影像，執行時間將會改為載入 Microsoft 中繼語言（MSIL）影像和即時（JIT）編譯器。 在這種情況下，偵錯工具仍然必須使用[ICorDebugModule2：： SetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)方法來設定 JIT 編譯所需的旗標。  
   
- 如果已載入的映像，但一些 JIT 編譯必須進行該映像 （這會是大小寫，如果映像包含泛型），所指定的編譯器旗標`SetDesiredNGENCompilerFlags`方法會套用至額外的 JIT 編譯。  
+ 如果載入影像，但必須針對該影像進行某些 JIT 編譯（如果影像包含泛型，則會是這種情況），則 `SetDesiredNGENCompilerFlags` 方法所指定的編譯器旗標將會套用至額外的 JIT 編譯。  
   
- `SetDesiredNGENCompilerFlags`方法必須呼叫期間[icordebugmanagedcallback:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)回呼。 嘗試呼叫`SetDesiredNGENCompilerFlags`方法之後將會失敗。 嘗試設定不的旗標而且，定義於`CorDebugJITCompilerFlags`列舉型別或不合法的特定處理序將會失敗。  
+ 在[ICorDebugManagedCallback：： CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)回呼期間，必須呼叫 `SetDesiredNGENCompilerFlags` 方法。 之後嘗試呼叫 `SetDesiredNGENCompilerFlags` 方法將會失敗。 此外，也會嘗試設定未在 `CorDebugJITCompilerFlags` 列舉中定義或不合法的旗標，而不是指定的處理常式將會失敗。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 - [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

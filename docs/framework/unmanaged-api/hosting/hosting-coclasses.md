@@ -6,30 +6,28 @@ helpviewer_keywords:
 - unmanaged coclasses [.NET Framework], hosting
 - coclasses [.NET Framework hosting]
 ms.assetid: e32d8667-58ee-4760-814f-d22963881622
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8dbe16c1bd9293cd109e9ce7f1211d6651551bc5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f23d2c9828a2ccce058fbb4829a41f1af5b25a11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946077"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127018"
 ---
 # <a name="hosting-coclasses"></a>裝載 Coclass
-本章節描述裝載 API 所使用的 unmanaged 的 API coclass。  
+本節說明裝載 API 所使用的非受控 API coclass。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [CLRRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)  
- 提供介面來管理執行程式碼執行階段。  
+ 提供介面，以供運行時間管理程式碼執行。  
   
  [ComCallUnmarshal Coclass](../../../../docs/framework/unmanaged-api/hosting/comcallunmarshal-coclass.md)  
- 提供介面來管理的介面指標封送處理。  
+ 提供介面來管理介面指標的封送處理。  
   
  [CorRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)  
- 提供介面來管理由 common language runtime 所執行的應用程式。  
+ 提供介面，以管理由 common language runtime 執行的應用程式。  
   
  [TypeNameFactory Coclass](../../../../docs/framework/unmanaged-api/hosting/typenamefactory-coclass.md)  
- 提供的介面，用於管理解構的型別名稱。  
+ 提供介面來管理類型名稱的解構。  
   
 ## <a name="related-sections"></a>相關章節  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  

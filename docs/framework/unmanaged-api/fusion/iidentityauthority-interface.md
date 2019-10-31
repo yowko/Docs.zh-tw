@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6277f914-51a8-49be-bec6-52d6d648527d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7421e0d0e1a1f0e1a5fbe0d0eb7d5a0ab2a48b9a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3e2d2335e37ced9139ea44092f10b19566894681
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796417"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127085"
 ---
 # <a name="iidentityauthority-interface"></a>IIdentityAuthority 介面
 
@@ -35,20 +33,20 @@ ms.locfileid: "70796417"
 |`IIdentityAuthority::AreReferencesEqual`|取得值，指出兩個指定的[IReferenceIdentity](ireferenceidentity-interface.md)實例是否相等。|
 |`IIdentityAuthority::AreTextualDefinitionsEqual`|取得值，指出兩個指定的字串定義識別表示是否相等。|
 |`IIdentityAuthority::AreTextualReferencesEqual`|取得值，指出兩個指定的字串參考身分識別表示是否相等。|
-|`IIdentityAuthority::CreateDefinition`|取得新`IDefinitionIdentity`實例的指標，表示目前範圍中的程式碼物件。|
-|`IIdentityAuthority::CreateReference`|取得新`IReferenceIdentity`實例的指標，表示目前範圍中的程式碼物件。|
-|`IIdentityAuthority::DefinitionToText`|取得指定`IDefinitionIdentity`的格式化字串版本。|
-|`IIdentityAuthority::DefinitionToTextBuffer`|使用指定`IDefinitionIdentity`的字串版本，填滿指定的寬字元緩衝區。|
-|`IIdentityAuthority::DoesDefinitionMatchReference`|取得值，指出指定`IDefinitionIdentity`的和`IReferenceIdentity`實例是否參考相同的程式碼物件。|
+|`IIdentityAuthority::CreateDefinition`|取得新 `IDefinitionIdentity` 實例的指標，表示目前範圍中的程式碼物件。|
+|`IIdentityAuthority::CreateReference`|取得新 `IReferenceIdentity` 實例的指標，表示目前範圍中的程式碼物件。|
+|`IIdentityAuthority::DefinitionToText`|取得指定之 `IDefinitionIdentity`的格式化字串版本。|
+|`IIdentityAuthority::DefinitionToTextBuffer`|使用指定之 `IDefinitionIdentity`的字串版本，填滿指定的寬字元緩衝區。|
+|`IIdentityAuthority::DoesDefinitionMatchReference`|取得值，指出指定的 `IDefinitionIdentity` 和 `IReferenceIdentity` 實例是否參考相同的程式碼物件。|
 |`IIdentityAuthority::DoesTextualDefinitionMatchTextualReference`|取得值，指出指定的字串是否參考相同的程式碼物件。|
-|`IIdentityAuthority::GenerateDefinitionKey`|取得所指定`IDefinitionIdentity`的新建立之字串索引鍵的指標。|
-|`IIdentityAuthority::GenerateReferenceKey`|取得所指定`IReferenceIdentity`的新建立之字串索引鍵的指標。|
-|`IIdentityAuthority::HashDefinition`|取得所指定`IDefinitionIdentity`的雜湊值。|
-|`IIdentityAuthority::HashReference`|取得所指定`IReferenceIdentity`的雜湊值。|
-|`IIdentityAuthority::ReferenceToText`|取得指定`IReferenceIdentity`的格式化字串版本。|
-|`IIdentityAuthority::ReferenceToTextBuffer`|使用指定`IReferenceIdentity`的字串版本，填滿指定的寬字元緩衝區。|
-|`IIdentityAuthority::TextToDefinition`|取得從指定的格式化字串`IDefinitionIdentity`產生之實例的介面指標。|
-|`IIdentityAuthority::TextToReference`|取得從指定的格式化字串`IReferenceIdentity`產生之實例的介面指標。|
+|`IIdentityAuthority::GenerateDefinitionKey`|取得指定之 `IDefinitionIdentity`的新建立字串索引鍵的指標。|
+|`IIdentityAuthority::GenerateReferenceKey`|取得指定之 `IReferenceIdentity`的新建立字串索引鍵的指標。|
+|`IIdentityAuthority::HashDefinition`|取得指定之 `IDefinitionIdentity`的雜湊值。|
+|`IIdentityAuthority::HashReference`|取得指定之 `IReferenceIdentity`的雜湊值。|
+|`IIdentityAuthority::ReferenceToText`|取得指定之 `IReferenceIdentity`的格式化字串版本。|
+|`IIdentityAuthority::ReferenceToTextBuffer`|使用指定之 `IReferenceIdentity`的字串版本，填滿指定的寬字元緩衝區。|
+|`IIdentityAuthority::TextToDefinition`|取得從指定的格式化字串產生之 `IDefinitionIdentity` 實例的介面指標。|
+|`IIdentityAuthority::TextToReference`|取得從指定的格式化字串產生之 `IReferenceIdentity` 實例的介面指標。|
 
 ## <a name="requirements"></a>需求
 
@@ -56,8 +54,8 @@ ms.locfileid: "70796417"
 
 **標頭：** 隔離。h
 
-**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [融合介面](fusion-interfaces.md)

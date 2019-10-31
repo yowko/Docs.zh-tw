@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 75754c2f-38c7-4707-85fe-559db4542729
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 23ead080823ace1b091568108af8866dcbca14ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 67841bbcd796e41b3b81f922020fe6c3677730c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770272"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124557"
 ---
 # <a name="iclrtask2beginpreventasyncabort-method"></a>ICLRTask2::BeginPreventAsyncAbort 方法
-延遲執行緒中止的新要求導致執行緒中止目前的執行緒上。  
+延遲在目前線程上導致執行緒中止的新執行緒中止要求。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,27 +37,27 @@ HRESULT BeginPreventAsyncAbort();
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|HOST_E_INVALIDOPERATION|這不是目前執行緒的執行緒上呼叫方法。|  
+|HOST_E_INVALIDOPERATION|在不是目前線程的執行緒上呼叫方法。|  
   
 ## <a name="remarks"></a>備註  
- 呼叫這個方法的其中一個遞增目前執行緒的延遲執行緒中止計數器。  
+ 呼叫這個方法會將目前線程的延遲線程中止計數器遞增一。  
   
- 若要呼叫`BeginPreventAsyncAbort`並[ICLRTask2::EndPreventAsyncAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md)可以巢狀。 計數器是小於或等於零，因為目前執行緒的執行緒中止都延遲。 如果此呼叫未配對的呼叫`EndPreventAsyncAbort`方法，您就能夠達到在哪一個執行緒中止不能傳遞到目前執行緒的狀態。  
+ `BeginPreventAsyncAbort` 和[ICLRTask2：： EndPreventAsyncAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md)的呼叫可以進行嵌套。 只要計數器大於零，就會延遲目前線程的執行緒中止。 如果此呼叫未與 `EndPreventAsyncAbort` 方法的呼叫配對，則可能會到達無法將執行緒中止傳遞至目前線程的狀態。  
   
- 中止本身的執行緒不被接受的延遲。  
+ 中斷本身的執行緒不會接受延遲。  
   
- 這項功能所公開的功能會在內部使用虛擬機器 (VM)。 不當使用這些方法可能會導致未指定的行為，在 VM 中。 例如，呼叫`EndPreventAsyncAbort`情況下先呼叫`BeginPreventAsyncAbort`VM 先前會遞增它時，無法設定計數器為零。 同樣地，內部的計數器不會溢位檢查。 如果它超過其整數類資料的限制，因為它就會增加主機和 VM，產生的行為是未指定。  
+ 這項功能所公開的功能會在虛擬機器（VM）內部使用。 誤用這些方法可能會導致 VM 中未指定的行為。 例如，在沒有第一次呼叫 `BeginPreventAsyncAbort` 的情況下呼叫 `EndPreventAsyncAbort`，會在 VM 先前已遞增時，將計數器設定為零。 同樣地，內部計數器也不會檢查溢位。 如果它超過其整數限制，因為它是由主機和 VM 增加，則會未指定所產生的行為。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [EndPreventAsyncAbort 方法](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md)
 - [ICLRTask2 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)

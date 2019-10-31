@@ -6,19 +6,17 @@ helpviewer_keywords:
 - fusion interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], fusion
 ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1605605f8510f7ccf5f0bbf2f3f6b09050a16025
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 81c66825e69d9526abddfe06133426a2274ad08f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795311"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108187"
 ---
 # <a name="fusion-interfaces"></a>融合介面
 本節說明融合 API 用來存取應用程式資源屬性的非受控介面，以及為應用程式找出這些資源的正確版本。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [IAppIdAuthority 介面](iappidauthority-interface.md)  
  提供方法，以產生並比較應用程式識別和參考的索引鍵。  
   
@@ -29,7 +27,7 @@ ms.locfileid: "70795311"
  代表全域組件快取中的單一元件。  
   
  [IAssemblyEnum 介面](iassemblyenum-interface.md)  
- 表示物件陣列的`IAssemblyName`列舉值。  
+ 表示 `IAssemblyName` 物件陣列的列舉值。  
   
  [IAssemblyName 介面](iassemblyname-interface.md)  
  提供方法來描述和使用元件的唯一身分識別。  
@@ -41,13 +39,13 @@ ms.locfileid: "70795311"
  表示在目前範圍中定義應用程式之程式碼的唯一簽章。  
   
  [IEnumDefinitionIdentity 介面](ienumdefinitionidentity-interface.md)  
- 作為`IDefinitionIdentity`物件集合的列舉值。  
+ 作為 `IDefinitionIdentity` 物件集合的列舉值。  
   
  [IEnumIDENTITY_ATTRIBUTE 介面](ienumidentity-attribute-interface.md)  
  作為目前範圍中程式碼物件屬性的列舉值。  
   
  [IEnumReferenceIdentity 介面](ienumreferenceidentity-interface.md)  
- 作為物件集合的`IReferenceIdentity`列舉值。  
+ 作為 `IReferenceIdentity` 物件集合的列舉值。  
   
  [IIdentityAuthority 介面](iidentityauthority-interface.md)  
  管理程式碼物件的識別索引鍵。  

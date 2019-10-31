@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a1c4d165-9bdc-4ca8-940e-292d4ffcc338
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d8ea7df9396e9199d04ad5609daa9d2b01761f36
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e64a0512e05965b3da2e7486e986ee34ca8a20d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798888"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104309"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo 函式
 藉由檢查[TLIBATTR](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr)結構，傳回指定之類型程式庫的相關資訊。  
@@ -59,20 +57,20 @@ HRESULT GetTypeLibInfo(
  脫銷類型程式庫的次要版本號碼。 例如，針對版本*x. y*，次要版本號碼為*y*。  
   
 ## <a name="remarks"></a>備註  
- 此`GetTypeLibInfo`函式是由[tlbexp.exe （類型程式庫匯出工具）](../../tools/tlbexp-exe-type-library-exporter.md)所呼叫。 此工具會產生類型程式庫，以描述 common language runtime （CLR）元件中的類型。  
+ `GetTypeLibInfo` 函式是由[tlbexp.exe （類型程式庫匯出工具）](../../tools/tlbexp-exe-type-library-exporter.md)所呼叫。 此工具會產生類型程式庫，以描述 common language runtime （CLR）元件中的類型。  
   
- 如果有任何參數為 null，函數`HRESULT`會傳回的。 `E_POINTER` 否則，它會傳回 `S_OK`。  
+ 如果有任何參數為 null，函數會傳回 `E_POINTER`的 `HRESULT`。 否則它會傳回 `S_OK`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** TlbRef。h  
   
- **LIBRARY:** TlbRef.lib  
+ 連結**庫：** TlbRef .lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Tlbexp Helper 函式](index.md)
 - [LoadTypeLibEx 函式](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

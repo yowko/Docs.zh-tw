@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetSlotIndex 方法
+title: ICorDebugVariableHome：： GetSlotIndex 方法
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetSlotIndex
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 966da50d-5665-4fff-bf7b-1c72bbadd9a4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 199c3ba5d5b9588db4c665070b4dec6266cefc2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dfc2e91599e7f05d90d56af07b71313e9eecaa51
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760353"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121059"
 ---
-# <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome::GetSlotIndex 方法
-取得區域變數的 managed 的位置索引。  
+# <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome：： GetSlotIndex 方法
+取得本機變數的 managed 位置索引。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,28 +35,28 @@ HRESULT GetSlotIndex(
   
 ## <a name="parameters"></a>參數  
  `pSlotIndex`  
- [out]區域變數位置索引指標。  
+ 脫銷本機變數位置索引的指標。  
   
 ## <a name="return-value"></a>傳回值  
  方法會傳回下列值。  
   
 |值|描述|  
 |-----------|-----------------|  
-|`S_OK`|方法呼叫傳回的位置索引值`pSlotIndex`。|  
-|`E_FAIL`|目前[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)執行個體代表的函式引數。|  
+|`S_OK`|方法呼叫會在 `pSlotIndex`中傳回位置索引值。|  
+|`E_FAIL`|目前的[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)實例代表函式引數。|  
   
 ## <a name="remarks"></a>備註  
- 位置索引可用來擷取這個區域變數的中繼資料。  
+ 位置索引可以用來抓取此區域變數的中繼資料。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugVariableHome 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

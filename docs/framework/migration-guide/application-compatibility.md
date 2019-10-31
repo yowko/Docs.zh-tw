@@ -6,14 +6,12 @@ helpviewer_keywords:
 - .NET Framework application compatibility
 - .NET Framework changes
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f547180995ec155f9121eeace109e7dfb07c7827
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cf0d556dd5df773958e24ff1efcefbc3d8a8d3a9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790120"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126325"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework 中的應用程式相容性
 
@@ -74,7 +72,7 @@ ms.locfileid: "70790120"
 - [重定目標變更](./retargeting/index.md)
 - [執行階段變更](./runtime/index.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [版本和相依性](versions-and-dependencies.md)
 - [新功能](../whats-new/index.md)

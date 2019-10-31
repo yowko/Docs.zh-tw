@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65af5303468904ee40da4d567381782af70bfb38
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db6a20dee21b6c8bbd55fa9b52a159a00fe310d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776494"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092029"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK 函式指標
-指向主應用程式等候處理的函式 (<xref:System.Threading.WaitHandle>) 已收到信號或逾時。  
+Points to a function that notifies the host that a wait handle (<xref:System.Threading.WaitHandle>) has either been signaled or timed out.  
   
- 在.NET Framework 4 中，已被取代此函式指標。  
+ This function pointer has been deprecated in the .NET Framework 4.  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,23 +37,23 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
   
 ## <a name="parameters"></a>參數  
  `lpParameter`  
- [in]物件，包含主機所定義的資訊指標。  
+ [in] A pointer to an object that contains information defined by the host.  
   
  `TimerOrWaitFired`  
- [in]`true`如果逾時等候控制代碼，或`false`，表示收到信號。  
+ [in] `true` if the wait handle timed out, or `false` if it was signaled.  
   
 ## <a name="remarks"></a>備註  
- 函式，其中`WAITORTIMERCALLBACK`點是回呼函式，而且必須在裝載應用程式寫入器實作。  
+ The function to which `WAITORTIMERCALLBACK` points is a callback function and must be implemented by the writer of the hosting application.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **Header:** MSCorEE.h  
   
- **LIBRARY:** MSCorWks.dll  
+ **Library:** MSCorWks.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

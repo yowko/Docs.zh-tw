@@ -11,13 +11,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.author: ronpet
-ms.openlocfilehash: 53a8938a373136df65e23c162b94c4d8dc1f30b4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5f0388d90119455833eb6dba6ac808cdc8517865
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253856"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101662"
 ---
 # <a name="---string-interpolation-c-reference"></a>$-字串插補C# （參考）
 
@@ -39,9 +38,9 @@ ms.locfileid: "70253856"
 
 在方括號中的元素是選擇性的元素。 下表說明每個元素：
 
-|項目|說明|
+|項目|描述|
 |-------------|-----------------|
-|`interpolationExpression`|產生要格式化之結果的運算式。 的`null`字串表示為<xref:System.String.Empty?displayProperty=nameWithType>。|
+|`interpolationExpression`|產生要格式化之結果的運算式。 `null` 的字串表示 <xref:System.String.Empty?displayProperty=nameWithType>。|
 |`alignment`|常數運算式，其值會定義運算式結果的字串表示中的最小字元數。 如果是正數，則字串表示是靠右對齊；如果是負數，它是靠左對齊。 如需詳細資訊，請參閱[對齊元件](../../../standard/base-types/composite-formatting.md#alignment-component)。|
 |`formatString`|運算式結果的類型所支援的格式字串。 如需詳細資訊，請參閱[格式字串元件](../../../standard/base-types/composite-formatting.md#format-string-component)。|
 
@@ -59,16 +58,16 @@ ms.locfileid: "70253856"
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-內插逐字字串`$`是以字元開頭，後面接著`@`字元。 如需逐字字串的詳細資訊，請參閱[字串](../keywords/string.md)和[逐字識別碼](verbatim.md)主題。
+內插逐字字串是以 `$` 字元開頭，後面接著 `@` 字元。 如需逐字字串的詳細資訊，請參閱[字串](../keywords/string.md)和[逐字識別碼](verbatim.md)主題。
 
 > [!NOTE]
-> 從C# 8.0 開始，您可以依任何`$`順序`@`使用和 token： `$@"..."`和`@$"..."`都是有效的內插逐字字串。 在較C#舊的版本`$`中，權杖`@`必須出現在標記之前。
+> 從C# 8.0 開始，您可以使用`$`，並以任何順序`@`權杖： `$@"..."`和`@$"..."`都是有效的內插逐字字串。 在舊版C#中，`$` token 必須出現在 `@` token 前面。
 
-## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>隱含轉換和如何指定`IFormatProvider`實作為
+## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>隱含轉換和如何指定 `IFormatProvider` 的執行
 
 有三個來自插入字串的隱含轉換：
 
-1. 將插入字串轉換成插入字串解析結果的 <xref:System.String> 執行個體，且內插補點運算式項目取代為其結果的格式正確字串表示。 這種轉換會<xref:System.Globalization.CultureInfo.CurrentCulture>使用來格式化運算式結果。
+1. 將插入字串轉換成插入字串解析結果的 <xref:System.String> 執行個體，且內插補點運算式項目取代為其結果的格式正確字串表示。 這種轉換會使用 <xref:System.Globalization.CultureInfo.CurrentCulture> 來格式化運算式結果。
 
 1. 將插入字串轉換成 <xref:System.FormattableString> 執行個體，以代表複合格式字串，並將運算式結果格式化。 那可讓您從單一 <xref:System.FormattableString> 執行個體建立多個具有特定文化特性內容的結果字串。 若要這麼做，請呼叫下列其中一個方法：
 
@@ -98,7 +97,7 @@ ms.locfileid: "70253856"
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[內插字串](~/_csharplang/spec/expressions.md#interpolated-strings)一節。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 特殊字元](index.md)

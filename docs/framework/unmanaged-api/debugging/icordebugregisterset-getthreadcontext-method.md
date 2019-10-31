@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0f63400b-dc1c-48d6-b51a-75c3f7f28e03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ef7619316cae46df350bd75a2c6838828f7e9c82
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db4f9bc6277015055cbcdb509628f2862a71dbc4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747176"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127158"
 ---
 # <a name="icordebugregistersetgetthreadcontext-method"></a>ICorDebugRegisterSet::GetThreadContext 方法
-取得目前執行緒的內容。  
+取得目前線程的內容。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,26 +37,26 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>參數  
  `contextSize`  
- [in]大小，以位元組為單位的`context`陣列。  
+ 在`context` 陣列的大小（以位元組為單位）。  
   
  `context`  
- [in、 out]撰寫 Win32 的位元組陣列`CONTEXT`結構目前的平台。  
+ [in、out]組成目前平臺之 Win32 `CONTEXT` 結構的位元組陣列。  
   
 ## <a name="remarks"></a>備註  
- 偵錯工具應該呼叫此函式，而不是 Win32`GetThreadContext`函式，因為執行緒可能處於 「 攔截 」 狀態，其中已暫時變更其內容。 傳回的資料是 Win32`CONTEXT`結構目前的平台。  
+ 偵錯工具應該呼叫此函式，而不是 Win32 `GetThreadContext` 函式，因為執行緒可能處於「被攔截」狀態，其中的內容已暫時變更。 傳回的資料是目前平臺的 Win32 `CONTEXT` 結構。  
   
- 非分葉框架，用戶端應該檢查哪些暫存器是使用有效[icordebugregisterset:: Getregistersavailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)。  
+ 若是非分葉框架，用戶端應該使用[ICorDebugRegisterSet：： GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)來檢查哪些暫存器是有效的。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugRegisterSet 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
 - [ICorDebugRegisterSet2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

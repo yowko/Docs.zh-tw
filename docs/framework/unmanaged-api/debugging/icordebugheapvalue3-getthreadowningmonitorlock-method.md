@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4322a7e23c7085dadb3b2df6c1f72125aa685cef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec265525d01dab0669939569501fce91b500a900
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756612"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127496"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock 方法
-傳回擁有此物件的監視器鎖定的 managed 的執行緒。  
+傳回擁有這個物件之監視器鎖定的 managed 執行緒。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,10 +36,10 @@ HRESULT GetThreadOwningMonitorLock (
   
 ## <a name="parameters"></a>參數  
  `ppThread`  
- [out]擁有此物件的監視器鎖定的 managed 的執行緒。  
+ 脫銷擁有此物件之監視器鎖定的 managed 執行緒。  
   
  `pAcquisitionCount`  
- [out]此執行緒就必須釋放鎖定之前它會返回正在未擁有的次數。  
+ 脫銷此執行緒在傳回為無人擁有之前，必須釋放鎖定的次數。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
@@ -49,33 +47,33 @@ HRESULT GetThreadOwningMonitorLock (
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|S_FALSE|沒有任何受管理的執行緒擁有此物件的監視器鎖定。|  
+|S_FALSE|沒有受控執行緒擁有此物件上的監視鎖定。|  
   
 ## <a name="exceptions"></a>例外狀況  
   
 ## <a name="remarks"></a>備註  
- 如果 managed 的執行緒擁有此物件的監視器鎖定：  
+ 如果 managed 執行緒擁有此物件的監視器鎖定：  
   
 - 方法會傳回 S_OK。  
   
-- 執行緒物件是有效的直到執行緒結束為止。  
+- 執行緒物件是有效的，直到執行緒結束為止。  
   
- 如果沒有任何受管理的執行緒擁有這個物件的監視器鎖定`ppThread`和`pAcquisitionCount`維持不變，而方法會傳回 S_FALSE。  
+ 如果沒有 managed 執行緒擁有這個物件的監視器鎖定，`ppThread` 和 `pAcquisitionCount` 就不會變更，而且方法會傳回 S_FALSE。  
   
- 如果`ppThread`或`pAcquisitionCount`不是有效的指標，結果為未定義。  
+ 如果 `ppThread` 或 `pAcquisitionCount` 不是有效的指標，則結果會是未定義的。  
   
- 如果發生錯誤，無法判斷的如果有的話，執行緒擁有監視器上的鎖定這個物件，這個方法會傳回指出失敗的 HRESULT。  
+ 如果發生錯誤，因此無法判斷哪個執行緒擁有此物件的監視器鎖定，此方法會傳回表示失敗的 HRESULT。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

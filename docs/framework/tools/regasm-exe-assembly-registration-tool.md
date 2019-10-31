@@ -7,14 +7,12 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4038f8e4a3c012fab9df6019b5f9f19375f61f2a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 45b4c6c08d3afb948444a8c97dc32bd41f2615ce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044294"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104955"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (組件登錄工具)
 
@@ -42,19 +40,19 @@ regasm assemblyFile [options]
 |**/registered**|指定這個工具只會參考已註冊的類型程式庫。|
 |**/asmpath:directory**|指定包含組件參考的目錄。 必須與 **/regfile** 選項一起使用。|
 |**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|
-|**/regfile** [ **:** *regFile*]|產生組件的指定 .reg 檔，其中包含所需的登錄項目。 指定這個選項並不會變更登錄。 這個選項不可與 **/u** 或 **/tlb** 選項一起使用。|
+|**/regfile** [**:** *regFile*]|產生組件的指定 .reg 檔，其中包含所需的登錄項目。 指定這個選項並不會變更登錄。 這個選項不可與 **/u** 或 **/tlb** 選項一起使用。|
 |**/silent** 或 **/s**|隱藏顯示成功訊息。|
-|**/tlb** [ **:** *typeLibFile*]|從指定的組件中產生類型程式庫，其中包含組件內所定義之可存取類型的定義。|
+|**/tlb** [**:** *typeLibFile*]|從指定的組件中產生類型程式庫，其中包含組件內所定義之可存取類型的定義。|
 |**/unregister** 或 **/u**|移除註冊 *assemblyFile* 中所找到的可建立類別。 省略這個選項會造成 Regasm.exe 註冊組件中可建立的類別。|
 |**/verbose**|指定詳細資訊模式，與 **/tlb** 選項一起指定時，顯示需要產生型別程式庫之任何參考組件的清單。|
 |**/?** 或 **/help**|顯示工具的命令語法和選項。|
 
 > [!NOTE]
-> Regasm.exe 命令列選項不區分大小寫。 您只需要提供足夠的選項資訊，就可唯一識別該選項。 例如， **/n** 相當於 **/nologo**，且 **/t:** *outfile.tlb* 相當於 **/tlb:** *outfile.tlb*。
+> Regasm.exe 命令列選項不區分大小寫。 您只需要提供足夠的選項資訊，就可唯一識別該選項。 例如，**/n** 相當於 **/nologo**，且 **/t:** *outfile.tlb* 相當於 **/tlb:** *outfile.tlb*。
 
 ## <a name="remarks"></a>備註
 
-您可以使用 **/regfile** 選項產生包含登錄項目的 .reg 檔，而不是直接變更登錄。 您可以使用登錄編輯程式工具 (Regedit.exe) 匯入 .reg 檔，藉此更新電腦上的登錄。 請注意，.reg 檔並不包含任何可以藉由使用者定義的註冊功能處理的登錄更新。  請注意， **/regfile** 選項只會發出 Managed 類別的登錄項目。  這個選項不會發出 `TypeLibID` 或 `InterfaceID` 的項目。
+您可以使用 **/regfile** 選項產生包含登錄項目的 .reg 檔，而不是直接變更登錄。 您可以使用登錄編輯程式工具 (Regedit.exe) 匯入 .reg 檔，藉此更新電腦上的登錄。 請注意，.reg 檔並不包含任何可以藉由使用者定義的註冊功能處理的登錄更新。  請注意，**/regfile** 選項只會發出 Managed 類別的登錄項目。  這個選項不會發出 `TypeLibID` 或 `InterfaceID` 的項目。
 
 當您指定 **/tlb** 選項時，Regasm.exe 會產生及註冊型別程式庫，描述組件中找到的類型。 Regasm.exe 會將產生的類型程式庫放入目前的工作目錄中，或是為輸出檔指定的目錄中。 為參考其他組件的組件產生類型程式庫可能導致一次產生多個類型程式庫。 您可以使用型別程式庫提供型別資訊給 Visual Studio 這類開發工具。 如果您要註冊的組件是由型別程式庫匯入工具 ([Tlbimp.exe](tlbimp-exe-type-library-importer.md)) 所產生，則不應該使用 **/tlb** 選項。 您無法從原本自類型程式庫匯入的組件匯出類型程式庫。 使用 **/tlb** 選項與使用類型程式庫匯出工具 ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) 和 Regasm.exe 的效果相同，但是有一點除外，就是 Tlbexp.exe 不會註冊本身所產生的類型資料庫。  如果您使用 **/tlb** 選項註冊型別程式庫，就可以使用 **/tlb** 選項搭配 **/unregister** 選項將型別程式庫的註冊移除。 這兩個選項一起使用時，將會移除類型程式庫和介面項目的註冊，因而大幅清除登錄。
 
@@ -84,7 +82,7 @@ regasm myTest.dll /regfile:myTest.reg
 regasm myTest.dll /tlb:myTest.tlb
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [工具](index.md)
 - [Tlbexp.exe (類型程式庫匯出工具)](tlbexp-exe-type-library-exporter.md)

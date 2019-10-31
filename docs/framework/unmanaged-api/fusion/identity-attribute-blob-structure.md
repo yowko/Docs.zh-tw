@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58ee2764d2e2c4c4e21effa3e0c3551a2e145f40
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 212a9f46dd33f98abd31e7a78c7a830cb3386cb6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796499"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108002"
 ---
 # <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 結構
-包含元件中單一屬性的相關資訊，並由三個`DWORD`組成。 每`DWORD`個都是[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)介面的方法所`CurrentIntoBuffer`產生之字元緩衝區的位移  
+包含元件中單一屬性的相關資訊，並由三個 `DWORD`組成。 每個 `DWORD` 都是由[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)介面的 `CurrentIntoBuffer` 方法所產生之字元緩衝區的位移。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +36,7 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 }   IDENTITY_ATTRIBUTE_BLOB;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
@@ -47,15 +45,15 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 |`ofsValue`|字元緩衝區中的第三個位移。 這個位置會標示屬性值的開頭。|  
   
 ## <a name="sample"></a>範例  
- 下列範例說明數個基本步驟，最後會產生一個已填入`IDENTITY_ATTRIBUTE_BLOB`的結構：  
+ 下列範例說明數個基本步驟，最後會產生 `IDENTITY_ATTRIBUTE_BLOB` 結構的擴展：  
   
 1. 取得元件的[IReferenceIdentity](ireferenceidentity-interface.md) 。  
   
-2. 呼叫`IReferenceIdentity::EnumAttributes`方法，並取得 [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)。  
+2. 呼叫 `IReferenceIdentity::EnumAttributes` 方法，並取得[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)。  
   
-3. 建立字元緩衝區，並將它轉換成`IDENTITY_ATTRIBUTE_BLOB`結構。  
+3. 建立字元緩衝區，並將它轉換為 `IDENTITY_ATTRIBUTE_BLOB` 結構。  
   
-4. 呼叫介面`IEnumIDENTITY_ATTRIBUTE`的方法。 `CurrentIntoBuffer` 這個方法會將屬性`Namespace`、 `Name`和`Value`複製到字元緩衝區。 這些字串的三個位移會在`IDENTITY_ATTRIBUTE_BLOB`結構中變成可用。  
+4. 呼叫 `IEnumIDENTITY_ATTRIBUTE` 介面的 `CurrentIntoBuffer` 方法。 這個方法會將 `Namespace`、`Name`和 `Value` 的屬性複製到字元緩衝區中。 這些字串的三個位移會在 `IDENTITY_ATTRIBUTE_BLOB` 結構中變成可用。  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -242,7 +240,7 @@ Exit:
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IReferenceIdentity 介面](ireferenceidentity-interface.md)
 - [IEnumIDENTITY_ATTRIBUTE 介面](ienumidentity-attribute-interface.md)

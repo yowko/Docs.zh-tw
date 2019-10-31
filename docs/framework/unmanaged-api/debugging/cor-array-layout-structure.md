@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa20ac3d-6f60-4aa2-91c5-f3a86f82eba8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec9c4f3afb8f3b7e75e22874996d57d29ce8cf16
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: f37bf545553045b9737b7057feed78e1f06ace4d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274209"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099461"
 ---
 # <a name="cor_array_layout-structure"></a>COR_ARRAY_LAYOUT 結構
 提供記憶體中陣列物件配置的相關資訊。  
@@ -41,7 +39,7 @@ typedef struct COR_ARRAY_LAYOUT {
 } COR_ARRAY_LAYOUT;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
@@ -55,20 +53,20 @@ typedef struct COR_ARRAY_LAYOUT {
 |`rankOffset`|排名開始的位移。|  
   
 ## <a name="remarks"></a>備註  
- `rankSize`欄位會指定多維度陣列中的次序大小。 一維陣列也是正確的。  
+ [`rankSize`] 欄位會指定多維度陣列中的次序大小。 一維陣列也是正確的。  
   
- 針對一維`numRanks`陣列和`N` `N`維度的多維陣列，的值是1。  
+ 一維陣列的 `numRanks` 值是1，而 `N` 維度的多維陣列則 `N`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯結構](debugging-structures.md)
 - [偵錯](index.md)

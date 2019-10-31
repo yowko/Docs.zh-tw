@@ -5,14 +5,12 @@ ms.date: 04/18/2019
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c9f7a0bc3a7a41a77db3c90c2f88fb5ddfd7bfa0
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e2b039ba9f8183de481db09c028f8c3672f43c36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971081"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085349"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和相依性
 每一版 .NET Framework 都包含通用語言執行平台 (CLR)、基底類別庫及其他 Managed 程式庫。 本主題將說明各版 .NET Framework 的主要功能、提供有關基礎 CLR 版本和相關聯開發環境的資訊，以及識別 Windows 作業系統所安裝的版本。  
@@ -30,7 +28,7 @@ ms.locfileid: "70971081"
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
  
-|.NET Framework 版本|CLR 版本|包含在<br /> Visual Studio<br/>版本|✓ 隨附於<br />+ 可安裝於<br />Windows|✓ 隨附於<br />+ 可安裝於<br />Windows Server|判斷已安裝的 .NET 版本|  
+|.NET Framework 版本|CLR 版本|包含在<br /> Visual Studio<br/>version|✓ 隨附於<br />+ 可安裝於<br />Windows|✓ 隨附於<br />+ 可安裝於<br />Windows Server|判斷已安裝的 .NET 版本|  
 |----------------------------|-----------------|--------------|---------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------| 
 |4.8<br/><br/>[新功能](../whats-new/index.md#whats-new-in-net-framework-48)<br/><br/>[協助工具的新功能](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-net-framework-48)<br /><br >[版本資訊](https://github.com/Microsoft/dotnet/tree/master/releases/net48/README.md)|4| | ✓ 10 2019 年 5 月更新<br/><br/> + 10 2018 年 10 月更新 (版本 1809) <br/> + 10 2018 年 4 月更新 (版本 1803) <br/> + 10 Fall Creators Update (版本 1709) <br/> + 10 Creators Update (版本 1703) <br/> + 10 Anniversary Update (版本 1607) <br/> + 8.1 <br/> +7 | + Windows Server 2019<br/> + Windows Server，版本 1809 <br/> + Windows Server，版本 1803 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 528040 (Windows 10 2019 年 5 月更新) <br/> - 528049 (所有其他作業系統版本) <br/><br/> (請參閱[相關指示](how-to-determine-which-versions-are-installed.md))|
 |4.7.2<br/><br/>[新功能](../whats-new/index.md#whats-new-in-net-framework-472)<br/><br/>[協助工具的新功能](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-net-framework-472)<br /><br >[版本資訊](https://github.com/Microsoft/dotnet/tree/master/releases/net472/README.md)|4| | ✓ 10 2018 年 10 月更新 (版本 1809) <br/> ✓ 10 2018 年 4 月更新 (版本 1803) <br/><br/> + 10 Fall Creators Update (版本 1709) <br/> + 10 Creators Update (版本 1703) <br/> + 10 Anniversary Update (版本 1607) <br/> + 8.1 <br/> +7 | ✓ Windows Server 2019<br/> ✓ Windows Server，版本 1809 <br/> ✓ Windows Server，版本 1803 <br/><br/> + Windows Server，版本 1709 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 461814 (Windows 10 2018 年 10 月更新) <br/> - 461808 (Windows 10 2018 年 4 月更新及 Windows Server，版本 1803) <br/> - 461814 (所有其他作業系統版本) <br/><br/> (請參閱[相關指示](how-to-determine-which-versions-are-installed.md))|
@@ -49,7 +47,7 @@ ms.locfileid: "70971081"
 |1.1<br/><br/>[新功能](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/9wtde3k4\(v%3dvs.71\))|1.1|2003|-|✓ 2003|請參閱[相關指示](how-to-determine-which-versions-are-installed.md)|  
 |1.0|1.0|Visual Studio .NET|-|-|請參閱[相關指示](how-to-determine-which-versions-are-installed.md)|  
 
-**注意事項**
+**備註**
 
 <sup>\*</sup>&nbsp;&nbsp;必須在此作業系統上透過[控制台 (適用於 Windows) 或伺服器管理員 (適用於 Windows Server)](../install/dotnet-35-windows-10.md#enable-the-net-framework-35-in-control-panel) 來啟用 .NET Framework。
 
@@ -80,9 +78,9 @@ ms.locfileid: "70971081"
   
 - 如需將應用程式從 .NET Framework 4 移轉至 .NET Framework 4.5 及其點發行版本的資訊，請參閱[移轉手冊](index.md)。  
   
-- 如需判斷電腦上已安裝哪些版本或更新的資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)和[如何：判斷安裝的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)。  
+- 如需判斷電腦上已安裝哪些版本或更新的資訊，請參閱 [如何：判斷安裝的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)和[如何：判斷安裝的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [版本相容性](version-compatibility.md)
 - [Microsoft .NET Framework 支援週期原則](https://go.microsoft.com/fwlink/?LinkId=196607)

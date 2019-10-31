@@ -1,15 +1,13 @@
 ---
 title: ref 傳回值和 ref 區域變數 (C# 手冊)
 description: 了解如何定義和使用 ref 傳回值和 ref 區域變數值
-author: rpetrusha
-ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: e23007deffea0f542d623be918cd1c61496d1362
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 99e0f9d995cf3bf5c0486415b6f2d578147d3c7f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353880"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114481"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 傳回值和 ref 區域變數
 
@@ -121,7 +119,7 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 如果搜尋數目較接近陣列結尾，則這個第二個版本對較長的序列更具效率。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ref 關鍵字](../../language-reference/keywords/ref.md)
 - [撰寫安全、有效率的程式碼](../../write-safe-efficient-code.md)

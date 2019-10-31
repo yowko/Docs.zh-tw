@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a0ad4b7e907412aced911d7869ffce81eb867448
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6b4303163140c9c5553d02855c64dd2a3f5b134
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738515"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112742"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual 方法
 將資料從指定的緩衝區寫入指定的虛擬記憶體位址。  
@@ -41,26 +39,26 @@ HRESULT WriteVirtual (
   
 ## <a name="parameters"></a>參數  
  `address`  
- [in]CLRDATA_ADDRESS 儲存的虛擬記憶體位址。  
+ 在儲存虛擬記憶體位址的 CLRDATA_ADDRESS。  
   
  `buffer`  
- [in]將資料寫入緩衝區的指標。  
+ 在儲存要寫入之資料的緩衝區指標。  
   
  `bytesRequested`  
- [in]要寫入的位元組數目。  
+ 在要寫入的位元組數目。  
   
  `bytesWritten`  
- [out]實際寫入的位元組數目指標。  
+ 脫銷寫入的實際位元組數的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** ClrData.idl, ClrData.h  
+ **標頭：** ClrData .idl，ClrData。h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

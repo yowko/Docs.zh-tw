@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0774f70-5bed-45e8-9922-fdad778c4c33
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 39bc1316bb7d8e2aba3390499437aadf263dac07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 739b491d343c0eba76160c15719069ffae385f46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739855"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097967"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a>CorDebugJITCompilerFlags 列舉
 包含會影響 Managed Just-In-Time (JIT) 編譯器行為的值。  
@@ -38,23 +36,23 @@ typedef enum CorDebugJITCompilerFlags {
 } CorDebugJITCompilerFlags;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`CORDEBUG_JIT_DEFAULT`|指定編譯器應追蹤編譯資料，並可讓最佳化。|  
-|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|指定編譯器應追蹤編譯資料，但是會停用最佳化。|  
-|`CORDEBUG_JIT_ENABLE_ENC`|指定編譯器應追蹤編譯資料，會停用最佳化，以及啟用編輯後繼續的技術。|  
+|`CORDEBUG_JIT_DEFAULT`|指定編譯器應該追蹤編譯資料，並允許優化。|  
+|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|指定編譯器應該追蹤編譯資料，但停用優化。|  
+|`CORDEBUG_JIT_ENABLE_ENC`|指定編譯器應該追蹤編譯資料、停用優化，並啟用編輯後繼續技術。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

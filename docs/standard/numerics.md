@@ -11,14 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7f180e459764d6e8e4484072218f01c8bab8a3b5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
+ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50191144"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091595"
 ---
 # <a name="numerics-in-net"></a>.NET 中的數值
 
@@ -28,7 +26,7 @@ ms.locfileid: "50191144"
 
 .NET 同時支援帶正負號和不帶正負號的 8、16、32 及 64 位元整數類型，其已列於下表之中：
   
-|類型|帶正負號/不帶正負號|大小 (以位元組為單位)|最小值|最大值|  
+|輸入|帶正負號/不帶正負號|大小 (以位元組為單位)|最小值|最大值|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
 |<xref:System.Byte?displayProperty=nameWithType>|不帶正負號|1|0|255|  
 |<xref:System.Int16?displayProperty=nameWithType>|簽署人|2|-32,768|32,767|  
@@ -54,7 +52,7 @@ ms.locfileid: "50191144"
 
 .NET 包含三個基本浮點類型，如下表所列：
   
-|類型|大小 (以位元組為單位)|大概範圍|精確度|  
+|輸入|大小 (以位元組為單位)|大概範圍|精確度|  
 |----------|--------|---------------------|--------------------|  
 |<xref:System.Single?displayProperty=nameWithType>|4|±1.5 x 10<sup>−45</sup> 到 ±3.4 x 10<sup>38</sup>|~6-9 位數|  
 |<xref:System.Double?displayProperty=nameWithType>|8|±5.0 × 10<sup>−324</sup> 至 ±1.7 × 10<sup>308</sup>|~15-17 位數|  
@@ -95,7 +93,7 @@ ms.locfileid: "50191144"
   
 啟用 SIMD 的類型的實作方式，使它們可以搭配未啟用 SIMD 的硬體或 JIT 編譯器使用。 若要運用 SIMD 指令，您的 64 位元應用程式必須由使用 RyuJIT 編譯器的執行階段執行，此編譯器已包含在 .NET Core 和 .NET Framework 4.6 及更新版本中。 它會在以 64 位元處理器為目標時加入 SIMD 支援。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [應用程式基本概念](application-essentials.md)
-- [Standard Numeric Format Strings](base-types/standard-numeric-format-strings.md)
+- [標準數值格式字串](base-types/standard-numeric-format-strings.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 98b097ef-2276-4dd9-8551-b03c972e8179
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a886106e5da49e7124dac5c8ea7416859aa441da
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0b6ac83cdd0c88e87fdfd552c76c906a334f8928
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929849"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120294"
 ---
 # <a name="iclrruntimeinfogetversionstring-method"></a>ICLRRuntimeInfo::GetVersionString 方法
-取得與指定的[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面相關聯的 common language RUNTIME (CLR) 版本資訊。  
+取得與指定的[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面相關聯的 common language RUNTIME （CLR）版本資訊。  
   
- 這個方法會取代下列函數:  
+ 這個方法會取代下列函數：  
   
 - [GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
   
@@ -43,15 +41,15 @@ HRESULT GetVersionString(
   
 ## <a name="parameters"></a>參數  
  `pwzBuffer`  
- 脫銷.NET Framework 的編譯版本, 格式為 "v*A*。*B*[.*X*] "。 *A*、 *B*和*X*是對應至主要版本、次要版本和組建編號的十進位數。 *X*是選擇性的。 如果*X*不存在, 則沒有尾端句點。  
+ 脫銷.NET Framework 的編譯版本，格式為 "v*A*。*B*[。*X*] "。 *A*、 *B*和*X*是對應至主要版本、次要版本和組建編號的十進位數。 *X*是選擇性的。 如果*X*不存在，則沒有尾端句點。  
   
 > [!NOTE]
-> 這個參數必須符合 .NET Framework 版本的目錄名稱, 因為它出現在 C:\Windows\Microsoft.NET\Framework。  
+> 這個參數必須符合 .NET Framework 版本的目錄名稱，因為它出現在 C:\Windows\Microsoft.NET\Framework。  
   
- 範例值為 "v v1.0.3705"、"v 1.1.4322"、"v 2.0.50727" 和 "v4.0"。*x*", 其中*x*取決於安裝的組建編號。 請注意, "v" 前置詞是強制的。  
+ 範例值為 "v v1.0.3705"、"v 1.1.4322"、"v 2.0.50727" 和 "v4.0"。*x*"，其中*x*取決於安裝的組建編號。 請注意，"v" 前置詞是強制的。  
   
  `pchBuffer`  
- [in、out]指定的大小`pwzBuffer` , 以避免緩衝區溢位。 如果`pwzBuffer`為`null`, `pwzBuffer`則會傳回所需的大小以允許預先配置。 `pchBuffer`  
+ [in、out]指定 `pwzBuffer` 的大小，以避免緩衝區溢位。 如果 `pwzBuffer` 是 `null`，`pchBuffer` 會傳回所需的 `pwzBuffer` 大小以允許預先配置。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
@@ -64,13 +62,13 @@ HRESULT GetVersionString(
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MetaHost.h  
+ **標頭：** MetaHost。h  
   
- **LIBRARY:** 包含為 Mscoree.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRRuntimeInfo 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

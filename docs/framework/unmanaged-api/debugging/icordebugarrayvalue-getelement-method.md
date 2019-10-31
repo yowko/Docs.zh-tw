@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ac3cba5-c282-402e-b7ef-b46634f5176b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 356f7ec9c50ce511883cbf0f5fbcb729493c92af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3d45caae56403d77776f1a8adbb5fb9c368ff105
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737578"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088497"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement 方法
-取得指定之陣列元素的值。  
+取得給定陣列元素的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,23 +38,23 @@ HRESULT GetElement (
   
 ## <a name="parameters"></a>參數  
  `cdim`  
- [in]這個維度的數目`ICorDebugArrayValue`物件。  
+ 在這個 `ICorDebugArrayValue` 物件的維度數目。  
   
- 此值也是的大小`indices`因為其大小的維度數目等於陣列`ICorDebugArrayValue`物件。  
+ 這個值也是 `indices` 陣列的大小，因為它的大小等於 `ICorDebugArrayValue` 物件的維度數目。  
   
  `indices`  
- [in]陣列的索引值，其中每個指定的維度內的位置`ICorDebugArrayValue`物件。  
+ 在索引值的陣列，其中每一個都指定 `ICorDebugArrayValue` 物件之維度中的位置。  
   
- 此值不能為 null。  
+ 此值不得為 null。  
   
  `ppValue`  
- [out]ICorDebugValue 物件，表示指定的項目值的位址指標。  
+ 脫銷ICorDebugValue 物件位址的指標，表示指定元素的值。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

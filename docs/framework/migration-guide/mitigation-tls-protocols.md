@@ -5,17 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e98b447028ef9fa96233a71133aa82184d83cec8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2a2f95be92ec08185f627e862b0f62e40a1d764b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779163"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126131"
 ---
 # <a name="mitigation-tls-protocols"></a>風險降低：TLS 通訊協定
-從 .NET Framework 4.6 開始，<xref:System.Net.ServicePointManager?displayProperty=nameWithType> 和 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 類別可以使用下列三種通訊協定之一：Tls1.0、Tls1.1 或 Tls1.2。 不支援 SSL3.0 通訊協定與 RC4 編碼器。  
+從 .NET Framework 4.6 開始，<xref:System.Net.ServicePointManager?displayProperty=nameWithType> 和 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 類別可以使用 Tls1.0、Tls1.1 或 Tls 1.2 這三種通訊協定之一。 不支援 SSL3.0 通訊協定與 RC4 編碼器。  
   
 ## <a name="impact"></a>影響  
  這項變更會影響：  
@@ -24,7 +22,7 @@ ms.locfileid: "70779163"
   
 - 無法升級到支援 Tls1.0、Tls1.1 或 Tls 1.2 的任何伺服器端應用程式。  
   
-## <a name="mitigation"></a>緩和  
+## <a name="mitigation"></a>風險降低  
  建議的緩和措施是將伺服器端應用程式升級至 Tls1.0、Tls1.1 或 Tls 1.2。 如果這並不可行，或是用戶端應用程式已中斷，則可使用 <xref:System.AppContext> 類別搭配下列兩種方式之一，停用這項功能：  
   
 - 以程式設計方式，利用如下所示的程式碼片段：  
@@ -42,6 +40,6 @@ ms.locfileid: "70779163"
   
  但是請注意，我們並不建議您停用這項預設行為，因為這樣會讓應用程式較不安全。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [重定目標變更](retargeting-changes-in-the-net-framework-4-6.md)

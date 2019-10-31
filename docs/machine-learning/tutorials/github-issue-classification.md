@@ -1,15 +1,15 @@
 ---
 title: 教學課程：分類支援問題-多元分類
 description: 了解如何在多類別分類案例中使用 ML.NET 來分類 GitHub 問題，以將它們指派至特定區域。
-ms.date: 09/30/2019
+ms.date: 10/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 7507463cfc5504182f028ab2ced9a03733c61f6d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1cd213653c23c4d713e03d53394885f1f3ebb6f5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774491"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094596"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>教學課程：使用多元分類搭配 ML .NET 來分類支援問題
 
@@ -272,13 +272,13 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 
 針對多類別分類評估的計量如下：
 
-* 微精確度 - 每個範例類別組同樣都會對精確度計量提出貢獻。  建議讓微精確度盡量接近 1。
+* 微精確度 - 每個範例類別組同樣都會對精確度計量提出貢獻。  您希望微精確度盡可能接近一。
 
-* 大精確度 - 每個類別同樣都會對精確度計量提出貢獻。 少數類別會加上與較大類別相同的權重。 建議讓大精確度盡量接近 1。
+* 大精確度 - 每個類別同樣都會對精確度計量提出貢獻。 少數類別會加上與較大類別相同的權重。 您想要讓宏精確度盡可能接近一個。
 
 * 記錄檔遺失 - 請參閱[記錄檔遺失](../resources/glossary.md#log-loss)。 建議讓記錄檔遺失盡量接近零。
 
-* 記錄檔遺失減少 - 範圍介於 [-inf, 100]，其中 100 表示完美的預測，而 0 表示平均預測。 建議讓記錄檔遺失減少盡量接近零。
+* 記錄檔遺失減少-範圍從 [-inf，1.00]，其中1.00 是完美的預測，而0則表示平均值的預測。 您想要儘量減少記錄檔遺失，使其盡可能接近一。
 
 ### <a name="displaying-the-metrics-for-model-validation"></a>顯示模型驗證的計量
 

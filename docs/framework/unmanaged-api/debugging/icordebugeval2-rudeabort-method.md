@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02468edf-d32b-4cb3-aaa8-3dd2abfc8b25
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4a1adb79e5081fc909d0cd180d8161eccea7e58e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a486935d5d53a6fc7d862160ed1186c5774814c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754347"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084789"
 ---
 # <a name="icordebugeval2rudeabort-method"></a>ICorDebugEval2::RudeAbort 方法
-中止計算這個`ICorDebugEval2`目前正在執行。  
+中止此 `ICorDebugEval2` 目前正在執行的計算。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,13 +32,13 @@ HRESULT RudeAbort ();
 ```  
   
 ## <a name="remarks"></a>備註  
- `RudeAbort` 不會釋放評估工具會保留任何鎖定，因此在不安全的狀態不會留下偵錯工作階段。 呼叫這個方法時應謹慎小心。  
+ `RudeAbort` 不會釋放評估工具所持有的任何鎖定，因此它會讓偵錯工具保持不安全的狀態。 請特別小心呼叫此方法。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

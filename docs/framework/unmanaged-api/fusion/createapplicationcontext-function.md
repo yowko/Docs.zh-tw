@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bf8a141-b2c0-4058-9885-1cef7dcaa811
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 25364330dafdf858c4b41e9a05731c37e97fbb57
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e188fe80e770481aac02244a2c105639e4da19e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795440"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108898"
 ---
 # <a name="createapplicationcontext-function"></a>CreateApplicationContext 函式
 此函式支援 .NET Framework 的基礎結構，但不適合直接從您的程式碼使用。  
@@ -47,11 +45,11 @@ HRESULT CreateApplicationContext (
   
  **標頭：** 融合。h  
   
- **LIBRARY:** 納入為融合 .dll 中的資源  
+ 連結**庫：** 納入為融合 .dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IAssemblyCache 介面](iassemblycache-interface.md)
 - [融合全域靜態函式](fusion-global-static-functions.md)

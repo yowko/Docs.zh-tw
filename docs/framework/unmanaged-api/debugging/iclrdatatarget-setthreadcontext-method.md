@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 103c8502-81fe-40d7-9c1e-9008d8fb19e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: edd70dd4cfc2e26b30ee0deec79b7d126d1f76a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cceafc8358ce2b0eafa62a3855c4eb1e96adae11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738583"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113306"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>ICLRDataTarget::SetThreadContext 方法
-目標處理序中設定指定之執行緒的目前內容。 這個方法是由通用語言執行平台 (CLR) 資料存取服務呼叫。  
+設定目標進程中指定之執行緒的目前內容。 這個方法是由 common language runtime （CLR）資料存取服務呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,15 +38,15 @@ HRESULT SetThreadContext (
   
 ## <a name="parameters"></a>參數  
  `threadID`  
- [in]目標處理序中的執行緒作業系統識別項。  
+ 在目標進程中線程的作業系統識別碼。  
   
  `contextSize`  
- [in]內容的大小。  
+ 在內容的大小。  
   
  `context`  
- [in]包含內容之緩衝區的指標。  
+ 在包含內容之緩衝區的指標。  
   
- 中的資料`context`緩衝區會在 Win32 格式`CONTEXT`結構。 這個內容會指定特定處理器的暫存器資料，因此 Win32 定義`CONTEXT`結構取決於處理器架構。 請參閱 WinNT.h 標頭檔來定義的 Win32`CONTEXT`結構。  
+ `context` 緩衝區中的資料將會採用 Win32 `CONTEXT` 結構的格式。 內容會指定處理器特定的暫存器資料，因此 Win32 `CONTEXT` 結構的定義取決於處理器的架構。 如需 Win32 `CONTEXT` 結構的定義，請參閱 WinNT 標頭檔。  
   
 ## <a name="remarks"></a>備註  
  此方法是由偵錯應用程式的作者來實作。  
@@ -56,12 +54,12 @@ HRESULT SetThreadContext (
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** ClrData.idl, ClrData.h  
+ **標頭：** ClrData .idl，ClrData。h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

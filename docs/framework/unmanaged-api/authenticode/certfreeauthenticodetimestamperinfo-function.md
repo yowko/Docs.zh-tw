@@ -8,14 +8,12 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: 3eb14c49-68c2-4516-ac89-e5bd7473831c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a8ecada29528b065ddad0abc80a850ee0f347f6b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f0806e0273b111e3398fb8f2884231b96cf1116
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787000"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099776"
 ---
 # <a name="certfreeauthenticodetimestamperinfo-function"></a>CertFreeAuthenticodeTimestamperInfo 函式
 釋放配置給[AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md)結構的資源。  
@@ -35,6 +33,6 @@ HRESULT CertFreeAuthenticodeTimestamperInfo (
 ## <a name="return-value"></a>傳回值  
  如果函式成功，會傳回 `S_OK`。 否則會傳回錯誤碼。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Authenticode](index.md)

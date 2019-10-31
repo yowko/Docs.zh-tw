@@ -6,19 +6,17 @@ helpviewer_keywords:
 - fusion global static functions [.NET Framework]
 - global static functions [.NET Framework fusion]
 ms.assetid: 229b2188-9168-4b44-a987-e1f515494688
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6a8f15bc862c0486311960f7567c49424859846e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ff94ed23f3e39888b4f7e255feece99898f8aa74
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795323"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108274"
 ---
 # <a name="fusion-global-static-functions"></a>融合全域靜態函式
 本節說明融合 API 所使用的非受控全域靜態函式。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [ClearDownloadCache 函式](cleardownloadcache-function.md)  
  清除已下載元件的全域組件快取。  
   
@@ -47,7 +45,7 @@ ms.locfileid: "70795323"
  取得[IAppIdAuthority](iappidauthority-interface.md)實例的指標，它會管理應用程式識別和參考的索引鍵。  
   
  [GetAssemblyIdentityFromFile 函式](getassemblyidentityfromfile-function.md)  
- 取得具有指定之元件`IUnknown` `IID`中指定檔案路徑之物件的指標。  
+ 取得位於指定檔案路徑之元件中具有指定 `IID` 之 `IUnknown` 物件的指標。  
   
  [GetCachePath 函式](getcachepath-function.md)  
  使用指定的旗標，取得快取元件的路徑。  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a6db1990df2ed6b29d548c147ed40b5bc98254d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d9430c5a1f37a0507b383ea5437f7d7fed706c43
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745685"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123856"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange 方法
-取得這個鏈結的堆疊區段的位址範圍。  
+取得此鏈之堆疊區段的位址範圍。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,19 +36,19 @@ HRESULT GetStackRange (
   
 ## <a name="parameters"></a>參數  
  `pStart`  
- [out]指標`CORDB_ADDRESS`是堆疊區段的起始位址的值。  
+ 脫銷`CORDB_ADDRESS` 值的指標，這是堆疊區段的起始位址。  
   
  `pEnd`  
- [out]指標`CORDB_ADDRESS`是堆疊區段的結束位址的值。  
+ 脫銷指向堆疊區段結尾位址 `CORDB_ADDRESS` 值的指標。  
   
 ## <a name="remarks"></a>備註  
- 數值範圍是僅對比較的堆疊框架位置有意義的。 您不能做出任何假設項目實際上儲存在堆疊上。  
+ 只有在比較堆疊框架位置時，數值範圍才有意義。 您無法針對實際儲存在堆疊上的內容進行任何假設。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

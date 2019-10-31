@@ -5,21 +5,19 @@ helpviewer_keywords:
 - appDomainResourceMonitoring element
 - <appDomainResourceMonitoring> element
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1395ee64d94e33693344b678c7a949665f994079
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 991833500cae4d96e9c28f7e94ca366e9b976a9d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252828"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118246"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > 元素
 針對處理序存留期間，指示執行階段收集處理序中所有應用程式網域的統計資料。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainResourceMonitoring>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainResourceMonitoring >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +42,7 @@ ms.locfileid: "70252828"
 |`true`|系統會收集應用程式域資源監視的統計資料。|  
 |`false`|不會收集應用程式域資源監視的統計資料。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -55,9 +53,9 @@ ms.locfileid: "70252828"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 應用程式域資源監視可透過受控應用程式域類別、裝載[ICLRAppDomainResourceMonitor](../../../unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)介面和 Windows 事件追蹤 (ETW) 來取得。 啟用監視時, 會針對進程中的所有應用程式域收集統計資料。  
+ 應用程式域資源監視可透過受控應用程式域類別、裝載[ICLRAppDomainResourceMonitor](../../../unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)介面和 Windows 事件追蹤（ETW）來取得。 啟用監視時，會針對進程中的所有應用程式域收集統計資料。  
   
- 若要從 managed 程式碼啟用監視, <xref:System.AppDomain.MonitoringIsEnabled%2A>請使用屬性。  
+ 若要從 managed 程式碼啟用監視，請使用 <xref:System.AppDomain.MonitoringIsEnabled%2A> 屬性。  
   
  此 configuration 元素僅適用于 .NET Framework 4 和更新版本。  
   
@@ -72,7 +70,7 @@ ms.locfileid: "70252828"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
 - [執行階段設定結構描述](index.md)

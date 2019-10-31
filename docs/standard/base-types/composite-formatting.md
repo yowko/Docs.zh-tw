@@ -13,21 +13,19 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8d0574c7e0910a658f1dc80d8394f55b472c31a3
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
-ms.translationtype: HT
+ms.openlocfilehash: 12666ca5ad8f223f2fba4a63a7cc7525601367a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "64634561"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091563"
 ---
 # <a name="composite-formatting"></a>複合格式
 
 .NET 複合格式功能會採用物件清單和複合格式字串作為輸入。 複合格式字串是由混合索引替代符號 (Placeholder) 的固定文字所組成 (這些符號稱為對應至清單內物件的格式項目)。 格式作業產生的結果字串是由原始固定文字所組成，這些固定文字混合了清單中代表物件的字串。  
   
 > [!IMPORTANT]
-> 如果您使用的語言和語言版本支援，您可以使用「內插字串」  ，而不使用複合格式字串。 內插字串是包含「插入運算式」  的字串。 每個插值的運算式會以運算式的值解析，且在字串指派時，包含在結果字串中。 如需詳細資訊，請參閱[字串內插補點 (C# 參考)](../../csharp/language-reference/tokens/interpolated.md) 和[字串內插補點 (Visual Basic 參考)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)。
+> 如果您使用的語言和語言版本支援，您可以使用「內插字串」，而不使用複合格式字串。 內插字串是包含「插入運算式」的字串。 每個插值的運算式會以運算式的值解析，且在字串指派時，包含在結果字串中。 如需詳細資訊，請參閱[字串內插補點 (C# 參考)](../../csharp/language-reference/tokens/interpolated.md) 和[字串內插補點 (Visual Basic 參考)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)。
 
 下列方法支援複合格式功能：  
   
@@ -67,7 +65,7 @@ ms.locfileid: "64634561"
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- 多個格式項目可以藉由指定相同參數規範來參考物件清單中的相同項目。 例如，您可以格式化十六進位、科學記號和數字格式的相同數值，方法是指定複合格式字串 (例如："0x{0:X} {0:E} {0:N}")，如下列範例所示。  
+ 多個格式項目可以藉由指定相同參數規範來參考物件清單中的相同項目。 例如，您可以指定複合格式字串 (例如："0x{0:X} {0:E} {0:N}") 來將同一個數值設定成十六進位、科學記號和數字格式，如下列範例所示。  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
@@ -91,7 +89,7 @@ ms.locfileid: "64634561"
 |---------------------------|---------|  
 |日期和時間類型 (<xref:System.DateTime>、<xref:System.DateTimeOffset>)|[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
 |列舉類型 (衍生自 <xref:System.Enum?displayProperty=nameWithType> 的所有類型)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|數字類型 (<xref:System.Numerics.BigInteger>、<xref:System.Byte>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|數字類型 (<xref:System.Numerics.BigInteger>、<xref:System.Byte>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>)|[標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
@@ -159,7 +157,7 @@ ms.locfileid: "64634561"
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Console.WriteLine%2A>
 - <xref:System.String.Format%2A?displayProperty=nameWithType>

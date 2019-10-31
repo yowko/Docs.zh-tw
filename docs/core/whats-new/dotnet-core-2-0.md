@@ -1,15 +1,13 @@
 ---
 title: .NET Core 2.0 的新功能
 description: 了解 .NET Core 所提供的新功能。
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: c208f565bebedc06e244de1f6554129f21c77b8c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: fcac4255e7370f31ea6c26771fdd7d341bafe38b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849943"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100846"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 的新功能
 
@@ -112,7 +110,7 @@ ms.locfileid: "70849943"
 
 .NET Standard 2.0 類別庫也可以參考 .NET Framework 類別庫，前提是這些類別庫必須呼叫存在於 .NET Standard 2.0 中的 API。 不需要對 .NET Framework 程式庫進行任何重新編譯。
 
-如需於 .NET Standard 1.6 之後新增至 .NET Standard 的 API 清單，請參閱 [.NET Standard 2.0 與1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md) \(英文\)。
+如需自上次版本後已新增至 .NET Standard 的 Api 清單，.NET Standard 1.6，請參閱[.NET Standard 2.0 與 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md)。
 
 ### <a name="expanded-surface-area"></a>擴展的介面區
 
@@ -161,6 +159,6 @@ Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能
 - [使用 Xamarin 的行動應用程式](/xamarin/xamarin-forms/enterprise-application-patterns/index)
 - [使用 Azure 部署至雲端的應用程式](/azure/architecture/reference-architectures/index)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ASP.NET Core 2.0 的新功能](/aspnet/core/aspnetcore-2.0)

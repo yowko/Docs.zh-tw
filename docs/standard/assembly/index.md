@@ -12,14 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5fb809b564df17d6320b7ffce3d757fa0fee7639
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 7ac9ea194095832f6c3825ce414350bca89c26fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583015"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107235"
 ---
 # <a name="assemblies-in-net"></a>.NET 中的組件
 
@@ -65,47 +63,47 @@ ms.locfileid: "72583015"
 
 您可以使用幾種方式建立組件。 您可以使用可建立 *.dll*或 *.exe*檔案的開發工具（例如 Visual Studio）。 您可以使用 Windows SDK 中的工具，利用其他開發環境中的模組來建立元件。 您也可以使用 Common Language Runtime API (例如 <xref:System.Reflection.Emit?displayProperty=nameWithType>) 來建立動態組件。 
 
-藉由使用 .NET Core 命令列介面工具建立元件，或使用命令列編譯器建立 .NET Framework 元件，藉 Visual Studio 以編譯元件。 如需使用 .NET Core 命令列介面工具來建立元件的詳細資訊，請參閱[.Net core 命令列介面工具](../../core/tools/index.md)。 如需使用命令列編譯器來建立元件，請參閱的[命令列組建，其](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)適用于C#的 csc，或[從命令列建立](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)以進行 Visual Basic。
+藉由使用 .NET Core 命令列介面工具建立元件，或使用命令列編譯器建立 .NET Framework 元件，藉 Visual Studio 以編譯元件。 如需使用 .NET Core 命令列介面工具來建立元件的詳細資訊，請參閱[.Net core 命令列介面工具](../../core/tools/index.md)。 For building assemblies with the command-line compilers, see [Command-line build with csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) for C#, or [Build from the command line](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) for Visual Basic.
 
 > [!NOTE]
-> 若要在 Visual Studio 中建立元件，請在 [**建立**] 功能表上，選取 [**建立**]。
+> To build an assembly in Visual Studio, on the **Build** menu, select **Build**.
 
 ## <a name="assembly-manifest"></a>資訊清單
 
-每個元件都有一個*組件資訊清單*檔。 類似于目錄，組件資訊清單包含：
+Every assembly has an *assembly manifest* file. Similar to a table of contents, the assembly manifest contains:
 
 - 組件的身分識別 (其名稱和版本)。
 
-- 一個檔案表格，描述組成元件的所有其他檔案，例如您所建立的其他元件，亦即您的 *.exe*或 *.dll*檔案依賴、點陣圖檔案或讀我檔案。
+- A file table describing all the other files that make up the assembly, such as other assemblies you created that your *.exe* or *.dll* file relies on, bitmap files, or Readme files.
 
-- *元件參考清單*，這是所有外部相依性的清單，例如 *.dll*s 或其他檔案。 組件參考同時包含全域和私用物件的參考。 所有其他應用程式皆可使用全域物件。 在 .NET Core 中，全域物件會與特定的 .NET Core 執行時間結合。 在 .NET Framework 中，全域物件位於全域組件快取（GAC）中。 *System.web*是 GAC 中元件的範例。 私用物件必須在您應用程式安裝所在目錄的目錄層級中。
+- An *assembly reference list*, which is a list of all external dependencies, such as *.dll*s or other files. 組件參考同時包含全域和私用物件的參考。 所有其他應用程式皆可使用全域物件。 In .NET Core, global objects are coupled with a particular .NET Core runtime. In .NET Framework, global objects reside in the global assembly cache (GAC). *System.IO.dll* is an example of an assembly in the GAC. Private objects must be in a directory level at or below the directory in which your app is installed.
 
-因為元件包含內容、版本設定及相依性的相關資訊，所以使用它們的應用程式不需要依賴外部來源（例如 Windows 系統上的登錄），就能正常運作。 元件可減少 *.dll 的*衝突，讓您的應用程式更可靠且更容易部署。 在許多情況下，您只要將 .NET 型應用程式的檔案複製到目標電腦，即完成安裝。 如需詳細資訊，請參閱[組件資訊清單](manifest.md)。
+Because assemblies contain information about content, versioning, and dependencies, the applications that use them needn't rely on external sources, such as the registry on Windows systems, to function properly. Assemblies reduce *.dll* conflicts and make your applications more reliable and easier to deploy. 在許多情況下，您只要將 .NET 型應用程式的檔案複製到目標電腦，即完成安裝。 For more information, see [Assembly manifest](manifest.md).
 
-## <a name="add-a-reference-to-an-assembly"></a>加入元件的參考
+## <a name="add-a-reference-to-an-assembly"></a>Add a reference to an assembly
 
-若要在應用程式中使用元件，您必須加入它的參考。 參考元件之後，所有可存取的類型、屬性、方法和其命名空間的其他成員，都可供您的應用程式使用，就像其程式碼屬於您的來源檔案。
+To use an assembly in an application, you must add a reference to it. Once an assembly is referenced, all the accessible types, properties, methods, and other members of its namespaces are available to your application as if their code were part of your source file.
 
 > [!NOTE]
-> 系統會自動參考 .NET 類別庫中的大多數組件。 如果未自動參考系統元件，則針對 .NET Core，您可以加入包含元件之 NuGet 套件的參考。 在 Visual Studio 中使用 NuGet 套件管理員，或將元件的[\<PackageReference >](../../core/tools/dependencies.md#the-new-packagereference-element)專案新增至 *.csproj*或 *. vbproj*專案。 在 .NET Framework 中，您可以使用 Visual Studio 中的 [**加入參考**] 對話方塊，或使用[C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md)或[Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)編譯器的 `-reference` 命令列選項，加入元件的參考。
+> 系統會自動參考 .NET 類別庫中的大多數組件。 If a system assembly isn't automatically referenced, for .NET Core, you can add a reference to the NuGet package that contains the assembly. Either use the NuGet Package Manager in Visual Studio, or add a [\<PackageReference>](../../core/tools/dependencies.md#the-new-packagereference-element) element for the assembly to the *.csproj* or *.vbproj* project. In .NET Framework, you can add a reference to the assembly by using the **Add Reference** dialog in Visual Studio, or by using the `-reference` command line option for the [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) or [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) compilers.
 
-在C#中，您可以在單一應用程式中使用相同元件的兩個版本。 如需詳細資訊，請參閱[外部別名](../../csharp/language-reference/keywords/extern-alias.md)。
+In C#, you can use two versions of the same assembly in a single application. 如需詳細資訊，請參閱[外部別名](../../csharp/language-reference/keywords/extern-alias.md)。
 
 ## <a name="related-content"></a>相關內容
   
 |標題|描述|  
 |-----------|-----------------|  
-|[元件內容](contents.md)|組成元件的元素。|  
-|[組件資訊清單](manifest.md)|組件資訊清單中的資料，以及它如何儲存在元件中。|  
-|[全域組件快取](../../framework/app-domains/gac.md)|GAC 儲存和使用元件的方式。|  
-|[強式名稱的組件](strong-named.md)|強式名稱元件的特性。|  
-|[元件安全性考慮](security-considerations.md)|元件的安全性運作方式。|  
-|[元件版本控制](versioning.md)|.NET Framework 版本控制原則的總覽。|  
-|[元件位置](../../framework/app-domains/assembly-placement.md)|哪裡可以找到元件。|  
-|[元件和並存執行](side-by-side-execution.md)|同時使用多個版本的執行時間或元件。|  
-|[具有元件的程式](program.md)|如何建立、簽署和設定元件上的屬性。|  
-|[發出動態方法和元件](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|如何建立動態元件。|  
-|[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|.NET Framework 如何在執行時間解析元件參考。|  
+|[Assembly contents](contents.md)|Elements that make up an assembly.|  
+|[Assembly manifest](manifest.md)|Data in the assembly manifest, and how it is stored in assemblies.|  
+|[Global assembly cache](../../framework/app-domains/gac.md)|How the GAC stores and uses assemblies.|  
+|[強式名稱的組件](strong-named.md)|Characteristics of strong-named assemblies.|  
+|[Assembly security considerations](security-considerations.md)|How security works with assemblies.|  
+|[Assembly versioning](versioning.md)|Overview of the .NET Framework versioning policy.|  
+|[Assembly placement](../../framework/app-domains/assembly-placement.md)|Where to locate assemblies.|  
+|[Assemblies and side-by-side execution](side-by-side-execution.md)|Use multiple versions of the runtime or an assembly simultaneously.|  
+|[Program with assemblies](program.md)|How to create, sign, and set attributes on assemblies.|  
+|[Emit dynamic methods and assemblies](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|How to create dynamic assemblies.|  
+|[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|How the .NET Framework resolves assembly references at run time.|  
 
 ## <a name="reference"></a>參考資料  
  <xref:System.Reflection.Assembly?displayProperty=nameWithType>
@@ -114,8 +112,8 @@ ms.locfileid: "72583015"
 
 - [.NET 組件檔格式](file-format.md)
 - [.NET 中的組件](index.md)
-- [Friend 元件](friend.md)
-- [參考元件](reference-assemblies.md)
-- [如何：載入和卸載元件](load-unload.md)
-- [如何：在 .NET Core 中使用和 debug 元件卸載功能](unloadability.md)
-- [如何：判斷檔案是否為元件](identify.md)
+- [Friend assemblies](friend.md)
+- [Reference assemblies](reference-assemblies.md)
+- [How to: Load and unload assemblies](load-unload.md)
+- [How to: Use and debug assembly unloadability in .NET Core](unloadability.md)
+- [How to: Determine if a file is an assembly](identify.md)

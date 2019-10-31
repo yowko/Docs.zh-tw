@@ -10,14 +10,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ad535e9b862cce93244524c6cd67f667abaaa0e
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: dc9b8beafe1b174543afaf9da7e7180638d561ff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919347"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104361"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (強式名稱工具)
 強式名稱工具 (Sn.exe) 可幫助您使用[強式名稱](../../standard/assembly/strong-named.md)簽署組件。 Sn.exe 提供了金鑰管理、簽章產生和簽章驗證的選項。  
@@ -62,8 +60,8 @@ sn [-quiet][option [parameter(s)]]
 |`-R[a] assembly infile`|以 *infile* 中的金鑰組重新簽署先前已簽署或延遲簽署的組件。<br /><br /> 如果使用了 **-Ra**，則會針對組件中的所有檔案重新計算雜湊。|  
 |`-Rc[a] assembly container`|以 *container* 中的金鑰組重新簽署先前已簽署或延遲簽署的組件。<br /><br /> 如果使用了 **-Rca**，則會針對組件中的所有檔案重新計算雜湊。|  
 |`-Rh assembly`|針對組件中的所有檔案重新計算雜湊。|  
-|`-t[p] infile`|顯示存放在 *infile* 中公開金鑰的語彙基元。 *infile* 的內容必須是先前使用 **-p** 從金鑰組檔案中產生的公開金鑰。  請不要使用 **-t[p]** 選項，直接從金鑰組檔案中擷取語彙基元。<br /><br /> Sn.exe 是使用公開金鑰中的雜湊函式來計算語彙基元。 為了節省空間，通用語言執行平台在將相依性記錄到具有強式名稱的組件時，會將公開金鑰語彙基元存放到資訊清單中，做為其他組件參考的一部分。 除了語彙基元之外， **-Tp** 選項還會顯示公開金鑰。 如果 <xref:System.Reflection.AssemblySignatureKeyAttribute> 屬性已套用至組件，則語彙基元代表識別金鑰，然後會顯示雜湊演算法和識別金鑰的名稱。<br /><br /> 請注意，此選項不會驗證組件簽章，且不應該用來進行信任決策。  此選項只會顯示未經處理的公開金鑰語彙基元資料。|  
-|`-T[p] assembly`|顯示 *assembly.* 的公開金鑰語彙基元。 *assembly* 必須是含有組件資訊清單的檔案名稱。<br /><br /> Sn.exe 是使用公開金鑰中的雜湊函式來計算語彙基元。 為了節省空間，執行階段在將相依性記錄到具有強式名稱的組件時，會將公開金鑰語彙基元存放到資訊清單中，做為其他組件參考的一部分。 除了語彙基元之外， **-Tp** 選項還會顯示公開金鑰。 如果 <xref:System.Reflection.AssemblySignatureKeyAttribute> 屬性已套用至組件，則語彙基元代表識別金鑰，然後會顯示雜湊演算法和識別金鑰的名稱。<br /><br /> 請注意，此選項不會驗證組件簽章，且不應該用來進行信任決策。  此選項只會顯示未經處理的公開金鑰語彙基元資料。|  
+|`-t[p] infile`|顯示存放在 *infile* 中公開金鑰的語彙基元。 *infile* 的內容必須是先前使用 **-p** 從金鑰組檔案中產生的公開金鑰。  請不要使用 **-t[p]** 選項，直接從金鑰組檔案中擷取語彙基元。<br /><br /> Sn.exe 是使用公開金鑰中的雜湊函式來計算語彙基元。 為了節省空間，通用語言執行平台在將相依性記錄到具有強式名稱的組件時，會將公開金鑰語彙基元存放到資訊清單中，做為其他組件參考的一部分。 除了語彙基元之外，**-Tp** 選項還會顯示公開金鑰。 如果 <xref:System.Reflection.AssemblySignatureKeyAttribute> 屬性已套用至組件，則語彙基元代表識別金鑰，然後會顯示雜湊演算法和識別金鑰的名稱。<br /><br /> 請注意，此選項不會驗證組件簽章，且不應該用來進行信任決策。  此選項只會顯示未經處理的公開金鑰語彙基元資料。|  
+|`-T[p] assembly`|顯示 *assembly.* 的公開金鑰語彙基元。 *assembly* 必須是含有組件資訊清單的檔案名稱。<br /><br /> Sn.exe 是使用公開金鑰中的雜湊函式來計算語彙基元。 為了節省空間，執行階段在將相依性記錄到具有強式名稱的組件時，會將公開金鑰語彙基元存放到資訊清單中，做為其他組件參考的一部分。 除了語彙基元之外，**-Tp** 選項還會顯示公開金鑰。 如果 <xref:System.Reflection.AssemblySignatureKeyAttribute> 屬性已套用至組件，則語彙基元代表識別金鑰，然後會顯示雜湊演算法和識別金鑰的名稱。<br /><br /> 請注意，此選項不會驗證組件簽章，且不應該用來進行信任決策。  此選項只會顯示未經處理的公開金鑰語彙基元資料。|  
 |`-TS assembly infile`|使用*infile*中的金鑰組，對已簽署或部分簽署的*元件*進行簽署測試。|  
 |`-TSc assembly container`|以金鑰容器*容器*中的金鑰組，對已簽署或部分簽署的*元件*進行測試簽署。| 
 |`-v assembly`|驗證 *assembly* 中的強式名稱，此處的 *assembly* 是含有組件資訊清單的檔案名稱。|  
@@ -83,7 +81,7 @@ sn [-quiet][option [parameter(s)]]
  **-R** 和 **–Rc** 選項搭配已延遲簽署的組件時非常實用。 在此情節中，在編譯時期只會設定公開金鑰，並且在稍後知道私密金鑰時才進行簽署。  
   
 > [!NOTE]
-> 若為寫入像是登錄這類受保護資源的參數 (例如，–**Vr)** ，請以系統管理員身分執行 SN.exe。  
+> 若為寫入像是登錄這類受保護資源的參數 (例如，–**Vr)**，請以系統管理員身分執行 SN.exe。  
   
 強式名稱工具假設會使用 `AT_SIGNATURE` 演算法識別碼來產生公開/私密金鑰組。 使用 `AT_KEYEXCHANGE` 演算法產生的公開/私密金鑰組會產生錯誤。 
 

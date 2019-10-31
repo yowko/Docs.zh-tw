@@ -10,14 +10,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 852490c57a2954e9d56799ef8deebbef31d5f665
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1d5289ce15c213024af576c99fe039f5d6c1a247
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045892"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130074"
 ---
 # <a name="security-considerations-for-reflection"></a>反映的安全性考量
 
@@ -69,7 +67,7 @@ ms.locfileid: "71045892"
 
 |安全性層級|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|
 |--------------------|------------------------|----------------------------|---------------------------|
-|重大|`true`|`false`|`false`|
+|Critical|`true`|`false`|`false`|
 |安全關鍵|`true`|`true`|`false`|
 |透明|`false`|`false`|`true`|
 
@@ -88,7 +86,7 @@ ms.locfileid: "71045892"
   > [!NOTE]
   > 根據預設，安全性原則會拒絕將此權限授與源自網際網路的程式碼。 此權限絕不能授與源自網際網路的程式碼。
 
-- 若要允許程式碼叫用任何非公用成員，只要包含被叫用成員的組件授權集，與包含叫用程式碼的組件授權集相同，或是其授權集的子集：您的程式碼必須被授與具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。
+- 若要允許程式碼叫用任何非公用成員，只要包含被叫用成員的組件授與集，與包含叫用程式碼的組件授與集相同，或是其授權集的子集：您的程式碼必須被授與具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標的  <xref:System.Security.Permissions.ReflectionPermission>。
 
 例如，假設您將網際網路權限，以及具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>，授與應用程式定義域，然後執行網際網路應用程式來搭配兩個組件 A 和 B。
 
@@ -112,7 +110,7 @@ ms.locfileid: "71045892"
 
 - 從 .NET Framework 2.0 開始，使用反映來取得非公開型別和成員的相關資訊時不需要任何權限。 在舊版中，會需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>

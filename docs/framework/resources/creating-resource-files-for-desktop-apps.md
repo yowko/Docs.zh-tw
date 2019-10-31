@@ -10,14 +10,12 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 893b6e6e61e23bdc0da1902407017a836bc6cbe8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 92e52fb130adecd6acdbeb8eac8d624d3c291094
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045674"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129983"
 ---
 # <a name="create-resource-files-for-net-apps"></a>建立 .NET 應用程式的資源檔
 
@@ -60,7 +58,7 @@ name2=value2
 
  .txt 和 .restext 檔案的資源檔格式完全相同。 .restext 副檔名只提供可立即將文字檔識別為文字資源檔。
 
- 字串資源會以「名稱/值」配對的形式出現，其中「名稱」是識別資源的字串，「值」則是當您將「名稱」傳遞至資源擷取方法 (例如 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>) 時所傳回的資源字串。 「名稱」和「值」必須以等號 (=) 分隔。 例如：
+ 字串資源會以「名稱/值」配對的形式出現，其中「名稱」是識別資源的字串，「值」則是當您將「名稱」傳遞至資源擷取方法 (例如 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>) 時所傳回的資源字串。 「名稱」和「值」必須以等號 (=) 分隔。 例如:
 
 ```text
 FileMenuName=File
@@ -72,7 +70,7 @@ HelpMenuName=Help
 > [!CAUTION]
 > 請勿使用資源檔儲存密碼、安全機密資訊或私用資料。
 
- 文字檔中允許空字串 (即其值為 <xref:System.String.Empty?displayProperty=nameWithType> 的資源)。 例如：
+ 文字檔中允許空字串 (即其值為 <xref:System.String.Empty?displayProperty=nameWithType> 的資源)。 例如:
 
 ```text
 EmptyString=
@@ -94,7 +92,7 @@ CancelButton=Cancel
 
  如果文字檔包含重複出現的「名稱」，則[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 會顯示警告，並忽略另一個名稱。
 
- 「值」不可包含新行字元，但是您可以使用類似 C 語言逸出字元 (例如 `\n`) 代表新行，以及使用 `\t` 代表定位點。您也可以包括已逸出的反斜線字元 (例如，"\\\\")。 此外，也允許空字串。
+ *值*不能包含分行符號，但是您可以使用 C 語言樣式的 escape 字元（例如 `\n`）來代表新的一行，並 `\t` 來表示索引標籤。您也可以包含反斜線字元（如果已進行轉義）（例如，"\\\\"）。 此外，也允許空字串。
 
  您應該在位元組由小到大或由大到小的位元組順序中使用 UTF-8 編碼或 UTF-16 編碼，以將資源儲存為文字檔格式。 不過，可將 .txt 檔案轉換為 .resources 檔案的[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)，預設會將檔案視為 UTF-8。 如果您想要 Resgen.exe 辨識使用 UTF-16 所編碼的檔案，必須在檔案開頭包括 Unicode 位元組順序標記 (U+FEFF)。
 
@@ -204,7 +202,7 @@ csc greeting.cs -resource:GreetingResources.resources
 
 在編譯時間，Visual Studio 先將專案中的 .resx 檔案轉換成二進位資源檔 (.resources)，並將它們儲存在專案 *obj* 目錄的子目錄中。 Visual Studio 會將未包含當地語系化資源的任何資源檔內嵌在專案所產生的主要組件中。 如果任何資源檔包含當地語系化資源，Visual Studio 會將其內嵌在每個當地語系化文化特性的個別附屬組件中。 它接著會將每個附屬組件儲存在名稱對應至當地語系化文化特性的目錄中。 例如，當地語系化的英文 (美國) 資源會儲存在 en-US 子目錄的附屬組件中。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Resources>
 - [桌面應用程式中的資源](index.md)

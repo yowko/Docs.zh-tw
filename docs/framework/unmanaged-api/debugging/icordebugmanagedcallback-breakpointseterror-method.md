@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f2b773a4-c4d0-429c-9717-51d6e2ed86af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a3ef4b284676608363281e04087f6435dcb1ef74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dae04e1809c1bb3260461086a4953b8b4e5cce52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759848"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122576"
 ---
 # <a name="icordebugmanagedcallbackbreakpointseterror-method"></a>ICorDebugManagedCallback::BreakpointSetError 方法
-Common language runtime 無法精確地繫結之前的函式是在 just-in-time (JIT) 編譯，並設定中斷點會告知偵錯工具。  
+通知偵錯工具，common language runtime 無法正確地系結在函式為即時（JIT）編譯之前所設定的中斷點。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,29 +38,29 @@ HRESULT BreakpointSetError (
   
 ## <a name="parameters"></a>參數  
  `pAppDomain`  
- [in]ICorDebugAppDomain 物件，表示應用程式定義域，其中包含未繫結的中斷點指標。  
+ 在ICorDebugAppDomain 物件的指標，表示包含未系結之中斷點的應用程式域。  
   
  `pThread`  
- [in]ICorDebugThread 物件，表示包含未繫結的中斷點的執行緒指標。  
+ 在ICorDebugThread 物件的指標，表示包含未系結之中斷點的執行緒。  
   
  `pBreakpoint`  
- [in]ICorDebugBreakpoint 物件，表示未繫結的中斷點指標。  
+ 在表示未系結之中斷點的 ICorDebugBreakpoint 物件指標。  
   
  `dwError`  
- [in]整數，表示錯誤。  
+ 在表示錯誤的整數。  
   
 ## <a name="remarks"></a>備註  
- 永遠不會叫用指定的中斷點。 偵錯工具應該停用，並將它重新繫結。  
+ 將永遠不會叫用指定的中斷點。 偵錯工具應該停用並將它重新系結。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

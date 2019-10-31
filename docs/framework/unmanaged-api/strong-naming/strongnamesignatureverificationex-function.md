@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: cfe4b634-18bf-44b8-9773-d94fb7e8a480
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 08247c1ec5b868055e4836b3c0fb520a536374e8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ca428d680df1710d8e74441d9945d4c3545b0482
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798924"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121151"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>StrongNameSignatureVerificationEx 函式
 取得指出位於指定路徑的組件資訊清單是否包含強式名稱簽章的值。  
@@ -44,27 +42,27 @@ BOOLEAN StrongNameSignatureVerificationEx (
  在要驗證之元件的可攜式可執行檔（.exe 或 .dll）的路徑。  
   
  `fForceVerification`  
- 在表示執行驗證，即使需要覆寫登錄設定也一樣; `false`否則為。 `true`  
+ [in] `true` 執行驗證，即使需要覆寫登錄設定也一樣。否則，`false`。  
   
  `pfWasVerified`  
- 脫銷如果已驗證強式名稱簽章，則為`false`，否則為。 `true` `pfWasVerified`如果驗證因為登錄`false`設定而成功，也會設定為。  
+ [out] `true` 是否已驗證強式名稱簽章;否則，`false`。 如果驗證因為登錄設定而成功，`pfWasVerified` 也會設定為 `false`。  
   
 ## <a name="return-value"></a>傳回值  
- `true`如果驗證成功，則為，否則為`false`。  
+ 如果驗證成功，則 `true`;否則，`false`。  
   
 ## <a name="remarks"></a>備註  
- `StrongNameSignatureVerificationEx`提供的功能類似于[StrongNameSignatureVerification](strongnamesignatureverification-function.md)函數。 不過，的第二個輸入參數和輸出參數`StrongNameSignatureVerificationEx`的類型`BOOLEAN`是，而`DWORD`不是。  
+ `StrongNameSignatureVerificationEx` 提供類似[StrongNameSignatureVerification](strongnamesignatureverification-function.md)函數的功能。 不過，`StrongNameSignatureVerificationEx` 的第二個輸入參數和輸出參數是 `BOOLEAN` 類型，而不是 `DWORD`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Stackexchange.redis.strongname。h  
   
- **LIBRARY:** 包含為 mscoree.dll 中的資源  
+ 連結**庫：** 包含為 mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [StrongNameSignatureVerificationEx 方法](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
 - [StrongNameSignatureVerification 方法](../hosting/iclrstrongname-strongnamesignatureverification-method.md)

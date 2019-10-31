@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定 IIS 5.0 和 IIS 6.0 以部署 WPF 應用程式
+title: 如何：設定 IIS 5.0 和 IIS 6.0 以部署 WPF 應用程式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MIME types [WPF], registering
@@ -13,21 +13,21 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: 3a9bf79a9d505fef53b62cb589920adcf95ae92a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a731dc49556a73c585c6201a80ea3ea77c15cb11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611499"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124421"
 ---
-# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>作法：設定 IIS 5.0 和 IIS 6.0 以部署 WPF 應用程式
+# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>如何：設定 IIS 5.0 和 IIS 6.0 以部署 WPF 應用程式
 
-您可以從大部分[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的 Web 服務器部署應用程式, 前提是它們已設定適當的多用途網際網路郵件延伸 (MIME) 類型。 根據預設, Microsoft Internet Information Services (IIS) 7.0 是使用這些 MIME 類型來設定, 但 Microsoft Internet Information Services (IIS) 5.0 和 Microsoft Internet Information Services (IIS) 6.0 則不是。
+您可以從大部分的 Web 服務器部署 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式，只要它們已設定適當的多用途網際網路郵件延伸（MIME）類型即可。 根據預設，Microsoft Internet Information Services （IIS）7.0 是使用這些 MIME 類型來設定，但 Microsoft Internet Information Services （IIS）5.0 和 Microsoft Internet Information Services （IIS）6.0 則不是。
 
-本主題說明如何設定 microsoft Internet Information Services (iis) 5.0 和 microsoft Internet Information Services (iis) 6.0 以部署[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。
+本主題說明如何設定 Microsoft Internet Information Services （IIS）5.0 和 Microsoft Internet Information Services （IIS）6.0 以部署 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式。
 
 > [!NOTE]
-> 您可以檢查登錄中的*UserAgent*字串, 以判斷系統是否已安裝 .NET Framework。 如需詳細資訊和檢查*UserAgent*字串以判斷系統上是否已安裝 .NET Framework 的腳本, 請參閱偵測[是否已安裝 .NET Framework 3.0](how-to-detect-whether-the-net-framework-3-0-is-installed.md)。
+> 您可以檢查登錄中的*UserAgent*字串，以判斷系統是否已安裝 .NET Framework。 如需詳細資訊和檢查*UserAgent*字串以判斷系統上是否已安裝 .NET Framework 的腳本，請參閱偵測[是否已安裝 .NET Framework 3.0](how-to-detect-whether-the-net-framework-3-0-is-installed.md)。
 
 <a name="content_expiration"></a>
 
@@ -37,7 +37,7 @@ ms.locfileid: "69611499"
 
 1. 按一下 [開始] 功能表，指向 [系統管理工具]，然後按一下 [Internet Information Services (IIS) 管理員]。 您也可以從命令列使用 "%SystemRoot%\system32\inetsrv\iis.msc" 來啟動此應用程式。
 
-2. 展開 IIS 樹狀結構, 直到您找到 [**預設的網站**] 節點。
+2. 展開 IIS 樹狀結構，直到您找到 [**預設的網站**] 節點。
 
 3. 以滑鼠右鍵按一下 [預設的網站]，然後從操作功能表選取 [屬性]。
 
@@ -49,7 +49,7 @@ ms.locfileid: "69611499"
 
 ## <a name="register-mime-types-and-file-extensions"></a>註冊 MIME 類型和副檔名
 
-您必須註冊數個 MIME 類型和副檔名, 才能讓用戶端系統上的瀏覽器載入正確的處理常式。 您需要新增下列類型：
+您必須註冊數個 MIME 類型和副檔名，才能讓用戶端系統上的瀏覽器載入正確的處理常式。 您需要新增下列類型：
 
 |副檔名|MIME 類型|
 |---------------|---------------|
@@ -61,9 +61,9 @@ ms.locfileid: "69611499"
 |.xps|application/vnd.ms-xpsdocument|
 
 > [!NOTE]
-> 您不需要在用戶端系統上註冊 MIME 類型或副檔名。 當您安裝 Microsoft .NET Framework 時, 它們會自動註冊。
+> 您不需要在用戶端系統上註冊 MIME 類型或副檔名。 當您安裝 Microsoft .NET Framework 時，它們會自動註冊。
 
-下列 Microsoft Visual Basic Scripting Edition (VBScript) 範例會自動將必要的 MIME 類型新增至 IIS。 若要使用指令碼，請將程式碼複製到伺服器上的 .vbs 檔案。 然後，從命令列執行該檔案，或在 [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)] 中按兩下該檔案，以執行指令碼。
+下列 Microsoft Visual Basic Scripting Edition （VBScript）範例會自動將必要的 MIME 類型新增至 IIS。 若要使用指令碼，請將程式碼複製到伺服器上的 .vbs 檔案。 然後，從命令列執行檔案，或在 Microsoft Windows Explorer 中按兩下該檔案，以執行腳本。
 
 ```vb
 ' This script adds the necessary Windows Presentation Foundation MIME types
@@ -126,9 +126,9 @@ End Sub
 ```
 
 > [!NOTE]
-> 多次執行此腳本會在 Microsoft Internet Information Services (IIS) 5.0 或 Microsoft Internet Information Services (IIS) 6.0 元資料庫中建立多個 MIME 對應專案。
+> 多次執行此腳本會在 Microsoft Internet Information Services （IIS）5.0 或 Microsoft Internet Information Services （IIS）6.0 元資料庫中建立多個 MIME 對應專案。
 
-執行此腳本之後, 您可能不會看到來自 Microsoft Internet Information Services (IIS) 5.0 或 Microsoft Internet Information Services (IIS) 6.0 Microsoft Management Console (MMC) 的其他 MIME 類型。 不過, 這些 MIME 類型已新增至 Microsoft Internet Information Services (IIS) 5.0 或 Microsoft Internet Information Services (IIS) 6.0 元資料庫。 下列腳本會顯示 Microsoft Internet Information Services (IIS) 5.0 或 Microsoft Internet Information Services (IIS) 6.0 元資料庫中的所有 MIME 類型。
+執行此腳本之後，您可能不會看到來自 Microsoft Internet Information Services （IIS）5.0 或 Microsoft Internet Information Services （IIS） 6.0 Microsoft Management Console （MMC）的其他 MIME 類型。 不過，這些 MIME 類型已新增至 Microsoft Internet Information Services （IIS）5.0 或 Microsoft Internet Information Services （IIS）6.0 元資料庫。 下列腳本會顯示 Microsoft Internet Information Services （IIS）5.0 或 Microsoft Internet Information Services （IIS）6.0 元資料庫中的所有 MIME 類型。
 
 ```vb
 ' This script lists the MIME types for an IIS Server.

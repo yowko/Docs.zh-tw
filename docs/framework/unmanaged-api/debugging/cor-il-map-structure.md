@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5ae4c5743b01c4a9087323678d315473631cb32f
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: c37f039d9636854c464e7981693c573bd60deab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274043"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132349"
 ---
 # <a name="cor_il_map-structure"></a>COR_IL_MAP 結構
 指定函式相關位移中的變更。  
@@ -36,16 +34,16 @@ typedef struct _COR_IL_MAP {
 } COR_IL_MAP;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
 |`oldOffset`|相對於函數開頭的舊 Microsoft 中繼語言（MSIL）位移。|  
 |`newOffset`|相對於函數開頭的新 MSIL 位移。|  
-|`fAccurate`|`true`如果已知對應是正確的，則為，否則為`false`。|  
+|`fAccurate`|如果已知對應是正確的，則 `true`。否則，`false`。|  
   
 ## <a name="remarks"></a>備註  
- 對應的格式如下所示：偵錯工具會假設， `oldOffset`這是指原始、未修改的 msil 程式碼內的 MSIL 位移。 `newOffset`參數會參考新檢測的程式碼內對應的 MSIL 位移。  
+ 對應的格式如下所示：偵錯工具會假設 `oldOffset` 指的是原始、未修改的 MSIL 程式碼內的 MSIL 位移。 `newOffset` 參數會參考新檢測的程式碼內對應的 MSIL 位移。  
   
  若要讓逐步執行正常運作，應符合下列需求：  
   
@@ -86,11 +84,11 @@ typedef struct _COR_IL_MAP {
   
  **標頭：** Cordebug.h .idl，Corprof.idl .idl  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯結構](debugging-structures.md)
 - [偵錯](index.md)

@@ -5,21 +5,19 @@ helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 146aef8c1e085ee3146585c3b5b1cda8004b9f7e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7c9fad9b420044cce2c9d75cca66ecdb5b0558cd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044205"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104674"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET Security Annotator 工具)
 .NET Security Annotator 工具 (SecAnnotate.exe) 是識別一個或多個組件之 `SecurityCritical` 和 `SecuritySafeCritical` 部分的命令列應用程式。  
   
  Visual Studio 延伸模組 ([Security Annotator](https://go.microsoft.com/fwlink/?LinkId=198007)) 提供 SecAnnotate.exe 的圖形化使用者介面，讓您能夠從 Visual Studio 執行該工具。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下鍵入以下內容，*parameters* 會在下一節中說明，而 *assemblies* 則包含以空格分隔的一或多個組件名稱：  
   
@@ -31,7 +29,7 @@ SecAnnotate.exe [parameters] [assemblies]
   
 ## <a name="parameters"></a>參數  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |`/a`<br /><br /> 或<br /><br /> `/showstatistics`|顯示要分析之組件中有關透明度使用的統計資料。|  
 |`/d:` *directory*<br /><br /> 或<br /><br /> `/referencedir:` *directory*|指定要在註釋期間搜尋相依組件的目錄。|  
@@ -43,7 +41,7 @@ SecAnnotate.exe [parameters] [assemblies]
 |`/r:` *assembly*<br /><br /> 或<br /><br /> `/referenceassembly:` *assembly*|註釋期間解析相依組件時包含指定的組件。 參考組件的優先順序高於參考路徑中的組件。|  
 |`/s:` *rulename*<br /><br /> 或<br /><br /> `/suppressrule:` *rulename*|隱藏執行輸入組件上的指定透明度規則。|  
 |`/t`<br /><br /> 或<br /><br /> `/forcetransparent`|強制 Annotator 工具將所有不具透明度註釋的組件視為完全透明。|  
-|`/t`:*組件*<br /><br /> 或<br /><br /> `/forcetransparent`:*assembly*|強制指定的組件呈現透明，無論目前組件層級註釋為何。|  
+|`/t`:*assembly*<br /><br /> 或<br /><br /> `/forcetransparent`:*assembly*|強制指定的組件呈現透明，無論目前組件層級註釋為何。|  
 |||  
 |`/v`<br /><br /> 或<br /><br /> `/verify`|只用於驗證組件的註釋是否正確，如果組件並未驗證，請勿為了找出所有必要的註釋而嘗試多次傳遞。|  
 |`/x`<br /><br /> 或<br /><br /> `/verbose`|指定標註提供詳細輸出。|  

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6e7c6bee-7ced-495f-bf6c-2a5f0c716f7e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3490477f30cd1c0badaa9cfd71433a5bf9d7a99
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7333f8f7b95655ac821e9a2977d5db3794486a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738990"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122997"
 ---
-# <a name="efngetmanagedobjectname-function"></a>\_EFN\_GetManagedObjectName 函式
-取得使用提供的 managed 的物件的指標類型的名稱。  
+# <a name="_efn_getmanagedobjectname-function"></a>\_EFN\_GetManagedObjectName 函式
+使用提供的 managed 物件指標，取得型別的名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,27 +37,27 @@ HRESULT _EFN_GetManagedObjectName(
   
 ## <a name="parameters"></a>參數  
  `Client`  
- [in]偵錯用戶端指標。  
+ 在Debug 用戶端的指標。  
   
  `objAddr`  
- [in]Managed 的物件指標。  
+ 在Managed 物件指標。  
   
  szName  
- [out]型別的名稱。  
+ 脫銷類型的名稱。  
   
  `cbName`  
- [out]字串緩衝區中有可用的字元數。  
+ 脫銷字串緩衝區中可用的字元數。  
   
 ## <a name="remarks"></a>備註  
- 如果沒有任何 managed 程式碼的執行緒上目前內容中，則函數會傳回 HRESULT SOS_E_NOMANAGEDCODE 0xa0 設備值與 0x1000 錯誤碼。  
+ 如果目前在內容中的執行緒上沒有 managed 程式碼，則函式會傳回具有設備值0xa0 的 HRESULT SOS_E_NOMANAGEDCODE，以及錯誤碼為0x1000。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** SOS_Stacktrace.h  
+ **標頭：** SOS_Stacktrace。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯全域靜態函式](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

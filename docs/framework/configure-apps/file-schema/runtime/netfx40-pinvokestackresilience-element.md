@@ -5,21 +5,19 @@ helpviewer_keywords:
 - <NetFx40_PInvokeStackResilience> element
 - NetFx40_PInvokeStackResilience element
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f4dffe5428ccb7541055fa4f3f335f57deaf2ec
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 86f50aafe0b21d5080288e09ac7118ca1e4c939a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252434"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116165"
 ---
 # <a name="netfx40_pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > 元素
 
 指定執行階段是否會在執行階段自動修復不正確的平台叫用宣告，即使這麼做會使 Managed 和 Unmanaged 程式碼之間的轉換變慢。
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<NetFx40_PInvokeStackResilience >**  
 
 ## <a name="syntax"></a>語法
@@ -36,35 +34,35 @@ ms.locfileid: "70252434"
 
 |屬性|描述|
 |---------------|-----------------|
-|`enabled`|必要屬性。<br /><br /> 指定執行時間是否偵測到不正確的平台叫用宣告, 並在32位平臺上自動修正執行時間的堆疊。|
+|`enabled`|必要屬性。<br /><br /> 指定執行時間是否偵測到不正確的平台叫用宣告，並在32位平臺上自動修正執行時間的堆疊。|
 
 ## <a name="enabled-attribute"></a>啟用屬性
 
 |值|描述|
 |-----------|-----------------|
-|`0`|執行時間會使用 .NET Framework 4 中引進的更快 interop 封送處理架構, 這不會偵測並修正不正確的平台叫用宣告。 這是預設值。|
+|`0`|執行時間會使用 .NET Framework 4 中引進的更快 interop 封送處理架構，這不會偵測並修正不正確的平台叫用宣告。 這是預設值。|
 |`1`|執行時間會使用較慢的轉換來偵測並修正不正確的平台叫用宣告。|
 
-### <a name="child-elements"></a>子元素
+### <a name="child-elements"></a>子項目
 
 無。
 
 ### <a name="parent-elements"></a>父項目
 
-|項目|說明|
+|項目|描述|
 |-------------|-----------------|
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|
 |`runtime`|包含有關執行階段初始化選項的資訊。|
 
 ## <a name="remarks"></a>備註
 
-此元素可讓您針對執行時間復原, 針對不正確的平台叫用宣告, 進行更快速的 interop 封送處理。
+此元素可讓您針對執行時間復原，針對不正確的平台叫用宣告，進行更快速的 interop 封送處理。
 
-從 .NET Framework 4 開始, 簡化的 interop 封送處理架構可大幅改善從 managed 程式碼轉換為非受控碼的效能。 在舊版的 .NET Framework 中, 封送處理層在32位平臺上偵測到不正確的平台叫用宣告, 並自動修正堆疊。 新的封送處理架構會消除此步驟。 因此, 轉換會非常快速, 但不正確的平台叫用宣告可能會導致程式失敗。
+從 .NET Framework 4 開始，簡化的 interop 封送處理架構可大幅改善從 managed 程式碼轉換為非受控碼的效能。 在舊版的 .NET Framework 中，封送處理層在32位平臺上偵測到不正確的平台叫用宣告，並自動修正堆疊。 新的封送處理架構會消除此步驟。 因此，轉換會非常快速，但不正確的平台叫用宣告可能會導致程式失敗。
 
-為了讓您在開發過程中輕鬆偵測不正確的宣告, 已改善 Visual Studio 的偵錯工具體驗。 當您的應用程式是以附加的偵錯工具執行時, [pInvokeStackImbalance](../../../debug-trace-profile/pinvokestackimbalance-mda.md) managed 偵錯工具 (MDA) 會通知您不正確的平台叫用宣告。
+為了讓您在開發過程中輕鬆偵測不正確的宣告，已改善 Visual Studio 的偵錯工具體驗。 當您的應用程式是以附加的偵錯工具執行時， [pInvokeStackImbalance](../../../debug-trace-profile/pinvokestackimbalance-mda.md) managed 偵錯工具（MDA）會通知您不正確的平台叫用宣告。
 
-若要處理您的應用程式使用無法重新編譯的元件, 且其平台叫用宣告不正確的情況, 您`NetFx40_PInvokeStackResilience`可以使用元素。 將此專案新增至您的應用程式`enabled="1"`設定檔, 並使用舊版 .NET Framework 的行為, 以較慢的轉換為代價, 將其加入至相容性模式。 已針對舊版 .NET Framework 編譯的元件會自動選擇進入此相容性模式, 而且不需要此元素。
+若要處理您的應用程式使用無法重新編譯之元件的情況，以及具有不正確平台叫用宣告的情況，您可以使用 `NetFx40_PInvokeStackResilience` 元素。 將此專案新增至您的應用程式佈建檔，並將 `enabled="1"` 選擇進入相容性模式，並具有舊版 .NET Framework 的行為，但代價是較慢的轉換。 已針對舊版 .NET Framework 編譯的元件會自動選擇進入此相容性模式，而且不需要此元素。
 
 ## <a name="configuration-file"></a>組態檔
 
@@ -72,7 +70,7 @@ ms.locfileid: "70252434"
 
 ## <a name="example"></a>範例
 
-下列範例示範如何針對應用程式的不正確平台叫用宣告, 選擇增加的復原能力, 代價是 managed 和非受控碼之間的轉換速度較慢。
+下列範例示範如何針對應用程式的不正確平台叫用宣告，選擇增加的復原能力，代價是 managed 和非受控碼之間的轉換速度較慢。
 
 ```xml
 <configuration>
@@ -82,7 +80,7 @@ ms.locfileid: "70252434"
 </configuration>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段設定結構描述](index.md)
 - [組態檔結構描述](../index.md)

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 032f43aa16dbca0f4ab0477d586e7568230b7381
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1af93ae89d027bccdd52b9cd9c49f8e620303677
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044258"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104935"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET 服務安裝工具)
 .NET 服務安裝工具會執行下列動作：  
@@ -41,14 +39,14 @@ ms.locfileid: "71044258"
   
 ## <a name="parameters"></a>參數  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |*assemblyFile.dll*|來源組件檔。 這個組件必須以強式名稱簽署。 如需詳細資訊，請參閱[以強式名稱簽署組件](../../standard/assembly/sign-strong-name.md)。|  
   
 |選項|描述|  
 |------------|-----------------|  
-|**/appdir:<路徑>**|指定應用程式的根目錄。|  
-|**/appname:<應用程式名稱>**|指定要尋找或建立之 COM+ 應用程式的名稱。|  
+|**/appdir:<路徑>** |指定應用程式的根目錄。|  
+|**/appname:<應用程式名稱>** |指定要尋找或建立之 COM+ 應用程式的名稱。|  
 |**/c**|建立目標應用程式。|  
 |**/componly**|只設定元件，忽略方法和介面。|  
 |**/exapp**|指定需要現有應用程式的工具。|  
@@ -59,7 +57,7 @@ ms.locfileid: "71044258"
 |**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|  
 |**/parname:** *name*|指定要尋找或建立之 COM+ 應用程式的名稱或 ID。|  
 |**/reconfig**|重新設定現有的目標應用程式。 這是預設值。|  
-|**/tlb:<型別程式庫檔案>**|指定要安裝的類型程式庫檔案。|  
+|**/tlb:<型別程式庫檔案>** |指定要安裝的類型程式庫檔案。|  
 |**/u**|解除安裝目標應用程式。|  
 |**/quiet**|指定安靜模式，隱藏標誌或成功訊息顯示。|  
 |**/?**|顯示工具的命令語法和選項。|  
@@ -86,8 +84,8 @@ regsvcs /appname:myTargetApp myTest.dll
 regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [工具](index.md)
-- [如何：使用強式名稱簽署組件](../../standard/assembly/sign-strong-name.md)
+- [操作說明：使用強式名稱簽署組件](../../standard/assembly/sign-strong-name.md)
 - [命令提示字元](developer-command-prompt-for-vs.md)

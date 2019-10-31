@@ -1,15 +1,15 @@
 ---
-title: dotnet-add reference 命令
+title: dotnet 新增參考命令
 description: dotnet add reference 命令提供方便的選項，以新增專案對專案參考。
 ms.date: 06/26/2019
-ms.openlocfilehash: 79c8a787079e02f6cf227820c24bb4157b0292c6
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: c97975e11410cfaad18ca68832957d75a4a2fd09
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522763"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100809"
 ---
-# <a name="dotnet-add-reference"></a>dotnet-add reference
+# <a name="dotnet-add-reference"></a>dotnet add reference
 
 **本文適用於：✓** .NET Core 1.x SDK 和更新版本
 

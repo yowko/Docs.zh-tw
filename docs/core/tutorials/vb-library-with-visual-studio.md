@@ -1,25 +1,23 @@
 ---
 title: 在 Visual Studio 2017 中建置 Visual Basic .NET Standard 類別庫
 description: 了解如何使用 Visual Studio 2017 建置以 Visual Basic 撰寫的 .NET Standard 類別庫
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f14e4ffbebfe0d7e01d548a6d4f2dc8924633682
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1daab377abe3b6b89f73ed48eafadeae4d7eee77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157296"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100871"
 ---
 # <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core SDK 建置 .NET Standard 程式庫
 
 「類別庫」會定義應用程式所呼叫的類型和方法。 以 .NET Standard 2.0 為目標的類別庫，允許支援該 .NET Standard 版本的任何 .NET 實作呼叫您的類別庫。 當您完成類別庫時，您可以決定要將它散發為協力廠商元件，還是要將它併入作為一或多個應用程式隨附的元件。
 
 > [!NOTE]
-> 如需 .NET 標準版本與所支援平台的清單，請參閱 [.NET 標準](../../standard/net-standard.md)。
+> 如需 .NET Standard 版本與所支援平台的清單，請參閱 [.NET Standard](../../standard/net-standard.md)。
 
 在本主題中，您將建立含有單一字串處理方法的簡單公用程式類別庫。 您將它實作為[擴充方法](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)，以便可以如同 <xref:System.String> 類別的成員一般來進行呼叫。
 
@@ -27,9 +25,9 @@ ms.locfileid: "59157296"
 
 請開始建立類別庫專案和其相關專案的方案。 Visual Studio 方案只能做為一個或多個專案的容器。 建立方案：
 
-1. 在 Visual Studio 功能表列上，選擇 [檔案]  >  [新增]   >  [專案]。
+1. 在 Visual Studio 功能表列上，選擇 [檔案]  >  [新增]  >  [專案]。
 
-1. 在 **[新增專案]** 對話方塊中，展開 **[其他專案類型]** 節點，並選取 **[Visual Studio 方案]**。 將方案命名為 "ClassLibraryProjects"，然後選取 **[確定]** 按鈕。
+1. 在 **[新增專案]** 對話方塊中，展開 **[其他專案類型]** 節點，並選取 **[Visual Studio 方案]** 。 將方案命名為 "ClassLibraryProjects"，然後選取 [確定] 按鈕。
 
    ![Visual Studio 建立新的測試專案對話方塊](./media/library-with-visual-studio/new-project-dialog.png)
 
@@ -37,7 +35,7 @@ ms.locfileid: "59157296"
 
 建立您的類別庫專案：
 
-1. 在 **方案總管** 中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案檔，然後從內容功能表中，選取 **[新增]** > **[新增專案]**。
+1. 在方案總管 中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案檔，然後從內容功能表中，選取 [新增]  >  [新增專案]。
 
 1. 在 [新增專案] 對話方塊中，展開 [Visual Basic] 節點，然後選取後面跟著 [類別庫 (.NET Standard)] 專案範本的 [.NET Standard] 節點。 在 [名稱] 文字方塊中，輸入 "StringLibrary" 作為專案名稱。 選取 [確定] 以建立類別庫專案。
 

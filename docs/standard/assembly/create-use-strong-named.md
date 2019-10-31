@@ -12,14 +12,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 55869c107d245738df3af5ca9bb1b22195e90024
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 700eca16e7755823456c3e3ace17eb5e6b3526ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973317"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122503"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>建立和使用強式名稱的組件
 
@@ -66,14 +64,14 @@ ms.locfileid: "70973317"
 
 - 不延遲簽署。
 
-個別應用程式或電腦可停用此功能。 請參閱[How to:停用強式名稱略過功能](disable-strong-name-bypass-feature.md)。
+個別應用程式或電腦可停用此功能。 請參閱[如何：停用強式名稱略過功能](disable-strong-name-bypass-feature.md)。
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|說明|
+|標題|描述|
 |-----------|-----------------|
 |[如何：建立公開/私密金鑰組](create-public-private-key-pair.md)|描述如何建立簽署組件的密碼編譯金鑰組。|
-|[如何：使用強式名稱簽署組件](sign-strong-name.md)|描述如何建立強式名稱組件。|
+|[如何：使用強式名稱簽署元件](sign-strong-name.md)|描述如何建立強式名稱組件。|
 |[增強的強式命名](enhanced-strong-naming.md)|描述 .NET Framework 4.5 中強式名稱的增強項目。|
 |[如何：參考強式名稱的元件](reference-strong-named.md)|描述如何在編譯或執行階段期間，參考以強式名稱命名之組件中的類型或資源。|
 |[如何：停用強式名稱略過功能](disable-strong-name-bypass-feature.md)|描述如何停用會略過強式名稱簽章驗證的功能。 所有應用程式皆可停用此功能，也可以只停用特定應用程式中的此功能。|

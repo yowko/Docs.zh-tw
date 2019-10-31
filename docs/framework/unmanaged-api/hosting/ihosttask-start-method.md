@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b18742b0-d8c4-401c-ae89-e6eccdaa81d0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2bc996973a98f3b8596b449e1524d5c93b4456e3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fe93a3bab267ccca941974b734c86329ad0f4d03
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749803"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121342"
 ---
 # <a name="ihosttaskstart-method"></a>IHostTask::Start 方法
-要求主機移到表示由目前的工作[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)執行個體處於可以執行程式碼的即時狀態從已暫停。  
+要求主機將目前[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)實例所代表的工作從暫止狀態移動到即時狀態，讓程式碼可以在其中執行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,22 +35,22 @@ HRESULT Start ();
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|開始在成功傳回。|  
-|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL common language runtime (CLR) 已不再可在此程序中使用。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|S_OK|成功地啟動傳回。|  
+|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，common language runtime （CLR）在進程內就無法再使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- `Start` 在發生嚴重失敗的情況下，除了一律傳回 s_ok 時，HRESULT 值。  
+ `Start` 一律會傳回 S_OK 的 HRESULT 值，但發生嚴重失敗的情況除外。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [ICLRTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)

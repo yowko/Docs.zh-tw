@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d0b44a2-5a14-44a2-9a0e-e8682fd4e106
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 371ed85f53109856d9c8f64e42aadca10302c269
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 43a5cd57a8eeaba70f1bb1ffb9cab5bb1a067914
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748215"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130958"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfilew-method"></a>ICLRStrongName::GetHashFromAssemblyFileW 方法
 產生以 Unicode 字串指定之檔案內容的雜湊。  
@@ -41,33 +39,33 @@ HRESULT GetHashFromAssemblyFileW (
   
 ## <a name="parameters"></a>參數  
  `wszFilePath`  
- [in]要雜湊檔案的路徑。 這個參數必須是 Unicode 字串。  
+ 在要雜湊之檔案的路徑。 這個參數必須是 Unicode 字串。  
   
  `piHashAlg`  
- [in、 out]常數，指定的雜湊演算法。 使用預設雜湊演算法的零。  
+ [in、out]指定雜湊演算法的常數。 預設雜湊演算法使用零。  
   
  `pbHash`  
- [out]傳回的雜湊緩衝區。  
+ 脫銷傳回的雜湊緩衝區。  
   
  `cchHash`  
- [in]要求的最大大小的`pbHash`。  
+ 在`pbHash`的要求大小上限。  
   
  `pchHash`  
- [out]傳回大小，以位元組為單位， `pbHash`。  
+ 脫銷傳回的大小，以位元組為單位，`pbHash`。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
+ 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MetaHost.h  
+ **標頭：** MetaHost。h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [GetHashFromAssemblyFile 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
 - [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

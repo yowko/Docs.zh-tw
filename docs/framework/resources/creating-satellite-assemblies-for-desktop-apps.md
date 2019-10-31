@@ -23,14 +23,12 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17465b07172788f18a432784653afadda18467fe
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2ab4fc990e0c524e0c77fa0bdedd7c263edb21b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045692"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129967"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>建立桌面應用程式的附屬組件
 
@@ -198,7 +196,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 
 ### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>在全域組件快取中安裝附屬組件
 
-執行階段在資源後援程序中搜尋資源時，會先尋找[全域組件快取](../app-domains/gac.md) (如需詳細資訊，請參閱[封裝和部署資源](packaging-and-deploying-resources-in-desktop-apps.md)主題的＜資源後援程序＞一節)。只要附屬組件是使用強式名稱進行簽署，就可以使用[全域組件快取工具 (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 將它安裝在全域組件快取中。
+執行階段在資源後援程序中搜尋資源時，會先尋找[全域組件快取](../app-domains/gac.md) （如需詳細資訊，請參閱[封裝和部署資源](packaging-and-deploying-resources-in-desktop-apps.md)主題的「資源回退程式」一節）。一旦使用強式名稱簽署附屬元件，就可以使用[全域組件快取工具（Gacutil）](../tools/gacutil-exe-gac-tool.md)，將它安裝在全域組件快取中。
 
 下列 Gacutil.exe 命令會在全域組件快取中安裝 StringLibrary.resources.dll：
 
@@ -318,7 +316,7 @@ gacutil -i:StringLibrary.resources.dll
 
 14. 執行 Example.exe。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [封裝和部署資源](packaging-and-deploying-resources-in-desktop-apps.md)
 - [延遲簽署組件](../../standard/assembly/delay-sign.md)

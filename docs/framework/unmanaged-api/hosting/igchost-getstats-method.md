@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c4ae022c-46ac-4f19-9ddd-09b955f19412
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3e374c03ca90c904cd4ef8a4585cb35ccf43cb43
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c86786a34ff236fb57a1ea6bc4d00b9cd5c4a717
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766523"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134888"
 ---
 # <a name="igchostgetstats-method"></a>IGCHost::GetStats 方法
-取得記憶體回收系統的目前狀態的統計資料。  
+取得垃圾收集系統目前狀態的統計資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,20 +35,20 @@ HRESULT GetStats (
   
 ## <a name="parameters"></a>參數  
  `pStats`  
- [in、 out]指標[COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)結構，包含記憶體回收系統的目前狀態的統計資料。  
+ [in、out][COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)結構的指標，其中包含垃圾收集系統目前狀態的統計資料。  
   
 ## <a name="remarks"></a>備註  
- 統計資料可以供智慧型配置系統，以協助記憶體回收系統運作。 例如，配置系統可能會決定，檢閱需要新增更多的記憶體，或強制的統計資料之後。  
+ 智慧配置系統可以使用統計資料來協助垃圾收集系統運作。 例如，配置系統可能會決定在檢查統計資料之後，它需要新增更多記憶體或強制集合。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** GCHost.idl GCHost.h  
+ **標頭：** GCHost .idl，GCHost。h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IGCHost 介面](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

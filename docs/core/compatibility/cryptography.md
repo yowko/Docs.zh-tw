@@ -2,14 +2,12 @@
 title: 密碼編譯重大變更-.NET Core
 description: 列出 .NET Core 中與密碼編譯相關的重大變更。
 ms.date: 09/20/2019
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 80b62f9b32487e88a309ea7686f78d68af8f2e0a
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: ce6739c57df801ef6ae3ab35e31bba6ad4055caa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71217112"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093085"
 ---
 # <a name="cryptography-breaking-changes"></a>密碼編譯的重大變更
 

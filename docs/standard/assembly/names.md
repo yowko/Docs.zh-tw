@@ -5,14 +5,12 @@ helpviewer_keywords:
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 22e35450460436e164db922fce76a53c437f6bdf
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: a35be7c2a2cb4b499496f526d263bb1825a3614b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835312"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107122"
 ---
 # <a name="assembly-names"></a>組件名稱
 組件的名稱儲存在中繼資料內，而且對組件範圍具有重大影響，並供應用程式使用。 強式名稱組件的完整名稱包括組件的名稱、文化特性、公開金鑰和版本號碼。 這通常稱為顯示名稱，以及可以使用 <xref:System.Reflection.Assembly.FullName%2A> 屬性取得載入的組件。  
@@ -50,16 +48,16 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ## <a name="name-application-components"></a>命名應用程式元件  
  判斷組件的身分識別時，執行階段不會考慮檔案名稱。 執行階段必須知道包含組件名稱、版本、文化特性和強式名稱的組件身分識別。  
   
- 例如，如果您有一個名為*myAssembly*的元件參考名為*myAssembly*的元件，則在執行*myAssembly*時，會正確地進行系結。 不過，如果另一個應用程式使用方法<xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>執行 myAssembly， `myAssembly`則執行時間會判斷當*myAssembly*要求系結至`myAssembly`時，已經載入。 在此情況下，絕對不會載入*myAssembly* 。 因為*myAssembly*不包含要求的型別， <xref:System.TypeLoadException>所以會發生。  
+ 例如，如果您有一個名為*myAssembly*的元件參考名為*myAssembly*的元件，則在執行*myAssembly*時，會正確地進行系結。 不過，如果有另一個應用程式使用 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>的方法執行*myAssembly* ，則執行時間會決定當 myAssembly 要求系結至 `myAssembly`時，已載入 `myAssembly` *。* 在此情況下，絕對不會載入*myAssembly* 。 因為*myAssembly*不包含要求的型別，所以會發生 <xref:System.TypeLoadException>。  
   
  若要避免這個問題，請確定構成應用程式的組件沒有相同的組件名稱，或將同名的組件放在不同的目錄中。  
   
 > [!NOTE]
-> 在 .NET Framework 中，如果您將強式名稱的元件放在全域組件快取中，則元件的檔案名必須符合元件名稱，不包括副檔名，例如 *.exe*或 *.dll*。 例如，如果元件的檔案名是*myAssembly*，則元件名稱必須是`myAssembly`。 只有在根應用程式目錄中部署的私用組件才能具有與檔案名稱不同的組件名稱。  
+> 在 .NET Framework 中，如果您將強式名稱的元件放在全域組件快取中，則元件的檔案名必須符合元件名稱，不包括副檔名，例如 *.exe*或 *.dll*。 例如，如果元件的檔案名是*myAssembly*，則元件名稱必須 `myAssembly`。 只有在根應用程式目錄中部署的私用組件才能具有與檔案名稱不同的組件名稱。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [如何：決定元件的完整名稱](find-fully-qualified-name.md)
+- [如何：判斷元件的完整名稱](find-fully-qualified-name.md)
 - [建立元件](create.md)
 - [強式名稱的組件](strong-named.md)
 - [全域組件快取](../../framework/app-domains/gac.md)

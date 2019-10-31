@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5f54a34-6335-4708-b407-a756ec70fab4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a90f0a0319d88654d0310530749ef35b7095e0fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3836b6c08098d38516c8a25260fb28998a2317fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754422"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084787"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>ICorDebugEval2::NewStringWithLength 方法
-使用指定的內容中建立的指定長度的字串。  
+使用指定的內容，建立指定長度的字串。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,21 +36,21 @@ HRESULT NewStringWithLength (
   
 ## <a name="parameters"></a>參數  
  `string`  
- [in]字串值的指標。  
+ 在字串值的指標。  
   
  `uiLength`  
- [in]字串的長度。  
+ 在字串的長度。  
   
 ## <a name="remarks"></a>備註  
- 如果字串的尾端預期的 null 字元會在受管理的字串中，呼叫端`NewStringWithLength`方法必須確保字串長度包含之尾端的 null 字元。  
+ 如果字串尾端的 null 字元必須位於 managed 字串中，則 `NewStringWithLength` 方法的呼叫端必須確保字串長度包含尾端的 null 字元。  
   
- 字串一律會建立目前執行所在之執行緒的應用程式定義域中。  
+ 此字串一律會線上程目前執行所在的應用程式域中建立。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

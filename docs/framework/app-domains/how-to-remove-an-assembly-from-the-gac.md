@@ -1,5 +1,5 @@
 ---
-title: HOW TO：從全域組件快取移除組件
+title: 如何：從全域組件快取移除組件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - GAC (global assembly cache), removing assemblies
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a085ff6955f706bcd90f895c42e6405a28d408a
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: c7d85222f35a61154e3eec70d8c9dad2ca6a32f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834045"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119859"
 ---
-# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>HOW TO：從全域組件快取移除組件
+# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>如何：從全域組件快取移除組件
 
 從全域組件快取 (GAC) 移除組件的方式有兩種：
 
@@ -52,8 +50,8 @@ gacutil -u hello
 > [!NOTE]
 > Windows Installer 會維護安裝在 GAC 中之組件的參考計數。 只有在組件的參考計數到達零時 (表示 Windows Installer 套件所安裝的任何應用程式都未使用這個組件)，才能從 GAC 中移除組件。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用組件和全域組件快取](working-with-assemblies-and-the-gac.md)
-- [如何：在全域組件快取中安裝單一組件](install-assembly-into-gac.md)
+- [操作說明：將組件安裝到全域組件快取](install-assembly-into-gac.md)
 - [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md)

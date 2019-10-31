@@ -8,14 +8,12 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5993cfdb0f50d8e474a4f18280d181d9ec2fdfa4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049660"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128381"
 ---
 # <a name="compiling-apps-with-net-native"></a>使用 .NET Native 編譯應用程式
 
@@ -61,13 +59,13 @@ ms.locfileid: "71049660"
 
 針對適用於 Windows 10 的 Windows 應用程式，您要將應用程式封裝 (.appx 檔) 中的 .NET 機器碼編譯二進位檔上傳至 Windows 市集。
 
-## <a name="in-this-section"></a>本節內容
+## <a name="in-this-section"></a>本章節內容
 
 如需有關使用 .NET 機器碼編譯來開發應用程式的詳細資訊，請參閱下列主題：
 
-- [.NET Native 程式碼編譯的消費者入門：開發人員經驗逐步解說](getting-started-with-net-native.md)
+- [開始使用 .NET 機器碼編譯：開發人員經驗逐步解說](getting-started-with-net-native.md)
 
-- [.NET Native 和編譯：](net-native-and-compilation.md).NET Native 如何將您的專案編譯成原生程式碼。
+- [.NET 原生和編譯：](net-native-and-compilation.md) .NET 原生如何將您的專案編譯成原生程式碼。
 
 - [反映和 .NET Native](reflection-and-net-native.md)
 

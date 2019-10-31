@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 132ef8cc-d938-43f3-b8f2-e3b97c0ceb33
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1b7cbadbd1494d5e4d1488dd12296f4f90890127
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 77e55c4c3644ac4bd76f5c92152f4ee86cf5fa9a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395489"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125570"
 ---
 # <a name="icordebugcodeisil-method"></a>ICorDebugCode::IsIL 方法
 
@@ -39,7 +37,7 @@ HRESULT IsIL (
 ## <a name="parameters"></a>參數
 
 `pbIL`  
-[out] `true`，如果這個 `ICorDebugCode` 代表以 MSIL 編譯的程式碼，則為，否則，`false`。
+[out] `true` 如果這個 `ICorDebugCode` 代表在 MSIL 中編譯的程式碼，則為，否則，`false`。
 
 ## <a name="requirements"></a>需求
 
@@ -49,4 +47,4 @@ HRESULT IsIL (
 
 **程式庫：** CorGuids.lib
 
-**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

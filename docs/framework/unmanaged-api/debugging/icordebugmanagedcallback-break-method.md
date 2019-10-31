@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7d78a301-82b3-43b2-9d65-3cda3285ae97
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 621c5b1e32a1a21c2b0b883249c3b65fadceb5f2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: efc9de050e34867c14f8e85e091e2b959c30f213
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632358"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122589"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a>ICorDebugManagedCallback::Break 方法
 
-會告知偵錯工具時<xref:System.Reflection.Emit.OpCodes.Break>執行指令碼資料流中的。
+在執行程式碼資料流程中的 <xref:System.Reflection.Emit.OpCodes.Break> 指令時，通知偵錯工具。
 
 ## <a name="syntax"></a>語法
 
@@ -40,10 +38,10 @@ HRESULT Break (
 ## <a name="parameters"></a>參數
 
 `pAppDomain`\
-[in]ICorDebugAppDomain 物件，表示應用程式定義域，其中包含中斷指令指標。
+在ICorDebugAppDomain 物件的指標，表示包含中斷指令的應用程式域。
 
 `thread`\
-[in]ICorDebugThread 物件，表示執行緒，其中包含中斷指令指標。
+在ICorDebugThread 物件的指標，表示包含中斷指令的執行緒。
 
 ## <a name="requirements"></a>需求
 
@@ -51,10 +49,10 @@ HRESULT Break (
 
 **標頭：** CorDebug.idl、CorDebug.h
 
-**LIBRARY:** CorGuids.lib
+**程式庫：** CorGuids.lib
 
-**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugManagedCallback 介面](icordebugmanagedcallback-interface.md)

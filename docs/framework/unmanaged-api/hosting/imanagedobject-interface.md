@@ -14,34 +14,32 @@ helpviewer_keywords:
 ms.assetid: 1fbbf572-6d28-41a5-82fb-579ac90bfcf5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c90df6a8b6f25a93835981b1593a4b3d123cd168
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5dc1ad5bd98899f82e0b52345710c5ea3da864b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943373"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103038"
 ---
 # <a name="imanagedobject-interface"></a>IManagedObject 介面
-提供方法來控制受管理的物件。  
+提供控制 managed 物件的方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetObjectIdentity 方法](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|取得此受管理物件識別。|  
-|[GetSerializedBuffer 方法](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|取得此受管理物件的字串表示。|  
+|[GetObjectIdentity 方法](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|取得這個 managed 物件的識別。|  
+|[GetSerializedBuffer 方法](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|取得這個 managed 物件的字串表示。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

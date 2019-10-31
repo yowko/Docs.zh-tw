@@ -1,21 +1,19 @@
 ---
-title: 作法：使用 Tlbimp.exe 產生主要 Interop 組件
+title: 如何：使用 Tlbimp.exe 產生主要 Interop 組件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - primary interop assemblies, generating
 - Tlbimp.exe
 - Type Library Importer
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ac60fa96b7c9ce6991f89e8c6a37ff5da4a34a50
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e46295b89b042452cb6e303302a8b88d68d58426
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051783"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123916"
 ---
-# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>HOW TO：使用 Tlbimp.exe 產生主要 Interop 組件
+# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>如何：使用 Tlbimp.exe 產生主要 Interop 組件
 
 有兩種方式可產生主要 Interop 組件：
 
@@ -37,7 +35,7 @@ ms.locfileid: "71051783"
 
 ### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>使用 Tlbimp.exe 產生主要 Interop 組件
 
-1. 在命令提示字元中，輸入：
+1. 在命令提示中，輸入：
 
     **tlbimp** *tlbfile*  **/primary /keyfile:** *filename* **/out:** *assemblyname*
 
@@ -69,6 +67,6 @@ tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /o
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [如何：登錄主要 Interop 組件](how-to-register-primary-interop-assemblies.md)

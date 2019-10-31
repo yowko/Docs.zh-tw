@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 542cdd81-5ae7-4361-b0ef-1ae4775df258
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cd2add7e96a8edaff8509563ae1846e80132001
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: faa2082d31c5fa47b87e2238017066b477fdc191
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740095"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132179"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>CorDebugExceptionObjectStackFrame 結構
 代表例外狀況物件所產生的堆疊框架資訊。  
@@ -37,28 +35,28 @@ typedef struct CorDebugExceptionObjectStackFrame {
 } CorDebugExceptionObjectStackFrame;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`pModule`|ICorDebugModule 物件目前畫面格指標。|  
-|`ip`|指令指標 (EIP/RIP) 目前畫面格的值。|  
-|`methodDef`|目前的框架方法語彙基元。|  
-|`isLastForeignExceptionFrame`|值，指出框架是否為外部例外狀況的最後一個框架。|  
+|`pModule`|目前框架的 ICorDebugModule 物件指標。|  
+|`ip`|目前框架的指令指標（EIP/RIP）的值。|  
+|`methodDef`|目前框架的方法 token。|  
+|`isLastForeignExceptionFrame`|值，指出框架是否為外部例外狀況中的最後一個框架。|  
   
 ## <a name="remarks"></a>備註  
- 呼叫端必須釋放 ICorDebugModule 物件的指標之後就無法再使用中。  
+ 呼叫端不再使用時，必須釋放 ICorDebugModule 物件的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
