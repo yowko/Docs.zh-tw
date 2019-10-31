@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: f31185e0-f01d-463a-b392-42163e39bfe9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 29427bab938437c40d0edb5676a2f8f76cbb6691
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 728e8bdbce7f93176324d8f80261030f8cbae283
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764855"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140415"
 ---
-# <a name="icorpublishprocessgetprocessid-method"></a><span data-ttu-id="c3166-102">ICorPublishProcess::GetProcessID 方法</span><span class="sxs-lookup"><span data-stu-id="c3166-102">ICorPublishProcess::GetProcessID Method</span></span>
-<span data-ttu-id="c3166-103">取得這個處理序作業系統識別項。</span><span class="sxs-lookup"><span data-stu-id="c3166-103">Gets the operating system identifier for this process.</span></span>  
+# <a name="icorpublishprocessgetprocessid-method"></a><span data-ttu-id="6301d-102">ICorPublishProcess::GetProcessID 方法</span><span class="sxs-lookup"><span data-stu-id="6301d-102">ICorPublishProcess::GetProcessID Method</span></span>
+<span data-ttu-id="6301d-103">取得此進程的作業系統識別碼。</span><span class="sxs-lookup"><span data-stu-id="6301d-103">Gets the operating system identifier for this process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c3166-104">語法</span><span class="sxs-lookup"><span data-stu-id="c3166-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6301d-104">語法</span><span class="sxs-lookup"><span data-stu-id="6301d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetProcessID (  
@@ -35,19 +33,19 @@ HRESULT GetProcessID (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c3166-105">參數</span><span class="sxs-lookup"><span data-stu-id="c3166-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6301d-105">參數</span><span class="sxs-lookup"><span data-stu-id="6301d-105">Parameters</span></span>  
  `pid`  
- <span data-ttu-id="c3166-106">[out]所表示的程序的識別項的指標[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)物件。</span><span class="sxs-lookup"><span data-stu-id="c3166-106">[out] A pointer to the identifier of the process represented by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) object.</span></span>  
+ <span data-ttu-id="6301d-106">脫銷這個[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)物件所表示之進程的識別碼指標。</span><span class="sxs-lookup"><span data-stu-id="6301d-106">[out] A pointer to the identifier of the process represented by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c3166-107">需求</span><span class="sxs-lookup"><span data-stu-id="c3166-107">Requirements</span></span>  
- <span data-ttu-id="c3166-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c3166-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6301d-107">需求</span><span class="sxs-lookup"><span data-stu-id="6301d-107">Requirements</span></span>  
+ <span data-ttu-id="6301d-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6301d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c3166-109">**標頭：** CorPub.idl CorPub.h</span><span class="sxs-lookup"><span data-stu-id="c3166-109">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="6301d-109">**標頭：** CorPub .idl，CorPub。h</span><span class="sxs-lookup"><span data-stu-id="6301d-109">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="c3166-110">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c3166-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6301d-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6301d-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c3166-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3166-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6301d-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6301d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c3166-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c3166-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6301d-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="6301d-112">See also</span></span>
 
-- [<span data-ttu-id="c3166-113">ICorPublishProcess 介面</span><span class="sxs-lookup"><span data-stu-id="c3166-113">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+- [<span data-ttu-id="6301d-113">ICorPublishProcess 介面</span><span class="sxs-lookup"><span data-stu-id="6301d-113">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)

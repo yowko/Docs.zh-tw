@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: fbc418e8-fa22-420d-84ec-e0e1800db041
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da5c5a12df5689f113857045ba4bcda696bda8f5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b9eab1274f2d0ad562c0dec6adeddb85c6cfc458
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756721"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138384"
 ---
-# <a name="icordebugheapvalue2createhandle-method"></a><span data-ttu-id="01109-102">ICorDebugHeapValue2::CreateHandle 方法</span><span class="sxs-lookup"><span data-stu-id="01109-102">ICorDebugHeapValue2::CreateHandle Method</span></span>
-<span data-ttu-id="01109-103">建立堆積值，這個 ICorDebugHeapValue2 物件所表示的指定類型的控制代碼。</span><span class="sxs-lookup"><span data-stu-id="01109-103">Creates a handle of the specified type for the heap value represented by this ICorDebugHeapValue2 object.</span></span>  
+# <a name="icordebugheapvalue2createhandle-method"></a><span data-ttu-id="215b4-102">ICorDebugHeapValue2::CreateHandle 方法</span><span class="sxs-lookup"><span data-stu-id="215b4-102">ICorDebugHeapValue2::CreateHandle Method</span></span>
+<span data-ttu-id="215b4-103">針對這個 ICorDebugHeapValue2 物件所表示的堆積值，建立指定類型的控制碼。</span><span class="sxs-lookup"><span data-stu-id="215b4-103">Creates a handle of the specified type for the heap value represented by this ICorDebugHeapValue2 object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01109-104">語法</span><span class="sxs-lookup"><span data-stu-id="01109-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="215b4-104">語法</span><span class="sxs-lookup"><span data-stu-id="215b4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateHandle (  
@@ -36,23 +34,23 @@ HRESULT CreateHandle (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="01109-105">參數</span><span class="sxs-lookup"><span data-stu-id="01109-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="215b4-105">參數</span><span class="sxs-lookup"><span data-stu-id="215b4-105">Parameters</span></span>  
  `type`  
- <span data-ttu-id="01109-106">[in]CorDebugHandleType 列舉，指定要建立的控制代碼的型別值。</span><span class="sxs-lookup"><span data-stu-id="01109-106">[in] A value of the CorDebugHandleType enumeration that specifies the type of handle to be created.</span></span>  
+ <span data-ttu-id="215b4-106">在CorDebugHandleType 列舉的值，指定要建立的控制碼類型。</span><span class="sxs-lookup"><span data-stu-id="215b4-106">[in] A value of the CorDebugHandleType enumeration that specifies the type of handle to be created.</span></span>  
   
  `ppHandle`  
- <span data-ttu-id="01109-107">[out]ICorDebugHandleValue 物件，表示此堆積值的新控制代碼的位址指標。</span><span class="sxs-lookup"><span data-stu-id="01109-107">[out] A pointer to the address of an ICorDebugHandleValue object that represents the new handle for this heap value.</span></span>  
+ <span data-ttu-id="215b4-107">脫銷ICorDebugHandleValue 物件位址的指標，表示這個堆積值的新控制碼。</span><span class="sxs-lookup"><span data-stu-id="215b4-107">[out] A pointer to the address of an ICorDebugHandleValue object that represents the new handle for this heap value.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="01109-108">備註</span><span class="sxs-lookup"><span data-stu-id="01109-108">Remarks</span></span>  
- <span data-ttu-id="01109-109">控制代碼會在堆積的值，與相關聯的應用程式定義域中建立，而且會變成無效，如果應用程式定義域卸載。</span><span class="sxs-lookup"><span data-stu-id="01109-109">The handle will be created in the application domain that is associated with the heap value, and will become invalid if the application domain gets unloaded.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="215b4-108">備註</span><span class="sxs-lookup"><span data-stu-id="215b4-108">Remarks</span></span>  
+ <span data-ttu-id="215b4-109">系統會在與堆積值相關聯的應用程式域中建立控制碼，如果已卸載應用程式域，將會變成無效。</span><span class="sxs-lookup"><span data-stu-id="215b4-109">The handle will be created in the application domain that is associated with the heap value, and will become invalid if the application domain gets unloaded.</span></span>  
   
- <span data-ttu-id="01109-110">此函式相同的堆積值的多個呼叫會建立多個控制代碼。</span><span class="sxs-lookup"><span data-stu-id="01109-110">Multiple calls to this function for the same heap value will create multiple handles.</span></span> <span data-ttu-id="01109-111">控制代碼會影響記憶體回收行程的效能，因為偵錯工具應限制本身相對較小的數字，一次是作用中的控制代碼 (大約 256)。</span><span class="sxs-lookup"><span data-stu-id="01109-111">Because handles affect the performance of the garbage collector, the debugger should limit itself to a relatively small number of handles (about 256) that are active at a time.</span></span>  
+ <span data-ttu-id="215b4-110">針對相同堆積值多次呼叫此函式，將會建立多個控制碼。</span><span class="sxs-lookup"><span data-stu-id="215b4-110">Multiple calls to this function for the same heap value will create multiple handles.</span></span> <span data-ttu-id="215b4-111">由於控制碼會影響垃圾收集行程的效能，因此偵錯工具應該將其本身限制為一次作用中的相對較少控制碼（大約256）。</span><span class="sxs-lookup"><span data-stu-id="215b4-111">Because handles affect the performance of the garbage collector, the debugger should limit itself to a relatively small number of handles (about 256) that are active at a time.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="01109-112">需求</span><span class="sxs-lookup"><span data-stu-id="01109-112">Requirements</span></span>  
- <span data-ttu-id="01109-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="01109-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="215b4-112">需求</span><span class="sxs-lookup"><span data-stu-id="215b4-112">Requirements</span></span>  
+ <span data-ttu-id="215b4-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="215b4-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="01109-114">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="01109-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="215b4-114">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="215b4-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="01109-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="01109-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="215b4-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="215b4-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="01109-116">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01109-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="215b4-116">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="215b4-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

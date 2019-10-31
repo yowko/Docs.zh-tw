@@ -1,5 +1,5 @@
 ---
-title: 作法：在 PLINQ 中指定合併選項
+title: 如何：在 PLINQ 中指定合併選項
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,30 +8,28 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to use merge options
 ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 947f3cb15b7eb372d20884ece73374114c48f472
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: 40abe2f101f6fa23d804ef30e27d642a36908196
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988849"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139270"
 ---
-# <a name="how-to-specify-merge-options-in-plinq"></a><span data-ttu-id="36e0b-102">作法：在 PLINQ 中指定合併選項</span><span class="sxs-lookup"><span data-stu-id="36e0b-102">How to: Specify Merge Options in PLINQ</span></span>
-<span data-ttu-id="36e0b-103">此範例示範如何指定將套用到 PLINQ 查詢中所有後續運算子的合併選項。</span><span class="sxs-lookup"><span data-stu-id="36e0b-103">This example shows how to specify the merge options that will apply to all subsequent operators in a PLINQ query.</span></span> <span data-ttu-id="36e0b-104">您不需明確地設定合併選項，但這樣做可改善效能。</span><span class="sxs-lookup"><span data-stu-id="36e0b-104">You do not have to set merge options explicitly, but doing so may improve performance.</span></span> <span data-ttu-id="36e0b-105">如需合併選項的詳細資訊，請參閱 [PLINQ 中的合併選項](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)。</span><span class="sxs-lookup"><span data-stu-id="36e0b-105">For more information about merge options, see [Merge Options in PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).</span></span>  
+# <a name="how-to-specify-merge-options-in-plinq"></a><span data-ttu-id="f634c-102">如何：在 PLINQ 中指定合併選項</span><span class="sxs-lookup"><span data-stu-id="f634c-102">How to: Specify Merge Options in PLINQ</span></span>
+<span data-ttu-id="f634c-103">此範例示範如何指定將套用到 PLINQ 查詢中所有後續運算子的合併選項。</span><span class="sxs-lookup"><span data-stu-id="f634c-103">This example shows how to specify the merge options that will apply to all subsequent operators in a PLINQ query.</span></span> <span data-ttu-id="f634c-104">您不需明確地設定合併選項，但這樣做可改善效能。</span><span class="sxs-lookup"><span data-stu-id="f634c-104">You do not have to set merge options explicitly, but doing so may improve performance.</span></span> <span data-ttu-id="f634c-105">如需合併選項的詳細資訊，請參閱 [PLINQ 中的合併選項](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)。</span><span class="sxs-lookup"><span data-stu-id="f634c-105">For more information about merge options, see [Merge Options in PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).</span></span>  
   
 > [!WARNING]
-> <span data-ttu-id="36e0b-106">這個範例是為了示範用法，執行速度可能比不上對應的循序 LINQ to Objects 查詢。</span><span class="sxs-lookup"><span data-stu-id="36e0b-106">This example is intended to demonstrate usage, and might not run faster than the equivalent sequential LINQ to Objects query.</span></span> <span data-ttu-id="36e0b-107">如需加速的詳細資訊，請參閱[認識 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。</span><span class="sxs-lookup"><span data-stu-id="36e0b-107">For more information about speedup, see [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span></span>  
+> <span data-ttu-id="f634c-106">這個範例是為了示範用法，執行速度可能比不上對應的循序 LINQ to Objects 查詢。</span><span class="sxs-lookup"><span data-stu-id="f634c-106">This example is intended to demonstrate usage, and might not run faster than the equivalent sequential LINQ to Objects query.</span></span> <span data-ttu-id="f634c-107">如需加速的詳細資訊，請參閱[認識 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。</span><span class="sxs-lookup"><span data-stu-id="f634c-107">For more information about speedup, see [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="36e0b-108">範例</span><span class="sxs-lookup"><span data-stu-id="36e0b-108">Example</span></span>  
- <span data-ttu-id="36e0b-109">下列範例示範具有未排序來源之基本案例中的合併選項行為，並將高度耗費資源的函式套用至每個元素。</span><span class="sxs-lookup"><span data-stu-id="36e0b-109">The following example demonstrates the behavior of merge options in a basic scenario that has an unordered source and applies an expensive function to every element.</span></span>  
+## <a name="example"></a><span data-ttu-id="f634c-108">範例</span><span class="sxs-lookup"><span data-stu-id="f634c-108">Example</span></span>  
+ <span data-ttu-id="f634c-109">下列範例示範具有未排序來源之基本案例中的合併選項行為，並將高度耗費資源的函式套用至每個元素。</span><span class="sxs-lookup"><span data-stu-id="f634c-109">The following example demonstrates the behavior of merge options in a basic scenario that has an unordered source and applies an expensive function to every element.</span></span>  
   
  [!code-csharp[PLINQ#23](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#23)]
  [!code-vb[PLINQ#23](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#23)]  
   
- <span data-ttu-id="36e0b-110">如果 <xref:System.Linq.ParallelMergeOptions.AutoBuffered> 在產生第一個元素前造成非預期的延遲，請試用 <xref:System.Linq.ParallelMergeOptions.NotBuffered> 選項，以更快且更順暢的方式產生結果元素。</span><span class="sxs-lookup"><span data-stu-id="36e0b-110">In cases where the <xref:System.Linq.ParallelMergeOptions.AutoBuffered> option incurs an undesirable latency before the first element is yielded, try the <xref:System.Linq.ParallelMergeOptions.NotBuffered> option to yield result elements faster and more smoothly.</span></span>  
+ <span data-ttu-id="f634c-110">如果 <xref:System.Linq.ParallelMergeOptions.AutoBuffered> 在產生第一個元素前造成非預期的延遲，請試用 <xref:System.Linq.ParallelMergeOptions.NotBuffered> 選項，以更快且更順暢的方式產生結果元素。</span><span class="sxs-lookup"><span data-stu-id="f634c-110">In cases where the <xref:System.Linq.ParallelMergeOptions.AutoBuffered> option incurs an undesirable latency before the first element is yielded, try the <xref:System.Linq.ParallelMergeOptions.NotBuffered> option to yield result elements faster and more smoothly.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="36e0b-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="36e0b-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f634c-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="f634c-111">See also</span></span>
 
 - <xref:System.Linq.ParallelMergeOptions>
-- [<span data-ttu-id="36e0b-112">平行 LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="36e0b-112">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [<span data-ttu-id="f634c-112">平行 LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="f634c-112">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

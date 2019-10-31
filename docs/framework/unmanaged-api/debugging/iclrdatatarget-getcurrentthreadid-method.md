@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: dc9a0a6c-d592-4fb7-86ed-62684da3b0e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 45a409bda8861701e68d3ea1a956a4c35ce88ddd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ccb5cda11a2466496a4b3981e8185cbb7130f66f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738789"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122902"
 ---
-# <a name="iclrdatatargetgetcurrentthreadid-method"></a><span data-ttu-id="89a65-102">ICLRDataTarget::GetCurrentThreadID 方法</span><span class="sxs-lookup"><span data-stu-id="89a65-102">ICLRDataTarget::GetCurrentThreadID Method</span></span>
-<span data-ttu-id="89a65-103">取得目前執行緒的作業系統識別項。</span><span class="sxs-lookup"><span data-stu-id="89a65-103">Gets the operating system identifier for the current thread.</span></span>  
+# <a name="iclrdatatargetgetcurrentthreadid-method"></a><span data-ttu-id="717df-102">ICLRDataTarget::GetCurrentThreadID 方法</span><span class="sxs-lookup"><span data-stu-id="717df-102">ICLRDataTarget::GetCurrentThreadID Method</span></span>
+<span data-ttu-id="717df-103">取得目前線程的作業系統識別碼。</span><span class="sxs-lookup"><span data-stu-id="717df-103">Gets the operating system identifier for the current thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="89a65-104">語法</span><span class="sxs-lookup"><span data-stu-id="89a65-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="717df-104">語法</span><span class="sxs-lookup"><span data-stu-id="717df-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCurrentThreadID (  
@@ -35,22 +33,22 @@ HRESULT GetCurrentThreadID (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="89a65-105">參數</span><span class="sxs-lookup"><span data-stu-id="89a65-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="717df-105">參數</span><span class="sxs-lookup"><span data-stu-id="717df-105">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="89a65-106">[out]目標處理序的目前執行緒的作業系統識別碼指標。</span><span class="sxs-lookup"><span data-stu-id="89a65-106">[out] A pointer to the operating system identifier of the current thread for the target process.</span></span>  
+ <span data-ttu-id="717df-106">脫銷目標進程之目前線程的作業系統識別碼指標。</span><span class="sxs-lookup"><span data-stu-id="717df-106">[out] A pointer to the operating system identifier of the current thread for the target process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="89a65-107">備註</span><span class="sxs-lookup"><span data-stu-id="89a65-107">Remarks</span></span>  
- <span data-ttu-id="89a65-108">如果沒有目前的執行緒，目標處理序`GetCurrentThreadID`方法可能會失敗。</span><span class="sxs-lookup"><span data-stu-id="89a65-108">If there is no current thread for the target process, the `GetCurrentThreadID` method may fail.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="717df-107">備註</span><span class="sxs-lookup"><span data-stu-id="717df-107">Remarks</span></span>  
+ <span data-ttu-id="717df-108">如果目標進程沒有目前的執行緒，`GetCurrentThreadID` 方法可能會失敗。</span><span class="sxs-lookup"><span data-stu-id="717df-108">If there is no current thread for the target process, the `GetCurrentThreadID` method may fail.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="89a65-109">需求</span><span class="sxs-lookup"><span data-stu-id="89a65-109">Requirements</span></span>  
- <span data-ttu-id="89a65-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="89a65-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="717df-109">需求</span><span class="sxs-lookup"><span data-stu-id="717df-109">Requirements</span></span>  
+ <span data-ttu-id="717df-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="717df-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="89a65-111">**標頭：** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="89a65-111">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="717df-111">**標頭：** ClrData .idl，ClrData。h</span><span class="sxs-lookup"><span data-stu-id="717df-111">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="89a65-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="89a65-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="717df-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="717df-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="89a65-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89a65-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="717df-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="717df-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="89a65-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="89a65-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="717df-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="717df-114">See also</span></span>
 
-- [<span data-ttu-id="89a65-115">ICLRDataTarget 介面</span><span class="sxs-lookup"><span data-stu-id="89a65-115">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [<span data-ttu-id="717df-115">ICLRDataTarget 介面</span><span class="sxs-lookup"><span data-stu-id="717df-115">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 31e53494-bcc9-4981-91a4-f7e0f02cad48
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e03e7a965bc923d91cb0c83a9ea8ea5899da63a9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c159a175ddd380015cc2dc21637c8b63fd3caea6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754665"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137887"
 ---
-# <a name="icordebugfunctiongetlocalvarsigtoken-method"></a><span data-ttu-id="2d40e-102">ICorDebugFunction::GetLocalVarSigToken 方法</span><span class="sxs-lookup"><span data-stu-id="2d40e-102">ICorDebugFunction::GetLocalVarSigToken Method</span></span>
-<span data-ttu-id="2d40e-103">取得區域變數簽章這個 ICorDebugFunction 執行個體所表示的函式的中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="2d40e-103">Gets the metadata token for the local variable signature of the function that is represented by this ICorDebugFunction instance.</span></span>  
+# <a name="icordebugfunctiongetlocalvarsigtoken-method"></a><span data-ttu-id="5cb6e-102">ICorDebugFunction::GetLocalVarSigToken 方法</span><span class="sxs-lookup"><span data-stu-id="5cb6e-102">ICorDebugFunction::GetLocalVarSigToken Method</span></span>
+<span data-ttu-id="5cb6e-103">取得此 ICorDebugFunction 實例所表示之函式的區域變數簽章的元資料標記。</span><span class="sxs-lookup"><span data-stu-id="5cb6e-103">Gets the metadata token for the local variable signature of the function that is represented by this ICorDebugFunction instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2d40e-104">語法</span><span class="sxs-lookup"><span data-stu-id="2d40e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5cb6e-104">語法</span><span class="sxs-lookup"><span data-stu-id="5cb6e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLocalVarSigToken (  
@@ -35,15 +33,15 @@ HRESULT GetLocalVarSigToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2d40e-105">參數</span><span class="sxs-lookup"><span data-stu-id="2d40e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5cb6e-105">參數</span><span class="sxs-lookup"><span data-stu-id="5cb6e-105">Parameters</span></span>  
  `pmdSig`  
- <span data-ttu-id="2d40e-106">[out]指標`mdSignature`本機變數的簽章，此函式的語彙基元或`mdSignatureNil`，如果此函式沒有任何區域變數。</span><span class="sxs-lookup"><span data-stu-id="2d40e-106">[out] A pointer to the `mdSignature` token for the local variable signature of this function, or `mdSignatureNil`, if this function has no local variables.</span></span>  
+ <span data-ttu-id="5cb6e-106">脫銷此函式的區域變數簽章之 `mdSignature` token 的指標，如果此函式沒有任何區域變數，則為 `mdSignatureNil`。</span><span class="sxs-lookup"><span data-stu-id="5cb6e-106">[out] A pointer to the `mdSignature` token for the local variable signature of this function, or `mdSignatureNil`, if this function has no local variables.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2d40e-107">需求</span><span class="sxs-lookup"><span data-stu-id="2d40e-107">Requirements</span></span>  
- <span data-ttu-id="2d40e-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2d40e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5cb6e-107">需求</span><span class="sxs-lookup"><span data-stu-id="5cb6e-107">Requirements</span></span>  
+ <span data-ttu-id="5cb6e-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5cb6e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2d40e-109">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2d40e-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5cb6e-109">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5cb6e-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2d40e-110">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2d40e-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5cb6e-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5cb6e-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2d40e-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2d40e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="5cb6e-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5cb6e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

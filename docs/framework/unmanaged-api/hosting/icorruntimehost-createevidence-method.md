@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e235ea80-b84c-4442-a4c3-fc96c25a8eb9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e3b17ca32051cd5fc0673ef26124b855a66f9785
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 429ce0510162b3256cdf58f4820b04dd80243e29
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779982"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139630"
 ---
-# <a name="icorruntimehostcreateevidence-method"></a><span data-ttu-id="c4373-102">ICorRuntimeHost::CreateEvidence 方法</span><span class="sxs-lookup"><span data-stu-id="c4373-102">ICorRuntimeHost::CreateEvidence Method</span></span>
-<span data-ttu-id="c4373-103">取得類型的介面指標<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>，可讓主應用程式建立安全性辨識項，要傳遞給[CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)或是[CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="c4373-103">Gets an interface pointer of type <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, which allows the host to create security evidence to pass to the [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) or [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) method.</span></span>  
+# <a name="icorruntimehostcreateevidence-method"></a><span data-ttu-id="effba-102">ICorRuntimeHost::CreateEvidence 方法</span><span class="sxs-lookup"><span data-stu-id="effba-102">ICorRuntimeHost::CreateEvidence Method</span></span>
+<span data-ttu-id="effba-103">取得類型 <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>的介面指標，可讓主機建立安全性辨識項，以傳遞至[CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)或[CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="effba-103">Gets an interface pointer of type <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, which allows the host to create security evidence to pass to the [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) or [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c4373-104">語法</span><span class="sxs-lookup"><span data-stu-id="c4373-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="effba-104">語法</span><span class="sxs-lookup"><span data-stu-id="effba-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateEvidence (  
@@ -35,33 +33,33 @@ HRESULT CreateEvidence (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c4373-105">參數</span><span class="sxs-lookup"><span data-stu-id="c4373-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="effba-105">參數</span><span class="sxs-lookup"><span data-stu-id="effba-105">Parameters</span></span>  
  `pEvidence`  
- <span data-ttu-id="c4373-106">[out]介面指標<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>用來建立安全性辨識項的執行個體。</span><span class="sxs-lookup"><span data-stu-id="c4373-106">[out] A interface pointer to an <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> instance used to create security evidence.</span></span> <span data-ttu-id="c4373-107">這個指標型別`IUnknown`，所以通常應該呼叫的呼叫端`QueryInterface`若要取得的指標，此介面上<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="c4373-107">This pointer is typed `IUnknown`, so callers should typically call `QueryInterface` on this interface to obtain a pointer to an <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>.</span></span>  
+ <span data-ttu-id="effba-106">脫銷用來建立安全性辨識項之 <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> 實例的介面指標。</span><span class="sxs-lookup"><span data-stu-id="effba-106">[out] A interface pointer to an <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> instance used to create security evidence.</span></span> <span data-ttu-id="effba-107">這個指標的型別 `IUnknown`，因此呼叫端通常應該在這個介面上呼叫 `QueryInterface`，以取得 <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>的指標。</span><span class="sxs-lookup"><span data-stu-id="effba-107">This pointer is typed `IUnknown`, so callers should typically call `QueryInterface` on this interface to obtain a pointer to an <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c4373-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="c4373-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="effba-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="effba-108">Return Value</span></span>  
   
-|<span data-ttu-id="c4373-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c4373-109">HRESULT</span></span>|<span data-ttu-id="c4373-110">描述</span><span class="sxs-lookup"><span data-stu-id="c4373-110">Description</span></span>|  
+|<span data-ttu-id="effba-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="effba-109">HRESULT</span></span>|<span data-ttu-id="effba-110">描述</span><span class="sxs-lookup"><span data-stu-id="effba-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c4373-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="c4373-111">S_OK</span></span>|<span data-ttu-id="c4373-112">此作業成功。</span><span class="sxs-lookup"><span data-stu-id="c4373-112">The operation was successful.</span></span>|  
-|<span data-ttu-id="c4373-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="c4373-113">S_FALSE</span></span>|<span data-ttu-id="c4373-114">作業無法完成。</span><span class="sxs-lookup"><span data-stu-id="c4373-114">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="c4373-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="c4373-115">E_FAIL</span></span>|<span data-ttu-id="c4373-116">發生不明、 重大失敗。</span><span class="sxs-lookup"><span data-stu-id="c4373-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="c4373-117">如果方法會傳回 E_FAIL，common language runtime (CLR) 不再使用舊處理序中。</span><span class="sxs-lookup"><span data-stu-id="c4373-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="c4373-118">任何裝載 api 的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="c4373-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="c4373-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="c4373-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="c4373-120">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="c4373-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="effba-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="effba-111">S_OK</span></span>|<span data-ttu-id="effba-112">作業成功。</span><span class="sxs-lookup"><span data-stu-id="effba-112">The operation was successful.</span></span>|  
+|<span data-ttu-id="effba-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="effba-113">S_FALSE</span></span>|<span data-ttu-id="effba-114">作業無法完成。</span><span class="sxs-lookup"><span data-stu-id="effba-114">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="effba-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="effba-115">E_FAIL</span></span>|<span data-ttu-id="effba-116">發生未知的嚴重失敗。</span><span class="sxs-lookup"><span data-stu-id="effba-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="effba-117">如果方法傳回 E_FAIL，則 common language runtime （CLR）在進程中就不再可用。</span><span class="sxs-lookup"><span data-stu-id="effba-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="effba-118">對任何裝載 Api 的後續呼叫都會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="effba-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="effba-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="effba-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="effba-120">CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。</span><span class="sxs-lookup"><span data-stu-id="effba-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c4373-121">備註</span><span class="sxs-lookup"><span data-stu-id="c4373-121">Remarks</span></span>  
- <span data-ttu-id="c4373-122">這個方法會傳回空集合無法填入從原生程式碼。</span><span class="sxs-lookup"><span data-stu-id="c4373-122">This method returns an empty collection that cannot be populated from native code.</span></span> <span data-ttu-id="c4373-123">您應該使用<xref:System.Security.Policy.Evidence>方法改為。</span><span class="sxs-lookup"><span data-stu-id="c4373-123">You should use the <xref:System.Security.Policy.Evidence> method instead.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="effba-121">備註</span><span class="sxs-lookup"><span data-stu-id="effba-121">Remarks</span></span>  
+ <span data-ttu-id="effba-122">這個方法會傳回無法從機器碼填入的空集合。</span><span class="sxs-lookup"><span data-stu-id="effba-122">This method returns an empty collection that cannot be populated from native code.</span></span> <span data-ttu-id="effba-123">您應該改用 <xref:System.Security.Policy.Evidence> 方法。</span><span class="sxs-lookup"><span data-stu-id="effba-123">You should use the <xref:System.Security.Policy.Evidence> method instead.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c4373-124">需求</span><span class="sxs-lookup"><span data-stu-id="c4373-124">Requirements</span></span>  
- <span data-ttu-id="c4373-125">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c4373-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="effba-124">需求</span><span class="sxs-lookup"><span data-stu-id="effba-124">Requirements</span></span>  
+ <span data-ttu-id="effba-125">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="effba-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c4373-126">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c4373-126">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="effba-126">**標頭：** Mscoree.dll. h</span><span class="sxs-lookup"><span data-stu-id="effba-126">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c4373-127">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="c4373-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="effba-127">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="effba-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c4373-128">**.NET framework 版本：** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="c4373-128">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="effba-128">**.NET Framework 版本：** 1.0、1。1</span><span class="sxs-lookup"><span data-stu-id="effba-128">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c4373-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c4373-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="effba-129">請參閱</span><span class="sxs-lookup"><span data-stu-id="effba-129">See also</span></span>
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [<span data-ttu-id="c4373-130">ICorRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="c4373-130">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="effba-130">ICorRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="effba-130">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

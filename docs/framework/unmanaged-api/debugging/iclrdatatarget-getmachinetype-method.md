@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5f1f9c61-3e3b-48b2-b111-a4395f7623a7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 958968fb1a84b598b0c3e92151fbad58fc5e79d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 941d1b4057ef78a6235a0ba853e48a000f2087e8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738751"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122881"
 ---
-# <a name="iclrdatatargetgetmachinetype-method"></a><span data-ttu-id="c8845-102">ICLRDataTarget::GetMachineType 方法</span><span class="sxs-lookup"><span data-stu-id="c8845-102">ICLRDataTarget::GetMachineType Method</span></span>
-<span data-ttu-id="c8845-103">取得目標處理序正在使用的指令集的類型識別項。</span><span class="sxs-lookup"><span data-stu-id="c8845-103">Gets the identifier for the kind of instruction set that the target process is using.</span></span>  
+# <a name="iclrdatatargetgetmachinetype-method"></a><span data-ttu-id="11c08-102">ICLRDataTarget::GetMachineType 方法</span><span class="sxs-lookup"><span data-stu-id="11c08-102">ICLRDataTarget::GetMachineType Method</span></span>
+<span data-ttu-id="11c08-103">取得目標進程所使用之指令集種類的識別碼。</span><span class="sxs-lookup"><span data-stu-id="11c08-103">Gets the identifier for the kind of instruction set that the target process is using.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c8845-104">語法</span><span class="sxs-lookup"><span data-stu-id="c8845-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="11c08-104">語法</span><span class="sxs-lookup"><span data-stu-id="11c08-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMachineType (  
@@ -35,19 +33,19 @@ HRESULT GetMachineType (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c8845-105">參數</span><span class="sxs-lookup"><span data-stu-id="c8845-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="11c08-105">參數</span><span class="sxs-lookup"><span data-stu-id="11c08-105">Parameters</span></span>  
  `machineType`  
- <span data-ttu-id="c8845-106">[out]使用值，指出的指令集，目標處理序的指標。</span><span class="sxs-lookup"><span data-stu-id="c8845-106">[out] A pointer to a value that indicates the instruction set that the target process is using.</span></span> <span data-ttu-id="c8845-107">傳回`machineType`是 WinNT.h 標頭檔中所定義的 IMAGE_FILE_MACHINE 常數之一。</span><span class="sxs-lookup"><span data-stu-id="c8845-107">The returned `machineType` is one of the IMAGE_FILE_MACHINE constants, which are defined in the WinNT.h header file.</span></span>  
+ <span data-ttu-id="11c08-106">脫銷值的指標，表示目標進程所使用的指令集。</span><span class="sxs-lookup"><span data-stu-id="11c08-106">[out] A pointer to a value that indicates the instruction set that the target process is using.</span></span> <span data-ttu-id="11c08-107">傳回的 `machineType` 是在 WinNT 標頭檔中定義的其中一個 IMAGE_FILE_MACHINE 常數。</span><span class="sxs-lookup"><span data-stu-id="11c08-107">The returned `machineType` is one of the IMAGE_FILE_MACHINE constants, which are defined in the WinNT.h header file.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c8845-108">需求</span><span class="sxs-lookup"><span data-stu-id="c8845-108">Requirements</span></span>  
- <span data-ttu-id="c8845-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c8845-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="11c08-108">需求</span><span class="sxs-lookup"><span data-stu-id="11c08-108">Requirements</span></span>  
+ <span data-ttu-id="11c08-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="11c08-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c8845-110">**標頭：** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="c8845-110">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="11c08-110">**標頭：** ClrData .idl，ClrData。h</span><span class="sxs-lookup"><span data-stu-id="11c08-110">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="c8845-111">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c8845-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="11c08-111">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="11c08-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c8845-112">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8845-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="11c08-112">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="11c08-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c8845-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c8845-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="11c08-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="11c08-113">See also</span></span>
 
-- [<span data-ttu-id="c8845-114">ICLRDataTarget 介面</span><span class="sxs-lookup"><span data-stu-id="c8845-114">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [<span data-ttu-id="11c08-114">ICLRDataTarget 介面</span><span class="sxs-lookup"><span data-stu-id="11c08-114">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

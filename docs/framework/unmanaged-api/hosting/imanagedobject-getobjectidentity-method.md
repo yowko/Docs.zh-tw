@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b862ff3e-e480-4cdf-84e2-e1013334a467
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 291246169a5cc2c95b117bc55bc269791885b2ea
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c884569a452fb2985713956f942205cda6ea1ff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749110"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141242"
 ---
-# <a name="imanagedobjectgetobjectidentity-method"></a><span data-ttu-id="0120d-102">IManagedObject::GetObjectIdentity 方法</span><span class="sxs-lookup"><span data-stu-id="0120d-102">IManagedObject::GetObjectIdentity Method</span></span>
-<span data-ttu-id="0120d-103">取得此受管理物件識別。</span><span class="sxs-lookup"><span data-stu-id="0120d-103">Gets the identity of this managed object.</span></span>  
+# <a name="imanagedobjectgetobjectidentity-method"></a><span data-ttu-id="d43f7-102">IManagedObject::GetObjectIdentity 方法</span><span class="sxs-lookup"><span data-stu-id="d43f7-102">IManagedObject::GetObjectIdentity Method</span></span>
+<span data-ttu-id="d43f7-103">取得這個 managed 物件的識別。</span><span class="sxs-lookup"><span data-stu-id="d43f7-103">Gets the identity of this managed object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0120d-104">語法</span><span class="sxs-lookup"><span data-stu-id="0120d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d43f7-104">語法</span><span class="sxs-lookup"><span data-stu-id="d43f7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetObjectIdentity (  
@@ -37,28 +35,28 @@ HRESULT GetObjectIdentity (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0120d-105">參數</span><span class="sxs-lookup"><span data-stu-id="0120d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d43f7-105">參數</span><span class="sxs-lookup"><span data-stu-id="d43f7-105">Parameters</span></span>  
  `pBSTRGUID`  
- <span data-ttu-id="0120d-106">[out]物件所在的程序的 GUID 指標。</span><span class="sxs-lookup"><span data-stu-id="0120d-106">[out] A pointer to the GUID of the process in which the object resides.</span></span>  
+ <span data-ttu-id="d43f7-106">脫銷物件所在進程 GUID 的指標。</span><span class="sxs-lookup"><span data-stu-id="d43f7-106">[out] A pointer to the GUID of the process in which the object resides.</span></span>  
   
  `AppDomainID`  
- <span data-ttu-id="0120d-107">[out]物件的應用程式定義域的識別碼指標。</span><span class="sxs-lookup"><span data-stu-id="0120d-107">[out] A pointer to the ID of the object's application domain.</span></span>  
+ <span data-ttu-id="d43f7-107">脫銷物件之應用程式域的識別碼指標。</span><span class="sxs-lookup"><span data-stu-id="d43f7-107">[out] A pointer to the ID of the object's application domain.</span></span>  
   
  `pCCW`  
- <span data-ttu-id="0120d-108">[out]物件的索引，在 COM 傳統 v-table 指標。</span><span class="sxs-lookup"><span data-stu-id="0120d-108">[out] A pointer to object's index in the COM classic v-table.</span></span>  
+ <span data-ttu-id="d43f7-108">脫銷COM 傳統 v 資料表中物件索引的指標。</span><span class="sxs-lookup"><span data-stu-id="d43f7-108">[out] A pointer to object's index in the COM classic v-table.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0120d-109">備註</span><span class="sxs-lookup"><span data-stu-id="0120d-109">Remarks</span></span>  
- <span data-ttu-id="0120d-110">受管理物件的身分識別會納入 COM 傳統 v-table 處理序 GUID、 應用程式定義域 ID 和物件的索引。</span><span class="sxs-lookup"><span data-stu-id="0120d-110">The identity of a managed object includes process GUID, application domain ID, and the object's index in the COM classic v-table.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d43f7-109">備註</span><span class="sxs-lookup"><span data-stu-id="d43f7-109">Remarks</span></span>  
+ <span data-ttu-id="d43f7-110">Managed 物件的身分識別包含進程 GUID、應用程式域識別碼，以及 COM 傳統 v 資料表中物件的索引。</span><span class="sxs-lookup"><span data-stu-id="d43f7-110">The identity of a managed object includes process GUID, application domain ID, and the object's index in the COM classic v-table.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0120d-111">需求</span><span class="sxs-lookup"><span data-stu-id="0120d-111">Requirements</span></span>  
- <span data-ttu-id="0120d-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0120d-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d43f7-111">需求</span><span class="sxs-lookup"><span data-stu-id="d43f7-111">Requirements</span></span>  
+ <span data-ttu-id="d43f7-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d43f7-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0120d-113">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0120d-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="d43f7-113">**標頭：** Mscoree.dll. h</span><span class="sxs-lookup"><span data-stu-id="d43f7-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0120d-114">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="0120d-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d43f7-114">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="d43f7-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0120d-115">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0120d-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d43f7-115">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d43f7-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0120d-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0120d-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d43f7-116">請參閱</span><span class="sxs-lookup"><span data-stu-id="d43f7-116">See also</span></span>
 
-- [<span data-ttu-id="0120d-117">IManagedObject 介面</span><span class="sxs-lookup"><span data-stu-id="0120d-117">IManagedObject Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)
+- [<span data-ttu-id="d43f7-117">IManagedObject 介面</span><span class="sxs-lookup"><span data-stu-id="d43f7-117">IManagedObject Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c9a26ea3-b8eb-4b8e-854f-9a2ca26b3b39
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d672cf2375a5354c48608b3e4156867ba406992a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e9f7f1fc0f04e8cc8c69d533c1dbba380d04ebfb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765023"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140494"
 ---
-# <a name="icorpublishenumclone-method"></a><span data-ttu-id="3a367-102">ICorPublishEnum::Clone 方法</span><span class="sxs-lookup"><span data-stu-id="3a367-102">ICorPublishEnum::Clone Method</span></span>
-<span data-ttu-id="3a367-103">建立一份這[ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)物件。</span><span class="sxs-lookup"><span data-stu-id="3a367-103">Creates a copy of this [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) object.</span></span>  
+# <a name="icorpublishenumclone-method"></a><span data-ttu-id="a2c9d-102">ICorPublishEnum::Clone 方法</span><span class="sxs-lookup"><span data-stu-id="a2c9d-102">ICorPublishEnum::Clone Method</span></span>
+<span data-ttu-id="a2c9d-103">建立這個[ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)物件的複本。</span><span class="sxs-lookup"><span data-stu-id="a2c9d-103">Creates a copy of this [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3a367-104">語法</span><span class="sxs-lookup"><span data-stu-id="3a367-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a2c9d-104">語法</span><span class="sxs-lookup"><span data-stu-id="a2c9d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Clone (  
@@ -35,19 +33,19 @@ HRESULT Clone (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3a367-105">參數</span><span class="sxs-lookup"><span data-stu-id="3a367-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a2c9d-105">參數</span><span class="sxs-lookup"><span data-stu-id="a2c9d-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="3a367-106">[out]位址指標`ICorPublishEnum`物件，這個複本`ICorPublishEnum`物件。</span><span class="sxs-lookup"><span data-stu-id="3a367-106">[out] A pointer to the address of an `ICorPublishEnum` object that is a copy of this `ICorPublishEnum` object.</span></span>  
+ <span data-ttu-id="a2c9d-106">脫銷這個 `ICorPublishEnum` 物件之複本的 `ICorPublishEnum` 物件位址的指標。</span><span class="sxs-lookup"><span data-stu-id="a2c9d-106">[out] A pointer to the address of an `ICorPublishEnum` object that is a copy of this `ICorPublishEnum` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3a367-107">需求</span><span class="sxs-lookup"><span data-stu-id="3a367-107">Requirements</span></span>  
- <span data-ttu-id="3a367-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3a367-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a2c9d-107">需求</span><span class="sxs-lookup"><span data-stu-id="a2c9d-107">Requirements</span></span>  
+ <span data-ttu-id="a2c9d-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a2c9d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3a367-109">**標頭：** CorPub.idl CorPub.h</span><span class="sxs-lookup"><span data-stu-id="3a367-109">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="a2c9d-109">**標頭：** CorPub .idl，CorPub。h</span><span class="sxs-lookup"><span data-stu-id="a2c9d-109">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="3a367-110">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3a367-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a2c9d-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a2c9d-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3a367-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a367-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a2c9d-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a2c9d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3a367-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3a367-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a2c9d-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="a2c9d-112">See also</span></span>
 
-- [<span data-ttu-id="3a367-113">ICorPublishEnum 介面</span><span class="sxs-lookup"><span data-stu-id="3a367-113">ICorPublishEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+- [<span data-ttu-id="a2c9d-113">ICorPublishEnum 介面</span><span class="sxs-lookup"><span data-stu-id="a2c9d-113">ICorPublishEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: cd8b9879-962a-4811-aa46-2e2b6bae0d84
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5274e70c5bead201beb158ee2895415d7ec9e53c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d52f9f0bc2ff27d7849a80a424714aa84d3688fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779138"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137002"
 ---
-# <a name="clsidresolutionflags-enumeration"></a><span data-ttu-id="b8e9d-102">CLSID_RESOLUTION_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="b8e9d-102">CLSID_RESOLUTION_FLAGS Enumeration</span></span>
-<span data-ttu-id="b8e9d-103">包含值，表示 common language runtime (CLR) 應該要如何解決`CLSID`。</span><span class="sxs-lookup"><span data-stu-id="b8e9d-103">Contains values that indicate how the common language runtime (CLR) should resolve a `CLSID`.</span></span>  
+# <a name="clsid_resolution_flags-enumeration"></a><span data-ttu-id="f6cd5-102">CLSID_RESOLUTION_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="f6cd5-102">CLSID_RESOLUTION_FLAGS Enumeration</span></span>
+<span data-ttu-id="f6cd5-103">包含值，指出 common language runtime （CLR）應如何解析 `CLSID`。</span><span class="sxs-lookup"><span data-stu-id="f6cd5-103">Contains values that indicate how the common language runtime (CLR) should resolve a `CLSID`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b8e9d-104">語法</span><span class="sxs-lookup"><span data-stu-id="b8e9d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6cd5-104">語法</span><span class="sxs-lookup"><span data-stu-id="f6cd5-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -35,20 +33,20 @@ typedef enum {
 } CLSID_RESOLUTION_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b8e9d-105">成員</span><span class="sxs-lookup"><span data-stu-id="b8e9d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f6cd5-105">Members</span><span class="sxs-lookup"><span data-stu-id="f6cd5-105">Members</span></span>  
   
-|<span data-ttu-id="b8e9d-106">成員</span><span class="sxs-lookup"><span data-stu-id="b8e9d-106">Member</span></span>|<span data-ttu-id="b8e9d-107">說明</span><span class="sxs-lookup"><span data-stu-id="b8e9d-107">Description</span></span>|  
+|<span data-ttu-id="f6cd5-106">成員</span><span class="sxs-lookup"><span data-stu-id="f6cd5-106">Member</span></span>|<span data-ttu-id="f6cd5-107">描述</span><span class="sxs-lookup"><span data-stu-id="f6cd5-107">Description</span></span>|  
 |------------|-----------------|  
-|`CLSID_RESOLUTION_DEFAULT`|<span data-ttu-id="b8e9d-108">表示預設行為。</span><span class="sxs-lookup"><span data-stu-id="b8e9d-108">Indicates the default behavior.</span></span>|  
-|`CLSID_RESOLUTION_REGISTERED`|<span data-ttu-id="b8e9d-109">表示執行階段會搜尋登錄，並套用填充碼原則。</span><span class="sxs-lookup"><span data-stu-id="b8e9d-109">Indicates that the runtime searches the registry and applies shim policy.</span></span>|  
+|`CLSID_RESOLUTION_DEFAULT`|<span data-ttu-id="f6cd5-108">表示預設行為。</span><span class="sxs-lookup"><span data-stu-id="f6cd5-108">Indicates the default behavior.</span></span>|  
+|`CLSID_RESOLUTION_REGISTERED`|<span data-ttu-id="f6cd5-109">表示執行時間會搜尋登錄並套用填充碼原則。</span><span class="sxs-lookup"><span data-stu-id="f6cd5-109">Indicates that the runtime searches the registry and applies shim policy.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b8e9d-110">需求</span><span class="sxs-lookup"><span data-stu-id="b8e9d-110">Requirements</span></span>  
- <span data-ttu-id="b8e9d-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b8e9d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f6cd5-110">需求</span><span class="sxs-lookup"><span data-stu-id="f6cd5-110">Requirements</span></span>  
+ <span data-ttu-id="f6cd5-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f6cd5-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b8e9d-112">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b8e9d-112">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f6cd5-112">**標頭：** Mscoree.dll. h</span><span class="sxs-lookup"><span data-stu-id="f6cd5-112">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="b8e9d-113">**.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b8e9d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="f6cd5-113">**.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6cd5-113">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b8e9d-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b8e9d-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f6cd5-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="f6cd5-114">See also</span></span>
 
-- [<span data-ttu-id="b8e9d-115">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="b8e9d-115">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="f6cd5-115">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="f6cd5-115">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
