@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30698
 ms.assetid: 3b77b7e3-8b17-40de-b4e1-05e4b9b325ad
-ms.openlocfilehash: e6e7590c10c2234e2bbe2f39a00428494105caae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88f97e9314d5bc77b86dad22f1a7e794cf0caa3b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766918"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197014"
 ---
 # <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a>無法寫入暫存檔，因為無法使用暫存路徑
-Visual Basic 無法判斷儲存暫存檔的路徑。  
+Visual Basic 無法判斷儲存暫存檔案的路徑。  
   
- **錯誤 ID:** BC30698  
+ **錯誤識別碼：** BC30698  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
@@ -25,6 +25,6 @@ Visual Basic 無法判斷儲存暫存檔的路徑。
   
 2. 如果問題持續發生，請重新安裝 Visual Studio。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [告訴我們](/visualstudio/ide/talk-to-us)
+- [告訴我們](/visualstudio/ide/feedback-options)

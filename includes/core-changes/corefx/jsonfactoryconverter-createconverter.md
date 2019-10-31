@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: f5b0064f9f01923c6353fd8e2b274bd7407ccbd8
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 9052f509ec6df4e4b911e2f33b5c8197adb9a2c3
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72237314"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198376"
 ---
 ### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a>JsonFactoryConverter. CreateConverter 簽章已變更
 
-為了簡化 @no__t 0 類別的組合，已將 @no__t 1 方法設為公用，並提供類型 <xref:System.Text.Json.JsonSerializerOptions> 的第二個引數。
+為了簡化 <xref:System.Text.Json.Serialization.JsonConverterFactory> 類別的撰寫，<xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> 方法已設為公用，並提供類型 <xref:System.Text.Json.JsonSerializerOptions>的第二個引數。
 
 #### <a name="change-description"></a>變更描述
 
-3\.0 Preview 8 之前的 .NET Core 中，`CreateConverter` 方法的簽章為： 
+在 3.0 Preview 8 之前的 .NET Core 中，`CreateConverter` 方法的簽章為：
 
 ```csharp
 namespace System.Text.Json.Serialization
@@ -48,7 +48,7 @@ namespace System.Text.Json.Serialization
 
 #### <a name="affected-apis"></a>受影響的 API
 
-<xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>.
+<xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>
 
 <!-- For tool use only
 

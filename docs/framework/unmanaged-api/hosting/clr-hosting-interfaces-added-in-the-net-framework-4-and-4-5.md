@@ -6,60 +6,58 @@ helpviewer_keywords:
 - .NET Framework 4, hosting interfaces
 - interfaces [.NET Framework hosting], version 4
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea95789ea1623985a6a53fcf923b70d7df2ad460
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: aea88430d8f83234a1568bcaf433c2a75492e23a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170430"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195918"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 和 4.5 中新增的 CLR 裝載介面
-本節說明 unmanaged 介面主機可以使用整合的 common language runtime (CLR) 中.NET Framework 4、.NET Framework 4.5 和更新版本到其應用程式。 這些介面提供的主機，若要設定及執行階段載入處理序的方法。  
+本節說明非受控主機可用來將 .NET Framework 4、.NET Framework 4.5 和更新版本中的 common language runtime （CLR）整合到其應用程式的介面。 這些介面會提供方法，讓主機設定並將執行時間載入進程中。  
   
- 從.NET Framework 4 開始，所有的裝載介面具有下列特性：  
+ 從 .NET Framework 4 開始，所有的裝載介面都具有下列特性：  
   
-- 他們使用生命週期管理 (`AddRef`並`Release`)，封裝 （隱含的內容） 和`QueryInterface`從 com 存取。  
+- 它們會使用存留期管理（`AddRef` 和 `Release`）、封裝（隱含內容）和 COM `QueryInterface`。  
   
-- 它們不會使用 COM 類型這類`BSTR`， `SAFEARRAY`，或`VARIANT`。  
+- 它們不會使用 COM 類型，例如 `BSTR`、`SAFEARRAY`或 `VARIANT`。  
   
-- 不沒有使用任何 apartment 模型、 彙總或登錄啟用[CoCreateInstance 函式](https://go.microsoft.com/fwlink/?LinkId=142894)。  
+- 沒有使用[CoCreateInstance 函數](https://go.microsoft.com/fwlink/?LinkId=142894)的單元模型、匯總或登錄啟用。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [ICLRAppDomainResourceMonitor 介面](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
- 提供方法，檢查應用程式定義域的記憶體和 CPU 使用量。  
+ 提供可檢查應用程式域記憶體和 CPU 使用量的方法。  
   
  [ICLRDomainManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)  
- 可讓主應用程式指定將用來初始化預設的應用程式定義域，並指定初始化屬性的應用程式定義域管理員。  
+ 可讓主機指定將用來初始化預設應用程式域的應用程式網域管理員，以及指定初始化屬性。  
   
  [ICLRGCManager2 介面](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)  
- 提供[SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)方法，讓主應用程式來設定記憶體回收集合區段的大小和記憶體回收系統的層代 0 的最大值大於`DWORD`。  
+ 提供[SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)方法，可讓主機將垃圾收集區段的大小，以及垃圾收集系統層代0的大小上限設定為大於 `DWORD`的值。  
   
  [ICLRMetaHost 介面](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- 提供方法，傳回特定版本的 CLR、 列出所有已安裝的 Clr、 列出所有的同處理序執行階段，傳回啟用介面，並探索用以編譯組件的 CLR 版本。  
+ 提供的方法會傳回 CLR 的特定版本、列出所有已安裝的 CLRs、列出所有內含式執行時間、傳回啟用介面，以及探索用來編譯元件的 CLR 版本。  
   
  [ICLRMetaHostPolicy 介面](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)  
- 提供[GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)提供 CLR 介面的方法會根據原則準則、 managed 組件、 版本和組態檔。  
+ 提供[GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)方法，以根據原則準則、managed 元件、版本和設定檔來提供 CLR 介面。  
   
  [ICLRRuntimeInfo 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- 提供方法，傳回特定的執行階段，包括版本、 目錄和負載狀態的相關資訊。  
+ 提供傳回特定執行時間相關資訊的方法，包括版本、目錄和載入狀態。  
   
  [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
- 提供基本的全域靜態函式簽章以強式名稱的組件。 所有[ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)方法會傳回標準的 COM Hresult。  
+ 提供基本的全域靜態函式，以強式名稱簽署元件。 所有的[ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)方法都會傳回標準 COM hresult。  
   
  [ICLRStrongName2 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname2-interface.md)  
- 讓您能夠建立使用 sha-2 群組的安全雜湊演算法 （SHA-256、 SHA-384 和 SHA-512） 的強式名稱。  
+ 提供使用 SHA-2 安全雜湊演算法（SHA-256、SHA-384 和 SHA-512）群組建立強式名稱的功能。  
   
  [ICLRTask2 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)  
- 提供的所有功能[ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md); 此外，都提供方法，可讓執行緒中止延遲在目前的執行緒上。  
+ 提供[ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)的所有功能;此外，也提供可讓執行緒中止在目前線程上延遲的方法。  
   
 ## <a name="related-sections"></a>相關章節  
  [已被取代的 CLR 裝載介面和 Coclass](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
- 描述裝載.NET framework 1.0 和 1.1 版所提供的介面。  
+ 描述 .NET Framework 版本1.0 和1.1 所提供的主控介面。  
   
  [CLR 裝載介面](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
- 描述裝載以.NET Framework 版本 2.0、 3.0 和 3.5 提供的介面。  
+ 描述 .NET Framework 版本2.0、3.0 和3.5 所提供的主控介面。  
   
  [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- 導入了.NET Framework 中所裝載。
+ 引進了 .NET Framework 中的裝載。

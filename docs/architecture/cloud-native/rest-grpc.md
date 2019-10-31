@@ -3,12 +3,12 @@ title: REST 和 gRPC
 description: 瞭解 gRPC、其在雲端原生應用程式中的角色，以及它與 HTTP REST 的差異
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: ba15bb1c5ee7c2cd48d75867512539190c80b0e5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4baccccf12bcd76366a4a934bb39a41d76ac11e0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094543"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191999"
 ---
 # <a name="rest-and-grpc"></a>REST 和 gRPC
 
@@ -52,7 +52,7 @@ Microsoft .NET Core framework 3.0 包含 gRPC 的工具和原生支援。 圖4-2
 
 **圖 4-21**： Visual Studio 2019 中的 gRPC 專案
 
-## <a name="gprc-usage"></a>gPRC 使用方式
+## <a name="grpc-usage"></a>gRPC 使用方式
 
 gRPC 適用于下列案例：
 

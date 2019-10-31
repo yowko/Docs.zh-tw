@@ -677,12 +677,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: f60c2e3caec215c60851e669eabf554617149096
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 68ea00c6f5f97e61adaeb53aed8464cf874814e7
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002175"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196237"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>抱歉，我們沒有這個 C# 錯誤的具體內容。
 
@@ -697,8 +697,8 @@ ms.locfileid: "72002175"
  也請參閱：  
  [Visual C# 程式設計人員的其他資源](../getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../programming-guide/index.md)
 - [C# 參考](../language-reference/index.md)
-- [告訴我們](/visualstudio/ide/talk-to-us)
+- [告訴我們](/visualstudio/ide/feedback-options)

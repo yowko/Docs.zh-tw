@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 78a9bd2cf657376bbc324cdefd423b14a283f842
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 77db5201ab21dff1f04f76da5dd10d07aa377813
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104722"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191816"
 ---
 # <a name="c-guide"></a>C# 指南
 
@@ -64,8 +64,8 @@ C# 指南含有數個章節。 您可以按順序閱讀，或直接跳至您最�
 - [C# 語言規格](./language-reference/language-specification/index.md)
   - 最新 C# 語言規格版本的連結。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [使用視覺效果消費者入門C#](/visualstudio/ide/quickstart-csharp-console)
 - [.NET 指南](../standard/index.md)
 - [C# 範例](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)

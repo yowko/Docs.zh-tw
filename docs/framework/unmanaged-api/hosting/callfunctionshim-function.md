@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 37118465-ddf3-41f0-bf27-335b72777e63
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31d93ac427ec67726c9456d623aeb683c9029ccd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d39e15a2ba71ba0c0147482259f5618dcb5d298b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773769"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192100"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim 函式
-會指定程式庫中具有指定的名稱和參數的函式呼叫。  
+呼叫在指定的程式庫中具有指定名稱和參數的函式。  
   
- 此函式已被取代，在.NET Framework 4。  
+ 此函式在 .NET Framework 4 中已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,32 +41,32 @@ HRESULT CallFunctionShim (
   
 ## <a name="parameters"></a>參數  
  `szDllName`  
- [in]包含函式的程式庫名稱。  
+ 在包含函數之程式庫的名稱。  
   
  `szFunctionName`  
- [in]函式的名稱。  
+ 在函式的名稱。  
   
  `lpvArgument1`  
- [in]第一個引數傳遞給函式。  
+ 在要傳遞至函式的第一個引數。  
   
  `lpvArgument2`  
- [in]第二個引數傳遞給函式。  
+ 在要傳遞至函式的第二個引數。  
   
  `szVersion`  
- [in]包含此函式的程式庫版本。  
+ 在包含函數的程式庫版本。  
   
  `pvReserved`  
- [in]保留供日後使用。 傳遞此參數中的零。  
+ 在保留供日後使用。 在此參數中傳遞零。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** MSCorEE.dll  
+ 連結**庫：** Mscoree.dll .dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

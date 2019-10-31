@@ -9,16 +9,16 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 0807e46d36a4cf031bc44ae0dc4efab79dd51d03
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: edab64bf02a2b60cce21af536d2da98193dea9a1
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991334"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196224"
 ---
 # <a name="hello-world----your-first-program"></a>Hello World--您的第一個程式
 
-在本文中，您將使用 Visual Studio 來建立傳統的「Hello World！」 程式。 Visual Studio 是一種專業整合式開發環境（IDE），具有專為 .NET 開發所設計的許多功能。 您只會使用 Visual Studio 中的幾項功能來建立此程式。 若要深入瞭解 Visual Studio，請參閱[使用 Visual C#和 Visual Basic 消費者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)。
+在本文中，您將使用 Visual Studio 來建立傳統的「Hello World！」 程式。 Visual Studio 是一種專業整合式開發環境（IDE），具有專為 .NET 開發所設計的許多功能。 您只會使用 Visual Studio 中的幾項功能來建立此程式。 若要深入瞭解 Visual Studio，請參閱[使用 Visual C#消費者入門](/visualstudio/ide/quickstart-csharp-console)。
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
@@ -41,7 +41,7 @@ ms.locfileid: "70991334"
 
 在 [新增專案] 對話方塊中，選擇 [主控台應用程式（.NET Core）]，然後按 **[下一步]** 。 為您的專案命名，例如 "HelloWorld"，然後按 [**建立**]。
 
-Visual Studio 會開啟您的專案。 它已經是基本的「Hello World！」 為例。 按`Ctrl`  + 以執行您的專案。`F5` Visual Studio 會建立您的專案，並將原始程式碼轉換成可執行檔。 然後，它會啟動執行新應用程式的命令視窗。 您應該會在視窗中看到下列文字：
+Visual Studio 會開啟您的專案。 它已經是基本的「Hello World！」 為例。 按 `Ctrl` + `F5` 以執行您的專案。 Visual Studio 會建立您的專案，並將原始程式碼轉換成可執行檔。 然後，它會啟動執行新應用程式的命令視窗。 您應該會在視窗中看到下列文字：
 
 ```console
 Hello World!
@@ -67,7 +67,7 @@ Press any key to close this window . . .
 
 在 [新增專案] 對話方塊中，選擇 [.NET Core] 和 [主控台應用程式]，然後按 **[下一步]** 。 您必須選取目標 framework。 預設值是正常的，因此請按 [下一步]。 為您的專案命名，例如 "HelloWorld"，然後按 [**建立**]。 您可以使用預設的專案位置。 請勿將這個專案加入至原始檔控制。
 
-Visual Studio for Mac 會開啟您的專案。 它已經是基本的「Hello World！」 為例。 按`Ctrl` 以執行 + 您的專案。 +  `Fn` `F5` Visual Studio for Mac 會建立您的專案，並將原始程式碼轉換成可執行檔。 然後，它會啟動執行新應用程式的命令視窗。 您應該會在視窗中看到下列文字：
+Visual Studio for Mac 會開啟您的專案。 它已經是基本的「Hello World！」 為例。 按 `Ctrl` + `Fn` + `F5` 以執行您的專案。 Visual Studio for Mac 會建立您的專案，並將原始程式碼轉換成可執行檔。 然後，它會啟動執行新應用程式的命令視窗。 您應該會在視窗中看到下列文字：
 
 ```console
 Hello World!
@@ -123,9 +123,9 @@ C# 程式通常會使用 .NET Framework 執行階段程式庫所提供的輸入/
 
 如需輸入/輸出方法的詳細資訊，請參閱 <xref:System.IO>。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [範例與教學課程](../../../samples-and-tutorials/index.md)
 - [Main() 和命令列引數](../main-and-command-args/index.md)
-- [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [使用視覺效果消費者入門C#](/visualstudio/ide/quickstart-csharp-console)

@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 8564499b9ff55514179314217b7d40d8d3cdf6a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 506b69f1db12a51217d10ad261b1f1a44bfb2008
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031144"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198152"
 ---
-# <a name="type-typename-has-no-constructors"></a>類型 '\<類型名稱 >' 沒有建構函式
+# <a name="type-typename-has-no-constructors"></a>類型 '\<typename > ' 沒有任何函數
 類型不支援呼叫 `Sub New()`。 一個可能原因是編譯器或二進位檔案損毀。  
   
- **錯誤 ID:** BC30251  
+ **錯誤識別碼：** BC30251  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
@@ -29,7 +29,7 @@ ms.locfileid: "62031144"
   
 4. 如果錯誤持續發生，請收集情況的相關資訊，並通知 Microsoft 產品支援服務。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [告訴我們](/visualstudio/ide/talk-to-us)
+- [告訴我們](/visualstudio/ide/feedback-options)

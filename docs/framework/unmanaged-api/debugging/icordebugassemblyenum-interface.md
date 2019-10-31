@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 891ceb43-5161-421e-a0bf-299962fd7efd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6c557df3c69b9d18b95ebf33815b92dcb9097f4e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aa0bc34c3cb3ac330582cee0843022e913376fc2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69987531"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192164"
 ---
 # <a name="icordebugassemblyenum-interface"></a>ICorDebugAssemblyEnum 介面
 
@@ -29,9 +27,9 @@ ms.locfileid: "69987531"
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|從目前位置開始, `ICorDebugAssembly`取得列舉中指定的實例數目。|  
+|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|從目前位置開始，取得列舉中指定數目的 `ICorDebugAssembly` 實例。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -43,10 +41,10 @@ ms.locfileid: "69987531"
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

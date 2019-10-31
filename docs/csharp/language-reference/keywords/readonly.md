@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 6c48806e54f11bce930d03a53b010c337e6658f8
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 8ecf399e48da12a9dee19bb217b8668c6a53d3ad
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960858"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191866"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# 參考)
 
@@ -27,7 +27,7 @@ ms.locfileid: "72960858"
   - 由於參考型別包含針對其資料的參考，因此 `readonly` 參考型別的欄位必須一律參考相同的物件。 該物件不變。 `readonly` 修飾詞可防止欄位被不同的參考型別執行個體取代。 不過，修飾詞並不會防止欄位的實例資料透過唯讀欄位進行修改。
 
   > [!WARNING]
-  > 外部可見的類型若包含屬於可變動參考型別的外部可見唯讀欄位，可能會是安全性弱點，而且可能會觸發警告[CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types) ：「不要宣告唯讀的可變動參考型別」。
+  > 外部可見的類型若包含屬於可變動參考型別的外部可見唯讀欄位，可能會是安全性弱點，而且可能會觸發警告[CA2104](/visualstudio/code-quality/ca2104) ：「不要宣告唯讀的可變動參考型別」。
 
 - 在 [`readonly struct` 定義](#readonly-struct-example)中，`readonly` 表示 `struct` 是不可變的。
 - 在[`readonly` 成員定義](#readonly-member-examples)中，`readonly` 表示 `struct` 的成員不會改變結構的內部狀態。

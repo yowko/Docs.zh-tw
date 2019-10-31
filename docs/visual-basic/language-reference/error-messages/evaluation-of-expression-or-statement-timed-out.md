@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30722
 ms.assetid: 6f452da8-6ef8-41fd-9ab8-6f681cf7d433
-ms.openlocfilehash: 7a3b460e7abb0e673457ca6abee2a195912715ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0600c7acdb138e363dcbece392bf4b8122cb250
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803372"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191933"
 ---
 # <a name="evaluation-of-expression-or-statement-timed-out"></a>運算式或陳述式評估已經逾時
 運算式的評估未及時完成。  
   
- **錯誤 ID:** BC30722  
+ **錯誤識別碼：** BC30722  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. 請確認輸入的程式碼正確無誤。  
+1. 請確認輸入的程式碼正確。  
   
-2. 請簡化運算式，使它花較少的時間執行。  
+2. 簡化您的運算式，以縮短執行時間。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)
+- [Visual Studio 偵錯](/visualstudio/debugger/debugger-feature-tour)

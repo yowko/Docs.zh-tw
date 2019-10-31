@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 21605b30867d7be0b906b431253c183e655bea82
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 7b22bbf75b29fdffd9927110ebe5b4e5309cd778
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922487"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191823"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C# 編譯器選項)
 **-doc** 選項可讓您在 XML 檔案中放入文件註解。  
@@ -41,7 +41,7 @@ ms.locfileid: "69922487"
   
  包含主要的原始程式碼檔案會先輸出為 XML。  
   
- 若要以產生的 .xml 檔案搭配 [IntelliSense](/visualstudio/ide/using-intellisense) 功能使用，.xml 檔案的檔案名稱要和您想支援的組件同名，然後確定 .xml 檔案和組件位於相同的目錄。 如此，在 Visual Studio 專案中參考組件時，也會找到 .xml 檔案。 如需詳細資訊，請參閱[提供程式碼註解](/visualstudio/ide/supplying-xml-code-comments)。  
+ 若要以產生的 .xml 檔案搭配 [IntelliSense](/visualstudio/ide/using-intellisense) 功能使用，.xml 檔案的檔案名稱要和您想支援的組件同名，然後確定 .xml 檔案和組件位於相同的目錄。 如此，在 Visual Studio 專案中參考組件時，也會找到 .xml 檔案。 如需詳細資訊，請參閱[提供程式碼註解](/visualstudio/ide/reference/generate-xml-documentation-comments)。  
   
  除非您使用 [-target:module](./target-module-compiler-option.md) 編譯，否則 `file` 會包含 \<assembly>\</assembly> 標記，以指定包含編譯輸出檔案之組建資訊清單的檔案名稱。  
   
@@ -52,15 +52,15 @@ ms.locfileid: "69922487"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性]  頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2. 按一下 [建置]  索引標籤。  
+2. 按一下 [建置] 索引標籤。  
   
 3. 修改 **XML 文件檔案**屬性。  
   
- 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

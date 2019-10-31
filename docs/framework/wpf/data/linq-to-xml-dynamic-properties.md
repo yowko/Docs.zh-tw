@@ -2,12 +2,12 @@
 title: LINQ to XML 動態屬性參考
 ms.date: 10/22/2019
 ms.topic: reference
-ms.openlocfilehash: ca3684716f9b562d0e6a006c26730a1d1a28f8b1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 48b51e92eb78786b2cc189e3e7daa00875b41585
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920927"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197048"
 ---
 # <a name="linq-to-xml-dynamic-properties"></a>LINQ to XML 動態屬性
 
@@ -21,7 +21,7 @@ ms.locfileid: "72920927"
 
 - 索引值 (例如 <xref:System.Xml.Linq.XElement> 的 [Elements](elements-xelement-dynamic-property.md) 和 [Descendants](descendants-xelement-dynamic-property.md) 屬性)，可解析為索引子類型。 對於要解析為所需數值或集合的索引子型別，必須將擴充名稱參數傳遞給它們。
 
-傳回 <xref:System.Collections.Generic.IEnumerable%601> 類型之索引值的所有動態屬性都使用延緩執行。 如需延後執行的詳細資訊，請參閱 [LINQ 查詢簡介 (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)。
+傳回 <xref:System.Collections.Generic.IEnumerable%601> 類型之索引值的所有動態屬性都使用延緩執行。 如需延後執行的詳細資訊，請參閱 [LINQ 查詢簡介 (C#)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。
 
 ## <a name="reference"></a>參考資料
 
@@ -33,4 +33,4 @@ ms.locfileid: "72920927"
 
 - [使用 LINQ to XML 進行 WPF 資料繫結](wpf-data-binding-with-linq-to-xml-overview.md)
 - [WPF 資料繫結與 LINQ to XML 概觀](wpf-data-binding-with-linq-to-xml-overview.md)
-- [LINQ 查詢簡介 (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)
+- [LINQ 查詢簡介 (C#)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)

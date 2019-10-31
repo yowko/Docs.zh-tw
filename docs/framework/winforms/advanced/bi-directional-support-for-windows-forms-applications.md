@@ -7,18 +7,18 @@ helpviewer_keywords:
 - localization [Windows Forms], bi-directional support in Windows
 - bi-directional language support [Windows Forms], Windows applications
 - Windows Forms, bi-directional support
-ms.openlocfilehash: 3bf90636bf1fc4b20b23c61fdd90033b3da35ddd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 0b99dcdb9549a2319efe8a78eb4bca33f40f2cb0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141193"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197486"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>對 Windows Forms 應用程式的雙向支援
 您可以使用 Visual Studio 來建立支援雙向（由右至左）語言（例如阿拉伯文和希伯來文）的 Windows 應用程式。 這包括標準表單、對話方塊、MDI 表單，以及您可以在這些表單中使用的所有控制項，也就是 <xref:System.Windows.Forms.Control> 命名空間中的所有物件。
 
 ## <a name="culture-support"></a>文化特性支援
- 文化特性和 UI 文化特性設定可決定應用程式如何使用日期、時間、貨幣和其他資訊。 對文化特性和 UI 文化特性的支援同樣適用於雙向語言，因為其適用於任何其他語言。 如需詳細資訊，請參閱[全域 Windows form 和 web forms 的文化特性特定類別](/visualstudio/ide/culture-specific-classes-for-global-windows-forms-and-web-forms)。
+ 文化特性和 UI 文化特性設定可決定應用程式如何使用日期、時間、貨幣和其他資訊。 對文化特性和 UI 文化特性的支援同樣適用於雙向語言，因為其適用於任何其他語言。 如需詳細資訊，請參閱[全域 Windows form 和 web forms 的文化特性特定類別](/visualstudio/ide/globalizing-and-localizing-applications)。
 
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>RightToLeft 和 RightToLeftLayout 屬性
  基底 <xref:System.Windows.Forms.Control> 類別 (表單的衍生來源) 包含 <xref:System.Windows.Forms.Control.RightToLeft%2A> 屬性，您可以將其設定，以變更表單及其控制項的讀取順序。 如果您設定表單的 <xref:System.Windows.Forms.Control.RightToLeft%2A> 屬性，根據預設，表單上的控制項會繼承此設定。 不過，在大部分控制項上，也都可以個別設定 <xref:System.Windows.Forms.Control.RightToLeft%2A> 屬性。 另請參閱[如何：針對全球化在 Windows Forms 中由右至左顯示文字](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100))。

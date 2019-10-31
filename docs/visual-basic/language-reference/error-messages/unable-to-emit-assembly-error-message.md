@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 530aaee40be92bf72ee4b83b4141108e9b81c8a1
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5776755a57fbc2b0086b1c9b6cfbb2f2b7eb03fa
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70968859"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197269"
 ---
 # <a name="unable-to-emit-assembly-error-message"></a>無法發出元件： \<錯誤訊息 >
 
@@ -59,9 +59,9 @@ Visual Basic 編譯器會呼叫元件連結器（*al.exe*，也稱為 Alink）�
 
 6. 在 Visual Studio 中，將 .NET 元件參考新增至您剛才建立的檔案。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Sn.exe (強式名稱工具)](../../../framework/tools/sn-exe-strong-name-tool.md)
 - [如何：建立公開/私密金鑰組](../../../standard/assembly/create-public-private-key-pair.md)
-- [告訴我們](/visualstudio/ide/talk-to-us)
+- [告訴我們](/visualstudio/ide/feedback-options)

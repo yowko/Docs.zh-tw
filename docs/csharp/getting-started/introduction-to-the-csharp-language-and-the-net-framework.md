@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 995362667ed0a203112744f03a036eabbcb784c8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 93f07e663fbc8f61c71e5b83bb752f0b129b62ba
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608308"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191870"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 語言和 .NET Framework 簡介
 
@@ -28,7 +28,7 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
  除了這些基本物件導向準則，C# 可讓您透過許多創新的語言建構，輕鬆地開發軟體元件，包括下列各項︰  
   
-- 稱為「委派」  的封裝方法簽章，可啟用型別安全事件通知。  
+- 稱為「委派」的封裝方法簽章，可啟用型別安全事件通知。  
   
 - 屬性，可做為私用成員變數的存取子。  
   
@@ -66,7 +66,7 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
  如需 .NET Framework 的詳細資訊，請參閱 [Microsoft.NET Framework 概觀 (英文)](../../framework/get-started/overview.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C#](../index.md)
-- [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [使用視覺效果消費者入門C#](/visualstudio/ide/quickstart-csharp-console)

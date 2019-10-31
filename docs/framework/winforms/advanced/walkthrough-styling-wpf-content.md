@@ -9,24 +9,24 @@ ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 287ed08db8a4266e5044a81d47a697949257e113
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8b9e2c5c05f1a4b263890c2d8ca8474abe07d836
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658488"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197408"
 ---
 # <a name="walkthrough-style-wpf-content"></a>逐步解說：樣式 WPF 內容
 
-本文說明如何將樣式套用至裝載于 Windows Form 的 Windows Presentation Foundation (WPF) 控制項。
+本文說明如何將樣式套用至裝載于 Windows Form 的 Windows Presentation Foundation （WPF）控制項。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 若要完成這個逐步解說，您必須具有 Visual Studio。
 
 ## <a name="create-the-project"></a>建立專案
 
-開啟 Visual Studio, 並在 Visual Basic 或視覺效果C#中建立名為`StylingWpfContent`的新 Windows Forms 應用程式專案。
+開啟 Visual Studio，並在 Visual Basic 或視覺效果C#中建立名為 `StylingWpfContent`的新 Windows Forms 應用程式專案。
 
 > [!NOTE]
 > 裝載 WPF 內容時，只支援 C# 和 Visual Basic 專案。
@@ -35,15 +35,15 @@ ms.locfileid: "69658488"
 
 在將 WPF 控制項加入專案後，即可將它裝載至 <xref:System.Windows.Forms.Integration.ElementHost> 控制項。
 
-1. 將新的 WPF <xref:System.Windows.Controls.UserControl> 專案加入方案。 使用控制項類型的預設名稱 `UserControl1.xaml`。 如需詳細資訊，請參閱[逐步解說：在設計階段](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)于 Windows Forms 上建立新的 WPF 內容。
+1. 將新的 WPF <xref:System.Windows.Controls.UserControl> 專案加入方案。 使用控制項類型的預設名稱 `UserControl1.xaml`。 如需詳細資訊，請參閱[逐步解說：在設計階段于 Windows Forms 上建立新的 WPF 內容](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。
 
 2. 在 [設計] 檢視中，確定已選取 `UserControl1`。
 
-3. 在 [**屬性**] 視窗中, 將<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>屬性的值設定為**200**。
+3. 在 [**屬性**] 視窗中，將 [<xref:System.Windows.FrameworkElement.Width%2A>] 和 [<xref:System.Windows.FrameworkElement.Height%2A> 屬性] 的值設定為**200**。
 
-4. 將控制項加入<xref:System.Windows.Controls.UserControl>至, 並將屬性的值設定<xref:System.Windows.Controls.ContentControl.Content%2A>為 [**取消**]。 <xref:System.Windows.Controls.Button?displayProperty=nameWithType>
+4. 將 <xref:System.Windows.Controls.Button?displayProperty=nameWithType> 控制項加入至 <xref:System.Windows.Controls.UserControl>，並將 <xref:System.Windows.Controls.ContentControl.Content%2A> 屬性的值設定為 [**取消**]。
 
-5. 將第二<xref:System.Windows.Controls.Button?displayProperty=nameWithType>個控制項加入<xref:System.Windows.Controls.UserControl>至, 並<xref:System.Windows.Controls.ContentControl.Content%2A>將屬性的值設定為 **[確定]** 。
+5. 將第二個 <xref:System.Windows.Controls.Button?displayProperty=nameWithType> 控制項加入至 <xref:System.Windows.Controls.UserControl>，並將 <xref:System.Windows.Controls.ContentControl.Content%2A> 屬性的值設定為 **[確定]** 。
 
 6. 建置專案。
 
@@ -53,13 +53,13 @@ ms.locfileid: "69658488"
 
 1. 在 Windows Form 設計工具中開啟 `Form1`。
 
-1. 在 [**工具箱**] 中, 按兩下`UserControl1`以在表單上`UserControl1`建立的實例。
+1. 在 [**工具箱**] 中，按兩下 [`UserControl1`]，在表單上建立 `UserControl1` 的實例。
 
    `UserControl1` 的執行個體裝載於名為 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。
 
-1. 在的智慧標籤面板`elementHost1`中, 按一下下拉式清單中的 [**編輯主控內容**]。
+1. 在 `elementHost1`的智慧標籤面板中，按一下下拉式清單中的 [**編輯主控內容**]。
 
-   `UserControl1`在 WPF 設計工具中開啟。
+   `UserControl1` 會在 WPF 設計工具中開啟。
 
 1. 在 [XAML] 檢閱中，插入下列 XAML 到 `<UserControl>` 開頭標記後面。 此 XAML 會建立具有對比漸層框線的漸層。 按一下控制項時，漸層會變更，產生已按下的按鈕外觀。 如需詳細資訊，請參閱 [設定樣式和範本](../../wpf/controls/styling-and-templating.md)。
 
@@ -111,13 +111,13 @@ ms.locfileid: "69658488"
    </UserControl.Resources>
    ```
 
-1. 藉由在 [**取消**] 按鈕的`<Button>`標記中插入下列 XAML, 將上一個步驟中定義的樣式套用至[取消]按鈕。`SimpleButton`
+1. 藉由在 [**取消**] 按鈕的 [`<Button>`] 標記中插入下列 XAML，將上一個步驟中所定義的 `SimpleButton` 樣式套用至 [取消] 按鈕。
 
    ```xaml
    Style="{StaticResource SimpleButton}
    ```
 
-   您的按鈕宣告將類似下列 XAML:
+   您的按鈕宣告將類似下列 XAML：
 
    ```xaml
    <Button Height="23" Margin="41,52,98,0" Name="button1" VerticalAlignment="Top"
@@ -130,16 +130,16 @@ ms.locfileid: "69658488"
 
 1. 新的樣式會套用至按鈕控制項。
 
-1. 從 [**調試**程式] 功能表中, 選取 [**開始調試**] 以執行應用程式。
+1. 從 [**調試**程式] 功能表中，選取 [**開始調試**] 以執行應用程式。
 
-1. 按一下 [**確定]** 和 [**取消**] 按鈕, 並查看差異。
+1. 按一下 [**確定]** 和 [**取消**] 按鈕，並查看差異。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [移轉和互通性](../../wpf/advanced/migration-and-interoperability.md)
 - [使用 WPF 控制項](using-wpf-controls.md)
-- [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [在 Visual Studio 中設計 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [XAML 概觀 (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
-- [樣式設定和範本化](../../wpf/controls/styling-and-templating.md)
+- [設定樣式和範本](../../wpf/controls/styling-and-templating.md)
