@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a4d9c86-b5ef-460a-9731-1d8c91b93a0b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8c9486b8ad0acb53e13f6a9202ce2d713ffe5fce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f12ff1486d39fe3d7d33f6afc061e5d0e610750c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765008"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140473"
 ---
 # <a name="icorpublishenumreset-method"></a>ICorPublishEnum::Reset 方法
-移動資料指標的列舉型別的開頭。  
+將的資料指標移至列舉的開頭。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,12 +37,12 @@ HRESULT Reset ();
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorPub.idl CorPub.h  
+ **標頭：** CorPub .idl，CorPub。h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorPublishEnum 介面](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

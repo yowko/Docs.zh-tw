@@ -14,23 +14,21 @@ helpviewer_keywords:
 ms.assetid: 88989482-a09f-4bd0-9adb-16f47b0291fd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0aa7e5cfce67c2854f943f65909acb39cfc0d214
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4cc9849ee8cd160a33ae9c769f7b98a87eafb8dd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913997"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134605"
 ---
 # <a name="icordebugvalueenum-interface"></a>ICorDebugValueEnum 介面
-會執行 "ICorDebugEnum" 方法, 並列舉 "ICorDebugValue" 陣列。  
+會執行 "ICorDebugEnum" 方法，並列舉 "ICorDebugValue" 陣列。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalueenum-next-method.md)|從列舉中取得指定`ICorDebugValue`的實例數目, 從目前位置開始。|  
+|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalueenum-next-method.md)|從列舉中取得指定數目的 `ICorDebugValue` 實例，從目前位置開始。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -42,10 +40,10 @@ ms.locfileid: "69913997"
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

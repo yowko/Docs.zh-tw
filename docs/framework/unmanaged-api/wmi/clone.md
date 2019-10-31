@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Clone function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5957f591dca7df30178660eb3fb074567c285715
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c8e7781a3efe7679ef2e05747862911db88bcc5f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798717"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141623"
 ---
 # <a name="clone-function"></a>Clone 函式
 傳回屬於目前物件之完整複製品的新物件。   
@@ -47,7 +45,7 @@ HRESULT Clone (
 在[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)實例的指標。
 
 `ppCopy`  
-脫銷新的物件，它是的完整獨立`ptr`。 如果這個引數`null`收到目前物件的複本，就不能是。
+脫銷新的物件，這是 `ptr`的完整獨立。 如果這個引數收到目前物件的複本，就無法 `null`。
 
 ## <a name="return-value"></a>傳回值
 
@@ -56,7 +54,7 @@ HRESULT Clone (
 |常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 發生一般失敗。 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null`已指定為參數，而且在此用法中不合法。 |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 已將 `null` 指定為參數，而且在此使用方式中不合法。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可複製物件。 |
 | `WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
   
@@ -69,10 +67,10 @@ HRESULT Clone (
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** WMINet_Utils.idl  
+ **標頭：** WMINet_Utils .idl  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WMI 和效能計數器（非受控 API 參考）](index.md)

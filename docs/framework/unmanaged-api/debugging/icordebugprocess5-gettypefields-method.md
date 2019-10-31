@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2d413b17da0b6f241f9078bfeb3bd035d4d07a81
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0045285a3da22f468c2426bb3b9c4ae7e3e1d7c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767625"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132662"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields 方法
-提供屬於型別欄位的相關資訊。  
+提供屬於類型之欄位的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,30 +38,30 @@ HRESULT GetTypeFields(
   
 ## <a name="parameters"></a>參數  
  `id`  
- [in]會擷取其欄位資訊類型的識別碼。  
+ 在要抓取其欄位資訊之類型的識別碼。  
   
  `celt`  
- [in]數目[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)其欄位資訊是要擷取的物件。  
+ 在要取出其欄位資訊的[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)物件數目。  
   
  `fields`  
- [out]陣列[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)提供屬於型別欄位的相關資訊的物件。  
+ 脫銷[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)物件的陣列，提供屬於該類型之欄位的相關資訊。  
   
  `pceltNeeded`  
- [out]指標的數目[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)中所包含物件`fields`。  
+ 脫銷`fields`所包含之[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)物件數目的指標。  
   
 ## <a name="remarks"></a>備註  
- `celt`參數，指定欄位的方法用來填入其欄位資訊數目`fields`，應該會對應至值`COR_TYPE_LAYOUT::numFields`欄位。  
+ `celt` 參數，指定方法用來填入 `fields`之欄位資訊的欄位數目，應對應至 [`COR_TYPE_LAYOUT::numFields`] 欄位的值。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugProcess5 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

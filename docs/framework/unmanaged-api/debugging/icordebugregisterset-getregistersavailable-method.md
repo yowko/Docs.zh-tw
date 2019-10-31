@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ba08ffa-55a2-4662-9d6d-4738f1db60c9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d600b4687b86f5872f94a60ad3422be764cf5307
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d8bd6ab13fa408fd7390aaeb76baee274742f48
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747214"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137695"
 ---
 # <a name="icordebugregistersetgetregistersavailable-method"></a>ICorDebugRegisterSet::GetRegistersAvailable 方法
-取得位元遮罩，指出其會登錄在此[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)目前可用。  
+取得位元遮罩，指出目前可使用此[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)中的哪些暫存器。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,23 +35,23 @@ HRESULT GetRegistersAvailable (
   
 ## <a name="parameters"></a>參數  
  `pAvailable`  
- [out]位元遮罩，指出目前使用哪些暫存器。  
+ 脫銷位元遮罩，指出目前可使用的暫存器。  
   
 ## <a name="remarks"></a>備註  
- 暫存器可能無法使用，如果其值無法判斷指定的情況。  
+ 如果無法判斷指定狀況的值，暫存器可能無法使用。  
   
- 傳回的遮罩位元包含每個暫存器 (1 << 暫存索引)。 位元值為 1，如果將暫存器可供使用，則為 0，如果它無法使用。  
+ 傳回的遮罩會包含每個暫存器的位（1 < < 暫存器索引）。 如果註冊可供使用，位值是1，如果無法使用，則為0。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugRegisterSet 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
 - [ICorDebugRegisterSet2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

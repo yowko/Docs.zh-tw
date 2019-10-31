@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 9ea07b57-96e2-44df-8711-8fe6c119087f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 569efa9d14ef10d8c5cf735091778a6c78882815
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e661bd82ecf6d804e852cca4a4478084edf303c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781168"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141495"
 ---
 # <a name="rundll32shimw-function"></a>RunDll32ShimW 函式
 執行指定命令。  
   
- 此函式已被取代，在.NET Framework 4。  
+ 此函式在 .NET Framework 4 中已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,26 +39,26 @@ HRESULT RunDll32ShimW (
   
 ## <a name="parameters"></a>參數  
  `hwnd`  
- [in]將在其中顯示命令輸出的視窗控制代碼。  
+ 在將顯示命令輸出之視窗的控制碼。  
   
  `hinst`  
- [in]包含命令的文件庫控制代碼。  
+ 在包含命令之程式庫的控制碼。  
   
  `lpszCmdLine`  
- [in]字串，指定要執行的命令。  
+ 在字串，指定要執行的命令。  
   
  `nCmdShow`  
- [in]整數，指定 [輸出] 視窗的顯示模式。  
+ 在整數，指定輸出視窗的顯示模式。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** MSCorEE.dll  
+ 連結**庫：** Mscoree.dll .dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5fd30875-555e-4e96-877b-5dd266cde7c4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96db1ca115ffed47b5eb8eadd9c3d2f620060c4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86b8737577bdb5f61f1061cb217620fae03ebd0c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755444"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139381"
 ---
 # <a name="icordebugprocessmodifylogswitch-method"></a>ICorDebugProcess::ModifyLogSwitch 方法
-設定指定的記錄參數的嚴重性層級。  
+設定指定之記錄參數的嚴重性層級。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,19 +35,19 @@ HRESULT ModifyLogSwitch(
   
 ## <a name="parameters"></a>參數  
  `pLogSwitchName`  
- [in]指定的記錄參數名稱的字串指標。  
+ 在字串的指標，指定記錄參數的名稱。  
   
  `lLevel`  
- [in]嚴重性層級設為指定的記錄參數。  
+ 在要為指定的記錄參數設定的嚴重性層級。  
   
 ## <a name="remarks"></a>備註  
- 這個方法會有效之後，才[icordebugmanagedcallback:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)回呼發生。  
+ 只有在發生[ICorDebugManagedCallback：： CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)回呼時，這個方法才有效。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

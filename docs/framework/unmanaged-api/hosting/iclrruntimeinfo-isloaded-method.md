@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdc5a3a7-71ff-4025-99a1-59e4ee0bfe1b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d7eafd9c3c9eeb14e53643bed09309ca8d3b5855
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e0ab16348abbaff00152f2b259ccafdd331174df
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748424"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136354"
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a>ICLRRuntimeInfo::IsLoaded 方法
-表示 common language runtime (CLR) 要與相關聯[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面會載入處理序。 但還沒有開始，就可以載入執行階段。  
+指出與[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面相關聯的 common language RUNTIME （CLR）是否已載入進程中。 您也可以載入執行時間，而不需要啟動。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,10 +35,10 @@ HRESULT IsLoaded(
   
 ## <a name="parameters"></a>參數  
  `hndProcess`  
- [in]處理序控制代碼。  
+ 在進程的控制碼。  
   
  `pbLoaded`  
- [out]`true` CLR 載入處理序，否則如果`false`。  
+ [out] `true` 如果 CLR 已載入進程中，則為，否則，`false`。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
@@ -51,28 +49,28 @@ HRESULT IsLoaded(
 |E_POINTER|`pbLoaded` 為 null。|  
   
 ## <a name="remarks"></a>備註  
- 這個方法是具有回溯相容性與下列函式和介面：  
+ 這個方法與下列函數和介面具有回溯相容性：  
   
-- [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)介面 （在.NET Framework 第 1 版裝載 API)。  
+- [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)介面（在 .NET Framework 版本1裝載 API 中）。  
   
-- [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) （在.NET Framework 2.0 中裝載 API) 的介面。  
+- [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)介面（在 .NET Framework 2.0 裝載 API 中）。  
   
-- 已被取代`CorBindTo*`函式 (請參閱 <<c2> [ 已被取代 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)裝載 API 的.NET Framework 2.0 中)。  
+- 已淘汰的 `CorBindTo*` 函式（請參閱 .NET Framework 2.0 裝載 API 中已[淘汰的 CLR 裝載](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)函式）。  
   
- 主機可能呼叫其中一個已被取代`CorBindTo*`函式，例如[CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)函式，來具現化特定的 clr 版本。 主應用程式然後再呼叫[iclrmetahost:: Getruntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md)方法並指定相同的版本號碼，才能取得[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面。  
+ 主機可以呼叫其中一個已被取代的 `CorBindTo*` 函式（例如[CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)函數），以具現化 CLR 的特定版本。 然後主機可以呼叫[ICLRMetaHost：： GetRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md)方法，並指定相同的版本號碼來取得[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面。  
   
- 如果主應用程式接著會呼叫`IsLoaded`方法傳回[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面`pbLoaded`傳回`true`; 否則它會傳回`false`。  
+ 如果主機接著在傳回的[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面上呼叫 `IsLoaded` 方法，`pbLoaded` 會傳回 `true`;否則，它會傳回 `false`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MetaHost.h  
+ **標頭：** MetaHost。h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRRuntimeInfo 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

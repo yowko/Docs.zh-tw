@@ -14,20 +14,18 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 68bce927c6426fc32cd2fe26dcc488432199612d
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: a8eb45e45a905f0b366642050f4845460e14aaf8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987200"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132896"
 ---
 # <a name="changing-case-in-net"></a>在 .NET 中變更大小寫
 如果您要撰寫接受使用者輸入的應用程式，則無法確定使用者輸入資料時會使用大寫或小寫。 通常，您會希望字串的大小寫一致，特別是要在使用者介面中顯示這些字串時。 下表描述三種變更大小寫的方法。 前兩種方法提供接受文化特性的多載。  
   
-|方法名稱|使用|  
+|方法名稱|請使用|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|將字串中的所有字元轉換成大寫。|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|將字串中的所有字元轉換成小寫。|  
@@ -72,7 +70,7 @@ ms.locfileid: "69987200"
   
  請注意，雖然它區分文化特性，但 <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> 方法不會提供語言正確的大小寫規則。 例如，在上述範例中，這個方法會將 "a tale of two cities"  轉換成 "A Tale Of Two Cities"。 不過，對於 en-US 文化特性而言語言正確的字首大寫為 "A Tale of Two Cities"。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)
 - [執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

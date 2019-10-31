@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 638d77df-ff9c-40d9-88ee-930f5f87ada1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4c56f6a2eecb614d2d8fbc7c402e90a7cb3ff7d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ac835459f88655377d96699e6aea0e877218c8fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753207"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125278"
 ---
 # <a name="itypenamegettypearguments-method"></a>ITypeName::GetTypeArguments 方法
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
@@ -40,12 +38,12 @@ HRESULT GetTypeArguments (
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6734321c-c8a9-401f-a558-cad715ec4a77
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 120d00bd329db17b98a439aa2e9c36d2d04968d3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4ae4856eca2c1441ea53df0d9ed3648700b39b24
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761305"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130649"
 ---
 # <a name="icordebugmanagedcallbackunloadassembly-method"></a>ICorDebugManagedCallback::UnloadAssembly 方法
-Common language runtime 組件已卸載會告知偵錯工具。  
+通知偵錯工具已卸載通用語言執行時間元件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,24 +36,24 @@ HRESULT UnloadAssembly (
   
 ## <a name="parameters"></a>參數  
  `pAppDomain`  
- [in]表示包含組件的應用程式定義域的 ICorDebugAppDomain 物件指標。  
+ 在ICorDebugAppDomain 物件的指標，表示包含該元件的應用程式域。  
   
  `pAssembly`  
- [in]代表組件 ICorDebugAssembly 物件的指標。  
+ 在表示元件之 ICorDebugAssembly 物件的指標。  
   
 ## <a name="remarks"></a>備註  
- 在此回呼之後應不到組件。  
+ 此回呼之後，不應使用此元件。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LoadAssembly 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)
 - [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

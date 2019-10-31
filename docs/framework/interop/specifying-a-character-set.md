@@ -10,14 +10,12 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ee68d0da3b7f23d4de0192da076ef6f71d6d222
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0db1cd8d75b45f6d718168793c873e5867028269
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051639"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125170"
 ---
 # <a name="specifying-a-character-set"></a>指定字元集
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位控制字串封送處理，並決定平台叫用如何在 DLL 中尋找函式名稱。 這個主題將描述這兩種行為。  
@@ -146,7 +144,7 @@ extern "C" int MessageBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [在 Managed 程式碼中建立原型](creating-prototypes-in-managed-code.md)

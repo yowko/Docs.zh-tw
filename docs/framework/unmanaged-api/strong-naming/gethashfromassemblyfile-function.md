@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 751ed69f-b7ab-4e07-80de-e17ca9319b0c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f984d44d0a8acb85562a58653dfd2882053a0ce
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 866b34acae333f043d8e13f4d0ebd55f32046334
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799282"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140725"
 ---
 # <a name="gethashfromassemblyfile-function"></a>GetHashFromAssemblyFile 函式
 使用指定的雜湊演算法取得所指定組件檔案的雜湊。  
@@ -51,21 +49,21 @@ HRESULT GetHashFromAssemblyFile (
  脫銷傳回的雜湊緩衝區。  
   
  `cchHash`  
- 在要求的大小`pbHash`上限。  
+ 在`pbHash`的要求大小上限。  
   
  `pchHash`  
- 脫銷傳回的大小（以位元組為單位`pbHash`）。  
+ 脫銷傳回的大小，以位元組為單位，`pbHash`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Stackexchange.redis.strongname。h  
   
- **LIBRARY:** 包含為 Mscoree.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [GetHashFromAssemblyFile 方法](../hosting/iclrstrongname-gethashfromassemblyfile-method.md)
 - [GetHashFromAssemblyFileW 方法](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md)

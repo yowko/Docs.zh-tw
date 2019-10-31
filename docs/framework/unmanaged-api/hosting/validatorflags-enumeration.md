@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3f5c266-3fcc-4ad1-aaf5-4cdbe26304ad
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c5f38231eb6a5911527c21ee3304fc77cfcf8e90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 61aafb8dc99bb908fc603945ff6ea74054f812c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776528"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141428"
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags 列舉
-包含值，表示應該執行的呼叫中的驗證類型[iclrvalidator:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)方法。  
+包含值，指出應該在呼叫[ICLRValidator：： Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)方法時執行的驗證類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,26 +36,26 @@ enum ValidatorFlags {
 };  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`VALIDATOR_CHECK_ILONLY`|指定只有的 Microsoft intermediate language (MSIL) 中的可執行檔應該進行驗證。|  
-|`VALIDATOR_CHECK_PEFORMAT_ONLY`|指定的可執行檔的格式進行驗證。|  
-|`VALIDATOR_EXTRA_VERBOSE`|指定應該執行和報告的所有類型的驗證。|  
-|`VALIDATOR_NOCHECK_PEFORMAT`|指定不應該驗證可執行檔的格式。|  
-|`VALIDATOR_SHOW_SOURCE_LINES`|指定驗證錯誤訊息應包含的原始程式碼程式行，顯示發生驗證錯誤。 .NET Framework 2.0 版中，此欄位的值無效。|  
+|`VALIDATOR_CHECK_ILONLY`|指定只應驗證可執行檔中的 Microsoft 中繼語言（MSIL）。|  
+|`VALIDATOR_CHECK_PEFORMAT_ONLY`|指定只應驗證可執行檔的格式。|  
+|`VALIDATOR_EXTRA_VERBOSE`|指定應該在上執行和報告所有類型的驗證。|  
+|`VALIDATOR_NOCHECK_PEFORMAT`|指定不應驗證可執行檔的格式。|  
+|`VALIDATOR_SHOW_SOURCE_LINES`|指定驗證錯誤訊息應包含引發驗證錯誤的源程式碼。 此域值在 .NET Framework 版本2.0 中無效。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** IValidator.idl, IValidator.h  
+ **標頭：** IValidator .idl，IValidator。h  
   
- **LIBRARY:** MSCorEE.dll  
+ 連結**庫：** Mscoree.dll .dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRErrorReportingManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
 - [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

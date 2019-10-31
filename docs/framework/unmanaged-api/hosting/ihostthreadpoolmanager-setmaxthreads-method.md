@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 77cfd347-95c2-4425-b807-4ecc2a8d4578
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 442e4566749aade5a7f8164fcc43baad902928c0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30c4ff93688396dd9a6a8086fbb53ad1c763ead0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749124"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141287"
 ---
 # <a name="ihostthreadpoolmanagersetmaxthreads-method"></a>IHostThreadPoolManager::SetMaxThreads 方法
-設定主應用程式可以維護執行緒集區中的執行緒最大數目。  
+設定主機可以線上程集區中維護的執行緒數目上限。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,27 +41,27 @@ HRESULT SetMaxThreads (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SetMaxThreads` 已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
-|HOST_E_TIMEOUT|呼叫已逾時。|  
-|HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生不明、 重大失敗。 方法會傳回 E_FAIL CLR 已不再可在此程序中使用。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
-|E_NOTIMPL|主機並未提供的實作`SetMaxThreads`。|  
+|S_OK|已成功傳回 `SetMaxThreads`。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫超時。|  
+|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
+|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
+|E_FAIL|發生未知的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|E_NOTIMPL|主機未提供 `SetMaxThreads`的執行。|  
   
 ## <a name="remarks"></a>備註  
- 主機不需要讓 CLR 設定執行緒集區的大小。 某些主機可能會想專有控制權的執行緒集區中，例如實作、 效能或延展性的原因。 在此情況下，主應用程式應該傳回 E_NOTIMPL 的 HRESULT 值。  
+ 主機不需要允許 CLR 設定執行緒集區的大小。 某些主機可能會想要獨佔控制執行緒集區，原因包括執行、效能或擴充性。 在此情況下，主機應該會傳回 E_NOTIMPL 的 HRESULT 值。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Threading.ThreadPool.SetMaxThreads%2A>
 - <xref:System.Threading.ThreadPool>

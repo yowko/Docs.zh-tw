@@ -8,14 +8,12 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d96e223b85178c7f2784a523e5609057d1432488
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: a2cd1039f95a763002922fc2fa24eff77838de80
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310534"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141293"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>開發世界性應用程式的最佳做法
 
@@ -101,7 +99,7 @@ ms.locfileid: "59310534"
 
 5. 請注意，uiCulture 值可設為瀏覽器所接受的語言。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)
 - [桌面應用程式中的資源](../../../docs/framework/resources/index.md)

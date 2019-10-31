@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f0922545-c2cf-40c8-9ef6-ca033563e682
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d964a5a77569762ff4fd69e419324a377b820d97
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e49dd95cf5d78c0a0f4fa075126eca19dea2693
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768941"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138708"
 ---
 # <a name="icordebugthread2getvolatileosthreadid-method"></a>ICorDebugThread2::GetVolatileOSThreadID 方法
-取得此 ICorDebugThread2 作業系統執行緒識別項。  
+取得此 ICorDebugThread2 的作業系統執行緒識別碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,13 +35,13 @@ HRESULT GetVolatileOSThreadID (
   
 ## <a name="parameters"></a>參數  
  `pdwTid`  
- [out]此執行緒的作業系統執行緒識別項。  
+ 脫銷此執行緒的作業系統執行緒識別碼。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

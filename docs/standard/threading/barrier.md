@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - synchronization primitives, Barrier
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 081a4e66462ab546bf4738b4a8b06a4a2ec91a1d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 5aa34f7f39f4b9b626bea29372cf984f3cefb361
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645026"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138156"
 ---
 # <a name="barrier"></a>屏障
 
@@ -54,7 +52,7 @@ ms.locfileid: "64645026"
   
  如需詳細資訊，請參閱[使用接續工作鏈結工作](../parallel-programming/chaining-tasks-by-using-continuation-tasks.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行緒物件和功能](threading-objects-and-features.md)
 - [操作說明：使用屏障同步處理並行作業](how-to-synchronize-concurrent-operations-with-a-barrier.md)

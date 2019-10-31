@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2081223-84ca-4331-a8d3-9352f422f3e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 62c81741b1260c20b25a0f49a33d3a20ebde24a5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 92282b09c4fbc0a5ed63c0dbca0f1a234bb421a9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780415"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133325"
 ---
 # <a name="icorthreadpoolcorcallorqueueuserworkitem-method"></a>ICorThreadpool::CorCallOrQueueUserWorkItem 方法
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
@@ -40,12 +38,12 @@ HRESULT CorCallOrQueueUserWorkItem (
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorThreadpool 介面](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)

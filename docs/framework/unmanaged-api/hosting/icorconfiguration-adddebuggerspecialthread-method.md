@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1f1e3239-438e-4be9-a3bb-7d0722d3a76d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a73232fb9327880f0038097d71698ddf8bf005e3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c5d6cfa3826667514eb70f9bb0df118d9ba0d07c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779897"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127825"
 ---
 # <a name="icorconfigurationadddebuggerspecialthread-method"></a>ICorConfiguration::AddDebuggerSpecialThread 方法
-表示特定的執行緒都應該可以繼續執行，而偵錯工具已在 managed 或 unmanaged 偵錯的情況下停止應用程式執行偵錯服務。  
+向偵錯工具表示，當偵錯工具在 managed 或非受控的偵測案例中停止時，應該允許特定執行緒繼續執行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,20 +35,20 @@ HRESULT AddDebuggerSpecialThread (
   
 ## <a name="parameters"></a>參數  
  `dwSpecialThreadId`  
- [in]應該允許繼續執行的執行緒識別碼。  
+ 在應允許繼續執行之執行緒的識別碼。  
   
 ## <a name="remarks"></a>備註  
- 指定的執行緒不會允許執行 managed 程式碼，或輸入以任何方式的執行階段。 在這類執行緒的範例是以支援舊版指令碼偵錯工具在處理序執行緒。  
+ 指定的執行緒將不允許執行 managed 程式碼，或以任何方式進入執行時間。 這類執行緒的範例就是支援舊版腳本偵錯工具的同進程執行緒。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorConfiguration 介面](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)

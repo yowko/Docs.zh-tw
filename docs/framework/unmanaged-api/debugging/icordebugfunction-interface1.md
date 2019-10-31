@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 783faea9-8083-41c1-b04a-51a81ac4c8f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae65c59efe1d925b5e058e8664d1e093fdfec875
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eb2b1e218314be01898ce90c4378fb713f9bf6ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917197"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137856"
 ---
 # <a name="icordebugfunction-interface"></a>ICorDebugFunction 介面
 
@@ -32,22 +30,22 @@ ms.locfileid: "69917197"
 |方法|描述|  
 |------------|-----------------|  
 |[CreateBreakpoint 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-createbreakpoint-method.md)|在此函式的開頭建立中斷點。|  
-|[GetClass 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getclass-method.md)|取得 ICorDebugClass 物件, 代表此函式為其成員的類別。|  
+|[GetClass 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getclass-method.md)|取得 ICorDebugClass 物件，代表此函式為其成員的類別。|  
 |[GetCurrentVersionNumber 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md)|取得對此函式進行之最新編輯的版本號碼。|  
-|[GetILCode 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getilcode-method.md)|取得此函式的 Microsoft 中繼語言 (MSIL) 程式碼。|  
-|[GetLocalVarSigToken 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getlocalvarsigtoken-method.md)|取得這個`ICorDebugFunction`實例所表示之函式的區域變數簽章的元資料標記。|  
+|[GetILCode 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getilcode-method.md)|取得此函式的 Microsoft 中繼語言（MSIL）程式碼。|  
+|[GetLocalVarSigToken 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getlocalvarsigtoken-method.md)|取得此 `ICorDebugFunction` 實例所表示之函式的區域變數簽章的元資料標記。|  
 |[GetModule 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getmodule-method.md)|取得定義此函數的模組。|  
 |[GetNativeCode 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getnativecode-method.md)|取得此函式的原生程式碼。|  
 |[GetToken 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-gettoken-method.md)|取得此函式的元資料標記。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugFunction`介面不代表具有泛型型別參數的函式。 例如, 實例會`ICorDebugFunction`代表`Func<T>` , 而不`Func<string>`是。 呼叫[ICorDebugILFrame2:: EnumerateTypeParameters](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)以取得泛型型別參數。  
+ `ICorDebugFunction` 介面不代表具有泛型型別參數的函式。 例如，`ICorDebugFunction` 實例會代表 `Func<T>`，但不會 `Func<string>`。 呼叫[ICorDebugILFrame2：： EnumerateTypeParameters](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)以取得泛型型別參數。  
   
- 方法的元資料標記`mdMethodDef`與方法的`ICorDebugFunction`物件之間的關聯性, 取決於函式上是否允許 [編輯後繼續]:  
+ 方法的元資料標記、`mdMethodDef`和方法的 `ICorDebugFunction` 物件之間的關聯性，取決於函式是否允許 [編輯後繼續]：  
   
-- 如果函式不允許 [編輯後繼續], 則`ICorDebugFunction`物件`mdMethodDef`與標記之間會存在一對一關聯性。 也就是, 函式有`ICorDebugFunction`一個物件和`mdMethodDef`一個 token。  
+- 如果函式不允許 [編輯後繼續]，則 `ICorDebugFunction` 物件和 `mdMethodDef` token 之間存在一對一關聯性。 也就是說，函式有一個 `ICorDebugFunction` 物件和一個 `mdMethodDef` token。  
   
-- 如果允許在函式上進行 [編輯後繼續], 則`ICorDebugFunction`物件`mdMethodDef`與標記之間會存在多對一關聯性。 也就是說, 函式可能有多個實例`ICorDebugFunction`, 每個函式版本各一個, 但只會有一個`mdMethodDef` token。  
+- 如果函式允許 [編輯後繼續]，則 `ICorDebugFunction` 物件和 `mdMethodDef` token 之間存在多對一關聯性。 也就是說，函式可能有許多 `ICorDebugFunction`的實例，每個版本的函式各有一個，但只有一個 `mdMethodDef` token。  
   
 > [!NOTE]
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
@@ -57,10 +55,10 @@ ms.locfileid: "69917197"
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ 連結**庫：** Corguids.lib .lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

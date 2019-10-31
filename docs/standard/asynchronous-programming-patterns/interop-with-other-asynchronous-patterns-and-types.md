@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cb99d6d78fc381e0b56efae51307eb469c535a9a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
-ms.translationtype: HT
+ms.openlocfilehash: f9fe33bb46f0ba78756c4172032dfbaf45d6fc89
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457342"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123983"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interop 與其他非同步模式和類型
 .NET Framework 1.0 導入了 <xref:System.IAsyncResult> 模式，亦稱為 [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)或 `Begin/End` 模式。  .NET Framework 2.0 加入了 [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)。  從 .NET Framework 4 開始， [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 取代了 APM 和 EAP，但是可讓您從較早的模式輕鬆建置移轉常式。  
@@ -99,7 +97,7 @@ ms.locfileid: "66457342"
  [!code-csharp[Conceptual.AsyncInterop#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#12)]
  [!code-vb[Conceptual.AsyncInterop#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wait1.vb#12)]  
   
- 有了此方法，您可以使用非同步方法中現有的 <xref:System.Threading.WaitHandle> 實作。  例如，如果您想要節流處理任何特定時間執行的非同步作業數目，可以利用旗號 ( <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> 物件)。  您可以節流處理至 *N* ，即同時執行的作業數，方法是透過將旗號的計數初始化至 *N*，在任何想執行作業時等待旗號，並在完成作業時釋放旗號：  
+ 有了此方法，您可以使用非同步方法中現有的 <xref:System.Threading.WaitHandle> 實作。  例如，如果您想要節流處理任何特定時間執行的非同步作業數目，可以利用旗號 (<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> 物件)。  您可以節流處理至 *N* ，即同時執行的作業數，方法是透過將旗號的計數初始化至 *N*，在任何想執行作業時等待旗號，並在完成作業時釋放旗號：  
   
  [!code-csharp[Conceptual.AsyncInterop#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Semaphore1.cs#13)]
  [!code-vb[Conceptual.AsyncInterop#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Semaphore1.vb#13)]  
@@ -113,8 +111,8 @@ ms.locfileid: "66457342"
  [!code-csharp[Conceptual.AsyncInterop#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#14)]
  [!code-vb[Conceptual.AsyncInterop#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wait1.vb#14)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [工作式非同步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
 - [實作以工作為基礎的非同步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)
-- [Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
+- [使用以工作為基礎的非同步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)

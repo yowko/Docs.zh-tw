@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 870f65fdbf263913134d0528c200d3c2990a498c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: HT
+ms.openlocfilehash: 284be7789b6411055a6421fd07cc1b0605f6ea0c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299003"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139867"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>逐步解說：建立資料流程管線
 雖然您可以使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> 方法從來源區塊接收訊息，但是也可以將訊息區連接起來，形成「資料流程管線」。 資料流程管線是一系列的元件，或稱為「資料流程區塊」，各個元件分別執行一項特定工作，以便共同完成整體目標。 資料流程管線中的每個資料流程區塊會在收到來自其他資料流程區塊的訊息時，開始執行工作。 以汽車製造的裝配線做比喻。 當每輛汽車通過裝配線時，某一站會組裝車架，下一站會安裝引擎，以此類推。 由於裝配線能夠同時組裝多輛車，因此裝配線的生產量會優於一次將一輛車從頭到尾組裝完成的生產量。
@@ -36,7 +34,7 @@ ms.locfileid: "59299003"
   
 6. 等候管線完成所有工作。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  在開始進行這個逐步解說之前，請先閱讀[資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)。  
   
 ## <a name="creating-a-console-application"></a>建立主控台應用程式  
@@ -55,7 +53,7 @@ ms.locfileid: "59299003"
  [!code-csharp[TPLDataflow_Palindromes#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#3)]
  [!code-vb[TPLDataflow_Palindromes#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#3)]  
   
-|成員|類型|說明|  
+|成員|輸入|描述|  
 |------------|----------|-----------------|  
 |`downloadString`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|從網站下載書籍的文字。|  
 |`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|將書籍的文字分成文字陣列。|  
@@ -108,8 +106,8 @@ ms.locfileid: "59299003"
   
  使用資料流程管線達成的平行處理原則稱為「粗略平行處理原則」(Coarse-grained Parallelism)，因為它通常包含數量較少的大型工作。 您也可以在資料流程管線中使用「精細平行處理原則」(Fine-grained Parallelism) 來處理一些較小且執行時間較短的工作。 在這個範例中，管線的 `findReversedWords` 成員會使用 [PLINQ](parallel-linq-plinq.md) 來平行處理工作清單中的多個項目。 在粗略管線中使用精細平行處理原則可以改善整體生產量。  
   
- 您也可以將來源資料流程區塊連接到多個目標區塊，藉此建立「資料流程網路」。 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> 方法的多載版本採用 <xref:System.Predicate%601> 物件定義目標區塊是否依據其值接受每個訊息。 大部分做為來源的資料流程區塊類型都會依照連接的順序，對所有連接的目標區塊提供訊息，直到其中一個區塊接受該訊息為止。 使用這個篩選機制就可以建立連接資料流程區塊的系統，透過不同的路徑導引不同的資料。 如需使用篩選建立資料流程網路的範例，請參閱[逐步解說：在 Windows Forms 應用程式中使用資料流程](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
+ 您也可以將來源資料流程區塊連接到多個目標區塊，藉此建立「資料流程網路」。 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> 方法的多載版本採用 <xref:System.Predicate%601> 物件定義目標區塊是否依據其值接受每個訊息。 大部分做為來源的資料流程區塊類型都會依照連接的順序，對所有連接的目標區塊提供訊息，直到其中一個區塊接受該訊息為止。 使用這個篩選機制就可以建立連接資料流程區塊的系統，透過不同的路徑導引不同的資料。 如需使用篩選來建立資料流程網路的範例，請參閱[逐步解說：在 Windows Forms 應用程式中使用資料流程](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

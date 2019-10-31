@@ -11,14 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], passing data to threads
 - threading [.NET Framework], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c231c946897772a6f02cce6eb2d3c4936b72a35e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: a628cbb4c9ec8e1c9ccd9fd73e72a82ecf2b2836
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716035"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138096"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>建立執行緒，並在啟動期間傳遞資料
 
@@ -59,7 +57,7 @@ ms.locfileid: "54716035"
  [!code-csharp[System.Threading.ThreadStart2#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source4.cs#4)]
  [!code-vb[System.Threading.ThreadStart2#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadStart2/VB/source4.vb#4)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadStart>

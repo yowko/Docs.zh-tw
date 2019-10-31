@@ -1,17 +1,15 @@
 ---
-title: ICorDebugMutableDataTarget::ContinueStatusChanged 方法
+title: ICorDebugMutableDataTarget：： ContinueStatusChanged 方法
 ms.date: 03/30/2017
 ms.assetid: 5a66d3f4-dd16-4d62-9dcc-0eab7041d894
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f43e98530fcd6d11b7c76295a92d42baceddcd6e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: abaf2d0542e16f526ecbe369370c31c225808f1f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764630"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139347"
 ---
-# <a name="icordebugmutabledatatargetcontinuestatuschanged-method"></a>ICorDebugMutableDataTarget::ContinueStatusChanged 方法
+# <a name="icordebugmutabledatatargetcontinuestatuschanged-method"></a>ICorDebugMutableDataTarget：： ContinueStatusChanged 方法
 變更指定執行緒上未處理之偵錯事件的接續狀態。  
   
 ## <a name="syntax"></a>語法  
@@ -37,11 +35,11 @@ HRESULT ContinueStatusChanged(
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugMutableDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

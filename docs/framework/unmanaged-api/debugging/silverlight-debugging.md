@@ -5,24 +5,22 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1d20bc002e52c3c6a42b45c0d1c5d559e65dc52c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7af03197a43976c47b7ddc30346d622e6b97207
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763659"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139140"
 ---
 # <a name="silverlight-debugging"></a>Silverlight 偵錯
 本節中的主題說明 Common Language Runtime (CLR) 為了支援對 Windows 作業系統或 Macintosh 平台上執行的 Silverlight 應用程式進行偵錯，所提供的環境和介面。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [EnumerateCLRs 函式](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)  
  提供在處理程序中列舉 CLRs 的機制。  
   
  [CloseCLREnumeration 函式](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)  
- 關閉所傳回的控制代碼陣列中任何有效 CLR 繼續-啟動事件[EnumerateCLRs 函式](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)，並釋放用於控制代碼和字串路徑陣列的記憶體。  
+ 關閉位於[EnumerateCLRs](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)函式所傳回之控制碼陣列中的任何有效 CLR 繼續-啟動事件，並釋放控制碼和字串路徑陣列的記憶體。  
   
  [CreateCoreClrDebugTarget 函式](../../../../docs/framework/unmanaged-api/debugging/createcoreclrdebugtarget-function.md)  
  針對處理序和執行階段列舉，建立與遠端目標的連接。  
@@ -34,7 +32,7 @@ ms.locfileid: "61763659"
  從目標處理序中的 CLR 路徑來建立版本字串。  
   
  [CreateDebuggingInterfaceFromVersion 函式](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)  
- 接受從傳回的 CLR 版本字串[CreateVersionStringFromModule 函式](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)函式，並傳回對應的偵錯工具介面。  
+ 接受從[CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)函式函式傳回的 CLR 版本字串，並傳回對應的偵錯工具介面。  
   
  [CoreClrDebugProcInfo 結構](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)  
  代表正在遠端電腦上執行的處理序。  
@@ -54,7 +52,7 @@ ms.locfileid: "61763659"
  [ShutdownDbgTransportManager 函式](../../../../docs/framework/unmanaged-api/debugging/shutdowndbgtransportmanager-function.md)  
  關閉要與遠端目標電腦連接的傳輸管理員。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯 Coclass](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

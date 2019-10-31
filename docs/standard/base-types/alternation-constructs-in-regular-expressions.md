@@ -15,15 +15,13 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: c6f33023d747ce20964c7cb83a66d6764b6030cd
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 352cfd65cd4620d8274ff0a14ea507cd49522470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736606"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140561"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>規則運算式中的替代建構
 
@@ -43,7 +41,7 @@ ms.locfileid: "71736606"
 [!code-csharp[RegularExpressions.Language.Alternation#1](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation1.cs#1)]
 [!code-vb[RegularExpressions.Language.Alternation#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation1.vb#1)]
 
-使用 `|` 字元的正則運算式 `\bgr(a|e)y\b`，如下表所示：
+使用 `|` 字元 `\bgr(a|e)y\b`的正則運算式，如下表所示：
 
 |模式|描述|  
 |-------------|-----------------|  
@@ -52,7 +50,7 @@ ms.locfileid: "71736606"
 |<code>(a&#124;e)</code>|比對 "a" 或 "e"。|  
 |`y\b`|比對字邊界上的 "y"。|  
 
-`|` 字元也可以用來與多個字元或子運算式執行兩選一的比對，這些字元或運算式可以包含字元常值和規則運算式語言項目的任何組合。 然而，字元類別並不提供這項功能。下列範例使用 `|` 字元擷取其中任一組美國社會安全號碼 (SSN)，*ddd*-*dd*-*dddd* 格式的 9 位數數字，或擷取美國雇主識別碼 (EIN)，其為 *dd*-*ddddddd* 格式的 9 位數數字。
+`|` 字元也可以用來與多個字元或子運算式執行兩選一的比對，這些字元或運算式可以包含字元常值和規則運算式語言項目的任何組合。 （字元類別不提供這種功能）。下列範例會使用 `|` 字元來解壓縮美國社會安全號碼（SSN），這是一種以*ddd*-*dd*-*dddd*或美國雇主識別碼（EIN）格式的9位數數位，是9位數的數位，其格式為*dd*-*ddddddd*。
 
 [!code-csharp[RegularExpressions.Language.Alternation#2](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
 [!code-vb[RegularExpressions.Language.Alternation#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
@@ -70,13 +68,13 @@ ms.locfileid: "71736606"
 
 這個語言項目會嘗試比對兩個模式的其中一個是否符合初始模式。 它的語法為：  
 
-`(?(` *運算式* `)` *是* `|` *no* `)`
+`(?(` *expression* `)` *yes* `|` *no* `)`
 
-其中 *expression* 是要比對的初始模式， *yes* 是符合 *expression* 時要比對的模式，而 *no* 是不符合 *expression* 時要比對的選擇性模式。 規則運算式引擎會將 *expression* 視為零寬度的判斷提示，也就是說，規則運算式引擎不會在評估 *expression*之後於輸入資料流中前進。 因此，此建構等同於下列：
+其中 *expression* 是要比對的初始模式， *yes* 是符合 *expression* 時要比對的模式，而 *no* 是不符合 *expression* 時要比對的選擇性模式。 規則運算式引擎會將 *expression* 視為零寬度的判斷提示，也就是說，規則運算式引擎不會在評估 *expression* 之後於輸入資料流中前進。 因此，此建構等同於下列：
 
-`(?(?=` *運算式* `)` *是* `|` *no* `)`
+`(?(?=` *expression* `)` *yes* `|` *no* `)`
 
-其中 `(?=`*expression*`)`) 是零寬度的判斷提示建構 (如需詳細資訊，請參閱[群組建構](grouping-constructs-in-regular-expressions.md)。)由於規則運算式引擎會將 *expression* 解譯為錨點 (零寬度的判斷提示)，因此 *expression* 必須是零寬度的判斷提示 (如需詳細資訊，請參閱[錨點](anchors-in-regular-expressions.md)) 或是同樣包含在 *yes* 中的子運算式。 否則就無法比對 *yes* 模式。  
+其中 `(?=`*expression*`)`) 是零寬度的判斷提示建構 （如需詳細資訊，請參閱[群組結構](grouping-constructs-in-regular-expressions.md)）。因為正則運算式引擎會將*expression*解讀為錨點（零寬度的判斷提示），所以*expression*必須是零寬度的判斷提示（如需詳細資訊，請參閱[錨點](anchors-in-regular-expressions.md)）或也包含在中的子運算式*是*。 否則就無法比對 *yes* 模式。  
   
 > [!NOTE]
 > 如果 *expression* 是具名或編號的擷取群組，則替代建構會解譯為擷取測試。如需詳細資訊，請參閱下一節[依據有效擷取群組進行的條件式比對](#Conditional_Group)。 換句話說，規則運算式引擎不會嘗試比對擷取的子字串，而會測試群組是否存在。  
@@ -101,7 +99,7 @@ ms.locfileid: "71736606"
 
 這個語言項目會嘗試根據它是否已經比對指定的擷取群組，比對兩種模式的其中一種。 它的語法為：
 
-`(?(` *name* `)` *是* `|` *no* `)`
+`(?(` *name* `)` *yes* `|` *no* `)`
 
 或
 
@@ -109,9 +107,9 @@ ms.locfileid: "71736606"
 
 其中 *name* 是名稱，而 *number* 是擷取群組的數目， *yes* 是 *name* 或 *number* 其中之一相符時要比對的運算式，而 *no* 則是不符合時要比對的選擇性運算式。
 
-如果 *name* 並未對應到規則運算式模式中所使用的擷取群組名稱，則交替建構會解譯為運算式測試，如上一節中所說明。 通常，這表示 *expression* 判斷值為 `false`。 如果 *number* 沒有對應到規則運算式模式中所使用的編號擷取群組，則規則運算式引擎會擲回 <xref:System.ArgumentException>。
+如果 *name* 並未對應到規則運算式模式中所使用的擷取群組名稱，則替代建構會解譯為運算式測試，如上一節中所說明。 通常，這表示 *expression* 判斷值為 `false`。 如果 *number* 沒有對應到規則運算式模式中所使用的編號擷取群組，則規則運算式引擎會擲回 <xref:System.ArgumentException>。
 
-下列範例是[以 &#124; 進行的二選一模式比對](#Either_Or)一節中使用的範例變化。 它會使用名為 `n2` 的擷取群組，其由兩個數字後接連字號所組成。 替代建構會測試是否已在輸入字串中比對這個擷取群組。 如果是，替代建構會嘗試比對九位數雇主識別碼 (EIN) 的末七碼。美國雇主識別碼 (EIN)。 如果不是，則會嘗試比對九位數美國社會安全碼 (SSN)。社會安全碼 (SSN)。
+下列範例是[以 &#124; 進行的二選一模式比對](#Either_Or)一節中使用的範例變化。 它會使用名為 `n2` 的擷取群組，其由兩個數字後接連字號所組成。 替代建構會測試是否已在輸入字串中比對這個擷取群組。 如果是，交替建構會嘗試比對九位數雇主識別碼 (EIN) 的末七碼。美國雇主識別碼 (EIN)。 如果不是，則會嘗試比對九位數美國社會安全碼 (SSN)。社會安全碼 (SSN)。
 
 [!code-csharp[RegularExpressions.Language.Alternation#4](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation4.cs#4)]
 [!code-vb[RegularExpressions.Language.Alternation#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation4.vb#4)]
@@ -132,6 +130,6 @@ ms.locfileid: "71736606"
 [!code-csharp[RegularExpressions.Language.Alternation#5](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
 [!code-vb[RegularExpressions.Language.Alternation#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)

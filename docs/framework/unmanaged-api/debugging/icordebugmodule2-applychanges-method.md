@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 96fa3406-6a6f-41a1-88c6-d9bc5d1a16d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 860b87b09ee487f893a1bba2aaa34292c50ffcb7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c324019e1e62701f4f2aaba1c00948b292ba6847
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764335"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127904"
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges 方法
-適用於執行中處理序在中繼資料中的變更和 Microsoft intermediate language (MSIL) 程式碼中的變更。  
+將中繼資料中的變更和 Microsoft 中繼語言（MSIL）程式碼中的變更套用至執行中的進程。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,35 +38,35 @@ HRESULT ApplyChanges (
   
 ## <a name="parameters"></a>參數  
  `cbMetadata`  
- [in]以位元組為單位的差異中繼資料的大小。  
+ 在差異中繼資料的大小（以位元組為單位）。  
   
  `pbMetadata`  
- [in]包含差異中繼資料的緩衝區。 從傳回的緩衝區位址[IMetaDataEmit2::SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)方法。  
+ 在包含差異中繼資料的緩衝區。 緩衝區的位址會從[IMetaDataEmit2：： SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)方法傳回。  
   
- 中繼資料中的相對虛擬位址 (Rva) 應該是相對於 MSIL 程式碼的開頭。  
+ 中繼資料中的相對虛擬位址（Rva）應該相對於 MSIL 程式碼的開頭。  
   
  `cbIL`  
- [in]大小，以位元組為單位的 MSIL 程式碼的差異。  
+ 在差異 MSIL 程式碼的大小（以位元組為單位）。  
   
  `pbIL`  
- [in]包含更新的 MSIL 程式碼的緩衝區。  
+ 在包含更新的 MSIL 程式碼的緩衝區。  
   
 ## <a name="remarks"></a>備註  
- `pbMetadata`參數的特殊差異中繼資料格式 (如輸出所[IMetaDataEmit2::SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md))。 `pbMetadata` 接受做為基底的上一個中繼資料，並描述要套用至該基底的個別變更。  
+ `pbMetadata` 參數是特殊的差異元資料格式（如[IMetaDataEmit2：： SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)所輸出）。 `pbMetadata` 會將先前的中繼資料當做基底，並描述要套用至該基底的個別變更。  
   
- 相反地， `pbIL[`] 參數包含更新的方法，新的 MSIL，而且完全取代該方法的先前 MSIL  
+ 相反地，`pbIL[`] 參數包含新的 MSIL 做為已更新的方法，其目的是要完全取代該方法先前的 MSIL  
   
- 當差異 MSIL 和中繼資料中已建立偵錯工具的記憶體時，偵錯工具就會呼叫`ApplyChanges`傳送到 common language runtime (CLR) 的變更。 執行階段更新及其中繼資料資料表、 將新的 MSIL 放到程序，並設定新的 MSIL-just-in-time (JIT) 編譯。 偵錯工具時已套用所做的變更，應該呼叫[IMetaDataEmit2::ResetENCLog](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md)準備的下一個編輯工作階段。 偵錯工具就可以繼續處理程序。  
+ 在偵錯工具的記憶體中建立 delta MSIL 和中繼資料時，偵錯工具會呼叫 `ApplyChanges` 將變更傳送至 common language runtime （CLR）。 執行時間會更新其中繼資料資料表，將新的 MSIL 放在進程中，並設定新 MSIL 的即時（JIT）編譯。 套用變更之後，偵錯工具應該呼叫[IMetaDataEmit2：： ResetENCLog](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md)來準備下一個編輯會話。 偵錯工具可能會繼續處理。  
   
- 每當偵錯工具會呼叫`ApplyChanges`上有差異的中繼資料的模組，它也應該呼叫[imetadataemit:: Applyeditandcontinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md)與該模組的中繼資料，但複本的其複本的所有相同的差異中繼資料用來發出所做的變更。 如果中繼資料的複本以某種方式變得同步處理與實際的中繼資料，偵錯工具可以一律擲出該複本，並取得新的複本。  
+ 每當偵錯工具在具有 delta 中繼資料的模組上呼叫 `ApplyChanges` 時，它也應該在該模組中繼資料的所有複本上，使用相同的差異中繼資料來呼叫[IMetaDataEmit：： ApplyEditAndContinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md) ，但用來發出變更的複本除外。 如果中繼資料的複本與實際的中繼資料有某種的同步，則偵錯工具一律會擲回該複本並取得新的複本。  
   
- 如果`ApplyChanges`方法失敗，偵錯工作階段處於無效的狀態，必須重新啟動。  
+ 如果 `ApplyChanges` 方法失敗，則 debug 會話會處於無效狀態，而且必須重新開機。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

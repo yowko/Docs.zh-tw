@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0500854e-2121-43d9-a028-64312da35258
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1e0217019aa9b8ff85716c62c27c0f4d5547074a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da35db8a943fda5fb3fbf4126684bb9cb7243001
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759789"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137419"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap 方法
-CTRL + C 會陷入正在偵錯的處理程序會告知偵錯工具。  
+通知偵錯工具在正在進行調試的進程中，已攔截 CTRL + C。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,27 +35,27 @@ HRESULT ControlCTrap (
   
 ## <a name="parameters"></a>參數  
  `pProcess`  
- [in]表示處理程序的 CTRL + C 會被截取的 ICorDebugProcess 物件指標。  
+ 在ICorDebugProcess 物件的指標，代表用來攔截 CTRL + C 的進程。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|偵錯工具會處理 CTRL + C 設陷。|  
-|S_FALSE|偵錯工具不會處理 CTRL + C 設陷。|  
+|S_OK|偵錯工具將會處理 CTRL + C 陷阱。|  
+|S_FALSE|偵錯工具將不會處理 CTRL + C 陷阱。|  
   
 ## <a name="remarks"></a>備註  
- 在程序中的所有應用程式定義域會停止這個回呼。  
+ 此回呼的進程中的所有應用程式域都會停止。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

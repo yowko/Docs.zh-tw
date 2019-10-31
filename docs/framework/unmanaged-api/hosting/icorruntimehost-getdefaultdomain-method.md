@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e17a6fc-f335-4aae-9bb0-c3e1271a9426
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe80050d7b513bce2660b81c5e4faa35b375f22b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6dc25cbeef2576a2ecc6ec39b2cb3f9abb7b9964
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780027"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139562"
 ---
 # <a name="icorruntimehostgetdefaultdomain-method"></a>ICorRuntimeHost::GetDefaultDomain 方法
-取得類型的介面指標<xref:System._AppDomain?displayProperty=nameWithType>，代表為目前的處理序的預設網域。  
+取得類型 <xref:System._AppDomain?displayProperty=nameWithType> 的介面指標，表示目前進程的預設網域。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,29 +35,29 @@ HRESULT GetDefaultDomain (
   
 ## <a name="parameters"></a>參數  
  `pAppDomain`  
- [out]類型的介面指標<xref:System._AppDomain?displayProperty=nameWithType>至<xref:System.AppDomain>執行個體，表示處理程序的預設應用程式定義域。  
+ 脫銷類型的介面指標，<xref:System._AppDomain?displayProperty=nameWithType> 指向代表進程之預設應用程式域的 <xref:System.AppDomain> 實例。  
   
- 這個指標型別`IUnknown`，所以通常應該呼叫的呼叫端`QueryInterface`若要取得類型的介面指標<xref:System._AppDomain?displayProperty=nameWithType>。  
+ 這個指標的型別 `IUnknown`，因此呼叫端通常應該呼叫 `QueryInterface` 來取得型別 <xref:System._AppDomain?displayProperty=nameWithType>的介面指標。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|此作業成功。|  
+|S_OK|作業成功。|  
 |S_FALSE|作業無法完成。|  
-|E_FAIL|發生不明、 重大失敗。 如果方法會傳回 E_FAIL，common language runtime (CLR) 不再使用舊處理序中。 任何裝載 api 的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
-|HOST_E_CLRNOTAVAILABLE|不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
+|E_FAIL|發生未知的嚴重失敗。 如果方法傳回 E_FAIL，則 common language runtime （CLR）在進程中就不再可用。 對任何裝載 Api 的後續呼叫都會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** 1.0, 1.1  
+ **.NET Framework 版本：** 1.0、1。1  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>

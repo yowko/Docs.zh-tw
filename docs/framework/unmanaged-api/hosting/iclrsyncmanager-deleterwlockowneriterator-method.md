@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fcfd340a-b7d6-44e4-8167-2c05b789d483
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a30ac0ab8c985af04709ddd8e8e5dd9bca776dcb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb02b5c941e15d172140565e8efb625234947cd7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759087"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130570"
 ---
 # <a name="iclrsyncmanagerdeleterwlockowneriterator-method"></a>ICLRSyncManager::DeleteRWLockOwnerIterator 方法
-要求 common language runtime (CLR)，損毀的呼叫所建立的迭代器[iclrsyncmanager:: Createrwlockowneriterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md)。  
+要求 common language runtime （CLR）終結由呼叫[ICLRSyncManager：： CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md)所建立的反覆運算器。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,32 +35,32 @@ HRESULT DeleteRWLockOwnerIterator (
   
 ## <a name="parameters"></a>參數  
  `Iterator`  
- [in]使用呼叫所建立的迭代器`CreateRWLockOwnerIterator`。  
+ 在使用 `CreateRWLockOwnerIterator`的呼叫所建立的反覆運算器。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`DeleteRWLockOwnerIterator` 已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 已載入處理序，或處於不能在其中執行 managed 程式碼，或成功地處理所呼叫的狀態。|  
-|HOST_E_TIMEOUT|呼叫已逾時。|  
-|HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL CLR 已不再可在此程序中使用。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|S_OK|已成功傳回 `DeleteRWLockOwnerIterator`。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或處於無法執行 managed 程式碼或無法成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫超時。|  
+|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
+|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
+|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- 主機可以呼叫這個方法和`CreateRWLockOwnerIterator`以確保其執行緒的實作保持同步。  
+ 主機可以呼叫這個方法並 `CreateRWLockOwnerIterator`，以確保其執行緒的執行保持同步。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
 - [IHostSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

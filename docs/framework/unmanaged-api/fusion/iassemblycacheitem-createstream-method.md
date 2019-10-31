@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 697ab0f4-470c-4baa-a415-4a975c42d0d5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5af7dc4e1694b66fc4a5ce37e515c71e9fa3db49
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0660621f465f2ba3610e06bd1df38baa1bc5c907
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796738"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134477"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream 方法
 
@@ -59,7 +57,7 @@ HRESULT CreateStream (
 脫銷傳回之[IStream](/windows/desktop/api/objidl/nn-objidl-istream)實例位址的指標。
 
 `puliMaxSize`\
-[in，optional]所參考`ppIStream`之資料流程的大小上限。
+[in，optional]`ppIStream`所參考的資料流程大小上限。
 
 ## <a name="requirements"></a>需求
 
@@ -69,6 +67,6 @@ HRESULT CreateStream (
 
 **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IAssemblyCacheItem 介面](iassemblycacheitem-interface.md)

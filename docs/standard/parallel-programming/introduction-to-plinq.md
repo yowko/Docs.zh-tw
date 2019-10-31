@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 39ca7ca02c2bb1050653daf1b53450533cc950dd
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: 938bae09eab4e95c0ec875a8681cc276325b976b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490965"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129047"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 簡介
 
@@ -40,7 +38,7 @@ Parallel LINQ (PLINQ) 是平行實作的 LINQ 模式。 PLINQ 查詢在很多方
 
 除了標準查詢運算子外，<xref:System.Linq.ParallelEnumerable> 類別還會包含一組方法，以供啟用平行執行特有的行為。 下表列出這些 PLINQ 特有的方法。
 
-|ParallelEnumerable 運算子|說明|
+|ParallelEnumerable 運算子|描述|
 |---------------------------------|-----------------|
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|PLINQ 的進入點。 指定系統應該在情況允許時平行處理其餘查詢。|
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|指定系統應該將其餘查詢當作非平行 LINQ 查詢來循序執行。|
@@ -103,11 +101,11 @@ Parallel LINQ (PLINQ) 是平行實作的 LINQ 模式。 PLINQ 查詢在很多方
 
 下圖顯示 `foreach` 和 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 兩者在執行查詢方面的差異。
 
-![比較 ForAll 與ForEach](../../../docs/standard/parallel-programming/media/vs-isvnt-allvseach.png "VS_ISVNT_ALLvsEACH")
+![ForAll 與 ForEach 的比較](../../../docs/standard/parallel-programming/media/vs-isvnt-allvseach.png "VS_ISVNT_ALLvsEACH")
 
 ## <a name="cancellation"></a>取消
 
-PLINQ 已與 .NET Framework 4 中的取消作業型別整合。 (如需詳細資訊，請參閱 [Managed 執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md))。因此，不像循序 LINQ to Objects 查詢，PLINQ 查詢是可以取消的。 若要建立可取消的 PLINQ 查詢，請在查詢中使用 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 運算子，並提供 <xref:System.Threading.CancellationToken> 執行個體做為引數。 當權杖上的 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性設為 true 時，PLINQ 將注意到，並會停止所有執行緒上的處理作業，然後擲回 <xref:System.OperationCanceledException>。
+PLINQ 已與 .NET Framework 4 中的取消作業型別整合。 （如需詳細資訊，請參閱[Managed 執行緒中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)）。因此，與順序 LINQ to Objects 查詢不同的是，PLINQ 查詢可以取消。 若要建立可取消的 PLINQ 查詢，請在查詢中使用 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 運算子，並提供 <xref:System.Threading.CancellationToken> 執行個體做為引數。 當權杖上的 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性設為 true 時，PLINQ 將注意到，並會停止所有執行緒上的處理作業，然後擲回 <xref:System.OperationCanceledException>。
 
 在設定了取消權杖之後，PLINQ 查詢還是可能會繼續處理某些元素。
 
@@ -134,7 +132,7 @@ PLINQ 支援固定數目的分割 (但在執行階段為了保持負載平衡，
 
 在許多情況下，查詢可平行處理，但設定平行查詢時所帶來的額外負荷，遠超過所獲得的效能好處。 如果查詢不會執行許多計算，或如果資料來源很小，PLINQ 查詢的速度可能會比 LINQ to Objects 循序查詢還慢。 您可以使用 Visual Studio Team Server 中的 Parallel Performance Analyzer 來比較各種查詢的效能，以找出處理瓶頸，以及判斷您的查詢該平行執行還是循序執行。 如需詳細資訊，請參閱[並行視覺化檢視](/visualstudio/profiling/concurrency-visualizer)和[如何：測量 PLINQ 查詢效能](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [認識 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)

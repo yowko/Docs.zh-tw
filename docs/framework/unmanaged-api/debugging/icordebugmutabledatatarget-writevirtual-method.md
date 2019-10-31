@@ -1,17 +1,15 @@
 ---
-title: ICorDebugMutableDataTarget::WriteVirtual 方法
+title: ICorDebugMutableDataTarget：： WriteVirtual 方法
 ms.date: 03/30/2017
 ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d0a6a58a1a270cb67b75cf34ac5df8d45ccf307c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5947caa8dfb97574bb4b3c5634d962df153211c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764574"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132684"
 ---
-# <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget::WriteVirtual 方法
+# <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget：： WriteVirtual 方法
 將記憶體寫入目標處理序位址空間。  
   
 ## <a name="syntax"></a>語法  
@@ -44,11 +42,11 @@ HRESULT WriteVirtual(
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugMutableDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

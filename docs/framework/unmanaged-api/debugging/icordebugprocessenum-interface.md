@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b63a507a-ca97-4be0-8e4f-401cce2125f6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 81653c69353b60d7287240505f53b26552c21774
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f5406c35915e447831d233804413034a429e8a1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960983"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139784"
 ---
 # <a name="icordebugprocessenum-interface"></a>ICorDebugProcessEnum Interface
 會執行 ICorDebugEnum 方法並列舉 ICorDebugProcess 陣列。  
@@ -30,7 +28,7 @@ ms.locfileid: "69960983"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-next-method.md)|從列舉中取得指定`ICorDebugProcess`的實例數目, 從目前位置開始。|  
+|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-next-method.md)|從列舉中取得指定數目的 `ICorDebugProcess` 實例，從目前位置開始。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -42,10 +40,10 @@ ms.locfileid: "69960983"
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

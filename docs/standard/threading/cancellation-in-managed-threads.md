@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3e39ee597f5142f2b3ccbd4ded49e59d6700ec8a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d4bbf30923d65ad7aeced80efa626136ae27491b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960148"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138146"
 ---
 # <a name="cancellation-in-managed-threads"></a>Managed 執行緒中的取消作業
 從 .NET Framework 4 開始，.NET Framework 使用統一的模型來進行非同步或長時間執行的同步作業的合作式取消。 此模型是根據一個被稱為取消權杖的輕量級物件。 叫用一或多個可取消作業的物件，例如藉由建立新的執行緒或工作，會將權杖傳遞至每個作業。 個別作業可以依序將權杖的複本傳遞至其他作業。 之後的某些時候 ，建立權杖的物件可以使用它來要求作業停止活動。 只有要求的物件可以發出取消要求，而且每個接聽程式負責留意要求，並且以適當且即時的方式回應。  
@@ -35,7 +33,7 @@ ms.locfileid: "69960148"
   
  下圖顯示權杖來源和其權杖的所有複本兩者之間的關係。  
   
- ![CancellationTokenSource 和取消權杖](../../../docs/standard/threading/media/vs-cancellationtoken.png "VS_CancellationToken")  
+ ![CancellationTokenSource 和解除標記](../../../docs/standard/threading/media/vs-cancellationtoken.png "VS_CancellationToken")  
   
  新的取消模型可讓您更輕鬆地建立取消感知應用程式和程式庫，它可支援下列功能：  
   
@@ -45,7 +43,7 @@ ms.locfileid: "69960148"
   
 - 送出要求的物件藉著只使用一個方法呼叫，來發出取消要求給權杖的所有複本。  
   
-- 接聽程式可以透過將這些權杖聯結成單一個「連結的權杖」(linked token)  來同時接聽多個權杖。  
+- 接聽程式可以透過將這些權杖聯結成單一個「連結的權杖」(linked token) 來同時接聽多個權杖。  
   
 - 使用者程式碼可以注意並回應來自程式庫程式碼的取消要求，並且程式庫程式碼可以注意並回應來自使用者程式碼的取消要求。  
   
@@ -54,7 +52,7 @@ ms.locfileid: "69960148"
 ## <a name="cancellation-types"></a>取消類型  
  取消架構被實作為一組相關的類型，這些會在下表中列出。  
   
-|類型名稱|說明|  
+|類型名稱|描述|  
 |---------------|-----------------|  
 |<xref:System.Threading.CancellationTokenSource>|建立取消權杖，並發出取消要求給該權杖所有複本的物件。|  
 |<xref:System.Threading.CancellationToken>|輕量型的實值類型通常做為方法參數傳遞至一或多個接聽程式。 接聽程式會監控權杖中 `IsCancellationRequested` 屬性的值，藉由輪詢、回呼，或等候控制代碼。|  
@@ -66,7 +64,7 @@ ms.locfileid: "69960148"
  在下列範例中，要求的物件會建立 <xref:System.Threading.CancellationTokenSource> 物件，然後傳遞其 <xref:System.Threading.CancellationTokenSource.Token%2A> 屬性給可取消作業。 接收要求的作業會藉由輪詢來監視權杖之 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性的值。 當此值變成 `true`  時，接聽程式能夠以任何合適的方式來結束。 在此範例中，方法只會結束，就如同在許多情況下所要求的。  
   
 > [!NOTE]
-> 此範例會使用 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 方法來示範新的取消架構與舊版應用程式開發介面相容。 如需使用所慣用新 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類型的範例，請參閱[如何：取消工作及其子系](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)。  
+> 此範例會使用 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 方法來示範新的取消架構與舊版應用程式開發介面相容。 如需使用慣用的新 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類型之範例，請參閱[如何：取消工作及其子系](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)。  
   
  [!code-csharp[Cancellation#1](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex1.cs#1)]
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  
@@ -114,7 +112,7 @@ ms.locfileid: "69960148"
   
 - 回呼不應該執行任何手動執行緒或 <xref:System.Threading.SynchronizationContext> 使用方式於回呼中。 如果回呼必須在特定執行緒上執行，請使用 <xref:System.Threading.CancellationTokenRegistration?displayProperty=nameWithType> 建構函式，它可讓您指定目標 syncContext 為作用中的 <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType>。 於回呼中執行手動執行緒可能會導致死結。  
   
- 如需更完整的範例，請參閱[如何：註冊取消要求的回呼](../../../docs/standard/threading/how-to-register-callbacks-for-cancellation-requests.md)。  
+ 如需更完整的範例，請參閱[如何：註冊用於取消要求的回呼](../../../docs/standard/threading/how-to-register-callbacks-for-cancellation-requests.md)。  
   
 ### <a name="listening-by-using-a-wait-handle"></a>使用等候控制代碼來接聽  
  當可取消的作業等候同步處理基本類型，例如 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 或 <xref:System.Threading.Semaphore?displayProperty=nameWithType>，而可以封鎖可取消作業時，您可以使用 <xref:System.Threading.CancellationToken.WaitHandle%2A?displayProperty=nameWithType> 屬性，來啟用事件以等候前述兩種事件以及取消要求。 取消權杖的等候控制代碼會被通知以回應取消要求，而且方法可以使用 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法被傳回的值，以判斷它是否是被通知的取消權杖。 作業可以就在那時結束，或在適當的情況擲回 <xref:System.OperationCanceledException> 。  
@@ -127,7 +125,7 @@ ms.locfileid: "69960148"
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  
   
- 如需更完整的範例，請參閱[如何：接聽具有等候控制代碼的取消要求](../../../docs/standard/threading/how-to-listen-for-cancellation-requests-that-have-wait-handles.md)。  
+ 如需更完整的範例，請參閱[如何：透過等候處理來接聽取消要求](../../../docs/standard/threading/how-to-listen-for-cancellation-requests-that-have-wait-handles.md)。  
   
 ### <a name="listening-to-multiple-tokens-simultaneously"></a>同時接聽多個權杖  
  在某些情況下，接聽程式可能必須同時接聽多個取消權杖。 例如，可取消的作業可能需要監視內部的取消權杖，除了在外部做為引數傳遞至方法參數的權杖。 若要達成此目的，建立連結的權杖來源，它可以將兩個或多個權杖聯結到一個權杖，如下列範例所示。  
@@ -146,8 +144,8 @@ ms.locfileid: "69960148"
   
 - 使用者委派應該及時嘗試回應來自程式庫程式碼的取消要求。  
   
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> 是遵循這些指導方針之類別的範例。 如需詳細資訊，請參閱[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)和[如何：取消 PLINQ 查詢](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)。  
+ <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> 是遵循這些指導方針之類別的範例。 如需詳細資訊，請參閱工作[取消](../../../docs/standard/parallel-programming/task-cancellation.md)和[如何：取消 PLINQ 查詢](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Managed 執行緒處理的基本概念](../../../docs/standard/threading/managed-threading-basics.md)

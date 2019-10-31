@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1cf4ca8e-d9bb-4633-9adf-5e24315bf87a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbcf6c842e7eee55609a9ea2a25cda4360f8dc95
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d52757f82a950c382c7c8f2162630eda7d7795e7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739298"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132098"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget 函式
-建立偵錯工具 proxy 在遠端電腦上，執行並傳回連接[ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)可用來查詢執行的處理序和遠端電腦上載入的執行階段的物件。  
+建立連接至遠端電腦上執行的偵錯工具 proxy，並傳回可用來查詢執行中進程和載入的執行時間在遠端電腦上的[ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,7 +40,7 @@ HRESULT CreateCoreClrDebugTarget (
  [in] 遠端目標電腦的 IPv4 位址。  
   
  `ppTarget`  
- [out]指標的指標[ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)將建立的物件。  
+ 脫銷將建立之[ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)物件指標的指標。  
   
 ## <a name="return-value"></a>傳回值  
  S_OK  
@@ -57,8 +55,8 @@ HRESULT CreateCoreClrDebugTarget (
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CoreClrRemoteDebuggingInterfaces.h  
+ **標頭：** CoreClrRemoteDebuggingInterfaces。h  
   
- **程式庫：** mscordbi_macx86.dll  
+ 連結**庫：** mscordbi_macx86  
   
- **.NET framework 版本：** 3.5 SP1
+ **.NET Framework 版本：** 3.5 SP1

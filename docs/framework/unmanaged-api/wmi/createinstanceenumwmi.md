@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CreateInstanceEnumWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b7709d9c50a494013ece2f91b3acc213278f0e57
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9ffa718be0e8b67471fdf8cb277df201388d2840
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798900"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130409"
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi 函式
 
@@ -63,10 +61,10 @@ HRESULT CreateInstanceEnumWmi (
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 函數會傳回順向列舉值。 一般來說，順向列舉值的速度較快，而且使用的記憶體比傳統的列舉值少，但它們不允許[複製](clone.md)的呼叫。 |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI 會保留列舉中物件的指標，直到釋放它們為止。 |
 
-建議的旗標`WBEM_FLAG_RETURN_IMMEDIATELY`為`WBEM_FLAG_FORWARD_ONLY` ，以達到最佳效能。
+建議的旗標是 `WBEM_FLAG_RETURN_IMMEDIATELY` 和 `WBEM_FLAG_FORWARD_ONLY` 以獲得最佳效能。
 
 `pCtx`\
-在通常，此值為`null`。 否則，它是[IWbemCoNtext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)實例的指標，可供提供要求之實例的提供者使用。
+在通常，此值為 `null`。 否則，它是[IWbemCoNtext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)實例的指標，可供提供要求之實例的提供者使用。
 
 `ppEnum`\
 脫銷接收列舉值的指標。
@@ -93,7 +91,7 @@ HRESULT CreateInstanceEnumWmi (
 
 這個函式所傳回的下列值會定義在*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數：
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 使用者沒有許可權可查看指定之類別的實例。 |
 | `WBEM_E_FAILED` | 0x80041001 | 發生未指定的錯誤。 |
@@ -116,10 +114,10 @@ HRESULT CreateInstanceEnumWmi (
 
 **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
-**標頭：** WMINet_Utils.idl
+**標頭：** WMINet_Utils .idl
 
 **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WMI 和效能計數器（非受控 API 參考）](index.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d74da502492065dbffb5e5499581263760636c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef9e339c74b2d2785d758ed9c4adfc1901073253
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737075"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139368"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory 方法
-讀取指定的此程序的記憶體區域。  
+讀取這個進程的指定記憶體區域。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,29 +37,29 @@ HRESULT ReadMemory(
   
 ## <a name="parameters"></a>參數  
  `address`  
- [in]A`CORDB_ADDRESS`值，指定要讀取的記憶體的基底位址。  
+ 在`CORDB_ADDRESS` 值，指定要讀取之記憶體的基底位址。  
   
  `size`  
- [in]若要從記憶體讀取的位元組數目。  
+ 在要從記憶體中讀取的位元組數目。  
   
  `buffer`  
- [out]接收內容的記憶體緩衝區。  
+ 脫銷接收記憶體內容的緩衝區。  
   
  `read`  
- [out]指標的位元組數傳送至指定的緩衝區。  
+ 脫銷傳送到指定緩衝區的位元組數目指標。  
   
 ## <a name="remarks"></a>備註  
- `ReadMemory`方法主要是用來檢查正在使用的 unmanaged 偵錯項目一部分的記憶體區域的 interop 偵錯。 這個方法也可用來讀取 Microsoft intermediate language (MSIL) 程式碼和原生的 JIT 編譯程式碼。  
+ `ReadMemory` 方法主要是供 interop 偵錯工具用來檢查偵錯工具的非受控部分所使用的記憶體區域。 這個方法也可以用來讀取 Microsoft 中繼語言（MSIL）程式碼和原生 JIT 編譯程式碼。  
   
- 將移除任何受管理的中斷點，從資料中傳回的`buffer`參數。 將進行不會調整，藉由設定原生的中斷點[ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)。  
+ 任何受控中斷點都會從 `buffer` 參數傳回的資料中移除。 [ICorDebugProcess2：： SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)所設定的原生中斷點不會進行任何調整。  
   
- 無快取的程序記憶體會執行。  
+ 不會執行進程記憶體的快取。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

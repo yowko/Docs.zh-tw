@@ -1,5 +1,5 @@
 ---
-title: 作法：對 Web 使用者顯示當地語系化的日期和時間資訊
+title: 如何：對 Web 使用者顯示當地語系化的日期和時間資訊
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -13,16 +13,14 @@ ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
 dev_langs:
 - csharp
 - vb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c50cdf93d8cfcefeffd35290d26dfa432a241e1
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: HT
+ms.openlocfilehash: 51142a168aba4408e6ce550a032960c4df6c3ae7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882480"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138737"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>作法：對 Web 使用者顯示當地語系化的日期和時間資訊
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>如何：對 Web 使用者顯示當地語系化的日期和時間資訊
 由於網頁可在世界的任何一個角落顯示，負責剖析及格式化日期和時間值的作業在與使用者互動時，並不應該仰賴單一的預設格式 (這通常是網頁伺服器當地文化特性的格式)。 相反地，處理來自使用者之日期和時間字串輸入的 Web 表單，應該使用該使用者慣用的文化特性對字串進行剖析。 同樣地，日期和時間資料應該以符合使用者文化特性的格式向該使用者顯示。 本主題顯示如何執行此動作。  
   
 ## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>剖析來自使用者的日期和時間字串  
@@ -111,7 +109,7 @@ ms.locfileid: "65882480"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  為了防止使用者將指令碼插入至 HTML 資料流，絕對不應在伺服器回應中直接回應使用者輸入。 而應改用 <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> 方法進行編碼。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

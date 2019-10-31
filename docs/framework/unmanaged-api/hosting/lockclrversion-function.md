@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6742293c1970198ef3d5f5da7d75a0c78e78045c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 216852f8f051440b2814619b843a1f25013e4042
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768404"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133769"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 函式
-可讓主機判斷哪個版本的 common language runtime (CLR) 會在程序中使用之前先明確初始化 CLR。  
+允許主機判斷在明確初始化 CLR 之前，將在進程中使用哪個版本的 common language runtime （CLR）。  
   
- 此函式已被取代，在.NET Framework 4。  
+ 此函式在 .NET Framework 4 中已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,16 +39,16 @@ HRESULT LockClrVersion (
   
 ## <a name="parameters"></a>參數  
  `hostCallback`  
- [in]在初始化時，clr 會呼叫的函式。  
+ 在要在初始化時由 CLR 呼叫的函式。  
   
  `pBeginHostSetup`  
- [in]正在啟動初始設定來通知 CLR 主機會呼叫的函式。  
+ 在主機要呼叫的函式，以通知 CLR 初始化正在啟動。  
   
  `pEndHostSetup`  
- [in]函式由主機呼叫，來通知 CLR 初始化已完成。  
+ 在主機要呼叫的函式，以通知 CLR 初始化已完成。  
   
 ## <a name="return-value"></a>傳回值  
- 中所定義 WinError.h，除了下列的值，這個方法會傳回標準的 COM 錯誤代碼。  
+ 這個方法會傳回標準 COM 錯誤碼（如 Winerror.h 中所定義），以及下列值。  
   
 |傳回碼|描述|  
 |-----------------|-----------------|  
@@ -58,41 +56,41 @@ HRESULT LockClrVersion (
 |E_INVALIDARG|一或多個引數為 null。|  
   
 ## <a name="remarks"></a>備註  
- 主機會呼叫`LockClrVersion`之前初始化 CLR。 `LockClrVersion` 採用三個參數，全部都是類型的回呼[FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)。 此類型定義，如下所示。  
+ 主機會在初始化 CLR 之前呼叫 `LockClrVersion`。 `LockClrVersion` 採用三個參數，這些都是[FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)類型的回呼。 此類型的定義如下。  
   
 ```cpp  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
 ```  
   
- 在執行階段初始化時，會執行下列步驟：  
+ 初始化執行時間時，會發生下列步驟：  
   
-1. 主機會呼叫[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)或其中一個其他執行階段初始化函式。 或者，主應用程式無法初始化執行階段使用 COM 物件啟動。  
+1. 主機會呼叫[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)或其中一個其他執行時間初始化函數。 或者，主機也可以使用 COM 物件啟用來初始化執行時間。  
   
-2. 在執行階段呼叫所指定的函數`hostCallback`參數。  
+2. 執行時間會呼叫 `hostCallback` 參數所指定的函數。  
   
-3. 所指定的函數`hostCallback`接著會將下列呼叫順序：  
+3. `hostCallback` 所指定的函式會執行下列一連串的呼叫：  
   
-    - 所指定的函數`pBeginHostSetup`參數。  
+    - `pBeginHostSetup` 參數所指定的函數。  
   
-    - `CorBindToRuntimeEx` （或另一個執行階段初始化函式）。  
+    - `CorBindToRuntimeEx` （或另一個執行時間初始化函數）。  
   
-    - [Iclrruntimehost:: Sethostcontrol](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)。  
+    - [ICLRRuntimeHost：： SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)。  
   
-    - [Iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)。  
+    - [ICLRRuntimeHost：： Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)。  
   
-    - 所指定的函數`pEndHostSetup`參數。  
+    - `pEndHostSetup` 參數所指定的函數。  
   
- 所有的來電`pBeginHostSetup`至`pEndHostSetup`必須發生在單一執行緒或 fiber，使用相同的邏輯堆疊。 這個執行緒可以不同的執行緒`hostCallback`呼叫。  
+ 所有從 `pBeginHostSetup` 到 `pEndHostSetup` 的呼叫都必須在具有相同邏輯堆疊的單一執行緒或光纖上發生。 這個執行緒可以與呼叫 `hostCallback` 的執行緒不同。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** MSCorEE.dll  
+ 連結**庫：** Mscoree.dll .dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

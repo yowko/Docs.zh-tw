@@ -3,14 +3,12 @@ title: XML 結構描述物件模型概觀
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 97e2e54c534b30c3c514c9102ded0050fc154b75
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 3ebf0cd06ebea3092ef8aa42debe0afeac9be4f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589794"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129140"
 ---
 # <a name="xml-schema-object-model-overview"></a>XML 結構描述物件模型概觀
 Microsoft .NET Framework 中的結構描述物件模型 (SOM) 是一個豐富的 API，可讓您以程式設計的方式建立、編輯及驗證結構描述。 SOM 在 XML 結構描述文件上的運作方式，與文件物件模型 (DOM) 在 XML 文件上的運作方式相似。 XML 結構描述文件是有效的 XML 檔案，當它載入 SOM 後，便可傳達符合該結構描述之其他 XML 文件結構及有效性的意義。  
@@ -38,7 +36,7 @@ Microsoft .NET Framework 中的結構描述物件模型 (SOM) 是一個豐富的
   
  如需 <xref:System.Xml.Schema> 命名空間中每個類別的詳細資訊，請參閱 .NET Framework 類別庫中的 <xref:System.Xml.Schema> 命名空間參考文件。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f5cdc135-6db4-4b32-9dd1-260ec58b774f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c6b53d23410dd310766dab44664c8cd865ee9ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c076dd2912a22e4f9492492a2d7a9fb73db88e8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771691"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139031"
 ---
 # <a name="icordebugstepper2setjmc-method"></a>ICorDebugStepper2::SetJMC 方法
-設定值，這個值指出是否此 ICorDebugStepper 步驟只能透過應用程式的開發人員所撰寫的程式碼。 此程序也稱為 my code (JMC) 偵錯。  
+設定值，指定此 ICorDebugStepper 步驟是否只透過應用程式開發人員所撰寫的程式碼進行。 這個程式也就是所謂的「我的程式碼」（JMC）偵錯工具。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,13 +35,13 @@ HRESULT SetJMC (
   
 ## <a name="parameters"></a>參數  
  `fIsJMCStepper`  
- [in]設定為`true`來逐步執行程式碼，是由應用程式的開發人員所撰寫; 否則設定為只`false`。  
+ 在設定為 `true`，只透過應用程式開發人員所撰寫的程式碼執行。否則，請將設定為 `false`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

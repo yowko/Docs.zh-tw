@@ -1,5 +1,5 @@
 ---
-title: 作法：使用 JoinBlock 從多個來源讀取資料
+title: 如何：使用 JoinBlock 從多個來源讀取資料
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - TPL dataflow library, joining blocks in
 - dataflow blocks, joining in TPL
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a7becba9c7626e79f9d001a6a21ed92a336e9d11
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: HT
+ms.openlocfilehash: 66fd7ed7a98b8be8f88f65ecb52710a1e40af778
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591988"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139733"
 ---
-# <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>作法：使用 JoinBlock 從多個來源讀取資料
+# <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>如何：使用 JoinBlock 從多個來源讀取資料
 本文件將說明，如何在有多個來源的資料可用時，使用 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 類別執行作業。 另外也會示範如何使用非窮盡模式，讓多個聯結區塊更有效率地共用資料來源。
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -35,6 +33,6 @@ ms.locfileid: "65591988"
 ## <a name="robust-programming"></a>穩固程式設計  
  使用非窮盡聯結還可以協助您防止應用程式中發生死結。 在軟體應用程式中，當兩個或多個處理序都保留資源，且互相等候另一個處理序釋放某些其他資源時，就會發生「死結」。 假設有一個應用程式定義了兩個 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 物件。 這兩個物件都會從兩個共用來源區塊讀取資料。 在窮盡模式下，如果其中一個聯結區塊是從第一個來源讀取，而第二個聯結區塊是從第二個來源讀取，則應用程式可能會發生死結，因為這兩個聯結區塊會互相等候彼此釋放其資源。 在非窮盡模式下，每個聯結區塊只會在所有資料都可用時才從其來源讀取，因此可排除死結的情況發生。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

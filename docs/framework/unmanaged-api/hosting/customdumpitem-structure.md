@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: fd9085ff-7beb-4c38-97f0-037cd8ba4f65
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 05f5d3fbe05ad1e97a1ae61ed0496f314c4ec5cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae64edd8a3a628100d4c51d0b78be1bc8d49fc17
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765964"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138287"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem 結構
-描述要新增至自訂的傾印，錯誤報告中的項目。  
+描述要在錯誤報表中新增至自訂傾印的專案。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,25 +35,25 @@ struct {
 } CustomDumpItem;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`itemKind`|[ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)值，指出要加入的項目種類。|  
-|`pReserved`|目前無法使用。 加入等位的任何項目必須是不能大於指標大小。 如果`struct`是有需要，您必須分別將其配置，並指向它。|  
+|`itemKind`|[ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)值，表示要新增的專案類型。|  
+|`pReserved`|目前未使用。 加入至聯集的任何專案都不能大於指標大小。 如果需要 `struct`，您必須分別加以配置並指向它。|  
   
 ## <a name="remarks"></a>備註  
- [Iclrerrorreportingmanager:: Begincustomdump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)採用參數的型別`CustomDumpItem`。  
+ [ICLRErrorReportingManager：： BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)接受 `CustomDumpItem`類型的參數。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.idl  
+ **標頭：** Mscoree.dll .idl  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

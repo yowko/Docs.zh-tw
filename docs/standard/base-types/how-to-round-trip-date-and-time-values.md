@@ -1,5 +1,5 @@
 ---
-title: 作法：反覆存取日期和時間值
+title: 如何：反覆存取日期和時間值
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,16 +12,14 @@ helpviewer_keywords:
 - time [.NET Framework], round-trip values
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fc3393c27d2955528822c193c36a0f6d86f5c148
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 2e3a58ffe8332e0afec62461f6897d673e1da09f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663801"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132011"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>作法：反覆存取日期和時間值
+# <a name="how-to-round-trip-date-and-time-values"></a>如何：反覆存取日期和時間值
 
 在許多應用程式中，日期和時間值的用途都是要明確地識別單一時間點。 本主題說明如何儲存並還原 <xref:System.DateTime> 值、<xref:System.DateTimeOffset> 值，以及具有時區資訊的日期和時間值，讓還原值能夠識別出與儲存值相同的時間。
 
@@ -40,7 +38,7 @@ ms.locfileid: "67663801"
 [!code-csharp[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#1)]
 [!code-vb[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#1)]
 
-反覆存取 <xref:System.DateTime> 值時，這項技術可以成功保留所有當地和全球通用時間的時間。 例如，如果當地的 <xref:System.DateTime> 值儲存在美國太平洋標準時區的系統上，但該值在美國中央標準時區的系統上還原，則還原的日期和時間會比原始時間晚兩個小時，以反映出兩個時區之間的時間差異。 不過，針對未指定的時間，這項技術並不一定準確。 所有 <xref:System.DateTime.Kind%2A> 屬性為 <xref:System.DateTimeKind.Unspecified> 的 <xref:System.DateTime> 值，都會被視為當地時間。 如果不是這種狀況，<xref:System.DateTime> 就無法成功識別出正確的時間點。 這項限制的因應措施，是將日期和時間值與其儲存和還原作業的時區緊密結合。
+反覆存取 <xref:System.DateTime> 值時，這項技術可以成功保留所有當地和全球通用時間的時間。 例如，如果本地 <xref:System.DateTime> 值是儲存在美國太平洋標準時間時區系統中，並且還原為美國中央標準時間時區系統中，則還原的日期和時間會比原始時間多兩小時，反映出兩個時區之間的時差。 不過，針對未指定的時間，這項技術並不一定準確。 所有 <xref:System.DateTime.Kind%2A> 屬性為 <xref:System.DateTimeKind.Unspecified> 的 <xref:System.DateTime> 值，都會被視為當地時間。 如果不是這種狀況，<xref:System.DateTime> 就無法成功識別出正確的時間點。 這項限制的因應措施，是將日期和時間值與其儲存和還原作業的時區緊密結合。
 
 ### <a name="to-round-trip-a-datetimeoffset-value"></a>若要反覆存取 DateTimeOffset 值
 
@@ -89,17 +87,17 @@ ms.locfileid: "67663801"
 
   - <xref:System> (僅限 C#)。
 
-  - <xref:System.Globalization?displayProperty=nameWithType>.
+  - <xref:System.Globalization?displayProperty=nameWithType>
 
-  - <xref:System.IO?displayProperty=nameWithType>.
+  - <xref:System.IO?displayProperty=nameWithType>
 
-  - <xref:System.Runtime.Serialization?displayProperty=nameWithType>.
+  - <xref:System.Runtime.Serialization?displayProperty=nameWithType>
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.
+  - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>
 
 - 每個程式碼範例 (`DateInTimeZone` 類別除外) 都應包含於類別或 Visual Basic 模組中，並從 `Main` 方法進行呼叫。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之間選擇](../../../docs/standard/datetime/choosing-between-datetime.md)

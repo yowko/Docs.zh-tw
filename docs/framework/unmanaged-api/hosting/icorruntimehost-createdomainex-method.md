@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1bdde382-f8ba-4cc8-94b2-d1ac919c585e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2e51c5cda8eca1737e2daab4cbe94a78433c8608
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a3a2d1827774ddedc00eb849f64256e3f425b3fa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762124"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127716"
 ---
 # <a name="icorruntimehostcreatedomainex-method"></a>ICorRuntimeHost::CreateDomainEx 方法
-建立應用程式定義域。 呼叫端會收到類型的介面指標<xref:System._AppDomain>，執行個體的型別<xref:System.AppDomain?displayProperty=nameWithType>。 這個方法可讓呼叫端傳遞 IAppDomainSetup 執行個體來設定傳回的其他功能<xref:System._AppDomain>執行個體。  
+建立應用程式域。 呼叫端會接收類型為 <xref:System._AppDomain>的介面指標，<xref:System.AppDomain?displayProperty=nameWithType>的實例。 這個方法可讓呼叫端傳遞 IAppDomainSetup 實例，以設定所傳回 <xref:System._AppDomain> 實例的其他功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,39 +38,39 @@ HRESULT CreateDomainEx (
   
 ## <a name="parameters"></a>參數  
  `pwzFriendlyName`  
- [in]選擇性參數，可用來為網域指定的易記名稱。 此易記名稱可以顯示在使用者介面，例如偵錯工具，以識別該定義域。  
+ 在選擇性參數，用來為定義域提供易記名稱。 這個易記名稱可以在使用者介面（例如偵錯工具）中顯示，以識別網域。  
   
  `pSetup`  
- [in]選擇性的介面指標的型別`IAppDomainSetup`呼叫得到[icorruntimehost:: Createdomainsetup](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md)方法。  
+ 在`IAppDomainSetup`類型的選擇性介面指標，由呼叫[ICorRuntimeHost：： CreateDomainSetup](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md)方法所取得。  
   
  `pIdentityArray`  
- [in]選擇性的指標陣列`IIdentity`執行個體，表示對應到安全性原則，以建立權限集合的辨識項。 `IIdentity`物件，可由呼叫[CreateEvidence](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)方法。  
+ 在指向 `IIdentity` 實例的選擇性陣列，表示透過安全性原則對應的辨識項，以建立許可權集合。 您可以藉由呼叫[CreateEvidence](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)方法來取得 `IIdentity` 物件。  
   
  `pAppDomain`  
- [out]類型的介面指標<xref:System._AppDomain>的執行個體<xref:System.AppDomain?displayProperty=nameWithType>，可用來進一步控制網域。  
+ 脫銷類型的介面指標 <xref:System._AppDomain> 至可用來進一步控制定義域的 <xref:System.AppDomain?displayProperty=nameWithType> 實例。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|此作業成功。|  
+|S_OK|作業成功。|  
 |S_FALSE|作業無法完成。|  
-|E_FAIL|發生不明、 重大失敗。 如果方法會傳回 E_FAIL，common language runtime (CLR) 不再使用舊處理序中。 任何裝載 api 的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
-|HOST_E_CLRNOTAVAILABLE|不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
+|E_FAIL|發生未知的嚴重失敗。 如果方法傳回 E_FAIL，則 common language runtime （CLR）在進程中就不再可用。 對任何裝載 Api 的後續呼叫都會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
   
 ## <a name="remarks"></a>備註  
- `CreateDomainEx` 擴充功能[CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)藉由呼叫者傳入`IAppDomainSetup`與設定應用程式定義域的屬性值的執行個體。  
+ `CreateDomainEx` 藉由允許呼叫端傳入具有屬性值的 `IAppDomainSetup` 實例以設定應用程式域，來擴充[CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)的功能。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** 1.0, 1.1  
+ **.NET Framework 版本：** 1.0、1。1  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>

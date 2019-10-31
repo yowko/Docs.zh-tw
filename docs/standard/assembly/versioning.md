@@ -8,14 +8,12 @@ helpviewer_keywords:
 - resolving assembly binding requests
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1363ce758929414f054e3d28dc6cd02bd618a8ac
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bbb3dae2ce66c93d05a2a1c0f7e426901fa7b2e0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053955"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140187"
 ---
 # <a name="assembly-versioning"></a>組件版本控制
 
@@ -73,7 +71,7 @@ Runtime 會針對版本的用途區別一般和強式名稱的組件。 版本�
   
 資訊版本是使用自訂屬性 <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> 表示。 如需資訊版本屬性的詳細資訊，請參閱[設定元件屬性](set-attributes.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段如何找出組件](../../framework/deployment/how-the-runtime-locates-assemblies.md)
 - [設定應用程式](../../framework/configure-apps/index.md)

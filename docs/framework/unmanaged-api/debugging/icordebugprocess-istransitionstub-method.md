@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f7653317-7e48-4163-be03-f50f1a4b0f70
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1ec29aa748c437199434fa1394e1a00c82154447
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 852c77be0dc8ef91933bacbbd3d6b3f5a69ae8c8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766880"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139383"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a>ICorDebugProcess::IsTransitionStub 方法
-取得值，指出位址是否會導致轉換到 managed 程式碼的虛設常式內。  
+取得值，指出位址是否在將導致轉換成 managed 程式碼的存根內部。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,21 +35,21 @@ HRESULT IsTransitionStub(
   
 ## <a name="parameters"></a>參數  
  `address`  
- [in]A`CORDB_ADDRESS`值，指定的位址。  
+ 在指定有問題之位址的 `CORDB_ADDRESS` 值。  
   
  `pbTransitionStub`  
- [out]布林值的指標`true`如果指定的位址位於虛設常式，會導致轉換到 managed 程式碼; 否則 *`pbTransitionStub`是`false`。  
+ 脫銷布林值的指標，如果指定的位址位於會導致轉換成 managed 程式碼的存根內部，則為 `true`：否則，會 `false``pbTransitionStub`。  
   
 ## <a name="remarks"></a>備註  
- `IsTransitionStub`方法可以由未受管理的逐步執行程式碼用來決定何時要將逐步執行控制權傳回給受管理的步進。  
+ 未受管理的逐步執行程式碼可以使用 `IsTransitionStub` 方法，決定何時要將逐步執行控制傳回給 managed 分檔器。  
   
- 您也可以查看在可攜式執行檔 (PE) 中的資訊識別轉換虛設常式。  
+ 您也可以查看可移植執行檔（PE）檔案中的資訊，以識別轉換存根。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

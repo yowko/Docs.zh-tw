@@ -16,14 +16,12 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - Reqasm.exe
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 09c54e58ef25afa28d2681719284c358d90bddc2
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 6866da283cc7cdd180aada252007d67bd72cd862
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969066"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124101"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>封裝 COM 的 .NET Framework 組件
 
@@ -61,7 +59,7 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
 
   不論您選擇的機制為何，只有所提供組件中定義的公用類型才會包含在所產生的型別程式庫中。
 
-如需相關指示，請參閱[如何：將型別程式庫當作 Win32 資源內嵌在 .NET 架構應用程式中](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))。
+如需指示，請參閱[如何：將型別程式庫當作 Win32 資源內嵌在 .NET 架構應用程式中](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))。
 
 <a name="cpconpackagingassemblyforcomanchor1"></a>
 
@@ -89,7 +87,7 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
 
 [.NET 服務安裝工具 (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) 會將 Managed 類別新增至 Windows 2000 元件服務，並將數項工作合併到單一工具。 除了載入和註冊組件之外，Regsvcs.exe 還可以在現有 COM+ 1.0 應用程式中產生、註冊和安裝型別程式庫。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>

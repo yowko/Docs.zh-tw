@@ -10,14 +10,12 @@ helpviewer_keywords:
 - source code in multiple languages
 - languages, multiple language support by CodeDOM
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5fb95ab7ff4fcac7169238d90637d7b83078d6dd
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a7e341bb5bfb5b4648a222409951275169a29b79
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046109"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130247"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>動態原始程式碼的產生和編譯
 .NET Framework 包含稱為程式碼文件物件模型 (CodeDOM) 的機制，它可讓發出原始程式碼的程式開發人員在執行階段，根據代表要呈現之程式碼的單一模型，產生多種程式語言的原始程式碼。  
@@ -30,7 +28,7 @@ ms.locfileid: "71046109"
   
  .NET Framework 包含 <xref:Microsoft.CSharp.CSharpCodeProvider>、<xref:Microsoft.JScript.JScriptCodeProvider> 和 <xref:Microsoft.VisualBasic.VBCodeProvider> 的程式碼產生器和程式碼編譯器。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [使用 CodeDOM](using-the-codedom.md)  
  說明常見的用法，並示範使用 CodeDOM 建置簡單的物件圖形。  
   

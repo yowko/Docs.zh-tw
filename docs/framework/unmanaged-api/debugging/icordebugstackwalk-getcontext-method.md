@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f453e950a79b0f929ec8f813cc13eb2e01ab8c87
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 700e0af05828b9fe0a50c1aac114e840adc276b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760938"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131855"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext 方法
-傳回目前的框架的內容[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)物件。  
+傳回[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)物件中目前框架的內容。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,42 +36,42 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 ## <a name="parameters"></a>參數  
  `contextFlags`  
- [in]旗標，表示要求 （在 WinNT.h 中定義） 的內容緩衝區的內容。  
+ 在旗標，指出內容緩衝區的要求內容（定義于 WinNT. h 中）。  
   
  `contextBufSize`  
- [in]內容緩衝區配置的大小。  
+ 在內容緩衝區的配置大小。  
   
  `contextSize`  
- [out]內容的實際大小。 此值必須小於或等於內容緩衝區的大小。  
+ 脫銷內容的實際大小。 這個值必須小於或等於內容緩衝區的大小。  
   
  `contextBuf`  
- [out]內容的緩衝區。  
+ 脫銷內容緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功地傳回目前的框架的內容。|  
+|S_OK|已成功傳回目前框架的內容。|  
 |E_FAIL|無法傳回內容。|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|內容緩衝區是太小。|  
-|CORDBG_E_PAST_END_OF_STACK|框架指標已經結尾的堆疊;因此，可以不存取任何其他的框架。|  
+|HRESULT_FROM_WIN32 （ERROR_INSUFFICIENT 緩衝區）|內容緩衝區太小。|  
+|CORDBG_E_PAST_END_OF_STACK|框架指標已在堆疊的結尾;因此，不能存取任何其他框架。|  
   
 ## <a name="exceptions"></a>例外狀況  
   
 ## <a name="remarks"></a>備註  
- 因為回溯還原暫存器，例如靜態暫存器中，只有部分內容可能不完全符合的註冊狀態時呼叫。  
+ 因為回溯只會還原暫存器的子集，例如非暫時性暫存器，所以內容可能不會完全符合呼叫時的註冊狀態。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a7f62385031967c164915fd31735a6d962f557fa
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: b27e7a2cdcbfc3a88a734230118d99c2dd5c700e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894982"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129529"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName 方法
 取得模組的檔案名。  
@@ -48,15 +46,15 @@ HRESULT GetName(
  脫銷儲存傳回名稱的陣列。  
   
 ## <a name="remarks"></a>備註  
- 如果`GetName`模組的檔案名與磁片上的名稱相符，此方法會傳回 S_OK HRESULT。 `GetName`如果已製作名稱，則會傳回 S_FALSE HRESULT，例如針對動態或記憶體中的模組。  
+ 如果模組的檔案名與磁片上的名稱相符，則 `GetName` 方法會傳回 S_OK HRESULT。 如果已製作名稱，`GetName` 會傳回 S_FALSE HRESULT，例如動態或記憶體中模組。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

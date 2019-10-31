@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc7d9448-3186-494d-9f0d-ea39717e9a82
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c4fa79f4918412720592bce449a001a349ae657
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e20ea6addc1ae3f99b4b3d65f532e0128ac160b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766558"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134964"
 ---
 # <a name="igchostcollect-method"></a>IGCHost::Collect 方法
-強制發生指定的層代，不論目前的記憶體回收集合的狀態。  
+無論目前垃圾收集的狀態為何，都會強制針對給定的層代進行集合。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,17 +35,17 @@ HRESULT Collect (
   
 ## <a name="parameters"></a>參數  
  `Generation`  
- [in]要執行記憶體回收層代。 -1 值表示所有層代將會進行記憶體回收。  
+ 在要在其上執行垃圾收集的產生。 -1 值表示所有層代都會進行垃圾收集。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** GCHost.idl GCHost.h  
+ **標頭：** GCHost .idl，GCHost。h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IGCHost 介面](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

@@ -15,15 +15,13 @@ helpviewer_keywords:
 - source code execution
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
-author: rpetrusha
-ms.author: ronpet
 ms.custom: updateeachrelease
-ms.openlocfilehash: a1e1fd2b7843299fdd8fbd62dbfba6c62a7be50f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: c866e3d1a4de31361843f5c071510fd18247cb39
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645013"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132817"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Common Language Runtime (CLR) 概觀
 
@@ -81,13 +79,13 @@ Common Language Runtime 使得設計其物件可跨語言互動的元件和應�
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|說明|
+|標題|描述|
 |-----------|-----------------|
 |[Managed 執行程序](managed-execution-process.md)|描述充分利用 Common Language Runtime 所需要的步驟。|
 |[自動管理記憶體](automatic-memory-management.md)|說明記憶體回收行程如何配置和釋放記憶體。|
 |[.NET Framework 概觀](../framework/get-started/overview.md)|說明重要的 .NET Framework 概念，例如一般型別系統、跨語言互通性 (Interoperability)、Managed 執行、應用程式定義域和組件。|
 |[一般類型系統](./base-types/common-type-system.md)|描述型別如何在執行階段中宣告、使用和管理，以支援跨程式語言整合。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [版本和相依性](../framework/migration-guide/versions-and-dependencies.md)

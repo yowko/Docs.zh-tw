@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 98a4762d-9ad2-45bd-9d03-39064a028b44
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 46e3356df6578f2adf2ceee00b1363b65fd014ea
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f1ad414c30788801e14a33e98a0893e2a0f58d0c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760236"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136510"
 ---
 # <a name="flockclrversioncallback-function-pointer"></a>FLockClrVersionCallback 函式指標
-函式的一般語言執行平台 (CLR) 呼叫，表示初始設定啟動或完成的點。  
+指向 common language runtime （CLR）呼叫的函式，表示初始化已啟動或已完成。  
   
- 在.NET Framework 4 中，已被取代此函式指標。  
+ 這個函式指標在 .NET Framework 4 中已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,18 +33,18 @@ typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );
 ```  
   
 ## <a name="remarks"></a>備註  
- 此函式是由主應用程式實作。  
+ 此函式是由主機所執行。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** MSCorWks.dll  
+ 連結**庫：** Mscorwks.dll .dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LockClrVersion 函式](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)
 - [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

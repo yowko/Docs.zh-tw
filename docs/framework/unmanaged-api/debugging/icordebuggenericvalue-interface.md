@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 36c2ed5529151a7ea18ccaffc2202ad6c69bcbd9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 312b8b005998da44feb5ae24ab4a0a17bb948a3f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910222"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138563"
 ---
 # <a name="icordebuggenericvalue-interface"></a>ICorDebugGenericValue 介面
 
@@ -35,9 +33,9 @@ ms.locfileid: "69910222"
 |[SetValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|從指定的緩衝區複製新的值。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugGenericValue`是子介面, 因為它無法遠端處理。  
+ `ICorDebugGenericValue` 是子介面，因為它無法遠端處理。  
   
- 對於參考型別, 此值為參考, 而不是參考的內容。  
+ 對於參考型別，此值為參考，而不是參考的內容。  
   
  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
@@ -49,10 +47,10 @@ ms.locfileid: "69910222"
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

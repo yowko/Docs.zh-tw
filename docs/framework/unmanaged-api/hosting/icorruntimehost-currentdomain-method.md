@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd2afb38-675b-4c3c-a9f3-8ab3b133eb02
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3aa6bc844d2c6629085b0596127c0b51b99357d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f2249d10159b1ff0be7ead0783efb8a2742d26b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766362"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139615"
 ---
 # <a name="icorruntimehostcurrentdomain-method"></a>ICorRuntimeHost::CurrentDomain 方法
-取得類型的介面指標<xref:System.AppDomain?displayProperty=nameWithType>，代表目前執行緒上所載入的網域。  
+取得類型 <xref:System.AppDomain?displayProperty=nameWithType> 的介面指標，表示在目前線程上載入的網域。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,27 +35,27 @@ HRESULT CurrentDomain (
   
 ## <a name="parameters"></a>參數  
  `pAppDomain`  
- [out]型別的指標<xref:System.AppDomain?displayProperty=nameWithType>表示執行緒的目前應用程式定義域。 這個指標型別`IUnknown`，所以通常應該呼叫的呼叫端`QueryInterface`若要取得類型的指標<xref:System._AppDomain>。  
+ 脫銷類型 <xref:System.AppDomain?displayProperty=nameWithType> 的指標，表示執行緒目前的應用程式域。 這個指標的型別 `IUnknown`，因此呼叫端通常應該呼叫 `QueryInterface` 來取得型別 <xref:System._AppDomain>的指標。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|此作業成功。|  
+|S_OK|作業成功。|  
 |S_FALSE|作業無法完成。|  
-|E_FAIL|發生不明、 重大失敗。 如果方法會傳回 E_FAIL，common language runtime (CLR) 不再使用舊處理序中。 任何裝載 api 的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
-|HOST_E_CLRNOTAVAILABLE|不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
+|E_FAIL|發生未知的嚴重失敗。 如果方法傳回 E_FAIL，則 common language runtime （CLR）在進程中就不再可用。 對任何裝載 Api 的後續呼叫都會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** 1.0, 1.1  
+ **.NET Framework 版本：** 1.0、1。1  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>

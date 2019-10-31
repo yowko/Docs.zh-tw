@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: bc7b51cf-39d3-48ec-a5cb-2f179fbefff8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a02a899fd6fbffd04ef25913adb6a65ade27177
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f60f159ab4770023cee7123b39109040243e1ccd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755655"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136970"
 ---
-# <a name="cordllmain-function"></a>\_CorDllMain 函式
+# <a name="_cordllmain-function"></a>\_CorDllMain 函式
 
-初始化 common language runtime (CLR)、 在 DLL 組件的 CLR 標頭，尋找 managed 的進入點，並開始執行。  
+初始化 common language runtime （CLR），尋找 DLL 元件的 CLR 標頭中的 managed 進入點，然後開始執行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,36 +37,36 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
 ## <a name="parameters"></a>參數  
  `hInst`  
- [in]載入模組的執行個體控制代碼。  
+ 在已載入模組的實例控制碼。  
   
  `dwReason`  
- [in]指出為什麼稱為 DLL 進入點函式。 這個參數可以是下列值之一：DLL\_PROCESS_ATTACH、 DLL\_執行緒\_附加、 DLL\_執行緒\_ATTACH 或 DLL\_程序\_卸離。 如需這些值的描述，請參閱`DllMain`平台 SDK 中的文件。  
+ 在指出呼叫 DLL 進入點函式的原因。 這個參數可以是下列其中一個值： DLL\_PROCESS_ATTACH、DLL\_執行緒\_附加、DLL\_執行緒\_附加，或 DLL\_進程\_卸離。 如需這些值的說明，請參閱 Platform SDK 中的 `DllMain` 檔。  
   
  `lpReserved`  
- [in]未使用。  
+ 在未使用.  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回`true`成功和`false`發生錯誤。  
+ 這個方法會傳回成功的 `true`，並在發生錯誤時 `false`。  
   
 ## <a name="remarks"></a>備註  
- 作業系統載入器會呼叫此函數的 DLL 組件。 針對可執行檔的組件，載入器會呼叫[ \_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)函式。  
+ DLL 元件的作業系統載入器會呼叫這個函式。 對於可執行檔元件，載入器會改為呼叫[\_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)函數。  
   
- 作業系統載入器會呼叫這個方法，不論在 DLL 檔案中指定的進入點。  
+ 無論 DLL 檔案中指定的進入點為何，作業系統載入器都會呼叫這個方法。  
   
-`_CorDllMain`直接由作業系統載入器呼叫函式。
+`_CorDllMain` 函式是由作業系統載入器直接呼叫。
   
- 如需詳細資訊，請參閱 < 備註 > 一節[ \_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)主題。  
+ 如需詳細資訊，請參閱[\_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)主題中的「備註」一節。  
   
 ## <a name="requirements"></a>需求  
 
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **標頭：** Cor。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料全域靜態函式](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

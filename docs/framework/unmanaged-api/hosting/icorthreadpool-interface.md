@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 18485a27-cae3-4c6a-baa8-f7df601122d5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8d245afe2d34c06a5bb9ca39b1c0dd4924fadada
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 107644270dbc9b14912dac9b97fc716aaeba7f4f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911242"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133210"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool 介面
 提供存取執行緒集區的方法。  
@@ -48,12 +46,12 @@ ms.locfileid: "69911242"
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含為 Mscoree.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

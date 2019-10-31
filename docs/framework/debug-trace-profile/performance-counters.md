@@ -6,14 +6,12 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eafbd5b1dfa8eeee386cdcf49652aeeee9d635a8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 02163f923bc93a1cf377cc608b5f390472c60edd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052386"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121605"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework 中的效能計數器
 本主題提供您可以在[Windows 效能監視器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)中找到的效能計數器清單。  
@@ -50,7 +48,7 @@ ms.locfileid: "71052386"
 ## <a name="interop-performance-counters"></a>Interop 效能計數器  
  效能主控台 .NET CLR Interop 分類包含計數器，此計數器提供應用程式與 COM 元件、COM + 服務以及外部類型程式庫互動的相關資訊。 下表描述的是這些效能計數器。  
   
-|效能計數器|說明|  
+|效能計數器|描述|  
 |-------------------------|-----------------|  
 |**# of CCWs**|顯示目前的 COM 可呼叫包裝函式 (CCW) 數目。 CCW 是被 Unmanaged 的 COM 用戶端所參考的 Managed 物件之 Proxy。 這個計數器表示被 Unmanaged 的 COM 程式碼所參考的 Managed 物件數目。|  
 |**# of marshaling**|顯示自應用程式啟動後，已從 Managed 程式碼封送處理引數和傳回值至 Unmanaged 程式碼的總次數，反之亦然。 如果虛設常式是內嵌的，則不會遞增此計數器。 (虛設常式負責封送處理引數和傳回值)。 如果封送處理額外負荷很小，則虛設常式通常是內嵌的。|  
@@ -75,7 +73,7 @@ ms.locfileid: "71052386"
 ## <a name="loading-performance-counters"></a>載入效能計數器  
  效能主控台 .NET CLR 載入分類包含計數器，此計數器提供已載入組件、類別和應用程式定義域的相關資訊。 下表描述的是這些效能計數器。  
   
-|效能計數器|說明|  
+|效能計數器|描述|  
 |-------------------------|-----------------|  
 |**% Time Loading**|保留供未來使用。|  
 |**Assembly Search Length**|保留供未來使用。|  
@@ -251,7 +249,7 @@ for (int i = 0; i < Array.Length; i++)
 |**Stack Walk Depth**|在最後一個執行階段程式碼存取安全性檢查期間顯示堆疊深度。 執行階段程式碼存取安全性檢查都是藉由查核堆疊來執行的。 這個計數器不是平均數；它僅顯示最後觀察到的值。|  
 |**Total Runtime Checks**|顯示自應用程式啟動後執行階段程式碼存取安全性檢查執行的總數。 當呼叫端要求特定權限時，會執行執行階段程式碼存取安全性檢查。 執行階段檢查在每次由呼叫端呼叫時進行，並且檢查目前呼叫端的執行緒堆疊。 搭配使用 **Stack Walk Depth** 計數器時，此計數器指出因安全性檢查而發生的效能降低。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [效能計數器](performance-counters.md)
 - [執行階段分析](runtime-profiling.md)

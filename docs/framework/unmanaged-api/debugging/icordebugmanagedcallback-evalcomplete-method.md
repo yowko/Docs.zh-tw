@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f74ab4eb-cd1b-407c-a66d-8ec0d85647f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a874646a6746a9b2fc8ce597e6c1ca47340c199a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d52c19f8663a776215241ddb16f3aa9ba00c0d36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759654"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137344"
 ---
 # <a name="icordebugmanagedcallbackevalcomplete-method"></a>ICorDebugManagedCallback::EvalComplete 方法
-告知偵錯工具評估已完成。  
+通知偵錯工具已完成評估。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,23 +37,23 @@ HRESULT EvalComplete (
   
 ## <a name="parameters"></a>參數  
  `pAppDomain`  
- [in]表示在其中評估已執行的應用程式定義域的 ICorDebugAppDomain 物件指標。  
+ 在ICorDebugAppDomain 物件的指標，代表執行評估所在的應用程式域。  
   
  `pThread`  
- [in]表示評估執行所在的執行緒 ICorDebugThread 物件的指標。  
+ 在ICorDebugThread 物件的指標，代表執行評估的執行緒。  
   
  `pEval`  
- [in]ICorDebugEval 物件，表示執行評估的程式碼指標。  
+ 在ICorDebugEval 物件的指標，代表執行評估的程式碼。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

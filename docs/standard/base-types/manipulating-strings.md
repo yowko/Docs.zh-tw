@@ -6,19 +6,17 @@ helpviewer_keywords:
 - strings [.NET Framework], manipulating
 - manipulating strings
 ms.assetid: d4568ff3-9f83-4549-acd8-47aec2194ac0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca4e24cb882daf7efd14da83011d50d05a85232b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5188c4f1099aad486e921dfba0c6c4216613ba4e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567584"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135223"
 ---
 # <a name="manipulating-strings-in-net"></a>在 .NET 中操作字串
 .NET 提供大量的常式集合，讓您能夠有效率建立、比較和修改字串，並迅速剖析大量文字和資料以搜尋、移除和取代文字模式。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)  
  檢查 .NET 中的字串排序、比較與大小寫方法，並提供選取字串處理方法的建議。  
   
@@ -35,5 +33,5 @@ ms.locfileid: "33567584"
  [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
  說明如何使用基底類別庫來實作格式化、如何將數值類型格式化、如何將字串類型格式化，以及如何將特定的文化特性格式化。  
   
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
+ [剖析字串](../../../docs/standard/base-types/parsing-strings.md)  
  說明如何將物件初始化為這些物件的字串表示所描述的值。 剖析是格式化的反向作業。

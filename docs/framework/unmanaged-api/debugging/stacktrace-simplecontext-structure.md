@@ -15,16 +15,14 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc0fc18e31b89b22ffd30d99a8b079ed7b87fa1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1cd3c34fc292e4a050fa8a75078283e34425fc8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752497"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139122"
 ---
-# <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext 結構
+# <a name="stacktrace_simplecontext-structure"></a>StackTrace_SimpleContext 結構
 提供可用來代替完整 `CONTEXT` 結構的簡單內容。  
   
 ## <a name="syntax"></a>語法  
@@ -38,25 +36,25 @@ struct StackTrace_SimpleContext
 };  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`StackOffset`|堆疊指標或在 x86 上的 enter 堆疊指標 (ESP) 平台。|  
-|`FrameOffset`|畫面格位移或 EBP 暫存器，在 x86 平台。|  
-|`InstructionOffset`|指令指標或輸入指令指標 (EIP) 在 x86 平台。|  
+|`StackOffset`|堆疊指標，或 x86 平臺上的輸入堆疊指標（ESP）。|  
+|`FrameOffset`|框架位移，或 x86 平臺上的 EBP 暫存器。|  
+|`InstructionOffset`|指令指標，或 x86 平臺上的 enter 指令指標（EIP）。|  
   
 ## <a name="remarks"></a>備註  
- 因為堆疊追蹤函式通常需要只傳回地址、 框架位移並堆疊位址，您可以選擇性地使用`SimpleContext`結構，而不是大型`CONTEXT`結構。  
+ 因為堆疊追蹤函數通常只需要傳回位址、框架位移和堆疊位址，所以您可以選擇性地使用 `SimpleContext` 結構，而不是大型的 `CONTEXT` 結構。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** SOS_Stacktrace.h  
+ **標頭：** SOS_Stacktrace。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

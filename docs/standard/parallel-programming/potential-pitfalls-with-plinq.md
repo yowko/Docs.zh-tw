@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b996b09ed3973125d4d848d5e00c18ab02a6967
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: HT
+ms.openlocfilehash: 85098a0d10b4c05de52cd33d30ec5c4f4bbc594d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673739"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139996"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>使用 PLINQ 時可能出現的錯誤
 
@@ -42,7 +40,7 @@ ms.locfileid: "57673739"
 
 - 目前已知內部資料來源 (cust.Orders) 很長。
 
-- 您正在對每個順序執行昂貴的計算  (範例所示作業並不昂貴)。
+- 您正在對每個順序執行昂貴的計算 (範例所示作業並不昂貴)。
 
 - 已知目標系統有足夠的處理器，可處理因為在 `cust.Orders` 上平行處理查詢而會產生的執行緒數目。
 
@@ -79,11 +77,11 @@ a.AsParallel().Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));
 
 相同問題適用於 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>。換句話說，`source.AsParallel().Where().ForAll(...)` 應該比
 
-`Parallel.ForEach(source.AsParallel().Where(), ...)`.
+`Parallel.ForEach(source.AsParallel().Where(), ...)`
 
 ## <a name="be-aware-of-thread-affinity-issues"></a>注意執行緒相似性問題
 
-有些技術 (例如，適用於單一執行緒 Apartment (STA) 元件、Windows Forms 和 Windows Presentation Foundation (WPF) 的 COM 互通性) 會施加執行緒相似性限制，以要求程式碼在特定執行緒上執行。 例如，在 Windows Forms 和 WPF 中，只有用來建立控制項的執行緒能夠存取該控制項。 如果您嘗試存取 PLINQ 查詢中 Windows Forms 控制項的共用狀態，在偵錯工具中執行時會引發例外狀況。 (這項設定可以關閉。)不過，如果您的查詢是在 UI 執行緒上使用，您就能從列舉查詢結果的 `foreach` 迴圈存取控制項，因為該程式碼只會在一個執行緒上執行。
+有些技術 (例如，適用於單一執行緒 Apartment (STA) 元件、Windows Forms 和 Windows Presentation Foundation (WPF) 的 COM 互通性) 會施加執行緒相似性限制，以要求程式碼在特定執行緒上執行。 例如，在 Windows Forms 和 WPF 中，只有用來建立控制項的執行緒能夠存取該控制項。 如果您嘗試存取 PLINQ 查詢中 Windows Forms 控制項的共用狀態，在偵錯工具中執行時會引發例外狀況。 （可以關閉此設定）。不過，如果您的查詢是在 UI 執行緒上使用，則您可以從列舉查詢結果的 `foreach` 迴圈存取控制項，因為該程式碼只會在一個執行緒上執行。
 
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>不要認為 ForEach、For 和 ForAll 的反覆項目一定要以平行方式執行
 
@@ -125,6 +123,6 @@ Enumerable.Range(0, Environment.ProcessorCount * 100).AsParallel().ForAll((j) =>
 
 特別是，平行迴圈的反覆項目永遠不應該等候該迴圈的另一個反覆項目才能繼續。 如果平行迴圈決定以循序方式排程反覆項目，但順序相反，系統就會發生死結。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

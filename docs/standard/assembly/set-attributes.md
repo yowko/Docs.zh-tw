@@ -1,25 +1,23 @@
 ---
-title: 設定元件屬性
+title: 設定組件屬性
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], attributes
 - assembly binding, attributes
 - assembly manifest, attributes
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: d0809ec3da5a12abe950e63f9665037323a0ab39
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: fe003a6c74da59c1cb47a0f12a8597143916e320
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991672"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138652"
 ---
-# <a name="set-assembly-attributes"></a>設定元件屬性
+# <a name="set-assembly-attributes"></a>設定組件屬性
 
 組件屬性是提供組件相關資訊的值。 屬性可分成下列幾組資訊：
 
@@ -41,7 +39,7 @@ ms.locfileid: "70991672"
 |---------------------------------|-----------------|
 |<xref:System.Reflection.AssemblyCultureAttribute>|列舉的欄位，會指出組件所支援的文化特性。 組件也可以指定文化特性獨立性，表示其包含預設文化特性的資源。 **注意：** 執行階段會將任何未將文化特性屬性設為 null 的組件作為附屬組件。 這類組件會受限於附屬組件繫結規則。 如需詳細資訊，請參閱[執行時間如何找出元件](../../framework/deployment/how-the-runtime-locates-assemblies.md)。|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|此值用以設定組件屬性，例如組件是否可並存執行。|
-|<xref:System.Reflection.AssemblyVersionAttribute>|格式為 *major*.*minor*.*build*.*revision* 的數值 (例如 2.4.0.0)。 通用語言執行平台會使用此值來執行強式名稱組件中的繫結作業。 **注意：** 如果 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 屬性未套用到組件，則 <xref:System.Reflection.AssemblyVersionAttribute> 屬性所指定的版本號碼會由 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>、<xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>與 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 屬性所使用。|
+|<xref:System.Reflection.AssemblyVersionAttribute>|格式為 *major*.*minor*.*build*.*revision* 的數值 (例如 2.4.0.0)。 通用語言執行平台會使用此值來執行強式名稱組件中的繫結作業。 **注意：** 如果 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 屬性未套用到組件，則 <xref:System.Reflection.AssemblyVersionAttribute> 屬性所指定的版本號碼會由 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>、<xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 與 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 屬性所使用。|
 
 下列程式碼範例顯示如何將版本與文化特性屬性套用至組件。
 
@@ -119,7 +117,7 @@ ms.locfileid: "70991672"
 <Assembly:AssemblyDelaySignAttribute(True)>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [建立元件](create.md)
 - [具有元件的程式](program.md)

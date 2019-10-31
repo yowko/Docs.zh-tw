@@ -1,5 +1,5 @@
 ---
-title: 作法：在 PLINQ 中指定執行模式
+title: 如何：在 PLINQ 中指定執行模式
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to use execution mode
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 705b6bc364e2ecf00c3629814228157c90017a8b
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: c602aba6e18f80b007b15cd61dfd2b48a36dd2c8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988451"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139248"
 ---
-# <a name="how-to-specify-the-execution-mode-in-plinq"></a>作法：在 PLINQ 中指定執行模式
+# <a name="how-to-specify-the-execution-mode-in-plinq"></a>如何：在 PLINQ 中指定執行模式
 這個範例示範如何強制 PLINQ 略過其預設啟發學習法並以平行方式處理查詢，而不考慮查詢的種類。  
   
 > [!WARNING]
@@ -32,7 +30,7 @@ ms.locfileid: "69988451"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  將此程式碼剪下並貼到 [PLINQ 資料範例](../../../docs/standard/parallel-programming/plinq-data-sample.md)，並從 `Main` 呼叫此方法。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Linq.ParallelEnumerable.AsSequential%2A>
 - [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

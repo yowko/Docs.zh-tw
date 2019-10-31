@@ -1,5 +1,5 @@
 ---
-title: 作法：檢視組件內容
+title: 如何：視圖元件內容
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, viewing information
@@ -10,20 +10,18 @@ helpviewer_keywords:
 - MSIL
 - viewing MSIL information
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 40ed31bb2231775bb2b6eb24586e07c8b07a85bb
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0b5e306d55bf38c28e2a68172c2a035b56e8d0af
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053950"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140167"
 ---
-# <a name="how-to-view-assembly-contents"></a>作法：檢視組件內容
+# <a name="how-to-view-assembly-contents"></a>如何：視圖元件內容
 
 您可以使用 [Ildasm.exe (IL 反組譯工具)](../../framework/tools/ildasm-exe-il-disassembler.md) 來檢視檔案中的 Microsoft 中繼語言 (MSIL) 資訊。 如果所檢查的檔案是組件，這項資訊可以包括組件的屬性，以及其他模組和組件的參考。 這項資訊可能有助於判斷檔案是組件還是組件的一部分，以及檔案是否有其他模組或組件的參考。  
   
@@ -120,9 +118,9 @@ End Class
 |**.subsystem \<**  *值* **>**|指定程式所需的應用程式環境。 在此範例中，值 3 指出從主控台執行這個可執行檔。|  
 |**.corflags**|中繼資料中目前保留的欄位。|  
   
- 根據組件的內容，組件資訊清單可以包含許多不同的指示詞。 如需組件資訊清單中的指示詞延伸清單，請參閱 ECMA 文件，特別是 "Partition II:Metadata Definition and Semantics" 和 "Partition III:CIL 指令集。」 檔可在線上取得。 請參閱 MSDN 上的[ecma C#和通用語言基礎結構標準](https://go.microsoft.com/fwlink/?LinkID=99212)，以及 ecma 國際網站上的[標準 Ecma-335-通用語言基礎結構（CLI）](https://go.microsoft.com/fwlink/?LinkID=65552) 。  
+ 根據組件的內容，組件資訊清單可以包含許多不同的指示詞。 如需組件資訊清單中的詳細指示詞清單，請參閱 ECMA 檔，特別是「分割區 II：元資料定義和語義」和「資料分割 III： CIL 指令集」。 檔可在線上取得。 請參閱 MSDN 上的[ecma C#和通用語言基礎結構標準](https://go.microsoft.com/fwlink/?LinkID=99212)，以及 ecma 國際網站上的[標準 Ecma-335-通用語言基礎結構（CLI）](https://go.microsoft.com/fwlink/?LinkID=65552) 。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [應用程式定義域和組件](../../framework/app-domains/application-domains.md#application-domains-and-assemblies)
 - [應用程式域和元件的 how to 主題](../../framework/app-domains/application-domains-and-assemblies-how-to-topics.md)

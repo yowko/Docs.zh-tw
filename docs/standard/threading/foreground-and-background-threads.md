@@ -8,14 +8,12 @@ helpviewer_keywords:
 - foreground threads
 - background threads
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8dbad5da42f5ed4e03751534a3a183615a9757cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9e93f07b3b84264373db0317919b6ee519c8127c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960027"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138043"
 ---
 # <a name="foreground-and-background-threads"></a>前景和背景執行緒
 受控執行緒可以是背景執行緒或前景執行緒。 背景執行緒與前景執行緒完全相同，但有一個例外：背景執行緒不會讓受控的執行環境保持執行狀態。 一旦受控處理序 (其中的 .exe 檔案為受控組件) 的所有前景執行緒都已停止之後，系統就會停止所有背景執行緒並關閉。  
@@ -32,7 +30,7 @@ ms.locfileid: "69960027"
   
  如果您使用執行緒來監視活動 (例如通訊端連線)，請將它的 <xref:System.Threading.Thread.IsBackground%2A> 屬性設為 `true`，讓執行緒不會阻止您的處理序終止。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>
 - <xref:System.Threading.Thread>

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：實作觀察者
+title: 如何：實作觀察器
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,17 +9,15 @@ helpviewer_keywords:
 - observers [.NET Framework], observer design pattern
 - observer design pattern [.NET Framework], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b410b9381246cef2e61086e333c4c5b07646a575
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: e6aba4d85e502563291478640927bd0f234736a8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301057"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139315"
 ---
-# <a name="how-to-implement-an-observer"></a>HOW TO：實作觀察者
-觀察者設計模式需要觀察者和提供者之間的分區，其中觀察者會註冊通知，而提供者會監視資料並將通知傳送到一個或多個觀察者。 本主題討論如何建立觀察者。 相關主題為[如何：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)，討論如何建立提供者。  
+# <a name="how-to-implement-an-observer"></a>如何：實作觀察器
+觀察者設計模式需要觀察者和提供者之間的分區，其中觀察者會註冊通知，而提供者會監視資料並將通知傳送到一個或多個觀察者。 本主題討論如何建立觀察者。 相關主題為[操作說明：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)，討論如何建立提供者。  
   
 ### <a name="to-create-an-observer"></a>建立觀察者  
   
@@ -49,9 +47,9 @@ ms.locfileid: "59301057"
  [!code-csharp[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#12)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#12)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IObserver%601>
 - [觀察者設計模式](../../../docs/standard/events/observer-design-pattern.md)
-- [如何：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)
+- [操作說明：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)
 - [觀察者設計模式最佳做法](../../../docs/standard/events/observer-design-pattern-best-practices.md)
