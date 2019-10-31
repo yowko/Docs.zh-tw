@@ -2,44 +2,42 @@
 title: ICorDebugMergedAssemblyRecord 介面
 ms.date: 03/30/2017
 ms.assetid: fe280b11-9479-4e34-a07c-0d1ea8088422
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8fd7a5f630bcf97277a4f98f2408ecaf04883fa3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8dc07cb8c2f57ee6f9598c727cbd6de38bf4625f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916981"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139188"
 ---
-# <a name="icordebugmergedassemblyrecord-interface"></a><span data-ttu-id="15ae3-102">ICorDebugMergedAssemblyRecord 介面</span><span class="sxs-lookup"><span data-stu-id="15ae3-102">ICorDebugMergedAssemblyRecord Interface</span></span>
-<span data-ttu-id="15ae3-103">提供合併組件的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="15ae3-103">Provides information about a merged assembly.</span></span>  
+# <a name="icordebugmergedassemblyrecord-interface"></a><span data-ttu-id="66aa4-102">ICorDebugMergedAssemblyRecord 介面</span><span class="sxs-lookup"><span data-stu-id="66aa4-102">ICorDebugMergedAssemblyRecord Interface</span></span>
+<span data-ttu-id="66aa4-103">提供合併組件的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="66aa4-103">Provides information about a merged assembly.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="15ae3-104">方法</span><span class="sxs-lookup"><span data-stu-id="15ae3-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="66aa4-104">方法</span><span class="sxs-lookup"><span data-stu-id="66aa4-104">Methods</span></span>  
   
-|<span data-ttu-id="15ae3-105">方法</span><span class="sxs-lookup"><span data-stu-id="15ae3-105">Method</span></span>|<span data-ttu-id="15ae3-106">描述</span><span class="sxs-lookup"><span data-stu-id="15ae3-106">Description</span></span>|  
+|<span data-ttu-id="66aa4-105">方法</span><span class="sxs-lookup"><span data-stu-id="66aa4-105">Method</span></span>|<span data-ttu-id="66aa4-106">描述</span><span class="sxs-lookup"><span data-stu-id="66aa4-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="15ae3-107">GetCulture 方法</span><span class="sxs-lookup"><span data-stu-id="15ae3-107">GetCulture Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getculture-method.md)|<span data-ttu-id="15ae3-108">取得組件的文化特性名稱字串。</span><span class="sxs-lookup"><span data-stu-id="15ae3-108">Gets the culture name string of the assembly.</span></span>|  
-|[<span data-ttu-id="15ae3-109">GetIndex 方法</span><span class="sxs-lookup"><span data-stu-id="15ae3-109">GetIndex Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getindex-method.md)|<span data-ttu-id="15ae3-110">取得組件的前置詞索引。</span><span class="sxs-lookup"><span data-stu-id="15ae3-110">Gets the assembly's prefix index.</span></span>|  
-|[<span data-ttu-id="15ae3-111">GetPublicKey 方法</span><span class="sxs-lookup"><span data-stu-id="15ae3-111">GetPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getpublickey-method.md)|<span data-ttu-id="15ae3-112">取得組件的公開金鑰。</span><span class="sxs-lookup"><span data-stu-id="15ae3-112">Gets the assembly's public key.</span></span>|  
-|[<span data-ttu-id="15ae3-113">GetPublicKeyToken 方法</span><span class="sxs-lookup"><span data-stu-id="15ae3-113">GetPublicKeyToken Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getpublickeytoken-method.md)|<span data-ttu-id="15ae3-114">取得組件的公開金鑰語彙基元。</span><span class="sxs-lookup"><span data-stu-id="15ae3-114">Gets the assembly's public key token.</span></span>|  
-|[<span data-ttu-id="15ae3-115">GetSimpleName 方法</span><span class="sxs-lookup"><span data-stu-id="15ae3-115">GetSimpleName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getsimplename-method.md)|<span data-ttu-id="15ae3-116">取得組件的簡單名稱。</span><span class="sxs-lookup"><span data-stu-id="15ae3-116">Gets the simple name of the assembly.</span></span>|  
-|[<span data-ttu-id="15ae3-117">GetVersion 方法</span><span class="sxs-lookup"><span data-stu-id="15ae3-117">GetVersion Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getversion-method.md)|<span data-ttu-id="15ae3-118">取得組件的版本資訊。</span><span class="sxs-lookup"><span data-stu-id="15ae3-118">Gets the assembly's version information.</span></span>|  
+|[<span data-ttu-id="66aa4-107">GetCulture 方法</span><span class="sxs-lookup"><span data-stu-id="66aa4-107">GetCulture Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getculture-method.md)|<span data-ttu-id="66aa4-108">取得組件的文化特性名稱字串。</span><span class="sxs-lookup"><span data-stu-id="66aa4-108">Gets the culture name string of the assembly.</span></span>|  
+|[<span data-ttu-id="66aa4-109">GetIndex 方法</span><span class="sxs-lookup"><span data-stu-id="66aa4-109">GetIndex Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getindex-method.md)|<span data-ttu-id="66aa4-110">取得組件的前置詞索引。</span><span class="sxs-lookup"><span data-stu-id="66aa4-110">Gets the assembly's prefix index.</span></span>|  
+|[<span data-ttu-id="66aa4-111">GetPublicKey 方法</span><span class="sxs-lookup"><span data-stu-id="66aa4-111">GetPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getpublickey-method.md)|<span data-ttu-id="66aa4-112">取得組件的公開金鑰。</span><span class="sxs-lookup"><span data-stu-id="66aa4-112">Gets the assembly's public key.</span></span>|  
+|[<span data-ttu-id="66aa4-113">GetPublicKeyToken 方法</span><span class="sxs-lookup"><span data-stu-id="66aa4-113">GetPublicKeyToken Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getpublickeytoken-method.md)|<span data-ttu-id="66aa4-114">取得組件的公開金鑰語彙基元。</span><span class="sxs-lookup"><span data-stu-id="66aa4-114">Gets the assembly's public key token.</span></span>|  
+|[<span data-ttu-id="66aa4-115">GetSimpleName 方法</span><span class="sxs-lookup"><span data-stu-id="66aa4-115">GetSimpleName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getsimplename-method.md)|<span data-ttu-id="66aa4-116">取得組件的簡單名稱。</span><span class="sxs-lookup"><span data-stu-id="66aa4-116">Gets the simple name of the assembly.</span></span>|  
+|[<span data-ttu-id="66aa4-117">GetVersion 方法</span><span class="sxs-lookup"><span data-stu-id="66aa4-117">GetVersion Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getversion-method.md)|<span data-ttu-id="66aa4-118">取得組件的版本資訊。</span><span class="sxs-lookup"><span data-stu-id="66aa4-118">Gets the assembly's version information.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="15ae3-119">備註</span><span class="sxs-lookup"><span data-stu-id="15ae3-119">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="66aa4-119">備註</span><span class="sxs-lookup"><span data-stu-id="66aa4-119">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="15ae3-120">這個介面僅適用於 .NET 原生。</span><span class="sxs-lookup"><span data-stu-id="15ae3-120">This interface is available with .NET Native only.</span></span> <span data-ttu-id="15ae3-121">如果您在 .NET 原生之外針對 ICorDebug 案例實作這個介面，Common Language Runtime 會忽略這個介面。</span><span class="sxs-lookup"><span data-stu-id="15ae3-121">If you implement this interface for ICorDebug scenarios outside of .NET Native, the common language runtime will ignore this interface.</span></span>  
+> <span data-ttu-id="66aa4-120">這個介面僅適用於 .NET 原生。</span><span class="sxs-lookup"><span data-stu-id="66aa4-120">This interface is available with .NET Native only.</span></span> <span data-ttu-id="66aa4-121">如果您在 .NET 原生之外針對 ICorDebug 案例實作這個介面，Common Language Runtime 會忽略這個介面。</span><span class="sxs-lookup"><span data-stu-id="66aa4-121">If you implement this interface for ICorDebug scenarios outside of .NET Native, the common language runtime will ignore this interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="15ae3-122">需求</span><span class="sxs-lookup"><span data-stu-id="15ae3-122">Requirements</span></span>  
- <span data-ttu-id="15ae3-123">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="15ae3-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="66aa4-122">需求</span><span class="sxs-lookup"><span data-stu-id="66aa4-122">Requirements</span></span>  
+ <span data-ttu-id="66aa4-123">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="66aa4-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="15ae3-124">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="15ae3-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="66aa4-124">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="66aa4-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="15ae3-125">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="15ae3-125">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="66aa4-125">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="66aa4-125">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="15ae3-126">**.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15ae3-126">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="66aa4-126">**.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="66aa4-126">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15ae3-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="15ae3-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="66aa4-127">請參閱</span><span class="sxs-lookup"><span data-stu-id="66aa4-127">See also</span></span>
 
-- [<span data-ttu-id="15ae3-128">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="15ae3-128">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="15ae3-129">偵錯</span><span class="sxs-lookup"><span data-stu-id="15ae3-129">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="66aa4-128">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="66aa4-128">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="66aa4-129">偵錯</span><span class="sxs-lookup"><span data-stu-id="66aa4-129">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

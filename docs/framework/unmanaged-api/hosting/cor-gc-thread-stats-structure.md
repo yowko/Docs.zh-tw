@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 01f9a59b-7679-4d42-9ced-4a8981625c3d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f56ceca5269ebffb29908c63e698ce794027d8a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37da471aaa8e9f802a8430d7b3289b375ff1b40a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768057"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136977"
 ---
-# <a name="corgcthreadstats-structure"></a><span data-ttu-id="71c04-102">COR_GC_THREAD_STATS 結構</span><span class="sxs-lookup"><span data-stu-id="71c04-102">COR_GC_THREAD_STATS Structure</span></span>
-<span data-ttu-id="71c04-103">包含有關記憶體回收的每個執行緒統計資料。</span><span class="sxs-lookup"><span data-stu-id="71c04-103">Contains per-thread statistics pertaining to garbage collection.</span></span>  
+# <a name="cor_gc_thread_stats-structure"></a><span data-ttu-id="9fb2e-102">COR_GC_THREAD_STATS 結構</span><span class="sxs-lookup"><span data-stu-id="9fb2e-102">COR_GC_THREAD_STATS Structure</span></span>
+<span data-ttu-id="9fb2e-103">包含有關垃圾收集的每個執行緒統計資料。</span><span class="sxs-lookup"><span data-stu-id="9fb2e-103">Contains per-thread statistics pertaining to garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="71c04-104">語法</span><span class="sxs-lookup"><span data-stu-id="71c04-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9fb2e-104">語法</span><span class="sxs-lookup"><span data-stu-id="9fb2e-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _COR_GC_THREAD_STATS {  
@@ -35,26 +33,26 @@ typedef struct _COR_GC_THREAD_STATS {
 } COR_GC_THREAD_STATS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="71c04-105">成員</span><span class="sxs-lookup"><span data-stu-id="71c04-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="9fb2e-105">Members</span><span class="sxs-lookup"><span data-stu-id="9fb2e-105">Members</span></span>  
   
-|<span data-ttu-id="71c04-106">成員</span><span class="sxs-lookup"><span data-stu-id="71c04-106">Member</span></span>|<span data-ttu-id="71c04-107">描述</span><span class="sxs-lookup"><span data-stu-id="71c04-107">Description</span></span>|  
+|<span data-ttu-id="9fb2e-106">成員</span><span class="sxs-lookup"><span data-stu-id="9fb2e-106">Member</span></span>|<span data-ttu-id="9fb2e-107">描述</span><span class="sxs-lookup"><span data-stu-id="9fb2e-107">Description</span></span>|  
 |------------|-----------------|  
-|`PerThreadAllocation`|<span data-ttu-id="71c04-108">目前與相關聯的執行緒上配置的記憶體位元組數目`COR_GC_THREAD_STATS`執行個體。</span><span class="sxs-lookup"><span data-stu-id="71c04-108">The number of bytes of memory allocated on the thread that is associated with the current `COR_GC_THREAD_STATS` instance.</span></span> <span data-ttu-id="71c04-109">每次在層代 0 記憶體回收時清除這個數字為零。</span><span class="sxs-lookup"><span data-stu-id="71c04-109">This number is cleared to zero each time a generation-zero garbage collection occurs.</span></span>|  
-|`Flags`|<span data-ttu-id="71c04-110">位元組數目提升至更高的層代最新的回收。</span><span class="sxs-lookup"><span data-stu-id="71c04-110">The number of bytes promoted to a higher generation at the most recent garbage collection.</span></span>|  
+|`PerThreadAllocation`|<span data-ttu-id="9fb2e-108">在與目前 `COR_GC_THREAD_STATS` 實例相關聯的執行緒上配置的記憶體位元組數目。</span><span class="sxs-lookup"><span data-stu-id="9fb2e-108">The number of bytes of memory allocated on the thread that is associated with the current `COR_GC_THREAD_STATS` instance.</span></span> <span data-ttu-id="9fb2e-109">每次發生層代零垃圾收集時，這個數位就會清除為零。</span><span class="sxs-lookup"><span data-stu-id="9fb2e-109">This number is cleared to zero each time a generation-zero garbage collection occurs.</span></span>|  
+|`Flags`|<span data-ttu-id="9fb2e-110">在最近一次垃圾收集時，升級至較高層代的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="9fb2e-110">The number of bytes promoted to a higher generation at the most recent garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="71c04-111">備註</span><span class="sxs-lookup"><span data-stu-id="71c04-111">Remarks</span></span>  
- <span data-ttu-id="71c04-112">[Iclrtask:: Getmemstats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)會採用輸出參數的型別`COR_GC_THREAD_STATS`。</span><span class="sxs-lookup"><span data-stu-id="71c04-112">[ICLRTask::GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) takes an output parameter of type `COR_GC_THREAD_STATS`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9fb2e-111">備註</span><span class="sxs-lookup"><span data-stu-id="9fb2e-111">Remarks</span></span>  
+ <span data-ttu-id="9fb2e-112">[ICLRTask：： GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)接受 `COR_GC_THREAD_STATS`類型的輸出參數。</span><span class="sxs-lookup"><span data-stu-id="9fb2e-112">[ICLRTask::GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) takes an output parameter of type `COR_GC_THREAD_STATS`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="71c04-113">需求</span><span class="sxs-lookup"><span data-stu-id="71c04-113">Requirements</span></span>  
- <span data-ttu-id="71c04-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="71c04-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9fb2e-113">需求</span><span class="sxs-lookup"><span data-stu-id="9fb2e-113">Requirements</span></span>  
+ <span data-ttu-id="9fb2e-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9fb2e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="71c04-115">**標頭：** GCHost.idl</span><span class="sxs-lookup"><span data-stu-id="71c04-115">**Header:** GCHost.idl</span></span>  
+ <span data-ttu-id="9fb2e-115">**標頭：** GCHost .idl</span><span class="sxs-lookup"><span data-stu-id="9fb2e-115">**Header:** GCHost.idl</span></span>  
   
- <span data-ttu-id="71c04-116">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="71c04-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9fb2e-116">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="9fb2e-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="71c04-117">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="71c04-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9fb2e-117">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9fb2e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="71c04-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="71c04-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9fb2e-118">請參閱</span><span class="sxs-lookup"><span data-stu-id="9fb2e-118">See also</span></span>
 
-- [<span data-ttu-id="71c04-119">裝載結構</span><span class="sxs-lookup"><span data-stu-id="71c04-119">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [<span data-ttu-id="71c04-120">IHostTask 介面</span><span class="sxs-lookup"><span data-stu-id="71c04-120">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="9fb2e-119">裝載結構</span><span class="sxs-lookup"><span data-stu-id="9fb2e-119">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [<span data-ttu-id="9fb2e-120">IHostTask 介面</span><span class="sxs-lookup"><span data-stu-id="9fb2e-120">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

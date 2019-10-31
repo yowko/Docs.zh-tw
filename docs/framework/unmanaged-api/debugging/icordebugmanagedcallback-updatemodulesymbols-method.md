@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0863f644-58e8-45a0-b0c3-a28e99b20938
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a15e3ab0d50763ad53b1caa921035239868fec1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f5b413ffbbc8fccbea38f23d8c87d40e010dd37
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761240"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130608"
 ---
-# <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a><span data-ttu-id="7e075-102">ICorDebugManagedCallback::UpdateModuleSymbols 方法</span><span class="sxs-lookup"><span data-stu-id="7e075-102">ICorDebugManagedCallback::UpdateModuleSymbols Method</span></span>
-<span data-ttu-id="7e075-103">已變更為通用語言執行階段模組的符號會告知偵錯工具。</span><span class="sxs-lookup"><span data-stu-id="7e075-103">Notifies the debugger that the symbols for a common language runtime module have changed.</span></span>  
+# <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a><span data-ttu-id="866bb-102">ICorDebugManagedCallback::UpdateModuleSymbols 方法</span><span class="sxs-lookup"><span data-stu-id="866bb-102">ICorDebugManagedCallback::UpdateModuleSymbols Method</span></span>
+<span data-ttu-id="866bb-103">通知偵錯工具，通用語言執行時間模組的符號已經變更。</span><span class="sxs-lookup"><span data-stu-id="866bb-103">Notifies the debugger that the symbols for a common language runtime module have changed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7e075-104">語法</span><span class="sxs-lookup"><span data-stu-id="7e075-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="866bb-104">語法</span><span class="sxs-lookup"><span data-stu-id="866bb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT UpdateModuleSymbols (  
@@ -37,32 +35,32 @@ HRESULT UpdateModuleSymbols (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7e075-105">參數</span><span class="sxs-lookup"><span data-stu-id="7e075-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="866bb-105">參數</span><span class="sxs-lookup"><span data-stu-id="866bb-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="7e075-106">[in]表示包含的模組的符號已經變更的應用程式定義域的 ICorDebugAppDomain 物件指標。</span><span class="sxs-lookup"><span data-stu-id="7e075-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the module in which the symbols have changed.</span></span>  
+ <span data-ttu-id="866bb-106">在ICorDebugAppDomain 物件的指標，代表包含已變更符號之模組的應用程式域。</span><span class="sxs-lookup"><span data-stu-id="866bb-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the module in which the symbols have changed.</span></span>  
   
  `pModule`  
- <span data-ttu-id="7e075-107">[in]ICorDebugModule 物件，表示的模組符號已經變更指標。</span><span class="sxs-lookup"><span data-stu-id="7e075-107">[in] A pointer to an ICorDebugModule object that represents the module in which the symbols have changed.</span></span>  
+ <span data-ttu-id="866bb-107">在ICorDebugModule 物件的指標，表示符號已變更的模組。</span><span class="sxs-lookup"><span data-stu-id="866bb-107">[in] A pointer to an ICorDebugModule object that represents the module in which the symbols have changed.</span></span>  
   
  `pSymbolStream`  
- <span data-ttu-id="7e075-108">[in]Win32 COM 指標`IStream`物件，其中包含已修改的符號。</span><span class="sxs-lookup"><span data-stu-id="7e075-108">[in] A pointer to a Win32 COM `IStream` object that contains the modified symbols.</span></span>  
+ <span data-ttu-id="866bb-108">在Win32 COM `IStream` 物件的指標，其中包含修改過的符號。</span><span class="sxs-lookup"><span data-stu-id="866bb-108">[in] A pointer to a Win32 COM `IStream` object that contains the modified symbols.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7e075-109">備註</span><span class="sxs-lookup"><span data-stu-id="7e075-109">Remarks</span></span>  
- <span data-ttu-id="7e075-110">這個方法便有機會呼叫來更新模組的符號偵錯工具的檢視[isymunmanagedreader:: Updatesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)或是[isymunmanagedreader:: Replacesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md)。</span><span class="sxs-lookup"><span data-stu-id="7e075-110">This method provides an opportunity to update the debugger's view of a module's symbols by calling [ISymUnmanagedReader::UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) or [ISymUnmanagedReader::ReplaceSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="866bb-109">備註</span><span class="sxs-lookup"><span data-stu-id="866bb-109">Remarks</span></span>  
+ <span data-ttu-id="866bb-110">這個方法可讓您藉由呼叫[ISymUnmanagedReader：： UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)或[ISymUnmanagedReader：： ReplaceSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md)，來更新偵錯工具的模組符號的觀點。</span><span class="sxs-lookup"><span data-stu-id="866bb-110">This method provides an opportunity to update the debugger's view of a module's symbols by calling [ISymUnmanagedReader::UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) or [ISymUnmanagedReader::ReplaceSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md).</span></span>  
   
- <span data-ttu-id="7e075-111">此回呼可能會多次發生相同的模組。</span><span class="sxs-lookup"><span data-stu-id="7e075-111">This callback can occur multiple times for the same module.</span></span>  
+ <span data-ttu-id="866bb-111">針對相同的模組，此回呼可能會發生多次。</span><span class="sxs-lookup"><span data-stu-id="866bb-111">This callback can occur multiple times for the same module.</span></span>  
   
- <span data-ttu-id="7e075-112">偵錯工具應該嘗試繫結未繫結的來源層級中斷點。</span><span class="sxs-lookup"><span data-stu-id="7e075-112">A debugger should try to bind unbound source-level breakpoints.</span></span>  
+ <span data-ttu-id="866bb-112">偵錯工具應該嘗試系結未系結的來源層級中斷點。</span><span class="sxs-lookup"><span data-stu-id="866bb-112">A debugger should try to bind unbound source-level breakpoints.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7e075-113">需求</span><span class="sxs-lookup"><span data-stu-id="7e075-113">Requirements</span></span>  
- <span data-ttu-id="7e075-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7e075-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="866bb-113">需求</span><span class="sxs-lookup"><span data-stu-id="866bb-113">Requirements</span></span>  
+ <span data-ttu-id="866bb-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="866bb-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7e075-115">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7e075-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="866bb-115">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="866bb-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7e075-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7e075-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="866bb-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="866bb-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7e075-117">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e075-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="866bb-117">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="866bb-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7e075-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7e075-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="866bb-118">請參閱</span><span class="sxs-lookup"><span data-stu-id="866bb-118">See also</span></span>
 
-- [<span data-ttu-id="7e075-119">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="7e075-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="866bb-119">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="866bb-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

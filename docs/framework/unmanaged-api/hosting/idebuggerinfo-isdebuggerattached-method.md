@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6e21872f-602f-411a-a423-bff5cdf27000
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f381cc687b4c28dd58a02aea8cf931f569cf9611
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cbd6fa5f7935a57799d695c3ebb617d856e6dbd9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780529"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133169"
 ---
-# <a name="idebuggerinfoisdebuggerattached-method"></a><span data-ttu-id="ce0af-102">IDebuggerInfo::IsDebuggerAttached 方法</span><span class="sxs-lookup"><span data-stu-id="ce0af-102">IDebuggerInfo::IsDebuggerAttached Method</span></span>
-<span data-ttu-id="ce0af-103">取得值，指出是否要將受管理的偵錯工具附加至這個處理程序。</span><span class="sxs-lookup"><span data-stu-id="ce0af-103">Gets a value that indicates whether a managed debugger is attached to this process.</span></span>  
+# <a name="idebuggerinfoisdebuggerattached-method"></a><span data-ttu-id="867de-102">IDebuggerInfo::IsDebuggerAttached 方法</span><span class="sxs-lookup"><span data-stu-id="867de-102">IDebuggerInfo::IsDebuggerAttached Method</span></span>
+<span data-ttu-id="867de-103">取得值，指出 managed 偵錯工具是否附加至此進程。</span><span class="sxs-lookup"><span data-stu-id="867de-103">Gets a value that indicates whether a managed debugger is attached to this process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ce0af-104">語法</span><span class="sxs-lookup"><span data-stu-id="ce0af-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="867de-104">語法</span><span class="sxs-lookup"><span data-stu-id="867de-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsDebuggerAttached (  
@@ -35,19 +33,19 @@ HRESULT IsDebuggerAttached (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ce0af-105">參數</span><span class="sxs-lookup"><span data-stu-id="ce0af-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="867de-105">參數</span><span class="sxs-lookup"><span data-stu-id="867de-105">Parameters</span></span>  
  `pbAttached`  
- <span data-ttu-id="ce0af-106">[out]為值的指標`true`managed 偵錯工具附加至處理序，否則如果`false`。</span><span class="sxs-lookup"><span data-stu-id="ce0af-106">[out] A pointer to a value that is `true` if a managed debugger is attached to the process; otherwise, `false`.</span></span>  
+ <span data-ttu-id="867de-106">脫銷如果 managed 偵錯工具附加至進程，則為 `true` 值的指標;否則，`false`。</span><span class="sxs-lookup"><span data-stu-id="867de-106">[out] A pointer to a value that is `true` if a managed debugger is attached to the process; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ce0af-107">需求</span><span class="sxs-lookup"><span data-stu-id="ce0af-107">Requirements</span></span>  
- <span data-ttu-id="ce0af-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ce0af-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="867de-107">需求</span><span class="sxs-lookup"><span data-stu-id="867de-107">Requirements</span></span>  
+ <span data-ttu-id="867de-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="867de-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ce0af-109">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ce0af-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="867de-109">**標頭：** Mscoree.dll. h</span><span class="sxs-lookup"><span data-stu-id="867de-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ce0af-110">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="ce0af-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="867de-110">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="867de-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ce0af-111">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce0af-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="867de-111">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="867de-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ce0af-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ce0af-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="867de-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="867de-112">See also</span></span>
 
-- [<span data-ttu-id="ce0af-113">IDebuggerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="ce0af-113">IDebuggerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)
+- [<span data-ttu-id="867de-113">IDebuggerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="867de-113">IDebuggerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)

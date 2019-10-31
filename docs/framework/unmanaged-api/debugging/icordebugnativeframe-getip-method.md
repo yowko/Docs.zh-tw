@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 99f693f3-d3b9-4fd8-9d09-b8efd03f7b67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 71e9149bafc866f89253c4318ac69f2705431e48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3011a8c7e5cf278768587633967b2e9491cf87ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765299"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137328"
 ---
-# <a name="icordebugnativeframegetip-method"></a><span data-ttu-id="39cd4-102">ICorDebugNativeFrame::GetIP 方法</span><span class="sxs-lookup"><span data-stu-id="39cd4-102">ICorDebugNativeFrame::GetIP Method</span></span>
-<span data-ttu-id="39cd4-103">取得原生程式碼位移指令指標目前設定的位置。</span><span class="sxs-lookup"><span data-stu-id="39cd4-103">Gets the native code offset location to which the instruction pointer is currently set.</span></span>  
+# <a name="icordebugnativeframegetip-method"></a><span data-ttu-id="d9d1e-102">ICorDebugNativeFrame::GetIP 方法</span><span class="sxs-lookup"><span data-stu-id="d9d1e-102">ICorDebugNativeFrame::GetIP Method</span></span>
+<span data-ttu-id="d9d1e-103">取得目前設定指令指標的原生程式碼位移位置。</span><span class="sxs-lookup"><span data-stu-id="d9d1e-103">Gets the native code offset location to which the instruction pointer is currently set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="39cd4-104">語法</span><span class="sxs-lookup"><span data-stu-id="39cd4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d9d1e-104">語法</span><span class="sxs-lookup"><span data-stu-id="d9d1e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetIP (  
@@ -35,20 +33,20 @@ HRESULT GetIP (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="39cd4-105">參數</span><span class="sxs-lookup"><span data-stu-id="39cd4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d9d1e-105">參數</span><span class="sxs-lookup"><span data-stu-id="d9d1e-105">Parameters</span></span>  
  `pnOffset`  
- <span data-ttu-id="39cd4-106">[out]在原生程式碼中的位移位置指標。</span><span class="sxs-lookup"><span data-stu-id="39cd4-106">[out] A pointer to the offset location in the native code.</span></span>  
+ <span data-ttu-id="d9d1e-106">脫銷機器碼中位移位置的指標。</span><span class="sxs-lookup"><span data-stu-id="d9d1e-106">[out] A pointer to the offset location in the native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="39cd4-107">備註</span><span class="sxs-lookup"><span data-stu-id="39cd4-107">Remarks</span></span>  
- <span data-ttu-id="39cd4-108">如果這個 「 ICorDebugNativeFrame"所表示的堆疊框架正在使用時，此位移為要執行的下一個指令的位址。</span><span class="sxs-lookup"><span data-stu-id="39cd4-108">If the stack frame that is represented by this "ICorDebugNativeFrame" is active, the offset is the address of the next instruction to be executed.</span></span> <span data-ttu-id="39cd4-109">如果此堆疊框架不是作用中，此位移為下一個堆疊框架就會重新啟動時要執行指令的位址。</span><span class="sxs-lookup"><span data-stu-id="39cd4-109">If this stack frame is not active, the offset is the address of the next instruction to be executed when the stack frame is reactivated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d9d1e-107">備註</span><span class="sxs-lookup"><span data-stu-id="d9d1e-107">Remarks</span></span>  
+ <span data-ttu-id="d9d1e-108">如果這個 "ICorDebugNativeFrame" 所代表的堆疊框架是作用中，則位移就是下一個要執行之指令的位址。</span><span class="sxs-lookup"><span data-stu-id="d9d1e-108">If the stack frame that is represented by this "ICorDebugNativeFrame" is active, the offset is the address of the next instruction to be executed.</span></span> <span data-ttu-id="d9d1e-109">如果這個堆疊框架不在作用中，則位移是重新開機堆疊框架時，要執行的下一個指令的位址。</span><span class="sxs-lookup"><span data-stu-id="d9d1e-109">If this stack frame is not active, the offset is the address of the next instruction to be executed when the stack frame is reactivated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="39cd4-110">需求</span><span class="sxs-lookup"><span data-stu-id="39cd4-110">Requirements</span></span>  
- <span data-ttu-id="39cd4-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="39cd4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9d1e-110">需求</span><span class="sxs-lookup"><span data-stu-id="d9d1e-110">Requirements</span></span>  
+ <span data-ttu-id="d9d1e-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d9d1e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="39cd4-112">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="39cd4-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d9d1e-112">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d9d1e-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="39cd4-113">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="39cd4-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d9d1e-113">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d9d1e-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="39cd4-114">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="39cd4-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d9d1e-114">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9d1e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="39cd4-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="39cd4-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9d1e-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="d9d1e-115">See also</span></span>

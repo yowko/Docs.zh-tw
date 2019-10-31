@@ -15,15 +15,13 @@ helpviewer_keywords:
 ms.assetid: f8e38bf6-0312-4517-bed5-42031ed86331
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 29b32bd986479ffc9c37f5631148cc333c543021
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 57481c858c876fd9c60425bced7a13297086f0d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700751"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125453"
 ---
-# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="a5034-102">ICorDebugController::CommitChanges 方法</span><span class="sxs-lookup"><span data-stu-id="a5034-102">ICorDebugController::CommitChanges Method</span></span>
+# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="8d203-102">ICorDebugController::CommitChanges 方法</span><span class="sxs-lookup"><span data-stu-id="8d203-102">ICorDebugController::CommitChanges Method</span></span>
 
-<span data-ttu-id="a5034-103">`CommitChanges` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="a5034-103">`CommitChanges` is obsolete.</span></span> <span data-ttu-id="a5034-104">請勿呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="a5034-104">Do not call this method.</span></span>
+<span data-ttu-id="8d203-103">`CommitChanges` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="8d203-103">`CommitChanges` is obsolete.</span></span> <span data-ttu-id="8d203-104">請勿呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="8d203-104">Do not call this method.</span></span>
