@@ -10,14 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: edec95ea729fdf26e384b6658c241ca307e60851
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cdd8d2781331956289d2b74162e653ba1ee8fad6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643110"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114232"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>與非受控程式碼交互操作
 
@@ -39,7 +37,7 @@ ms.locfileid: "61643110"
 [Interop 封送處理](interop-marshaling.md)  
 描述適用於 COM Interop 和平台叫用的封送處理。
 
-[如何：對應 HRESULT 和例外狀況](how-to-map-hresults-and-exceptions.md)  
+[操作說明：對應 HRESULT 和例外狀況](how-to-map-hresults-and-exceptions.md)  
 描述例外狀況與 HRESULT 之間的對應。
 
 [COM 包裝函式](com-wrappers.md)  

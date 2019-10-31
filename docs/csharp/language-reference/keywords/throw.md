@@ -10,14 +10,12 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1e3f9ff82bdc4f35232c4ea1162050e216a9cc21
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: f274802c84ff8f3dd2588db8b83a0d0de36d2d68
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353414"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101779"
 ---
 # <a name="throw-c-reference"></a>throw (C# 參考)
 
@@ -60,7 +58,7 @@ throw [e];
 
    [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]
 
-- 運算式主體 [lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) 或方法。 下列範例說明因不支援轉換為 <xref:System.DateTime> 值而擲回 <xref:System.InvalidCastException> 的運算式主體方法。
+- 運算式主體 [ambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) 或方法。 下列範例說明因不支援轉換為 <xref:System.DateTime> 值而擲回 <xref:System.InvalidCastException> 的運算式主體方法。
 
    [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]
 
@@ -68,10 +66,10 @@ throw [e];
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [try-catch](try-catch.md)
 - [C# 關鍵字](index.md)
-- [如何：明確擲回例外狀況](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+- [操作說明：明確擲回例外狀況](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

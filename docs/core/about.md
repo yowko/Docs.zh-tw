@@ -2,12 +2,12 @@
 title: 關於 .NET Core
 description: 了解 .NET Core。
 ms.date: 09/17/2019
-ms.openlocfilehash: 8b96e1e8f882ee69bcf7db58ca7a5eeab89fb4fd
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 51e4f3784db58e23ab4293c2d9f4e52e0d6617b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395174"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093434"
 ---
 # <a name="about-net-core"></a>關於 .NET Core
 
@@ -113,7 +113,7 @@ Windows 與 Unix 實作大小相近。 Windows 有更大的執行，因為 CoreF
 
 ### <a name="comparison-with-mono"></a>與 Mono 的比較
 
-[Mono](https://www.mono-project.com/)是 .net 的原始跨平臺。 它是以[開放原始](https://github.com/mono/mono)碼的方式開始使用 .NET Framework 並轉換成以行動裝置為目標，因為 IOS 和 Android 裝置變得很熱門。 它可以視為 .NET Framework 的社群複製體。 Mono 專案小組依賴 Microsoft 發佈的開放[.net 標準](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)（尤其是 ECMA 335）來提供相容的執行。
+[Mono](https://www.mono-project.com/)是 .net 的原始跨平臺執行。 它會以[開放原始](https://github.com/mono/mono)碼替代方式開始使用 .NET Framework 並轉換成以行動裝置為目標，因為 IOS 和 Android 裝置變得很熱門。 它可以視為 .NET Framework 的社群複製體。 Mono 專案小組依賴 Microsoft 發佈的開放[.net 標準](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)（尤其是 ECMA 335）來提供相容的執行。
 
 .NET Core 和 Mono 的主要差異︰
 

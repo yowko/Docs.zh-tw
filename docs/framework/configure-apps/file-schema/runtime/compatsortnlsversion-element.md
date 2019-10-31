@@ -8,21 +8,19 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 575d44ad9ecf445ba5d4b7fbe47032127ccb33ae
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f13265e2056c8eca62cd510154dd7c096eeabb00
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252725"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117685"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 元素
 指定執行階段在執行字串比較時，應使用舊版排序次序。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<CompatSortNLSVersion>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<CompatSortNLSVersion >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,18 +44,18 @@ ms.locfileid: "70252725"
 |-----------|-----------------|  
 |4096|表示替代排序次序的地區設定 ID。 在此情況下，4096代表 .NET Framework 3.5 及舊版的排序次序。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 由於 .NET Framework 4 中的類別所<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>執行的字串比較、排序和大小寫作業符合 Unicode 5.1 標準，因此字串比較方法<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> （例如和<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> ）的結果可能會與舊版的 .NET Framework。 如果您的應用程式相依于舊版行為，您可以在應用程式的設定檔中包含`<CompatSortNLSVersion>`專案，以還原 .NET Framework 3.5 和更早版本中使用的字串比較和排序規則。  
+ 因為 .NET Framework 4 中 <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> 類別所執行的字串比較、排序和大小寫作業符合 Unicode 5.1 標準，所以字串比較方法（例如 <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> 和 <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>）的結果可能與舊版的不同.NET Framework。 如果您的應用程式相依于舊版行為，您可以在應用程式的設定檔中包含 `<CompatSortNLSVersion>` 元素，以還原 .NET Framework 3.5 和舊版中所使用的字串比較和排序規則。  
   
 > [!IMPORTANT]
 > 還原舊版字串比較和排序規則也必須要有可在本機系統上提供的 sort00001000.dll 動態連結程式庫。  
@@ -93,7 +91,7 @@ sta equals a in the sort order.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段設定結構描述](index.md)
 - [組態檔結構描述](../index.md)

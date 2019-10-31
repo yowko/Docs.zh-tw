@@ -5,14 +5,12 @@ helpviewer_keywords:
 - supportPortability element
 - <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a76c378038a19d3edb9fe0c5e61012cc854c1b7
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 63c309a8a93c1d31ed8f73a495cf5154c3590d56
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773935"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115646"
 ---
 # <a name="supportportability-element"></a>\<supportPortability > 元素
 指定應用程式可以在兩個不同的 .NET Framework 實作中參考相同的組件，方法是停用將組件視為同等的預設行為 (此預設行為是基於應用程式可攜性的考量)。  
@@ -69,7 +67,7 @@ ms.locfileid: "72773935"
   
 ## <a name="example"></a>範例  
 
-下列範例可讓應用程式同時參考同時存在於兩個執行中之任何 .NET Framework 元件的 .NET Framework 實和 .NET Framework。 @No__t_0 編譯器選項必須用來指定此 app.config 檔案的位置。  
+下列範例可讓應用程式同時參考同時存在於兩個執行中之任何 .NET Framework 元件的 .NET Framework 實和 .NET Framework。 `/appconfig` 編譯器選項必須用來指定此 app.config 檔案的位置。  
   
 ```xml  
 <configuration>  

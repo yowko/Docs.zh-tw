@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立 .NET Framework 單一檔案元件
+title: 如何：建立 .NET Framework 單一檔案元件
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
@@ -13,16 +13,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 98f06e62e1070f78faa77ef7d83fd80a62984684
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: af1bfb89b01a316a858cbb45bf19a26a16d90016
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991239"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119943"
 ---
-# <a name="how-to-build-a-net-framework-single-file-assembly"></a>HOW TO：建立 .NET Framework 單一檔案元件
+# <a name="how-to-build-a-net-framework-single-file-assembly"></a>如何：建立 .NET Framework 單一檔案元件
 
 單一檔案組件，是最簡單的組件類型，包含類型資訊和實作，以及[組件資訊清單](../../standard/assembly/manifest.md)。 您可以使用命令列編譯器或 Visual Studio 來建立以 .NET Framework 為目標的單一檔案元件。 根據預設，編譯器會建立副檔名為 *.exe*的元件檔。
 
@@ -39,7 +37,7 @@ ms.locfileid: "70991239"
 
 在這個命令中，「編譯器命令」是您程式碼模組所用語言的編譯器命令，而「模組名稱」則是編譯至組件的程式碼模組名稱。
 
-下列範例會從名`myCode`為的程式碼模組建立名為*myCode*的元件。
+下列範例會從名為 `myCode`的程式碼模組建立名為*myCode*的元件。
 
 ```csharp
 csc myCode.cs
@@ -57,7 +55,7 @@ vbc myCode.vb
 
 在這個命令中，「編譯器命令」是您程式碼模組所用語言的編譯器命令、「檔案名稱」是輸出檔名稱，而「模組名稱」則是編譯至組件的程式碼模組名稱。
 
-下列範例會從名`myCode`為的程式碼模組建立名為*myAssembly*的元件。
+下列範例會從名為 `myCode`的程式碼模組建立名為*myAssembly*的元件。
 
 ```csharp
 csc -out:myAssembly.exe myCode.cs
@@ -76,7 +74,7 @@ vbc -out:myAssembly.exe myCode.vb
 
 在這個命令中，「編譯器命令」是您程式碼模組所用語言的編譯器命令，而「模組名稱」則是編譯至組件的程式碼模組名稱。 您也可以使用其他編譯器選項，例如 **out:** 選項。
 
-下列範例會從名`myCode`為的程式碼模組建立名為 myCodeAssembly 的*連結*庫元件。
+下列範例會從名為 `myCode`的程式碼模組建立名為*myCodeAssembly 的連結*庫元件。
 
 ```csharp
 csc -out:myCodeLibrary.dll -t:library myCode.cs
@@ -86,7 +84,7 @@ csc -out:myCodeLibrary.dll -t:library myCode.cs
 vbc -out:myCodeLibrary.dll -t:library myCode.vb
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [建立元件](../../standard/assembly/create.md)
 - [多檔案元件](multifile-assemblies.md)

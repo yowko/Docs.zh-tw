@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetQualifierSet function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 845d5ea93a06859840c87c65b415ead0f846d538
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 489e240af3f26e82f2459ac4b4dbd944639f78fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798458"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127444"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet 函式
 擷取類別執行個體或類別定義的限定詞集合。
@@ -53,12 +51,12 @@ HRESULT GetQualifierSet (
 
 這個函式所傳回的下列值會定義在*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數：
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 發生一般失敗。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定的方法不存在。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成作業。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數為`null`。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數為 `null`。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
   
 ## <a name="remarks"></a>備註
@@ -70,10 +68,10 @@ HRESULT GetQualifierSet (
 ## <a name="requirements"></a>需求  
 **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** WMINet_Utils.idl  
+ **標頭：** WMINet_Utils .idl  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WMI 和效能計數器（非受控 API 參考）](index.md)

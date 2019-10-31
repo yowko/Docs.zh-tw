@@ -8,21 +8,19 @@ helpviewer_keywords:
 - assemblyBinding element
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 515261fe39676292ce50858f71b7da92287945d1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c688353583f5e452950d63b7d02c48505b6ae999
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252805"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118137"
 ---
-# <a name="assemblybinding-element-for-runtime"></a>\<執行時間 > 的\<assemblyBinding > 元素
+# <a name="assemblybinding-element-for-runtime"></a>\<執行時間的 \<assemblyBinding > 元素 >
 包含有關組件版本重新導向和組件位置的資訊。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<assemblyBinding>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<assemblyBinding >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,7 +40,7 @@ ms.locfileid: "70252805"
 |**xmlns**|必要屬性。<br /><br /> 指定組件繫結所需的 XML 命名空間。 使用字串 "urn:schemas-microsoft-com:asm.v1" 做為值。|  
 |**appliesTo**|指定 .NET Framework 組件重新導向適用的執行階段版本。 這個選擇性屬性會使用 .NET Framework 版本號碼，以表示它適用於哪一個版本。 如果未指定 **appliesTo** 屬性，則 **\<assemblyBinding>** 項目會套用至所有的 .NET Framework 版本。 **AppliesTo**屬性是在 .NET Framework 版本1.1 中引進.NET Framework 版本1.0 會忽略它。 這表示在使用 .NET Framework 1.0 版時，會套用所有 **\<assemblyBinding>** 項目，即使已指定 **appliesTo** 屬性時也是如此。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -92,7 +90,7 @@ ms.locfileid: "70252805"
 </runtime>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段設定結構描述](index.md)
 - [組態檔結構描述](../index.md)

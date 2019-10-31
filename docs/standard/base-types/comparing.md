@@ -18,19 +18,17 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dd5ec18147c074400457581618bacba11d9ee40a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e63b2a8ac44d6171f9c48990882780ea420f8c76
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963412"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101664"
 ---
 # <a name="comparing-strings-in-net"></a>在 .NET 中比較字串
 .NET 會提供數種方法來比較字串值。 下表列出並描述數值比較的方法。  
   
-|方法名稱|使用|  
+|方法名稱|請使用|  
 |-----------------|---------|  
 |<xref:System.String.Compare%2A?displayProperty=nameWithType>|比較兩個字串的值。 傳回整數值。|  
 |<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|比較兩個字串，而不考慮當地文化特性。 傳回整數值。|  
@@ -61,7 +59,7 @@ ms.locfileid: "69963412"
   
  此範例會顯示 `-1` 至主控台。  
   
- 上述範例根據預設會區分文化特性。 若要執行不區分文化特性的字串比較，使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法的多載，可讓您藉由提供 *文化特性* 參數來指定要使用的文化特性。 如需範例示範如何使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法以執行不區分文化特性的比較，請參閱 [執行不區分文化特性的字串比較](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)。  
+ 上述範例根據預設會區分文化特性。 若要執行不區分文化特性的字串比較，使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法的多載，可讓您藉由提供「文化特性」參數來指定要使用的文化特性。 如需示範如何使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法以執行不區分文化特性比較的範例，請參閱[執行不區分文化特性的字串比較](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)。  
   
 ## <a name="compareordinal"></a>CompareOrdinal  
  <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 方法會比較兩個字串物件，而不考慮當地文化特性。 這個方法的傳回值與上表中 **比較** 方法所傳回的值相同。  
@@ -91,7 +89,7 @@ ms.locfileid: "69963412"
   
  此範例會顯示 `-1` 至主控台。  
   
- 根據預設，所有 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法的多載會執行區分文化特性和區分大小寫的比較。 此方法不提供可讓您執行不區分文化特性比較的多載。 為了讓程式碼更清楚，建議您改用 **String.Compare** 方法，對於區分文化特性的作業指定 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 或對於不區分文化特性的作業指定 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 。 如需範例示範如何使用 **String.Compare** 方法以執行區分文化特性和不區分文化特性的比較，請參閱 [執行不區分文化特性的字串比較](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)。  
+ 根據預設，<xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法的所有多載都會執行區分文化特性和區分大小寫的比較。 此方法不提供可讓您執行不區分文化特性比較的多載。 為了讓程式碼更清楚，建議您改用 **String.Compare** 方法，對於區分文化特性的作業指定 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>，或對於不區分文化特性的作業指定 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>。 如需範例示範如何使用 **String.Compare** 方法以執行區分文化特性和不區分文化特性的比較，請參閱 [執行不區分文化特性的字串比較](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)。  
   
 ## <a name="equals"></a>等於  
  **String.Equals** 方法可以輕易地判斷兩個字串是否相同。 這個區分大小寫的方法會傳回 **true** 或 **false** 布林值。 它可從現有的類別下使用，如下一個範例中所示。 下列範例會使用 **等於** 方法來判斷字串物件是否包含片語 "Hello World"。  
@@ -150,7 +148,7 @@ ms.locfileid: "69963412"
   
  當搭配 **String.Remove** 方法使用時，這兩種方法都很實用。 您可以使用 **IndexOf** 或 **LastIndexOf** 方法來擷取字元的位置，然後提供該位置給 **移除** 方法，以移除字元或以該字元開頭的單字。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)
 - [執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

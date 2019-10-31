@@ -15,14 +15,12 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a35f4ffa88211d914dbf84c87da49fafa89a929
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a4f4c0e1af379d31c5b478472780d5c7de813bf6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353904"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121939"
 ---
 # <a name="metadata-and-self-describing-components"></a>中繼資料和自我描述元件
 
@@ -159,7 +157,7 @@ JIT 編譯器會讀取整個方法的 MSIL、全面分析它，並產生那個�
 
 下表顯示 **MethodDef** 表格中，由描述 `Add` 方法的中繼資料語彙基元所參考的部分。 雖然尚有其他中繼資料表存在於這個組件中並擁有其唯一值，但只有這個表格在討論之列。
 
-|表格列|相關的虛擬位址 (RVA)|ImplFlags|旗標|Name<br /><br /> (指向字串堆積)|簽章 (指向 BLOB 堆積)|
+|表格列|相關的虛擬位址 (RVA)|ImplFlags|旗標|[屬性]<br /><br /> (指向字串堆積)|簽章 (指向 BLOB 堆積)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
 |1|0x00002050|IL<br /><br /> Managed|Public<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (建構函式)||
 |2|0x00002058|IL<br /><br /> Managed|Public<br /><br /> Static<br /><br /> ReuseSlot|主要|String|

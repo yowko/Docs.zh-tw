@@ -14,42 +14,40 @@ helpviewer_keywords:
 ms.assetid: a71dbbd5-64b8-47eb-9f03-8e8c85fbe2bc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cb15da31d91565d49df83099045f742866eebcaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 18dfee606f3d41229aa58a5b4bb9380b87c4efa5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992832"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121386"
 ---
 # <a name="ihosttask-interface"></a>IHostTask 介面
-提供方法，可讓 common language runtime (CLR) 與主應用程式管理工作進行通訊。  
+提供可讓 common language runtime （CLR）與主機通訊的方法，以管理工作。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Alert 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md)|要求主機喚醒表示由目前的工作`IHostTask`執行個體，因此可以中止的工作。|  
-|[GetPriority 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md)|取得表示目前的工作的執行緒優先權層級`IHostTask`執行個體。|  
-|[Join 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md)|表示由目前的工作之前會封鎖呼叫的工作`IHostTask`執行個體完成後，將指定的時間間隔過去後，或是[ihosttask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md)呼叫。|  
-|[SetCLRTask 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md)|將產生關聯[ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)與目前的執行個體`IHostTask`執行個體。|  
-|[SetPriority 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setpriority-method.md)|表示由目前的工作要求主應用程式調整的執行緒優先權層級`IHostTask`執行個體。|  
-|[Start 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)|要求主機移到表示由目前的工作`IHostTask`從暫停狀態的即時狀態，可以在其中執行程式碼的執行個體。|  
+|[Alert 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md)|要求主機喚醒目前 `IHostTask` 實例所代表的工作，讓工作可以中止。|  
+|[GetPriority 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md)|取得目前 `IHostTask` 實例所表示之工作的執行緒優先權層級。|  
+|[Join 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md)|封鎖呼叫工作，直到目前的 `IHostTask` 實例所表示的工作完成、已超過指定的時間間隔，或呼叫[IHostTask：： Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md)為止。|  
+|[SetCLRTask 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md)|將[ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)實例與目前的 `IHostTask` 實例產生關聯。|  
+|[SetPriority 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setpriority-method.md)|要求主機針對目前 `IHostTask` 實例所表示的工作，調整執行緒優先順序層級。|  
+|[Start 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)|要求主機將目前 `IHostTask` 實例所代表的工作從暫停狀態移至即時狀態，在其中可執行程式碼。|  
   
 ## <a name="remarks"></a>備註  
- CLR 會呼叫所定義的方法`IHostTask`啟動工作，設定它的執行緒優先權層級，依此類推。  
+ CLR 會呼叫 `IHostTask` 所定義的方法來啟動工作、設定其執行緒優先順序層級等等。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [ICLRTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)

@@ -1,17 +1,15 @@
 ---
-title: 風險降低：在應用程式定義域之間將物件還原序列化
+title: 緩和：在應用程式定義域之間還原序列化物件
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de2456a1365a1fb48b3e9f126e090b8da77728cc
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 43a1a045560b54cc831e69f9e1d4dba76a8569e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894112"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126247"
 ---
-# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>風險降低：在應用程式定義域之間將物件還原序列化
+# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>緩和：在應用程式定義域之間還原序列化物件
 在某些情況下，當應用程式使用具有不同應用程式基底的兩個或多個應用程式定義域時，嘗試在跨應用程式定義域的邏輯呼叫內容中將物件還原序列化，將會擲回例外狀況。  
   
 ## <a name="diagnosing-the-issue"></a>診斷問題  
@@ -37,7 +35,7 @@ ms.locfileid: "70894112"
   
 6. 由於邏輯呼叫內容中的類型無法在預設應用程式定義域中解析，因此會擲回例外狀況。  
   
-## <a name="mitigation"></a>緩和  
+## <a name="mitigation"></a>風險降低  
  若要解決這個問題，請執行下列動作  
   
 1. 尋找擲回例外狀況時，在呼叫堆疊上的 `get_Evidence` 呼叫。 例外狀況可以是例外狀況的任一個大型子集，包括 <xref:System.IO.FileNotFoundException> 和 <xref:System.Runtime.Serialization.SerializationException>。  
@@ -48,6 +46,6 @@ ms.locfileid: "70894112"
     System.Configuration.ConfigurationManager.GetSection("system.xml/xmlReader");  
     ```
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段變更](runtime-changes-in-the-net-framework-4-5-1.md)

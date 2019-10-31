@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: 9ffb4498-7719-49d3-8890-df2c22248a0c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1faa78150659b4397cd4174583b607e1f7841b8f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b77d5859986c90d6ef61c02547014d0bec354106
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943353"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096147"
 ---
 # <a name="icordebugobjectenum-interface"></a>ICorDebugObjectEnum 介面
 
-會執行 ICorDebugEnum 方法, 並依其相對虛擬位址 (Rva) 來列舉物件陣列。  
+會執行 ICorDebugEnum 方法，並依其相對虛擬位址（Rva）來列舉物件陣列。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-next-method.md)|從目前的位置開始, 取得列舉中指定數目之物件的 Rva。|  
+|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-next-method.md)|從目前的位置開始，取得列舉中指定數目之物件的 Rva。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -43,10 +41,10 @@ ms.locfileid: "69943353"
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

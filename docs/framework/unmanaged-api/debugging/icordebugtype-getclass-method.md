@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2644f48b-db3c-429f-ae62-76f1c98a1af5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd68df77adafb8b21e7684b28fe978722ca37e16
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3a895f432ed640cc35a492df0c91cece34893062
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736800"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122371"
 ---
 # <a name="icordebugtypegetclass-method"></a>ICorDebugType::GetClass 方法
-取得表示未具現化的泛型型別 ICorDebugClass 介面指標。  
+取得 ICorDebugClass 的介面指標，表示未具現化的泛型型別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,16 +35,16 @@ HRESULT GetClass (
   
 ## <a name="parameters"></a>參數  
  `ppClass`  
- [out]位址指標`ICorDebugClass`介面，表示未具現化的泛型型別。  
+ 脫銷表示未具現化泛型型別之 `ICorDebugClass` 介面的位址指標。  
   
 ## <a name="remarks"></a>備註  
- `GetClass` 您可以只在某些情況下呼叫。 呼叫[icordebugtype:: Gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)再呼叫`GetClass`。 如果`ICorDebugType::GetType`傳回 CorElementType 值，這個值是 ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE，`GetClass`可以呼叫以取得泛型型別未具現化的型別。  
+ `GetClass` 只能在特定條件下呼叫。 呼叫[ICorDebugType：： GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) ，再呼叫 `GetClass`。 如果 `ICorDebugType::GetType` 傳回 ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE 的 CorElementType 值，則可以呼叫 `GetClass` 以取得泛型型別的未具現化類型。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

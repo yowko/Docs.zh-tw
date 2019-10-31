@@ -9,21 +9,19 @@ helpviewer_keywords:
 - container tags, <probing> element
 - probing element
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae789e99a1306102c67f2252760e215989132406
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e9e48ea97e1b70fef7fcc78a113e18c5fec23b7c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971619"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115855"
 ---
 # <a name="probing-element"></a>\<探查 > 元素
 指定載入元件時，common language runtime 要搜尋的應用程式基底子目錄。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<探查 >**  
   
 ## <a name="syntax"></a>語法  
@@ -41,7 +39,7 @@ ms.locfileid: "70971619"
 |---------------|-----------------|  
 |`privatePath`|必要屬性。<br /><br /> 指定可能包含元件之應用程式基底目錄的子目錄。 以分號分隔每個子目錄。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
 
 無。  
   
@@ -66,7 +64,7 @@ ms.locfileid: "70971619"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行時間設定架構](index.md)
 - [組態檔結構描述](../index.md)

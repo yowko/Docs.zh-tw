@@ -5,14 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8d916aa5e19b8ce583984d9a8e9708d34cf0adfb
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: faf14245cd9dd7aa4bf8e89d5a05901279956509
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049535"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128273"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException 類別 (.NET Native)
 **適用于 Windows 10 的 Windows 應用程式的 .NET，僅限 .NET Native**  
@@ -22,7 +20,7 @@ ms.locfileid: "71049535"
  **命名空間：** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
-> `MissingInteropDataException`類別僅供 .NET Native 工具鏈內部使用。 這主要並非用於協力廠商程式碼中，也不應該在應用程式程式碼中處理此例外狀況。 相反地，請藉由將項目新增至[執行階段指示詞檔案](runtime-directives-rd-xml-configuration-file-reference.md)，來消除例外狀況。 如需詳細資訊，請參閱＜備註＞一節。  
+> `MissingInteropDataException` 類別僅供 .NET Native 工具鏈內部使用。 這主要並非用於協力廠商程式碼中，也不應該在應用程式程式碼中處理此例外狀況。 相反地，請藉由將項目新增至[執行階段指示詞檔案](runtime-directives-rd-xml-configuration-file-reference.md)，來消除例外狀況。 如需詳細資訊，請參閱＜備註＞一節。  
   
 ## <a name="syntax"></a>語法  
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
@@ -36,7 +34,7 @@ ms.locfileid: "71049535"
 |-----------------|-----------------|  
 |`public MissingInteropDataException(String resourceId, Type pertinentType)`|使用系統提供有關錯誤及遺漏資料之類型的說明訊息識別碼，初始化 `MissingInteropDataException` 類別的新執行個體。 此函式僅供 .NET Native 工具鏈內部使用。|  
   
-## <a name="properties"></a>屬性  
+## <a name="properties"></a>內容  
   
 |屬性|描述|  
 |--------------|-----------------|  
@@ -55,15 +53,15 @@ ms.locfileid: "71049535"
 |方法|描述|  
 |------------|-----------------|  
 |`public bool Equals(Object obj)`|判斷指定的物件是否等於目前的物件。  (繼承自 <xref:System.Object>。)|  
-|`protected void Finalize()`|在記憶體回收開始前，允許物件嘗試釋放資源，並執行其他清除作業。 (繼承自 <xref:System.Object>。)|  
+|`protected void Finalize()`|允許物件在記憶體回收進行回收之前，嘗試釋放資源並執行其他清除作業。 (繼承自 <xref:System.Object>。)|  
 |`public Exception GetBaseException()`|傳回一或多個後續例外狀況之根本原因的例外狀況。 (繼承自 <xref:System.Exception?displayProperty=nameWithType>。)|  
 |`public int GetHashCode()`|傳回 `MissingInteropDataException` 執行個體的雜湊碼。   (繼承自 <xref:System.Object>。)|  
-|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|使用與例外狀況相關的資訊來設定 <xref:System.Runtime.Serialization.SerializationInfo> 物件。  (繼承自 <xref:System.Exception?displayProperty=nameWithType>。)|  
+|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|使用例外狀況的相關資訊來設定 <xref:System.Runtime.Serialization.SerializationInfo> 物件。  (繼承自 <xref:System.Exception?displayProperty=nameWithType>。)|  
 |`public Type GetType()`|取得目前執行個體的執行階段類型。 (繼承自 <xref:System.Exception?displayProperty=nameWithType>。)|  
 |`protected Object MemberwiseClone()`|建立目前物件的淺層複本。 (繼承自 <xref:System.Object>。)|  
 |`public string ToString()`|傳回目前例外狀況的字串表示。 (繼承自 <xref:System.Exception?displayProperty=nameWithType>。)|  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>「事件」  
   
 |Event - 事件|描述|  
 |-----------|-----------------|  
@@ -72,14 +70,14 @@ ms.locfileid: "71049535"
 ## <a name="usage-details"></a>用法詳細資料  
  當由於沒有類型資訊而無法順利對 COM 或 Windows 執行階段元件呼叫方法時，會擲回 `MissingInteropDataException` 例外狀況。  
   
- 應用程式在執行時間可使用的中繼資料是由執行時間指示詞（XML 設定）檔案（ \*app.config）所定義。 若要防止應用程式擲回這個例外狀況，您必須修改這個檔案，定義必須在執行階段有中繼資料。 解決這個錯誤的最常見方式，是將 `MarshalObject`、`MarshalDelegate` 或 `MarshalStructure` 屬性加入至執行階段指示詞檔案中的適當程式項目。 如需此檔案格式的資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)。  
+ 應用程式在執行時間可使用的中繼資料是由執行時間指示詞（XML 設定）檔案（\*. .xml）所定義。 若要防止應用程式擲回這個例外狀況，您必須修改這個檔案，定義必須在執行階段有中繼資料。 解決這個錯誤的最常見方式，是將 `MarshalObject`、`MarshalDelegate` 或 `MarshalStructure` 屬性加入至執行階段指示詞檔案中的適當程式項目。 如需此檔案格式的資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)。  
   
 > [!IMPORTANT]
 > 因為這個例外狀況指出應用程式所需的中繼資料在執行階段無法使用，所以您不應該在 `try`/`catch` 區塊中處理這個例外狀況。 相反地，您應該診斷例外狀況的原因，然後將適當地進入點加入階段指示詞檔案，以去除這項例外狀況。  
   
  `MissingInteropDataException` 類別包含唯一的成員 `MissingType` 屬性，指出需要中繼資料才能成功呼叫方法的類型。 其餘所有成員都是繼承自基底類別 <xref:System.Exception?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Exception?displayProperty=nameWithType>
 - [MissingMetadataException 類別](missingmetadataexception-class-net-native.md)

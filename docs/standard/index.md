@@ -2,16 +2,15 @@
 title: .NET 指南
 description: 了解 .NET。
 author: cartermp
-ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: ffc63146cde0be5359ee03ea53683220f4996b81
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: dfc66bd2bdc69d1236a635b30697bc1cd607821c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855482"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120761"
 ---
 # <a name="net-guide"></a>.NET 指南
 
@@ -53,7 +52,7 @@ ms.locfileid: "70855482"
 * [記憶體回收](garbagecollection/index.md)
 * [.NET 的基本類型](base-types/index.md)
 * [集合](collections/index.md)
-* [日期、時間和時區](datetime/index.md)
+* [日期、時間及時區](datetime/index.md)
 * [非同步程式設計](async.md)
 
 此外，請參閱各語言指南以了解主要的三種 .NET 語言：

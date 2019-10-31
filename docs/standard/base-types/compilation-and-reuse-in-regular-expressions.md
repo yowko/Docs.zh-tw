@@ -12,14 +12,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, compilation
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca2dfcfbb5407be2727343a5b3a5b429af83ae20
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 3e1dfe8373145286b03e503f038e267ff0d4c4f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634589"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091736"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>規則運算式中的編譯和重複使用
 只要了解規則運算式引擎如何編譯運算式，以及了解如何快取規則運算式，您就可以使大量使用規則運算式的應用程式達到最佳效能。 本主題討論編譯及快取。  
@@ -34,7 +32,7 @@ ms.locfileid: "64634589"
  您必須小心限制以 <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 選項編譯的不同規則運算式數目，以避免消耗太多資源。 如果應用程式必須使用大量或未限制數目的規則運算式，應該要解譯而不是編譯各個運算式。 不過，如果要重複使用少數規則運算式，應該使用 <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 進行編譯以獲得較高效能。 替代方法是使用先行編譯的規則運算式。 您可以使用 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> 方法，將您的所有運算式編譯為一個可重複使用的 DLL。 這樣可避免需要在執行階段進行編譯，同時仍能從已編譯之規則運算式的速度中獲益。  
   
 ## <a name="the-regular-expressions-cache"></a>規則運算式快取  
- 為了提升效能，規則運算式引擎會維護整個應用程式的已編譯規則運算式之快取。 這個快取會儲存只有在靜態方法呼叫中使用的規則運算式模式 (不會快取提供給執行個體方法的規則運算式模式)。這可避免在每次使用運算式時，必須將其重新剖析為高階位元組程式碼。  
+ 為了提升效能，規則運算式引擎會維護整個應用程式的已編譯規則運算式之快取。 這個快取會儲存只有在靜態方法呼叫中使用的規則運算式模式 （不會快取提供給實例方法的正則運算式模式）。這可避免在每次使用時，將運算式重新分析為高階位元組程式碼。  
   
  快取的規則運算式數目上限取決於 `static` (在 Visual Basic 中為 `Shared`) <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType> 屬性值。 根據預設，規則運算式引擎最多可快取 15 個已編譯的規則運算式。 如果編譯的規則運算式數目超出快取大小，就會捨棄最近最少使用的規則運算式，並快取新的規則運算式。  
   
@@ -46,6 +44,6 @@ ms.locfileid: "64634589"
   
  由於物件具現化和規則運算式編譯會造成額外負荷，因此建立及快速終結多個 <xref:System.Text.RegularExpressions.Regex> 物件是個非常耗費資源的處理序。 對於使用大量不同規則運算式的應用程式，您可以使用靜態 `Regex` 方法的呼叫，或增加規則運算式快取的大小，以達到最佳效能。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)

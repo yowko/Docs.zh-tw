@@ -8,14 +8,12 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aaf76d4c3d0f5fb59aeb35fae7a7020ee97b74d6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3c5e803c874e1254510f75189846d7cb12cb1ee2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776485"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132479"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense 函式
 為 Authenticode XrML 授權加上時間戳記。  
@@ -38,7 +36,7 @@ HRESULT CertTimestampAuthenticodeLicense (
  [in] 時間戳記伺服器的 URI。  
   
  `pTimestampSignatureBlob`  
- [out] CRYPT_DATA_BLOB (要接收 Base 64 編碼的時間戳記簽章) 的指標。 呼叫者`pTimestampSignatureBlob`必須負責`HepFree()`在使用之後釋放->。 `pbData` 請參閱[CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob)結構。  
+ [out] CRYPT_DATA_BLOB (要接收 Base 64 編碼的時間戳記簽章) 的指標。 呼叫者必須負責在使用之後，使用 `HepFree()` 釋放 `pTimestampSignatureBlob`->`pbData`。 請參閱[CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob)結構。  
   
 ## <a name="remarks"></a>備註  
  時間戳記簽章實際上是 PKCS #7 SignedData 訊息，其內容是來自授權簽章的 SignatureValue 二進位格式。 基本上是將此當作授權的副署。  
@@ -46,6 +44,6 @@ HRESULT CertTimestampAuthenticodeLicense (
 ## <a name="return-value"></a>傳回值  
  如果函式成功，會傳回 `S_OK`。 否則會傳回錯誤碼。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Authenticode](index.md)

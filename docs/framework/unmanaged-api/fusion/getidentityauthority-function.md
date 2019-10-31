@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 843cd5ab-d2b7-4ff6-86bd-e68c7a91c098
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f29246bdb929c8eaf1ebce726164d5cd2269b9f1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: acb80f3cc199d4d9f774cb3898335d26fe44b807
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796868"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127138"
 ---
 # <a name="getidentityauthority-function"></a>GetIdentityAuthority 函式
 取得[IIdentityAuthority](iidentityauthority-interface.md)實例的指標，它會管理程式碼物件的索引鍵。  
@@ -37,16 +35,16 @@ HRESULT GetIdentityAuthority (
   
 ## <a name="parameters"></a>參數  
  `ppIIdentityAuthority`  
- 脫銷傳回`IIdentityAuthority`的指標。  
+ 脫銷傳回的 `IIdentityAuthority` 指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** 隔離。h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IIdentityAuthority 介面](iidentityauthority-interface.md)
 - [融合全域靜態函式](fusion-global-static-functions.md)

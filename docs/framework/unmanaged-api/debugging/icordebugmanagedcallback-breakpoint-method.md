@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60b279b0-a726-46d2-8c53-76986a007ebb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f49fac3951c130c3cf06b6861beb06b89c27dfb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a4f7d4f422d80d044bcb92065dbefc7f421a069
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759901"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122596"
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a>ICorDebugManagedCallback::Breakpoint 方法
-遇到中斷點時，請告知偵錯工具。  
+遇到中斷點時，通知偵錯工具。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,23 +37,23 @@ HRESULT Breakpoint (
   
 ## <a name="parameters"></a>參數  
  `pAppDomain`  
- [in]表示應用程式定義域，其中包含中斷點的 ICorDebugAppDomain 物件指標。  
+ 在ICorDebugAppDomain 物件的指標，表示包含中斷點的應用程式域。  
   
  `pThread`  
- [in]ICorDebugThread 物件，表示包含中斷點的執行緒指標。  
+ 在ICorDebugThread 物件的指標，表示包含中斷點的執行緒。  
   
  `pBreakpoint`  
- [in]ICorDebugBreakpoint 物件，表示中斷點指標。  
+ 在代表中斷點之 ICorDebugBreakpoint 物件的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 71f0eab5-0170-46f8-9f88-1df5abdeb34a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57ed64ad8a6ae8ef46f423471436c3fce29d6fe5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a3ae474a73f4c8e4b98c4b2bc5d04e55bcae6874
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767815"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128659"
 ---
 # <a name="ihostmemorymanagerneedsvirtualaddressspace-method"></a>IHostMemoryManager::NeedsVirtualAddressSpace 方法
-通知主機 common language runtime (CLR) 會嘗試使用指定的記憶體。  
+通知主機 common language runtime （CLR）即將嘗試使用指定的記憶體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,25 +36,25 @@ HRESULT NeedsVirtualAddressSpace (
   
 ## <a name="parameters"></a>參數  
  `startAddress`  
- [in]記憶體的起始位址。  
+ 在記憶體的起始位址。  
   
  `size`  
- [in]以位元組為單位的記憶體大小。  
+ 在記憶體的大小（以位元組為單位）。  
   
 ## <a name="remarks"></a>備註  
- `NeedsVirtualAddressSpace`方法的回呼方法，必須在裝載應用程式寫入器實作。 CLR 會呼叫它。  
+ `NeedsVirtualAddressSpace` 方法是回呼方法，必須由主控應用程式的寫入器來執行。 CLR 會呼叫它。  
   
- 如果主機不想要使用指定的記憶體 CLR，它可能會傳回 E_OUTOFMEMORY HRESULT。  
+ 如果主機不想讓 CLR 使用指定的記憶體，它可能會傳回 E_OUTOFMEMORY HRESULT。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IHostMemoryManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

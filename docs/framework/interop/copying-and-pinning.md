@@ -7,14 +7,12 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 90ed12862c4cadc45777150deb1b9f91f111bf41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f6db7d37293015911c1285d39e19bf7542a7ac59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750504"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123646"
 ---
 # <a name="copying-and-pinning"></a>複製和 Pin
 
@@ -33,7 +31,7 @@ ms.locfileid: "64750504"
 格式化 [Blittable](blittable-and-non-blittable-types.md) 類別具有固定配置 (格式化) 以及 Managed 和 Unmanaged 記憶體中的常見資料呈現。 這些類型需要封送處理時，會將堆積中物件的指標直接傳遞給被呼叫者。 被呼叫者可以變更指標所參考記憶體位置的內容。
 
 > [!NOTE]
-> 如果參數標記 Out 或 In/Out，則被呼叫者可以變更記憶體內容。相反地，將參數設定為封送處理為 In (這是格式化 Blittable 類型的預設值) 時，被呼叫者應該避免變更內容。 修改 In 物件時會在將相同類別匯出至型別程式庫時產生問題，並且用來進行跨 Apartment 呼叫。
+> 如果參數標示為 Out 或 In/Out，則被呼叫者可以變更記憶體內容。相反地，當參數設定為 [封送處理為] 時，被呼叫端應避免變更內容，這是格式化的可型別類型的預設值。 修改 In 物件時會在將相同類別匯出至型別程式庫時產生問題，並且用來進行跨 Apartment 呼叫。
 
 ## <a name="formatted-non-blittable-classes"></a>格式化非 Blittable 類別
 
@@ -80,7 +78,7 @@ ms.locfileid: "64750504"
 
 以傳值方式傳遞 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 時，封送處理器會直接將 **StringBuilder** 的內部緩衝區參考傳遞給呼叫者。 呼叫者和被呼叫者必須同意緩衝區的大小。 呼叫者負責建立長度足夠的 **StringBuilder**。 被呼叫者必須採取必要的預防措施，確保緩衝區未溢位。 **StringBuilder** 是規則的例外狀況，而此規則預設會將以傳值方式傳遞的參考型別傳遞為 In 參數。 它一律會傳遞為 In/Out。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [預設的封送處理行為](default-marshaling-behavior.md)
 - [方向屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))

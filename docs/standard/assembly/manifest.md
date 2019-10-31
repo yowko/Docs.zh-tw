@@ -8,14 +8,12 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 053726b200b73956099ff9274cc8f63f21d8fc64
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: f1913f8c41ba4a7b54f7abcdfb97400503da8ac5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973170"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107144"
 ---
 # <a name="assembly-manifest"></a>資訊清單
 每個組件 (不論是靜態或是動態) 都含有描述組件中項目彼此如何關聯的資料集合。 組件資訊清單就包含這個組件的中繼資料。 組件資訊清單含有指定組件的版本需求和安全性識別所需的所有中繼資料，以及定義組件範圍和解析資源與類別參考所需的所有中繼資料。 組件資訊清單可以儲存在 PE 檔（ *.exe*或 *.dll*）中，並以 MICROSOFT 中繼語言（MSIL）程式碼或只包含組件資訊清單資訊的獨立 PE 檔案。  
@@ -41,7 +39,7 @@ ms.locfileid: "70973170"
 ## <a name="assembly-manifest-contents"></a>組件資訊清單內容  
  下表所示為組件資訊清單中包含的資訊。 前四個專案：元件名稱、版本號碼、文化特性和強式名稱資訊組成元件的身分識別。  
   
-|內容|說明|  
+|內容|描述|  
 |-----------------|-----------------|  
 |組件名稱|指定組件名稱的文字字串。|  
 |版本號碼|主要和次要版本號碼，以及修訂和組建編號。 Common Language Runtime 會使用這些編號來強制執行版本原則。|  
@@ -53,7 +51,7 @@ ms.locfileid: "70973170"
   
  您可以在程式碼中使用組件屬性在組件資訊清單中加入或變更某些資訊。 您可以變更版本資訊和資訊屬性，包括商標、著作權、產品、公司和資訊版本。 如需元件屬性的完整清單，請參閱[設定元件屬性](set-attributes.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [元件內容](contents.md)
 - [元件版本控制](versioning.md)

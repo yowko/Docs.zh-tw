@@ -13,14 +13,12 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50750b23af9e9cfca79b0f7db9d272e8e24971ab
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: HT
+ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591409"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103823"
 ---
 # <a name="creating-new-strings-in-net"></a>在 .NET 中建立新字串
 .NET Framework 允許使用簡單指派來建立字串，且還可以多載類別建構函式，支援使用多個不同參數來建立字串。 .NET Framework 也在 <xref:System.String?displayProperty=nameWithType> 類別中提供數個方法，藉由合併數個字串、字串陣列或物件來建立新的字串物件。  
@@ -34,7 +32,7 @@ ms.locfileid: "65591409"
 ## <a name="methods-that-return-strings"></a>傳回字串的方法  
  下表列出數個可傳回新字串物件的有用方法。  
   
-|方法名稱|使用|  
+|方法名稱|請使用|  
 |-----------------|---------|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|從一組輸入物件建立格式化的字串。|  
 |<xref:System.String.Concat%2A?displayProperty=nameWithType>|從兩個或多個字串建立字串。|  
@@ -80,7 +78,7 @@ ms.locfileid: "65591409"
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)
-- [複合格式](../../../docs/standard/base-types/composite-formatting.md)
+- [複合格式設定](../../../docs/standard/base-types/composite-formatting.md)

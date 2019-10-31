@@ -1,5 +1,5 @@
 ---
-title: 作法：在資料流程區塊收到資料時執行動作
+title: 如何：在資料流程區塊收到資料時執行動作
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,17 +9,15 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, receiving data
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17167467f52ab9afb8d7500f4f0eb744d8f60a6e
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 89ab2bb18e5fe00a4d1b79d911bb0f7524b83104
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169027"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124206"
 ---
-# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>作法：在資料流程區塊收到資料時執行動作
-「執行資料流程區塊」(Execution Dataflow Block)  類型會在收到資料時呼叫使用者提供的委派。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> 類別都是執行資料流程區塊類型。 當您將工作函式提供給執行資料流程區塊時，可以使用 `delegate` 關鍵字 (在 Visual Basic 中為 `Sub`)、<xref:System.Action%601>、<xref:System.Func%602> 或 Lambda 運算式。 本文件將說明如何使用 <xref:System.Func%602> 和 Lambda 運算式在執行區塊中執行動作。  
+# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>如何：在資料流程區塊收到資料時執行動作
+「執行資料流程區塊」(Execution Dataflow Block) 類型會在收到資料時呼叫使用者提供的委派。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> 類別都是執行資料流程區塊類型。 當您將工作函式提供給執行資料流程區塊時，可以使用 `delegate` 關鍵字 (在 Visual Basic 中為 `Sub`)、<xref:System.Action%601>、<xref:System.Func%602> 或 Lambda 運算式。 本文件將說明如何使用 <xref:System.Func%602> 和 Lambda 運算式在執行區塊中執行動作。  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
@@ -44,6 +42,6 @@ ms.locfileid: "70169027"
  [!code-csharp[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#3)]
  [!code-vb[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#3)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

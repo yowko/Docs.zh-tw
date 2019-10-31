@@ -6,14 +6,12 @@ helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b1cda82125a2d4a6eb3102b01bea639a4f3e3df
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 7401d7fed89d18aa0b05e1c95871e4a025705627
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636093"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126308"
 ---
 # <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>.NET Framework 4.8、4.7、4.6 和 4.5 移轉手冊
 
@@ -33,13 +31,13 @@ ms.locfileid: "65636093"
 
 - 如需想要新增至應用程式之新功能的描述，請參閱[新功能](../whats-new/index.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [應用程式相容性](application-compatibility.md)
 - [從 .NET Framework 1.1 移轉](migrating-from-the-net-framework-1-1.md)
 - [版本相容性](version-compatibility.md)
 - [版本和相依性](versions-and-dependencies.md)
-- [如何：設定應用程式以支援 .NET Framework 4 或更新版本](how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [如何：將應用程式設定為支援 .NET Framework 4 或更新版本](how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 - [新功能](../whats-new/index.md)
 - [類別庫中已淘汰的功能](../whats-new/whats-obsolete.md)
 - [.NET Framework 版本和組件資訊](https://go.microsoft.com/fwlink/?LinkId=201701)

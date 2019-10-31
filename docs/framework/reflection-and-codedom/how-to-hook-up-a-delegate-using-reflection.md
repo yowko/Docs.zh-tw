@@ -1,5 +1,5 @@
 ---
-title: 作法：使用反映連結委派
+title: 如何：使用反映連結委派
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - reflection, adding event-handler delegates
 - delegates [.NET Framework], adding event handlers with reflection
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 937dca59be8b83526ebf6cd4c369532b1a8b9afe
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 14a9694708b36b23ecef453d530ad3b939a046ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045985"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130122"
 ---
-# <a name="how-to-hook-up-a-delegate-using-reflection"></a>作法：使用反映連結委派
+# <a name="how-to-hook-up-a-delegate-using-reflection"></a>如何：使用反映連結委派
 當您使用反映來載入和執行組件時，無法使用 C# `+=` 運算子或 Visual Basic [AddHandler 陳述式](../../visual-basic/language-reference/statements/addhandler-statement.md)這類語言功能來連結事件。 下列程序示範如何透過反映取得所有必要類型以將現有方法連結至事件，以及如何使用反映發出建立動態方法並將它連結至事件。  
   
 > [!NOTE]
@@ -105,7 +103,7 @@ ms.locfileid: "71045985"
  [!code-csharp[HookUpDelegate#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#1)]
  [!code-vb[HookUpDelegate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#1)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Emit.DynamicMethod>

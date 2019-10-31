@@ -8,25 +8,23 @@ dev_langs:
 helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 29383d0b7f125111071ac131d8a822dba811032e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 8f15ee4f136e3e2df1a4e1c7683467f2a4bc9bc0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603309"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123190"
 ---
 # <a name="attached-and-detached-child-tasks"></a>附加與中斷連結的子工作
 「子工作」(或「巢狀工作」) 是 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 執行個體，它是在另一項工作 (稱為「父工作」) 的使用者委派中建立。 子工作可以中斷連結或附加。 「中斷連結的子工作」(detached child task) 是獨立於其父代而執行的工作。 「附加的子工作」(attached child task) 是巢狀工作，而且是使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項所建立，其父代並不明確或預設禁止它附加。 工作可能會建立任意數目的附加和中斷連結的子工作，只受限於系統資源。  
   
  下表列出這兩種子工作之間的基本差異。  
   
-|分類|中斷連結的子工作|附加的子工作|  
+|Category|中斷連結的子工作|附加的子工作|  
 |--------------|--------------------------|--------------------------|  
-|等候子工作完成的父系。|否|是|  
-|父系會傳播子工作擲回的例外狀況。|否|是|  
-|父系的狀態取決於子系的狀態。|否|是|  
+|等候子工作完成的父系。|否|[是]|  
+|父系會傳播子工作擲回的例外狀況。|否|[是]|  
+|父系的狀態取決於子系的狀態。|否|[是]|  
   
  在大部分情況下，我們建議您使用中斷連結的子工作，因為它們與其他工作的關聯性較不複雜。 這也就是為什麼在父工作中建立的工作會依預設中斷連結，且您必須明確指定 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項才能建立附加的子工作。  
   
@@ -78,7 +76,7 @@ ms.locfileid: "54603309"
   
  當子工作未及時完成時，您也可能想要防止子工作附加到其父系。 由於父工作會在所有子工作完成後才完成，因此長時間執行的子工作可能造成整個應用程式效能不佳。 如需示範如何藉由防止工作附加至其父工作以改善應用程式效能的範例，請參閱[如何：防止子工作附加到其父系](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平行程式設計](../../../docs/standard/parallel-programming/index.md)
 - [資料平行處理原則](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

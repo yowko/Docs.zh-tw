@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd042f89-10b1-40ca-946e-46da082f5263
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0086906b23cc65825bbd54a54e544fa9ec7b211e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3d3fd88a2c1ac90f823b23d8d2bcb5b177a625c3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796262"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109003"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult 列舉
 表示由[CompareAssemblyIdentity](compareassemblyidentity-function.md)函式決定的兩個元件識別是否相等。  
@@ -45,9 +43,9 @@ typedef enum _tagAssemblyComparisonResult {
 } AssemblyComparisonResult;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
-|成員名稱|說明|  
+|成員名稱|描述|  
 |-----------------|-----------------|  
 |`ACR_EquivalentFullMatch`|表示比較中的所有元件欄位都相符。|  
 |`ACR_EquivalentFXUnified`|指出元件會根據 .NET Framework 版本2.0 中元件版本號碼的通用語言執行時間版本（CLR）統一而視為對等。|  
@@ -67,11 +65,11 @@ typedef enum _tagAssemblyComparisonResult {
   
  **標頭：** 融合。h  
   
- **LIBRARY:** 包含為 Mscoree.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [CompareAssemblyIdentity 函式](compareassemblyidentity-function.md)
 - [融合列舉](fusion-enumerations.md)

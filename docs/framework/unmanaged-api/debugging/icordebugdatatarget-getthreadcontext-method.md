@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8954268-1821-4b23-b665-dbb55f2af31b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2047929c52dbb7b0d780a4ea0f180bae48a3ce79
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 278320391615eddaa8ba878ef87f802f30cddb95
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750391"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122030"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext 方法
-傳回針對指定的執行緒目前的執行緒內容。  
+傳回指定之執行緒的目前線程內容。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,30 +37,30 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>參數  
  `dwThreadID`  
- [in]要擷取之內容的執行緒識別碼。 識別碼是由作業系統定義的。  
+ 在要抓取其內容之執行緒的識別碼。 識別碼是由作業系統所定義。  
   
  `contextFlags`  
- [in]表示應讀取內容的哪些部分的平台相依旗標的位元組合。  
+ 在平臺相依旗標的位元組合，表示應該讀取內容的哪個部分。  
   
  `contextSize`  
  [in] `pContext` 的大小。  
   
  `pContext`  
- [out]將儲存執行緒內容緩衝區。  
+ 脫銷將儲存執行緒內容的緩衝區。  
   
 ## <a name="remarks"></a>備註  
- 在 Windows 平台，`pContext`必須是`CONTEXT`（在 WinNT.h 中定義） 的結構，這是適用於所指定的機器類型[icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法。 `contextFlags` 必須有相同的值，如同`ContextFlags`欄位`CONTEXT`結構。 `CONTEXT`結構是處理器特定; 請參閱 WinNT.h 檔案，如需詳細資訊。  
+ 在 Windows 平臺上，`pContext` 必須是 `CONTEXT` 結構（定義于 WinNT. h 中），適用于[ICorDebugDataTarget：： GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法所指定的電腦類型。 `contextFlags` 必須具有與 `CONTEXT` 結構的 `ContextFlags` 欄位相同的值。 `CONTEXT` 結構是處理器特定的;如需詳細資訊，請參閱 WinNT. h 檔案。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

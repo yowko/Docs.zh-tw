@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 235b93f4176858372a83331730ddea8b97179cc8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f28a4b4acd9d6050d33b9824aa49a9b9041b59b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738366"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111240"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata 方法
-由通用語言執行平台 (CLR) 資料存取服務擷取的映像的中繼資料的呼叫。  
+由 common language runtime （CLR）資料存取服務呼叫，以取得影像的中繼資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,31 +44,31 @@ HRESULT GetMetadata(
   
 ## <a name="parameters"></a>參數  
  `imagePath`  
- [in]字串，指定影像檔的路徑。  
+ 在指定影像檔案路徑的字串。  
   
  `imageTimestamp`  
- [in]影像檔的時間戳記。  
+ 在影像檔案的時間戳記。  
   
  `imageSize`  
- [in]影像檔的大小。  
+ 在影像檔案的大小。  
   
  `mvid`  
- [in]映像的全域唯一識別碼。  
+ 在影像的全域唯一識別碼。  
   
  `mdRva`  
- [in]相對虛擬位址 (RVA) 的中繼資料。 此位址是相對於映像的基底位址。  
+ 在中繼資料的相對虛擬位址（RVA）。 位址是相對於映射基底位址。  
   
  `flags`  
- [in]保留供日後使用。  
+ 在保留供日後使用。  
   
  `bufferSize`  
- [in]在其中放置中繼資料的緩衝區大小。  
+ 在要在其中放置中繼資料的緩衝區大小。  
   
  `buffer`  
- [out]中要放置的中繼資料的緩衝區。  
+ 脫銷要在其中放置中繼資料的緩衝區。  
   
  `dataSize`  
- [out]傳回中繼資料的大小。  
+ 脫銷傳回的中繼資料大小。  
   
 ## <a name="remarks"></a>備註  
  此方法是由偵錯應用程式的作者來實作。  
@@ -78,12 +76,12 @@ HRESULT GetMetadata(
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** ClrData.idl, ClrData.h  
+ **標頭：** ClrData .idl，ClrData。h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRMetadataLocator 介面](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)

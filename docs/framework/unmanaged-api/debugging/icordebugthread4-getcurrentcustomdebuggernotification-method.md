@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 57e0f2d2-5f0e-4e2d-99ec-3f26632eb693
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f626ff6e562bd9bc94440f31e9470a45cc32cfbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba4375511fe7f5aaee032c4e132de54808041111
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902768"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122438"
 ---
 # <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a>ICorDebugThread4::GetCurrentCustomDebuggerNotification 方法
 
-取得目前[ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)目前執行緒上的物件。
+取得目前線程上的目前[ICorDebugManagedCallback3：： CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)物件。
 
 ## <a name="syntax"></a>語法
 
@@ -39,11 +37,11 @@ HRESULT GetCurrentCustomDebuggerNotification(
 ## <a name="parameters"></a>參數
 
 `ppNotificationObject`\
-[out]目前的指標`ICorDebugManagedCallback3::CustomNotification`目前執行緒上的物件。
+脫銷目前線程上目前 `ICorDebugManagedCallback3::CustomNotification` 物件的指標。
 
 ## <a name="remarks"></a>備註
 
-值`ppNotificationObject`為 null 如果方法不會呼叫從`ICorDebugManagedCallback3::CustomNotification`回呼，或如果沒有目前的通知物件存在。
+如果未從 `ICorDebugManagedCallback3::CustomNotification` 回呼中呼叫方法，或如果沒有目前的通知物件存在，則 `ppNotificationObject` 的值為 null。
 
 ## <a name="requirements"></a>需求
 
@@ -51,11 +49,11 @@ HRESULT GetCurrentCustomDebuggerNotification(
 
 **標頭：** CorDebug.idl、CorDebug.h
 
-**LIBRARY:** CorGuids.lib
+**程式庫：** CorGuids.lib
 
-**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
+**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugThread4 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -1,20 +1,18 @@
 ---
-title: 作法：建立 COM 包裝函式
+title: 如何：建立 COM 包裝函式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
 - COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 56a88a5719fc5630baf2f31ee62fd463980661c2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 623df8aa86d25d9a57d3039bee01b0ee39d402a8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051798"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123945"
 ---
-# <a name="how-to-create-com-wrappers"></a>作法：建立 COM 包裝函式
+# <a name="how-to-create-com-wrappers"></a>如何：建立 COM 包裝函式
 
 您可以使用 Visual Studio 2005 功能或 .NET Framework 工具 Tlbimp.exe 和 Regasm.exe 來建立元件物件模型 (COM) 包裝函式。 這兩種方法會產生兩種類型的 COM 包裝函式：
 
@@ -73,7 +71,7 @@ ms.locfileid: "71051798"
   
 您可以對位於任何目錄中的組件執行 Regasm.exe，然後執行 [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md) 將它移到全域組件快取中。 移動組件並不會使位置登錄項目無效，因為只要在其他位置找不到組件，就一律會對全域組件快取進行檢查。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段可呼叫包裝函式](../../standard/native-interop/runtime-callable-wrapper.md)
 - [COM 可呼叫包裝函式](../../standard/native-interop/com-callable-wrapper.md)

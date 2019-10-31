@@ -11,14 +11,12 @@ helpviewer_keywords:
 - profiling applications
 - Performance Console
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 163022256dfbeb303a500d9c1d574054c5b550d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: daa2ae4fbbed78bda4648b4b3077fa7d96a9b3f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052291"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121555"
 ---
 # <a name="runtime-profiling"></a>執行階段分析
 分析是在任何開發或部署案例中蒐集效能資料的一種方法。 本節適用對象為想要蒐集應用程式效能資訊的開發人員和系統管理員。  
@@ -46,7 +44,7 @@ ms.locfileid: "71052291"
   
      在 [所選取物件的例項] 清單方塊中，按一下要監視該應用程式之效能計數器的應用程式名稱。  
   
-     若要區別多個執行階段版本，或釐清多個同名的應用程式，您也必須修改登錄機碼。 如需詳細資訊，請參閱 [效能計數器與同處理序並存應用程式](performance-counters-and-in-process-side-by-side-applications.md)。  
+     若要區別多個執行階段版本，或釐清多個同名的應用程式，您也必須修改登錄機碼。 如需詳細資訊，請參閱 [Performance Counters and In-Process Side-By-Side Applications](performance-counters-and-in-process-side-by-side-applications.md)。  
   
 > [!NOTE]
 > 如果在執行 [效能] 主控台時安裝新的效能計數器，請停止並重新啟動 [效能] 主控台，以顯示新的計數器。  
@@ -59,13 +57,13 @@ ms.locfileid: "71052291"
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>以程式設計方式讀取及建立效能計數器  
  .NET Framework 提供類別，您可以用來以程式設計方式存取效能主控台中可用的相同效能資訊。 您也可以使用這些類別，建立自訂效能計數器。 下表描述 .NET Framework 中提供的一些效能監視類別。  
   
-|類別|描述|  
+|執行個體|描述|  
 |-----------|-----------------|  
 |<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|代表 Windows NT 效能計數器元件。 使用這個類別可讀取現有的預先定義或自訂計數器，並將效能資料發佈 (寫入) 至自訂計數器。|  
 |<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|提供與電腦上的計數器和計數器類別互動的幾種方法。|  
 |<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|指定 `PerformanceCounter` 元件的安裝程式。|  
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|指定用以計算 `NextValue` 之 `PerformanceCounter`方法的公式。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [效能計數器](performance-counters.md)

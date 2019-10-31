@@ -5,19 +5,17 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f99b2fd4716b069d4ec7a21e369c5178990ce16d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cb0aca3b527c16a7abf984952795a673948775dd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044199"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104635"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (簽署工具)
 簽署工具是一項命令列工具，會以數位方式簽署檔案、驗證檔案中的簽章以及為檔案加上時間戳記。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
@@ -129,7 +127,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` (`SHA1`&#124;`SHA256`)|指定在目錄中搜尋檔案時，要使用的選擇性雜湊演算法。|  
 |`/kp`|指定應以核心模式驅動程式簽署原則執行驗證。|  
 |`/ms`|使用多個驗證語意。 在 [!INCLUDE[win8](../../../includes/win8-md.md)] 及以上版本上，這是 [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) 呼叫的預設行為。|  
-|`/o` *Version*|根據作業系統版本驗證檔案。 *Version* 的形式如下：*PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*。 *PlatformID* 代表 <xref:System.PlatformID> 列舉成員的基礎值。 **重要：** 建議使用 `/o` 參數。 如果未指定 `/o`，SignTool.exe 可能會傳回未預期的結果。 例如，如果您未包含 `/o` 參數，在舊版作業系統上正確驗證的系統目錄，可能無法在較新版作業系統正確驗證。|  
+|`/o` *Version*|根據作業系統版本驗證檔案。 *Version* 的格式如下：*PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*。 *PlatformID* 代表 <xref:System.PlatformID> 列舉成員的基礎值。 **重要事項：** 建議使用 `/o` 參數。 如果未指定 `/o`，SignTool.exe 可能會傳回未預期的結果。 例如，如果您未包含 `/o` 參數，在舊版作業系統上正確驗證的系統目錄，可能無法在較新版作業系統正確驗證。|  
 |`/p7`|驗證 PKCS #7 檔案。 PKCS #7 驗證沒有使用任何現有的原則。 檢查簽章，並建置簽署憑證鏈結。|  
 |`/pa`|指定使用預設 Authenticode 驗證原則。 如果未指定 `/pa` 選項，簽署工具便會使用「Windows 驅動程式驗證原則」(Windows Driver Verification Policy)。 這個選項無法與 `catdb` 選項搭配使用。|  
 |`/pg` *PolicyGUID*|依 GUID 指定驗證原則。 *PolicyGUID* 會對應至驗證原則的 ActionID。 這個選項無法與 `catdb` 選項搭配使用。|  
@@ -209,7 +207,7 @@ signtool verify /a SystemFile.dll
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [工具](index.md)
 - [命令提示字元](developer-command-prompt-for-vs.md)

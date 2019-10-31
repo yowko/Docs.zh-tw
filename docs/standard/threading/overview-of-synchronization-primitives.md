@@ -8,14 +8,12 @@ helpviewer_keywords:
 - threading [.NET],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31d5df6521b7c420943a7d3d0efcf6e4bee2d3a2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 43f78c914b7cb01f9b0de4c258d5882548e52790
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666283"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106585"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步處理原始物件概觀
 
@@ -142,7 +140,7 @@ ms.locfileid: "69666283"
 
 如需詳細資訊，請參閱 [SpinWait](spinwait.md) 文章與 <xref:System.Threading.SpinWait> API 參考。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [安全執行緒集合](../collections/thread-safe/index.md)

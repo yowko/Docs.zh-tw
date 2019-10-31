@@ -1,17 +1,15 @@
 ---
-title: 風險降低：產品版本控制
+title: 風險降低：產品版本
 ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 91db9d8c6fccf75bc9025a9487517e8c55d016cc
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 63075136b7de4aeaa4f94c092996ae1829b449a7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779205"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126161"
 ---
-# <a name="mitigation-product-versioning"></a>風險降低：產品版本控制
+# <a name="mitigation-product-versioning"></a>風險降低：產品版本
 
 在 .NET Framework 4.6 和更新版本中，舊版 .NET Framework (.NET Framework 4、4.5、4.5.1 和 4.5.2) 的產品版本均有所變更。
 
@@ -42,6 +40,6 @@ ms.locfileid: "70779205"
 
 - 若要取得 CLR 版本，請呼叫 <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType> 方法。   針對 .NET Framework 4 及其點發行版本 (.NET Framework 4.5、4.5.1、4.5.2 以及 .NET Framework 4.6、4.6.1、4.6.2 和 4.7)，該方法會傳回字串 `v4.0.30319`。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段變更](runtime-changes-in-the-net-framework-4-6.md)

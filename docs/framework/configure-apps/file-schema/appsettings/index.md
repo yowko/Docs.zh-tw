@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d02f9f952c0ca7651d27571111a2d29f3d1130fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b931b76aa09b3f62fbd799990975268af4f7293
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921294"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119211"
 ---
 # <a name="app-settings-schema"></a>應用程式設定結構描述
 
@@ -70,7 +70,7 @@ ms.locfileid: "69921294"
 </configuration>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [應用程式設定概觀](../../../winforms/advanced/application-settings-overview.md)
 - [應用程式設定架構](../../../winforms/advanced/application-settings-architecture.md)

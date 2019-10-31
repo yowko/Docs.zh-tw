@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CompareTo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ec42dff333422e247a11b4a3a5b9aed9bd316fa
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0d210795016cd2e0179b902a224ca0c62f4ac01f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798782"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128704"
 ---
 # <a name="compareto-function"></a>CompareTo 函式
 
@@ -52,7 +50,7 @@ HRESULT CompareTo (
 在旗標的位元組合，指定要考慮比較的物件特性。 如需詳細資訊，請參閱[備註](#remarks)一節。
 
 `pCompareTo`\
-在要比較的物件。 `pCompareTo`必須是有效的[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)實例;不能是`null`。
+在要比較的物件。 `pCompareTo` 必須是有效的[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)實例;無法 `null`。
 
 ## <a name="return-value"></a>傳回值
 
@@ -62,7 +60,7 @@ HRESULT CompareTo (
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 發生未指定的錯誤。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數無效。 |
-| `WBEM_E_UNEXPECTED` | 0x8004101d | 第二次呼叫`BeginEnumeration`時，不需要介入的[`EndEnumeration`](endenumeration.md)呼叫。 |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | 對 `BeginEnumeration` 進行第二次呼叫，而不需要呼叫[`EndEnumeration`](endenumeration.md)。 |
 | `WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
 | `WBEM_S_DIFFERENT` | 0x40003 | 物件不同。 |
 | `WBEM_S_SAME` | 0 | 根據比較旗標，物件是相同的。 |
@@ -71,9 +69,9 @@ HRESULT CompareTo (
 
 此函式會包裝對[IWbemClassObject：： CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto)方法的呼叫。
 
-可當做`lEnumFlags`引數傳遞的旗標會定義在*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數。 您可以藉由指定下列旗標的位元組合，指定涉及比較的個別特性：
+可以當做 `lEnumFlags` 引數傳遞的旗標會定義在*WbemCli*標頭檔中，或者您可以在程式碼中將它們定義為常數。 您可以藉由指定下列旗標的位元組合，指定涉及比較的個別特性：
 
-|常數  |值  |說明  |
+|常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | 忽略來源（伺服器及其來源的命名空間）。 |
 | `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | 忽略所有限定詞（包括**金鑰**和**動態**） |
@@ -92,10 +90,10 @@ HRESULT CompareTo (
 
 **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
-**標頭：** WMINet_Utils.idl
+**標頭：** WMINet_Utils .idl
 
 **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WMI 和效能計數器（非受控 API 參考）](index.md)

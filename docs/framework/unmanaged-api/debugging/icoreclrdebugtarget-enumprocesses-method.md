@@ -17,14 +17,12 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 301e6cc153f905bc5c15e1b526e6fb1a492a76d6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4d1404e3f7565ee26edd94e059b7f01f8edd4dd6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774447"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121852"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses 方法
 列舉在遠端電腦上執行的處理序。  
@@ -43,7 +41,7 @@ HRESULT EnumProcesses (
  [out] `ppProcs` 中傳回的處理序數目。 這個值可以是 0 (零)。  
   
  `ppProcs`  
- [out]陣列[CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)代表在遠端電腦上執行的處理程序的結構。  
+ 脫銷[CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)結構的陣列，代表在遠端電腦上執行的處理常式。  
   
 ## <a name="return-value"></a>傳回值  
  S_OK  
@@ -56,17 +54,17 @@ HRESULT EnumProcesses (
  其他失敗。  
   
 ## <a name="remarks"></a>備註  
- 若要釋放這個方法所配置的記憶體，請呼叫[icoreclrdebugtarget:: Freememory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)方法。  
+ 若要釋放這個方法所配置的記憶體，請呼叫[ICoreClrDebugTarget：： FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CoreClrRemoteDebuggingInterfaces.h  
+ **標頭：** CoreClrRemoteDebuggingInterfaces。h  
   
- **程式庫：** mscordbi_macx86.dll  
+ 連結**庫：** mscordbi_macx86  
   
- **.NET framework 版本：** 3.5 SP1  
+ **.NET Framework 版本：** 3.5 SP1  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICoreClrDebugTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

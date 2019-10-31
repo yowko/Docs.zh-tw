@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 648ea90e-5e60-40a0-a56a-3e61bf2fba7c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9fbac8263944ff0d009fcc7c5f6aecdc7faed089
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 71fda266c22c4beb1e1f9c81c84d6c56a0a6110e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759183"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092578"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassemblyex-method"></a>ICLRStrongName::StrongNameTokenFromAssemblyEx 方法
-從指定的組件檔案中，建立強式名稱語彙基元，並傳回語彙基元所代表的公開金鑰。  
+從指定的元件檔案建立強式名稱 token，並傳回權杖所代表的公開金鑰。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,38 +39,38 @@ HRESULT StrongNameTokenFromAssemblyEx (
   
 ## <a name="parameters"></a>參數  
  `wszFilePath`  
- [in]組件的可攜式執行檔 (PE) 檔案的路徑。  
+ 在元件的可移植執行檔（PE）路徑。  
   
  `ppbStrongNameToken`  
- [out]傳回的強式名稱語彙基元。  
+ 脫銷傳回的強式名稱 token。  
   
  `pcbStrongNameToken`  
- [out]大小，以位元組為單位的強式名稱語彙基元。  
+ 脫銷強式名稱 token 的大小（以位元組為單位）。  
   
  `ppbPublicKeyBlob`  
- [out]傳回的公開金鑰。  
+ 脫銷傳回的公開金鑰。  
   
  `pcbPublicKeyBlob`  
- [out]以位元組為單位的公開金鑰大小。  
+ 脫銷公用金鑰的大小（以位元組為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
+ 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
   
 ## <a name="remarks"></a>備註  
- 強式名稱語彙基元是公開金鑰的縮短格式。 64 位元雜湊建立用來簽署組件的公開金鑰權杖。 此權杖是組件的強式名稱的一部分，而且可以讀取組件中繼資料。  
+ 強式名稱 token 是公用金鑰的縮寫格式。 Token 是從用來簽署元件的公開金鑰所建立的64位雜湊。 Token 是元件強式名稱的一部分，而且可以從元件中繼資料讀取。  
   
- 擷取索引鍵，並建立權杖之後，您應該呼叫[iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法來釋放配置的記憶體。  
+ 在取得金鑰並建立權杖之後，您應該呼叫[ICLRStrongName：： StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法來釋放已配置的記憶體。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MetaHost.h  
+ **標頭：** MetaHost。h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [StrongNameTokenFromAssembly 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)
 - [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3fdf523-274a-449c-920b-9fcb0aed1d97
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8ec40de7fe9e12315987e65e48f1727f5d5b80ef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6c74a6c371ababb21bfda9b8dd2910d6a7881e6a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960721"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125533"
 ---
 # <a name="icordebugcode4-interface"></a>ICorDebugCode4 介面
-提供一種方法, 可讓偵錯工具列舉函式中的區域變數和引數。  
+提供一種方法，可讓偵錯工具列舉函式中的區域變數和引數。  
   
 ## <a name="methods"></a>方法  
   
@@ -42,11 +40,11 @@ ms.locfileid: "69960721"
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugCode3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 7f470c5c-e1c0-4d8d-aad8-830f113ae751
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65225281fe3abaa20e69e96f4cd4d2a4b03a87ce
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4ac26ef4449dc02230f26b1247616b4587d217b7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629947"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085163"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction 方法
 
-設定指定的函式的呼叫。
+設定對指定函數的呼叫。
 
-這個方法是在.NET Framework 2.0 版中已過時。 使用[ICorDebugEval2::CallParameterizedFunction](icordebugeval2-callparameterizedfunction-method.md)改。
+這個方法在 .NET Framework 版本2.0 中已過時。 請改用[ICorDebugEval2：： CallParameterizedFunction](icordebugeval2-callparameterizedfunction-method.md) 。
 
 ## <a name="syntax"></a>語法
 
@@ -43,17 +41,17 @@ HRESULT CallFunction (
 ## <a name="parameters"></a>參數
 
 `pFunction`\
-[in]ICorDebugFunction 物件，指定要呼叫的函式的指標。
+在ICorDebugFunction 物件的指標，指定要呼叫的函式。
 
 `nArgs`\
-[in]函式的引數數目。
+在函數的引數數目。
 
 `ppArgs`\
-[in]指標的陣列，其中每一個指向 ICorDebugValue 物件，指定要傳遞至函式的引數。
+在指標的陣列，其中每一個都會指向 ICorDebugValue 物件，以指定要傳遞給函數的引數。
 
 ## <a name="remarks"></a>備註
 
-如果函式是虛擬的`CallFunction`會執行虛擬分派。 如果函式不同的應用程式定義域中，則會發生轉換，只要所有引數也是應用程式定義域中。
+如果函式是虛擬的，`CallFunction` 將會執行虛擬分派。 如果函式在不同的應用程式域中，只要所有引數也在該應用程式域中，就會發生轉換。
 
 ## <a name="requirements"></a>需求
 
@@ -61,10 +59,10 @@ HRESULT CallFunction (
 
 **標頭：** CorDebug.idl、CorDebug.h
 
-**LIBRARY:** CorGuids.lib
+**程式庫：** CorGuids.lib
 
-**.NET framework 版本：** 1.1, 1.0
+**.NET Framework 版本：** 1.1、1。0
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [CallParameterizedFunction 方法](icordebugeval2-callparameterizedfunction-method.md)

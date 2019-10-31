@@ -14,14 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c8a4c1c9450d624b6c4903f9f7978e931e74551c
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
-ms.translationtype: HT
+ms.openlocfilehash: b67b00fdb4a5c484c112cc2f3321ce2268d4dad7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133830"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121713"
 ---
 # <a name="standard-date-and-time-format-strings"></a>標準日期和時間格式字串
 
@@ -40,7 +38,7 @@ ms.locfileid: "70133830"
 
 <a name="table"></a>下表描述標準日期和時間的格式規範。 除非特別註明，否則特定標準日期和時間格式規範會產生相同的字串表示，無論是與 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值搭配使用。 如需使用標準日期和時間格式字串的詳細資訊，請參閱[備註](#Notes)一節。
 
-|格式規範|說明|範例|
+|格式規範|描述|範例|
 |----------------------|-----------------|--------------|
 |"d"|簡短日期模式。<br /><br /> 詳細資訊：[簡短日期 ("d") 格式規範](#ShortDate)。|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)|
 |"D"|完整日期模式。<br /><br /> 詳細資訊：[完整日期 ("D") 格式規範](#LongDate)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> Montag, 15 Juni 2009 (de-DE)|
@@ -54,7 +52,7 @@ ms.locfileid: "70133830"
 |"s"|可排序日期/時間模式。<br /><br /> 詳細資訊：[可排序 ("s") 格式規範](#Sortable)。|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|
 |"t"|簡短時間模式。<br /><br /> 詳細資訊：[簡短時間 ("t") 格式規範](#ShortTime)。|2009-06-15T13:45:30 -> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-EG)|
 |"T"|完整時間模式。<br /><br /> 詳細資訊：[完整時間 ("T") 格式規範](#LongTime)。|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|
-|"u"|國際可排序日期/時間模式。<br /><br /> 詳細資訊：[國際可排序 ("u") 格式規範](#UniversalSortable)。|具有 <xref:System.DateTime> 值：2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> 具有 <xref:System.DateTimeOffset> 值：2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|
+|"u"|國際可排序日期/時間模式。<br /><br /> 詳細資訊：[國際可排序 ("u") 格式規範](#UniversalSortable)。|使用 <xref:System.DateTime> 值：2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> 使用 <xref:System.DateTimeOffset> 值：2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|
 |"U"|國際完整日期/時間模式。<br /><br /> 詳細資訊：[國際完整 ("U") 格式規範](#UniversalFull)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|
 |"Y", "y"|年月模式。<br /><br /> 詳細資訊：[年月 ("Y") 格式規範](#YearMonth)。|2009-06-15T13:45:30 -> June, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|
 |任何其他單一字元|未知的規範。|擲回執行階段 <xref:System.FormatException>。|
@@ -107,7 +105,7 @@ ms.locfileid: "70133830"
 
 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。
 
-|屬性|說明|
+|屬性|描述|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|定義結果字串的整體格式。|
 |<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|定義分隔日期之年份、月份和日期元件的字串。|
@@ -127,7 +125,7 @@ ms.locfileid: "70133830"
 
 下表列出 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性，這些屬性控制傳回之字串的格式設定。
 
-|屬性|說明|
+|屬性|描述|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|定義結果字串的整體格式。|
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|定義可顯示在結果字串中的當地語系化日期名稱。|
@@ -148,7 +146,7 @@ ms.locfileid: "70133830"
 
 結果字串會受到特定 <xref:System.Globalization.DateTimeFormatInfo> 物件的格式設定資訊所影響。 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。
 
-|屬性|說明|
+|屬性|描述|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|定義結果字串之日期元件的格式。|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|定義結果字串之時間元件的格式。|
@@ -173,7 +171,7 @@ ms.locfileid: "70133830"
 
 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。
 
-|屬性|說明|
+|屬性|描述|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|定義結果字串的整體格式。|
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|定義可顯示在結果字串中的當地語系化日期名稱。|
@@ -197,7 +195,7 @@ ms.locfileid: "70133830"
 
 結果字串會受到特定 <xref:System.Globalization.DateTimeFormatInfo> 物件的格式設定資訊所影響。 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。
 
-|屬性|說明|
+|屬性|描述|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|定義結果字串之日期元件的格式。|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|定義結果字串之時間元件的格式。|
@@ -221,7 +219,7 @@ ms.locfileid: "70133830"
 
 結果字串會受到特定 <xref:System.Globalization.DateTimeFormatInfo> 物件的格式設定資訊所影響。 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。
 
-|屬性|說明|
+|屬性|描述|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|定義結果字串之日期元件的格式。|
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|定義結果字串之時間元件的格式。|
@@ -245,7 +243,7 @@ ms.locfileid: "70133830"
 
 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。
 
-|屬性|說明|
+|屬性|描述|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|定義結果字串的整體格式。|
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|定義可顯示在結果字串中的當地語系化月份名稱。|
@@ -277,7 +275,7 @@ ms.locfileid: "70133830"
 
 傳遞至 `Parse` 和 `TryParse` 的 `ParseExact`、`TryParseExact`、<xref:System.DateTime> 和 <xref:System.DateTimeOffset> 方法的字串如果是這些格式，就可以使用 "O" 或 "o" 格式規範來剖析。 在 <xref:System.DateTime> 物件的案例中，您呼叫的剖析多載應該也要包含 `styles` 參數，且值為 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>。 請注意，如果您呼叫剖析方法時，使用對應於 "O" 或 "o" 格式規範的自訂格式字串，將不會取得與 "O" 或 "o" 相同的結果。 這是因為使用自訂格式字串的剖析方法，無法剖析缺少時區元件或使用 "Z" 來指示 UTC 之日期和時間值的字串表示法。
 
-下列範例使用 "o" 格式規範，在美國太平洋時區系統上顯示一連串的 <xref:System.DateTime> 值以及 <xref:System.DateTimeOffset> 值太平洋時間
+下列範例會使用 "o" 格式規範，在美國太平洋時區的系統上顯示一系列的 <xref:System.DateTime> 值和 <xref:System.DateTimeOffset> 值。
 
 [!code-csharp[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
 [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]
@@ -297,7 +295,7 @@ ms.locfileid: "70133830"
 
 在表示不因文化特性而異之 <xref:System.Globalization.DateTimeFormatInfo> 屬性所傳回的 <xref:System.Globalization.DateTimeFormatInfo.InvariantInfo%2A?displayProperty=nameWithType> 物件中，有下列屬性會影響結果字串。
 
-|屬性|說明|
+|屬性|描述|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|定義結果字串的格式。|
 |<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A>|定義可顯示在結果字串中的縮寫日期名稱。|
@@ -305,7 +303,7 @@ ms.locfileid: "70133830"
 
 雖然 RFC 1123 標準以國際標準時間 (UTC) 來表示時間，但對於要進行格式化的 <xref:System.DateTime> 物件，格式化作業並不會修改這些物件的值。 因此，您必須先呼叫 <xref:System.DateTime> 方法將 <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> 值轉換成 UTC，才能執行格式化作業。 相反地，<xref:System.DateTimeOffset> 值會自動執行這項轉換，因此在格式化作業之前，不需要呼叫 <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=nameWithType> 方法。
 
-下列範例會使用 "r" 格式規範，在美國太平洋時區系統上顯示 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值。太平洋時間
+下列範例會使用 "r" 格式規範，在美國太平洋時區系統上顯示 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值。
 
 [!code-csharp-interactive[Formatting.DateAndTime.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#9)]
 [!code-vb[Formatting.DateAndTime.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#9)]
@@ -322,7 +320,7 @@ ms.locfileid: "70133830"
 
 使用這個標準格式規範時，格式或剖析作業一律使用不因文化特性而異。
 
-下列範例會使用 "r" 格式規範，在美國太平洋時區系統上顯示 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值。太平洋時間
+下列範例會使用 "s" 格式規範，在美國太平洋時區系統上顯示 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值。
 
 [!code-csharp-interactive[Formatting.DateAndTime.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#10)]
 [!code-vb[Formatting.DateAndTime.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#10)]
@@ -337,7 +335,7 @@ ms.locfileid: "70133830"
 
 結果字串會受到特定 <xref:System.Globalization.DateTimeFormatInfo> 物件的格式設定資訊所影響。 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。
 
-|屬性|說明|
+|屬性|描述|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|定義結果字串之時間元件的格式。|
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|定義分隔時間之小時、分鐘和秒鐘元件的字串。|
@@ -359,7 +357,7 @@ ms.locfileid: "70133830"
 
 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。
 
-|屬性|說明|
+|屬性|描述|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|定義結果字串之時間元件的格式。|
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|定義分隔時間之小時、分鐘和秒鐘元件的字串。|
@@ -396,7 +394,7 @@ ms.locfileid: "70133830"
 
 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。 由某些文化特性的 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 屬性所傳回的自訂格式規範，可能不會使用所有屬性。
 
-|屬性|說明|
+|屬性|描述|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|定義結果字串的整體格式。|
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|定義可顯示在結果字串中的當地語系化日期名稱。|
@@ -422,7 +420,7 @@ ms.locfileid: "70133830"
 
 下表列出可控制傳回字串之格式設定的 <xref:System.Globalization.DateTimeFormatInfo> 物件屬性。
 
-|屬性|說明|
+|屬性|描述|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A>|定義結果字串的整體格式。|
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|定義可顯示在結果字串中的當地語系化月份名稱。|
@@ -436,19 +434,19 @@ ms.locfileid: "70133830"
 
 <a name="Notes"></a>
 
-## <a name="notes"></a>注意
+## <a name="notes"></a>備註
 
 ### <a name="control-panel-settings"></a>控制台設定值
 
 [控制台] 中 [ **地區及語言選項]** 項目的設定會影響格式化作業所產生的結果字串。 這些設定是用來初始化與目前執行緒文化特性相關的 <xref:System.Globalization.DateTimeFormatInfo> 物件，該物件會提供用來管理格式的值。 使用不同設定的電腦會產生不同的結果字串。
 
-此外，如果您使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 建構函式來具現化新的 <xref:System.Globalization.CultureInfo> 物件，而此物件代表的文化特性與目前系統文化特性相同，則 [控制台] 中的 [ **地區及語言選項** ] 項目所建立的任何自訂都會套用至新的 <xref:System.Globalization.CultureInfo> 物件。 您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。
+此外，如果您使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 建構函式來將新的 <xref:System.Globalization.CultureInfo> 物件具現化，而此物件代表的文化特性與目前系統文化特性相同，則 [控制台] 中的 [地區及語言選項] 項目所建立的任何自訂都會套用至新的 <xref:System.Globalization.CultureInfo> 物件。 您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。
 
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo 屬性
 
 格式會受到目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的影響，而此物件是由目前執行緒文化特性隱含提供或由叫用格式之方法的 <xref:System.IFormatProvider> 參數明確提供。 針對 <xref:System.IFormatProvider> 參數，您的應用程式應指定代表文化特性的 <xref:System.Globalization.CultureInfo> 物件，或是指定代表特定文化特性之日期和時間格式化慣例的 <xref:System.Globalization.DateTimeFormatInfo> 物件。 許多標準日期和時間格式規範都是格式化模式的別名，這些模式是由目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性所定義。 您的應用程式可以變更對應 <xref:System.Globalization.DateTimeFormatInfo> 屬性的對應日期和時間格式模式，藉此改變某些標準日期和時間格式規範所產生的結果。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>

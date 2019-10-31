@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a8ecd8c8-9627-4356-9c6f-bd05e24637c0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7c9e2bb9ef97326c3d11553b6cabd0de0fd6e495
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 011da6aacbf4c40420329952f47b1fabdfc2c1a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747512"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125625"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping 方法
-取得"COR_DEBUG_IL_TO_NATIVE_MAP 」 執行個體，表示對應從 Microsoft intermediate language (MSIL) 位移到原生位移陣列。  
+取得 "COR_DEBUG_IL_TO_NATIVE_MAP" 實例的陣列，代表從 Microsoft 中繼語言（MSIL）位移到原生位移的對應。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,25 +41,25 @@ HRESULT GetILToNativeMapping (
  [in] `map` 陣列的大小。  
   
  `pcMap`  
- [out]項目中傳回的實際數目的指標`map`陣列。  
+ 脫銷`map` 陣列中所傳回之實際專案數目的指標。  
   
  `map`  
- [out]陣列`COR_DEBUG_IL_TO_NATIVE_MAP`結構，每一個都代表從 MSIL 位移到原生位移的對應。  
+ 脫銷`COR_DEBUG_IL_TO_NATIVE_MAP` 結構的陣列，其中每一個都代表從 MSIL 位移到原生位移的對應。  
   
- 沒有任何排序傳回的項目的陣列。  
+ 不會對傳回的元素陣列進行排序。  
   
 ## <a name="remarks"></a>備註  
- `GetILToNativeMapping`方法會傳回有意義的結果，只有當此"ICorDebugCode 」 執行個體代表已在 just-in-time (JIT) 編譯的 MSIL 程式碼的原生程式碼。  
+ 只有當這個 "ICorDebugCode" 實例代表從 MSIL 程式碼編譯而來的機器碼（JIT）時，`GetILToNativeMapping` 方法才會傳回有意義的結果。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugCode 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)

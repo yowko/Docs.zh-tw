@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 163816e7-0739-4566-b3df-cd256be8b8a4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad87b6552df25926b5b4184b7884c1d444c4f1be
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8928e22b70af0360660c30289ee999a3e4c5e99e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769079"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133479"
 ---
 # <a name="icordebugthreadgetprocess-method"></a>ICorDebugThread::GetProcess 方法
-取得的介面指標，其中此 ICorDebugThread 構成組件的程序。  
+取得此 ICorDebugThread 構成元件之進程的介面指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,13 +35,13 @@ HRESULT GetProcess (
   
 ## <a name="parameters"></a>參數  
  `ppProcess`  
- [out]ICorDebugProcess 介面物件，表示處理程序的位址指標。  
+ 脫銷代表進程之 ICorDebugProcess 介面物件的位址指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

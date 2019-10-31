@@ -9,14 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 75261bc44b938432c9c22b90dc4db30ca00d630b
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: 808c92e906a0bf6f8fdc368396d6d240573de501
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170735"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120780"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
 
@@ -32,7 +30,7 @@ ms.locfileid: "67170735"
 
 如果三個元件全都存在，則是絕對路徑。 如果未指定任何磁碟區或磁碟機代號，且目錄名稱開頭為[目錄分隔符號字元](<xref:System.IO.Path.DirectorySeparatorChar>)，則路徑是相對於目前磁碟機的根目錄。 否則，路徑是相對於目前的目錄。 下表顯示一些可能的目錄和檔案路徑。
 
-|路徑  |說明  |
+|路徑  |描述  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | 從磁碟機 C: 根目錄開始的絕對檔案路徑 |
 | `\Program Files\Custom Utilities\StringFinder.exe` | 從目前磁碟機根目錄開始的絕對路徑。 |
@@ -62,7 +60,7 @@ ms.locfileid: "67170735"
 
 以下是 UNC 路徑的一些範例：
 
-|路徑  |說明  |
+|路徑  |描述  |
 | -- | -- |
 | `\\system07\C$\` | `system07` 上磁碟機 C: 的根目錄。 |
 | `\\Server2\Share\Test\Foo.txt` | \\\\Server2\\Share 磁碟區 Test 目錄中的 Foo.txt 檔案。|
@@ -95,7 +93,7 @@ DOS 裝置路徑由以下元件組成：
 
    裝置路徑規範識別磁碟區或磁碟機之後，DOS 裝置路徑的第一個區段。 (例如，`\\?\C:\` 和 `\\.\BootPartition\`。)
 
-   對於呼叫的 UNC 有一個特定連結，不用多說，就是 `UNC`。 例如：
+   對於呼叫的 UNC 有一個特定連結，不用多說，就是 `UNC`。 例如:
 
   `\\.\UNC\Server\Share\Test\Foo.txt`  
   `\\?\UNC\Server\Share\Test\Foo.txt`

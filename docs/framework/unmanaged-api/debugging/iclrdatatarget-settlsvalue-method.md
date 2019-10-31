@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a2d6a24-749a-47ad-9f01-4517203d3f35
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 34c0ab32d18d5aeeb81befa736cc42b678b11fb1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1425d48bb18d4161a1c96239b76b8315ae258705
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738544"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112785"
 ---
 # <a name="iclrdatatargetsettlsvalue-method"></a>ICLRDataTarget::SetTLSValue 方法
-設定執行緒區域儲存區 (TLS) 的目標處理序中指定的執行緒中的值。 這個方法是由通用語言執行平台 (CLR) 資料存取服務呼叫。  
+設定目標進程中指定執行緒的執行緒區域儲存區（TLS）中的值。 這個方法是由 common language runtime （CLR）資料存取服務呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,13 +37,13 @@ HRESULT SetTLSValue (
   
 ## <a name="parameters"></a>參數  
  `threadID`  
- [in]目標處理序中的執行緒作業系統識別項。  
+ 在目標進程中線程的作業系統識別碼。  
   
  `index`  
- [in]位置的索引。 此值必須是執行緒的指定本機存放區中的有效索引。  
+ 在位置的索引。 這個值必須是指定之執行緒本機存放區中的有效索引。  
   
  `value`  
- [in]A`CLRDATA_ADDRESS`值，指定要放置在指定的 TLS 位置的值。  
+ 在`CLRDATA_ADDRESS` 值，指定要在指定的 TLS 位置中放置的值。  
   
 ## <a name="remarks"></a>備註  
  此方法是由偵錯應用程式的作者來實作。  
@@ -53,12 +51,12 @@ HRESULT SetTLSValue (
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** ClrData.idl, ClrData.h  
+ **標頭：** ClrData .idl，ClrData。h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

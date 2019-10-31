@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97e493f5-3a62-4ec7-b42f-4af57bf71f57
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd8f71ca75a795ab86c61140eacbbcfb0a18b590
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 166f6bb50849df8550871958d7034fdf2a841abb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737812"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089120"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>ICorDebugAppDomain2::GetArrayOrPointerType 方法
-取得指定的型別，或是指標或參考指定的型別陣列。  
+取得指定類型的陣列，或指定之類型的指標或參考。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,19 +38,19 @@ HRESULT GetArrayOrPointerType (
   
 ## <a name="parameters"></a>參數  
  `elementType`  
- [in]CorElementType 列舉，指定基礎的原生型別 （陣列、 指標或參考） 若要建立的值。  
+ 在CorElementType 列舉的值，指定要建立的基礎原生類型（陣列、指標或參考）。  
   
  `nRank`  
- [in]陣列陣序 （也就是維度的數目）。 此值必須是 0，如果`elementType`指定指標或參考類型。  
+ 在陣列的順位（也就是維度的數目）。 如果 `elementType` 指定指標或參考型別，這個值必須是0。  
   
  `pTypeArg`  
- [in]ICorDebugType 物件，表示陣列類型的指標、 指標或參考來建立。  
+ 在ICorDebugType 物件的指標，代表要建立的陣列、指標或參考的類型。  
   
  `ppType`  
- [out]位址指標`ICorDebugType`代表建構的陣列、 指標類型或參考的物件類型。  
+ 脫銷表示結構化陣列、指標類型或參考型別之 `ICorDebugType` 物件的位址指標。  
   
 ## <a name="remarks"></a>備註  
- 值*elementType*必須是下列其中之一：  
+ *ElementType*的值必須是下列其中一項：  
   
 - ELEMENT_TYPE_PTR  
   
@@ -60,13 +58,13 @@ HRESULT GetArrayOrPointerType (
   
 - ELEMENT_TYPE_ARRAY 或 ELEMENT_TYPE_SZARRAY  
   
- 如果值*elementType* ELEMENT_TYPE_PTR 或 ELEMENT_TYPE_BYREF， *nRank*必須為零。  
+ 如果*elementType*的值是 ELEMENT_TYPE_PTR 或 ELEMENT_TYPE_BYREF，則*nRank*必須為零。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -8,17 +8,15 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96968956b513e1ae80a25f5fb4afea48bf888876
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 438af9f191f48a86207c3b343ba428eef2c1fabc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739259"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132195"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>適用於 Silverlight 的 CreateDebuggingInterfaceFromVersion 函式
-接受從傳回的常見 language runtime (CLR) 版本字串[CreateVersionStringFromModule 函式](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)，並傳回對應的偵錯工具介面 (通常[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md))。  
+接受從[CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)函式傳回的 common language RUNTIME （CLR）版本字串，並傳回對應的偵錯工具介面（通常是[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,14 +29,14 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
 ## <a name="parameters"></a>參數  
  `szDebuggeeVersion`  
- [in]中的 目標偵錯項目，傳回的 CLR 版本字串[CreateVersionStringFromModule 函式](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)。  
+ 在目標偵錯工具中 CLR 的版本字串（由[CreateVersionStringFromModule 函數](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)傳回）。  
   
  `ppCordb`  
- [out] COM 物件 (`IUnknown`) 指標的指標。 這個物件會轉換成[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)物件再傳回。  
+ [out] COM 物件 (`IUnknown`) 指標的指標。 這個物件會在傳回之前轉換成[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)物件。  
   
 ## <a name="return-value"></a>傳回值  
  S_OK  
- `ppCordb` 參考有效的物件，可實作[ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)介面。  
+ `ppCordb` 會參考實[ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)介面的有效物件。  
   
  E_INVALIDARG  
  `szDebuggeeVersion` 或 `ppCordb` 為 null。  
@@ -58,8 +56,8 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** dbgshim.h  
+ **標頭：** dbgshim。h  
   
- **程式庫：** dbgshim.dll  
+ 連結**庫：** dbgshim  
   
- **.NET framework 版本：** 3.5 SP1
+ **.NET Framework 版本：** 3.5 SP1

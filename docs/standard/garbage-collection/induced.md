@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 149597f0e34448d9c275a2cb8cd4ffc250bec619
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 604b49ef577a46204b523ebf5a8575a30b81635e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492115"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120924"
 ---
 # <a name="induced-collections"></a>引發的集合
 大部分情況下，記憶體回收行程會判斷執行回收的最佳時間，請讓記憶體回收行程獨立執行。 在罕見的情況下，強制回收可能會改善您應用程式的效能。 在這些情況下，您可以使用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法強制進行記憶體回收，來引發記憶體回收。  
@@ -22,7 +20,7 @@ ms.locfileid: "54492115"
 ## <a name="gc-collection-mode"></a>GC 收集模式  
  您可以使用其中一個 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法多載，其包含 <xref:System.GCCollectionMode> 值來指定強制回收行為，如下所示。  
   
-|`GCCollectionMode` 值|說明|  
+|`GCCollectionMode` 值|描述|  
 |------------------------------|-----------------|  
 |<xref:System.GCCollectionMode.Default>|使用 .NET 執行版本的預設記憶體回收設定。|  
 |<xref:System.GCCollectionMode.Forced>|強制立即進行記憶體回收。 這等於呼叫 <xref:System.GC.Collect?displayProperty=nameWithType> 多載。 它會導致完整封鎖回收所有層代。<br /><br /> 您也可以在強制執行立即的完整區塊記憶體回收之前，透過將 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType> 來壓縮大型物件。|  
@@ -36,7 +34,7 @@ ms.locfileid: "54492115"
 |<xref:System.GCCollectionMode.Forced> 或 <xref:System.GCCollectionMode.Default>|會盡快執行封鎖回收。 如果正在進行背景回收，而且層代是 0 或 1，則 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> 方法會立即觸發封鎖回收，並在回收完成時返回。 如果正在進行背景回收，而且 `generation` 參數是 2，則方法會等到背景回收完成，並觸發封鎖層代 2 回收，然後返回。|會盡快執行回收。 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> 方法會要求背景集合，但不保證可取得。視情況而定，可能仍會執行封鎖集合。 如果已在進行背景回收，則這個方法會立即返回。|  
 |<xref:System.GCCollectionMode.Optimized>|可能會因記憶體回收行程和 `generation` 參數的狀態而執行封鎖集合。 記憶體回收行程會嘗試提供最佳效能。|根據記憶體回收行程的狀態，可能會執行回收。 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> 方法會要求背景集合，但不保證可取得。視情況而定，可能仍會執行封鎖集合。 記憶體回收行程會嘗試提供最佳效能。 如果已在進行背景回收，則這個方法會立即返回。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [延遲模式](../../../docs/standard/garbage-collection/latency.md)
 - [記憶體回收](../../../docs/standard/garbage-collection/index.md)

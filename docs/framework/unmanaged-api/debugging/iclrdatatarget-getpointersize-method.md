@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51d9f4a4-81a7-4527-8537-5212bdb05c70
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54abcd357c6f26f54432b39bfcb4a0d63afabfe4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1b4741b71521ab91152ce71d5b1b4a4c3fbd3629
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738721"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113748"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>ICLRDataTarget::GetPointerSize 方法
-取得大小，以位元組為單位，目標處理序會使用與指標類型。 這個方法是由通用語言執行階段資料存取服務呼叫。  
+取得目標進程所使用之指標類型的大小（以位元組為單位）。 這個方法是由 common language runtime 資料存取服務所呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +35,7 @@ HRESULT GetPointerSize (
   
 ## <a name="parameters"></a>參數  
  `pointerSize`  
- [out]整數值，指定的大小，以位元組為單位，在目標處理序上之指標的指標。  
+ 脫銷整數值的指標，指定目標進程上指標的大小（以位元組為單位）。  
   
 ## <a name="remarks"></a>備註  
  此方法是由偵錯應用程式的作者來實作。  
@@ -45,12 +43,12 @@ HRESULT GetPointerSize (
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** ClrData.idl, ClrData.h  
+ **標頭：** ClrData .idl，ClrData。h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

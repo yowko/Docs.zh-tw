@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 701281dd-2936-45c8-a1f0-3bf7332b093b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2042d0936359a85d203375c42be0d8a096f004e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fc3f77adf33502bfbc3d65ff5131420093fbbec8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739757"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097927"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult 列舉
 提供如何取得指令指標 (IP) 值的詳細資料。  
@@ -39,29 +37,29 @@ typedef enum CorDebugMappingResult {
 } CorDebugMappingResult;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`MAPPING_PROLOG`|原生程式碼是在初構中，因此 IP 值為 0。|  
-|`MAPPING_EPILOG`|原生程式碼是終解中，因此 IP 值是方法的最後一個指令的位址。|  
-|`MAPPING_NO_INFO`|對應不未提供任何資訊的方法，因此 IP 值為 0。|  
-|`MAPPING_UNMAPPED_ADDRESS`|雖然此方法的對應資訊，但目前的地址無法對應到 Microsoft intermediate language (MSIL) 程式碼。 IP 的值為 0。|  
-|`MAPPING_EXACT`|方法會對應至 MSIL 程式碼完全或框架已解譯，因此 IP 值正確無誤。|  
-|`MAPPING_APPROXIMATE`|已成功對應方法，但 IP 值可能只是近似。|  
+|`MAPPING_PROLOG`|機器碼位於初構中，因此 IP 的值為0。|  
+|`MAPPING_EPILOG`|機器碼為終解，因此 IP 的值是方法最後一個指令的位址。|  
+|`MAPPING_NO_INFO`|方法沒有對應資訊可供使用，因此 IP 的值為0。|  
+|`MAPPING_UNMAPPED_ADDRESS`|雖然有方法的對應資訊，但目前的位址無法對應至 Microsoft 中繼語言（MSIL）程式碼。 IP 的值為0。|  
+|`MAPPING_EXACT`|方法可能會完全對應至 MSIL 程式碼，或已解讀框架，因此 IP 的值是正確的。|  
+|`MAPPING_APPROXIMATE`|已成功對應方法，但 IP 的值可能是近似值。|  
   
 ## <a name="remarks"></a>備註  
- 您可以使用[icordebugilframe:: Getip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md)方法，以取得指令指標的值。  
+ 您可以使用[ICorDebugILFrame：： GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md)方法來取得指令指標的值。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

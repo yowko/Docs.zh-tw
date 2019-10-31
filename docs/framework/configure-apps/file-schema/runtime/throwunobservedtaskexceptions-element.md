@@ -8,20 +8,18 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ed1e66c4aadab656455686a7a1e5028b035676a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 99eef6b8c264e21df7f4ecf9fc79dc607d484a0a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252258"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115425"
 ---
-# <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > 元素
+# <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions> Element
 指定未處理的工作例外狀況是否應終止執行中的處理序。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<ThrowUnobservedTaskExceptions>**  
   
 ## <a name="syntax"></a>語法  
@@ -36,18 +34,18 @@ ms.locfileid: "70252258"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
-|`enabled`|必要屬性。<br /><br /> 指定未處理的工作例外狀況是否應終止正在執行的進程。|  
+|`enabled`|必要屬性。<br /><br /> Specifies whether unhandled task exceptions should terminate the running process.|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`false`|不會針對未處理的工作例外狀況終止正在執行的進程。 這是預設值。|  
-|`true`|針對未處理的工作例外狀況終止正在執行的進程。|  
+|`false`|Does not terminate the running process for an unhandled task exception. 這是預設值。|  
+|`true`|Terminates the running process for an unhandled task exception.|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -59,22 +57,22 @@ ms.locfileid: "70252258"
 |||  
   
 ## <a name="remarks"></a>備註  
- 如果未觀察到與相關聯的<xref:System.Threading.Tasks.Task>例外狀況, 則不會有任何<xref:System.Threading.Tasks.Task.Wait%2A>作業、父代未附加, 且<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType>屬性未被讀取。工作例外狀況會被視為未觀察到。  
+ If an exception that is associated with a <xref:System.Threading.Tasks.Task> has not been observed, there is no <xref:System.Threading.Tasks.Task.Wait%2A> operation, the parent is not attached, and the <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> property was not read the task exception is considered to be unobserved.  
   
- 在 .NET Framework 4 中, 根據預設, 如果<xref:System.Threading.Tasks.Task>已進行垃圾收集, 則完成項會擲回例外狀況並終止進程。 進程的終止取決於垃圾收集和結束的時間。  
+ In the .NET Framework 4, by default, if a <xref:System.Threading.Tasks.Task> that has an unobserved exception is garbage collected, the finalizer throws an exception and terminates the process. The termination of the process is determined by the timing of garbage collection and finalization.  
   
- 為了讓開發人員更容易撰寫以工作為基礎的非同步程式碼, .NET Framework 4.5 會變更未觀察到例外狀況的這個預設行為。 未觀察到例外狀況仍然會<xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>引發事件, 但根據預設, 進程不會終止。 而是在引發事件之後忽略例外狀況, 而不論事件處理常式是否觀察到例外狀況。  
+ To make it easier for developers to write asynchronous code based on tasks, the .NET Framework 4.5 changes this default behavior for unobserved exceptions. Unobserved exceptions still cause the <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> event to be raised, but by default, the process does not terminate. Instead, the exception is ignored after the event is raised, regardless of whether an event handler observes the exception.  
   
- 在 .NET Framework 4.5 中, 您可以使用應用程式佈建檔中的[ \<ThrowUnobservedTaskExceptions > 元素](throwunobservedtaskexceptions-element.md), 以啟用擲回例外狀況的 .NET Framework 4 行為。  
+ In the .NET Framework 4.5, you can use the [\<ThrowUnobservedTaskExceptions> element](throwunobservedtaskexceptions-element.md) in an application configuration file to enable the .NET Framework 4 behavior of throwing an exception.  
   
- 您也可以利用下列其中一種方式來指定例外狀況行為:  
+ You can also specify the exception behavior in one of the following ways:  
   
-- 藉由設定環境變數`COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`)。  
+- By setting the environment variable `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
   
-- 藉由在 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\中設定 Registry DWORD 值 ThrowUnobservedTaskExceptions = 1.Netframework 鍵。  
+- By setting the registry DWORD value ThrowUnobservedTaskExceptions = 1 in the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework key.  
   
 ## <a name="example"></a>範例  
- 下列範例顯示如何使用應用程式佈建檔來啟用工作中的例外狀況擲回。  
+ The following example shows how to enable the throwing of exceptions in tasks by using an application configuration file.  
   
 ```xml  
 <configuration>   
@@ -85,12 +83,12 @@ ms.locfileid: "70252258"
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何從工作擲回未觀察到例外狀況。 程式碼必須以發行的程式的形式執行, 才能正常運作。  
+ The following example demonstrates how an unobserved exception is thrown from a task. The code must be run as a released program to work correctly.  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段設定結構描述](index.md)
 - [組態檔結構描述](../index.md)

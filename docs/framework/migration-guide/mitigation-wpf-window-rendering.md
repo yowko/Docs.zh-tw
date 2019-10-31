@@ -2,14 +2,12 @@
 title: 風險降低：WPF 視窗呈現
 ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 13091c06561da24d2fc03f810fd8b8687b21d9a4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 374f24ff8a66f689fbd6ca635905ba73bc9e0450
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789799"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126094"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>風險降低：WPF 視窗呈現
 
@@ -21,7 +19,7 @@ ms.locfileid: "70789799"
 
 在 Windows 8 和更新版本中，跨監視器呈現 WPF 視窗的影響涉及太多因素，因此無法精確量化。 在某些情況下，它仍可能會產生不良的效能影響，特別是針對執行使用大量圖形的應用程式並有跨監視器顯示視窗的使用者來說，更是明顯。 在其他情況下，您可能只需要 .NET Framework 版本之間保持一致的行為。
 
-## <a name="mitigation"></a>緩和
+## <a name="mitigation"></a>風險降低
 
 您可以停用這項變更並還原為先前的行為，即可在超出單一顯示畫面時裁剪 WPF 視窗。 執行此作業的方法有兩種：
 
@@ -41,6 +39,6 @@ ms.locfileid: "70789799"
 
 - 方法是在應用程式啟動時，將 <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> 屬性設定為 `true`。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段變更](runtime-changes-in-the-net-framework-4-6.md)

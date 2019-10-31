@@ -14,14 +14,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b4217221cc5199b9d8904be1ca3073878378b4e9
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
-ms.translationtype: HT
+ms.openlocfilehash: 9957c38ad625a27395a3bcc3ddd9ce0b4797b93d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268177"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127609"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>在 .NET 中剖析日期和時間字串
 
@@ -50,12 +48,12 @@ ms.locfileid: "67268177"
   
 格式提供者也可以用來解譯不明確的數值日期。 "02/03/04" 字串並未明確表示代表月份、日期和年份的日期元件。 元件會根據格式提供者中的相似日期格式順序來解譯。
 
-## <a name="parse"></a>Parse
+## <a name="parse"></a>剖析
 
 下面的範例會示範如何使用 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 方法將 `string` 轉換成 <xref:System.DateTime>。 本範例會使用與目前執行緒相關聯的文化特性。 如果與目前文化特性相關聯的 <xref:System.Globalization.CultureInfo> 無法剖析輸入字串，則會擲回 <xref:System.FormatException>。
 
 > [!TIP]
-> 本文中所有的 C# 範例皆可在您的瀏覽器中執行。 按 [執行]  按鈕以查看輸出。 您也可以編輯它們以進行實驗。
+> 本文中所有的 C# 範例皆可在您的瀏覽器中執行。 按 [執行] 按鈕以查看輸出。 您也可以編輯它們以進行實驗。
 
 > [!NOTE]
 > 這些範例可在 [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) 和 [VB](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions) 兩者的 GitHub 文件存放庫中取得。 或者，您可以為 [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) 或 [VB](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip)將專案下載為 ZIP 檔案。
@@ -86,7 +84,7 @@ ms.locfileid: "67268177"
 
 <xref:System.DateTime.Parse%2A> 和 <xref:System.DateTime.ParseExact%2A> 方法的每個多載也都有 <xref:System.IFormatProvider> 參數，可提供有關設定字串格式的特定文化特性資訊。 此 <xref:System.IFormatProvider> 物件是代表標準文化特性的 <xref:System.Globalization.CultureInfo> 物件，或 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 屬性所傳回的 <xref:System.Globalization.DateTimeFormatInfo> 物件。  <xref:System.DateTime.ParseExact%2A> 也會使用可定義一或多個自訂日期和時間格式的額外字串或字串陣列引數。  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [剖析字串](parsing-strings.md)
 - [格式化類型](formatting-types.md)

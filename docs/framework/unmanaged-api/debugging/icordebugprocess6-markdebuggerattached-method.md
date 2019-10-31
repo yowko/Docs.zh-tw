@@ -2,14 +2,12 @@
 title: ICorDebugProcess6::MarkDebuggerAttached 方法
 ms.date: 03/30/2017
 ms.assetid: bf94f090-5265-4112-8e57-5b4e20e070d0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c818b196f3252138f2a9c601b04f1d7a6727bc6b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 48bab20a71144b28f24951556eb36210d7b6aebf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912746"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123438"
 ---
 # <a name="icordebugprocess6markdebuggerattached-method"></a>ICorDebugProcess6::MarkDebuggerAttached 方法
 變更偵錯項目的內部狀態，讓 .NET Framework 類別庫中的 <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> 方法傳回 `true`。  
@@ -29,7 +27,7 @@ HRESULT MarkDebuggerAttached(
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下表所列的值。  
   
-|傳回值|說明|  
+|傳回值|描述|  
 |------------------|-----------------|  
 |`S_OK`|偵錯項目已成功更新。|  
 |`CORDBG_E_MODULE_NOT_LOADED`|尚未載入包含 <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> 方法的組件，或遺漏中繼資料等其他一些錯誤導致無法辨認組件。<br /><br /> 這個錯誤很常見而且無害。 當其他組件載入時，您應該再次呼叫這個方法。|  
@@ -45,11 +43,11 @@ HRESULT MarkDebuggerAttached(
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugProcess6 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87029cc4-e5e1-42d5-8b98-655bb7ece520
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 205b7670bac55d428d7458b7accaee5e00b00b03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94f2d20816bfc28118877f52c04237c41b3859e3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745578"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125779"
 ---
 # <a name="icordebugclassgetmodule-method"></a>ICorDebugClass::GetModule 方法
 取得定義此類別的模組。  
@@ -37,13 +35,13 @@ HRESULT GetModule (
   
 ## <a name="parameters"></a>參數  
  `pModule`  
- [out]ICorDebugModule 物件，表示這個類別的定義模組的位址指標。  
+ 脫銷ICorDebugModule 物件位址的指標，表示定義此類別的模組。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

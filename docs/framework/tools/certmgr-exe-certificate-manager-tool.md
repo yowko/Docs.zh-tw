@@ -13,14 +13,12 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 716513bdcf3ac1b8a2b2b29b23a8dc25a86a0d1c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 06fe3a78d0b19720d4f83111980b88806312205f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044815"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129868"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (憑證管理員工具)
 憑證管理員工具 (Certmgr.exe) 可以管理憑證、憑證信任清單 (CTL) 和憑證撤銷清單 (CRL)。  
@@ -30,7 +28,7 @@ ms.locfileid: "71044815"
 > [!NOTE]
 > 憑證管理工具 (Certmgr.exe) 是一個命令列公用程式，而憑證 (Certmgr.msc) 則是 Microsoft Management Console (MMC) 嵌入式管理單元。 因為 Certmgr.msc 通常會位於 Windows 系統目錄中，以在命令列中輸入 `certmgr` 可能會載入憑證 MMC 嵌入式管理單元，即使您已開啟 Visual Studio 開發人員命令提示字元也一樣。 發生這種情況是因為嵌入式管理單元的路徑在 PATH 環境變數中位於憑證管理員工具的路徑之前。 如果您遇到此問題，可以透過指定可執行檔的路徑來執行 Certmgr.exe 指令。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
   
  如需 X.509 憑證的概觀，請參閱[使用憑證](../wcf/feature-details/working-with-certificates.md)。  
   
@@ -54,10 +52,10 @@ ms.locfileid: "71044815"
 |選項|描述|  
 |------------|-----------------|  
 |**/add**|將憑證、CTL 和 CRL 加入憑證存放區。|  
-|**/all**|與 **/add** 一起使用時會加入所有項目。 與 **/del** 一起使用時會刪除所有項目。未與 **/add** 或 **/del** 選項一起使用時，會顯示所有項目。 **/all** 選項無法與 **/put** 一起使用。|  
-|**/c**|與 **/add** 一起使用時會加入憑證。 與 **/del** 一起使用時會刪除憑證。與 **/put** 一起使用時會儲存憑證。 未與 **/add**、 **/del** 或 **/put** 選項一起使用時，會顯示憑證。|  
-|**/CRL**|與 **/add** 一起使用時會加入 CRL。 與 **/del** 一起使用時會刪除 CRL。與 **/put** 一起使用時會儲存 CRL。 未與 **/add**、 **/del** 或 **/put** 選項一起使用時，會顯示 CRL。|  
-|**/CTL**|與 **/add** 一起使用時會加入 CTL。 與 **/del** 一起使用時會刪除 CTL。與 **/put** 一起使用時會儲存 CTL。 未與 **/add**、 **/del** 或 **/put** 選項一起使用時，會顯示 CTL。|  
+|**/all**|與 **/add** 一起使用時會加入所有項目。 當與 **/del**搭配使用時，刪除所有專案。在未使用 **/add**或 **/del**選項的情況下，顯示所有專案。 **/all** 選項無法與 **/put** 一起使用。|  
+|**/c**|與 **/add** 一起使用時會加入憑證。 與 **/del**搭配使用時，會刪除憑證。會在與 **/put**搭配使用時儲存憑證。 未與 **/add**、 **/del** 或 **/put** 選項一起使用時，會顯示憑證。|  
+|**/CRL**|與 **/add** 一起使用時會加入 CRL。 與 **/del**搭配使用時，刪除 crl。與 **/put**搭配使用時，會儲存 crl。 未與 **/add**、 **/del** 或 **/put** 選項一起使用時，會顯示 CRL。|  
+|**/CTL**|與 **/add** 一起使用時會加入 CTL。 與 **/del**搭配使用時，會刪除 ctl。與 **/put**搭配使用時，會儲存 ctl。 未與 **/add**、 **/del** 或 **/put** 選項一起使用時，會顯示 CTL。|  
 |**/del**|從憑證存放區刪除憑證、CTL 和 CRL。|  
 |**/e** *encodingType*|指定憑證的編碼類型。 預設為 `X509_ASN_ENCODING`。|  
 |**/f** *dwFlags*|指定存放區的開放旗標。 這是傳遞到 **CertOpenStore** 的 *dwFlags* 參數。 預設值是 CERT_SYSTEM_STORE_CURRENT_USER。 只有在使用 **/y** 選項時，才會將這個選項列入考量。|  
@@ -137,7 +135,7 @@ certmgr /del /all /ctl /s my newStore.str
 certmgr /put /c /s my newFile  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [工具](index.md)
 - [Makecert.exe (憑證建立工具)](/windows/desktop/SecCrypto/makecert)

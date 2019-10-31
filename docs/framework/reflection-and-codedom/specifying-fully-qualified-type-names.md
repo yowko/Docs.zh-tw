@@ -14,14 +14,12 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 656b82daffc62824ed663ea7080bd6d20cd0dadc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 707c71482196d789ed9a88db34af048ec57734fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045821"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130024"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>指定完整的類型名稱
 
@@ -128,7 +126,7 @@ AssemblyProperty
 |\\*|指標類型。|
 |\\[|陣列維度分隔符號。|
 |\\]|陣列維度分隔符號。|
-|\\.|句號只有用在陣列規格中時，前面才會使用反斜線。 NamespaceSpec 中的句號不接受反斜線。|
+|\\|句號只有用在陣列規格中時，前面才會使用反斜線。 NamespaceSpec 中的句號不接受反斜線。|
 |\\\|反斜線會視需要當成字串常值。|
 
 請注意，除 AssemblyNameSpec 以外的所有 TypeSpec 元件中，空格都是相關的。 在 AssemblyNameSpec 中，',' 分隔符號之前的空格是相關的，但 ',' 分隔符號之後的空格則會忽略。
@@ -143,11 +141,11 @@ AssemblyProperty
 
 組件名稱規格中的基本資訊是組件的文字名稱 (IDENTIFIER)。 您可以按照逗號分隔的屬性/值組清單理解 IDENTIFIER，如下表所述。 IDENTIFIER 的命名應依照檔案命名的規則。 IDENTIFIER 不區分大小寫。
 
-|屬性名稱|說明|允許的值|
+|屬性名稱|描述|允許的值|
 |-------------------|-----------------|----------------------|
 |**版本**|組件版本號碼|在 *Major.Minor.Build.Revision* 中，*Major*、*Minor*、*Build* 和 *Revision* 是介於 0 到 65535 (含) 之間的整數。|
 |**PublicKey**|完整公開金鑰|十六進位格式的完整公開金鑰字串值。 指定 null 參考 (Visual Basic 為**Nothing**) 以明確指出私用組件。|
-|**PublicKeyToken**|公開金鑰語彙基元 (完整公開金鑰的 8 位元組雜湊)|十六進位格式的公開金鑰語彙基元字串值。 指定 null 參考 (Visual Basic 為 **Nothing**) 以明確指出私用組件。|
+|**PublicKeyToken**|公開金鑰語彙基元 (完整公開金鑰的 8 位元組雜湊)|十六進位格式的公開金鑰語彙基元字串值。 指定 null 參考 (Visual Basic 為**Nothing**) 以明確指出私用組件。|
 |**文化特性**|組件文化特性|RFC-1766 格式的組件文化特性，或「中性的」語言無關 (非附屬) 組件。|
 |**自訂**|自訂二進位大型物件 (BLOB)。 目前只用於[原生映像產生器 (Ngen)](../tools/ngen-exe-native-image-generator.md) 產生的組件。|自訂原生映像產生器工具所用的字串用於通知組件快取安裝中的組件是原生映像，因此要安裝在原生映像快取中。 也稱為 zap 字串。|
 
@@ -216,7 +214,7 @@ SimpleTypeSpec & 代表 Managed 指標或參考。 例如，若要取得類型 M
 
 對 **ModuleBuilder.GetType** 而言，`MyArray[0..5]` 表示大小 6、下限 0 的一維陣列。 `MyArray[4…]` 表示大小不明、下限 4 的一維陣列。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Reflection.AssemblyName>
 - <xref:System.Reflection.Emit.ModuleBuilder>
