@@ -17,15 +17,13 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 0831a22b0c1d3333cc37f86a764006c934597390
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 06f1094d872c84f2f277c7695a8858edc285449f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968566"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140525"
 ---
 # <a name="backtracking-in-regular-expressions"></a>規則運算式中的回溯
 <a name="top"></a> 回溯 (Backtracking) 會在規則運算式模式包含選擇性的 [數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 或 [交替建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)，且規則運算式引擎返回之前儲存的狀態繼續搜尋相符項目時發生。 回溯是規則運算式的核心能力，可讓運算式功能強大且靈活，並且比對非常複雜的模式。 但同時，這項強大功能需付出相當的代價。 回溯經常是影響規則運算式引擎之效能最重要的一項因素。 幸好開發人員能夠掌控規則運算式引擎的行為，以及其使用回溯的方式。 本主題將說明回溯運作的方式，以及如何進行控制。  
@@ -54,7 +52,7 @@ ms.locfileid: "69968566"
   
  雖然這個規則運算式包括數量詞 `{2}`，但仍然會以線性方式進行評估。 規則運算式引擎不會回溯，因為 `{2}` 不是選擇性的數量詞，它指定了確切的數字，而不是前面的子運算式必須比對的可變次數。 因此，規則運算式引擎會嘗試比對規則運算式模式與輸入字串，如下表所示。  
   
-|作業|模式中的位置|字串中的位置|結果|  
+|運算|模式中的位置|字串中的位置|結果|  
 |---------------|-------------------------|------------------------|------------|  
 |1|e|"needing a reed" (索引 0)|沒有符合的結果。|  
 |2|e|"eeding a reed" (索引 1)|可能符合的結果。|  
@@ -137,7 +135,7 @@ ms.locfileid: "69968566"
   
  <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外狀況表示規則運算式引擎在指定的逾時間隔內找不到相符項目，但不會指出擲回例外狀況的原因。 這個原因可能是大量回溯，不過也有可能是對於擲回例外狀況當時的系統負載而言，設定的逾時間隔太低。 當您處理例外狀況時，可以選擇中放棄一步比對輸入字串，或增加逾時間隔並重試比對作業。  
   
- 例如，下列程式碼會呼叫 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 建構函式來具現化逾時值為一秒的 <xref:System.Text.RegularExpressions.Regex> 物件。 規則運算式模式 `(a+)+$`會在行尾比對一個或多個 "a" 字元的一個或多個序列，並且受限於大量回溯。 如果擲回 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> ，則範例會將逾時值增加至最大間隔三秒。 在這個間隔之後，它就會放棄嘗試比對模式。  
+ 例如，下列程式碼會呼叫 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 建構函式來具現化逾時值為一秒的 <xref:System.Text.RegularExpressions.Regex> 物件。 規則運算式模式 `(a+)+$` 會在行尾比對一個或多個 "a" 字元的一個或多個序列，並且受限於大量回溯。 如果擲回 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> ，則範例會將逾時值增加至最大間隔三秒。 在這個間隔之後，它就會放棄嘗試比對模式。  
   
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
@@ -162,9 +160,9 @@ ms.locfileid: "69968566"
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking5.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking5.vb#5)]  
   
- 第一個規則運算式模式 `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`的定義如下表所示。  
+ 第一個規則運算式模式 `^[0-9A-Z]([-.\w]*[0-9A-Z])*@` 的定義如下表所示。  
   
-|模式|說明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`^`|從字串的開頭開始比對。|  
 |`[0-9A-Z]`|比對英數字元。 這項比較不區分大小寫，因為 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 選項呼叫。|  
@@ -175,7 +173,7 @@ ms.locfileid: "69968566"
   
  第二個規則運算式模式 `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`使用左合樣判斷提示。 其定義方式如下表所示。  
   
-|模式|說明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`^`|從字串的開頭開始比對。|  
 |`[0-9A-Z]`|比對英數字元。 這項比較不區分大小寫，因為 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 選項呼叫。|  
@@ -194,9 +192,9 @@ ms.locfileid: "69968566"
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking6.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking6.vb#6)]  
   
- 第一個規則運算式模式 `^(([A-Z]\w*)+\.)*[A-Z]\w*$`的定義如下表所示。  
+ 第一個規則運算式模式 `^(([A-Z]\w*)+\.)*[A-Z]\w*$` 的定義如下表所示。  
   
-|模式|說明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`^`|從字串的開頭開始比對。|  
 |`([A-Z]\w*)+\.`|比對後面接著零個或多個文字字元的字母字元 (A-Z) 一次或多次，後面接著句號。 這項比較不區分大小寫，因為 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 選項呼叫。|  
@@ -206,7 +204,7 @@ ms.locfileid: "69968566"
   
  第二個規則運算式模式 `^((?=[A-Z])\w+\.)*[A-Z]\w*$`使用右合樣判斷提示。 其定義方式如下表所示。  
   
-|模式|說明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`^`|從字串的開頭開始比對。|  
 |`(?=[A-Z])`|如果是字母 (A-Z)，則向右合樣至第一個字元並繼續比對。 這項比較不區分大小寫，因為 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 選項呼叫。|  
@@ -217,10 +215,10 @@ ms.locfileid: "69968566"
   
  [回到頁首](#top)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)
 - [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
 - [交替建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
-- [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
