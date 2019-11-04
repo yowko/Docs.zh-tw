@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 5a5c4c62799e1d2c190c2f7eaab12fff31e457ab
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: 619dc101cd8851cee24651b7e3098ae12ef46259
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425276"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459777"
 ---
 # <a name="navigation-overview"></a>巡覽概觀
 
@@ -742,7 +742,7 @@ XBAP 可以使用其應用程式定義來指定開始 <xref:System.Windows.Contr
 
 ### <a name="navigating-to-custom-objects"></a>巡覽至自訂物件
 
-如果您有儲存為自訂物件的資料，顯示該資料的一種方式是使用系結至這些物件的內容來建立 <xref:System.Windows.Controls.Page> （請參閱資料系結[總覽](../data/data-binding-overview.md)）。 如果您不需要建立整個頁面此額外負荷，而只要顯示物件，則您可以改為直接巡覽至它們。
+如果您有儲存為自訂物件的資料，顯示該資料的一種方式是使用系結至這些物件的內容來建立 <xref:System.Windows.Controls.Page> （請參閱資料系結[總覽](../../../desktop-wpf/data/data-binding-overview.md)）。 如果您不需要建立整個頁面此額外負荷，而只要顯示物件，則您可以改為直接巡覽至它們。
 
 請考慮在下列程式碼中執行的 `Person` 類別。
 

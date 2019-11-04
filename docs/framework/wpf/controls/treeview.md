@@ -8,28 +8,28 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: b353b413f7486990b6dd8ae5126809b27590ae3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb8d77bd3df848e6e9ed186cc621c02d36842175
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761324"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458285"
 ---
 # <a name="treeview"></a>TreeView
-<xref:System.Windows.Controls.TreeView>控制項會顯示階層式結構中使用可摺疊的節點資訊。  
+<xref:System.Windows.Controls.TreeView> 控制項會使用可折迭的節點來顯示階層式結構中的資訊。  
   
- 下圖是舉例<xref:System.Windows.Controls.TreeView>控制項包含巢狀<xref:System.Windows.Controls.TreeViewItem>控制項：  
+ 下圖是具有嵌套 <xref:System.Windows.Controls.TreeViewItem> 控制項之 <xref:System.Windows.Controls.TreeView> 控制項的範例：  
   
- ![顯示圖例，巢狀的 TreeViewItem 控制項。](./media/treeview/nested-treeviewitem-controls.jpg)  
+ ![此圖顯示嵌套的 TreeViewItem 控制項。](./media/treeview/nested-treeviewitem-controls.jpg)  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [TreeView 概觀](treeview-overview.md)  
- [HOW-TO 主題](treeview-how-to-topics.md)  
+ [「如何」主題](treeview-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.TreeView>  
   <xref:System.Windows.Controls.TreeViewItem>  
   
 ## <a name="related-sections"></a>相關章節  
- [資料繫結概觀](../data/data-binding-overview.md)  
+ [資料繫結概觀](../../../desktop-wpf/data/data-binding-overview.md)  
   [資料範本化概觀](../data/data-templating-overview.md)
