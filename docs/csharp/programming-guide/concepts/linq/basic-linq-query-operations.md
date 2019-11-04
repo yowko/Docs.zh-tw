@@ -17,34 +17,34 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 013e1960e6c5721e0bd7ce6998848ddce15a4e4d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 361101258caca763502f92d897866c75bc8d7da2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924398"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418714"
 ---
 # <a name="basic-linq-query-operations-c"></a>基本 LINQ 查詢作業 (C#)
 本主題簡介 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式以及在查詢中執行的一些一般類型的作業。 下列各主題提供更詳細的資訊：  
   
- [LINQ 查詢運算式](../../linq-query-expressions/index.md)  
+ [LINQ 查詢運算式](../../../linq/index.md)  
   
  [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)  
   
- [逐步解說：用 C# 撰寫查詢](./walkthrough-writing-queries-linq.md)  
+ [逐步解說：在 C# 中撰寫查詢](./walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
 > 如果您已經熟悉 SQL 或 XQuery 這類查詢語言，則可以略過本主題的大部分內容。 閱讀下一節中的＜`from` 子句＞，以了解 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式中的子句順序。  
   
 ## <a name="obtaining-a-data-source"></a>取得資料來源  
- 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢中，第一個步驟是指定資料來源。 在 C# 中，如同大多數程式設計語言一樣，必須先宣告變數，才能使用變數。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢中，依序會先出現 `from` 子句來引進資料來源 (`customers`) 和「範圍變數」  (`cust`)。  
+ 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢中，第一個步驟是指定資料來源。 在 C# 中，如同大多數程式設計語言一樣，必須先宣告變數，才能使用變數。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢中，依序會先出現 `from` 子句來引進資料來源 (`customers`) 和「範圍變數」(`cust`)。  
   
  [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   
  範圍變數就像 `foreach` 迴圈中的反覆項目變數，差異在於查詢運算式中沒有實際反覆項目。 執行查詢時，範圍變數將會作為 `customers` 中每個後續項目的參考。 因為編譯器可以推斷 `cust` 的類型，所以您不需要明確予以指定。 `let` 子句可以引進其他範圍變數。 如需詳細資訊，請參閱 [let 子句](../../../language-reference/keywords/let-clause.md)。  
   
 > [!NOTE]
-> 針對 <xref:System.Collections.ArrayList> 這類非泛型資料來源，必須明確範圍變數的類型。 如需詳細資訊，請參閱[如何：使用 LINQ (C#)](./how-to-query-an-arraylist-with-linq.md)和 [from 子句](../../../language-reference/keywords/from-clause.md)查詢 ArrayList。  
+> 針對 <xref:System.Collections.ArrayList> 這類非泛型資料來源，必須明確範圍變數的類型。 如需詳細資訊，請參閱[如何：使用 LINQ 查詢 ArrayList (C#)](./how-to-query-an-arraylist-with-linq.md) 和 [from 子句](../../../language-reference/keywords/from-clause.md)。  
   
 ## <a name="filtering"></a>篩選  
  最常見的查詢作業可能是以 Boolean 運算式的形式套用篩選條件。 篩選會導致查詢僅傳回運算式成立的項目。 結果是使用 `where` 子句所產生。 篩選實際上會指定要從來源序列中排除的項目。 在下列範例中，只會傳回地址在倫敦的 `customers`。  
@@ -97,11 +97,11 @@ from order in Customer.Orders...
  如需詳細資訊，請參閱 [join 子句](../../../language-reference/keywords/join-clause.md)。  
   
 ## <a name="selecting-projections"></a>選取 (投影)  
- `select` 子句會產生查詢的結果，並指定每個所傳回項目的「圖形」或類型。 例如，您可以根據計算或新物件建立指定結果包含完整 `Customer` 物件、僅一個成員、成員子集，還是某個完全不同的結果類型。 `select` 子句不只產生一份來源項目時，作業稱為「投影」  。 使用投影來轉換資料是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式的強大功能。 如需詳細資訊，請參閱[使用 LINQ 轉換資料 (C#)](./data-transformations-with-linq.md) 和 [select 子句](../../../language-reference/keywords/select-clause.md)。  
+ `select` 子句會產生查詢的結果，並指定每個所傳回項目的「圖形」或類型。 例如，您可以根據計算或新物件建立指定結果包含完整 `Customer` 物件、僅一個成員、成員子集，還是某個完全不同的結果類型。 `select` 子句不只產生一份來源項目時，作業稱為「投影」。 使用投影來轉換資料是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式的強大功能。 如需詳細資訊，請參閱[使用 LINQ 轉換資料 (C#)](./data-transformations-with-linq.md) 和 [select 子句](../../../language-reference/keywords/select-clause.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [LINQ 查詢運算式](../../linq-query-expressions/index.md)
-- [逐步解說：用 C# 撰寫查詢](./walkthrough-writing-queries-linq.md)
+- [LINQ 查詢運算式](../../../linq/index.md)
+- [逐步解說：在 C# 中撰寫查詢](./walkthrough-writing-queries-linq.md)
 - [查詢關鍵字 (LINQ)](../../../language-reference/keywords/query-keywords.md)
 - [匿名類型](../../classes-and-structs/anonymous-types.md)

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-ms.openlocfilehash: fdcf0c25e4e6cab2c99457112b892f5d2c5bd3b4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0665ce331492a5322fdfde9e91fc1dae5b8e7ea8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930613"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424102"
 ---
 # <a name="message-security-anonymous"></a>訊息安全性匿名
-訊息安全性匿名範例示範如何使用不具用戶端驗證的訊息層級安全性來執行 Windows Communication Foundation (WCF) 應用程式, 但這需要使用伺服器的 x.509 進行伺服器驗證。證書. 用戶端與伺服器之間的所有應用程式訊息都會經過簽署及加密。 這個範例是以[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)範例為基礎。 這個範例是由用戶端主控台程式 (.exe) 和網際網路資訊服務 (IIS) 所裝載的服務程式庫 (.dll) 所組成。 服務會實作定義要求-回覆通訊模式的合約。
+訊息安全性匿名範例示範如何使用不具用戶端驗證的訊息層級安全性來執行 Windows Communication Foundation （WCF）應用程式，但這需要使用伺服器的 x.509 進行伺服器驗證。證書. 用戶端與伺服器之間的所有應用程式訊息都會經過簽署及加密。 這個範例是以[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)範例為基礎。 這個範例是由用戶端主控台程式 (.exe) 和網際網路資訊服務 (IIS) 所裝載的服務程式庫 (.dll) 所組成。 服務會實作定義要求-回覆通訊模式的合約。
 
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
@@ -57,7 +57,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>
 ```
 
- 用於服務驗證的認證會在  [ \<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)中指定。 伺服器憑證中包含的 `SubjectName` 值必須與 `findValue` 屬性的指定值相同，如下列範例程式碼所示。
+ 用於服務驗證的認證會在[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)中指定。 伺服器憑證中包含的 `SubjectName` 值必須與 `findValue` 屬性的指定值相同，如下列範例程式碼所示。
 
 ```xml
 <behaviors>
@@ -108,7 +108,7 @@ public class CalculatorService : ICalculator
 
  此範例會將 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 設定為 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust> 以驗證服務的憑證。 此項作業會在用戶端 App.config 檔的 `behaviors` 區段中完成。 這表示如果憑證位在使用者之受信任人的存放區，則此憑證就受到信任，而不會執行驗證憑證的簽發者鏈結。 範例中是基於方便而使用這項設定，這樣便能夠在不需要憑證授權單位 (CA) 發出之憑證的情況下執行此範例。 這個設定的安全性比預設值 (ChainTrust) 低。 在實際執行程式碼 (Production Code) 中使用 `PeerOrChainTrust` 之前，應該要謹慎考量這項設定。
 
- 用戶端執行會將呼叫新增至`IsCallerAnonymous`方法, 否則不會與[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)範例不同。
+ 用戶端執行會將呼叫新增至 `IsCallerAnonymous` 方法，否則不會與[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)範例不同。
 
 ```csharp
 // Create a client with a client endpoint configuration.
@@ -135,7 +135,7 @@ Console.ReadLine();
 
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。
 
-```
+```console
 IsCallerAnonymous returned: True
 Add(100,15.99) = 115.99
 Subtract(145,76.54) = 68.46
@@ -168,13 +168,13 @@ Press <ENTER> to terminate client.
 
      下列程式行會將伺服器憑證複製到用戶端受信任人的存放區中。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證的步驟。
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
 - 授與憑證私密金鑰的權限。
 
-     安裝程式 .bat 批次檔中的下列幾行, 可讓 ASP.NET worker 進程帳戶存取儲存在 LocalMachine 存放區的伺服器憑證。
+     安裝程式 .bat 批次檔中的下列幾行，可讓 ASP.NET worker 進程帳戶存取儲存在 LocalMachine 存放區的伺服器憑證。
 
     ```bat
     echo ************
@@ -187,7 +187,7 @@ Press <ENTER> to terminate client.
     ```
 
 > [!NOTE]
-> 如果您使用的是非美式英文版的 Windows，則必須編輯 Setup.bat 檔案，並以適用您所在地區的對等帳戶取代 `NT AUTHORITY\NETWORK SERVICE` 帳戶名稱。
+> 如果您使用非英文版的 Windows，則必須編輯安裝 .bat 檔案，並將 `NT AUTHORITY\NETWORK SERVICE` 帳戶名稱取代為您的區域對等檔案。
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
@@ -199,16 +199,16 @@ Press <ENTER> to terminate client.
 
 1. 確認路徑中包含 Makecert.exe 和 FindPrivateKey.exe 所在的資料夾。
 
-2. 從開發人員命令提示字元中的範例安裝資料夾執行安裝程式 .bat, Visual Studio 以系統管理員許可權執行。 這會安裝執行範例所需的所有憑證。
+2. 從開發人員命令提示字元中的範例安裝資料夾執行安裝程式 .bat，Visual Studio 以系統管理員許可權執行。 這會安裝執行範例所需的所有憑證。
 
     > [!NOTE]
     > 安裝批次檔是設計用來從 Visual Studio 的開發人員命令提示字元執行。 它要求 path 環境變數指向安裝 SDK 的目錄。 此環境變數會在 Visual Studio 的開發人員命令提示字元中自動設定。  
   
-3. 驗證的存取權的服務使用瀏覽器輸入位址 `http://localhost/servicemodelsamples/service.svc` 。  
+3. 藉由輸入 `http://localhost/servicemodelsamples/service.svc`的位址，確認使用瀏覽器存取服務。  
   
 4. 從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-5. 如果用戶端和服務無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+5. 如果用戶端和服務無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
@@ -220,21 +220,21 @@ Press <ENTER> to terminate client.
   
 4. 將用戶端程式檔複製到用戶端電腦上的用戶端目錄。 同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。  
   
-5. 在伺服器上, 于`setup.bat service`使用系統管理員許可權開啟 Visual Studio 的開發人員命令提示字元中執行。 `setup.bat` 使用引數執行時,會建立具有電腦完整功能變數名稱的服務憑證,並將服務憑證匯出至名`service`為 .cer 的檔案。  
+5. 在伺服器上，以系統管理員許可權開啟 Visual Studio，在開發人員命令提示字元中執行 `setup.bat service`。 使用 `service` 引數執行 `setup.bat`，會建立具有電腦完整功能變數名稱的服務憑證，並將服務憑證匯出至名為 .cer 的檔案。  
   
-6. 編輯 web.config 以反映新的憑證名稱 (在[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)的`findValue`屬性中), 這與電腦的完整功能變數名稱相同。  
+6. 編輯 Web.config 以反映新的憑證名稱（在[\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)的 `findValue` 屬性中），這與電腦的完整功能變數名稱相同。  
   
 7. 從服務目錄中將 Service.cer 檔案複製至用戶端電腦上的用戶端目錄。  
   
 8. 在用戶端電腦上的 Client.exe.config 檔案中，變更端點的位址值以符合服務的新位址。  
   
-9. 在用戶端上, 于 Visual Studio 以系統管理員許可權開啟的開發人員命令提示字元中執行 Importservicecert.bat。 這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。  
+9. 在用戶端上，于 Visual Studio 以系統管理員許可權開啟的開發人員命令提示字元中執行 Importservicecert.bat。 這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。  
   
-10. 在用戶端電腦上，從命令提示字元啟動 Client.exe。 如果用戶端和服務無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+10. 在用戶端電腦上，從命令提示字元啟動 Client.exe。 如果用戶端和服務無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
 - 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
 > [!NOTE]
-> 跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已在電腦上執行使用憑證的 Windows Communication Foundation (WCF) 範例, 請務必清除已安裝在 CurrentUser-TrustedPeople 存放區中的服務憑證。 若要這麼做, 請使用下列命令:`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`
+> 跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已在電腦上執行使用憑證的 Windows Communication Foundation （WCF）範例，請務必清除已安裝在 CurrentUser-TrustedPeople 存放區中的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`。

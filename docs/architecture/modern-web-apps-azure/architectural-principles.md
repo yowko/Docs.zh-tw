@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 91bb3be207c9919eb7eb0119e96e76aae94858be
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 656c92c417283366e4bb757489c189ecbc0ea815
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373758"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416693"
 ---
 # <a name="architectural-principles"></a>架構原則
 
@@ -75,7 +75,7 @@ ms.locfileid: "70373758"
 
 ### <a name="persistence-ignorance"></a>持續性無知
 
-**續性無知** (PI) 指的是需要持續的，但其程式碼不會受到持續性技術選項影響的類型。 這類的類型在 .NET 中有時稱為簡單的 CLR 物件 (POCO)，因為它們不需要繼承特定的基底類別或實作特定介面。 持續性無知的價值在於它允許以多種方式保存相同的商務模型，為應用程式提供額外的彈性。 持續性選項可能會隨著時間變更，從一種資料庫技術變為另一種技術，或是除了應用程式一開始的選項之外，可能還需要其他形式的持續性 (例如，除了關聯式資料庫之外，還使用 Redis 快取或 Azure DocumentDb)。
+**續性無知** (PI) 指的是需要持續的，但其程式碼不會受到持續性技術選項影響的類型。 這類的類型在 .NET 中有時稱為簡單的 CLR 物件 (POCO)，因為它們不需要繼承特定的基底類別或實作特定介面。 持續性無知的價值在於它允許以多種方式保存相同的商務模型，為應用程式提供額外的彈性。 持續性選擇可能會隨著時間而改變，從一種資料庫技術到另一種，或是除了應用程式啟動的任何內容之外，可能還需要其他形式的持續性（例如，使用 Redis 快取或 Azure Cosmos DB關係資料庫）。
 
 違反這個原則的一些範例包括：
 
@@ -101,7 +101,7 @@ ms.locfileid: "70373758"
 
 ## <a name="additional-resources"></a>其他資源
 
-- [JAVA 設計模式：準則](https://java-design-patterns.com/principles/)
+- [JAVA 設計模式：原則](https://java-design-patterns.com/principles/)
 - [繫結內容](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 93f07e663fbc8f61c71e5b83bb752f0b129b62ba
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 57fd4ab59a1162145087b375cbbb71816a10e78c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191870"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420345"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 語言和 .NET Framework 簡介
 
@@ -44,7 +44,7 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
  下列是一些其他 C# 資源：  
   
-- 如需此語言的一般簡介，請參閱 [C# 語言規格](../language-reference/language-specification/index.md)的第 1 章。  
+- 如需此語言的一般簡介，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的第 1 章。  
   
 - 如需有關 C# 語言特定層面的詳細資訊，請參閱 [C# 參考](../language-reference/index.md)。  
   

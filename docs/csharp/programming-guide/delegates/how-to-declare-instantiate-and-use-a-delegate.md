@@ -1,18 +1,18 @@
 ---
-title: 作法：宣告、產生和使用委派 - C# 程式設計手冊
+title: 如何：宣告、具現化和使用委派程式C#設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 565ae2a6c42de57570f564edc9d0bde5cab8efa8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: bd3d80023f6cb382f057e976dba01daf5e28db50
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590623"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423327"
 ---
-# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>作法：宣告、產生和使用委派 (C# 程式設計手冊)
+# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>如何：宣告、產生和使用委派 (C# 程式設計手冊)
 在 C# 1.0 和更新版本中，宣告委派的方式如下列範例所示。  
   
  [!code-csharp[csProgGuideDelegates#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#13)]  
@@ -23,7 +23,7 @@ ms.locfileid: "69590623"
   
  [!code-csharp[csProgGuideDelegates#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#32)]  
   
- 在 C# 2.0 和更新版本中，也可以使用匿名方法來宣告和初始化[委派](../../language-reference/keywords/delegate.md)，如下列範例所示。  
+ 在 C# 2.0 和更新版本中，也可以使用匿名方法來宣告和初始化[委派](../../language-reference/builtin-types/reference-types.md)，如下列範例所示。  
   
  [!code-csharp[csProgGuideDelegates#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#15)]  
   
@@ -72,7 +72,7 @@ ms.locfileid: "69590623"
   
      委派可以同步呼叫 (如此範例所示)，或使用 `BeginInvoke` 和 `EndInvoke` 方法以非同步方式呼叫。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [事件](../events/index.md)

@@ -2,12 +2,12 @@
 title: 非同步程式中的控制流程（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 74942ec3d293485ea6aae3940d1715af8de67c90
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 69474b3c8d4ce08da46c9ba793da58786a607d91
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352124"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420114"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>非同步程式中的控制流程（Visual Basic）
 
@@ -41,7 +41,7 @@ Class MainWindow
 
         ' SIX
         ResultsTextBox.Text &=
-            String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, contentLength)
+            vbCrLf & $"Length of the downloaded string: {contentLength}." & vbCrLf
 
     End Sub
 
@@ -101,7 +101,7 @@ Length of the downloaded string: 33946.
 
 ### <a name="download-the-program"></a>下載程式
 
-您可以從[非同步範例：非同步程式中的控制流程](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)下載本主題的應用程式。 下列步驟會開啟和執行程式。
+您可以從 [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (非同步範例：非同步程式中的控制流程) 下載本主題的應用程式。 下列步驟會開啟和執行程式。
 
 1. 解壓縮下載的檔案，然後啟動 Visual Studio。
 
@@ -117,7 +117,7 @@ Length of the downloaded string: 33946.
 
 1. 啟動 Visual Studio。
 
-2. 在功能表列上，選擇 [檔案]、[新增]、[專案]。
+2. 在功能表列上，選擇 [ **檔案**]、[ **新增**]、[ **專案**]。
 
     [ **新增專案** ] 對話方塊隨即開啟。
 
@@ -256,7 +256,7 @@ Length of the downloaded string: 33946.
 
 前兩個顯示當 `startButton_Click` 呼叫 `AccessTheWebAsync`，以及 `AccessTheWebAsync` 呼叫非同步 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 時，追蹤路徑的程式碼行。 下圖概述不同方法的呼叫。
 
-![步驟一和二](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")
+![步驟一和二](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "Asynctrace-six-ONETWO")
 
 `AccessTheWebAsync` 和 `client.GetStringAsync` 傳回的類型都是 <xref:System.Threading.Tasks.Task%601>。 針對 `AccessTheWebAsync`，TResult 是整數。 針對 `GetStringAsync`，TResult 是字串。 如需非同步方法傳回類型的詳細資訊，請參閱[非同步傳回類型（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。
 
@@ -286,9 +286,9 @@ THREE: Back in AccessTheWebAsync.
 Dim urlContents As String = Await getStringTask
 ```
 
-下圖顯示從 `client.GetStringAsync` 到指派的控制流程，以 `getStringTask`，並從建立 `getStringTask` 到 Await 運算子的應用程式。
+下圖顯示從 `client.GetStringAsync` 到指派的控制流程，以 `getStringTask` 和從建立 `getStringTask` 到 Await 運算子的應用程式。
 
-![步驟三](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")
+![步驟三](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "Asynctrace-six-三")
 
 除非傳回 `client.GetStringAsync`，否則 await 運算式會暫止 `AccessTheWebAsync`。 同時，控制項會返回 `AccessTheWebAsync` 的呼叫端 `startButton_Click`。
 
@@ -323,7 +323,7 @@ Dim contentLength As Integer = Await getLengthTask
 
 在下圖中，除非等候 `getLengthTask`，否則箭頭會顯示從 `AccessTheWebAsync` 中的 await 運算式到將值指派給 `getLengthTask` (後接 `startButton_Click` 中的正常處理) 的控制流程。
 
-![步驟四](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")
+![步驟四](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "Asynctrace-six-四")
 
 ### <a name="step-five"></a>步驟五
 
@@ -340,7 +340,7 @@ return 陳述式的運算元 `urlContents.Length` 儲存在 `AccessTheWebAsync` 
 
 下圖顯示 `client.GetStringAsync` (和 `getStringTask`) 完成後的控制權轉移。
 
-![步驟五](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")
+![步驟五](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "Asynctrace-six-五")
 
 `AccessTheWebAsync` 會執行直到完成，而且控制項會返回正在等待完成的 `startButton_Click`。
 
@@ -365,11 +365,11 @@ Dim contentLength As Integer = Await getLengthTask
 
 下圖顯示從 `AccessTheWebAsync` 到 `startButton_Click` 的控制項返回。
 
-![步驟六](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")
+![步驟六](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "Asynctrace-six-六")
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [非同步方法的傳回型別 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [逐步解說：使用 Async 和 Await 存取 Web （Visual Basic） ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [非同步範例：非同步程式中的控制流程 (C# 和 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [逐步解說：使用 Async 和 Await 存取 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (非同步範例：非同步程式中的控制流程 (C# 和 Visual Basic))

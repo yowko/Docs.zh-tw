@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 9aba83bd3e05e3f390b3d1553bd7974c64c41037
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 180de3f571426441155a19b98ab750fcdbb3888e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321338"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420652"
 ---
 # <a name="wcf-client-overview"></a>WCF 用戶端概觀
 本節描述用戶端應用程式的用途、如何設定、建立和使用 Windows Communication Foundation （WCF）用戶端，以及如何保護用戶端應用程式。  
@@ -43,7 +43,7 @@ ms.locfileid: "72321338"
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>取得服務合約、繫結和位址  
  在 WCF 中，服務和用戶端會使用 managed 屬性、介面和方法來模型合約。 若要在用戶端應用程式中連接到服務，您必須取得服務合約的類型資訊。 一般來說，您會使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](servicemodel-metadata-utility-tool-svcutil-exe.md)來執行這項操作，這會從服務下載中繼資料，並以您選擇的語言將它轉換成 managed 原始程式碼檔，並建立用戶端應用程式設定檔，您可以使用來設定 WCF 用戶端物件。 例如，如果您要建立 WCF 用戶端物件來叫用 `MyCalculatorService`，而且您知道該服務的中繼資料是在 `http://computerName/MyCalculatorService/Service.svc?wsdl` 發行，則下列程式碼範例會示範如何使用 Svcutil 來取得包含服務 co 的 `ClientCode.vb` 檔案在 managed 程式碼中 ntract。  
   
-```  
+```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
 ```  
   

@@ -2,12 +2,12 @@
 title: 非同步訊息通訊
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 非同步訊息型通訊是微服務架構的基本概念，因為它是最終保持微服務彼此之間相互獨立，同時又能同步的最佳方式。
 ms.date: 09/20/2018
-ms.openlocfilehash: c362bdaf41fee5ee20516b89b8bec12d6c0557cf
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 84eaf70178cce91a86dae8a55badb0b4ddd6a7c1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522753"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454227"
 ---
 # <a name="asynchronous-message-based-communication"></a>非同步訊息通訊
 
@@ -77,7 +77,7 @@ ms.locfileid: "72522753"
 
 - 使用完整的[事件溯源模式](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)。
 
-- 使用[寄件匣模式](http://www.kamilgrzybek.com/design/the-outbox-pattern/)：交易式資料庫資料表作為訊息佇列，而訊息佇列將是事件建立者元件的基礎，會建立事件加以發行。
+- 使用[寄件匣模式](https://www.kamilgrzybek.com/design/the-outbox-pattern/)：交易式資料庫資料表作為訊息佇列，而訊息佇列將是事件建立者元件的基礎，會建立事件加以發行。
 
 使用非同步通訊時要考慮的其他主題還有訊息等冪及訊息重複資料刪除。 這些主題將在本指南稍後的[實作微服務之間的事件通訊 (整合事件)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md)小節討論。
 

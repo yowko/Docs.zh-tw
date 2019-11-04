@@ -2,12 +2,12 @@
 title: 排序資料 (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 28cf4025d0b9bca841695c9873a0ff7972726b98
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 78b263c384895b736b11cc524befa42b4a896380
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591035"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418181"
 ---
 # <a name="sorting-data-c"></a>排序資料 (C#)
 排序作業會根據一個或多個屬性來排序序列的項目。 第一個排序準則會執行元素的主要排序； 您可以藉由指定第二個排序準則來排序每一個主要排序群組內的元素。  
@@ -20,7 +20,7 @@ ms.locfileid: "69591035"
   
 ## <a name="methods"></a>方法  
   
-|方法名稱|說明|C# 查詢運算式語法|更多資訊|  
+|方法名稱|描述|C# 查詢運算式語法|更多資訊|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |OrderBy|依遞增順序排序值。|`orderby`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
 |OrderByDescending|依遞減順序排序值。|`orderby … descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
@@ -126,10 +126,10 @@ foreach (string str in query)
 */  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Linq>
 - [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)
 - [orderby 子句](../../../language-reference/keywords/orderby-clause.md)
-- [如何：排序 Join 子句的結果](../../linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
+- [如何：排序 Join 子句的結果](../../../linq/order-the-results-of-a-join-clause.md)
 - [如何：依任何字或欄位排序或篩選文字資料 (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

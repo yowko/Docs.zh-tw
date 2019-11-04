@@ -1,5 +1,5 @@
 ---
-title: HOW TO：指定繫結來源
+title: 操作說明：指定繫結來源
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: 418dc77ce7638698d4850b06dafcea57787e1015
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4fde66b22bac6b4a2cfeb4eceb50027daadee387
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959706"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454362"
 ---
-# <a name="how-to-specify-the-binding-source"></a>作法：指定繫結來源
+# <a name="how-to-specify-the-binding-source"></a>操作說明：指定繫結來源
 在資料繫結中，繫結來源物件是指您的資料取得來源物件。 本主題說明指定繫結來源的不同方式。  
   
 ## <a name="example"></a>範例  
@@ -39,15 +39,15 @@ ms.locfileid: "69959706"
   
 |屬性|描述|  
 |--------------|-----------------|  
-|<xref:System.Windows.Data.Binding.Source%2A>|使用這個屬性將來源設定為物件的執行個體。 如果您不需要建立範圍的功能, 其中有數個屬性會繼承相同的資料內容, 您可以使用<xref:System.Windows.Data.Binding.Source%2A>屬性, 而不是`DataContext`屬性。 如需詳細資訊，請參閱 <xref:System.Windows.Data.Binding.Source%2A>。|  
-|<xref:System.Windows.Data.Binding.RelativeSource%2A>|當您想以相對於繫結目標的位置指定來源，這十分有用。 使用這個屬性的常見案例是，當您想將元素的一個屬性繫結至同一元素的其他屬性時，或當您正在樣式或範本中定義繫結時。 如需詳細資訊，請參閱 <xref:System.Windows.Data.Binding.RelativeSource%2A>。|  
-|<xref:System.Windows.Data.Binding.ElementName%2A>|指定一個字串來代表您想繫結至的元素。 當您想要繫結至應用程式中其他元素的屬性時，這十分有用。 例如, 如果您想要<xref:System.Windows.Controls.Slider>使用控制應用程式中另一個控制項的高度, 或想要<xref:System.Windows.Controls.ContentControl.Content%2A>將控制項的系結<xref:System.Windows.Controls.ListBox>至控制項的<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>屬性, 則為。 如需詳細資訊，請參閱 <xref:System.Windows.Data.Binding.ElementName%2A>。|  
+|<xref:System.Windows.Data.Binding.Source%2A>|使用這個屬性將來源設定為物件的執行個體。 如果您不需要建立範圍的功能，其中有數個屬性會繼承相同的資料內容，您可以使用 [<xref:System.Windows.Data.Binding.Source%2A>] 屬性，而不是 [`DataContext`] 屬性。 如需詳細資訊，請參閱<xref:System.Windows.Data.Binding.Source%2A>。|  
+|<xref:System.Windows.Data.Binding.RelativeSource%2A>|當您想以相對於繫結目標的位置指定來源，這十分有用。 使用這個屬性的常見案例是，當您想將元素的一個屬性繫結至同一元素的其他屬性時，或當您正在樣式或範本中定義繫結時。 如需詳細資訊，請參閱<xref:System.Windows.Data.Binding.RelativeSource%2A>。|  
+|<xref:System.Windows.Data.Binding.ElementName%2A>|指定一個字串來代表您想繫結至的元素。 當您想要繫結至應用程式中其他元素的屬性時，這十分有用。 例如，如果您想要使用 <xref:System.Windows.Controls.Slider> 來控制應用程式中另一個控制項的高度，或想要將控制項的 <xref:System.Windows.Controls.ContentControl.Content%2A> 系結至 <xref:System.Windows.Controls.ListBox> 控制項的 <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> 屬性。 如需詳細資訊，請參閱<xref:System.Windows.Data.Binding.ElementName%2A>。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
 - [屬性值繼承](../advanced/property-value-inheritance.md)
-- [資料繫結概觀](data-binding-overview.md)
+- [資料繫結概觀](../../../desktop-wpf/data/data-binding-overview.md)
 - [繫結宣告概觀](binding-declarations-overview.md)
-- [HOW-TO 主題](data-binding-how-to-topics.md)
+- [「如何」主題](data-binding-how-to-topics.md)

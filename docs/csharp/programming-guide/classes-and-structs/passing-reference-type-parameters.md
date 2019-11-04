@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: f4329c525995b8246427072d1f537d91d875ef95
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 6489d31ac1e466fdbf2b47ce1aae7e1139af0960
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596272"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419049"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>傳遞參考類型的參數 (C# 程式設計手冊)
 [參考型別](../../language-reference/keywords/reference-types.md)的變數不會直接包含其資料；它會包含其資料的參考。 以值的方式傳遞參考型別參數時，可以變更屬於參考資料的資料，例如類別成員的值。 但您無法變更參考本身的值；例如，您無法使用相同的參考，為新的物件配置記憶體，並讓其保存在方法之外。 若要這樣做，請使用 [ref](../../language-reference/keywords/ref.md) 或 [out](../../language-reference/keywords/out-parameter-modifier.md) 關鍵字來傳遞參數。 為求簡化，下列範例使用 `ref`。  
@@ -37,9 +37,9 @@ ms.locfileid: "69596272"
   
  在此範例中，參數需要以傳址方式傳遞以影響呼叫端程式中的變數。 如果您移除了方法標頭和方法呼叫中的 `ref` 關鍵字，就不會在呼叫端程式中進行任何變更。  
   
- 如需字串的詳細資訊，請參閱 [string](../../language-reference/keywords/string.md)。  
+ 如需字串的詳細資訊，請參閱 [string](../../language-reference/builtin-types/reference-types.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [傳遞參數](./passing-parameters.md)

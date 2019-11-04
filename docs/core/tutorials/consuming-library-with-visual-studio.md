@@ -4,16 +4,13 @@ description: 使用 Visual Studio 2017 來建置會呼叫另一個類別庫之�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/05/2018
-dev_langs:
-- csharp
-- vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 31a9183f541afa5365862b1e89704354cf7bd527
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: cfceb7ba384a28a09f172032f6edb6f5e495e9c0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969302"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420904"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>在 Visual Studio 2017 中取用 .NET Standard 程式庫
 
@@ -33,11 +30,11 @@ ms.locfileid: "70969302"
 
 1. 開啟您[在 Visual Studio 2017 中使用 .NET Core 組置 C# 類別庫](./library-with-visual-studio.md)主題中建立的 `ClassLibraryProjects` 方案。 在方案總管 中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案，然後從內容功能表中，選取 [新增]  >  [新增專案]。
 
-1. 在 [新增專案] 對話方塊中，展開 [Visual C#] 節點，選取後面跟著 [主控台應用程式 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 **[名稱]** 文字方塊中，輸入 "ShowCase"，然後選取 **[確定]** 按鈕。
+1. 在 [新增專案] 對話方塊中，展開 [Visual C#] 節點，選取後面跟著 [主控台應用程式 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 [名稱] 文字方塊中，輸入 "ShowCase"，然後選取 [確定] 按鈕。
 
    ![Visual Studio [新增專案] 對話方塊 - C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
 
-1. 在 **方案總管** 中，以滑鼠右鍵按一下 **ShowCase** 專案，然後在內容功能表中選取 **[設定為啟始專案]** 。
+1. 在方案總管 中，以滑鼠右鍵按一下 **ShowCase** 專案，然後在內容功能表中選取 [設定為啟始專案]。
 
    ![Visual Studio 專案的設定啟始專案操作功能表 - C#](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
@@ -45,7 +42,7 @@ ms.locfileid: "70969302"
 
    ![Visual Studio 專案的 [新增參考] 操作功能表 - C#](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
-1. 在 **[參考管理員]** 對話方塊中，選取**StringLibrary**、您的類別庫專案，然後選取 **[確定]** 按鈕。
+1. 在 [參考管理員] 對話方塊中，選取**StringLibrary**、您的類別庫專案，然後選取 [確定] 按鈕。
 
    ![Visual Studio [參考管理員] 對話方塊 - C#](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
@@ -65,11 +62,11 @@ ms.locfileid: "70969302"
 
 1. 開啟您[在 Visual Studio 2017 中使用 .NET Core 建置類別庫](vb-library-with-visual-studio.md)主題中建立的 `ClassLibraryProjects` 解決方案。 在方案總管 中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案，然後從內容功能表中，選取 [新增]  >  [新增專案]。
 
-1. 在 [新增專案] 對話方塊中，展開 [Visual Basic] 節點，選取後面跟著 [主控台應用程式 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 **[名稱]** 文字方塊中，輸入 "ShowCase"，然後選取 **[確定]** 按鈕。
+1. 在 [新增專案] 對話方塊中，展開 [Visual Basic] 節點，選取後面跟著 [主控台應用程式 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 [名稱] 文字方塊中，輸入 "ShowCase"，然後選取 [確定] 按鈕。
 
    ![Visual Studio [新增專案] 對話方塊 - Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
 
-1. 在 **方案總管** 中，以滑鼠右鍵按一下 **ShowCase** 專案，然後在內容功能表中選取 **[設定為啟始專案]** 。 
+1. 在方案總管 中，以滑鼠右鍵按一下 **ShowCase** 專案，然後在內容功能表中選取 [設定為啟始專案]。 
 
    ![Visual Studio 專案的設定啟始專案操作功能表 - Visual Basic](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
@@ -77,7 +74,7 @@ ms.locfileid: "70969302"
 
    ![Visual Studio 專案的 [新增參考] 操作功能表 - Visual Basic](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
-1. 在 **[參考管理員]** 對話方塊中，選取**StringLibrary**、您的類別庫專案，然後選取 **[確定]** 按鈕。
+1. 在 [參考管理員] 對話方塊中，選取**StringLibrary**、您的類別庫專案，然後選取 [確定] 按鈕。
 
    ![Visual Studio [參考管理員] 對話方塊 - Visual Basic](./media/consuming-library-with-visual-studio/manage-project-references.png)
 

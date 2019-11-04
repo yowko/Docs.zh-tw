@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 8ecf399e48da12a9dee19bb217b8668c6a53d3ad
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 30419200cfce785d7fcbbf59650241580a1f0ce4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191866"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454969"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# 參考)
 
@@ -33,7 +33,7 @@ ms.locfileid: "73191866"
 - 在[`readonly` 成員定義](#readonly-member-examples)中，`readonly` 表示 `struct` 的成員不會改變結構的內部狀態。
 - 在[`ref readonly` 方法](#ref-readonly-return-example)傳回中，`readonly` 修飾詞表示方法會傳回參考，而且不允許寫入該參考。
 
-`readonly sturct` 和 `ref readonly` 內容已在7.2 中C#新增。 已在8.0 中C#新增 `readonly` 結構成員
+`readonly struct` 和 `ref readonly` 內容已在7.2 中C#新增。 已在8.0 中C#新增 `readonly` 結構成員
 
 ## <a name="readonly-field-example"></a>唯讀欄位範例
 
@@ -161,6 +161,6 @@ public string Message { readonly get; set; }
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [修飾詞](modifiers.md)
+- [修飾詞](index.md)
 - [const](const.md)
 - [欄位](../../programming-guide/classes-and-structs/fields.md)

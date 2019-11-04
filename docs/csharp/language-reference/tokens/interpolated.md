@@ -11,12 +11,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: 5f0388d90119455833eb6dba6ac808cdc8517865
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cda8582da9ca8262ec2ce6bcfbb76e2e2f5f6006
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73101662"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421848"
 ---
 # <a name="---string-interpolation-c-reference"></a>$-字串插補C# （參考）
 
@@ -58,7 +58,7 @@ ms.locfileid: "73101662"
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-內插逐字字串是以 `$` 字元開頭，後面接著 `@` 字元。 如需逐字字串的詳細資訊，請參閱[字串](../keywords/string.md)和[逐字識別碼](verbatim.md)主題。
+內插逐字字串是以 `$` 字元開頭，後面接著 `@` 字元。 如需逐字字串的詳細資訊，請參閱[字串](../builtin-types/reference-types.md)和[逐字識別碼](verbatim.md)主題。
 
 > [!NOTE]
 > 從C# 8.0 開始，您可以使用`$`，並以任何順序`@`權杖： `$@"..."`和`@$"..."`都是有效的內插逐字字串。 在舊版C#中，`$` token 必須出現在 `@` token 前面。

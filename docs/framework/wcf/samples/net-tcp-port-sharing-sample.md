@@ -2,12 +2,12 @@
 title: Net.TCP Port Sharing 範例
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 56d248a8349e4f38bfdef6a887fc41b117402d02
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 240579ef36405d730bb04ea171846c8e5ef9322e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039192"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416750"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Port Sharing 範例
 TCP/IP 通訊協定使用一個 16 位元的數字 (稱為連接埠) 來區分在同一部電腦上執行的多個網路應用程式連線。 如果應用程式正在接聽某個連接埠，則該連接埠的所有 TCP 流量就會流向該應用程式。 其他應用程式將無法同時接聽該連接埠。  
@@ -17,17 +17,17 @@ TCP/IP 通訊協定使用一個 16 位元的數字 (稱為連接埠) 來區分�
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
  許多通訊協定都使用一個標準或預設的連接埠號碼。 例如，HTTP 通訊協定通常使用 TCP 通訊埠 80。 Internet Information Services (IIS) 有一個可在多個 HTTP 應用程式之間共用通訊埠的接聽項。 IIS 會直接接聽連接埠，並依照訊息資料流內的資訊將訊息轉送至適當的應用程式。 這樣一來，多個 HTTP 應用程式就可以使用相同的連接埠號碼，而不用競相保留該連接埠以接收訊息。  
   
- NetTcp 埠共用是一種 Windows Communication Foundation (WCF) 功能, 同樣允許多個網路應用程式共用單一通訊埠。 NetTcp Port Sharing Service 會透過 net.tcp 通訊協定來接受連線，並依據該連線的目的地位址來轉送訊息。  
+ NetTcp 埠共用是一種 Windows Communication Foundation （WCF）功能，同樣允許多個網路應用程式共用單一通訊埠。 NetTcp Port Sharing Service 會透過 net.tcp 通訊協定來接受連線，並依據該連線的目的地位址來轉送訊息。  
   
  NetTcp Port Sharing Service 預設並未啟用。 在執行此範例之前，您必須手動啟用服務。 如需詳細資訊，請參閱[如何：啟用 Net.tcp 埠共用服務](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)。 如果服務已停用，則當啟動伺服器應用程式時，會擲回例外狀況。  
   
-```  
+```console
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
 ```  
   
@@ -51,7 +51,7 @@ host.Open();
 
  啟用了連接埠共用後，您可以多次執行服務，而不用擔心會碰到連接埠號碼衝突情況。 如果您變更程式碼來停用連接埠共用，啟動兩組相同的服務會導致第二個服務失敗並傳回 <xref:System.ServiceModel.AddressAlreadyInUseException>。  
   
-```  
+```console  
 Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is already a listener on IP endpoint 0.0.0.0:9000.  Make sure that you are not trying to use this endpoint multiple times in your application and that there are no other applications listening on this endpoint. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted  
 ```  
   
@@ -104,14 +104,14 @@ class client
 
  每個服務的執行個體都會列出自己的唯一號碼與位址。 例如，當您執行 service.exe 時，可能會看到下列文字。  
   
-```  
+```console  
 Service #4381 listening on net.tcp://localhost:9000/calculator/4381.  
 Press <ENTER> to terminate service.  
 ```  
   
  輸入當您執行 client.exe 時，在此處看到的服務號碼。  
   
-```  
+```console  
 Enter the service number to test: 4381  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
@@ -127,7 +127,7 @@ Press <ENTER> to terminate client.
   
 1. 使用下列命令安裝 ASP.NET 4.0。  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
@@ -137,4 +137,4 @@ Press <ENTER> to terminate client.
   
 4. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-5. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。 有關執行本範例的特定詳細資訊，已經包含在先前的「執行範例」一節中。  
+5. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。 有關執行本範例的特定詳細資訊，已經包含在先前的「執行範例」一節中。  

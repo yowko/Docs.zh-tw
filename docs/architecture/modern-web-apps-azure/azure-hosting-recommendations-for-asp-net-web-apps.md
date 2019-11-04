@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | AS
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: ed8771a4d79b45d8fad0e5309c886c2e00402ec7
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71331993"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416719"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Web Core 應用程式的 Azure 裝載建議
 
@@ -116,7 +116,7 @@ Azure 提供各種資料儲存選項，以便您的應用程式可以針對有�
 
 針對交易式的關聯式資料，Azure SQL Database 是最佳選項。 對於高性能的唯讀資料，由 Azure SQL Database 支援之 Redis 快取是很好的解決方案。
 
-非結構化的 JSON 資料可以透過各種方式進行儲存；從 SQL 資料庫的資料列到 Blob 或 Azure 儲存體中的表單到 DocumentDB。 其中 DocumentDB 提供最佳的查詢功能，且是大量 JSON 型文件的推薦選項，因為這些文件必須支援查詢。
+非結構化 JSON 資料可以多種方式儲存，從 SQL Database 資料行到 Azure 儲存體中的 Blob 或資料表，到 Azure Cosmos DB。 在這些情況下，Azure Cosmos DB 提供最佳查詢功能，而且對於必須支援查詢的大量 JSON 檔而言，這是建議的選項。
 
 用於協調應用程式行為的暫時性命令或事件型資料，可以使用 Azure 服務匯流排或 Azure 儲存體佇列。 Azure 儲存體匯流排提供更大的靈活性，並且是應用程式內部和之間非一般訊息的建議服務。
 
@@ -154,4 +154,4 @@ Azure 提供各種資料儲存選項，以便您的應用程式可以針對有�
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
->[上一步](development-process-for-azure.md)
+>[上一篇](development-process-for-azure.md)

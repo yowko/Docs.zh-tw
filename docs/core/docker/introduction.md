@@ -3,12 +3,12 @@ title: Docker 簡介
 description: 本文在 .NET Core 應用程式內容中提供了 Docker 的簡介及概觀。
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: af1213eefb013f8911a865e7e2e318a8beadc9a5
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 7f19b12d84543e8ae69c2f8728872bf94ef0536f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038468"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416650"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 簡介
 
@@ -72,7 +72,7 @@ Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET 
 
 ## <a name="next-steps"></a>後續步驟
 
-- [了解如何將 .NET Core 應用程式容器化。](build-docker-netcore-container.md)
+- [了解如何將 .NET Core 應用程式容器化。](build-container.md)
 - [了解如何將 ASP.NET Core 應用程式容器化。](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 - [嘗試了解 ASP.NET Core 微服務教學課程。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro) \(英文\)
 - [了解 Visual Studio 中的容器工具](/visualstudio/containers/overview)

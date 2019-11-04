@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 3319cfa6b98e3f4b9b8afa070c4784c03d2750ef
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 1b3ceb2671a4c21f1df89599c9b8c0bc107a7435
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596382"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419261"
 ---
 # <a name="objects-c-programming-guide"></a>物件 (C# 程式設計手冊)
 類別或結構定義就像是指定型別可以做什麼的藍圖。 物件基本上是根據藍圖配置和設定的記憶體區塊。 程式可建立許多同類別的物件。 物件也稱為執行個體，可儲存在具名變數或陣列或集合中。 用戶端程式碼是使用這些變數呼叫方法，並存取物件公用屬性的程式碼。 在 C# 之類的物件導向語言中，一般程式包含多個動態互動的物件。  
@@ -19,7 +19,7 @@ ms.locfileid: "69596382"
 > [!NOTE]
 > 靜態型別的行為會和此處描述的不同。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](./static-classes-and-static-class-members.md)。
   
-## <a name="struct-instances-vs-class-instances"></a>結構執行個體與類別執行個體  
+## <a name="struct-instances-vs-class-instances"></a>結構實例與類別實例的比較  
  因為類別是參考型別，所以類別物件的變數會將參考保留在 Managed 堆積上的物件位址中。 如果同型別的第二個物件指派給第一個物件，則這兩個變數都會參考位於該位址的物件。 本主題稍後會詳細討論這一點。  
   
  使用 [new 運算子](../../language-reference/operators/new-operator.md) 建立類別的執行個體。 在下例中，`Person` 是型別，而 `person1` 和 `person 2` 則是該型別的執行個體或物件。  
@@ -35,10 +35,10 @@ ms.locfileid: "69596382"
 > [!NOTE]
 > 通用語言執行平台中，已高度最佳化 Managed 堆積上的記憶體配置和解除配置。 在大部分情況下，在堆積上配置類別執行個體與在堆疊上配置結構執行個體，效能成本沒有任何重大差異。
   
-## <a name="object-identity-vs-value-equality"></a>物件識別與實值相等  
+## <a name="object-identity-vs-value-equality"></a>物件識別與值相等比較  
  當您比較兩個物件是否相等時，您必須先區別是否想要知道這兩個變數在記憶體中是否代表相同的物件，或者其欄位的一或多個值是否相等。 如果您打算比較值，就必須考慮物件是實值型別 (結構) 還是參考型別 (類別、委派、陣列) 的執行個體。  
   
-- 若要判斷兩個類別執行個體在記憶體中是否參考相同的位置 (表示它們具有相同的「身分識別」  )，請使用靜態 <xref:System.Object.Equals%2A> 方法。 (<xref:System.Object?displayProperty=nameWithType> 是所有實值型別和參考型別的隱含基底類別，包括使用者定義的結構和類別。)  
+- 若要判斷兩個類別執行個體在記憶體中是否參考相同的位置 (表示它們具有相同的「身分識別」)，請使用靜態 <xref:System.Object.Equals%2A> 方法。 (<xref:System.Object?displayProperty=nameWithType> 是所有實值型別和參考型別的隱含基底類別，包括使用者定義的結構和類別。)  
   
 - 若要判斷兩個結構執行個體中的執行個體欄位是否有相同的值，請使用 <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> 方法。 因為所有結構都是隱含繼承 <xref:System.ValueType?displayProperty=nameWithType>，所以您可以直接在物件上呼叫方法，如以下範例︰  
   
@@ -61,10 +61,10 @@ ms.locfileid: "69596382"
   
 - [事件](../events/index.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
-- [object](../../language-reference/keywords/object.md)
+- [object](../../language-reference/builtin-types/reference-types.md)
 - [繼承](./inheritance.md)
 - [class](../../language-reference/keywords/class.md)
 - [struct](../../language-reference/keywords/struct.md)

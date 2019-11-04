@@ -1,5 +1,5 @@
 ---
-title: 作法：將字串轉換為數值 - C# 程式設計指南
+title: 如何：將字串轉換為數字程式C#設計指南
 ms.custom: seodec18
 ms.date: 02/11/2019
 helpviewer_keywords:
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 377074bf09cf1e24ec022cee506588a9dcb8cb80
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
-ms.translationtype: HT
+ms.openlocfilehash: c39602afbece4faaf6599a5c76f5746defffe03a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133710"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417638"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>作法：將字串轉換為數值 (C# 程式設計指南)
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>如何：將字串轉換為數值 (C# 程式設計手冊)
 
-您可以透過呼叫可在數個數值型別 (`int`、`long`、`double` 等) 上找到的 `Parse` 或 `TryParse` 方法，或透過使用 <xref:System.Convert?displayProperty=nameWithType> 類別中的方法，將 [string](../../language-reference/keywords/string.md) 轉換為數字。  
+您可以透過呼叫可在數個數值型別 (`int`、`long`、`double` 等) 上找到的 `Parse` 或 `TryParse` 方法，或透過使用 <xref:System.Convert?displayProperty=nameWithType> 類別中的方法，將 [string](../../language-reference/builtin-types/reference-types.md) 轉換為數字。  
   
  如果您有一個字串，呼叫 `TryParse` 方法 (例如，[`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) 或 `Parse` 方法 (例如，[`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)) 相較之下將更有效率且直接。  使用 <xref:System.Convert> 方法比實作 <xref:System.IConvertible> 的一般物件更有用。  
   
@@ -51,12 +51,12 @@ ms.locfileid: "70133710"
 |`uint`|<xref:System.Convert.ToUInt32%28System.String%29>|  
 |`ulong`|<xref:System.Convert.ToUInt64%28System.String%29>|  
   
- 此範例會呼叫 <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> 方法，將輸入字串轉換為 [int](../../language-reference/builtin-types/integral-numeric-types.md)。範例會攔截由這個方法擲回之兩種最常見的例外狀況，分別是 <xref:System.FormatException> 與 <xref:System.OverflowException>。 若產生的數字可在不超過 <xref:System.Int32.MaxValue?displayProperty=nameWithType> 的情況下遞增，範例會增加 1 到結果並顯示輸出。  
+ 下列範例會呼叫 <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> 方法，將輸入字串轉換為[int](../../language-reference/builtin-types/integral-numeric-types.md)。此範例會攔截可由這個方法擲回的兩個最常見的例外狀況，<xref:System.FormatException> 和 <xref:System.OverflowException>。 若產生的數字可在不超過 <xref:System.Int32.MaxValue?displayProperty=nameWithType> 的情況下遞增，範例會增加 1 到結果並顯示輸出。  
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [型別](./index.md)
-- [如何：判斷字串是否代表數值](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [如何：判斷字串是否表示數值](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [Sample: .NET Core WinForms Formatting Utility (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) (範例：.NET Core WinForms 格式化公用程式 (C#))

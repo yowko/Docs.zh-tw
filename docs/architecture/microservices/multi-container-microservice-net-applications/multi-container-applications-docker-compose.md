@@ -2,16 +2,16 @@
 title: 使用 docker-compose.yml 定義多容器應用程式
 description: 如何使用 docker-compose.yml 指定多容器應用程式的微服務組合。
 ms.date: 10/02/2018
-ms.openlocfilehash: 8c0f1a654d27b32e613b84d3862198ad96f32e1c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 938a9aa192f82628051bd7dc065f661f510ba544
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039737"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416710"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定義多容器應用程式
 
-在本指南中，[docker-compose.yml](https://docs.docker.com/compose/compose-file/) 檔案是在下列這節中介紹：[步驟 4.建置多容器 Docker 應用程式時，在 docker-compose.yml 中定義您的服務](../docker-application-development-process/docker-app-development-workflow.md#step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application)。 不過，有一些其他方法可以使用值得深入探索的 docker-compose 檔案。
+在本指南中， [docker-compose.dev.debug.yml. yml](https://docs.docker.com/compose/compose-file/)檔案已在步驟4一節中引進[。建立多容器 Docker 應用程式時，請在 docker-compose.dev.debug.yml yml 中定義您的服務](../docker-application-development-process/docker-app-development-workflow.md#step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application)。 不過，有一些其他方法可以使用值得深入探索的 docker-compose 檔案。
 
 例如，您可以明確地描述要如何在 docker-compose.yml 檔案中部署多容器應用程式。 您也可以選擇性地描述要如何建置自訂 Docker 映像 (也可以使用 Docker CLI 來建置自訂 Docker 映像)。
 
@@ -84,7 +84,7 @@ services:
 
 此檔案中的根金鑰就是服務。 在該金鑰下，您定義想要在執行 `docker-compose up` 命令或是使用此 docker-compose.yml 檔案從 Visual Studio 部署時所部署和執行的服務。 在此情況下，docker-compose.yml 檔案已定義多個服務，如下表所述。
 
-| 服務名稱 | 說明 |
+| 服務名稱 | 描述 |
 |--------------|-------------|
 | webmvc       | 容器，包括使用伺服器端 C\# 之微服務的 ASP.NET Core MVC 應用程式|
 | catalog.api  | 容器，包括 Catalog ASP.NET Core Web API 微服務 |
@@ -446,11 +446,11 @@ ENTRYPOINT ["dotnet", "run"]
 
 .NET 小組已執行重要工作，讓 .NET Core 和 ASP.NET Core 成為容器最佳化架構。 .NET Core 不僅已是磁碟使用量低的輕量型架構，從 2.1 版起，小組還將重點放在針對三大情境將 Docker 映像最佳化，以便於 *dotnet/core*的 Docker Hub 登錄中加以發佈：
 
-1. **開發**：最優先事項是能夠快速進行整合，及對變更進行偵錯，而大小則次之。
+1. **開發**：其優先順序是能夠快速逐一查看和調試變更，而其中的大小為次要。
 
-2. **組建**：最優先事項是編譯應用程式，以及包含二進位檔和其他相依性來將二進位檔最佳化。
+2. **建置**：最優先事項是編譯應用程式，以及包含二進位檔和其他相依性來將二進位檔最佳化。
 
-3. **生產**：因為重點在於快速地部署和啟動容器，所以這些映像只限於二進位檔及執行應用程式所需的內容。
+3. **生產**：焦點是快速部署和啟動容器的位置，因此這些映射僅限於執行應用程式所需的二進位檔和內容。
 
 為達到這項目標，.NET 小組目前在 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (Docker Hub) 提供 四種基本變體：
 
@@ -467,7 +467,7 @@ ENTRYPOINT ["dotnet", "run"]
   <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
 
 - **建置 .NET Core 應用程式的 Docker 映像**  
-  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 > [!div class="step-by-step"]
 > [上一頁](data-driven-crud-microservice.md)

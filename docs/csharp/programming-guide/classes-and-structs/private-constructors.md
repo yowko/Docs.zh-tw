@@ -6,15 +6,15 @@ helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: faa5132845a2d463d3b7d74dc0e0cce21dca61aa
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 918d39b8aed25395106942524baa3b51221933dc
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596221"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418879"
 ---
 # <a name="private-constructors-c-programming-guide"></a>私用建構函式 (C# 程式設計手冊)
-私用建構函式是一種特殊的執行個體建構函式。 它通常會用於只包含靜態成員的類別。 如果類別具有一或多個私用建構函式，而且沒有任何公用建構函式，則其他類別 (巢狀類別除外) 無法建立此類別的執行個體。 例如：  
+私用建構函式是一種特殊的執行個體建構函式。 它通常會用於只包含靜態成員的類別。 如果類別具有一或多個私用建構函式，而且沒有任何公用建構函式，則其他類別 (巢狀類別除外) 無法建立此類別的執行個體。 例如:  
   
  [!code-csharp[csProgGuideObjects#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#11)]  
   
@@ -33,9 +33,9 @@ ms.locfileid: "69596221"
   
 ## <a name="c-language-specification"></a>C# 語言規格  
 
-如需詳細資訊，請參閱 [C# 語言規格](../../language-reference/language-specification/index.md)的[私用建構式](~/_csharplang/spec/classes.md#private-constructors)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的[私用建構式](~/_csharplang/spec/classes.md#private-constructors)。 語言規格是 C# 語法及用法的限定來源。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](./index.md)

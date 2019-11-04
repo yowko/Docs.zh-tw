@@ -39,14 +39,16 @@
           href: tutorials/object-detection-onnx.md
         - name: 使用 TensorFlow 將情感分類 (文字分類)
           href: tutorials/text-classification-tf.md
-    - name: 工具
+    - name: 模型建立器與 CLI
       items:
-        - name: 使用模型建立器預測價格
+        - name: 預測價格 (模型建立器與迴歸)
           href: tutorials/predict-prices-with-model-builder.md
         - name: 使用 ML.NET CLI 分析情感
           href: tutorials/mlnet-cli.md
-        - name: 使用 Model Builder 及 Razor Pages 分析情感
+        - name: 在 Razor Pages 中分析情感 (模型建立器與二元分類)
           href: tutorials/sentiment-analysis-model-builder.md
+        - name: 分類健康狀態違規 (模型建立器與多元分類)
+          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: 使用 Infer.NET 進行機率性程式設計

@@ -3,16 +3,16 @@ title: 建立 gRPC 用戶端程式庫-適用于 WCF 開發人員的 gRPC
 description: 討論 gRPC 服務的共用用戶端程式庫/套件。
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 12c628d2b58199a8103c60aa123bb75a34e0797d
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: b403e7e1638496947ac7f6fc976cbeab2f435bbf
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846698"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419926"
 ---
 # <a name="create-grpc-client-libraries"></a>建立 gRPC 用戶端程式庫
 
-不需要散發 gPRC 應用程式的用戶端程式庫。 您可以在組織內建立 `.proto` 檔案的共用程式庫，而其他小組則可以使用這些檔案在自己的專案中產生用戶端程式代碼。 但是，如果您有私用的 NuGet 存放庫，而且許多其他小組使用 .NET Core，則建立和發佈用戶端 NuGet 套件做為服務專案的一部分，可能是共用和升級服務的好方法。
+不需要散發 gRPC 應用程式的用戶端程式庫。 您可以在組織內建立 `.proto` 檔案的共用程式庫，而其他小組則可以使用這些檔案在自己的專案中產生用戶端程式代碼。 但是，如果您有私用的 NuGet 存放庫，而且許多其他小組使用 .NET Core，則建立和發佈用戶端 NuGet 套件做為服務專案的一部分，可能是共用和升級服務的好方法。
 
 散發用戶端程式庫的優點之一，是您可以使用實用的「便利性」方法和屬性，來增強產生的 gRPC 和 Protobuf 類別。 在用戶端程式代碼中，就像在伺服器中一樣，所有類別都會宣告為 `partial`，因此您可以在不編輯產生的程式碼的情況下擴充它們。 這表示很容易就能將多個函式、方法、計算屬性和其他新增至基本類型。
 
@@ -23,7 +23,7 @@ ms.locfileid: "72846698"
 
 ## <a name="useful-extensions"></a>有用的擴充功能
 
-.NET 中有兩個常用的介面，可用來處理物件的資料流程： <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.IObservable%601>。 從 .NET Core 3.0 和C# 8.0 開始，有一個用來非同步處理資料流程的<xref:System.Collections.Generic.IAsyncEnumerable%601>介面，以及使用介面的`await foreach`語法。 本節提供可重複使用的程式碼，以將這些介面套用至 gRPC 資料流程。
+.NET 中有兩個常用的介面，可用來處理物件的資料流程： <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.IObservable%601>。 從 .NET Core 3.0 和C# 8.0 開始，有一個用來非同步處理資料流程的 <xref:System.Collections.Generic.IAsyncEnumerable%601> 介面，以及使用介面的 `await foreach` 語法。 本節提供可重複使用的程式碼，以將這些介面套用至 gRPC 資料流程。
 
 有了 .NET Core gRPC 用戶端程式庫，`IAsyncStreamReader<T>` 的 `ReadAllAsync` 擴充方法會建立 `IAsyncEnumerable<T>`。 對於使用被動程式設計的開發人員而言，建立 `IObservable<T>` 的同等擴充方法可能如下所示。
 

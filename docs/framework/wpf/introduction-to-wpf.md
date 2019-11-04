@@ -6,12 +6,12 @@ ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 35290796b89262cafd8bce63bb97da203853f569
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d8ea49bbe400c5ec478a94ad7c1adb759af28abb
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920710"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454190"
 ---
 # <a name="wpf-overview"></a>WPF 概觀
 
@@ -612,7 +612,7 @@ WPF 控制項的預設使用者介面通常是從其他控制項和圖案建構�
 
 資源與資源字典是 WPF 支援佈景主題和面板的基礎。
 
-如需詳細資訊，請參閱[資源](advanced/xaml-resources.md)。
+如需詳細資訊，請參閱[資源](../../desktop-wpf/fundamentals/xaml-resources-define.md)。
 
 ### <a name="custom-controls"></a>自訂控制項
 
