@@ -7,25 +7,25 @@ helpviewer_keywords:
 - reusing resources [WPF]
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
-ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 568ff84c6de2d80527921fe6f3179e6bb123f72f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053479"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458714"
 ---
-# <a name="resources-how-to-topics"></a><span data-ttu-id="b10fd-102">資源 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="b10fd-102">Resources How-to Topics</span></span>
-<span data-ttu-id="b10fd-103">在本節中的主題描述如何使用 Windows Presentation Foundation (WPF) 資源。</span><span class="sxs-lookup"><span data-stu-id="b10fd-103">The topics in this section describe how to use Windows Presentation Foundation (WPF) resources.</span></span>  
+# <a name="resources-how-to-topics"></a><span data-ttu-id="66da0-102">資源 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="66da0-102">Resources How-to Topics</span></span>
+<span data-ttu-id="66da0-103">本節中的主題說明如何使用 Windows Presentation Foundation （WPF）資源。</span><span class="sxs-lookup"><span data-stu-id="66da0-103">The topics in this section describe how to use Windows Presentation Foundation (WPF) resources.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b10fd-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="b10fd-104">In This Section</span></span>  
- [<span data-ttu-id="b10fd-105">定義和參考資源</span><span class="sxs-lookup"><span data-stu-id="b10fd-105">Define and Reference a Resource</span></span>](how-to-define-and-reference-a-resource.md)  
- [<span data-ttu-id="b10fd-106">使用應用程式資源</span><span class="sxs-lookup"><span data-stu-id="b10fd-106">Use Application Resources</span></span>](how-to-use-application-resources.md)  
- [<span data-ttu-id="b10fd-107">使用 SystemFonts</span><span class="sxs-lookup"><span data-stu-id="b10fd-107">Use SystemFonts</span></span>](how-to-use-systemfonts.md)  
- [<span data-ttu-id="b10fd-108">使用系統字型索引鍵</span><span class="sxs-lookup"><span data-stu-id="b10fd-108">Use System Fonts Keys</span></span>](how-to-use-system-fonts-keys.md)  
- [<span data-ttu-id="b10fd-109">使用 SystemParameters</span><span class="sxs-lookup"><span data-stu-id="b10fd-109">Use SystemParameters</span></span>](how-to-use-systemparameters.md)  
- [<span data-ttu-id="b10fd-110">使用系統參數索引鍵</span><span class="sxs-lookup"><span data-stu-id="b10fd-110">Use System Parameters Keys</span></span>](how-to-use-system-parameters-keys.md)  
+## <a name="in-this-section"></a><span data-ttu-id="66da0-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="66da0-104">In This Section</span></span>  
+ [<span data-ttu-id="66da0-105">定義和參考資源</span><span class="sxs-lookup"><span data-stu-id="66da0-105">Define and Reference a Resource</span></span>](how-to-define-and-reference-a-resource.md)  
+ [<span data-ttu-id="66da0-106">使用應用程式資源</span><span class="sxs-lookup"><span data-stu-id="66da0-106">Use Application Resources</span></span>](how-to-use-application-resources.md)  
+ [<span data-ttu-id="66da0-107">使用 SystemFonts</span><span class="sxs-lookup"><span data-stu-id="66da0-107">Use SystemFonts</span></span>](how-to-use-systemfonts.md)  
+ [<span data-ttu-id="66da0-108">使用系統字型索引鍵</span><span class="sxs-lookup"><span data-stu-id="66da0-108">Use System Fonts Keys</span></span>](how-to-use-system-fonts-keys.md)  
+ [<span data-ttu-id="66da0-109">使用 SystemParameters</span><span class="sxs-lookup"><span data-stu-id="66da0-109">Use SystemParameters</span></span>](how-to-use-systemparameters.md)  
+ [<span data-ttu-id="66da0-110">使用系統參數索引鍵</span><span class="sxs-lookup"><span data-stu-id="66da0-110">Use System Parameters Keys</span></span>](how-to-use-system-parameters-keys.md)  
   
-## <a name="reference"></a><span data-ttu-id="b10fd-111">參考資料</span><span class="sxs-lookup"><span data-stu-id="b10fd-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="66da0-111">參考資料</span><span class="sxs-lookup"><span data-stu-id="66da0-111">Reference</span></span>  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
   
  <xref:System.Windows.SystemColors>  
@@ -34,5 +34,5 @@ ms.locfileid: "62053479"
   
  <xref:System.Windows.SystemFonts>  
   
-## <a name="related-sections"></a><span data-ttu-id="b10fd-112">相關章節</span><span class="sxs-lookup"><span data-stu-id="b10fd-112">Related Sections</span></span>  
- [<span data-ttu-id="b10fd-113">XAML 資源</span><span class="sxs-lookup"><span data-stu-id="b10fd-113">XAML Resources</span></span>](xaml-resources.md)
+## <a name="related-sections"></a><span data-ttu-id="66da0-112">相關章節</span><span class="sxs-lookup"><span data-stu-id="66da0-112">Related Sections</span></span>  
+ [<span data-ttu-id="66da0-113">XAML 資源</span><span class="sxs-lookup"><span data-stu-id="66da0-113">XAML Resources</span></span>](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
