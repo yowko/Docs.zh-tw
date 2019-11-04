@@ -6,12 +6,12 @@ helpviewer_keywords:
 - buttons [WPF]
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-ms.openlocfilehash: bf75677ee6a6a607a8779edf5af5e63f5c92b230
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: a3990a7dc446c264e0865e15dadcdaf3ba0a0ff6
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920167"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460058"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>逐步解說：建立自訂動畫按鈕
 正如其名，Windows Presentation Foundation （WPF）非常適合為客戶提供豐富的呈現體驗。 這些逐步解說示範如何自訂按鈕的外觀和行為（包括動畫）。 這項自訂作業是使用樣式和範本來完成，因此您可以輕鬆地將此自訂按鈕套用至應用程式中的任何按鈕。 下圖顯示您將建立的自訂按鈕。
@@ -26,7 +26,7 @@ ms.locfileid: "72920167"
  [使用 XAML 建立按鈕](walkthrough-create-a-button-by-using-xaml.md)示範如何使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 和 Visual Studio，建立具有自訂行為的按鈕。
 
 ## <a name="related-sections"></a>相關章節
- [樣式設定和範本化](styling-and-templating.md)描述如何使用樣式和範本來決定控制項的外觀和行為。
+ [樣式設定和範本化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)描述如何使用樣式和範本來決定控制項的外觀和行為。
 
  [動畫總覽](../graphics-multimedia/animation-overview.md)描述如何使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 動畫和計時系統來製作物件的動畫。
 

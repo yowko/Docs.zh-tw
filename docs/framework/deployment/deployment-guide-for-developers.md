@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 1f13053ea23e45b66b4767295af28a758f474ab5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3e87ba8c9442c4bba24e4e569cd20bdbdc76f6ec
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121545"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457988"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
 開發人員若要讓自己的應用程式一起安裝從 .NET Framework 4.5 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的任何 .NET Framework 版本，可參考本主題提供的資訊。
@@ -168,7 +168,7 @@ InstallAware 可以從單一來源來建立 Windows 應用程式 (APPX)、Window
 
 ### <a name="windows-installer-xml-wix-deployment"></a>Windows Installer XML (WiX) 部署
 
-Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows 安裝套件。 WiX 支援命令列環境，該環境可整合至您的建置程序中，用來建置 MSI 與 MSM 安裝封裝。 您可以使用 WiX [將 .NET Framework 指定為必要條件](http://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)，或是 [建立 Chainer](http://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) ，以便完全掌控 .NET Framework 部署經驗。 如需 WiX 的詳細資訊，請參閱 [Windows Installer XML (WiX) 工具組](http://wixtoolset.org/) 網站。
+Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows 安裝套件。 WiX 支援命令列環境，該環境可整合至您的建置程序中，用來建置 MSI 與 MSM 安裝封裝。 您可以使用 WiX [將 .NET Framework 指定為必要條件](https://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)，或是 [建立 Chainer](https://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) ，以便完全掌控 .NET Framework 部署經驗。 如需 WiX 的詳細資訊，請參閱 [Windows Installer XML (WiX) 工具組](https://wixtoolset.org/) 網站。
 
 <a name="installing_manually"></a>
 
@@ -288,7 +288,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 | | |
 |-|-|
-| 機碼 | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| 機碼 | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
 | [屬性] | 版本 |
 | 輸入 | DWORD |
 

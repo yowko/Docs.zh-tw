@@ -2,12 +2,12 @@
 title: HOW TO：啟用工作流程與工作流程服務的持續性
 ms.date: 03/30/2017
 ms.assetid: 2b1c8bf3-9866-45a4-b06d-ee562393e503
-ms.openlocfilehash: 9357098318342d15ad7eead32cbc7218af095f6e
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 5d0eeb8ad40f2f4f3349ab48487316014a561a1b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425343"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460887"
 ---
 # <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>HOW TO：啟用工作流程與工作流程服務的持續性
 
@@ -15,9 +15,9 @@ ms.locfileid: "67425343"
 
 ## <a name="enable-persistence-for-workflows"></a>啟用工作流程的持續性
 
-您可以建立與執行個體存放區的關聯**WorkflowApplication**利用<xref:System.Activities.WorkflowApplication.InstanceStore%2A>屬性<xref:System.Activities.WorkflowApplication>類別。 <xref:System.Activities.WorkflowApplication.Persist%2A> 方法會將工作流程儲存或保存在與應用程式相關的執行個體存放區中。 <xref:System.Activities.WorkflowApplication.Unload%2A> 方法會將工作流程保存在執行個體存放區中，然後從記憶體卸載該執行個體。 **負載**方法會載入使用執行個體持續性存放區中的工作流程資料的記憶體中的工作流程。
+您可以使用 <xref:System.Activities.WorkflowApplication> 類別的 <xref:System.Activities.WorkflowApplication.InstanceStore%2A> 屬性，將實例存放區與**WorkflowApplication**產生關聯。 <xref:System.Activities.WorkflowApplication.Persist%2A> 方法會將工作流程儲存或保存在與應用程式相關的執行個體存放區中。 <xref:System.Activities.WorkflowApplication.Unload%2A> 方法會將工作流程保存在執行個體存放區中，然後從記憶體卸載該執行個體。 **Load**方法會使用儲存在實例持續性存放區中的工作流程資料，將工作流程載入記憶體中。
 
-**Persist**方法會執行下列步驟：
+**保存**方法會執行下列步驟：
 
 1. 暫停工作流程排程器，直到工作流程進入閒置狀態為止。
 
@@ -25,7 +25,7 @@ ms.locfileid: "67425343"
 
 3. 恢復工作流程排程器。
 
- **卸載**方法會執行下列步驟：
+ **Unload**方法會執行下列步驟：
 
 1. 暫停工作流程排程器，直到工作流程進入閒置狀態為止。
 
@@ -33,20 +33,20 @@ ms.locfileid: "67425343"
 
 3. 處置記憶體中的工作流程執行個體。
 
-這兩個**Persist**並**卸載**方法將會封鎖直到工作流程離開不保存區域工作流程是在非保存區域時。 不保存區完成後，此方法會繼續進行保存或卸載作業。 如果不保存區未在逾時時間過去前完成，或者持續性處理序所花的時間過長，就會擲回 TimeoutException。
+當工作流程在不保存區域中時，**保存** **和卸載**方法都會遭到封鎖，直到工作流程離開不保存區域為止。 不保存區完成後，此方法會繼續進行保存或卸載作業。 如果不保存區未在逾時時間過去前完成，或者持續性處理序所花的時間過長，就會擲回 TimeoutException。
 
 ## <a name="enable-persistence-for-workflow-services-in-code"></a>在程式碼中啟用工作流程服務的持續性
 
-**DurableInstancingOptions**隸屬<xref:System.ServiceModel.WorkflowServiceHost>類別具有名為**InstanceStore**可用來建立與執行個體存放區的關聯**WorkflowServiceHost**.
+<xref:System.ServiceModel.WorkflowServiceHost> 類別的**DurableInstancingOptions**成員具有名為**InstanceStore**的屬性，可讓您用來建立實例存放區與**WorkflowServiceHost**的關聯。
 
 ```csharp
 // wsh is an instance of WorkflowServiceHost class
 wsh.DurableInstancingOptions.InstanceStore = new SqlWorkflowInstanceStore();
 ```
 
-當**WorkflowServiceHost**已開啟，持續性會自動啟用**DurableInstancingOptions.InstanceStore**不是 null。
+當**WorkflowServiceHost**開啟時，如果**DurableInstancingOptions**不是 null，就會自動啟用持續性。
 
-一般而言，服務行為會提供搭配使用工作流程服務主機的實體執行個體存放區**InstanceStore**屬性。 例如，SqlWorkflowInstanceStoreBehavior 會建立的執行個體**SqlWorkflowInstanceStore**、 加以設定，然後將其指派給**DurableInstancingOptions.InstanceStore**。
+一般而言，服務行為會提供具象實例存放區，以搭配使用**InstanceStore**屬性與工作流程服務主機。 例如，SqlWorkflowInstanceStoreBehavior 會建立**SqlWorkflowInstanceStore**的實例、設定它，並將它指派給**DurableInstancingOptions**。
 
 ## <a name="enable-persistence-for-workflow-services-using-an-application-configuration-file"></a>使用應用程式組態檔啟用工作流程服務的持續性
 
@@ -58,10 +58,10 @@ wsh.DurableInstancingOptions.InstanceStore = new SqlWorkflowInstanceStore();
     <behaviors>
       <serviceBehaviors>
         <behavior name="myBehavior">
-          <SqlWorkflowInstanceStore connectionString="Data Source=myDatabaseServer;Initial Catalog=myPersistenceDatabase">
+          <sqlWorkflowInstanceStore connectionString="Data Source=myDatabaseServer;Initial Catalog=myPersistenceDatabase" />
         </behavior>
       </serviceBehaviors>
-    <behaviors>
+    </behaviors>
   </system.serviceModel>
 </configuration>
 ```

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 11e48c54ba82b51268b34d6db01d2f9d4ae61ad7
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: d4a2562324259bda0bab523849449d584736b2ae
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523569"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423190"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>逐步解說：Office 程式設計 (C# 和 Visual Basic)
 
@@ -114,13 +114,13 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     這些新增內容可示範 C# 中的另一項功能：將 COM 主機 (例如 Office) 傳回的 `Object` 值，視為具有 [dynamic](../../language-reference/keywords/dynamic.md) 類型。 當 [**內嵌 Interop 類型**] 設定為其預設值（`True`），或當[-link](../../language-reference/compiler-options/link-compiler-option.md)編譯器選項參考元件時，就會自動發生這種情況。 `dynamic` 類型可以進行晚期繫結 (Visual Basic 中已有這個功能)，並避免在 C# 3.0 和語言舊版本中需要明確轉型。
+     這些新增內容可示範 C# 中的另一項功能：將 COM 主機 (例如 Office) 傳回的 `Object` 值，視為具有 [dynamic](../../language-reference/builtin-types/reference-types.md) 類型。 當 [**內嵌 Interop 類型**] 設定為其預設值（`True`），或當[-link](../../language-reference/compiler-options/link-compiler-option.md)編譯器選項參考元件時，就會自動發生這種情況。 `dynamic` 類型可以進行晚期繫結 (Visual Basic 中已有這個功能)，並避免在 C# 3.0 和語言舊版本中需要明確轉型。
 
      例如，`excelApp.Columns[1]` 會傳回 `Object`；而 `AutoFit` 則為 Excel [Range](<xref:Microsoft.Office.Interop.Excel.Range>) 方法。 如果沒有 `dynamic`，則在呼叫 `excelApp.Columns[1]` 方法之前，必須將 `Range` 所傳回的物件，轉型為 `AutoFit` 執行個體。
 
      [!code-csharp[csOfficeWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#8)]
 
-     如需內嵌 Interop 類型的詳細資訊，請參閱本主題稍後的＜尋找 PIA 參考＞和＜還原 PIA 相依性＞程序。 如需 `dynamic` 的詳細資訊，請參閱 [dynamic](../../language-reference/keywords/dynamic.md) 或[使用動態類型](../types/using-type-dynamic.md)。
+     如需內嵌 Interop 類型的詳細資訊，請參閱本主題稍後的＜尋找 PIA 參考＞和＜還原 PIA 相依性＞程序。 如需 `dynamic` 的詳細資訊，請參閱 [dynamic](../../language-reference/builtin-types/reference-types.md) 或[使用動態類型](../types/using-type-dynamic.md)。
 
 ### <a name="to-invoke-displayinexcel"></a>叫用 DisplayInExcel
 
@@ -199,7 +199,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
 - [依位置和名稱傳遞引數](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
 - [具名和選擇性引數](../classes-and-structs/named-and-optional-arguments.md)
 - [早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../language-reference/keywords/dynamic.md)
+- [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [使用動態型別](../types/using-type-dynamic.md)
 - [Lambda 運算式 (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Lambda 運算式 (C#)](../statements-expressions-operators/lambda-expressions.md)

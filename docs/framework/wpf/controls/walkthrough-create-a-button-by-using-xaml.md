@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: a0792beca358de52a24bd9bb0dd48a20c175f8ff
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 6738b9e66c1223ea4ec50c070a421d119fd30bc4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920178"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458690"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>逐步解說：使用 XAML 建立按鈕
 
@@ -92,7 +92,7 @@ ms.locfileid: "72920178"
 
      ![寬度為90且邊界為10的按鈕](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")
 
-     您可以使用樣式來執行更多動作，包括微調目標物件的各種方式、指定複雜的屬性值，甚至使用樣式做為其他樣式的輸入。 如需詳細資訊，請參閱 [設定樣式和範本](styling-and-templating.md)。
+     您可以使用樣式來執行更多動作，包括微調目標物件的各種方式、指定複雜的屬性值，甚至使用樣式做為其他樣式的輸入。 如需詳細資訊，請參閱 [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)。
 
 3. **將樣式屬性值設定為資源：** 資源可讓您以簡單的方式重複使用常用定義的物件和值。 使用資源來定義複雜的值，讓您的程式碼更模組化是特別有用。 將下列反白顯示的標記新增至 app.xaml。
 
@@ -439,7 +439,7 @@ ms.locfileid: "72920178"
 ## <a name="see-also"></a>請參閱
 
 - [使用 Microsoft Expression Blend 建立按鈕](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
-- [設定樣式和範本](styling-and-templating.md)
+- [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [動畫概觀](../graphics-multimedia/animation-overview.md)
 - [使用純色和漸層繪製的概觀](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
 - [點陣圖效果概觀](../graphics-multimedia/bitmap-effects-overview.md)

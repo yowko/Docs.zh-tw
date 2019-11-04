@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 範例的單次安裝程序
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 7c07f39ebff0caf97a9561f08826a0c95ac81140
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 90463a83b8a10085d4df90a2832886e43c51c734
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799024"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424933"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 範例的單次安裝程序
 
@@ -31,7 +31,7 @@ ms.locfileid: "72799024"
     > [!WARNING]
     > 如果您重新安裝了 IIS，就必須再次執行下列命令。
 
-    ```
+    ```console
     "%WINDIR%\Microsoft.Net\Framework\v4.0.30319\aspnet_regiis" –i –enable
     "%WINDIR%\Microsoft.Net\Framework\v4.0.30319\ServiceModelReg.exe" -r
     ```
@@ -41,11 +41,11 @@ ms.locfileid: "72799024"
 
 5. 請遵循[防火牆指示](../../../../docs/framework/wcf/samples/firewall-instructions.md)，以啟用範例所使用的埠。
 
-6. 檢查下列預設目錄： \<InstallDrive >： **\WF_WCF_Samples**。 如果先前安裝了範例，這就是預設目錄。
+6. 檢查下列預設目錄： \<InstallDrive >： **\ WF_WCF_Samples**。 如果先前安裝了範例，這就是預設目錄。
 
 7. 如果未安裝範例，請從的範例下載位置進行安裝[C#](https://go.microsoft.com/fwlink/?LinkId=190939)。
 
-8. 安裝範例之後，請移至： \<InstallDrive >： **\WF_WCF_Samples\WCF\Setup\\**
+8. 安裝範例之後，請移至： \<InstallDrive >： **\ WF_WCF_Samples \wcf\setup\\**
 
 9. 執行**setupvroot.bat**批次檔。 系統會執行下列步驟：
 
@@ -65,7 +65,7 @@ ms.locfileid: "72799024"
 
 11. 在電腦上建立 C:\logs 目錄；某些案例可能會需要這個目錄。 請確認適當的帳戶已經將寫入權限授與此資料夾。 若為 Windows 7、[!INCLUDE[wv](../../../../includes/wv-md.md)]和 Windows Server 2008 R2，此帳戶為**Network Service**。 若是 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，此帳戶為 NT Authority\Network Service。 若是 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，此帳戶則為 ASPNET。
 
-12. 執行 Setupcerttool.bat 檔案。 這個檔案位於 \<InstallPath > \WF_WCF_Samples\WCF\Setup\ 資料夾中。  這個指令碼會執行下列工作：
+12. 執行 Setupcerttool.bat 檔案。 這個檔案位於 \<InstallPath > \ WF_WCF_Samples \WCF\Setup\ 資料夾中。  這個指令碼會執行下列工作：
 
     - 建立 FindPrivateKey 工具。
 

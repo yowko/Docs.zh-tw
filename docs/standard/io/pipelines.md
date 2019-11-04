@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 54b5f97aca131f52b9b5d9f54d7fa5ec00ba3d5b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395916"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423667"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET 中的 system.object
 
@@ -50,7 +50,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 * 在 `ReadAsync` 的單一呼叫中，可能不會收到整個訊息（結尾的那一行）。
 * 它會忽略 `stream.ReadAsync` 的結果。 `stream.ReadAsync` 會傳回已讀取的資料量。
 * 它不會處理在單一 `ReadAsync` 呼叫中讀取多行的情況。
-* 它會在每次讀取時配置 @no__t 0 陣列。
+* 它會在每次讀取時配置 `byte` 陣列。
 
 若要修正上述問題，需要進行下列變更：
 
@@ -70,7 +70,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 
 ## <a name="pipe"></a>管道
 
-@No__t-0 類別可以用來建立 @no__t 1 的配對。 寫入 `PipeWriter` 的所有資料都可在 `PipeReader` 中取得：
+<xref:System.IO.Pipelines.Pipe> 類別可以用來建立 `PipeWriter/PipeReader` 組。 寫入 `PipeWriter` 的所有資料都可在 `PipeReader` 中取得：
 
 [!code-csharp[](~/samples/snippets/csharp/pipelines/Pipe.cs?name=snippet2)]
 
@@ -85,13 +85,13 @@ async Task ProcessLinesAsync(NetworkStream stream)
 * `FillPipeAsync` 會從 `Socket` 讀取，並寫入至 `PipeWriter`。
 * `ReadPipeAsync` 會從 `PipeReader` 讀取並剖析傳入的行。
 
-未配置明確的緩衝區。 系統會將所有緩衝區管理委派給 `PipeReader` 和 @no__t 1 的執行。 委派緩衝區管理可讓您更輕鬆地使用程式碼，只著重于商務邏輯。
+未配置明確的緩衝區。 系統會將所有緩衝區管理委派給 `PipeReader` 和 `PipeWriter` 的執行。 委派緩衝區管理可讓您更輕鬆地使用程式碼，只著重于商務邏輯。
 
 在第一個迴圈中：
 
 * 呼叫 <xref:System.IO.Pipelines.PipeWriter.GetMemory(System.Int32)?displayProperty=nameWithType>，以從基礎寫入器取得記憶體。
 * 呼叫 <xref:System.IO.Pipelines.PipeWriter.Advance(System.Int32)?displayProperty=nameWithType>，告訴 `PipeWriter` 已寫入緩衝區的資料量。
-* 呼叫 <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType>，讓資料可供 `PipeReader` 使用。
+* 呼叫 <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType> 以將資料提供給 `PipeReader`。
 
 在第二個迴圈中，`PipeReader` 會耗用 `PipeWriter` 所寫入的緩衝區。 緩衝區來自通訊端。 對 `PipeReader.ReadAsync` 的呼叫：
 
@@ -124,7 +124,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 若要解決上述問題，`Pipe` 有兩個設定可控制資料的流程：
 
 * <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>：決定在呼叫 <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> 暫停之前，應該緩衝多少資料。
-* <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>：在呼叫 @no__t 1 繼續之前，決定讀取器必須觀察多少資料。
+* <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>：決定在呼叫 `PipeWriter.FlushAsync` 繼續之前，讀取器必須觀察多少資料。
 
 ![具有 ResumeWriterThreshold 和 PauseWriterThreshold 的圖表](./media/pipelines/resume-pause.png)
 
@@ -155,7 +155,7 @@ var pipe = new Pipe(options);
 
 [!code-csharp[](~/samples/snippets/csharp/pipelines/Program.cs?name=snippet)]
 
-[PipeScheduler](xref:System.IO.Pipelines.PipeScheduler.ThreadPool)是將回呼佇列排入執行緒集區的 @no__t 1 實。 `PipeScheduler.ThreadPool` 是預設值，通常是最佳選擇。 [PipeScheduler](xref:System.IO.Pipelines.PipeScheduler.Inline)可能會導致非預期的結果，例如鎖死。
+[PipeScheduler](xref:System.IO.Pipelines.PipeScheduler.ThreadPool)是將回呼佇列排入執行緒集區的 <xref:System.IO.Pipelines.PipeScheduler> 執行。 `PipeScheduler.ThreadPool` 是預設值，通常是最佳選擇。 [PipeScheduler](xref:System.IO.Pipelines.PipeScheduler.Inline)可能會導致非預期的結果，例如鎖死。
 
 ### <a name="pipe-reset"></a>管道重設
 
@@ -163,7 +163,7 @@ var pipe = new Pipe(options);
 
 ## <a name="pipereader"></a>PipeReader
 
-<xref:System.IO.Pipelines.PipeReader> 代表呼叫端管理記憶體。 呼叫 <xref:System.IO.Pipelines.PipeReader.ReadAsync%2A?displayProperty=nameWithType> 之後，**一律**呼叫 <xref:System.IO.Pipelines.PipeReader.AdvanceTo%2A?displayProperty=nameWithType>。 這可讓 `PipeReader` 知道呼叫端何時會使用記憶體來進行追蹤。 從 `PipeReader.ReadAsync` 傳回的 `ReadOnlySequence<byte>` 只有在呼叫 `PipeReader.AdvanceTo` 之前才有效。 呼叫 `PipeReader.AdvanceTo` 之後，使用 `ReadOnlySequence<byte>` 是不合法的。
+<xref:System.IO.Pipelines.PipeReader> 代表呼叫端管理記憶體。 呼叫 <xref:System.IO.Pipelines.PipeReader.ReadAsync%2A?displayProperty=nameWithType>之後，**一律**呼叫 <xref:System.IO.Pipelines.PipeReader.AdvanceTo%2A?displayProperty=nameWithType>。 這可讓 `PipeReader` 知道呼叫端何時會使用記憶體來進行追蹤。 從 `PipeReader.ReadAsync` 傳回的 `ReadOnlySequence<byte>` 只有在呼叫 `PipeReader.AdvanceTo` 之前才有效。 呼叫 `PipeReader.AdvanceTo` 之後，使用 `ReadOnlySequence<byte>` 是不合法的。
 
 `PipeReader.AdvanceTo` 會接受兩個 <xref:System.SequencePosition> 個引數：
 
@@ -196,7 +196,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 * 剖析單一訊息。
 * 更新已取用的 `SequencePosition`，並檢查 `SequencePosition` 以指向已修剪之輸入緩衝區的開頭。
 
-這兩個 @no__t 0 引數會更新，因為 `TryParseMessage` 會從輸入緩衝區移除剖析的訊息。 一般來說，從緩衝區剖析單一訊息時，檢查的位置應該是下列其中一項：
+這兩個 `SequencePosition` 引數會更新，因為 `TryParseMessage` 會從輸入緩衝區移除剖析的訊息。 一般來說，從緩衝區剖析單一訊息時，檢查的位置應該是下列其中一項：
 
 * 訊息的結尾。
 * 如果找不到任何訊息，則為收到的緩衝區結尾。
@@ -215,7 +215,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 * 支援傳遞 <xref:System.Threading.CancellationToken>。
 * 如果在讀取暫止時取消 `CancellationToken`，則會擲回 <xref:System.OperationCanceledException>。
-* 支援透過 <xref:System.IO.Pipelines.PipeReader.CancelPendingRead%2A?displayProperty=nameWithType> 取消目前讀取作業的方法，這可避免引發例外狀況。 呼叫 `PipeReader.CancelPendingRead` 會導致 `PipeReader.ReadAsync` 的目前或下一次呼叫傳回 <xref:System.IO.Pipelines.ReadResult>，並將 `IsCanceled` 設定為 `true`。 這有助於以非破壞性和非例外的方式來暫停現有的讀取迴圈。
+* 支援透過 <xref:System.IO.Pipelines.PipeReader.CancelPendingRead%2A?displayProperty=nameWithType>取消目前讀取作業的方法，這可避免引發例外狀況。 呼叫 `PipeReader.CancelPendingRead` 會導致 `PipeReader.ReadAsync` 的目前或下一次呼叫傳回 <xref:System.IO.Pipelines.ReadResult>，並將 `IsCanceled` 設定為 `true`。 這有助於以非破壞性和非例外的方式來暫停現有的讀取迴圈。
 
 [!code-csharp[MyConnection](~/samples/snippets/csharp/pipelines/MyConnection.cs?name=snippet)]
 
@@ -237,7 +237,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 #### <a name="problematic-code"></a>有問題的程式碼
 
-@no__t 0**資料遺失**
+❌**資料遺失**
 
 當 `IsCompleted` 設定為 `true` 時，`ReadResult` 可以傳回最後的資料區段。 在結束讀取迴圈之前不讀取該資料將會導致資料遺失。
 
@@ -247,7 +247,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
-@no__t 0**無限迴圈**
+❌**無限迴圈**
 
 如果 `Result.IsCompleted` `true`，但緩衝區中沒有完整的訊息，下列邏輯可能會導致無限迴圈。
 
@@ -305,21 +305,21 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 ## <a name="pipewriter"></a>PipeWriter
 
-@No__t-0 會管理要代表呼叫端寫入的緩衝區。 `PipeWriter` 會執行[`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601)。 `IBufferWriter<byte>` 可讓您取得緩衝區的存取權，以執行寫入，而不需要額外的緩衝區複本。
+<xref:System.IO.Pipelines.PipeWriter> 會管理要代表呼叫端寫入的緩衝區。 `PipeWriter` 會執行[`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601)。 `IBufferWriter<byte>` 可讓您取得緩衝區的存取權，以執行寫入，而不需要額外的緩衝區複本。
 
 [!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
 
 先前的程式碼：
 
-* 使用 <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A>，從 `PipeWriter` 要求至少5個位元組的緩衝區。
-* 將 ASCII 字串 `"Hello"` 的位元組寫入傳回的 `Span<byte>`。
-* 呼叫 <xref:System.IO.Pipelines.PipeWriter.Advance%2A>，表示寫入緩衝區的位元組數目。
+* 使用 <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A>從 `PipeWriter` 要求至少有5個位元組的緩衝區。
+* 將 ASCII 字串 `"Hello"` 的位元組寫入傳回的 `Memory<byte>`。
+* 呼叫 <xref:System.IO.Pipelines.PipeWriter.Advance%2A> 以指出寫入緩衝區的位元組數目。
 * 排清 `PipeWriter`，這會將位元組傳送至基礎裝置。
 
 先前的寫入方法會使用 `PipeWriter` 所提供的緩衝區。 或者，<xref:System.IO.Pipelines.PipeWriter.WriteAsync%2A?displayProperty=nameWithType>：
 
 * 將現有的緩衝區複製到 `PipeWriter`。
-* 視情況呼叫 `GetSpan`，`Advance`，並呼叫 <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A>。
+* 呼叫 `GetSpan`，`Advance` 適當的，並呼叫 <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A>。
 
 [!code-csharp[MyPipeWriter#2](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet2)]
 
@@ -331,7 +331,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 ### <a name="pipewriter-common-problems"></a>PipeWriter 常見的問題
 
-* <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A>，<xref:System.IO.Pipelines.PipeWriter.GetMemory%2A> 會傳回至少具有所要求記憶體數量的緩衝區。 請**不要**採用確切的緩衝區大小。
+* <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A> 和 <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A> 會傳回至少具有所需記憶體數量的緩衝區。 請**不要**採用確切的緩衝區大小。
 * 不保證後續的呼叫會傳回相同的緩衝區或相同大小的緩衝區。
 * 呼叫 <xref:System.IO.Pipelines.PipeWriter.Advance%2A> 之後，必須要求新的緩衝區，才能繼續寫入更多資料。 無法寫入先前取得的緩衝區。
 * 呼叫 `GetMemory` 或 `GetSpan`，但不完整的呼叫 `FlushAsync` 並不安全。
@@ -339,10 +339,10 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 ## <a name="iduplexpipe"></a>IDuplexPipe
 
-@No__t-0 是支援讀取和寫入之類型的合約。 例如，網路連接會以 `IDuplexPipe` 來表示。
+<xref:System.IO.Pipelines.IDuplexPipe> 是支援讀取和寫入之類型的合約。 例如，網路連接會以 `IDuplexPipe` 來表示。
 
- 與包含 `PipeReader` 和 `PipeWriter` 的 `Pipe` 不同，`IDuplexPipe` 代表全雙工連線的單一端。 這表示將不會從 `PipeReader` 讀取寫入 @no__t 0。
+ 與包含 `PipeReader` 和 `PipeWriter` 的 `Pipe` 不同，`IDuplexPipe` 代表全雙工連線的單一端。 這表示將不會從 `PipeReader`讀取要寫入 `PipeWriter` 的內容。
 
 ## <a name="streams"></a>資料流
 
-讀取或寫入資料流程資料時，您通常會使用還原序列化程式來讀取資料，並使用序列化程式來寫入資料。 大部分的讀取和寫入串流 Api 都有 `Stream` 參數。 為了讓您更輕鬆地與這些現有的 Api 整合，`PipeReader`，而 `PipeWriter` 會公開 <xref:System.IO.Pipelines.PipeReader.AsStream%2A>。  <xref:System.IO.Pipelines.PipeWriter.AsStream%2A> 會傳回圍繞 `PipeReader` 或 `PipeWriter` 的 @no__t 1 執行。
+讀取或寫入資料流程資料時，您通常會使用還原序列化程式來讀取資料，並使用序列化程式來寫入資料。 大部分的讀取和寫入串流 Api 都有 `Stream` 參數。 為了讓您更輕鬆地與這些現有的 Api 整合，`PipeReader` 和 `PipeWriter` 會公開 <xref:System.IO.Pipelines.PipeReader.AsStream%2A>。  <xref:System.IO.Pipelines.PipeWriter.AsStream%2A> 會傳回 `PipeReader` 或 `PipeWriter`周圍的 `Stream` 執行。

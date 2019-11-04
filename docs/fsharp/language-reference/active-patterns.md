@@ -2,12 +2,12 @@
 title: 現用模式
 description: 瞭解如何使用現用模式來定義以程式F#設計語言細分輸入資料的命名分割區。
 ms.date: 05/16/2016
-ms.openlocfilehash: 0c1315f2386b3cea2def698f4725e4c1cf030609
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: f5ed4a8600cba10d23d01628aba6ca07e543c586
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083086"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425099"
 ---
 # <a name="active-patterns"></a>現用模式
 
@@ -48,7 +48,7 @@ let (|identifier|_|) [arguments ] valueToMatch = expression
 32 is even
 ```
 
-使用中模式的另一種用法是以多種方式分解資料類型，例如，當相同的基礎資料有各種可能的標記法時。 例如， `Color`物件可能會分解成 RGB 標記法或 HSB 標記法。
+使用中模式的另一種用法是以多種方式分解資料類型，例如，當相同的基礎資料有各種可能的標記法時。 例如，`Color` 物件可以分解成 RGB 標記法或 HSB 標記法。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
@@ -78,7 +78,7 @@ BlanchedAlmond
 
 ## <a name="partial-active-patterns"></a>部分現用模式
 
-有時候，您只需要分割部分的輸入空間。 在這種情況下，您會撰寫一組符合某些輸入但無法符合其他輸入的部分模式。 不一定會產生值的現用模式稱為「*部分現用模式*」;它們具有屬於選項類型的傳回值。 若要定義部分現用模式，請在香蕉剪輯內的\_模式清單結尾使用萬用字元（）。 下列程式碼說明如何使用部分現用模式。
+有時候，您只需要分割部分的輸入空間。 在這種情況下，您會撰寫一組符合某些輸入但無法符合其他輸入的部分模式。 不一定會產生值的現用模式稱為「*部分現用模式*」;它們具有屬於選項類型的傳回值。 若要定義部分現用模式，請在香蕉剪輯內的模式清單結尾使用萬用字元（\_）。 下列程式碼說明如何使用部分現用模式。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
 
@@ -92,7 +92,7 @@ BlanchedAlmond
 Something else : Not matched.
 ```
 
-使用部分現用模式時，有時個別的選擇可能不相鄰或互斥，但它們不需要。 在下列範例中，模式正方形和模式 Cube 不是連續的，因為有些數位同時為正方形和 cube，例如64。 下列程式會使用和模式來結合正方形和 Cube 模式。 它會列印出最多1000的所有整數，其中同時為正方形和 cube，以及僅為 cube。 
+使用部分現用模式時，有時個別的選擇可能不相鄰或互斥，但它們不需要。 在下列範例中，模式正方形和模式 Cube 不是連續的，因為有些數位同時為正方形和 cube，例如64。 下列程式會使用和模式來結合正方形和 Cube 模式。 它會列印出最多1000的所有整數，其中同時為正方形和 cube，以及僅為 cube。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
@@ -113,7 +113,7 @@ Something else : Not matched.
 
 ## <a name="parameterized-active-patterns"></a>參數化現用模式
 
-現用模式一律會針對要比對的專案使用至少一個引數，但它們也可能會採用其他引數，在此情況下，會套用*參數化現用模式*的名稱。 其他引數可讓一般模式特製化。 例如，使用正則運算式來剖析字串的現用模式通常會包含正則運算式做為額外的參數，如下列程式碼所示，這也會使用`Integer`先前程式碼範例中定義的部分現用模式。 在此範例中，會提供使用適用于各種日期格式之正則運算式的字串，以自訂一般 ParseRegex 現用模式。 整數現用模式是用來將相符的字串轉換成可傳遞至 DateTime 函數的整數。
+現用模式一律會針對要比對的專案使用至少一個引數，但它們也可能會採用其他引數，在此情況下，會套用*參數化現用模式*的名稱。 其他引數可讓一般模式特製化。 例如，使用正則運算式來剖析字串的現用模式通常會包含正則運算式做為額外的參數，如下列程式碼所示，這也會使用先前程式碼範例中定義的部分現用模式 `Integer`。 在此範例中，會提供使用適用于各種日期格式之正則運算式的字串，以自訂一般 ParseRegex 現用模式。 整數現用模式是用來將相符的字串轉換成可傳遞至 DateTime 函數的整數。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 
@@ -134,7 +134,7 @@ Hello, random citizen!
 Hello, George!
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [F# 語言參考](index.md)
 - [比對運算式](match-expressions.md)

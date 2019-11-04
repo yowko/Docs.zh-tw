@@ -3,22 +3,24 @@ title: C# 簡介 - 互動式教學課程
 description: 在您的瀏覽器中學習 C#，並開始使用您自己的開發環境
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 564af21fb0f9b6cf8b5c3591ff5622278a8cbb22
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850775"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423095"
 ---
 # <a name="introduction-to-c"></a>C\# 簡介
 
-歡迎使用 C# 簡介教學課程。 這些快速入門會以可在瀏覽器中執行的互動式課程開始。
+歡迎使用 C# 簡介教學課程。 這些快速入門會以可在瀏覽器中執行的互動式課程開始。 開始這些互動式課程之前， C#您可以從[ C# 101 影片系列](https://aka.ms/dotnet3-csharp)瞭解的基本概念。
+
+> [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
 第一個課程會使用簡短的程式碼片段解釋 C# 概念。 您將能學習 C# 語法的基本概念，以及如何處理字串、數字和布林值等資料類型。 課程內容都是可互動的，因此您很快就能上手並開始撰寫和執行程式碼。 這些入門課程會假設您是首次接觸程式設計或 C# 語言。
 
 使用線上的瀏覽器體驗或[您自己的本機開發環境](local-environment.md)，即可使用 Hello World 課程後的所有簡介教學課程。 在每個教學課程結束時，您可以決定要在線上還是在自己的電腦上繼續進行下一個課程。 有些連結可幫助您設定環境，並在您的電腦上繼續進行下一個教學課程。
 
-## <a name="hello-worldhello-worldyml"></a>[Hello world](hello-world.yml)
+## <a name="hello-worldhello-worldyml"></a>[Hello World](hello-world.yml)
 
 在 [Hello World](hello-world.yml) 教學課程中，您將會建立最基本的 C# 程式。 您將會探索 `string` 類型，以及處理文字的方式。
 

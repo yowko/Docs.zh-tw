@@ -3,14 +3,14 @@ title: 使用 F# 開始使用 Azure 資料表儲存體
 description: 使用 Azure 資料表儲存體或 Azure Cosmos DB，將結構化資料儲存在雲端。
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 30ffd5f099dbb8efbf57104a2ade6c26304b7cee
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 6833e2264f7543f50b94892b6980140e4bf1cdd1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395199"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424600"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>開始使用 Azure 資料表儲存體和使用 F @ no__t 的 Azure Cosmos DB 資料表 API-0
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>開始使用 Azure 資料表儲存體和使用 F\# 的 Azure Cosmos DB 資料表 API
 
 Azure 表格儲存體是在雲端儲存結構化 NoSQL 資料的服務。 資料表儲存體是具有無架構設計的索引鍵/屬性存放區。 因為資料表儲存體是無架構的，所以很容易就能隨著應用程式發展的需求來調整您的資料。 對所有類型的應用程式而言，資料的存取速度既快速又符合成本效益。 相較于類似資料量的傳統 SQL，資料表儲存體的成本通常會大幅降低。
 
@@ -38,13 +38,13 @@ Azure Cosmos DB 提供針對 Azure 資料表儲存體所撰寫，而且需要高
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>建立F#腳本並啟動F#互動式
 
-本文中的範例可用於F#應用程式或F#腳本中。 若要建立F#腳本，請在您F#的開發環境中建立具有 @no__t 1 副檔名的檔案，例如 `tables.fsx`。
+本文中的範例可用於F#應用程式或F#腳本中。 若要建立F#腳本，請在您F#的開發環境中建立具有 `.fsx` 副檔名的檔案，例如 `tables.fsx`。
 
-接下來，使用[Paket](https://fsprojects.github.io/Paket/)或[NuGet](https://www.nuget.org/)之類的[套件管理員](package-management.md)，在您的腳本中使用 `#r` 指示詞來安裝 @no__t 3 套件並參考 `WindowsAzure.Storage.dll`。 再次針對 `Microsoft.WindowsAzure.ConfigurationManager` 執行此動作，以取得 Microsoft Azure 命名空間。
+接下來，使用[套件管理員](package-management.md)（例如[Paket](https://fsprojects.github.io/Paket/)或[NuGet](https://www.nuget.org/) ），在您的腳本中使用 `#r` 指示詞來安裝 `WindowsAzure.Storage` 封裝和參考 `WindowsAzure.Storage.dll`。 再次針對 `Microsoft.WindowsAzure.ConfigurationManager` 執行此動作，以取得 Microsoft Azure 命名空間。
 
 ### <a name="add-namespace-declarations"></a>新增命名空間宣告
 
-將下列 `open` 語句加入至 @no__t 1 檔案的頂端：
+將下列 `open` 語句加入至 `tables.fsx` 檔案的頂端：
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L1-L5)]
 
@@ -54,7 +54,7 @@ Azure Cosmos DB 提供針對 Azure 資料表儲存體所撰寫，而且需要高
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>取得您的 Azure Cosmos DB 連接字串
 
-如果您要連接到 Azure Cosmos DB，在本教學課程中需要連接字串。 您可以從 Azure 入口網站複製連接字串。 在 Azure 入口網站的 Cosmos DB 帳戶中，移至 [**設定**] [ > ] [**連接字串**]，然後按一下 [**複製**] 按鈕以複製您的主要連接字串。 
+如果您要連接到 Azure Cosmos DB，在本教學課程中需要連接字串。 您可以從 Azure 入口網站複製連接字串。 在 Azure 入口網站的 Cosmos DB 帳戶中，移至 [**設定**] [ > ] [**連接字串**]，然後按一下 [**複製**] 按鈕以複製您的主要連接字串。
 
 在本教學課程中，請在腳本中輸入您的連接字串，如下列範例所示：
 
@@ -78,7 +78,7 @@ Azure Cosmos DB 提供針對 Azure 資料表儲存體所撰寫，而且需要高
 
 ### <a name="create-the-table-service-client"></a>建立表格服務用戶端
 
-@No__t 0 類別可讓您取得資料表儲存體中的資料表和實體。 以下是建立服務用戶端的其中一種方式：
+`CloudTableClient` 類別可讓您取得資料表儲存體中的資料表和實體。 以下是建立服務用戶端的其中一種方式：
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L28-L29)]
 
@@ -92,7 +92,7 @@ Azure Cosmos DB 提供針對 Azure 資料表儲存體所撰寫，而且需要高
 
 ### <a name="add-an-entity-to-a-table"></a>將實體新增至資料表
 
-實體必須具有繼承自 `TableEntity` 的類型。 您可以用您喜歡的任何方式擴充 `TableEntity`，但是您的型別*必須*具有無參數的函式。 只有同時具有 `get` 和 @no__t 1 的屬性會儲存在您的 Azure 資料表中。
+實體必須具有繼承自 `TableEntity` 的類型。 您可以用您喜歡的任何方式擴充 `TableEntity`，但是您的型別*必須*具有無參數的函式。 只有具有 `get` 和 `set` 的屬性會儲存在您的 Azure 資料表中。
 
 實體的資料分割和資料列索引鍵可唯一識別資料表中的實體。 具有相同資料分割索引鍵的實體查詢速度可以比具有不同分割區索引鍵的實體更快，但使用不同的分割區索引鍵可提供平行作業的更高擴充性。
 

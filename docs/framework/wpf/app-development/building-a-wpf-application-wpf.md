@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: cac7a7552d1a24480d614b7b90fdd8cf0ef8a3e8
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 04183b2404d26c783e14dc6f4cb4141bab0d7621
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197786"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424427"
 ---
 # <a name="building-a-wpf-application-wpf"></a>建置 WPF 應用程式 (WPF)
 
@@ -136,13 +136,13 @@ End Sub
 
 在組建程式結束時，當所有應用程式元件和內容檔案都準備就緒之後，就會產生應用程式的 ClickOnce 資訊清單。
 
-部署資訊清單檔會描述部署模型︰目前的版本、更新行為，以及發行者身分識別和數位簽章。 此資訊清單預期是由處理部署的系統管理員所撰寫。 副檔名為 .xbap (若是 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]) 和 .application (若是已安裝的應用程式)。 前者是由 `HostInBrowser` 專案屬性所指定，因此資訊清單會將應用程式識別為由瀏覽器裝載。
+部署資訊清單檔會描述部署模型︰目前的版本、更新行為，以及發行者身分識別和數位簽章。 此資訊清單預期是由處理部署的系統管理員所撰寫。 副檔名為 xbap （適用于 XAML 瀏覽器應用程式（Xbap））和應用程式（適用于已安裝的應用程式）。 前者是由 `HostInBrowser` 專案屬性所指定，因此資訊清單會將應用程式識別為由瀏覽器裝載。
 
 應用程式資訊清單 (.exe.manifest 檔案) 會描述應用程式組件和相依程式庫，並列出應用程式所需的權限。 此檔案預期是由應用程式開發人員所撰寫。 為了啟動 ClickOnce 應用程式，使用者會開啟應用程式的部署資訊清單檔案。
 
-若是 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，一律會建立這些資訊清單檔。 若是已安裝的應用程式，除非將專案檔中的 `GenerateManifests` 屬性指定為 `true` 值，否則不會建立這些檔案。
+這些資訊清單檔案一律會針對 Xbap 建立。 若是已安裝的應用程式，除非將專案檔中的 `GenerateManifests` 屬性指定為 `true` 值，否則不會建立這些檔案。
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 在指派給一般網際網路區域應用程式的許可權之外，還有兩個額外的許可權： <xref:System.Security.Permissions.WebBrowserPermission> 和 <xref:System.Security.Permissions.MediaPermission>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 建置系統會在應用程式資訊清單中宣告這些權限。
+Xbap 會在指派給一般網際網路區域應用程式的許可權之外，取得兩個額外的許可權： <xref:System.Security.Permissions.WebBrowserPermission> 和 <xref:System.Security.Permissions.MediaPermission>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 建置系統會在應用程式資訊清單中宣告這些權限。
 
 <a name="Incremental_Build_Support"></a>
 

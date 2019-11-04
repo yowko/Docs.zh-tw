@@ -9,41 +9,41 @@ helpviewer_keywords:
 - states [WPF], Expander
 - parts [WPF], Expander
 ms.assetid: da2e5a1c-5230-4c21-98a5-59c7895facd7
-ms.openlocfilehash: c5f805c251d3f6b256035e568798cd6d252ea9a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26989474f264161be12bcc14fed614fdc7f775b6
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911726"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460337"
 ---
 # <a name="expander-styles-and-templates"></a>Expander 樣式和範本
-本主題描述的樣式和範本<xref:System.Windows.Controls.Expander>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>，讓控制項的獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
+本主題描述 <xref:System.Windows.Controls.Expander> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
   
-## <a name="expander-parts"></a>展開器組件  
- <xref:System.Windows.Controls.Expander>控制項沒有任何具名組件。  
+## <a name="expander-parts"></a>展開器元件  
+ <xref:System.Windows.Controls.Expander> 控制項沒有任何已命名的元件。  
   
 ## <a name="expander-states"></a>展開器狀態  
- 下表列出的視覺狀態<xref:System.Windows.Controls.Expander>控制項。  
+ 下表列出 <xref:System.Windows.Controls.Expander> 控制項的視覺狀態。  
   
 |VisualState 名稱|VisualStateGroup 名稱|描述|  
 |-|-|-|  
 |一般|CommonStates|預設狀態。|  
 |MouseOver|CommonStates|滑鼠指標移到控制項上。|  
-|已停用|CommonStates|已停用控制項。|  
+|Disabled|CommonStates|已停用控制項。|  
 |已取得焦點|FocusStates|控制項已取得焦點。|  
 |未取得焦點|FocusStates|控制項未取得焦點。|  
-|展開|ExpansionStates|展開此控制項。|  
-|Collapsed|ExpansionStates|無法展開此控制項。|  
-|ExpandDown|ExpandDirectionStates|控制會向下展開。|  
-|ExpandUp|ExpandDirectionStates|控制項將向上擴充。|  
+|展開|ExpansionStates|控制項已展開。|  
+|Collapsed|ExpansionStates|控制項不會展開。|  
+|ExpandDown|ExpandDirectionStates|控制項會向下展開。|  
+|ExpandUp|ExpandDirectionStates|控制項會展開。|  
 |ExpandLeft|ExpandDirectionStates|控制項會向左展開。|  
 |ExpandRight|ExpandDirectionStates|控制項會向右展開。|  
-|驗證|ValidationStates|控制項使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`已在控制項具有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`有控制項沒有焦點。|  
+|驗證|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，而 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性則 `false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是控制項具有焦點 `true`。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是 `true` 控制項沒有焦點。|  
   
-## <a name="expander-controltemplate-example"></a>Expander ControlTemplate 範例  
- 下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>針對<xref:System.Windows.Controls.Expander>控制項。  
+## <a name="expander-controltemplate-example"></a>展開器 ControlTemplate 範例  
+ 下列範例顯示如何定義 <xref:System.Windows.Controls.Expander> 控制項的 <xref:System.Windows.Controls.ControlTemplate>。  
   
  [!code-xaml[ControlTemplateExamples#Expander](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/expander.xaml#expander)]  
   
@@ -53,11 +53,11 @@ ms.locfileid: "61911726"
   
  如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控制項的樣式和範本](control-styles-and-templates.md)
 - [控制項自訂](control-customization.md)
-- [樣式設定和範本化](styling-and-templating.md)
+- [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)

@@ -5,12 +5,12 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 51dcf5cd85913f0e69ea51dff5101426cc57390f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 2d960a43f7934e262fa0e19abfea0209aa4e9ff0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774457"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425208"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>教學課程：使用矩陣 factorizaton 搭配 ML.NET 來建立電影推薦
 
@@ -73,7 +73,7 @@ ms.locfileid: "72774457"
 
 2. 在 [方案總管] 中，於每個 \*.csv 檔案上按一下滑鼠右鍵，然後選取 [屬性]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
 
-   ![在 VS 中有更新版本時複製](./media/movie-recommendation/copytoout.gif)
+   ![如果 VS 中有更新版本，使用者的 GIF 選取 [複製]。](./media/movie-recommendation/copy-to-output-if-newer.gif)
 
 ## <a name="load-your-data"></a>載入您的資料
 
@@ -83,7 +83,7 @@ ML.NET 程序的第一個步驟是準備並載入模型定型和測試資料。
 
 以下是您 \*.csv 檔案的資料預覽：
 
-![資料預覽](./media/movie-recommendation/csv-dataset-preview.png)
+![CVS 資料集預覽的螢幕擷取畫面。](./media/movie-recommendation/csv-file-dataset-preview.png)
 
 在 \*.csv 檔案中有四個資料行：
 
@@ -171,11 +171,11 @@ ML.NET 有三個主要概念：[資料](../resources/glossary.md#data)、[轉換
 
 機器學習服務定型演算法需要特定格式的資料。 `Transformers` 用來將表格式資料轉換成相容的格式。
 
-![轉換器映像](./media/movie-recommendation/transformer.png)
+![轉換器資料流程的圖表。](./media/movie-recommendation/data-transformer-transformed.png)
 
 您會建立 `Estimators` 以在 ML.NET 中建立 `Transformers`。 `Estimators` 會接受資料並傳回 `Transformers`。
 
-![估算工具映像](./media/movie-recommendation/estimator.png)
+![估計工具資料流程的圖表。](./media/movie-recommendation/data-estimator-transformer.png)
 
 您將用於定型模型的推薦定型演算法，即為 `Estimator` 的範例。
 

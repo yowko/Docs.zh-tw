@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 7e29b724259604a6ee09dff9cf9133b1739eb9ad
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: 908c3fb0baacc7fd75dae875e9a9d49a08fe5401
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424778"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459720"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a>開發 Windows Presentation Foundation （WPF）獨立和瀏覽器裝載的應用程式時，您必須考慮安全性模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 獨立應用程式會以不受限制的許可權（CAS**FullTrust**許可權集合）執行，無論是使用 Windows Installer （.msi）、XCopy 或 ClickOnce 部署。 不支援使用 ClickOnce 部署部分信任的獨立 WPF 應用程式。 不過，完全信任的主應用程式可以使用 .NET Framework 增益集模型，建立部分信任的 <xref:System.AppDomain>。 如需詳細資訊，請參閱[WPF 增益集總覽](./app-development/wpf-add-ins-overview.md)。  
@@ -279,4 +279,4 @@ ms.locfileid: "73424778"
 - [Patterns and Practices Security Guidance for Applications](https://go.microsoft.com/fwlink/?LinkId=117426) (應用程式的模式和實務安全性指南)
 - [程式碼存取安全性](../misc/code-access-security.md)
 - [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)
-- [XAML 概觀 (WPF)](./advanced/xaml-overview-wpf.md)
+- [XAML 概觀 (WPF)](../../desktop-wpf/fundamentals/xaml.md)

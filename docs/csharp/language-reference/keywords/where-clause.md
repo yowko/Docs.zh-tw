@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: aceda6cfd33a53388a5afb046359c4dcfddfd1f8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 15df6339cec9eabadf5aa4c184d7504c4e065032
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602031"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421936"
 ---
 # <a name="where-clause-c-reference"></a>where 子句 (C# 參考)
 
@@ -45,11 +45,11 @@ ms.locfileid: "69602031"
 
 在編譯時間，`where` 關鍵字會轉換為 <xref:System.Linq.Enumerable.Where%2A> 標準查詢運算子方法呼叫。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [查詢關鍵字 (LINQ)](query-keywords.md)
 - [from 子句](from-clause.md)
 - [select 子句](select-clause.md)
 - [篩選資料](../../programming-guide/concepts/linq/filtering-data.md)
-- [LINQ 查詢運算式](../../programming-guide/linq-query-expressions/index.md)
-- [開始使用 C# 中的 LINQ](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C# 中的 LINQ](../../linq/index.md)
+- [開始使用 C# 中的 LINQ](/dotnet/csharp/programming-guide/concepts/linq/)

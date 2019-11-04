@@ -4,12 +4,12 @@ description: 了解 .NET Framework 中支援委派的類別，以及這些類別
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 7aca2d3ba7aefd103ac927a6ce905938262ae39c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037442"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420359"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 和 `delegate` 關鍵字
 
@@ -32,7 +32,7 @@ ms.locfileid: "73037442"
 public delegate int Comparison<in T>(T left, T right);
 ```
 
-編譯器會產生一個衍生自 `System.Delegate` 且符合所用簽章的類別 (在此情況下，其為一個會傳回整數且具有兩個引數的方法)。 該委派的型別為 `Comparison`。 `Comparison` 委派型別是泛型型別。 如需泛型的詳細資料，請參閱[這裡](generics.md)。
+編譯器會產生一個衍生自 `System.Delegate` 且符合所用簽章的類別 (在此情況下，其為一個會傳回整數且具有兩個引數的方法)。 該委派的型別為 `Comparison`。 `Comparison` 委派型別是泛型型別。 如需泛型的詳細資料，請參閱[這裡](programming-guide/generics/index.md)。
 
 請注意，此語法看似在宣告一個變數，但實際上是宣告「型別」。 您可以在類別中定義委派型別、直接在命名空間中定義，或甚至在全域命名空間中加以定義。
 

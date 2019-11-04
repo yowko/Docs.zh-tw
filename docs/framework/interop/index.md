@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-ms.openlocfilehash: cdd8d2781331956289d2b74162e653ba1ee8fad6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114232"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457963"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>與非受控程式碼交互操作
 
@@ -40,9 +40,6 @@ ms.locfileid: "73114232"
 [操作說明：對應 HRESULT 和例外狀況](how-to-map-hresults-and-exceptions.md)  
 描述例外狀況與 HRESULT 之間的對應。
 
-[COM 包裝函式](com-wrappers.md)  
-描述由 COM Interop 所提供的包裝函式。
-
 [類型等價和內嵌 Interop 類型](type-equivalence-and-embedded-interop-types.md)  
 描述如何將 COM 類型的類型資訊內嵌於組件，以及通用語言執行平台如何決定內嵌 COM 類型的對等項。
 
@@ -57,3 +54,8 @@ ms.locfileid: "73114232"
 
 [如何：設定免註冊啟用的 .NET Framework 架構 COM 元件](configure-net-framework-based-com-components-for-reg.md)  
 描述如何建立應用程式資訊清單，以及如何建立和內嵌元件資訊清單。
+
+## <a name="related-sections"></a>相關章節
+
+[COM 包裝函式](../../standard/native-interop/com-wrappers.md)  
+描述由 COM Interop 所提供的包裝函式。

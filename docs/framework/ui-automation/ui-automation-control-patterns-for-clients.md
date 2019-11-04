@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: e1d87920f64242379d1931a424aa38b676dc5ef5
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c7d9eeceaba2ed8b624d3001dae86868ef626c08
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039453"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458110"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>用戶端的 UI 自動化控制項模式
 > [!NOTE]
@@ -40,7 +40,7 @@ ms.locfileid: "73039453"
   
 <a name="uiautomation_with_variable_patterns"></a>   
 ## <a name="controls-with-variable-patterns"></a>包含變數模式的控制項  
- 某些控制項類型支援不同的模式，視其狀態或使用控制項的方式而定。 可以有變數模式的控制項範例包括清單視圖（縮圖、磚、圖示、清單、詳細資料）、[!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 圖表（圓形圖、折線圖、橫條圖、含有公式的儲存格值）、[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]的檔區域（一般、Web 版面配置、大綱、列印版面配置、預覽列印），以及Microsoft Windows 媒體播放機的外觀。  
+ 某些控制項類型支援不同的模式，視其狀態或使用控制項的方式而定。 可以有變數模式的控制項範例包括清單視圖（縮圖、磚、圖示、清單、詳細資料）、Microsoft Excel 圖表（圓形圖、折線圖、橫條圖、具有公式的資料格值）、Microsoft Word 的檔區域（一般、Web 版面配置、大綱、列印版面配置、列印預覽）和 Microsoft Windows 媒體播放機的外觀。  
   
  實作自訂控制項類型的控制項可以有任何控制項模式組合，它們是代表其功能所需的組合。  
   

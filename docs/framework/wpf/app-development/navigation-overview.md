@@ -24,16 +24,16 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: c82bba5612e943eb261777074acffec7af330f22
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
-ms.translationtype: MT
+ms.openlocfilehash: 5a5c4c62799e1d2c190c2f7eaab12fff31e457ab
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920350"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425276"
 ---
 # <a name="navigation-overview"></a>巡覽概觀
 
-Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用於兩種類型的應用程式：獨立應用程式和 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。 若要封裝內容以進行導覽，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供 <xref:System.Windows.Controls.Page> 類別。 您可以使用 <xref:System.Windows.Documents.Hyperlink>，或以程式設計方式從一個 <xref:System.Windows.Controls.Page> 導覽至另一個，方法是使用 <xref:System.Windows.Navigation.NavigationService>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用日誌記憶曾經巡覽過的頁面，以利返回巡覽。
+Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用於兩種類型的應用程式：獨立應用程式和 XAML 瀏覽器應用程式（Xbap）。 若要封裝內容以進行導覽，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供 <xref:System.Windows.Controls.Page> 類別。 您可以使用 <xref:System.Windows.Documents.Hyperlink>，或以程式設計方式從一個 <xref:System.Windows.Controls.Page> 導覽至另一個，方法是使用 <xref:System.Windows.Navigation.NavigationService>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用日誌記憶曾經巡覽過的頁面，以利返回巡覽。
 
 <xref:System.Windows.Controls.Page>、<xref:System.Windows.Documents.Hyperlink>、<xref:System.Windows.Navigation.NavigationService>和日誌形成 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]所提供的導覽支援的核心。 本總覽會在涵蓋先進的導覽支援（包括流覽到鬆散 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 檔案、HTML 檔案和物件）之前，先深入探索這些功能。
 
@@ -42,10 +42,10 @@ Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用
 
 ## <a name="navigation-in-wpf-applications"></a>WPF 應用程式中的巡覽
 
-本主題提供 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中的主要導覽功能的總覽。 這些功能可用於獨立應用程式和 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，雖然本主題會在 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]的內容中呈現它們。
+本主題提供 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中的主要導覽功能的總覽。 這些功能都可供獨立應用程式和 Xbap 使用，雖然本主題會在 XBAP 的內容中呈現它們。
 
 > [!NOTE]
-> 本主題不會討論如何建立和部署 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 如需 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]的詳細資訊，請參閱[WPF XAML 瀏覽器應用程式總覽](wpf-xaml-browser-applications-overview.md)。
+> 本主題不會討論如何建立和部署 Xbap。 如需 Xbap 的詳細資訊，請參閱[WPF XAML 瀏覽器應用程式總覽](wpf-xaml-browser-applications-overview.md)。
 
 本節說明並示範下列巡覽的各個面向︰
 
@@ -121,16 +121,16 @@ Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用
 
 ### <a name="configuring-a-start-page"></a>設定起始頁
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 需要瀏覽器中裝載一定數量的應用程式基礎結構。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，<xref:System.Windows.Application> 類別是應用程式定義的一部分，可建立必要的應用程式基礎結構（請參閱[應用程式管理總覽](application-management-overview.md)）。
+Xbap 需要在瀏覽器中裝載一定數量的應用程式基礎結構。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，<xref:System.Windows.Application> 類別是應用程式定義的一部分，可建立必要的應用程式基礎結構（請參閱[應用程式管理總覽](application-management-overview.md)）。
 
-應用程式定義通常會使用標記和程式碼後置來實作為，並將標記檔案設定為 MSBuild `ApplicationDefinition` 專案。 以下是 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]的應用程式定義。
+應用程式定義通常會使用標記和程式碼後置來實作為，並將標記檔案設定為 MSBuild `ApplicationDefinition` 專案。 以下是 XBAP 的應用程式定義。
 
 [!code-xaml[XBAPAppDefSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]
 
 [!code-csharp[XBAPAppDefSnippets#XBAPApplicationDefinitionCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml.cs#xbapapplicationdefinitioncodebehind)]
 [!code-vb[XBAPAppDefSnippets#XBAPApplicationDefinitionCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppDefSnippets/VisualBasic/Application.xaml.vb#xbapapplicationdefinitioncodebehind)]
 
-[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 可以使用其應用程式定義來指定開始 <xref:System.Windows.Controls.Page>，這是啟動 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 時自動載入的 <xref:System.Windows.Controls.Page>。 若要這麼做，您可以為所需的 <xref:System.Windows.Controls.Page>設定具有統一資源識別元（URI）的 <xref:System.Windows.Application.StartupUri%2A> 屬性。
+XBAP 可以使用其應用程式定義來指定開始 <xref:System.Windows.Controls.Page>，也就是啟動 XBAP 時自動載入的 <xref:System.Windows.Controls.Page>。 若要這麼做，您可以為所需的 <xref:System.Windows.Controls.Page>設定具有統一資源識別元（URI）的 <xref:System.Windows.Application.StartupUri%2A> 屬性。
 
 > [!NOTE]
 > 在大部分情況下，<xref:System.Windows.Controls.Page> 會編譯成應用程式或與之一起部署。 在這些情況下，識別 <xref:System.Windows.Controls.Page> 的 URI 是一個 pack URI，這是符合*套件*配置的 uri。 套件 Uri 會[在 WPF 的 Pack uri](pack-uris-in-wpf.md)中進一步討論。 您也可以巡覽至使用 http 配置的內容，後文會討論。
@@ -139,18 +139,18 @@ Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用
 
 [!code-xaml[NavigationOverviewSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]
 
-在此範例中，`StartupUri` 屬性是以識別首頁的相對 pack URI 來設定。 當 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 啟動時，首頁. xaml 會自動流覽並顯示。 如下圖所示，這會顯示從 Web 服務器啟動的 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]。
+在此範例中，`StartupUri` 屬性是以識別首頁的相對 pack URI 來設定。 當 XBAP 啟動時，首頁. xaml 會自動流覽並顯示。 如下圖所示，它會顯示從 Web 服務器啟動的 XBAP。
 
 ![XBAP 頁面](./media/navigation-overview/xbap-launched-from-a-web-server.png "這會顯示從 Web 服務器啟動的 XBAP。")
 
 > [!NOTE]
-> 如需有關 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]的開發和部署的詳細資訊，請參閱[WPF XAML 瀏覽器應用程式總覽](wpf-xaml-browser-applications-overview.md)和[部署 wpf 應用程式](deploying-a-wpf-application-wpf.md)。
+> 如需有關開發和部署 Xbap 的詳細資訊，請參閱[WPF XAML 瀏覽器應用程式總覽](wpf-xaml-browser-applications-overview.md)和[部署 wpf 應用程式](deploying-a-wpf-application-wpf.md)。
 
 <a name="ConfiguringAXAMLPage"></a>
 
 ### <a name="configuring-the-host-windows-title-width-and-height"></a>設定主機視窗的標題、寬度和高度
 
-您在上圖中可能注意到的一件事，就是瀏覽器和 [索引標籤] 面板的標題都是 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]的 URI。 除了長之外，標題既不吸引人，也不提供資訊。 基於這個理由，<xref:System.Windows.Controls.Page> 提供了一種方式，可讓您藉由設定 <xref:System.Windows.Controls.Page.WindowTitle%2A> 屬性來變更標題。 此外，您可以分別設定 <xref:System.Windows.Controls.Page.WindowWidth%2A> 和 <xref:System.Windows.Controls.Page.WindowHeight%2A>，以設定瀏覽器視窗的寬度和高度。
+您在上圖中可能注意到的一件事，就是瀏覽器和索引標籤面板的標題都是 XBAP 的 URI。 除了長之外，標題既不吸引人，也不提供資訊。 基於這個理由，<xref:System.Windows.Controls.Page> 提供了一種方式，可讓您藉由設定 <xref:System.Windows.Controls.Page.WindowTitle%2A> 屬性來變更標題。 此外，您可以分別設定 <xref:System.Windows.Controls.Page.WindowWidth%2A> 和 <xref:System.Windows.Controls.Page.WindowHeight%2A>，以設定瀏覽器視窗的寬度和高度。
 
 <xref:System.Windows.Controls.Page.WindowTitle%2A>、<xref:System.Windows.Controls.Page.WindowWidth%2A>和 <xref:System.Windows.Controls.Page.WindowHeight%2A> 可以在標記中以宣告方式設定，如下列範例所示。
 
@@ -164,7 +164,7 @@ Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用
 
 ### <a name="hyperlink-navigation"></a>超連結巡覽
 
-典型的 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 包含數個頁面。 從一頁流覽至另一個頁面最簡單的方式，就是使用 <xref:System.Windows.Documents.Hyperlink>。 您可以使用 `Hyperlink` 元素，以宣告的方式將 <xref:System.Windows.Documents.Hyperlink> 新增至 <xref:System.Windows.Controls.Page>，如下列標記所示。
+典型的 XBAP 包含數個頁面。 從一頁流覽至另一個頁面最簡單的方式，就是使用 <xref:System.Windows.Documents.Hyperlink>。 您可以使用 `Hyperlink` 元素，以宣告的方式將 <xref:System.Windows.Documents.Hyperlink> 新增至 <xref:System.Windows.Controls.Page>，如下列標記所示。
 
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml1)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]
@@ -176,11 +176,11 @@ Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用
 
 - 使用者可以按一下以起始導覽的內容，例如文字和影像（針對 `Hyperlink` 元素可以包含的內容，請參閱 <xref:System.Windows.Documents.Hyperlink>）。
 
-下圖顯示具有 <xref:System.Windows.Documents.Hyperlink>之 <xref:System.Windows.Controls.Page> 的 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]。
+下圖顯示具有 <xref:System.Windows.Documents.Hyperlink>之 <xref:System.Windows.Controls.Page> 的 XBAP。
 
 ![具有超連結的頁面](./media/navigation-overview/xbap-with-a-page-with-a-hyperlink.png "這會顯示具有超連結之頁面的 XBAP。")
 
-如您所預期，按一下 <xref:System.Windows.Documents.Hyperlink> 會導致 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 流覽至 `NavigateUri` 屬性所識別的 <xref:System.Windows.Controls.Page>。 此外，[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 會將先前 <xref:System.Windows.Controls.Page> 的專案新增到 Internet Explorer 的 [最近使用的頁面] 清單中。 如下圖所示。
+如您所預期，按一下 <xref:System.Windows.Documents.Hyperlink> 會導致 XBAP 流覽至 `NavigateUri` 屬性所識別的 <xref:System.Windows.Controls.Page>。 此外，XBAP 會將先前 <xref:System.Windows.Controls.Page> 的專案加入 Internet Explorer 的 [最近使用的頁面] 清單中。 如下圖所示。
 
 ![[上一頁] 和 [下一頁] 按鈕](./media/navigation-overview/back-and-forward-navigation.png "以 [上一頁] 和 [下一頁] 按鈕導覽。")
 
@@ -371,10 +371,10 @@ Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用
 
 ![[上一頁] 和 [下一頁] 按鈕](./media/navigation-overview/back-and-forward-navigation.png "以 [上一頁] 和 [下一頁] 按鈕導覽。")
 
-若為 Internet Explorer 所主控的 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會將日誌整合到 Internet Explorer 的導覽 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 這可讓使用者使用 Internet Explorer 中的 [**上一頁**]、[**下一頁**] 和 [**最近的頁面**] 按鈕，流覽 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 中的頁面。
+若為 Internet Explorer 所裝載的 Xbap，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會將日誌整合到 Internet Explorer 的流覽 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 這可讓使用者使用 Internet Explorer 中的 [**上一頁**]、[**下一頁**] 和 [**最近使用的頁面**] 按鈕，流覽 XBAP 中的頁面。
 
 > [!IMPORTANT]
-> 在 Internet Explorer 中，當使用者離開並返回 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]時，只有未保持運作之頁面的記錄項目會保留在日誌中。 如需讓頁面保持運作的討論，請參閱本主題稍後的[頁面存留期和日誌](#PageLifetime)。
+> 在 Internet Explorer 中，當使用者離開並回到 XBAP 時，只有未保持運作之頁面的記錄項目會保留在日誌中。 如需讓頁面保持運作的討論，請參閱本主題稍後的[頁面存留期和日誌](#PageLifetime)。
 
 根據預設，Internet Explorer [**最近使用的頁面**] 清單中出現的每個 <xref:System.Windows.Controls.Page> 文字，都是 <xref:System.Windows.Controls.Page> 的 URI。 在許多情況下，這對使用者都不是特別有意義。 幸運的是，您可以變更使用下列選項之一的文字︰
 
@@ -425,7 +425,7 @@ Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用
 
 ### <a name="page-lifetime-and-the-journal"></a>網頁存留期和日誌
 
-假設有數個頁面包含豐富內容的 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]，包括圖形、動畫和媒體。 這類頁面的磁碟使用量可能相當大，尤其是使用視訊和音訊媒體的時候。 假設日誌「記憶」已流覽過的頁面，這類 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 可能很快就會耗用大量的記憶體數量。
+假設有多個頁面包含豐富內容的 XBAP，包括圖形、動畫和媒體。 這類頁面的磁碟使用量可能相當大，尤其是使用視訊和音訊媒體的時候。 假設筆記本「記憶」已流覽過的頁面，這樣的 XBAP 可能很快就會耗用大量且明顯的記憶體數量。
 
 基於這個理由，日誌的預設行為是將 <xref:System.Windows.Controls.Page> 中繼資料儲存在每個日誌項目中，而不是 <xref:System.Windows.Controls.Page> 物件的參考。 當流覽記錄項目時，其 <xref:System.Windows.Controls.Page> 中繼資料會用來建立指定 <xref:System.Windows.Controls.Page> 的新實例。 因此，流覽的每個 <xref:System.Windows.Controls.Page> 都具有下圖所說明的存留期。
 
@@ -533,21 +533,21 @@ Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用
 
 以下是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中支援 cookie 的一些方式：
 
-- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 獨立應用程式和 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 都可以建立和管理 cookie。
+- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 獨立應用程式和 Xbap 都可以建立和管理 cookie。
 
-- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 所建立的 cookie 可從瀏覽器存取。
+- 您可以從瀏覽器存取 XBAP 所建立的 cookie。
 
-- 來自相同網域的 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以建立及共用 Cookie。
+- 來自相同網域的 Xbap 可以建立和共用 cookie。
 
-- 來自相同網域的 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 和 HTML 網頁可以建立和共用 cookie。
+- 來自相同網域的 Xbap 和 HTML 頁面可以建立和共用 cookie。
 
-- 當 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 和鬆散的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面提出 Web 要求時，會分派 cookie。
+- 當 Xbap 和鬆散的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面提出 Web 要求時，會分派 cookie。
 
-- 在 IFRAME 中裝載的頂層 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 和 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 都可以存取 cookie。
+- 在 IFRAME 中裝載的頂層 Xbap 和 Xbap 都可以存取 cookie。
 
 - 針對所有支援的瀏覽器，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的 Cookie 支援都相同。
 
-- 在 Internet Explorer 中，與 cookie 相關的 P3P 原則會受到 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，特別是關於第一方和協力廠商 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。
+- 在 Internet Explorer 中，與 cookie 相關的 P3P 原則會受到 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，特別是關於第一方和協力廠商 Xbap。
 
 <a name="Structured_Navigation"></a>
 
@@ -561,7 +561,7 @@ Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用
 
 ## <a name="the-navigationwindow-class"></a>NavigationWindow 類別
 
-至此，您已了解最可能用來建置有可巡覽內容之應用程式的巡覽服務範圍。 這些服務是在 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]的內容中討論，但它們並不限於 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 新式作業系統和 Windows 應用程式利用新式使用者的瀏覽器體驗，將瀏覽器樣式的導覽併入獨立應用程式中。 常見範例包括︰
+至此，您已了解最可能用來建置有可巡覽內容之應用程式的巡覽服務範圍。 這些服務是在 Xbap 的內容中討論，雖然它們不限於 Xbap。 新式作業系統和 Windows 應用程式利用新式使用者的瀏覽器體驗，將瀏覽器樣式的導覽併入獨立應用程式中。 常見範例包括︰
 
 - **文字同義字**︰巡覽文字選擇。
 
@@ -569,7 +569,7 @@ Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用
 
 - **精靈**︰將複雜的工作細分成可往來巡覽的多個頁面。 其中一個範例是處理新增和移除 Windows 功能的 Windows 元件 Wizard。
 
-若要將瀏覽器樣式的導覽併入您的獨立應用程式，您可以使用 <xref:System.Windows.Navigation.NavigationWindow> 類別。 <xref:System.Windows.Navigation.NavigationWindow> 衍生自 <xref:System.Windows.Window>，並以 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 提供的相同導覽支援來加以擴充。 您可以使用 <xref:System.Windows.Navigation.NavigationWindow> 做為獨立應用程式的主視窗，或當做對話方塊之類的次要視窗。
+若要將瀏覽器樣式的導覽併入您的獨立應用程式，您可以使用 <xref:System.Windows.Navigation.NavigationWindow> 類別。 <xref:System.Windows.Navigation.NavigationWindow> 衍生自 <xref:System.Windows.Window>，並使用 Xbap 所提供的相同導覽支援來加以擴充。 您可以使用 <xref:System.Windows.Navigation.NavigationWindow> 做為獨立應用程式的主視窗，或當做對話方塊之類的次要視窗。
 
 若要執行 <xref:System.Windows.Navigation.NavigationWindow>，如同 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] （<xref:System.Windows.Window>、<xref:System.Windows.Controls.Page>等等）中大部分的最上層類別，您可以使用標記和程式碼後置的組合。 這在下列範例中顯示。
 
@@ -618,7 +618,7 @@ Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用
 
 ## <a name="the-frame-class"></a>Frame 類別
 
-瀏覽器和 <xref:System.Windows.Navigation.NavigationWindow> 都是裝載可流覽內容的視窗。 在某些情況下，應用程式會有不需要由整個視窗裝載的內容。 這類內容反可以裝載於其他內容中。 您可以使用 <xref:System.Windows.Controls.Frame> 類別，將可流覽的內容插入至其他內容。 <xref:System.Windows.Controls.Frame> 提供與 <xref:System.Windows.Navigation.NavigationWindow> 和 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]相同的支援。
+瀏覽器和 <xref:System.Windows.Navigation.NavigationWindow> 都是裝載可流覽內容的視窗。 在某些情況下，應用程式會有不需要由整個視窗裝載的內容。 這類內容反可以裝載於其他內容中。 您可以使用 <xref:System.Windows.Controls.Frame> 類別，將可流覽的內容插入至其他內容。 <xref:System.Windows.Controls.Frame> 提供與 <xref:System.Windows.Navigation.NavigationWindow> 和 Xbap 相同的支援。
 
 下列範例示範如何使用 `Frame` 元素，以宣告方式將 <xref:System.Windows.Controls.Frame> 加入 <xref:System.Windows.Controls.Page>。
 
@@ -626,13 +626,13 @@ Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用
 [!code-xaml[NavigationOverviewSnippets#FrameHostPageXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPage.xaml#framehostpagexaml2)]
 [!code-xaml[NavigationOverviewSnippets#FrameHostPageXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPage.xaml#framehostpagexaml3)]
 
-此標記會將 `Frame` 元素的 `Source` 屬性設定為 <xref:System.Windows.Controls.Frame> 應該一開始流覽的 <xref:System.Windows.Controls.Page> 的 pack URI。 下圖顯示具有 <xref:System.Windows.Controls.Page> 的 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]，此 <xref:System.Windows.Controls.Frame> 已在數個頁面之間流覽。
+此標記會將 `Frame` 元素的 `Source` 屬性設定為 <xref:System.Windows.Controls.Frame> 應該一開始流覽的 <xref:System.Windows.Controls.Page> 的 pack URI。 下圖顯示 XBAP，其中的 <xref:System.Windows.Controls.Page> 具有在數個頁面之間流覽的 <xref:System.Windows.Controls.Frame>。
 
 ![在多個頁面之間流覽的框架](./media/navigation-overview/frame-navigation-between-multiple-pages.png "這會顯示多個頁面之間的框架導覽。")
 
 您不只需要在 <xref:System.Windows.Controls.Page> 的內容內使用 <xref:System.Windows.Controls.Frame>。 在 <xref:System.Windows.Window> 內容中裝載 <xref:System.Windows.Controls.Frame> 也是很常見的情況。
 
-根據預設，只有在沒有另一個日誌時，<xref:System.Windows.Controls.Frame> 才會使用自己的日誌。 如果 <xref:System.Windows.Controls.Frame> 是裝載于 <xref:System.Windows.Navigation.NavigationWindow> 或 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]內之內容的一部分，<xref:System.Windows.Controls.Frame> 會使用屬於 <xref:System.Windows.Navigation.NavigationWindow> 或 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]的日誌。 不過，有時候 <xref:System.Windows.Controls.Frame> 可能需要負責自己的日誌。 若要這麼做，其中一個原因是允許在 <xref:System.Windows.Controls.Frame> 所裝載的頁面內進行日誌導覽。 如下圖所示。
+根據預設，只有在沒有另一個日誌時，<xref:System.Windows.Controls.Frame> 才會使用自己的日誌。 如果 <xref:System.Windows.Controls.Frame> 是裝載于 <xref:System.Windows.Navigation.NavigationWindow> 或 XBAP 內之內容的一部分，<xref:System.Windows.Controls.Frame> 會使用屬於 <xref:System.Windows.Navigation.NavigationWindow> 或 XBAP 的日誌。 不過，有時候 <xref:System.Windows.Controls.Frame> 可能需要負責自己的日誌。 若要這麼做，其中一個原因是允許在 <xref:System.Windows.Controls.Frame> 所裝載的頁面內進行日誌導覽。 如下圖所示。
 
 ![框架和頁面圖表](./media/navigation-overview/journal-navigation-within-pages-hosted-by-a-frame.png "這會在框架所主控的頁面中顯示日誌導覽。")
 
@@ -665,7 +665,7 @@ Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用
 
 ![導覽器圖表](./media/navigation-overview/navigation-host-construction.png "導覽主控制項的基本結構")
 
-基本上，這可讓 <xref:System.Windows.Navigation.NavigationWindow> 和 <xref:System.Windows.Controls.Frame> 提供在瀏覽器中裝載時，[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 所提供的相同導覽支援。
+基本上，這可讓 <xref:System.Windows.Navigation.NavigationWindow> 和 <xref:System.Windows.Controls.Frame> 提供 XBAP 在瀏覽器中裝載時所提供的相同導覽支援。
 
 除了使用 <xref:System.Windows.Navigation.NavigationService> 和日誌以外，導覽主機還會實作為 <xref:System.Windows.Navigation.NavigationService> 所執行的相同成員。 如下圖所示。
 
@@ -681,7 +681,7 @@ Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用
 
 ## <a name="navigating-to-content-other-than-xaml-pages"></a>巡覽至 XAML 頁面以外的內容
 
-在本主題中，<xref:System.Windows.Controls.Page> 和 pack [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 已用來示範 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的各種導覽功能。 不過，編譯成應用程式的 <xref:System.Windows.Controls.Page> 不是唯一可以流覽的內容類型，而套件 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 則不是識別內容的唯一方法。
+在本主題中，<xref:System.Windows.Controls.Page> 和 pack Xbap 都是用來示範 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]的各種導覽功能。 不過，編譯成應用程式的 <xref:System.Windows.Controls.Page> 不是可流覽的唯一內容類型，而套件 Xbap 則不是識別內容的唯一方法。
 
 如本節所示，您也可以流覽到鬆散的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案、HTML 檔案和物件。
 
@@ -728,7 +728,7 @@ Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用
 
 [!code-xaml[NavigationOverviewSnippets#FrameHtmlNavMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHTMLNavPage.xaml#framehtmlnavmarkup)]
 
-流覽至 HTML 需要特殊許可權。 例如，您無法從在網際網路區域部分信任安全性沙箱中執行的 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 進行流覽。 如需詳細資訊，請參閱 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。
+流覽至 HTML 需要特殊許可權。 例如，您無法從在網際網路區域部分信任安全性沙箱中執行的 XBAP 進行流覽。 如需詳細資訊，請參閱 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。
 
 <a name="Navigating_to_HTML_Files_Using_WebBrowser"></a>
 
@@ -778,7 +778,7 @@ Windows Presentation Foundation （WPF）支援瀏覽器樣式的導覽，可用
 
 ## <a name="security"></a>安全性
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 導覽支援允許透過網際網路流覽 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，並可讓應用程式裝載協力廠商內容。 為了保護應用程式和使用者免于有害的行為，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供[安全性](../security-wpf.md)和[WPF 部分信任安全性](../wpf-partial-trust-security.md)中所討論的各種安全性功能。
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 導覽支援可讓您透過網際網路流覽至 Xbap，並允許應用程式裝載協力廠商內容。 為了保護應用程式和使用者免于有害的行為，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供[安全性](../security-wpf.md)和[WPF 部分信任安全性](../wpf-partial-trust-security.md)中所討論的各種安全性功能。
 
 ## <a name="see-also"></a>請參閱
 

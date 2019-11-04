@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 6b1a78ec56032d84d9699c2ecda89308779ee2da
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: a31dc2c5431c8201607462e8bdef4b8bae0fb41d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421140"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460922"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 應用程式資源、內容和資料檔案
 Microsoft Windows 應用程式通常取決於包含非可執行資料的檔案，例如 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、影像、影片和音訊。 Windows Presentation Foundation （WPF）提供設定、識別和使用這些類型的資料檔案（稱為「應用程式資料檔案」）的特殊支援。 這項支援是以一組特定的應用程式資料檔案類型為中心，包括：  
@@ -52,7 +52,7 @@ Microsoft Windows 應用程式通常取決於包含非可執行資料的檔案�
 - 您的應用程式資料檔案必須是可當地語系化的（請參閱[WPF 全球化和當地語系化總覽](../advanced/wpf-globalization-and-localization-overview.md)）。  
   
 > [!NOTE]
-> 本節所述的資源檔與[XAML 資源](../advanced/xaml-resources.md)中所述的資源檔不同，而且不同于[管理應用程式資源（.net）](/visualstudio/ide/managing-application-resources-dotnet)中所述的內嵌或連結的資源。  
+> 本節所述的資源檔與[XAML 資源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)中所述的資源檔不同，而且不同于[管理應用程式資源（.net）](/visualstudio/ide/managing-application-resources-dotnet)中所述的內嵌或連結的資源。  
   
 ### <a name="configuring-resource-files"></a>設定資源檔  
  在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，資源檔是包含在 Microsoft build engine （MSBuild）專案中做為 `Resource` 專案的檔案。  

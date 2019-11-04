@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 76330c1228b1f55a5dbaf58a1acd231a391d550c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 09c3c57f3ac1009416a5c67b37c035fe30cd5b5e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580519"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425332"
 ---
 # <a name="structured-navigation-overview"></a>結構化巡覽概觀
 
-可由 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]、<xref:System.Windows.Controls.Frame> 或 <xref:System.Windows.Navigation.NavigationWindow> 所裝載的內容，是由套件統一資源識別項（Uri）所識別，並透過超連結流覽至的頁面所組成。 頁面的結構及其可被巡覽的方式，如超連結所定義，稱之為巡覽拓撲。 這種拓撲適合各種不同的應用程式類型，尤其是巡覽文件的應用程式。 針對這類應用程式，使用者可以從一頁巡覽到另一頁，頁面彼此間不需要了解。
+XAML 瀏覽器應用程式（XBAP）、<xref:System.Windows.Controls.Frame>或 <xref:System.Windows.Navigation.NavigationWindow> 所裝載的內容，是由封裝統一資源識別項（Uri）所識別，並透過超連結流覽至的頁面所組成。 頁面的結構及其可被巡覽的方式，如超連結所定義，稱之為巡覽拓撲。 這種拓撲適合各種不同的應用程式類型，尤其是巡覽文件的應用程式。 針對這類應用程式，使用者可以從一頁巡覽到另一頁，頁面彼此間不需要了解。
 
 不過，其他類型的應用程式有需要知道被巡覽的頁面。 例如，假設人力資源應用程式有列出組織中所有員工的頁面：「員工清單」頁面。 此頁面也允許使用者按一下超連結新增新進員工。 按一下時，頁面會巡覽至「新增員工」頁面，收集新進員工的詳細資料，並傳回「員工清單」頁面建立新的員工以及更新清單。 這種巡覽樣式類似於呼叫方法執行一些處理並傳回值，稱之為結構化程式設計。 因此，這種巡覽稱之為「結構化巡覽」。
 
-@No__t_0 類別不會執行結構化導覽的支援。 相反地，<xref:System.Windows.Navigation.PageFunction%601> 類別衍生自 <xref:System.Windows.Controls.Page>，並以結構化導覽所需的基本結構來擴充它。 本主題說明如何使用 <xref:System.Windows.Navigation.PageFunction%601> 建立結構化導覽。
+<xref:System.Windows.Controls.Page> 類別不會執行結構化導覽的支援。 相反地，<xref:System.Windows.Navigation.PageFunction%601> 類別衍生自 <xref:System.Windows.Controls.Page>，並以結構化導覽所需的基本結構來擴充它。 本主題說明如何使用 <xref:System.Windows.Navigation.PageFunction%601>建立結構化導覽。
 
 <a name="Structured_Navigation"></a>
 
@@ -48,7 +48,7 @@ ms.locfileid: "72580519"
 
 ## <a name="structured-navigation-with-pagefunction"></a>有 PageFunction 的結構化巡覽
 
-本主題說明如何執行涉及單一 <xref:System.Windows.Navigation.PageFunction%601> 之結構化導覽的基本機制。 在此範例中，<xref:System.Windows.Controls.Page> 會呼叫 <xref:System.Windows.Navigation.PageFunction%601> 以從使用者取得 <xref:System.String> 值，並將其傳回。
+本主題說明如何執行涉及單一 <xref:System.Windows.Navigation.PageFunction%601>之結構化導覽的基本機制。 在此範例中，<xref:System.Windows.Controls.Page> 會呼叫 <xref:System.Windows.Navigation.PageFunction%601> 以從使用者取得 <xref:System.String> 值，並將其傳回。
 
 ### <a name="creating-a-calling-page"></a>建立呼叫端頁面
 
@@ -66,7 +66,7 @@ ms.locfileid: "72580519"
 
 ### <a name="creating-a-page-function-to-call"></a>建立呼叫頁面函式
 
-因為呼叫的頁面可以使用呼叫的頁面來收集和傳回使用者的資料，所以 <xref:System.Windows.Navigation.PageFunction%601> 會實作為泛型類別，其型別引數會指定所呼叫的頁面將傳回的數值型別。 下列程式碼使用會傳回 <xref:System.String> 的 <xref:System.Windows.Navigation.PageFunction%601>，顯示呼叫的頁面的初始執行。
+因為呼叫的頁面可以使用呼叫的頁面來收集和傳回使用者的資料，所以 <xref:System.Windows.Navigation.PageFunction%601> 會實作為泛型類別，其型別引數會指定所呼叫的頁面將傳回的數值型別。 下列程式碼使用會傳回 <xref:System.String>的 <xref:System.Windows.Navigation.PageFunction%601>，顯示呼叫的頁面的初始執行。
 
 [!code-xaml[StructuredNavigationSample#CalledPageFunctionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml#calledpagefunctionmarkup)]
 
@@ -75,9 +75,9 @@ ms.locfileid: "72580519"
 [!code-csharp[StructuredNavigationSample#CalledPageFunctionCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#calledpagefunctioncodebehind2)]
 [!code-vb[StructuredNavigationSample#CalledPageFunctionCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#calledpagefunctioncodebehind2)]
 
-@No__t_0 的宣告類似于 <xref:System.Windows.Controls.Page> 的宣告，並加入了型別引數。 如您在程式碼範例中所見，使用 `x:TypeArguments` 屬性的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 標記和使用標準泛型型別引數語法的程式碼後置，兩者都指定型別引數。
+<xref:System.Windows.Navigation.PageFunction%601> 的宣告類似于 <xref:System.Windows.Controls.Page> 的宣告，並加入了型別引數。 如您在程式碼範例中所見，使用 `x:TypeArguments` 屬性的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 標記和使用標準泛型型別引數語法的程式碼後置，兩者都指定型別引數。
 
-您不需要只使用 .NET Framework 類別做為型別引數。 您可以呼叫 <xref:System.Windows.Navigation.PageFunction%601> 來收集抽象為自訂類型的定義域特定資料。 下列程式碼示範如何使用自訂型別做為 <xref:System.Windows.Navigation.PageFunction%601> 的型別引數。
+您不需要只使用 .NET Framework 類別做為型別引數。 您可以呼叫 <xref:System.Windows.Navigation.PageFunction%601> 來收集抽象為自訂類型的定義域特定資料。 下列程式碼示範如何使用自訂型別做為 <xref:System.Windows.Navigation.PageFunction%601>的型別引數。
 
 [!code-csharp[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomType.cs#customtypecode1)]
 [!code-vb[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomType.vb#customtypecode1)]
@@ -92,7 +92,7 @@ ms.locfileid: "72580519"
 [!code-csharp[CustomTypePageFunctionSnippets#CustomTypePageFunctionCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomTypePageFunction.xaml.cs#customtypepagefunctioncodebehind2)]
 [!code-vb[CustomTypePageFunctionSnippets#CustomTypePageFunctionCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomTypePageFunction.xaml.vb#customtypepagefunctioncodebehind2)]
 
-@No__t_0 的型別引數提供呼叫頁面與所呼叫頁面之間通訊的基礎，下列各節將討論這些程式。
+<xref:System.Windows.Navigation.PageFunction%601> 的型別引數提供呼叫頁面與所呼叫頁面之間通訊的基礎，下列各節將討論這些程式。
 
 如您所見，使用宣告 <xref:System.Windows.Navigation.PageFunction%601> 所識別的類型，在將資料從 <xref:System.Windows.Navigation.PageFunction%601> 傳回至呼叫的頁面時，扮演著重要的角色。
 
@@ -127,15 +127,15 @@ ms.locfileid: "72580519"
 
   1. 使用無參數的函式，具現化呼叫的 <xref:System.Windows.Navigation.PageFunction%601>。
 
-  2. 將參數儲存在 <xref:System.Windows.Application.Properties%2A> 中。
+  2. 將參數儲存在 <xref:System.Windows.Application.Properties%2A>中。
 
   3. 流覽至呼叫的 <xref:System.Windows.Navigation.PageFunction%601>。
 
 - 從呼叫的 <xref:System.Windows.Navigation.PageFunction%601>：
 
-  - 取出並使用儲存在 <xref:System.Windows.Application.Properties%2A> 中的參數。
+  - 取出並使用儲存在 <xref:System.Windows.Application.Properties%2A>中的參數。
 
-但是，您很快就會發現，您還是需要使用程式碼來具現化並巡覽至呼叫的頁面，才能收集呼叫的頁面所傳回的資料。 基於這個理由，<xref:System.Windows.Navigation.PageFunction%601> 必須保持運作狀態;否則，當您下次流覽至 <xref:System.Windows.Navigation.PageFunction%601> 時，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會使用無參數的函式來具現化 <xref:System.Windows.Navigation.PageFunction%601>。
+但是，您很快就會發現，您還是需要使用程式碼來具現化並巡覽至呼叫的頁面，才能收集呼叫的頁面所傳回的資料。 基於這個理由，<xref:System.Windows.Navigation.PageFunction%601> 必須保持運作狀態;否則，當您下次流覽至 <xref:System.Windows.Navigation.PageFunction%601>時，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會使用無參數的函式來具現化 <xref:System.Windows.Navigation.PageFunction%601>。
 
 但在呼叫的頁面傳回之前，它需要傳回呼叫端頁面可擷取的資料。
 
@@ -156,7 +156,7 @@ ms.locfileid: "72580519"
 
 在本例中，如果使用者按下 [取消] 按鈕，`null` 值就會傳回呼叫端頁面。 如果改按下 [確定] 按鈕，則傳回使用者提供的字串值。 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 是您呼叫的 `protected virtual` 方法，可將您的資料傳回給呼叫的頁面。 您的資料必須封裝在泛型 <xref:System.Windows.Navigation.ReturnEventArgs%601> 型別的實例中，其型別引數會指定 <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> 傳回的值型別。 如此一來，當您宣告具有特定類型引數的 <xref:System.Windows.Navigation.PageFunction%601> 時，您會指出 <xref:System.Windows.Navigation.PageFunction%601> 會傳回類型引數所指定之類型的實例。 在此範例中，類型引數和，因此傳回值的類型為 <xref:System.String>。
 
-呼叫 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 時，呼叫端頁面需要某種方式來接收 <xref:System.Windows.Navigation.PageFunction%601> 的傳回值。 基於這個理由，<xref:System.Windows.Navigation.PageFunction%601> 會實作為呼叫頁面以處理的 <xref:System.Windows.Navigation.PageFunction%601.Return> 事件。 呼叫 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 時，會引發 <xref:System.Windows.Navigation.PageFunction%601.Return>，因此呼叫的頁面可以向 <xref:System.Windows.Navigation.PageFunction%601.Return> 註冊以接收通知。
+呼叫 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 時，呼叫端頁面需要某種方式來接收 <xref:System.Windows.Navigation.PageFunction%601>的傳回值。 基於這個理由，<xref:System.Windows.Navigation.PageFunction%601> 會實作為呼叫頁面以處理的 <xref:System.Windows.Navigation.PageFunction%601.Return> 事件。 呼叫 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 時，會引發 <xref:System.Windows.Navigation.PageFunction%601.Return>，因此呼叫的頁面可以向 <xref:System.Windows.Navigation.PageFunction%601.Return> 註冊以接收通知。
 
 [!code-csharp[StructuredNavigationSample#ProcessResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#processresultcodebehind1)]
 [!code-vb[StructuredNavigationSample#ProcessResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CallingPage.xaml.vb#processresultcodebehind1)]
@@ -167,7 +167,7 @@ ms.locfileid: "72580519"
 
 當傳回呼叫的頁面，而使用者未取消呼叫的頁面時，呼叫端頁面會處理使用者提供以及呼叫的頁面所傳回的資料。 以此方式擷取的資料通常是獨立的活動。當被呼叫頁面傳回時，呼叫端頁面需要建立並巡覽至新的呼叫端頁面，以擷取更多資料。
 
-不過，除非從日誌移除呼叫的頁面，否則使用者就能夠巡覽回到呼叫端頁面的上一個執行個體。 @No__t_0 是否保留在日誌中是由 <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> 屬性所決定。 根據預設，呼叫 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 時，會自動移除頁面函式，因為 <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> 設定為 `true`。 若要在呼叫 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 之後，將頁面函式保留在導覽歷程記錄中，請將 <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> 設定為 [`false`]。
+不過，除非從日誌移除呼叫的頁面，否則使用者就能夠巡覽回到呼叫端頁面的上一個執行個體。 <xref:System.Windows.Navigation.PageFunction%601> 是否保留在日誌中是由 <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> 屬性所決定。 根據預設，呼叫 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 時，會自動移除頁面函式，因為 <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> 設定為 `true`。 若要在呼叫 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 之後，將頁面函式保留在導覽歷程記錄中，請將 <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> 設定為 [`false`]。
 
 <a name="Other_Types_of_Structured_Navigation"></a>
 

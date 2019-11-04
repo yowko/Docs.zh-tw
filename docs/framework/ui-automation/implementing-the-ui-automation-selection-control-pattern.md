@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation, Selection control pattern
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
-ms.openlocfilehash: 8ce37b71846f227c753e8d217e96482f623d3bd1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 39baadbad4bf5aff1cc2cd7877489f43581e0fa0
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043230"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458154"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>實作 UI 自動化 Selection 控制項模式
 > [!NOTE]
-> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題將介紹實作 <xref:System.Windows.Automation.Provider.ISelectionProvider>的方針和慣例，包括事件和屬性的相關資訊。 其他參考的連結列於主題的結尾。  
   
@@ -29,18 +29,18 @@ ms.locfileid: "71043230"
   
 - 有最小值、最大值和連續範圍的控制項 (如 [音量] 滑桿控制項)，應實作 <xref:System.Windows.Automation.Provider.IRangeValueProvider> ，而不是實作 <xref:System.Windows.Automation.Provider.ISelectionProvider>。  
   
-- 若單一選取控制項有實作 <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>的子控制項，例如 [顯示內容] 對話方塊中的 [螢幕解析度] 滑桿或 **的 [色彩選擇器]** [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 選取控制項 (如下所示)，應實作 <xref:System.Windows.Automation.Provider.ISelectionProvider>，其子系應實作 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> 和 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>。  
+- 單一選取控制項，可管理執行 <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>的子控制項，例如 [**顯示**內容] 對話方塊中的 [**螢幕解析度**] 滑杆，或 Microsoft Word 的 [**色彩選擇器**] 選取控制項（如下所示）：），應該執行 <xref:System.Windows.Automation.Provider.ISelectionProvider>;其子系應同時執行 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> 和 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>。  
   
- 反![白顯示黃色的色彩選擇器。](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
+ ![反白顯示黃色的色彩選擇器。](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 色樣字串對應範例  
   
-- 功能表不支援 <xref:System.Windows.Automation.SelectionPattern>。 如果您使用的功能表項目同時包含圖形和文字（例如 Microsoft Outlook 的 [ **View** ] 功能表中的 [**預覽] 窗格**專案），而且需要傳達狀態，則應執行<xref:System.Windows.Automation.Provider.IToggleProvider>。  
+- 功能表不支援 <xref:System.Windows.Automation.SelectionPattern>。 如果您使用的功能表項目同時包含圖形和文字（例如 Microsoft Outlook 中 [**視圖**] 功能表中的 [**預覽] 窗格**專案），而且需要傳達狀態，則應該執行 <xref:System.Windows.Automation.Provider.IToggleProvider>。  
   
 <a name="Required_Members_for_ISelectionProvider"></a>   
 ## <a name="required-members-for-iselectionprovider"></a>ISelectionProvider 的必要成員  
  <xref:System.Windows.Automation.Provider.ISelectionProvider> 介面需要下列屬性、方法和事件。  
   
-|必要成員|類型|注意|  
+|必要成員|輸入|備註|  
 |----------------------|----------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|屬性|應支援使用 <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> 和 <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>的屬性變更事件。|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|屬性|應支援使用 <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> 和 <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>的屬性變更事件。|  
@@ -58,7 +58,7 @@ ms.locfileid: "71043230"
 |<xref:System.Windows.Automation.ElementNotEnabledException>|如果未啟用此控制項。|  
 |<xref:System.InvalidOperationException>|如果隱藏此控制項。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)

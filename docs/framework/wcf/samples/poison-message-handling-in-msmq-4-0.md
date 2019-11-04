@@ -2,12 +2,12 @@
 title: MSMQ 4.0 中的有害訊息處理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: f20f7cec29574746edc84d45171cfa63a5682337
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6f3ec0f097f1b18ca45333b7dc66431277816c60
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039080"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424317"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 中的有害訊息處理
 這個範例會示範如何在服務中執行有害訊息處理。 這個範例是以交易式[MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)系結範例為基礎。 這個範例會使用 `netMsmqBinding`。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
@@ -27,13 +27,13 @@ ms.locfileid: "70039080"
 
  一旦訊息標記為有害，該訊息就會根據 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 列舉中的設定加以處理。 若要重新逐一查看可能的值：
 
-- 錯誤 (預設值):表示錯誤接聽程式和服務主機。
+- Fault (預設)：使接聽程式和服務主機發生錯誤。
 
-- 下拉式以捨棄訊息。
+- Drop：捨棄訊息。
 
-- 進入將訊息移至有害訊息子佇列。 這個值只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
+- Move：將訊息移至有害訊息子佇列。 這個值只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
 
-- 否決若要拒絕訊息, 請將訊息傳回給寄件者的寄不出的信件佇列。 這個值只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
+- Reject：拒絕訊息，並將訊息傳回至傳送者之寄不出的信件佇列。 這個值只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
 
  此範例會示範對有害訊息使用 `Move` 處置。 `Move` 會導致訊息移至有害子佇列。
 
@@ -157,7 +157,7 @@ public class OrderProcessorService : IOrderProcessor
 ## <a name="processing-messages-from-the-poison-message-queue"></a>處理有害訊息佇列中的訊息
  有害訊息服務會讀取最終有害訊息佇列中的訊息，並處理這些訊息。
 
- 有害訊息佇列中的訊息是指定址到正在處理這些訊息之服務的訊息，這個服務與有害訊息服務端點可能不同。 因此, 當有害訊息服務從佇列讀取訊息時, WCF 通道層會尋找端點不相符的情況, 而且不會分派訊息。 此時，該訊息是定址到訂單處理服務，但卻是由有害訊息服務接收。 即使訊息是定址到其他端點，若要繼續接收訊息，我們就必須新增 `ServiceBehavior`，以便篩選比對準則要比對訊息定址到的任何服務端點時的所在位址。 若要成功處理從有害訊息佇列中讀取的訊息，您就必須執行這項操作。
+ 有害訊息佇列中的訊息是指定址到正在處理這些訊息之服務的訊息，這個服務與有害訊息服務端點可能不同。 因此，當有害訊息服務從佇列讀取訊息時，WCF 通道層會尋找端點不相符的情況，而且不會分派訊息。 此時，該訊息是定址到訂單處理服務，但卻是由有害訊息服務接收。 即使訊息是定址到其他端點，若要繼續接收訊息，我們就必須新增 `ServiceBehavior`，以便篩選比對準則要比對訊息定址到的任何服務端點時的所在位址。 若要成功處理從有害訊息佇列中讀取的訊息，您就必須執行這項操作。
 
  有害訊息服務實作本身與服務實作非常相似， 它會實作合約並處理訂單。 程式碼範例如下所示。
 
@@ -233,7 +233,7 @@ public class OrderProcessorService : IOrderProcessor
 
  服務會開始執行、處理訂單，並隨機終止處理。 如果訊息指出其已處理訂單，您就可以再次執行用戶端來傳送其他訊息，直到您清楚該服務已確實終止訊息。 根據設定的有害訊息設定，訊息會在移至最終有害佇列之前嘗試經過處理一次。
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -258,7 +258,7 @@ Aborting transaction, cannot process purchase order: 23e0b991-fbf9-4438-a0e2-20a
 
  啟動有害訊息服務，即可從有害佇列讀取有害訊息。 在這個範例中，有害訊息服務會讀取並處理訊息。 您會發現已終止和已標記為有害的採購單會由有害訊息服務所讀取。
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -281,17 +281,17 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
     2. 展開 [**功能**] 索引標籤。
 
-    3. 以滑鼠右鍵按一下 [**私人訊息佇列**], 然後選取 [**新增**]、[**私用佇列**]。
+    3. 以滑鼠右鍵按一下 [**私人訊息佇列**]，然後選取 [**新增**]、[**私用佇列**]。
 
     4. 選取 [**交易**式] 方塊。
 
-    5. 輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。
+    5. 輸入 `ServiceModelSamplesTransacted` 做為新佇列的名稱。
 
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 
-4. 若要在單一或跨電腦設定中執行範例, 請變更佇列名稱以反映實際主機名稱, 而不是 localhost, 並遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
+4. 若要在單一或跨電腦設定中執行範例，請變更佇列名稱以反映實際主機名稱，而不是 localhost，並遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
- 根據預設，安全性會透過 `netMsmqBinding` 繫結傳輸啟用。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 這兩個屬性會共同決定傳輸安全性的類型。 根據預設，驗證模式會設定為 `Windows`，保護層級則會設定為 `Sign`。 若要 MSMQ 提供驗證和簽署功能，則 MSMQ 必須是網域的一部分。 如果您在不屬於網域的電腦上執行此範例, 則會收到下列錯誤:「使用者的內部訊息佇列憑證不存在」。
+ 根據預設，安全性會透過 `netMsmqBinding` 繫結傳輸啟用。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 這兩個屬性會共同決定傳輸安全性的類型。 根據預設，驗證模式會設定為 `Windows`，保護層級則會設定為 `Sign`。 若要 MSMQ 提供驗證和簽署功能，則 MSMQ 必須是網域的一部分。 如果您在不屬於網域的電腦上執行這個範例，就會收到下列錯誤：「使用者的內部訊息佇列憑證不存在」。
 
 #### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>若要在加入至工作群組的電腦上執行範例
 
@@ -314,13 +314,13 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     > [!NOTE]
     > 將 `security mode` 設定為 `None`，相當於將 `MsmqAuthenticationMode`、`MsmqProtectionLevel` 和 `Message` 安全性設定為 `None`。  
   
-3. 若要讓中繼資料交換正常運作，我們要向 http 繫結登錄 URL。 這時需要在更高權限的命令視窗中執行服務。 否則, 您會收到如下的例外狀況`Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`:。  
+3. 若要讓中繼資料交換正常運作，我們要向 http 繫結登錄 URL。 這時需要在更高權限的命令視窗中執行服務。 否則，您會收到如下的例外狀況： `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`

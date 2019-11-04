@@ -2,12 +2,12 @@
 title: 服務版本控制
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 68c41f2c349dbceb318976ee26db58fd00dae872
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3f9fd87eacf67a1b23568dcf87df086e935879ba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321478"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423692"
 ---
 # <a name="service-versioning"></a>服務版本控制
 在初始部署以及存留期間可能的數次部署之後，服務 (以及公開的端點) 可能因各種不同的原因而需要變更，例如變更業務需要、資訊技術需求，或解決其他問題等。 每個變更都會產生新的服務版本。 本主題說明如何在 Windows Communication Foundation （WCF）中考慮版本設定。  
@@ -132,7 +132,7 @@ ms.locfileid: "72321478"
   
  這類機制的其中一種是使用介面定義各資料合約的成員，並且根據介面而非實作介面的資料合約類別，撰寫內部實作程式碼。 以下第 1 版服務的程式碼示範 `IPurchaseOrderV1` 介面和 `PurchaseOrderV1`。  
   
-```  
+```csharp  
 public interface IPurchaseOrderV1  
 {  
     string OrderId { get; set; }  
@@ -153,7 +153,7 @@ public class PurchaseOrderV1 : IPurchaseOrderV1
   
  即使服務合約的作業可以根據 `PurchaseOrderV1` 撰寫，實際商務邏輯仍會根據 `IPurchaseOrderV1`。 接著在第 2 版中，會有一個新的 `IPurchaseOrderV2` 介面和新的 `PurchaseOrderV2` 類別，如以下程式碼中所示：  
   
-```  
+```csharp
 public interface IPurchaseOrderV2  
 {  
     DateTime OrderDate { get; set; }  

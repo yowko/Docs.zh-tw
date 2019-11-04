@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: e1daf9efd59b89d5d5be5f51cf9ac5e00750dda3
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919732"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421092"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 增益集概觀
 
@@ -171,21 +171,21 @@ WPF UI 類型無法遠端處理。 為了解決這個問題，WPF 擴充了 .NET
 
 ## <a name="add-ins-and-xaml-browser-applications"></a>增益集和 XAML 瀏覽器應用程式
 
-在到目前為止的範例中，主應用程式一直是已安裝的獨立應用程式。 但是 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 也可以裝載增益集，儘管有下列額外組建和實作需求︰
+在到目前為止的範例中，主應用程式一直是已安裝的獨立應用程式。 但是，XAML 瀏覽器應用程式（Xbap）也可以裝載增益集，但具有下列額外的組建和執行需求：
 
-- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 應用程式資訊清單必須特別設定，才能將管線（資料夾和元件）和增益集元件下載至用戶端電腦上的 ClickOnce 應用程式快取（在與 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]相同的資料夾中）。
+- XBAP 應用程式資訊清單必須特別設定，才能將管線（資料夾和元件）和增益集元件下載至用戶端電腦上的 ClickOnce 應用程式快取（在與 XBAP 相同的資料夾中）。
 
-- 探索及載入增益集的 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 程式碼必須使用 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 的 ClickOnce 應用程式快取，做為管線和增益集的位置。
+- 用來探索及載入增益集的 XBAP 程式碼必須使用 XBAP 的 ClickOnce 應用程式快取，做為管線和增益集的位置。
 
-- 如果增益集參考位於原始網站的鬆散式檔案，[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 必須將增益集載入特殊的安全性內容；為 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 所裝載時，增益集只能參考位於主應用程式原始網站的鬆散式檔案。
+- 如果增益集參考位於來源網站上的鬆散檔案，XBAP 就必須將增益集載入到特殊的安全性內容中。以 Xbap 裝載時，增益集只能參考位於主應用程式的來源網站上的鬆散檔案。
 
 下列各小節將詳細說明這些工作。
 
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>設定 ClickOnce 部署的管線和增益集
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 會下載至 ClickOnce 部署快取中的安全資料夾並從中執行。 為了讓 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 裝載增益集，管線和增益集組件必須也下載到安全資料夾。 為達到此目的，您需要設定應用程式資訊清單包含管線和增益集組件以供下載。 這最容易在 Visual Studio 中完成，雖然管線和增益集元件必須位於主機 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 專案的根資料夾中，才能讓 Visual Studio 偵測管線元件。
+Xbap 會下載至 ClickOnce 部署快取中的安全資料夾並從中執行。 為了讓 XBAP 裝載增益集，管線和增益集元件也必須下載至 safe 資料夾。 為達到此目的，您需要設定應用程式資訊清單包含管線和增益集組件以供下載。 雖然管線和增益集元件必須位於主機 XBAP 專案的根資料夾中，才能讓 Visual Studio 偵測管線元件，但這最容易在 Visual Studio 中完成。
 
-因此，第一個步驟是設定每個管線組件和增益集組件專案的組建輸出，組建 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 專案根目錄的管線和增益集組件。 下表顯示管線組件專案及增益集組件專案的組建輸出路徑，這些專案和裝載 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 專案位在相同的解決方案和根資料夾中。
+因此，第一個步驟是設定每個管線元件和增益集元件專案的組建輸出，以將管線和增益集元件建立至 XBAP 專案的根目錄。 下表顯示管線元件專案和增益集元件專案的組建輸出路徑，其位於與主機 XBAP 專案相同的方案和根資料夾中。
 
 表 1：XBAP 裝載之管線組件的組建輸出路徑
 
@@ -197,21 +197,21 @@ WPF UI 類型無法遠端處理。 為了解決這個問題，WPF 擴充了 .NET
 |主控件端配接器|`..\HostXBAP\HostSideAdapters\`|
 |增益集|`..\HostXBAP\AddIns\WPFAddIn1`|
 
-下一個步驟是執行下列動作，將管線元件和增益集元件指定為 Visual Studio 中的 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 內容檔案：
+下一個步驟是執行下列動作，將管線元件和增益集元件指定為 Visual Studio 中的 Xbap 內容檔案：
 
 1. 以滑鼠右鍵按一下方案總管中每個管線資料夾，然後選擇 [加入至專案]，在專案中包含管線和增益集組件。
 
 2. 從 [屬性] 視窗將每個管線組件和增益集組件的 [建置動作] 設定為 [內容]。
 
-最後一個步驟，是設定應用程式資訊清單包含管線組件檔和增益集組件檔以供下載。 這些檔案應該位於 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 應用程式所佔用之 ClickOnce 快取資料夾根目錄中的資料夾。 您可以藉由執行下列動作，在 Visual Studio 中達到設定：
+最後一個步驟，是設定應用程式資訊清單包含管線組件檔和增益集組件檔以供下載。 檔案應該位於 XBAP 應用程式所佔用之 ClickOnce 快取資料夾根目錄的資料夾中。 您可以藉由執行下列動作，在 Visual Studio 中達到設定：
 
-1. 以滑鼠右鍵按一下 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 專案，再依序按一下 [屬性]、[發佈] 和 [應用程式檔案] 按鈕。
+1. 以滑鼠右鍵按一下 XBAP 專案，依序按一下 [**屬性**]、[**發佈**]，然後按一下 [**應用程式檔**] 按鈕。
 
 2. 在 [應用程式檔案] 對話方塊中，將每個管線和增益集 DLL 的 [發行狀態] 設成 [Include (Auto)] (包含 (自動))，並將每個管線和增益集 DLL 的 [下載群組] 設成 [(必要項)]。
 
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>使用來自應用程式基底的管線和增益集
 
-當管線和增益集設定進行 ClickOnce 部署時，會將它們下載到與 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]相同的 ClickOnce 快取資料夾。 若要使用來自 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 的管線和增益集，[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 程式碼必須從應用程式基底取得它們。 使用管線和增益集之 .NET Framework 增益集模型的各種類型和成員，會針對此案例提供特殊支援。 首先，路徑是由 <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> 列舉值所識別。 您使用此值與相關增益集成員的多載處理使用包含下列各項的管線︰
+當管線和增益集設定進行 ClickOnce 部署時，會將它們下載到與 XBAP 相同的 ClickOnce 快取資料夾。 若要從 XBAP 使用管線和增益集，XBAP 程式碼必須從應用程式基底取得它們。 使用管線和增益集之 .NET Framework 增益集模型的各種類型和成員，會針對此案例提供特殊支援。 首先，路徑是由 <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> 列舉值所識別。 您使用此值與相關增益集成員的多載處理使用包含下列各項的管線︰
 
 - <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>
 

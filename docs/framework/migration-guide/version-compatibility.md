@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 1a3c23a70bc7dc519c824426f8939cb15e87a7fb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c3e2368bc5977d7f50ae7ecea8557c5c545e82a4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128059"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455601"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework 的版本相容性
 
@@ -49,7 +49,7 @@ ms.locfileid: "73128059"
 
 如果您的應用程式或元件在 .NET Framework 4.5 (包括其點版本，.NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8) 上無法如預期運作，請使用下列檢查清單：
 
-- 如果您應用程式的開發目的是在開頭為 .NET Framework 4.0 之任何版本的 .NET Framework 上執行，請參閱 [.NET Framework 中的應用程式相容性](application-compatibility.md)，以產生目標 .NET Framework 版本與您應用程式所執行版本之間的變更清單。
+- 如果您的應用程式是在從 .NET Framework 4.0 開始的任何 .NET Framework 版本上執行，請參閱[應用程式相容性](application-compatibility.md)，以產生目標 .NET Framework 版本與執行應用程式的版本之間的變更清單。
 
 - 如果您有 .NET Framework 3.5 應用程式，另請參閱 [.NET Framework 4 移轉問題](../migration-guide/net-framework-4-migration-issues.md)。
 

@@ -2,23 +2,23 @@
 title: SAML 權杖提供者
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 4a6ee808d224696d4fc21337cc558fcc6218e71d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 87aef572c2179034d295361c62942cea2ad6ed7a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044773"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424243"
 ---
 # <a name="saml-token-provider"></a>SAML 權杖提供者
-這個範例會示範如何實作自訂的用戶端 SAML 權杖提供者。 Windows Communication Foundation (WCF) 中的權杖提供者是用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附預設的認證管理員權杖提供者。 WCF 也隨附于 CardSpace 權杖提供者。 自訂權杖提供者適用於下列情況：
+這個範例會示範如何實作自訂的用戶端 SAML 權杖提供者。 Windows Communication Foundation （WCF）中的權杖提供者是用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附預設的認證管理員權杖提供者。 WCF 也隨附于 CardSpace 權杖提供者。 自訂權杖提供者適用於下列情況：
 
 - 如果您有這些權杖提供者無法使用的認證存放區。
 
-- 如果您想要提供自己的自訂機制, 讓使用者在 WCF 用戶端架構使用認證時, 將詳細資料提供給該時間點時, 可以將認證轉換成。
+- 如果您想要提供自己的自訂機制，讓使用者在 WCF 用戶端架構使用認證時，將詳細資料提供給該時間點時，可以將認證轉換成。
 
 - 如果您要建置自訂權杖。
 
- 這個範例示範如何建立自訂權杖提供者, 以允許使用從 WCF 用戶端架構外部取得的 SAML 權杖。
+ 這個範例示範如何建立自訂權杖提供者，以允許使用從 WCF 用戶端架構外部取得的 SAML 權杖。
 
  簡而言之，這個範例示範下面的情形：
 
@@ -30,7 +30,7 @@ ms.locfileid: "70044773"
 
 - 用戶端如何使用伺服器的 X.509 憑證來驗證伺服器。
 
- 服務會公開兩個端點，以便與使用組態檔 App.config 定義的服務進行通訊。每個端點是由位址、繫結及合約所組成。 繫結已設定成會使用訊息安全性的標準 `wsFederationHttpBinding`。 其中一個端點會預期用戶端經由使用對稱式證明金鑰的 SAML 權杖驗證，而另一個端點則預期用戶端經由使用非對稱式證明金鑰的 SAML 權杖驗證。 服務也會使用 `serviceCredentials` 行為來設定服務憑證。 `serviceCredentials` 行為可以讓您設定服務憑證。 服務憑證是由用戶端用來驗證服務並提供訊息保護。 下列組態會參考在安裝範例期間所安裝的 localhost 憑證，如本主題結尾處的安裝指示所述。 `serviceCredentials` 行為也會允許您設定受信任可簽署 SAML 權杖的憑證。 下列組態會參考在範例期間安裝的 'Alice' 憑證。
+ 服務會公開兩個端點，以便與使用設定檔 App.config 定義的服務進行通訊。每個端點都是由位址、系結和合約所組成。 繫結已設定成會使用訊息安全性的標準 `wsFederationHttpBinding`。 其中一個端點會預期用戶端經由使用對稱式證明金鑰的 SAML 權杖驗證，而另一個端點則預期用戶端經由使用非對稱式證明金鑰的 SAML 權杖驗證。 服務也會使用 `serviceCredentials` 行為來設定服務憑證。 `serviceCredentials` 行為可以讓您設定服務憑證。 服務憑證是由用戶端用來驗證服務並提供訊息保護。 下列組態會參考在安裝範例期間所安裝的 localhost 憑證，如本主題結尾處的安裝指示所述。 `serviceCredentials` 行為也會允許您設定受信任可簽署 SAML 權杖的憑證。 下列組態會參考在範例期間安裝的 'Alice' 憑證。
 
 ```xml
 <system.serviceModel>
@@ -111,7 +111,7 @@ ms.locfileid: "70044773"
 </system.serviceModel>
 ```
 
- 下列步驟示範如何開發自訂 SAML 權杖提供者, 並將它與 WCF: 安全性架構整合:
+ 下列步驟示範如何開發自訂 SAML 權杖提供者，並將它與 WCF：安全性架構整合：
 
 1. 撰寫自訂 SAML 權杖提供者。
 
@@ -119,7 +119,7 @@ ms.locfileid: "70044773"
 
      為了執行這個工作，此自訂權杖提供者會衍生自 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 類別，並覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法。 這個方法會建立並傳回新的 `SecurityToken`。
 
-    ```
+    ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)
     {
      // Create a SamlSecurityToken from the provided assertion
@@ -160,7 +160,7 @@ ms.locfileid: "70044773"
 
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> 類別會用來建立特定 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 物件的 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>，而該提供者會透過 `CreateSecurityTokenProvider` 方法傳遞給該管理員。 安全性權杖管理員也會用來建立權杖驗證器與權杖序列化程式，但是這些不在本範例的討論範圍。 在這個範例中，自訂安全性權杖管理員繼承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 類別，並且會覆寫 `CreateSecurityTokenProvider` 方法，以便在傳遞的權杖需求表示要求 SAML 權杖時傳回自訂 SAML 權杖提供者。 如果用戶端認證類別 (請參閱步驟 3) 尚未指定判斷提示，安全性權杖管理員就會建立適當的執行個體。
 
-    ```
+    ```csharp
     public class SamlSecurityTokenManager :
      ClientCredentialsSecurityTokenManager
     {
@@ -232,7 +232,7 @@ ms.locfileid: "70044773"
 
      用戶端認證類別會用來代表針對用戶端 Proxy 設定的認證，並且會建立用來取得權杖驗證器、權杖提供者以及權杖序列化程式的安全性權杖管理員。
 
-    ```
+    ```csharp
     public class SamlClientCredentials : ClientCredentials
     {
      ClaimSet claims;
@@ -275,7 +275,7 @@ ms.locfileid: "70044773"
 
      此範例會刪除預設用戶端認證類別並提供新的用戶端認證類別，以便讓用戶端能夠使用自訂用戶端認證。
 
-    ```
+    ```csharp
     // Create new credentials class
     SamlClientCredentials samlCC = new SamlClientCredentials();
 
@@ -309,7 +309,7 @@ ms.locfileid: "70044773"
 
      憑證會儲存在 LocalMachine 存放區位置下的 My (Personal) 存放區中。
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -323,7 +323,7 @@ ms.locfileid: "70044773"
 
      Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證的步驟。
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
@@ -333,7 +333,7 @@ ms.locfileid: "70044773"
 
      憑證會儲存在位於 CurrentUser 存放區位置下的 My 存放區中。
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -347,7 +347,7 @@ ms.locfileid: "70044773"
 
      Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將簽發者憑證填入伺服器憑證的步驟。
 
-    ```
+    ```console
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
@@ -355,7 +355,7 @@ ms.locfileid: "70044773"
 
 1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2. 若要建立方案, 請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。
+2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。
 
 > [!NOTE]
 > 如果您使用 Svcutil.exe 重新產生這個範例的組態，請務必修改用戶端組態中的端點名稱，以符合用戶端程式碼。
@@ -371,7 +371,7 @@ ms.locfileid: "70044773"
   
 3. 從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4. 如果用戶端和服務無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果用戶端和服務無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
@@ -379,7 +379,7 @@ ms.locfileid: "70044773"
   
 2. 將服務程式檔複製到服務電腦上的服務目錄。 同時，將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。  
   
-3. 您伺服器憑證的主體名稱必須包含電腦的完整網域名稱。 此 Service.exe.config 檔必須更新以反映這個新憑證名稱。 您可以修改 Setup.bat 批次檔來建立伺服器憑證。 請注意, 安裝程式 .bat 檔案必須在以系統管理員許可權開啟的 Visual Studio 視窗的開發人員命令提示字元中執行。 您必須將 `%SERVER_NAME%` 變數設定為用來裝載服務之電腦的完整主機名稱。  
+3. 您伺服器憑證的主體名稱必須包含電腦的完整網域名稱。 此 Service.exe.config 檔必須更新以反映這個新憑證名稱。 您可以修改 Setup.bat 批次檔來建立伺服器憑證。 請注意，安裝程式 .bat 檔案必須在以系統管理員許可權開啟的 Visual Studio 視窗的開發人員命令提示字元中執行。 您必須將 `%SERVER_NAME%` 變數設定為用來裝載服務之電腦的完整主機名稱。  
   
 4. 將伺服器憑證複製到用戶端的 CurrentUser-TrustedPeople 存放區中。 當伺服器憑證是由用戶端信任的簽發者發行時，就不需要這個步驟。  
   
@@ -393,7 +393,7 @@ ms.locfileid: "70044773"
   
 9. 在用戶端電腦上，從命令提示字元視窗啟動 `Client.exe`。  
   
-10. 如果用戶端和服務無法通訊, 請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+10. 如果用戶端和服務無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   

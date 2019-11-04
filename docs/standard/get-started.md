@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 05/01/2017
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: 5c162258d6d365da8c6048590eb4c5eec6162973
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ac9ad7e3730f8c430d42c4c8c8b63ab3d9cd091f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799315"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423819"
 ---
 # <a name="get-started"></a>開始使用
 
@@ -21,7 +21,7 @@ ms.locfileid: "70799315"
 
 * [C# 使用者入門](../csharp/getting-started/index.md)文章和 [C# 教學課程](../csharp/tutorials/index.md)可提供數種方式，利用以 C# 為中心的方法來開始使用。
 
-* [F# 使用者入門](../fsharp/tutorials/getting-started/index.md)教學課程提供您可以使用 F# 的三種主要方式︰使用 Visual Studio、Visual Studio 程式碼或命令列工具。
+* [F# 使用者入門](../fsharp/get-started/index.md)教學課程提供您可以使用 F# 的三種主要方式︰使用 Visual Studio、Visual Studio 程式碼或命令列工具。
 
 * [Visual Basic 使用者入門](../visual-basic/getting-started/index.md)文章提供在 Visual Studio 中使用 Visual Basic 的指南。
 

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 XAML 中的檢視排序和分組資料
+title: 如何：使用 XAML 排序和分組資料
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], grouping data in views in XAML
@@ -11,36 +11,36 @@ helpviewer_keywords:
 - views [WPF], sorting data
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
-ms.openlocfilehash: ca4439b574264ebebfda745f0765f750099bc95f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e42dd330535f71438ab7af3dca9d078e9dfd8d3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020734"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460122"
 ---
-# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>HOW TO：使用 XAML 中的檢視排序和分組資料
-此範例示範如何建立資料集合中的檢視[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 檢視允許的分組、 排序、 篩選、 功能和目前的項目的概念。  
+# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>如何：使用 XAML 排序和分組資料
+這個範例示範如何在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]中建立資料集合的視圖。 Views 允許群組、排序、篩選和目前專案的概念等功能。  
   
 ## <a name="example"></a>範例  
- 在下列範例中，靜態資源的名稱*放置*做為集合定義*位置*物件，其中每一個*位置*物件組成的縣 （市） 名稱，狀態。 前置詞*src*對應至命名空間位置的資料來源*上的芳鄰*定義。 前置詞*scm*對應至`"clr-namespace:System.ComponentModel;assembly=WindowsBase"`並*dat*對應至`"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`。  
+ 在下列範例中，名為「*位置*」的靜態資源會定義為「*位置*」物件的集合，其中每個「*位置*」物件都是由「城市」名稱和「州」（city）組成。 前置詞*src*會對應至定義資料來源*位置*所在的命名空間。 首碼*scm*會對應到 `"clr-namespace:System.ComponentModel;assembly=WindowsBase"` 和*dat*對應以 `"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`。  
   
- 下列範例會建立依城市名稱排序和依狀態分組的資料集合的檢視。  
+ 下列範例會建立依城市名稱排序並依州/省分組之資料集合的視圖。  
   
  [!code-xaml[CollectionViewSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#1)]  
   
- 檢視即可繫結來源，如下列範例所示：  
+ 然後，此視圖可以是系結來源，如下列範例所示：  
   
  [!code-xaml[CollectionViewSource#2](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
   
- XML 資料中定義的繫結<xref:System.Windows.Data.XmlDataProvider>資源，與 XML 名稱前面加上 @ 符號。  
+ 若為系結至 <xref:System.Windows.Data.XmlDataProvider> 資源中定義的 XML 資料，請在 XML 名稱前面加上 @ 符號。  
   
  [!code-xaml[CollectionViewSource#XDPChunk](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#xdpchunk)]  
   
  [!code-xaml[CollectionViewSource#Attribute](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#attribute)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Data.CollectionViewSource>
 - [取得資料集合的預設檢視](how-to-get-the-default-view-of-a-data-collection.md)
-- [資料繫結概觀](data-binding-overview.md)
-- [HOW-TO 主題](data-binding-how-to-topics.md)
+- [資料繫結概觀](../../../desktop-wpf/data/data-binding-overview.md)
+- [「如何」主題](data-binding-how-to-topics.md)
