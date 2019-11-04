@@ -2,12 +2,12 @@
 title: 風險降低︰路徑正規化
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-ms.openlocfilehash: 9ec34d8215c88329066b1cb86da018db82e16c5c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1e7b540975b84320d099ca004df5b6a87aa60f6a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126216"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457893"
 ---
 # <a name="mitigation-path-normalization"></a>風險降低︰路徑正規化
 從以 .NET Framework 4.6.2 為目標的應用程式開始，.NET Framework 中的路徑正規化已有所變更。  
@@ -61,4 +61,4 @@ ms.locfileid: "73126216"
   
 ## <a name="see-also"></a>請參閱
 
-- [重定目標變更](retargeting-changes-in-the-net-framework-4-6-2.md)
+- [應用程式相容性](application-compatibility.md)

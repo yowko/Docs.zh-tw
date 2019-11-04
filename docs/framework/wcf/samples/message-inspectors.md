@@ -2,12 +2,12 @@
 title: 訊息偵測器
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: e7846b8710fa52a5b13de245b8b7147e217533db
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 01553084aa049688cd05fa36e46fb6f67983fb21
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039392"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424143"
 ---
 # <a name="message-inspectors"></a>訊息偵測器
 這個範例會示範如何實作與設定用戶端和服務訊息偵測器。  
@@ -19,7 +19,7 @@ ms.locfileid: "70039392"
 ## <a name="message-inspector"></a>訊息偵測器  
  用戶端訊息偵測器會實作 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> 介面，而服務訊息偵測器會實作 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> 介面。 該實作可以從用於兩端的訊息偵測器結合至單一類別。 這個範例就會實作這類結合的訊息偵測器。 對已驗證之傳入和傳出訊息傳遞一組結構描述而建構偵測器，該偵測器並可讓開發人員指定是否要驗證傳入或傳出訊息，以及偵測器是否處於分派或用戶端模式，而這都會影響本主題之後會討論的錯誤處理方式。  
   
-```  
+```csharp  
 public class SchemaValidationMessageInspector : IClientMessageInspector, IDispatchMessageInspector  
 {  
     XmlSchemaSet schemaSet;  
@@ -43,7 +43,7 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
   
  接收訊息時，發送器會叫用 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>，但將此項解除序列化並分派至作業之前，是由通道堆疊所處理並指派至服務。 如果已加密傳入訊息，在訊息抵達訊息偵測器時就會進行解密。 方法會取得當做參考屬性傳遞的 `request` 訊息，而此參考屬性可讓您根據需要檢查訊息、管理或取代訊息。 傳回值可以是服務將回覆傳回現行訊息時，當做傳遞至 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> 之相互關聯狀態物件使用的任何物件。 在此範例中，<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> 會將訊息檢查 (驗證) 委派給私用的本機方法 `ValidateMessageBody`，而且不會傳回任何相互關聯狀態物件。 這個方法會確定不會有無效的訊息傳遞至服務。  
   
-```  
+```csharp  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
 {  
     if (validateRequest)  
@@ -60,7 +60,7 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
   
  如果是在服務上發生驗證錯誤，`ValidateMessageBody` 方法會擲回 <xref:System.ServiceModel.FaultException> 衍生的例外狀況。 在 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> 中，這些例外狀況可以放入服務模型基礎結構，在這裡會自動將例外狀況轉換為 SOAP 錯誤，並轉送至用戶端。 在 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>, <xref:System.ServiceModel.FaultException> 中，例外狀況不可放置在基礎結構中，因為服務擲回的錯誤例外狀況轉換會在呼叫訊息偵測器之前即發生。 因此，下列實作可以攔截已知的 `ReplyValidationFault` 例外狀況，並以明確的錯誤訊息取代回覆訊息。 這個方法可確定服務實作不會傳回無效的訊息。  
   
-```  
+```csharp  
 void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.Message reply, object correlationState)  
 {  
     if (validateReply)  
@@ -88,7 +88,7 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
   
  這個 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> 實作可確定不會將無效的訊息傳送至服務。  
   
-```  
+```csharp  
 object IClientMessageInspector.BeforeSendRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel)  
 {  
     if (validateRequest)  
@@ -101,7 +101,7 @@ object IClientMessageInspector.BeforeSendRequest(ref System.ServiceModel.Channel
   
  `AfterReceiveReply` 實作可確定從服務接收的無效訊息不會轉送至用戶端使用者程式碼。  
   
-```  
+```csharp  
 void IClientMessageInspector.AfterReceiveReply(ref System.ServiceModel.Channels.Message reply, object correlationState)  
 {  
     if (validateReply)  
@@ -115,7 +115,7 @@ void IClientMessageInspector.AfterReceiveReply(ref System.ServiceModel.Channels.
   
  如果沒有任何錯誤，就會建構從原始訊息複製屬性和標頭的新訊息，並在記憶體資料流中使用現在驗證的 Infoset (由 <xref:System.Xml.XmlDictionaryReader> 包裝並新增至取代訊息)。  
   
-```  
+```csharp  
 void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool isRequest)  
 {  
     if (!message.IsFault)  
@@ -162,7 +162,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
   
  如前所討論，處理常式擲回的例外狀況和用戶端與服務擲回的例外狀況不同。 在服務上，例外狀況是衍生自 <xref:System.ServiceModel.FaultException>，而在用戶端上，例外狀況則是一般自訂例外狀況。  
   
-```  
+```csharp  
         void InspectionValidationHandler(object sender, ValidationEventArgs e)  
 {  
     if (e.Severity == XmlSeverityType.Error)  
@@ -206,7 +206,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
   
  下列 `SchemaValidationBehavior` 類別是用來將此範例的訊息偵測器新增至用戶端或分派執行階段的行為。 在這兩個例子中，實作都相當基本。 在 <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> 和 <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> 中，會建立訊息偵測器並新增至相對之執行階段的 <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> 集合中。  
   
-```  
+```csharp  
 public class SchemaValidationBehavior : IEndpointBehavior  
 {  
     XmlSchemaSet schemaSet;   
@@ -259,7 +259,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
 > 此特定行為不會兼做屬性，因此無法以宣告方式新增至服務類型的合約類型。 這是根據設計所做的決策，因為結構描述集合無法載入屬性宣告，而參考至此屬性中額外的組態位置 (例如，應用程式設定) 則表示所建立的組態項目，會與其他服務模型組態不一致。 因此，您只能以命令方式，透過程式碼和服務模型組態延伸項目新增此行為。  
   
 ## <a name="adding-the-message-inspector-through-configuration"></a>透過組態新增訊息偵測器  
- 若要在應用程式佈建檔中的端點上設定自訂行為, 服務模型會要求實施者建立由衍生自之<xref:System.ServiceModel.Configuration.BehaviorExtensionElement>類別所代表的設定*延伸元素*。 針對如本節所討論之下列延伸項目所示的延伸項目，此延伸項目必須新增至服務模型的組態區段。  
+ 若要在應用程式佈建檔中的端點上設定自訂行為，服務模型會要求實施者建立由衍生自 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>之類別所代表的設定*延伸元素*。 針對如本節所討論之下列延伸項目所示的延伸項目，此延伸項目必須新增至服務模型的組態區段。  
   
 ```xml  
 <system.serviceModel>  
@@ -299,7 +299,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
   
  當執行階段在建置用戶端或端點的同時評估組態資料時，覆寫的 `CreateBehavior` 方法便會將組態資料轉換為行為物件。  
   
-```  
+```csharp  
 public class SchemaValidationBehaviorExtensionElement : BehaviorExtensionElement  
 {  
     public SchemaValidationBehaviorExtensionElement()  
@@ -369,7 +369,7 @@ public bool ValidateRequest
 ## <a name="adding-message-inspectors-imperatively"></a>以命令方式新增訊息偵測器  
  除了使用屬性 (由於先前所提的原因，在此範例中不支援) 和組態，也可以使用命令式程式碼輕鬆地將行為新增至用戶端和服務執行階段。 在此範例中，會在用戶端應用程式中完成此動作，以測試用戶端訊息偵測器。 `GenericClient` 類別衍生自 <xref:System.ServiceModel.ClientBase%601>，而這會對使用者程式碼公開端點組態。 在隱含地開啟用戶端之前，您可以變更端點組態，例如像下列程式碼所示地新增行為。 在服務上新增行為幾乎等同於此處顯示的用戶端技術，並必須在開啟服務主機之前即已執行新增動作。  
   
-```  
+```csharp  
 try  
 {  
     Console.WriteLine("*** Call 'Hello' with generic client, with client behavior");  
@@ -400,15 +400,15 @@ catch (Exception e)
   
 1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要建立方案, 請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。  
+2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。  
   
-3. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  

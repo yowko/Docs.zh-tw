@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 5013738e74aaa260ab6f5bcd4d73904cfbdcc3c8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 895f561c15941d851980ea9b392d2e86db2462f3
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590273"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423277"
 ---
 # <a name="exception-handling-c-programming-guide"></a>例外狀況處理 (C# 程式設計手冊)
 C# 程式設計人員使用 [try](../../language-reference/keywords/try-catch.md) 區塊分割可能受到例外狀況影響的程式碼。 相關聯的 [catch](../../language-reference/keywords/try-catch.md) 區塊用來處理任何產生的例外狀況。 無論 `try` 區塊是否擲回例外狀況，[finally](../../language-reference/keywords/try-finally.md) 區塊都包含執行的程式碼，例如釋放配置在 `try` 區塊中的資源。 `try` 區塊需要一或多個相關聯的 `catch` 區塊，或 `finally` 區塊，或兩種都要。  
@@ -27,7 +27,7 @@ C# 程式設計人員使用 [try](../../language-reference/keywords/try-catch.md
  `try` 區塊沒有 `catch` 或 `finally` 區塊會造成編譯器錯誤。  
   
 ## <a name="catch-blocks"></a>catch 區塊  
- `catch` 區塊可以指定要攔截的例外狀況類型。 類型規格稱之為「例外狀況篩選條件」  。 例外狀況類型應衍生自 <xref:System.Exception>。 一般情況下，不指定 <xref:System.Exception> 為例外狀況篩選條件，除非您知道如何處理 `try` 區塊中可能擲回的所有例外狀況，或您在 `catch` 區塊的結尾已包含 [throw](../../language-reference/keywords/throw.md) 陳述式。  
+ `catch` 區塊可以指定要攔截的例外狀況類型。 類型規格稱之為「例外狀況篩選條件」。 例外狀況類型應衍生自 <xref:System.Exception>。 一般情況下，不指定 <xref:System.Exception> 為例外狀況篩選條件，除非您知道如何處理 `try` 區塊中可能擲回的所有例外狀況，或您在 `catch` 區塊的結尾已包含 [throw](../../language-reference/keywords/throw.md) 陳述式。  
   
  多個 `catch` 區塊有不同的例外狀況篩選條件可以鏈結在一起。 `catch` 區塊在您的程式碼中是由上往下評估，但每個被擲回的例外狀況只會執行一個 `catch` 區塊。 執行指定確切類型或擲回例外狀況基底類別的第一個 `catch` 區塊。 如果沒有任何 `catch` 區塊指定符合的例外狀況篩選條件，即選取沒有篩選的 `catch` 區塊，如果陳述式中有的話。 請務必先定位 `catch` 區塊和最特定的 (亦即衍生程度最高的) 例外狀況。  
   
@@ -54,9 +54,9 @@ C# 程式設計人員使用 [try](../../language-reference/keywords/try-catch.md
   
 ## <a name="c-language-specification"></a>C# 語言規格  
 
-如需詳細資訊，請參閱 [C# 語言規格](../../language-reference/language-specification/index.md)的[例外狀況](~/_csharplang/spec/exceptions.md)與 [try 陳述式](~/_csharplang/spec/statements.md#the-try-statement)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的[例外狀況](~/_csharplang/spec/exceptions.md)與 [try 陳述式](~/_csharplang/spec/statements.md#the-try-statement)。 語言規格是 C# 語法及用法的限定來源。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../../language-reference/index.md)
 - [C# 程式設計指南](../index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - let keyword [C#]
 - let clause [C#]
 ms.assetid: 13c9c1a4-ce57-48ef-8e1b-4c2a59b99fb4
-ms.openlocfilehash: e9e10957e7ebe93a6dea9bbb6233ca7733f68e20
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: df3df279d2dbdb59a0a94d9afad37d1a7ddf7b57
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633467"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422704"
 ---
 # <a name="let-clause-c-reference"></a>let 子句 (C# 參考)
 
@@ -30,10 +30,10 @@ ms.locfileid: "65633467"
 
 [!code-csharp[cscsrefQueryKeywords#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Let.cs#28)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../../language-reference/index.md)
 - [查詢關鍵字 (LINQ)](query-keywords.md)
 - [Language-Integrated Query (LINQ)](../../linq/index.md)
-- [開始使用 C# 中的 LINQ](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [開始使用 C# 中的 LINQ](/dotnet/csharp/programming-guide/concepts/linq/)
 - [處理查詢運算式中的例外狀況](../../linq/handle-exceptions-in-query-expressions.md)

@@ -1,5 +1,5 @@
 ---
-title: 作法：偵測有無安裝 Firefox 的 WPF 外掛程式
+title: 如何：偵測有無安裝 Firefox 的 WPF 外掛程式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - plug-in for Firefox [WPF]
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - Firefox [WPF], detecting installation
 - detecting whether the WPF plug-in for Firefox is installed [WPF]
 ms.assetid: 5f839373-e3fb-44f1-88ad-4a0761f02189
-ms.openlocfilehash: f84a0a2af43931b3ada1f674390ec5d841b79a1c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: fdc7b516c316c7efc7056b549baf43191a5aedd1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690427"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423753"
 ---
-# <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>作法：偵測有無安裝 Firefox 的 WPF 外掛程式
+# <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>如何：偵測有無安裝 Firefox 的 WPF 外掛程式
 
-Windows Presentation Foundation (WPF) Firefox 的外掛程式可讓[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]鬆散 XAML 檔案，以在 Mozilla Firefox 瀏覽器中執行。 本主題提供以 HTML 和系統管理員可用來判斷是否已安裝的 WPF 外掛程式適用於 Firefox 的 JavaScript 撰寫的指令碼。
+適用于 Firefox 的 Windows Presentation Foundation （WPF）外掛程式可讓 XAML 瀏覽器應用程式（Xbap）和鬆散的 XAML 檔案在 Mozilla Firefox 瀏覽器中執行。 本主題提供以 HTML 和 JavaScript 撰寫的腳本，可讓系統管理員用來判斷是否已安裝 Firefox 的 WPF 外掛程式。
 
 > [!NOTE]
-> 如需有關安裝的詳細資訊，請部署，並偵測.NET Framework 中，請參閱[安裝適用於開發人員的.NET Framework](../../install/guide-for-developers.md)。
+> 如需安裝、部署和偵測 .NET Framework 的詳細資訊，請參閱[安裝適用于開發人員的 .NET Framework](../../install/guide-for-developers.md)。
 
 ## <a name="example"></a>範例
 
-安裝.NET Framework 3.5 時，用戶端電腦都設定搭配 WPF 外掛程式適用於 Firefox。 下列的範例指令碼會檢查適用於 Firefox 的 WPF 外掛程式，並接著會顯示適當的狀態訊息。
+安裝 .NET Framework 3.5 時，會使用 Firefox 的 WPF 外掛程式來設定用戶端電腦。 下列範例腳本會檢查 Firefox 的 WPF 外掛程式，然後顯示適當的狀態訊息。
 
 ```html
 <HTML>
@@ -56,7 +56,7 @@ Windows Presentation Foundation (WPF) Firefox 的外掛程式可讓[!INCLUDE[TLA
 </HTML>
 ```
 
-如果適用於 Firefox 的 WPF 外掛程式檢查成功，則會顯示下列狀態訊息：
+如果 Firefox 的 WPF 外掛程式檢查成功，則會顯示下列狀態訊息：
 
 `The WPF plug-in for Firefox is installed.`
 
@@ -64,7 +64,7 @@ Windows Presentation Foundation (WPF) Firefox 的外掛程式可讓[!INCLUDE[TLA
 
 `The WPF plug-in for Firefox is not installed. Please install or reinstall the .NET Framework 3.5.`
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵測有無安裝 .NET Framework 3.0](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
 - [偵測有無安裝 .NET Framework 3.5](how-to-detect-whether-the-net-framework-3-5-is-installed.md)

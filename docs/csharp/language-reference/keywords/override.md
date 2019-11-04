@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: bbdbcaf466e0b4dca4b78902ca9e7a49b02ac718
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 699887d635ab074fc9ffa4cd7fa354372eb82f25
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394240"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422627"
 ---
 # <a name="override-c-reference"></a>override (C# 參考)
 
@@ -21,7 +21,7 @@ ms.locfileid: "70394240"
 
 ## <a name="example"></a>範例
 
-在此範例中， `Square`類別必須提供的`GetArea`覆寫實作為`GetArea` ，因為繼承自抽象`Shape`類：
+在此範例中，`Square` 類別必須提供 `GetArea` 的覆寫實作為，因為 `GetArea` 繼承自抽象的 `Shape` 類別：
 
 [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
 
@@ -47,13 +47,13 @@ ms.locfileid: "70394240"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [繼承](../../programming-guide/classes-and-structs/inheritance.md)
 - [C# 關鍵字](index.md)
-- [修飾詞](modifiers.md)
+- [修飾詞](index.md)
 - [abstract](abstract.md)
 - [virtual](virtual.md)
 - [new (修飾詞)](new-modifier.md)

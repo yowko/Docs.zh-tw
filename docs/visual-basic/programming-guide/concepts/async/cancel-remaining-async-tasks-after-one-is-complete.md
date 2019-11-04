@@ -1,15 +1,15 @@
 ---
-title: 當取消剩餘的非同步工作是完成 (Visual Basic)
+title: 完成一項作業之後，取消剩餘的非同步工作（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 587c863ba110f035ace5207d8404fd70b3befe37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 329c1eb738f065ae34540e9980c80d44248da05c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755826"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419794"
 ---
-# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>當取消剩餘的非同步工作是完成 (Visual Basic)
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>完成一項作業之後，取消剩餘的非同步工作（Visual Basic）
 
 搭配使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法與 <xref:System.Threading.CancellationToken>，即可在其中一個工作完成時取消所有剩餘的工作。 `WhenAny` 方法會接受本身為一組工作的引數。 這個方法會啟動所有工作，並傳回單一工作。 集合中的任何工作完成時，單一工作即完成。
 
@@ -20,13 +20,13 @@ ms.locfileid: "64755826"
 
 ## <a name="downloading-the-example"></a>下載範例
 
-您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。
+您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。
 
 1. 解壓縮您下載的檔案，然後啟動 Visual Studio。
 
-2. 在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。
+2. 在功能表列上，依序選擇 [檔案]、[開啟舊檔]及 [專案/方案]。
 
-3. 在 [**開啟專案**] 對話方塊中，開啟您解壓縮之範例程式碼的資料夾，然後再開啟 AsyncFineTuningVB 的方案 (.sln) 檔案。
+3. 在 [**開啟專案**] 對話方塊中，開啟保存解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningVB 的方案（.sln）檔案。
 
 4. 在方案總管中，開啟 **CancelAfterOneTask** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
 
@@ -36,15 +36,15 @@ ms.locfileid: "64755826"
 
 6. 執行程式數次，確認先完成不同的下載。
 
-如果您不想要下載的專案，您可以檢閱本主題結尾的 MainWindow.xaml.vb 檔案。
+如果您不想要下載專案，您可以參閱本主題結尾的 Mainwindow.xaml。
 
 ## <a name="building-the-example"></a>建置範例
 
-本主題中的範例將加入專案中所開發[取消一項非同步工作或工作清單](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)取消工作清單。 雖然未明確地使用 [取消] 按鈕，但是此範例會使用相同的 UI。
+本主題中的範例會新增至 [取消非同步工作][或工作清單](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)中所開發的專案，以取消工作清單。 雖然未明確地使用 [取消] 按鈕，但是此範例會使用相同的 UI。
 
 若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelAListOfTasks] 作為 [啟始專案]。 將本主題中的變更新增至該專案。
 
-中的 MainWindow.xaml.vb 檔案**CancelAListOfTasks**專案，以開始轉換，藉由移動每個網站的處理步驟中的迴圈從`AccessTheWebAsync`至下列非同步方法。
+在**CancelAListOfTasks**專案的 mainwindow.xaml 檔案中，將每個網站的處理步驟從 `AccessTheWebAsync` 中的迴圈移至下列非同步方法，以開始轉換。
 
 ```vb
 ' ***Bundle the processing steps for a website into one async method.
@@ -100,18 +100,18 @@ End Function
 
     ```vb
     Dim length = Await firstFinishedTask
-    resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)
+    resultsTextBox.Text &= vbCrLf & $"Length of the downloaded website:  {length}" & vbCrLf
     ```
 
 執行程式數次，確認先完成不同的下載。
 
 ## <a name="complete-example"></a>完整範例
 
-下列程式碼是範例的完整 MainWindow.xaml.vb 或 MainWindow.xaml.cs 檔案。 星號會標記已針對此範例新增的項目。
+下列程式碼是範例的完整 Mainwindow.xaml 或 MainWindow.xaml.cs 檔案。 星號會標記已針對此範例新增的項目。
 
 請注意，您必須新增 <xref:System.Net.Http> 的參考。
 
-您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。
+您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -175,7 +175,7 @@ Class MainWindow
         ''    Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()
 
         ''    resultsTextBox.Text &=
-        ''        String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, urlContents.Length)
+        ''        vbCrLf & $"Length of the downloaded string: {urlContents.Length}." & vbCrLf
         ''Next
 
         ' ***Create a query that, when executed, returns a collection of tasks.
@@ -196,7 +196,7 @@ Class MainWindow
         ' Run the program several times to demonstrate that different
         ' websites can finish first.
         Dim length = Await firstFinishedTask
-        resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)
+        resultsTextBox.Text &= vbCrLf & $"Length of the downloaded website:  {length}" & vbCrLf
     End Function
 
     ' ***Bundle the processing steps for a website into one async method.
@@ -236,9 +236,9 @@ End Class
 ' Download complete.
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [微調非同步應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [非同步範例：微調您的應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [非同步範例：微調應用程式 (英文)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

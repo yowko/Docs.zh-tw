@@ -7,16 +7,16 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 687990cc86b3303bdef96af26be63af47410f8c0
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 22bdfa197e3ce9c119203c74eeb0eb8217022a68
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698787"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422912"
 ---
 # <a name="built-in-types-table-c-reference"></a>內建類型資料表 (C# 參考)
 
-下表顯示內C#建類型的關鍵字，這些是 @no__t 1 命名空間中預先定義類型的別名：
+下表顯示內C#建類型的關鍵字，這些是 <xref:System> 命名空間中預先定義類型的別名：
 
 |C# 類型|.NET 型別|  
 |--------------|-------------------------|  
@@ -31,10 +31,10 @@ ms.locfileid: "71698787"
 |[uint](../builtin-types/integral-numeric-types.md)|<xref:System.UInt32?displayProperty=nameWithType>|  
 |[long](../builtin-types/integral-numeric-types.md)|<xref:System.Int64?displayProperty=nameWithType>|  
 |[ulong](../builtin-types/integral-numeric-types.md)|<xref:System.UInt64?displayProperty=nameWithType>|  
-|[object](object.md)|<xref:System.Object?displayProperty=nameWithType>|  
+|[object](../builtin-types/reference-types.md)|<xref:System.Object?displayProperty=nameWithType>|  
 |[short](../builtin-types/integral-numeric-types.md)|<xref:System.Int16?displayProperty=nameWithType>|  
 |[ushort](../builtin-types/integral-numeric-types.md)|<xref:System.UInt16?displayProperty=nameWithType>|  
-|[string](string.md)|<xref:System.String?displayProperty=nameWithType>|  
+|[string](../builtin-types/reference-types.md)|<xref:System.String?displayProperty=nameWithType>|  
   
 ## <a name="remarks"></a>備註
 
@@ -61,12 +61,12 @@ Console.WriteLine(doubleType.FullName);
 // System.Double
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [值類型](value-types.md)
+- [實值型別](value-types.md)
 - [參考型別](reference-types.md)
 - [預設值表](default-values-table.md)
-- [dynamic](dynamic.md)
+- [dynamic](../builtin-types/reference-types.md)

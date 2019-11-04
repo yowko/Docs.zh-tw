@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9d9e75767f5ed5010f618d5dbe1e58fe79454597
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: ff517aef93acf8c3a241c8fd8f240f7018467793
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117296"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419972"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>使用 ASP.NET Core 應用程式中的資料
 
@@ -342,20 +342,20 @@ NoSQL 資料庫還有一個必須處理的複雜問題是版本設定。 當物�
 
 NoSQL 資料庫通常不會強制執行 [ACID](https://en.wikipedia.org/wiki/ACID)，因此在效能和延展性方面比關聯式資料庫更有優勢。 因此針對不適用於正規化資料表結構儲存區的極大型資料集以及物件，就非常適合使用這種資料庫。 單一應用程式也可以同時利用關聯式和 NoSQL 資料庫，只要依據最適合的情況來選擇即可。
 
-## <a name="azure-documentdb"></a>Azure DocumentDB
+## <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-Azure DocumentDB 是全受控的 NoSQL 資料庫服務，可提供以雲端為基礎的無結構描述資料儲存區。 DocumentDB 是專為滿足快速及可預測的效能、高可用性、彈性調整和全域發佈需求所建置。 即使在 NoSQL 資料庫中，開發人員仍可以對 JSON 資料使用豐富且熟悉的 SQL 查詢功能。 DocumentDB 中的所有資源都會儲存為 JSON 文件。 系統會以「項目」形式來管理資源；也就是說，資源是包含中繼資料和「摘要」的文件，也是項目的集合。 圖 8-2 顯示不同 DocumentDB 資源之間的關聯性。
+Azure Cosmos DB 是完全受控的 NoSQL 資料庫服務，提供以雲端為基礎的無架構資料儲存。 Azure Cosmos DB 是針對快速且可預測的效能、高可用性、彈性調整和全域散發而建立的。 即使在 NoSQL 資料庫中，開發人員仍可以對 JSON 資料使用豐富且熟悉的 SQL 查詢功能。 Azure Cosmos DB 中的所有資源都會儲存為 JSON 檔。 系統會以「項目」形式來管理資源；也就是說，資源是包含中繼資料和「摘要」的文件，也是項目的集合。 圖8-2 顯示不同 Azure Cosmos DB 資源之間的關聯性。
 
-![DocumentDB (其為 NoSQL JSON 資料庫) 資源之間的階層式關聯性](./media/image8-2.png)
+![Azure Cosmos DB 的資源（NoSQL JSON 資料庫）之間的階層式關聯性](./media/image8-2.png)
 
-**圖 8-2**： DocumentDB 資源的組織。
+**圖 8-2**： Azure Cosmos DB 資源組織。
 
-DocumentDB 查詢語言是一種簡單但功能強大的介面，適用於查詢 JSON 文件。 該語言支援 ANSI SQL 文法子集，並深度整合 JavaScript 物件、陣列、物件建構和函式引動過程。
+Azure Cosmos DB 查詢語言是一種簡單但功能強大的介面，可用於查詢 JSON 檔。 該語言支援 ANSI SQL 文法子集，並深度整合 JavaScript 物件、陣列、物件建構和函式引動過程。
 
-**參考資料 – DocumentDB**
+**參考– Azure Cosmos DB**
 
-- DocumentDB 簡介  
-  <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
+- Azure Cosmos DB 簡介  
+  <https://docs.microsoft.com/azure/cosmos-db/introduction>
 
 ## <a name="other-persistence-options"></a>其他持續性選項
 
@@ -439,7 +439,6 @@ public class CachedCatalogService : ICatalogService
     private readonly CatalogService _catalogService;
     private static readonly string _brandsKey = "brands";
     private static readonly string _typesKey = "types";
-    private static readonly string _itemsKeyTemplate = "items-{0}-{1}-{2}-{3}";
     private static readonly TimeSpan _defaultCacheDuration = TimeSpan.FromSeconds(30);
     public CachedCatalogService(IMemoryCache cache,
     CatalogService catalogService)
@@ -459,7 +458,7 @@ public class CachedCatalogService : ICatalogService
 
     public async Task<Catalog> GetCatalogItems(int pageIndex, int itemsPage, int? brandID, int? typeId)
     {
-        string cacheKey = String.Format(_itemsKeyTemplate, pageIndex, itemsPage, brandID, typeId);
+        string cacheKey = $"items-{pageIndex}-{itemsPage}-{brandID}-{typeId}";
         return await _cache.GetOrCreateAsync(cacheKey, async entry =>
         {
             entry.SlidingExpiration = _defaultCacheDuration;

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-ms.openlocfilehash: 2f0f9680668d67867d4bd7b60cb54d48ed7c4776
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ed5d1db4618649391f88affad67e62dd9fc95925
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73086901"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455181"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -46,7 +46,7 @@ ms.locfileid: "73086901"
   - 分析器可能使用的其他檔案
 - 目前文化特性 (Culture) (適用於用來產生診斷和例外狀況訊息的語言)。
 - 如果未指定編碼，則為預設編碼 (或目前字碼頁)。
-- 存在、不存在，以及編譯器搜尋路徑 (例如，透過 `/lib` 或 `/recurse` 指定) 上檔案的內容。
+- 存在、不存在，以及編譯器搜尋路徑 (例如，透過 `-lib` 或 `-recurse` 指定) 上檔案的內容。
 - 在其上執行編譯器的 CLR 平台。
 - `%LIBPATH%` 的值，可能會影響分析器相依性載入。
 

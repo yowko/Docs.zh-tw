@@ -2,17 +2,17 @@
 title: 作業格式器和作業選取器
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 5853a791a92535c970f8010dd08d42e10292ffa8
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8653bfd12df8eaf422797197cfcc58e9a46274bf
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039036"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424284"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>作業格式器和作業選取器
-這個範例會示範如何使用 Windows Communication Foundation (WCF) 擴充性點, 以允許來自 WCF 所預期的不同格式的訊息資料。 根據預設, WCF 格式器會預期方法參數會包含`soap:body`在元素底下。 此範例會示範如何實作自訂作業格式器，而這個作業格式器會剖析 HTTP GET 查詢字串中的參數資料，然後使用該資料叫用方法。  
+這個範例會示範如何使用 Windows Communication Foundation （WCF）擴充性點，以允許來自 WCF 所預期的不同格式的訊息資料。 根據預設，WCF 格式器會預期方法參數會包含在 `soap:body` 元素之下。 此範例會示範如何實作自訂作業格式器，而這個作業格式器會剖析 HTTP GET 查詢字串中的參數資料，然後使用該資料叫用方法。  
   
- 此範例是以`ICalculator`執行服務合約的[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。 它會示範如何將 Add、Subtract、Multiply 和 Divide 訊息變更為針對用戶端對伺服器的要求使用 HTTP GET，以及針對伺服器對用戶端的回應使用具有 POX 訊息的 HTTP POST。  
+ 此範例是以[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎，它會執行 `ICalculator` 服務合約。 它會示範如何將 Add、Subtract、Multiply 和 Divide 訊息變更為針對用戶端對伺服器的要求使用 HTTP GET，以及針對伺服器對用戶端的回應使用具有 POX 訊息的 HTTP POST。  
   
  為了此示範，範例提供下列各項：  
   
@@ -30,7 +30,7 @@ ms.locfileid: "70039036"
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
   
 ## <a name="key-concepts"></a>重要概念  
- `QueryStringFormatter`-作業格式器是 WCF 中的元件, 負責將訊息轉換成參數物件的陣列, 並將參數物件的陣列轉換成訊息。 此轉換是透過用戶端上的 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 介面和伺服器上的 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 介面來完成。 這些介面都可讓使用者從 `Serialize` 和 `Deserialize` 方法中取得要求和回應訊息。  
+ `QueryStringFormatter`-作業格式器是 WCF 中的元件，負責將訊息轉換成參數物件的陣列，並將參數物件的陣列轉換成訊息。 此轉換是透過用戶端上的 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 介面和伺服器上的 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 介面來完成。 這些介面都可讓使用者從 `Serialize` 和 `Deserialize` 方法中取得要求和回應訊息。  
   
  在這個範例中，`QueryStringFormatter` 會實作這兩個介面，並且在用戶端和伺服器上實作。  
   
@@ -60,10 +60,10 @@ ms.locfileid: "70039036"
   
  將 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A> 設定為 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 實作。  
   
- 根據預設, WCF 會使用完全相符的位址篩選準則。 傳入訊息上的 URI 包含作業名稱後置字元，後面跟著包含參數資料的查詢字串，因此端點行為也會將位址篩選條件變更為開頭相符的篩選條件。 基於此目的,<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>它會使用 WCF。  
+ 根據預設，WCF 會使用完全相符的位址篩選準則。 傳入訊息上的 URI 包含作業名稱後置字元，後面跟著包含參數資料的查詢字串，因此端點行為也會將位址篩選條件變更為開頭相符的篩選條件。 基於此目的，它會使用 WCF<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>。  
   
 ### <a name="installing-operation-formatters"></a>安裝作業格式器  
- 指定格式器的作業行為都是獨一無二。 預設一定會對每個作業實作一個這樣的行為，以建立所需的作業格式器。 不過，這些行為看起來就像其他作業行為，其他屬性無法識別這些行為。 若要安裝取代行為, 執行必須尋找 WCF 型別載入器預設安裝的特定格式器行為, 並加以取代或加入相容的行為, 以在預設行為之後執行。  
+ 指定格式器的作業行為都是獨一無二。 預設一定會對每個作業實作一個這樣的行為，以建立所需的作業格式器。 不過，這些行為看起來就像其他作業行為，其他屬性無法識別這些行為。 若要安裝取代行為，執行必須尋找 WCF 型別載入器預設安裝的特定格式器行為，並加以取代或加入相容的行為，以在預設行為之後執行。  
   
  在呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> 之前，可以透過程式設計方式設定這些作業格式器行為，或在預設行為之後指定要執行的作業行為來設定。 不過，無法輕易地透過端點行為 (以及組態) 來設定作業格式器行為，因為行為模型不允許取代其他行為，否則會修改描述樹狀。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "70039036"
   
  這個動作必須在呼叫 `CreateChannel` 之前完成。  
   
-```  
+```csharp  
 void ReplaceFormatterBehavior(OperationDescription operationDescription, EndpointAddress address)  
 {  
     // Remove the DataContract behavior if it is present.  
@@ -166,7 +166,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QueryStringFormatter`  
   
@@ -174,6 +174,6 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
   
 1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要建立方案, 請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。  
+2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。  
   
-3. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  

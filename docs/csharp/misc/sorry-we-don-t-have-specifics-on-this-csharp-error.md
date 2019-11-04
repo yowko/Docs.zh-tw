@@ -677,12 +677,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 68ea00c6f5f97e61adaeb53aed8464cf874814e7
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: bc19224f980091e6046494fd4d708af2b03041da
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196237"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419705"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>抱歉，我們沒有這個 C# 錯誤的具體內容。
 
@@ -695,7 +695,7 @@ ms.locfileid: "73196237"
 提供 QA 網站，瞭解視覺效果C#的相關問題和問題。  
 
  也請參閱：  
- [Visual C# 程式設計人員的其他資源](../getting-started/additional-resources.md)  
+ [Visual C# 程式設計人員的其他資源](../getting-started/index.md)  
   
 ## <a name="see-also"></a>請參閱
 

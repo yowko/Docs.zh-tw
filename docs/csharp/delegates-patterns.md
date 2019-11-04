@@ -3,16 +3,16 @@ title: 委派的一般模式
 description: 了解在程式碼中使用委派，以避免元件之間強式結合的一般模式。
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095694"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454076"
 ---
 # <a name="common-patterns-for-delegates"></a>委派的一般模式
 
-[上一步](delegates-strongly-typed.md)
+[上一篇](delegates-strongly-typed.md)
 
 委派會提供一種機制，啟用與元件之間最小結合程度有關的軟體設計。
 
@@ -58,7 +58,7 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 上述靜態類別是可運作的最簡單事項。 我們需要撰寫將訊息寫入主控台之方法的單一實作︰ 
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/Program.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
 最後，您必須連結委派，方法是將它附加到記錄器中所宣告的 WriteMessage 委派︰
 
@@ -70,7 +70,7 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 使用核心架構中所定義的委派類型，可讓使用者輕鬆地使用委派。 您不需要定義新類型，而且使用您程式庫的開發人員不需要學習新的特殊委派類型。
 
-所使用的介面將會盡可能簡化並具有彈性：若要建立新的輸出記錄器，您必須建立一個方法。 該方法可能是靜態方法或執行個體方法。 它可能會任何存取權。
+使用的介面最小也最具彈性︰若要建立新的輸出記錄器，您必須建立一種方法。 該方法可能是靜態方法或執行個體方法。 它可能會任何存取權。
 
 ## <a name="formatting-output"></a>Formatting Output
 
@@ -107,13 +107,13 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 ```csharp
 var fileOutput = new FileLogger("log.txt");
-Logger.WriteMessage += LogToConsole;
+Logger.WriteMessage += LoggingMethods.LogToConsole; // LoggingMethods is the static class we utilized earlier
 ```
 
 稍後，即使在相同的應用程式中，您還是可以移除其中一個委派，而且系統不會有任何其他問題︰
 
 ```csharp
-Logger.WriteMessage -= LogToConsole;
+Logger.WriteMessage -= LoggingMethods.LogToConsole;
 ```
 
 ## <a name="practices"></a>做法

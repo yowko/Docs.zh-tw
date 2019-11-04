@@ -9,32 +9,32 @@ helpviewer_keywords:
 - ControlTemplate [WPF], ToolTip
 - templates [WPF], ToolTip
 ms.assetid: 405fe385-4de9-49ee-a448-d8f4d1f740dd
-ms.openlocfilehash: 24def466509c12eb69307de139e83dd5a1ed5ce4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 626d0b4d49d653f820d1506f0aa09f06d26352c2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790672"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458642"
 ---
 # <a name="tooltip-styles-and-templates"></a>ToolTip 樣式和範本
-本主題描述的樣式和範本<xref:System.Windows.Controls.ToolTip>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>，讓控制項的獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
+本主題描述 <xref:System.Windows.Controls.ToolTip> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
   
-## <a name="tooltip-parts"></a>工具提示部分  
- <xref:System.Windows.Controls.ToolTip>控制項沒有任何具名組件。  
+## <a name="tooltip-parts"></a>工具提示元件  
+ <xref:System.Windows.Controls.ToolTip> 控制項沒有任何已命名的元件。  
   
-## <a name="tooltip-states"></a>工具提示的狀態  
- 下表列出的視覺狀態<xref:System.Windows.Controls.ToolTip>控制項。  
+## <a name="tooltip-states"></a>工具提示狀態  
+ 下表列出 <xref:System.Windows.Controls.ToolTip> 控制項的視覺狀態。  
   
 |VisualState 名稱|VisualStateGroup 名稱|描述|  
 |-|-|-|  
-|Closed|OpenStates|預設狀態。|  
-|開啟|OpenStates|<xref:System.Windows.Controls.ToolTip>為可見。|  
-|驗證|ValidationStates|控制項使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`已在控制項具有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`有控制項沒有焦點。|  
+|已關閉|OpenStates|預設狀態。|  
+|開啟|OpenStates|<xref:System.Windows.Controls.ToolTip> 是可見的。|  
+|驗證|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，而 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性則 `false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是控制項具有焦點 `true`。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是 `true` 控制項沒有焦點。|  
   
 ## <a name="tooltip-controltemplate-example"></a>工具提示 ControlTemplate 範例  
- 下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>針對<xref:System.Windows.Controls.ToolTip>控制項。  
+ 下列範例顯示如何定義 <xref:System.Windows.Controls.ToolTip> 控制項的 <xref:System.Windows.Controls.ControlTemplate>。  
   
  [!code-xaml[ControlTemplateExamples#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/tooltip.xaml#tooltip)]  
   
@@ -44,11 +44,11 @@ ms.locfileid: "61790672"
   
  如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控制項的樣式和範本](control-styles-and-templates.md)
 - [控制項自訂](control-customization.md)
-- [樣式設定和範本化](styling-and-templating.md)
+- [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)

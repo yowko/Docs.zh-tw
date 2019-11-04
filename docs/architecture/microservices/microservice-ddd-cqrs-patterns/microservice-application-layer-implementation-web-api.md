@@ -2,12 +2,12 @@
 title: 使用 Web API 實作微服務應用程式層
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解相依性插入和中繼程序模式，以及它們在 Web API 應用程式層的實作詳細資料。
 ms.date: 10/08/2018
-ms.openlocfilehash: 38c0bdb32666ab727c573d466d3e30d739bdd3b3
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c73823a0449fdf81ba3d886efdef540bd1aa6121
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771108"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454857"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 實作微服務應用程式層
 
@@ -398,10 +398,10 @@ public class CreateOrderCommandHandler
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **命令和事件** \
-  <http://cqrs.nu/Faq/commands-and-events>
+  <https://cqrs.nu/Faq/commands-and-events>
 
 - **命令處理常式有何作用？** \
-  <http://cqrs.nu/Faq/command-handlers>
+  <https://cqrs.nu/Faq/command-handlers>
 
 - **Jimmy Bogard。網域命令模式–處理常式** \
   <https://jimmybogard.com/domain-command-patterns-handlers/>

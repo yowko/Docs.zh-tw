@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 93f02b8a0f828be89c6a1b7bfcdc6ba2a2a93e81
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: c6eff1cae79e7b555c5a41d10712b4f3022ff793
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597187"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419496"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>匿名類型 (C# 程式設計手冊)
 
@@ -29,7 +29,7 @@ var v = new { Amount = 108, Message = "Hello" };
 Console.WriteLine(v.Amount + v.Message);  
 ```  
   
- 您通常可以在查詢運算式的 [select](../../language-reference/keywords/select-clause.md) 子句中使用匿名型別，以從來源序列中的每個物件傳回屬性子集。 如需查詢的詳細資訊，請參閱 [LINQ 查詢運算式](../linq-query-expressions/index.md)。  
+ 您通常可以在查詢運算式的 [select](../../language-reference/keywords/select-clause.md) 子句中使用匿名型別，以從來源序列中的每個物件傳回屬性子集。 如需查詢的詳細資訊，請參閱[中C#的 LINQ ](../../linq/index.md)。  
   
  匿名類型包含一個或多個公用唯讀屬性。 其他類型的類別成員 (例如方法或事件) 則無效。 用於初始化屬性的運算式不可以是 `null`、匿名函式或指標類型。  
   
@@ -48,7 +48,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 ```  
   
 ## <a name="remarks"></a>備註  
- 匿名型別是直接衍生自 [object](../../language-reference/keywords/object.md)，並且無法轉換成 [object](../../language-reference/keywords/object.md) 以外之任何類型的 [class](../../language-reference/keywords/class.md) 類型。 編譯器提供每種匿名類型的名稱，不過您的應用程式無法存取此名稱。 對 Common Language Runtime 來說，匿名類型與其他任何參考類型並無不同。  
+ 匿名型別是直接衍生自 [object](../../language-reference/builtin-types/reference-types.md)，並且無法轉換成 [object](../../language-reference/builtin-types/reference-types.md) 以外之任何類型的 [class](../../language-reference/keywords/class.md) 類型。 編譯器提供每種匿名類型的名稱，不過您的應用程式無法存取此名稱。 對 Common Language Runtime 來說，匿名類型與其他任何參考類型並無不同。  
   
  如果組件中有兩個或多個匿名物件初始設定式，指定了順序相同並具有相同名稱和類型的屬性序列，編譯器會將這些物件視為相同類型的執行個體。 這些物件會共用編譯器產生的相同類型資訊。  
   
@@ -56,9 +56,9 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
   
  由於匿名類型上的 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法會以屬性的 `Equals` 和 `GetHashCode` 方法來定義，相同匿名類型的兩個執行個體僅在其所有屬性都相等時，這兩個執行個體才相等。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [物件和集合初始設定式](./object-and-collection-initializers.md)
-- [開始使用 C# 中的 LINQ](../concepts/linq/getting-started-with-linq.md)
-- [LINQ 查詢運算式](../linq-query-expressions/index.md)
+- [開始使用 C# 中的 LINQ](/dotnet/csharp/programming-guide/concepts/linq/)
+- [C# 中的 LINQ](../../linq/index.md)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 8a29584dd5ed47ad1e8a336a7283cba9271f3abd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 95726d4bfae6da43cd845d461caf8f1848d774f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121203"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424325"
 ---
 # <a name="implementing-a-dispose-method"></a>實作 Dispose 方法
 
 您實作 <xref:System.IDisposable.Dispose%2A> 方法，以釋放您的應用程式所使用的非受控資源。 .NET 記憶體回收行程不會配置或釋放 Unmanaged 記憶體。  
   
-處置物件的模式稱為[處置模式](../../../docs/standard/design-guidelines/dispose-pattern.md)，會在物件的存留期上安排順序。 處置模式僅適用於存取 Unmanaged 資源的物件，例如檔案和管道控制碼、註冊控制代碼、等候控制代碼，或是 Unmanaged 記憶體區塊的指標。 這是因為記憶體回收行程在回收未使用的 Managed 物件方面相當有效率，但是它無法回收 Unmanaged 物件。  
+處置物件的模式稱為[處置模式](implementing-dispose.md)，會在物件的存留期上安排順序。 處置模式僅適用於存取 Unmanaged 資源的物件，例如檔案和管道控制碼、註冊控制代碼、等候控制代碼，或是 Unmanaged 記憶體區塊的指標。 這是因為記憶體回收行程在回收未使用的 Managed 物件方面相當有效率，但是它無法回收 Unmanaged 物件。  
   
 處置模式有兩種：  
   
@@ -167,4 +167,4 @@ ms.locfileid: "73121203"
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
 - [如何：定義與使用類別和結構 (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
-- [Dispose 模式](../../../docs/standard/design-guidelines/dispose-pattern.md)
+- [Dispose 模式](implementing-dispose.md)

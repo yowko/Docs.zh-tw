@@ -1,5 +1,5 @@
 ---
-title: 作法：使用色彩矩陣設定影像中的 Alpha 值
+title: 如何：使用色彩矩陣設定影像中的 Alpha 值
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,32 +10,32 @@ helpviewer_keywords:
 - matrices [Windows Forms], alpha values
 - bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
-ms.openlocfilehash: fd63380e04eeb4b7ec7ed7d59032309ea7446507
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 73e820845d040856a0ae367da8b9371ad6afa142
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593164"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423719"
 ---
-# <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>作法：使用色彩矩陣設定影像中的 Alpha 值
-<xref:System.Drawing.Bitmap>類別 (繼承自<xref:System.Drawing.Image>類別) 和<xref:System.Drawing.Imaging.ImageAttributes>類別提供用於取得和設定像素值的功能。 您可以使用<xref:System.Drawing.Imaging.ImageAttributes>類別來修改 alpha 值的整個影像，或您可以呼叫<xref:System.Drawing.Bitmap.SetPixel%2A>方法<xref:System.Drawing.Bitmap>修改個別像素值的類別。  
+# <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>如何：使用色彩矩陣設定影像中的 Alpha 值
+<xref:System.Drawing.Bitmap> 類別（繼承自 <xref:System.Drawing.Image> 類別）和 <xref:System.Drawing.Imaging.ImageAttributes> 類別提供用來取得和設定圖元值的功能。 您可以使用 <xref:System.Drawing.Imaging.ImageAttributes> 類別來修改整個影像的 Alpha 值，也可以呼叫 <xref:System.Drawing.Bitmap> 類別的 <xref:System.Drawing.Bitmap.SetPixel%2A> 方法來修改個別的圖元值。  
   
 ## <a name="example"></a>範例  
- <xref:System.Drawing.Imaging.ImageAttributes>類別具有可供您在轉譯期間修改映像的屬性。 在下列範例中，<xref:System.Drawing.Imaging.ImageAttributes>物件用來將所有的 alpha 值設定為 80%的這些。 這是藉由初始化色彩矩陣，並設定的 alpha 縮放 0.8 矩陣中的值。 色彩矩陣的位址傳遞給<xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A>方法<xref:System.Drawing.Imaging.ImageAttributes>物件，而<xref:System.Drawing.Imaging.ImageAttributes>物件傳遞給<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>物件。  
+ <xref:System.Drawing.Imaging.ImageAttributes> 類別有許多屬性，可讓您在呈現期間用來修改影像。 在下列範例中，會使用 <xref:System.Drawing.Imaging.ImageAttributes> 物件，將所有 Alpha 值設定為其過去的80%。 這是藉由初始化色彩矩陣，並將矩陣中的 Alpha 縮放值設定為0.8 來完成。 色彩矩陣的位址會傳遞至 <xref:System.Drawing.Imaging.ImageAttributes> 物件的 <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> 方法，而 <xref:System.Drawing.Imaging.ImageAttributes> 物件會傳遞至 <xref:System.Drawing.Graphics> 物件的 <xref:System.Drawing.Graphics.DrawString%2A> 方法。  
   
- 在呈現期間，在點陣圖中的 alpha 值會轉換成原先的 80%。 這會導致混合與背景的影像。 下圖所示，點陣圖影像看起來透明;您所見，透過它的實心黑色線條。  
+ 在轉譯期間，點陣圖中的 Alpha 值會轉換成其過去的80%。 這會產生與背景混合的影像。 如下圖所示，點陣圖影像看起來是透明的;您可以透過它來查看實心黑色線。  
   
- ![使用矩陣 alpha 透明混色](./media/image2.png "image2")  
+ ![使用矩陣的 Alpha 混合螢幕擷取畫面。](./media/how-to-use-a-color-matrix-to-set-alpha-values-in-images/alpha-blending-matrix.png "image2）")  
   
- 其中是背景的白色部分上的映像，映像具有已混合與白色。 映像交點，黑色線條，映像會混合與黑色。  
+ 當影像在背景的白色部分上方時，影像就會與白色色彩混合。 影像與黑色線條相交時，影像會以黑色進行混合。  
   
  [!code-csharp[System.Drawing.AlphaBlending#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.AlphaBlending#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
+ 先前的範例是針對與 Windows Forms 搭配使用所設計，而且需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.PaintEventHandler>的參數。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
 - [Alpha 混色線條和填色](alpha-blending-lines-and-fills.md)

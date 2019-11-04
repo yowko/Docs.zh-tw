@@ -2,12 +2,12 @@
 title: 非同步傳回類型（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: f85b3ec536033fd6d3cdec8f5a6ac4f9f66077f3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a5553070dd68a0bc3eaad1c5e8c000f7a31f8783
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524337"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423962"
 ---
 # <a name="async-return-types-visual-basic"></a>非同步傳回類型（Visual Basic）
 
@@ -20,7 +20,7 @@ ms.locfileid: "72524337"
 
 ## <a name="BKMK_TaskTReturnType"></a> Task(T) 傳回型別
 
-@No__t_0 傳回型別用於非同步方法，其中包含[return](../../../../visual-basic/language-reference/statements/return-statement.md)語句，其中運算元的型別為 `TResult`。
+<xref:System.Threading.Tasks.Task%601> 傳回型別用於非同步方法，其中包含[return](../../../../visual-basic/language-reference/statements/return-statement.md)語句，其中運算元的型別為 `TResult`。
 
 在下列範例中，`TaskOfT_MethodAsync` 非同步方法包含一個傳回整數的 return 陳述式。 因此，方法宣告必須指定 `Task(Of Integer)` 傳回型別。
 
@@ -66,7 +66,7 @@ Dim result1 As Integer = Await TaskOfT_MethodAsync()
 Dim integerTask As Task(Of Integer) = TaskOfT_MethodAsync()
 
 ' You can do other work that does not rely on resultTask before awaiting.
-textBox1.Text &= String.Format("Application can continue working while the Task(Of T) runs. . . . " & vbCrLf)
+textBox1.Text &= "Application can continue working while the Task(Of T) runs. . . . " & vbCrLf
 
 Dim result2 As Integer = Await integerTask
 ```
@@ -76,9 +76,9 @@ Dim result2 As Integer = Await integerTask
 ```vb
 ' Display the values of the result1 variable, the result2 variable, and
 ' the resultTask.Result property.
-textBox1.Text &= String.Format(vbCrLf & "Value of result1 variable:   {0}" & vbCrLf, result1)
-textBox1.Text &= String.Format("Value of result2 variable:   {0}" & vbCrLf, result2)
-textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, integerTask.Result)
+textBox1.Text &= vbCrLf & $"Value of result1 variable:   {result1}" & vbCrLf
+textBox1.Text &= $"Value of result2 variable:   {result2}" & vbCrLf
+textBox1.Text &= $"Value of resultTask.Result:  {integerTask.Result}" & vbCrLf
 ```
 
 ## <a name="BKMK_TaskReturnType"></a> 工作傳回型別
@@ -95,7 +95,7 @@ Async Function Task_MethodAsync() As Task
     ' asynchronous call.
     ' Task.Delay is a placeholder for actual work.
     Await Task.Delay(2000)
-    textBox1.Text &= String.Format(vbCrLf & "Sorry for the delay. . . ." & vbCrLf)
+    textBox1.Text &= vbCrLf & "Sorry for the delay. . . ." & vbCrLf
 
     ' This method has no return statement, so its return type is Task.
 End Function
@@ -119,14 +119,14 @@ Await Task_MethodAsync()
 Dim simpleTask As Task = Task_MethodAsync()
 
 ' You can do other work that does not rely on simpleTask before awaiting.
-textBox1.Text &= String.Format(vbCrLf & "Application can continue working while the Task runs. . . ." & vbCrLf)
+textBox1.Text &= vbCrLf & "Application can continue working while the Task runs. . . ." & vbCrLf
 
 Await simpleTask
 ```
 
 ## <a name="BKMK_VoidReturnType"></a> Void 傳回型別
 
-@No__t_0 程式的主要用途是在事件處理常式中，沒有傳回型別（稱為其他語言的 void 傳回型別）。 void 傳回也可用來覆寫傳回 void 的方法，或執行可分類為「射後不理」(fire and forget) 之活動的方法。 不過，您應該盡可能傳回 `Task`，因為無法等候傳回 void 的非同步方法。 這種方法的任何呼叫端必須要能夠繼續完成而不需等待呼叫的非同步方法完成，且呼叫端必須與非同步方法產生的任何值或例外狀況無關。
+`Sub` 程式的主要用途是在事件處理常式中，沒有傳回型別（稱為其他語言的 void 傳回型別）。 void 傳回也可用來覆寫傳回 void 的方法，或執行可分類為「射後不理」(fire and forget) 之活動的方法。 不過，您應該盡可能傳回 `Task`，因為無法等候傳回 void 的非同步方法。 這種方法的任何呼叫端必須要能夠繼續完成而不需等待呼叫的非同步方法完成，且呼叫端必須與非同步方法產生的任何值或例外狀況無關。
 
 傳回 void 的非同步方法的呼叫端無法攔截方法擲回的例外狀況，這類未處理的例外狀況有可能造成應用程式失敗。 如果例外狀況發生在會傳回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 的非同步方法，則例外狀況會儲存在傳回的工作中，並在等候工作時再次擲回。 因此，請確定任何可能會產生例外狀況的非同步方法具有傳回型別 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>，且會等候對方法的呼叫。
 
@@ -218,15 +218,15 @@ End Sub
             Dim integerTask As Task(Of Integer) = TaskOfT_MethodAsync()
 
             ' You can do other work that does not rely on resultTask before awaiting.
-            textBox1.Text &= String.Format("Application can continue working while the Task(Of T) runs. . . . " & vbCrLf)
+            textBox1.Text &= "Application can continue working while the Task(Of T) runs. . . . " & vbCrLf
 
             Dim result2 As Integer = Await integerTask
 
             ' Display the values of the result1 variable, the result2 variable, and
             ' the resultTask.Result property.
-            textBox1.Text &= String.Format(vbCrLf & "Value of result1 variable:   {0}" & vbCrLf, result1)
-            textBox1.Text &= String.Format("Value of result2 variable:   {0}" & vbCrLf, result2)
-            textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, integerTask.Result)
+            textBox1.Text &= vbCrLf & $"Value of result1 variable:   {result1}" & vbCrLf
+            textBox1.Text &= $"Value of result2 variable:   {result2}" & vbCrLf
+            textBox1.Text &= $"Value of resultTask.Result:  {integerTask.Result}" & vbCrLf
 
             ' Task
             ' Call and await the Task-returning async method in the same statement.
@@ -236,7 +236,7 @@ End Sub
             Dim simpleTask As Task = Task_MethodAsync()
 
             ' You can do other work that does not rely on simpleTask before awaiting.
-            textBox1.Text &= String.Format(vbCrLf & "Application can continue working while the Task runs. . . ." & vbCrLf)
+            textBox1.Text &= vbCrLf & "Application can continue working while the Task runs. . . ." & vbCrLf
 
             Await simpleTask
         End Function
@@ -269,7 +269,7 @@ End Sub
             ' asynchronous call.
             ' Task.Delay is a placeholder for actual work.
             Await Task.Delay(2000)
-            textBox1.Text &= String.Format(vbCrLf & "Sorry for the delay. . . ." & vbCrLf)
+            textBox1.Text &= vbCrLf & "Sorry for the delay. . . ." & vbCrLf
 
             ' This method has no return statement, so its return type is Task.
         End Function

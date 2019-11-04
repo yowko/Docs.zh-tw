@@ -1,26 +1,26 @@
 ---
-title: 作法：建立及執行長時間執行的工作流程
+title: 'How to: Create and Run a Long Running Workflow'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: 15ee10120f4d4c92bdc95cb48cb3cb838f526343
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e5083b3d12cecc395500ef13405effa7b7e51633
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044372"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420622"
 ---
-# <a name="how-to-create-and-run-a-long-running-workflow"></a>作法：建立及執行長時間執行的工作流程
+# <a name="how-to-create-and-run-a-long-running-workflow"></a>How to: Create and Run a Long Running Workflow
 
-Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將閒置工作流程保存和卸載至資料庫的能力。 下列步驟[說明如何:執行工作流程](how-to-run-a-workflow.md) , 示範使用主控台應用程式裝載工作流程的基本概念。 範例包括啟動工作流程、工作流程開發週期處理常式，以及繼續使用書籤。 為有效示範工作流程持續性，必須要有較複雜的工作流程主機，以支援啟動與繼續使用多個工作流程執行個體。 教學課程中的這個步驟，示範如何建立 Windows 表單主應用程式，以支援啟動與繼續使用多個工作流程執行個體、工作流程持續性，並且為後續教學課程步驟中示範的追蹤和版本設定等進階功能提供基礎。
-
-> [!NOTE]
-> 本教學課程步驟和後續步驟會使用下列三種工作[流程類型:建立工作流程](how-to-create-a-workflow.md)。 如果您未完成這三種類型, 您可以從[Windows Workflow Foundation (WF45)-消費者入門教學](https://go.microsoft.com/fwlink/?LinkID=248976)課程下載完整的步驟版本。
+Windows Workflow Foundation （WF）的其中一項主要功能是執行時間將閒置工作流程保存和卸載至資料庫的能力。 [如何：執行工作流程](how-to-run-a-workflow.md)中的步驟示範使用主控台應用程式裝載工作流程的基本概念。 範例包括啟動工作流程、工作流程開發週期處理常式，以及繼續使用書籤。 為有效示範工作流程持續性，必須要有較複雜的工作流程主機，以支援啟動與繼續使用多個工作流程執行個體。 教學課程中的這個步驟，示範如何建立 Windows 表單主應用程式，以支援啟動與繼續使用多個工作流程執行個體、工作流程持續性，並且為後續教學課程步驟中示範的追蹤和版本設定等進階功能提供基礎。
 
 > [!NOTE]
-> 若要下載教學課程的完整版或觀看影片逐步解說, 請參閱[Windows Workflow Foundation (WF45)-消費者入門教學](https://go.microsoft.com/fwlink/?LinkID=248976)課程。
+> 本教學課程步驟和後續步驟會使用[如何：建立工作流程](how-to-create-a-workflow.md)中的三種工作流程類型。 如果您未完成這三種類型，您可以從[Windows Workflow Foundation （WF45）-消費者入門教學](https://go.microsoft.com/fwlink/?LinkID=248976)課程下載完整的步驟版本。
+
+> [!NOTE]
+> 若要下載教學課程的完整版或觀看影片逐步解說，請參閱[Windows Workflow Foundation （WF45）-消費者入門教學](https://go.microsoft.com/fwlink/?LinkID=248976)課程。
 
 ## <a name="in-this-topic"></a>本主題內容
 
@@ -46,75 +46,75 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
 
 ### <a name="BKMK_CreatePersistenceDatabase"></a>若要建立持續性資料庫
 
-1. 開啟 SQL Server Management Studio 並連接到本機伺服器, 例如 **.\SQLEXPRESS**。 以滑鼠右鍵按一下本機伺服器上的 [**資料庫**] 節點, 然後選取 [**新增資料庫**]。 將新的資料庫命名為**WF45GettingStartedTutorial**, 接受所有其他值, 然後選取 **[確定]** 。
+1. 開啟 SQL Server Management Studio 並連接到本機伺服器，例如 **.\SQLEXPRESS**。 以滑鼠右鍵按一下本機伺服器上的 [**資料庫**] 節點，然後選取 [**新增資料庫**]。 將新的資料庫命名為**WF45GettingStartedTutorial**，接受所有其他值，然後選取 **[確定]** 。
 
     > [!NOTE]
-    > 在建立資料庫之前, 請確定您已在本機伺服器上**建立資料庫**許可權。
+    > 在建立資料庫之前，請確定您已在本機伺服器上**建立資料庫**許可權。
 
-2. 從 [檔案 ] 功能表中選擇 [**開啟**]、[檔案]。 瀏覽至下列資料夾：`C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`
+2. 從 **[檔案**] 功能表中選擇 [**開啟** **]、[** 檔案]。 瀏覽至下列資料夾：`C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`
 
-    選取下列兩個檔案, 然後按一下 [**開啟**]。
+    選取下列兩個檔案，然後按一下 [**開啟**]。
 
     - SqlWorkflowInstanceStoreLogic.sql
 
     - SqlWorkflowInstanceStoreSchema.sql
 
-3. 從 [**視窗]** 功能表選擇 [ **sqlworkflowinstancestoreschema.sql** ]。 確定已在 [**可用的資料庫**] 下拉式選單中選取 [ **WF45GettingStartedTutorial** ], 然後從 [**查詢**] 功能表中選擇 [**執行**]。
+3. 從 [**視窗]** 功能表選擇 [ **sqlworkflowinstancestoreschema.sql** ]。 確定已在 [**可用的資料庫**] 下拉式選單中選取 [ **WF45GettingStartedTutorial** ]，然後從 [**查詢**] 功能表中選擇 [**執行**]。
 
-4. 從 [**視窗]** 功能表選擇 [ **sqlworkflowinstancestorelogic.sql** ]。 確定已在 [**可用的資料庫**] 下拉式選單中選取 [ **WF45GettingStartedTutorial** ], 然後從 [**查詢**] 功能表中選擇 [**執行**]。
+4. 從 [**視窗]** 功能表選擇 [ **sqlworkflowinstancestorelogic.sql** ]。 確定已在 [**可用的資料庫**] 下拉式選單中選取 [ **WF45GettingStartedTutorial** ]，然後從 [**查詢**] 功能表中選擇 [**執行**]。
 
     > [!WARNING]
     > 務必按照正確順序執行前面的兩個步驟。 如果未按照正確順序執行查詢，會發生錯誤，而且也無法正確地設定持續性資料庫。
 
 ### <a name="BKMK_AddReference"></a>若要加入 DurableInstancing 元件的參考
 
-1. 以滑鼠右鍵按一下**方案總管**中的 [ **[numberguessworkflowhost]** ], 然後選取 [**新增參考**]。
+1. 以滑鼠右鍵按一下**方案總管**中的 [ **[numberguessworkflowhost]** ]，然後選取 [**新增參考**]。
 
-2. 從 [**加入參考**] 清單中選取 [ `DurableInstancing` **元件**], 然後在 [**搜尋元件**] 方塊中輸入。 如此會篩選組件，讓您更容易選取所需的參考。
+2. 從 [**加入參考**] 清單中選取 [**元件**]，然後在 [**搜尋元件**] 方塊中輸入 `DurableInstancing`。 如此會篩選組件，讓您更容易選取所需的參考。
 
-3. 從 [**搜尋結果**] 清單中核取 [ **DurableInstancing** ] 和 [ **DurableInstancing** ] 旁邊的核取方塊, 然後按一下 **[確定]** 。
+3. 從 [**搜尋結果**] 清單中核取 [ **DurableInstancing** ] 和 [ **DurableInstancing** ] 旁邊的核取方塊，然後按一下 **[確定]** 。
 
 ### <a name="BKMK_CreateForm"></a>若要建立工作流程主機表單
 
 > [!NOTE]
-> 此程序中的步驟描述如何手動加入及設定表單。 如果需要，可以下載教學課程的方案檔，並將完成的表單加入到專案中。 若要下載教學課程檔案, 請參閱[Windows Workflow Foundation (WF45)-消費者入門教學](https://go.microsoft.com/fwlink/?LinkID=248976)課程。 下載檔案之後, 以滑鼠右鍵按一下 [ **[numberguessworkflowhost]** ], 然後選擇 [**加入參考**]。 新增對**system.web**和**system.web**的參考。 如果您從 [新增]、[**新專案**] 功能表加入新的表單, 但必須在匯入表單時手動加入, 則會自動加入這些參考。 加入參考之後, 以滑鼠右鍵按一下**方案總管**中的 [ **[numberguessworkflowhost]** ], 然後選擇 [**加入**]、[**現有專案**]。 流覽至專案`Form`檔中的資料夾, 選取  **WorkflowHostForm.cs**  (或   **workflowhostform**), 然後按一下 **新增**。 如果您選擇匯入表單, 則可以跳到下一節,[以加入表單的屬性和 helper 方法](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)。
+> 此程序中的步驟描述如何手動加入及設定表單。 如果需要，可以下載教學課程的方案檔，並將完成的表單加入到專案中。 若要下載教學課程檔案，請參閱[Windows Workflow Foundation （WF45）-消費者入門教學](https://go.microsoft.com/fwlink/?LinkID=248976)課程。 下載檔案之後，以滑鼠右鍵按一下 [ **[numberguessworkflowhost]** ]，然後選擇 [**加入參考**]。 新增對**system.web**和**system.web**的參考。 如果您從 [新增]、[**新專案**] 功能表加入新的表單，但必須在匯入表單時手動**加入，則**會自動加入這些參考。 加入參考之後，以滑鼠右鍵按一下**方案總管**中的 [ **[numberguessworkflowhost]** ]，然後選擇 [**加入**]、[**現有專案**]。 流覽至專案檔中的 `Form` 資料夾，選取  **WorkflowHostForm.cs**  （或   **workflowhostform**），然後按一下 **新增**。 如果您選擇匯入表單，則可以跳到下一節，[以加入表單的屬性和 helper 方法](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)。
 
-1. 以滑鼠右鍵按一下**方案總管**中的 **[numberguessworkflowhost]** , 然後選擇 [**加入**]、[**新增專案**]。
+1. 以滑鼠右鍵按一下**方案總管**中的 **[numberguessworkflowhost]** ，然後選擇 [**加入**]、[**新增專案**]。
 
-2. 在 [**安裝**的範本] 清單中, 選擇 [ `WorkflowHostForm` **Windows Form**], 在 [**名稱**] 方塊中輸入, 然後按一下 [**新增**]。
+2. 在 [**已安裝**的範本] 清單中，選擇 [ **Windows Form**]，在 [**名稱**] 方塊中輸入 `WorkflowHostForm`，然後按一下 [**新增**]。
 
 3. 設定表單中的下列屬性。
 
     |屬性|值|
     |--------------|-----------|
     |FormBorderStyle|FixedSingle|
-    |MaximizeBox|偽|
+    |MaximizeBox|False|
     |大小|400, 420|
 
 4. 依指定順序將下列控制項加入到表單中，並依指示設定屬性。
 
-    |控制項|Property值|
+    |控制項|屬性：值|
     |-------------|---------------------|
-    |**Button**|名稱：NewGame<br /><br /> 位置:13, 13<br /><br /> 大小：75, 23<br /><br /> 文字新遊戲|
-    |**Label**|位置:94, 18<br /><br /> 文字猜號碼，從 1 到|
-    |**ComboBox**|名稱：NumberRange<br /><br /> DropDownStyleDropDownList<br /><br /> Items：10、100、1000<br /><br /> 位置:228, 12<br /><br /> 大小：143, 21|
-    |**Label**|位置:13, 43<br /><br /> 文字工作流程類型|
-    |**ComboBox**|名稱：WorkflowType<br /><br /> DropDownStyleDropDownList<br /><br /> Items：StateMachineNumberGuessWorkflow、FlowchartNumberGuessWorkflow、SequentialNumberGuessWorkflow<br /><br /> 位置:94, 40<br /><br /> 大小：277, 21|
-    |**Label**|名稱：WorkflowVersion<br /><br /> 位置:13, 362<br /><br /> 文字工作流程版本|
-    |**GroupBox**|位置:13, 67<br /><br /> 大小：358, 287<br /><br /> 文字遊戲|
+    |**Button**|名稱： NewGame<br /><br /> 位置：13、13<br /><br /> 大小：75、23<br /><br /> 文字：新遊戲|
+    |**標籤**|位置：94、18<br /><br /> Text：猜測從1到的數位|
+    |**ComboBox**|名稱： NumberRange<br /><br /> DropDownStyle： DropDownList<br /><br /> 專案：10、100、1000<br /><br /> 位置：228、12<br /><br /> 大小：143、21|
+    |**標籤**|位置：13，43<br /><br /> 文字：工作流程類型|
+    |**ComboBox**|名稱： WorkflowType<br /><br /> DropDownStyle： DropDownList<br /><br /> 專案： StateMachineNumberGuessWorkflow、FlowchartNumberGuessWorkflow、SequentialNumberGuessWorkflow<br /><br /> 位置：94、40<br /><br /> 大小：277、21|
+    |**標籤**|名稱： WorkflowVersion<br /><br /> 位置：13，362<br /><br /> 文字：工作流程版本|
+    |**GroupBox**|位置：13，67<br /><br /> 大小：358、287<br /><br /> 文字：遊戲|
 
     > [!NOTE]
-    > 新增下列控制項時, 請將它們放入群組方塊中。
+    > 新增下列控制項時，請將它們放入群組方塊中。
 
-    |控制項|Property值|
+    |控制項|屬性：值|
     |-------------|---------------------|
-    |**Label**|位置:7, 20<br /><br /> 文字工作流程執行個體識別碼|
-    |**ComboBox**|名稱：InstanceId<br /><br /> DropDownStyleDropDownList<br /><br /> 位置:121, 17<br /><br /> 大小：227, 21|
-    |**Label**|位置:7, 47<br /><br /> 文字猜測|
-    |**TextBox**|名稱：猜測<br /><br /> 位置:50, 44<br /><br /> 大小：65, 20|
-    |**Button**|名稱：EnterGuess<br /><br /> 位置:121, 42<br /><br /> 大小：75, 23<br /><br /> 文字輸入猜測|
-    |**Button**|名稱：QuitGame<br /><br /> 位置:274, 42<br /><br /> 大小：75, 23<br /><br /> 文字結束|
-    |**TextBox**|名稱：WorkflowStatus<br /><br /> 位置:10, 73<br /><br /> 多行True<br /><br /> 唯讀True<br /><br /> 滾動垂直<br /><br /> 大小：338, 208|
+    |**標籤**|位置：7、20<br /><br /> 文字：工作流程實例識別碼|
+    |**ComboBox**|名稱： InstanceId<br /><br /> DropDownStyle： DropDownList<br /><br /> 位置：121、17<br /><br /> 大小：227、21|
+    |**標籤**|位置：7、47<br /><br /> 文字：猜測|
+    |**TextBox**|名稱：猜測<br /><br /> 位置：50、44<br /><br /> 大小：65、20|
+    |**Button**|名稱： EnterGuess<br /><br /> 位置：121、42<br /><br /> 大小：75、23<br /><br /> 文字：輸入猜測|
+    |**Button**|名稱： QuitGame<br /><br /> 位置：274、42<br /><br /> 大小：75、23<br /><br /> 文字： Quit|
+    |**TextBox**|名稱： WorkflowStatus<br /><br /> 位置：10、73<br /><br /> 多行： True<br /><br /> ReadOnly： True<br /><br /> 捲軸：垂直<br /><br /> 大小：338、208|
 
 5. 將表單的**AcceptButton**屬性設定為**EnterGuess**。
 
@@ -126,7 +126,7 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
 
 本節中的步驟會將設定表單 UI 的屬性和 Helper 方法加入到表單類別中，以支援執行及繼續使用數字猜測工作流程。
 
-1. 以滑鼠右鍵按一下**方案總管**中的   **workflowhostform** , 然後選擇 **查看程式碼**。
+1. 以滑鼠右鍵按一下**方案總管**中的   **workflowhostform** ，然後選擇 **查看程式碼**。
 
 2. 將下列 `using` (或 `Imports`) 陳述式加入至檔案最上方的其他 `using` (或 `Imports`) 陳述式。
 
@@ -187,9 +187,9 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
     }
     ```
 
-    下拉式方塊會顯示持續性工作流程實例識別碼的清單, `WorkflowInstanceId`而屬性會傳回目前選取的工作流程。 `InstanceId`
+    [`InstanceId`] 下拉式方塊會顯示持續性工作流程實例識別碼的清單，而 [`WorkflowInstanceId`] 屬性則會傳回目前選取的工作流程。
 
-5. 加入表單 `Load` 事件的處理常式。 若要加入處理常式, 請切換至表單的**設計檢視**, 按一下 [**屬性**] 視窗頂端的 [**事件**] 圖示, 然後按兩下 [**載入**]。
+5. 加入表單 `Load` 事件的處理常式。 若要加入處理常式，請切換至表單的**設計檢視**，按一下 [**屬性**] 視窗頂端的 [**事件**] 圖示，然後按兩下 [**載入**]。
 
     ```vb
     Private Sub WorkflowHostForm_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -234,7 +234,7 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
 
     當表單載入時，會設定 `SqlWorkflowInstanceStore`，範圍和工作流程型別下拉式方塊會設為預設值，而且持續性工作流程執行個體會加入至 `InstanceId` 下拉式方塊。
 
-7. 加入 `SelectedIndexChanged` 的 `InstanceId` 處理常式。 若要加入處理常式, 請切換至表單的 [**設計檢視**], 選取`InstanceId`下拉式方塊, 按一下 [**屬性**] 視窗頂端的 [**事件**] 圖示, 然後按兩下 [ **SelectedIndexChanged**]。
+7. 加入 `SelectedIndexChanged` 的 `InstanceId` 處理常式。 若要加入處理常式，請切換至表單的 [**設計檢視**]，選取 [`InstanceId`] 下拉式方塊，按一下 [**屬性**] 視窗頂端的 [**事件**] 圖示，然後按兩下 [ **SelectedIndexChanged**]。
 
     ```vb
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged
@@ -392,7 +392,7 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
     }
     ```
 
-11. 將下列 `GameOver` 方法及對應的委派加入至表單類別。 當工作流程完成時, 這個方法會從**InstanceId**下拉式方塊中移除已完成工作流程的實例識別碼, 以更新表單 UI。
+11. 將下列 `GameOver` 方法及對應的委派加入至表單類別。 當工作流程完成時，這個方法會從**InstanceId**下拉式方塊中移除已完成工作流程的實例識別碼，以更新表單 UI。
 
     ```vb
     Private Delegate Sub GameOverDelegate()
@@ -454,7 +454,7 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
     wfApp.InstanceStore = store;
     ```
 
-3. 接下來，建立 `StringWriter` 執行個體，並將其加入到 `Extensions` 的 `WorkflowApplication` 集合中。 當新增至擴充`WriteLine` 功能時,它會捕捉所有活動輸出。`StringWriter` 工作流程閒置時，可以從 `WriteLine` 擷取 `StringWriter` 輸出並顯示在表單上。
+3. 接下來，建立 `StringWriter` 執行個體，並將其加入到 `Extensions` 的 `WorkflowApplication` 集合中。 當 `StringWriter` 新增至擴充功能時，它會捕捉所有 `WriteLine` 活動輸出。 工作流程閒置時，可以從 `WriteLine` 擷取 `StringWriter` 輸出並顯示在表單上。
 
     ```vb
     'Add a StringWriter to the extensions. This captures the output
@@ -483,7 +483,7 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
                 UpdateStatus("Workflow Canceled.")
             Else
                 Dim Turns As Integer = Convert.ToInt32(e.Outputs("Turns"))
-                UpdateStatus(String.Format("Congratulations, you guessed the number in {0} turns.", Turns))
+                UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.")
             End If
             GameOver()
         End Sub
@@ -494,9 +494,7 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
     {
         if (e.CompletionState == ActivityInstanceState.Faulted)
         {
-            UpdateStatus(string.Format("Workflow Terminated. Exception: {0}\r\n{1}",
-                e.TerminationException.GetType().FullName,
-                e.TerminationException.Message));
+            UpdateStatus($"Workflow Terminated. Exception: {e.TerminationException.GetType().FullName}\r\n{e.TerminationException.Message}");
         }
         else if (e.CompletionState == ActivityInstanceState.Canceled)
         {
@@ -505,7 +503,7 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
         else
         {
             int Turns = Convert.ToInt32(e.Outputs["Turns"]);
-            UpdateStatus(string.Format("Congratulations, you guessed the number in {0} turns.", Turns));
+            UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.");
         }
         GameOver();
     };
@@ -516,16 +514,12 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
     ```vb
     wfApp.Aborted = _
         Sub(e As WorkflowApplicationAbortedEventArgs)
-            UpdateStatus(String.Format("Workflow Aborted. Exception: {0}" & vbCrLf & "{1}", _
-                e.Reason.GetType().FullName, _
-                e.Reason.Message))
+            UpdateStatus($"Workflow Aborted. Exception: {0e.Reason.GetType().FullName}" & vbCrLf & $"{e.Reason.Message}")
         End Sub
 
     wfApp.OnUnhandledException = _
         Function(e As WorkflowApplicationUnhandledExceptionEventArgs)
-            UpdateStatus(String.Format("Unhandled Exception: {0}" & vbCrLf & "{1}", _
-                e.UnhandledException.GetType().FullName, _
-                e.UnhandledException.Message))
+            UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}" & vbCrLf & $"{e.UnhandledException.Message}")
             GameOver()
             Return UnhandledExceptionAction.Terminate
         End Function
@@ -534,16 +528,12 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
     ```csharp
     wfApp.Aborted = delegate(WorkflowApplicationAbortedEventArgs e)
     {
-        UpdateStatus(string.Format("Workflow Aborted. Exception: {0}\r\n{1}",
-                e.Reason.GetType().FullName,
-                e.Reason.Message));
+        UpdateStatus($"Workflow Aborted. Exception: {e.Reason.GetType().FullName}\r\n{e.Reason.Message}");
     };
 
     wfApp.OnUnhandledException = delegate(WorkflowApplicationUnhandledExceptionEventArgs e)
     {
-        UpdateStatus(string.Format("Unhandled Exception: {0}\r\n{1}",
-                e.UnhandledException.GetType().FullName,
-                e.UnhandledException.Message));
+        UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}\r\n{e.UnhandledException.Message}");
         GameOver();
         return UnhandledExceptionAction.Terminate;
     };
@@ -600,23 +590,19 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
                     UpdateStatus("Workflow Canceled.")
                 Else
                     Dim Turns As Integer = Convert.ToInt32(e.Outputs("Turns"))
-                    UpdateStatus(String.Format("Congratulations, you guessed the number in {0} turns.", Turns))
+                    UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.")
                 End If
                 GameOver()
             End Sub
 
         wfApp.Aborted = _
             Sub(e As WorkflowApplicationAbortedEventArgs)
-                UpdateStatus(String.Format("Workflow Aborted. Exception: {0}" & vbCrLf & "{1}", _
-                    e.Reason.GetType().FullName, _
-                    e.Reason.Message))
+                UpdateStatus($"Workflow Aborted. Exception: {e.Reason.GetType().FullName}" & vbCrLf & $"{e.Reason.Message}")
             End Sub
 
         wfApp.OnUnhandledException = _
             Function(e As WorkflowApplicationUnhandledExceptionEventArgs)
-                UpdateStatus(String.Format("Unhandled Exception: {0}" & vbCrLf & "{1}", _
-                    e.UnhandledException.GetType().FullName, _
-                    e.UnhandledException.Message))
+                UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}" & vbCrLf & $"{e.UnhandledException.Message}")
                 GameOver()
                 Return UnhandledExceptionAction.Terminate
             End Function
@@ -648,9 +634,7 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
         {
             if (e.CompletionState == ActivityInstanceState.Faulted)
             {
-                UpdateStatus(string.Format("Workflow Terminated. Exception: {0}\r\n{1}",
-                    e.TerminationException.GetType().FullName,
-                    e.TerminationException.Message));
+                UpdateStatus($"Workflow Terminated. Exception: {e.TerminationException.GetType().FullName}\r\n{e.TerminationException.Message}");
             }
             else if (e.CompletionState == ActivityInstanceState.Canceled)
             {
@@ -659,23 +643,19 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
             else
             {
                 int Turns = Convert.ToInt32(e.Outputs["Turns"]);
-                UpdateStatus(string.Format("Congratulations, you guessed the number in {0} turns.", Turns));
+                UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.");
             }
             GameOver();
         };
 
         wfApp.Aborted = delegate(WorkflowApplicationAbortedEventArgs e)
         {
-            UpdateStatus(string.Format("Workflow Aborted. Exception: {0}\r\n{1}",
-                    e.Reason.GetType().FullName,
-                    e.Reason.Message));
+            UpdateStatus($"Workflow Aborted. Exception: {e.Reason.GetType().FullName}\r\n{e.Reason.Message}");
         };
 
         wfApp.OnUnhandledException = delegate(WorkflowApplicationUnhandledExceptionEventArgs e)
         {
-            UpdateStatus(string.Format("Unhandled Exception: {0}\r\n{1}",
-                    e.UnhandledException.GetType().FullName,
-                    e.UnhandledException.Message));
+            UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}\r\n{e.UnhandledException.Message}");
             GameOver();
             return UnhandledExceptionAction.Terminate;
         };
@@ -695,9 +675,9 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
 
 ### <a name="BKMK_WorkflowVersionMap"></a>啟用啟動和繼續多個工作流程類型
 
-主機必須提供工作流程定義，才能繼續工作流程執行個體。 本教學課程包含三種工作流程型別，後續的教學課程將介紹這些類型的多個版本。 `WorkflowIdentity` 提供方法，讓主應用程式能夠將識別資訊與持續的工作流程執行個體建立關聯。 本節中的步驟示範如何建立公用程式類別，以協助將持續性工作流程執行個體的工作流程識別對應至相對應的工作流程定義。 如需`WorkflowIdentity`和版本設定的詳細資訊, 請參閱[使用 WorkflowIdentity 和版本控制](using-workflowidentity-and-versioning.md)。
+主機必須提供工作流程定義，才能繼續工作流程執行個體。 本教學課程包含三種工作流程型別，後續的教學課程將介紹這些類型的多個版本。 `WorkflowIdentity` 提供方法，讓主應用程式能夠將識別資訊與持續的工作流程執行個體建立關聯。 本節中的步驟示範如何建立公用程式類別，以協助將持續性工作流程執行個體的工作流程識別對應至相對應的工作流程定義。 如需 `WorkflowIdentity` 和版本控制的詳細資訊，請參閱[使用 WorkflowIdentity 和版本控制](using-workflowidentity-and-versioning.md)。
 
-1. 以滑鼠右鍵按一下**方案總管**中的 **[numberguessworkflowhost]** , 然後選擇 [**新增**]、[**類別**]。 在`WorkflowVersionMap` [**名稱**] 方塊中輸入, 然後按一下 [**新增**]。
+1. 以滑鼠右鍵按一下**方案總管**中的 **[numberguessworkflowhost]** ，然後選擇 [**新增**]、[**類別**]。 在 [**名稱**] 方塊中輸入 `WorkflowVersionMap`，然後按一下 [**新增**]。
 
 2. 將下列 `using` 或 `Imports` 陳述式加入至檔案最上方的其他 `using` 或 `Imports` 陳述式。
 
@@ -813,7 +793,7 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
 
 ### <a name="BKMK_StartWorkflow"></a>啟動新的工作流程
 
-1. 加入 `Click` 的 `NewGame` 處理常式。 若要加入處理常式, 請切換至表單的**設計檢視**, 然後按兩下`NewGame`。 會加入 `NewGame_Click` 處理常式，且表單的檢視會切換成程式碼檢視。 每當使用者按一下此按鈕，就會啟動新的工作流程。
+1. 加入 `Click` 的 `NewGame` 處理常式。 若要加入處理常式，請切換至表單的**設計檢視**，然後按兩下 [`NewGame`]。 會加入 `NewGame_Click` 處理常式，且表單的檢視會切換成程式碼檢視。 每當使用者按一下此按鈕，就會啟動新的工作流程。
 
     ```vb
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click
@@ -1008,7 +988,7 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
 
 ### <a name="BKMK_ResumeWorkflow"></a>繼續工作流程
 
-1. 加入 `Click` 的 `EnterGuess` 處理常式。 若要加入處理常式, 請切換至表單的**設計檢視**, 然後按兩下`EnterGuess`。 每當使用者按一下此按鈕，就會繼續使用該工作流程。
+1. 加入 `Click` 的 `EnterGuess` 處理常式。 若要加入處理常式，請切換至表單的**設計檢視**，然後按兩下 [`EnterGuess`]。 每當使用者按一下此按鈕，就會繼續使用該工作流程。
 
     ```vb
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click
@@ -1224,7 +1204,7 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
 
 ### <a name="BKMK_TerminateWorkflow"></a>終止工作流程
 
-1. 加入 `Click` 的 `QuitGame` 處理常式。 若要加入處理常式, 請切換至表單的**設計檢視**, 然後按兩下`QuitGame`。 每當使用者按一下此按鈕，就會終止目前選取的工作流程。
+1. 加入 `Click` 的 `QuitGame` 處理常式。 若要加入處理常式，請切換至表單的**設計檢視**，然後按兩下 [`QuitGame`]。 每當使用者按一下此按鈕，就會終止目前選取的工作流程。
 
     ```vb
     Private Sub QuitGame_Click(sender As Object, e As EventArgs) Handles QuitGame.Click
@@ -1298,7 +1278,7 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
 
 ### <a name="BKMK_BuildAndRun"></a> 若要建置及執行應用程式
 
-1. 按兩下**方案總管**中的 [ **Program.cs** ] (或 [ **Module1**]) 以顯示程式碼。
+1. 按兩下**方案總管**中的 [ **Program.cs** ] （或 [ **Module1**]）以顯示程式碼。
 
 2. 將下列 `using` (或 `Imports`) 陳述式加入至檔案最上方的其他 `using` (或 `Imports`) 陳述式。
 
@@ -1310,7 +1290,7 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
     using System.Windows.Forms;
     ```
 
-3. 移除或批註現有的工作流程裝載程式碼[, 方法如下:執行工作流程](how-to-run-a-workflow.md), 並以下列程式碼取代它。
+3. 從[如何：執行工作流程](how-to-run-a-workflow.md)中移除或批註現有的工作流程裝載程式碼，並以下列程式碼取代它。
 
     ```vb
     Sub Main()
@@ -1327,14 +1307,14 @@ Windows Workflow Foundation (WF) 的其中一項主要功能是執行時間將�
     }
     ```
 
-4. 以滑鼠右鍵按一下**方案總管**中的 [ **[numberguessworkflowhost]** ], 然後選擇 [**屬性**]。 在 [**應用程式**] 索引標籤中, 指定 [ **Windows 應用程式**] 作為**輸出類型**。 此步驟是選用性的，但如果不進行此步驟，除了表單外還會顯示主控台視窗。
+4. 以滑鼠右鍵按一下**方案總管**中的 [ **[numberguessworkflowhost]** ]，然後選擇 [**屬性**]。 在 [**應用程式**] 索引標籤中，指定 [ **Windows 應用程式**] 作為**輸出類型**。 此步驟是選用性的，但如果不進行此步驟，除了表單外還會顯示主控台視窗。
 
 5. 按 Ctrl+Shift+B 建置應用程式。
 
-6. 確定 [ **[numberguessworkflowhost]** ] 已設定為 [啟動應用程式], 然後按下 Ctrl + F5 啟動應用程式。
+6. 確定 [ **[numberguessworkflowhost]** ] 已設定為 [啟動應用程式]，然後按下 Ctrl + F5 啟動應用程式。
 
-7. 選取猜測遊戲的範圍和要啟動的工作流程類型, 然後按一下 [**新遊戲**]。 在 [**猜測**] 方塊中輸入猜測, 然後按一下 [**移**至] 以提交您的猜測。 請注意，`WriteLine` 活動的輸出會顯示在表單上。
+7. 選取猜測遊戲的範圍和要啟動的工作流程類型，然後按一下 [**新遊戲**]。 在 [**猜測**] 方塊中輸入猜測，然後按一下 [**移**至] 以提交您的猜測。 請注意，`WriteLine` 活動的輸出會顯示在表單上。
 
-8. 啟動數個使用不同工作流程類型和數位範圍的工作流程、輸入一些猜測, 然後從 [**工作流程實例識別碼**] 清單中選取來切換工作流程。
+8. 啟動數個使用不同工作流程類型和數位範圍的工作流程、輸入一些猜測，然後從 [**工作流程實例識別碼**] 清單中選取來切換工作流程。
 
-    請注意，當您切換到新的工作流程時，先前的猜測和工作流程的進度都不會顯示在狀態視窗中。 不顯示狀態的原因是未擷取狀態，也未儲存在任何位置。 在教學課程的下一個步驟中[, 如何:建立自訂追蹤參與者](how-to-create-a-custom-tracking-participant.md), 您可以建立可儲存此資訊的自訂追蹤參與者。
+    請注意，當您切換到新的工作流程時，先前的猜測和工作流程的進度都不會顯示在狀態視窗中。 不顯示狀態的原因是未擷取狀態，也未儲存在任何位置。 在教學課程的下一個步驟中，[如何：建立自訂追蹤參與者](how-to-create-a-custom-tracking-participant.md)，您可以建立可儲存這項資訊的自訂追蹤參與者。

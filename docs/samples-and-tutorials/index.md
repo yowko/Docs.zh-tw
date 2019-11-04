@@ -4,12 +4,12 @@ description: 針對 .NET Core、ASP.NET Core 及 C# 語言的範例和教學課�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: e4906feb7cda026848c990c7dd6f1dc8146dc7aa
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855769"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423564"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 範例與教學課程
 
@@ -25,7 +25,7 @@ ms.locfileid: "70855769"
 
 ### <a name="tutorials"></a>教學課程
 
-**[使用 CLI 工具撰寫 .NET Core 主控台應用程式：逐步指南](../core/tutorials/using-with-xplat-cli.md)**
+**[使用 CLI 工具撰寫 .NET Core 主控台應用程式︰逐步指南](../core/tutorials/using-with-xplat-cli.md)**
 
 此指南說明如何使用 .NET Core CLI 工具，來建置跨平台的主控台應用程式。 它會從基本的主控台應用程式開始，最終會跨越多個專案 (包括測試)。 您會逐步新增各種功能，並同時增加您的知識。 [完整範例](https://github.com/dotnet/samples/tree/master/core/console-apps) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
@@ -49,7 +49,7 @@ ms.locfileid: "70855769"
 
 此範例示範 C# 索引子的語法和功能。 [完整範例](https://github.com/dotnet/samples/tree/master/csharp/indexers) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
-**[委派和事件](../csharp/delegates-events.md)**
+**[委派和事件](../csharp/delegates-overview.md)**
 
 此範例示範 C# 委派和事件的語法和功能。 [完整範例](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。 以事件為焦點的[第二個範例 (英文)](https://github.com/dotnet/samples/tree/master/csharp/events) 也位於相同的存放庫中。
 
@@ -95,15 +95,11 @@ ms.locfileid: "70855769"
 
 本教學課程會向您示範如何在支援外掛程式架構的 .NET Core 上建置簡單的應用程式。 [完整範例](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
-## <a name="deploying-to-containers"></a>部署至容器
+## <a name="deploy-to-containers"></a>部署至容器
 
-**[在 Windows Docker 容器中執行 ASP.NET MVC 應用程式](../framework/docker/aspnetmvc.md)**
+**[在 Windows Docker 容器中執行 ASP.NET MVC 應用程式](/aspnet/mvc/overview/deployment/docker-aspnetmvc)**
 
 此教學課程示範如何在 Windows Docker 容器中部署現有的 ASP.NET MVC 應用程式。 [完整範例](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
-
-**[在 Windows 容器中執行 .NET Framework 主控台應用程式](../framework/docker/console.md)**
-
-此教學課程示範如何在 Windows 容器中部署現有的主控台應用程式。 [完整範例](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
 ## <a name="viewing-and-downloading-samples"></a>檢視和下載範例
 
@@ -117,5 +113,5 @@ ms.locfileid: "70855769"
 1. 您有數個選項可以執行範例：
    * 使用 [dotnet CLI 工具](../core/tools/index.md)：在主控台視窗中，瀏覽至範例的資料夾，並使用 dotnet CLI 命令。
    * 使用 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 或 [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)：從功能表列選取 [檔案] > [開啟] > [專案/方案]，瀏覽至範例專案資料夾，並選取專案檔案 ( *.csproj* 或 *.fsproj*) 來開啟範例。
-   * 使用 [Visual Studio Code](https://code.visualstudio.com/)：從功能表列選取 [檔案] > [開啟資料夾]，並選取範例的專案資料夾來開啟範例。
+   * 使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)：從功能表列選取 [檔案] > [開啟資料夾]，並選取範例的專案資料夾來開啟範例。
    * 使用支援 .NET Core 專案的另一個 IDE。

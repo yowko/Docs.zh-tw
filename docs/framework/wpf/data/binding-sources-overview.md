@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: cf5873cdf137573826d5361d077e0534e8cba1f0
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920294"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459023"
 ---
 # <a name="binding-sources-overview"></a>繫結來源概觀
 在資料繫結中，繫結來源物件是指您取得資料的來源物件。 本主題討論可以當做繫結來源的物件類型。
@@ -54,7 +54,7 @@ ms.locfileid: "72920294"
 ## <a name="using-entire-objects-as-a-binding-source"></a>使用整個物件做為繫結來源
  您可以使用整個物件做為繫結來源。 您可以使用 [<xref:System.Windows.Data.Binding.Source%2A>] 或 [<xref:System.Windows.FrameworkElement.DataContext%2A>] 屬性來指定系結來源，然後提供空白的系結宣告： `{Binding}`。 可以使用這種方法的案例包括繫結到屬於字串型別的物件、繫結到內含您感興趣之多個屬性的物件，或是繫結到集合物件。 如需繫結到整個集合物件的範例，請參閱[使用含階層式資料的主從式模式](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)。
 
- 請注意，您可能必須套用自訂邏輯，如此資料對於繫結目標屬性來說才有意義。 自訂邏輯的格式可能是自訂轉換器（如果預設的類型轉換不存在）或 <xref:System.Windows.DataTemplate>。 如需轉換器的詳細資訊，請參閱[資料繫結概觀](data-binding-overview.md)的＜資料轉換＞一節。 如需資料範本的詳細資訊，請參閱[資料範本化概觀](data-templating-overview.md)。
+ 請注意，您可能必須套用自訂邏輯，如此資料對於繫結目標屬性來說才有意義。 自訂邏輯的格式可能是自訂轉換器（如果預設的類型轉換不存在）或 <xref:System.Windows.DataTemplate>。 如需轉換器的詳細資訊，請參閱[資料繫結概觀](../../../desktop-wpf/data/data-binding-overview.md)的＜資料轉換＞一節。 如需資料範本的詳細資訊，請參閱[資料範本化概觀](data-templating-overview.md)。
 
 <a name="collections"></a>
 ## <a name="using-collection-objects-as-a-binding-source"></a>使用集合物件做為繫結來源
@@ -64,7 +64,7 @@ ms.locfileid: "72920294"
 
  <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別是可公開 <xref:System.Collections.Specialized.INotifyCollectionChanged> 介面之資料集合的內建實作為。 集合中的個別資料物件都必須滿足前幾個章節中描述的需求。 如需範例，請參閱[建立和繫結至 ObservableCollection](how-to-create-and-bind-to-an-observablecollection.md)。 在執行您自己的集合之前，請考慮使用 <xref:System.Collections.ObjectModel.ObservableCollection%601> 或其中一個現有的集合類別，例如 <xref:System.Collections.Generic.List%601>、<xref:System.Collections.ObjectModel.Collection%601>和 <xref:System.ComponentModel.BindingList%601>等等。
 
- WPF 絕不會直接繫結至集合。 如果您指定集合做為繫結來源，WPF 實際上會繫結至集合的預設檢視。 如需預設檢視的詳細資訊，請參閱[資料繫結概觀](data-binding-overview.md)。
+ WPF 絕不會直接繫結至集合。 如果您指定集合做為繫結來源，WPF 實際上會繫結至集合的預設檢視。 如需預設檢視的詳細資訊，請參閱[資料繫結概觀](../../../desktop-wpf/data/data-binding-overview.md)。
 
  如果您有先進的案例，而且想要執行自己的集合，請考慮使用 <xref:System.Collections.IList> 介面。 <xref:System.Collections.IList> 提供可依索引個別存取的非泛型物件集合，其可改善效能。
 
@@ -97,6 +97,6 @@ ms.locfileid: "72920294"
 - <xref:System.Windows.Data.ObjectDataProvider>
 - <xref:System.Windows.Data.XmlDataProvider>
 - [指定繫結來源](how-to-specify-the-binding-source.md)
-- [資料繫結概觀](data-binding-overview.md)
+- [資料繫結概觀](../../../desktop-wpf/data/data-binding-overview.md)
 - [WPF 資料繫結與 LINQ to XML 概觀](wpf-data-binding-with-linq-to-xml-overview.md)
 - [優化資料系結效能](../advanced/optimizing-performance-data-binding.md)

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
-ms.translationtype: HT
+ms.openlocfilehash: 76c778d1e2d45990793b5d9c7d4a8ee5a99fed46
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424117"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422290"
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
 
-`switch` 是一個選取範圍陳述式，可根據使用「比對運算式」  的模式比對，從候選項清單中選擇要執行的單一「參數區段」  。
+`switch` 是一個選取範圍陳述式，可根據使用「比對運算式」的模式比對，從候選項清單中選擇要執行的單一「參數區段」。
 
 [!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
@@ -44,7 +44,7 @@ ms.locfileid: "67424117"
 在 C# 6 和更早坂本中，比對運算式必須是傳回下列類型之值的運算式︰
 
 - [char](char.md)。
-- [string](string.md)。
+- [string](../builtin-types/reference-types.md)。
 - [bool](bool.md)。
 - 整數值，例如 [int](../builtin-types/integral-numeric-types.md) 或 [long](../builtin-types/integral-numeric-types.md)。
 - [enum](enum.md) 值。
@@ -53,13 +53,13 @@ ms.locfileid: "67424117"
 
 ## <a name="the-switch-section"></a>參數區段
 
-`switch` 陳述式包含一個或多個參數區段。 每個參數區段都包含一或多個「case 標籤」  (case 或預設標籤)，後面接著一或多個陳述式。 `switch` 陳述式在任何參數區段中最多只能放置一個預設標籤。 下列範例示範擁有三個參數區段的簡單 `switch` 陳述式，每個區段包含兩個陳述式。 第二個參數區段包含 `case 2:` 和 `case 3:` 標籤。
+`switch` 陳述式包含一個或多個參數區段。 每個參數區段都包含一或多個「case 標籤」 (case 或預設標籤)，後面接著一或多個陳述式。 `switch` 陳述式在任何參數區段中最多只能放置一個預設標籤。 下列範例示範擁有三個參數區段的簡單 `switch` 陳述式，每個區段包含兩個陳述式。 第二個參數區段包含 `case 2:` 和 `case 3:` 標籤。
 
 `switch` 陳述式可包含任意數目的參數區段，而每個區段都可以擁有一或多個 case 標籤，如下列範例所示。 不過，不可以有兩個 case 標籤包含相同的運算式。
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-switch 陳述式中只會執行一個參數區段。 C# 不允許從某個參數區段繼續執行至另一個參數區段。 因此，下列程式碼會產生編譯器錯誤 CS0163：「控制項無法從一個 case 標籤 (\<case label>) 掉入另一個。」
+switch 陳述式中只會執行一個參數區段。 C# 不允許從某個參數區段繼續執行至另一個參數區段。 因此，下列程式碼會產生編譯器錯誤，CS0163：「控制項無法從一個 case 標籤（\<案例標籤 >）到另一個。」
 
 ```csharp
 switch (caseSwitch)
@@ -82,7 +82,7 @@ switch (caseSwitch)
 
 ## <a name="case-labels"></a>case 標籤
 
-每個 case 標籤都會指定要與比對運算式比較的模式 (先前範例中的 `caseSwitch` 變數)。 如果相符，控制權會轉移至 **「第一個」** 相符 case 標籤的參數區段。 若無任何狀況標籤模式符合比對運算式，會將控制權轉移到具有 `default` 狀況標籤的區段 (如有此區段)。 如果沒有 `default` 狀況，則不會執行任何參數區段中的陳述式，而且控制權會轉移到 `switch` 陳述式外部。
+每個 case 標籤都會指定要與比對運算式比較的模式 (先前範例中的 `caseSwitch` 變數)。 如果相符，控制權會轉移至包含「第一個」相符 case 標籤的參數區段。 若無任何狀況標籤模式符合比對運算式，會將控制權轉移到具有 `default` 狀況標籤的區段 (如有此區段)。 如果沒有 `default` 狀況，則不會執行任何參數區段中的陳述式，而且控制權會轉移到 `switch` 陳述式外部。
 
 如需 `switch` 陳述式和模式比對的資訊，請參閱[模式比對與 `switch` 陳述式](#pattern)一節。
 
@@ -125,7 +125,7 @@ switch (caseSwitch)
 - 所宣告之 `const` 變數的名稱。
 - 列舉常數。
 - [char](char.md) 常值。
-- [string](string.md) 常值。
+- [string](../builtin-types/reference-types.md) 常值。
 
 常數運算式評估如下：
 
@@ -157,7 +157,7 @@ switch (caseSwitch)
 
 - *expr* 是衍生自 *type* 的類型執行個體。 換句話說，*expr* 的結果可向上轉型成 *type* 的執行個體。
 
-- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」  是定義於其型別宣告的變數類型。 變數的「執行階段類型」  是指派給該變數的執行個體類型。
+- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」是定義於其型別宣告的變數類型。 變數的「執行階段類型」是指派給該變數的執行個體類型。
 
 - *expr* 是實作 *type* 介面的類型執行個體。
 
@@ -195,9 +195,9 @@ case null:
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)中的 [switch 陳述式](~/_csharplang/spec/statements.md#the-switch-statement)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)中的 [switch 陳述式](~/_csharplang/spec/statements.md#the-switch-statement)。 語言規格是 C# 語法及用法的限定來源。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

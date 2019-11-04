@@ -14,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 67cba143957b50e8e8d7fa68e62b52775ca2f144
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131624"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423532"
 ---
 # <a name="handling-and-raising-events"></a>處理和引發事件
 
@@ -50,7 +50,7 @@ ms.locfileid: "73131624"
   
 委派為[多點傳送](xref:System.MulticastDelegate)，這表示它們可以持有對一個以上事件處理方法的參考。 如需詳細資訊，請參閱 <xref:System.Delegate> 參考頁面。 委派可讓事件處理更彈性並進行精細的控制。 委派會維護事件的已註冊事件處理常式清單，進而做為引發事件之類別的事件分派者。  
   
-對於無法使用 <xref:System.EventHandler> 和 <xref:System.EventHandler%601> 委派的情況，您可以定義委派。 需要定義委派的情況非常少見，例如，當您必須使用無法辨識泛型的程式碼時。 您會在宣告中以 C# 的 [`delegate`](../../csharp/language-reference/keywords/delegate.md) 與 Visual Basic 的 [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) 關鍵字標記委派。 下列範例將示範如何宣告名為 `ThresholdReachedEventHandler` 的委派。  
+對於無法使用 <xref:System.EventHandler> 和 <xref:System.EventHandler%601> 委派的情況，您可以定義委派。 需要定義委派的情況非常少見，例如，當您必須使用無法辨識泛型的程式碼時。 您會在宣告中以 C# 的 [`delegate`](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) 與 Visual Basic 的 [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) 關鍵字標記委派。 下列範例將示範如何宣告名為 `ThresholdReachedEventHandler` 的委派。  
   
 [!code-csharp[EventsOverview#4](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
 [!code-vb[EventsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  

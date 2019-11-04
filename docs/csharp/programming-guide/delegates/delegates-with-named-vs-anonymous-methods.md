@@ -1,20 +1,20 @@
 ---
-title: 具名方法委派與匿名方法 - C# 程式設計手冊
+title: 具有命名與匿名方法的委派- C#程式設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 9df143fb183ef2fc7e951b2cee47d18ce4b11942
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 50df0e9c42d366c9c79dde3b0d34f85b8e552a45
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590656"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418036"
 ---
-# <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>具名方法委派與匿名方法 (C# 程式設計手冊)
-[delegate](../../language-reference/keywords/delegate.md) 可以與具名方法產生關聯。 當您使用具名方法具現化委派時，方法會當做參數傳遞，例如：  
+# <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>使用具名和匿名方法委派的比較 (C# 程式設計手冊)
+[delegate](../../language-reference/builtin-types/reference-types.md) 可以與具名方法產生關聯。 當您使用具名方法具現化委派時，方法會當做參數傳遞，例如：  
   
  [!code-csharp[csProgGuideDelegates#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#1)]  
   
@@ -37,7 +37,7 @@ ms.locfileid: "69590656"
   
  [!code-csharp[csProgGuideDelegates#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#3)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [委派](./index.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: d6e3667861c2b1ac9a84ca7b4e2cabb5784d793d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 413d3ee6323aa601df84c0f402aaea7567a61e76
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970050"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422279"
 ---
 # <a name="using-directive-c-reference"></a>using 指示詞 (C# 參考)
 
@@ -92,9 +92,9 @@ using alias 指示詞的右邊不能有開放式的泛型類型。 例如，您�
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的 [Using 指示詞](~/_csharplang/spec/namespaces.md#using-directives)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的 [Using 指示詞](~/_csharplang/spec/namespaces.md#using-directives)。 語言規格是 C# 語法及用法的限定來源。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

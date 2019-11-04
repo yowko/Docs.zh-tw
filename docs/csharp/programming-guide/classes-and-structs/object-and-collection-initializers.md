@@ -6,12 +6,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: f6977fa6c5a8909d6108a5ccfc140b89a4fdd5a4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1f8ae023c414f8762139b194a9a8274218d0b5aa
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596572"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419375"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>物件和集合初始設定式 (C# 程式設計手冊)
 
@@ -123,8 +123,8 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
 
 [!code-csharp[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullDictionaryInitializer)]  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
-- [LINQ 查詢運算式](../linq-query-expressions/index.md)
+- [C# 中的 LINQ](../../linq/index.md)
 - [匿名類型](anonymous-types.md)

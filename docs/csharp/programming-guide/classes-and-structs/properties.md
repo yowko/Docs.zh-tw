@@ -8,16 +8,16 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: dec4d4239fd1a953da6e64a1e1aff9593e2863e2
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 16dbfddb6f947ca07b60ab0e676e8c0ed118ac40
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596148"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418849"
 ---
 # <a name="properties-c-programming-guide"></a>屬性 (C# 程式設計手冊)
 
-屬性是提供彈性機制以讀取、寫入或計算私用欄位值的成員。 使用屬性時可將其視為公用資料成員，但實際上屬性是名為「存取子」  的特殊方法。 如此可讓資料更容易存取，同時有助於提升方法的安全性和彈性。  
+屬性是提供彈性機制以讀取、寫入或計算私用欄位值的成員。 使用屬性時可將其視為公用資料成員，但實際上屬性是名為「存取子」的特殊方法。 如此可讓資料更容易存取，同時有助於提升方法的安全性和彈性。  
 
 ## <a name="properties-overview"></a>屬性概觀  
   
@@ -26,7 +26,7 @@ ms.locfileid: "69596148"
 - [get](../../language-reference/keywords/get.md) 屬性存取子可用來傳回屬性值，而 [set](../../language-reference/keywords/set.md) 屬性存取子則用來指派新值。 這些存取子可以有不同的存取層級。 如需詳細資訊，請參閱[限制存取子的存取範圍](./restricting-accessor-accessibility.md)。  
   
 - [value`set` 關鍵字是用來定義 ](../../language-reference/keywords/value.md) 存取子要指派的值。  
-- 屬性可以是「讀寫」  (同時具有 `get` 和 `set` 存取子)、「唯讀」  (具有 `get` 存取子但沒有 `set` 存取子) 或「唯寫」  (具有 `set` 存取子但沒有 `get` 存取子)。 唯寫屬性很少見，而且最常用來限制對機密資料的存取。
+- 屬性可以是「讀寫」(同時具有 `get` 和 `set` 存取子)、「唯讀」(具有 `get` 存取子但沒有 `set` 存取子) 或「唯寫」(具有 `set` 存取子但沒有 `get` 存取子)。 唯寫屬性很少見，而且最常用來限制對機密資料的存取。
 
 - 不需要自訂存取子程式碼的簡單屬性，則可以實作為運算式主體定義或[自動實作屬性](./auto-implemented-properties.md)。
  
@@ -72,9 +72,9 @@ ms.locfileid: "69596148"
   
 ## <a name="c-language-specification"></a>C# 語言規格  
 
-如需詳細資訊，請參閱 [C# 語言規格](../../language-reference/language-specification/index.md)的[屬性](~/_csharplang/spec/classes.md#properties)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的[屬性](~/_csharplang/spec/classes.md#properties)。 語言規格是 C# 語法及用法的限定來源。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [使用屬性](./using-properties.md)

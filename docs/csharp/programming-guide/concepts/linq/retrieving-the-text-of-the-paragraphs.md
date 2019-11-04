@@ -2,12 +2,12 @@
 title: 擷取段落的文字 (C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: 986145fa62722a35d23831a3818b89e63529b85f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cedca9df84ee687a9e304cde0015b46d07956364
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253050"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423332"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>擷取段落的文字 (C#)
 這個範例是根據上述範例 ([擷取段落及其樣式 (C#)](./retrieving-the-paragraphs-and-their-styles.md)) 所建置。 這個新的範例會將每個段落的文字當做字串擷取。  
@@ -18,7 +18,7 @@ ms.locfileid: "70253050"
   
  當然，此慣用句可能會撰寫包含功能的單一查詢以擷取段落、每個段落的樣式，以及每個段落的文字。 不過，這通常有助於將更複雜的查詢分割為多個查詢，因為所產生的程式碼更為模組化而且更容易維護。 此外，如果您需要重複使用某部分查詢，當查詢以此種方式撰寫時，重構比較容易。  
   
- 這些鏈結在一起的查詢會使用在主題[教學課程：將查詢鏈結在一起 (C#)](./tutorial-chaining-queries-together.md) 中詳述的處理模型。  
+ 這些鏈結在一起的查詢會使用在[教學課程：將查詢鏈結在一起 (C#)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) 主題中詳細檢查的處理模型。  
   
 ## <a name="example"></a>範例  
  此範例會處理 WordprocessingML 文件，以判斷項目節點、樣式名稱，以及每個段落的文字。 此範例在這個教學課程中，會在先前的範例上建置。 新的查詢會在以下程式碼的註解中叫出。  
@@ -142,7 +142,7 @@ StyleName:Code >Hello World<
   
 - [使用擴充方法進行重構 (C#)](./refactoring-using-an-extension-method.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [教學課程：管理 WordprocessingML 文件中的內容 (C#)](./tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [教學課程：管理 WordprocessingML 文件中的內容 (C#)](shape-of-wordprocessingml-documents.md)
 - [LINQ to XML 中的延後執行和延遲評估 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

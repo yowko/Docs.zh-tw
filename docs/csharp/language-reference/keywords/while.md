@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: 486936ae29552891c6a58913b6d5cf9a0d725a69
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
-ms.translationtype: HT
+ms.openlocfilehash: ab0a8ba0b724757b4f239daf1d3319b989c4531a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422490"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421922"
 ---
 # <a name="while-c-reference"></a>while (C# 參考)
 
@@ -27,15 +27,15 @@ ms.locfileid: "66422490"
 
 ## <a name="example"></a>範例
 
-下列範例會示範 `while` 陳述式的用法。 選取 [執行]  執行範例程式碼。 之後，您可以修改程式碼，然後再次執行它。
+下列範例會示範 `while` 陳述式的用法。 選取 [執行] 執行範例程式碼。 之後，您可以修改程式碼，然後再次執行它。
 
 [!code-csharp-interactive[while loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#3)]
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的 [while 陳述式](~/_csharplang/spec/statements.md#the-while-statement)一節。
+如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的 [while 陳述式](~/_csharplang/spec/statements.md#the-while-statement)一節。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 54991ce16aa905f4138013944fb8b5a317675d9b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 75cf628b6faad1f8c52a70c77baa4ede21160510
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043152"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458128"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>實作 UI 自動化 Value 控制項模式
 > [!NOTE]
-> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主題將介紹實作 <xref:System.Windows.Automation.Provider.IValueProvider>的方針和慣例，包括事件和屬性的相關資訊。 其他參考的連結列於主題的結尾。  
   
@@ -36,9 +36,9 @@ ms.locfileid: "71043152"
   
 - <xref:System.Windows.Automation.Provider.IValueProvider> 不支援擷取格式設定資訊或子字串值。 在這些案例中請實作 <xref:System.Windows.Automation.Provider.ITextProvider> 。  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider>必須由控制項[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] （如下列所示的**色彩選擇器**選取控制項）實作為，其支援色彩值（例如，"黃色"）與對等的內部 RGB 結構之間的字串對應。  
+- <xref:System.Windows.Automation.Provider.IValueProvider> 必須由像是 Microsoft Word 的**色彩選擇器**選取控制項（如下列所示）中的控制項來執行，以支援色彩值（例如，"黃色"）與對等的內部 RGB 結構之間的字串對應。  
   
- 反![白顯示黃色的色彩選擇器。](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
+ ![反白顯示黃色的色彩選擇器。](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 色樣字串對應範例  
   
 - 控制項的 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> 應該設為 `true` ， <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> 應該設為 `false` ，才能允許呼叫 <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>。  
@@ -47,10 +47,10 @@ ms.locfileid: "71043152"
 ## <a name="required-members-for-ivalueprovider"></a>IValueProvider 的必要成員  
  以下是實作 <xref:System.Windows.Automation.Provider.IValueProvider>的必要屬性和方法。  
   
-|必要成員|成員類型|注意|  
+|必要成員|成員類型|備註|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|屬性|None|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|屬性|無|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|屬性|None|  
 |<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|方法|None|  
   
 <a name="Exceptions"></a>   
@@ -63,7 +63,7 @@ ms.locfileid: "71043152"
 |<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -如果新的值無法從字串轉換成控制項可辨識的格式。|  
 |<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -嘗試操作未啟用的控制項時。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)

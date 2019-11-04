@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: cee80ca0880e046870f699f45624df61ee507a47
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 403c4e76e302536513b9de0694ab7b0de621d5d2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919854"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455515"
 ---
 # <a name="attached-properties-overview"></a>附加屬性概觀
 
@@ -60,7 +60,7 @@ WPF 定義附加屬性的最常見案例是當父元素支援子專案集合時�
 
 ## 程式碼中的附加屬性<a name="attached_properties_code"></a>
 
-WPF 中附加的屬性沒有一般的 CLR 「包裝函式」方法，可輕鬆取得/設定存取。 這是因為附加屬性不一定是設定屬性之實例的 CLR 命名空間的一部分。 不過，XAML 處理器必須可以在剖析 XAML 時設定這些值。 若要支援有效的附加屬性使用方式，附加屬性的擁有者類型必須以**Get_PropertyName_** 和**Set_PropertyName_** 格式來實作為專用存取子方法。 這些專用存取子方法也適用於取得或設定程式碼中的附加屬性。 從程式碼觀點，附加屬性類似具有方法存取子而非屬性存取子的支援欄位，而且該支援欄位可以存在於任何物件，而不需要特別進行定義。
+WPF 中附加的屬性沒有一般的 CLR 「包裝函式」方法，可輕鬆取得/設定存取。 這是因為附加屬性不一定是設定屬性之實例的 CLR 命名空間的一部分。 不過，XAML 處理器必須可以在剖析 XAML 時設定這些值。 若要支援有效的附加屬性使用方式，附加屬性的擁有者類型必須以**Get_PropertyName_** 和**Set_PropertyName_** 的形式，實作為專用存取子方法。 這些專用存取子方法也適用於取得或設定程式碼中的附加屬性。 從程式碼觀點，附加屬性類似具有方法存取子而非屬性存取子的支援欄位，而且該支援欄位可以存在於任何物件，而不需要特別進行定義。
 
 下列範例示範如何在程式碼中設定附加屬性。 在此範例中，`myCheckBox` 是 <xref:System.Windows.Controls.CheckBox> 類別的實例。
 
@@ -91,7 +91,7 @@ WPF 中附加的屬性沒有一般的 CLR 「包裝函式」方法，可輕鬆�
 
 如果您的類別是嚴格定義附加屬性以用於其他類型，則類別不需要衍生自 <xref:System.Windows.DependencyObject>。 但是，如果您遵循整體 WPF 模型讓附加屬性也是相依性屬性，則需要從 <xref:System.Windows.DependencyObject> 衍生。
 
-藉由宣告 <xref:System.Windows.DependencyProperty>類型的 `public static readonly` 欄位，將附加屬性定義為相依性屬性。 您可以使用 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 方法的傳回值來定義此欄位。 功能變數名稱必須符合附加屬性名稱（附加字串 `Property`），才能遵循已建立的 WPF 模式來命名識別欄位與它們所代表的屬性。 附加屬性提供者也必須提供靜態**Get_PropertyName_** 和**Set_PropertyName_** 方法，做為附加屬性的存取子;如果無法這麼做，就會導致屬性系統無法使用您的附加屬性。
+藉由宣告 <xref:System.Windows.DependencyProperty>類型的 `public static readonly` 欄位，將附加屬性定義為相依性屬性。 您可以使用 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 方法的傳回值來定義此欄位。 功能變數名稱必須符合附加屬性名稱（附加字串 `Property`），才能遵循已建立的 WPF 模式來命名識別欄位與它們所代表的屬性。 附加屬性提供者也必須提供靜態**Get_PropertyName_** 和**Set_PropertyName_** 方法做為附加屬性的存取子;如果無法這麼做，就會導致屬性系統無法使用您的附加屬性。
 
 > [!NOTE]
 > 如果您省略附加屬性的 get 存取子，屬性上的資料系結將無法在設計工具中使用，例如 Visual Studio 和 Blend for Visual Studio。
@@ -146,5 +146,5 @@ WPF 會定義數個 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includ
 - <xref:System.Windows.DependencyProperty>
 - [相依性屬性概觀](dependency-properties-overview.md)
 - [自訂相依性屬性](custom-dependency-properties.md)
-- [XAML 概觀 (WPF)](xaml-overview-wpf.md)
+- [XAML 概觀 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [註冊附加屬性](how-to-register-an-attached-property.md)

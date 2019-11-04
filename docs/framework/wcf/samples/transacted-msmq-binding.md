@@ -2,12 +2,12 @@
 title: 交易 MSMQ 繫結
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-ms.openlocfilehash: 259ca8059ac1c4f62636a2320d5eb64daa7f56cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebf93ba5b7497d30ff7efceea3bd7ca827d5b502
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759982"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423894"
 ---
 # <a name="transacted-msmq-binding"></a>交易 MSMQ 繫結
 
@@ -50,7 +50,7 @@ public interface IOrderProcessor
 }
 ```
 
-服務會自我裝載。 使用 MSMQ 傳輸時，必須事先建立使用的佇列。 這個動作可手動或透過程式碼完成。 在這個範例中，該服務包含的程式碼會檢查佇列的存在，並在佇列不存在時建立佇列。 佇列名稱會從組態檔中讀取。 使用基底位址[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來產生服務 proxy。
+服務會自我裝載。 使用 MSMQ 傳輸時，必須事先建立使用的佇列。 這個動作可手動或透過程式碼完成。 在這個範例中，該服務包含的程式碼會檢查佇列的存在，並在佇列不存在時建立佇列。 佇列名稱會從組態檔中讀取。 [System.servicemodel 中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)會使用基底位址來產生服務的 proxy。
 
 ```csharp
 // Host the service within this EXE console application.
@@ -90,7 +90,7 @@ MSMQ 佇列名稱是指定在組態檔的 appSettings 區段中，如下面的�
 ```
 
 > [!NOTE]
-> 使用 <xref:System.Messaging> 來建立佇列時，佇列會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 Windows Communication Foundation (WCF) 端點會使用包含 net.msmq 配置的佇列位址、 使用"localhost"代表本機電腦，並在其路徑中使用正斜線。
+> 使用 <xref:System.Messaging> 來建立佇列時，佇列會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 Windows Communication Foundation （WCF）端點會使用含有 net.tcp 配置的佇列位址、使用 "localhost" 代表本機電腦，並在其路徑中使用正斜線。
 
 用戶端會建立一個交易範圍。 與佇列的通訊會發生在異動範圍內，導致其被視為原子單位 (Atomic Unit)，其中會將所有訊息都傳送至佇列，或是不傳送任何訊息至佇列。 呼叫異動範圍上的 <xref:System.Transactions.TransactionScope.Complete%2A>，即可認可異動。
 
@@ -144,7 +144,7 @@ Console.ReadLine();
 
 當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以查看來自用戶端的服務接收訊息。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。 請注意，因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。 您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -159,23 +159,23 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。
 
-    1. 開啟 Visual Studio 2012 中的 伺服器管理員。
+    1. 在 Visual Studio 2012 中開啟伺服器管理員。
 
-    2. 依序展開**功能** 索引標籤。
+    2. 展開 [**功能**] 索引標籤。
 
-    3. 以滑鼠右鍵按一下**私用訊息佇列**，然後選取**新增**，**私用佇列**。
+    3. 以滑鼠右鍵按一下 [**私人訊息佇列**]，然後選取 [**新增**]、[**私用佇列**]。
 
-    4. 請檢查**Transactional**  方塊中。
+    4. 選取 [**交易**式] 方塊。
 
-    5. 輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。
+    5. 輸入 `ServiceModelSamplesTransacted` 做為新佇列的名稱。
 
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 
-4. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
 根據預設，傳輸安全性會透過 <xref:System.ServiceModel.NetMsmqBinding> 啟用。 MSMQ 傳輸安全性有兩個相關屬性：<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 和 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>。 根據預設，驗證模式會設定為 `Windows`，保護層級則會設定為 `Sign`。 若要 MSMQ 提供驗證及簽署功能，MSMQ 必須是網域的一部分，而且必須安裝 MSMQ 的 Active Directory 整合選項。 如果您在不符合這些條件的電腦上執行這個範例，就會收到錯誤。
 
@@ -235,6 +235,6 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`

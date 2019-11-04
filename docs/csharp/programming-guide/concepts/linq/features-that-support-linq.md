@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 1029d34ae8823fe91c7e4bc92e168fcc1061c707
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: af7bf487ff4ed250025b946f0948c269fcc5bf09
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594410"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418566"
 ---
 # <a name="c-features-that-support-linq"></a>支援 LINQ 的 C# 功能
 
@@ -26,7 +26,7 @@ var query = from str in stringArray
             select stringGroup;
 ```
 
-如需詳細資訊，請參閱 [LINQ 查詢運算式](../../linq-query-expressions/index.md)。
+如需詳細資訊，請參閱 [LINQ 查詢運算式](../../../linq/index.md)。
 
 ## <a name="implicitly-typed-variables-var"></a>隱含型別變數 (var)
 
@@ -42,7 +42,7 @@ var query = from str in stringArray
 
 宣告為 `var` 的變數和明確指定類型的變數一樣具有強型別。 `var` 可用來建立匿名型別，但僅可用於區域變數。 陣列也可以使用隱含型別進行宣告。
 
-如需詳細資訊，請參閱[隱含類型區域變數](../../classes-and-structs/implicitly-typed-local-variables.md)。
+如需詳細資訊，請參閱[隱含型別區域變數](../../classes-and-structs/implicitly-typed-local-variables.md)。
 
 ## <a name="object-and-collection-initializers"></a>物件和集合初始設定式
 
@@ -100,6 +100,6 @@ Lambda 運算式是一種內嵌函式，其使用 => 運算子分隔輸入參數
 
 - [運算式樹狀結構 (C#)](../expression-trees/index.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Language-Integrated Query (LINQ) (C#)](./index.md)
