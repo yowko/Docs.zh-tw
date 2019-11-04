@@ -8,28 +8,28 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: b353b413f7486990b6dd8ae5126809b27590ae3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb8d77bd3df848e6e9ed186cc621c02d36842175
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761324"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458285"
 ---
-# <a name="treeview"></a><span data-ttu-id="c59c9-102">TreeView</span><span class="sxs-lookup"><span data-stu-id="c59c9-102">TreeView</span></span>
-<span data-ttu-id="c59c9-103"><xref:System.Windows.Controls.TreeView>控制項會顯示階層式結構中使用可摺疊的節點資訊。</span><span class="sxs-lookup"><span data-stu-id="c59c9-103">The <xref:System.Windows.Controls.TreeView> control displays information in a hierarchical structure by using collapsible nodes.</span></span>  
+# <a name="treeview"></a><span data-ttu-id="e29ce-102">TreeView</span><span class="sxs-lookup"><span data-stu-id="e29ce-102">TreeView</span></span>
+<span data-ttu-id="e29ce-103"><xref:System.Windows.Controls.TreeView> 控制項會使用可折迭的節點來顯示階層式結構中的資訊。</span><span class="sxs-lookup"><span data-stu-id="e29ce-103">The <xref:System.Windows.Controls.TreeView> control displays information in a hierarchical structure by using collapsible nodes.</span></span>  
   
- <span data-ttu-id="c59c9-104">下圖是舉例<xref:System.Windows.Controls.TreeView>控制項包含巢狀<xref:System.Windows.Controls.TreeViewItem>控制項：</span><span class="sxs-lookup"><span data-stu-id="c59c9-104">The following illustration is an example of a <xref:System.Windows.Controls.TreeView> control that has nested <xref:System.Windows.Controls.TreeViewItem> controls:</span></span>  
+ <span data-ttu-id="e29ce-104">下圖是具有嵌套 <xref:System.Windows.Controls.TreeViewItem> 控制項之 <xref:System.Windows.Controls.TreeView> 控制項的範例：</span><span class="sxs-lookup"><span data-stu-id="e29ce-104">The following illustration is an example of a <xref:System.Windows.Controls.TreeView> control that has nested <xref:System.Windows.Controls.TreeViewItem> controls:</span></span>  
   
- ![顯示圖例，巢狀的 TreeViewItem 控制項。](./media/treeview/nested-treeviewitem-controls.jpg)  
+ ![此圖顯示嵌套的 TreeViewItem 控制項。](./media/treeview/nested-treeviewitem-controls.jpg)  
   
-## <a name="in-this-section"></a><span data-ttu-id="c59c9-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="c59c9-106">In This Section</span></span>  
- [<span data-ttu-id="c59c9-107">TreeView 概觀</span><span class="sxs-lookup"><span data-stu-id="c59c9-107">TreeView Overview</span></span>](treeview-overview.md)  
- [<span data-ttu-id="c59c9-108">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="c59c9-108">How-to Topics</span></span>](treeview-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e29ce-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="e29ce-106">In This Section</span></span>  
+ [<span data-ttu-id="e29ce-107">TreeView 概觀</span><span class="sxs-lookup"><span data-stu-id="e29ce-107">TreeView Overview</span></span>](treeview-overview.md)  
+ [<span data-ttu-id="e29ce-108">「如何」主題</span><span class="sxs-lookup"><span data-stu-id="e29ce-108">How-to Topics</span></span>](treeview-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="c59c9-109">參考資料</span><span class="sxs-lookup"><span data-stu-id="c59c9-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e29ce-109">參考資料</span><span class="sxs-lookup"><span data-stu-id="e29ce-109">Reference</span></span>  
  <xref:System.Windows.Controls.TreeView>  
   <xref:System.Windows.Controls.TreeViewItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="c59c9-110">相關章節</span><span class="sxs-lookup"><span data-stu-id="c59c9-110">Related Sections</span></span>  
- [<span data-ttu-id="c59c9-111">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="c59c9-111">Data Binding Overview</span></span>](../data/data-binding-overview.md)  
-  [<span data-ttu-id="c59c9-112">資料範本化概觀</span><span class="sxs-lookup"><span data-stu-id="c59c9-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="e29ce-110">相關章節</span><span class="sxs-lookup"><span data-stu-id="e29ce-110">Related Sections</span></span>  
+ [<span data-ttu-id="e29ce-111">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="e29ce-111">Data Binding Overview</span></span>](../../../desktop-wpf/data/data-binding-overview.md)  
+  [<span data-ttu-id="e29ce-112">資料範本化概觀</span><span class="sxs-lookup"><span data-stu-id="e29ce-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)
