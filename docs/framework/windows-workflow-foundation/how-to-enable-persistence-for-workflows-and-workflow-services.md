@@ -2,55 +2,55 @@
 title: HOW TO：啟用工作流程與工作流程服務的持續性
 ms.date: 03/30/2017
 ms.assetid: 2b1c8bf3-9866-45a4-b06d-ee562393e503
-ms.openlocfilehash: 9357098318342d15ad7eead32cbc7218af095f6e
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 5d0eeb8ad40f2f4f3349ab48487316014a561a1b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425343"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460887"
 ---
-# <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a><span data-ttu-id="d467f-102">HOW TO：啟用工作流程與工作流程服務的持續性</span><span class="sxs-lookup"><span data-stu-id="d467f-102">How to: Enable Persistence for Workflows and Workflow Services</span></span>
+# <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a><span data-ttu-id="84d40-102">HOW TO：啟用工作流程與工作流程服務的持續性</span><span class="sxs-lookup"><span data-stu-id="84d40-102">How to: Enable Persistence for Workflows and Workflow Services</span></span>
 
-<span data-ttu-id="d467f-103">本主題描述如何啟用工作流程與工作流程服務的持續性。</span><span class="sxs-lookup"><span data-stu-id="d467f-103">This topic describes how to enable persistence for workflows and workflow services.</span></span>
+<span data-ttu-id="84d40-103">本主題描述如何啟用工作流程與工作流程服務的持續性。</span><span class="sxs-lookup"><span data-stu-id="84d40-103">This topic describes how to enable persistence for workflows and workflow services.</span></span>
 
-## <a name="enable-persistence-for-workflows"></a><span data-ttu-id="d467f-104">啟用工作流程的持續性</span><span class="sxs-lookup"><span data-stu-id="d467f-104">Enable Persistence for Workflows</span></span>
+## <a name="enable-persistence-for-workflows"></a><span data-ttu-id="84d40-104">啟用工作流程的持續性</span><span class="sxs-lookup"><span data-stu-id="84d40-104">Enable Persistence for Workflows</span></span>
 
-<span data-ttu-id="d467f-105">您可以建立與執行個體存放區的關聯**WorkflowApplication**利用<xref:System.Activities.WorkflowApplication.InstanceStore%2A>屬性<xref:System.Activities.WorkflowApplication>類別。</span><span class="sxs-lookup"><span data-stu-id="d467f-105">You can associate an instance store with a **WorkflowApplication** by using the <xref:System.Activities.WorkflowApplication.InstanceStore%2A> property of the <xref:System.Activities.WorkflowApplication> class.</span></span> <span data-ttu-id="d467f-106"><xref:System.Activities.WorkflowApplication.Persist%2A> 方法會將工作流程儲存或保存在與應用程式相關的執行個體存放區中。</span><span class="sxs-lookup"><span data-stu-id="d467f-106">The <xref:System.Activities.WorkflowApplication.Persist%2A> method saves or persists a workflow into the instance store associated with the application.</span></span> <span data-ttu-id="d467f-107"><xref:System.Activities.WorkflowApplication.Unload%2A> 方法會將工作流程保存在執行個體存放區中，然後從記憶體卸載該執行個體。</span><span class="sxs-lookup"><span data-stu-id="d467f-107">The <xref:System.Activities.WorkflowApplication.Unload%2A> method persists a workflow into the instance store and then unloads the instance from the memory.</span></span> <span data-ttu-id="d467f-108">**負載**方法會載入使用執行個體持續性存放區中的工作流程資料的記憶體中的工作流程。</span><span class="sxs-lookup"><span data-stu-id="d467f-108">The **Load** method loads a workflow into memory using the workflow data stored in the instance persistence store.</span></span>
+<span data-ttu-id="84d40-105">您可以使用 <xref:System.Activities.WorkflowApplication> 類別的 <xref:System.Activities.WorkflowApplication.InstanceStore%2A> 屬性，將實例存放區與**WorkflowApplication**產生關聯。</span><span class="sxs-lookup"><span data-stu-id="84d40-105">You can associate an instance store with a **WorkflowApplication** by using the <xref:System.Activities.WorkflowApplication.InstanceStore%2A> property of the <xref:System.Activities.WorkflowApplication> class.</span></span> <span data-ttu-id="84d40-106"><xref:System.Activities.WorkflowApplication.Persist%2A> 方法會將工作流程儲存或保存在與應用程式相關的執行個體存放區中。</span><span class="sxs-lookup"><span data-stu-id="84d40-106">The <xref:System.Activities.WorkflowApplication.Persist%2A> method saves or persists a workflow into the instance store associated with the application.</span></span> <span data-ttu-id="84d40-107"><xref:System.Activities.WorkflowApplication.Unload%2A> 方法會將工作流程保存在執行個體存放區中，然後從記憶體卸載該執行個體。</span><span class="sxs-lookup"><span data-stu-id="84d40-107">The <xref:System.Activities.WorkflowApplication.Unload%2A> method persists a workflow into the instance store and then unloads the instance from the memory.</span></span> <span data-ttu-id="84d40-108">**Load**方法會使用儲存在實例持續性存放區中的工作流程資料，將工作流程載入記憶體中。</span><span class="sxs-lookup"><span data-stu-id="84d40-108">The **Load** method loads a workflow into memory using the workflow data stored in the instance persistence store.</span></span>
 
-<span data-ttu-id="d467f-109">**Persist**方法會執行下列步驟：</span><span class="sxs-lookup"><span data-stu-id="d467f-109">The **Persist** method performs the following steps:</span></span>
+<span data-ttu-id="84d40-109">**保存**方法會執行下列步驟：</span><span class="sxs-lookup"><span data-stu-id="84d40-109">The **Persist** method performs the following steps:</span></span>
 
-1. <span data-ttu-id="d467f-110">暫停工作流程排程器，直到工作流程進入閒置狀態為止。</span><span class="sxs-lookup"><span data-stu-id="d467f-110">Pauses the workflow scheduler and waits until the workflow enters the idle state.</span></span>
+1. <span data-ttu-id="84d40-110">暫停工作流程排程器，直到工作流程進入閒置狀態為止。</span><span class="sxs-lookup"><span data-stu-id="84d40-110">Pauses the workflow scheduler and waits until the workflow enters the idle state.</span></span>
 
-2. <span data-ttu-id="d467f-111">將工作流程保存或儲存在持續性存放區中。</span><span class="sxs-lookup"><span data-stu-id="d467f-111">Persists or saves the workflow into the persistence store.</span></span>
+2. <span data-ttu-id="84d40-111">將工作流程保存或儲存在持續性存放區中。</span><span class="sxs-lookup"><span data-stu-id="84d40-111">Persists or saves the workflow into the persistence store.</span></span>
 
-3. <span data-ttu-id="d467f-112">恢復工作流程排程器。</span><span class="sxs-lookup"><span data-stu-id="d467f-112">Resumes the workflow scheduler.</span></span>
+3. <span data-ttu-id="84d40-112">恢復工作流程排程器。</span><span class="sxs-lookup"><span data-stu-id="84d40-112">Resumes the workflow scheduler.</span></span>
 
- <span data-ttu-id="d467f-113">**卸載**方法會執行下列步驟：</span><span class="sxs-lookup"><span data-stu-id="d467f-113">The **Unload** method performs the following steps:</span></span>
+ <span data-ttu-id="84d40-113">**Unload**方法會執行下列步驟：</span><span class="sxs-lookup"><span data-stu-id="84d40-113">The **Unload** method performs the following steps:</span></span>
 
-1. <span data-ttu-id="d467f-114">暫停工作流程排程器，直到工作流程進入閒置狀態為止。</span><span class="sxs-lookup"><span data-stu-id="d467f-114">Pauses the workflow scheduler and waits until the workflow enters the idle state.</span></span>
+1. <span data-ttu-id="84d40-114">暫停工作流程排程器，直到工作流程進入閒置狀態為止。</span><span class="sxs-lookup"><span data-stu-id="84d40-114">Pauses the workflow scheduler and waits until the workflow enters the idle state.</span></span>
 
-2. <span data-ttu-id="d467f-115">將工作流程保存或儲存在持續性存放區中。</span><span class="sxs-lookup"><span data-stu-id="d467f-115">Persists or saves the workflow into the persistence store.</span></span>
+2. <span data-ttu-id="84d40-115">將工作流程保存或儲存在持續性存放區中。</span><span class="sxs-lookup"><span data-stu-id="84d40-115">Persists or saves the workflow into the persistence store.</span></span>
 
-3. <span data-ttu-id="d467f-116">處置記憶體中的工作流程執行個體。</span><span class="sxs-lookup"><span data-stu-id="d467f-116">Disposes the workflow instance in the memory.</span></span>
+3. <span data-ttu-id="84d40-116">處置記憶體中的工作流程執行個體。</span><span class="sxs-lookup"><span data-stu-id="84d40-116">Disposes the workflow instance in the memory.</span></span>
 
-<span data-ttu-id="d467f-117">這兩個**Persist**並**卸載**方法將會封鎖直到工作流程離開不保存區域工作流程是在非保存區域時。</span><span class="sxs-lookup"><span data-stu-id="d467f-117">Both the **Persist** and **Unload** methods will block while a workflow is in a no-persist zone until the workflow exits the no-persist zone.</span></span> <span data-ttu-id="d467f-118">不保存區完成後，此方法會繼續進行保存或卸載作業。</span><span class="sxs-lookup"><span data-stu-id="d467f-118">The method continues with the persist or unload operation after the no-persist zone completes.</span></span> <span data-ttu-id="d467f-119">如果不保存區未在逾時時間過去前完成，或者持續性處理序所花的時間過長，就會擲回 TimeoutException。</span><span class="sxs-lookup"><span data-stu-id="d467f-119">If the no-persist zone does not complete before the time-out elapses, or if the persistence process takes too long, a TimeoutException will be thrown.</span></span>
+<span data-ttu-id="84d40-117">當工作流程在不保存區域中時，**保存** **和卸載**方法都會遭到封鎖，直到工作流程離開不保存區域為止。</span><span class="sxs-lookup"><span data-stu-id="84d40-117">Both the **Persist** and **Unload** methods will block while a workflow is in a no-persist zone until the workflow exits the no-persist zone.</span></span> <span data-ttu-id="84d40-118">不保存區完成後，此方法會繼續進行保存或卸載作業。</span><span class="sxs-lookup"><span data-stu-id="84d40-118">The method continues with the persist or unload operation after the no-persist zone completes.</span></span> <span data-ttu-id="84d40-119">如果不保存區未在逾時時間過去前完成，或者持續性處理序所花的時間過長，就會擲回 TimeoutException。</span><span class="sxs-lookup"><span data-stu-id="84d40-119">If the no-persist zone does not complete before the time-out elapses, or if the persistence process takes too long, a TimeoutException will be thrown.</span></span>
 
-## <a name="enable-persistence-for-workflow-services-in-code"></a><span data-ttu-id="d467f-120">在程式碼中啟用工作流程服務的持續性</span><span class="sxs-lookup"><span data-stu-id="d467f-120">Enable Persistence for Workflow Services in Code</span></span>
+## <a name="enable-persistence-for-workflow-services-in-code"></a><span data-ttu-id="84d40-120">在程式碼中啟用工作流程服務的持續性</span><span class="sxs-lookup"><span data-stu-id="84d40-120">Enable Persistence for Workflow Services in Code</span></span>
 
-<span data-ttu-id="d467f-121">**DurableInstancingOptions**隸屬<xref:System.ServiceModel.WorkflowServiceHost>類別具有名為**InstanceStore**可用來建立與執行個體存放區的關聯**WorkflowServiceHost**.</span><span class="sxs-lookup"><span data-stu-id="d467f-121">The **DurableInstancingOptions** member of the <xref:System.ServiceModel.WorkflowServiceHost> class has a property named **InstanceStore** that you can use to associate an instance store with the **WorkflowServiceHost**.</span></span>
+<span data-ttu-id="84d40-121"><xref:System.ServiceModel.WorkflowServiceHost> 類別的**DurableInstancingOptions**成員具有名為**InstanceStore**的屬性，可讓您用來建立實例存放區與**WorkflowServiceHost**的關聯。</span><span class="sxs-lookup"><span data-stu-id="84d40-121">The **DurableInstancingOptions** member of the <xref:System.ServiceModel.WorkflowServiceHost> class has a property named **InstanceStore** that you can use to associate an instance store with the **WorkflowServiceHost**.</span></span>
 
 ```csharp
 // wsh is an instance of WorkflowServiceHost class
 wsh.DurableInstancingOptions.InstanceStore = new SqlWorkflowInstanceStore();
 ```
 
-<span data-ttu-id="d467f-122">當**WorkflowServiceHost**已開啟，持續性會自動啟用**DurableInstancingOptions.InstanceStore**不是 null。</span><span class="sxs-lookup"><span data-stu-id="d467f-122">When the **WorkflowServiceHost** is opened, persistence is automatically enabled if the **DurableInstancingOptions.InstanceStore** is not null.</span></span>
+<span data-ttu-id="84d40-122">當**WorkflowServiceHost**開啟時，如果**DurableInstancingOptions**不是 null，就會自動啟用持續性。</span><span class="sxs-lookup"><span data-stu-id="84d40-122">When the **WorkflowServiceHost** is opened, persistence is automatically enabled if the **DurableInstancingOptions.InstanceStore** is not null.</span></span>
 
-<span data-ttu-id="d467f-123">一般而言，服務行為會提供搭配使用工作流程服務主機的實體執行個體存放區**InstanceStore**屬性。</span><span class="sxs-lookup"><span data-stu-id="d467f-123">Typically, a service behavior provides the concrete instance store to be used with a workflow service host by using the **InstanceStore** property.</span></span> <span data-ttu-id="d467f-124">例如，SqlWorkflowInstanceStoreBehavior 會建立的執行個體**SqlWorkflowInstanceStore**、 加以設定，然後將其指派給**DurableInstancingOptions.InstanceStore**。</span><span class="sxs-lookup"><span data-stu-id="d467f-124">For example, the SqlWorkflowInstanceStoreBehavior creates an instance of the **SqlWorkflowInstanceStore**, configures it, and assigns it to the **DurableInstancingOptions.InstanceStore**.</span></span>
+<span data-ttu-id="84d40-123">一般而言，服務行為會提供具象實例存放區，以搭配使用**InstanceStore**屬性與工作流程服務主機。</span><span class="sxs-lookup"><span data-stu-id="84d40-123">Typically, a service behavior provides the concrete instance store to be used with a workflow service host by using the **InstanceStore** property.</span></span> <span data-ttu-id="84d40-124">例如，SqlWorkflowInstanceStoreBehavior 會建立**SqlWorkflowInstanceStore**的實例、設定它，並將它指派給**DurableInstancingOptions**。</span><span class="sxs-lookup"><span data-stu-id="84d40-124">For example, the SqlWorkflowInstanceStoreBehavior creates an instance of the **SqlWorkflowInstanceStore**, configures it, and assigns it to the **DurableInstancingOptions.InstanceStore**.</span></span>
 
-## <a name="enable-persistence-for-workflow-services-using-an-application-configuration-file"></a><span data-ttu-id="d467f-125">使用應用程式組態檔啟用工作流程服務的持續性</span><span class="sxs-lookup"><span data-stu-id="d467f-125">Enable Persistence for Workflow Services Using an Application Configuration File</span></span>
+## <a name="enable-persistence-for-workflow-services-using-an-application-configuration-file"></a><span data-ttu-id="84d40-125">使用應用程式組態檔啟用工作流程服務的持續性</span><span class="sxs-lookup"><span data-stu-id="84d40-125">Enable Persistence for Workflow Services Using an Application Configuration File</span></span>
 
-<span data-ttu-id="d467f-126">在 app.config 或 web.config 檔案中加入下列程式碼，即可使用應用程式組態檔啟用持續性：</span><span class="sxs-lookup"><span data-stu-id="d467f-126">Persistence can be enabled using an application configuration file by adding the following code to your app.config or web.config file:</span></span>
+<span data-ttu-id="84d40-126">在 app.config 或 web.config 檔案中加入下列程式碼，即可使用應用程式組態檔啟用持續性：</span><span class="sxs-lookup"><span data-stu-id="84d40-126">Persistence can be enabled using an application configuration file by adding the following code to your app.config or web.config file:</span></span>
 
 ```xml
 <configuration>
@@ -58,10 +58,10 @@ wsh.DurableInstancingOptions.InstanceStore = new SqlWorkflowInstanceStore();
     <behaviors>
       <serviceBehaviors>
         <behavior name="myBehavior">
-          <SqlWorkflowInstanceStore connectionString="Data Source=myDatabaseServer;Initial Catalog=myPersistenceDatabase">
+          <sqlWorkflowInstanceStore connectionString="Data Source=myDatabaseServer;Initial Catalog=myPersistenceDatabase" />
         </behavior>
       </serviceBehaviors>
-    <behaviors>
+    </behaviors>
   </system.serviceModel>
 </configuration>
 ```

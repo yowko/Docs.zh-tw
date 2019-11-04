@@ -11,83 +11,83 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5d3aa715590a10391bafa08a85265842ee8cedfb
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 9ee9df41e6f0a4e37164760a2e40740e31530121
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197112"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459069"
 ---
-# <a name="troubleshoot-control-and-component-authoring"></a><span data-ttu-id="a1537-102">針對控制項和元件撰寫進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="a1537-102">Troubleshoot Control and Component Authoring</span></span>
+# <a name="troubleshoot-control-and-component-authoring"></a><span data-ttu-id="73e55-102">針對控制項和元件撰寫進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="73e55-102">Troubleshoot Control and Component Authoring</span></span>
 
-<span data-ttu-id="a1537-103">本主題列出開發元件和控制項時所發生的下列常見問題：</span><span class="sxs-lookup"><span data-stu-id="a1537-103">This topic lists the following common problems that arise when developing components and controls:</span></span>
+<span data-ttu-id="73e55-103">本主題列出開發元件和控制項時所發生的下列常見問題：</span><span class="sxs-lookup"><span data-stu-id="73e55-103">This topic lists the following common problems that arise when developing components and controls:</span></span>
 
-- <span data-ttu-id="a1537-104">無法將控制項新增至工具箱</span><span class="sxs-lookup"><span data-stu-id="a1537-104">Cannot Add Control to Toolbox</span></span>
+- <span data-ttu-id="73e55-104">無法將控制項新增至工具箱</span><span class="sxs-lookup"><span data-stu-id="73e55-104">Cannot Add Control to Toolbox</span></span>
 
-- <span data-ttu-id="a1537-105">無法針對 Windows Forms 使用者控制項或元件進行偵錯</span><span class="sxs-lookup"><span data-stu-id="a1537-105">Cannot Debug the Windows Forms User Control or Component</span></span>
+- <span data-ttu-id="73e55-105">無法針對 Windows Forms 使用者控制項或元件進行偵錯</span><span class="sxs-lookup"><span data-stu-id="73e55-105">Cannot Debug the Windows Forms User Control or Component</span></span>
 
-- <span data-ttu-id="a1537-106">事件在繼承的控制項或元件中引發兩次</span><span class="sxs-lookup"><span data-stu-id="a1537-106">Event Is Raised Twice in Inherited Control or Component</span></span>
+- <span data-ttu-id="73e55-106">事件在繼承的控制項或元件中引發兩次</span><span class="sxs-lookup"><span data-stu-id="73e55-106">Event Is Raised Twice in Inherited Control or Component</span></span>
 
-- <span data-ttu-id="a1537-107">設計階段錯誤：「無法建立元件 '元件名稱'」</span><span class="sxs-lookup"><span data-stu-id="a1537-107">Design-Time Error: "Failed to Create Component '*Component Name*'"</span></span>
+- <span data-ttu-id="73e55-107">設計階段錯誤：「無法建立元件 '元件名稱'」</span><span class="sxs-lookup"><span data-stu-id="73e55-107">Design-Time Error: "Failed to Create Component '*Component Name*'"</span></span>
 
-- <span data-ttu-id="a1537-108">STAThreadAttribute</span><span class="sxs-lookup"><span data-stu-id="a1537-108">STAThreadAttribute</span></span>
+- <span data-ttu-id="73e55-108">STAThreadAttribute</span><span class="sxs-lookup"><span data-stu-id="73e55-108">STAThreadAttribute</span></span>
 
-- <span data-ttu-id="a1537-109">元件圖示不會出現在工具箱中</span><span class="sxs-lookup"><span data-stu-id="a1537-109">Component Icon Does Not Appear in Toolbox</span></span>
+- <span data-ttu-id="73e55-109">元件圖示不會出現在工具箱中</span><span class="sxs-lookup"><span data-stu-id="73e55-109">Component Icon Does Not Appear in Toolbox</span></span>
 
-## <a name="cannot-add-control-to-toolbox"></a><span data-ttu-id="a1537-110">無法將控制項新增至工具箱</span><span class="sxs-lookup"><span data-stu-id="a1537-110">Cannot Add Control to Toolbox</span></span>
+## <a name="cannot-add-control-to-toolbox"></a><span data-ttu-id="73e55-110">無法將控制項新增至工具箱</span><span class="sxs-lookup"><span data-stu-id="73e55-110">Cannot Add Control to Toolbox</span></span>
 
-<span data-ttu-id="a1537-111">如果您想要將您在另一個專案中建立的自訂控制項或協力廠商控制項新增至 [工具箱]，您必須手動進行。</span><span class="sxs-lookup"><span data-stu-id="a1537-111">If you want to add a custom control that you created in another project or a third-party control to the **Toolbox**, you must do so manually.</span></span> <span data-ttu-id="a1537-112">如果目前專案包含您的控制項或元件，它應該會自動出現在 [工具箱]。</span><span class="sxs-lookup"><span data-stu-id="a1537-112">If the current project contains your control or component, it should appear in the **Toolbox** automatically.</span></span> <span data-ttu-id="a1537-113">如需詳細資訊，請參閱[逐步解說：自動將自訂元件填入工具箱](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。</span><span class="sxs-lookup"><span data-stu-id="a1537-113">For more information, see [Walkthrough: Automatically Populating the Toolbox with Custom Components](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).</span></span>
+<span data-ttu-id="73e55-111">如果您想要將您在另一個專案中建立的自訂控制項或協力廠商控制項新增至 [工具箱]，您必須手動進行。</span><span class="sxs-lookup"><span data-stu-id="73e55-111">If you want to add a custom control that you created in another project or a third-party control to the **Toolbox**, you must do so manually.</span></span> <span data-ttu-id="73e55-112">如果目前專案包含您的控制項或元件，它應該會自動出現在 [工具箱]。</span><span class="sxs-lookup"><span data-stu-id="73e55-112">If the current project contains your control or component, it should appear in the **Toolbox** automatically.</span></span> <span data-ttu-id="73e55-113">如需詳細資訊，請參閱[逐步解說：自動將自訂元件填入工具箱](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。</span><span class="sxs-lookup"><span data-stu-id="73e55-113">For more information, see [Walkthrough: Automatically Populating the Toolbox with Custom Components](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).</span></span>
 
-### <a name="to-add-a-control-to-the-toolbox"></a><span data-ttu-id="a1537-114">將控制項新增至工具箱</span><span class="sxs-lookup"><span data-stu-id="a1537-114">To add a control to the Toolbox</span></span>
+### <a name="to-add-a-control-to-the-toolbox"></a><span data-ttu-id="73e55-114">將控制項新增至工具箱</span><span class="sxs-lookup"><span data-stu-id="73e55-114">To add a control to the Toolbox</span></span>
 
-1. <span data-ttu-id="a1537-115">以滑鼠右鍵按一下 [工具箱]，然後從捷徑功能表選取 [選擇項目]。</span><span class="sxs-lookup"><span data-stu-id="a1537-115">Right-click the **Toolbox** and from the shortcut menu, select **Choose Items**.</span></span>
+1. <span data-ttu-id="73e55-115">以滑鼠右鍵按一下 [工具箱]，然後從捷徑功能表選取 [選擇項目]。</span><span class="sxs-lookup"><span data-stu-id="73e55-115">Right-click the **Toolbox** and from the shortcut menu, select **Choose Items**.</span></span>
 
-2. <span data-ttu-id="a1537-116">在 [選擇工具箱項目] 對話方塊中，新增元件：</span><span class="sxs-lookup"><span data-stu-id="a1537-116">In the **Choose Toolbox Items** dialog box, add the component:</span></span>
+2. <span data-ttu-id="73e55-116">在 [選擇工具箱項目] 對話方塊中，新增元件：</span><span class="sxs-lookup"><span data-stu-id="73e55-116">In the **Choose Toolbox Items** dialog box, add the component:</span></span>
 
-    - <span data-ttu-id="a1537-117">如果您想要新增 .NET Framework 元件或控制項，請按一下 [.NET Framework 元件] 索引標籤。</span><span class="sxs-lookup"><span data-stu-id="a1537-117">If you want to add a .NET Framework component or control, click the **.NET Framework Components** tab.</span></span>
+    - <span data-ttu-id="73e55-117">如果您想要新增 .NET Framework 元件或控制項，請按一下 [.NET Framework 元件] 索引標籤。</span><span class="sxs-lookup"><span data-stu-id="73e55-117">If you want to add a .NET Framework component or control, click the **.NET Framework Components** tab.</span></span>
 
-         <span data-ttu-id="a1537-118">-或-</span><span class="sxs-lookup"><span data-stu-id="a1537-118">– or –</span></span>
+         <span data-ttu-id="73e55-118">-或-</span><span class="sxs-lookup"><span data-stu-id="73e55-118">– or –</span></span>
 
-    - <span data-ttu-id="a1537-119">如果您想要新增 COM 元件或 ActiveX 控制項，請按一下 [COM 元件] 索引標籤。</span><span class="sxs-lookup"><span data-stu-id="a1537-119">If you want to add a COM component or ActiveX control, click the **COM Components** tab.</span></span>
+    - <span data-ttu-id="73e55-119">如果您想要新增 COM 元件或 ActiveX 控制項，請按一下 [COM 元件] 索引標籤。</span><span class="sxs-lookup"><span data-stu-id="73e55-119">If you want to add a COM component or ActiveX control, click the **COM Components** tab.</span></span>
 
-3. <span data-ttu-id="a1537-120">如果您的控制項列在對話方塊中，確認它已選取，然後按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="a1537-120">If your control is listed in the dialog box, confirm it is selected, and then click **OK**.</span></span>
+3. <span data-ttu-id="73e55-120">如果您的控制項列在對話方塊中，確認它已選取，然後按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="73e55-120">If your control is listed in the dialog box, confirm it is selected, and then click **OK**.</span></span>
 
-     <span data-ttu-id="a1537-121">控制項隨即新增至 [工具箱]。</span><span class="sxs-lookup"><span data-stu-id="a1537-121">The control is added to the **Toolbox**.</span></span>
+     <span data-ttu-id="73e55-121">控制項隨即新增至 [工具箱]。</span><span class="sxs-lookup"><span data-stu-id="73e55-121">The control is added to the **Toolbox**.</span></span>
 
-4. <span data-ttu-id="a1537-122">如果您的控制項未列在對話方塊中，請執行下列作業︰</span><span class="sxs-lookup"><span data-stu-id="a1537-122">If your control is not listed in the dialog box, do the following:</span></span>
+4. <span data-ttu-id="73e55-122">如果您的控制項未列在對話方塊中，請執行下列作業︰</span><span class="sxs-lookup"><span data-stu-id="73e55-122">If your control is not listed in the dialog box, do the following:</span></span>
 
-    1. <span data-ttu-id="a1537-123">按一下 [瀏覽] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="a1537-123">Click the **Browse** button.</span></span>
+    1. <span data-ttu-id="73e55-123">按一下 [瀏覽] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="73e55-123">Click the **Browse** button.</span></span>
 
-    2. <span data-ttu-id="a1537-124">瀏覽至包含 .dll 檔案 (包含您的控制項) 的資料夾。</span><span class="sxs-lookup"><span data-stu-id="a1537-124">Browse to the folder that contains the .dll file that contains your control.</span></span>
+    2. <span data-ttu-id="73e55-124">瀏覽至包含 .dll 檔案 (包含您的控制項) 的資料夾。</span><span class="sxs-lookup"><span data-stu-id="73e55-124">Browse to the folder that contains the .dll file that contains your control.</span></span>
 
-    3. <span data-ttu-id="a1537-125">選取 .dll 檔案，然後按一下 [開啟]。</span><span class="sxs-lookup"><span data-stu-id="a1537-125">Select the .dll file and click **Open**.</span></span>
+    3. <span data-ttu-id="73e55-125">選取 .dll 檔案，然後按一下 [開啟]。</span><span class="sxs-lookup"><span data-stu-id="73e55-125">Select the .dll file and click **Open**.</span></span>
 
-         <span data-ttu-id="a1537-126">您的控制項會出現在對話方塊中。</span><span class="sxs-lookup"><span data-stu-id="a1537-126">Your control appears in the dialog box.</span></span>
+         <span data-ttu-id="73e55-126">您的控制項會出現在對話方塊中。</span><span class="sxs-lookup"><span data-stu-id="73e55-126">Your control appears in the dialog box.</span></span>
 
-    4. <span data-ttu-id="a1537-127">確認已選取您的控制項，然後按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="a1537-127">Confirm that your control is selected, and then click **OK**.</span></span>
+    4. <span data-ttu-id="73e55-127">確認已選取您的控制項，然後按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="73e55-127">Confirm that your control is selected, and then click **OK**.</span></span>
 
-         <span data-ttu-id="a1537-128">您的控制項隨即新增至 [工具箱]。</span><span class="sxs-lookup"><span data-stu-id="a1537-128">Your control is added to the **Toolbox**.</span></span>
+         <span data-ttu-id="73e55-128">您的控制項隨即新增至 [工具箱]。</span><span class="sxs-lookup"><span data-stu-id="73e55-128">Your control is added to the **Toolbox**.</span></span>
 
-## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a><span data-ttu-id="a1537-129">無法針對 Windows Forms 使用者控制項或元件進行偵錯</span><span class="sxs-lookup"><span data-stu-id="a1537-129">Cannot Debug the Windows Forms User Control or Component</span></span>
+## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a><span data-ttu-id="73e55-129">無法針對 Windows Forms 使用者控制項或元件進行偵錯</span><span class="sxs-lookup"><span data-stu-id="73e55-129">Cannot Debug the Windows Forms User Control or Component</span></span>
 
-<span data-ttu-id="a1537-130">如果您的控制項衍生自 <xref:System.Windows.Forms.UserControl> 類別，您可以使用測試容器來對其執行時間行為進行偵錯工具。</span><span class="sxs-lookup"><span data-stu-id="a1537-130">If your control derives from the <xref:System.Windows.Forms.UserControl> class, you can debug its run-time behavior with the test container.</span></span> <span data-ttu-id="a1537-131">如需詳細資訊，請參閱[如何：測試 UserControl 的執行階段行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)。</span><span class="sxs-lookup"><span data-stu-id="a1537-131">For more information, see [How to: Test the Run-Time Behavior of a UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>
+<span data-ttu-id="73e55-130">如果您的控制項衍生自 <xref:System.Windows.Forms.UserControl> 類別，您可以使用測試容器來對其執行時間行為進行偵錯工具。</span><span class="sxs-lookup"><span data-stu-id="73e55-130">If your control derives from the <xref:System.Windows.Forms.UserControl> class, you can debug its run-time behavior with the test container.</span></span> <span data-ttu-id="73e55-131">如需詳細資訊，請參閱[如何：測試 UserControl 的執行階段行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)。</span><span class="sxs-lookup"><span data-stu-id="73e55-131">For more information, see [How to: Test the Run-Time Behavior of a UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>
 
-<span data-ttu-id="a1537-132">其他自訂控制項和元件不是獨立的專案。</span><span class="sxs-lookup"><span data-stu-id="a1537-132">Other custom controls and components are not stand-alone projects.</span></span> <span data-ttu-id="a1537-133">它們必須由 Windows Forms 專案之類的應用程式裝載。</span><span class="sxs-lookup"><span data-stu-id="a1537-133">They must be hosted by an application such as a Windows Forms project.</span></span> <span data-ttu-id="a1537-134">若要針對控制項或元件進行偵錯，您必須將它新增至 Windows Forms 專案。</span><span class="sxs-lookup"><span data-stu-id="a1537-134">To debug a control or component, you must add it to a Windows Forms project.</span></span>
+<span data-ttu-id="73e55-132">其他自訂控制項和元件不是獨立的專案。</span><span class="sxs-lookup"><span data-stu-id="73e55-132">Other custom controls and components are not stand-alone projects.</span></span> <span data-ttu-id="73e55-133">它們必須由 Windows Forms 專案之類的應用程式裝載。</span><span class="sxs-lookup"><span data-stu-id="73e55-133">They must be hosted by an application such as a Windows Forms project.</span></span> <span data-ttu-id="73e55-134">若要針對控制項或元件進行偵錯，您必須將它新增至 Windows Forms 專案。</span><span class="sxs-lookup"><span data-stu-id="73e55-134">To debug a control or component, you must add it to a Windows Forms project.</span></span>
 
-### <a name="to-debug-a-control-or-component"></a><span data-ttu-id="a1537-135">針對控制項或元件進行偵錯</span><span class="sxs-lookup"><span data-stu-id="a1537-135">To debug a control or component</span></span>
+### <a name="to-debug-a-control-or-component"></a><span data-ttu-id="73e55-135">針對控制項或元件進行偵錯</span><span class="sxs-lookup"><span data-stu-id="73e55-135">To debug a control or component</span></span>
 
-1. <span data-ttu-id="a1537-136">按一下 [建置] 功能表上的 [建置方案] 以建置解決方案。</span><span class="sxs-lookup"><span data-stu-id="a1537-136">From the **Build** menu, click **Build Solution** to build your solution.</span></span>
+1. <span data-ttu-id="73e55-136">按一下 [建置] 功能表上的 [建置方案] 以建置解決方案。</span><span class="sxs-lookup"><span data-stu-id="73e55-136">From the **Build** menu, click **Build Solution** to build your solution.</span></span>
 
-2. <span data-ttu-id="a1537-137">從 [檔案]功能表，選擇 [新增]，然後選擇 [新增專案]，以將測試專案新增至您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="a1537-137">From the **File** menu, choose **Add**, and then **New Project** to add a test project to your application.</span></span>
+2. <span data-ttu-id="73e55-137">從 [檔案]功能表，選擇 [新增]，然後選擇 [新增專案]，以將測試專案新增至您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="73e55-137">From the **File** menu, choose **Add**, and then **New Project** to add a test project to your application.</span></span>
 
-3. <span data-ttu-id="a1537-138">在 [加入新的專案] 對話方塊中，針對專案型別選擇 [Windows 應用程式]。</span><span class="sxs-lookup"><span data-stu-id="a1537-138">In the **Add New Project** dialog box choose **Windows Application** for the type of project.</span></span>
+3. <span data-ttu-id="73e55-138">在 [加入新的專案] 對話方塊中，針對專案型別選擇 [Windows 應用程式]。</span><span class="sxs-lookup"><span data-stu-id="73e55-138">In the **Add New Project** dialog box choose **Windows Application** for the type of project.</span></span>
 
-4. <span data-ttu-id="a1537-139">在 [方案總管] 中，以滑鼠右鍵按一下新專案的 [參考] 節點。</span><span class="sxs-lookup"><span data-stu-id="a1537-139">In **Solution Explorer**, right-click the **References** node for the new project.</span></span> <span data-ttu-id="a1537-140">在捷徑功能表上，按一下 [加入參考] 以將參考新增至包含控制項或元件的專案。</span><span class="sxs-lookup"><span data-stu-id="a1537-140">On the shortcut menu, click **Add Reference** to add a reference to the project containing the control or component.</span></span>
+4. <span data-ttu-id="73e55-139">在 [方案總管] 中，以滑鼠右鍵按一下新專案的 [參考] 節點。</span><span class="sxs-lookup"><span data-stu-id="73e55-139">In **Solution Explorer**, right-click the **References** node for the new project.</span></span> <span data-ttu-id="73e55-140">在捷徑功能表上，按一下 [加入參考] 以將參考新增至包含控制項或元件的專案。</span><span class="sxs-lookup"><span data-stu-id="73e55-140">On the shortcut menu, click **Add Reference** to add a reference to the project containing the control or component.</span></span>
 
-5. <span data-ttu-id="a1537-141">在測試專案中建立您的控制項或元件的執行個體。</span><span class="sxs-lookup"><span data-stu-id="a1537-141">Create an instance of your control or component in the test project.</span></span> <span data-ttu-id="a1537-142">如果您的元件位於 [工具箱]，您可以將它拖曳至設計工具介面，或者您可以程式設計方式建立執行個體，如下列程式碼範例所示。</span><span class="sxs-lookup"><span data-stu-id="a1537-142">If your component is in the **Toolbox**, you can drag it to your designer surface, or you can create the instance programmatically, as shown in the following code example.</span></span>
+5. <span data-ttu-id="73e55-141">在測試專案中建立您的控制項或元件的執行個體。</span><span class="sxs-lookup"><span data-stu-id="73e55-141">Create an instance of your control or component in the test project.</span></span> <span data-ttu-id="73e55-142">如果您的元件位於 [工具箱]，您可以將它拖曳至設計工具介面，或者您可以程式設計方式建立執行個體，如下列程式碼範例所示。</span><span class="sxs-lookup"><span data-stu-id="73e55-142">If your component is in the **Toolbox**, you can drag it to your designer surface, or you can create the instance programmatically, as shown in the following code example.</span></span>
 
     ```vb
     Dim Component1 As New MyNeatComponent()
@@ -97,29 +97,29 @@ ms.locfileid: "73197112"
     MyNeatComponent Component1 = new MyNeatComponent();
     ```
 
-   <span data-ttu-id="a1537-143">您現在可以如同往常一般針對您的控制項或元件進行偵錯。</span><span class="sxs-lookup"><span data-stu-id="a1537-143">You can now debug your control or component as usual.</span></span>
+   <span data-ttu-id="73e55-143">您現在可以如同往常一般針對您的控制項或元件進行偵錯。</span><span class="sxs-lookup"><span data-stu-id="73e55-143">You can now debug your control or component as usual.</span></span>
 
-<span data-ttu-id="a1537-144">如需偵錯的詳細資訊，請參閱[在 Visual Studio 中偵錯](/visualstudio/debugger/debugger-feature-tour)和[逐步解說︰在設計階段針對自訂 Windows Forms 控制項進行偵錯](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)。</span><span class="sxs-lookup"><span data-stu-id="a1537-144">For more information about debugging, see [Debugging in Visual Studio](/visualstudio/debugger/debugger-feature-tour) and [Walkthrough: Debugging Custom Windows Forms Controls at Design Time](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).</span></span>
+<span data-ttu-id="73e55-144">如需偵錯的詳細資訊，請參閱[在 Visual Studio 中偵錯](/visualstudio/debugger/debugger-feature-tour)和[逐步解說︰在設計階段針對自訂 Windows Forms 控制項進行偵錯](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)。</span><span class="sxs-lookup"><span data-stu-id="73e55-144">For more information about debugging, see [Debugging in Visual Studio](/visualstudio/debugger/debugger-feature-tour) and [Walkthrough: Debugging Custom Windows Forms Controls at Design Time](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).</span></span>
 
-## <a name="event-is-raised-twice-in-inherited-control-or-component"></a><span data-ttu-id="a1537-145">事件在繼承的控制項或元件中引發兩次</span><span class="sxs-lookup"><span data-stu-id="a1537-145">Event Is Raised Twice in Inherited Control or Component</span></span>
+## <a name="event-is-raised-twice-in-inherited-control-or-component"></a><span data-ttu-id="73e55-145">事件在繼承的控制項或元件中引發兩次</span><span class="sxs-lookup"><span data-stu-id="73e55-145">Event Is Raised Twice in Inherited Control or Component</span></span>
 
-<span data-ttu-id="a1537-146">這可能是因為重複的 `Handles` 子句。</span><span class="sxs-lookup"><span data-stu-id="a1537-146">This is likely due to a duplicated `Handles` clause.</span></span> <span data-ttu-id="a1537-147">如需詳細資訊，請參閱 [Visual Basic 中的繼承事件處理常式疑難排解](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)。</span><span class="sxs-lookup"><span data-stu-id="a1537-147">For more information, see [Troubleshooting Inherited Event Handlers in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).</span></span>
+<span data-ttu-id="73e55-146">這可能是因為重複的 `Handles` 子句。</span><span class="sxs-lookup"><span data-stu-id="73e55-146">This is likely due to a duplicated `Handles` clause.</span></span> <span data-ttu-id="73e55-147">如需詳細資訊，請參閱 [Visual Basic 中的繼承事件處理常式疑難排解](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)。</span><span class="sxs-lookup"><span data-stu-id="73e55-147">For more information, see [Troubleshooting Inherited Event Handlers in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).</span></span>
 
-## <a name="design-time-error-failed-to-create-component-component-name"></a><span data-ttu-id="a1537-148">設計階段錯誤：「無法建立元件 '元件名稱'」</span><span class="sxs-lookup"><span data-stu-id="a1537-148">Design-Time Error: "Failed to Create Component 'Component Name'"</span></span>
+## <a name="design-time-error-failed-to-create-component-component-name"></a><span data-ttu-id="73e55-148">設計階段錯誤：「無法建立元件 '元件名稱'」</span><span class="sxs-lookup"><span data-stu-id="73e55-148">Design-Time Error: "Failed to Create Component 'Component Name'"</span></span>
 
-<span data-ttu-id="a1537-149">您的元件或控制項必須提供沒有參數的無參數的處理常式。</span><span class="sxs-lookup"><span data-stu-id="a1537-149">Your component or control must provide a parameterless constructor with no parameters.</span></span> <span data-ttu-id="a1537-150">當設計環境建立元件或控制項的執行個體時，它不會嘗試提供任何參數給採用參數的建構函式多載。</span><span class="sxs-lookup"><span data-stu-id="a1537-150">When the design environment creates an instance of your component or control, it does not attempt to provide any parameters to constructor overloads that take parameters.</span></span>
+<span data-ttu-id="73e55-149">您的元件或控制項必須提供沒有參數的無參數的處理常式。</span><span class="sxs-lookup"><span data-stu-id="73e55-149">Your component or control must provide a parameterless constructor with no parameters.</span></span> <span data-ttu-id="73e55-150">當設計環境建立元件或控制項的執行個體時，它不會嘗試提供任何參數給採用參數的建構函式多載。</span><span class="sxs-lookup"><span data-stu-id="73e55-150">When the design environment creates an instance of your component or control, it does not attempt to provide any parameters to constructor overloads that take parameters.</span></span>
 
-## <a name="stathreadattribute"></a><span data-ttu-id="a1537-151">STAThreadAttribute</span><span class="sxs-lookup"><span data-stu-id="a1537-151">STAThreadAttribute</span></span>
+## <a name="stathreadattribute"></a><span data-ttu-id="73e55-151">STAThreadAttribute</span><span class="sxs-lookup"><span data-stu-id="73e55-151">STAThreadAttribute</span></span>
 
-<span data-ttu-id="a1537-152"><xref:System.STAThreadAttribute> 會通知 common language runtime （CLR），Windows Forms 使用單一執行緒的單元模型。</span><span class="sxs-lookup"><span data-stu-id="a1537-152">The <xref:System.STAThreadAttribute> informs the common language runtime (CLR) that Windows Forms uses the single-threaded apartment model.</span></span> <span data-ttu-id="a1537-153">如果您未將此屬性套用至 Windows Forms 應用程式的 `Main` 方法，您可能會發現非預期的行為。</span><span class="sxs-lookup"><span data-stu-id="a1537-153">You may notice unintended behavior if you do not apply this attribute to your Windows Forms application's `Main` method.</span></span> <span data-ttu-id="a1537-154">例如，<xref:System.Windows.Forms.ListView>之類的控制項可能不會出現背景影像。</span><span class="sxs-lookup"><span data-stu-id="a1537-154">For example, background images may not appear for controls like <xref:System.Windows.Forms.ListView>.</span></span> <span data-ttu-id="a1537-155">某些控制項可能也需要此屬性，才能有正確的 AutoComplete 和拖放行為。</span><span class="sxs-lookup"><span data-stu-id="a1537-155">Some controls may also require this attribute for correct AutoComplete and drag-and-drop behavior.</span></span>
+<span data-ttu-id="73e55-152"><xref:System.STAThreadAttribute> 會通知 common language runtime （CLR），Windows Forms 使用單一執行緒的單元模型。</span><span class="sxs-lookup"><span data-stu-id="73e55-152">The <xref:System.STAThreadAttribute> informs the common language runtime (CLR) that Windows Forms uses the single-threaded apartment model.</span></span> <span data-ttu-id="73e55-153">如果您未將此屬性套用至 Windows Forms 應用程式的 `Main` 方法，您可能會發現非預期的行為。</span><span class="sxs-lookup"><span data-stu-id="73e55-153">You may notice unintended behavior if you do not apply this attribute to your Windows Forms application's `Main` method.</span></span> <span data-ttu-id="73e55-154">例如，<xref:System.Windows.Forms.ListView>之類的控制項可能不會出現背景影像。</span><span class="sxs-lookup"><span data-stu-id="73e55-154">For example, background images may not appear for controls like <xref:System.Windows.Forms.ListView>.</span></span> <span data-ttu-id="73e55-155">某些控制項可能也需要此屬性，才能有正確的 AutoComplete 和拖放行為。</span><span class="sxs-lookup"><span data-stu-id="73e55-155">Some controls may also require this attribute for correct AutoComplete and drag-and-drop behavior.</span></span>
 
-## <a name="component-icon-does-not-appear-in-toolbox"></a><span data-ttu-id="a1537-156">元件圖示不會出現在工具箱中</span><span class="sxs-lookup"><span data-stu-id="a1537-156">Component Icon Does Not Appear in Toolbox</span></span>
+## <a name="component-icon-does-not-appear-in-toolbox"></a><span data-ttu-id="73e55-156">元件圖示不會出現在工具箱中</span><span class="sxs-lookup"><span data-stu-id="73e55-156">Component Icon Does Not Appear in Toolbox</span></span>
 
-<span data-ttu-id="a1537-157">當您使用 <xref:System.Drawing.ToolboxBitmapAttribute> 將圖示與您的自訂群組件產生關聯時，該點陣圖不會出現在自動產生之元件的 [工具箱] 中。</span><span class="sxs-lookup"><span data-stu-id="a1537-157">When you use <xref:System.Drawing.ToolboxBitmapAttribute> to associate an icon with your custom component, the bitmap does not appear in the Toolbox for autogenerated components.</span></span> <span data-ttu-id="a1537-158">若要查看點陣圖，請使用 [選擇工具箱項目] 對話方塊，重新載入控制項。</span><span class="sxs-lookup"><span data-stu-id="a1537-158">To see the bitmap, reload the control by using the **Choose Toolbox Items** dialog box.</span></span> <span data-ttu-id="a1537-159">如需詳細資訊，請參閱[如何：為控制項提供工具箱點陣圖](how-to-provide-a-toolbox-bitmap-for-a-control.md)。</span><span class="sxs-lookup"><span data-stu-id="a1537-159">For more information, see [How to: Provide a Toolbox Bitmap for a Control](how-to-provide-a-toolbox-bitmap-for-a-control.md).</span></span>
+<span data-ttu-id="73e55-157">當您使用 <xref:System.Drawing.ToolboxBitmapAttribute> 將圖示與您的自訂群組件產生關聯時，該點陣圖不會出現在自動產生之元件的 [工具箱] 中。</span><span class="sxs-lookup"><span data-stu-id="73e55-157">When you use <xref:System.Drawing.ToolboxBitmapAttribute> to associate an icon with your custom component, the bitmap does not appear in the Toolbox for autogenerated components.</span></span> <span data-ttu-id="73e55-158">若要查看點陣圖，請使用 [選擇工具箱項目] 對話方塊，重新載入控制項。</span><span class="sxs-lookup"><span data-stu-id="73e55-158">To see the bitmap, reload the control by using the **Choose Toolbox Items** dialog box.</span></span> <span data-ttu-id="73e55-159">如需詳細資訊，請參閱[如何：為控制項提供工具箱點陣圖](how-to-provide-a-toolbox-bitmap-for-a-control.md)。</span><span class="sxs-lookup"><span data-stu-id="73e55-159">For more information, see [How to: Provide a Toolbox Bitmap for a Control](how-to-provide-a-toolbox-bitmap-for-a-control.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a1537-160">請參閱</span><span class="sxs-lookup"><span data-stu-id="a1537-160">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="73e55-160">請參閱</span><span class="sxs-lookup"><span data-stu-id="73e55-160">See also</span></span>
 
-- [<span data-ttu-id="a1537-161">在設計階段開發 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="a1537-161">Developing Windows Forms Controls at Design Time</span></span>](developing-windows-forms-controls-at-design-time.md)
-- [<span data-ttu-id="a1537-162">逐步解說：自動將自訂元件填入工具箱</span><span class="sxs-lookup"><span data-stu-id="a1537-162">Walkthrough: Automatically Populating the Toolbox with Custom Components</span></span>](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [<span data-ttu-id="a1537-163">操作說明：測試 UserControl 的執行階段行為</span><span class="sxs-lookup"><span data-stu-id="a1537-163">How to: Test the Run-Time Behavior of a UserControl</span></span>](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [<span data-ttu-id="a1537-164">逐步解說：在設計階段偵錯自訂的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="a1537-164">Walkthrough: Debugging Custom Windows Forms Controls at Design Time</span></span>](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
+- [<span data-ttu-id="73e55-161">在設計階段開發 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="73e55-161">Developing Windows Forms Controls at Design Time</span></span>](developing-windows-forms-controls-at-design-time.md)
+- [<span data-ttu-id="73e55-162">逐步解說：自動將自訂元件填入工具箱</span><span class="sxs-lookup"><span data-stu-id="73e55-162">Walkthrough: Automatically Populating the Toolbox with Custom Components</span></span>](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [<span data-ttu-id="73e55-163">操作說明：測試 UserControl 的執行階段行為</span><span class="sxs-lookup"><span data-stu-id="73e55-163">How to: Test the Run-Time Behavior of a UserControl</span></span>](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [<span data-ttu-id="73e55-164">逐步解說：在設計階段偵錯自訂的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="73e55-164">Walkthrough: Debugging Custom Windows Forms Controls at Design Time</span></span>](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
