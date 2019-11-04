@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 2db08bd89b5e0fc612599f83cb02178aef5ee5fb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e08220362c0acec6060ade75131e34a6b3fb7390
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774174"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417687"
 ---
 # <a name="expressions-c-programming-guide"></a>運算式 (C# 程式設計手冊)
 
@@ -47,7 +47,7 @@ System.Convert.ToInt32("35");
   
  [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
- 如需常值的詳細資訊，請參閱[類型](../../language-reference/keywords/types.md)。  
+ 如需常值的詳細資訊，請參閱[類型](/dotnet/csharp/language-reference/keywords)。  
   
  在上述範例中，`i` 和 `s` 是識別區域變數的簡單名稱。 在運算式中使用這些變數時，變數名稱會評估為目前儲存在記憶體中變數位置的值。 下列範例會顯示這一點：  
   

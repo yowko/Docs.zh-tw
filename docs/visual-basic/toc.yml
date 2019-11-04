@@ -605,6 +605,8 @@
               href: language-reference/operators/like-operator.md
             - name: Mod 運算子
               href: language-reference/operators/mod-operator.md
+            - name: NameOf 運算子
+              href: language-reference/operators/nameof.md
             - name: New 運算子
               href: language-reference/operators/new-operator.md
             - name: Not 運算子

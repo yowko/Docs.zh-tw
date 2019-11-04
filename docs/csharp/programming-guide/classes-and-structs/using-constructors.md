@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: dab8466b4d40e318bbb9915c06ce4ac836c0ead0
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: cb6a0befb9e2e628f066061282532513019c1419
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205425"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418727"
 ---
 # <a name="using-constructors-c-programming-guide"></a>使用建構函式 (C# 程式設計手冊)
 
@@ -20,7 +20,7 @@ ms.locfileid: "70205425"
   
  [!code-csharp[csProgGuideObjects#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#53)]  
   
- 不接受任何參數的建構函式稱為「無參數建構函式」  。 每當使用 `new` 運算子來具現化物件，而且未提供引數給 `new` 時，便會叫用無參數建構函式。 如需詳細資訊，請參閱[執行個體建構函式](./instance-constructors.md)。  
+ 不接受任何參數的建構函式稱為「無參數建構函式」。 每當使用 `new` 運算子來具現化物件，而且未提供引數給 `new` 時，便會叫用無參數建構函式。 如需詳細資訊，請參閱[執行個體建構函式](./instance-constructors.md)。  
   
  除非類別是[靜態](../../language-reference/keywords/static.md)，否則沒有建構函式的類別會從 C# 編譯器取得一個公開無參數建構函式，以啟用類別具現化。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](./static-classes-and-static-class-members.md)。  
   
@@ -55,7 +55,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  因此您不需要呼叫實值型別的無參數建構函式。  
   
- 類別和 `structs` 都可以定義使用參數的建構函式。 使用參數的建構函式必須透過 `new` 陳述式或 [base](../../language-reference/keywords/base.md) 陳述式呼叫。 類別和 `structs` 也可以定義多個建構函式，且皆無須定義無參數建構函式。 例如：  
+ 類別和 `structs` 都可以定義使用參數的建構函式。 使用參數的建構函式必須透過 `new` 陳述式或 [base](../../language-reference/keywords/base.md) 陳述式呼叫。 類別和 `structs` 也可以定義多個建構函式，且皆無須定義無參數建構函式。 例如:  
   
  [!code-csharp[csProgGuideObjects#54](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#54)]  
   
@@ -63,7 +63,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#55](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#55)]  
   
- 建構函式可以使用 `base` 關鍵字呼叫基底類別的建構函式。 例如：  
+ 建構函式可以使用 `base` 關鍵字呼叫基底類別的建構函式。 例如:  
   
  [!code-csharp[csProgGuideObjects#56](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#56)]  
   
@@ -91,9 +91,9 @@ Console.WriteLine("{0}, {1}", a, b);
   
 ## <a name="c-language-specification"></a>C# 語言規格  
 
-如需詳細資訊，請參閱 [C# 語言規格](../../language-reference/language-specification/index.md)的[執行個體建構函式](~/_csharplang/spec/classes.md#instance-constructors)和[靜態建構函式](~/_csharplang/spec/classes.md#static-constructors)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的[執行個體建構函式](~/_csharplang/spec/classes.md#instance-constructors)和[靜態建構函式](~/_csharplang/spec/classes.md#static-constructors)。 語言規格是 C# 語法及用法的限定來源。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](./index.md)

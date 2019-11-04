@@ -2,12 +2,12 @@
 title: C# 教學課程
 description: 探索這些 C# 教學課程以了解如何建置 C# 程式，並了解 C# 語言功能。
 ms.date: 10/25/2018
-ms.openlocfilehash: c2dd00505afbf4d8bc3f213a2f87751fe452f253
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
-ms.translationtype: HT
+ms.openlocfilehash: 3f3ca31c0fdeb5d7c60b25c4b45399569cc919b4
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557173"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417104"
 ---
 # <a name="c-tutorials"></a>C# 教學課程
 
@@ -15,9 +15,11 @@ ms.locfileid: "65557173"
 
 ## <a name="introduction-to-c-interactive-tutorials"></a>C# 簡介互動式教學課程
 
+如果您想要以影片格式開始流覽， [ C# 101 影片系列](https://aka.ms/dotnet3-csharp)提供的簡介C#。 您將瞭解可在這些教學課程中探索的概念。
+
 第一個課程會使用簡短的程式碼片段解釋 C# 概念。 您將能學習 C# 語法的基本概念，以及如何處理字串、數字和布林值等資料類型。 課程內容都是可互動的，因此您很快就能上手並開始撰寫和執行程式碼。 這些入門課程會假設您是首次接觸程式設計或 C# 語言。
 
-## <a name="hello-worldintro-to-csharphello-worldyml"></a>[Hello world](intro-to-csharp/hello-world.yml)
+## <a name="hello-worldintro-to-csharphello-worldyml"></a>[Hello World](intro-to-csharp/hello-world.yml)
 
 在 [Hello World](intro-to-csharp/hello-world.yml) 教學課程中，您將會建立最基本的 C# 程式。 您將會探索 `string` 類型，以及處理文字的方式。
 
@@ -45,12 +47,12 @@ ms.locfileid: "65557173"
 
 ## <a name="explore-new-features-in-c"></a>探索 C\# 中的新功能
 
-* [以互動方式嘗試 C# 6 中的新功能](exploration/csharp-6.yml)：在您的瀏覽器中以互動方式探索 [C# 6](../whats-new/csharp-6.md) 中新增的功能。
+* [以互動方式試用C# 6 中的新功能](exploration/csharp-6.yml)：探索瀏覽器中[ C#以互動方式](../whats-new/csharp-6.md)新增的功能。
 * [字串插值](string-interpolation.md)：示範如何使用字串插值在 C# 中建立格式化的字串。
 * [可為 Null 的參考型別](nullable-reference-types.md)：示範如何使用可為 Null 的參考型別來表示您的 Null 參考意圖。
 * [更新專案以使用可為 Null 的參考型別](upgrade-to-nullable-references.md)：示範升級現有專案以使用可為 Null 之參考型別的技術。
 * [使用模式比對延伸資料功能](pattern-matching.md)：示範如何使用模式比對來將型別延伸到其核心功能之外。
-* [使用索引與範圍處理資料序列](ranges-indexes.md)：示範一種新的方便語法，此語法可用來存取單一元素或一個範圍的循序資料容器。
+* [使用索引和範圍來處理資料序列](ranges-indexes.md)：示範用來存取單一專案或連續資料容器範圍的新便利語法。
 
 ## <a name="general-tutorials"></a>一般教學課程
 

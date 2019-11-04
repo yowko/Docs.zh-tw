@@ -2,12 +2,12 @@
 title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: 9e20b2c7278787671c7a27646b7cbaac78b57d5f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 8c0eb71fffdd29d9599d74c789a66ec7caf1faeb
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591859"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418168"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
 詞彙 "LINQ to Objects" 是指直接搭配使用 LINQ 查詢與任何 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 集合，而不要使用中繼 LINQ 提供者或 API (例如 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) 或 [LINQ to XML](./linq-to-xml-overview.md))。 您可以使用 LINQ 查詢任何可列舉的集合，例如 <xref:System.Collections.Generic.List%601>、<xref:System.Array> 或 <xref:System.Collections.Generic.Dictionary%602>。 這類集合可以是使用者定義，或由 .NET Framework API 所傳回。  
@@ -26,11 +26,11 @@ ms.locfileid: "69591859"
   
  本節的目的是要透過一些精選的範例，示範 LINQ 方法， 而不是要提供詳細的說明。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [LINQ 和字串 (C#)](./linq-and-strings.md)  
  說明如何使用 LINQ 查詢及轉換字串與字串集合。 此外也包含示範這些原理的主題連結。  
   
- [LINQ 和反映 (C#)](./linq-and-reflection.md)  
+ [LINQ 和反映 (C#)](how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
  示範 LINQ 如何使用反映的範例連結。  
   
  [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 8c09ddc5a9db71a4e0bef0434d2fc14a4c088352
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 7010c38797ab64e5106c96c06cd814c143ca9c24
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635556"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419380"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隱含類型區域變數 (C# 程式設計手冊)
 
@@ -91,7 +91,7 @@ private var bookTitles = new List<string>();
 
 無論如何，使用 `var` 都可能會使您的程式碼對其他開發人員而言更難以了解。 基於這個理由，C# 文件通常只有在必要時才會使用 `var`。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../../language-reference/index.md)
 - [隱含型別陣列](../arrays/implicitly-typed-arrays.md)
@@ -99,7 +99,7 @@ private var bookTitles = new List<string>();
 - [匿名類型](anonymous-types.md)
 - [物件和集合初始設定式](object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)
-- [LINQ 查詢運算式](../linq-query-expressions/index.md)
+- [C# 中的 LINQ](../../linq/index.md)
 - [LINQ (Language-Integrated Query)](../../linq/index.md)
 - [for](../../language-reference/keywords/for.md)
 - [foreach、in](../../language-reference/keywords/foreach-in.md)

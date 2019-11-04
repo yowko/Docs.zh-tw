@@ -9,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 160b25bd93f7d7c69ec104a31a0608e930e2dee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 806bc3de138ebae682d2e248593230c753eb7ba2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534887"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422768"
 ---
 # <a name="group-clause-c-reference"></a>group 子句 (C# 參考)
 
@@ -54,7 +54,7 @@ ms.locfileid: "54534887"
 
 ### <a name="grouping-by-numeric-range"></a>依數字範圍群組
 
-下一個範例使用運算式來建立代表百分位數範圍的數字群組索引鍵。 請注意會使用 [let](let-clause.md) 作為儲存方法呼叫結果的方便位置，因此不需要在 `group` 子句中呼叫方法兩次。 如需如何在查詢運算式中安全地使用方法的詳細資訊，請參閱[如何：處理查詢運算式中的例外狀況](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md)。
+下一個範例使用運算式來建立代表百分位數範圍的數字群組索引鍵。 請注意會使用 [let](let-clause.md) 作為儲存方法呼叫結果的方便位置，因此不需要在 `group` 子句中呼叫方法兩次。 如需如何在查詢運算式中安全地使用方法的詳細資訊，請參閱[如何：處理查詢運算式中的例外狀況](../../linq/handle-exceptions-in-query-expressions.md)。
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -66,7 +66,7 @@ ms.locfileid: "54534887"
 group person by new {name = person.surname, city = person.city};
 ```
 
-如果您必須將查詢變數傳遞給另一種方法，請使用具名類型。 請使用索引鍵的自動實作屬性建立特殊類別，然後覆寫 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法。 您也可以使用結構，在此情況下，您絕對不需要覆寫這些方法。 如需詳細資訊，請參閱[如何：使用自動實作的屬性來實作輕量型類別](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)和[如何：查詢樹狀目錄中的重複檔案](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)。 第二篇文章的程式碼範例示範如何使用含有具名類型的複合索引鍵。
+如果您必須將查詢變數傳遞給另一種方法，請使用具名類型。 請使用索引鍵的自動實作屬性建立特殊類別，然後覆寫 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法。 您也可以使用結構，在此情況下，您絕對不需要覆寫這些方法。 如需詳細資訊，請參閱[如何：使用自動實作的屬性來實作輕量型類別](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)和[如何：查詢目錄樹狀結構中的重複檔案](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)。 第二篇文章的程式碼範例示範如何使用含有具名類型的複合索引鍵。
 
 ## <a name="example"></a>範例
 
@@ -86,7 +86,7 @@ group person by new {name = person.surname, city = person.city};
 
 在編譯時期，`group` 子句會轉譯成 <xref:System.Linq.Enumerable.GroupBy%2A> 方法的呼叫。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Linq.IGrouping%602>
 - <xref:System.Linq.Enumerable.GroupBy%2A>

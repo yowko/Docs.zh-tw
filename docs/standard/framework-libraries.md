@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 56d795d309aec98d43bfba506cbc4e862f13cc68
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9c0b5a07277de6e87e2692ebb7c4f73c03702801
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131544"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424964"
 ---
 # <a name="framework-libraries"></a>Framework 程式庫
 
@@ -26,7 +26,7 @@ BCL 提供最基本的類型和公用程式功能，是所有其他 .NET 類別�
 
 .NET 包含一組所有程式 (在某種程度上) 都會使用的基本類型。 這些類型包含資料，例如數字、字串、位元組和任意物件。 C# 語言包含這些類型的關鍵字。 以下列出一組範例類型，並提供相符的 C# 關鍵字。
 
-* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)) - CLR 型別系統中的 Ultimate 基底類別。 它是類型階層架構中的根類型。
+* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/builtin-types/reference-types.md#the-object-type)) - CLR 型別系統中的 Ultimate 基底類別。 它是類型階層架構中的根類型。
 * <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 16 位元帶正負號的整數類型。 也存在不帶正負號的 <xref:System.UInt16>。
 * <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 32 位元帶正負號的整數類型。 也存在不帶正負號的 [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md)。
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) - 32 位元浮點類型。
@@ -34,7 +34,7 @@ BCL 提供最基本的類型和公用程式功能，是所有其他 .NET 類別�
 * <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 代表記憶體位元組之不帶正負號的 8 位元整數。
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)) - 代表 `true` 或 `false` 的布林類型。
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)) - 代表 Unicode 字元的 16 位元數值類型。
-* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/keywords/string.md)) - 代表連續字元。 不同於 `char[]`，但允許編製索引為 `string` 中的每個 `char`。
+* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) - 代表連續字元。 不同於 `char[]`，但允許編製索引為 `string` 中的每個 `char`。
 
 ## <a name="data-structures"></a>資料結構
 

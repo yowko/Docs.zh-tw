@@ -5,12 +5,12 @@ ms.date: 10/15/2019
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: 7e6d1b663007d430f71f81923f343f1c43f5dd2d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: f5ff78eaf9d565a9708c7a3a11754579389e79e8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579173"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422250"
 ---
 # <a name="using-statement-c-reference"></a>using 陳述式 (C# 參考)
 
@@ -36,7 +36,7 @@ ms.locfileid: "72579173"
 
 [!code-csharp[csrefKeywordsNamespace#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#5)]
 
-較新的 `using` 語句語法會轉譯成非常類似的程式碼。 @No__t_0 區塊會在宣告變數的位置開啟。 @No__t_0 區塊會在封閉區塊的結尾處新增，通常是在方法的結尾處。
+較新的 `using` 語句語法會轉譯成非常類似的程式碼。 `try` 區塊會在宣告變數的位置開啟。 `finally` 區塊會在封閉區塊的結尾處新增，通常是在方法的結尾處。
 
 如需 `try`-`finally` 陳述式的詳細資訊，請參閱 [try-finally](try-finally.md) 主題。
 
@@ -56,7 +56,7 @@ ms.locfileid: "72579173"
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)中的 [using 陳述式](~/_csharplang/spec/statements.md#the-using-statement)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)中的 [using 陳述式](~/_csharplang/spec/statements.md#the-using-statement)。 語言規格是 C# 語法及用法的限定來源。
 
 ## <a name="see-also"></a>請參閱
 
