@@ -4,16 +4,16 @@ description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署�
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2cb91032e0ce1d320b266772e8f9f1431df4a298
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 3604aff5d1f138071c941ea85546af03185d722d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960964"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460727"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>教學課程：將適用于 Apache Spark 應用程式的 .NET 部署至 Azure HDInsight
 
-本教學課程會教您如何透過 Azure HDInsight 叢集，將 Apache Spark 應用程式的 .NET 部署至雲端。 HDInsight 可讓您更輕鬆地在 Azure 中建立和設定 Spark 叢集，因為 HDInsight 中的 Spark 叢集與 Azure 儲存體和 Azure Data Lake Storage 相容。 
+本教學課程會教您如何透過 Azure HDInsight 叢集，將 Apache Spark 應用程式的 .NET 部署至雲端。 HDInsight 可讓您更輕鬆地在 Azure 中建立和設定 Spark 叢集，因為 HDInsight 中的 Spark 叢集與 Azure 儲存體和 Azure Data Lake Storage 相容。
 
 在本教學課程中，您將了解如何：
 
@@ -25,7 +25,7 @@ ms.locfileid: "72960964"
 > * 建立並執行 HDInsight 腳本動作。
 > * 在 HDInsight 叢集上執行適用于 Apache Spark 應用程式的 .NET。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 開始之前，請執行下列工作：
 
@@ -46,7 +46,7 @@ ms.locfileid: "72960964"
 
 ## <a name="create-an-hdinsight-cluster"></a>建立 HDInsight 叢集
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > HDInsight 叢集的計費是以每分鐘為單位，即使您不使用它們也一樣。 在您完成使用叢集之後，請務必刪除叢集。 如需詳細資訊，請參閱本教學課程的[清理資源](#clean-up-resources)一節。
 
 1. 請造訪[Azure 入口網站](https://portal.azure.com)。
@@ -57,9 +57,9 @@ ms.locfileid: "72960964"
 
 3. 在 [**基本**] 底下，提供下列值：
 
-    |屬性  |描述  |
+    |屬性  |說明  |
     |---------|---------|
-    |訂用帳戶  | 從下拉式選單中，選擇其中一個作用中的 Azure 訂用帳戶。 |
+    |訂閱  | 從下拉式選單中，選擇其中一個作用中的 Azure 訂用帳戶。 |
     |資源群組 | 指定您要建立新的資源群組，還是使用現有的。 資源群組是保存 Azure 解決方案相關資源的容器。 |
     |叢集名稱 | 提供 HDInsight Spark 叢集的名稱。|
     |位置   | 選取資源群組的 [位置]。 此範本會使用此位置來建立叢集，以及針對預設叢集儲存體。 |
@@ -71,7 +71,7 @@ ms.locfileid: "72960964"
 
 4. 選取 **[下一步]：儲存體 > >** 繼續前往 [**儲存體**] 頁面。 在 [**儲存體**] 底下，提供下列值：
 
-    |屬性  |描述  |
+    |屬性  |說明  |
     |---------|---------|
     |主要儲存體類型|使用預設值**Azure 儲存體**。|
     |選取方法|使用 [**從清單中選取**預設值]。|
@@ -82,7 +82,7 @@ ms.locfileid: "72960964"
 
 ## <a name="publish-your-app"></a>發行您的應用程式
 
-接下來，您會發佈在 .Net 中建立[Apache Spark-開始使用10分鐘](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)教學課程的*mySparkApp* ，這可讓您的 Spark 叢集存取執行應用程式所需的所有檔案。 
+接下來，您會發佈在 .Net 中建立[Apache Spark-開始使用10分鐘](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)教學課程的*mySparkApp* ，這可讓您的 Spark 叢集存取執行應用程式所需的所有檔案。
 
 1. 執行下列命令以發佈*mySparkApp*：
 
@@ -90,7 +90,7 @@ ms.locfileid: "72960964"
 
    ```console
    cd mySparkApp
-   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x6
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
 
    **在 Linux 上：**
@@ -114,7 +114,7 @@ ms.locfileid: "72960964"
 
 ## <a name="upload-files-to-azure"></a>將檔案上傳至 Azure
 
-接下來，您可以使用 Azure 儲存體總管，將下列五個檔案上傳至您為叢集儲存體選擇的 blob 容器： 
+接下來，您可以使用 Azure 儲存體總管，將下列五個檔案上傳至您為叢集儲存體選擇的 blob 容器：
 
 * Microsoft. Spark. 背景工作角色
 * install-worker.sh
@@ -128,7 +128,7 @@ ms.locfileid: "72960964"
 
    ![將檔案上傳至 Azure 儲存體總管](./media/hdinsight-deployment/upload-files-to-storage.png)
 
-3. *Install-worker.sh*是一個腳本，可讓您將 Apache Spark 相依檔案的 .net 複製到叢集的節點中。 
+3. *Install-worker.sh*是一個腳本，可讓您將 Apache Spark 相依檔案的 .net 複製到叢集的節點中。
 
    在您的本機電腦上建立名為**install-worker.sh**的新檔案，並貼上位於 GitHub 的[install-worker.sh 內容](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)。 然後，將*install-worker.sh*上傳至您的 blob 容器。
 
@@ -142,19 +142,19 @@ ms.locfileid: "72960964"
 
 ## <a name="run-the-hdinsight-script-action"></a>執行 HDInsight 腳本動作
 
-一旦您的叢集正在執行，且您已將檔案上傳至 Azure，您就可以在叢集上執行**install-worker.sh**腳本。 
+一旦您的叢集正在執行，且您已將檔案上傳至 Azure，您就可以在叢集上執行**install-worker.sh**腳本。
 
 1. 在 Azure 入口網站中，流覽至您的 HDInsight Spark 叢集，然後選取 [**腳本動作**]。
 
 2. 選取 [ **+ 提交新**的]，並提供下列值：
 
-   |屬性  |描述  |
+   |屬性  |說明  |
    |---------|---------|
    | 腳本類型 |自訂|
-   | [屬性] | 安裝背景工作|
+   | 名稱 | 安裝背景工作|
    | Bash 腳本 URI |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> 若要確認此 URI，請以滑鼠右鍵按一下 Azure 儲存體總管中的 [install-worker.sh]，然後選取 [屬性]。 |
    | 節點類型| 工作|
-   | 參數 | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin 
+   | 參數 | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
 
 3. 選取 [**建立**] 以提交您的腳本。
 

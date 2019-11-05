@@ -4,12 +4,12 @@ description: 了解 .NET for Apache Spark，其為開放原始碼且跨平台的
 author: mamccrea
 ms.topic: overview
 ms.date: 10/15/2019
-ms.openlocfilehash: c31b50a20ac08bcde077e1e85ee915435a99fc28
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 12fccd478cedaccf455043feb3afa7b12221bf0e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395858"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458196"
 ---
 # <a name="what-is-net-for-apache-spark"></a>什麼是 .NET for Apache Spark？
 
@@ -19,10 +19,10 @@ ms.locfileid: "72395858"
 
 適用于 Apache Spark 的 .NET 可讓開發人員使用 .NET 體驗或程式碼基底，以參與 big data analytics 的世界。 適用于 Apache Spark 的 .NET 會提供高效能 Api， C#以便F#從和使用 Spark。 有 C# 和 F#，您就可以存取：
 
-* 使用結構化資料的資料框架和 SparkSQL
-* 用於處理串流資料的 Spark 結構化串流
-* 使用 SQL 語法撰寫查詢的 Spark SQL
-* 機器學習服務整合，以加速定型和預測（也就是將 .NET 用於 Apache Spark 與[ML.NET](http://dot.net/ml)）
+* 使用結構化資料的資料框架和 SparkSQL。
+* Spark 結構化串流以便使用串流資料。
+* 使用 SQL 語法撰寫查詢的 Spark SQL。
+* 機器學習服務整合可加速定型和預測（也就是使用 .NET 做為 Apache Spark 與[ML.NET](https://dot.net/ml)）。
 
 .NET for Apache Spark 符合 .NET Standard 的規範，這是所有 .NET 實作都具備的 .NET API 正式規格。 這表示您可以在撰寫 .NET 程式碼的任何地方使用 .NET for Apache Spark，這讓您可以重複運用身為 .NET 開發人員已具備的所有知識、技能、程式碼和程式庫。
 
@@ -33,13 +33,13 @@ ms.locfileid: "72395858"
 Spark C#的F# /語言系結是以新的 spark interop 層撰寫，可提供更輕鬆的擴充性。 這個新一層的 Spark interop 是使用語言擴充功能的最佳做法所撰寫，並可針對 interop 和效能進行優化。 長期而言，此擴充性可用於在 Spark 中新增其他語言的支援。
 
 > [!div class="mx-imgBorder"]
-> Apache Spark 架構 @ no__t-1 的 @no__t 0.NET
+> 適用于 Apache Spark 架構的 ![.NET](media/dotnet-spark-architecture.png)
 
 您可以從[提案](https://issues.apache.org/jira/browse/SPARK-26257)瞭解 Spark 語言延伸模組的 interop 支援。
 
 ## <a name="net-for-apache-spark-performance"></a>適用于 Apache Spark 效能的 .NET
 
-相較于使用[TPC-H 基準測試](http://www.tpc.org/tpch/)的 Python 和 Scala，適用于 Apache Spark 的 .net 在大多數情況下都能順利執行，而且在使用者定義的函數效能很重要時，速度會比 python 快2倍。 我們持續致力於改善和基準效能。 
+相較于使用[TPC-H 基準測試](http://www.tpc.org/tpch/)的 Python 和 Scala，適用于 Apache Spark 的 .net 在大多數情況下都能順利執行，而且在使用者定義的函數效能很重要時，速度會比 python 快2倍。 我們持續致力於改善和基準效能。
 
 若要執行您自己的基準測試，請參閱適用于[Apache Spark GitHub 的 .net](https://github.com/dotnet/spark/tree/master/benchmark)上的效能評定。
 

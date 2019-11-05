@@ -4,20 +4,20 @@ description: 瞭解 Apache Spark 和 big data 案例。
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
-ms.openlocfilehash: 187a37897c23809d91820bd79b476e775fb5b99b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 653f355d09a045feabb3dee0f5737cb691cf2dc4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583476"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458172"
 ---
 # <a name="what-is-apache-spark"></a>什麼是 Apache Spark？
 
-[Apache Spark](https://spark.apache.org/)是一種開放原始碼平行處理架構，可支援記憶體內部處理，以提升分析海量資料之應用程式的效能。 Big data 解決方案是設計用來處理對於傳統資料庫而言太大或太複雜的資料。 Spark 會處理記憶體中的大量資料，速度會比以磁片為基礎的替代專案快很多。 
+[Apache Spark](https://spark.apache.org/)是一種開放原始碼平行處理架構，可支援記憶體內部處理，以提升分析海量資料之應用程式的效能。 Big data 解決方案是設計用來處理對於傳統資料庫而言太大或太複雜的資料。 Spark 會處理記憶體中的大量資料，速度會比以磁片為基礎的替代專案快很多。
 
 ## <a name="common-big-data-scenarios"></a>常見的 big data 案例
 
-如果您需要儲存和處理大量資料、轉換非結構化資料，或處理串流資料，則可以考慮使用大型資料架構。 Spark 是一般用途的分散式處理引擎，可用於數個大型資料案例。 
+如果您需要儲存和處理大量資料、轉換非結構化資料，或處理串流資料，則可以考慮使用大型資料架構。 Spark 是一般用途的分散式處理引擎，可用於數個大型資料案例。
 
 ### <a name="extract-transform-and-load-etl"></a>解壓縮、轉換和載入（ETL）
 
@@ -33,7 +33,7 @@ ms.locfileid: "72583476"
 
 ### <a name="real-time-data-stream-processing"></a>即時資料流處理
 
-資料流程或即時資料是移動中的資料。 IoT 裝置、weblog 和點選流的遙測全都是串流資料的範例。 可以處理即時資料，以提供有用的資訊，例如地理空間分析、遠端監視和異常偵測。 就像關聯式資料，您可以先篩選、匯總和準備串流資料，再將資料移至輸出接收。 Apache Spark 支援透過[Spark 串流](https://spark.apache.org/streaming/)[處理即時資料流](/azure/architecture/data-guide/big-data/real-time-processing)。 
+資料流程或即時資料是移動中的資料。 IoT 裝置、weblog 和點選流的遙測全都是串流資料的範例。 可以處理即時資料，以提供有用的資訊，例如地理空間分析、遠端監視和異常偵測。 就像關聯式資料，您可以先篩選、匯總和準備串流資料，再將資料移至輸出接收。 Apache Spark 支援透過[Spark 串流](https://spark.apache.org/streaming/)[處理即時資料流](/azure/architecture/data-guide/big-data/real-time-processing)。
 
 ### <a name="batch-processing"></a>批次處理
 
