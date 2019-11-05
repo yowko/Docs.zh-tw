@@ -33,6 +33,8 @@
           href: tutorials/image-classification-api-transfer-learning.md
         - name: 分類影像 (模型組合)
           href: tutorials/image-classification.md
+        - name: 預測自行車租借需求 (時間序列)
+          href: tutorials/time-series-demand-forecasting.md
         - name: 產品銷售分析 (異常偵測)
           href: tutorials/sales-anomaly-detection.md
         - name: 偵測影像中的物件 (物件偵測)
