@@ -24,7 +24,7 @@ ms.locfileid: "73454271"
 > - 建立 Spark 作業和 Spark 叢集。
 > - 在 Spark 叢集上執行您的應用程式。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 開始之前，請執行下列工作：
 
@@ -46,7 +46,7 @@ ms.locfileid: "73454271"
 
 2. 在 [ **Azure Databricks 服務**] 底下，提供值以建立 Databricks 工作區。
 
-    |屬性  |說明  |
+    |屬性  |描述  |
     |---------|---------|
     |**工作區名稱**     | 為您的 Databricks 工作區提供名稱。        |
     |**訂用帳戶**     | 從下拉式選單中，選取您的 Azure 訂用帳戶。        |

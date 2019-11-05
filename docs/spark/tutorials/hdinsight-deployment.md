@@ -25,7 +25,7 @@ ms.locfileid: "73460727"
 > * 建立並執行 HDInsight 腳本動作。
 > * 在 HDInsight 叢集上執行適用于 Apache Spark 應用程式的 .NET。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 開始之前，請執行下列工作：
 
@@ -57,9 +57,9 @@ ms.locfileid: "73460727"
 
 3. 在 [**基本**] 底下，提供下列值：
 
-    |屬性  |說明  |
+    |屬性  |描述  |
     |---------|---------|
-    |訂閱  | 從下拉式選單中，選擇其中一個作用中的 Azure 訂用帳戶。 |
+    |訂用帳戶  | 從下拉式選單中，選擇其中一個作用中的 Azure 訂用帳戶。 |
     |資源群組 | 指定您要建立新的資源群組，還是使用現有的。 資源群組是保存 Azure 解決方案相關資源的容器。 |
     |叢集名稱 | 提供 HDInsight Spark 叢集的名稱。|
     |位置   | 選取資源群組的 [位置]。 此範本會使用此位置來建立叢集，以及針對預設叢集儲存體。 |
@@ -71,7 +71,7 @@ ms.locfileid: "73460727"
 
 4. 選取 **[下一步]：儲存體 > >** 繼續前往 [**儲存體**] 頁面。 在 [**儲存體**] 底下，提供下列值：
 
-    |屬性  |說明  |
+    |屬性  |描述  |
     |---------|---------|
     |主要儲存體類型|使用預設值**Azure 儲存體**。|
     |選取方法|使用 [**從清單中選取**預設值]。|
@@ -148,10 +148,10 @@ ms.locfileid: "73460727"
 
 2. 選取 [ **+ 提交新**的]，並提供下列值：
 
-   |屬性  |說明  |
+   |屬性  |描述  |
    |---------|---------|
    | 腳本類型 |自訂|
-   | 名稱 | 安裝背景工作|
+   | [屬性] | 安裝背景工作|
    | Bash 腳本 URI |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> 若要確認此 URI，請以滑鼠右鍵按一下 Azure 儲存體總管中的 [install-worker.sh]，然後選取 [屬性]。 |
    | 節點類型| 工作|
    | 參數 | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin

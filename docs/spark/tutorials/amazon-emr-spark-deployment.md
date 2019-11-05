@@ -24,7 +24,7 @@ ms.locfileid: "73454930"
 > * 將您的應用程式部署到 Amazon EMR Spark
 > * 執行應用程式
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 開始之前，請執行下列動作：
 
@@ -37,7 +37,7 @@ ms.locfileid: "73454930"
 
 1. 選取要部署在您叢集上的 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp 版本。
 
-   例如，若您想要使用 `.NET for Apache Spark v0.1.0` 的 `netcoreapp2.1`，您可以下載 [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz)。
+   例如，若您想要使用 `netcoreapp2.1` 的 `.NET for Apache Spark v0.1.0`，您可以下載 [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz)。
 
 2. 將 `Microsoft.Spark.Worker.<release>.tar.gz` 和 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 上傳到您叢集可以存取的分散式檔案系統 (例如 S3)。
 
@@ -78,7 +78,7 @@ ms.locfileid: "73454930"
 
 僅在建立叢集時才需要此步驟。
 
-使用`install-worker.sh`啟動程序動作[在叢集建立期間執行 ](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-bootstrap.html)。
+使用[啟動程序動作](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-bootstrap.html)在叢集建立期間執行 `install-worker.sh`。
 
 使用 AWS CLI 在 Linux 上執行下列命令。
 
