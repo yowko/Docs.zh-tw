@@ -1,26 +1,26 @@
 ---
 title: 值的選項
-description: 深入了解F#值的選項類型，這是結構類型版本的選項。
+description: 瞭解F#值選項類型，這是選項類型的結構版本。
 ms.date: 02/06/2019
-ms.openlocfilehash: e1036c83189c853b3704d94ca245e4818acc98c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4dc3f7217943345b7aaf1165fd648ab2e01bd727
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982575"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424011"
 ---
 # <a name="value-options"></a>值的選項
 
-中的值選項類型F#在下列兩種情況下保存時，會使用：
+當下列兩種情況F#成立時，會使用值選項輸入：
 
-1. 案例是適用於[ F#  選項](options.md)。
-2. 使用結構可提供效能優勢，在您的案例。
+1. 案例適用于[ F#選項](options.md)。
+2. 使用結構可在您的案例中提供效能優勢。
 
-並非所有效能敏感的狀況下會 「 都解決 」 使用結構。 您必須考慮複製時使用它們，而不參考類型的額外成本。 不過，大型F#程式通常具現化的許多選擇性類型流經忙碌的路徑，並在這種情況下，結構通常可以產生更好的整體效能，程式的存留期。
+並非所有的效能相關案例都是使用結構來「解決」。 使用時，您必須考慮複製的額外成本，而不是參考型別。 不過，大型F#程式通常會具現化許多可流經最忙碌路徑的選擇性類型，在這種情況下，結構通常可以在程式的存留期內產生較佳的整體效能。
 
 ## <a name="definition"></a>定義
 
-值選項指[結構差別聯集](discriminated-unions.md#struct-discriminated-unions)類似參考選項類型。 如此一來您可以想像它的定義：
+Value 選項會定義為[結構的區分](discriminated-unions.md#struct-discriminated-unions)等位，與參考選項類型類似。 其定義可以透過這種方式來考慮：
 
 ```fsharp
 [<StructuralEquality; StructuralComparison>]
@@ -30,11 +30,11 @@ type ValueOption<'T> =
     | ValueSome of 'T
 ```
 
-結構化相等和比較符合值 選項。 主要差異在於編譯的名稱、 型別名稱和大小寫名稱所有指出它是實值型別。
+Value 選項符合結構相等和比較。 主要差異在於編譯的名稱、型別名稱和大小寫名稱全都表示它是實值型別。
 
-## <a name="using-value-options"></a>使用值的選項
+## <a name="using-value-options"></a>使用值選項
 
-就像使用值選項[選項](options.md)。 `ValueSome` 用來表示值已存在，及`ValueNone`值不存在時，會使用：
+值選項的使用方式就像[選項](options.md)一樣。 `ValueSome` 可用來表示值存在，而且當值不存在時，會使用 `ValueNone`：
 
 ```fsharp
 let tryParseDateTime (s: string) =
@@ -55,24 +55,24 @@ match (result1, result2) with
 | ValueNone, ValueNone -> printfn "None of them are dates!"
 ```
 
-如同[選項](options.md)，傳回的函式的命名慣例`ValueOption`會加上前置詞與`try`。
+如同[選項](options.md)，傳回 `ValueOption` 之函式的命名慣例是在其前面加上 `try`。
 
 ## <a name="value-option-properties-and-methods"></a>值選項屬性和方法
 
-此時沒有一個屬性的值選項： `Value`。 <xref:System.InvalidOperationException>沒有值是否存在叫用這個屬性時引發。
+目前有一個屬性用於值選項： `Value`。 叫用此屬性時，如果沒有任何值存在，就會引發 <xref:System.InvalidOperationException>。
 
-## <a name="value-option-functions"></a>值選項函式
+## <a name="value-option-functions"></a>值選項函數
 
-目前沒有一個模組繫結函式的值選項`defaultValueArg`:
+目前有一個模組系結函數適用于值選項，`defaultValueArg`：
 
 ```fsharp
-val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T 
+val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T
 ```
 
-如同`defaultArg`函式，`defaultValueArg`傳回指定的 [值] 選項的基礎值，如果存在的話，否則會傳回指定的預設值。
+如同 `defaultArg` 函式，`defaultValueArg` 會傳回指定值選項的基礎值（如果有的話）。否則，它會傳回指定的預設值。
 
-在此階段中，沒有其他模組繫結函數的值選項。
+目前沒有適用于值選項的其他模組系結函數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [選項](options.md)

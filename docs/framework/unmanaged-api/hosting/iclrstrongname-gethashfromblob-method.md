@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f91d0f89-f356-49ac-aafb-50fad963c13d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4839f098a41e0d2b8e87616791b69ffd83e139f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c9adcc252fe16c95da8b2afca45bb2ee5dc545a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748199"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135197"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>ICLRStrongName::GetHashFromBlob 方法
 使用指定的雜湊演算法取得位於指定記憶體位址之組件的雜湊。  
@@ -42,35 +40,35 @@ HRESULT GetHashFromBlob (
   
 ## <a name="parameters"></a>參數  
  `pbBlob`  
- [in]要雜湊的記憶體區塊的位址指標。  
+ 在要雜湊的記憶體區塊位址的指標。  
   
  `cchBlob`  
- [in]記憶體區塊的長度，以位元組為單位。  
+ 在記憶體區塊的長度（以位元組為單位）。  
   
  `piHashAlg`  
- [in、 out]常數，指定的雜湊演算法。 使用零的預設演算法。  
+ [in、out]指定雜湊演算法的常數。 預設演算法使用零。  
   
  `pbHash`  
- [out]傳回的雜湊緩衝區。  
+ 脫銷傳回的雜湊緩衝區。  
   
  `cchHash`  
- [in]要求的最大大小的`pbHash`。  
+ 在`pbHash`的要求大小上限。  
   
  `pchHash`  
- [out]大小，以位元組為單位傳回`pbHash`。  
+ 脫銷傳回之 `pbHash`的大小（以位元組為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
+ 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MetaHost.h  
+ **標頭：** MetaHost。h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

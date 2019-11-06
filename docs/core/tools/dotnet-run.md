@@ -1,25 +1,37 @@
 ---
 title: dotnet run 命令
 description: dotnet run 命令提供方便的選項，以透過原始程式碼來執行應用程式。
-ms.date: 05/29/2018
-ms.openlocfilehash: ec2a24b78f435dd1905ec67b6f3f4a4ec3f7e7fa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 10/31/2019
+ms.openlocfilehash: 87e9a57e874116533951a9c5eb676be76be2c98d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117477"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454786"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**本文適用於：✓** .NET Core 1.x SDK 和更新版本
 
-## <a name="name"></a>名稱
+<!-- todo: uncomment when all CLI commands are reviewed
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
+
+## <a name="name"></a>[屬性]
 
 `dotnet run` - 執行原始程式碼，而不需要有任何明確的編譯或啟動命令。
 
 ## <a name="synopsis"></a>概要
 
 <!-- markdownlint-disable MD025 -->
+
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+
+```dotnetcli
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile] [--no-build] [--no-dependencies]
+    [--no-launch-profile] [--no-restore] [-p|--project] [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -68,6 +80,64 @@ dotnet myapp.dll
 
 ## <a name="options"></a>選項
 
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+
+`--`
+
+分隔 `dotnet run` 的引數與執行中應用程式的引數。 此分隔符號之後的所有引數會傳遞至執行的應用程式。
+
+`-c|--configuration {Debug|Release}`
+
+定義組建組態。 大部分專案的預設值為 `Debug`。
+
+`-f|--framework <FRAMEWORK>`
+
+使用指定的[架構](../../standard/frameworks.md)建置並執行應用程式。 架構必須在專案檔中指定。
+
+`--force`
+
+即使最後的還原成功，仍強制解析所有相依性。 指定這個旗標等同於刪除 *project.assets.json* 檔案。
+
+`-h|--help`
+
+印出命令的簡短說明。
+
+`--interactive`
+
+允許命令停止並等候使用者輸入或動作 (例如完成驗證)。
+
+`--launch-profile <NAME>`
+
+啟動應用程式時使用的啟動設定檔名稱 (如果有的話)。 啟動設定檔是在 *launchSettings.json* 檔案中定義，通常稱為 `Development`、`Staging` 和 `Production`。 如需詳細資訊，請參閱[使用多個環境](/aspnet/core/fundamentals/environments)。
+
+`--no-build`
+
+不會在執行前建置專案。 它也會隱含設定 `--no-restore` 旗標。
+
+`--no-dependencies`
+
+在還原包含專案對專案 (P2P) 參考的專案時，會還原根專案，而非參考。
+
+`--no-launch-profile`
+
+不會嘗試使用 *launchSettings.json* 來設定應用程式。
+
+`--no-restore`
+
+執行命令時，不會執行隱含還原。
+
+`-p|--project <PATH>`
+
+指定要執行的專案檔路徑 (資料夾名稱或完整路徑)。 如果未指定，則會預設為目前目錄。
+
+`--runtime <RUNTIME_IDENTIFIER>`
+
+指定要還原套件的目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。
+
+`-v|--verbosity <LEVEL>`
+
+設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--`
@@ -76,7 +146,7 @@ dotnet myapp.dll
 
 `-c|--configuration {Debug|Release}`
 
-定義組建組態。 預設值為 `Debug`。
+定義組建組態。 大部分專案的預設值為 `Debug`。
 
 `-f|--framework <FRAMEWORK>`
 
@@ -130,7 +200,7 @@ dotnet myapp.dll
 
 `-c|--configuration {Debug|Release}`
 
-定義組建組態。 預設值為 `Debug`。
+定義組建組態。 大部分專案的預設值為 `Debug`。
 
 `-f|--framework <FRAMEWORK>`
 
@@ -180,7 +250,7 @@ dotnet myapp.dll
 
 `-c|--configuration {Debug|Release}`
 
-定義組建組態。 預設值為 `Debug`。
+定義組建組態。 大部分專案的預設值為 `Debug`。
 
 `-f|--framework <FRAMEWORK>`
 
@@ -192,7 +262,7 @@ dotnet myapp.dll
 
 `-p|--project <PATH/PROJECT.csproj>`
 
-指定專案檔的路徑和名稱。 (請參閱附註)。如果未指定，則會預設為目前目錄。
+指定專案檔的路徑和名稱。 （請參閱附注）。如果未指定，則會預設為目前目錄。
 
 > [!NOTE]
 > 透過 `-p|--project` 選項使用專案檔的路徑和名稱。 CLI 中出現迴歸會無法提供具有 NET Core SDK 1.x 的資料夾路徑。 如需此問題的詳細資訊，請參閱 [dotnet run -p, can not start a project (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992) (dotnet run -p，無法啟動專案 (dotnet/cli #5992))。

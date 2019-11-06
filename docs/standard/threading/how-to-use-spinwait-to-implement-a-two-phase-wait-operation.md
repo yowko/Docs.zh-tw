@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 SpinWait 實作兩階段等候作業
+title: 如何：使用 SpinWait 實作兩階段等候作業
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - SpinWait, how to synchronize two-phase wait
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 52b9164546d2061a65c79fb167b14543b0dae5a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 5bac174660177fd47e1f345e64581e35ae4c0ffc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576508"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137947"
 ---
-# <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>HOW TO：使用 SpinWait 實作兩階段等候作業
+# <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>如何：使用 SpinWait 實作兩階段等候作業
 下列範例示範如何使用 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 物件來實作兩階段等候作業。 在第一個階段中，同步處理物件 `Latch` 會在它檢查鎖定是否已變成可用時，進行數個週期的微調。 在第二個階段中，如果鎖定已變成可用，則 `Wait` 方法會傳回，而不需使用 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 來執行等候；否則 `Wait` 會執行等候。  
   
 ## <a name="example"></a>範例  
@@ -30,7 +28,7 @@ ms.locfileid: "54576508"
   
  記錄輸出會藉由取得鎖定，而不使用 <xref:System.Threading.ManualResetEvent>，來顯示閂鎖能夠提升效能的頻率。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [SpinWait](../../../docs/standard/threading/spinwait.md)
 - [執行緒物件和功能](../../../docs/standard/threading/threading-objects-and-features.md)

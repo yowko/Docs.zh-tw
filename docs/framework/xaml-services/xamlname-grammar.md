@@ -8,12 +8,12 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 837a18ca18d0c634dfa5cc133aa013919cfb9d96
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a39d25f03583ab9020878b7a659bc99489231ff9
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053891"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458894"
 ---
 # <a name="xamlname-grammar"></a>XamlName 文法
 XamlName 文法是以 XAML 語言規格 [MS-XAML] 定義的特定文法，為了方便起見，會在這裡重現。  
@@ -46,7 +46,7 @@ CombiningCharacter ::= UnicodeMn | UnicodeMc
 | Nd                 | 數位、十進位               |
 | Nl                 | 數字，字母                |
  
- XAML 會定義第二個文法 DottedXamlName，用於屬性和事件限定的參考，也會用於附加的成員。 如需詳細資訊， <xref:System.Windows.DependencyProperty>請參閱和[XAML 總覽（WPF）](../wpf/advanced/xaml-overview-wpf.md)。  
+ XAML 會定義第二個文法 DottedXamlName，用於屬性和事件限定的參考，也會用於附加的成員。 如需詳細資訊，請參閱 <xref:System.Windows.DependencyProperty> 和[XAML 總覽（WPF）](../../desktop-wpf/fundamentals/xaml.md)。  
   
  DottedXamlName 類型的字串值必須符合下列文法：  
   
@@ -55,4 +55,4 @@ DottedXamlName ::= XamlName '.' XamlName
 ```  
   
 ## <a name="remarks"></a>備註  
- 如需完整的規格，請參閱[ \[MS\]-XAML](https://go.microsoft.com/fwlink/?LinkId=114525)。
+ 如需完整的規格，請參閱[\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)。

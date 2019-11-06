@@ -7,36 +7,34 @@ helpviewer_keywords:
 - Windows Forms layout
 - Windows Forms dynamic resizing
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1641702c7b1c3d3b0e83c59a96529de70f699d17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9183b15da24f70b6fceaa90f718c5af93a3cdda
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966938"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139070"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows Forms 中的高 DPI 支援
 
-從.NET Framework 4.7 開始，Windows Form 包含常見的高 DPI 與動態 DPI 情節的增強功能。 它們包括：
+從 .NET Framework 4.7 開始，Windows Forms 包含常見高 DPI 和動態 DPI 案例的增強功能。 它們包括：
 
-- 改進調整和配置數個 Windows Form 控制項，例如<xref:System.Windows.Forms.MonthCalendar>控制項和<xref:System.Windows.Forms.CheckedListBox>控制項。
+- 改善數個 Windows Forms 控制項的縮放和版面配置，例如 <xref:System.Windows.Forms.MonthCalendar> 控制項和 <xref:System.Windows.Forms.CheckedListBox> 控制項。
 
-- 單一行程調整。  在.NET Framework 4.6 和更早版本中，透過多個行程，這造成一些控制項進行調整，多個必須執行調整。
+- 單一傳遞調整。  在 .NET Framework 4.6 和舊版中，縮放是透過多個階段來執行，這會導致某些控制項的縮放比例超出所需。
 
-- 已啟動的 Windows Forms 應用程式之後變更的 DPI 或小數位數的比例的使用者的動態 DPI 案例的支援。
+- 支援動態 DPI 案例，在這種情況下，使用者會在啟動 Windows Forms 應用程式之後變更 DPI 或縮放比例。
 
-從.NET Framework 4.7 開始的.NET framework 版本，增強高 DPI 支援是選擇性功能。 您必須設定您的應用程式加以利用。
+從 .NET Framework 4.7 開始的 .NET Framework 版本中，增強的高 DPI 支援是加入宣告的功能。 您必須設定應用程式來利用它。
 
-## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>設定您的 Windows Forms 應用程式的高 DPI 支援
+## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>設定 Windows Forms 應用程式以提供高 DPI 支援
 
-支援高 DPI 感知的新 Windows Forms 功能是僅適用於.NET Framework 4.7 為目標，並從 Windows 10 Creators Update 開始的 Windows 作業系統上執行的應用程式。
+支援高 DPI 感知的新 Windows Forms 功能僅適用于以 .NET Framework 4.7 為目標的應用程式，而且會在 windows 作業系統上執行，從 Windows 10 建立者更新開始。
 
-此外，若要設定您的 Windows Forms 應用程式中的高 DPI 支援，您必須執行下列作業：
+此外，若要在 Windows Forms 應用程式中設定高 DPI 支援，您必須執行下列動作：
 
 - 宣告與 Windows 10 的相容性。
 
-  若要這樣做，請將下列內容新增至您的資訊清單檔案：
+  若要這麼做，請將下列內容新增至您的資訊清單檔案：
 
   ```xml
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
@@ -47,9 +45,9 @@ ms.locfileid: "61966938"
   </compatibility>
   ```
 
-- 啟用個別監視器 DPI 感知*app.config*檔案。
+- 在*app.config*檔案中啟用每個監視器的 DPI 感知。
 
-  引進新的 Windows Forms [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md)以支援新功能和自訂項目加入從.NET Framework 4.7 開始的項目。 若要充分利用支援高 DPI 的新功能，將下列內容新增至您的應用程式組態檔。
+  Windows Forms 引進新的[`<System.Windows.Forms.ApplicationConfigurationSection>`](../configure-apps/file-schema/winforms/index.md)元素，以支援從 .NET Framework 4.7 開始新增的新功能和自訂專案。 若要利用支援高 DPI 的新功能，請在您的應用程式佈建檔中新增下列各項。
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -58,11 +56,11 @@ ms.locfileid: "61966938"
   ```
 
   > [!IMPORTANT]
-  > 在舊版的.NET Framework 中，您會使用資訊清單新增高 DPI 支援。 不建議這種方法，因為它會覆寫 app.config 檔案中所定義的設定。
+  > 在舊版的 .NET Framework 中，您使用了資訊清單來新增高 DPI 支援。 不再建議使用此方法，因為它會覆寫 app.config 檔案中定義的設定。
 
-- 呼叫靜態<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法。
+- 呼叫靜態 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法。
 
-  這應該是第一個方法呼叫中的應用程式的進入點。 例如: 
+  這應該是應用程式進入點中的第一個方法呼叫。 例如:
 
   ```csharp
   static void Main()
@@ -75,7 +73,7 @@ ms.locfileid: "61966938"
 
 ## <a name="opting-out-of-individual-high-dpi-features"></a>退出個別的高 DPI 功能
 
-設定`DpiAwareness`值`PerMonitorV2`可讓從.NET Framework 4.7 開始的.NET Framework 版本所支援的所有高 DPI 感知功能。 一般而言，這是適合大部分的 Windows Forms 應用程式。 不過，您可以選擇不使用一或多個個別的功能。 執行此動作的最重要的原因是您現有的應用程式程式碼已經處理該功能。  比方說，如果您的應用程式會處理自動調整規模，您可能想要停用自動調整大小功能，如下所示：
+將 `DpiAwareness` 值設定為 `PerMonitorV2`，會啟用從 .NET Framework 4.7 開始 .NET Framework 版本所支援的所有高 DPI 感知功能。 一般來說，這適用于大部分的 Windows Forms 應用程式。 不過，您可能會想要退出宣告一或多個個別的功能。 執行此作業最重要的原因是您現有的應用程式程式碼已處理該功能。  例如，如果您的應用程式處理自動調整，您可能會想要停用自動調整大小功能，如下所示：
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
@@ -84,31 +82,31 @@ ms.locfileid: "61966938"
 </System.Windows.Forms.ApplicationConfigurationSection>
 ```
 
-如需個別的索引鍵和其值的清單，請參閱 < [Windows Form 加入組態項目](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)。
+如需個別金鑰和其值的清單，請參閱[Windows Forms 新增設定元素](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)。
 
 ## <a name="new-dpi-change-events"></a>新的 DPI 變更事件
 
-從.NET Framework 4.7 開始，三個新的事件可讓您以程式設計方式處理動態 DPI 變更：
+從 .NET Framework 4.7 開始，三個新的事件可讓您以程式設計方式處理動態 DPI 變更：
 
-- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>這會引發之後的父控制項的 DPI 變更事件以程式設計方式變更控制項的 DPI 設定或表單發生時。
-- <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>這會引發其父控制項的 DPI 變更事件之前以程式設計方式變更控制項的 DPI 設定或表單發生時。
-- <xref:System.Windows.Forms.Form.DpiChanged>其中目前顯示表單的顯示裝置上的 DPI 設定變更時引發。
+- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>，當控制項的 DPI 設定在其父控制項或表單發生 DPI 變更事件之後，以程式設計方式變更時，就會引發此錯誤。
+- <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>，當控制項的 DPI 設定在其父控制項或表單發生 DPI 變更事件之前，以程式設計方式變更時，就會引發此錯誤。
+- <xref:System.Windows.Forms.Form.DpiChanged>，當目前顯示表單的顯示裝置上的 DPI 設定變更時，就會引發此情況。
 
-## <a name="new-helper-methods-and-properties"></a>新的協助程式方法和屬性
+## <a name="new-helper-methods-and-properties"></a>新的 helper 方法和屬性
 
-.NET Framework 4.7 也新增了許多新的協助程式方法和屬性提供的 DPI 縮放比例的相關資訊，可讓您執行 DPI 縮放比例。 它們包括：
+.NET Framework 4.7 也會新增一些新的 helper 方法和屬性，以提供 DPI 縮放比例的相關資訊，並可讓您執行 DPI 縮放比例。 它們包括：
 
-- <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>其中會將值從邏輯裝置像素為單位。
+- <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>，會將值從邏輯轉換為裝置圖元。
 
-- <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>這會調整邏輯裝置的 DPI 點陣圖影像。
+- <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>，可將點陣圖影像調整為裝置的邏輯 DPI。
 
-- <xref:System.Windows.Forms.Control.DeviceDpi%2A>它會傳回目前裝置的 DPI。
+- <xref:System.Windows.Forms.Control.DeviceDpi%2A>，它會傳回目前裝置的 DPI。
 
-## <a name="versioning-considerations"></a>版本控制考量
+## <a name="versioning-considerations"></a>版本設定考慮
 
-除了.NET Framework 4.7 和 Windows 10 Creators Update 上執行，它不相容於高 DPI 的改進功能環境也可能會執行您的應用程式。 在此情況下，您必須開發您的應用程式的後援。 您可以執行[自訂繪圖](./controls/user-drawn-controls.md)來處理調整。
+除了在 .NET Framework 4.7 和 Windows 10 建立者更新上執行之外，您的應用程式也可能會在與高 DPI 改良功能不相容的環境中執行。 在此情況下，您必須為您的應用程式開發一個 fallback。 您可以執行此動作，以執行[自訂繪圖](./controls/user-drawn-controls.md)來處理調整。
 
-若要這樣做，您也需要判斷您的應用程式執行所在的作業系統。 您可以使用如下所示的程式碼來這麼做：
+若要這樣做，您也必須判斷您的應用程式執行所在的作業系統。 您可以使用如下的程式碼來執行此動作：
 
 ```csharp
 // Create a reference to the OS version of Windows 10 Creators Update.
@@ -122,15 +120,15 @@ Console.WriteLine(Environment.OSVersion.VersionString);
 Console.WriteLine(Environment.OSVersion.Version.CompareTo(OsMinVersion));
 ```
 
-請注意您的應用程式將不會成功地偵測 Windows 10 是否未列出為支援的作業系統，應用程式資訊清單中。
+請注意，如果您的應用程式未在應用程式資訊清單中列為受支援的作業系統，則不會成功偵測到 Windows 10。
 
-您也可以檢查應用程式建置的.NET framework 版本：
+您也可以檢查用來建立應用程式的 .NET Framework 版本：
 
 ```csharp
 Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [Windows Form 加入組態項目](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
+- [Windows Forms 新增 Configuration 元素](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
 - [調整 Windows Forms 的大小和比例](adjusting-the-size-and-scale-of-windows-forms.md)

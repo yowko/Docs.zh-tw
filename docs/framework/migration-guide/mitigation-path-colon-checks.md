@@ -2,12 +2,12 @@
 title: 風險降低︰路徑冒號檢查
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
-ms.openlocfilehash: ee71f6ef1e70509e772aee2cc75d00c33122a92e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e88643fea3bd507289436f41880a2de34117884f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126224"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457904"
 ---
 # <a name="mitigation-path-colon-checks"></a>風險降低︰路徑冒號檢查
 從以 .NET Framework 4.6.2 為目標的應用程式開始，為了支援先前不支援的路徑 (就長度和格式兩方面) 而有數項變更。 特別是提供更正確的適當磁碟機分隔符號語法 (冒號) 檢查。  
@@ -32,4 +32,4 @@ ms.locfileid: "73126224"
   
 ## <a name="see-also"></a>請參閱
 
-- [重定目標變更](retargeting-changes-in-the-net-framework-4-6-2.md)
+- [應用程式相容性](application-compatibility.md)

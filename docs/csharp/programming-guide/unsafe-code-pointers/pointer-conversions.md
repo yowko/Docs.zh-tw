@@ -5,19 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 81b2110e6a571e174693fd272d1c6b4bf44dbae3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: b0a517eacc505376c9502e9d095c7aac0cd54555
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588214"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417524"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>指標轉換 (C# 程式設計手冊)
 下表顯示預先定義的隱含指標轉換。 在許多情況下可能會發生隱含轉換，包括方法叫用和指派陳述式。  
   
 ## <a name="implicit-pointer-conversions"></a>隱含指標轉換  
   
-|從|以|  
+|From|若要|  
 |----------|--------|  
 |任何指標類型|void*|  
 |null|任何指標類型|  
@@ -26,7 +26,7 @@ ms.locfileid: "69588214"
   
 ## <a name="explicit-pointer-conversions"></a>明確指標轉換  
   
-|從|以|  
+|From|若要|  
 |----------|--------|  
 |任何指標類型|任何其他指標類型|  
 |sbyte、byte、short、ushort、int、uint、long 或 ulong|任何指標類型|  
@@ -39,11 +39,11 @@ ms.locfileid: "69588214"
   
  [!code-csharp[csProgGuidePointers#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#4)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [指標型別](./pointer-types.md)
-- [型別](../../language-reference/keywords/types.md)
-- [Unsafe.DangerousAPI](../../language-reference/keywords/unsafe.md)
+- [型別](/dotnet/csharp/language-reference/keywords)
+- [unsafe](../../language-reference/keywords/unsafe.md)
 - [fixed 陳述式](../../language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../language-reference/operators/stackalloc.md)

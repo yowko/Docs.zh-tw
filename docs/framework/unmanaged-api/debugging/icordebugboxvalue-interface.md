@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: 3d3ae7e2-97d4-46de-a2c3-cb78f3490f9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c21e5bb70815fa54d1b458894ca33becde204758
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a40e12655106cca01add065c2f95384b0eb1a286
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912914"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122802"
 ---
 # <a name="icordebugboxvalue-interface"></a>ICorDebugBoxValue 介面
 
-"ICorDebugHeapValue" 的子類別, 表示已裝箱的實值類別物件。  
+"ICorDebugHeapValue" 的子類別，表示已裝箱的實值類別物件。  
   
 ## <a name="methods"></a>方法  
   
@@ -43,10 +41,10 @@ ms.locfileid: "69912914"
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 0c79ba3dd42f2e65eb241409946e921577ced5f1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 6d7401f9614e663351968dc6a2f85548735a176d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920057"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460427"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>透過建立 ControlTemplate 自訂現有控制項的外觀
 <a name="introduction"></a><xref:System.Windows.Controls.ControlTemplate> 指定控制項的視覺化結構和視覺效果行為。 您可以藉由提供新的 <xref:System.Windows.Controls.ControlTemplate>來自訂控制項的外觀。 當您建立 <xref:System.Windows.Controls.ControlTemplate>時，您會取代現有控制項的外觀，而不會變更其功能。 例如，您可以將應用程式中的按鈕改成四捨五入，而不是預設的方形圖形，但是按鈕仍然會引發 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件。
@@ -262,4 +262,4 @@ ms.locfileid: "72920057"
 
 ## <a name="see-also"></a>請參閱
 
-- [設定樣式和範本](styling-and-templating.md)
+- [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

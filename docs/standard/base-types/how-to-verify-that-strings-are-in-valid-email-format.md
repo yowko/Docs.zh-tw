@@ -1,5 +1,5 @@
 ---
-title: 如何：確認字串是否為有效的電子郵件格式
+title: 如何確認字串是否為有效的電子郵件格式
 ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,16 +18,14 @@ helpviewer_keywords:
 - email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 352808e561a0f59d41f092eb7c70c40a591da5b6
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: c02fc215fa66951ae3333175191ab96a226a2afe
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846773"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197578"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>如何：確認字串是否為有效的電子郵件格式
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>如何確認字串是否為有效的電子郵件格式
 
 下列範例會使用規則運算式來確認字串是否為有效的電子郵件格式。
 
@@ -52,7 +50,7 @@ ms.locfileid: "72846773"
 [!code-csharp[RegularExpressions.Examples.Email#7](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#7)]
 [!code-vb[RegularExpressions.Examples.Email#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#7)]
 
-在此範例中，正則運算式模式 ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` 會如下列圖例所示加以解讀。 正則運算式是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 旗標來編譯。
+在此範例中，正則運算式模式 ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$`` 會如下列圖例所示加以解讀。 正則運算式是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 旗標來編譯。
 
 模式 `^`：在字串開頭開始比對。
 
@@ -64,7 +62,7 @@ ms.locfileid: "72846773"
 
 模式 `(\.(?!\.))`：如果下一個字元是句點，則比對。 如果不是句號，則向右合樣下一個字元並繼續比對。 `(?!\.)` 是零寬度的右不合樣 (Negative Lookahead) 判斷提示，可防止電子郵件地址的本機部分出現兩個連續的句號。
 
-模式 ``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]``：如果下一個字元不是句號，則比對任何文字字元或下列其中一個字元：-！ # $% & ' * +/=？ ^ '{}| ~
+模式 ``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]``：如果下一個字元不是句號，則比對任何文字字元或下列其中一個字元：-！ # $% & '\*+/=？ ^\`{}| ~
 
 模式 ``((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*``：比對交替模式（句號後面接著非句號，或其中一個字元）零次或多次。
 

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - reflection, dynamic assembly
 - assemblies, collectible
 - collectible assemblies, retrieving
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b26da264b2da40e19db4bc5e3b3575505f5c979c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 85eacff22cf2e1c0b8c3d74a4971de035dfafbe4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637738"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130283"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>動態類型產生的可回收組件
 
@@ -80,6 +78,6 @@ ms.locfileid: "54637738"
 - **執行緒靜態資料**       
    不支援執行緒靜態變數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [發出動態方法和組件](emitting-dynamic-methods-and-assemblies.md)

@@ -7,14 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc8381f8059e37c6c520c2402289124a506188e8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ecc1e234b03cb45075c40ff6698f71f8ce18d0de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968419"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128972"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>同步多執行緒處理的資料
 
@@ -32,10 +30,10 @@ ms.locfileid: "69968419"
   
  通用語言執行平台提供執行緒模型，其中類別分為一些分類，可以根據需求以各種不同的方式同步處理。 下表顯示為指定同步處理分類的欄位和方法提供哪些同步處理支援。  
   
-|分類|全域欄位|靜態欄位|靜態方法|執行個體欄位|執行個體方法|特定程式碼區塊|  
+|Category|全域欄位|靜態欄位|靜態方法|執行個體欄位|執行個體方法|特定程式碼區塊|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
 |沒有同步處理|否|否|否|否|否|否|  
-|同步處理的內容|否|否|否|yes|是|否|  
+|同步處理的內容|否|否|否|[是]|[是]|否|  
 |同步程式碼區域|否|否|只有當標記時|否|只有當標記時|只有當標記時|  
 |手動同步處理|手動|手動|手動|手動|手動|手動|  
   
@@ -69,7 +67,7 @@ ms.locfileid: "69968419"
  
 僅限在 .NET Framework 和 Xamarin 應用程式中，您可以在任何 <xref:System.ContextBoundObject> 上使用 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> 來同步所有執行個體方法和欄位。 相同內容網域中所有物件都共用相同的鎖定。 允許多個執行緒存取方法和欄位，但是一次只允許單一執行緒。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)

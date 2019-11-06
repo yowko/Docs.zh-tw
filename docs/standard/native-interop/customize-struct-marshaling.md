@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: b174a817e82f9a9f123c79581656cc8e7179b435
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f4b8402413f4d2f558d8e61ad4f10490dece9835
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929043"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423997"
 ---
 # <a name="customizing-structure-marshaling"></a>自訂結構封送處理
 
@@ -26,7 +26,7 @@ ms.locfileid: "70929043"
 
 **✔️ 務必**只在封送處理中使用 `LayoutKind.Explicit` (當您的原生結構也有明確的配置 (例如聯集) 時)。
 
-**❌ 避免**在於非 Windows 平台上封送處理結構時使用 `LayoutKind.Explicit`。 .NET Core 執行階段不支援以傳值方式傳遞明確結構至 Intel 或 AMD 64 位元非 Windows 系統上的原生函式。 不過，執行階段支援在所有平台上以傳參考方式傳遞明確結構。
+如果您需要以 .NET Core 3.0 之前的執行時間為目標，請 **❌ 避免**在非 Windows 平臺上封送處理結構時使用 `LayoutKind.Explicit`。 3\.0 之前的 .NET Core 執行時間不支援在 Intel 或 AMD 64 位非 Windows 系統上，以傳值方式將明確結構傳遞至原生函式。 不過，執行階段支援在所有平台上以傳參考方式傳遞明確結構。
 
 ## <a name="customizing-boolean-field-marshaling"></a>自訂布林值欄位封送處理
 
@@ -249,7 +249,7 @@ struct UTF8String
 > [!NOTE]
 > 使用 <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> 需要 .NET Framework 4.7 (或更新版本) 或 .NET Core 1.1 (或更新版本)。 它在 .NET Standard 2.0 中不提供。
 
-若您要處理 COM API，您可能必須將字串封送處理為 `BSTR`。 使用 <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> 值，您可以將字串封送處理為 `BSTR`。
+若您要處理 COM API，您可能必須將字串封送處理為 `BSTR`。 使用 <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> 值時，您可以將字串封送處理為 `BSTR`。
 
 ```csharp
 public struct BString

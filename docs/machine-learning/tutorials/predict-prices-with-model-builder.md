@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 314b637b4a43725f6daeefa6097544567dcaabc2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f5010f944dba007e24d3c0e22d4e339f9ed0522a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124294"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459181"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>教學課程：使用模型產生器的回歸預測價格
 
@@ -68,7 +68,7 @@ ms.locfileid: "73124294"
     - **payment_type：** 付款方式 (現金或信用卡) 是一項特徵。
     - **fare_amount：** 計程車車資總計是標籤。
 
-`label` 是您希望進行預測的資料行。 執行迴歸工作時，目標是預測數值。 在這個價格預測案例中，會預測計程車車程的成本。 因此，**fare_amount** 為標籤。 所識別 `features` 則是您提供模型來預測 `label` 的輸入。 在此情況下，除了**trip_time_in_secs**以外，其餘的資料行會當做特徵或輸入來預測費用量。
+`label` 是您希望進行預測的資料行。 執行迴歸工作時，目標是預測數值。 在這個價格預測案例中，會預測計程車車程的成本。 因此，**fare_amount** 為標籤。 所識別 `features` 則是您提供模型來預測 `label` 的輸入。 在此情況下，除了**trip_time_in_secs**以外，其餘的資料行會當做特徵或輸入來預測費用金額。
 
 ## <a name="choose-a-scenario"></a>選擇案例
 
@@ -84,7 +84,7 @@ ms.locfileid: "73124294"
 1. 在模型產生器工具的資料步驟中，從資料來源下拉式清單中選取 [檔案]。
 1. 選取 [選取檔案] 文字方塊旁邊的按鈕，然後使用 [檔案總管] 進行瀏覽，並選取 *Data* 目錄中的 *taxi-fare-test.csv*
 1. 在 [*要預測的資料行（標籤）* ] 下拉式清單中選擇 [ *fare_amount* ]。
-1. 展開 [*輸入資料行（功能）* ] 下拉式清單，並取消核取 [ *trip_time_in_secs* ] 資料行，在定型期間將它排除為一項功能  流覽至模型產生器工具的 [定型] 步驟。
+1. 展開 [*輸入資料行（功能）* ] 下拉式清單，然後取消核取 [ *trip_time_in_secs* ] 資料行，在定型期間將其排除為功能。  流覽至模型產生器工具的 [定型] 步驟。
 
 ## <a name="train-the-model"></a>將模型定型
 
@@ -180,4 +180,4 @@ ms.locfileid: "73124294"
 - [模型建立器案例](../automate-training-with-model-builder.md#scenarios)
 - [迴歸](../resources/glossary.md#regression)
 - [迴歸模型計量](../resources/metrics.md#metrics-for-regression)
-- [NYC TLC 計程車旅程資料集](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) \(英文\)
+- [NYC TLC 計程車旅程資料集](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) \(英文\)

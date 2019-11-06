@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: b5ef70967c8404dc5ce5b816bb9a1c3b1d7e4230
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c7e314e9712c3b569ecc813a72670942651feda1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117354"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454736"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>使用命令列開始在 Windows/Linux/macOS 上使用 .NET Core
 
@@ -19,7 +19,7 @@ ms.locfileid: "71117354"
 
 如果您不熟悉 .NET Core CLI 工具組，請參閱 [.NET Core SDK 概觀](../tools/index.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - [.NET Core SDK 2.1](https://dotnet.microsoft.com/download)或更新版本。
 - 您選擇的文字編輯器或程式碼編輯器。
@@ -39,18 +39,18 @@ dotnet run
 
 1. `dotnet new console`
 
-   [`dotnet new`](../tools/dotnet-new.md) 使用建置主控台應用程式時所需的相依性，來建立最新的 `Hello.csproj` 專案檔。  它也會建立 `Program.cs`，這個基本檔案包含了應用程式的進入點。
+   [`dotnet new`](../tools/dotnet-new.md)會使用建立主控台應用程式所需的相依性，建立最新的*Hello .csproj*專案檔案。 它也會建立一個*Program.cs*，這是一個基本檔案，其中包含應用程式的進入點。
 
-   `Hello.csproj`：
+   您*好，.csproj*：
 
-   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+   [!code-xml[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
 
    專案檔會指定還原相依性和建置程式所需的所有內容。
 
    - `OutputType` 標記會指定我們正在建置可執行檔，亦即主控台應用程式。
    - `TargetFramework` 標記會指定做為目標的 .NET 實作。 在進階案例中，您可以指定多個目標架構，並在單一作業中建置這全部的架構。 在本教學課程中，我們將著重於僅針對 .NET Core 2.1 來建置。
 
-   `Program.cs`：
+   *Program.cs*：
 
    [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]
 
@@ -169,7 +169,7 @@ Hello World!
 
 就是這麼容易！ 現在，您可以開始使用這裡學到的基本概念，建立您自己的程式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用 .NET Core CLI 工具組織和測試專案](testing-with-cli.md)
 - [使用 CLI 發佈 .NET Core 應用程式](../deploying/deploy-with-cli.md)

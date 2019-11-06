@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b78789344050fd5e1cb0ee3492bf330fbf92bc88
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 82fa0903474ee04b767fd9c68812efe7f0cc4fa0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798930"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124165"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 函式
 載入類型程式庫，並使用提供的[ITypeLibResolver 介面](itypelibresolver-interface.md)來解析任何內部參考的類型程式庫。  
@@ -70,30 +68,30 @@ HRESULT LoadTypeLibWithResolver(
 |`TYPE_E_CANTLOADLIBRARY`|無法載入類型程式庫或 DLL。|  
   
 ## <a name="remarks"></a>備註  
- [Tlbexp.exe （類型程式庫匯出工具）](../../tools/tlbexp-exe-type-library-exporter.md)會在元件`LoadTypeLibWithResolver`對類型程式庫轉換過程中呼叫函式。  
+ [Tlbexp.exe （類型程式庫匯出工具）](../../tools/tlbexp-exe-type-library-exporter.md)會在元件對類型程式庫轉換過程中呼叫 `LoadTypeLibWithResolver` 函式。  
   
  此函式會以最少的登錄存取權來載入指定的類型程式庫。 接著，函式會檢查類型程式庫中是否有內部參考的類型程式庫，其中每一個都必須載入並加入至父類型程式庫。  
   
- 在可以載入參考的類型程式庫之前，必須先將其參考檔案路徑解析成完整的檔案路徑。 這項作業是透過[ITypeLibResolver 介面](itypelibresolver-interface.md)所提供的`pTlbResolver` [ResolveTypeLib 方法](resolvetypelib-method.md)來完成，它會傳入參數。  
+ 在可以載入參考的類型程式庫之前，必須先將其參考檔案路徑解析成完整的檔案路徑。 這項作業是透過[ITypeLibResolver 介面](itypelibresolver-interface.md)所提供的[ResolveTypeLib 方法](resolvetypelib-method.md)來完成，這會在 `pTlbResolver` 參數中傳遞。  
   
- 已知參考類型程式庫的完整檔案路徑時， `LoadTypeLibWithResolver`函式會載入參考的類型程式庫，並將其加入至父類型程式庫，並建立組合的主要類型程式庫。  
+ 已知參考類型程式庫的完整檔案路徑時，`LoadTypeLibWithResolver` 函式會載入參考的類型程式庫，並將其加入至父類型程式庫，並建立組合的主要類型程式庫。  
   
- 在函式解析並載入所有內部參考的類型程式庫之後，它會傳回`pptlib`參數中主要已解析之類型程式庫的參考。  
+ 在函式解析並載入所有內部參考的類型程式庫之後，它會傳回 `pptlib` 參數中主要已解析之類型程式庫的參考。  
   
- 函式通常是由[tlbexp.exe （類型程式庫匯出工具）](../../tools/tlbexp-exe-type-library-exporter.md)所呼叫，它會在`pTlbResolver`參數中提供自己的內部[ITypeLibResolver 介面](itypelibresolver-interface.md)實作為。 `LoadTypeLibWithResolver`  
+ `LoadTypeLibWithResolver` 函式通常是由[tlbexp.exe （類型程式庫匯出工具）](../../tools/tlbexp-exe-type-library-exporter.md)所呼叫，這會在 `pTlbResolver` 參數中提供自己的內部[ITypeLibResolver 介面](itypelibresolver-interface.md)實作為。  
   
- 如果您直接`LoadTypeLibWithResolver`呼叫，就必須提供自己的[ITypeLibResolver 介面](itypelibresolver-interface.md)執行。  
+ 如果您直接呼叫 `LoadTypeLibWithResolver`，就必須提供自己的[ITypeLibResolver 介面](itypelibresolver-interface.md)執行。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** TlbRef。h  
   
- **LIBRARY:** TlbRef.lib  
+ 連結**庫：** TlbRef .lib  
   
  **.NET Framework 版本：** 3.5、3.0、2。0  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Tlbexp Helper 函式](index.md)
 - [LoadTypeLibEx 函式](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

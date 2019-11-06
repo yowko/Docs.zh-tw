@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea38ae20-7e0a-427a-be77-d78fae719d82
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ffddb8242b6627239a99bd9223b98762910b831
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20315dfc426b63f2d526f3481756e165b388b41e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753245"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137603"
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a>ICorDebugEval2::CreateValueForType 方法
-取得指定的型別，新 ICorDebugValue 其初始值為零或 null 指標。  
+取得指定類型之新 ICorDebugValue 的指標，其初始值為零或 null。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,21 +36,21 @@ HRESULT CreateValueForType (
   
 ## <a name="parameters"></a>參數  
  `pType`  
- [in]ICorDebugType 物件，表示類型的指標。  
+ 在代表類型之 ICorDebugType 物件的指標。  
   
  `ppValue`  
- [out]指標的位址`ICorDebugValue`物件，表示值。  
+ 脫銷表示值之 `ICorDebugValue` 物件的位址指標。  
   
 ## <a name="remarks"></a>備註  
- `CreateValueForType` 一般化[icordebugeval:: Createvalue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md)可讓您指定任意的物件類型，包括建構類型這類`List<int>`。 這個方法的唯一目的是產生可傳遞至函式評估的值。  
+ `CreateValueForType` 一般化[ICorDebugEval：： CreateValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) ，可讓您指定任意物件類型，包括如 `List<int>`的結構化類型。 此方法的唯一目的是產生可傳遞至函數評估的值。  
   
- 類型必須是類別或實值型別。 您無法使用這個方法來建立陣列的值或字串值。  
+ 型別必須是類別或實值型別。 您不能使用這個方法來建立陣列值或字串值。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

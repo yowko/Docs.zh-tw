@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Delete function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a1bf9bd5d93d1affee649588138456269411d280
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6b8f287be831702dd31a8335f9b2f6447bcee540
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798677"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127657"
 ---
 # <a name="delete-function"></a>Delete 函式
 
@@ -48,7 +46,7 @@ HRESULT Delete (
 在[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)實例的指標。
 
 `wszName`\
-在要刪除的屬性名稱。 `wszName`必須是有效`LPCWSTR`的指標。
+在要刪除的屬性名稱。 `wszName` 必須是有效 `LPCWSTR`的指標。
 
 ## <a name="return-value"></a>傳回值
 
@@ -74,10 +72,10 @@ HRESULT Delete (
 
 **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
-**標頭：** WMINet_Utils.idl
+**標頭：** WMINet_Utils .idl
 
 **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WMI 和效能計數器（非受控 API 參考）](index.md)

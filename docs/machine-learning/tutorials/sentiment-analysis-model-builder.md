@@ -64,6 +64,7 @@ ms.locfileid: "72180276"
 1 | == 沒問題! == 嗯，我會把狂野 WIKI 弄壞!!!
 0 | 我希望這有幫助。
 
+
 ## <a name="choose-a-scenario"></a>選擇案例
 
 ![Visual Studio 中的模型產生器 wizard](./media/sentiment-analysis-model-builder/model-builder-screen.png)

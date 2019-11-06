@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b1b432a-d234-4002-839b-81366c3a8bdc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d5fbf83690f616556774e8f279e1077fccdb8baf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 497a115b980bb58a3906fda68d7ff564efe78089
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779917"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127834"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>ICLRValidator::Validate 方法
-驗證的可攜式執行檔 (PE) 或 Microsoft intermediate language (MSIL)，在指定的檔案。  
+驗證指定檔案中的可移植執行檔（PE）或 Microsoft 中繼語言（MSIL）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,49 +42,49 @@ HRESULT Validate (
   
 ## <a name="parameters"></a>參數  
  `veh`  
- [in]指標`IVEHandler`處理驗證錯誤的執行個體。  
+ 在處理驗證錯誤之 `IVEHandler` 實例的指標。  
   
  `ulAppDomainId`  
- [in]目前的識別項<xref:System.AppDomain>。  
+ 在目前 <xref:System.AppDomain>的識別碼。  
   
  `ulFlags`  
- [in]組合[ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md)值，表示應該執行的驗證類型。  
+ 在[ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md)值的組合，表示應該執行的驗證類型。  
   
  `ulMaxError`  
- [in]結束驗證之前允許的錯誤數目上限。  
+ 在結束驗證之前允許的錯誤數目上限。  
   
  `token`  
- [in]未使用。  
+ 在未使用.  
   
  `fileName`  
- [in]要驗證之檔案的名稱。  
+ 在要驗證的檔案名。  
   
  `pe`  
- [in]檔案緩衝區的指標。  
+ 在檔案緩衝區的指標。  
   
  `ulSize`  
- [in]以位元組為單位，以驗證檔案的大小。  
+ 在要驗證之檔案的大小（以位元組為單位）。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`Validate` 已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
-|HOST_E_TIMEOUT|呼叫已逾時。|  
-|HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL CLR 已不再可在此程序中使用。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|S_OK|已成功傳回 `Validate`。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫超時。|  
+|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
+|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
+|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** IValidator.idl, IValidator.h  
+ **標頭：** IValidator .idl，IValidator。h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRValidator 介面](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)

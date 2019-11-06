@@ -7,23 +7,23 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: bf5c13f59b9e9c4774fde952a52289abb2815b65
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 930e8a0013dd601aaafcd81340b3b9b8b69f8fdd
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395986"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458504"
 ---
 # <a name="white-space-processing-in-xaml"></a>XAML 中的空白字元處理
-XAML 的語言規則狀態，必須由 @no__t 0 處理器實處理大幅泛空白字元。 本主題說明這些 XAML 語言規則， 此外，它也記載了由 XAML 處理器的 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 實作為進行序列化所定義的其他空白字元處理和 XAML 寫入器。  
+XAML 的語言規則狀態，必須由 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器執行處理顯著的空白字元。 本主題說明這些 XAML 語言規則， 它也記載了由 XAML 處理器的 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 實作為序列化的 XAML 寫入器所定義的其他空白字元處理。  
   
 <a name="whitespace_definition"></a>   
 ## <a name="white-space-definition"></a>空白字元定義  
- 與 [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)] 一致，[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 中的空白字元為空格、換行字元和索引標籤。這些會分別對應至 Unicode 值0020、000A 和0009。  
+ 與 [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]一致，[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 中的空白字元包括空格、換行字元和索引標籤。這些會分別對應至 Unicode 值0020、000A 和0009。  
   
 <a name="whitespace_normalization"></a>   
 ## <a name="white-space-normalization"></a>空白字元正規化  
- 根據預設，當 @no__t 0 處理器處理 @no__t 1 檔案時，就會發生下列空白字元正規化：  
+ 根據預設，當 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器處理 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 檔案時，就會發生下列空白字元正規化：  
   
 1. 東亞字元間的換行字元會遭到移除。 如需這個詞彙的定義，請參閱本主題稍後的＜東亞字元＞一節。  
   
@@ -51,7 +51,7 @@ XAML 的語言規則狀態，必須由 @no__t 0 處理器實處理大幅泛空�
   
 <a name="preserving_whitespace"></a>   
 ## <a name="preserving-white-space"></a>保留空白字元  
- 有數種方法可保留來源中的空白字元 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]，以進行最終簡報，而不會受到 @no__t 1 處理器泛空白字元正規化的影響。  
+ 有數種技巧可保留來源 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 中的泛空白字元，以進行最終簡報，而不會受到 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器泛空白字元正規化的影響。  
   
  **xml： space = "preserve"** ：在專案層級指定此屬性，這是想要保留的空白字元。 這樣做會保留所有空白字元，其中包括程式碼編輯應用程式為了以視覺上直覺的巢狀結構來「美化」對齊項目可能加入的空格。 不過，這些空格的呈現與否是由包含項目的內容模型所決定。 請避免在根層級指定 `xml:space="preserve"`，因為不論您如何設定屬性，大部分的物件模型都不會將空白字元視為重要。 全域設定 `xml:space` 可能會對某些實作中的 XAML 處理 (特別是序列化) 帶來效能影響。 較好的作法是，只在轉譯字串內空白字元的專案層級上設定屬性，或使用空白字元的重要集合。  
   
@@ -70,12 +70,12 @@ XAML 的語言規則狀態，必須由 @no__t 0 處理器實處理大幅泛空�
   
  即使是可以接受字串的內容模型，這些內容模型內的預設行為是，任何保留的空白字元都不會被視為重要的。 例如，<xref:System.Windows.Controls.ListBox> 會接受 <xref:System.Collections.IList>，但不會保留和呈現空白字元（例如，每個 <xref:System.Windows.Controls.ListBoxItem> 之間的分行符號）。 如果您嘗試使用換行字元做為 <xref:System.Windows.Controls.ListBoxItem> 項目之字串間的分隔符號，則完全無法運作；以換行字元分隔的字串會視為一個字串和一個項目。  
   
- 將空白字元視為重要的集合通常是非固定格式檔模型的一部分。 支援空白字元保留行為的主要集合 <xref:System.Windows.Documents.InlineCollection>。 這個集合類別是使用 <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> 來宣告;找到此屬性時，@no__t 1 處理器會將集合內的空白字元視為重要。 在 @no__t 1 表示的集合中，`xml:space="preserve"` 和空白字元的組合，會保留並呈現所有空白字元。 @No__t-1 內的 `xml:space="default"` 和空白字元的組合，會導致稍早所述的初始空白字元正規化，這會在特定位置留下一個空格，而這些空格會保留並轉譯。 您可以自行決定要使用哪一種行為，而且您應該選擇性地使用 `xml:space` 來允許您想要的行為。  
+ 將空白字元視為重要的集合通常是非固定格式檔模型的一部分。 支援空白字元保留行為的主要集合 <xref:System.Windows.Documents.InlineCollection>。 這個集合類別是使用 <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>所宣告。找到這個屬性時，[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器會將集合內的空白字元視為重要。 <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> 表示的集合中，`xml:space="preserve"` 和空白字元的組合，就是保留並轉譯所有空白字元。 <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> 中 `xml:space="default"` 和空白字元的組合，會導致先前所述的初始空白字元正規化，這會在特定位置留下一個空格，而這些空格會被保留和轉譯。 您可以自行決定要使用哪一種行為，而且您應該選擇性地使用 `xml:space` 來允許您想要的行為。  
   
- 此外，在非固定格式檔模型中理貨單 linebreak 的某些內嵌專案，即使在空白字元的重要集合中也不會引進額外的空間。 例如，<xref:System.Windows.Documents.LineBreak> 元素的用途與 HTML 中的 \<BR/> 標記相同，因此在標記中的可讀性，通常會以撰寫的換行字元與任何後續文字區隔 <xref:System.Windows.Documents.LineBreak>。 該換行字元不應該正規化為下一行的前置空格。 若要啟用該行為，<xref:System.Windows.Documents.LineBreak> 元素的類別定義會套用 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>，然後由 @no__t 2 處理器來解讀，表示一律會修剪 <xref:System.Windows.Documents.LineBreak> 周圍的空白字元。  
+ 此外，在非固定格式檔模型中理貨單 linebreak 的某些內嵌專案，即使在空白字元的重要集合中也不會引進額外的空間。 例如，<xref:System.Windows.Documents.LineBreak> 元素的用途與 HTML 中的 \<BR/> 標記相同，因此在標記中的可讀性，通常會以撰寫的換行字元與任何後續文字區隔 <xref:System.Windows.Documents.LineBreak>。 該換行字元不應該正規化為下一行的前置空格。 若要啟用該行為，<xref:System.Windows.Documents.LineBreak> 專案的類別定義會套用 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>，然後由 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器加以解讀，以表示一律會修剪 <xref:System.Windows.Documents.LineBreak> 周圍的空白字元。  
   
 ## <a name="see-also"></a>請參閱
 
-- [XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [XAML 概觀 (WPF)](../../desktop-wpf/fundamentals/xaml.md)
 - [XML 字元實體和 XAML](xml-character-entities-and-xaml.md)
 - [xml： XAML 中的空間處理](xml-space-handling-in-xaml.md)

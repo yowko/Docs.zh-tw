@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0783c6ab80f3a07bd7b7e5a005444218c17e85fb
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 25615dd43f1ae4f56c7bced7f79a0612093a21fb
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035464"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191690"
 ---
 # <a name="contributing"></a>貢獻
 
@@ -15,9 +15,9 @@ ms.locfileid: "73035464"
 
 本文件涵蓋參與 [.NET 文件網站](https://docs.microsoft.com/dotnet)所裝載文章和程式碼範例的程序。 貢獻可以簡單到像錯字更正，或是複雜到像是新的文章。
 
+- [使用規範](#dos-and-donts)
 - [投稿程序](#process-for-contributing)
 - [C# 互動式體驗](#the-c-interactive-experience)
-- [使用規範](#dos-and-donts)
 - [參與者授權合約](#contributor-license-agreement)
 
 此存放庫包含 .NET 的概念文件。 .NET 文件網站除了此存放庫之外，還使用多個存放庫作為建置基礎：
@@ -28,6 +28,24 @@ ms.locfileid: "73035464"
     此存放庫的問題和工作會在[dotnet/dotnet-api-檔/問題](https://github.com/dotnet/dotnet-api-docs/issues)中進行追蹤。
 - [.NET Compiler Platform SDK 參考](https://github.com/dotnet/roslyn-api-docs)  
     此存放庫的問題和變成會在[dotnet/檔/問題](https://github.com/dotnet/docs/issues)中進行追蹤。
+
+## <a name="dos-and-donts"></a>可進行及不可進行的事項
+
+下列清單顯示您參與 .NET 文件時，應謹記在心的一些指導規則：
+
+- 請**勿**以大量提取要求來讓我們大吃一驚。 而是請您先提出問題並開始討論，我們會在您投入大量的時間之前，先行確認方向。 若要進行大量變更，請將工作分成較小的 Pr （最多100個檔案）。 如果您的 PR 未遵循下列指導方針，則強烈建議使用此指導方針。
+- **請**查看目前[的抓取](https://github.com/dotnet/docs/labels/up-for-grabs)問題，以取得有關工作的建議。
+- **請**為每個工作建立一個 PR。 包含多個不相關變更的 Pr 比較難審視。 這會延遲評論和合併 Pr。 這項指導方針也適用于評論：我們不會在評論中建議不相關的變更。我們要求社區評論遵守此指導方針。
+- **請**提供您 PR 中工作的清楚描述。 請告訴我們變更的內容和原因。 「更新 article.md」的預設描述對審核者而言並不實用。
+- 請**不要**提交 pr 進行僅限樣式的變更，而不需要事先討論。 這些 Pr 需要花更多時間來審查準確度，而合併它們通常會造成與其他重要更新的合併衝突。 我們正努力遵循一致的風格，但我們正在進行平衡以處理其他工作。 當我們因其他原因而進行重大更新時，會將文章納入樣式一致性。 
+- **請務必**閱讀[樣式指南](./styleguide/template.md)與[語態和語氣](./styleguide/voice-tone.md)指導方針。 新的新增專案應遵循這些指導方針。
+- **請務必**在對文章進行作業之前，先在分叉上建立您自己的分支。
+- **請務必**遵循 [GitHub 流程的工作流程](https://guides.github.com/introduction/flow/)。
+- **請務必**利用部落格及推特 (或任何其他形式)，頻繁地發表您的文章！
+
+這些指導方針可協助我們尊重所有人的時間。 許多人都參與這些存放庫。 遵循這些指導方針，可讓我們更輕鬆地及時審查和合併您的 PR。 這些作法會將與其他社區成員和我們小組 Pr 的衝突降至最低。 由於未遵循這些指導方針的 Pr 通常會對美國和社區成員造成額外的工作，因此可能會拒絕這些 Pr。 如果您想要發生例外狀況，請先建立問題。
+
+> 注意：您可能注意到某些主題目前並未依循這裡及[風格指南](./styleguide/template.md)上指定的所有指導方針。 我們目前正在努力達到整個網站的一致性。
 
 ## <a name="process-for-contributing"></a>投稿程序
 
@@ -135,19 +153,6 @@ C# 互動式體驗改變了我們使用範例的方式。 訪客可以執行範�
 
 - 文章的範例如果會產生較大型的輸出，註解中就不應該包含該輸出。 一旦執行範例，它便會遮蔽程式碼。
 - 當文章的範例會示範某個主題，但輸出並非理解該主題的必要部分時。 例如，執行 LINQ 查詢來說明查詢語法後再於輸出集合中顯示每個項目的程式碼。
-
-## <a name="dos-and-donts"></a>可進行及不可進行的事項
-
-下列清單顯示您參與 .NET 文件時，應謹記在心的一些指導規則：
-
-- 請**勿**以大量提取要求來讓我們大吃一驚。 而是請您先提出問題並開始討論，我們會在您投入大量的時間之前，先行確認方向。 若要進行大量變更，請將工作分成較小的 Pr （最多100個檔案）。
-- **請務必**閱讀[樣式指南](./styleguide/template.md)與[語態和語氣](./styleguide/voice-tone.md)指導方針。
-- **請務必**使用[範本](./styleguide/template.md)檔案作為您開始工作的起點。
-- **請務必**在對文章進行作業之前，先在分叉上建立您自己的分支。
-- **請務必**遵循 [GitHub 流程的工作流程](https://guides.github.com/introduction/flow/)。
-- **請務必**利用部落格及推特 (或任何其他形式)，頻繁地發表您的文章！
-
-> 注意：您可能注意到某些主題目前並未依循這裡及[風格指南](./styleguide/template.md)上指定的所有指導方針。 我們目前正在努力達到整個網站的一致性。
 
 ## <a name="contributor-license-agreement"></a>參與者授權合約
 

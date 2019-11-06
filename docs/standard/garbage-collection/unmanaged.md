@@ -12,14 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6be45a3d03d8cff580653260081a20d518448237
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: e05cfb949ee3f206f212ca7015f3ff4c22cd2a12
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662737"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423030"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>清除 Unmanaged 資源
 
@@ -27,7 +25,7 @@ ms.locfileid: "67662737"
 
 如果您的類型使用 Unmanaged 資源，則應該執行下列作業：
 
-- 實作[處置模式](../../../docs/standard/design-guidelines/dispose-pattern.md)。 這樣會要求您提供 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 實作以便將 Unmanaged 資源進行決定性的釋放。 類型的消費者會在不再需要物件與其使用的資源時呼叫 <xref:System.IDisposable.Dispose%2A>。 <xref:System.IDisposable.Dispose%2A> 方法會立即釋放 Unmanaged 資源。
+- 實作[處置模式](implementing-dispose.md)。 這樣會要求您提供 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 實作以便將 Unmanaged 資源進行決定性的釋放。 類型的消費者會在不再需要物件與其使用的資源時呼叫 <xref:System.IDisposable.Dispose%2A>。 <xref:System.IDisposable.Dispose%2A> 方法會立即釋放 Unmanaged 資源。
 
 - 提供的用途是在您的類型消費者忘記呼叫 <xref:System.IDisposable.Dispose%2A> 時釋放 Unmanaged 資源。 執行此作業的方法有兩種：
 
@@ -39,9 +37,9 @@ ms.locfileid: "67662737"
 
 這樣類型的消費者就可以直接呼叫您的 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 實作來釋放 Unmanaged 資源所使用的記憶體。 當您正確實作 <xref:System.IDisposable.Dispose%2A> 方法時，安全控制代碼的 <xref:System.Object.Finalize%2A> 方法或是自有的 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法覆寫便會成為一種防護措施，可在未呼叫 <xref:System.IDisposable.Dispose%2A> 方法時清除資源。
 
-## <a name="in-this-section"></a>本節內容
+## <a name="in-this-section"></a>本章節內容
 
-[實作 Dispose 方法](../../../docs/standard/garbage-collection/implementing-dispose.md) - 描述如何實作[處置模式](../../../docs/standard/design-guidelines/dispose-pattern.md)以便釋放非受控資源。
+[實作 Dispose 方法](../../../docs/standard/garbage-collection/implementing-dispose.md) - 描述如何實作[處置模式](implementing-dispose.md)以便釋放非受控資源。
 
 [使用實作 IDisposable 的物件](../../../docs/standard/garbage-collection/using-objects.md) - 描述型別取用者如何確保呼叫其 <xref:System.IDisposable.Dispose%2A> 實作。 建議您使用 C# `using` 陳述式或 Visual Basic `Using` 陳述式執行這項作業。
 

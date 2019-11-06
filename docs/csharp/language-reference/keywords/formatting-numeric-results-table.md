@@ -8,18 +8,18 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 0f2b5bc54a0e9055d64a95dc229eaadf66687b43
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
-ms.translationtype: HT
+ms.openlocfilehash: 2cba5e704787ae6368b2543c985babf2fde3b4dd
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421964"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422747"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>格式化數值結果表 (C# 參考)
 
 下表顯示用來格式化數值結果的支援格式規範。 最後一個資料行中的格式化結果會對應至 "en-US" <xref:System.Globalization.CultureInfo>。
 
-|格式規範|說明|範例|結果|  
+|格式規範|描述|範例|結果|  
 |----------------------|-----------------|--------------|------------|  
 |C 或 c|貨幣|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
 |D 或 d|Decimal|`string s = $"{25:D5}";`|00025|  
@@ -50,11 +50,11 @@ ms.locfileid: "66421964"
 
 如需詳細資訊，請參閱[標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [格式化類型](../../../standard/base-types/formatting-types.md)
 - [複合格式](../../../standard/base-types/composite-formatting.md)
 - [字串內插補點](../tokens/interpolated.md)
-- [string](string.md)
+- [string](../builtin-types/reference-types.md)

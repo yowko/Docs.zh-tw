@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8176d732-c25c-4520-811d-e3310f339947
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 739670fb84eb0145fd8bf8073f453518487c38b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 22ec34c82d0f8e550dfc8941f2c048ebed6cf1d7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749580"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133029"
 ---
 # <a name="ihosttaskmanagergetstackguarantee-method"></a>IHostTaskManager::GetStackGuarantee 方法
-取得量的保證堆疊操作完成之後, 才能使用的堆疊空間，但處理程序關閉之前。  
+取得堆疊作業完成後，但在關閉進程之前，保證可以使用的堆疊空間量。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,17 +35,17 @@ HRESULT GetStackGuarantee(
   
 ## <a name="parameters"></a>參數  
  `pGuarantee`  
- [out]可用的位元組數目指標。  
+ 脫銷可用位元組數的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IHostTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

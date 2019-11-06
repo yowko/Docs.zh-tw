@@ -8,18 +8,20 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 78a9bd2cf657376bbc324cdefd423b14a283f842
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: a7ddaac56177d13248caf6559221fff26d2d2c00
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104722"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416727"
 ---
 # <a name="c-guide"></a>C# 指南
 
 C# 指南提供有關 C# 語言的許多資源。 此網站適用於許多不同的對象。 根據您的程式設計體驗，或是使用 C# 語言和 .NET 的體驗，您可能想要探索本指南的不同章節。
 
 - 全新的開發人員：
+  - 觀看[ C# 101 影片系列](https://aka.ms/dotnet3-csharp)。 其中提供您將在這些教學課程中探索之重要概念的簡介。
+
   - 從 [C# 簡介教學課程](tutorials/intro-to-csharp/index.md)開始。 這些教學課程可讓您在瀏覽器中以互動方式探索 C# 語言。 您可以從該處繼續進行其他[教學課程](tutorials/index.md)。 這些教學課程示範如何從頭開始建立 C# 程式。 這些教學課程提供建立程式的逐步程序。 課程將說明語言的概念，以及如何建置您自己的 C# 程式。 如果您想要先閱讀概觀資訊，請嘗試 [C# 語言教學課程](tour-of-csharp/index.md)。 它會說明 C# 語言的概念。 閱讀本節之後，您將對此語言具有基本的認識，且準備好嘗試進行教學課程，或自行建置一些項目。
 
 - 新的 C# 開發人員：
@@ -61,11 +63,11 @@ C# 指南含有數個章節。 您可以按順序閱讀，或直接跳至您最�
 - [語言參考](language-reference/index.md)
   - 本節包含有關 C# 語言的參考資料。 此教材協助您了解 C# 的語法和語意。 它同時提供型別、運算子、屬性、前置處理器指示詞、編譯器參數、編譯器錯誤和編譯器警告的參考資訊。
 
-- [C# 語言規格](./language-reference/language-specification/index.md)
+- [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)
   - 最新 C# 語言規格版本的連結。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [使用視覺效果消費者入門C#](/visualstudio/ide/quickstart-csharp-console)
 - [.NET 指南](../standard/index.md)
 - [C# 範例](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)

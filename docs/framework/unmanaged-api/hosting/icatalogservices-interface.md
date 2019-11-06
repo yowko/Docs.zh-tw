@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: f0d7e49b-2394-4ae0-8820-1b64cae0cfe8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 07356dcf81df41a1dd419c3b68829dcbfec5a073
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da14d159b1933112e95a9a8973b2fad62f25288f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985383"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126859"
 ---
 # <a name="icatalogservices-interface"></a>ICatalogServices 介面
-提供方法來編製目錄服務。  
+提供編目服務的方法。  
   
  此介面支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
   
@@ -35,6 +33,6 @@ ms.locfileid: "61985383"
 |[Autodone 方法](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-autodone-method.md)|已保留供內部使用。|  
 |[NotAutodone 方法](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|已保留供內部使用。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

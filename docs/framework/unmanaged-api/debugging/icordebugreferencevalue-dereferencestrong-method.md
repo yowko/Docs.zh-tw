@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 723482d1-d1a1-410a-a405-677eeb04e2bf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 02ed315ccf227413e59f635b0244fb82be67c18e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 402ffa232691bc8d0c77a9fa5aeb524dd5a9409b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744936"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137733"
 ---
 # <a name="icordebugreferencevaluedereferencestrong-method"></a>ICorDebugReferenceValue::DereferenceStrong 方法
-`DereferenceStrong` 未實作。 請勿呼叫這個方法。  
+未執行 `DereferenceStrong`。 請勿呼叫此方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,6 +38,6 @@ HRESULT DereferenceStrong (
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

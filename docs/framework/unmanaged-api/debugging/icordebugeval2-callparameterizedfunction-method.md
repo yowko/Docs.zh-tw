@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 72f54a45-dbe6-4bb4-8c99-e879a27368e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2779cfaecfdd241b5317ac8b467222e045d48049
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b521c96d26202119dad6fedb61cbd9da8b3c2e52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753316"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137631"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction 方法
-設定指定 ICorDebugFunction，可以巢狀的類別的建構函式會採用內呼叫<xref:System.Type>參數或本身可以採取<xref:System.Type>參數。  
+設定對指定 ICorDebugFunction 的呼叫，其可以嵌套在類別中，其會使用 <xref:System.Type> 參數，或者自己可以接受 <xref:System.Type> 參數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,32 +39,32 @@ HRESULT CallParameterizedFunction (
   
 ## <a name="parameters"></a>參數  
  `pFunction`  
- [in]指標`ICorDebugFunction`物件，表示要呼叫的函式。  
+ 在`ICorDebugFunction` 物件的指標，表示要呼叫的函式。  
   
  `nTypeArgs`  
- [in]此函數會採用的引數數目。  
+ 在函式所採用的引數數目。  
   
  `ppTypeArgs`  
- [in]指標的陣列，其中每一個指向 ICorDebugType 物件，表示函式引數。  
+ 在指標陣列，其中每一個都會指向代表函式引數的 ICorDebugType 物件。  
   
  `nArgs`  
- [in]函式中傳遞的值數目。  
+ 在函數中傳遞的值數目。  
   
  `ppArgs`  
- [in]指標的陣列，其中每一個指向 ICorDebugValue 物件，表示值傳入函式引數。  
+ 在指標的陣列，其中每一個都會指向 ICorDebugValue 物件，代表在函數引數中傳遞的值。  
   
 ## <a name="remarks"></a>備註  
- `CallParameterizedFunction` 就像是[icordebugeval:: Callfunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md)不同之處在於函式可能會在具有類型參數的類別內，可能本身需要型別參數，或兩者。 針對類別，然後再針對函式，應該先提供類型引數。  
+ `CallParameterizedFunction` 類似[ICorDebugEval：： CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) ，但函式可能位於具有型別參數的類別中，本身可能會採用型別參數，或兩者都是。 應該先為類別指定類型引數，然後為函式提供。  
   
- 如果函式在不同的應用程式網域中，則會發生轉換。 不過，所有類型和值的引數必須都是目標應用程式定義域中。  
+ 如果函式在不同的應用程式域中，將會發生轉換。 不過，所有類型和值引數都必須在目標應用程式域中。  
   
- 只在有限案例中，可以執行函式評估。 如果`CallParameterizedFunction`或`ICorDebugEval::CallFunction`失敗，傳回的 HRESULT 會指出失敗最常見的可能原因。  
+ 函數評估只能在有限的情況下執行。 如果 `CallParameterizedFunction` 或 `ICorDebugEval::CallFunction` 失敗，則傳回的 HRESULT 會指出失敗的最常見可能原因。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Initialize function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1bc3688b30180bdcde0a87027955a789de749f90
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b1f96b6285911b12d72ac136127d736b75d44023
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798436"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127384"
 ---
 # <a name="initialize-function"></a>Initialize 函式
 
@@ -41,20 +39,20 @@ HRESULT Initialize(
 
 `bAllowIManagementObjectQI`
 
-在`true`表示允許呼叫 WMI 物件上的 QueryInterface;`false`否則為。
+[in] `true`，表示允許對 WMI 物件上的 QueryInterface 進行呼叫;否則 `false`。
 
 ## <a name="return-value"></a>傳回值
 
-函數一律`S_OK`會傳回（0）。
+函數一律會傳回 `S_OK` （0）。
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
-**標頭：** WMINet_Utils.def
+**標頭：** WMINet_Utils .def
 
 **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WMI 和效能計數器（非受控 API 參考）](index.md)

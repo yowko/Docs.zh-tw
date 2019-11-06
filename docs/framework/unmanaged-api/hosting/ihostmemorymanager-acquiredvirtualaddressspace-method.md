@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef2f83c2-127e-4c38-8385-306c03cd2167
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 423fbfc2bda9d3544a5c32b6cd650643209f0e86
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b70454cd1e2d6d38e6ca4d0ea0bd8974963c201c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767238"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136733"
 ---
 # <a name="ihostmemorymanageracquiredvirtualaddressspace-method"></a>IHostMemoryManager::AcquiredVirtualAddressSpace 方法
-Common language runtime (CLR) 已取得指定的記憶體，作業系統會告知主應用程式。  
+通知主機 common language runtime （CLR）已從作業系統取得指定的記憶體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,23 +36,23 @@ HRESULT AcquiredVirtualAddressSpace(
   
 ## <a name="parameters"></a>參數  
  `startAddress`  
- [in]記憶體的起始位址。  
+ 在記憶體的起始位址。  
   
  `size`  
- [in]以位元組為單位的記憶體大小。  
+ 在記憶體的大小（以位元組為單位）。  
   
 ## <a name="remarks"></a>備註  
- `AcquiredVirtualAddressSpace`方法的回呼方法，必須在裝載應用程式寫入器實作。 CLR 會呼叫它。  
+ `AcquiredVirtualAddressSpace` 方法是回呼方法，必須由主控應用程式的寫入器來執行。 CLR 會呼叫它。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IHostMemoryManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

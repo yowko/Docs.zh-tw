@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3a1ce48-9bb9-4ed6-a5fe-5e1819a6333f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 89cf2a12b0a693bbed3e8a3c1134d0f2b2a72a30
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5826297d8151cf05e1ec08acbf5c9cd381d2452b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754459"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137797"
 ---
 # <a name="icordebugfunction2getversionnumber-method"></a>ICorDebugFunction2::GetVersionNumber 方法
-取得此函式的 編輯後繼續版本。  
+取得此函式的編輯後繼續版本。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,22 +35,22 @@ HRESULT GetVersionNumber (
   
 ## <a name="parameters"></a>參數  
  `pnVersion`  
- [out]此 ICorDebugFunction2 物件所代表的函式的版本號碼的整數指標。  
+ 脫銷整數的指標，這是這個 ICorDebugFunction2 物件所表示之函式的版本號碼。  
   
 ## <a name="remarks"></a>備註  
- 執行階段記錄的編輯已發生每個模組的偵錯工作階段的數目。 函式的版本號碼是其中一個超過編輯導入的函式的數目。 函式的原始版本是第 1 版。 每次遞增的數字的模組[ICorDebugModule2::ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)該模組上呼叫。 因此，如果第一個和第三個呼叫中已取代的函式的主體`ICorDebugModule2::ApplyChanges`，`GetVersionNumber`可能會傳回版本 1、 2 或 4 個該函式，但不是第 3 版。 （該函式會有版本 3）。  
+ 執行時間會持續追蹤在「偵錯工具」會話期間，每個模組所進行的編輯次數。 函式的版本號碼比引進函數的編輯次數還要多。 函式的原始版本為第1版。 每次在該模組上呼叫[ICorDebugModule2：： ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)時，模組的數目就會遞增。 因此，如果第一個和第三個呼叫中已取代函式的主體 `ICorDebugModule2::ApplyChanges`，`GetVersionNumber` 可能會傳回該函式的版本1、2或4，但不會傳回第3版。 （該函數不會有第3版）。  
   
- 版本號碼分別追蹤每個模組。 因此，如果您在模組 1 和模組 2 上未執行四個編輯，您模組 1 上的下一個編輯會將版本號碼為 6 模組 1 中的所有已編輯函式。 如果相同編輯涉及模組 2，模組 2 中的函式會取得版本數字 2。  
+ 針對每個模組分別追蹤版本號碼。 因此，如果您在模組1上執行四項編輯，而在模組2上執行了 [無]，則下一次編輯模組1將會為模組1中所有編輯的函式指派6的版本號碼。 如果相同的編輯觸及模組2，則模組2中的函式會取得版本號碼2。  
   
- 取得版本號碼`GetVersionNumber`方法可能是藉由取得低於[icordebugfunction:: Getcurrentversionnumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md)。  
+ `GetVersionNumber` 方法所取得的版本號碼可能低於[ICorDebugFunction：： GetCurrentVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md)所取得的版本編號。  
   
- [Icordebugcode:: Getversionnumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md)方法會執行相同的作業`ICorDebugFunction2::GetVersionNumber`。  
+ [ICorDebugCode：： GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md)方法會執行與 `ICorDebugFunction2::GetVersionNumber`相同的作業。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

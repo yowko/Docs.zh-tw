@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b712d862-f2d0-4b55-87d4-65bbeadef982
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 59b4df08157ce14a58393e54b671e8f41b8998ed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d1027aea1d800bda1654b223fec992aa70efd4b7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799225"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140718"
 ---
 # <a name="gethashfromblob-function"></a>GetHashFromBlob 函式
 
@@ -57,10 +55,10 @@ HRESULT GetHashFromBlob (
 脫銷傳回的雜湊緩衝區。
 
 `cchHash`\
-在要求的大小`pbHash`上限。
+在`pbHash`的要求大小上限。
 
 `pchHash`\
-脫銷傳回`pbHash`之的大小（以位元組為單位）。
+脫銷傳回之 `pbHash`的大小（以位元組為單位）。
 
 ## <a name="requirements"></a>需求
 
@@ -68,11 +66,11 @@ HRESULT GetHashFromBlob (
 
 **標頭：** Stackexchange.redis.strongname。h
 
-**LIBRARY:** 包含為 Mscoree.dll 中的資源
+連結**庫：** 包含為 Mscoree.dll 中的資源
 
 **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [GetHashFromBlob 方法](../hosting/iclrstrongname-gethashfromblob-method.md)
 - [ICLRStrongName 介面](../hosting/iclrstrongname-interface.md)

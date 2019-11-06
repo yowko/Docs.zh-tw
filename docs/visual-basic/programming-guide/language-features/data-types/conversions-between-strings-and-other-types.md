@@ -9,17 +9,17 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: e1530c1772808249546b453294fc848c31c1e581
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 06dabbb5d5dfbfb545f01afb157fd532ca0551df
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582930"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197340"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>字串與其他類型之間的轉換 (Visual Basic)
 您可以將數值、`Boolean` 或日期/時間值轉換成 `String`。 您也可以從字串值轉換成數位、`Boolean` 或 `Date`，前提是字串的內容可以解讀為目的地資料類型的有效值。 如果不是，就會發生執行階段錯誤。  
   
- 所有這些指派的轉換是以任一方向進行，都是縮小轉換。 您應該使用類型轉換關鍵字（`CBool`、`CByte`、`CDate`、`CDbl`、`CDec`、`CInt`、`CLng`、`CSByte`、`CShort`、`CSng`、0、1、2、3 和 4）。 @No__t_0 和 <xref:Microsoft.VisualBasic.Conversion.Val%2A> 函數可讓您進一步控制字元串和數位之間的轉換。  
+ 所有這些指派的轉換是以任一方向進行，都是縮小轉換。 您應該使用類型轉換關鍵字（`CBool`、`CByte`、`CDate`、`CDbl`、`CDec`、`CInt`、`CLng`、`CSByte`、`CShort`、`CSng`、0、1、2、3 和 4）。 <xref:Microsoft.VisualBasic.Strings.Format%2A> 和 <xref:Microsoft.VisualBasic.Conversion.Val%2A> 函數可讓您進一步控制字元串和數位之間的轉換。  
   
  如果您已定義類別或結構，您可以在 `String` 和類別或結構的類型之間定義類型轉換運算子。 如需詳細資訊，請參閱 [How to: Define a Conversion Operator](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)。  
   
@@ -49,4 +49,4 @@ Str = "The total count is " & count
 - [陣列轉換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
 - [資料類型](../../../../visual-basic/language-reference/data-types/index.md)
 - [類型轉換函式](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [以 .NET Framework 為基礎的國際應用程式簡介](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [開發全球化和當地語系化應用程式](/visualstudio/ide/globalizing-and-localizing-applications)

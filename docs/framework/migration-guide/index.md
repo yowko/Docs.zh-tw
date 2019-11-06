@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-ms.openlocfilehash: 7401d7fed89d18aa0b05e1c95871e4a025705627
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 350d5400b4e1df7238702ce925c974eecb2a0d7a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126308"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457946"
 ---
 # <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>.NET Framework 4.8、4.7、4.6 和 4.5 移轉手冊
 
@@ -25,7 +25,7 @@ ms.locfileid: "73126308"
 
 - 請參閱[版本和相依性](versions-and-dependencies.md)，了解每個 .NET Framework 版本的基礎 CLR 版本，並檢閱成功設定應用程式目標的方針。
 
-- 檢閱[應用程式相容性](application-compatibility.md)，了解可能影響應用程式的執行階段和重定目標變更，以及如何處理這些變更。
+- 請參閱[應用程式相容性](application-compatibility.md)，瞭解可能影響應用程式的執行時間和重定變更，以及如何處理它們。
 
 - 檢閱[類別庫中已淘汰的功能](../whats-new/whats-obsolete.md)，以判斷您的程式碼中可能已淘汰的任何類型或成員，以及建議的替代做法。
 

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 246e6572deefaf4546afe6fb5326ecc2286215a5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
-ms.translationtype: HT
+ms.openlocfilehash: 120777ca3c26b1634bd2143863547cfa4ea5deac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766817"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141325"
 ---
 # <a name="weak-references"></a>弱式參考
 在應用程式碼可以存取使用中物件時，記憶體回收行程無法透過應用程式回收該物件。 應用程式即具有物件的強式參考。  
@@ -37,7 +35,7 @@ ms.locfileid: "67766817"
   
      透過記憶體回收回收物件時，簡短弱式參考的目標會變成 `null`。 弱式參考本身是 Managed 物件，而且很容易進行記憶體回收，就像任何其他 Managed 物件一樣。  簡短弱式參考是 <xref:System.WeakReference> 的無參數建構函式。  
   
-- long  
+- Long  
   
      在呼叫物件的 <xref:System.Object.Finalize%2A> 方法之後，會保留完整弱式參考。 這樣會重建物件，但是物件的狀態仍然無法預測。 若要使用完整參考，請在 <xref:System.WeakReference> 建構函式中指定 `true`。  
   
@@ -52,6 +50,6 @@ ms.locfileid: "67766817"
   
  請避免使用弱式參考作為記憶體管理問題的自動解決方案。 相反地，開發有效的快取原則來處理您的應用程式物件。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [記憶體回收](../../../docs/standard/garbage-collection/index.md)

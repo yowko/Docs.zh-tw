@@ -28,7 +28,7 @@ ms.locfileid: "72774409"
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 存放庫中找到本教學課程的原始程式碼。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)版本
 
@@ -38,7 +38,7 @@ ms.locfileid: "72774409"
 
 1. 建立稱為 "SentimentAnalysis" 的 **.NET Core 主控台應用程式**。
 
-2. 在專案中建立一個名為 *Data* 的目錄以儲存資料集檔案。
+2. 在您專案中建立名為 *Data* 的目錄以儲存資料集檔案。
 
 3. 安裝「Microsoft.ML NuGet 套件」：
 
@@ -47,7 +47,7 @@ ms.locfileid: "72774409"
 ## <a name="prepare-your-data"></a>準備您的資料
 
 > [!NOTE]
-> 此教學課程的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人 al， KDD 2015，並裝載于 UCI Machine Learning 存放庫-Dua、d. 和 Karra Taniskidou，E. （2017）。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml ]。 Irvine，CA：加州大學，學校資訊與電腦科學。
+> 此教學課程的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人 al， KDD 2015，並裝載于 UCI Machine Learning 存放庫-Dua、d. 和 Karra Taniskidou，E. （2017）。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml]。 Irvine，CA：加州大學，學校資訊與電腦科學。
 
 1. 下載並解壓縮 [UCI 情感標記句子資料集 ZIP 檔案](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)。
 
@@ -57,7 +57,7 @@ ms.locfileid: "72774409"
 
 ### <a name="create-classes-and-define-paths"></a>建立類別及定義路徑
 
-1. 在 *Program.cs* 檔案頂端新增下列額外的 `using` 陳述式：
+1. 在 `using`Program.cs*檔案頂端新增下列額外的* 陳述式：
 
     [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddUsings "Add necessary usings")]
 
@@ -80,14 +80,14 @@ ms.locfileid: "72774409"
     [!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
 
 ### <a name="how-the-data-was-prepared"></a>如何準備資料
-輸入資料集類別 `SentimentData` 具有使用者評論 (`SentimentText`) 的 `string`，以及代表情感的 `bool` (`Sentiment`) 值 1 (正面) 或 0 (負面)。 這兩個欄位都有 [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) 附加屬性，其描述每個欄位的資料檔案順序。  此外，`Sentiment` 屬性具有 [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A) 屬性來將它指定為 `Label` 欄位。 下列範例檔案沒有標頭資料列，且看起來像這樣：
+輸入資料集類別 `SentimentData` 具有使用者評論 (`string`) 的 `SentimentText`，以及代表情感的 `bool` (`Sentiment`) 值 1 (正面) 或 0 (負面)。 這兩個欄位都有 [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) 附加屬性，其描述每個欄位的資料檔案順序。  此外，`Sentiment` 屬性具有 [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A) 屬性來將它指定為 `Label` 欄位。 下列範例檔案沒有標頭資料列，且看起來像這樣：
 
 |SentimentText                         |情感 (標籤) |
 |--------------------------------------|----------|
-|女服務生的服務速度有點慢。|    0     |
-|不夠酥脆。                    |    0     |
-|Wow .。。就愛了。              |    1     |
-|服務很迅速。              |    1     |
+|女服務生的服務速度有點慢。| 0 |
+|不夠酥脆。 | 0 |
+| 哇... 愛這地方。 | 1 |
+|服務很迅速。 | 1 |
 
 `SentimentPrediction` 是在模型定型後所使用的預測類別。 它繼承自 `SentimentData`，以便輸入 `SentimentText` 可以和輸出預測一起顯示。 `Prediction` 布林值是在提供新輸入 `SentimentText` 時，模型預測的值。
 
@@ -98,11 +98,11 @@ ms.locfileid: "72774409"
 ## <a name="load-the-data"></a>載入資料
 ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。 `IDataView` 是彈性且有效率的表格式資料描述方式 (數值和文字)。 資料可以從文字或即時 (例如 SQL 資料庫或記錄檔) 載入至 `IDataView` 物件。
 
-[MLContext 類別](xref:Microsoft.ML.MLContext)是所有 ML.NET 作業的起點。 將 `mlContext` 初始化會建立新的 ML.NET 環境，可在模型建立工作流程物件間共用。 就概念而言，類似於 Entity Framework 中的 `DBContext`。
+[MLContext 類別](xref:Microsoft.ML.MLContext)是所有 ML.NET 作業的起點。 初始化 `mlContext` 會建立新的 ML.NET 環境，可在模型建立工作流程物件間共用。 就概念而言，類似於 Entity Framework 中的 `DBContext`。
 
 您可以準備資料，然後載入資料：
 
-1. 將 `Main` 方法中的 `Console.WriteLine("Hello World!")` 程式碼行取代為下列程式碼，以宣告 mlContext 變數並將它初始化：
+1. 將 `Console.WriteLine("Hello World!")` 方法中的 `Main` 程式碼行取代為下列程式碼，以宣告 mlContext 變數並將它初始化：
 
     [!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateMLContext "Create the ML Context")]
 
@@ -110,7 +110,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
     [!code-csharp[CallLoadData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallLoadData)]
 
-3. 請使用下列程式碼，在緊接著 `Main()` 方法之後，建立 `LoadData()` 方法：
+3. 請使用下列程式碼，在緊接著 `LoadData()` 方法之後，建立 `Main()` 方法：
 
     ```csharp
     public static TrainTestData LoadData(MLContext mlContext)
@@ -141,7 +141,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
     上述程式碼使用 [TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) 方法將載入的資料集分割為定型與測試資料集，然後將它們包含在 [TrainTestData](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) 類別中並傳回。 您可以使用 `testFraction` 參數來指定資料的測試集百分比。 預設值是 10%，但您在本例中會使用 20% 以評估更多資料。
 
-2. 在 `LoadData()` 方法的結尾傳回 `splitDataView`：
+2. 在 `splitDataView` 方法的結尾傳回 `LoadData()`：
 
     [!code-csharp[ReturnSplitData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#ReturnSplitData)]
 
@@ -158,7 +158,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
     - 根據測試資料預測情感。
     - 傳回模型。
 
-2. 請使用下列程式碼，在緊接著 `Main()` 方法之後，建立 `BuildAndTrainModel()` 方法：
+2. 請使用下列程式碼，在緊接著 `BuildAndTrainModel()` 方法之後，建立 `Main()` 方法：
 
     ```csharp
     public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView splitTrainSet)
@@ -177,10 +177,10 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
     |SentimentText                         |情感 |功能              |
     |--------------------------------------|----------|----------------------|
-    |女服務生的服務速度有點慢。|    0     |[0.76, 0.65, 0.44, …] |
-    |不夠酥脆。                    |    0     |[0.98, 0.43, 0.54, …] |
-    |Wow .。。就愛了。              |    1     |[0.35, 0.73, 0.46, …] |
-    |服務很迅速。              |    1     |[0.39, 0, 0.75, …]    |
+    |女服務生的服務速度有點慢。| 0 |[0.76, 0.65, 0.44, …] |
+    |不夠酥脆。 | 0 |[0.98, 0.43, 0.54, …] |
+    |哇... 愛這地方。 | 1 |[0.35, 0.73, 0.46, …] |
+    |服務很迅速。 | 1 |[0.39, 0, 0.75, …] |
 
 ### <a name="add-a-learning-algorithm"></a>新增學習演算法
 
@@ -194,11 +194,11 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 ### <a name="train-the-model"></a>將模型定型
 
-將下列內容新增為 `BuildAndTrainModel()` 方法中的下一行程式碼，調整模型為合適於 `splitTrainSet` 資料並傳回已定型模型：
+將下列內容新增為 `splitTrainSet` 方法中的下一行程式碼，調整模型為合適於 `BuildAndTrainModel()` 資料並傳回已定型模型：
 
 [!code-csharp[TrainModel](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#TrainModel "Train the model")]
 
-[Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) 方法會透過轉換資料集和套用定型來定型模型。
+[Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) 方法透過轉換資料集和套用定型來定型模型。
 
 ### <a name="return-the-model-trained-to-use-for-evaluation"></a>傳回經訓練以供評估使用的模型
 
@@ -210,7 +210,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 定型模型之後，使用您的測試資料來驗證模型效能。
 
-1. 在 `BuildAndTrainModel()` 之後，使用下列程式碼建立 `Evaluate()` 方法：
+1. 在 `Evaluate()` 之後，使用下列程式碼建立 `BuildAndTrainModel()` 方法：
 
     ```csharp
     public static void Evaluate(MLContext mlContext, ITransformer model, IDataView splitTestSet)
@@ -226,15 +226,15 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
     - 評估模型並建立計量。
     - 顯示計量。
 
-2. 請使用下列程式碼，在緊接著 `BuildAndTrainModel()` 方法呼叫底下，從 `Main()` 方法新增對新方法的呼叫：
+2. 請使用下列程式碼，在緊接著 `Main()` 方法呼叫底下，從 `BuildAndTrainModel()` 方法新增對新方法的呼叫：
 
     [!code-csharp[CallEvaluate](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallEvaluate "Call the Evaluate method")]
 
-3. 將下列程式碼新增至 `Evaluate()` 以轉換 `splitTestSet` 資料：
+3. 將下列程式碼新增至 `splitTestSet` 以轉換 `Evaluate()` 資料：
 
     [!code-csharp[PredictWithTransformer](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#TransformData "Predict using the Transformer")]
 
-    上述程式碼使用 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 方法對多個提供的測試資料集輸入資料列進行預測。
+    之前的程式碼使用 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 方法會對測試資料集多個所提供的輸入資料列進行預測。
 
 4. 將下列內容新增為 `Evaluate()` 方法中的下一行程式碼來評估模型：
 
@@ -256,7 +256,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 ### <a name="predict-the-test-data-outcome"></a>預測測試資料結果
 
-1. 請使用下列程式碼，在緊接著 `Evaluate()` 方法之後，建立 `UseModelWithSingleItem()` 方法：
+1. 請使用下列程式碼，在緊接著 `UseModelWithSingleItem()` 方法之後，建立 `Evaluate()` 方法：
 
     ```csharp
     private static void UseModelWithSingleItem(MLContext mlContext, ITransformer model)
@@ -267,12 +267,12 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
     `UseModelWithSingleItem()` 方法會執行下列工作：
 
-    - 建立單一評論的測試資料。
+    - 建立測試資料的單一評論。
     - 根據測試資料預測情感。
     - 合併測試資料和預測來進行報告。
     - 顯示預測的結果。
 
-2. 請使用下列程式碼，在緊接著 `Evaluate()` 方法呼叫底下，從 `Main()` 方法新增對新方法的呼叫：
+2. 請使用下列程式碼，在緊接著 `Main()` 方法呼叫底下，從 `Evaluate()` 方法新增對新方法的呼叫：
 
     [!code-csharp[CallUseModelWithSingleItem](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallUseModelWithSingleItem "Call the UseModelWithSingleItem method")]
 
@@ -285,7 +285,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
     > [!NOTE]
     > `PredictionEnginePool` 服務延伸模組目前處於預覽狀態。
 
-4. 透過建立 `SentimentData` 的執行個體，在 `UseModelWithSingleItem()` 方法中新增評論，以測試定型模型的預測：
+4. 透過建立 `UseModelWithSingleItem()` 的執行個體，在 `SentimentData` 方法中新增評論，以測試定型模型的預測：
 
     [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
 
@@ -303,7 +303,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 ### <a name="deploy-and-predict-batch-items"></a>部署並預測批次項目
 
-1. 請使用下列程式碼，在緊接著 `UseModelWithSingleItem()` 方法之後，建立 `UseModelWithBatchItems()` 方法：
+1. 請使用下列程式碼，在緊接著 `UseModelWithBatchItems()` 方法之後，建立 `UseModelWithSingleItem()` 方法：
 
     ```csharp
     public static void UseModelWithBatchItems(MLContext mlContext, ITransformer model)
@@ -319,7 +319,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
     - 合併測試資料和預測來進行報告。
     - 顯示預測的結果。
 
-2. 請使用下列程式碼，在緊接著 `UseModelWithSingleItem()` 方法呼叫底下，從 `Main` 方法新增對新方法的呼叫：
+2. 請使用下列程式碼，在緊接著 `Main` 方法呼叫底下，從 `UseModelWithSingleItem()` 方法新增對新方法的呼叫：
 
     [!code-csharp[CallPredictModelBatchItems](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallUseModelWithBatchItems "Call the CallUseModelWithBatchItems method")]
 

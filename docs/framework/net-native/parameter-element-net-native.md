@@ -1,15 +1,13 @@
 ---
-title: <Parameter>元素（.NET Native）
+title: <Parameter> 元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c9a462e75df535504d0e98c22c34c11ff7af7d8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c6dfc347d44a794ee8496c45ca879f9daab12b22
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049352"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128190"
 ---
 # <a name="parameter-element-net-native"></a>\<參數 > 元素（.NET Native）
 將反映原則套用至傳遞給方法的引數類型。  
@@ -57,11 +55,11 @@ ms.locfileid: "71049352"
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -73,7 +71,7 @@ ms.locfileid: "71049352"
 ## <a name="remarks"></a>備註  
  `<Parameter>` 項目是 [\<Method>](method-element-net-native.md) 項目的子項，用來將原則套用至特定的方法參數。 特定的方法參數是依名稱指定，而不是依類型。 必須存在至少一個表示原則類型的屬性，例如 `Activate` 或 `Dynamic`。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [\<Method> 項目](method-element-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)

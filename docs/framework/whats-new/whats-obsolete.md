@@ -7,14 +7,12 @@ helpviewer_keywords:
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 810f49581d4cb28987ea41237645f75c50388084
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
-ms.translationtype: HT
+ms.openlocfilehash: 4de441ff55c3728f43742d6e467deeb47f400507
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690471"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140594"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework 類別庫中已淘汰的功能
 
@@ -23,7 +21,7 @@ ms.locfileid: "66690471"
 .NET Framework 和 Common Language Runtime 致力於支援回溯相容性 (讓使用某個 .NET Framework 版本所開發的應用程式能夠在下一個 .NET Framework 版本上執行)。 這點會讓您難以單純地移除類型或類型成員。 相反地，.NET Framework 會將某個類型或類型成員標記為過時或已被取代，表示不應該再使用該類型或類型成員。 取代類型或成員時需要為其加上標記，以便讓開發人員了解該類型或成員即將消失，而且有時間來回應其移除。 不過，使用該類型或成員的現有程式碼仍然可繼續在新的 .NET Framework 版本中執行。
 
 > [!NOTE]
-> 就 .NET Framework 的類型和成員而言，「過時」  和「已被取代」  具有相同的意義。
+> 就 .NET Framework 的類型和成員而言，「過時」和「已被取代」具有相同的意義。
 
 ## <a name="the-obsoleteattribute-attribute"></a>ObsoleteAttribute 屬性
 
@@ -86,6 +84,6 @@ ms.locfileid: "66690471"
 
 - [.NET Framework 2.0 的過時清單](https://docs.microsoft.com/previous-versions/aa497286(v=msdn.10))
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [\<supportedRuntime> 項目](../configure-apps/file-schema/startup/supportedruntime-element.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: ed931871e8abbfd9ff421a1307fb21c3490493fb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 44af3bf1a7c013c16c7b4a4528c3516621bea149
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608461"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422543"
 ---
 # <a name="query-keywords-c-reference"></a>查詢關鍵字 (C# 參考)
 
@@ -19,7 +19,7 @@ ms.locfileid: "69608461"
 
 ## <a name="in-this-section"></a>本節內容
 
-|子句|說明|
+|子句|描述|
 |------------|-----------------|
 |[from](from-clause.md)|指定資料來源和範圍變數 (與反覆運算變數類似)。|
 |[where](where-clause.md)|根據以邏輯 AND 和 OR 運算子區隔的一或多個布林運算式，以篩選來源項目 (`&&` 或 <code>&#124;&#124;</code>)。|
@@ -36,9 +36,9 @@ ms.locfileid: "69608461"
 |[ascending](ascending.md)|[orderby](orderby-clause.md) 子句中的內容關鍵字。|
 |[descending](descending.md)|[orderby](orderby-clause.md) 子句中的內容關鍵字。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 關鍵字](index.md)
 - [LINQ (Language-Integrated Query)](../../programming-guide/concepts/linq/index.md)
-- [LINQ 查詢運算式](../../programming-guide/linq-query-expressions/index.md)
-- [開始使用 C# 中的 LINQ](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C# 中的 LINQ](../../linq/index.md)
+- [開始使用 C# 中的 LINQ](/dotnet/csharp/programming-guide/concepts/linq/)

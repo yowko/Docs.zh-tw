@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: ad15c0d4bd69417fffd8bcad0805a3b78321e05b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 2433d8b8563cace4415fb8fcd2d110f75d7d4304
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894952"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196377"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 的傳輸層安全性 (TLS) 最佳做法
 
@@ -56,7 +56,7 @@ ms.locfileid: "70894952"
 
 針對 ASP.NET 應用程式，請檢查 _web.config_ 的 `<system.web><httpRuntime targetFramework>` 元素，以確認您是使用正確的 .NET Framework 版本。
 
-針對 Windows Forms 及其他應用程式，請參閱[如何：以一個 .NET Framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。
+針對 Windows Forms 及其他應用程式，請參閱[如何：將 .NET Framework 的某個版本設定為目標](/visualstudio/ide/visual-studio-multi-targeting-overview)。
 
 使用下列小節來確認您沒有使用特定的 TLS 或 SSL 版本。
 
@@ -66,9 +66,9 @@ ms.locfileid: "70894952"
 
 ### <a name="for-http-networking"></a>針對 HTTP 網路功能
 
-<xref:System.Net.ServicePointManager>使用 .NET Framework 4.7 和更新版本時，將會使用 OS 中設定的預設安全性通訊協定。 若要取得預設的 OS 選擇，可能的話，請不要設定<xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType>屬性的值，這會預設為。 <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType>
+使用 .NET Framework 4.7 和更新版本 <xref:System.Net.ServicePointManager>，將會使用 OS 中設定的預設安全性通訊協定。 若要取得預設的 OS 選擇，可能的話，請不要設定 <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> 屬性的值，預設為 <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType>。
 
-因為此<xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType>設定<xref:System.Net.ServicePointManager>會導致使用作業系統所設定的預設安全性通訊協定，所以您的應用程式可能會根據其執行所在的 OS 以不同的方式執行。 例如，Windows 7 SP1 使用 TLS 1.0，而 Windows 8 和 Windows 10 使用 TLS 1.2。
+因為 <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType> 設定會導致 <xref:System.Net.ServicePointManager> 使用作業系統所設定的預設安全性通訊協定，所以您的應用程式可能會根據其執行所在的 OS 以不同的方式執行。 例如，Windows 7 SP1 使用 TLS 1.0，而 Windows 8 和 Windows 10 使用 TLS 1.2。
 
 本文剩下的內容，與針對 HTTP 網路功能將 .NET Framework 4.7 或更新版本設為目標無關。
 
@@ -241,7 +241,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="the-sch_use_strong_crypto-flag"></a>The SCH_USE_STRONG_CRYPTO 旗標
 
-啟用 `SCH_USE_STRONG_CRYPTO` 旗標時 (預設會由 `AppContext` 參數或 Windows 登錄啟用)，.NET Framework 會在您的應用程式要求 TLS 安全性通訊協定時使用此旗標。 `SCH_USE_STRONG_CRYPTO` 旗標可以依預設啟用、搭配 `AppContext` 參數啟用，或是搭配登錄啟用。 OS 會將旗標傳遞至 `Schannel`，以指示它停用已知的弱式加密演算法、加密套件，以及 TLS/SSL 通訊協定版本；若不這樣做，系統可能會為了取得更佳的互通性而啟用這些項目。 如需詳細資訊，請參閱：
+啟用 `SCH_USE_STRONG_CRYPTO` 旗標時 (預設會由 `AppContext` 參數或 Windows 登錄啟用)，.NET Framework 會在您的應用程式要求 TLS 安全性通訊協定時使用此旗標。 `SCH_USE_STRONG_CRYPTO` 旗標可以依預設啟用、搭配 `AppContext` 參數啟用，或是搭配登錄啟用。 OS 會將旗標傳遞至 `Schannel`，以指示它停用已知的弱式加密演算法、加密套件，以及 TLS/SSL 通訊協定版本；若不這樣做，系統可能會為了取得更佳的互通性而啟用這些項目。 如需詳細資訊，請參閱:
 
 - [安全通道](/windows/desktop/SecAuthN/secure-channel) \(英文\)
 - [SCHANNEL_CRED 結構](/windows/win32/api/schannel/ns-schannel-schannel_cred) \(英文\)
@@ -260,7 +260,7 @@ Windows Registry Editor Version 5.00
 另請參閱：
 
 - [.NET Framework 版本和相依性](../migration-guide/versions-and-dependencies.md)
-- [如何：判斷安裝的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。
+- [如何：判斷所安裝的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。
 
 ## <a name="support-for-tls-12"></a>支援 TLS 1.2
 

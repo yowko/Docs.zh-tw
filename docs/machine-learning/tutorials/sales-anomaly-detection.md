@@ -4,12 +4,12 @@ description: 了解如何建置產品銷售資料的異常偵測應用程式。 
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ed4c24fac2348c021982ad593417b33d50347dd1
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 37c6b99fbd7db63c19201e0c6dce9b2b6d9f1932
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774432"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423579"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>教學課程：使用 ML.NET 偵測產品銷售額中的異常
 
@@ -127,7 +127,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 異常偵測會標記未預期或不尋常的事件或行為。 它可提供尋找問題的線索，協助您回答「這奇不奇怪？」的問題。
 
-![奇不奇怪](./media/sales-anomaly-detection/anomalydetection.png)
+![「這是奇怪的異常偵測」的範例。](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
 
 異常偵測是偵測時間序列資料極端值的程序，它們是指定輸入時間序列中非預期或「奇怪」行為的資料點。
 
@@ -152,7 +152,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 尖峰偵測目標是找出明顯有別於大部分時間序列資料值的突然卻短暫暴增。 請務必及時偵測這些可疑的罕見項目、事件或觀測，將影響降至最低。 下列方法可用來偵測各種異常，例如：中斷、網路攻擊或病毒式 Web 內容。 下圖是時間序列資料集的尖峰範例：
 
-![SpikeDetection](./media/sales-anomaly-detection/SpikeDetection.png)
+![顯示兩個尖峰偵測的螢幕擷取畫面。](./media/sales-anomaly-detection/two-spike-detections.png)
 
 ### <a name="add-the-createemptydataview-method"></a>新增 CreateEmptyDataView() 方法
 
@@ -266,7 +266,7 @@ Alert   Score   P-Value
 
 `Change points` 是值之時間序列事件資料流分佈的持續變更，例如層級變更和趨勢。 這些持續變更延續的時間比 `spikes` 長，可能表示災難性事件。 `Change points` 通常無法為肉眼所見，但可以使用下列方法，在您的資料中偵測到。  下圖是變更點偵測的範例：
 
-![ChangePointDetection](./media/sales-anomaly-detection/ChangePointDetection.png)
+![顯示變更點偵測的螢幕擷取畫面。](./media/sales-anomaly-detection/change-point-detection.png)
 
 ### <a name="create-the-detectchangepoint-method"></a>建立 DetectChangepoint() 方法
 

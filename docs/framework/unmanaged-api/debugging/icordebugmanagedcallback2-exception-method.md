@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd707685dfff31644565db18e72dc153d25781f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f40030a2034057e83de51a21655a686f30b9ee88
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761072"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137447"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception 方法
-已開始搜尋例外狀況處理常式會告知偵錯工具。  
+通知偵錯工具已開始搜尋例外狀況處理常式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,47 +40,47 @@ HRESULT Exception (
   
 ## <a name="parameters"></a>參數  
  `pAppDomain`  
- [in]ICorDebugAppDomain 物件，表示應用程式定義域包含的執行緒例外狀況的指標。  
+ 在ICorDebugAppDomain 物件的指標，表示包含擲回例外狀況之執行緒的應用程式域。  
   
  `pThread`  
- [in]ICorDebugThread 物件，表示的執行緒例外狀況的指標。  
+ 在ICorDebugThread 物件的指標，表示擲回例外狀況的執行緒。  
   
  `pFrame`  
- [in]ICorDebugFrame 物件，表示在範圍內，由指標`dwEventType`參數。 如需詳細資訊，請參閱 < 備註 > 一節的表格。  
+ 在代表框架的 ICorDebugFrame 物件指標，由 `dwEventType` 參數決定。 如需詳細資訊，請參閱備註一節中的表格。  
   
  `nOffset`  
- [in]整數，指定位移，由`dwEventType`參數。 如需詳細資訊，請參閱 < 備註 > 一節的表格。  
+ 在指定位移的整數，由 `dwEventType` 參數決定。 如需詳細資訊，請參閱備註一節中的表格。  
   
  `dwEventType`  
- [in]CorDebugExceptionCallbackType 列舉，指定此例外狀況的回呼類型的值。  
+ 在CorDebugExceptionCallbackType 列舉的值，指定這個例外狀況回呼的類型。  
   
  `dwFlags`  
- [in]值為[CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)列舉，指定例外狀況的其他資訊  
+ 在[CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)列舉的值，指定例外狀況的其他資訊。  
   
 ## <a name="remarks"></a>備註  
- `Exception`回呼例外狀況處理程序的 「 搜尋 」 階段期間，會呼叫在不同的點。 也就是說，它可以呼叫超過一次而回溯例外狀況。  
+ 在例外狀況處理常式的搜尋階段，會在不同的時間點呼叫 `Exception` 回呼。 也就是說，它可以在回溯例外狀況時呼叫多次。  
   
- 正在處理的例外狀況可以擷取從所參考的 ICorDebugThread 物件`pThread`參數。  
+ 所處理的例外狀況可以從 `pThread` 參數所參考的 ICorDebugThread 物件中抓取。  
   
- 特定畫面格和位移取決於`dwEventType`參數，如下所示：  
+ 特定的框架和位移取決於 `dwEventType` 參數，如下所示：  
   
 |`dwEventType` 的值|`pFrame` 的值|`nOffset` 的值|  
 |----------------------------|-----------------------|------------------------|  
-|DEBUG_EXCEPTION_FIRST_CHANCE|擲回例外狀況框架。|指令指標框架中。|  
-|DEBUG_EXCEPTION_USER_FIRST_CHANCE|擲回的例外狀況的點最接近的使用者程式碼框架。|指令指標框架中。|  
-|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|包含 catch 處理常式之框架。|Microsoft intermediate language (MSIL) 位移開頭的 catch 處理常式。|  
-|DEBUG_EXCEPTION_UNHANDLED|NULL|未定義。|  
+|DEBUG_EXCEPTION_FIRST_CHANCE|擲回例外狀況的框架。|框架中的指令指標。|  
+|DEBUG_EXCEPTION_USER_FIRST_CHANCE|最接近所擲回例外狀況點的使用者程式碼框架。|框架中的指令指標。|  
+|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|包含 catch 處理常式的框架。|Catch 處理常式開頭的 Microsoft 中繼語言（MSIL）位移。|  
+|DEBUG_EXCEPTION_UNHANDLED|NULL|Useraccountcontrol.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugManagedCallback2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

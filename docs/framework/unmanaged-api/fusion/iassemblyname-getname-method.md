@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1dee9781-1cf3-48a9-a376-d18ea1f73280
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e471ee99af57ef980850c0a5d3e4f5f2973967ac
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5f758d76d779cff7db119e69dc1cf3342071f1c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796599"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134341"
 ---
 # <a name="iassemblynamegetname-method"></a>IAssemblyName::GetName 方法
 取得這個[IAssemblyName](iassemblyname-interface.md)物件所參考的簡單、未加密的元件名稱。  
@@ -38,7 +36,7 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>參數  
  `lpcwBuffer`  
- [in、out]`pwzName`以寬字元為單位的大小，包括 null 結束字元字元。  
+ [in、out]以寬字元為單位的 `pwzName` 大小，包括 null 結束字元字元。  
   
  `pwzName`  
  脫銷保存參考元件名稱的緩衝區。  
@@ -50,6 +48,6 @@ HRESULT GetName (
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IAssemblyName 介面](iassemblyname-interface.md)

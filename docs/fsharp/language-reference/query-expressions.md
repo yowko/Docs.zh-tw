@@ -2,12 +2,12 @@
 title: 查詢運算式
 description: 瞭解程式F#設計語言中 LINQ 的查詢運算式支援。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6eaac16336cca752eaac355276300c6809c570a8
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: f0c7245a930a06576487a61d73a1e5b94190ee59
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216818"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424890"
 ---
 # <a name="query-expressions"></a>查詢運算式
 
@@ -24,7 +24,7 @@ query { expression }
 
 ## <a name="remarks"></a>備註
 
-查詢運算式是一種類似于序列運算式的計算運算式。 就像您在序列運算式中提供程式碼指定順序一樣，您可以在查詢運算式中提供程式碼來指定一組資料。 在序列運算式中， `yield`關鍵字會識別要在結果序列中傳回的資料。 在查詢運算式中， `select`關鍵字會執行相同的函式。 除了`select`關鍵字之外， F#也支援許多與 SQL SELECT 語句部分非常類似的查詢運算子。 以下是簡單查詢運算式的範例，以及連接到 Northwind OData 來源的程式碼。
+查詢運算式是一種類似于序列運算式的計算運算式。 就像您在序列運算式中提供程式碼指定順序一樣，您可以在查詢運算式中提供程式碼來指定一組資料。 在序列運算式中，`yield` 關鍵字會識別要在結果序列中傳回的資料。 在查詢運算式中，`select` 關鍵字會執行相同的函式。 除了 `select` 關鍵字之外， F#也支援許多與 SQL SELECT 語句部分非常類似的查詢運算子。 以下是簡單查詢運算式的範例，以及連接到 Northwind OData 來源的程式碼。
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -46,15 +46,15 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-在上述程式碼範例中，查詢運算式是以大括弧括住。 運算式中程式碼的意義是，會在查詢結果中，傳回資料庫中 Customers 資料表內的每個客戶。 查詢運算式會傳回實<xref:System.Linq.IQueryable%601>和<xref:System.Collections.Generic.IEnumerable%601>的型別，因此可以使用[Seq 模組](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)逐一查看，如範例所示。
+在上述程式碼範例中，查詢運算式是以大括弧括住。 運算式中程式碼的意義是，會在查詢結果中，傳回資料庫中 Customers 資料表內的每個客戶。 查詢運算式會傳回實 <xref:System.Linq.IQueryable%601> 和 <xref:System.Collections.Generic.IEnumerable%601>的型別，因此可以使用[Seq 模組](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)逐一查看，如範例所示。
 
-每個計算運算式類型都是從產生器類別所建立。 查詢計算運算式的 builder 類別是`QueryBuilder`。 如需詳細資訊，請參閱[計算運算式](computation-expressions.md)和[QueryBuilder 類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)。
+每個計算運算式類型都是從產生器類別所建立。 查詢計算運算式的 builder 類別是 `QueryBuilder`。 如需詳細資訊，請參閱[計算運算式](computation-expressions.md)和[QueryBuilder 類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)。
 
 ## <a name="query-operators"></a>查詢運算子
 
-查詢運算子可讓您指定查詢的詳細資料，例如將準則放在要傳回的記錄上，或指定結果的排序次序。 查詢來源必須支援查詢運算子。 如果您嘗試使用不支援的查詢運算子， `System.NotSupportedException`將會擲回。
+查詢運算子可讓您指定查詢的詳細資料，例如將準則放在要傳回的記錄上，或指定結果的排序次序。 查詢來源必須支援查詢運算子。 如果您嘗試使用不支援的查詢運算子，則會擲回 `System.NotSupportedException`。
 
-查詢運算式中只允許可轉譯為 SQL 的運算式。 例如，當您使用`where`查詢運算子時，運算式中不允許有函式呼叫。
+查詢運算式中只允許可轉譯為 SQL 的運算式。 例如，當您使用 `where` 查詢運算子時，運算式中不允許有函式呼叫。
 
 [表 1] 顯示可用的查詢運算子。 此外，請參閱 Table2，這會比較 SQL 查詢和本F#主題稍後的對等查詢運算式。 某些類型提供者不支援某些查詢運算子。 特別的是，OData 型別提供者在支援的查詢運算子中受到限制，因為 OData 的限制。 如需詳細資訊，請參閱[Odataservice 型 TypeF#Provider （）](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)。
 
@@ -231,7 +231,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenBy</code></td><td>依指定的排序索引鍵，執行目前為止所選取之專案的後續排序。 只有在<code>sortBy</code>、、 <code>sortByDescending</code> <code>thenBy</code>或之後，才可以使用這個運算子。<code>thenByDescending</code><br/><br/>
+<td><code>thenBy</code></td><td>依指定的排序索引鍵，執行目前為止所選取之專案的後續排序。 只有在 <code>sortBy</code>、<code>sortByDescending</code>、<code>thenBy</code>或 <code>thenByDescending</code>之後，才可以使用這個運算子。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -243,7 +243,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByDescending</code></td><td>依指定的排序索引鍵，執行目前為止所選取之專案的後續排序。 只有在<code>sortBy</code>、、 <code>sortByDescending</code> <code>thenBy</code>或之後，才可以使用這個運算子。<code>thenByDescending</code><br/><br/>
+<td><code>thenByDescending</code></td><td>依指定的排序索引鍵，執行目前為止所選取之專案的後續排序。 只有在 <code>sortBy</code>、<code>sortByDescending</code>、<code>thenBy</code>或 <code>thenByDescending</code>之後，才可以使用這個運算子。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -265,7 +265,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>join</code></td><td>根據相符的索引鍵，相互關聯兩組選取的值。 請注意，聯結運算式的 = sign 前後的索引鍵順序很重要。 在 [ <code>-&gt;</code>所有聯結] 中，如果該行是在符號之後分割，則縮排至少必須縮排到關鍵字<code>for</code>為止。<br/><br/>
+<td><code>join</code></td><td>根據相符的索引鍵，相互關聯兩組選取的值。 請注意，聯結運算式的 = sign 前後的索引鍵順序很重要。 在 [所有聯結] 中，如果該行是在 <code>-&gt;</code> 符號之後分割，則縮排至少必須縮排為關鍵字 <code>for</code>。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -353,7 +353,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
     for student in db.Student do
     join selection in db.CourseSelection
         on (student.StudentID = selection.StudentID)
-    distinct       
+    distinct
 }
 </code></pre>
 
@@ -474,7 +474,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullable</code></td><td>依給定的可為 null 排序索引鍵，執行目前為止所選取之專案的後續順序。 這個運算子只能<code>sortBy</code>在、 <code>sortByDescending</code>、 <code>thenBy</code>、或<code>thenByDescending</code>之後立即使用，或其可為 null 的 variant。<br/><br/>
+<td><code>thenByNullable</code></td><td>依給定的可為 null 排序索引鍵，執行目前為止所選取之專案的後續順序。 只有在 <code>sortBy</code>、<code>sortByDescending</code>、<code>thenBy</code>或 <code>thenByDescending</code>或其可為 null 的變數之後，才可以使用這個運算子。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -485,7 +485,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullableDescending</code></td><td>依指定的可為 null 排序索引鍵，執行到目前為止所選取之專案的後續順序。 這個運算子只能<code>sortBy</code>在、 <code>sortByDescending</code>、 <code>thenBy</code>、或<code>thenByDescending</code>之後立即使用，或其可為 null 的 variant。<br/><br/>
+<td><code>thenByNullableDescending</code></td><td>依指定的可為 null 排序索引鍵，執行到目前為止所選取之專案的後續順序。 只有在 <code>sortBy</code>、<code>sortByDescending</code>、<code>thenBy</code>或 <code>thenByDescending</code>或其可為 null 的變數之後，才可以使用這個運算子。<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -499,6 +499,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </table>
 
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Transact-SQL 和 F# 查詢運算式的比較
+
 下表顯示一些常見的 Transact-SQL 查詢及其在中F#的對等專案。 這個資料表中的程式碼也會假設與上一個資料表相同的資料庫，以及用來設定型別提供者的相同初始程式碼。
 
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>[表 2] Transact-SQL 和 F# 查詢運算式
@@ -533,7 +534,7 @@ query {
 
 <pre><code class="lang-fsharp">// Count of students.
 query {
-    for student in db.Student do       
+    for student in db.Student do
     count
 }
 </code></pre>
@@ -638,7 +639,7 @@ GROUP BY Student.Age
 <pre><code class="lang-fsharp">// Group students by age and sum ages.
 query {
     for student in db.Student do
-    groupBy student.Age into g       
+    groupBy student.Age into g
     let total =
         query {
             for student in g do
@@ -666,14 +667,14 @@ ORDER BY COUNT( * ) DESC
 query {
     for student in db.Student do
     groupBy student.Age into g
-    where (g.Count() > 1)       
+    where (g.Count() > 1)
     sortByDescending (g.Count())
     select (g.Key, g.Count())
 }
 </code></pre>
 
 </td></tr><tr><td>
-<code>IN</code>一組指定的值<br/>
+<code>IN</code> 一組指定的值<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -713,8 +714,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>
-<code>LIKE</code>模式比對設定。<br/>
+</td></tr><tr><td>模式比對設定的 
+<code>LIKE</code>。<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -726,12 +727,12 @@ WHERE Student.Name LIKE '[abc]%'
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
     where (SqlMethods.Like( student.Name, "[abc]%") )
-    select student 
+    select student
 }
 </code></pre>
 
-</td></tr><tr><td>
-<code>LIKE</code>具有設定排除模式的。<br/>
+</td></tr><tr><td>具有設定排除模式的 
+<code>LIKE</code>。<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -750,7 +751,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>在一個欄位上，但選取不同的欄位。<br/>
+<code>LIKE</code> 在一個欄位上，但選取不同的欄位。<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -761,7 +762,7 @@ WHERE Student.Name LIKE '[^abc]%'
 <pre><code class="lang-fsharp">query {
     for n in db.Student do
     where (SqlMethods.Like( n.Name, "[^abc]%") )
-    select n.StudentID   
+    select n.StudentID
 }
 </code></pre>
 
@@ -782,7 +783,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-具有<code>JOIN</code>兩個數據表的簡單。<br/>
+具有兩個數據表的簡單 <code>JOIN</code>。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 JOIN CourseSelection
@@ -800,7 +801,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>LEFT JOIN</code>有兩個數據表。<br/>
+</td></tr><tr><td>具有兩個數據表的 <code>LEFT JOIN</code>。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -819,7 +820,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code>熟悉<code>COUNT</code><br/>
+</td></tr><tr><td>使用 <code>COUNT</code> 的 <code>JOIN</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -902,7 +903,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>OR</code>具有順序<br/>
+</td></tr><tr><td>具有順序的 <code>OR</code><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -920,7 +921,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>TOP</code>、 <code>OR</code>和排序。<br/>
+</td></tr><tr><td><code>TOP</code>、<code>OR</code>和排序。<br/>
 
 <pre><code class="lang-sql">SELECT TOP 2 student.Name FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -942,7 +943,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>UNION</code>兩個查詢的。<br/>
+</td></tr><tr><td>兩個查詢的 <code>UNION</code>。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
@@ -991,7 +992,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><code>CASE</code>條件.<br/>
+</td></tr><tr><td><code>CASE</code> 條件。<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -2421,7 +2422,7 @@ module Queries2 = begin
 end
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [F# 語言參考](index.md)
 - [QueryBuilder 類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)

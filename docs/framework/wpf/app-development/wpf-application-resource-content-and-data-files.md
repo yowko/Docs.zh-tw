@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 77f3c519308f39f83dac399aef395d5d36a7195e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a31dc2c5431c8201607462e8bdef4b8bae0fb41d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040916"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460922"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 應用程式資源、內容和資料檔案
 Microsoft Windows 應用程式通常取決於包含非可執行資料的檔案，例如 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、影像、影片和音訊。 Windows Presentation Foundation （WPF）提供設定、識別和使用這些類型的資料檔案（稱為「應用程式資料檔案」）的特殊支援。 這項支援是以一組特定的應用程式資料檔案類型為中心，包括：  
@@ -52,7 +52,7 @@ Microsoft Windows 應用程式通常取決於包含非可執行資料的檔案�
 - 您的應用程式資料檔案必須是可當地語系化的（請參閱[WPF 全球化和當地語系化總覽](../advanced/wpf-globalization-and-localization-overview.md)）。  
   
 > [!NOTE]
-> 本節所述的資源檔與[XAML 資源](../advanced/xaml-resources.md)中所述的資源檔不同，而且不同于[管理應用程式資源（.net）](/visualstudio/ide/managing-application-resources-dotnet)中所述的內嵌或連結的資源。  
+> 本節所述的資源檔與[XAML 資源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)中所述的資源檔不同，而且不同于[管理應用程式資源（.net）](/visualstudio/ide/managing-application-resources-dotnet)中所述的內嵌或連結的資源。  
   
 ### <a name="configuring-resource-files"></a>設定資源檔  
  在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，資源檔是包含在 Microsoft build engine （MSBuild）專案中做為 `Resource` 專案的檔案。  
@@ -187,15 +187,15 @@ Microsoft Windows 應用程式通常取決於包含非可執行資料的檔案�
   
  [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- 不過，file:/// 和 http:// 配置要求應用程式必須受到完全信任。 如果您的應用程式是從網際網路或內部網路啟動的 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]，而且它只會要求從那些位置啟動之應用程式所允許的許可權集，就只能從應用程式的來源網站載入鬆散檔案（啟動位置）。 這類檔案稱為「*來源網站*」檔案。  
+ 不過，file:/// 和 http:// 配置要求應用程式必須受到完全信任。 如果您的應用程式是從網際網路或內部網路啟動的 XAML 瀏覽器應用程式（XBAP），而且它只會要求從那些位置啟動之應用程式所允許的許可權集，則只可將鬆散檔載入應用程式的來源網站（啟動位置）。 這類檔案稱為「*來源網站*」檔案。  
   
  來源網站檔是部分信任應用程式的唯一選擇，但並不是只適用於部分信任應用程式。 完全信任應用程式可能還是需要載入它們在建置階段並不知道的應用程式資料檔案；雖然完全信任應用程式可以使用 file:///，但是應用程式資料檔案可能會安裝在應用程式組件的相同資料夾或子資料夾中。 在此情況下，使用來源網站參考比使用 file:/// 簡單，因為使用 file:/// 時，您必須找出檔案的完整路徑。  
   
 > [!NOTE]
-> 來源網站檔案不會使用用戶端電腦上的 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 進行快取，而內容檔案則是。 因此，只有在特別要求時，才會下載來源網站檔。 如果 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 應用程式有大型媒體檔案，將它們設定為 [來源網站] 檔案，表示初始應用程式啟動速度快很多，而且檔案只會隨選下載。  
+> 來源網站檔案不會使用用戶端電腦上的 XAML 瀏覽器應用程式（XBAP）進行快取，而內容檔案則是。 因此，只有在特別要求時，才會下載來源網站檔。 如果 XAML 瀏覽器應用程式（XBAP）應用程式有大型媒體檔案，將它們設定為「原始網站」檔案，表示初始應用程式啟動速度會更快，而且只會視需要下載檔案。  
   
 ### <a name="configuring-site-of-origin-files"></a>設定來源網站檔  
- 如果您的原始網站檔案在編譯時期不存在或不明，您需要使用傳統部署機制，以確保在執行時間可使用所需的檔案，包括使用 `XCopy` 命令列程式或 [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)]。  
+ 如果您的原始網站檔案在編譯時期不存在或不明，您需要使用傳統部署機制，以確保在執行時間可使用所需的檔案，包括使用 `XCopy` 命令列程式或 Microsoft Windows安裝程式.  
   
  如果您在編譯時期知道您想要在來源網站上找到的檔案，但仍想要避免明確的相依性，您可以將這些檔案新增至 MSBuild 專案做為 `None` 專案。 如同內容檔案，您必須設定 MSBuild `CopyToOutputDirectory` 屬性，以指定將來源網站檔案複製到相對於所建立元件的位置，方法是指定 `Always` 值或 `PreserveNewest` 值。  
   

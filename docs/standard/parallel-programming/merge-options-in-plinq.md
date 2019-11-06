@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7255ef11bfdf74afa6ae2032b0c86c8c44dbfe7d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f88f2035fb27567e56792cae8289140129e9c557
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647732"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129013"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ 中的合併選項
 當查詢平行執行時，PLINQ 會分割來源序列，讓多個執行緒可以在不同的組件上同時工作，通常是在個別的執行緒上。 如果結果是在一個執行緒上使用，例如在 `foreach` (Visual Basic 中的 `For Each`) 迴圈中，則必須將每個執行緒中的結果合併回單一序列。 PLINQ 執行的合併類型，取決於存在查詢中的運算子。 比方說，對結果強制執行新順序的運算子，必須緩衝所有執行緒中的所有元素。 就使用執行緒的角度而言 (也是應用程式使用者的觀點)，完整緩衝的查詢在產生其第一個結果前可能會執行不算短的一段時間。 其他運算子預設會部分進行緩衝；會批次產生其結果。 有一個運算子 (<xref:System.Linq.ParallelEnumerable.ForAll%2A>) 預設不會進行緩衝。 它會立即產生所有執行緒中的所有元素。  
@@ -49,23 +47,23 @@ ms.locfileid: "64647732"
   
 |運算子|限制|  
 |--------------|------------------|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|無|  
-|<xref:System.Linq.ParallelEnumerable.Cast%2A>|無|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.Cast%2A>|None|  
 |<xref:System.Linq.ParallelEnumerable.Concat%2A>|只含有陣列或清單來源的非排序查詢。|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|無|  
-|<xref:System.Linq.ParallelEnumerable.OfType%2A>|無|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.OfType%2A>|None|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|只含有陣列或清單來源的非排序查詢。|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>|無|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|無|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|無|  
-|<xref:System.Linq.ParallelEnumerable.Take%2A>|無|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>|無|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.Take%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>|None|  
   
  所有其他的 PLINQ 查詢運算子可能會忽略使用者提供的合併選項。 某些查詢運算子 (例如 <xref:System.Linq.ParallelEnumerable.Reverse%2A> 和 <xref:System.Linq.ParallelEnumerable.OrderBy%2A>) 在所有元素都已產生並重新排序之前無法產生任何元素。 因此，當 <xref:System.Linq.ParallelMergeOptions> 使用於也包含運算子 (例如 <xref:System.Linq.ParallelEnumerable.Reverse%2A>) 的查詢中時，一直到該運算子已產生其結果後，才會在查詢中套用合併行為。  
   
  某些運算子是否可以處理合併選項，取決於來源序列的類型，以及先前是否在查詢中使用了 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 運算子。 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 一律為 <xref:System.Linq.ParallelMergeOptions.NotBuffered>；它會立即產生其元素。 <xref:System.Linq.ParallelEnumerable.OrderBy%2A> 一律為 <xref:System.Linq.ParallelMergeOptions.FullyBuffered>；它必須先排序整個清單後才會產生。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
-- [如何：在 PLINQ 中指定合併選項](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)
+- [操作說明：在 PLINQ 中指定合併選項](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

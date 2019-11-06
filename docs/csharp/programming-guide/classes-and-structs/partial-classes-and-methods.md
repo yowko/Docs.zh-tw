@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 53c3ac6e4fa6313488c47d851e0897bd512521b7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 2df3492274c2abceebf1d37b87be9cc9bb455b5f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596283"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419174"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分類別和方法 (C# 程式設計手冊)
 
@@ -113,7 +113,7 @@ ms.locfileid: "69596283"
 
 ## <a name="example-1"></a>範例 1
 
-### <a name="description"></a>說明
+### <a name="description"></a>描述
 
 在下例中，類別的欄位和建構函式 `Coords`，已在一個部分類別定義中宣告，而成員 `PrintCoords`，則是在另一個部分類別定義中宣告。
 
@@ -123,7 +123,7 @@ ms.locfileid: "69596283"
 
 ## <a name="example-2"></a>範例 2
 
-### <a name="description"></a>說明
+### <a name="description"></a>描述
 
 下例範例示範您也可以開發部分結構和介面。
 
@@ -164,13 +164,13 @@ partial void onNameChanged()
 
 - 部分方法可以為泛型。 條件約束放在定義部分方法宣告中，可選擇性地在實作宣告時重複。 參數和型別參數名稱在實作宣告中不必相同，但在定義宣告中要相同。
 
-- 您可以[委派](../../language-reference/keywords/delegate.md)已定義且實作的部分方法，但不能委派只經定義的部分方法。
+- 您可以[委派](../../language-reference/builtin-types/reference-types.md)已定義且實作的部分方法，但不能委派只經定義的部分方法。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](../../language-reference/language-specification/index.md)的[部分型別](~/_csharplang/spec/classes.md#partial-types)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的[部分型別](~/_csharplang/spec/classes.md#partial-types)。 語言規格是 C# 語法及用法的限定來源。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別](./classes.md)

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Next function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f97a19f236b87a7f4c5b2014aca6ee4abd338c63
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c9c824b0158618848c13183d92f88604460d5099
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798276"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141718"
 ---
 # <a name="qualifierset_next-function"></a>QualifierSet_Next 函式
 擷取透過呼叫 [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) 函式而開始之列舉中的下一個限定詞。   
@@ -53,13 +51,13 @@ HRESULT QualifierSet_Next (
 [in] 保留。 這個參數必須是0。
 
 `pstrName`   
-脫銷辨識符號的名稱。 如果`null`為，則會忽略這個參數， `pstrName`否則不應指向有效`BSTR`的或發生記憶體流失的情況。 如果不是 null，函式`BSTR` `WBEM_S_NO_ERROR`會在傳回時一律配置新的。
+脫銷辨識符號的名稱。 如果 `null`，則會忽略此參數;否則，`pstrName` 不應該指向有效的 `BSTR` 或發生記憶體流失。 如果不是 null，當函式傳回 `WBEM_S_NO_ERROR`時，一律會配置新的 `BSTR`。
 
 `pVal`   
-脫銷如果成功，則為限定詞的值。 如果函式失敗，則`VARIANT`不`pVal`會修改所指向的。 如果此參數為`null`，則會忽略參數。
+脫銷如果成功，則為限定詞的值。 如果函式失敗，`pVal` 所指向的 `VARIANT` 不會修改。 如果 `null`此參數，則會忽略參數。
 
 `plFlavor`   
-脫銷接收限定詞類別的長整數指標。 如果不需要類別資訊，此參數可以是`null`。 
+脫銷接收限定詞類別的長整數指標。 如果不想要的是類別資訊，可以 `null`此參數。 
 
 ## <a name="return-value"></a>傳回值
 
@@ -77,17 +75,17 @@ HRESULT QualifierSet_Next (
 
 此函式會包裝對[IWbemQualifierSet：： Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next)方法的呼叫。
 
-您會重複`QualifierSet_Next`呼叫函式來列舉所有的限定詞，直到函`WBEM_S_NO_MORE_DATA`式傳回為止。 若要及早終止列舉，請呼叫[QualifierSet_EndEnumeration](qualifierset-endenumeration.md)函數。
+您會重複呼叫 `QualifierSet_Next` 函式，以列舉所有的限定詞，直到函式傳回 `WBEM_S_NO_MORE_DATA`為止。 若要及早終止列舉，請呼叫[QualifierSet_EndEnumeration](qualifierset-endenumeration.md)函數。
 
 列舉期間傳回的限定詞順序未定義。
 
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** WMINet_Utils.idl  
+ **標頭：** WMINet_Utils .idl  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WMI 和效能計數器（非受控 API 參考）](index.md)

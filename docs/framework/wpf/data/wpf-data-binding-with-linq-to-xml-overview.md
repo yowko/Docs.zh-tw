@@ -2,12 +2,12 @@
 title: 使用 LINQ to XML 進行 WPF 資料繫結
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: c423ad9c8069b78b2e69a88d25d8e12bd3a3a1b7
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 53aba3295b98ae4a476b321cb585e1bbbdd45dad
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920703"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197386"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>使用 LINQ to XML 的 WPF 資料系結總覽
 
@@ -36,7 +36,7 @@ WPF 資料繫結可讓 UI 項目將其屬性中的一個屬性與資料來源產
 |繫結來源|一或多個值的來源物件，這些值會提供給 UI 項目進行顯示。 WPF 會自動支援下列類型做為繫結來源：CLR 物件、ADO.NET 資料物件、XML 資料 (來自 XPath 或 LINQ to XML 查詢)，或其他 <xref:System.Windows.DependencyObject>。|
 |來源路徑|繫結來源的屬性，可解析要繫結的值或值集合。|
 
-相依性屬性為 WPF 專屬的概念，代表 UI 項目動態計算的屬性。 例如，相依性屬性通常具有父項目提供的預設值或值。 這些特殊的屬性是由 <xref:System.Windows.DependencyProperty> 類別 (而非具有標準屬性的欄位) 的執行個體所支援。 如需詳細資訊，請參閱[相依性屬性概觀](/dotnet/framework/wpf/advanced/dependency-properties-overview)。
+相依性屬性為 WPF 專屬的概念，代表 UI 項目動態計算的屬性。 例如，相依性屬性通常具有父項目提供的預設值或值。 這些特殊的屬性是由 <xref:System.Windows.DependencyProperty> 類別 (而非具有標準屬性的欄位) 的執行個體所支援。 如需詳細資訊，請參閱[相依性屬性概觀](../advanced/dependency-properties-overview.md)。
 
 ### <a name="dynamic-data-binding-in-wpf"></a>WPF 中的動態資料系結
 
@@ -89,6 +89,6 @@ WPF 資料繫結可讓 UI 項目將其屬性中的一個屬性與資料來源產
 
 - [WPF 資料繫結與 LINQ to XML](wpf-data-binding-with-linq-to-xml-overview.md)
 - [LINQ to XML 動態屬性](linq-to-xml-dynamic-properties.md)
-- [WPF 中的 XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)
+- [WPF 中的 XAML](../advanced/xaml-in-wpf.md)
 - [資料繫結 (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
-- [使用工作流程標記](http://go.microsoft.com/fwlink/?LinkId=98685)
+- [使用工作流程標記](https://go.microsoft.com/fwlink/?LinkId=98685)

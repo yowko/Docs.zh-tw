@@ -11,19 +11,19 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2e0b98107ac5f43c80aad6cb5ea61e6f4e1e28d3
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 9ee9df41e6f0a4e37164760a2e40740e31530121
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015705"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459069"
 ---
 # <a name="troubleshoot-control-and-component-authoring"></a>針對控制項和元件撰寫進行疑難排解
 
-本主題列出開發元件和控制項時所發生的下列常見問題:
+本主題列出開發元件和控制項時所發生的下列常見問題：
 
 - 無法將控制項新增至工具箱
 
@@ -31,7 +31,7 @@ ms.locfileid: "70015705"
 
 - 事件在繼承的控制項或元件中引發兩次
 
-- 設計階段錯誤:「無法建立元件 '*元件名稱*'」
+- 設計階段錯誤：「無法建立元件 '元件名稱'」
 
 - STAThreadAttribute
 
@@ -39,7 +39,7 @@ ms.locfileid: "70015705"
 
 ## <a name="cannot-add-control-to-toolbox"></a>無法將控制項新增至工具箱
 
-如果您想要將您在另一個專案中建立的自訂控制項或協力廠商控制項新增至 [工具箱]，您必須手動進行。 如果目前專案包含您的控制項或元件，它應該會自動出現在 [工具箱]。 如需詳細資訊，請參閱[逐步解說：自動將自訂群組件](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)填入工具箱。
+如果您想要將您在另一個專案中建立的自訂控制項或協力廠商控制項新增至 [工具箱]，您必須手動進行。 如果目前專案包含您的控制項或元件，它應該會自動出現在 [工具箱]。 如需詳細資訊，請參閱[逐步解說：自動將自訂元件填入工具箱](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。
 
 ### <a name="to-add-a-control-to-the-toolbox"></a>將控制項新增至工具箱
 
@@ -73,7 +73,7 @@ ms.locfileid: "70015705"
 
 ## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a>無法針對 Windows Forms 使用者控制項或元件進行偵錯
 
-如果您的<xref:System.Windows.Forms.UserControl>控制項衍生自類別, 您可以使用測試容器來對其執行時間行為進行偵錯工具。 如需詳細資訊，請參閱[如何：測試 UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)的執行時間行為。
+如果您的控制項衍生自 <xref:System.Windows.Forms.UserControl> 類別，您可以使用測試容器來對其執行時間行為進行偵錯工具。 如需詳細資訊，請參閱[如何：測試 UserControl 的執行階段行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)。
 
 其他自訂控制項和元件不是獨立的專案。 它們必須由 Windows Forms 專案之類的應用程式裝載。 若要針對控制項或元件進行偵錯，您必須將它新增至 Windows Forms 專案。
 
@@ -99,27 +99,27 @@ ms.locfileid: "70015705"
 
    您現在可以如同往常一般針對您的控制項或元件進行偵錯。
 
-如需有關偵錯工具的詳細資訊, 請參閱[ [Visual Studio 中的調試](/visualstudio/debugger/debugging-in-visual-studio)程式和逐步解說:在設計階段時](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md), 對自訂 Windows Forms 控制項進行調試。
+如需偵錯的詳細資訊，請參閱[在 Visual Studio 中偵錯](/visualstudio/debugger/debugger-feature-tour)和[逐步解說︰在設計階段針對自訂 Windows Forms 控制項進行偵錯](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)。
 
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>事件在繼承的控制項或元件中引發兩次
 
 這可能是因為重複的 `Handles` 子句。 如需詳細資訊，請參閱 [Visual Basic 中的繼承事件處理常式疑難排解](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)。
 
-## <a name="design-time-error-failed-to-create-component-component-name"></a>設計階段錯誤:「無法建立元件 ' 元件名稱 '」
+## <a name="design-time-error-failed-to-create-component-component-name"></a>設計階段錯誤：「無法建立元件 '元件名稱'」
 
 您的元件或控制項必須提供沒有參數的無參數的處理常式。 當設計環境建立元件或控制項的執行個體時，它不會嘗試提供任何參數給採用參數的建構函式多載。
 
 ## <a name="stathreadattribute"></a>STAThreadAttribute
 
-會<xref:System.STAThreadAttribute>通知 common language runtime (CLR), Windows Forms 使用單一執行緒的單元模型。 如果您未將此屬性套用至 Windows Forms 應用程式的 `Main` 方法，您可能會發現非預期的行為。 例如, 之類<xref:System.Windows.Forms.ListView>的控制項可能不會出現背景影像。 某些控制項可能也需要此屬性，才能有正確的 AutoComplete 和拖放行為。
+<xref:System.STAThreadAttribute> 會通知 common language runtime （CLR），Windows Forms 使用單一執行緒的單元模型。 如果您未將此屬性套用至 Windows Forms 應用程式的 `Main` 方法，您可能會發現非預期的行為。 例如，<xref:System.Windows.Forms.ListView>之類的控制項可能不會出現背景影像。 某些控制項可能也需要此屬性，才能有正確的 AutoComplete 和拖放行為。
 
 ## <a name="component-icon-does-not-appear-in-toolbox"></a>元件圖示不會出現在工具箱中
 
-當您使用<xref:System.Drawing.ToolboxBitmapAttribute>來建立圖示與自訂群組件的關聯時, 該點陣圖不會出現在自動產生之元件的 [工具箱] 中。 若要查看點陣圖，請使用 [選擇工具箱項目] 對話方塊，重新載入控制項。 如需詳細資訊，請參閱[如何：提供控制項](how-to-provide-a-toolbox-bitmap-for-a-control.md)的 [工具箱] 點陣圖。
+當您使用 <xref:System.Drawing.ToolboxBitmapAttribute> 將圖示與您的自訂群組件產生關聯時，該點陣圖不會出現在自動產生之元件的 [工具箱] 中。 若要查看點陣圖，請使用 [選擇工具箱項目] 對話方塊，重新載入控制項。 如需詳細資訊，請參閱[如何：為控制項提供工具箱點陣圖](how-to-provide-a-toolbox-bitmap-for-a-control.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [在設計階段開發 Windows Forms 控制項](developing-windows-forms-controls-at-design-time.md)
-- [逐步解說：使用自訂群組件自動填入工具箱](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [如何：測試 UserControl 的執行時間行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [逐步解說：在設計階段針對自訂 Windows Forms 控制項進行偵錯](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
+- [逐步解說：自動將自訂元件填入工具箱](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [操作說明：測試 UserControl 的執行階段行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [逐步解說：在設計階段偵錯自訂的 Windows Forms 控制項](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)

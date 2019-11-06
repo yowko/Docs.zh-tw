@@ -9,14 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4d7cbd00dbf94900185643490b952ced7887965
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 6a7f29a95cd3042cda1c508ad7472e9378817ebe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895217"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126441"
 ---
 # <a name="details-of-regular-expression-behavior"></a>規則運算式行為的詳細資訊
 .NET Framework 規則運算式引擎是回溯規則運算式比對器，它結合了傳統的非決定性有限自動化 (NFA) 引擎，例如 Perl、Python、Emacs 和 Tcl 所使用的引擎。 這使得它與較快速、但限制較多的純規則運算式決定性有限自動化 (DFA) 引擎有所區別，例如 awk、egrep 或 lex 中的引擎。 這也和標準的但較緩慢的 POSIX NFA 有差異。 下節描述這三種規則運算式引擎，並說明為何要在 .NET Framework 中使用傳統 NFA 引擎來實作規則運算式。  
@@ -77,7 +75,7 @@ ms.locfileid: "70895217"
   
      規則運算式模式 `\b(?!non)\w+\b` 的定義如下表所示。  
   
-    |模式|說明|  
+    |模式|描述|  
     |-------------|-----------------|  
     |`\b`|開始字緣比對。|  
     |`(?!non)`|向右合樣以確定目前的字串不是以 "non" 開頭。 如果是，則比對失敗。|  
@@ -124,7 +122,7 @@ ms.locfileid: "70895217"
   
      如需從右至左比對的詳細資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)。  
   
-- 左合樣和左不合樣：`(?<=`*subexpression*`)` 適用於左合樣，而 `(?<!`*subexpression*`)` 適用於左不合樣。 此功能類似於本主題前文中所討論的向右合樣。 因為規則運算式引擎允許完整的由右至左比對，規則運算式允許無限制的向左合樣。 當巢狀子運算式為外部運算式的超集時，左合樣和左不合樣也可以用來避免產生巢狀數量詞。 具有此種巢狀數量詞的規則運算式通常效能不佳。 例如，下例會驗證字串是否以英數字元開頭和結尾，以及字串中的任何其他字元是否為較大子集之一。 其會構成用來驗證電子郵件地址之規則運算式的一部分；如需詳細資訊，請參閱[如何：確認字串是否為有效的電子郵件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
+- 左合樣和左不合樣：`(?<=`*subexpression*`)` 適用於左合樣，而 `(?<!`*subexpression*`)` 適用於左不合樣。 此功能類似於本主題前文中所討論的向右合樣。 因為規則運算式引擎允許完整的由右至左比對，規則運算式允許無限制的向左合樣。 當巢狀子運算式為外部運算式的超集時，左合樣和左不合樣也可以用來避免產生巢狀數量詞。 具有此種巢狀數量詞的規則運算式通常效能不佳。 例如，下例會驗證字串是否以英數字元開頭和結尾，以及字串中的任何其他字元是否為較大子集之一。 它會構成用來驗證電子郵件地址之規則運算式的一部分；如需詳細資訊，請參閱[如何：確認字串是否為有效的電子郵件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
@@ -135,7 +133,7 @@ ms.locfileid: "70895217"
     |-------------|-----------------|  
     |`^`|從字串的開頭開始比對。|  
     |`[A-Z0-9]`|比對任何數值或英數字元。 (此比較不區分大小寫。)|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>|比對出現零或多次的任何文字字元，或下列任一個字元：-、!、#、$、%、&、'、.、\*、+、/、=、?、^、\`、{、}、&#124; 或 ~。|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>|比對出現零次或多次的任何文字字元，或下列任何字元：-,!, #、$、%、&、'、.、\*、+、/、=、？、^、\`、{、}、 &#124;或 ~。|  
     |`(?<=[A-Z0-9])`|向左合樣前一個字元，而該字元必須是數值或英數字元。 (此比較不區分大小寫。)|  
     |`$`|在字串的結尾結束比對。|  
   
@@ -143,7 +141,7 @@ ms.locfileid: "70895217"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|提供規則運算式回溯如何擴展以尋找替代符合項目的相關資訊。|  
 |[編譯及重複使用](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|提供編譯和重複使用規則運算式以提升效能的相關資訊。|  

@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: 131eb251493b77f13b5dc59a3a03504be8868e8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73f36325a2621cc834e1bef8d2060dec1a8c133d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052049"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423785"
 ---
 # <a name="label"></a>ThisAddIn
-<xref:System.Windows.Controls.Label> 控制項通常會提供資訊[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。  在過去，<xref:System.Windows.Controls.Label>包含僅限文字，但是由於<xref:System.Windows.Controls.Label>隨附[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]是<xref:System.Windows.Controls.ContentControl>，它可以包含文字或<xref:System.Windows.UIElement>。  
+<xref:System.Windows.Controls.Label> 控制項通常會在 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]中提供資訊。  在過去，<xref:System.Windows.Controls.Label> 只包含文字，但因為 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 隨附的 <xref:System.Windows.Controls.Label> 是 <xref:System.Windows.Controls.ContentControl>，它可以包含文字或 <xref:System.Windows.UIElement>。  
   
- A<xref:System.Windows.Controls.Label>提供存取金鑰的功能和視覺的支援。 它經常會用來啟用控制項的鍵盤快速存取，例如<xref:System.Windows.Controls.TextBox>。 若要將指派<xref:System.Windows.Controls.Label>要<xref:System.Windows.Controls.Control>，將<xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType>應該在使用者按下便捷鍵時取得焦點之控制項的屬性。  
+ <xref:System.Windows.Controls.Label> 提供存取金鑰的功能和視覺支援。 它經常用來啟用快速鍵盤存取，例如 <xref:System.Windows.Controls.TextBox>的控制項。 若要將 <xref:System.Windows.Controls.Label> 指派給 <xref:System.Windows.Controls.Control>，請將 <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> 屬性設定為當使用者按下便捷鍵時，應取得焦點的控制項。  
   
- 下圖顯示<xref:System.Windows.Controls.Label>為目標的 「 主題 」 <xref:System.Windows.Controls.ComboBox>。  當使用者按下時，<xref:System.Windows.Controls.ComboBox>收到焦點。  如需詳細資訊，請參閱[如何：設定標籤的目標屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))。  
+ 下圖顯示以 <xref:System.Windows.Controls.ComboBox>為目標的 <xref:System.Windows.Controls.Label> 「主題」。  當使用者按下時，<xref:System.Windows.Controls.ComboBox> 會收到焦點。  如需詳細資訊，請參閱[如何：設定標籤的目標屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))。  
   
- ![顯示用法所標記的顯示屬性](./media/labeledby.JPG "以 LabeledBy")  
+ ![顯示 [屬性] 對話方塊的螢幕擷取畫面，其中顯示 [使用方式] 標示。](./media/label/display-properties-labeled-by.png "LabeledBy")  
   
-## <a name="in-this-section"></a>本節內容  
- [如何：建立具有便捷鍵和文字換行的控制項](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  
+## <a name="in-this-section"></a>本章節內容  
+ [如何：建立具有存取金鑰和文字換行的控制項](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Label>

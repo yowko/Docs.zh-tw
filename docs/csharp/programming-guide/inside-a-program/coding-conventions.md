@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 27001d1697def083580ecdc742b4b8db924545aa
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 42e1814af38fa442255f6da79fb4862ce3d0f361
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589422"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423211"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 編碼慣例 (C# 程式設計手冊)
  編碼慣例有下列用途：  
@@ -93,7 +93,7 @@ ms.locfileid: "69589422"
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
-- 避免使用 `var` 取代 [dynamic](../../language-reference/keywords/dynamic.md)。  
+- 避免使用 `var` 取代 [dynamic](../../language-reference/builtin-types/reference-types.md)。  
   
 - 使用隱含類型，確定 [for](../../language-reference/keywords/for.md) 和 [foreach](../../language-reference/keywords/foreach-in.md) 迴圈中迴圈變數的類型。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "69589422"
   
 ### <a name="static-members"></a>靜態成員  
   
-- 使用類別名稱呼叫 [static](../../language-reference/keywords/static.md) 成員：*ClassName.StaticMember*。 這種作法可讓靜態存取更加清晰，從而讓程式碼更易於閱讀。  請勿使用衍生類別的名稱，限定在基底類別中定義的靜態成員。  編譯該程式碼時，如果將具有相同名稱的靜態成員加入衍生類別，則會破壞程式碼的清楚程度，且程式碼之後可能會在中斷。  
+- 使用類別名稱 *ClassName.StaticMember*，呼叫 [static](../../language-reference/keywords/static.md) 成員。 這種作法可讓靜態存取更加清晰，從而讓程式碼更易於閱讀。  請勿使用衍生類別的名稱，限定在基底類別中定義的靜態成員。  編譯該程式碼時，如果將具有相同名稱的靜態成員加入衍生類別，則會破壞程式碼的清楚程度，且程式碼之後可能會在中斷。  
   
 ### <a name="linq-queries"></a>LINQ 查詢  
   
@@ -196,7 +196,7 @@ ms.locfileid: "69589422"
 ## <a name="security"></a>安全性  
  請遵循[安全程式碼撰寫方針](../../../standard/security/secure-coding-guidelines.md)中的指引。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Basic 編碼慣例](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
 - [安全程式碼撰寫方針](../../../standard/security/secure-coding-guidelines.md)

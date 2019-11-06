@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: edef213c0f4d43a15b7c6842ef6c62e95544da66
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 62f0ba1dc8b7836a3b4699699b91b567eb8051f3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039504"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458187"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>實作 UI 自動化 MultipleView 控制項模式
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "73039504"
   
  <xref:System.Windows.Automation.MultipleViewPattern> 控制項模式可用來支援控制項，這種控制項提供相同一組資訊或子控制項的多種不同表示，而且能夠在這些表示之間切換。  
   
- 可以顯示多個視圖的控制項範例包括 [清單] 視圖（可以將其內容顯示為縮圖、磚、圖示或詳細資料）、[!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 圖表（圓形圖、折線圖、橫條圖、具有公式的儲存格值）、[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 檔（一般、Web 配置、列印版面配置、閱讀版面配置、大綱）、Microsoft Outlook 行事曆（年、月、周、日）和 Microsoft Windows 媒體播放機的外觀。 支援哪些檢視會由控制項的開發人員決定，而且是每個控制項所特有。  
+ 可以顯示多個視圖的控制項範例包括清單視圖（可以將其內容顯示為縮圖、磚、圖示或詳細資料）、Microsoft Excel 圖表（圓形圖、折線圖、橫條圖、含有公式的儲存格值）、Microsoft Word 檔（一般、Web 配置、列印版面配置、閱讀版面配置、大綱）、Microsoft Outlook 行事曆（年、月、周、日）和 Microsoft Windows 媒體播放機的外觀。 支援哪些檢視會由控制項的開發人員決定，而且是每個控制項所特有。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  

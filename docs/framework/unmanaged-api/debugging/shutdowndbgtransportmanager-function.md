@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6325a782-6862-4346-8e20-d922ca246169
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2e59ec88ea001640ba0dc3e923fa62a064a2d007
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d9ae66b7c77a0d3482b7c68a824a8a148ba2595
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752480"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139160"
 ---
 # <a name="shutdowndbgtransportmanager-function"></a>ShutdownDbgTransportManager 函式
 關閉要與遠端目標電腦連接的傳輸管理員。  
@@ -37,8 +35,8 @@ void InitDbgTransportManager ();
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CoreClrRemoteDebuggingInterfaces.h  
+ **標頭：** CoreClrRemoteDebuggingInterfaces。h  
   
- **程式庫：** mscordbi_macx86.dll  
+ 連結**庫：** mscordbi_macx86  
   
- **.NET framework 版本：** 3.5 SP1
+ **.NET Framework 版本：** 3.5 SP1

@@ -1,22 +1,22 @@
 ---
-title: 作法：撰寫 Windows Forms 的控制項
+title: 如何：撰寫 Windows Forms 的控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], creating
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 45a6ae68102204ad8506027065c2676e02fdd7a3
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 3776e47191d9b10431acbb9a2a7257996e531ba8
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015922"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459419"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>作法：Windows Forms 的作者控制項
+# <a name="how-to-author-controls-for-windows-forms"></a>如何：撰寫 Windows Forms 的控制項
 
 控制項所代表使用者與程式之間的圖形化連結。 控制項可以提供或處理資料、接受使用者輸入、回應事件，或執行任意數目的其他功能來連接使用者與應用程式。 因為控制項本質上是具有圖形化介面的元件，所以可以提供元件所執行的任何功能，以及提供使用者互動。 建立控制項以提供特定用途，而編寫控制項只是另一個程式設計工作。 記住這點，下列步驟代表控制項撰寫處理序的概觀。 連結可提供各個步驟的其他資訊。
 
@@ -40,20 +40,20 @@ ms.locfileid: "70015922"
 
 5. 如果您需要自訂控制項的繪製，請為它新增程式碼。 如需詳細資訊，請參閱[自訂控制項繪製和轉譯](custom-control-painting-and-rendering.md)。
 
-6. 如果您的控制項繼承<xref:System.Windows.Forms.UserControl>自, 您可以藉由建立控制項專案並在**UserControl 測試容器**中執行, 來測試其執行時間行為。 如需詳細資訊，請參閱[如何：測試 UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)的執行時間行為。
+6. 如果您的控制項繼承自 <xref:System.Windows.Forms.UserControl>，您可以藉由建立控制項專案並在**UserControl 測試容器**中執行，來測試其執行時間行為。 如需詳細資訊，請參閱[如何：測試 UserControl 的執行階段行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)。
 
-7. 您也可以建立新專案 (例如 Windows 應用程式) 並將它放入容器中，來測試您的控制項並進行偵錯。 此程式會在逐步解說的[過程中示範:撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-csharp.md)。
+7. 您也可以建立新專案 (例如 Windows 應用程式) 並將它放入容器中，來測試您的控制項並進行偵錯。 此程式會在[逐步解說：撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-csharp.md)的過程中示範。
 
 8. 當您新增每項功能時，將功能新增至測試專案，以執行新功能。
 
 9. 重複執行，並調整設計。
 
-10. 封裝並部署您的控制項。 如需詳細資訊, 請參閱[Visual Studio 中的部署的第一次](/visualstudio/deployment/deploying-applications-services-and-components)查看。
+10. 封裝並部署您的控制項。 如需詳細資訊，請參閱[Visual Studio 中的部署的第一次](/visualstudio/deployment/deploying-applications-services-and-components)查看。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [如何：繼承自 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
-- [如何：繼承自控制項類別](how-to-inherit-from-the-control-class.md)
-- [如何：繼承自現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)
-- [如何：測試 UserControl 的執行時間行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [操作說明：繼承自 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
+- [操作說明：繼承自 Control 類別](how-to-inherit-from-the-control-class.md)
+- [操作說明：繼承自現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)
+- [操作說明：測試 UserControl 的執行階段行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [各種自訂控制項](varieties-of-custom-controls.md)

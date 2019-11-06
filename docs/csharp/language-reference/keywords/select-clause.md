@@ -9,12 +9,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: 3ba52fccc0521df1a0bb5b6177575dc5d2152248
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: f1bfbeccaf6c3916a591f6447760fa01c3f8a3b6
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633823"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422358"
 ---
 # <a name="select-clause-c-reference"></a>select 子句 (C# 參考)
 
@@ -38,12 +38,12 @@ ms.locfileid: "65633823"
 
 在編譯時間，`select` 子句會轉譯為 <xref:System.Linq.Enumerable.Select%2A> 標準查詢運算子的方法呼叫。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [查詢關鍵字 (LINQ)](query-keywords.md)
 - [from 子句](from-clause.md)
 - [partial (方法) (C# 參考)](partial-method.md)
 - [匿名類型](../../programming-guide/classes-and-structs/anonymous-types.md)
-- [LINQ 查詢運算式](../../programming-guide/linq-query-expressions/index.md)
-- [開始使用 C# 中的 LINQ](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C# 中的 LINQ](../../linq/index.md)
+- [開始使用 C# 中的 LINQ](/dotnet/csharp/programming-guide/concepts/linq/)

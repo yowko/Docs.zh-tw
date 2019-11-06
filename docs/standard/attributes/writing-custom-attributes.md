@@ -16,14 +16,12 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1d0a0659c99a49770d0d08460026363ecef06654
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: HT
+ms.openlocfilehash: 6570c6994c0f2e6571361c3eadc73b02a55f1584
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836314"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140582"
 ---
 # <a name="writing-custom-attributes"></a>撰寫自訂屬性
 若要設計您自己的自訂屬性，並不需要精通很多新概念。 假如您擅長物件導向的程式設計，且瞭解如何設計類別，那麼您就已經擁有大部分所需的知識。 自訂屬性基本上是一種直接或間接衍生自 <xref:System.Attribute?displayProperty=nameWithType>的傳統類別。 自訂屬性就像傳統類別一樣，含有儲存和擷取資料的方法。  
@@ -47,7 +45,7 @@ ms.locfileid: "56836314"
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- <xref:System.AttributeUsageAttribute> 有三個建立自訂屬性所需的重要成員：[AttributeTargets](#attributetargets-member)、[Inherited](#inherited-property) 和 [AllowMultiple](#allowmultiple-property)。  
+ <xref:System.AttributeUsageAttribute> 有三個建立自訂屬性所需的重要成員：[AttributeTargets](#attributetargets-member)、[Inherited](#inherited-property) 及 [AllowMultiple](#allowmultiple-property)。  
   
 ### <a name="attributetargets-member"></a>AttributeTargets 成員  
  在上述範例中，指定了 <xref:System.AttributeTargets.All?displayProperty=nameWithType> ，指出此屬性可以套用到所有程式元素。 或者，您也可以指定 <xref:System.AttributeTargets.Class?displayProperty=nameWithType>，指出您的屬性可以套用到類別，或指定 <xref:System.AttributeTargets.Method?displayProperty=nameWithType>，指出屬性只能套用至方法。 所有的程式項目都可以用這種方式透過自訂屬性標示為描述。  
@@ -148,7 +146,7 @@ ms.locfileid: "56836314"
   
  第一個範例示範只套用了必要具名參數的屬性，而第二個範例則示範同時套用了必要和選擇性參數的屬性。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Attribute?displayProperty=nameWithType>
 - <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>

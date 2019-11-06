@@ -2,12 +2,12 @@
 title: 設定工作流程的追蹤
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 889efc804bb45b384dfde5b4deb520a81d1e5486
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353061"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458895"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>設定工作流程的追蹤
 
@@ -50,9 +50,9 @@ instance.Extensions.Add(trackingParticipant);
 
 ### <a name="configuring-workflow-service-tracking"></a>設定工作流程服務追蹤
 
-工作流程裝載于 @no__t 0 服務主機時，可以公開為 WCF 服務。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 是用於工作流程服務的特殊 .NET ServiceHost 實作。 本節說明如何為在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中執行的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 工作流程服務設定追蹤。 此追蹤是透過 Web.config 檔案 (適用於 Web 裝載服務) 或 App.config 檔案 (適用於裝載於獨立應用程式中的服務，例如主控台應用程式) 指定服務行為而設定的，或是透過程式碼將追蹤特定行為加入至服務主機的 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合而設定的。
+工作流程裝載于 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 服務主機時，可以公開為 WCF 服務。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 是用於工作流程服務的特殊 .NET ServiceHost 實作。 本節說明如何為在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中執行的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 工作流程服務設定追蹤。 此追蹤是透過 Web.config 檔案 (適用於 Web 裝載服務) 或 App.config 檔案 (適用於裝載於獨立應用程式中的服務，例如主控台應用程式) 指定服務行為而設定的，或是透過程式碼將追蹤特定行為加入至服務主機的 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合而設定的。
 
-若為裝載在 <xref:System.ServiceModel.WorkflowServiceHost> 中的工作流程服務，您可以在設定檔中使用 < `behavior` > 元素來新增 <xref:System.Activities.Tracking.EtwTrackingParticipant>，如下列範例所示。
+若為裝載于 <xref:System.ServiceModel.WorkflowServiceHost>中的工作流程服務，您可以在設定檔中使用 <`behavior`> 元素來新增 <xref:System.Activities.Tracking.EtwTrackingParticipant>，如下列範例所示。
 
 ```xml
 <behaviors>
@@ -61,7 +61,7 @@ instance.Extensions.Add(trackingParticipant);
           <etwTracking profileName="Sample Tracking Profile" />
         </behavior>
    </serviceBehaviors>
-<behaviors>
+</behaviors>
 ```
 
 此外，對於裝載於 <xref:System.ServiceModel.WorkflowServiceHost> 中的工作流程服務，您可以透過程式碼加入 <xref:System.Activities.Tracking.EtwTrackingParticipant> 行為擴充。 若要加入自訂的追蹤參與者，請建立一個新的行為擴充，並將它加入至 <xref:System.ServiceModel.ServiceHost>，如下列範例程式碼所示。
@@ -196,7 +196,7 @@ WF 4 提供將追蹤記錄寫入至 ETW (Windows 事件追蹤) 工作階段的�
     </system.serviceModel>
     ```
 
-2. 將資訊清單檔案從%windir%\Microsoft.NET\Framework @ no__t-0 @ no__t-1latest 版本的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] > \Microsoft.windows.applicationserver.applications.man 複製複製到暫存位置，然後將它重新命名為ApplicationServer. Applications_Provider1 man
+2. 將資訊清單檔案從%windir%\Microsoft.NET\Framework\\\<最新版本的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.windows.applicationserver.applications.man 複製複製到暫存位置，然後將它重新命名為ApplicationServer. Applications_Provider1 man
 
 3. 將資訊清單檔中的 GUID 變更為新的 GUID。
 
@@ -256,7 +256,7 @@ WF 4 提供將追蹤記錄寫入至 ETW (Windows 事件追蹤) 工作階段的�
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
         ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Windows Server App Fabric 監視](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [使用 App Fabric 監視應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)

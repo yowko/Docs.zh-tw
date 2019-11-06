@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7797562d-7b4c-4bd9-8b93-f35e0e2869e4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1aabc5783e66893d13aed60e04d7ea5f6547c68
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 19d6a76d62680be91a7b9721912ca528edde7511
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773576"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126748"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromfile-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromFile 方法
-取得資料繫結在指定的檔案路徑組件的組件識別。  
+取得位於指定檔案路徑之元件的元件識別系結資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,43 +38,43 @@ HRESULT GetBindingIdentityFromFile(
   
 ## <a name="parameters"></a>參數  
  `pwzFilePath`  
- [in]要評估的檔案路徑。  
+ 在要評估之檔案的路徑。  
   
  `dwFlags`  
- [in]值為[ECLRAssemblyIdentityFlags](../../../../docs/framework/unmanaged-api/hosting/eclrassemblyidentityflags-enumeration.md)列舉，指出組件的識別型別。 供未來擴充。 CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT 是 common language runtime (CLR) 2.0 版支援的唯一值。  
+ 在[ECLRAssemblyIdentityFlags](../../../../docs/framework/unmanaged-api/hosting/eclrassemblyidentityflags-enumeration.md)列舉的值，表示元件的識別類型。 提供供未來擴充性之用。 CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT 是 common language runtime （CLR）2.0 版支援的唯一值。  
   
  `pwzBuffer`  
- [out]包含的不透明的組件身分識別資料的緩衝區。  
+ 脫銷包含不透明元件識別資料的緩衝區。  
   
  `pcchBufferSize`  
- [in、 out]大小的指標`pwzBuffer`。  
+ [in、out]`pwzBuffer`大小的指標。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|此方法傳回成功。|  
-|E_INVALIDARG|提供`pwzFilePath`為 null。|  
-|ERROR_INSUFFICIENT_BUFFER|大小`pwzBuffer`太小。|  
-|HOST_E_CLRNOTAVAILABLE|不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
-|HOST_E_TIMEOUT|呼叫已逾時。|  
-|HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重錯誤。 如果方法會傳回 E_FAIL，CLR 不再使用舊的處理序內。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|S_OK|已成功傳回方法。|  
+|E_INVALIDARG|提供的 `pwzFilePath` 為 null。|  
+|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` 的大小太小。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫超時。|  
+|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
+|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
+|E_FAIL|發生不明的嚴重失敗。 如果方法傳回 E_FAIL，則 CLR 在進程內將無法再使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- `GetBindingIdentityFromFile` 通常會呼叫兩次。 第一次呼叫提供 null 值`pwzBuffer`，且此方法會傳回適當的大小，以`pcchBufferSize`。 第二個呼叫所提供的適當配置的緩衝區，此方法會傳回實際的緩衝區資料完成時。  
+ `GetBindingIdentityFromFile` 通常會被呼叫兩次。 第一個呼叫會為 `pwzBuffer`提供 null 值，而方法會在 `pcchBufferSize`中傳回適當的大小。 第二個呼叫會提供適當配置的緩衝區，而且方法會在完成時以實際的緩衝區資料傳回。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRAssemblyIdentityManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)

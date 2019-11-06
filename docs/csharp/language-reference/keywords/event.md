@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: 4149663422908069b5b65ed3c32ccc6dbdfd7729
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: a6a62881f7205891bafe039a42da44eb8f8d03c0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605807"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422834"
 ---
 # <a name="event-c-reference"></a>event (C# 參考)
 `event` 關鍵字用來在發行者類別中宣告事件。  
@@ -32,7 +32,7 @@ ms.locfileid: "69605807"
 ## <a name="keywords-and-events"></a>關鍵字和事件  
  下列關鍵字適用於事件。  
   
-|關鍵字|說明|如需詳細資訊|  
+|關鍵字|描述|如需詳細資訊|  
 |-------------|-----------------|--------------------------|  
 |[static](./static.md)|隨時向呼叫端提供事件，即使沒有任何類別執行個體存在。|[靜態類別和靜態類別成員](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|  
 |[virtual](./virtual.md)|允許衍生類別使用 [override](./override.md) 關鍵字覆寫事件行為。|[繼承](../../programming-guide/classes-and-structs/inheritance.md)|  
@@ -46,12 +46,12 @@ ms.locfileid: "69605807"
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](./index.md)
 - [add](./add.md)
 - [remove](./remove.md)
-- [修飾詞](./modifiers.md)
+- [修飾詞](index.md)
 - [如何：組合委派 (多點傳送委派)](../../programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

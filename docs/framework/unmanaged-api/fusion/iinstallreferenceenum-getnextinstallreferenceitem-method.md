@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce969c9d-6538-4c34-8784-148ffd99fe7a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 20e2bff4257df64f761fd8fff880643d4e786748
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0dad50f1acac38f8cdc505026e88d42882deb580
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796453"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131715"
 ---
 # <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a>IInstallReferenceEnum::GetNextInstallReferenceItem 方法
 取得包含在這個[IInstallReferenceEnum](iinstallreferenceenum-interface.md)物件中的下一個[IInstallReferenceItem](iinstallreferenceitem-interface.md)物件的指標。  
@@ -39,13 +37,13 @@ HRESULT GetNextInstallReferenceItem (
   
 ## <a name="parameters"></a>參數  
  `ppRefItem`  
- 脫銷傳回`IInstallReferenceItem`的指標。  
+ 脫銷傳回的 `IInstallReferenceItem` 指標。  
   
  `dwFlags`  
- 在保留以供未來擴充性之用。 `dwFlags`必須是0（零）。  
+ 在保留以供未來擴充性之用。 `dwFlags` 必須是0（零）。  
   
  `pvReserved`  
- 在保留以供未來擴充性之用。 `pvReserved`必須是 null 參考。  
+ 在保留以供未來擴充性之用。 `pvReserved` 必須是 null 參考。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
@@ -54,7 +52,7 @@ HRESULT GetNextInstallReferenceItem (
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IInstallReferenceItem 介面](iinstallreferenceitem-interface.md)
 - [IInstallReferenceEnum 介面](iinstallreferenceenum-interface.md)

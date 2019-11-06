@@ -1,5 +1,5 @@
 ---
-title: 作法：測試 UserControl 的執行階段行為
+title: 如何：測試 UserControl 的執行階段行為
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], testing
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 110036e5031a2956375b1edf0689237661522d39
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: be6c913c43e3559806bc9f38a9c3152b544e4c07
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180199"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455531"
 ---
-# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>作法：測試 UserControl 的執行時間行為
+# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>如何：測試 UserControl 的執行時間行為
 
-當您開發 <xref:System.Windows.Forms.UserControl> 時，您需要測試其執行時間行為。 您可以建立個別的 Windows 應用程式專案，並將控制項放在測試表單上，但此程式並不方便。 更快速且更簡單的方式，就是使用 Visual Studio 所提供的**UserControl 測試容器**。 此測試容器會直接從您的 Windows 控制項程式庫專案開始。
+當您開發 <xref:System.Windows.Forms.UserControl>時，您需要測試其執行時間行為。 您可以建立個別的 Windows 應用程式專案，並將控制項放在測試表單上，但此程式並不方便。 更快速且更簡單的方式，就是使用 Visual Studio 所提供的**UserControl 測試容器**。 此測試容器會直接從您的 Windows 控制項程式庫專案開始。
 
 > [!IMPORTANT]
 > 若要讓測試容器載入您的 <xref:System.Windows.Forms.UserControl>，控制項必須至少有一個公用的函式。
@@ -32,9 +32,9 @@ ms.locfileid: "72180199"
 
 1. 在 Visual Studio 中，建立 Windows 控制項程式庫專案，並將其命名為**TestContainerExample**。
 
-2. 在  **Windows Form 設計工具**中，從 **工具箱** 將 @no__t 1 控制項拖曳至控制項的設計介面上。
+2. 在  **Windows Form 設計工具**中，從 **工具箱** 將 <xref:System.Windows.Forms.Label> 控制項拖曳至控制項的設計介面上。
 
-3. 按<kbd>F5</kbd>以建立專案，並執行**UserControl 測試容器**。 測試容器會在**預覽**窗格中顯示 <xref:System.Windows.Forms.UserControl>。
+3. 按<kbd>F5</kbd>以建立專案，並執行**UserControl 測試容器**。 [測試] 容器會與您的 <xref:System.Windows.Forms.UserControl> 顯示在**預覽**窗格中。
 
 4. 選取 [**預覽**] 窗格右邊的 [<xref:System.Windows.Forms.PropertyGrid>] 控制項中所顯示的 [<xref:System.Windows.Forms.Control.BackColor%2A>] 屬性。 將其值變更為**ControlDark**。 觀察控制項是否變更為較暗的色彩。 請嘗試變更其他屬性值，並觀察對控制項的影響。
 
@@ -44,7 +44,7 @@ ms.locfileid: "72180199"
 
 7. 將另一個使用者控制項加入至**TestContainerExample**專案。
 
-8. 在  **Windows Form 設計工具**中，從 **工具箱** 將 @no__t 1 控制項拖曳至控制項的設計介面上。
+8. 在  **Windows Form 設計工具**中，從 **工具箱** 將 <xref:System.Windows.Forms.Button> 控制項拖曳至控制項的設計介面上。
 
 9. 按<kbd>F5</kbd>以建立專案並執行測試容器。
 
@@ -56,9 +56,9 @@ ms.locfileid: "72180199"
 
 1. 在 Visual Studio 中，建立 Windows 控制項程式庫專案，並將其命名為**TestContainerExample2**。
 
-2. 在  **Windows Form 設計工具**中，從 **工具箱** 將 @no__t 1 控制項拖曳至控制項的設計介面上。
+2. 在  **Windows Form 設計工具**中，從 **工具箱** 將 <xref:System.Windows.Forms.RadioButton> 控制項拖曳至控制項的設計介面上。
 
-3. 按<kbd>F5</kbd>以建立專案並執行測試容器。 測試容器會在**預覽**窗格中顯示 <xref:System.Windows.Forms.UserControl>。
+3. 按<kbd>F5</kbd>以建立專案並執行測試容器。 [測試] 容器會與您的 <xref:System.Windows.Forms.UserControl> 顯示在**預覽**窗格中。
 
 4. 按一下 [**載入**] 按鈕。
 
@@ -66,9 +66,9 @@ ms.locfileid: "72180199"
 
 6. 使用 [**選取使用者控制項**<xref:System.Windows.Forms.ComboBox>]，從**TestContainerExample**專案中的兩個使用者控制項之間切換。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.UserControl>
-- [如何：撰寫複合控制項 @ no__t-0
-- [逐步解說：撰寫複合控制項 @ no__t-0
+- [操作說明：撰寫複合控制項](how-to-author-composite-controls.md)
+- [逐步解說：撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 - [使用者控制項設計工具](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

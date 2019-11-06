@@ -2,12 +2,12 @@
 title: 緩和：在應用程式定義域之間還原序列化物件
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-ms.openlocfilehash: 43a1a045560b54cc831e69f9e1d4dba76a8569e1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e2d90a77cab699646bd31eaa162d1bd1744fd51b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126247"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457920"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>緩和：在應用程式定義域之間還原序列化物件
 在某些情況下，當應用程式使用具有不同應用程式基底的兩個或多個應用程式定義域時，嘗試在跨應用程式定義域的邏輯呼叫內容中將物件還原序列化，將會擲回例外狀況。  
@@ -48,4 +48,4 @@ ms.locfileid: "73126247"
   
 ## <a name="see-also"></a>請參閱
 
-- [執行階段變更](runtime-changes-in-the-net-framework-4-5-1.md)
+- [應用程式相容性](application-compatibility.md)

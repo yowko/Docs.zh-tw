@@ -7,14 +7,12 @@ helpviewer_keywords:
 - primary interop assemblies,not necessary in CLR version 4
 - NoPIA
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 137aeaab4e63adbb81c0f3d90718def10f906e6a
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: ee9d2d94d62f262ef61edc66ce915e1227532d67
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489244"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126398"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>類型等價和內嵌 Interop 類型
 
@@ -53,7 +51,7 @@ ms.locfileid: "66489244"
 
 - 讓類型成為 COM 匯入類型。 如果介面具有 <xref:System.Runtime.InteropServices.ComImportAttribute> 屬性，便是 COM 匯入類型。 如果定義介面、結構、列舉或委派所在的組件具有 <xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute> 屬性，便是 COM 匯入類型。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Type.IsEquivalentTo%2A>
 - [在受控程式碼中使用 COM 類型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))

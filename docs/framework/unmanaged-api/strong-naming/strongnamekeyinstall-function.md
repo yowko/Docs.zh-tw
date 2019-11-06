@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e32fd546-7757-4681-be3d-658e93281e50
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 353898b72f41acd0c49a43ff05e54f61b99444c4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e441d4da64e9704fbda2368d2b07289aaea610a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799001"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125202"
 ---
 # <a name="strongnamekeyinstall-function"></a>StrongNameKeyInstall 函式
 
@@ -42,23 +40,23 @@ BOOLEAN StrongNameKeyInstall (
 ## <a name="parameters"></a>參數
 
 `wszKeyContainer`\
-在金鑰容器的名稱。 `wszKeyContainer`必須是非空白字串。
+在金鑰容器的名稱。 `wszKeyContainer` 必須是非空白字串。
 
 `pbKeyBlob`\
 在二進位金鑰組。
 
 `cbKeyBlob`\
-在的大小（以位元組為單位`pbKeyBlob`）。
+在`pbKeyBlob`的大小（以位元組為單位）。
 
 ## <a name="return-value"></a>傳回值
 
-`true`成功完成時;否則為`false`。
+成功完成時 `true`;否則，`false`。
 
 ## <a name="remarks"></a>備註
 
 使用[StrongNameKeyDelete](strongnamekeydelete-function.md)函數來刪除金鑰容器。
 
-如果 `StrongNameKeyInstall`函式未順利完成，請呼叫 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函式，以取出最後產生的錯誤。
+如果 `StrongNameKeyInstall` 函式未順利完成，請呼叫[StrongNameErrorInfo](strongnameerrorinfo-function.md)函式，以取出最後產生的錯誤。
 
 ## <a name="requirements"></a>需求
 
@@ -66,11 +64,11 @@ BOOLEAN StrongNameKeyInstall (
 
 **標頭：** Stackexchange.redis.strongname。h
 
-**LIBRARY:** 包含為 Mscoree.dll 中的資源
+連結**庫：** 包含為 Mscoree.dll 中的資源
 
 **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [StrongNameKeyInstall 方法](../hosting/iclrstrongname-strongnamekeyinstall-method.md)
 - [StrongNameKeyDelete 方法](../hosting/iclrstrongname-strongnamekeydelete-method.md)

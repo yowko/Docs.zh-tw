@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8684cd06-ad3e-48ef-832e-15320e1f43a2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 62e2be44165472e2fbf368f61b865d39a5e9fc28
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 14356a12c944ef93dba5e7b818d3ee5cf5adc607
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395458"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125426"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue 方法
 
@@ -39,7 +37,7 @@ HRESULT Continue (
 ## <a name="parameters"></a>參數
 
 `fIsOutOfBand`  
-在如果從頻外事件繼續，請將設定為 `true`;否則，設定為 `false`。
+在如果從頻外事件繼續，請將設定為 `true`。否則，請將設定為 `false`。
 
 ## <a name="remarks"></a>備註
 
@@ -49,7 +47,7 @@ HRESULT Continue (
 
 *內建事件*是 managed 事件或一般非受控事件，在此期間，偵錯工具支援與進程的受管理狀態互動。 在此情況下，偵錯工具會接收[ICorDebugUnmanagedCallback：:D ebugevent](icordebugunmanagedcallback-debugevent-method.md)回呼，並將其 `fOutOfBand` 參數設定為 `false`。
 
-*頻外事件*是一個不受管理的事件，在此情況下，當進程因事件而停止時，無法與處理常式的受管理狀態互動。 在此情況下，偵錯工具會接收 @no__t 0 回呼，並將其 `fOutOfBand` 參數設定為 `true`。
+*頻外事件*是一個不受管理的事件，在此情況下，當進程因事件而停止時，無法與處理常式的受管理狀態互動。 在此情況下，偵錯工具會接收 `ICorDebugUnmanagedCallback::DebugEvent` 回呼，並將其 `fOutOfBand` 參數設定為 `true`。
 
 ## <a name="requirements"></a>需求
 

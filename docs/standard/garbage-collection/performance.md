@@ -6,20 +6,18 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a0d21ab8af3669575a451644deb2b3572fdb7651
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 833bf46b973988196fea37da18bac9923ecd6dcc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71354023"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141364"
 ---
 # <a name="garbage-collection-and-performance"></a>記憶體回收和效能
 
 <a name="top"></a> 本主題描述記憶體回收和記憶體使用量的相關問題。 它解決關於 Managed 堆積的問題，並說明如何將記憶體回收對應用程式的影響降至最低。 每個問題已連結至程序，可讓您用來調查問題。
 
-本主題包含下列幾節：
+此主題包括下列章節：
 
 - [效能分析工具](#performance_analysis_tools)
 
@@ -149,7 +147,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 <a name="Issue_Fragmentation"></a>
 
-### <a name="issue-the-managed-heap-is-too-fragmented"></a>問題：受控堆積太過分散
+### <a name="issue-the-managed-heap-is-too-fragmented"></a>問題：Managed 堆積太過分散
 
 分散層級的計算方式是可用空間佔層代配置記憶體總數的比例。 針對層代 2，可接受的分散層級是不超過 20%。 層代 2 可能會非常大，因此分散比例比絕對值更重要。
 
@@ -828,6 +826,6 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   如果 `% Time in GC` 值與處理序時間同時升高，則記憶體回收便造成高 CPU 使用量。 否則，請針對應用程式進行程式碼剖析，尋找發生高使用量的地方。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [記憶體回收](../../../docs/standard/garbage-collection/index.md)

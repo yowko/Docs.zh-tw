@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b68624b962ed610dbeecd3e4cead769ab1400f4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1571ff796a10c5ddcd85cc2ce130e62eab2ed8f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739219"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132077"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule 函式
 從目標處理序中的 Common Language Runtime (CLR) 路徑來建立版本字串。  
@@ -74,15 +72,15 @@ HRESULT CreateVersionStringFromModule (
  `pidDebuggee` 未參考有效的處理序，或其他失敗。  
   
 ## <a name="remarks"></a>備註  
- 此函式可接受 `pidDebuggee` 識別的 CLR 處理序，以及 `szModuleName` 所指定的字串路徑。 版本字串傳回在 `pBuffer` 所指向的緩衝區中。 此字串對函式使用者是不透明的，也就是說，版本字串本身沒有內建意義。 它只會用在此函式的內容及[CreateDebuggingInterfaceFromVersion 函式](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)。  
+ 此函式可接受 `pidDebuggee` 識別的 CLR 處理序，以及 `szModuleName` 所指定的字串路徑。 版本字串傳回在 `pBuffer` 所指向的緩衝區中。 此字串對函式使用者是不透明的，也就是說，版本字串本身沒有內建意義。 它只會在此函式和[CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)函式的內容中使用。  
   
  應該要呼叫此函式兩次。 當您第一次呼叫此函式時，針對 `pBuffer` 和 `cchBuffer` 都傳遞 null。 當您這麼做時，`pBuffer` 所需的緩衝區大小將會傳回 `pdwLength` 中。 然後您可以呼叫此函式第二次，並且在 `pBuffer` 中傳遞緩衝區，在 `cchBuffer` 中傳遞其大小。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** dbgshim.h  
+ **標頭：** dbgshim。h  
   
- **程式庫：** dbgshim.dll  
+ 連結**庫：** dbgshim  
   
- **.NET framework 版本：** 3.5 SP1
+ **.NET Framework 版本：** 3.5 SP1

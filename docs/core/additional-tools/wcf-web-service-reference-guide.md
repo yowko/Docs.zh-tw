@@ -1,15 +1,15 @@
 ---
 title: 新增 WCF Web Service Reference
 description: 新增 .NET Core 和 ASP.NET Core 專案功能的 Microsoft WCF Web Service Reference Provider 工具概觀，與 .NET Framework 專案的「新增服務參考」類似。
-author: mlacouture
-ms.date: 04/19/2018
+author: dasetser
+ms.date: 10/29/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 28eaae4a83d918f8a9e5376eb3c8d42843ffa027
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: feecf374e1af48f349495c13ea91b810c6b0a1c3
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773951"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191906"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>使用 WCF Web Service Reference Provider 工具
 
@@ -76,12 +76,16 @@ ms.locfileid: "72773951"
 
 完成這些程序時，您可以建立已產生 WCF 用戶端類型的執行個體，並叫用服務作業。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="see-also"></a>請參閱
 
-### <a name="feedback--questions"></a>意見反應和問題
+- [Windows Communication Foundation 應用程式入門](../../framework/wcf/getting-started-tutorial.md)
+- [Visual Studio 中的 Windows Communication Foundation 服務和 WCF 資料服務](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio)
+- [.NET Core 上的 WCF 支援功能](https://github.com/dotnet/wcf/blob/master/release-notes/SupportedFeatures-v2.1.0.md)
 
-如果您有任何問題或意見反應，請[在 GitHub 上開啟問題](https://github.com/dotnet/wcf/issues/new)。 您也可以[在 GitHub 的 WCF 存放庫](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling)檢閱任何現有問題或議題。
+## <a name="feedback--questions"></a>意見反應和問題
 
-### <a name="release-notes"></a>版本資訊
+如果您有任何疑問或意見反應，請在使用「回報[問題](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)」工具的[開發人員小組](https://developercommunity.visualstudio.com/)報告。
+
+## <a name="release-notes"></a>版本資訊
 
 - 如需已更新的版本資訊，請參閱[版本資訊](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md) (包含已知問題)。

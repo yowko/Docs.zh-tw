@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ac7077c-8d88-49c4-b360-b3af0c541c63
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 59efdb76c000a78007ec0321202793ed0dd50cfb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0666becb5a34688d3f4cf5bddd1e2fa71785b38a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768284"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139797"
 ---
 # <a name="icordebugprocessenumnext-method"></a>ICorDebugProcessEnum::Next 方法
-取得指定的 ICorDebugProcess 執行個體的數目從列舉型別，從目前位置開始。  
+從列舉中取得指定數目的 ICorDebugProcess 實例，從目前位置開始。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,19 +38,19 @@ HRESULT Next (
   
 ## <a name="parameters"></a>參數  
  `celt`  
- [in]數目`ICorDebugProcess`要擷取的執行個體。  
+ 在要抓取 `ICorDebugProcess` 實例的數目。  
   
  `processes`  
- [out]指標的陣列，其中每一個指向`ICorDebugProcess`物件，表示處理程序。  
+ 脫銷指標陣列，其中每一個都會指向代表進程的 `ICorDebugProcess` 物件。  
   
  `pceltFetched`  
- [out]數目的指標`ICorDebugProcess`實際傳回的執行個體。 此值可能為 null 如果`celt`是其中一個。  
+ 脫銷實際傳回的 `ICorDebugProcess` 實例數目的指標。 如果 `celt` 是一個，這個值可能會是 null。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

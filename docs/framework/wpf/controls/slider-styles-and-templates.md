@@ -9,40 +9,40 @@ helpviewer_keywords:
 - templates [WPF], Slider
 - ControlTemplate [WPF], Slider
 ms.assetid: d89aa97b-075a-4752-9c41-9679df65c491
-ms.openlocfilehash: 385a69ad2bd17ae4c51437245915109aad446bdf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 334cb4a44788980262110eadac3305283bb61a92
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970972"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458399"
 ---
 # <a name="slider-styles-and-templates"></a>Slider 樣式和範本
-本主題描述的樣式和範本<xref:System.Windows.Controls.Slider>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>，讓控制項的獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
+本主題描述 <xref:System.Windows.Controls.Slider> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
   
-## <a name="slider-parts"></a>滑桿組件  
- 下表列出的具名組件<xref:System.Windows.Controls.Slider>控制項。  
+## <a name="slider-parts"></a>滑杆元件  
+ 下表列出 <xref:System.Windows.Controls.Slider> 控制項的已命名元件。  
   
-|組件|類型|描述|  
+|組件|輸入|描述|  
 |-|-|-|  
-|PART_Track|<xref:System.Windows.Controls.Primitives.Track>|指出的位置之項目的容器<xref:System.Windows.Controls.Slider>。|  
-|PART_SelectionRange|<xref:System.Windows.FrameworkElement>|顯示上的選取範圍的項目<xref:System.Windows.Controls.Slider>。  選取範圍會顯示只有當<xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A>屬性是`true`。|  
+|PART_Track|<xref:System.Windows.Controls.Primitives.Track>|元素的容器，表示 <xref:System.Windows.Controls.Slider>的位置。|  
+|PART_SelectionRange|<xref:System.Windows.FrameworkElement>|沿著 <xref:System.Windows.Controls.Slider>顯示選取範圍的元素。  只有在 `true`<xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> 屬性時，才會顯示選取範圍。|  
   
-## <a name="slider-states"></a>滑桿狀態  
- 下表列出的視覺狀態<xref:System.Windows.Controls.Slider>控制項。  
+## <a name="slider-states"></a>滑杆狀態  
+ 下表列出 <xref:System.Windows.Controls.Slider> 控制項的視覺狀態。  
   
 |VisualState 名稱|VisualStateGroup 名稱|描述|  
 |----------------------|---------------------------|-----------------|  
 |一般|CommonStates|預設狀態。|  
 |MouseOver|CommonStates|滑鼠指標移到控制項上。|  
-|已停用|CommonStates|已停用控制項。|  
+|Disabled|CommonStates|已停用控制項。|  
 |已取得焦點|FocusStates|控制項已取得焦點。|  
 |未取得焦點|FocusStates|控制項未取得焦點。|  
-|驗證|ValidationStates|控制項使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`已在控制項具有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`有控制項沒有焦點。|  
+|驗證|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，而 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性則 `false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是控制項具有焦點 `true`。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是 `true` 控制項沒有焦點。|  
   
-## <a name="slider-controltemplate-example"></a>滑桿 ControlTemplate 範例  
- 下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>針對<xref:System.Windows.Controls.Slider>控制項。  
+## <a name="slider-controltemplate-example"></a>滑杆 ControlTemplate 範例  
+ 下列範例顯示如何定義 <xref:System.Windows.Controls.Slider> 控制項的 <xref:System.Windows.Controls.ControlTemplate>。  
   
  [!code-xaml[ControlTemplateExamples#Slider](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/slider.xaml#slider)]  
   
@@ -52,11 +52,11 @@ ms.locfileid: "61970972"
   
  如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控制項的樣式和範本](control-styles-and-templates.md)
 - [控制項自訂](control-customization.md)
-- [樣式設定和範本化](styling-and-templating.md)
+- [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)

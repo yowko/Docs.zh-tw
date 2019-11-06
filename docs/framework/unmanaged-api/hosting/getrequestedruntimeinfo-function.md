@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0dfd7cdc-c116-4e25-b56a-ac7b0378c942
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 62a6f6d6e73ce42c8c86d4e458322e5bd361f412
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cd1d9e768698115bee22e35699b044e0c3526d2d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778134"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136316"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo 函式
-取得 common language runtime (CLR) 應用程式所要求的版本和目錄資訊。  
+取得應用程式所要求之 common language runtime （CLR）的版本和目錄資訊。  
   
- 此函式已被取代，在.NET Framework 4。  
+ 此函式在 .NET Framework 4 中已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,64 +47,64 @@ HRESULT GetRequestedRuntimeInfo (
   
 ## <a name="parameters"></a>參數  
  `pExe`  
- [in]應用程式的名稱。  
+ 在應用程式的名稱。  
   
  `pwszVersion`  
- [in]字串，指定執行階段的版本號碼。  
+ 在指定執行時間版本號碼的字串。  
   
  `pConfigurationFile`  
- [in]相關聯的組態檔的名稱`pExe`。  
+ 在與 `pExe`相關聯之設定檔的名稱。  
   
  `startupFlags`  
- [in]一或多個[STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)列舉值。  
+ 在一或多個[STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)列舉值。  
   
  `runtimeInfoFlags`  
- [in]一或多個[RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md)列舉值。  
+ 在一或多個[RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md)列舉值。  
   
  `pDirectory`  
- [out]這種緩衝區包含成功完成時，執行階段的目錄路徑。  
+ 脫銷一個緩衝區，其中包含成功完成時，執行時間的目錄路徑。  
   
  `dwDirectory`  
- [in]目錄緩衝區的長度。  
+ 在目錄緩衝區的長度。  
   
  `dwDirectoryLength`  
- [out]目錄路徑字串的長度指標。  
+ 脫銷目錄路徑字串長度的指標。  
   
  `pVersion`  
- [out]這種緩衝區包含成功完成時，執行階段的版本號碼。  
+ 脫銷包含成功完成時，執行時間版本號碼的緩衝區。  
   
  `cchBuffer`  
- [in]版本字串緩衝區的長度。  
+ 在版本字串緩衝區的長度。  
   
  `dwlength`  
- [out]版本字串的長度指標。  
+ 脫銷版本字串長度的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 中所定義 WinError.h，除了下列的值，這個方法會傳回標準的元件物件模型 (COM) 錯誤代碼。  
+ 這個方法會傳回標準元件物件模型（COM）錯誤碼（如 Winerror.h 中所定義），以及下列值。  
   
 |傳回碼|描述|  
 |-----------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|ERROR_INSUFFICIENT_BUFFER|無法夠大，無法儲存的目錄路徑的目錄緩衝區。<br /><br /> - 或 -<br /><br /> 版本緩衝區不夠大，無法儲存版本字串。|  
+|ERROR_INSUFFICIENT_BUFFER|目錄緩衝區不夠大，無法儲存目錄路徑。<br /><br /> -或-<br /><br /> 版本緩衝區不夠大，無法儲存版本字串。|  
   
 ## <a name="remarks"></a>備註  
- `GetRequestedRuntimeInfo`方法會傳回執行階段載入處理序，而不一定是最新版本的電腦上安裝的版本資訊。  
+ `GetRequestedRuntimeInfo` 方法會傳回載入進程中之版本的相關執行時間資訊，這不一定是電腦上所安裝的最新版本。  
   
- 在.NET Framework 2.0 版中，您可以取得最新的安裝版本的相關資訊，使用`GetRequestedRuntimeInfo`方法，如下所示：  
+ 在 .NET Framework 版本2.0 中，您可以使用 `GetRequestedRuntimeInfo` 方法來取得最新已安裝版本的相關資訊，如下所示：  
   
-- 指定`pExe`， `pwszVersion`，和`pConfigurationFile`參數為 null。  
+- 將 `pExe`、`pwszVersion`和 `pConfigurationFile` 參數指定為 null。  
   
-- 指定在 RUNTIME_INFO_UPGRADE_VERSION 旗標`RUNTIME_INFO_FLAGS`列舉型別供`runtimeInfoFlags`參數。  
+- 在 `RUNTIME_INFO_FLAGS` 列舉中指定 `runtimeInfoFlags` 參數的 RUNTIME_INFO_UPGRADE_VERSION 旗標。  
   
- `GetRequestedRuntimeInfo`方法不會傳回最新的 CLR 版本，在下列情況：  
+ 在下列情況下，`GetRequestedRuntimeInfo` 方法不會傳回最新的 CLR 版本：  
   
-- 指定正在載入特定的 CLR 版本的應用程式組態檔存在。 請注意 .NET Framework 會使用組態檔，即使您指定 null`pConfigurationFile`參數。  
+- 指定載入特定 CLR 版本的應用程式佈建檔已存在。 請注意，即使您為 `pConfigurationFile` 參數指定 null，.NET Framework 還是會使用設定檔。  
   
-- [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)方法受呼叫時指定較早的 CLR 版本。  
+- 呼叫[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)方法時，指定了較早的 CLR 版本。  
   
-- 針對較早的 CLR 版本所編譯的應用程式目前正在執行。  
+- 已針對舊版 CLR 版本編譯的應用程式目前正在執行。  
   
- 針對`runtimeInfoFlags`參數，您可以指定其中一個架構的常數`RUNTIME_INFO_FLAGS`列舉一次：  
+ 針對 `runtimeInfoFlags` 參數，您一次只能指定一個 `RUNTIME_INFO_FLAGS` 列舉的架構常數：  
   
 - RUNTIME_INFO_REQUEST_IA64  
   
@@ -117,13 +115,13 @@ HRESULT GetRequestedRuntimeInfo (
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** MSCorEE.dll  
+ 連結**庫：** Mscoree.dll .dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [GetRequestedRuntimeVersion 函式](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
 - [GetVersionFromProcess 函式](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)

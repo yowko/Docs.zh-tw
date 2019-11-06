@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291588"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421578"
 ---
 # <a name="tour-of-net"></a>.NET 教學課程
 
@@ -37,7 +37,7 @@ Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic 
 
 ## <a name="automatic-memory-management"></a>自動記憶體管理
 
-.NET 使用[記憶體回收 (GC)](garbagecollection/index.md) 為程式提供自動記憶體管理。 GC 採用延遲方法來管理記憶體，優先考慮應用程式輸送量，而不是立即收集記憶體。 若要深入了解 .NET GC，請參閱[記憶體回收 (GC) 的基本概念](garbagecollection/fundamentals.md)。
+.NET 使用[記憶體回收 (GC)](garbage-collection/index.md) 為程式提供自動記憶體管理。 GC 採用延遲方法來管理記憶體，優先考慮應用程式輸送量，而不是立即收集記憶體。 若要深入了解 .NET GC，請參閱[記憶體回收 (GC) 的基本概念](garbage-collection/fundamentals.md)。
 
 下列兩行會配置記憶體：
 
@@ -55,7 +55,7 @@ Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic 
 
 有一些物件會參考 *Unmanaged 資源*。 Unmanaged 資源是指 .NET 執行階段不會自動維護的資源。 例如檔案控制程式碼就是 Unmanaged 資源。 <xref:System.IO.FileStream> 物件是Managed 物件，但會 Unmanaged 檔案控制代碼。 當您完成使用 <xref:System.IO.FileStream> 時，您必須釋放檔案控制代碼。
 
-在.NET 中，參考 Unmanaged 資源的物件會實作 <xref:System.IDisposable> 介面。 當您完成使用此物件時，您可以呼叫物件的 <xref:System.IDisposable.Dispose> 方法來釋放任何 Unmanaged 資源。 .NET 語言為這類物件提供便利的[@no__t 1 語句](../csharp/language-reference/keywords/using.md)，如下列範例所示：
+在.NET 中，參考 Unmanaged 資源的物件會實作 <xref:System.IDisposable> 介面。 當您完成使用此物件時，您可以呼叫物件的 <xref:System.IDisposable.Dispose> 方法來釋放任何 Unmanaged 資源。 .NET 語言為這類物件提供一個方便的[`using` 語句](../csharp/language-reference/keywords/using.md)，如下列範例所示：
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 

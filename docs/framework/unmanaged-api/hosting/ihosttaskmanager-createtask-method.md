@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6f8ad36-61e1-42b0-9db2-add575646d18
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0a154aeafed9bc4de63dea3fe7fc32e2daee7b96
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 16916d62a528222db952a1d29dc7c69de2352191
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749732"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133117"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>IHostTaskManager::CreateTask 方法
-主應用程式建立新工作的要求。  
+要求主機建立新的工作。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,42 +38,42 @@ HRESULT CreateTask (
   
 ## <a name="parameters"></a>參數  
  `stacksize`  
- [in]要求的大小，以位元組為單位，要求的堆疊，或預設大小為 0 （零）。  
+ 在要求之堆疊的要求大小（以位元組為單位），或預設大小為0（零）。  
   
  `pStartAddress`  
- [in]工作是執行函式的指標。  
+ 在工作要執行之函式的指標。  
   
  `pParameter`  
- [in]要傳遞至函式或如果函式的使用者資料的指標不接受任何參數。  
+ 在要傳遞至函式之使用者資料的指標，如果函數不接受任何參數，則為 null。  
   
  `ppTask`  
- [out]位址指標[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)建立主應用程式，則為 null，如果無法建立工作的執行個體。 工作仍會留在暫停狀態，直到它明確呼叫來啟動[ihosttask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)。  
+ 脫銷主機所建立之[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)實例的位址指標，如果無法建立工作，則為 null。 工作會維持在暫停狀態，直到呼叫[IHostTask：： Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)明確啟動為止。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`CreateTask` 已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
-|HOST_E_TIMEOUT|呼叫已逾時。|  
-|HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL CLR 已不再可在此程序中使用。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|S_OK|已成功傳回 `CreateTask`。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫超時。|  
+|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
+|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
+|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
 |E_OUTOFMEMORY|沒有足夠的記憶體可用來建立要求的工作。|  
   
 ## <a name="remarks"></a>備註  
- CLR 會呼叫`CreateTask`要求主機建立新的工作。 主應用程式傳回的介面指標`IHostTask`執行個體。 傳回的工作必須保持暫停，直到明確啟動呼叫`IHostTask::Start`。  
+ CLR 會呼叫 `CreateTask` 來要求主機建立新的工作。 主機會將介面指標傳回 `IHostTask` 實例。 傳回的工作必須保持暫停，直到 `IHostTask::Start`的呼叫明確啟動為止。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [ICLRTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)

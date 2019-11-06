@@ -7,20 +7,20 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: 4724e6264c0108924629055525e46d84e86a6e6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 98c7022eab9153808d47d7da69c23349032165c3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953412"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460857"
 ---
 # <a name="optimizing-wpf-application-performance"></a>最佳化 WPF 應用程式效能
-本節旨在做為[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式開發人員的參考, 以尋找改善其應用程式效能的方法。 如果您是 Microsoft .NET Framework 和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的新手開發人員, 您應該先熟悉這兩個平臺。 本章節假設您對兩者都有了解, 而且是針對已經知道要讓應用程式啟動並執行的程式設計人員所撰寫的。  
+本節的目的是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式開發人員的參考，以尋找改善其應用程式效能的方法。 如果您是 Microsoft .NET Framework 和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]新手的開發人員，您應該先熟悉這兩個平臺。 本章節假設您對兩者都有了解，而且是針對已經知道要讓應用程式啟動並執行的程式設計人員所撰寫的。  
   
 > [!NOTE]
-> 本節所提供的效能資料是以 2.8 GHz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]電腦上執行的應用程式為基礎, 其中包含 512 RAM 和一個 ATI Radeon 9700 圖形配接器。  
+> 本節所提供的效能資料是以在 2.8 GHz 電腦上執行的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式為基礎，其中包含 512 RAM 和一個 ATI Radeon 9700 圖形配接器。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [應用程式效能規劃](planning-for-application-performance.md)  
   
  [運用硬體](optimizing-performance-taking-advantage-of-hardware.md)  
@@ -43,7 +43,7 @@ ms.locfileid: "69953412"
   
  [應用程式啟動時間](application-startup-time.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>
@@ -59,7 +59,7 @@ ms.locfileid: "69953412"
 - [WPF 中的文件](documents-in-wpf.md)
 - [繪製格式化的文字](drawing-formatted-text.md)
 - [WPF 中的印刷樣式](typography-in-wpf.md)
-- [資料繫結概觀](../data/data-binding-overview.md)
+- [資料繫結概觀](../../../desktop-wpf/data/data-binding-overview.md)
 - [瀏覽概觀](../app-development/navigation-overview.md)
 - [動畫祕訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)
 - [逐步解說：在 WPF 應用程式中快取應用程式資料](walkthrough-caching-application-data-in-a-wpf-application.md)

@@ -1,31 +1,30 @@
 ---
 title: dotnet sln 命令
 description: dotnet-sln 命令提供方便在方案檔中新增、移除及列出專案的選項。
-ms.date: 06/13/2018
-ms.openlocfilehash: 84508aaefff61b31e2965576ebc2daaae7331951
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 10/29/2019
+ms.openlocfilehash: 18702c7638798117bd04d5c6a829d64cc6bf18a8
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117581"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191831"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**本文適用於：✓** .NET Core 1.x SDK 和更新版本
 
-## <a name="name"></a>名稱
+<!-- todo: uncomment when all CLI commands are reviewed
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
+
+## <a name="name"></a>[屬性]
 
 `dotnet sln` - 修改.NET Core 方案檔。
 
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] add <GLOBBING_PATTERN>
-dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] remove <GLOBBING_PATTERN>
-dotnet sln [<SOLUTION_NAME>] list
-dotnet sln [-h|--help]
+dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 ```
 
 ## <a name="description"></a>描述
@@ -38,61 +37,138 @@ dotnet sln [-h|--help]
 dotnet new sln
 ```
 
-## <a name="commands"></a>命令
-
-`add <PROJECT> ...`
-
-`add <GLOBBING_PATTERN>`
-
-將一個專案或多個專案加入至方案檔。 以 Unix/Linux 為基礎的終端機上支援 [Globbing 模式 (英文)](https://en.wikipedia.org/wiki/Glob_(programming))。
-
-`remove <PROJECT> ...`
-
-`remove <GLOBBING_PATTERN>`
-
-從方案檔中移除一個專案或多個專案。 以 Unix/Linux 為基礎的終端機上支援 [Globbing 模式 (英文)](https://en.wikipedia.org/wiki/Glob_(programming))。
-
-`list`
-
-列出方案檔中的所有專案。
-
 ## <a name="arguments"></a>引數
 
-`SOLUTION_NAME`
+- **`SOLUTION_FILE`**
 
-要使用的方案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。 如果目錄中有多個方案檔，請務必指定一個方案檔。
+  要使用的方案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。 如果目錄中有多個方案檔，請務必指定一個方案檔。
 
 ## <a name="options"></a>選項
 
-`-h|--help`
+- **`-h|--help`**
 
-印出命令的簡短說明。
+  印出命令的簡短說明。
+
+## <a name="commands"></a>命令
+
+### `add`
+
+將一個專案或多個專案加入至方案檔。
+
+#### <a name="synopsis"></a>概要
+
+```dotnetcli
+dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH>
+dotnet sln add [-h|--help]
+```
+
+#### <a name="arguments"></a>引數
+
+- **`SOLUTION_FILE`**
+
+  要使用的方案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。 如果目錄中有多個方案檔，請務必指定一個方案檔。
+
+- **`PROJECT_PATH`**
+
+  要加入至方案之專案的路徑。 加入多個專案，方法是在另一個後面加上空格分隔。 Unix/Linux shell[萬用字元模式](https://en.wikipedia.org/wiki/Glob_(programming))擴充會由 `dotnet sln` 命令正確處理。
+
+#### <a name="options"></a>選項
+
+- **`-h|--help`**
+
+  印出命令的簡短說明。
+
+- **`--in-root`**
+
+  將專案放在方案的根目錄中，而不是建立方案資料夾。 自 .NET Core 3.0 SDK 起提供。
+
+- **`-s|--solution-folder`**
+
+  要加入專案的目的地解決方案資料夾路徑。 自 .NET Core 3.0 SDK 起提供。
+
+### `remove`
+
+從方案檔中移除一個專案或多個專案。
+
+#### <a name="synopsis"></a>概要
+
+```dotnetcli
+dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH>
+dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
+```
+
+#### <a name="arguments"></a>引數
+
+- **`SOLUTION_FILE`**
+
+  要使用的方案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。 如果目錄中有多個方案檔，請務必指定一個方案檔。
+
+- **`PROJECT_PATH`**
+
+  要從方案中移除之專案的路徑。 藉由在另一個專案後面加上空格，以移除多個專案。 Unix/Linux shell[萬用字元模式](https://en.wikipedia.org/wiki/Glob_(programming))擴充會由 `dotnet sln` 命令正確處理。
+
+#### <a name="options"></a>選項
+
+- **`-h|--help`**
+
+  印出命令的簡短說明。
+
+### `list`
+
+列出方案檔中的所有專案。
+
+#### <a name="synopsis"></a>概要
+
+```dotnetcli
+dotnet sln list [-h|--help]
+```
+  
+#### <a name="arguments"></a>引數
+
+- **`SOLUTION_FILE`**
+
+  要使用的方案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。 如果目錄中有多個方案檔，請務必指定一個方案檔。
+
+#### <a name="options"></a>選項
+
+- **`-h|--help`**
+
+  印出命令的簡短說明。
 
 ## <a name="examples"></a>範例
 
 將 C# 專案新增至方案：
 
-`dotnet sln todo.sln add todo-app/todo-app.csproj`
+```dotnetcli
+dotnet sln todo.sln add todo-app/todo-app.csproj
+```
 
 移除方案中的 C# 專案：
 
-`dotnet sln todo.sln remove todo-app/todo-app.csproj`
+```dotnetcli
+dotnet sln todo.sln remove todo-app/todo-app.csproj
+```
 
 將多個 C# 專案新增至方案：
 
-`dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj`
+```dotnetcli
+dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
+```
 
 從方案中移除多個 C# 專案：
 
-`dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj`
+```dotnetcli
+dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
+```
 
-使用 Glob 模式將多個 C# 專案新增至方案：
+使用萬用字元C#模式將多個專案新增至解決方案（僅限 Unix/Linux）：
 
-`dotnet sln todo.sln add **/*.csproj`
+```dotnetcli
+dotnet sln todo.sln add **/*.csproj
+```
 
-使用 Glob 模式從方案中移除多個 C# 專案：
+使用萬用字元C#模式從方案中移除多個專案（僅限 Unix/Linux）：
 
-`dotnet sln todo.sln remove **/*.csproj`
-
-> [!NOTE]
-> 萬用字元不是 CLI 功能，而是命令殼層的功能。 若要成功擴充檔案，您必須使用支援萬用字元的殼層。 如需萬用字元的詳細資訊，請參閱[維基百科](https://en.wikipedia.org/wiki/Glob_(programming)) \(英文\)。
+```dotnetcli
+dotnet sln todo.sln remove **/*.csproj
+```

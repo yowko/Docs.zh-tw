@@ -8,14 +8,12 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bed67019fdd3bb81585d08349715a895dfe5a681
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
-ms.translationtype: HT
+ms.openlocfilehash: 63fb3d627364810fac5ddb0bfd3adc3c0421c9cc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363955"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126378"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>屬性化程式設計模型概觀 (MEF)
 
@@ -201,7 +199,7 @@ public class MyClass
 }
 ```
 
-當合約類型是從 `dynamic` 關鍵字推斷而來時，會符合所有合約類型。 在此範例中，匯入 **一律** 應指定要符合的合約名稱 (如果未指定合約名稱，則會將匯入視為不符合任何匯出)。以下兩個匯出皆符合前述匯入。
+當合約類型是從 `dynamic` 關鍵字推斷而來時，會符合所有合約類型。 在此範例中，匯入 **一律** 應指定要符合的合約名稱 （如果未指定合約名稱，則會將匯入視為不符合任何匯出）。下列兩個匯出都符合先前的匯入。
 
 ```vb
 <Export("TheString", GetType(IMyAddin))>
@@ -343,7 +341,7 @@ public MyClass([Import(typeof(IMySubAddin))]IMyAddin MyAddin)
 
 `Import` 屬性指定要讓組件正常運作必須達到的需求。 如果無法完成匯入，則組合該組件會失敗，而組件會無法使用。
 
-您可以使用 *屬性，將匯入指定為* 「選擇性」 `AllowDefault` (Optional) 匯入。 在此情況下，即使匯入不符合任何可用的匯出，組合也會成功，並且匯入端屬性會設定為其屬性類型的預設值 (如果是物件屬性則為 `null`，如果是布林值屬性則為 `false`，如果是數值屬性則為零)。下列類別使用選擇性匯入。
+您可以使用 *屬性，將匯入指定為* 「選擇性」 `AllowDefault` (Optional) 匯入。 在此情況下，即使匯入不符合任何可用的匯出，組合也會成功，而且匯入屬性會設定為其屬性類型的預設值（物件屬性的`null`、布林的 `false`，或數值屬性為零）。下列類別使用選擇性的匯入。
 
 ```vb
 Public Class MyClass1
@@ -687,7 +685,7 @@ public class NumFour : NumThree
 }
 ```
 
-如果 `InheritedExport` 屬性有相關聯的中繼資料，也會繼承該中繼資料 (如需詳細資訊，請參閱稍早的＜中繼資料和中繼資料檢視＞一節)。子類別無法修改所繼承的中繼資料。 不過，子類別可以藉由重新宣告具有相同合約名稱與合約類型 (但使用新的中繼資料) 的 `InheritedExport` ，以新的中繼資料來取代繼承的中繼資料。 下列類別示範這個原則。 `MegaLogger` 組件繼承自 `Logger` 並包含 `InheritedExport` 屬性。 由於 `MegaLogger` 重新宣告名為 Status 的新中繼資料，因此不會從 `Logger`繼承 Name 和 Version 中繼資料。
+如果 `InheritedExport` 屬性有相關聯的中繼資料，也會繼承該中繼資料 （如需詳細資訊，請參閱先前的「中繼資料和元資料檢視」一節）。子類別無法修改繼承的中繼資料。 不過，子類別可以藉由重新宣告具有相同合約名稱與合約類型 (但使用新的中繼資料) 的 `InheritedExport` ，以新的中繼資料來取代繼承的中繼資料。 下列類別示範這個原則。 `MegaLogger` 組件繼承自 `Logger` 並包含 `InheritedExport` 屬性。 由於 `MegaLogger` 重新宣告名為 Status 的新中繼資料，因此不會從 `Logger`繼承 Name 和 Version 中繼資料。
 
 ```vb
 <InheritedExport(GetType(IPlugin))>
@@ -747,7 +745,7 @@ public class MegaLogger : Logger        {
 }
 ```
 
-當您重新宣告 `InheritedExport` 屬性以覆寫中繼資料時，請確定合約類型相同。 (在上述範例中，合約類型是 `IPlugin`)。如果合約類型不同，則第二個屬性會從組件建立第二個獨立的匯出，而不是覆寫原有的匯出。 一般而言，這表示當您覆寫 `InheritedExport` 屬性時，您必須明確指定合約類型，如上述範例所示。
+當您重新宣告 `InheritedExport` 屬性以覆寫中繼資料時，請確定合約類型相同。 （在上一個範例中，`IPlugin` 是合約型別）。如果兩者不同，而不是覆寫，則第二個屬性會建立第二個獨立的元件匯出。 一般而言，這表示當您覆寫 `InheritedExport` 屬性時，您必須明確指定合約類型，如上述範例所示。
 
 由於無法直接具現化介面，因此通常無法以 `Export` 或 `Import` 屬性裝飾介面。 不過，您可以在介面層級以 `InheritedExport` 屬性裝飾介面，然後該匯出與所有相關聯的中繼資料就會由任何實作端類別所繼承。 但是，介面本身無法當做組件使用。
 
@@ -982,7 +980,7 @@ public class PartSeven
 
 `IPartImportsSatisfiedNotification` 包含一個名為 `OnImportsSatisfied`的方法。 當組合完成且組件的匯入可開始使用時，組合容器會對任何實作介面的組件呼叫這個方法。 組合引擎會建立組件，以填入其他組件的匯入。 設定組件的匯入之前，您無法在組件建構函式中執行任何依賴或操作匯入值的初始設定，除非已使用 `ImportingConstructor` 屬性指定這些值做為必要條件。 這通常是比較好的方法，但在某些情況下，可能無法插入建構函式。 在這些情況下，您可以在 `OnImportsSatisfied`中執行初始設定，並且組件應該實作 `IPartImportsSatisfiedNotification`。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [Channel 9 影片：Open Up Your Applications with the Managed Extensibility Framework (透過 Managed Extensibility Framework 開展應用程式)](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
-- [Channel 9 影片：Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+- [Channel 9 影片：透過 Managed Extensibility Framework 擴充應用程式](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328) \(英文\)
+- [Channel 9 影片：Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20) \(英文\)

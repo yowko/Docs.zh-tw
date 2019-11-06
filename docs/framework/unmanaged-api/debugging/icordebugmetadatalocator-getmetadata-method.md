@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9b0ff22-54db-45eb-9cc3-508000a3141d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b761d31e640063e11c1e549966bb372449fe743
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e4f11de423d1ab6b66aca40e671607a383a4413
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762269"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136636"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData 方法
 要求偵錯工具傳回完整路徑到模組，其需要中繼資料以完成偵錯工具的要求。  
@@ -43,10 +41,10 @@ HRESULT GetMetaData(
   
 ## <a name="parameters"></a>參數  
  `wszImagePath`  
- [in] 以 null 結束的字串，表示檔案的完整路徑。 如果沒有提供的完整路徑的名稱和副檔名的檔案 (*檔名*。*延伸模組*)。  
+ [in] 以 null 結束的字串，表示檔案的完整路徑。 如果無法使用完整路徑，則為檔案的名稱和副檔名（*filename*。*擴充*功能）。  
   
  `dwImageTimeStamp`  
- [in] 從映像的 PE 檔標頭的時間戳記。 這個參數可能可以用於符號伺服器 ([SymSrv](/windows/desktop/debug/using-symsrv)) 查閱。  
+ [in] 從映像的 PE 檔標頭的時間戳記。 這個參數可能會用於符號伺服器（[SymSrv](/windows/desktop/debug/using-symsrv)）查閱。  
   
  `dwImageSize`  
  [in] 從 PE 檔標頭的映像大小。 此參數可能會用於 SymSrv 查閱。  
@@ -62,7 +60,7 @@ HRESULT GetMetaData(
  `wszPathBuffer`  
  [out] 偵錯工具會將包含要求的中繼資料檔案的完整路徑複製到其中的緩衝區指標。  
   
- `ofReadOnly`加上旗標，從[CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)列舉型別用來要求此檔案中的中繼資料的唯讀存取。  
+ [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)列舉中的 `ofReadOnly` 旗標是用來要求此檔案中中繼資料的唯讀存取權。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。 所有其他失敗的 HRESULT 表示無法擷取檔案。  
@@ -80,11 +78,11 @@ HRESULT GetMetaData(
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugThread4 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -16,20 +16,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 5f722977928604e5876e52a7329eef5c933bf2a7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: bf5e98f895c17a3ab9b16e63601fa40fb9e15417
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046475"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140540"
 ---
 # <a name="anchors-in-regular-expressions"></a>規則運算式中的錨點
 <a name="top"></a> 錨點或不可部分完成的無寬度判斷提示會指定字串中必須比對的位置。 當您在搜尋運算式中使用錨點時，規則運算式引擎不會在字串中前進或使用字元；它只會尋找指定位置中的相符項目。 例如， `^` 指定必須從行首或字串的開頭開始比對。 因此，僅當行首出現 "http:" 時，規則運算式 `^http:` 才會與其相符。 下表列出 .NET 中此規則運算式所支援的錨點。  
   
-|錨點|說明|  
+|錨點|描述|  
 |------------|-----------------|  
 |`^`|根據預設，比對必須發生在字串的開頭；在多行模式中，它必須發生在一行的開頭。 如需詳細資訊，請參閱 [字串開頭或行首](#Start)。|  
 |`$`|根據預設，比對必須發生在字串的結尾或字串結尾的 `\n` 之前；在多行模式中，它必須發生在一行的結尾，或一行結尾的 `\n` 之前。 如需詳細資訊，請參閱 [字串結尾或行尾](#End)。|  
@@ -55,10 +53,10 @@ ms.locfileid: "70046475"
   
  規則運算式模式 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` 的定義如下表所示。  
   
-|模式|說明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`^`|開始在輸入字串的開頭比對 (如果是使用 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項來呼叫此方法，則從行首開始比對)。|  
-|`((\w+(\s?)){2,}`|比對一或多個文字字元，後面接零或接一個空格至少兩次。 這是第一個擷取群組。 此運算式也定義了第二個和第三個擷取群組：第二個包含所擷取的文字，第三個則包含擷取到的空白字元。|  
+|`((\w+(\s?)){2,}`|比對一或多個文字字元，後面接零或接一個空格至少兩次。 這是第一個擷取群組。 此運算式也會定義第二個和第三個捕獲群組：第二個是由已捕獲的單字組成，而第三個則是由捕捉的空白字元組成。|  
 |`,\s`|比對後面接著空白字元的逗號。|  
 |`(\w+\s\w+)`|比對一或多個文字字元，後面接空格，再接一或多個文字字元。 這是第四個擷取群組。|  
 |`,`|比對逗號。|  
@@ -128,7 +126,7 @@ ms.locfileid: "70046475"
   
  規則運算式 `\G(\w+\s?\w*),?` 的解譯方式如下表所示。  
   
-|模式|說明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\G`|從上一次比對結束的地方開始。|  
 |`\w+`|比對一個或多個文字字元。|  
@@ -141,7 +139,7 @@ ms.locfileid: "70046475"
   
 <a name="WordBoundary"></a>   
 ## <a name="word-boundary-b"></a>字邊界：\b  
- `\b` 錨點指定比對必須發生在文字字元 ( `\w` 語言項目) 和非文字字元 ( `\W` 語言項目) 之間的邊界上。 文字字元由英數字元及底線所組成；非文字字元是非英數字元或底線的任何字元。 (如需詳細資訊，請參閱[字元類別](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。)比對也可能會在字串開頭或結尾的字邊界上發生。  
+ `\b` 錨點指定比對必須發生在文字字元 ( `\w` 語言項目) 和非文字字元 ( `\W` 語言項目) 之間的邊界上。 文字字元由英數字元及底線所組成；非文字字元是非英數字元或底線的任何字元。 （如需詳細資訊，請參閱[字元類別](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。）比對也可能發生在字串開頭或結尾的字邊界上。  
   
  `\b` 錨點經常用來確保子運算式會比對整個字組，而非只比對字組的開頭或結尾。 在下列範例中的規則運算式 `\bare\w*\b` 說明這個的使用方式。 它會比對任何以子字串 "are" 為開頭的字組。 範例的輸出也說明了 `\b` 會比對輸入字串的開頭和結尾。  
   
@@ -150,7 +148,7 @@ ms.locfileid: "70046475"
   
  規則運算式模式的解譯方式如下表所示。  
   
-|模式|說明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`are`|比對子字串 "are"。|  
@@ -170,13 +168,13 @@ ms.locfileid: "70046475"
   
  規則運算式模式的解譯方式如下表所示。  
   
-|模式|說明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\B`|不要在字邊界開始比對。|  
 |`qu`|比對子字串 "qu"。|  
 |`\w+`|比對一個或多個文字字元。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)

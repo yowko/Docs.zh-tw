@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 0054ac49589991d754da655e9f8f52d63e9a6274
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920225"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458929"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>逐步解說：在 Windows Form 中裝載 WPF 複合控制項
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，當您對 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 程式碼進行大量投資時，使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 擴充現有的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式，而不是從頭重新撰寫，可能會更有效率。 常見的案例是當您想要在 Windows Forms 應用程式中內嵌一個或多個使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所執行的控制項。 如需自訂 WPF 控制項的詳細資訊，請參閱[控制項自訂](../controls/control-customization.md)。  
@@ -87,7 +87,7 @@ ms.locfileid: "72920225"
 #### <a name="styling-the-ui-elements"></a>設定 UI 項目的樣式  
  資料輸入表單上的許多項目都會有類似的外觀，表示它們具有數個屬性的相同設定。 先前的 XAML 不會分別設定每個專案的屬性，而是使用 <xref:System.Windows.Style> 元素來定義專案類別的標準屬性設定。 此方法會減少控制項的複雜度，並可讓您透過單一樣式屬性來變更多個項目的外觀。  
   
- <xref:System.Windows.Style> 元素會包含在 <xref:System.Windows.Controls.Grid> 元素的 <xref:System.Windows.FrameworkElement.Resources%2A> 屬性中，因此控制項中的所有專案都可以使用這些專案。 如果樣式名為，您可以藉由將 <xref:System.Windows.Style> 專案設定為樣式的名稱，將它套用至元素。 未命名的樣式會成為項目的預設樣式。 如需 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 樣式的詳細資訊，請參閱設定樣式[和範本](../controls/styling-and-templating.md)。  
+ <xref:System.Windows.Style> 元素會包含在 <xref:System.Windows.Controls.Grid> 元素的 <xref:System.Windows.FrameworkElement.Resources%2A> 屬性中，因此控制項中的所有專案都可以使用這些專案。 如果樣式名為，您可以藉由將 <xref:System.Windows.Style> 專案設定為樣式的名稱，將它套用至元素。 未命名的樣式會成為項目的預設樣式。 如需 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 樣式的詳細資訊，請參閱設定樣式[和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)。  
   
  下列 XAML 會顯示覆合控制項的 <xref:System.Windows.Style> 元素。 若要查看如何將樣式套用至項目，請參閱先前的 XAML。 例如，最後一個 <xref:System.Windows.Controls.TextBlock> 元素具有 `inlineText` 樣式，而最後一個 <xref:System.Windows.Controls.TextBox> 元素則使用預設樣式。  
   
@@ -326,6 +326,6 @@ namespace MyControls
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [在 Visual Studio 中設計 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [逐步解說：在 WPF 中裝載 Windows Forms 複合控制項](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [逐步解說：在 Windows Forms 中裝載立體 WPF 複合控制項](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

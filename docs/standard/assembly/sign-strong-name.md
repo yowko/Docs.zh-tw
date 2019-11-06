@@ -1,5 +1,5 @@
 ---
-title: 作法：使用強式名稱簽署元件
+title: 如何：使用強式名稱簽署元件
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, signing with strong names
@@ -7,20 +7,18 @@ helpviewer_keywords:
 - assemblies [.NET Framework], signing
 - assemblies [.NET Framework], strong-named
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 527fd68ef40e152b57a1fc98113094d3b41fbaae
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: c9ddbcf8f7b6307ab2d89b819aee4809f753a0fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973058"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138602"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>作法：使用強式名稱簽署元件
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>如何：使用強式名稱簽署元件
 
 > [!NOTE]
 > 雖然 .NET Core 支援強式名稱的元件，而且 .NET Core 程式庫中的所有元件都已簽署，但大部分的協力廠商元件都不需要強名稱。 如需詳細資訊，請參閱 GitHub 上的[強式名稱簽署](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md)。
@@ -35,7 +33,7 @@ ms.locfileid: "70973058"
   
 - 使用編譯器選項。  
   
- 您必須使用密碼編譯金鑰組將組件簽署為強式名稱。 如需建立金鑰組的詳細資訊，請參閱[如何：建立公開/私密金鑰組](create-public-private-key-pair.md)。  
+ 您必須使用密碼編譯金鑰組將組件簽署為強式名稱。 如需建立金鑰組的詳細資訊，請參閱[如何：建立公開/私密金鑰](create-public-private-key-pair.md)組。  
   
 ## <a name="create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>使用 Visual Studio，以強式名稱建立並簽署元件  
   
@@ -60,7 +58,7 @@ ms.locfileid: "70973058"
 
 - *assemblyName*是元件連結器將發出的強式簽署元件（ *.dll*或 *.exe*檔案）的名稱。  
   
-- *moduleName*是包含一或多個類型 .NET Framework 程式碼模組（ *.netmodule*檔案）的名稱。 您可以使用或 Visual Basic 中`/target:module` C#的參數編譯器代碼，來建立 .netmodule 檔案。
+- *moduleName*是包含一或多個類型 .NET Framework 程式碼模組（ *.netmodule*檔案）的名稱。 您可以使用或 Visual Basic 中C#的 `/target:module` 參數來編譯您的程式碼，以建立 .netmodule 檔案。
   
 - *keyfileName*是包含金鑰組的容器或檔案名。 元件連結器會根據目前目錄來解讀相對路徑。  
 
@@ -81,7 +79,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
    > [!NOTE]
    > C# 和 Visual Basic 編譯器在原始程式碼中遇到 <xref:System.Reflection.AssemblyKeyFileAttribute> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 屬性時，會發出編譯器警告 (分別為 CS1699 和 BC41008)。 您可以忽略這些警告。  
 
-下列範例會使用<xref:System.Reflection.AssemblyKeyFileAttribute>屬性搭配名為*keyfile*的金鑰檔，此檔案位於編譯元件所在的目錄中。  
+下列範例會使用 <xref:System.Reflection.AssemblyKeyFileAttribute> 屬性搭配名為*keyfile*的金鑰檔，此檔案位於編譯元件所在的目錄中。  
 
 ```cpp
 [assembly:AssemblyKeyFileAttribute("keyfile.snk")];
@@ -109,7 +107,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk  
 ```  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [建立和使用強式名稱的元件](create-use-strong-named.md)
 - [如何：建立公開/私密金鑰組](create-public-private-key-pair.md)

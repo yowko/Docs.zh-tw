@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: b7401cd3e9551b378983193f4c5e8e4107954b74
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 663dd7a785200ddbc78cc0cd1fb5b43531982f42
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401411"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458951"
 ---
 # <a name="dependency-properties-overview"></a>相依性屬性概觀
 
 Windows Presentation Foundation (WPF) 提供一組可用來擴充類型的[屬性](../../../standard/base-types/common-type-system.md#Properties)功能之服務。 整體而言，這些服務通常稱為 WPF 屬性系統。 受到 WPF 屬性系統支援的屬性則稱為相依性屬性。 本概觀描述 WPF 屬性系統和相依性屬性的功能。 這包括如何在 XAML 和程式碼中使用現有的相依性屬性。 本概觀也介紹相依性屬性的特製化層面，例如相依性屬性中繼資料，以及如何在自訂類別中建立您自己的相依性屬性。
 
-## <a name="prerequisites"></a>必要條件
-本主題假設您對 NET 類型系統和物件導向程式設計有基本的認識。 為了遵循本主題中的範例，您也應該了解 XAML 並知道如何撰寫 WPF 應用程式。 如需詳細資訊，請參閱[逐步解說：我的第一個 WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)桌面應用程式。  
+## <a name="prerequisites"></a>Prerequisites
+本主題假設您對 NET 類型系統和物件導向程式設計有基本的認識。 為了遵循本主題中的範例，您也應該了解 XAML 並知道如何撰寫 WPF 應用程式。 如需詳細資訊，請參閱[逐步解說︰我的第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
 ## <a name="dependency-properties-and-clr-properties"></a>相依性屬性與 CLR 屬性
  在 WPF 中，屬性通常會公開為標準 .NET [屬性](../../../standard/base-types/common-type-system.md#Properties)。 在基本層級，您可以和這些屬性直接互動，永遠不知道它們會實作為相依性屬性。 但您應該要熟悉 WPF 屬性系統的部分或全部功能，以便可以利用這些功能。
@@ -40,11 +40,11 @@ Windows Presentation Foundation (WPF) 提供一組可用來擴充類型的[屬�
 
 以下列出與相依性屬性搭配使用的術語：
 
-- **相依性屬性:** 由支援的屬性<xref:System.Windows.DependencyProperty>。
+- **相依性屬性：** 由 <xref:System.Windows.DependencyProperty> 支援的屬性。
 
-- **相依性屬性識別碼:** <xref:System.Windows.DependencyProperty>實例, 在註冊相依性屬性時, 會取得做為傳回值, 然後儲存為類別的靜態成員。 此識別碼用為與 WPF 屬性系統互動的多個 API 參數。
+- **相依性屬性識別碼︰** 是一個 <xref:System.Windows.DependencyProperty> 執行個體，在登錄相依性屬性時當成傳回值取得，然後儲存為類別的靜態成員。 此識別碼用為與 WPF 屬性系統互動的多個 API 參數。
 
-- **CLR 「包裝函式」:** 屬性的實際取得和設定實值。 這些實作透過在 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 呼叫中使用相依性屬性識別碼，為使用 WPF 屬性系統的屬性提供支援。
+- **CLR「包裝函式」：** 實際取得及設定屬性的實作。 這些實作透過在 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 呼叫中使用相依性屬性識別碼，為使用 WPF 屬性系統的屬性提供支援。
 
 下例定義 `IsSpinning` 相依性屬性，並向其支援的屬性顯示 <xref:System.Windows.DependencyProperty> 識別碼關聯性。
 
@@ -61,14 +61,14 @@ Windows Presentation Foundation (WPF) 提供一組可用來擴充類型的[屬�
 
 [!code-xaml[PropertiesOvwSupport#MostBasicProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#mostbasicproperty)]
 
-XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語法，取決於屬性使用的實值型別以及其他因素，例如有無類型轉換器。 如需屬性設定之 XAML 語法的詳細資訊，請參閱 [XAML 概觀 (WPF)](xaml-overview-wpf.md) 和 [XAML 語法詳細資料](xaml-syntax-in-detail.md)。
+XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語法，取決於屬性使用的實值型別以及其他因素，例如有無類型轉換器。 如需屬性設定之 XAML 語法的詳細資訊，請參閱 [XAML 概觀 (WPF)](../../../desktop-wpf/fundamentals/xaml.md) 和 [XAML 語法詳細資料](xaml-syntax-in-detail.md)。
 
 下列 XAML 範例為非屬性語法的範例，示範另一個按鈕的背景。 這一次不是設定簡單的純色，而是將背景設定為映像，將表示該映像和該映像來源的項目指定為巢狀項目的屬性。 這是屬性項目語法的範例。
 
 [!code-xaml[PropertiesOvwSupport#PESyntaxProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#pesyntaxproperty)]
 
 ### <a name="setting-properties-in-code"></a>在程式碼中設定屬性
- 在程式碼中設定相依性屬性值, 通常只是呼叫 CLR "包裝函式所公開的集合實。
+ 在程式碼中設定相依性屬性值，通常只是呼叫 CLR "包裝函式所公開的集合實。
 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyset)]
 [!code-vb[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyset)]
@@ -78,7 +78,7 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-您也可以直接呼叫屬性系統 api <xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A> 。 如果您使用現有的屬性 (包裝函式更方便, 並為開發人員工具提供更好的屬性公開), 則通常不需要這麼做, 但在某些情況下, 直接呼叫 Api 是適當的。
+您也可以 <xref:System.Windows.DependencyObject.GetValue%2A> 呼叫屬性系統 Api，並直接 <xref:System.Windows.DependencyObject.SetValue%2A>。 如果您使用現有的屬性（包裝函式更方便，並為開發人員工具提供更好的屬性公開），則通常不需要這麼做，但在某些情況下，直接呼叫 Api 是適當的。
 
 屬性也可以在 XAML 中設定，稍後再於程式碼中透過程式碼後置存取。 如需詳細資訊，請參閱 [WPF 中的程式碼後置和 XAML](code-behind-and-xaml-in-wpf.md)。
 
@@ -190,15 +190,15 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 
 ## <a name="learning-more-about-dependency-properties"></a>深入了解相依性屬性  
 
-- 附加屬性是支援 XAML 特殊語法的屬性類型。 附加屬性通常沒有與 common language runtime (CLR) 屬性的1:1 對應, 而且不一定是相依性屬性。 附加屬性的一般用途是允許子項目向父項目回報屬性值，即使父項目和子項目未同時擁有列為類別成員的該屬性。 一個主要案例是使子項目能夠告知父系應如何在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 中將其呈現；如需範例，請參閱 <xref:System.Windows.Controls.DockPanel.Dock%2A> 或 <xref:System.Windows.Controls.Canvas.Left%2A>。 如需詳細資訊，請參閱[附加屬性概觀](attached-properties-overview.md)。
+- 附加屬性是支援 XAML 特殊語法的屬性類型。 附加屬性通常沒有與 common language runtime （CLR）屬性的1:1 對應，而且不一定是相依性屬性。 附加屬性的一般用途是允許子項目向父項目回報屬性值，即使父項目和子項目未同時擁有列為類別成員的該屬性。 一個主要案例是使子項目能夠告知父系應如何在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 中將其呈現；如需範例，請參閱 <xref:System.Windows.Controls.DockPanel.Dock%2A> 或 <xref:System.Windows.Controls.Canvas.Left%2A>。 如需詳細資訊，請參閱[附加屬性概觀](attached-properties-overview.md)。
 
 - 元件開發人員或應用程式開發人員可能希望建立自己的相依性屬性，以便啟用資料繫結或樣式支援等功能，或用於失效和值的強制型轉支援。 如需詳細資訊，請參閱[自訂相依性屬性](custom-dependency-properties.md)。
 
 - 相依性屬性通常應該視為公用屬性，任何可存取執行個體的呼叫端皆可存取或至少可探索它們。 如需詳細資訊，請參閱[相依性屬性的安全性](dependency-property-security.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [自訂相依性屬性](custom-dependency-properties.md)
 - [唯讀相依性屬性](read-only-dependency-properties.md)
-- [XAML 概觀 (WPF)](xaml-overview-wpf.md)
+- [XAML 概觀 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [WPF 架構](wpf-architecture.md)

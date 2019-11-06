@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 58023498c499569eebb9a0506bea434d2669de45
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: c85f5b6b4552dc4a10c7ad66b8f93331f97a8621
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596005"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196210"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>使用 Override 和 New 關鍵字進行版本控制 (C# 程式設計手冊)
 C# 語言的設計，就是讓不同文件庫的[基底](../../language-reference/keywords/base.md)和衍生類別的版本控制能夠發展兼具回溯相容性。 例如，這表示 C# 完全支援在基底[類別](../../language-reference/keywords/class.md)中引入與衍生類別成員同名的新成員，不會導致非預期的行為。 這也表示，類別必須明確指出方法是打算覆寫繼承的方法，還是方法是一種新方法，會隱藏名稱相似的繼承方法。  
@@ -56,7 +56,7 @@ C# 語言的設計，就是讓不同文件庫的[基底](../../language-referenc
   
  [!code-csharp[csProgGuideInheritance#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#44)]  
   
- 如果您不希望自己的方法覆寫新的基底類別方法，請採納下列考量。 為避免混淆兩個方法，您可以重新命名您的方法。 這很耗時間又容易發生錯誤，並且在某些情況下不實際。 不過，如果您的專案相對較小，您可以使用 Visual Studio 的重構選項來重新命名方法。 如需詳細資訊，請參閱[重構類別和型別 (類別設計工具)](/visualstudio/ide/refactoring-classes-and-types-class-designer)。  
+ 如果您不希望自己的方法覆寫新的基底類別方法，請採納下列考量。 為避免混淆兩個方法，您可以重新命名您的方法。 這很耗時間又容易發生錯誤，並且在某些情況下不實際。 不過，如果您的專案相對較小，您可以使用 Visual Studio 的重構選項來重新命名方法。 如需詳細資訊，請參閱[重構類別和型別 (類別設計工具)](/visualstudio/ide/class-designer/refactoring-classes-and-types)。  
   
  或者，您也可以在衍生類別定義中使用關鍵字 `new`，避免出現警告：  
   
@@ -69,17 +69,17 @@ C# 語言的設計，就是讓不同文件庫的[基底](../../language-referenc
   
  [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  
   
- 在 `Derived` 的執行個體上呼叫 `DoWork` 時，C# 編譯器會先嘗試進行與 `DoWork` 版本相容的呼叫，此版本原是在 `Derived` 上宣告。 覆寫方法不視為在類別中宣告，它們是基底類別中所宣告方法的新實作。 只有當 C# 編譯器無法比對方法呼叫和 `Derived` 中的原始方法時，才會嘗試比對具有相同名稱和相容參數的覆寫方法呼叫。 例如：  
+ 在 `Derived` 的執行個體上呼叫 `DoWork` 時，C# 編譯器會先嘗試進行與 `DoWork` 版本相容的呼叫，此版本原是在 `Derived` 上宣告。 覆寫方法不視為在類別中宣告，它們是基底類別中所宣告方法的新實作。 只有當 C# 編譯器無法比對方法呼叫和 `Derived` 中的原始方法時，才會嘗試比對具有相同名稱和相容參數的覆寫方法呼叫。 例如:  
   
  [!code-csharp[csProgGuideInheritance#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#33)]  
   
- 因為變數 `val` 可以隱含方式轉換為 double，所以 C# 編譯器會呼叫 `DoWork(double)`，不是呼叫 `DoWork(int)`。 有兩種方式可避免這種情況。 首先，避免使用和虛擬方法相同的名稱宣告新方法。 第二，您可以將 `Derived` 執行個體轉換成 `Base`，讓 C# 編譯器搜尋基底類別方法清單，指示它呼叫虛擬方法。 因為方法是虛擬的，所以會在 `Derived` 呼叫 `DoWork(int)` 實作。 例如：  
+ 因為變數 `val` 可以隱含方式轉換為 double，所以 C# 編譯器會呼叫 `DoWork(double)`，不是呼叫 `DoWork(int)`。 有兩種方式可避免這種情況。 首先，避免使用和虛擬方法相同的名稱宣告新方法。 第二，您可以將 `Derived` 執行個體轉換成 `Base`，讓 C# 編譯器搜尋基底類別方法清單，指示它呼叫虛擬方法。 因為方法是虛擬的，所以會在 `Derived` 呼叫 `DoWork(int)` 實作。 例如:  
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   
  如需更多的 `new` 和 `override` 範例，請參閱[了解使用 Override 和 New 關鍵字的時機](./knowing-when-to-use-override-and-new-keywords.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](./index.md)

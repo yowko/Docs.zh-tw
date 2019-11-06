@@ -1,17 +1,17 @@
 ---
 title: 結果
-description: 了解如何使用F#'Result' 類型，可協助您撰寫錯誤容錯的程式碼。
+description: 瞭解如何使用F# 「結果」類型來協助您撰寫錯誤容錯程式碼。
 ms.date: 04/24/2017
-ms.openlocfilehash: 36f60df8a2991c1d318e4921af6c9e89a0156918
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 187aa26ccbaac7e0ec998756377bb7b0489eb1ab
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645327"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424843"
 ---
 # <a name="results"></a>結果
 
-開頭為F#4.1 沒有`Result<'T,'TFailure>`您可以用來撰寫可以組成-容錯的程式碼類型。
+從F# 4.1 開始，有一個 `Result<'T,'TFailure>` 型別，您可以用它來撰寫可撰寫的容錯程式碼。
 
 ## <a name="syntax"></a>語法
 
@@ -20,20 +20,20 @@ ms.locfileid: "65645327"
 [<StructuralEquality; StructuralComparison>]
 [<CompiledName("FSharpResult`2")>]
 [<Struct>]
-type Result<'T,'TError> = 
-    | Ok of ResultValue:'T 
+type Result<'T,'TError> =
+    | Ok of ResultValue:'T
     | Error of ErrorValue:'TError
 ```
 
 ## <a name="remarks"></a>備註
 
-請注意，結果型別是[結構差別聯集](discriminated-unions.md#struct-discriminated-unions)，這另一項功能中導入F#4.1。  結構相等語意適用於此處。
+請注意，結果類型是[結構區分](discriminated-unions.md#struct-discriminated-unions)等位，這是4.1 中F#引進的另一項功能。  結構相等的語義適用于這裡。
 
-`Result`型別通常用於單邊錯誤處理，這通常稱為[鐵路導向程式設計](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)在F#社群。  下列的簡單範例會示範這種方法。
+`Result` 類型通常用於 monadic 錯誤處理，這通常稱為「在F#社區中以鐵路為[導向的程式設計](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)」。  下列簡單範例示範這種方法。
 
 ```fsharp
 // Define a simple type which has fields that can be validated
-type Request = 
+type Request =
     { Name: string
       Email: string }
 
@@ -57,11 +57,11 @@ let validateEmail req =
     | _ -> Ok req
 
 let validateRequest reqResult =
-    reqResult 
+    reqResult
     |> Result.bind validateName
     |> Result.bind validateEmail
 
-let test() = 
+let test() =
     // Now, create a Request and pattern match on the result.
     let req1 = { Name = "Phillip"; Email = "phillip@contoso.biz" }
     let res1 = validateRequest (Ok req1)
@@ -80,9 +80,9 @@ let test() =
 test()
 ```
 
-如您所見，它是很容易就能鏈結各種驗證函式，如果您強制它們全部傳回`Result`。  這樣，您會分解成小片段，也就是當您需要的組合這類功能。  這也具有附加價值*強制*善用[模式比對](pattern-matching.md)結尾的一輪的驗證，進而強制執行較高的程式正確性。
+如您所見，如果您強制所有的驗證函式都要傳回 `Result`，這會是很容易的。  這可讓您將這類功能分解成一小部分，如同您所需的可組合。  這也有額外的值，可在驗證回合結束時*強制*使用[模式](pattern-matching.md)比對，而這會強制執行較高程度的程式正確性。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [差別聯集](discriminated-unions.md)
 - [模式比對](pattern-matching.md)

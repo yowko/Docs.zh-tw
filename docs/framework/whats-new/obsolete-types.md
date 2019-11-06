@@ -6,14 +6,12 @@ helpviewer_keywords:
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d8af0f32c676f4438334f7c64b771e237db90dd3
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 748045c6e9d84ec71faa69ccfb9861472eb306e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663848"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124123"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中過時的類型
 
@@ -81,59 +79,59 @@ ms.locfileid: "67663848"
 
 ### <a name="assembly-mscorlibdll"></a>組件：mscorlib.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:System.ExecutionEngineException?displayProperty=nameWithType>|這個型別先前會在執行階段中指出未指定的嚴重錯誤。 執行階段已不再引發這個例外狀況，因此這個型別已過時。|
 |<xref:System.Collections.CaseInsensitiveHashCodeProvider?displayProperty=nameWithType>|請改用 <xref:System.StringComparer?displayProperty=nameWithType>。|
 |<xref:System.Collections.IHashCodeProvider?displayProperty=nameWithType>|請改用 <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType>。|
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|<xref:System.Configuration.Assemblies.AssemblyHash> 類別已被取代。|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。 改為在 System.Runtime.CompilerServices 命名空間中使用 <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> 類別。|
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|有可用的替代 API ：請改為發出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自訂屬性。|
-|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=nameWithType>。|
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|有替代的 API 可用：請改為發出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自訂屬性。|
+|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=nameWithType> 。|
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=nameWithType>|這個屬性已被取代，將在未來的版本中移除。|
 |<xref:System.Runtime.InteropServices.IDispatchImplType?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=nameWithType> 已被取代。|
-|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=nameWithType>。|
+|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=nameWithType> 。|
 |<xref:System.Runtime.InteropServices.SetWin32ContextInIDispatchAttribute?displayProperty=nameWithType>|這個屬性已被取代。 應用程式定義域不再遵循 IDispatch 呼叫中的啟動內容界限。|
-|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType>。|
+|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType> 。|
 |<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> 。|
 |<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> 僅用於 .NET 2.0 透明度相容性。|
 |<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> 僅用於 .NET 2.0 透明度相容性。 請改用 <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>。|
@@ -145,9 +143,9 @@ ms.locfileid: "67663848"
 
 <a name="Core"></a>
 
-### <a name="assembly-systemcoredll"></a>組件︰System.Core.dll
+### <a name="assembly-systemcoredll"></a>組件：System.Core.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:System.Runtime.CompilerServices.ExecutionScope?displayProperty=nameWithType>|使用這個型別會產生編譯器錯誤。<br /><br /> 請勿使用這個型別。|
 
@@ -155,9 +153,9 @@ ms.locfileid: "67663848"
 
 <a name="data"></a>
 
-### <a name="assembly-systemdatadll"></a>組件︰System.Data.dll
+### <a name="assembly-systemdatadll"></a>組件：System.Data.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute> 已被取代。|
 |<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes> 已被取代。|
@@ -168,9 +166,9 @@ ms.locfileid: "67663848"
 
 <a name="oracleclient"></a>
 
-### <a name="assembly-systemdataoracleclientdll"></a>組件︰System.Data.OracleClient.dll
+### <a name="assembly-systemdataoracleclientdll"></a>組件：System.Data.OracleClient.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory> 已被取代。|
 |<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand> 已被取代。|
@@ -185,11 +183,11 @@ ms.locfileid: "67663848"
 
 <a name="design"></a>
 
-### <a name="assembly-systemdesigndll"></a>組件︰System.Design.dll
+### <a name="assembly-systemdesigndll"></a>組件：System.Design.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
-|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|這個類別已被取代。 請改用 <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType>。|
+|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|這個類別已被取代。 請改用 <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType> 。|
 |<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=nameWithType>|由於資料繫結編輯功能是經由 <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType> 而非屬性方格啟動，因此不建議使用這個型別。|
 |<xref:System.Web.UI.Design.DataBindingCollectionEditor?displayProperty=nameWithType>|由於資料繫結編輯功能是經由 <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType> 而非屬性方格啟動，因此不建議使用這個型別。|
 |<xref:System.Web.UI.Design.IControlDesignerBehavior?displayProperty=nameWithType>|建議的替代方案是 <xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=nameWithType> 和 <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=nameWithType>。|
@@ -208,13 +206,13 @@ ms.locfileid: "67663848"
 
 <a name="system"></a>
 
-### <a name="assembly-systemdll"></a>組件︰System.dll
+### <a name="assembly-systemdll"></a>組件：System.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|這個介面已被取代。 請改為加入 <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> 來處理 <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType> 型別。|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|請改用 <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType> 來處理新的設定模型。|
-|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|這個屬性已被取代。 請改用 <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType>。|
+|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|這個屬性已被取代。 請改用 <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType> 。|
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=nameWithType>|這個類別已被取代。|
 |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|這個類別已被取代。 請改為透過 <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType> 類別使用效能計數器。|
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|這個類別已被取代。 請改用 <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType> 來存取和設定全域預設 Proxy。 請使用 'null' 而非 <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType>。|
@@ -224,9 +222,9 @@ ms.locfileid: "67663848"
 
 <a name="enterpriseservices"></a>
 
-### <a name="assembly-systementerpriseservicesdll"></a>組件︰System.EnterpriseServices.dll
+### <a name="assembly-systementerpriseservicesdll"></a>組件：System.EnterpriseServices.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:System.EnterpriseServices.RegistrationHelperTx?displayProperty=nameWithType>|<xref:System.EnterpriseServices.RegistrationHelperTx> 類別已被取代。|
 
@@ -234,9 +232,9 @@ ms.locfileid: "67663848"
 
 <a name="net"></a>
 
-### <a name="assembly-systemnetdll"></a>組件︰System.Net.dll
+### <a name="assembly-systemnetdll"></a>組件：System.Net.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:System.Net.INetworkProgress?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 使用這個型別會產生編譯器錯誤。<br /><br /> 這個 API 支援 .NET Framework 基礎結構，並不適合直接從您的程式碼中使用。|
 |<xref:System.Net.IUnsafeWebRequestCreate?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 使用這個型別會產生編譯器錯誤。<br /><br /> 這個 API 支援 .NET Framework 基礎結構，並不適合直接從您的程式碼中使用。|
@@ -252,9 +250,9 @@ ms.locfileid: "67663848"
 
 <a name="servicemodel"></a>
 
-### <a name="assembly-systemservicemodeldll"></a>組件︰System.ServiceModel.dll
+### <a name="assembly-systemservicemodeldll"></a>組件：System.ServiceModel.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:System.ServiceModel.NetPeerTcpBinding?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 對等通道功能已經過時，未來將會移除。|
 |<xref:System.ServiceModel.Channels.HttpCookieContainerBindingElement?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個型別已經過時。 若要啟用 HTTP <xref:System.Net.CookieContainer>，請使用 Http 繫結或 `AllowCookies` 的 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 屬性。|
@@ -269,9 +267,9 @@ ms.locfileid: "67663848"
 
 <a name="web"></a>
 
-### <a name="assembly-systemwebdll"></a>組件︰System.Web.dll
+### <a name="assembly-systemwebdll"></a>組件：System.Web.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:System.Web.Configuration.PassportAuthentication?displayProperty=nameWithType>|這個型別已經過時。 已不再支援 Passport 驗證產品，並且以 [Microsoft 帳戶](https://go.microsoft.com/fwlink/?LinkId=733413)取代該產品|
 |<xref:System.Web.Mail.MailAttachment?displayProperty=nameWithType>|建議的替代做法是 <xref:System.Net.Mail.Attachment?displayProperty=nameWithType>。|
@@ -291,9 +289,9 @@ ms.locfileid: "67663848"
 
 <a name="mobile"></a>
 
-### <a name="assembly-systemwebmobiledll"></a>組件︰System.Web.Mobile.dll
+### <a name="assembly-systemwebmobiledll"></a>組件：System.Web.Mobile.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:System.Web.Mobile.CookielessData?displayProperty=nameWithType>|System.Web.Mobile.dll 組件已被取代，不應該再使用。 如需如何開發 ASP.NET 行動應用程式的資訊，請參閱[行動裝置的 ASP.NET](https://go.microsoft.com/fwlink/?LinkId=157231)。|
 |<xref:System.Web.Mobile.DeviceFilterElement?displayProperty=nameWithType>|System.Web.Mobile.dll 組件已被取代，不應該再使用。 如需如何開發 ASP.NET 行動應用程式的資訊，請參閱[行動裝置的 ASP.NET](https://go.microsoft.com/fwlink/?LinkId=157231)。|
@@ -492,9 +490,9 @@ ms.locfileid: "67663848"
 
 <a name="workflow_activities"></a>
 
-### <a name="assembly-systemworkflowactivitiesdll"></a>組件︰System.Workflow.Activities.dll
+### <a name="assembly-systemworkflowactivitiesdll"></a>組件：System.Workflow.Activities.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:System.Workflow.Activities?displayProperty=nameWithType> 命名空間中的所有型別。|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
 |<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
@@ -506,9 +504,9 @@ ms.locfileid: "67663848"
 
 <a name="workflow_componentmodel"></a>
 
-### <a name="assembly-systemworkflowcomponentmodeldll"></a>組件︰System.Workflow.ComponentModel.dll
+### <a name="assembly-systemworkflowcomponentmodeldll"></a>組件：System.Workflow.ComponentModel.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |在 <xref:System.Workflow.ComponentModel> 命名空間中除了 <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> 和 <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType> 之外的所有型別|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
 |在 <xref:System.Workflow.ComponentModel.Compiler> 命名空間中除了 <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> 和 <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType> 之外的所有型別|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
@@ -525,9 +523,9 @@ ms.locfileid: "67663848"
 
 <a name="workflow_runtime"></a>
 
-### <a name="assembly-systemworkflowruntimedll"></a>組件︰System.Workflow.Runtime.dll
+### <a name="assembly-systemworkflowruntimedll"></a>組件：System.Workflow.Runtime.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:System.Activities.Statements.Interop?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。<br /><br />Workflow Foundation 3.0 類型已被取代。 請改用 <xref:System.Activities>.\* 的 Workflow 4.0 類型。|
 |<xref:System.Activities.Tracking.InteropTrackingRecord?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。<br /><br />Workflow Foundation 3.0 類型已被取代。 請改用 <xref:System.Activities>.\* 的 Workflow 4.0 類型。|
@@ -541,9 +539,9 @@ ms.locfileid: "67663848"
 
 <a name="workflowservices"></a>
 
-### <a name="assembly-systemworkflowservicesdll"></a>組件︰System.WorkflowServices.dll
+### <a name="assembly-systemworkflowservicesdll"></a>組件：System.WorkflowServices.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。<br /><br /> WF 3 型別已被取代。 請改用 <xref:System.Activities>.\* 的新 WF 4 類型。|
 |<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。<br /><br /> WF 3 型別已被取代。 請改用 <xref:System.Activities>.\* 的新 WF 4 類型。|
@@ -571,9 +569,9 @@ ms.locfileid: "67663848"
 
 <a name="xaml"></a>
 
-### <a name="assembly-systemxamldll"></a>組件︰System.Xaml.dll
+### <a name="assembly-systemxamldll"></a>組件：System.Xaml.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute?displayProperty=nameWithType>|XAML 剖析器已不使用這個項目。 請查看 <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>。|
 
@@ -581,9 +579,9 @@ ms.locfileid: "67663848"
 
 <a name="xml"></a>
 
-### <a name="assembly-systemxmldll"></a>組件︰System.Xml.dll
+### <a name="assembly-systemxmldll"></a>組件：System.Xml.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:System.Xml.IApplicationResourceStreamResolver?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 使用這個型別會產生編譯器錯誤。<br /><br /> 這個 API 支援 .NET Framework 基礎結構，並不適合直接從您的程式碼中使用。|
 |<xref:System.Xml.Schema.XmlSchemaCollection?displayProperty=nameWithType>|請使用 <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> 進行結構描述編譯和驗證。|
@@ -595,9 +593,9 @@ ms.locfileid: "67663848"
 
 <a name="WindowsBase"></a>
 
-### <a name="assembly-windowsbasedll"></a>組件︰WindowsBase.dll
+### <a name="assembly-windowsbasedll"></a>組件：WindowsBase.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> 已被取代。 這個介面不再使用。|
 
@@ -611,7 +609,7 @@ ms.locfileid: "67663848"
 
 <a name="IEHost"></a>
 
-### <a name="assembly-iehostdll-and-ieexecexe"></a>組件︰IEHost.dll 和 IEExec.exe
+### <a name="assembly-iehostdll-and-ieexecexe"></a>組件：IEHost.dll 和 IEExec.exe
 
 IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有型別和成員都已淘汱，並自 .NET Framework 4 起不再支援。 這些組件之前是用來裝載 Windows Form 控制項以及在 Internet Explorer 中執行可執行檔。 建議的替代方案包括 ClickOnce、XAML 瀏覽器應用程式 (XBAP) 和 Microsoft Silverlight。
 
@@ -619,9 +617,9 @@ IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有�
 
 <a name="Engine"></a>
 
-### <a name="assembly-microsoftbuildenginedll"></a>組件︰Microsoft.Build.Engine.dll
+### <a name="assembly-microsoftbuildenginedll"></a>組件：Microsoft.Build.Engine.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|這個類別已被取代。 請改用 *Microsoft.Build* 組件的 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>。|
 |<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|這個類別已被取代。 請改用 *Microsoft.Build* 組件的 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>。|
@@ -630,9 +628,9 @@ IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有�
 
 <a name="jscript"></a>
 
-### <a name="assembly-microsoftjscriptdll"></a>組件︰Microsoft.JScript.dll
+### <a name="assembly-microsoftjscriptdll"></a>組件：Microsoft.JScript.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:Microsoft.JScript.Vsa.BaseVsaEngine?displayProperty=nameWithType>|這個類型在 Visual Studio 2005 中已過時；未來沒有取代項目。 如需詳細資訊，請參閱 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> 文件。|
 |<xref:Microsoft.JScript.Vsa.BaseVsaSite?displayProperty=nameWithType>|這個類型在 Visual Studio 2005 中已過時；未來沒有取代項目。 如需詳細資訊，請參閱 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> 文件。|
@@ -657,11 +655,11 @@ IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有�
 
 <a name="VBCompat"></a>
 
-### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>組件︰Microsoft.VisualBasic.Compatibility.dll
+### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>組件：Microsoft.VisualBasic.Compatibility.dll
 
 如需從 Visual Basic 6 移轉的資訊，請參閱 [Visual Basic 6.0 資源中心](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation)。
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray?displayProperty=nameWithType>|這個成員已過時。|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray?displayProperty=nameWithType>|這個成員已過時。|
@@ -735,9 +733,9 @@ IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有�
 
 <a name="VBCompatData"></a>
 
-### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>組件︰Microsoft.VisualBasic.Compatibility.Data.dll
+### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>組件：Microsoft.VisualBasic.Compatibility.Data.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.ADODC?displayProperty=nameWithType>|這個成員已過時。|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.ADODC.BOFActionEnum?displayProperty=nameWithType>|這個成員已過時。|
@@ -793,9 +791,9 @@ IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有�
 
 <a name="visualc"></a>
 
-### <a name="assembly-microsoftvisualcdll"></a>組件︰Microsoft.VisualC.dll
+### <a name="assembly-microsoftvisualcdll"></a>組件：Microsoft.VisualC.dll
 
-|類型|訊息|
+|輸入|訊息|
 |----------|-------------|
 |<xref:Microsoft.VisualC.DebugInfoInPDBAttribute?displayProperty=nameWithType>|Microsoft.VisualC.dll 這個組件已經過時，其存在目的只是為了提供回溯相容性。|
 |<xref:Microsoft.VisualC.DecoratedNameAttribute?displayProperty=nameWithType>|Microsoft.VisualC.dll 這個組件已經過時，其存在目的只是為了提供回溯相容性。|
@@ -808,7 +806,7 @@ IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有�
 |<xref:Microsoft.VisualC.NeedsCopyConstructorModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll 這個組件已經過時，其存在目的只是為了提供回溯相容性。|
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll 這個組件已經過時，其存在目的只是為了提供回溯相容性。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [類別庫中已淘汰的功能](whats-obsolete.md)
 - [過時的成員](obsolete-members.md)

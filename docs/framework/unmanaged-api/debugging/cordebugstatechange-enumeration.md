@@ -10,14 +10,12 @@ api_type:
 ms.assetid: 1d4424ab-5143-4e50-a84a-ceeb4ddf3bba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 676489880cb30ca540cb78d70797dbf4eedf7395
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 239e3a82df0e6010278669f9f429bfad0d163319
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739593"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133716"
 ---
 # <a name="cordebugstatechange-enumeration"></a>CorDebugStateChange 列舉
 
@@ -33,7 +31,7 @@ typedef enum CorDebugStateChange
 } CorDebugStateChange;
 ```
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 | 成員            | 描述                                                              |
 | ----------------- | ------------------------------------------------------------------------ |
@@ -42,7 +40,7 @@ typedef enum CorDebugStateChange
 
 ## <a name="remarks"></a>備註
 
- 成員`CorDebugStateChange`列舉型別提供做為引數，當偵錯工具呼叫`ProcessStateChanged`方法使用[ICorDebugProcess4::ProcessStateChanged](icordebugprocess4-processstatechanged-method.md)或[ICorDebugProcess6::ProcessStateChanged](icordebugprocess6-processstatechanged-method.md)
+ 當偵錯工具以[ICorDebugProcess4：:P rocessstatechanged](icordebugprocess4-processstatechanged-method.md)或[ICorDebugProcess6：:P rocessstatechanged](icordebugprocess6-processstatechanged-method.md)呼叫 `ProcessStateChanged` 方法時，會提供 `CorDebugStateChange` 列舉的成員做為引數。
 
 ## <a name="requirements"></a>需求
 
@@ -50,11 +48,11 @@ typedef enum CorDebugStateChange
 
  **標頭：** CorDebug.idl、CorDebug.h
 
- **LIBRARY:** CorGuids.lib
+ **程式庫：** CorGuids.lib
 
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯列舉](debugging-enumerations.md)
 - [偵錯](index.md)

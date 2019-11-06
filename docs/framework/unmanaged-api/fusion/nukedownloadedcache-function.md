@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: fac2b1c6-6fa3-4818-805b-b63972024c86
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 29f492173a7fd22ab497d6e0096798e164fccf26
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8f97614412eb2d49b202e86bdabc727159deb5d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796301"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131690"
 ---
 # <a name="nukedownloadedcache-function"></a>NukeDownloadedCache 函式
 刪除 common language runtime （CLR）下載快取。  
@@ -45,11 +43,11 @@ HRESULT NukeDownloadedCache();
   
  **標頭：** 融合。h  
   
- **LIBRARY:** 融合 .dll 和 Mscorwks.dll。 請使用 [Mscorwks.dll]，而不是 []，以確保您以正確的 .NET Framework 版本為目標。  
+ 連結**庫：** 融合 .dll 和 Mscorwks.dll。 請使用 [Mscorwks.dll]，而不是 []，以確保您以正確的 .NET Framework 版本為目標。  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [CreateHistoryReader 函式](createhistoryreader-function.md)
 - [GetHistoryFileDirectory 函式](gethistoryfiledirectory-function.md)

@@ -2,14 +2,12 @@
 title: 序列化和中繼資料
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec8180da9637ec2b2c4e1b432773b4f9f1ac908b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1805b6ca06d584237303d1366222419da3e8b9ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049177"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128115"
 ---
 # <a name="serialization-and-metadata"></a>序列化和中繼資料
 
@@ -47,7 +45,7 @@ ms.locfileid: "71049177"
   
 ### <a name="typeof-used-outside-the-constructor"></a>在建構函式外部使用的 typeof
 
- 如果您呼叫這些序列化類別的處理常式，並在C#提供給<xref:System.Type>此函式參數的運算式外部使用[typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)運算子（如下列程式碼所示），則 .NET Native 編譯器無法解析類型：  
+ 如果您呼叫這些序列化類別的處理常式，並在C#提供給此函式的 <xref:System.Type> 參數的運算式外部使用[typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)運算子，則 .NET Native 編譯器無法解析類型：  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -57,7 +55,7 @@ ms.locfileid: "71049177"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- 同樣地，如果您呼叫<xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>和之類的函式，並提供要序列化的其他<xref:System.Type>物件陣列（如下列程式碼所示），則 .NET Native 編譯器無法解析這些類型。  
+ 同樣地，如果您呼叫 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> 的函式，並提供要序列化的其他 <xref:System.Type> 物件陣列（如下列程式碼所示），則 .NET Native 編譯器無法解析這些類型。  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
@@ -69,9 +67,9 @@ ms.locfileid: "71049177"
   
  如需範例中所使用語法的資訊，請參閱 [\<Type> 項目](type-element-net-native.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)
-- [\<輸入 > 元素](type-element-net-native.md)
+- [\<類型 > 元素](type-element-net-native.md)
 - [\<Namespace> 項目](namespace-element-net-native.md)

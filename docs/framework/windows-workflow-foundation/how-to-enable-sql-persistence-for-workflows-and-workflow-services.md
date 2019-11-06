@@ -1,16 +1,13 @@
 ---
 title: HOW TO：啟用工作流程與工作流程服務的 SQL 持續性
 ms.date: 03/30/2017
-dev_langs:
-- csharp
-- vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: b3ba21234af9555a4e40a0b587ac21473cff8761
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 4dc5648d748372828c5b9a36441bfb02eef045e1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834831"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460858"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>HOW TO：啟用工作流程與工作流程服務的 SQL 持續性
 
@@ -29,7 +26,7 @@ Windows Server App Fabric 會簡化設定持續性的程序。 如需詳細資�
 > [!IMPORTANT]
 > 如果您並未建立持續性資料庫，則當主機嘗試保存工作流程時，SQL 工作流程執行個體存放區功能就會擲回與下列其中一個相似的例外狀況。
 >
-> SqlClient. SqlException：找不到預存程式 ' DurableInstancing. CreateLockOwner '
+> System.Data.SqlClient.SqlException：找不到預存程序 'System.Activities.DurableInstancing.CreateLockOwner'
 
 下列各節描述如何使用 SQL 工作流程執行個體存放區啟用工作流程與工作流程服務的持續性。 如需 SQL 工作流程實例存放區屬性的詳細資訊，請參閱[Sql 工作流程實例存放區的屬性](properties-of-sql-workflow-instance-store.md)。
 
@@ -72,7 +69,7 @@ Windows Server App Fabric 會簡化設定持續性的程序。 如需詳細資�
    ```
 
 > [!NOTE]
-> 請參閱 @no__t 0How：建立並執行[消費者入門教學](getting-started-tutorial.md)課程的長時間執行工作流程 @ no__t-0 步驟，以取得逐步指示。
+> 如需逐步指示，請參閱[消費者入門教學](getting-started-tutorial.md)課程的
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>啟用使用 WorkflowServiceHost 之自我裝載工作流程服務的持續性
 
@@ -129,7 +126,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 您可以使用組態檔，啟用自我裝載或 Windows Process Activation Service (WAS) 裝載之工作流程服務的持續性。 WAS 裝載的工作流程服務會使用 WorkflowServiceHost，如同自我裝載的工作流程服務一樣。
 
-@No__t-0，這是一種服務行為，可讓您透過 XML 設定方便地變更[SQL 工作流程實例存放區](sql-workflow-instance-store.md)屬性。 如果是 WAS 裝載的工作流程服務，請使用 Web.config 檔。 下列組態範例示範如何使用組態檔中的 `sqlWorkflowInstanceStore` 行為項目來設定 SQL 工作流程執行個體存放區。
+`SqlWorkflowInstanceStoreBehavior`，這是一種服務行為，可讓您透過 XML 設定方便地變更[SQL 工作流程實例存放區](sql-workflow-instance-store.md)屬性。 如果是 WAS 裝載的工作流程服務，請使用 Web.config 檔。 下列組態範例示範如何使用組態檔中的 `sqlWorkflowInstanceStore` 行為項目來設定 SQL 工作流程執行個體存放區。
 
 ```xml
 <serviceBehaviors>
@@ -140,9 +137,8 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
                     instanceCompletionAction="DeleteAll | DeleteNothing"
                     instanceLockedExceptionAction="NoRetry | BasicRetry |AggressiveRetry"
                     hostLockRenewalPeriod="00:00:30"
-                    runnableInstancesDetectionPeriod="00:00:05">
+                    runnableInstancesDetectionPeriod="00:00:05" />
 
-        <sqlWorkflowInstanceStore/>
     </behavior>
 </serviceBehaviors>
 ```
@@ -162,7 +158,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 安裝會將下列與 SQL 工作流程執行個體存放區功能相關的項目加入至 Machine.config 檔：
 
-- 將下列行為延伸專案加入至 Machine.config 檔案，讓您可以使用設定檔中的 @no__t 0sqlWorkflowInstanceStore > 服務行為專案來設定服務的持續性。
+- 將下列行為延伸模組專案新增至 Machine.config 檔案，讓您可以使用設定檔中的 \<sqlWorkflowInstanceStore > 服務行為專案來設定服務的持續性。
 
     ```xml
     <configuration>
@@ -172,6 +168,6 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
                     <add name="sqlWorkflowInstanceStore" type="System.Activities.DurableInstancing.SqlWorkflowInstanceStoreElement, System.Activities.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
                 </behaviorExtensions>
             </extensions>
-        <system.serviceModel>
-    <configuration>
+        </system.serviceModel>
+    </configuration>
     ```

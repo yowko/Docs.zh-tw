@@ -2,14 +2,14 @@
 title: 將您的 Windows 市集應用程式移轉至 .NET Native
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 7eea089ef9b492e156758d170394b17d74a60a64
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1942574e832ca7593d91c71370cc0af0c3051617
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128316"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455606"
 ---
-# <a name="migrating-your-windows-store-app-to-net-native"></a>將您的 Windows 市集應用程式移轉至 .NET Native
+# <a name="migrate-your-windows-store-app-to-net-native"></a>將您的 Windows Store 應用程式遷移至 .NET Native
 
 .NET Native 在 Windows Store 或開發人員的電腦上提供應用程式的靜態編譯。 這不同於 just-in-time (JIT) 編譯器或裝置上的 [原生映像產生器 (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) 為 Windows 市集應用程式執行的動態編譯。 儘管有差異，.NET Native 會嘗試維持與適用于[Windows Store 應用程式的 .net](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)的相容性。 在大部分的情況下，適用于 Windows Store 應用程式的 .NET 的專案也會使用 .NET Native。  不過，在某些情況下，您可能會遇到行為上的變更。 本檔討論適用于 Windows Store 應用程式的標準 .NET 與下列領域的 .NET Native 之間的差異：
 
@@ -53,7 +53,7 @@ ms.locfileid: "73128316"
 
 例如，資料繫結會要求應用程式能夠將屬性名稱對應至函式。 在適用於 Windows 市集應用程式的 .NET 中，通用語言執行平台會自動使用反映來提供這項功能給 Managed 類型和可公開取得的原生類型。 在 .NET Native 中，編譯器會自動包含您要系結資料之類型的中繼資料。
 
-.NET Native 編譯器也可以處理常用的泛型型別（例如 <xref:System.Collections.Generic.List%601> 和 <xref:System.Collections.Generic.Dictionary%602>），而不需要任何提示或指示詞。 在某些限制下，也可支援 [動態](../../csharp/language-reference/keywords/dynamic.md) 關鍵字。
+.NET Native 編譯器也可以處理常用的泛型型別（例如 <xref:System.Collections.Generic.List%601> 和 <xref:System.Collections.Generic.Dictionary%602>），而不需要任何提示或指示詞。 在某些限制下，也可支援 [動態](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) 關鍵字。
 
 > [!NOTE]
 > 將應用程式移植到 .NET Native 時，您應該徹底測試所有動態程式碼路徑。

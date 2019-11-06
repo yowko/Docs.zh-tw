@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ab7c097f6b65d539117e5a6ef38eb67b24695a32
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: c861d61cbbe8075db4b17a702e863336ea621f2b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394203"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198378"
 ---
 ### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP：所有伺服器中的同步 IO 已停用
 
@@ -39,7 +39,7 @@ if (syncIOFeature != null)
 }
 ```
 
-如果您在 `Dispose` 中 @no__t 或另一個資料流程呼叫同步 API 時遇到問題，請改為呼叫新的 `DisposeAsync` API。
+如果您在 `Dispose`中 `TextWriter` 或另一個資料流程呼叫同步 API 時遇到問題，請改為呼叫新的 `DisposeAsync` API。
 
 如需討論，請參閱[aspnet/AspNetCore # 7644](https://github.com/aspnet/AspNetCore/issues/7644)。
 
@@ -53,7 +53,7 @@ if (syncIOFeature != null)
 
 #### <a name="new-behavior"></a>新的行為
 
-預設不允許這些同步 Api： 
+預設不允許這些同步 Api：
 
 預期的錯誤如下：
 
@@ -77,7 +77,7 @@ if (syncIOFeature != null)
 }
 ```
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>Category
 
 ASP.NET Core
 

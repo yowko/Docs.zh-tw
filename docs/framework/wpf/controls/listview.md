@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView control [WPF]
 ms.assetid: fc3784a7-c9e8-4e2b-909a-7af37cef9b43
-ms.openlocfilehash: c90849c27f7bbef2338ef255350a7dccd40c99e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45f5b054b946e746e490c64b2b051bec80fc6b17
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932575"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459335"
 ---
 # <a name="listview"></a>ListView
-<xref:System.Windows.Controls.ListView>控制項提供的基礎結構，以顯示不同的版面配置或檢視表中的一組資料的項目。  
+<xref:System.Windows.Controls.ListView> 控制項提供基礎結構，以在不同的版面配置或視圖中顯示一組資料項目。  
   
- 下圖顯示<xref:System.Windows.Controls.ListView>。  
+ 下圖顯示 <xref:System.Windows.Controls.ListView>。  
   
- ![螢幕擷取畫面，顯示 ListView 與 GridView 輸出。](./media/gridview-overview/listview-gridview-output.jpg)  
+ ![顯示具有 GridView 輸出之 ListView 的螢幕擷取畫面。](./media/gridview-overview/listview-gridview-output.jpg)  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [概觀](listview-overviews.md)  
- [HOW-TO 主題](listview-how-to-topics.md)  
+ [「如何」主題](listview-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.ListView>  
@@ -31,5 +31,5 @@ ms.locfileid: "61932575"
   <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>相關章節  
- [資料繫結概觀](../data/data-binding-overview.md)  
+ [資料繫結概觀](../../../desktop-wpf/data/data-binding-overview.md)  
   [資料範本化概觀](../data/data-templating-overview.md)

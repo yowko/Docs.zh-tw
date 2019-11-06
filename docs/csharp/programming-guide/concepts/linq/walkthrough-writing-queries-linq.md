@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 9b6592405d3047c8663b48137aa5b1f0eb14bdb4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924100"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418059"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>逐步解說：在 C# 中撰寫查詢 (LINQ)
 本逐步解說示範用以撰寫 LINQ 查詢運算式的 C# 語言功能。  
@@ -26,15 +26,15 @@ ms.locfileid: "69924100"
   
 1. 啟動 Visual Studio。  
   
-2. 在功能表列上，選擇 [檔案]  、[新增]  、[專案]  。  
+2. 在功能表列上，選擇 [ **檔案**]、[ **新增**]、[ **專案**]。  
   
      [ **新增專案** ] 對話方塊隨即開啟。  
   
-3. 依序展開 [已安裝]  、[範本]  和 [Visual C#]  ，然後選擇 [主控台應用程式]  。  
+3. 依序展開 [已安裝]、[範本] 和 [Visual C#]，然後選擇 [主控台應用程式]。  
   
-4. 在 [名稱]  文字方塊中，輸入不同的名稱或接受預設名稱，然後按一下 [確定]  按鈕。  
+4. 在 [名稱] 文字方塊中，輸入不同的名稱或接受預設名稱，然後按一下 [確定] 按鈕。  
   
-     新的專案隨即會出現在方案總管  中。  
+     新的專案隨即出現在方案總管中。  
   
 5. 您會發現專案具有 System.Core.dll 的參考和 <xref:System.Linq?displayProperty=nameWithType> 命名空間的 `using` 指示詞。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "69924100"
   
     - 此變數的類型是 `Student`，其與 `IEnumerable<Student>` 查詢變數類型相容。  
   
-2. 加入此程式碼之後，建置並執行應用程式，即可在 [主控台]  視窗中查看結果。  
+2. 加入此程式碼之後，建置並執行應用程式，即可在 [主控台] 視窗中查看結果。  
   
  [!code-csharp[CsLINQGettingStarted#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#13)]  
   
@@ -127,7 +127,7 @@ ms.locfileid: "69924100"
   
      [!code-csharp[CsLINQGettingStarted#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#15)]  
   
-3. 執行應用程式，並在 [主控台]  視窗中檢視結果。  
+3. 執行應用程式，並在 [主控台] 視窗中檢視結果。  
   
      如需詳細資訊，請參閱 [group 子句](../../../language-reference/keywords/group-clause.md)。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "69924100"
   
  [LINQ to Objects (C#)](./linq-to-objects.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Language-Integrated Query (LINQ) (C#)](./index.md)
-- [LINQ 查詢運算式](../../linq-query-expressions/index.md)
+- [LINQ 查詢運算式](../../../linq/index.md)

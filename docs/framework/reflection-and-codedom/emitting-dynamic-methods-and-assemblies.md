@@ -7,14 +7,12 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d8e2b9aeb8c632efcbf8c506da4da7c6e7b408e1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4578b708b10e93a7f5def5b9dc040eeb646bdc8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046077"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130239"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>發出動態方法和組件
 
@@ -36,14 +34,14 @@ ms.locfileid: "71046077"
   
 除了 <xref:System.Reflection.Emit> 命名空間中的 Managed 類型，還有[中繼資料介面](../unmanaged-api/metadata/metadata-interfaces.md)參考文件中說明的 Unmanaged 中繼資料介面。 相較於 Unmanaged 中繼資料介面，Managed 反映發出提供較強的語意錯誤檢查，以及抽象層級較高的中繼資料。  
   
-通用語言基礎結構 (CLI) 文件是使用中繼資料和 MSIL 的另一個有用資源，特別是 "Partition II:Metadata Definition and Semantics" 和 "Partition III:CIL Instruction Set"。 您可以在 [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) 以及 [Ecma 網站](https://go.microsoft.com/fwlink/?LinkId=116487)上，線上取得這份文件。  
+另一項適用於中繼資料和 MSIL 的有用資源，是通用語言基礎結構 (CLI) 文件，尤其是＜第二部分：中繼資料定義和語意＞以及＜第三部分：CIL 指令集＞。 您可以在 [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) 以及 [Ecma 網站](https://go.microsoft.com/fwlink/?LinkId=116487)上，線上取得這份文件。  
   
-## <a name="in-this-section"></a>本節內容
+## <a name="in-this-section"></a>本章節內容
   
 [反映發出中的安全性問題](security-issues-in-reflection-emit.md)  
 說明有關使用反映發出來建立動態組件的安全性問題。  
 
-[如何：定義並執行動態方法](how-to-define-and-execute-dynamic-methods.md)   
+[如何：定義和執行動態方法](how-to-define-and-execute-dynamic-methods.md)   
 顯示如何執行簡單的動態方法以及繫結至類別執行個體的動態方法。
 
 [如何：使用反映發出定義泛型型別](how-to-define-a-generic-type-with-reflection-emit.md)   

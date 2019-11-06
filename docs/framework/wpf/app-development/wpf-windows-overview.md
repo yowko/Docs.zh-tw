@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: e62825a88858a63984860cbc8a1c570f784f663f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8c650ceab57a46cb6dd396111e7a93163a62299f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040869"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424935"
 ---
 # <a name="wpf-windows-overview"></a>WPF 視窗概觀
 使用者透過 Windows 與 Windows Presentation Foundation （WPF）獨立應用程式互動。 視窗的主要用途是裝載內容，以視覺化方式檢視資料，並讓使用者可以與資料互動。 獨立 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式會使用 <xref:System.Windows.Window> 類別來提供自己的視窗。 本主題介紹在獨立應用程式中建立和管理 windows 的基本概念之前的 <xref:System.Windows.Window>。  
   
 > [!NOTE]
-> 瀏覽器裝載的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式，包括 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 和鬆散的 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 頁面，不會提供自己的視窗。 相反地，它們是裝載于 Windows Internet Explorer 所提供的 windows 中。 請參閱[WPF XAML 瀏覽器應用程式總覽](wpf-xaml-browser-applications-overview.md)。  
+> 瀏覽器裝載 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式，包括 XAML 瀏覽器應用程式（Xbap）和鬆散 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 頁面，不提供自己的視窗。 相反地，它們是裝載于 Windows Internet Explorer 所提供的 windows 中。 請參閱[WPF XAML 瀏覽器應用程式總覽](wpf-xaml-browser-applications-overview.md)。  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Window 類別  
@@ -471,7 +471,7 @@ ms.locfileid: "73040869"
   
  不過，這不在授與使用 ClickOnce 從網際網路或近端內部網路區域啟動之應用程式的許可權集之外。 因此，使用者會收到 ClickOnce 安全性警告，而且必須將應用程式的許可權集合提升為完全信任。  
   
- 此外，[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 預設無法顯示視窗或對話方塊。 如需獨立應用程式安全性考慮的討論，請參閱[WPF 安全性策略-平臺安全性](../wpf-security-strategy-platform-security.md)。  
+ 此外，Xbap 預設無法顯示視窗或對話方塊。 如需獨立應用程式安全性考慮的討論，請參閱[WPF 安全性策略-平臺安全性](../wpf-security-strategy-platform-security.md)。  
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>其他類型的視窗  

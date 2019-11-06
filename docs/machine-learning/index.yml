@@ -9,13 +9,13 @@ metadata:
   ms.collection: collection
   author: natke
   ms.author: nakersha
-  ms.date: 10/28/2019
-  ms.openlocfilehash: d5aedcd118fc0558a5f425ccad7fb1ad67992f74
-  ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+  ms.date: 10/30/2019
+  ms.openlocfilehash: 05d357af2088321524841bfc05f94f816f1bc306
+  ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 10/29/2019
-  ms.locfileid: "73038231"
+  ms.lasthandoff: 11/01/2019
+  ms.locfileid: "73423945"
 landingContent:
 - title: ML.NET 基本概念
   linkLists:
@@ -51,6 +51,8 @@ landingContent:
       url: tutorials/sentiment-analysis-model-builder.md
     - text: 預測價格（模型產生器）
       url: tutorials/predict-prices-with-model-builder.md
+    - text: 分類健全狀況違規（模型產生器 & SQL Server）
+      url: tutorials/health-violation-classification-model-builder.md
     - text: 分類支援問題（API）
       url: tutorials/github-issue-classification.md
     - text: 使用影像分類 API （API）分類影像
@@ -61,6 +63,8 @@ landingContent:
       url: tutorials/object-detection-onnx.md
     - text: 偵測產品銷售（API）中的異常
       url: tutorials/sales-anomaly-detection.md
+    - text: 預測自行車出租需求（API & SQL Server）
+      url: tutorials/time-series-demand-forecasting.md
     - text: 建立電影推薦（API）
       url: tutorials/movie-recommendation.md
 - title: 作法指南

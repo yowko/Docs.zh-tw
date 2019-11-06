@@ -12,13 +12,12 @@ helpviewer_keywords:
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
 author: pkulikov
-ms.author: ronpet
-ms.openlocfilehash: 644ccf5951e9d2556fc697d2fd763f026fd0ebdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: d7d1fa13b02fe7425fa9b4cb81ba20297a23fe4b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617222"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128956"
 ---
 # <a name="timers"></a>計時器
 
@@ -56,7 +55,7 @@ ms.locfileid: "54617222"
 
 如需詳細資訊與範例，請參閱<xref:System.Timers.Timer?displayProperty=nameWithType>。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Threading.Timer?displayProperty=nameWithType>
 - <xref:System.Timers.Timer?displayProperty=nameWithType>

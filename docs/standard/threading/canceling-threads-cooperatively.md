@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - threads, cancellation
 ms.assetid: d2d6d5fd-e263-4fa0-847b-2fc3e0d82337
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd32deb9c8719a12b76aaea8ec91a17471cf18f9
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
+ms.openlocfilehash: 1d1433ecf39974bf9e68fe07b9d0818ac16fb544
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259856"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138133"
 ---
 # <a name="canceling-threads-cooperatively"></a>以合作方式取消執行緒
 
@@ -24,6 +22,6 @@ ms.locfileid: "44259856"
  [!code-csharp[Cancellation#14](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/CooperativeThreads.cs#14)]
  [!code-vb[Cancellation#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/CooperativeThreads.vb#14)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用執行緒和執行緒處理](using-threads-and-threading.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 19560c79-abdc-4bdf-a5fe-eb362a59edc0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 79743b78ea3d19bab4756b580d2feddd07e0a23b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d28af09faae84b0482d438ae33f593f250490c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745017"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73196331"
 ---
 # <a name="icordebugchaingetcallee-method"></a>ICorDebugChain::GetCallee 方法
-取得這個鏈結所呼叫函式鏈結。  
+取得這個鏈所呼叫的鏈。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,16 +35,16 @@ HRESULT GetCallee (
   
 ## <a name="parameters"></a>參數  
  `ppChain`  
- [out]ICorDebugChain 物件，表示呼叫的鏈結的位址指標。 如果這個鏈結目前執行中 （亦即，如果這個鏈結不會等候到傳回的呼叫鏈結） 以及`ppChain`將會是 null。  
+ 脫銷ICorDebugChain 物件位址的指標，表示呼叫的鏈。 如果目前正在執行此鏈（也就是，如果此鏈未等候被呼叫的鏈傳回），`ppChain` 將會是 null。  
   
 ## <a name="remarks"></a>備註  
- 這個鏈結會等待呼叫的鏈結，以便繼續執行之前傳回。 呼叫的鏈結可能會在跨執行緒封送處理呼叫的情況下的另一個執行緒上。  
+ 這個鏈會在繼續執行之前，等待被呼叫的鏈返回。 在跨執行緒封送處理呼叫的情況下，被呼叫的鏈可能會在另一個執行緒上。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -677,12 +677,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: f60c2e3caec215c60851e669eabf554617149096
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: bc19224f980091e6046494fd4d708af2b03041da
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002175"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419705"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>抱歉，我們沒有這個 C# 錯誤的具體內容。
 
@@ -695,10 +695,10 @@ ms.locfileid: "72002175"
 提供 QA 網站，瞭解視覺效果C#的相關問題和問題。  
 
  也請參閱：  
- [Visual C# 程式設計人員的其他資源](../getting-started/additional-resources.md)  
+ [Visual C# 程式設計人員的其他資源](../getting-started/index.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../programming-guide/index.md)
 - [C# 參考](../language-reference/index.md)
-- [告訴我們](/visualstudio/ide/talk-to-us)
+- [告訴我們](/visualstudio/ide/feedback-options)

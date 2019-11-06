@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 4d0801cd81e00c84be278b44730058798b0acfa9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: b9b9f145f8f2d945fa06d53efa89f5754766963f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588200"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423133"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指標類型 (C# 程式設計手冊)
 
@@ -23,9 +23,9 @@ void* identifier; //allowed but not recommended
 
 在指標型別中的 `*` 之前指定的型別稱為**參考型別**。 只有 [unmanaged 型別](../../language-reference/builtin-types/unmanaged-types.md)才可以是參考型別。
 
-指標型別不會從 [object](../../language-reference/keywords/object.md) 繼承，而且指標型別與 `object` 之間無法進行轉換。 此外，boxing 和 unboxing 不支援指標。 不過，不同的指標類型之間以及指標類型與整數類資料類型之間可以進行轉換。
+指標型別不會從 [object](../../language-reference/builtin-types/reference-types.md) 繼承，而且指標型別與 `object` 之間無法進行轉換。 此外，boxing 和 unboxing 不支援指標。 不過，不同的指標類型之間以及指標類型與整數類資料類型之間可以進行轉換。
 
-當您在相同的宣告中宣告多個指標時，星號 (*) 只會與基礎類型一起出現，而不會做為每個指標名稱的前置詞使用。 例如：
+當您在相同的宣告中宣告多個指標時，星號 (\*) 只會與基礎類型一起出現，而不會做為每個指標名稱的前置詞使用。 例如:
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -36,7 +36,7 @@ int *p1, *p2, *p3;   // Invalid in C#
 
 `myType*` 類型的指標變數值是 `myType` 類型變數的位址。 以下是指標類型宣告的範例：
 
-|範例|說明|
+|範例|描述|
 |-------------|-----------------|
 |`int* p`|`p` 為整數的指標。|
 |`int** p`|`p` 為整數指標的指標。|
@@ -64,7 +64,7 @@ int* myVariable;
 
 下表所列出的運算子和陳述式可以用於 unsafe 內容中的指標：
 
-|運算子/陳述式|使用|
+|運算子/陳述式|請使用|
 |-------------------------|---------|
 |`*`|執行指標間接取值。|
 |`->`|透過指標存取結構的成員。|
@@ -82,10 +82,10 @@ int* myVariable;
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[指標型別](~/_csharplang/spec/unsafe-code.md#pointer-types)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [Unsafe 程式碼和指標](index.md)
 - [指標轉換](pointer-conversions.md)
-- [型別](../../language-reference/keywords/types.md)
-- [Unsafe.DangerousAPI](../../language-reference/keywords/unsafe.md)
+- [型別](/dotnet/csharp/language-reference/keywords)
+- [unsafe](../../language-reference/keywords/unsafe.md)

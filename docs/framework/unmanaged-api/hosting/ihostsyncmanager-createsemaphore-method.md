@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37679e94-5ff9-4173-8fa5-457febeb89bf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 43935829d11a925d4a3389149f5c316df15f06bb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 02066d3923714e66bf287f1435b7854280c97cb7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764595"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195823"
 ---
 # <a name="ihostsyncmanagercreatesemaphore-method"></a>IHostSyncManager::CreateSemaphore 方法
-會建立[IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)以作為等候事件的號誌的 common language runtime (CLR) 物件。  
+建立[IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)物件，以供 common language RUNTIME （CLR）用來做為等候事件的信號。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,39 +37,39 @@ HRESULT CreateSemaphore (
   
 ## <a name="parameters"></a>參數  
  `dwInitial`  
- [in]初始計數`ppSemaphore`。  
+ 在`ppSemaphore`的初始計數。  
   
  `dwMax`  
- [in]最大計數`ppSemaphore`。  
+ 在`ppSemaphore`的最大計數。  
   
  `ppSemaphore`  
- [out]位址指標`IHostSemaphore`執行個體，或如果無法建立號誌，則為 null。  
+ 脫銷`IHostSemaphore` 實例之位址的指標，如果無法建立信號，則為 null。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`CreateSemaphore` 已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
-|HOST_E_TIMEOUT|呼叫已逾時。|  
-|HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL CLR 已不再可在此程序中使用。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
-|E_OUTOFMEMORY|記憶體不足，無法建立要求的事件物件。|  
+|S_OK|已成功傳回 `CreateSemaphore`。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫超時。|  
+|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
+|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
+|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|E_OUTOFMEMORY|沒有足夠的記憶體可用來建立要求的事件物件。|  
   
 ## <a name="remarks"></a>備註  
- `CreateSemaphore` 鏡像 Win32 函式具有相同的名稱。 `dwInitial`並`dwMax`參數使用相同的語意號誌計數做為 Win32`lInitialCount`和`lMaximumCount`參數，分別。 `dwInitial` 必須是介於 0 和`dwMax`（包含頭尾)。 `dwMax` 必須是小於或等於零。  
+ `CreateSemaphore` 會反映具有相同名稱的 Win32 函數。 `dwInitial` 和 `dwMax` 參數會分別針對信號計數使用相同的語義，做為 Win32 `lInitialCount` 和 `lMaximumCount` 參數。 `dwInitial` 必須介於零和 `dwMax`（含）之間。 `dwMax` 必須大於零。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
 - [IHostSemaphore 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)

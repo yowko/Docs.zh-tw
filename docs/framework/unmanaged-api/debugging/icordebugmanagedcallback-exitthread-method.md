@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62db708b-6cf0-45c5-b897-4b5c75bd2505
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 85247f2f3672e7827f4dd0c93e50cd5da914ee8f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bbe2727e4b93cf6d7b3111b6060d170e497024a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755772"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130776"
 ---
 # <a name="icordebugmanagedcallbackexitthread-method"></a>ICorDebugManagedCallback::ExitThread 方法
-已結束執行緒所執行的 managed 程式碼會告知偵錯工具。  
+通知偵錯工具，執行 managed 程式碼的執行緒已結束。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,23 +36,23 @@ HRESULT ExitThread (
   
 ## <a name="parameters"></a>參數  
  `pAppDomain`  
- [in]表示包含 managed 的執行緒的應用程式網域的 ICorDebugAppDomain 物件指標。  
+ 在ICorDebugAppDomain 物件的指標，表示包含 managed 執行緒的應用程式域。  
   
  `thread`  
- [in]ICorDebugThread 物件，表示 managed 的執行緒指標。  
+ 在代表 managed 執行緒之 ICorDebugThread 物件的指標。  
   
 ## <a name="remarks"></a>備註  
- 一次`ExitThread`引發回呼時，執行緒不會再出現在 執行緒列舉型別。  
+ 一旦引發 `ExitThread` 回呼，執行緒就不會再出現線上程列舉中。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

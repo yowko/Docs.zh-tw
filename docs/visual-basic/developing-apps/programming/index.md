@@ -5,12 +5,12 @@ helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 09bc9254c880d58ffed22971d3ff96ba341fdf83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 68c200b3e47a0f96963e5872c854633a7c24e938
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61812668"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423981"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic 中的程式設計
 本節將討論您可能想要在建立 Visual Basic 應用程式時深入了解的程式設計工作。  
@@ -34,10 +34,10 @@ ms.locfileid: "61812668"
  [存取應用程式設定](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  包含的文件說明如何使用 `My.Settings` 物件來存取應用程式的設定。  
   
- [處理磁碟機、目錄和檔案](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
+ [處理磁碟機、目錄和檔案](drives-directories-files/index.md)  
  包含的文件說明如何使用 `My.Computer.FileSystem` 物件來存取檔案系統。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Basic 語言功能](../../../visual-basic/programming-guide/language-features/index.md)
 - [程式設計概念](../../../visual-basic/programming-guide/concepts/index.md)

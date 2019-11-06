@@ -18,7 +18,7 @@ ms.locfileid: "72774535"
 
 概率程式設計可讓您建立真實世界處理的統計模型。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 - 本機開發環境設定
 

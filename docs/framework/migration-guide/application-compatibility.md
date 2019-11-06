@@ -1,79 +1,69 @@
 ---
-title: .NET Framework 中的應用程式相容性
-ms.date: 05/19/2017
+title: 執行時間和重定變更-.NET Framework
+ms.date: 10/29/2019
 helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
-ms.openlocfilehash: cf0d556dd5df773958e24ff1efcefbc3d8a8d3a9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c46f781d495b87a4f24e77935df7c4814c8567ae
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126325"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196693"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework 中的應用程式相容性
 
-## <a name="introduction"></a>簡介
-相容性是每個 .NET 版本都極為重視的目標。 相容性可確保每個版本都能累加，讓舊版仍能運作。 另一方面，舊版功能的變更 (為改善效能、處理安全性問題，或修正 Bug) 會造成現有程式碼或現有應用程式中在更新版本下執行的相容性問題。 .NET Framework 可辨識重定目標變更及執行階段變更。 重定目標變更會影響以 .NET Framework 特定版本為目標，但在更新版本上執行的應用程式。 執行階段變更會影響在特定版本上執行的所有應用程式。
+相容性是每個 .NET 版本的重要目標。 相容性可確保每個版本都是附加的，因此舊版會繼續工作。 另一方面，對先前的功能所做的變更（例如，為了改善效能、解決安全性問題或修正錯誤）可能會導致現有程式碼中的相容性問題，或在更新版本下執行的現有應用程式。
 
-每個應用程式都有特定版本的 .NET Framework 目標，可以下列方式指定：
+每個應用程式都是以特定版本的 .NET Framework 為目標，如下所示：
 
 - 在 Visual Studio 中定義目標架構。
 - 在專案檔中指定目標架構。
 - 將 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 套用至原始程式碼。
 
-在比目標版本更新的版本上執行時，.NET Framework 會使用古怪的行為，模擬較舊的目標版本。 換句話說，應用程式會在較新的 Framework 版本上執行，但表現出的行為如同在較舊的版本上執行。 .NET Framework 版本間的許多相容性問題是透過這種古怪的模型而降低。 應用程式的目標 .NET Framework 版本取決於執行程式碼所在之應用程式定義域的項目組件目標版本。 該應用程式定義域載入的所有其他組件則以該 .NET Framework 版本為目標。 例如，在可執行檔的情況下，可執行檔的目標架構是該 AppDomain 中的所有組件將在其下運行的相容性模式。
+從 .NET Framework 的某個版本遷移至另一個版本時，需要考慮兩種類型的變更：
+
+- [執行階段變更](#runtime-changes)
+- [重定目標變更](#retargeting-changes)
 
 ## <a name="runtime-changes"></a>執行階段變更
 
-執行階段問題是在電腦上進行新的執行階段，而相同的二進位檔案也在執行時，會看到不同的行為。 如果二進位檔已針對 .NET Framework 4.0 編譯，它就可以在 4.5 或更新版本中以 .NET Framework 4.0 相容性模式執行。 許多影響 4.5 的變更不會影響針對 4.0 所編譯的二進位檔。 這是 AppDomain 特有的功能，視項目組件的設定而定。
+執行時間問題是在電腦上放置新的執行時間，以及應用程式的行為變更時所發生的問題。 當在比目標較新的版本上執行時，.NET Framework 會使用*quirked*行為來模擬較舊的目標版本。 應用程式會在較新的版本上執行，但會如同在較舊的版本上執行一樣。 .NET Framework 版本間的許多相容性問題是透過這種古怪的模型而降低。 例如，如果二進位檔是針對 .NET Framework 4.0 編譯，但在具有 .NET Framework 4.5 或更新版本的電腦上執行，則會在 .NET Framework 4.0 相容性模式下執行。 這表示，較新版本中的許多變更不會影響二進位檔。
+
+應用程式目標的 .NET Framework 版本是由程式碼執行所在之應用程式域的專案元件目標版本所決定。 載入該應用程式域中的所有其他元件都會以該版本為目標。 例如，如果是可執行檔，則可執行檔目標的版本是該應用程式域中的所有元件在其下執行的相容性模式。
+
+若要查看適用于您環境的執行時間變更清單，請選取您目前設為目標的 .NET Framework 版本，然後選擇您想要遷移到的版本：
+
+[!INCLUDE[versionselector](../../../includes/migration-guide/runtime/versionselector.md)]
 
 ## <a name="retargeting-changes"></a>重定目標變更
 
-重定目標問題，是當以 4.0 為目標的組件現在設定為以 4.5 為目標時發生的問題。 現在，組件選擇加入新功能並成為可能的舊功能相容性問題。 這同樣受項目組件支配，所以主控台應用程式會使用組件，或網站會參考組件。
+重定變更是元件重新編譯成以較新版本為目標時所發生的變更。 以較新的版本為目標，表示元件會加入宣告新功能，以及舊功能的潛在相容性問題。
 
-## <a name="net-compatibility-diagnostics"></a>.NET 相容性診斷
+若要查看適用于您環境的重定變更清單，請選取您目前設為目標的 .NET Framework 版本，然後選擇您想要遷移到的版本：
 
-.NET 相容性診斷是由 Roslyn 提供的分析器，可協助您識別各版 .NET Framework 之間的應用程式相容性問題。 此清單包含所有可用的分析器，但只有一部分會套用至任何特定的移轉。 分析器會判斷適用於規劃之移轉的問題，並且只會呈現這些問題。
+[!INCLUDE[versionselector](../../../includes/migration-guide/retargeting/versionselector.md)]
 
-每個問題包含下列資訊：
+## <a name="impact-classification"></a>影響分類
 
-- 舊版中已變更的內容描述。
+在描述執行時間和重定變更的主題中（例如，[重定從4.7.2 遷移到4.8 的變更](retargeting/4.7.2-4.8.md)），個別專案會依其預期的影響分類，如下所示：
 
-- 變更如何影響客戶，以及是否有任何因應措施可保留版本間的相容性。
+**Major**\
+影響大量應用程式或需要大幅修改程式碼的重大變更。
 
-- 變更的重要性評估。 應用程式相容性問題可分類如下：
+**Minor**\
+影響少量應用程式或需要稍微修改程式碼的變更。
 
-    |   |   |
-    |---|---|
-    |主要|影響大量應用程式或需要大幅修改程式碼的重大變更。|
-    |次要|影響少量應用程式或需要稍微修改程式碼的變更。|
-    |邊緣案例|在非常特定 (罕見) 的情況下影響應用程式的變更。|
-    |透明|對應用程式的開發人員或使用者影響的不明顯變更。|
+**Edge 案例**\
+在非常特定 (罕見) 的情況下影響應用程式的變更。
 
-- 第一次出現此變更的 Framework 版本。 也指出某些變更會引入到特定版本，然後在更新版本中還原。
-
-- 變更類型：
-
-    |   |   |
-    |---|---|
-    |正在重定目標|此變更會影響為了以新版 .NET Framework 為目標而重新編譯的應用程式。|
-    |執行階段|此變更會影響以舊版 .NET Framework 為目標但在新版上執行的現有應用程式。|
-
-- 受影響的 API (如果有的話)。
-
-- 可用診斷的識別碼
-
-## <a name="usage"></a>使用量
-若要開始，請選取以下的相容性變更類型：
-
-- [重定目標變更](./retargeting/index.md)
-- [執行階段變更](./runtime/index.md)
+**透明**\
+此變更對應用程式的開發人員或使用者的影響不明顯。 發生此變更的應用程式應該不需要修改。
 
 ## <a name="see-also"></a>請參閱
 
 - [版本和相依性](versions-and-dependencies.md)
-- [新功能](../whats-new/index.md)
-- [類別庫中已淘汰的功能](../whats-new/whats-obsolete.md)
+- [新增功能](../whats-new/index.md)
+- [過時功能](../whats-new/whats-obsolete.md)

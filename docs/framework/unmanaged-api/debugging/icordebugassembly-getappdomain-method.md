@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 14e18510-23ac-4cba-9f96-c86147a2df9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4fced656168952c1064de213405147baf7856b2c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 53042e722809a6574396648529c677d749154716
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737352"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132734"
 ---
 # <a name="icordebugassemblygetappdomain-method"></a>ICorDebugAssembly::GetAppDomain 方法
-取得包含這個應用程式定義域的介面指標`ICorDebugAssembly`執行個體。  
+取得包含這個 `ICorDebugAssembly` 實例之應用程式域的介面指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,16 +35,16 @@ HRESULT GetAppDomain (
   
 ## <a name="parameters"></a>參數  
  `ppAppDomain`  
- [out]ICorDebugAppDomain 介面，代表應用程式定義域的位址指標。  
+ 脫銷代表應用程式域之 ICorDebugAppDomain 介面位址的指標。  
   
 ## <a name="remarks"></a>備註  
- 如果這個組件是系統組件`GetAppDomain`會傳回 null。  
+ 如果這個元件是系統元件，`GetAppDomain` 會傳回 null。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

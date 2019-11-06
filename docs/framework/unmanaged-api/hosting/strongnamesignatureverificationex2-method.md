@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dfd4133f-a074-4db3-a7ee-4f250fe9ad3a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eb4e41f62f5f55969dadd47e80efc56e1c92c94f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cf8d6b7e45c0012d223173c85a92fac4fb044c6c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768261"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141407"
 ---
 # <a name="strongnamesignatureverificationex2-method"></a>StrongNameSignatureVerificationEx2 方法
-驗證強式名稱的組件中，簽章，並提供實際的索引鍵與 ECMA 索引鍵的對應。  
+驗證強式名稱元件的簽章，並提供從 ECMA 金鑰到實際金鑰的對應。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,33 +38,33 @@ HRESULT StrongNameSignatureVerificationEx (
   
 ## <a name="parameters"></a>參數  
  `wszFilePath`  
- [in]可攜式可執行檔 （.exe 或.dll） 檔來進行驗證的組件的路徑。  
+ 在要驗證之元件的可攜式可執行檔（.exe 或 .dll）的路徑。  
   
  `fForceVerification`  
- [in]`true`進行驗證，即使它是必要的登錄設定會覆寫，否則`false`。  
+ [in] `true` 執行驗證，即使需要覆寫登錄設定也一樣。否則，`false`。  
   
  `pbEcmaPublicKey`  
- [in]從實際的索引鍵的 ECMA 公開金鑰對應的指標，用來驗證。  
+ 在從 ECMA 公開金鑰到用於驗證之實際金鑰的對應指標。  
   
  `cbEcmaPublicKey`  
- [in]實際的 ECMA 公開金鑰長度。  
+ 在實際 ECMA 公用金鑰的長度。  
   
  `pfWasVerified`  
- [out]`true`強式名稱簽章是否已驗證，否則`false`。 這個參數也會設定為`false`若驗證成功因登錄設定。  
+ [out] `true` 是否已驗證強式名稱簽章;否則，`false`。 如果因為登錄設定而驗證成功，此參數也會設定為 `false`。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果驗證成功;否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
+ 如果驗證成功，則 `S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MetaHost.h  
+ **標頭：** MetaHost。h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [StrongNameSignatureVerification 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
 - [StrongNameSignatureVerificationEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78232e6f-ae18-4cfa-a6cd-e79471cf9d76
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1201ac0dca9cbd48c24b2621eba079ae672fd310
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f2c881603cfa0e4b3d2dc8d1e996631b51d1e850
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737851"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134707"
 ---
 # <a name="icordebugappdomaingetobject-method"></a>ICorDebugAppDomain::GetObject 方法
-Common language runtime (CLR) 應用程式定義域中取得的介面指標。  
+取得 common language runtime （CLR）應用程式域的介面指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,19 +35,19 @@ HRESULT GetObject (
   
 ## <a name="parameters"></a>參數  
  `ppObject`  
- [out]ICorDebugValue 介面物件，表示 CLR 應用程式定義域的位址指標。  
+ 脫銷表示 CLR 應用程式域之 ICorDebugValue 介面物件的位址指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 managed<xref:System.AppDomain?displayProperty=nameWithType>尚未針對這個應用程式定義域已建構物件，此方法會傳回`S_FALSE`，並將放`NULL`在`*ppObject`。  
+ 如果尚未為這個應用程式域建立 managed <xref:System.AppDomain?displayProperty=nameWithType> 物件，此方法會傳回 `S_FALSE`，並將 `NULL` 放在 `*ppObject`中。  
   
 ## <a name="remarks"></a>備註  
- 每個應用程式定義域的處理序中可能有 managed<xref:System.AppDomain?displayProperty=nameWithType>表示該執行階段中的物件。 此函式取得 ICorDebugValue 介面物件，對應至這個受控<xref:System.AppDomain?displayProperty=nameWithType>物件。  
+ 進程中的每個應用程式域在代表它的執行時間中可能會有 managed <xref:System.AppDomain?displayProperty=nameWithType> 物件。 此函式會取得對應至這個 managed <xref:System.AppDomain?displayProperty=nameWithType> 物件的 ICorDebugValue 介面物件。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]

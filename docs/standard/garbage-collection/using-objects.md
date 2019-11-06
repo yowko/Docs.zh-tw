@@ -10,14 +10,12 @@ helpviewer_keywords:
 - try/finally block
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f165ab5b79abbc2b5464f40a27a580d26af163a
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 979cd782e5ab094b6dea010fc7a0b27caa390e67
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106945"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141349"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>使用實作 IDisposable 的物件
 
@@ -60,7 +58,7 @@ C# `using` 陳述式還可讓您以單一陳述式取得多項資源，其內部
   
 如果您的程式語言不支援 `using` 陳述式，但是允許直接呼叫 <xref:System.IDisposable.Dispose%2A> 方法，而使得您選擇實作或必須實作 `try/finally` 區塊，則可以遵循這個基本模式。 
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [清除 Unmanaged 資源](../../../docs/standard/garbage-collection/unmanaged.md)
 - [using 陳述式 (C# 參考)](../../csharp/language-reference/keywords/using-statement.md)

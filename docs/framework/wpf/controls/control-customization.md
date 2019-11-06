@@ -7,23 +7,23 @@ helpviewer_keywords:
 - customizing controls [WPF]
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
-ms.openlocfilehash: b70a6654e5c3722ad1ef1d926ee3a441d24d9e68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 946724cc388c9c9456973ef164b8b6f38fd85869
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017692"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460752"
 ---
 # <a name="control-customization"></a>控制項自訂
-這個類別涵蓋了各種不同的基底類別、 介面和其他項目和用來建立功能完整的概念[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控制項。  
+此類別涵蓋各種基類、介面和其他元素，以及用來建立功能完整的 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 控制項的概念。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [控制項撰寫概觀](control-authoring-overview.md)  
  [設計可設定樣式控制項的方針](guidelines-for-designing-stylable-controls.md)  
  [裝飾項](adorners.md)  
  [控制項的樣式和範本](control-styles-and-templates.md)  
  [WPF 自訂控制項的 UI 自動化](ui-automation-of-a-wpf-custom-control.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [樣式設定和範本化](styling-and-templating.md)
+- [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

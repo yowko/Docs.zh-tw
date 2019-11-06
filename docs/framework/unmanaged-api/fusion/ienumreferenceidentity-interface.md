@@ -14,25 +14,23 @@ helpviewer_keywords:
 ms.assetid: a17b3155-7216-4e16-8c9f-abce21f549e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c5d4bc1fa82f7623168050f4ee36f0ea3cd171e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1305b9ebe3cd87ba002ee87610ff309d015a44e6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796439"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131740"
 ---
 # <a name="ienumreferenceidentity-interface"></a>IEnumReferenceIdentity 介面
-作為物件集合的`IReferenceIdentity`列舉值。  
+作為 `IReferenceIdentity` 物件集合的列舉值。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
-|`IEnumReferenceIdentity::Clone`|取得新`IEnumReferenceIdentity`的介面指標，其中包含與這個`IEnumReferenceIdentity`相同的成員。|  
-|`IEnumReferenceIdentity::Next`|取得指定數目的`IReferenceIdentity`物件，從目前位置開始。|  
-|`IEnumReferenceIdentity::Reset`|將指令指標移至這個`IEnumReferenceIdentity`的開頭。|  
+|`IEnumReferenceIdentity::Clone`|取得新 `IEnumReferenceIdentity` 的介面指標，其中包含與此 `IEnumReferenceIdentity`相同的成員。|  
+|`IEnumReferenceIdentity::Next`|從目前位置開始，取得指定的 `IReferenceIdentity` 物件數目。|  
+|`IEnumReferenceIdentity::Reset`|將指令指標移至這個 `IEnumReferenceIdentity`的開頭。|  
 |`IEnumReferenceIdentity::Skip`|從目前位置開始，將指令指標向下移動指定的專案數。|  
   
 ## <a name="requirements"></a>需求  
@@ -42,7 +40,7 @@ ms.locfileid: "70796439"
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [融合介面](fusion-interfaces.md)
 - [IReferenceIdentity 介面](ireferenceidentity-interface.md)

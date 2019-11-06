@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 747ee407-ee8c-484d-9583-25089236d2d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f388a52c320c3f0d5f4ad7e073e1e8960d7947dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e560d08d3e10db1b5978d1bd7be53dfed9ca3268
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749360"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132976"
 ---
 # <a name="ihosttaskmanagersetlocale-method"></a>IHostTaskManager::SetLocale 方法
-Common language runtime (CLR) 已變更的地區設定或在目前執行之工作的文化特性，會告知主應用程式。  
+通知主機 common language runtime （CLR）已變更目前正在執行之工作的地區設定或文化特性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,33 +35,33 @@ HRESULT SetLocale (
   
 ## <a name="parameters"></a>參數  
  `lcid`  
- [in]可對應到新指派的地理文化特性和語言的地區設定識別碼值。  
+ 在地區設定識別碼值，對應至新指派的地理文化特性和語言。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SetLocale` 已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
-|HOST_E_TIMEOUT|呼叫已逾時。|  
-|HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL CLR 已不再可在此程序中使用。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
-|E_NOTIMPL|主機不允許受管理的使用者程式碼，以修改的地區設定。|  
+|S_OK|已成功傳回 `SetLocale`。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫超時。|  
+|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
+|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
+|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|E_NOTIMPL|主機不允許受管理的使用者程式碼修改地區設定。|  
   
 ## <a name="remarks"></a>備註  
- 執行階段會呼叫`SetLocale`時的值<xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>屬性變更時，managed 程式碼。 這個方法便有機會執行同步處理的地區設定中可能會有任何機制主機。 若主機不允許從 managed 程式碼變更的地區設定，或未實作的機制來同步處理地區設定，應從這個方法會傳回 E_NOTIMPL。  
+ 當 managed 程式碼變更 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 屬性的值時，執行時間會呼叫 `SetLocale`。 這個方法可讓主機執行任何可能對地區設定同步處理的機制。 如果主機不允許從 managed 程式碼變更地區設定，或未執行同步處理地區設定的機制，則應該從這個方法傳回 E_NOTIMPL。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [ICLRTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)

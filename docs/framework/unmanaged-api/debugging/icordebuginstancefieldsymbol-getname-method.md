@@ -1,17 +1,15 @@
 ---
-title: ICorDebugInstanceFieldSymbol::GetName 方法
+title: ICorDebugInstanceFieldSymbol：： GetName 方法
 ms.date: 03/30/2017
 ms.assetid: d9c12b1f-9c1d-4943-8e9e-93b55faf085f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b1b3cc489c504942806b043fa2e3b76d5415d84
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d88e18b8d6d497098e340b396972f9ead28dbaf6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936939"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139045"
 ---
-# <a name="icordebuginstancefieldsymbolgetname-method"></a>ICorDebugInstanceFieldSymbol::GetName 方法
+# <a name="icordebuginstancefieldsymbolgetname-method"></a>ICorDebugInstanceFieldSymbol：： GetName 方法
 取得執行個體欄位的名稱。  
   
 ## <a name="syntax"></a>語法  
@@ -44,11 +42,11 @@ HRESULT GetName(
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugInstanceFieldSymbol 介面](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

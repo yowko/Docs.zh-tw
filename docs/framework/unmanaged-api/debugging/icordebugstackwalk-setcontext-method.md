@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bac0b156-31a3-4e7f-be4d-ab21789c81f1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d6eb97fc70fec25f4b225c3fd5bad1e780091f7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 90156152a2c133446dedbe22426785ab63f8dfb9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771031"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131804"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>ICorDebugStackWalk::SetContext 方法
-設定組[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)有效的內容執行緒物件的目前內容。  
+將[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)物件的目前內容設定為執行緒的有效內容。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,43 +35,43 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
 ## <a name="parameters"></a>參數  
  `flag`  
- [in]A [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md)旗標，指出內容是從使用中框架在堆疊上，還是回溯堆疊所取得的內容。  
+ 在[CorDebugSetCoNtextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md)旗標，指出內容是否來自堆疊上的現用框架，或回溯堆疊所取得的內容。  
   
  `contextSize`  
- [in]配置的大小`CONTEXT`緩衝區。  
+ 在`CONTEXT` 緩衝區的配置大小。  
   
  `context`  
- [in]`CONTEXT`緩衝區。  
+ 在`CONTEXT` 緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`ICorDebugStackWalk`成功設定物件的內容。|  
-|E_FAIL|`ICorDebugStackWalk`未設定物件的內容。|  
+|S_OK|已成功設定 `ICorDebugStackWalk` 物件的內容。|  
+|E_FAIL|未設定 `ICorDebugStackWalk` 物件的內容。|  
 |E_INVALIDARG|內容為 null。|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|內容緩衝區是太小。|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|內容緩衝區太小。|  
   
 ## <a name="exceptions"></a>例外狀況  
   
 ## <a name="remarks"></a>備註  
- 這個方法不會更改目前執行緒的內容。  
+ 這個方法不會改變執行緒目前的內容。  
   
- 將目前的內容設定為無效的內容可能會導致無法預期的結果從堆疊查核器。  
+ 將目前內容設定為不正確內容，可能會導致堆疊遍歷程式無法預期的結果。  
   
- 您可以擷取的位元的確切複本，此內容的立即呼叫[icordebugstackwalk:: Getcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)方法。  
+ 您可以藉由立即呼叫[ICorDebugStackWalk：： GetCoNtext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)方法，來抓取此內容的完全位複本。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

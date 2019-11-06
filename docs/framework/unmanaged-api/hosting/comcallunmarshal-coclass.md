@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2adb5827-2268-4914-a1c6-f62b61880a45
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fde42e3ecfac81a168920bc152833be7ba72b995
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38f3140a181deae1a86569bfc2eb7cf3cd7d1991
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779077"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131922"
 ---
 # <a name="comcallunmarshal-coclass"></a>ComCallUnmarshal Coclass
-提供介面來管理的介面指標封送處理。  
+提供介面來管理介面指標的封送處理。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,17 +36,17 @@ coclass ComCallUnmarshal {
   
 |介面|描述|  
 |---------------|-----------------|  
-|`IMarshal`|提供方法來建立、 初始化及管理用戶端處理序中的 proxy。|  
+|`IMarshal`|提供在用戶端進程中建立、初始化和管理 proxy 的方法。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.idl  
+ **標頭：** Mscoree.dll .idl  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [裝載 Coclass](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

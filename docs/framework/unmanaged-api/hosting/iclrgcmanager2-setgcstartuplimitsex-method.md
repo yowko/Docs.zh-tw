@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6c3a08a9-5d65-48d4-8bbf-2a86ed7d356a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d881c71d4725e1a73d743aa098aecc053182947
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 77de550cd3fb614e03f8028707c3cbf914734910
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918613"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141097"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>ICLRGCManager2::SetGCStartupLimitsEx 方法
-設定垃圾收集區段的大小, 以及垃圾收集系統層代0的大小上限。  
+設定垃圾收集區段的大小，以及垃圾收集系統層代0的大小上限。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,28 +49,28 @@ HRESULT SetGCStartupLimitsEx (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimitsEx`已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入進程中, 或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|S_OK|已成功傳回 `SetGCStartupLimitsEx`。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
 |HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
-|E_FAIL|發生不明的嚴重失敗。 在方法傳回 E_FAIL 之後, CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|E_FAIL|發生不明的嚴重失敗。 在方法傳回 E_FAIL 之後，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- 只有在啟動`SetGCStartupLimitsEx`主機之前, 才可以指定設定的值。 稍後對`SetGCStartupLimitsEx`的呼叫會被忽略。  
+ 只有在啟動主機之前，才可以指定 `SetGCStartupLimitsEx` 設定的值。 稍後會忽略 `SetGCStartupLimitsEx` 的呼叫。  
   
- 若要設定其中一個參數而不影響另一個, 請針對您不想要變更的參數指定 0 (零)。  
+ 若要設定其中一個參數而不影響另一個，請針對您不想要變更的參數指定0（零）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含為 Mscoree.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [自動管理記憶體](../../../standard/automatic-memory-management.md)
 - [記憶體回收](../../../standard/garbage-collection/index.md)

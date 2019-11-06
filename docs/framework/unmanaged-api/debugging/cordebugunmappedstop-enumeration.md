@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2ea0bf215c0d2abfe9beb29d736f893073d3be8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc02f63808b1929b93777c8bbc67c47000b0b424
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739518"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132752"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop 列舉
 指定可在步進器執行程式碼時觸發暫止的未對應程式碼類型。  
@@ -40,30 +38,30 @@ typedef enum CorDebugUnmappedStop {
 } CorDebugUnmappedStop;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`STOP_NONE`|不會停止任何類型的未對應的程式碼。|  
-|`STOP_PROLOG`|停止在初構程式碼中。|  
-|`STOP_EPILOG`|終解程式碼中停止。|  
-|`STOP_NO_MAPPING_INFO`|沒有對應資訊的程式碼中停止。|  
-|`STOP_OTHER_UNMAPPED`|停止未對應的程式碼，並不適用於初構、 終解、 沒有對應資訊或未受管理的類別目錄中。|  
-|`STOP_UNMANAGED`|停止在 unmanaged 程式碼。 此值就有效只能搭配 interop 偵錯。|  
-|`STOP_ALL`|停止所有類型的未對應的程式碼。|  
+|`STOP_NONE`|請勿在任何類型的未對應程式碼中停止。|  
+|`STOP_PROLOG`|在初構程式碼中停止。|  
+|`STOP_EPILOG`|停止結束程式碼。|  
+|`STOP_NO_MAPPING_INFO`|在沒有對應資訊的程式碼中停止。|  
+|`STOP_OTHER_UNMAPPED`|在未對應的程式碼中停止，而不符合初構、終解、無對應資訊或非受控類別。|  
+|`STOP_UNMANAGED`|在未受管理的程式碼中停止。 此值僅適用于 interop 調試。|  
+|`STOP_ALL`|停止所有類型的未對應程式碼。|  
   
 ## <a name="remarks"></a>備註  
- 使用[icordebugstepper:: Setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)方法來設定旗標，指定在其中將會停止步進未對應的程式碼。  
+ 使用[ICorDebugStepper：： SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)方法來設定旗標，以指定分檔器將停止的未對應程式碼。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

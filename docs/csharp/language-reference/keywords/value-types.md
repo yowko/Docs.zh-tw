@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 2a3e7f02ee9d210acae881edd170edbced82dab6
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353759"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422205"
 ---
 # <a name="value-types-c-reference"></a>實值型別 (C# 參考)
 
@@ -32,7 +32,7 @@ ms.locfileid: "71353759"
 
 與參考型別不同，您無法從實值型別衍生新的類型。 不過，就像參考型別，結構可以實作介面。
 
-實值型別預設不可為 `null`。 不過，對應的[可為 null 實數值型別](../../programming-guide/nullable-types/index.md)的變數可以 `null`。
+實值型別預設不可為 `null`。 不過，可以 `null`對應的[可為 null 實數值型別](../../programming-guide/nullable-types/index.md)的變數。
 
 每種實值型別都具有初始化該型別預設值的隱含無參數建構函式。 如需有關實值型別預設值的資訊，請參閱[預設值表](default-values-table.md)。
 
@@ -54,7 +54,7 @@ ms.locfileid: "71353759"
 
 - 常數運算式如果運算元全都是簡單型別常數，就會在編譯階段進行評估。
 
-如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[簡單型別](~/_csharplang/spec/types.md#simple-types)一節。
+如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的[簡單型別](~/_csharplang/spec/types.md#simple-types)一節。
 
 ## <a name="initializing-value-types"></a>將實值型別初始化
 
@@ -102,11 +102,11 @@ var p = new Point(); // Invoke parameterless constructor for the struct.
 
 如需有關將數字型別輸出格式化的資訊，請參閱[格式化數值結果表](formatting-numeric-results-table.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [型別](types.md)
+- [型別](/dotnet/csharp/language-reference/keywords)
 - [參考型別](reference-types.md)
 - [可為 Null 的實值型別](../../programming-guide/nullable-types/index.md)

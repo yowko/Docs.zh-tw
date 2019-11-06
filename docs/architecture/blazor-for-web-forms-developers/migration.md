@@ -4,12 +4,12 @@ description: 瞭解如何將現有的 ASP.NET Web Forms 應用程式遷移至 Bl
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: 1680c3ccd496029cbdefc38119cf89bae0a777a7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b6604e000eaf79bcd8da15d72a3d85713c620851
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087923"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191934"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>從 ASP.NET Web Forms 遷移至 Blazor
 
@@ -84,7 +84,7 @@ Blazor 專案會在專案檔的 `<ItemGroup>` 元素中列出您需要的相依�
 </ItemGroup>
 ```
 
-[Windows 相容性套件](/dotnet/core/porting/windows-compat-pack)是一個可簡化 Web form 開發人員生命週期的 NuGet 套件。 雖然 .NET Core 是跨平臺的，但某些功能只能在 Windows 上使用。 藉由安裝相容性套件，可取得 Windows 特有的功能。 這類功能的範例包括登錄、WMI 和目錄服務。 套件增加了20000個 Api，並啟用許多您可能已經熟悉的服務。 EShop 專案不需要相容性套件;但是，如果您的專案使用 Windows 特有的功能，封裝就能減輕遷移的工作。
+[Windows 相容性套件](../../core/porting/windows-compat-pack.md)是一個可簡化 Web form 開發人員生命週期的 NuGet 套件。 雖然 .NET Core 是跨平臺的，但某些功能只能在 Windows 上使用。 藉由安裝相容性套件，可取得 Windows 特有的功能。 這類功能的範例包括登錄、WMI 和目錄服務。 套件增加了20000個 Api，並啟用許多您可能已經熟悉的服務。 EShop 專案不需要相容性套件;但是，如果您的專案使用 Windows 特有的功能，封裝就能減輕遷移的工作。
 
 ## <a name="enable-startup-process"></a>啟用啟動程式
 

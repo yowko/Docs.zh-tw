@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: c004560a0b7ab367fbf4fbb48b0e8d8b63f3d8f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 399e4ac223d2fcb728ece2c92d25a087990992f2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053037"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458665"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding 標記延伸
 將控制項樣板中的屬性值連結成為樣板化控制項上另一個屬性的值。  
@@ -35,14 +35,14 @@ ms.locfileid: "62053037"
 |||  
 |-|-|  
 |`propertyName`|在 setter 語法中設定之屬性的 <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>。|  
-|`sourceProperty`|存在於樣板化類型上的另一個相依性屬性，由其 <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> 所指定。<br /><br /> -或-<br /><br /> 「穿插句點」的屬性名稱，由樣板化目標類型以外的不同類型所定義。 這實際上是一個 <xref:System.Windows.PropertyPath>。 請參閱[PropertyPath XAML 語法](propertypath-xaml-syntax.md)。|  
+|`sourceProperty`|存在於樣板化類型上的另一個相依性屬性，由其 <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> 所指定。<br /><br /> -或-<br /><br /> 「穿插句點」的屬性名稱，由樣板化目標類型以外的不同類型所定義。 這實際上是一個 <xref:System.Windows.PropertyPath>。 請參閱[PROPERTYPATH XAML 語法](propertypath-xaml-syntax.md)。|  
   
 ## <a name="remarks"></a>備註  
- A`TemplateBinding`是的最佳化的形式[繫結](binding-markup-extension.md)範本的情況下，類似於`Binding`建構`{Binding RelativeSource={RelativeSource TemplatedParent}}`。 `TemplateBinding` 永遠是單向繫結，即使相關的屬性是預設為雙向繫結也一樣。 相關的兩個屬性必須是相依性屬性。 為了達到樣板化父代的雙向繫結下列繫結陳述式改為使用`{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`。 
+ `TemplateBinding` 是範本[案例的最佳](binding-markup-extension.md)系結形式，類似于 `{Binding RelativeSource={RelativeSource TemplatedParent}}`所結構的 `Binding`。 `TemplateBinding` 永遠是單向繫結，即使相關的屬性是預設為雙向繫結也一樣。 相關的兩個屬性必須是相依性屬性。 為了達成樣板化父系的雙向系結，請改用下列 binding 語句 `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`。 
   
- [RelativeSource](relativesource-markupextension.md)是另一個標記延伸，有時候搭配使用或取而代之`TemplateBinding`才能執行相對屬性繫結，在範本內。  
+ [RelativeSource](relativesource-markupextension.md)是另一個標記延伸，有時會與或（而不是 `TemplateBinding`）搭配使用，以便在範本內執行相對屬性系結。  
   
- 概念說明控制項樣板未涵蓋;如需詳細資訊，請參閱 <<c0> [ 控制項的樣式和範本](../controls/control-styles-and-templates.md)。  
+ 此處未涵蓋以概念描述控制項範本;如需詳細資訊，請參閱[控制項樣式和範本](../controls/control-styles-and-templates.md)。  
   
  屬性 (Attribute) 語法是最常搭配這個標記延伸來使用的語法。 `TemplateBinding` 識別項字串後所提供的字串語彙基元，是指派做為基礎 <xref:System.Windows.TemplateBindingExtension.Property%2A> 延伸類別的 <xref:System.Windows.TemplateBindingExtension> 值。  
   
@@ -56,16 +56,16 @@ ms.locfileid: "62053037"
   
  詳細使用方式通常是適用於具有一個以上可設定屬性或有些屬性為選擇性屬性的標記延伸。 因為 `TemplateBinding` 只有一個必要的可設定屬性，所以這種詳細使用方式並不常見。  
   
- 在  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 處理器實作中，這個標記延伸的處理由定義<xref:System.Windows.TemplateBindingExtension>類別。  
+ 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 處理器執行中，此標記延伸模組的處理是由 <xref:System.Windows.TemplateBindingExtension> 類別所定義。  
   
- `TemplateBinding` 是一種標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 在 XAML 使用的所有標記延伸`{`和`}`字元在其屬性語法中，這是用 XAML 處理器會辨識為標記延伸必須處理這個屬性的慣例。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
+ `TemplateBinding` 是一種標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 XAML 中的所有標記延伸都會使用其屬性語法中的 `{` 和 `}` 字元，這是 XAML 處理器辨識標記延伸必須處理屬性的慣例。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [樣式設定和範本化](../controls/styling-and-templating.md)
-- [XAML 概觀 (WPF)](xaml-overview-wpf.md)
+- [設定樣式和範本](../controls/styling-and-templating.md)
+- [XAML 概觀 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [RelativeSource 標記延伸](relativesource-markupextension.md)
 - [Binding 標記延伸](binding-markup-extension.md)

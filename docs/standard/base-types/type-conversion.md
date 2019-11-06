@@ -24,14 +24,12 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a8fc6f59b7a295cb73489a644da80976345cb172
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b125b3c6527da405deb600ba7334ef18220f1601
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922695"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132873"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework 中的類型轉換
 <a name="top"></a>每個值都有相關聯的類型，該類型定義屬性，例如配置給值的空間量、能夠擁有的可能值範圍，以及提供的成員。 許多值都可以表示成多種類型。 例如，數值 4 就可以表示成整數值或浮點 (Floating-Point) 值。 類型轉換會建立新類型的值，與舊類型的值相等，但是不一定會保留原始物件的識別 (或實際的值)。  
@@ -91,13 +89,13 @@ ms.locfileid: "69922695"
   
  例如，<xref:System.UInt32>、<xref:System.Int64> 和 <xref:System.UInt64> 資料類型的範圍超過 <xref:System.Int32> 資料類型的範圍，如下表所示。  
   
-|類型|與 Int32 的範圍比較|  
+|輸入|與 Int32 的範圍比較|  
 |----------|------------------------------------|  
 |<xref:System.Int64>|<xref:System.Int64.MaxValue?displayProperty=nameWithType> 大於 <xref:System.Int32.MaxValue?displayProperty=nameWithType>，而 <xref:System.Int64.MinValue?displayProperty=nameWithType> 小於 (負值範圍大於) <xref:System.Int32.MinValue?displayProperty=nameWithType>。|  
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> 大於 <xref:System.Int32.MaxValue?displayProperty=nameWithType>。|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> 大於 <xref:System.Int32.MaxValue?displayProperty=nameWithType>。|  
   
- 為了處理縮小轉換，.NET Framework 允許類型定義 `Explicit` 運算子。 然後，個別語言編譯器就可以使用自己的語法來實作這個運算子，也可以呼叫 <xref:System.Convert> 類別的成員來執行轉換。 (如需 <xref:System.Convert> 類別的詳細資訊，請參閱本主題稍後的 [Convert 類別](#Convert)。)下列範例說明如何使用語言功能，處理從這些可能超出範圍之整數值至 <xref:System.Int32> 值的明確轉換。  
+ 為了處理縮小轉換，.NET Framework 允許類型定義 `Explicit` 運算子。 然後，個別語言編譯器就可以使用自己的語法來實作這個運算子，也可以呼叫 <xref:System.Convert> 類別的成員來執行轉換。 （如需有關 <xref:System.Convert> 類別的詳細資訊，請參閱本主題稍後[的 Convert 類別](#Convert)）。下列範例說明如何使用語言功能來處理將這些可能超出範圍的整數值明確轉換成 <xref:System.Int32> 值。  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -107,7 +105,7 @@ ms.locfileid: "69922695"
  大多數的編譯器都允許明確轉換以已檢查或未檢查的方式執行。 如果執行已檢查的轉換，當要轉換之類型的值不在目標類型的範圍內時，則會擲回 <xref:System.OverflowException>。 在同樣的狀況下執行未檢查的轉換時，轉換可能不會擲回例外狀況，但實際行為會變得不明確，且可能產生不正確的值。  
   
 > [!NOTE]
-> 在 C# 中，已檢查的轉換可以透過使用 `checked` 關鍵字搭配轉型運算子來執行，也可以指定 `/checked+` 編譯器選項來執行。 相反地，未檢查的轉換可使用 `unchecked` 關鍵字搭配轉型運算子來執行，或可以指定 `/checked-` 編譯器選項來執行。 根據預設，明確轉換是未檢查的。 在 Visual Basic 中，已檢查的轉換可藉由清除專案的 [進階編譯器設定]  對話方塊中的 [移除整數的溢位檢查]  核取方塊來執行，或可以指定 `/removeintchecks-` 編譯器選項來執行。 相反地，未檢查的轉換可以藉由選取專案的 [進階編譯器設定]  對話方塊中的 [移除整數的溢位檢查]  核取方塊來執行，也可以指定 `/removeintchecks+` 編譯器選項來執行。 根據預設，明確轉換是檢查的。  
+> 在 C# 中，已檢查的轉換可以透過使用 `checked` 關鍵字搭配轉型運算子來執行，也可以指定 `/checked+` 編譯器選項來執行。 相反地，未檢查的轉換可使用 `unchecked` 關鍵字搭配轉型運算子來執行，或可以指定 `/checked-` 編譯器選項來執行。 根據預設，明確轉換是未檢查的。 在 Visual Basic 中，已檢查的轉換可藉由清除專案的 [進階編譯器設定] 對話方塊中的 [移除整數的溢位檢查] 核取方塊來執行，或可以指定 `/removeintchecks-` 編譯器選項來執行。 相反地，未檢查的轉換可以藉由選取專案的 [進階編譯器設定] 對話方塊中的 [移除整數的溢位檢查] 核取方塊來執行，也可以指定 `/removeintchecks+` 編譯器選項來執行。 根據預設，明確轉換是檢查的。  
   
  下列 C# 範例使用 `checked` 和 `unchecked` 關鍵字，說明將超出 <xref:System.Byte> 範圍的值轉換為 <xref:System.Byte> 時的行為差異。 已檢查的轉換會擲回例外狀況，但未檢查的轉換會指派 <xref:System.Byte.MaxValue?displayProperty=nameWithType> 給 <xref:System.Byte> 變數。  
   
@@ -206,7 +204,7 @@ ms.locfileid: "69922695"
   
  如需使用類型轉換子執行轉換的詳細資訊，請參閱 <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Convert?displayProperty=nameWithType>
 - <xref:System.IConvertible>

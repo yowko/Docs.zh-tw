@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ee96c9d-7a3d-4129-a6cc-7675c7f2dda4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1065c8d710ddbd6088ee0db694a43e098564e707
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5715f0634346dd0c6591cfe5687690aa0fba95f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750386"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125323"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform 方法
-提供的平台，包括處理器架構與目標處理序執行所在的作業系統的相關資訊。  
+提供目標進程執行所在平臺的相關資訊，包括處理器架構和作業系統。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,29 +33,29 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
 ## <a name="parameters"></a>參數  
  `pTargetPlatform`  
- [out]指標[CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)列舉型別描述的目標平台。  
+ 脫銷描述目標平臺之[CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)列舉的指標。  
   
 ## <a name="remarks"></a>備註  
- `CorDebugPlatformEnum`列舉型別傳回值由[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)介面，以判斷目標處理序，例如其指標大小、 位址空間配置、 暫存器組合、 指示格式、 內容配置的詳細資料和呼叫慣例。  
+ [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)介面會使用 `CorDebugPlatformEnum` 列舉傳回值來判斷目標進程的詳細資料，例如其指標大小、位址空間配置、暫存器組、指令格式、內容配置和呼叫慣例。  
   
- `pTargetPlatform`值可能會參考正在模擬的目標，而不是使用中指定實際的硬體平台。 例如，使用 64 位元版本的 Windows 作業系統執行 Windows (WOW) 環境上的 Windows 中的程序應該`CORDB_PLATFORM_WINDOWS_X86`的值[CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)列舉型別。  
+ `pTargetPlatform` 值可能會參考針對目標模擬的平臺，而不是指定實際使用的硬體。 例如，在 windows 作業系統64位版本的 windows on windows （WOW）環境中執行的進程，應使用[CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)列舉的 `CORDB_PLATFORM_WINDOWS_X86` 值。  
   
- 這個方法必須成功。 如果失敗，目標平台是無法使用。 此方法可能會失敗，原因如下：  
+ 這個方法必須成功。 如果失敗，則目標平臺無法使用。 方法可能會因為下列原因而失敗：  
   
-- 正在模擬的目標平台是無法使用。  
+- 針對目標模擬的平臺無法使用。  
   
-- 目標平台上實際的硬體就無法使用。  
+- 目標平臺上的實際硬體無法使用。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

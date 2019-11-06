@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 073b28d353bb7ea43775c7e20ddf7241cabf7d9a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 60614a95e4091b4d7bd9ae3a71e2ddeca53e29ba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664007"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424858"
 ---
 # <a name="xml-documents-and-data"></a>XML 文件和資料
 
@@ -28,13 +28,13 @@ ms.locfileid: "67664007"
 
 如需完整清單，請在 [.NET API 瀏覽器](https://docs.microsoft.com/dotnet/api/?term=system.xml)搜尋 "System.Xml"。
 
-這些命名空間中的類別支援全球資訊網協會 (W3C) 的建議。 例如：
+這些命名空間中的類別支援全球資訊網協會 (W3C) 的建議。 例如:
 
 - <xref:System.Xml.XmlDocument?displayProperty=nameWithType> 類別會實作 [W3C 文件物件模型 (DOM) 層級 1 核心](https://www.w3.org/TR/REC-DOM-Level-1/)和 [DOM 層級 2 核心](https://www.w3.org/TR/DOM-Level-2-Core/)的建議事項。
 
 - <xref:System.Xml.XmlReader?displayProperty=nameWithType> 和 <xref:System.Xml.XmlWriter?displayProperty=nameWithType> 類別支援 [W3C XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/) 和 [XML 中的命名空間](https://www.w3.org/TR/REC-xml-names/)的建議事項。
 
-- <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> 類別中的結構描述支援 [W3C XML Schema Part 1:Structures](https://www.w3.org/TR/xmlschema-1/) (XML 結構描述第 1 部分：結構) 及 [XML Schema Part 2:Datatypes](https://www.w3.org/TR/xmlschema-2/) (資料類型) 建議。
+- <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> 類別中的結構描述支援 [W3C XML 結構描述第一部分：結構](https://www.w3.org/TR/xmlschema-1/)和 [XML 結構描述第二部分：資料類型](https://www.w3.org/TR/xmlschema-2/)的建議事項。
 
 - <xref:System.Xml.Xsl?displayProperty=nameWithType> 命名空間中的類別支援符合 [W3C XSLT 1.0](https://www.w3.org/TR/xslt) 建議事項的 XSLT 轉換。
 
@@ -58,11 +58,11 @@ ms.locfileid: "67664007"
 
 - **與 ADO.NET 整合。** XML 類別與 [ADO.NET](../../../../docs/framework/data/adonet/index.md) 緊密整合在一起，可讓關聯式資料和 XML 結合在一起。 <xref:System.Data.DataSet> 類別是一項擷取自資料庫的記憶體中資料快取。 <xref:System.Data.DataSet> 類別可使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 類別來讀取及寫入 XML，將其內部的關聯式結構描述結構保存為 XML 結構描述 (XSD)，還可以推斷 XML 文件的結構描述結構。
 
-## <a name="in-this-section"></a>本節內容
+## <a name="in-this-section"></a>本章節內容
 
 [XML 處理選項](../../../../docs/standard/data/xml/xml-processing-options.md) 討論用來處理 XML 資料的選項。
 
-[處理記憶體內的 XML 資料](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) 討論用來處理記憶體內 XML 資料的三個模型：[LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)、<xref:System.Xml.XmlDocument> 類別 (根據 W3C 文件物件模型) 和 <xref:System.Xml.XPath.XPathDocument> 類別 (根據 XPath 資料模型)。
+[處理記憶體中的 XML 資料](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md)討論用來處理記憶體中 XML 資料的三個模型： [LINQ to XMLC#（）](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)和[LINQ to XML （Visual Basic）](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)、<xref:System.Xml.XmlDocument> 類別（根據 W3C 檔物件模型）和 <xref:System.Xml.XPath.XPathDocument> 類別（根據 XPath 資料模型）。
 
 [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)\
 說明如何使用 XSLT 處理器。

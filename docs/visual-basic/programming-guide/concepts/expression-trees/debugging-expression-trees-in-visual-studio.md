@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中偵測運算式樹狀架構（Visual Basic）
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: 51579c74ecbebbfb7da8bf20bef7592980ec437c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: b27ab41f3c3d9bd488fd0f7aaa5010f2997946de
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320410"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198266"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>在 Visual Studio 中偵測運算式樹狀架構（Visual Basic）
 當您針對應用程式進行偵錯時，可以分析運算式樹狀架構的結構與內容。 若要取得運算式樹狀架構的快速概觀，您可以使用 `DebugView` 屬性，其代表[使用特殊語法](debugview-syntax.md)的運算式樹狀架構。 (請注意，`DebugView` 僅適用於偵錯模式。)  
@@ -41,6 +41,6 @@ ms.locfileid: "72320410"
 ## <a name="see-also"></a>請參閱
 
 - [運算式樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)
+- [Visual Studio 偵錯](/visualstudio/debugger/debugger-feature-tour)
 - [建立自訂視覺化檢視](/visualstudio/debugger/create-custom-visualizers-of-data)
 - [`DebugView` 語法](debugview-syntax.md)

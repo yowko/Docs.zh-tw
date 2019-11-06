@@ -3,12 +3,12 @@ title: private protected - C# 參考
 ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: c739dd0b5a5457a66c11962ed86bcd2ffbf811ab
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: dfb2e754d81116012b9fc3f8fd4f6fe1ad0daef1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661679"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422615"
 ---
 # <a name="private-protected-c-reference"></a>private protected (C# 參考)
 
@@ -69,14 +69,14 @@ class DerivedClass2 : BaseClass
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [存取修飾詞](access-modifiers.md)
 - [存取範圍層級](accessibility-levels.md)
-- [修飾詞](modifiers.md)
+- [修飾詞](index.md)
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)

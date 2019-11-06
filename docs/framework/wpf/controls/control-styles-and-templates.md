@@ -10,15 +10,15 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017653"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460407"
 ---
 # <a name="control-styles-and-templates"></a>控制項的樣式和範本
-在 Windows Presentation Foundation (WPF) 控制項有<xref:System.Windows.Controls.ControlTemplate>包含該控制項的視覺化樹狀結構。 您可以變更的結構和外觀的控制項，藉由修改<xref:System.Windows.Controls.ControlTemplate>該控制項。 沒有任何方法來取代一部分控制項之視覺化樹狀結構若要變更，您必須設定的控制項的視覺化樹狀結構<xref:System.Windows.Controls.Control.Template%2A>至其新且完整的控制項屬性<xref:System.Windows.Controls.ControlTemplate>。  
+Windows Presentation Foundation （WPF）中的控制項具有 <xref:System.Windows.Controls.ControlTemplate>，其中包含該控制項的視覺化樹狀結構。 您可以藉由修改控制項的 <xref:System.Windows.Controls.ControlTemplate>，來變更其結構和外觀。 沒有任何方法可以只取代控制項的部分視覺化樹狀結構;若要變更控制項的視覺化樹狀結構，您必須將控制項的 <xref:System.Windows.Controls.Control.Template%2A> 屬性設定為新的 完整 <xref:System.Windows.Controls.ControlTemplate>。  
   
  桌面佈景主題決定所使用的資源字典。 若要取得桌面佈景主題的資源字典，請參閱[預設 WPF 佈景主題](https://go.microsoft.com/fwlink/?LinkID=158252)。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62017653"
 |Royale.NormalColor.xaml|Windows XP Media Center Edition 作業系統上的預設佈景主題。|  
 |Aero.NormalColor.xaml|Windows Vista 作業系統上的預設佈景主題。|  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [Button 樣式和範本](button-styles-and-templates.md)  
  [Calendar 樣式和範本](calendar-styles-and-templates.md)  
  [CheckBox 樣式和範本](checkbox-styles-and-templates.md)  
@@ -61,7 +61,7 @@ ms.locfileid: "62017653"
  [TabControl 樣式和範本](tabcontrol-styles-and-templates.md)  
  [TextBox 樣式和範本](textbox-styles-and-templates.md)  
  [Thumb 樣式和範本](thumb-styles-and-templates.md)  
- [ToggleButton 樣式和範本](togglebutton-styles-and-templates.md)  
+ [切換按鈕樣式和範本](togglebutton-styles-and-templates.md)  
  [ToolBar 樣式和範本](toolbar-styles-and-templates.md)  
  [ToolTip 樣式和範本](tooltip-styles-and-templates.md)  
  [TreeView 樣式和範本](treeview-styles-and-templates.md)  
@@ -75,4 +75,4 @@ ms.locfileid: "62017653"
 ## <a name="related-sections"></a>相關章節  
  [控制項撰寫概觀](control-authoring-overview.md)  
   
- [樣式設定和範本化](styling-and-templating.md)
+ [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

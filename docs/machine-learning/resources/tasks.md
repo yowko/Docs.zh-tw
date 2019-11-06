@@ -4,16 +4,16 @@ description: 探索 ML.NET 中支援的各種不同機器學習工作與相關�
 ms.custom: seodec18
 ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: bcd967c11156ca9b837631560e78722b13fc7ae0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: d19593358361c9c8d3657053e766ec4a2c1ec163
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630061"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424222"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 中的機器學習工作
 
-建置機器學習模型時，您必須先定義希望利用資料來達成的目標。 這可讓您挑選適合您情況的機器學習工作。 以下清單描述可供您選擇的各種不同機器學習工作，以及一些常見的使用案例。
+建置機器學習模型時，您必須先定義希望利用資料來達成的目標。 這可讓您挑選適合您情況的機器學習工作。 以下清單描述可供您選擇的各種不同機器學習工作，以及一些常見的使用案例。 如需選擇適用于您的案例之工作的詳細資訊，請參閱[演算法](../how-to-choose-an-ml-net-algorithm.md)。
 
 一旦您決定哪一個工作適用於您的案例，您就必須選擇最佳演算法來訓練模型。 每個工作的區段中列出了可用的演算法。
 
@@ -24,7 +24,7 @@ ms.locfileid: "68630061"
 * [理解 Twitter 評論的情感](../tutorials/sentiment-analysis.md)是「正面」還是「負面」。
 * 診斷病患是否有某種疾病。
 * 決定是否要將電子郵件標示為「垃圾郵件」。
-* 決定相片是否包含狗或水果。
+* 判斷相片是否包含特定專案，例如狗或水果。
 
 如需詳細資訊，請參閱維基百科上的[二元分類](https://en.wikipedia.org/wiki/Binary_classification) \(英文\) 一文。
 
@@ -52,9 +52,9 @@ ms.locfileid: "68630061"
 輸入標籤資料行資料必須是 <xref:System.Boolean>。
 輸入特徵資料行資料必須是 <xref:System.Single> 的固定大小向量。
 
-這些訓練工具會輸出下列資料行：
+這些訓練人員會輸出下列資料行：
 
-| 輸出資料行名稱 | 資料行型別 | 說明|
+| 輸出資料行名稱 | 資料行型別 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 由模型計算的原始分數|
 | `PredictedLabel` | <xref:System.Boolean> | 預測標籤 (根據分數的正負號)。 負值分數會對應到 `false`，正值分數則會對應到 `true`。|
@@ -91,7 +91,7 @@ ms.locfileid: "68630061"
 
 訓練工具輸出下列內容：
 
-| 輸出名稱 | 類型 | 說明|
+| 輸出名稱 | 輸入 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> 的向量 | 所有類別的分數。 較高值表示落入相關聯類別的機率較高。 若第 i 個項目具有最大值，則預測標籤索引將會是 i。 請注意，i 是以零為基礎的索引。 |
 | `PredictedLabel` | [key](xref:Microsoft.ML.Data.KeyDataViewType) 類型 | 預測標籤的索引。 若其值是 i，則實際標籤可能會是索引鍵/值輸入標籤類型中的第 i 個類別。 |
@@ -124,7 +124,7 @@ ms.locfileid: "68630061"
 
 這項工作的訓練工具會輸出下列內容：
 
-| 輸出名稱 | 類型 | 說明|
+| 輸出名稱 | 輸入 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 由模型預測的原始分數 |
 
@@ -148,7 +148,7 @@ ms.locfileid: "68630061"
 
 訓練工具輸出下列內容：
 
-| 輸出名稱 | 類型 | 說明|
+| 輸出名稱 | 輸入 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> 的向量 | 指定資料點到所有叢集幾何中心的距離 |
 | `PredictedLabel` | [key](xref:Microsoft.ML.Data.KeyDataViewType) 類型 | 由模型所預測最接近的叢集索引。 |
@@ -180,7 +180,7 @@ PCA 是以機器學習所建立的技術，經常用於探索資料分析，因�
 
 訓練工具輸出下列內容：
 
-| 輸出名稱 | 類型 | 說明|
+| 輸出名稱 | 輸入 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 由異常偵測模型所計算之非負數且沒有限制的分數 |
 
@@ -203,7 +203,7 @@ PCA 是以機器學習所建立的技術，經常用於探索資料分析，因�
 
 訓練工具輸出下列內容：
 
-| 輸出名稱 | 類型 | 說明|
+| 輸出名稱 | 輸入 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 由模型計算的無限制分數，用來判斷預測 |
 

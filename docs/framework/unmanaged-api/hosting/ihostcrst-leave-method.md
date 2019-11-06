@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dfc51d9e-b36d-4dba-9ea1-4f63fa0601ae
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f260e1351c8aa14961a10e0f7087bd076752785d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 050af068579d84b984ed83377d0c201e281bd154
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763764"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130539"
 ---
 # <a name="ihostcrstleave-method"></a>IHostCrst::Leave 方法
-離開關鍵區段所表示的目前執行個體[IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)。  
+保留[IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)目前實例所代表的重要區段。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,26 +35,26 @@ HRESULT Leave ();
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`Leave` 已成功傳回。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。|  
-|HOST_E_TIMEOUT|呼叫已逾時。|  
-|HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
-|HOST_E_ABANDONED|事件已取消時已封鎖的執行緒或 fiber 等候它。|  
-|E_FAIL|發生未知的嚴重錯誤。 方法會傳回 E_FAIL CLR 已不再可在此程序中使用。 若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|S_OK|已成功傳回 `Leave`。|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|HOST_E_TIMEOUT|呼叫超時。|  
+|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
+|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
+|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- `Leave` 可讓 CLR 直接通訊主機的執行緒實作，而不是使用對應的 Win32`LeaveCriticalSection`函式。 取得擁有權的重要區段表示由目前的執行緒`IHostCrst`執行個體必須呼叫`Leave`之後每次進入該重要區段。  
+ `Leave` 允許 CLR 直接與主機的執行緒進行通訊，而不是使用對應的 Win32 `LeaveCriticalSection` 函數。 取得由目前 `IHostCrst` 實例所表示之重要區段擁有權的執行緒，必須在每次進入關鍵區段時呼叫 `Leave` 一次。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
 - [IHostCrst 介面](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)

@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43927be83b8b2a9163656f8d6d54c2cf83a23e28
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 43e9438ed2c1cd82bb4d89ff082545021b2d543e
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052645"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195350"
 ---
 # <a name="debugging-tracing-and-profiling"></a>偵錯、追蹤和程式碼剖析
 若要偵錯 .NET Framework 應用程式，必須設定編譯器和執行階段環境，讓偵錯工具能夠附加至應用程式，並針對應用程式及其相對應的 Microsoft 中繼語言 (MSIL) 產生符號和字行對應 (可能的話)。 在偵錯 Managed 應用程式後，可將其剖析以提高效能。 程式碼剖析會評估和描述產生最常執行之程式碼的原始程式碼字行，以及花費多少時間執行。  
   
  使用 Visual Studio 可輕易偵錯 .NET Framework 應用程式，它會處理許多組態詳細資料。 如果未安裝 Visual Studio，您可以使用 .NET Framework <xref:System.Diagnostics> 命名空間中的偵錯類別，來檢查並改善 .NET Framework 應用程式的效能。 此命名空間包含用來追蹤執行流程的 <xref:System.Diagnostics.Trace><xref:System.Diagnostics.Debug> 和 <xref:System.Diagnostics.TraceSource> 類別，以及用來剖析程式碼的 <xref:System.Diagnostics.Process>、<xref:System.Diagnostics.EventLog> 和 <xref:System.Diagnostics.PerformanceCounter> 類別。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [啟用 JIT 附加偵錯](enabling-jit-attach-debugging.md)  
  示範如何設定登錄，以將偵錯引擎 JIT 附加至 .NET Framework 應用程式。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "71052645"
  描述您可以用來追蹤應用程式效能的計數器。  
   
 ## <a name="related-sections"></a>相關章節  
- [Visual Studio 中的 Debug ASP.NET 或 ASP.NET Core 應用程式](/visualstudio/debugger/debugging-aspnet-and-ajax-applications)  
+ [Visual Studio 中的 Debug ASP.NET 或 ASP.NET Core 應用程式](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
  提供如何在開發期間或部署之後偵錯 ASP.NET 應用程式的先決條件與指示。  
   
  [開發指南](../development-guide.md)  

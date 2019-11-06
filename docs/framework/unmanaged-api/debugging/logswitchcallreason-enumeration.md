@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bbb8d1b-bbc4-47b0-b1b1-2d54cc0be291
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 894f74f12de7ed0754dcca34eacb815efc33c766
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2a6ca9f4d74c508ac0a2af68c2a5b0a3e6d6b217
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752582"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139174"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason 列舉
 指出在切換偵錯/追蹤時所執行的作業。  
@@ -36,23 +34,23 @@ typedef enum LogSwitchCallReason {
 } LogSwitchCallReason;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`SWITCH_CREATE`|建立偵錯/追蹤參數。|  
-|`SWITCH_MODIFY`|偵錯/追蹤交換器已修改。|  
-|`SWITCH_DELETE`|偵錯/追蹤參數已被刪除。|  
+|`SWITCH_CREATE`|已建立偵錯工具/追蹤參數。|  
+|`SWITCH_MODIFY`|已修改偵錯工具/追蹤參數。|  
+|`SWITCH_DELETE`|已刪除偵錯工具/追蹤參數。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

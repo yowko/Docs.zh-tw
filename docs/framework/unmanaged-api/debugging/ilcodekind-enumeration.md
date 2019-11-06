@@ -12,14 +12,12 @@ api_type:
 ms.assetid: b91765e4-82db-46f9-a6dc-6b80610276af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fea08331fffb85c91721d60764bae8bfe8b30e27
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: b59fbc2acefa907bb3f881b7ed183388d2e4c368
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928808"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103363"
 ---
 # <a name="ilcodekind-enumeration"></a>ILCodeKind 列舉
 [.NET Framework 4.5.2 與更新版本提供支援]  
@@ -43,12 +41,12 @@ typedef enum ILCodeKind {
 |`ILCODE_REJIT_IL`|偵錯工具有權存取 ReJIT 檢測的資訊。|  
   
 ## <a name="remarks"></a>備註  
- `ILCodeKind`列舉的成員可以傳遞至[EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)和[GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)方法，以判斷偵錯工具是否可以存取在 profiler ReJIT 檢測中加入的[變數，以及GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)方法，可判斷偵錯工具是否可以存取已檢測的 IL。  
+ `ILCodeKind` 列舉的成員可以傳遞至[EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)和[GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)方法，以判斷偵錯工具是否可以存取在 Profiler ReJIT 檢測和 [GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) 中新增的變數用來判斷偵錯工具是否可以存取已檢測 IL 的方法。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、CorDebug.h  
+ **標頭：** Cordebug.h .idl，Cordebug.h。h  
   
  **LIBRARY:** CorGuids.lib  
   
@@ -58,4 +56,4 @@ typedef enum ILCodeKind {
 
 - [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [ICorDebugILFrame4 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
-- [ReJIT使用說明指南](https://blogs.msdn.microsoft.com/davbr/2011/10/12/rejit-a-how-to-guide/)
+- [ReJIT：使用說明指南](https://blogs.msdn.microsoft.com/davbr/2011/10/12/rejit-a-how-to-guide/)

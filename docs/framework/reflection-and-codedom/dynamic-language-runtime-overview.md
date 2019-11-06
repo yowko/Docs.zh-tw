@@ -7,14 +7,12 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6b6de8f0a178914c46ba5a65dfb56795cf23c71
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f0bd28823c5b8efc0b773ad588f2f232f8a41502
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046117"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130271"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dynamic Language Runtime 概觀
 
@@ -76,7 +74,7 @@ DLR 也可協助您建立支援動態作業的程式庫。 比方說，如果您
 ## <a name="dlr-architecture"></a>DLR 架構
  下圖顯示動態語言執行階段的架構。
 
- ![Dynamic Language Runtime 架構概觀](./media/dlr-archoverview.png "DLR_ArchOverview") DLR 架構
+ ![動態語言執行時間架構總覽](./media/dlr-archoverview.png "DLR_ArchOverview")DLR 架構
 
  DLR 新增一組服務給 CLR，以便更妥善支援動態語言。 這些服務包括下列各項：
 
@@ -91,7 +89,7 @@ DLR 使用呼叫站台中的繫結器來進行通訊，不只是與 .NET Framewo
 ## <a name="dlr-documentation"></a>DLR 文件
  如需如何使用 DLR 開放原始碼版本將動態行為新增至語言的詳細資訊，或如何搭配使用動態語言與 .NET Framework 的詳細資訊，請參閱 GitHub 的 [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) 存放庫上的文件。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>

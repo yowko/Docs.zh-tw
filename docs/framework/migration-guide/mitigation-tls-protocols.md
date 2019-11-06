@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
-ms.openlocfilehash: 2a2f95be92ec08185f627e862b0f62e40a1d764b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 45225d73ac60564d3e22c73270faab6b4e04d697
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126131"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457833"
 ---
 # <a name="mitigation-tls-protocols"></a>風險降低：TLS 通訊協定
 從 .NET Framework 4.6 開始，<xref:System.Net.ServicePointManager?displayProperty=nameWithType> 和 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 類別可以使用 Tls1.0、Tls1.1 或 Tls 1.2 這三種通訊協定之一。 不支援 SSL3.0 通訊協定與 RC4 編碼器。  
@@ -42,4 +42,4 @@ ms.locfileid: "73126131"
   
 ## <a name="see-also"></a>請參閱
 
-- [重定目標變更](retargeting-changes-in-the-net-framework-4-6.md)
+- [應用程式相容性](application-compatibility.md)

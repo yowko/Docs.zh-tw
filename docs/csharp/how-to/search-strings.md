@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: b9c27e419d37b6c0730f214d3b2b9bbdf7e30d11
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: HT
+ms.openlocfilehash: 12fb0e7c9fe02c3438fa989059dbea6238d24104
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202869"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420315"
 ---
 # <a name="how-to-search-strings"></a>如何：搜尋字串
 
@@ -19,7 +19,7 @@ ms.locfileid: "57202869"
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-[字串](../language-reference/keywords/string.md)類型，這是 <xref:System.String?displayProperty=nameWithType> 類別的別名，提供一些有用的方法來搜尋字串的內容。 它們是 <xref:System.String.Contains%2A>、<xref:System.String.StartsWith%2A><xref:System.String.EndsWith%2A>、<xref:System.String.IndexOf%2A>、<xref:System.String.LastIndexOf%2A>。 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別提供豐富的詞彙來搜尋文字中的模式。 在此文章中，您了解這些技術，以及如何選擇您需求的最佳方法。
+[字串](../language-reference/builtin-types/reference-types.md#the-string-type)類型，這是 <xref:System.String?displayProperty=nameWithType> 類別的別名，提供一些有用的方法來搜尋字串的內容。 它們是 <xref:System.String.Contains%2A>、<xref:System.String.StartsWith%2A><xref:System.String.EndsWith%2A>、<xref:System.String.IndexOf%2A>、<xref:System.String.LastIndexOf%2A>。 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別提供豐富的詞彙來搜尋文字中的模式。 在本文中，您了解這些技術，以及如何選擇您需求的最佳方法。
 
 ## <a name="does-a-string-contain-text"></a>字串是否包含文字？
 
@@ -41,7 +41,7 @@ ms.locfileid: "57202869"
 
 下列程式碼範例會搜尋句子中的 "the" 或 "their" 單字，但忽略大小寫。 靜態方法 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 會執行搜尋。 您為其指定要搜尋的字串和搜尋模式。 在此情況下，第三個引數指定不區分大小寫的搜尋。 如需詳細資訊，請參閱<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>。  
 
-搜尋模式描述您搜尋的文字。 下表描述搜尋模式的每個項目  (下表使用單一 `\`，其在 C# 字串中必須逸出為 `\\`)。
+搜尋模式描述您搜尋的文字。 下表描述搜尋模式的每個項目 (下表使用單一 `\`，其在 C# 字串中必須逸出為 `\\`)。
 
 | pattern  | 意義     |
 | -------- |-------------|
@@ -74,7 +74,7 @@ ms.locfileid: "57202869"
 
 您可以查看 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的程式碼，來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../programming-guide/index.md)
 - [字串](../programming-guide/strings/index.md)

@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
-ms.openlocfilehash: bc4d05e52434cf62fa90671d29b407c83114b5d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d004c89b742944622ce45e6a2be8d96116252745
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801942"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197574"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>函式評估已停用，因為先前的函式評估逾時
-函式評估已停用，因為先前的函式評估逾時。若要重新啟用函式評估，再次逐步執行或重新啟動偵錯。  
+函數評估已停用，因為先前的函數評估已超時。若要重新啟用函數評估，請再次執行或重新開機偵錯工具。  
   
- 在 Visual Studio 偵錯工具中，運算式指定程序呼叫，但另一個評估已逾時。  
+ 在 Visual Studio 偵錯工具中，運算式會指定程序呼叫，但另一個評估會超時。  
   
- 程序呼叫的逾時時間的可能原因包括無限的迴圈或*永無止盡的迴圈*。 如需詳細資訊，請參閱[For...下一個陳述式](../../../visual-basic/language-reference/statements/for-next-statement.md)。  
+ 程序呼叫超時的可能原因包括無限迴圈或無止盡*迴圈*。 如需詳細資訊，請參閱[For .。。下一個語句](../../../visual-basic/language-reference/statements/for-next-statement.md)。  
   
- 是特殊形式的無限迴圈*遞迴*。 如需詳細資訊，請參閱 <<c0> [ 遞迴程序](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)。  
+ 無限迴圈的特殊情況是*遞迴*。 如需詳細資訊，請參閱[遞迴程式](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)。  
   
- **錯誤 ID:** BC30957  
+ **錯誤識別碼：** BC30957  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. 可能的話，判斷先前的函式評估的已和逾時的原因。否則，您可能會遇到這個錯誤一次。  
+1. 可能的話，請判斷先前的函式評估為何，以及造成它超時的原因。否則，您可能會再次遇到此錯誤。  
   
-2. 同樣地，逐步偵錯工具或終止，並重新啟動偵錯。  
+2. 請重新執行偵錯工具，或終止並重新啟動偵錯工具。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)
+- [Visual Studio 偵錯](/visualstudio/debugger/debugger-feature-tour)
 - [使用偵錯工具巡覽程式碼](/visualstudio/debugger/navigating-through-code-with-the-debugger)

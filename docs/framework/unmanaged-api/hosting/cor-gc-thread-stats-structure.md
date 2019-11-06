@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 01f9a59b-7679-4d42-9ced-4a8981625c3d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f56ceca5269ebffb29908c63e698ce794027d8a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37da471aaa8e9f802a8430d7b3289b375ff1b40a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768057"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136977"
 ---
-# <a name="corgcthreadstats-structure"></a>COR_GC_THREAD_STATS 結構
-包含有關記憶體回收的每個執行緒統計資料。  
+# <a name="cor_gc_thread_stats-structure"></a>COR_GC_THREAD_STATS 結構
+包含有關垃圾收集的每個執行緒統計資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,26 +33,26 @@ typedef struct _COR_GC_THREAD_STATS {
 } COR_GC_THREAD_STATS;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`PerThreadAllocation`|目前與相關聯的執行緒上配置的記憶體位元組數目`COR_GC_THREAD_STATS`執行個體。 每次在層代 0 記憶體回收時清除這個數字為零。|  
-|`Flags`|位元組數目提升至更高的層代最新的回收。|  
+|`PerThreadAllocation`|在與目前 `COR_GC_THREAD_STATS` 實例相關聯的執行緒上配置的記憶體位元組數目。 每次發生層代零垃圾收集時，這個數位就會清除為零。|  
+|`Flags`|在最近一次垃圾收集時，升級至較高層代的位元組數目。|  
   
 ## <a name="remarks"></a>備註  
- [Iclrtask:: Getmemstats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)會採用輸出參數的型別`COR_GC_THREAD_STATS`。  
+ [ICLRTask：： GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)接受 `COR_GC_THREAD_STATS`類型的輸出參數。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** GCHost.idl  
+ **標頭：** GCHost .idl  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [IHostTask 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

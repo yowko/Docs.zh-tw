@@ -1,5 +1,5 @@
 ---
-title: 作法：以前置字元零來填補數字
+title: 如何：以前置字元零來填補數字
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54c3eb734184adf5168607cfc8bcbf6c17ea493a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: HT
+ms.openlocfilehash: bc3c4b75c484274c214141d8fbfcf8ac592b0b99
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678889"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131981"
 ---
-# <a name="how-to-pad-a-number-with-leading-zeros"></a>作法：以前置字元零來填補數字
+# <a name="how-to-pad-a-number-with-leading-zeros"></a>如何：以前置字元零來填補數字
 
 如果整數要加上前置零，您可以使用具有精確度規範的 "D" [標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)。 如果整數和浮點數都要加上前置零，您可以使用[自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。 此文示範如何使用這兩種方法，以前置零填補數值。
 
@@ -102,8 +100,8 @@ ms.locfileid: "57678889"
 [!code-csharp[Formatting.HowTo.PadNumber#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.PadNumber/cs/Pad1.cs#4)]
 [!code-vb[Formatting.HowTo.PadNumber#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#4)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [複合格式](../../../docs/standard/base-types/composite-formatting.md)
+- [自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [複合格式設定](../../../docs/standard/base-types/composite-formatting.md)

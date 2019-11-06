@@ -1,17 +1,15 @@
 ---
-title: ICorDebugMemoryBuffer::GetSize 方法
+title: ICorDebugMemoryBuffer：： GetSize 方法
 ms.date: 03/30/2017
 ms.assetid: 9ffd5482-268e-4680-9fd1-bfb0b7d66450
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1c88d389f80b4b3d811d95f65acd41f294d076b3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1693860abe99884ee443be0666dfb6b485a219a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969082"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127998"
 ---
-# <a name="icordebugmemorybuffergetsize-method"></a>ICorDebugMemoryBuffer::GetSize 方法
+# <a name="icordebugmemorybuffergetsize-method"></a>ICorDebugMemoryBuffer：： GetSize 方法
 取得以位元組為單位的記憶體緩衝區大小。  
   
 ## <a name="syntax"></a>語法  
@@ -36,11 +34,11 @@ HRESULT GetSize(
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugMemoryBuffer 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

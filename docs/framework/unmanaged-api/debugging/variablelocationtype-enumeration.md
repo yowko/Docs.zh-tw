@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2093466c78b039a06a01e2d850b88ff4543d0ab3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 861d5daa481132d3d6527e8d5fbccfab6436c5fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752466"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139110"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType 列舉
-表示變數的原生位置型別。  
+表示變數的原生位置類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,26 +35,26 @@ typedef enum VariableLocationType
 } VariableLocationType;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`VLT_REGISTER`|變數是在暫存器。|  
-|`VLT_REGISTER_RELATIVE`|變數是在暫存器的相對記憶體位置。|  
-|`VLT_INVALID`|變數不會儲存在暫存器或暫存器的相對記憶體位置。|  
+|`VLT_REGISTER`|變數在暫存器中。|  
+|`VLT_REGISTER_RELATIVE`|變數位於暫存器相對的記憶體位置。|  
+|`VLT_INVALID`|此變數不會儲存在暫存器或登錄相對的記憶體位置。|  
   
 ## <a name="remarks"></a>備註  
- 成員`VariableLocationType`列舉型別由[ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)方法。  
+ [ICorDebugVariableHome：： GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)方法會傳回 `VariableLocationType` 列舉的成員。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

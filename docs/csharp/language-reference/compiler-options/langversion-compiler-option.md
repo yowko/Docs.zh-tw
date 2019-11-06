@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 81cf336f94815dd3f2c88995eb34ae03b8220097
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 9588ec73250e8745426f6f6020c8d555a174d627
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179925"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422964"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C# 編譯器選項)
 
@@ -65,15 +65,15 @@ C# 應用程式所參考的中繼資料不限於 **-langversion** 編譯器選�
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-|Version|連結|描述|
+|版本|連結|描述|
 |-------|----|-----------|
 |C# 7.0 與更新版本||目前無法使用|
-|C# 6.0|[連結](../language-specification/index.md)|C# 語言規格版本 6 - 非官方草稿：.NET Foundation|
+|C# 6.0|[連結](/dotnet/csharp/language-reference/language-specification/introduction)|C# 語言規格版本 6 - 非官方草稿：.NET Foundation|
 |C# 5.0|[下載 PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)|標準 ECMA-334 第 5 版|
-|C# 3.0|[下載 DOC](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|C# 語言規格 3.0 版：Microsoft Corporation|
+|C# 3.0|[下載 DOC](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|C# 語言規格版本 3.0：Microsoft Corporation|
 |C# 2.0|[下載 PDF](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf)|標準 ECMA-334 第 4 版|
-|C# 1.2|[下載 DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf)|C# 語言規格 1.2 版：Microsoft Corporation|
-|C# 1.0|[下載 DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf)|C# 語言規格 1.0 版：Microsoft Corporation|
+|C# 1.2|[下載 DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf)|C# 語言規格版本 1.2：Microsoft Corporation|
+|C# 1.0|[下載 DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf)|C# 語言規格版本 1.0：Microsoft Corporation|
 
 ## <a name="minimum-sdk-version-needed-to-support-all-language-features"></a>支援所有語言功能所需的最低 SDK 版本
 
@@ -93,7 +93,7 @@ C# 應用程式所參考的中繼資料不限於 **-langversion** 編譯器選�
 |C#2| Microsoft Visual Studio/Build Tools 2005 或配套的 .NET Framework 2.0 編譯器 |
 |C#1.0/1。2 | Microsoft Visual Studio/Build Tools .NET 2002 或配套的 .NET Framework 1.0 編譯器 |
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 編譯器選項](index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

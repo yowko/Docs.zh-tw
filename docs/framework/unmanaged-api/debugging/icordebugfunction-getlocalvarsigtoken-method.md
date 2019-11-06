@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31e53494-bcc9-4981-91a4-f7e0f02cad48
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e03e7a965bc923d91cb0c83a9ea8ea5899da63a9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c159a175ddd380015cc2dc21637c8b63fd3caea6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754665"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137887"
 ---
 # <a name="icordebugfunctiongetlocalvarsigtoken-method"></a>ICorDebugFunction::GetLocalVarSigToken 方法
-取得區域變數簽章這個 ICorDebugFunction 執行個體所表示的函式的中繼資料語彙基元。  
+取得此 ICorDebugFunction 實例所表示之函式的區域變數簽章的元資料標記。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,13 +35,13 @@ HRESULT GetLocalVarSigToken (
   
 ## <a name="parameters"></a>參數  
  `pmdSig`  
- [out]指標`mdSignature`本機變數的簽章，此函式的語彙基元或`mdSignatureNil`，如果此函式沒有任何區域變數。  
+ 脫銷此函式的區域變數簽章之 `mdSignature` token 的指標，如果此函式沒有任何區域變數，則為 `mdSignatureNil`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fbc418e8-fa22-420d-84ec-e0e1800db041
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da5c5a12df5689f113857045ba4bcda696bda8f5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b9eab1274f2d0ad562c0dec6adeddb85c6cfc458
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756721"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138384"
 ---
 # <a name="icordebugheapvalue2createhandle-method"></a>ICorDebugHeapValue2::CreateHandle 方法
-建立堆積值，這個 ICorDebugHeapValue2 物件所表示的指定類型的控制代碼。  
+針對這個 ICorDebugHeapValue2 物件所表示的堆積值，建立指定類型的控制碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,21 +36,21 @@ HRESULT CreateHandle (
   
 ## <a name="parameters"></a>參數  
  `type`  
- [in]CorDebugHandleType 列舉，指定要建立的控制代碼的型別值。  
+ 在CorDebugHandleType 列舉的值，指定要建立的控制碼類型。  
   
  `ppHandle`  
- [out]ICorDebugHandleValue 物件，表示此堆積值的新控制代碼的位址指標。  
+ 脫銷ICorDebugHandleValue 物件位址的指標，表示這個堆積值的新控制碼。  
   
 ## <a name="remarks"></a>備註  
- 控制代碼會在堆積的值，與相關聯的應用程式定義域中建立，而且會變成無效，如果應用程式定義域卸載。  
+ 系統會在與堆積值相關聯的應用程式域中建立控制碼，如果已卸載應用程式域，將會變成無效。  
   
- 此函式相同的堆積值的多個呼叫會建立多個控制代碼。 控制代碼會影響記憶體回收行程的效能，因為偵錯工具應限制本身相對較小的數字，一次是作用中的控制代碼 (大約 256)。  
+ 針對相同堆積值多次呼叫此函式，將會建立多個控制碼。 由於控制碼會影響垃圾收集行程的效能，因此偵錯工具應該將其本身限制為一次作用中的相對較少控制碼（大約256）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

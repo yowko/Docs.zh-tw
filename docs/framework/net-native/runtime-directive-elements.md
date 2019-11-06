@@ -2,14 +2,12 @@
 title: 執行階段指示詞項目
 ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 062f13ad92f37bb7ae29ed34dcf88f99f98e7612
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c900516382c8e526a6b0021bb2b681486283f3ab
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049263"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128176"
 ---
 # <a name="runtime-directive-elements"></a>執行階段指示詞項目
 執行階段指示詞 (rd.xml) 檔案格式支援下列執行階段指示詞元素。 如需階層表示法，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)。  
@@ -38,7 +36,7 @@ ms.locfileid: "71049263"
  [\<ImpliesType>](impliestype-element-net-native.md)  
  如果執行階段原則已套用至包含類型或方法，則會將該原則套用至類型。  
   
- [\<程式庫>](library-element-net-native.md)  
+ [\<Library>](library-element-net-native.md)  
  將執行階段原則套用至組件中的所有類型。 這是 [\<Application>](application-element-net-native.md) 和 [\<Library>](library-element-net-native.md) 項目的子項。  
   
  [\<Method>](method-element-net-native.md)  
@@ -68,6 +66,6 @@ ms.locfileid: "71049263"
  [\<TypeParameter>](typeparameter-element-net-native.md)  
  將執行階段原則套用至傳遞給方法之 <xref:System.Type> 引數所表示的類型。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [rd.xml 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)

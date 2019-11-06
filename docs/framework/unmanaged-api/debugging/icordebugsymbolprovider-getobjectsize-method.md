@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider::GetObjectSize 方法
+title: ICorDebugSymbolProvider：： GetObjectSize 方法
 ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 59054d7b939ab29cb08c30961601a323529ce06b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5c0fe6d73302abbfabe2272cc878d6fd8f5fdec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955634"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138822"
 ---
-# <a name="icordebugsymbolprovidergetobjectsize-method"></a>ICorDebugSymbolProvider::GetObjectSize 方法
+# <a name="icordebugsymbolprovidergetobjectsize-method"></a>ICorDebugSymbolProvider：： GetObjectSize 方法
 傳回根據某物件之 typespec 簽章的該物件大小。  
   
 ## <a name="syntax"></a>語法  
@@ -44,11 +42,11 @@ HRESULT GetObjectSize(
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugSymbolProvider 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

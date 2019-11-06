@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: ec8ec42c174d87834af5d4c651c1e8c8bde3b3e2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 981e518a55f179c2fbf44534783c80fb230e4ecf
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581694"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421130"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF 主應用程式 (PresentationHost.exe)
 Windows Presentation Foundation （WPF）主機（Presentationhost.exe）是一種應用程式，可讓 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的應用程式裝載在相容的瀏覽器中（包括 Microsoft Internet Explorer 6 和更新版本）。 根據預設，Windows Presentation Foundation （WPF）主機會註冊為瀏覽器主控 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 內容的 shell 和 MIME 處理常式，其中包括：  
   
 - 鬆散 (未編譯) 的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案 (.xaml)。  
   
-- [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap)。  
+- XAML 瀏覽器應用程式（XBAP）（xbap）。  
   
  對於這些類型的檔案，請 Windows Presentation Foundation （WPF）主機：  
   

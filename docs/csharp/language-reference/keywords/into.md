@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - into keyword [C#]
 ms.assetid: 81ec62c1-f0b1-4755-8a31-959876e77f65
-ms.openlocfilehash: dc1e2ee004c21bb3d05155eec3e42ea80bf641a1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: ccb1463db51510d275b7053955a0257bd4fe621e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608633"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422717"
 ---
 # <a name="into-c-reference"></a>into (C# 參考)
 
-`into` 內容關鍵字可以用來建立暫時識別碼，以將 [group](group-clause.md)、[join](join-clause.md) 或 [select](select-clause.md) 子句結果儲存至新的識別碼。 這個識別碼本身可以是其他查詢命令的產生器。 用於 `group` 或 `select` 子句時，使用 new 識別碼有時稱為「接續」  。
+`into` 內容關鍵字可以用來建立暫時識別碼，以將 [group](group-clause.md)、[join](join-clause.md) 或 [select](select-clause.md) 子句結果儲存至新的識別碼。 這個識別碼本身可以是其他查詢命令的產生器。 用於 `group` 或 `select` 子句時，使用 new 識別碼有時稱為「接續」。
 
 ## <a name="example"></a>範例
 
@@ -29,8 +29,8 @@ ms.locfileid: "69608633"
 
 如需在 `join` 子句中使用 `into` 的範例，請參閱 [join 子句](join-clause.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [查詢關鍵字 (LINQ)](query-keywords.md)
-- [LINQ 查詢運算式](../../programming-guide/linq-query-expressions/index.md)
+- [C# 中的 LINQ](../../linq/index.md)
 - [group 子句](group-clause.md)

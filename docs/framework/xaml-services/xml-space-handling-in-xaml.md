@@ -7,15 +7,15 @@ helpviewer_keywords:
 - xml:space attribute [XAML Services]
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-ms.openlocfilehash: d15bab1ad9234959048fa7b7c3fa2bbbeca5fe6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f860f5ee42b5c1df43c4ec2b1003408bc1c0d8e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938719"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458800"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>XAML 中的 xml:space 處理
-`xml:space`屬性是宣告為物件項目內的顯著泛空白字元處理行為的 XML 定義的屬性。 此行為會與相關的項目內所包含的所有內容 （內部文字） 其中`xml:space`宣告，因此也會設定至子項目。  
+`xml:space` 屬性是 XML 定義的屬性，可宣告物件元素內的重要空白字元處理行為。 這個行為與在宣告 `xml:space` 的元素中包含的所有內容（內部文字）相關，也會將範圍設為子項目。  
   
 ## <a name="xaml-attribute-usage"></a>XAML Attribute Usage  
   
@@ -30,17 +30,17 @@ ms.locfileid: "61938719"
 ```  
   
 ## <a name="remarks"></a>備註  
- 定義`xml:space`包括其兩個可能值的 XAML 中的屬性衍生自`xml:space`W3C XML 規格所定義為 「 特殊屬性 」。  
+ XAML 中 `xml:space` 屬性的定義，包括它的兩個可能值，衍生自 W3C 規格 for XML 定義為「特殊屬性」的 `xml:space`。  
   
- 預設值`xml:space`屬性是常值`"default"`。 值`"default"`，或者如果`xml:space`並未顯示，行為的顯著泛空白字元剖析為預設處理，主題中所定義[泛空白字元處理中 XAML](whitespace-processing-in-xaml.md)。  
+ `xml:space` 屬性的預設值是 `"default"`的常值。 對於 `"default"`的值，或如果沒有指定 `xml:space`，則重大空白字元剖析的行為是預設處理，如[XAML 中的空白字元處理](whitespace-processing-in-xaml.md)主題中所定義。  
   
- 若要保留物件項目內容中的空白字元，請指定`xml:space="preserve"`該物件元素上。  
+ 若要保留物件專案內容中的空白字元，請在該物件元素上指定 `xml:space="preserve"`。  
   
- 在大部分的詮釋，`xml:space`屬性效果和屬性的值範圍都限於子項目。  
+ 在大部分的解讀之下，`xml:space` 屬性效果和屬性的值都是以子項目為範圍。  
   
- 泛空白字元處理在 XAML 中的完整討論，請參閱 <<c0> [ 泛空白字元處理中 XAML](whitespace-processing-in-xaml.md)。  
+ 如需 XAML 中空白字元處理的完整討論，請參閱[xaml 中](whitespace-processing-in-xaml.md)的空白字元處理。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [在 XAML 中處理泛空白字元](whitespace-processing-in-xaml.md)
-- [XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [XAML 中的空白字元處理](whitespace-processing-in-xaml.md)
+- [XAML 概觀 (WPF)](../../desktop-wpf/fundamentals/xaml.md)

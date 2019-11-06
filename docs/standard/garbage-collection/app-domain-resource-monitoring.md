@@ -8,14 +8,12 @@ helpviewer_keywords:
 - memory use, monitoring
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8c7b9d7c2297fe30b02dc9782002413e9f38dc98
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 54e300bef1818fd08f27d7920eec68ee1f2c45bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751541"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141389"
 ---
 # <a name="application-domain-resource-monitoring"></a>應用程式定義域資源監視
 
@@ -43,7 +41,7 @@ ARM 一經啟用之後，就會立即開始收集處理序中所有應用程式�
 
 ARM 會提供應用程式定義域所使用的處理器時間總計，以及三種有關記憶體使用情況的資訊。
 
-- **應用程式定義域的處理器時間總計 (單位為秒)**：計算方式是將作業系統所回報的執行緒時間加總，這包括所有在存留期內花時間在應用程式定義域中執行的執行緒。 已被封鎖或睡眠中的執行緒不會使用處理器時間。 當執行緒呼叫原生程式碼時，該執行緒花費在原生程式碼的時間會包含在進行呼叫之應用程式定義域的計數中。
+- **應用程式定義域的處理器時間總計 (單位為秒)** ：計算方式是將作業系統所回報的執行緒時間加總，這包括所有在存留期內花時間在應用程式定義域中執行的執行緒。 已被封鎖或睡眠中的執行緒不會使用處理器時間。 當執行緒呼叫原生程式碼時，該執行緒花費在原生程式碼的時間會包含在進行呼叫之應用程式定義域的計數中。
 
   - 受控 API：<xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> 屬性。
 
@@ -51,7 +49,7 @@ ARM 會提供應用程式定義域所使用的處理器時間總計，以及三�
 
   - ETW 事件：`ThreadCreated``ThreadAppDomainEnter`及 `ThreadTerminated` 事件。 如需有關提供者和關鍵字的資訊，請參閱 [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)中的＜AppDomain 資源監視事件＞。
 
-- **應用程式定義域在其存留期內所做的受控配置總計 (單位為位元組)**：配置總計並不一定會反映應用程式定義域所使用的記憶體，因為所配置物件的存留期可能很短。 不過，如果應用程式配置並釋出大量物件，配置成本就可能相當高。
+- **應用程式定義域在其存留期內所做的受控配置總計 (單位為位元組)** ：配置總計並不一定會反映應用程式定義域所使用的記憶體，因為所配置物件的存留期可能很短。 不過，如果應用程式配置並釋出大量物件，配置成本就可能相當高。
 
   - 受控 API：<xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> 屬性。
 
@@ -59,7 +57,7 @@ ARM 會提供應用程式定義域所使用的處理器時間總計，以及三�
 
   - ETW 事件：`AppDomainMemAllocated` 事件、`Allocated` 欄位。
 
-- **應用程式定義域所參考並在最近完整阻斷式收集中未被回收的受控記憶體 (單位為位元組)**：此數字只有在進行完整阻斷式收集後才會精確。 (這是相對於在背景中進行而不會阻斷應用程式的並行收集)。例如，<xref:System.GC.Collect?displayProperty=nameWithType> 方法多載就會造成完整、阻斷式收集。
+- **應用程式定義域所參考並在最近的完整、阻斷式收集中未被回收的受控記憶體 (單位為位元組)** ：此數字只有在進行完整、阻斷式收集後才會精確。 （這與在背景中發生並不會封鎖應用程式的並行集合相反。）例如，<xref:System.GC.Collect?displayProperty=nameWithType> 方法多載會導致完整的封鎖集合。
 
   - 受控 API：<xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> 屬性。
 
@@ -67,7 +65,7 @@ ARM 會提供應用程式定義域所使用的處理器時間總計，以及三�
 
   - ETW 事件：`AppDomainMemSurvived` 事件、`Survived` 欄位。
 
-- **處理序所參考並在最近完整阻斷式收集中未被回收的受控記憶體總計 (單位為位元組)**：可以將個別應用程式定義域未被回收的記憶體與此數字做比較。
+- **處理序所參考並在最近的完整、阻斷式收集中未被回收的受控記憶體總計 (單位為位元組)** ：可以將個別應用程式定義域未被回收的記憶體與此數字做比較。
 
   - 受控 API：<xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType> 屬性。
 
@@ -89,7 +87,7 @@ ARM 會提供應用程式定義域所使用的處理器時間總計，以及三�
 
 如果您使用非受控裝載 API，您的主機就必須將 [IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md) 介面實作傳遞給 CLR。 CLR 會在繼續執行發生收集時被暫止的執行緒時，呼叫 [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) 方法。 CLR 會將已完成的收集世代以方法參數的形式傳遞，讓主機能夠判斷該收集是完整收集還是部分收集。 您的 [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) 方法實作可以查詢未被回收的記憶體，以確定計數是在更新後所立即擷取的計數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
 - [ICLRAppDomainResourceMonitor 介面](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - covariance, out keyword [C#]
 - out keyword [C#]
 ms.assetid: f8c20dec-a8bc-426a-9882-4076b1db1e00
-ms.openlocfilehash: 1316228a186976f313bb9f10032262974243a3ae
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
-ms.translationtype: HT
+ms.openlocfilehash: 121faf46f1c5ba50f132dc180e9d4f802ac91696
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334882"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422665"
 ---
 # <a name="out-generic-modifier-c-reference"></a>out (泛型修飾詞) (C# 參考)
 
@@ -23,7 +23,7 @@ ms.locfileid: "53334882"
 
 Covariant 委派可以指派給同型別的另一個委派，但具有衍生程度較大的泛型型別參數。
 
-如需詳細資訊，請參閱 [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md) (共變數和反變數 (C# 和 Visual Basic))。
+如需詳細資訊，請參閱 [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md) (共變數和反變數)。
 
 ## <a name="example---covariant-generic-interface"></a>範例 - Covariant 泛型介面
 
@@ -52,8 +52,8 @@ Covariant 委派可以指派給同型別的另一個委派，但具有衍生程�
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [泛型介面中的變異數](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
 - [in](in-generic-modifier.md)
-- [修飾詞](modifiers.md)
+- [修飾詞](index.md)

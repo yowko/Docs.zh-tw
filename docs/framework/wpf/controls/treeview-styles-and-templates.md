@@ -9,60 +9,60 @@ helpviewer_keywords:
 - styles [WPF], TreeView
 - TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
-ms.openlocfilehash: 01841bb828594dd4cac0c179d70495fe392c8de5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6dbe54324a5ad5e2f85719d819c035abfd644b1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761295"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460194"
 ---
 # <a name="treeview-styles-and-templates"></a>TreeView 樣式和範本
-本主題描述的樣式和範本<xref:System.Windows.Controls.TreeView>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>，讓控制項的獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
+本主題描述 <xref:System.Windows.Controls.TreeView> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
   
-## <a name="treeview-parts"></a>樹狀檢視組件  
- <xref:System.Windows.Controls.TreeView>控制項沒有任何具名組件。  
+## <a name="treeview-parts"></a>TreeView 元件  
+ <xref:System.Windows.Controls.TreeView> 控制項沒有任何已命名的元件。  
   
- 當您建立<xref:System.Windows.Controls.ControlTemplate>for <xref:System.Windows.Controls.TreeView>，您的範本可能會包含<xref:System.Windows.Controls.ItemsPresenter>內<xref:System.Windows.Controls.ScrollViewer>。 (<xref:System.Windows.Controls.ItemsPresenter>會顯示在每個項目<xref:System.Windows.Controls.TreeView>;<xref:System.Windows.Controls.ScrollViewer>可在控制項內捲動)。  如果<xref:System.Windows.Controls.ItemsPresenter>不是直接子系<xref:System.Windows.Controls.ScrollViewer>，您必須給予<xref:System.Windows.Controls.ItemsPresenter>名稱， `ItemsPresenter`。  
+ 當您建立 <xref:System.Windows.Controls.TreeView>的 <xref:System.Windows.Controls.ControlTemplate> 時，您的範本可能會在 <xref:System.Windows.Controls.ScrollViewer>中包含 <xref:System.Windows.Controls.ItemsPresenter>。 （<xref:System.Windows.Controls.ItemsPresenter> 會顯示 <xref:System.Windows.Controls.TreeView>中的每個專案，<xref:System.Windows.Controls.ScrollViewer> 可在控制項內進行滾動）。  如果 <xref:System.Windows.Controls.ItemsPresenter> 不是 <xref:System.Windows.Controls.ScrollViewer>的直接子系，您必須為 <xref:System.Windows.Controls.ItemsPresenter> 指定名稱，`ItemsPresenter`。  
   
-## <a name="treeview-states"></a>樹狀檢視狀態  
- 下表列出的視覺狀態<xref:System.Windows.Controls.TreeView>控制項。  
+## <a name="treeview-states"></a>TreeView 狀態  
+ 下表列出 <xref:System.Windows.Controls.TreeView> 控制項的視覺狀態。  
   
 |VisualState 名稱|VisualStateGroup 名稱|描述|  
 |-|-|-|  
-|驗證|ValidationStates|控制項使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`已在控制項具有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`有控制項沒有焦點。|  
+|驗證|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，而 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性則 `false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是控制項具有焦點 `true`。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是 `true` 控制項沒有焦點。|  
   
-## <a name="treeviewitem-parts"></a>TreeViewItem 的組件  
- 下表列出的具名組件<xref:System.Windows.Controls.TreeViewItem>控制項。  
+## <a name="treeviewitem-parts"></a>TreeViewItem 元件  
+ 下表列出 <xref:System.Windows.Controls.TreeViewItem> 控制項的已命名元件。  
   
-|組件|類型|描述|  
+|組件|輸入|描述|  
 |----------|----------|-----------------|  
-|PART_Header|<xref:System.Windows.FrameworkElement>|包含該內容的標頭的視覺元素<xref:System.Windows.Controls.TreeView>控制項。|  
+|PART_Header|<xref:System.Windows.FrameworkElement>|包含 <xref:System.Windows.Controls.TreeView> 控制項之標頭內容的視覺元素。|  
   
 ## <a name="treeviewitem-states"></a>TreeViewItem 狀態  
- 下表列出的視覺狀態<xref:System.Windows.Controls.TreeViewItem>控制項。  
+ 下表列出 <xref:System.Windows.Controls.TreeViewItem> 控制項的視覺狀態。  
   
 |VisualState 名稱|VisualStateGroup 名稱|描述|  
 |----------------------|---------------------------|-----------------|  
 |一般|CommonStates|預設狀態。|  
-|MouseOver|CommonStates|滑鼠指標位於<xref:System.Windows.Controls.TreeViewItem>。|  
-|已停用|CommonStates|<xref:System.Windows.Controls.TreeViewItem>已停用。|  
-|已取得焦點|FocusStates|<xref:System.Windows.Controls.TreeViewItem>具有焦點。|  
-|未取得焦點|FocusStates|<xref:System.Windows.Controls.TreeViewItem>未取得焦點。|  
-|展開|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem>展開控制項。|  
-|Collapsed|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem>摺疊控制項。|  
-|HasItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem>有項目。|  
-|NoItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem>沒有任何項目。|  
-|已選取|SelectionStates|<xref:System.Windows.Controls.TreeViewItem>已選取。|  
-|SelectedInactive|SelectionStates|<xref:System.Windows.Controls.TreeViewItem>選取但非作用中。|  
-|未選取|SelectionStates|<xref:System.Windows.Controls.TreeViewItem>未選取。|  
-|驗證|ValidationStates|控制項使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`已在控制項具有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`有控制項沒有焦點。|  
+|MouseOver|CommonStates|滑鼠指標位於 <xref:System.Windows.Controls.TreeViewItem>上。|  
+|Disabled|CommonStates|<xref:System.Windows.Controls.TreeViewItem> 已停用。|  
+|已取得焦點|FocusStates|<xref:System.Windows.Controls.TreeViewItem> 具有焦點。|  
+|未取得焦點|FocusStates|<xref:System.Windows.Controls.TreeViewItem> 沒有焦點。|  
+|展開|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> 控制項已展開。|  
+|Collapsed|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> 控制項已折迭。|  
+|HasItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> 有個專案。|  
+|NoItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> 沒有專案。|  
+|已選取|SelectionStates|已選取 [<xref:System.Windows.Controls.TreeViewItem>]。|  
+|SelectedInactive|SelectionStates|已選取 <xref:System.Windows.Controls.TreeViewItem>，但未使用。|  
+|未選取|SelectionStates|未選取 <xref:System.Windows.Controls.TreeViewItem>。|  
+|驗證|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，而 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性則 `false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是控制項具有焦點 `true`。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是 `true` 控制項沒有焦點。|  
   
 ## <a name="treeview-controltemplate-example"></a>TreeView ControlTemplate 範例  
- 下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>針對<xref:System.Windows.Controls.TreeView>控制項和其相關聯的類型。  
+ 下列範例示範如何定義 <xref:System.Windows.Controls.TreeView> 控制項及其關聯類型的 <xref:System.Windows.Controls.ControlTemplate>。  
   
  [!code-xaml[ControlTemplateExamples#TreeView](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/treeview.xaml#treeview)]  
   
@@ -72,11 +72,11 @@ ms.locfileid: "61761295"
   
  如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控制項的樣式和範本](control-styles-and-templates.md)
 - [控制項自訂](control-customization.md)
-- [樣式設定和範本化](styling-and-templating.md)
+- [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)

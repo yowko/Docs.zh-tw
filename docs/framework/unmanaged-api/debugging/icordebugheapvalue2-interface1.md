@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: 87360a52-90b1-4ada-80c0-589a556116d8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fa872453ed72a3095c135aa25e81284610ad2436
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8ae788094def566b4dc3a17d0a08d657cc27468f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910215"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138369"
 ---
 # <a name="icordebugheapvalue2-interface"></a>ICorDebugHeapValue2 介面
 
-ICorDebugHeapValue 的延伸模組, 可提供 common language runtime (CLR) 控制碼的支援。  
+ICorDebugHeapValue 的延伸模組，可提供 common language runtime （CLR）控制碼的支援。  
   
 ## <a name="methods"></a>方法  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
-|[CreateHandle 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|建立這個`ICorDebugHeapValue2`物件之指定類型的控制碼。|  
+|[CreateHandle 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|建立這個 `ICorDebugHeapValue2` 物件之指定類型的控制碼。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -43,10 +41,10 @@ ICorDebugHeapValue 的延伸模組, 可提供 common language runtime (CLR) 控�
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

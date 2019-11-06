@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_LocalNotSupported
 ms.assetid: 59bfa215-556b-4bfa-8f25-b090ea83298d
-ms.openlocfilehash: 6a8a41a06dda243b724a1c37e74f3f38abf69898
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75a1e1b963a502f382ce8f09722a514206831a0a
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942567"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198109"
 ---
 # <a name="this-system-does-not-contain-support-for-the-locale-specified"></a>此系統沒有包含指定地區設定的支援
 您嘗試使用 `VbStrConv` 列舉，但您的系統不支援指定的地區設定。  
@@ -18,8 +18,8 @@ ms.locfileid: "61942567"
   
 1. 請升級電腦以支援地區設定，或在支援該地區設定的電腦上執行應用程式。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Globalization>
 
-- [以 .NET Framework 為基礎的國際應用程式簡介](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [開發全球化和當地語系化應用程式](/visualstudio/ide/globalizing-and-localizing-applications)

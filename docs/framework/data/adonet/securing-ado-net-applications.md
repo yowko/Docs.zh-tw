@@ -2,12 +2,12 @@
 title: 設定 ADO.NET 應用程式的安全性
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 725ba568f3cd482991359237f4fc42b7da99bc0a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c99c56afca475caafe32cca3f50d074fb82e0e00
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795053"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196725"
 ---
 # <a name="securing-adonet-applications"></a>設定 ADO.NET 應用程式的安全性
 撰寫安全的 ADO.NET 應用程式並不只是為了避免常見的編碼錯誤，例如未驗證使用者輸入。 用於存取資料的應用程式有許多潛在的錯誤，攻擊者可以利用這些錯誤來擷取、管理或毀損機密資料。 因此，了解安全性的所有面向就相當重要，從應用程式設計階段期間的威脅模組處理，到最終的部署以及進行中的作業，都包括在內。  
@@ -16,7 +16,7 @@ ms.locfileid: "70795053"
   
  撰寫安全的程式碼，並不能防衛在使用 Unmanged 資源 (例如資料庫) 時自身造成的安全性漏洞。 大部分的伺服器資料庫 (例如 SQL Server) 都擁有自己的安全性系統，如果實作正確即可提升安全性。 不過，即使是具有嚴密安全性系統的資料來源，如果設定不正確，也可能在攻擊中受損。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [安全性概觀](security-overview.md)  
  針對設計安全的 ADO. NET 應用程式提供建議。  
   
@@ -48,10 +48,10 @@ ms.locfileid: "70795053"
  [用於建立安全應用程式的資源](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  提供建立安全應用程式的主題連結。  
   
- [安全性參考書目](/visualstudio/ide/security-bibliography)  
+ [安全性參考書目](/visualstudio/ide/securing-applications)  
  提供可線上使用及列印版本的外部資源連結。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ADO.NET](index.md)
 - [ADO.NET 概觀](ado-net-overview.md)

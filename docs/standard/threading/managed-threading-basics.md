@@ -8,14 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f55057e40a251be49898b9b1b7862bd243b2a70c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: bec769043ab630b37609bed12302ceff5b90474a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913174"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139234"
 ---
 # <a name="managed-threading-basics"></a>受控執行緒處理的基本概念
 
@@ -43,7 +41,7 @@ ms.locfileid: "69913174"
  [Windows 中的 Managed 和 Unmanaged 執行緒處理](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  討論受控和非受控執行緒之間的關聯性、針對 Windows 執行緒 API 列出受控對等項目，並討論 COM Apartment 和受控執行緒的互動。  
   
- [執行緒本機儲存體：執行緒相關靜態欄位和資料插槽](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
+ [執行緒區域儲存區：執行緒相關的靜態欄位和資料位置](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  描述執行緒相關的儲存機制。  
   
 ## <a name="reference"></a>參考資料

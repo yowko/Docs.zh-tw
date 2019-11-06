@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab18a509-dff3-4930-b585-bd15e0414176
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e944a6debf790907b75760c8856ae3a365a84650
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: af2dab65629093401219f1016538b912bee4d067
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759617"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130818"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>ICorDebugManagedCallback::Exception 方法
-例外狀況已擲回從 managed 程式碼會告知偵錯工具。  
+通知偵錯工具，已從 managed 程式碼擲回例外狀況。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,26 +37,26 @@ HRESULT Exception (
   
 ## <a name="parameters"></a>參數  
  `pAppDomain`  
- [in]表示擲回例外狀況所在的應用程式定義域的 ICorDebugAppDomain 物件指標。  
+ 在ICorDebugAppDomain 物件的指標，表示擲回例外狀況的應用程式域。  
   
  `pThread`  
- [in]ICorDebugThread 物件，表示擲回例外狀況所在的執行緒指標。  
+ 在ICorDebugThread 物件的指標，表示擲回例外狀況的執行緒。  
   
  `unhandled`  
- [in]如果此值為`false`、 例外狀況尚未已由應用程式處理，否則為，例外狀況無法處理，因此將會終止處理序。  
+ 在如果這個值是 `false`，應用程式尚未處理此例外狀況。否則，例外狀況會被未處理，並會終止進程。  
   
 ## <a name="remarks"></a>備註  
- 從執行緒物件，可以擷取特定的例外狀況。  
+ 您可以從 thread 物件中抓取特定的例外狀況。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

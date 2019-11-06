@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2709f18f-3eee-497f-bc33-3ab7a485599b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8edd2a42ed1b826e1b6ea09e92165bc9fa967a8b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 970468bc2f50144c62c6e3cbcf9c00c2027f7663
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760246"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138173"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>FExecuteInAppDomainCallback 函式指標
-指向由 common language runtime (CLR) 執行 managed 程式碼呼叫的函式。  
+指向 common language runtime （CLR）所呼叫的函式，以執行 managed 程式碼。  
   
- 在.NET Framework 4 中，已被取代此函式指標。  
+ 這個函式指標在 .NET Framework 4 中已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,19 +36,19 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
   
 ## <a name="parameters"></a>參數  
  `cookie`  
- [in]其中包含要執行的 managed 程式碼不透明呼叫端配置的記憶體指標。  
+ 在不透明呼叫端配置的記憶體指標，其中包含要執行的 managed 程式碼。  
   
- 配置和存留期的這個記憶體是由呼叫端 (也就是 CLR) 控制。 這不是 CLR managed 堆積記憶體。  
+ 這個記憶體的配置和存留期是由呼叫端（也就是 CLR）所控制。 這不是 CLR managed 堆積記憶體。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** MSCorWks.dll  
+ 連結**庫：** Mscorwks.dll .dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

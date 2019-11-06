@@ -14,14 +14,12 @@ helpviewer_keywords:
 - EndEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0065dcd25430e102b965d5598c7e9a04c7857eb3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b9fd1f094c8fb56c94421a07437aa25a3549c487
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798821"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132050"
 ---
 # <a name="endenumeration-function"></a>EndEnumeration 函式
 
@@ -59,16 +57,16 @@ HRESULT EndEnumeration (
 
 此函式會包裝對[IWbemClassObject：： EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)方法的呼叫。
 
-不需要呼叫`EndEnumeration`函式，但建議您這樣做，因為它會釋放與列舉相關聯的資源。 不過，系統會在下一個列舉啟動或釋放物件時，自動解除配置資源。
+不需要呼叫 `EndEnumeration` 函式，但建議您這樣做，因為它會釋放與列舉相關聯的資源。 不過，系統會在下一個列舉啟動或釋放物件時，自動解除配置資源。
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
-**標頭：** WMINet_Utils.idl
+**標頭：** WMINet_Utils .idl
 
 **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WMI 和效能計數器（非受控 API 參考）](index.md)

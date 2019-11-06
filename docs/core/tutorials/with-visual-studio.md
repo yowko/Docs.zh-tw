@@ -5,28 +5,28 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b42a71993cb120c88b90e867b7af23873b99d280
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3b397c8cac989fb7d1cbc1982cc2ce40a8777983
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039602"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454760"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core SDK 來建置 C# Hello World 應用程式
 
-本主題提供在 Visual Studio 2017 中使用 C# 建置、偵錯及發行簡單 .NET Core 主控台應用程式的逐步指示。 Visual Studio 2017 提供功能完整的開發環境來建置 .NET Core 應用程式。 只要應用程式沒有平台特定的相依性，應用程式就可以在 .NET Core 的任何目標平台，以及安裝 .NET Core 的任何系統上執行。
+本文提供在 Visual Studio 2017 中使用C#來建立、偵測和發行簡單 .net Core 主控台應用程式的逐步介紹。 Visual Studio 2017 提供功能完整的開發環境來建置 .NET Core 應用程式。 只要應用程式沒有平台特定的相依性，應用程式就可以在 .NET Core 的任何目標平台，以及安裝 .NET Core 的任何系統上執行。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 (英文)](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)。 您可以使用 .NET Core 2.1 或更新版本來開發您的應用程式。
+已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 您可以使用 .NET Core 2.1 或更新版本來開發您的應用程式。
 
-如需詳細資訊，請參閱 [Windows 上 .NET Core 的必要條件](../windows-prerequisites.md)。
+如需詳細資訊，請參閱[Windows 上的 .Net Core 的必要條件](../windows-prerequisites.md)一文。
 
 ## <a name="a-simple-hello-world-application"></a>簡單的 Hello World 應用程式
 
 請開始建立簡單的 "Hello World" 主控台應用程式。 請依照下列步驟：
 
-1. 啟動 Visual Studio 2017。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案]* 對話方塊中，選取後面跟著 [.NET Core] 節點的 [Visual C#] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，鍵入 "HelloWorld"。 選取 [確定] 按鈕。
+1. 啟動 Visual Studio。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [.NET Core] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，鍵入 "HelloWorld"。 選取 [確定] 按鈕。
 
    ![已選取 [主控台應用程式] 的 [新增專案] 對話方塊](./media/with-visual-studio/visual-studio-new-project.png)
 
@@ -57,9 +57,9 @@ ms.locfileid: "71039602"
 
 增強您的應用程式以提示使用者輸入其名稱，並將其與日期和時間一起顯示。 若要修改並測試程式，請執行下列動作︰
 
-1. 在程式碼視窗中，於 `static void Main(string[] args)` 行之後的左括弧後方，以及第一個右括弧之前輸入下列 C# 程式碼：
+1. 在 [程式C#代碼] 視窗中，于 `static void Main(string[] args)` 行之後和第一個右大括弧前面的左括弧後方輸入下列程式碼：
 
-   [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
+   [!code-csharp[GettingStarted#1](~/samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
    此程式碼會取代 `Main` 方法的內容。
 
@@ -81,7 +81,7 @@ ms.locfileid: "71039602"
 
 - 如需開發和發行應用程式可散發版本的資訊，請參閱[使用 Visual Studio 2017 發行 .NET Core Hello World 應用程式](publishing-with-visual-studio.md)。
 
-## <a name="related-topics"></a>相關主題
+## <a name="related-articles"></a>相關文章
 
 除了主控台應用程式之外，您也可以使用 .NET Core 和 Visual Studio 2017 建置類別庫。 如需逐步介紹，請參閱[在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](library-with-visual-studio.md)。
 

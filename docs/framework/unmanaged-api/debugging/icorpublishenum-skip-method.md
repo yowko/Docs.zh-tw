@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1680ec06-4ab0-447e-93ad-cdb8693fde5c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9be0c3b931130e0ea86766b5134ca514478f0201
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eb9e5bdf85c6d487fd82422522854076c03e2288
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764937"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140459"
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip 方法
-將游標移往前列舉中所指定的項目數。  
+在列舉中，將資料指標向後移動指定的專案數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,17 +35,17 @@ HRESULT Skip (
   
 ## <a name="parameters"></a>參數  
  `celt`  
- [in]用來將游標向前移動的項目數目。  
+ 在要將資料指標向前移動的專案數。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorPub.idl CorPub.h  
+ **標頭：** CorPub .idl，CorPub。h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorPublishEnum 介面](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72ea68b4-689f-4733-9416-9664b75e8892
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 46dab35c44e59a149822005575c83c13e9350455
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc5324683daa9a02a6a89b2a3fb57ee9fd5dbe72
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758542"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136954"
 ---
-# <a name="corexemain2-function"></a>_CorExeMain2 函式
-指定記憶體對應的程式碼中執行的進入點。 作業系統載入器會呼叫此函式。  
+# <a name="_corexemain2-function"></a>_CorExeMain2 函式
+執行指定的記憶體對應程式碼中的進入點。 此函式是由作業系統載入器所呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,29 +38,29 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
   
 ## <a name="parameters"></a>參數  
  `pUnmappedPE`  
- [in]記憶體對應的程式碼指標。  
+ 在記憶體對應程式碼的指標。  
   
  `cUnmappedPE`  
- [in]項目數`pUnmappedPE`可以保存。  
+ 在`pUnmappedPE` 可以保存的元素數目。  
   
  `pImageNameIn`  
- [in]可執行檔映像的名稱指標。  
+ 在可執行映射名稱的指標。  
   
  `pLoadersFileName`  
- [in]載入器檔案的名稱。  
+ 在載入器檔案的名稱。  
   
  `pCmdLine`  
- [in]命令列參數，如果有的話。  
+ 在命令列參數（如果有的話）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **標頭：** Cor。h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料全域靜態函式](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

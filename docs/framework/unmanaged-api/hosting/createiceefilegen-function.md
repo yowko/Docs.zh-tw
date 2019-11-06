@@ -16,19 +16,17 @@ helpviewer_keywords:
 ms.assetid: e36e1fd8-8456-4359-bdc3-3ec1765f041f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96968de84182b74f7baa89d5dfc12a4797ade595
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: de27851b4afc3eccad46531848c68723bff346d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779224"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136828"
 ---
 # <a name="createiceefilegen-function"></a>CreateICeeFileGen 函式
-會建立[ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)物件。  
+建立[ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)物件。  
   
- 此函式已被取代，在.NET Framework 4。  
+ 此函式在 .NET Framework 4 中已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,25 +38,25 @@ HRESULT CreateICeeFileGen (
   
 ## <a name="parameters"></a>參數  
  `ceeFileGen`  
- [out]新的位址指標`ICeeFileGen`物件。  
+ 脫銷新 `ICeeFileGen` 物件之位址的指標。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回標準 COM 錯誤碼。  
   
 ## <a name="remarks"></a>備註  
- `ICeeFileGen`物件用來建立通用語言執行平台 (CLR) 可移植執行檔 (PE) 檔案。  
+ `ICeeFileGen` 物件是用來建立 common language runtime （CLR）可移植執行檔（PE）檔案。  
   
- 呼叫[DestroyICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md)函式終結`ICeeFileGen`物件時完成。  
+ 完成時，呼叫[DestroyICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md)函式以終結 `ICeeFileGen` 物件。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** ICeeFileGen.h  
+ **標頭：** ICeeFileGen。h  
   
- **LIBRARY:** MSCorPE.dll  
+ 連結**庫：** MSCorPE .dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -5,12 +5,12 @@ author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: db42ba4916aad739bd2c9d8b547f16022fce44bd
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 043b9b85633e81670783e7870f1be7726ab07e81
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104939"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454630"
 ---
 # <a name="select-the-net-core-version-to-use"></a>選取要使用的 .NET Core 版本
 
@@ -39,7 +39,7 @@ SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `do
 
 在罕見的情況下，您可能需要使用舊版的 SDK。 您可以在 [*global.json* 檔案](../tools/global-json.md)中指定該版本。 「使用最新版」原則表示您只會使用 *global.json* 指定比最新安裝版本更早的 .NET Core SDK 版本。
 
-*global.json* 可能放在檔案階層中的任何地方。 CLI 會從專案目錄向上搜尋，以找到第一個 *global.json*。 您可以根據指定的 *global.json* 在檔案系統中的位置，來控制其所套用的專案。 .NET CLI 會從目前的工作目錄向上反覆巡覽路徑，以搜尋 *global.json* 檔案。 第一個找到的 *global.json* 檔案指定所使用的版本。 如果安裝該版本，則會使用該版本。 如果找不到 *global.json* 中指定的 SDK，.NET CLI 會向前復原到最新安裝的 SDK。 找不到 *global.json* 檔案時，向前復原會與預設行為相同。
+*global.json* 可能放在檔案階層中的任何地方。 CLI 會從專案目錄向上搜尋，以找到第一個 *global.json*。 您可以根據指定的 *global.json* 在檔案系統中的位置，來控制其所套用的專案。 .NET CLI 會從目前的工作目錄向上反覆巡覽路徑，以搜尋 *global.json* 檔案。 第一個找到的 *global.json* 檔案指定所使用的版本。 如果已安裝該 SDK 版本，則會使用該版本。 如果找不到在*global.asax*中指定的 sdk，則 .net CLI 會使用比對[規則](../tools/global-json.md#matching-rules)來選取相容的 sdk，如果找不到，則會失敗。
 
 下列範例示範 *global.json* 語法：
 
@@ -114,4 +114,4 @@ SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `do
 <RuntimeFrameworkVersion>2.0.4</RuntimeFrameworkVersion>
 ```
 
-`RuntimeFrameworkVersion` 項目會覆寫預設版本原則。 針對獨立部署，`RuntimeFrameworkVersion` 會指定「確切」  的執行階段架構版本。 針對架構相依應用程式，`RuntimeFrameworkVersion` 會指定所需的「最低」  執行階段架構版本。
+`RuntimeFrameworkVersion` 項目會覆寫預設版本原則。 針對獨立部署，`RuntimeFrameworkVersion` 會指定「確切」的執行階段架構版本。 針對架構相依應用程式，`RuntimeFrameworkVersion` 會指定所需的「最低」執行階段架構版本。

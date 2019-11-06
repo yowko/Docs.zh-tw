@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d5ccc4d-0193-41f5-af54-45d7b70d5321
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 539f69c33b67ad1a8a514062c5d777deaced1599
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 23f868bba2dc058d99f1c5c09e9b311b1ff3634a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964999"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140898"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification 方法
-提供回呼函式, 保證會在第一次載入 common language runtime (CLR) 版本, 但尚未啟動時呼叫。 這個方法會取代[LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)函數。  
+提供回呼函式，保證會在第一次載入 common language runtime （CLR）版本，但尚未啟動時呼叫。 這個方法會取代[LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)函數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,15 +45,15 @@ HRESULT RequestRuntimeLoadedNotification (
 |E_POINTER|`pCallbackFunction` 為 null。|  
   
 ## <a name="remarks"></a>備註  
- 回呼會以下列方式運作:  
+ 回呼會以下列方式運作：  
   
-- 只有在第一次載入執行時間時, 才會叫用回呼。  
+- 只有在第一次載入執行時間時，才會叫用回呼。  
   
 - 不會針對相同執行時間的可重新進入負載叫用回呼。  
   
-- 對於不可重新進入的執行時間載入, 會序列化回呼函數的呼叫。  
+- 對於不可重新進入的執行時間載入，會序列化回呼函數的呼叫。  
   
- 回呼函數具有下列原型:  
+ 回呼函數具有下列原型：  
   
 ```cpp  
 typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(  
@@ -64,41 +62,41 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
                      CallbackThreadUnsetFnPtr pfnCallbackThreadUnset);  
 ```  
   
- 回呼函數原型如下所示:  
+ 回呼函數原型如下所示：  
   
-- `pfnCallbackThreadSet`：  
+- `pfnCallbackThreadSet`:  
   
     ```cpp  
     typedef HRESULT (__stdcall *CallbackThreadSetFnPtr)();  
     ```  
   
-- `pfnCallbackThreadUnset`：  
+- `pfnCallbackThreadUnset`:  
   
     ```cpp  
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- 如果主機打算載入或造成另一個執行時間以可重新進入的方式載入, 則`pfnCallbackThreadSet`必須`pfnCallbackThreadUnset`以下列方式使用回呼函式中提供的和參數:  
+ 如果主機打算載入或造成另一個執行時間以可重新進入的方式載入，則在回呼函式中提供的 `pfnCallbackThreadSet` 和 `pfnCallbackThreadUnset` 參數必須以下列方式使用：  
   
-- `pfnCallbackThreadSet`必須由執行緒呼叫, 可能會在嘗試進行這類負載之前造成執行時間載入。  
+- `pfnCallbackThreadSet` 必須由執行緒呼叫，這可能會在嘗試進行這類負載之前造成執行時間載入。  
   
-- `pfnCallbackThreadUnset`當執行緒不會再造成這類執行時間載入 (以及從初始回呼傳回之前) 時, 必須呼叫。  
+- 當執行緒不再造成這類執行時間載入（以及從初始回呼傳回之前）時，就必須呼叫 `pfnCallbackThreadUnset`。  
   
-- `pfnCallbackThreadSet`和`pfnCallbackThreadUnset`都是不可重新進入的。  
+- `pfnCallbackThreadSet` 和 `pfnCallbackThreadUnset` 都是不可重新進入的。  
   
 > [!NOTE]
-> 主應用程式不能`pfnCallbackThreadSet`在`pfnCallbackThreadUnset` `pCallbackFunction`參數的範圍之外呼叫和。  
+> 主應用程式不能在 `pCallbackFunction` 參數的範圍之外呼叫 `pfnCallbackThreadSet` 和 `pfnCallbackThreadUnset`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MetaHost.h  
+ **標頭：** MetaHost。h  
   
- **LIBRARY:** 包含為 Mscoree.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRMetaHost 介面](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
 - [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)

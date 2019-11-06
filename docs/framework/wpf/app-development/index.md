@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 85218bd4b6e900bd4508a5c90132419a07846f2c
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: ce37eecf7edf2adcc4f56af27a5c658400f7abba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920206"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420645"
 ---
 # <a name="application-development"></a>應用程式開發
 <a name="introduction"></a>Windows Presentation Foundation （WPF）是一種呈現架構，可用來開發下列類型的應用程式：  
   
 - 獨立應用程式（傳統樣式的 Windows 應用程式，建作為可執行元件，並從用戶端電腦執行）。  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] （應用程式是由建立為可執行元件並由網頁瀏覽器（例如 Microsoft Internet Explorer 或 Mozilla Firefox）所裝載的導覽頁面所組成。  
+- XAML 瀏覽器應用程式（Xbap）（這些應用程式是由建立為可執行元件並由網頁瀏覽器（例如 Microsoft Internet Explorer 或 Mozilla Firefox）所主控的導覽頁面所組成）。  
   
 - 自訂控制項程式庫 (非可執行組件，其中包含可重複使用的控制項)。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72920206"
   
 - 管理獨立應用程式中的視窗。  
   
-- 追蹤 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 以及具有瀏覽視窗和框架之獨立應用程式中的瀏覽。  
+- 追蹤 XAML 瀏覽器應用程式（Xbap）中的導覽，以及具有流覽視窗和框架的獨立應用程式。  
   
  這些功能是由 <xref:System.Windows.Application> 類別實作，您可以使用「應用程式定義」將此類別新增至應用程式。  
   
@@ -86,15 +86,15 @@ ms.locfileid: "72920206"
   
 - 裝載於網頁瀏覽器的獨立頁面。  
   
-- 編譯成裝載於網頁瀏覽器之 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 的頁面。  
+- 編譯成 XBAP 的頁面，裝載在網頁瀏覽器中。  
   
 - 編譯成獨立應用程式並由瀏覽視窗 (<xref:System.Windows.Navigation.NavigationWindow>) 裝載的頁面。  
   
-- 由框架 (<xref:System.Windows.Controls.Frame>) 裝載的頁面，框架本身可以裝載於獨立頁面，或是編譯成 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 或獨立應用程式的頁面。  
+- 由框架（<xref:System.Windows.Controls.Frame>）主控的頁面，可能裝載于獨立頁面，或編譯成 XBAP 或獨立應用程式的頁面。  
   
  為了加速瀏覽，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會實作下列項目：  
   
-- <xref:System.Windows.Navigation.NavigationService>，這是處理瀏覽要求的共用瀏覽引擎，可供 <xref:System.Windows.Controls.Frame>、<xref:System.Windows.Navigation.NavigationWindow> 和 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 用來支援應用程式內的瀏覽。  
+- <xref:System.Windows.Navigation.NavigationService>，這是用來處理導覽要求的共用導覽引擎，可由 <xref:System.Windows.Controls.Frame>、<xref:System.Windows.Navigation.NavigationWindow>和 Xbap 用來支援應用程式內導覽。  
   
 - 要啟始瀏覽的瀏覽方法。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "72920206"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>架設  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以裝載于 Microsoft Internet Explorer 或 Firefox 中。 每個裝載模型有各自的一組考量和條件約束，[裝載](hosting-wpf-applications.md)中將進行說明。  
+ Xbap 可以裝載于 Microsoft Internet Explorer 或 Firefox 中。 每個裝載模型有各自的一組考量和條件約束，[裝載](hosting-wpf-applications.md)中將進行說明。  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>建置和部署  
@@ -124,7 +124,7 @@ ms.locfileid: "72920206"
 |[應用程式管理概觀](application-management-overview.md)|提供 <xref:System.Windows.Application> 類別的概觀，包括管理應用程式存留期、視窗、應用程式資源和瀏覽。|  
 |[WPF 中的視窗](windows-in-wpf-applications.md)|提供在應用程式中管理視窗的詳細資料，包括如何使用 <xref:System.Windows.Window> 類別和對話方塊。|  
 |[瀏覽概觀](navigation-overview.md)|提供有關管理在應用程式頁面之間瀏覽的概觀。|  
-|[裝載](hosting-wpf-applications.md)|提供 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 的概觀。|  
+|[裝載](hosting-wpf-applications.md)|提供 XAML 瀏覽器應用程式（Xbap）的總覽。|  
 |[建置和部署](building-and-deploying-wpf-applications.md)|描述如何建置及部署 WPF 應用程式。|  
 |[Visual Studio 中的 WPF 簡介](../getting-started/introduction-to-wpf-in-vs.md)|描述 WPF 的主要功能。|  
 |[逐步解說：我的第一個 WPF 傳統型應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|示範如何建立使用頁面瀏覽、配置、控制項、影像、樣式和繫結之 WPF 應用程式的逐步解說。|

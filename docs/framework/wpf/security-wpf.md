@@ -13,17 +13,17 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 031313c6f56801f032a5aeaff06cde8d0550af92
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 908c3fb0baacc7fd75dae875e9a9d49a08fe5401
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582404"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459720"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a>開發 Windows Presentation Foundation （WPF）獨立和瀏覽器裝載的應用程式時，您必須考慮安全性模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 獨立應用程式會以不受限制的許可權（CAS**FullTrust**許可權集合）執行，無論是使用 Windows Installer （.msi）、XCopy 或 ClickOnce 部署。 不支援使用 ClickOnce 部署部分信任的獨立 WPF 應用程式。 不過，完全信任的主應用程式可以使用 .NET Framework 增益集模型，建立部分信任的 <xref:System.AppDomain>。 如需詳細資訊，請參閱[WPF 增益集總覽](./app-development/wpf-add-ins-overview.md)。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 瀏覽器裝載的應用程式是由 Windows Internet Explorer 或 Firefox 主控，而且可以是 [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] 或鬆散的 [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 檔如需詳細資訊，請參閱[WPF XAML 瀏覽器應用程式總覽](./app-development/wpf-xaml-browser-applications-overview.md)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 瀏覽器裝載的應用程式是由 Windows Internet Explorer 或 Firefox 主控，而且可以是 XAML 瀏覽器應用程式（Xbap）或鬆散的 [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 檔如需詳細資訊，請參閱[WPF XAML 瀏覽器應用程式總覽](./app-development/wpf-xaml-browser-applications-overview.md)。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 瀏覽器裝載的應用程式預設會在部分信任安全性沙箱中執行，其限制為預設的 CAS**網際網路**區域許可權集合。 這可有效地隔離用戶端電腦 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 瀏覽器裝載的應用程式，就像您預期一般 Web 應用程式隔離的方式一樣。 XBAP 可以根據部署 URL 的安全性區域以及用戶端的安全性組態來提高權限，而最高為「完全信任」。 如需詳細資訊，請參閱 [WPF 部分信任安全性](wpf-partial-trust-security.md)。  
   
@@ -45,13 +45,13 @@ ms.locfileid: "72582404"
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>安全巡覽  
- 針對 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 區分兩種類型的導覽：應用程式和瀏覽器。  
+ 針對 Xbap，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 區分兩種類型的導覽：應用程式和瀏覽器。  
   
  「應用程式巡覽」是瀏覽器所裝載之應用程式的內容項目間的巡覽。 「瀏覽器巡覽」是變更瀏覽器本身的內容和位置 URL 的巡覽。 下圖顯示應用程式導覽（通常是 XAML）和瀏覽器導覽（通常是 HTML）之間的關聯性：
   
  ![應用程式導覽與瀏覽器導覽之間的關聯性。](./media/security-wpf/application-browser-navigation-relationship.png)  
   
- 針對流覽至 [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 所視為安全的內容類型，主要取決於是否使用應用程式導覽或瀏覽器導覽。  
+ 針對 XBAP 流覽至安全的內容類型，主要取決於是否使用應用程式導覽或瀏覽器導覽。  
   
 <a name="Application_Navigation_Security"></a>   
 ### <a name="application-navigation-security"></a>應用程式巡覽安全性  
@@ -83,7 +83,7 @@ ms.locfileid: "72582404"
   
 - **通訊協定**. 所使用的通訊協定為**HTTP**、 **HTTPs**、 **file**或**mailto**。  
   
- 如果 [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 嘗試以不符合這些條件的方式流覽至內容，則會擲回 <xref:System.Security.SecurityException>。  
+ 如果 XBAP 嘗試以不符合這些條件的方式流覽至內容，則會擲回 <xref:System.Security.SecurityException>。  
   
 <a name="InternetExplorerSecuritySettings"></a>   
 ## <a name="web-browsing-software-security-settings"></a>Web 瀏覽軟體安全性設定  
@@ -124,7 +124,7 @@ ms.locfileid: "72582404"
   
 - **鬆散 XAML**。 控制 Internet Explorer 是否可以流覽至和鬆散 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 檔案。 ([啟用]、[停用] 和 [提示] 選項)。  
   
-- **XAML 瀏覽器應用程式**。 控制 Internet Explorer 是否可以導覽並執行 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 ([啟用]、[停用] 和 [提示] 選項)。  
+- **XAML 瀏覽器應用程式**。 控制 Internet Explorer 是否可以流覽並執行 Xbap。 ([啟用]、[停用] 和 [提示] 選項)。  
   
  根據預設，這些設定都會針對 [**網際網路**]、[近端**內部**網路] 和 [**信任**的網站] 區域啟用，並針對 [**限制的網站**] 區域停用。  
   
@@ -207,9 +207,9 @@ ms.locfileid: "72582404"
 |---------------------|  
 |FEATURE_ENABLE_SCRIPT_PASTE_URLACTION_IF_PROMPT|  
   
- 如果您在 Windows Internet Explorer 中執行包含 WPF <xref:System.Windows.Controls.WebBrowser> 控制項的部分信任 [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)]，WPF 會在 Internet Explorer 進程的位址空間中裝載 WebBrowser ActiveX 控制項。 由於 WebBrowser ActiveX 控制項裝載于 Internet Explorer 進程中，因此 Internet Explorer 的所有功能控制也會針對 WebBrowser ActiveX 控制項啟用。  
+ 如果您在 Windows Internet Explorer 中執行包含 WPF <xref:System.Windows.Controls.WebBrowser> 控制項的部分信任 XAML 瀏覽器應用程式（XBAP），WPF 會在 Internet Explorer 進程的位址空間中裝載 WebBrowser ActiveX 控制項。 由於 WebBrowser ActiveX 控制項裝載于 Internet Explorer 進程中，因此 Internet Explorer 的所有功能控制也會針對 WebBrowser ActiveX 控制項啟用。  
   
- 與一般獨立應用程式相較之下，在 Internet Explorer 中執行的 XBAP 也會取得額外層級的安全性。 這項額外的安全性是因為 Internet Explorer，因此 WebBrowser ActiveX 控制項預設會在 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../includes/win7-md.md)] 上以受保護模式執行。 如需受保護模式的詳細資訊，請參閱[瞭解及使用受保護模式的 Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393)。  
+ 與一般獨立應用程式相較之下，在 Internet Explorer 中執行的 XBAP 也會取得額外層級的安全性。 這項額外的安全性是因為 Internet Explorer，因此 WebBrowser ActiveX 控制項預設會在 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../includes/win7-md.md)]上以受保護模式執行。 如需受保護模式的詳細資訊，請參閱[瞭解及使用受保護模式的 Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393)。  
   
 > [!NOTE]
 > 如果您嘗試在 Firefox 中執行包含 WPF <xref:System.Windows.Controls.WebBrowser> 控制項的 XBAP，而在網際網路區域中，則會擲回 <xref:System.Security.SecurityException>。 這是因為 WPF 安全性原則。  
@@ -220,7 +220,7 @@ ms.locfileid: "72582404"
   
  不過，APTCA 元件可能會在安裝到 GAC 後出現安全性缺陷。 發現安全性缺陷之後，組件發行者可以產生安全性更新來修正現有安裝上的問題，以及防止在發現問題之後可能進行的安裝。 雖然解除安裝組件可能會中斷其他使用組件的完全信任用戶端應用程式，但是更新的其中一個選項是解除安裝組件。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供一種機制，可讓您停用部分信任 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] 的 APTCA 元件，而不需卸載 APTCA 元件。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供一種機制，可讓您停用部分信任 Xbap 的 APTCA 元件，而不需卸載 APTCA 元件。  
   
  若要停用 APTCA 組件，您必須建立特殊登錄機碼︰  
   
@@ -279,4 +279,4 @@ ms.locfileid: "72582404"
 - [Patterns and Practices Security Guidance for Applications](https://go.microsoft.com/fwlink/?LinkId=117426) (應用程式的模式和實務安全性指南)
 - [程式碼存取安全性](../misc/code-access-security.md)
 - [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)
-- [XAML 概觀 (WPF)](./advanced/xaml-overview-wpf.md)
+- [XAML 概觀 (WPF)](../../desktop-wpf/fundamentals/xaml.md)

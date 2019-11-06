@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6fc01e98-c2e7-49de-ab9f-95937cc89017
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f4cb71e5ac0afe19e865ffca6fe578ad08f3162
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8764a3d665c997460419561eb168f92ca769c30c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773876"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192105"
 ---
 # <a name="assemblybindinfo-structure"></a>AssemblyBindInfo 結構
-提供參考的組件的詳細的資訊。  
+提供有關所參考元件的詳細資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,28 +35,28 @@ typedef struct _AssemblyBindInfo {
 } AssemblyBindInfo;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`dwAppDomainId`|唯一識別碼`IStream`呼叫所傳回的[ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)，從參考的組件即載入。|  
-|`lpReferencedIdentity`|參考的組件的唯一識別碼。|  
-|`lpPostPolicyIdentity`|參考的組件之後的任何繫結的原則值的應用程式識別碼。|  
-|`ePolicyLevel`|其中一個[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)值，指出哪一個版本控制，如果有的話，應該套用原則的參考組件。|  
+|`dwAppDomainId`|呼叫[IHostAssemblyStore：:P rovideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)所傳回之 `IStream` 的唯一識別碼，所參考的元件會從中載入。|  
+|`lpReferencedIdentity`|參考元件的唯一識別碼。|  
+|`lpPostPolicyIdentity`|應用程式的任何系結原則值之後，所參考元件的識別碼。|  
+|`ePolicyLevel`|其中一個[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)值，指出哪些版本設定原則（如果有的話）應套用至參考的元件。|  
   
 ## <a name="remarks"></a>備註  
- 主應用程式提供的唯一識別碼`dwAppDomainId`common language runtime (CLR)。 在呼叫之後`IHostAssemblyStore::ProvideAssembly`傳回時，執行階段會使用識別碼來判斷是否內容`IStream`已經對應。 如果是的話，則執行階段會載入現有的複本，而不是重新對應之資料流。 執行階段也會使用此識別碼做為查閱索引鍵從傳回的資料流呼叫[ihostassemblystore:: Providemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)。 因此，識別碼必須是唯一的模組要求，並針對組件要求。  
+ 主機會將唯一識別碼提供給 common language runtime （CLR） `dwAppDomainId`。 呼叫 `IHostAssemblyStore::ProvideAssembly` 傳回之後，執行時間會使用識別碼來判斷是否已對應 `IStream` 的內容。 若是如此，執行時間就會載入現有的複本，而不是重新對應資料流程。 執行時間也會使用此識別碼作為從呼叫 IHostAssemblyStore 所傳回之資料流程的查閱索引鍵[：:P rovidemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)。 因此，對於模組要求和元件要求而言，識別碼必須是唯一的。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.idl  
+ **標頭：** Mscoree.dll .idl  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [ICLRAssemblyIdentityManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)

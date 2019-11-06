@@ -16,15 +16,13 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 050b2c2b8b55bc79cf388ce7a8c197b14f3437d7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 5590bb07c3927ba50000d7f9d99f11e30373343d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934769"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105713"
 ---
 # <a name="common-type-system"></a>一般類型系統
 一般型別系統定義如何在 Common Language Runtime 中宣告、使用和管理型別，同時也是執行階段支援跨語言整合中很重要的一部分。 一般型別系統可執行下列功能：  
@@ -73,7 +71,7 @@ ms.locfileid: "69934769"
   
  下表將說明類別可以具有的某些特性。 每一個支援執行階段的語言都會提供一種方式，指出類別或類別成員具有這些其中一個或多個特性。 然而，以 .NET 為目標的程式設計語言則無法使用所有這些特性。  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |sealed|指定無法從這個型別衍生出其他類別。|  
 |實作|指出類別會以提供介面成員實作的方式來使用一個或多個介面。|  
@@ -190,7 +188,7 @@ ms.locfileid: "69934769"
 ### <a name="type-accessibility"></a>型別存取範圍  
  所有型別都具有修飾詞 (Modifier)，負責控制其他型別的存取範圍。 下表說明執行階段所支援的型別存取範圍。  
   
-|協助工具選項|說明|  
+|協助工具選項|描述|  
 |-------------------|-----------------|  
 |public|型別可供所有組件存取|  
 |組件 (assembly)|型別只能在本身的組件中存取|  
@@ -278,7 +276,7 @@ ms.locfileid: "69934769"
  如果結構的原始程式碼已定義建構函式，它們必須是參數化建構函式；結構並無法定義無參數建構函式，而且編譯器不會產生結構或其他實值型別的無參數建構函式。 所有實值型別都有隱含的無參數建構函式。 這個建構函式是由 Common Language Runtime 實作，會將結構的所有欄位初始化為其預設值。  
   
 <a name="Events"></a>   
-### <a name="events"></a>事件  
+### <a name="events"></a>Events  
  事件 (Event) 會定義可以回應的事件 (Incident)，並且定義用於訂閱、取消訂閱和產生事件 (Event) 的方法。 事件通常是用來通知其他型別有狀態變更。 如需詳細資訊，請參閱[事件](../../../docs/standard/events/index.md)。  
   
 <a name="NestedTypes"></a>   
@@ -291,15 +289,15 @@ ms.locfileid: "69934769"
 ## <a name="characteristics-of-type-members"></a>型別成員的特性  
  一般型別系統允許型別成員具有各種特性，但是所使用的語言並不需要支援所有特性。 下表將描述成員特性。  
   
-|特性|適用於|說明|  
+|特性|適用於|描述|  
 |--------------------|------------------|-----------------|  
 |abstract|方法、屬性和事件|型別不提供方法的實作。 繼承或實作抽象方法的型別必須提供方法的實作。 唯一的例外狀況 (Exception) 是當衍生型別本身也是抽象型別時。 所有抽象方法都是虛擬的。|  
-|private、family、assembly、family 和 assembly、family 或 assembly 或是 public|All|定義成員的存取範圍：<br /><br /> private<br /> 只能在與成員相同的型別或巢狀型別中存取。<br /><br /> family<br /> 可在與成員相同的型別和從它繼承而來的衍生型別中存取。<br /><br /> 組件<br /> 只能在已定義型別的組件中存取。<br /><br /> family 和 assembly<br /> 只能從同時限定家族和組件存取的型別中存取。<br /><br /> family 或 assembly<br /> 只能從限定家族或組件之一存取的型別中存取。<br /><br /> public<br /> 可從任何型別中存取。|  
+|private、family、assembly、family 和 assembly、family 或 assembly 或是 public|全部|定義成員的存取範圍：<br /><br /> private<br /> 只能在與成員相同的型別或巢狀型別中存取。<br /><br /> family<br /> 可在與成員相同的型別和從它繼承而來的衍生型別中存取。<br /><br /> 組件<br /> 只能在已定義型別的組件中存取。<br /><br /> family 和 assembly<br /> 只能從同時限定家族和組件存取的型別中存取。<br /><br /> family 或 assembly<br /> 只能從限定家族或組件之一存取的型別中存取。<br /><br /> public<br /> 可從任何型別中存取。|  
 |final|方法、屬性和事件|在衍生型別中無法覆寫虛擬方法。|  
 |initialize-only|欄位|只能初始化數值，在初始化之後即無法寫入。|  
 |執行個體|欄位、方法、屬性和事件|如果成員未標記為 `static` (C# 和 C++)、`Shared` (Visual Basic)、`virtual` (C# 和 C++) 或 `Overridable` (Visual Basic)，則為執行個體成員 (沒有 instance 關鍵字)。 在記憶體中，這類成員的複本數與使用它的物件數一樣。|  
 |常值|欄位|指定給欄位的數值是在編譯時間得知的內建實值型別的固定值。 常值 (Literal) 欄位有時候也稱為常數。|  
-|newslot 或 override|All|定義成員與具有相同簽章的繼承成員之間的互動方式：<br /><br /> newslot<br /> 隱藏具有相同簽章的繼承成員。<br /><br /> 覆寫<br /> 取代繼承虛擬方法的定義。<br /><br /> 預設值為 newslot。|  
+|newslot 或 override|全部|定義成員與具有相同簽章的繼承成員之間的互動方式：<br /><br /> newslot<br /> 隱藏具有相同簽章的繼承成員。<br /><br /> 覆寫<br /> 取代繼承虛擬方法的定義。<br /><br /> 預設值為 newslot。|  
 |靜態|欄位、方法、屬性和事件|成員屬於定義於其上的型別，而非屬於特定的型別執行個體；即使沒有建立型別執行個體，成員仍然存在，而且供型別的所有執行個體共用。|  
 |虛擬|方法、屬性和事件|方法可由衍生型別實作，而且可以用靜態或動態方式叫用。 如果使用動態引動，在執行時期進行呼叫的執行個體型別會決定呼叫哪一個方法實作，而不是由編譯時間得知的型別決定。 若要用靜態方式叫用虛擬方法，可能必須將變數轉型為使用方法所需版本的型別。|  
   

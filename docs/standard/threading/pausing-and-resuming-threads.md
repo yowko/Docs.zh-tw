@@ -10,14 +10,12 @@ helpviewer_keywords:
 - threading [.NET Framework], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f3dcee9c45cdbf029ccba90a963c9cea0a9c7ad4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 3020694b93479d5f1d64d31c203f8fe033a10320
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963569"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128997"
 ---
 # <a name="pausing-and-interrupting-threads"></a>暫停和中斷執行緒
 
@@ -49,7 +47,7 @@ ms.locfileid: "69963569"
   
 - <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 會從任何可能的等候中喚醒執行緒，並造成 <xref:System.Threading.ThreadAbortException> 在執行緒中被擲回。 如需詳細資訊，請參閱[終結執行緒](../../../docs/standard/threading/destroying-threads.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadInterruptedException>

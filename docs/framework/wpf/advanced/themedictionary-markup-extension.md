@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: 471b444b66c5e8173542ab1e27cb1233bfde133f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ab38c2c885e230183852fff895e0a8a8f1d7a666
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582324"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459484"
 ---
 # <a name="themedictionary-markup-extension"></a>ThemeDictionary 標記延伸
 為自訂控制項的作者或應用程式提供一種方式，整合協力廠商的控制項來載入佈景主題特定的資源字典，以便在設定控制項樣式時使用。  
@@ -41,11 +41,11 @@ ms.locfileid: "72582324"
 |`assemblyUri`|包含主題資訊之元件的統一資源識別項（URI）。 一般而言，這個 Pack URI 會參考較大封裝中的組件。 組件資源和 Pack URI 可簡化部署問題。 如需詳細資訊，請參閱 [WPF 中的 Pack URI](../app-development/pack-uris-in-wpf.md)。|  
   
 ## <a name="remarks"></a>備註  
- 此延伸模組的目的是只填滿一個特定的屬性值： <xref:System.Windows.ResourceDictionary.Source%2A?displayProperty=nameWithType> 的值。  
+ 此延伸模組的目的是只填滿一個特定的屬性值： <xref:System.Windows.ResourceDictionary.Source%2A?displayProperty=nameWithType>的值。  
   
  藉由使用此延伸模組，您可以指定僅限資源的單一元件，其中包含一些樣式，只有在 Windows Aero 主題套用至使用者的系統時才會使用，其他樣式則僅適用于 Luna 主題作用中的情況等。 藉由使用此延伸模組，控制項特定的資源字典內容可在必要時自動失效並重新載入以專用於另一個佈景主題。  
   
- @No__t_0 字串（<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> 屬性值）會形成命名慣例的基礎，以識別特定主題所適用的字典。 @No__t_1 的 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> 邏輯會產生一個指向特定主題字典變異的統一資源識別項（URI），如同在先行編譯的資源元件中所包含的一樣。 此處將不會完整說明此慣例，或是概念上與一般控制項樣式設定和頁面/應用程式層級樣式設定進行的佈景主題互動。 使用 `ThemeDictionary` 的基本案例是指定在應用層級宣告之 `ResourceDictionary` 的 <xref:System.Windows.ResourceDictionary.Source%2A> 屬性。 當您透過 `ThemeDictionary` 延伸模組（而非直接 URI）提供元件的 URI 時，延伸模組邏輯將提供當系統主題變更時適用的失效邏輯。  
+ `assemblyUri` 字串（<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> 屬性值）會形成命名慣例的基礎，以識別特定主題所適用的字典。 `ThemeDictionary` 的 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> 邏輯會產生一個指向特定主題字典變異的統一資源識別項（URI），如同在先行編譯的資源元件中所包含的一樣。 此處將不會完整說明此慣例，或是概念上與一般控制項樣式設定和頁面/應用程式層級樣式設定進行的佈景主題互動。 使用 `ThemeDictionary` 的基本案例是指定在應用層級宣告之 `ResourceDictionary` 的 <xref:System.Windows.ResourceDictionary.Source%2A> 屬性。 當您透過 `ThemeDictionary` 延伸模組（而非直接 URI）提供元件的 URI 時，延伸模組邏輯將提供當系統主題變更時適用的失效邏輯。  
   
  屬性 (Attribute) 語法是最常搭配這個標記延伸來使用的語法。 `ThemeDictionary` 識別項字串後所提供的字串語彙基元，是指派做為基礎 <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> 延伸類別的 <xref:System.Windows.ThemeDictionaryExtension> 值。  
   
@@ -66,6 +66,6 @@ ms.locfileid: "72582324"
 ## <a name="see-also"></a>請參閱
 
 - [設定樣式和範本](../controls/styling-and-templating.md)
-- [XAML 概觀 (WPF)](xaml-overview-wpf.md)
+- [XAML 概觀 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [WPF 應用程式資源、內容和資料檔案](../app-development/wpf-application-resource-content-and-data-files.md)

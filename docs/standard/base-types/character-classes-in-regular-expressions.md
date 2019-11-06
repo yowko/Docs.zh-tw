@@ -12,15 +12,13 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: f6d96d14a4d05178a8f90c15edecb1318e8c5a36
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: dbfa61077cbfdd7da104dc12f304a4096b3c032d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957193"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120605"
 ---
 # <a name="character-classes-in-regular-expressions"></a>規則運算式中的字元類別
 
@@ -247,7 +245,7 @@ ms.locfileid: "71957193"
   
  下列範例會使用 `\w` 語言項目比對文字中重複的字元。 這個範例會定義規則運算式模式 `(\w)\1`，該模式解譯如下。  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |(\w)|比對文字字元。 這是第一個擷取群組。|  
 |\1|比對第一個擷取的值。|  
@@ -281,7 +279,7 @@ ms.locfileid: "71957193"
   
  以下範例將說明 `\W` 字元類別。  它會定義規則運算式模式 `\b(\w+)(\W){1,2}`，該模式會比對後面接一個或多個非文字字元的文字，例如空白字元或標點符號。 規則運算式的解譯方式如下表所示。  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |\b|開始字緣比對。|  
 |(\w+)|比對一個或多個文字字元。 這是第一個擷取群組。|  
@@ -310,7 +308,7 @@ ms.locfileid: "71957193"
   
  以下範例將說明 `\s` 字元類別。 它會定義規則運算式模式 `\b\w+(e)?s(\s|$)`，該模式會比對結尾為 "s" 或 "es" 且後面加上空白字元或是輸入字串結尾的文字。 規則運算式的解譯方式如下表所示。  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |\b|開始字緣比對。|  
 |\w+|比對一個或多個文字字元。|  
@@ -329,7 +327,7 @@ ms.locfileid: "71957193"
   
  下列範例將說明 `\S` 語言項目。 規則運算式模式 `\b(\S+)\s?` 會比對以空白字元分隔的字串。 在比對之 <xref:System.Text.RegularExpressions.GroupCollection> 物件中的第二個項目包含相符的字串。 規則運算式的解譯方式如下表所示。  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`(\S+)`|比對一個或多個非空白字元。 這是第一個擷取群組。|  
@@ -561,7 +559,7 @@ ms.locfileid: "71957193"
   
  下列範例會定義規則運算式 (`^[0-9-[2468]]+$`)，該運算式會比對輸入字串中的零和奇數數字。  規則運算式的解譯方式如下表所示。  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |^|從輸入字串開頭開始比對。|  
 |`[0-9-[2468]]+`|比對 0 到 9 中不包括 2、4、6 和 8 的任何出現一次或多次的字元。 換句話說，就是比對出現一次或多次的零或奇數。|  
@@ -570,7 +568,7 @@ ms.locfileid: "71957193"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/classsubtraction1.cs#15)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/classsubtraction1.vb#15)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Char.GetUnicodeCategory%2A>
 - [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

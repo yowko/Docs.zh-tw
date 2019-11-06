@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 68e20e62-203d-46d8-bb91-8d3c61cfacc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ca3b86e90dcb76c1fece44cf2c5ed68e073d8e7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7edf0065fa7eb39dada167a682f2b634a438f1f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757215"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138405"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>ICorDebugHeapValue::IsValid 方法
-取得值，指出此 ICorDebugHeapValue 所代表的物件是否有效。  
+取得值，指出此 ICorDebugHeapValue 所表示的物件是否有效。  
   
- 這個方法已被取代，在.NET Framework 2.0 版。  
+ 這個方法已在 .NET Framework 版本2.0 中被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,18 +37,18 @@ HRESULT IsValid (
   
 ## <a name="parameters"></a>參數  
  `pbValid`  
- [out]布林值，指出是否在堆積上的這個值是有效的指標。  
+ 脫銷布林值的指標，指出堆積上的這個值是否有效。  
   
 ## <a name="remarks"></a>備註  
- 值不正確，如果它已經由記憶體回收行程回收。  
+ 如果垃圾收集行程已回收值，則該值無效。  
   
- 這個方法已被取代。 在.NET Framework 2.0 中，所有值都是有效期限[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)呼叫時，在這段值都會失效。  
+ 這個方法已被取代。 在 .NET Framework 2.0 中，所有值都是有效的，直到呼叫[ICorDebugController：： Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)為止，此時值會無效。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataContractJsonSerializer changes
 - serialization changes
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
-ms.openlocfilehash: 5f8218d0f369f25b1add501fdc975d6dccfe90fa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: faa7a32766a3ea1ef9cddcdb8af8fd0dd5a6f287
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126155"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457822"
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>風險降低︰使用 DataContractJsonSerializer 序列化控制字元
 
@@ -40,4 +40,4 @@ ms.locfileid: "73126155"
  
 ## <a name="see-also"></a>請參閱
 
-- [.NET Framework 4.7 中的重定目標變更](retargeting-changes-in-the-net-framework-4-7.md)
+- [應用程式相容性](application-compatibility.md)

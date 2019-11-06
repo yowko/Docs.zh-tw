@@ -13,14 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ee06454575afc16c904b60a2301feeb05debdcdf
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 8bf6870e3eb3ef65b498f431cb2b8805eee7ec3c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957170"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140122"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>規則運算式中的分組建構
 分組建構會描寫規則運算式的子運算式，以及擷取輸入字串的子字串。 您可以使用分組建構來執行下列作業：  
@@ -54,12 +52,12 @@ ms.locfileid: "71957170"
 ## <a name="matched-subexpressions"></a>相符子運算式  
  下列分組建構會擷取相符子運算式：  
   
- `(` *子運算式* `)`  
+ `(` subexpression `)`  
   
  其中 *subexpression* 是任何有效的規則運算式模式。 使用括號的擷取會依據規則運算式中的左括號順序，從一開始，由左至右自動編號。 編號零的擷取是整個規則運算式模式比對的文字。  
   
 > [!NOTE]
-> 根據預設， `(`*子運算式*`)` 語言項目會擷取相符的子運算式。 但是如果規則運算式模式比對方法的 <xref:System.Text.RegularExpressions.RegexOptions> 參數包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 旗標，或這個子運算式套用了 `n` 選項 (請參閱本主題稍後的 [群組選項](#group_options) )，則不會擷取相符子運算式。  
+> 根據預設， `(`*子運算式*`)` 語言項目會擷取相符的子運算式。 但是如果規則運算式模式比對方法的 <xref:System.Text.RegularExpressions.RegexOptions> 參數包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 旗標，或這個子運算式套用了 `n` 選項 (請參閱本主題稍後的[群組選項](#group_options))，則不會擷取相符的子運算式。  
   
  您可以用四種方式來存取擷取群組：  
   
@@ -67,9 +65,9 @@ ms.locfileid: "71957170"
   
 - 在規則運算式中使用具名的反向參考建構。 使用語法 `\k<`*name*`>`(其中 where *name* 是擷取群組的名稱) 或 `\k<`*number*`>`(其中 where *number* 是擷取群組的序號)，在相同的規則運算式中參考相符子運算式。 擷取群組的預設名稱與其序號相同。 如需詳細資訊，請參閱本主題稍後的 [具名的相符子運算式](#named_matched_subexpression) 。  
   
-- 在 `$`*number* $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 取代順序，其中 *number* 是所擷取子運算式的序號)，在相同的規則運算式中參考相符子運算式。  
+- 在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法呼叫中使用 `$`*number* 取代序列，其中 *number* 是所擷取子運算式的序號。  
   
-- 以程式設計方式，使用 <xref:System.Text.RegularExpressions.GroupCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 物件。 集合中位置為零的成員代表整個規則運算式相符。 每個後續成員各代表一個相符子運算式。 如需詳細資訊，請參閱 [Grouping Constructs and Regular Expression Objects](#Objects) 一節。  
+- 以程式設計方式，使用 <xref:System.Text.RegularExpressions.GroupCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 物件。 集合中位置為零的成員代表整個規則運算式相符。 每個後續成員各代表一個相符子運算式。 如需詳細資訊，請參閱[群組建構和規則運算式物件](#Objects)一節。  
   
  下列範例說明可識別文字中重複文字的規則運算式。 規則運算式模式的兩個擷取群組代表重複文字的兩個執行個體。 擷取第二個執行個體是為了報告其於輸入字串中的開始位置。  
   
@@ -102,7 +100,7 @@ ms.locfileid: "71957170"
  其中 *name* 是有效的群組名稱，而 *subexpression* 是任何有效的規則運算式模式。 *name* 絕不能包含任何標點符號字元，而且不能以數字開頭。  
   
 > [!NOTE]
-> 如果規則運算式模式比對方法的 <xref:System.Text.RegularExpressions.RegexOptions> 參數包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 旗標，或這個子運算式套用了 `n` 選項 (請參閱本主題稍後的 [群組選項](#group_options) )，則擷取子運算式的唯一方式，就是明確地為擷取群組命名。  
+> 如果規則運算式模式比對方法的 <xref:System.Text.RegularExpressions.RegexOptions> 參數包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 旗標，或這個子運算式套用了 `n` 選項 (請參閱本主題稍後的[群組選項](#group_options))，則擷取子運算式的唯一方式就是明確地為擷取群組命名。  
   
  您可以用下列方式來存取具名的擷取群組：  
   
@@ -110,7 +108,7 @@ ms.locfileid: "71957170"
   
 - 在規則運算式中使用反向參考建構。 使用語法 `\`*number*(其中 where *number* 是所擷取子運算式的序號)，在相同的規則運算式中參考相符子運算式。 具名的相符子運算式會在相符子運算式之後，由左至右連續編號。  
   
-- 在 `${`*name*`}` $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 取代順序，其中 *name* 是所擷取子運算式的名稱)，在相同的規則運算式中參考相符子運算式。  
+- 在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法呼叫中使用 `${`*name*`}` 取代序列，其中 *name* 是所擷取子運算式的名稱。  
   
 - 在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法呼叫中使用 `$`*number* 取代序列，其中 *number* 是所擷取子運算式的序號。  
   
@@ -120,7 +118,7 @@ ms.locfileid: "71957170"
   
  有一個簡單的規則運算式模式，說明如何以程式設計方式，或是使用規則運算式語言語法，來參考編號 (未具名) 和具名群組。 規則運算式 `((?<One>abc)\d+)?(?<Two>xyz)(.*)` 會依號碼或依名稱產生下列擷取群組。 第一個擷取群組 (編號 0) 一律參考整個模式。  
   
-|number|Name|模式|  
+|number|[屬性]|模式|  
 |------------|----------|-------------|  
 |0|0 (預設名稱)|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
 |1|1 (預設名稱)|`((?<One>abc)\d+)`|  
@@ -266,7 +264,7 @@ ms.locfileid: "71957170"
 ## <a name="group-options"></a>群組選項  
  下列分組建構會在子運算式中套用或停用指定的選項：  
   
- `(?imnsx-imnsx:` *子運算式* `)`  
+ `(?imnsx-imnsx:` subexpression `)`  
   
  其中 *subexpression* 是任何有效的規則運算式模式。 例如， `(?i-s:)` 會開啟不區分大小寫，並停用單行模式。 如需您可以指定之內嵌選項的詳細資訊，請參閱 [規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)。  
   
@@ -290,7 +288,7 @@ ms.locfileid: "71957170"
 ## <a name="zero-width-positive-lookahead-assertions"></a>零寬度右合樣 (Positive Lookahead) 判斷提示  
  下列分組建構可定義零寬度右合樣 (Positive Lookahead) 判斷提示：  
   
- `(?=` *子運算式* `)`  
+ `(?=` subexpression `)`  
   
  其中 *subexpression* 是任何規則運算式模式。 若要讓比對成功，輸入字串必須符合 *subexpression*中的規則運算式模式，但是相符的子字串不會包含在比對結果中。 零寬度右合樣 (Positive Lookahead) 判斷提示不會回溯。  
   
@@ -313,7 +311,7 @@ ms.locfileid: "71957170"
 ## <a name="zero-width-negative-lookahead-assertions"></a>零寬度右不合樣 (Negative Lookahead) 判斷提示  
  下列分組建構可定義零寬度右不合樣 (Negative Lookahead) 判斷提示：  
   
- `(?!` *子運算式* `)`  
+ `(?!` subexpression `)`  
   
  其中 *subexpression* 是任何規則運算式模式。 為了若要讓比對成功，輸入字串絕不能符合 *subexpression*中的規則運算式模式，但是相符的字串不會包含在比對結果中。  
   
@@ -351,7 +349,7 @@ ms.locfileid: "71957170"
 ## <a name="zero-width-positive-lookbehind-assertions"></a>零寬度左合樣 (Positive Lookbehind) 判斷提示  
  下列分組建構可定義零寬度左合樣 (Positive Lookbehind) 判斷提示：  
   
- `(?<=` *子運算式* `)`  
+ `(?<=` subexpression `)`  
   
  其中 *subexpression* 是任何規則運算式模式。 若要讓比對成功， *subexpression* 必須出現在目前位置左邊的輸入字串中，但是 `subexpression` 不會包含在比對結果中。 零寬度左合樣 (Positive Lookbehind) 判斷提示不會回溯。  
   
@@ -376,7 +374,7 @@ ms.locfileid: "71957170"
 ## <a name="zero-width-negative-lookbehind-assertions"></a>零寬度左不合樣 (Negative Lookbehind) 判斷提示  
  下列分組建構可定義零寬度左不合樣 (Negative Lookbehind) 判斷提示：  
   
- `(?<!` *子運算式* `)`  
+ `(?<!` subexpression `)`  
   
  其中 *subexpression* 是任何規則運算式模式。 若要讓比對成功， *subexpression* 絕不能出現在目前位置左邊的輸入字串中。 不過，不符合 `subexpression` 的任何子字串都不會包含在比對結果中。  
   
@@ -401,7 +399,7 @@ ms.locfileid: "71957170"
 ## <a name="nonbacktracking-subexpressions"></a>非回溯子運算式  
  下列分組建構代表非回溯子運算式 (也稱為「窮盡」(Greedy) 子運算式)：  
   
- `(?>` *子運算式* `)`  
+ `(?>` subexpression `)`  
   
  其中 *subexpression* 是任何規則運算式模式。  
   
@@ -454,7 +452,7 @@ ms.locfileid: "71957170"
   
  第二個擷取群組會比對句子中的每個字。 第一個擷取群組會比對每個字以及接在該字後面的標點符號和空白字元。 索引為 2 的 <xref:System.Text.RegularExpressions.Group> 物件會提供第二個擷取群組所比對之文字的相關資訊。 您可以從 <xref:System.Text.RegularExpressions.CaptureCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 物件取得擷取群組所擷取的一整組文字。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

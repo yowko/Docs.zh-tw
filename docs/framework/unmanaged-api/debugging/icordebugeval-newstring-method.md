@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29e7a14b-d50e-4852-bfda-011b76c0c9ee
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50a18f435063b74b837dbfe9e4f1d986bb735039
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a5d421bf0eb8ec5a34fe21d6efc79bbe56c294c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753350"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137648"
 ---
 # <a name="icordebugevalnewstring-method"></a>ICorDebugEval::NewString 方法
-會配置新的字串執行個體具有指定的內容。  
+使用指定的內容，配置新的字串實例。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,16 +35,16 @@ HRESULT NewString (
   
 ## <a name="parameters"></a>參數  
  `string`  
- [in]字串內容的指標。  
+ 在字串內容的指標。  
   
 ## <a name="remarks"></a>備註  
- 字串一律會建立目前執行所在之執行緒的應用程式定義域中。  
+ 此字串一律會線上程目前執行所在的應用程式域中建立。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

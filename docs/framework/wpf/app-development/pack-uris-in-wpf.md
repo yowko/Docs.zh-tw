@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 59c72d9ae12a014a8c47cb3b2852b337b173446c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: efaf55220a41526b8952f01b8225f8336a4e8657
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580624"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459662"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF 中的 Pack URI
 
@@ -139,7 +139,7 @@ pack://*授權*/*路徑*
 
 `pack://application:,,,/ReferencedAssembly;v1.0.0.1;component/ResourceFile.xaml`
 
-請注意，所參考元件資源檔的 pack URI 語法只能搭配 application:///授權單位使用。 例如，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 不支援下列各項。
+請注意，所參考元件資源檔的 pack URI 語法只能搭配 application:///授權單位使用。 例如，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]不支援下列各項。
 
 `pack://siteoforigin:,,,/SomeAssembly;component/ResourceFile.xaml`
 
@@ -188,7 +188,7 @@ pack://*授權*/*路徑*
 
 設定為 MSBuild `Page` 專案的 XAML 檔案，會以與資源檔相同的方式編譯成元件。 因此，可以使用資源檔的 pack Uri 來識別 MSBuild `Page` 專案。
 
-通常設定為 MSBuild `Page` 專案的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案類型具有下列其中一項做為其根項目：
+通常設定為 MSBuild`Page` 專案的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案類型具有下列其中一項做為其根項目：
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 
@@ -265,7 +265,7 @@ Pack Uri 的格式可讓不同類型檔案的套件 Uri 看起來相同。 例�
 
 URI 解析不適用於參考下列各項的 Uri：
 
-- 參考元件中的內容檔： [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 不支援這些檔案類型。
+- 參考元件中的內容檔： [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]不支援這些檔案類型。
 
 - 參考元件中的內嵌檔案：識別它們的 Uri 是唯一的，因為它們同時包含參考元件的名稱和 `;component` 尾碼。
 
@@ -397,7 +397,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 ### <a name="common-pack-uri-scenarios"></a>常見套件 URI 案例
 
-前面幾節已討論如何建立套件 Uri，以識別資源、內容和來源網站檔案。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中，這些結構會以各種不同的方式使用，而下列各節將涵蓋數個常見的用法。
+前面幾節已討論如何建立套件 Uri，以識別資源、內容和來源網站檔案。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，這些結構會以各種不同的方式使用，而下列各節將涵蓋數個常見的用法。
 
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>
 
@@ -407,11 +407,11 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]
 
-獨立應用程式和 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 也可以指定頁面做為初始 UI，如下列範例所示。
+獨立應用程式和 XAML 瀏覽器應用程式（Xbap）也可以指定頁面做為初始 UI，如下列範例所示。
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]
 
-如果應用程式是獨立應用程式，而且已使用 <xref:System.Windows.Application.StartupUri%2A> 來指定頁面，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 就會開啟 <xref:System.Windows.Navigation.NavigationWindow> 來裝載該頁面。 針對 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，此頁面會顯示在主機瀏覽器中。
+如果應用程式是獨立應用程式，而且已使用 <xref:System.Windows.Application.StartupUri%2A>來指定頁面，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 就會開啟 <xref:System.Windows.Navigation.NavigationWindow> 來裝載該頁面。 針對 Xbap，此頁面會顯示在主機瀏覽器中。
 
 <a name="Navigating_to_a_Page"></a>
 
@@ -423,7 +423,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]
 
-如需在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中流覽各種方式的詳細資訊，請參閱[導覽總覽](navigation-overview.md)。
+如需在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中流覽各種方式的詳細資訊，請參閱[導覽總覽](navigation-overview.md)。
 
 <a name="Specifying_a_Window_Icon"></a>
 
@@ -457,7 +457,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 
-如需 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 主題的總覽，請參閱設定[樣式和範本](../controls/styling-and-templating.md)。
+如需 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]主題的總覽，請參閱設定[樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)。
 
 ## <a name="see-also"></a>請參閱
 

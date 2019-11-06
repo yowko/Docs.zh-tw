@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c68375d-145d-46ef-a7c8-2dc4257472de
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 46ee21a9fd7b9267672a14107c1706af5d5cdcc5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 402a0e8808b51fd4c09b254114292d4c851b2760
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763580"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129504"
 ---
 # <a name="icordebugmodulegetsize-method"></a>ICorDebugModule::GetSize 方法
-取得大小，以位元組為單位的模組。  
+取得模組的大小（以位元組為單位）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,15 +35,15 @@ HRESULT GetSize(
   
 ## <a name="parameters"></a>參數  
  `pcBytes`  
- [out]該模組，以位元組為單位的大小。  
+ 脫銷模組的大小（以位元組為單位）。  
   
- 如果從原生映像產生器 (NGen.exe) 產生的模組，模組的大小會是零。  
+ 如果模組是從原生映射產生器（Ngen.exe）所產生，則模組的大小會是零。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

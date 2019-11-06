@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2863b33b-a541-462c-bbe8-702a2832898e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d29b9e2a9b9022f682065816a62734d6c5b2d62
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d3f7c24b4bd373924c44dbc0490c890e7f1322bd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796416"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131738"
 ---
 # <a name="iinstallreferenceenum-interface"></a>IInstallReferenceEnum 介面
 代表安裝在全域組件快取中參考元件的列舉值。  
@@ -42,7 +40,7 @@ interface IInstallReferenceEnum : IUnknown {
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetNextInstallReferenceItem 方法](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|取得這個`IInstallReferenceItem` `IInstallReferenceEnum`中所包含下一個的指標。|  
+|[GetNextInstallReferenceItem 方法](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|取得此 `IInstallReferenceEnum`所包含下一個 `IInstallReferenceItem` 的指標。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
@@ -51,7 +49,7 @@ interface IInstallReferenceEnum : IUnknown {
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [融合介面](fusion-interfaces.md)
 - [IInstallReferenceItem 介面](iinstallreferenceitem-interface.md)

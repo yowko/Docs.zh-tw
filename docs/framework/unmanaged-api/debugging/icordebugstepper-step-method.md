@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 38c1940b-ada1-40ba-8295-4c0833744e1e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d0f601c4b454b55edc5fa25eb2ee33d491009b9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 43f86e704e4a52a702b8f563e3c613806eb061b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760576"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137523"
 ---
 # <a name="icordebugstepperstep-method"></a>ICorDebugStepper::Step 方法
-導致此 ICorDebugStepper 單一步驟及其包含的執行緒，以及 （選擇性） 若要繼續單一位逐步執行會在執行緒內呼叫的函式。  
+使此 ICorDebugStepper 逐步執行其包含的執行緒，並選擇性地繼續透過線上程內呼叫的函式進行單一逐步執行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,16 +35,16 @@ HRESULT Step (
   
 ## <a name="parameters"></a>參數  
  `bStepIn`  
- [in]若要設定`true`逐步執行至呼叫執行緒內的函式。 若要設定`false`進入函式。  
+ 在設定為 `true`，以逐步執行線上程內呼叫的函式。 設定為 [`false`] 以不進入函式。  
   
 ## <a name="remarks"></a>備註  
- Common language runtime 在這個步進框架中執行下一個 managed 的指令時，就會完成的步驟。 如果`Step`是步進上呼叫，這不是在 managed 程式碼、 執行緒所執行的下一個 managed 程式碼指令時，步驟就會完成。  
+ 當 common language runtime 在這個分檔器的框架中執行下一個 managed 指令時，就會完成此步驟。 如果在不是 managed 程式碼的分檔器上呼叫 `Step`，當執行緒執行下一個 managed 程式碼指令時，步驟就會完成。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

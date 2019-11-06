@@ -2,14 +2,12 @@
 title: ICorDebugDataTarget3::GetLoadedModules 方法
 ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 120b839b2b11c85f42bb1a0ae4701de0dea33879
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6ee2215e2b3e3bd911158b3fc801361fc4e22db1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912827"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136678"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>ICorDebugDataTarget3::GetLoadedModules 方法
 取得到目前為止已載入的模組清單。  
@@ -32,7 +30,7 @@ HRESULT GetLoadedModules(
  [out] 傳回該模組資訊之模組數目的指標。  
   
  `pLoadedModules`  
- 脫銷[ICorDebugLoadedModule](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)物件陣列的指標, 提供已載入模組的相關資訊。  
+ 脫銷[ICorDebugLoadedModule](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)物件陣列的指標，提供已載入模組的相關資訊。  
   
 ## <a name="remarks"></a>備註  
   
@@ -44,11 +42,11 @@ HRESULT GetLoadedModules(
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugDataTarget3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget3-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

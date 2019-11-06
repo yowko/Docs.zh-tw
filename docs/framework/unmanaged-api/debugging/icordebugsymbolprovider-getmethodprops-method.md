@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider::GetMethodProps 方法
+title: ICorDebugSymbolProvider：： GetMethodProps 方法
 ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95610bc527b8f5b90df906b6260eb636d61dbcd8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 811106216e1e454ddf342af1578f74c80ba2acc9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957313"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138835"
 ---
-# <a name="icordebugsymbolprovidergetmethodprops-method"></a>ICorDebugSymbolProvider::GetMethodProps 方法
+# <a name="icordebugsymbolprovidergetmethodprops-method"></a>ICorDebugSymbolProvider：： GetMethodProps 方法
 傳回方法屬性的相關資訊，例如方法的中繼資料語彙基元，以及其泛型參數的相關資訊 (假設該方法中有相對虛擬位址 (RVA))。  
   
 ## <a name="syntax"></a>語法  
@@ -47,7 +45,7 @@ HRESULT GetMethodProps(
  [out] 保留所有泛型參數之 TypeSpec 簽章的緩衝區。  
   
 ## <a name="remarks"></a>備註  
- 若要取得`signature`方法陣列所需的大小, 請`cbSignature`將引數設為 0 `signature` , 並將設定為**null**。 當這個方法傳回時，`pcbSignature` 會包含 `signature` 陣列所需的位元組數目。  
+ 若要取得方法的 `signature` 陣列所需的大小，請將 `cbSignature` 引數設定為0，並將 `signature` 為**null**。 當這個方法傳回時，`pcbSignature` 會包含 `signature` 陣列所需的位元組數目。  
   
 > [!NOTE]
 > 這個方法僅適用於 .NET Native。  
@@ -57,11 +55,11 @@ HRESULT GetMethodProps(
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [GetTypeProps 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-gettypeprops-method.md)
 - [ICorDebugSymbolProvider 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)

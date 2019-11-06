@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 799740aa-46ec-4532-95da-6444565b4971
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d8ed3a85d12d35bb4779297a7bbc94ce911accef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d4b8bb7d5b3da15f665849c8d18c3a10dbe600b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767981"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138315"
 ---
 # <a name="corbindtoruntime-function"></a>CorBindToRuntime 函式
-可讓 unmanaged 主應用程式將 common language runtime (CLR) 載入程序。  
+讓非受控主機將 common language runtime （CLR）載入進程中。  
   
- 此函式已被取代，在.NET Framework 4。  
+ 此函式在 .NET Framework 4 中已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,59 +41,59 @@ HRESULT CorBindToRuntime (
   
 ## <a name="parameters"></a>參數  
  `pwszVersion`  
- [in]想要載入的字串，描述的 CLR 版本。  
+ 在描述您要載入之 CLR 版本的字串。  
   
- 在.NET Framework 的版本號碼是由以句點分隔的四個部分所組成： *major.minor.build.revision*。 將字串傳遞為`pwszVersion`不可使用字元"v"後面接著的版本號碼 (例如，"v1.0.1529 」) 的前三個部分。  
+ .NET Framework 中的版本號碼包含四個以句點分隔的部分： [主要]. [*次要. 組建. 修訂*]。 當做 `pwszVersion` 傳遞的字串必須以 "v" 字元開頭，後面接著版本號碼的前三個部分（例如 "v 1.0.1529"）。  
   
- 某些版本的 CLR 會以指定與舊版的 clr 相容的原則陳述式安裝。 根據預設，啟動填充碼會評估`pwszVersion`針對原則陳述式並載入最新版本的執行階段，是與所要求的版本相容。 主機可以強制填充碼略過原則評估，並載入指定的確切版本`pwszVersion`傳遞的值，藉以`STARTUP_LOADER_SAFEMODE`如`flags`參數，如下所述。  
+ 某些 CLR 版本會與原則語句一起安裝，以指定與舊版 CLR 的相容性。 根據預設，啟動填充碼會針對原則語句評估 `pwszVersion`，並載入與所要求版本相容的最新執行階段版本。 主機可以強制填充碼略過原則評估，並藉由傳遞 `flags` 參數的 `STARTUP_LOADER_SAFEMODE` 值來載入 `pwszVersion` 中指定的確切版本，如下所述。  
   
- 如果呼叫端指定為 null `pwszVersion`，載入執行階段的最新的版本。 將 null 傳遞不提供主機載入執行階段版本的任何控制項。 雖然這種方法可能適用於某些情況下，強烈建議主應用程式，提供要載入的特定版本。  
+ 如果呼叫者為 `pwszVersion`指定 null，則會載入最新版本的執行時間。 傳遞 null 可讓主機無法控制載入的執行階段版本。 雖然這種方法可能適用于某些情況，但強烈建議主機提供要載入的特定版本。  
   
  `pwszBuildFlavor`  
- [in]字串，指定是否要載入的伺服器或工作站組建的 clr。 有效值為 `svr` 和 `wks`。 伺服器組建已最佳化，可利用多個處理器的記憶體回收，以及工作站建置適用於單一處理器電腦上執行的用戶端應用程式。  
+ 在字串，指定是否要載入伺服器或 CLR 的工作站組建。 有效值為 `svr` 和 `wks`。 伺服器組建已優化，可利用多個處理器進行垃圾收集，而且工作站組建已針對在單處理器機器上執行的用戶端應用程式優化。  
   
- 如果`pwszBuildFlavor`設為 null，工作站組建已載入。 單一處理器電腦上執行時，會一律載入工作站組建，即使`pwszBuildFlavor`設為`svr`。 不過，如果`pwszBuildFlavor`設為`svr`以及指定並行記憶體回收 (請參閱說明，`flags`參數)，會載入伺服器組建。  
+ 如果 `pwszBuildFlavor` 設定為 null，則會載入工作站組建。 在單處理器電腦上執行時，一律會載入工作站組建，即使 `pwszBuildFlavor` 設定為 `svr`也一樣。 不過，如果 `pwszBuildFlavor` 設定為 `svr` 且同時指定了並行垃圾收集（請參閱 `flags` 參數的描述），則會載入伺服器組建。  
   
  `rclsid`  
- [in]`CLSID`的實作的 coclass [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)介面。 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
+ 在執行[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)介面之 coclass 的 `CLSID`。 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
   
  `riid`  
- [in]`IID`的要求的介面，從`rclsid`。 支援的值為 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
+ 在從 `rclsid`所要求之介面的 `IID`。 支援的值為 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
   
  `ppv`  
- [out]若要傳回的介面指標`riid`。  
+ 脫銷要 `riid`的傳回介面指標。  
   
 ## <a name="remarks"></a>備註  
- 如果`pwszVersion`指定不存在，執行階段版本`CorBindToRuntimeEx`傳回 CLR_E_SHIM_RUNTIMELOAD HRESULT 值。  
+ 如果 `pwszVersion` 指定不存在的執行階段版本，`CorBindToRuntimeEx` 會傳回 CLR_E_SHIM_RUNTIMELOAD 的 HRESULT 值。  
   
-## <a name="execution-context-and-flow-of-windows-identity"></a>執行內容和流程的 Windows 身分識別  
- 在第 1 版的 clr，<xref:System.Security.Principal.WindowsIdentity>物件不會流經非同步點，例如新的執行緒、 執行緒集區或計時器回呼。 在 2.0 版中的 clr，<xref:System.Threading.ExecutionContext>物件包裝目前執行中執行緒的一些資訊，並跨任何非同步點，但不是會在應用程式定義域界限之間流動它。 同樣地，<xref:System.Security.Principal.WindowsIdentity>物件也會流過任何非同步點。 因此，目前的模擬執行緒，如果有的話，會流動。  
+## <a name="execution-context-and-flow-of-windows-identity"></a>執行內容和 Windows 身分識別流程  
+ 在 CLR 的第1版中，<xref:System.Security.Principal.WindowsIdentity> 物件不會流經非同步點，例如新執行緒、執行緒集區或計時器回呼。 在版本2.0 的 CLR 中，<xref:System.Threading.ExecutionContext> 物件會包裝有關目前執行中線程的一些資訊，並將其流經任何非同步點，但不會跨越應用程式域界限。 同樣地，<xref:System.Security.Principal.WindowsIdentity> 物件也會跨任何非同步點流動。 因此，執行緒上目前的模擬（如果有的話）也會流動。  
   
- 您可以變更流程有兩種：  
+ 您可以透過兩種方式來改變流程：  
   
-1. 藉由修改<xref:System.Threading.ExecutionContext>若要隱藏個別的執行緒上的流程的設定 (請參閱 < <xref:System.Threading.ExecutionContext.SuppressFlow%2A>， <xref:System.Security.SecurityContext.SuppressFlow%2A>，和<xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A>方法)。  
+1. 藉由修改 <xref:System.Threading.ExecutionContext> 設定，以根據每個執行緒來隱藏流程（請參閱 <xref:System.Threading.ExecutionContext.SuppressFlow%2A>、<xref:System.Security.SecurityContext.SuppressFlow%2A>和 <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A> 方法）。  
   
-2. 藉由處理程序的預設模式變更為 「 第 1 版相容性模式中，其中<xref:System.Security.Principal.WindowsIdentity>物件不會流經任何非同步點，無論<xref:System.Threading.ExecutionContext>目前執行緒上的設定。 您要如何變更預設的模式取決於您是使用 managed 可執行檔或未受管理的裝載介面載入 CLR:  
+2. 藉由將進程預設模式變更為版本1相容性模式，其中 <xref:System.Security.Principal.WindowsIdentity> 物件不會流經任何非同步點，而不論目前線程上的 <xref:System.Threading.ExecutionContext> 設定為何。 您變更預設模式的方式，取決於您使用的是受控可執行檔或非受控裝載介面來載入 CLR：  
   
-    1. 受管理的可執行檔，您必須設定`enabled`的屬性[ \<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)項目`true`。  
+    1. 對於受控可執行檔，您必須將[\<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)專案的 `enabled` 屬性設定為 [`true`]。  
   
-    2. Unmanaged 裝載介面，設定`STARTUP_LEGACY_IMPERSONATION`中的旗標`flags`參數呼叫時`CorBindToRuntimeEx`函式。  
+    2. 若為非受控裝載介面，請在呼叫 `CorBindToRuntimeEx` 函式時，在 `flags` 參數中設定 `STARTUP_LEGACY_IMPERSONATION` 旗標。  
   
-     第 1 版相容性模式適用於整個程序和程序中的所有應用程式定義域。  
+     版本1相容性模式適用于整個進程和進程中的所有應用程式域。  
   
 ## <a name="remarks"></a>備註  
- [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)並`CorBindToRuntime`執行相同的作業，但`CorBindToRuntimeEx`函式可讓您設定旗標指定 CLR 的行為。  
+ [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)和 `CorBindToRuntime` 會執行相同的作業，但 `CorBindToRuntimeEx` 函數可讓您設定旗標來指定 CLR 的行為。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** MSCorEE.dll  
+ 連結**庫：** Mscoree.dll .dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [CorBindToCurrentRuntime 函式](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)
 - [CorBindToRuntimeByCfg 函式](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)

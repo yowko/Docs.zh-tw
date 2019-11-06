@@ -7,17 +7,17 @@ helpviewer_keywords:
 - reusing resources [WPF]
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
-ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 568ff84c6de2d80527921fe6f3179e6bb123f72f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053479"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458714"
 ---
 # <a name="resources-how-to-topics"></a>資源 HOW TO 主題
-在本節中的主題描述如何使用 Windows Presentation Foundation (WPF) 資源。  
+本節中的主題說明如何使用 Windows Presentation Foundation （WPF）資源。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [定義和參考資源](how-to-define-and-reference-a-resource.md)  
  [使用應用程式資源](how-to-use-application-resources.md)  
  [使用 SystemFonts](how-to-use-systemfonts.md)  
@@ -35,4 +35,4 @@ ms.locfileid: "62053479"
  <xref:System.Windows.SystemFonts>  
   
 ## <a name="related-sections"></a>相關章節  
- [XAML 資源](xaml-resources.md)
+ [XAML 資源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d6a1cd9-370b-4462-adbf-e3980e897ea7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d17f51867b64780fca9b21c5f48c88db36343af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 51ee8b3631bffe9fd7fef4351e0aa67d1cbbe2c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748779"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125391"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>ICorDebugController::HasQueuedCallbacks 方法
-取得值，指出是否任何受管理的回呼目前在佇列中等待指定的執行緒。  
+取得值，指出目前是否已針對指定的執行緒將任何 managed 回呼排入佇列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,25 +36,25 @@ HRESULT HasQueuedCallbacks (
   
 ## <a name="parameters"></a>參數  
  `pThread`  
- [in]表示執行緒 」 ICorDebugThread 」 物件的指標。  
+ 在代表執行緒之 "ICorDebugThread" 物件的指標。  
   
  `pbQueued`  
- [out]為值的指標`true`如果任何受管理的回呼目前針對指定的執行緒已排入佇列，否則`false`。  
+ 脫銷如果目前已針對指定的執行緒將任何 managed 回呼排入佇列，則為 `true` 的值指標。否則，`false`。  
   
- 如果指定 null`pThread`參數，`HasQueuedCallbacks`會傳回`true`如果目前沒有受管理的回呼排入佇列的任何執行緒。  
+ 如果指定了 `pThread` 參數的 null，`HasQueuedCallbacks` 會傳回 `true` （如果有任何執行緒目前已排入佇列的受控回呼）。  
   
 ## <a name="remarks"></a>備註  
- 回呼會在時間內，每次分派的一個[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)呼叫。 偵錯工具可以檢查此旗標，如果想要報告多個同時進行的偵錯事件。  
+ 回呼會一次分派一個，每次呼叫[ICorDebugController：： Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)時。 如果偵錯工具想要報告同時發生的多個偵測事件，可以檢查此旗標。  
   
- 當偵錯事件會排入佇列時，它們已經發生，因此偵錯工具必須清空的偵錯工具的狀態，確定整個佇列。 (呼叫`ICorDebugController::Continue`清空佇列。)比方說，如果佇列包含兩個執行緒上的偵錯事件*X*，以及偵錯工具暫止的執行緒*X*之後第一個偵錯事件，然後呼叫`ICorDebugController::Continue`，第二個偵錯事件執行緒*X*雖然已暫停的執行緒會分派。  
+ 當偵測事件排入佇列時，它們已經發生，因此偵錯工具必須清空整個佇列，以確保偵錯工具的狀態。 （呼叫 `ICorDebugController::Continue` 以清空佇列）。例如，如果佇列包含執行緒*x*上的兩個偵測事件，而且偵錯工具在第一個偵錯工具事件之後暫停執行緒*x* ，然後呼叫 `ICorDebugController::Continue`，則會分派執行緒*x*的第二個偵錯工具事件，但執行緒已暫止。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱

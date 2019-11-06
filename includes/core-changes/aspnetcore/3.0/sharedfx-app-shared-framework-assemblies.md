@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: a4bf8cff59ffe01b7465e227c0b1d1e7d93f16e7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8344fdedcff34f102b73f977b688abc15563bd4c
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393929"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198387"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>共用架構：從 AspNetCore 移除的元件
 
-從 ASP.NET Core 3.0 開始，ASP.NET Core 共用架構（`Microsoft.AspNetCore.App`）僅包含由 Microsoft 完全開發、支援及維護的第一方元件。 
+從 ASP.NET Core 3.0 開始，ASP.NET Core 共用架構（`Microsoft.AspNetCore.App`）僅包含由 Microsoft 完全開發、支援及維護的第一方元件。
 
 #### <a name="change-description"></a>變更描述
 
@@ -22,7 +22,7 @@ ms.locfileid: "72393929"
 
 #### <a name="old-behavior"></a>舊的行為
 
-透過專案檔中的 @no__t 1 元素，`Microsoft.AspNetCore.App` 所參考的專案。
+專案會透過專案檔中的 `<PackageReference>` 元素 `Microsoft.AspNetCore.App` 參考。
 
 此外，`Microsoft.AspNetCore.App` 包含下列子元件：
 
@@ -32,7 +32,7 @@ ms.locfileid: "72393929"
 
 #### <a name="new-behavior"></a>新的行為
 
-@No__t 的參考不再需要專案檔中有 `<PackageReference>` 元素。 .NET Core SDK 支援稱為 `<FrameworkReference>` 的新專案，這會取代 `<PackageReference>` 的用法。
+`Microsoft.AspNetCore.App` 的參考不再需要專案檔中的 `<PackageReference>` 元素。 .NET Core SDK 支援稱為 `<FrameworkReference>` 的新專案，這會取代 `<PackageReference>` 的用法。
 
 如需詳細資訊，請參閱[aspnet/AspNetCore # 3612](https://github.com/aspnet/AspNetCore/issues/3612)。
 
@@ -54,7 +54,7 @@ Json.NET 和 Entity Framework Core 會繼續與 ASP.NET Core 搭配使用。 不
 
 這項變更不適用於透過 ASP.NET Core 2.x 中的 `Microsoft.AspNetCore.App` 所參考的所有二進位檔。 值得注意的例外狀況包括：
 
-- 繼續以 .NET Standard 為目標的 @no__t 0 程式庫會以 NuGet 套件的形式提供（請參閱 https://github.com/aspnet/Extensions) 。
+- 繼續以 .NET Standard 為目標的 `Microsoft.Extensions` 程式庫會以 NuGet 套件的形式提供（請參閱 https://github.com/aspnet/Extensions) 。
 - 不屬於 `Microsoft.AspNetCore.App` 的 ASP.NET Core 小組所產生的 Api。 例如，下列元件會以 NuGet 套件的形式提供：
   - Entity Framework Core
   - 提供協力廠商整合的 Api
@@ -65,7 +65,7 @@ Json.NET 和 Entity Framework Core 會繼續與 ASP.NET Core 搭配使用。 不
 
 如需詳細資訊，請參閱[在3.0 中停止產生共用架構元件的封裝](https://github.com/aspnet/AspNetCore/issues/3756)。 如需討論，請參閱[aspnet/AspNetCore # 3757](https://github.com/aspnet/AspNetCore/issues/3757)。
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>Category
 
 ASP.NET Core
 

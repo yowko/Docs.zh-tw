@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 6c48806e54f11bce930d03a53b010c337e6658f8
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 30419200cfce785d7fcbbf59650241580a1f0ce4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960858"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454969"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# 參考)
 
@@ -27,13 +27,13 @@ ms.locfileid: "72960858"
   - 由於參考型別包含針對其資料的參考，因此 `readonly` 參考型別的欄位必須一律參考相同的物件。 該物件不變。 `readonly` 修飾詞可防止欄位被不同的參考型別執行個體取代。 不過，修飾詞並不會防止欄位的實例資料透過唯讀欄位進行修改。
 
   > [!WARNING]
-  > 外部可見的類型若包含屬於可變動參考型別的外部可見唯讀欄位，可能會是安全性弱點，而且可能會觸發警告[CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types) ：「不要宣告唯讀的可變動參考型別」。
+  > 外部可見的類型若包含屬於可變動參考型別的外部可見唯讀欄位，可能會是安全性弱點，而且可能會觸發警告[CA2104](/visualstudio/code-quality/ca2104) ：「不要宣告唯讀的可變動參考型別」。
 
 - 在 [`readonly struct` 定義](#readonly-struct-example)中，`readonly` 表示 `struct` 是不可變的。
 - 在[`readonly` 成員定義](#readonly-member-examples)中，`readonly` 表示 `struct` 的成員不會改變結構的內部狀態。
 - 在[`ref readonly` 方法](#ref-readonly-return-example)傳回中，`readonly` 修飾詞表示方法會傳回參考，而且不允許寫入該參考。
 
-`readonly sturct` 和 `ref readonly` 內容已在7.2 中C#新增。 已在8.0 中C#新增 `readonly` 結構成員
+`readonly struct` 和 `ref readonly` 內容已在7.2 中C#新增。 已在8.0 中C#新增 `readonly` 結構成員
 
 ## <a name="readonly-field-example"></a>唯讀欄位範例
 
@@ -161,6 +161,6 @@ public string Message { readonly get; set; }
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [修飾詞](modifiers.md)
+- [修飾詞](index.md)
 - [const](const.md)
 - [欄位](../../programming-guide/classes-and-structs/fields.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：撰寫含有執行緒區域變數的 Parallel.For 迴圈
+title: 如何：撰寫含有執行緒區域變數的 Parallel.For 迴圈
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ffac3df82268399aa35ff494e462e2b23c3894b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610795"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139719"
 ---
-# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>HOW TO：撰寫含有執行緒區域變數的 Parallel.For 迴圈
+# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>如何：撰寫含有執行緒區域變數的 Parallel.For 迴圈
 此範例說明如何使用執行緒區域變數，儲存及擷取 <xref:System.Threading.Tasks.Parallel.For%2A> 迴圈所建立之每項工作的狀態。 使用執行緒區域資料，可讓您避免因同步處理大量的共用狀態存取而產生額外負荷。 您可以計算並儲存值，直到工作的所有反覆運算完成為止，而無須在每次反覆運算時寫入至共用資源。 接著，您可以將最終結果寫入至共用資源，或將其傳遞至其他方法。  
   
 ## <a name="example"></a>範例  
@@ -38,13 +36,13 @@ ms.locfileid: "54610795"
 Function() new MyClass()  
 ```  
   
- 第四個參數會定義迴圈邏輯。 它必須是委派或 Lambda 運算式，其簽章是 `Func<int, ParallelLoopState, long, long>` (在 C# 中) 或 `Func(Of Integer, ParallelLoopState, Long, Long)` (在 Visual Basic 中)。 第一個參數是該迴圈反覆運算之迴圈計數器的值。 第二個參數是可用於脫離迴圈的 <xref:System.Threading.Tasks.ParallelLoopState> 物件，<xref:System.Threading.Tasks.Parallel> 類別會提供此物件給每個迴圈。 第三個參數是執行緒區域變數。 最後一個參數是傳回型別。 在此範例中，此類型為 <xref:System.Int64>，因為這是我們在 <xref:System.Threading.Tasks.Parallel.For%2A> 類型引數中指定的類型。 該變數的名稱為 `subtotal`，會由 Lambda 運算式傳回。 此傳回值會在迴圈的每次後續反覆運算時，用來初始化 `subtotal`。 您也可以將此最後一個參數視為會傳遞至每個反覆項目，然後在最後一個反覆項目完成時傳遞至 `localFinally` 委派的值。  
+ 第四個參數會定義迴圈邏輯。 它必須是委派或 Lambda 運算式，其簽章是 `Func<int, ParallelLoopState, long, long>` (在 C# 中) 或 `Func(Of Integer, ParallelLoopState, Long, Long)` (在 Visual Basic 中)。 第一個參數是該迴圈反覆運算之迴圈計數器的值。 第二個參數是可用於脫離迴圈的 <xref:System.Threading.Tasks.ParallelLoopState> 物件，<xref:System.Threading.Tasks.Parallel> 類別會提供此物件給每個迴圈。 第三個參數是執行緒區域變數。 最後一個參數是傳回型別。 在此範例中，此類型為 <xref:System.Int64>，因為這是我們在 <xref:System.Threading.Tasks.Parallel.For%2A> 型別引數中指定的類型。 該變數的名稱為 `subtotal`，會由 Lambda 運算式傳回。 此傳回值會在迴圈的每次後續反覆運算時，用來初始化 `subtotal`。 您也可以將此最後一個參數視為會傳遞至每個反覆項目，然後在最後一個反覆項目完成時傳遞至 `localFinally` 委派的值。  
   
- 第五個參數定義要在特定執行緒上所有的反覆項目完成後呼叫一次的方法。 輸入參數的類型會重新對應至 <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> 方法的類型引數，以及主體 Lambda 運算式所傳回的類型。 在此範例中，會透過呼叫 <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> 方法，以安全執行緒的方式將值加入至類別範圍的變數中。 使用執行緒區域變數，可讓我們避免在每次反覆運算迴圈時寫入至此類別變數。  
+ 第五個參數定義要在特定執行緒上所有的反覆項目完成後呼叫一次的方法。 輸入參數的類型會重新對應至 <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> 方法的型別引數，以及主體 Lambda 運算式所傳回的類型。 在此範例中，會透過呼叫 <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> 方法，以安全執行緒的方式將值加入至類別範圍的變數中。 使用執行緒區域變數，可讓我們避免在每次反覆運算迴圈時寫入至此類別變數。  
   
  如需如何使用 Lambda 運算式的詳細資訊，請參閱 [PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [資料平行處理原則](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [平行程式設計](../../../docs/standard/parallel-programming/index.md)

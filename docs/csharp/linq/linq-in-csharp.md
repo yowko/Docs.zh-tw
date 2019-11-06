@@ -3,12 +3,12 @@ title: C# 中的 LINQ
 description: 提供 C# 中之 LINQ 詳細資訊的主題連結。
 ms.date: 11/30/2016
 ms.assetid: 8eb3284f-0ab9-4cad-9216-2da58d9761a5
-ms.openlocfilehash: a86bbabedc99531a5d02a9e60df5798a03653370
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 0b9301074996528cd1fbcfebde3a0a57b15e2f15
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633780"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421756"
 ---
 # <a name="linq-in-c"></a>C\# 中的 LINQ
 
@@ -36,7 +36,7 @@ ms.locfileid: "65633780"
 
 ## <a name="related-sections"></a>相關章節
 
-[LINQ 查詢運算式](../programming-guide/linq-query-expressions/index.md)  
+[LINQ 查詢運算式](index.md)  
 包含 LINQ 的查詢概觀，並提供其他資源連結。
 
 [標準查詢運算子概觀](../programming-guide/concepts/linq/standard-query-operators-overview.md)  

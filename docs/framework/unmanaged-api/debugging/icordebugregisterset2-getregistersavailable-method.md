@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3ed344b-0d3a-44e8-8000-2a97e0805a2c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5d4ab49aaccd77fac497bd86413915e82c99ed3e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d0b6960a24e246c7a538e8ffc59fa380a4b8e2a7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744901"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131362"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable 方法
-取得位元組陣列，提供可用的暫存器的點陣圖。  
+取得提供可用暫存器之點陣圖的位元組陣列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,16 +39,16 @@ HRESULT GetRegistersAvailable (
  [in] `availableRegChunks` 陣列的大小。  
   
  `availableRegChunks`  
- [out]位元組陣列，其中每個位元對應暫存器。 如果使用暫存器，則會設定註冊的對應位元。  
+ 脫銷位元組陣列，其中每個位對應至暫存器。 如果有可用的註冊，則會設定暫存器的對應位。  
   
 ## <a name="remarks"></a>備註  
- CorDebugRegister 列舉之值的指定不同的微處理器的暫存器。 每個值的較高的五位元是索引`availableRegChunks`的位元組陣列。 每個值的較低的三位元識別索引位元組中的位元位置。 指定`CorDebugRegister`值，指定特定的暫存器，用來遮罩中的暫存位置的判斷如下：  
+ CorDebugRegister 列舉的值會指定不同微處理器的暫存器。 每個值的前五個位是 `availableRegChunks` 位元組陣列中的索引。 每個值的較低三個位識別索引位元組內的位位置。 假設有一個指定特定暫存器的 `CorDebugRegister` 值，則會以下列方式決定登錄在遮罩中的位置：  
   
-1. 擷取存取中的正確位元組所需的索引`availableRegChunks`陣列：  
+1. 解壓縮存取 `availableRegChunks` 陣列中正確位元組所需的索引：  
   
-     `CorDebugRegister` 值 >> 3  
+     `CorDebugRegister` 值 > > 3  
   
-2. 擷取元零所在的最小顯著性的位元的位元位置內的索引的位元組：  
+2. 將索引位元組中的位位置解壓縮，其中 bit 零是最不重要的位：  
   
      `CorDebugRegister` 值 & 7  
   
@@ -59,11 +57,11 @@ HRESULT GetRegistersAvailable (
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugRegisterSet2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
 - [ICorDebugRegisterSet 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)

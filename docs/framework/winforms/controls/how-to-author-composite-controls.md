@@ -1,5 +1,5 @@
 ---
-title: 作法：撰寫複合控制項
+title: 如何：撰寫複合控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], creating composite controls
@@ -7,29 +7,29 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 08cb07ceebf08b3096415f9b7370e2d955152cb6
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 42ea424507b89576df8099fd4849dd2665135a55
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015927"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459432"
 ---
-# <a name="how-to-author-composite-controls"></a>作法：撰寫複合控制項
+# <a name="how-to-author-composite-controls"></a>如何：撰寫複合控制項
 
-複合控制項的運用方式有許多種。 您可以將它們撰寫成 Windows 桌面應用程式專案的一部分，且只在專案中的表單上使用它們。 或者，您可以在 Windows 控制項程式庫專案中撰寫它們、將專案編譯成組件，然後在其他專案中使用控制項。 您甚至可以從它們繼承, 並使用視覺繼承來快速地自訂它們以進行特殊用途。
+複合控制項的運用方式有許多種。 您可以將它們撰寫成 Windows 桌面應用程式專案的一部分，且只在專案中的表單上使用它們。 或者，您可以在 Windows 控制項程式庫專案中撰寫它們、將專案編譯成組件，然後在其他專案中使用控制項。 您甚至可以從它們繼承，並使用視覺繼承來快速地自訂它們以進行特殊用途。
 
 ## <a name="to-author-a-composite-control"></a>撰寫複合控制項
 
-1. 在 Visual Studio 中, 建立新的**Windows 應用程式**專案, 並將其命名為**DemoControlHost**。
+1. 在 Visual Studio 中，建立新的**Windows 應用程式**專案，並將其命名為**DemoControlHost**。
 
 2. 在 [專案] 功能表上，按一下 [加入使用者控制項]。
 
 3. 在 [新增項目] 對話方塊中，為類別檔案 (.vb 或 .cs 檔案) 指定您希望複合控制項擁有的名稱。
 
-4. 選取 [**新增**] 按鈕, 以建立複合控制項的類別檔案。
+4. 選取 [**新增**] 按鈕，以建立複合控制項的類別檔案。
 
 5. 將控制項從 [工具箱] 新增至複合控制項介面。
 
@@ -77,10 +77,10 @@ ms.locfileid: "70015927"
 
      您可以在 DLL 中看見繼承自複合控制項的組成控制項，而且可以修改其 [修飾詞] 屬性為 [公用] 之控制項的屬性。 您無法變更其 [修飾詞] 屬性為 [私人] 之控制項的屬性。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [逐步解說：撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 - [逐步解說：繼承自 Windows Forms 控制項](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 - [控制項類型建議](control-type-recommendations.md)
-- [如何：Windows Forms 的作者控制項](how-to-author-controls-for-windows-forms.md)
+- [操作說明：撰寫 Windows Forms 的控制項](how-to-author-controls-for-windows-forms.md)
 - [各種自訂控制項](varieties-of-custom-controls.md)

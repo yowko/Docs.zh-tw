@@ -14,46 +14,44 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3c3bebe8eabd4d5fd5faec21e0b0efc408353bc2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 51d79c398c94ec355528140325da2c25422cbad9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796808"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133853"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager 介面
-提供方法，可讓 common language runtime (CLR) 與主應用程式所提供的 I/O 完成連接埠進行互動。  
+提供的方法可讓 common language runtime （CLR）與主機所提供的 i/o 完成通訊埠互動。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Bind 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)|將控制代碼繫結至 I/O 完成連接埠。|  
-|[CloseIoCompletionPort 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-closeiocompletionport-method.md)|關閉透過先前呼叫所建立的連接埠`CreateIoCompletionPort`。|  
-|[CreateIoCompletionPort 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md)|主應用程式建立新的 I/O 完成連接埠的要求。|  
-|[GetAvailableThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-getavailablethreads-method.md)|取得目前未處理要求的 I/O 完成執行緒的數目。|  
-|[GetHostOverlappedSize 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-gethostoverlappedsize-method.md)|取得主應用程式想要附加至 I/O 要求的任何自訂資料的大小。|  
-|[GetMaxThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-getmaxthreads-method.md)|取得服務 I/O 要求的主機可以配置的執行緒數目上限。|  
-|[GetMinThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-getminthreads-method.md)|取得服務 I/O 要求的主機提供的執行緒最小數目。|  
-|[InitializeHostOverlapped 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md)|提供有機會初始化的 I/O 要求相關的任何自訂資料中的主應用程式。|  
-|[SetCLRIoCompletionManager 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setclriocompletionmanager-method.md)|主應用程式提供的介面指標[ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md) ，CLR 所實作的執行個體。|  
-|[SetMaxThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setmaxthreads-method.md)|I/O 要求提供服務設定主應用程式指派的執行緒的數目上限。|  
-|[SetMinThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setminthreads-method.md)|I/O 完成設定主應用程式應該配置的執行緒最小數目。|  
+|[Bind 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)|將控制碼系結到 i/o 完成通訊埠。|  
+|[CloseIoCompletionPort 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-closeiocompletionport-method.md)|關閉透過先前的 `CreateIoCompletionPort`呼叫所建立的埠。|  
+|[CreateIoCompletionPort 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md)|要求主機建立新的 i/o 完成埠。|  
+|[GetAvailableThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-getavailablethreads-method.md)|取得目前未處理要求的 i/o 完成執行緒數目。|  
+|[GetHostOverlappedSize 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-gethostoverlappedsize-method.md)|取得主機打算附加到 i/o 要求的任何自訂資料大小。|  
+|[GetMaxThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-getmaxthreads-method.md)|取得主機可以為服務 i/o 要求所分配的執行緒數目上限。|  
+|[GetMinThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-getminthreads-method.md)|取得主機提供給服務 i/o 要求的執行緒數目下限。|  
+|[InitializeHostOverlapped 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md)|提供主機初始化 i/o 要求之任何自訂資料的機會。|  
+|[SetCLRIoCompletionManager 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setclriocompletionmanager-method.md)|提供具有 CLR 所實[ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)實例之介面指標的主機。|  
+|[SetMaxThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setmaxthreads-method.md)|設定主機 allots 至服務 i/o 要求的執行緒數目上限。|  
+|[SetMinThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setminthreads-method.md)|設定主機應該為 i/o 完成所配置的執行緒數目下限。|  
   
 ## <a name="remarks"></a>備註  
- `IHostIoCompletionManager` 對應至`ICLRIoCompletionManager`，CLR 所實作的介面。 CLR 會呼叫的方法`IHostIoCompletionManager`若要將控制代碼繫結至主應用程式提供，且主機會呼叫方法的連接埠`ICLRIoCompletionManager`報告的 I/O 要求完成。  
+ `IHostIoCompletionManager` 對應至 CLR 所實的 `ICLRIoCompletionManager` 介面。 CLR 會呼叫 `IHostIoCompletionManager` 的方法，將控制碼系結至主機提供的埠，而主機則會呼叫 `ICLRIoCompletionManager` 的方法，以報告 i/o 要求的完成。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
