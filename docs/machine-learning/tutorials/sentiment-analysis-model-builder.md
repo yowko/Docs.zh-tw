@@ -60,9 +60,9 @@ ms.locfileid: "72180276"
 
 | 情感 | SentimentText |
 | :---: | :---: |
-1 | ==RUDE== Dude, you are rude upload that carl picture back, or else.
-1 | == OK! ==  IM GOING TO VANDALIZE WILD ONES WIKI THEN!!!
-0 | I hope this helps.
+1 | ==沒禮貌== 哥們，把那張卡爾的相片上傳回來之類的真是太沒禮貌了。
+1 | == 沒問題! == 嗯，我會把狂野 WIKI 弄壞!!!
+0 | 我希望這有幫助。
 
 ## <a name="choose-a-scenario"></a>選擇案例
 
