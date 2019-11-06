@@ -17,21 +17,21 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-ms.openlocfilehash: 79cc53be0f099151db1b64190c844b1d57205a44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8e4e848cb37ac1b2d147b570d98777a7beaf1bb
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018057"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460248"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>以 XML Web 服務進行 XML 序列化
-XML 序列化為 XML Web 服務架構中使用的基礎傳輸機制，由 <xref:System.Xml.Serialization.XmlSerializer> 類別執行。 若要控制 XML Web Service 產生的 XML，可將列在[控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)和[控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)中的屬性，套用至用來建立 XML Web Service (.asmx) 之檔案的類別、傳回值、參數以及欄位。 如需建立 XML Web service 的詳細資訊，請參閱 < [ASP.NET XML Web Service 使用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100))。  
+XML 序列化為 XML Web 服務架構中使用的基礎傳輸機制，由 <xref:System.Xml.Serialization.XmlSerializer> 類別執行。 若要控制 XML Web Service 產生的 XML，可將列在[控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)和[控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)中的屬性，套用至用來建立 XML Web Service (.asmx) 之檔案的類別、傳回值、參數以及欄位。 如需建立 XML Web Service 的詳細資訊，請參閱[使用 ASP.NET 的 XML Web Service](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100))。  
   
 ## <a name="literal-and-encoded-styles"></a>常值與編碼樣式  
- XML Web service 所產生的 XML 可以是其中一種方式，常值格式或編碼中所述[自訂 SOAP 訊息格式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))。 因此有兩組屬性控制 XML 序列化。 列在[控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)中的屬性設計用來控制常值樣式 XML。 列在[控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)中的屬性則可控制編碼樣式。 您可選擇性地套用這些屬性，自訂應用程式傳回其中一種或同時兩種樣式。 除此之外，可將這些屬性套用至傳回值和參數 (如果適合的話)。  
+ XML Web Service 所產生的 XML 可以使用常值或已編碼的兩種方式之一進行格式化，如[自訂 SOAP 訊息格式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))中所述。 因此有兩組屬性控制 XML 序列化。 列在[控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)中的屬性設計用來控制常值樣式 XML。 列在[控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)中的屬性則可控制編碼樣式。 您可選擇性地套用這些屬性，自訂應用程式傳回其中一種或同時兩種樣式。 除此之外，可將這些屬性套用至傳回值和參數 (如果適合的話)。  
   
 ### <a name="example-of-using-both-styles"></a>同時使用兩種樣式的範例  
- 當您建立 XML Web 服務，可同時使用方法上的兩組屬性。 在下列程式碼範例中，名為 `MyService``MyLiteralMethod`的類別包含兩個 XML Web 服務方法：`MyEncodedMethod` 及 。 兩種方法都執行相同功能：傳回 `Order` 類別的執行個體。 在 `Order` 類別中，<xref:System.Xml.Serialization.XmlTypeAttribute> 以及 <xref:System.Xml.Serialization.SoapTypeAttribute> 屬性 (attribute) 都套用至 `OrderID` 欄位，而且兩個屬性 (attribute) 的 `ElementName` 屬性 (property) 都設為不同值。  
+ 當您建立 XML Web 服務，可同時使用方法上的兩組屬性。 在下列程式碼範例中，名為 `MyService``MyLiteralMethod`的類別包含兩個 XML Web 服務方法：`MyEncodedMethod` 及 {4}。 兩種方法都執行相同功能：傳回 `Order` 類別的執行個體。 在 `Order` 類別中，<xref:System.Xml.Serialization.XmlTypeAttribute> 以及 <xref:System.Xml.Serialization.SoapTypeAttribute> 屬性 (attribute) 都套用至 `OrderID` 欄位，而且兩個屬性 (attribute) 的 `ElementName` 屬性 (property) 都設為不同值。  
   
  若要執行這個範例，請將程式碼貼至副檔名為 .asmx 的檔案中，並將該檔置於 Internet Information Services (IIS) 管理的虛擬目錄中。 從 Internet Explorer 這類 HTML 瀏覽器中，輸入電腦、虛擬目錄及檔案的名稱。  
   
@@ -232,21 +232,22 @@ public class Order {
   
  套用 `XmlTypeAttribute` 及 `SoapTypeAttribute` 的結果可在檢查服務說明時看到，如下列程式碼範例所示。  
   
-```xml  
-    <s:element name="BookOrderForm" type="s0:BigBookService" />   
-- <s:complexType name="BigBookService">  
-- <s:sequence>  
-    <s:element minOccurs="0" maxOccurs="1" name="LiteralOrderID" type="s:string" />   
-    </s:sequence>  
-  
-- <s:schema targetNamespace="http://tempuri.org/encodedTypes">  
-- <s:complexType name="SoapBookService">  
-- <s:sequence>  
-    <s:element minOccurs="1" maxOccurs="1" name="EncodedOrderID" type="s:string" />   
-    </s:sequence>  
-    </s:complexType>  
-    </s:schema>  
-```  
+```xml
+<s:element name="BookOrderForm" type="s0:BigBookService" />
+<s:complexType name="BigBookService">
+  <s:sequence>
+    <s:element minOccurs="0" maxOccurs="1" name="LiteralOrderID" type="s:string" />
+  </s:sequence>
+
+  <s:schema targetNamespace="http://tempuri.org/encodedTypes">
+    <s:complexType name="SoapBookService">
+      <s:sequence>
+        <s:element minOccurs="1" maxOccurs="1" name="EncodedOrderID" type="s:string" />
+      </s:sequence>
+    </s:complexType>
+  </s:schema>
+</s:complexType>
+```
   
  `XmlRootAttribute` 的效果也可以在 HTTP GET 與 HTTP POST 結果中看到，如下所示。  
   
@@ -259,10 +260,10 @@ public class Order {
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [可控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
-- [如何：將物件序列化為 SOAP 編碼的 XML Stream](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
-- [如何：覆寫編碼的 SOAP XML 序列化](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)
-- [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [如何：將物件序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)
+- [可控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)
+- [如何：將物件序列化為 SOAP 編碼的 XML 資料流](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [如何：覆寫已編碼的 SOAP XML 序列化](how-to-override-encoded-soap-xml-serialization.md)
+- [XML 序列化簡介](introducing-xml-serialization.md)
+- [如何：序列化物件](how-to-serialize-an-object.md)
+- [如何：還原序列化物件](how-to-deserialize-an-object.md)
