@@ -84,10 +84,10 @@ ms.locfileid: "72774409"
 
 |SentimentText                         |情感 (標籤) |
 |--------------------------------------|----------|
-|Waitress was a little slow in service.|    0     |
-|Crust is not good.                    |    0     |
-|Wow... Loved this place.              |    1     |
-|Service was very prompt.              |    1     |
+|女服務生的服務速度有點慢。| 0 |
+|不夠酥脆。 | 0 |
+| 哇... 愛這地方。 | 1 |
+|服務很迅速。 | 1 |
 
 `SentimentPrediction` 是在模型定型後所使用的預測類別。 它繼承自 `SentimentData`，以便輸入 `SentimentText` 可以和輸出預測一起顯示。 `Prediction` 布林值是在提供新輸入 `SentimentText` 時，模型預測的值。
 
@@ -177,10 +177,10 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
     |SentimentText                         |情感 |功能              |
     |--------------------------------------|----------|----------------------|
-    |Waitress was a little slow in service.|    0     |[0.76, 0.65, 0.44, …] |
-    |Crust is not good.                    |    0     |[0.98, 0.43, 0.54, …] |
-    |Wow... Loved this place.              |    1     |[0.35, 0.73, 0.46, …] |
-    |Service was very prompt.              |    1     |[0.39, 0, 0.75, …]    |
+    |女服務生的服務速度有點慢。| 0 |[0.76, 0.65, 0.44, …] |
+    |不夠酥脆。 | 0 |[0.98, 0.43, 0.54, …] |
+    |哇... 愛這地方。 | 1 |[0.35, 0.73, 0.46, …] |
+    |服務很迅速。 | 1 |[0.39, 0, 0.75, …] |
 
 ### <a name="add-a-learning-algorithm"></a>新增學習演算法
 
