@@ -4,12 +4,12 @@ description: .NET 微服務和 Web 應用程式中的安全性 - 了解 ASP.NET 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: f405b4199e8239e86c4799a649c3d87811d99828
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: b25f02140915ce87c5c478d8a8a5fe28ba7693b3
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798850"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736931"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>製作安全的 .NET 微服務和 Web 應用程式
 
@@ -21,15 +21,17 @@ ms.locfileid: "72798850"
 
 在微服務案例中，通常會集中處理驗證。 如果您使用 API 閘道，則閘道會是適合驗證的位置，如圖 9-1 所示。 如果您使用此方法，請確定若沒有 API 閘道，就無法直接到達個別微服務，除非有其他安全性機制可驗證訊息，而不論其是否來自閘道。
 
-![當 API 閘道將驗證集中時，會在將要求轉送給微服務時新增使用者資訊。](./media/image1.png)
+![此圖顯示用戶端行動應用程式如何與後端互動。](./media/index/api-gateway-centralized-authentication.png)
 
 **圖 9-1**. 使用 API 閘道的集中式驗證
 
-如果服務可供直接存取，則可以使用 Azure Active Directory 等驗證服務或作為 Security Token Service (STS) 的專用驗證微服務來驗證使用者。 信任決策會透過安全性權杖或 Cookie 在服務之間共用 （如有需要，可以在 ASP.NET Core 應用程式之間共用這些權杖，方法是執行[cookie 共用](/aspnet/core/security/cookie-sharing)）。此模式如圖9-2 所示。
+當 API 閘道將驗證集中時，會在將要求轉送給微服務時新增使用者資訊。 如果服務可供直接存取，則可以使用 Azure Active Directory 等驗證服務或作為 Security Token Service (STS) 的專用驗證微服務來驗證使用者。 信任決策會透過安全性權杖或 Cookie 在服務之間共用 （如有需要，可以在 ASP.NET Core 應用程式之間共用這些權杖，方法是執行[cookie 共用](/aspnet/core/security/cookie-sharing)）。此模式如圖9-2 所示。
 
-![直接存取微服務時，包含驗證和授權的信任會由專用微服務所發行的安全性權杖（在微服務之間共用）來處理。](./media/image2.png)
+![此圖顯示透過後端微服務的驗證。](./media/index/identity-microservice-authentication.png)
 
 **圖 9-2**： 由識別微服務驗證並透過授權權杖共用信任
+
+有人直接存取微服務時，包含驗證和授權的信任將由專用微服務發行的安全性權杖處理，於微服務間共用。
 
 ### <a name="authenticate-with-aspnet-core-identity"></a>使用 ASP.NET Core Identity 進行驗證
 
@@ -121,7 +123,7 @@ else
 
 如果當您在 Visual Studio 中建立 ASP.NET Code Web 應用程式專案時，選擇 [Individual User Account] \(個別使用者帳戶\) 驗證選項，專案中已有使用外部提供者登入所需的所有程式碼，如圖 9-3 所示。
 
-![新 ASP.NET Core Web 應用程式的對話方塊，反白顯示了變更驗證的按鈕。](./media/image3.png)
+![[新增 ASP.NET Core Web 應用程式] 對話方塊的螢幕擷取畫面。](./media/index/select-external-authentication-option.png)
 
 **圖 9-3**。 建立 Web 應用程式專案時選取使用外部驗證的選項
 

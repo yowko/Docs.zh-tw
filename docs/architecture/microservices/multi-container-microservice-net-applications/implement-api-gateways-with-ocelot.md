@@ -2,12 +2,12 @@
 title: 使用 Ocelot 實作 API 閘道
 description: 了解如何使用 Ocelot 實作 API 閘道，並了解如何在以容器為基礎的環境中使用 Ocelot。
 ms.date: 10/02/2018
-ms.openlocfilehash: cb452c330712ecf536cdf09f41fdbf828a4e9314
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 6c576a17d784777557bfb8bd99438eb111e8ec2e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771177"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737607"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>使用 Ocelot 實作 API 閘道
 
@@ -22,7 +22,7 @@ ms.locfileid: "72771177"
 
 下列架構圖說明如何在 eShopOnContainers 中使用 Ocelot 實作 API 閘道。
 
-![eShopOnContainers 架構圖顯示用戶端應用程式、微服務及之間的 API 閘道](./media/image28.png)
+![顯示 eShopOnContainers 架構的圖表。](./media/implement-api-gateways-with-ocelot/eshoponcontainers-architecture.png)
 
 **圖 6-28**。 使用 API 閘道的 eShopOnContainers 架構
 
@@ -46,7 +46,7 @@ ms.locfileid: "72771177"
 
 例如，eShopOnContainers 大約有六個內部微服務類型必須透過 API 閘道發佈，如下圖所示。
 
-![只有 Basket、Catalog、Location、Marketing、Ordering 和 Payment 微服務透過 API 閘道發佈。](./media/image29.png)
+![[服務] 資料夾的螢幕擷取畫面，其中顯示其子資料夾。](./media/implement-api-gateways-with-ocelot/eshoponcontainers-microservice-folders.png)
 
 **圖 6-29**。 Visual Studio 之 eShopOnContainers 方案中的微服務資料夾
 
@@ -54,7 +54,7 @@ ms.locfileid: "72771177"
 
 上述所有服務目前會實作為 ASP.NET Core Web API 服務，如程式碼所示。 讓我們專注於其中一個微服務，例如目錄微服務程式碼。
 
-![Catalog.API 專案的方案總管檢視。](./media/image30.png)
+![顯示目錄. API 專案內容方案總管的螢幕擷取畫面。](./media/implement-api-gateways-with-ocelot/catalog-api-microservice-folders.png)
 
 **圖 6-30**。 範例 Web API 微服務 (目錄微服務)
 
@@ -130,7 +130,7 @@ docker-compose run --service-ports catalog.api
 
 然後，您可以直接存取目錄微服務，並使用直接透過該「外部」連接埠 (在本例中為 `http://localhost:5101/swagger`) 存取的 Swagger UI 查看其方法：
 
-![目錄.API REST API 的 Swagger UI 時代瀏覽器檢視。](./media/image31.png)
+![顯示目錄. API REST API 的 Swagger UI 螢幕擷取畫面。](./media/implement-api-gateways-with-ocelot/test-catalog-microservice.png)
 
 **圖 6-31**。 使用其 Swagger UI 測試目錄微服務
 
@@ -152,7 +152,7 @@ Install-Package Ocelot
 
 在 eShopOnContainers 中，其 API 閘道實作是簡單的 ASP.NET Core WebHost 專案，而且 Ocelot 的中介軟體會處理所有 API 閘道功能，如下圖所示：
 
-![Ocelot API 閘道專案的方案總管檢視。](./media/image32.png)
+![顯示 Ocelot API 閘道專案的方案總管螢幕擷取畫面。](./media/implement-api-gateways-with-ocelot/ocelotapigw-base-project.png)
 
 **圖 6-32**。 eShopOnContainers 中的 OcelotApiGw 基底專案
 
@@ -280,7 +280,7 @@ UpstreamPathTemplate 是 URL，可供 Ocelot 用來識別針對用戶端中的�
 
 在 eShopOnContainers 中，我們會搭配 Ocelot API 閘道使用單一 Docker 容器映像；不過，到了執行階段時，我們會使用 Docker 磁碟區來為各服務存取其他電腦資料夾，透過提供不同的 configuration.json 檔案來為每種 API 閘道/BFF 建立不同的服務/容器。
 
-![為全部四個 API 閘道使用的單一 Ocelot API 閘道 Docker 映像](./media/image33.png)
+![適用于所有 API 閘道的單一 Ocelot 閘道 Docker 映射圖表。](./media/implement-api-gateways-with-ocelot/reusing-single-ocelot-docker-image.png)
 
 **圖 6-33**。 在多個 API 閘道類型之間重複使用單一 Ocelot Docker 映像
 
@@ -354,7 +354,7 @@ webmarketingapigw:
 
 基於上述程式碼，而且如下面的 Visual Studio 總管所示，定義每個特定業務/BFF API 閘道所需的唯一檔案只有 configuration.json 檔案，因為這四個 API 閘道是以相同的 Docker 映像為依據。
 
-![所有 API 閘道之間的差異僅在於各閘道的 configuration.json 檔案。](./media/image34.png)
+![螢幕擷取畫面：顯示具有設定 json 檔案的所有 API 閘道。](./media/implement-api-gateways-with-ocelot/ocelot-configuration-files.png)
 
 **圖 6-34**。 使用 Ocelot 定義每個 API 閘道/BFF 所需的唯一檔案是設定檔
 
@@ -364,13 +364,13 @@ webmarketingapigw:
 
 例如，瀏覽 webshoppingapigw API 閘道所提供的上游 URL `http://localhost:5202/api/v1/c/catalog/items/2/` 時，您會從 Docker 主機的內部下游 URL `http://catalog.api/api/v1/2` 取得相同結果，如下列瀏覽器所示。
 
-![瀏覽器檢視：從 Catalog.api 通過 API 閘道的回應。](./media/image35.png)
+![瀏覽器的螢幕擷取畫面，其中顯示透過 API 閘道的回應。](./media/implement-api-gateways-with-ocelot/access-microservice-through-url.png)
 
 **圖 6-35**。 透過 API 閘道提供的 URL 存取微服務
 
 基於測試或偵錯原因，如果您想要直接存取目錄 Docker 容器 (僅限開發環境) 而不透過 API 閘道傳遞，由於 'catalog.api' 是 Docker 主機內部的 DNS 解析 (由 docker-compose 服務名稱處理的服務探索)，因此直接存取容器的唯一方式是透過 docker-compose.override.yml 中發佈的外部連接埠，這只會提供給開發測試，例如下列瀏覽器中的 `http://localhost:5101/api/v1/Catalog/items/1`。
 
-![瀏覽器檢視：從 Catalog.api 直接前往 Catalog.api 的回應，等同通過 API 閘道的回應。](./media/image36.png)
+![瀏覽器的螢幕擷取畫面，其中顯示對目錄的直接回應。](./media/implement-api-gateways-with-ocelot/direct-access-microservice-testing.png)
 
 **圖 6-36**。 直接存取微服務以進行測試
 
@@ -384,13 +384,13 @@ webmarketingapigw:
 
 在下圖中，您也可以查看彙總工具服務如何搭配其相關 API 閘道使用。
 
-![eShopOnContainers 架構，顯示彙總工具服務。](./media/image37.png)
+![顯示匯總工具服務的 eShopOnContainers 架構圖表。](./media/implement-api-gateways-with-ocelot/eshoponcontainers-architecture-aggregator-services.png)
 
 **圖 6-37**。 使用彙總工具服務的 eShopOnContainers 架構
 
 仔細看的話，您可以在以下影像的 “Shopping” 商務區域發現，在 API 閘道中使用彙總工具服務時，用戶端應用程式與微服務之間的對話頻繁度有所減少。
 
-![eShopOnContainers 架構放大，顯示匯總工具服務，這會「組合」來自數個微服務的回應「聯結」，以減少用戶端的對話。](./media/image38.png)
+![顯示 eShopOnContainers 架構放大的圖表。](./media/implement-api-gateways-with-ocelot/zoom-in-vision-aggregator-services.png)
 
 **圖 6-38**。 放大檢視彙總工具服務
 
@@ -404,17 +404,17 @@ webmarketingapigw:
 
 由於 eShopOnContainers 使用多個具有依據 BFF 和業務領域之界限的 API 閘道，因此識別/驗證服務不會包含在 API 閘道中 (在下圖中以黃色醒目提示)。
 
-![eShopOnContainers 架構圖，顯示 API 閘道下的身分識別微服務。](./media/image39.png)
+![此圖顯示 API 閘道底下的身分識別微服務。](./media/implement-api-gateways-with-ocelot/eshoponcontainers-identity-service-position.png)
 
 **圖 6-39**。 識別服務在 eShopOnContainers 中的位置
 
 不過，Ocelot 也支援將識別/驗證微服務放在 API 閘道界限內，如下面另一個圖所示。
 
-![利用 API 閘道 (AG) 下的身分識別微服務進行驗證：1) AG 向身分識別微服務要求驗證權杖，2) 身分識別微服務將權杖傳回給 AG，3-4) AG 使用驗證權杖向微服務發出要求。](./media/image40.png)
+![此圖顯示 Ocelot API 閘道中的驗證。](./media/implement-api-gateways-with-ocelot/ocelot-authentication.png)
 
 **圖 6-40**。 Ocelot 的驗證
 
-由於 eShopOnContainers 應用程式已將 API 閘道分割成多個 BFF (前端的後端) 和業務領域 API 閘道，因此另一個選擇是為跨領域考量建立其他 API 閘道。 該選擇相當適合具有多個跨領域考量微服務的更複雜微服務型架構。 由於 eShopOnContainers 中只有一個跨領域考量，因此為了簡單起見，決定只在 API 閘道領域外部處理安全性服務。
+如上圖所示，當身分識別微服務位於 API 閘道（AG）底下時：1） AG 會向身分識別微服務要求驗證權杖，2） identity 微服務會使用驗證 token，將權杖傳回給 AG，3-4） AG 來自微服務的要求。 由於 eShopOnContainers 應用程式已將 API 閘道分割成多個 BFF (前端的後端) 和業務領域 API 閘道，因此另一個選擇是為跨領域考量建立其他 API 閘道。 該選擇相當適合具有多個跨領域考量微服務的更複雜微服務型架構。 由於 eShopOnContainers 中只有一個跨領域考量，因此為了簡單起見，決定只在 API 閘道領域外部處理安全性服務。
 
 在任何情況下，如果在 API 閘道層級保護應用程式，當嘗試使用任何受保護的微服務時，會先瀏覽 Ocelot API 閘道的驗證模組。 這會重新導向 HTTP 要求以瀏覽身分識別或驗證微服務以取得存取權杖，讓您可以使用存取權杖來瀏覽受保護的服務。
 
@@ -540,11 +540,11 @@ services.AddAuthentication(options =>
 
 在 Web 應用程式前端的 Kubernetes 中有一個輸入 Nginx 層加上數個 Ocelot API 閘道/BFF 是理想的架構，如下圖所示。
 
-![Kubernetes 輸入扮演著所有對應用程式流量的反向 Proxy 角色，其中包括通常不在 API 閘道範圍內的 Web 應用程式。](./media/image41.png)
+![顯示輸入層如何融入 AKS 環境的圖表。](./media/implement-api-gateways-with-ocelot/eshoponcontainer-ingress-tier.png)
 
 **圖 6-41**。 部署至 Kubernetes 時之 eShopOnContainers 中的輸入層
 
-當您將 eShopOnContainers 部署到 Kubernetes 時，它只會透過「輸入」公開一些服務或端點，基本上包括 URL 上的下列後置詞清單：
+Kubernetes 輸入扮演著所有對應用程式流量的反向 Proxy 角色，其中包括通常不在 API 閘道範圍內的 Web 應用程式。 當您將 eShopOnContainers 部署到 Kubernetes 時，它只會透過「輸入」公開一些服務或端點，基本上包括 URL 上的下列後置詞清單：
 
 - `/` 代表用戶端 SPA Web 應用程式
 - `/webmvc` 代表用戶端 MVC Web 應用程式

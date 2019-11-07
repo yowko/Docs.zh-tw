@@ -2,12 +2,12 @@
 title: 使用 Entity Framework Core 實作基礎結構持續層
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 使用 Entity Framework Core 探索基礎結構持續層的實作詳細資料。
 ms.date: 10/08/2018
-ms.openlocfilehash: 7e3480999b115ac13f8d7ebcaed826b407aa7637
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: b70ede6b47cbf990d0435aef841416c68f6439b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674095"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737907"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 實作基礎結構持續層
 
@@ -37,7 +37,7 @@ Entity Framework (EF) Core 是常見 Entity Framework 資料存取技術的輕�
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>DDD 觀點的 Entity Framework Core 基礎結構
 
-從 DDD 觀點來看，EF 的一項重要功能是能夠使用 POCO 網域實體，在 EF 術語中也稱為 POCO「程式碼優先的實體」  。 如果您使用 POCO 網域實體，您的網域模型類別會是持續性無知 (persistence-ignorant)，並遵循 [Persistence Ignorance](https://deviq.com/persistence-ignorance/) (持續性無知) 和 [Infrastructure Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance) (基礎結構無知) 準則。
+從 DDD 觀點來看，EF 的一項重要功能是能夠使用 POCO 網域實體，在 EF 術語中也稱為 POCO「程式碼優先的實體」。 如果您使用 POCO 網域實體，您的網域模型類別會是持續性無知 (persistence-ignorant)，並遵循 [Persistence Ignorance](https://deviq.com/persistence-ignorance/) (持續性無知) 和 [Infrastructure Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance) (基礎結構無知) 準則。
 
 根據 DDD 模式，您應該將網域行為和規則封裝在實體類別本身內，讓它可以在存取任何集合時控制非變異項目、驗證及規則。 因此，在 DDD 中允許對子系實體或值物件之集合的公用存取權並不是一項好的做法。 相反地，您會想要公開可控制欄位和屬性集合更新方式與時機，以及發生這種情況時應發生哪些行為和動作的方法。
 
@@ -174,11 +174,11 @@ Entity Framework DbContext 類別是根據工作單位和存放庫模式，並�
 
 在圖 7-18 中，您可以看到不使用存放庫 (直接使用 EF DbContext)，與使用存放庫來簡單模擬存放庫，這二種方式之間的差異。
 
-![比較使用自訂存放庫與一般 DbContext：自訂存放庫會新增一個抽象層，可模擬存放庫用以簡化測試。](./media/image19.png)
+![此圖顯示兩個存放庫中的元件和資料流程。](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
 
 **圖 7-18**。 使用自訂存放庫與一般 DbContext
 
-在模擬時有多種替代方式。 您可以只模擬存放庫，或是模擬整個工作單位。 通常只模擬存放庫便已足夠，通常不需要抽象與模擬整個工作單位的複雜性。
+圖7-18 顯示使用自訂存放庫會新增一個抽象層，可用於模擬存放庫來簡化測試。 在模擬時有多種替代方式。 您可以只模擬存放庫，或是模擬整個工作單位。 通常只模擬存放庫便已足夠，通常不需要抽象與模擬整個工作單位的複雜性。
 
 稍後，當我們將重點放在應用程式層上，您會看到相依性插入在 ASP.NET Core 中的運作方式，以及在使用存放庫時的實作方式。
 
@@ -235,15 +235,15 @@ builder.RegisterType<OrderRepository>()
 - **在 ASP.NET MVC 應用程式中實作存放庫與工作單位模式** \
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
-- **Jonathan Allen.使用 Entity Framework、Dapper 及 Chain 實作存放庫模式策略** \
+- **Jonathan Allen。具有 Entity Framework、Dapper 和連鎖 \ 的存放庫模式的執行策略**
   <https://www.infoq.com/articles/repository-implementation-strategies>
 
-- **Cesar de la Torre：比較 ASP.NET Core IoC 容器服務存留期與 Autofac IoC 容器執行個體範圍** \
+- **Cesar de La Torre。比較 ASP.NET Core IoC 容器服務存留期與 Autofac IoC 容器實例範圍** \
   <https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/>
 
 ## <a name="table-mapping"></a>資料表對應
 
-資料表對應會識別要從中查詢的資料表資料，並儲存到資料庫。 先前您已看到如何使用網域實體 (例如產品或訂單網域) 來產生相關的資料庫結構描述。 EF 的設計高度圍繞著「慣例」  的概念。 慣例處理的問題例如「資料表的名稱是什麼？」 或「主索引鍵是哪個屬性？」 慣例通常依據傳統的名稱 — 例如，主索引鍵通常是以 Id 為結尾的屬性。
+資料表對應會識別要從中查詢的資料表資料，並儲存到資料庫。 先前您已看到如何使用網域實體 (例如產品或訂單網域) 來產生相關的資料庫結構描述。 EF 的設計高度圍繞著「慣例」的概念。 慣例處理的問題例如「資料表的名稱是什麼？」 或「主索引鍵是哪個屬性？」 慣例通常依據傳統的名稱 — 例如，主索引鍵通常是以 Id 為結尾的屬性。
 
 依照慣例，每個實體都會設定成對應至與 `DbSet<TEntity>` 屬性同名的資料表，該屬性會在衍生內容上公開實體。 如不為指定的實體提供 `DbSet<TEntity>` 值，即使用類別名稱。
 
@@ -458,7 +458,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 - **支援欄位** \
   [https://docs.microsoft.com/ef/core/modeling/backing-field](/ef/core/modeling/backing-field)
 
-- **Steve Smith.Entity Framework Core 中的封裝式集合** \
+- **Steve Smith。Entity Framework Core \ 中的封裝集合**
   <https://ardalis.com/encapsulated-collections-in-entity-framework-core>
 
 - **陰影屬性** \

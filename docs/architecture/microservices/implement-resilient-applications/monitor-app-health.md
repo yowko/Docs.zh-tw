@@ -2,12 +2,12 @@
 title: 健康狀態監視
 description: 瀏覽實作健康情況監視的其中一種方式。
 ms.date: 01/07/2019
-ms.openlocfilehash: 2d43efa7b6cfb855a033ee4d766c64c2472ceb36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1d63e04bbea95fcf0a9f9d3b50aef0e7d4a830e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094073"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732875"
 ---
 # <a name="health-monitoring"></a>健康狀態監視
 
@@ -123,7 +123,7 @@ eShopOnContainers 中的微服務依賴多個服務來執行其工作。 例如�
 
 例如，在 `Catalog.API` 微服務中，已新增下列 NuGet 套件：
 
-![Catalog.API 專案的解決方案總管檢視，可在其中參考 AspNetCore.Diagnostics.HealthChecks NuGet 套件](./media/image6.png)
+![HealthChecks NuGet 套件的螢幕擷取畫面。](./media/monitor-app-health/aspnet-core-diagnostics-health-checks.png)
 
 **圖 8-7**。 目錄 API 中使用 AspNetCore.Diagnostics.HealthChecks 實作的自訂健康情況檢查
 
@@ -191,7 +191,7 @@ app.UseHealthChecks("/hc", new HealthCheckOptions()
 
 完成此文章中說明的健康情況檢查設定並在 Docker 中開始執行微服務之後，您就可以直接從瀏覽器檢查微服務的健康情況。 您必須在 Docker 主機中發佈容器連接埠，以便透過外部 Docker 主機 IP 或 `localhost` 存取容器，如圖 8-8 所示。
 
-![健康情況檢查所傳回 JSON 回應的瀏覽器檢視](./media/image7.png)
+![健全狀況檢查所傳回之 JSON 回應的螢幕擷取畫面。](./media/monitor-app-health/health-check-json-response.png)
 
 **圖 8-8**。 從瀏覽器檢查單一服務的健康狀態
 
@@ -205,7 +205,7 @@ eShopOnContainers 範例包含顯示範例健康情況檢查報告的網頁，�
 
 幸好，[AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) 也會提供 [AspNetCore.HealthChecks.UI](https://www.nuget.org/packages/AspNetCore.HealthChecks.UI/) NuGet 套件，其可用來顯示所設定 URI 中的健康情況檢查結果。
 
-![WebStatus 應用程式的瀏覽器檢視，其中顯示 eShopOnContainers 中所有微服務的健康情況狀態](./media/image8.png)
+![健全狀況檢查 UI eShopOnContainers 健全狀況狀態的螢幕擷取畫面。](./media/monitor-app-health/health-check-status-ui.png)
 
 **圖 8-9**。 eShopOnContainers 中的範例健康狀態檢查報告
 

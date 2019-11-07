@@ -2,16 +2,16 @@
 title: 容器和 Docker 簡介
 description: 取得使用 Docker 主要優點的高階概觀。
 ms.date: 02/15/2019
-ms.openlocfilehash: a03c67ed4fbc55c84e69fba5b7978863c8305e00
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 9ac08a64cd2465b4b88a266c1ec0925f37680bf9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295669"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738125"
 ---
 # <a name="introduction-to-containers-and-docker"></a>容器和 Docker 簡介
 
-容器化是一種軟體開發方法，在此方法中，應用程式或服務、其相依性及其組態 (抽象化為部署資訊清單檔) 會封裝在一起成為一個容器映像。  您可以將容器化應用程式當作一個單位來測試，並將它以容器映像執行個體形式部署至主機作業系統 (OS)。
+*容器化是一種軟體發展方法，其中應用程式或服務、其相依性和其設定（抽象化為部署資訊清單檔案）會封裝在一起，做為容器映射。接著，您可以將容器化應用程式測試為一個單位，並將其部署為主機作業系統（OS）的容器映射實例。*
 
 就像是貨櫃允許利用船隻、火車或貨車運輸貨物，而不論內含哪種貨物，軟體容器是軟體部署的標準單位，可包含不同的程式碼和相依性。 以此方式容器化軟體可讓開發人員和 IT 專業人員只需要一點修改或不需要任何修改，就能跨環境進行部署。
 
@@ -19,7 +19,7 @@ ms.locfileid: "70295669"
 
 每個容器可以執行整個 Web 應用程式或服務，如圖 1-1 所示。 在此範例中，Docker 主機是容器主機，而 App1、App2、Svc1 及 Svc2 是容器化應用程式或服務。
 
-![在 VM 或實體伺服器的作業系統上執行的兩個應用程式和兩個服務](./media/image1.png)
+![此圖顯示在 VM 或伺服器中執行的四個容器。](./media/index/multiple-containers-single-host.png)
 
 **圖 1-1**。 在容器主機上執行的多個容器
 

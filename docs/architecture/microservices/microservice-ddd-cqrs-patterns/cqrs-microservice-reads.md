@@ -2,12 +2,12 @@
 title: 在 CQRS 微服務中實作讀取/查詢
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 CQRS 查詢端使用 Dapper 在 eShopOnContainers 訂購微服務上的實作。
 ms.date: 10/08/2018
-ms.openlocfilehash: 6541a0cb7ce8ac3946e119483308d91158bdb522
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 064abd084ea6b99229f995f8ca899a99b69b7bc2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094057"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739988"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>在 CQRS 微服務中實作讀取/查詢
 
@@ -15,15 +15,15 @@ ms.locfileid: "73094057"
 
 方法很簡單，如圖 7-3 所示。 API 介面是由 Web API 控制器實作，這些控制器會使用任何基礎結構，例如 Dapper 等微物件關聯式對應 (ORM)，並根據 UI 應用程式的需求傳回動態 ViewModel。
 
-![對於簡化 CQRS 方法中的查詢端，最簡單的方法可以藉由使用例如 Dapper 等微型 ORM，傳回動態 ViewModel 查詢資料庫來實作。](./media/image3.png)
+![顯示高階查詢的圖表，也就是簡化的 CQRS。](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
 
 **圖 7-3**. CQRS 微服務中最簡單的查詢方法
 
-這是最簡單可行的查詢方法。 查詢定義會查詢資料庫，並傳回每個查詢立即建立的動態 ViewModel。 因為查詢都具有等冪性，所以無論您執行查詢多少次，它們都不會變更資料。 因此，您不必受限於交易端使用的任何 DDD 模式，例如彙總及其他模式，這就是查詢與交易區域分開的原因。 您只要向資料庫查詢 UI 需要的資料，並傳回不需要在任何位置以靜態方式定義的動態 ViewModel (ViewModel 沒有類別)，SQL 陳述式本身除外。
+對於簡化 CQRS 方法中的查詢端，最簡單的方法可以藉由使用例如 Dapper 等微型 ORM，傳回動態 ViewModel 查詢資料庫來實作。 查詢定義會查詢資料庫，並傳回每個查詢立即建立的動態 ViewModel。 因為查詢都具有等冪性，所以無論您執行查詢多少次，它們都不會變更資料。 因此，您不必受限於交易端使用的任何 DDD 模式，例如彙總及其他模式，這就是查詢與交易區域分開的原因。 您只要向資料庫查詢 UI 需要的資料，並傳回不需要在任何位置以靜態方式定義的動態 ViewModel (ViewModel 沒有類別)，SQL 陳述式本身除外。
 
 因為這是簡單的方法，所以查詢端需要的程式碼 (例如使用 [Dapper](https://github.com/StackExchange/Dapper) 等微 ORM 的程式碼) 可在[相同的 Web API 專案](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs)中實作。 如圖 7-4 所示。 查詢是在 eShopOnContainers 解決方案內的 **Ordering.API** 微服務專案中所定義。
 
-![Ordering.API 專案的 [方案總管] 檢視，顯示應用程式 > 查詢資料夾。](./media/image4.png)
+![排序 API 專案的 [查詢] 資料夾的螢幕擷取畫面。](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
 **圖 7-4**. eShopOnContainers 訂購微服務中的查詢
 
@@ -41,7 +41,7 @@ ViewModel 可以是在類別中定義的靜態類型。 或者，您可以根據
 
 Dapper 是開放原始碼專案 (原創者為 Sam Saffron)，屬於 [Stack Overflow](https://stackoverflow.com/) (堆疊溢位) 的建置組塊。 若要使用 Dapper，您只需要透過 [Dapper NuGet 套件](https://www.nuget.org/packages/Dapper)安裝它即可，如下圖所示：
 
-![在 VS [管理 NuGet 套件] 檢視中所檢視的 Dapper 套件。](./media/image4.1.png)
+![NuGet 套件視圖中 Dapper 套件的螢幕擷取畫面。](./media/cqrs-microservice-reads/drapper-package-nuget.png)
 
 您也需要新增 using 陳述式，以便您的程式碼存取 Dapper 擴充方法。
 
@@ -177,7 +177,7 @@ public class OrderSummary
 
 在下圖中，您會看到 Swagger UI 如何顯示 ResponseType 資訊。
 
-![訂購 API 的 Swagger UI 頁面瀏覽器檢視。](./media/image5.png)
+![訂購 API 的 Swagger UI 頁面螢幕擷取畫面。](./media/cqrs-microservice-reads/swagger-ordering-http-api.png)
 
 **圖 7-5**。 顯示 Web API 回應類型和可能 HTTP 狀態碼的 Swagger UI
 

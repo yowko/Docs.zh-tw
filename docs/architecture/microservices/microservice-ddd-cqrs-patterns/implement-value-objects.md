@@ -2,12 +2,12 @@
 title: 實作值物件
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 深入了解使用新 Entity Framework 功能實作值物件的詳細資料與選項。
 ms.date: 10/08/2018
-ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 2608517c4006f5e8da1d31b2c337d8ddd3ddd542
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674145"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739859"
 ---
 # <a name="implement-value-objects"></a>實作值物件
 
@@ -17,11 +17,11 @@ ms.locfileid: "68674145"
 
 圖 7-13 顯示 Order 彙總內的 Address 值物件。
 
-![Order 彙總內的 Address 值物件。](./media/image14.png)
+![圖表，顯示訂單匯總內的位址值物件。](./media/implement-value-objects/value-object-within-aggregate.png)
 
 **圖 7-13**。 訂單彙總內的 Address 值物件
 
-如圖 7-13 所示，實體通常是由多個屬性組成。 例如，`Order` 實體可以模型化成具身分識別的實體，並且在內部由一組屬性組成，例如 OrderId、OrderDate、OrderItems 等等。但地址 (僅由國家/地區、街道、縣市等組成的複雜值，且在此網域中沒有任何身分識別) 必須模型化並視為值物件。
+如圖 7-13 所示，實體通常是由多個屬性組成。 例如，`Order` 實體可以模型化為具有身分識別的實體，並由內部的一組屬性組成，例如 [訂單]、[訂購]、[OrderItems] 等等。但位址是由國家/地區、街道、城市等等組成的複雜值，而且在此網域中沒有任何身分識別，必須模型化並視為值物件。
 
 ## <a name="important-characteristics-of-value-objects"></a>值物件的重要特性
 
@@ -307,13 +307,13 @@ public class Address
 
 ## <a name="additional-resources"></a>其他資源
 
-- **Martin Fowler：ValueObject 模式** \
+- **聖馬丁 Fowler。ValueObject 模式** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
-- **Eric Evans：網域驅動設計：解決軟體核心的複雜度。** (書籍；包含值物件的探討) \
+- **Eric Evans。領域驅動設計：處理軟體核心的複雜性。** (書籍；包含值物件的探討) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
-- **Vaughn Vernon：Implementing Domain-Driven Design.** (書籍；包含值物件的探討) \
+- **Vaughn Vernon。執行領域驅動設計。** (書籍；包含值物件的探討) \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
 - **陰影屬性** \

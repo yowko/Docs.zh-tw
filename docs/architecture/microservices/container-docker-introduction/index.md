@@ -2,12 +2,12 @@
 title: 容器和 Docker 簡介
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 容器和 Docker 簡介
 ms.date: 08/31/2018
-ms.openlocfilehash: cb6244939f6ae89ba1dc824b55a21d1e010cef5e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 364cbc0ba8149be1873df628a1ca243f420e7d0b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296156"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740059"
 ---
 # <a name="introduction-to-containers-and-docker"></a>容器和 Docker 簡介
 
@@ -19,7 +19,7 @@ ms.locfileid: "70296156"
 
 每個容器可以執行整個 Web 應用程式或服務，如圖 2-1 所示。 在此範例中，Docker 主機是容器主機，而 App1、App2、Svc 1 和 Svc 2 是容器化應用程式或服務。
 
-![在 VM 或實體伺服器的作業系統上執行的兩個應用程式和兩個服務](./media/image1.png)
+![此圖顯示在 VM 或伺服器中執行的四個容器。](./media/index/multiple-containers-single-host.png)
 
 **圖 2-1**. 在容器主機上執行的多個容器
 

@@ -2,22 +2,22 @@
 title: 什麼是 Docker？
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 什麼是 Docker？
 ms.date: 08/31/2018
-ms.openlocfilehash: 6fb08157a78bfaee48e0bf919fc5942eadf0f287
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 215d756c631440c99a3a8ad8128ec61fef3bc26d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771350"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740123"
 ---
 # <a name="what-is-docker"></a>什麼是 Docker？
 
 [Docker](https://www.docker.com/) 是[開放原始碼專案](https://github.com/docker/docker)，將應用程式自動化部署為可攜式且可自足的容器，在雲端或內部部署上執行。 Docker 也是一家升級及發展這項技術的[公司](https://www.docker.com/)，並且與雲端、Linux 和 Windows 廠商 (包括 Microsoft) 合作。
 
-![Docker 容器可以在任何位置執行，例如客戶資料中心的內部部署、外部服務提供者或雲端 (在 Azure 上)。](./media/image2.png)
+![此圖顯示 Docker 容器可執行檔位置。](./media/docker-defined/docker-containers-run-anywhere.png)
 
-**圖 2-2**。 Docker 將容器部署在混合式雲端的所有圖層
+**圖 2-2**。 Docker 會在混合式雲端的所有層級部署容器。
 
-Docker 映像容器可以原生方式在 Linux 及 Windows 上執行。 不過，Windows 映像只能在 Windows 主機上執行，而 Linux 映像可以在 Linux 主機和 Windows 主機上執行 (目前是使用 Hyper-V Linux VM)，其中主機是指伺服器或 VM。
+Docker 容器可以在任何位置執行，例如客戶資料中心的內部部署、外部服務提供者或雲端 (在 Azure 上)。 Docker 映像容器可以原生方式在 Linux 及 Windows 上執行。 不過，Windows 映像只能在 Windows 主機上執行，而 Linux 映像可以在 Linux 主機和 Windows 主機上執行 (目前是使用 Hyper-V Linux VM)，其中主機是指伺服器或 VM。
 
 開發人員可以使用 Windows、Linux 或 macOS 上的開發環境。 在開發電腦上，開發人員執行的 Docker 主機是 Docker 映像部署所在，包括應用程式及其相依性。 在 Linux 或 Mac 上工作的開發人員會使用 Linux 型的 Docker 主機，他們只能建立適用於 Linux 容器的映像。 （在 Mac 上工作的開發人員可以編輯程式碼，或從 macOS 執行 Docker CLI，但在撰寫本文時，容器不會直接在 macOS 上執行）。在 Windows 上工作的開發人員可以建立 Linux 或 Windows 容器的映射。
 
@@ -37,10 +37,12 @@ Docker 映像容器可以原生方式在 Linux 及 Windows 上執行。 不過�
 
 | 虛擬機器 | Docker 容器 |
 | -----------------| ------------------|
-|![針對 VM，在主機伺服器中有三個基礎層，從下到上分別是：基礎結構、主機作業系統和 Hypervisor，每部 VM 在頂端都具有各自的作業系統和所有必要的程式庫。](./media/image3.png)|![針對 Docker，主機伺服器只有基礎結構和作業系統，而且在其上，容器引擎會讓容器保持隔離，但是共用基礎作業系統服務。](./media/image4.png)|
+|![顯示傳統 VM 硬體/軟體堆疊的圖表。](./media/docker-defined/virtual-machine-hardware-software.png)|![顯示 Docker 容器之硬體/軟體堆疊的圖表。](./media/docker-defined/docker-container-hardware-software.png)|
 |虛擬機器包含應用程式、必要的程式庫或二進位檔，以及完整的客體作業系統。 完整的虛擬化比容器化需要更多資源。 | 容器包括應用程式及其所有相依性。 不過，它們會與其他容器共用作業系統核心，並在主機作業系統的使用者空間中，以獨立程序的形式執行。 (Hyper-V 容器除外，因為每個容器都是在每個容器的特殊虛擬機器內部執行。) |
 
 **圖 2-3**。 傳統虛擬機器與 Docker 容器的比較
+
+針對 VM，在主機伺服器中有三個基礎層，從下到上分別是：基礎結構、主機作業系統和 Hypervisor，每部 VM 在頂端都具有各自的作業系統和所有必要的程式庫。 針對 Docker，主機伺服器只有基礎結構和作業系統，在上方則是容器引擎，該引擎會讓容器保持隔離，但是共用基礎作業系統服務。
 
 因為容器只需要很少的資源 (例如，它們不需要完整的作業系統)，所以容易部署且會快速啟動。 這可讓您擁有更高的密度，這表示可讓您在相同硬體單位上執行更多服務，藉此降低成本。
 

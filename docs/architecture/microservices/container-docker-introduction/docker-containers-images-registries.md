@@ -2,12 +2,12 @@
 title: Docker 容器、映像和登錄
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | Docker 容器、映像和登錄
 ms.date: 08/31/2018
-ms.openlocfilehash: 520f8d4d54f1fdd227ff9a1e88660b62e75f927f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 3b643a3bf4ca3ce1b8ba3fc40cd2f3ad8bbe5ffb
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674895"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737786"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 容器、映像和登錄
 
@@ -19,9 +19,11 @@ ms.locfileid: "68674895"
 
 圖 2-4 顯示 Docker 中的映像和登錄與其他元件的關係。 它也顯示來自廠商的多個登錄供應項目。
 
-![Docker 中的基本分類：登錄就像是一個書架，映像會存放於此處，並供提取用以建置容器，以執行服務或 Web 應用程式。 內部部署和公用雲端上都會有私人 Docker 登錄。 Docker Hub 是由 Docker 維護的公開登錄，連同 Docker Trusted Registry 這項企業級解決方案，Azure 提供了 Azure Container Registry。 AWS、Google 和其他服務也有容器登錄。](./media/image5.PNG)
+![顯示 Docker 中基本分類法的圖表。](./media/docker-containers-images-registries/taxonomy-of-docker-terms-and-concepts.png)
 
 **圖 2-4**： Docker 術語和概念分類
+
+登錄就像是一個書架，映像會存放於此處，並供提取用以建置容器，以執行服務或 Web 應用程式。 內部部署和公用雲端上都會有私人 Docker 登錄。 Docker Hub 是由 Docker 維護的公開登錄，連同 Docker Trusted Registry 這項企業級解決方案，Azure 提供了 Azure Container Registry。 AWS、Google 和其他服務也有容器登錄。
 
 將映像放在登錄中可讓您儲存靜態和不可變的應用程式位元，包括其在架構層級的所有相依性。 您可以接著在多個環境中建立這些映像的版本並加以部署，因此提供一致的部署單位。
 

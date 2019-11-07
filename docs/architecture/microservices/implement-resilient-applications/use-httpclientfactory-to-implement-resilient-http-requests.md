@@ -2,12 +2,12 @@
 title: 使用 HttpClientFactory 實作復原 HTTP 要求
 description: 了解如何使用 HttpClientFactory，自 .NET Core 2.1 開始提供，可用來建立 `HttpClient` 執行個體，方便您在應用程式中使用。
 ms.date: 08/08/2019
-ms.openlocfilehash: e32ffdd43ce8968ef9a0694873870b61510d7300
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9eff4a01361b3dc6f7471bc012c945d048b9a276
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093991"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737762"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 實作復原 HTTP 要求
 
@@ -56,11 +56,13 @@ ms.locfileid: "73093991"
 
 下圖顯示具型別用戶端如何搭配 `HttpClientFactory` 使用：
 
-![ClientService (控制器或用戶端程式碼所使用) 會使用由已註冊的 IHttpClientFactory 所建立的 HttpClient。 此處理站會從它管理的集區指派一個 HttpMessageHandler 給 HttpClient。 使用擴充方法 AddHttpClient 在 DI 容器中註冊 IHttpClientFactory 時，可以使用 Polly 的原則設定 HttpClient。](./media/image3.5.png)
+![顯示型別用戶端如何搭配 HttpClientFactory 使用的圖表。](./media/use-httpclientfactory-to-implement-resilient-http-requests/client-application-code.png)
 
 **圖 8-4**。 搭配具型別用戶端類別使用 HttpClientFactory。
 
-首先，安裝包含 `IServiceCollection` `AddHttpClient()` 擴充方法的 `Microsoft.Extensions.Http` NuGet 封裝，以在您的應用程式中安裝 `HttpClientFactory`。 這個擴充方法註冊將用來做為介面 `IHttpClientFactory` 之單一物件的 `DefaultHttpClientFactory`。 它為 `HttpMessageHandlerBuilder` 定義暫時性設定。 此訊息處理常式 (`HttpMessageHandler` 物件) 取自集區，供處理站傳回的 `HttpClient` 使用。
+在上圖中，ClientService （由控制器或用戶端程式代碼使用）會使用已註冊 `IHttpClientFactory`所建立的 `HttpClient`。 此處理站會從所管理的集區中指派 `HttpMessageHandler` 的 `HttpClient`。 在使用擴充方法 `AddHttpClient`的 DI 容器中註冊 `IHttpClientFactory` 時，可以使用 Polly 的原則來設定 `HttpClient`。
+
+若要設定上述結構，請安裝包含 `IServiceCollection``AddHttpClient()` 擴充方法的 `Microsoft.Extensions.Http` NuGet 封裝，以在應用程式中新增 `HttpClientFactory`。 這個擴充方法註冊將用來做為介面 `IHttpClientFactory` 之單一物件的 `DefaultHttpClientFactory`。 它為 `HttpMessageHandlerBuilder` 定義暫時性設定。 此訊息處理常式 (`HttpMessageHandler` 物件) 取自集區，供處理站傳回的 `HttpClient` 使用。
 
 在下一個程式碼中，您可以看到如何使用 `AddHttpClient()` 來註冊需要使用 `HttpClient` 的具型別用戶端 (服務代理程式)。
 

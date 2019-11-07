@@ -2,12 +2,12 @@
 title: 使用 docker-compose.yml 定義多容器應用程式
 description: 如何使用 docker-compose.yml 指定多容器應用程式的微服務組合。
 ms.date: 10/02/2018
-ms.openlocfilehash: 938a9aa192f82628051bd7dc065f661f510ba544
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 02db27feb1320d8b9c6823b8f9ef51c2ddf9791c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416710"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737101"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定義多容器應用程式
 
@@ -177,9 +177,15 @@ docker-compose -f docker-compose.yml -f docker-compose.test.override.yml down
 
 Compose 預設會讀取兩個檔案、docker-compose.yml 和選擇性 docker-compose.override.yml 檔案。 如圖 6-11 中所示，當您在使用 Visual Studio 並啟用 Docker 支援時，Visual Studio 也會另外建立 docker-compose.vs.debug.g.yml 檔案以供偵錯應用程式，您可以在主要解決方案資料夾中的資料夾 obj\\Docker\\查看此檔案。
 
-![docker-compose 專案檔結構：.dockerignore > 用於忽略檔案；docker-compose.yml > 用於結合微服務；docker-compose.override.yml > 用於設定微服務環境。](./media/image12.png)
+![Docker 撰寫專案中檔案的螢幕擷取畫面。](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 **圖 6-11**。 Visual Studio 2017 中的 docker-compose 檔案
+
+**docker 撰寫**專案檔案結構：
+
+* *.dockerignore* -用來忽略檔案
+* *docker-compose.dev.debug.yml. yml* -用來撰寫微服務
+* *docker-compose.dev.debug.yml. override. yml* -用來設定微服務環境
 
 您可以使用任何編輯器 (如 Visual Studio Code 或 Sublime) 來編輯 docker-compose 檔案，並使用 docker-compose-up 命令來執行應用程式。
 
@@ -191,11 +197,11 @@ docker-compose.override.yml 檔案，如其名所示，包含可覆寫基底組�
 
 典型使用案例是定義多個 Compose 檔案，讓您可以將目標設為多個環境，例如生產環境、暫存環境、CI 或開發。 若要支援這些差異，您可以將 Compose 組態分割成多個檔案，如圖 6-12 所示。
 
-![您可以合併多個 docker-compose*.fml 檔案來處理不同環境。](./media/image13.png)
+![三個 docker 組成檔案的圖表，設定為覆寫基底檔案。](./media/multi-container-applications-docker-compose/multiple-docker-compose-files-override-base.png)
 
 **圖 6-12**。 覆寫基底 docker-compose.yml 檔案中值的多個 docker-compose 檔案
 
-您可以開始使用基底 docker-compose.yml 檔案。 此基底檔案必須包含不會根據環境而變更的基底或靜態組態設定。 例如，eShopOnContainers 具有下列與基底檔案相同的 docker-compose.yml (簡化為具有較少服務) 檔案。
+您可以結合多個 docker-compose* yml 檔案來處理不同的環境。 您可以開始使用基底 docker-compose.yml 檔案。 此基底檔案必須包含不會根據環境而變更的基底或靜態組態設定。 例如，eShopOnContainers 具有下列與基底檔案相同的 docker-compose.yml (簡化為具有較少服務) 檔案。
 
 ```yml
 #docker-compose.yml (Base)

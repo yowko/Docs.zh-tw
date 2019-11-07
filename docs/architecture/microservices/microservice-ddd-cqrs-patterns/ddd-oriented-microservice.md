@@ -2,12 +2,12 @@
 title: 設計 DDD 導向微服務
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 DDD 導向的訂購微服務及其應用程式層的設計。
 ms.date: 10/08/2018
-ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674345"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739973"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>設計 DDD 導向微服務
 
@@ -37,13 +37,13 @@ ms.locfileid: "68674345"
 
 圖 7-5 顯示分層設計在 eShopOnContainer 應用程式中的實作方式。
 
-![訂購等 DDD 微服務中的三層。 每一層都是 VS 專案：應用程式層是 Ordering.API、領域層是 Ordering.Domain，而基礎結構層是 Ordering.Infrastructure。](./media/image6.png)
+![顯示領域驅動設計微服務中之圖層的圖表。](./media/ddd-oriented-microservice/domain-driven-design-microservice.png)
 
 **圖 7-5**。 eShopOnContainers 訂購微服務中的 DDD 層
 
-您會希望將系統設計成每一個層都只會跟特定的其他層通訊。 若層是作為不同的類別程式庫實作的，這會比較容易強制執行，因為您可以清楚的識別程式庫之間設定了哪些相依性。 例如，領域模型層不應該相依於任何其他的層 (領域模型類別應為簡單的 CLR 物件 ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) 類別)。 如圖 7-6 所示，**Ordering.Domain** 層程式庫只在 .NET Core 程式庫或 NuGet 套件上具有相依性，在任何其他自訂程式庫 (例如資料程式庫或永續性程式庫) 上則不具有相依性。
+訂購等 DDD 微服務中的三層。 每一層都是 VS 專案：應用程式層是 Ordering.API、領域層是 Ordering.Domain，而基礎結構層是 Ordering.Infrastructure。 您會希望將系統設計成每一個層都只會跟特定的其他層通訊。 若層是作為不同的類別程式庫實作的，這會比較容易強制執行，因為您可以清楚的識別程式庫之間設定了哪些相依性。 例如，領域模型層不應該相依於任何其他的層 (領域模型類別應為簡單的 CLR 物件 ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) 類別)。 如圖 7-6 所示，**Ordering.Domain** 層程式庫只在 .NET Core 程式庫或 NuGet 套件上具有相依性，在任何其他自訂程式庫 (例如資料程式庫或永續性程式庫) 上則不具有相依性。
 
-![Ordering.Domain 相依性的 [方案總管] 檢視，顯示它只相依於 .NET Core 程式庫。](./media/image7.png)
+![排序的螢幕擷取畫面。網域相依性。](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
 
 **圖 7-6**。 作為程式庫實作的層允許對層之間的相依性進行更佳的控制
 
@@ -51,7 +51,7 @@ ms.locfileid: "68674345"
 
 Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](https://domainlanguage.com/ddd/) 提到了下列關於領域模型層及應用程式層的內容。
 
-**領域模型層**：負責呈現商務概念、商務情況的資訊，以及商務規則。 反映商務情況的狀態會受控並用於此處，即使儲存它的技術細節已委派給基礎結構。 此層是商務軟體的核心。
+**領域模型層**負責呈現商務概念、商務情況的資訊，以及商務規則。 反映商務情況的狀態會受控並用於此處，即使儲存它的技術細節已委派給基礎結構。 此層是商務軟體的核心。
 
 領域模型層是表達商務的地方。 當您在 .NET 中實作微服務領域模型層時，該層會編碼為帶有擷取資料與行為 (帶有邏輯的方法) 之領域實體的類別庫。
 
@@ -85,21 +85,21 @@ Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](https://d
 
 因此，您的層或類別庫及專案最後應相依於您的領域模型層 (程式庫)，而不是反過來也一樣，如圖 7-7 所示。
 
-![DDD 服務中的相依性，應用程式層相依於領域和基礎結構，基礎結構相依於網域，但網域不相依於任一層。](./media/image8.png)
+![此圖顯示 DDD 服務層之間存在的相依性。](./media/ddd-oriented-microservice/ddd-service-layer-dependencies.png)
 
 **圖 7-7**。 DDD 中層之間的相依性
 
-針對每一個微服務，此層應獨立設計。 如前文所述，您可以遵循 DDD 模式來實作最複雜的微服務，同時卻能以更簡單的方式實作更簡單的資料驅動微服務 (於單一層中的簡單 CRUD)。
+DDD 服務中的相依性，應用程式層相依於領域和基礎結構，基礎結構相依於網域，但網域不相依於任一層。 針對每一個微服務，此層應獨立設計。 如前文所述，您可以遵循 DDD 模式來實作最複雜的微服務，同時卻能以更簡單的方式實作更簡單的資料驅動微服務 (於單一層中的簡單 CRUD)。
 
 #### <a name="additional-resources"></a>其他資源
 
-- **DevIQ。持續性無知準則** \
+- **DevIQ。持續性無知原則** \
   <https://deviq.com/persistence-ignorance/>
 
 - **Oren Eini。基礎結構無知** \
   <https://ayende.com/blog/3137/infrastructure-ignorance>
 
-- **Angel Lopez。領域導向設計中的分層架構** \
+- **天使 Lopez。領域導向設計中的分層架構** \
   <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]

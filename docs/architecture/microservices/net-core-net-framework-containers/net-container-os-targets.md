@@ -2,12 +2,12 @@
 title: 針對 .NET 容器要設為目標的作業系統
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對 .NET 容器要設為目標的作業系統
 ms.date: 01/07/2019
-ms.openlocfilehash: 8bcfa0212f84c575a63f76e05edec1e511cadc36
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: dcf91f5ab808a8704201979f6bab1140c3343bce
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772008"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736919"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>針對 .NET 容器要設為目標的作業系統
 
@@ -19,9 +19,11 @@ ms.locfileid: "72772008"
 
 在圖 3-1 中，您可以看到根據使用的 .NET Framework，可能使用的 OS 版本。
 
-![在部署舊版 .NET Framework 應用程式時，您必須以相容於舊版應用程式和 IIS、且具有較大映像的 Windows Server Core 為目標。 在部署 .NET Core 應用程式時，您能夠以 Windows Nano Server 為目標，因為它已經過雲端最佳化、使用 Kestrel，且較為輕巧而啟動速度較快。 此外，支援 Debian、Alpine 和其他項目的 Linux 也可作為目標。 它同樣也使用 Kestrel，且較為輕巧而啟動速度較快。](./media/image1.png)
+![此圖顯示要與哪些 .NET 容器搭配使用的作業系統。](./media/net-container-os-targets/targeting-operating-systems.png)
 
 **圖 3-1** 根據 .NET Framework 版本決定要設為目標的作業系統
+
+部署舊版 .NET Framework 應用程式時，您必須以 Windows Server Core 為目標，與繼承應用程式和 IIS 相容，但其影像較大。 在部署 .NET Core 應用程式時，您能夠以 Windows Nano Server 為目標，因為它已經過雲端最佳化、使用 Kestrel，且較為輕巧而啟動速度較快。 此外，支援 Debian、Alpine 和其他項目的 Linux 也可作為目標。 也會使用 Kestrel，較小且更快速地啟動。
 
 若您想要使用不同的 Linux 發佈或 Microsoft 未支援的版本，您也可以建立您自己的 Docker 映像。 例如，您可以建立讓 ASP.NET Core 在傳統式 .NET Framework 及 Windows Server Core 上執行的映像 (並非 Docker 的常見案例)。
 

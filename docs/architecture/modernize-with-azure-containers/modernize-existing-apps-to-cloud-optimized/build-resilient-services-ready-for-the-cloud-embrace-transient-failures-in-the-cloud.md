@@ -2,14 +2,14 @@
 title: 為雲端打造可復原的服務。 接受雲端中的暫時性失敗
 description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |為雲端打造可復原的服務。 接受雲端中的暫時性失敗
 ms.date: 04/30/2018
-ms.openlocfilehash: 5f44029a214cf1f366fc787e27a9ac34599c4dca
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: e6fae8140b55cb0308dca9f4b77e961501b41f8f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373963"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739386"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>建置準備好在雲端執行的彈性服務：接受雲端中的暫時性失敗
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>為雲端打造可復原的服務：在雲端中採用暫時性失敗
 
 「復原」是指能夠從失敗中復原並繼續運作的能力。 復原不是為了避免失敗，而是要接受發生失敗的事實，然後以避免停機或資料遺失的方式來回應它們。 復原的目標是在失敗後將應用程式返回完全運作的狀態。
 
@@ -27,7 +27,7 @@ ms.locfileid: "70373963"
 
 如圖4-9 所示，彈性應用程式應該執行像是「使用指數輪詢重試」之類的技術，讓應用程式有機會處理資源中的暫時性失敗。 您也應該在應用程式中使用「斷路器」。 當應用程式實際上是長期失敗時，斷路器會停止嘗試存取資源。 藉由使用斷路器，應用程式可避免誘發本身的拒絕服務。
 
-![以指數輪詢的重試處理部分失敗](./media/image9.png)
+![以指數輪詢重試所處理部分失敗的圖表。](./media/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud/retry-partial-failures.png)
 
 **圖4-9。** 以指數輪詢的重試處理部分失敗
 
@@ -35,7 +35,7 @@ ms.locfileid: "70373963"
 
 根據您所使用的 .NET 版本，執行存取資料庫的復原通訊時，可能很簡單（例如，[使用 Entity Framework 6 或更新](/ef/ef6/fundamentals/connection-resiliency/retry-logic)版本）。 這只是設定資料庫連接的相關事項。 或者，您可能需要使用其他程式庫，例如[暫時性錯誤處理應用程式區塊](https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50))（適用于舊版 .net），或甚至是執行您自己的程式庫。
 
-實作 HTTP 重試與斷路器時，適用於.NET 的建議是使用[Polly](https://github.com/App-vNext/Polly)目標.NET Framework 4.0，.NET Framework 4.5 和.NET Standard 1.1 中，其中包含.NET Core 支援程式庫。
+在執行 HTTP 重試和斷路器時，.NET 的建議是使用[Polly](https://github.com/App-vNext/Polly)程式庫，其目標為 .NET Framework 4.0、.NET Framework 4.5 和 .NET Standard 1.1，其中包括 .net Core 支援。
 
 若要瞭解如何在雲端中執行處理部分失敗的策略，請參閱下列參考。
 

@@ -2,12 +2,12 @@
 title: 使用 .NET Core 實作微服務領域模型
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 進入 DDD 導向領域模型的實作詳細資料。
 ms.date: 10/08/2018
-ms.openlocfilehash: b2ad62c2a16dd3993b9624ec14f0070e934ac2de
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: be8dc9339f5815139616e9785b5b3e3e5931b57e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676585"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737260"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 實作微服務領域模型
 
@@ -17,7 +17,9 @@ ms.locfileid: "68676585"
 
 用於 eShopOnContainers 參考應用程式的資料夾組織展示了應用程式的 DDD 模型。 您可能會發現不同的資料夾組織可以更清楚的與您為應用程式選擇的設計進行通訊。 如同您在圖 7-10 中所看到的，在訂購領域模型中有兩個彙總，即訂單彙總和購買者彙總。 每一個彙總都是一組領域實體和值物件，雖然您也可以使用單一領域實體 (彙總根或根實體) 來組成彙總。
 
-![Ordering.Domain 專案的 [方案總管] 檢視，顯示包含 BuyerAggregate 及 OrderAggregate 資料夾的 AggregatesModel 資料夾，每一個包含它的實體類別、值物件檔案等等。 ](./media/image11.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="方案總管中的排序. 網域專案的螢幕擷取畫面。":::
+Ordering.Domain 專案的 [方案總管] 檢視，顯示包含 BuyerAggregate 及 OrderAggregate 資料夾的 AggregatesModel 資料夾，每一個包含它的實體類別、值物件檔案等等。
+:::image-end:::
 
 **圖 7-10**。 eShopOnContainers 訂購微服務的領域模型結構
 
@@ -31,7 +33,9 @@ ms.locfileid: "68676585"
 
 「交易一致性」表示彙總保證會在商務動作結束時維持一致及最新狀態。 例如，來自 eShopOnContainers 訂購微服務領域模型的訂單彙總是由圖 7-11 中的內容所組成。
 
-![OrderAggregate 資料夾的詳細檢視：Address.cs 是值物件、IOrderRepository 是存放庫介面、Order.cs 是彙總根、OrderItem.cs 是子系實體，且 OrderStatus.cs 是列舉類別。](./media/image12.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/vs-solution-explorer-order-aggregate.png" alt-text="OrderAggregate 資料夾及其類別的螢幕擷取畫面。":::
+OrderAggregate 資料夾的詳細檢視：Address.cs 是值物件、IOrderRepository 是存放庫介面、Order.cs 是彙總根、OrderItem.cs 是子系實體，且 OrderStatus.cs 是列舉類別。
+:::image-end:::
 
 **圖 7-11**。 Visual Studio 方案中的訂單彙總
 
@@ -105,7 +109,7 @@ public class Order : Entity, IAggregateRoot
 
 在先前的程式碼中，請注意許多屬性都是唯讀或私用，且只能透過類別方法進行更新，以使得任何更新都必須考量到類別方法中指定的商務領域變異及邏輯。
 
-例如，根據 DDD 模式，**您「不」  應從任何命令處理常式方法或應用程式層類別進行下列動作** (實際上，您應該無法這麼做)：
+例如，根據 DDD 模式，**您「不」應從任何命令處理常式方法或應用程式層類別進行下列動作** (實際上，您應該無法這麼做)：
 
 ```csharp
 // WRONG ACCORDING TO DDD PATTERNS – CODE AT THE APPLICATION LAYER OR
@@ -150,7 +154,7 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 
 當您使用 Entity Framework Core 1.1 或更新版本時，DDD 實體可以更好的方式進行表達，因為除了屬性之外，它還允許了[對應至欄位 (支援欄位)](https://docs.microsoft.com/ef/core/modeling/backing-field)。 這在保護子實體或值物件集合時將會很有用。 透過這項增強功能，您可以使用簡單的私用欄位 (而非屬性)，並且也能在公用方法中實作任何對欄位集合進行的更新，並透過 AsReadOnly 方法提供唯讀存取。
 
-在 DDD 中，您會希望只透過實體 (或建構函式) 中的方法來更新實體，以控制任何不區分及資料的一致性，使屬性可以只定義 get 存取子。 屬性會受私用欄位支援。 私用成員只能在類別中進行存取。 不過，有一個例外：EF Core 也需要先設定這些欄位 (讓它可以傳回具有適當值的物件)。
+在 DDD 中，您會希望只透過實體 (或建構函式) 中的方法來更新實體，以控制任何不區分及資料的一致性，使屬性可以只定義 get 存取子。 屬性會受私用欄位支援。 私用成員只能在類別中進行存取。 不過，有一項例外：EF Core 也需要先設定這些欄位 (讓它可以傳回具有適當值的物件)。
 
 ### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>僅使用 Get 存取子來將屬性對應至資料庫資料表中的欄位
 
@@ -166,13 +170,13 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 
 ### <a name="additional-resources"></a>其他資源
 
-- **Vaughn Vernon：使用 DDD 及 Entity Framework 為彙總建立模型** 請注意，這*並非* Entity Framework Core。 \
+- **Vaughn Vernon。使用 DDD 和 Entity Framework 建立匯總模型。** 請注意，這*並非* Entity Framework Core。 \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman。資料點 - 針對領域驅動設計撰寫程式碼：進行資料型開發的祕訣** \
+- **Julie Lerman。資料點-針對領域驅動設計撰寫程式碼：以資料為焦點的開發人員的秘訣** \
   <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
-- **Udi Dahan.如何建立完整封裝式領域模型** \
+- **Udi Dahan。如何建立完全封裝的網域模型** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 > [!div class="step-by-step"]

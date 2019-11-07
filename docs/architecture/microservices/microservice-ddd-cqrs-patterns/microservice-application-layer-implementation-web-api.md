@@ -2,12 +2,12 @@
 title: 使用 Web API 實作微服務應用程式層
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解相依性插入和中繼程序模式，以及它們在 Web API 應用程式層的實作詳細資料。
 ms.date: 10/08/2018
-ms.openlocfilehash: c73823a0449fdf81ba3d886efdef540bd1aa6121
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454857"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737496"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 實作微服務應用程式層
 
@@ -17,7 +17,9 @@ ms.locfileid: "73454857"
 
 例如，訂購微服務的應用程式層程式碼可直接實作為 **Ordering.API** 專案 (ASP.NET Core Web API 專案) 的一部分，如圖 7-23 所示。
 
-![Ordering.API 微服務的 [方案總管] 檢視，顯示 Application 資料夾下的子資料夾：Behaviors、Commands、DomainEventHandlers、IntegrationEvents、Models、Queries 和 Validations。](./media/image20.png)
+:::image type="complex" source="./media/microservice-application-layer-implementation-web-api/ordering-api-microservice.png" alt-text="方案總管中的 [訂購. API] 微服務螢幕擷取畫面。":::
+Ordering.API 微服務的 [方案總管] 檢視，顯示 Application 資料夾下的子資料夾：Behaviors、Commands、DomainEventHandlers、IntegrationEvents、Models、Queries 和 Validations。
+:::image-end:::
 
 **圖 7-23**。 Ordering.API ASP.NET Core Web API 專案中的應用程式層
 
@@ -181,9 +183,11 @@ Autofac 也有功能可[掃描組件以及按命名慣例註冊類型](https://a
 
 如圖 7-24 所示，模式的基礎是接受來自用戶端的命令，然後根據領域模型規則處理它們，最後保持交易狀態。
 
-![CQRS 中寫入端的高階視圖： UI 應用程式會透過取得 CommandHandler 的 API 傳送命令，這取決於網域模型和基礎結構來更新資料庫。](./media/image21.png)
+![此圖顯示從用戶端到資料庫的高層級資料流程。](./media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
 
 **圖 7-24**. CQRS 模式中命令或「交易端」的高階檢視
+
+[圖 7-24] 顯示 UI 應用程式會透過 API 傳送命令，以取得根據領域模型和基礎結構來更新資料庫的 `CommandHandler`。
 
 ### <a name="the-command-class"></a>命令類別
 
@@ -423,9 +427,11 @@ public class CreateOrderCommandHandler
 
 如圖 7-25 所示，在 CQRS 方法中，您使用與記憶體內部匯流排類似的智慧型中繼程序，而它聰明到可以根據所收到的命令或 DTO 類型，重新導向至正確的命令處理常式。 元件之間的單一黑色箭號代表物件 (在許多情況下，是透過 DI 插入) 與其相關互動之間的相依性。
 
-![放大前一個映像：ASP.NET Core 控制器會將命令傳送給 MediatR 的命令管線，讓它們取得適當的處理常式。](./media/image22.png)
+![此圖顯示從用戶端到資料庫的更詳細資料流程。](./media/microservice-application-layer-implementation-web-api/mediator-cqrs-microservice.png)
 
 **圖 7-25**。 在單一 CQRS 微服務過程中使用中繼程序模式
+
+上圖顯示影像7-24 中的放大： ASP.NET Core 控制器會將命令傳送至 MediatR 的命令管線，讓它們取得適當的處理常式。
 
 使用中繼程序模式的合理原因是，在企業應用程式中，處理要求會變得複雜。 您想要可以新增已開啟數目的跨領域關注，例如記錄、驗證、稽核和安全性。 在這些情況下，您可以依賴中繼程序管道 (請參閱[中繼程序模式](https://en.wikipedia.org/wiki/Mediator_pattern)) 提供這些額外行為或跨領域關注的方法。
 
@@ -439,11 +445,11 @@ public class CreateOrderCommandHandler
 
 另一個選擇是根據訊息代理程式或訊息佇列來使用非同步訊息，如圖 7-26 所示。 該選項也可以與命令處理常式正前方的中繼程序一起使用。
 
-![命令的管線也可以由高可用性訊息佇列處理，將命令傳遞給適當的處理常式。](./media/image23.png)
+![此圖顯示使用 HA 訊息佇列的資料流程。](./media/microservice-application-layer-implementation-web-api/add-ha-message-queue.png)
 
 **圖 7-26**。 搭配使用訊息佇列 (跨處理序和處理序間通訊) 與 CQRS 命令
 
-使用訊息佇列接受命令可能會讓命令管道更為複雜，因為您可能需要將管道分割成透過外部訊息佇列所連接的兩個處理序。 儘管如此，如果您需要擁有根據非同步訊息的已改善延展性和效能，則應該使用它。 請考慮在圖 7-26 的情況下，控制器只會將命令訊息公佈至佇列並傳回。 命令處理常式接著會依自己的步調來處理訊息。 這是佇列的最大好處：訊息佇列可以作為需要超級延展性時的緩衝區，例如針對股票或任何其他具有大量輸入資料的案例。
+命令的管線也可以由高可用性訊息佇列處理，將命令傳遞給適當的處理常式。 使用訊息佇列接受命令可能會讓命令管道更為複雜，因為您可能需要將管道分割成透過外部訊息佇列所連接的兩個處理序。 儘管如此，如果您需要擁有根據非同步訊息的已改善延展性和效能，則應該使用它。 請考慮在圖 7-26 的情況下，控制器只會將命令訊息公佈至佇列並傳回。 命令處理常式接著會依自己的步調來處理訊息。 這是佇列的最大好處：訊息佇列可以作為需要超級延展性時的緩衝區，例如針對股票或任何其他具有大量輸入資料的案例。
 
 不過，因為訊息佇列的非同步本質，所以您需要找出與用戶端應用程式溝通命令處理序成功或失敗的方式。 一般而言，您應該永遠不會使用「發動就忘記」命令。 每個商務應用程式都需要知道是否已成功處理命令，或至少已驗證和接受命令。
 

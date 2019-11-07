@@ -2,12 +2,12 @@
 title: 容器化應用程式的 Microsoft 平台和工具簡介
 description: 了解支援 Docker 應用程式生命週期的 Microsoft 供應項目。
 ms.date: 02/15/2019
-ms.openlocfilehash: 1829ce1051f091065f543a6cadcf5d179a284834
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9c8c0f5688bf226351abfc7bf52d4ace05f8c6d8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094459"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738102"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>容器化應用程式的 Microsoft 平台和工具簡介
 
@@ -15,7 +15,9 @@ ms.locfileid: "73094459"
 
 圖 3-1 顯示依工作類型分類的 Docker 應用程式生命週期中的主要部分，而工作類型是由多個小組 (應用程式開發、DevOps 基礎結構程序以及 IT 管理和作業) 所衍生。 通常，在企業中，負責每個區域之「人物代表」的設定檔會不同。 就是他們的技術。
 
-![Microsoft 工具。 針對開發/設計工作負載：適用于 Windows 的 Docker 引擎、VS 和 VS Code、.NET Core Azure Kubernetes Service。 針對組建/測試/出貨工作負載： Azure DevOps、Team Foundation Server、Docker CLI Azure Kubernetes Service。 針對執行/監視/管理工作負載： Azure 監視器、Azure 入口網站 Azure Kubernetes Services、Service Fabric、其他協調器。](./media/image1.png)
+:::image type="complex" source="./media/index/microsoft-tools-contanerized-docker-app.png" alt-text="此圖顯示維護 Docker 應用程式所需的 Microsoft 工具。":::
+Microsoft 工具。 針對開發/設計工作負載：適用于 Windows 的 Docker 引擎、VS 和 VS Code、.NET Core Azure Kubernetes Service。 針對組建/測試/出貨工作負載： Azure DevOps、Team Foundation Server、Docker CLI Azure Kubernetes Service。 針對執行/監視/管理工作負載： Azure 監視器、Azure 入口網站 Azure Kubernetes Services、Service Fabric、其他協調器。
+:::image-end:::
 
 **圖 3-1** 使用 Microsoft 平台和工具之容器化 Docker 應用程式生命週期中的主要部分
 

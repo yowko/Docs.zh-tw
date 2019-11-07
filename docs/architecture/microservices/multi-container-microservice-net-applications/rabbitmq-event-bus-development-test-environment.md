@@ -2,12 +2,12 @@
 title: 針對開發或測試環境使用 RabbitMQ 實作事件匯流排
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對開發或測試環境使用 RabbitMQ 實作整合事件的事件匯流排傳訊。
 ms.date: 10/02/2018
-ms.openlocfilehash: 7d51054d444ce1e35fabab94cc803e74dbd96f19
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 211348caec3c101435fcdd99bd96fd8e17a6456b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089735"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739500"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>針對開發或測試環境使用 RabbitMQ 實作事件匯流排
 
@@ -17,11 +17,11 @@ eShopOnContainers 的其中一個事件匯流排自訂實作基本上是使用 R
 
 使用 RabbitMQ 實作事件匯流排可讓微服務訂閱事件、發行事件和接收事件，如圖 6-21 所示。
 
-![RabbitMQ 的功能是訊息發行者與訂閱者之間的媒介，用來處理散發。](./media/image22.png)
+![顯示訊息寄件者和訊息接收者之間 RabbitMQ 的圖表。](./media/rabbitmq-event-bus-development-test-environment/rabbitmq-implementation.png)
 
 **圖 6-12。** 事件匯流排的 RabbitMQ 實作
 
-在程式碼中，EventBusRabbitMQ 類別會實作泛型 IEventBus 介面。 這是以相依性插入為基礎，因此您可以從此開發/測試版本切換至生產版本。
+RabbitMQ 的功能是訊息發行者與訂閱者之間的媒介，用來處理散發。 在程式碼中，EventBusRabbitMQ 類別會實作泛型 IEventBus 介面。 這是以相依性插入為基礎，因此您可以從此開發/測試版本切換至生產版本。
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable

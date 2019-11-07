@@ -2,12 +2,12 @@
 title: 容器化整合型應用程式
 description: 容器化整合型應用程式雖然無法從微服務架構獲得所有好處，但可立即提供重要部署優勢。
 ms.date: 09/20/2018
-ms.openlocfilehash: 5b38ba1c2954f4fd4064723b1316afbf09d25bf2
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e02aa4ff644fc26b7f15721866f8862f6a175cf2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771483"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737981"
 ---
 # <a name="containerizing-monolithic-applications"></a>容器化整合型應用程式
 
@@ -15,11 +15,11 @@ ms.locfileid: "72771483"
 
 為了管理此模型，您會部署單一容器來代表應用程式。 若要增加容量，您需要進行擴充，也就是只在前端新增多個含有負載平衡器的複本。 由於是在單一容器或 VM 中管理單一部署，因此很簡單。
 
-![整合型容器化應用程式會將其大部分的功能放在含有內部階層及程式庫的單一容器內，並透過在多個伺服器/VM 上複製容器來進行擴充](./media/image1.png)
+![此圖顯示整合型容器化應用程式的元件。](./media/containerize-monolithic-applications/monolithic-containerized-application.png)
 
 **圖 4-1**： 容器化整合型應用程式的架構範例
 
-您可以在每個容器中包含多個元件、程式庫或內部階層，如圖 4-1 所示。 不過，此整合型模式可能會與「容器執行一項動作並在一個處理序中執行」的容器原則衝突，但在某些情況下可能沒問題。
+您可以在每個容器中包含多個元件、程式庫或內部階層，如圖 4-1 所示。 整合型容器化應用程式在單一容器內具有內部層或程式庫的大部分功能，並藉由在多個伺服器/Vm 上複製容器來相應放大。 不過，此整合型模式可能會與「容器執行一項動作並在一個處理序中執行」的容器原則衝突，但在某些情況下可能沒問題。
 
 如果應用程式成長而需要擴充，此方法的缺點會變得很明顯。 若可調整整個應用程式，則不成問題。 不過，在大多數情況下，應用程式只需要擴充幾個造成阻礙的部分，其他元件則較少使用。
 
@@ -31,7 +31,7 @@ ms.locfileid: "72771483"
 
 從基礎結構的觀點來看，每部伺服器可以在相同主機內執行許多應用程式，並有可接受的資源使用效率比，如圖 4-2 所示。
 
-![主機可以執行數個整合型應用程式，每一個應用程式都在不同的容器上。](./media/image2.png)
+![此圖顯示在容器中執行許多應用程式的一部主機。](./media/containerize-monolithic-applications/host-multiple-apps-containers.png)
 
 **圖 4-2**： 整合型方法：執行多個應用程式的主機，每個應用程式會當做容器來執行
 
@@ -39,7 +39,7 @@ ms.locfileid: "72771483"
 
 在 QA 環境或有限的生產環境中，您可以部署多部 Docker 主機 VM 並使用 Azure 平衡器進行平衡，如圖 4-3 所示。 這可讓您以粗略的方法來管理擴充，因為整個應用程式都位於單一容器內。
 
-![數個主機，每一個都執行具有整合型應用程式的容器。](./media/image3.png)
+![此圖顯示數個執行整合型應用程式容器的主機。](./media/containerize-monolithic-applications/docker-infrastructure-monolithic-application.png)
 
 **圖 4-3**： 向上擴充單一容器應用程式的多部主機範例
 
@@ -59,7 +59,7 @@ ms.locfileid: "72771483"
 
 不論您想要取得部署至 Azure 的容器驗證，還是在應用程式只是單一容器應用程式的情況下，Azure App Service 都有絕佳的方法來提供可擴充的單一容器服務。 使用 Azure App Service 很簡單。 它提供與 Git 的絕佳整合，讓您可以輕鬆地取得程式碼、在 Visual Studio 中建置，並將它直接部署至 Azure。
 
-![將單一容器應用程式從 Visual Studio 發佈至 Azure App Service 的精靈](./media/image4.png)
+![顯示容器登錄的 [建立 App Service] 對話方塊的螢幕擷取畫面。](./media/containerize-monolithic-applications/publish-azure-app-service-container.png)
 
 **圖 4-4**： 將單一容器應用程式從 Visual Studio 發行至 Azure App Service
 

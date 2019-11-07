@@ -2,12 +2,12 @@
 title: 在微服務中使用 IHostedService 和 BackgroundService 類別實作背景工作
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解在微服務 .NET Core 使用 IHostedService 和 BackgroundService 實作背景工作的新選項。
 ms.date: 01/07/2019
-ms.openlocfilehash: 2d0b41bc7853dc616284c46462efe96ca1a9d296
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: d289d8ccc737fa9fc13b95da44e4b617b431f96a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770114"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737172"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>在微服務中使用 IHostedService 和 BackgroundService 類別實作背景工作
 
@@ -17,11 +17,11 @@ ms.locfileid: "72770114"
 
 自 .NET Core 2.0 開始，此架構提供名為 <xref:Microsoft.Extensions.Hosting.IHostedService> 的新介面，協助您輕鬆地實作託管服務。 基本概念是，您可以註冊多個背景工作（託管服務），以在您的 web 主機或主機執行時于背景中執行，如映射6-26 所示。
 
-![ASP.NET Core 1.x 和 2.x 針對 Web 應用程式中的背景處理序支援 IWebHost，.NET Core 2.1 針對使用一般主控台應用程式的背景處理序支援 IHost。](./media/image26.png)
+![比較 ASP.NET Core IWebHost 和 .NET Core IHost 的圖表。](./media/background-tasks-with-ihostedservice/ihosted-service-webhost-vs-host.png)
 
 **圖 6-26**。 在 WebHost 與主機中使用 IHostedService
 
-請注意 `WebHost` 與 `Host` 之間的差異。
+ASP.NET Core 1.x 和2.x 支援 web 應用程式中的背景進程 IWebHost。 .NET Core 2.1 支援使用一般主控台應用程式來 IHost 背景進程。 請注意 `WebHost` 與 `Host` 之間的差異。
 
 ASP.NET Core 2.0 中的 `WebHost` (實作 `IWebHost` 的基底類別) 是用來將 HTTP 伺服器功能提供給程序的基礎結構成品，就像您是實作 MVC Web 應用程式或 Web API 服務一樣。 它會提供 ASP.NET Core 中的所有新基礎結構優點，讓您可以使用相依性插入、在要求管道中插入中介軟體等等，以及精確地針對背景工作使用這些 `IHostedServices`。
 
@@ -45,7 +45,7 @@ SignalR 是使用託管服務之成品的一個範例，但您也可以將它用
 
 您基本上可以根據 IHostedService，將其中任何動作卸載至背景工作。
 
-將一個或多個 `IHostedServices` 新增至 `WebHost` 或 `Host` 的方式，是透過  extension ASP.NET Core （或在 .NET Core 2.1 和更新版本的 `WebHost`）中的 <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A> `Host` 方法進行註冊。 基本上，您必須在 `Startup` 類別的熟悉 `ConfigureServices()` 方法內註冊託管服務，如典型 ASP.NET WebHost 中的下列程式碼所示。
+將一個或多個 `IHostedServices` 新增至 `WebHost` 或 `Host` 的方式，是透過  ASP.NET Core （或 .NET Core 2.1 和更新版本的 `WebHost` 中的 <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A>`Host` 擴充方法進行註冊。 基本上，您必須在 `Startup` 類別的熟悉 `ConfigureServices()` 方法內註冊託管服務，如典型 ASP.NET WebHost 中的下列程式碼所示。
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -224,9 +224,11 @@ WebHost.CreateDefaultBuilder(args)
 
 下圖顯示在執行 IHostedServices 時所牽涉的類別和介面的視覺化摘要。
 
-![類別圖表：IWebHost 和 IHost 可以裝載許多服務，它們繼承自 BackgroundService，而 BackgroundService 實作 IHostedService。](./media/image27.png)
+![圖表顯示 IWebHost 和 IHost 可以裝載許多服務。](./media/background-tasks-with-ihostedservice/class-diagram-custom-ihostedservice.png)
 
 **圖 6-27**。 類別圖表，顯示多個與 IHostedService 相關的類別和介面
+
+類別圖表：IWebHost 和 IHost 可以裝載許多服務，它們繼承自 BackgroundService，而 BackgroundService 實作 IHostedService。
 
 ### <a name="deployment-considerations-and-takeaways"></a>部署考量和心得
 

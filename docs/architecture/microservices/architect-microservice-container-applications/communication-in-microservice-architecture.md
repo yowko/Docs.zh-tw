@@ -2,12 +2,12 @@
 title: 微服務架構中的通訊
 description: 探索微服務之間的不同通訊方式，並了解同步和非同步方式的影響。
 ms.date: 09/20/2018
-ms.openlocfilehash: 25d99d3d9b00b8c20c5ded6d8b40c77fcbe0eb46
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: add1ff74bee456e0fa7f2fb54d2cf4e536402db4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673295"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738063"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>微服務架構中的通訊
 
@@ -39,7 +39,7 @@ ms.locfileid: "68673295"
 
 微服務應用程式通常會使用這些通訊樣式的組合。 叫用一般 Web API HTTP 服務時，最常見的類型是使用 HTTP/HTTPS 等同步通訊協定的單一接收者通訊。 微服務通常也會使用傳訊通訊協定，來進行微服務之間的非同步通訊。
 
-這些軸可讓您對可能的通訊機制一目了然，但它們不是建置微服務時的重要考量。 在整合微服務時，用戶端執行緒執行的非同步本質或者所選通訊協定的非同步本質兩者都不是重點。 真正的重點  在於您要能夠以非同步方式整合微服務，同時保持微服務的獨立性，如下節所述。
+這些軸可讓您對可能的通訊機制一目了然，但它們不是建置微服務時的重要考量。 在整合微服務時，用戶端執行緒執行的非同步本質或者所選通訊協定的非同步本質兩者都不是重點。 真正的重點在於您要能夠以非同步方式整合微服務，同時保持微服務的獨立性，如下節所述。
 
 ## <a name="asynchronous-microservice-integration-enforces-microservices-autonomy"></a>非同步的微服務整合可強化微服務的自主性
 
@@ -51,9 +51,11 @@ ms.locfileid: "68673295"
 
 如果微服務 (例如查詢要求) 之間的同步相依性越高，用戶端應用程式的整體回應時間就會越糟。
 
-![在同步通訊中，提供處理用戶端要求時會在微服務之間建立要求的「鏈結」。 這是反模式。 在非同步通訊中，微服務會使用非同步訊息或 http 輪詢與其他微服務進行通訊，但用戶端要求會立即處理。](./media/image15.png)
+![此圖顯示微服務間的三種通訊類型。](./media/communication-in-microservice-architecture/sync-vs-async-patterns-across-microservices.png)
 
 **圖 4-15**： 微服務之間的通訊模式和反向模式
+
+如上圖所示，在同步通訊中，要求的「鏈」會在服務用戶端要求的微服務之間建立。 這是反模式。 在非同步通訊中，微服務會使用非同步訊息或 http 輪詢與其他微服務進行通訊，但用戶端要求會立即處理。
 
 如果您的微服務需要引發另一個微服務的其他動作，請盡量不要同步執行該動作，也不要與原始微服務要求及回覆作業一併執行。 請改為以非同步方式執行 (使用非同步傳訊或整合事件、佇列等)。 但是，請盡量不要與原始的同步要求及回覆作業同步叫用動作。
 
@@ -75,7 +77,7 @@ ms.locfileid: "68673295"
 
 當用戶端使用要求/回應通訊時，它會將要求傳送給服務，然後由服務處理要求，並傳回回應。 要求/回應通訊非常適合用來查詢用戶端應用程式的即時 UI (即時的使用者介面) 資料。 因此，在微服務架構中，您可能會針對大部分查詢使用這種通訊機制，如圖 4-16 所示。
 
-![當用戶端傳送要求給 API 閘道時，假設微服務的回應會在極短時間抵達，您可以使用要求/回應通訊進行即時查詢。](./media/image16.png)
+![此圖顯示即時查詢和更新的要求/回應通訊。](./media/communication-in-microservice-architecture/request-response-comms-live-queries-updates.png)
 
 **圖 4-16**： 使用 HTTP 要求/回應通訊 (同步或非同步)
 
@@ -87,7 +89,7 @@ ms.locfileid: "68673295"
 
 ### <a name="additional-resources"></a>其他資源
 
-- **Martin Fowler：Richardson 成熟度模型** REST 模型的描述。 \
+- **聖馬丁 Fowler。Richardson 成熟度模型**： REST 模型的描述。 \
   <https://martinfowler.com/articles/richardsonMaturityModel.html>
 
 - **Swagger** 官方網站。 \
@@ -99,11 +101,11 @@ ms.locfileid: "68673295"
 
 如圖 4-17 所示，即時 HTTP 通訊表示您可以讓伺服器程式碼在資料可用時將內容推送至連線的用戶端，而不需要讓伺服器等候用戶端要求新的資料。
 
-![SignalR 很適合用來完成將內容從後端伺服器推送到用戶端的即時通訊。](./media/image17.png)
+![顯示以 SignalR 為基礎之推送和即時通訊的圖表。](./media/communication-in-microservice-architecture/one-to-many-communication.png)
 
 **圖 4-17**： 一對一的即時非同步訊息通訊
 
-由於是即時通訊，因此用戶端應用程式幾乎會立即顯示變更。 一般來說，其會由 WebSockets 這類通訊協定使用許多 Websocket 連線 (每個用戶端一個) 來進行處理。 典型的範例是：某個服務同時向許多用戶端 Web 應用程式傳達運動遊戲之分數變更的情況。
+SignalR 是達成即時通訊的好方法，可將內容從後端伺服器推送至用戶端。由於通訊是即時的，因此用戶端應用程式幾乎會立即顯示變更。 一般來說，其會由 WebSockets 這類通訊協定使用許多 Websocket 連線 (每個用戶端一個) 來進行處理。 典型的範例是：某個服務同時向許多用戶端 Web 應用程式傳達運動遊戲之分數變更的情況。
 
 >[!div class="step-by-step"]
 >[上一頁](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

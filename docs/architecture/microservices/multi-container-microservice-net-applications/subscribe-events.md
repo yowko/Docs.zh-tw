@@ -2,12 +2,12 @@
 title: 訂閱事件
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解發佈及訂閱整合事件的詳細資料。
 ms.date: 10/02/2018
-ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c607f8b980f7dffacf3564688c6c9bb498264d96
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035643"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737047"
 ---
 # <a name="subscribing-to-events"></a>訂閱事件
 
@@ -139,7 +139,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 圖 6-22 顯示這些方法中第一個方法的架構。
 
-![在發佈事件時，處理不可部分完成之作業的方法之一：使用一個交易將事件認可至事件記錄表，然後使用其他交易來發佈 (在 eShopOnContainers 中使用)](./media/image23.png)
+![不使用背景工作微服務發行時的不可部分完成性圖表。](./media/subscribe-events/atomicity-publish-event-bus.png)
 
 **圖 6-22**。 將事件發行至事件匯流排時的不可部分完成性
 
@@ -147,7 +147,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 關於第二個方法：您會使用 EventLog 資料表作為佇列，且一律會使用背景工作微服務來發行訊息。 在此情況下，其流程會如圖 6-23 所示。 圖中顯示額外的微服務，而且資料表是發行事件時的單一來源。
 
-![處理不可部分完成之作業的另一方法：發佈至事件記錄表，然後以其他微服務 (在幕後執行) 發佈事件。](./media/image24.png)
+![使用背景工作微服務發行時的不可部分完成性圖表。](./media/subscribe-events/atomicity-publish-worker-microservice.png)
 
 **圖 6-23**。 使用背景工作微服務將事件發行至事件匯流排時的不可部分完成性
 
@@ -279,7 +279,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 事件處理常式需要確認產品是否存在於任何購物籃執行個體中。 它也會更新每個相關購物籃明細項目的項目價格。 最後，其會建立一個警示，向使用者顯示價格變更，如圖 6-24 所示。
 
-![使用者購物車上價格變更通知的瀏覽器檢視。](./media/image25.png)
+![瀏覽器的螢幕擷取畫面，其中顯示使用者購物車的價格變更通知。](./media/subscribe-events/display-item-price-change.png)
 
 **圖 6-24**。 顯示購物籃中的項目價格變更，如整合事件所傳達
 
