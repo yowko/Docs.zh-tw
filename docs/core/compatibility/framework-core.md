@@ -2,21 +2,18 @@
 title: 重大變更，.NET Framework 至 .NET Core 3.0-.NET Core
 description: 列出 Windows Forms 和 Windows Presentation Foundation .NET Framework 到 .NET Core 3.0 的重大變更。
 ms.date: 09/10/2019
-ms.openlocfilehash: a374e35192c7aad07e986e0e0b75039642744edc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 80c93dd7a8715a9bcc6d81605ffe5af4b0461257
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089565"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739434"
 ---
-# <a name="breaking-changes-for-migration-from-net-framework-to-net-core-30"></a><span data-ttu-id="da671-103">從 .NET Framework 遷移至 .NET Core 3.0 的突破性變更</span><span class="sxs-lookup"><span data-stu-id="da671-103">Breaking changes for migration from .NET Framework to .NET Core 3.0</span></span>
+# <a name="breaking-changes-for-migration-from-net-framework-to-net-core-30"></a><span data-ttu-id="acd8e-103">從 .NET Framework 遷移至 .NET Core 3.0 的突破性變更</span><span class="sxs-lookup"><span data-stu-id="acd8e-103">Breaking changes for migration from .NET Framework to .NET Core 3.0</span></span>
 
-> [!IMPORTANT]
-> <span data-ttu-id="da671-104">本文的結構如下。</span><span class="sxs-lookup"><span data-stu-id="da671-104">This article is under construction.</span></span> <span data-ttu-id="da671-105">這不是 .NET Core 重大變更的完整清單。</span><span class="sxs-lookup"><span data-stu-id="da671-105">This is not a complete list of .NET Core breaking changes.</span></span> <span data-ttu-id="da671-106">如需 .NET Core 重大變更的詳細資訊，您可以在 GitHub 上的 dotnet/檔存放庫中檢查個別的[重大變更問題](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)。</span><span class="sxs-lookup"><span data-stu-id="da671-106">For more information on .NET Core breaking changes, you can examine individual [breaking changes issues](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) in the dotnet/docs repository on GitHub.</span></span> 
+<span data-ttu-id="acd8e-104">如果您要將 Windows Forms 或 Windows Presentation Foundation 應用程式從 .NET Framework 遷移至 .NET Core 3.0，請參閱下列主題，以取得可能影響您應用程式的重大變更：</span><span class="sxs-lookup"><span data-stu-id="acd8e-104">If you're migrating a Windows Forms or Windows Presentation Foundation application from .NET Framework to .NET Core 3.0, review the following topics for breaking changes that may affect your app:</span></span>
 
-<span data-ttu-id="da671-107">如果您要將 Windows Forms 或 Windows Presentation Foundation 應用程式從 .NET Framework 遷移至 .NET Core 3.0，請參閱下列主題，以取得可能影響您應用程式的重大變更：</span><span class="sxs-lookup"><span data-stu-id="da671-107">If you are migrating a Windows Forms or Windows Presentation Foundation application from .NET Framework to .NET Core 3.0, review the following topics for breaking changes that may affect your app:</span></span>
-
-## <a name="windows-forms"></a><span data-ttu-id="da671-108">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="da671-108">Windows Forms</span></span>
+## <a name="windows-forms"></a><span data-ttu-id="acd8e-105">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="acd8e-105">Windows Forms</span></span>
 
 [!INCLUDE[Control.DefaultFont changed to Segoe UI 9pt](~/includes/core-changes/windowsforms/control-defaultfont-changed.md)]
 
