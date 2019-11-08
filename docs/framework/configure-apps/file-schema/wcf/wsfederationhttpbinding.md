@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsFederationBinding element
 ms.assetid: 9c3312b4-2137-4e71-bf3f-de1cf8e9be79
-ms.openlocfilehash: a605d3241ec62f5648e3439b327153f3fb4590df
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 011a46c15785b7ffa832db57925c7e7b5f76c67a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399026"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732506"
 ---
-# <a name="wsfederationhttpbinding"></a>\<wsFederationHttpBinding>
+# <a name="wsfederationhttpbinding"></a>\<wsFederationHttpBinding >
 
 定義支援 WS-Federation 的繫結。
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp; &nbsp;[ **\<system system.servicemodel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md)系結 >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<wsFederationHttpBinding >**  
 
 ## <a name="syntax"></a>語法
@@ -109,14 +109,14 @@ ms.locfileid: "70399026"
 
 ### <a name="attributes"></a>屬性
 
-|屬性|說明|
+|屬性|描述|
 |---------------|-----------------|
 |bypassProxyOnLocal|布林值，指出本機位址是否略過 Proxy 伺服器。 預設為 `false`。|
 |closeTimeout|<xref:System.TimeSpan> 值，指定提供用來讓關閉作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|
 |hostnameComparisonMode|指定用於剖析 URI 的 HTTP 主機名稱比較模式。 這個屬性的型別為 <xref:System.ServiceModel.HostNameComparisonMode>，表示比對 URI 時此主機名稱是否會用來取用服務。 預設值為 <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>，表示比對時忽略主機名稱。|
 |maxBufferPoolSize|指定此繫結之緩衝區集區大小上限的整數。 預設為 524,288 個位元組 (512 * 1024)。 Windows Communication Foundation (WCF) 的許多部分會使用緩衝區。 每次使用這些組件時建立並終結緩衝區是高度耗費資源的作業，回收緩衝區的記憶體也是如此。 有了緩衝集區，您就可以從集區取出緩衝區來使用，用完後再還給集區， 因此可以避免建立及終結緩衝區的負荷。|
 |maxReceivedMessageSize|正整數，指定在使用此繫結設定之通道上可以接收的訊息大小上限 (以位元組為單位，包括標頭)。 超出此限制之訊息的寄件者將會收到 SOAP 錯誤。 收件者會捨棄訊息，然後在追蹤記錄檔中建立此事件的項目。 預設值為 65536。|
-|messageEncoding|定義用來對訊息進行編碼的編碼器。 有效值包括以下的值：<br /><br /> 文字使用文字訊息編碼器。<br />Mtom使用訊息傳輸組織機制1.0 （MTOM）編碼器。<br /><br /> 預設為 Text。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.WSMessageEncoding>。|
+|messageEncoding|定義用來對訊息進行編碼的編碼器。 有效值包括以下的值：<br /><br /> -Text：使用文字訊息編碼器。<br />-Mtom：使用訊息傳輸組織機制1.0 （MTOM）編碼器。<br /><br /> 預設為 Text。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.WSMessageEncoding>。|
 |NAME|包含繫結之組態名稱的字串。 這個值應該是唯一的，因為它會當做繫結的識別使用。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需預設設定和無相關系結和行為的詳細資訊，請參閱[簡化](../../../wcf/simplified-configuration.md)的設定和[WCF 服務的簡化](../../../wcf/samples/simplified-configuration-for-wcf-services.md)設定。|
 |openTimeout|<xref:System.TimeSpan> 值，指定提供用來讓開啟作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|
 |privacyNoticeAt|字串，指定隱私權注意事項所在的 URI。|
@@ -124,23 +124,23 @@ ms.locfileid: "70399026"
 |proxyAddress|指定 HTTP Proxy 位址的 URI。 如果 `useDefaultWebProxy` 為 `true`，則這項設定必須為 `null`。 預設為 `null`。|
 |receiveTimeout|<xref:System.TimeSpan> 值，指定接收作業完成其作業之時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:10:00。|
 |sendTimeout|<xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|
-|textEncoding|設定要在繫結上發出訊息時使用的字元集編碼方式。 有效值包括以下的值：<br /><br /> BigEndianUnicodeUnicode BigEndian 編碼。<br />消除16位編碼。<br />UTF88位編碼<br /><br /> 預設為 UTF8。 此屬性的型別為 <xref:System.Text.Encoding>。|
+|textEncoding|設定要在繫結上發出訊息時使用的字元集編碼方式。 有效值包括以下的值：<br /><br /> -BigEndianUnicode： Unicode BigEndian 編碼方式。<br />-Unicode：16位編碼方式。<br />-UTF8：8位編碼<br /><br /> 預設為 UTF8。 此屬性的型別為 <xref:System.Text.Encoding>。|
 |transactionFlow|指定繫結程序是否支援流動 WS-Transactions 的布林值。 預設為 `false`。|
 |useDefaultWebProxy|布林值，指定是否使用系統自動設定的 HTTP Proxy。 如果這個屬性為 `null`，則 Proxy 位址必須為 `true` (也就是不設定)。 預設為 `true`。|
 
-### <a name="child-elements"></a>子元素
+### <a name="child-elements"></a>子項目
 
 |項目|描述|
 |-------------|-----------------|
-|[\<security>](security-of-wsfederationhttpbinding.md)|定義訊息的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>。|
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|
-|[\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|指定是否在通道端點之間建立可靠的工作階段。|
+|[\<security >](security-of-wsfederationhttpbinding.md)|定義訊息的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>。|
+|[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|
+|[\<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|指定是否在通道端點之間建立可靠的工作階段。|
 
 ### <a name="parent-elements"></a>父項目
 
 |項目|描述|
 |-------------|-----------------|
-|[\<bindings>](bindings.md)|這個項目會保存標準和自訂繫結的集合。|
+|[\<bindings >](bindings.md)|這個項目會保存標準和自訂繫結的集合。|
 
 ## <a name="remarks"></a>備註
 
@@ -150,17 +150,17 @@ ms.locfileid: "70399026"
 
 `wsFederationHttpBinding` 與 `wsHttpBinding` 中包含的項目相同。
 
-當[ \<安全性 >](security-of-wsfederationhttpbinding.md)設定為<xref:System.ServiceModel.WSFederationHttpSecurityMode.Message>的預設值時。
+當[\<安全性 >](security-of-wsfederationhttpbinding.md)設定為預設值 [<xref:System.ServiceModel.WSFederationHttpSecurityMode.Message>] 時。
 
-會控制 message [ \<>](message-element-of-wsfederationhttpbinding.md)中訊息安全性設定的詳細資料。 `wsFederationHttpBinding` 請注意，[ [ \<安全性 >](security-of-wsfederationhttpbinding.md) ] 元素僅提供 [取得存取]，因為一旦建立系結之後，就無法變更系結所使用的安全性。
+`wsFederationHttpBinding` 會在[\<訊息 >](message-element-of-wsfederationhttpbinding.md)中控制訊息安全性設定的詳細資料。 請注意， [\<安全性 >](security-of-wsfederationhttpbinding.md)元素只會提供存取權，因為一旦建立系結之後，就無法變更系結所使用的安全性。
 
-`wsFederationHttpBinding`也會提供 privacyNoticeAt 屬性，以設定和抓取隱私權注意事項所在的 URI。
+`wsFederationHttpBinding` 也會提供 privacyNoticeAt 屬性，以設定和抓取隱私權注意事項所在的 URI。
 
 維持原則的安全相當重要，特別是在聯合案例中。 建議使用某種形式的安全性，例如 HTTPS，來保護原則不受惡意使用者攻擊。
 
 在使用這個繫結的聯合案例中，服務原則可能有重要的資訊，例如用來加密所發行 (SAML) 權杖的金鑰、放入權杖內的宣告類型等等。 如果這個原則遭到竄改，攻擊者可能會發現可導致進一步竄改、資訊洩露和其他惡意行為的已發行權杖金鑰。 為了防止發生這種情況，必須安全地從服務取得原則 (例如，使用 HTTPS)。
 
-如需此系結的詳細資訊[，請參閱如何：建立 WSFederationHttpBinding](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。
+如需此系結的詳細資訊，請參閱 how [to： Create a WSFederationHttpBinding](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。
 
 ## <a name="example"></a>範例
 
@@ -195,7 +195,7 @@ ms.locfileid: "70399026"
 </configuration>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.WSFederationHttpBinding>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement>
@@ -203,4 +203,4 @@ ms.locfileid: "70399026"
 - [繫結](../../../wcf/bindings.md)
 - [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

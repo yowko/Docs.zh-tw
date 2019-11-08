@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: d088342a08076c69b34f6c3d39dce076cb3890d4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 377ee76e7e3537e9cae010189306611a503acbed
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460043"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740631"
 ---
 # <a name="data-templating-overview"></a>資料範本化概觀
 WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的彈性。 WPF 控制項的內建功能支援自訂資料呈現方式。 本主題首先會示範如何定義 <xref:System.Windows.DataTemplate>，然後引進其他資料範本化功能，例如以自訂邏輯為基礎的範本選擇，以及顯示階層式資料的支援。  
@@ -54,7 +54,7 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
   
  ![資料範本化範例螢幕擷取畫面](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
   
- 不過，這是有限制的，而且缺乏彈性。 此外，如果是繫結至 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料，將無法覆寫 `ToString`。  
+ 不過，這是有限制的，而且缺乏彈性。 此外，如果您要系結至 XML 資料，就無法覆寫 `ToString`。  
   
 <a name="defining_simple_datatemplate"></a>   
 ### <a name="defining-a-simple-datatemplate"></a>定義簡單的 DataTemplate  
@@ -62,7 +62,7 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
   
  [!code-xaml[DataTemplatingIntro_snip#Inline](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#inline)]  
   
- 本主題中範例的基礎資料是 CLR 物件的集合。 如果是繫結至 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料，基本概念都相同，但有些微的語法差異。 例如，您可以將 <xref:System.Windows.Data.Binding.XPath%2A> 設定為 `@TaskName` （如果 `TaskName` 是 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 節點的屬性），而不是擁有 `Path=TaskName`。  
+ 本主題中範例的基礎資料是 CLR 物件的集合。 如果您要系結至 XML 資料，基本概念是相同的，但有些微的語法差異。 例如，您可以將 <xref:System.Windows.Data.Binding.XPath%2A> 設定為 `@TaskName` （如果 `TaskName` 是 XML 節點的屬性），而不是擁有 `Path=TaskName`。  
   
  現在，我們的 <xref:System.Windows.Controls.ListBox> 看起來如下所示：  
   

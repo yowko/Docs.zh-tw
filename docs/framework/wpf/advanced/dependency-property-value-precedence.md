@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 2abe89abf1ab246464c8f7a7ca7c87295b0b3946
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 178145b06cb937fb677b8454357bed774ed3003b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458985"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740844"
 ---
 # <a name="dependency-property-value-precedence"></a>相依性屬性值優先順序
 <a name="introduction"></a> 本主題說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統的運作方式如何影響相依性屬性的值，並描述屬性系統套用到屬性有效值的優先順序。  
@@ -109,7 +109,7 @@ ms.locfileid: "73458985"
   
 <a name="animations"></a>   
 ## <a name="coercion-animations-and-base-value"></a>強制型轉、動畫和基底值  
- 在這個 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 中，強制型轉和動畫都會在名為「基底值」的值上作用。 因此，基底值是透過在項目中往上評估，直到達到第 2 個項目來決定的值。  
+ 強制型轉和動畫都會針對在整個 SDK 中稱為「基底值」的值採取動作。 因此，基底值是透過在項目中往上評估，直到達到第 2 個項目來決定的值。  
   
  對動畫而言，如果動畫未同時指定特定行為的 "From" 和 "To"，或是動畫刻意在完成後還原成基底值，則基底值可能會對動畫值造成影響。 若要了解實際的情形，請執行 [From、To 和 By 動畫目標值範例](https://go.microsoft.com/fwlink/?LinkID=159988)。 請試著設定此範例中矩形高度的區域數值，讓初始區域數值與動畫中的任何 "From" 不同。 您會發現，動畫會立即使用 "From" 值啟動，並在啟動後取代基底值。 動畫可能會指定在動畫完成後，藉由指定 [停止 <xref:System.Windows.Media.Animation.FillBehavior>] 來返回所找到的值。 在此之後，就會使用正常優先順序來決定基底值。  
   

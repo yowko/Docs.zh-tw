@@ -5,26 +5,27 @@ ms.date: 04/18/2019
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: b852fbd09376995692e19d944619307d9c1057bd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: eadb456bafb1703c687e73c6aecc81c9dccae72c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458050"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739575"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和相依性
+
 每一版 .NET Framework 都包含通用語言執行平台 (CLR)、基底類別庫及其他 Managed 程式庫。 本主題將說明各版 .NET Framework 的主要功能、提供有關基礎 CLR 版本和相關聯開發環境的資訊，以及識別 Windows 作業系統所安裝的版本。  
   
 > [!NOTE]
 > 如需下載和安裝 .NET Framework 的資訊，請參閱[安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)。  
   
- 下表摘要說明 .NET Framework 版本記錄，並將每個版本與 Visual Studio、Windows 和 Windows Server 相互關聯。 請注意，Visual Studio 提供多目標功能，因此不受限於所列出的 .NET Framework 版本。  
+下表摘要說明 .NET Framework 版本記錄，並將每個版本與 Visual Studio、Windows 和 Windows Server 相互關聯。 Visual Studio 提供多目標，因此您不限於所列出的 .NET Framework 版本。  
   
- 每一個新的 .NET Framework 版本都會保留舊版的功能並增加新的功能。 CLR 是透過自己的版本號碼加以識別。 .NET Framework 版本號碼會隨每個發行版本遞增，但是 CLR 版本不一定會遞增。 例如，.NET Framework 4、4.5 和更新版本包含 CLR 4，但是 .NET Framework 2.0、3.0 和 3.5 包含 CLR 2.0。 (沒有 CLR 版本 3)。  
+每一個新的 .NET Framework 版本都會保留舊版的功能並增加新的功能。 CLR 是透過自己的版本號碼加以識別。 .NET Framework 版本號碼會隨每個發行版本遞增，但是 CLR 版本不一定會遞增。 例如，.NET Framework 4、4.5 和更新版本包含 CLR 4，但是 .NET Framework 2.0、3.0 和 3.5 包含 CLR 2.0。 (沒有 CLR 版本 3)。  
   
- 如需完整的支援作業系統清單，請參閱[系統需求](../get-started/system-requirements.md)。 如需下載，請參閱[安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)。 若要判斷電腦上安裝的 .NET Framework 版本，請參閱[如何：判斷安裝的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)。  
+如需完整的支援作業系統清單，請參閱[系統需求](../get-started/system-requirements.md)。 如需下載，請參閱[安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)。 若要判斷電腦上安裝的 .NET Framework 版本，請參閱[如何：判斷安裝的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)。  
   
- 在下表中，[隨附於/可安裝於 Windows] 與 [隨附於/可安裝於 Windows Server] 欄中標有 ✓ 的作業系統版本上安裝的 .NET Framework 版本，必須[在控制台中啟用](../install/dotnet-35-windows-10.md) (適用於 Windows) 或透過伺服器管理員啟用 (適用於 Windows Server)。  
+在下表中，[隨附於/可安裝於 Windows] 與 [隨附於/可安裝於 Windows Server] 欄中標有 ✓ 的作業系統版本上安裝的 .NET Framework 版本，必須[在控制台中啟用](../install/dotnet-35-windows-10.md) (適用於 Windows) 或透過伺服器管理員啟用 (適用於 Windows Server)。  
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
  
@@ -47,41 +48,42 @@ ms.locfileid: "73458050"
 |1.1<br/><br/>[新功能](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/9wtde3k4\(v%3dvs.71\))|1.1|2003|-|✓ 2003|請參閱[相關指示](how-to-determine-which-versions-are-installed.md)|  
 |1.0|1.0|Visual Studio .NET|-|-|請參閱[相關指示](how-to-determine-which-versions-are-installed.md)|  
 
-**備註**
+> [!NOTE]
+>
+> - 您必須透過 [[控制台] （適用于 windows）或伺服器管理員（適用于 Windows Server）](../install/dotnet-35-windows-10.md#enable-the-net-framework-35-in-control-panel)，在此作業系統上啟用此 .NET Framework。
+> - 一般而言，您不應該解除安裝電腦上已安裝的任何 .NET Framework 版本，因為您使用的應用程式可能倚賴特定版本，如果移除該版本，可能使應用程式中斷。 您可以同時在單一電腦上載入多個 .NET Framework 版本。 這表示，您不需要解除安裝舊版，可以直接安裝新版 .NET Framework。 如需詳細資訊，請參閱[使用者入門](../get-started/index.md)。
 
-<sup>\*</sup>&nbsp;&nbsp;必須在此作業系統上透過[控制台 (適用於 Windows) 或伺服器管理員 (適用於 Windows Server)](../install/dotnet-35-windows-10.md#enable-the-net-framework-35-in-control-panel) 來啟用 .NET Framework。
+## <a name="target-and-run-apps-for-version-45-and-later"></a>目標和執行4.5 和更新版本的應用程式
 
- 一般而言，您不應該解除安裝電腦上已安裝的任何 .NET Framework 版本，因為您使用的應用程式可能倚賴特定版本，如果移除該版本，可能使應用程式中斷。 您可以同時在單一電腦上載入多個 .NET Framework 版本。 這表示，您不需要解除安裝舊版，可以直接安裝新版 .NET Framework。 如需詳細資訊，請參閱[使用者入門](../get-started/index.md)。
-
-## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>鎖定執行 .NET Framework 4.5 及更新版本的應用程式  
- .NET framework 4.5 是取代您電腦中 .NET Framework 4 的就地更新；同樣地，.NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 和 4.8 都是 .NET Framework 4.5 的就地更新，這表示它們使用相同的執行階段版本，但會更新組件版本並納入新的類型和成員。 安裝其中一個更新之後，您的 .NET Framework 4、.NET Framework 4.5、.NET Framework 4.6 或 .NET Framework 4.7 應用程式會繼續執行，而不需重新編譯。 不過，反向操作則不可行。 不建議您在舊版 .NET Framework 上執行目標為新版 .NET Framework 的應用程式。 例如，我們不建議您在 .NET Framework 4.5 上執行針對 .NET Framework 4.6 的應用程式。 以下是適用的方針：  
+.NET framework 4.5 是取代您電腦中 .NET Framework 4 的就地更新；同樣地，.NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 和 4.8 都是 .NET Framework 4.5 的就地更新，這表示它們使用相同的執行階段版本，但會更新組件版本並納入新的類型和成員。 安裝其中一個更新之後，您的 .NET Framework 4、.NET Framework 4.5、.NET Framework 4.6 或 .NET Framework 4.7 應用程式會繼續執行，而不需重新編譯。 不過，反向操作則不可行。 不建議您在舊版 .NET Framework 上執行目標為新版 .NET Framework 的應用程式。 例如，我們不建議您在 .NET Framework 4.5 上執行針對 .NET Framework 4.6 的應用程式。 以下是適用的方針：  
   
 - 在 Visual Studio 中，您可以選擇 .NET Framework 4.5 作為專案的目標 Framework (這會設定 <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> 屬性)，將專案編譯為 .NET Framework 4.5 的組件或可執行檔。 此組件或可執行檔可用於任何已安裝 .NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8 的電腦。  
   
-- 在 Visual Studio 中，您可以選擇 .NET Framework 4.5.1 作為專案的目標 Framework (這會設定 <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> 屬性)，將專案編譯為 .NET Framework 4.5.1 組件或可執行檔。 此組件或可執行檔只應在已安裝 .NET Framework 4.5.1 或更新版本 .NET framework 的電腦上執行。 針對 .NET Framework 4.5.1 的可執行檔，將無法在僅安裝舊版 .NET Framework 的電腦上執行 (例如 .NET Framework 4.5)，系統會提示使用者安裝 .NET Framework 4.5.1。 此外，.NET Framework 4.5.1 組件不應從針對舊版 .NET Framework (例如 .NET Framework 4.5) 的應用程式中呼叫。  
+- 在 Visual Studio 中，您可以選擇 .NET Framework 4.5.1 做為專案的目標架構，將它編譯為 .NET Framework 4.5.1 元件或可執行檔。 只能在已安裝 .NET Framework 4.5.1 或更新版本的電腦上執行此元件或可執行檔。 以 .NET Framework 4.5.1 為目標的可執行檔將會遭到封鎖，而無法在僅有舊版 .NET Framework 的電腦上執行，例如 .NET Framework 4.5。 系統會提示使用者安裝 .NET Framework 4.5.1。 此外，.NET Framework 4.5.1 組件不應從針對舊版 .NET Framework (例如 .NET Framework 4.5) 的應用程式中呼叫。  
   
-     .NET framework 4.5.1 及 .NET Framework 4.5 在此處僅用於示範。 此準則適用於目標較安裝於執行所在系統上版本更新之 .NET Framework 的任何應用程式。  
+  > [!NOTE]
+  > .NET framework 4.5.1 及 .NET Framework 4.5 在此處僅用於示範。 所述的原則適用于以較新版本 .NET Framework 為目標的任何應用程式，而不是安裝在執行的系統上。  
   
- .NET Framework 中的某些變更可能需要變更您的應用程式程式碼;請先參閱[應用程式相容性](application-compatibility.md)，再使用 .NET Framework 4.5 或更新版本執行現有的應用程式。 如需安裝目前版本的詳細資訊，請參閱[安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)。 如需 .NET Framework 支援的資訊，請參閱 Microsoft 技術支援網站上的 [Microsoft .NET Framework 支援週期原則](https://go.microsoft.com/fwlink/?LinkId=196607)。  
+.NET Framework 中的某些變更可能需要變更您的應用程式程式碼。 如果您正在 .NET Framework 4.5 或更新版本上執行現有的應用程式，請參閱[應用程式相容性](application-compatibility.md)。 如需安裝目前版本的詳細資訊，請參閱[安裝適用于開發人員的 .NET Framework](../install/guide-for-developers.md)。 如需 .NET Framework 支援的資訊，請參閱 Microsoft 技術支援網站上的 [Microsoft .NET Framework 支援週期原則](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)。  
   
-## <a name="targeting-and-running-apps-for-older-versions"></a>鎖定及執行舊版的應用程式  
+## <a name="target-and-run-apps-for-older-versions"></a>針對較舊版本的目標和執行應用程式  
 
-.NET Framework 版本 2.0、3.0 和 3.5 使用相同版本的 CLR (CLR 2.0) 建置。 這些版本代表單一安裝的連續執行層。 每個版本都是以累加方式建置於舊版之上。 2\.0、3.0 和 3.5 版無法在電腦上並存執行。 當您安裝 3.5 版時，會自動取得 2.0 和 3.0 執行層，而針對 2.0、3.0 和 3.5 版所建置的應用程式全都可以在 3.5 版上執行。 不過，.NET Framework 4 結束此分層方法，且該版本和更新版本 (.NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 和 4.8) 也代表單一安裝的連續層。  從 .NET Framework 4 開始，您可以使用內含式並存裝載，在單一處理序中執行多個版本的 CLR。 如需詳細資訊，請參閱[組件和並存執行](../../standard/assembly/side-by-side-execution.md)。  
+.NET Framework 版本 2.0、3.0 和 3.5 使用相同版本的 CLR (CLR 2.0) 建置。 這些版本代表單一安裝的連續執行層。 每個版本都是以累加方式建置於舊版之上。 您不能在電腦上並存執行2.0、3.0 和3.5 版。 當您安裝 3.5 版時，會自動取得 2.0 和 3.0 執行層，而針對 2.0、3.0 和 3.5 版所建置的應用程式全都可以在 3.5 版上執行。 不過，.NET Framework 4 結束此分層方法，且該版本和更新版本 (.NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 和 4.8) 也代表單一安裝的連續層。 從 .NET Framework 4 開始，您可以使用同進程、並存裝載，在單一進程中執行多個 CLR 版本。 如需詳細資訊，請參閱[組件和並存執行](../../standard/assembly/side-by-side-execution.md)。  
   
- 此外，如果您的應用程式是以 2.0、3.0 或 3.5 作版為目標，則使用者可能需要先在 Windows 8、Windows 8.1 或 Windows 10 的電腦上啟用 .NET Framework 3.5，才可執行您的應用程式。 如需詳細資訊，請參閱[在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../install/dotnet-35-windows-10.md)。  
+此外，如果您的應用程式是以 2.0、3.0 或 3.5 作版為目標，則使用者可能需要先在 Windows 8、Windows 8.1 或 Windows 10 的電腦上啟用 .NET Framework 3.5，才可執行您的應用程式。 如需詳細資訊，請參閱[在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../install/dotnet-35-windows-10.md)。  
   
 ## <a name="next-steps"></a>後續步驟  
   
 - 如果您還不熟悉 .NET Framework，請參閱[概觀](../get-started/overview.md)中有關重要概念和功能的簡介。  
   
-- 如需 .NET Framework 4.5 及其點發行版本中的新功能和增強功能，請參閱 [.NET Framework 的新功能](../whats-new/index.md)。  
+- 如需 .NET Framework 4.5 及其點發行版的新功能和改進，請參閱[.NET Framework 的新](../whats-new/index.md)功能。  
   
-- 如需將應用程式從 .NET Framework 4 移轉至 .NET Framework 4.5 及其點發行版本的資訊，請參閱[移轉手冊](index.md)。  
+- 如需將您的應用程式遷移至較新版本的 .NET Framework 的詳細資訊，請參閱[遷移指南](index.md)。
   
 - 如需判斷電腦上已安裝哪些版本或更新的資訊，請參閱 [如何：判斷安裝的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)和[如何：判斷安裝的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)。  
   
 ## <a name="see-also"></a>請參閱
 
 - [版本相容性](version-compatibility.md)
-- [Microsoft .NET Framework 支援週期原則](https://go.microsoft.com/fwlink/?LinkId=196607)
+- [Microsoft .NET Framework 支援週期原則](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 - [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](../install/troubleshoot-blocked-installations-and-uninstallations.md)

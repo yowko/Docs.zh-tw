@@ -5,15 +5,15 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: 31fdc3c31c8792fea5f3e71dedb7370ebd63c98e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9b302be3ed9f01ccd27470063f49966dc7d74708
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458556"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740792"
 ---
 # <a name="optimizing-performance-data-binding"></a>最佳化效能：資料繫結
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 元素可以系結至各種資料來源中的資料，其格式為 CLR 物件和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 元素可以系結至各種資料來源中的資料，其格式為 CLR 物件和 XML。  
   
  本主題提供資料繫結的效能建議。  
 
@@ -69,7 +69,7 @@ ms.locfileid: "73458556"
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>不要只為了資料繫結而將 CLR 物件轉換成 XML。  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您將資料系結至 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 內容;不過，[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 內容的資料系結會比系結至 CLR 物件的資料更慢。 如果唯一的目的是要進行資料系結，請勿將 CLR 物件資料轉換成 XML。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您將資料系結至 XML 內容;不過，資料系結至 XML 內容的速度會比系結至 CLR 物件的資料更慢。 如果唯一的目的是要進行資料系結，請勿將 CLR 物件資料轉換成 XML。  
   
 ## <a name="see-also"></a>請參閱
 

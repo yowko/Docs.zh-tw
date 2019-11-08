@@ -2,17 +2,14 @@
 title: CoreFx 重大變更-.NET Core
 description: 列出 .NET CoreFx （基類庫）中的重大變更。
 ms.date: 09/20/2019
-ms.openlocfilehash: 04ae857b5f46748ad57c742b6ccf421f57bc3138
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 028a5c1059a855d1de644dde9fd9ad5f85f47ffe
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093420"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739796"
 ---
 # <a name="corefx-breaking-changes"></a>CoreFx 重大變更
-
-> [!IMPORTANT]
-> 本文的結構如下。 這不是 .NET Core 重大變更的完整清單。 如需 .NET Core 重大變更的詳細資訊，您可以在 GitHub 上的 dotnet/檔存放庫中檢查個別的[重大變更問題](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)。
 
 以下是 .NET Core 版本的 CoreFx 重大變更清單。 CoreFx 提供 .NET Core 所使用的基本和其他一般類型。
 

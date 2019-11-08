@@ -2,12 +2,12 @@
 title: 參考完整性條件約束
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-ms.openlocfilehash: 28880c7085f8b4e3dd2e51b5633c1f0e2a984a4b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ad35df7bcca62ffdbc3842b0817b22c5482a3d4d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794451"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738380"
 ---
 # <a name="referential-integrity-constraint"></a>參考完整性條件約束
 實體資料模型（EDM）中的*參考完整性條件約束*類似關係資料庫中的參考完整性條件約束。 與資料庫資料表的資料行（或資料行）可以參考另一個資料表的主要索引鍵一樣，[實體類型](entity-type.md)的[屬性](property.md)（或屬性）可以參考另一個實體類型的[實體索引鍵](entity-key.md)。 參考的實體類型稱為條件約束的*主要端點*。 參考主要端點的實體類型稱為條件約束的*相依端點*。  
@@ -29,11 +29,11 @@ ms.locfileid: "70794451"
   
  ![RefConstraintModel](./media/referential-integrity-constraint/reference-constraint-model.gif "參考條件約束模型的範例")  
   
- [ADO.NET Entity Framework](./ef/index.md)會使用稱為概念結構定義語言（[CSDL](./ef/language-reference/csdl-specification.md)）的特定領域語言（DSL）來定義概念模型。 下列 CSDL 會對上述概念模型中的 `PublishedBy` 關聯定義參考完整性條件約束。  
+ [ADO.NET Entity Framework](./ef/index.md)會使用稱為概念結構定義語言（[CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)）的特定領域語言（DSL）來定義概念模型。 下列 CSDL 會對上述概念模型中的 `PublishedBy` 關聯定義參考完整性條件約束。  
   
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [實體資料模型索引鍵概念](entity-data-model-key-concepts.md)
 - [實體資料模型](entity-data-model.md)

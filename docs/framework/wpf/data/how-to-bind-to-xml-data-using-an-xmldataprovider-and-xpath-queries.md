@@ -6,23 +6,23 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 0f39c9d42abfaba1327f2c189ac6ce3d40db6e89
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f075d646539de5d68e1c9c75d9664451125e9919
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459218"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733559"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>操作說明：使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料
-這個範例示範如何使用 <xref:System.Windows.Data.XmlDataProvider>系結至 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 資料。  
+這個範例示範如何使用 <xref:System.Windows.Data.XmlDataProvider>系結至 XML 資料。  
   
- 有了 <xref:System.Windows.Data.XmlDataProvider>，可以透過應用程式中的資料系結存取的基礎資料，可以是任何 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 節點的樹狀結構。 換句話說，<xref:System.Windows.Data.XmlDataProvider> 提供一個便利的方式，可以使用任何 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 節點的樹狀結構做為系結來源。  
+ 有了 <xref:System.Windows.Data.XmlDataProvider>，可以透過應用程式中的資料系結存取的基礎資料，可以是任何 XML 節點的樹狀結構。 換句話說，<xref:System.Windows.Data.XmlDataProvider> 提供一個便利的方式，可以使用任何 XML 節點的樹狀結構做為系結來源。  
   
 ## <a name="example"></a>範例  
- 在下列範例中，資料會直接內嵌為 <xref:System.Windows.FrameworkElement.Resources%2A> 區段內的 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]*資料島*。 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料島必須包裝在 `<x:XData>` 標記中，並一律具有單一根節點，在此範例中為 *Inventory*。  
+ 在下列範例中，資料會直接內嵌為 <xref:System.Windows.FrameworkElement.Resources%2A> 區段中的 XML*資料島*。 XML 資料島必須包裝在 `<x:XData>` 標籤中，而且一律具有單一根節點，在此範例中為*清查*。  
   
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料的根節點具有一個 **xmlns** 屬性，會將 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空間設為空白字串。 這是將 XPath 查詢套用至內嵌於 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面內之資料島的需求。 在此內嵌案例中，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，因此資料島會繼承 <xref:System.Windows> 命名空間。 因此，您必須將命名空間設為空白，讓 XPath 查詢不受 <xref:System.Windows> 命名空間的限定，這會 misdirect 查詢。  
+> XML 資料的根節點具有**xmlns**屬性，可將 xml 命名空間設定為空字串。 這是將 XPath 查詢套用至內嵌於 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面內之資料島的需求。 在此內嵌案例中，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，因此資料島會繼承 <xref:System.Windows> 命名空間。 因此，您必須將命名空間設為空白，讓 XPath 查詢不受 <xref:System.Windows> 命名空間的限定，這會 misdirect 查詢。  
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
@@ -48,11 +48,11 @@ ms.locfileid: "73459218"
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   
- 在某些應用程式中，因為在編譯時即須取得資料的確切內容，所以可能不便在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面的來源內將 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 內嵌為資料島。 因此，您也可以從外部 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 檔案取得資料，如下列範例所示：  
+ 在某些應用程式中，將 XML 內嵌為 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面來源內的資料島可能很不方便，因為在編譯時期，資料的確切內容必須是已知的。 因此，也支援從外部 XML 檔案取得資料，如下列範例所示：  
   
  [!code-xaml[XMLDataSource2#XmlFileExample](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
   
- 如果 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料位於遠端 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 檔案中，您可以將適當的 URL 指派給 <xref:System.Windows.Data.XmlDataProvider.Source%2A> 屬性，藉以定義資料的存取權，如下所示：  
+ 如果 XML 資料位於遠端 XML 檔案中，您可以將適當的 URL 指派給 <xref:System.Windows.Data.XmlDataProvider.Source%2A> 屬性，藉以定義資料的存取權，如下所示：  
   
 ```xml  
 <XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  

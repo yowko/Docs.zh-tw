@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 8c650ceab57a46cb6dd396111e7a93163a62299f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 87d5ff67a9e95c5ec5385802d09d667ee8b6e0f9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424935"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740686"
 ---
 # <a name="wpf-windows-overview"></a>WPF 視窗概觀
 使用者透過 Windows 與 Windows Presentation Foundation （WPF）獨立應用程式互動。 視窗的主要用途是裝載內容，以視覺化方式檢視資料，並讓使用者可以與資料互動。 獨立 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式會使用 <xref:System.Windows.Window> 類別來提供自己的視窗。 本主題介紹在獨立應用程式中建立和管理 windows 的基本概念之前的 <xref:System.Windows.Window>。  
@@ -88,7 +88,7 @@ ms.locfileid: "73424935"
   
  若要讓 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 標記檔和程式碼後置檔案一起工作，需要下列各項：  
   
-- 在標記中，`Window` 元素必須包含 `x:Class` 屬性。 建立應用程式時，標記檔案中的 `x:Class` 存在，會導致 Microsoft build engine （MSBuild）建立衍生自 <xref:System.Windows.Window> 的 `partial` 類別，且其名稱是由 `x:Class` 屬性所指定。 這需要加入 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 架構的 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空間宣告（`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`）。 產生的 `partial` 類別會執行 `InitializeComponent` 方法，其會呼叫來註冊事件並設定在標記中執行的屬性。  
+- 在標記中，`Window` 元素必須包含 `x:Class` 屬性。 建立應用程式時，標記檔案中的 `x:Class` 存在，會導致 Microsoft build engine （MSBuild）建立衍生自 <xref:System.Windows.Window> 的 `partial` 類別，且其名稱是由 `x:Class` 屬性所指定。 這需要加入 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 架構（`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`）的 XML 命名空間宣告。 產生的 `partial` 類別會執行 `InitializeComponent` 方法，其會呼叫來註冊事件並設定在標記中執行的屬性。  
   
 - 在程式碼後置中，類別必須是具有與標記中 `x:Class` 屬性所指定相同名稱的 `partial` 類別，而且必須衍生自 <xref:System.Windows.Window>。 這可讓程式碼後置檔案與建立應用程式時為標記檔案產生的 `partial` 類別相關聯（請參閱[建立 WPF 應用程式](building-a-wpf-application-wpf.md)）。  
   

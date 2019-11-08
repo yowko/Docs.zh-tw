@@ -3,16 +3,16 @@ title: .NET Core 上無法使用的 .NET Framework 技術
 description: 了解無法在 .NET Core 上使用的 .NET Framework 技術
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: e5626d7b3e402848e2e84c49d4e98e109f62982d
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 47f93268c44682afeba87cde17fe9c39811b37bf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846805"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739708"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core 上無法使用的 .NET Framework 技術
 
-有幾種 .NET Framework 程式庫可用的功能並無法搭配 .NET Core 使用，例如 AppDomain、遠端、程式碼存取安全性 (CAS) 和安全性透明。 如果您的程式庫會依賴一或多個這些技術，請考慮使用下述的替代方法。 如需有關 API 相容性的詳細資訊，請參閱[.Net Core 重大變更](../compatibility/breaking-changes.md)文章。
+.NET Framework 程式庫可用的數種技術無法與 .NET Core 搭配使用，例如 Appdomain、遠端、代碼啟用安全性（CAS）、安全性透明度和 System.enterpriseservices。 如果您的程式庫會依賴一或多個這些技術，請考慮使用下述的替代方法。 如需有關 API 相容性的詳細資訊，請參閱[.Net Core 重大變更](../compatibility/breaking-changes.md)文章。
 
 目前未實作的 API或技術，並不代表我們是刻意不支援它。 您應先搜尋 .NET Core 的 GitHub 存放庫，確認所發生的某項問題是否為設計原理所致，但若無法證明，請在 GitHub 的 [dotnet/corefx repository issues](https://github.com/dotnet/corefx/issues) (dotnet/corefx 存放庫問題) 中提問，尋求特定的 API 和技術。 [移植要求的相關問題](https://github.com/dotnet/corefx/labels/port-to-core) \(英文\) 會以 `port-to-core` 標籤標記。
 

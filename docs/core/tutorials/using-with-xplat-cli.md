@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: c7e314e9712c3b569ecc813a72670942651feda1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: cf8c3ae070f4c77789dc55ba4d7888c7b15c8653
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454736"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736987"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>使用命令列開始在 Windows/Linux/macOS 上使用 .NET Core
 
@@ -43,7 +43,7 @@ dotnet run
 
    您*好，.csproj*：
 
-   [!code-xml[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+   [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
 
    專案檔會指定還原相依性和建置程式所需的所有內容。
 
@@ -52,9 +52,9 @@ dotnet run
 
    *Program.cs*：
 
-   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]
+   [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
 
-   程式是透過 `using System` 來啟動，這表示「將 `System` 命名空間中的所有內容帶入這個檔案的範圍內」。 `System` 命名空間會包含像是 `string` 的基本結構或數字類型。
+   程式是透過 `using System` 來啟動，這表示「將 `System` 命名空間中的所有內容帶入這個檔案的範圍內」。 `System` 命名空間包含 `Console` 類別。
 
    然後，我們會定義稱為 `Hello` 的命名空間。 您可以將其變更為任何所需的位置。 名為 `Program` 的類別是定義於該命名空間內，其中含有可接受字串陣列作為其引數的 `Main` 方法。 這個陣列包含呼叫已編譯的程式時傳入的引數清單。 事實上，並未使用這個陣列︰所有程式所做的只是將 "Hello World!" 寫入 到主控台。 稍後，我們將變更程式碼以便使用此引數。
 
@@ -116,7 +116,7 @@ dotnet run
    15: 377
    ```
 
-就是這麼容易！  您可以隨意擴充 `Program.cs`。
+就是這麼容易！  您可以用您喜歡的方式來增加*Program.cs* 。
 
 ## <a name="working-with-multiple-files"></a>使用多個檔案
 
@@ -125,11 +125,11 @@ dotnet run
 
 1. 使用下列程式碼在 *Hello* 目錄中新增名為 *FibonacciGenerator.cs* 的檔案：
 
-   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
+   [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
 
 2. 變更 *Program.cs* 檔案中的 `Main` 方法，以具現化新的類別並呼叫其方法，如下列範例所示：
 
-   [!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+   [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
 3. 執行 [`dotnet build`](../tools/dotnet-build.md) 以編譯變更。
 

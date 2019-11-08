@@ -2,21 +2,21 @@
 title: <byteStreamMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: 5d78aed78a5c3a10aecac53bda02d6c640bc71ae
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 1d4109bde9c1668bc0832689b05e5d1dc3b198e9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400577"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739058"
 ---
-# <a name="bytestreammessageencoding"></a>\<byteStreamMessageEncoding>
+# <a name="bytestreammessageencoding"></a>\<byteStreamMessageEncoding >
 將訊息編碼指定為位元組資料流，且含有指定字元編碼的選項。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp; &nbsp;[ **\<system system.servicemodel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md)系結 >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<** 系結 >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<byteStreamMessageEncoding >**  
   
 ## <a name="syntax"></a>語法  
@@ -34,19 +34,19 @@ ms.locfileid: "70400577"
 |---------------|-----------------|  
 |messageVersion|指定使用這個繫結所傳送訊息的 SOAP 版本。 這個屬性只能設定為 <xref:System.ServiceModel.Channels.MessageVersion.None%2A> 的訊息版本值。 位元組資料流訊息編碼器不支援任何其他的訊息版本。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.Channels.MessageVersion>。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding >](bindings.md)|定義自訂繫結的所有繫結功能。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
@@ -57,4 +57,4 @@ ms.locfileid: "70400577"
 - [繫結](../../../wcf/bindings.md)
 - [擴充繫結](../../../wcf/extending/extending-bindings.md)
 - [自訂繫結](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<customBinding >](custombinding.md)

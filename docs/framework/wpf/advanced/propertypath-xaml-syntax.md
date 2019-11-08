@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: b2530793bfe1a158a0df1c34b2768e0c7ca351f3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459359"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740790"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 語法
 
@@ -32,7 +32,7 @@ ms.locfileid: "73459359"
 
 資料繫結是一個 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能，您可藉以繫結至任何相依性屬性的目標值。 不過，這類資料繫結的來源不需要是相依性屬性；它可以是適用的資料提供者所能辨識的任何屬性類型。 屬性路徑特別用於 <xref:System.Windows.Data.ObjectDataProvider>，用於從 common language runtime （CLR）物件及其屬性取得系結來源。
 
-請注意，[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 的資料系結不會使用 <xref:System.Windows.PropertyPath>，因為它不會使用 <xref:System.Windows.Data.Binding>中的 <xref:System.Windows.Data.Binding.Path%2A>。 相反地，您會使用 <xref:System.Windows.Data.Binding.XPath%2A>，並在資料的 [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] 中指定有效的 XPath 語法。 <xref:System.Windows.Data.Binding.XPath%2A> 也指定為字串，但此處未記載。請參閱[使用 XMLDataProvider 和 XPath 查詢系結至 XML 資料](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。
+請注意，資料系結至 XML 不會使用 <xref:System.Windows.PropertyPath>，因為它不會使用 <xref:System.Windows.Data.Binding>中的 <xref:System.Windows.Data.Binding.Path%2A>。 相反地，您會使用 <xref:System.Windows.Data.Binding.XPath%2A>，並在資料的 XML 檔物件模型（DOM）中指定有效的 XPath 語法。 <xref:System.Windows.Data.Binding.XPath%2A> 也指定為字串，但此處未記載。請參閱[使用 XMLDataProvider 和 XPath 查詢系結至 XML 資料](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。
 
 若要了解資料繫結中的屬性路徑，關鍵在於您可以將繫結的目標設為個別的屬性值，也可以改為繫結至要取得清單或集合的目標屬性。 如果您要系結集合，例如系結會根據集合中有多少資料項目而展開的 <xref:System.Windows.Controls.ListBox>，則您的屬性路徑應該參考集合物件，而不是個別的集合專案。 資料系結引擎會自動將當做資料來源使用的集合與系結目標的類型進行比對，因而產生像是以專案陣列填入 <xref:System.Windows.Controls.ListBox> 的行為。
 
@@ -76,7 +76,7 @@ ms.locfileid: "73459359"
 <object property="(ownerType.propertyName)" .../>
 ```
 
-括弧表示應該使用部分限定性來建立 <xref:System.Windows.PropertyPath> 中的這個屬性。 它可以使用 XML 命名空間來尋找具有適當對應的類型。 `ownerType` 會透過每個元件中的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 宣告，搜尋 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器可以存取的類型。 大部分的應用程式都有對應至 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空間的預設 XML 命名空間，因此，前置詞通常只需用於自訂類型或該命名空間以外的類型。  `propertyName` 必須解析為存在於 `ownerType` 上的屬性名稱。 此語法通常用於下列其中一種情況：
+括弧表示應該使用部分限定性來建立 <xref:System.Windows.PropertyPath> 中的這個屬性。 它可以使用 XML 命名空間來尋找具有適當對應的類型。 `ownerType` 會透過每個元件中的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 宣告，搜尋 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器可以存取的類型。 大部分的應用程式都有對應至 `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 命名空間的預設 XML 命名空間，因此，前置詞通常只需用於自訂類型或該命名空間以外的類型。  `propertyName` 必須解析為存在於 `ownerType` 上的屬性名稱。 此語法通常用於下列其中一種情況：
 
 - 指定於 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的路徑，其位於不具指定目標類型的樣式或範本中。 除此之外，限定用法通常是無效的，因為在非樣式和非範本的情況中，屬性會存在於執行個體上，而非類型上。
 
@@ -97,7 +97,7 @@ ms.locfileid: "73459359"
 此語法中的 / 是用來在階層式資料來源物件內進行巡覽，並支援含有連續 / 字元之階層的多個步驟。 來源周遊負責目前的記錄指標位置，這是藉由將資料與其檢視的 UI 同步處理來判斷。 如需與階層式資料來源物件繫結的詳細資訊，以及資料繫結中目前記錄指標的概念，請參閱[使用含階層式資料的主從式模式](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)或[資料繫結概觀](../../../desktop-wpf/data/data-binding-overview.md)。
 
 > [!NOTE]
-> 此語法外表上類似 [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]。 用來系結至 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料來源的 true [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] 運算式不會當做 <xref:System.Windows.Data.Binding.Path%2A> 值，而應該改為用於互斥的 <xref:System.Windows.Data.Binding.XPath%2A> 屬性。
+> 表面上，此語法類似 XPath。 用來系結至 XML 資料來源的 true XPath 運算式不會做為 <xref:System.Windows.Data.Binding.Path%2A> 值，應該改為用於互斥的 <xref:System.Windows.Data.Binding.XPath%2A> 屬性。
 
 ### <a name="collection-views"></a>集合檢視
 
@@ -204,7 +204,7 @@ ms.locfileid: "73459359"
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>
 ```
 
-括弧表示應該使用部分限定性來建立 <xref:System.Windows.PropertyPath> 中的這個屬性。 它可使用 XML 命名空間來尋找此類型。 `ownerType` 會透過每個元件中的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 宣告，搜尋 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器可以存取的類型。 大部分的應用程式都有對應至 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空間的預設 XML 命名空間，因此，前置詞通常只需用於自訂類型或該命名空間以外的類型。 `propertyName` 必須解析為存在於 `ownerType` 上的屬性名稱。 指定為 `propertyName` 的屬性必須是 <xref:System.Windows.DependencyProperty>。 (所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加屬性都會實作為相依性屬性，因此只有自訂附加屬性才會發生此問題)。
+括弧表示應該使用部分限定性來建立 <xref:System.Windows.PropertyPath> 中的這個屬性。 它可使用 XML 命名空間來尋找此類型。 `ownerType` 會透過每個元件中的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 宣告，搜尋 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器可以存取的類型。 大部分的應用程式都有對應至 `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 命名空間的預設 XML 命名空間，因此，前置詞通常只需用於自訂類型或該命名空間以外的類型。 `propertyName` 必須解析為存在於 `ownerType` 上的屬性名稱。 指定為 `propertyName` 的屬性必須是 <xref:System.Windows.DependencyProperty>。 (所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加屬性都會實作為相依性屬性，因此只有自訂附加屬性才會發生此問題)。
 
 <a name="indexanim"></a>
 

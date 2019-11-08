@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 7c0168d5ca8b1d3bda709f934e454b2603d37b71
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b60f2871062a12d3bee91a9c6d9883222b3034f4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039873"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733574"
 ---
 # <a name="imaging-overview"></a>影像處理概觀
 本主題提供 Microsoft Windows Presentation Foundation 映射元件的簡介。 WPF 影像處理可讓開發人員顯示、轉換和格式化影像。  
@@ -165,7 +165,7 @@ ms.locfileid: "73039873"
 ## <a name="image-metadata"></a>影像中繼資料  
  某些影像檔包含描述檔案內容或特性的中繼資料。 例如，大部分數位相機建立的影像，會包含用來擷取影像之相機廠牌與型號的中繼資料。 每一種影像格式會以不同的方式處理中繼資料，但 WPF 映射會提供統一的方式來儲存和抓取每個支援影像格式的中繼資料。  
   
- 中繼資料的存取是透過 <xref:System.Windows.Media.Imaging.BitmapSource> 物件的 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 屬性來提供。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 會傳回 <xref:System.Windows.Media.Imaging.BitmapMetadata> 物件，其中包含影像所包含的所有中繼資料。 此資料可能位於單一的中繼資料結構描述，或不同結構描述的組合中。 WPF 影像處理支援下列影像中繼資料架構：交換影像檔案（Exif）、文字（PNG 文字資料）、影像檔案目錄（IFD）、國際按電信委員會（IPTC）和 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
+ 中繼資料的存取是透過 <xref:System.Windows.Media.Imaging.BitmapSource> 物件的 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 屬性來提供。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 會傳回 <xref:System.Windows.Media.Imaging.BitmapMetadata> 物件，其中包含影像所包含的所有中繼資料。 此資料可能位於單一的中繼資料結構描述，或不同結構描述的組合中。 WPF 影像處理支援下列影像中繼資料架構：交換影像檔案（Exif）、文字（PNG 文字資料）、影像檔案目錄（IFD）、國際按電信委員會（IPTC）和可擴充的中繼資料平臺（XMP）。  
   
  為了簡化讀取中繼資料的程式，<xref:System.Windows.Media.Imaging.BitmapMetadata> 提供了數個可輕易存取的命名屬性，例如 <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>、<xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>和 <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>。 許多具名屬性也可以用於寫入中繼資料。 讀取中繼資料的其他支援是由中繼資料查詢讀取器提供。 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 方法是藉由提供字串查詢（例如 *"/app1/exif/"* ），用來抓取中繼資料查詢讀取器。 在下列範例中，會使用 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 來取得儲存在 *"/Text/Description"* 位置的文字。  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 2e975745c2124ab2834eb82ed9b94563b44642b1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c18cce1898b8834c20d5e4af70c1b010e4b96e11
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453682"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740896"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF 中的程式碼後置和 XAML
 <a name="introduction"></a>程式碼後置是一個詞彙，用來描述以標記定義的物件聯結的程式碼（當 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面已進行標記編譯時）。 本主題描述程式碼後置的需求，以及 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中程式碼的替代內嵌程式碼機制。  
@@ -50,7 +50,7 @@ ms.locfileid: "73453682"
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x：Code  
- [x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md)是在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中定義的指示詞元素。 `x:Code` 指示詞元素可以包含內嵌程式設計程式碼。 以內嵌方式定義的程式碼可以與相同頁面上的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 互動。 下列範例說明內嵌C#程式碼。 請注意，程式碼位於 `x:Code` 元素內，而且程式碼必須以 `<CDATA[`...`]]>` 括住 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]的內容，如此一來，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器（解讀 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 架構或 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 架構）就不會嘗試將內容逐字解讀為 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]。  
+ [x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md)是在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中定義的指示詞元素。 `x:Code` 指示詞元素可以包含內嵌程式設計程式碼。 以內嵌方式定義的程式碼可以與相同頁面上的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 互動。 下列範例說明內嵌C#程式碼。 請注意，程式碼是在 `x:Code` 專案內，而且程式碼必須以 `<CDATA[`...`]]>` 括住 XML 的內容，如此一來，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器（解讀 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 架構或 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 架構）就不會嘗試將內容逐字解讀為 XML。  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   

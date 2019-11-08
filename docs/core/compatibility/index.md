@@ -2,12 +2,12 @@
 title: 評估中斷性變更 - .NET Core
 description: 深入了解 .NET Core 嘗試針對跨 .NET 版本開發人員維護相容性的方式。
 ms.date: 06/10/2019
-ms.openlocfilehash: a4a1b5c4e81cec783248c6110b0af9844eb3f4af
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416643"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739343"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>評估 .NET Core 中的中斷性變更
 
@@ -52,7 +52,7 @@ ms.locfileid: "73416643"
 - **✔️ 將 [struct](../../csharp/language-reference/keywords/struct.md) 型別變更為 `readonly struct` 型別**
 
   請注意，不允許將 `readonly struct` 型別變更為 `struct` 型別。
-  
+
 - **✔️ 當沒有可存取 (公用或受保護) 的建構函式時，將[密封](../../csharp/language-reference/keywords/sealed.md)或[抽象](../../csharp/language-reference/keywords/abstract.md)關鍵字新增到型別**
 
 - **✔️ 延伸型別的可見性**
@@ -138,9 +138,9 @@ ms.locfileid: "73416643"
 - **❌ 重新具名引數（包括變更其大小寫）**
 
   這會視為中斷的原因有二：
-  
+
   - 它中斷了晚期繫結的案例，例如 Visual Basic 中的晚期繫結功能和 C# 中的 [dynamic](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type)。
-  
+
   - 當開發人員使用[具名引數](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments)時，它會中斷[來源相容性](categories.md#source-compatibility)。
 
 - **❌ 從 `ref` 傳回值變更為 `ref readonly` 傳回值**
@@ -153,9 +153,9 @@ ms.locfileid: "73416643"
 
   雖然這通常不是一個中斷性變更，因為 C# 編譯器傾向於發出 [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) 中繼語言 (IL) 指令以呼叫非虛擬方法 (`callvirt` 會執行 Null 檢查，而正常呼叫不會)，由於以下幾個原因，此行為並不是不變的：
   - C# 不是 .NET 以其為目標的唯一語言。
-  
+
   - 只要目標方法為非虛擬且可能不是 Null 時 (例如透過 [?. null 傳播運算子](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-)存取的方法)，C# 編譯器就會漸漸地嘗試將 `callvirt` 最佳化為正常呼叫。
-  
+
   使方法成為虛擬表示取用者程式碼通常最後會以非虛擬方式呼叫它。
 
 - **❌ 將[虛擬](../../csharp/language-reference/keywords/virtual.md)關鍵字新增至成員**

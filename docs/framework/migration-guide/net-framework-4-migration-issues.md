@@ -5,32 +5,18 @@ helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: d3966ff15e06baf293ea02dad031bd5849b4a20f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 889e63feb71682065641fcdc56ada017dcf6c58c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126051"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735129"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 移轉問題
 
-本主題描述 .NET Framework 版本 3.5 Service Pack 1 與 .NET Framework 版本 4 之間的移轉問題，包含修正程式、標準合規性和安全性變更，以及根據客戶意見反應的變更。 大多數變更都不需要您的應用程式進行任何設計修改。 對於可能涉及修改的變更，請參閱表格的 [建議變更] 欄。
+本主題描述 .NET Framework 版本 3.5 Service Pack 1 與 .NET Framework 版本 4 之間的移轉問題，包含修正程式、標準合規性和安全性變更，以及根據客戶意見反應的變更。 大多數變更都不需要您的應用程式進行任何設計修改。 對於可能涉及修改的變更，請參閱表格的 [建議變更] 欄。 值得注意的變更會依區域細分，例如，ASP.NET 和 Windows Presentation Foundation （WPF）。
 
-本主題描述下列領域中值得注意的變更：
-
-- [ASP.NET 和 Web](#aspnet-and-web)
-
-- [核心](#core)
-
-- [Data](#data)
-
-- [Windows Communication Foundation (WCF)](#windows-communication-foundation-wcf)
-
-- [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
-
-- [XML](#xml)
-
-如需本主題中問題的較高階概觀，請參閱 [.NET Framework 4 移轉手冊](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)。
+如需本主題中問題的更高層級總覽，請參閱[.NET Framework 4 的遷移指南](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)。
 
 如需新功能的資訊，請參閱 [.NET Framework 4 的新功能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)。
 
@@ -38,7 +24,7 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System.Web>、<xref:System.Web.Mobile>、<xref:System.Web.Security>、<xref:System.Web.UI.WebControls>；組件：System.Web (在 System.Web.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 | 建議變更 |
+| 特殊功能 | 3\.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
 | **瀏覽器定義檔** | 瀏覽器定義檔已更新成包含新增和已更新瀏覽器及裝置的資訊。 已移除 Netscape Navigator 這類較舊的瀏覽器和裝置，並已新增 Google Chrome 和 Apple iPhone 這類較新的瀏覽器和裝置。<br><br>如果您的應用程式包含繼承自其中一個已移除瀏覽器定義的自訂瀏覽器定義，則您會看到錯誤。<br><br><xref:System.Web.HttpBrowserCapabilities> 物件 (由頁面的 `Request.Browse` 屬性所公開) 是透過瀏覽器定義檔所驅動。 因此，ASP.NET 4 中存取此物件的屬性所傳回的資訊，可能會與舊版 ASP.NET 中所傳回的資訊不同。 | 如果您的應用程式依賴舊的瀏覽器定義檔，則可以從下列資料夾中複製它們：<br><br>*Windows\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG\\Browsers*<br><br>將檔案複製至 ASP.NET 4 的對應 \\CONFIG\\Browsers 資料夾。 在您複製檔案之後，請執行 [Aspnet_regbrowsers.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229858(v=vs.90)) 命令列工具。 如需詳細資訊，請參閱 [https://www.asp.net/mobile](/aspnet/mobile/overview) 網站。 |
 | **在混合 ASP.NET 版本下執行的子應用程式** | 因為發生組態或編譯錯誤，所以可能無法啟動設定為執行舊版 ASP.NET 之應用程式子系的 ASP.NET 4 應用程式。 發生的特定錯誤取決於應用程式是在 IIS 6.0 還是 IIS 7 或 IIS 7.5 下執行。 | 您可以變更受影響應用程式的組態檔，讓組態系統正確地辨識 ASP.NET 4 應用程式。 如需您必須進行之變更的資訊，請參閱 ASP.NET 網站之 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes) (ASP.NET 4 最新變更) 文件中的＜ASP.NET 4 Child Applications Fail to Start When Under ASP.NET 2.0 or ASP.NET 3.5 Applications＞(在 ASP.NET 2.0 或 ASP.NET 3.5 應用程式下時，無法啟動 ASP.NET 4 子應用程式) 一節。 |
@@ -67,7 +53,7 @@ ms.locfileid: "73126051"
 
 ### <a name="general-features"></a>一般功能
 
-| 特殊功能 | 3.5 SP1 的差異 | 建議變更 |
+| 特殊功能 | 3\.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
 | **CardSpace** | Windows CardSpace 不再包含於 .NET Framework 中；它會個別予以提供。 | 請從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=199868)下載 Windows CardSpace。 |
 | **組態檔** | 已更正 .NET Framework 如何存取應用程式組態檔。 | 如果您的應用程式佈建檔案名為*應用程式名稱 .config*，請將它重新命名為*application-name*。例如，將*myapp*重新命名為*myapp. .config*。 |
@@ -79,7 +65,7 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System>；組件：mscorlib (在 mscorlib.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 | 建議變更 |
+| 特殊功能 | 3\.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
 | **日光節約時間** | 為了與系統時鐘一致，時間屬性 (例如 <xref:System.TimeZoneInfo.Local> 和 <xref:System.DateTime.Now>) 現在會使用作業系統規則，而不是日光節約時間作業的其他 .NET Framework 資料。 | 無。 |
 | **格式字串** | 為了支援區分文化特性格式，除了新 `ParseExact` 和 `TryParseExact` 方法之外，<xref:System.TimeSpan> 結構還包含 `ToString`、`Parse` 和 `TryParse` 方法的新多載。 | 無。 |
@@ -90,7 +76,7 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System.Globalization>；組件：mscorlib (在 mscorlib.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 | 建議變更 |
+| 特殊功能 | 3\.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
 | **文化特性名稱** | 下列名稱變更會影響德文、迪維西文和非洲文文化特性：<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>：德文 (瑞士) (de-CH) 文化特性的貨幣名稱已從 "sFr." 變更 為 "Fr."。<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>：迪維西文 (馬爾地夫) (dv-MV) 文化特性的完整日期模式已從 "dd/MMMM/yyyy" 變更為 "dd/MM/yyyy"。<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>： 南非荷蘭文 (南非) (af-ZA) 文化特性的 P.M. 指示項已從 "nm" 變更為 "PM"。 | 請注意文化特性名稱的變更。 |
 | **LCID 參數** | 為了與自動化伺服器設定中的預期行為一致，CLR 不再將 `LCID` 參數的目前文化特性 (Culture) 傳遞給未受管理的 COM 應用程式。 相反地，它會傳遞文化特性的 1033 (en-us)。 | 不需要進行任何修改，但需要所指定文化特性的原生應用程式除外。 |
@@ -102,7 +88,7 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System>、<xref:System.Runtime.ExceptionServices>；組件：mscorlib (在 mscorlib.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 | 建議變更 |
+| 特殊功能 | 3\.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
 | **損毀處理序狀態的例外狀況** | CLR 不再將損毀處理序狀態的例外狀況傳遞給 Managed 程式碼中的例外狀況處理常式。 | 這些例外狀況指出處理序狀態已損毀。 不建議您在此狀態下執行應用程式。<br><br>如需詳細資訊，請參閱 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> 以及 CLR Inside Out 部落格中的項目[Handling Corrupted State Exceptions](https://go.microsoft.com/fwlink/?LinkID=179681) (處理損毀的狀態例外狀況)。 |
 | **執行引擎例外狀況** | 因為可攔截的例外狀況允許不穩定的處理序繼續執行，所以 <xref:System.ExecutionEngineException> 現在已過時。 這項變更可改善執行階段中的預測性和可靠性。 | 使用 <xref:System.InvalidOperationException> 對條件發出信號。 |
@@ -111,20 +97,20 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System.Reflection>；組件：mscorlib (在 mscorlib.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 | 建議變更 |
+| 特殊功能 | 3\.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
 | **組件雜湊演算法** | 因為執行階段在未載入所參考組件時不知道組件的雜湊演算法，所以 <xref:System.Reflection.AssemblyName.HashAlgorithm> 屬性現在會傳回 <xref:System.Configuration.Assemblies.AssemblyHashAlgorithm> (這指的是使用 <xref:System.Reflection.Assembly.GetReferencedAssemblies%2A> 方法所傳回的所參考組件的屬性)。 | 無。 |
 | **組件載入** | 為了避免重複載入組件，以及儲存虛擬位址空間，CLR 現在只會使用 Win32 `MapViewOfFile` 函式載入組件。 它也不再呼叫 `LoadLibrary` 函式。<br><br>這項變更會以下列方式影響診斷應用程式：<br><br>* <xref:System.Diagnostics.ProcessModuleCollection> 將不再包含從 `Process.GetCurrentProcess().Modules` 呼叫取得之類別庫 (.dll 檔案) 中的任何模組。<br>* 使用 `EnumProcessModules` 函式的 Win32 應用程式看不到所有列出的受管理模組。 | 無。 |
 | **宣告類型** | 類型沒有宣告類型時，<xref:System.Type.DeclaringType> 屬性現在會正確地傳回 Null。 | 無。 |
 | **委派** | 將 Null 值傳遞給委派的建構函式時，委派現在會擲回 <xref:System.ArgumentNullException>，而不是 <xref:System.NullReferenceException>。 | 請確定任何例外狀況處理攔截到 <xref:System.ArgumentNullException>。 |
-| **全域組件快取位置變更** | 針對 .NET Framework 4 組件，已將全域組件快取從 Windows 目錄 (%WINDIR%) 移至 Microsoft.Net 子目錄 (*%WINDIR%\\Microsoft.Net*)。 舊版本中的組件會保留在較舊的目錄中。<br><br>未受管理的 [ASM_CACHE_FLAGS](../unmanaged-api/fusion/asm-cache-flags-enumeration.md) 列舉包含新的 `ASM_CACHE_ROOT_EX` 旗標。 此旗標會取得 .NET Framework 4 組件的快取位置，而快取位置可以透過 [GetCachePath](../unmanaged-api/fusion/getcachepath-function.md) 函式取得。 | 無，假設應用程式未使用組件的明確路徑，這不是建議的作法。 |
+| **全域組件快取位置變更** | 針對 .NET Framework 4 組件，已將全域組件快取從 Windows 目錄 (%WINDIR%) 移至 Microsoft.Net 子目錄 ( *%WINDIR%\\Microsoft.Net*)。 舊版本中的組件會保留在較舊的目錄中。<br><br>未受管理的 [ASM_CACHE_FLAGS](../unmanaged-api/fusion/asm-cache-flags-enumeration.md) 列舉包含新的 `ASM_CACHE_ROOT_EX` 旗標。 此旗標會取得 .NET Framework 4 組件的快取位置，而快取位置可以透過 [GetCachePath](../unmanaged-api/fusion/getcachepath-function.md) 函式取得。 | 無，假設應用程式未使用組件的明確路徑，這不是建議的作法。 |
 | **全域組件快取工具** | [Gacutil.exe (全域組件快取工具)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ex0ss12c%28v=vs.100%29) 不再支援殼層外掛程式檢視器。 | 無。 |
 
 ### <a name="interoperability"></a>互通性
 
 命名空間：<xref:System.Runtime.InteropServices>；組件：mscorlib (在 mscorlib.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 | 建議變更 |
+| 特殊功能 | 3\.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
 | **緩衝區長度** (Unmanaged API) | 為了節省記憶體，[ICorProfilerInfo2::GetStringLayout](../unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) 方法之 `pBufferLengthOffset` 參數的功能已變更成符合 `pStringLengthOffset` 參數。 這兩個參數現在會指向字串長度的位移位置。 已從字串類別呈現移除緩衝區長度。 | 移除緩衝區長度的任何相依性。 |
 | **JIT 偵錯** | 若要簡化 Just-In-Time (JIT) 偵錯的註冊，.NET Framework 偵錯工具現在只會使用 AeDebug 登錄機碼，以控制機器碼的 JIT 偵錯行為。 這項變更會導致下列各項：<br><br>* 您無法再針對 Managed 和機器碼註冊兩個不同的偵錯工具。<br>* 您可以不再針對非互動式處理序自動啟動偵錯工具，但可以提示使用者進行互動式處理序。<br>* 在無法啟動偵錯工具時，或沒有應該啟動的註冊偵錯工具時，不再通知您。<br>* 不再支援取決於應用程式互動性的自動啟動原則。 | 依需要調整偵錯作業。 |
@@ -141,7 +127,7 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System.Data>、<xref:System.Data.Objects.DataClasses>、<xref:System.Data.SqlClient>；組件：System.Data (在 System.Data.dll 中)、System.Data.Entity (在 System.Data.Entity.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 |
+| 特殊功能 | 3\.5 SP1 的差異 |
 | ------- | ------------------------ |
 | **POCO 案例** | <xref:System.Data.Objects.DataClasses.IRelatedEnd> 介面有新的方法可改善其在簡單的 CLR 物件 (POCO) 案例中的使用性。 這些新方法接受 <xref:System.Object> 作為參數，而不接受 <xref:System.Data.Objects.DataClasses.IEntityWithRelationships> 實體。 |
 | **編輯資料列** | <xref:System.Data.DataView> 類別所實作的 <xref:System.Collections.IList.IndexOf%2A> 方法現在會正確地傳回所編輯資料列的值，而不是傳回 -1。 |
@@ -156,7 +142,7 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System.Data>、<xref:System.Data.Objects>、<xref:System.Data.Objects.DataClasses>；組件：System.Data.Entity (在 System.Data.Entity.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 |
+| 特殊功能 | 3\.5 SP1 的差異 |
 | ------- | ------------------------ |
 | **實體物件** | 呼叫 <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> 方法時，現在在 <xref:System.Data.Objects.ObjectContext.Detach%2A> 方法與實體物件狀態之間具有同位檢查。 這項改善的一致性可避免擲回未預期的例外狀況。 |
 | **Entity SQL** | 已針對 Entity SQL 中的識別項解析改善規則。<br><br>Entity SQL 剖析器具有用於解析多組件識別項的改善邏輯。 |
@@ -169,7 +155,7 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System.Data.Linq>；組件：System.Data.Linq (在 System.Data.Linq.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 |
+| 特殊功能 | 3\.5 SP1 的差異 |
 | ------- | ------------------------ |
 | **事件** | 除了在載入集合時引發事件之外，如果卸載 <xref:System.Data.Linq.EntitySet%601>，<xref:System.Data.Linq.EntitySet%601> 集合現在還會對新增和移除作業引發 <xref:System.Data.Linq.EntitySet%601.ListChanged> 事件。 |
 | **查詢** | LINQ to SQL 查詢中不再忽略 `Skip(0)`。 因此，具有此方法之查詢的行為可能會不同。 例如，在某些情況下，`OrderBy` 子句需要具有 `Skip(0)`，而且，如果未包含 `OrderBy` 子句，則查詢現在會擲回 <xref:System.NotSupportedException> 例外狀況。 |
@@ -180,7 +166,7 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System.Data.Services>、<xref:System.Data.Services.Client>、<xref:System.Data.Services.Common>、<xref:System.Data.Services.Providers>；組件：System.Data.Services (在 System.Data.Services.dll 中)、System.Data.Services.Client (在 System.Data.Services.Client.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 |
+| 特殊功能 | 3\.5 SP1 的差異 |
 | ------- | ------------------------ |
 | **批次二進位內容** | WCF Data Services 現在支援要求和回應中的批次二進位內容。 |
 | **變更攔截器** | 變更攔截器現在是針對刪除要求所執行。<br><br>變更攔截器是一種方法，會在每次伺服器收到修改實體集中實體的要求時執行。 它會在執行內送要求之前執行。 變更攔截器可存取所變更的實體以及對其執行的作業。 |
@@ -196,7 +182,7 @@ ms.locfileid: "73126051"
 
 下表描述先前有限制或其他問題之功能的改善。
 
-| 特殊功能 | 3.5 SP1 的差異 |
+| 特殊功能 | 3\.5 SP1 的差異 |
 | ------- | ------------------------ |
 | **組態檔** | 為了透過組態檔階層啟用行為繼承，WCF 現在支援跨組態檔合併。<br><br>現在已擴充組態繼承模型，讓使用者定義將套用至在電腦上執行之所有服務的行為。<br><br>如果在不同的階層層級有同名的行為，您可能會遇到行為變更。 |
 | **服務裝載** | 將 `allowDefinition="MachineToApplication"` 屬性新增至項目定義，就無法再於服務層級指定 `<serviceHostingEnvironment>` 組態項目。<br><br>在服務層級指定 `<serviceHostingEnvironment>` 項目就技術上而言不正確，而且會導致不一致的行為。 |
@@ -207,7 +193,7 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System.Windows>、<xref:System.Windows.Controls>；組件：PresentationFramework (在 PresentationFramework.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 | 建議變更 |
+| 特殊功能 | 3\.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
 | **例外狀況處理** | 若要早期偵測到錯誤，WPF 會擲回 <xref:System.Reflection.TargetInvocationException> 並將 <xref:System.Exception.InnerException> 屬性設定為重大例外狀況，例如 <xref:System.NullReferenceException>、<xref:System.OutOfMemoryException>、<xref:System.StackOverflowException> 和 <xref:System.Security.SecurityException>，而不是攔截原始例外狀況。 | 無。 |
 | **連結的資源** | 為了讓連結更為簡單，建置應用程式時，位於專案資料夾結構以外之位置中的資源檔 (例如影像) 會使用資源檔的完整路徑，而不是將其檔案名稱作為資源識別碼。 應用程式將能夠在執行階段找出檔案。 | 無。 |
@@ -221,7 +207,7 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>；組件：PresentationFramework (在 PresentationFramework.dll 中)、PresentationCore (在 PresentationCore.dll 中)、WindowsBase (在 WindowsBase.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 | 建議變更 |
+| 特殊功能 | 3\.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
 | **對話方塊** | 為了改善可靠性，會在已建立 <xref:Microsoft.Win32.FileDialog> 控制項的相同執行緒上呼叫 <xref:Microsoft.Win32.CommonDialog.ShowDialog%2A> 方法。 | 請務必建立 <xref:Microsoft.Win32.FileDialog> 控制項，並在相同的執行緒上呼叫 <xref:Microsoft.Win32.CommonDialog.ShowDialog%2A> 方法。 |
 | **浮動視窗** | 為了修正不正確地持續重新啟用浮動視窗的焦點還原邏輯 (讓它看起來像是強制回應對話方塊)，現在，如果候選項目不是視窗的子系，則會避免焦點還原。 | 無。 |
@@ -237,7 +223,7 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>、<xref:System.Windows.Media.Effects>；組件：PresentationFramework (在 PresentationFramework.dll 中)、PresentationCore (在 PresentationCore.dll 中)、WindowsBase (在 WindowsBase.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 | 建議變更 |
+| 特殊功能 | 3\.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
 | **點陣圖效果** | 為了改善效能，<xref:System.Windows.Media.Effects.BitmapEffect> 類別以及繼承自 <xref:System.Windows.Media.Effects.BitmapEffect> 類別的類別雖然仍然存在，但已予以停用。 如果下列條件成立，則會使用硬體加速轉譯管線來轉譯效果：<br><br>* 應用程式使用半徑屬性集小於 100 DIU 的 <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> 或 <xref:System.Windows.Media.Effects.BlurBitmapEffect>。<br>* 執行應用程式之電腦上的視訊卡支援像素著色器 2.0。<br><br>如果不符合這些條件，則 <xref:System.Windows.Media.Effects.BitmapEffect> 物件不會有任何作用。<br><br>此外，Visual Studio 在遇到 <xref:System.Windows.Media.Effects.BitmapEffect> 物件或子類別時將會產生編譯器警告。<br><br><xref:System.Windows.Media.DrawingContext.PushEffect%2A> 方法已標示為過時。 | 停止使用舊版 <xref:System.Windows.Media.Effects.BitmapEffect> 和衍生類別，而是改成使用衍生自 <xref:System.Windows.Media.Effects.Effect> 的新類別：<xref:System.Windows.Media.Effects.BlurEffect>、<xref:System.Windows.Media.Effects.DropShadowEffect> 和 <xref:System.Windows.Media.Effects.ShaderEffect>。<br><br>您也可以繼承自 <xref:System.Windows.Media.Effects.ShaderEffect> 類別，來建立自己的效果。 |
 | **點陣圖框架** | 複製的 <xref:System.Windows.Media.Imaging.BitmapFrame> 物件現在會收到 <xref:System.Windows.Media.Imaging.BitmapSource.DownloadProgress>、<xref:System.Windows.Media.Imaging.BitmapSource.DownloadCompleted> 和 <xref:System.Windows.Media.Imaging.BitmapSource.DownloadFailed> 事件。 這可讓從 Web 下載並透過 <xref:System.Windows.Style> 套用至 <xref:System.Windows.Controls.Image> 控制項的映像正常運作。<br><br>只有在下列所有陳述式都成立時，您才會看到行為變更：<br><br>* 您訂閱 <xref:System.Windows.Media.Imaging.BitmapSource.DownloadProgress>、<xref:System.Windows.Media.Imaging.BitmapSource.DownloadCompleted> 或 <xref:System.Windows.Media.Imaging.BitmapSource.DownloadFailed> 事件。<br>* <xref:System.Windows.Media.Imaging.BitmapFrame> 的來源是來自 Web。<br>* 在下載仍在進行時複製 <xref:System.Windows.Media.Imaging.BitmapFrame>。 | 只有在寄件者是原始 <xref:System.Windows.Media.Imaging.BitmapFrame> 時，才會檢查事件處理常式中的寄件者，並採取動作。 |
@@ -247,7 +233,7 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>；組件：PresentationFramework (在 PresentationFramework.dll 中)、PresentationCore (在 PresentationCore.dll 中)、WindowsBase (在 WindowsBase.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 | 建議變更 |
+| 特殊功能 | 3\.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
 | **繫結命令執行個體** | 為了提供機制將檢視模型命令執行個體繫結至檢視輸入手勢，<xref:System.Windows.Input.InputBinding> 類別現在繼承自 <xref:System.Windows.Freezable>，而不是 <xref:System.Windows.DependencyObject>。 下列屬性現在是相依性屬性：<br><br>* <xref:System.Windows.Input.InputBinding.Command><br>* <xref:System.Windows.Input.InputBinding.CommandParameter><br>* <xref:System.Windows.Input.InputBinding.CommandTarget><br><br>這項變更會導致下列各項：<br><br>* <xref:System.Windows.Input.InputBinding> 物件現在在註冊後會予以凍結，而不是保持可變動。<br>* 因為 <xref:System.Windows.DependencyObject> 類別的限制，所以您無法從多個執行緒存取執行個體層級 <xref:System.Windows.Input.InputBinding> 物件。<br>* 因為 <xref:System.Windows.Freezable> 類別的限制，所以您無法在註冊之後變動類別層級輸入繫結。<br>* 您無法在檢視模型中所建立的命令執行個體上指定輸入繫結。 | 如果繫結是可變動的，或要凍結它們，請在個別執行緒上建立不同的 <xref:System.Windows.Input.InputBinding> 類別執行個體。 類別層級靜態 <xref:System.Windows.Input.InputBinding> 在註冊之後，就請不要進行變動。 |
 | **瀏覽器應用程式** | WPF 瀏覽器應用程式 (.XBAP) 現在會處理獨立 WPF 應用程式這類重要事件，因此物件會依正確順序接收已路由傳送的重要事件。 | 無。 |
@@ -258,7 +244,7 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System.Windows>、<xref:System.Windows.Automation.Peers>、<xref:System.Windows.Automation.Provider>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>；組件：PresentationFramework (在 PresentationFramework.dll 中)、PresentationCore (在 PresentationCore.dll 中)、UIAutomationProvider (在 UIAutomationProvider.dll 中)、WindowsBase (在 WindowsBase.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 | 建議變更 |
+| 特殊功能 | 3\.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
 | **檢視類別階層** | <xref:System.Windows.Automation.Peers.TreeViewAutomationPeer> 和 <xref:System.Windows.Automation.Peers.TreeViewItemAutomationPeer> 類別繼承自 <xref:System.Windows.Automation.Peers.ItemsControlAutomationPeer>，而不是 <xref:System.Windows.Automation.Peers.FrameworkElementAutomationPeer>。 | 如果您繼承自 <xref:System.Windows.Automation.Peers.TreeViewItemAutomationPeer> 類別並覆寫 <xref:System.Windows.Automation.Peers.TreeViewItemAutomationPeer.GetChildrenCore%2A> 方法，請考慮傳回繼承自新 <xref:System.Windows.Automation.Peers.TreeViewDataItemAutomationPeer> 類別的物件。 |
 | **移出螢幕的容器** | 為了修正不正確的傳回值，<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.IsOffscreenCore%2A> 方法現在會正確傳回捲出檢視之項目容器的 `false`。 此外，其他視窗閉塞不會影響方法的值，項目是否出現在特定監視器也不會影響方法的值。 | 無。 |
@@ -271,7 +257,7 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>、<xref:System.Windows.Markup>；組件：PresentationFramework (在 PresentationFramework.dll 中)、PresentationCore (在 PresentationCore.dll 中)、WindowsBase (在 WindowsBase.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 | 建議變更 |
+| 特殊功能 | 3\.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
 | **標記延伸** | WPF 現在一律會正確地使用 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> 方法的值，而不是在使用標記延伸來設定屬性或在集合中建立項目的特定情況下傳回 <xref:System.Windows.Markup.MarkupExtension> 物件。 在某些情況下，標記延伸可能會傳回它自己。 | 如果您的應用程式存取已在舊版本中傳回 <xref:System.Windows.Markup.MarkupExtension> 物件的資源，請參考從 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> 所傳回的物件，而不是 <xref:System.Windows.Markup.MarkupExtension> 物件。 |
 | **剖析屬性** | XAML 中的屬性現在只能有一個句點。 例如，下列有效：<br><br>`<Button Background="Red"/>` (沒有句點)<br><br>`<Button Button.Background = "Red"/>` (一個句點)<br><br>下列不再有效：<br><br>`<Button Control.Button.Background = "Red"/>` (多個句點) | 更正有多個句點的 XAML 屬性。 |
@@ -284,7 +270,7 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System.Xml.Linq>、<xref:System.Xml.Schema>、<xref:System.Xml.XPath>；組件：System.Xml (在 System.Xml.dll 中)、System.Xml.Linq (在 System.Xml.Linq.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 |
+| 特殊功能 | 3\.5 SP1 的差異 |
 | ------- | ------------------------ |
 | **Chameleon 結構描述** | 為了避免資料損毀，現在，Chameleon 結構描述隨附於多個結構描述時會正確地進行複製。<br><br>Chameleon 結構描述是沒有目標命名空間的結構描述，而且它們包含於其他 XSD 時，會採用匯入結構描述的目標命名空間。 它們通常用來將一般類型併入結構描述中。 |
 | **ID 函式** | 將 <xref:System.Xml.XmlReader> 物件傳遞給 XLST 時，XSLT [id 函式](/sql/xquery/functions-on-sequences-id)現在會傳回正確值，而不是 Null。<br><br>如果使用者已使用 <xref:System.Xml.Linq.XNode.CreateReader%2A> 方法從 LINQ to XML 類別建立 <xref:System.Xml.XmlReader> 物件，並且這個 <xref:System.Xml.XmlReader> 物件會傳遞至 XSLT，在過去，XSLT 中 `id` 函式的任何執行個體會傳回 Null。 這不是 `id` 函式的允許傳回值。 |
@@ -298,7 +284,7 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System.Xml.Linq>、<xref:System.Xml.Schema>、<xref:System.Xml.XPath>；組件：System.Xml (在 System.Xml.dll 中)、System.Xml.Linq (在 System.Xml.Linq.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 |
+| 特殊功能 | 3\.5 SP1 的差異 |
 | ------- | ------------------------ |
 | **命名空間解析程式** | <xref:System.Xml.XmlReader.ReadContentAs%2A> 方法不再忽略傳遞給它的 <xref:System.Xml.IXmlNamespaceResolver> 解析程式。<br><br>在舊版本中，已忽略指定的命名空間解析程式，並改成使用 <xref:System.Xml.XmlReader>。 |
 | **空白字元** | 為了避免在建立讀取器時資料遺失，<xref:System.Xml.XmlReader.Create%2A> 方法不再捨棄明顯的空白字元。<br><br>XML 驗證會辨識混合內容模式，其中，文字可以與 XML 標記混合使用。 在混合模式中，所有空白字元都是重要且應予以回報的。 |
@@ -307,7 +293,7 @@ ms.locfileid: "73126051"
 
 命名空間：<xref:System.Xml.Linq>、<xref:System.Xml.Schema>、<xref:System.Xml.XPath>；組件：System.Xml (在 System.Xml.dll 中)、System.Xml.Linq (在 System.Xml.Linq.dll 中)
 
-| 特殊功能 | 3.5 SP1 的差異 |
+| 特殊功能 | 3\.5 SP1 的差異 |
 | ------- | ------------------------ |
 | **實體參考** | 為了避免資料損毀，不再於 XML 屬性中實體化實體參考兩次。<br><br>如果使用者使用 <xref:System.Xml.XmlWriter.WriteEntityRef%2A> 方法嘗試將實體寫入至 `xmlns` 屬性或 `xml:lang` or `xml:space` 屬性，則會在輸出中實體化實體兩次，因此損毀資料。 |
 | **換行處理** | 為了避免資料損毀，<xref:System.Xml.XmlWriter> 物件會使用 <xref:System.Xml.NewLineHandling> 選項。 |

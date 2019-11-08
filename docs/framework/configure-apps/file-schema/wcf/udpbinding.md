@@ -2,19 +2,19 @@
 title: <udpBinding>
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: 9ee6d4b5e623248499adc43bb176d96bfc9cd1a8
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 95ce89aabb400c01002799fd8251383a2e5dd4c2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399255"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732702"
 ---
-# <a name="udpbinding"></a>\<udpBinding>
+# <a name="udpbinding"></a>\<udpBinding >
 用來設定 <xref:System.ServiceModel.UdpBinding> 繫結的組態元素。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp; &nbsp;[ **\<system system.servicemodel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md)系結 >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<udpBinding >**  
   
 ## <a name="syntax"></a>語法  
@@ -63,26 +63,26 @@ ms.locfileid: "70399255"
 |`openTimeout`|<xref:System.TimeSpan> 值，指定提供用來讓開啟作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |`receiveTimeout`|<xref:System.TimeSpan> 值，指定接收作業完成其作業之時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:10:00。|  
 |`sendTimeout`|<xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
-|`textEncoding`|設定要在繫結上發出訊息時使用的字元集編碼方式。 有效值包括以下的值：<br /><br /> BigEndianUnicodeUnicode BigEndian 編碼。<br />消除16位編碼。<br />UTF88位編碼<br /><br /> 預設為 UTF8。 此屬性的型別為 <xref:System.Text.Encoding>。|  
+|`textEncoding`|設定要在繫結上發出訊息時使用的字元集編碼方式。 有效值包括以下的值：<br /><br /> -BigEndianUnicode： Unicode BigEndian 編碼方式。<br />-Unicode：16位編碼方式。<br />-UTF8：8位編碼<br /><br /> 預設為 UTF8。 此屬性的型別為 <xref:System.Text.Encoding>。|  
 |`timeToLive`|指定繫結存留時間的 timespan 值。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<bindings>](bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
+|[\<bindings >](bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
  UdpBinding 允許 WCF 服務透過 UDP 傳輸進行通訊。 它允許「引發並忘記」訊息交換，其中用戶端會將訊息傳送至服務，並預期不會傳迴響應。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何<xref:System.ServiceModel.UdpBinding>使用 <`udpBinding`> 元素來設定。  
+ 下列範例顯示如何使用 <`udpBinding`> 專案來設定 <xref:System.ServiceModel.UdpBinding>。  
   
 ```xml  
 <udpBinding>
@@ -104,7 +104,7 @@ ms.locfileid: "70399255"
 </udpBinding>
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
@@ -113,4 +113,4 @@ ms.locfileid: "70399255"
 - [繫結](../../../wcf/bindings.md)
 - [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

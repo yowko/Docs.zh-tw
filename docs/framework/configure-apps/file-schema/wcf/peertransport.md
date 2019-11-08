@@ -2,21 +2,21 @@
 title: <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: c1a5013a-9dd4-4a27-b114-795b8b323177
-ms.openlocfilehash: d896953a7ed31fdaf5f357a8721c7d085d50bc56
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 99fb013e052329ae4b99c4db89565ace8935c456
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400061"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736503"
 ---
-# <a name="peertransport"></a>\<peerTransport>
+# <a name="peertransport"></a>\<peerTransport >
 定義自訂繫結的對等傳輸。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp; &nbsp;[ **\<system system.servicemodel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md)系結 >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<** 系結 >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<peerTransport >**  
   
 ## <a name="syntax"></a>語法  
@@ -43,22 +43,22 @@ ms.locfileid: "70400061"
 |maxReceivedMessageSize|正整數，這個正整數會定義包含標頭之訊息的大小上限 (以位元組為單位)。 當對收件者而言訊息太大時，寄件者便會收到 SOAP 錯誤。 收件者會捨棄訊息，然後在追蹤記錄檔中建立此事件的項目。 預設值為 65536。|  
 |連接埠|整數，指定這個繫結處理對等通道 TCP 訊息的網路介面連接埠。 這個值必須介於 <xref:System.Net.IPEndPoint.MinPort> 和 <xref:System.Net.IPEndPoint.MaxPort> 之間。 預設值為 0。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<security>](security-of-peertransport.md)|定義此傳輸的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.PeerSecurityElement>。|  
+|[\<security >](security-of-peertransport.md)|定義此傳輸的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.PeerSecurityElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding >](bindings.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
  這個傳輸不可與具有要求/回覆作業的合約一起使用。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.Configuration.PeerTransportElement>
 - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
@@ -69,4 +69,4 @@ ms.locfileid: "70400061"
 - [繫結](../../../wcf/bindings.md)
 - [擴充繫結](../../../wcf/extending/extending-bindings.md)
 - [自訂繫結](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<customBinding >](custombinding.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 7d648741676ba947d901d26e3ee7c1289d3d4bc3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 385ce8d263991361512371dcacff52fcf0bbe738
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453871"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740944"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF 中的雙向功能概觀
 
@@ -98,7 +98,7 @@ ms.locfileid: "73453871"
 
 輸出將會失望此應用程式的使用者，即使 <xref:System.Windows.FlowDirection> 是正確的，也不會將數位塑造成應塑造阿拉伯文數位。
 
-XAML 元素可以包含 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 屬性（`xml:lang`），以定義每個專案的語言。 XAML 也支援 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 的語言原則，因此子項目會使用套用至樹狀結構中父元素的 `xml:lang` 值。 在上一個範例中，因為未針對 <xref:System.Windows.Documents.Run> 元素或其最上層元素定義語言，所以使用預設 `xml:lang`，這是 XAML `en-US`。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 的內部數位成形演算法會選取對應語言中的數位–在此案例中為英文。 若要正確轉譯阿拉伯文數位 `xml:lang` 必須設定。
+XAML 元素可以包含 XML 屬性（`xml:lang`），以定義每個元素的語言。 XAML 也支援 XML 語言原則，因此子項目會使用套用至樹狀結構中父元素的 `xml:lang` 值。 在上一個範例中，因為未針對 <xref:System.Windows.Documents.Run> 元素或其最上層元素定義語言，所以使用預設 `xml:lang`，這是 XAML `en-US`。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 的內部數位成形演算法會選取對應語言中的數位–在此案例中為英文。 若要正確轉譯阿拉伯文數位 `xml:lang` 必須設定。
 
 下圖顯示已新增 `xml:lang` 的範例。
 

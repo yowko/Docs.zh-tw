@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 62d0aacc3464969366cbdc8107adbc9a5c364b0c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8159f24e92608677cc832448fd2d79a1846ab12a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417792"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739218"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型別參數的條件約束 (C# 程式設計手冊)
 
@@ -20,7 +20,7 @@ ms.locfileid: "73417792"
 
 |條件約束|描述|
 |----------------|-----------------|
-|`where T : struct`|型別引數必須是實值型別。 您可以指定 <xref:System.Nullable%601> 以外的任何實值型別。 如需可為 null 的實數值型別的詳細資訊，請參閱[nullable 實數值型別](../nullable-types/index.md)。|
+|`where T : struct`|型別引數必須是不可為 null 的實值型別。 如需可為 null 的實數值型別的詳細資訊，請參閱[nullable 實數值型別](../../language-reference/builtin-types/nullable-value-types.md)|
 |`where T : class`|型別引數必須是參考型別。 此條件約束也適用於任何類別、介面、委派或陣列型別。|
 |`where T : notnull`|型別引數必須是不可為 null 的型別。 引數可以是8.0 或更新版本中C#不可為 null 的參考型別，或不可為 null 的實數值型別。 此條件約束也適用於任何類別、介面、委派或陣列型別。|
 |`where T : unmanaged`|型別引數必須是 [unmanaged 型別](../../language-reference/builtin-types/unmanaged-types.md)。|

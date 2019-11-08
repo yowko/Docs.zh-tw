@@ -9,15 +9,15 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: d8fdeec8784c9a44c9b272a0a5a8b9c56ace5230
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e14ab0ebc7d44e2792307b16c7c0581ff7a71bc6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458825"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740819"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 屬性
-指定 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器可以忽略標記檔案中發現的 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空間前置詞。 `mc:Ignorable` 屬性支援自訂命名空間對應和 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 版本設定的標記相容性。  
+指定 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器可以忽略標記檔案中發現的 XML 命名空間前置詞。 `mc:Ignorable` 屬性支援自訂命名空間對應和 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 版本設定的標記相容性。  
   
 ## <a name="xaml-attribute-usage-single-prefix"></a>XAML 屬性使用方式（單一前置詞）  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73458825"
 |*ThisElementCanBeIgnored*|如果無法解析基礎類型，則 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 處理器實作為可以忽略的元素。|  
   
 ## <a name="remarks"></a>備註  
- `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空間前置詞是對應 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 相容性命名空間 `http://schemas.openxmlformats.org/markup-compatibility/2006`時所使用的建議前置詞慣例。  
+ `mc` XML 命名空間前置詞是對應 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 相容性命名空間 `http://schemas.openxmlformats.org/markup-compatibility/2006`時，所使用的建議前置詞慣例。  
   
  元素或屬性，其中專案名稱的前置詞部分會識別為 `mc:Ignorable` 在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器處理時不會引發錯誤。 如果該屬性無法解析成基礎類型或程式設計結構，則會忽略該元素。 不過，請注意，忽略的元素仍然可能針對該專案未處理的其他專案需求，產生額外的剖析錯誤。 例如，特定專案內容模型可能只需要一個子專案，但如果指定的子專案是在 `mc:Ignorable` 前置詞中，而指定的子專案無法解析成型別，則 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的處理器可能會引發錯誤。  
   

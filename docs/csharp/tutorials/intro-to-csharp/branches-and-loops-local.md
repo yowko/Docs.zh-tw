@@ -3,12 +3,12 @@ title: 分支和迴圈 - C# 教學課程簡介
 description: 在這個關於分支和迴圈的教學課程中，您將會撰寫 C# 程式碼以探索支援條件式分支和迴圈的語言語法，以重複執行陳述式。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: a0701a63d6c3aece6bac4263cbcf8a682a623cf7
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834116"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739134"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>透過分支和迴圈陳述式了解條件式邏輯
 
@@ -18,7 +18,13 @@ ms.locfileid: "71834116"
 
 ## <a name="make-decisions-using-the-if-statement"></a>使用 `if` 陳述式來做決策
 
-建立名為 *branches-tutorial* 的目錄。 將該目錄設為目前的目錄，並執行 `dotnet new console -n BranchesAndLoops -o .`。 此命令會在目前的目錄中建立新的 .NET Core 主控台應用程式。
+建立名為 *branches-tutorial* 的目錄。 將它設為目前的目錄，然後執行下列命令：
+
+```dotnetcli
+dotnet new console -n BranchesAndLoops -o .
+```
+
+此命令會在目前的目錄中建立新的 .NET Core 主控台應用程式。
 
 在您最愛的編輯器中開啟 *Program.cs*，並以下列程式碼取代 `Console.WriteLine("Hello World!");` 程式碼行：
 

@@ -3,12 +3,12 @@ title: C# 中的數字 - C# 教學課程簡介
 description: 透過探索數值類型及其屬性和方法來了解 C#。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: b392682a245101e37a182cb92d36ccb1dd34b13e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a06bc57e5c979b62e19407747cb2c8a2447ca114
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039699"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739146"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>在 C\# 中操作整數和浮點數數字
 
@@ -18,7 +18,11 @@ ms.locfileid: "73039699"
 
 ## <a name="explore-integer-math"></a>探索整數運算
 
-建立名為 *numbers-quickstart* 的目錄。 將該目錄設為目前的目錄，並執行 `dotnet new console -n NumbersInCSharp -o .`。
+建立名為 *numbers-quickstart* 的目錄。 將它設為目前的目錄，然後執行下列命令：
+
+```dotnetcli
+dotnet new console -n NumbersInCSharp -o .
+```
 
 在您最愛的編輯器中開啟 *Program.cs*，並以下列程式碼取代 `Console.WriteLine("Hello World!");` 程式碼行：
 

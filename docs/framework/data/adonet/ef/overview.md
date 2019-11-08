@@ -2,12 +2,12 @@
 title: Entity Framework 概觀
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 92aa7b9c1f163c0496a821cca375c8b7e1b21a5f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b68db4f139330ccc1da5057498a37a08d00ba266
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854350"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738503"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework 總覽
 
@@ -34,7 +34,7 @@ Entity Framework 是 ADO.NET 中的一組技術，可支援資料導向軟體應
 
 儲存體模型和對應可依需要變更，不需要變更概念模型、資料類別或應用程式程式碼。 由於儲存模型是提供者特有的，所以您可以在各種資料來源中使用一致的概念模型。
 
-Entity Framework 會使用這些模型和對應檔，針對概念模型中的實體和關聯性，建立、讀取、更新和刪除作業，以對資料來源中的對等作業進行。 Entity Framework 甚至支援將概念模型中的實體對應至資料來源中的預存程式。 如需詳細資訊，請參閱[CSDL、SSDL 和 MSL 規格](./language-reference/csdl-ssdl-and-msl-specifications.md)。
+Entity Framework 會使用這些模型和對應檔，針對概念模型中的實體和關聯性，建立、讀取、更新和刪除作業，以對資料來源中的對等作業進行。 Entity Framework 甚至支援將概念模型中的實體對應至資料來源中的預存程式。 如需詳細資訊，請參閱[CSDL、SSDL 和 MSL 規格](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)。
 
 ## <a name="map-objects-to-data"></a>將物件對應至資料
  物件導向程式設計會提出與資料儲存系統互動的挑戰。 雖然類別的組織經常會與關聯式資料庫資料表的組織鏡像，但是這個符合並不完美。 多個正規化資料表經常會對應到單一類別，而且經常會使用與資料表之間的關聯性不同的方式來表示類別之間的關聯性。 例如，若要表示銷售訂單的客戶，`Order` 類別可能會使用包含 `Customer` 類別執行個體之參考的屬性，但是資料庫中的 `Order` 資料表資料列包含外部索引鍵資料行 (或資料行組)，而且其值對應至 `Customer` 資料表中的主索引鍵值。 `Customer` 類別可能具有名為 `Orders` 的屬性，其中包含 `Order` 類別執行個體的集合，但是資料庫中的 `Customer` 資料表沒有任何可比較的資料行。 Entity Framework 為開發人員提供以這種方式表示關聯性的彈性，或在資料庫中呈現更緊密的模型關聯性。
@@ -47,7 +47,7 @@ Entity Framework 不只是另一個物件關聯式對應方案而已，它基本
 
 - LINQ to Entities。 針對查詢在概念模型中定義的實體類型，提供了語言整合式查詢（LINQ）支援。 如需詳細資訊，請參閱[LINQ to Entities](./language-reference/linq-to-entities.md)。
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. 與儲存體無關的 SQL 方言，可直接與概念模型中的實體搭配使用，並支援實體資料模型的概念。 [!INCLUDE[esql](../../../../../includes/esql-md.md)]適用于使用 EntityClient 提供者執行的物件查詢和查詢。 如需詳細資訊，請參閱[Entity SQL 總覽](./language-reference/entity-sql-overview.md)。
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)] 與儲存體無關的 SQL 方言，可直接與概念模型中的實體搭配使用，並支援實體資料模型的概念。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 用於物件查詢，以及使用 EntityClient 提供者執行的查詢。 如需詳細資訊，請參閱[Entity SQL 總覽](./language-reference/entity-sql-overview.md)。
 
 Entity Framework 包含 EntityClient 資料提供者。 這個提供者會管理連接、將實體查詢轉譯成資料來源特有的查詢，並傳回 Entity Framework 用來將實體資料具體化為物件的資料讀取器。 不需要物件具體化時，EntityClient 提供者也可以當做標準 ADO.NET 資料提供者使用，方法是讓應用程式執行 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢並且取用傳回的唯讀資料讀取器。 如需詳細資訊，請參閱[Entity Framework 的 EntityClient 提供者](entityclient-provider-for-the-entity-framework.md)。
 
@@ -55,11 +55,11 @@ Entity Framework 包含 EntityClient 資料提供者。 這個提供者會管理
 
 ![Entity Framework 架構圖](./media/wd-efarchdiagram.gif "wd_EFArchDiagram")
 
-實體資料模型工具可以產生衍生自`System.Data.Objects.ObjectContext`或`System.Data.Entity.DbContext`的類別，其代表概念模型中的實體容器。 這個物件內容會提供追蹤變更以及管理識別 (Identity)、並行和關聯性的機能。 這個類別也會公開 (Expose) 可針對資料來源進行寫入、插入、更新和刪除作業的 `SaveChanges` 方法。 就像查詢一樣，這些變更是由系統自動產生的命令所進行，或由開發人員指定的預存程序所進行。
+實體資料模型工具可以產生衍生自 `System.Data.Objects.ObjectContext` 的類別，或代表概念模型中之實體容器的 `System.Data.Entity.DbContext`。 這個物件內容會提供追蹤變更以及管理識別 (Identity)、並行和關聯性的機能。 這個類別也會公開 (Expose) 可針對資料來源進行寫入、插入、更新和刪除作業的 `SaveChanges` 方法。 就像查詢一樣，這些變更是由系統自動產生的命令所進行，或由開發人員指定的預存程序所進行。
 
 ## <a name="data-providers"></a>資料提供者
 
-`EntityClient`提供者會藉由存取概念實體和關聯性方面的資料，來擴充 ADO.NET 提供者模型。 它將執行使用 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 的查詢。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 提供了可讓 `EntityClient` 與資料庫通訊的基礎查詢語言。 如需詳細資訊，請參閱[Entity Framework 的 EntityClient 提供者](entityclient-provider-for-the-entity-framework.md)。
+`EntityClient` 提供者會藉由存取概念實體和關聯性方面的資料，來擴充 ADO.NET 提供者模型。 它將執行使用 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 的查詢。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 提供了可讓 `EntityClient` 與資料庫通訊的基礎查詢語言。 如需詳細資訊，請參閱[Entity Framework 的 EntityClient 提供者](entityclient-provider-for-the-entity-framework.md)。
 
 Entity Framework 包含支援標準命令樹的更新 SqlClient Data Provider。 如需詳細資訊，請參閱[SqlClient for the Entity Framework](sqlclient-for-the-entity-framework.md)。
 
@@ -77,6 +77,6 @@ Entity Framework 包含支援標準命令樹的更新 SqlClient Data Provider。
 
 [Entity Framework 資源](resources.md)-提供概念主題的連結，以及外部主題和資源的連結，以建立 Entity Framework 的應用程式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ADO.NET Entity Framework](index.md)

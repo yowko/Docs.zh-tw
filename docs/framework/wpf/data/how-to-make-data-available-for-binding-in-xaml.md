@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-ms.openlocfilehash: 2bfd9809a6ad487a7e706366dc6bce8fe951c940
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 97e878e4932ca9122bf27f76c32d1a56e69f253a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459756"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740601"
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>如何：讓資料可於 XAML 中繫結
 本主題討論您可以根據應用程式的需求，讓資料可在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]中進行系結的各種方式。  
@@ -38,7 +38,7 @@ ms.locfileid: "73459756"
  [!code-csharp[ADODataSet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml.cs#1)]
  [!code-vb[ADODataSet#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ADODataSet/VisualBasic/Window1.xaml.vb#1)]  
   
- 若要使用 <xref:System.Windows.Data.XmlDataProvider> 類別來存取 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料以進行系結，請參閱[使用 XMLDataProvider 和 XPath 查詢系結至 XML 資料](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。 若要使用 <xref:System.Windows.Data.ObjectDataProvider> 類別來存取 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料以進行系結，請參閱系結[至 XML 查詢結果的 XDocument、system.xml.linq.xelement> 或 LINQ](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)。  
+ 若要使用 <xref:System.Windows.Data.XmlDataProvider> 類別來存取 XML 資料以進行系結，請參閱[使用 XMLDataProvider 和 XPath 查詢系結至 Xml 資料](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。 若要使用 <xref:System.Windows.Data.ObjectDataProvider> 類別來存取 XML 資料以進行系結，請參閱系結[至 Xml 查詢結果的 XDocument、system.xml.linq.xelement> 或 LINQ](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)。  
   
  如需您可以指定所系結之資料的許多方法的詳細資訊，請參閱指定系結[來源](how-to-specify-the-binding-source.md)。 如需您可以系結至哪些類型的資料，或如何實作為系結的通用語言執行平臺（CLR）物件的相關資訊，請參閱系結[來源總覽](binding-sources-overview.md)。  
   

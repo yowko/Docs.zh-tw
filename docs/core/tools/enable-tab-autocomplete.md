@@ -3,13 +3,13 @@ title: 啟用 tab 鍵自動完成
 description: 本文描述如何為適用於 PowerShell、Bash 和 zsh 的 .NET Core CLI 啟用 tab 鍵自動完成。
 author: thraka
 ms.author: adegeo
-ms.date: 12/17/2018
-ms.openlocfilehash: 0f29ba2ef1d419339a0e2dc44f67c93b326eb40d
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 11/03/2019
+ms.openlocfilehash: 8c5d6a254db5ba21417ba45122ed0d7cb093c7c3
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182465"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739308"
 ---
 # <a name="how-to-enable-tab-completion-for-net-core-cli"></a>如何為 .NET Core CLI 啟用 TAB 鍵自動完成
 
@@ -17,7 +17,7 @@ ms.locfileid: "71182465"
 
 [!INCLUDE [topic-appliesto-net-core-2plus](~/includes/topic-appliesto-net-core-2plus.md)]
 
-設定後，只要在殼層中輸入 `dotnet` 命令，然後按 TAB 鍵，即會觸發 .NET Core CLI 的 Tab 鍵自動完成。 目前的命令列會傳送至 `dotnet complete` 命令，並由您的殼層處理結果。 您可以直接傳送某些內容至 `dotnet complete` 命令來測試結果，而不啟用 tab 鍵自動完成。 例如：
+設定後，只要在殼層中輸入 `dotnet` 命令，然後按 TAB 鍵，即會觸發 .NET Core CLI 的 Tab 鍵自動完成。 目前的命令列會傳送至 `dotnet complete` 命令，並由您的殼層處理結果。 您可以直接傳送某些內容至 `dotnet complete` 命令來測試結果，而不啟用 tab 鍵自動完成。 例如:
 
 ```console
 > dotnet complete "dotnet a"
@@ -58,7 +58,7 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
  }
 ```
 
-## <a name="bash"></a>Bash
+## <a name="bash"></a>狂歡
 
 若要將 tab 鍵自動完成新增至 .NET Core CLI 的 **bash** 殼層，請將下列程式碼新增至您的 `.bashrc` 檔案：
 
@@ -70,7 +70,10 @@ _dotnet_bash_complete()
   local word=${COMP_WORDS[COMP_CWORD]}
 
   local completions
-  completions="$(dotnet complete --position "${COMP_POINT}" "${COMP_LINE}")"
+  completions="$(dotnet complete --position "${COMP_POINT}" "${COMP_LINE}" 2>/dev/null)"
+  if [ $? -ne 0 ]; then
+    completions=""
+  fi
 
   COMPREPLY=( $(compgen -W "$completions" -- "$word") )
 }
@@ -78,7 +81,7 @@ _dotnet_bash_complete()
 complete -f -F _dotnet_bash_complete dotnet
 ```
 
-## <a name="zsh"></a>Zsh
+## <a name="zsh"></a>zsh
 
 若要將 tab 鍵自動完成新增至 .NET Core CLI 的 **zsh** 殼層，請將下列程式碼新增至您的 `.zshrc` 檔案：
 

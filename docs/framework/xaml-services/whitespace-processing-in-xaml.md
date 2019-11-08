@@ -7,19 +7,19 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 930e8a0013dd601aaafcd81340b3b9b8b69f8fdd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3661563dc7f5fa7346a12abab15013b56c376325
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458504"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740594"
 ---
 # <a name="white-space-processing-in-xaml"></a>XAML 中的空白字元處理
 XAML 的語言規則狀態，必須由 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理器執行處理顯著的空白字元。 本主題說明這些 XAML 語言規則， 它也記載了由 XAML 處理器的 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 實作為序列化的 XAML 寫入器所定義的其他空白字元處理。  
   
 <a name="whitespace_definition"></a>   
 ## <a name="white-space-definition"></a>空白字元定義  
- 與 [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]一致，[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 中的空白字元包括空格、換行字元和索引標籤。這些會分別對應至 Unicode 值0020、000A 和0009。  
+ 與 XML 一致，[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 中的空白字元包括空格、換行字元和索引標籤。這些會分別對應至 Unicode 值0020、000A 和0009。  
   
 <a name="whitespace_normalization"></a>   
 ## <a name="white-space-normalization"></a>空白字元正規化  

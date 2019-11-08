@@ -2,12 +2,12 @@
 title: Entity Type - 實體類型
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-ms.openlocfilehash: efd3ea0972148e885d4b22b49040640539bb28cd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1dafce5f7f95ba6f391c8742944f40a9afa7dcf8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795127"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737813"
 ---
 # <a name="entity-type"></a>Entity Type - 實體類型
 *實體類型*是使用實體資料模型（EDM）描述資料結構的基本建立區塊。 在概念模型中，實體類型代表最上層概念的結構，例如客戶或訂單。 實體類型是實體類型執行個體的範本。 每個範本包含下列資訊：  
@@ -31,11 +31,11 @@ ms.locfileid: "70795127"
   
  請注意，構成實體索引鍵的每個實體類型屬性皆加註「(索引鍵)」。  
   
- [ADO.NET Entity Framework](./ef/index.md)會使用稱為概念結構定義語言（[CSDL](./ef/language-reference/csdl-specification.md)）的特定領域語言（DSL）來定義概念模型。 下列 CSDL 定義上圖所顯示的 `Book` 實體類型：  
+ [ADO.NET Entity Framework](./ef/index.md)會使用稱為概念結構定義語言（[CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)）的特定領域語言（DSL）來定義概念模型。 下列 CSDL 定義上圖所顯示的 `Book` 實體類型：  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [實體資料模型索引鍵概念](entity-data-model-key-concepts.md)
 - [實體資料模型](entity-data-model.md)

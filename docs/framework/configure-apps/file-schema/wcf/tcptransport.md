@@ -2,21 +2,21 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 409d2e47b411c0bfaa2b0fe46fc242bd8453a042
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 6761d090206e55e58001ea2bb885eaa69f26d9eb
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399482"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738646"
 ---
-# <a name="tcptransport"></a>\<tcpTransport>
+# <a name="tcptransport"></a>\<tcpTransport >
 定義 TCP 傳輸，通道可使用此傳輸來傳輸自訂繫結的訊息。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp; &nbsp;[ **\<system system.servicemodel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md)系結 >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<** 系結 >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<tcpTransport >**  
   
 ## <a name="syntax"></a>語法  
@@ -66,21 +66,21 @@ ms.locfileid: "70399482"
 |transferMode|取得或設定值，這個值表示訊息是否使用連線導向傳輸進行緩衝或資料流處理。|  
 |connectionPoolSettings|為具名管道繫結指定其他連線集區設定。|  
   
-### <a name="child-elements"></a>子元素  
- 無  
+### <a name="child-elements"></a>子項目  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding >](bindings.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
  這個傳輸會使用以下格式的 URI "net.tcp://hostname:port/path"。 其他 URI 元件是選擇性的。  
   
  `tcpTransport` 項目是在建立自訂繫結時的起點，該繫結會實作 TCP 傳輸通訊協定。 這個傳輸已針對 WCF 至 WCF 的通訊最佳化。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.Configuration.TcpTransportElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
@@ -91,4 +91,4 @@ ms.locfileid: "70399482"
 - [繫結](../../../wcf/bindings.md)
 - [擴充繫結](../../../wcf/extending/extending-bindings.md)
 - [自訂繫結](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<customBinding >](custombinding.md)

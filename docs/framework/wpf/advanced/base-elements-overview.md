@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 6f8542be5a84a4b8b4cabf594c32d6fdfd3757d2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 823c81bf6b21b88d719503387a68ce6e7d643d61
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453761"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740921"
 ---
 # <a name="base-elements-overview"></a>基底項目概觀
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中有高百分比的類別衍生自 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 文件中通稱為基底項目類別的四個類別。 這些類別是 <xref:System.Windows.UIElement>、<xref:System.Windows.FrameworkElement>、<xref:System.Windows.ContentElement>和 <xref:System.Windows.FrameworkContentElement>。 <xref:System.Windows.DependencyObject> 類別也是相關的，因為它是 <xref:System.Windows.UIElement> 和 <xref:System.Windows.ContentElement> 的通用基類。  
+在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中，高百分比的類別衍生自四個類別，SDK 檔中通常稱為基底元素類別。 這些類別是 <xref:System.Windows.UIElement>、<xref:System.Windows.FrameworkElement>、<xref:System.Windows.ContentElement>和 <xref:System.Windows.FrameworkContentElement>。 <xref:System.Windows.DependencyObject> 類別也是相關的，因為它是 <xref:System.Windows.UIElement> 和 <xref:System.Windows.ContentElement> 的通用基類。  
 
 <a name="base_apis"></a>   
 ## <a name="base-element-apis-in-wpf-classes"></a>WPF 類別中的基底項目 API  

@@ -2,12 +2,12 @@
 title: ref 傳回值和 ref 區域變數 (C# 手冊)
 description: 了解如何定義和使用 ref 傳回值和 ref 區域變數值
 ms.date: 04/04/2018
-ms.openlocfilehash: 99e0f9d995cf3bf5c0486415b6f2d578147d3c7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ade422b5b3805ef2e1f487252a98fb85cdfe70c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114481"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736814"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 傳回值和 ref 區域變數
 
@@ -25,7 +25,7 @@ ms.locfileid: "73114481"
 
 - 傳回值不能是常值 `null`。 傳回 `null` 會產生編譯器錯誤 CS8156「無法在此內容中使用運算式，因為其可能不會以傳址方式傳回」。
 
-   具有 ref 傳回的方法可以將別名傳回給目前值為 null （未具現化）值或[可](../nullable-types/index.md)為 null 實數值型別的變數。
+   具有 ref 傳回的方法可以將別名傳回給目前值為 null （未具現化）值或[可](../../language-reference/builtin-types/nullable-value-types.md)為 null 實數值型別的變數。
 
 - 傳回值不能是常數、列舉成員、屬性的以傳值方式傳回值，或是 `class` 或 `struct` 的方法。 違反此規則會產生編譯器錯誤 CS8156「無法在此內容中使用運算式，因為其可能不會以傳址方式傳回」。
 

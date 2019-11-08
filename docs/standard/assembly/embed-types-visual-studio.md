@@ -5,12 +5,12 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 648aaaa86cf2d6bd2de989739694ba188c4bbc04
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 47a339de60301e01b52a4b8a3a85945624daf940
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73041022"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733196"
 ---
 # <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>逐步解說：從 Visual Studio 中的 managed 元件內嵌類型
 
@@ -34,7 +34,7 @@ ms.locfileid: "73041022"
 
 ## <a name="conditions-and-limitations"></a>條件和限制
 
-在下列情況下，您可以從元件內嵌類型資訊： 
+在下列情況下，您可以從元件內嵌類型資訊：
 
 - 組件已公開至少一個公用介面。
 - 內嵌的介面會以 `ComImport` 屬性加上批註，並 `Guid` 具有唯一 Guid 的屬性。
@@ -321,5 +321,4 @@ ms.locfileid: "73041022"
 - [-link （Visual Basic）](../../visual-basic/reference/command-line-compiler/link.md)
 - [C# 程式設計指南](../../csharp/programming-guide/index.md)
 - [程式設計概念（Visual Basic）](../../visual-basic/programming-guide/concepts/index.md)
-- [具有元件的程式](program.md)
 - [.NET 中的組件](index.md)

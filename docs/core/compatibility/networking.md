@@ -2,17 +2,14 @@
 title: 網路中斷性變更-.NET Core
 description: 列出 .NET Core 中網路功能的重大變更。
 ms.date: 10/03/2019
-ms.openlocfilehash: fba784b7533ff571164bc87af58ece5a47b7766d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5f22b03683a6350d1ac46521202bb469f7f22427
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092953"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739373"
 ---
-# <a name="networking-breaking-changes"></a>網路中斷性變更 
-
-> [!IMPORTANT]
-> 本文的結構如下。 這不是 .NET Core 重大變更的完整清單。 如需 .NET Core 重大變更的詳細資訊，您可以在 GitHub 上的 dotnet/檔存放庫中檢查個別的[重大變更問題](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)。 
+# <a name="networking-breaking-changes"></a>網路中斷性變更
 
 以下是 .NET Core 版本的網路中斷性變更清單。
 

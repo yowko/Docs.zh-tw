@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 02a70e65cd53a8998395987770cd32efc82293d0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ec979240b8fead10522817b77eef23e29409411
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459602"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740700"
 ---
 # <a name="wpf-architecture"></a>WPF 架構
 本主題提供 Windows Presentation Foundation （WPF）類別階層的導覽。 它涵蓋大部分的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 主要子系統，並描述其互動方式。 它也會詳述 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 架構設計人員所進行的一些選擇。  
@@ -42,7 +42,7 @@ ms.locfileid: "73459602"
   
  討論 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的並行時，實際上需要了解兩個核心概念：發送器和執行緒相似性。  
   
- 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的設計階段期間，目的是要移至單一執行的執行緒，而非執行緒「親和性」模型。 元件使用執行中執行緒的身分識別來儲存某些類型的狀態時，會發生執行緒親和性。 這最常見的形式是使用執行緒本機存放區 (TLS) 來儲存狀態。 執行緒親和性需要作業系統中只有一個實體執行緒擁有每個邏輯執行的執行緒，而這樣可能會耗用大量記憶體。 最後，透過執行緒親和性，WPF 的執行緒模型會與單一執行緒執行作業的現有 User32 執行緒模型同步。 這個的主要原因是交互操作性；[!INCLUDE[TLA2#tla_ole2.0](../../../../includes/tla2sharptla-ole2-0-md.md)] 這類系統、剪貼簿和 Internet Explorer 都需要單一執行緒親和性 (STA) 執行。  
+ 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的設計階段期間，目的是要移至單一執行的執行緒，而非執行緒「親和性」模型。 元件使用執行中執行緒的身分識別來儲存某些類型的狀態時，會發生執行緒親和性。 這最常見的形式是使用執行緒本機存放區 (TLS) 來儲存狀態。 執行緒親和性需要作業系統中只有一個實體執行緒擁有每個邏輯執行的執行緒，而這樣可能會耗用大量記憶體。 最後，透過執行緒親和性，WPF 的執行緒模型會與單一執行緒執行作業的現有 User32 執行緒模型同步。 這種情況的主要原因是互通性– OLE 2.0、剪貼簿和 Internet Explorer 等系統都需要單一線程親和性（STA）執行。  
   
  假設您的物件具有 STA 執行緒，則您需要執行緒之間的通訊方法，並驗證您位於正確的執行緒。 其中具有發送器的角色。 發送器是基本訊息發送系統，具有多個已設定優先權的佇列。 訊息範例包括未經處理的輸入通知 (滑鼠移動)、架構功能 (版面配置) 或使用者命令 (執行此方法)。 藉由從 <xref:System.Windows.Threading.DispatcherObject>衍生，您會建立具有 STA 行為的 CLR 物件，並在建立時給予發送器的指標。  
   

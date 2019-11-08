@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 00596911cf603ae9615eb64d0aedefe90c2520bc
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8e3ac7207a5ef05b94e97f005ecd17d5078669a4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458998"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740894"
 ---
 # <a name="custom-dependency-properties"></a>自訂相依性屬性
 
@@ -35,7 +35,7 @@ ms.locfileid: "73458998"
 
 ## <a name="what-is-a-dependency-property"></a>什麼是相依性屬性？
 
-您可以啟用通用語言執行平臺（CLR）屬性，以支援樣式、資料系結、繼承、動畫和預設值，方法是將其實作為相依性屬性。 相依性屬性是藉由呼叫 <xref:System.Windows.DependencyProperty.Register%2A> 方法（或 <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>），並由 <xref:System.Windows.DependencyProperty> 識別碼欄位支援的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統註冊的屬性。 相依性屬性只能由 <xref:System.Windows.DependencyObject> 類型使用，但 <xref:System.Windows.DependencyObject> 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 類別階層中相當高，因此 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中提供的大部分類別都可以支援相依性屬性。 如需相依性屬性的詳細資訊，以及此 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 中描述它們所使用的一些術語和慣例，請參閱[相依性屬性概觀](dependency-properties-overview.md)。
+您可以啟用通用語言執行平臺（CLR）屬性，以支援樣式、資料系結、繼承、動畫和預設值，方法是將其實作為相依性屬性。 相依性屬性是藉由呼叫 <xref:System.Windows.DependencyProperty.Register%2A> 方法（或 <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>），並由 <xref:System.Windows.DependencyProperty> 識別碼欄位支援的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統註冊的屬性。 相依性屬性只能由 <xref:System.Windows.DependencyObject> 類型使用，但 <xref:System.Windows.DependencyObject> 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 類別階層中相當高，因此 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中提供的大部分類別都可以支援相依性屬性。 如需相依性屬性以及在此 SDK 中用來描述它們的一些術語和慣例的詳細資訊，請參閱相依性[屬性總覽](dependency-properties-overview.md)。
 
 <a name="example_dp"></a>
 

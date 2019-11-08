@@ -4,12 +4,12 @@ description: 了解結構類型和其建立方式
 ms.date: 10/12/2016
 ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 10971dc1a0b2c9d64ac8766734b3f6f630aa3ccf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 39bf44dc187fbbc7aac71a1d5c5f3a4d7f446eb8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423110"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739186"
 ---
 # <a name="structs"></a>結構
 
@@ -53,21 +53,9 @@ ms.locfileid: "73423110"
   
 - 結構可以實作介面。
 
-## <a name="literal-values"></a>常值
-
-在 C# 中，常值會接收來自編譯器的型別。 您可以在數字後面附加一個字母，指定應如何輸入數值常值。 例如，若要指定應該將值 4.56 視為浮點數時，請在數字之後附加 "f" 或 "F"︰`4.56f`。 如果未附加任何字母，則編譯器會推斷 `double` 類型的常值。 如需您可以使用字母後置字元指定哪些類型的詳細資訊，請參閱參考頁面中個別類型的[實值型別](./language-reference/keywords/value-types.md)。  
-  
-因為輸入的是常值且所有類型最終都衍生自 <xref:System.Object>，所以您可以如下所示來撰寫和編譯程式碼：  
-  
-[!code-csharp[Literal Values](../../samples/snippets/csharp/concepts/structs/literals.cs)]
-
-最後兩個範例示範 C# 7.0 引進的語言功能。 第一個可讓您使用底線字元作為數值常值內的「數字分隔符號」。 您可以將它們放在數字之間的任何位置，以提高可讀性。 它們不會影響值。
-
-第二個示範「二進位常值」，可讓您直接指定位元模式，而不是使用十六進位標記法。
-
 ## <a name="nullable-value-types"></a>可為 Null 的實值型別
 
-一般的實值型別值不能為 [null](language-reference/keywords/null.md)。 不過，您可以在該型別後面添加 `?`，建立可為 null 的實值型別。 例如，`int?` 就是也能有 [null](./language-reference/keywords/null.md) 值的 `int` 型別。 可為 null 的實數值型別是 <xref:System.Nullable%601>泛型結構類型的實例。 可為 null 的實值型別在您將資料傳遞至資料庫，且其中的數值可能為 null 或未定義時，特別有用。 如需詳細資訊，請參閱[可為 null 的實數值型別](programming-guide/nullable-types/index.md)。
+一般的實值型別值不能為 [null](language-reference/keywords/null.md)。 不過，您可以在該型別後面添加 `?`，建立可為 null 的實值型別。 例如，`int?` 就是也能有 [null](./language-reference/keywords/null.md) 值的 `int` 型別。 可為 null 的實數值型別是 <xref:System.Nullable%601>泛型結構類型的實例。 可為 null 的實值型別在您將資料傳遞至資料庫，且其中的數值可能為 null 或未定義時，特別有用。 如需詳細資訊，請參閱[可為 null 的實數值型別](language-reference/builtin-types/nullable-value-types.md)。
 
 ## <a name="see-also"></a>請參閱
 

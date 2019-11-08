@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 5c5586c2ee41b12e9b5706603b4c2f62207566ed
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7d101e72a94ec1fecf44d4c883efb4f74e6d1d88
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417725"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739209"
 ---
 # <a name="types-c-programming-guide"></a>類型 (C# 程式設計手冊)
 
@@ -174,7 +174,7 @@ stringList.Add(4);
 
 在某些情況下，不方便為一組您不想要儲存或在方法界限外傳遞的簡單相關值，建立簡單的具名型別。 為此，您可以建立「匿名型別」。 如需詳細資訊，請參閱[匿名型別](../classes-and-structs/anonymous-types.md)。
 
-一般的實值型別值不能為 [null](../../language-reference/keywords/null.md)。 不過，您可以在該型別後面添加 `?`，建立可為 null 的實值型別。 例如，`int?` 就是也能有 [null](../../language-reference/keywords/null.md) 值的 `int` 型別。 可為 null 的實數值型別是 <xref:System.Nullable%601?displayProperty=nameWithType>泛型結構類型的實例。 可為 null 的實值型別在您將資料傳入和從資料庫（其中的數值可能為 null）時特別有用。 如需詳細資訊，請參閱[可為 null 的實數值型別](../nullable-types/index.md)。
+一般的實值型別值不能為 [null](../../language-reference/keywords/null.md)。 不過，您可以在該型別後面添加 `?`，建立可為 null 的實值型別。 例如，`int?` 就是也能有 [null](../../language-reference/keywords/null.md) 值的 `int` 型別。 可為 null 的實數值型別是 <xref:System.Nullable%601?displayProperty=nameWithType>泛型結構類型的實例。 可為 null 的實值型別在您將資料傳入和從資料庫（其中的數值可能為 null）時特別有用。 如需詳細資訊，請參閱[可為 null 的實數值型別](../../language-reference/builtin-types/nullable-value-types.md)。
 
 ## <a name="related-sections"></a>相關章節
 

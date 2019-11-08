@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e7546021fbfde3fceea7fd4f1eba10cdc90dff8b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459023"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740622"
 ---
 # <a name="binding-sources-overview"></a>繫結來源概觀
 在資料繫結中，繫結來源物件是指您取得資料的來源物件。 本主題討論可以當做繫結來源的物件類型。
@@ -25,7 +25,7 @@ ms.locfileid: "73459023"
 |common language runtime （CLR）物件|您可以系結至任何 common language runtime （CLR）物件的公用屬性、子屬性和索引子。 系結引擎會使用 CLR 反映來取得屬性的值。 或者，執行 <xref:System.ComponentModel.ICustomTypeDescriptor> 或擁有已註冊 <xref:System.ComponentModel.TypeDescriptionProvider> 的物件也會使用系結引擎。<br /><br /> 如需如何實作可做為繫結來源之類別的詳細資訊，請參閱本主題稍後的[為繫結來源實作類別](#classes)。|
 |動態物件|您可以系結至可執行 <xref:System.Dynamic.IDynamicMetaObjectProvider> 介面之物件的可用屬性和索引子。 如果您可以在程式碼中存取某個成員，就可以繫結至該成員。 例如，若動態物件可讓您在程式碼中透過 `someObjet.AProperty` 存取某個成員，您就可以將繫結路徑設定為 `AProperty`，以繫結至該成員。|
 |ADO.NET 物件|您可以系結至 ADO.NET 物件，例如 <xref:System.Data.DataTable>。 ADO.NET <xref:System.Data.DataView> 會執行 <xref:System.ComponentModel.IBindingList> 介面，它會提供系結引擎所接聽的變更通知。|
-|[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 物件|您可以在 <xref:System.Xml.XmlNode>、<xref:System.Xml.XmlDocument>或 <xref:System.Xml.XmlElement>上系結和執行 `XPath` 查詢。 在標記中存取系結來源 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 資料的便利方式，是使用 <xref:System.Windows.Data.XmlDataProvider> 物件。 如需詳細資訊，請參閱[使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。<br /><br /> 您也可以使用 LINQ to XML，系結至 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument>，或系結至這些類型物件上執行的查詢結果。 使用 LINQ to XML 來存取在標記中系結來源之 XML 資料的便利方式，就是使用 <xref:System.Windows.Data.ObjectDataProvider> 物件。 如需詳細資訊，請參閱[繫結至 XML 查詢結果的 XDocument、XElement 或 LINQ](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)。|
+|XML 物件|您可以在 <xref:System.Xml.XmlNode>、<xref:System.Xml.XmlDocument>或 <xref:System.Xml.XmlElement>上系結和執行 `XPath` 查詢。 在標記中存取屬於系結來源之 XML 資料的便利方式，是使用 <xref:System.Windows.Data.XmlDataProvider> 物件。 如需詳細資訊，請參閱[使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。<br /><br /> 您也可以使用 LINQ to XML，系結至 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument>，或系結至這些類型物件上執行的查詢結果。 使用 LINQ to XML 來存取在標記中系結來源之 XML 資料的便利方式，就是使用 <xref:System.Windows.Data.ObjectDataProvider> 物件。 如需詳細資訊，請參閱[繫結至 XML 查詢結果的 XDocument、XElement 或 LINQ](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)。|
 |<xref:System.Windows.DependencyObject> 物件|您可以系結至任何 <xref:System.Windows.DependencyObject>的相依性屬性。 如需範例，請參閱[繫結兩個控制項的屬性](how-to-bind-the-properties-of-two-controls.md)。|
 
 <a name="classes"></a>
@@ -86,7 +86,7 @@ ms.locfileid: "73459023"
 
 - 您永遠都可以繫結至相依性屬性。
 
- [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 繫結也有類似的使用權限需求。 在部分信任的沙箱中，當它沒有存取指定資料的許可權時，<xref:System.Windows.Data.XmlDataProvider> 會失敗。
+ XML 系結的許可權需求很類似。 在部分信任的沙箱中，當它沒有存取指定資料的許可權時，<xref:System.Windows.Data.XmlDataProvider> 會失敗。
 
  具有匿名型別的物件為內部物件。 只有在完全信任狀況下執行時，您才能繫結至匿名型別的屬性。 如需匿名型別的詳細資訊，請參閱[匿名型別 (C# 程式設計手冊)](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) 或[匿名型別 (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic)。
 

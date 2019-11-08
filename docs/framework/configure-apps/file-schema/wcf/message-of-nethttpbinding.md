@@ -2,23 +2,23 @@
 title: <message> 的 <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: 793e0541b1714d2afaafc634a9e9435e5243fa19
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 62b1793d18ddc8edc1f55b02137c4e0a9f7327d2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397830"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738955"
 ---
-# <a name="message-of-nethttpbinding"></a>\<netHttpBinding > 的\<訊息 >
-定義[ \<netHttpBinding >](nethttpbinding.md)的訊息層級安全性設定。  
+# <a name="message-of-nethttpbinding"></a>\<netHttpBinding 的 \<訊息 > >
+定義[\<netHttpBinding >](nethttpbinding.md)的訊息層級安全性設定。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp; &nbsp;[ **\<system system.servicemodel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md)系結 >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<** 系結 >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全性 >** ](security-of-nethttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<訊息 >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**訊息 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,24 +34,24 @@ ms.locfileid: "70397830"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|algorithmSuite|設定訊息加密和金鑰包裝演算法。 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>，它會指定演算法和金鑰大小。 這些演算法會對應至安全性原則語言 (WS-SecurityPolicy) 規格中指定的演算法。<br /><br /> 預設值為 `Basic256`。|  
+|algorithmSuite|設定訊息加密和金鑰包裝演算法。 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>，它會指定演算法和金鑰大小。 這些演算法會對應至安全性原則語言 (WS-SecurityPolicy) 規格中指定的演算法。<br /><br /> 預設值是 `Basic256`。|  
 |clientCredentialType|指定當使用訊息安全性執行用戶端驗證時，要使用的認證類型。 預設為 `UserName`。|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 屬性  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |使用者名稱|-要求用戶端必須使用 UserName 認證向伺服器進行驗證。 此認證必須使用 <`clientCredentials`> 元素來指定。<br />-WCF 不支援傳送密碼摘要或使用密碼衍生金鑰，以及使用這類金鑰來取得訊息安全性。 因此，在使用使用者名稱認證時，WCF 會強制保護傳輸。 對於 `basicHttpBinding`，這需要設定 SSL 通道。|  
-|憑證|需要使用憑證對伺服器驗證用戶端。 此案例中的用戶端認證必須使用 <`clientCredentials`> 和 <`clientCertificate`> 來指定。 此外，當使用訊息安全性模式時，必須提供服務憑證給用戶端。 此案例中的服務認證必須使用<xref:System.ServiceModel.Description.ClientCredentials>類別或`ClientCredentials`行為元素來指定，並使用 serviceCredentials 的\<serviceCertificate > 元素來指定服務憑證。|  
+|憑證|需要使用憑證對伺服器驗證用戶端。 此案例中的用戶端認證必須使用 <`clientCredentials`> 和 <`clientCertificate`> 來指定。 此外，當使用訊息安全性模式時，必須提供服務憑證給用戶端。 在此情況下，必須使用 <xref:System.ServiceModel.Description.ClientCredentials> 類別或 `ClientCredentials` 行為專案來指定服務認證，並使用 serviceCredentials 的 \<serviceCertificate > 元素來指定服務憑證。|  
   
-### <a name="child-elements"></a>子元素  
- 無  
+### <a name="child-elements"></a>子項目  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
-|<`security`< 的 > 元素`netHttpBinding`>|定義 <`netHttpBinding`> 元素的安全性功能。|  
+|`netHttpBinding`的 <`security`> 元素 >|定義 <`netHttpBinding`> 元素的安全性功能。|  
   
 ## <a name="example"></a>範例  
  這個範例會示範如何實作一個使用 basicHttpBinding 和訊息安全性的應用程式。 在下列服務組態範例中，端點定義會指定 basicHttpBinding，並參考名為 `Binding1` 的繫結組態。 服務對用戶端驗證它自己時所使用的憑證是在組態檔案 `behaviors` 區段中的 `serviceCredentials` 項目下設定。 用戶端用來對服務驗證本身之憑證所套用的驗證模式，也是在 `behaviors` 項目下的 `clientCertificate` 區段中設定。  
@@ -120,10 +120,10 @@ ms.locfileid: "70397830"
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [保護服務和用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
 - [繫結](../../../wcf/bindings.md)
 - [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

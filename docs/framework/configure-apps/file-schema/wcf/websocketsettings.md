@@ -2,22 +2,22 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 80784f40130e572ae374bd9b26e701360dbfcaa5
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399139"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732563"
 ---
-# <a name="websocketsettings"></a>\<webSocketSettings>
+# <a name="websocketsettings"></a>\<W s >
 用來指定 Web 通訊端設定的組態元素。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp; &nbsp;[ **\<system system.servicemodel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md)系結 >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<W s >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<** 系結 >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<w s >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,17 +60,17 @@ ms.locfileid: "70399139"
 |永遠|不論合約為何，永遠使用 Web 通訊端通訊協定。|  
 |永不|永遠不使用 Web 通訊端通訊協定。|  
   
-### <a name="child-elements"></a>子元素  
- 無  
+### <a name="child-elements"></a>子項目  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|\<netHttpBinding>|指定 NetHttpBinding|  
+|\<netHttpBinding >|指定 NetHttpBinding|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用\<w s > 元素。  
+ 下列範例示範如何使用 \<W s > 元素。  
   
 ```xml  
 <netHttpBinding>
@@ -87,7 +87,7 @@ ms.locfileid: "70399139"
 </netHttpBinding>
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
@@ -96,4 +96,4 @@ ms.locfileid: "70399139"
 - [繫結](../../../wcf/bindings.md)
 - [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

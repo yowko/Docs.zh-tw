@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: a912e0437bf986aff65fc722065e912571427189
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b8777e1402bef1708136a5f81a641beb8c761905
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035789"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740704"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和當地語系化概觀
 
@@ -70,7 +70,7 @@ ms.locfileid: "73035789"
 
 ## <a name="localize-a-wpf-application"></a>將 WPF 應用程式當地語系化
 
-當您將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式當地語系化時，您會有數個選項。 例如，您可以將應用程式中可當地語系化的資源系結至 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 檔案、將可當地語系化的文字儲存在 resx 資料表中，或讓您的當地語系化工具使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 的檔案。 本節描述使用 BAML 形式 XAML 的當地語系化工作流程，其提供數個優點：
+當您將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式當地語系化時，您會有數個選項。 例如，您可以將應用程式中可當地語系化的資源系結至 XML 檔案、將可當地語系化的文字儲存在 resx 資料表中，或讓您的當地語系化工具使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 的檔案。 本節描述使用 BAML 形式 XAML 的當地語系化工作流程，其提供數個優點：
 
 - 您可以在建立之後當地語系化。
 
@@ -265,7 +265,7 @@ ms.locfileid: "73035789"
 
 [!code-xaml[GlobalizationHomepage#LocalizationComment](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcomment)]
 
-此批註會變成與 TextBlock_1's 內容相關聯，而且在 LocBaml 工具的情況下（請參閱[當地語系化應用程式](how-to-localize-an-application.md)），它可以在輸出 .csv 檔案中 TextBlock_1 資料列的第6個數據行中看到：
+此批註會與 TextBlock_1 的內容相關聯，而且在 LocBaml 工具的情況下（請參閱[當地語系化應用程式](how-to-localize-an-application.md)），它可以在輸出 .csv 檔案中 TextBlock_1 資料列的第6個數據行中看到：
 
 |資源索引鍵|Category|可讀取|可修改|註解|值|
 |-|-|-|-|-|-|

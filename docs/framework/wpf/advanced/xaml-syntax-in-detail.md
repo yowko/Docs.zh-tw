@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: aa535c36b578e000ae6ddd7534838b07b0a5d756
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 10bd924664a469be26174fadf3892ee56aa33856
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459996"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740648"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 語法詳細資料
 本主題定義用來描述 XAML 語法元素的詞彙。 本檔的其餘部分會經常使用這些詞彙，這兩者都是針對 WPF 檔，特別是針對使用 XAML 的其他架構，或是在 .xaml 層級由 XAML 語言支援啟用的基本 XAML 概念。 本主題將針對[XAML 總覽（WPF）](../../../desktop-wpf/fundamentals/xaml.md)主題中引進的基本術語進行擴充。  
@@ -52,7 +52,7 @@ ms.locfileid: "73459996"
 #### <a name="members-of-types-and-class-inheritance"></a>類型和類別繼承的成員  
  當做 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 類型的 XAML 成員出現的屬性和事件，通常會繼承自基底類型。 例如，請考慮下列範例： `<Button Background="Blue" .../>`。 如果您要查看類別定義、反映結果或檔，<xref:System.Windows.Controls.Control.Background%2A> 屬性不是 <xref:System.Windows.Controls.Button> 類別上立即宣告的屬性。 而是繼承自基底 <xref:System.Windows.Controls.Control> 類別的 <xref:System.Windows.Controls.Control.Background%2A>。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 專案的類別繼承行為，是從 XML 標記的架構強制轉譯中很重要的。 類別繼承可能會變得複雜，特別是當中繼基類是抽象的，或涉及介面時。 這是一項原因，那就是 XAML 元素的集合及其允許的屬性，很難正確地表示，並使用一般用於 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 程式設計的架構類型，例如 DTD 或 XSD 格式。 另一個原因是 XAML 語言本身的擴充性和類型對應功能，會排除所允許之類型和成員的任何固定標記法的完整性。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 專案的類別繼承行為，是從 XML 標記的架構強制轉譯中很重要的。 類別繼承可能會變得複雜，特別是當中繼基類是抽象的，或涉及介面時。 這是一項原因，那就是 XAML 元素的集合及其允許的屬性，很難正確地表示，並使用一般用於 XML 程式設計的架構類型，例如 DTD 或 XSD 格式。 另一個原因是 XAML 語言本身的擴充性和類型對應功能，會排除所允許之類型和成員的任何固定標記法的完整性。  
   
 <a name="object_element_syntax"></a>   
 ## <a name="object-element-syntax"></a>物件元素語法  

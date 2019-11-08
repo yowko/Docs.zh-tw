@@ -4,16 +4,16 @@ description: 了解如何建立支援外掛程式的 .NET Core 應用程式。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 5267a56d0742d8e1cae4a81c058bc4ee05e83b4e
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 16fc9d3c721ddd0618c980c7dc406b7ad7864ff5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579509"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739695"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>建立具有外掛程式的 .NET Core 應用程式
 
-本教學課程會示範如何建立自訂 <xref:System.Runtime.Loader.AssemblyLoadContext> 來載入外掛程式。 @No__t_0 可用來解析外掛程式的相依性。 本教學課程會正確地隔離外掛程式與主控應用程式的相依性。 您將了解如何：
+本教學課程會示範如何建立自訂 <xref:System.Runtime.Loader.AssemblyLoadContext> 來載入外掛程式。 <xref:System.Runtime.Loader.AssemblyDependencyResolver> 可用來解析外掛程式的相依性。 本教學課程會正確地隔離外掛程式與主控應用程式的相依性。 您將了解如何：
 
 - 建構專案以支援外掛程式。
 - 建立自訂 <xref:System.Runtime.Loader.AssemblyLoadContext> 以載入每個外掛程式。
@@ -189,7 +189,7 @@ static IEnumerable<ICommand> CreateCommands(Assembly assembly)
 
 [!code-csharp[loading-plugins](~/samples/core/extensions/AppWithPlugin/AppWithPlugin/PluginLoadContext.cs)]
 
-`PluginLoadContext` 類型衍生自 <xref:System.Runtime.Loader.AssemblyLoadContext>。 @No__t_0 類型是執行時間中的特殊類型，可讓開發人員將載入的元件隔離到不同的群組，以確保元件版本不會衝突。 此外，自訂 `AssemblyLoadContext` 可以選擇要從中載入組件的不同路徑，並覆寫預設行為。 `PluginLoadContext` 使用 .NET Core 3.0 中引進的 `AssemblyDependencyResolver` 類型執行個體，將組件名稱解析為路徑。 `AssemblyDependencyResolver` 物件是以 .NET 類別庫路徑所建構。 它會根據其路徑已傳遞至 `AssemblyDependencyResolver` 建構函式之類別庫的 *deps.json* 檔案，將組件和原生程式庫解析至其相對路徑。 自訂 `AssemblyLoadContext` 可讓外掛程式具有自己的相依性，而 `AssemblyDependencyResolver` 可讓您輕鬆正確地載入相依性。
+`PluginLoadContext` 類型衍生自 <xref:System.Runtime.Loader.AssemblyLoadContext>。 `AssemblyLoadContext` 類型是執行時間中的特殊類型，可讓開發人員將載入的元件隔離到不同的群組，以確保元件版本不會衝突。 此外，自訂 `AssemblyLoadContext` 可以選擇要從中載入組件的不同路徑，並覆寫預設行為。 `PluginLoadContext` 使用 .NET Core 3.0 中引進的 `AssemblyDependencyResolver` 類型執行個體，將組件名稱解析為路徑。 `AssemblyDependencyResolver` 物件是以 .NET 類別庫路徑所建構。 它會根據其路徑已傳遞至 `AssemblyDependencyResolver` 建構函式之類別庫的 *deps.json* 檔案，將組件和原生程式庫解析至其相對路徑。 自訂 `AssemblyLoadContext` 可讓外掛程式具有自己的相依性，而 `AssemblyDependencyResolver` 可讓您輕鬆正確地載入相依性。
 
 現在 `AppWithPlugin` 專案具有 `PluginLoadContext` 類型，請以下列主體更新 `Program.LoadPlugin` 方法：
 
@@ -256,7 +256,7 @@ static Assembly LoadPlugin(string relativePath)
 </ItemGroup>
 ```
 
-@No__t_0 元素很重要。 這會指示 MSBuild 不要將 *PluginBase.dll* 複製到 HelloPlugin 的輸出目錄。 如果 *PluginBase.dll* 組件存在於輸出目錄中，`PluginLoadContext` 會在其中尋找組件，並在載入 *HelloPlugin.dll* 組件時將它載入。 此時，`HelloPlugin.HelloCommand` 類型會從 `HelloPlugin` 專案輸出目錄中的 *PluginBase.dll* 實作 `ICommand` 介面，而不是實作預設載入內容中所載入的 `ICommand` 介面。 由於執行時間會將這兩個型別視為不同的元件，因此 `AppWithPlugin.Program.CreateCommands` 的方法將找不到命令。 因此，需要 `<Private>false</Private>` 中繼資料才能參考含有外掛程式介面的組件。
+`<Private>false</Private>` 元素很重要。 這會指示 MSBuild 不要將 *PluginBase.dll* 複製到 HelloPlugin 的輸出目錄。 如果 *PluginBase.dll* 組件存在於輸出目錄中，`PluginLoadContext` 會在其中尋找組件，並在載入 *HelloPlugin.dll* 組件時將它載入。 此時，`HelloPlugin.HelloCommand` 類型會從 `HelloPlugin` 專案輸出目錄中的 *PluginBase.dll* 實作 `ICommand` 介面，而不是實作預設載入內容中所載入的 `ICommand` 介面。 由於執行時間會將這兩個型別視為不同的元件，因此 `AppWithPlugin.Program.CreateCommands` 的方法將找不到命令。 因此，需要 `<Private>false</Private>` 中繼資料才能參考含有外掛程式介面的組件。
 
 現在 `HelloPlugin` 專案已完成，我們應該更新 `AppWithPlugin` 專案以了解何處可以找到 `HelloPlugin` 外掛程式。 在 `// Paths to plugins to load` 註解後面，新增 `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` 作為 `pluginPaths` 陣列的項目。
 
@@ -285,3 +285,7 @@ static Assembly LoadPlugin(string relativePath)
 ## <a name="plugin-target-framework-recommendations"></a>外掛程式目標 Framework 建議
 
 因為外掛程式相依性載入會使用 *deps.json* 檔案，所以會有與外掛程式的目標 Framework 相關的 Gotcha。 具體來說，您的外掛程式應以執行階段為目標 (例如 .NET Core 3.0)，而不是 .NET Standard 版本。 *.deps.json* 檔案是根據專案的目標 Framework 所產生；由於許多 .NET Standard 相容套件提供針對 .NET Standard 進行建置的參考組件，以及適用於特定執行階段的實作組件，因此 *.deps.json* 可能無法正確看到實作組件，或可能抓取 .NET Standard 版本的組件，而不是您預期的 .NET Core 版本。
+
+## <a name="plugin-framework-references"></a>外掛程式架構參考
+
+外掛程式目前無法在程式中引進新的架構。 例如，您無法將使用 `Microsoft.AspNetCore.App` 架構的外掛程式載入僅使用根 `Microsoft.NETCore.App` 架構的應用程式。 主應用程式必須宣告外掛程式所需之所有架構的參考。

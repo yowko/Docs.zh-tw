@@ -3,12 +3,12 @@ title: 類別和物件 - C# 教學課程簡介
 description: 建立您的第一個 C# 程式並探索物件導向概念
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: f4199f709ee0011af9f00f6909193f08345bc49e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e4cf7912de69946289c0594944b8ac3a8c252ac2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834110"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736836"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>探索使用類別與物件的物件導向程式設計
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-當您使用 [`new`](../../language-reference/operators/new-operator.md) 建立物件時，系統便會呼叫建構函式。 以下列程式程式碼取代*Program.cs*中的行 `Console.WriteLine("Hello World!");` （以您的名稱取代 `<name>`）：
+當您使用 [`new`](../../language-reference/operators/new-operator.md) 建立物件時，系統便會呼叫建構函式。 使用下列程式程式碼取代*Program.cs*中的行 `Console.WriteLine("Hello World!");` （以您的名稱取代 `<name>`）：
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -106,7 +106,7 @@ Console.WriteLine($"Account {account.Number} was created for {account.Owner} wit
 private static int accountNumberSeed = 1234567890;
 ```
 
-這是一個資料成員。 它是 `private`，這表示它只能由 `BankAccount` 類別中的程式碼存取。 這是將公開責任 (例如具有帳戶號碼) 和私用實作 (帳戶號碼產生的方式) 區隔開來的方法。它也是 `static`，這表示它是由所有 `BankAccount` 物件共用的。 非靜態變數的值對於每個 `BankAccount` 物件的執行個體而言都是唯一的。 將下列兩行新增到建構函式來指派帳戶號碼：
+這是一個資料成員。 它是 `private`，這表示它只能由 `BankAccount` 類別中的程式碼存取。 這是一種將公開責任（如擁有帳戶號碼）與私用實施（產生帳戶號碼的方式）分開的方式。它也 `static`，這表示它是由所有 `BankAccount` 物件共用。 非靜態變數的值對於每個 `BankAccount` 物件的執行個體而言都是唯一的。 將下列兩行新增到建構函式來指派帳戶號碼：
 
 ```csharp
 this.Number = accountNumberSeed.ToString();
@@ -178,7 +178,7 @@ catch (ArgumentOutOfRangeException e)
 使用 [`try` 與 `catch` 陳述式](../../language-reference/keywords/try-catch.md)來標記可能會擲回例外狀況的程式碼區塊，並攔截您所預期的那些錯誤。 您可以使用同樣的技巧來測試會針對負數餘額擲回例外狀況的程式碼：
 
 ```csharp
-// Test for a negative balance:
+// Test for a negative balance.
 try
 {
     account.MakeWithdrawal(750, DateTime.Now, "Attempt to overdraw");
@@ -210,6 +210,6 @@ Console.WriteLine(account.GetAccountHistory());
 
 ## <a name="next-steps"></a>後續步驟
 
-如果遇到問題，您可以在我們的 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/) \(英文\) 中查看此教學課程的原始程式碼
+如果您停滯，可以[在我們的 GitHub 存放庫中](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/)看到本教學課程的來源。
 
-恭喜，您已完成所有 C# 簡介教學課程。 如果您想要學習更多，請嘗試更多[教學課程](../index.md)
+恭喜，您已完成所有 C# 簡介教學課程。 如果您想要深入瞭解，請嘗試我們的[教學](../index.md)課程。

@@ -3,22 +3,19 @@ title: 教學課程：使用傳輸學習的自動化視覺效果檢查
 description: 本教學課程說明如何使用「傳輸學習」來定型 ML.NET 中的 TensorFlow 深度學習模型，其方式是使用影像偵測 API，將具體介面的影像分類為破裂或未破解。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/25/2019
+ms.date: 11/07/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b8aec80134188811eb80ad1394e5a64d65a3c6f0
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: f5fc08b2944374c0be00249ec9e2a4b819762e13
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961984"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733219"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>教學課程：搭配 ML.NET 影像分類 API 使用傳輸學習的自動化視覺效果檢查
 
 瞭解如何使用「傳輸學習」（預先定型 TensorFlow 模型）和「ML.NET 影像分類 API」來定型自訂深度學習模型，以將具體表面的影像分類為破裂或 uncracked。
-
-> [!NOTE]
-> 本教學課程使用 ML.NET 影像分類 API 的預覽版本。
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
@@ -84,7 +81,7 @@ ML.NET 提供各種執行影像分類的方式。 本教學課程會使用影像
 既然您已大致瞭解轉移學習和影像分類 API，現在正是建立應用程式的時候了。
 
 1. 建立名為 "DeepLearning_ImageClassification_Binary" 的 **C# .net Core 主控台應用程式**。
-1. 安裝**Microsoft.ML 1.4.0-preview2** NuGet 套件：
+1. 安裝**Microsoft.ML**版本**1.4.0** NuGet 套件：
     1. 在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。
     1. 選擇 "nuget.org" 作為套件來源。
     1. 選取 [瀏覽] 索引標籤。
@@ -92,7 +89,7 @@ ML.NET 提供各種執行影像分類的方式。 本教學課程會使用影像
     1. 搜尋**Microsoft.ML**。
     1. 選取 [安裝] 按鈕。
     1. 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
-    1. 針對**Dnn 0.16.0-preview2**和**ImageAnalytics 1.4.0-preview2**重複這些步驟。
+    1. 針對**1.4.0**、SciSharp**版本** **1.15.0**和**TensorFlow**版本**ImageAnalytics** NuGet 套件，重複上述步驟。（適用于**microsoft ml** ）。
 
 ### <a name="prepare-and-understand-the-data"></a>準備並了解資料
 
@@ -124,7 +121,15 @@ SDNET2018 是影像資料集，其中包含已破裂和未破裂之實體結構�
 
 1. 開啟*Program.cs*檔案，並將檔案頂端的現有 `using` 語句取代為下列內容：
 
-    [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L1-L7)]
+    ```csharp
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.IO;
+    using Microsoft.ML;
+    using static Microsoft.ML.DataOperationsCatalog;
+    using Microsoft.ML.Vision;
+    ```
 
 1. 在*Program.cs*的 `Program` 類別底下，建立名為 `ImageData`的類別。 這個類別是用來代表一開始載入的資料。 
 
@@ -162,17 +167,27 @@ SDNET2018 是影像資料集，其中包含已破裂和未破裂之實體結構�
 
         類似于 `ModelInput`，只有 `PredictedLabel` 才需要進行預測，因為它包含模型所做的預測。 為了方便存取原始的影像檔案名稱和類別，會保留 [`ImagePath`] 和 [`Label`] 屬性。
 
+### <a name="create-workspace-directory"></a>建立工作區目錄
+
+當定型和驗證資料不常變更時，快取計算的瓶頸值以進行進一步的執行是很好的作法。
+
+1. 在您的專案中，建立名為*workspace*的新目錄，以儲存計算的瓶頸值和 `.pb` 版本的模型。
+
 ### <a name="define-paths-and-initialize-variables"></a>定義路徑和初始化變數
 
-1. 在 `Main` 方法中，定義資產的位置。
+1. 在 `Main` 方法中，定義您的資產位置、計算的瓶頸值，以及模型的 `.pb` 版本。
 
-    [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L16)]
+    ```csharp
+    var projectDirectory = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "../../../"));
+    var workspaceRelativePath = Path.Combine(projectDirectory, "workspace");
+    var assetsRelativePath = Path.Combine(projectDirectory, "assets");
+    ```
 
 1. 然後，使用[MLCoNtext](xref:Microsoft.ML.MLContext)的新實例來初始化 `mlContext` 變數。
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L18)]
 
-[MLCoNtext](xref:Microsoft.ML.MLContext)類別是所有 ML.NET 作業的起點，而初始化 MLCoNtext 會建立可在模型建立工作流程物件之間共用的新 ML.NET 環境。 就概念而言，類似於 Entity Framework 中的 `DBContext`。
+    [MLCoNtext](xref:Microsoft.ML.MLContext)類別是所有 ML.NET 作業的起點，而初始化 MLCoNtext 會建立可在模型建立工作流程物件之間共用的新 ML.NET 環境。 就概念而言，類似於 Entity Framework 中的 `DBContext`。
 
 ## <a name="load-the-data"></a>載入資料
 
@@ -226,9 +241,17 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
     [!code-csharp [ShuffleRows](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L24)]
 
-1. 機器學習模型預期輸入為數值格式。 因此，必須在定型之前對資料進行一些前置處理。 建立由[`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*)和[`LoadImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*)轉換所組成的[`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) 。 `MapValueToKey` 轉換會採用 `Label` 資料行中的類別值，將它轉換成數值 `KeyType` 值，並將它儲存在名為 `LabelAsKey`的新資料行中。 `LoadImages` 會從 `ImagePath` 資料行中取得值，並使用 `imageFolder` 參數來載入要定型的影像。 將 `useImageType` 設定為 `false` 會將影像轉換成 `byte[]`。 
+1. 機器學習模型預期輸入為數值格式。 因此，必須在定型之前對資料進行一些前置處理。 建立由[`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*)和 `LoadRawImageBytes` 轉換所組成的[`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) 。 `MapValueToKey` 轉換會採用 `Label` 資料行中的類別值，將它轉換成數值 `KeyType` 值，並將它儲存在名為 `LabelAsKey`的新資料行中。 `LoadImages` 會從 `ImagePath` 資料行中取得值，並使用 `imageFolder` 參數來載入要定型的影像。
 
-    [!code-csharp [DefinePreprocessingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L26-L33)]
+    ```csharp
+    var preprocessingPipeline = mlContext.Transforms.Conversion.MapValueToKey(
+            inputColumnName: "Label",
+            outputColumnName: "LabelAsKey")
+        .Append(mlContext.Transforms.LoadRawImageBytes(
+            outputColumnName: "Image",
+            imageFolder: assetsRelativePath,
+            inputColumnName: "ImagePath"));
+    ```
 
 1. 使用[`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*)方法，將資料套用至 `preprocessingPipeline` [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)後面接著[`Transform`](xref:Microsoft.ML.Data.TransformerChain`1.Transform*)方法，這會傳回包含預先處理資料的[`IDataView`](xref:Microsoft.ML.IDataView) 。
 
@@ -250,23 +273,41 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 模型訓練包含幾個步驟。 首先，使用影像分類 API 來定型模型。 然後，`PredictedLabel` 資料行中的編碼標籤會使用 `MapKeyToValue` 轉換，轉換回其原始類別值。 
 
-1. 定義包含 `mapLabelEstimator` 和 `ImageClassification` 轉換的定型[`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)管線。
+1. 建立新的變數來儲存 `ImageClassificationTrainer`的一組必要和選擇性參數。 
 
-    [!code-csharp [DefineTrainingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L46-L58)]    
+    ```csharp
+    var classifierOptions = new ImageClassificationTrainer.Options()
+    {
+        FeatureColumnName = "Image",
+        LabelColumnName = "LabelAsKey",
+        ValidationSet = validationSet,
+        Arch = ImageClassificationTrainer.Architecture.ResnetV2101,
+        MetricsCallback = (metrics) => Console.WriteLine(metrics),
+        TestOnTrainSet = false,
+        ReuseTrainSetBottleneckCachedValues = true,
+        ReuseValidationSetBottleneckCachedValues = true,
+        WorkspacePath=workspaceRelativePath
+    };
+    ```
 
-    `ImageClassification` 估計工具接受數個參數：
+    `ImageClassificationTrainer` 接受數個選擇性參數：
 
-    - `featuresColumnName` 是用來做為模型輸入的資料行。
-    - `labelColumnName` 是要預測之值的資料行。
-    - `arch` 定義要使用的預先定型模型架構。 本教學課程使用 ResNetv2 模型的101層變體。
-    - `epoch` 在整個定型程式中，指定整個資料集的反覆運算次數上限。 數位愈大，模型所定型的時間愈長，而且可能會產生較佳的模型。
-    - `batchSize` 是一次用於定型的樣本數。 在一個 epoch 期間，會使用多個與 batchSize 相等的批次來定型及更新模型。 數位越低，處理每個批次時所需的記憶體就越少。
-    - `testOnTrainSet` 會告知模型在沒有驗證集時，測量定型集的效能。
-    - `metricsCallback` 系結函式來追蹤定型期間的進度。
-    - `validationSet` 是包含驗證資料的[`IDataView`](xref:Microsoft.ML.IDataView) 。
-    - `reuseTrainSetBottleneckCachedValues` 會告訴模型，是否要在後續執行的瓶頸階段中使用快取的值。 瓶頸階段是單次傳遞計算，在第一次執行時需要大量計算。 如果定型資料不會變更，而您想要使用不同數目的 epoch 或批次大小進行實驗，則使用快取的值會大幅減少定型模型所需的時間量。
-    - `reuseValidationSetBottleneckCachedValues` 類似 `reuseTrainSetBottleneckCachedValues` 只有在此情況下，它是用於驗證資料集。
-    - `disableEarlyStopping` 會告訴 ImageClassification 估計工具是否要採用早期停止策略。 當此模型搜尋可協助它在定型期間做出精確預測的最佳值時，效能可能會增加或減少。 最後，如果模型達到上一個 epoch，則從定型學習到的模式可能會是不佳的情況。 及早停止監視這些效能下降的訓練，並停止定型程式以保留模型的最佳版本。
+    - `FeatureColumnName` 是用來做為模型輸入的資料行。
+    - `LabelColumnName` 是要預測之值的資料行。
+    - `ValidationSet` 是包含驗證資料的[`IDataView`](xref:Microsoft.ML.IDataView) 。
+    - `Arch` 定義要使用的預先定型模型架構。 本教學課程使用 ResNetv2 模型的101層變體。
+    - `MetricsCallback` 系結函式來追蹤定型期間的進度。
+    - `TestOnTrainSet` 會告知模型在沒有驗證集時，測量定型集的效能。
+    - `ReuseTrainSetBottleneckCachedValues` 會告訴模型，是否要在後續執行的瓶頸階段中使用快取的值。 瓶頸階段是單次傳遞計算，在第一次執行時需要大量計算。 如果定型資料不會變更，而您想要使用不同數目的 epoch 或批次大小進行實驗，則使用快取的值會大幅減少定型模型所需的時間量。
+    - `ReuseValidationSetBottleneckCachedValues` 類似 `ReuseTrainSetBottleneckCachedValues` 只有在此情況下，它是用於驗證資料集。
+    - `WorkspacePath` 定義要儲存計算的瓶頸值和模型 `.pb` 版本的目錄。
+
+1. 定義由 `mapLabelEstimator` 和 `ImageClassificationTrainer`組成的[`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)訓練管線。
+
+    ```csharp
+    var trainingPipeline = mlContext.MulticlassClassification.Trainers.ImageClassification(classifierOptions)
+        .Append(mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
+    ```
 
 1. 使用[`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*)方法來定型您的模型。
 

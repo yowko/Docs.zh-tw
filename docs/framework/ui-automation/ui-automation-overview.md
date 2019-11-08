@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 6e5501b152c4662f1456786ba51fd3f25923b34c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: d803bd053acd876b3a38cfc52eb29818219e9423
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040536"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739580"
 ---
 # <a name="ui-automation-overview"></a>UI 自動化概觀
 > [!NOTE]
@@ -72,7 +72,7 @@ ms.locfileid: "73040536"
 > [!NOTE]
 > 控制項類型和控制項模式之間並不存在一對一的對應關係。 控制項模式可由多個控制項類型所支援，且控制項可支援多個控制項模式，每個控制項都會公開其行為的不同層面。 例如，下拉式方塊擁有至少兩個控制項模式：其中一個代表展開和折疊的能力，另一個則代表選取機制。 如需特定資訊，請參閱 [UI Automation Control Types](ui-automation-control-types.md)。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 也可以透過事件，將資訊提供給用戶端應用程式。 與 [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)]不同的是， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件並不是以廣播機制為基礎。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 用戶端會註冊特定事件通知，且可以要求將特定的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性和控制項模式資訊傳遞至所屬的事件處理常式。 此外， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件也包含引發事件之項目的參考。 提供者可以選擇引發事件來改善效能，取決於是否有任何用戶端接聽。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 也可以透過事件，將資訊提供給用戶端應用程式。 不同于 WinEvents，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件不是以廣播機制為基礎。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 用戶端會註冊特定事件通知，且可以要求將特定的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性和控制項模式資訊傳遞至所屬的事件處理常式。 此外， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件也包含引發事件之項目的參考。 提供者可以選擇引發事件來改善效能，取決於是否有任何用戶端接聽。  
   
 ## <a name="see-also"></a>請參閱
 

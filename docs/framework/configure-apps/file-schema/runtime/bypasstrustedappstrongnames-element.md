@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
-ms.openlocfilehash: 50e67e97d74b896a680cc18270d32aa7a8eb8035
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 96361a6742d1d2f76cb237344189d3277d7c8069
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118170"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739092"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 項目
 
@@ -72,7 +72,7 @@ ms.locfileid: "73118170"
 - 不延遲簽署。
 
 > [!NOTE]
-> 若已使用登錄機碼為電腦上的所有應用程式關閉略過功能，此設定檔案設定就不會有任何作用。 如需詳細資訊，請參閱[如何：停用強式名稱略過功能](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)。
+> 若已使用登錄機碼為電腦上的所有應用程式關閉略過功能，此設定檔案設定就不會有任何作用。 如需詳細資訊，請參閱[如何：停用強式名稱略過功能](../../../../standard/assembly/disable-strong-name-bypass-feature.md)。
 
 ## <a name="example"></a>範例
 

@@ -1,18 +1,18 @@
 ---
-title: 升級具有屬性的 Api 以定義 null 預期
-description: 本文說明加入描述性屬性的動機和技術，以描述引數的 null 狀態和 Api 的傳回值
+title: 使用定義 null 值預期的屬性來升級可為 null 的參考型別的 Api
+description: 瞭解如何使用描述性屬性 AllowNull、DisallowNull、MaybeNull、NotNull 等，以完整描述 Api 的 null 狀態。
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: 102598843b091ea25e6456aeedcccf43f056250d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 64dcc70565de0c3094ef1c10866aafce9e18a5c9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039374"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737886"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>更新程式庫以使用可為 null 的參考型別，並將可為 null 的規則與呼叫
 
-加入[可為 null 的參考型別](nullable-references.md)表示您可以宣告每個變數是否允許或預期 `null` 值。 這會在您撰寫程式碼時提供絕佳的體驗。 如果不可為 null 的變數可能設定為 `null`，您會收到警告。 如果可為 null 的變數不是 null，則您會收到警告，然後再對其進行取值。 更新您的程式庫可能需要一些時間，但回報值得一提。 您提供給編譯器的詳細資訊，是允許或禁止 `null` 值*時*，API 的使用者將會得到更好的警告。 讓我們從熟悉的範例開始。 假設您的程式庫具有下列 API 來抓取資源字串：
+加入[可為 null 的參考型別](nullable-references.md)表示您可以宣告每個變數是否允許或預期 `null` 值。 此外，您可以套用一些屬性： `AllowNull`、`DisallowNull`、`MaybeNull`、`NotNull`、`NotNullWhen`、`MaybeNullWhen`和 `NotNullWhenNotNull`，以完整描述引數和傳回值的 null 狀態。 這會在您撰寫程式碼時提供絕佳的體驗。 如果不可為 null 的變數可能設定為 `null`，您會收到警告。 如果可為 null 的變數不是 null，則您會收到警告，然後再對其進行取值。 更新您的程式庫可能需要一些時間，但回報值得一提。 您提供給編譯器的詳細資訊，是允許或禁止 `null` 值*時*，API 的使用者將會得到更好的警告。 讓我們從熟悉的範例開始。 假設您的程式庫具有下列 API 來抓取資源字串：
 
 ```csharp
 bool TryGetMessage(string key, out string message)

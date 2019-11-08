@@ -5,22 +5,22 @@ helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: f74b75827770524299f9a25a5854503186139cb4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a553d24a12b7ea227325a76d255e2ad53ada716f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126287"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739617"
 ---
-# <a name="migrating-from-the-net-framework-11"></a>從 .NET Framework 1.1 移轉
+# <a name="migrate-from-the-net-framework-11"></a>從 .NET Framework 1.1 遷移
 
-[!INCLUDE[win7](../../../includes/win7-md.md)] 和更新版本的 Windows 作業系統不支援 .NET Framework 1.1。 因此，以 .NET Framework 1.1 為目標的應用程式一定要在 [!INCLUDE[win7](../../../includes/win7-md.md)] 或更新版本的作業系統上修改才能執行。 本主題討論在 [!INCLUDE[win7](../../../includes/win7-md.md)] 和更新版本的 Windows 作業系統底下執行以 .NET Framework 1.1 為目標的應用程式時所需的步驟。 如需有關 .NET Framework 1.1 和 [!INCLUDE[win8](../../../includes/win8-md.md)] 的詳細資訊，請參閱[在 Windows 8 及更新版本上執行 .NET Framework 1.1 應用程式](../install/run-net-framework-1-1-apps.md)。
+Windows 7 和更新版本的 Windows 作業系統不支援 .NET Framework 1.1。 因此，以 .NET Framework 1.1 為目標的應用程式不需要在 Windows 7 或更新版本的作業系統版本上進行修改，就不會執行。 本主題討論在 Windows 7 和更新版本的 Windows 作業系統下執行以 .NET Framework 1.1 為目標的應用程式所需的步驟。 如需 .NET Framework 1.1 和 Windows 8 的詳細資訊，請參閱[在 Windows 8 和更新版本上執行 .NET Framework 1.1 應用程式](../install/run-net-framework-1-1-apps.md)。
 
-## <a name="retargeting-or-recompiling"></a>重定目標或重新編譯
+## <a name="retarget-or-recompile"></a>重定目標或重新編譯
 
-有兩種方式可取得之前使用 .NET Framework 1.1 所編譯的應用程式，使其在 [!INCLUDE[win7](../../../includes/win7-md.md)] 或更新版本的 Windows 作業系統上執行：
+有兩種方式可取得使用 .NET Framework 1.1 編譯的應用程式，以在 Windows 7 或更新版本的 Windows 作業系統上執行：
 
-- 您可以重設應用程式的目標，以在 .NET Framework 4 和更新版本之下執行。 重新設定目標需要您將 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 元素新增至應用程式的組態檔，使它可以在 .NET Framework 4 和更新版本之下執行。 這類組態檔的形式如下：
+- 將應用程式的目標重定為在 .NET Framework 4 和更新版本下執行。 重新設定目標需要您將 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 元素新增至應用程式的組態檔，使它可以在 .NET Framework 4 和更新版本之下執行。 這類組態檔的形式如下：
 
     ```xml
     <configuration>
@@ -30,7 +30,7 @@ ms.locfileid: "73126287"
     </configuration>
     ```
 
-- 您可以使用以 .NET Framework 4 和更新版本為目標的編譯器來重新編譯應用程式。 如果您原本使用 Visual Studio 2003 來開發及編譯解決方案，您可以在 Visual Studio 2010 (更新版本也可以) 中開啟此解決方案，並且使用 [專案相容性] 對話方塊來將此解決方案和專案檔從 Visual Studio 2003 使用的格式轉換成 Microsoft Build Engine (MSBuild) 格式。
+- 使用以 .NET Framework 4 或更新版本為目標的編譯器來重新編譯應用程式。 如果您原本使用 Visual Studio 2003 來開發及編譯解決方案，您可以在 Visual Studio 2010 (更新版本也可以) 中開啟此解決方案，並且使用 [專案相容性] 對話方塊來將此解決方案和專案檔從 Visual Studio 2003 使用的格式轉換成 Microsoft Build Engine (MSBuild) 格式。
 
 不論您偏好重新編譯應用程式還是重新設定應用程式的目標，您都必須決定您的應用程式是否會受到較新 .NET Framework 版本中引入的任何變更所影響。 這些變更有兩種：
 
@@ -62,7 +62,7 @@ ms.locfileid: "73126287"
 
 - [.NET Framework 4 移轉問題](net-framework-4-migration-issues.md)中記載 .NET Framework 3.5 SP1 和 .NET Framework 4 之間的變更。
 
-## <a name="obsolete-types-and-members"></a>過時的型別和成員
+## <a name="obsolete-types-and-members"></a>過時的類型和成員
 
 對於重新設定目標的應用程式和重新編譯的應用程式而言，已被取代的型別和成員的影響有些不同。 使用過時的型別和成員將不會影響重新設定目標的應用程式，除非已經從其組件中實際移除過時的型別或成員。 重新編譯使用過時型別或成員的應用程式通常會產生編譯器警告，而不是編譯器錯誤。 但是在某些情況下，它會產生編譯器錯誤，而且使用過時型別或成員的程式碼無法成功編譯。 在此情況下，您必須重新撰寫呼叫過時型別或成員的原始程式碼，然後重新編譯應用程式。 如需過時類型和成員的詳細資訊，請參閱[類別庫中的過時功能](../whats-new/whats-obsolete.md)。
 

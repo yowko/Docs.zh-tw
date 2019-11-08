@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 04183b2404d26c783e14dc6f4cb4141bab0d7621
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bf673195f06475daf8341fd17cd701b84a970b39
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424427"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740674"
 ---
 # <a name="building-a-wpf-application-wpf"></a>建置 WPF 應用程式 (WPF)
 
@@ -46,7 +46,7 @@ WPF 應用程式可透過下列方式編譯：
 
 - .NET Framework。
 
-- [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] 目錄。
+- Windows SDK 目錄。
 
 - [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 參考組件的位置。
 
@@ -64,7 +64,7 @@ MSBuild 搜尋元件的第一個位置是參考元件目錄（%ProgramFiles%\Ref
 
 ### <a name="markup-compilationpass-1"></a>標記編譯 - 第一階段
 
-在此步驟中，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案會經過剖析及編譯，讓執行階段不需要花時間剖析 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 和驗證屬性值。 已編譯的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案會預先語彙基元化，因此在執行階段將它載入時，應該會比載入 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案更快。
+在此步驟中，會剖析並編譯 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的檔案，讓執行時間不會花費時間剖析 XML 和驗證屬性值。 已編譯的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案會預先語彙基元化，因此在執行階段將它載入時，應該會比載入 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案更快。
 
 在此步驟期間，以 `Page` 組建項目表示的每個 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案會發生下列活動：
 

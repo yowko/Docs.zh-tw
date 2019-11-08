@@ -11,12 +11,12 @@ helpviewer_keywords:
 - null-coalescing assignment [C#]
 - ??= operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 5262aa70bb5ec2f03dda9425194b89ec1e809d76
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2bd6fe3d2d283e64eebc2251416fa5234e30bdad
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038968"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739667"
 ---
 # <a name="-and--operators-c-reference"></a>?? 還有？= 運算子（C#參考）
 
@@ -28,7 +28,7 @@ ms.locfileid: "73038968"
 
 `??=` 運算子的左邊運算元必須是變數、[屬性](../../programming-guide/classes-and-structs/properties.md)或[索引子](../../programming-guide/indexers/index.md)元素。
 
-在C# 7.3 和更早版本中，`??`運算子的左邊運算元類型必須是參考型別或[可為 null 的實數值型別](../../programming-guide/nullable-types/index.md)。 從C# 8.0 開始，這項需求會以下列內容取代：`??`和`??=`運算子的左邊運算元類型不能是不可為 null 的實數值型別。 特別是從C# 8.0 開始，您可以使用 null 聯合運算子搭配不受限制的類型參數：
+在C# 7.3 和更早版本中，`??` 運算子的左邊運算元類型必須是[參考型別](../keywords/reference-types.md)或[可為 null 的實數值型別](../builtin-types/nullable-value-types.md)。 從C# 8.0 開始，這項需求會以下列內容取代：`??`和`??=`運算子的左邊運算元類型不能是不可為 null 的實數值型別。 特別是從C# 8.0 開始，您可以使用 null 聯合運算子搭配不受限制的類型參數：
 
 [!code-csharp[unconstrained type parameter](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#UnconstrainedType)]
 
@@ -54,7 +54,7 @@ d ??= (e ??= f)
 
   [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
 
-- 當您使用[可為 null 的實數值型別](../../programming-guide/nullable-types/index.md)，而且需要提供基礎實數值型別的值時，請使用 `??` 運算子來指定要提供的值，以防可為 null 的型別值為 `null`：
+- 當您使用[可為 null 的實數值型別](../builtin-types/nullable-value-types.md)，而且需要提供基礎實數值型別的值時，請使用 `??` 運算子來指定要提供的值，以防可為 null 的型別值為 `null`：
 
   [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
 

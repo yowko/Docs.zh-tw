@@ -13,18 +13,19 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51938dade8ebd1b84010533e04b26cf989ed5f24
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 21d8ef3abfd16e11c9251edfc4f39b02e93eaab5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353951"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740933"
 ---
 # <a name="generic-collections-in-net"></a>.NET 中的泛型集合
 
  .NET 類別庫提供 <xref:System.Collections.Generic> 和 <xref:System.Collections.ObjectModel> 命名空間中的數種泛型集合類別。 如需這些類別的詳細資訊，請參閱[常用的集合類型](../../../docs/standard/collections/commonly-used-collection-types.md)。  
   
-### <a name="systemcollectionsgeneric"></a>System.Collections.Generic  
+## <a name="systemcollectionsgeneric"></a>System.Collections.Generic
+
  許多泛型集合類型是非泛型類型的直接模擬。 <xref:System.Collections.Generic.Dictionary%602> 是 <xref:System.Collections.Hashtable> 的泛型版本，使用泛型結構 <xref:System.Collections.Generic.KeyValuePair%602> (而不是 <xref:System.Collections.DictionaryEntry>) 來進行列舉。  
   
  <xref:System.Collections.Generic.List%601> 是 <xref:System.Collections.ArrayList> 的泛型版本。 泛型 <xref:System.Collections.Generic.Queue%601> 和 <xref:System.Collections.Generic.Stack%601> 類別有對應的非泛型版本。  
@@ -33,14 +34,16 @@ ms.locfileid: "71353951"
   
  <xref:System.Collections.Generic.LinkedList%601> 泛型類別是純連結清單， 沒有對應的非泛型版本。  
   
-### <a name="systemcollectionsobjectmodel"></a>System.Collections.ObjectModel  
+## <a name="systemcollectionsobjectmodel"></a>System.Collections.ObjectModel
+
  <xref:System.Collections.ObjectModel.Collection%601> 泛型類別提供基底類別，可用於衍生您自己的泛型集合類型。 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 類別提供一個簡單的方法，從任何實作 <xref:System.Collections.Generic.IList%601> 泛型介面的類型中產生唯讀集合。 <xref:System.Collections.ObjectModel.KeyedCollection%602> 泛型類別提供一個方法來儲存物件 (其中包含物件的索引鍵)。  
   
-## <a name="other-generic-types"></a>其他泛型類型  
+## <a name="other-generic-types"></a>其他泛型型別
+
  <xref:System.Nullable%601> 泛型結構可讓您使用可指派 `null` 的實值類型。 這在使用資料庫查詢時會很有用，因為包含實值類型的欄位可能遺漏。 泛型類型參數可以是任何實值類型。  
   
 > [!NOTE]
-> 在 C# 和 Visual Basic 中，不需要明確使用 <xref:System.Nullable%601>，因為語言已具有可為 Null 型別的語法。 請參閱[可為 nullC#的實數值型別（程式設計指南）](../../csharp/programming-guide/nullable-types/index.md)和[可為 null 的實數值型別（Visual Basic）](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+> 在 C# 和 Visual Basic 中，不需要明確使用 <xref:System.Nullable%601>，因為語言已具有可為 Null 型別的語法。 請參閱[可為 nullC#的實數值型別（參考）](../../csharp/language-reference/builtin-types/nullable-value-types.md)和[可為 null 的實數值型別（Visual Basic）](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
   
  <xref:System.ArraySegment%601> 泛型結構提供一個方法，將項目範圍限定在任何類型之以零為起始的一維陣列中。 泛型型別參數是陣列的項目類型。  
   
@@ -50,7 +53,7 @@ ms.locfileid: "71353951"
  [!code-csharp[Conceptual.Generics.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source2.cs#7)]
  [!code-vb[Conceptual.Generics.Overview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source2.vb#7)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>

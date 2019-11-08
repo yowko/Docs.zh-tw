@@ -3,12 +3,12 @@ title: 可為 Null 的參考型別
 description: 本文提供可為 null 的參考型別總覽，已C#在8.0 中新增。 您會了解此功能如何為新及現有的專案，針對 Null 參考例外狀況提供安全。
 ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: e20ea6efa389ba1aa0d8432a408c0b2a06a61c30
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: ded7234ecb746ba03ba59505b7189272886f1cbf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039773"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737832"
 ---
 # <a name="nullable-reference-types"></a>可為 Null 的參考型別
 
@@ -28,7 +28,7 @@ C# 8.0 引進**可為 Null 的參考型別**及**不可為 Null 的參考型別*
 
 透過新增的可為 Null 參考型別，您可以更清楚地宣告您的意圖。 `null` 值是表示變數並非指向某個值的正確方式。 請不要使用這項功能來從您的程式碼中移除所有 `null` 值。 相反地，您應該對編譯器及其他閱讀您程式碼之開發人員宣告您的意圖。 藉由宣告您的意圖，編譯器會在您撰寫的程式碼與該意圖不一致時通知您。
 
-**可為 Null 參考型別**的語法與[可為 Null 實值型別](programming-guide/nullable-types/index.md)語法相同：將 `?` 附加至變數的型別。 例如，下列變數宣告代表可為 Null 字串變數，`name`：
+**可為 Null 參考型別**的語法與[可為 Null 實值型別](language-reference/builtin-types/nullable-value-types.md)語法相同：將 `?` 附加至變數的型別。 例如，下列變數宣告代表可為 Null 字串變數，`name`：
 
 ```csharp
 string? name;

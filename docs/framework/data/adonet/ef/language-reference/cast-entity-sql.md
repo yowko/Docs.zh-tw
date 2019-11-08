@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: c16270babe4daa8e703b24b27211c6fd6f53677d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b7778d6a2e0b0dd15b2911f2d1cee36208e13328
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039924"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738512"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 將一種資料類型的運算式轉換成另一種。  
@@ -23,7 +23,7 @@ CAST ( expression AS data_type )
  可以轉換為 `data_type`的任何有效運算式。  
   
  `data_type`  
- 目標系統提供的資料型別。 它必須是基本 (純量) 型別。 使用的 `data_type` 視查詢空間而定。 如果查詢是以 <xref:System.Data.EntityClient.EntityCommand>執行的，資料型別會是在概念模型中定義的型別。 如需詳細資訊，請參閱 [CSDL Specification](csdl-specification.md)。 如果查詢是以 <xref:System.Data.Objects.ObjectQuery%601>執行的，則資料型別為 Common Language Runtime (CLR) 型別。  
+ 目標系統提供的資料型別。 它必須是基本 (純量) 型別。 使用的 `data_type` 視查詢空間而定。 如果查詢是以 <xref:System.Data.EntityClient.EntityCommand>執行的，資料型別會是在概念模型中定義的型別。 如需詳細資訊，請參閱 [CSDL Specification](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)。 如果查詢是以 <xref:System.Data.Objects.ObjectQuery%601>執行的，則資料型別為 Common Language Runtime (CLR) 型別。  
   
 ## <a name="return-value"></a>傳回值  
  傳回 `data_type`的相同值。  

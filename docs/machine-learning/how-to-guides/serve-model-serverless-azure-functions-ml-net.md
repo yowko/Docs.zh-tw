@@ -1,23 +1,23 @@
 ---
 title: 將模型部署到 Azure Functions
 description: 使用 Azure Functions 在網際網路上提供 ML.NET 情感分析機器學習模型以進行預測
-ms.date: 10/31/2019
+ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: bd08982e96f39a9685ddabc090ac3bc5c7855022
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5ef6331950845b2900e33b2c51c308644ba17fd6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424338"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733346"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>將模型部署到 Azure Functions
 
 了解如何部署預先定型的 ML.NET 機器學習模型，以使用 Azure Functions 無伺服器環境透過 HTTP 進行預測。
 
 > [!NOTE]
-> `PredictionEnginePool` 服務延伸模組目前處於預覽狀態。
+> 這個範例會執行 `PredictionEnginePool` 服務的預覽版本。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -46,11 +46,11 @@ ms.locfileid: "73424338"
 
     在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.Azure.Functions.Extensions**、從清單中選取該套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
 
-1. 安裝**Microsoft.Extensions.ML NuGet 套件**版本**1.3.1**：
+1. 安裝**Microsoft.Extensions.ML NuGet 套件**版本**0.15.1**：
 
     在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.Extensions.ML**、從清單中選取該套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
 
-1. 安裝1.0.28 的**NuGet 套件**版本 +：
+1. 安裝1.0.28 的**NuGet 套件**版本 **+** ：
 
     在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 [nuget.org] 作為套件來源，選取 [已安裝] 索引標籤 **，搜尋**[1.0.28]，在清單中選取該套件，從 [版本] 下拉式清單中選取 []**或更新版本**，然後選取 [**更新**] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
 

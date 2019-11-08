@@ -1,17 +1,17 @@
 ---
 title: 教學課程：預測自行車出租需求-時間序列
 description: 本教學課程說明如何使用單一變數時間序列分析和 ML.NET，預測自行車出租服務的需求。
-ms.date: 10/31/2019
+ms.date: 11/07/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: f30aac5f8467c2410e9008bafea3cf35af3f4e2a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e913c27c3501c4c553d7d62f948de31abb3d6f49
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425636"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740543"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>教學課程：使用時間序列分析和 ML.NET 預測自行車出租服務需求
 
@@ -26,9 +26,6 @@ ms.locfileid: "73425636"
 > * 評估預測模型
 > * 儲存預測模型
 > * 使用預測模型
-
-> [!NOTE]
-> 本教學課程使用 DatabaseLoader 的預覽版本。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -49,13 +46,13 @@ ms.locfileid: "73425636"
 ## <a name="create-console-application"></a>建立主控台應用程式
 
 1. 建立名為 "BikeDemandForecasting" 的新 **C# .net Core 主控台應用程式**。
-1. 安裝**Microsoft.ML**版本**1.4.0-preview2** NuGet 套件
+1. 安裝**Microsoft.ML**版本**1.4.0** NuGet 套件
     1. 在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。
     1. 選擇 [nuget.org] 作為 [套件來源]，選取 [**流覽**] 索引標籤，搜尋**Microsoft.ML**。
     1. 勾選 [**包含發行**前版本] 核取方塊。
     1. 選取 [安裝] 按鈕。
     1. 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
-    1. 針對**SqlClient**版本**4.7.0**、 **0.16.0 版本-preview2**和版本**時間序列-1.4.0** **，重複**這些步驟 **：。**
+    1. 針對**SqlClient** version **4.7.0**和**時間序列**version **1.4.0**重複這些步驟。
 
 ### <a name="prepare-and-understand-the-data"></a>準備並了解資料
 

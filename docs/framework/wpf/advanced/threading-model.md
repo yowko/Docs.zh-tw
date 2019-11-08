@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ef25123ed53ecf3e03e4f4c969bed2ef570591ad
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 22544b3bf2acf6e397f2ad5ae3de576bf491bd2b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459037"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740734"
 ---
 # <a name="threading-model"></a>執行緒模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是設計來避免開發人員遇到執行緒的難題。 因此，大部分的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 開發人員都不需要撰寫使用一個以上執行緒的介面。 由於多執行緒的程式非常複雜且很難偵錯，因此，若有單一執行緒解決方案，就應避免使用多執行緒程式。  
@@ -49,7 +49,7 @@ ms.locfileid: "73459037"
   
  如果只有一個執行緒可以修改 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，背景執行緒如何與使用者互動？ 背景執行緒可以要求 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 執行緒代表它執行作業。 其方式是向 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 執行緒的 <xref:System.Windows.Threading.Dispatcher> 註冊工作專案。 <xref:System.Windows.Threading.Dispatcher> 類別提供兩種註冊工作專案的方法： <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 和 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>。 這兩種方法都會排程要執行的委派。 <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 是同步呼叫，也就是說，在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 執行緒實際完成執行委派之前，它不會傳回。 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 是非同步，而且會立即傳回。  
   
- <xref:System.Windows.Threading.Dispatcher> 依優先順序排序其佇列中的元素。 將專案新增至 <xref:System.Windows.Threading.Dispatcher> 的佇列時，可以指定十個層級。 這些優先順序會在 <xref:System.Windows.Threading.DispatcherPriority> 列舉中維護。 <xref:System.Windows.Threading.DispatcherPriority> 層級的詳細資訊可在 [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)] 檔中找到。  
+ <xref:System.Windows.Threading.Dispatcher> 依優先順序排序其佇列中的元素。 將專案新增至 <xref:System.Windows.Threading.Dispatcher> 的佇列時，可以指定十個層級。 這些優先順序會在 <xref:System.Windows.Threading.DispatcherPriority> 列舉中維護。 <xref:System.Windows.Threading.DispatcherPriority> 層級的詳細資訊可在 Windows SDK 檔中找到。  
   
 <a name="samples"></a>   
 ## <a name="threads-in-action-the-samples"></a>執行中的執行緒︰範例  

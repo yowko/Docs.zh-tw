@@ -2,23 +2,23 @@
 title: <message> 的 <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: 987c51f65f5c36a70724fd62fecaf737943c2d9a
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 3396f74f76d790759f4c32de2907607486701b1a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398026"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738954"
 ---
-# <a name="message-of-ws2007httpbinding"></a>\<ws2007HttpBinding > 的\<訊息 >
-定義[ \<ws2007HttpBinding >](ws2007httpbinding.md)元素的訊息層級安全性設定。  
+# <a name="message-of-ws2007httpbinding"></a>\<ws2007HttpBinding 的 \<訊息 > >
+定義[\<ws2007HttpBinding >](ws2007httpbinding.md)元素的訊息層級安全性設定。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp; &nbsp;[ **\<system system.servicemodel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md)系結 >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ws2007HttpBinding >** ](ws2007httpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<** 系結 >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全性 >** ](security-of-ws2007httpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<訊息 >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**訊息 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ ms.locfileid: "70398026"
 </ws2007HttpBinding>
 ```  
   
-## <a name="type"></a>類型  
+## <a name="type"></a>輸入  
  <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -47,9 +47,9 @@ ms.locfileid: "70398026"
 |屬性|描述|  
 |---------------|-----------------|  
 |`algorithmSuite`|設定訊息加密和金鑰包裝演算法。 這些演算法和金鑰大小是由 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 類別所決定。 這些演算法會對應至安全性原則語言 (WS-SecurityPolicy) 規格中指定的演算法。<br /><br /> 預設值為 Basic256。|  
-|`clientCredentialType`|選擇性。 指定使用的安全性模式為 `Message` 或 `TransportWithMessageCredentials` 執行用戶端驗證時，要使用的認證類型。 請參閱下表的列舉數值。 預設為 Windows。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.MessageCredentialType>。|  
-|`establishSecurityContext`|數值，這個數值會決定安全性通道是否建立安全工作階段。 安全工作階段會先建立安全性內容權杖 (SCT)，再交換應用程式訊息。 建立 SCT 後，安全性通道會提供 <xref:System.ServiceModel.Channels.ISession> 介面給上層通道。 如需有關使用安全會話的詳細資訊[，請參閱如何：建立安全會話](../../../wcf/feature-details/how-to-create-a-secure-session.md)。<br /><br /> 預設值為 `true`。|  
-|`negotiateServiceCredential`|選擇性。 數值，這個數值會指定是否在超出範圍的用戶端佈建服務認證，或透過交涉處理取得從服務到用戶端的服務認證。 此類交涉是一般訊息交換的前兆。<br /><br /> 如果屬性等於 None、Username 或 Certificate，則將這個屬性設定為`false`表示服務憑證可在超出範圍的用戶端使用，而且用戶端必須指定服務憑證（使用`clientCredentialType` [serviceCertificate\<>](servicecertificate-of-servicecredentials.md)）在 serviceCredentials [ >服務行為。\< ](servicecredentials.md) 這個模式可與實作 WS-Trust 和 WS-SecureConversation 的 SOAP 堆疊互通。<br /><br /> 如果 `ClientCredentialType` 屬性設定為 `Windows`，則將這個屬性設定為 `false` 可指定 Kerberos 驗證。 這表示用戶端和服務必須屬於同一個 Kerberos 網域。 這個模式可與實作 Kerberos 語彙基元設定檔 (如在 OASIS WSS TC 所定義) 以及 WS-Trust 和 WS-SecureConversation 的 SOAP 堆疊互通。<br /><br /> 當這個屬性是 `true` 時，會造成透過 SOAP 訊息以通道連接 <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.Spnego%2A> 交換的 .NET SOAP 交涉。<br /><br /> 預設為 `true`。|  
+|`clientCredentialType`|選擇項。 指定使用的安全性模式為 `Message` 或 `TransportWithMessageCredentials` 執行用戶端驗證時，要使用的認證類型。 請參閱下表的列舉數值。 預設為 Windows。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.MessageCredentialType>。|  
+|`establishSecurityContext`|數值，這個數值會決定安全性通道是否建立安全工作階段。 安全工作階段會先建立安全性內容權杖 (SCT)，再交換應用程式訊息。 建立 SCT 後，安全性通道會提供 <xref:System.ServiceModel.Channels.ISession> 介面給上層通道。 如需使用安全會話的詳細資訊，請參閱[如何：建立安全會話](../../../wcf/feature-details/how-to-create-a-secure-session.md)。<br /><br /> 預設值是 `true`。|  
+|`negotiateServiceCredential`|選擇項。 數值，這個數值會指定是否在超出範圍的用戶端佈建服務認證，或透過交涉處理取得從服務到用戶端的服務認證。 此類交涉是一般訊息交換的前兆。<br /><br /> 如果 `clientCredentialType` 屬性等於 None、Username 或 Certificate，則將這個屬性設定為 `false` 表示服務憑證可在超出範圍的用戶端使用，而且用戶端必須指定服務憑證（使用[\<](servicecertificate-of-servicecredentials.md) [\<serviceCredentials >](servicecredentials.md)服務行為中的 serviceCertificate >）。 這個模式可與實作 WS-Trust 和 WS-SecureConversation 的 SOAP 堆疊互通。<br /><br /> 如果 `ClientCredentialType` 屬性設定為 `Windows`，則將這個屬性設定為 `false` 可指定 Kerberos 驗證。 這表示用戶端和服務必須屬於同一個 Kerberos 網域。 這個模式可與實作 Kerberos 語彙基元設定檔 (如在 OASIS WSS TC 所定義) 以及 WS-Trust 和 WS-SecureConversation 的 SOAP 堆疊互通。<br /><br /> 當這個屬性是 `true` 時，會造成透過 SOAP 訊息以通道連接 <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.Spnego%2A> 交換的 .NET SOAP 交涉。<br /><br /> 預設為 `true`。|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 屬性  
   
@@ -79,19 +79,19 @@ ms.locfileid: "70398026"
 |`None`|這會允許服務與匿名用戶端互動。 在服務上，這表示此服務不需要任何用戶端認證。 在用戶端上，這表示此用戶端不提供任何用戶端認證。|  
 |`Certificate`|允許服務要求用戶端使用憑證進行驗證。 如果使用 `message` 安全性模式且 `negotiateServiceCredential` 屬性設定為 `false`，則必須為用戶端佈建服務憑證。|  
 |`IssuedToken`|指定通常由安全性權杖服務 (STS) 所發出的自訂權杖。|  
-|`UserName`|允許服務要求用戶端使用 `UserName` 認證進行驗證。 WCF 不支援傳送密碼摘要或使用密碼衍生金鑰，以及使用這類金鑰來取得訊息安全性。 因此，在使用`UserName`認證時，WCF 會強制保護傳輸。 這個認證模式會產生可互通交換或是無法互通的交涉 (根據 `negotiateServiceCredential` 屬性)。|  
+|`UserName`|允許服務要求用戶端使用 `UserName` 認證進行驗證。 WCF 不支援傳送密碼摘要或使用密碼衍生金鑰，以及使用這類金鑰來取得訊息安全性。 因此，在使用 `UserName` 認證時，WCF 會強制保護傳輸。 這個認證模式會產生可互通交換或是無法互通的交涉 (根據 `negotiateServiceCredential` 屬性)。|  
 |`Windows`|允許 SOAP 交換在 `Windows` 認證的已驗證內容中。 如果 `negotiateServiceCredential` 屬性設定為 `true`，這會執行 SSPI 交涉或 Kerberos (互通標準)。|  
   
-### <a name="child-elements"></a>子元素  
- 無  
+### <a name="child-elements"></a>子項目  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
-|[\<security>](security-of-ws2007httpbinding.md)|定義[ \<ws2007HttpBinding >](ws2007httpbinding.md)的安全性設定。|  
+|[\<security >](security-of-ws2007httpbinding.md)|定義[\<ws2007HttpBinding >](ws2007httpbinding.md)的安全性設定。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Message%2A>
@@ -101,4 +101,4 @@ ms.locfileid: "70398026"
 - [繫結](../../../wcf/bindings.md)
 - [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

@@ -6,18 +6,18 @@ ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: d9889ce389eed73a9af0a3f72dcca6ec476cae15
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
-ms.translationtype: HT
+ms.openlocfilehash: 02f86ef8ee73ff31a6c5c9d17a44a443f72ef05e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796489"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739290"
 ---
 # <a name="default-values-table-c-reference"></a>預設值表 (C# 參考)
 
 下列表格顯示 C# 型別的預設值：
 
-|類型|預設值|
+|輸入|預設值|
 |---------|------------------|
 |任何參考類型|`null`|
 |任何[內建整數數值型別](../builtin-types/integral-numeric-types.md)|0 (零)|
@@ -26,7 +26,7 @@ ms.locfileid: "68796489"
 |[char](char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|這個值是由運算式 `(E)0` 所產生，其中 `E` 是列舉識別碼。|
 |[struct](struct.md)|這個值是藉由將所有實值型別欄位設定為其預設值，並將所有參考型別欄位設定為 `null` 所產生。|
-|任何[可為 Null 的值型別](../../programming-guide/nullable-types/index.md)|<xref:System.Nullable%601.HasValue%2A> 屬性是 `false` 且未定義 <xref:System.Nullable%601.Value%2A> 屬性的執行個體。 該預設值也稱為可為 Null 值型別的 *null* 值。|
+|任何[可為 Null 的值型別](../builtin-types/nullable-value-types.md)|<xref:System.Nullable%601.HasValue%2A> 屬性是 `false` 且未定義 <xref:System.Nullable%601.Value%2A> 屬性的執行個體。 該預設值也稱為可為 null 的實數值型別的*null*值。|
 
 使用[預設運算子](../operators/default.md)產生型別的預設值，如下列範例所示：
 
@@ -54,7 +54,7 @@ Console.WriteLine(n);  // output: (0, 0)
 - [預設值](~/_csharplang/spec/variables.md#default-values)
 - [預設建構函式](~/_csharplang/spec/types.md#default-constructors)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 關鍵字](index.md)

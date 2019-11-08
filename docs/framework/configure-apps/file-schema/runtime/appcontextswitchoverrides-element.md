@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: feb84fb3d8836168035ef8eed31728c6a0d00cba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 881b9fedfaa42ffb402e226a6b271f47feb20617
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118290"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736805"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppCoNtextSwitchOverrides > 元素
 定義一或多個由 <xref:System.AppContext> 類別所使用的參數，以提供新功能的退出機制。  
@@ -84,7 +84,7 @@ ms.locfileid: "73118290"
 |`Switch.System.IO.`<br/>`UseLegacyPathHandling`|控制是否使用舊版路徑正規化，以及 <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> 和 <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> 方法是否支援 URI 路徑。 如需詳細資訊，請參閱[風險降低：路徑](../../../migration-guide/mitigation-path-normalization.md)正規化和[緩和：路徑冒號檢查](../../../migration-guide/mitigation-path-colon-checks.md)。|.NET Framework 4.6.2|
 |`Switch.System.`<br/>`MemberDescriptorEqualsReturnsFalseIfEquivalent`|控制是否相等的測試會比較一個物件的 <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=nameWithType> 屬性與第二個物件的 <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=nameWithType> 屬性。 如需詳細資訊，請參閱[System.componentmodel.memberdescriptor.equals 不正確的執行](../../../migration-guide/retargeting/4.6.1-4.6.2.md#incorrect-implementation-of-memberdescriptorequals)。|.NET Framework 4.6.2|  
  `Switch.System.Net.`<br/>`DontCheckCertificateEKUs`|停用憑證增強金鑰使用方法（EKU）物件識別碼（OID）驗證。 增強金鑰使用方法 (EKU) 延伸模組是表示使用金鑰之應用程式的物件識別碼 (OID) 集合。|.NET Framework 4.6|
-|`Switch.System.Net.`<br/>`DontEnableSchSendAuxRecord`|停用 SCH_SEND_AUX_RECORD，以停用 TLS 1.0 瀏覽器對 SSL/TLS （BEAST）緩和的攻擊。|.NET Framework 4.6|
+|`Switch.System.Net.`<br/>`DontEnableSchSendAuxRecord`|停用 SCH_SEND_AUX_RECORD，藉此停用 TLS 1.0 瀏覽器，以避免 SSL/TLS （BEAST）緩和。|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSchUseStrongCrypto`|控制 <xref:System.Net.ServicePointManager?displayProperty=nameWithType> 和 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 類別是否可以使用 SSL 3.0 通訊協定。 如需詳細資訊，請參閱[風險降低：TLS 通訊協定](../../../migration-guide/mitigation-tls-protocols.md)。|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|停用 SystemDefault 的 TLS 版本還原為預設的 Tls12、Tls11、Tls。|.NET Framework 4.7|
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|停用 SslStream TLS 伺服器端警示。|.NET Framework 4.7|
@@ -92,7 +92,7 @@ ms.locfileid: "73118290"
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |控制[DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer)是否會根據 ECMAScript V6 和 V8 標準序列化某些控制字元。 如需詳細資訊，請參閱[風險降低︰使用 DataContractJsonSerializer 控制字元的序列化](../../../migration-guide/mitigation-serialization-control-characters.md)| .NET Framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|控制 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 是否支援多個調整，或僅針對某個時區進行單一調整。 如果 `true`，它會使用 <xref:System.TimeZoneInfo> 類型來序列化和還原序列化日期和時間資料;否則，它會使用不支援多個調整規則的 <xref:System.TimeZone> 類型。|.NET Framework 4.6.2|
 |`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|控制在物件序列化和還原序列化期間，<xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType> 是否使用較大的陣列大小。 將此參數設定為 `true`，藉由 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>之類的類型來改善大型物件圖形的序列化和還原序列化效能。 |.NET Framework 4.7.2|
-|`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|控制 <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> 的函式是否使用現有的物件參考來設定新物件的 <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> 屬性。 如需詳細資訊，請參閱[風險降低︰ClaimsIdentity 建構函式](../../../migration-guide/mitigation-claimsidentity-constructor.md)。|.NET Framework 4.6.2|  
+|`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|控制 <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> 的函式是否使用現有的物件參考來設定新物件的 <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> 屬性。 如需詳細資訊，請參閱[風險降低︰ClaimsIdentity 建構函式](../../../migration-guide/retargeting/4.6.1-4.6.2.md)。|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|控制嘗試重複使用 <xref:System.Security.Cryptography.AesCryptoServiceProvider> 解密子是否會擲回 <xref:System.Security.Cryptography.CryptographicException>。 如需詳細資訊，請參閱[AesCryptoServiceProvider 解密程式提供可重複使用的轉換](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform)。|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|控制[CspParameters. system.security.cryptography.cspparameters.parentwindowhandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle)屬性的值是否為代表視窗控制碼之記憶體位置的[IntPtr](xref:System.IntPtr) ，或其是否為視窗控制碼（HWND）。 如需詳細資訊，請參閱[風險降低︰CspParameters.ParentWindowHandle 應該有 HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)。 |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|控制在 FIPS 模式中使用受管理的加密類別是否會擲回 <xref:System.Security.Cryptography.CryptographicException> （`true`），或依賴系統程式庫（`false`）的執行。|.NET Framework 4.8|

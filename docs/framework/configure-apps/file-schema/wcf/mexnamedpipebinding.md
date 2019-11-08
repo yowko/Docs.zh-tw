@@ -2,19 +2,19 @@
 title: <mexNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 193412fa-3260-414c-92c6-b32ed3b94a34
-ms.openlocfilehash: b26201064aad3a8a09d8604a9706fe3c149cbf58
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: be538274636b519600d87b1d3be2faaa2e161cd0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400223"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738922"
 ---
-# <a name="mexnamedpipebinding"></a>\<mexNamedPipeBinding>
+# <a name="mexnamedpipebinding"></a>\<mexNamedPipeBinding >
 指定於具名管道上 WS-MetadataExchange (WS-MEX) 訊息交換之繫結的設定。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp; &nbsp;[ **\<system system.servicemodel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md)系結 >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexNamedPipeBinding >**  
   
 ## <a name="syntax"></a>語法  
@@ -43,23 +43,23 @@ ms.locfileid: "70400223"
 |`receiveTimeout`|<xref:System.TimeSpan> 值，指定接收作業完成其作業之時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:10:00。|  
 |`sendTimeout`|<xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|項目|描述|  
 |-------------|-----------------|  
-|[\<bindings>](bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
+|[\<bindings >](bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexNamedPipeBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexNamedPipeBindingElement>
-- [如何：使用設定檔發佈服務的中繼資料](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [如何：使用組態檔發行服務的中繼資料](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [發行與擷取自訂繫結上的中繼資料](../../../wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
 - [中繼資料](../../../wcf/feature-details/metadata.md)
 - [繫結](../../../wcf/bindings.md)
 - [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

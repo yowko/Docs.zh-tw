@@ -1,23 +1,20 @@
 ---
 title: 在 ASP.NET Core Web API 中部署模型
 description: 使用 ASP.NET Core Web API 在網際網路上提供 ML.NET 情感分析機器學習模型
-ms.date: 09/11/2019
+ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: b85d77900c5d9227ecc6fe81b8a8d68171dd9ef5
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b6801b7de5a17257be706f77a7a67aa87df96524
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774513"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733316"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>在 ASP.NET Core Web API 中部署模型
 
 了解如何使用 ASP.NET Core Web API，在 Web 上提供預先定型的 ML.NET 機器學習模型。 透過 Web API 提供模型可讓您透過標準 HTTP 方法進行預測。
-
-> [!NOTE]
-> `PredictionEnginePool` 服務延伸模組目前處於預覽狀態。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -122,27 +119,23 @@ ms.locfileid: "72774513"
 2. 將下列程式碼新增到 *ConfigureServices* 方法：
 
     ```csharp
-    public void ConfigureServices(IServiceCollection services)
-    {
-        services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-        services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
-            .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
-    }
+    services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
+        .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
     ```
 
 概括而言，此程式碼會自動初始化物件和服務，以供稍後在應用程式要求時使用，而不需要手動執行。
 
-機器學習模型不是靜態的。 當有新的定型資料可供使用時，就會重新訓練並重新部署模型。 將模型的最新版本取得至應用程式的方法之一，就是重新部署整個應用程式。 不過，這會引進應用程式停機時間。 @No__t_0 服務提供一種機制，可重載已更新的模型，而不需要讓應用程式關閉。
+機器學習模型不是靜態的。 當有新的定型資料可供使用時，就會重新訓練並重新部署模型。 將模型的最新版本取得至應用程式的方法之一，就是重新部署整個應用程式。 不過，這會引進應用程式停機時間。 `PredictionEnginePool` 服務提供一種機制，可重載已更新的模型，而不需要讓應用程式關閉。
 
 將 [`watchForChanges`] 參數設定為 [`true`]，`PredictionEnginePool` 會啟動一個接聽檔案系統變更通知的[`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) ，並在檔案變更時引發事件。 這會提示 `PredictionEnginePool` 自動重載模型。
 
 模型是由 `modelName` 參數所識別，因此，每個應用程式可以在變更時重載一個以上的模型。
 
 > [!TIP]
-> 或者，當您使用遠端儲存的模型時，可以使用 `FromUri` 方法。 @No__t_0 輪詢遠端位置以進行變更，而不是監看檔案變更的事件。 輪詢間隔預設為5分鐘。 您可以根據應用程式的需求來增加或減少輪詢間隔。 在下面的程式碼範例中，`PredictionEnginePool` 會每分鐘輪詢儲存在指定 URI 的模型。
+> 或者，當您使用遠端儲存的模型時，可以使用 `FromUri` 方法。 `FromUri` 輪詢遠端位置以進行變更，而不是監看檔案變更的事件。 輪詢間隔預設為5分鐘。 您可以根據應用程式的需求來增加或減少輪詢間隔。 在下面的程式碼範例中，`PredictionEnginePool` 會每分鐘輪詢儲存在指定 URI 的模型。
 >
 >```csharp
->builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
+>services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
 >       modelName: "SentimentAnalysisModel",
 >       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",

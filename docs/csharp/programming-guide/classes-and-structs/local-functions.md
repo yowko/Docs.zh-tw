@@ -4,12 +4,12 @@ ms.custom: seodec18
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 7b6b46a33430a4a58c78245a0ab3bed1e0fbcd9c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 24b7d6f98e331110ddcd971d0d0b21003dbe023d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455382"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736845"
 ---
 # <a name="local-functions-c-programming-guide"></a>區域函式 (C# 程式設計手冊)
 
@@ -43,11 +43,10 @@ ms.locfileid: "73455382"
 
 請注意，在區域函式中可以存取包含成員中所定義的所有區域變數 (包含其方法參數)。 
 
-與方法定義不同，區域函式定義不能包含下列項目：
+不同于方法定義，區域函式定義不能包含成員存取修飾詞。 因為所有區域函式都是私用，所以包含 `private` 這類關鍵字的存取修飾詞會產生編譯器錯誤 CS0106「修飾詞 'private' 對此項目無效」。
 
-- 成員存取修飾詞。 因為所有區域函式都是私用，所以包含 `private` 這類關鍵字的存取修飾詞會產生編譯器錯誤 CS0106「修飾詞 'private' 對此項目無效」。
- 
-- [static](../../language-reference/keywords/static.md) 關鍵字。 包含 `static` 關鍵字會產生編譯器錯誤 CS0106「修飾詞 'static' 對此項目無效」。
+> [!NOTE]
+> 在C# 8.0 之前，區域函式不能包含 `static` 修飾詞。 包含 `static` 關鍵字會產生編譯器錯誤 CS0106「修飾詞 'static' 對此項目無效」。
 
 此外，屬性無法套用至區域函式或其參數和型別參數。 
  

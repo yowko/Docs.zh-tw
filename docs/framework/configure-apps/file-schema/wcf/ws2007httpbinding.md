@@ -2,19 +2,19 @@
 title: <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-ms.openlocfilehash: 0f0dc3ebe34ea45c1b464ff4fe437694ff4761f0
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 2f8cff87280f08af0c426b7a726949b9a9c40197
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399054"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732521"
 ---
-# <a name="ws2007httpbinding"></a>\<ws2007HttpBinding>
+# <a name="ws2007httpbinding"></a>\<ws2007HttpBinding >
 定義可互通的繫結，此繫結支援正確版本的 <xref:System.ServiceModel.WSHttpBinding.Security%2A>、<xref:System.ServiceModel.ReliableSession> 和 <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> 繫結項目。  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
+&nbsp; &nbsp;[ **\<system system.servicemodel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md)系結 >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<ws2007HttpBinding >**  
   
 ## <a name="syntax"></a>語法  
@@ -77,23 +77,23 @@ ms.locfileid: "70399054"
 |`proxyAddress`|指定 HTTP Proxy 位址的 URI。 如果 `useSystemWebProxy` 為 `true`，則這項設定必須為 `null`。 預設為 `null`。|  
 |`receiveTimeout`|<xref:System.TimeSpan> 值，指定接收作業完成其作業之時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |`sendTimeout`|<xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
-|`textEncoding`|指定要在繫結上發出訊息時使用的字元集編碼方式。 有效值包括以下的值：<br /><br /> -   `UnicodeFffeTextEncoding`：Unicode Big Endian 編碼。<br />-   `Utf16TextEncoding`：16位編碼。<br />-   `Utf8TextEncoding`：8位編碼。<br /><br /> 預設為 `Utf8TextEncoding`。<br /><br /> 此屬性的型別為 <xref:System.Text.Encoding>。|  
+|`textEncoding`|指定要在繫結上發出訊息時使用的字元集編碼方式。 有效值包括以下的值：<br /><br /> -   `UnicodeFffeTextEncoding`： Unicode Big Endian 編碼。<br />-   `Utf16TextEncoding`：16位編碼方式。<br />-   `Utf8TextEncoding`：8位編碼。<br /><br /> 預設為 `Utf8TextEncoding`。<br /><br /> 此屬性的型別為 <xref:System.Text.Encoding>。|  
 |`transactionFlow`|指定繫結程序是否支援流動 WS-Transactions 的值。 預設為 `false`。|  
 |`useDefaultWebProxy`|指定是否使用系統自動設定之 HTTP Proxy 的值。 預設為 `true`。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<security>](security-of-wshttpbinding.md)|定義繫結的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>。|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜性的條件約束，而這些條件約束可由使用此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
-|[\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|指定是否在通道端點之間建立可靠的工作階段。|  
+|[\<security >](security-of-wshttpbinding.md)|定義繫結的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>。|  
+|[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜性的條件約束，而這些條件約束可由使用此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|指定是否在通道端點之間建立可靠的工作階段。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<bindings>](bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
+|[\<bindings >](bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
  `WS2007HttpBinding` 會加入類似 `WSHttpBinding` 的系統提供繫結，但是會使用 ReliableSession、Security 和 TransactionFlow 通訊協定的先進結構化資訊標準組織 (OASIS) 標準版本。 使用這個繫結時，不需要變更物件模型或是預設設定。  
@@ -136,11 +136,11 @@ ms.locfileid: "70399054"
 </configuration>
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.WS2007HttpBinding>
 - <xref:System.ServiceModel.Configuration.WS2007HttpBindingElement>
 - [繫結](../../../wcf/bindings.md)
 - [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

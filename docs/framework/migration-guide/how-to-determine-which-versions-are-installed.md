@@ -1,5 +1,5 @@
 ---
-title: 如何：判斷安裝的 .NET Framework 版本
+title: 判斷安裝的 .NET Framework 版本
 ms.date: 04/18/2019
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: 748b5ea2b14abe2da0b84430461eb68a70ae268d
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: b860aac01780acb67c53e822eff478b78198996b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195228"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738198"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：判斷安裝的 .NET Framework 版本
 
@@ -36,13 +36,16 @@ ms.locfileid: "73195228"
 >
 > 如需版本的詳細資訊，請參閱 [.NET Framework 版本和相依性](versions-and-dependencies.md)。
 
-您可以存取登錄來取得電腦上安裝的 .NET Framework 版本清單。 您可以使用登錄編輯程式來檢視登錄，或使用程式碼來查詢登錄：
+登錄包含電腦上安裝的 .NET Framework 版本清單。 您可以使用 [登錄編輯程式] 來查看登錄，或利用程式碼查詢它：
 
 - 尋找新版的 .NET Framework (4.5 和更新版本)：
+
   - [使用登錄編輯程式尋找 .NET Framework 版本](#net_b)
   - [使用程式碼查詢登錄以取得 .NET Framework 版本](#net_d)
   - [使用 PowerShell 查詢登錄以取得 .NET Framework 版本](#ps_a)
-- 尋找舊版的 .NET Framework (1&#8211;4)：
+
+- 尋找較舊的 .NET Framework 版本（1到4）：
+
   - [使用登錄編輯程式尋找 .NET Framework 版本](#net_a)
   - [使用程式碼查詢登錄以取得 .NET Framework 版本](#net_c)
 
@@ -55,22 +58,24 @@ ms.locfileid: "73195228"
 
 ## <a name="find-newer-net-framework-versions-45-and-later"></a>尋找新版的 .NET Framework (4.5 和更新版本)
 
+您可以使用登錄編輯程式來尋找登錄中的版本資訊，或是以程式設計方式來查詢登錄。
+
 <a name="net_b"></a>
 
-### <a name="find-net-framework-versions-45-and-later-in-the-registry"></a>在登錄中尋找 .NET Framework 4.5 和更新版本
+### <a name="use-registry-editor"></a>使用登錄編輯程式
 
 1. 從 [開始] 功能表上，選擇 [執行]，輸入 *regedit*，然後選取 [確定]。
 
      您必須具有系統管理認證才能執行 regedit。
 
-2. 在 [登錄編輯程式] 中，開啟下列子機碼： **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full**。 如果 **Full** 子機碼不存在，即表示未安裝 .NET Framework 4.5 或更新版本。
+2. 在 [登錄編輯程式] 中，開啟下列子機碼： **HKEY_LOCAL_MACHINE \Software\microsoft\net Framework Setup\NDP\v4\Full**。 如果 **Full** 子機碼不存在，即表示未安裝 .NET Framework 4.5 或更新版本。
 
     > [!NOTE]
     > 登錄中的 **NET Framework Setup** 資料夾「不是」以英文句號開頭。
 
-3. 檢查是否有名為 **Release** 的 DWORD 項目。 若有，則表示已安裝 .NET Framework 4.5 或更新版本。 其值為對應至 .NET Framework 特定版本的版本機碼。 例如，下圖中 **Release** 項目的值是 *378389*，也就是 .NET Framework 4.5 的版本機碼。
+3. 檢查是否有名為 **Release** 的 DWORD 項目。 如果已存在，則您已安裝 .NET Framework 4.5 或更新版本。 其值為對應至 .NET Framework 特定版本的版本機碼。 例如，在下圖中， **release**專案的值是378389，也就是 .NET Framework 4.5 的發行金鑰。
 
-     ![.NET Framework 4.5 的登錄專案](./media/clr-installdir.png ".NET Framework 4.5 的登錄專案")
+   ![.NET Framework 4.5 的登錄專案](./media/clr-installdir.png ".NET Framework 4.5 的登錄專案")
 
 下表列出 .NET Framework 4.5 及更新版本個別作業系統上 **Release** DWORD 的值。
 
@@ -91,21 +96,40 @@ ms.locfileid: "73195228"
 |.NET Framework 4.7.2|Windows 10 2018 年4月更新和 Windows Server，版本1803：461808<br/>在 Windows 10 2018 年4月更新和 Windows Server 的所有 Windows 作業系統上，版本1803：461814|
 |.NET Framework 4.8|在 Windows 10 5 月2019更新和 Windows 10 十一月2019更新：528040<br/>在所有其他 Windows 作業系統（包括其他 Windows 10 作業系統）上：528049|
 
-您可以依照下列方式使用這些值：
+#### <a name="specific-version"></a>特定版本
 
-- 若要判斷特定版本 Windows 作業系統上是否安裝特定版本的 .NET Framework，請測試表格中所列 **Release** DWORD 值是否「等於」表格中所列的值。 例如，若要判斷 Windows 10 系統上是否有 .NET Framework 4.6，請測試「等於」393295 的 **Release** 值。
+若要判斷特定版本的 Windows 作業系統是否已安裝*特定*版本的 .NET Framework，請測試**Release** DWORD 值是否*等於*資料表中所列的值。 例如，若要判斷 Windows 10 系統上是否有 .NET Framework 4.6，請測試「等於」393295 的 **Release** 值。
 
-- 若要判斷 .NET Framework 最低版本是否存在，請使用該版本較小的 **RELEASE**DWORD 值。 例如，如果您的應用程式是在 .NET Framework 4.8 或更新版本下執行，請測試*大於或等於*528040 的**RELEASE** DWORD 值。 對於只列出每一 .NET Framework 版本最小 **RELEASE** DWORD 值的資料表，請參閱 [.NET Framework 4.5 與更新版本的最小 Release DWORD 值](minimum-release-dword.md).
+#### <a name="minimum-version"></a>最小版本
 
-- 若要測試多個版本，請從測試「大於或等於」最新版 .NET Framework 的較小 DWORD 值開始，然後將值與每一後續較早版本的較小 DWORD 值進行比較。 例如，如果應用程式需要 .NET Framework 4.7 或更新版本，而且您想要判斷現有 .NET Framework 的特定版本，請從測試「大於或等於」461808 (.NET Framework 4.7.2 的較小 DWORD 值) 的 **RELEASE** DWORD 值開始。 然後將 **RELEASE** DWORD 值與每一更新版本 .NET Framework 的較小值進行比較。 對於只列出每一 .NET Framework 版本最小 **RELEASE** DWORD 值的資料表，請參閱 [.NET Framework 4.5 與更新版本的最小 Release DWORD 值](minimum-release-dword.md).
+若要判斷 .NET Framework 的*最低*版本是否存在，請使用上表中該版本的最小**RELEASE** DWORD 值。 （為了方便起見，最小值也會列在下表中）。
+
+例如，如果您的應用程式是在 .NET Framework 4.8 或更新版本下執行，請測試*大於或等於*528040 的**RELEASE** DWORD 值。
+
+|.NET Framework 版本|DWORD 版本的最低值|
+|--------------------------------|-------------|
+|.NET Framework 4.5|378389|
+|.NET Framework 4.5.1|378675|
+|.NET Framework 4.5.2|379893|
+|.NET Framework 4.6|393295|
+|.NET Framework 4.6.1|394254|
+|.NET Framework 4.6.2|394802|
+|.NET Framework 4.7|460798|
+|.NET Framework 4.7.1|461308|
+|.NET Framework 4.7.2|461808|
+|.NET Framework 4.8|528040|
+
+#### <a name="multiple-versions"></a>多個版本
+
+若要測試多個版本，請從測試「大於或等於」最新版 .NET Framework 的較小 DWORD 值開始，然後將值與每一後續較早版本的較小 DWORD 值進行比較。 例如，如果應用程式需要 .NET Framework 4.7 或更新版本，而且您想要判斷現有 .NET Framework 的特定版本，請從測試「大於或等於」461808 (.NET Framework 4.7.2 的較小 DWORD 值) 的 **RELEASE** DWORD 值開始。 然後將 **RELEASE** DWORD 值與每一更新版本 .NET Framework 的較小值進行比較。
 
 <a name="net_d"></a>
 
-### <a name="find-net-framework-versions-45-and-later-with-code"></a>使用程式碼尋找 .NET Framework 4.5 和更新版本
+### <a name="query-the-registry-using-code"></a>使用程式碼查詢登錄
 
 1. 使用 <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A?displayProperty=nameWithType> 和 <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A?displayProperty=nameWithType> 方法存取 Windows 登錄中的 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full** 子機碼。
 
-    **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full** 子機碼中存在 **Release** DWORD 項目表示 .NET Framework 4.5 或更新版本已安裝在電腦上。
+   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full** 子機碼中存在 **Release** DWORD 項目表示 .NET Framework 4.5 或更新版本已安裝在電腦上。
 
 2. 檢查 **Release** 項目的值，判斷已安裝的版本。 若要正向相容，請檢查是否有大於或等於 [.NET Framework 版本表](#version_table)中所列值的值。
 
@@ -122,9 +146,9 @@ ms.locfileid: "73195228"
 
 <a name="ps_a"></a>
 
-### <a name="check-for-a-minimum-required-net-framework-version-45-and-later-with-powershell"></a>使用 PowerShell 檢查 .NET Framework 最低版本需求 (4.5 及更新版本)
+### <a name="use-powershell-to-check-for-a-minimum-required-version"></a>使用 PowerShell 檢查是否有最小必要版本
 
-- 使用 PowerShell 命令檢查 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full** 子機碼的 **Release** 項目值。
+使用 PowerShell 命令檢查 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full** 子機碼的 **Release** 項目值。
 
 下列範例會檢查 **Release** 項目值，以判斷是否安裝了 .NET Framework 4.6.2 或更新版本。 如已安裝，則此程式碼會傳回 `True`；否則傳回 `False`。
 
@@ -132,19 +156,19 @@ ms.locfileid: "73195228"
 (Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
 ```
 
-若要檢查不同的所需 .NET Framework 最低版本，請以 [.NET Framework 版本表](#version_table)的 **Release** 值取代這些範例中的 *394802*。
+若要檢查是否有不同的最低需求 .NET Framework 版本，請將範例中的 `394802` 取代為[.NET Framework 版本資料表](#version_table)中的值。 使用針對該版本所顯示的最小值。
 
-## <a name="find-older-net-framework-versions-182114"></a>尋找舊版的 .NET Framework (1&#8211;4)
+## <a name="find-older-net-framework-versions-1-through-4"></a>尋找較舊的 .NET Framework 版本（1到4）
 
 <a name="net_a"></a>
 
-### <a name="find-net-framework-versions-182114-in-the-registry"></a>在登錄中尋找 .NET Framework 1&#8211;4 版
+### <a name="use-registry-editor-older-framework-versions"></a>使用登錄編輯程式（較舊的 framework 版本）
 
 1. 從 [開始] 功能表上，選擇 [執行]，輸入 *regedit*，然後選取 [確定]。
 
     您必須具有系統管理認證才能執行 regedit。
 
-2. 在 [登錄編輯程式] 中，開啟下列子機碼： **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP**：
+2. 在 [登錄編輯程式] 中，開啟下列子機碼： **HKEY_LOCAL_MACHINE \Software\microsoft\net Framework Setup\NDP**：
 
     - 針對 .NET Framework 1.1 到 3.5 版，每個安裝的版本都會列為 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP** 子機碼下的子機碼。 例如，**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v3.5**。 版本號碼儲存為版本子機碼 **Version** 項目中的值。
 
@@ -159,11 +183,11 @@ ms.locfileid: "73195228"
 
 <a name="net_c"></a>
 
-### <a name="find-net-framework-versions-182114-with-code"></a>使用程式碼尋找 .NET Framework 1&#8211;4 版
+### <a name="query-the-registry-using-code-older-framework-versions"></a>使用程式碼查詢登錄（較舊的 framework 版本）
 
-- 使用 <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> 類別存取 Windows 登錄中的 **HKEY_LOCAL_MACHINE\Software\Microsoft\NET Framework Setup\NDP** 子機碼。
+使用 <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> 類別存取 Windows 登錄中的 **HKEY_LOCAL_MACHINE\Software\Microsoft\NET Framework Setup\NDP** 子機碼。
 
-下列範例會尋找已安裝的 .NET Framework 1&#8211;4 版：
+下列範例會尋找已安裝的 .NET Framework 1 到4個版本：
 
 [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
 [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
@@ -172,7 +196,7 @@ ms.locfileid: "73195228"
 
 <a name="clr_a"></a>
 
-### <a name="find-the-current-clr-version-with-clrverexe"></a>使用 Clrver.exe 尋找目前的 CLR 版本
+### <a name="use-clrverexe"></a>使用 Clrver
 
 使用 [CLR 版本工具 (Clrver.exe)](../tools/clrver-exe-clr-version-tool.md) 以判斷電腦上安裝了哪些 CLR 版本：
 
@@ -188,7 +212,7 @@ ms.locfileid: "73195228"
 
 <a name="clr_b"></a>
 
-### <a name="find-the-current-clr-version-with-the-environment-class"></a>使用環境類別尋找目前的 CLR 版本
+### <a name="use-the-environment-class"></a>使用環境類別
 
 > [!IMPORTANT]
 > 針對 .NET Framework 4.5 和更新版本，請不要使用 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 屬性偵測 CLR 的版本。 請依[使用程式碼尋找 .NET Framework 4.5 和更新版本](#net_d)中所述，改查詢登錄。

@@ -1,16 +1,16 @@
 ---
 title: 從檔案和其他來源載入資料
 description: 此操作說明教學會示範如何將資料載入 ML.NET 以進行處理和定型。 資料原先是儲存在檔案或其他資料來源中，例如資料庫、JSON、XML 或記憶體內部集合。
-ms.date: 09/11/2019
+ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 82a4d19a6296faa6d195e301016b1bf97d483a2c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 07b3e7f5302a03f5fa4c936679c8a3c00d19a7b0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040808"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740557"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>從檔案和其他來源載入資料
 
@@ -107,10 +107,10 @@ IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubF
 
 ## <a name="load-data-from-a-relational-database"></a>從關係資料庫載入資料
 
-> [!NOTE]
-> DatabaseLoader 目前為預覽狀態。 它可以藉由參考[SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) NuGet[套件的方式](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview)來使用。
-
 ML.NET 支援從[`System.Data`](xref:System.Data)所支援的各種關係資料庫載入資料，其中包括 SQL Server、Azure SQL Database、Oracle、SQLite、于 postgresql、進度、IBM DB2 等等。
+
+> [!NOTE]
+> 若要使用 `DatabaseLoader`，請參考[SqlClient](https://www.nuget.org/packages/System.Data.SqlClient) NuGet 套件。
 
 假設資料庫具有名為 `House` 的資料表和下列架構：
 

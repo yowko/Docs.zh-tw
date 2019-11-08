@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8703532ff8551e8bd42128eb9e8cdcf2afd9dad8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422205"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739672"
 ---
 # <a name="value-types-c-reference"></a>實值型別 (C# 參考)
 
@@ -32,7 +32,7 @@ ms.locfileid: "73422205"
 
 與參考型別不同，您無法從實值型別衍生新的類型。 不過，就像參考型別，結構可以實作介面。
 
-實值型別預設不可為 `null`。 不過，可以 `null`對應的[可為 null 實數值型別](../../programming-guide/nullable-types/index.md)的變數。
+實值型別預設不可為 `null`。 不過，可以 `null`對應的[可為 null 實數值型別](../builtin-types/nullable-value-types.md)的變數。
 
 每種實值型別都具有初始化該型別預設值的隱含無參數建構函式。 如需有關實值型別預設值的資訊，請參閱[預設值表](default-values-table.md)。
 
@@ -105,8 +105,6 @@ var p = new Point(); // Invoke parameterless constructor for the struct.
 ## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [型別](/dotnet/csharp/language-reference/keywords)
 - [參考型別](reference-types.md)
-- [可為 Null 的實值型別](../../programming-guide/nullable-types/index.md)
+- [可為 Null 的實值型別](../builtin-types/nullable-value-types.md)
