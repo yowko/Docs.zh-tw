@@ -9,27 +9,29 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 25b686e654c5d6bb44a56b96cbf4045d14e95b62
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: c9d879d1760f543d5a4722977d4dee8bca856016
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392436"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739187"
 ---
 # <a name="c-programming-guide"></a>C# 程式設計手冊
+
 本節提供可透過 .NET Framework 存取 C# 的重要 C# 語言特性與功能的詳細資訊。  
   
  本節內容中大部分會假設您已經了解一些 C# 和一般程式設計概念。 如果您是使用程式設計或的C#新手，您可能會想要造訪[ C#教學課程簡介](../tutorials/intro-to-csharp/index.md)或[瀏覽器中的 .net 教學](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)課程，其中不需要任何預先設計的知識。  
   
- 如需特定關鍵字、運算子和前置處理器指示詞的相關資訊，請參閱 [C# 參考](../language-reference/index.md)。 如需 C# 語言規格的相關資訊，請參閱 [C# 語言規格](../language-reference/language-specification/index.md)。  
+ 如需特定關鍵字、運算子和前置處理器指示詞的相關資訊，請參閱 [C# 參考](../language-reference/index.md)。 如需 C# 語言規格的相關資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)。  
   
 ## <a name="program-sections"></a>程式區段
 
 [C# 程式內部](./inside-a-program/index.md)  
   
 [Main() 和命令列引數](./main-and-command-args/index.md)  
- 
-## <a name="language-sections"></a>語言章節  
+
+## <a name="language-sections"></a>語言章節
+
 [陳述式、運算式和運算子](./statements-expressions-operators/index.md)  
 
  [型別](./types/index.md)  
@@ -41,7 +43,7 @@ ms.locfileid: "71392436"
  [列舉型別](./enumeration-types.md)  
   
  [委派](./delegates/index.md)  
- 
+
  [陣列](./arrays/index.md)  
   
  [字串](./strings/index.md)  
@@ -56,19 +58,18 @@ ms.locfileid: "71392436"
   
  [迭代器](./concepts/iterators.md)
   
- [LINQ 查詢運算式](./linq-query-expressions/index.md)  
+ [LINQ 查詢運算式](../linq/index.md)  
   
  [Lambda 運算式](./statements-expressions-operators/lambda-expressions.md)  
   
  [命名空間](./namespaces/index.md)  
   
- [可為 Null 的實值型別](./nullable-types/index.md)  
-  
  [Unsafe 程式碼和指標](./unsafe-code-pointers/index.md)  
   
  [XML 文件註解](./xmldoc/index.md)  
   
-## <a name="platform-sections"></a>平台章節  
+## <a name="platform-sections"></a>平台章節
+
  [應用程式定義域](../../framework/app-domains/application-domains.md)  
   
  [.NET 中的組件](../../standard/assembly/index.md)  

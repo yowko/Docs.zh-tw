@@ -3,12 +3,12 @@ title: C# 的歷史 - C# 指南
 description: 最早的語言版本有哪些內容，而在之後有什麼演變？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 11463f7d47c5fb5b71bd16d73039b22e4a6ca43e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039643"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739100"
 ---
 # <a name="the-history-of-c"></a>C\# 的歷史
 
@@ -57,7 +57,7 @@ C#1.2 版隨附 Visual Studio .NET 2003。 本版內含對語言的小幅功能�
 - [泛型](../programming-guide/generics/index.md)
 - [部分型別](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [匿名方法](../language-reference/operators/delegate-operator.md)
-- [可為 Null 的實值型別](../programming-guide/nullable-types/index.md)
+- [可為 Null 的實值型別](../language-reference/builtin-types/nullable-value-types.md)
 - [迭代器](../programming-guide/concepts/iterators.md)
 - [共變數和反變數](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -104,7 +104,7 @@ C#版本4.0 （以 Visual Studio 2010 發行）可能會有一段很棘手的時
 
 下一版確實導入了一些有趣的新功能：
 
-- [動態繫結](../language-reference/keywords/dynamic.md)
+- [動態繫結](../language-reference/builtin-types/reference-types.md)
 - [具名/選擇性引數](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [泛型 covariant 和 contravariant](../../standard/generics/covariance-and-contravariance.md)
 - [內嵌 Interop 型別](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
