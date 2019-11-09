@@ -5,21 +5,21 @@ author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 2bd81c29e727254af6c8ecf39ee4bfef1f39d009
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "72522644"
 ---
-# <a name="orchestration-patterns"></a><span data-ttu-id="34308-103">協調流程模式</span><span class="sxs-lookup"><span data-stu-id="34308-103">Orchestration patterns</span></span>
+# <a name="orchestration-patterns"></a><span data-ttu-id="4d166-103">協調流程模式</span><span class="sxs-lookup"><span data-stu-id="4d166-103">Orchestration patterns</span></span>
 
-<span data-ttu-id="34308-104">Durable Functions 可讓您更輕鬆地建立可設定狀態的工作流程，其中包含無伺服器環境中的離散、長時間執行活動。</span><span class="sxs-lookup"><span data-stu-id="34308-104">Durable Functions makes it easier to create stateful workflows that are composed of discrete, long running activities in a serverless environment.</span></span> <span data-ttu-id="34308-105">由於 Durable Functions 可以追蹤您工作流程的進度，並定期檢查執行歷程記錄，因此它本身就能執行一些有趣的模式。</span><span class="sxs-lookup"><span data-stu-id="34308-105">Since Durable Functions can track the progress of your workflows and periodically checkpoints the execution history, it lends itself to implementing some interesting patterns.</span></span>
+<span data-ttu-id="4d166-104">Durable Functions 可讓您更輕鬆地建立可設定狀態的工作流程，其中包含無伺服器環境中的離散、長時間執行活動。</span><span class="sxs-lookup"><span data-stu-id="4d166-104">Durable Functions makes it easier to create stateful workflows that are composed of discrete, long running activities in a serverless environment.</span></span> <span data-ttu-id="4d166-105">由於 Durable Functions 可以追蹤您工作流程的進度，並定期檢查執行歷程記錄，因此它本身就能執行一些有趣的模式。</span><span class="sxs-lookup"><span data-stu-id="4d166-105">Since Durable Functions can track the progress of your workflows and periodically checkpoints the execution history, it lends itself to implementing some interesting patterns.</span></span>
 
-## <a name="function-chaining"></a><span data-ttu-id="34308-106">函數鏈</span><span class="sxs-lookup"><span data-stu-id="34308-106">Function chaining</span></span>
+## <a name="function-chaining"></a><span data-ttu-id="4d166-106">函數鏈</span><span class="sxs-lookup"><span data-stu-id="4d166-106">Function chaining</span></span>
 
-<span data-ttu-id="34308-107">在一般的順序程式中，活動必須以特定順序逐一執行。</span><span class="sxs-lookup"><span data-stu-id="34308-107">In a typical sequential process, activities need to execute one after the other in a particular order.</span></span> <span data-ttu-id="34308-108">（選擇性）近期的活動可能需要先前函式的一些輸出。</span><span class="sxs-lookup"><span data-stu-id="34308-108">Optionally, the upcoming activity may require some output from the previous function.</span></span> <span data-ttu-id="34308-109">這項對活動順序的相依性會建立執行的函式鏈。</span><span class="sxs-lookup"><span data-stu-id="34308-109">This dependency on the ordering of activities creates a function chain of execution.</span></span>
+<span data-ttu-id="4d166-107">在一般的順序程式中，活動必須以特定順序逐一執行。</span><span class="sxs-lookup"><span data-stu-id="4d166-107">In a typical sequential process, activities need to execute one after the other in a particular order.</span></span> <span data-ttu-id="4d166-108">（選擇性）近期的活動可能需要先前函式的一些輸出。</span><span class="sxs-lookup"><span data-stu-id="4d166-108">Optionally, the upcoming activity may require some output from the previous function.</span></span> <span data-ttu-id="4d166-109">這項對活動順序的相依性會建立執行的函式鏈。</span><span class="sxs-lookup"><span data-stu-id="4d166-109">This dependency on the ordering of activities creates a function chain of execution.</span></span>
 
-<span data-ttu-id="34308-110">使用 Durable Functions 來執行此工作流程模式的優點，在於它的執行檢查點功能。</span><span class="sxs-lookup"><span data-stu-id="34308-110">The benefit of using Durable Functions to implement this workflow pattern comes from its ability to do checkpointing.</span></span> <span data-ttu-id="34308-111">如果伺服器當機、網路超時或發生其他問題，長期函式會從上次已知狀態繼續，並繼續執行您的工作流程，即使它位於另一部伺服器上也一樣。</span><span class="sxs-lookup"><span data-stu-id="34308-111">If the server crashes, the network times out or some other issue occurs, Durable functions can resume from the last known state and continue running your workflow even if it's on another server.</span></span>
+<span data-ttu-id="4d166-110">使用 Durable Functions 來執行此工作流程模式的優點，在於它的執行檢查點功能。</span><span class="sxs-lookup"><span data-stu-id="4d166-110">The benefit of using Durable Functions to implement this workflow pattern comes from its ability to do checkpointing.</span></span> <span data-ttu-id="4d166-111">如果伺服器當機、網路超時或發生其他問題，長期函式會從上次已知狀態繼續，並繼續執行您的工作流程，即使它位於另一部伺服器上也一樣。</span><span class="sxs-lookup"><span data-stu-id="4d166-111">If the server crashes, the network times out or some other issue occurs, Durable functions can resume from the last known state and continue running your workflow even if it's on another server.</span></span>
 
 ```csharp
 [FunctionName("PlaceOrder")]
@@ -37,9 +37,9 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-<span data-ttu-id="34308-112">在上述程式碼範例中，`CallActivityAsync` 函數負責在資料中心的虛擬機器上執行指定的活動。</span><span class="sxs-lookup"><span data-stu-id="34308-112">In the preceding code sample, the `CallActivityAsync` function is responsible for running a given activity on a virtual machine in the data center.</span></span> <span data-ttu-id="34308-113">當 await 傳回且基礎工作完成時，會將執行記錄到歷程記錄資料表。</span><span class="sxs-lookup"><span data-stu-id="34308-113">When the await returns and the underlying Task completes, the execution will be recorded to the history table.</span></span> <span data-ttu-id="34308-114">協調器函式中的程式碼可利用工作平行程式庫的任何熟悉結構和 async/await 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="34308-114">The code in the orchestrator function can make use of any of the familiar constructs of the Task Parallel Library and the async/await keywords.</span></span>
+<span data-ttu-id="4d166-112">在上述程式碼範例中，`CallActivityAsync` 函數負責在資料中心的虛擬機器上執行指定的活動。</span><span class="sxs-lookup"><span data-stu-id="4d166-112">In the preceding code sample, the `CallActivityAsync` function is responsible for running a given activity on a virtual machine in the data center.</span></span> <span data-ttu-id="4d166-113">當 await 傳回且基礎工作完成時，會將執行記錄到歷程記錄資料表。</span><span class="sxs-lookup"><span data-stu-id="4d166-113">When the await returns and the underlying Task completes, the execution will be recorded to the history table.</span></span> <span data-ttu-id="4d166-114">協調器函式中的程式碼可利用工作平行程式庫的任何熟悉結構和 async/await 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="4d166-114">The code in the orchestrator function can make use of any of the familiar constructs of the Task Parallel Library and the async/await keywords.</span></span>
 
-<span data-ttu-id="34308-115">下列程式碼是 `ProcessPayment` 方法可能如下所示的簡化範例：</span><span class="sxs-lookup"><span data-stu-id="34308-115">The following code is a simplified example of what the `ProcessPayment` method may look like:</span></span>
+<span data-ttu-id="4d166-115">下列程式碼是 `ProcessPayment` 方法可能如下所示的簡化範例：</span><span class="sxs-lookup"><span data-stu-id="4d166-115">The following code is a simplified example of what the `ProcessPayment` method may look like:</span></span>
 
 ```csharp
 [FunctionName("ProcessPayment")]
@@ -56,11 +56,11 @@ public static bool ProcessPayment([ActivityTrigger] DurableActivityContext conte
 }
 ```
 
-## <a name="asynchronous-http-apis"></a><span data-ttu-id="34308-116">非同步 HTTP Api</span><span class="sxs-lookup"><span data-stu-id="34308-116">Asynchronous HTTP APIs</span></span>
+## <a name="asynchronous-http-apis"></a><span data-ttu-id="4d166-116">非同步 HTTP Api</span><span class="sxs-lookup"><span data-stu-id="4d166-116">Asynchronous HTTP APIs</span></span>
 
-<span data-ttu-id="34308-117">在某些情況下，工作流程可能會包含需要相當長一段時間才能完成的活動。</span><span class="sxs-lookup"><span data-stu-id="34308-117">In some cases, workflows may contain activities that take a relatively long period of time to complete.</span></span> <span data-ttu-id="34308-118">假設有一個處理常式，會將媒體檔案備份到 blob 儲存體中。</span><span class="sxs-lookup"><span data-stu-id="34308-118">Imagine a process that kicks off the backup of media files into blob storage.</span></span> <span data-ttu-id="34308-119">視媒體檔案的大小和數量而定，此備份程式可能需要數小時才能完成。</span><span class="sxs-lookup"><span data-stu-id="34308-119">Depending on the size and quantity of the media files, this backup process may take hours to complete.</span></span>
+<span data-ttu-id="4d166-117">在某些情況下，工作流程可能會包含需要相當長一段時間才能完成的活動。</span><span class="sxs-lookup"><span data-stu-id="4d166-117">In some cases, workflows may contain activities that take a relatively long period of time to complete.</span></span> <span data-ttu-id="4d166-118">假設有一個處理常式，會將媒體檔案備份到 blob 儲存體中。</span><span class="sxs-lookup"><span data-stu-id="4d166-118">Imagine a process that kicks off the backup of media files into blob storage.</span></span> <span data-ttu-id="4d166-119">視媒體檔案的大小和數量而定，此備份程式可能需要數小時才能完成。</span><span class="sxs-lookup"><span data-stu-id="4d166-119">Depending on the size and quantity of the media files, this backup process may take hours to complete.</span></span>
 
-<span data-ttu-id="34308-120">在此案例中，`DurableOrchestrationClient` 檢查執行中工作流程狀態的功能會變得很有用。</span><span class="sxs-lookup"><span data-stu-id="34308-120">In this scenario, the `DurableOrchestrationClient`'s ability to check the status of a running workflow becomes useful.</span></span> <span data-ttu-id="34308-121">當使用 `HttpTrigger` 來啟動工作流程時，`CreateCheckStatusResponse` 方法可以用來傳回 `HttpResponseMessage` 的實例。</span><span class="sxs-lookup"><span data-stu-id="34308-121">When using an `HttpTrigger` to start a workflow, the `CreateCheckStatusResponse` method can be used to return an instance of `HttpResponseMessage`.</span></span> <span data-ttu-id="34308-122">此回應會在承載中提供具有 URI 的用戶端，可用來檢查執行中進程的狀態。</span><span class="sxs-lookup"><span data-stu-id="34308-122">This response provides the client with a URI in the payload that can be used to check the status of the running process.</span></span>
+<span data-ttu-id="4d166-120">在此案例中，`DurableOrchestrationClient` 檢查執行中工作流程狀態的功能會變得很有用。</span><span class="sxs-lookup"><span data-stu-id="4d166-120">In this scenario, the `DurableOrchestrationClient`'s ability to check the status of a running workflow becomes useful.</span></span> <span data-ttu-id="4d166-121">當使用 `HttpTrigger` 來啟動工作流程時，`CreateCheckStatusResponse` 方法可以用來傳回 `HttpResponseMessage` 的實例。</span><span class="sxs-lookup"><span data-stu-id="4d166-121">When using an `HttpTrigger` to start a workflow, the `CreateCheckStatusResponse` method can be used to return an instance of `HttpResponseMessage`.</span></span> <span data-ttu-id="4d166-122">此回應會在承載中提供具有 URI 的用戶端，可用來檢查執行中進程的狀態。</span><span class="sxs-lookup"><span data-stu-id="4d166-122">This response provides the client with a URI in the payload that can be used to check the status of the running process.</span></span>
 
 ```csharp
 [FunctionName("OrderWorkflow")]
@@ -76,7 +76,7 @@ public static async Task<HttpResponseMessage> Run(
 }
 ```
 
-<span data-ttu-id="34308-123">下面的範例結果顯示回應承載的結構。</span><span class="sxs-lookup"><span data-stu-id="34308-123">The sample result below shows the structure of the response payload.</span></span>
+<span data-ttu-id="4d166-123">下面的範例結果顯示回應承載的結構。</span><span class="sxs-lookup"><span data-stu-id="4d166-123">The sample result below shows the structure of the response payload.</span></span>
 
 ```json
 {
@@ -87,7 +87,7 @@ public static async Task<HttpResponseMessage> Run(
 }
 ```
 
-<span data-ttu-id="34308-124">使用您慣用的 HTTP 用戶端時，可以對 statusQueryGetUri 中的 URI 提出 GET 要求，以檢查執行中工作流程的狀態。</span><span class="sxs-lookup"><span data-stu-id="34308-124">Using your preferred HTTP client, GET requests can be made to the URI in statusQueryGetUri to inspect the status of the running workflow.</span></span> <span data-ttu-id="34308-125">傳回的狀態回應應如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="34308-125">The returned status response should resemble the following code.</span></span>
+<span data-ttu-id="4d166-124">使用您慣用的 HTTP 用戶端時，可以對 statusQueryGetUri 中的 URI 提出 GET 要求，以檢查執行中工作流程的狀態。</span><span class="sxs-lookup"><span data-stu-id="4d166-124">Using your preferred HTTP client, GET requests can be made to the URI in statusQueryGetUri to inspect the status of the running workflow.</span></span> <span data-ttu-id="4d166-125">傳回的狀態回應應如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="4d166-125">The returned status response should resemble the following code.</span></span>
 
 ```json
 {
@@ -101,13 +101,13 @@ public static async Task<HttpResponseMessage> Run(
 }
 ```
 
-<span data-ttu-id="34308-126">當程式繼續進行時，狀態回應會變更為 [**失敗**] 或 [**已完成**]。</span><span class="sxs-lookup"><span data-stu-id="34308-126">As the process continues, the status response will change to either **Failed** or **Completed**.</span></span> <span data-ttu-id="34308-127">成功完成時，裝載中的**輸出**屬性會包含任何傳回的資料。</span><span class="sxs-lookup"><span data-stu-id="34308-127">On successful completion, the **output** property in the payload will contain any returned data.</span></span>
+<span data-ttu-id="4d166-126">當程式繼續進行時，狀態回應會變更為 [**失敗**] 或 [**已完成**]。</span><span class="sxs-lookup"><span data-stu-id="4d166-126">As the process continues, the status response will change to either **Failed** or **Completed**.</span></span> <span data-ttu-id="4d166-127">成功完成時，裝載中的**輸出**屬性會包含任何傳回的資料。</span><span class="sxs-lookup"><span data-stu-id="4d166-127">On successful completion, the **output** property in the payload will contain any returned data.</span></span>
 
-## <a name="monitoring"></a><span data-ttu-id="34308-128">監視</span><span class="sxs-lookup"><span data-stu-id="34308-128">Monitoring</span></span>
+## <a name="monitoring"></a><span data-ttu-id="4d166-128">監視</span><span class="sxs-lookup"><span data-stu-id="4d166-128">Monitoring</span></span>
 
-<span data-ttu-id="34308-129">針對簡單的週期性工作，Azure Functions 提供可根據 CRON 運算式排程的 `TimerTrigger`。</span><span class="sxs-lookup"><span data-stu-id="34308-129">For simple recurring tasks, Azure Functions provides the `TimerTrigger` that can be scheduled based on a CRON expression.</span></span> <span data-ttu-id="34308-130">計時器適用于簡單、短期的工作，但在某些情況下，也可能需要更具彈性的排程。</span><span class="sxs-lookup"><span data-stu-id="34308-130">The timer works well for simple, short-lived tasks, but there might be scenarios where more flexible scheduling is needed.</span></span> <span data-ttu-id="34308-131">此案例是監視模式和 Durable Functions 可提供協助的時機。</span><span class="sxs-lookup"><span data-stu-id="34308-131">This scenario is when the monitoring pattern and Durable Functions can help.</span></span>
+<span data-ttu-id="4d166-129">針對簡單的週期性工作，Azure Functions 提供可根據 CRON 運算式排程的 `TimerTrigger`。</span><span class="sxs-lookup"><span data-stu-id="4d166-129">For simple recurring tasks, Azure Functions provides the `TimerTrigger` that can be scheduled based on a CRON expression.</span></span> <span data-ttu-id="4d166-130">計時器適用于簡單、短期的工作，但在某些情況下，也可能需要更具彈性的排程。</span><span class="sxs-lookup"><span data-stu-id="4d166-130">The timer works well for simple, short-lived tasks, but there might be scenarios where more flexible scheduling is needed.</span></span> <span data-ttu-id="4d166-131">此案例是監視模式和 Durable Functions 可提供協助的時機。</span><span class="sxs-lookup"><span data-stu-id="4d166-131">This scenario is when the monitoring pattern and Durable Functions can help.</span></span>
 
-<span data-ttu-id="34308-132">Durable Functions 可提供彈性的排程間隔、存留期管理，以及從單一協調流程功能建立多個監視器進程。</span><span class="sxs-lookup"><span data-stu-id="34308-132">Durable Functions allows for flexible scheduling intervals, lifetime management, and the creation of multiple monitor processes from a single orchestration function.</span></span> <span data-ttu-id="34308-133">這項功能的其中一個使用案例，可能是建立在符合特定閾值後才會完成的股票價格變更監看員。</span><span class="sxs-lookup"><span data-stu-id="34308-133">One use case for this functionality might be to create watchers for stock price changes that complete once a certain threshold is met.</span></span>
+<span data-ttu-id="4d166-132">Durable Functions 可提供彈性的排程間隔、存留期管理，以及從單一協調流程功能建立多個監視器進程。</span><span class="sxs-lookup"><span data-stu-id="4d166-132">Durable Functions allows for flexible scheduling intervals, lifetime management, and the creation of multiple monitor processes from a single orchestration function.</span></span> <span data-ttu-id="4d166-133">這項功能的其中一個使用案例，可能是建立在符合特定閾值後才會完成的股票價格變更監看員。</span><span class="sxs-lookup"><span data-stu-id="4d166-133">One use case for this functionality might be to create watchers for stock price changes that complete once a certain threshold is met.</span></span>
 
 ```csharp
 [FunctionName("CheckStockPrice")]
@@ -149,14 +149,14 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-<span data-ttu-id="34308-134">`DurableOrchestrationContext` 的 `CreateTimer` 方法會設定下一個叫用迴圈的排程，以檢查股票價格變更。</span><span class="sxs-lookup"><span data-stu-id="34308-134">`DurableOrchestrationContext`'s `CreateTimer` method sets up the schedule for the next invocation of the loop to check for stock price changes.</span></span> <span data-ttu-id="34308-135">`DurableOrchestrationContext` 也具有 `CurrentUtcDateTime` 屬性，可取得 UTC 格式的目前日期時間值。</span><span class="sxs-lookup"><span data-stu-id="34308-135">`DurableOrchestrationContext` also has a `CurrentUtcDateTime` property to get the current DateTime value in UTC.</span></span> <span data-ttu-id="34308-136">最好是使用這個屬性，而不是 `DateTime.UtcNow`，因為它很容易模擬以進行測試。</span><span class="sxs-lookup"><span data-stu-id="34308-136">It's better to use this property instead of `DateTime.UtcNow` because it's easily mocked for testing.</span></span>
+<span data-ttu-id="4d166-134">`DurableOrchestrationContext` 的 `CreateTimer` 方法會設定下一個叫用迴圈的排程，以檢查股票價格變更。</span><span class="sxs-lookup"><span data-stu-id="4d166-134">`DurableOrchestrationContext`'s `CreateTimer` method sets up the schedule for the next invocation of the loop to check for stock price changes.</span></span> <span data-ttu-id="4d166-135">`DurableOrchestrationContext` 也具有 `CurrentUtcDateTime` 屬性，可取得 UTC 格式的目前日期時間值。</span><span class="sxs-lookup"><span data-stu-id="4d166-135">`DurableOrchestrationContext` also has a `CurrentUtcDateTime` property to get the current DateTime value in UTC.</span></span> <span data-ttu-id="4d166-136">最好是使用這個屬性，而不是 `DateTime.UtcNow`，因為它很容易模擬以進行測試。</span><span class="sxs-lookup"><span data-stu-id="4d166-136">It's better to use this property instead of `DateTime.UtcNow` because it's easily mocked for testing.</span></span>
 
-## <a name="recommended-resources"></a><span data-ttu-id="34308-137">建議的資源</span><span class="sxs-lookup"><span data-stu-id="34308-137">Recommended resources</span></span>
+## <a name="recommended-resources"></a><span data-ttu-id="4d166-137">建議的資源</span><span class="sxs-lookup"><span data-stu-id="4d166-137">Recommended resources</span></span>
 
-- [<span data-ttu-id="34308-138">Azure Durable Functions</span><span class="sxs-lookup"><span data-stu-id="34308-138">Azure Durable Functions</span></span>](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-- [<span data-ttu-id="34308-139">.NET Core 與 .NET Standard 中的單元測試</span><span class="sxs-lookup"><span data-stu-id="34308-139">Unit Testing in .NET Core and .NET Standard</span></span>](../../core/testing/index.md)
+- [<span data-ttu-id="4d166-138">Azure Durable Functions</span><span class="sxs-lookup"><span data-stu-id="4d166-138">Azure Durable Functions</span></span>](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
+- [<span data-ttu-id="4d166-139">.NET Core 與 .NET Standard 中的單元測試</span><span class="sxs-lookup"><span data-stu-id="4d166-139">Unit Testing in .NET Core and .NET Standard</span></span>](../../core/testing/index.md)
 
 >[!div class="step-by-step"]
-><span data-ttu-id="34308-140">[上一頁](durable-azure-functions.md)
->[下一頁](serverless-business-scenarios.md)</span><span class="sxs-lookup"><span data-stu-id="34308-140">[Previous](durable-azure-functions.md)
+><span data-ttu-id="4d166-140">[上一頁](durable-azure-functions.md)
+>[下一頁](serverless-business-scenarios.md)</span><span class="sxs-lookup"><span data-stu-id="4d166-140">[Previous](durable-azure-functions.md)
 [Next](serverless-business-scenarios.md)</span></span>
