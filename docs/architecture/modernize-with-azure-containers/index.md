@@ -3,10 +3,10 @@ title: 利用 Azure 雲端服務及 Windows 容器將現有的 .NET 應用程式
 description: 了解如何利用這本電子書，將現有的應用程式原形移轉到 Azure 雲端及容器並加以現代化。
 ms.date: 04/28/2018
 ms.openlocfilehash: 67b1c7743697832684e96225e3d365da625ce6a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "73089760"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>利用 Azure 雲端服務及 Windows 容器將現有的 .NET 應用程式現代化 (第 2 版)

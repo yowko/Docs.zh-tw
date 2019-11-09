@@ -3,10 +3,10 @@ title: 雲端原生應用程式呢？
 description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |那麼，雲端原生應用程式呢？
 ms.date: 04/28/2018
 ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "72318416"
 ---
 # <a name="what-about-cloud-native-applications"></a>雲端原生應用程式呢？

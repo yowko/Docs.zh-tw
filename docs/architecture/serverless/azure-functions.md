@@ -5,10 +5,10 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 5e8187b3752a0f0d0bcf8e15f2ce440dc5a64e45
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "72522875"
 ---
 # <a name="azure-functions"></a>Azure Functions
@@ -169,11 +169,11 @@ Proxy 會儲存為 JSON 定義。 請看以下範例：
 }
 ```
 
-@No__t_0 proxy 會採用縮短的路由，並將其對應至較長的函式資源。 轉換看起來像這樣：
+`Domain Redirect` proxy 會採用縮短的路由，並將其對應至較長的函式資源。 轉換看起來像這樣：
 
 `https://--shorturl--/123` -> `https://--longurl--.azurewebsites.net/api/UrlRedirect/123`
 
-@No__t_0 proxy 會接受傳送至根 URL （`https://--shorturl--/`）的任何專案，並將其重新導向至檔網站。
+`Root` proxy 會接受傳送至根 URL （`https://--shorturl--/`）的任何專案，並將其重新導向至檔網站。
 
 如需使用 proxy 的範例，請觀看[Azure：使用無伺服器將您的應用程式帶入雲端 Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102)。 在本機 SQL Server 上執行的 ASP.NET Core 應用程式會即時移轉至 Azure 雲端。 Proxy 是用來協助重構傳統的 Web API 專案以使用函式。
 

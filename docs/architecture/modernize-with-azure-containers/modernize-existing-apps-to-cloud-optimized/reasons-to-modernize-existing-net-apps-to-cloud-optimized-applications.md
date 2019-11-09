@@ -3,10 +3,10 @@ title: 將現有 .NET 應用程式現代化為雲端優化應用程式的原因
 description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |將現有 .NET 應用程式現代化為雲端優化應用程式的原因
 ms.date: 04/28/2018
 ms.openlocfilehash: 55eb3fb9b0b6c91e25bcdb23056a8a8e51463ef7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "73093625"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>將現有 .NET 應用程式現代化為雲端優化應用程式的原因

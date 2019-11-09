@@ -5,10 +5,10 @@ author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 2c0ad086640409ac187c3aa882add4d6b39b6ff9
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "72522858"
 ---
 # <a name="durable-azure-functions"></a>永久的 Azure 函式
@@ -77,7 +77,7 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 
 活動函式是離散作業，會在協調流程函數內一起撰寫以建立工作流程。 以下是大部分實際工作發生的地方。 它們代表商務邏輯、長時間執行的程式，以及更大的解決方案的拼圖片段。
 
-@No__t_0 可用來標注 `DurableActivityContext` 類型的函數參數。 使用批註會通知執行時間函式要當做活動函數使用。 使用 `DurableActivityContext` 參數的 `GetInput<T>` 方法來抓取活動函式的輸入值。
+`ActivityTriggerAttribute` 可用來標注 `DurableActivityContext`類型的函數參數。 使用批註會通知執行時間函式要當做活動函數使用。 使用 `DurableActivityContext` 參數的 `GetInput<T>` 方法來抓取活動函式的輸入值。
 
 與協調流程函式類似，活動函式的傳回類型必須是 void、Task 或 JSON 可序列化的值。
 

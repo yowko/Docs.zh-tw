@@ -3,10 +3,10 @@ title: 將您的關係資料庫移轉至 azure
 description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |將您的關係資料庫移轉至 azure
 ms.date: 04/28/2018
 ms.openlocfilehash: efd1548c3f74fc27450f4949d71a1c4d61907ba5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "73093620"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>將您的關係資料庫移轉至 azure
