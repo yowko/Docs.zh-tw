@@ -1,242 +1,243 @@
 - name: 移轉指南
   href: index.md
-- name: 應用程式相容性
-  href: application-compatibility.md
+- name: 相容性
   items:
-    - name: 執行階段變更
+    - name: 應用程式相容性
       items:
-        - name: 4.0 至 4.5
-          href: runtime/4.0-4.5.md
-        - name: 4.0 至 4.5.1
-          href: runtime/4.0-4.5.1.md
-        - name: 4.0 至 4.5.2
-          href: runtime/4.0-4.5.2.md
-        - name: 4.0 至 4.6
-          href: runtime/4.0-4.6.md
-        - name: 4.0 至 4.6.1
-          href: runtime/4.0-4.6.1.md
-        - name: 4.0 至 4.6.2
-          href: runtime/4.0-4.6.2.md
-        - name: 4.0 至 4.7
-          href: runtime/4.0-4.7.md
-        - name: 4.0 至 4.7.1
-          href: runtime/4.0-4.7.1.md
-        - name: 4.0 至 4.7.2
-          href: runtime/4.0-4.7.2.md
-        - name: 4.0 至 4.8
-          href: runtime/4.0-4.8.md
-        - name: 4.5 至 4.5.1
-          href: runtime/4.5-4.5.1.md
-        - name: 4.5 至 4.5.2
-          href: runtime/4.5-4.5.2.md
-        - name: 4.5 至 4.6
-          href: runtime/4.5-4.6.md
-        - name: 4.5 至 4.6.1
-          href: runtime/4.5-4.6.1.md
-        - name: 4.5 至 4.6.2
-          href: runtime/4.5-4.6.2.md
-        - name: 4.5 至 4.7
-          href: runtime/4.5-4.7.md
-        - name: 4.5 至 4.7.1
-          href: runtime/4.5-4.7.1.md
-        - name: 4.5 至 4.7.2
-          href: runtime/4.5-4.7.2.md
-        - name: 4.5 至 4.8
-          href: runtime/4.5-4.8.md
-        - name: 4.5.1 至 4.5.2
-          href: runtime/4.5.1-4.5.2.md
-        - name: 4.5.1 至 4.6
-          href: runtime/4.5.1-4.6.md
-        - name: 4.5.1 至 4.6.1
-          href: runtime/4.5.1-4.6.1.md
-        - name: 4.5.1 至 4.6.2
-          href: runtime/4.5.1-4.6.2.md
-        - name: 4.5.1 至 4.7
-          href: runtime/4.5.1-4.7.md
-        - name: 4.5.1 至 4.7.1
-          href: runtime/4.5.1-4.7.1.md
-        - name: 4.5.1 至 4.7.2
-          href: runtime/4.5.1-4.7.2.md
-        - name: 4.5.1 至 4.8
-          href: runtime/4.5.1-4.8.md
-        - name: 4.5.2 至 4.6
-          href: runtime/4.5.2-4.6.md
-        - name: 4.5.2 至 4.6.1
-          href: runtime/4.5.2-4.6.1.md
-        - name: 4.5.2 至 4.6.2
-          href: runtime/4.5.2-4.6.2.md
-        - name: 4.5.2 至 4.7
-          href: runtime/4.5.2-4.7.md
-        - name: 4.5.2 至 4.7.1
-          href: runtime/4.5.2-4.7.1.md
-        - name: 4.5.2 至 4.7.2
-          href: runtime/4.5.2-4.7.2.md
-        - name: 4.5.2 至 4.8
-          href: runtime/4.5.2-4.8.md
-        - name: 4.6 至 4.6.1
-          href: runtime/4.6-4.6.1.md
-        - name: 4.6 至 4.6.2
-          href: runtime/4.6-4.6.2.md
-        - name: 4.6 至 4.7
-          href: runtime/4.6-4.7.md
-        - name: 4.6 至 4.7.1
-          href: runtime/4.6-4.7.1.md
-        - name: 4.6 至 4.7.2
-          href: runtime/4.6-4.7.2.md
-        - name: 4.6 至 4.8
-          href: runtime/4.6-4.8.md
-        - name: 4.6.1 至 4.6.2
-          href: runtime/4.6.1-4.6.2.md
-        - name: 4.6.1 至 4.7
-          href: runtime/4.6.1-4.7.md
-        - name: 4.6.1 至 4.7.1
-          href: runtime/4.6.1-4.7.1.md
-        - name: 4.6.1 至 4.7.2
-          href: runtime/4.6.1-4.7.2.md
-        - name: 4.6.1 至 4.8
-          href: runtime/4.6.1-4.8.md
-        - name: 4.6.2 至 4.7
-          href: runtime/4.6.2-4.7.md
-        - name: 4.6.2 至 4.7.1
-          href: runtime/4.6.2-4.7.1.md
-        - name: 4.6.2 至 4.7.2
-          href: runtime/4.6.2-4.7.2.md
-        - name: 4.6.2 至 4.8
-          href: runtime/4.6.2-4.8.md
-        - name: 4.7 至 4.7.1
-          href: runtime/4.7-4.7.1.md
-        - name: 4.7 至 4.7.2
-          href: runtime/4.7-4.7.2.md
-        - name: 4.7 至 4.8
-          href: runtime/4.7-4.8.md
-        - name: 4.7.1 至 4.7.2
-          href: runtime/4.7.1-4.7.2.md
-        - name: 4.7.1 至 4.8
-          href: runtime/4.7.1-4.8.md
-        - name: 4.7.2 至 4.8
-          href: runtime/4.7.2-4.8.md
-    - name: 重定目標變更
-      items:
-        - name: 4.0 至 4.5
-          href: retargeting/4.0-4.5.md
-        - name: 4.0 至 4.5.1
-          href: retargeting/4.0-4.5.1.md
-        - name: 4.0 至 4.5.2
-          href: retargeting/4.0-4.5.2.md
-        - name: 4.0 至 4.6
-          href: retargeting/4.0-4.6.md
-        - name: 4.0 至 4.6.1
-          href: retargeting/4.0-4.6.1.md
-        - name: 4.0 至 4.6.2
-          href: retargeting/4.0-4.6.2.md
-        - name: 4.0 至 4.7
-          href: retargeting/4.0-4.7.md
-        - name: 4.0 至 4.7.1
-          href: retargeting/4.0-4.7.1.md
-        - name: 4.0 至 4.7.2
-          href: retargeting/4.0-4.7.2.md
-        - name: 4.0 至 4.8
-          href: retargeting/4.0-4.8.md
-        - name: 4.5 至 4.5.1
-          href: retargeting/4.5-4.5.1.md
-        - name: 4.5 至 4.5.2
-          href: retargeting/4.5-4.5.2.md
-        - name: 4.5 至 4.6
-          href: retargeting/4.5-4.6.md
-        - name: 4.5 至 4.6.1
-          href: retargeting/4.5-4.6.1.md
-        - name: 4.5 至 4.6.2
-          href: retargeting/4.5-4.6.2.md
-        - name: 4.5 至 4.7
-          href: retargeting/4.5-4.7.md
-        - name: 4.5 至 4.7.1
-          href: retargeting/4.5-4.7.1.md
-        - name: 4.5 至 4.7.2
-          href: retargeting/4.5-4.7.2.md
-        - name: 4.5 至 4.8
-          href: retargeting/4.5-4.8.md
-        - name: 4.5.1 至 4.5.2
-          href: retargeting/4.5.1-4.5.2.md
-        - name: 4.5.1 至 4.6
-          href: retargeting/4.5.1-4.6.md
-        - name: 4.5.1 至 4.6.1
-          href: retargeting/4.5.1-4.6.1.md
-        - name: 4.5.1 至 4.6.2
-          href: retargeting/4.5.1-4.6.2.md
-        - name: 4.5.1 至 4.7
-          href: retargeting/4.5.1-4.7.md
-        - name: 4.5.1 至 4.7.1
-          href: retargeting/4.5.1-4.7.1.md
-        - name: 4.5.1 至 4.7.2
-          href: retargeting/4.5.1-4.7.2.md
-        - name: 4.5.2 至 4.6
-          href: retargeting/4.5.2-4.6.md
-        - name: 4.5.2 至 4.6.1
-          href: retargeting/4.5.2-4.6.1.md
-        - name: 4.5.2 至 4.6.2
-          href: retargeting/4.5.2-4.6.2.md
-        - name: 4.5.2 至 4.7
-          href: retargeting/4.5.2-4.7.md
-        - name: 4.5.2 至 4.7.1
-          href: retargeting/4.5.2-4.7.1.md
-        - name: 4.5.2 至 4.7.2
-          href: retargeting/4.5.2-4.7.2.md
-        - name: 4.5.2 至 4.8
-          href: retargeting/4.5.2-4.8.md
-        - name: 4.6 至 4.6.1
-          href: retargeting/4.6-4.6.1.md
-        - name: 4.6 至 4.6.2
-          href: retargeting/4.6-4.6.2.md
-        - name: 4.6 至 4.7
-          href: retargeting/4.6-4.7.md
-        - name: 4.6 至 4.7.1
-          href: retargeting/4.6-4.7.1.md
-        - name: 4.6 至 4.7.2
-          href: retargeting/4.6-4.7.2.md
-        - name: 4.6 至 4.8
-          href: retargeting/4.6-4.8.md
-        - name: 4.6.1 至 4.6.2
-          href: retargeting/4.6.1-4.6.2.md
-        - name: 4.6.1 至 4.7
-          href: retargeting/4.6.1-4.7.md
-        - name: 4.6.1 至 4.7.1
-          href: retargeting/4.6.1-4.7.1.md
-        - name: 4.6.1 至 4.7.2
-          href: retargeting/4.6.1-4.7.2.md
-        - name: 4.6.1 至 4.8
-          href: retargeting/4.6.1-4.8.md
-        - name: 4.6.2 至 4.7
-          href: retargeting/4.6.2-4.7.md
-        - name: 4.6.2 至 4.7.1
-          href: retargeting/4.6.2-4.7.1.md
-        - name: 4.6.2 至 4.7.2
-          href: retargeting/4.6.2-4.7.2.md
-        - name: 4.6.2 至 4.8
-          href: retargeting/4.6.2-4.8.md
-        - name: 4.7 至 4.7.1
-          href: retargeting/4.7-4.7.1.md
-        - name: 4.7 至 4.7.2
-          href: retargeting/4.7-4.7.2.md
-        - name: 4.7 至 4.8
-          href: retargeting/4.7-4.8.md
-        - name: 4.7.1 至 4.7.2
-          href: retargeting/4.7.1-4.7.2.md
-        - name: 4.7.1 至 4.8
-          href: retargeting/4.7.1-4.8.md
-        - name: 4.7.2 至 4.8
-          href: retargeting/4.7.2-4.8.md
-- name: 版本相容性
-  href: version-compatibility.md
-- name: 版本
+        - name: 總覽
+          displayName: App compatibility
+          href: application-compatibility.md
+        - name: 執行階段變更
+          items:
+            - name: 4.0 至 4.5
+              href: runtime/4.0-4.5.md
+            - name: 4.0 至 4.5.1
+              href: runtime/4.0-4.5.1.md
+            - name: 4.0 至 4.5.2
+              href: runtime/4.0-4.5.2.md
+            - name: 4.0 至 4.6
+              href: runtime/4.0-4.6.md
+            - name: 4.0 至 4.6.1
+              href: runtime/4.0-4.6.1.md
+            - name: 4.0 至 4.6.2
+              href: runtime/4.0-4.6.2.md
+            - name: 4.0 至 4.7
+              href: runtime/4.0-4.7.md
+            - name: 4.0 至 4.7.1
+              href: runtime/4.0-4.7.1.md
+            - name: 4.0 至 4.7.2
+              href: runtime/4.0-4.7.2.md
+            - name: 4.0 至 4.8
+              href: runtime/4.0-4.8.md
+            - name: 4.5 至 4.5.1
+              href: runtime/4.5-4.5.1.md
+            - name: 4.5 至 4.5.2
+              href: runtime/4.5-4.5.2.md
+            - name: 4.5 至 4.6
+              href: runtime/4.5-4.6.md
+            - name: 4.5 至 4.6.1
+              href: runtime/4.5-4.6.1.md
+            - name: 4.5 至 4.6.2
+              href: runtime/4.5-4.6.2.md
+            - name: 4.5 至 4.7
+              href: runtime/4.5-4.7.md
+            - name: 4.5 至 4.7.1
+              href: runtime/4.5-4.7.1.md
+            - name: 4.5 至 4.7.2
+              href: runtime/4.5-4.7.2.md
+            - name: 4.5 至 4.8
+              href: runtime/4.5-4.8.md
+            - name: 4.5.1 至 4.5.2
+              href: runtime/4.5.1-4.5.2.md
+            - name: 4.5.1 至 4.6
+              href: runtime/4.5.1-4.6.md
+            - name: 4.5.1 至 4.6.1
+              href: runtime/4.5.1-4.6.1.md
+            - name: 4.5.1 至 4.6.2
+              href: runtime/4.5.1-4.6.2.md
+            - name: 4.5.1 至 4.7
+              href: runtime/4.5.1-4.7.md
+            - name: 4.5.1 至 4.7.1
+              href: runtime/4.5.1-4.7.1.md
+            - name: 4.5.1 至 4.7.2
+              href: runtime/4.5.1-4.7.2.md
+            - name: 4.5.1 至 4.8
+              href: runtime/4.5.1-4.8.md
+            - name: 4.5.2 至 4.6
+              href: runtime/4.5.2-4.6.md
+            - name: 4.5.2 至 4.6.1
+              href: runtime/4.5.2-4.6.1.md
+            - name: 4.5.2 至 4.6.2
+              href: runtime/4.5.2-4.6.2.md
+            - name: 4.5.2 至 4.7
+              href: runtime/4.5.2-4.7.md
+            - name: 4.5.2 至 4.7.1
+              href: runtime/4.5.2-4.7.1.md
+            - name: 4.5.2 至 4.7.2
+              href: runtime/4.5.2-4.7.2.md
+            - name: 4.5.2 至 4.8
+              href: runtime/4.5.2-4.8.md
+            - name: 4.6 至 4.6.1
+              href: runtime/4.6-4.6.1.md
+            - name: 4.6 至 4.6.2
+              href: runtime/4.6-4.6.2.md
+            - name: 4.6 至 4.7
+              href: runtime/4.6-4.7.md
+            - name: 4.6 至 4.7.1
+              href: runtime/4.6-4.7.1.md
+            - name: 4.6 至 4.7.2
+              href: runtime/4.6-4.7.2.md
+            - name: 4.6 至 4.8
+              href: runtime/4.6-4.8.md
+            - name: 4.6.1 至 4.6.2
+              href: runtime/4.6.1-4.6.2.md
+            - name: 4.6.1 至 4.7
+              href: runtime/4.6.1-4.7.md
+            - name: 4.6.1 至 4.7.1
+              href: runtime/4.6.1-4.7.1.md
+            - name: 4.6.1 至 4.7.2
+              href: runtime/4.6.1-4.7.2.md
+            - name: 4.6.1 至 4.8
+              href: runtime/4.6.1-4.8.md
+            - name: 4.6.2 至 4.7
+              href: runtime/4.6.2-4.7.md
+            - name: 4.6.2 至 4.7.1
+              href: runtime/4.6.2-4.7.1.md
+            - name: 4.6.2 至 4.7.2
+              href: runtime/4.6.2-4.7.2.md
+            - name: 4.6.2 至 4.8
+              href: runtime/4.6.2-4.8.md
+            - name: 4.7 至 4.7.1
+              href: runtime/4.7-4.7.1.md
+            - name: 4.7 至 4.7.2
+              href: runtime/4.7-4.7.2.md
+            - name: 4.7 至 4.8
+              href: runtime/4.7-4.8.md
+            - name: 4.7.1 至 4.7.2
+              href: runtime/4.7.1-4.7.2.md
+            - name: 4.7.1 至 4.8
+              href: runtime/4.7.1-4.8.md
+            - name: 4.7.2 至 4.8
+              href: runtime/4.7.2-4.8.md
+        - name: 重定目標變更
+          items:
+            - name: 4.0 至 4.5
+              href: retargeting/4.0-4.5.md
+            - name: 4.0 至 4.5.1
+              href: retargeting/4.0-4.5.1.md
+            - name: 4.0 至 4.5.2
+              href: retargeting/4.0-4.5.2.md
+            - name: 4.0 至 4.6
+              href: retargeting/4.0-4.6.md
+            - name: 4.0 至 4.6.1
+              href: retargeting/4.0-4.6.1.md
+            - name: 4.0 至 4.6.2
+              href: retargeting/4.0-4.6.2.md
+            - name: 4.0 至 4.7
+              href: retargeting/4.0-4.7.md
+            - name: 4.0 至 4.7.1
+              href: retargeting/4.0-4.7.1.md
+            - name: 4.0 至 4.7.2
+              href: retargeting/4.0-4.7.2.md
+            - name: 4.0 至 4.8
+              href: retargeting/4.0-4.8.md
+            - name: 4.5 至 4.5.1
+              href: retargeting/4.5-4.5.1.md
+            - name: 4.5 至 4.5.2
+              href: retargeting/4.5-4.5.2.md
+            - name: 4.5 至 4.6
+              href: retargeting/4.5-4.6.md
+            - name: 4.5 至 4.6.1
+              href: retargeting/4.5-4.6.1.md
+            - name: 4.5 至 4.6.2
+              href: retargeting/4.5-4.6.2.md
+            - name: 4.5 至 4.7
+              href: retargeting/4.5-4.7.md
+            - name: 4.5 至 4.7.1
+              href: retargeting/4.5-4.7.1.md
+            - name: 4.5 至 4.7.2
+              href: retargeting/4.5-4.7.2.md
+            - name: 4.5 至 4.8
+              href: retargeting/4.5-4.8.md
+            - name: 4.5.1 至 4.5.2
+              href: retargeting/4.5.1-4.5.2.md
+            - name: 4.5.1 至 4.6
+              href: retargeting/4.5.1-4.6.md
+            - name: 4.5.1 至 4.6.1
+              href: retargeting/4.5.1-4.6.1.md
+            - name: 4.5.1 至 4.6.2
+              href: retargeting/4.5.1-4.6.2.md
+            - name: 4.5.1 至 4.7
+              href: retargeting/4.5.1-4.7.md
+            - name: 4.5.1 至 4.7.1
+              href: retargeting/4.5.1-4.7.1.md
+            - name: 4.5.1 至 4.7.2
+              href: retargeting/4.5.1-4.7.2.md
+            - name: 4.5.2 至 4.6
+              href: retargeting/4.5.2-4.6.md
+            - name: 4.5.2 至 4.6.1
+              href: retargeting/4.5.2-4.6.1.md
+            - name: 4.5.2 至 4.6.2
+              href: retargeting/4.5.2-4.6.2.md
+            - name: 4.5.2 至 4.7
+              href: retargeting/4.5.2-4.7.md
+            - name: 4.5.2 至 4.7.1
+              href: retargeting/4.5.2-4.7.1.md
+            - name: 4.5.2 至 4.7.2
+              href: retargeting/4.5.2-4.7.2.md
+            - name: 4.5.2 至 4.8
+              href: retargeting/4.5.2-4.8.md
+            - name: 4.6 至 4.6.1
+              href: retargeting/4.6-4.6.1.md
+            - name: 4.6 至 4.6.2
+              href: retargeting/4.6-4.6.2.md
+            - name: 4.6 至 4.7
+              href: retargeting/4.6-4.7.md
+            - name: 4.6 至 4.7.1
+              href: retargeting/4.6-4.7.1.md
+            - name: 4.6 至 4.7.2
+              href: retargeting/4.6-4.7.2.md
+            - name: 4.6 至 4.8
+              href: retargeting/4.6-4.8.md
+            - name: 4.6.1 至 4.6.2
+              href: retargeting/4.6.1-4.6.2.md
+            - name: 4.6.1 至 4.7
+              href: retargeting/4.6.1-4.7.md
+            - name: 4.6.1 至 4.7.1
+              href: retargeting/4.6.1-4.7.1.md
+            - name: 4.6.1 至 4.7.2
+              href: retargeting/4.6.1-4.7.2.md
+            - name: 4.6.1 至 4.8
+              href: retargeting/4.6.1-4.8.md
+            - name: 4.6.2 至 4.7
+              href: retargeting/4.6.2-4.7.md
+            - name: 4.6.2 至 4.7.1
+              href: retargeting/4.6.2-4.7.1.md
+            - name: 4.6.2 至 4.7.2
+              href: retargeting/4.6.2-4.7.2.md
+            - name: 4.6.2 至 4.8
+              href: retargeting/4.6.2-4.8.md
+            - name: 4.7 至 4.7.1
+              href: retargeting/4.7-4.7.1.md
+            - name: 4.7 至 4.7.2
+              href: retargeting/4.7-4.7.2.md
+            - name: 4.7 至 4.8
+              href: retargeting/4.7-4.8.md
+            - name: 4.7.1 至 4.7.2
+              href: retargeting/4.7.1-4.7.2.md
+            - name: 4.7.1 至 4.8
+              href: retargeting/4.7.1-4.8.md
+            - name: 4.7.2 至 4.8
+              href: retargeting/4.7.2-4.8.md
+    - name: 版本相容性
+      href: version-compatibility.md
+- name: .NET Framewor 版本
   items:
     - name: 版本和相依性
       href: versions-and-dependencies.md
-    - name: 判斷安裝的 .NET Framework 版本
+    - name: 尋找已安裝的版本
       href: how-to-determine-which-versions-are-installed.md
-      items:
-        - name: .NET Framework 版本的最低 Release DWORD 值
-          href: minimum-release-dword.md
-    - name: 判斷已安裝哪些 .NET Framework 更新
+    - name: 尋找已安裝的更新
       href: how-to-determine-which-net-framework-updates-are-installed.md
 - name: 設定應用程式支援 .NET Framework 4 或更新版本
   href: how-to-configure-an-app-to-support-net-framework-4-or-4-5.md
