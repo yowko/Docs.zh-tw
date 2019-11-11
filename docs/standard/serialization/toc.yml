@@ -7,6 +7,8 @@
           href: system-text-json-overview.md
         - name: 如何將 JSON 序列化及還原序列化
           href: system-text-json-how-to.md
+        - name: 如何撰寫自訂轉換器
+          href: system-text-json-converters-how-to.md
     - name: 二進位序列化
       href: binary-serialization.md
       items:
