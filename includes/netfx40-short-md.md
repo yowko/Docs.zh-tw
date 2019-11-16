@@ -1,9 +1,0 @@
----
-ms.openlocfilehash: 9d80a8100153facfbd2b48d87e4be0cea5ff7fb4
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "65637240"
----
-<span data-ttu-id="c0609-101">.NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="c0609-101">.NET Framework 4</span></span>
