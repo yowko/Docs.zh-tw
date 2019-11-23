@@ -1,14 +1,13 @@
 ---
 title: 通道認證-適用于 WCF 開發人員的 gRPC
 description: 如何在 ASP.NET Core 3.0 中執行和使用 gRPC 通道認證。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 61141dc4143f36f9ac511c3369c3fde668c9d703
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: b424db49337a2dc6e3d0245d36349e3f408cdf6c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846704"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967954"
 ---
 # <a name="channel-credentials"></a>通道認證
 
@@ -49,7 +48,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 ```
 
-`ClientCertificateMode.RequireCertificate` 設定會導致 Kestrel 立即拒絕未提供用戶端憑證的任何連線要求，但它不會驗證憑證。 新增 `ClientCertificateValidation` 回呼可讓 Kestrel 驗證用戶端憑證（在此案例中，確保它是由與伺服器憑證相同的*憑證授權單位*單位）在建立連線時，在 ASP.NET Core 管線之前為參與。
+`ClientCertificateMode.RequireCertificate` 設定會導致 Kestrel 立即拒絕未提供用戶端憑證的任何連線要求，但它不會驗證憑證。 新增 `ClientCertificateValidation` 回呼可讓 Kestrel 驗證用戶端憑證（在此案例中，確保它是由與伺服器憑證相同的*憑證授權單位*單位所發行），然後再執行 ASP.NET Core 管線。
 
 ### <a name="adding-aspnet-core-certificate-authentication"></a>新增 ASP.NET Core 憑證驗證
 

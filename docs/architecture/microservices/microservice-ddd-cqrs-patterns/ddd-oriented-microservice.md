@@ -11,7 +11,7 @@ ms.locfileid: "73739973"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>設計 DDD 導向微服務
 
-領域驅動設計 (DDD) 支援以與您的使用案例相關之商務實際情況建立模型。 在建置應用程式的內容中，DDD 會將問題作為領域討論。 它將獨立問題區域描述為限定內容 (每個限定內容都與一個微服務相互關聯)，並強調討論這些問題的通用語言。 它也提出了許多技術概念和模式，像是帶有豐富模型的領域實體 (無 [anemic-domain 模型](https://martinfowler.com/bliki/AnemicDomainModel.html))、值物件、彙總及彙總根 (或根實體) 規則，來支援內部實作。 本節將介紹這些內部模式的設計及實作。
+網域驅動設計 (DDD) 支援以與您的使用案例相關之商務實際情況建立模型。 在建置應用程式的內容中，DDD 會將問題作為領域討論。 它將獨立問題區域描述為限定內容 (每個限定內容都與一個微服務相互關聯)，並強調討論這些問題的通用語言。 它也提出了許多技術概念和模式，像是帶有豐富模型的領域實體 (無 [anemic-domain 模型](https://martinfowler.com/bliki/AnemicDomainModel.html))、值物件、彙總及彙總根 (或根實體) 規則，來支援內部實作。 本節將介紹這些內部模式的設計及實作。
 
 有時候這些 DDD 技術規則和模式會被認為是實作 DDD 方法時具有陡峭學習曲線的障礙。 但重要的並非模式本身，而是組織程式碼，使其能與商務問題校準，並使用相同的商務字詞 (通用語言)。 此外，只有您在使用大量商務規則實作複雜的微服務時，才應套用 DDD 方法。 較簡單的責任，例如 CRUD 服務，可使用更為簡單的方法來管理。
 
@@ -39,7 +39,7 @@ ms.locfileid: "73739973"
 
 ![顯示領域驅動設計微服務中之圖層的圖表。](./media/ddd-oriented-microservice/domain-driven-design-microservice.png)
 
-**圖 7-5**。 eShopOnContainers 訂購微服務中的 DDD 層
+**圖 7-5**. eShopOnContainers 訂購微服務中的 DDD 層
 
 訂購等 DDD 微服務中的三層。 每一層都是 VS 專案：應用程式層是 Ordering.API、領域層是 Ordering.Domain，而基礎結構層是 Ordering.Infrastructure。 您會希望將系統設計成每一個層都只會跟特定的其他層通訊。 若層是作為不同的類別程式庫實作的，這會比較容易強制執行，因為您可以清楚的識別程式庫之間設定了哪些相依性。 例如，領域模型層不應該相依於任何其他的層 (領域模型類別應為簡單的 CLR 物件 ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) 類別)。 如圖 7-6 所示，**Ordering.Domain** 層程式庫只在 .NET Core 程式庫或 NuGet 套件上具有相依性，在任何其他自訂程式庫 (例如資料程式庫或永續性程式庫) 上則不具有相依性。
 

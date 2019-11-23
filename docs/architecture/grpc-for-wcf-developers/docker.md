@@ -1,14 +1,13 @@
 ---
 title: 適用于 WCF 開發人員的 Docker gRPC
 description: 建立 ASP.NET Core gRPC 應用程式的 Docker 映射
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: cc369da9494ade532187dfc8d19a94a3a037ebab
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: a5aceb4b5270cb828965e990a62db4147012adff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846677"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967845"
 ---
 # <a name="docker"></a>Docker
 
@@ -18,14 +17,14 @@ ms.locfileid: "72846677"
 
 Microsoft 提供各種基底映射來建立和執行 .NET Core 應用程式。 若要建立 ASP.NET Core 3.0 映射，會使用兩個基底映射：用來建立及發佈應用程式的 SDK 映射，以及用於部署的執行時間映射。
 
-| Image | 描述 |
+| 影像 | 描述 |
 | ----- | ----------- |
-| [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | 用於建立具有 `docker build` 的應用程式。 不會在生產環境中使用。 |
+| [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | 用於建立具有 `docker build`的應用程式。 不會在生產環境中使用。 |
 | [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | 包含執行時間和 ASP.NET Core 相依性。 適用于生產環境。 |
 
 針對每個映射，有四個以不同 Linux 散發套件為基礎的變體，以標記區分。
 
-| 映射標記 | Linux | 備註 |
+| 映射標記 | Linux | 注意事項 |
 | --------- | ----- | ----- |
 | 3.0-buster、3。0 | Debian 10 | 如果未指定 OS variant，則為預設映射。 |
 | 3.0-alpine | Alpine 3。9 | Alpine 基底映射的大小遠低於 Debian 或 Ubuntu。 |
@@ -117,7 +116,7 @@ docker build --tag stockdata .
 
 名為 `--tag` 旗標的 confusingly （可以縮短為 `-t`）指定影像的完整名稱，*包括*實際的標記（如果有指定的話）。 結尾的 `.` 會指定要在其中執行組建的*內容*;Dockerfile 中 `COPY` 命令的目前工作目錄。
 
-如果您在單一解決方案中有多個應用程式，您可以將每個應用程式的 Dockerfile 保留在它自己的資料夾中，`.csproj` 檔案旁邊，但您仍應從基底目錄執行 `docker build` 命令，以確保解決方案和所有專案會複製到影像中。 您可以使用 `--file` （或 `-f`）旗標，在目前目錄底下指定 Dockerfile。
+如果您在單一方案中有多個應用程式，您可以將每個應用程式的 Dockerfile 保留在它自己的資料夾中（`.csproj` 檔案旁邊），但您仍應從基底目錄執行 `docker build` 命令，以確保方案和所有專案都會複製到映射中。 您可以使用 `--file` （或 `-f`）旗標，在目前目錄底下指定 Dockerfile。
 
 ```console
 docker build --tag stockdata --file src/StockData/Dockerfile .

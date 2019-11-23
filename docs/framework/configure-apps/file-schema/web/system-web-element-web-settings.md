@@ -15,11 +15,11 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699097"
 ---
-# <a name="systemweb-element-web-settings"></a>\<system. web > 元素（Web 設定）
+# <a name="systemweb-element-web-settings"></a>\<system.web > 元素（Web 設定）
 包含 ASP.NET 裝載層如何管理整個進程行為的相關資訊。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<system. web >**  
+&nbsp;&nbsp; **\<system.web >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -28,17 +28,17 @@ ms.locfileid: "71699097"
 </system.web>  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和元素  
 
-下列各節描述屬性、子項目和父項目。  
+下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
 
-無。  
+None。  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<applicationPool>](applicationpool-element-web-settings.md)|在 aspnet .config 檔案中指定 IIS 應用程式集區的配置設定。|  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71699097"
   
 ## <a name="remarks"></a>備註  
 
-@No__t-0 元素及其子 `applicationPool` 元素已加入至 .NET Framework 3.5 SP1 為止的 .NET Framework 中。 當您在整合模式中執行 IIS 7.0 或更新版本時，此元素組合可讓您設定 ASP.NET 管理執行緒的方式，以及當 ASP.NET 裝載于 IIS 應用程式集區時，如何將要求排入佇列。 如果您以傳統或 ISAPI 模式執行 IIS 7.0 或更新版本，則會忽略這些設定。  
+`system.web` 專案及其子 `applicationPool` 元素已加入至 .NET Framework 3.5 SP1 為止的 .NET Framework 中。 當您在整合模式中執行 IIS 7.0 或更新版本時，此元素組合可讓您設定 ASP.NET 管理執行緒的方式，以及當 ASP.NET 裝載于 IIS 應用程式集區時，如何將要求排入佇列。 如果您以傳統或 ISAPI 模式執行 IIS 7.0 或更新版本，則會忽略這些設定。  
   
 ## <a name="example"></a>範例  
 

@@ -64,7 +64,7 @@ AKS 叢集：
 az aks get-credentials --resource-group MSSampleK8ClusterRG --name MSSampleK8Cluster
 ```
 
-![上述命令的主控台輸出：已將 "MsSampleK8Cluster 合併為 /root/.kube/config 中的目前內容。](media/get-credentials-command-result.png)
+![上述命令的主控台輸出：在/root/.kube/config. 中合併「MsSampleK8Cluster 為目前內容」](media/get-credentials-command-result.png)
 
 **圖 4-19**. `aks get-credentials` 命令的結果。
 
@@ -74,7 +74,7 @@ az aks get-credentials --resource-group MSSampleK8ClusterRG --name MSSampleK8Clu
 kubectl get nodes
 ```
 
-![上述命令的主控台輸出：具有狀態、存留期 (執行時間) 與版本的節點清單](media/kubectl-get-nodes-command-result.png)
+![上述命令的主控台輸出：具有狀態、存留期（執行時間）和版本的節點清單](media/kubectl-get-nodes-command-result.png)
 
 **圖 4-20**： `kubectl get nodes` 命令的結果。
 

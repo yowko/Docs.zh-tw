@@ -238,7 +238,7 @@ orderConfiguration.OwnsOne(p => p.Address)
                             .Property(p=>p.City).HasColumnName("ShippingCity");
 ```
 
-可在 fluent 對應中鏈結 `OwnsOne` 方法。 在下列假設性的範例中，`OrderDetails` 擁有 `BillingAddress` 和 `ShippingAddress`，它們兩個都是 `Address` 類型。 然後 `Order` 類型擁有 `OrderDetails`。
+可在 fluent 對應中鏈結 `OwnsOne` 方法。 在下列假設性的範例中，`OrderDetails` 擁有 `BillingAddress` 和 `ShippingAddress`，它們兩個都是 `Address` 類型。 然後 `OrderDetails` 類型擁有 `Order`。
 
 ```csharp
 orderConfiguration.OwnsOne(p => p.OrderDetails, cb =>

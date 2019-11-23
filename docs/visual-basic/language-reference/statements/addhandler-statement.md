@@ -1,5 +1,5 @@
 ---
-title: AddHandler 語句（Visual Basic）
+title: AddHandler 陳述式
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AddHandlerMethod
@@ -8,15 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-ms.openlocfilehash: 95277f532488b0cf56114e5ee94dc3528e3a2e02
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: c110116af75d4fb39c016b8d6afcdb707fa6599b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004538"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350182"
 ---
 # <a name="addhandler-statement"></a>AddHandler 陳述式
-在執行時間將事件與事件處理常式產生關聯。  
+Associates an event with an event handler at run time.  
   
 ## <a name="syntax"></a>語法  
   
@@ -27,24 +27,24 @@ AddHandler event, AddressOf eventhandler
 ## <a name="parts"></a>組件  
 |||
 |---|---|
-|event|要處理的事件名稱。|  
-|`eventhandler`|處理事件的程式名稱。|
+|event|The name of the event to handle.|  
+|`eventhandler`|The name of a procedure that handles the event.|
 |||
   
 ## <a name="remarks"></a>備註  
- @No__t-0 和 @no__t 1 語句可讓您在程式執行期間的任何時間啟動和停止事件處理。  
+ The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling at any time during program execution.  
   
- @No__t 0 程式的簽章必須符合事件 `event` 的簽章。  
+ The signature of the `eventhandler` procedure must match the signature of the event `event`.  
   
- `Handles` 關鍵字和 `AddHandler` 陳述式都可以讓您指定由特定程序處理特定事件，但兩者存有差異。 `AddHandler` 陳述式會在執行階段將程序連接到事件。 當定義程序以指定它處理特定事件時，使用 `Handles` 關鍵字。 如需詳細資訊，請參閱[控制碼](../../../visual-basic/language-reference/statements/handles-clause.md)。  
+ `Handles` 關鍵字和 `AddHandler` 陳述式都可以讓您指定由特定程序處理特定事件，但兩者存有差異。 `AddHandler` 陳述式會在執行階段將程序連接到事件。 當定義程序以指定它處理特定事件時，使用 `Handles` 關鍵字。 For more information, see [Handles](../../../visual-basic/language-reference/statements/handles-clause.md).  
   
 > [!NOTE]
-> 若為自訂事件，`AddHandler` 語句會叫用事件的 @no__t 1 存取子。 如需自訂事件的詳細資訊，請參閱[Event 語句](../../../visual-basic/language-reference/statements/event-statement.md)。  
+> For custom events, the `AddHandler` statement invokes the event's `AddHandler` accessor. For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>範例  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [RemoveHandler 陳述式](../../../visual-basic/language-reference/statements/removehandler-statement.md)
 - [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)

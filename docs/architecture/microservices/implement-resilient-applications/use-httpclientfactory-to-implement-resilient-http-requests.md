@@ -48,11 +48,11 @@ ms.locfileid: "73737762"
 - 使用具型別用戶端
 - 使用產生的用戶端
 
-為了簡潔起見，本指南說明使用 `HttpClientFactory` 的最結構化方式，也就是使用具型別用戶端（服務代理程式模式）。 不過，所有選項都已記載，而且目前列于本文中，[涵蓋 HttpClientFactory 的使用](/aspnet/core/fundamentals/http-requests#consumption-patterns)方式。
+為了簡潔起見，本指南說明使用 `HttpClientFactory`的最結構化方式，也就是使用具型別用戶端（服務代理程式模式）。 不過，所有選項都已記載，而且目前列于本文中，[涵蓋 HttpClientFactory 的使用](/aspnet/core/fundamentals/http-requests#consumption-patterns)方式。
 
 ## <a name="how-to-use-typed-clients-with-httpclientfactory"></a>如何搭配 HttpClientFactory 使用具型別用戶端
 
-那麼，什麼是「具型別用戶端」？ 它只是 `DefaultHttpClientFactory` 插入時所設定的一個 `HttpClient`。
+那麼，什麼是「具型別用戶端」？ 它只是 `HttpClient` 插入時所設定的一個 `DefaultHttpClientFactory`。
 
 下圖顯示具型別用戶端如何搭配 `HttpClientFactory` 使用：
 
@@ -62,7 +62,7 @@ ms.locfileid: "73737762"
 
 在上圖中，ClientService （由控制器或用戶端程式代碼使用）會使用已註冊 `IHttpClientFactory`所建立的 `HttpClient`。 此處理站會從所管理的集區中指派 `HttpMessageHandler` 的 `HttpClient`。 在使用擴充方法 `AddHttpClient`的 DI 容器中註冊 `IHttpClientFactory` 時，可以使用 Polly 的原則來設定 `HttpClient`。
 
-若要設定上述結構，請安裝包含 `IServiceCollection``AddHttpClient()` 擴充方法的 `Microsoft.Extensions.Http` NuGet 封裝，以在應用程式中新增 `HttpClientFactory`。 這個擴充方法註冊將用來做為介面 `IHttpClientFactory` 之單一物件的 `DefaultHttpClientFactory`。 它為 `HttpMessageHandlerBuilder` 定義暫時性設定。 此訊息處理常式 (`HttpMessageHandler` 物件) 取自集區，供處理站傳回的 `HttpClient` 使用。
+若要設定上述結構，請安裝包含 `IServiceCollection``AddHttpClient()` 擴充方法的 `Microsoft.Extensions.Http` NuGet 封裝，以在應用程式中新增 `HttpClientFactory`。 這個擴充方法註冊將用來做為介面 `DefaultHttpClientFactory` 之單一物件的 `IHttpClientFactory`。 它為 `HttpMessageHandlerBuilder` 定義暫時性設定。 此訊息處理常式 (`HttpMessageHandler` 物件) 取自集區，供處理站傳回的 `HttpClient` 使用。
 
 在下一個程式碼中，您可以看到如何使用 `AddHttpClient()` 來註冊需要使用 `HttpClient` 的具型別用戶端 (服務代理程式)。
 
@@ -103,11 +103,11 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 
 ### <a name="httpclient-lifetimes"></a>HttpClient 存留期
 
-每次您從 `IHttpClientFactory` 取得 `HttpClient` 物件時，都會傳回一個新的執行個體。 但只要 `HttpMessageHandler` 的存留期間尚未過期，每個 `HttpClient` 就都會使用 `HttpMessageHandler`，它會由 `IHttpClientFactory` 組成集區並重複使用以減少資源耗用量。
+每次您從 `HttpClient` 取得 `IHttpClientFactory` 物件時，都會傳回一個新的執行個體。 但只要 `HttpClient` 的存留期間尚未過期，每個 `HttpMessageHandler` 就都會使用 `IHttpClientFactory`，它會由 `HttpMessageHandler` 組成集區並重複使用以減少資源耗用量。
 
 處理常式的集合是需要的做法，因為每個處理常式通常會管理自己的基礎 HTTP 連線；建立比所需數目更多的處理常式可能會導致連線延遲。 有些處理常式也會保持連線無限期地開啟，這可能導致處理常式無法對 DNS 變更回應。
 
-集區中的 `HttpMessageHandler` 物件有存留期，也就是集區中該 `HttpMessageHandler` 執行個體可重複使用的時間長度。 預設值為 2 分鐘，但是可針對各個具型別用戶端分別覆寫。 若要覆寫它，請在建立用戶端時所傳回的 `IHttpClientBuilder` 上呼叫 `SetHandlerLifetime()`，如下列程式碼所示：
+集區中的 `HttpMessageHandler` 物件有存留期，也就是集區中該 `HttpMessageHandler` 執行個體可重複使用的時間長度。 預設值為 2 分鐘，但是可針對各個具型別用戶端分別覆寫。 若要覆寫它，請在建立用戶端時所傳回的 `SetHandlerLifetime()` 上呼叫 `IHttpClientBuilder`，如下列程式碼所示：
 
 ```csharp
 //Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client
@@ -119,7 +119,7 @@ services.AddHttpClient<ICatalogService, CatalogService>()
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>實作使用已插入和已設定之 HttpClient 的具型別用戶端類別
 
-在上一個步驟中，您必須先定義具型別用戶端類別，例如範例程式碼中的類別，像是 'BasketService'、'CatalogService'、'OrderingService' 等等，具型別用戶端是接受 `HttpClient` 物件 (透過建構函式插入) 並使用該物件來呼叫某些遠端 HTTP 服務的類別。 例如:
+在上一個步驟中，您必須先定義具型別用戶端類別，例如範例程式碼中的類別，像是 'BasketService'、'CatalogService'、'OrderingService' 等等，具型別用戶端是接受 `HttpClient` 物件 (透過建構函式插入) 並使用該物件來呼叫某些遠端 HTTP 服務的類別。 例如，
 
 ```csharp
 public class CatalogService : ICatalogService
@@ -152,7 +152,7 @@ public class CatalogService : ICatalogService
 
 ### <a name="use-your-typed-client-classes"></a>使用具型別用戶端類別
 
-最後，一旦您將具型別類別實並讓它們向 `AddHttpClient()` 註冊後，您就可以在任何可使用 DI 插入服務的地方使用它們。 例如，在 Razor 頁面程式碼或 MVC web 應用程式的控制器中，如下列 eShopOnContainers 程式碼所示：
+最後，一旦您將具型別類別實並讓它們向 `AddHttpClient()`註冊後，您就可以在任何可使用 DI 插入服務的地方使用它們。 例如，在 Razor 頁面程式碼或 MVC web 應用程式的控制器中，如下列 eShopOnContainers 程式碼所示：
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC.Controllers

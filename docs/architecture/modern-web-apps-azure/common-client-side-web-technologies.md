@@ -108,7 +108,7 @@ Microsoft 開發了一個參考應用程式 [eShopOnContainers](https://aka.ms/M
 
 React 最重要的功能之一是使用虛擬 DOM。 虛擬 DOM 為 React 提供了幾項優勢，包括效能 (虛擬 DOM 可最佳化實際 DOM 的哪些部分需要更新) 和可測試性 (無需使用瀏覽器測試 React 及其與虛擬 DOM 的互動)。
 
-React 在 HTML 的工作方式上也很獨特。 在程式碼和標記之間沒有嚴格的分隔 (或許是出現於 HTML 屬性中的 JavaScript 參考)，React 直接在 JavaScript 程式碼中新增 HTML 作為 JSX。 JSX 是 HTML 的類似語法，可以編譯成純 JavaScript。 例如：
+React 在 HTML 的工作方式上也很獨特。 在程式碼和標記之間沒有嚴格的分隔 (或許是出現於 HTML 屬性中的 JavaScript 參考)，React 直接在 JavaScript 程式碼中新增 HTML 作為 JSX。 JSX 是 HTML 的類似語法，可以編譯成純 JavaScript。 例如，
 
 ```js
 <ul>
@@ -144,7 +144,7 @@ JavaScript 架構持續以驚人的速度改良。 使用上面列出的考量�
 >
 > - **HTML 和 CSS**  
 > <https://www.w3.org/standards/webdesign/htmlcss>
-> - **Sass vs.LESS**  
+> - **Sass 與 LESS 比較**  
 > <https://www.keycdn.com/blog/sass-vs-less/>
 > - **以 LESS、Sass 和 Font Awesome 設定樣式**  
 > <https://docs.microsoft.com/aspnet/core/client-side/less-sass-fa>

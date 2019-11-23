@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 X.509 憑證加密 XML 元素
+title: 如何：使用 X.509 憑證加密 XML 元素
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -23,14 +23,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71353856"
 ---
-# <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>HOW TO：使用 X.509 憑證加密 XML 元素
-您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密是交換或儲存加密 XML 資料的標準方法，不必擔心資料被輕易讀取。  如需 XML 加密標準的詳細資訊，請參閱全球資訊網協會 (W3C) 規格 XML 加密位於 <https://www.w3.org/TR/xmldsig-core/>。  
+# <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>如何：使用 X.509 憑證加密 XML 元素
+您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密是交換或儲存加密 XML 資料的標準方法，不必擔心資料被輕易讀取。  如需 XML 加密標準的詳細資訊，請參閱 XML 加密的全球資訊網協會（W3C）規格，位於 <https://www.w3.org/TR/xmldsig-core/>。  
   
  您可以使用 XML 加密將任何 XML 元素或文件取代為包含加密 XML 資料的 <`EncryptedData`> 元素。 <`EncryptedData`> 元素可以包含子元素，而子元素會包含有關加密時所使用之金鑰和程序的資訊。  XML 加密可讓文件中包含多個加密的元素，並允許元素加密多次。  這個程序中的程式碼範例將顯示如何建立 <`EncryptedData`> 元素和數個其他子元素，以便稍後在解密時使用。  
   
  此範例會使用兩個金鑰來加密 XML 元素。 它會使用[憑證建立工具 (Makecert.exe)](/windows/desktop/SecCrypto/makecert) 產生測試 X.509 憑證，並將憑證儲存到憑證存放區。 範例接著會以程式設計方式擷取憑證，並使用它使用 <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> 方法加密 XML 項目。 就內部而言，<xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> 方法會建立個別的工作階段金鑰，並使用它來加密 XML 文件。 這個方法會加密工作階段金鑰，並將它與加密的 XML 一併儲存在新的 <`EncryptedData`> 元素中。  
   
- 若要解密 XML 項目，只要呼叫 <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法，它會自動從存放區擷取 X.509 憑證，並執行必要的解密。  如需如何解密使用此程式加密之 XML 元素的詳細資訊，請參閱 [How to：使用 x.509 憑證 @ no__t-0 解密 XML 元素。  
+ 若要解密 XML 項目，只要呼叫 <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法，它會自動從存放區擷取 X.509 憑證，並執行必要的解密。  如需如何將使用這個程序加密的 XML 元素解密的詳細資訊，請參閱 [如何：使用 X.509 憑證解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)。  
   
  這個範例適合多個應用程式需要共用加密資料或應用程式需要在它執行時間之間儲存加密資料的情況。  
   
@@ -119,4 +119,4 @@ ms.locfileid: "71353856"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Security.Cryptography.Xml>
-- [如何：以 x.509 憑證 @ no__t-0 解密 XML 元素
+- [如何：使用 X.509 憑證解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)

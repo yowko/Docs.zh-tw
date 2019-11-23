@@ -1,5 +1,5 @@
 ---
-title: Class 陳述式 (Visual Basic)
+title: Class 陳述式
 ms.date: 05/12/2018
 f1_keywords:
 - vb.Class
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: 2e4514686afcbbe0e9ff0b3326c1be212db4f9f8
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3cb276f134e90ce3b3009234eb980d89477e0d09
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005161"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354153"
 ---
 # <a name="class-statement-visual-basic"></a>Class 陳述式 (Visual Basic)
-宣告類別的名稱，並引進類別所組成之變數、屬性、事件和程式的定義。  
+Declares the name of a class and introduces the definition of the variables, properties, events, and procedures that the class comprises.  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,82 +38,82 @@ End Class
   
 |詞彙|定義|  
 |---|---|  
-|`attributelist`|選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|選擇性。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私](../../../visual-basic/language-reference/modifiers/private.md)用<br />@no__t 0[保護的 Friend](../../language-reference/modifiers/protected-friend.md)<br />- [私用保護](../../language-reference/modifiers/private-protected.md)<br/><br/> 請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`Shadows`|選擇性。 請參閱[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
-|`MustInherit`|選擇性。 請參閱[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。|  
-|`NotInheritable`|選擇性。 請參閱[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)。|  
-|`Partial`|選擇性。 表示類別的部分定義。 請參閱[部分](../../../visual-basic/language-reference/modifiers/partial.md)。|  
-|`name`|必要項。 這個類別的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`Of`|選擇性。 指定這是泛型類別。|  
-|`typelist`|如果您使用 of 關鍵字，則[為必要項](../../../visual-basic/language-reference/statements/of-clause.md)。 這個類別的型別參數清單。 請參閱[類型清單](../../../visual-basic/language-reference/statements/type-list.md)。|  
-|`Inherits`|選擇性。 表示這個類別會繼承另一個類別的成員。 請參閱[Inherits 語句](../../../visual-basic/language-reference/statements/inherits-statement.md)。|  
-|`classname`|如果您使用 `Inherits` 語句，則為必要。 這個類別衍生來源的類別名稱。|  
-|`Implements`|選擇性。 表示這個類別會執行一或多個介面的成員。 請參閱[Implements 語句](../../../visual-basic/language-reference/statements/implements-statement.md)。|  
-|`interfacenames`|如果您使用 `Implements` 語句，則為必要。 這個類別所執行之介面的名稱。|  
-|`statements`|選擇性。 定義此類別之成員的語句。|  
-|`End Class`|必要項。 終止 `Class` 定義。|  
+|`attributelist`|選擇項。 See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|選擇項。 可以是下列其中一項：<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br/><br/> 請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`Shadows`|選擇項。 See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`MustInherit`|選擇項。 See [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
+|`NotInheritable`|選擇項。 See [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
+|`Partial`|選擇項。 Indicates a partial definition of the class. See [Partial](../../../visual-basic/language-reference/modifiers/partial.md).|  
+|`name`|必要項。 Name of this class. 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`Of`|選擇項。 Specifies that this is a generic class.|  
+|`typelist`|Required if you use the [Of](../../../visual-basic/language-reference/statements/of-clause.md) keyword. List of type parameters for this class. See [Type List](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Inherits`|選擇項。 Indicates that this class inherits the members of another class. See [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`classname`|Required if you use the `Inherits` statement. The name of the class from which this class derives.|  
+|`Implements`|選擇項。 Indicates that this class implements the members of one or more interfaces. See [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`interfacenames`|Required if you use the `Implements` statement. The names of the interfaces this class implements.|  
+|`statements`|選擇項。 Statements which define the members of this class.|  
+|`End Class`|必要項。 Terminates the `Class` definition.|  
   
 ## <a name="remarks"></a>備註  
- @No__t-0 語句會定義新的資料類型。 「*類別*」（class）是物件導向程式設計（OOP）的基礎建立組塊。 如需詳細資訊，請參閱[物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
+ A `Class` statement defines a new data type. A *class* is a fundamental building block of object-oriented programming (OOP). For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
- 您只能在命名空間或模組層級使用 `Class`。 這表示類別的宣告*內容*必須是原始程式檔、命名空間、類別、結構、模組或介面，而且不能是程式或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+ You can use `Class` only at namespace or module level. This means the *declaration context* for a class must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block. 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
   
- 類別的每個實例都有一個存留期，與所有其他實例無關。 此存留期是由[新的 Operator](../../../visual-basic/language-reference/operators/new-operator.md)子句或函數（如 <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>）所建立。 當所有指向實例的變數都已設定為「[無](../../../visual-basic/language-reference/nothing.md)」或其他類別的實例時，它就會結束。  
+ Each instance of a class has a lifetime independent of all other instances. This lifetime begins when it is created by a [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) clause or by a function such as <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>. It ends when all variables pointing to the instance have been set to [Nothing](../../../visual-basic/language-reference/nothing.md) or to instances of other classes.  
   
- 類別預設為[Friend](../../../visual-basic/language-reference/modifiers/friend.md)存取。 您可以使用存取修飾詞來調整其存取層級。 如需詳細資訊，請參閱[Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ Classes default to [Friend](../../../visual-basic/language-reference/modifiers/friend.md) access. You can adjust their access levels with the access modifiers. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>規則  
   
-- **嵌入.** 您可以在另一個類別中定義一個類別。 外部類別稱為「*包含類別*」，而內部類別稱為「*嵌套類別*」。  
+- **Nesting.** You can define one class within another. The outer class is called the *containing class*, and the inner class is called a *nested class*.  
   
-- **繼承**： 如果類別使用[Inherits 語句](../../../visual-basic/language-reference/statements/inherits-statement.md)，您只能指定一個基類或介面。 類別無法繼承自一個以上的元素。  
+- **繼承**： If the class uses the [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), you can specify only one base class or interface. A class cannot inherit from more than one element.  
   
-     類別無法繼承自另一個具有更嚴格存取層級的類別。 例如，@no__t 0 類別無法繼承自 @no__t 1 類別。  
+     A class cannot inherit from another class with a more restrictive access level. For example, a `Public` class cannot inherit from a `Friend` class.  
   
-     類別無法繼承自其內嵌套的類別。  
+     A class cannot inherit from a class nested within it.  
   
-- **實作.** 如果類別使用[Implements 語句](../../../visual-basic/language-reference/statements/implements-statement.md)，您必須執行您在 `interfacenames` 中指定的每個介面所定義的每個成員。 例外狀況是基類成員的重新實作。 如需詳細資訊，請參閱[Implements](../../../visual-basic/language-reference/statements/implements-clause.md)中的 "重新實作"。  
+- **Implementation.** If the class uses the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md), you must implement every member defined by every interface you specify in `interfacenames`. An exception to this is reimplementation of a base class member. For more information, see "Reimplementation" in [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).  
   
-- **Default 屬性。** 類別最多可以指定一個屬性做為其*預設屬性*。 如需詳細資訊，請參閱[Default](../../../visual-basic/language-reference/modifiers/default.md)。  
+- **Default Property.** A class can specify at most one property as its *default property*. For more information, see [Default](../../../visual-basic/language-reference/modifiers/default.md).  
   
 ## <a name="behavior"></a>行為  
   
-- **存取層級。** 在類別中，您可以使用自己的存取層級來宣告每個成員。 類別成員預設為[公用](../../../visual-basic/language-reference/modifiers/public.md)存取，但變數和常數除外，預設為[私](../../../visual-basic/language-reference/modifiers/private.md)用存取。 當類別的存取權比它的其中一個成員更受限制時，類別存取層級的優先順序會較高。  
+- **Access Level.** Within a class, you can declare each member with its own access level. Class members default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access, except variables and constants, which default to [Private](../../../visual-basic/language-reference/modifiers/private.md) access. When a class has more restricted access than one of its members, the class access level takes precedence.  
   
-- **範圍.** 類別會在其包含的命名空間、類別、結構或模組的範圍內。  
+- **Scope.** A class is in scope throughout its containing namespace, class, structure, or module.  
   
-     每個類別成員的範圍都是整個類別。  
+     The scope of every class member is the entire class.  
   
-     **期.** Visual Basic 不支援靜態類別。 靜態類別的功能對等項是由模組所提供。 如需詳細資訊，請參閱[Module 語句](../../../visual-basic/language-reference/statements/module-statement.md)。  
+     **Lifetime.** Visual Basic does not support static classes. The functional equivalent of a static class is provided by a module. For more information, see [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).  
   
-     類別成員有存留期，視宣告的方式和位置而定。 如需詳細資訊，請參閱[Visual Basic 中的存留期](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。  
+     Class members have lifetimes depending on how and where they are declared. For more information, see [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
-- **加.** 類別外的程式碼必須使用該類別的名稱來限定成員名稱。  
+- **Qualification.** Code outside a class must qualify a member's name with the name of that class.  
   
-     如果嵌套類別內的程式碼會對程式設計專案進行不合格的參考，Visual Basic 會先在嵌套類別中搜尋該專案，然後在其包含的類別中，依此類推，直到最外層的包含元素。  
+     If code inside a nested class makes an unqualified reference to a programming element, Visual Basic searches for the element first in the nested class, then in its containing class, and so on out to the outermost containing element.  
   
-## <a name="classes-and-modules"></a>類別和模組  
- 這些元素有許多相似之處，但也有一些重要的差異。  
+## <a name="classes-and-modules"></a>Classes and Modules  
+ These elements have many similarities, but there are some important differences as well.  
   
-- **庫.** 舊版的 Visual Basic 會辨識兩種類型的模組：*類別模組*（cls 檔）和*標準模組*（bas 檔案）。 目前的版本會分別呼叫這些*類別*和*模組*。  
+- **Terminology.** Previous versions of Visual Basic recognize two types of modules: *class modules* (.cls files) and *standard modules* (.bas files). The current version calls these *classes* and *modules*, respectively.  
   
-- **共用成員。** 您可以控制類別的成員是否為共用或實例成員。  
+- **Shared Members.** You can control whether a member of a class is a shared or instance member.  
   
-- **物件方向。** 類別是物件導向，但模組則不是。 您可以建立一或多個類別的實例。 如需詳細資訊，請參閱[物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
+- **Object Orientation.** Classes are object-oriented, but modules are not. You can create one or more instances of a class. For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="example"></a>範例  
- 下列範例會使用 `Class` 語句來定義類別和數個成員。  
+ The following example uses a `Class` statement to define a class and several members.  
   
  [!code-vb[VbVbalrStatements#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#62)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
 - [結構和類別](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
 - [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)
 - [Module 陳述式](../../../visual-basic/language-reference/statements/module-statement.md)
 - [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)
-- @no__t 0Object 存留期：如何建立和終結物件 @ no__t-0
+- [物件存留期：物件的建立和終結](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [如何：使用泛型類別](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)

@@ -17,15 +17,15 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697899"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>適用于 bypasslist 的 @no__t 0remove > 元素（網路設定）
+# <a name="remove-element-for-bypasslist-network-settings"></a>\<移除 bypasslist 的 > 元素（網路設定）
 
 從 proxy 略過清單中移除 IP 位址或 DNS 名稱。
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
+&nbsp;&nbsp;[ **\<system.web >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<移除 >**  
 
 ## <a name="syntax"></a>語法
 
@@ -35,31 +35,31 @@ ms.locfileid: "71697899"
 />
 ```
 
-## <a name="attributes-and-elements"></a>屬性和項目
+## <a name="attributes-and-elements"></a>屬性和元素
 
-下列各節描述屬性、子項目和父項目。
+下列章節說明屬性、子元素和父元素。
 
 ### <a name="attributes"></a>屬性
 
-|**屬性**|**描述**|
+|**屬性**|**說明**|
 |-------------------|---------------------|
 |`address`|描述 IP 位址或 DNS 名稱的正則運算式。|
 
 ### <a name="child-elements"></a>子元素
 
-無。
+None。
 
 ### <a name="parent-elements"></a>父項目
 
-|**目**|**描述**|
+|**目**|**說明**|
 |-----------------|---------------------|
 |[bypasslist](bypasslist-element-network-settings.md)|提供一組正則運算式，描述不使用 proxy 的位址。|
 
 ## <a name="remarks"></a>備註
 
-@No__t-0 元素會從略過 proxy 伺服器的地址清單中，移除描述 IP 位址或 DNS 伺服器名稱的正則運算式。 先前已在設定檔或設定階層的較高層級定義位址。
+`remove` 元素會從略過 proxy 伺服器的地址清單中，移除描述 IP 位址或 DNS 伺服器名稱的正則運算式。 先前已在設定檔或設定階層的較高層級定義位址。
 
-@No__t-0 屬性的值應該是描述一組 IP 位址或主機名稱的正則運算式。
+`address` 屬性的值應該是描述一組 IP 位址或主機名稱的正則運算式。
 
 如需正則運算式的詳細資訊，請參閱。[.NET Framework 正則運算式](../../../../standard/base-types/regular-expressions.md)。
 

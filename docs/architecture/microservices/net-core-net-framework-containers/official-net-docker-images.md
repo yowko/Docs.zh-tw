@@ -13,7 +13,7 @@ ms.locfileid: "71353877"
 
 官方 .NET Docker 映像是 Microsoft 建立及最佳化的 .NET Docker 映像。 [它們在 Docker Hub 上的 Microsoft 存放庫中公開提供](https://hub.docker.com/u/microsoft/)。 每個存放庫可以包含多個映像，視 .NET 版本及作業系統與版本而定 (Linux Debian、Linux Alpine、Windows Nano Server、Windows Server Core 等等)。
 
-自 .NET Core 2.1 起，所有 .NET Core 映射（包括 for ASP.NET Core 都可在 Docker Hub 的 .NET Core 映射存放庫中<https://hub.docker.com/_/microsoft-dotnet-core/>取得）：。
+自 .NET Core 2.1 起，所有 .NET core 映射（包括 for ASP.NET Core）都可以在 Docker Hub 的 .NET Core 映射存放庫中取得： <https://hub.docker.com/_/microsoft-dotnet-core/>。
 
 大部分的映像存放庫會提供大量的標籤，不僅協助您選取特定的架構版本，還協助您選擇作業系統 (Linux 發行版本或 Windows 版本)。
 
@@ -43,7 +43,7 @@ ms.locfileid: "71353877"
 
 當您瀏覽 Docker Hub 的 .NET 映像存放庫時，您會發現以標籤分類或標記的多個映像版本。 這些標籤可協助您根據需要的版本決定使用的版本，如同下表中的這些：
 
-| Image | 註解 |
+| 影像 | 註解 |
 |-------|----------|
 | mcr.microsoft.com/dotnet/core/aspnet:**2.2** | Linux 和 Windows 上的 ASP.NET Core，具有僅執行階段和 ASP.NET Core 最佳化 (多架構) |
 | mcr.microsoft.com/dotnet/core/sdk:**2.2** | Linux 和 Windows 上的 .NET Core，包含 SDK (多架構) |

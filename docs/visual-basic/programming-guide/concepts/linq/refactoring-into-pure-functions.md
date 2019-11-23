@@ -4,7 +4,7 @@ ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
 ms.openlocfilehash: e951b3e9108f26a9c861eb49c44bb0a510131819
 ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/03/2019
 ms.locfileid: "71834921"
@@ -21,7 +21,7 @@ ms.locfileid: "71834921"
 
  轉換為功能性程式設計的其中一種方式為重構現有的程式碼以排除不必要的副作用與外部相依性。 以此種方式，您可以建立現有程式碼的純虛擬函式版本。
 
-這個主題討論什麼是純虛擬函式以及什麼不是純虛擬函式。 [教學課程：管理 WordprocessingML 檔中的內容（Visual Basic） ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) 教學課程顯示如何操作 WordprocessingML 檔，並包含兩個如何使用純虛擬函式進行重構的範例。
+這個主題討論什麼是純虛擬函式以及什麼不是純虛擬函式。 [教學課程：管理 WordprocessingML 檔中的內容（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)教學課程顯示如何操作 WordprocessingML 檔，並包含兩個如何使用純虛擬函式進行重構的範例。
 
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>排除副作用與外部相依性
 
@@ -52,7 +52,7 @@ End Module
 StringOne-StringTwo
 ```
 
-請注意，要修改的資料是否 `public` 或 @no__t 1 存取，或為 @no__t 2 成員或實例成員，是不相關的。 純虛擬函式不會變更函式以外的任何資料。
+請注意，要修改的資料是否已 `public` 或 `private` 存取，或是 `shared` 成員或實例成員都是不相關的。 純虛擬函式不會變更函式以外的任何資料。
 
 ### <a name="non-pure-function-that-changes-an-argument"></a>變更引數的非純虛擬函式
 
@@ -108,4 +108,4 @@ End Module
 ## <a name="see-also"></a>另請參閱
 
 - [純功能性轉換簡介（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [函數式程式設計與命令式程式設計（Visual Basic） ](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [功能性程式設計與命令式程式設計的比較（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

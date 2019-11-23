@@ -1,5 +1,5 @@
 ---
-title: 程序參數和引數 (Visual Basic)
+title: 程序參數和引數
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -18,55 +18,55 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: 08bb05f681d5f795bc448ddc62976d7675696023
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7dfbbcb39cf7bb05c8a62a7a252e425f287c9a09
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638840"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352574"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>程序參數和引數 (Visual Basic)
-在大部分情況下，程序會需要一些資訊在其中呼叫的情況。 執行重複或共用工作的程序會針對每個呼叫中使用不同的資訊。 這項資訊是由變數、 常數和您傳遞至程序時呼叫它的運算式所組成。  
+In most cases, a procedure needs some information about the circumstances in which it has been called. A procedure that performs repeated or shared tasks uses different information for each call. This information consists of variables, constants, and expressions that you pass to the procedure when you call it.  
   
- A*參數*表示程序需要您提供當您呼叫它的值。 程序的宣告會定義其參數。  
+ A *parameter* represents a value that the procedure expects you to supply when you call it. The procedure's declaration defines its parameters.  
   
- 您可以定義具有任何參數，一個參數，或一個以上的程序。 在呼叫程序定義指定之參數的一部分*參數清單*。  
+ You can define a procedure with no parameters, one parameter, or more than one. The part of the procedure definition that specifies the parameters is called the *parameter list*.  
   
- *引數*程序參數代表您提供的值，當您呼叫程序。 呼叫程序時，呼叫程式碼會提供引數。 指定的引數的程序呼叫的部分稱為*引數清單*。  
+ An *argument* represents the value you supply to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure. The part of the procedure call that specifies the arguments is called the *argument list*.  
   
- 下圖顯示程式碼呼叫程序`safeSquareRoot`從兩個不同的地方。 第一次呼叫會將變數的值傳遞`x`(4.0) 參數`number`，並在傳回的值`root`(2.0) 指派給變數`y`。 第二次呼叫會將傳遞常值數值 9.0 `number`，並將傳回的值 (3.0) 指派給變數`z`。  
+ The following illustration shows code calling the procedure `safeSquareRoot` from two different places. The first call passes the value of the variable `x` (4.0) to the parameter `number`, and the return value in `root` (2.0) is assigned to the variable `y`. The second call passes the literal value 9.0 to `number`, and assigns the return value (3.0) to variable `z`.  
   
- ![此圖顯示傳遞至參數的引數](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
+ ![Diagram that shows passing an argument to a parameter](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
- 如需詳細資訊，請參閱 <<c0> [ 參數之間的差異和引數](./differences-between-parameters-and-arguments.md)。  
+ For more information, see [Differences Between Parameters and Arguments](./differences-between-parameters-and-arguments.md).  
   
-## <a name="parameter-data-type"></a>參數資料類型  
- 您定義資料類型的參數使用`As`在其宣告中的子句。 例如，下列函式會接受字串和整數。  
+## <a name="parameter-data-type"></a>Parameter Data Type  
+ You define a data type for a parameter by using the `As` clause in its declaration. For example, the following function accepts a string and an integer.  
   
  [!code-vb[VbVbcnProcedures#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#32)]  
   
- 如果類型檢查參數 ([Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`Off,``As`子句是選擇性的不同之處在於任何一個參數會使用它，如果所有參數必須都使用它。 如果型別檢查`On`，則`As`子句是必要的所有程序參數。  
+ If the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `Off,` the `As` clause is optional, except that if any one parameter uses it, all parameters must use it. If type checking is `On`, the `As` clause is required for all procedure parameters.  
   
- 如果呼叫程式碼必須要有這類資料類型不同，其對應的參數提供引數`Byte`至`String`參數，它必須執行下列其中一項：  
+ If the calling code expects to supply an argument with a data type different from that of its corresponding parameter, such as `Byte` to a `String` parameter, it must do one of the following:  
   
-- 提供引數會擴展為參數的資料型別; 的資料類型  
+- Supply only arguments with data types that widen to the parameter data type;  
   
-- 設定`Option Strict Off`允許隱含的縮小轉換; 或  
+- Set `Option Strict Off` to allow implicit narrowing conversions; or  
   
-- 您可以使用轉換關鍵字，明確轉換成資料類型。  
+- Use a conversion keyword to explicitly convert the data type.  
   
 ### <a name="type-parameters"></a>類型參數  
- A*泛型程序*也會定義一或多個*型別參數*除了其一般的參數。 泛型程序可讓呼叫端的程式碼，來傳遞不同的資料類型每次呼叫此程序，讓它可以調整資料類型需求的每個個別的呼叫。 請參閱 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。  
+ A *generic procedure* also defines one or more *type parameters* in addition to its normal parameters. A generic procedure allows the calling code to pass different data types each time it calls the procedure, so it can tailor the data types to the requirements of each individual call. 請參閱 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [程序](./index.md)
 - [Sub 程序](./sub-procedures.md)
 - [函式程序](./function-procedures.md)
 - [屬性程序](./property-procedures.md)
 - [運算子程序](./operator-procedures.md)
-- [如何：如需程序來定義參數](./how-to-define-a-parameter-for-a-procedure.md)
+- [如何：定義程序的參數](./how-to-define-a-parameter-for-a-procedure.md)
 - [如何：將引數傳遞至程序](./how-to-pass-arguments-to-a-procedure.md)
 - [以傳值和傳址方式傳遞引數](./passing-arguments-by-value-and-by-reference.md)
 - [程序多載化](./procedure-overloading.md)
-- [在 Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

@@ -1,5 +1,5 @@
 ---
-title: '\ 運算子 (Visual Basic)'
+title: '\ 運算子'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.\
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - quotients, integer
 - truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
-ms.openlocfilehash: d1a46f99c21be007d33361ba095a3f0c52fe906c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 2b4cca99ed54195162530bb8eb950bd251bfbff9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701138"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347125"
 ---
 # <a name="-operator-visual-basic"></a>\ 運算子 (Visual Basic)
-將兩個數字相除並傳回整數結果。  
+Divides two numbers and returns an integer result.  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,39 +41,39 @@ expression1 \ expression2
  必要項。 任何數值運算式。  
   
 ## <a name="supported-types"></a>支援的型別  
- 所有數數值型別，包括不帶正負號的和浮點類型，以及 `Decimal`。  
+ All numeric types, including the unsigned and floating-point types and `Decimal`.  
   
 ## <a name="result"></a>結果  
- 結果是 `expression1` 除以 `expression2` 的整數商，這會捨棄任何餘數，而且只會保留整數部分。 這就是所謂的*截斷*。  
+ The result is the integer quotient of `expression1` divided by `expression2`, which discards any remainder and retains only the integer portion. This is known as *truncation*.  
   
- 結果資料類型是適用于和`expression1` `expression2`之資料類型的數數值型別。 請參閱[運算子結果的資料類型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)中的「整數算術」資料表。  
+ The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
- [/運算子（Visual Basic）](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)會傳回完整商，這會保留分數部分中的餘數。  
+ The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) returns the full quotient, which retains the remainder in the fractional portion.  
   
 ## <a name="remarks"></a>備註  
- 在執行除法之前，Visual Basic 嘗試將任何浮點數值運算式轉換成 `Long`。 如果 `Option Strict` 是 `On`，就會發生編譯器錯誤。 如果 `Option Strict` 是 `Off`，如果值超出[LONG 資料型別](../../../visual-basic/language-reference/data-types/long-data-type.md)的範圍，就可能會有 <xref:System.OverflowException>。 轉換為 `Long` 也會受限於四*進位*。 如需詳細資訊，請參閱[類型轉換函數](../../../visual-basic/language-reference/functions/type-conversion-functions.md)中的「小數部分」。  
+ Before performing the division, Visual Basic attempts to convert any floating-point numeric expression to `Long`. If `Option Strict` is `On`, a compiler error occurs. If `Option Strict` is `Off`, an <xref:System.OverflowException> is possible if the value is outside the range of the [Long Data Type](../../../visual-basic/language-reference/data-types/long-data-type.md). The conversion to `Long` is also subject to *banker's rounding*. For more information, see "Fractional Parts" in [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
- 如果`expression1` 或`expression2`評估為[沒有任何](../../../visual-basic/language-reference/nothing.md)值，則會將它視為零。  
+ If `expression1` or `expression2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.  
   
-## <a name="attempted-division-by-zero"></a>嘗試除數為零  
- 如果 `expression2` 評估為零，則 @no__t 1 運算子會擲回 @no__t 2 例外狀況。 這適用于運算元的所有數值資料類型。  
+## <a name="attempted-division-by-zero"></a>Attempted Division by Zero  
+ If `expression2` evaluates to zero, the `\` operator throws a <xref:System.DivideByZeroException> exception. This is true for all numeric data types of the operands.  
   
 > [!NOTE]
-> @No__t-0 運算子可以多載 *，這*表示當運算元具有該類別或結構的類型時，類別或結構可以重新定義其行為。 如果您的程式碼在這類類別或結構上使用這個運算子，請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+> The `\` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用 `\` 運算子來執行整數除法。 結果是一個整數，代表兩個運算元的整數商，餘數會被捨棄。  
+ The following example uses the `\` operator to perform integer division. The result is an integer that represents the integer quotient of the two operands, with the remainder discarded.  
   
  [!code-vb[VbVbalrOperators#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#18)]  
   
- 上述範例中的運算式會分別傳回2、3、33和-22 的值。  
+ The expressions in the preceding example return values of 2, 3, 33, and -22, respectively.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [\\ = 運算子](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
-- [/運算子（Visual Basic）](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
+- [\\= Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
 - [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [算術運算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic 中的算術運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

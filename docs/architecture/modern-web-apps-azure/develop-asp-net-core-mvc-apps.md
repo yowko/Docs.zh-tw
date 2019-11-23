@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 19d1d5f81b5be9b843698b6e61d8571d4edfa66f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: b57741ed68b3481ad2c85b1c3d62717f09c7570e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181947"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971591"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>開發 ASP.NET Core MVC 應用程式
 
@@ -20,7 +20,7 @@ ASP.NET Core 是跨平台的開放原始碼架構，適用於建置現代化的�
 
 ## <a name="mvc-and-razor-pages"></a>MVC 與 Razor Pages
 
-ASP.NET Core MVC 提供許多實用功能，可用來建置 Web API 及應用程式。 MVC 一詞代表 "Model-View-Controller"，是將回應使用者要求的作業分解成幾部分來負責的 UI 模式。 除了遵循這個模式外，您也可以在 ASP.NET Core 應用程式中，以 Razor Pages 實作功能。 Razor Pages 建置於 ASP.NET Core MVC 中，並使用相同的功能來路由、繫結模型等。但是，Razor Pages 沒有針對控制器、檢視等的個別資料夾及檔案，也不使用以屬性為基礎的路由，而是位於單一資料夾 ("/Pages") 中，根據其在此資料夾中的相對位置傳送路由，而且使用處理常式而非控制器動作來處理要求。
+ASP.NET Core MVC 提供許多實用功能，可用來建置 Web API 及應用程式。 MVC 一詞代表 "Model-View-Controller"，是將回應使用者要求的作業分解成幾部分來負責的 UI 模式。 除了遵循這個模式外，您也可以在 ASP.NET Core 應用程式中，以 Razor Pages 實作功能。 Razor Pages 內建于 ASP.NET Core MVC 中，並使用相同的功能來進行路由、模型系結等。不過，您可以將 Razor Pages 放在單一資料夾（"/Pages"）中，並根據其在此資料夾中的相對位置來路由傳送，並使用處理程式來處理要求，而非控制器動作。
 
 當您在建立新的 ASP.NET Core 應用程式時，應該在心中計畫好所要建置的應用程式會是什麼樣子。 在 Visual Studio 中，您將從多個範本中選擇。 最常見的三個專案範本是 Web API、Web 應用程式及 Web 應用程式 (Model-View-Controller)。 雖然您只能在初次建立專案時做決定，但是該決定並非不可改變。 Web API 專案使用標準 Model-View-Controller 控制器，根據預設它只缺少檢視。 同樣地，預設 Web 應用程式範本使用 Razor Pages，因此它也缺少檢視資料夾。 您可以之後將檢視資料夾新增到這些專案，來支援以檢視為基礎的行為。 根據預設，Web API 及 Model-View-Controller 專案不含 Pages 資料夾，但是您可以之後新增該資料夾，來支援以 Razor Pages 為基礎的行為。 您可以將這三個範本視為支援三種不同的預設使用者互動：資料 (Web API)、以頁面為基礎及以檢視為基礎。 然而如果您想，您可以在單一專案中將其任意混合與配對。
 
@@ -49,9 +49,9 @@ app.UseMvc(routes =>
 });
 ```
 
-在此範例中，已將名為 "default" 的路由新增至路由表。 它定義一個路由範本，其中包含 _controller_、_action_ 和 _id_ 的預留位置。controller 和 action 預留位置已指定預設值 (分別是 "Home" 和 "Index")，而 id 預留位置則是選擇性的 (由於已套用 "?")。 此處定義的慣例指出要求的第一個部分應該對應至控制器的名稱，第二個部分對應至動作，而第三個部分 (如果需要) 則會代表 id 參數。 慣例路由通常是在應用程式的一個位置定義，例如在啟動類別的 Configure 方法中。
+在此範例中，已將名為 "default" 的路由新增至路由表。 它會定義具有_控制器_、_動作_和_識別碼_之預留位置的路由範本。控制器和動作預留位置已指定預設值（分別是「Home」和「Index」），而 id 預留位置則是選擇性的（藉由對其套用「？」）。 此處定義的慣例指出要求的第一個部分應該對應至控制器的名稱，第二個部分對應至動作，而第三個部分 (如果需要) 則會代表 id 參數。 慣例路由通常是在應用程式的一個位置定義，例如在啟動類別的 Configure 方法中。
 
-屬性路由會直接套用至控制器和動作，而不是全域指定。 其優點在於當您想要查看特定方法時，會更容易搜尋到這些路由，但也表示路由資訊不會保留在應用程式的一個位置。 透過屬性路由，您可以輕鬆地為一個動作指定多個路由，並合併控制器與動作之間的路由。 例如：
+屬性路由會直接套用至控制器和動作，而不是全域指定。 其優點在於當您想要查看特定方法時，會更容易搜尋到這些路由，但也表示路由資訊不會保留在應用程式的一個位置。 透過屬性路由，您可以輕鬆地為一個動作指定多個路由，並合併控制器與動作之間的路由。 例如，
 
 ```csharp
 [Route("Home")]
@@ -82,7 +82,7 @@ Razor Pages 不會使用屬性路由。 您可以為 Razor 頁面指定其他路
 @page "{id:int}"
 ```
 
-在前一個範例中，問題中的頁面會將路由與整數 `id` 參數比對。 例如，位於 `/Pages` 根的 *Products.cshtml* 頁面會有下列路由：
+在前一個範例中，問題中的頁面會將路由與整數 `id` 參數比對。 例如，位於 *根的*Products.cshtml`/Pages` 頁面會有下列路由：
 
 ```csharp
 "/Products/123"
@@ -90,7 +90,7 @@ Razor Pages 不會使用屬性路由。 您可以為 Razor 頁面指定其他路
 
 在指定的要求與路由經過比對之後，但呼叫動作方法之前，ASP.NET Core MVC 會在要求上執行[模型繫結](/aspnet/core/mvc/models/model-binding)和[模型驗證](/aspnet/core/mvc/models/validation)。 模型繫結會負責將傳入 HTTP 資料轉換成 .NET 類型，以指定為要呼叫之動作方法的參數。 例如，如果動作方法必須有 int id 參數，模型繫結會嘗試從要求隨附的值提供此參數。 若要這樣做，模型繫結會尋找以 POST 形式送出的值、路由本身中的值，以及查詢字串值。 假設找到 id 值，則會將它轉換成整數，再傳入動作方法。
 
-在繫結模型之後，但呼叫動作方法之前，會進行模型驗證。 模型驗證會根據模型類型使用選用屬性，並可協助確保提供的模型物件符合特定資料需求。 某些值可能指定為必要，或限制為特定長度或數字範圍等等。如果指定了驗證屬性，但模型不符合其需求，則屬性 ModelState.IsValid 會是 false，而且會將失敗的驗證規則集傳送給提出要求的用戶端。
+在繫結模型之後，但呼叫動作方法之前，會進行模型驗證。 模型驗證會根據模型類型使用選用屬性，並可協助確保提供的模型物件符合特定資料需求。 某些值可能會指定為必要，或僅限於特定長度或數位範圍等。如果已指定驗證屬性，但模型不符合其需求，則屬性 ModelState 會是 false，而失敗的驗證規則集會傳送給提出要求的用戶端。
 
 如果您使用模型驗證，請務必檢查模型是否有效，再執行任何狀態改變命令，以確保您的應用程式不會遭到無效資料損毀。 您可以使用[篩選條件](/aspnet/core/mvc/controllers/filters)，避免需要在每個動作中新增程式碼來執行此作業。 ASP.NET Core MVC 篩選條件可讓您攔截要求群組，以便可根據目標套用一般原則和跨領域關注。 您可以將篩選條件套用至個別動作、整個控制器，或針對應用程式全域套用。
 
@@ -172,7 +172,7 @@ ASP.NET Core UI 專案會負責任何 UI 層級考量，但不應該包含商務
 
 ### <a name="feature-organization"></a>功能組織
 
-根據預設，ASP.NET Core 應用程式組織其資料夾結構時會包含 Controllers 和 Views，通常也會包含 ViewModels。 支援這些伺服器端結構的用戶端程式碼通常會與 wwwroot 資料夾分開儲存。 不過，大型應用程式在使用此組織方式時可能會遇到問題，因為處理任何指定的功能通常需要在這些資料夾之間跳來跳去。 隨著每個資料夾中的檔案和子資料夾數目增加，這會變得越來越困難，而導致需要大幅捲動方案總管。 解決此問題的方法之一，是依「功能」而不是檔案類型來組織應用程式程式碼。 此組織樣式通常稱為功能資料夾或[功能分割](https://msdn.microsoft.com/magazine/mt763233.aspx) (另請參閱：[Vertical Slices](https://deviq.com/vertical-slices/) (垂直分割))。
+根據預設，ASP.NET Core 應用程式組織其資料夾結構時會包含 Controllers 和 Views，通常也會包含 ViewModels。 支援這些伺服器端結構的用戶端程式碼通常會與 wwwroot 資料夾分開儲存。 不過，大型應用程式在使用此組織方式時可能會遇到問題，因為處理任何指定的功能通常需要在這些資料夾之間跳來跳去。 隨著每個資料夾中的檔案和子資料夾數目增加，這會變得越來越困難，而導致需要大幅捲動方案總管。 解決此問題的方法之一，是依「功能」而不是檔案類型來組織應用程式程式碼。 此組織樣式通常稱為功能資料夾或[功能](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)配量（另請參閱：[垂直](https://deviq.com/vertical-slices/)配量）。
 
 基於此目的，ASP.NET Core MVC 會支援 Areas。 使用 Areas，您可以在每個 Areas 資料夾中建立不同的 Controllers 和 Views 資料夾集 (以及任何相關聯的模型)。 圖 7-1 顯示使用 Areas 的範例資料夾結構。
 
@@ -237,7 +237,7 @@ public class FeatureConvention : IControllerModelConvention
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-ASP.NET Core MVC 也會使用慣例來尋找檢視。 您可以使用自訂慣例將它覆寫，讓檢視位於功能資料夾中 (使用上述 FeatureConvention 提供的功能名稱)。 您可以從 MSDN 文章 [Feature Slices for ASP.NET Core MVC](https://msdn.microsoft.com/magazine/mt763233.aspx) (ASP.NET Core MVC 的功能分割)，深入了解此方法及下載工作範例。
+ASP.NET Core MVC 也會使用慣例來尋找檢視。 您可以使用自訂慣例將它覆寫，讓檢視位於功能資料夾中 (使用上述 FeatureConvention 提供的功能名稱)。 您可以從 MSDN 文章 [Feature Slices for ASP.NET Core MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) (ASP.NET Core MVC 的功能分割)，深入了解此方法及下載工作範例。
 
 ### <a name="cross-cutting-concerns"></a>跨領域關注
 
@@ -297,7 +297,7 @@ public class ValidateModelAttribute : ActionFilterAttribute
 }
 ```
 
-您可以藉由包含 [Ardalis.ValidateModel](https://www.nuget.org/packages/Ardalis.ValidateModel) 套件，來將 `ValidateModelAttribute` 新增到您的專案作為 NuGet 相依性。 針對 API，您可以使用 `ApiController` 屬性，在不需要個別 `ValidateModel` 篩選的情況下強制執行此行為。
+您可以藉由包含 `ValidateModelAttribute`Ardalis.ValidateModel[ 套件，來將 ](https://www.nuget.org/packages/Ardalis.ValidateModel) 新增到您的專案作為 NuGet 相依性。 針對 API，您可以使用 `ApiController` 屬性，在不需要個別 `ValidateModel` 篩選的情況下強制執行此行為。
 
 同樣地，篩選條件可用來檢查記錄是否存在，並先傳回 404 再執行動作，因此不需要在動作中執行這些檢查。 一旦您取出一般慣例並組織方案，將基礎結構程式碼和商務邏輯與 UI 分隔開來之後，您的 MVC 動作方法應該會非常精簡：
 
@@ -311,18 +311,18 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-您可以從 MSDN 文章 [Real World ASP.NET Core MVC Filters](https://msdn.microsoft.com/magazine/mt767699.aspx) (真實世界的 ASP.NET Core MVC 篩選條件)，深入了解如何實作篩選條件及下載工作範例。
+您可以從 MSDN 文章 [Real World ASP.NET Core MVC Filters](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters) (真實世界的 ASP.NET Core MVC 篩選條件)，深入了解如何實作篩選條件及下載工作範例。
 
 > ### <a name="references--structuring-applications"></a>參考資料 - 建構應用程式
 >
 > - **區域**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN Magazine - Feature Slices for ASP.NET Core MVC (MSDN Magazine - ASP.NET Core MVC 的功能分區)**  
->   <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc>
 > - **篩選**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN - Real World ASP.NET Core MVC Filters (真實世界的 ASP.NET Core MVC 篩選條件)**  
->   <https://msdn.microsoft.com/magazine/mt767699.aspx>
+>   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
 ## <a name="security"></a>安全性
 
@@ -563,7 +563,7 @@ ASP.NET Core 應用程式是主控台應用程式，必須在伺服器開機時�
 
 ![Kestrel 到網際網路](./media/image7-5.png)
 
-**圖 7-5**。 ASP.NET 裝載于反向 proxy 伺服器後方的 Kestrel 中
+**圖 7-5**. ASP.NET 裝載于反向 proxy 伺服器後方的 Kestrel 中
 
 在另一個案例中，反向 Proxy 可能有助於使用 SSL/HTTPS 來保護多個應用程式。 在此情況下，只有反向 Proxy 需要設定 SSL。 反向 Proxy 伺服器與 Kestrel 之間的通訊可透過 HTTP 進行，如圖 7-6 所示。
 

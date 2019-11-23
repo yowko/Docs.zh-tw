@@ -44,7 +44,7 @@ ms.locfileid: "71214015"
 
 - 訊息加密/解密變得很重要。
 
-書籍[.net 微服務：容器化 .net 應用程式](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)的架構（可從 Microsoft 免費取得）提供微服務應用程式通訊模式的深入涵蓋範圍。 在本章中，我們會提供這些模式的高階概述，以及 Azure 雲端中可用的實作為選項。
+[.Net 微服務：容器化 .Net 應用程式的架構](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)（可從 Microsoft 免費取得）提供微服務應用程式通訊模式的深入涵蓋範圍。 在本章中，我們會提供這些模式的高階概述，以及 Azure 雲端中可用的實作為選項。
 
 在本章中，我們會先解決前端應用程式與後端微服務之間的通訊。 然後，我們將探討後端微服務彼此通訊。 我們將探討 up 和 gRPC 通訊技術。 最後，我們將使用服務網格技術來探討新的創新通訊模式。 我們也將瞭解 Azure 雲端如何提供不同種類的支援*服務*，以支援雲端原生通訊。
 

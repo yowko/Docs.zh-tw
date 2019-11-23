@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71332738"
 ---
-# <a name="what-is-f"></a>什麼是 F @ no__t-0
+# <a name="what-is-f"></a>什麼是 F\#
 
 F#是一種功能性程式設計語言，可讓您輕鬆地撰寫正確和可維護的程式碼。
 

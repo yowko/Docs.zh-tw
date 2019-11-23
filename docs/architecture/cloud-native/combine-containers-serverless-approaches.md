@@ -34,16 +34,16 @@ func init ProjectName --docker
 從下列選項中選擇您要的背景工作執行時間：
 
 - `dotnet` (C#)
-- `node` (JavaScript)
+- `node` （JavaScript）
 - `python`
 
-建立專案時，會包含 Dockerfile。 現在，您可以在本機建立及測試您的函式。 使用`docker build` 和`docker run`命令來建立並執行它。 如需開始使用 Docker 支援來建立 Azure Functions 的詳細步驟，請參閱[使用自訂映射在 Linux 上建立](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image)函式教學課程。
+建立專案時，會包含 Dockerfile。 現在，您可以在本機建立及測試您的函式。 使用 `docker build` 和 `docker run` 命令來建立並執行它。 如需開始使用 Docker 支援來建立 Azure Functions 的詳細步驟，請參閱[使用自訂映射在 Linux 上建立](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image)函式教學課程。
 
 ## <a name="how-to-combine-serverless-and-kubernetes-with-keda"></a>如何結合無伺服器和 Kubernetes 與 KEDA
 
 Azure 函式會根據以指定函式為目標的事件速率，自動調整以滿足需求。 此外，您可以利用 Kubernetes 來裝載您的函式，並使用以 Kubernetes 為基礎的事件驅動自動調整，或 KEDA。 當沒有發生任何事件時，KEDA 可以相應減少為0個實例，然後為了回應事件，它可以使用其水準 pod 自動調整程式來相應增加容器的數目，以符合需求。 [深入瞭解如何使用 KEDA 調整 Azure](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda)函式。
 
-## <a name="references"></a>reference
+## <a name="references"></a>參考
 
 - [在 Docker 容器中執行 Azure Functions](https://markheath.net/post/azure-functions-docker)
 - [使用自訂映射在 Linux 上建立函式](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image)

@@ -1,14 +1,13 @@
 ---
 title: GRPC 應用程式中的安全性-WCF 開發人員適用的 gRPC
 description: GRPC 中的呼叫和通道驗證和授權的總覽。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: d0b7ff5bef755c5eeb9b3c419dcda1cb75ac4031
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: b88ed0c01d1ca4432c7e4fe7115246f4227159df
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846235"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967242"
 ---
 # <a name="security-in-grpc-applications"></a>gRPC 應用程式中的安全性
 

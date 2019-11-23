@@ -30,7 +30,7 @@ AKS 的基本部署可以使用自訂 CLI 腳本或簡單的部署檔案，但�
 ![eShopOnContainers 架構](./media/eshoponcontainers-helm-folder.png)
 **圖 2-6**。 EShopOnContainers helm 資料夾。
 
-每個個別元件都是使用`helm install`命令來安裝。 這些命令很容易編寫腳本，而 eShopOnContainers 提供「部署所有」腳本，它會在不同的元件之間進行迴圈，並使用其各自的 helm 圖表進行安裝。 結果是可重複的程式，在原始檔控制中使用應用程式進行版本設定，而小組中的任何人都可以使用單行指令碼命令，部署到 AKS 叢集。 特別是當與 Azure Dev Spaces 結合時，讓開發人員能夠輕鬆地診斷及測試其微服務型雲端原生應用程式的個別變更。
+每個個別元件都是使用 `helm install` 命令來安裝。 這些命令很容易編寫腳本，而 eShopOnContainers 提供「部署所有」腳本，它會在不同的元件之間進行迴圈，並使用其各自的 helm 圖表進行安裝。 結果是可重複的程式，在原始檔控制中使用應用程式進行版本設定，而小組中的任何人都可以使用單行指令碼命令，部署到 AKS 叢集。 特別是當與 Azure Dev Spaces 結合時，讓開發人員能夠輕鬆地診斷及測試其微服務型雲端原生應用程式的個別變更。
 
 ## <a name="azure-dev-spaces"></a>Azure Dev Spaces
 
@@ -50,10 +50,10 @@ Azure Dev Spaces 可協助個別開發人員在開發期間，于 Azure 中裝�
 
 EShopOnContainers 範例包含追蹤線上行銷活動的支援。 Azure 函式是用來針對指定的活動識別碼提取行銷活動詳細資料。 單一 Azure 函式端點比較簡單且足夠，而不是為此目的建立完整的 ASP.NET Core 應用程式。 Azure Functions 具有比完整 ASP.NET Core 應用程式更簡單的組建和部署模型，特別是當設定為在 Kubernetes 中執行時。 部署函式的功能是使用 Azure Resource Manager （ARM）範本和 Azure CLI。 此活動詳細資料微服務不是面向客戶，而且與線上商店的需求並不相同，因此這是 Azure Functions 的理想候選。 函式需要某些設定才能正常運作，例如資料庫連接字串資料和映射基底 URI 設定。 您會在 Azure 入口網站中設定 Azure Functions。
 
-## <a name="references"></a>reference
+## <a name="references"></a>參考
 
-- [EShopOnContainers在 AKS 中建立 Kubernetes 叢集](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#create-kubernetes-cluster-in-aks)
-- [EShopOnContainersAzure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)
+- [eShopOnContainers：在 AKS 中建立 Kubernetes 叢集](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#create-kubernetes-cluster-in-aks)
+- [eShopOnContainers： Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)
 - [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about)
 
 >[!div class="step-by-step"]

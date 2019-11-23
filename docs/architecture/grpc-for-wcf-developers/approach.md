@@ -1,18 +1,17 @@
 ---
 title: GRPC 如何為 WCF 開發人員提供 RPC gRPC 的方法
 description: 比較 WCF 與 gRPC 的主要功能。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 3da28968f8c8bd6c4fdba7432ffc8458d8340457
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 1ebfd102217c9685c5ff5200386c642b2017e98f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846693"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968122"
 ---
 # <a name="how-grpc-approaches-rpc"></a>gRPC 如何處理 RPC
 
-Windows Communication Foundation （WCF）和 gRPC 兩者都是*遠端程序呼叫*（RPC）模式的執行，它的目的是要呼叫在不同電腦上執行的服務，或是在不同的進程中，順暢地像是用戶端應用程式中的方法呼叫。 雖然 WCF 和 gRPC 的目標都相同，但執行的詳細資料也很不同。
+Windows Communication Foundation （WCF）和 gRPC 兩者都是*遠端程序呼叫*（RPC）模式的執行，它的目的是要呼叫在不同電腦或不同進程中執行的服務，而不會像在用戶端應用程式中直接呼叫方法一樣順利運作。 雖然 WCF 和 gRPC 的目標都相同，但執行的詳細資料也很不同。
 
 下表將說明 WCF 的主要功能與 gRPC 的關聯性，以及您可以在本書其餘部分找到更詳細的解釋。
 

@@ -1,14 +1,13 @@
 ---
 title: 將 WCF 雙工服務遷移至 WCF 開發人員的 gRPC-gRPC
 description: 瞭解如何將各種形式的 WCF 雙工服務遷移至 gRPC 串流服務。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 1702c9f7659f056af9009e81847f28c6e65b277c
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e2248df20e5c2d8f96055d42ba684749251154bd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846605"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971873"
 ---
 # <a name="migrate-wcf-duplex-services-to-grpc"></a>將 WCF 雙面服務移轉至 gRPC
 
@@ -18,7 +17,7 @@ ms.locfileid: "72846605"
 
 ## <a name="server-streaming-rpc"></a>伺服器串流 RPC
 
-在[範例 SIMPLESTOCKTICKER WCF 方案](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/SimpleStockTickerSample/wcf/SimpleStockTicker) *SimpleStockPriceTicker*中，有一個雙工服務，其中用戶端會使用內建符號清單來啟動連線，而伺服器會使用*回呼介面*來傳送更新可供使用。 用戶端會執行該介面，以回應來自伺服器的呼叫。
+在[SIMPLESTOCKTICKER WCF 解決方案的範例](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/SimpleStockTickerSample/wcf/SimpleStockTicker)中， *SimpleStockPriceTicker*有一個雙工服務，其中用戶端會使用內建符號清單來啟動連線，而伺服器會使用*回呼介面*來在更新可用時進行傳送。 用戶端會執行該介面，以回應來自伺服器的呼叫。
 
 ### <a name="the-wcf-solution"></a>WCF 解決方案
 
@@ -168,7 +167,7 @@ public class StockTickerService : Protos.SimpleStockTicker.SimpleStockTickerBase
 
 不同于 WCF 雙工服務，在連接開啟時，服務類別的實例會保持運作狀態，而 gRPC 服務則會使用傳回的工作來保持服務的運作狀態。 工作不應完成，直到連接關閉為止。
 
-服務可以使用 `ServerCallContext` 中的 `CancellationToken` 來判斷用戶端何時關閉連接。 簡單的靜態方法（`AwaitCancellation`）是用來建立在解除標記時完成的工作。
+服務可以使用 `ServerCallContext`中的 `CancellationToken` 來判斷用戶端何時關閉連接。 簡單的靜態方法（`AwaitCancellation`）是用來建立在解除標記時完成的工作。
 
 在 `Subscribe` 方法中，取得 `StockPriceSubscriber` 並加入寫入回應資料流程的事件處理常式。 然後在立即處置 `subscriber` 以防止它嘗試將資料寫入已關閉的資料流程之前，先等候連接關閉。
 
@@ -214,9 +213,9 @@ class Program
 
 #### <a name="consume-the-stream"></a>使用資料流程
 
-WCF 使用的回呼介面，可讓伺服器直接呼叫用戶端上的方法。 gRPC 串流的工作方式不同。 用戶端會逐一查看傳回的資料流程並處理訊息，就像是從傳回 `IEnumerable` 的本機方法傳回的一樣。
+WCF 使用的回呼介面，可讓伺服器直接呼叫用戶端上的方法。 gRPC 串流的工作方式不同。 用戶端會逐一查看傳回的資料流程並處理訊息，就像是從傳回 `IEnumerable`的本機方法傳回的一樣。
 
-`IAsyncStreamReader<T>` 類型的運作方式很像 `IEnumerator<T>`：有一個 `MoveNext` 方法，只要有更多資料，就會傳回 true，而 `Current` 屬性則會傳回最新的值。 唯一的差別在於 `MoveNext` 方法會傳回 `Task<bool>`，而不只是 `bool`。 `ReadAllAsync` 擴充方法會將資料流程包裝在標準C# 8`IAsyncEnumerable`中，以搭配新的`await foreach`語法使用。
+`IAsyncStreamReader<T>` 類型的運作方式很像 `IEnumerator<T>`：有一個 `MoveNext` 方法，只要有更多資料，就會傳回 true，而 `Current` 屬性則會傳回最新的值。 唯一的差別在於 `MoveNext` 方法會傳回 `Task<bool>`，而不只是 `bool`。 `ReadAllAsync` 擴充方法會將資料流程包裝在標準C# 8 `IAsyncEnumerable` 中，以搭配新的 `await foreach` 語法使用。
 
 ```csharp
 static async Task DisplayAsync(IAsyncStreamReader<StockTickerUpdate> stream, CancellationToken token)
@@ -273,7 +272,7 @@ public interface IFullStockTickerService
 
 在 gRPC 中執行此模式較不簡單，因為現在有兩個數據串流會傳遞訊息：一個是從用戶端到伺服器，另一個則是從伺服器到用戶端。 您無法使用多個方法來執行新增和移除作業，但是可以在單一資料流程上傳遞多個類型的訊息，其方式是使用 `Any` 類型或 `oneof` 關鍵字，如[第3章](protobuf-any-oneof.md)所述。
 
-在有一組可接受的特定類型的情況下，`oneof` 是較好的方式。 使用可以保存 `AddSymbolRequest` 或 `RemoveSymbolRequest` 的 `ActionMessage`。
+在有一組可接受的特定類型的情況下，`oneof` 是較好的方式。 使用可以保存 `AddSymbolRequest` 或 `RemoveSymbolRequest`的 `ActionMessage`。
 
 ```protobuf
 message ActionMessage {
@@ -346,7 +345,7 @@ private static Task AwaitCancellation(CancellationToken token)
 }
 ```
 
-GRPC 為我們產生的 `ActionMessage` 類別，保證只能設定其中一個 `Add` 和 `Remove` 屬性，並找出哪一個不 `null` 是尋找所使用之訊息類型的有效方式但還有更好的方法。 程式碼產生也會在 `ActionMessage` 類別中建立 `enum ActionOneOfCase`，如下所示：
+GRPC 為我們產生的 `ActionMessage` 類別，保證只能設定其中一個 `Add` 和 `Remove` 屬性，並找出哪一個不 `null` 是尋找所要使用之訊息類型的有效方式，但還有更好的方法。 程式碼產生也會在 `ActionMessage` 類別中建立 `enum ActionOneOfCase`，如下所示：
 
 ```csharp
 public enum ActionOneofCase {
@@ -463,7 +462,7 @@ private async Task HandleResponsesAsync(CancellationToken token)
 
 ### <a name="client-clean-up"></a>用戶端清理
 
-當視窗關閉並處置 `MainWindowViewModel` （從 `MainWindow` 的 `Closed` 事件）時，建議您適當地處置 `AsyncDuplexStreamingCall` 物件。 特別是，應該呼叫 `RequestStream` 上的 `CompleteAsync` 方法，以正常地關閉伺服器上的資料流程。 下列範例顯示範例視圖模型中的 `DisposeAsync` 方法：
+當視窗關閉並處置 `MainWindowViewModel` （從 `MainWindow`的 `Closed` 事件）時，建議您適當地處置 `AsyncDuplexStreamingCall` 物件。 特別是，應該呼叫 `RequestStream` 上的 `CompleteAsync` 方法，以正常地關閉伺服器上的資料流程。 下列範例顯示範例視圖模型中的 `DisposeAsync` 方法：
 
 ```csharp
 public ValueTask DisposeAsync()

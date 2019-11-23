@@ -1,5 +1,5 @@
 ---
-title: Take While 子句 (Visual Basic)
+title: Take While 子句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryTakeWhile
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-ms.openlocfilehash: fe6ee470698504bc0434930cc9aa6de712e04254
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 23b7c84a9f896161a66059fcb1f30753d3b863d5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004682"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347104"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While 子句 (Visual Basic)
 只要指定的條件為 `true`，即包含集合中的項目，並略過其餘項目。  
@@ -28,19 +28,19 @@ Take While expression
   
 |詞彙|定義|  
 |---|---|  
-|`expression`|必要項。 運算式，表示要測試元素的條件。 運算式必須傳回 `Boolean` 值或函式對等用法，例如要評估為 `Boolean` 的 `Integer`。|  
+|`expression`|必要項。 An expression that represents a condition to test elements for. The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.|  
   
 ## <a name="remarks"></a>備註  
- @No__t-0 子句包含查詢結果開頭的元素，直到提供的 `expression` 傳回 `false` 為止。 在 `expression` 傳回 `false` 之後，查詢將會略過所有剩餘的元素。 針對其餘的結果，會忽略 `expression`。  
+ The `Take While` clause includes elements from the start of a query result until the supplied `expression` returns `false`. After the `expression` returns `false`, the query will bypass all remaining elements. The `expression` is ignored for the remaining results.  
   
- @No__t-0 子句與 `Where` 子句不同之處在于，@no__t 2 子句可以用來包含符合特定條件之查詢中的所有元素。 只有在第一次未滿足條件時，@no__t 0 子句才會包含元素。 當您使用已排序的查詢結果時，`Take While` 子句最有用。  
+ The `Take While` clause differs from the `Where` clause in that the `Where` clause can be used to include all elements from a query that meet a particular condition. The `Take While` clause includes elements only until the first time that the condition is not satisfied. The `Take While` clause is most useful when you are working with an ordered query result.  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例會使用 `Take While` 子句來抓取結果，直到找不到任何訂單的第一個客戶為止。  
+ The following code example uses the `Take While` clause to retrieve results until the first customer without any orders is found.  
   
  [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [查詢](../../../visual-basic/language-reference/queries/index.md)

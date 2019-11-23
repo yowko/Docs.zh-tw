@@ -1,21 +1,21 @@
 ---
-title: IsNot 運算子 (Visual Basic)
+title: IsNot 運算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.isnot
 helpviewer_keywords:
 - IsNot operator [Visual Basic]
 ms.assetid: 8dd2bcdb-0166-48a2-9094-60dfb448f36c
-ms.openlocfilehash: 32e8f9532244679d2994b0e3d98279d75f7e77b4
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 616506f64d20e1f150b443433f1b69040136a5ba
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701043"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336067"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot 運算子 (Visual Basic)
 
-比較兩個物件參考變數。
+Compares two object reference variables.
 
 ## <a name="syntax"></a>語法
 
@@ -24,27 +24,27 @@ result = object1 IsNot object2
 ```
 
 ## <a name="parts"></a>組件
- `result` 必要項。 `Boolean` 值。
+ 需要 `result`。 `Boolean` 值。
 
- `object1` 必要項。 任何 @no__t 0 變數或運算式。
+ 需要 `object1`。 Any `Object` variable or expression.
 
- `object2` 必要項。 任何 @no__t 0 變數或運算式。
+ 需要 `object2`。 Any `Object` variable or expression.
 
 ## <a name="remarks"></a>備註
- @No__t-0 運算子會判斷兩個物件參考是否參考不同的物件。 不過，它不會執行值比較。 如果 `object1` 和 `object2` 都參考完全相同的物件實例，`result` 會 `False`;如果不是，`result` `True`。
+ The `IsNot` operator determines if two object references refer to different objects. However, it does not perform value comparisons. If `object1` and `object2` both refer to the exact same object instance, `result` is `False`; if they do not, `result` is `True`.
 
- `IsNot` 是 `Is` 運算子的相反。 @No__t-0 的優點是，您可以避免使用 `Not` 和 `Is` 的語法不好，這可能會很難閱讀。
+ `IsNot` is the opposite of the `Is` operator. The advantage of `IsNot` is that you can avoid awkward syntax with `Not` and `Is`, which can be difficult to read.
 
- 您可以使用 `Is` 和 @no__t 1 運算子來測試早期繫結和晚期繫結物件。
+ You can use the `Is` and `IsNot` operators to test both early-bound and late-bound objects.
 
 ## <a name="example"></a>範例
- 下列程式碼範例會使用 `Is` 運算子和 `IsNot` 運算子來完成相同的比較。
+ The following code example uses both the `Is` operator and the `IsNot` operator to accomplish the same comparison.
 
  [!code-vb[VbVbalrOperators#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#29)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Is 運算子](is-operator.md)
 - [TypeOf 運算子](typeof-operator.md)
 - [Visual Basic 中的運算子優先順序](operator-precedence.md)
-- [如何：測試兩個物件是否相同 @ no__t-0
+- [如何：測試兩個物件是否相同](../../programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)

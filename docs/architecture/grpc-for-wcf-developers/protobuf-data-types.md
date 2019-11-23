@@ -1,20 +1,19 @@
 ---
 title: Protobuf 純量資料類型-WCF 開發人員的 gRPC
 description: 瞭解 .NET Core 中 Protobuf 和 gRPC 所支援的基本和已知資料類型。
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: cae9cc483ffb791a9b53e6a2d9d7c0924d725a67
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: ae7f5f48099000dff0eefb36e23cb9b9f2ac517c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846354"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971556"
 ---
 # <a name="protobuf-scalar-data-types"></a>Protobuf 純量資料類型
 
 Protobuf 支援某個範圍的原生純量實數值型別。 下表列出所有其對等C#的類型：
 
-| Protobuf 類型 | C# 類型      | 備註 |
+| Protobuf 類型 | C# 類型      | 注意事項 |
 | ------------- | ------------ | ----- |
 | `double`      | `double`     |       |
 | `float`       | `float`      |       |
@@ -32,18 +31,18 @@ Protobuf 支援某個範圍的原生純量實數值型別。 下表列出所有�
 | `string`      | `string`     | 3     |
 | `bytes`       | `ByteString` | 4     |
 
-## <a name="notes"></a>備註
+## <a name="notes"></a>注意事項
 
-1. 使用帶正負號的值時，`int32` 和 `int64` 的標準編碼沒有效率。 如果您的欄位可能包含負數，請改用 `sint32` 或 `sint64`。 這兩種類型分別C#對應至`int`和`long`類型。
+1. 使用帶正負號的值時，`int32` 和 `int64` 的標準編碼沒有效率。 如果您的欄位可能包含負數，請改用 `sint32` 或 `sint64`。 這兩種類型分別C#對應至 `int` 和 `long` 類型。
 2. 無論值為何，`fixed` 欄位一律會使用相同數目的位元組。 此行為可讓較大的值更快速地進行序列化和還原序列化。
 3. Protobuf 字串是以 UTF-8 （或7位 ASCII）編碼，且編碼的長度不能大於 2<sup>32</sup>。
-4. Protobuf 執行時間提供 `ByteString` 類型，可讓您輕鬆地在C#`byte[]`陣列之間進行對應。
+4. Protobuf 執行時間提供 `ByteString` 類型，可讓您輕鬆地在C# `byte[]` 陣列之間進行對應。
 
 ## <a name="other-net-primitive-types"></a>其他 .NET 基本類型
 
 ### <a name="dates-and-times"></a>日期和時間
 
-原生純量類型不提供日期和時間值，相當於C#的<xref:System.DateTimeOffset>、<xref:System.DateTime>和<xref:System.TimeSpan>。 您可以使用 Google 的「知名型別」延伸模組來指定這些型別，這些擴充功能可跨支援的平臺，為更複雜的欄位類型提供程式碼產生和執行時間支援。 下表顯示日期和時間類型：
+原生純量類型不提供日期和時間值，相當於C#的 <xref:System.DateTimeOffset>、<xref:System.DateTime>和 <xref:System.TimeSpan>。 您可以使用 Google 的「知名型別」延伸模組來指定這些型別，這些擴充功能可跨支援的平臺，為更複雜的欄位類型提供程式碼產生和執行時間支援。 下表顯示日期和時間類型：
 
 | C# 類型 | Protobuf 知名型別 |
 | ------- | ------------------------ |
@@ -90,7 +89,7 @@ Protobuf 不直接支援在其他平臺上稱為 `UUID` 的 <xref:System.Guid> �
 
 ### <a name="nullable-types"></a>可為 Null 的型別
 
-產生的 Protobuf 程式C#代碼會使用原生類型，例如`int32`的`int`。 這表示一定會包含這些值，而且不能是 null。 對於需要明確 null 的值，例如在程式C#代碼中使用 `int?`，Protobuf 的「知名類型」包含編譯成可為 null C#之類型的包裝函式。 若要使用它們，請將 `wrappers.proto` 匯入到您的 `.proto` 檔案，如下所示：
+產生的 Protobuf 程式C#代碼會使用原生類型，例如 `int32`的 `int`。 這表示一定會包含這些值，而且不能是 null。 對於需要明確 null 的值，例如在程式C#代碼中使用 `int?`，Protobuf 的「知名類型」包含編譯成可為 null C#之類型的包裝函式。 若要使用它們，請將 `wrappers.proto` 匯入到您的 `.proto` 檔案，如下所示：
 
 ```protobuf  
 syntax = "proto3"
@@ -120,11 +119,11 @@ Protobuf 會針對產生的訊息屬性使用簡單的 `T?` （例如 `int?`）�
 
 已知的型別 `Timestamp` 和 `Duration` 在 .NET 中是以類別表示，因此不需要可為 null 的版本，但轉換成 `DateTimeOffset` 或 `TimeSpan`時，請務必檢查這些類型的屬性是否為 null。
 
-## <a name="decimals"></a>小
+## <a name="decimals"></a>小數
 
 Protobuf 原本就不支援 .NET `decimal` 型別，只 `double` 和 `float`。 Protobuf 專案中有一項持續的討論，告訴您將標準 `Decimal` 類型新增至已知類型的可能性，並提供支援的語言和架構平臺支援，但尚未實行任何功能。
 
-您可以建立訊息定義來代表可在 .NET 用戶端和伺服器之間安全序列化的 `decimal` 類型，但是其他平臺上的開發人員必須瞭解所使用的格式，並執行自己的處理適用于該檔案。
+您可以建立訊息定義來代表可在 .NET 用戶端和伺服器之間安全序列化的 `decimal` 類型，但是其他平臺上的開發人員必須瞭解所使用的格式，並為其執行自己的處理。
 
 ### <a name="creating-a-custom-decimal-type-for-protobuf"></a>建立 Protobuf 的自訂十進位類型
 

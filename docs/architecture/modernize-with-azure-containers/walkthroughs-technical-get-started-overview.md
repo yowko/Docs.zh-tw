@@ -39,7 +39,7 @@ ms.locfileid: "69660890"
 
 [eShopModernizing wiki 逐步解說](https://github.com/dotnet-architecture/eShopModernizing/wiki)
 
-### <a name="overview"></a>總覽
+### <a name="overview"></a>概觀
 
 在此逐步解說中，您可以探索三個範例繼承應用程式的初始執行。 前兩個範例 web 應用程式具有整合型架構，而且是使用傳統 ASP.NET 建立的。 其中一個應用程式是以 ASP.NET 4.x MVC 為基礎;第二個應用程式是以 ASP.NET 4.x Web Forms 為基礎。
 第三個應用程式是由用戶端 WinForms 應用程式和伺服器端[Windows Communication Foundation （WCF）](../../framework/wcf/whats-wcf.md)服務所組成的3層應用程式。
@@ -83,7 +83,7 @@ ASP.NET 4.x 或更早版本中的相依性（適用于 MVC 或 Web form）表示
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>逐步解說2：使用 Windows 容器容器化現有的 .NET 應用程式
 
-### <a name="overview"></a>總覽
+### <a name="overview"></a>概觀
 
 使用 Windows 容器改善現有 .NET 應用程式的部署，像是以 MVC、Web form 或 WCF 為基礎，到生產、開發和測試環境。
 
@@ -134,7 +134,7 @@ ASP.NET 4.x 或更早版本中的相依性（適用于 MVC 或 Web form）表示
 
 EShopModernizing GitHub 存放庫 wiki 中提供完整的技術逐步解說： <https://github.com/dotnet-architecture/eShopModernizing/wiki/06.-Deploying-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
-### <a name="overview"></a>總覽
+### <a name="overview"></a>概觀
 
 在 Azure 中的 Windows Server 2016 虛擬機器（VM）上部署至 Docker 主機，可讓您快速設定開發/測試/預備環境。 此外，它也會提供測試人員或商務使用者用來驗證應用程式的一般位置。 Vm 也可以是有效的基礎結構即服務（IaaS）生產環境。
 
@@ -188,7 +188,7 @@ Azure 目前提供名為**Windows Server 2016 與容器**的 VM。 您可以使�
 
 [將應用程式部署至 ACI （Azure 容器實例）](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances))
 
-### <a name="overview"></a>總覽
+### <a name="overview"></a>概觀
 
 [Azure 容器實例（ACI）](https://docs.microsoft.com/azure/container-instances/)是擁有容器開發/測試/預備環境的最快方式，您可以在其中部署容器的單一實例。
 
@@ -226,7 +226,7 @@ Azure 容器實例可讓您輕鬆地在 Azure 中建立及管理 Docker 容器�
 
 <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
-### <a name="overview"></a>總覽
+### <a name="overview"></a>概觀
 
 以 Windows 容器為基礎的應用程式，很快就需要使用平臺，甚至從 IaaS Vm 繼續進行。 這是為了輕鬆達成高擴充性和更好的自動化擴充性，以及在自動化部署和版本控制方面的重大改進所需要的。 您可以使用[Azure Container service](https://azure.microsoft.com/services/container-service/)中提供的 orchestrator [Kubernetes](https://kubernetes.io/)來達到這些目標。
 
@@ -286,7 +286,7 @@ Azure Container Service 專為 Azure 優化熱門的開放原始碼工具和技�
 
 <https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>
 
-### <a name="overview"></a>總覽
+### <a name="overview"></a>概觀
 
 使用 Windows 容器的簡單容器化應用程式，可以輕鬆地部署到適用于容器的 Azure App Service。 對於大部分的 Windows 容器型應用程式而言，這是建議的方法。
 
@@ -294,7 +294,7 @@ Azure Container Service 專為 Azure 優化熱門的開放原始碼工具和技�
 
 本逐步解說的目標是瞭解如何部署 Windows 容器型應用程式，以從登錄（Docker Hub 或 Azure Container Registry） Azure App Service 容器。
 
-### <a name="scenario"></a>情節
+### <a name="scenario"></a>案例
 
 ![將以 Windows 容器為基礎的應用程式部署至適用于容器的 Azure App Service](./media/image5-11.png)
 

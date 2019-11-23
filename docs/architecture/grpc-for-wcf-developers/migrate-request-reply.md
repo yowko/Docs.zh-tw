@@ -1,14 +1,13 @@
 ---
 title: 將 WCF 要求-回復服務遷移至 WCF 開發人員的 gRPC-gRPC
 description: 瞭解如何將簡單的要求-回復服務從 WCF 遷移至 gRPC。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 12e042e8e7e3683cc4da1fedce2482e7199b04a7
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: f0b20e7b374438f90d83aebc6035a4e4dd94ae18
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846606"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971791"
 ---
 # <a name="migrate-a-wcf-request-reply-service-to-a-grpc-unary-rpc"></a>將 WCF 要求-回復服務遷移至 gRPC 一元 RPC
 
@@ -30,7 +29,7 @@ public interface IPortfolioService
 }
 ```
 
-`Portfolio` 模型是以[DataContract](xref:System.Runtime.Serialization.DataContractAttribute)標記C#的簡單類別，包括`PortfolioItem`物件的清單。 這些模型會定義在 `TraderSys.PortfolioData` 專案中，以及代表資料存取抽象的儲存機制類別。
+模型是以 `Portfolio`DataContract[ 標記C#的簡單類別，包括](xref:System.Runtime.Serialization.DataContractAttribute)物件的清單。`PortfolioItem` 這些模型會定義在 `TraderSys.PortfolioData` 專案中，以及代表資料存取抽象的儲存機制類別。
 
 ```csharp
 [DataContract]
@@ -135,7 +134,7 @@ message Portfolio {
 
 ## <a name="convert-the-servicecontract-to-a-grpc-service"></a>將 ServiceContract 轉換成 gRPC 服務
 
-WCF `Get` 方法會採用兩個參數： `Guid traderId` 和 `int portfolioId`。 gRPC 服務方法只能接受單一參數，因此必須建立訊息來保存這兩個值。 常見的做法是使用與方法相同的名稱來命名這些要求物件，並 `Request` 尾碼。 同樣地，`string` 用於 `traderId` 欄位，而不是 `Guid`。
+WCF `Get` 方法會採用兩個參數： `Guid traderId` 和 `int portfolioId`。 gRPC 服務方法只能接受單一參數，因此必須建立訊息來保存這兩個值。 常見的做法是使用與方法相同的名稱來命名這些要求物件，並 `Request`尾碼。 同樣地，`string` 用於 `traderId` 欄位，而不是 `Guid`。
 
 服務可以直接傳回 `Portfolio` 訊息，但同樣地，這可能會影響未來的回溯相容性。 針對服務中的每個方法定義個別的 `Request` 和 `Response` 訊息是個很好的作法，即使其中有許多都是相同的，因此請使用單一 `Portfolio` 欄位宣告 `GetResponse` 訊息。
 
@@ -180,7 +179,7 @@ service Portfolios {
 
 如果您使用這些變更來儲存專案，則 gRPC 組建目標會在背景中執行，並產生所有 Protobuf 訊息類型，以及您可以繼承以執行服務的基類。
 
-開啟 `Services/GreeterService.cs` 類別，並刪除範例程式碼。 現在您可以加入「公事包服務」執行。 產生的基類將會在 `Protos` 命名空間中，並以嵌套類別的形式產生。 gRPC 會建立一個靜態類別，其名稱與 `.proto` 檔案中的服務相同，然後在該靜態類別內具有尾碼 `Base` 的基類，因此會 `TraderSys.Portfolios.Protos.Portfolios.PortfoliosBase` 基底類型的完整識別碼。
+開啟 `Services/GreeterService.cs` 類別，並刪除範例程式碼。 現在您可以加入「公事包服務」執行。 產生的基類將會在 `Protos` 命名空間中，並以嵌套類別的形式產生。 gRPC 會建立一個靜態類別，其名稱與 `.proto` 檔案中的服務相同，然後在該靜態類別內具有尾碼 `Base` 的基類，因此會 `TraderSys.Portfolios.Protos.Portfolios.PortfoliosBase`基底類型的完整識別碼。
 
 ```csharp
 namespace TraderSys.Portfolios.Services
@@ -199,7 +198,7 @@ ASP.NET Core 中所有 gRPC 一元服務方法的簽章都是一致的。 有兩
 
 ## <a name="migrate-the-portfoliodata-library-to-net-core"></a>將 PortfolioData 程式庫遷移至 .NET Core
 
-此時，專案需要 WCF 方案中包含在 `TraderSys.PortfolioData` 類別庫中的組合存放庫和模型。 將它們帶入最簡單的方式，就是使用 [Visual Studio**新增專案**] 對話方塊與 [*類別庫] （.NET Standard）* 範本，或從命令列使用 .NET Core CLI 執行下列命令，以建立新的類別庫。從包含 `TraderSys.sln` 檔案的目錄。
+此時，專案需要 WCF 方案中包含在 `TraderSys.PortfolioData` 類別庫中的組合存放庫和模型。 將其帶到最簡單的方式，就是使用 Visual Studio [**新增專案**] 對話方塊和 [*類別庫] （.NET Standard）* 範本來建立新的類別庫，或從命令列使用 .NET Core CLI，從包含 `TraderSys.sln` 檔案的目錄執行下列命令。
 
 ```dotnetcli
 dotnet new classlib -o src/TraderSys.PortfolioData
@@ -281,7 +280,7 @@ public override Task<GetResponse> Get(GetRequest request, ServerCallContext cont
 }
 ```
 
-第一個問題是，`request.TraderId` 是字串，而服務需要 `Guid`。 雖然字串的預期格式是 `UUID`，但程式碼必須處理呼叫者已傳送無效值並適當回應的可能性。 服務可以藉由擲回 `RpcException` 來回應錯誤，並使用標準的 `InvalidArgument` 狀態碼來表示問題。
+第一個問題是，`request.TraderId` 是字串，而服務需要 `Guid`。 雖然字串的預期格式是 `UUID`，但程式碼必須處理呼叫者已傳送無效值並適當回應的可能性。 服務可以藉由擲回 `RpcException`來回應錯誤，並使用標準的 `InvalidArgument` 狀態碼來表示問題。
 
 ```csharp
 public override Task<GetResponse> Get(GetRequest request, ServerCallContext context)
@@ -295,7 +294,7 @@ public override Task<GetResponse> Get(GetRequest request, ServerCallContext cont
 }
 ```
 
-一旦 `traderId` 有適當的 `Guid` 值，就可以使用存放庫來抓取組合，並將其傳回給用戶端。
+一旦 `traderId`有適當的 `Guid` 值，就可以使用存放庫來抓取組合，並將其傳回給用戶端。
 
 ```csharp
     var response = new GetResponse
@@ -348,7 +347,7 @@ namespace TraderSys.Portfolios.Protos
 ```
 
 > [!NOTE]
-> 您可以使用程式庫（例如[AutoMapper](https://automapper.org/) ）來處理從內部模型類別到 Protobuf 類型的這種轉換，只要您設定較低層級的類型轉換，例如 `string` / `Guid` 或 `decimal` / `double` 和清單對應。
+> 您可以使用程式庫（例如[AutoMapper](https://automapper.org/) ）來處理從內部模型類別到 Protobuf 類型的這種轉換，只要您設定較低層級的類型轉換，例如 `string`/`Guid` 或 `decimal`/`double` 和清單對應。
 
 轉換程式碼準備好之後，就可以完成 `Get` 方法的執行。
 
@@ -370,7 +369,7 @@ public override async Task<GetResponse> Get(GetRequest request, ServerCallContex
 
 ```
 
-`GetAll` 方法的實作為相似之處。 請注意，Protobuf 訊息上的 `repeated` 欄位會產生為 `RepeatedField<T>` 類型的 `readonly` 屬性，因此您必須使用 `AddRange` 方法將專案新增至其中，如下列範例所示：
+`GetAll` 方法的實作為相似之處。 請注意，Protobuf 訊息上的 `repeated` 欄位會產生為 `RepeatedField<T>`類型的 `readonly` 屬性，因此您必須使用 `AddRange` 方法將專案新增至其中，如下列範例所示：
 
 ```csharp
 public override async Task<GetAllResponse> GetAll(GetAllRequest request, ServerCallContext context)
@@ -409,7 +408,7 @@ public override async Task<GetAllResponse> GetAll(GetAllRequest request, ServerC
 > [!TIP]
 > 請注意，此對話方塊也會提供 [URL] 欄位。 如果您的組織維護 `.proto` 檔案的 web 可存取目錄，您就可以藉由設定此 URL 位址來建立用戶端。
 
-使用 Visual Studio**加入已連接服務**功能時，會將 `portfolios.proto` 檔案新增至類別庫專案做為*連結*的檔案，而不是複製，因此服務專案中檔案的變更會自動套用至用戶端專案. `csproj` 檔案中的 `<Protobuf>` 元素看起來像這樣：
+使用 Visual Studio**加入已連接服務**功能時，`portfolios.proto` 檔案會加入至類別庫專案做為*連結*的檔案，而不是複製，因此服務專案中檔案的變更會自動套用至用戶端專案。 `csproj` 檔案中的 `<Protobuf>` 元素看起來像這樣：
 
 ```xml
 <Protobuf Include="..\TraderSys.Portfolios\Protos\portfolios.proto" GrpcServices="Client">

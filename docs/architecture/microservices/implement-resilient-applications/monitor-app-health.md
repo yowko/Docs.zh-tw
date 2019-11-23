@@ -1,5 +1,5 @@
 ---
-title: 健康狀態監視
+title: 健康情況監視
 description: 瀏覽實作健康情況監視的其中一種方式。
 ms.date: 01/07/2019
 ms.openlocfilehash: f1d63e04bbea95fcf0a9f9d3b50aef0e7d4a830e
@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/07/2019
 ms.locfileid: "73732875"
 ---
-# <a name="health-monitoring"></a>健康狀態監視
+# <a name="health-monitoring"></a>健康情況監視
 
 健康狀態監視功能可提供近即時的容器和微服務狀態資訊。 健康狀態監視功能對微服務運作的各方面來說都非常重要，尤其當協調器要分階段執行部分應用程式升級時更是如此，如稍後所說明。
 

@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 8985434467346acc360e9a89c052803f495e87d1
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: b376f8b38749f242f4e78a10808532989e0ac834
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332000"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972137"
 ---
 # <a name="common-web-application-architectures"></a>一般 Web 應用程式架構
 
@@ -146,7 +146,7 @@ Clean Architecture 會將商務邏輯和應用程式模型放在應用程式的�
 
 在 Clean Architecture 解決方案中，每個專案都有清楚的責任。 因此，某些類型屬於每個專案，而您將經常找到對應至適當專案中這些類型的資料夾。
 
-應用程式核心會保存商務模型，其中包含實體、服務和介面。 這些介面包含將使用基礎結構執行的作業抽象，例如資料存取、檔案系統存取、網路呼叫等。有時在這個層級定義的服務或介面會需要使用不相依於 UI 或基礎結構的非實體類型。 這些可以定義為簡單的資料傳輸物件 (DTO)。
+應用程式核心會保存商務模型，其中包含實體、服務和介面。 這些介面包括使用基礎結構（例如資料存取、檔案系統存取、網路呼叫等）所執行之作業的抽象概念。有時候在此層級定義的服務或介面，將需要使用對 UI 或基礎結構沒有相依性的非實體類型。 這些可以定義為簡單的資料傳輸物件 (DTO)。
 
 ### <a name="application-core-types"></a>應用程式核心類型
 
@@ -170,7 +170,7 @@ ASP.NET Core MVC 應用程式中的使用者介面層是應用程式的進入點
 ### <a name="ui-layer-types"></a>UI 層類型
 
 - Controllers
-- 篩選條件
+- 篩選器。
 - 檢視
 - ViewModels
 - 啟動
@@ -260,13 +260,12 @@ networks:
       name: nat
 ```
 
-`docker-compose.yml` 檔案參考了 `Web` 專案中的 `Dockerfile`。 `Dockerfile` 是用來指定將使用的基底容器，以及如何在其上設定應用程式。 `Web` 的 `Dockerfile`：
+`docker-compose.yml` 檔案參考了 `Dockerfile` 專案中的 `Web`。 `Dockerfile` 是用來指定將使用的基底容器，以及如何在其上設定應用程式。 `Web` 的 `Dockerfile`：
 
 ```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 
-COPY *.sln .
 COPY . .
 WORKDIR /app/src/Web
 RUN dotnet restore

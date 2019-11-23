@@ -18,12 +18,12 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699295"
 ---
-# <a name="sharedlisteners-element"></a>@no__t 0sharedListeners > 元素
+# <a name="sharedlisteners-element"></a>\<s > 元素
 包含任何來源或追蹤項目可參考的接聽項。  這些接聽程式預設不會接收任何追蹤，而且在執行時間不可能取得這些接聽程式。 識別為共用接聽項的接聽程式可以依名稱新增至來源或追蹤。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. 診斷 >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<sharedListeners >**  
+&nbsp;&nbsp;[ **\<系統診斷 >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<s >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,15 +33,15 @@ ms.locfileid: "71699295"
 </sharedListeners>  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和元素  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
- 無。  
+ None。  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-trace.md)|將接聽項新增至 `sharedListeners` 集合。|  
   
@@ -58,7 +58,7 @@ ms.locfileid: "71699295"
  此元素可用於電腦設定檔（Machine.config）和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下列範例顯示如何使用 `<sharedListeners>` 元素，將接聽程式 `console` 新增至 <xref:System.Diagnostics.TraceSource> 和 @no__t 4 類別的 @no__t 2 集合。 主控台追蹤接聽程式會透過對 <xref:System.Diagnostics.TraceSource> 或 <xref:System.Diagnostics.Trace> 的呼叫，將追蹤資訊寫入主控台。  
+ 下列範例示範如何使用 `<sharedListeners>` 專案，將接聽程式 `console` 新增至 <xref:System.Diagnostics.TraceSource> 和 <xref:System.Diagnostics.Trace> 類別的 `Listeners` 集合。 主控台追蹤接聽程式會透過呼叫 <xref:System.Diagnostics.TraceSource> 或 <xref:System.Diagnostics.Trace>，將追蹤資訊寫入主控台。  
   
 ```xml  
 <configuration>  

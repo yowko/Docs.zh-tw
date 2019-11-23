@@ -14,7 +14,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71700893"
 ---
-# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>' @no__t 0membername > ' 無法透過 \<containertype > ' \<containertypename > '，在專案外公開類型 ' \<typename > '
+# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<成員名稱 > ' 無法透過 \<containertype > '\<containertypename > '，在專案外公開類型 '\<typename > '
 變數、程式參數或函式傳回會在其容器外公開，但它會宣告為不能在容器外公開的類型。  
   
  下列基本架構程式碼會顯示產生此錯誤的情況。  
@@ -27,11 +27,11 @@ Public Class mainClass
 End Class  
 ```  
   
- @No__t-0、`Friend`、`Protected Friend` 或 `Private` 宣告的類型，主要是在其宣告內容外具有有限的存取權。 以較不受限制的存取來使用它做為變數的資料類型，將會破壞此目的。 在上述的基本架構程式碼中，`exposedVar` 會 `Public`，並將 `privateClass` 公開給不應該有存取權的程式碼。  
+ 宣告 `Protected`、`Friend`、`Protected Friend`或 `Private` 的型別，是為了在其宣告內容外具有有限的存取權。 以較不受限制的存取來使用它做為變數的資料類型，將會破壞此目的。 在上述的基本架構程式碼中，會 `Public` `exposedVar`，並將 `privateClass` 公開給不應存取它的程式碼。  
   
  **錯誤識別碼：** BC30909  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a>若要改正這項錯誤  
   
 - 將變數、程式參數或函數傳回的存取層級變更為至少與其資料類型的存取層級相同。  
   

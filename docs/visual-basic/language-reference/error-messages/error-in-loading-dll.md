@@ -1,37 +1,37 @@
 ---
-title: 載入 DLL 時發生錯誤 (Visual Basic)
+title: 載入 DLL 時發生錯誤
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-ms.openlocfilehash: 5a26443a49b0b853f2f2188fb58d7ed907d671b4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36452cc6ff03042939cd4066aef76129b5bb8f0a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659604"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329550"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>載入 DLL 時發生錯誤 (Visual Basic)
-動態連結程式庫 (DLL) 是程式庫中指定`Lib`子句`Declare`陳述式。 此錯誤的可能原因包括：  
+A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement. Possible causes for this error include:  
   
-- 檔案不是可執行檔的 DLL。  
+- The file is not DLL executable.  
   
-- 檔案不是 Microsoft Windows DLL。  
+- The file is not a Microsoft Windows DLL.  
   
-- DLL 會參考不存在的另一個 DLL。  
+- The DLL references another DLL that is not present.  
   
-- DLL 或參考的 DLL 不在路徑中指定的目錄。  
+- The DLL or referenced DLL is not in a directory specified in the path.  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 如果是檔案的原始程式文字檔案，因此不 DLL 可執行檔，它必須單獨編譯及連結至 DLL 可執行檔格式。  
+- If the file is a source-text file and therefore not DLL executable, it must be compiled and linked to a DLL-executable form.  
   
-- 如果檔案不是 Microsoft Windows DLL，取得對等的 Microsoft Windows。  
+- If the file is not a Microsoft Windows DLL, obtain the Microsoft Windows equivalent.  
   
-- 如果 DLL 參考不存在的另一個 DLL 時，取得參考的 DLL，並提供它。  
+- If the DLL references another DLL that is not present, obtain the referenced DLL and make it available.  
   
-- 如果 DLL 或參考的 DLL 不是路徑所指定的目錄中，請將 DLL 移至參考的目錄。  
+- If the DLL or referenced DLL is not in a directory specified by the path, move the DLL to a referenced directory.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)

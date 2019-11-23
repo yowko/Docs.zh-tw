@@ -2,12 +2,12 @@
 title: 微服務架構中的通訊
 description: 探索微服務之間的不同通訊方式，並了解同步和非同步方式的影響。
 ms.date: 09/20/2018
-ms.openlocfilehash: add1ff74bee456e0fa7f2fb54d2cf4e536402db4
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 7bd45e0b8f8ea3330cf8d2b613e54111cc72f14f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738063"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966983"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>微服務架構中的通訊
 
@@ -35,7 +35,7 @@ ms.locfileid: "73738063"
 
 - 單一接收者： 每個要求都必須由一個接收者或服務來處理。 這種通訊的其中一個範例是 [Command pattern](https://en.wikipedia.org/wiki/Command_pattern) (命令模式)。
 
-- 多個接收者： 每個要求可以由零到多個接收者來處理。 這種類型的通訊必須是非同步的。 其中的範例是用於[事件驅動架構](https://microservices.io/patterns/data/event-driven-architecture.html)這類模式的[發佈/訂閱](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)機制。 這是以透過事件在多個微服務之間散佈資料更新時的事件匯流排介面或訊息代理程式為基礎；通常您可以使用[主題和訂閱](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)，並透過服務匯流排或類似 [Azure 服務匯流排](https://azure.microsoft.com/services/service-bus/)的構件來實作。
+- 多個接收者： 每個要求可以由零到多個接收者來處理。 這種類型的通訊必須是非同步的。 其中的範例是用於[事件驅動架構](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)這類模式的[發佈/訂閱](https://microservices.io/patterns/data/event-driven-architecture.html)機制。 這是以透過事件在多個微服務之間散佈資料更新時的事件匯流排介面或訊息代理程式為基礎；通常您可以使用[主題和訂閱](https://azure.microsoft.com/services/service-bus/)，並透過服務匯流排或類似 [Azure 服務匯流排](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)的構件來實作。
 
 微服務應用程式通常會使用這些通訊樣式的組合。 叫用一般 Web API HTTP 服務時，最常見的類型是使用 HTTP/HTTPS 等同步通訊協定的單一接收者通訊。 微服務通常也會使用傳訊通訊協定，來進行微服務之間的非同步通訊。
 
@@ -105,7 +105,7 @@ ms.locfileid: "73738063"
 
 **圖 4-17**： 一對一的即時非同步訊息通訊
 
-SignalR 是達成即時通訊的好方法，可將內容從後端伺服器推送至用戶端。由於通訊是即時的，因此用戶端應用程式幾乎會立即顯示變更。 一般來說，其會由 WebSockets 這類通訊協定使用許多 Websocket 連線 (每個用戶端一個) 來進行處理。 典型的範例是：某個服務同時向許多用戶端 Web 應用程式傳達運動遊戲之分數變更的情況。
+SignalR 很適合用來完成將內容從後端伺服器推送到用戶端的即時通訊。 由於是即時通訊，因此用戶端應用程式幾乎會立即顯示變更。 一般來說，其會由 WebSockets 這類通訊協定使用許多 Websocket 連線 (每個用戶端一個) 來進行處理。 典型的範例是：某個服務同時向許多用戶端 Web 應用程式傳達運動遊戲之分數變更的情況。
 
 >[!div class="step-by-step"]
 >[上一頁](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

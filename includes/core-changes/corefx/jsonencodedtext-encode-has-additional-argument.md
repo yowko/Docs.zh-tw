@@ -8,13 +8,13 @@ ms.locfileid: "72237315"
 ---
 ### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a>JsonEncodedText 方法有額外的 JavaScriptEncoder 引數
 
-從 .NET Core 3.0 Preview 8 開始，@no__t 0 的方法包含選擇性的 <xref:System.Text.Encodings.Web.JavaScriptEncoder> 引數。
+從 .NET Core 3.0 Preview 8 開始，<xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> 方法包含選擇性的 <xref:System.Text.Encodings.Web.JavaScriptEncoder> 引數。
 
 #### <a name="change-description"></a>變更描述
 
 .NET Core 3.0 包含新的類型 x： JsonEncodedText。編碼% 2A？ displayProperty = Namewithtype> >。 從 .NET Core 3.0 Preview 8 開始，所有 <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> 方法多載的簽章已變更為包含選擇性的 <xref:System.Text.Encodings.Web.JavaScriptEncoder> 參數。 已進行這種變更，以允許不同或自訂的編碼器。
 
-.NET Core 3.0 Preview 7 中 `Encode` 方法的簽章是：
+.NET Core 3.0 Preview 7 中 `Encode` 方法的簽章為：
 
 ```csharp
 namespace System.Text.Json
@@ -50,7 +50,7 @@ namespace System.Text.Json
 
 這只是二進位的重大變更;針對 .NET Core 3.0 Preview 8 或更新版本進行重新編譯將會修正任何執行時間問題。
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>類別
 
 CoreFx
 

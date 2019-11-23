@@ -53,7 +53,7 @@ NuGet 套件識別碼與 NuGet 套件版本結合，可用來識別 NuGet 中的
 
 Windows.NET Framework CLR 會要求完全相符，以載入強式名稱組件。 例如，`Libary1, Version=1.0.0.0` 編譯時參考了 `Newtonsoft.Json, Version=11.0.0.0`。 .NET Framework 將只會載入該確切版本 `11.0.0.0`。 若要在執行階段載入不同的版本，必須將繫結重新導向新增至 .NET 應用程式的設定檔中。
 
-強式命名與組件版本相結合，可啟用[嚴格的組件版本載入](../assembly/versioning.md)。 雖然為程式庫進行強式命名有很多好處，但它通常會導致無法找到組件的執行階段例外狀況，而且[要求修復 `app.config`/`web.config` 中的繫結重新導向](../../framework/configure-apps/redirect-assembly-versions.md)。 .NET Core 組件載入已經放寬，.NET Core CLR 將在更高版本的執行階段自動載入組件。
+強式命名與組件版本相結合，可啟用[嚴格的組件版本載入](../assembly/versioning.md)。 雖然為程式庫進行強式命名有很多好處，但它通常會導致無法找到組件的執行階段例外狀況，而且[要求修復 ](../../framework/configure-apps/redirect-assembly-versions.md)`app.config`/ 中的繫結重新導向`web.config`。 .NET Core 組件載入已經放寬，.NET Core CLR 將在更高版本的執行階段自動載入組件。
 
 **✔️ 考慮**只在 AssemblyVersion 中包括主要版本。
 

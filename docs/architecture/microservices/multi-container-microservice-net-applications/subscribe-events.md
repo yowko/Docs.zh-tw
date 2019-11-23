@@ -87,7 +87,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 在本例中，由於來源微服務是簡單的 CRUD 微服務，因此該程式碼會直接放在 Web API 控制器中。
 
-在更進階的微服務中，例如使用 CQRS 方法時，它可以在 `Handle()` 方法的 `CommandHandler` 類別中實作。
+在更進階的微服務中，例如使用 CQRS 方法時，它可以在 `CommandHandler` 方法的 `Handle()` 類別中實作。
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>設計發行至事件匯流排時的不可部分完成性和復原
 
@@ -95,7 +95,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 基本上，您可以使用微服務來建置可擴充且高度可用的系統。 簡單來說，CAP 定理指出您無法建置持續可用、極為一致「且」容許任何分割的 (分散式) 資料庫 (或擁有自己模型的微服務)。 您必須從這三個屬性中選擇兩個。
 
-在微服務架構中，您應該選擇可用性和容錯，而且您應該不要強調強式一致性。 因此，在大多數現代化微服務架構應用程式中，您通常不想要在傳訊中使用分散式交易 (就像是使用 [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) 實作以 Windows Distributed Transaction Coordinator (DTC) 為基礎的[分散式交易](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85))時一樣)。
+在微服務架構中，您應該選擇可用性和容錯，而且您應該不要強調強式一致性。 因此，在大多數現代化微服務架構應用程式中，您通常不想要在傳訊中使用分散式交易 (就像是使用 [MSMQ](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) 實作以 Windows Distributed Transaction Coordinator (DTC) 為基礎的[分散式交易](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx)時一樣)。
 
 讓我們回到一開始的問題及其範例。 如果服務損毀發生在更新資料庫之後 (在本例中會是具有 \_context.SaveChangesAsync() 的程式碼行之後)，但在發行整合事件之前，整體系統可能會變成不一致。 視您正在處理的特定商務作業而定，這可能具商務關鍵性。
 
@@ -328,7 +328,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 - **事件驅動傳訊** \
     <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
-- **Jimmy Bogard。重構以提高彈性：評估**結合  \
+- **Jimmy Bogard。重構以提高彈性：評估**結合性 \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 - **發佈訂閱通道** \

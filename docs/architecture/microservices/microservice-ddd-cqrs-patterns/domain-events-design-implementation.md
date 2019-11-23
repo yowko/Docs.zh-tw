@@ -63,7 +63,7 @@ ms.locfileid: "73739923"
 
 重點是不要限制領域事件出現時所要執行的動作數目。 領域和應用程式中的動作和規則最終都會成長。 發生某件事時的副作用動作複雜度或數目會成長，但如果您的程式碼與「黏附」功能結合 (亦即，使用 `new` 建立特定物件)，則每次您需要新增動作時，也需要變更可運作及經測試的程式碼。
 
-這項變更可能會導致新的 Bug，而此方法也會違反 [SOLID](https://en.wikipedia.org/wiki/SOLID) 的 [Open–closed principl](https://en.wikipedia.org/wiki/Open/closed_principle) (開啟/關閉準則)。 不僅如此，協調作業的原始類別會不斷成長，這違背[單一功能原則 (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle)。
+這項變更可能會導致新的 Bug，而此方法也會違反 [SOLID](https://en.wikipedia.org/wiki/Open/closed_principle) 的 [Open–closed principl](https://en.wikipedia.org/wiki/SOLID) (開啟/關閉準則)。 不僅如此，協調作業的原始類別會不斷成長，這違背[單一功能原則 (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle)。
 
 相反地，如果您使用領域事件，就可以透過此方法分離職責，來建立更細緻且低耦合的實作：
 
@@ -71,7 +71,7 @@ ms.locfileid: "73739923"
 2. 接收命令處理常式中的命令。
    - 執行單一彙總的交易。
    - (選擇性) 引發副作用的領域事件 (例如 OrderStartedDomainEvent)。
-3. 處理領域事件 (在目前的處理序中)，這些事件會在多個彙總或應用程式動作中執行不限數目的副作用。 例如:
+3. 處理領域事件 (在目前的處理序中)，這些事件會在多個彙總或應用程式動作中執行不限數目的副作用。 例如，
    - 確認或建立購買者和付款方式。
    - 建立相關的整合事件並傳送至事件匯流排，以在微服務之間傳播狀態，或觸發外部動作，例如將電子郵件傳送給購買者。
    - 處理其他副作用。
@@ -224,7 +224,7 @@ Vaughn Vernon 在有效的匯總設計中指出下列各項[。第二部分：�
 
 不過，其他開發人員以及像是 Jimmy Bogard 的架構設計人員接受單一交易橫跨數個彙總，但僅限於這些額外的彙總與相同原始命令的副作用相關時。 例如，Bogard 在 [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/) (更佳的領域事件模式) 中表示：
 
-> 一般來說，我想要讓領域事件的副作用發生在相同的邏輯交易中，但不一定是在我們認可交易之前，\[...\] 的相同範圍內，我們會將事件分派給他們的個別處理常式。
+> 一般來說，我想要讓領域事件的副作用發生在相同的邏輯交易中，但不一定是在我們認可交易之前的相同範圍內 \[...\]，我們會將事件分派至其各自的處理常式。
 
 如果您在認可原始交易「之前」分派領域事件，這是因為您想要將這些事件的副作用包含在相同的交易中。 例如，如果 EF DbContext SaveChanges 方法失敗，交易將會復原所有變更，包括相關領域事件處理常式所實作之任何副作用作業的結果。 這是因為 DbContext 存留期範圍預設會定義為 "scoped"。 因此，DbContext 物件會在相同範圍或物件圖形內要具現化的多個儲存機制物件之間共用。 開發 Web API 或 MVC 應用程式時，這會與 HttpRequest 範圍一致。
 

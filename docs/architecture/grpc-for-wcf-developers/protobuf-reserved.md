@@ -1,14 +1,13 @@
 ---
 title: Protobuf 保留的欄位-WCF 開發人員的 gRPC
 description: 瞭解跨版本相容性的保留字段。
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 34697371299bdc5d9a58c0696c1ce7d19816ca87
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e589cd38a712ce014fa2c4d847fbde359d538dd0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846322"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967305"
 ---
 # <a name="protobuf-reserved-fields"></a>Protobuf 保留欄位
 

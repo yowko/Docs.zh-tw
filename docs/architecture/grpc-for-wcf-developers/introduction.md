@@ -1,14 +1,13 @@
 ---
 title: 簡介-WCF 開發人員的 gRPC
 description: 簡介
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 9eb12d5060ddf4f345ebe095738c98238c6caab7
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 3fb7ae440f65cc2daa2a2c984d01d0c0c1eac0aa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846630"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967612"
 ---
 # <a name="introduction"></a>簡介
 
@@ -18,7 +17,7 @@ ms.locfileid: "72846630"
 
 gRPC 是廣泛軟體發展的熱門架構，適用于各種程式設計語言，供新式 RPC 案例使用。 此社區和生態系統既活躍又活躍，而且支援將 gRPC 通訊協定新增至基礎結構元件，例如 Kubernetes、服務網格、負載平衡器等等。 這些因素，以及其效能、效率和跨平臺相容性，讓 gRPC 成為新應用程式的自然選擇，以及移至 .NET Core 的 WCF 應用程式。
 
-## <a name="history"></a>歷程
+## <a name="history"></a>歷程記錄
 
 電腦網路的基本原則，只是一組電腦彼此交換資料，以達成一系列相互關聯的工作，而不會在其開始後變更。 不過，複雜度、規模和預期已以指數方式成長。  
 

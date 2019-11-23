@@ -1,14 +1,13 @@
 ---
 title: 為什麼為 WCF 開發人員建議使用 gRPC-針對 WCF 開發人員 gRPC
 description: 討論為什麼 gRPC 是適合想要遷移至現代化架構和平臺的 WCF 開發人員。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: f96e9a059dc9f12a13c9eb5bb7184ee75d602458
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: da712e1ceee92f0a1a2661252dcda602f5dde9a0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846073"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966937"
 ---
 # <a name="why-grpc-is-recommended-for-wcf-developers"></a>為什麼建議 WCF 開發人員使用 gRPC
 
@@ -34,7 +33,7 @@ GRPC 代表其他解決方案的其他原因如下：
 
 gRPC 是一套完整的 RPC 解決方案。 它在多個語言和平臺上一致運作，並提供絕佳的工具，其中包含自動產生的許多必要的程式碼，因此更多的開發人員時間也會更專注于商務邏輯。
 
-### <a name="streaming"></a>資料流
+### <a name="streaming"></a>Streaming
 
 gRPC 具有完整的雙向串流，其可為 WCF 的全雙工服務提供非常類似的功能。 gRPC 串流可以透過一般的網際網路連線、負載平衡器和服務網格運作。
 

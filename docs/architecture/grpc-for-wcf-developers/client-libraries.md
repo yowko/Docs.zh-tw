@@ -1,14 +1,13 @@
 ---
 title: 建立 gRPC 用戶端程式庫-適用于 WCF 開發人員的 gRPC
 description: 討論 gRPC 服務的共用用戶端程式庫/套件。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: b403e7e1638496947ac7f6fc976cbeab2f435bbf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 2135fe8b24a2311a31cb2bed191d290b1112bc66
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419926"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967879"
 ---
 # <a name="create-grpc-client-libraries"></a>建立 gRPC 用戶端程式庫
 
@@ -19,7 +18,7 @@ ms.locfileid: "73419926"
 > [!CAUTION]
 > 您**不**應該使用自訂程式碼來提供基本的功能，因為這表示功能會限制為使用共用程式庫的 .net 小組，而不是使用 Python 或 JAVA 等其他語言或平臺的小組。
 
-在不同小組經常使用不同程式設計語言和架構的多平臺環境中，或您的 API 可從外部存取的情況下，只要共用 `.proto` 檔案，讓開發人員能夠產生自己的用戶端，是確保的最佳方式。盡可能有許多小組可以存取您的 gRPC 服務。
+在不同小組經常使用不同程式設計語言和架構的多平臺環境中，或您的 API 可從外部存取的情況下，只要共用 `.proto` 檔案，讓開發人員能夠產生自己的用戶端，是確保小組可以存取 gRPC 服務的最佳方式。
 
 ## <a name="useful-extensions"></a>有用的擴充功能
 
@@ -146,7 +145,7 @@ namespace Grpc.Core
 }
 ```
 
-## <a name="summary"></a>總結
+## <a name="summary"></a>摘要
 
 `IAsyncEnumerable` 和 `IObservable` 模型都是受到妥善支援的方式，也是在 .NET 中處理非同步資料資料流程的完整記錄方法。 gRPC 串流會妥善對應到這兩個範例，以提供與現代化 .NET Core 架構的緊密整合，以及被動/非同步程式設計樣式。
 

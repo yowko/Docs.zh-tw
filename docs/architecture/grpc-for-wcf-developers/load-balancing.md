@@ -1,14 +1,13 @@
 ---
 title: 適用于 WCF 開發人員的負載平衡 gRPC-gRPC
 description: 選擇要使用 gRPC 服務的負載平衡器。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 18965b9c4765ac693c6ba36ad3ea9848ce858a5c
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 070fc7fda73988302d15c8cec12b1ac359641317
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846625"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967446"
 ---
 # <a name="load-balancing-grpc"></a>負載平衡 gRPC
 

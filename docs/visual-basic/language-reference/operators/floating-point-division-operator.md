@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
 ms.openlocfilehash: 238c062b2dd0744ba96cf9ba8591c0ef39f81bb3
 ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/28/2019
 ms.locfileid: "71592187"
@@ -34,16 +34,16 @@ expression1 / expression2
   
 ## <a name="parts"></a>組件  
  `expression1`  
- 必要項。 任何數值運算式。  
+ 必要。 任何數值運算式。  
   
  `expression2`  
- 必要項。 任何數值運算式。  
+ 必要。 任何數值運算式。  
   
 ## <a name="supported-types"></a>支援的型別  
  所有數數值型別，包括不帶正負號的和浮點類型，以及 `Decimal`。  
   
 ## <a name="result"></a>結果  
- 結果是 `expression1` 除以 `expression2` 的完整商，包括任何餘數。  
+ 結果是 `expression1` 除以 `expression2`的完整商，包括任何餘數。  
   
  [\ 運算子（Visual Basic）](../../../visual-basic/language-reference/operators/integer-division-operator.md)會傳回整數商，這會捨棄餘數。  
   
@@ -59,19 +59,19 @@ expression1 / expression2
   
  在執行除法之前，任何整數數值運算式都會擴展為 `Double`。 如果您將結果指派給整數資料類型，Visual Basic 會嘗試將 `Double` 的結果轉換成該類型。 如果結果不符合該類型，這可能會擲回例外狀況。 特別是，請參閱此說明頁面上的「嘗試除數為零」。  
   
- 如果`expression1` 或`expression2`評估為[沒有任何](../../../visual-basic/language-reference/nothing.md)值，則會將它視為零。  
+ 如果 `expression1` 或 `expression2` 評估為[沒有任何](../../../visual-basic/language-reference/nothing.md)值，則會將它視為零。  
   
 ## <a name="attempted-division-by-zero"></a>嘗試除數為零  
- 如果 `expression2` 評估為零，則 @no__t 1 運算子的行為會因不同的運算元資料類型而有所不同。 下表顯示可能的行為。  
+ 如果 `expression2` 評估為零，則 `/` 運算子的行為會因不同的運算元資料類型而有所不同。 下表顯示可能的行為。  
   
 |運算元資料類型|如果 `expression2` 為零時的行為|  
 |------------------------|---------------------------------------|  
-|浮點（`Single` 或 `Double`）|傳回無限大（<xref:System.Double.PositiveInfinity> 或 <xref:System.Double.NegativeInfinity>），如果 `expression1` 也為零，則傳回 <xref:System.Double.NaN> （不是數位）|  
+|浮點（`Single` 或 `Double`）|如果 `expression1` 也為零，則傳回無限大（<xref:System.Double.PositiveInfinity> 或 <xref:System.Double.NegativeInfinity>）或 <xref:System.Double.NaN> （不是數位）|  
 |`Decimal`|擲回 <xref:System.DivideByZeroException>|  
-|整數（帶正負號或不帶正負號）|嘗試轉換回整數類資料類型 <xref:System.OverflowException>，因為整數類型無法接受 <xref:System.Double.PositiveInfinity>、<xref:System.Double.NegativeInfinity> 或 <xref:System.Double.NaN>|  
+|整數（帶正負號或不帶正負號）|嘗試轉換回整數類資料類型 <xref:System.OverflowException>，因為整數類型無法接受 <xref:System.Double.PositiveInfinity>、<xref:System.Double.NegativeInfinity>或 <xref:System.Double.NaN>|  
   
 > [!NOTE]
-> @No__t-0 運算子可以多載 *，這*表示當運算元具有該類別或結構的類型時，類別或結構可以重新定義其行為。 如果您的程式碼在這類類別或結構上使用這個運算子，請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+> `/` 運算子可以多載 *，這*表示當運算元具有該類別或結構的類型時，類別或結構可以重新定義其行為。 如果您的程式碼在這類類別或結構上使用這個運算子，請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
  這個範例會使用 `/` 運算子來執行浮點除法。 結果為兩個運算元的商。  

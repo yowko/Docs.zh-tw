@@ -2,12 +2,12 @@
 title: 使用 .NET Core 實作微服務領域模型
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 進入 DDD 導向領域模型的實作詳細資料。
 ms.date: 10/08/2018
-ms.openlocfilehash: be8dc9339f5815139616e9785b5b3e3e5931b57e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: bff9cbda08e519038056268151a1721427f0ac01
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737260"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972049"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 實作微服務領域模型
 
@@ -174,7 +174,7 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
 - **Julie Lerman。資料點-針對領域驅動設計撰寫程式碼：以資料為焦點的開發人員的秘訣** \
-  <https://msdn.microsoft.com/magazine/dn342868.aspx>
+  <https://docs.microsoft.com/archive/msdn-magazine/2013/august/data-points-coding-for-domain-driven-design-tips-for-data-focused-devs>
 
 - **Udi Dahan。如何建立完全封裝的網域模型** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>

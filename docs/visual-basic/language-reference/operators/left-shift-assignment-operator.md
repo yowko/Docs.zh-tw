@@ -1,5 +1,5 @@
 ---
-title: < < = 運算子（Visual Basic）
+title: <<= 運算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.<<=
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - operator<<=
 - compound assignment statements [Visual Basic]
 ms.assetid: 8ad26613-faff-4e2f-89ee-63feee33bfda
-ms.openlocfilehash: aae71069bdcb88efa5842526dd7eb47806f248d0
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: cc89e0dadc7148b21e695a53a2e746a00ed66441
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701099"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350960"
 ---
-# <a name="-operator-visual-basic"></a>\< @ no__t-1 = 運算子（Visual Basic）
-在變數或屬性的值上執行算術左移位，並將結果指派回變數或屬性。  
+# <a name="-operator-visual-basic"></a>\<\<= Operator (Visual Basic)
+Performs an arithmetic left shift on the value of a variable or property and assigns the result back to the variable or property.  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,27 +29,27 @@ variableorproperty <<= amount
   
 ## <a name="parts"></a>組件  
  `variableorproperty`  
- 必要項。 整數類資料類型的變數或屬性（`SByte`、`Byte`、@no__t 2、`UShort`、`Integer`、`UInteger`、`Long` 或 `ULong`）。  
+ 必要項。 Variable or property of an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).  
   
  `amount`  
- 必要項。 擴展為 `Integer` 之資料類型的數值運算式。  
+ 必要項。 Numeric expression of a data type that widens to `Integer`.  
   
 ## <a name="remarks"></a>備註  
- @No__t-0 運算子左邊的元素可以是簡單的純量變數、屬性或陣列的元素。 變數或屬性不可為[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  
+ The element on the left side of the `<<=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- @No__t-0 運算子會先在變數或屬性的值上執行算術左移位。 然後，運算子會將該作業的結果指派回該變數或屬性。  
+ The `<<=` operator first performs an arithmetic left shift on the value of the variable or property. The operator then assigns the result of that operation back to that variable or property.  
   
- 算術移位不是迴圈的，這表示不會在另一端重新進入從結果的一端移位的位。 在算術左移位中，會捨棄超出結果資料類型範圍的位，而且右邊空出的位位置會設定為零。  
+ Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. In an arithmetic left shift, the bits shifted beyond the range of the result data type are discarded, and the bit positions vacated on the right are set to zero.  
   
 ## <a name="overloading"></a>多載化  
- [< < 運算子](../../../visual-basic/language-reference/operators/left-shift-operator.md)*可以多載，這*表示當運算元具有該類別或結構的類型時，類別或結構可以重新定義其行為。 多載 `<<` 運算子會影響 `<<=` 運算子的行為。 如果您的程式碼在多載 `<<` 的類別或結構上使用 `<<=`，請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ The [<< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `<<` operator affects the behavior of the `<<=` operator. If your code uses `<<=` on a class or structure that overloads `<<`, be sure you understand its redefined behavior. 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用 `<<=` 運算子，將 `Integer` 變數的位模式向左移位指定的數量，並將結果指派給該變數。  
+ The following example uses the `<<=` operator to shift the bit pattern of an `Integer` variable left by the specified amount and assign the result to the variable.  
   
  [!code-vb[VbVbalrOperators#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#13)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [<< 運算子](../../../visual-basic/language-reference/operators/left-shift-operator.md)
 - [指派運算子](../../../visual-basic/language-reference/operators/assignment-operators.md)

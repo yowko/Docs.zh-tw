@@ -16,13 +16,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697492"
 ---
-# <a name="requiredruntime-element"></a>@no__t 0requiredRuntime > 元素
+# <a name="requiredruntime-element"></a>\<R q > 元素
 
-指定應用程式只支援 Common Language Runtime 1.0 版。 此元素已被取代，不應該再使用。 應該改為使用[@no__t 1](supportedruntime-element.md)元素。
+指定應用程式只支援 Common Language Runtime 1.0 版。 此元素已被取代，不應該再使用。 應該改為使用[`supportedRuntime`](supportedruntime-element.md)元素。
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<startup >** ](startup-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requiredRuntime >**  
+&nbsp;&nbsp;[ **\<啟動 >** ](startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<r q >**  
 
 ## <a name="syntax"></a>語法
 
@@ -47,30 +47,30 @@ safemode="true|false"/>
 
 |值|描述|
 |-----------|-----------------|
-|`false`|執行時間啟動程式碼會在登錄中尋找。 這是預設值。|
+|`false`|執行時間啟動程式碼會在登錄中尋找。 此為預設值。|
 |`true`|執行時間啟動程式碼不會在登錄中尋找。|
 
 ### <a name="child-elements"></a>子元素
 
-無。
+None。
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|項目|描述|
 |-------------|-----------------|
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|
-|`startup`|`<requiredRuntime>`包含元素。|
+|`startup`|包含 `<requiredRuntime>` 元素。|
 
 ## <a name="remarks"></a>備註
  為了僅支援1.0 版執行時間所建立的應用程式，必須使用 `<requiredRuntime>` 元素。 使用1.1 版或更新版本的執行時間所建立的應用程式必須使用 `<supportedRuntime>` 元素。
 
 > [!NOTE]
-> 如果您使用[CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函數來指定設定檔，您必須針對所有版本的執行時間使用 `<requiredRuntime>` 元素。 當您使用[CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)時，會忽略 `<supportedRuntime>` 元素。
+> 如果您使用[CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函數來指定設定檔，您必須針對所有版本的執行時間使用 `<requiredRuntime>` 專案。 當您使用[CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)時，會忽略 `<supportedRuntime>` 元素。
 
- @No__t-0 屬性字串必須符合指定之 .NET Framework 版本的安裝資料夾名稱。 不會解讀此字串。 如果執行時間啟動程式碼找不到相符的資料夾，則不會載入執行時間;啟動程式碼會顯示錯誤訊息並結束。
+ `version` 屬性字串必須符合指定之 .NET Framework 版本的安裝資料夾名稱。 不會解讀此字串。 如果執行時間啟動程式碼找不到相符的資料夾，則不會載入執行時間;啟動程式碼會顯示錯誤訊息並結束。
 
 > [!NOTE]
-> Microsoft Internet Explorer 中裝載之應用程式的啟動代碼會忽略 @no__t 0 元素。
+> Microsoft Internet Explorer 中裝載之應用程式的啟動代碼會忽略 `<requiredRuntime>` 元素。
 
 ## <a name="example"></a>範例
 
@@ -88,4 +88,4 @@ safemode="true|false"/>
 
 - [啟動設定結構描述](index.md)
 - [組態檔結構描述](../index.md)
-- [如何：設定應用程式以支援 .NET Framework 4 或更新版本](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [如何：將應用程式設定為支援 .NET Framework 4 或更新版本](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

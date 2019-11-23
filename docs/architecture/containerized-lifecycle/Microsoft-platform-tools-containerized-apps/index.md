@@ -27,7 +27,7 @@ Microsoft 工具。 針對開發/設計工作負載：適用于 Windows 的 Dock
 
 **表 3-1.** 開放給任何技術的 DevOps 工作流程
 
-| 主機 | Microsoft 技術 | 協力廠商 - Azure 插入式 |
+| Host | Microsoft 技術 | 協力廠商 - Azure 插入式 |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Docker 應用程式的平台   | • Microsoft Visual Studio 和 Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Kubernetes Service (AKS)<br /> • Azure Service Fabric<br /> • Azure Container Registry<br /> | • 任何程式碼編輯器 (例如，Sublime)<br /> • 任何語言 (Node.js、Java、Go 等等)<br /> • 任何協調器和排程器<br /> • 任何 Docker 登錄<br /> |
 | Docker 應用程式的 DevOps     | • Azure DevOps Services<br /> • Microsoft Team Foundation Server<br /> • Azure Kubernetes Service (AKS)<br /> • Azure Service Fabric<br /> | • GitHub、Git、Subversion 等等<br /> • Jenkins、Chef、Puppet、Velocity、CircleCI、TravisCI 等等<br /> • 內部部署 Docker Datacenter、Docker Swarm、Mesos DC/OS、Kubernetes 等等<br /> |

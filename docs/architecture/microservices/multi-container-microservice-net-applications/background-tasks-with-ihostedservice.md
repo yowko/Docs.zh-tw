@@ -45,7 +45,7 @@ SignalR 是使用託管服務之成品的一個範例，但您也可以將它用
 
 您基本上可以根據 IHostedService，將其中任何動作卸載至背景工作。
 
-將一個或多個 `IHostedServices` 新增至 `WebHost` 或 `Host` 的方式，是透過  ASP.NET Core （或 .NET Core 2.1 和更新版本的 `WebHost` 中的 <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A>`Host` 擴充方法進行註冊。 基本上，您必須在 `Startup` 類別的熟悉 `ConfigureServices()` 方法內註冊託管服務，如典型 ASP.NET WebHost 中的下列程式碼所示。
+將一個或多個 `IHostedServices` 新增至 `WebHost` 或 `Host` 的方式，是透過  ASP.NET Core （或 .NET Core 2.1 和更新版本的 `WebHost` 中的 <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A>`Host` 擴充方法進行註冊。 基本上，您必須在 `ConfigureServices()` 類別的熟悉 `Startup` 方法內註冊託管服務，如典型 ASP.NET WebHost 中的下列程式碼所示。
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -68,7 +68,7 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 
 ## <a name="the-ihostedservice-interface"></a>IHostedService 介面
 
-註冊 `IHostedService` 時，.NET Core 將會在應用程式啟動和停止期間分別呼叫 `IHostedService` 型別的 `StartAsync()` 和 `StopAsync()` 方法。 具體而言，在啟動伺服器之後會呼叫啟動，並觸發 `IApplicationLifetime.ApplicationStarted`。
+註冊 `IHostedService` 時，.NET Core 將會在應用程式啟動和停止期間分別呼叫 `StartAsync()` 型別的 `StopAsync()` 和 `IHostedService` 方法。 具體而言，在啟動伺服器之後會呼叫啟動，並觸發 `IApplicationLifetime.ApplicationStarted`。
 
 .NET Core 中所定義的 `IHostedService` 如下。
 
@@ -210,7 +210,7 @@ public class GracePeriodManagerService : BackgroundService
 
 當然，您可以改為執行任何其他商務背景工作。
 
-取消權杖預設會設定 5 秒的逾時，但您可以在使用 `IWebHostBuilder` 的 `UseShutdownTimeout` 延伸模組建置 `WebHost` 時變更該值。 這表示，我們的服務應該在 5 秒內取消，否則就會更突然地終止。
+取消權杖預設會設定 5 秒的逾時，但您可以在使用 `WebHost` 的 `UseShutdownTimeout` 延伸模組建置 `IWebHostBuilder` 時變更該值。 這表示，我們的服務應該在 5 秒內取消，否則就會更突然地終止。
 
 下列程式碼會將該時間變更為 10 秒。
 
@@ -240,14 +240,14 @@ WebHost.CreateDefaultBuilder(args)
 
 ## <a name="additional-resources"></a>其他資源
 
-- **在 ASP.NET Core/標準 2.0 
-   中建立排程工作**<https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
+- **在 ASP.NET Core/標準 2.0
+  中建立排程工作**<https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **在 ASP.NET Core 2.0 
-   中執行 IHostedService** <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
+- **在 ASP.NET Core 2.0
+  中執行 IHostedService** <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **使用 ASP.NET Core 2.1 
-   的 GenericHost 範例**<https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
+- **使用 ASP.NET Core 2.1
+  的 GenericHost 範例**<https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]
 >[上一頁](test-aspnet-core-services-web-apps.md)

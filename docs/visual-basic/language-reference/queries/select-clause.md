@@ -1,5 +1,5 @@
 ---
-title: Select 子句 (Visual Basic)
+title: Select 子句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QuerySelect
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 087472c51d203be083fea0d39ade6f12066cfcb4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5ebb813229d5d517b369036c69b2d23c8ee1c9f5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004744"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350413"
 ---
 # <a name="select-clause-visual-basic"></a>Select 子句 (Visual Basic)
-定義查詢的結果。  
+Defines the result of a query.  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,32 +26,32 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
 ## <a name="parts"></a>組件  
  `var1`  
- 選擇性。 可以用來參考資料行運算式結果的別名。  
+ 選擇項。 An alias that can be used to reference the results of the column expression.  
   
  `fieldName1`  
- 必要項。 要在查詢結果中傳回之欄位的名稱。  
+ 必要項。 The name of the field to return in the query result.  
   
 ## <a name="remarks"></a>備註  
- 您可以使用 `Select` 子句來定義要從查詢傳回的結果。 這可讓您定義由查詢所建立之新匿名型別的成員，或是以查詢所傳回之命名型別的成員為目標。 查詢不需要 `Select` 子句。 如果未指定任何 `Select` 子句，則查詢會根據目前範圍所識別之範圍變數的所有成員，傳回型別。 如需詳細資訊，請參閱[匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。 當查詢建立名為的型別時，它會傳回型別為 <xref:System.Collections.Generic.IEnumerable%601> 的結果，其中 `T` 是所建立的型別。  
+ You can use the `Select` clause to define the results to return from a query. This enables you to either define the members of a new anonymous type that is created by a query, or to target the members of a named type that is returned by a query. The `Select` clause is not required for a query. If no `Select` clause is specified, the query will return a type based on all members of the range variables identified for the current scope. 如需詳細資訊，請參閱[匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。 When a query creates a named type, it will return a result of type <xref:System.Collections.Generic.IEnumerable%601> where `T` is the created type.  
   
- @No__t-0 子句可以參考目前範圍中的任何變數。 這包括在 `From` 子句（或 `From` 子句）中識別的範圍變數。 它也包含以 `Aggregate`、`Let`、`Group By` 或 `Group Join` 子句的別名建立的新變數，或查詢運算式中先前 `Select` 子句的變數。 @No__t-0 子句也可以包含靜態值。 例如，下列程式碼範例顯示一個查詢運算式，其中 `Select` 子句會將查詢結果定義為具有四個成員的新匿名型別： `ProductName`、`Price`、`Discount` 和 `DiscountedPrice`。 @No__t-0 和 @no__t 1 成員值取自在 `From` 子句中定義的產品範圍變數。 在 `Let` 子句中，會計算 @no__t 0 的成員值。 @No__t 0 成員是靜態值。  
+ The `Select` clause can reference any variables in the current scope. This includes range variables identified in the `From` clause (or `From` clauses). It also includes any new variables created with an alias by the `Aggregate`, `Let`, `Group By`, or `Group Join` clauses, or variables from a previous `Select` clause in the query expression. The `Select` clause can also include static values. For example, the following code example shows a query expression in which the `Select` clause defines the query result as a new anonymous type with four members: `ProductName`, `Price`, `Discount`, and `DiscountedPrice`. The `ProductName` and `Price` member values are taken from the product range variable that is defined in the `From` clause. The `DiscountedPrice` member value is calculated in the `Let` clause. The `Discount` member is a static value.  
   
  [!code-vb[VbSimpleQuerySamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#27)]  
   
- @No__t-0 子句為後續的查詢子句導入了一組新的範圍變數，而先前的範圍變數已不再在範圍內。 查詢運算式中的最後一個 `Select` 子句會決定查詢的傳回值。 例如，下列查詢會傳回總計超過500的每個客戶訂單的公司名稱和訂單識別碼。 第一個 `Select` 子句會識別 `Where` 子句和第二個 `Select` 子句的範圍變數。 第二個 `Select` 子句會將查詢所傳回的值識別為新的匿名型別。  
+ The `Select` clause introduces a new set of range variables for subsequent query clauses, and previous range variables are no longer in scope. The last `Select` clause in a query expression determines the return value of the query. For example, the following query returns the company name and order ID for every customer order for which the total exceeds 500. The first `Select` clause identifies the range variables for the `Where` clause and the second `Select` clause. The second `Select` clause identifies the values returned by the query as a new anonymous type.  
   
  [!code-vb[VbSimpleQuerySamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#28)]  
   
- 如果 `Select` 子句識別要傳回的單一專案，則查詢運算式會傳回該單一專案之類型的集合。 如果 `Select` 子句識別要傳回的多個專案，則查詢運算式會根據選取的專案，傳回新匿名型別的集合。 例如，下列兩個查詢會根據 `Select` 子句傳回兩個不同類型的集合。 第一個查詢會以字串形式傳回公司名稱的集合。 第二個查詢會傳回以公司名稱和位址資訊填入之 @no__t 0 物件的集合。  
+ If the `Select` clause identifies a single item to return, the query expression returns a collection of the type of that single item. If the `Select` clause identifies multiple items to return, the query expression returns a collection of a new anonymous type, based on the selected items. For example, the following two queries return collections of two different types based on the `Select` clause. The first query returns a collection of company names as strings. The second query returns a collection of `Customer` objects populated with the company names and address information.  
   
  [!code-vb[VbSimpleQuerySamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#29)]  
   
 ## <a name="example"></a>範例  
- 下列查詢運算式會使用 `From` 子句，針對 @no__t 2 集合宣告範圍變數 `cust`。 @No__t-0 子句會選取 [客戶名稱] 和 [識別碼] 值，並填入新範圍變數的 `CompanyName` 和 @no__t 2 資料行。 @No__t-0 語句會在每個傳回的物件上迴圈，並顯示每一筆記錄的 `CompanyName` 和 @no__t 2 資料行。  
+ The following query expression uses a `From` clause to declare a range variable `cust` for the `customers` collection. The `Select` clause selects the customer name and ID value and populates the `CompanyName` and `CustomerID` columns of the new range variable. The `For Each` statement loops over each returned object and displays the `CompanyName` and `CustomerID` columns for each record.  
   
  [!code-vb[VbSimpleQuerySamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#30)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [查詢](../../../visual-basic/language-reference/queries/index.md)

@@ -32,7 +32,7 @@ ms.locfileid: "73736919"
 
 當您將映像名稱新增至您的 Dockerfile 檔案時，您可以根據使用的標籤選取作業系統及版本，如下列範例中所示：
 
-| Image | 註解 |
+| 影像 | 註解 |
 |-------|----------|
 | mcr.microsoft.com/dotnet/core/runtime:2.2 | .NET Core 2.2 多架構：支援 Linux 和 Windows Nano Server，視 Docker 主機而定。 |
 | mcr.microsoft.com/dotnet/core/aspnet:2.2 | ASP.NET Core 2.2 多架構：支援 Linux 和 Windows Nano Server，視 Docker 主機而定。 <br/> aspnetcore 映像有幾項針對 ASP.NET Core 所做的最佳化。 |

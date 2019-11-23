@@ -23,32 +23,32 @@ ms.locfileid: "71353718"
 # <a name="names-of-classes-structs-and-interfaces"></a>類別、結構和介面的名稱
 後面的命名指導方針適用于一般類型命名。  
   
- **✓ DO** 命名類別與結構名詞或名詞片語，使用 PascalCasing。  
+ **✓ DO**使用 PascalCasing 來命名具有名詞或名詞片語的類別和結構。  
   
  這會區分方法中的型別名稱，其以動詞片語命名。  
   
- **✓ DO** 命名介面與形容詞片語，或有時候名詞或名詞片語。  
+ **✓ DO**使用形容詞片語來命名介面，或偶爾使用名詞或名詞片語。  
   
  名詞和名詞片語應該很少使用，而且可能表示該類型應該是抽象類別，而不是介面。  
   
- **X DO NOT** 提供以類別名稱的前置詞 (例如，"C")。  
+ **X 不會**為類別名稱提供前置詞（例如 "C"）。  
   
- **✓ CONSIDER** 名稱的結尾衍生的基底類別名稱的類別。  
+ **✓請考慮**使用基類的名稱來結束衍生類別的名稱。  
   
- 這是非常容易閱讀的，並且清楚地說明關聯性。 程式碼中的一些範例如下： `ArgumentOutOfRangeException`，這是一種 `Exception`，而 `SerializableAttribute`，這是一種 `Attribute`。 不過，請務必在套用此指導方針時使用合理的判斷。例如，`Button` 類別是一種 `Control` 事件，但 `Control` 不會出現在其名稱中。  
+ 這是非常容易閱讀的，並且清楚地說明關聯性。 程式碼中的一些範例如下： `ArgumentOutOfRangeException`，這是一種 `Exception`，而 `SerializableAttribute`則是一種 `Attribute`。 不過，請務必在套用此指導方針時使用合理的判斷。例如，`Button` 類別是一種 `Control` 事件，不過 `Control` 不會出現在其名稱中。  
   
- **✓ DO** 前置詞介面名稱以字母 I，表示型別是介面。  
+ **✓**會使用字母 I 來做為介面名稱的前置詞，以指出該類型為介面。  
   
  例如，`IComponent` （描述性名詞）、`ICustomAttributeProvider` （名詞片語）和 `IPersistable` （形容詞）都是適當的介面名稱。 如同其他類型名稱，請避免使用縮寫。  
   
- **✓ DO** 確保僅由"I"前置詞上的介面名稱定義在類別是標準的介面實作的一組類別 – 介面時，名稱會不同。  
+ 當您定義類別–介面組（其中類別是介面的標準執行）時， **✓確實**會確保介面名稱上的 "I" 前置詞只會有不同的名稱。  
   
 ## <a name="names-of-generic-type-parameters"></a>泛型型別參數的名稱  
  泛型已加入至 .NET Framework 2.0。 此功能引進了一種稱為「*型別參數*」的新識別碼。  
   
- **✓ DO** 泛型型別參數名稱使用描述性名稱，除非單一字母名稱是完全一目了然，而且專案的描述性名稱不會加入值。  
+ **✓ DO** name 具有描述性名稱的泛型型別參數，除非單一字母名稱完全一目了然，而且描述性名稱不會加上值。  
   
- **✓ CONSIDER** 使用 `T` 做為型別參數名稱與一個單一字母的型別參數的類型。  
+ **✓請考慮**使用 `T` 做為具有一個單字母類型參數之類型的類型參數名稱。  
   
 ```csharp  
 public int IComparer<T> { ... }  
@@ -56,7 +56,7 @@ public delegate bool Predicate<T>(T item);
 public struct Nullable<T> where T:struct { ... }  
 ```  
   
- **✓ DO** 描述性型別參數名稱前面加上 `T`。  
+ **✓ DO**在描述性類型參數名稱前面加上 `T`。  
   
 ```csharp  
 public interface ISessionChannel<TSession> where TSession : ISession {  
@@ -64,41 +64,41 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 }  
 ```  
   
- **✓ CONSIDER** 指出條件約束放在以參數名稱的型別參數上。  
+ **✓請考慮**將條件約束放在參數名稱中的類型參數上。  
   
  例如，限制為 `ISession` 的參數可能會被呼叫 `TSession`。  
   
 ## <a name="names-of-common-types"></a>一般類型的名稱  
- **✓ DO** 遵循命名型別衍生自或實作特定的.NET Framework 型別時下, 表中所述的指導方針。  
+ **✓確實**遵循下表中所述的指導方針來命名衍生自的型別，或是執行特定的 .NET Framework 類型。  
   
 |基底類型|衍生/執行類型指導方針|  
 |---------------|------------------------------------------|  
-|`System.Attribute`|**✓ DO** 加入後置詞"Attribute"的自訂屬性的類別名稱。|  
-|`System.Delegate`|**✓ DO** 將後置詞"事件處理常式 」 新增到事件中所使用的委派的名稱。<br /><br /> **✓ DO** 加入後置詞"Callback"名稱的委派以外做為事件處理常式。<br /><br /> **X DO NOT** 委派中加入後置詞 「 委派 」。|  
-|`System.EventArgs`|**✓ DO** 加入後置詞"EventArgs。 」|  
-|`System.Enum`|**X DO NOT** 衍生自這個類別使用改為您的語言支援的關鍵字; 例如，在 C# 中，使用 `enum` 關鍵字。<br /><br /> **X DO NOT** 加入後置詞 「 列舉 」 或 「 旗標。 」|  
-|`System.Exception`|**✓ DO** 加入後置詞 「 例外狀況 」。|  
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** 加入後置詞"字典。 請注意，`IDictionary` 是特定類型的集合，但這項指導方針優先于後面的較一般集合指導方針。|  
-|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ DO** 加入後置詞 「 集合 」。|  
-|`System.IO.Stream`|**✓ DO** 加入後置詞"資料流。 」|  
-|`CodeAccessPermission IPermission`|**✓ DO** 加入後置詞 「 權限。 」|  
+|`System.Attribute`|**✓ DO**將尾碼 "Attribute" 新增至自訂屬性類別的名稱。|  
+|`System.Delegate`|**✓ DO**將後置詞 "EventHandler" 新增到事件中所使用的委派名稱。<br /><br /> **✓ DO**將後置詞 "Callback" 新增至委派的名稱，而不是當做事件處理常式使用。<br /><br /> **X 不會**將後置詞「委派」新增至委派。|  
+|`System.EventArgs`|**✓ DO**新增尾碼 "EventArgs"。|  
+|`System.Enum`|**X**不是衍生自這個類別;請改用您的語言支援的關鍵字;例如，在中C#，使用 `enum` 關鍵字。<br /><br /> **X 不會**加入後置詞「列舉」或「旗標」。|  
+|`System.Exception`|**✓ DO**新增尾碼 "Exception"。|  
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO**新增尾碼「字典」。 請注意，`IDictionary` 是特定類型的集合，但這項指導方針優先于後面的較一般集合指導方針。|  
+|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ DO**新增尾碼「集合」。|  
+|`System.IO.Stream`|**✓ DO**新增尾碼 "Stream"。|  
+|`CodeAccessPermission IPermission`|**✓ DO**新增尾碼「許可權」。|  
   
 ## <a name="naming-enumerations"></a>命名列舉  
  列舉類型的名稱（也稱為列舉）通常應該遵循標準類型命名規則（PascalCasing 等等）。 不過，還有其他適用于列舉的指導方針。  
   
- **✓ DO** 使用單數的型別名稱的列舉型別，除非其值是位元欄位。  
+ **✓確實**會針對列舉使用單數類型名稱，除非其值為位欄位。  
   
- **✓ DO** 與位元欄位使用列舉的複數的型別名稱，做為值，也稱為旗標列舉。  
+ **✓**會針對以位欄位作為值（也稱為 flags 列舉）的列舉使用複數類型名稱。  
   
- **X DO NOT** 列舉型別名稱中使用的 「 列舉 」 後置詞。  
+ **X 不要**在列舉型別名稱中使用 "enum" 尾碼。  
   
- **X DO NOT** 使用 」 的旗標 」 或"Flags"尾碼在列舉型別名稱。  
+ **X 不要**在列舉型別名稱中使用 "Flags" 或 "Flags" 尾碼。  
   
- **X DO NOT** 使用前置詞上的列舉值名稱 (例如，"ad"ADO 列舉。)、"rtf"rtf 文字列舉等等。  
+ **X 不要**在列舉值名稱上使用前置詞（例如，"ad" 代表 ADO enum，"rtf" 用於豐富文字列舉等等）。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- 從 @no__t 1Framework 設計指導方針中，@no__t 0Reprinted by 皮耳森教育，Inc. 的許可權：可重複使用的 .NET 程式庫、第2版 @ no__t-0 by Krzysztof Cwalina 和 Brad Abrams 的慣例、慣用語和模式，已于2008年10月22日發行，其為 Microsoft Windows 開發系列的一部分 Addison-Wesley Professional。 *  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 *Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition[ 節錄。](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)*  
   
 ## <a name="see-also"></a>另請參閱
 

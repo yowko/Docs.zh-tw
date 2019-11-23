@@ -1,14 +1,13 @@
 ---
 title: 錯誤處理-WCF 開發人員的 gRPC
 description: 要寫入的
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 91f5789d8ed0f01f3ce2f3f9a6c6ccf14f245290
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2c44bd9264c877a7c7a86c115b6da9f759006016
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094227"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967786"
 ---
 # <a name="error-handling"></a>錯誤處理
 
@@ -47,7 +46,7 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 
 ## <a name="catching-errors-in-grpc-clients"></a>攔截 gRPC 用戶端中的錯誤
 
-就像 WCF 用戶端可以攔截 <xref:System.ServiceModel.FaultException%601> 錯誤，gRPC 用戶端可以攔截 `RpcException` 來處理錯誤。 因為 `RpcException` 不是泛型型別，所以您無法在不同的區塊中攔截不同的錯誤類型C#，但是您可以使用的*例外狀況篩選*功能，針對不同的狀態碼宣告個別的`catch`區塊，如下列範例所示：
+就像 WCF 用戶端可以攔截 <xref:System.ServiceModel.FaultException%601> 錯誤，gRPC 用戶端可以攔截 `RpcException` 來處理錯誤。 因為 `RpcException` 不是泛型型別，所以您無法在不同的區塊中攔截不同的錯誤類型C#，但是您可以使用的*例外狀況篩選*功能，針對不同的狀態碼宣告個別的 `catch` 區塊，如下列範例所示：
 
 ```csharp
 try

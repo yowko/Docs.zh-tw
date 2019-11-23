@@ -1,5 +1,5 @@
 ---
-title: Using 陳述式 (Visual Basic)
+title: Using 陳述式
 ms.date: 07/20/2015
 f1_keywords:
 - vb.using
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-ms.openlocfilehash: 819af63acb6a1f038300bcb999dcfb904eb8a457
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 6ec0e228b3898f66f27e322b5db2dd7f3bf3d7d6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592081"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352763"
 ---
 # <a name="using-statement-visual-basic"></a>Using 陳述式 (Visual Basic)
 
-宣告 @no__t 0 區塊的開頭，並選擇性地取得區塊所控制的系統資源。
+Declares the beginning of a `Using` block and optionally acquires the system resources that the block controls.
 
 ## <a name="syntax"></a>語法
 
@@ -32,12 +32,12 @@ End Using
 
 |詞彙|定義|  
 |---|---|  
-|`resourcelist`|如果您未提供 `resourceexpression`，則為必要。 這個 `Using` 區塊控制項的一或多個系統資源清單，並以逗號分隔。|  
-|`resourceexpression`|如果您未提供 `resourcelist`，則為必要。 參考要由此 @no__t 0 區塊控制之系統資源的參考變數或運算式。|  
-|`statements`|選擇性。 @No__t 0 區塊執行的語句區塊。|  
-|`End Using`|必要項。 結束 @no__t 0 區塊的定義，並處置它所控制的所有資源。|  
+|`resourcelist`|Required if you do not supply `resourceexpression`. List of one or more system resources that this `Using` block controls, separated by commas.|  
+|`resourceexpression`|Required if you do not supply `resourcelist`. Reference variable or expression referring to a system resource to be controlled by this `Using` block.|  
+|`statements`|選擇項。 Block of statements that the `Using` block runs.|  
+|`End Using`|必要項。 Terminates the definition of the `Using` block and disposes of all the resources that it controls.|  
 
- @No__t 0 部分中的每個資源都有下列語法和部分：
+ Each resource in the `resourcelist` part has the following syntax and parts:
 
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`
 
@@ -45,47 +45,47 @@ End Using
 
  `resourcename As resourcetype = resourceexpression`
 
-## <a name="resourcelist-parts"></a>resourcelist 元件
+## <a name="resourcelist-parts"></a>resourcelist Parts
 
 |詞彙|定義|  
 |---|---|  
-|`resourcename`|必要項。 參考變數，參照 @no__t 0 區塊所控制的系統資源。|  
-|`New`|如果 `Using` 語句取得資源，則為必要。 如果您已經取得資源，請使用第二個替代語法。|  
-|`resourcetype`|必要項。 資源的類別。 類別必須執行 0 @no__t 介面。|  
-|`arglist`|選擇性。 您要傳遞至函式的引數清單，以建立 `resourcetype` 的實例。 請參閱[參數清單](parameter-list.md)。|  
-|`resourceexpression`|必要項。 參考系統資源的變數或運算式，滿足 `resourcetype` 的需求。 如果您使用第二個語法替代，則必須先取得資源，然後再將控制權傳遞給 `Using` 語句。|  
+|`resourcename`|必要項。 Reference variable that refers to a system resource that the `Using` block controls.|  
+|`New`|Required if the `Using` statement acquires the resource. If you have already acquired the resource, use the second syntax alternative.|  
+|`resourcetype`|必要項。 The class of the resource. The class must implement the <xref:System.IDisposable> interface.|  
+|`arglist`|選擇項。 List of arguments you are passing to the constructor to create an instance of `resourcetype`. See [Parameter List](parameter-list.md).|  
+|`resourceexpression`|必要項。 Variable or expression referring to a system resource satisfying the requirements of `resourcetype`. If you use the second syntax alternative, you must acquire the resource before passing control to the `Using` statement.|  
   
 ## <a name="remarks"></a>備註
 
- 有時候，您的程式碼需要非受控資源，例如檔案控制代碼、COM 包裝函式或 SQL 連接。 當您的程式碼完成時，@no__t 0 區塊可保證一或多個這類資源的處置。 這讓它們可供其他程式碼使用。
+ Sometimes your code requires an unmanaged resource, such as a file handle, a COM wrapper, or a SQL connection. A `Using` block guarantees the disposal of one or more such resources when your code is finished with them. This makes them available for other code to use.
 
- 受控資源會由 .NET Framework 垃圾收集行程（GC）處置，而不需要您進行任何額外的程式碼撰寫。 您不需要受控資源的 `Using` 區塊。 不過，您仍然可以使用 `Using` 區塊來強制處置受管理的資源，而不是等候垃圾收集行程。
+ Managed resources are disposed of by the .NET Framework garbage collector (GC) without any extra coding on your part. You do not need a `Using` block for managed resources. However, you can still use a `Using` block to force the disposal of a managed resource instead of waiting for the garbage collector.
 
- @No__t-0 區塊有三個部分：取得、使用和處置。
+ A `Using` block has three parts: acquisition, usage, and disposal.
 
-- 取得*表示建立*變數，並將它初始化以參考系統資源。 @No__t-0 語句可以取得一或多個資源，或者您可以在輸入區塊並將它提供給 `Using` 語句之前，只取得一個資源。 如果您提供 `resourceexpression`，則必須先取得資源，然後再將控制權傳遞給 `Using` 語句。
+- *Acquisition* means creating a variable and initializing it to refer to the system resource. The `Using` statement can acquire one or more resources, or you can acquire exactly one resource before entering the block and supply it to the `Using` statement. If you supply `resourceexpression`, you must acquire the resource before passing control to the `Using` statement.
 
-- *使用*方式表示存取資源，並對它們執行動作。 @No__t-0 和 `End Using` 之間的語句代表資源的使用。
+- *Usage* means accessing the resources and performing actions with them. The statements between `Using` and `End Using` represent the usage of the resources.
 
-- *處置*表示在 `resourcename` 中的物件上呼叫 <xref:System.IDisposable.Dispose%2A> 方法。 這可讓物件完全終止其資源。 @No__t-0 語句會處置 `Using` 區塊控制項下的資源。
+- *Disposal* means calling the <xref:System.IDisposable.Dispose%2A> method on the object in `resourcename`. This allows the object to cleanly terminate its resources. The `End Using` statement disposes of the resources under the `Using` block's control.
 
 ## <a name="behavior"></a>行為
 
- @No__t 0 區塊的行為就像是 `Try` ... `Finally` 結構，其中 `Try` 區塊會使用資源，而 `Finally` 區塊則會處置它們。 因此，不論您如何結束區塊，@no__t 0 區塊都會保證資源的處置。 即使在未處理的例外狀況中，也是如此，但 <xref:System.StackOverflowException> 除外。
+ A `Using` block behaves like a `Try`...`Finally` construction in which the `Try` block uses the resources and the `Finally` block disposes of them. Because of this, the `Using` block guarantees disposal of the resources, no matter how you exit the block. This is true even in the case of an unhandled exception, except for a <xref:System.StackOverflowException>.
 
- @No__t-0 語句所取得之每個資源變數的範圍僅限於 `Using` 區塊。
+ The scope of every resource variable acquired by the `Using` statement is limited to the `Using` block.
 
- 如果您在 `Using` 語句中指定多個系統資源，效果會與您在另一個中嵌套 `Using` 個區塊相同。
+ If you specify more than one system resource in the `Using` statement, the effect is the same as if you nested `Using` blocks one within another.
 
- 如果 `resourcename` 是 `Nothing`，則不會呼叫 <xref:System.IDisposable.Dispose%2A>，也不會擲回任何例外狀況。
+ If `resourcename` is `Nothing`, no call to <xref:System.IDisposable.Dispose%2A> is made, and no exception is thrown.
 
-## <a name="structured-exception-handling-within-a-using-block"></a>Using 區塊內的結構化例外狀況處理
+## <a name="structured-exception-handling-within-a-using-block"></a>Structured Exception Handling Within a Using Block
 
- 如果您需要處理可能發生在 `Using` 區塊中的例外狀況，您可以在其中加入完整的 `Try` ... `Finally` 的結構。 如果您需要處理 `Using` 語句無法成功取得資源的情況，您可以測試以查看 `resourcename` 是否 `Nothing`。
+ If you need to handle an exception that might occur within the `Using` block, you can add a complete `Try`...`Finally` construction to it. If you need to handle the case where the `Using` statement is not successful in acquiring a resource, you can test to see if `resourcename` is `Nothing`.
 
-## <a name="structured-exception-handling-instead-of-a-using-block"></a>結構化例外狀況處理，而不是 Using 區塊
+## <a name="structured-exception-handling-instead-of-a-using-block"></a>Structured Exception Handling Instead of a Using Block
 
- 如果您需要更精確地控制資源的取得，或在 `Finally` 區塊中需要額外的程式碼，您可以將 @no__t 1 區塊重寫為 `Try` ... `Finally` 結構。 下列範例會顯示在 `resource` 的取得與處置中，對等的基本架構 `Try` 和 @no__t 1 的結構。
+ If you need finer control over the acquisition of the resources, or you need additional code in the `Finally` block, you can rewrite the `Using` block as a `Try`...`Finally` construction. The following example shows skeleton `Try` and `Using` constructions that are equivalent in the acquisition and disposal of `resource`.
 
 ```vb
 Using resource As New resourceType
@@ -105,18 +105,18 @@ End Try
 ```
 
 > [!NOTE]
-> @No__t-0 區塊內的程式碼不應該將 `resourcename` 中的物件指派給另一個變數。 當您結束 `Using` 區塊時，系統會處置資源，而另一個變數無法存取其指向的資源。
+> The code inside the `Using` block should not assign the object in `resourcename` to another variable. When you exit the `Using` block, the resource is disposed, and the other variable cannot access the resource to which it points.
 
 ## <a name="example"></a>範例
 
- 下列範例會建立名為 log .txt 的檔案，並將兩行文字寫入檔案。 此範例也會讀取相同的檔案，並顯示文字行：
+ The following example creates a file that is named log.txt and writes two lines of text to the file. The example also reads that same file and displays the lines of text:
 
- 因為 <xref:System.IO.TextWriter> 和 @no__t 1 類別會執行 @no__t 2 介面，所以程式碼可以使用 `Using` 語句，以確保檔案在寫入和讀取作業之後會正確地關閉。
+ Because the <xref:System.IO.TextWriter> and <xref:System.IO.TextReader> classes implement the <xref:System.IDisposable> interface, the code can use `Using` statements to ensure that the file is correctly closed after the write and read operations.
 
  [!code-vb[VbVbalrStatements#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#50)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IDisposable>
 - [Try...Catch...Finally 陳述式](try-catch-finally-statement.md)
-- [如何：處置系統資源 @ no__t-0
+- [如何：處置系統資源](../../programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)

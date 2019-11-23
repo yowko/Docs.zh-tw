@@ -1,14 +1,13 @@
 ---
 title: 自我裝載的 gRPC 應用程式-適用于 WCF 開發人員的 gRPC
 description: 將 ASP.NET Core gRPC 應用程式部署為自我裝載的服務。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 4983cad1dd075480c6d83a5350a323ab348cdaaf
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 59f6275dbf85442bca3a98a1521597ef40e9675b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846113"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967218"
 ---
 # <a name="self-hosted-grpc-applications"></a>自我裝載的 gRPC 應用程式
 
@@ -57,7 +56,7 @@ sc create MyService binPath=C:\MyService\MyService.exe
 
 ### <a name="log-to-windows-event-log"></a>記錄到 Windows 事件記錄檔
 
-`UseWindowsService` 方法會自動新增[記錄](https://docs.microsoft.com/aspnet/core/fundamentals/logging/?view=aspnetcore-3.0)提供者，將記錄訊息寫入 Windows 事件記錄檔。 您可以藉由將 `EventLog` 專案新增至 `appsettings.json` 或其他設定來源的 `Logging` 區段，來設定此提供者的記錄。 事件記錄檔中使用的來源名稱可以藉由在這些設定中設定 `SourceName` 屬性來覆寫;如果您未指定名稱，則會使用預設的應用程式名稱（通常是可執行檔元件名稱）。
+方法會自動新增`UseWindowsService`記錄[提供者，將記錄訊息寫入 Windows 事件記錄檔。](https://docs.microsoft.com/aspnet/core/fundamentals/logging/?view=aspnetcore-3.0) 您可以藉由將 `EventLog` 專案新增至 `appsettings.json` 或其他設定來源的 `Logging` 區段，來設定此提供者的記錄。 事件記錄檔中使用的來源名稱可以藉由在這些設定中設定 `SourceName` 屬性來覆寫;如果您未指定名稱，則會使用預設的應用程式名稱（通常是可執行檔元件名稱）。
 
 如需有關記錄的詳細資訊，請到本章的結尾。
 
@@ -78,7 +77,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 > [!NOTE]
 > 如果應用程式不是以 Linux 服務的身分執行，`UseSystemd` 方法就不會進行任何動作。
 
-現在，從 Visual Studio 以滑鼠右鍵按一下專案，然後從操作功能表中選擇 [*發佈*]，或從 [.NET Core CLI]，發佈您的應用程式（與架構相依，或獨立的 Linux 執行時間（例如 `linux-x64`）使用下列命令。
+現在，您可以從 Visual Studio 以滑鼠右鍵按一下專案，然後從操作功能表中選擇 [*發佈*]，.NET Core CLI 或使用下列命令，發佈您的應用程式（與 framework 相依，或獨立的 Linux 執行時間（例如 `linux-x64`）。
 
 ```console
 dotnet publish -c Release -r linux-x64 -o ./publish
@@ -153,7 +152,7 @@ sudo journalctl -u myapp
 
 在 Windows 主機上，您可以使用[system.security.cryptography.x509certificates.x509store 類別](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.0)，從安全的[憑證存放區](https://docs.microsoft.com/windows/win32/seccrypto/managing-certificates-with-certificate-stores)載入憑證。 `X509Store` 類別也可以與某些 Linux 主機上的 OpenSSL 金鑰存放區搭配使用。
 
-憑證也可以使用其中一個[X509Certificate2](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0)的處理常式來建立，不論是從檔案（例如，由強式密碼保護的 `.pfx` 檔案），或是從從安全儲存體服務（例如[Azure Key Vault](https://azure.microsoft.com/services/key-vault/) ）取得的二進位資料.
+您也可以使用其中一個[X509Certificate2](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0)的處理常式來建立憑證，不論是從檔案（例如`.pfx`，受強式密碼保護的檔案），或是從從安全儲存體服務（例如 [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)）取得的二進位資料。
 
 Kestrel 可設定為使用憑證的方式有兩種：從設定，或在程式碼中。
 

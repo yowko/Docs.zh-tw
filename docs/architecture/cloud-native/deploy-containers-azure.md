@@ -36,7 +36,7 @@ az acr login --name *registryname*
 docker tag mycontainer myregistry.azurecr.io/mycontainer:v1
 ```
 
-標記影像之後，您可以使用`docker push`命令將映射推送至您的 ACR 實例。
+標記映射之後，您可以使用 `docker push` 命令將映射推送到您的 ACR 實例。
 
 ```console
 docker push myregistry.azurecr.io/mycontainer:v1
@@ -69,7 +69,7 @@ docker rmi myregistry.azurecr.io/mycontainer:v1
 
 - 縮放
 - 驗證
-- 網路
+- 網路功能
 - 監視
 - Tags
 
@@ -92,18 +92,18 @@ docker rmi myregistry.azurecr.io/mycontainer:v1
 3. 設定子開發人員空間（適用于您自己的系統版本）。
 4. 連接到開發人員空間。
 
-所有這些步驟都可以使用 Azure CLI 和新`azds`的命令列工具來執行。 例如，若要為指定的 Kubernetes 叢集建立新的 Azure 開發人員空間，您可以使用如下所示的命令：
+所有這些步驟都可以使用 Azure CLI 和新的 `azds` 命令列工具來執行。 例如，若要為指定的 Kubernetes 叢集建立新的 Azure 開發人員空間，您可以使用如下所示的命令：
 
 ```azurecli
 az aks use-dev-spaces -g my-aks-resource-group -n MyAKSCluster
 ```
 
-接下來，您可以使用`azds prep`命令來產生必要的 Docker 和 Helm 圖表資產，以執行應用程式。 然後，您可以使用`azds up`在 AKS 中執行程式碼。 當您第一次執行此命令時，將會安裝 Helm 圖，並根據您的指示來建立和部署容器。 這可能會在第一次執行時需要幾分鐘的時間。 不過，在您進行變更之後，您可以使用`azds space select`連接到您自己的子開發人員空間，然後在隔離的子開發人員空間中部署和偵錯工具。 當開發人員空間啟動並執行之後，您可以藉由重新發出`azds up`命令，或使用 Visual Studio 或 Visual Studio Code 中的內建工具，將更新傳送給它。 使用 VS Code，您可以使用命令選擇區來連接到您的開發人員空間。 圖3-12 顯示如何使用 Visual Studio 中的 Azure Dev Spaces 啟動 web 應用程式。
+接下來，您可以使用 `azds prep` 命令來產生執行應用程式所需的 Docker 和 Helm 圖表資產。 然後，使用 `azds up`在 AKS 中執行程式碼。 當您第一次執行此命令時，將會安裝 Helm 圖，並根據您的指示來建立和部署容器。 這可能會在第一次執行時需要幾分鐘的時間。 不過，在您進行變更之後，您可以使用 `azds space select` 連接到您自己的子開發人員空間，然後在隔離的子開發人員空間中部署和偵錯工具。 當開發人員空間啟動並執行之後，您可以藉由重新發出 `azds up` 命令，或在 Visual Studio 或 Visual Studio Code 中使用內建工具，將更新傳送給它。 使用 VS Code，您可以使用命令選擇區來連接到您的開發人員空間。 圖3-12 顯示如何使用 Visual Studio 中的 Azure Dev Spaces 啟動 web 應用程式。
 
-![連接到 Visual Studio](./media/azure-dev-spaces-visual-studio-launchsettings.png)
-**圖 3-12**中的 Azure Dev Spaces。 連接到 Visual Studio 中的 Azure Dev Spaces
+![連接到 Visual Studio 中的 Azure Dev Spaces](./media/azure-dev-spaces-visual-studio-launchsettings.png)
+**圖 3-12**。 連接到 Visual Studio 中的 Azure Dev Spaces
 
-## <a name="references"></a>reference
+## <a name="references"></a>參考
 
 - [未進行的版本](https://martinfowler.com/bliki/CanaryRelease.html)
 - [使用 VS Code 的 Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/quickstart-netcore)
