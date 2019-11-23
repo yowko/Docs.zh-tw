@@ -37,7 +37,7 @@ ms.locfileid: "73191916"
 
 ## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>微服務和繫結內容模式之間的關聯性
 
-微服務概念衍生自[網域導向設計 (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design) 中的[繫結內容 (BC) 模式](https://martinfowler.com/bliki/BoundedContext.html)。 DDD 透過將大型模型分成多個 BC 並且明確指定其界限來處理大型模型。 每個 BC 必須有自己的模型和資料庫。同樣地，每個微服務也擁有其相關資料。 此外，每個 BC 通常都有它自己的[通用語言](https://martinfowler.com/bliki/UbiquitousLanguage.html)，協助軟體開發人員和網域專家之間的溝通。
+微服務概念衍生自[網域導向設計 (DDD)](https://martinfowler.com/bliki/BoundedContext.html) 中的[繫結內容 (BC) 模式](https://en.wikipedia.org/wiki/Domain-driven_design)。 DDD 透過將大型模型分成多個 BC 並且明確指定其界限來處理大型模型。 每個 BC 必須有自己的模型和資料庫。同樣地，每個微服務也擁有其相關資料。 此外，每個 BC 通常都有它自己的[通用語言](https://martinfowler.com/bliki/UbiquitousLanguage.html)，協助軟體開發人員和網域專家之間的溝通。
 
 通用語言中的詞彙 (主要為領域實體) 在不同繫結內容中可以有不同名稱，即使是不同領域實體都共用相同的識別 (亦即，用來從儲存體讀取實體的唯一識別碼)。 比方說，在使用者設定檔繫結內容中，使用者網域實體可能會與排序之繫結內容中的買方網域實體共用身分識別。
 

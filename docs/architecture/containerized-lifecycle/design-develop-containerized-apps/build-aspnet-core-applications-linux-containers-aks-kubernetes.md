@@ -47,7 +47,7 @@ Visual Studio 會列出適用於 Web 專案的範本。 在我們的範例中，
 
 您可以在建立專案期間或之後新增 Docker 支援，以便可隨時將您的專案「Docker 化」。 若要在建立專案之後新增 Docker 支援，請在 [方案總管] 中以滑鼠右鍵按一下專案節點，然後從操作功能表選取 [新增] > [Docker 支援]。
 
-![將 Docker 支援新增至現有專案的操作功能表選項：按一下滑鼠右鍵 (在專案上) > [新增] > [Docker 支援]。](media/add-docker-support-to-project.png)
+![將 Docker 支援新增至現有專案的內容功能表選項：以滑鼠右鍵按一下（在專案上） > 新增 > Docker 支援。](media/add-docker-support-to-project.png)
 
 **圖 4-38**. 將 Docker 支援新增至現有的專案
 
@@ -69,7 +69,7 @@ Visual Studio 會列出適用於 Web 專案的範本。 在我們的範例中，
 docker images
 ```
 
-![docker images 命令的主控台輸出，顯示下列項目清單：存放庫、標記、映像識別碼、建立時間 (日期) 和大小。](media/docker-images-command.png)
+![來自 docker images 命令的主控台輸出會顯示包含下列內容的清單：存放庫、標記、映射識別碼、已建立（日期）和大小。](media/docker-images-command.png)
 
 **圖 4-40**. Docker 映像檢視
 
@@ -89,7 +89,7 @@ docker images
 
 ### <a name="create-a-new-tag-for-the-image"></a>為映像建立新的標記
 
-每個容器映射都必須標記`loginServer`登錄的名稱。 將容器映射推送至映射登錄時，會使用此標記來進行路由。
+每個容器映射都必須以登錄的 `loginServer` 名稱標記。 將容器映射推送至映射登錄時，會使用此標記來進行路由。
 
 您可以從 Azure 入口網站檢視 `loginServer` 名稱，然後從 Azure Container Registry 擷取資訊
 
@@ -190,7 +190,7 @@ spec:
 az aks get-credentials --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
 ```
 
-![上述命令的主控台輸出：已將 "MSSampleK8Cluster 合併為 /root/.kube/config 中的目前內容](media/getting-aks-credentials.png)
+![上述命令的主控台輸出：在/root/.kube/config 中合併「MSSampleK8Cluster 為目前內容」](media/getting-aks-credentials.png)
 
 **圖 4-47**. 取得認證
 

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用焦點事件變更項目的色彩
+title: 如何：使用焦點事件變更項目的色彩
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,17 +16,17 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72004831"
 ---
-# <a name="how-to-change-the-color-of-an-element-using-focus-events"></a>HOW TO：使用焦點事件變更項目的色彩
-這個範例示範如何在專案取得和失去焦點時，使用 <xref:System.Windows.UIElement.GotFocus> 和 <xref:System.Windows.UIElement.LostFocus> 事件來變更元素的色彩。  
+# <a name="how-to-change-the-color-of-an-element-using-focus-events"></a>如何：使用焦點事件變更項目的色彩
+這個範例會示範如何使用 <xref:System.Windows.UIElement.GotFocus> 和 <xref:System.Windows.UIElement.LostFocus> 事件來變更元素的色彩。  
   
- 這個範例是由 @no__t 0 檔案和程式碼後置檔案所組成。  
+ 這個範例包含 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 檔案和程式碼後置檔案。  
   
 ## <a name="example"></a>範例  
- 下列 XAML 會建立使用者介面，其中包含兩個 @no__t 0 的物件，並將 <xref:System.Windows.UIElement.GotFocus> 和 @no__t 2 事件的事件處理常式附加至 <xref:System.Windows.Controls.Button> 物件。  
+ 下列 XAML 會建立使用者介面，其中包含兩個 <xref:System.Windows.Controls.Button> 物件，並將 <xref:System.Windows.UIElement.GotFocus> 和 <xref:System.Windows.UIElement.LostFocus> 事件的事件處理常式附加至 <xref:System.Windows.Controls.Button> 物件。  
   
  [!code-xaml[gotfocusLostfocusEffectUsingEvent#GotLostFocusSampleXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/gotfocusLostfocusEffectUsingEvent/CSharp/Window1.xaml#gotlostfocussamplexaml)]  
   
- 下列程式碼後置會建立 <xref:System.Windows.UIElement.GotFocus> 和 @no__t 1 事件處理常式。  當 @no__t 0 取得鍵盤焦點時，<xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Controls.Control.Background%2A> 會變更為紅色。  當 @no__t 0 失去鍵盤焦點時，<xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Controls.Control.Background%2A> 會變更回白色。  
+ 下列程式碼後置會建立 <xref:System.Windows.UIElement.GotFocus> 和 <xref:System.Windows.UIElement.LostFocus> 事件處理常式。  當 <xref:System.Windows.Controls.Button> 取得鍵盤焦點時，<xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Controls.Control.Background%2A> 會變更為紅色。  當 <xref:System.Windows.Controls.Button> 失去鍵盤焦點時，<xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Controls.Control.Background%2A> 會變更回白色。  
   
  [!code-csharp[gotfocusLostfocusEffectUsingEvent#GotLostFocusSampleEventHandlers](~/samples/snippets/csharp/VS_Snippets_Wpf/gotfocusLostfocusEffectUsingEvent/CSharp/Window1.xaml.cs#gotlostfocussampleeventhandlers)]
  [!code-vb[gotfocusLostfocusEffectUsingEvent#GotLostFocusSampleEventHandlers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/gotfocusLostfocusEffectUsingEvent/VisualBasic/Window1.xaml.vb#gotlostfocussampleeventhandlers)]  

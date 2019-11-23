@@ -186,7 +186,7 @@ namespace OcelotApiGw
 }
 ```
 
-對於 Ocelot 而言，此處的重點是您必須透過 `AddJsonFile()` 方法提供給產生器的 `configuration.json` 檔案。 該 `configuration.json` 是您指定所有 API 閘道重設路徑的位置，表示具有特定連接埠的外部端點及相互關聯的內部端點 (通常使用不同的連接埠)。
+對於 Ocelot 而言，此處的重點是您必須透過 `configuration.json` 方法提供給產生器的 `AddJsonFile()` 檔案。 該 `configuration.json` 是您指定所有 API 閘道重設路徑的位置，表示具有特定連接埠的外部端點及相互關聯的內部端點 (通常使用不同的連接埠)。
 
 ```json
 {
@@ -522,7 +522,7 @@ services.AddAuthentication(options =>
 
 ## <a name="using-kubernetes-ingress-plus-ocelot-api-gateways"></a>使用 Kubernetes 輸入加上 Ocelot API 閘道
 
-使用 Kubernetes (例如 Azure Kubernetes Service 叢集) 時，您通常會透過以 *Nginx* 為基礎的 [Kuberentes 輸入層](https://kubernetes.io/docs/concepts/services-networking/ingress/) \(英文\) 來整合所有 HTTP 要求。
+使用 Kubernetes (例如 Azure Kubernetes Service 叢集) 時，您通常會透過以 [Nginx](https://kubernetes.io/docs/concepts/services-networking/ingress/) 為基礎的 *Kuberentes 輸入層* \(英文\) 來整合所有 HTTP 要求。
 
 在 Kubernetes 中，如果您未使用任何輸入方法，則您的服務和 Pod 只能透過叢集網路路由 IP。
 

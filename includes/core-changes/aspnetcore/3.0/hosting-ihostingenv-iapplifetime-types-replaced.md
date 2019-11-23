@@ -16,7 +16,7 @@ ms.locfileid: "72394056"
 
 #### <a name="old-behavior"></a>舊的行為
 
-@No__t-2 和 `Microsoft.AspNetCore.Hosting` 中有兩個不同的 @no__t 0 和 @no__t 1 類型。
+`Microsoft.Extensions.Hosting` 和 `Microsoft.AspNetCore.Hosting`中有兩個不同的 `IHostingEnvironment` 和 `IApplicationLifetime` 類型。
 
 #### <a name="new-behavior"></a>新的行為
 
@@ -24,7 +24,7 @@ ms.locfileid: "72394056"
 
 #### <a name="reason-for-change"></a>變更的原因
 
-ASP.NET Core 2.1 引進 `Microsoft.Extensions.Hosting` 時，會從 `Microsoft.AspNetCore.Hosting` 複製某些類型，例如 `IHostingEnvironment` 和 `IApplicationLifetime`。 某些 ASP.NET Core 3.0 變更會導致應用程式同時包含 `Microsoft.Extensions.Hosting` 和 @no__t 1 命名空間。 當參考這兩個命名空間時，任何使用這些重複類型會導致「不明確的參考」編譯器錯誤。
+當 `Microsoft.Extensions.Hosting` 在 ASP.NET Core 2.1 中引進時，會從 `Microsoft.AspNetCore.Hosting`複製某些類型，例如 `IHostingEnvironment` 和 `IApplicationLifetime`。 某些 ASP.NET Core 3.0 變更會導致應用程式同時包含 `Microsoft.Extensions.Hosting` 和 `Microsoft.AspNetCore.Hosting` 命名空間。 當參考這兩個命名空間時，任何使用這些重複類型會導致「不明確的參考」編譯器錯誤。
 
 #### <a name="recommended-action"></a>建議的動作
 
@@ -46,9 +46,9 @@ ASP.NET Core 2.1 引進 `Microsoft.Extensions.Hosting` 時，會從 `Microsoft.A
 - <xref:Microsoft.Extensions.Hosting.IHostApplicationLifetime?displayProperty=nameWithType>
 - <xref:Microsoft.Extensions.Hosting.Environments?displayProperty=nameWithType>
 
-新的 `IHostEnvironment` `IsDevelopment` 和 @no__t 2 擴充方法位於 `Microsoft.Extensions.Hosting` 命名空間中。 該命名空間可能需要新增至您的專案。
+新的 `IHostEnvironment` `IsDevelopment` 和 `IsProduction` 擴充方法位於 `Microsoft.Extensions.Hosting` 命名空間中。 該命名空間可能需要新增至您的專案。
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>類別
 
 ASP.NET Core
 

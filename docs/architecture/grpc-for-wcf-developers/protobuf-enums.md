@@ -1,14 +1,13 @@
 ---
 title: Protobuf 列舉-適用于 WCF 開發人員的 gRPC
 description: 瞭解如何在 Protobuf 中宣告和使用列舉。
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: f18196f54caba824d7101782a88cf3bf699560d5
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 4ea4d03bede2a9ebfd1f2c3ee56f299e918800e9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846346"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971582"
 ---
 # <a name="protobuf-enumerations"></a>Protobuf 列舉
 
@@ -39,7 +38,7 @@ public enum AccountStatus
 }
 ```
 
-Protobuf 列舉定義**必須**有零常數做為其第一個欄位。 如同在C#中，您可以宣告多個具有相同值的欄位，但您必須使用列舉中的`allow_alias`選項明確啟用此選項：
+Protobuf 列舉定義**必須**有零常數做為其第一個欄位。 如同在C#中，您可以宣告多個具有相同值的欄位，但您必須使用列舉中的 `allow_alias` 選項明確啟用此選項：
 
 ```protobuf
 enum AccountStatus {
@@ -71,7 +70,7 @@ message Product {
 }
 ```
 
-如果您將 `product.AvailableIn` 設定為 `Region.NorthAmerica | Region.SouthAmerica`，則會將它序列化為整數值 `3`。 當用戶端或伺服器嘗試將值還原序列化時，它在 `3` 的 enum 定義中找不到相符項，因此會 `Region.None` 結果。
+如果您將 `product.AvailableIn` 設定為 `Region.NorthAmerica | Region.SouthAmerica`，則會將它序列化為整數值 `3`。 當用戶端或伺服器嘗試將值還原序列化時，它在 `3` 的 enum 定義中找不到相符項，因此會 `Region.None`結果。
 
 在 Protobuf 中處理多個列舉值的最佳方式是使用列舉類型的 `repeated` 欄位。
 

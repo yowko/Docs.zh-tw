@@ -13,7 +13,7 @@ ms.locfileid: "71700928"
 ---
 # <a name="charsets-and-marshaling"></a>字元集與封送處理
 
-`char` 值、`string` 物件與 `System.Text.StringBuilder` 物件封送處理方式取決於 P/Invoke 或結構上 `CharSet` 欄位的值。 您可以透過在宣告您的 P/Invoke 時設定 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位，以設定 P/Invoke 的 `CharSet`。 若要為類型設定 `CharSet`，請在您的類別或結構宣告上設定 @no__t 1 欄位。 當這些屬性欄位未設定時，語言編譯器可決定要使用的 `CharSet`。 C# 和 VB 預設會使用 <xref:System.Runtime.InteropServices.CharSet.Ansi> 字元集。
+`char` 值、`string` 物件與 `System.Text.StringBuilder` 物件封送處理方式取決於 P/Invoke 或結構上 `CharSet` 欄位的值。 您可以透過在宣告您的 P/Invoke 時設定 `CharSet` 欄位，以設定 P/Invoke 的 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>。 若要設定類型的 `CharSet`，請在您的類別或結構宣告上設定 <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> 欄位。 當這些屬性欄位未設定時，語言編譯器可決定要使用的 `CharSet`。 C# 和 VB 預設會使用 <xref:System.Runtime.InteropServices.CharSet.Ansi> 字元集。
 
 下表顯示每個字元集與使用該字元集進行封送處理時，如何表示字元或字串：
 

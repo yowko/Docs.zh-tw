@@ -2,12 +2,12 @@
 title: 在 CQRS 微服務中實作讀取/查詢
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 CQRS 查詢端使用 Dapper 在 eShopOnContainers 訂購微服務上的實作。
 ms.date: 10/08/2018
-ms.openlocfilehash: 064abd084ea6b99229f995f8ca899a99b69b7bc2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 235b0e471a17e2a37a883a111cf499b7837f3ea1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739988"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972079"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>在 CQRS 微服務中實作讀取/查詢
 
@@ -45,7 +45,7 @@ Dapper 是開放原始碼專案 (原創者為 Sam Saffron)，屬於 [Stack Overf
 
 您也需要新增 using 陳述式，以便您的程式碼存取 Dapper 擴充方法。
 
-當您在程式碼中使用 Dapper 時，您可直接使用 <xref:System.Data.SqlClient> 命名空間提供的 <xref:System.Data.SqlClient.SqlConnection> 類別。 透過 QueryAsync 方法和其他擴充 <xref:System.Data.SqlClient.SqlConnection> 類別的擴充方法，您可以直接且有效率的只執行查詢。
+當您在程式碼中使用 Dapper 時，您可直接使用 <xref:System.Data.SqlClient.SqlConnection> 命名空間提供的 <xref:System.Data.SqlClient> 類別。 透過 QueryAsync 方法和其他擴充 <xref:System.Data.SqlClient.SqlConnection> 類別的擴充方法，您可以直接且有效率的只執行查詢。
 
 ## <a name="dynamic-versus-static-viewmodels"></a>動態 ViewModel 與靜態 ViewModel
 
@@ -55,7 +55,7 @@ Dapper 是開放原始碼專案 (原創者為 Sam Saffron)，屬於 [Stack Overf
 
 ### <a name="viewmodel-as-dynamic-type"></a>ViewModel 作為動態類型
 
-如下列程式碼所示，透過傳回在內部以查詢所傳回屬性為基礎的「動態」類型，查詢可以直接傳回 `ViewModel`。 這表示要傳回的屬性子集是以查詢本身為基礎。 因此，如果您在查詢或聯結中新增新的資料行，該資料會以動態方式新增至傳回的 `ViewModel`。
+如下列程式碼所示，透過傳回在內部以查詢所傳回屬性為基礎的「動態」`ViewModel`*類型，查詢可以直接傳回* 。 這表示要傳回的屬性子集是以查詢本身為基礎。 因此，如果您在查詢或聯結中新增新的資料行，該資料會以動態方式新增至傳回的 `ViewModel`。
 
 ```csharp
 using Dapper;
@@ -179,7 +179,7 @@ public class OrderSummary
 
 ![訂購 API 的 Swagger UI 頁面螢幕擷取畫面。](./media/cqrs-microservice-reads/swagger-ordering-http-api.png)
 
-**圖 7-5**。 顯示 Web API 回應類型和可能 HTTP 狀態碼的 Swagger UI
+**圖 7-5**. 顯示 Web API 回應類型和可能 HTTP 狀態碼的 Swagger UI
 
 您在上圖中可以看到一些範例值，它們是以 ViewModel 類型為基礎，加上可以傳回的可能 HTTP 狀態碼。
 
@@ -189,7 +189,7 @@ public class OrderSummary
  <https://github.com/StackExchange/dapper-dot-net>
 
 - **Julie Lerman。資料點-Dapper、Entity Framework 和混合式應用程式（MSDN 雜誌文章）**  
-  <https://msdn.microsoft.com/magazine/mt703432>
+  <https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps>
 
 - **使用 Swagger 的 ASP.NET Core Web API 說明頁面**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>

@@ -14,7 +14,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/10/2019
 ms.locfileid: "72250174"
 ---
-# <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>@no__t 0proceduresignature1 > 不符合 CLS 規範，因為它會多載 @no__t 1proceduresignature2 的 >，而這與只有陣列參數類型的陣列或陣列參數類型的順位不同
+# <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>\<proceduresignature1 > 不符合 CLS 標準，因為它會多載 \<的 proceduresignature2 > 這項差異只在於陣列參數類型的陣列，或是陣列參數類型的順位。
 
 程式或屬性會在覆寫另一個程式或屬性時標示為 `<CLSCompliant(True)>`，而且其參數清單之間的唯一差異是不規則陣列的嵌套層級或陣列的次序。
   
@@ -26,7 +26,7 @@ ms.locfileid: "72250174"
   
  `Overloads Sub ProcessArray(arrayParam(,) As Integer)`  
   
- 第二個宣告會將原始的一維參數 `arrayParam` 變更為陣列陣列。 第三個宣告會將 `arrayParam` 變更為二維陣列（順位2）。 雖然 Visual Basic 只允許多載不同于這些變更的其中一個，但這類超載並不符合[語言獨立性和與語言無關的元件](../../../standard/language-independence-and-language-independent-components.md)（CLS）。  
+ 第二個宣告會將原始的一維參數 `arrayParam` 變更為陣列的陣列。 第三個宣告會將 `arrayParam` 變更為二維陣列（順位2）。 雖然 Visual Basic 只允許多載不同于這些變更的其中一個，但這類超載並不符合[語言獨立性和與語言無關的元件](../../../standard/language-independence-and-language-independent-components.md)（CLS）。  
   
  將 <xref:System.CLSCompliantAttribute> 套用至程式設計項目時，請將屬性的 `isCompliant` 參數設定為 `True` 或 `False` ，表示符合標準或不符合標準。 這個參數沒有預設值，您必須提供值。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "72250174"
   
  **錯誤識別碼：** BC40035  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a>若要改正這項錯誤  
   
 - 如果您需要 CLS 合規性，請將您的多載定義成不同于此說明頁面上所述之變更的方式。
 - 如果您要求多載只因此說明頁面上所述的變更而不同，請從其定義中移除 <xref:System.CLSCompliantAttribute>，或將它們標示為 `<CLSCompliant(False)>`。

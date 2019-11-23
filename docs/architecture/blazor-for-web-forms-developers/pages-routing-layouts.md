@@ -84,7 +84,7 @@ Blazor 應用程式中的對等頁面看起來會像這樣：
 
 ## <a name="create-pages"></a>建立頁面
 
-若要在 Blazor 中建立頁面，請建立元件並新增 `@page` Razor 指示詞，以指定元件的路由。 @No__t_0 指示詞接受單一參數，也就是要新增至該元件的路由範本。
+若要在 Blazor 中建立頁面，請建立元件並新增 `@page` Razor 指示詞，以指定元件的路由。 `@page` 指示詞接受單一參數，也就是要新增至該元件的路由範本。
 
 ```razor
 @page "/counter"
@@ -122,7 +122,7 @@ Blazor 應用程式中的對等頁面看起來會像這樣：
 
 ## <a name="router-component"></a>路由器元件
 
-Blazor 中的路由是由 `Router` 元件所處理。 @No__t_0 元件通常用於應用程式的根元件（*razor*）。
+Blazor 中的路由是由 `Router` 元件所處理。 `Router` 元件通常用於應用程式的根元件（*razor*）。
 
 ```razor
 <Router AppAssembly="@typeof(Program).Assembly">
@@ -137,15 +137,15 @@ Blazor 中的路由是由 `Router` 元件所處理。 @No__t_0 元件通常用�
 </Router>
 ```
 
-@No__t_0 元件會探索指定 `AppAssembly` 和選擇性指定 `AdditionalAssemblies` 中的可路由元件。 當瀏覽器導覽時，如果路由符合位址，`Router` 會攔截導覽，並以已解壓縮的 `RouteData` 來呈現其 `Found` 參數的內容，否則 `Router` 會轉譯其 `NotFound` 參數。
+`Router` 元件會探索指定 `AppAssembly` 和選擇性指定 `AdditionalAssemblies`中的可路由元件。 當瀏覽器導覽時，如果路由符合位址，`Router` 會攔截導覽，並以已解壓縮的 `RouteData` 來呈現其 `Found` 參數的內容，否則 `Router` 會轉譯其 `NotFound` 參數。
 
-@No__t_0 元件會處理呈現 `RouteData` 所指定的相符元件及其版面配置（如果有的話）。 如果相符的元件沒有版面配置，則會使用選擇性指定的 `DefaultLayout`。
+`RouteView` 元件會處理呈現 `RouteData` 所指定的相符元件及其版面配置（如果有的話）。 如果相符的元件沒有版面配置，則會使用選擇性指定的 `DefaultLayout`。
 
-@No__t_0 元件會在指定的版面配置中轉譯其子內容。 我們將在本章稍後詳細探討版面配置。
+`LayoutView` 元件會在指定的版面配置中轉譯其子內容。 我們將在本章稍後詳細探討版面配置。
 
 ## <a name="navigation"></a>巡覽
 
-在 ASP.NET Web form 中，您可以藉由將重新導向回應傳回至瀏覽器，來觸發導覽至不同頁面。 例如:
+在 ASP.NET Web form 中，您可以藉由將重新導向回應傳回至瀏覽器，來觸發導覽至不同頁面。 例如，
 
 ```csharp
 protected void NavigateButton_Click(object sender, EventArgs e)
@@ -220,7 +220,7 @@ ASP.NET Web Forms 中的頁面配置是由主版頁面處理。 主版頁面會�
 </html>
 ```
 
-在 Blazor 中，您可以使用版面配置元件來處理頁面配置。 版面配置元件會繼承自 `LayoutComponentBase`，這會定義 `RenderFragment` 類型的單一 `Body` 屬性，可用來呈現頁面的內容。
+在 Blazor 中，您可以使用版面配置元件來處理頁面配置。 版面配置元件會繼承自 `LayoutComponentBase`，這會定義 `RenderFragment`類型的單一 `Body` 屬性，可用來呈現頁面的內容。
 
 *MainLayout razor*
 
@@ -240,7 +240,7 @@ ASP.NET Web Forms 中的頁面配置是由主版頁面處理。 主版頁面會�
 @layout MainLayout
 ```
 
-您可以使用 *_Imports*檔案，為資料夾和子資料夾中的所有元件指定版面配置。 您也可以使用[路由器元件](#router-component)來指定所有頁面的預設版面配置。
+您可以使用 *_Imports razor*檔案，為資料夾和子資料夾中的所有元件指定版面配置。 您也可以使用[路由器元件](#router-component)來指定所有頁面的預設版面配置。
 
 主版頁面可以定義多個內容預留位置，但 Blazor 中的版面配置只有一個 `Body` 屬性。 Blazor 版面配置元件的這項限制會在未來的版本中解決。
 
@@ -276,7 +276,7 @@ ASP.NET Web Forms 中的主版頁面可以嵌套。 也就是，主版頁面也�
 </div>
 ```
 
-Blazor 中的配置通常不會定義頁面的根 HTML 元素（`<html>`、`<body>`、`<head>` 等等）。 根 HTML 專案會改為定義于 Blazor 應用程式的 [主機] 頁面，用來呈現應用程式的初始 HTML 內容（請參閱[啟動 Blazor](project-structure.md#bootstrap-blazor)）。 [主機] 頁面可以使用周圍標記來呈現應用程式的多個根元件。
+Blazor 中的配置通常不會定義頁面的根 HTML 元素（`<html>`、`<body>`、`<head>`等等）。 根 HTML 專案會改為定義于 Blazor 應用程式的 [主機] 頁面，用來呈現應用程式的初始 HTML 內容（請參閱[啟動 Blazor](project-structure.md#bootstrap-blazor)）。 [主機] 頁面可以使用周圍標記來呈現應用程式的多個根元件。
 
 Blazor 中的元件（包括頁面）無法轉譯 `<script>` 標記。 這種轉譯限制存在，因為 `<script>` 標記會載入一次，因此無法變更。 如果您嘗試使用 Razor 語法動態呈現標記，可能會發生非預期的行為。 相反地，所有 `<script>` 標記都應該新增至應用程式的 [主機] 頁面。
 

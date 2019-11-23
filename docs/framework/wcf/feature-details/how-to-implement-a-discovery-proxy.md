@@ -11,7 +11,7 @@ ms.locfileid: "71351572"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>HOW TO：實作探索 Proxy
 
-本主題說明如何實作探索 Proxy。 如需 Windows Communication Foundation （WCF）中探索功能的詳細資訊，請參閱[WCF 探索總覽](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。 探索 Proxy 可透過建立延伸類別的方式來實作，該類別可擴充<xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象類別。 許多其他支援類別都已在此範例中定義和使用。 `OnResolveAsyncResult`、`OnFindAsyncResult` 和 `AsyncResult`。 這些類別會實作 <xref:System.IAsyncResult> 介面。 如需 <xref:System.IAsyncResult> 的詳細資訊，請參閱[system.web 介面](xref:System.IAsyncResult)。
+本主題說明如何實作探索 Proxy。 如需 Windows Communication Foundation （WCF）中探索功能的詳細資訊，請參閱[WCF 探索總覽](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。 探索 Proxy 可透過建立延伸類別的方式來實作，該類別可擴充<xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象類別。 許多其他支援類別都已在此範例中定義和使用。 `OnResolveAsyncResult`、`OnFindAsyncResult`和 `AsyncResult`。 這些類別會實作 <xref:System.IAsyncResult> 介面。 如需 <xref:System.IAsyncResult> 的詳細資訊，請參閱[system.web 介面](xref:System.IAsyncResult)。
 
  本主題將實作探索 Proxy 分為三個主要部分：
 
@@ -546,7 +546,7 @@ OnBegin. / OnEnd. 方法提供後續探索作業的邏輯。 例如，<xref:Syst
     }
     ```
 
-您已經完成實作探索 Proxy。 繼續進行 [How 至：執行以探索 Proxy @ no__t-0 註冊的可探索服務。
+您已經完成實作探索 Proxy。 繼續進行[如何：執行向探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)。
 
 ## <a name="example"></a>範例
 
@@ -976,6 +976,6 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>另請參閱
 
 - [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [如何：執行以探索 Proxy @ no__t-0 註冊的可探索服務
-- [如何：執行使用探索 Proxy 來尋找服務 @ no__t-0 的用戶端應用程式
-- [如何：測試探索 Proxy @ no__t-0
+- [如何：實作以探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [如何：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [如何：測試探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

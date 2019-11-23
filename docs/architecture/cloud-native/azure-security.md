@@ -86,7 +86,7 @@ Azure 的設計是為了平衡大部分使用者的可用性和安全性。 不�
 
 幸好，大部分的 Azure 資源都可以放入 Azure 虛擬網路，以允許更精細的存取控制。 與內部部署網路建立從較大世界保護之私人網路的方式類似，虛擬網路是位於 Azure 網路內的私人 IP 位址孤島。
 
-![Figure 10-1 Azure 中的虛擬網路 ](./media/virtual-network.png)
+![圖 10-1 Azure 中的虛擬網路](./media/virtual-network.png)
 **圖 10-1**。 Azure 中的虛擬網路。
 
 與內部部署網路有防火牆管理網路存取的相同方式，您可以在虛擬網路的界限建立類似的防火牆。 根據預設，虛擬網路上的所有資源仍可與網際網路通訊。 這只是需要某種形式的明確防火牆例外的連入連線。
@@ -109,8 +109,8 @@ RBAC 是一種系統，可為在 Azure 中執行的應用程式提供身分識�
 
 RBAC 中的第一個元件是安全性主體。 安全性主體可以是使用者、群組、服務主體或受控識別。
 
-![Figure 10-2 不同類型的安全性主體 ](./media/rbac-security-principal.png)
-**圖 10-2**。 不同類型的安全性主體。
+![圖 10-2](./media/rbac-security-principal.png)
+**圖 10-2**中不同類型的安全性主體。 不同類型的安全性主體。
 
 - 使用者-在 Azure Active Directory 中具有帳戶的任何使用者都是使用者。
 - 群組-Azure Active Directory 的使用者集合。 身為群組的成員，使用者除了其本身之外，還會接受該群組的角色。
@@ -123,7 +123,7 @@ RBAC 中的第一個元件是安全性主體。 安全性主體可以是使用�
 
 安全性主體可能會採用許多角色，或使用更 sartorial 的比喻，而磨損許多職。 每個角色都會定義一系列的許可權，例如「從 Azure 服務匯流排端點讀取訊息」。 安全性主體的有效許可權集合是指派給安全性主體所擁有之所有角色的擁有權限組合。 Azure 有大量的內建角色，使用者可以定義自己的角色。
 
-![Figure 10-3 RBAC 角色定義 ](./media/rbac-role-definition.png)
+![圖 10-3 RBAC 角色定義](./media/rbac-role-definition.png)
 **圖 10-3**。 RBAC 角色定義。
 
 內建在 Azure 中，也有許多高階角色，例如擁有者、參與者、讀者和使用者帳戶管理員。 使用擁有者角色時，安全性主體可以存取所有資源，並將許可權指派給其他人。 參與者具有與所有資源相同的存取層級，但無法指派許可權。 讀者只能查看現有的 Azure 資源，而使用者帳戶系統管理員可以管理對 Azure 資源的存取。
@@ -148,7 +148,7 @@ RBAC 中的第一個元件是安全性主體。 安全性主體可以是使用�
 
 您可以想像，擁有大量的角色和範圍，可以讓您瞭解服務主體的有效許可權非常困難。 堆積拒絕規則的基礎，只是為了增加複雜性。 幸運的是，有一個許可權計算機可以顯示任何服務主體的有效許可權。 通常會在入口網站的 [IAM] 索引標籤下找到，如圖10-3 所示。
 
-應用程式服務的 ![Figure 10-4 許可權計算機 ](./media/check-rbac.png)
+![圖10-4 應用程式服務的許可權計算機](./media/check-rbac.png)
 **圖 10-4**。 App service 的許可權計算機。
 
 ## <a name="securing-secrets"></a>保護秘密
@@ -215,7 +215,7 @@ TLS 是一個複雜的通訊協定，而且只知道連線使用 TLS 並不足�
 
 即使是 Azure SQL 資料庫等服務，也會使用 TLS 加密來防止資料隱藏。 使用 TLS 對傳輸中的資料進行加密的有趣部分是，即使是 Microsoft，也無法在執行 TLS 的電腦之間接聽連接。 這對於擔心其資料可能會有比標準攻擊者更多資源的 Microsoft 適當或甚至是狀態動作專案的公司而言，是非常舒適的。
 
-![Figure 10-5 SSL 實驗室報表，顯示服務匯流排端點的分數。](./media/ssl-report.png)
+![圖 10-5 SSL 實驗室報表，顯示服務匯流排端點的分數。](./media/ssl-report.png)
 **圖 10-5**。 SSL 實驗室報表，顯示服務匯流排端點的分數。
 
 雖然此層級的加密不會對所有時間都足夠，但它應該會激發 Azure TLS 連線相當安全的信心。 Azure 會在加密改善時繼續發展其安全性標準。 瞭解安全性標準和更新 Azure 的情況，是很好的方式。
@@ -244,8 +244,8 @@ TDS 的「透明」部分來自于不需要用戶端變更即可使用加密資�
 
 設定此加密層需要在 SQL Server Management Studio 中透過 wizard 執行，以選取加密的類型，以及在 Key Vault 儲存相關聯金鑰的位置。
 
-![Figure 10-6 選取資料表中的資料行，以使用 Always Encrypted ](./media/always-encrypted.png)
-**圖 10-6**進行加密。 選取要使用 Always Encrypted 加密之資料表中的資料行。
+![圖10-6 使用 Always Encrypted](./media/always-encrypted.png)
+**圖 10-6**選取要加密之資料表中的資料行。 選取要使用 Always Encrypted 加密之資料表中的資料行。
 
 從這些加密資料行讀取資訊的用戶端應用程式必須進行特殊的額度，才能讀取加密的資料。 連接字串必須使用 `Column Encryption Setting=Enabled` 進行更新，且用戶端認證必須從 Key Vault 抓取。 接著，必須使用資料行加密金鑰來可能遭受 SQL Server 用戶端。 完成後，其餘的動作會使用 SQL 用戶端的標準介面。 也就是說，以 SQL 用戶端為基礎的 Dapper 和 Entity Framework 之類的工具，在沒有變更的情況下仍可繼續工作。 每一種語言都可能尚未提供每個 SQL Server 驅動程式的 Always Encrypted。
 
@@ -255,7 +255,7 @@ TDE 和 Always Encrypted 的組合，這兩者都可以與用戶端特定的金�
 
 Cosmos DB 是 Microsoft 在 Azure 中提供的最新資料庫。 它是從頭開始建立的，並記住安全性和密碼編譯。 AES-256 位加密對於所有 Cosmos DB 資料庫而言都是標準的，而且無法停用。 結合 TLS 1.2 的通訊需求時，整個儲存體解決方案都會加密。
 
-![Figure 10-7 Cosmos DB 內的資料加密流程 ](./media/cosmos-encryption.png)
+![圖 10-7 Cosmos DB 內的資料加密流程](./media/cosmos-encryption.png)
 **圖 10-7**。 Cosmos DB 內的資料加密流程。
 
 雖然 Cosmos DB 並不提供提供客戶加密金鑰的能力，但小組也已經完成許多工作，以確保它維持符合 PCI DSS 的規範。 Cosmos DB 也不支援任何類似 Azure SQL Always Encrypted 的單一資料行加密。

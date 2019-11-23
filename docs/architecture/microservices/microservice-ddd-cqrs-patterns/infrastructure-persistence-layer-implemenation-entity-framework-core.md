@@ -80,7 +80,7 @@ public class Order : Entity
 
 請注意，`OrderItems` 屬性只可以使用 `IReadOnlyCollection<OrderItem>` 以唯讀方式存取。 此類型為唯讀，因此它會受到保護，可避免定期的外部更新。
 
-EF Core 可用來將網域模型對應至實體資料庫，而不含「破壞」網域模型。 它是純粹的 POCO.NET 程式碼，因為對應動作在持續層中實作。 在該對應動作中，您需要設定欄位到資料庫的對應。 在下列來自 `OrderingContext` 和 `OrderEntityTypeConfiguration` 類別的 `OnModelCreating` 方法範例中，呼叫 `SetPropertyAccessMode` 通知 EF Core 透過其欄位存取 `OrderItems` 屬性。
+EF Core 可用來將網域模型對應至實體資料庫，而不含「破壞」網域模型。 它是純粹的 POCO.NET 程式碼，因為對應動作在持續層中實作。 在該對應動作中，您需要設定欄位到資料庫的對應。 在下列來自 `OnModelCreating` 和 `OrderingContext` 類別的 `OrderEntityTypeConfiguration` 方法範例中，呼叫 `SetPropertyAccessMode` 通知 EF Core 透過其欄位存取 `OrderItems` 屬性。
 
 ```csharp
 // At OrderingContext.cs from eShopOnContainers
@@ -156,7 +156,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 
 請注意，IBuyerRepository 介面以合約的方式來自網域模型層。 不過，存放庫實作是在持續層和基礎結構層進行。
 
-EF DbContext 是透過相依性插入而通過建構函式。 它會在相同 HTTP 要求範圍內的多個存放庫之間共用，這點受惠於 IoC 容器 (也可以明確使用 `services.AddDbContext<>` 設定) 中的預設存留期 (`ServiceLifetime.Scoped`)。
+EF DbContext 是透過相依性插入而通過建構函式。 它會在相同 HTTP 要求範圍內的多個存放庫之間共用，這點受惠於 IoC 容器 (也可以明確使用 `ServiceLifetime.Scoped` 設定) 中的預設存留期 (`services.AddDbContext<>`)。
 
 ### <a name="methods-to-implement-in-a-repository-updates-or-transactions-versus-queries"></a>要在存放庫實作的方法 (更新或交易與查詢)
 
@@ -190,7 +190,7 @@ Entity Framework DbContext 類別是根據工作單位和存放庫模式，並�
 
 `DbContext` 物件 (公開為 `IUnitOfWork` 物件) 應在相同 HTTP 要求範圍內的多個存放庫之間共用。 比方說，當正在執行的作業必須處理多個彙總時，或是因為您正在使用多個存放庫執行個體時，便是如此。 還有一點也很重要，`IUnitOfWork` 介面是網域層的一部分，不是 EF Core 類型。
 
-為了這樣做，`DbContext` 物件的執行個體必須將其服務存留期設定為 ServiceLifetime.Scoped。 這是在您的 ASP.NET Core Web API 專案中，從 `Startup.cs` 檔案的 ConfigureServices 方法，在 IoC 容器中向 `services.AddDbContext` 登錄 `DbContext` 時的預設存留期。 以下的程式碼可說明這點。
+為了這樣做，`DbContext` 物件的執行個體必須將其服務存留期設定為 ServiceLifetime.Scoped。 這是在您的 ASP.NET Core Web API 專案中，從 `DbContext` 檔案的 ConfigureServices 方法，在 IoC 容器中向 `services.AddDbContext` 登錄 `Startup.cs` 時的預設存留期。 以下的程式碼可說明這點。
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)

@@ -32,15 +32,15 @@ ms.locfileid: "72004957"
 ## <a name="remarks"></a>備註  
  您可以使用 Microsoft Windows 資源編譯器（RC）來建立 Win32 資源檔。  
   
- Win32 資源可以包含版本或點陣圖（圖示）資訊，協助您在 [檔案**瀏覽器**] 中識別您的應用程式。 如果您未指定 `-win32resource`，則編譯器會根據元件版本產生版本資訊。 @No__t-0 和 @no__t 1 選項互斥。  
+ Win32 資源可以包含版本或點陣圖（圖示）資訊，協助您在 [檔案**瀏覽器**] 中識別您的應用程式。 如果您未指定 `-win32resource`，編譯器會根據元件版本產生版本資訊。 `-win32resource` 和 `-win32icon` 選項是互斥的。  
   
  請參閱[-linkresource （Visual Basic）](../../../visual-basic/reference/command-line-compiler/linkresource.md)來參考 .NET Framework 資源檔，或使用[-resource （Visual Basic）](../../../visual-basic/reference/command-line-compiler/resource.md)來附加 .NET Framework 資源檔。  
   
 > [!NOTE]
-> @No__t-0 選項無法從 Visual Studio 開發環境中使用;只有在從命令列編譯時，才可以使用它。  
+> Visual Studio 開發環境中無法使用 [`-win32resource`] 選項;只有在從命令列編譯時，才可以使用它。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會編譯 `In.vb`，並將 Win32 資源檔附加 `Rf.res`：  
+ 下列程式碼會編譯 `In.vb` 並附加 Win32 資源檔，`Rf.res`：  
   
 ```console  
 vbc -win32resource:rf.res in.vb  

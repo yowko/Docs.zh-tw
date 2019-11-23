@@ -52,7 +52,7 @@ float GetAirfare(string fromCity, string toCity, out string currency);
     Function GetAirfare(fromCity As String, toCity As String) As Double  
 ```  
   
- 此外，您可以使用參考參數，讓參數同時成為要求與回覆訊息的一部分。 參數必須是可以序列化 (轉換為 XML) 的型別。 根據預設，WCF 會使用稱為 @no__t 0 類別的元件來執行這項轉換。 支援大多數的基本型別 (例如 `int`、`string`、`float` 和 `DateTime`)。 使用者定義型別通常必須具有資料合約。 如需詳細資訊，請參閱[使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 此外，您可以使用參考參數，讓參數同時成為要求與回覆訊息的一部分。 參數必須是可以序列化 (轉換為 XML) 的型別。 根據預設，WCF 會使用稱為 <xref:System.Runtime.Serialization.DataContractSerializer> 類別的元件來執行這項轉換。 支援大多數的基本型別 (例如 `int`、`string`、`float` 和 `DateTime`)。 使用者定義型別通常必須具有資料合約。 如需詳細資訊，請參閱[使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
 ```csharp
 public interface IAirfareQuoteService  
@@ -87,7 +87,7 @@ Public Interface IAirfareQuoteService
 End Interface  
 ```  
   
- 有時候，`DataContractSerializer` 並不足以序列化您的型別。 WCF 支援替代的序列化引擎，也就是 <xref:System.Xml.Serialization.XmlSerializer>，您也可以用它來序列化參數。 <xref:System.Xml.Serialization.XmlSerializer> 可讓您透過諸如 `XmlAttributeAttribute` 的屬性，針對最後的 XML 格式進行更複雜的控制。 若要切換為針對特定作業或整個服務使用 <xref:System.Xml.Serialization.XmlSerializer>，請將 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 屬性套用到作業或服務。 例如:  
+ 有時候，`DataContractSerializer` 並不足以序列化您的型別。 WCF 支援替代的序列化引擎（也就是 <xref:System.Xml.Serialization.XmlSerializer>），您也可以用它來序列化參數。 <xref:System.Xml.Serialization.XmlSerializer> 可讓您透過諸如 `XmlAttributeAttribute` 的屬性，針對最後的 XML 格式進行更複雜的控制。 若要切換為針對特定作業或整個服務使用 <xref:System.Xml.Serialization.XmlSerializer>，請將 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 屬性套用到作業或服務。 例如，  
   
 ```csharp  
 [ServiceContract]  
@@ -432,7 +432,7 @@ End Class
 ## <a name="specifying-the-use-and-style"></a>指定使用方式與樣式  
  在使用 Web 服務描述語言 (WSDL) 來描述服務時，最常用到的兩種樣式就是文件與遠端程序呼叫 (RPC)。 在文件樣式中，整個訊息本文會透過結構描述來描述，而 WSDL 則是藉由參照結構描述中的項目來描述不同的訊息本文部分。 在 RPC 樣式中，WSDL 會參照每個訊息部分的結構描述型別 (而不是項目)。 在某些情況下，您必須手動選取其中一種樣式。 您可以套用 <xref:System.ServiceModel.DataContractFormatAttribute> 屬性，並設定 `Style` 屬性 (當 <xref:System.Runtime.Serialization.DataContractSerializer> 正在使用時)，或是在 `Style` 屬性上設定 <xref:System.ServiceModel.XmlSerializerFormatAttribute> (當使用 <xref:System.Xml.Serialization.XmlSerializer> 時)，來完成。  
   
- 另外，<xref:System.Xml.Serialization.XmlSerializer> 支援兩種格式的序列化 XML：`Literal` 和 `Encoded`。 `Literal` 是最普遍接受的格式，也是 <xref:System.Runtime.Serialization.DataContractSerializer> 唯一支援的格式。 `Encoded` 是 SOAP 規範第 5 節所描述的舊版格式，不建議在新的服務上使用。 若要切換至 `Encoded` 模式，請將 `Use` 屬性 (Attribute) 上的 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 屬性 (Property) 設為 `Encoded`。  
+ 另外，<xref:System.Xml.Serialization.XmlSerializer> 支援兩種格式的序列化 XML：`Literal` 和 `Encoded`。 `Literal` 是最常接受的形式，而且是 <xref:System.Runtime.Serialization.DataContractSerializer> 唯一支援的形式。 `Encoded` 是 SOAP 規格第5節中所述的舊版格式，不建議用於新的服務。 若要切換至 `Encoded` 模式，請將 `Use` 屬性 (Attribute) 上的 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 屬性 (Property) 設為 `Encoded`。  
   
  在大部分情況下，您不應該變更 `Style` 和 `Use` 屬性的預設設定。  
   
@@ -464,7 +464,7 @@ End Interface
 ```  
   
 ### <a name="serialization-behaviors"></a>序列化行為  
- WCF 提供兩種行為，<xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 和 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>，會根據特定作業所使用的序列化程式自動插入。 由於這些行為是自動套用的，一般來說您不需要知道它們的存在。  
+ 根據特定作業所使用的序列化程式，WCF、<xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 和 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 會自動插入兩種行為。 由於這些行為是自動套用的，一般來說您不需要知道它們的存在。  
   
  然而，`DataContractSerializerOperationBehavior` 具有 `MaxItemsInObjectGraph`、`IgnoreExtensionDataObject`，和 `DataContractSurrogate` 屬性，可供您用來自訂序列化處理序。 開頭的兩個屬性具有如上一節所述相同的意義。 您可以使用 `DataContractSurrogate` 屬性來啟用資料合約替代，這是一項功能強大的機制，可供您用來自訂與延伸序列化處理序。 如需詳細資訊，請參閱[資料合約代理](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。  
   
@@ -564,7 +564,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
  有時候內建的序列化程式可能無法滿足您的案例需求。 在大部分情況下，您仍舊可以使用 <xref:System.Runtime.Serialization.XmlObjectSerializer> 抽取作業，來同時衍生 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer>。  
   
- 前三個案例 (.NET 型別保留、物件圖形保留，與完整自訂 `XmlObjectSerializer` 式序列化) 皆需插入自訂序列化程式。 若要完成此項作業，請執行下列步驟：  
+ 前三個案例 (.NET 型別保留、物件圖形保留，與完整自訂 `XmlObjectSerializer` 式序列化) 皆需插入自訂序列化程式。 若要這樣做，請執行下列步驟：  
   
 1. 撰寫自己的行為 (衍生自 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>)。  
   
@@ -577,5 +577,5 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
 ## <a name="see-also"></a>另請參閱
 
 - [使用 XmlSerializer 類別](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)
-- [如何：啟用串流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
-- [如何：建立類別或結構的基本資料合約 @ no__t-0
+- [如何：啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [如何：建立類別或結構的基本資料合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

@@ -19,8 +19,8 @@ ms.locfileid: "71697831"
 控制網路要求的快取機制。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requestCaching >**  
+&nbsp;&nbsp;[ **\<system.web >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<requestcaching> >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,16 +35,16 @@ ms.locfileid: "71697831"
 </requestCaching>
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和元素  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`isPrivateCache`|指定快取是否在不同使用者的資訊之間提供隔離。 預設值為 `true`。 中介層應用程式的這個值應該 `false`。|  
+|`isPrivateCache`|指定快取是否在不同使用者的資訊之間提供隔離。 預設值是 `true`。 中介層應用程式的這個值應該是 `false`。|  
 |`disableAllCaching`|指定停用所有 Web 回應的快取，而且無法以程式設計方式覆寫。|  
-|`defaultPolicyLevel`|<xref:System.Net.Cache.RequestCacheLevel> 列舉中的其中一個值。 預設值為 `BypassCache`。|  
+|`defaultPolicyLevel`|<xref:System.Net.Cache.RequestCacheLevel> 列舉中的其中一個值。 預設值是 `BypassCache`。|  
 |`unspecifiedMaximumAge`|指定將內容標示為過期的預設時間。|  
   
 ## <a name="policylevel-attribute"></a>policyLevel 屬性  
@@ -62,10 +62,10 @@ ms.locfileid: "71697831"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|選擇性項目。<br /><br /> 描述 HTTP 快取是否作用中，並描述預設的快取原則。|  
-|[@no__t 1defaultFtpCachePolicy > 元素（網路設定）](defaultftpcachepolicy-element-network-settings.md)|選擇性項目。<br /><br /> 描述 FTP 快取是否作用中，並描述預設的快取原則。|  
+|[\<defaultFtpCachePolicy > 元素（網路設定）](defaultftpcachepolicy-element-network-settings.md)|選擇性項目。<br /><br /> 描述 FTP 快取是否作用中，並描述預設的快取原則。|  
   
 ### <a name="parent-elements"></a>父項目  
   

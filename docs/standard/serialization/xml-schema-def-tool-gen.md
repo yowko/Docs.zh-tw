@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 XML 結構描述定義工具產生類別和 XML 結構描述文件
+title: 'How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
@@ -14,7 +14,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71392858"
 ---
-# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>HOW TO：使用 XML 結構描述定義工具產生類別和 XML 結構描述文件
+# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents
 XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描述或產生由 XML 結構描述定義的類別。 下列程序將說明如何執行這些作業。  
   
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>產生符合特定結構描述的類別  
@@ -59,5 +59,5 @@ XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描
 - [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [XML 結構描述定義工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [如何：序列化物件 @ no__t-0
-- [如何：還原序列化物件 @ no__t-0
+- [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

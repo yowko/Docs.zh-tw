@@ -17,12 +17,12 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699175"
 ---
-# <a name="trace-element"></a>@no__t 0trace > 元素
+# <a name="trace-element"></a>\<追蹤 > 元素
 包含用於收集、儲存及路由傳送追蹤訊息的接聽項。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. 診斷 >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<trace >**  
+&nbsp;&nbsp;[ **\<系統診斷 >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<追蹤 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,8 +32,8 @@ ms.locfileid: "71699175"
        useGlobalLock="true| false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和元素  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -59,7 +59,7 @@ ms.locfileid: "71699175"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<listeners>](listeners-element-for-trace.md)|指定收集、儲存及路由傳送訊息的接聽程式。|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71699175"
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 `<trace>` 元素，將接聽程式 `MyListener` 新增至 @no__t 2 集合。 `MyListener` 會建立名為 `MyListener.log` 的檔案，並將輸出寫入檔案。 @No__t-0 屬性會設定為 `false`，如果追蹤接聽程式是安全線程，則不會使用全域鎖定。 @No__t-0 屬性會設定為 `true`，這會使追蹤接聽程式寫入檔案，不論是否呼叫 @no__t 2 方法。 @No__t-0 屬性設為0（零），這會在呼叫 <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> 方法時，讓接聽程式縮排零空間。  
+ 下列範例顯示如何使用 `<trace>` 專案，將接聽程式 `MyListener` 加入至 `Listeners` 集合。 `MyListener` 會建立名為 `MyListener.log` 的檔案，並將輸出寫入檔案。 `useGlobalLock` 屬性會設定為 `false`，如果追蹤接聽程式是安全線程，則不會使用全域鎖定。 `autoflush` 屬性會設定為 `true`，這會使追蹤接聽程式寫入檔案，不論是否呼叫 <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> 方法。 `indentsize` 屬性設為0（零），這會導致接聽程式在呼叫 <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> 方法時，將零空格縮排。  
   
 ```xml  
 <configuration>  

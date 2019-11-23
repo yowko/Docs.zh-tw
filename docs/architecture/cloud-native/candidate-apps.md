@@ -3,18 +3,18 @@ title: 適用于雲端原生的候選應用程式
 description: 瞭解哪些類型的應用程式可從雲端原生方法獲益
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 127dca45ce8a5e025ca7511e6513afffe64e592d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 328af4081d830cf1a7959a37c2155090ec4da3ff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087684"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968288"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>適用于雲端原生的候選應用程式
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-查看您的組合中的應用程式。 有多少人符合雲端原生架構的資格？ 全部都是嗎？ 也許有些嗎？
+查看您的組合中的應用程式。 有多少人符合雲端原生架構的資格？ 全部？ 也許有些嗎？
 
 套用成本/權益分析，很有可能不會支援雲端原生所需的等於沉重 price 標記。 雲端原生的成本遠遠超過應用程式的商業價值。
 
@@ -64,13 +64,13 @@ ms.locfileid: "73087684"
 
 適當的遷移策略取決於組織優先順序和您的目標系統。 對許多人而言，將整合型應用程式優化，或將粗略服務新增至多層式應用程式，可能會更符合成本效益。 在這些情況下，您仍然可以充分利用雲端 PaaS 功能，例如 Azure App Service 所提供的功能。
 
-## <a name="summary"></a>總結
+## <a name="summary"></a>摘要
 
 在本章中，我們引進了雲端原生運算。 我們提供了一種定義，以及驅動雲端原生應用程式的主要功能。 我們探討了可能會證明這項投資和投入時間的應用程式類型。
 
 隨著背後的介紹，我們現在深入探討雲端原生的詳細探討。
 
-### <a name="references"></a>reference
+### <a name="references"></a>參考
 
 - [雲端原生運算基礎](https://www.cncf.io/)
 
@@ -89,8 +89,6 @@ ms.locfileid: "73087684"
 - [Netflix 如何部署程式碼](https://www.infoq.com/news/2013/06/netflix/)
 
 - [調整 WeChat 微服務的多載控制](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf)
-
-- [RayGun-案例研究](https://raygun.com/case-study/ovation)
 
 >[!div class="step-by-step"]
 >[上一頁](definition.md)

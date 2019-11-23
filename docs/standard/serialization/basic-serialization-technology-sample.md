@@ -72,7 +72,7 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 
 - 執行階段序列化
 
-  - <xref:System.Runtime.Serialization.IFormatter> 用來參考 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 或 @no__t 2 物件。
+  - <xref:System.Runtime.Serialization.IFormatter> 用來參考 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 或 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 物件。
 
   - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 用來將連結清單序列化為二進位格式的資料流程。 二進位格式子使用的格式只有 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型別才了解。 不過，資料相當簡明。
 
@@ -80,11 +80,11 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 
 - 資料流 I/O
 
-  - <xref:System.IO.Stream> 用來執行序列化及還原序列化。 這個範例所用的特定資料流型別是 <xref:System.IO.FileStream> 型別。 不過，序列化可以使用衍生自 <xref:System.IO.Stream> 的任何型別。
+  - <xref:System.IO.Stream> 用來序列化和還原序列化。 這個範例所用的特定資料流型別是 <xref:System.IO.FileStream> 型別。 不過，序列化可以使用衍生自 <xref:System.IO.Stream> 的任何型別。
 
-  - <xref:System.IO.File> 用來建立 <xref:System.IO.FileStream> 物件，以便在磁碟上讀取及建立檔案。
+  - <xref:System.IO.File> 用來建立 <xref:System.IO.FileStream> 物件，以便在磁片上讀取和建立檔案。
 
-  - <xref:System.IO.FileStream> 用來將連結串列序列化及還原序列化。
+  - <xref:System.IO.FileStream> 用來序列化和還原序列化連結清單。
 
 ## <a name="see-also"></a>另請參閱
 

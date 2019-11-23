@@ -10,7 +10,7 @@ ms.locfileid: "72394097"
 
 在 ASP.NET Core 3.0 Preview 7 中，SignalR JavaScript 用戶端封裝名稱從 `@aspnet/signalr` 變更為 `@microsoft/signalr`。 名稱變更反映出 SignalR 在不只是 ASP.NET Core 的應用程式中很有用的事實，因為 Azure SignalR Service。
 
-若要回應這項變更，請變更封裝中的*json*檔案、@no__t 1 語句和 ECMAScript @no__t 2 語句中的參考。 在此重新命名過程中，不會變更任何 API。
+若要回應這項變更，請變更您*封裝*中的參考、`require` 語句和 ECMAScript `import` 語句。 在此重新命名過程中，不會變更任何 API。
 
 如需討論，請參閱[aspnet/AspNetCore # 11637](https://github.com/aspnet/AspNetCore/issues/11637)。
 
@@ -34,7 +34,7 @@ ms.locfileid: "72394097"
 
 切換至新的封裝 `@microsoft/signalr`。
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>類別
 
 ASP.NET Core
 

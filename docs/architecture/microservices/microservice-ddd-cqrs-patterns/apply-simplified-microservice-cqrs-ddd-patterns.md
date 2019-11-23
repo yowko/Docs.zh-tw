@@ -37,7 +37,7 @@ eShopOnContainers 參考應用程式中的訂購微服務即為這種服務的�
 
 ## <a name="additional-resources"></a>其他資源
 
-- **Greg Young。Versioning in an Event Sourced System** (事件來源系統中的版本控制) (免費閱讀的線上電子書) \
+- **Greg 年輕事件來源系統中的版本控制**（免費閱讀線上電子書） \
    <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]

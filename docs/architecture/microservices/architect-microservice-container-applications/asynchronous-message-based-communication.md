@@ -101,7 +101,7 @@ ms.locfileid: "73454227"
 - **最終一致性** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Jimmy Bogard。重構以提高彈性：評估**結合  \
+- **Jimmy Bogard。重構以提高彈性：評估**結合性 \
   <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]

@@ -12,15 +12,15 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699216"
 ---
-# <a name="applicationpool-element-web-settings"></a>@no__t 0applicationPool > 元素（Web 設定）
+# <a name="applicationpool-element-web-settings"></a>\<applicationPool > 元素（Web 設定）
 指定當 ASP.NET 應用程式在 IIS 7.0 或更新版本上以整合模式執行時，ASP.NET 用來管理整個進程行為的設定。  
   
 > [!IMPORTANT]
 > 此元素和其支援的功能只有在您的 ASP.NET 應用程式裝載于 IIS 7.0 或更新版本時才能使用。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. web >** ](system-web-element-web-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<applicationPool >**  
+&nbsp;&nbsp;[ **\<system.web >** ](system-web-element-web-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<applicationPool >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,9 +31,9 @@ ms.locfileid: "71699216"
     requestQueueLimit="5000" />  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和元素  
 
-下列各節描述屬性、子項目和父項目。  
+下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -44,7 +44,7 @@ ms.locfileid: "71699216"
 |`requestQueueLimit`|指定在單一進程中可排入佇列以進行 ASP.NET 的最大要求數目。 當兩個或多個 ASP.NET 應用程式在單一應用程式集區中執行時，對應用程式集區中的任何應用程式所做的累計要求集會受到這項設定。|  
   
 ### <a name="child-elements"></a>子元素  
- 無。  
+ None。  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -56,14 +56,14 @@ ms.locfileid: "71699216"
 
 當您在整合模式中執行 IIS 7.0 或更新版本時，此元素組合可讓您設定當應用程式裝載于 IIS 應用程式集區時，ASP.NET 管理執行緒和佇列要求的方式。 如果您執行 IIS 6，或以傳統模式或在 ISAPI 模式中執行 IIS 7.0，則會忽略這些設定。  
   
-@No__t-0 設定適用于在特定 .NET Framework 版本上執行的所有應用程式集區。 這些設定包含在 aspnet .config 檔案中。 此檔案有版本2.0 和4.0 的 .NET Framework。 （版本3.0 和3.5 的 .NET Framework 會與版本2.0 共用 aspnet .config 檔案）。  
+`applicationPool` 設定適用于在特定版本的 .NET Framework 上執行的所有應用程式集區。 這些設定包含在 aspnet .config 檔案中。 此檔案有版本2.0 和4.0 的 .NET Framework。 （版本3.0 和3.5 的 .NET Framework 會與版本2.0 共用 aspnet .config 檔案）。  
   
 > [!IMPORTANT]
-> 如果您在 [!INCLUDE[win7](../../../../../includes/win7-md.md)] 上執行 IIS 7.0，您可以為每個應用程式集區設定個別的 aspnet .config 檔案。 這可讓您針對每個應用程式集區量身訂做執行緒的效能。  
+> 如果您在 [!INCLUDE[win7](../../../../../includes/win7-md.md)]上執行 IIS 7.0，您可以為每個應用程式集區設定個別的 aspnet .config 檔案。 這可讓您針對每個應用程式集區量身訂做執行緒的效能。  
   
-在 [`maxConcurrentRequestsPerCPU`] 設定中，.NET Framework 4 中預設的 "5000" 設定會有效地關閉由 ASP.NET 控制的要求節流，除非您的每個 CPU 實際上有5000個或更多的要求。 預設設定會改為依賴 CLR 執行緒集區，以自動管理每個 CPU 的平行存取。 大量使用非同步要求處理的應用程式，或是在網路 i/o 上封鎖了許多長時間執行的要求，將受益于 .NET Framework 4 中增加的預設限制。 將 `maxConcurrentRequestsPerCPU` 設定為零會關閉使用受控執行緒來處理 ASP.NET 要求。 當應用程式在 IIS 應用程式集區中執行時，要求會停留在 IIS i/o 執行緒上，因此並行處理會受到 IIS 執行緒設定的節流。  
+在 `maxConcurrentRequestsPerCPU` 設定中，.NET Framework 4 中預設的 "5000" 設定會有效地關閉由 ASP.NET 控制的要求節流，除非您的每個 CPU 實際上有5000個或更多的要求。 預設設定會改為依賴 CLR 執行緒集區，以自動管理每個 CPU 的平行存取。 大量使用非同步要求處理的應用程式，或是在網路 i/o 上封鎖了許多長時間執行的要求，將受益于 .NET Framework 4 中增加的預設限制。 將 `maxConcurrentRequestsPerCPU` 設定為零會關閉使用受控執行緒來處理 ASP.NET 要求。 當應用程式在 IIS 應用程式集區中執行時，要求會停留在 IIS i/o 執行緒上，因此並行處理會受到 IIS 執行緒設定的節流。  
   
-[@No__t-0] 設定的運作方式與[processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100))元素的 `requestQueueLimit` 屬性相同，這是在 ASP.NET 應用程式的 web.config 檔案中設定。 不過，aspnet .config 檔案中的 `requestQueueLimit` 設定會覆寫 Web.config 檔案中的 `requestQueueLimit` 設定。 換句話說，如果同時設定這兩個屬性（預設為 true），則會優先使用 aspnet .config 檔案中的 `requestQueueLimit` 設定。  
+`requestQueueLimit` 設定的運作方式與[processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100))專案的 `requestQueueLimit` 屬性相同，這會在 ASP.NET 應用程式的 web.config 檔案中設定。 不過，aspnet .config 檔案中的 `requestQueueLimit` 設定會覆寫 Web.config 檔案中的 `requestQueueLimit` 設定。 換句話說，如果同時設定這兩個屬性（預設為 true），則會優先使用 aspnet .config 檔案中的 `requestQueueLimit` 設定。  
   
 ## <a name="example"></a>範例  
 

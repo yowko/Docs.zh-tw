@@ -1,14 +1,13 @@
 ---
 title: Protobuf 適用于 variant 類型的 Any 和一個欄位-WCF 開發人員的 gRPC
 description: 瞭解如何使用 Any 型別和一個關鍵字來代表訊息中的 variant 物件類型。
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 10f55288eb4a6aa603228da5b4850317d6bde614
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: af3ba22c238aa80a8c6119f62d5d8914770cad68
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846385"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971609"
 ---
 # <a name="protobuf-any-and-oneof-fields-for-variant-types"></a>Protobuf variant 類型的 Any 和一個欄位
 
@@ -16,7 +15,7 @@ ms.locfileid: "72846385"
 
 Protobuf 提供兩個較簡單的選項，可處理可能屬於一種以上類型的值。 `Any` 類型可以代表任何已知的 Protobuf 訊息類型，而 `oneof` 關鍵字可讓您指定在任何指定的訊息中只能設定一個範圍的欄位。
 
-## <a name="any"></a>Any
+## <a name="any"></a>任何
 
 `Any` 是 Protobuf 的「知名型別」之一，這是一組有用、可重複使用的訊息型別，並以所有支援的語言執行。 若要使用 `Any` 類型，您必須匯入 `google/protobuf/any.proto` 定義。
 
@@ -39,7 +38,7 @@ message ChangeNotification {
 }
 ```
 
-在程式C#代碼中，`Any`類別提供了設定欄位、將訊息解壓縮，以及檢查類型的方法。
+在程式C#代碼中，`Any` 類別提供了設定欄位、將訊息解壓縮，以及檢查類型的方法。
 
 ```csharp
 public void FormatChangeNotification(ChangeNotification change)

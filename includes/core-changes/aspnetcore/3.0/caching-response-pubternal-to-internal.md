@@ -8,13 +8,13 @@ ms.locfileid: "72394343"
 ---
 ### <a name="caching-responsecaching-pubternal-types-changed-to-internal"></a>Caching： ResponseCaching "pubternal" 類型已變更為 internal
 
-在 ASP.NET Core 3.0 中，`ResponseCaching` 中的 "pubternal" 類型已變更為 `internal`。
+在 ASP.NET Core 3.0 中，`ResponseCaching` 中的 "pubternal" 類型已變更為 [`internal`]。
 
-此外，`IResponseCachingPolicyProvider` 和 `IResponseCachingKeyProvider` 的預設值不會再加入至服務，做為 @no__t 2 方法的一部分。
+此外，`IResponseCachingPolicyProvider` 和 `IResponseCachingKeyProvider` 的預設值不會再加入至服務，做為 `AddResponseCaching` 方法的一部分。
 
 #### <a name="change-description"></a>變更描述
 
-在 ASP.NET Core 中，"pubternal" 類型會宣告為 `public`，但位於尾碼為 `.Internal` 的命名空間中。 雖然這些類型是公用的，但它們沒有支援原則，而且可能會受到重大變更。 可惜的是，意外使用這些型別是很常見的，因而導致這些專案的重大變更，並限制維護架構的能力。
+在 ASP.NET Core 中，"pubternal" 類型會宣告為 `public`，但位於尾碼為 `.Internal`的命名空間中。 雖然這些類型是公用的，但它們沒有支援原則，而且可能會受到重大變更。 可惜的是，意外使用這些型別是很常見的，因而導致這些專案的重大變更，並限制維護架構的能力。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -30,13 +30,13 @@ ms.locfileid: "72394343"
 
 #### <a name="reason-for-change"></a>變更的原因
 
-@No__t-0 範圍更能反映不受支援的原則。
+`internal` 範圍更能反映不受支援的原則。
 
 #### <a name="recommended-action"></a>建議的動作
 
 複製您的應用程式或程式庫所使用的類型。
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>類別
 
 ASP.NET Core
 

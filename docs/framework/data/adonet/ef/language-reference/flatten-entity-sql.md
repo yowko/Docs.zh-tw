@@ -23,12 +23,12 @@ FLATTEN ( collection )
  任何傳回值集合的集合以便扁平化成為單一集合的有效運算式。  
   
 ## <a name="remarks"></a>備註  
- `FLATTEN` 是其中一個 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 設定運算子。 所有 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 設定運算子都會從左到右評估。 如需 @no__t 1 設定運算子的優先順序資訊，請參閱[除外](except-entity-sql.md)。  
+ `FLATTEN` 是其中一個 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 設定運算子。 所有 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 設定運算子都會從左到右評估。 如需 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 設定運算子的優先順序資訊，請參閱[除外](except-entity-sql.md)。  
   
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會使用 `FLATTEN` 運算子，將集合轉換成扁平化集合。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. 依照 [How 中的程式進行：執行可傳回 StructuralType 結果 @ no__t-0 的查詢。  
+1. 遵循 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)中的程序進行。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   

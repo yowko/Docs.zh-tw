@@ -76,7 +76,7 @@ ASP.NET Core 也支援使用[外部驗證提供者](/aspnet/core/security/authen
 | **Facebook**  | **Microsoft.AspNetCore.Authentication.Facebook**         |
 | **Twitter**   | **Microsoft.AspNetCore.Authentication.Twitter**          |
 
-不論是何種情況，都會透過呼叫類似 `Startup.Configure`中 `app.Use{ExternalProvider}Authentication` 的註冊方法來註冊中介軟體。 視提供者需要，這些註冊方法會接受選項物件，其中包含應用程式識別碼和秘密資訊 (例如密碼)。 外部驗證提供者需要註冊應用程式 (如 [ASP.NET Core 文件](/aspnet/core/security/authentication/social/)中所述)，才能通知使用者哪個應用程式要求存取其身分識別。
+不論是何種情況，都會透過呼叫類似 `app.Use{ExternalProvider}Authentication`中 `Startup.Configure` 的註冊方法來註冊中介軟體。 視提供者需要，這些註冊方法會接受選項物件，其中包含應用程式識別碼和秘密資訊 (例如密碼)。 外部驗證提供者需要註冊應用程式 (如 [ASP.NET Core 文件](/aspnet/core/security/authentication/social/)中所述)，才能通知使用者哪個應用程式要求存取其身分識別。
 
 在 `Startup.Configure` 中註冊中介軟體之後，您可以提示使用者透過任何控制器動作登入。 若要這樣做，您可以建立 `AuthenticationProperties` 物件，其中包含驗證提供者的名稱和重新導向 URL。 然後，您需要傳回傳遞 `AuthenticationProperties` 物件的挑戰回應。 下列程式碼將示範這項作業。
 
@@ -274,7 +274,7 @@ public void ConfigureServices(IServiceCollection services)
 
 準備好此中介軟體之後，就會從授權標頭自動擷取 JWT 權杖。 這些權杖會接著還原序列化、驗證 (使用 `Audience` 和 `Authority` 參數中的值) 並儲存為使用者資訊，以供 MVC 動作或授權篩選稍後參考。
 
-JWT 持有人驗證中介軟體也可以支援更進階的案例；例如，在沒有授權單位的情況下，使用本機憑證來驗證權杖。 在此案例中，您可以在 `JwtBearerOptions`物件中指定 `TokenValidationParameters` 物件。
+JWT 持有人驗證中介軟體也可以支援更進階的案例；例如，在沒有授權單位的情況下，使用本機憑證來驗證權杖。 在此案例中，您可以在 `TokenValidationParameters`物件中指定 `JwtBearerOptions` 物件。
 
 ## <a name="additional-resources"></a>其他資源
 
@@ -284,13 +284,13 @@ JWT 持有人驗證中介軟體也可以支援更進階的案例；例如，在�
 - **身分識別簡介** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/identity](/aspnet/core/security/authentication/identity)
 
-- **Rick Anderson。使用 SMS  \ 的雙因素驗證**
+- **Rick Anderson。使用 SMS \ 的雙因素驗證**
   [https://docs.microsoft.com/aspnet/core/security/authentication/2fa](/aspnet/core/security/authentication/2fa)
 
 - **使用 Facebook、Google 和其他外部提供者啟用驗證** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
-- **Michell anicas,。OAuth 2  \ 簡介**
+- **Michell anicas,。OAuth 2 \ 簡介**
   <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
 - **AspNet.Security.OAuth.Providers** (ASP.NET OAuth 提供者的 GitHub 存放庫) \

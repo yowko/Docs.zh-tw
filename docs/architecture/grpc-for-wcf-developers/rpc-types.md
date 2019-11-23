@@ -1,14 +1,13 @@
 ---
 title: WCF 開發人員的 RPC gRPC 類型
 description: 瞭解 WCF 支援的遠端程序呼叫類型，以及它們在 gRPC 中的對等專案
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: ce5bf03b01dff3f7bb201ff08c9065abc2e58360
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 64375236da17c0aedbafe1cb441e72a144203358
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846224"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967262"
 ---
 # <a name="types-of-rpc"></a>RPC 類型
 
@@ -62,7 +61,7 @@ public async Task ShowThing(int thingId)
 
 ## <a name="wcf-duplex-one-way-to-client"></a>WCF 雙工，單向至用戶端
 
-WCF 應用程式（具有特定系結）可以在用戶端與伺服器之間建立持續性連接，而伺服器可以使用指定的*回呼介面*，以非同步方式將資料傳送至用戶端，直到關閉連接為止 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>property.
+WCF 應用程式（具有特定系結）可以在用戶端與伺服器之間建立持續性連接，而伺服器可以使用 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 屬性中指定的*回呼介面*，以非同步方式將資料傳送至用戶端，直到連接關閉為止。
 
 gRPC 服務提供與訊息資料流程類似的功能。 在執行方面，資料流程不會*完全*對應到 WCF 雙工服務，但也可以達成相同的結果。
 

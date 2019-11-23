@@ -17,13 +17,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699604"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>適用于 bypasslist 的 @no__t 0add > 元素（網路設定）
+# <a name="add-element-for-bypasslist-network-settings"></a>\<為 bypasslist 新增 > 元素（網路設定）
 將 IP 位址或 DNS 名稱新增至 proxy 略過清單。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;[ **\<system.web >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<新增 >**  
   
 ## <a name="syntax"></a>語法  
@@ -34,30 +34,30 @@ ms.locfileid: "71699604"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和元素  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
-|**屬性**|**描述**|  
+|**屬性**|**說明**|  
 |-------------------|---------------------|  
 |**address**|描述 IP 位址或 DNS 名稱的正則運算式。|  
   
 ### <a name="child-elements"></a>子元素  
- 無。  
+ None。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**描述**|  
+|**目**|**說明**|  
 |-----------------|---------------------|  
 |[bypasslist](bypasslist-element-network-settings.md)|提供一組正則運算式，描述不使用 proxy 的位址。|  
   
 ## <a name="remarks"></a>備註  
- @No__t-0 元素會在略過 proxy 伺服器的地址清單中，插入描述 IP 位址或 DNS 伺服器名稱的正則運算式。  
+ `add` 元素會將描述 IP 位址或 DNS 伺服器名稱的正則運算式，插入到略過 proxy 伺服器的地址清單中。  
   
- @No__t-0 屬性的值應該是描述一組 IP 位址或主機名稱的正則運算式。  
+ `address` 屬性的值應該是描述一組 IP 位址或主機名稱的正則運算式。  
   
- 為此元素指定正則運算式時，請務必小心。 正則運算式 "[a-z] + \\.contoso\\.com" 會符合 contoso.com 網域中的任何主機，但它也會符合 contoso.com.cpandl.com 網域中的任何主機。 若只要比對 contoso.com 網域中的主機，請使用錨點（"$"）： "[a-z] + \\.contoso\\.com $"。  
+ 為此元素指定正則運算式時，請務必小心。 正則運算式 "[a-z] +\\. contoso\\.com" 符合 contoso.com 網域中的任何主機，但也符合 contoso.com.cpandl.com 網域中的任何主機。 若只要比對 contoso.com 網域中的主機，請使用錨點（"$"）： "[a-z] +\\. contoso\\.com $"。  
   
  如需正則運算式的詳細資訊，請參閱。[.NET Framework 正則運算式](../../../../standard/base-types/regular-expressions.md)。  
   

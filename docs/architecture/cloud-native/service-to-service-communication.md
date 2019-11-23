@@ -3,12 +3,12 @@ title: 服務對服務通訊
 description: 瞭解後端雲端原生微服務如何與其他後端微服務通訊。
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: 6a7e72491cb56d925e684b94109b1aaa98e24df3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5124b8b83f62ff17b1230ead63db26e0c1f2a5b
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094626"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087601"
 ---
 # <a name="service-to-service-communication"></a>服務對服務通訊
 
@@ -34,7 +34,7 @@ ms.locfileid: "73094626"
 
 許多時候，一個微服務可能需要*查詢*另一個，而需要立即回應才能完成作業。 購物籃微服務可能需要產品資訊和價格，才能將專案新增至購物籃。 有數種方法可以執行查詢作業。
 
-### <a name="requestresponse-messaging"></a>要求/回應訊息
+### <a name="requestresponse-messaging"></a>要求/回應傳訊
 
 執行此案例的其中一個選項是呼叫後端微服務，對它需要查詢的微服務提出直接的 HTTP 要求，如圖4-8 所示。
 
@@ -50,7 +50,7 @@ ms.locfileid: "73094626"
 
 **圖 4-9**。 連結 HTTP 查詢
 
-您當然可以想像上圖所示的設計風險。 如果步驟 \#3 失敗，會發生什麼事？ 或步驟 \#8 失敗？ 如何復原？ 如果因為基礎服務忙碌而使步驟 \#6 變慢，該怎麼辦？ 您要如何繼續？ 即使所有作業都正常運作，您也可以考慮此呼叫會產生的延遲，這是每個步驟的延遲總和。
+您當然可以想像上圖所示的設計風險。 如果步驟 \#3 失敗，會發生什麼事？ 或步驟 \#8 失敗？ 如何復原？ 如果步驟 \#6 因為基礎服務忙碌而變慢，該怎麼辦？ 您要如何繼續？ 即使所有作業都正常運作，您也可以考慮此呼叫會產生的延遲，這是每個步驟的延遲總和。
 
 上圖中的大量結合性建議服務無法以最佳模式進行模型化。 它會 behoove 小組來重新審視其設計。
 
@@ -144,7 +144,7 @@ Azure 儲存體佇列是在您的雲端原生應用程式中執行命令訊息�
 
 在上圖中，請注意點對點關聯性。 相同提供者的兩個實例會佇列訊息至單一服務匯流排佇列。 每個訊息只會由右邊的三個取用者實例的其中一個使用。 接下來，我們會討論如何執行訊息，其中不同的取用者可能會對相同的訊息感興趣。
 
-## <a name="events"></a>「事件」
+## <a name="events"></a>事件
 
 「訊息佇列」是一種有效的方法，可讓產生者以非同步方式傳送訊息給取用者的通訊。 不過，當有*許多不同*的取用者對相同訊息感興趣時，會發生什麼事？ 每個取用者的專用訊息佇列不會適當地進行調整，因而變得難以管理。
 
@@ -166,7 +166,7 @@ Azure 儲存體佇列是在您的雲端原生應用程式中執行命令訊息�
 
 **圖 4-16**： 主題架構
 
-在上圖中，發行者會將訊息傳送至主題。 最後，訂閱者會從訂用帳戶接收訊息。 在中間，主題會根據一組*規則*（以暗藍色方塊顯示），將訊息轉送至訂閱。 規則會作為將特定訊息轉寄至訂用帳戶的篩選準則。 在這裡，「CreateOrder」事件會傳送到訂用帳戶 \#1 和訂用帳戶 \#3，但不會傳送到訂用帳戶 \#2。 「OrderCompleted」事件會傳送到訂用帳戶 \#2 和訂用帳戶 \#3。
+在上圖中，發行者會將訊息傳送至主題。 最後，訂閱者會從訂用帳戶接收訊息。 在中間，主題會根據一組*規則*（以暗藍色方塊顯示），將訊息轉送至訂閱。 規則會作為將特定訊息轉寄至訂用帳戶的篩選準則。 在這裡，"CreateOrder" 事件會傳送到訂用帳戶 \#1 和訂用帳戶 \#3，但不會傳送到訂用帳戶 \#2。 「OrderCompleted」事件會傳送到訂用帳戶 \#2，訂用帳戶 \#3。
 
 Azure 雲端支援兩種不同的主題服務： Azure 服務匯流排主題和 Azure EventGrid。
 
@@ -208,7 +208,7 @@ EventGrid 和服務匯流排之間的主要差異在於基礎*訊息交換模式
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>在 Azure 雲端中串流處理訊息
 
-Azure 服務匯流排和事件方格針對公開單一獨立事件的應用程式提供絕佳的支援，例如新檔已插入 Cosmos DB。 但是，如果您的雲端原生系統需要處理*相關事件的資料流程*，該怎麼辦？ [事件資料流程](https://msdn.microsoft.com/magazine/dn904671)較複雜。 它們通常是依時間排序、相互關聯，而且必須以群組的方式處理。
+Azure 服務匯流排和事件方格針對公開單一獨立事件的應用程式提供絕佳的支援，例如新檔已插入 Cosmos DB。 但是，如果您的雲端原生系統需要處理*相關事件的資料流程*，該怎麼辦？ [事件資料流程](https://docs.microsoft.com/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems)較複雜。 它們通常是依時間排序、相互關聯，而且必須以群組的方式處理。
 
 [Azure 事件中樞](https://azure.microsoft.com/services/event-hubs/)是一種資料串流平臺和事件內嵌服務，可收集、轉換及儲存事件。 它會微調以捕捉串流資料，例如從遙測內容發出的連續事件通知。 此服務具有高度擴充性，而且每秒可儲存和[處理數百萬個事件](https://docs.microsoft.com/azure/event-hubs/event-hubs-about)。 如圖4-18 所示，這通常是事件管線的前端，可將內嵌資料流程從事件耗用量分離出來。
 
@@ -220,7 +220,7 @@ Azure 服務匯流排和事件方格針對公開單一獨立事件的應用程�
 
 事件中樞支援常見的事件發佈通訊協定，包括 HTTPS 和 AMQP。 它也支援 Kafka 1.0。 [現有的 Kafka 應用程式可以使用 Kafka 通訊協定與事件中樞通訊](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview)，以提供管理大型 Kafka 叢集的替代方法。 許多開放原始碼雲端原生系統採用 Kafka。
 
-事件中樞透過[分割取用者模型](https://docs.microsoft.com/azure/event-hubs/event-hubs-features)來執行訊息串流，而每個取用者只會讀取訊息資料流程的特定子集或資料分割。 此模式可讓您大規模地進行事件處理，並提供佇列和主題中無法使用的其他資料流程導向功能。 「分割區」（partition）是保留在事件中樞內之事件的排序次序。 當較新的事件抵達時，它們會新增至此順序的結尾。 圖4-19 顯示事件中樞內的資料分割。
+事件中樞透過[分割取用者模型](https://docs.microsoft.com/azure/event-hubs/event-hubs-features)來執行訊息串流，而每個取用者只會讀取訊息資料流程的特定子集或資料分割。 此模式支援大幅的水平擴充來處理事件，並提供佇列和主題所沒有的其他串流功能。 「分割區」（partition）是保留在事件中樞內之事件的排序次序。 當較新的事件抵達時，它們會新增至此順序的結尾。 圖4-19 顯示事件中樞內的資料分割。
 
 ![事件中樞資料分割](./media/event-hub-partitioning.png)
 

@@ -11,7 +11,7 @@ ms.locfileid: "72031890"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>工作 1：建立新的 Windows Presentation Foundation 應用程式
 
-在這項工作中，您將使用 WPF 應用程式 Visual Studio 範本來建立空的 Windows Presentation Foundation （WPF）應用程式，並將參考新增至適當的 @no__t 0 工作流程元件。  
+在這項工作中，您將使用 WPF 應用程式 Visual Studio 範本來建立空的 Windows Presentation Foundation （WPF）應用程式，並將參考加入適當的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程元件。  
   
 ## <a name="to-create-the-wpf-application-project"></a>若要建立 WPF 應用程式專案
 
@@ -37,9 +37,9 @@ ms.locfileid: "72031890"
     - System.Activities.Presentation
     - System.Activities.Core.Presentation
 
-10. 請參閱 [Task 2：裝載工作流程設計工具 @ no__t-0，以瞭解如何裝載工作流程設計工具設計畫布。
+10. 如要瞭解如何裝載工作流程設計工具設計畫布，請參閱[Task 2：裝載工作流程設計工具](task-2-host-the-workflow-designer.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 - [重新裝載工作流程設計工具](rehosting-the-workflow-designer.md)
-- [Task 2：裝載工作流程設計工具 @ no__t-0
+- [工作 2：裝載工作流程設計工具](task-2-host-the-workflow-designer.md)

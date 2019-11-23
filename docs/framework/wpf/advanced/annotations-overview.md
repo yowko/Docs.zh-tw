@@ -19,7 +19,7 @@ ms.locfileid: "72004042"
 # <a name="annotations-overview"></a>附註概觀
 在書面文件上撰寫附註或註解是相當稀鬆平常的事，我們幾乎將它視為理所當然。 這些附註或註解是我們新增至文件的「註釋」，用以標記資訊，或反白顯示感興趣的項目以供日後參考。 雖然在書面文件上撰寫附註很容易且平常，不過在電子文件中新增個人註解的功能通常非常有限，如果有的話。  
   
- 本主題會回顧數個常見的批註類型，特別是附注和醒目提示，並說明 Microsoft 注釋架構如何透過 Windows Presentation Foundation 在應用程式中協助這些類型的注釋（WPF）檔視圖控制項。  支援注釋的 @no__t 0 檔視圖控制項包括 <xref:System.Windows.Controls.FlowDocumentReader> 和 <xref:System.Windows.Controls.FlowDocumentScrollViewer>，以及從 <xref:System.Windows.Controls.Primitives.DocumentViewerBase> （例如 <xref:System.Windows.Controls.DocumentViewer> 和 <xref:System.Windows.Controls.FlowDocumentPageViewer>）衍生的控制項。  
+ 本主題會回顧數個常見的批註類型，特別是附注和醒目提示，並說明 Microsoft 注釋架構如何透過 Windows Presentation Foundation 在應用程式中協助這些類型的注釋（WPF）檔視圖控制項。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 檔視圖支援注釋的控制項包括 <xref:System.Windows.Controls.FlowDocumentReader> 和 <xref:System.Windows.Controls.FlowDocumentScrollViewer>，以及從 <xref:System.Windows.Controls.Primitives.DocumentViewerBase> （例如 <xref:System.Windows.Controls.DocumentViewer> 和 <xref:System.Windows.Controls.FlowDocumentPageViewer>）衍生的控制項。  
 
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>自黏便箋  
@@ -35,14 +35,14 @@ ms.locfileid: "72004042"
  [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
   
 <a name="caf1_type_callouts"></a>   
-## <a name="highlights"></a>反白顯示  
- 人們使用有創意的方法，在標記書面文件時將注意力吸引到感興趣的項目，例如使用底線、反白顯示、圈起句子中的文字，或是在邊界繪製記號或標記法。  Microsoft 注釋架構中的反白顯示批註提供了類似的功能，用來標記 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 檔視圖控制項中顯示的資訊。  
+## <a name="highlights"></a>重點  
+ 人們使用有創意的方法，在標記書面文件時將注意力吸引到感興趣的項目，例如使用底線、反白顯示、圈起句子中的文字，或是在邊界繪製記號或標記法。  Microsoft 注釋架構中的反白顯示批註提供了類似的功能，用來標記 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 檔視圖控制項中所顯示的資訊。  
   
  下圖顯示反白顯示註釋的範例。  
   
  ![反白顯示註釋](./media/caf-callouts.png "CAF_Callouts")  
   
- 使用者通常會藉由先選取一些文字或感關注的專案來建立批註，然後以滑鼠右鍵按一下以顯示 <xref:System.Windows.Controls.ContextMenu> 的注釋選項。  下列範例顯示 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，您可以用來宣告具有路由命令的 <xref:System.Windows.Controls.ContextMenu>，讓使用者可以存取來建立和管理注釋。  
+ 使用者通常會藉由先選取一些文字或感關注的專案來建立批註，然後以滑鼠右鍵按一下來顯示批註選項的 <xref:System.Windows.Controls.ContextMenu>。  下列範例顯示的 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 可讓您用來宣告具有路由命令的 <xref:System.Windows.Controls.ContextMenu>，讓使用者可以存取來建立和管理注釋。  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
@@ -75,4 +75,4 @@ ms.locfileid: "72004042"
 - [ContextMenu 概觀](../controls/contextmenu-overview.md)
 - [命令概觀](commanding-overview.md)
 - [非固定格式文件概觀](flow-document-overview.md)
-- [如何：將命令新增至 MenuItem @ no__t-0
+- [如何：將命令新增至 MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

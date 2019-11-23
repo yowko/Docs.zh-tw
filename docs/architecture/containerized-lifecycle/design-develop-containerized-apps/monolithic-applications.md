@@ -61,7 +61,7 @@ ms.locfileid: "72771038"
 
 雖然整合型應用程式可以從 Docker 獲益，但這只是一小部分優點。 管理容器的主要優點來自於使用容器協調器進行部署，透過此方式來管理各種執行個體和每個容器執行個體的生命週期。 將整合型應用程式分成可個別擴充、開發及部署的多個子系統，是您開始使用微服務的不錯起點。
 
-若要瞭解如何「隨即轉移」整合型應用程式與容器，以及如何將應用程式現代化，您可以閱讀此額外的 Microsoft 指南[使用 Azure 雲端和 Windows 容器將現有的 .net 應用程式現代化](../../modernize-with-azure-containers/index.md)。您也可以從 <https://aka.ms/LiftAndShiftWithContainersEbook> 下載為 PDF。
+若要瞭解如何「隨即轉移」整合型應用程式與容器，以及如何將應用程式現代化，您可以閱讀此額外的 Microsoft 指南[使用 Azure 雲端和 Windows 容器現代化現有的 .net 應用程式](../../modernize-with-azure-containers/index.md)，您也可以從 <https://aka.ms/LiftAndShiftWithContainersEbook>下載為 PDF。
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>將單一 Docker 容器應用程式發佈至 Azure App Service
 

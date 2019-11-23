@@ -1,14 +1,13 @@
 ---
 title: 應用程式效能管理-WCF 開發人員的 gRPC
 description: ASP.NET Core gRPC 應用程式的記錄、計量和追蹤。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6ba67fd069e7efc232f912e50c0e283facb79e9c
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 2b6a30ab68cb6e2fdc81c59e7faef81064b948c1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846724"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968172"
 ---
 # <a name="application-performance-management"></a>應用程式效能管理
 
@@ -56,7 +55,7 @@ ASP.NET Core 和 gRPC framework 元件會提供許多有關要求、例外狀況
 
 .NET Core 執行時間提供一組元件，用於發出和觀察包含 Api （例如 <xref:System.Diagnostics.Tracing.EventSource> 和 <xref:System.Diagnostics.Tracing.EventCounter> 類別）的計量。 這些 Api 可用來發出可供外部進程使用的基本數值資料，例如[dotnet 計數器通用工具](https://github.com/dotnet/diagnostics/blob/master/documentation/dotnet-counters-instructions.md)或 Windows 事件追蹤。 如需在您自己的程式碼中使用 `EventCounter` 的詳細資訊，請參閱[EventCounter 簡介](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)教學課程。
 
-針對更先進的計量，以及將度量資料寫入更廣泛的資料存放區，有一個絕佳的開放原始碼專案，稱為[應用程式計量](https://www.app-metrics.io)。 此程式庫套件提供一組豐富的類型來檢測您的程式碼。 它也提供封裝，以將計量寫入包含時間序列資料庫的不同目標型別，例如 Prometheus 和 InfluxDB、 [Azure 應用程式 Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)等等。 [AspNetCore](https://www.nuget.org/packages/App.Metrics.AspNetCore.Mvc/) NuGet 套件甚至會新增一組完整的基本計量，這些度量是透過與 ASP.NET Core 架構的整合自動產生的，而網站則提供[範本](https://www.app-metrics.io/samples/grafana/)來顯示這些計量使用[Grafana](https://grafana.com/)視覺化平臺。
+針對更先進的計量，以及將度量資料寫入更廣泛的資料存放區，有一個絕佳的開放原始碼專案，稱為[應用程式計量](https://www.app-metrics.io)。 此程式庫套件提供一組豐富的類型來檢測您的程式碼。 它也提供封裝，以將計量寫入包含時間序列資料庫的不同目標型別，例如 Prometheus 和 InfluxDB、 [Azure 應用程式 Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)等等。 [AspNetCore](https://www.nuget.org/packages/App.Metrics.AspNetCore.Mvc/) NuGet 套件甚至會新增一組完整的基本計量，這些度量會透過與 ASP.NET Core 架構的整合而自動產生，而網站則提供[範本](https://www.app-metrics.io/samples/grafana/)，以使用[Grafana](https://grafana.com/)視覺化平臺來顯示這些計量。
 
 如需有關應用程式計量的詳細資訊和檔，請參閱[app-metrics.io](https://app-metrics.io)網站。
 
@@ -160,7 +159,7 @@ public class Startup
 
 OpenTracing 套件是抽象層，因此它需要後端特定的執行。 下列開放原始碼後端可以使用 OpenTracing API 部署。
 
-| [屬性] | 封裝 | 網站 |
+| 名稱 | 套件 | 網站 |
 | ---- | ------- | -------- |
 | Jaeger | [Jaeger](https://www.nuget.org/packages/Jaeger/) | [jaegertracing.io](https://jaegertracing.io) |
 | 彈性 APM | [NetCoreAll 的彈性](https://www.nuget.org/packages/Elastic.Apm.NetCoreAll/) | [elastic.co/products/apm](https://www.elastic.co/products/apm) |

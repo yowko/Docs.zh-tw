@@ -27,19 +27,19 @@ ms.locfileid: "71834804"
 
 WCF 會為此程式提供基類 helper。 如需本文所討論之通道協助程式類別的圖表，請參閱[通道模型總覽](channel-model-overview.md)。
 
-- @No__t 0 類別會執行 <xref:System.ServiceModel.ICommunicationObject>，並強制執行[開發通道](developing-channels.md)的步驟2中所述的狀態機器。
+- <xref:System.ServiceModel.Channels.CommunicationObject> 類別會實 <xref:System.ServiceModel.ICommunicationObject> 並強制執行[開發通道](developing-channels.md)的步驟2中所述的狀態機器。
 
 - <xref:System.ServiceModel.Channels.ChannelManagerBase> 類別會實作 <xref:System.ServiceModel.Channels.CommunicationObject>，並為 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 和 <xref:System.ServiceModel.Channels.ChannelListenerBase> 提供統一的基底類別。 <xref:System.ServiceModel.Channels.ChannelManagerBase> 類別可以和 <xref:System.ServiceModel.Channels.ChannelBase> 一起運作，而後者是實作 <xref:System.ServiceModel.Channels.IChannel> 的基底類別。
 
-- @No__t 0 類別會執行 <xref:System.ServiceModel.Channels.ChannelManagerBase> 和 <xref:System.ServiceModel.Channels.IChannelFactory>，並將 @no__t 3 多載合併為一個 `OnCreateChannel` 抽象方法。
+- <xref:System.ServiceModel.Channels.ChannelFactoryBase> 類別會執行 <xref:System.ServiceModel.Channels.ChannelManagerBase> 和 <xref:System.ServiceModel.Channels.IChannelFactory>，並將 `CreateChannel` 多載合併為一個 `OnCreateChannel` 抽象方法。
 
 - <xref:System.ServiceModel.Channels.ChannelListenerBase> 類別會實作 <xref:System.ServiceModel.Channels.IChannelListener>。 它會負責基礎的狀態管理。
 
-下列討論是以 @no__t 0Transport 為基礎：UDP](../samples/transport-udp.md)範例。
+下列討論是以[Transport： UDP](../samples/transport-udp.md)範例為基礎。
 
 ## <a name="creating-a-channel-listener"></a>建立通道接聽程式
 
-範例所執行的 @no__t 0 衍生自 <xref:System.ServiceModel.Channels.ChannelListenerBase> 類別。 它會使用單一 UDP 通訊端來接收資料包。 `OnOpen` 方法會透過非同步迴圈的 UDP 通訊端來接收資料， 然後透過下列訊息編碼系統將資料轉換為訊息：
+範例所執行的 `UdpChannelListener` 衍生自 <xref:System.ServiceModel.Channels.ChannelListenerBase> 類別。 它會使用單一 UDP 通訊端來接收資料包。 `OnOpen` 方法會透過非同步迴圈的 UDP 通訊端來接收資料， 然後透過下列訊息編碼系統將資料轉換為訊息：
 
 ```csharp
 message = UdpConstants.MessageEncoder.ReadMessage(
@@ -48,7 +48,7 @@ message = UdpConstants.MessageEncoder.ReadMessage(
 );
 ```
 
-由於相同的資料包通道代表來自幾個來源的訊息，因此 `UdpChannelListener` 是單一接聽程式。 一次最多隻會有一個作用中的 @no__t 0 與此接聽程式相關聯。 只有當 <xref:System.ServiceModel.Channels.ChannelListenerBase%601.AcceptChannel%2A> 方法所傳回的通道被接著處理後，範例才會產生另一個通道。 當收到訊息時，就會將它加入這個單一通道的佇列中。
+由於相同的資料包通道代表來自幾個來源的訊息，因此 `UdpChannelListener` 是單一接聽程式。 一次最多隻會有一個作用中的 <xref:System.ServiceModel.Channels.IChannel> 與此接聽程式相關聯。 只有當 <xref:System.ServiceModel.Channels.ChannelListenerBase%601.AcceptChannel%2A> 方法所傳回的通道被接著處理後，範例才會產生另一個通道。 當收到訊息時，就會將它加入這個單一通道的佇列中。
 
 ### <a name="udpinputchannel"></a>UdpInputChannel
 

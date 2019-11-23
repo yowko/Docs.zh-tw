@@ -1,14 +1,13 @@
 ---
 title: Wcf 端點和 gRPC 方法-適用于 WCF 開發人員的 gRPC
 description: 比較以 ServiceContract 和 OperationContract 屬性宣告的 WCF 端點，以及 Protobuf 中宣告的 gRPC 方法
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 1cb7fedf1fbb632438134375306801f356d7b921
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 763862a363afc6aab72335050cf4822754816c7a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846059"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966915"
 ---
 # <a name="wcf-endpoints-and-grpc-methods"></a>WCF 端點和 gRPC 方法
 
@@ -45,7 +44,7 @@ public interface IGreeterService
 | <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel>    | 無訊息加密;在傳輸層處理的網路加密（TLS over HTTP/2）。 |
 | <xref:System.ServiceModel.OperationContractAttribute.ReplyAction>        | SOAP 相關，在 gRPC 中沒有意義。 |
 
-`IsInitiating` 屬性可讓您指出[ServiceContract](xref:System.ServiceModel.ServiceContractAttribute)中的方法不能是第一個呼叫作為會話一部分的方法。 [`IsTerminating`] 屬性會導致伺服器在呼叫作業之後關閉會話（如果是在回呼用戶端上使用，則為用戶端）。 在 gRPC 中，資料流程是由單一方法建立，並且明確地關閉。 請參閱[gRPC 串流](rpc-types.md#grpc-streaming)。
+屬性可讓您指出 `IsInitiating`ServiceContract[ 中的方法不能是第一個呼叫作為會話一部分的方法。](xref:System.ServiceModel.ServiceContractAttribute) [`IsTerminating`] 屬性會導致伺服器在呼叫作業之後關閉會話（如果是在回呼用戶端上使用，則為用戶端）。 在 gRPC 中，資料流程是由單一方法建立，並且明確地關閉。 請參閱[gRPC 串流](rpc-types.md#grpc-streaming)。
 
 如需有關 gRPC 安全性和加密的詳細資訊，請參閱[第6章](security.md)。
 

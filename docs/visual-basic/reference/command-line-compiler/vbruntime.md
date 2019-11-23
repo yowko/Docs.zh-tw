@@ -39,14 +39,14 @@ ms.locfileid: "72005050"
  使用指定之程式庫（DLL）的參考進行編譯。  
   
 ## <a name="remarks"></a>備註  
- @No__t-0 編譯器選項可讓您指定編譯器應該編譯，而不需要 Visual Basic 執行時間程式庫的參考。 如果您編譯時沒有 Visual Basic 執行時間程式庫的參考，則會將錯誤或警告記錄在產生呼叫 Visual Basic 執行時間 helper 的程式碼或語言結構上。 （ *Visual Basic 運行*時間協助程式是在執行時間呼叫的函式，可執行特定語言的語義）。  
+ `-vbruntime` 編譯器選項可讓您指定編譯器應該編譯，而不需要 Visual Basic 執行時間程式庫的參考。 如果您編譯時沒有 Visual Basic 執行時間程式庫的參考，則會將錯誤或警告記錄在產生呼叫 Visual Basic 執行時間 helper 的程式碼或語言結構上。 （ *Visual Basic 運行*時間協助程式是在執行時間呼叫的函式，可執行特定語言的語義）。  
   
- 如果未指定任何 `-vbruntime` 參數，則 `-vbruntime+` 選項會產生相同的行為。 您可以使用 `-vbruntime+` 選項來覆寫先前的 `-vbruntime` 參數。  
+ 如果未指定任何 `-vbruntime` 參數，`-vbruntime+` 選項會產生相同的行為。 您可以使用 `-vbruntime+` 選項來覆寫先前的 `-vbruntime` 參數。  
   
- 當您使用 `-vbruntime-` 或 @no__t 2 選項時，@no__t 0 類型的大部分物件都無法使用。  
+ 當您使用 `-vbruntime-` 或 `-vbruntime:path` 選項時，`My` 類型的大部分物件都無法使用。  
   
 ## <a name="embedding-visual-basic-runtime-core-functionality"></a>內嵌 Visual Basic 執行時間核心功能  
- @No__t-0 選項可讓您在沒有執行時間程式庫參考的情況下進行編譯。 相反地，Visual Basic 執行時間程式庫中的核心功能會內嵌在使用者元件中。 如果您的應用程式是在不包含 Visual Basic 執行時間的平臺上執行，您可以使用此選項。  
+ [`-vbruntime*`] 選項可讓您編譯，而不需要執行時間程式庫的參考。 相反地，Visual Basic 執行時間程式庫中的核心功能會內嵌在使用者元件中。 如果您的應用程式是在不包含 Visual Basic 執行時間的平臺上執行，您可以使用此選項。  
   
  下列是內嵌的執行時間成員：  
   
@@ -78,14 +78,14 @@ ms.locfileid: "72005050"
   
 - <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> 常數  
   
-- @No__t-0 類型的某些物件  
+- `My` 類型的某些物件  
   
- 如果您使用 `-vbruntime*` 選項進行編譯，而您的程式碼參考的成員不是以核心功能內嵌的 Visual Basic 執行時間程式庫，則編譯器會傳回錯誤，指出該成員無法使用。  
+ 如果您使用 [`-vbruntime*`] 選項進行編譯，而您的程式碼參考的成員不是以核心功能內嵌的 Visual Basic 執行時間程式庫，則編譯器會傳回錯誤，指出該成員無法使用。  
   
 ## <a name="referencing-a-specified-library"></a>參考指定的程式庫  
- 您可以使用自訂執行時間程式庫的參考（而不是預設的 Visual Basic 執行時間程式庫）來編譯 `path` 引數。  
+ 您可以使用 `path` 引數，以自訂執行時間程式庫的參考進行編譯，而不是預設的 Visual Basic 執行時間程式庫。  
   
- 如果 `path` 引數的值是 DLL 的完整路徑，編譯器將會使用該檔案做為執行時間程式庫。 如果 `path` 引數的值不是 DLL 的完整路徑，Visual Basic 編譯器會先在目前的資料夾中搜尋已識別的 DLL。 然後，它會在您使用[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)編譯器選項所指定的路徑中進行搜尋。 如果未使用 `-sdkpath` 編譯器選項，則編譯器會搜尋 .NET Framework 資料夾中已識別的 DLL （`%systemroot%\Microsoft.NET\Framework\versionNumber`）。  
+ 如果 `path` 引數的值是 DLL 的完整路徑，編譯器將會使用該檔案做為執行時間程式庫。 如果 `path` 引數的值不是 DLL 的完整路徑，Visual Basic 編譯器會先在目前的資料夾中搜尋已識別的 DLL。 然後，它會在您使用[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)編譯器選項所指定的路徑中進行搜尋。 如果未使用 `-sdkpath` 編譯器選項，編譯器會在 .NET Framework 資料夾（`%systemroot%\Microsoft.NET\Framework\versionNumber`）中搜尋已識別的 DLL。  
   
 ## <a name="example"></a>範例  
  下列範例顯示如何使用 `-vbruntime` 選項，以自訂程式庫的參考進行編譯。  

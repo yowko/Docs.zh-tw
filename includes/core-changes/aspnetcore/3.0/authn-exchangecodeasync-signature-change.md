@@ -14,7 +14,7 @@ ms.locfileid: "72394070"
 protected virtual System.Threading.Tasks.Task<Microsoft.AspNetCore.Authentication.OAuth.OAuthTokenResponse> ExchangeCodeAsync(string code, string redirectUri) { throw null; }
 ```
 
-收件者:
+收件人：
 
 ```csharp
 protected virtual System.Threading.Tasks.Task<Microsoft.AspNetCore.Authentication.OAuth.OAuthTokenResponse> ExchangeCodeAsync(Microsoft.AspNetCore.Authentication.OAuth.OAuthCodeExchangeContext context) { throw null; }
@@ -26,11 +26,11 @@ protected virtual System.Threading.Tasks.Task<Microsoft.AspNetCore.Authenticatio
 
 #### <a name="old-behavior"></a>舊的行為
 
-@No__t-0 和 @no__t 1 字串已當做個別引數傳遞。
+`code` 和 `redirectUri` 字串已當做個別引數傳遞。
 
 #### <a name="new-behavior"></a>新的行為
 
-`Code` 和 `RedirectUri` 是 `OAuthCodeExchangeContext` 的屬性，可以透過 `OAuthCodeExchangeContext` 的函式來設定。 新的 `OAuthCodeExchangeContext` 型別是傳遞給 `OAuthHandler.ExchangeCodeAsync` 的唯一引數。
+`Code` 和 `RedirectUri` 是可透過 `OAuthCodeExchangeContext` 的函式設定之 `OAuthCodeExchangeContext` 上的屬性。 新的 `OAuthCodeExchangeContext` 類型是傳遞給 `OAuthHandler.ExchangeCodeAsync`的唯一引數。
 
 #### <a name="reason-for-change"></a>變更的原因
 
@@ -38,9 +38,9 @@ protected virtual System.Threading.Tasks.Task<Microsoft.AspNetCore.Authenticatio
 
 #### <a name="recommended-action"></a>建議的動作
 
-使用適當的 `code` 和 @no__t 2 值來建立 `OAuthCodeExchangeContext`。 必須提供 <xref:Microsoft.AspNetCore.Authentication.AuthenticationProperties> 實例。 這個單一 `OAuthCodeExchangeContext` 實例可以傳遞給 `OAuthHandler.ExchangeCodeAsync`，而不是多個引數。
+使用適當的 `code` 和 `redirectUri` 值來建立 `OAuthCodeExchangeContext`。 必須提供 <xref:Microsoft.AspNetCore.Authentication.AuthenticationProperties> 實例。 這個單一 `OAuthCodeExchangeContext` 實例可以傳遞給 `OAuthHandler.ExchangeCodeAsync`，而不是多個引數。
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>類別
 
 ASP.NET Core
 

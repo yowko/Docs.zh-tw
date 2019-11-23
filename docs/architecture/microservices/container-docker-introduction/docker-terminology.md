@@ -31,7 +31,7 @@ ms.locfileid: "73090046"
 
 **登錄**：提供存放庫存取權的服務。 大多數公用映像的預設登錄是 [Docker Hub](https://hub.docker.com/) (以組織形式為 Docker 所擁有）。 登錄通常會包含來自多個小組的存放庫。 公司通常會有私人登錄來儲存及管理其所建立的映像。 Azure Container Registry 是另一個範例。
 
-**多架構映射**：針對多結構，這項功能可簡化適當映射的選取專案，根據 docker 執行所在的平臺，例如當 Dockerfile 向登錄要求**來自 mcr.microsoft.com/dotnet/core/sdk:2.2**的基底映射時，它實際上會取得**2.2-sdk-nanoserver-1709**、 **2.2-sdk-nanoserver-1803**、 **2.2-sdk-nanoserver-1809**或**2.2-sdk-延展**，視執行 docker 的作業系統和版本而定.
+**多架構映射**：針對多結構，這項功能可簡化適當映射的選取專案，根據 docker 執行所在的平臺，例如當 Dockerfile 向登錄要求**來自 mcr.microsoft.com/dotnet/core/sdk:2.2**的基底映射時，它實際上會取得**2.2-sdk-nanoserver-1709**、 **2.2-sdk-nanoserver-1803**、 **2.2-sdk-nanoserver-1809**或**2.2-sdk-延展**，視執行 docker 的作業系統和版本而定。
 
 **Docker Hub**：上傳並使用映像的公開登錄。 Docker Hub 提供 Docker 映像裝載、公開或私人登錄、組建觸發程序和 Webhook，以及與 GitHub 和 Bitbucket 的整合。
 

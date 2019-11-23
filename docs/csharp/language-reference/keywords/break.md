@@ -27,7 +27,7 @@ ms.locfileid: "72179927"
 
 ## <a name="example"></a>範例
 
-這個範例示範如何在 [switch](./switch.md) 陳述式中使用 `break`。
+這個範例示範如何在 `break`switch[ 陳述式中使用 ](./switch.md)。
 
 [!code-csharp[csrefKeywordsJump#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#2)]
 
@@ -46,7 +46,7 @@ Sorry, invalid selection.
 
 ## <a name="example"></a>範例
 
-在此範例中，`break` 語句只會在迴圈的每個反覆運算期間用來中斷最新分支。 迴圈本身不會受到屬於嵌套[switch](./switch.md)語句之 @no__t 0 的實例所影響。
+在此範例中，`break` 語句只會在迴圈的每個反覆運算期間用來中斷最新分支。 迴圈本身不會受到屬於嵌套[switch](./switch.md)語句之 `break` 的實例所影響。
 
 [!code-csharp[csrefKeywordsJump#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#8)]
 

@@ -8,13 +8,13 @@ ms.locfileid: "72237316"
 ---
 ### <a name="jsonelement-api-changes"></a>JsonElement API 變更
 
-從 .NET Core 3.0 Preview 7 開始，部分 @no__t 0 Api 已變更為允許更輕鬆的探索和更高的可用性。
+從 .NET Core 3.0 Preview 7 開始，部分 <xref:System.Text.Json.JsonElement> Api 已變更為允許更輕鬆的探索和更高的可用性。
 
 #### <a name="change-description"></a>變更描述
 
 在 .NET Core 3.0 Preview 7 中，<xref:System.Text.Json.JsonElement> Api 已依照下列方式變更，以允許更容易探索及使用更高的可用性。
 
-1. 已從 <xref:System.Text.Json.JsonElement> 移除所有的 `WriteProperty` 方法多載。 這會影響程式碼，如下所示：
+1. 已從 <xref:System.Text.Json.JsonElement>移除所有 `WriteProperty` 方法多載。 這會影響程式碼，如下所示：
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -41,7 +41,7 @@ ms.locfileid: "72237316"
     }
     ```
 
-1. <xref:System.Text.Json.JsonElement.WriteTo%2A> 現在會在其方法參數 `null` 時擲回 <xref:System.ArgumentNullException>。
+1. <xref:System.Text.Json.JsonElement.WriteTo%2A> 現在會在 `null`其方法參數時擲回 <xref:System.ArgumentNullException>。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -51,7 +51,7 @@ ms.locfileid: "72237316"
 
 如果您的程式碼受到這些變更的影響，您可以執行下列動作：
 
-- @No__t-1 中沒有適用于 @no__t 0 多載的替代 API。 相反地，您可以呼叫其中一個 <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> 多載以及 <xref:System.Text.Json.JsonElement.WriteTo%2A> 方法，以達到相同的結果。 例如:
+- <xref:System.Text.Json.JsonElement>中沒有適用于 `WriteProperty` 多載的替代 API。 相反地，您可以呼叫其中一個 <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> 多載以及 <xref:System.Text.Json.JsonElement.WriteTo%2A> 方法，以達到相同的結果。 例如，
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -72,7 +72,7 @@ ms.locfileid: "72237316"
    }
    ```
 
-- 處理 <xref:System.Text.Json.JsonElement.WriteTo%2A> 方法的呼叫中的 <xref:System.ArgumentNullException>。
+- 處理 <xref:System.Text.Json.JsonElement.WriteTo%2A> 方法呼叫中的 <xref:System.ArgumentNullException>。
 
 #### <a name="affected-apis"></a>受影響的 API
 

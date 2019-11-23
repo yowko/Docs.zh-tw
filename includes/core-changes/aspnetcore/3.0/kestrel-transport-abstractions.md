@@ -8,7 +8,7 @@ ms.locfileid: "72394414"
 ---
 ### <a name="kestrel-transport-abstractions-removed-and-made-public"></a>Kestrel：已移除並設為公用的傳輸抽象概念
 
-在離開「pubternal」 Api 的過程中，Kestrel 傳輸層 Api 會公開為 @no__t 0 程式庫中的公用介面。
+在離開「pubternal」 Api 的過程中，Kestrel 傳輸層 Api 會公開為 `Microsoft.AspNetCore.Connections.Abstractions` 程式庫中的公用介面。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -16,13 +16,13 @@ ms.locfileid: "72394414"
 
 #### <a name="old-behavior"></a>舊的行為
 
-- @No__t-0 程式庫中提供傳輸相關的抽象概念。
-- @No__t-0 屬性可供使用。
+- `Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions` 程式庫中提供傳輸相關的抽象概念。
+- `ListenOptions.NoDelay` 屬性是可用的。
 
 #### <a name="new-behavior"></a>新的行為
 
-- @No__t-0 介面是在 @no__t 1 程式庫中引進，用以公開 @no__t 2 程式庫中最常用的功能。
-- @No__t-0 現在可用於傳輸選項（`LibuvTransportOptions` 和 `SocketTransportOptions`）。
+- `Microsoft.AspNetCore.Connections.Abstractions` 程式庫引進了 `IConnectionListener` 介面，以從 `...Transport.Abstractions` 程式庫公開最常使用的功能。
+- `NoDelay` 現在可以在傳輸選項（`LibuvTransportOptions` 和 `SocketTransportOptions`）中取得。
 - `SchedulingMode` 已無法再使用。
 
 #### <a name="reason-for-change"></a>變更的原因
@@ -31,7 +31,7 @@ ASP.NET Core 3.0 已從 "pubternal" Api 中移除。
 
 #### <a name="recommended-action"></a>建議的動作
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>類別
 
 ASP.NET Core
 

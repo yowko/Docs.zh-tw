@@ -64,7 +64,7 @@ Logstash 收集到記錄檔之後，就需要在某個位置放置它們。 雖�
 
 已製作成包含參數或已透過 Logstash 處理將參數從它們分割的記錄訊息，可以直接查詢，因為 Elasticsearch 會保留此資訊。
 
-如圖7-4 所示，搜尋 `jill@example.com` 流覽過前10頁的查詢。
+如圖7-4 所示，搜尋 `jill@example.com`流覽過前10頁的查詢。
 
 ```
 "query": {
@@ -96,7 +96,7 @@ Logstash 收集到記錄檔之後，就需要在某個位置放置它們。 雖�
 
 另一個選項是[最近宣佈的 ELK 即服務](https://devops.com/logz-io-unveils-azure-open-source-elk-monitoring-solution/)供應專案。
 
-## <a name="references"></a>reference
+## <a name="references"></a>參考
 
 - [在 Azure 上安裝彈性堆疊](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)
 

@@ -41,12 +41,12 @@ ms.locfileid: "71956432"
 
 - [逐步解說：依需求以 ClickOnce 部署 API 下載附屬組件](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
 
-- [如何：設定 Windows Forms 全球化 @ no__t-0 的文化特性和 UI 文化特性
+- [如何：設定 Windows Forms 全球化的文化特性和 UI 文化特性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/b28bx3bh(v=vs.100))
 
-- [如何：建立鏡像 Windows Forms 和控制項 @ no__t-0
+- [如何：建立鏡像 Windows Forms 和控制項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xwbz5ws0(v=vs.100))
 
-- [如何：支援使用 AutoSize 和 TableLayoutPanel 控制項 @ no__t-0 對 Windows Forms 進行當地語系化
+- [如何‎：使用 AutoSize 和 TableLayoutPanel 控制項支援 Windows Forms 的當地語系化](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))
 
-- [逐步解說：當地語系化 Windows Forms @ no__t-0
+- [逐步解說：當地語系化 Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 
-- [逐步解說：建立可調整當地語系化 @ no__t-0 比例的版面配置
+- [逐步解說：建立可調整比例以進行當地語系化的版面配置](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))

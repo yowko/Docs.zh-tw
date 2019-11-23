@@ -15,7 +15,7 @@ ms.locfileid: "72291302"
 
 ### <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>SQL Server 執行為附微服務相關資料庫的容器
 
-eShopOnContainers 中有個容器名為 sql.data，在 [docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) 檔案中定義，此檔案執行 SQL Server for Linux 及微服務需要的所有 SQL Server 資料庫。 (您也可以每個資料庫各一個 SQL Server 容器，但這樣就需要指派更多的記憶體給 Docker。)微服務有一個重點是每項微服務擁有自己的相關資料，在本例中為其相關的 SQL 資料庫。 但是這些資料庫可以位在任何位置。
+eShopOnContainers 中有個容器名為 sql.data，在 [docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) 檔案中定義，此檔案執行 SQL Server for Linux 及微服務需要的所有 SQL Server 資料庫。 （您也可以為每個資料庫提供一個 SQL Server 容器，但這需要更多的記憶體指派給 Docker）。微服務中的重點是，每個微服務都會擁有其相關的資料，因此在此情況下會有相關的 SQL 資料庫。 但是這些資料庫可以位在任何位置。
 
 範例應用程式中的 SQL Server 容器，是在 docker-compose.yml 檔案中使用下列 YAML 程式碼設定，它會在您執行 `docker-compose up` 時執行。 請注意 YAML 程式碼已合併來自泛型 docker-compose.yml 檔案和 docker-compose.override.yml 檔案的組態資訊。 (通常您會將環境設定從 SQL Server 映像相關的基底或靜態資訊中分離出來。)
 

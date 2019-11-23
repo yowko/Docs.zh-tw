@@ -20,7 +20,7 @@ ms.locfileid: "71700049"
 
 **引數**
 
-@No__t-0、`Int64`、`Double` 和 `Decimal`。
+`Int32`、`Int64`、`Double`和 `Decimal`。
 
 **傳回值**
 
@@ -52,7 +52,7 @@ ms.locfileid: "71700049"
 
 **引數**
 
-集合 @ no__t-0T >，其中 T 是下列其中一種類型：
+\<T > 的集合，其中 T 是下列其中一個類型：
 
 |   |   |   |   |
 |---|---|---|---|
@@ -168,7 +168,7 @@ ms.locfileid: "71700049"
 
 **引數**
 
-集合（T），其中 T 是下列其中一個類型： `Int32`，`Int64`，`Double`，`Decimal`。
+集合（T），其中 T 是下列其中一個類型： `Int32`、`Int64`、`Double`、`Decimal`。
 
 **傳回值**
 
@@ -212,6 +212,6 @@ ms.locfileid: "71700049"
   
 ## <a name="see-also"></a>另請參閱
 
-- [彙總函式 (transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)
+- [彙總函式（Transact-sql）](/sql/t-sql/functions/aggregate-functions-transact-sql)
 - [Entity SQL 語言](./language-reference/entity-sql-language.md)
 - [彙總標準函式](./language-reference/aggregate-canonical-functions.md)

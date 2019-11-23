@@ -39,7 +39,7 @@ Docker 映像的容器或執行個體將包含這些元件：
 
 **圖 4-22**。 使用 Docker CLI 之 Docker 容器化應用程式的生命週期工作流程概要
 
-### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>步驟 1:開始在 Visual Studio Code 中編碼，並建立您的初始應用程式/服務基準
+### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>步驟1：開始在 Visual Studio Code 中撰寫程式碼，並建立您的初始應用程式/服務基準
 
 開發 Docker 應用程式的方式，與不使用 Docker 開發應用程式的方式類似。 差別在於，在開發時，您要部署並測試放置於本機環境之 Docker 容器 (例如 Linux VM 或 Windows) 中正在執行的應用程式或服務。
 
@@ -85,7 +85,7 @@ Microsoft 提供 Visual Studio Code，這是 Windows、Linux 和 macOS 上支援
 
 **圖 4-23**： 在 Visual Studio Code 中安裝 Docker 延伸模組
 
-### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>步驟 2:建立與現有映像 (純文字 OS 或開發環境，例如 .NET Core、Node.js 和 Ruby) 相關的 DockerFile
+### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>步驟2：建立與現有映射相關的 DockerFile （一般 OS 或開發環境，例如 .NET Core、node.js 和 Ruby）
 
 針對每個要建置的自訂映像，以及每個要部署的容器，您都需要一個 `DockerFile`。 如果您的應用程式由單一自訂服務所組成，您將需要單一 `DockerFile`。 但如果您的應用程式由多個服務所組成 (如同在微服務架構中)，針對每項服務您將需要一個 `Dockerfile`。
 
@@ -145,7 +145,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 您可以從頭建立您自己的 Docker 基底映像，如 Docker 的此[文章](https://docs.docker.com/engine/userguide/eng-image/baseimages/)中所述。 如果您是 Docker 新手，此方案可能不適合您，但如果您想要設定專屬基底映像的特點，您可以這樣做。
 
-### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>步驟 3：建立自訂 Docker 映像並將服務嵌入其中
+### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>步驟3：建立您的自訂 Docker 映射在其中內嵌您的服務
 
 針對每個包含您應用程式的自訂服務，您需要建立相關映像。 如果您的應用程式組成為單一的服務或 Web 應用程式，則您只需要單一映像。
 
@@ -172,7 +172,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 **圖 4-26**。 使用 docker images 檢視現有的映像
 
-### <a name="step-4-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>步驟 4：建置具有多個服務的組成 Docker 應用程式時，在 docker-compose.yml 中定義您的服務
+### <a name="step-4-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>步驟4：使用多個服務建立組成的 Docker 應用程式時，在 docker-compose.dev.debug.yml 中定義您的服務 yml
 
 透過 `docker-compose.yml` 檔案，您可以定義一組相關服務，部署為具有部署命令 (將於下一節解釋) 的組成應用程式。
 
@@ -205,11 +205,11 @@ services:
 
 Redis 服務會使用從 Docker Hub 登錄提取的[最新公用 redis 映像](https://hub.docker.com/_/redis/)。 [redis](https://redis.io/) 是伺服器端應用程式的熱門快取系統。
 
-### <a name="step-5-build-and-run-your-docker-app"></a>步驟 5：建置並執行您的 Docker 應用程式
+### <a name="step-5-build-and-run-your-docker-app"></a>步驟5：建立並執行您的 Docker 應用程式
 
 如果您的應用程式只有單一容器，您只需要將其部署至您的 Docker 主機 (VM 或實體伺服器) 來執行。 不過，如果您的應用程式由多個服務組成，您也需要「撰寫」該應用程式。 讓我們看看不同的選項。
 
-***Option：執行單一容器或服務***
+***選項 A：執行單一容器或服務***
 
 您可以使用 docker run 命令執行 Docker 映像，如下所示：
 
@@ -219,7 +219,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 針對此特定的部署，我們將會將傳送至連接埠 80 的要求重新導向至內部連接埠 5000。 現在應用程式正在主機層級的外部連接埠 80 上接聽。
 
-***Option B：撰寫並執行多容器應用程式***
+***選項 B：撰寫和執行多容器應用程式***
 
 在大部分的企業案例中，Docker 應用程式由多個服務組成。 在這些案例中，您可以執行 `docker-compose up` 命令 (圖 4-27)，會使用您先前可能已建立的 docker compose.yml 檔案。 執行此命令會部署組成應用程式及其所有相關容器。
 
@@ -233,7 +233,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 **圖 4-28**。 部署了 Docker 容器的 VM
 
-### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>步驟 6：測試您的 Docker 應用程式 (本機方式，在您的本機 CD VM 中)
+### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>步驟6：測試您的 Docker 應用程式（在本機 CD VM 中）
 
 此步驟會隨應用程式執行的作業而異。
 

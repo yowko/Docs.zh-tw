@@ -1,14 +1,13 @@
 ---
 title: 適用于 WCF 開發人員的 Kubernetes-gRPC
 description: 在 Kubernetes 叢集中執行 ASP.NET Core gRPC 服務。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 819c761a7a55485612b7fb0c8b392971751d8724
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 503b582ae9fdcf8c72c87558de3a8ddd898489aa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846634"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967560"
 ---
 # <a name="kubernetes"></a>Kubernetes
 
@@ -26,7 +25,7 @@ Kubernetes 包含下列功能：
 
 ## <a name="kubernetes-terminology"></a>Kubernetes 術語
 
-Kubernetes 會使用*預期狀態*設定：此 API 可用來描述 pod、*部署*和*服務*等*物件，而* *控制平面*會負責在所有節點上執行所需的狀態*在叢集中。* Kubernetes 叢集具有執行*KUBERNETES API*的*主要*節點，可以透過程式設計方式或使用 `kubectl` 命令列工具來進行通訊。 `kubectl` 可以使用命令列引數來建立和管理物件，但最適合用於包含 Kubernetes 物件之宣告資料的 YAML 檔案。
+Kubernetes 會使用*預期狀態*設定：此 API 可用來描述 pod、*部署*和*服務*等*物件，而* *控制平面*會負責在*叢集中的*所有*節點*上執行所需的狀態。 Kubernetes 叢集具有執行*KUBERNETES API*的*主要*節點，可以透過程式設計方式或使用 `kubectl` 命令列工具來進行通訊。 `kubectl` 可以使用命令列引數來建立和管理物件，但最適合用於包含 Kubernetes 物件之宣告資料的 YAML 檔案。
 
 ### <a name="kubernetes-yaml-files"></a>Kubernetes YAML 檔
 
@@ -43,7 +42,7 @@ metadata:
 
 大部分的 Kubernetes YAML 檔也會有一個 `spec` 區段，描述建立物件所需的資源和設定。
 
-### <a name="pods"></a>盒
+### <a name="pods"></a>Pod
 
 Pod 是 Kubernetes 中的基本執行單位。 它們可以執行多個容器，但也會用來執行單一容器。 Pod 也包含容器所需的任何儲存體資源，以及網路 IP 位址。
 
@@ -85,7 +84,7 @@ Server Version: version.Info{Major:"1", Minor:"14", GitVersion:"v1.14.6", GitCom
 
 範例應用程式有一個 `kube` 目錄，其中包含三個 YAML 檔案。 `namespace.yml` 檔案會宣告自訂命名空間，`stocks`。 `stockdata.yml` 檔案會宣告 gRPC 應用程式的部署和服務，而 `stockweb.yml` 檔案則會針對使用 gRPC 服務的 ASP.NET Core 3.0 MVC web 應用程式宣告部署和服務。
 
-若要使用具有 `kubectl` 的 `YAML` 檔案，請使用 `apply -f` 命令。
+若要使用具有 `kubectl`的 `YAML` 檔案，請使用 `apply -f` 命令。
 
 ```console
 kubectl apply -f object.yml
@@ -121,7 +120,7 @@ stocks            Active   2m53s
 
 #### <a name="the-stockdata-deployment"></a>StockData 部署
 
-部署元件會提供部署本身的 `spec`，包括所需的複本數目，以及要由部署建立和管理的 Pod 物件 `template`。 請注意，部署物件是使用 `apps` API 來管理，如 `apiVersion` 中所指定，而不是主要的 Kubernetes API。
+部署元件會提供部署本身的 `spec`，包括所需的複本數目，以及要由部署建立和管理的 Pod 物件 `template`。 請注意，部署物件是使用 `apps` API 來管理，如 `apiVersion`中所指定，而不是主要的 Kubernetes API。
 
 ```yaml
 apiVersion: apps/v1
@@ -182,7 +181,7 @@ spec:
     run: stockdata
 ```
 
-服務規格會使用 `selector` 屬性來比對執行中的 `Pods`，在此情況下，會尋找標籤 `run: stockdata` 的 pod。 相符 pod 上指定的 `port` 是由已命名的服務發行。 在 `stocks` 命名空間中執行的其他 pod 可以使用 `http://stockdata` 作為位址，在此服務上存取 HTTP。 在其他命名空間中執行的 pod 可以使用 `http://stockdata.stocks` 主機名稱。 您可以使用[網路原則](https://kubernetes.io/docs/concepts/services-networking/network-policies/)來控制跨命名空間服務存取。
+服務規格會使用 `selector` 屬性來比對執行中的 `Pods`，在此情況下，會尋找標籤 `run: stockdata`的 pod。 相符 pod 上指定的 `port` 是由已命名的服務發行。 在 `stocks` 命名空間中執行的其他 pod 可以使用 `http://stockdata` 作為位址，在此服務上存取 HTTP。 在其他命名空間中執行的 pod 可以使用 `http://stockdata.stocks` 主機名稱。 您可以使用[網路原則](https://kubernetes.io/docs/concepts/services-networking/network-policies/)來控制跨命名空間服務存取。
 
 #### <a name="deploy-the-stockdata-application"></a>部署 StockData 應用程式
 
@@ -295,7 +294,7 @@ NAME       TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
 stockweb   NodePort   10.106.141.5   <none>        80:32564/TCP   13s
 ```
 
-`get service` 命令的輸出顯示 HTTP 埠已發佈至外部網路上的埠 `32564`;對於 Docker Desktop，這會是 localhost。 您可以藉由流覽至 `http://localhost:32564` 來存取應用程式。
+`get service` 命令的輸出顯示 HTTP 埠已發佈至外部網路上的埠 `32564`;對於 Docker Desktop，這會是 localhost。 您可以藉由流覽至 `http://localhost:32564`來存取應用程式。
 
 ### <a name="testing-the-application"></a>測試應用程式
 
@@ -303,7 +302,7 @@ StockWeb 應用程式會顯示從簡單的要求-回復服務中取出的 NASDAQ
 
 ![StockWeb 螢幕擷取畫面](media/kubernetes/stockweb-screenshot.png)
 
-如果 `stockdata` 服務的複本數目已增加，您可能會預期**伺服器**值從行變更為行，但事實上，所有100記錄一律會從相同的實例傳回。 如果您每隔幾秒鐘就重新整理頁面，伺服器識別碼會維持不變。 為什麼會發生這種情況？ 這裡有兩個因素。
+如果 `stockdata` 服務的複本數目已增加，您可能會預期**伺服器**值從行變更為行，但事實上，所有100記錄一律會從相同的實例傳回。 如果您每隔幾秒鐘就重新整理頁面，伺服器識別碼會維持不變。 為何發生此狀況？ 這裡有兩個因素。
 
 首先，Kubernetes 服務探索系統預設會使用「迴圈配置資源」負載平衡。 第一次查詢 DNS 伺服器時，它會傳回服務的第一個相符的 IP 位址。 下一次是清單中的下一個 IP 位址，依此類推，直到結束為止，然後才會迴圈回到開始位置。
 

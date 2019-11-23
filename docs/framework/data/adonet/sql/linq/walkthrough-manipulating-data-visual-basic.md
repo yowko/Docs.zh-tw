@@ -31,11 +31,11 @@ ms.locfileid: "72003391"
   
      您可以使用物件關聯式設計工具或 SQLMetal 工具來產生這個檔案。 本逐步解說是使用 SQLMetal 工具，以下列命令列所撰寫：  
   
-     **sqlmetal /code:"c:\linqtest2\northwind.vb" /language:vb "C:\linqtest2\northwnd.mdf" /pluralize**  
+     **sqlmetal/code： "c:\linqtest2\northwind.vb"/language： vb "C:\linqtest2\northwnd.mdf"/pluralize**  
   
      如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../tools/sqlmetal-exe-code-generation-tool.md)。  
   
-## <a name="overview"></a>總覽  
+## <a name="overview"></a>概觀  
  此逐步解說包含六個主要工作：  
   
 - 在 Visual Studio 中建立 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 解決方案。  
@@ -51,7 +51,7 @@ ms.locfileid: "72003391"
 - 將這些變更送出至 Northwind 資料庫。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>建立 LINQ to SQL 方案  
- 在第一項工作中，您會建立 Visual Studio 方案，其中包含組建和執行 @no__t 0 專案所需的參考。  
+ 在第一項工作中，您會建立 Visual Studio 方案，其中包含組建和執行 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 專案所需的參考。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案  
   

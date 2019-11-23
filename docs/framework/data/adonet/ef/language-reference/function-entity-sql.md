@@ -41,7 +41,7 @@ FUNCTION function-name
  `data_type`  
  支援的型別名稱。  
   
- COLLECTION （< type_definition @ no__t-0）  
+ 集合（< type_definition`>`）  
  傳回支援的型別、資料列或參考等集合的運算式。  
   
  REF **(** `data_type` **)**  
@@ -61,7 +61,7 @@ FUNCTION function-name
   
  `A()`  
   
- 如需詳細資訊，請參閱[如何：呼叫使用者定義函數 @ no__t-0。  
+ 如需詳細資訊，請參閱 [How to: Call a User-Defined Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))。  
   
  函式也可以在模型本身進行宣告。 在模型中宣告的函式，會與在命令中宣告為內嵌的函式一樣，以相同的方式執行。 如需詳細資訊，請參閱[使用者定義函數](user-defined-functions-entity-sql.md)。  
   

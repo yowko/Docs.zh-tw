@@ -19,7 +19,7 @@ ms.locfileid: "71697499"
 包含會指定 .NET Framework 如何連接至網路的設定。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<system. net >**  
+&nbsp;&nbsp; **\<system.web >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -28,32 +28,32 @@ ms.locfileid: "71697499"
 </system.net>  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和元素  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
- 無。  
+ None。  
   
 ### <a name="child-elements"></a>子元素  
   
-|**目**|**描述**|  
+|**目**|**說明**|  
 |-----------------|---------------------|  
-|[authenticationModules](authenticationmodules-element-network-settings.md)|指定用來驗證網際網路要求的模組。|  
-|[connectionManagement](connectionmanagement-element-network-settings.md)|指定網際網路主機的最大連接數目。|  
+|[Authenticationmodules 專案](authenticationmodules-element-network-settings.md)|指定用來驗證網際網路要求的模組。|  
+|[Connectionmanagement 專案](connectionmanagement-element-network-settings.md)|指定網際網路主機的最大連接數目。|  
 |[defaultProxy](defaultproxy-element-network-settings.md)|設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。|  
 |[mailSettings](mailsettings-element-network-settings.md)|設定簡單郵件傳輸通訊協定（SMTP）郵件傳送選項。|  
-|[requestCaching](requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
-|[設置](settings-element-network-settings.md)|為 @no__t 0 和相關子命名空間中的類別設定基本網路選項。|  
-|[webRequestModules](webrequestmodules-element-network-settings.md)|指定要用來從網際網路主機要求資訊的模組。|  
+|[Requestcaching>](requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
+|[設置](settings-element-network-settings.md)|為 <xref:System.Net> 和相關子命名空間中的類別設定基本的網路選項。|  
+|[Webrequestmodules 專案](webrequestmodules-element-network-settings.md)|指定要用來從網際網路主機要求資訊的模組。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**描述**|  
+|**目**|**說明**|  
 |-----------------|---------------------|  
-|[configuration](../configuration-element.md)|包含所有命名空間的設定。|  
+|[配置](../configuration-element.md)|包含所有命名空間的設定。|  
   
 ## <a name="remarks"></a>備註  
- [@No__t-1system >](system-net-element-network-settings.md)元素包含 @no__t 2 和相關子命名空間中的類別設定。 設定可設定驗證模組、連線管理、郵件設定、proxy 伺服器，以及從網際網路主機接收資訊的網際網路要求模組。  
+ [\<的 system.web >](system-net-element-network-settings.md)元素包含 <xref:System.Net> 和相關子命名空間中的類別設定。 設定可設定驗證模組、連線管理、郵件設定、proxy 伺服器，以及從網際網路主機接收資訊的網際網路要求模組。  
   
 ## <a name="example"></a>範例  
  下列範例顯示 <xref:System.Net> 類別所使用的一般設定。  

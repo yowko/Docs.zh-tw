@@ -1,14 +1,13 @@
 ---
 title: 通訊協定緩衝區-WCF 開發人員的 gRPC
 description: 適用于 gRPC 網路的通訊協定緩衝區線路格式簡介。
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 6b47c7f3576134d8ee44f79e329cc4879661e6c3
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: dbe8cb43475cfeec19051daf68452ef86269372f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846304"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967297"
 ---
 # <a name="protocol-buffers"></a>通訊協定緩衝區
 

@@ -91,15 +91,15 @@ public class Control {
   
  **✓ DO**在欄位名稱中使用 PascalCasing。  
   
- **✓ DO** 使用名詞、名詞片語或形容詞來命名欄位。  
+ **✓ DO**使用名詞、名詞片語或形容詞來命名欄位。  
   
  **X DO NOT**為欄位名稱使用首碼。  
   
  例如，不要使用 "g_" 或 "s_" 來表示靜態欄位。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- 從 @no__t 1Framework 設計指導方針中，@no__t 0Reprinted by 皮耳森教育，Inc. 的許可權：可重複使用的 .NET 程式庫、第2版 @ no__t-0 by Krzysztof Cwalina 和 Brad Abrams 的慣例、慣用語和模式，已于2008年10月22日發行，其為 Microsoft Windows 開發系列的一部分 Addison-Wesley Professional。 *  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 *Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition[ 節錄。](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)*  
   
 ## <a name="see-also"></a>另請參閱
 

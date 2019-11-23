@@ -1,20 +1,20 @@
 ---
-title: -nostdlib （Visual Basic）
+title: -nostdlib
 ms.date: 03/13/2018
 helpviewer_keywords:
 - nostdlib compiler option [Visual Basic]
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: 819505df2e7d5f93302f9ed601de856e36ed7124
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: db6b047f521d8ef44d2bd1b70b654a4233ebb1a7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005410"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347917"
 ---
-# <a name="-nostdlib-visual-basic"></a>-nostdlib （Visual Basic）
-導致編譯器不自動參考標準程式庫。  
+# <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
+Causes the compiler not to automatically reference the standard libraries.  
   
 ## <a name="syntax"></a>語法  
   
@@ -23,22 +23,22 @@ ms.locfileid: "72005410"
 ```  
   
 ## <a name="remarks"></a>備註  
- @No__t-0 選項會移除對 System.object 元件的自動參考，並防止編譯器讀取 Vbc .rsp 檔案。 與 Vbc 檔案位於相同目錄中的 Vbc .rsp 檔案，會參考常用的 .NET Framework 元件，並匯入 `System` 和 @no__t 1 命名空間。  
+ The `-nostdlib` option removes the automatic reference to the System.dll assembly and prevents the compiler from reading the Vbc.rsp file. The Vbc.rsp file, which is located in the same directory as the Vbc.exe file, references the commonly used .NET Framework assemblies and imports the `System` and `Microsoft.VisualBasic` namespaces.  
   
 > [!NOTE]
-> 我們一律會參考 Mscorlib.dll 和 Microsoft。  
+> The Mscorlib.dll and Microsoft.VisualBasic.dll assemblies are always referenced.  
   
 > [!NOTE]
-> @No__t-0 選項無法從 Visual Studio 開發環境中使用;只有在從命令列編譯時，才可以使用它。  
+> The `-nostdlib` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
   
 ## <a name="example"></a>範例  
- 下列程式碼會編譯 `T2.vb`，而不參考標準程式庫。 您必須將 `_MYTYPE` 的條件式編譯常數設定為字串 "Empty"，才能移除 `My` 物件。  
+ The following code compiles `T2.vb` without referencing the standard libraries. You must set the `_MYTYPE` conditional-compilation constant to the string "Empty" to remove the `My` object.  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)

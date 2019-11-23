@@ -141,7 +141,7 @@ End Class
 
 影像、視訊和音訊都是以媒體功能豐富的方式傳達資訊和使用者體驗。
 
-### <a name="images"></a>影像
+### <a name="images"></a>映像
 
 包括圖示、背景，甚至動畫組件的影像，是大部分應用程式的核心組件。 因為您經常需要使用影像，所以 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 公開能以各種不同方式處理的功能。 下圖顯示眾多方式的其中之一。
 
@@ -161,7 +161,7 @@ End Class
 
 如需詳細資訊，請參閱[多媒體概觀](multimedia-overview.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Media>
 - <xref:System.Windows.Media.Animation>

@@ -1,5 +1,5 @@
 ---
-title: <source> 的 <listeners> 項目
+title: <listeners> 的 <source> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
@@ -14,14 +14,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697295"
 ---
-# <a name="listeners-element-for-source"></a>\<source 的 @no__t 0listeners > 元素 >
-在 <xref:System.Diagnostics.TraceSource> 的 <xref:System.Diagnostics.TraceSource.Listeners%2A> 集合中，新增或移除接聽程式。 接聽程式會將追蹤輸出導向至適當的目標，例如記錄檔、視窗或文字檔。  
+# <a name="listeners-element-for-source"></a>\<來源的 \<接聽程式 > 元素 >
+在 <xref:System.Diagnostics.TraceSource>的 <xref:System.Diagnostics.TraceSource.Listeners%2A> 集合中加入或移除接聽程式。 接聽程式會將追蹤輸出導向至適當的目標，例如記錄檔、視窗或文字檔。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. 診斷 >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<listeners >**  
+&nbsp;&nbsp;[ **\<系統診斷 >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<來源 >** ](sources-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**來源 >** ](source-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<** 接聽程式 >  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,15 +33,15 @@ ms.locfileid: "71697295"
 </listeners>  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和元素  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
- 無。  
+ None。  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-source.md)|將接聽項新增至 `Listeners` 集合。|  
 |[\<remove>](remove-element-for-listeners-for-source.md)|從 `Listeners` 集合中移除接聽程式。|  
@@ -62,7 +62,7 @@ ms.locfileid: "71697295"
  此元素可用於電腦設定檔（Machine.config）和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 `<listeners>` 元素，將主控台追蹤接聽項加入至 `mySource` 來源，以及移除預設的追蹤接聽程式。  
+ 下列範例示範如何使用 `<listeners>` 專案，將主控台追蹤接聽程式加入至 `mySource` 來源，以及移除預設的追蹤接聽程式。  
   
 ```xml  
 <configuration>  

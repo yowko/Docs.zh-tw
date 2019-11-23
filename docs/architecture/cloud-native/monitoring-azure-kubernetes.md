@@ -1,6 +1,6 @@
 ---
-title: 在 Azure Kubernetes Services 中進行監視
-description: 在 Azure Kubernetes Services 中進行監視
+title: 在 Azure Kubernetes Service 中監視
+description: 在 Azure Kubernetes Service 中監視
 ms.date: 09/23/2019
 ms.openlocfilehash: 71192601eac2169db188b25da3dc91b71b860903
 ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71184985"
 ---
-# <a name="monitoring-in-azure-kubernetes-services"></a>在 Azure Kubernetes Services 中進行監視
+# <a name="monitoring-in-azure-kubernetes-services"></a>在 Azure Kubernetes Service 中監視
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -28,15 +28,15 @@ KUBE_ENABLE_NODE_LOGGING=true
 
 這會在叢集上安裝 Elasticsearch，並將所有叢集記錄檔傳送至該叢集。
 
-![Kibana 儀表板的範例，其中顯示針對從 Kubernetes](./media/kibana-dashboard.png)
-**圖 7-6**內嵌的記錄進行查詢的結果。 Kibana 儀表板的範例，其中顯示針對內嵌自 Kubernetes 的記錄進行查詢的結果
+![Kibana 儀表板範例，其中顯示內嵌自 Kubernetes 的記錄查詢結果，](./media/kibana-dashboard.png)
+**圖 7-6**。 Kibana 儀表板的範例，其中顯示針對內嵌自 Kubernetes 的記錄進行查詢的結果
 
 ## <a name="azure-container-monitoring"></a>Azure 容器監視
 
 Azure 容器監視不僅支援從 Kubernetes 取用記錄，還能從其他協調流程引擎（例如 DC/OS、Docker Swarm 和 Red Hat OpenShift）使用。
 
-![使用來自不同容器](./media/containers-diagram.png)
-的記錄**圖 7-7**。  使用來自不同容器的記錄
+![使用不同容器的記錄](./media/containers-diagram.png)
+**圖 7-7**。  使用來自不同容器的記錄
 
 記錄和計量資訊不只是從叢集中執行的容器，也是從叢集主機本身收集而來。 它允許從兩者相互關聯記錄資訊，讓它更容易追蹤錯誤。
 
@@ -44,8 +44,8 @@ Azure 容器監視不僅支援從 Kubernetes 取用記錄，還能從其他協�
 
 無論哪個協調器或作業系統正在執行 Azure 監視器 daemon，記錄資訊都會轉送到與使用者熟悉的相同 Azure 監視器工具。 這可確保在混合不同記錄來源（例如混合式 Kubernetes/Azure Functions 環境）的環境中具有平行體驗。
 
-![範例儀表板，顯示來自數個執行中容器的記錄和度量資訊。**圖 7-8**。 ](./media/containers-dashboard.png)
- 範例儀表板，顯示來自數個執行中容器的記錄和度量資訊。
+![範例儀表板，其中顯示來自數個執行中容器的記錄和度量資訊。](./media/containers-dashboard.png)
+**圖 7-8**。 範例儀表板，顯示來自數個執行中容器的記錄和度量資訊。
 
 ## <a name="logfinalize"></a>Log. Finalize （）
 

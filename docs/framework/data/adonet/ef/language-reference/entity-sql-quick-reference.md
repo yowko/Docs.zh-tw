@@ -48,7 +48,7 @@ DATETIME '2006-12-25 01:01'
 |-----------|  
 |12/25/2006 1:01:00 AM|  
   
-### <a name="integer"></a>Integer  
+### <a name="integer"></a>整數  
  整數常值可以屬於型別 Int32 (123)、UInt32 (123U)、Int64 (123L) 和 UInt64 (123UL)。  
   
  範例：  
@@ -72,7 +72,7 @@ DATETIME '2006-12-25 01:01'
 ## <a name="type-constructors"></a>型別建構函式  
   
 ### <a name="row"></a>ROW  
- 資料[列](row-entity-sql.md)結構化匿名的結構型別（記錄）值，如下所示： `ROW(1 AS myNumber, ‘Name’ AS myName).`  
+ [ROW](row-entity-sql.md)會將匿名的結構化型別（記錄）值結構化為： `ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
  範例：  
   
@@ -83,7 +83,7 @@ SELECT VALUE row (product.ProductID AS ProductID, product.Name
   
  輸出：  
   
-|ProductID|Name|  
+|ProductID|名稱|  
 |---------------|----------|  
 |1|Adjustable Race|  
 |879|All-Purpose Bike Stand|  
@@ -103,11 +103,11 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
   
  輸出：  
   
-|ProductID|Name|ProductNumber|…|  
+|ProductID|名稱|ProductNumber|…|  
 |---------------|----------|-------------------|-------|  
 |842|Touring-Panniers, Large|PA-T100|…|  
   
-### <a name="object"></a>Object  
+### <a name="object"></a>物件  
  [命名類型](named-type-constructor-entity-sql.md)的函式結構（名為）使用者定義物件，例如 `person("abc", 12)`。  
   
  範例：  
@@ -201,10 +201,10 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
 |771|  
 |...|  
   
-## <a name="functions"></a>Functions  
+## <a name="functions"></a>函式  
   
-### <a name="canonical"></a>Canonical  
- [標準](canonical-functions.md)函式的命名空間是 Edm，如 `Edm.Length("string")` 中所示。 除非匯入了另一個命名空間其中包含與標準函式同名的函式，否則不需要指定命名空間。 如果兩個命名空間有相同的函式，使用者就應當指定完整名稱。  
+### <a name="canonical"></a>標準  
+ [標準](canonical-functions.md)函式的命名空間是 Edm，如同 `Edm.Length("string")`。 除非匯入了另一個命名空間其中包含與標準函式同名的函式，否則不需要指定命名空間。 如果兩個命名空間有相同的函式，使用者就應當指定完整名稱。  
   
  範例：  
   
@@ -268,7 +268,7 @@ SELECT c.ContactID as ID, c.LastName AS Name FROM
   
  輸出：  
   
-|id|Name|  
+|ID|名稱|  
 |--------|----------|  
 |10|Adina|  
 |11|Agcaoili|  
@@ -286,7 +286,7 @@ SELECT VALUE name FROM AdventureWorksEntities.Product AS P
   
  輸出：  
   
-|name|  
+|名稱|  
 |----------|  
 |LL Mountain Seat Assembly|  
 |ML Mountain Seat Assembly|  
@@ -294,7 +294,7 @@ SELECT VALUE name FROM AdventureWorksEntities.Product AS P
 |...|  
   
 ## <a name="navigation"></a>巡覽  
- 關聯性巡覽運算子可以讓您在關聯性上從一個實體 (開始端) 巡覽到另一個實體 (結束端)。 [導覽](navigate-entity-sql.md)會採用限定為 @no__t 1namespace > 的關聯性類型。 \<relationship 類型名稱 >。 如果要結束的基數為1，則導覽會傳回 Ref @ no__t-0T >。 如果要結束的基數為 n，則會傳回集合 < Ref @ no__t-0T > >。  
+ 關聯性巡覽運算子可以讓您在關聯性上從一個實體 (開始端) 巡覽到另一個實體 (結束端)。 [導覽](navigate-entity-sql.md)會採用限定為 \<命名空間 > 的關聯性類型。\<關聯性類型名稱 >。 如果要結束的基數為1，則導覽會傳回 Ref\<T >。 如果要結束的基數為 n，則會傳回集合 < Ref\<T > >。  
   
  範例：  
   
@@ -316,7 +316,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>SELECT VALUE 和 SELECT  
   
 ### <a name="select-value"></a>SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供 SELECT VALUE 子句來略過隱含資料列建構。 SELECT VALUE 子句中可指定一個項目。 使用這類子句時，不會在 SELECT 子句中的專案周圍建立資料列包裝函式，並且可以產生所需形狀的集合，例如： `SELECT VALUE a`。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供 SELECT VALUE 子句來略過隱含資料列結構。 SELECT VALUE 子句中可指定一個項目。 使用這類子句時，不會在 SELECT 子句中的專案周圍建立資料列包裝函式，並且可以產生所需形狀的集合，例如： `SELECT VALUE a`。  
   
  範例：  
   
@@ -326,7 +326,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
   
  輸出：  
   
-|Name|  
+|名稱|  
 |----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -334,13 +334,13 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
 |...|  
   
 ### <a name="select"></a>SELECT  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 也提供資料列建構函式來建構任意資料列。 SELECT 會擷取投影中的一個或多個項目，並且產生具有欄位的資料記錄，例如：`SELECT a, b, c`。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 也會提供資料列的函數來建立任意資料列。 SELECT 會擷取投影中的一個或多個項目，並且產生具有欄位的資料記錄，例如：`SELECT a, b, c`。  
   
  範例：  
   
  SELECT p.Name, p.ProductID FROM AdventureWorksEntities.Product as p Output:  
   
-|Name|ProductID|  
+|名稱|ProductID|  
 |----------|---------------|  
 |Adjustable Race|1|  
 |All-Purpose Bike Stand|879|  
@@ -360,7 +360,7 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
   
 |值|  
 |-----------|  
-|true|  
+|TRUE|  
   
 ## <a name="see-also"></a>另請參閱
 

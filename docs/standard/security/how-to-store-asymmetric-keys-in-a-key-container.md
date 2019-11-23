@@ -1,5 +1,5 @@
 ---
-title: 作法：將對稱金鑰儲存在金鑰容器中
+title: 如何：將對稱金鑰儲存在金鑰容器中
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,14 +24,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/12/2019
 ms.locfileid: "72291637"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>作法：將對稱金鑰儲存在金鑰容器中
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>如何：將對稱金鑰儲存在金鑰容器中
 非對稱私密金鑰不應逐字或以純文字儲存到本機電腦上。 如果您需要儲存私密金鑰，您應該使用金鑰容器。 如需金鑰容器的詳細資訊，請參閱[了解電腦層級和使用者層級的 RSA 金鑰容器](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100))。  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>建立非對稱金鑰並儲存到金鑰容器中  
   
-1. 建立 @no__t 0 類別的新實例，並將您要呼叫金鑰容器的名稱傳遞給 <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> 欄位。  
+1. 建立 <xref:System.Security.Cryptography.CspParameters> 類別的新實例，並將您要呼叫金鑰容器的名稱傳遞給 <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> 欄位。  
   
-2. 建立衍生自 @no__t 0 類別（通常是**RSACryptoServiceProvider**或**DSACryptoServiceProvider**）的類別的新實例，並將先前建立的**CspParameters**物件傳遞至其函式。  
+2. 建立衍生自 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 類別（通常是**RSACryptoServiceProvider**或**DSACryptoServiceProvider**）的類別的新實例，並將先前建立的**CspParameters**物件傳遞至其函式。  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>從金鑰容器中刪除金鑰  
   
@@ -228,4 +228,4 @@ Key deleted.
 - [產生加密和解密金鑰](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [加密資料](../../../docs/standard/security/encrypting-data.md)
 - [解密資料](../../../docs/standard/security/decrypting-data.md)
-- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)
+- [密碼編譯服務](../../../docs/standard/security/cryptographic-services.md)

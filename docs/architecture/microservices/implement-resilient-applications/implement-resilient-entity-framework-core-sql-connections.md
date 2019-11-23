@@ -11,7 +11,7 @@ ms.locfileid: "73094055"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>實作具復原功能的 Entity Framework Core SQL 連接
 
-針對 Azure SQL DB，Entity Framework (EF) Core 已提供內部資料庫連線恢復功能和重試邏輯。 如果您想要使用[具復原功能的 EF Core 連線](/ef/core/miscellaneous/connection-resiliency)，則必須為每個 <xref:Microsoft.EntityFrameworkCore.DbContext> 連線啟用 Entity Framework 執行策略。
+針對 Azure SQL DB，Entity Framework (EF) Core 已提供內部資料庫連線恢復功能和重試邏輯。 如果您想要使用<xref:Microsoft.EntityFrameworkCore.DbContext>具復原功能的 EF Core 連線[，則必須為每個 ](/ef/core/miscellaneous/connection-resiliency) 連線啟用 Entity Framework 執行策略。
 
 例如，EF Core 連接層級的下列程式碼可在連接失敗時重試具有恢復功能的 SQL 連接。
 

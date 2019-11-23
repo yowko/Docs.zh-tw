@@ -26,7 +26,7 @@ ms.locfileid: "71184838"
 那麼，發生什麼問題？
 
 - 未預期的[網路延遲](https://www.techopedia.com/definition/8553/network-latency)。
-- [暫時性錯誤](https://docs.microsoft.com/azure/architecture/best-practices/transient-faults)（暫時性的網路連接錯誤）。
+- [暫時性錯誤](https://docs.microsoft.com/azure/architecture/best-practices/transient-faults)（暫時性網路連接錯誤）。
 - 由長時間執行的同步作業封鎖。
 - 已損毀且正在重新開機或移動的主機進程。
 - 無法回應短時間的多載微服務。

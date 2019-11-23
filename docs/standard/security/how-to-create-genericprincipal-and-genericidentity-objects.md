@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立 GenericPrincipal 和 GenericIdentity 物件
+title: 如何：建立 GenericPrincipal 和 GenericIdentity 物件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1f768242bffe619051779f87e950138ae9fcec6c
 ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71353181"
 ---
-# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>HOW TO：建立 GenericPrincipal 和 GenericIdentity 物件
+# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>如何：建立 GenericPrincipal 和 GenericIdentity 物件
 
-您可以使用 <xref:System.Security.Principal.GenericIdentity> 類別搭配 <xref:System.Security.Principal.GenericPrincipal> 類別來建立獨立于 Windows 網域的授權配置。
+您可以使用 <xref:System.Security.Principal.GenericIdentity> 類別搭配 <xref:System.Security.Principal.GenericPrincipal> 類別，建立獨立于 Windows 網域的授權配置。
 
 ### <a name="to-create-a-genericprincipal-object"></a>建立 GenericPrincipal 物件
 
@@ -48,7 +48,7 @@ ms.locfileid: "71353181"
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. 使用下列程式碼將主體附加至目前的執行緒。 這在主體必須經過多次驗證的情況下很有用，必須由應用程式中執行的其他程式碼進行驗證，或者必須由 @no__t 0 物件驗證。 您仍然可以在主體物件上執行角色型驗證，而不需將它附加至執行緒。 如需詳細資訊，請參閱[取代 Principal 物件](../../../docs/standard/security/replacing-a-principal-object.md)。
+3. 使用下列程式碼將主體附加至目前的執行緒。 這在主體必須經過多次驗證的情況下很有用，必須由應用程式中執行的其他程式碼進行驗證，或者必須由 <xref:System.Security.Permissions.PrincipalPermission> 物件驗證。 您仍然可以在主體物件上執行角色型驗證，而不需將它附加至執行緒。 如需詳細資訊，請參閱[取代 Principal 物件](../../../docs/standard/security/replacing-a-principal-object.md)。
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal

@@ -1,5 +1,5 @@
 ---
-title: With...End With 陳述式 (Visual Basic)
+title: With...End With 陳述式
 ms.date: 07/20/2015
 f1_keywords:
 - vb.With
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 3da04b85865389a2b4466b78091ff28529346269
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: eb8790d0d8f82232a4b10e4e0e30165745c065c0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582247"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352740"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With 陳述式 (Visual Basic)
 
@@ -64,10 +64,10 @@ End With
 
 您無法從區塊外部分支進入 `With` 陳述式區塊。
 
-除非區塊包含迴圈，否則陳述式只會執行一次。 您可以巢狀方式處理不同種類的控制結構。 如需詳細資訊，請參閱[嵌套控制項結構](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)。
+除非區塊包含迴圈，否則陳述式只會執行一次。 您可以巢狀方式處理不同種類的控制結構。 For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
 
 > [!NOTE]
-> 您可以在物件初始設定式中使用 `With` 關鍵字。 如需詳細資訊和範例，請參閱[物件初始化運算式：名稱和匿名](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)型別和[匿名](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)型別。
+> 您可以在物件初始設定式中使用 `With` 關鍵字。 For more information and examples, see [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) and [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 >
 > 如果您只有在初始化剛具現化之物件的屬性或欄位時使用 `With` 區塊，請考慮改用物件初始設定式。
 

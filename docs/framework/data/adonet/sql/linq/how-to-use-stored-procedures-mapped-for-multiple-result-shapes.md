@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用與多個結果型式對應的預存程序
+title: 如何：使用與多個結果型式對應的預存程序
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,10 +12,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72003278"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>HOW TO：使用與多個結果型式對應的預存程序
+# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>如何：使用與多個結果型式對應的預存程序
 如果預存程序 (Stored Procedure) 可以傳回多個結果圖案，則傳回型別不可以強型別 (Strongly Typed) 為單一投影圖案。 雖然 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以產生所有可能的投射類型，但它無法知道其傳回的順序。  
   
- 請將這個案例與循序產生多個結果圖案的預存程序案例比較。 如需詳細資訊，請參閱[如何：使用對應于連續結果圖形 @ no__t-0 的預存程式。  
+ 請將這個案例與循序產生多個結果圖案的預存程序案例比較。 如需詳細資訊，請參閱[如何：針對連續結果圖形使用對應的預存程式](how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)。  
   
  <xref:System.Data.Linq.Mapping.ResultTypeAttribute> 屬性 (Attribute) 會套用至傳回多個結果型別的預存程序，以指定程序可以傳回的型別集。  
   

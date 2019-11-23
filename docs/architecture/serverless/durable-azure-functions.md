@@ -47,7 +47,7 @@ public static async Task<HttpResponseMessage> Run(
 
 使用 Azure Functions 標記中的 OrchestrationTriggerAttribute 來標注函式，以作為協調器函數。 負責管理組成具狀態工作流程的各種活動。
 
-協調器函式無法利用 OrchestrationTriggerAttribute 以外的系結。 這個屬性只能搭配 DurableOrchestrationCoNtext 的參數類型使用。 因為不支援在函式簽章中的輸入還原序列化，所以不能使用其他輸入。 若要取得協調流程用戶端所提供的輸入，必須使用 Getinput t> \<T \> 方法。
+協調器函式無法利用 OrchestrationTriggerAttribute 以外的系結。 這個屬性只能搭配 DurableOrchestrationCoNtext 的參數類型使用。 因為不支援在函式簽章中的輸入還原序列化，所以不能使用其他輸入。 若要取得協調流程用戶端所提供的輸入，必須使用 Getinput t>\<T\> 方法。
 
 此外，協調流程函式的傳回類型必須是 void、Task 或 JSON 可序列化的值。
 
@@ -81,7 +81,7 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 
 與協調流程函式類似，活動函式的傳回類型必須是 void、Task 或 JSON 可序列化的值。
 
-任何在活動函式中擲回的未處理例外狀況，都會傳送至呼叫協調器函式，並以 `TaskFailedException` 形式呈現。 此時，可能會攔截到錯誤並記錄在協調器中，而且可以重試活動。
+任何在活動函式中擲回的未處理例外狀況，都會傳送至呼叫協調器函式，並以 `TaskFailedException`形式呈現。 此時，可能會攔截到錯誤並記錄在協調器中，而且可以重試活動。
 
 ```csharp
 [FunctionName("CheckAndReserveInventory")]

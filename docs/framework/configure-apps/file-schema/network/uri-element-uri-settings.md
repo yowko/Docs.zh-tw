@@ -9,11 +9,11 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697444"
 ---
-# <a name="uri-element-uri-settings"></a>@no__t 0uri > 元素（Uri 設定）
+# <a name="uri-element-uri-settings"></a>\<uri > 元素（Uri 設定）
 包含指定 .NET Framework 如何處理使用統一資源識別項（Uri）所表示之 web 位址的設定。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<uri >**  
+&nbsp;&nbsp; **\<uri >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -22,28 +22,28 @@ ms.locfileid: "71697444"
 </uri>  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和元素  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
- 無。  
+ None。  
   
 ### <a name="child-elements"></a>子元素  
   
-|**目**|**描述**|  
+|**目**|**說明**|  
 |-----------------|---------------------|  
 |[idn](idn-element-uri-settings.md)|指定是否要對網域名稱套用國際化網域名稱 (IDN) 剖析。|  
 |[g](iriparsing-element-uri-settings.md)|指定是否要將國際資源識別碼（IRI）剖析套用至 <xref:System.Uri>，以及是否應該套用 IRI 剖析規則。|  
-|[schemeSettings](schemesettings-element-uri-settings.md)|指定如何針對特定配置剖析 <xref:System.Uri>。|  
+|[Schemesettings 專案](schemesettings-element-uri-settings.md)|指定如何針對特定配置剖析 <xref:System.Uri>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**描述**|  
+|**目**|**說明**|  
 |-----------------|---------------------|  
-|[configuration](../configuration-element.md)|包含所有命名空間的設定。|  
+|[配置](../configuration-element.md)|包含所有命名空間的設定。|  
   
 ## <a name="remarks"></a>備註  
- @No__t-0 元素包含 <xref:System.Net> 命名空間中的類別所使用之 @no__t 1 類別成員的設定。 設定會設定 IRI 和 IDN 的支援。  
+ `uri` 元素包含 <xref:System.Net> 命名空間中的類別所使用之 <xref:System.Uri> 類別成員的設定。 設定會設定 IRI 和 IDN 的支援。  
   
 ## <a name="example"></a>範例  
   

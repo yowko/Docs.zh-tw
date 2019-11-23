@@ -132,7 +132,7 @@ API 閘道可以提供多個功能。 視產品而定，它可以提供更豐富
 
 **圖 4-14**. 將 Azure API 管理用於 API 閘道
 
-Azure API 管理可解決您的 API 閘道和管理需求，例如記錄、安全性、計量等等。在此情況下，使用 Azure API 管理這類產品時，您可能會有單一 API 閘道不會有風險，因為這類 API 閘道是「精簡」的，這表示您不會C#執行可能演變成的自訂程式碼整合型元件。
+Azure API 管理可解決您的 API 閘道和管理需求，例如記錄、安全性、計量等等。在此情況下，使用 Azure API 管理這類產品時，您可能會有單一 API 閘道不會有風險，因為這類 API 閘道是「精簡」的，這表示您不會C#執行可能演變為整合型元件的自訂程式碼。
 
 API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以篩選內部微服務的 API，以及在此單一階層中將授權套用至已發行的 API。
 
@@ -146,7 +146,7 @@ API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以�
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot) 是輕量型 API 閘道，如需較簡單的方法建議加以採用。 Ocelot 是開放原始碼的 .NET Core 型 API 閘道，專門為需要系統統一進入點的微服務架構而設計。 它輕量、快速、可調整規模且提供路由和驗證等更多其他功能。
 
-為[eShopOnContainers 參考應用程式](https://github.com/dotnet-architecture/eShopOnContainers)選擇 Ocelot 的主要原因是，Ocelot 是一個 .net Core 輕量 API 閘道，您可以將它部署到您要部署微服務/的相同應用程式部署環境中容器，例如 Docker 主機、Kubernetes 等等。而且因為它是以 .NET Core 為基礎，所以它是跨平臺，可讓您在 Linux 或 Windows 上進行部署。
+為[eShopOnContainers 參考應用程式](https://github.com/dotnet-architecture/eShopOnContainers)選擇 Ocelot 的主要原因是，Ocelot 是一個 .net Core 輕量 API 閘道，您可以將其部署到部署微服務/容器的相同應用程式部署環境，例如 Docker 主機、Kubernetes 等。而且因為它是以 .NET Core 為基礎，所以它是跨平臺，可讓您在 Linux 或 Windows 上進行部署。
 
 上面的圖表顯示在容器中執行的自訂 API 閘道，正如同您也可以在容器和微服務型應用程式中執行 Ocelot。
 
@@ -170,7 +170,7 @@ API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以�
 
 ## <a name="additional-resources"></a>其他資源
 
-- **Chris Richardson。模式：適用于前端  \ 的 API 閘道/後端**
+- **Chris Richardson。模式：適用于前端 \ 的 API 閘道/後端**
   <https://microservices.io/patterns/apigateway.html>
 
 - **API 閘道模式** \
@@ -185,7 +185,7 @@ API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以�
 - **Udi Dahan。服務導向組合** \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Clemens Vasters。在 GOTO 2016 （影片）  \ 的訊息和微服務**
+- **Clemens Vasters。在 GOTO 2016 （影片） \ 的訊息和微服務**
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **API 閘道簡介** (ASP.net Core API 閘道教學課程系列)\

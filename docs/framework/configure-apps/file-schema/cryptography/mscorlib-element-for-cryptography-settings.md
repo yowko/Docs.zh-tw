@@ -15,11 +15,11 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699737"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>密碼編譯設定的 @no__t 0mscorlib > 元素
-包含[@no__t 1cryptographySettings 的 > 元素](cryptographysettings-element.md)。  
+# <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > 元素進行密碼編譯設定
+包含[\<的 cryptographySettings > 元素](cryptographysettings-element.md)。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<mscorlib >**  
+&nbsp;&nbsp; **\<mscorlib >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -28,15 +28,15 @@ ms.locfileid: "71699737"
 </mscorlib>  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和元素  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
- 無。  
+ None。  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |`cryptographySettings`|包含密碼編譯設定。|  
   
@@ -47,7 +47,7 @@ ms.locfileid: "71699737"
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 **@no__t 1mscorlib 的 >** 專案來參考密碼編譯類別，並設定執行時間。 接著，您可以將字串 "RSA" 傳遞給 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 方法，然後使用 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 方法傳回 @no__t 2 物件。  
+ 下列範例示範如何使用 **\<的 mscorlib >** 元素來參考密碼編譯類別，以及設定執行時間。 接著，您可以將字串 "RSA" 傳遞給 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 方法，然後使用 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 方法來傳回 `MyCryptoRSAClass` 物件。  
   
 ```xml  
 <configuration>  
@@ -74,5 +74,5 @@ ms.locfileid: "71699737"
 - <xref:System.Security.Cryptography>
 - [組態檔結構描述](../index.md)
 - [密碼編譯設定結構描述](index.md)
-- [The signature is valid](../../../../standard/security/cryptographic-services.md)
+- [密碼編譯服務](../../../../standard/security/cryptographic-services.md)
 - [設定密碼編譯類別](../../configure-cryptography-classes.md)

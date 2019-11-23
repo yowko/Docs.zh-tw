@@ -28,13 +28,13 @@ ms.locfileid: "71834601"
 
 ## <a name="mouse-information"></a>滑鼠資訊
 
-<xref:System.Windows.Forms.MouseEventArgs> 會傳送至有關點按滑鼠按鈕和追蹤滑鼠移動之滑鼠事件的處理常式。 <xref:System.Windows.Forms.MouseEventArgs> 提供滑鼠目前狀態的相關資訊，包括滑鼠指標在用戶端座標中的位置、按了哪個滑鼠按鈕，以及是否已捲動滑鼠滾輪。 有幾個滑鼠事件 (例如只是通知滑鼠指標何時進入或離開控制項界限的事件) 會傳送 <xref:System.EventArgs> 至事件處理常式，而沒有進一步的資訊。
+<xref:System.Windows.Forms.MouseEventArgs> 會傳送至有關點按滑鼠按鈕和追蹤滑鼠移動之滑鼠事件的處理常式。 <xref:System.Windows.Forms.MouseEventArgs> 提供滑鼠目前狀態的相關資訊，包括滑鼠指標在用戶端座標中的位置、按下滑鼠按鍵的位置，以及滑鼠滾輪是否已滾動。 有幾個滑鼠事件 (例如只是通知滑鼠指標何時進入或離開控制項界限的事件) 會傳送 <xref:System.EventArgs> 至事件處理常式，而沒有進一步的資訊。
 
-如果您想要知道滑鼠按鈕的目前狀態或滑鼠指標的位置，而且您想要避免處理滑鼠事件，您也可以使用 <xref:System.Windows.Forms.Control> 類別的 <xref:System.Windows.Forms.Control.MouseButtons%2A> 和 <xref:System.Windows.Forms.Control.MousePosition%2A> 屬性。 <xref:System.Windows.Forms.Control.MouseButtons%2A> 會傳回目前按下哪些滑鼠按鈕的相關資訊。 <xref:System.Windows.Forms.Control.MousePosition%2A> 會傳回滑鼠指標的螢幕座標，等於 <xref:System.Windows.Forms.Cursor.Position%2A> 所傳回的值。
+如果您想要知道滑鼠按鈕的目前狀態或滑鼠指標的位置，而且您想要避免處理滑鼠事件，您也可以使用 <xref:System.Windows.Forms.Control.MouseButtons%2A> 類別的 <xref:System.Windows.Forms.Control.MousePosition%2A> 和 <xref:System.Windows.Forms.Control> 屬性。 <xref:System.Windows.Forms.Control.MouseButtons%2A> 會傳回目前按下滑鼠按鍵的相關資訊。 <xref:System.Windows.Forms.Control.MousePosition%2A> 會傳回滑鼠指標的螢幕座標，等於 <xref:System.Windows.Forms.Cursor.Position%2A> 所傳回的值。
 
 ## <a name="converting-between-screen-and-client-coordinates"></a>在螢幕與用戶端座標之間轉換
 
-因為有些滑鼠位置資訊是在用戶端座標中，而有些是在螢幕座標中，所以您可能需要將某個點從一個座標系統轉換到另一個座標系統。 使用 <xref:System.Windows.Forms.Control> 類別中所提供的 <xref:System.Windows.Forms.Control.PointToClient%2A> 和 <xref:System.Windows.Forms.Control.PointToScreen%2A> 方法，可讓您輕鬆執行此作業。
+因為有些滑鼠位置資訊是在用戶端座標中，而有些是在螢幕座標中，所以您可能需要將某個點從一個座標系統轉換到另一個座標系統。 使用 <xref:System.Windows.Forms.Control.PointToClient%2A> 類別中所提供的 <xref:System.Windows.Forms.Control.PointToScreen%2A> 和 <xref:System.Windows.Forms.Control> 方法，可讓您輕鬆執行此作業。
 
 ## <a name="standard-click-event-behavior"></a>標準點按事件行為
 
@@ -66,7 +66,7 @@ ms.locfileid: "71834601"
 
 8. <xref:System.Windows.Forms.Control.MouseUp> 事件。
 
-如需示範滑鼠點擊事件順序的程式碼範例，請參閱 [How to：處理 Windows Forms 控制項 @ no__t-0 中的使用者輸入事件。
+如需示範滑鼠點按事件順序的程式碼範例，請參閱[如何：處理 Windows Forms 控制項中的使用者輸入事件](how-to-handle-user-input-events-in-windows-forms-controls.md)。
 
 ### <a name="individual-controls"></a>個別控制項
 
@@ -82,29 +82,29 @@ ms.locfileid: "71834601"
 
   - 按一下滑鼠左鍵：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 按一下滑鼠右鍵：未引發 click 事件
+  - 按一下滑鼠右鍵：不會引發點按事件
 
   - 按兩下滑鼠左鍵：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>；<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 以滑鼠右鍵按一下：未引發 click 事件
+  - 按兩下滑鼠右鍵：不會引發點按事件
 
-- <xref:System.Windows.Forms.TextBox>、<xref:System.Windows.Forms.RichTextBox>、<xref:System.Windows.Forms.ListBox>、<xref:System.Windows.Forms.MaskedTextBox> 和 <xref:System.Windows.Forms.CheckedListBox> 控制項
+- <xref:System.Windows.Forms.TextBox>、<xref:System.Windows.Forms.RichTextBox>、<xref:System.Windows.Forms.ListBox>、<xref:System.Windows.Forms.MaskedTextBox>和 <xref:System.Windows.Forms.CheckedListBox> 控制項
 
   > [!NOTE]
   > 當使用者在這些控制項內的任何位置按一下，就會發生下述事件行為。
 
   - 按一下滑鼠左鍵：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
-  - 按一下滑鼠右鍵：未引發 click 事件
+  - 按一下滑鼠右鍵：不會引發點按事件
 
   - 按兩下滑鼠左鍵：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>、<xref:System.Windows.Forms.Control.DoubleClick>、<xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-  - 以滑鼠右鍵按一下：未引發 click 事件
+  - 按兩下滑鼠右鍵：不會引發點按事件
 
 - <xref:System.Windows.Forms.ListView> 控制項
 
   > [!NOTE]
-  > 唯有當使用者按一下 <xref:System.Windows.Forms.ListView> 控制項中的項目，才會發生下述事件行為。 在控制項上任何其他地方按一下，都會不引發任何事件。 如果您想要使用驗證來搭配 <xref:System.Windows.Forms.ListView> 控制項，除了下述事件，您可能也會想要了解 <xref:System.Windows.Forms.ListView.BeforeLabelEdit> 和 <xref:System.Windows.Forms.ListView.AfterLabelEdit> 事件。
+  > 唯有當使用者按一下 <xref:System.Windows.Forms.ListView> 控制項中的項目，才會發生下述事件行為。 在控制項上任何其他地方按一下，都會不引發任何事件。 如果您想要使用驗證來搭配 <xref:System.Windows.Forms.ListView.BeforeLabelEdit> 控制項，除了下述事件，您可能也會想要了解 <xref:System.Windows.Forms.ListView.AfterLabelEdit> 和 <xref:System.Windows.Forms.ListView> 事件。
 
   - 按一下滑鼠左鍵：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 
@@ -117,7 +117,7 @@ ms.locfileid: "71834601"
 - <xref:System.Windows.Forms.TreeView> 控制項
 
   > [!NOTE]
-  > 唯有當使用者按一下 <xref:System.Windows.Forms.TreeView> 控制項中的項目本身，或是項目右邊，才會發生下述事件行為。 在控制項上任何其他地方按一下，都會不引發任何事件。 如果您想要使用驗證來搭配 <xref:System.Windows.Forms.TreeView> 控制項，除了下述事件，您可能也會想要了解 <xref:System.Windows.Forms.TreeView.BeforeCheck>、<xref:System.Windows.Forms.TreeView.BeforeSelect>、<xref:System.Windows.Forms.TreeView.BeforeLabelEdit>、<xref:System.Windows.Forms.TreeView.AfterSelect>、<xref:System.Windows.Forms.TreeView.AfterCheck> 和 <xref:System.Windows.Forms.TreeView.AfterLabelEdit> 事件。
+  > 唯有當使用者按一下 <xref:System.Windows.Forms.TreeView> 控制項中的項目本身，或是項目右邊，才會發生下述事件行為。 在控制項上任何其他地方按一下，都會不引發任何事件。 如果您想要使用驗證來搭配 <xref:System.Windows.Forms.TreeView.BeforeCheck> 控制項，除了下述事件，您可能也會想要了解 <xref:System.Windows.Forms.TreeView.BeforeSelect>、<xref:System.Windows.Forms.TreeView.BeforeLabelEdit>、<xref:System.Windows.Forms.TreeView.AfterSelect>、<xref:System.Windows.Forms.TreeView.AfterCheck>、<xref:System.Windows.Forms.TreeView.AfterLabelEdit> 和 <xref:System.Windows.Forms.TreeView> 事件。
 
   - 按一下滑鼠左鍵：<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>
 

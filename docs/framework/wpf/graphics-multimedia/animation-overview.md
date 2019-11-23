@@ -231,10 +231,10 @@ ms.locfileid: "73039180"
 
 |屬性類型|對應的基本 (From/To/By) 動畫|對應的主要畫面格動畫|對應的路徑動畫|使用範例|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|建立 <xref:System.Windows.Media.SolidColorBrush> 或 <xref:System.Windows.Media.GradientStop><xref:System.Windows.Media.SolidColorBrush.Color%2A> 的動畫。|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|無|建立 <xref:System.Windows.Media.SolidColorBrush> 或 <xref:System.Windows.Media.GradientStop><xref:System.Windows.Media.SolidColorBrush.Color%2A> 的動畫。|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|以動畫顯示 <xref:System.Windows.Controls.DockPanel> 的 <xref:System.Windows.FrameworkElement.Width%2A> 或 <xref:System.Windows.Controls.Button>的 <xref:System.Windows.FrameworkElement.Height%2A>。|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|以動畫顯示 <xref:System.Windows.Media.EllipseGeometry>的 <xref:System.Windows.Media.EllipseGeometry.Center%2A> 位置。|
-|<xref:System.String>|None|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|以動畫顯示 <xref:System.Windows.Controls.TextBlock> 的 <xref:System.Windows.Controls.TextBlock.Text%2A> 或 <xref:System.Windows.Controls.Button>的 <xref:System.Windows.Controls.ContentControl.Content%2A>。|
+|<xref:System.String>|無|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|無|以動畫顯示 <xref:System.Windows.Controls.TextBlock> 的 <xref:System.Windows.Controls.TextBlock.Text%2A> 或 <xref:System.Windows.Controls.Button>的 <xref:System.Windows.Controls.ContentControl.Content%2A>。|
 
 <a name="animationsaretimelines"></a>
 
@@ -380,14 +380,14 @@ ms.locfileid: "73039180"
 |[分鏡腳本概觀](storyboards-overview.md)|描述如何使用有多個時間軸的分鏡腳本建立複雜的動畫。|
 |[計時行為概觀](timing-behaviors-overview.md)|描述動畫中使用的 <xref:System.Windows.Media.Animation.Timeline> 類型和屬性。|
 |[計時事件概觀](timing-events-overview.md)|描述 <xref:System.Windows.Media.Animation.Timeline> 和 <xref:System.Windows.Media.Animation.Clock> 物件上可用的事件，以在時間軸中的點執行程式碼，例如 [開始]、[暫停]、[繼續]、[略過] 或 [停止]。|
-|[「如何」主題](animation-and-timing-how-to-topics.md)|包含在應用程式中使用動畫及時間軸的程式碼範例。|
+|[HOW-TO 主題](animation-and-timing-how-to-topics.md)|包含在應用程式中使用動畫及時間軸的程式碼範例。|
 |[時鐘操作說明主題](clocks-how-to-topics.md)|包含在您的應用程式中使用 <xref:System.Windows.Media.Animation.Clock> 物件的程式碼範例。|
 |[主要畫面格操作說明主題](key-frame-animation-how-to-topics.md)|包含在應用程式中使用主要畫面格動畫的程式碼範例。|
 |[路徑動畫操作說明主題](path-animation-how-to-topics.md)|包含在應用程式中使用路徑動畫的程式碼範例。|
 
 <a name="reference"></a>
 
-## <a name="reference"></a>參考資料
+## <a name="reference"></a>參考
 
 - <xref:System.Windows.Media.Animation.Timeline>
 

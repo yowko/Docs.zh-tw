@@ -52,7 +52,7 @@ ms.locfileid: "71047598"
  [FTP 總管技術範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms233623(v=vs.85))  
  示範如何列出 FTP 伺服器的內容。  
 
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Net>  
   
  <xref:System.Net.NetworkInformation>  

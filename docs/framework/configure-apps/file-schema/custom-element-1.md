@@ -40,11 +40,11 @@ ms.locfileid: "73118841"
 
 ## <a name="child-elements"></a>子元素
 
-None
+無
 
 ## <a name="remarks"></a>備註
 
-**\<sectionName >** 元素是由[ **\<configSections >** ](configsections-element-for-configuration.md)元素的[ **\<區段 >** ](section-element.md)標記所定義的自訂元素。 當您呼叫 <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>時，設定系統會傳回 <xref:System.Collections.IDictionary> 物件。
+**\<SectionName>** 項目是所定義的自訂項目 [ **\<section>** ](section-element.md) 標記 [ **\<configSections>** ](configsections-element-for-configuration.md) 項目。 當您呼叫 <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>時，設定系統會傳回 <xref:System.Collections.IDictionary> 物件。
 
 ## <a name="example"></a>範例
 
@@ -66,6 +66,6 @@ None
 
 此元素可用於應用程式佈建檔案 *、電腦設定檔案（machine.config*），以及不在應用程式目錄層級*的 web.config 檔案*。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 的設定檔架構](index.md)

@@ -60,7 +60,7 @@ public static bool ProcessPayment([ActivityTrigger] DurableActivityContext conte
 
 在某些情況下，工作流程可能會包含需要相當長一段時間才能完成的活動。 假設有一個處理常式，會將媒體檔案備份到 blob 儲存體中。 視媒體檔案的大小和數量而定，此備份程式可能需要數小時才能完成。
 
-在此案例中，`DurableOrchestrationClient` 檢查執行中工作流程狀態的功能會變得很有用。 當使用 `HttpTrigger` 來啟動工作流程時，`CreateCheckStatusResponse` 方法可以用來傳回 `HttpResponseMessage` 的實例。 此回應會在承載中提供具有 URI 的用戶端，可用來檢查執行中進程的狀態。
+在此案例中，`DurableOrchestrationClient`檢查執行中工作流程狀態的功能會變得很有用。 當使用 `HttpTrigger` 來啟動工作流程時，`CreateCheckStatusResponse` 方法可以用來傳回 `HttpResponseMessage`的實例。 此回應會在承載中提供具有 URI 的用戶端，可用來檢查執行中進程的狀態。
 
 ```csharp
 [FunctionName("OrderWorkflow")]
@@ -149,7 +149,7 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-`DurableOrchestrationContext` 的 `CreateTimer` 方法會設定下一個叫用迴圈的排程，以檢查股票價格變更。 `DurableOrchestrationContext` 也具有 `CurrentUtcDateTime` 屬性，可取得 UTC 格式的目前日期時間值。 最好是使用這個屬性，而不是 `DateTime.UtcNow`，因為它很容易模擬以進行測試。
+`DurableOrchestrationContext`的 `CreateTimer` 方法會設定下一個叫用迴圈的排程，以檢查股票價格變更。 `DurableOrchestrationContext` 也具有 `CurrentUtcDateTime` 屬性，可取得 UTC 格式的目前日期時間值。 最好是使用這個屬性，而不是 `DateTime.UtcNow`，因為它很容易模擬以進行測試。
 
 ## <a name="recommended-resources"></a>建議的資源
 

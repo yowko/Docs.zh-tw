@@ -14,7 +14,7 @@ ms.lasthandoff: 10/07/2019
 ms.locfileid: "72005442"
 ---
 # <a name="-noconfig"></a>-noconfig
-指定編譯器不應自動參考常用的 .NET Framework 元件，或匯入 `System` 和 @no__t 1 命名空間。  
+指定編譯器不應自動參考常用的 .NET Framework 元件，或匯入 `System` 和 `Microsoft.VisualBasic` 命名空間。  
   
 ## <a name="syntax"></a>語法  
   
@@ -23,7 +23,7 @@ ms.locfileid: "72005442"
 ```  
   
 ## <a name="remarks"></a>備註  
- @No__t-0 選項會指示編譯器不要以 Vbc 檔案進行編譯，此檔案位於與 Vbc 檔案相同的目錄中。 Vbc 檔案會參考常用的 .NET Framework 元件，並匯入 `System` 和 @no__t 1 命名空間。 除非指定了 `-nostdlib` 選項，否則編譯器會隱含地參考 System.web 元件。 @No__t-0 選項會指示編譯器不要使用 Vbc 或自動參考 system.string 元件來編譯。  
+ `-noconfig` 選項會指示編譯器不要以 Vbc 檔案進行編譯，此檔案位於與 Vbc 檔案相同的目錄中。 Vbc 檔案會參考常用的 .NET Framework 元件，並匯入 `System` 和 `Microsoft.VisualBasic` 命名空間。 除非指定了 `-nostdlib` 選項，否則編譯器會隱含地參考 System.web 元件。 `-nostdlib` 選項會指示編譯器不要使用 Vbc .rsp 進行編譯，或自動參考 system.string 元件。  
   
 > [!NOTE]
 > 我們一律會參考 Mscorlib.dll 和 Microsoft。  
@@ -33,7 +33,7 @@ ms.locfileid: "72005442"
  編譯器會處理過去傳遞給 `vbc` 命令的選項。 因此，命令列上的任何選項都會覆寫 Vbc .rsp 檔案中相同選項的設定。  
   
 > [!NOTE]
-> @No__t-0 選項無法從 Visual Studio 開發環境中使用;只有在從命令列編譯時，才可以使用它。  
+> Visual Studio 開發環境中無法使用 [`-noconfig`] 選項;只有在從命令列編譯時，才可以使用它。  
   
 ## <a name="see-also"></a>另請參閱
 

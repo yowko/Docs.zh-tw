@@ -48,13 +48,13 @@ ms.locfileid: "72275736"
 - **使用 ASP.NET 的複合 UI （特定的研討會）**  
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
-- **Ruben Oostinga：微服務架構中的整合型前端 @ no__t-0  
+- **Ruben Oostinga:。微服務架構中的整合型前端**  
   <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
-- **Mauro Servienti：較佳的 UI 組合的秘密 @ no__t-0  
+- **Mauro Servienti:。更好的 UI 組合的秘密**  
   <https://particular.net/blog/secret-of-better-ui-composition>
 
-- **Viktor Farcic：將前端 Web 元件包含在微服務 @ no__t-0 中  
+- **Viktor Farcic:。將前端 Web 元件包含在微服務中**  
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
 - **管理微服務架構中的前端**  

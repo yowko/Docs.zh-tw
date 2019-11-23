@@ -23,7 +23,7 @@ ms.locfileid: "71833785"
  在其中執行群組作業的任何有效查詢運算式。 `expression` 可以是屬性，或參考 FROM 子句所傳回之屬性的非彙總運算式。 GROUP BY 子句中的每一個運算式都必評估為可以比較是否相等的型別 這些型別通常是純量基本型別，例如數值、字串和日期。 您不可依集合來群組。  
   
 ## <a name="remarks"></a>備註  
- 如果 SELECT 子句中包含彙總函式 \<select list >，GROUP BY 就會計算每個群組的摘要值。 當指定 GROUP BY 時，GROUP BY 清單應該包括選取清單中之任何非彙總運算式中的每一個屬性名稱，否則，GROUP BY 運算式必須完全符合選取清單運算式。  
+ 如果 SELECT 子句中包含彙總函式 \<選取 [清單 >]，[群組依據] 就會計算每個群組的摘要值。 當指定 GROUP BY 時，GROUP BY 清單應該包括選取清單中之任何非彙總運算式中的每一個屬性名稱，否則，GROUP BY 運算式必須完全符合選取清單運算式。  
   
 > [!NOTE]
 > 如果未指定 ORDER BY 子句，由 GROUP BY 子句傳回的群組將不會依照任何特定順序。 若要指定特定資料排序，建議您一律使用 ORDER BY 子句。  
@@ -62,7 +62,7 @@ GROUP BY 1   -- BAD, a constant is not allowed
 ## <a name="example"></a>範例  
  以下 Entity SQL 查詢使用 GROUP BY 運算子指定查詢傳回的物件所在的群組。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. 依照 [How 中的程式進行：執行可傳回 PrimitiveType 結果 @ no__t-0 的查詢。  
+1. 依照[如何：執行傳回 PrimitiveType 結果的查詢](../how-to-execute-a-query-that-returns-primitivetype-results.md)中的程式進行。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：  
   

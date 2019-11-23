@@ -31,7 +31,7 @@ HRESULT DynamicMethodJITCompilationFinished(
 ```  
   
 ## <a name="parameters"></a>參數  
-[輸入] `functionId`  
+[in] `functionId`  
 啟動 JIT 編譯之記憶體中函式的識別碼。   
 
 [in] `hrStatus`   
@@ -56,7 +56,7 @@ HRESULT DynamicMethodJITCompilationFinished(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DynamicMethodJITCompilationStarted 方法](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [ICorProfilerCallback8 介面](icorprofilercallback8-interface.md)

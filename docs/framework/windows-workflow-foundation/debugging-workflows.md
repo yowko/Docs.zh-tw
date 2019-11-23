@@ -11,7 +11,7 @@ ms.locfileid: "72291484"
 ---
 # <a name="debugging-workflows"></a>偵錯工作流程
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]提供一些從開發環境進行偵錯工作流程的選項。 可在設計工具、XAML 與程式碼中將工作流程偵錯。
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 提供了數個選項，可讓您從開發環境中執行工作流程的偵錯工具。 可在設計工具、XAML 與程式碼中將工作流程偵錯。
 
 ## <a name="debugging-in-the-workflow-designer"></a>在工作流程設計工具中偵錯
 
@@ -19,7 +19,7 @@ ms.locfileid: "72291484"
 
 ## <a name="debugging-in-xaml"></a>在 XAML 中偵錯
 
-如果工作流程在設計工具中的中斷點上暫停，即可在 XAML 中偵錯工作流程。 若要在 XAML 中查看執行點，請在工作流程執行暫停時，在工作流程設計工具中選取 [ **XAML 視圖**]。 從解決方案總管的設計工具中重新開啟工作流程，即可將偵錯切換回設計工具。 如需詳細資訊，請參閱[如何：使用工作流程設計工具 @ no__t-0 的 Debug XAML。
+如果工作流程在設計工具中的中斷點上暫停，即可在 XAML 中偵錯工作流程。 若要在 XAML 中查看執行點，請在工作流程執行暫停時，在工作流程設計工具中選取 [ **XAML 視圖**]。 從解決方案總管的設計工具中重新開啟工作流程，即可將偵錯切換回設計工具。 如需詳細資訊，請參閱[如何：使用工作流程設計工具進行 XAML 的調試](/visualstudio/workflow-designer/how-to-debug-xaml-with-the-workflow-designer)程式。
 
 ## <a name="debugging-in-code"></a>在程式碼中偵錯
 
@@ -29,12 +29,12 @@ ms.locfileid: "72291484"
 
 工作流程偵錯也支援使用 Visual Studio 的基礎結構來附加至處理序。 這可讓工作流程的作者在不同的主機環境中 (例如 Internet Information Services (IIS) 7.0) 執行時偵錯工作流程。
 
-## <a name="remote-debugging"></a>Remote Debugging
+## <a name="remote-debugging"></a>遠端偵錯
 
-Windows Workflow Foundation （WF）遠端偵錯程式與其他 Visual Studio 元件的遠端偵錯功能相同。 如需使用遠端偵錯程式的詳細資訊，請參閱 [How to：啟用遠端偵錯 no__t-0。
+Windows Workflow Foundation （WF）遠端偵錯程式與其他 Visual Studio 元件的遠端偵錯功能相同。 如需使用遠端偵錯程式的詳細資訊，請參閱[如何：啟用遠端偵錯](https://go.microsoft.com/fwlink/?LinkId=196257)。
 
 > [!NOTE]
-> 如果工作流應用程式的目標為 x86 架構，並裝載在執行64位作業系統的電腦上，則除非遠端電腦上已安裝 Visual Studio，或工作流程應用程式的目標變更為，否則遠端偵錯程式將無法運作。**任何 CPU**。
+> 如果工作流應用程式的目標為 x86 架構，並裝載在執行64位作業系統的電腦上，則除非遠端電腦上已安裝 Visual Studio，或工作流程應用程式的目標變更為 [**任何 CPU**]，否則遠端偵錯程式將無法運作。
 
 ## <a name="extending-the-workflow-debugging-service"></a>擴充工作流程偵錯服務
 

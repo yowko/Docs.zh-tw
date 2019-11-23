@@ -26,7 +26,7 @@ SQL 交易主要是以未*排序的值集合來*進行。 排序通常是一項�
 
 ### <a name="concat"></a>Concat
 
-<xref:System.Linq.Enumerable.Concat%2A>方法在定義上適用於已排序的多重集，也就是說接收器的順序和引數的順序相同。 <xref:System.Linq.Enumerable.Concat%2A> 的運作原理，是對採用共通順序的多重集執行 `UNION ALL`。
+<xref:System.Linq.Enumerable.Concat%2A>{2}方法在定義上適用於已排序的多重集，也就是說接收器的順序和引數的順序相同。 <xref:System.Linq.Enumerable.Concat%2A> 的運作方式就像是在多重集上 `UNION ALL`，接著是一般的順序。
 
 最後一步就是在產生結果前於 SQL 中排序。 <xref:System.Linq.Enumerable.Concat%2A> 不會保留其引數的順序。 若要確保適當的排序，您必須明確排序 <xref:System.Linq.Enumerable.Concat%2A> 的結果。
 
@@ -38,12 +38,12 @@ SQL 交易主要是以未*排序的值集合來*進行。 排序通常是一項�
 
 ### <a name="take-skip"></a>Take、Skip
 
-<xref:System.Linq.Enumerable.Take%2A> 和 @no__t 1 方法已針對已*排序的集合*妥善定義。 未定義適用於未排序集合或多重集的語意 (Semantics)。
+<xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 方法已針對已排序的*集合*妥善定義。 未定義適用於未排序集合或多重集的語意 (Semantics)。
 
 > [!NOTE]
-> <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 在用於對 SQL Server 2000 進行的查詢中時會有一些限制。 如需詳細資訊，請參閱[疑難排解](troubleshooting.md)中的「略過並採取 SQL Server 2000 中的例外狀況」專案。
+> <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 在對 SQL Server 2000 的查詢中使用時，會有特定限制。 如需詳細資訊，請參閱[疑難排解](troubleshooting.md)中的「略過並採取 SQL Server 2000 中的例外狀況」專案。
 
-由於 SQL 中的排序限制，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會嘗試將這些方法的引數排序移至方法的結果。 例如，請考量下列 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查詢：
+由於 SQL 中的排序限制，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 嘗試將這些方法的引數順序移至方法的結果。 例如，請考量下列 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查詢：
 
 [!code-csharp[DLinqSQOTranslation#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#1)]
 [!code-vb[DLinqSQOTranslation#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#1)]
@@ -76,25 +76,25 @@ ORDER BY [t0].[CustomerID]
 
 |運算子|基本原理|
 |---------------|---------------|
-|<xref:System.Linq.Enumerable.TakeWhile%2A>、 <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL 查詢可用於多重集而非序列上。 `ORDER BY` 必須是最後一個對結果套用的子句。 因此，這兩個方法不需要普遍受到轉譯。|
+|<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL 查詢可用於多重集而非序列上。 `ORDER BY` 必須是套用至結果的最後一個子句。 因此，這兩個方法不需要普遍受到轉譯。|
 |<xref:System.Linq.Enumerable.Reverse%2A>|如果是未排序的集合，則要轉譯這個方法是可行的，但 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 目前不會加以轉譯。|
-|<xref:System.Linq.Enumerable.Last%2A>、 <xref:System.Linq.Enumerable.LastOrDefault%2A>|如果是未排序的集合，則要轉譯這些方法是可行的，但 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 目前不會加以轉譯。|
-|<xref:System.Linq.Enumerable.ElementAt%2A>、 <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|SQL 查詢是用於多重集，而非可建立索引的序列上。|
-|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> (以預設引數多載)|一般而言，如果是任意 Tuple，就不能指定預設值。 在某些情況下，可以透過外部聯結 (Outer Join) 指定 Null 值給 Tuple。|
+|<xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A>|如果是未排序的集合，則要轉譯這些方法是可行的，但 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 目前不會加以轉譯。|
+|<xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|SQL 查詢是用於多重集，而非可建立索引的序列上。|
+|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> （使用預設 arg 的多載）|一般而言，如果是任意 Tuple，就不能指定預設值。 在某些情況下，可以透過外部聯結 (Outer Join) 指定 Null 值給 Tuple。|
 
 ## <a name="expression-translation"></a>運算式轉譯
 
 ### <a name="null-semantics"></a>Null 語意
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不會對 SQL 加上 null 比較語意。 比較運算子會轉譯為語法上的 SQL 對等用法。 基於這個理由，此語義會反映伺服器或連接設定所定義的 SQL 語義。 例如，兩個 null 值在預設 SQL Server 設定之下視為不相等，但是您可以變更設定來變更此語義。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在轉譯查詢時不會考慮伺服器設定。
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不會在 SQL 上強加 null 比較語義。 比較運算子會轉譯為語法上的 SQL 對等用法。 基於這個理由，此語義會反映伺服器或連接設定所定義的 SQL 語義。 例如，兩個 null 值在預設 SQL Server 設定之下視為不相等，但是您可以變更設定來變更此語義。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在轉譯查詢時不會考慮伺服器設定。
 
 與常值 null 的比較會轉譯為適當的 SQL 版本 (`is null` 或 `is not null`)。
 
-定序 (Collation) 中的值 `null` 是由 SQL Server 所定義。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不會變更這個定序。
+定序 (Collation) 中的值 `null` 是由 SQL Server 所定義。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不會變更定序。
 
 ### <a name="aggregates"></a>彙總
 
-標準查詢運算子彙總方法 <xref:System.Linq.Enumerable.Sum%2A> 會將空序列或只包含 null 的序列評估為零。 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，SQL 的語義會保留不變，而 <xref:System.Linq.Enumerable.Sum%2A> 會評估為 `null`，而不是零表示空的序列，或只包含 null 的序列。
+標準查詢運算子彙總方法 <xref:System.Linq.Enumerable.Sum%2A> 會將空序列或只包含 null 的序列評估為零。 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]中，SQL 的語義會保持不變，而 <xref:System.Linq.Enumerable.Sum%2A> 會評估 `null` 為空的序列，或只包含 null 的序列，而不是零。
 
 SQL 對中繼結果的限制會套用至 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的彙總。 32 位元整數量值的 <xref:System.Linq.Enumerable.Sum%2A> 不會用 64 位元的結果來計算。 即使標準查詢運算子實作並未造成對應的記憶體中序列發生溢位，進行 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的 <xref:System.Linq.Enumerable.Sum%2A> 轉譯仍可能會發生溢位。
 
@@ -102,7 +102,7 @@ SQL 對中繼結果的限制會套用至 [!INCLUDE[vbtecdlinq](../../../../../..
 
 ### <a name="entity-arguments"></a>實體引數
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可讓實體類型用於 <xref:System.Linq.Enumerable.GroupBy%2A> 和 @no__t 2 方法中。 在轉譯這些運算子時，使用型別引數會視為指定該型別的所有成員。 例如，下列程式碼為對等用法：
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可讓實體類型用於 <xref:System.Linq.Enumerable.GroupBy%2A> 和 <xref:System.Linq.Enumerable.OrderBy%2A> 方法。 在轉譯這些運算子時，使用型別引數會視為指定該型別的所有成員。 例如，下列程式碼為對等用法：
 
 [!code-csharp[DLinqSQOTranslation#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#2)]
 [!code-vb[DLinqSQOTranslation#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#2)]
@@ -158,7 +158,7 @@ Visual Basic 編譯器 (Compiler) 所用的下列 Helper 函式會轉譯為對�
 
 ### <a name="inheritance-mapping-restrictions"></a>繼承對應限制
 
-如需詳細資訊，請參閱[如何：對應繼承階層架構 @ no__t-0。
+如需詳細資訊，請參閱[如何：對應繼承](how-to-map-inheritance-hierarchies.md)階層架構。
 
 ### <a name="inheritance-in-queries"></a>查詢中的繼承
 
@@ -198,17 +198,17 @@ Visual Basic 編譯器 (Compiler) 所用的下列 Helper 函式會轉譯為對�
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 支援
 
-下列 SQL Server 2000 限制（相較于 Microsoft SQL Server 2005）會影響 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的支援。
+下列 SQL Server 2000 限制（相較于 Microsoft SQL Server 2005）會影響 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援。
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 和 Outer Apply 運算子
 
-SQL Server 2000 無法使用這些運算子。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會嘗試進行一連串重寫作業，以便將它們取代成適當的聯結 (Join)。
+SQL Server 2000 無法使用這些運算子。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 嘗試一系列重寫，以適當的聯結來取代它們。
 
-`Cross Apply` 和 `Outer Apply` 是為了關聯性 (Relationship) 巡覽而產生的。 會進行這類重寫的查詢集還沒整理出來。 基於這個理由，SQL Server 2000 支援的最少查詢集合是不涉及關聯性導覽的集合。
+會針對關聯性導覽產生 `Cross Apply` 和 `Outer Apply`。 會進行這類重寫的查詢集還沒整理出來。 基於這個理由，SQL Server 2000 支援的最少查詢集合是不涉及關聯性導覽的集合。
 
 ### <a name="text--ntext"></a>text / ntext
 
-@No__t-0 @ no__t-1 @ no__t-2 的資料類型不能用於 Microsoft SQL Server 2005 支援的 `varchar(max)` @ no__t-4 @ no__t-5 的某些查詢作業。
+`text` / `ntext` 的資料類型不能用於  / 2005 所支援 `varchar(max)``nvarchar(max)`Microsoft SQL Server 的某些查詢作業。
 
 這項限制沒有解決方案。 具體來說，如果結果中含有對應至 `Distinct()` 或 `text` 資料行的成員，就不能對該結果使用 `ntext`。
 
@@ -218,7 +218,7 @@ SQL Server 2000 （至 SP4）系結器具有一些由巢狀查詢觸發的特性
 
 ### <a name="skip-and-take-operators"></a>Skip 和 Take 運算子
 
-<xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 在用於對 SQL Server 2000 進行的查詢中時會有一些限制。 如需詳細資訊，請參閱[疑難排解](troubleshooting.md)中的「略過並採取 SQL Server 2000 中的例外狀況」專案。
+<xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 在對 SQL Server 2000 的查詢中使用時，會有特定限制。 如需詳細資訊，請參閱[疑難排解](troubleshooting.md)中的「略過並採取 SQL Server 2000 中的例外狀況」專案。
 
 ## <a name="object-materialization"></a>物件具體化
 

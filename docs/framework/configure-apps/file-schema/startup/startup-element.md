@@ -16,12 +16,12 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699421"
 ---
-# <a name="startup-element"></a>@no__t 0startup > 元素
+# <a name="startup-element"></a>\<啟動 > 元素
 
 指定 common language runtime 啟動資訊。
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp; **\<startup>**  
+&nbsp;&nbsp; **\<啟動 >**  
 
 ## <a name="syntax"></a>語法
 
@@ -44,34 +44,34 @@ ms.locfileid: "71699421"
 
 |值|描述|
 |-----------|-----------------|
-|`true`|為選擇的執行時間啟用 .NET Framework 2.0 執行時間啟動原則，這會將舊版的執行時間啟用技術（例如[CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)函式）系結至從設定檔案選擇的執行時間，而不是在 CLR 上將它們設為上限版本2.0。 因此，如果從設定檔中選擇 CLR 4 版（含）以後版本，則會使用所選擇的 CLR 版本載入以舊版 .NET Framework 建立的混合模式元件。 設定此值可防止 CLR 版本1.1 或 CLR 版本2.0 載入相同的進程中，有效地停用同進程並存功能。|
-|`false`|使用 .NET Framework 4 和更新版本的預設啟用原則，這是為了允許舊版的執行時間啟用技術將 CLR 版本1.1 或2.0 載入至進程中。 設定此值可防止混合模式元件載入至 .NET Framework 4 或更新版本，除非它們是以 .NET Framework 4 或更新版本建立的。 此為預設值。|
+|`true`|啟用所選執行時間的 .NET Framework 2.0 執行時間啟動原則，這是將舊版執行時間啟用技術（例如[CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)函式）系結至從設定檔案選擇的執行時間，而不是在 CLR 2.0 版上加以上限。 因此，如果從設定檔中選擇 CLR 4 版（含）以後版本，則會使用所選擇的 CLR 版本載入以舊版 .NET Framework 建立的混合模式元件。 設定此值可防止 CLR 版本1.1 或 CLR 版本2.0 載入相同的進程中，有效地停用同進程並存功能。|
+|`false`|使用 .NET Framework 4 和更新版本的預設啟用原則，這是為了允許舊版的執行時間啟用技術將 CLR 版本1.1 或2.0 載入至進程中。 設定此值可防止混合模式元件載入至 .NET Framework 4 或更新版本，除非它們是以 .NET Framework 4 或更新版本建立的。 這是預設值。|
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|項目|描述|
 |-------------|-----------------|
-|[\<requiredRuntime>](requiredruntime-element.md)|指定應用程式只支援 Common Language Runtime 1.0 版。 使用執行階段版本 1.1 或更新版本建置的應用程式應該改用 **\<Supportedruntime>** 項目。|
+|[\<requiredRuntime>](requiredruntime-element.md)|指定應用程式只支援 Common Language Runtime 1.0 版。 以執行時間1.1 版或更新版本建立的應用程式應該使用 **\<supportedruntime> >** 元素。|
 |[\<supportedRuntime>](supportedruntime-element.md)|指定應用程式支援的通用語言執行平台版本。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|項目|描述|
 |-------------|-----------------|
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|
 
 ## <a name="remarks"></a>備註
 
- **\<Supportedruntime>** 項目應由使用 1.1 版或更新版本的執行階段所建置的所有應用程式。 為了僅支援1.0 版執行時間所建立的應用程式，必須使用 **@no__t 1requiredRuntime 的 >** 元素。
+ 使用1.1 版或更新版本的執行時間所建立的所有應用程式都應該使用 **\<supportedruntime> >** 元素。 為了僅支援1.0 版執行時間所建立的應用程式，必須使用 **\<的 r q >** 元素。
 
- Microsoft Internet Explorer 中裝載之應用程式的啟動程式碼會忽略 **@no__t 1startup >** 元素及其子項目。
+ Microsoft Internet Explorer 中裝載之應用程式的啟動程式碼會忽略 **\<啟動 >** 元素及其子項目。
 
 ## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>UseLegacyV2RuntimeActivationPolicy 屬性
 
- 如果您的應用程式使用舊版啟動路徑（例如[CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)函式），而您想要讓這些路徑啟用 CLR 的第4版（而不是舊版），或如果您的應用程式是以 .net 建立，這個屬性就很有用。Framework 4，但相依于以舊版 .NET Framework 建立的混合模式元件。 在這些情況下，請將屬性設定為 `true`。
+ 如果您的應用程式使用舊版啟用路徑（例如[CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)函式），而您想要讓這些路徑啟動 CLR 的第4版（而不是舊版），或如果您的應用程式是以 .NET Framework 4 建立，但相依于使用舊版 .NET Framework 所建立的混合模式元件，這個屬性就很有用。 在這些情況下，請將屬性設定為 `true`。
 
 > [!NOTE]
-> 將屬性設定為 `true` 會防止 CLR 版本1.1 或 CLR 2.0 版載入相同的進程中，有效地停用同進程並存功能（請參閱[COM Interop 的並存執行](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))）。
+> 將屬性設定為 `true` 可防止 CLR 版本1.1 或 CLR 2.0 版載入至相同的進程，有效地停用同進程並存功能（請參閱[COM Interop 的並存執行](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))）。
 
 ## <a name="example"></a>範例
 
@@ -97,6 +97,6 @@ ms.locfileid: "71699421"
 
 - [啟動設定結構描述](index.md)
 - [組態檔結構描述](../index.md)
-- [如何：設定應用程式以支援 .NET Framework 4 或更新版本](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [如何：將應用程式設定為支援 .NET Framework 4 或更新版本](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 - [COM Interop 的並存執行](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
 - [同處理序並存執行](../../../deployment/in-process-side-by-side-execution.md)

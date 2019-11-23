@@ -19,7 +19,7 @@ Azure AD 是針對雲端所建立。 它真的是一個雲端原生身分識別�
 
 Azure AD 支援公司品牌的登入畫面、多工廠驗證和雲端式應用程式 proxy，這些都是用來為裝載于內部部署的應用程式提供 SSO。 它提供不同種類的安全性報告和警示功能。
 
-## <a name="references"></a>reference
+## <a name="references"></a>參考
 
 - [Microsoft 身分識別平臺](https://docs.microsoft.com/azure/active-directory/develop/)
 

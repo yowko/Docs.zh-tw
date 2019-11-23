@@ -91,7 +91,7 @@ ms.locfileid: "73739519"
 
 ### <a name="additional-resources"></a>其他資源
 
-- **EShopOnContainers GitHub 存放庫。參考應用程式  \ 的原始程式碼**
+- **EShopOnContainers GitHub 存放庫。參考應用程式 \ 的原始程式碼**
   <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>微服務架構解決方案的優點

@@ -45,7 +45,7 @@ IdentityServer 提供在 ASP.NET Core 應用程式中執行的中介軟體，並
 
 IdentityServer4 是開放原始碼且可免費使用。 您可以使用 NuGet 套件，將它新增至您的應用程式。 主要套件是已下載超過4000000次的[IdentityServer4](https://www.nuget.org/packages/IdentityServer4/) 。 基底套件不包含任何使用者介面程式碼，而且只支援記憶體設定。 若要將它與資料庫搭配使用，您也會想要使用 Entity Framework Core 來儲存 IdentityServer 之設定和運算元據的資料提供者，例如[IdentityServer4. EntityFramework](https://www.nuget.org/packages/IdentityServer4.EntityFramework) 。 針對使用者介面，您可以將[檔案從快速入門 UI 存放庫](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI)複製到 ASP.NET Core MVC 應用程式中，以新增使用 IdentityServer 中介軟體進行登入和登出的支援。
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>組態
 
 IdentityServer 支援不同種類的通訊協定和社交驗證提供者，可設定為每個自訂安裝的一部分。 這通常是在 `ConfigureServices` 方法的 ASP.NET Core 應用程式的 `Startup` 類別中完成。 設定牽涉到指定支援的通訊協定，以及將使用的伺服器和端點的路徑。 圖8-2 顯示從 IdentityServer4 快速入門 UI 專案取得的範例設定：
 
@@ -98,7 +98,7 @@ IdentityServer 也會裝載公用示範網站，可用來測試各種通訊協�
 
 許多雲端原生應用程式會利用前端的伺服器端 Api 和豐富型用戶端單頁應用程式（Spa）。 IdentityServer 透過可新增至 Spa 的 NPM 提供[JavaScript 用戶端](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html)（`oidc-client.js`），讓他們能夠使用 IdentityServer 進行登入、登出，以及 web api 的權杖型驗證。
 
-## <a name="references"></a>reference
+## <a name="references"></a>參考
 
 - [IdentityServer 檔](http://docs.identityserver.io/en/latest/)
 - [應用程式類型](https://docs.microsoft.com/azure/active-directory/develop/app-types)

@@ -29,18 +29,18 @@ ms.locfileid: "73130283"
  
 - 將 `T` 作為它的其中一個型別引數的泛型型別執行個體。 這包含 `T` 的泛型集合，即使該集合是空的也是一樣。
 
-- 表示 `T` 的 <xref:System.Type> 或 <xref:System.Reflection.Emit.TypeBuilder> 執行個體。 
+- 表示 <xref:System.Type> 的 <xref:System.Reflection.Emit.TypeBuilder> 或 `T` 執行個體。 
 
    > [!IMPORTANT]
-   > 您必須發行所有代表組件各部分的物件。 定義 `T` 的 <xref:System.Reflection.Emit.ModuleBuilder> 會保留 <xref:System.Reflection.Emit.TypeBuilder> 的參考，而 <xref:System.Reflection.Emit.AssemblyBuilder> 物件會保留 <xref:System.Reflection.Emit.ModuleBuilder> 的參考，因此必須發行這些物件的參考。 即使建構 `T` 時已使用 <xref:System.Reflection.Emit.LocalBuilder> 或 <xref:System.Reflection.Emit.ILGenerator> 還是會防止卸載。
+   > 您必須發行所有代表組件各部分的物件。 定義 <xref:System.Reflection.Emit.ModuleBuilder> 的 `T` 會保留 <xref:System.Reflection.Emit.TypeBuilder> 的參考，而 <xref:System.Reflection.Emit.AssemblyBuilder> 物件會保留 <xref:System.Reflection.Emit.ModuleBuilder> 的參考，因此必須發行這些物件的參考。 即使建構 <xref:System.Reflection.Emit.LocalBuilder> 時已使用 <xref:System.Reflection.Emit.ILGenerator> 或 `T` 還是會防止卸載。
 
-- 依另一個動態定義型別 `T1` 之 `T` 的靜態參考，而此動態定義型別仍然可以透過執行程式碼來取得。 例如，`T1` 可能衍生自 `T`，或 `T` 可能是 `T1` 的方法中的參數類型。
+- 依另一個動態定義型別 `T` 之 `T1` 的靜態參考，而此動態定義型別仍然可以透過執行程式碼來取得。 例如，`T1` 可能衍生自 `T`，或 `T` 可能是 `T1` 的方法中的參數類型。
  
-- 屬於 `T` 之靜態欄位的 **ByRef**。
+- 屬於 **之靜態欄位的**ByRef`T`。
 
 - <xref:System.RuntimeTypeHandle>、<xref:System.RuntimeFieldHandle> 或 <xref:System.RuntimeMethodHandle>，可以參考 `T` 或 `T` 的元件。
 
-- 任何反映物件執行個體，可以間接或直接用來存取代表 `T` 的 <xref:System.Type> 物件。 例如，`T` 的 <xref:System.Type> 物件可以從其項目類型為 `T` 的陣列類型取得，或從具有 `T` 作為型別引數的泛型型別取得。 
+- 任何反映物件執行個體，可以間接或直接用來存取代表 <xref:System.Type> 的 `T` 物件。 例如，<xref:System.Type> 的 `T` 物件可以從其項目類型為 `T` 的陣列類型取得，或從具有 `T` 作為型別引數的泛型型別取得。 
 
 - 任何執行緒呼叫堆疊上的方法 `M`，其中 `M` 是 `T` 的方法或是組件中所定義的模型層級方法。
 
@@ -78,6 +78,6 @@ ms.locfileid: "73130283"
 - **執行緒靜態資料**       
    不支援執行緒靜態變數。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [發出動態方法和組件](emitting-dynamic-methods-and-assemblies.md)

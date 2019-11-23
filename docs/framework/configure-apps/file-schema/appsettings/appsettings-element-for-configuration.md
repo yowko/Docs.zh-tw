@@ -1,5 +1,5 @@
 ---
-title: <configuration> 的 <appSettings> 項目
+title: <appSettings> 的 <configuration> 項目
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
@@ -84,6 +84,6 @@ ms.locfileid: "73119274"
 
 此元素可用於應用程式佈建檔案 *、電腦設定檔案（machine.config*），以及不在應用程式目錄層級*的 web.config 檔案*。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 的設定檔架構](../index.md)

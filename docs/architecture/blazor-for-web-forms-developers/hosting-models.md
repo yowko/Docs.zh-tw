@@ -36,13 +36,13 @@ Blazor WebAssembly 應用程式純粹是以用戶端執行。 這類應用程式
 
 ## <a name="blazor-server-apps"></a>Blazor 伺服器應用程式
 
-回想一下[Blazor 架構](architecture-comparison.md#blazor)討論，Blazor 元件會將輸出轉譯成稱為 `RenderTree` 的中繼抽象概念。 然後，Blazor 架構會比較呈現的內容與先前轉譯的內容。 這些差異會套用至 DOM。 Blazor 元件會與其呈現輸出的套用方式分離。 因此，元件本身不需要與更新 UI 的進程在相同的進程中執行。 事實上，它們甚至不需要在同一部電腦上執行。
+回想一下[Blazor 架構](architecture-comparison.md#blazor)討論，Blazor 元件會將輸出轉譯成稱為 `RenderTree`的中繼抽象概念。 然後，Blazor 架構會比較呈現的內容與先前轉譯的內容。 這些差異會套用至 DOM。 Blazor 元件會與其呈現輸出的套用方式分離。 因此，元件本身不需要與更新 UI 的進程在相同的進程中執行。 事實上，它們甚至不需要在同一部電腦上執行。
 
 在 Blazor 伺服器應用程式中，元件會在伺服器上執行，而不是在瀏覽器中的用戶端上執行。 在瀏覽器中發生的 UI 事件會透過即時連線傳送至伺服器。 事件會分派至正確的元件實例。 元件會轉譯，而匯出的 UI diff 會序列化並傳送至它套用至 DOM 的瀏覽器。
 
 ![Blazor 伺服器](media/hosting-models/blazor-server.png)
 
-如果您已使用 ASP.NET AJAX 和 <xref:System.Web.UI.UpdatePanel> 控制項，則 Blazor 伺服器裝載模型可能會很熟悉。 `UpdatePanel` 控制項會處理套用部分頁面更新，以回應頁面上的觸發程式事件。 當觸發時，`UpdatePanel` 會要求部分更新，然後套用它，而不需要重新整理頁面。 UI 的狀態是使用 `ViewState` 來管理。 Blazor 伺服器應用程式稍有不同，因為應用程式需要與用戶端使用中的連接。 此外，所有 UI 狀態都會保留在伺服器上。 除了這些差異之外，這兩個模型在概念上類似。
+如果您已使用 ASP.NET AJAX 和 <xref:System.Web.UI.UpdatePanel> 控制項，則 Blazor 伺服器裝載模型可能會很熟悉。 `UpdatePanel` 控制項會處理套用部分頁面更新，以回應頁面上的觸發程式事件。 當觸發時，`UpdatePanel` 會要求部分更新，然後套用它，而不需要重新整理頁面。 UI 的狀態是使用 `ViewState`來管理。 Blazor 伺服器應用程式稍有不同，因為應用程式需要與用戶端使用中的連接。 此外，所有 UI 狀態都會保留在伺服器上。 除了這些差異之外，這兩個模型在概念上類似。
 
 ## <a name="how-to-choose-the-right-blazor-hosting-model"></a>如何選擇正確的 Blazor 裝載模型
 

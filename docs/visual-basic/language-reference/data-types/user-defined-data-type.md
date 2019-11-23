@@ -25,14 +25,14 @@ helpviewer_keywords:
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
 ms.openlocfilehash: d95feec3a976a38c92a215f6da58ae6324085fe8
 ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71696872"
 ---
 # <a name="user-defined-data-type"></a>使用者定義資料類型
 
-以您定義的格式來保存資料。 @No__t-0 語句會定義格式。
+以您定義的格式來保存資料。 `Structure` 語句會定義格式。
 
 舊版的 Visual Basic 支援使用者定義型別（UDT）。 目前的版本會將 UDT 擴充至*結構*。 結構是一或多個不同資料類型*成員*的串連。 Visual Basic 會將結構視為單一單位，不過您也可以個別存取其成員。
 
@@ -44,13 +44,13 @@ ms.locfileid: "71696872"
 
 ## <a name="declaration-format"></a>宣告格式
 
-結構宣告會以[結構語句](../../../visual-basic/language-reference/statements/structure-statement.md)開頭，並以 `End Structure` 語句結束。 @No__t 0 語句提供結構的名稱，這也是結構所定義之資料類型的識別碼。 程式碼的其他部分可以使用此識別碼來宣告變數、參數和函式傳回值，使其成為此結構的資料類型。
+結構宣告會以[結構語句](../../../visual-basic/language-reference/statements/structure-statement.md)開頭，並以 `End Structure` 語句結束。 `Structure` 語句會提供結構的名稱，這也是結構所定義之資料類型的識別碼。 程式碼的其他部分可以使用此識別碼來宣告變數、參數和函式傳回值，使其成為此結構的資料類型。
 
-@No__t-0 和 @no__t 1 語句之間的宣告會定義結構的成員。
+`Structure` 和 `End Structure` 語句之間的宣告會定義結構的成員。
 
 ## <a name="member-access-levels"></a>成員存取層級
 
-您必須使用[Dim 語句](../../../visual-basic/language-reference/statements/dim-statement.md)或指定存取層級的語句（例如[Public](../../../visual-basic/language-reference/modifiers/public.md)、 [Friend](../../../visual-basic/language-reference/modifiers/friend.md)或[Private](../../../visual-basic/language-reference/modifiers/private.md)）來宣告每個成員。 如果您使用 `Dim` 語句，則存取層級預設為 [公用]。
+您必須使用[Dim 語句](../../../visual-basic/language-reference/statements/dim-statement.md)或指定存取層級的語句（例如[Public](../../../visual-basic/language-reference/modifiers/public.md)、 [Friend](../../../visual-basic/language-reference/modifiers/friend.md)或[Private](../../../visual-basic/language-reference/modifiers/private.md)）來宣告每個成員。 如果您使用 `Dim` 語句，存取層級預設為 [公用]。
 
 ## <a name="programming-tips"></a>程式設計提示
 
@@ -62,7 +62,7 @@ ms.locfileid: "71696872"
 
 - **輸入字元。** 結構資料類型沒有常數值型別字元或識別項型別字元。
 
-- **架構類型。** .NET Framework 中沒有對應的類型。 所有結構都會繼承自 .NET Framework 類別 <xref:System.ValueType?displayProperty=nameWithType>，但不會有個別結構對應至 <xref:System.ValueType?displayProperty=nameWithType>。
+- **架構類型。** .NET Framework 中沒有對應的類型。 所有結構都會繼承自 .NET Framework 類別 <xref:System.ValueType?displayProperty=nameWithType>，但不會對應到 <xref:System.ValueType?displayProperty=nameWithType>的個別結構。
 
 ## <a name="example"></a>範例
 

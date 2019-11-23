@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) **dotnet-svcutil** 工具是一種 .NET C
 > [!IMPORTANT]
 > 您只應該參考來自信任來源的服務。 新增不信任來源的參考可能會危及安全性。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 <!-- markdownlint-disable MD025 -->
 
@@ -84,7 +84,7 @@ public interface ISayHello
     </ItemGroup>
     ```
 
-    接著使用 [`dotnet restore`](../tools/dotnet-restore.md) 命令還原 _dotnet-svcutil_ 套件，如下所示：
+    接著使用[ 命令還原 `dotnet restore`dotnet-svcutil](../tools/dotnet-restore.md) 套件，如下所示：
 
     ```dotnetcli
     dotnet restore
@@ -179,6 +179,6 @@ dotnet svcutil --help
 
 - 如需已更新的版本資訊，請參閱[版本資訊](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md) (包含已知問題)。
 
-## <a name="information"></a>內容
+## <a name="information"></a>資訊
 
 - [dotnet-svcutil NuGet 套件](https://nuget.org/packages/dotnet-svcutil) \(英文\)

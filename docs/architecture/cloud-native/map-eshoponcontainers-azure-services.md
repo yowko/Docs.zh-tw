@@ -17,7 +17,8 @@ ms.locfileid: "72275813"
 
 應用程式的架構如圖2-5 所示。 左側是用戶端應用程式，分成行動、傳統 Web 和 Web 單頁應用程式（SPA）等。 右側是組成系統的伺服器端元件，每一個都可以裝載于 Docker 容器和 Kubernetes 叢集。 傳統的 web 應用程式由以黃色顯示的 ASP.NET Core MVC 應用程式提供技術支援。 此應用程式和行動和 web SPA 應用程式會透過一或多個 API 閘道與個別微服務通訊。 API 閘道會遵循「前端的後端」（BFF）模式，這表示每個閘道都是設計來支援指定的前端用戶端。 個別的微服務會列在 API 閘道的右邊，同時包含商務邏輯和某種類型的持續性存放區。 不同的服務會利用 SQL Server 資料庫、Redis 快取實例和 MongoDB/CosmosDB 存放區。 最右側的是系統的事件匯流排，用於微服務之間的通訊。
 
-@no__t 0eShopOnContainers 架構 @ no__t-1**圖 2-5**。 EShopOnContainers 架構。
+![eShopOnContainers 架構](./media/eshoponcontainers-architecture.png)
+**圖 2-5**。 EShopOnContainers 架構。
 
 此架構的伺服器端元件可輕鬆地對應至 Azure 服務。
 

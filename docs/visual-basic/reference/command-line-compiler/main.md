@@ -24,14 +24,14 @@ ms.locfileid: "72005501"
   
 ## <a name="arguments"></a>引數  
  `location`  
- 必要項。 包含程式啟動時要呼叫之 @no__t 0 程式的類別或模組名稱。 此格式可能為 **-main： module**或 **-main： namespace. 模組**。  
+ 必要。 類別或模組的名稱，其中包含程式啟動時要呼叫的 `Sub Main` 程式。 此格式可能為 **-main： module**或 **-main： namespace. 模組**。  
   
 ## <a name="remarks"></a>備註  
  當您建立可執行檔或 Windows 可執行程式時，請使用此選項。 如果省略 **-main**選項，編譯器會在所有公用類別和模組中搜尋有效的共用 `Sub Main`。  
   
  如需 `Main` 程式各種形式的討論，請參閱[Visual Basic 中的主要](../../../visual-basic/programming-guide/program-structure/main-procedure.md)程式。  
   
- 當 `location` 是繼承自 <xref:System.Windows.Forms.Form> 的類別時，編譯器會提供預設的 @no__t 2 程式，以在類別沒有任何 `Main` 程式時啟動應用程式。 這可讓您在開發環境中建立的命令列編譯器代碼。  
+ 當 `location` 是繼承自 <xref:System.Windows.Forms.Form>的類別時，編譯器會提供預設的 `Main` 程式，以在類別沒有 `Main` 的過程中啟動應用程式。 這可讓您在開發環境中建立的命令列編譯器代碼。  
   
  [!code-vb[VbVbalrCompiler#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#16)]  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72005501"
 4. 修改 [**啟始物件**] 方塊中的值。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會編譯 `T2.vb` 和 `T3.vb`，指定在 `Test2` 類別中找到 @no__t 2 程式。  
+ 下列程式碼會編譯 `T2.vb` 和 `T3.vb`，指定在 `Test2` 類別中找到 `Sub Main` 程式。  
   
 ```console
 vbc t2.vb t3.vb -main:Test2  

@@ -36,7 +36,7 @@ ms.locfileid: "72771024"
 
 在第6章中，我們深入探討服務網格技術，包括對其架構和可用開放原始碼的整合進行討論。
 
-## <a name="summary"></a>總結
+## <a name="summary"></a>摘要
 
 在本章中，我們討論了雲端原生通訊模式。 我們一開始先檢查前端用戶端如何與後端微服務通訊。 在過程中，我們討論了 API 閘道平臺和即時通訊。 接著，我們探討了微服務如何與其他後端服務通訊。 我們探討了同步 HTTP 通訊，以及跨服務的非同步訊息。 我們涵蓋了 gRPC，這是雲端原生世界中即將推出的技術。 最後，我們引進了一項新的、快速發展的技術，其服務網格可簡化微服務通訊。
 
@@ -52,7 +52,7 @@ ms.locfileid: "72771024"
 
 接下來，移至雲端原生系統中的分散式資料，以及它所呈現的優點和挑戰。
 
-### <a name="references"></a>reference
+### <a name="references"></a>參考
 
 - [.NET 微服務：容器化 .NET 應用程式的架構](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 

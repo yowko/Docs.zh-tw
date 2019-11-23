@@ -13,7 +13,7 @@ ms.locfileid: "72275745"
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名稱
 
 `dotnet restore` - 還原專案的相依性和工具。
 
@@ -53,7 +53,7 @@ dotnet restore [-h|--help]
 
 ### <a name="nugetconfig-differences"></a>nuget.config 差異
 
-*nuget.config* 檔案中設定 (如果有的話) 會影響 `dotnet restore` 命令的行為。 例如，在 *nuget.config* 中設定 `globalPackagesFolder` 會將還原的 NuGet 套件置於所指定資料夾。 這是在 `dotnet restore` 命令上指定 `--packages` 選項的替代方式。 如需詳細資訊，請參閱 [nuget.config 參考](/nuget/schema/nuget-config-file)。
+`dotnet restore`nuget.config*檔案中設定 (如果有的話) 會影響* 命令的行為。 例如，在 `globalPackagesFolder`nuget.config*中設定* 會將還原的 NuGet 套件置於所指定資料夾。 這是在 `--packages` 命令上指定 `dotnet restore` 選項的替代方式。 如需詳細資訊，請參閱 [nuget.config 參考](/nuget/schema/nuget-config-file)。
 
 `dotnet restore` 會忽略三個特定設定：
 
@@ -91,7 +91,7 @@ dotnet restore [-h|--help]
 
 要還原之專案檔的選用路徑。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -129,7 +129,7 @@ dotnet restore [-h|--help]
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-指定套件還原的執行階段。 這用來針對 *.csproj* 檔案內 `<RuntimeIdentifiers>` 標記中未明確列出的執行階段還原套件。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 多次指定這個選項來提供多個 RID。
+指定套件還原的執行階段。 這用來針對 `<RuntimeIdentifiers>`.csproj*檔案內* 標記中未明確列出的執行階段還原套件。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 多次指定這個選項來提供多個 RID。
 
 `-s|--source <SOURCE>`
 
@@ -175,11 +175,11 @@ dotnet restore [-h|--help]
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-指定套件還原的執行階段。 這用來針對 *.csproj* 檔案內 `<RuntimeIdentifiers>` 標記中未明確列出的執行階段還原套件。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 多次指定這個選項來提供多個 RID。
+指定套件還原的執行階段。 這用來針對 `<RuntimeIdentifiers>`.csproj*檔案內* 標記中未明確列出的執行階段還原套件。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 多次指定這個選項來提供多個 RID。
 
 `-s|--source <SOURCE>`
 
-指定要在還原作業期間使用的 NuGet 套件來源。 這會覆寫*nuget.exe*檔案中指定的所有來源，並有效地讀取*nuget.exe*檔案，就好像 @no__t 2 元素不存在一樣。 多次指定這個選項，即可提供多個來源。
+指定要在還原作業期間使用的 NuGet 套件來源。 這會覆寫*nuget.exe*檔案中指定的所有來源，並有效地讀取*nuget.exe*檔案，就好像 `<packageSource>` 元素不存在一樣。 多次指定這個選項，即可提供多個來源。
 
 `--verbosity <LEVEL>`
 

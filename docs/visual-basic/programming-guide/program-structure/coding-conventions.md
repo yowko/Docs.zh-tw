@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
 ms.openlocfilehash: 18c309e22cccfa5d835394996fc6974d95825b65
 ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72003117"
@@ -24,11 +24,11 @@ Microsoft 會依照本主題中的指導方針來開發範例和檔。 如果您
   
 - 您可以協助確保您的程式碼會針對 Visual Basic 示範「最佳做法」。  
   
-## <a name="naming-conventions"></a>命名規範  
+## <a name="naming-conventions"></a>命名慣例  
   
 - 如需命名指導方針的詳細資訊，請參閱[命名指導方針](../../../standard/design-guidelines/naming-guidelines.md)主題。  
   
-- 請勿使用 "My" 或 "my" 作為變數名稱的一部分。 這種作法會與 @no__t 0 的物件產生混淆。  
+- 請勿使用 "My" 或 "my" 作為變數名稱的一部分。 這種作法會與 `My` 物件產生混淆。  
   
 - 您不需要在自動產生的程式碼中變更物件的名稱，使其符合方針。  
   
@@ -67,7 +67,7 @@ Microsoft 會依照本主題中的指導方針來開發範例和檔。 如果您
   
 ## <a name="program-structure"></a>程式結構  
   
-- 當您使用 `Main` 方法時，請使用新的主控台應用程式的預設結構，並使用 `My` 來表示命令列引數。  
+- 當您使用 `Main` 方法時，請使用新的主控台應用程式的預設結構，並使用 `My` 做為命令列引數。  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
@@ -92,7 +92,7 @@ Microsoft 會依照本主題中的指導方針來開發範例和檔。 如果您
   
 ### <a name="unsigned-data-type"></a>不帶正負號的資料類型  
   
-- 請使用 `Integer`，而不是不帶正負號的類型，除非其為必要的位置。  
+- 請使用 `Integer` 而不是不帶正負號的類型，除非其為必要的位置。  
   
 ### <a name="arrays"></a>陣列  
   
@@ -159,10 +159,10 @@ Microsoft 會依照本主題中的指導方針來開發範例和檔。 如果您
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- 在您呼叫 `RaiseEvent` 方法之前，請不要驗證事件是否 `Nothing` （null）。 `RaiseEvent` 會在引發事件之前，先檢查 `Nothing`。  
+- 在您呼叫 `RaiseEvent` 方法之前，請不要驗證事件是否 `Nothing` （null）。 `RaiseEvent` 在引發事件之前檢查 `Nothing`。  
   
 ### <a name="using-shared-members"></a>使用共用成員  
- 使用類別名稱（而不是從執行個體變數）呼叫 `Shared` 的成員。  
+ 使用類別名稱（而不是從執行個體變數）來呼叫 `Shared` 成員。  
   
 ### <a name="use-xml-literals"></a>使用 XML 常值  
  XML 常值可簡化您在使用 XML 時所遇到的最常見工作（例如，載入、查詢和轉換）。 當您使用 XML 進行開發時，請遵循下列指導方針：  
@@ -195,7 +195,7 @@ Microsoft 會依照本主題中的指導方針來開發範例和檔。 如果您
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
-- 將查詢子句對齊 `From` 語句底下：  
+- 在 `From` 語句底下對齊查詢子句：  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
@@ -203,7 +203,7 @@ Microsoft 會依照本主題中的指導方針來開發範例和檔。 如果您
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
-- 您可以使用 `Join` 子句來明確定義聯結作業，而不是使用 `Where` 子句來隱含定義聯結運算：  
+- 使用 `Join` 子句來明確定義聯結作業，而不是使用 `Where` 子句來隱含定義聯結作業：  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   

@@ -27,13 +27,13 @@ Microsoft 企業程式庫例外狀況處理應用程式區塊協助實作常見�
 
 ## <a name="dealing-with-expected-exceptions"></a>處理預期的例外狀況
 
-適當的動作是在每個作業或相關的擴充點中攔截預期的例外狀況，決定是否可以從復原，並在 FaultException @ no__t-0T > 中傳回適當的自訂錯誤。
+適當的動作是在每個作業或相關的擴充點中攔截預期的例外狀況，決定是否可以從復原，並在 FaultException 中傳回適當的自訂錯誤\<T >。
   
 ## <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>使用 IErrorHandler 處理未預期的例外狀況
 
 若要處理非預期的例外狀況，建議的做法是「攔截」 IErrorHandler。 錯誤處理常式只會在 WCF 執行時間層級（「服務模型」層）攔截例外狀況，而不是在通道層。 在通道層級攔截 IErrorHandler 的唯一方式是建立自訂通道，在大部分的情況下不建議使用。
 
-「未預期的例外狀況」通常不是無法復原的例外狀況，也不是處理例外狀況。而是非預期的使用者例外狀況。 無法復原的例外狀況（例如記憶體不足例外狀況）–通常由[服務模型例外狀況處理常式](xref:System.ServiceModel.Dispatcher.ExceptionHandler)自動處理–通常無法正常處理，且唯一處理這類例外狀況的原因可能是其他記錄或傳回標準例外狀況至用戶端。 處理中的例外狀況發生於訊息的處理過程中 - 例如序列化、編碼器或格式器層級 - 通常無法在 IErrorHandler 處理，因為對錯誤處理常式而言，這些例外狀況發生的時間通常太早或太晚，使其無法介入。 同樣地，也無法在 IErrorHandler 處理傳輸例外狀況。
+「未預期的例外狀況」通常不是無法復原的例外狀況，也不是處理例外狀況。而是非預期的使用者例外狀況。 無法復原的例外狀況（例如記憶體不足例外狀況）–通常由[服務模型例外狀況處理常式](xref:System.ServiceModel.Dispatcher.ExceptionHandler)自動處理–通常無法正常處理，而且完全處理這類例外狀況的唯一理由，可能是執行額外的記錄，或將標準例外狀況傳回用戶端。 處理中的例外狀況發生於訊息的處理過程中 - 例如序列化、編碼器或格式器層級 - 通常無法在 IErrorHandler 處理，因為對錯誤處理常式而言，這些例外狀況發生的時間通常太早或太晚，使其無法介入。 同樣地，也無法在 IErrorHandler 處理傳輸例外狀況。
 
 當例外狀況擲回時，您可使用 IErrorHandler 明確控制應用程式的行為。 您可以：  
 
@@ -53,7 +53,7 @@ IErrorHandler.ProvideFault 可控制傳送至用戶端的錯誤訊息。 不論�
 
 您可能使用此方法的情況如下，當您想在例外狀況傳送給用戶端前，建立一個集中位置以將例外狀況轉換為錯誤時 (確保不會處理執行個體，且不會將通道移至錯誤狀態)。
 
-IErrorHandler.HandleError 方法通常用來實作與錯誤相關的行為，例如錯誤記錄，系統通知及關閉應用程式等。可在服務內的多個地方呼叫 IErrorHandler.HandleError，根據錯誤擲回的地方，充當作業的同一個執行緒不一定會呼叫 HandleError 方法，這一點無法保證。
+IErrorHandler. HandleError 方法通常用來執行與錯誤相關的行為，例如錯誤記錄、系統通知、關閉應用程式等。IErrorHandler 可以在服務內的多個位置呼叫 HandleError，而視擲回錯誤的位置而定，HandleError 方法不一定會由作業的相同執行緒呼叫;在這方面不會有任何保證。
 
 ## <a name="dealing-with-exceptions-outside-wcf"></a>處理 WCF 以外的例外狀況
 

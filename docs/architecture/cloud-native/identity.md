@@ -1,5 +1,5 @@
 ---
-title: 身分識別
+title: 相同比較
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |2x2
 ms.date: 09/23/2019
 ms.openlocfilehash: 4cc7c04bf323d2589777df466321f6801f511b6f
@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71183046"
 ---
-# <a name="identity"></a>身分識別
+# <a name="identity"></a>相同比較
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -27,7 +27,7 @@ ms.locfileid: "71183046"
 
 通常，STS 只負責驗證主體。 判斷其對資源的存取層級，會留給應用程式的其他部分。
 
-## <a name="references"></a>reference
+## <a name="references"></a>參考
 
 - [Microsoft 身分識別平臺](https://docs.microsoft.com/azure/active-directory/develop/)
 

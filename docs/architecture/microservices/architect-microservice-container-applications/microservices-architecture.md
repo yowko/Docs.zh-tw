@@ -43,19 +43,19 @@ ms.locfileid: "71834390"
 
 ## <a name="additional-resources"></a>其他資源
 
-- **Mark Russinovich：Microservices:An application revolution powered by the cloud (微服務：採用雲端技術的應用程式變革)**  \
+- **Mark Russinovich。微服務：由雲端支援的應用程式革命** \
   <https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/>
 
-- **Martin Fowler：微服務** \
+- **聖馬丁 Fowler。微服務** \
   <https://www.martinfowler.com/articles/microservices.html>
 
-- **Martin Fowler：微服務先決條件** \
+- **聖馬丁 Fowler。微服務必要條件** \
   <https://martinfowler.com/bliki/MicroservicePrerequisites.html>
 
-- **Jimmy Nilsson：區塊雲端運算** \
+- **Jimmy Nilsson。 \ 的區塊雲端**運算
   <https://www.infoq.com/articles/CCC-Jimmy-Nilsson>
 
-- **Cesar de la Torre：Microsoft 平台和工具的容器化 Docker 應用程式生命週期** (可下載的電子書) \
+- **Cesar de La Torre。Microsoft 平臺和工具的容器化 Docker 應用程式生命週期**（可下載的電子書） \
   <https://aka.ms/dockerlifecycleebook>
 
 >[!div class="step-by-step"]

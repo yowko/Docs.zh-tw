@@ -15,11 +15,11 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699200"
 ---
-# <a name="systemdiagnostics-element"></a>\<system. 診斷 > 元素
+# <a name="systemdiagnostics-element"></a>\<diagnostics > 元素
 指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<system. 診斷 >**  
+&nbsp;&nbsp; **\<系統診斷 >**  
   
 ## <a name="syntax"></a>語法  
   
@@ -28,15 +28,15 @@ ms.locfileid: "71699200"
 </system.diagnostics>  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和元素  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
- 無。  
+ None。  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<assert>](assert-element.md)|指定呼叫 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法時是否要顯示訊息方塊，此外也會指定寫入訊息之目的地檔案的名稱。|  
 |[\<performanceCounters>](performancecounters-element.md)|指定效能計數器共用之全域記憶體的大小。|  
@@ -52,10 +52,10 @@ ms.locfileid: "71699200"
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何將追蹤參數和追蹤接聽程式內嵌在 **\<system >** 元素內。 @No__t-0 追蹤參數設定為 <xref:System.Diagnostics.TraceLevel> 層級。 追蹤接聽程式 `myListener` 會建立名為 `MyListener.log` 的檔案，並將輸出寫入檔案。  
+ 下列範例示範如何將追蹤參數和追蹤接聽項內嵌在 **\<diagnostics >** 元素中。 `General` 追蹤參數設定為 <xref:System.Diagnostics.TraceLevel> 層級。 追蹤接聽程式 `myListener` 會建立名為 `MyListener.log` 的檔案，並將輸出寫入檔案。  
   
 > [!NOTE]
-> 在 .NET Framework 2.0 版中，您可以使用文字來指定參數的值。 例如，您可以為 <xref:System.Diagnostics.BooleanSwitch> 指定 `true`，或使用代表列舉值的文字，例如 <xref:System.Diagnostics.TraceSwitch> 的 `Error`。 `<add name="myTraceSwitch" value="Error" />` 這一行相當於 `<add name="myTraceSwitch" value="1" />`。  
+> 在 .NET Framework 2.0 版中，您可以使用文字來指定參數的值。 例如，您可以指定 <xref:System.Diagnostics.BooleanSwitch> 的 `true`，或使用代表列舉值的文字，例如 <xref:System.Diagnostics.TraceSwitch>的 `Error`。 `<add name="myTraceSwitch" value="Error" />` 這一行相當於 `<add name="myTraceSwitch" value="1" />`。  
   
 ```xml  
 <configuration>  

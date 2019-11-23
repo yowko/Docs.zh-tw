@@ -36,7 +36,7 @@ ms.locfileid: "73130239"
   
 另一項適用於中繼資料和 MSIL 的有用資源，是通用語言基礎結構 (CLI) 文件，尤其是＜第二部分：中繼資料定義和語意＞以及＜第三部分：CIL 指令集＞。 您可以在 [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) 以及 [Ecma 網站](https://go.microsoft.com/fwlink/?LinkId=116487)上，線上取得這份文件。  
   
-## <a name="in-this-section"></a>本章節內容
+## <a name="in-this-section"></a>本節內容
   
 [反映發出中的安全性問題](security-issues-in-reflection-emit.md)  
 說明有關使用反映發出來建立動態組件的安全性問題。  
@@ -53,7 +53,7 @@ ms.locfileid: "73130239"
 [動態類型產生的可回收組件](collectible-assemblies.md)   
 引進可回收組件，即動態組件，不需要卸載其建立所在的應用程式定義域即可予以卸載。
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
 
 <xref:System.Reflection.Emit.OpCodes>  
 將可用來建置方法主體的 MSIL 指令碼編製目錄。  

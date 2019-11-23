@@ -22,7 +22,7 @@ COM Interop 同時提供使用來自 Managed 程式碼之 COM 物件的支援和
   
  下列各節會連結到各個主題，以描述當您可以 (或必須) 提供具有其他類型資訊的封送處理器時，自訂 Interop 包裝函式的程序。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 [如何：手動建立包裝函式](how-to-create-wrappers-manually.md)   
 描述如何在受控原始程式碼中手動建立 COM 包裝函式。 
  
@@ -48,5 +48,5 @@ COM Interop 同時提供使用來自 Managed 程式碼之 COM 物件的支援和
  [型別程式庫至組件轉換的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))  
  描述類型程式庫至組件匯入轉換的程序。  
   
- [使用泛型型別互通](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))  
+ [使用泛型型別交互操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))  
  描述使用泛型類型來取得 COM 互通性時所支援的動作。

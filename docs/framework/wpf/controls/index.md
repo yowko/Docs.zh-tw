@@ -1,5 +1,5 @@
 ---
-title: 控制項
+title: Controls
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/03/2019
 ms.locfileid: "73459441"
 ---
-# <a name="controls"></a>控制項
+# <a name="controls"></a>Controls
 <a name="introduction"></a>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 隨附于幾乎每個 Windows 應用程式中使用的許多常見 UI 元件，例如 <xref:System.Windows.Controls.Button>、<xref:System.Windows.Controls.Label>、<xref:System.Windows.Controls.TextBox>、<xref:System.Windows.Controls.Menu>和 <xref:System.Windows.Controls.ListBox>。 在過去，這些物件是稱為控制項。 雖然 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK 會繼續使用「控制」一詞，以鬆散表示應用程式中代表可見物件的任何類別，但請務必注意，類別不需要繼承自 <xref:System.Windows.Controls.Control> 類別，就能看到可見的狀態。 繼承自 <xref:System.Windows.Controls.Control> 類別的類別包含 <xref:System.Windows.Controls.ControlTemplate>，可讓控制項的取用者徹底變更控制項的外觀，而不需要建立新的子類別。  本主題討論如何在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中經常使用控制項（這兩者都是從 <xref:System.Windows.Controls.Control> 類別繼承而不是）。  
 
@@ -97,7 +97,7 @@ ms.locfileid: "73459441"
 
  如需這些基類的詳細資訊，請參閱[WPF 內容模型](wpf-content-model.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [設定樣式和範本](styling-and-templating.md)
 - [依分類列出控制項](controls-by-category.md)

@@ -17,7 +17,7 @@ ms.locfileid: "72291160"
 
 ASP.NET Core 應用程式是以一系列中介軟體為基礎所建立。 中介軟體是處理常式，會排列成管線來處理要求和回應。 在 Web Forms 應用程式中，HTTP 處理常式和模組會解決類似的問題。 在 ASP.NET Core 中，模組、處理常式、 *Global.asax.cs*和應用程式生命週期都會取代為中介軟體。 在本章中，您將瞭解 Blazor 應用程式內容中的中介軟體。
 
-## <a name="overview"></a>總覽
+## <a name="overview"></a>概觀
 
 ASP.NET Core 要求管線由要求委派序列組成，並會一個接著一個呼叫。 下圖說明此概念。 執行緒遵循黑色箭號執行。
 
@@ -35,7 +35,7 @@ ASP.NET 4.x 包含許多模組。 以類似的方式，ASP.NET Core 也有許多
 
 下表列出 ASP.NET Core 中的取代中介軟體和元件。
 
-|Module                 |ASP.NET 4.x 模組           |ASP.NET Core 選項|
+|模組                 |ASP.NET 4.x 模組           |ASP.NET Core 選項|
 |-----------------------|-----------------------------|-------------------|
 |HTTP 錯誤            |`CustomErrorModule`          |[狀態碼頁面中介軟體](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |預設檔       |`DefaultDocumentModule`      |[預設檔案中介軟體](/aspnet/core/fundamentals/static-files#serve-a-default-document)|
@@ -88,7 +88,7 @@ public class Startup
 }
 ```
 
-中介軟體也可以藉由執行 @no__t 0 介面或遵循中介軟體慣例，定義為類別。 如需詳細資訊，請參閱[撰寫自訂 ASP.NET Core 中介軟體](/aspnet/core/fundamentals/middleware/write)。
+中介軟體也可以藉由執行 `IMiddleware` 介面或遵循中介軟體慣例，定義為類別。 如需詳細資訊，請參閱[撰寫自訂 ASP.NET Core 中介軟體](/aspnet/core/fundamentals/middleware/write)。
 
 >[!div class="step-by-step"]
 >[上一頁](data.md)

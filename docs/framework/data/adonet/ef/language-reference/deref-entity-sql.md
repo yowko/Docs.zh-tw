@@ -26,12 +26,12 @@ SELECT DEREF ( o.expression ) FROM Table AS o;
  所參考之實體的值。  
   
 ## <a name="remarks"></a>備註  
- DEREF 運算子會對參考值取值並且產生該取值的結果。 例如，如果 `r` 是類型 ref @ no__t-1T > 的參考，`Deref(r)` 是會產生 `r` 所參考之實體的類型為 `T` 的運算式。 如果此參數值為 null，或為懸空 (也就是參考的目標不存在)，DEREF 運算子的結果就會是 null。  
+ DEREF 運算子會對參考值取值並且產生該取值的結果。 例如，如果 `r` 是類型 ref\<T > 的參考，則 `Deref(r)` 是 `T` 類型的運算式，會產生 `r`所參考的實體。 如果此參數值為 null，或為懸空 (也就是參考的目標不存在)，DEREF 運算子的結果就會是 null。  
   
 ## <a name="example"></a>範例  
  以下 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢使用 DEREF 運算子對參考值取值並且產生該取值的結果。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. 依照 [How 中的程式進行：執行可傳回 PrimitiveType 結果 @ no__t-0 的查詢。  
+1. 依照[如何：執行傳回 PrimitiveType 結果的查詢](../how-to-execute-a-query-that-returns-primitivetype-results.md)中的程式進行。  
   
 2. 將下列查詢當成引數傳遞至 ExecutePrimitiveTypeQuery 方法：  
   

@@ -26,7 +26,7 @@ ASP.NET Web Forms 架構是以頁面為中心的架構為基礎。 應用程式�
 - HTML 標籤
 - C# 或 Visual Basic 程式碼
 - 包含邏輯和事件處理功能的程式碼後置類別
-- 控制項
+- Controls
 
 控制項是可重複使用的 web UI 單位，可以透過程式設計方式在頁面上放置和互動。 頁面是由以 *.aspx*結尾的檔案所組成，其中包含標記、控制項和一些程式碼。 程式碼後置類別位於具有相同基底名稱和*aspx.cs*或 *.aspx*副檔名的檔案中，視所使用的程式語言而定。 有趣的是，web 伺服器會解讀 *.aspx*檔案的內容，並在每次變更時進行編譯。 即使 web 伺服器已經在執行中，也會進行重新編譯。
 
@@ -34,7 +34,7 @@ ASP.NET Web Forms 架構是以頁面為中心的架構為基礎。 應用程式�
 
 頁面也有廣泛的事件生命週期。 當 ASP.NET 執行時間針對每個要求執行頁面的程式碼時，每個頁面都會引發初始化、載入、呈現和卸載事件的事件。
 
-頁面上的控制項通常會回傳至呈現控制項的相同頁面，並從稱為 `ViewState` 的隱藏表單欄位中，連同其承載一起執行。 [@No__t_0] 欄位包含控制項在呈現和呈現于頁面上時的狀態相關資訊，可讓 ASP.NET 執行時間比較和識別提交至伺服器之內容中的變更。
+頁面上的控制項通常會回傳至呈現控制項的相同頁面，並從稱為 `ViewState`的隱藏表單欄位中，連同其承載一起執行。 [`ViewState`] 欄位包含控制項在呈現和呈現于頁面上時的狀態相關資訊，可讓 ASP.NET 執行時間比較和識別提交至伺服器之內容中的變更。
 
 ## <a name="blazor"></a>Blazor
 
@@ -52,7 +52,7 @@ Blazor[元件](components.md)是代表可重複使用之 UI 部分的 .net 類�
 
 ![Blazor DOM 互動](./media/architecture-comparison/blazor-dom-interaction.png)
 
-元件也可以手動指示，如果它們的狀態在一般 UI 事件之外發生變更，就應該加以呈現。 Blazor 會使用 `SynchronizationContext` 來強制執行單一邏輯執行緒。 元件的生命週期方法以及 Blazor 所引發的任何事件回呼都會在此 `SynchronizationContext` 上執行。
+元件也可以手動指示，如果它們的狀態在一般 UI 事件之外發生變更，就應該加以呈現。 Blazor 會使用 `SynchronizationContext` 來強制執行單一邏輯執行緒。 元件的生命週期方法以及 Blazor 所引發的任何事件回呼都會在此 `SynchronizationContext`上執行。
 
 >[!div class="step-by-step"]
 >[上一頁](introduction.md)

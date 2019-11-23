@@ -77,15 +77,15 @@ Razor 指示詞是以 `@` 字元開頭，通常用於檔案開頭的新行開頭
 
 下表摘要說明 Blazor 中使用的各種 Razor 指示詞，以及其 ASP.NET Web form 對應項（如果有的話）。
 
-|指示詞    |描述|範例|Web Forms 對等|
+|Directive    |描述|範例|Web Forms 對等|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |將類別層級屬性加入至元件|`@attribute [Authorize]`|None|
+|`@attribute` |將類別層級屬性加入至元件|`@attribute [Authorize]`|無|
 |`@code`      |將類別成員加入至元件|`@code { ... }`|`<script runat="server">...</script>`|
 |`@implements`|執行指定的介面|`@implements IDisposable`|使用程式碼後置|
 |`@inherits`  |繼承自指定的基類|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |將服務插入元件|`@inject IJSRuntime JS`|None|
+|`@inject`    |將服務插入元件|`@inject IJSRuntime JS`|無|
 |`@layout`    |指定元件的版面配置元件|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |設定元件的命名空間|`@namespace MyNamespace`|None|
+|`@namespace` |設定元件的命名空間|`@namespace MyNamespace`|無|
 |`@page`      |指定元件的路由|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |指定元件的泛型型別參數|`@typeparam TItem`|使用程式碼後置|
 |`@using`     |指定要帶入範圍的命名空間|`@using MyComponentNamespace`|*在 web.config*中新增命名空間|
@@ -106,11 +106,11 @@ Razor 元件也會廣泛使用專案上的指示詞*屬性*，以控制元件的
 |`@key`       |指定比較演算法用來保留集合中元素的索引鍵|`<DetailsEditor @key="person" Details="person.Details" />`|
 |`@ref`       |捕捉元件或 HTML 元素的參考|`<MyDialog @ref="myDialog" />`|
 
-Blazor （`@onclick`、`@bind`、`@ref` 等所使用的各種指示詞屬性會涵蓋在下列各節和之後的章節中。
+Blazor （`@onclick`、`@bind`、`@ref`等所使用的各種指示詞屬性會涵蓋在下列各節和之後的章節中。
 
 *.Aspx*和 *.ascx*檔案中使用的許多語法都具有 Razor 中的平行語法。 以下是 ASP.NET Web Forms 和 Razor 語法的簡單比較。
 
-|特殊功能                      |Web Form           |語法               |Razor         |語法 |
+|功能                      |Web Form           |語法               |Razor         |語法 |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |指示詞                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |程式碼區塊                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
@@ -156,7 +156,7 @@ Blazor （`@onclick`、`@bind`、`@ref` 等所使用的各種指示詞屬性會�
 <Counter />
 ```
 
-如預設的 Blazor 專案中所示，通常會將 `@using` 指示詞放入 *_Imports razor*檔案中，使其匯入相同目錄和子目錄中的所有*razor*檔案。
+如預設的 Blazor 專案中所示，通常會將 `@using` 指示詞放入 *_Imports razor*檔案，使其匯入相同目錄和子目錄中的所有*razor*檔案。
 
 如果元件的命名空間不在範圍內，您可以使用其完整類型名稱來指定元件，如同您在中C#的一樣：
 
@@ -218,7 +218,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-在 Blazor 中，您可以直接使用 `@on{event}` 格式的指示詞屬性來註冊 DOM UI 事件的處理常式。 `{event}` 預留位置代表事件的名稱。 例如，您可以聆聽按鈕的點擊方式，如下所示：
+在 Blazor 中，您可以直接使用 `@on{event}`格式的指示詞屬性來註冊 DOM UI 事件的處理常式。 `{event}` 預留位置代表事件的名稱。 例如，您可以聆聽按鈕的點擊方式，如下所示：
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -296,7 +296,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-元件也可以藉由定義 `EventCallback<TValue>` 類型的元件參數來定義自己的事件。 事件回呼支援 DOM UI 事件處理常式的所有變化：選擇性引數、同步或非同步、方法群組或 lambda 運算式。
+元件也可以藉由定義 `EventCallback<TValue>`類型的元件參數來定義自己的事件。 事件回呼支援 DOM UI 事件處理常式的所有變化：選擇性引數、同步或非同步、方法群組或 lambda 運算式。
 
 ```razor
 <button class="btn btn-primary" @onclick="OnClick">Click me!</button>
@@ -418,7 +418,7 @@ public class AppState
 
 ## <a name="component-lifecycle"></a>元件生命週期
 
-ASP.NET Web form 架構具有定義完善的模組、頁面和控制項生命週期方法。 例如，下列控制項會針對 `Init`、`Load` 和 `UnLoad` 生命週期事件來執行事件處理常式：
+ASP.NET Web form 架構具有定義完善的模組、頁面和控制項生命週期方法。 例如，下列控制項會針對 `Init`、`Load`和 `UnLoad` 生命週期事件來執行事件處理常式：
 
 *Counter.ascx.cs*
 
@@ -527,7 +527,7 @@ Blazor 元件可以捕捉元素的參考。 不同于 ASP.NET Web Forms 中的 H
 
 在 ASP.NET Web Forms 中，您可以建立樣板*化控制項*。 樣板化控制項可讓開發人員指定用來呈現容器控制項的 HTML 部分。 建立樣板化伺服器控制項的機制很複雜，但它們可以讓您以可自訂的方式呈現資料的強大案例。 樣板化控制項的範例包括 `Repeater` 和 `DataList`。
 
-您也可以藉由定義 `RenderFragment` 或 `RenderFragment<T>` 類型的元件參數，將 Blazor 元件樣板化。 `RenderFragment` 代表 Razor 標記的區塊，可由元件轉譯。 `RenderFragment<T>` 是 Razor 標記的區塊，它會接受呈現轉譯片段時可指定的參數。
+您也可以藉由定義 `RenderFragment` 或 `RenderFragment<T>`類型的元件參數，將 Blazor 元件樣板化。 `RenderFragment` 代表 Razor 標記的區塊，可由元件轉譯。 `RenderFragment<T>` 是 Razor 標記的區塊，它會接受呈現轉譯片段時可指定的參數。
 
 ### <a name="child-content"></a>子內容
 
@@ -584,7 +584,7 @@ Blazor 元件可以將其子內容當做 `RenderFragment` 捕捉，並將該內�
 }
 ```
 
-使用樣板化元件時，可以使用符合參數名稱的子項目來指定範本參數。 當做元素傳遞 `RenderFragment<T>` 類型的元件引數具有名為 `context` 的隱含參數。 您可以使用子專案上的 `Context` 屬性來變更這個實參數的名稱。 您可以使用符合型別參數名稱的屬性來指定任何泛型型別參數。 可能的話，會推斷型別參數：
+使用樣板化元件時，可以使用符合參數名稱的子項目來指定範本參數。 當做元素傳遞 `RenderFragment<T>` 類型的元件引數具有名為 `context`的隱含參數。 您可以使用子專案上的 `Context` 屬性來變更這個實參數的名稱。 您可以使用符合型別參數名稱的屬性來指定任何泛型型別參數。 可能的話，會推斷型別參數：
 
 ```razor
 <SimpleListView Items="messages" TItem="string">

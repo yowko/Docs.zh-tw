@@ -35,7 +35,7 @@ ms.locfileid: "73087761"
 
 部署 SQL Database 時，請注意上圖中的替代方案：
 
-- [單一資料庫](https://docs.microsoft.com/azure/sql-database/sql-database-single-database) with 由[SQL Database 伺服器](https://docs.microsoft.com/azure/sql-database/sql-database-servers)管理的自有資源集。 單一資料庫與內部部署 SQL Server 部署  in 自主 [資料庫](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases)類似。
+- [單一資料庫](https://docs.microsoft.com/azure/sql-database/sql-database-single-database) ，其中包含一組由[SQL Database 伺服器](https://docs.microsoft.com/azure/sql-database/sql-database-servers)管理的資源。 單一資料庫與內部部署 SQL Server 部署中的自主 [資料庫](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases) 類似。
 
 - 一種[彈性](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool)集區，其中 SQL 資料庫的集合會以設定的價格共用單一 SQL Database 伺服器。 您可以視需要在彈性集區中移動或移出單一資料庫，以優化一組資料庫的價格效能。
 
@@ -53,7 +53,7 @@ Azure SQL Database 包含[內建的監視和智慧型調整](https://docs.micros
 
 ## <a name="azure-database-for-mysql"></a>適用於 MySQL 的 Azure 資料庫
 
-[MySQL](https://en.wikipedia.org/wiki/MySQL)  is [開放原始](https://en.wikipedia.org/wiki/Open-source_software)碼 [關係資料庫](https://en.wikipedia.org/wiki/Relational_database_management_system)。 它是[燈泡軟體堆疊](https://en.wikipedia.org/wiki/LAMP_(software_bundle))中的元件，可供許多大型組織使用，包括 Facebook、Twitter 和 YouTube。 此社區版本免費提供，而 enterprise edition 則需要購買授權。 此產品原本是在1995中建立的，由 Sun Microsystems 在2008（由 Oracle 在2010中取得）所購買。
+[MySQL](https://en.wikipedia.org/wiki/MySQL)  是一個 [開放原始](https://en.wikipedia.org/wiki/Open-source_software)碼 [關係資料庫](https://en.wikipedia.org/wiki/Relational_database_management_system)。 它是[燈泡軟體堆疊](https://en.wikipedia.org/wiki/LAMP_(software_bundle))中的元件，可供許多大型組織使用，包括 Facebook、Twitter 和 YouTube。 此社區版本免費提供，而 enterprise edition 則需要購買授權。 此產品原本是在1995中建立的，由 Sun Microsystems 在2008（由 Oracle 在2010中取得）所購買。
 
 [適用於 MySQL 的 Azure 資料庫](https://azure.microsoft.com/services/mysql/)是完全受控、符合企業需求的關係資料庫服務，以開放原始碼 MySQL 伺服器引擎為基礎。 執行 MySQL 社區版，其中包含下列 PaaS 功能，不需額外費用：
 
@@ -101,7 +101,7 @@ Azure SQL Database 包含[內建的監視和智慧型調整](https://docs.micros
 
 [于 postgresql](https://www.postgresql.org/)是另一個受歡迎的開放原始碼關係資料庫，有超過30年的作用中開發。 這是一般用途和物件關係資料庫管理系統。 其授權被視為「自由」，而產品可免費使用、修改及散佈任何形式。 許多大型企業（包括 Apple、Red Hat 和 Fujitsu）都有使用於 postgresql 的建立產品。
 
-[適用於 PostgreSQL 的 Azure 資料庫](https://azure.microsoft.com/services/postgresql/)是完全受控的關係資料庫服務，以開放原始碼 Postgres 資料庫引擎為基礎。 它可以使用可預測的效能、安全性、高可用性和動態擴充性來處理任務關鍵性工作負載。 它支援數個開放原始碼架構和語言， C++包括、JAVA、Python、Node、C \# 和 PHP。 它可讓您透過命令列介面或[Azure 資料移轉服務](https://azure.microsoft.com/services/database-migration/)來[遷移](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1)于 postgresql 資料庫。
+[適用於 PostgreSQL 的 Azure 資料庫](https://azure.microsoft.com/services/postgresql/)是完全受控的關係資料庫服務，以開放原始碼 Postgres 資料庫引擎為基礎。 它可以使用可預測的效能、安全性、高可用性和動態擴充性來處理任務關鍵性工作負載。 它支援數個開放原始碼架構和語言， C++包括、JAVA、Python、Node、C\#和 PHP。 它可讓您透過命令列介面或[Azure 資料移轉服務](https://azure.microsoft.com/services/database-migration/)來[遷移](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1)于 postgresql 資料庫。
 
 本服務包含[內建的智慧功能](https://docs.microsoft.com/azure/postgresql/concepts-monitoring)，可研究您獨特的資料庫模式，並提供自訂的建議和見解，協助您將于 postgresql 資料庫的效能最大化。 [先進的威脅防護](https://docs.microsoft.com/azure/postgresql/concepts-data-access-and-security-threat-protection)會以時鐘來監視您的資料庫，並偵測潛在的惡意活動、在偵測到時發出警示，讓您可以立即介入。
 
@@ -109,7 +109,7 @@ Azure SQL Database 包含[內建的監視和智慧型調整](https://docs.micros
 
 - [單一伺服器](https://docs.microsoft.com/azure/postgresql/concepts-servers)部署選項是多個資料庫的中央管理點。 這是相同的于 postgresql 伺服器引擎，適用于內部部署。 有了它，您可以為每部伺服器建立單一資料庫，以取用所有資源，或建立多個資料庫來共用資源。 定價是以核心和儲存體為基礎，依伺服器進行結構化。
 
-- [超大規模資料庫（Citus）選項](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/)是由 [Citus Data](https://www.citusdata.com/)  technology 提供技術支援。 它可透過在數百個節點間水準調整單一資料庫，以提供神速的快速效能和規模，藉此進行高效能調整。 此選項可讓引擎在記憶體中容納更多資料、跨數百個節點平行處理查詢，以及更快編制資料索引。 超大規模資料庫功能與于 postgresql 的最新創新、版本和工具相容，因此您可以利用現有的于 postgresql 專長。
+- [超大規模資料庫（Citus）選項](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/)是由 [Citus Data](https://www.citusdata.com/) 技術提供技術支援。 它可透過在數百個節點間水準調整單一資料庫，以提供神速的快速效能和規模，藉此進行高效能調整。 此選項可讓引擎在記憶體中容納更多資料、跨數百個節點平行處理查詢，以及更快編制資料索引。 超大規模資料庫功能與于 postgresql 的最新創新、版本和工具相容，因此您可以利用現有的于 postgresql 專長。
 
 ## <a name="cosmos-db"></a>Cosmos DB
 
@@ -179,7 +179,7 @@ Azure Cosmos DB 會使用自動[分割](https://docs.microsoft.com/azure/cosmos-
 
 **圖 5-17**： Cosmos DB 實體的階層
 
-請注意圖5-17 如何從在資料庫帳戶內建立 Cosmos DB 資料庫開始。 該資料庫會成為一組容器的管理單位。 容器是一種不限架構的專案群組，可以根據您選取的 API 提供者（在先前的章節中討論），以集合、資料表或圖形表示。 專案是您加入至容器並以檔、資料列、節點或邊緣表示的資料。 根據預設，您新增至容器的所有專案都會自動編制索引，而不需要明確的索引或架構管理。
+請注意圖5-17 如何從在資料庫帳戶內建立 Cosmos DB 資料庫開始。 該資料庫會成為一組容器的管理單位。 容器是一種不限架構的專案群組，可以根據您選取的 API 提供者（在先前的章節中討論），以集合、資料表或圖形表示。 專案是您加入至容器並以檔、資料列、節點或邊緣表示的資料。 根據預設，系統會自動為您新增至容器的所有項目編製索引，您不需要進行任何明確的索引或結構描述管理。
 
 若要分割容器，專案會分成不同的子集，稱為「 [邏輯](https://docs.microsoft.com/azure/cosmos-db/partition-data)分割區」。 邏輯分割區是根據與容器中每個專案相關聯的資料分割索引鍵的值來建立。 圖5-18 顯示邏輯分割區中的所有專案如何具有相同的資料分割索引鍵值。
 

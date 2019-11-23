@@ -37,7 +37,7 @@ ms.locfileid: "73087113"
 
 無伺服器會使用個別的簡短執行函式，以回應某個觸發程式來進行呼叫。 這讓它們適合用來處理背景工作。
 
-例如，應用程式可能需要在處理要求的過程中傳送電子郵件。 您不需要在處理 web 要求時傳送電子郵件，而是將電子郵件的詳細資料放在佇列上，並使用 Azure 函式來挑選訊息並傳送電子郵件。 應用程式的許多不同元件（或甚至許多應用程式）都可以利用這個相同的 Azure 函式，為應用程式提供改善的效能和擴充性，並使用[佇列型負載調節](https://docs.microsoft.com/azure/architecture/patterns/queue-based-load-leveling)來避免與下列相關的瓶頸：傳送電子郵件。
+例如，應用程式可能需要在處理要求的過程中傳送電子郵件。 您不需要在處理 web 要求時傳送電子郵件，而是將電子郵件的詳細資料放在佇列上，並使用 Azure 函式來挑選訊息並傳送電子郵件。 應用程式的許多不同元件（或甚至許多應用程式）都可以利用這個相同的 Azure 函式，為應用程式提供改善的效能和擴充性，並使用以[佇列為基礎的負載調節](https://docs.microsoft.com/azure/architecture/patterns/queue-based-load-leveling)來避免與傳送電子郵件相關的瓶頸。
 
 雖然應用程式和 Azure Functions 之間的[發行者/訂閱者模式](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber)是最常見的模式，但其他模式也是可行的。 Azure Functions 可以由其他事件觸發，例如 Azure Blob 儲存體的變更。 支援的影像上傳的應用程式可能有負責建立縮圖影像的 Azure 函式，或將上傳影像的大小調整為一致的維度，或優化影像大小。 所有這項功能都可以透過插入 Azure Blob 儲存體直接觸發，讓應用程式本身的複雜性和工作負載保持不變。
 
@@ -56,7 +56,7 @@ ms.locfileid: "73087113"
 
 最後，針對應用程式內的特定工作運用無伺服器，會增加複雜度。 通常最好先以模組化、鬆散耦合的方式來設計您的應用程式，然後找出無伺服器可提供的優點，使額外的複雜性更有價值。 許多較小的應用程式在單一整合式部署中都可以順利執行，而不需要無伺服器運算所需的分散式應用程式架構。
 
-## <a name="references"></a>reference
+## <a name="references"></a>參考
 
 - [瞭解無伺服器冷啟動](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)
 - [預先準備就緒 Azure Functions 實例](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances)

@@ -14,14 +14,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698573"
 ---
-# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>運算式會遞迴地呼叫包含屬性 ' @no__t 0propertyname > '
-屬性定義的 `Set` 程式中的語句會將值儲存在屬性名稱中。  
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>運算式會遞迴地呼叫包含屬性 '\<propertyname > '
+屬性定義之 `Set` 程式中的語句會將值儲存在屬性名稱中。  
   
- 保存屬性值的建議方法是在屬性的容器中定義 @no__t 0 變數，並同時在 `Get` 和 @no__t 2 程式中使用它。 @No__t 0 程式應該會將傳入的值儲存在此 @no__t 1 變數中。  
+ 保存屬性值的建議方法是在屬性的容器中定義 `Private` 變數，並在 `Get` 和 `Set` 程式中使用它。 `Set` 程式接著應該將傳入的值儲存在這個 `Private` 變數中。  
   
- @No__t-0 程式的行為就像是 @no__t 1 程式，因此它可以藉由遇到 @no__t 2 語句，將值指派給屬性名稱，並傳回控制權。 不過，建議的方法是在[Return 語句](../../../visual-basic/language-reference/statements/return-statement.md)中包含 `Private` 變數做為值。  
+ `Get` 程式的行為就像是 `Function` 程式，因此它可以將值指派給屬性名稱，並藉由遇到 `End Get` 語句來傳回控制權。 不過，建議的方法是在[Return 語句](../../../visual-basic/language-reference/statements/return-statement.md)中包含 `Private` 變數做為值。  
   
- @No__t-0 程式的行為就像是不會傳回值的 @no__t 1 程式。 因此，程式或屬性名稱在 `Set` 程式中沒有特殊意義，而且您無法在其中儲存值。  
+ `Set` 程式的行為就像是不會傳回值的 `Sub` 程式。 因此，程式或屬性名稱在 `Set` 程式中沒有特殊意義，而且您無法在其中儲存值。  
   
  下列範例說明可能造成此錯誤的方法，後面接著建議的方法。  
   
@@ -59,7 +59,7 @@ End Class
   
  **錯誤識別碼：** BC42026  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a>若要改正這項錯誤  
   
 - 重寫屬性定義，以使用上述範例中所述的建議方法。  
   

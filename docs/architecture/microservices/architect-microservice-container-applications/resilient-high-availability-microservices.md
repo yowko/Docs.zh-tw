@@ -74,7 +74,7 @@ ms.locfileid: "73094220"
 - **Splunk** 官方網站。 \
   <https://www.splunk.com/>
 
-- Windows 事件追蹤 (ETW) **EventSource Class** API \
+- Windows 事件追蹤 (ETW) **EventSource Class** API
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]

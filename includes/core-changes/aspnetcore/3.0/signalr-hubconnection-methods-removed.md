@@ -8,7 +8,7 @@ ms.locfileid: "72394022"
 ---
 ### <a name="signalr-hubconnection-resetsendping-and-resettimeout-methods-removed"></a>SignalR：已移除 HubConnection ResetSendPing 和 ResetTimeout 方法
 
-@No__t-0 和 @no__t 1 方法已從 SignalR `HubConnection` API 中移除。 這些方法原本僅供內部使用，但在 ASP.NET Core 2.2 中公開。 從 ASP.NET Core 3.0 Preview 4 版本開始，這些方法將無法使用。 如需討論，請參閱[aspnet/AspNetCore # 8543](https://github.com/aspnet/AspNetCore/issues/8543)。
+`ResetSendPing` 和 `ResetTimeout` 方法已從 SignalR `HubConnection` API 移除。 這些方法原本僅供內部使用，但在 ASP.NET Core 2.2 中公開。 從 ASP.NET Core 3.0 Preview 4 版本開始，這些方法將無法使用。 如需討論，請參閱[aspnet/AspNetCore # 8543](https://github.com/aspnet/AspNetCore/issues/8543)。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -30,7 +30,7 @@ Api 已移除。
 
 請勿使用這些方法。
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>類別
 
 ASP.NET Core
 

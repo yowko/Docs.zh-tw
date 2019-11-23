@@ -59,7 +59,7 @@ Blazor WebAssembly 應用程式的專案檔看起來有點複雜（確切版本�
 
 Blazor WebAssembly projects 的目標是以 WebAssembly 為基礎的 .NET 執行時間在瀏覽器中執行，而不是 .NET Core .NET Standard。 您無法將 .NET 安裝到網頁瀏覽器中，就像您可以在伺服器或開發人員電腦上一樣。 因此，專案會使用個別的封裝參考來參考 Blazor 架構。
 
-相較之下，預設的 ASP.NET Web form 專案在其 *.csproj*檔案中包含將近300行的 XML，其中大部分是明確列出專案中的各種程式碼和內容檔案。 .NET Core 和 .NET Standard 型專案中的許多簡化，都來自于參考 `Microsoft.NET.Sdk.Web` SDK 所匯入的預設目標和屬性，通常稱為 Web SDK。 Web SDK 包含萬用字元和其他便利，可簡化專案中的程式碼和內容檔案的加入。 您不需要明確列出檔案。 以 .NET Core 為目標時，Web SDK 也會同時將架構參考新增至 .NET Core 和 ASP.NET Core 共用架構。 您可以從 [**方案總管**] 視窗中的 [相依**性  >  架構] 節點**查看架構。 共用架構是安裝 .NET Core 時安裝在電腦上的元件集合。
+相較之下，預設的 ASP.NET Web form 專案在其 *.csproj*檔案中包含將近300行的 XML，其中大部分是明確列出專案中的各種程式碼和內容檔案。 .NET Core 和 .NET Standard 型專案中的許多簡化，都來自于參考 `Microsoft.NET.Sdk.Web` SDK 所匯入的預設目標和屬性，通常稱為 Web SDK。 Web SDK 包含萬用字元和其他便利，可簡化專案中的程式碼和內容檔案的加入。 您不需要明確列出檔案。 以 .NET Core 為目標時，Web SDK 也會同時將架構參考新增至 .NET Core 和 ASP.NET Core 共用架構。 您可以從 [**方案總管**] 視窗中的 [相依**性 > 架構] 節點**查看架構。 共用架構是安裝 .NET Core 時安裝在電腦上的元件集合。
 
 雖然它們受到支援，但在 .NET Core 專案中，個別元件參考較不常見。 大部分的專案相依性會當做 NuGet 套件參考來處理。 您只需要參考 .NET Core 專案中的最上層套件相依性。 可轉移的相依性會自動包含在內。 封裝參考會使用 `<PackageReference>` 專案新增至專案檔，而不是使用通常在 ASP.NET Web Forms 專案中找到的*套件 .config*檔案來參考封裝。
 
@@ -98,7 +98,7 @@ Blazor apps 具有 `Startup` 類別，而不是*global.asax*檔案，以定義�
 
 不同于 ASP.NET Web form 專案，Blazor 專案中的所有檔案都可以要求為靜態檔案。 只有*wwwroot*資料夾中的檔案可供 web 定址。 此資料夾稱為應用程式的「web 根目錄」。 應用程式的 web 根目錄以外的任何專案都*不是*web 可定址的。 此設定可提供額外的安全性等級，以防止透過 web 意外公開專案檔。
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>組態
 
 ASP.NET Web Forms 應用程式中的設定通常會使用一或多個*web.config*檔案來處理。 Blazor 應用程式通常不會有*web.config*檔案。 如果有的話，檔案只會在裝載于 IIS 上時用來設定 IIS 特定的設定。 相反地，Blazor 伺服器應用程式會使用 ASP.NET Core 設定抽象概念（Blazor WebAssembly 應用程式目前不支援相同的設定抽象概念，但這可能是未來新增的功能）。 例如，預設的 Blazor 伺服器應用程式會將某些設定儲存在*appsettings*中。
 
@@ -123,7 +123,7 @@ Blazor projects 中的大部分檔案都是*razor*檔案。 Razor 是以 HTML C#
 
 建立專案時，每個 Razor 元件檔案都會編譯成 .NET 類別。 產生的類別會捕獲元件的狀態、呈現邏輯、生命週期方法、事件處理常式和其他邏輯。 我們將在[使用 Blazor 建立可重複使用的 UI 元件](./components.md)一節中探討撰寫元件。
 
-*_Imports razor*檔案不是 razor 元件檔案。 相反地，它們會定義一組 Razor 指示詞，以匯入相同資料夾和其子資料夾內的其他*razor*檔案。 例如，_Imports 的*razor*檔案是針對常用的命名空間加入 `using` 語句的傳統方式：
+*_Imports razor*檔案不是 razor 元件檔案。 相反地，它們會定義一組 Razor 指示詞，以匯入相同資料夾和其子資料夾內的其他*razor*檔案。 例如，_Imports 的*razor*檔案是為常用的命名空間加入 `using` 語句的傳統方式：
 
 ```razor
 @using System.Net.Http
@@ -162,7 +162,7 @@ Blazor 中的路由是在用戶端處理，而不是在伺服器上。 當使用
 - 指定頁面上要呈現根元件（*Razor*）的位置。
 - 新增對應的 Blazor framework 腳本。
 
-在 Blazor 伺服器應用程式中，根元件的 [主機] 頁面會定義在 *_Host*檔中。 這個檔案會定義 Razor 頁面，而不是元件。 Razor Pages 使用 Razor 語法定義伺服器可定址的頁面，非常類似于 *.aspx*頁面。 `Html.RenderComponentAsync<TComponent>(RenderMode)` 方法是用來定義應該呈現根層級元件的位置。 `RenderMode` 選項會指出元件的呈現方式。 下表概述支援的 `RenderMode` 選項。
+在 Blazor 伺服器應用程式中，根元件的 [主機] 頁面會定義在 *_Host 的 cshtml*檔案中。 這個檔案會定義 Razor 頁面，而不是元件。 Razor Pages 使用 Razor 語法定義伺服器可定址的頁面，非常類似于 *.aspx*頁面。 `Html.RenderComponentAsync<TComponent>(RenderMode)` 方法是用來定義應該呈現根層級元件的位置。 `RenderMode` 選項會指出元件的呈現方式。 下表概述支援的 `RenderMode` 選項。
 
 |選項                        |描述       |
 |------------------------------|------------------|
@@ -170,7 +170,7 @@ Blazor 中的路由是在用戶端處理，而不是在伺服器上。 當使用
 |`RenderMode.ServerPrerendered`|先資源清單，然後以互動方式呈現|
 |`RenderMode.Static`           |呈現為靜態內容|
 
-*_Framework/blazor*的腳本參考會建立與伺服器的即時連接，然後處理所有使用者互動和 UI 更新。
+*_Framework/blazor.server.js*的腳本參考會建立與伺服器的即時連接，然後處理所有使用者互動和 UI 更新。
 
 ```razor
 @page "/"
