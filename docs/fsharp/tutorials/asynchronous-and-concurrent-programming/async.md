@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/16/2019
 ms.locfileid: "72395795"
 ---
-# <a name="async-programming-in-f"></a>F @ no__t 中的非同步程式設計-0
+# <a name="async-programming-in-f"></a>F\# 中的非同步程式設計
 
 非同步程式設計是基於各種原因而對現代化應用程式而言不可或缺的一種機制。 大部分的開發人員都會遇到兩個主要的使用案例：
 
@@ -43,9 +43,9 @@ ms.locfileid: "72395795"
 
 在F#中，非同步程式設計是以三個核心概念為中心：
 
-- @No__t-0 類型，代表可組合的非同步計算。
-- @No__t 0 模組函式，可讓您排程非同步工作、撰寫非同步計算，以及轉換非同步結果。
-- @No__t 0[計算運算式](../../language-reference/computation-expressions.md)，提供建立和控制非同步計算的便利語法。
+- `Async<'T>` 類型，代表可組合的非同步計算。
+- `Async` 模組函數，可讓您排程非同步工作、撰寫非同步計算，以及轉換非同步結果。
+- `async { }`[計算運算式](../../language-reference/computation-expressions.md)，提供建立和控制非同步計算的便利語法。
 
 您可以在下列範例中看到這三個概念：
 
@@ -69,11 +69,11 @@ let main argv =
     0
 ```
 
-在此範例中，`printTotalFileBytes` 函數的類型為 `string -> Async<unit>`。 呼叫函數並不會實際執行非同步計算。 相反地，它會傳回 `Async<unit>`，作為要以非同步方式執行之工作的 * 規格。 它會在其主體中呼叫 `Async.AwaitTask`，這會在呼叫時將 <xref:System.IO.File.WriteAllBytesAsync%2A> 的結果轉換成適當的類型。
+在此範例中，`printTotalFileBytes` 函數的類型 `string -> Async<unit>`。 呼叫函數並不會實際執行非同步計算。 相反地，它會傳回 `Async<unit>`，做為要以非同步方式執行之工作的 * 規格。 它會在其主體中呼叫 `Async.AwaitTask`，這會在呼叫時將 <xref:System.IO.File.WriteAllBytesAsync%2A> 的結果轉換成適當的類型。
 
-另一個重要的程式程式碼是 `Async.RunSynchronously` 的呼叫。 這是非同步模組的其中一個啟動函式，如果您想要實際執行非同步計算，就必須F#呼叫這個函式。
+另一個重要的程式程式碼是 `Async.RunSynchronously`的呼叫。 這是非同步模組的其中一個啟動函式，如果您想要實際執行非同步計算，就必須F#呼叫這個函式。
 
-這是 `async` 程式設計C#的/VB 樣式的基本差異。 在F#中，可以將非同步計算視為**冷**工作。 必須明確啟動才能實際執行。 這有一些優點，因為它可讓您更輕鬆地結合和排序非同步工作，而C#不是/VB。
+這是 `async` 程式設計的C#/VB 樣式的基本差異。 在F#中，可以將非同步計算視為**冷**工作。 必須明確啟動才能實際執行。 這有一些優點，因為它可讓您更輕鬆地結合和排序非同步工作，而C#不是/VB。
 
 ## <a name="combining-asynchronous-computations"></a>結合非同步計算
 
@@ -101,18 +101,18 @@ let main argv =
     0
 ```
 
-如您所見，`main` 函式有更多的呼叫。 在概念上，它會執行下列動作：
+如您所見，`main` 函式已進行更多呼叫。 在概念上，它會執行下列動作：
 
 1. 使用 `Array.map`，將命令列引數轉換成 `Async<unit>` 計算。
-2. 建立 `Async<'T[]>`，以在執行時以平行方式排程和執行 @no__t 1 計算。
+2. 建立 `Async<'T[]>`，以在執行時以平行方式排程和執行 `printTotalFileBytes` 計算。
 3. 建立將會執行平行計算並忽略其結果的 `Async<unit>`。
-4. 明確地執行最後一個計算 `Async.RunSynchronously` 並封鎖，直到完成為止。
+4. 使用 `Async.RunSynchronously` 和 block 明確執行最後的計算，直到完成為止。
 
 當此程式執行時，`printTotalFileBytes` 會針對每個命令列引數以平行方式執行。 因為非同步計算獨立執行程式流程，所以不會列印其資訊並完成執行。 計算會以平行方式排程，但不保證其執行順序。
 
 ## <a name="sequencing-asynchronous-computations"></a>排序非同步計算
 
-因為 `Async<'T>` 是工作的規格，而不是已執行的工作，所以您可以輕鬆地執行更複雜的轉換。 以下範例會排序一組非同步計算，讓它們逐一執行。
+由於 `Async<'T>` 是工作的規格，而不是已執行的工作，因此您可以輕鬆地執行更複雜的轉換。 以下範例會排序一組非同步計算，讓它們逐一執行。
 
 ```fsharp
 let printTotalFileBytes path =
@@ -131,7 +131,7 @@ let main argv =
     |> ignore
 ```
 
-這會依照 `argv` 的元素順序來排程 `printTotalFileBytes`，而不是以平行方式進行排程。 因為下一個專案在最後一個計算完成執行後才會排程，所以計算會進行排序，使其執行不會有任何重迭。
+這會依照 `argv` 元素的順序來排程 `printTotalFileBytes` 執行，而不是以平行方式進行排程。 因為下一個專案在最後一個計算完成執行後才會排程，所以計算會進行排序，使其執行不會有任何重迭。
 
 ## <a name="important-async-module-functions"></a>重要的非同步模組函式
 
@@ -179,7 +179,7 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 
 ### <a name="asyncstartastask"></a>Async.startastask
 
-執行執行緒集區中的計算。 傳回 <xref:System.Threading.Tasks.Task%601>，這會在計算終止（產生結果、擲回例外狀況或取消）時，于對應的狀態下完成。 如果未提供解除標記，則會使用預設的解除標記。
+執行執行緒集區中的計算。 傳回在計算終止（產生結果、擲回例外狀況或取消）時，將在對應狀態下完成的 <xref:System.Threading.Tasks.Task%601>。 如果未提供解除標記，則會使用預設的解除標記。
 
 簽章
 
@@ -189,11 +189,11 @@ computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellatio
 
 使用時機：
 
-- 當您需要呼叫 .NET API，而該應用程式需要 <xref:System.Threading.Tasks.Task%601> 來表示非同步計算的結果時。
+- 當您需要呼叫 .NET API，而該應用程式預期會有 <xref:System.Threading.Tasks.Task%601> 來表示非同步計算的結果時。
 
 要注意的事項：
 
-- 此呼叫會配置額外的 `Task` 物件，如果經常使用，則可能會增加額外負荷。
+- 此呼叫會配置額外的 `Task` 物件，如果經常使用，則會增加額外負荷。
 
 ### <a name="asyncparallel"></a>Async。 Parallel
 
@@ -236,7 +236,7 @@ computations: seq<Async<'T>> -> Async<'T[]>
 
 ### <a name="asyncawaittask"></a>Async.awaittask
 
-傳回非同步計算，以等候指定的 <xref:System.Threading.Tasks.Task%601> 完成，並將其結果傳回為 `Async<'T>`
+傳回非同步計算，等候指定的 <xref:System.Threading.Tasks.Task%601> 完成，並將其結果傳回為 `Async<'T>`
 
 簽章
 
@@ -246,15 +246,15 @@ task: Task<'T>  -> Async<'T>
 
 使用時機：
 
-- 當您使用會在F#非同步計算中傳回 <xref:System.Threading.Tasks.Task%601> 的 .net API 時。
+- 當您使用的 .NET API 會在F#非同步計算中傳回 <xref:System.Threading.Tasks.Task%601>。
 
 要注意的事項：
 
-- 例外狀況會依照工作平行程式庫的慣例包裝在 <xref:System.AggregateException>，這與非同步如何呈現例外F#狀況的方式不同。
+- 例外狀況會依照工作平行程式庫的慣例包裝在 <xref:System.AggregateException> 中，這與非同步一般呈現F#例外狀況的方式不同。
 
 ### <a name="asynccatch"></a>Async Catch
 
-建立異步計算，以執行指定的 `Async<'T>`，傳回 `Async<Choice<'T, exn>>`。 如果指定的 `Async<'T>` 成功完成，則會傳回包含結果值的 `Choice1Of2`。 如果在完成之前擲回例外狀況，則會傳回 `Choice2of2`，並產生例外狀況。 如果它用於本身由許多計算組成的非同步計算，而其中一個計算擲回例外狀況，則會完全停止內含的計算。
+建立異步計算，以執行指定的 `Async<'T>`，並傳回 `Async<Choice<'T, exn>>`。 如果指定的 `Async<'T>` 成功完成，則會傳回包含結果值的 `Choice1Of2`。 如果在完成之前擲回例外狀況，則會傳回具有引發例外狀況的 `Choice2of2`。 如果它用於本身由許多計算組成的非同步計算，而其中一個計算擲回例外狀況，則會完全停止內含的計算。
 
 簽章
 
@@ -286,7 +286,7 @@ computation: Async<'T> -> Async<unit>
 
 要注意的事項：
 
-- 如果您必須使用此功能，因為您想要使用 `Async.Start` 或需要 `Async<unit>` 的另一個函式，請考慮捨棄結果是否可以執行。 通常不應該只是為了符合類型簽章而捨棄結果。
+- 如果您因為想要使用 `Async.Start` 或其他需要 `Async<unit>`的函式而必須使用此功能，請考慮捨棄結果是否可以執行。 通常不應該只是為了符合類型簽章而捨棄結果。
 
 ### <a name="asyncrunsynchronously"></a>Async.runsynchronously
 
@@ -309,7 +309,7 @@ computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -
 
 ### <a name="asyncstart"></a>Async. Start
 
-線上程集區中啟動會傳回 `unit` 的非同步計算。 不等候其結果。 以 `Async.Start` 開頭的嵌套計算會與呼叫它們的父系計算完全獨立地啟動。 其存留期不會系結至任何父系計算。 如果父代計算已取消，則不會取消任何子計算。
+線上程集區中啟動會傳回 `unit`的非同步計算。 不等候其結果。 以 `Async.Start` 開始的嵌套計算會與呼叫它們的父系計算完全獨立地啟動。 其存留期不會系結至任何父系計算。 如果父代計算已取消，則不會取消任何子計算。
 
 簽章
 
@@ -326,12 +326,12 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 
 要注意的事項：
 
-- 以 `Async.Start` 開頭的計算所引發的例外狀況不會傳播至呼叫端。 將完全展開呼叫堆疊。
-- @No__t-1 開始的任何 effectful 工作（例如呼叫 `printfn`）不會導致程式執行的主要執行緒發生此效果。
+- 以 `Async.Start` 開頭的計算所引發的例外狀況不會傳播至呼叫者。 將完全展開呼叫堆疊。
+- `Async.Start` 啟動的任何 effectful 工作（例如呼叫 `printfn`）都不會造成此效果在程式執行的主要執行緒上發生。
 
 ## <a name="interoperating-with-net"></a>與 .NET 交互操作
 
-您可能使用的 .NET 程式庫或C#程式碼基底，會使用非同步[/await](../../../standard/async.md)樣式的非同步程式設計。 由於C#和大部分的 .net 程式庫使用 <xref:System.Threading.Tasks.Task%601> 和 <xref:System.Threading.Tasks.Task> 類型做為其核心抽象概念，而不是 `Async<'T>`，因此您必須在這兩個方法之間的界限之間進行非同步。
+您可能使用的 .NET 程式庫或C#程式碼基底，會使用非同步[/await](../../../standard/async.md)樣式的非同步程式設計。 因為C#大部分的 .net 程式庫會使用 <xref:System.Threading.Tasks.Task%601> 和 <xref:System.Threading.Tasks.Task> 類型做為其核心抽象概念，而不是 `Async<'T>`，所以您必須在這兩種方法之間，將界限交叉到非同步。
 
 ### <a name="how-to-work-with-net-async-and-taskt"></a>如何使用 .NET async 和 `Task<T>`
 
@@ -359,7 +359,7 @@ let computationForCaller param =
 
 ### <a name="how-to-work-with-net-async-and-task"></a>如何使用 .NET async 和 `Task`
 
-若要使用 <xref:System.Threading.Tasks.Task> 的 Api （也就是不會傳回值的 .NET 非同步計算），您可能需要加入另一個函式，將 `Async<'T>` 轉換成 <xref:System.Threading.Tasks.Task>：
+若要使用 <xref:System.Threading.Tasks.Task> 的 Api （也就是不會傳回值的 .NET 非同步計算），您可能需要新增額外的函式，以將 `Async<'T>` 轉換為 <xref:System.Threading.Tasks.Task>：
 
 ```fsharp
 module Async =
@@ -368,7 +368,7 @@ module Async =
         Async.StartAsTask comp :> Task
 ```
 
-已經有 `Async.AwaitTask`，接受 <xref:System.Threading.Tasks.Task> 做為輸入。 使用此和先前定義的 `startTaskFromAsyncUnit` 函式，您可以從F#非同步計算啟動和等候 <xref:System.Threading.Tasks.Task> 類型。
+已經有可接受 <xref:System.Threading.Tasks.Task> 做為輸入的 `Async.AwaitTask`。 使用此和先前定義的 `startTaskFromAsyncUnit` 函式F# ，您可以從非同步計算啟動和等待 <xref:System.Threading.Tasks.Task> 類型。
 
 ## <a name="relationship-to-multithreading"></a>多執行緒的關聯性
 
@@ -381,7 +381,7 @@ module Async =
 
 雖然F#提供在目前線程上啟動非同步計算的一些功能（或明確地不在目前線程上），但非同步通常不會與特定的執行緒策略相關聯。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [F#非同步程式設計模型](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
 - [Jet .com 的F#非同步指南](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)

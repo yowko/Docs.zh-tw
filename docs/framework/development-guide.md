@@ -14,7 +14,7 @@ ms.locfileid: "73122473"
 # <a name="net-framework-development-guide"></a>.NET Framework 開發指南
 本節說明如何建立、設定、偵錯、保護和部署 .NET Framework 應用程式。 本節也提供有關技術領域的資訊，例如動態程式設計、互通性、擴充性、記憶體管理和執行緒。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [應用程式基本概念](../standard/application-essentials.md)  
  提供基本應用程式開發工作的相關資訊，例如應用程式定義域和組件的程式設計、使用屬性、格式設定和分析基底類型、使用集合、處理事件和例外狀況、使用檔案和資料流，以及使用泛型。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73122473"
  [效能](./performance/index.md)  
  提供有關快取、延遲初始設定、可靠性和 ETW 事件的資訊。  
  
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  [.NET Framework 類別庫](/dotnet/api/?view=netframework-4.7)  
  為每個包含在 .NET Framework 命名空間中的類別，提供語法、程式碼範例及使用方式資訊。  
   

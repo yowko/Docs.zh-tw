@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/30/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 53f446d4aad8517d758e936d2d2881071f319423
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cbe20183d317ac6fe39a937e1cfa8a5e3df81b74
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142176"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977214"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>教學課程：使用模型產生器分類餐廳健康情況違規的嚴重性
 
@@ -29,13 +29,13 @@ ms.locfileid: "73142176"
 > - 使用模型來進行預測
 
 > [!NOTE]
-> 模型產生器目前為預覽版。
+> 模型建立器目前為預覽版。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 如需必要條件和安裝指示的清單，請造訪[模型產生器安裝指南](../how-to-guides/install-model-builder.md)。
 
-## <a name="model-builder-multiclass-classification-overview"></a>模型產生器多元分類總覽 
+## <a name="model-builder-multiclass-classification-overview"></a>模型產生器多元分類總覽
 
 這個範例會建立C# .net Core 主控台應用程式，以使用以模型產生器建立的機器學習模型，將健康情況違規的風險分類。 您可以在[dotnet/machinelearning 範例](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations)GitHub 存放庫中找到本教學課程的原始程式碼。
 
@@ -58,7 +58,7 @@ Dataset 中的每個資料列都包含在健康情況部門進行檢查時所觀
 | 例行排程 | 抹除換喪服未清除或正確儲存或 sanitizer 不足 | 低風險 |
 
 - **InspectionType**：檢查的類型。 這可以是新建立的第一次檢查，也就是例行的檢查、抱怨檢查，以及許多其他類型。
-- **ViolationDescription**：在檢查期間找到之違規的描述。 
+- **ViolationDescription**：在檢查期間找到之違規的描述。
 - **RiskCategory**：違反的風險嚴重性會造成公用的健全狀況和安全。
 
 `label` 是您希望進行預測的資料行。 執行分類工作時，目標是要指派分類（文字或數位）。 在此分類案例中，違規的嚴重性會指派為 [低]、[中] 或 [高] 風險的值。 因此， **RiskCategory**是標籤。 `features` 是您為模型提供預測 `label`的輸入。 在此情況下， **InspectionType**和**ViolationDescription**會當做功能或輸入來預測**RiskCategory**。
@@ -78,7 +78,7 @@ Dataset 中的每個資料列都包含在健康情況部門進行檢查時所觀
 
 1. 在模型產生器工具的 [資料] 步驟中，從 [資料來源] 下拉式清單中選取 [ **SQL Server** ]。
 1. 選取 [**連接到 SQL Server 資料庫**] 文字方塊旁的按鈕。
-    1. 在 [**選擇資料**] 對話方塊中，選取 [ **Microsoft SQL Server 資料庫**檔案]。 
+    1. 在 [**選擇資料**] 對話方塊中，選取 [ **Microsoft SQL Server 資料庫**檔案]。
     1. 取消核取 [**一律使用此選取專案**] 核取方塊，然後選取 [**繼續**]。
     1. 在 [**連接屬性**] 對話方塊中，選取 [**流覽]** ，然後選取已下載的*RestaurantScores .mdf*檔案。
     1. 選取 [確定]。
@@ -124,11 +124,11 @@ Dataset 中的每個資料列都包含在健康情況部門進行檢查時所觀
 
     [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L2)]
 
-1. 若要使用模型對新資料進行預測，請在應用程式的 `Main` 方法內，建立 `ModelInput` 類別的新實例。 請注意，[風險] 分類不是輸入的一部分。 這是因為模型會產生它的預測。 
+1. 若要使用模型對新資料進行預測，請在應用程式的 `Main` 方法內，建立 `ModelInput` 類別的新實例。 請注意，[風險] 分類不是輸入的一部分。 這是因為模型會產生它的預測。
 
     [!code-csharp [TestData](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L11-L15)]
 
-1. 使用來自 `ConsumeModel` 類別的 `Predict` 方法。 `Predict` 方法會載入定型的模型、建立模型的[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ，並使用它來對新資料進行預測。 
+1. 使用來自 `ConsumeModel` 類別的 `Predict` 方法。 `Predict` 方法會載入定型的模型、建立模型的[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ，並使用它來對新資料進行預測。
 
     [!code-csharp [Prediction](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L17-L24)]
 
