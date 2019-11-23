@@ -1,38 +1,37 @@
 ---
 title: 呼叫認證-WCF 開發人員的 gRPC
 description: 如何在 ASP.NET Core 3.0 中執行和使用 gRPC 呼叫認證。
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 5f29d69ec37fe60bcd7ca01391001ea9eb71e7e4
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 2588fe3590a63ea6071b85ff29b3685efbfa25db
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846689"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967990"
 ---
-# <a name="call-credentials"></a><span data-ttu-id="464d3-103">呼叫認證</span><span class="sxs-lookup"><span data-stu-id="464d3-103">Call credentials</span></span>
+# <a name="call-credentials"></a><span data-ttu-id="e6564-103">呼叫認證</span><span class="sxs-lookup"><span data-stu-id="e6564-103">Call credentials</span></span>
 
-<span data-ttu-id="464d3-104">呼叫認證全都是以每個要求傳入中繼資料的某種權杖為基礎。</span><span class="sxs-lookup"><span data-stu-id="464d3-104">Call credentials are all based on some kind of token passed in metadata with each request.</span></span>
+<span data-ttu-id="e6564-104">呼叫認證全都是以每個要求傳入中繼資料的某種權杖為基礎。</span><span class="sxs-lookup"><span data-stu-id="e6564-104">Call credentials are all based on some kind of token passed in metadata with each request.</span></span>
 
-## <a name="ws-federation"></a><span data-ttu-id="464d3-105">WS-Federation</span><span class="sxs-lookup"><span data-stu-id="464d3-105">WS-Federation</span></span>
+## <a name="ws-federation"></a><span data-ttu-id="e6564-105">WS-Federation</span><span class="sxs-lookup"><span data-stu-id="e6564-105">WS-Federation</span></span>
 
-<span data-ttu-id="464d3-106">ASP.NET Core 使用[WsFederation](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.WsFederation) NuGet 套件來支援 WS-同盟。</span><span class="sxs-lookup"><span data-stu-id="464d3-106">ASP.NET Core supports WS-Federation using the [WsFederation](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.WsFederation) NuGet package.</span></span> <span data-ttu-id="464d3-107">WS-同盟是 Windows 驗證最接近的可用替代方法，不支援透過 HTTP/2。</span><span class="sxs-lookup"><span data-stu-id="464d3-107">WS-Federation is the closest available alternative to Windows Authentication, which is not supported over HTTP/2.</span></span> <span data-ttu-id="464d3-108">系統會使用 Active Directory 同盟服務（ADFS）來驗證使用者，其提供可用來向 ASP.NET Core 進行驗證的權杖。</span><span class="sxs-lookup"><span data-stu-id="464d3-108">Users are authenticated using Active Directory Federation Services (ADFS), which provides a token that can be used to authenticate with ASP.NET Core.</span></span>
+<span data-ttu-id="e6564-106">ASP.NET Core 使用[WsFederation](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.WsFederation) NuGet 套件來支援 WS-同盟。</span><span class="sxs-lookup"><span data-stu-id="e6564-106">ASP.NET Core supports WS-Federation using the [WsFederation](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.WsFederation) NuGet package.</span></span> <span data-ttu-id="e6564-107">WS-同盟是 Windows 驗證最接近的可用替代方法，不支援透過 HTTP/2。</span><span class="sxs-lookup"><span data-stu-id="e6564-107">WS-Federation is the closest available alternative to Windows Authentication, which is not supported over HTTP/2.</span></span> <span data-ttu-id="e6564-108">系統會使用 Active Directory 同盟服務（ADFS）來驗證使用者，其提供可用來向 ASP.NET Core 進行驗證的權杖。</span><span class="sxs-lookup"><span data-stu-id="e6564-108">Users are authenticated using Active Directory Federation Services (ADFS), which provides a token that can be used to authenticate with ASP.NET Core.</span></span>
 
-<span data-ttu-id="464d3-109">如需如何開始使用此驗證方法的詳細資訊，請參閱 ASP.NET Core 一文[中的使用 WS-同盟來驗證使用者](https://docs.microsoft.com/aspnet/core/security/authentication/ws-federation?view=aspnetcore-3.0)。</span><span class="sxs-lookup"><span data-stu-id="464d3-109">For more information on how to get started with this authentication method, see the [Authenticate users with WS-Federation in ASP.NET Core](https://docs.microsoft.com/aspnet/core/security/authentication/ws-federation?view=aspnetcore-3.0) article.</span></span>
+<span data-ttu-id="e6564-109">如需如何開始使用此驗證方法的詳細資訊，請參閱 ASP.NET Core 一文[中的使用 WS-同盟來驗證使用者](https://docs.microsoft.com/aspnet/core/security/authentication/ws-federation?view=aspnetcore-3.0)。</span><span class="sxs-lookup"><span data-stu-id="e6564-109">For more information on how to get started with this authentication method, see the [Authenticate users with WS-Federation in ASP.NET Core](https://docs.microsoft.com/aspnet/core/security/authentication/ws-federation?view=aspnetcore-3.0) article.</span></span>
 
-## <a name="jwt-bearer-tokens"></a><span data-ttu-id="464d3-110">JWT 持有人權杖</span><span class="sxs-lookup"><span data-stu-id="464d3-110">JWT Bearer tokens</span></span>
+## <a name="jwt-bearer-tokens"></a><span data-ttu-id="e6564-110">JWT 持有人權杖</span><span class="sxs-lookup"><span data-stu-id="e6564-110">JWT Bearer tokens</span></span>
 
-<span data-ttu-id="464d3-111">[JSON Web 權杖](https://jwt.io)標準提供一種方式，可在編碼字串中將使用者及其宣告的相關資訊編碼，並以這種方式簽署該權杖，讓取用者可以使用公開金鑰加密來驗證權杖的完整性。</span><span class="sxs-lookup"><span data-stu-id="464d3-111">The [JSON Web Token](https://jwt.io) standard provides a way to encode information about a user and their claims in an encoded string, and to sign that token in such a way that the consumer can verify the integrity of the token using public key cryptography.</span></span> <span data-ttu-id="464d3-112">您可以使用各種服務（例如 IdentityServer4）來驗證使用者，並產生 OpenID Connect （OIDC）權杖以搭配 gRPC 和 HTTP Api 使用。</span><span class="sxs-lookup"><span data-stu-id="464d3-112">You can use various services, such as IdentityServer4, to authenticate users and generate OpenID Connect (OIDC) tokens to use with gRPC and HTTP APIs.</span></span>
+<span data-ttu-id="e6564-111">[JSON Web 權杖](https://jwt.io)標準提供一種方式，可在編碼字串中將使用者及其宣告的相關資訊編碼，並以這種方式簽署該權杖，讓取用者可以使用公開金鑰加密來驗證權杖的完整性。</span><span class="sxs-lookup"><span data-stu-id="e6564-111">The [JSON Web Token](https://jwt.io) standard provides a way to encode information about a user and their claims in an encoded string, and to sign that token in such a way that the consumer can verify the integrity of the token using public key cryptography.</span></span> <span data-ttu-id="e6564-112">您可以使用各種服務（例如 IdentityServer4）來驗證使用者，並產生 OpenID Connect （OIDC）權杖以搭配 gRPC 和 HTTP Api 使用。</span><span class="sxs-lookup"><span data-stu-id="e6564-112">You can use various services, such as IdentityServer4, to authenticate users and generate OpenID Connect (OIDC) tokens to use with gRPC and HTTP APIs.</span></span>
 
-<span data-ttu-id="464d3-113">ASP.NET Core 3.0 可以使用 JWT 持有人套件來處理 JSON Web 權杖。</span><span class="sxs-lookup"><span data-stu-id="464d3-113">ASP.NET Core 3.0 can handle JSON Web Tokens using the JWT Bearer package.</span></span> <span data-ttu-id="464d3-114">GRPC 應用程式的設定與 ASP.NET Core MVC 應用程式完全相同。</span><span class="sxs-lookup"><span data-stu-id="464d3-114">The configuration is exactly the same for a gRPC application as an ASP.NET Core MVC application.</span></span>
+<span data-ttu-id="e6564-113">ASP.NET Core 3.0 可以使用 JWT 持有人套件來處理 JSON Web 權杖。</span><span class="sxs-lookup"><span data-stu-id="e6564-113">ASP.NET Core 3.0 can handle JSON Web Tokens using the JWT Bearer package.</span></span> <span data-ttu-id="e6564-114">GRPC 應用程式的設定與 ASP.NET Core MVC 應用程式完全相同。</span><span class="sxs-lookup"><span data-stu-id="e6564-114">The configuration is exactly the same for a gRPC application as an ASP.NET Core MVC application.</span></span>
 
-<span data-ttu-id="464d3-115">這一章將著重在 JWT 持有人權杖，因為比 WS-同盟更容易開發。</span><span class="sxs-lookup"><span data-stu-id="464d3-115">This chapter will focus on JWT Bearer tokens as they're easier to develop with than WS-Federation.</span></span>
+<span data-ttu-id="e6564-115">這一章將著重在 JWT 持有人權杖，因為比 WS-同盟更容易開發。</span><span class="sxs-lookup"><span data-stu-id="e6564-115">This chapter will focus on JWT Bearer tokens as they're easier to develop with than WS-Federation.</span></span>
 
-## <a name="adding-authentication-and-authorization-to-the-server"></a><span data-ttu-id="464d3-116">將驗證和授權新增至伺服器</span><span class="sxs-lookup"><span data-stu-id="464d3-116">Adding authentication and authorization to the server</span></span>
+## <a name="adding-authentication-and-authorization-to-the-server"></a><span data-ttu-id="e6564-116">將驗證和授權新增至伺服器</span><span class="sxs-lookup"><span data-stu-id="e6564-116">Adding authentication and authorization to the server</span></span>
 
-<span data-ttu-id="464d3-117">根據預設，JWT 持有人套件不包含在 ASP.NET Core 3.0 中。</span><span class="sxs-lookup"><span data-stu-id="464d3-117">The JWT Bearer package isn't included in ASP.NET Core 3.0 by default.</span></span> <span data-ttu-id="464d3-118">在您的應用程式中安裝[AspNetCore Microsoft.aspnetcore.authentication.jwtbearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer) NuGet 套件。</span><span class="sxs-lookup"><span data-stu-id="464d3-118">Install the [Microsoft.AspNetCore.Authentication.JwtBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer) NuGet package in your app.</span></span>
+<span data-ttu-id="e6564-117">根據預設，JWT 持有人套件不包含在 ASP.NET Core 3.0 中。</span><span class="sxs-lookup"><span data-stu-id="e6564-117">The JWT Bearer package isn't included in ASP.NET Core 3.0 by default.</span></span> <span data-ttu-id="e6564-118">在您的應用程式中安裝[AspNetCore Microsoft.aspnetcore.authentication.jwtbearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer) NuGet 套件。</span><span class="sxs-lookup"><span data-stu-id="e6564-118">Install the [Microsoft.AspNetCore.Authentication.JwtBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer) NuGet package in your app.</span></span>
 
-<span data-ttu-id="464d3-119">在 Startup 類別中新增驗證服務，並設定 JWT 持有人處理常式。</span><span class="sxs-lookup"><span data-stu-id="464d3-119">Add the Authentication service in the Startup class and configure the JWT Bearer handler.</span></span>
+<span data-ttu-id="e6564-119">在 Startup 類別中新增驗證服務，並設定 JWT 持有人處理常式。</span><span class="sxs-lookup"><span data-stu-id="e6564-119">Add the Authentication service in the Startup class and configure the JWT Bearer handler.</span></span>
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -58,9 +57,9 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-<span data-ttu-id="464d3-120">`IssuerSigningKey` 屬性需要使用驗證已簽署權杖所需的密碼編譯資料來執行 `Microsoft.IdentityModels.Tokens.SecurityKey`。</span><span class="sxs-lookup"><span data-stu-id="464d3-120">The `IssuerSigningKey` property requires an implementation of `Microsoft.IdentityModels.Tokens.SecurityKey` with the cryptographic data necessary to validate the signed tokens.</span></span> <span data-ttu-id="464d3-121">此權杖應安全地儲存在*秘密伺服器*（例如 Azure KeyVault）中。</span><span class="sxs-lookup"><span data-stu-id="464d3-121">This token should be stored securely in a *secrets server* like Azure KeyVault.</span></span>
+<span data-ttu-id="e6564-120">`IssuerSigningKey` 屬性需要使用驗證已簽署權杖所需的密碼編譯資料來執行 `Microsoft.IdentityModels.Tokens.SecurityKey`。</span><span class="sxs-lookup"><span data-stu-id="e6564-120">The `IssuerSigningKey` property requires an implementation of `Microsoft.IdentityModels.Tokens.SecurityKey` with the cryptographic data necessary to validate the signed tokens.</span></span> <span data-ttu-id="e6564-121">此權杖應安全地儲存在*秘密伺服器*（例如 Azure KeyVault）中。</span><span class="sxs-lookup"><span data-stu-id="e6564-121">This token should be stored securely in a *secrets server* like Azure KeyVault.</span></span>
 
-<span data-ttu-id="464d3-122">接下來，新增授權服務，以控制對系統的存取。</span><span class="sxs-lookup"><span data-stu-id="464d3-122">Next add the Authorization service, which controls access to the system.</span></span>
+<span data-ttu-id="e6564-122">接下來，新增授權服務，以控制對系統的存取。</span><span class="sxs-lookup"><span data-stu-id="e6564-122">Next add the Authorization service, which controls access to the system.</span></span>
 
 ```csharp
     services.AddAuthorization(options =>
@@ -75,9 +74,9 @@ public void ConfigureServices(IServiceCollection services)
 ```
 
 > [!TIP]
-> <span data-ttu-id="464d3-123">驗證和授權是兩個不同的步驟。</span><span class="sxs-lookup"><span data-stu-id="464d3-123">Authentication and Authorization are two separate steps.</span></span> <span data-ttu-id="464d3-124">驗證是用來判斷使用者的身分識別。</span><span class="sxs-lookup"><span data-stu-id="464d3-124">Authentication is used to determine the user's identity.</span></span> <span data-ttu-id="464d3-125">授權會決定是否允許該使用者存取系統的各個部分。</span><span class="sxs-lookup"><span data-stu-id="464d3-125">Authorization decides whether that user is allowed to access various parts of the system.</span></span>
+> <span data-ttu-id="e6564-123">驗證和授權是兩個不同的步驟。</span><span class="sxs-lookup"><span data-stu-id="e6564-123">Authentication and Authorization are two separate steps.</span></span> <span data-ttu-id="e6564-124">驗證是用來判斷使用者的身分識別。</span><span class="sxs-lookup"><span data-stu-id="e6564-124">Authentication is used to determine the user's identity.</span></span> <span data-ttu-id="e6564-125">授權會決定是否允許該使用者存取系統的各個部分。</span><span class="sxs-lookup"><span data-stu-id="e6564-125">Authorization decides whether that user is allowed to access various parts of the system.</span></span>
 
-<span data-ttu-id="464d3-126">現在，在 `Configure` 方法中，將驗證和授權中介軟體新增至 ASP.NET Core 管線。</span><span class="sxs-lookup"><span data-stu-id="464d3-126">Now add the Authentication and Authorization middleware to the ASP.NET Core pipeline in the `Configure` method.</span></span>
+<span data-ttu-id="e6564-126">現在，在 `Configure` 方法中，將驗證和授權中介軟體新增至 ASP.NET Core 管線。</span><span class="sxs-lookup"><span data-stu-id="e6564-126">Now add the Authentication and Authorization middleware to the ASP.NET Core pipeline in the `Configure` method.</span></span>
 
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -100,7 +99,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-<span data-ttu-id="464d3-127">最後，將 `[Authorize]` 屬性套用至要保護的任何服務或方法，並使用基礎 `HttpContext` 的 `User` 屬性來確認許可權。</span><span class="sxs-lookup"><span data-stu-id="464d3-127">Finally, apply the `[Authorize]` attribute to any services or methods to be secured, and use the `User` property from the underlying `HttpContext` to verify permissions.</span></span>
+<span data-ttu-id="e6564-127">最後，將 `[Authorize]` 屬性套用至要保護的任何服務或方法，並使用基礎 `HttpContext` 的 `User` 屬性來確認許可權。</span><span class="sxs-lookup"><span data-stu-id="e6564-127">Finally, apply the `[Authorize]` attribute to any services or methods to be secured, and use the `User` property from the underlying `HttpContext` to verify permissions.</span></span>
 
 ```csharp
 [Authorize]
@@ -120,9 +119,9 @@ public override async Task<GetResponse> Get(GetRequest request, ServerCallContex
 }
 ```
 
-## <a name="providing-call-credentials-in-the-client-application"></a><span data-ttu-id="464d3-128">在用戶端應用程式中提供呼叫認證</span><span class="sxs-lookup"><span data-stu-id="464d3-128">Providing call credentials in the client application</span></span>
+## <a name="providing-call-credentials-in-the-client-application"></a><span data-ttu-id="e6564-128">在用戶端應用程式中提供呼叫認證</span><span class="sxs-lookup"><span data-stu-id="e6564-128">Providing call credentials in the client application</span></span>
 
-<span data-ttu-id="464d3-129">當您從身分識別伺服器取得 JWT 權杖之後，您就可以使用它來驗證來自用戶端的 gRPC 呼叫，方法是將它新增為呼叫上的中繼資料標頭，如下所示：</span><span class="sxs-lookup"><span data-stu-id="464d3-129">Once you've obtained a JWT token from an identity server, you can use it to authenticate gRPC calls from the client by adding it as a metadata header on the call, as follows:</span></span>
+<span data-ttu-id="e6564-129">當您從身分識別伺服器取得 JWT 權杖之後，您就可以使用它來驗證來自用戶端的 gRPC 呼叫，方法是將它新增為呼叫上的中繼資料標頭，如下所示：</span><span class="sxs-lookup"><span data-stu-id="e6564-129">Once you've obtained a JWT token from an identity server, you can use it to authenticate gRPC calls from the client by adding it as a metadata header on the call, as follows:</span></span>
 
 ```csharp
 public async Task ShowPortfolioAsync(int portfolioId)
@@ -142,9 +141,9 @@ public async Task ShowPortfolioAsync(int portfolioId)
 }
 ```
 
-<span data-ttu-id="464d3-130">現在，您已使用 JWT 持有人權杖做為呼叫認證來保護您的 gRPC 服務。</span><span class="sxs-lookup"><span data-stu-id="464d3-130">Now, you've secured your gRPC service using JWT bearer tokens as call credentials.</span></span> <span data-ttu-id="464d3-131">已[新增驗證和授權的組合範例 gRPC 應用程式](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/PortfoliosSample/grpc/TraderSysAuth)版本位於 GitHub。</span><span class="sxs-lookup"><span data-stu-id="464d3-131">A version of the [Portfolios sample gRPC application with authentication and authorization added](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/PortfoliosSample/grpc/TraderSysAuth) is on GitHub.</span></span>
+<span data-ttu-id="e6564-130">現在，您已使用 JWT 持有人權杖做為呼叫認證來保護您的 gRPC 服務。</span><span class="sxs-lookup"><span data-stu-id="e6564-130">Now, you've secured your gRPC service using JWT bearer tokens as call credentials.</span></span> <span data-ttu-id="e6564-131">已[新增驗證和授權的組合範例 gRPC 應用程式](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/PortfoliosSample/grpc/TraderSysAuth)版本位於 GitHub。</span><span class="sxs-lookup"><span data-stu-id="e6564-131">A version of the [Portfolios sample gRPC application with authentication and authorization added](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/PortfoliosSample/grpc/TraderSysAuth) is on GitHub.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="464d3-132">[上一頁](security.md)
->[下一頁](channel-credentials.md)</span><span class="sxs-lookup"><span data-stu-id="464d3-132">[Previous](security.md)
+><span data-ttu-id="e6564-132">[上一頁](security.md)
+>[下一頁](channel-credentials.md)</span><span class="sxs-lookup"><span data-stu-id="e6564-132">[Previous](security.md)
 [Next](channel-credentials.md)</span></span>

@@ -11,13 +11,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71183942"
 ---
-# <a name="app-configuration"></a><span data-ttu-id="3752e-103">應用程式設定</span><span class="sxs-lookup"><span data-stu-id="3752e-103">App configuration</span></span>
+# <a name="app-configuration"></a><span data-ttu-id="e2ef8-103">應用程式設定</span><span class="sxs-lookup"><span data-stu-id="e2ef8-103">App configuration</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="3752e-104">*即將推出此內容。*</span><span class="sxs-lookup"><span data-stu-id="3752e-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="e2ef8-104">*即將推出此內容。*</span><span class="sxs-lookup"><span data-stu-id="e2ef8-104">*This content is coming soon.*</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="3752e-105">[上一頁](middleware.md)
->[下一頁](security-authentication-authorization.md)</span><span class="sxs-lookup"><span data-stu-id="3752e-105">[Previous](middleware.md)
+><span data-ttu-id="e2ef8-105">[上一頁](middleware.md)
+>[下一頁](security-authentication-authorization.md)</span><span class="sxs-lookup"><span data-stu-id="e2ef8-105">[Previous](middleware.md)
 [Next](security-authentication-authorization.md)</span></span>

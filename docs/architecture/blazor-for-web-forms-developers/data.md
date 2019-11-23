@@ -11,11 +11,11 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71183935"
 ---
-# <a name="data-access-and-management"></a><span data-ttu-id="e0e5e-103">資料存取和管理</span><span class="sxs-lookup"><span data-stu-id="e0e5e-103">Data access and management</span></span>
+# <a name="data-access-and-management"></a><span data-ttu-id="56c95-103">資料存取和管理</span><span class="sxs-lookup"><span data-stu-id="56c95-103">Data access and management</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="e0e5e-104">*即將推出此內容。*</span><span class="sxs-lookup"><span data-stu-id="e0e5e-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="56c95-104">*即將推出此內容。*</span><span class="sxs-lookup"><span data-stu-id="56c95-104">*This content is coming soon.*</span></span>
 
 <!--
 - Entity Framework
@@ -25,6 +25,6 @@ ms.locfileid: "71183935"
 -->
 
 >[!div class="step-by-step"]
-><span data-ttu-id="e0e5e-105">[上一頁](forms-validation.md)
->[下一頁](middleware.md)</span><span class="sxs-lookup"><span data-stu-id="e0e5e-105">[Previous](forms-validation.md)
+><span data-ttu-id="56c95-105">[上一頁](forms-validation.md)
+>[下一頁](middleware.md)</span><span class="sxs-lookup"><span data-stu-id="56c95-105">[Previous](forms-validation.md)
 [Next](middleware.md)</span></span>
