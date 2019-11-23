@@ -1,5 +1,5 @@
 ---
-title: Property 語句（Visual Basic）
+title: Property Statement
 ms.date: 05/12/2018
 f1_keywords:
 - vb.PropertySet
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 2c3e417aad404171a43342dc92773615ec350ef5
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
-ms.translationtype: HT
+ms.openlocfilehash: 80bce2442d96ecb9c548a88c8e5ee44c6258473b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332740"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346749"
 ---
 # <a name="property-statement"></a>Property Statement
 
-宣告屬性的名稱，以及用來儲存和取出屬性值的屬性程式。
+Declares the name of a property, and the property procedures used to store and retrieve the value of the property.
 
 ## <a name="syntax"></a>語法
 
@@ -45,15 +45,15 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `attributelist`
 
-  選擇性。 適用于這個屬性或 `Get` 或 `Set` 程式的屬性清單。 請參閱[屬性清單](attribute-list.md)。
+  選擇項。 List of attributes that apply to this property or `Get` or `Set` procedure. See [Attribute List](attribute-list.md).
 
 - `Default`
 
-  選擇性。 指定此屬性為其定義所在之類別或結構的預設屬性。 預設屬性必須接受參數，而且可以在不指定屬性名稱的情況下設定和抓取。 如果您將屬性宣告為 `Default`，就無法在屬性或其任何屬性程式上使用 `Private`。
+  選擇項。 Specifies that this property is the default property for the class or structure on which it is defined. Default properties must accept parameters and can be set and retrieved without specifying the property name. If you declare the property as `Default`, you cannot use `Private` on the property or on either of its property procedures.
 
 - `accessmodifier`
 
-  在 `Property` 語句和最多一個 `Get` 和 `Set` 語句上都是選擇性的。 可以是下列其中一項：
+  Optional on the `Property` statement and on at most one of the `Get` and `Set` statements. 可以是下列其中一項：
 
   - [Public](../modifiers/public.md)
 
@@ -71,17 +71,17 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `propertymodifiers`
 
-  選擇性。 可以是下列其中一項：
+  選擇項。 可以是下列其中一項：
 
   - [多載](../modifiers/overloads.md)
 
   - [Overrides](../modifiers/overrides.md)
 
-  - [Overrides](../modifiers/overridable.md)
+  - [Overridable](../modifiers/overridable.md)
 
   - [NotOverridable](../modifiers/notoverridable.md)
 
-  - [MustOverride](../modifiers/mustoverride.md)
+  - [New](../modifiers/mustoverride.md)
 
   - `MustOverride Overrides`
 
@@ -89,43 +89,43 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `Shared`
 
-  選擇性。 請參閱[共用](../modifiers/shared.md)。
+  選擇項。 See [Shared](../modifiers/shared.md).
 
 - `Shadows`
 
-  選擇性。 請參閱[Shadows](../modifiers/shadows.md)。
+  選擇項。 See [Shadows](../modifiers/shadows.md).
 
 - `ReadOnly`
 
-  選擇性。 請參閱[ReadOnly](../modifiers/readonly.md)。
+  選擇項。 See [ReadOnly](../modifiers/readonly.md).
 
 - `WriteOnly`
 
-  選擇性。 請參閱[WriteOnly](../modifiers/writeonly.md)。
+  選擇項。 See [WriteOnly](../modifiers/writeonly.md).
 
 - `Iterator`
 
-  選擇性。 請參閱[Iterator](../modifiers/iterator.md)。
+  選擇項。 See [Iterator](../modifiers/iterator.md).
 
 - `name`
 
-  必要。 屬性的名稱。 請參閱 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)。
+  必要項。 屬性的名稱。 請參閱 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)。
 
 - `parameterlist`
 
-  選擇性。 本機變數名稱的清單，代表這個屬性的參數，以及可能的 `Set` 程式的其他參數。 請參閱[參數清單](parameter-list.md)。
+  選擇項。 List of local variable names representing the parameters of this property, and possible additional parameters of the `Set` procedure. See [Parameter List](parameter-list.md).
 
 - `returntype`
 
-  如果 `Option Strict` `On`，則為必要。 這個屬性所傳回之值的資料類型。
+  Required if `Option Strict` is `On`. Data type of the value returned by this property.
 
 - `Implements`
 
-  選擇性。 指出此屬性會執行一或多個屬性，每個屬性都是由這個屬性的包含類別或結構所實的介面所定義。 請參閱[Implements 語句](implements-statement.md)。
+  選擇項。 Indicates that this property implements one or more properties, each one defined in an interface implemented by this property's containing class or structure. See [Implements Statement](implements-statement.md).
 
 - `implementslist`
 
-  如果使用 `Implements`，則為必要項。 要實作為屬性的清單。
+  如果使用 `Implements`，則為必要項。 List of properties being implemented.
 
   `implementedproperty [ , implementedproperty ... ]`
 
@@ -135,70 +135,70 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
   |組件|描述|
   |---|---|
-  |`interface`|必要。 這個屬性的包含類別或結構所實作為介面的名稱。|
-  |`definedname`|必要。 屬性在 `interface`中定義的名稱。|
+  |`interface`|必要項。 Name of an interface implemented by this property's containing class or structure.|
+  |`definedname`|必要項。 Name by which the property is defined in `interface`.|
 
 - `Get`
 
-  選擇性。 如果屬性標示為 `ReadOnly`則為必要。 啟動用來傳回屬性值的 `Get` 屬性程式。  `Get` 語句不會與[自動執行的屬性](../../programming-guide/language-features/procedures/auto-implemented-properties.md)搭配使用。
+  選擇項。 Required if the property is marked `ReadOnly`. Starts a `Get` property procedure that is used to return the value of the property.  The `Get` statement is not used with [auto-implemented properties](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
 
 - `statements`
 
-  選擇性。 要在 `Get` 或 `Set` 程式內執行的語句區塊。
+  選擇項。 Block of statements to run within the `Get` or `Set` procedure.
 
 - `End Get`
 
-  結束 `Get` 屬性程式。
+  Terminates the `Get` property procedure.
 
 - `Set`
 
-  選擇性。 如果屬性標示為 `WriteOnly`則為必要。 啟動用來儲存屬性值的 `Set` 屬性程式。  `Set` 語句不會與[自動執行的屬性](../../programming-guide/language-features/procedures/auto-implemented-properties.md)搭配使用。
+  選擇項。 Required if the property is marked `WriteOnly`. Starts a `Set` property procedure that is used to store the value of the property.  The `Set` statement is not used with [auto-implemented properties](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
 
 - `End Set`
 
-  結束 `Set` 屬性程式。
+  Terminates the `Set` property procedure.
 
 - `End Property`
 
-  終止這個屬性的定義。
+  Terminates the definition of this property.
 
 ## <a name="remarks"></a>備註
 
-`Property` 語句會引進屬性的宣告。 屬性可以有 `Get` 程式（唯讀）、`Set` 程式（僅限寫入）或兩者（讀寫）。 使用自動執行的屬性時，您可以省略 `Get` 和 `Set` 程式。 如需詳細資訊，請參閱[自動實作的屬性](../../programming-guide/language-features/procedures/auto-implemented-properties.md)。
+The `Property` statement introduces the declaration of a property. A property can have a `Get` procedure (read only), a `Set` procedure (write only), or both (read-write). You can omit the `Get` and `Set` procedure when using an auto-implemented property. 如需詳細資訊，請參閱[自動實作的屬性](../../programming-guide/language-features/procedures/auto-implemented-properties.md)。
 
-您只能在類別層級使用 `Property`。 這表示屬性的宣告*內容*必須是類別、結構、模組或介面，而且不能是原始程式檔、命名空間、程式或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](declaration-contexts-and-default-access-levels.md)。
+You can use `Property` only at class level. This means the *declaration context* for a property must be a class, structure, module, or interface, and cannot be a source file, namespace, procedure, or block. 如需詳細資訊，請參閱[宣告內容和預設存取層級](declaration-contexts-and-default-access-levels.md)。
 
-根據預設，屬性會使用公用存取。 您可以使用 `Property` 語句上的存取修飾詞來調整屬性的存取層級，也可以選擇性地將其中一個屬性程式調整為更嚴格的存取層級。
+By default, properties use public access. You can adjust a property's access level with an access modifier on the `Property` statement, and you can optionally adjust one of its property procedures to a more restrictive access level.
 
-Visual Basic 在屬性指派期間，將參數傳遞給 `Set` 程式。 如果您未提供 `Set`的參數，整合式開發環境（IDE）會使用名為 `value`的隱含參數。 這個參數會保留要指派給屬性的值。 您通常會將此值儲存在私用區域變數中，並在每次呼叫 `Get` 程式時傳回它。
+Visual Basic passes a parameter to the `Set` procedure during property assignments. If you do not supply a parameter for `Set`, the integrated development environment (IDE) uses an implicit parameter named `value`. This parameter holds the value to be assigned to the property. You typically store this value in a private local variable and return it whenever the `Get` procedure is called.
 
 ## <a name="rules"></a>規則
 
-- **混合存取層級。** 如果您要定義讀寫屬性，您可以選擇性地為 `Get` 或 `Set` 程式指定不同的存取層級，但不能同時為兩者。 如果您這樣做，程式存取層級必須比屬性的存取層級更嚴格。 例如，如果屬性是 `Friend`宣告的，您可以宣告 `Set` 程式 `Private`但不會 `Public`。
+- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Set` procedure `Private`, but not `Public`.
 
-  如果您要定義 `ReadOnly` 或 `WriteOnly` 屬性，單一屬性程式（分別為`Get` 或 `Set`）代表所有屬性。 您不能為這類程式宣告不同的存取層級，因為這會為屬性設定兩個存取層級。
+  If you are defining a `ReadOnly` or `WriteOnly` property, the single property procedure (`Get` or `Set`, respectively) represents all of the property. You cannot declare a different access level for such a procedure, because that would set two access levels for the property.
 
-- **傳回類型。** `Property` 語句可以宣告它所傳回之值的資料類型。 您可以指定任何資料類型，或是列舉、結構、類別或介面的名稱。
+- **Return Type.** The `Property` statement can declare the data type of the value it returns. You can specify any data type or the name of an enumeration, structure, class, or interface.
 
-  如果您未指定 `returntype`，屬性會傳回 `Object`。
+  If you do not specify `returntype`, the property returns `Object`.
 
-- **實作.** 如果此屬性使用 `Implements` 關鍵字，則包含的類別或結構必須緊接在其 `Class` 或 `Structure` 語句後面的 `Implements` 語句。 `Implements` 語句必須包含 `implementslist`中指定的每個介面。 不過，介面用來定義 `Property` （在 `definedname`中）的名稱不一定要與這個屬性的名稱相同（在 `name`中）。
+- **Implementation.** If this property uses the `Implements` keyword, the containing class or structure must have an `Implements` statement immediately following its `Class` or `Structure` statement. The `Implements` statement must include each interface specified in `implementslist`. However, the name by which an interface defines the `Property` (in `definedname`) does not have to be the same as the name of this property (in `name`).
 
 ## <a name="behavior"></a>行為
 
-- **從屬性程式傳回。** 當 `Get` 或 `Set` 程式回到呼叫程式碼時，執行會在叫用它的語句後面繼續進行語句。
+- **Returning from a Property Procedure.** When the `Get` or `Set` procedure returns to the calling code, execution continues with the statement following the statement that invoked it.
 
-  `Exit Property` 和 `Return` 語句會導致立即離開屬性程式。 任何數目的 `Exit Property` 和 `Return` 語句都可以出現在程式中的任何位置，而且您可以混合 `Exit Property` 和 `Return` 語句。
+  The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.
 
-- **傳回值。** 若要從 `Get` 程式傳回值，您可以將值指派給屬性名稱，或將它包含在 `Return` 語句中。 下列範例會將傳回值指派給屬性名稱 `quoteForTheDay`，然後使用 `Exit Property` 語句傳回。
+- **Return Value.** To return a value from a `Get` procedure, you can either assign the value to the property name or include it in a `Return` statement. The following example assigns the return value to the property name `quoteForTheDay` and then uses the `Exit Property` statement to return.
 
   [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]
 
   [!code-vb[VbVbalrStatements#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#28)]
 
-  如果您使用 `Exit Property` 而不指派值給 `name`，`Get` 程式會傳回屬性之資料類型的預設值。
+  If you use `Exit Property` without assigning a value to `name`, the `Get` procedure returns the default value for the property's data type.
 
-  同時 `Return` 語句會指派 `Get` 程式傳回值並結束程式。 下列範例會顯示這種情況。
+  The `Return` statement at the same time assigns the `Get` procedure return value and exits the procedure. The following example shows this.
 
   [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]
 
@@ -206,15 +206,15 @@ Visual Basic 在屬性指派期間，將參數傳遞給 `Set` 程式。 如果�
 
 ## <a name="example"></a>範例
 
-下列範例會在類別中宣告屬性。
+The following example declares a property in a class.
 
 [!code-vb[VbVbalrStatements#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#51)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [自動實作的屬性](../../programming-guide/language-features/procedures/auto-implemented-properties.md)
 - [物件和類別](../../programming-guide/language-features/objects-and-classes/index.md)
 - [Get 陳述式](get-statement.md)
 - [Set 陳述式](set-statement.md)
 - [參數清單](parameter-list.md)
-- [預設值](../modifiers/default.md)
+- [Default](../modifiers/default.md)

@@ -1,73 +1,73 @@
 ---
-title: Visual Basic 編碼慣例
+title: 編碼慣例
 ms.date: 07/20/2015
 helpviewer_keywords:
 - coding conventions [Visual Basic], Visual Basic
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: 18c309e22cccfa5d835394996fc6974d95825b65
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: HT
+ms.openlocfilehash: 36cd3a927d2fdf197e6b496d9308fc43a555d59b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003117"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346159"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 編碼慣例
-Microsoft 會依照本主題中的指導方針來開發範例和檔。 如果您遵循相同的編碼慣例，您可能會獲得下列優點：  
+Microsoft develops samples and documentation that follow the guidelines in this topic. If you follow the same coding conventions, you may gain the following benefits:  
   
-- 您的程式碼會有一致的外觀，讓讀者可以更專注于內容，而不是版面配置。  
+- Your code will have a consistent look, so that readers can better focus on content, not layout.  
   
-- 讀者會更快速地瞭解您的程式碼，因為它們可以根據先前的經驗做出假設。  
+- Readers understand your code more quickly because they can make assumptions based on previous experience.  
   
-- 您可以更輕鬆地複製、變更及維護程式碼。  
+- You can copy, change, and maintain the code more easily.  
   
-- 您可以協助確保您的程式碼會針對 Visual Basic 示範「最佳做法」。  
+- You help ensure that your code demonstrates "best practices" for Visual Basic.  
   
-## <a name="naming-conventions"></a>命名慣例  
+## <a name="naming-conventions"></a>命名規範  
   
-- 如需命名指導方針的詳細資訊，請參閱[命名指導方針](../../../standard/design-guidelines/naming-guidelines.md)主題。  
+- For information about naming guidelines, see [Naming Guidelines](../../../standard/design-guidelines/naming-guidelines.md) topic.  
   
-- 請勿使用 "My" 或 "my" 作為變數名稱的一部分。 這種作法會與 `My` 物件產生混淆。  
+- Do not use "My" or "my" as part of a variable name. This practice creates confusion with the `My` objects.  
   
-- 您不需要在自動產生的程式碼中變更物件的名稱，使其符合方針。  
+- You do not have to change the names of objects in auto-generated code to make them fit the guidelines.  
   
 ## <a name="layout-conventions"></a>版面配置慣例  
   
-- 將索引標籤插入空格，並使用具有四個空格縮排的智慧型縮排。  
+- Insert tabs as spaces, and use smart indenting with four-space indents.  
   
-- 使用程式**代碼的整齊清單（重新格式化）** ，在程式碼編輯器中重新格式化您的程式碼。 如需詳細資訊，請參閱[選項、文字編輯器、基本（Visual Basic）](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)。  
+- Use **Pretty listing (reformatting) of code** to reformat your code in the code editor. For more information, see [Options, Text Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
   
-- 每行只能使用一個語句。 請勿使用 Visual Basic 行分隔字元（:)。  
+- Use only one statement per line. Don't use the Visual Basic line separator character (:).  
   
-- 請避免使用明確行接續字元 "_"，以在語言允許的地方隱含行接續。  
+- Avoid using the explicit line continuation character "_" in favor of implicit line continuation wherever the language allows it.  
   
-- 每行只能使用一個宣告。  
+- Use only one declaration per line.  
   
-- 如果程式**代碼的整齊清單（重新格式化）** 不會自動格式化接續行，請手動將接續行縮排一次定位停駐點。 不過，一律會靠左對齊清單中的專案。  
+- If **Pretty listing (reformatting) of code** doesn't format continuation lines automatically, manually indent continuation lines one tab stop. However, always left-align items in a list.  
   
     ```vb  
     a As Integer,  
     b As Integer  
     ```  
   
-- 在方法和屬性定義之間新增至少一個空白行。  
+- Add at least one blank line between method and property definitions.  
   
 ## <a name="commenting-conventions"></a>註解慣例  
   
-- 將批註放在另一行，而不是一行程式碼的結尾。  
+- Put comments on a separate line instead of at the end of a line of code.  
   
-- 以大寫字母開始註解文字，並以句點結束註解文字。  
+- Start comment text with an uppercase letter, and end comment text with a period.  
   
-- 在批註分隔符號（'）和註解文字之間插入一個空格。  
+- Insert one space between the comment delimiter (') and the comment text.  
   
      [!code-vb[VbVbalrGuidelines#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#2)]  
   
-- 不要以星號的格式化區塊來括住批註。  
+- Do not surround comments with formatted blocks of asterisks.  
   
 ## <a name="program-structure"></a>程式結構  
   
-- 當您使用 `Main` 方法時，請使用新的主控台應用程式的預設結構，並使用 `My` 做為命令列引數。  
+- When you use the `Main` method, use the default construct for new console applications, and use `My` for command-line arguments.  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
@@ -81,132 +81,132 @@ Microsoft 會依照本主題中的指導方針來開發範例和檔。 如果您
      MsgBox($"hello{vbCrLf}goodbye")
      ```
   
-- 若要在迴圈中附加字串，請使用 <xref:System.Text.StringBuilder> 物件。  
+- To append strings in loops, use the <xref:System.Text.StringBuilder> object.  
   
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
-### <a name="relaxed-delegates-in-event-handlers"></a>事件處理常式中的寬鬆委派  
- 請勿將引數（物件和 EventArgs）明確限定為事件處理常式。 如果您不是使用傳遞至事件的事件引數（例如，傳送者作為物件，e as EventArgs），請使用寬鬆的委派，並在您的程式碼中省略事件引數：  
+### <a name="relaxed-delegates-in-event-handlers"></a>Relaxed Delegates in Event Handlers  
+ Do not explicitly qualify the arguments (Object and EventArgs) to event handlers. If you are not using the event arguments that are passed to an event (for example, sender as Object, e as EventArgs), use relaxed delegates, and leave out the event arguments in your code:  
   
  [!code-vb[VbVbalrGuidelines#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#7)]  
   
 ### <a name="unsigned-data-type"></a>不帶正負號的資料類型  
   
-- 請使用 `Integer` 而不是不帶正負號的類型，除非其為必要的位置。  
+- Use `Integer` rather than unsigned types, except where they are necessary.  
   
 ### <a name="arrays"></a>陣列  
   
-- 當您在宣告行上初始化陣列時，請使用簡短的語法。 例如，使用下列語法。  
+- Use the short syntax when you initialize arrays on the declaration line. For example, use the following syntax.  
   
      [!code-vb[VbVbalrGuidelines#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#8)]  
   
-     請勿使用下列語法。  
+     Do not use the following syntax.  
   
      [!code-vb[VbVbalrGuidelines#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#9)]  
   
-- 將陣列指示項放在型別上，而不是在變數上。 例如，使用下列語法：  
+- Put the array designator on the type, not on the variable. For example, use the following syntax:  
   
      [!code-vb[VbVbalrGuidelines#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#11)]  
   
-     請勿使用下列語法：  
+     Do not use the following syntax:  
   
      [!code-vb[VbVbalrGuidelines#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#10)]  
   
-- 當您宣告並初始化基本資料類型的陣列時，請使用 {} 語法。 例如，使用下列語法：  
+- Use the { } syntax when you declare and initialize arrays of basic data types. For example, use the following syntax:  
   
      [!code-vb[VbVbalrGuidelines#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#12)]  
   
-     請勿使用下列語法：  
+     Do not use the following syntax:  
   
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
-### <a name="use-the-with-keyword"></a>使用 With 關鍵字  
- 當您對一個物件進行一系列的呼叫時，請考慮使用 `With` 關鍵字：  
+### <a name="use-the-with-keyword"></a>Use the With Keyword  
+ When you make a series of calls to one object, consider using the `With` keyword:  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
-### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>使用 [嘗試 ...]使用例外狀況處理時的 Catch 和 Using 語句  
+### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>Use the Try...Catch and Using Statements when you use Exception Handling  
  請勿使用 `On Error Goto`。  
   
-### <a name="use-the-isnot-keyword"></a>使用 IsNot 關鍵字  
- 請使用 `IsNot` 關鍵字，而不是 `Not...Is Nothing`。  
+### <a name="use-the-isnot-keyword"></a>Use the IsNot Keyword  
+ Use the `IsNot` keyword instead of `Not...Is Nothing`.  
   
-### <a name="new-keyword"></a>New 關鍵字  
+### <a name="new-keyword"></a>New Keyword  
   
-- 使用簡短的具現化。 例如，使用下列語法：  
+- Use short instantiation. For example, use the following syntax:  
   
      [!code-vb[VbVbalrGuidelines#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#21)]  
   
-     上一行相當於：  
+     The preceding line is equivalent to this:  
   
      [!code-vb[VbVbalrGuidelines#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#22)]  
   
-- 針對新物件使用物件初始化運算式，而不是無參數的函式：  
+- Use object initializers for new objects instead of the parameterless constructor:  
   
      [!code-vb[VbVbalrGuidelines#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#23)]  
   
 ### <a name="event-handling"></a>事件處理  
   
-- 使用 `Handles`，而不是 `AddHandler`：  
+- Use `Handles` rather than `AddHandler`:  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
-- 使用 `AddressOf`，而且不明確地具現化委派：  
+- Use `AddressOf`, and do not instantiate the delegate explicitly:  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
-- 當您定義事件時，請使用簡短語法，並讓編譯器定義委派：  
+- When you define an event, use the short syntax, and let the compiler define the delegate:  
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- 在您呼叫 `RaiseEvent` 方法之前，請不要驗證事件是否 `Nothing` （null）。 `RaiseEvent` 在引發事件之前檢查 `Nothing`。  
+- Do not verify whether an event is `Nothing` (null) before you call the `RaiseEvent` method. `RaiseEvent` checks for `Nothing` before it raises the event.  
   
-### <a name="using-shared-members"></a>使用共用成員  
- 使用類別名稱（而不是從執行個體變數）來呼叫 `Shared` 成員。  
+### <a name="using-shared-members"></a>Using Shared Members  
+ Call `Shared` members by using the class name, not from an instance variable.  
   
-### <a name="use-xml-literals"></a>使用 XML 常值  
- XML 常值可簡化您在使用 XML 時所遇到的最常見工作（例如，載入、查詢和轉換）。 當您使用 XML 進行開發時，請遵循下列指導方針：  
+### <a name="use-xml-literals"></a>Use XML Literals  
+ XML literals simplify the most common tasks that you encounter when you work with XML (for example, load, query, and transform). When you develop with XML, follow these guidelines:  
   
-- 使用 XML 常值來建立 XML 檔和片段，而不是直接呼叫 XML Api。  
+- Use XML literals to create XML documents and fragments instead of calling XML APIs directly.  
   
-- 匯入檔案或專案層級的 XML 命名空間，以利用 XML 常值的效能優化。  
+- Import XML namespaces at the file or project level to take advantage of the performance optimizations for XML literals.  
   
-- 使用 XML 軸屬性來存取 XML 檔中的元素和屬性。  
+- Use the XML axis properties to access elements and attributes in an XML document.  
   
-- 使用內嵌運算式來包含值，並從現有的值建立 XML，而不是使用 API 呼叫，例如 `Add` 方法：  
+- Use embedded expressions to include values and to create XML from existing values instead of using API calls such as the `Add` method:  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
 ### <a name="linq-queries"></a>LINQ 查詢  
   
-- 針對查詢變數使用有意義的名稱：  
+- Use meaningful names for query variables:  
   
      [!code-vb[VbVbalrGuidelines#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#28)]  
   
-- 在查詢中提供元素的名稱，以確定匿名型別的屬性名稱使用 Pascal 大小寫正確地大寫：  
+- Provide names for elements in a query to make sure that property names of anonymous types are correctly capitalized using Pascal casing:  
   
      [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
-- 當結果中的屬性名稱可能會造成混淆時，請重新命名屬性。 例如，如果您的查詢傳回客戶名稱和訂單識別碼，請將它們重新命名，而不要將它們保留為 `Name`，並在結果中 `ID`：  
+- 當結果中的屬性名稱可能會造成混淆時，請重新命名屬性。 For example, if your query returns a customer name and an order ID, rename them instead of leaving them as `Name` and `ID` in the result:  
   
      [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
-- 在查詢變數和範圍變數的宣告中使用類型推斷：  
+- Use type inference in the declaration of query variables and range variables:  
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
-- 在 `From` 語句底下對齊查詢子句：  
+- Align query clauses under the `From` statement:  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
-- 在其他查詢子句之前使用 `Where` 子句，讓稍後的查詢子句在篩選的資料集上運作：  
+- Use `Where` clauses before other query clauses so that later query clauses operate on the filtered set of data:  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
-- 使用 `Join` 子句來明確定義聯結作業，而不是使用 `Where` 子句來隱含定義聯結作業：  
+- Use the `Join` clause to explicitly define a join operation instead of using the `Where` clause to implicitly define a join operation:  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安全程式碼撰寫方針](../../../standard/security/secure-coding-guidelines.md)

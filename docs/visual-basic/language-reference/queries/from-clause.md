@@ -1,5 +1,5 @@
 ---
-title: From 子句 (Visual Basic)
+title: From 子句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryFrom
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 781902f1bf28bd029c8d9825aee155a6691cbae9
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: HT
+ms.openlocfilehash: a63fb41fc2b0ad885acf76ad5d56e446922f5b90
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004775"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343784"
 ---
 # <a name="from-clause-visual-basic"></a>From 子句 (Visual Basic)
-指定一個或多個範圍變數，以及要查詢的集合。  
+Specifies one or more range variables and a collection to query.  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,45 +31,45 @@ From element [ As type ] In collection [ _ ]
   
 |詞彙|定義|  
 |---|---|  
-|`element`|必要。 用來逐一查看集合元素的*範圍變數*。 當查詢逐一查看 `collection`時，會使用範圍變數來參考 `collection` 的每個成員。 必須是可列舉的類型。|  
-|`type`|選擇性。 `element` 的類型。 如果未指定 `type`，就會從 `collection`推斷 `element` 的類型。|  
-|`collection`|必要。 參考要查詢的集合。 必須是可列舉的類型。|  
+|`element`|必要項。 A *range variable* used to iterate through the elements of the collection. A range variable is used to refer to each member of the `collection` as the query iterates through the `collection`. Must be an enumerable type.|  
+|`type`|選擇項。 `element` 的類型。 If no `type` is specified, the type of `element` is inferred from `collection`.|  
+|`collection`|必要項。 Refers to the collection to be queried. Must be an enumerable type.|  
   
 ## <a name="remarks"></a>備註  
- `From` 子句是用來識別查詢的來源資料，以及用來從來源集合參考元素的變數。 這些變數稱為「*範圍變數*」。 查詢需要 `From` 子句，但使用 `Aggregate` 子句來識別只傳回匯總結果的查詢時除外。 如需詳細資訊，請參閱[Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。  
+ The `From` clause is used to identify the source data for a query and the variables that are used to refer to an element from the source collection. These variables are called *range variables*. The `From` clause is required for a query, except when the `Aggregate` clause is used to identify a query that returns only aggregated results. For more information, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- 您可以在查詢中指定多個 `From` 子句，以識別要聯結的多個集合。 當指定多個集合時，會個別反復查看它們，或者您可以聯結它們（如果它們是相關的）。 您可以使用 `Select` 子句，或使用 `Join` 或 `Group Join` 子句明確地聯結集合。 或者，您可以在單一 `From` 子句中指定多個範圍變數和集合，並以逗號分隔每個相關的範圍變數和集合與其他專案。 下列程式碼範例顯示 `From` 子句的兩個語法選項。  
+ You can specify multiple `From` clauses in a query to identify multiple collections to be joined. When multiple collections are specified, they are iterated over independently, or you can join them if they are related. You can join collections implicitly by using the `Select` clause, or explicitly by using the `Join` or `Group Join` clauses. As an alternative, you can specify multiple range variables and collections in a single `From` clause, with each related range variable and collection separated from the others by a comma. The following code example shows both syntax options for the `From` clause.  
   
  [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
- `From` 子句會定義查詢的範圍，這類似于 `For` 迴圈的範圍。 因此，查詢範圍中的每個 `element` 範圍變數都必須有唯一的名稱。 因為您可以為查詢指定多個 `From` 子句，所以後續的 `From` 子句可以參考 `From` 子句中的範圍變數，也可以參考上一個 `From` 子句中的範圍變數。 例如，下列範例顯示的是一個 nested `From` 子句，其中第二個子句中的集合是以第一個子句中範圍變數的屬性為基礎。  
+ The `From` clause defines the scope of a query, which is similar to the scope of a `For` loop. Therefore, each `element` range variable in the scope of a query must have a unique name. Because you can specify multiple `From` clauses for a query, subsequent `From` clauses can refer to range variables in the `From` clause, or they can refer to range variables in a previous `From` clause. For example, the following example shows a nested `From` clause where the collection in the second clause is based on a property of the range variable in the first clause.  
   
  [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
- 每個 `From` 子句後面都可以加上任何其他查詢子句的組合，以精簡查詢。 您可以利用下列方式來精簡查詢：  
+ Each `From` clause can be followed by any combination of additional query clauses to refine the query. You can refine the query in the following ways:  
   
-- 使用 `From` 和 `Select` 子句，或使用 `Join` 或 `Group Join` 子句明確地結合多個集合。  
+- Combine multiple collections implicitly by using the `From` and `Select` clauses, or explicitly by using the `Join` or `Group Join` clauses.  
   
-- 使用 `Where` 子句來篩選查詢結果。  
+- Use the `Where` clause to filter the query result.  
   
-- 使用 `Order By` 子句來排序結果。  
+- Sort the result by using the `Order By` clause.  
   
-- 使用 `Group By` 子句，將類似的結果群組在一起。  
+- Group similar results together by using the `Group By` clause.  
   
-- 使用 `Aggregate` 子句來識別要評估整個查詢結果的彙總函式。  
+- Use the `Aggregate` clause to identify aggregate functions to evaluate for the whole query result.  
   
-- 使用 `Let` 子句來引進反覆運算變數，其值是由運算式（而非集合）所決定。  
+- Use the `Let` clause to introduce an iteration variable whose value is determined by an expression instead of a collection.  
   
-- 請使用 `Distinct` 子句來忽略重複的查詢結果。  
+- Use the `Distinct` clause to ignore duplicate query results.  
   
-- 使用 `Skip`、`Take`、`Skip While`和 `Take While` 子句，識別要傳回之結果的各個部分。  
+- Identify parts of the result to return by using the `Skip`, `Take`, `Skip While`, and `Take While` clauses.  
   
 ## <a name="example"></a>範例  
- 下列查詢運算式會使用 `From` 子句，針對 `customers` 集合中的每個 `Customer` 物件，宣告範圍變數 `cust`。 `Where` 子句會使用範圍變數，將輸出限制為來自指定區域的客戶。 `For Each` 迴圈會在查詢結果中顯示每個客戶的公司名稱。  
+ The following query expression uses a `From` clause to declare a range variable `cust` for each `Customer` object in the `customers` collection. The `Where` clause uses the range variable to restrict the output to customers from the specified region. The `For Each` loop displays the company name for each customer in the query result.  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [查詢](../../../visual-basic/language-reference/queries/index.md)
 - [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
