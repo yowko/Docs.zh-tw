@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 017fe2177cf824d461b4c51ea805f75b6ddbe064
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1ce152b84f17a35982a75f54b5418623ba39210f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779995"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975226"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
-WCF Data Services （之前稱為 "ADO.NET 資料服務"）是 .NET Framework 的元件，可讓您建立使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]的服務，透過 Web 或內部網路公開及取用資料，方法是使用[具像狀態的語義傳輸（REST）](https://go.microsoft.com/fwlink/?LinkId=113919)。 OData 會將資料公開為可由 URI 定址的資源。 資料是使用 GET、PUT、POST 和 DELETE 的標準 HTTP 動作來存取及變更。 OData 會使用[實體資料模型](../adonet/entity-data-model.md)的實體關聯性慣例，將資源公開為與關聯相關的實體集。
+WCF Data Services （之前稱為 "ADO.NET 資料服務"）是 .NET Framework 的元件，可讓您建立使用開放式資料通訊協定（OData）的服務，利用[具像狀態傳輸（REST）](https://go.microsoft.com/fwlink/?LinkId=113919)的語義，透過 Web 或內部網路公開及取用資料。 OData 會將資料公開為可由 URI 定址的資源。 資料是使用 GET、PUT、POST 和 DELETE 的標準 HTTP 動作來存取及變更。 OData 會使用[實體資料模型](../adonet/entity-data-model.md)的實體關聯性慣例，將資源公開為與關聯相關的實體集。
 
-WCF Data Services 使用 OData 通訊協定來定址及更新資源。 如此一來，您就可以從任何支援 OData 的用戶端存取這些服務。 OData 可讓您使用已知的傳輸格式來要求和寫入資源的資料：Atom，這是一組在 AJAX 應用程式中廣泛使用的文字型資料交換格式，用來以 XML 交換和更新資料的標準，以及 JavaScript 物件標記法（JSON）。
+WCF Data Services 使用 OData 通訊協定來定址及更新資源。 如此一來，您就可以從任何支援 OData 的用戶端存取這些服務。 OData 可讓您使用已知的傳輸格式來要求和寫入資源： Atom （一組以 XML 形式交換和更新資料的標準），以及 JavaScript 物件標記法（JSON），這是在 AJAX 中廣泛使用的文字型資料交換格式應用程式.
 
 WCF Data Services 可以將源自各種來源的資料公開為 OData 摘要。 Visual Studio 工具可讓您使用 ADO.NET Entity Framework 資料模型，更輕鬆地建立以 OData 為基礎的服務。 您也可以根據 common language runtime （CLR）類別，甚至是晚期繫結或不具類型的資料來建立 OData 摘要。
 
@@ -30,7 +30,7 @@ WCF Data Services 也包含一組用戶端程式庫，一個用於一般 .NET Fr
 
 - [快速入門](quickstart-wcf-data-services.md)
 
-- [快速入門](getting-started-with-wcf-data-services.md)
+- [使用者入門](getting-started-with-wcf-data-services.md)
 
 - [Silverlight 快速入門](https://go.microsoft.com/fwlink/?LinkID=192782)
 
@@ -42,17 +42,17 @@ WCF Data Services 也包含一組用戶端程式庫，一個用於一般 .NET Fr
 
 - [如何：執行資料服務查詢](how-to-execute-data-service-queries-wcf-data-services.md)
 
-- [如何：將資料系結至 Windows Presentation Foundation 元素](bind-data-to-wpf-elements-wcf-data-services.md)
+- [如何：將資料繫結至 Windows Presentation Foundation 項目](bind-data-to-wpf-elements-wcf-data-services.md)
 
 我想要深入瞭解 OData 。
 
-- [白皮書OData 簡介](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [白皮書：OData 簡介](https://go.microsoft.com/fwlink/?LinkId=220867)
 
 - [開放式資料通訊協定網站](https://go.microsoft.com/fwlink/?LinkID=184554)
 
-- [ODataSDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [OData：SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
 
-- [OData常見問題集](https://go.microsoft.com/fwlink/?LinkId=185867)
+- [OData：常見問題集](https://go.microsoft.com/fwlink/?LinkId=185867)
 
 我想要觀賞一些影片 。
 
@@ -60,7 +60,7 @@ WCF Data Services 也包含一組用戶端程式庫，一個用於一般 .NET Fr
 
 - [WCF Data Services 開發人員視訊](https://go.microsoft.com/fwlink/?LinkId=220861)
 
-- [OData開發人員網站](https://go.microsoft.com/fwlink/?LinkId=185866)
+- [OData：開發人員網站](https://go.microsoft.com/fwlink/?LinkId=185866)
 
 我想要查看端對端範例 。
 
@@ -68,7 +68,7 @@ WCF Data Services 也包含一組用戶端程式庫，一個用於一般 .NET Fr
 
 - [MSDN 範例庫上的其他 WCF Data Services 範例](https://go.microsoft.com/fwlink/?LinkId=220866)
 
-- [ODataSDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [OData：SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
 
 如何與 Visual Studio 整合？
 
@@ -82,7 +82,7 @@ WCF Data Services 也包含一組用戶端程式庫，一個用於一般 .NET Fr
 
 - [概觀](wcf-data-services-overview.md)
 
-- [白皮書OData 簡介](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [白皮書：OData 簡介](https://go.microsoft.com/fwlink/?LinkId=220867)
 
 - [應用程式案例](application-scenarios-wcf-data-services.md)
 
@@ -112,7 +112,7 @@ WCF Data Services 也包含一組用戶端程式庫，一個用於一般 .NET Fr
 
 - [開放式資料通訊協定網站](https://go.microsoft.com/fwlink/?LinkID=184554)
 
-## <a name="in-this-section"></a>本節內容
+## <a name="in-this-section"></a>本章節內容
 
 [概觀](wcf-data-services-overview.md)
 
@@ -122,7 +122,7 @@ WCF Data Services 也包含一組用戶端程式庫，一個用於一般 .NET Fr
 
 描述 WCF Data Services 中的新功能，以及新 OData 功能的支援。
 
-[快速入門](getting-started-with-wcf-data-services.md)
+[使用者入門](getting-started-with-wcf-data-services.md)
 
 描述如何使用 WCF Data Services 公開和取用 OData 摘要。
 
@@ -134,6 +134,6 @@ WCF Data Services 也包含一組用戶端程式庫，一個用於一般 .NET Fr
 
 描述如何使用用戶端程式庫，從 .NET Framework 用戶端應用程式取用 OData 摘要。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919) (具像狀態傳輸 (REST))
