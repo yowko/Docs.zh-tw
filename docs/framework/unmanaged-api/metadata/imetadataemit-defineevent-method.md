@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cf064bac-9a9f-41c5-9e1d-108ff7af3afe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ba35cd678d88389854ca2e866020ea3a9364c923
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6966d0ad2fefd8401b19d8e8dcf7776799a066b2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777670"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432561"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent 方法
-建立事件的定義，具有指定之中繼資料簽章，並取得該事件定義語彙基元。  
+Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,42 +43,42 @@ HRESULT DefineEvent (
   
 ## <a name="parameters"></a>參數  
  `td`  
- [in]目標類別或介面之語彙基元。 這是`mdTypeDef`或`mdTypeDefNil`語彙基元。  
+ [in] The token for the target class or interface. This is either a `mdTypeDef` or `mdTypeDefNil` token.  
   
  `szEvent`  
- [in]事件的名稱。  
+ [in] The name of the event.  
   
  `dwEventFlags`  
- [in]事件的旗標。  
+ [in] Event flags.  
   
  `tkEventType`  
- [in]事件類別之語彙基元。 這是`mdTypeDef`，則`mdTypeRef`，或`mdTokenNil`語彙基元。  
+ [in] The token for the event class. This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.  
   
  `mdAddOn`  
- [in]若要訂閱事件或 null 所用的方法。  
+ [in] The method used to subscribe to the event, or null.  
   
  `mdRemoveOn`  
- [in]用來取消訂閱事件，則為 null 的方法。  
+ [in] The method used to unsubscribe to the event, or null.  
   
  `mdFire`  
- [in]（藉由衍生類別） 用來引發事件的方法。  
+ [in] The method used (by a derived class) to raise the event.  
   
  `rmdOtherMethods[]`  
- [in]如需其他方法與事件相關聯的語彙基元的陣列。 陣列結尾`mdMethodDefNil`語彙基元。  
+ [in] An array of tokens for other methods associated with the event. The array is terminated with a `mdMethodDefNil` token.  
   
  `pmdEvent`  
- [out]指派給事件的中繼資料語彙基元。  
+ [out] The metadata token assigned to the event.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MSCorEE.dll 中的資源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

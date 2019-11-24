@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 35b8f0d6-9aba-4714-adb2-62020a38fb7e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a4eaf426bc9c933de1d4b774928f2b0a54dfb472
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5936ca837c9ab452e992fcb09aacb476ab37316a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636939"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431430"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>IMetaDataTables::GetUserString 方法
 
-取得在目前範圍中的字串資料行中的指定索引處的硬式編碼的字串。
+Gets the hard-coded string at the specified index in the string column in the current scope.
 
 ## <a name="syntax"></a>語法
 
@@ -41,25 +39,25 @@ HRESULT GetUserString (
 ## <a name="parameters"></a>參數
 
 `ixUserString`\
-[in]硬式編碼的字串將擷取的索引值。
+[in] The index value from which the hard-coded string will be retrieved.
 
 `pcbData`\
-[out]大小的指標`ppData`。
+[out] A pointer to the size of `ppData`.
 
 `ppData`\
-[out]傳回的字串指標的指標。
+[out] A pointer to a pointer to the returned string.
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**標頭：** Cor.h
+**Header:** Cor.h
 
-**LIBRARY:** 做為 MsCorEE.dll 中的資源
+**Library:** Used as a resource in MsCorEE.dll
 
-**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataTables 介面](imetadatatables-interface.md)
 - [IMetaDataTables2 介面](imetadatatables2-interface.md)

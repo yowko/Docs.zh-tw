@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a8e3dd32-6a44-4371-9a74-f417b11998c8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d5b82415635980f5bd4e13e87a0a03ec5b7032bb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc1b65de026a674a3dff183050a5a205fd7052c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777334"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428003"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter 方法
-目前方法中定義的單一參數。 參數類型是來自方法的簽章中參數的位置 （序列）。  
+Defines a single parameter in the current method. The parameter type is taken from the parameter's position (sequence) within the method's signature.  
   
- 指定方法的中繼資料中定義了參數，如果您沒有使用這個方法來重新定義。 符號讀取器必須檢查符號存放區之前先檢查一般的中繼資料的參數。  
+ If parameters are defined in the metadata for a given method, you do not have to define them again by using this method. The symbol readers must check the normal metadata for the parameters before checking the symbol store.  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,32 +42,32 @@ HRESULT DefineParameter(
   
 ## <a name="parameters"></a>參數  
  `name`  
- [in]參數名稱。  
+ [in] The parameter name.  
   
  `attributes`  
- [in]參數屬性。  
+ [in] The parameter attributes.  
   
  `sequence`  
- [in]參數簽章。  
+ [in] The parameter signature.  
   
  `addrKind`  
- [in]位址類型。  
+ [in] The address type.  
   
  `addr1`  
- [in]參數規格的第一個位址。  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- [in]參數規格的第二個位址。  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- [in]參數規格的第三個位址。  
+ [in] The third address for the parameter specification.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

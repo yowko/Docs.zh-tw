@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5fee4a0-b132-4e5e-8730-e586ce314b9a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e3868b07ff01f2d1fec79537dd478a2d005f490f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6d7884e896d6a0463639e7ef08b47dced10a27f4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778777"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431382"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a>IMetaDataImport2::GetGenericParamConstraintProps 方法
-取得與指定的條件約束語彙基元所代表的泛型參數條件約束相關聯的中繼資料。  
+Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,24 +37,24 @@ HRESULT GetGenericParamConstraintProps (
   
 ## <a name="parameters"></a>參數  
  `gpc`  
- [in]泛型參數條件約束，要傳回的中繼資料語彙基元。  
+ [in] The token to the generic parameter constraint for which to return the metadata.  
   
  `ptGenericParam`  
- [out]指標，代表泛型參數受限制的權杖。  
+ [out] A pointer to the token that represents the generic parameter that is constrained.  
   
  `ptkConstraintType`  
- [out]表示條件約束的 TypeDef、 TypeRef 或 TypeSpec 語彙基元的指標`ptGenericParam`。  
+ [out] A pointer to a TypeDef, TypeRef, or TypeSpec token that represents a constraint on `ptGenericParam`.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

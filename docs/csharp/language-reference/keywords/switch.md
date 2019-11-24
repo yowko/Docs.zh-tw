@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 76c778d1e2d45990793b5d9c7d4a8ee5a99fed46
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 012fa5b4d5f39b4dfa4d1c77bc3d6fbe181e78a6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422290"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428499"
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
 
@@ -43,10 +43,10 @@ ms.locfileid: "73422290"
 
 在 C# 6 和更早坂本中，比對運算式必須是傳回下列類型之值的運算式︰
 
-- [char](char.md)。
+- [char](../builtin-types/char.md)。
 - [string](../builtin-types/reference-types.md)。
 - [bool](bool.md)。
-- 整數值，例如 [int](../builtin-types/integral-numeric-types.md) 或 [long](../builtin-types/integral-numeric-types.md)。
+- an [integral](../builtin-types/integral-numeric-types.md) value, such as an `int` or a `long`.
 - [enum](enum.md) 值。
 
 從 C# 7.0 開始，比對運算式可以是任何非 Null 運算式。
@@ -59,7 +59,7 @@ ms.locfileid: "73422290"
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-switch 陳述式中只會執行一個參數區段。 C# 不允許從某個參數區段繼續執行至另一個參數區段。 因此，下列程式碼會產生編譯器錯誤，CS0163：「控制項無法從一個 case 標籤（\<案例標籤 >）到另一個。」
+switch 陳述式中只會執行一個參數區段。 C# 不允許從某個參數區段繼續執行至另一個參數區段。 Because of this, the following code generates a compiler error, CS0163: "Control cannot fall through from one case label (\<case label>) to another."
 
 ```csharp
 switch (caseSwitch)
@@ -121,10 +121,10 @@ switch (caseSwitch)
 其中，*constant* 是用來測試的值。 *constant* 可以是下列任何常數運算式：
 
 - [bool](bool.md) 常值：`true` 或 `false`。
-- 任何整數常數，例如 [int](../builtin-types/integral-numeric-types.md)、[long](../builtin-types/integral-numeric-types.md) 或 [byte](../builtin-types/integral-numeric-types.md)。
+- Any [integral](../builtin-types/integral-numeric-types.md) constant, such as an `int`, a `long`, or a `byte`.
 - 所宣告之 `const` 變數的名稱。
 - 列舉常數。
-- [char](char.md) 常值。
+- [char](../builtin-types/char.md) 常值。
 - [string](../builtin-types/reference-types.md) 常值。
 
 常數運算式評估如下：
