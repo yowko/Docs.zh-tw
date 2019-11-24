@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 72399636-c219-4ffd-8ac8-39432c9d4641
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1b6f53d5747eca00b898b2cde66d75764ca490cf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 45593e7e30e1c8f8036489936aab3c607b01dd52
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772100"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438641"
 ---
-# <a name="icorprofilerinfosetenterleavefunctionhooks-method"></a><span data-ttu-id="5f607-102">ICorProfilerInfo::SetEnterLeaveFunctionHooks 方法</span><span class="sxs-lookup"><span data-stu-id="5f607-102">ICorProfilerInfo::SetEnterLeaveFunctionHooks Method</span></span>
-<span data-ttu-id="5f607-103">指定要呼叫 「 輸入 」、 「 保留 」 和 「 tailcall"勾點的受管理的函式的分析工具實作函式。</span><span class="sxs-lookup"><span data-stu-id="5f607-103">Specifies profiler-implemented functions to be called on "enter", "leave", and "tailcall" hooks of managed functions.</span></span>  
+# <a name="icorprofilerinfosetenterleavefunctionhooks-method"></a><span data-ttu-id="4146b-102">ICorProfilerInfo::SetEnterLeaveFunctionHooks 方法</span><span class="sxs-lookup"><span data-stu-id="4146b-102">ICorProfilerInfo::SetEnterLeaveFunctionHooks Method</span></span>
+<span data-ttu-id="4146b-103">Specifies profiler-implemented functions to be called on "enter", "leave", and "tailcall" hooks of managed functions.</span><span class="sxs-lookup"><span data-stu-id="4146b-103">Specifies profiler-implemented functions to be called on "enter", "leave", and "tailcall" hooks of managed functions.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5f607-104">語法</span><span class="sxs-lookup"><span data-stu-id="5f607-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4146b-104">語法</span><span class="sxs-lookup"><span data-stu-id="4146b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetEnterLeaveFunctionHooks(  
@@ -36,32 +34,32 @@ HRESULT SetEnterLeaveFunctionHooks(
     [in] FunctionTailcall *pFuncTailcall);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5f607-105">參數</span><span class="sxs-lookup"><span data-stu-id="5f607-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4146b-105">參數</span><span class="sxs-lookup"><span data-stu-id="4146b-105">Parameters</span></span>  
  `pFuncEnter`  
- <span data-ttu-id="5f607-106">[in]要做為實作的指標[FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)回呼。</span><span class="sxs-lookup"><span data-stu-id="5f607-106">[in] A pointer to the implementation to be used as the [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) callback.</span></span>  
+ <span data-ttu-id="4146b-106">[in] A pointer to the implementation to be used as the [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) callback.</span><span class="sxs-lookup"><span data-stu-id="4146b-106">[in] A pointer to the implementation to be used as the [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) callback.</span></span>  
   
  `pFuncLeave`  
- <span data-ttu-id="5f607-107">[in]要做為實作的指標[FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)回呼。</span><span class="sxs-lookup"><span data-stu-id="5f607-107">[in] A pointer to the implementation to be used as the [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) callback.</span></span>  
+ <span data-ttu-id="4146b-107">[in] A pointer to the implementation to be used as the [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) callback.</span><span class="sxs-lookup"><span data-stu-id="4146b-107">[in] A pointer to the implementation to be used as the [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) callback.</span></span>  
   
  `pFuncTailcall`  
- <span data-ttu-id="5f607-108">[in]要做為實作的指標[FunctionTailcall](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md)回呼。</span><span class="sxs-lookup"><span data-stu-id="5f607-108">[in] A pointer to the implementation to be used as the [FunctionTailcall](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md) callback.</span></span>  
+ <span data-ttu-id="4146b-108">[in] A pointer to the implementation to be used as the [FunctionTailcall](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md) callback.</span><span class="sxs-lookup"><span data-stu-id="4146b-108">[in] A pointer to the implementation to be used as the [FunctionTailcall](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md) callback.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5f607-109">備註</span><span class="sxs-lookup"><span data-stu-id="5f607-109">Remarks</span></span>  
- <span data-ttu-id="5f607-110">在.NET Framework 1.0 版中，每個函式指標可以是 null，以停用該對應的回呼。</span><span class="sxs-lookup"><span data-stu-id="5f607-110">In the .NET Framework version 1.0, each function pointer can be null to disable that corresponding callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4146b-109">備註</span><span class="sxs-lookup"><span data-stu-id="4146b-109">Remarks</span></span>  
+ <span data-ttu-id="4146b-110">In the .NET Framework version 1.0, each function pointer can be null to disable that corresponding callback.</span><span class="sxs-lookup"><span data-stu-id="4146b-110">In the .NET Framework version 1.0, each function pointer can be null to disable that corresponding callback.</span></span>  
   
- <span data-ttu-id="5f607-111">只有一組回呼可以作用一次。</span><span class="sxs-lookup"><span data-stu-id="5f607-111">Only one set of callbacks can be active at a time.</span></span> <span data-ttu-id="5f607-112">因此，如果程式碼剖析工具呼叫兩者`SetEnterLeaveFunctionHooks`並[ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)，然後`SetEnterLeaveFunctionHooks2`會優先使用。</span><span class="sxs-lookup"><span data-stu-id="5f607-112">Thus, if a profiler calls both `SetEnterLeaveFunctionHooks` and [ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md), then `SetEnterLeaveFunctionHooks2` takes precedence.</span></span>  
+ <span data-ttu-id="4146b-111">Only one set of callbacks can be active at a time.</span><span class="sxs-lookup"><span data-stu-id="4146b-111">Only one set of callbacks can be active at a time.</span></span> <span data-ttu-id="4146b-112">Thus, if a profiler calls both `SetEnterLeaveFunctionHooks` and [ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md), then `SetEnterLeaveFunctionHooks2` takes precedence.</span><span class="sxs-lookup"><span data-stu-id="4146b-112">Thus, if a profiler calls both `SetEnterLeaveFunctionHooks` and [ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md), then `SetEnterLeaveFunctionHooks2` takes precedence.</span></span>  
   
- <span data-ttu-id="5f607-113">`SetEnterLeaveFunctionHooks`方法可以只從分析工具的呼叫[icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)回呼。</span><span class="sxs-lookup"><span data-stu-id="5f607-113">The `SetEnterLeaveFunctionHooks` method can be called only from the profiler's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.</span></span>  
+ <span data-ttu-id="4146b-113">The `SetEnterLeaveFunctionHooks` method can be called only from the profiler's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.</span><span class="sxs-lookup"><span data-stu-id="4146b-113">The `SetEnterLeaveFunctionHooks` method can be called only from the profiler's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5f607-114">需求</span><span class="sxs-lookup"><span data-stu-id="5f607-114">Requirements</span></span>  
- <span data-ttu-id="5f607-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5f607-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4146b-114">需求</span><span class="sxs-lookup"><span data-stu-id="4146b-114">Requirements</span></span>  
+ <span data-ttu-id="4146b-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4146b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5f607-116">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5f607-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="4146b-116">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4146b-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="5f607-117">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5f607-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4146b-117">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4146b-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5f607-118">**.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5f607-118">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="4146b-118">**.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4146b-118">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5f607-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5f607-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4146b-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="4146b-119">See also</span></span>
 
-- [<span data-ttu-id="5f607-120">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="5f607-120">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="4146b-120">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="4146b-120">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

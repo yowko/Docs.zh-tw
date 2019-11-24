@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4a3e43ed-3ee3-4395-ab14-f78b903be13e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f72984da8f75eec35517da6ec1f8a73bc96c4609
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fdfba34f35e40b2a50dbc4edc5b6b6c45f17194f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780811"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442878"
 ---
-# <a name="icorprofilerinfo4getobjectsize2-method"></a><span data-ttu-id="8b3d9-102">ICorProfilerInfo4::GetObjectSize2 方法</span><span class="sxs-lookup"><span data-stu-id="8b3d9-102">ICorProfilerInfo4::GetObjectSize2 Method</span></span>
-<span data-ttu-id="8b3d9-103">傳回指定之物件的大小。</span><span class="sxs-lookup"><span data-stu-id="8b3d9-103">Returns the size of a specified object.</span></span> <span data-ttu-id="8b3d9-104">會取代[icorprofilerinfo:: Getobjectsize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md)方法所報告的大於中能表示的物件大小`ULONG`。</span><span class="sxs-lookup"><span data-stu-id="8b3d9-104">Replaces the [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) method by reporting sizes of objects that are larger than what can be expressed in a `ULONG`.</span></span>  
+# <a name="icorprofilerinfo4getobjectsize2-method"></a><span data-ttu-id="fc4fb-102">ICorProfilerInfo4::GetObjectSize2 方法</span><span class="sxs-lookup"><span data-stu-id="fc4fb-102">ICorProfilerInfo4::GetObjectSize2 Method</span></span>
+<span data-ttu-id="fc4fb-103">Returns the size of a specified object.</span><span class="sxs-lookup"><span data-stu-id="fc4fb-103">Returns the size of a specified object.</span></span> <span data-ttu-id="fc4fb-104">Replaces the [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) method by reporting sizes of objects that are larger than what can be expressed in a `ULONG`.</span><span class="sxs-lookup"><span data-stu-id="fc4fb-104">Replaces the [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) method by reporting sizes of objects that are larger than what can be expressed in a `ULONG`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8b3d9-105">語法</span><span class="sxs-lookup"><span data-stu-id="8b3d9-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fc4fb-105">語法</span><span class="sxs-lookup"><span data-stu-id="fc4fb-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetObjectSize2(  
@@ -35,25 +33,25 @@ HRESULT GetObjectSize2(
     [out] SIZE_T *pcSize);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8b3d9-106">參數</span><span class="sxs-lookup"><span data-stu-id="8b3d9-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fc4fb-106">參數</span><span class="sxs-lookup"><span data-stu-id="fc4fb-106">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="8b3d9-107">[in]物件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="8b3d9-107">[in] The ID of the object.</span></span>  
+ <span data-ttu-id="fc4fb-107">[in] The ID of the object.</span><span class="sxs-lookup"><span data-stu-id="fc4fb-107">[in] The ID of the object.</span></span>  
   
  `pcSize`  
- <span data-ttu-id="8b3d9-108">[out]物件的大小，以位元組為單位的指標。</span><span class="sxs-lookup"><span data-stu-id="8b3d9-108">[out] A pointer to the object's size, in bytes.</span></span>  
+ <span data-ttu-id="fc4fb-108">[out] A pointer to the object's size, in bytes.</span><span class="sxs-lookup"><span data-stu-id="fc4fb-108">[out] A pointer to the object's size, in bytes.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8b3d9-109">備註</span><span class="sxs-lookup"><span data-stu-id="8b3d9-109">Remarks</span></span>  
- <span data-ttu-id="8b3d9-110">不同的物件相同的類型通常會有相同的大小。</span><span class="sxs-lookup"><span data-stu-id="8b3d9-110">Different objects of the same types often have the same size.</span></span> <span data-ttu-id="8b3d9-111">不過，某些類型，例如陣列或字串，可能會有不同的大小，為每個物件。</span><span class="sxs-lookup"><span data-stu-id="8b3d9-111">However, some types, such as arrays or strings, may have a different size for each object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fc4fb-109">備註</span><span class="sxs-lookup"><span data-stu-id="fc4fb-109">Remarks</span></span>  
+ <span data-ttu-id="fc4fb-110">Different objects of the same types often have the same size.</span><span class="sxs-lookup"><span data-stu-id="fc4fb-110">Different objects of the same types often have the same size.</span></span> <span data-ttu-id="fc4fb-111">However, some types, such as arrays or strings, may have a different size for each object.</span><span class="sxs-lookup"><span data-stu-id="fc4fb-111">However, some types, such as arrays or strings, may have a different size for each object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8b3d9-112">需求</span><span class="sxs-lookup"><span data-stu-id="8b3d9-112">Requirements</span></span>  
- <span data-ttu-id="8b3d9-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8b3d9-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fc4fb-112">需求</span><span class="sxs-lookup"><span data-stu-id="fc4fb-112">Requirements</span></span>  
+ <span data-ttu-id="fc4fb-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fc4fb-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8b3d9-114">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8b3d9-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="fc4fb-114">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="fc4fb-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="8b3d9-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8b3d9-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fc4fb-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fc4fb-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8b3d9-116">**.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b3d9-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="fc4fb-116">**.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fc4fb-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8b3d9-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8b3d9-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fc4fb-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="fc4fb-117">See also</span></span>
 
-- [<span data-ttu-id="8b3d9-118">ICorProfilerInfo4 介面</span><span class="sxs-lookup"><span data-stu-id="8b3d9-118">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [<span data-ttu-id="fc4fb-118">ICorProfilerInfo4 介面</span><span class="sxs-lookup"><span data-stu-id="fc4fb-118">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6dc37f9d-87ee-4cb3-9216-ced600184ce8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 93ca394eb877a86e4242d5f9f18eb26f5628db7e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 501199bedec3b7a65d95c80cdef178831a65fd01
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751083"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428413"
 ---
-# <a name="imetadataemitsetfieldrva-method"></a><span data-ttu-id="eb108-102">IMetaDataEmit::SetFieldRVA 方法</span><span class="sxs-lookup"><span data-stu-id="eb108-102">IMetaDataEmit::SetFieldRVA Method</span></span>
-<span data-ttu-id="eb108-103">設定全域變數的值，指定語彙基元所參考之欄位的相對虛擬位址。</span><span class="sxs-lookup"><span data-stu-id="eb108-103">Sets a global variable value for the relative virtual address of the field referenced by the specified token.</span></span>  
+# <a name="imetadataemitsetfieldrva-method"></a><span data-ttu-id="e77be-102">IMetaDataEmit::SetFieldRVA 方法</span><span class="sxs-lookup"><span data-stu-id="e77be-102">IMetaDataEmit::SetFieldRVA Method</span></span>
+<span data-ttu-id="e77be-103">Sets a global variable value for the relative virtual address of the field referenced by the specified token.</span><span class="sxs-lookup"><span data-stu-id="e77be-103">Sets a global variable value for the relative virtual address of the field referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eb108-104">語法</span><span class="sxs-lookup"><span data-stu-id="eb108-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e77be-104">語法</span><span class="sxs-lookup"><span data-stu-id="e77be-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetFieldRVA (   
@@ -36,23 +34,23 @@ HRESULT SetFieldRVA (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="eb108-105">參數</span><span class="sxs-lookup"><span data-stu-id="eb108-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e77be-105">參數</span><span class="sxs-lookup"><span data-stu-id="e77be-105">Parameters</span></span>  
  `fd`  
- <span data-ttu-id="eb108-106">[in]目標欄位的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="eb108-106">[in] The token for the target field.</span></span>  
+ <span data-ttu-id="e77be-106">[in] The token for the target field.</span><span class="sxs-lookup"><span data-stu-id="e77be-106">[in] The token for the target field.</span></span>  
   
  `ulRVA`  
- <span data-ttu-id="eb108-107">[in]程式碼或資料區域的位址。</span><span class="sxs-lookup"><span data-stu-id="eb108-107">[in] The address of a code or data area.</span></span>  
+ <span data-ttu-id="e77be-107">[in] The address of a code or data area.</span><span class="sxs-lookup"><span data-stu-id="e77be-107">[in] The address of a code or data area.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eb108-108">需求</span><span class="sxs-lookup"><span data-stu-id="eb108-108">Requirements</span></span>  
- <span data-ttu-id="eb108-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="eb108-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e77be-108">需求</span><span class="sxs-lookup"><span data-stu-id="e77be-108">Requirements</span></span>  
+ <span data-ttu-id="e77be-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e77be-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eb108-110">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="eb108-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e77be-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e77be-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="eb108-111">**LIBRARY:** 做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="eb108-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e77be-111">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e77be-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="eb108-112">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb108-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e77be-112">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e77be-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb108-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="eb108-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e77be-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="e77be-113">See also</span></span>
 
-- [<span data-ttu-id="eb108-114">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="eb108-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="eb108-115">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="eb108-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="e77be-114">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="e77be-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="e77be-115">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="e77be-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

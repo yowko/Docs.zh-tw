@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fcf32c4b27324ccc54eabbb248e8c9906cf693b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc5bbba2fa4a95955e52a2e083a2097178b5d96a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782353"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437513"
 ---
-# <a name="imetadataimportgetmemberprops-method"></a><span data-ttu-id="698d3-102">IMetaDataImport::GetMemberProps 方法</span><span class="sxs-lookup"><span data-stu-id="698d3-102">IMetaDataImport::GetMemberProps Method</span></span>
-<span data-ttu-id="698d3-103">取得儲存在指定的成員定義，包括名稱、 二進位簽章和相對虛擬位址的中繼資料中的資訊<xref:System.Type>指定之中繼資料語彙基元所參考的成員。</span><span class="sxs-lookup"><span data-stu-id="698d3-103">Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token.</span></span> <span data-ttu-id="698d3-104">這是一個簡單的 helper 方法： 如果*mb*就的 MethodDef **GetMethodProps**呼叫; 如果*mb*就的 fielddef 語彙**GetFieldProps**會呼叫。</span><span class="sxs-lookup"><span data-stu-id="698d3-104">This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called.</span></span> <span data-ttu-id="698d3-105">請參閱這些其他方法，如需詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="698d3-105">See these other methods for details.</span></span> 
+# <a name="imetadataimportgetmemberprops-method"></a><span data-ttu-id="80a6b-102">IMetaDataImport::GetMemberProps 方法</span><span class="sxs-lookup"><span data-stu-id="80a6b-102">IMetaDataImport::GetMemberProps Method</span></span>
+<span data-ttu-id="80a6b-103">Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token.</span><span class="sxs-lookup"><span data-stu-id="80a6b-103">Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token.</span></span> <span data-ttu-id="80a6b-104">This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called.</span><span class="sxs-lookup"><span data-stu-id="80a6b-104">This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called.</span></span> <span data-ttu-id="80a6b-105">See these other methods for details.</span><span class="sxs-lookup"><span data-stu-id="80a6b-105">See these other methods for details.</span></span> 
   
-## <a name="syntax"></a><span data-ttu-id="698d3-106">語法</span><span class="sxs-lookup"><span data-stu-id="698d3-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80a6b-106">語法</span><span class="sxs-lookup"><span data-stu-id="80a6b-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMemberProps (  
@@ -47,56 +45,56 @@ HRESULT GetMemberProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="698d3-107">參數</span><span class="sxs-lookup"><span data-stu-id="698d3-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="80a6b-107">參數</span><span class="sxs-lookup"><span data-stu-id="80a6b-107">Parameters</span></span>  
  `mb`  
- <span data-ttu-id="698d3-108">[in]參考的成員，以取得相關聯中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="698d3-108">[in] The token that references the member to get the associated metadata for.</span></span>  
+ <span data-ttu-id="80a6b-108">[in] The token that references the member to get the associated metadata for.</span><span class="sxs-lookup"><span data-stu-id="80a6b-108">[in] The token that references the member to get the associated metadata for.</span></span>  
   
  `pClass`  
- <span data-ttu-id="698d3-109">[out]表示的類別成員的中繼資料語彙基元指標。</span><span class="sxs-lookup"><span data-stu-id="698d3-109">[out] A pointer to the metadata token that represents the class of the member.</span></span>  
+ <span data-ttu-id="80a6b-109">[out] A pointer to the metadata token that represents the class of the member.</span><span class="sxs-lookup"><span data-stu-id="80a6b-109">[out] A pointer to the metadata token that represents the class of the member.</span></span>  
   
  `szMember`  
- <span data-ttu-id="698d3-110">[out]成員的名稱。</span><span class="sxs-lookup"><span data-stu-id="698d3-110">[out] The name of the member.</span></span>  
+ <span data-ttu-id="80a6b-110">[out] The name of the member.</span><span class="sxs-lookup"><span data-stu-id="80a6b-110">[out] The name of the member.</span></span>  
   
  `cchMember`  
- <span data-ttu-id="698d3-111">[in]寬字元大小`szMember`緩衝區。</span><span class="sxs-lookup"><span data-stu-id="698d3-111">[in] The size in wide characters of the `szMember` buffer.</span></span>  
+ <span data-ttu-id="80a6b-111">[in] The size in wide characters of the `szMember` buffer.</span><span class="sxs-lookup"><span data-stu-id="80a6b-111">[in] The size in wide characters of the `szMember` buffer.</span></span>  
   
  `pchMember`  
- <span data-ttu-id="698d3-112">[out]寬字元，傳回的檔案名稱的大小。</span><span class="sxs-lookup"><span data-stu-id="698d3-112">[out] The size in wide characters of the returned name.</span></span>  
+ <span data-ttu-id="80a6b-112">[out] The size in wide characters of the returned name.</span><span class="sxs-lookup"><span data-stu-id="80a6b-112">[out] The size in wide characters of the returned name.</span></span>  
   
  `pdwAttr`  
- <span data-ttu-id="698d3-113">[out]任何旗標套用至成員的值。</span><span class="sxs-lookup"><span data-stu-id="698d3-113">[out] Any flag values applied to the member.</span></span>  
+ <span data-ttu-id="80a6b-113">[out] Any flag values applied to the member.</span><span class="sxs-lookup"><span data-stu-id="80a6b-113">[out] Any flag values applied to the member.</span></span>  
   
  `ppvSigBlob`  
- <span data-ttu-id="698d3-114">[out]二進位中繼資料簽章的成員指標。</span><span class="sxs-lookup"><span data-stu-id="698d3-114">[out] A pointer to the binary metadata signature of the member.</span></span>  
+ <span data-ttu-id="80a6b-114">[out] A pointer to the binary metadata signature of the member.</span><span class="sxs-lookup"><span data-stu-id="80a6b-114">[out] A pointer to the binary metadata signature of the member.</span></span>  
   
  `pcbSigBlob`  
- <span data-ttu-id="698d3-115">[out]以位元組為單位的大小`ppvSigBlob`。</span><span class="sxs-lookup"><span data-stu-id="698d3-115">[out] The size in bytes of `ppvSigBlob`.</span></span>  
+ <span data-ttu-id="80a6b-115">[out] The size in bytes of `ppvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="80a6b-115">[out] The size in bytes of `ppvSigBlob`.</span></span>  
   
  `pulCodeRVA`  
- <span data-ttu-id="698d3-116">[out]成員的相對虛擬位址指標。</span><span class="sxs-lookup"><span data-stu-id="698d3-116">[out] A pointer to the relative virtual address of the member.</span></span>  
+ <span data-ttu-id="80a6b-116">[out] A pointer to the relative virtual address of the member.</span><span class="sxs-lookup"><span data-stu-id="80a6b-116">[out] A pointer to the relative virtual address of the member.</span></span>  
   
  `pdwImplFlags`  
- <span data-ttu-id="698d3-117">[out]成員相關聯任何方法實作旗標。</span><span class="sxs-lookup"><span data-stu-id="698d3-117">[out] Any method implementation flags associated with the member.</span></span>  
+ <span data-ttu-id="80a6b-117">[out] Any method implementation flags associated with the member.</span><span class="sxs-lookup"><span data-stu-id="80a6b-117">[out] Any method implementation flags associated with the member.</span></span>  
   
  `pdwCPlusTypeFlag`  
- <span data-ttu-id="698d3-118">[out]標示旗標<xref:System.ValueType>。</span><span class="sxs-lookup"><span data-stu-id="698d3-118">[out] A flag that marks a <xref:System.ValueType>.</span></span> <span data-ttu-id="698d3-119">它是其中一個`ELEMENT_TYPE_*`值。</span><span class="sxs-lookup"><span data-stu-id="698d3-119">It is one of the `ELEMENT_TYPE_*` values.</span></span>
+ <span data-ttu-id="80a6b-118">[out] A flag that marks a <xref:System.ValueType>.</span><span class="sxs-lookup"><span data-stu-id="80a6b-118">[out] A flag that marks a <xref:System.ValueType>.</span></span> <span data-ttu-id="80a6b-119">It is one of the `ELEMENT_TYPE_*` values.</span><span class="sxs-lookup"><span data-stu-id="80a6b-119">It is one of the `ELEMENT_TYPE_*` values.</span></span>
   
  `ppValue`  
- <span data-ttu-id="698d3-120">[out]常數字串值，這個成員所傳回。</span><span class="sxs-lookup"><span data-stu-id="698d3-120">[out] A constant string value returned by this member.</span></span>  
+ <span data-ttu-id="80a6b-120">[out] A constant string value returned by this member.</span><span class="sxs-lookup"><span data-stu-id="80a6b-120">[out] A constant string value returned by this member.</span></span>  
   
  `pcchValue`  
- <span data-ttu-id="698d3-121">[out]以字元為單位的大小`ppValue`，或零，如果`ppValue`不會保留為字串。</span><span class="sxs-lookup"><span data-stu-id="698d3-121">[out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.</span></span>  
+ <span data-ttu-id="80a6b-121">[out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.</span><span class="sxs-lookup"><span data-stu-id="80a6b-121">[out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="698d3-122">需求</span><span class="sxs-lookup"><span data-stu-id="698d3-122">Requirements</span></span>  
- <span data-ttu-id="698d3-123">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="698d3-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80a6b-122">需求</span><span class="sxs-lookup"><span data-stu-id="80a6b-122">Requirements</span></span>  
+ <span data-ttu-id="80a6b-123">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="80a6b-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="698d3-124">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="698d3-124">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="80a6b-124">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="80a6b-124">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="698d3-125">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="698d3-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="80a6b-125">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="80a6b-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="698d3-126">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="698d3-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="80a6b-126">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80a6b-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="698d3-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="698d3-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="80a6b-127">請參閱</span><span class="sxs-lookup"><span data-stu-id="80a6b-127">See also</span></span>
 
-- [<span data-ttu-id="698d3-128">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="698d3-128">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="698d3-129">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="698d3-129">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="80a6b-128">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="80a6b-128">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="80a6b-129">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="80a6b-129">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

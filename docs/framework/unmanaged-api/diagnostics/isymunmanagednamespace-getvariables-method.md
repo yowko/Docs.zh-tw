@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ea7c1617-f3ce-4220-8288-f2b50eaf0f0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 813f57377c1885b09190ada3c73f4391a3f2d931
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 98ed5556020b93fb1f31d1dde84690fc33092627
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895057"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448369"
 ---
-# <a name="isymunmanagednamespacegetvariables-method"></a><span data-ttu-id="37b88-102">ISymUnmanagedNamespace::GetVariables 方法</span><span class="sxs-lookup"><span data-stu-id="37b88-102">ISymUnmanagedNamespace::GetVariables Method</span></span>
-<span data-ttu-id="37b88-103">傳回在此命名空間內全域範圍中定義的所有變數。</span><span class="sxs-lookup"><span data-stu-id="37b88-103">Returns all variables defined at global scope within this namespace.</span></span>  
+# <a name="isymunmanagednamespacegetvariables-method"></a><span data-ttu-id="ba3d8-102">ISymUnmanagedNamespace::GetVariables 方法</span><span class="sxs-lookup"><span data-stu-id="ba3d8-102">ISymUnmanagedNamespace::GetVariables Method</span></span>
+<span data-ttu-id="ba3d8-103">Returns all variables defined at global scope within this namespace.</span><span class="sxs-lookup"><span data-stu-id="ba3d8-103">Returns all variables defined at global scope within this namespace.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37b88-104">語法</span><span class="sxs-lookup"><span data-stu-id="37b88-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba3d8-104">語法</span><span class="sxs-lookup"><span data-stu-id="ba3d8-104">Syntax</span></span>  
   
 ```cpp
 HRESULT GetVariables(  
@@ -37,22 +35,22 @@ HRESULT GetVariables(
         ISymUnmanagedVariable *pVars[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="37b88-105">參數</span><span class="sxs-lookup"><span data-stu-id="37b88-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ba3d8-105">參數</span><span class="sxs-lookup"><span data-stu-id="ba3d8-105">Parameters</span></span>  
  `cVars`  
- <span data-ttu-id="37b88-106">在，指出`pVars`陣列的大小。 `ULONG32`</span><span class="sxs-lookup"><span data-stu-id="37b88-106">[in] A `ULONG32` that indicates the size of the `pVars` array.</span></span>  
+ <span data-ttu-id="ba3d8-106">[in] A `ULONG32` that indicates the size of the `pVars` array.</span><span class="sxs-lookup"><span data-stu-id="ba3d8-106">[in] A `ULONG32` that indicates the size of the `pVars` array.</span></span>  
   
  `pcVars`  
- <span data-ttu-id="37b88-107">脫銷的指標`ULONG32` ，接收包含命名空間所需的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="37b88-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
+ <span data-ttu-id="ba3d8-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span><span class="sxs-lookup"><span data-stu-id="ba3d8-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
   
  `pVars`  
- <span data-ttu-id="37b88-108">脫銷包含命名空間之緩衝區的指標。</span><span class="sxs-lookup"><span data-stu-id="37b88-108">[out] A pointer to a buffer that contains the namespaces.</span></span>  
+ <span data-ttu-id="ba3d8-108">[out] A pointer to a buffer that contains the namespaces.</span><span class="sxs-lookup"><span data-stu-id="ba3d8-108">[out] A pointer to a buffer that contains the namespaces.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="37b88-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="37b88-109">Return Value</span></span>  
- <span data-ttu-id="37b88-110">如果方法成功，則為 S_OK;否則，E_FAIL 或其他錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="37b88-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ba3d8-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="ba3d8-109">Return Value</span></span>  
+ <span data-ttu-id="ba3d8-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="ba3d8-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="37b88-111">需求</span><span class="sxs-lookup"><span data-stu-id="37b88-111">Requirements</span></span>  
- <span data-ttu-id="37b88-112">**標頭：** CorSym .idl，CorSym。h</span><span class="sxs-lookup"><span data-stu-id="37b88-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ba3d8-111">需求</span><span class="sxs-lookup"><span data-stu-id="ba3d8-111">Requirements</span></span>  
+ <span data-ttu-id="ba3d8-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ba3d8-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37b88-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="37b88-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba3d8-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="ba3d8-113">See also</span></span>
 
-- [<span data-ttu-id="37b88-114">ISymUnmanagedNamespace 介面</span><span class="sxs-lookup"><span data-stu-id="37b88-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [<span data-ttu-id="ba3d8-114">ISymUnmanagedNamespace 介面</span><span class="sxs-lookup"><span data-stu-id="ba3d8-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 308183ee-fd44-4432-9d86-ef00d181b49b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d500584afd608f79e41e932be259d29ae51db2db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c9f667edf30feb23e1cdaa28950503283fce42e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781575"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445220"
 ---
-# <a name="imetadataimport2getversionstring-method"></a><span data-ttu-id="d6e47-102">IMetaDataImport2::GetVersionString 方法</span><span class="sxs-lookup"><span data-stu-id="d6e47-102">IMetaDataImport2::GetVersionString Method</span></span>
-<span data-ttu-id="d6e47-103">取得執行階段用來建置組件的版本號碼。</span><span class="sxs-lookup"><span data-stu-id="d6e47-103">Gets the version number of the runtime that was used to build the assembly.</span></span>  
+# <a name="imetadataimport2getversionstring-method"></a><span data-ttu-id="eab24-102">IMetaDataImport2::GetVersionString 方法</span><span class="sxs-lookup"><span data-stu-id="eab24-102">IMetaDataImport2::GetVersionString Method</span></span>
+<span data-ttu-id="eab24-103">Gets the version number of the runtime that was used to build the assembly.</span><span class="sxs-lookup"><span data-stu-id="eab24-103">Gets the version number of the runtime that was used to build the assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d6e47-104">語法</span><span class="sxs-lookup"><span data-stu-id="d6e47-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eab24-104">語法</span><span class="sxs-lookup"><span data-stu-id="eab24-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetVersionString (  
@@ -37,29 +35,29 @@ HRESULT GetVersionString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d6e47-105">參數</span><span class="sxs-lookup"><span data-stu-id="d6e47-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eab24-105">參數</span><span class="sxs-lookup"><span data-stu-id="eab24-105">Parameters</span></span>  
  `pwzBuf`  
- <span data-ttu-id="d6e47-106">[out]將指定版本的字串陣列。</span><span class="sxs-lookup"><span data-stu-id="d6e47-106">[out] An array to store the string that specifies the version.</span></span>  
+ <span data-ttu-id="eab24-106">[out] An array to store the string that specifies the version.</span><span class="sxs-lookup"><span data-stu-id="eab24-106">[out] An array to store the string that specifies the version.</span></span>  
   
  `ccBufSize`  
- <span data-ttu-id="d6e47-107">[in]大小，以寬字元為單位的`pwzBuf`陣列。</span><span class="sxs-lookup"><span data-stu-id="d6e47-107">[in] The size, in wide characters, of the `pwzBuf` array.</span></span>  
+ <span data-ttu-id="eab24-107">[in] The size, in wide characters, of the `pwzBuf` array.</span><span class="sxs-lookup"><span data-stu-id="eab24-107">[in] The size, in wide characters, of the `pwzBuf` array.</span></span>  
   
  `pccBufSize`  
- <span data-ttu-id="d6e47-108">[out]中的寬字元數目，包括 null 結束字元，傳回`pwzBuf`陣列。</span><span class="sxs-lookup"><span data-stu-id="d6e47-108">[out] The number of wide characters, including a null terminator, returned in the `pwzBuf` array.</span></span>  
+ <span data-ttu-id="eab24-108">[out] The number of wide characters, including a null terminator, returned in the `pwzBuf` array.</span><span class="sxs-lookup"><span data-stu-id="eab24-108">[out] The number of wide characters, including a null terminator, returned in the `pwzBuf` array.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d6e47-109">備註</span><span class="sxs-lookup"><span data-stu-id="d6e47-109">Remarks</span></span>  
- <span data-ttu-id="d6e47-110">`GetVersionString`方法會取得目前的中繼資料範圍的內建的版本。</span><span class="sxs-lookup"><span data-stu-id="d6e47-110">The `GetVersionString` method gets the built-for version of the current metadata scope.</span></span> <span data-ttu-id="d6e47-111">如果未曾儲存範圍，不會有內建的版本中，並會傳回空字串。</span><span class="sxs-lookup"><span data-stu-id="d6e47-111">If the scope has never been saved, it will not have a built-for version, and an empty string will be returned.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="eab24-109">備註</span><span class="sxs-lookup"><span data-stu-id="eab24-109">Remarks</span></span>  
+ <span data-ttu-id="eab24-110">The `GetVersionString` method gets the built-for version of the current metadata scope.</span><span class="sxs-lookup"><span data-stu-id="eab24-110">The `GetVersionString` method gets the built-for version of the current metadata scope.</span></span> <span data-ttu-id="eab24-111">If the scope has never been saved, it will not have a built-for version, and an empty string will be returned.</span><span class="sxs-lookup"><span data-stu-id="eab24-111">If the scope has never been saved, it will not have a built-for version, and an empty string will be returned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d6e47-112">需求</span><span class="sxs-lookup"><span data-stu-id="d6e47-112">Requirements</span></span>  
- <span data-ttu-id="d6e47-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d6e47-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eab24-112">需求</span><span class="sxs-lookup"><span data-stu-id="eab24-112">Requirements</span></span>  
+ <span data-ttu-id="eab24-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="eab24-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d6e47-114">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d6e47-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="eab24-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="eab24-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d6e47-115">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="d6e47-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="eab24-115">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="eab24-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d6e47-116">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d6e47-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="eab24-116">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eab24-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6e47-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d6e47-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eab24-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="eab24-117">See also</span></span>
 
-- [<span data-ttu-id="d6e47-118">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="d6e47-118">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [<span data-ttu-id="d6e47-119">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="d6e47-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="eab24-118">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="eab24-118">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="eab24-119">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="eab24-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

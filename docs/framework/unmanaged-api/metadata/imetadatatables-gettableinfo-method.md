@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 50cbe557-2322-41aa-8e0d-f967602eaa0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4844834232e34ab5dacfa34e7aa5d204ee344612
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 662b628f3cc6d2d7138f56820beaccee9c5d9e81
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781364"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426666"
 ---
-# <a name="imetadatatablesgettableinfo-method"></a><span data-ttu-id="dd2d6-102">IMetaDataTables::GetTableInfo 方法</span><span class="sxs-lookup"><span data-stu-id="dd2d6-102">IMetaDataTables::GetTableInfo Method</span></span>
-<span data-ttu-id="dd2d6-103">取得名稱、 資料列大小、 資料列數目、 資料行數與指定之資料表的索引鍵資料行索引。</span><span class="sxs-lookup"><span data-stu-id="dd2d6-103">Gets the name, row size, number of rows, number of columns, and key column index of the specified table.</span></span>  
+# <a name="imetadatatablesgettableinfo-method"></a><span data-ttu-id="a707f-102">IMetaDataTables::GetTableInfo 方法</span><span class="sxs-lookup"><span data-stu-id="a707f-102">IMetaDataTables::GetTableInfo Method</span></span>
+<span data-ttu-id="a707f-103">Gets the name, row size, number of rows, number of columns, and key column index of the specified table.</span><span class="sxs-lookup"><span data-stu-id="a707f-103">Gets the name, row size, number of rows, number of columns, and key column index of the specified table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dd2d6-104">語法</span><span class="sxs-lookup"><span data-stu-id="dd2d6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a707f-104">語法</span><span class="sxs-lookup"><span data-stu-id="a707f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTableInfo (  
@@ -40,35 +38,35 @@ HRESULT GetTableInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dd2d6-105">參數</span><span class="sxs-lookup"><span data-stu-id="dd2d6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a707f-105">參數</span><span class="sxs-lookup"><span data-stu-id="a707f-105">Parameters</span></span>  
  `ixTbl`  
- <span data-ttu-id="dd2d6-106">[in]資料表的識別碼傳回其屬性。</span><span class="sxs-lookup"><span data-stu-id="dd2d6-106">[in] The identifier of the table whose properties to return.</span></span>  
+ <span data-ttu-id="a707f-106">[in] The identifier of the table whose properties to return.</span><span class="sxs-lookup"><span data-stu-id="a707f-106">[in] The identifier of the table whose properties to return.</span></span>  
   
  `pcbRow`  
- <span data-ttu-id="dd2d6-107">[out]大小 （位元組），資料表資料列的指標。</span><span class="sxs-lookup"><span data-stu-id="dd2d6-107">[out] A pointer to the size, in bytes, of a table row.</span></span>  
+ <span data-ttu-id="a707f-107">[out] A pointer to the size, in bytes, of a table row.</span><span class="sxs-lookup"><span data-stu-id="a707f-107">[out] A pointer to the size, in bytes, of a table row.</span></span>  
   
  `pcRows`  
- <span data-ttu-id="dd2d6-108">[out]在資料表中的資料列數目指標。</span><span class="sxs-lookup"><span data-stu-id="dd2d6-108">[out] A pointer to the number of rows in the table.</span></span>  
+ <span data-ttu-id="a707f-108">[out] A pointer to the number of rows in the table.</span><span class="sxs-lookup"><span data-stu-id="a707f-108">[out] A pointer to the number of rows in the table.</span></span>  
   
  `pcCols`  
- <span data-ttu-id="dd2d6-109">[out]在資料表中的資料行數目指標。</span><span class="sxs-lookup"><span data-stu-id="dd2d6-109">[out] A pointer to the number of columns in the table.</span></span>  
+ <span data-ttu-id="a707f-109">[out] A pointer to the number of columns in the table.</span><span class="sxs-lookup"><span data-stu-id="a707f-109">[out] A pointer to the number of columns in the table.</span></span>  
   
  `piKey`  
- <span data-ttu-id="dd2d6-110">[out]索引鍵資料行或-1，如果資料表沒有索引鍵資料行的索引指標。</span><span class="sxs-lookup"><span data-stu-id="dd2d6-110">[out] A pointer to the index of the key column, or -1 if the table has no key column.</span></span>  
+ <span data-ttu-id="a707f-110">[out] A pointer to the index of the key column, or -1 if the table has no key column.</span><span class="sxs-lookup"><span data-stu-id="a707f-110">[out] A pointer to the index of the key column, or -1 if the table has no key column.</span></span>  
   
  `ppName`  
- <span data-ttu-id="dd2d6-111">[out]指向資料表名稱的指標。</span><span class="sxs-lookup"><span data-stu-id="dd2d6-111">[out] A pointer to a pointer to the table name.</span></span>  
+ <span data-ttu-id="a707f-111">[out] A pointer to a pointer to the table name.</span><span class="sxs-lookup"><span data-stu-id="a707f-111">[out] A pointer to a pointer to the table name.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dd2d6-112">需求</span><span class="sxs-lookup"><span data-stu-id="dd2d6-112">Requirements</span></span>  
- <span data-ttu-id="dd2d6-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dd2d6-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a707f-112">需求</span><span class="sxs-lookup"><span data-stu-id="a707f-112">Requirements</span></span>  
+ <span data-ttu-id="a707f-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a707f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dd2d6-114">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="dd2d6-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a707f-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a707f-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="dd2d6-115">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="dd2d6-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a707f-115">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a707f-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="dd2d6-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dd2d6-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a707f-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a707f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd2d6-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dd2d6-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a707f-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="a707f-117">See also</span></span>
 
-- [<span data-ttu-id="dd2d6-118">IMetaDataTables 介面</span><span class="sxs-lookup"><span data-stu-id="dd2d6-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="dd2d6-119">IMetaDataTables2 介面</span><span class="sxs-lookup"><span data-stu-id="dd2d6-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="a707f-118">IMetaDataTables 介面</span><span class="sxs-lookup"><span data-stu-id="a707f-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="a707f-119">IMetaDataTables2 介面</span><span class="sxs-lookup"><span data-stu-id="a707f-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

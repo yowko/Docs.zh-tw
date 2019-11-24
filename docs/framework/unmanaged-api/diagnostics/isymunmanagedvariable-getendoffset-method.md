@@ -15,36 +15,34 @@ helpviewer_keywords:
 ms.assetid: e5d777c5-d450-4c0f-999c-b3953ee22cfb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2ef32a963b73f2109b9747ef303e8ccd6a729838
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4ac1fc0b3567c49dfb36d2886926bee72d62a8dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778269"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446073"
 ---
-# <a name="isymunmanagedvariablegetendoffset-method"></a><span data-ttu-id="57faa-102">ISymUnmanagedVariable::GetEndOffset 方法</span><span class="sxs-lookup"><span data-stu-id="57faa-102">ISymUnmanagedVariable::GetEndOffset Method</span></span>
-<span data-ttu-id="57faa-103">取得其父系內這個變數的結束位移。</span><span class="sxs-lookup"><span data-stu-id="57faa-103">Gets the end offset of this variable within its parent.</span></span> <span data-ttu-id="57faa-104">如果這是在範圍內的本機變數，而結束位移會落在定義範圍的位移。</span><span class="sxs-lookup"><span data-stu-id="57faa-104">If this is a local variable within a scope, the end offset will fall within the offsets defined for the scope.</span></span>  
+# <a name="isymunmanagedvariablegetendoffset-method"></a><span data-ttu-id="a1055-102">ISymUnmanagedVariable::GetEndOffset 方法</span><span class="sxs-lookup"><span data-stu-id="a1055-102">ISymUnmanagedVariable::GetEndOffset Method</span></span>
+<span data-ttu-id="a1055-103">Gets the end offset of this variable within its parent.</span><span class="sxs-lookup"><span data-stu-id="a1055-103">Gets the end offset of this variable within its parent.</span></span> <span data-ttu-id="a1055-104">If this is a local variable within a scope, the end offset will fall within the offsets defined for the scope.</span><span class="sxs-lookup"><span data-stu-id="a1055-104">If this is a local variable within a scope, the end offset will fall within the offsets defined for the scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="57faa-105">語法</span><span class="sxs-lookup"><span data-stu-id="57faa-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a1055-105">語法</span><span class="sxs-lookup"><span data-stu-id="a1055-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetEndOffset(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="57faa-106">參數</span><span class="sxs-lookup"><span data-stu-id="57faa-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a1055-106">參數</span><span class="sxs-lookup"><span data-stu-id="a1055-106">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="57faa-107">[out]指標`ULONG32`接收的結束位移。</span><span class="sxs-lookup"><span data-stu-id="57faa-107">[out] A pointer to a `ULONG32` that receives the end offset.</span></span>  
+ <span data-ttu-id="a1055-107">[out] A pointer to a `ULONG32` that receives the end offset.</span><span class="sxs-lookup"><span data-stu-id="a1055-107">[out] A pointer to a `ULONG32` that receives the end offset.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="57faa-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="57faa-108">Return Value</span></span>  
- <span data-ttu-id="57faa-109">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="57faa-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a1055-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="a1055-108">Return Value</span></span>  
+ <span data-ttu-id="a1055-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="a1055-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="57faa-110">需求</span><span class="sxs-lookup"><span data-stu-id="57faa-110">Requirements</span></span>  
- <span data-ttu-id="57faa-111">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="57faa-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a1055-110">需求</span><span class="sxs-lookup"><span data-stu-id="a1055-110">Requirements</span></span>  
+ <span data-ttu-id="a1055-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a1055-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="57faa-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="57faa-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a1055-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="a1055-112">See also</span></span>
 
-- [<span data-ttu-id="57faa-113">ISymUnmanagedVariable 介面</span><span class="sxs-lookup"><span data-stu-id="57faa-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [<span data-ttu-id="57faa-114">GetStartOffset 方法</span><span class="sxs-lookup"><span data-stu-id="57faa-114">GetStartOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getstartoffset-method.md)
+- [<span data-ttu-id="a1055-113">ISymUnmanagedVariable 介面</span><span class="sxs-lookup"><span data-stu-id="a1055-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="a1055-114">GetStartOffset 方法</span><span class="sxs-lookup"><span data-stu-id="a1055-114">GetStartOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getstartoffset-method.md)

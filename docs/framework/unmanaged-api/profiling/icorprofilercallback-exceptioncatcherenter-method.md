@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 41462329-a648-46f0-ae6d-728b94c31aa9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6a90ae67a7d264273bd0e07a42aa6195122a06ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9c9cd0b042dc22f35c38e349ab8881dafc602731
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776152"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445012"
 ---
-# <a name="icorprofilercallbackexceptioncatcherenter-method"></a><span data-ttu-id="7445b-102">ICorProfilerCallback::ExceptionCatcherEnter 方法</span><span class="sxs-lookup"><span data-stu-id="7445b-102">ICorProfilerCallback::ExceptionCatcherEnter Method</span></span>
-<span data-ttu-id="7445b-103">通知控制項已傳遞至適當的分析工具`catch`區塊。</span><span class="sxs-lookup"><span data-stu-id="7445b-103">Notifies the profiler that control is being passed to the appropriate `catch` block.</span></span>  
+# <a name="icorprofilercallbackexceptioncatcherenter-method"></a><span data-ttu-id="9f435-102">ICorProfilerCallback::ExceptionCatcherEnter 方法</span><span class="sxs-lookup"><span data-stu-id="9f435-102">ICorProfilerCallback::ExceptionCatcherEnter Method</span></span>
+<span data-ttu-id="9f435-103">Notifies the profiler that control is being passed to the appropriate `catch` block.</span><span class="sxs-lookup"><span data-stu-id="9f435-103">Notifies the profiler that control is being passed to the appropriate `catch` block.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7445b-104">語法</span><span class="sxs-lookup"><span data-stu-id="7445b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9f435-104">語法</span><span class="sxs-lookup"><span data-stu-id="9f435-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExceptionCatcherEnter(  
@@ -35,30 +33,30 @@ HRESULT ExceptionCatcherEnter(
     [in] ObjectID   objectId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7445b-105">參數</span><span class="sxs-lookup"><span data-stu-id="7445b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9f435-105">參數</span><span class="sxs-lookup"><span data-stu-id="9f435-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="7445b-106">[in]包含的函式的識別項`catch`區塊。</span><span class="sxs-lookup"><span data-stu-id="7445b-106">[in] The identifier of the function containing the `catch` block.</span></span>  
+ <span data-ttu-id="9f435-106">[in] The identifier of the function containing the `catch` block.</span><span class="sxs-lookup"><span data-stu-id="9f435-106">[in] The identifier of the function containing the `catch` block.</span></span>  
   
  `objectId`  
- <span data-ttu-id="7445b-107">[in]正在處理的例外狀況的識別項。</span><span class="sxs-lookup"><span data-stu-id="7445b-107">[in] The identifier of the exception being handled.</span></span>  
+ <span data-ttu-id="9f435-107">[in] The identifier of the exception being handled.</span><span class="sxs-lookup"><span data-stu-id="9f435-107">[in] The identifier of the exception being handled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7445b-108">備註</span><span class="sxs-lookup"><span data-stu-id="7445b-108">Remarks</span></span>  
- <span data-ttu-id="7445b-109">`ExceptionCatcherEnter`只有 catch 點是在 just-in-time (JIT) 編譯器編譯的程式碼呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="7445b-109">The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler.</span></span> <span data-ttu-id="7445b-110">在 unmanaged 程式碼，或執行階段內部的程式碼中攔截到例外狀況不會呼叫這項通知。</span><span class="sxs-lookup"><span data-stu-id="7445b-110">An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification.</span></span> <span data-ttu-id="7445b-111">`objectId`值會傳遞一次進行記憶體回收可能移因為物件由於`ExceptionThrown`通知。</span><span class="sxs-lookup"><span data-stu-id="7445b-111">The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9f435-108">備註</span><span class="sxs-lookup"><span data-stu-id="9f435-108">Remarks</span></span>  
+ <span data-ttu-id="9f435-109">The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler.</span><span class="sxs-lookup"><span data-stu-id="9f435-109">The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler.</span></span> <span data-ttu-id="9f435-110">An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification.</span><span class="sxs-lookup"><span data-stu-id="9f435-110">An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification.</span></span> <span data-ttu-id="9f435-111">The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.</span><span class="sxs-lookup"><span data-stu-id="9f435-111">The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.</span></span>  
   
- <span data-ttu-id="7445b-112">因為堆疊可能無法在狀態，讓記憶體回收，分析工具不應在實作這個方法封鎖，因此無法啟用先佔式記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="7445b-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="7445b-113">如果分析工具會封鎖這裡並嘗試進行記憶體回收、 執行階段將會封鎖，直到此回呼中傳回。</span><span class="sxs-lookup"><span data-stu-id="7445b-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+ <span data-ttu-id="9f435-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span><span class="sxs-lookup"><span data-stu-id="9f435-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="9f435-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span><span class="sxs-lookup"><span data-stu-id="9f435-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="7445b-114">Managed 程式碼，或以任何方式造成 managed 記憶體配置，不應該呼叫這個方法的程式碼剖析工具的實作。</span><span class="sxs-lookup"><span data-stu-id="7445b-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="9f435-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span><span class="sxs-lookup"><span data-stu-id="9f435-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7445b-115">需求</span><span class="sxs-lookup"><span data-stu-id="7445b-115">Requirements</span></span>  
- <span data-ttu-id="7445b-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7445b-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f435-115">需求</span><span class="sxs-lookup"><span data-stu-id="9f435-115">Requirements</span></span>  
+ <span data-ttu-id="9f435-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9f435-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7445b-117">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7445b-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="9f435-117">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9f435-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="7445b-118">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7445b-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9f435-118">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9f435-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7445b-119">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7445b-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9f435-119">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f435-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7445b-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7445b-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9f435-120">請參閱</span><span class="sxs-lookup"><span data-stu-id="9f435-120">See also</span></span>
 
-- [<span data-ttu-id="7445b-121">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="7445b-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="7445b-122">ExceptionCatcherLeave 方法</span><span class="sxs-lookup"><span data-stu-id="7445b-122">ExceptionCatcherLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)
+- [<span data-ttu-id="9f435-121">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="9f435-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="9f435-122">ExceptionCatcherLeave 方法</span><span class="sxs-lookup"><span data-stu-id="9f435-122">ExceptionCatcherLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)

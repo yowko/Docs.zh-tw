@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: aeb0fc63-9eff-4384-9284-cb9900572d74
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 753449924f3415eb826b59d3a887eb69b9efba39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: edf24de8ae38aab97e41a53cc86ae5aa6c592c50
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778779"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434698"
 ---
-# <a name="imetadataimportisvalidtoken-method"></a><span data-ttu-id="3f92a-102">IMetaDataImport::IsValidToken 方法</span><span class="sxs-lookup"><span data-stu-id="3f92a-102">IMetaDataImport::IsValidToken Method</span></span>
-<span data-ttu-id="3f92a-103">取得一個值，用來表示指定語彙基元是否包含程式碼物件的有效參考。</span><span class="sxs-lookup"><span data-stu-id="3f92a-103">Gets a value indicating whether the specified token holds a valid reference to a code object.</span></span>  
+# <a name="imetadataimportisvalidtoken-method"></a><span data-ttu-id="941b3-102">IMetaDataImport::IsValidToken 方法</span><span class="sxs-lookup"><span data-stu-id="941b3-102">IMetaDataImport::IsValidToken Method</span></span>
+<span data-ttu-id="941b3-103">取得一個值，用來表示指定語彙基元是否包含程式碼物件的有效參考。</span><span class="sxs-lookup"><span data-stu-id="941b3-103">Gets a value indicating whether the specified token holds a valid reference to a code object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3f92a-104">語法</span><span class="sxs-lookup"><span data-stu-id="3f92a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="941b3-104">語法</span><span class="sxs-lookup"><span data-stu-id="941b3-104">Syntax</span></span>  
   
 ```cpp  
 BOOL IsValidToken (  
@@ -35,23 +33,23 @@ BOOL IsValidToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3f92a-105">參數</span><span class="sxs-lookup"><span data-stu-id="3f92a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="941b3-105">參數</span><span class="sxs-lookup"><span data-stu-id="941b3-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="3f92a-106">[in]若要檢查參考有效的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="3f92a-106">[in] The token to check the reference validity for.</span></span>  
+ <span data-ttu-id="941b3-106">[in] The token to check the reference validity for.</span><span class="sxs-lookup"><span data-stu-id="941b3-106">[in] The token to check the reference validity for.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3f92a-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="3f92a-107">Return Value</span></span>  
- <span data-ttu-id="3f92a-108">`true` 如果`tk`目前範圍內是有效的中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="3f92a-108">`true` if `tk` is a valid metadata token within the current scope.</span></span> <span data-ttu-id="3f92a-109">否則為 `false`。</span><span class="sxs-lookup"><span data-stu-id="3f92a-109">Otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="941b3-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="941b3-107">Return Value</span></span>  
+ <span data-ttu-id="941b3-108">`true` if `tk` is a valid metadata token within the current scope.</span><span class="sxs-lookup"><span data-stu-id="941b3-108">`true` if `tk` is a valid metadata token within the current scope.</span></span> <span data-ttu-id="941b3-109">否則為 `false`。</span><span class="sxs-lookup"><span data-stu-id="941b3-109">Otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3f92a-110">需求</span><span class="sxs-lookup"><span data-stu-id="3f92a-110">Requirements</span></span>  
- <span data-ttu-id="3f92a-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3f92a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="941b3-110">需求</span><span class="sxs-lookup"><span data-stu-id="941b3-110">Requirements</span></span>  
+ <span data-ttu-id="941b3-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="941b3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3f92a-112">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3f92a-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="941b3-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="941b3-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3f92a-113">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="3f92a-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="941b3-113">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="941b3-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="3f92a-114">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f92a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="941b3-114">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="941b3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3f92a-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3f92a-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="941b3-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="941b3-115">See also</span></span>
 
-- [<span data-ttu-id="3f92a-116">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="3f92a-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="3f92a-117">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="3f92a-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="941b3-116">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="941b3-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="941b3-117">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="941b3-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

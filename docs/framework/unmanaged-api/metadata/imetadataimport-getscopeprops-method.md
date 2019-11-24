@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c8ba42d2-d9fa-43cb-bbc0-f33e1e592cb6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 061c482a7e674fd425fe627c741a11b39864ba5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: af1c3d599c5280e584ffb842c96c70a7c3d4ed08
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778868"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436885"
 ---
-# <a name="imetadataimportgetscopeprops-method"></a><span data-ttu-id="4beb5-102">IMetaDataImport::GetScopeProps 方法</span><span class="sxs-lookup"><span data-stu-id="4beb5-102">IMetaDataImport::GetScopeProps Method</span></span>
-<span data-ttu-id="4beb5-103">取得目前中繼資料範圍內組件或模組的名稱以及選擇性地取得其版本識別項。</span><span class="sxs-lookup"><span data-stu-id="4beb5-103">Gets the name and optionally the version identifier of the assembly or module in the current metadata scope.</span></span>  
+# <a name="imetadataimportgetscopeprops-method"></a><span data-ttu-id="72afb-102">IMetaDataImport::GetScopeProps 方法</span><span class="sxs-lookup"><span data-stu-id="72afb-102">IMetaDataImport::GetScopeProps Method</span></span>
+<span data-ttu-id="72afb-103">取得目前中繼資料範圍內組件或模組的名稱以及選擇性地取得其版本識別項。</span><span class="sxs-lookup"><span data-stu-id="72afb-103">Gets the name and optionally the version identifier of the assembly or module in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4beb5-104">語法</span><span class="sxs-lookup"><span data-stu-id="4beb5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="72afb-104">語法</span><span class="sxs-lookup"><span data-stu-id="72afb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetScopeProps (  
@@ -38,32 +36,32 @@ HRESULT GetScopeProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4beb5-105">參數</span><span class="sxs-lookup"><span data-stu-id="4beb5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="72afb-105">參數</span><span class="sxs-lookup"><span data-stu-id="72afb-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="4beb5-106">[out]組件或模組名稱的的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="4beb5-106">[out] A buffer for the assembly or module name.</span></span>  
+ <span data-ttu-id="72afb-106">[out] A buffer for the assembly or module name.</span><span class="sxs-lookup"><span data-stu-id="72afb-106">[out] A buffer for the assembly or module name.</span></span>  
   
  `cchName`  
- <span data-ttu-id="4beb5-107">[in]寬字元大小`szName`。</span><span class="sxs-lookup"><span data-stu-id="4beb5-107">[in] The size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="72afb-107">[in] The size in wide characters of `szName`.</span><span class="sxs-lookup"><span data-stu-id="72afb-107">[in] The size in wide characters of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="4beb5-108">[out]中傳回的寬字元數目`szName`。</span><span class="sxs-lookup"><span data-stu-id="4beb5-108">[out] The number of wide characters returned in `szName`.</span></span>  
+ <span data-ttu-id="72afb-108">[out] The number of wide characters returned in `szName`.</span><span class="sxs-lookup"><span data-stu-id="72afb-108">[out] The number of wide characters returned in `szName`.</span></span>  
   
  `pmvid`  
- <span data-ttu-id="4beb5-109">[out，optional]可唯一識別組件或模組的版本 GUID 指標。</span><span class="sxs-lookup"><span data-stu-id="4beb5-109">[out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.</span></span>  
+ <span data-ttu-id="72afb-109">[out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.</span><span class="sxs-lookup"><span data-stu-id="72afb-109">[out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4beb5-110">備註</span><span class="sxs-lookup"><span data-stu-id="4beb5-110">Remarks</span></span>  
- <span data-ttu-id="4beb5-111">[Imetadataemit:: Setmoduleprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)方法用來設定這些屬性。</span><span class="sxs-lookup"><span data-stu-id="4beb5-111">The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="72afb-110">備註</span><span class="sxs-lookup"><span data-stu-id="72afb-110">Remarks</span></span>  
+ <span data-ttu-id="72afb-111">The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.</span><span class="sxs-lookup"><span data-stu-id="72afb-111">The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4beb5-112">需求</span><span class="sxs-lookup"><span data-stu-id="4beb5-112">Requirements</span></span>  
- <span data-ttu-id="4beb5-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4beb5-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="72afb-112">需求</span><span class="sxs-lookup"><span data-stu-id="72afb-112">Requirements</span></span>  
+ <span data-ttu-id="72afb-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="72afb-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4beb5-114">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4beb5-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="72afb-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="72afb-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4beb5-115">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="4beb5-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="72afb-115">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="72afb-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4beb5-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4beb5-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="72afb-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="72afb-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4beb5-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4beb5-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="72afb-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="72afb-117">See also</span></span>
 
-- [<span data-ttu-id="4beb5-118">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="4beb5-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="4beb5-119">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="4beb5-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="72afb-118">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="72afb-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="72afb-119">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="72afb-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

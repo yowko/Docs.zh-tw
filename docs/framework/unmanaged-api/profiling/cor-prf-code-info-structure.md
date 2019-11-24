@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: cf30e27c-1f7e-43a2-ba1e-01e4137301db
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2f236a74da04dfddef852514eccb02215ad2d15a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 643c9d7104c374d9141a604083f3fdcd540156c4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752382"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428383"
 ---
-# <a name="corprfcodeinfo-structure"></a><span data-ttu-id="93d9b-102">COR_PRF_CODE_INFO 結構</span><span class="sxs-lookup"><span data-stu-id="93d9b-102">COR_PRF_CODE_INFO Structure</span></span>
-<span data-ttu-id="93d9b-103">代表儲存在記憶體中的一個機器碼連續區塊。</span><span class="sxs-lookup"><span data-stu-id="93d9b-103">Represents one contiguous block of native code stored in memory.</span></span>  
+# <a name="cor_prf_code_info-structure"></a><span data-ttu-id="093e6-102">COR_PRF_CODE_INFO 結構</span><span class="sxs-lookup"><span data-stu-id="093e6-102">COR_PRF_CODE_INFO Structure</span></span>
+<span data-ttu-id="093e6-103">代表儲存在記憶體中的一個機器碼連續區塊。</span><span class="sxs-lookup"><span data-stu-id="093e6-103">Represents one contiguous block of native code stored in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="93d9b-104">語法</span><span class="sxs-lookup"><span data-stu-id="93d9b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="093e6-104">語法</span><span class="sxs-lookup"><span data-stu-id="093e6-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _COR_PRF_CODE_INFO {  
@@ -35,22 +33,22 @@ typedef struct _COR_PRF_CODE_INFO {
 } COR_PRF_CODE_INFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="93d9b-105">成員</span><span class="sxs-lookup"><span data-stu-id="93d9b-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="093e6-105">Members</span><span class="sxs-lookup"><span data-stu-id="093e6-105">Members</span></span>  
   
-|<span data-ttu-id="93d9b-106">成員</span><span class="sxs-lookup"><span data-stu-id="93d9b-106">Member</span></span>|<span data-ttu-id="93d9b-107">說明</span><span class="sxs-lookup"><span data-stu-id="93d9b-107">Description</span></span>|  
+|<span data-ttu-id="093e6-106">成員</span><span class="sxs-lookup"><span data-stu-id="093e6-106">Member</span></span>|<span data-ttu-id="093e6-107">描述</span><span class="sxs-lookup"><span data-stu-id="093e6-107">Description</span></span>|  
 |------------|-----------------|  
-|`startAddress`|<span data-ttu-id="93d9b-108">程式碼的連續區塊的開始位址。</span><span class="sxs-lookup"><span data-stu-id="93d9b-108">The starting address of the contiguous block of code.</span></span>|  
-|`size`|<span data-ttu-id="93d9b-109">區塊大小。</span><span class="sxs-lookup"><span data-stu-id="93d9b-109">The size of the block.</span></span>|  
+|`startAddress`|<span data-ttu-id="093e6-108">The starting address of the contiguous block of code.</span><span class="sxs-lookup"><span data-stu-id="093e6-108">The starting address of the contiguous block of code.</span></span>|  
+|`size`|<span data-ttu-id="093e6-109">The size of the block.</span><span class="sxs-lookup"><span data-stu-id="093e6-109">The size of the block.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="93d9b-110">需求</span><span class="sxs-lookup"><span data-stu-id="93d9b-110">Requirements</span></span>  
- <span data-ttu-id="93d9b-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="93d9b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="093e6-110">需求</span><span class="sxs-lookup"><span data-stu-id="093e6-110">Requirements</span></span>  
+ <span data-ttu-id="093e6-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="093e6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="93d9b-112">**標頭：** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="93d9b-112">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="093e6-112">**Header:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="093e6-112">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="93d9b-113">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="93d9b-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="093e6-113">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="093e6-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="93d9b-114">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="93d9b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="093e6-114">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="093e6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="93d9b-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="93d9b-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="093e6-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="093e6-115">See also</span></span>
 
-- [<span data-ttu-id="93d9b-116">分析結構</span><span class="sxs-lookup"><span data-stu-id="93d9b-116">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [<span data-ttu-id="093e6-116">分析結構</span><span class="sxs-lookup"><span data-stu-id="093e6-116">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
