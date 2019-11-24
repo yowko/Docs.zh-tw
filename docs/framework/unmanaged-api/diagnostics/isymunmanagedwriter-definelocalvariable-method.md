@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a9466df3f6413f86eb8558f0037b96c254b2a2e1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6a741df3ea57b5e9b4fa8bc5d304bfedd1d6c15
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777335"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428017"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable 方法
-在目前的語彙範圍中定義單一變數。 可以多次呼叫這個方法在範圍中有多個定義域的相同名稱的變數。 在此情況下，不過，值`startOffset`和`endOffset`參數不得重疊。  
+在目前的語彙範圍中定義單一變數。 This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope. In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,42 +43,42 @@ HRESULT DefineLocalVariable(
   
 ## <a name="parameters"></a>參數  
  `name`  
- [in]指標`WCHAR`定義本機變數的名稱。  
+ [in] A pointer to a `WCHAR` that defines the local variable name.  
   
  `attributes`  
- [in]本機變數的屬性。  
+ [in] The local variable attributes.  
   
  `cSig`  
- [in]A`ULONG32`表示的大小，以位元組為單位，`signature`緩衝區。  
+ [in] A `ULONG32` that indicates the size, in bytes, of the `signature` buffer.  
   
  `signature`  
- [in]區域變數簽章。  
+ [in] The local variable signature.  
   
  `addrKind`  
- [in]位址類型。  
+ [in] The address type.  
   
  `addr1`  
- [in]參數規格的第一個位址。  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- [in]參數規格的第二個位址。  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- [in]參數規格的第三個位址。  
+ [in] The third address for the parameter specification.  
   
  `startOffset`  
- [in]變數的起始位移。 這個參數是選擇性的。 如果是 0，會忽略這個參數，並在整個範圍定義的變數。 如果它是非零值時，變數會落在目前的範圍的位移。  
+ [in] The start offset for the variable. 這是選擇性參數。 If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
  `endOffset`  
- [in]變數的結束位移。 這個參數是選擇性的。 如果是 0，會忽略這個參數，並在整個範圍定義的變數。 如果它是非零值時，變數會落在目前的範圍的位移。  
+ [in] The end offset for the variable. 這是選擇性參數。 If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [DefineGlobalVariable 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)

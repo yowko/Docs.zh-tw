@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1af98e57-9145-4d35-bb78-77d1da7c91a5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a5039117c649943a1f05a91ecccf22eb4230e5e7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 24ec1f7d553a59425f7eb02af8e91010d940eb07
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776385"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444262"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA 結構
-包含參考的組件，包括其版本和層級支援地區設定、 處理器和作業系統的相關資訊。  
+Contains information about the referenced assembly, including its version and its level of support for locales, processors, and operating systems.  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,31 +41,31 @@ typedef struct {
 } ASSEMBLYMETADATA;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`usMajorVersion`|參考的組件的主要版本號碼。 此值不可為零。 如果所有的位元`usMajorVersion`設定，未指定的主要版本。|  
-|`usMinorVersion`|參考的組件的次要版本號碼。 此值不可為零。 如果所有的位元`usMinorVersion`設定，未指定的次要版本。|  
-|`usBuildNumber`|參考的組件的組建編號。 此值不可為零。 如果所有的位元`usBuildNumber`設定，未指定組建編號。|  
-|`usRevisionNumber`|參考的組件的修訂編號。 此值不可為零。 如果所有的位元`usRevisionNumber`設定，未指定的修訂編號。|  
-|`szLocale`|符合 RFC1766 規格中，使用分號分隔，指定參考的組件所支援的地區設定的地區設定名稱的清單。 Null 值表示地區設定的獨立性。 **注意：** 在.NET Framework 1.0 版，您無法指定多個地區設定。|  
-|`cbLocale`|寬字元大小`szLocale`。|  
-|`rdwProcessor`|陣列識別項，因為在 Winnt.h 中定義的類型參考的組件所支援的處理器。 NULL 值表示處理器的獨立性。|  
-|`ulProcessor`|長度`rdwProcessor`陣列。|  
-|`rOS`|陣列[OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)指定參考的組件所支援的作業系統的執行個體。 NULL 值表示作業系統獨立性。|  
-|`ulOS`|長度`rOS`陣列。|  
+|`usMajorVersion`|The major version number of the referenced assembly. This value cannot be zero. If all the bits of `usMajorVersion` are set, the major version is not specified.|  
+|`usMinorVersion`|The minor version number of the referenced assembly. This value cannot be zero. If all the bits of `usMinorVersion` are set, the minor version is not specified.|  
+|`usBuildNumber`|The build number of the referenced assembly. This value cannot be zero. If all the bits of `usBuildNumber` are set, the build number is not specified.|  
+|`usRevisionNumber`|The revision number of the referenced assembly. This value cannot be zero. If all the bits of `usRevisionNumber` are set, the revision number is not specified.|  
+|`szLocale`|A list of locale names conforming to the RFC1766 specification, separated by semicolons, specifying the locales supported by the referenced assembly. A null value indicates locale independence. **Note:**  In the .NET Framework version 1.0 you cannot specify more than one locale.|  
+|`cbLocale`|The size in wide characters of `szLocale`.|  
+|`rdwProcessor`|An array of identifiers, as defined in Winnt.h, for the processor types that are supported by the referenced assembly. A NULL value indicates processor independence.|  
+|`ulProcessor`|The length of the `rdwProcessor` array.|  
+|`rOS`|An array of [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) instances specifying the operating systems that are supported by the referenced assembly. A NULL value indicates operating-system independence.|  
+|`ulOS`|The length of the `rOS` array.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料結構](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
 - [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

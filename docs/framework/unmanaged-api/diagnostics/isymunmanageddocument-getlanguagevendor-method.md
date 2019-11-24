@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1d4b702e-4922-441d-8b44-03804284f70b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f5140462ae3c869d58187351d2e0ff11f7b6e179
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cea2c161211dd74a46818c9b3c641852ea9999cd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776686"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449167"
 ---
 # <a name="isymunmanageddocumentgetlanguagevendor-method"></a>ISymUnmanagedDocument::GetLanguageVendor 方法
-取得這份文件的語言廠商。  
+Gets the language vendor of this document.  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,11 +34,11 @@ HRESULT GetLanguageVendor(
   
 ## <a name="parameters"></a>參數  
  `pRetVal`  
- [out]接收的語言廠商的變數指標。  
+ [out] A pointer to a variable that receives the language vendor.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功為 S_OK。  
+ S_OK if the method succeeds.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

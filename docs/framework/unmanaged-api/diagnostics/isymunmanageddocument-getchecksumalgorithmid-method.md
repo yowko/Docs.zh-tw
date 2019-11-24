@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7f941cd-e25b-4b85-b1ce-5f77c9208fa9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b631b16334b7e5019376fbb9a3f65d7fc2ced7dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2bc673d2e331cd32d5317cb20f9418eb3a3b144a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776751"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431074"
 ---
 # <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a>ISymUnmanagedDocument::GetCheckSumAlgorithmId 方法
-取得總和檢查碼演算法識別項，或如果沒有任何總和檢查碼會傳回全部為零的 GUID。  
+Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,11 +34,11 @@ HRESULT GetCheckSumAlgorithmId(
   
 ## <a name="parameters"></a>參數  
  `pRetVal`  
- [out]收到的總和檢查碼演算法識別項變數的指標。  
+ [out] A pointer to a variable that receives the checksum algorithm identifier.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功為 S_OK。  
+ S_OK if the method succeeds.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

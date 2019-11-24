@@ -6,19 +6,17 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], metadata
 - metadata structures [.NET Framework]
 ms.assetid: 3eeaec36-5e1a-4a62-9de3-ea3942f67d04
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2095b6e490612cff5af193b1c1dfcbb6757fc23e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 663abfdad79b8e4878ee598587a1f3484f5afccc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049826"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444615"
 ---
 # <a name="metadata-structures"></a>中繼資料結構
 本節說明中繼資料 API 所使用的 Unmanaged 結構。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  ASSEMBLYMETADATA  
  儲存組件中繼資料供稍後使用。  
   

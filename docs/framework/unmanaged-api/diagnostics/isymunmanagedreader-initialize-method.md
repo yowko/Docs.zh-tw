@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f2dceeb2f0b3aa9f3147157e77087dffbf2d5f85
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ca34d1d84d6f9960d021c35566f8412df321464d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939018"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429745"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize 方法
-使用與此讀取器相關聯的中繼資料匯入介面, 以及模組的檔案名, 初始化符號讀取器。  
+Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.  
   
 > [!NOTE]
-> 這個方法只能呼叫一次, 而且必須在任何其他讀取器方法之前呼叫。  
+> This method can be called only once, and must be called before any other reader methods.  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,26 +40,26 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>參數  
  `importer`  
- 在與這個讀取器相關聯的中繼資料匯入工具介面。  
+ [in] The metadata importer interface with which this reader will be associated.  
   
  `filename`  
- 在模組的檔案名。 您可以`pIStream`改用參數。  
+ [in] The file name of the module. You can use the `pIStream` parameter instead.  
   
  `searchPath`  
- 在要搜尋的路徑。 這個參數是選擇性的。  
+ [in] The path to search. 這是選擇性參數。  
   
  `pIStream`  
- 在檔案資料流程, 用來做為 filename 參數的替代項。  
+ [in] The file stream, used as an alternative to the filename parameter.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功, 則為 S_OK;否則, E_FAIL 或其他錯誤碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="remarks"></a>備註  
- 您只需要指定其中一個`filename` `pIStream`或參數, 而不是兩者。 `searchPath` 是選擇性參數。  
+ You need to specify only one of the `filename` or the `pIStream` parameters, not both. `searchPath` 是選擇性參數。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl, CorSym。h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

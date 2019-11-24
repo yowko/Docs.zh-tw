@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: ad276f3f-b303-46ac-97e0-66a377adaa4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bd138d0418bb9667a86419d719bf0b95a4bb1b12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bee7db61beb9ed8c00cf584924be690a67d92eac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777124"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446959"
 ---
 # <a name="importfileex-method"></a>ImportFileEx 方法
-匯入指定的元件或解除系結模組。  
+Imports indicated assembly or unbound module.  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,33 +40,33 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>參數  
  `pszFilename`  
- 要匯入之檔案的完整名稱。  
+ Fully qualified name of file from which to import.  
   
  `pszTargetName`  
- 目的檔案名的選擇性名稱。  
+ Optional name of target file.  
   
  `fSmartImport`  
- 若為 TRUE，則會使用 ImportTypes，否則必須手動執行匯入。  
+ If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
   
  `dwOpenFlags`  
- 要傳遞至[OpenScope 方法](../metadata/imetadatadispenser-openscope-method.md)的旗標。  
+ Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- 接收正在匯入之檔案的識別碼。  
+ Receives ID of the file being imported.  
   
  `ppAssemblyScope`  
- 接收元件匯入範圍[IMetaDataAssemblyImport 介面](../metadata/imetadataassemblyimport-interface.md)介面。 如果檔案不是元件，則會設定為 Null。  
+ Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
   
  `pdwCountOfScopes`  
- 接收匯入的檔案和/或範圍的計數。  
+ Receives count of imported files and/or scopes.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則傳回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>需求  
- 需要 alink. h。  
+ Requires alink.h.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IALink2 介面](ialink2-interface.md)
 - [IALink 介面](ialink-interface.md)

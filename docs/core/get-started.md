@@ -4,12 +4,12 @@ description: 尋找資源以了解如何在 Windows、Linux 和 macOS 上建置 
 author: thraka
 ms.author: adegeo
 ms.date: 09/19/2019
-ms.openlocfilehash: 9dbc3ebc8d43fe2570a90f4e10fd155a5b114351
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 78066f2904f6a874b71165e4fe1769b6b778ae41
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521634"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428877"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 使用者入門
 
@@ -21,7 +21,7 @@ ms.locfileid: "72521634"
 
 首先，在您的電腦上下載並安裝 [.NET Core SDK](https://dotnet.microsoft.com/download)。
 
-接下來，開啟終端機，例如 **PowerShell**、**命令提示字元**或 **bash**。 輸入下列 `dotnet` 命令來建立和執行C#應用程式：
+接下來，開啟終端機，例如 **PowerShell**、**命令提示字元**或 **bash**。 Type the following `dotnet` commands to create and run a C# application:
 
 ```dotnetcli
 dotnet new console --output sample1
@@ -52,20 +52,20 @@ Hello World!
 - 觀看影片以了解[如何安裝及使用 Visual Studio 2017 和 .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/)。
 - [使用命令列開始使用 .NET Core。](tutorials/using-with-xplat-cli.md)
 
-如需支援的 Windows 版本清單，請參閱 [Windows 開發的必要條件](windows-prerequisites.md)一文。
+See the [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-windows) article for a list of the supported Windows versions.
 
 # <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
-依照下列逐步教學課程，您可以開始開發 .NET Core 應用程式：
+You can get started developing .NET Core application by following these step-by-step tutorials:
 
 - [使用命令列開始使用 .NET Core。](tutorials/using-with-xplat-cli.md)
 - 觀看影片以了解[使用 C# 和 .NET Core 在 Ubuntu 上開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)。
 
-如需支援的 Linux 發行和版本清單，請參閱 [Linux 開發的必要條件](linux-prerequisites.md)一文。
+See the [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-linux) article for a list of the supported Linux distros and versions.
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-依照下列逐步教學課程，您可以開始開發 .NET Core 應用程式：
+You can get started developing .NET Core application by following these step-by-step tutorials:
 
 - 觀看影片以了解[使用 C# 和 .NET Core 在 macOS 上開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)。
 - [使用 Visual Studio Code 在 macOS 上開始使用 .NET Core。](tutorials/using-on-macos.md)
@@ -73,6 +73,6 @@ Hello World!
 - [使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core。](tutorials/using-on-mac-vs.md)
 - [使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 方案。](tutorials/using-on-mac-vs-full-solution.md)
 
-如需支援的 OS X/macOS 版本清單，請參閱 [macOS 開發的必要條件](macos-prerequisites.md)一文。
+See the [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-macos) article for a list of the supported OS X / macOS versions.
 
 ---

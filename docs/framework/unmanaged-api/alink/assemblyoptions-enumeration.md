@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 84f83921-64cb-49e3-ac8b-22a0b77b18a8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 49e7b73559e8def890f8df8f596fbe8ad5bb5d3b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ed45e06297b77ea60304cdcfe1b08e97f9e4c085
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777476"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446596"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions 列舉
-列舉元件選項。  
+Enumerates the assembly options.  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,32 +56,32 @@ typedef enum _AssemblyOptions {
   
 |欄位|描述|  
 |-----------|-----------------|  
-|optAssemTitle|String-表示元件標題。|  
-|optAssemDescription|String-包含元件描述。|  
-|optAssemConfig|String-包含元件設定。|  
-|optAssemOS|字串編碼為： "dwOSPlatformId. dwOSMajorVersion. dwOSMinorVersion"。|  
+|optAssemTitle|String - Represents the assembly title.|  
+|optAssemDescription|String - Contains the assembly description.|  
+|optAssemConfig|String - Contains the assembly configuration.|  
+|optAssemOS|String - Encoded as: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
 |optAssemProcessor|ULONG|  
-|optAssemLocale|String-包含元件地區設定。|  
-|optAssemVersion|字串編碼為：「主要. 次要. 組建修訂」。|  
-|optAssemCompany|String-包含公司。|  
-|optAssemProduct|String-包含產品名稱。|  
-|optAssemProductVersion|String （也稱為 InformationalVersion）。|  
-|optAssemCopyright|String-包含著作權資訊。|  
-|optAssemTrademark|String-包含商標資訊。|  
-|optAssemKeyFile|字串（檔案名）。|  
-|optAssemKeyName|字串（索引鍵名稱）。|  
+|optAssemLocale|String - Contains the assembly locale.|  
+|optAssemVersion|String - Encoded as: "Major.Minor.Build.Revision".|  
+|optAssemCompany|String - Contains the company.|  
+|optAssemProduct|String - Contains the product name.|  
+|optAssemProductVersion|String (also known as InformationalVersion).|  
+|optAssemCopyright|String - Contains the copyright information.|  
+|optAssemTrademark|String - Contains the trademark information.|  
+|optAssemKeyFile|String (file name).|  
+|optAssemKeyName|String (The key name).|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
-|optAssemHalfSign|Bool （也稱為 DelaySign）。|  
-|optAssemFileVersion|字串編碼為「主要. 次要. 組建修訂版」--與 ProductVersion 相同。|  
-|optAssemSatelliteVer|字串編碼為「主要. 次要. 組建. 修訂」。|  
-|optLastAssemOption|元素數目的計數器。|  
+|optAssemHalfSign|Bool (Also known as DelaySign).|  
+|optAssemFileVersion|String - Encoded as "Major.Minor.Build.Revision"--same as ProductVersion.|  
+|optAssemSatelliteVer|String - Encoded as "Major.Minor.Build.Revision".|  
+|optLastAssemOption|A counter of the number of elements.|  
   
 ## <a name="requirements"></a>需求  
- **標頭：** alink。h  
+ **Header:** alink.h  
   
- 連結**庫**： alink .dll  
+ **Library**: alink.dll  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Al.exe (組件連結器)](../../tools/al-exe-assembly-linker.md)

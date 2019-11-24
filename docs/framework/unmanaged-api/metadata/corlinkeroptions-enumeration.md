@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a656aad6-cc7e-4994-8251-004a6a45e18f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 906b5ef2795d8fad996185f66f145a8cd3618c41
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 086e17185df9caa823b44b51cf027f95d635c48d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781816"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450266"
 ---
 # <a name="corlinkeroptions-enumeration"></a>CorLinkerOptions 列舉
 指定旗標，以選取中繼資料連結器的選項。  
@@ -35,20 +33,20 @@ typedef enum CorLinkerOptions {
 } CorLinkerOptions;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`MDAssembly`|不會保留私用類型和全域函式。|  
-|`MDNetModule`|私用類型和全域函式會保留。|  
+|`MDAssembly`|The private types and global functions are not preserved.|  
+|`MDNetModule`|The private types and global functions are preserved.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

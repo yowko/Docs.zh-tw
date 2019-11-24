@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 40f9bd9e-16ec-447e-81b0-168c875e9866
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 502e7841f8c413aa48732bcea0b6c2178d70c061
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ffb5953c843a338b4548253457a0c3b1ca0c20f5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776441"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444308"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags 列舉
-包含描述的組件的執行階段功能的值。  
+Contains values that describe run-time features of an assembly.  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,29 +36,29 @@ typedef enum {
 } AssemblyFlags;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|指定匯出的型別定義隱含構成組件檔案中。 在.NET framework 1.0 和 1.1 版中，這個值永遠都會假設設定。|  
-|`afImplicitResources`|指定的資源定義中是隱含包含組件的檔案。 在.NET Framework 1.0 和 1.1 中，這個值永遠都會假設設定。|  
-|`afNonSideBySideAppDomain`|指定是否它們相同的應用程式定義域中執行，無法與其他版本一起執行的組件。|  
-|`afNonSideBySideProcess`|指定是否它們在相同的程序執行，無法與其他版本一起執行的組件。|  
-|`afNonSideBySideMachine`|指定是否在同一部電腦上執行，無法與其他版本一起執行的組件。|  
+|`afImplicitExportedTypes`|Specifies that exported type definitions are implicit within the files that comprise the assembly. In the .NET Framework versions 1.0 and 1.1, this value is always assumed to be set.|  
+|`afImplicitResources`|Specifies that resource definitions are implicit within the files that comprise the assembly. In the .NET Framework 1.0 and 1.1, this value is always assumed to be set.|  
+|`afNonSideBySideAppDomain`|Specifies that the assembly cannot execute with other versions if they are running in the same application domain.|  
+|`afNonSideBySideProcess`|Specifies that the assembly cannot execute with other versions if they are running in the same process.|  
+|`afNonSideBySideMachine`|Specifies that the assembly cannot execute with other versions if they are running on the same computer.|  
   
 ## <a name="remarks"></a>備註  
- 0x0010 與 0x0070 之間的值用來描述所參考組件的並排顯示相容性功能。 如果沒有這些值的設定，則會將組件假設為並排顯示相容。  
+ The values between 0x0010 and 0x0070, inclusive, are used to describe side-by-side compatibility features of the referenced assembly. If none of these values are set, the assembly is assumed to be side-by-side compatible.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MsCorEE.h  
+ **Header:** MsCorEE.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
 - [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

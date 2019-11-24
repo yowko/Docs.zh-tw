@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ccda329-d752-4d89-abe8-511af3c3f4c9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d446e2b78f41d43aa70f429e23f1f4be22fd799
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 59512cc1c1b280d7fe6deb2f9d721ad53547e356
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782499"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437964"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef 方法
-取得成員的 MemberRef 語彙基元的指標參考也就是加上指定<xref:System.Type>且具有指定的名稱和中繼資料簽章。  
+Gets a pointer to the MemberRef token for the member reference that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,37 +39,37 @@ HRESULT FindMemberRef (
   
 ## <a name="parameters"></a>參數  
  `td`  
- [in]類別或介面，包含要搜尋的成員參考的 TypeRef 語彙基元。 如果此值為`mdTokenNil`，會在完成查詢的全域變數或全域函式參考。  
+ [in] The TypeRef token for the class or interface that encloses the member reference to search for. If this value is `mdTokenNil`, the lookup is done for a global variable or a global-function reference.  
   
  `szName`  
- [in]若要搜尋成員參考的名稱。  
+ [in] The name of the member reference to search for.  
   
  `pvSigBlob`  
- [in]成員參考的二進位中繼資料簽章指標。  
+ [in] A pointer to the binary metadata signature of the member reference.  
   
  `cbSigBlob`  
- [in]以位元組為單位的大小`pvSigBlob`。  
+ [in] The size in bytes of `pvSigBlob`.  
   
  `pmr`  
- [out]比對的 MemberRef 語彙基元指標。  
+ [out] A pointer to the matching MemberRef token.  
   
 ## <a name="remarks"></a>備註  
- 指定使用其封入類別或介面的成員 (`td`)，其名稱 (`szName`)，和 （選擇性） 其簽章 (`pvSigBlob`)。  
+ You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).  
   
- 簽章傳遞至`FindMemberRef`必須已產生在目前的範圍內，因為簽章會繫結至特定的範圍。 簽章可以內嵌識別封入類別或實值類型的語彙基元。 語彙基元是本機 TypeDef 資訊表內的索引。 您無法建置目前範圍的內容以外的執行階段簽章，並使用該簽章，做為輸入`FindMemberRef`。  
+ The signature passed to `FindMemberRef` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindMemberRef`.  
   
- `FindMemberRef` 尋找定義類別或介面中的直接成員參考找不到繼承的成員參考。  
+ `FindMemberRef` finds only member references that were defined directly in the class or interface; it does not find inherited member references.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

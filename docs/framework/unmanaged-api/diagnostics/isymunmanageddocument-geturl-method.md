@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60600178-c2b5-4cab-b3a5-f0f61acebaf1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5d8bc90cc07c2390cc83860b8009a3705f927e80
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 134a89d62a0fc455a9579de1e577103f1fe6abcf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776659"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449130"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL 方法
-傳回統一資源定位器 (URL)，這份文件。  
+Returns the uniform resource locator (URL) for this document.  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,17 +36,17 @@ HRESULT GetURL(
   
 ## <a name="parameters"></a>參數  
  `cchUrl`  
- [in]大小，以字元為單位的`szURL`緩衝區。  
+ [in] The size, in characters, of the `szURL` buffer.  
   
  `pcchUrl`  
- [out]此變數會接收的 URL，包括 null 終止的大小指標。  
+ [out] A pointer to a variable that receives the size of the URL, including the null termination.  
   
  `szUrl`  
- [out]包含之 URL 的緩衝區。  
+ [out] The buffer containing the URL.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，出現錯誤代碼。  
+ S_OK if the method succeeds; otherwise, an error code.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

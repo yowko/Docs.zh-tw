@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 90eab7b3-1fae-4af4-8bce-f7bc0e188a99
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 208dd5ff2ba9eb450cac5a9807f0cd09852d5cf3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9da4e34fa948db2fc73cbde813bac9b3430605ca
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777828"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436257"
 ---
 # <a name="imetadataconvertergettypelibfrommetadata-method"></a>IMetaDataConverter::GetTypeLibFromMetaData 方法
-取得指標`ITypeLib`表示具有指定的程式庫和模組名稱的型別程式庫的執行個體。  
+Gets a pointer to an `ITypeLib` instance that represents the type library that has the specified library and module names.  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,23 +37,23 @@ HRESULT GetTypeLibFromMetaData (
   
 ## <a name="parameters"></a>參數  
  `strModule`  
- [in]型別程式庫的模組名稱。  
+ [in] The name of the type library's module.  
   
  `strTlbName`  
- [in]型別程式庫的名稱。  
+ [in] The name of the type library.  
   
  `ppITL`  
- [out]接收的地址的位置指標`ITypeLib`執行個體，表示型別程式庫。  
+ [out] A pointer to a location that receives the address of the `ITypeLib` instance that represents the type library.  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataConverter 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)

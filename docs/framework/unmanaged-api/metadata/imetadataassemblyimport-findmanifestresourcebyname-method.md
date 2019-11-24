@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7b72fa11-3866-402b-bdea-2b966b77cfe0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aaaae5bda88d1fbc9949a080c5765127fd112bde
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f0c390509a698fdc4682ba81182d4b407d8718c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855962"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448248"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>IMetaDataAssemblyImport::FindManifestResourceByName 方法
-取得具有指定名稱之資訊清單資源的指標。  
+Gets a pointer to the manifest resource with the specified name.  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,24 +36,24 @@ HRESULT FindManifestResourceByName (
   
 ## <a name="parameters"></a>參數  
  `szName`  
- 在資源的名稱。  
+ [in] The name of the resource.  
   
  `ptkManifestResource`  
- 脫銷用來儲存`mdManifestResource`元資料標記的陣列，每個 token 都代表一個資訊清單資源。  
+ [out] The array used to store the `mdManifestResource` metadata tokens, each of which represents a manifest resource.  
   
 ## <a name="remarks"></a>備註  
- `FindManifestResourceByName`方法會使用 common language runtime 所採用的標準規則來解析參考。  
+ The `FindManifestResourceByName` method uses the standard rules employed by the common language runtime for resolving references.  
   
 ## <a name="requirements"></a>需求  
- **Platform.object**請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **標頭：** Cor。h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 Mscoree.dll 中的資源使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
 - [執行階段如何找出組件](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

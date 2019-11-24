@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c571e37d87ffd136687452dc80a823b8ddbe3359
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cea84f47a5289df4bc9c50381e18d7077b3b8dad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782066"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440469"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope 方法
-組件匯入目前的範圍，並取得新的中繼資料簽章為合併的範圍。  
+Imports an assembly into the current scope and gets a new metadata signature for the merged scope.  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,48 +45,48 @@ HRESULT TranslateSigWithScope (
   
 ## <a name="parameters"></a>參數  
  `pAssemImport`  
- [in]匯入組件 （其中會定義簽章） 介面。  
+ [in] The interface for import assembly (where the signature is defined).  
   
  `pbHashValue`  
- [in]組件雜湊的 blob。  
+ [in] The hash blob for the assembly.  
   
  `cbHashValue`  
- [in]中的位元組計數`pbHashValue`。  
+ [in] The count of bytes in `pbHashValue`.  
   
  `import`  
- [in]匯入中繼資料範圍的介面。  
+ [in] The interface for import metadata scope.  
   
  `pbSigBlob`  
- [in]要匯入簽章。  
+ [in] The signature to be imported.  
   
  `cbSigBlob`  
- [in]大小，以位元組為單位的`pbSigBlob`。  
+ [in] The size, in bytes, of `pbSigBlob`.  
   
  `pAssemEmit`  
- [in]匯出組件的介面。  
+ [in] The interface for export assembly.  
   
  `emit`  
- [in]匯出中繼資料範圍的介面。  
+ [in] The interface for export metadata scope.  
   
  `pvTranslatedSig`  
- [out]要保存已翻譯的簽章 blob 的緩衝區。  
+ [out] The buffer to hold the translated signature blob.  
   
  `cbTranslatedSigMax`  
- [in]容量，以位元組為單位的`pvTranslatedSig`。  
+ [in] The capacity, in bytes, of `pvTranslatedSig`.  
   
  `pcbTranslatedSig`  
- [out]已翻譯的簽章中的實際位元組數目。  
+ [out] The number of actual bytes in the translated signature.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MSCorEE.dll 中的資源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
 - [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

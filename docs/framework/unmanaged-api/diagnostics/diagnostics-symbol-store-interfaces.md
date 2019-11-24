@@ -9,57 +9,55 @@ helpviewer_keywords:
 - debugging interfaces [.NET Framework]
 - interfaces [.NET Framework debugging]
 ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6fca7359888b8b73b2e1cf709ab708d71abf0db6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bdb691570a9a2bf7bd2bb21af500b06c10b0bc53
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787890"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448533"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>診斷符號存放區介面
-本主題描述 unmanaged 的介面，可讓編譯器產生供偵錯工具符號資訊。  
+This topic describes the unmanaged interfaces that enable a compiler to generate symbol information for use by a debugger.  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [IBindingDisplay 介面](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)  
- 提供方法，它會顯示執行中應用程式的目前繫結資訊。  
+ Provides methods that display current binding information about the running application.  
   
  [IDebugAutoAttach 介面](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)  
- 針對伺服器叫用偵錯工具自動附加，請定義的介面。  
+ Defines the interface for a server-invoked debugger auto attach.  
   
  [INotifyConnection2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- 宣告方法註冊和取消註冊連接的通知來源。  
+ Declares methods for registering and unregistering a connection notification source.  
   
  [INotifySink2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- 宣告接收通知的方法。  
+ Declares methods for sink notification.  
   
  [INotifySource2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- 宣告設定通知篩選器的方法。  
+ Declares a method for setting notification filters.  
   
  [ISymENCUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)  
- 提供 [編輯後繼續] 功能的資訊。  
+ Provides information for the Edit and Continue feature.  
   
  [ISymUnmanagedAsyncMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)  
- 這個介面是讀取對補充[ISymUnmanagedAsyncMethodPropertiesWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)。  
+ This interface is the reading complement to [ISymUnmanagedAsyncMethodPropertiesWriter Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md).  
   
  [ISymUnmanagedAsyncMethodPropertiesWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)  
- 可讓每個方法符號的選擇性的非同步方法資訊的定義。 必須使用開啟的方法 (也就是呼叫之間[OpenMethod 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)並[CloseMethod 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md))。  
+ Allows definition of optional async method information per method symbol. Must use with an opened method (that is, between calls to the [OpenMethod Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)and the [CloseMethod Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
   
  [ISymUnmanagedBinder 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)  
- 表示 unmanaged 程式碼的符號繫結器。  
+ Represents a symbol binder for unmanaged code.  
   
  [ISymUnmanagedBinder2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  
- 表示 unmanaged 程式碼的符號繫結器，並擴充`ISymUnmanagedBinder`介面。  
+ Represents a symbol binder for unmanaged code, and extends the `ISymUnmanagedBinder` interface.  
   
  [ISymUnmanagedBinder3 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)  
- 表示 unmanaged 程式碼的符號繫結器，並擴充`ISymUnmanagedBinder`介面。  
+ Represents a symbol binder for unmanaged code, and extends the `ISymUnmanagedBinder` interface.  
   
  [ISymUnmanagedConstant 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)  
- 提供存取未受管理的常數。  
+ Provides access to unmanaged constants.  
   
  [ISymUnmanagedDispose 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)  
- 處置 unmanaged 資源。  
+ Disposes of unmanaged resources.  
   
  [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)  
  代表符號存放區所參考的文件。  
@@ -68,52 +66,52 @@ ms.locfileid: "61787890"
  提供寫入至符號存放區所參考之文件的方法。  
   
  [ISymUnmanagedENCUpdate 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)  
- 提供方法來 [編輯後繼續] 功能。  
+ Provides methods for the Edit and Continue feature.  
   
  [ISymUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)  
- 代表符號存放區內的方法。  
+ Represents a method within the symbol store.  
   
  [ISymUnmanagedNamespace 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)  
- 代表命名空間。  
+ Represents a namespace.  
   
  [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)  
- 表示符號讀取器可存取文件、 方法和符號存放區內的變數。  
+ Represents a symbol reader that provides access to documents, methods, and variables within a symbol store.  
   
  [ISymUnmanagedReader2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)  
- 取得指定方法的語彙基元和編輯複製版本號碼的符號讀取器方法。  
+ Gets a symbol reader method given a method token and an edit-and-copy version number.  
   
  [ISymUnmanagedReaderSymbolSearchInfo 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)  
- 提供方法，以取得符號搜尋資訊。  
+ Provides methods that get symbol search information.  
   
  [ISymUnmanagedScope 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)  
- 表示在方法內的語彙範圍。  
+ Represents a lexical scope within a method.  
   
  [ISymUnmanagedScope2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)  
- 表示語彙範圍內的方法，並擴充`ISymUnmanagedScope`介面會使用範圍內取得定義的常數的相關資訊的方法...  
+ Represents a lexical scope within a method, and extends the `ISymUnmanagedScope` interface with methods that get information about constants defined within the scope..  
   
  [ISymUnmanagedSourceServerModule 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)  
- 提供來源伺服器資料模組。  
+ Provides source server data for a module.  
   
  [ISymUnmanagedSymbolSearchInfo 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)  
- 提供方法，以取得搜尋路徑的相關資訊。  
+ Provides methods that get information about the search path.  
   
  [ISymUnmanagedVariable 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)  
- 表示變數，例如參數、 區域變數或欄位。  
+ Represents a variable, such as a parameter, a local variable, or a field.  
   
  [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- 表示的符號寫入器，並提供方法，以定義文件，序列點、 語彙範圍變數。  
+ Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables.  
   
  [ISymUnmanagedWriter2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- 表示的符號寫入器，並提供方法，以定義文件，序列點、 語彙範圍變數。 擴充`ISymUnmanagedWriter`介面。  
+ Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables. Extends the `ISymUnmanagedWriter` interface.  
   
  [ISymUnmanagedWriter3 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)  
- 表示的符號寫入器，並提供方法，以定義文件，序列點、 語彙範圍變數。 擴充`ISymUnmanagedWriter`介面。  
+ Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables. Extends the `ISymUnmanagedWriter` interface.  
   
  [ISymUnmanagedWriter4 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)  
- ISymUnmanagedWriter4 介面。  
+ ISymUnmanagedWriter4 interface.  
   
  [ISymUnmanagedWriter5 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-interface.md)  
- ISymUnmanagedWriter5 介面。  
+ ISymUnmanagedWriter5 interface.  
   
 ## <a name="related-sections"></a>相關章節  
  [診斷符號存放區列舉](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  

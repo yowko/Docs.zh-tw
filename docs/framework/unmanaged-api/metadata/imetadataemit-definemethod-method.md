@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3e2102c5-48b7-4c0e-b805-7e2b5e156e3d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4297b21970fbca4b5aa53c31680394cab358d255
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c46b075341742aac605537a08b762b3cf47ef35b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777606"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431812"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod 方法
-使用指定的簽章中，建立方法或全域函式的定義，並將權杖傳回給該方法的定義。  
+Creates a definition for a method or global function with the specified signature, and returns a token to that method definition.  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,75 +42,75 @@ HRESULT DefineMethod (
   
 ## <a name="parameters"></a>參數  
  `td`  
- [in]`mdTypedef`語彙基元的父類別或方法的父介面。 設定`td`至`mdTokenNil`，如果您正在定義全域函式。  
+ [in] The `mdTypedef` token of the parent class or parent interface of the method. Set `td` to `mdTokenNil`, if you are defining a global function.  
   
  `szName`  
- [in]以 Unicode 成員名稱。  
+ [in] The member name in Unicode.  
   
  `dwMethodFlags`  
- [in]值為[CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)列舉，指定方法或全域函式的屬性。  
+ [in] A value of the [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeration that specifies the attributes of the method or global function.  
   
  `pvSigBlob`  
- [in]方法簽章。 提供，則會保存簽章。 如果您需要指定任何參數的其他資訊，請使用[imetadataemit:: Setparamprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparamprops-method.md)方法。  
+ [in] The method signature. The signature is persisted as supplied. If you need to specify additional information for any parameters, use the [IMetaDataEmit::SetParamProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparamprops-method.md) method.  
   
  `cbSigBlob`  
- [in]中的位元組計數`pvSigBlob`。  
+ [in] The count of bytes in `pvSigBlob`.  
   
  `ulCodeRVA`  
- [in]程式碼的位址。  
+ [in] The address of the code.  
   
  `dwImplFlags`  
- [in]值為[CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md)列舉，指定方法的實作功能。  
+ [in] A value of the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration that specifies the implementation features of the method.  
   
  `pmd`  
- [out]成員語彙基元。  
+ [out] The member token.  
   
 ## <a name="remarks"></a>備註  
- 保存方法的相同順序，因為呼叫端會將它們發出指定封入類別或介面中所指定的中繼資料 API 可保證`td`參數。  
+ The metadata API guarantees to persist methods in the same order as the caller emits them for a given enclosing class or interface, which is specified in the `td` parameter.  
   
- 使用有關的其他資訊`DefineMethod`和特定的參數設定如下。  
+ Additional information regarding the use of `DefineMethod` and particular parameter settings is given below.  
   
-## <a name="slots-in-the-v-table"></a>V 資料表中的位置  
- 執行階段會使用方法定義，來設定 v-table 位置。 在其中一個或多個位置需要略過，這類情況下對於保留同位檢查 COM 介面的版面配置，虛擬方法定義為佔用的位置或 v-table; 中的位置設定`dwMethodFlags`要`mdRTSpecialName`的值[CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)列舉型別並將名稱指定為：  
+## <a name="slots-in-the-v-table"></a>Slots in the V-table  
+ The runtime uses method definitions to set up v-table slots. In the case where one or more slots need to be skipped, such as to preserve parity with a COM interface layout, a dummy method is defined to take up the slot or slots in the v-table; set the `dwMethodFlags` to the `mdRTSpecialName` value of the [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeration and specify the name as:  
   
  _VtblGap\<*SequenceNumber*>\<\_*CountOfSlots*>
   
- 何處*SequenceNumber*是方法的序號和*CountOfSlots*會在 v-table 中略過的位置數目。 如果*CountOfSlots*已省略，則假設為 1。 這些虛擬方法不是可從 managed 或 unmanaged 程式碼呼叫，任何嘗試呼叫它們，從 managed 或 unmanaged 程式碼，就會產生例外狀況。 其唯一用途是佔用執行階段會產生 COM 整合 v 資料表中的空間。  
+ where *SequenceNumber* is the sequence number of the method and *CountOfSlots* is the number of slots to skip in the v-table. If *CountOfSlots* is omitted, 1 is assumed. These dummy methods are not callable from either managed or unmanaged code and any attempt to call them, from either managed or unmanaged code, generates an exception. Their only purpose is to take up space in the v-table that the runtime generates for COM integration.  
   
-## <a name="duplicate-methods"></a>重複的方法  
- 您不能定義重複的方法。 也就是說，您不應該呼叫`DefineMethod`與一組重複的值`td`， `wzName`，和`pvSig`參數。 (這三個參數一起唯一定義的方法。)。 不過，使用重複的三倍，前提是，在您設定的其中一個方法定義，`mdPrivateScope`位元`dwMethodFlags`參數。 (`mdPrivateScope`位元表示編譯器將不會發出這個方法定義的參考。)  
+## <a name="duplicate-methods"></a>Duplicate Methods  
+ You should not define duplicate methods. That is, you should not call `DefineMethod` with a duplicate set of values in the `td`, `wzName`, and `pvSig` parameters. (These three parameters together uniquely define the method.). However, you can use a duplicate triple provided that, for one of the method definitions, you set the `mdPrivateScope` bit in the `dwMethodFlags` parameter. (The `mdPrivateScope` bit means that the compiler will not emit a reference to this method definition.)  
   
-## <a name="method-implementation-information"></a>方法的實作資訊  
- 在此方法宣告的時間通常不知道方法實作的相關資訊。 因此，您不需要傳遞值`ulCodeRVA`並`dwImplFlags`參數呼叫時`DefineMethod`。 提供值的順序可以稍後透過[imetadataemit:: Setmethodimplflags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md)或是[imetadataemit:: Setrva](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setrva-method.md)視需要。  
+## <a name="method-implementation-information"></a>Method Implementation Information  
+ Information about the method implementation is often not known at the time the method is declared. Therefore, you do not need to pass values in the `ulCodeRVA` and `dwImplFlags` parameters when calling `DefineMethod`. The values can be supplied later through [IMetaDataEmit::SetMethodImplFlags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md) or [IMetaDataEmit::SetRVA](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setrva-method.md), as appropriate.  
   
- 在某些情況下，例如平台叫用 (PInvoke) 或 COM interop 案例中，不會提供方法主體，以及`ulCodeRVA`應該設定為零。 在這些情況下，此方法不應標記為抽象，因為執行階段會找出實作。  
+ In some situations, such as platform invocation (PInvoke) or COM interop scenarios, the method body will not be supplied, and `ulCodeRVA` should be set to zero. In these situations, the method should not be tagged as abstract, because the runtime will locate the implementation.  
   
-## <a name="defining-a-method-for-pinvoke"></a>定義方法的 PInvoke  
- 對於透過 PInvoke 呼叫每個 unmanaged 函式，您必須定義受管理的方法，表示目標 unmanaged 函式。 若要定義受管理的方法，使用`DefineMethod`與某些參數設為特定值，根據在其中使用 PInvoke 的方式：  
+## <a name="defining-a-method-for-pinvoke"></a>Defining a Method for PInvoke  
+ For each unmanaged function to be called through PInvoke, you must define a managed method that represents the target unmanaged function. To define the managed method, use `DefineMethod` with some of the parameters set to certain values, depending on the way in which PInvoke is used:  
   
-- True PInvoke-涉及在 unmanaged DLL 位於外部的 unmanaged 方法引動過程。  
+- True PInvoke - involves invocation of an external unmanaged method that resides in an unmanaged DLL.  
   
-- 本機 PInvoke-包含內嵌於目前的受管理模組中的原生 unmanaged 方法的引動過程。  
+- Local PInvoke - involves invocation of a native unmanaged method that is embedded in the current managed module.  
   
- 下表提供的參數設定。  
+ The parameter settings are given in the following table.  
   
-|參數|值，則為 true 的 PInvoke|本機 PInvoke 的值|  
+|參數|Values for true PInvoke|Values for local PInvoke|  
 |---------------|-----------------------------|------------------------------|  
-|`dwMethodFlags`||設定`mdStatic`; 清除`mdSynchronized`和`mdAbstract`。|  
-|`pvSigBlob`|有效 common language runtime (CLR) 方法簽章具有有效的參數將 managed 型别。|有效的 CLR 方法簽章，以有效的參數將 managed 型别。|  
+|`dwMethodFlags`||Set `mdStatic`; clear `mdSynchronized` and `mdAbstract`.|  
+|`pvSigBlob`|A valid common language runtime (CLR) method signature with parameters that are valid managed types.|A valid CLR method signature with parameters that are valid managed types.|  
 |`ulCodeRVA`||0|  
-|`dwImplFlags`|設定`miCil`和`miManaged`。|設定`miNative`和`miUnmanaged`。|  
+|`dwImplFlags`|Set `miCil` and `miManaged`.|Set `miNative` and `miUnmanaged`.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MSCorEE.dll 中的資源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

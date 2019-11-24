@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d69fb6d-ee35-4318-8224-5eea2bd16818
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 02331bb3b0c70b946eaa28c9cd316f109ac927b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0a1d244a4bf077970d2031c3c3b2bc56a0dd3d79
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777232"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426817"
 ---
 # <a name="imetadataemitsetrva-method"></a>IMetaDataEmit::SetRVA 方法
-設定指定之方法的相對虛擬位址。  
+Sets the relative virtual address of the specified method.  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,21 +36,21 @@ HRESULT SetRVA (
   
 ## <a name="parameters"></a>參數  
  `md`  
- [in]目標方法或方法的實作之語彙基元。  
+ [in] The token for the target method or method implementation.  
   
  `ulRVA`  
- [in]程式碼或資料區域的位址。  
+ [in] The address of the code or data area.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MSCorEE.dll 中的資源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36cdc9f5-7579-4cd2-aa36-fc05c741584c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: be8f4e396171f3e56b5b93969d3960b7aaea142e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e508ccd81d25aa3d303456fa88554903ec71d633
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780640"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439060"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread 方法
-會對應至 Win32 執行緒控制代碼之執行緒的識別碼。  
+Maps the ID of a thread to a Win32 thread handle.  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,23 +35,23 @@ HRESULT GetHandleFromThread(
   
 ## <a name="parameters"></a>參數  
  `threadId`  
- [in]要對應的執行緒識別碼。  
+ [in] The thread ID to be mapped.  
   
  `phThread`  
- [out]Win32 執行緒控制代碼指標。  
+ [out] A pointer to a Win32 thread handle.  
   
 ## <a name="remarks"></a>備註  
- 分析工具必須呼叫 Win32`DuplicateHandle`後才能使用它的控制代碼上的函式。  
+ The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** CorProf.idl、CorProf.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

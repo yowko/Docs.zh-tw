@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d5e5f00-bcab-4f41-b191-176511a186a7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e9d2c74adecdfb0201f9f0c08998feba674f9e0f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bb73ccdd9eee4b5a655a56b5d6757e0c6003fbc9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778933"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437120"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps 方法
 取得指定 ParamDef 語彙基元所參考參數的中繼資料值。  
@@ -46,49 +44,49 @@ HRESULT GetParamProps (
   
 ## <a name="parameters"></a>參數  
  `tk`  
- [in]ParamDef 語彙基元，表示要傳回的中繼資料的參數。  
+ [in] A ParamDef token that represents the parameter to return metadata for.  
   
  `pmd`  
- [out]表示方法的 MethodDef 語彙基元的指標，會接受參數。  
+ [out] A pointer to a MethodDef token representing the method that takes the parameter.  
   
  `pulSequence`  
- [out]方法引數清單中的參數序數位置。  
+ [out] The ordinal position of the parameter in the method argument list.  
   
  `szName`  
- [out]若要保留的參數名稱的緩衝區。  
+ [out] A buffer to hold the name of the parameter.  
   
  `cchName`  
- [in]所要求的大小，以寬字元為單位的`szName`。  
+ [in] The requested size in wide characters of `szName`.  
   
  `pchName`  
- [out]寬字元在傳回的大小`szName`。  
+ [out] The returned size in wide characters of `szName`.  
   
  `pdwAttr`  
- [out]任何與參數相關聯的屬性旗標指標。 這是位元遮罩`CorParamAttr`值。  
+ [out] A pointer to any attribute flags associated with the parameter. This is a bitmask of `CorParamAttr` values.  
   
  `pdwCPlusTypeFlag`  
- [out]參數是以旗標，指定指標<xref:System.ValueType>。  
+ [out] A pointer to a flag specifying that the parameter is a <xref:System.ValueType>.  
   
  `ppValue`  
- [out]參數所傳回的常數字串指標。  
+ [out] A pointer to a constant string returned by the parameter.  
   
  `pcchValue`  
- [out]大小`ppValue`寬字元，或零，如果`ppValue`不會保留為字串。  
+ [out] The size of `ppValue` in wide characters, or zero if `ppValue` does not hold a string.  
   
 ## <a name="remarks"></a>備註
 
-中的值序列`pulSequence`參數 1 為開頭。 傳回值具有 0 的序號。
+The sequence values in `pulSequence` begin with 1 for parameters. A return value has a sequence number of 0.
 
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

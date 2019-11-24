@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb8db3b6-d81d-49fc-b74c-dbc908a9eab9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3532ca0a30d83aa8f61bc4397090f3d589b73257
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fda890cee5f513ea8cf7e82e710f5451a860c49f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780925"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443918"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags 列舉
 包含值，這些值描述套用至組件編譯的中繼資料。  
@@ -55,36 +53,36 @@ typedef enum CorAssemblyFlags {
 } CorAssemblyFlags;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`afPublicKey`|表示組件參考會保留完整的雜湊的公用金鑰。|  
-|`afPA_None`|表示未指定的處理器架構。|  
-|`afPA_MSIL`|指出處理器架構是中性 (PE32)。|  
-|`afPA_x86`|指出處理器架構為 x86 (PE32)。|  
-|`afPA_IA64`|指示處理器架構為 Itanium （PE32 +）。|  
-|`afPA_AMD64`|指出處理器架構的 AMD X64 （PE32 +）。|  
-|`afPA_ARM`|指出處理器架構是 ARM (PE32)。|  
-|`afPA_NoPlatform`|表示組件的參考組件;也就是它會套用至任何架構，但無法在任何架構上執行。 因此，此旗標等同於`afPA_Mask`。|  
-|`afPA_Specified`|指出處理器架構旗標，應該傳播至`AssemblyRef`記錄。|  
-|`afPA_Mask`|遮罩，描述處理器架構。|  
-|`afPA_FullMask`|指定包含處理器架構的說明。|  
-|`afPA_Shift`|指出處理器架構旗標，從索引中的移位計數。|  
-|`afEnableJITcompileTracking`|從對應的值會指出<xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>的<xref:System.Diagnostics.DebuggableAttribute>。|  
-|`afDisableJITcompileOptimizer`|從對應的值會指出<xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>的<xref:System.Diagnostics.DebuggableAttribute>。|  
-|`afRetargetable`|表示組件可以被重定目標在執行階段組件從不同的 「 發行者 」。|  
-|`afContentType_Mask`|遮罩，描述的內容類型。|  
-|`afContentType_Default`|表示預設內容類型。|  
-|`afContentType_WindowsRuntime`|表示 Windows 執行階段的內容類型。|  
+|`afPublicKey`|Indicates that the assembly reference holds the full, unhashed public key.|  
+|`afPA_None`|Indicates that the processor architecture is unspecified.|  
+|`afPA_MSIL`|Indicates that the processor architecture is neutral (PE32).|  
+|`afPA_x86`|Indicates that the processor architecture is x86 (PE32).|  
+|`afPA_IA64`|Indicates that the processor architecture is Itanium (PE32+).|  
+|`afPA_AMD64`|Indicates that the processor architecture is AMD X64 (PE32+).|  
+|`afPA_ARM`|Indicates that the processor architecture is ARM (PE32).|  
+|`afPA_NoPlatform`|Indicates that the assembly is a reference assembly; that is, it applies to any architecture but cannot run on any architecture. Thus, the flag is the same as `afPA_Mask`.|  
+|`afPA_Specified`|Indicates that the processor architecture flags should be propagated to the `AssemblyRef` record.|  
+|`afPA_Mask`|A mask that describes the processor architecture.|  
+|`afPA_FullMask`|Specifies that the processor architecture description is included.|  
+|`afPA_Shift`|Indicates a shift count in the processor architecture flags to and from the index.|  
+|`afEnableJITcompileTracking`|Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.|  
+|`afDisableJITcompileOptimizer`|Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.|  
+|`afRetargetable`|Indicates that the assembly can be retargeted at run time to an assembly from a different publisher.|  
+|`afContentType_Mask`|A mask that describes the content type.|  
+|`afContentType_Default`|Indicates the default content type.|  
+|`afContentType_WindowsRuntime`|Indicates the Windows Runtime content type.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

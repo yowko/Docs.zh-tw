@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 84ccbd7a8be7d90a541fb2d54baa3d7f66d3d31e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0731053fb37c775d25052a5fd99a479a44ff5862
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746123"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434875"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock 方法
-取得區段的區塊程式碼基底。  
+Gets a section block of the code base.  
   
- 這個方法已經過時，不應使用。  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,29 +40,29 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>參數  
  `section`  
- [in]要從中擷取的程式碼基底區塊一節。  
+ [in] The section from which to retrieve a block of the code base.  
   
  `len`  
- [in]要擷取區塊的長度。  
+ [in] The length of the block to be retrieved.  
   
  `align`  
- [in]位元組，相對於區段中，用來對齊第一個位元組區塊的開頭。 這是區塊的一節中的位置。  
+ [in] The byte, relative to the beginning of the section, with which to align the first byte of the block. This is the position of the block within the section.  
   
  `ppBytes`  
- [out]接收擷取區塊位址的位置指標。  
+ [out] A pointer to a location that receives the address of the retrieved block.  
   
 ## <a name="remarks"></a>備註  
- 呼叫`GetSectionBlock`只有當您有未處理的其他方法的特殊區段需求。  
+ Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

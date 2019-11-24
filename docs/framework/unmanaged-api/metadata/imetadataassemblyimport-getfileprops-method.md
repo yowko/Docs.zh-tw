@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4f3883b0cd1b7aca6265b738eace483c81eb37b9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: beb697d80417b937876a0887e4376341185a47d9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760148"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447219"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps 方法
-取得具有指定之中繼資料簽章檔案的屬性。  
+Gets the properties of the file with the specified metadata signature.  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,35 +41,35 @@ HRESULT GetFileProps (
   
 ## <a name="parameters"></a>參數  
  `mdf`  
- [in]`mdFile`中繼資料語彙基元，表示要為其取得屬性的檔案。  
+ [in] The `mdFile` metadata token that represents the file for which to get the properties.  
   
  `szName`  
- [out]檔案的簡單名稱。  
+ [out] The simple name of the file.  
   
  `cchName`  
- [in]大小，以寬字元為單位的`szName`。  
+ [in] The size, in wide chars, of `szName`.  
   
  `pchName`  
- [out]中實際傳回的寬字元數目`szName`。  
+ [out] The number of wide chars actually returned in `szName`.  
   
  `ppbHashValue`  
- [out]雜湊值的指標。 這是雜湊，並使用 sha-1 演算法，該檔案。  
+ [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the file.  
   
  `pcbHashValue`  
- [out]在傳回的雜湊值的寬字元數目。  
+ [out] The number of wide chars in the returned hash value.  
   
  `pdwFileFlags`  
- [out]指標，描述套用至檔案的中繼資料的旗標。 旗標值是由一或多個組成[CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)值。  
+ [out] A pointer to the flags that describe the metadata applied to a file. The flags value is a combination of one or more [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values.  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 79446216-4b8b-484c-8fe3-e87dbf9df2fd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1b8afe10563d61e3ddab93e8d1b57eee4b6765c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc4643f1c90b3ea4d3b561249a4e76ff304737bd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766840"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438770"
 ---
 # <a name="icorprofilerinfogetthreadcontext-method"></a>ICorProfilerInfo::GetThreadContext 方法
-取得目前與指定的執行緒相關聯的內容識別。  
+Gets the context identity currently associated with the specified thread.  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,20 +35,20 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>參數  
  `threadId`  
- [in]執行緒識別碼。  
+ [in] The ID of the thread.  
   
  `pContextId`  
- [out]目前與指定的執行緒相關聯的內容識別碼指標。 如果執行緒沒有任何目前與它相關聯的內容，此函式會傳回 CORPROF_E_DATAINCOMPLETE。  
+ [out] A pointer to the context ID currently associated with the specified thread. If the thread has no context currently associated with it, this function will return CORPROF_E_DATAINCOMPLETE.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** CorProf.idl、CorProf.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

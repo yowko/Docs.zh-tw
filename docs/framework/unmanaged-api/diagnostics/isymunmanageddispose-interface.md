@@ -14,27 +14,25 @@ helpviewer_keywords:
 ms.assetid: b1d74e83-a200-4d00-8fbd-27918808616d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8e81cea13fb8d25701ccbe163f112904baf47a9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08d9ba8f8c9a251bd0db0ffe256af7db0164ba2f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939915"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449223"
 ---
 # <a name="isymunmanageddispose-interface"></a>ISymUnmanagedDispose 介面
-處置 unmanaged 資源。  
+Disposes of unmanaged resources.  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Destroy 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|讓基礎的物件釋放所有的內部參考，並在任何後續的方法呼叫傳回失敗。|  
+|[Destroy 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|Causes the underlying object to release all internal references and return failure on any subsequent method calls.|  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

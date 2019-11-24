@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9495624f7eca57a79518036937a5fb63d01d9c4b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: db3c3d38e0200f9849c84d7605a436816d56b813
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851217"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427432"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 函式
-通知分析工具，目前正在執行的函式即將執行另一個函式的尾呼叫，並提供堆疊框架的相關資訊。  
+Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,43 +36,43 @@ void __stdcall FunctionTailcall2 (
   
 ## <a name="parameters"></a>參數  
  `funcId`  
- 在即將進行 tail 呼叫之目前正在執行之函式的識別碼。  
+ [in] The identifier of the currently executing function that is about to make a tail call.  
   
  `clientData`  
- 在程式碼剖析工具先前透過[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)指定的重新對應函式識別碼，這是即將進行 tail 呼叫的目前正在執行之函式。  
+ [in] The remapped function identifier, which the profiler previously specified via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), of the currently executing function that is about to make a tail call.  
   
  `func`  
- 在`COR_PRF_FRAME_INFO`值，指向堆疊框架的相關資訊。  
+ [in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.  
   
- 分析工具應該將此視為不透明的控制碼，以便在[ICorProfilerInfo2：： GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法中傳回給執行引擎。  
+ The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.  
   
 ## <a name="remarks"></a>備註  
- Tail 呼叫的目標函式會使用目前的堆疊框架，並會直接傳回呼叫端呼叫之函式的呼叫端。 這表示不會針對做為 tail 呼叫目標的函式發出[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)回呼。  
+ The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call. This means that a [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback will not be issued for a function that is the target of a tail call.  
   
- 在函式傳回`func` `FunctionTailcall2`之後，參數的值無效，因為此值可能會變更或損毀。  
+ The value of the `func` parameter is not valid after the `FunctionTailcall2` function returns because the value may change or be destroyed.  
   
- `FunctionTailcall2`函式是回呼; 您必須加以執行。 此執行必須使用`__declspec`（`naked`）儲存類別屬性。  
+ The `FunctionTailcall2` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
   
- 在呼叫此函式之前，執行引擎不會儲存任何暫存器。  
+ The execution engine does not save any registers before calling this function.  
   
-- 輸入時，您必須儲存您所使用的所有暫存器，包括浮點單位（FPU）中的暫存器。  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- 結束時，您必須透過關閉其呼叫者推送的所有參數來還原堆疊。  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- 的執行`FunctionTailcall2`不應該封鎖，因為它會延遲垃圾收集。 執行不應嘗試垃圾收集，因為堆疊可能不會處於垃圾收集的唯讀狀態。 如果嘗試垃圾收集，執行時間將會封鎖，直到`FunctionTailcall2`傳回為止。  
+ The implementation of `FunctionTailcall2` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionTailcall2` returns.  
   
- 此外，函`FunctionTailcall2`式不能呼叫 managed 程式碼，或以任何方式執行 managed 記憶體配置。  
+ Also, the `FunctionTailcall2` function must not call into managed code or in any way cause a managed memory allocation.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl  
+ **Header:** CorProf.idl  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [FunctionEnter2 函式](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
 - [FunctionLeave2 函式](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)

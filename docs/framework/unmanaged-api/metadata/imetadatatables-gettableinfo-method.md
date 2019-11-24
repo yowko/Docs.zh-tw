@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50cbe557-2322-41aa-8e0d-f967602eaa0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4844834232e34ab5dacfa34e7aa5d204ee344612
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 662b628f3cc6d2d7138f56820beaccee9c5d9e81
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781364"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426666"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>IMetaDataTables::GetTableInfo 方法
-取得名稱、 資料列大小、 資料列數目、 資料行數與指定之資料表的索引鍵資料行索引。  
+Gets the name, row size, number of rows, number of columns, and key column index of the specified table.  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,33 +40,33 @@ HRESULT GetTableInfo (
   
 ## <a name="parameters"></a>參數  
  `ixTbl`  
- [in]資料表的識別碼傳回其屬性。  
+ [in] The identifier of the table whose properties to return.  
   
  `pcbRow`  
- [out]大小 （位元組），資料表資料列的指標。  
+ [out] A pointer to the size, in bytes, of a table row.  
   
  `pcRows`  
- [out]在資料表中的資料列數目指標。  
+ [out] A pointer to the number of rows in the table.  
   
  `pcCols`  
- [out]在資料表中的資料行數目指標。  
+ [out] A pointer to the number of columns in the table.  
   
  `piKey`  
- [out]索引鍵資料行或-1，如果資料表沒有索引鍵資料行的索引指標。  
+ [out] A pointer to the index of the key column, or -1 if the table has no key column.  
   
  `ppName`  
- [out]指向資料表名稱的指標。  
+ [out] A pointer to a pointer to the table name.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

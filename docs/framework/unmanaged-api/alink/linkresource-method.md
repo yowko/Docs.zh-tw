@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c404acb3-4c59-4100-9a4c-483cbdb1d736
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 763b7a776007c2ce8dac42c6a5f7f00f6eb58a10
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e91d990a8f23335248043c59eb210e8c4155e3a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776952"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445626"
 ---
 # <a name="linkresource-method"></a>LinkResource 方法
-資源中的連結。  
+Links in a resource.  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,27 +38,27 @@ HRESULT LinkResource(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- 元件的識別碼。  
+ ID of the assembly.  
   
  `pszFileName`  
  檔案的名稱。  
   
  `pszNewLocation`  
- 選擇性的新檔案名。 如果不是 Null， `pszFileName`將會複製到 pszNewLocation。  
+ Optional new file name. If non-NULL, `pszFileName` will be copied to pszNewLocation.  
   
  `pszResourceName`  
  資源的名稱。  
   
  `dwFlags`  
- 協助工具旗標`mrPublic` ， `mrPrivate`例如和。 這個參數可以傳遞至[DefineManifestResource 方法](../metadata/imetadataassemblyemit-definemanifestresource-method.md)。  
+ Accessibility flags such as `mrPublic` and `mrPrivate`. This parameter may be passed to [DefineManifestResource Method](../metadata/imetadataassemblyemit-definemanifestresource-method.md).  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則傳回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>需求  
- 需要 alink. h。  
+ Requires alink.h.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

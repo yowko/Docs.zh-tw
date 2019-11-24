@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ae2c4be-212c-4e74-9288-40a11dc26522
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e909680428c7957da2283d13f5676329d953bf22
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d28a0c8b7ee85f023026dde6f3cc8f3a8406aa64
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781887"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450310"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr 列舉
 包含值，這些值描述與欄位有關的中繼資料。  
@@ -58,37 +56,37 @@ typedef enum CorFieldAttr {
 } CorFieldAttr;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|指定的協助工具資訊。|  
-|`fdPrivateScope`|指定無法參考的欄位。|  
-|`fdPrivate`|指定欄位只能由其父型別存取。|  
-|`fdFamANDAssem`|指定的欄位是由其組件中的衍生類別存取。|  
-|`fdAssembly`|指定欄位可存取其組件中的所有型別。|  
-|`fdFamily`|指定欄位只能由其類型存取，而且衍生的類別。|  
-|`fdFamORAssem`|指定的欄位是可由衍生的類別和其組件中的所有型別存取。|  
-|`fdPublic`|指定欄位可存取此範圍的可見性與所有類型。|  
-|`fdStatic`|指定的欄位是其類型的成員，而不是執行個體成員。|  
-|`fdInitOnly`|指定在初始化之後，無法變更的欄位。|  
-|`fdLiteral`|指定欄位值為編譯時間常數。|  
-|`fdNotSerialized`|指定當其類型為遠端時，則不會序列化的欄位。|  
-|`fdSpecialName`|指定欄位是特殊的且其名稱描述方式。|  
-|`fdPinvokeImpl`|指定欄位的實作會經由 PInvoke 被轉送。|  
-|`fdReservedMask`|保留供內部使用的 common language runtime。|  
-|`fdRTSpecialName`|指定 common language runtime 中繼資料內部 Api 應該檢查名稱編碼方式。|  
-|`fdHasFieldMarshal`|指定欄位含有封送處理資訊。|  
-|`fdHasDefault`|指定欄位含有預設值。|  
-|`fdHasFieldRVA`|指定欄位含有相對虛擬位址。|  
+|`fdFieldAccessMask`|Specifies accessibility information.|  
+|`fdPrivateScope`|Specifies that the field cannot be referenced.|  
+|`fdPrivate`|Specifies that the field is accessible only by its parent type.|  
+|`fdFamANDAssem`|Specifies that the field is accessible by derived classes in its assembly.|  
+|`fdAssembly`|Specifies that the field is accessible by all types in its assembly.|  
+|`fdFamily`|Specifies that the field is accessible only by its type and derived classes.|  
+|`fdFamORAssem`|Specifies that the field is accessible by derived classes and by all types in its assembly.|  
+|`fdPublic`|Specifies that the field is accessible by all types with visibility of this scope.|  
+|`fdStatic`|Specifies that the field is a member of its type rather than an instance member.|  
+|`fdInitOnly`|Specifies that the field cannot be changed after it is initialized.|  
+|`fdLiteral`|Specifies that the field value is a compile-time constant.|  
+|`fdNotSerialized`|Specifies that the field is not serialized when its type is remoted.|  
+|`fdSpecialName`|Specifies that the field is special, and that its name describes how.|  
+|`fdPinvokeImpl`|Specifies that the field implementation is forwarded through PInvoke.|  
+|`fdReservedMask`|Reserved for internal use by the common language runtime.|  
+|`fdRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the name.|  
+|`fdHasFieldMarshal`|Specifies that the field contains marshaling information.|  
+|`fdHasDefault`|Specifies that the field has a default value.|  
+|`fdHasFieldRVA`|Specifies that the field has a relative virtual address.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 91d688f3-a80e-419d-9755-ff94bc04188a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4229332ef3a079a5a294e27b624dde0e1fb46691
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9ba021ec223d00e57081567b76f70f59768e6b9a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782956"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445864"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass 方法
-通知分析工具有關的每個指定的類別已自最新的回收之後建立的執行個體數目。  
+Notifies the profiler about the number of instances of each specified class that have been created since the most recent garbage collection.  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,30 +36,30 @@ HRESULT ObjectsAllocatedByClass(
   
 ## <a name="parameters"></a>參數  
  `cClassCount`  
- [in]大小`classIds`和`cObjects`陣列。  
+ [in] The size of the `classIds` and `cObjects` arrays.  
   
  `classIds`  
- [in]類別識別碼，其中每個識別碼指定的類別與一或多個執行個體的陣列。  
+ [in] An array of class IDs, where each ID specifies a class with one or more instances.  
   
  `cObjects`  
- [in]整數，指定每個整數中的對應類別的執行個體數目的陣列`classIds`陣列。  
+ [in] An array of integers, where each integer specifies the number of instances for the corresponding class in the `classIds` array.  
   
 ## <a name="remarks"></a>備註  
- `classIds`和`cObjects`陣列是平行陣列。 例如，`classIds[i]`和`cObjects[i]`參考相同的類別。 如果自上一個記憶體回收之後建立的類別執行個體之後，即會省略的類別。 `ObjectsAllocatedByClass`回呼將不會報告在大型物件堆積中配置的物件。  
+ The `classIds` and `cObjects` arrays are parallel arrays. For example, `classIds[i]` and `cObjects[i]` reference the same class. If no instance of a class has been created since the previous garbage collection, the class is omitted. The `ObjectsAllocatedByClass` callback will not report objects allocated in the large object heap.  
   
- 所報告的數字`ObjectsAllocatedByClass`是只是估計值。 確切的計數，請使用[icorprofilercallback:: Objectallocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)。  
+ The numbers reported by `ObjectsAllocatedByClass` are only estimates. For exact counts, use [ICorProfilerCallback::ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).  
   
- `classIds`陣列可能包含一或多個 null 的項目，如果對應`cObjects`陣列有要卸載的類型。  
+ The `classIds` array may contain one or more null entries if the corresponding `cObjects` array has types that are unloading.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** CorProf.idl、CorProf.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

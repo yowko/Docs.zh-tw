@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bede0ec-5fdf-42a2-b5b7-bee64056acb6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5786f24f6543d4d262dd8a6389132aba02f9aacc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1586184c91619994ba0dfc9d5dcc277c10f99cf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779195"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436456"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr 列舉
 包含值，這些值表示類型中繼資料。  
@@ -75,51 +73,51 @@ typedef enum CorTypeAttr {
 } CorTypeAttr;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`tdVisibilityMask`|用於型別可視性資訊。|  
-|`tdNotPublic`|指定的型別不是公用的範圍中。|  
-|`tdPublic`|指定的類型是公用的範圍中。|  
-|`tdNestedPublic`|指定的類型巢狀具有公用可視性。|  
-|`tdNestedPrivate`|指定的類型巢狀使用私用可見度。|  
-|`tdNestedFamily`|指定的型別使用家族可視性的巢狀。|  
-|`tdNestedAssembly`|指定的型別使用巢狀組件可見性。|  
-|`tdNestedFamANDAssem`|指定的型別使用家族和組件的可見性的巢狀。|  
-|`tdNestedFamORAssem`|指定的型別使用家族或組件的可見性的巢狀。|  
-|`tdLayoutMask`|取得類型的配置資訊。|  
-|`tdAutoLayout`|指定此類型的欄位會自動配置。|  
-|`tdSequentialLayout`|指定此類型的欄位會以循序方式配置。|  
-|`tdExplicitLayout`|指定明確提供該欄位的配置。|  
-|`tdClassSemanticsMask`|取得型別的相關語意資訊。|  
+|`tdVisibilityMask`|Used for type visibility information.|  
+|`tdNotPublic`|Specifies that the type is not in public scope.|  
+|`tdPublic`|Specifies that the type is in public scope.|  
+|`tdNestedPublic`|Specifies that the type is nested with public visibility.|  
+|`tdNestedPrivate`|Specifies that the type is nested with private visibility.|  
+|`tdNestedFamily`|Specifies that the type is nested with family visibility.|  
+|`tdNestedAssembly`|Specifies that the type is nested with assembly visibility.|  
+|`tdNestedFamANDAssem`|Specifies that the type is nested with family and assembly visibility.|  
+|`tdNestedFamORAssem`|Specifies that the type is nested with family or assembly visibility.|  
+|`tdLayoutMask`|Gets layout information for the type.|  
+|`tdAutoLayout`|Specifies that the fields of this type are laid out automatically.|  
+|`tdSequentialLayout`|Specifies that the fields of this type are laid out sequentially.|  
+|`tdExplicitLayout`|Specifies that field layout is supplied explicitly.|  
+|`tdClassSemanticsMask`|Gets semantic information about the type.|  
 |`tdClass`|指定此類型為類別。|  
 |`tdInterface`|指定此類型為介面。|  
 |`tdAbstract`|指定此類型為抽象。|  
-|`tdSealed`|指定的型別不能擴充。|  
-|`tdSpecialName`|指定特殊的類別名稱。 其名稱將告訴您如何。|  
-|`tdImport`|指定的型別會匯入。|  
-|`tdSerializable`|指定的型別是可序列化。|  
-|`tdWindowsRuntime`|指定此類型為 Windows 執行階段型別。|  
-|`tdStringFormatMask`|取得字串編碼和格式化的方式的相關資訊。|  
-|`tdAnsiClass`|指定此類型會解譯為 ANSI LPTSTR。|  
-|`tdUnicodeClass`|指定此類型會解譯為 Unicode LPTSTR。|  
-|`tdAutoClass`|指定此類型會自動解譯 LPTSTR。|  
-|`tdCustomFormatClass`|指定該類型具有非標準的編碼，依照`CustomFormatMask`。|  
-|`tdCustomFormatMask`|您可以使用此遮罩來取得原生 interop 的非標準編碼資訊。 未指定這些兩位元值的意義。|  
-|`tdBeforeFieldInit`|指定第一次嘗試存取的靜態欄位之前，必須先初始化型別。|  
-|`tdForwarder`|指定，將匯出的類型，以及類型轉送子。|  
-|`tdReservedMask`|這個旗標和下方的旗標，則會由 common language runtime 內部使用。|  
-|`tdRTSpecialName`|指定 common language runtime 應該檢查名稱編碼方式。|  
-|`tdHasSecurity`|指定該類型具有與其相關聯的安全性。|  
+|`tdSealed`|Specifies that the type cannot be extended.|  
+|`tdSpecialName`|Specifies that the class name is special. Its name describes how.|  
+|`tdImport`|Specifies that the type is imported.|  
+|`tdSerializable`|Specifies that the type is serializable.|  
+|`tdWindowsRuntime`|Specifies that this type is a Windows Runtime type.|  
+|`tdStringFormatMask`|Gets information about how strings are encoded and formatted.|  
+|`tdAnsiClass`|Specifies that this type interprets an LPTSTR as ANSI.|  
+|`tdUnicodeClass`|Specifies that this type interprets an LPTSTR as Unicode.|  
+|`tdAutoClass`|Specifies that this type interprets an LPTSTR automatically.|  
+|`tdCustomFormatClass`|Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.|  
+|`tdCustomFormatMask`|Use this mask to get non-standard encoding information for native interop. The meaning of the values of these two bits is unspecified.|  
+|`tdBeforeFieldInit`|Specifies that the type must be initialized before the first attempt to access a static field.|  
+|`tdForwarder`|Specifies that the type is exported, and a type forwarder.|  
+|`tdReservedMask`|This flag and the flags below are used internally by the common language runtime.|  
+|`tdRTSpecialName`|Specifies that the common language runtime should check the name encoding.|  
+|`tdHasSecurity`|Specifies that the type has security associated with it.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

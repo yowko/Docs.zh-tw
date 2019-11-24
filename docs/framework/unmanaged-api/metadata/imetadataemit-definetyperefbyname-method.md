@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c30a4ce3-2d3e-411a-98df-e62ac4a5dd50
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f005ee9d3d9d4b8977cd6a1838fe46015e604df5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3dfdd473b01bfe83def52f957c52e0f4d11375ad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777477"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434377"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName 方法
-取得定義在指定的範圍內，也就是目前範圍以外的類型中繼資料語彙基元。  
+Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,34 +37,34 @@ HRESULT DefineTypeRefByName (
   
 ## <a name="parameters"></a>參數  
  `tkResolutionScope`  
- [in]指定的解析範圍語彙基元。 下列的語彙基元型別是有效的：  
+ [in] The token specifying the resolution scope. The following token types are valid:  
   
-- `mdModuleRef`如果呼叫端定義所在的相同組件中定義型別。  
+- `mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.  
   
-- `mdAssemblyRef`如果不同於呼叫端定義的組件中定義的類型。  
+- `mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.  
   
-- `mdTypeRef`如果類型是巢狀型別。  
+- `mdTypeRef`, if the type is a nested type.  
   
-- `mdModule`如果類型定義在呼叫端定義所在的相同模組中。  
+- `mdModule`, if the type is defined in the same module in which the caller is defined.  
   
-- 如果為 null，全域定義類型。  
+- Null, if the type is defined globally.  
   
  `szName`  
- [in]以 Unicode 的目標類型的名稱。  
+ [in] The name of the target type in Unicode.  
   
  `ptr`  
- [out]指標`mdTypeRef`指派給類型的語彙基元。  
+ [out] A pointer to the `mdTypeRef` token that is assigned to the type.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MSCorEE.dll 中的資源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

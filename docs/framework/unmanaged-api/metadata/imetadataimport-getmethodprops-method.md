@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0667ef7-1d31-4c89-a2d3-d426f023f8d2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 27b2867019085bf5b44f2ee364c07af66144d4b5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a258ce9121a287929ca5bc39c480f1ca2596e78
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782334"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437470"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>IMetaDataImport::GetMethodProps 方法
 取得與指定 MethodDef 語彙基元所參考方法相關聯的中繼資料。  
@@ -46,45 +44,45 @@ HRESULT GetMethodProps (
   
 ## <a name="parameters"></a>參數  
  `mb`  
- [in]MethodDef 語彙基元，表示要傳回的中繼資料的方法。  
+ [in] The MethodDef token that represents the method to return metadata for.  
   
  `pClass`  
- [out]表示實作方法的型別 TypeDef 語彙基元指標。  
+ [out] A Pointer to a TypeDef token that represents the type that implements the method.  
   
  `szMethod`  
- [out]方法的名稱之緩衝區的指標。  
+ [out] A Pointer to a buffer that has the method's name.  
   
  `cchMethod`  
- [in]要求的大小`szMethod`。  
+ [in] The requested size of `szMethod`.  
   
  `pchMethod`  
- [out]寬字元大小的指標`szMethod`，或者，如果截斷，實際的方法名稱中的寬字元數目。  
+ [out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.  
   
  `pdwAttr`  
- [out]任何與方法關聯的旗標指標。  
+ [out] A pointer to any flags associated with the method.  
   
  `ppvSigBlob`  
- [out]二進位中繼資料簽章方法的指標。  
+ [out] A pointer to the binary metadata signature of the method.  
   
  `pcbSigBlob`  
- [out]以位元組為單位的大小的指標`ppvSigBlob`。  
+ [out] A Pointer to the size in bytes of `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out]此方法的相對虛擬位址指標。  
+ [out] A pointer to the relative virtual address of the method.  
   
  `pdwImplFlags`  
- [out]指向的任何方法的實作旗標。  
+ [out] A pointer to any implementation flags for the method.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

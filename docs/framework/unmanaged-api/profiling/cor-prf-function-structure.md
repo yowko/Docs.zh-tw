@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 8bb5acf5-cf4b-4ccb-93f1-46db1f3f8bf3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57520b4a67eb164c8f8631dc4d63d32c655dafa2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40698a49ac7012c4f67eb88b1ead04c80f3dea77
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753831"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428322"
 ---
-# <a name="corprffunction-structure"></a>COR_PRF_FUNCTION 結構
+# <a name="cor_prf_function-structure"></a>COR_PRF_FUNCTION 結構
 將其 ID 與其重新編譯版本的 ID 合併在一起，以提供函式的唯一表示法。  
   
 ## <a name="syntax"></a>語法  
@@ -32,24 +30,24 @@ ms.locfileid: "67753831"
 typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJitId;} COR_PRF_FUNCTION;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`functionId`|函式的識別碼。|  
-|`reJitId`|重新編譯的函式的識別碼。 值為 0 （零） 表示的函式的原始版本。|  
+|`functionId`|The ID of the function.|  
+|`reJitId`|The ID of the recompiled function. A value of 0 (zero) represents the original version of the function.|  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl  
+ **Header:** CorProf.idl  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [分析結構](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

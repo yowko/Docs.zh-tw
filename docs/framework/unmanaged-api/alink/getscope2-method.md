@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 49435665-6f5a-4acd-9034-8c9244a04a63
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f08c4a97b8cbc61a735bb9c1e6a31a698e7eefc1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a5b080443be94d5a298cc67591914d87470e6f48
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787355"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447193"
 ---
 # <a name="getscope2-method"></a>GetScope2 方法
-取得匯入範圍。  
+Gets an import scope.  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,24 +37,24 @@ HRESULT GetScope2(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- 目標群組件的識別碼。  
+ ID of target assembly.  
   
  `FileToken`  
- 要匯入之檔案的識別碼。  
+ ID of file from which to import.  
   
  `dwScope`  
- 要匯入之以零為基底的範圍。  
+ Zero-based scope to import.  
   
  `ppImportScope`  
- 接收指定範圍之[IMetaDataImport2 介面](../metadata/imetadataimport2-interface.md)介面的指標。  
+ Receives pointer to [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface for indicated scope.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則傳回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>需求  
- 需要 alink. h。  
+ Requires alink.h.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IALink2 介面](ialink2-interface.md)
 - [IALink 介面](ialink-interface.md)

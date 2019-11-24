@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad32fb84-c2b6-41cd-888d-787ff3a90449
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4eefb7ec1e7d0d130ec64531a59d1d5bbce04963
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7a46fa5319a1badc0cf28dcdbf535a6ed017c9c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968925"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437924"
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember 方法
-取得欄位或方法的 MemberDef token 指標, 此標記是由指定<xref:System.Type>的所括住, 且具有指定的名稱和中繼資料簽章。  
+Gets a pointer to the MemberDef token for field or method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,40 +39,40 @@ HRESULT FindMember (
   
 ## <a name="parameters"></a>參數  
  `td`  
- 在用來括住要搜尋之成員的類別或介面的 TypeDef token。 如果這個值為`mdTokenNil`, 則會針對全域變數或全域函式進行查閱。  
+ [in] The TypeDef token for the class or interface that encloses the member to search for. If this value is `mdTokenNil`, the lookup is done for a global-variable or global-function.  
   
  `szName`  
- 在要搜尋之成員的名稱。  
+ [in] The name of the member to search for.  
   
  `pvSigBlob`  
- 在成員的二進位中繼資料簽章的指標。  
+ [in] A pointer to the binary metadata signature of the member.  
   
  `cbSigBlob`  
- 在的`pvSigBlob`大小 (以位元組為單位)。  
+ [in] The size in bytes of `pvSigBlob`.  
   
  `pmb`  
- 脫銷對應之 MemberDef token 的指標。  
+ [out] A pointer to the matching MemberDef token.  
   
 ## <a name="remarks"></a>備註  
- 您可以使用其封入類別或介面 (`td`)、其名稱 (`szName`), 以及選擇性的簽章 (`pvSigBlob`) 來指定成員。 類別或介面中可能有多個具有相同名稱的成員。 在此情況下, 請傳遞成員的簽章來尋找唯一的相符項。  
+ You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`). There might be multiple members with the same name in a class or interface. In that case, pass the member's signature to find the unique match.  
   
- 傳遞至`FindMember`的簽章必須已在目前的範圍中產生, 因為簽章已系結至特定範圍。 簽章可以內嵌可識別封閉類別或實數值型別的 token。 Token 是本機 TypeDef 資料表的索引。 您無法在目前範圍的內容之外建立執行時間簽章, 並使用該簽章做為輸入來輸入`FindMember`至。  
+ The signature passed to `FindMember` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMember`.  
   
- `FindMember`只尋找直接定義于類別或介面中的成員;它找不到繼承的成員。  
+ `FindMember` finds only members that were defined directly in the class or interface; it does not find inherited members.  
   
 > [!NOTE]
-> `FindMember`是 helper 方法。 它會呼叫[IMetaDataImport:: FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md);如果該呼叫找不到相符的, `FindMember`則會呼叫[IMetaDataImport:: FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)。  
+> `FindMember` is a helper method. It calls [IMetaDataImport::FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); if that call does not find a match, `FindMember` then calls [IMetaDataImport::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含為 Mscoree.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

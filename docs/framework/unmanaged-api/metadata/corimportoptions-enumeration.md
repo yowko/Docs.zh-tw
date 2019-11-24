@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e5d03cb-97c9-4ff4-8dbd-17d94ee374d3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 38c0937804eb82d1c96a605b55a00784ba58fe13
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 44d1776e2902988353ef4fd58aca20e56203b9da
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781832"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442852"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions 列舉
 包含旗標值，這些值可控制在匯入目前範圍之外的組件期間所發生的行為。  
@@ -44,27 +42,27 @@ typedef enum CorImportOptions {
 } CorImportOptions;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`MDImportOptionDefault`|表示預設行為，也就是略過已刪除的記錄。|  
-|`MDImportOptionAll`|指出應該要列舉所有的中繼資料。|  
-|`MDImportOptionAllTypeDefs`|指出應該要列舉所有的 Typedef，包括已刪除的。|  
-|`MDImportOptionAllMethodDefs`|表示所有 MethodDefs，包括已刪除的應該要都列舉。|  
-|`MDImportOptionAllFieldDefs`|表示所有 FieldDefs，包括已刪除的應該要都列舉。|  
-|`MDImportOptionAllProperties`|表示所有 PropertyDefs，包括已刪除的應該要都列舉。|  
-|`MDImportOptionAllEvents`|表示所有 EventDefs，包括已刪除的應該要都列舉。|  
-|`MDImportOptionAllCustomAttributes`|指出應該要列舉所有的自訂屬性，包括已刪除的。|  
-|`MDImportOptionAllExportedTypes`|表示所有匯出的類型，包括已刪除的應該要列舉。|  
+|`MDImportOptionDefault`|Indicates the default behavior, which is to skip deleted records.|  
+|`MDImportOptionAll`|Indicates that all metadata should be enumerated.|  
+|`MDImportOptionAllTypeDefs`|Indicates that all TypeDefs, including deleted ones, should be enumerated.|  
+|`MDImportOptionAllMethodDefs`|Indicates that all MethodDefs, including deleted ones, should be enumerated.|  
+|`MDImportOptionAllFieldDefs`|Indicates that all FieldDefs, including deleted ones, should be enumerated.|  
+|`MDImportOptionAllProperties`|Indicates that all PropertyDefs, including deleted ones, should be enumerated.|  
+|`MDImportOptionAllEvents`|Indicates that all EventDefs, including deleted ones, should be enumerated.|  
+|`MDImportOptionAllCustomAttributes`|Indicates that all custom attributes, including deleted ones, should be enumerated.|  
+|`MDImportOptionAllExportedTypes`|Indicates that all exported types, including deleted ones, should be enumerated.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

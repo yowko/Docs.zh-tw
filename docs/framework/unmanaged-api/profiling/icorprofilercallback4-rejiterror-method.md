@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6b01f38fbcf1cb0439b82a933b37971515b06ac4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ea9dee6e83870d1f2e0fdccffa53f16e6f18dba
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758156"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430103"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError 方法
-通知分析工具在 just-in-time (JIT) 編譯器發生重新編譯程序中的錯誤。  
+Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,16 +37,16 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>參數  
  `moduleID`  
- [in]`ModuleID`中進行重新編譯失敗的嘗試。  
+ [in] The `ModuleID` in which the failed recompilation attempt was made.  
   
  `methodId`  
- [in]`MethodDef`上失敗的重新編譯嘗試的方法。  
+ [in] The `MethodDef` of the method on which the failed recompilation attempt was made.  
   
  `functionId`  
- [in]正在重新編譯或標示為重新編譯函式執行個體。 這個值可以是`NULL`如果發生失敗而不是以每個具現化的方式以每個方法為基礎 （例如，如果分析工具指定重新編譯方法無效的中繼資料語彙基元）。  
+ [in] The function instance that is being recompiled or marked for recompilation. This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).  
   
  `hrStatus`  
- [in]HRESULT，表示失敗的本質。 請參閱值的狀態 HRESULT 區段的清單。  
+ [in] An HRESULT that indicates the nature of the failure. See the Status HRESULTS section for a list of values.  
   
 ## <a name="return-value"></a>傳回值  
  忽略此回呼傳回的值。  
@@ -57,23 +55,23 @@ HRESULT ReJITError(
   
 |狀態陣列 HRESULT|描述|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|`moduleID`或是`methodDef`語彙基元是`NULL`。|  
+|E_INVALIDARG|The `moduleID` or `methodDef` token is `NULL`.|  
 |CORPROF_E_DATAINCOMPLETE|這個模組未完全載入，或正在進行卸載。|  
-|CORPROF_E_MODULE_IS_DYNAMIC|動態產生指定的模組 (例如，藉由`Reflection.Emit`)，並因此不支援這個方法。|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|方法可回收組件中，具現化，因此無法重新編譯。 請注意，型別和非反映內容中定義的函式 (例如`List<MyCollectibleStruct>`) 可以具現化成可回收組件。|  
-|E_OUTOFMEMORY|CLR 會嘗試將標記指定的方法進行 JIT 重新編譯時已用盡記憶體。|  
-|其他|作業系統會傳回在 CLR 的控制項外發生的失敗。 例如，如果要變更之存取保護的記憶體分頁的系統呼叫失敗，作業系統會顯示錯誤。|  
+|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|The method is instantiated into a collectible assembly, and is therefore not able to be recompiled. Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.|  
+|E_OUTOFMEMORY|The CLR ran out of memory while trying to mark the specified method for JIT recompilation.|  
+|其他|作業系統會傳回在 CLR 的控制項外發生的失敗。 For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** CorProf.idl、CorProf.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback4 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 69156fbf-7219-43bf-b4b8-b13f1a2fcb86
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 576fb8632818a6b8ffc3e2c0acc50eaafd074de3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d4690cb6adedc77717e577d409cb52b18b1b5ca
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766961"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443828"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention 列舉
 包含值，這些值描述在 Managed 程式碼中進行的呼叫慣例類型。  
@@ -50,31 +48,31 @@ typedef enum CorCallingConvention
 } CorCallingConvention;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|表示預設呼叫慣例。|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|指出此方法會採用不同數量的參數。|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|表示呼叫的欄位。|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|表示要區域方法呼叫。|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|表示呼叫的屬性。|  
-|`IMAGE_CEE_CS_CALLCONV_UNMGD`|表示 unmanaged 呼叫。|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|表示泛型方法具現化。|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|表示 64 位元的 PInvoke 呼叫接受可變數目之參數的方法。|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|描述無效的 4 位元值。|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|指出，最後四個位元所描述的呼叫慣例。|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|表示的最上層的位元描述`this`參數。|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|表示`this`參數是明確地描述簽章中。|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|表示泛型方法簽章，以明確的型別引數數目。 這在之前的一般參數計數。|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Indicates a default calling convention.|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|Indicates that the method takes a variable number of parameters.|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|Indicates that the call is to a field.|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Indicates that the call is to a local method.|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indicates that the call is to a property.|  
+|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Indicates that the call is unmanaged.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indicates a generic method instantiation.|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|Describes an invalid 4-bit value.|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|Indicates that the calling convention is described by the bottom four bits.|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indicates that the top bit describes a `this` parameter.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indicates that a `this` parameter is explicitly described in the signature.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indicates a generic method signature with an explicit number of type arguments. This precedes an ordinary parameter count.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f66a43bc-a5c5-4190-acbe-63fd27640634
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b7828c86018724bb934de99cab4617f9885fdca6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 70dca19075d8c896408ec78f89549b0c539280de
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787614"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446574"
 ---
 # <a name="closeassembly-method"></a>CloseAssembly 方法
-完成元件作業。 在開始新元件或解除系結模組之前，請先呼叫這個方法。  
+Finalizes assembly operations. Call this method before beginning a new assembly or unbound module.  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,15 +35,15 @@ HRESULT CloseAssembly(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- 元件的識別碼。  
+ ID of the assembly.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則傳回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>需求  
- 需要 alink. h。  
+ Requires alink.h.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

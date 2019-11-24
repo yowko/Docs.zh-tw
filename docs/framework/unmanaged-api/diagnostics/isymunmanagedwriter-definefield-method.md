@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 37794d40b4b379c5d3a05935cf1f2b7b3da11baa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7eea63cae27c08260177dfc7746046b975434611
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777373"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428044"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField 方法
-定義不在方法內的單一變數。 這個方法是使用特定類別中的欄位、 位元欄位，依此類推。  
+Defines a single variable that is not within a method. This method is used for certain fields in classes, bit fields, and so on.  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,38 +42,38 @@ HRESULT DefineField(
   
 ## <a name="parameters"></a>參數  
  `parent`  
- [in]中繼資料型別或方法語彙基元。  
+ [in] The metadata type or method token.  
   
  `name`  
- [in]欄位名稱。  
+ [in] The field name.  
   
  `attributes`  
- [in]欄位的欄位屬性。  
+ [in] The field attributes.  
   
  `cSig`  
- [in]A`ULONG32`也就是大小，以字元為單位，以包含欄位簽章所需的緩衝區。  
+ [in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.  
   
  `signature`  
- [in]欄位簽章的陣列。  
+ [in] The array of field signatures.  
   
  `addrKind`  
- [in]位址類型。  
+ [in] The address type.  
   
  `addr1`  
- [in]欄位規格的第一個位址。  
+ [in] The first address for the field specification.  
   
  `addr2`  
- [in]欄位規格的第二個位址。  
+ [in] The second address for the field specification.  
   
  `addr3`  
- [in]欄位規格的第三個位址。  
+ [in] The third address for the field specification.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

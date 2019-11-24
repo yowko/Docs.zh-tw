@@ -1,17 +1,17 @@
 ---
-title: CoreFx 重大變更-.NET Core
-description: 列出 .NET CoreFx （基類庫）中的重大變更。
+title: Base class library breaking changes - .NET Core
+description: Lists the breaking changes in .NET CoreFx, the base class library.
 ms.date: 09/20/2019
-ms.openlocfilehash: 028a5c1059a855d1de644dde9fd9ad5f85f47ffe
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 859eb30b8f6fa48350f81ee1822247e72698fead
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739796"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429202"
 ---
-# <a name="corefx-breaking-changes"></a>CoreFx 重大變更
+# <a name="corefx-breaking-changes"></a>CoreFx breaking changes
 
-以下是 .NET Core 版本的 CoreFx 重大變更清單。 CoreFx 提供 .NET Core 所使用的基本和其他一般類型。
+The following is a list of CoreFx breaking changes by .NET Core version. CoreFx provides the primitives and other general types used by .NET Core.
 
 ## <a name="net-core-30-preview-7"></a>.NET Core 3.0 Preview 7
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2868dfec-c992-4606-88bb-a8e0b6b18271
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 22af95ef4bd1fca0a8253faa6ce0e1c7a862054d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0cd2071d4410615a08e774ba30e0e8fe8d1fa7c7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782652"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436183"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping 方法
-取得記憶體區域的對應的檔，以及對應的類型。  
+Gets the memory region of the mapped file, and the type of mapping.  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,41 +37,41 @@ HRESULT GetFileMapping (
   
 ## <a name="parameters"></a>參數  
  `ppvData`  
- [out]對應檔的開頭指標。  
+ [out] A pointer to the start of the mapped file.  
   
  `pcbData`  
- [out]對應區域的大小。 如果`pdwMappingType`是`fmFlat`，這是檔案的大小。  
+ [out] The size of the mapped region. If `pdwMappingType` is `fmFlat`, this is the size of the file.  
   
  `pdwMappingType`  
- [out]A [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)值，指出對應的類型。 目前的實作的 common language runtime (CLR) 永遠傳回`fmFlat`。 其他值保留供日後使用。 不過，您一律應該確認傳回的值，因為其他值可能會在未來版本中啟用，或服務版本。  
+ [out] A [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) value that indicates the type of mapping. The current implementation of the common language runtime (CLR) always returns `fmFlat`. Other values are reserved for future use. However, you should always verify the returned value, because other values may be enabled in future versions or service releases.  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|所有的輸出會填滿。|  
-|`E_INVALIDARG`|傳遞 NULL 做為引數的值。|  
-|`COR_E_NOTSUPPORTED`|CLR 實作無法提供記憶體區域的相關資訊。 這種情形，原因如下：<br /><br /> -在中繼資料範圍以開啟`ofWrite`或`ofCopyMemory`旗標。<br />-在中繼資料範圍已開啟但`ofReadOnly`旗標。<br />- [Imetadatadispenser:: Openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)方法用來開啟 僅中繼資料檔案的一部分。<br />-檔案不是可攜式執行檔 (PE) 檔案。 **注意：** 這些條件取決於 CLR 實作中，而且可能會減弱在未來的 CLR 版本。|  
+|`S_OK`|All outputs are filled.|  
+|`E_INVALIDARG`|NULL was passed as an argument value.|  
+|`COR_E_NOTSUPPORTED`|The CLR implementation cannot provide information about the memory region. This can happen for the following reasons:<br /><br /> -   The metadata scope was opened with the `ofWrite` or `ofCopyMemory` flag.<br />-   The metadata scope was opened without the `ofReadOnly` flag.<br />-   The [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method was used to open only the metadata portion of the file.<br />-   The file is not a portable executable (PE) file. **Note:**  These conditions depend on the CLR implementation, and are likely to be weakened in future versions of the CLR.|  
   
 ## <a name="remarks"></a>備註  
- 記憶體的`ppvData`指向無效，只要基礎的中繼資料範圍已開啟。  
+ The memory that `ppvData` points to is valid only as long as the underlying metadata scope is open.  
   
- 為了讓此方法才能運作，當您將磁碟上檔案的中繼資料對應到記憶體上呼叫[imetadatadispenser:: Openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)方法，您必須指定`ofReadOnly`旗標，您必須指定`ofWrite`或`ofCopyMemory`旗標。  
+ In order for this method to work, when you map the metadata of an on-disk file into memory by calling the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method, you must specify the `ofReadOnly` flag and you must not specify the `ofWrite` or `ofCopyMemory` flag.  
   
- 選擇每個範圍的檔案對應類型是 CLR 的指定實作的特定項目。 它不能由使用者設定。 目前實作的 clr 一律會傳回`fmFlat`在`pdwMappingType`，但這在 CLR 的版本，或未來的特定版本的服務版本可以在未來變更。 您一律應該檢查傳回的值`pdwMappingType`，因為不同的版面配置和位移，會有不同的型別。  
+ The choice of file mapping type for each scope is specific to a given implementation of the CLR. It cannot be set by the user. The current implementation of the CLR always returns `fmFlat` in `pdwMappingType`, but this can change in future versions of the CLR or in future service releases of a given version. You should always check the returned value in `pdwMappingType`, because different types will have different layouts and offsets.  
   
- 不支援將傳遞的任何三個參數都是 NULL。 此方法會傳回`E_INVALIDARG`，且沒有任何輸出會填入。 忽略對應型別或區域的大小，可能會導致程式異常終止。  
+ Passing NULL for any of the three parameters is not supported. The method returns `E_INVALIDARG`, and none of the outputs are filled. Ignoring the mapping type or the size of the region can result in abnormal program termination.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataInfo 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)
 - [CorFileMapping 列舉](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)

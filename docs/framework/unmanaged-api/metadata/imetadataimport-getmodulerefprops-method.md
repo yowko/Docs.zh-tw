@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b558e766-4c11-4628-ae47-b4e0a1800168
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: be4408758db1cbf7839c12cb66ff395625925f69
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dce9b9c20cbc73c6a70a34afa6c348c23164ed9e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779023"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437326"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>IMetaDataImport::GetModuleRefProps 方法
 取得指定中繼資料語彙基元所參考的模組名稱。  
@@ -40,27 +38,27 @@ HRESULT GetModuleRefProps (
   
 ## <a name="parameters"></a>參數  
  `mur`  
- [in]ModuleRef 中繼資料語彙基元所參考的模組，以取得中繼資料資訊。  
+ [in] The ModuleRef metadata token that references the module to get metadata information for.  
   
  `szName`  
- [out]緩衝區來容納模組名稱。  
+ [out] A buffer to hold the module name.  
   
  `cchName`  
- [in]要求的大小`szName`寬字元。  
+ [in] The requested size of `szName` in wide characters.  
   
  `pchName`  
- [out]傳回的大小`szName`寬字元。  
+ [out] The returned size of `szName` in wide characters.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

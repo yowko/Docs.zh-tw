@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a57c7d71-c4b0-41f9-a964-0c5ee84a3124
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0191f1fa17d436944fcb590d88dd4004adfa1aba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 51db7a2b6464b562e09ce061991898a8d604ead1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744295"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437977"
 ---
-# <a name="userthread-structure"></a>USER_THREAD 結構
-提供偵錯工具執行緒的相關資訊。 如需詳細資訊，請參閱 < [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)方法。  
+# <a name="user_thread-structure"></a>USER_THREAD 結構
+Provides information to a debugger about a thread. For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,18 +35,18 @@ typedef struct tagUSER_THREAD
 } USER_THREAD;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`pSidBuffer`|執行緒緩衝區的位址。|  
-|`dwSidLen`|執行緒的緩衝區，以位元組為單位的長度。|  
-|`dwTid`|執行緒 id。|  
+|`pSidBuffer`|Address of thread buffer.|  
+|`dwSidLen`|Length of thread buffer, in bytes.|  
+|`dwTid`|Thread ID.|  
   
 ## <a name="requirements"></a>需求  
- **標頭：** ProtocolNotify2.idl  
+ **Header:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [SetNotifyFilter 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)
 - [診斷符號存放區結構](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

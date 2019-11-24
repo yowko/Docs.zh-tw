@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 32f3ba58-9695-41e9-ba58-fd19e45ed396
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ce09eca30e1edb9e1afc02216a07955a5fed4fd2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8dae903ab76ab83ac0818c4bc4a76e81094bdf65
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787263"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445673"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 方法
-起始類型的匯入。 呼叫這個方法，以開始從每個透過[ImportFile 方法](importfile-method.md)匯入的範圍匯入類型。  
+Initiates the import of types. Call this method to begin importing types from each scope imported via [ImportFile Method](importfile-method.md).  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,30 +39,30 @@ HRESULT ImportTypes2(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- 要匯入之元件的識別碼。  
+ ID of assembly into which to import.  
   
  `FileToken`  
- 要從中匯入之檔案的識別碼。  
+ ID of file to from which to import.  
   
  `dwScope`  
- 要匯入之以零為基底的範圍。  
+ Zero-based scope from which to import.  
   
  `phEnum`  
- 接收指定範圍內之類型的列舉值控制碼。  
+ Receives enumerator handle for the types in the given scope.  
   
  `ppImportScope`  
- 選擇性地接收[IMetaDataImport2 介面](../metadata/imetadataimport2-interface.md)介面。  
+ Optionally receives [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface.  
   
  `pdwCountOfTypes`  
- 選擇性地接收指定範圍內的類型計數。  
+ Optionally receives count of types in the specified scope.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則傳回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>需求  
- 需要 alink. h  
+ Requires alink.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IALink2 介面](ialink2-interface.md)
 - [IALink 介面](ialink-interface.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9544b711-e669-4eaf-8630-ee862e5e4489
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7700236efe7b031866867f5ed859ba71683a8a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6b5b3b3b5a3613668f4470f48083ae010cc9d336
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782289"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445248"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps 方法
-取得指定 methodspec Neobsahuje 所參考之方法的中繼資料簽章語彙基元。  
+Gets the metadata signature of the method referenced by the specified MethodSpec token.  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,27 +38,27 @@ HRESULT GetMethodSpecProps (
   
 ## <a name="parameters"></a>參數  
  `mi`  
- [in]表示方法具現化 methodspec Neobsahuje 語彙基元。  
+ [in] A MethodSpec token that represents the instantiation of the method.  
   
  `tkParent`  
- [out]表示方法定義的 MethodDef 或 MethodRef 語彙基元指標。  
+ [out] A pointer to the MethodDef or MethodRef token that represents the method definition.  
   
  `ppvSigBlob`  
- [out]二進位中繼資料簽章方法的指標。  
+ [out] A pointer to the binary metadata signature of the method.  
   
  `pcbSigBlob`  
- [out]大小，以位元組為單位的`ppvSigBlob`。  
+ [out] The size, in bytes, of `ppvSigBlob`.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

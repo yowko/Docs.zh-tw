@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 83605f1e-e4f3-49e6-859b-f13cad68bb54
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e283bea2ce2f4b2e17da6e8dcb85165d3c4d6693
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 923a92ea256f79a1b0130b61c4fd99460fda96a0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776970"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441804"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodsFromDocumentPosition 方法
-傳回的陣列的方法，其中每一個包含文件中指定位置的中斷點。  
+Returns an array of methods, each of which contains the breakpoint at the given position in a document.  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,29 +40,29 @@ HRESULT GetMethodsFromDocumentPosition (
   
 ## <a name="parameters"></a>參數  
  `document`  
- [in]指定的文件。  
+ [in] The specified document.  
   
  `line`  
- [in]指定的文件行。  
+ [in] The line of the specified document.  
   
  `column`  
- [in]指定的文件的資料行。  
+ [in] The column of the specified document.  
   
  `cMethod`  
  [in] `pRetVal` 陣列的大小。  
   
  `pcMethod`  
- [out]此變數會接收傳回的項目數的指標`pRetVal`陣列。  
+ [out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.  
   
  `pRetVal`  
- [out]指標的陣列，其中每一個指向[ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)物件，表示包含中斷點的方法。  
+ [out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

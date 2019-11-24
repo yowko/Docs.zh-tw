@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 909aa530-2e3b-4d0a-a38a-a2750e535d7d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7bebf254110d9970ff3a99f948ff2e831ffb6b35
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bd7ba7ff10918e5953ea8ae89a60af3115af48a3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782443"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437679"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>IMetaDataImport::GetCustomAttributeByName 方法
-取得自訂屬性，指定其名稱和擁有者。  
+Gets the custom attribute, given its name and owner.  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,30 +38,30 @@ HRESULT GetCustomAttributeByName (
   
 ## <a name="parameters"></a>參數  
  `tkObj`  
- [in]表示擁有該自訂屬性的物件中繼資料語彙基元。  
+ [in] A metadata token representing the object that owns the custom attribute.  
   
  `szName`  
- [in]自訂屬性的名稱。  
+ [in] The name of the custom attribute.  
   
  `ppData`  
- [out]做為自訂屬性的值之資料的陣列指標。  
+ [out] A pointer to an array of data that is the value of the custom attribute.  
   
  `pcbData`  
- [out]以位元組為單位的中傳回的資料大小 *`ppData`。  
+ [out] The size in bytes of the data returned in *`ppData`.  
   
 ## <a name="remarks"></a>備註  
- 它是合法來定義多個自訂屬性之相同的擁有者;他們甚至可能擁有相同的名稱。 不過，`GetCustomAttributeByName`傳回只有一個執行個體。 (`GetCustomAttributeByName`傳回遇到的第一個執行個體。)若要尋找自訂屬性的所有執行個體，呼叫[imetadataimport:: Enumcustomattributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md)方法。  
+ It is legal to define multiple custom attributes for the same owner; they may even have the same name. However, `GetCustomAttributeByName` returns only one instance. (`GetCustomAttributeByName` returns the first instance that it encounters.) To find all instances of a custom attribute, call the [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) method.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

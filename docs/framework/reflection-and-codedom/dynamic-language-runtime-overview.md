@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-ms.openlocfilehash: f0bd28823c5b8efc0b773ad588f2f232f8a41502
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a38ed15769d1186ef78733d68d9d8b51b3eb262d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130271"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446903"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dynamic Language Runtime 概觀
 
@@ -51,7 +51,7 @@ DLR 也可協助您建立支援動態作業的程式庫。 比方說，如果您
 
 - IronPython。 在 [GitHub](https://github.com/IronLanguages/ironpython2) 網站上以開放原始碼軟體形式提供。
 
-- IronRuby。 以開放原始碼軟體於 [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044) 網站上提供。
+- IronRuby。 Available as open-source software from the [IronRuby](http://ironruby.net/) website.
 
 ## <a name="primary-dlr-advantages"></a>主要的 DLR 優點
  DLR 提供下列優點。
@@ -74,7 +74,7 @@ DLR 也可協助您建立支援動態作業的程式庫。 比方說，如果您
 ## <a name="dlr-architecture"></a>DLR 架構
  下圖顯示動態語言執行階段的架構。
 
- ![動態語言執行時間架構總覽](./media/dlr-archoverview.png "DLR_ArchOverview")DLR 架構
+ ![Dynamic Language Runtime Architecture Overview](./media/dlr-archoverview.png "DLR_ArchOverview") DLR architecture
 
  DLR 新增一組服務給 CLR，以便更妥善支援動態語言。 這些服務包括下列各項：
 

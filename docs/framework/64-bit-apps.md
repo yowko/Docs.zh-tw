@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-ms.openlocfilehash: 3ef6d02023570f5ec4013b070317c272a94b8212
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90e022d5643dc49ccc5b78d071b3b473c92f0670
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120102"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429659"
 ---
 # <a name="64-bit-applications"></a>64 位元應用程式
 您在編譯應用程式時，可以指定其應以原生應用程式在 Windows 64 位元作業系統上或在 WOW64 下 (Windows 64 位元上的 Windows 32 位元) 執行。 WOW64 是讓 32 位元應用程式可在 64 位元系統上執行的相容性環境。 所有 64 位元版本的 Windows 作業系統中都包含 WOW64。  
@@ -41,11 +41,7 @@ ms.locfileid: "73120102"
 ## <a name="general-64-bit-programming-information"></a>64 位元程式設計的一般資訊  
  如需 64 位元程式設計的一般資訊，請參閱下列文件：  
   
-- 如需 64 位元 Windows 電腦上的 64 位元版本 CLR 的詳細資訊，請參閱 MSDN 網站上的 [.NET Framework 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=37079)。  
-  
-- 在 Windows SDK 文件中，請參閱 [64 位元 Windows 程式設計指南](https://go.microsoft.com/fwlink/p/?LinkId=253512)。  
-  
-- 如需如何下載 64 位元版本 CLR 的詳細資訊，請參閱 MSDN 網站上的 [.NET Framework 開發人員中心下載](https://go.microsoft.com/fwlink/?LinkId=50953)。  
+- 在 Windows SDK 文件中，請參閱 [64 位元 Windows 程式設計指南](/windows/win32/winprog64/programming-guide-for-64-bit-windows)。  
   
 - 如需 Visual Studio 支援建立 64 位元應用程式的相關資訊，請參閱 [Visual Studio IDE 64 位元支援](/visualstudio/ide/visual-studio-ide-64-bit-support)。  
   
@@ -54,9 +50,9 @@ ms.locfileid: "73120102"
   
 |編譯器|編譯器選項|  
 |--------------|---------------------|  
-|Visual Basic|[-platform （Visual Basic）](../visual-basic/reference/command-line-compiler/platform.md)|  
+|Visual Basic|[-platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[-platform (C# 編譯器選項)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|您可以使用 **/clr:safe** 建立各平台適用的 Microsoft 中繼語言 (MSIL) 應用程式。 如需詳細資訊，請參閱[-clr （Common Language Runtime 編譯）](/cpp/build/reference/clr-common-language-runtime-compilation)。<br /><br /> Visual C++ 針對每個 64 位元作業系統包含了個別的編譯器。 如需如何使用 Visual C++ 建立可在 64 位元 Windows 作業系統上執行之原生應用程式的詳細資訊，請參閱 [64 位元程式設計](/cpp/build/configuring-programs-for-64-bit-visual-cpp)。|  
+|Visual C++|您可以使用 **/clr:safe** 建立各平台適用的 Microsoft 中繼語言 (MSIL) 應用程式。 For more information, see [-clr (Common Language Runtime Compilation)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ 針對每個 64 位元作業系統包含了個別的編譯器。 如需如何使用 Visual C++ 建立可在 64 位元 Windows 作業系統上執行之原生應用程式的詳細資訊，請參閱 [64 位元程式設計](/cpp/build/configuring-programs-for-64-bit-visual-cpp)。|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>判斷 .exe 檔或 .dll 檔的狀態  
  若要判斷 .exe 檔或 .dll 檔案是否只能在特定平台上或在 WOW64 下執行，請使用不含選項的 [CorFlags.exe (CorFlags 轉換工具)](./tools/corflags-exe-corflags-conversion-tool.md)。 您也可以使用 CorFlags.exe 來變更 .exe 檔或 .dll 檔的平台狀態。 Visual Studio 組件的 CLR 標頭中的執行階段主要版本號碼設為 2，而執行階段次要版本號碼設為 5。 將次要執行階段版本設定為 0 的應用程式會被視為舊版應用程式，並一律在 WOW64 下執行。  

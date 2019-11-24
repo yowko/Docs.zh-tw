@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9fb1dff80fccc920540d370797441b3a019d766c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f83cb96e39b257a1d35786130cd5ed31d071de7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780915"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443878"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 列舉
 指定有效套用屬性的應用程式項目。  
@@ -60,39 +58,39 @@ typedef enum CorAttributeTargets
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`catAssembly`|屬性可以套用至組件。|  
-|`catModule`|屬性可以套用至可攜式可執行檔 （.dll 或.exe） 模組。|  
-|`catClass`|屬性可以套用至類別。|  
-|`catStruct`|屬性可以套用至結構;也就是類型的值。|  
-|`catEnum`|屬性可以套用至列舉型別。|  
-|`catConstructor`|屬性可以套用至建構函式。|  
-|`catMethod`|屬性可以套用至方法。|  
-|`catProperty`|屬性可以套用至屬性。|  
-|`catField`|屬性可以套用至欄位。|  
-|`catEvent`|屬性可以套用至事件。|  
-|`catInterface`|屬性可以套用至介面。|  
-|`catParameter`|屬性可以套用至參數。|  
-|`catDelegate`|屬性可以套用至委派。|  
-|`catGenericParameter`|屬性可以套用至泛型參數。|  
-|`catAll`|屬性可以套用至任何應用程式項目。|  
-|`catClassMembers`|屬性可以套用至類別的成員。|  
+|`catAssembly`|Attribute can be applied to an assembly.|  
+|`catModule`|Attribute can be applied to a portable executable (.dll or .exe) module.|  
+|`catClass`|Attribute can be applied to a class.|  
+|`catStruct`|Attribute can be applied to a structure; that is, a value type.|  
+|`catEnum`|Attribute can be applied to an enumeration.|  
+|`catConstructor`|Attribute can be applied to a constructor.|  
+|`catMethod`|Attribute can be applied to a method.|  
+|`catProperty`|Attribute can be applied to a property.|  
+|`catField`|Attribute can be applied to a field.|  
+|`catEvent`|Attribute can be applied to an event.|  
+|`catInterface`|Attribute can be applied to an interface.|  
+|`catParameter`|Attribute can be applied to a parameter.|  
+|`catDelegate`|Attribute can be applied to a delegate.|  
+|`catGenericParameter`|Attribute can be applied to a generic parameter.|  
+|`catAll`|Attribute can be applied to any application element.|  
+|`catClassMembers`|Attribute can be applied to a member of a class.|  
   
 ## <a name="remarks"></a>備註  
- `CorAttributeTargets`列舉值可以結合位元的 OR 運算，若要取得慣用的組合。  
+ The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.  
   
- `CorAttributeTargets`平行 managed<xref:System.AttributeTargets?displayProperty=nameWithType>列舉型別。  
+ The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

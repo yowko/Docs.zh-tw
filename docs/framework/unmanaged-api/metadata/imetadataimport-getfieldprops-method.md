@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 574ac706a07e7fcd701ab04f923d5171bea6f64a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 462512fd2c2b33905b45bb67599b23b301fc71f7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782383"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438003"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps 方法
 取得與指定 FieldDef 語彙基元所參考欄位相關聯的中繼資料。  
@@ -47,48 +45,48 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>參數  
  `mb`  
- [in]FieldDef 語彙基元，表示要取得相關聯的中繼資料的欄位。  
+ [in] A FieldDef token that represents the field to get associated metadata for.  
   
  `pClass`  
- [out]表示欄位所屬的類別類型的 TypeDef 語彙基元指標。  
+ [out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.  
   
  `szField`  
- [out]欄位名稱。  
+ [out] The name of the field.  
   
  `cchField`  
- [in]寬字元緩衝區的大小*szField*。  
+ [in] The size in wide characters of the buffer for *szField*.  
   
  `pchField`  
- [out]傳回的緩衝區實際大小。  
+ [out] The actual size of the returned buffer.  
   
  `pdwAttr`  
- [out]欄位的中繼資料相關聯的旗標。  
+ [out] Flags associated with the field's metadata.  
   
  `ppvSigBlob`  
- [in]描述欄位的二進位中繼資料值的指標。  
+ [in] A pointer to the binary metadata value that describes the field.  
   
  `pcbSigBlob`  
- [out]以位元組為單位的大小`ppvSigBlob`。  
+ [out] The size in bytes of `ppvSigBlob`.  
   
  `pdwCPlusTypeFlag`  
- [out]指定欄位的值類型的旗標。  
+ [out] A flag that specifies the value type of the field.  
   
  `ppValue`  
- [out]欄位的常值。  
+ [out] A constant value for the field.  
   
  `pcchValue`  
- [out]以字元為單位的大小`ppValue`，零，如果不有任何字串。  
+ [out] The size in chars of `ppValue`, or zero if no string exists.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

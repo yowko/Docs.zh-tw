@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b4f34340c18fddc46695fe64946c3afd90ed7454
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 74807a678b5c0c2738f33fe552f6462af93ca1f9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772301"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436460"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType 列舉
-表示中繼資料語彙基元的類型。  
+Indicates the type of a metadata token.  
   
 ## <a name="syntax"></a>語法  
   
@@ -61,47 +59,47 @@ typedef enum CorTokenType {
 } CorTokenType;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`mdtModule`|`mdModule`語彙基元。|  
-|`mdtTypeRef`|`mdTypeRef`語彙基元。|  
-|`mdtTypeDef`|`mdTypeDef`語彙基元。|  
-|`mdtFieldDef`|`mdFieldDef`語彙基元。|  
-|`mdtMethodDef`|`mdMethodDef`語彙基元。|  
-|`mdtParamDef`|`mdParamDef`語彙基元。|  
-|`mdtInterfaceImpl`|`mdInterfaceImpl`語彙基元。|  
-|`mdtMemberRef`|`mdMemberRef`語彙基元。|  
-|`mdtCustomAttribute`|`mdCustomAttribute`語彙基元。|  
-|`mdtPermission`|`mdPermission`語彙基元。|  
-|`mdtSignature`|`mdSignature`語彙基元。|  
-|`mdtEvent`|`mdEvent`語彙基元。|  
-|`mdtProperty`|`mdProperty`語彙基元。|  
-|`mdtModuleRef`|`mdModuleRef`語彙基元。|  
-|`mdtTypeSpec`|`mdTypeSpec`語彙基元。|  
-|`mdtAssembly`|`mdAssembly`語彙基元。|  
-|`mdtAssemblyRef`|`mdAssemblyRef`語彙基元。|  
-|`mdtFile`|`mdFile`語彙基元。|  
-|`mdtExportedType`|`mdExportedType`語彙基元。|  
-|`mdtManifestResource`|`mdManifestResource`語彙基元。|  
-|`mdtGenericParam`|`mdGenericParam`語彙基元。|  
-|`mdtMethodSpec`|`mdMethodSpec`語彙基元。|  
-|`mdtGenericParamConstraint`|`mdGenericParamConstraint`語彙基元。|  
-|`mdtString`|`mdString`語彙基元。|  
-|`mdtName`|`mdName`語彙基元。|  
+|`mdtModule`|An `mdModule` token.|  
+|`mdtTypeRef`|An `mdTypeRef` token.|  
+|`mdtTypeDef`|An `mdTypeDef` token.|  
+|`mdtFieldDef`|An `mdFieldDef` token.|  
+|`mdtMethodDef`|An `mdMethodDef` token.|  
+|`mdtParamDef`|An `mdParamDef` token.|  
+|`mdtInterfaceImpl`|An `mdInterfaceImpl` token.|  
+|`mdtMemberRef`|An `mdMemberRef` token.|  
+|`mdtCustomAttribute`|An `mdCustomAttribute` token.|  
+|`mdtPermission`|An `mdPermission` token.|  
+|`mdtSignature`|An `mdSignature` token.|  
+|`mdtEvent`|An `mdEvent` token.|  
+|`mdtProperty`|An `mdProperty` token.|  
+|`mdtModuleRef`|An `mdModuleRef` token.|  
+|`mdtTypeSpec`|An `mdTypeSpec` token.|  
+|`mdtAssembly`|An `mdAssembly` token.|  
+|`mdtAssemblyRef`|An `mdAssemblyRef` token.|  
+|`mdtFile`|An `mdFile` token.|  
+|`mdtExportedType`|An `mdExportedType` token.|  
+|`mdtManifestResource`|An `mdManifestResource` token.|  
+|`mdtGenericParam`|An `mdGenericParam` token.|  
+|`mdtMethodSpec`|An `mdMethodSpec` token.|  
+|`mdtGenericParamConstraint`|An `mdGenericParamConstraint` token.|  
+|`mdtString`|An `mdString` token.|  
+|`mdtName`|An `mdName` token.|  
 |`mdtBaseType`|未使用。|  
   
 ## <a name="remarks"></a>備註  
- 每個值會等於對應的中繼資料語彙基元中的第一個位元組值。  
+ Each value is equal to the value of the top byte in the corresponding metadata token.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

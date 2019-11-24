@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d941102b-2679-4c49-b15e-c0fc9c53e11f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea0fbceb1e778a2f26e0625a337b803f417b59eb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2b1addc752c7238116e072c6e957d2b277ceb1e3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777242"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449396"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob 方法
-釋放 Win32 資源 blob 和相關聯的資源。  
+Releases the Win32 resource blob and associated resources.  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,15 +34,15 @@ HRESULT FreeWin32ResBlob(
   
 ## <a name="parameters"></a>參數  
  `ppResBlob`  
- 要釋放的資源 blob。 這個方法會將 blob 指標指派給 Null。  
+ The resource blob to be released. This method assigns the blob pointer to NULL.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則傳回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>需求  
- 需要 alink. h  
+ Requires alink.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 91a7ce63-f5b8-4f16-b2c4-e1d0baa88944
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 455f71c5b576d1b57db591dab2a3e59f8a5eed67
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 84c41e467c57afd2562e7aa8dd72ce4796249667
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777281"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438564"
 ---
 # <a name="exporttype-method"></a>ExportType 方法
-指定類型為可匯出。  
+Specifies that a type is exportable.  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,30 +39,30 @@ HRESULT ExportType(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- 要匯出之元件的識別碼。  
+ ID of the assembly to export from.  
   
  `FileToken`  
- 檔案的檔案標記或元件識別碼，其定義可匯出的類型。  
+ File token or assembly ID of file that defines the exportable type.  
   
  `TypeToken`  
- 要成為可匯出之類型的 Token。  
+ Token of type to be made exportable.  
   
  `pszTypename`  
- 要成為可匯出的完整型別名稱。  
+ Fully qualified type name to be made exportable.  
   
  `dwFlags`  
- `ComType`旗標， `tdPublic`例如`tdNested`或。 這個參數可以傳遞至[DefineExportedType 方法](../metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
+ `ComType` flags such as `tdPublic` or `tdNested`. This parameter may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- 接收匯出類型的 token。  
+ Receives token for exported type.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則傳回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>需求  
- 需要 alink. h  
+ Requires alink.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

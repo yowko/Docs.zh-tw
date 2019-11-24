@@ -6,21 +6,19 @@ helpviewer_keywords:
 - unions [.NET Framework metadata]
 - metadata unions [.NET Framework]
 ms.assetid: 2c7534cf-34fa-470a-b29e-6cf5a7bd03d3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 417c40f1b0e1ba1b9f7eb39d26da236b5bb691b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d872bf352652b6cd3a07dc7796a026c797000ed
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785069"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430683"
 ---
 # <a name="metadata-unions"></a>中繼資料等位
 本節說明中繼資料應用程式開發介面所使用的 Unmanaged 等位。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [CeeSectionRelocExtra 等位](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
- 代表可由為位址位移[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)介面，以重新配置區段  
+ Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section  
   
 ## <a name="related-sections"></a>相關章節  
  [中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

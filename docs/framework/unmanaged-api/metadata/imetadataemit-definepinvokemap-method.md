@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 03abf921-5154-4070-88fa-10b7092901fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c6421ca47c3439d94c1ae86caaf2198298872d53
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d4ea16a212ac5f0120d63510f07eaee69af739e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777529"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431482"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap 方法
-設定指定的語彙基元所參考方法的 PInvoke 簽章的功能。  
+Sets features of the PInvoke signature of the method referenced by the specified token.  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,27 +38,27 @@ HRESULT DefinePinvokeMap (
   
 ## <a name="parameters"></a>參數  
  `tk`  
- [in]目標方法的語彙基元。  
+ [in] The token for the target method.  
   
  `dwMappingFlags`  
- [in]PInvoke 用來進行對應的旗標。  
+ [in] Flags used by PInvoke to do the mapping.  
   
  `szImportName`  
- [in]方法在 unmanaged DLL 中的匯出目標的名稱。  
+ [in] The name of the target export method in an unmanaged DLL.  
   
  `mrImportDLL`  
- [in]目標的語彙基元的原生 DLL。  
+ [in] The token for the target native DLL.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MSCorEE.dll 中的資源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

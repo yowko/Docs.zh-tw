@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7ff90ad-dad8-48e8-917d-4aa9a118cbc8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bfa8f1b5df76c7fdfe2f25b637b157bfa4424f7a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1d58c8c0413346536c3e61e67ca0077c08c2b387
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781660"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436484"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr 列舉
 包含值，這些值描述方法參數的中繼資料。  
@@ -44,25 +42,25 @@ typedef enum CorParamAttr {
 } CorParamAttr;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`pdIn`|指定此參數會傳遞至方法呼叫。|  
-|`pdOut`|指定參數傳遞從方法傳回。|  
-|`pdOptional`|指定的參數為選擇性。|  
-|`pdReservedMask`|保留供內部使用的 common language runtime。|  
-|`pdHasDefault`|指定參數有預設值。|  
-|`pdHasFieldMarshal`|指定參數的封送處理資訊。|  
+|`pdIn`|Specifies that the parameter is passed into the method call.|  
+|`pdOut`|Specifies that the parameter is passed from the method return.|  
+|`pdOptional`|Specifies that the parameter is optional.|  
+|`pdReservedMask`|Reserved for internal use by the common language runtime.|  
+|`pdHasDefault`|Specifies that the parameter has a default value.|  
+|`pdHasFieldMarshal`|Specifies that the parameter has marshaling information.|  
 |`pdUnused`|未使用。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

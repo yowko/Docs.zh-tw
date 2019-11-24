@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d0f235b2-91fe-4f82-b7d5-e5c64186eea8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6140ecda1d12c26e1936daee4eaad11cbd9b6ba4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c0cec9eb7bb8bbc94b255152a9b4d79108bdd1b1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781228"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427074"
 ---
 # <a name="stacksnapshotcallback-function"></a>StackSnapshotCallback 函式
-提供分析工具相關資訊每個 managed 的框架和每次執行的非受控框架在堆疊上堆疊查核行程，這起始期間[ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法。  
+Provides the profiler with information about each managed frame and each run of unmanaged frames on the stack during a stack walk, which is initiated by the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,40 +39,40 @@ HRESULT __stdcall StackSnapshotCallback (
   
 ## <a name="parameters"></a>參數  
  `funcId`  
- [in]如果此值為零，此回呼是未受管理的畫面格; 的執行否則，它是受管理的函式的識別碼，而且此回呼是個 managed 框架。  
+ [in] If this value is zero, this callback is for a run of unmanaged frames; otherwise, it is the identifier of a managed function and this callback is for a managed frame.  
   
  `ip`  
- [in]原生程式碼指令指標框架中的值。  
+ [in] The value of the native code instruction pointer in the frame.  
   
  `frameInfo`  
- [in]A`COR_PRF_FRAME_INFO`值所參考的堆疊框架的相關資訊。 只在回呼期間，這個值是有效的使用。  
+ [in] A `COR_PRF_FRAME_INFO` value that references information about the stack frame. This value is valid for use only during this callback.  
   
  `contextSize`  
- [in]大小`CONTEXT`結構，也就由參考`context`參數。  
+ [in] The size of the `CONTEXT` structure, which is referenced by the `context` parameter.  
   
  `context`  
- [in]Win32 指標`CONTEXT`結構，代表此框架的 CPU 的狀態。  
+ [in] A pointer to a Win32 `CONTEXT` structure that represents the state of the CPU for this frame.  
   
- `context`參數是傳入 COR_PRF_SNAPSHOT_CONTEXT 旗標時，才有效`ICorProfilerInfo2::DoStackSnapshot`。  
+ The `context` parameter is valid only if the COR_PRF_SNAPSHOT_CONTEXT flag was passed in `ICorProfilerInfo2::DoStackSnapshot`.  
   
  `clientData`  
- [in]用戶端資料指標，再傳遞直接從`ICorProfilerInfo2::DoStackSnapshot`。  
+ [in] A pointer to the client data, which is passed straight through from `ICorProfilerInfo2::DoStackSnapshot`.  
   
 ## <a name="remarks"></a>備註  
- `StackSnapshotCallback`函式由程式碼剖析工具寫入器實作。 您必須限制在完成工作的複雜性`StackSnapshotCallback`。 例如，當使用`ICorProfilerInfo2::DoStackSnapshot`以非同步方式，在目標執行緒可能持有的鎖定。 如果程式碼內`StackSnapshotCallback`需要相同的鎖定，可能發生死結。  
+ The `StackSnapshotCallback` function is implemented by the profiler writer. You must limit the complexity of work done in `StackSnapshotCallback`. For example, when using `ICorProfilerInfo2::DoStackSnapshot` in an asynchronous manner, the target thread may be holding locks. If code within `StackSnapshotCallback` requires the same locks, a deadlock could ensue.  
   
- `ICorProfilerInfo2::DoStackSnapshot`方法呼叫`StackSnapshotCallback`managed 框架每一次或一次每一回合的非受控框架的函式。 如果`StackSnapshotCallback`呼叫執行未受管理的畫面格期間，分析工具可以使用暫存器內容 (藉由參考`context`參數) 來執行它自己的未受管理的堆疊查核行程。 在此案例中，Win32`CONTEXT`結構代表最近推送的框架內的未受管理的框架執行的 CPU 狀態。 雖然 Win32`CONTEXT`結構包含的所有暫存器值，您應該只依賴堆疊指標暫存器、 框架指標暫存器、 指令指標暫存器和值 （也就，保留） 之靜態整數暫存器。  
+ The `ICorProfilerInfo2::DoStackSnapshot` method calls the `StackSnapshotCallback` function once per managed frame or once per run of unmanaged frames. If `StackSnapshotCallback` is called for a run of unmanaged frames, the profiler may use the register context (referenced by the `context` parameter) to perform its own unmanaged stack walk. In this case, the Win32 `CONTEXT` structure represents the CPU state for the most recently pushed frame within the run of unmanaged frames. Although the Win32 `CONTEXT` structure includes values for all registers, you should rely only on the values of the stack pointer register, frame pointer register, instruction pointer register, and the nonvolatile (that is, preserved) integer registers.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl  
+ **Header:** CorProf.idl  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [DoStackSnapshot 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
 - [分析全域靜態函式](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

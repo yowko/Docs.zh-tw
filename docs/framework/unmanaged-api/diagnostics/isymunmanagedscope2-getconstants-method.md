@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f241b620-9ec5-42fd-92ef-3b22329db72a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bb3f5926677577bbc0bb14413c5d70150ef25152
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7cd45a90a750c357706f720453ff23697875b58
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778047"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446244"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants 方法
-取得此範圍內定義的區域常數。  
+Gets the local constants defined within this scope.  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,20 +38,20 @@ HRESULT GetConstants(
   
 ## <a name="parameters"></a>參數  
  `cConstants`  
- [in]緩衝區的長度，`pcConstants`參數所指向。  
+ [in] The length of the buffer that the `pcConstants` parameter points to.  
   
  `pcConstants`  
- [out]指標`ULONG32`接收大小，以字元為單位，以包含常數所需要的緩衝區。  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.  
   
  `constants`  
- [out]儲存常數緩衝區。  
+ [out] The buffer that stores the constants.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedScope2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 124656f6-0dad-4ceb-9043-d3869ab65cde
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1218ee76a3b7a2f501f87adf1e0bc8133d5329b5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: efce0c13944b383c42cbff6a6af4795293ee2989
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781342"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444165"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType 列舉
-提供值，以影響的型別`reloc`發出的呼叫中的指示[iceegen:: Addsectionreloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)。  
+Provides values to influence the type of `reloc` instruction emitted in a call to [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,36 +48,36 @@ typedef enum  {
     } CeeSectionRelocType;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`srRelocAbsolute`|產生僅區段相對`reloc`、 傳送任何項目到.reloc 區段。|  
-|`srRelocHighLow`|會產生`reloc`指標大小的位置。 這會轉換成 BASED_HIGHLOW 或 BASED_DIR64 視平台。|  
-|`srRelocHighAdj`|會產生`reloc`前 32 位元數字，其中 16 位元會包含在下一個字.reloc 資料表中的 16 位元。|  
-|`srRelocMapToken`|會產生語彙基元對應的重新配置，傳送任何項目到.reloc 區段。|  
-|`srRelocRelative`|表示值是相對位址的修復。|  
-|`srRelocFilePos`|產生僅區段相對`reloc`、 傳送任何項目到.reloc 區段。 這`reloc`是檔案的相對位置 區段中，不該區段的虛擬位址。|  
-|`srRelocCodeRelative`|指定程式碼的相對位址的修復。|  
-|`srRelocIA64Imm64`|會產生`reloc`64 位元位址在 ia64`movl`指令。|  
-|`srRelocDir64`|會產生`reloc`64 位元位址。|  
-|`srRelocIA64PcRel25`|產生`reloc`25 位元電腦相對位址在 ia64`br.call`指令。|  
-|`srRelocIA64PcRel64`|會產生`reloc`64 位元電腦相對位址在 ia64`brl.call`指令。|  
-|`srRelocAbsoluteTagged`|會產生 30 位元的區段相對於`reloc`，用來標記的指標值。|  
-|`srRelocSentinel`|為了協助確保這個列舉任何新增項目之 sentinel 值會反映到內部`reloc`名稱陣列。|  
-|`srNoBaseReloc`|指定不要發出基底`reloc`。|  
-|`srRelocPtr`|值，指出前修復記憶體內容的指標，而不是區段位移。|  
+|`srRelocAbsolute`|Generates only a section-relative `reloc`, sending nothing into a .reloc section.|  
+|`srRelocHighLow`|Generates a `reloc` for a pointer-sized location. This is transformed into BASED_HIGHLOW or BASED_DIR64 depending on the platform.|  
+|`srRelocHighAdj`|Generates a `reloc` for the top 16 bits of a 32-bit number, where the bottom 16 bits are included in the next word in the .reloc table.|  
+|`srRelocMapToken`|Generates a token map relocation, sending nothing into a .reloc section.|  
+|`srRelocRelative`|Indicates that the value is a relative address fixup.|  
+|`srRelocFilePos`|Generates only a section-relative `reloc`, sending nothing into a .reloc section. This `reloc` is relative to the file position of the section, not the section's virtual address.|  
+|`srRelocCodeRelative`|Specifies a code-relative address fixup.|  
+|`srRelocIA64Imm64`|Generates a `reloc` for a 64 bit address in an ia64 `movl` instruction.|  
+|`srRelocDir64`|Generates a `reloc` for a 64-bit address.|  
+|`srRelocIA64PcRel25`|Generate a `reloc` for a 25-bit PC-relative address in an ia64 `br.call` instruction.|  
+|`srRelocIA64PcRel64`|Generates a `reloc` for a 64-bit PC-relative address in an ia64 `brl.call` instruction.|  
+|`srRelocAbsoluteTagged`|Generates a 30-bit section-relative `reloc`, used for tagged pointer values.|  
+|`srRelocSentinel`|A sentinel value to help ensure any additions to this enum are reflected to the internal `reloc` name array.|  
+|`srNoBaseReloc`|Specifies not to emit a base `reloc`.|  
+|`srRelocPtr`|A value indicating that the pre-fixup contents of memory are a pointer rather than a section offset.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
 - [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

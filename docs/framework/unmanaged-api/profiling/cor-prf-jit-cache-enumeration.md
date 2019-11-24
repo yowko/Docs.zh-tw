@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: e7b8f6b4-95bc-4ba5-b9eb-f5590a7326a4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 30500e8ea55f8298b9a980e34dc611b58a51bdcc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 57d6ba77081536eb2bce0bf62d43ac080b2f5554
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916392"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447349"
 ---
 # <a name="cor_prf_jit_cache-enumeration"></a>COR_PRF_JIT_CACHE 列舉
 指出快取的函式搜尋結果。  
   
 > [!NOTE]
-> `COR_PRF_CACHED_FUNCTION_FOUND`的值為零, 因此`COR_PRF_JIT_CACHE`不能用來做為布林值代理。  
+> `COR_PRF_CACHED_FUNCTION_FOUND` has a value of zero, so `COR_PRF_JIT_CACHE` cannot be used as a Boolean surrogate.  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,22 +36,22 @@ typedef enum {
 } COR_PRF_JIT_CACHE;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|搜尋找到函式。|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|搜尋找不到函數。|  
+|`COR_PRF_FUNCTION_FOUND`|The search found the function.|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|The search did not find the function.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Corprof.idl .idl, Corprof.idl。h  
+ **標頭：** CorProf.idl、CorProf.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

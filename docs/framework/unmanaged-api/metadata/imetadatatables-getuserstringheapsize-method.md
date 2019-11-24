@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cba9e4d6-9461-4420-9614-96ff7039ec9c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf6deb4d1420e7b58e1edc7741b683beb591ca5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ce8d3356b1f9b73e33ed2d3215c7f8115e64ac70
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782094"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426644"
 ---
 # <a name="imetadatatablesgetuserstringheapsize-method"></a>IMetaDataTables::GetUserStringHeapSize 方法
-取得大小，以位元組為單位的使用者字串堆積。  
+Gets the size, in bytes, of the user string heap.  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,18 +35,18 @@ HRESULT GetUserStringHeapSize (
   
 ## <a name="parameters"></a>參數  
  `pcbBlobs`  
- [out]大小 （位元組），使用者字串堆積的指標。  
+ [out] A pointer to the size, in bytes, of the user string heap.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

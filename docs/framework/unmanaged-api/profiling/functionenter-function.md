@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 354736890a4b042a8da5e747a0ab6ea3777e398e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ad34592223433f0bf541c390674bcf96839b6ca8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952896"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440812"
 ---
 # <a name="functionenter-function"></a>FunctionEnter 函式
-通知分析工具, 控制項正在傳遞至函式。  
+Notifies the profiler that control is being passed to a function.  
   
 > [!NOTE]
-> `FunctionEnter`函式在 .NET Framework 版本2.0 中已被取代, 而且其使用會導致效能降低。 請改用[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)函數。  
+> The `FunctionEnter` function is deprecated in the .NET Framework version 2.0, and its use will incur a performance penalty. Use the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function instead.  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,31 +37,31 @@ void __stdcall FunctionEnter (
   
 ## <a name="parameters"></a>參數  
  `funcID`  
- 在傳遞控制項的函式識別碼。  
+ [in] The identifier of the function to which control is passed.  
   
 ## <a name="remarks"></a>備註  
- `FunctionEnter`函式是回呼; 您必須加以執行。 此執行必須使用`__declspec`(`naked`) 儲存類別屬性。  
+ The `FunctionEnter` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
   
- 在呼叫此函式之前, 執行引擎不會儲存任何暫存器。  
+ The execution engine does not save any registers before calling this function.  
   
-- 輸入時, 您必須儲存您所使用的所有暫存器, 包括浮點單位 (FPU) 中的暫存器。  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- 結束時, 您必須透過關閉其呼叫者推送的所有參數來還原堆疊。  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- 的執行`FunctionEnter`不應該封鎖, 因為它會延遲垃圾收集。 執行不應嘗試垃圾收集, 因為堆疊可能不會處於垃圾收集的唯讀狀態。 如果嘗試垃圾收集, 執行時間將會封鎖, 直到`FunctionEnter`傳回為止。  
+ The implementation of `FunctionEnter` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionEnter` returns.  
   
- 此外, 函`FunctionEnter`式不能呼叫 managed 程式碼, 或以任何方式執行 managed 記憶體配置。  
+ Also, the `FunctionEnter` function must not call into managed code or in any way cause a managed memory allocation.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl  
+ **Header:** CorProf.idl  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
- **.NET Framework 版本:** 1.1、1。0  
+ **.NET Framework Versions:** 1.1, 1.0  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [FunctionEnter2 函式](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
 - [FunctionLeave2 函式](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)

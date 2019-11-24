@@ -1,6 +1,7 @@
 ---
-title: Connection 類別
+title: Connection Class (System.Net)
 ms.date: 05/01/2017
+ms.technology: dotnet-networking
 topic_type:
 - apiref
 api_name:
@@ -12,16 +13,16 @@ api_type:
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a305b28a34a70112cc80c33b11f30ab02213f0c6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b3045e9f6a4b3d86580ec3bc5719520fed7d3a35
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120059"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429356"
 ---
 # <a name="connection-class"></a>Connection 類別
 
-`Connection` 類別會剖析伺服器回應、佇列要求和管線要求。
+The `Connection` class parses server responses, queue requests, and pipeline requests.
 
 ## <a name="syntax"></a>語法
   
@@ -30,14 +31,14 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> `Connection` 類別是內部的，而且不適合直接在程式碼中使用。
+> The `Connection` class is internal and is not meant to be used directly in your code.
 > 
-> 在任何情況下，Microsoft 不支援在生產應用程式中使用此類別。
+> Microsoft does not support the use of this class in a production application under any circumstance.
 
 ## <a name="requirements"></a>需求
 
 **命名空間︰** <xref:System.Net>
 
-**元件：** 系統（在 System .dll 中）
+**Assembly:** System (in System.dll)
 
-**.NET Framework 版本：** 自2.0 開始提供。
+**.NET Framework versions:** Available since 2.0.

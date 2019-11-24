@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00be4789-ac63-4397-b2ec-1629a5c5a585
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e47b1807e51427487d6af2f96ff5af437c4653eb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c1792ed0f15f8cfb62567593c9694453650f0bb9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760942"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436325"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps 方法
-取得具有指定之中繼資料簽章的資訊清單資源的屬性集。  
+Gets the set of properties of the manifest resource with the specified metadata signature.  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,35 +41,35 @@ HRESULT GetManifestResourceProps (
   
 ## <a name="parameters"></a>參數  
  `mdmr`  
- [in]`mdManifestResource`語彙基元，表示要為其取得屬性的資源。  
+ [in] An `mdManifestResource` token that represents the resource for which to get the properties.  
   
  `szName`  
- [out]資源的名稱。  
+ [out] The name of the resource.  
   
  `cchName`  
- [in]大小，以寬字元為單位的`szName`。  
+ [in] The size, in wide chars, of `szName`.  
   
  `pchName`  
- [out]中實際傳回的寬字元數目的指標`szName`。  
+ [out] A pointer to the number of wide chars actually returned in `szName`.  
   
  `ptkImplementation`  
- [out]指標`mdFile`語彙基元或`mdAssemblyRef`分別代表檔案或組件，包含資源的權杖。  
+ [out] A pointer to an `mdFile` token or an `mdAssemblyRef` token that represents the file or assembly, respectively, that contains the resource.  
   
  `pdwOffset`  
- [out]指定的資源檔中的開頭的位移值的指標。  
+ [out] A pointer to a value that specifies the offset to the beginning of the resource within the file.  
   
  `pdwResourceFlags`  
- [out]指標，描述套用至資源的中繼資料的旗標。 旗標值是由一或多個組成[CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md)值。  
+ [out] A pointer to flags that describe the metadata applied to a resource. The flags value is a combination of one or more [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) values.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

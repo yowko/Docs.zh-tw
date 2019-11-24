@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2632da80-6e4b-4429-8dee-b382745a5f81
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7d3c0d833208c91c548ea993bb6aa32e36e1f358
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 76514cfbd2e533f04c5139dbaef4429c12463106
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776645"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445470"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>INotifyConnection2::RegisterNotifySource 方法
-安裝指定的通知來源。  
+Installs a specified notification source.  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,18 +37,18 @@ HRESULT RegisterNotifySource
   
 ## <a name="parameters"></a>參數  
  `in_pNotifySource`  
- [in]指定要做為通知來源物件。  
+ [in] Specifies the object to be used as the notification source.  
   
  `out_ppNotifySink`  
- [out]接收要用作通知接收的物件。  
+ [out] Receives the object to be used as the notification sink.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功為 S_OK。  
+ S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** ProtocolNotify2.idl  
+ **Header:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [INotifyConnection2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
 - [INotifySource2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)

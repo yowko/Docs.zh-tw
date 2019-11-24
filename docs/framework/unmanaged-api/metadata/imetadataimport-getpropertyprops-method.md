@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc0ff3e6-7e7d-4f6c-948d-52b28f5cb78c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e83afcf6c872927e614fce33ca96e93f0da4f497
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 247a2793bf3806f5ee38585d50b4535820dfcb69
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778881"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437067"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps 方法
-取得指定語彙基元所表示之屬性的中繼資料。  
+Gets the metadata for the property represented by the specified token.  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,63 +50,63 @@ HRESULT GetPropertyProps (
   
 ## <a name="parameters"></a>參數  
  `prop`  
- [in]語彙基元，表示要傳回的中繼資料的屬性。  
+ [in] A token that represents the property to return metadata for.  
   
  `pClass`  
- [out]表示實作屬性的類型的 TypeDef 語彙基元指標。  
+ [out] A pointer to the TypeDef token that represents the type that implements the property.  
   
  `szProperty`  
- [out]若要保留的屬性名稱的緩衝區。  
+ [out] A buffer to hold the property name.  
   
  `cchProperty`  
- [in]寬字元大小`szProperty`。  
+ [in] The size in wide characters of `szProperty`.  
   
  `pchProperty`  
- [out]中傳回的寬字元數目`szProperty`。  
+ [out] The number of wide characters returned in `szProperty`.  
   
  `pdwPropFlags`  
- [out]任何套用至屬性的屬性旗標指標。 這個值是從位元遮罩[CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md)列舉型別。  
+ [out] A pointer to any attribute flags applied to the property. This value is a bitmask from the [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) enumeration.  
   
  `ppvSig`  
- [out]中繼資料簽章屬性的指標。  
+ [out] A pointer to the metadata signature of the property.  
   
  `pbSig`  
- [out]中傳回的位元組數目`ppvSig`。  
+ [out] The number of bytes returned in `ppvSig`.  
   
  `pdwCPlusTypeFlag`  
- [out]旗標，指定類型的常數，它是屬性的預設值。 這個值是從 CorElementType 列舉型別。  
+ [out] A flag specifying the type of the constant that is the default value of the property. This value is from the CorElementType enumeration.  
   
  `ppDefaultValue`  
- [out]儲存這個屬性的預設值的位元組指標。  
+ [out] A pointer to the bytes that store the default value for this property.  
   
  `pcchDefaultValue`  
- [out]中的寬字元的大小`ppDefaultValue`，如果`pdwCPlusTypeFlag`是 ELEMENT_TYPE_STRING; 否則此值不相關。 在此情況下，長度`ppDefaultValue`會從所指定的型別推斷`pdwCPlusTypeFlag`。  
+ [out] The size in wide characters of `ppDefaultValue`, if `pdwCPlusTypeFlag` is ELEMENT_TYPE_STRING; otherwise, this value is not relevant. In that case, the length of `ppDefaultValue` is inferred from the type that is specified by `pdwCPlusTypeFlag`.  
   
  `pmdSetter`  
- [out]表示屬性的 set 存取子方法的 MethodDef 語彙基元指標。  
+ [out] A pointer to the MethodDef token that represents the set accessor method for the property.  
   
  `pmdGetter`  
- [out]表示屬性的 get 存取子方法的 MethodDef 語彙基元指標。  
+ [out] A pointer to the MethodDef token that represents the get accessor method for the property.  
   
  `rmdOtherMethod`  
- [out]代表屬性相關聯的其他方法的 methoddef 語彙基元的陣列。  
+ [out] An array of MethodDef tokens that represent other methods associated with the property.  
   
  `cMax`  
- [in] `rmdOtherMethod` 陣列的大小上限。 如果您未提供足以容納所有方法的陣列，則會略過而不發出警告。  
+ [in] `rmdOtherMethod` 陣列的大小上限。 If you do not provide an array large enough to hold all the methods, they are skipped without warning.  
   
  `pcOtherMethod`  
- [out]中傳回的 methoddef 語彙基元數目`rmdOtherMethod`。  
+ [out] The number of MethodDef tokens returned in `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

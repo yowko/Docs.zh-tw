@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fcf32c4b27324ccc54eabbb248e8c9906cf693b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc5bbba2fa4a95955e52a2e083a2097178b5d96a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782353"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437513"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps 方法
-取得儲存在指定的成員定義，包括名稱、 二進位簽章和相對虛擬位址的中繼資料中的資訊<xref:System.Type>指定之中繼資料語彙基元所參考的成員。 這是一個簡單的 helper 方法： 如果*mb*就的 MethodDef **GetMethodProps**呼叫; 如果*mb*就的 fielddef 語彙**GetFieldProps**會呼叫。 請參閱這些其他方法，如需詳細資訊。 
+Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token. This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called. See these other methods for details. 
   
 ## <a name="syntax"></a>語法  
   
@@ -49,54 +47,54 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>參數  
  `mb`  
- [in]參考的成員，以取得相關聯中繼資料語彙基元。  
+ [in] The token that references the member to get the associated metadata for.  
   
  `pClass`  
- [out]表示的類別成員的中繼資料語彙基元指標。  
+ [out] A pointer to the metadata token that represents the class of the member.  
   
  `szMember`  
- [out]成員的名稱。  
+ [out] The name of the member.  
   
  `cchMember`  
- [in]寬字元大小`szMember`緩衝區。  
+ [in] The size in wide characters of the `szMember` buffer.  
   
  `pchMember`  
- [out]寬字元，傳回的檔案名稱的大小。  
+ [out] The size in wide characters of the returned name.  
   
  `pdwAttr`  
- [out]任何旗標套用至成員的值。  
+ [out] Any flag values applied to the member.  
   
  `ppvSigBlob`  
- [out]二進位中繼資料簽章的成員指標。  
+ [out] A pointer to the binary metadata signature of the member.  
   
  `pcbSigBlob`  
- [out]以位元組為單位的大小`ppvSigBlob`。  
+ [out] The size in bytes of `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out]成員的相對虛擬位址指標。  
+ [out] A pointer to the relative virtual address of the member.  
   
  `pdwImplFlags`  
- [out]成員相關聯任何方法實作旗標。  
+ [out] Any method implementation flags associated with the member.  
   
  `pdwCPlusTypeFlag`  
- [out]標示旗標<xref:System.ValueType>。 它是其中一個`ELEMENT_TYPE_*`值。
+ [out] A flag that marks a <xref:System.ValueType>. It is one of the `ELEMENT_TYPE_*` values.
   
  `ppValue`  
- [out]常數字串值，這個成員所傳回。  
+ [out] A constant string value returned by this member.  
   
  `pcchValue`  
- [out]以字元為單位的大小`ppValue`，或零，如果`ppValue`不會保留為字串。  
+ [out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

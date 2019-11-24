@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c675ce7e-76e7-45ff-8273-3b6489a2767c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 26458e2512f331ff7a8c41868c99d092cfd30977
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7f04b5c100f1fd9c44e671b883fe469b16d33fa6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737231"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440145"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute 方法
-取得自訂屬性，根據其名稱。 不同於中繼資料的自訂屬性，這些自訂屬性會保存在符號存放區。  
+Gets a custom attribute based upon its name. Unlike metadata custom attributes, these custom attributes are held in the symbol store.  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,26 +39,26 @@ HRESULT GetSymAttribute (
   
 ## <a name="parameters"></a>參數  
  `parent`  
- [in]屬性要求的物件之中繼資料語彙基元。  
+ [in] The metadata token for the object for which the attribute is requested.  
   
  `name`  
- [in]表示要擷取的屬性變數的指標。  
+ [in] A pointer to the variable that indicates the attribute to retrieve.  
   
  `cBuffer`  
  [in] `buffer` 陣列的大小。  
   
  `pcBuffer`  
- [out]接收屬性資料的長度變數的指標。  
+ [out] A pointer to the variable that receives the length of the attribute data.  
   
  `buffer`  
- [out]此變數會接收屬性的資料指標。  
+ [out] A pointer to the variable that receives the attribute data.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

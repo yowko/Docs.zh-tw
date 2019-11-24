@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd67d9faafedf4fb92c69618d4464ebb2ce47dcc
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 854d3ad28cc00c03e903b9e1d2ce3863e3ceef17
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774251"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436102"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo 方法
-取得指定資料表中指定之資料行的相關資料。  
+Gets data about the specified column in the specified table.  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,55 +42,55 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- 在所需資料表的索引。  
+ [in] The index of the desired table.  
   
  `ixCol`  
- 在所需資料行的索引。  
+ [in] The index of the desired column.  
   
  `poCol`  
- 脫銷資料列中資料行位移的指標。  
+ [out] A pointer to the offset of the column in the row.  
   
  `pcbCol`  
- 脫銷資料行大小的指標，以位元組為單位。  
+ [out] A pointer to the size, in bytes, of the column.  
   
  `pType`  
- 脫銷資料行中數值型別的指標。  
+ [out] A pointer to the type of the values in the column.  
   
  `ppName`  
- 脫銷指向資料行名稱之指標的指標。  
+ [out] A pointer to a pointer to the column name.  
  
 ## <a name="remarks"></a>備註
 
-傳回的資料行類型落在值的範圍內：
+The returned column type falls within a range of values:
 
-| pType                    | 描述   | Helper 函式                   |
+| pType                    | 描述   | Helper function                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`。`iRidMax`<br>（0到63）   | 掉           | **IsRidType**<br>**IsRidOrToken** |
-| `iCodedToken`。`iCodedTokenMax`<br>（64. 95） | 程式碼標記 | **IsCodedTokenType** <br>**IsRidOrToken** |
-| `iSHORT` （96）            | Int16         | **IsFixedType**                   |
-| `iUSHORT` （97）           | UInt16        | **IsFixedType**                   |
-| `iLONG` （98）             | Int32         | **IsFixedType**                   |
-| `iULONG` （99）            | UInt32        | **IsFixedType**                   |
-| `iBYTE` （100）            | Byte          | **IsFixedType**                   |
-| `iSTRING` （101）          | String        | **IsHeapType**                    |
-| `iGUID` （102）            | GUID          | **IsHeapType**                    |
-| `iBLOB` （103）            | Blob          | **IsHeapType**                    |
+| `0`..`iRidMax`<br>(0..63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Coded token | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `iSHORT` (96)            | Int16         | **IsFixedType**                   |
+| `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
+| `iLONG` (98)             | Int32         | **IsFixedType**                   |
+| `iULONG` (99)            | UInt32        | **IsFixedType**                   |
+| `iBYTE` (100)            | Byte          | **IsFixedType**                   |
+| `iSTRING` (101)          | String        | **IsHeapType**                    |
+| `iGUID` (102)            | GUID          | **IsHeapType**                    |
+| `iBLOB` (103)            | Blob          | **IsHeapType**                    |
 
-您可以使用下列方式來讀取儲存在*堆積*中的值（也就是 `IsHeapType == true`）：
+Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:
 
-- `iSTRING`： **IMetadataTables. GetString**
-- `iGUID`： **IMetadataTables. GetGUID**
-- `iBLOB`： **IMetadataTables. GetBlob**
+- `iSTRING`: **IMetadataTables.GetString**
+- `iGUID`: **IMetadataTables.GetGUID**
+- `iBLOB`: **IMetadataTables.GetBlob**
 
 > [!IMPORTANT]
-> 若要使用上表中所定義的常數，請包含*cor*標頭檔所提供的指示詞 `#define _DEFINE_META_DATA_META_CONSTANTS`。
+> To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.
 
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **Header:** Cor.h  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 69b398fa003abc0dba00ee89a9bb911a8c2dd6df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f11b374ed0ecbfc137c43fb641ae691237604691
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777510"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431529"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty 方法
-建立具有指定的屬性定義指定的型別，如`get`和`set`方法存取子，並取得該屬性定義的語彙基元。  
+Creates a property definition for the specified type, with the specified `get` and `set` method accessors, and gets a token to that property definition.  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,51 +46,51 @@ HRESULT DefineProperty (
   
 ## <a name="parameters"></a>參數  
  `td`  
- [in]類別或介面定義屬性之語彙基元。  
+ [in] The token for class or interface on which the property is being defined.  
   
  `szProperty`  
- [in]屬性的名稱。  
+ [in] The name of the property.  
   
  `dwPropFlags`  
- [in]屬性的旗標。  
+ [in] The property flags.  
   
  `pvSig`  
- [in]屬性簽章。  
+ [in] The property signature.  
   
  `cbSig`  
- [in]中的位元組計數`pvSig`。  
+ [in] The count of bytes in `pvSig`.  
   
  `dwCPlusTypeFlag`  
- [in]屬性的預設值的型別。  
+ [in] The type of the property's default value.  
   
  `pValue`  
- [in]屬性的預設值。  
+ [in] The default value for the property.  
   
  `cchValue`  
- [in]中的字元 (Unicode) 的計數`pValue`。  
+ [in] The count of (Unicode) characters in `pValue`.  
   
  `mdSetter`  
- [in]設定屬性值的方法。  
+ [in] The method that sets the property value.  
   
  `mdGetter`  
- [in]取得屬性值的方法。  
+ [in] The method that gets the property value.  
   
  `rmdOtherMethods[]`  
- [in]其他方法與屬性相關聯的陣列。 終止陣列`mdTokenNil`。  
+ [in] An array of other methods associated with the property. Terminate the array with an `mdTokenNil`.  
   
  `pmdProp`  
- [out]`mdProperty`指派權杖。  
+ [out] The `mdProperty` token assigned.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MSCorEE.dll 中的資源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

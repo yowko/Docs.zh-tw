@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe4150e8-071d-43fb-8e06-c3c616dbeed2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2796be32154275387da891683cc5053095f534af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 39f72e670ddc700c257f50f6bad6fab702ec21b6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772321"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432768"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC 列舉
 包含值，可用來在中繼資料產生期間影響行為。  
@@ -44,26 +42,26 @@ typedef enum CorSetENC {
 } CorSetENC;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
 |`MDSetENCOn`|已過時。|  
 |`MDSetENCOff`|已過時。|  
-|`MDUpdateENC`|表示可以更新中繼資料，而不移動語彙基元。|  
-|`MDUpdateFull`|表示可以在更新過程中移動語彙基元。|  
-|`MDUpdateExtension`|指出，更新可以只包含加入項目。 無法移動語彙基元。|  
-|`MDUpdateIncremental`|表示累加編譯。|  
-|`MDUpdateDelta`|表示應該儲存，只有已變更的中繼資料。|  
-|`MDUpdateMask`|包含`MDUpdateENC`，`MDUpdateFull`和`MDUpdateIncremental`。|  
+|`MDUpdateENC`|Indicates that whereas metadata can be updated, tokens cannot be moved.|  
+|`MDUpdateFull`|Indicates that tokens can be moved during updates.|  
+|`MDUpdateExtension`|Indicates that updates can consist only of additions. Tokens cannot be moved.|  
+|`MDUpdateIncremental`|Indicates that compilation is incremental.|  
+|`MDUpdateDelta`|Indicates that only changed metadata should be saved.|  
+|`MDUpdateMask`|Includes `MDUpdateENC`, `MDUpdateFull` and `MDUpdateIncremental`.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

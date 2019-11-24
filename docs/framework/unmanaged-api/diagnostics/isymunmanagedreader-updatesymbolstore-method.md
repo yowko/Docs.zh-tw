@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4a17d723-86b9-4f27-bd0d-b70c3259011c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d84d4fccb2cb4e500f07f6bfbfb93b8c7b81f5d6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e052d9b7b2abd57b176dfe3b00afac626d422c58
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938998"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446466"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore 方法
-以差異符號存放區來更新現有的符號存放區。 這個方法是在編輯後繼續案例中使用, 以更新符號存放區, 以符合原始可移植執行檔 (PE) 檔案的差異。  
+以差異符號存放區來更新現有的符號存放區。 This method is used in edit-and-continue scenarios to update the symbol store to match deltas to the original portable executable (PE) file.  
   
 > [!NOTE]
-> 您只需要指定其中一個`filename`或`pIStream`參數, 而不是兩者。 如果`filename`指定了, 符號存放區將會以該檔案中的符號進行更新。 如果`pIStream`指定了, 則會使用<xref:System.Runtime.InteropServices.ComTypes.IStream>中的資料來更新存放區。  
+> You need specify only one of the `filename` or `pIStream` parameters, not both. If `filename` is specified, the symbol store will be updated with the symbols in that file. If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,17 +38,17 @@ HRESULT UpdateSymbolStore (
   
 ## <a name="parameters"></a>參數  
  `filename`  
- 在包含符號存放區的檔案名。  
+ [in] The name of the file that contains the symbol store.  
   
  `pIStream`  
- 在檔案資料流程, 用來`filename`做為參數的替代方法。  
+ [in] The file stream, used as an alternative to the `filename` parameter.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功, 則為 S_OK;否則, E_FAIL 或其他錯誤碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl, CorSym。h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

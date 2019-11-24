@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0f9bde1d-e306-438d-941b-d0925b322304
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4225794740b7786c6f758c9a0953d323c31a1081
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 470b6511366cef1680eaf97f9ab376736add55c4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782494"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437892"
 ---
 # <a name="imetadataimportfindmethod-method"></a>IMetaDataImport::FindMethod 方法
-取得指標的 MethodDef 語彙基元的方法，以指定<xref:System.Type>且具有指定的名稱和中繼資料簽章。  
+Gets a pointer to the MethodDef token for the method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,37 +39,37 @@ HRESULT FindMethod (
   
 ## <a name="parameters"></a>參數  
  `td`  
- [in]`mdTypeDef`括住要搜尋之成員的類型 （類別或介面） 的語彙基元。 如果此值為`mdTokenNil`，則會在完成查詢的全域函式。  
+ [in] The `mdTypeDef` token for the type (a class or interface) that encloses the member to search for. If this value is `mdTokenNil`, then the lookup is done for a global function.  
   
  `szName`  
- [in]要搜尋的方法名稱。  
+ [in] The name of the method to search for.  
   
  `pvSigBlob`  
- [in]二進位中繼資料簽章方法的指標。  
+ [in] A pointer to the binary metadata signature of the method.  
   
  `cbSigBlob`  
- [in]以位元組為單位的大小`pvSigBlob`。  
+ [in] The size in bytes of `pvSigBlob`.  
   
  `pmb`  
- [out]比對的 MethodDef 語彙基元指標。  
+ [out] A pointer to the matching MethodDef token.  
   
 ## <a name="remarks"></a>備註  
- 指定使用其封入類別或介面的方法 (`td`)，其名稱 (`szName`)，和 （選擇性） 其簽章 (`pvSigBlob`)。 可能有多個具有相同名稱的類別或介面中的方法。 在此情況下，傳遞方法的簽章，以尋找唯一相符項目。  
+ You specify the method using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`). There might be multiple methods with the same name in a class or interface. In that case, pass the method's signature to find the unique match.  
   
- 簽章傳遞至`FindMethod`必須已產生在目前的範圍內，因為簽章會繫結至特定的範圍。 簽章可以內嵌識別封入類別或實值類型的語彙基元。 語彙基元是本機 TypeDef 資訊表內的索引。 您無法建置目前範圍的內容以外的執行階段簽章，並使用該簽章為輸入至輸入`FindMethod`。  
+ The signature passed to `FindMethod` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMethod`.  
   
- `FindMethod` 尋找直接在類別或介面中所定義的方法找不到繼承的方法。  
+ `FindMethod` finds only methods that were defined directly in the class or interface; it does not find inherited methods.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Reflection.MethodInfo>
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c698b86e-ace7-4b21-9549-f52d6a034959
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e06695f5ba348315523c7414822ce87d594bdbc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 85e65f6a3ec13c2acc31b8f87dbe4b4476ffc2a5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776599"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427873"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange 方法
-指定的則為 true 的開始和結束的原始程式檔內的方法。 使用這個方法可指定獨立存在的方法中序列點之方法的範圍。  
+Specifies the true start and end of a method within a source file. Use this method to specify the extent of a method independently of the sequence points that exist within the method.  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,29 +39,29 @@ HRESULT SetMethodSourceRange(
   
 ## <a name="parameters"></a>參數  
  `startDoc`  
- [in]包含開始位置的文件指標。  
+ [in] A pointer to the document containing the starting position.  
   
  `startLine`  
- [in]起始行號。  
+ [in] The starting line number.  
   
  `startColumn`  
- [in]起始的資料行。  
+ [in] The starting column.  
   
  `endDoc`  
- [in]此文件包含結束的位置指標。  
+ [in] A pointer to the document containing the ending position.  
   
  `endLine`  
- [in]結尾的行號。  
+ [in] The ending line number.  
   
  `endColumn`  
- [in]結束的欄號。  
+ [in] The ending column number.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

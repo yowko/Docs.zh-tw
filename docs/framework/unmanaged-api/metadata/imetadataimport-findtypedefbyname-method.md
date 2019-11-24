@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f4c2cd88-ac28-4bad-9ab1-2cf9d2de41e6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7f182dad17e28cc5d19393bb4e13d747e34249fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1b1c557eea62cae6d2ad09303441e4635abc899
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782470"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437846"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>IMetaDataImport::FindTypeDefByName 方法
-取得指標的 TypeDef 中繼資料語彙基元<xref:System.Type>具有指定名稱。  
+Gets a pointer to the TypeDef metadata token for the <xref:System.Type> with the specified name.  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,24 +37,24 @@ HRESULT FindTypeDefByName
   
 ## <a name="parameters"></a>參數  
  `szTypeDef`  
- [in]要取得的 TypeDef 語彙基元的型別名稱。  
+ [in] The name of the type for which to get the TypeDef token.  
   
  `tkEnclosingClass`  
- [in]TypeDef 或 TypeRef 語彙基元代表封入類別。 如果要尋找的類型不是巢狀的類別，請將此值設為 NULL。  
+ [in] A TypeDef or TypeRef token representing the enclosing class. If the type to find is not a nested class, set this value to NULL.  
   
  `ptd`  
- [out]相符的 TypeDef 語彙基元指標。  
+ [out] A pointer to the matching TypeDef token.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

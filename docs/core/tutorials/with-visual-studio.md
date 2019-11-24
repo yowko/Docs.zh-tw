@@ -5,22 +5,22 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 3b397c8cac989fb7d1cbc1982cc2ce40a8777983
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: cc7d78006998b79fe9d522e71883ce1af817c051
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454760"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428556"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core SDK 來建置 C# Hello World 應用程式
 
-本文提供在 Visual Studio 2017 中使用C#來建立、偵測和發行簡單 .net Core 主控台應用程式的逐步介紹。 Visual Studio 2017 提供功能完整的開發環境來建置 .NET Core 應用程式。 只要應用程式沒有平台特定的相依性，應用程式就可以在 .NET Core 的任何目標平台，以及安裝 .NET Core 的任何系統上執行。
+This article provides a step-by-step introduction to building, debugging, and publishing a simple .NET Core console application using C# in Visual Studio 2017. Visual Studio 2017 提供功能完整的開發環境來建置 .NET Core 應用程式。 只要應用程式沒有平台特定的相依性，應用程式就可以在 .NET Core 的任何目標平台，以及安裝 .NET Core 的任何系統上執行。
 
 ## <a name="prerequisites"></a>Prerequisites
 
-已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 您可以使用 .NET Core 2.1 或更新版本來開發您的應用程式。
+[Visual Studio 2017 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) with the ".NET Core cross-platform development" workload installed. You can develop your app with .NET Core 2.1 or later versions.
 
-如需詳細資訊，請參閱[Windows 上的 .Net Core 的必要條件](../windows-prerequisites.md)一文。
+For more information, see the [.NET Core dependencies and requirements](../install/sdk.md?tabs=netcore30&pivots=os-windows#install-with-visual-studio)article.
 
 ## <a name="a-simple-hello-world-application"></a>簡單的 Hello World 應用程式
 
@@ -57,7 +57,7 @@ ms.locfileid: "73454760"
 
 增強您的應用程式以提示使用者輸入其名稱，並將其與日期和時間一起顯示。 若要修改並測試程式，請執行下列動作︰
 
-1. 在 [程式C#代碼] 視窗中，于 `static void Main(string[] args)` 行之後和第一個右大括弧前面的左括弧後方輸入下列程式碼：
+1. Enter the following C# code in the code window immediately after the opening bracket that follows the `static void Main(string[] args)` line and before the first closing curly bracket:
 
    [!code-csharp[GettingStarted#1](~/samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 

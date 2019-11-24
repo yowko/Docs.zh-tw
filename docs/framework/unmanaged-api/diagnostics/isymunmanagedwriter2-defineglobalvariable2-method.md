@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04d569d6-a151-4957-9872-f3f694c3e4a9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a54d3cb1bb9abf740c2c9b5a9a8312a9612ae658
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 12475b1ac8a1a81e565aa689eac2ae1a9b55e73a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894449"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438281"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 方法
-定義單一全域變數。  
+Defines a single global variable.  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,33 +40,33 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>參數  
  `name`  
- 在全域變數名稱。  
+ [in] The global variable name.  
   
  `attributes`  
- 在全域變數屬性。  
+ [in] The global variable attributes.  
   
  `sigToken`  
- 在簽章的元資料標記。  
+ [in] The metadata token of the signature.  
   
  `addrKind`  
- 在網址類別型。  
+ [in] The address type.  
   
  `addr1`  
- 在參數規格的第一個位址。  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- 在參數規格的第二個位址。  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- 在參數規格的第三個位址。  
+ [in] The third address for the parameter specification.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK;否則，E_FAIL 或其他錯誤碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym.idl  
+ **Header:** CorSym.idl  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedWriter2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
 - [DefineGlobalVariable 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)

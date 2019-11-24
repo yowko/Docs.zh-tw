@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0451d752-1e5c-4c9a-8bad-6cd35b7ba3df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 994f6668de3040cc9f2381356d6db06c18c9e984
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87a70587027f283ef5976089b3f2daf1204e68ec
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745876"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426123"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection 方法
-將指定的程式碼區段捨去指定的長度。  
+Truncates the specified code section by the specified length.  
   
- 這個方法已經過時，不應使用。  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,23 +38,23 @@ HRESULT TruncateSection (
   
 ## <a name="parameters"></a>參數  
  `section`  
- [in]要截斷的區段。  
+ [in] The section to truncate.  
   
  `len`  
- [in]以位元組為單位，所要截斷的區段長度。  
+ [in] The length, in bytes, by which to truncate the section.  
   
 ## <a name="remarks"></a>備註  
- 呼叫`TruncateSection`只有當您有未處理的其他方法的特殊區段需求。  
+ Call `TruncateSection` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

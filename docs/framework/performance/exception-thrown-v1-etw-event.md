@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91abd9e6f31380b7e8cd3df1a14aa5c5722901ba
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3f0e968053c87319bf90bf3de0f21d750ec899ab
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046508"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447624"
 ---
 # <a name="exception-thrown_v1-etw-event"></a>Exception Thrown_V1 ETW 事件
 此事件會擷取被擲回的例外狀況相關資訊。  
@@ -31,15 +31,15 @@ ms.locfileid: "71046508"
   
  下表顯示事件資料。  
   
-|欄位名稱|資料類型|說明|  
+|欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
 |例外狀況類型|win:UnicodeString|例外狀況類型，例如 `System.NullReferenceException`。|  
 |例外狀況訊息|win:UnicodeString|實際的例外狀況訊息。|  
 |EIPCodeThrow|win:Pointer|發生例外狀況的指令指標。|  
-|ExceptionHR|win:UInt32|例外狀況 [HRESULT](https://go.microsoft.com/fwlink/?LinkId=179679)。|  
-|ExceptionFlags|win:UInt16|0x01HasInnerException （請參閱 Visual Basic 檔中的[CLR ETW 事件](clr-etw-events.md)）。<br /><br /> 0x02IsNestedException.<br /><br /> 0x04IsRethrownException.<br /><br /> 0x08IsCorruptedStateException （表示進程狀態已損毀，請參閱 MSDN 上的[處理損毀狀態例外狀況](https://go.microsoft.com/fwlink/?LinkId=179681)）。<br /><br /> 0x10IsCLSCompliant （衍生自<xref:System.Exception>的例外狀況符合 cls 標準，否則不符合 cls 標準）。|  
+|ExceptionHR|win:UInt32|例外狀況 [HRESULT](https://docs.microsoft.com/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)。|  
+|ExceptionFlags|win:UInt16|0x01：HasInnerException (請參閱 Visual Basic 文件的 [CLR ETW 事件](clr-etw-events.md))。<br /><br /> 0x02：IsNestedException。<br /><br /> 0x04：IsRethrownException。<br /><br /> 0x08: IsCorruptedStateException (indicates that the process state is corrupt; see [Handling Corrupted State Exceptions](https://docs.microsoft.com/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions)).<br /><br /> 0x10：IsCLSCompliant (衍生自 <xref:System.Exception> 的例外狀況符合 CLS 標準，否則與 CLS 不相容)。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [CLR ETW 事件](clr-etw-events.md)

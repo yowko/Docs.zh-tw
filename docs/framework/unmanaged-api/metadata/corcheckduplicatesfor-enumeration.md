@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d8ec8d3c-70f7-4cc6-9957-68068fd8f49c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a82ce9709e008e092c5f31372a89bf9a16e1f88b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6b551743227dc1c6069796038782a515e6dbe8c4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767023"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443783"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor 列舉
-指定要檢查重複項目中繼資料語彙基元。  
+Specifies the metadata tokens that will be checked for duplicates.  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,45 +64,45 @@ typedef enum CorCheckDuplicatesFor {
 } CorCheckDuplicatesFor;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`MDDupAll`|請檢查重複項目的所有中繼資料語彙基元。|  
+|`MDDupAll`|Check all metadata tokens for duplicates.|  
 |`MDDupENC`|未使用。|  
-|`MDNoDupChecks`|不會檢查重複項目中繼資料語彙基元。|  
-|`MDDupTypeDef`|檢查是否有重複的`mdTypeDef`語彙基元。|  
-|`MDDupInterfaceImpl`|檢查是否有重複的`mdInterfaceImpl`語彙基元。|  
-|`MDDupMethodDef`|檢查是否有重複的`mdMethodDef`語彙基元。|  
-|`MDDupTypeRef`|檢查是否有重複的`mdTypeRef`語彙基元。|  
-|`MDDupMemberRef`|檢查是否有重複的`mdMemberRef`語彙基元。|  
-|`MDDupCustomAttribute`|檢查是否有重複的`mdCustomAttribute`語彙基元。|  
-|`MDDupParamDef`|檢查是否有重複的`mdParamDef`語彙基元。|  
-|`MDDupPermission`|檢查是否有重複的`mdPermission`語彙基元。|  
-|`MDDupProperty`|檢查是否有重複的`mdProperty`語彙基元。|  
-|`MDDupEvent`|檢查是否有重複的`mdEvent`語彙基元。|  
-|`MDDupFieldDef`|檢查是否有重複的`mdFieldDef`語彙基元。|  
-|`MDDupSignature`|檢查是否有重複的`mdSignature`語彙基元。|  
-|`MDDupModuleRef`|檢查是否有重複的`mdModuleRef`語彙基元。|  
-|`MDDupTypeSpec`|檢查是否有重複的`mdTypeSpec`語彙基元。|  
-|`MDDupImplMap`|檢查是否有重複的`mdImplMap`語彙基元。|  
-|`MDDupAssemblyRef`|檢查是否有重複的`mdAssemblyRef`語彙基元。|  
-|`MDDupFile`|檢查是否有重複的`mdFile`語彙基元。|  
-|`MDDupExportedType`|檢查是否有重複的`mdExportedType`語彙基元。|  
-|`MDDupManifestResource`|檢查是否有重複的`mdManifestResource`語彙基元。|  
-|`MDDupGenericParam`|檢查是否有重複的`mdGenericParam`語彙基元。|  
-|`MDDupMethodSpec`|檢查是否有重複的`mdMethodSpec`語彙基元。|  
-|`MDDupGenericParamConstraint`|檢查是否有重複的`mdGenericParamConstraint`語彙基元。|  
-|`MDDupAssembly`|檢查是否有重複的`mdAssembly`語彙基元。|  
-|`MDDupDefault`|檢查是否有重複項目`mdMemberRef`， `mdTypeRef`， `mdSignature`， `mdTypeSpec`，和`mdMethodSpec`語彙基元。|  
+|`MDNoDupChecks`|Do not check metadata tokens for duplicates.|  
+|`MDDupTypeDef`|Check for duplicates of `mdTypeDef` tokens.|  
+|`MDDupInterfaceImpl`|Check for duplicates of `mdInterfaceImpl` tokens.|  
+|`MDDupMethodDef`|Check for duplicates of `mdMethodDef` tokens.|  
+|`MDDupTypeRef`|Check for duplicates of `mdTypeRef` tokens.|  
+|`MDDupMemberRef`|Check for duplicates of `mdMemberRef` tokens.|  
+|`MDDupCustomAttribute`|Check for duplicates of `mdCustomAttribute` tokens.|  
+|`MDDupParamDef`|Check for duplicates of `mdParamDef` tokens.|  
+|`MDDupPermission`|Check for duplicates of `mdPermission` tokens.|  
+|`MDDupProperty`|Check for duplicates of `mdProperty` tokens.|  
+|`MDDupEvent`|Check for duplicates of `mdEvent` tokens.|  
+|`MDDupFieldDef`|Check for duplicates of `mdFieldDef` tokens.|  
+|`MDDupSignature`|Check for duplicates of `mdSignature` tokens.|  
+|`MDDupModuleRef`|Check for duplicates of `mdModuleRef` tokens.|  
+|`MDDupTypeSpec`|Check for duplicates of `mdTypeSpec` tokens.|  
+|`MDDupImplMap`|Check for duplicates of `mdImplMap` tokens.|  
+|`MDDupAssemblyRef`|Check for duplicates of `mdAssemblyRef` tokens.|  
+|`MDDupFile`|Check for duplicates of `mdFile` tokens.|  
+|`MDDupExportedType`|Check for duplicates of `mdExportedType` tokens.|  
+|`MDDupManifestResource`|Check for duplicates of `mdManifestResource` tokens.|  
+|`MDDupGenericParam`|Check for duplicates of `mdGenericParam` tokens.|  
+|`MDDupMethodSpec`|Check for duplicates of `mdMethodSpec` tokens.|  
+|`MDDupGenericParamConstraint`|Check for duplicates of `mdGenericParamConstraint` tokens.|  
+|`MDDupAssembly`|Check for duplicates of `mdAssembly` tokens.|  
+|`MDDupDefault`|Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

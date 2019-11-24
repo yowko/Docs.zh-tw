@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e47a72f1-9609-48ed-bb34-97170d7f6890
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 846c754aeb0a710fa70e906e666f694eaa77c576
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef4788891e91608a394482319a89b8b0d258449f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781715"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436509"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType 列舉
 包含值，這些值描述原生 Unmanaged 類型。  
@@ -87,66 +85,66 @@ typedef enum CorNativeType {
 } CorNativeType;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|已過時。|  
 |`NATIVE_TYPE_VOID`|已過時。|  
-|`NATIVE_TYPE_BOOLEAN`|4 位元組的布林值，其中 TRUE 且非零，則為 FALSE 會是零。|  
-|`NATIVE_TYPE_I1`|帶正負號的 8 位元整數值。|  
-|`NATIVE_TYPE_U1`|不帶正負號的 8 位元整數值。|  
-|`NATIVE_TYPE_I2`|帶正負號的 16 位元整數值。|  
-|`NATIVE_TYPE_U2`|不帶正負號的 16 位元整數值。|  
+|`NATIVE_TYPE_BOOLEAN`|A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.|  
+|`NATIVE_TYPE_I1`|A signed 8-bit integer value.|  
+|`NATIVE_TYPE_U1`|An unsigned 8-bit integer value.|  
+|`NATIVE_TYPE_I2`|A signed 16-bit integer value.|  
+|`NATIVE_TYPE_U2`|An unsigned 16-bit integer value.|  
 |`NATIVE_TYPE_I4`|帶正負號的 32 位元整數值。|  
 |`NATIVE_TYPE_U4`|32 位元不帶正負號的整數值。|  
-|`NATIVE_TYPE_I8`|帶正負號的 64 位元整數值。|  
-|`NATIVE_TYPE_U8`|不帶正負號的 64 位元整數值。|  
-|`NATIVE_TYPE_R4`|4 位元組浮點數值。|  
-|`NATIVE_TYPE_R8`|8 位元組浮點數值。|  
+|`NATIVE_TYPE_I8`|A signed 64-bit integer value.|  
+|`NATIVE_TYPE_U8`|An unsigned 64-bit integer value.|  
+|`NATIVE_TYPE_R4`|A 4-byte floating-point numeric value.|  
+|`NATIVE_TYPE_R8`|An 8-byte floating-point numeric value.|  
 |`NATIVE_TYPE_SYSCHAR`|已過時。|  
 |`NATIVE_TYPE_VARIANT`|已過時。|  
-|`NATIVE_TYPE_CURRENCY`|數字的 COM 型別對應至 managed<xref:System.Decimal>型別。|  
+|`NATIVE_TYPE_CURRENCY`|A numeric COM type that corresponds to the managed <xref:System.Decimal> type.|  
 |`NATIVE_TYPE_PTR`|已過時。|  
 |`NATIVE_TYPE_DECIMAL`|已過時。|  
 |`NATIVE_TYPE_DATE`|已過時。|  
-|`NATIVE_TYPE_BSTR`|COM Interop。|  
-|`NATIVE_TYPE_LPSTR`|LPSTR 的字串值。|  
-|`NATIVE_TYPE_LPWSTR`|LPWSTR 的字串值。|  
-|`NATIVE_TYPE_LPTSTR`|LPTSTR 的字串值。|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|固定的系統定義的字串值。|  
+|`NATIVE_TYPE_BSTR`|COM Interop.|  
+|`NATIVE_TYPE_LPSTR`|An LPSTR string value.|  
+|`NATIVE_TYPE_LPWSTR`|An LPWSTR string value.|  
+|`NATIVE_TYPE_LPTSTR`|An LPTSTR string value.|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|A fixed, system-defined string value.|  
 |`NATIVE_TYPE_OBJECTREF`|已過時。|  
-|`NATIVE_TYPE_IUNKNOWN`|COM Interop。|  
-|`NATIVE_TYPE_IDISPATCH`|COM Interop。|  
-|`NATIVE_TYPE_STRUCT`|原生結構的值。|  
-|`NATIVE_TYPE_INTF`|COM Interop。|  
-|`NATIVE_TYPE_SAFEARRAY`|COM Interop。|  
-|`NATIVE_TYPE_FIXEDARRAY`|固定長度的陣列值。|  
-|`NATIVE_TYPE_INT`|原生的 16 位元帶正負號的整數值。|  
-|`NATIVE_TYPE_UINT`|原生的 16 位元不帶正負號的整數值。|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|已過時。<br /><br /> 使用 NATIVE_TYPE_STRUCT。|  
-|`NATIVE_TYPE_BYVALSTR`|COM Interop。|  
-|`NATIVE_TYPE_ANSIBSTR`|COM Interop。|  
-|`NATIVE_TYPE_TBSTR`|COM Interop。<br /><br /> 選取 BSTR 或 ANSIBSTR 視平台。|  
-|`NATIVE_TYPE_VARIANTBOOL`|2 位元組的布林值，其中為 true，則為-1，而 FALSE 是零。|  
+|`NATIVE_TYPE_IUNKNOWN`|COM Interop.|  
+|`NATIVE_TYPE_IDISPATCH`|COM Interop.|  
+|`NATIVE_TYPE_STRUCT`|A native structure value.|  
+|`NATIVE_TYPE_INTF`|COM Interop.|  
+|`NATIVE_TYPE_SAFEARRAY`|COM Interop.|  
+|`NATIVE_TYPE_FIXEDARRAY`|A fixed-length array value.|  
+|`NATIVE_TYPE_INT`|A native 16-bit signed integer value.|  
+|`NATIVE_TYPE_UINT`|A native 16-bit unsigned integer value.|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|已過時。<br /><br /> Use NATIVE_TYPE_STRUCT.|  
+|`NATIVE_TYPE_BYVALSTR`|COM Interop.|  
+|`NATIVE_TYPE_ANSIBSTR`|COM Interop.|  
+|`NATIVE_TYPE_TBSTR`|COM Interop.<br /><br /> Select BSTR or ANSIBSTR depending on the platform.|  
+|`NATIVE_TYPE_VARIANTBOOL`|A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.|  
 |`NATIVE_TYPE_FUNC`|函式指標。|  
-|`NATIVE_TYPE_ASANY`|任何原生型別的參考。|  
-|`NATIVE_TYPE_ARRAY`|未指定類型的成員與陣列的參考。|  
-|`NATIVE_TYPE_LPSTRUCT`|結構的 32 位元的整數指標。|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|自訂封送處理器的原生型別。<br /><br /> 這必須遵循下列格式的字串來：「 原生型別名稱/0Custom 封送處理器型別名稱/0Optional cookie/0"或"{原生輸入 GUID} / 0Custom 封送處理器輸入 cookie 的名稱/0Optional/0 」|  
-|`NATIVE_TYPE_ERROR`|COM Interop。<br /><br /> ELEMENT_TYPE_I4 與此類型會對應至 VT_HRESULT。|  
-|`NATIVE_TYPE_IINSPECTABLE`|原生`IInspectable`型別。|  
-|`NATIVE_TYPE_HSTRING`|原生`HString`。|  
-|`NATIVE_TYPE_MAX`|無效的值。|  
+|`NATIVE_TYPE_ASANY`|A reference to any native type.|  
+|`NATIVE_TYPE_ARRAY`|A reference to an array with members of an unspecified type.|  
+|`NATIVE_TYPE_LPSTRUCT`|A 32-bit integer pointer to a structure.|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|A custom marshaler native type.<br /><br /> This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"|  
+|`NATIVE_TYPE_ERROR`|COM Interop.<br /><br /> With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.|  
+|`NATIVE_TYPE_IINSPECTABLE`|A native `IInspectable` type.|  
+|`NATIVE_TYPE_HSTRING`|A native `HString`.|  
+|`NATIVE_TYPE_MAX`|An invalid value.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Runtime.InteropServices.UnmanagedType>
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

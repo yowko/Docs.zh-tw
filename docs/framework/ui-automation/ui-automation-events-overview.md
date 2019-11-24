@@ -9,16 +9,16 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: d342e4382cfe227e477ab87c2ca428834010768e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5f9362814eb671a6d7a111cadb96be6d06f5cb3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042167"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441488"
 ---
 # <a name="ui-automation-events-overview"></a>UI 自動化事件概觀
 > [!NOTE]
-> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 事件通知是輔助技術的重要功能，例如螢幕助讀程式和螢幕放大鏡。 這些 UI 自動化用戶端會追蹤 UI 自動化提供者在 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 發生情況時所引發的事件，並使用此資訊來通知使用者。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "71042167"
 ## <a name="types-of-events"></a>事件類型  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件可分類如下。  
   
-|Event - 事件|說明|  
+|Event - 事件|描述|  
 |-----------|-----------------|  
 |屬性變更|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目或控制項模式上的屬性變更時引發。 例如，如果用戶端需要監視應用程式的核取方塊控制項，則它可以註冊，以接聽 <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> 屬性上的屬性變更事件。 當選取或取消選取核取方塊控制項時，提供者會引發事件，而且用戶端可視需要採取動作。|  
 |項目動作|[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 中的變更是由於使用者或程式設計活動而產生時引發；例如，當按一下按鈕或透過 <xref:System.Windows.Automation.InvokePattern>叫用按鈕時。|  
@@ -66,7 +66,7 @@ ms.locfileid: "71042167"
 ## <a name="ui-automation-event-arguments"></a>UI 自動化事件引數  
  下列類別會封裝事件引數。  
   
-|類別|描述|  
+|執行個體|描述|  
 |-----------|-----------------|  
 |<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|包含非同步載入內容的相關資訊，包括已完成的載入百分比。|  
 |<xref:System.Windows.Automation.AutomationEventArgs>|包含不需要額外資料之簡單事件的相關資訊。|  
@@ -81,7 +81,7 @@ ms.locfileid: "71042167"
   
  如需事件識別碼的清單，請參閱 [UI Automation Events for Clients](ui-automation-events-for-clients.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [用戶端的 UI 自動化事件](ui-automation-events-for-clients.md)
 - [伺服器端 UI 自動化提供者實作](server-side-ui-automation-provider-implementation.md)

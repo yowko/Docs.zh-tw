@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d64a1ef21cd4fa4224609c7cd415c1611313769
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5c81bc82e19bce658336e4860a61f2721e17423d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777555"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431696"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam 方法
-使用指定的語彙基元所參考的方法指定的簽章建立的參數定義，並取得該參數定義的語彙基元。  
+Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,42 +42,42 @@ HRESULT DefineParam (
   
 ## <a name="parameters"></a>參數  
  `md`  
- [in]正在定義其參數的方法之語彙基元。  
+ [in] The token for the method whose parameter is being defined.  
   
  `ulParamSeq`  
- [in]參數的順序編號。  
+ [in] The parameter sequence number.  
   
  `szName`  
- [in]以 Unicode 參數的名稱。  
+ [in] The name of the parameter in Unicode.  
   
  `dwParamFlags`  
- [in]參數的旗標。 這是位元遮罩`CorParamAttr`值。  
+ [in] Flags for the parameter. This is a bitmask of `CorParamAttr` values.  
   
  `dwCPlusTypeFlag`  
- [in]`ELEMENT_TYPE_` *\** 常數的值。  
+ [in] `ELEMENT_TYPE_` *\** for the constant value.  
   
  `pValue`  
- [in]參數的常值。  
+ [in] The constant value for the parameter.  
   
  `cchValue`  
- [in]大小，以 Unicode 字元的`pValue`。  
+ [in] The size, in Unicode characters, of `pValue`.  
   
  `ppd`  
- [out]`mdParamDef`指派權杖。  
+ [out] The `mdParamDef` token assigned.  
   
 ## <a name="remarks"></a>備註  
- 中的值序列`ulParamSeq`參數 1 為開頭。 傳回值具有 0 的序號。  
+ The sequence values in `ulParamSeq` begin with 1 for parameters. A return value has a sequence number of 0.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MSCorEE.dll 中的資源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

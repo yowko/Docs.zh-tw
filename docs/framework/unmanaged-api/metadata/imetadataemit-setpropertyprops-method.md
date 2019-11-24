@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9e78c4d7319a931ca7090d6f99651bc9660e4af8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0fdec87324d6efa0f911e37573093c19b93c0349
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782045"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440544"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps 方法
-設定儲存在先前呼叫所定義之屬性的中繼資料的功能[DefineProperty 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)。  
+Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,39 +42,39 @@ HRESULT SetPropertyProps (
   
 ## <a name="parameters"></a>參數  
  `pr`  
- [in]若要變更屬性的語彙基元  
+ [in] The token for the property to be changed  
   
  `dwPropFlags`  
- [in]屬性旗標。  
+ [in] Property flags.  
   
  `dwCPlusTypeFlag`  
- [in]屬性的預設值的型別。  
+ [in] The type of the property's default value.  
   
  `pValue`  
- [in]屬性的預設值。  
+ [in] The default value for the property.  
   
  `cchValue`  
- [in]中的字元 (Unicode) 的計數`pValue`。  
+ [in] The count of (Unicode) characters in `pValue`.  
   
  `mdSetter`  
- [in]設定屬性值的方法。  
+ [in] The method that sets the property value.  
   
  `mdGetter`  
- [in]取得屬性值的方法。  
+ [in] The method that gets the property value.  
   
  `rmdOtherMethods[]`  
- [in]其他方法與屬性相關聯的陣列。 終止此陣列`mdTokenNil`語彙基元。  
+ [in] An array of other methods associated with the property. Terminate this array with an `mdTokenNil` token.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MSCorEE.dll 中的資源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
