@@ -1,4 +1,4 @@
-- name: 分析
+- name: 程式碼剖析
   href: index.md
   items:
     - name: 分析概觀
@@ -468,13 +468,15 @@
             - name: EnumerateObjectReferences 方法
               href: icorprofilerinfo10-enumerateobjectreferences-method.md
             - name: IsFrozenObject 方法
-            - name: GetLOHObjectSizeThreshold 方法
               href: icorprofilerinfo10-isfrozenobject-method.md
+            - name: GetLOHObjectSizeThreshold 方法
+              href: icorprofilerinfo10-getlohobjectsizethreshold-method.md
             - name: RequestReJITWithInliners 方法
-              href: icorprofilerinfo10-suspendruntime-method.md
+              href: icorprofilerinfo10-requestrejitwithinliners-method.md
             - name: ResumeRuntime 方法
-            - name: SuspendRuntime 方法
               href: icorprofilerinfo10-resumeruntime-method.md
+            - name: SuspendRuntime 方法
+              href: icorprofilerinfo10-suspendruntime-method.md
         - name: ICorProfilerModuleEnum 介面
           href: icorprofilermoduleenum-interface.md
           items:

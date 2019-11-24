@@ -970,15 +970,15 @@
         - name: 無法建立 ActiveX 元件
           href: language-reference/error-messages/cannot-create-activex-component.md
         - name: 無法參考至 '<name>'，因為它是類別 '<name>' 的實值類型欄位 '<classname>' 的成員，它把 'System.MarshalByRefObject' 當做基底類別
-          href: language-reference/error-messages/cannot-refer-to-name-because-it-is-member-of-value-typed-field-name-of-class.md
+          href: language-reference/error-messages/bc30310.md
         - name: 沒有類別的明確執行個體，因此無法從共用方法或共用成員初始設定式中參考至類別的執行個體成員
-          href: language-reference/error-messages/cannot-refer-to-an-instance-member-of-a-class.md
+          href: language-reference/error-messages/bc30369.md
         - name: 無法建立必要的暫存檔
           href: language-reference/error-messages/can-t-create-necessary-temporary-file.md
         - name: 無法開啟 '<filename>' 以進行寫入
-          href: language-reference/error-messages/can-t-open-filename-for-writing.md
+          href: language-reference/error-messages/bc2012.md
         - name: 找不到類別 '<classname>'
-          href: language-reference/error-messages/class-classname-cannot-be-found.md
+          href: language-reference/error-messages/bc31098.md
         - name: 類別不支援 Automation 或不支援預期的介面
           href: language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md
         - name: '''Class'' 陳述式之後必須搭配相對應的 ''End Class'''
