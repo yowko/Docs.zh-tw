@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 277c3344-d0cb-431e-beae-eb1eeeba8eea
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf16563e6d5fef3a743e802166173004a857dd0e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86b1c8b3f5bd88b216c59f5cc6846f83f3c094ee
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745828"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440759"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo 函式
-通知分析工具的控制項傳遞至函式，並提供可以傳遞至控制代碼[ICorProfilerInfo3::GetFunctionEnter3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)來擷取堆疊框架和函式引數。  
+Notifies the profiler that control is being passed to a function, and provides a handle that can be passed to the [ICorProfilerInfo3::GetFunctionEnter3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to retrieve the stack frame and function arguments.  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,36 +34,36 @@ void __stdcall FunctionEnter3WithInfo(
   
 ## <a name="parameters"></a>參數  
  `functionIDOrClientID`  
- [in]控制權會傳遞函式的識別碼。  
+ [in] The identifier of the function to which control is passed.  
   
  `eltInfo`  
- [in] 代表特定堆疊框架之資訊的不透明控制代碼。 這個控制代碼傳遞到回呼期間，只是有效的。  
+ [in] 代表特定堆疊框架之資訊的不透明控制代碼。 This handle is valid only during the callback to which it is passed.  
   
 ## <a name="remarks"></a>備註  
- `FunctionEnter3WithInfo`函式呼叫時，以及讓分析工具使用，回呼方法會通知分析工具[ICorProfilerInfo3::GetFunctionEnter3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)檢查引數的值。 若要存取引數的詳細資訊，`COR_PRF_ENABLE_FUNCTION_ARGS`旗標的設定。 可以使用分析工具[icorprofilerinfo:: Seteventmask 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)來設定事件的旗標，然後使用[ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)註冊您此函式的實作。  
+ The `FunctionEnter3WithInfo` callback method notifies the profiler as functions are called, and enables the profiler to use the [ICorProfilerInfo3::GetFunctionEnter3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to inspect argument values. To access argument information, the `COR_PRF_ENABLE_FUNCTION_ARGS` flag has to be set. The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags, and then use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) to register your implementation of this function.  
   
- `FunctionEnter3WithInfo`函式是回呼; 您必須實作它。 的實作必須使用`__declspec(naked)`儲存類別屬性。  
+ The `FunctionEnter3WithInfo` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
   
- 呼叫此函式之前，執行引擎不會儲存任何暫存器。  
+ The execution engine does not save any registers before calling this function.  
   
-- 項目，您必須儲存所有您使用，包括與浮點單位 (FPU) 中的暫存器。  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- 結束時，您必須還原堆疊驅離其呼叫端所推送的所有參數。  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- 實作`FunctionEnter3WithInfo`不應封鎖，因為它將會延遲記憶體回收。 實作不應嘗試回收，因為堆疊可能無法在記憶體回收方便集合的狀態。 如果嘗試進行記憶體回收，則執行階段將會封鎖直到`FunctionEnter3WithInfo`傳回。  
+ The implementation of `FunctionEnter3WithInfo` should not block, because it will delay garbage collection. The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionEnter3WithInfo` returns.  
   
- `FunctionEnter3WithInfo`函式不能呼叫 managed 程式碼或以任何方式造成 managed 的記憶體配置。  
+ The `FunctionEnter3WithInfo` function must not call into managed code or cause a managed memory allocation in any way.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl  
+ **Header:** CorProf.idl  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)
 - [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)

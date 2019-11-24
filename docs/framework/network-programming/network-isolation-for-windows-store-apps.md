@@ -2,12 +2,12 @@
 title: Windows 市集應用程式的網路隔離
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-ms.openlocfilehash: 0d08b09f4ed0314d4f235f10b69bbf1343935841
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: HT
+ms.openlocfilehash: 34b8865781079f45a68d3dd1aab7fbd66c703d50
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333258"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447428"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Windows 市集應用程式的網路隔離
 <xref:System.Net>、<xref:System.Net.Http> 和 <xref:System.Net.Http.Headers> 命名空間中的類別可以用來開發 Windows 市集應用程式或傳統型應用程式。 在 Windows 市集應用程式中使用時，這些命名空間中的類別受到網路隔離的影響，而網路隔離是 [!INCLUDE[win8](../../../includes/win8-md.md)] 所使用應用程式安全性模型的一部分。 必須在 Windows 市集應用程式的應用程式資訊清單中啟用適當的網路功能，讓系統允許網路存取。  
@@ -23,13 +23,13 @@ ms.locfileid: "59333258"
   
 4. 部署和執行應用程式，以使用針對疑難排解所提供的網路隔離工具對其進行測試。  
   
- 如需如何設定用於針對網路隔離進行疑難排解之網路功能和隔離工具的詳細資訊，請參閱 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 開發人員文件中的[如何設定網路隔離功能](https://go.microsoft.com/fwlink/?LinkID=228265)。  
+ For more detailed information on how to configure network capabilities and isolation tools used for troubleshooting network isolation, see [How to configure network isolation capabilities](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) in the Windows 8.x Store developer documentation.
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [連線至 Web 服務](https://go.microsoft.com/fwlink/?LinkID=245696)
-- [網路隔離的方針和檢查清單](https://go.microsoft.com/fwlink/?LinkID=228265)
-- [快速入門：使用 HttpClient 進行連線](https://go.microsoft.com/fwlink/?LinkId=245697)
-- [如何使用 HttpClient 處理常式](https://go.microsoft.com/fwlink/?LinkId=245699)
-- [如何保護 HttpClient 連線](https://go.microsoft.com/fwlink/?LinkId=245698)
-- [HttpClient 範例](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [連線至 Web 服務](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
+- [網路隔離的方針和檢查清單](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
+- [快速入門：使用 HttpClient 進行連線](https://docs.microsoft.com/previous-versions/windows/apps/hh781239(v=win.10))
+- [如何使用 HttpClient 處理常式](https://docs.microsoft.com/previous-versions/windows/apps/hh781241(v=win.10))
+- [如何保護 HttpClient 連線](https://docs.microsoft.com/previous-versions/windows/apps/hh781240(v=win.10))
+- [HttpClient 範例](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

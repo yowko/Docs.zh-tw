@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fd3bb47-58b5-4083-b241-b9719df7a285
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: edeaefd0792a5cc03ae6d4385ff669a343ffdfc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 690abec6104f6eed1ad5a0eae9a6b6bb18d35b0d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778816"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436682"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString 方法
 取得指定中繼資料語彙基元所代表的常值字串。  
@@ -40,27 +38,27 @@ HRESULT GetUserString (
   
 ## <a name="parameters"></a>參數  
  `stk`  
- [in]要傳回的相關聯的字串的字串權杖。  
+ [in] The String token to return the associated string for.  
   
  `szString`  
- [out]要求字串的複本。  
+ [out] A copy of the requested string.  
   
  `cchString`  
- [in]所要求的寬字元的大小上限`szString`。  
+ [in] The maximum size in wide characters of the requested `szString`.  
   
  `pchString`  
- [out]傳回寬字元大小`szString`。  
+ [out] The size in wide characters of the returned `szString`.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

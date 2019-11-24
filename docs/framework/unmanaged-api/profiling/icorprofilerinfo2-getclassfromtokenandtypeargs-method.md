@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b25c88f0-71b9-443b-8eea-1c94db0a44b9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a88a6c19a5c8b45576dd6f632adf70f7ec2eed55
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5b6c0159b432d2a70f583357bbcf714b27399633
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751869"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447179"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs 方法
-取得`ClassID`使用指定的中繼資料語彙基元型別和`ClassID`值的任何型別引數。  
+Gets the `ClassID` of a type by using the specified metadata token and the `ClassID` values of any type arguments.  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,37 +38,37 @@ HRESULT GetClassFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>參數  
  `moduleID`  
- [in]型別所在之模組識別碼。  
+ [in] The ID of the module in which the type resides.  
   
  `typeDef`  
- [in]`mdTypeDef`參考類型的中繼資料語彙基元。  
+ [in] An `mdTypeDef` metadata token that references the type.  
   
  `cTypeArgs`  
- [in]指定型別的型別參數的數目。 此值必須是非泛型型別為零。  
+ [in] The number of type parameters for the given type. This value must be zero for non-generic types.  
   
  `typeArgs`  
- [in]陣列`ClassID`每一個都是類型的引數的值。 值`typeArgs`可以是 NULL，如果`cTypeArgs`設為零。  
+ [in] An array of `ClassID` values, each of which is an argument of the type. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
   
  `pClassID`  
- [out]指標`ClassID`指定的型別。  
+ [out] A pointer to the `ClassID` of the specified type.  
   
 ## <a name="remarks"></a>備註  
- 呼叫`GetClassFromTokenAndTypeArgs`方法`mdTypeRef`而不是`mdTypeDef`中繼資料語彙基元可能會有無法預期的結果，呼叫端應該解決`mdTypeRef`到`mdTypeDef`傳遞時。  
+ Calling the `GetClassFromTokenAndTypeArgs` method with an `mdTypeRef` instead of an `mdTypeDef` metadata token can have unpredictable results; callers should resolve the `mdTypeRef` to an `mdTypeDef` when passing it.  
   
- 如果尚未載入的型別，則呼叫`GetClassFromTokenAndTypeArgs`會觸發載入，而這是危險的作業在許多內容中。 例如，在載入模組或其他類型期間呼叫這個方法可能會導致無限迴圈循環載入嘗試執行階段。  
+ If the type is not already loaded, calling `GetClassFromTokenAndTypeArgs` will trigger loading, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or other types could lead to an infinite loop as the runtime attempts to circularly load things.  
   
- 一般情況下，使用`GetClassFromTokenAndTypeArgs`建議您不要使用。 如果分析工具想要針對特定類型的事件，它們應該儲存`ModuleID`並`mdTypeDef`該類型，以及使用[ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)來檢查是否指定`ClassID`，就是所需的類型。  
+ In general, use of `GetClassFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular type, they should store the `ModuleID` and `mdTypeDef` of that type, and use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) to check whether a given `ClassID` is that of the desired type.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** CorProf.idl、CorProf.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e2d88c6-8a3a-4fbe-900b-b4f4c06bf6bf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 40d1817b9eb7f341899efddb469c7fa17a8f8c0e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1a4f7703536bcfdae75b0bcffae8dca0734e9e0f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782400"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437573"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>IMetaDataImport::GetFieldMarshal 方法
-取得指定的欄位中繼資料語彙基元所表示之欄位的原生、 unmanaged 類型的指標。  
+Gets a pointer to the native, unmanaged type of the field represented by the specified field metadata token.  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,24 +37,24 @@ HRESULT GetFieldMarshal (
   
 ## <a name="parameters"></a>參數  
  `tk`  
- [in]表示要取得 interop 封送處理資訊之欄位的中繼資料語彙基元。  
+ [in] The metadata token that represents the field to get interop marshaling information for.  
   
  `ppvNativeType`  
- [out]中繼資料簽章欄位的原生類型的指標。  
+ [out] A pointer to the metadata signature of the field's native type.  
   
  `pcbNativeType`  
- [out]以位元組為單位的大小`ppvNativeType`。  
+ [out] The size in bytes of `ppvNativeType`.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

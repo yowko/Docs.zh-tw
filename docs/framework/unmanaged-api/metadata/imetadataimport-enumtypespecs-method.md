@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 75331c7b-988b-436c-9eb9-a270d37b4f06
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 81592b6da7fa7cdf275e9fa5b4b82ef0a15061c0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 42b8360ac6a7bb62f29046475d6cc98124619770
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782573"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449964"
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>IMetaDataImport::EnumTypeSpecs 方法
 列舉在目前中繼資料範圍中定義的 TypeSpec 語彙基元。  
@@ -40,37 +38,37 @@ HRESULT EnumTypeSpecs (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in、 out]列舉值的指標。 首次呼叫這個方法，這個值必須是 NULL。  
+ [in, out] A pointer to the enumerator. This value must be NULL for the first call of this method.  
   
  `rTypeSpecs`  
- [out]陣列，用來儲存 TypeSpec 語彙基元。  
+ [out] The array used to store the TypeSpec tokens.  
   
  `cMax`  
  [in] `rTypeSpecs` 陣列的大小上限。  
   
  `pcTypeSpecs`  
- [out]中傳回的 TypeSpec 語彙基元數目`rTypeSpecs`。  
+ [out] The number of TypeSpec tokens returned in `rTypeSpecs`.  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeSpecs` 已成功傳回。|  
-|`S_FALSE`|沒有列舉語彙基元。 在此情況下，`pcTypeSpecs`為零。|  
+|`S_OK`|`EnumTypeSpecs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeSpecs` is zero.|  
   
 ## <a name="remarks"></a>備註  
- 所建立的 TypeSpec 語彙基元[imetadataemit:: Gettokenfromtypespec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md)方法。  
+ The TypeSpec tokens are created by the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

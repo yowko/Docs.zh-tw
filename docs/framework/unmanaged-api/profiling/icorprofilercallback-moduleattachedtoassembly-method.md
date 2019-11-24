@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b595798a-5d40-4cac-ab4f-911c61d2c5d2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3345e2e87ba41f750031deed2d15e13dbe4f06c8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d229b530062d759ab270612fa70b1799acbcadbe
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769300"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448067"
 ---
 # <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a>ICorProfilerCallback::ModuleAttachedToAssembly 方法
-通知分析工具模組，附加到其父組件。  
+Notifies the profiler that a module is being attached to its parent assembly.  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,23 +35,23 @@ HRESULT ModuleAttachedToAssembly(
   
 ## <a name="parameters"></a>參數  
  `moduleId`  
- [in]要附加的模組識別碼。  
+ [in] The ID of the module that is being attached.  
   
  `AssemblyId`  
- [in]要附加之模組的父組件的識別碼。  
+ [in] The ID of the parent assembly to which the module is attached.  
   
 ## <a name="remarks"></a>備註  
- 可以透過匯入位址表 (IAT)、 載入模組，透過呼叫`LoadLibrary`，或透過中繼資料參考。 如此一來，common language runtime (CLR) 載入器會有多個程式碼路徑，來判斷模組存留在其中的組件。 因此，很可能之後[icorprofilercallback:: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)呼叫時，此模組並不知道哪一個組件中，而且不可能取得父組件識別碼。 `ModuleAttachedToAssembly`模組連接到其父組件，且它可以取得識別碼的父組件時，會呼叫方法。  
+ A module can be loaded through an import address table (IAT), through a call to `LoadLibrary`, or through a metadata reference. As a result, the common language runtime (CLR) loader has multiple code paths for determining the assembly in which a module lives. Therefore, it is possible that after [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) is called, the module does not know what assembly it is in and getting the parent assembly ID is not possible. The `ModuleAttachedToAssembly` method is called when the module is attached to its parent assembly and its parent assembly ID can be obtained.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** CorProf.idl、CorProf.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

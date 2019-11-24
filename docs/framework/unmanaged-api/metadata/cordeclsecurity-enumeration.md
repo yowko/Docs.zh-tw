@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 864f1267-d267-4696-8df7-1f83f8444d6f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5898f2f0900b0bbe392d4dbaa8fc1db5e0e45c9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 98183ed02f8821b7c40852de2d040775d30f2518
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767001"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443738"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity 列舉
 指定可以使用宣告式安全性執行的安全性動作。  
@@ -56,7 +54,7 @@ typedef enum CorDeclSecurity {
 } CorDeclSecurity;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
@@ -64,14 +62,14 @@ typedef enum CorDeclSecurity {
 |`dclActionNil`|保留的。|  
 |`dclRequest`|保留的。|  
 |`dclDemand`|呼叫堆疊中較高層的所有呼叫端，必須已獲得目前權限物件所指定的權限。|  
-|`dclAssert`|呼叫端程式碼可以存取目前權限物件所識別的資源，即使堆疊中較高層的呼叫端未獲得存取資源的權限|  
-|`dclDeny`|存取目前的使用權限物件所指定之資源的能力被拒絕呼叫端，即使使用者已獲得存取權限。|  
+|`dclAssert`|The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource|  
+|`dclDeny`|The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.|  
 |`dclPermitOnly`|只可存取這個權限物件所指定的資源，即使程式碼已獲得其他資源存取權限亦然。|  
-|`dclLinktimeCheck`|已授與指定的一段時間的指定權限需要立即呼叫端。|  
-|`dclInheritanceCheck`|衍生的類別繼承另一個類別或覆寫的方法，才能獲得指定權限。|  
-|`dclRequestMinimum`|呼叫端可以要求執行的程式碼所需的最低權限。 這個動作只能在組件的範圍內使用。|  
-|`dclRequestOptional`|呼叫端可以要求的是選擇性的 （不需要執行） 的其他權限。 這項要求會隱含拒絕未特別要求的所有其他權限。 這個動作只能在組件的範圍內使用。|  
-|`dclRequestRefuse`|未被授與呼叫端的要求可能遭到誤用的權限。 這個動作只能在組件的範圍內使用。|  
+|`dclLinktimeCheck`|The immediate caller is required to have been granted the specified permission for a given period of time.|  
+|`dclInheritanceCheck`|The derived class inheriting another class or overriding a method is required to have been granted the specified permission.|  
+|`dclRequestMinimum`|The caller can request for the minimum permissions required for code to run. 這個動作只能在組件的範圍內使用。|  
+|`dclRequestOptional`|The caller can request for additional permissions that are optional (not required to run). 這項要求會隱含拒絕未特別要求的所有其他權限。 這個動作只能在組件的範圍內使用。|  
+|`dclRequestRefuse`|The caller's request for permissions that might be misused will not be granted. 這個動作只能在組件的範圍內使用。|  
 |`dclPrejitGrant`|保留的。|  
 |`dclPrejitDenied`|保留的。|  
 |`dclNonCasDemand`|保留的。|  
@@ -85,10 +83,10 @@ typedef enum CorDeclSecurity {
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

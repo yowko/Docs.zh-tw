@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d23247e-c58c-45db-afd8-83aa89cde18e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 65f59d3df96f46ad65650183bdb6f631356a4d0b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d32dc8ae59fc1a4a189d849437cc95ea3b94a4d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775540"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449547"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields 方法
 列舉指定 TypeDef 語彙基元所參考類型的 FieldDef 語彙基元。  
@@ -41,37 +39,37 @@ HRESULT EnumFields (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in、 out]列舉值的指標。  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in]其欄位是列舉類別的 TypeDef 語彙基元。  
+ [in] The TypeDef token of the class whose fields are to be enumerated.  
   
  `rFields`  
- [out]FieldDef 語彙基元清單。  
+ [out] The list of FieldDef tokens.  
   
  `cMax`  
  [in] `rFields` 陣列的大小上限。  
   
  `pcTokens`  
- [out]中傳回的 fielddef 語彙基元的實際數目`rFields`。  
+ [out] The actual number of FieldDef tokens returned in `rFields`.  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields` 已成功傳回。|  
-|`S_FALSE`|沒有列舉欄位。 在此情況下，`pcTokens`為零。|  
+|`S_OK`|`EnumFields` returned successfully.|  
+|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

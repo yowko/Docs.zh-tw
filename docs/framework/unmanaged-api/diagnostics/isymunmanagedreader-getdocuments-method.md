@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3b73a3f-d089-4101-a9a9-5e0765d05b61
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7fad7fae41fed70d996fcaaa7a7cdf69403b6094
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c26c0a5f8c597613266e2e6d1998edfca8f17b82
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763359"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448335"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>ISymUnmanagedReader::GetDocuments 方法
-傳回定義在符號存放區中的所有文件的陣列。  
+Returns an array of all the documents defined in the symbol store.  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,17 +40,17 @@ HRESULT GetDocuments (
  [in] `pDocs` 陣列的大小。  
   
  `pcDocs`  
- [out]此變數會接收陣列長度指標。  
+ [out] A pointer to a variable that receives the array length.  
   
  `pDocs`  
- [out]接收文件陣列變數的指標。  
+ [out] A pointer to a variable that receives the document array.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

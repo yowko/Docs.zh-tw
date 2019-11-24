@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a85283d8-379c-417a-9736-ddeeef9bcf50
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ef5a98d510eee8942a2cad0525b6902e3e4eaa52
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f1bd9c33f24847eae4ff7d26c5b996cd34afb72
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769383"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448934"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges 方法
-指定的文件中的位置，傳回陣列的開始和結束位移組對應的 Microsoft intermediate language (MSIL，其中涵蓋在這個方法內的位置) 範圍。 陣列是一個整數的陣列，並具有 [開始、 結束、 開始、 結束] 格式。 範圍組的數目會除以 2 陣列的長度。  
+Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method. The array is an array of integers and has the format [start, end, start, end]. The number of range pairs is the length of the array divided by 2.  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,29 +40,29 @@ HRESULT GetRanges(
   
 ## <a name="parameters"></a>參數  
  `document`  
- [in]要求位移的文件。  
+ [in] The document for which the offset is requested.  
   
  `line`  
- [in]對應到範圍的文件行。  
+ [in] The document line corresponding to the ranges.  
   
  `column`  
- [in]對應到範圍的文件的資料行。  
+ [in] The document column corresponding to the ranges.  
   
  `cRanges`  
  [in] `ranges` 陣列的大小。  
   
  `pcRanges`  
- [out]指標`ULONG32`接收包含範圍所需的緩衝區大小。  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.  
   
  `ranges`  
- [out]接收範圍緩衝區的指標。  
+ [out] A pointer to the buffer that receives the ranges.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

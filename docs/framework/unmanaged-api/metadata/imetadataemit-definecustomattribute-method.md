@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7dd14854-b756-4401-b167-88ca576dc8f0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 994e007eabf8b7fdcf5446d905c06eb4ab91bb3f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6a732b98ae02ba2b273b45921b7de61ab4fd29f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777683"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432647"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>IMetaDataEmit::DefineCustomAttribute 方法
-建立自訂屬性的定義，具有指定之中繼資料簽章，附加至指定的物件，並取得該自訂屬性定義的語彙基元。  
+Creates a definition for a custom attribute with the specified metadata signature, to be attached to the specified object, and gets a token to that custom attribute definition.  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,30 +39,30 @@ HRESULT DefineCustomAttribute (
   
 ## <a name="parameters"></a>參數  
  `tkObj`  
- [in]擁有者項目之語彙基元。  
+ [in] The token for the owner item.  
   
  `tkType`  
- [in]語彙基元，可識別自訂的屬性。  
+ [in] The token that identifies the custom attribute.  
   
  `pCustomAttribute`  
- [in]自訂屬性的指標。  
+ [in] A pointer to the custom attribute.  
   
  `cbCustomAttribute`  
- [in]中的位元組計數`pCustomAttribute`。  
+ [in] The count of bytes in `pCustomAttribute`.  
   
  `pcv`  
- [out]`mdCustomAttribute`指派權杖。  
+ [out] The `mdCustomAttribute` token assigned.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MSCorEE.dll 中的資源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

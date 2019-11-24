@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86d98f39-52e6-4c61-a625-9760f695ff12
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 174e71fca8c59dbd4842d0fc0b84bb9a3d7b10df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 33b72c8d089e5b335069fe465987086dfa1243bc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763039"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445179"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished 方法
-通知分析工具組件已完成載入。  
+Notifies the profiler that an assembly has finished loading.  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,25 +35,25 @@ HRESULT AssemblyLoadFinished(
   
 ## <a name="parameters"></a>參數  
  `assemblyId`  
- [in]識別已載入的組件。  
+ [in] Identifies the assembly that was loaded.  
   
  `hrStatus`  
- [in]指出是否已完成組件載入成功的 HRESULT。  
+ [in] An HRESULT that indicates whether the assembly finished loading successfully.  
   
 ## <a name="remarks"></a>備註  
- 值`assemblyId`不是有效資訊要求直到`AssemblyLoadFinished`呼叫方法。  
+ The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.  
   
- 載入組件的某些部分可能會繼續之後`AssemblyLoadFinished`回呼。 失敗 HRESULT 中`hrStatus`表示失敗。 不過，成功的 HRESULT 中`hrStatus`僅會指示已成功載入組件的第一個部分。  
+ Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** CorProf.idl、CorProf.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

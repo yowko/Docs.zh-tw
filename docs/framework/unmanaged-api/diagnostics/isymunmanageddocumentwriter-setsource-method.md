@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea5b9d9f-ff06-4bd3-8de5-6435343aba59
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 555926e0e6a669f70bdeff484cff0eb62ae11f7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff18f95bd6b4cfde5aaa4d3f6f68b58fd37c04b3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776936"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449077"
 ---
 # <a name="isymunmanageddocumentwritersetsource-method"></a>ISymUnmanagedDocumentWriter::SetSource 方法
-設定內嵌正在寫入的文件的來源。  
+Sets embedded source for a document that is being written.  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,17 +35,17 @@ HRESULT SetSource(
   
 ## <a name="parameters"></a>參數  
  `sourceSize`  
- [in]A `ULONG32` ，其中包含大小`source`緩衝區。  
+ [in] A `ULONG32` that contains the size of the `source` buffer.  
   
  `source`  
- [in]儲存內嵌的來源緩衝區。  
+ [in] The buffer that stores the embedded source.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedDocumentWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

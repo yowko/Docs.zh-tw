@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 65a4ad49-fa49-4b36-8ed1-76dd6a185ab4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 84de8e3c688a23198762fca5219d317fabb69c1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 00f2aa3364b8b707d4100f8d2574ff3765d106da
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777464"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450163"
 ---
 # <a name="imetadataemitdeleteclasslayout-method"></a>IMetaDataEmit::DeleteClassLayout 方法
-終結指定的語彙基元所代表的型別類別配置中繼資料簽章。  
+Destroys the class layout metadata signature for the type represented by the specified token.  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,18 +35,18 @@ HRESULT DeleteClassLayout (
   
 ## <a name="parameters"></a>參數  
  `td`  
- [in]`mdTypeDef`表示刪除類別配置之類型的中繼資料語彙基元。  
+ [in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MSCorEE.dll 中的資源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

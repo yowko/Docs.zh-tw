@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b72f5409-79af-4fa7-90a7-7630eec170f1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 77d54f6c8f67dda5132518d1fbd579a91ce82071
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ec0a86e3396ad42152bc0a244f74ad13deba16e4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777449"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446515"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute 方法
-呼叫以設定元件層級的自訂屬性。  
+Call to set assembly-level custom attributes.  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,33 +41,33 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- 元件的識別碼。  
+ ID of the assembly.  
   
  `FileToken`  
- 定義屬性的檔案。 如果未指出未`AssemblyID`系結的 .netmodule，則可以是 Null。  
+ File that defiles the attribute. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
   
  `tkType`  
- 自訂屬性的類型。  
+ Type of the custom attribute.  
   
  `pCustomValue`  
- 自訂值資料。  
+ Custom value data.  
   
  `cbCustomValue`  
- 自訂值資料的長度。  
+ Length of custom value data.  
   
  `bSecurity`  
- 如果自訂屬性與元件簽署有關，則為 TRUE。  
+ TRUE if the custom attribute is related to assembly signing.  
   
  `bAllowMulti`  
- 如果要發出多個屬性，則為 TRUE。  
+ TRUE if multiple attributes are to be emitted.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則傳回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>需求  
- 需要 alink. h  
+ Requires alink.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

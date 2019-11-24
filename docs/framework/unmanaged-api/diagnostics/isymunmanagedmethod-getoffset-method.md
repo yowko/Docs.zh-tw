@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8bf3cb62-89bf-4159-ad53-de606aba89e8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 62fa0969044504905d5c835f74873dc6f46cafa8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7993ebc15f95df97a9b45523717f318d8c435ce
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769433"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448942"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>ISymUnmanagedMethod::GetOffset 方法
-文件中的指定位置傳回此對應的方法中的位移。  
+Returns the offset within this method that corresponds to a given position within a document.  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,23 +37,23 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>參數  
  `document`  
- [in]要求位移的文件指標。  
+ [in] A pointer to the document for which the offset is requested.  
   
  `line`  
- [in]要求位移的文件行。  
+ [in] The document line for which the offset is requested.  
   
  `column`  
- [in]要求位移的文件的資料行。  
+ [in] The document column for which the offset is requested.  
   
  `pRetVal`  
- [out]指標`ULONG32`接收位移。  
+ [out] A pointer to a `ULONG32` that receives the offsets.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

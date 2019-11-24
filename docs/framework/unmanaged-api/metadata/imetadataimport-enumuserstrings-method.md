@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b1f1418-4be8-4cdb-b418-b3abccc527a7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea144784f82c192f41f68394eb2ccdf443db54c2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1c9f15881d3515f24a63f29e9337a7a356937f2d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782560"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449938"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>IMetaDataImport::EnumUserStrings 方法
 列舉字串語彙基元，其代表目前中繼資料範圍內的硬式編碼字串。  
@@ -40,37 +38,37 @@ HRESULT EnumUserStrings (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in、 out]列舉值的指標。 首次呼叫這個方法，這必須是 NULL。  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rStrings`  
- [out]陣列，用來儲存的字串語彙基元。  
+ [out] The array used to store the String tokens.  
   
  `cMax`  
  [in] `rStrings` 陣列的大小上限。  
   
  `pcStrings`  
- [out]中傳回的字串語彙基元數目`rStrings`。  
+ [out] The number of String tokens returned in `rStrings`.  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUserStrings` 已成功傳回。|  
-|`S_FALSE`|沒有列舉語彙基元。 在此情況下，`pcStrings`為零。|  
+|`S_OK`|`EnumUserStrings` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcStrings` is zero.|  
   
 ## <a name="remarks"></a>備註  
- 所建立的字串語彙基元[imetadataemit:: Defineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md)方法。 這個方法被設計來由中繼資料瀏覽器中，而不是由編譯器。  
+ The String tokens are created by the [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) method. This method is designed to be used by a metadata browser rather than by a compiler.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

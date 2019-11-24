@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e7e3c630-9691-46d6-94df-b5593a7bb08a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 715e53ae04532214d4011d4a40503b2ade5a014d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff6932b6040a19e0ccda2f8d2140fa131cdd9224
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782079"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450071"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>IMetaDataImport::EnumMethodSemantics 方法
 列舉和指定方法相關的屬性及屬性變更事件。  
@@ -41,40 +39,40 @@ HRESULT EnumMethodSemantics (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in、 out]列舉值的指標。 首次呼叫這個方法，這必須是 NULL。  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `mb`  
- [in]列舉的範圍限制 MethodDef 語彙基元。  
+ [in] A MethodDef token that limits the scope of the enumeration.  
   
  `rEventProp`  
- [out]用來儲存事件或屬性的陣列。  
+ [out] The array used to store the events or properties.  
   
  `cMax`  
  [in] `rEventProp` 陣列的大小上限。  
   
  `pcEventProp`  
- [out]事件或傳入的屬性數目`rEventProp`。  
+ [out] The number of events or properties returned in `rEventProp`.  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSemantics` 已成功傳回。|  
-|`S_FALSE`|沒有任何事件或列舉的屬性。 在此情況下，`pcEventProp`為零。|  
+|`S_OK`|`EnumMethodSemantics` returned successfully.|  
+|`S_FALSE`|There are no events or properties to enumerate. In that case, `pcEventProp` is zero.|  
   
 ## <a name="remarks"></a>備註  
- 許多 common language runtime 類型定義*屬性*`Changed`事件並`On`*屬性*`Changed`方法與它們的屬性。 例如，<xref:System.Windows.Forms.Control?displayProperty=nameWithType>型別會定義<xref:System.Windows.Forms.Control.Font%2A>屬性，<xref:System.Windows.Forms.Control.FontChanged>事件，和<xref:System.Windows.Forms.Control.OnFontChanged%2A>方法。 Set 存取子方法<xref:System.Windows.Forms.Control.Font%2A>屬性呼叫<xref:System.Windows.Forms.Control.OnFontChanged%2A>方法，進而引發<xref:System.Windows.Forms.Control.FontChanged>事件。 您可以呼叫`EnumMethodSemantics`使用的 MethodDef<xref:System.Windows.Forms.Control.OnFontChanged%2A>來取得參考<xref:System.Windows.Forms.Control.Font%2A>屬性和<xref:System.Windows.Forms.Control.FontChanged>事件。  
+ Many common language runtime types define *Property*`Changed` events and `On`*Property*`Changed` methods related to their properties. For example, the <xref:System.Windows.Forms.Control?displayProperty=nameWithType> type defines a <xref:System.Windows.Forms.Control.Font%2A> property, a <xref:System.Windows.Forms.Control.FontChanged> event, and an <xref:System.Windows.Forms.Control.OnFontChanged%2A> method. The set accessor method of the <xref:System.Windows.Forms.Control.Font%2A> property calls <xref:System.Windows.Forms.Control.OnFontChanged%2A> method, which in turn raises the <xref:System.Windows.Forms.Control.FontChanged> event. You would call `EnumMethodSemantics` using the MethodDef for <xref:System.Windows.Forms.Control.OnFontChanged%2A> to get references to the <xref:System.Windows.Forms.Control.Font%2A> property and the <xref:System.Windows.Forms.Control.FontChanged> event.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

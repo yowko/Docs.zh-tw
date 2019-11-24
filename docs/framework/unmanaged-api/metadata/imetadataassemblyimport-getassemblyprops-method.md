@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0eaa4aa9-9441-444a-920c-e4b2a2db899e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ec04588bd1cc21e585d89c734c152a86fb835b15
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c3c57074ae53e2e1d8d41aa04cb6eb6089db58b5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772728"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449438"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps 方法
-取得具有指定之中繼資料簽章的組件的屬性集。  
+Gets the set of properties for the assembly with the specified metadata signature.  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,41 +43,41 @@ HRESULT GetAssemblyProps (
   
 ## <a name="parameters"></a>參數  
  `mda`  
- [in]. `mdAssembly`表示要為其取得屬性的組件的中繼資料語彙基元。  
+ [in]. The `mdAssembly` metadata token that represents the assembly for which to get the properties.  
   
  `ppbPublicKey`  
- [out]公開金鑰或中繼資料語彙基元的指標。  
+ [out] A pointer to the public key or the metadata token.  
   
  `pcbPublicKey`  
- [out]在傳回的公開金鑰的位元組數目。  
+ [out] The number of bytes in the returned public key.  
   
  `pulHashAlgId`  
- [out]指標，用來雜湊組件中的檔案的演算法。  
+ [out] A pointer to the algorithm used to hash the files in the assembly.  
   
  `szName`  
- [out]組件的簡單名稱。  
+ [out] The simple name of the assembly.  
   
  `cchName`  
- [in]大小，以寬字元為單位的`szName`。  
+ [in] The size, in wide chars, of `szName`.  
   
  `pchName`  
- [out]中實際傳回的寬字元數目`szName`。  
+ [out] The number of wide chars actually returned in `szName`.  
   
  `pMetaData`  
- [out]ASSEMBLYMETADATA 結構，其中包含組件中繼資料指標。  
+ [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
   
  `pdwAssemblyFlags`  
- [out]描述套用至組件的中繼資料的旗標。 這個值是由一或多個組成[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)值。  
+ [out] Flags that describe the metadata applied to an assembly. This value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

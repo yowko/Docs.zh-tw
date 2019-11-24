@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 42145e8d-000f-4d0b-ae43-c08201190fa2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 71a2c7a61d573c1e17d0e8fefcd34d60e05ed3c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b240be3e5b0127de42cea43dd8e89a2cc656b28e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780475"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449521"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName 方法
 列舉具有指定名稱之指定類型的 FieldDef 語彙基元。  
@@ -42,43 +40,43 @@ HRESULT EnumFieldsWithName (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in、 out]列舉值的指標。  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in]其欄位是列舉型別的權杖。  
+ [in] The token of the type whose fields are to be enumerated.  
   
  `szName`  
- [in]列舉的範圍限制欄位名稱。  
+ [in] The field name that limits the scope of the enumeration.  
   
  `rFields`  
- [out]用來儲存 fielddef 語彙基元的陣列。  
+ [out] Array used to store the FieldDef tokens.  
   
  `cMax`  
  [in] `rFields` 陣列的大小上限。  
   
  `pcTokens`  
- [out]中傳回的 fielddef 語彙基元的實際數目`rFields`。  
+ [out] The actual number of FieldDef tokens returned in `rFields`.  
   
 ## <a name="remarks"></a>備註  
- 不同於[imetadataimport:: Enumfields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md)，`EnumFieldsWithName`會捨棄所有不具有指定的名稱的欄位語彙基元。  
+ Unlike [IMetaDataImport::EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` discards all field tokens that do not have the specified name.  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFieldsWithName` 已成功傳回。|  
-|`S_FALSE`|沒有列舉欄位。 在此情況下，`pcTokens`為零。|  
+|`S_OK`|`EnumFieldsWithName` returned successfully.|  
+|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

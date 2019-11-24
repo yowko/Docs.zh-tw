@@ -6,19 +6,17 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], profiling
 - structures [.NET Framework profiling]
 ms.assetid: 750385f2-f365-41b1-939f-ca2f2ff9b466
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 229218cb15963846da91f688b0d2faacb20031c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f3e8cedcc498230311c0b52f7ecc1c2c4fc8ff1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000437"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447690"
 ---
 # <a name="profiling-structures"></a>分析結構
 本節說明分析 API 所使用的 Unmanaged 結構。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [COR_PRF_ASSEMBLY_REFERENCE_INFO 結構](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)  
  提供在執行組件參考結束查核時，所應考量的參考組件相關資訊給通用語言執行平台。  
   

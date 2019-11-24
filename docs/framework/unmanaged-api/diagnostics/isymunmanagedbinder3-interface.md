@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: 37527a84-4b03-4f08-8135-94d898599089
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a6f514cc070a0a38eb09a5387efc8611100765b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e4a415b21e3980e7603319d7acbb3831462fac9e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944101"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449292"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>ISymUnmanagedBinder3 介面
-擴充符號系結器介面。 在執行`ISymUnmanagedBinder`介面的物件`QueryInterface`上呼叫, 以取得此介面。  
+Extends the symbol binder interface. Obtain this interface by calling `QueryInterface` on an object that implements the `ISymUnmanagedBinder` interface.  
   
 > [!IMPORTANT]
-> 從不受信任的來源開啟程式資料庫 (PDB) 檔案會有安全性風險。  
+> It is a security risk to open a program database (PDB) file from an untrusted source.  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetReaderFromCallback 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|可讓使用者透過回呼`IID_IDiaReadExeAtRVACallback`來執行或提供, 或`IID_IDiaReadExeAtOffsetCallback`從記憶體取得 Debug 目錄資訊|  
+|[GetReaderFromCallback 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the Debug directory information from memory|  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl, CorSym。h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedBinder 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)

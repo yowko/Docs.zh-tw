@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Menu Item control type
 - UI Automation, Menu Item control type
 ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
-ms.openlocfilehash: 5b9983dda790fbf501b055ea8e592851e61e1e89
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c65e30ffea64a9b577cfee7535fd92e489bc7632
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039422"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446713"
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>MenuItem 控制項類型的 UI 自動化支援
 
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。
 
 本主題提供 MenuItem 類型的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 支援相關資訊。 其中說明控制項的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 樹狀結構，並提供 MenuItem 類型的必要屬性和控制項模式。
 
-功能表控制項可將命令和事件處理常式的關聯項目以階層方式組織。 在典型的 Microsoft Windows 應用程式中，功能表列會包含數個功能表項目 **（例如 [** 檔案]、[**編輯**] 和 [**視窗]** ），而每個功能表項目都會顯示一個功能表。 功能表又包含一組功能表項目 (例如 [開新檔案]、[開啟舊檔]和 [關閉檔案])，這些項目可展開顯示更多的功能表項目，或在按一下時可執行特定的動作。 功能表項目可裝載於功能表、功能表列或工具列中。
+功能表控制項可將命令和事件處理常式的關聯項目以階層方式組織。 In a typical Microsoft Windows application, a menu bar contains several menu items (such as **File**, **Edit**, and **Window**), and each menu item displays a menu. 功能表又包含一組功能表項目 (例如 [開新檔案]、[開啟舊檔]和 [關閉檔案])，這些項目可展開顯示更多的功能表項目，或在按一下時可執行特定的動作。 功能表項目可裝載於功能表、功能表列或工具列中。
 
 下列章節會定義 MenuItem 類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 無論是 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]需求都適用於所有清單控制項。
 
@@ -32,9 +32,9 @@ ms.locfileid: "73039422"
 
 |控制項檢視|內容檢視|
 |------------------|------------------|
-|MenuItem 的「說明」<br /><br /> <ul><li>功能表 ([說明] 功能表項目的子功能表)<br /><br /> <ul><li>MenuItem 的「說明主題」</li><li>MenuItem 的「關於記事本」</li></ul></li></ul>|MenuItem 的「說明」<br /><br /> -MenuItem "說明主題"<br />-MenuItem 「關於記事本」|
+|MenuItem 的「說明」<br /><br /> <ul><li>功能表 ([說明] 功能表項目的子功能表)<br /><br /> <ul><li>MenuItem 的「說明主題」</li><li>MenuItem 的「關於記事本」</li></ul></li></ul>|MenuItem 的「說明」<br /><br /> -   MenuItem "Help Topics"<br />-   MenuItem "About Notepad"|
 
-在功能表項目控制項的控制項檢視中， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構顯示如上。 請**注意，已包含 [說明**] 功能表項目，以便更清楚地說明一般功能表至子功能表階層中的結構。
+在功能表項目控制項的控制項檢視中， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構顯示如上。 Note that the **Help** menu item is included to better illustrate the structure in a typical menu to submenu hierarchy.
 
 在內容檢視中， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構沒有功能表，因為它並未傳達任何有意義的資訊給使用者。
 
@@ -42,7 +42,7 @@ ms.locfileid: "73039422"
 
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性
 
-下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與功能表項目控制項特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱[用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)。
+下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與功能表項目控制項特別有關。 For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).
 
 |屬性|值|描述|
 |--------------|-----------|-----------------|

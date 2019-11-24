@@ -1,5 +1,5 @@
 ---
-title: 如何：在十六進位字串和數位類型之間轉換- C#程式設計指南
+title: 'How to: Convert Between Hexadecimal Strings and Numeric Types - C# Programming Guide'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: e5013891db827e27b3cda55135fff4ee287cfcb4
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8b72734f9b617fed2ff65977c9a0e60f46424ae8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423139"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429449"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>如何：在十六進位字串和數字類型間轉換 (C# 程式設計手冊)
 這些範例示範如何執行下列工作：  
   
 - 取得[字串](../../language-reference/builtin-types/reference-types.md)中每個字元的十六進位值。  
   
-- 取十六進位字串中對應每個值的 [char](../../language-reference/keywords/char.md)。  
+- 取十六進位字串中對應每個值的 [char](../../language-reference/builtin-types/char.md)。  
   
 - 將十六進位 `string` 轉換成 [int](../../language-reference/builtin-types/integral-numeric-types.md)。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "73423139"
  [!code-csharp[csProgGuideTypes#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#30)]  
   
 ## <a name="example"></a>範例  
- 本例會剖析十六進位值的 `string`，並輸出對應至每個十六進位值的字元。 它會先呼叫 [Split(Char\[\])](xref:System.String.Split(System.Char[])) 方法，取得每個十六進位值，作為陣列中的個別 `string`。 然後它會呼叫 <xref:System.Convert.ToInt32%28System.String%2CSystem.Int32%29>，將十六進位值轉換成以[int](../../language-reference/builtin-types/integral-numeric-types.md)表示的十進位值。它會顯示兩種不同的方式，以取得與該字元碼對應的字元。 第一個技巧使用 <xref:System.Char.ConvertFromUtf32%28System.Int32%29>，傳回對應於整數引數作為 `string` 的字元。 第二個技巧將 `int` 明確轉換成 [char](../../language-reference/keywords/char.md)。  
+ 本例會剖析十六進位值的 `string`，並輸出對應至每個十六進位值的字元。 它會先呼叫 [Split(Char\[\])](xref:System.String.Split(System.Char[])) 方法，取得每個十六進位值，作為陣列中的個別 `string`。 Then it calls <xref:System.Convert.ToInt32%28System.String%2CSystem.Int32%29> to convert the hexadecimal value to a decimal value represented as an [int](../../language-reference/builtin-types/integral-numeric-types.md). It shows two different ways to obtain the character corresponding to that character code. 第一個技巧使用 <xref:System.Char.ConvertFromUtf32%28System.Int32%29>，傳回對應於整數引數作為 `string` 的字元。 第二個技巧將 `int` 明確轉換成 [char](../../language-reference/builtin-types/char.md)。  
   
  [!code-csharp[csProgGuideTypes#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#31)]  
   

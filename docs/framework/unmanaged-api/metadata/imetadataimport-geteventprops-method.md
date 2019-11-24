@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5eaf3b4a-92b7-4d5b-97e0-1e83721e0052
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c87f2212c761dc31a75addabca6970c5497aa2a0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 18fe0c834506d0ac4cd15fd7af4c4f15904b0f81
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782421"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437582"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps 方法
-取得指定的事件語彙基元，包括宣告的型別、 新增和移除方法委派，和任何旗標和其他相關聯的資料所代表的事件的中繼資料資訊。  
+Gets metadata information for the event represented by the specified event token, including the declaring type, the add and remove methods for delegates, and any flags and other associated data.  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,51 +47,51 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>參數  
  `ev`  
- [in]事件中繼資料語彙基元，表示要取得中繼資料的事件。  
+ [in] The event metadata token representing the event to get metadata for.  
   
  `pClass`  
- [out]表示宣告該事件之類別的 TypeDef 語彙基元指標。  
+ [out] A pointer to the TypeDef token representing the class that declares the event.  
   
  `szEvent`  
- [out]所參考的事件名稱`ev`。  
+ [out] The name of the event referenced by `ev`.  
   
  `pchEvent`  
- [in]所要求的長度，寬字元`szEvent`。  
+ [in] The requested length in wide characters of `szEvent`.  
   
  `pdwEventFlags`  
- [out]傳回寬字元的長度`szEvent`。  
+ [out] The returned length in wide characters of `szEvent`.  
   
  `ptkEventType`  
- [out]TypeRef 或 TypeDef 中繼資料語彙基元，代表指標<xref:System.Delegate>事件型別。  
+ [out] A pointer to a TypeRef or TypeDef metadata token representing the <xref:System.Delegate> type of the event.  
   
  `pmdAddOn`  
- [out]表示將事件處理常式方法的中繼資料語彙基元指標。  
+ [out] A pointer to the metadata token representing the method that adds handlers for the event.  
   
  `pmdRemoveOn`  
- [out]表示移除事件處理常式方法的中繼資料語彙基元指標。  
+ [out] A pointer to the metadata token representing the method that removes handlers for the event.  
   
  `pmdFire`  
- [out]表示引發事件的方法中繼資料語彙基元指標。  
+ [out] A pointer to the metadata token representing the method that raises the event.  
   
  `rmdOtherMethod`  
- [out]與事件相關聯的其他方法的語彙基元指標的陣列。  
+ [out] An array of token pointers to other methods associated with the event.  
   
  `cMax`  
  [in] `rmdOtherMethod` 陣列的大小上限。  
   
  `pcOtherMethod`  
- [out]權杖中傳回的數目`rmdOtherMethod`。  
+ [out] The number of tokens returned in `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

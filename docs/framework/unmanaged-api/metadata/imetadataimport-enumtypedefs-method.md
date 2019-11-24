@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 621582536c07b269dd723c9014e23c50e561957a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3854cb4aa3d229c87466c0a35a72447ceb235624
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774609"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450002"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs 方法
 列舉代表目前範圍內的所有類型的 TypeDef 語彙基元。  
@@ -40,37 +38,37 @@ HRESULT EnumTypeDefs (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [out]新的列舉值指標。 首次呼叫這個方法，這必須是 NULL。  
+ [out] A pointer to the new enumerator. This must be NULL for the first call of this method.  
   
  `rTypeDefs`  
- [in]陣列，用來儲存的 TypeDef 語彙基元。  
+ [in] The array used to store the TypeDef tokens.  
   
  `cMax`  
  [in] `rTypeDefs` 陣列的大小上限。  
   
  `pcTypeDefs`  
- [out]中傳回的 TypeDef 語彙基元數目`rTypeDefs`。  
+ [out] The number of TypeDef tokens returned in `rTypeDefs`.  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` 已成功傳回。|  
-|`S_FALSE`|沒有列舉語彙基元。 在此情況下，`pcTypeDefs`為零。|  
+|`S_OK`|`EnumTypeDefs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeDefs` is zero.|  
   
 ## <a name="remarks"></a>備註  
- TypeDef 語彙基元所代表的類型，例如類別或介面，以及透過擴充性機制新增任何型別。  
+ The TypeDef token represents a type such as a class or an interface, as well as any type added via an extensibility mechanism.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

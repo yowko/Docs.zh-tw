@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8027df7c-cfad-4724-bda0-7538d9519070
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6be71878ba354ebe53b4b8b9b40db3222ec828f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1362efbf518310240ce665badc93810d1c0b9b89
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781729"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450196"
 ---
 # <a name="cornativelinkflags-enumeration"></a>CorNativeLinkFlags 列舉
 提供連結器在連結機器碼時所使用的旗標值。  
@@ -38,24 +36,24 @@ typedef enum
 } CorNativeLinkFlags;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`nlfNone`|表示沒有旗標。|  
-|`nlfLastError`|指出`setLastError`關鍵字。|  
-|`nlfNoMangle`|指出`nomangle`關鍵字。|  
+|`nlfNone`|Indicates no flags.|  
+|`nlfLastError`|Indicates a `setLastError` keyword.|  
+|`nlfNoMangle`|Indicates a `nomangle` keyword.|  
 |`nlfMaxValue`|未使用。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

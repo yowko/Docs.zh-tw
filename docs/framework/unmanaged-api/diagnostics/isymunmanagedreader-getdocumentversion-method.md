@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a51f1f64-e084-44c5-830c-2222da5a6bbf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: efe4d28d207625f00634087b862d76c001518c8d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3bc578be680951a1d41c92fb2169c860882b2e31
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777032"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448303"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>ISymUnmanagedReader::GetDocumentVersion 方法
-取得指定的文件的指定的版本。 文件版本從 1 開始，就會遞增每次更新文件時使用[UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)方法。 如果`pbCurrent`參數是`true`，這是最新版本的文件。  
+Gets the specified version of the specified document. The document version starts at 1 and is incremented each time the document is updated using the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method. If the `pbCurrent` parameter is `true`, this is the latest version of the document.  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,20 +36,20 @@ HRESULT GetDocumentVersion (
   
 ## <a name="parameters"></a>參數  
  `pDoc`  
- [in]指定的文件。  
+ [in] The specified document.  
   
  `version`  
- [out]緩衝區的指標，此變數會接收指定的文件的版本。  
+ [out] A pointer to a variable that receives the version of the specified document.  
   
  `pbCurrent`  
- [out]接收變數的指標`true`如果這是最新版本的文件或`false`如果不是最新版本。  
+ [out] A pointer to a variable that receives `true` if this is the latest version of the document, or `false` if it isn't the latest version.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

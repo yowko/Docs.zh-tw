@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc09bad2-fb34-4d13-a521-6ec7b1a1d915
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b669921bf8d27283ba99f4ca1d97b6abc00e15db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94a571a4bc01b805387aebe5a6e23bad0b735313
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776880"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448646"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset 方法
-取得位移與相關聯的行資訊。 如果位移的參數 (`dwOffset`) 不是序列點，這個方法會取得先前的位移與相關聯的行資訊。  
+Gets the line information associated with an offset. If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,29 +39,29 @@ HRESULT GetLineFromOffset(
   
 ## <a name="parameters"></a>參數  
  `dwOffset`  
- [in]A`ULONG32`包含位移。  
+ [in] A `ULONG32` that contains the offset.  
   
  `pline`  
- [out]指標`ULONG32`接收之列。  
+ [out] A pointer to a `ULONG32` that receives the line.  
   
  `pcolumn`  
- [out]指標`ULONG32`接收的資料行。  
+ [out] A pointer to a `ULONG32` that receives the column.  
   
  `pendLine`  
- [out]指標`ULONG32`接收之結尾行。  
+ [out] A pointer to a `ULONG32` that receives the end line.  
   
  `pendColumn`  
- [out]指標`ULONG32`接收端資料行。  
+ [out] A pointer to a `ULONG32` that receives the end column.  
   
  `pdwStartOffset`  
- [out]指標`ULONG32`接收相關聯的序列點。  
+ [out] A pointer to a `ULONG32` that receives the associated sequence point.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymENCUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

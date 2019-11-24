@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 53441f3a-68d2-477c-906e-37c55dfcfb4d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: afa2d35a193a11360b52bcbdc1d9e5dae16d1c90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 66186d25e8fee0d6b25c0a2069d46ff9a104c625
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782121"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450041"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>IMetaDataImport::EnumModuleRefs 方法
 列舉代表已匯入的模組之 ModuleRef 語彙基元。  
@@ -40,34 +38,34 @@ HRESULT EnumModuleRefs (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in、 out]列舉值的指標。 首次呼叫這個方法，這必須是 NULL。  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rModuleRefs`  
- [out]陣列，用來儲存 ModuleRef 語彙基元。  
+ [out] The array used to store the ModuleRef tokens.  
   
  `cMax`  
  [in] `rModuleRefs` 陣列的大小上限。  
   
  `pcModuleRefs`  
- [out]ModuleRef 語彙基元中傳回的數目`rModuleRefs`。  
+ [out] The number of ModuleRef tokens returned in `rModuleRefs`.  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumModuleRefs` 已成功傳回。|  
-|`S_FALSE`|沒有列舉語彙基元。 在此情況下，`pcModuleRefs`為零。|  
+|`S_OK`|`EnumModuleRefs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcModuleRefs` is zero.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

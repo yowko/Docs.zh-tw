@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9a6be861-c260-4a35-acea-3372ea515a0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a03fc24e5ef932d13c0d195f53c703cdd3ff45ff
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17f158167d4075783d1aa594fb61cc9e28d30dd7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776933"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446978"
 ---
 # <a name="importfile2-method"></a>ImportFile2 方法
-匯入元件和解除系結模組。 這個方法就像[ImportFile 方法](importfile-method.md)，但即使匯入的檔案不存在於磁片上，也會運作。  
+Imports assemblies and unbound modules. This method is like [ImportFile Method](importfile-method.md), but works even if the file being imported does not exist on disk.  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,33 +40,33 @@ HRESULT ImportFile2(
   
 ## <a name="parameters"></a>參數  
  `pszFilename`  
- 要匯入之檔案的名稱。  
+ Name of file to be imported.  
   
  `pszTargetName`  
- 選擇性的輸出檔案名，可以在檔案連結至元件時用來重新命名檔案。  
+ Optional output file name that can be used to rename the file as it is linked into the assembly.  
   
  `pAssemblyScopeIn`  
- 選擇性範圍[IMetaDataAssemblyImport 介面](../metadata/imetadataassemblyimport-interface.md)介面。  
+ Optional scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.  
   
  `fSmartImport`  
- 若為 TRUE，則會使用 ImportTypes，否則必須手動執行匯入。  
+ If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
   
  `pImportToken`  
- 接收檔案或元件的識別碼。  
+ Receives the ID for the file or assembly.  
   
  `ppAssemblyScope`  
- 接收[IMetaDataAssemblyImport 介面](../metadata/imetadataassemblyimport-interface.md)介面。 如果檔案不是元件，則為 Null。  
+ Receives the [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. NULL if the file is not an assembly.  
   
  `pdwCountOfScopes`  
- 接收已匯入的檔案和/或範圍的。  
+ Receives the found of files and/or scopes imported.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則傳回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>需求  
- 需要 alink. h。  
+ Requires alink.h.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

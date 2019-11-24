@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f069802a-198f-46dd-9f09-4f77adffc9ba
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a9f6e63a1f24043ac502d139f735cada599df4f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 14b152474cd71dc3ff7b59c94b6ec4fa0cd7ce0c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780675"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439206"
 ---
 # <a name="icorprofilerinfogetfunctionfromip-method"></a>ICorProfilerInfo::GetFunctionFromIP 方法
-對應的 managed 程式碼指令指標`FunctionID`。  
+Maps a managed code instruction pointer to a `FunctionID`.  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,20 +35,20 @@ HRESULT GetFunctionFromIP(
   
 ## <a name="parameters"></a>參數  
  `ip`  
- [in]在 managed 程式碼指令指標。  
+ [in] The instruction pointer in managed code.  
   
  `pFunctionId`  
- [out]傳回的函式識別碼。  
+ [out] The returned function ID.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** CorProf.idl、CorProf.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

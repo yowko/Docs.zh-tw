@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5604d21f-e6b7-490e-b469-42122a7568e1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2bc3e48185c3bc289a4f7bfd865f69d9c06a720c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c2eb7d0dc04d813b1ce91fb1acf4b171f244592
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750505"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445756"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage 方法
-通知分析工具處理序已收到的遠端方法叫用或啟用要求。  
+Notifies the profiler that the process has received a remote method invocation or activation request.  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,31 +35,31 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>參數  
  `pCookie`  
- [in]值，這個值會對應中提供的價值[icorprofilercallback:: Remotingclientsendingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)在這些情況下：  
+ [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) under these conditions:  
   
-- 遠端處理 GUID cookie 在作用中。  
+- Remoting GUID cookies are active.  
   
-- 成功的訊息傳輸通道。  
+- The channel succeeds in transmitting the message.  
   
-- GUID cookie 上為作用中的用戶端程序。  
+- GUID cookies are active on the client-side process.  
   
- 這可讓您輕易地配對的遠端呼叫，以及建立的邏輯呼叫堆疊。  
+ This allows easy pairing of remoting calls and the creation of a logical call stack.  
   
  `fIsAsync`  
- [in]值是`true`的呼叫是非同步，否則如果`false`。  
+ [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
   
 ## <a name="remarks"></a>備註  
- 如果是非同步的訊息要求，要求可以處理任何任意的執行緒。  
+ If the message request is asynchronous, the request can be serviced by any arbitrary thread.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** CorProf.idl、CorProf.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

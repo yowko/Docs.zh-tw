@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c090153-fd5f-46c7-9cff-39a78d992c8f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e4be840760782789aa91e5519f60374aca2e3941
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae682c354a7a5188611b103008a3e18f8d821260
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775259"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431937"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>IMetaDataAssemblyEmit::SetExportedTypeProps 方法
 修改指定的 `ExportedType` 中繼資料結構。  
@@ -40,29 +38,29 @@ HRESULT SetExportedTypeProps (
   
 ## <a name="parameters"></a>參數  
  `ct`  
- [in]指定中繼資料語彙基元`ExportedType`要修改的中繼資料結構。  
+ [in] The metadata token that specifies the `ExportedType` metadata structure to be modified.  
   
  `tkImplementation`  
- [in]型別的語彙基元`File`， `AssemblyRef`，或`ExportedType`，指定此類型的實作方式。  
+ [in] The token, of type `File`, `AssemblyRef`, or `ExportedType`, that specifies how this type is implemented.  
   
  `tkTypeDef`  
- [in]`TypeDef`程式碼檔案中參考的語彙基元。  
+ [in] The `TypeDef` token referenced in the code file.  
   
  `dwExportedTypeFlags`  
- [in]指定之型別的屬性值的位元組合。  
+ [in] A bitwise combination of values that specify attributes of the type.  
   
 ## <a name="remarks"></a>備註  
- 若要建立`ExportedType`中繼資料結構，使用[imetadataassemblyemit:: Defineexportedtype](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)方法。  
+ To create an `ExportedType` metadata structure, use the [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) method.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

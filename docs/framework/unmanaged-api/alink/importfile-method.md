@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: bcbe321f-b83a-4e9a-9f10-8d913e244dc9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7fee7a91de99e2db69609cbc7c73e22d85d045f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cda6d90865f8ad2b9d565f6a6378c35b03c65bf7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777068"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446987"
 ---
 # <a name="importfile-method"></a>ImportFile 方法
-匯入元件和解除系結模組。  
+Imports assemblies and unbound modules.  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,30 +39,30 @@ HRESULT ImportFile(
   
 ## <a name="parameters"></a>參數  
  `pszFilename`  
- 要匯入之檔案的完整名稱。  
+ Fully qualified name of file to be imported.  
   
  `pszTargetName`  
- 選擇性的輸出檔案名，可以在檔案連結至元件時用來重新命名檔案。  
+ Optional output file name that can be used to rename the file as it is linked into the assembly.  
   
  `fSmartImport`  
- 若為 TRUE，則會使用 ImportTypes，否則必須手動執行匯入。  
+ If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
   
  `pImportToken`  
- 標記的指標，其中將儲存唯一的檔案識別碼。 檔案可以是元件或檔案。  
+ Pointer to token where a unique file ID will be stored. The file can be an assembly or a file.  
   
  `ppAssemblyScope`  
- 接收[IMetaDataAssemblyImport 介面](../metadata/imetadataassemblyimport-interface.md)的指標。 如果檔案不是元件，則可以是 Null。  
+ Receives pointer to [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md). Can be NULL if the file is not an assembly.  
   
  `pdwCountOfScopes`  
- 已匯入之檔案和/或範圍計數的指標。  
+ Pointer to the count of files and/or scopes that have been imported.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則傳回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>需求  
- 需要 alink. h  
+ Requires alink.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

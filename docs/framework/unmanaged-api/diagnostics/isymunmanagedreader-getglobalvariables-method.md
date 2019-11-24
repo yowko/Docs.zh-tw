@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2dd5098-3e58-4be5-b7a2-e4160b3b505a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3de246c8b9c4387ea782b77f16edfbe792bb4427
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b6cf7293f1d65db1f60301f49ce655c74df3daca
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777021"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448325"
 ---
 # <a name="isymunmanagedreadergetglobalvariables-method"></a>ISymUnmanagedReader::GetGlobalVariables 方法
-傳回所有全域變數。  
+Returns all global variables.  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,20 +37,20 @@ HRESULT GetGlobalVariables(
   
 ## <a name="parameters"></a>參數  
  `cVars`  
- [in]所指向緩衝區的長度`pcVars`。  
+ [in] The length of the buffer pointed to by `pcVars`.  
   
  `pcVars`  
- [out]指標`ULONG32`接收含有變數所需的緩衝區大小。  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the variables.  
   
  `pVars`  
- [out]這種緩衝區包含的變數。  
+ [out] A buffer that contains the variables.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58ac8202-854d-4efd-acfb-d2da8b446e12
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5fb70d530af24798636972de0a4d6280dbcb8f1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d49a146a465210cea8466a75666ca3f800b090b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781633"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450136"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr 列舉
 包含值，這些值描述屬性的中繼資料。  
@@ -40,23 +38,23 @@ typedef enum CorPropertyAttr {
 } CorPropertyAttr;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`prSpecialName`|指定屬性是特殊的且其名稱描述方式。|  
-|`prReservedMask`|保留供內部使用的 common language runtime。|  
-|`prRTSpecialName`|指定 common language runtime 中繼資料內部 Api 應該檢查屬性名稱的編碼方式。|  
-|`prHasDefault`|指定屬性具有預設值。|  
+|`prSpecialName`|Specifies that the property is special, and that its name describes how.|  
+|`prReservedMask`|Reserved for internal use by the common language runtime.|  
+|`prRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the property name.|  
+|`prHasDefault`|Specifies that the property has a default value.|  
 |`prUnused`|未使用。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

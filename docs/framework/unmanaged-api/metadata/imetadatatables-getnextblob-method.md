@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 017c8ab4-4c09-4754-9935-5b0b49cabecb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b1e7181f50d94fa417bf9d00c3531747cefca82c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 145fdde302e7e942ea77049b3faeabf60894dd94
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781481"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448404"
 ---
 # <a name="imetadatatablesgetnextblob-method"></a>IMetaDataTables::GetNextBlob 方法
-取得資料表中的下一個二進位大型物件 (BLOB) 的索引。  
+Gets the index of the next binary large object (BLOB) in the table.  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,21 +36,21 @@ HRESULT GetNextBlob (
   
 ## <a name="parameters"></a>參數  
  `ixBlob`  
- [in]索引，傳回的資料行的 Blob。  
+ [in] The index, as returned from a column of BLOBs.  
   
  `pNext`  
- [out]索引的下一個 BLOB 的指標。  
+ [out] A pointer to the index of the next BLOB.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

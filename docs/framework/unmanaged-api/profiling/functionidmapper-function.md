@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: b8205b60-1893-4303-8cff-7ac5a00892aa
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9dee1404a8da63208bba7b7529b16eabbee3254
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 23c6f0a29160b6e1dc194cf360c07374c565522b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745771"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440698"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper 函式
-通知分析工具的函式指定的識別項可能會重新對應至替代識別碼，以用於[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)， [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)，和[FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)該函式的回呼。 `FunctionIDMapper` 也可讓分析工具指出它是否要接收該函式的回呼。  
+Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), and [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) callbacks for that function. `FunctionIDMapper` 也可讓分析工具指出它是否要接收該函式的回呼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,30 +38,30 @@ UINT_PTR __stdcall FunctionIDMapper (
  [in] 要重新對應的函式識別項。  
   
  `pbHookFunction`  
- [out]分析工具設定為值的指標`true`想要收到`FunctionEnter2`， `FunctionLeave2`，以及`FunctionTailcall2`回呼; 否則它將此值設定為`false`。  
+ [out] A pointer to a value that the profiler sets to `true` if it wants to receive `FunctionEnter2`, `FunctionLeave2`, and `FunctionTailcall2` callbacks; otherwise, it sets this value to `false`.  
   
 ## <a name="return-value"></a>傳回值  
- 分析工具會傳回一個值，執行引擎會使用該值做為替代函式識別項。 傳回值不可為 null，除非 `false` 傳回在 `pbHookFunction` 中。 否則，傳回的 null 值會產生無法預期的結果，包括可能暫止處理程序。  
+ 分析工具會傳回一個值，執行引擎會使用該值做為替代函式識別項。 傳回值不可為 null，除非 `false` 傳回在 `pbHookFunction` 中。 Otherwise, a null return value will produce unpredictable results, including possibly halting the process.  
   
 ## <a name="remarks"></a>備註  
- `FunctionIDMapper`函式是回呼。 它被藉由分析工具重新對應至某些其他識別碼，比較適合進行程式碼剖析工具的函式識別碼。 `FunctionIDMapper`傳回要用於任何指定的函式的替代識別碼。 執行引擎再接受分析工具的要求，藉由將這個替代識別碼，除了傳統的函式識別碼傳遞回中的分析工具`clientData`的參數`FunctionEnter2`， `FunctionLeave2`，和`FunctionTailcall2`攔截程序，來識別正在呼叫攔截函式。  
+ The `FunctionIDMapper` function is a callback. It is implemented by the profiler to remap a function ID to some other identifier that is more useful for the profiler. The `FunctionIDMapper` returns the alternate ID to be used for any given function. The execution engine then honors the profiler's request by passing this alternate ID, in addition to the traditional function ID, back to the profiler in the `clientData` parameter of the `FunctionEnter2`, `FunctionLeave2`, and `FunctionTailcall2` hooks, to identify the function for which the hook is being called.  
   
- 您可以使用[icorprofilerinfo:: Setfunctionidmapper](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)方法，以指定的實作`FunctionIDMapper`函式。 您可以呼叫`ICorProfilerInfo::SetFunctionIDMapper`方法，一次，我們建議，請在[icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)回呼。  
+ You can use the [ICorProfilerInfo::SetFunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md) method to specify the implementation of the `FunctionIDMapper` function. You can call the `ICorProfilerInfo::SetFunctionIDMapper` method only once, and we recommend that you do so in the [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.  
   
- 根據預設，它會假設，分析工具，設定 COR_PRF_MONITOR_ENTERLEAVE 旗標使用[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)，並可設定攔截程序透過[icorprofilerinfo:: Setenterleavefunctionhooks](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setenterleavefunctionhooks-method.md)或是[ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)，應該會收到`FunctionEnter2`， `FunctionLeave2`，和`FunctionTailcall2`每個函式的回呼。 不過，實作程式碼剖析工具可能`FunctionIDMapper`若要選擇性地避免 針對特定收到這些回呼函式藉由設定`pbHookFunction`至`false`。  
+ By default, it is assumed that a profiler that sets the COR_PRF_MONITOR_ENTERLEAVE flag by using [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md), and which sets hooks via [ICorProfilerInfo::SetEnterLeaveFunctionHooks](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setenterleavefunctionhooks-method.md) or [ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md), should receive the `FunctionEnter2`, `FunctionLeave2`, and `FunctionTailcall2` callbacks for every function. However, profilers may implement `FunctionIDMapper` to selectively avoid receiving these callbacks for certain functions by setting `pbHookFunction` to `false`.  
   
- 程式碼剖析工具應該容許多執行緒的分析的應用程式會呼叫同時相同的方法/函式的情況。 在這種情況下，分析工具可能會收到多個`FunctionIDMapper`相同的回呼`FunctionID`。 分析工具應該先確定要從此回呼傳回相同的值，多次呼叫相同時`FunctionID`。  
+ Profilers should be tolerant of cases where multiple threads of a profiled application are calling the same method/function simultaneously. In such cases, the profiler may receive multiple `FunctionIDMapper` callbacks for the same `FunctionID`. The profiler should be certain to return the same values from this callback when it is called multiple times with the same `FunctionID`.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl  
+ **Header:** CorProf.idl  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [SetFunctionIDMapper 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)
 - [FunctionIDMapper2 函式](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md)

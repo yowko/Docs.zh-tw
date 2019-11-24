@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0c88c12646a13e5a24f2475bd2db04c8c831141c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a76a7a2d4ad68e367e38e175377aff40ce399346
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781759"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450203"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl 列舉
 包含值，這些值描述方法實作功能。  
@@ -54,34 +52,34 @@ typedef enum CorMethodImpl {
 } CorMethodImpl;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`miCodeTypeMask`|描述程式碼類型的旗標。|  
-|`miIL`|指定方法實作是 Microsoft intermediate language (MSIL)。|  
+|`miCodeTypeMask`|Flags that describe code type.|  
+|`miIL`|Specifies that the method implementation is Microsoft intermediate language (MSIL).|  
 |`miNative`|指定方法實作為原生。|  
-|`miOPTIL`|指定方法實作為 OPTIL。|  
-|`miRuntime`|指定方法實作由通用語言執行平台。|  
-|`miManagedMask`|表示程式碼是否為 managed 或 unmanaged 的旗標。|  
-|`miUnmanaged`|指定方法實作為非受控。|  
-|`miManaged`|指定方法實作管理。|  
-|`miForwardRef`|指定已定義的方法。 這個旗標時，可使用主要合併。|  
-|`miPreserveSig`|指定方法簽章不會受損 HRESULT 轉換。|  
-|`miInternalCall`|保留供內部使用的 common language runtime。|  
-|`miSynchronized`|指定的方法是單一執行緒，透過其主體。|  
+|`miOPTIL`|Specifies that the method implementation is OPTIL.|  
+|`miRuntime`|Specifies that the method implementation is provided by the common language runtime.|  
+|`miManagedMask`|Flags that indicate whether the code is managed or unmanaged.|  
+|`miUnmanaged`|Specifies that the method implementation is unmanaged.|  
+|`miManaged`|Specifies that the method implementation is managed.|  
+|`miForwardRef`|Specifies that the method is defined. This flag is used primarily in merge scenarios.|  
+|`miPreserveSig`|Specifies that the method signature cannot be mangled for an HRESULT conversion.|  
+|`miInternalCall`|Reserved for internal use by the common language runtime.|  
+|`miSynchronized`|Specifies that the method is single-threaded through its body.|  
 |`miNoInlining`|指定方法無法內嵌。|  
-|`miAggressiveInlining`|指定方法應內嵌的話。|  
-|`miNoOptimization`|指定未最佳化的方法。|  
-|`miMaxMethodImplVal`|最大有效值`CorMethodImpl`。|  
+|`miAggressiveInlining`|Specifies that the method should be inlined if possible.|  
+|`miNoOptimization`|Specifies that the method should not be optimized.|  
+|`miMaxMethodImplVal`|The maximum valid value for a `CorMethodImpl`.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

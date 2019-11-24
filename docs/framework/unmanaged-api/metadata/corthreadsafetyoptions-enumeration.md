@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: dae07d9b-df51-488c-b17e-52d6e48217bd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d71d2a5b3007d4e877900443af426a9643b29125
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93dd8c56176890d04d792f3c336492e4f232825b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045223"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442463"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions 列舉
 
@@ -37,22 +35,22 @@ typedef enum CorThreadSafetyOptions {
 } CorThreadSafetyOptions;
 ```
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 |成員|描述|
 |------------|-----------------|
-|`MDThreadSafetyDefault`|預設值。 與 `MDThreadSafetyOff` 相同。|
-|`MDThreadSafetyOff`|表示不能設定的讀取器/寫入器鎖定。|
-|`MDThreadSafetyOn`|表示，您可以設定的讀取器/寫入器鎖定。|
+|`MDThreadSafetyDefault`|Default value. 與 `MDThreadSafetyOff` 相同。|
+|`MDThreadSafetyOff`|Indicates that a reader/writer lock cannot be set.|
+|`MDThreadSafetyOn`|Indicates that a reader/writer lock can be set.|
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**標頭：** CorHdr.h
+**Header:** CorHdr.h
 
-**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

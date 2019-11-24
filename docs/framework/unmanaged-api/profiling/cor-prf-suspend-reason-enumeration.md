@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 75594833-bed3-47b2-a426-b75c5fe6fbcf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e084bc957eca9474078ed5ca3aef0276361dbe1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d2d9ca77e764fe439753f1174a42af5ef80faa59
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745534"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447714"
 ---
-# <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON 列舉
-表示執行階段已暫止的原因。  
+# <a name="cor_prf_suspend_reason-enumeration"></a>COR_PRF_SUSPEND_REASON 列舉
+Indicates the reason that the runtime is suspended.  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,31 +38,31 @@ typedef enum {
 } COR_PRF_SUSPEND_REASON;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
 |成員|描述|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_SUSPEND_OTHER`|執行階段會暫停，未指定原因。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|執行階段暫止記憶體回收集合要求。<br /><br /> 之間發生的記憶體回收相關集合回呼[icorprofilercallback:: Runtimesuspendfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)並[icorprofilercallback:: Runtimeresumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)回呼。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|執行階段會暫停，讓`AppDomain`可以關機。<br /><br /> 執行階段暫停期間，執行階段會判斷哪一個執行緒都會在`AppDomain`也就是正在關閉，並將它們設定成在恢復時中止。 有沒有`AppDomain`-在這個暫止期間的特定回呼。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|執行階段會暫停，以便推銷程式碼進行。<br /><br /> 推銷程式碼都能彼此吻合僅當在 just-in-time (JIT) 編譯器在作用中與啟用推銷程式碼。 程式碼之間發生的推銷回呼`ICorProfilerCallback::RuntimeSuspendFinished`和`ICorProfilerCallback::RuntimeResumeStarted`回呼。 **注意：** 所以此值不用於 2.0 CLR JIT 不在.NET Framework 2.0 版中，講述函式。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|執行階段會暫停，讓它可以關閉。 它必須暫止所有執行緒完成作業。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|執行階段會暫停進行同處理序偵錯。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|執行階段會暫停以準備進行記憶體回收。|  
-|`COR_PRF_SUSPEND_FOR_REJIT`|執行階段會暫停進行 JIT 重新編譯。|  
+|`COR_PRF_FIELD_SUSPEND_OTHER`|The runtime is suspended for an unspecified reason.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|The runtime is suspended to service a garbage collection request.<br /><br /> The garbage collection-related callbacks occur between the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) and [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callbacks.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|The runtime is suspended so that an `AppDomain` can be shut down.<br /><br /> While the runtime is suspended, the runtime will determine which threads are in the `AppDomain` that is being shut down and set them to abort when they resume. There are no `AppDomain`-specific callbacks during this suspension.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|The runtime is suspended so that code pitching can occur.<br /><br /> Code pitching ensues only when the just-in-time (JIT) compiler is active with code pitching enabled. Code pitching callbacks occur between the `ICorProfilerCallback::RuntimeSuspendFinished` and `ICorProfilerCallback::RuntimeResumeStarted` callbacks. **Note:**  The CLR JIT does not pitch functions in the .NET Framework version 2.0, so this value is not used in 2.0.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|The runtime is suspended so that it can shut down. It must suspend all threads to complete the operation.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|The runtime is suspended for in-process debugging.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|The runtime is suspended to prepare for a garbage collection.|  
+|`COR_PRF_SUSPEND_FOR_REJIT`|The runtime is suspended for JIT recompilation.|  
   
 ## <a name="remarks"></a>備註  
- 允許未受管理的程式碼中的所有執行階段執行緒繼續執行，直到嘗試重新進入執行階段，此時它們也會擱置直到執行階段繼續。 這也適用於新的執行緒進入執行階段。 在執行階段內的所有執行緒都在可中斷的程式碼，也就是如果立即暫止，或要求暫止執行到可中斷的程式碼。  
+ All runtime threads that are in unmanaged code are permitted to continue running until they try to re-enter the runtime, at which point they will also be suspended until the runtime resumes. This also applies to new threads that enter the runtime. All threads within the runtime are either suspended immediately if they are in interruptible code, or asked to suspend when they do reach interruptible code.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** CorProf.idl、CorProf.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

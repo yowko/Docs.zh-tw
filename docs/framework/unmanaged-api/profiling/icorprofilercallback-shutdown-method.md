@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ea194f0-a331-4855-a2ce-37393b8e5f84
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d63dd911a5f674a3ce0b02ec78de443c7aebf84
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63e41df8af85d94df068526ef69708687b341e78
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747167"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446938"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown 方法
-通知應用程式正在關閉分析工具。  
+Notifies the profiler that the application is shutting down.  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,22 +32,22 @@ HRESULT Shutdown();
 ```  
   
 ## <a name="remarks"></a>備註  
- 分析工具程式碼無法安全地呼叫方法[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)介面之後`Shutdown`呼叫方法。 呼叫任何`ICorProfilerInfo`方法會導致未定義的行為之後,`Shutdown`方法會傳回。 特定的不可變事件仍然可能發生之後關機;分析工具應該謹慎地發生這種情況時，立即傳回。  
+ The profiler code cannot safely call methods of the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface after the `Shutdown` method is called. Any calls to `ICorProfilerInfo` methods result in undefined behavior after the `Shutdown` method returns. Certain immutable events may still occur after shutdown; the profiler should take care to return immediately when this occurs.  
   
- `Shutdown`正在分析 managed 應用程式啟動為 managed 程式碼時，才會呼叫方法 （也就是初始堆疊上的框架處理程序管理）。 如果應用程式啟動為 unmanaged 程式碼，但稍後開始運用 managed 程式碼，藉此建立的執行個體的 common language runtime (CLR)，然後`Shutdown`將不會呼叫。 在這些情況下，分析工具應該在其文件庫中包含`DllMain`釋放任何資源，並執行清除其資料，例如排清到磁碟等的追蹤處理常式，它會使用 DLL_PROCESS_DETACH 值。  
+ The `Shutdown` method will be called only if the managed application that is being profiled started as managed code (that is, the initial frame on the process stack is managed). If the application started as unmanaged code but later jumped into managed code, thereby creating an instance of the common language runtime (CLR), then `Shutdown` will not be called. For these cases, the profiler should include in its library a `DllMain` routine that uses the DLL_PROCESS_DETACH value to free any resources and perform clean-up processing of its data, such as flushing traces to disk and so on.  
   
- 一般情況下，分析工具必須應付非預期的關機。 比方說，可能會停止處理程序的 Win32 的`TerminateProcess`（Winbase.h 中宣告） 的方法。 在其他情況下，CLR 將會中止特定 managed 的執行緒 （背景執行緒），而不進行有條理的解構郵件傳遞它們。  
+ In general, the profiler must cope with unexpected shutdowns. For example, a process might be halted by Win32's `TerminateProcess` method (declared in Winbase.h). In other cases, the CLR will halt certain managed threads (background threads) without delivering orderly destruction messages for them.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** CorProf.idl、CorProf.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [Initialize 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)

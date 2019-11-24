@@ -5,16 +5,16 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 6cbf31c8a1cdf6e853e56445d22f4a7513bd1859
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c59352f908c5f4a1fd2ca6dd631d26bb5d69f09a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042001"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441219"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>標準控制項的 UI 自動化支援
 > [!NOTE]
-> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主題將說明針對 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]和 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]架構所開發的應用程式中，其標準控制項的 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 支援。  
   
@@ -41,10 +41,10 @@ ms.locfileid: "71042001"
 |按鈕|核取方塊|  
 |ComboBoxEx32|ComboBox|  
 |ComboBox|ComboBox|  
-|編輯|文件|  
-|編輯|編輯|  
+|Edit|文件|  
+|Edit|Edit|  
 |SysLink|超連結|  
-|Static|文字|  
+|Static|Text|  
 |Static|Image|  
 |SysIPAddress32|自訂|  
 |SysHeader32|Header/HeaderItem|  
@@ -73,11 +73,11 @@ ms.locfileid: "71042001"
 |ToolbarWindow32|Separator|  
 |tooltips_class32|ToolTip|  
 |#32774|ToolTip|  
-|ReBarWindow32|工具列|  
+|ReBarWindow32|ToolBar|  
 |SysTreeView32|樹狀結構|  
 |SysTreeView32|TreeItem|  
   
- **注意** 只有隨附於 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] 的版本 (在 RichEd20.dll 3.1 版 (含) 以後版本以及 MsftEdit.dll 4.1 版 (含) 以後版本) 才支援 RichEdit 控制項。  
+ **Note** The RichEdit control is supported only for versions shipped with Windows Vista (in RichEd20.dll version 3.1 and later, and MsftEdit.dll version 4.1 and later).  
   
  不支援的控制項如下。  
   
@@ -94,9 +94,9 @@ ms.locfileid: "71042001"
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Windows Form 控制項  
- Windows Forms 控制項會透過 uiautomationclientsideproviders.dll [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]中的用戶端提供者公開至。 此組件會自動註冊為用於使用者介面自動化用戶端應用程式。  
+ Windows Forms controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] through client-side providers in UIAutomationClientsideProviders.dll. 此組件會自動註冊為用於使用者介面自動化用戶端應用程式。  
   
- 一般來說， [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支援通用控制項的 managed 包裝函式 Windows Forms 控制項。 支援的控制項如下。  
+ Typically, Windows Forms controls that are managed wrappers for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] common controls are supported by [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. 支援的控制項如下。  
   
 |類別名稱|  
 |----------------|  
@@ -136,7 +136,7 @@ ms.locfileid: "71042001"
 |VscrollBar|  
 |Web 瀏覽器|  
   
- 下列控制項只會透過其[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] Microsoft Active Accessibility 的支援來公開。 部分功能可能無法使用。  
+ The following controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] only through their support for Microsoft Active Accessibility. 部分功能可能無法使用。  
   
 |控制項名稱|  
 |------------------|  
@@ -167,6 +167,6 @@ ms.locfileid: "71042001"
 |RaftingContainer|  
 |StatusStrip|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [UI 自動化控制項類型](ui-automation-control-types.md)

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1edd1670-976a-4fc8-bef7-7c41e60ad989
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7a7859bd890a2ecc10b5117f697ff8b06ad569f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 411fad0accb59431f776c5bd66e8bd3027ddd907
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781693"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450154"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement 列舉
-指定權杖的重新對應發生時將中繼資料 API 用戶端傳送的通知。  
+Specifies the notifications that will be sent to the metadata API client when a token remap occurs.  
   
 ## <a name="syntax"></a>語法  
   
@@ -61,44 +59,44 @@ typedef enum CorNotificationForTokenMovement {
 } CorNotificationForTokenMovement;  
 ```  
   
-## <a name="members"></a>成員  
+## <a name="members"></a>Members  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`MDNotifyDefault`|時通知我`mdTypeRef`， `mdMethodDef`， `mdMemberRef`，或`mdFieldDef`語彙基元移動。|  
-|`MDNotifyAll`|語彙基元移動時，就會通知。|  
-|`MDNotifyNone`|不通知語彙基元移動時。|  
-|`MDNotifyMethodDef`|通知時機`mdMethodDef`k 的移動。|  
-|`MDNotifyMemberRef`|通知時機`mdMemberRef`k 的移動。|  
-|`MDNotifyFieldDef`|通知時機`mdFieldDef`k 的移動。|  
-|`MDNotifyTypeRef`|通知時機`mdTypeRef`k 的移動。|  
-|`MDNotifyTypeDef`|通知時機`mdTypeDef`k 的移動。|  
-|`MDNotifyParamDef`|通知時機`mdParamDef`k 的移動。|  
-|`MDNotifyInterfaceImpl`|通知時機`mdInterfaceImpl`k 的移動。|  
-|`MDNotifyProperty`|通知時機`mdProperty`k 的移動。|  
-|`MDNotifyEvent`|通知時機`mdEvent`k 的移動。|  
-|`MDNotifySignature`|通知時機`mdSignature`k 的移動。|  
-|`MDNotifyTypeSpec`|通知時機`mdTypeSpec`k 的移動。|  
-|`MDNotifyCustomAttribute`|通知時機`mdCustomAttribute`k 的移動。|  
-|`MDNotifySecurityValue`|通知時機`mdSecurityValue`k 的移動。|  
-|`MDNotifyPermission`|通知時機`mdPermission`k 的移動。|  
-|`MDNotifyModuleRef`|通知時機`mdModuleRef`k 的移動。|  
-|`MDNotifyNameSpace`|通知時機`mdNameSpace`k 的移動。|  
-|`MDNotifyAssemblyRef`|通知時機`mdAssemblyRef`k 的移動。|  
-|`MDNotifyFile`|通知時機`mdFile`k 的移動。|  
-|`MDNotifyExportedType`|通知時機`mdExportedType`k 的移動。|  
-|`MDNotifyResource`|通知時機`mdManifestResource`k 的移動。|  
+|`MDNotifyDefault`|Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.|  
+|`MDNotifyAll`|Notify when any token moves.|  
+|`MDNotifyNone`|Do not notify when tokens move.|  
+|`MDNotifyMethodDef`|Notify when an `mdMethodDef` token moves.|  
+|`MDNotifyMemberRef`|Notify when an `mdMemberRef` token moves.|  
+|`MDNotifyFieldDef`|Notify when an `mdFieldDef` token moves.|  
+|`MDNotifyTypeRef`|Notify when an `mdTypeRef` token moves.|  
+|`MDNotifyTypeDef`|Notify when an `mdTypeDef` token moves.|  
+|`MDNotifyParamDef`|Notify when an `mdParamDef` token moves.|  
+|`MDNotifyInterfaceImpl`|Notify when an `mdInterfaceImpl` token moves.|  
+|`MDNotifyProperty`|Notify when an `mdProperty` token moves.|  
+|`MDNotifyEvent`|Notify when an `mdEvent` token moves.|  
+|`MDNotifySignature`|Notify when an `mdSignature` token moves.|  
+|`MDNotifyTypeSpec`|Notify when an `mdTypeSpec` token moves.|  
+|`MDNotifyCustomAttribute`|Notify when an `mdCustomAttribute` token moves.|  
+|`MDNotifySecurityValue`|Notify when an `mdSecurityValue` token moves.|  
+|`MDNotifyPermission`|Notify when an `mdPermission` token moves.|  
+|`MDNotifyModuleRef`|Notify when an `mdModuleRef` token moves.|  
+|`MDNotifyNameSpace`|Notify when an `mdNameSpace` token moves.|  
+|`MDNotifyAssemblyRef`|Notify when an `mdAssemblyRef` token moves.|  
+|`MDNotifyFile`|Notify when an `mdFile` token moves.|  
+|`MDNotifyExportedType`|Notify when an `mdExportedType` token moves.|  
+|`MDNotifyResource`|Notify when an `mdManifestResource` token moves.|  
   
 ## <a name="remarks"></a>備註  
- 語彙基元可能會重新對應 （也就是指移動） 期間的中繼資料合併。  
+ A token may be re-mapped (that is, moved) during a metadata merge.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

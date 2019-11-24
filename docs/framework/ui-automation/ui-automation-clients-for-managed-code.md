@@ -7,20 +7,20 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: 578a6da0f1545012d5a77edc3db04d52f56180bc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6b71b620c5e41a6d16ca11370010c8353cdbd6c8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042503"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448800"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>Managed 程式碼的 UI 自動化用戶端
 > [!NOTE]
-> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本章節包含概觀和使用說明主題，可協助您開發使用者介面自動化用戶端。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [UI 自動化和畫面縮放比例](ui-automation-and-screen-scaling.md)  
  [標準控制項的 UI 自動化支援](ui-automation-support-for-standard-controls.md)  
  [用戶端的 UI 自動化事件](ui-automation-events-for-clients.md)  
@@ -30,7 +30,7 @@ ms.locfileid: "71042503"
  [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)  
  [取得 UI 自動化項目](obtaining-ui-automation-elements.md)  
  [UI 自動化執行緒問題](ui-automation-threading-issues.md)  
- [HOW-TO 主題](ui-automation-clients-for-managed-code-how-to-topics.md)  
+ [「如何」主題](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Automation>

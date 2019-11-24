@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e2a06ee4-b8ee-49c7-935a-c1031a29eef2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: febf952dbfd80a37017cb165aec4a6b207052d1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 277e2584049fae397cf91281a65d05b0b49d9454
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745952"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448085"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen 方法
-取得指定的區段長度。  
+Gets the length of the specified section.  
   
- 這個方法已經過時，不應使用。  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,23 +38,23 @@ HRESULT GetSectionDataLen (
   
 ## <a name="parameters"></a>參數  
  `section`  
- [in][資料] 區段將擷取其長度的情況下。  
+ [in] The data section whose length will be retrieved.  
   
  `dataLen`  
- [out]指定的區段傳回的長度。  
+ [out] The returned length of the specified section.  
   
 ## <a name="remarks"></a>備註  
- 呼叫`GetSectionDataLen`只有當您有未處理的其他方法的特殊區段需求。  
+ Call `GetSectionDataLen` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

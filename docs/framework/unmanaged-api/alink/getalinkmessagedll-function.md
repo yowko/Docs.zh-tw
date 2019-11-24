@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 67985a22-88a2-4c54-8d99-4bcde9d6213e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 323e53c45a26d5703548ebe9863978f6d3929f0b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 63719d0c6e13768e9dc7ed80e52e2a293e32a8a1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787472"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449351"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll 函式
-尋找並載入訊息 DLL。 如果無法找到或載入訊息 DLL，則傳回0。 訊息 DLL 應位於名稱為語言識別項的子目錄中，或在目前的目錄中。  
+Finds and loads the message DLL. Returns 0 if the message DLL could not be located or loaded. The message DLL should be either in a subdirectory whose name is a language ID, or in the current directory.  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,10 +32,10 @@ HINSTANCE WINAPI GetALinkMessageDll();
 ```  
   
 ## <a name="requirements"></a>需求  
- **標頭：** alink。h  
+ **Header:** alink.h  
   
- 連結**庫**： alink .dll  
+ **Library**: alink.dll  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Al.exe (組件連結器)](../../tools/al-exe-assembly-linker.md)

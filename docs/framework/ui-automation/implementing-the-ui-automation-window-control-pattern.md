@@ -6,20 +6,20 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: ad2f84fbde512bb99b213bf3b97f2190091d8576
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d8afaa13bd4eca9f9fcd4c8ed26c09c62ad74931
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042995"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447026"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>實作 UI 自動化 Window 控制項模式
 > [!NOTE]
-> 這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主題簡介實作 <xref:System.Windows.Automation.Provider.IWindowProvider>的方針和慣例，包括 <xref:System.Windows.Automation.WindowPattern> 屬性、方法和事件的相關資訊。 其他參考的連結列於主題的結尾。  
   
- <xref:System.Windows.Automation.WindowPattern>控制項模式是用來支援在傳統圖形化使用者介面（GUI）內提供基本以視窗為基礎之功能的控制項。 必須實作為此控制項模式的控制項範例包括最上層應用程式視窗、多重文件介面（MDI）子視窗、可調整大小的分割窗格控制項、強制回應對話方塊和氣球說明視窗。  
+ The <xref:System.Windows.Automation.WindowPattern> control pattern is used to support controls that provide fundamental window-based functionality within a traditional graphical user interface (GUI). Examples of controls that must implement this control pattern include top-level application windows, multiple-document interface (MDI) child windows, resizable split pane controls, modal dialogs and balloon help windows.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
@@ -39,18 +39,18 @@ ms.locfileid: "71042995"
 ## <a name="required-members-for-iwindowprovider"></a>IWindowProvider 的必要成員  
  IWindowProvider 介面需要下列屬性、方法和事件。  
   
-|必要成員|成員類型|注意|  
+|必要成員|成員類型|備註|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|屬性|None|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|屬性|None|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|無|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|無|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|方法|無|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Event - 事件|無|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|方法|None|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Event - 事件|None|  
 |<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Event - 事件|None|  
 |<xref:System.Windows.Automation.WindowInteractionState>|Event - 事件|不保證是 <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
@@ -60,10 +60,10 @@ ms.locfileid: "71042995"
   
 |例外狀況類型|條件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -當控制項不支援要求的行為時。|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -當參數不是有效的數位時。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -   When a control does not support a requested behavior.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -   When the parameter is not a valid number.|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)

@@ -7,30 +7,28 @@ helpviewer_keywords:
 - diagnostics symbol store enumerations [.NET Framework]
 - enumerations [.NET Framework debugging]
 ms.assetid: 57d68c70-aba1-4bad-a13f-6d0c55f43746
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d7675e4ade28be1f57e20e655fd7b82603b91f4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44ff50994f707dbd7eb9a55c05fe2b4540759aac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756178"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448535"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>診斷符號存放區列舉
-本主題描述診斷符號存放區 API 使用的 unmanaged 的列舉。  
+This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [CorSymAddrKind 列舉](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
- 指出記憶體位址的類型。  
+ Indicates the type of memory address.  
   
  [CorSymSearchPolicyAttributes 列舉](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- 指定要在進行搜尋的符號讀取器時使用的原則。  
+ Specifies the policy to be used when doing a search for a symbol reader.  
   
  [CorSymVarFlag 列舉](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
- 指出變數是否為編譯器所產生。  
+ Indicates whether a variable is compiler-generated.  
   
  [NOTIFY_FILTER 列舉](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
- 識別偵錯工具的函式的回呼。  
+ Identifies callbacks for debugger functions.  
   
 ## <a name="related-sections"></a>相關章節  
  [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

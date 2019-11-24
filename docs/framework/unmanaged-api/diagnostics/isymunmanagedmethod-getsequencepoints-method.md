@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1d8cfde8f0eb14919c12d261c3f9f7209365829c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 75d477af7395a9b7d3328b2a5787f810733f3749
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759456"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448884"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints 方法
-取得這個方法內的所有序列點。  
+Gets all the sequence points within this method.  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,35 +41,35 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>參數  
  `cPoints`  
- [in]A`ULONG32`接收的大小`offsets`， `documents`， `lines`， `columns`， `endLines`，和`endColumns`陣列。  
+ [in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.  
   
  `pcPoints`  
- [out]指標`ULONG32`接收包含序列點所需緩衝區的長度。  
+ [out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.  
   
  `offsets`  
- [in]陣列，用來儲存 Microsoft intermediate language (MSIL) 位移序列點之方法開頭。  
+ [in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.  
   
  `documents`  
- [in]用來儲存所在的序列點所在文件陣列。  
+ [in] An array in which to store the documents in which the sequence points are located.  
   
  `lines`  
- [in]用來儲存之序列點所在文件中的行陣列。  
+ [in] An array in which to store the lines in the documents at which the sequence points are located.  
   
  `columns`  
- [in]要在其中儲存之序列點所在文件中的資料行陣列。  
+ [in] An array in which to store the columns in the documents at which the sequence points are located.  
   
  `endLines`  
- [in]序列點結束處的文件行陣列。  
+ [in] The array of lines in the documents at which the sequence points end.  
   
  `endColumns`  
- [in]序列點結束處的文件中的資料行陣列。  
+ [in] The array of columns in the documents at which the sequence points end.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

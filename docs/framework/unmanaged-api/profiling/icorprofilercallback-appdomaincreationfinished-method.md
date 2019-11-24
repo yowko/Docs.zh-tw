@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 910f8b7f78b6348ace9036d35c0844f2a64cf433
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eaf0ae2a1b86234495c1804cff8b74331b3e8021
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763150"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445283"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished 方法
-通知分析工具已建立的應用程式定義域。  
+Notifies the profiler that an application domain has been created.  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,25 +35,25 @@ HRESULT AppDomainCreationFinished(
   
 ## <a name="parameters"></a>參數  
  `appDomainId`  
- [in]識別已建立的網域。  
+ [in] Identifies the domain which has been created.  
   
  `hrStatus`  
- [in]HRESULT，指出是否已成功完成建立應用程式定義域。  
+ [in] An HRESULT that indicates whether creation of the application domain completed successfully.  
   
 ## <a name="remarks"></a>備註  
- 應用程式識別碼不是有效的任何資訊要求，直到`AppDomainCreationFinished`呼叫方法。  
+ The application ID is not valid for any information request until the `AppDomainCreationFinished` method is called.  
   
- 載入應用程式定義域的某些部分可能會繼續之後`AppDomainCreationFinished`回呼。 失敗 HRESULT 中`hrStatus`表示失敗。 不過，成功的 HRESULT 中`hrStatus`僅會指示已成功建立應用程式定義域的第一個部分。  
+ Some parts of loading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of creating the application domain has succeeded.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** CorProf.idl、CorProf.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

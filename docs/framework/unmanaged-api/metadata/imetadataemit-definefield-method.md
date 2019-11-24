@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 057bae1d702fa091ebc3d3178c9fba35d5dd3d90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40f24a4ea628ce92a27ab1bfe97fc87a57dfa4f0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777651"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432554"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField 方法
-建立欄位的定義，具有指定之中繼資料簽章，並取得該欄位定義的語彙基元。  
+Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,42 +43,42 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>參數  
  `td`  
- [in]`mdTypeDef`封入類別或介面的語彙基元。  
+ [in] The `mdTypeDef` token for the enclosing class or interface.  
   
  `szName`  
- [in]以 Unicode 欄位名稱。  
+ [in] The field name in Unicode.  
   
  `dwFieldFlags`  
- [in]欄位的欄位屬性。 這是位元遮罩`CorFieldAttr`值。  
+ [in] The field attributes. This is a bitmask of `CorFieldAttr` values.  
   
  `pvSigBlob`  
- [in]為 BLOB 欄位簽章。  
+ [in] The field signature as a BLOB.  
   
  `cbSigBlob`  
- [in]中的位元組計數`pvSigBlob`。  
+ [in] The count of bytes in `pvSigBlob`.  
   
  `dwCPlusTypeFlag`  
- [in]`ELEMENT_TYPE_` *\** 常數的值。 這是`CorElementType`值。 如果未定義欄位的常數值，使用`ELEMENT_TYPE_END`。  
+ [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If not defining a constant value for the field, use `ELEMENT_TYPE_END`.  
   
  `pValue`  
- [in]欄位的常值。  
+ [in] The constant value for the field.  
   
  `cchValue`  
- [in]\(Unicode\) 字元的大小`pValue`。  
+ [in] The size in (Unicode) characters of `pValue`.  
   
  `pmd`  
- [out]`mdFieldDef`指派權杖。  
+ [out] The `mdFieldDef` token assigned.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MSCorEE.dll 中的資源  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

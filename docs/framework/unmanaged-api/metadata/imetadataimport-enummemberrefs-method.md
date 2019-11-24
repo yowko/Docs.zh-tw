@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 444c892026f9b6de12255ebdcda829db82c9bfdb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 743b6bed1a5d62f5214b8366b1a3c6e4ebecb98b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780447"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441712"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs 方法
 列舉代表指定類型成員的 MemberRef 語彙基元。  
@@ -41,37 +39,37 @@ HRESULT EnumMemberRefs (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in、 out]列舉值的指標。  
+ [in, out] A pointer to the enumerator.  
   
  `tkParent`  
- [in]其成員的列舉的類型的 TypeDef，TypeRef、 MethodDef 或 ModuleRef 語彙基元。  
+ [in] A TypeDef, TypeRef, MethodDef, or ModuleRef token for the type whose members are to be enumerated.  
   
  `rMemberRefs`  
- [out]陣列，用來儲存 memberref 語彙基元。  
+ [out] The array used to store MemberRef tokens.  
   
  `cMax`  
  [in] `rMemberRefs` 陣列的大小上限。  
   
  `pcTokens`  
- [out]Memberref 語彙基元中傳回的實際數目`rMemberRefs`。  
+ [out] The actual number of MemberRef tokens returned in `rMemberRefs`.  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs` 已成功傳回。|  
-|`S_FALSE`|沒有列舉 MemberRef 語彙基元。 在此情況下，`pcTokens`是零。|  
+|`S_OK`|`EnumMemberRefs` returned successfully.|  
+|`S_FALSE`|There are no MemberRef tokens to enumerate. In that case, `pcTokens` is to zero.|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

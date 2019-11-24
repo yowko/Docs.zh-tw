@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4db97cf9-e4c1-4233-8efa-cbdc0e14a8e4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 315d9aa6f7db51342e71ba3f8fcdc091f7707743
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c12d3a7a7d1e52529435361aa12e22e4edeecf03
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777976"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448287"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName 方法
-取得具有指定的組件的陣列`szAssemblyName`參數，用來解析參考的 common language runtime (CLR) 所採用的標準規則。  
+Gets an array of assemblies with the specified `szAssemblyName` parameter, using the standard rules employed by the common language runtime (CLR) for resolving references.  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,49 +40,49 @@ HRESULT FindAssembliesByName (
   
 ## <a name="parameters"></a>參數  
  `szAppBase`  
- [in]要在其中搜尋指定的組件的根目錄。 如果此值設為`null`，`FindAssembliesByName`會尋找只在全域組件快取中組件。  
+ [in] The root directory in which to search for the given assembly. If this value is set to `null`, `FindAssembliesByName` will look only in the global assembly cache for the assembly.  
   
  `szPrivateBin`  
- [in]以分號分隔 （例如，「 bin; bin2"） 下, 子目錄的根目錄，在其中搜尋組件清單。 除了預設探查規則中所指定會探查下列目錄。  
+ [in] A list of semicolon-delimited subdirectories (for example, "bin;bin2"), under the root directory, in which to search for the assembly. These directories are probed in addition to those specified in the default probing rules.  
   
  `szAssemblyName`  
- [in]若要尋找組件的名稱。 此字串的格式定義的類別參考頁面<xref:System.Reflection.AssemblyName>。  
+ [in] The name of the assembly to find. The format of this string is defined in the class reference page for <xref:System.Reflection.AssemblyName>.  
   
  `ppIUnk`  
- [in]類型的陣列[IUnknown](/cpp/atl/iunknown)要放入`IMetadataAssemblyImport`介面指標。  
+ [in] An array of type [IUnknown](/cpp/atl/iunknown) in which to put the `IMetadataAssemblyImport` interface pointers.  
   
  `cMax`  
- [out]可以放在的介面指標的最大數目`ppIUnk`。  
+ [out] The maximum number of interface pointers that can be placed in `ppIUnk`.  
   
  `pcAssemblies`  
- [out]傳回的介面指標的數目。 也就是介面指標的數目實際放在`ppIUnk`。  
+ [out] The number of interface pointers returned. That is, the number of interface pointers actually placed in `ppIUnk`.  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|說明|  
+|HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`FindAssembliesByName` 已成功傳回。|  
-|`S_FALSE`|沒有組件。|  
+|`S_OK`|`FindAssembliesByName` returned successfully.|  
+|`S_FALSE`|There are no assemblies.|  
   
 ## <a name="remarks"></a>備註  
- 授與組件的名稱，`FindAssembliesByName`方法會遵循標準的規則，以便解析組件參考來尋找組件。 (如需詳細資訊，請參閱 <<c0> [ 執行階段如何找出組件](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。)`FindAssembliesByName`允許呼叫端設定的組件解析程式的內容，例如應用程式基底和私用的搜尋路徑的各種層面。  
+ Given an assembly name, the `FindAssembliesByName` method finds the assembly by following the standard rules for resolving assembly references. (For more information, see [How the Runtime Locates Assemblies](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` allows the caller to configure various aspects of the assembly resolver context, such as application base and private search path.  
   
- `FindAssembliesByName`方法需要 CLR 初始化程序中，才能叫用組件解析邏輯。 因此，您必須呼叫[CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) （傳遞 COINITEE_DEFAULT） 然後再呼叫`FindAssembliesByName`，然後依照呼叫[CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md)。  
+ The `FindAssembliesByName` method requires the CLR to be initialized in the process in order to invoke the assembly resolution logic. Therefore, you must call [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (passing COINITEE_DEFAULT) before calling `FindAssembliesByName`, and then follow with a call to [CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md).  
   
- `FindAssembliesByName` 會傳回[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)傳入的檔案包含組件名稱的組件資訊清單的指標。 如果指定的組件名稱完全未指定 （例如，如果它不包含版本），可能會傳回多個組件。  
+ `FindAssembliesByName` returns an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) pointer to the file containing the assembly manifest for the assembly name that is passed in. If the given assembly name is not fully specified (for example, if it does not include a version), multiple assemblies might be returned.  
   
- `FindAssembliesByName` 通常會使用嘗試尋找參考的組件在編譯時期的編譯器。  
+ `FindAssembliesByName` is commonly used by a compiler that attempts to find a referenced assembly at compile time.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor.h  
+ **Header:** Cor.h  
   
- **LIBRARY:** 做為 MsCorEE.dll 中的資源  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段如何找出組件](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

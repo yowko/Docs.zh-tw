@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc994fef-65c9-432a-84cb-66c8141147e7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 405d5ff49ba7bc2e5204f00cf50c30822354e56d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5edc4e0e2fc25ddae6ccabc1aa9c9a031292b63a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775580"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449886"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>ICorProfilerInfo::GetThreadInfo 方法
-取得指定的執行緒目前的 Win32 執行緒身分識別。  
+Gets the current Win32 thread identity for the specified thread.  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,20 +35,20 @@ HRESULT GetThreadInfo(
   
 ## <a name="parameters"></a>參數  
  `threadId`  
- [in]要取得目前的 Win32 ID 的執行緒識別碼  
+ [in] The ID of the thread for which to get the current Win32 ID.  
   
  `pdwWin32ThreadId`  
- [out]指向指定的執行緒目前的 Win32 執行緒的識別碼。  
+ [out] A pointer to the specified thread's current Win32 thread ID.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** CorProf.idl、CorProf.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

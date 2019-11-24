@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb203853-6a6d-4027-b9e9-603a7f28b9d3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 32b7505a9e512f3c3e3e7a9fcbff40276e98ecf4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1fcb885b6e19457065c2ca9971f068b42f97147d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759343"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448339"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument 方法
-尋找文件。 文件語言、 廠商和類型是選擇性的。  
+Finds a document. The document language, vendor, and type are optional.  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,26 +38,26 @@ HRESULT GetDocument (
   
 ## <a name="parameters"></a>參數  
  `url`  
- [in]識別文件的 URL。  
+ [in] The URL that identifies the document.  
   
  `language`  
- [in]文件語言。 這個參數是選擇性的。  
+ [in] The document language. 這是選擇性參數。  
   
  `languageVendor`  
- [in]文件語言廠商的身分識別。 這個參數是選擇性的。  
+ [in] The identity of the vendor for the document language. 這是選擇性參數。  
   
  `documentType`  
- [in]文件類型。 這個參數是選擇性的。  
+ [in] The type of the document. 這是選擇性參數。  
   
  `pRetVal`  
- [out]傳回的介面指標。  
+ [out] A pointer to the returned interface.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>需求  
- **標頭：** 於 CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

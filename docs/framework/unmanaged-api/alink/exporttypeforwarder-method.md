@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 55989fa9-ab43-4f08-8eb6-2eb56fa7ca76
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0ae4ddd07a2a3d3ab9b5d024eceb43329db96915
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 36c99477e9faead5e24799d5b0ae8901f1dd13c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787503"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448713"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder 方法
-將類型轉寄站加入至指定元件的類型資料表。  
+Adds a type forwarder to the type table of the given assembly.  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,24 +37,24 @@ HRESULT ExportTypeForwarder(
   
 ## <a name="parameters"></a>參數  
  `tkAssemblyRef`  
- 參考型別轉寄站所參考的元件。  
+ Reference to the assembly to which the type forwarder refers.  
   
  `pszTypename`  
- 要匯出的完整類型名稱。  
+ Fully qualified type name to export.  
   
  `dwFlags`  
- `ComType`旗標， `tdPublic`例如`tdNested`或。 這個值可能會傳遞給[DefineExportedType 方法](../metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
+ `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- 接收匯出類型的 token。 這只有在發出巢狀型別時才需要。  
+ Receives the token of the exported type. This is necessary only for emitting nested types.  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則傳回 S_OK。  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>需求  
- 需要 alink. h  
+ Requires alink.h  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)
