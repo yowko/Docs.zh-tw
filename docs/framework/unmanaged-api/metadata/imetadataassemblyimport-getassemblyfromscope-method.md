@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0b437f70-561d-48c7-abe0-0cb9ace10c08
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d40b997cd2b07cfc86e7671f7d7d2fcf9bd9c60a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 953aa16566c2a15939fbd556f478bbdb3c0c77d0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772758"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448247"
 ---
-# <a name="imetadataassemblyimportgetassemblyfromscope-method"></a><span data-ttu-id="2934d-102">IMetaDataAssemblyImport::GetAssemblyFromScope 方法</span><span class="sxs-lookup"><span data-stu-id="2934d-102">IMetaDataAssemblyImport::GetAssemblyFromScope Method</span></span>
-<span data-ttu-id="2934d-103">取得目前範圍中的組件的指標。</span><span class="sxs-lookup"><span data-stu-id="2934d-103">Gets a pointer to the assembly in the current scope.</span></span>  
+# <a name="imetadataassemblyimportgetassemblyfromscope-method"></a><span data-ttu-id="22c9c-102">IMetaDataAssemblyImport::GetAssemblyFromScope 方法</span><span class="sxs-lookup"><span data-stu-id="22c9c-102">IMetaDataAssemblyImport::GetAssemblyFromScope Method</span></span>
+<span data-ttu-id="22c9c-103">Gets a pointer to the assembly in the current scope.</span><span class="sxs-lookup"><span data-stu-id="22c9c-103">Gets a pointer to the assembly in the current scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2934d-104">語法</span><span class="sxs-lookup"><span data-stu-id="2934d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="22c9c-104">語法</span><span class="sxs-lookup"><span data-stu-id="22c9c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAssemblyFromScope (  
@@ -35,19 +33,19 @@ HRESULT GetAssemblyFromScope (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2934d-105">參數</span><span class="sxs-lookup"><span data-stu-id="2934d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="22c9c-105">參數</span><span class="sxs-lookup"><span data-stu-id="22c9c-105">Parameters</span></span>  
  `ptkAssembly`  
- <span data-ttu-id="2934d-106">[out]所擷取的指標`mdAssembly`語彙基元，可識別組件。</span><span class="sxs-lookup"><span data-stu-id="2934d-106">[out] A pointer to the retrieved `mdAssembly` token that identifies the assembly.</span></span>  
+ <span data-ttu-id="22c9c-106">[out] A pointer to the retrieved `mdAssembly` token that identifies the assembly.</span><span class="sxs-lookup"><span data-stu-id="22c9c-106">[out] A pointer to the retrieved `mdAssembly` token that identifies the assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2934d-107">需求</span><span class="sxs-lookup"><span data-stu-id="2934d-107">Requirements</span></span>  
- <span data-ttu-id="2934d-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2934d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="22c9c-107">需求</span><span class="sxs-lookup"><span data-stu-id="22c9c-107">Requirements</span></span>  
+ <span data-ttu-id="22c9c-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="22c9c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2934d-109">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2934d-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="22c9c-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="22c9c-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="2934d-110">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="2934d-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="22c9c-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="22c9c-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="2934d-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2934d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="22c9c-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="22c9c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2934d-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2934d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="22c9c-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="22c9c-112">See also</span></span>
 
-- [<span data-ttu-id="2934d-113">IMetaDataAssemblyImport 介面</span><span class="sxs-lookup"><span data-stu-id="2934d-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="22c9c-113">IMetaDataAssemblyImport 介面</span><span class="sxs-lookup"><span data-stu-id="22c9c-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

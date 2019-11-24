@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 47b2a3b6-907d-43dc-858d-1ae7dca1316a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 027547098edefdca71317b8f885e71f468dc6e77
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3898b095809e2b84f71aba2036f4d7a294dfdf6a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777196"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444647"
 ---
-# <a name="imetadataemit2definegenericparam-method"></a><span data-ttu-id="dd0ec-102">IMetaDataEmit2::DefineGenericParam 方法</span><span class="sxs-lookup"><span data-stu-id="dd0ec-102">IMetaDataEmit2::DefineGenericParam Method</span></span>
-<span data-ttu-id="dd0ec-103">建立泛型類型參數的定義，並取得該泛型型別參數的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="dd0ec-103">Creates a definition for a generic type parameter, and gets a token to that generic type parameter.</span></span>  
+# <a name="imetadataemit2definegenericparam-method"></a><span data-ttu-id="281a4-102">IMetaDataEmit2::DefineGenericParam 方法</span><span class="sxs-lookup"><span data-stu-id="281a4-102">IMetaDataEmit2::DefineGenericParam Method</span></span>
+<span data-ttu-id="281a4-103">Creates a definition for a generic type parameter, and gets a token to that generic type parameter.</span><span class="sxs-lookup"><span data-stu-id="281a4-103">Creates a definition for a generic type parameter, and gets a token to that generic type parameter.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dd0ec-104">語法</span><span class="sxs-lookup"><span data-stu-id="dd0ec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="281a4-104">語法</span><span class="sxs-lookup"><span data-stu-id="281a4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineGenericParam (   
@@ -41,38 +39,38 @@ HRESULT DefineGenericParam (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dd0ec-105">參數</span><span class="sxs-lookup"><span data-stu-id="dd0ec-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="281a4-105">參數</span><span class="sxs-lookup"><span data-stu-id="281a4-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="dd0ec-106">[in]`mdTypeDef`或`mdMethodDef`語彙基元，表示方法或建構函式為其定義的泛型參數。</span><span class="sxs-lookup"><span data-stu-id="dd0ec-106">[in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.</span></span>  
+ <span data-ttu-id="281a4-106">[in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.</span><span class="sxs-lookup"><span data-stu-id="281a4-106">[in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.</span></span>  
   
  `ulParamSeq`  
- <span data-ttu-id="dd0ec-107">[in]泛型參數的索引。</span><span class="sxs-lookup"><span data-stu-id="dd0ec-107">[in] The index of the generic parameter.</span></span>  
+ <span data-ttu-id="281a4-107">[in] The index of the generic parameter.</span><span class="sxs-lookup"><span data-stu-id="281a4-107">[in] The index of the generic parameter.</span></span>  
   
  `dwParamFlags`  
- <span data-ttu-id="dd0ec-108">[in]值為[CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)描述泛型參數類型的列舉型別。</span><span class="sxs-lookup"><span data-stu-id="dd0ec-108">[in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.</span></span>  
+ <span data-ttu-id="281a4-108">[in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.</span><span class="sxs-lookup"><span data-stu-id="281a4-108">[in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.</span></span>  
   
  `szname`  
- <span data-ttu-id="dd0ec-109">[in]參數的名稱。</span><span class="sxs-lookup"><span data-stu-id="dd0ec-109">[in] The name of the parameter.</span></span>  
+ <span data-ttu-id="281a4-109">[in] The name of the parameter.</span><span class="sxs-lookup"><span data-stu-id="281a4-109">[in] The name of the parameter.</span></span>  
   
  `reserved`  
- <span data-ttu-id="dd0ec-110">[in]此參數保留供未來擴充。</span><span class="sxs-lookup"><span data-stu-id="dd0ec-110">[in] This parameter is reserved for future extensibility.</span></span>  
+ <span data-ttu-id="281a4-110">[in] This parameter is reserved for future extensibility.</span><span class="sxs-lookup"><span data-stu-id="281a4-110">[in] This parameter is reserved for future extensibility.</span></span>  
   
  `rtkConstraints`  
- <span data-ttu-id="dd0ec-111">[in]類型條件約束的零結尾的陣列。</span><span class="sxs-lookup"><span data-stu-id="dd0ec-111">[in] A zero-terminated array of type constraints.</span></span> <span data-ttu-id="dd0ec-112">陣列成員必須是`mdTypeDef`， `mdTypeRef`，或`mdTypeSpec`中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="dd0ec-112">Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.</span></span>  
+ <span data-ttu-id="281a4-111">[in] A zero-terminated array of type constraints.</span><span class="sxs-lookup"><span data-stu-id="281a4-111">[in] A zero-terminated array of type constraints.</span></span> <span data-ttu-id="281a4-112">Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.</span><span class="sxs-lookup"><span data-stu-id="281a4-112">Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.</span></span>  
   
  `pgp`  
- <span data-ttu-id="dd0ec-113">[out]代表泛型參數的權杖。</span><span class="sxs-lookup"><span data-stu-id="dd0ec-113">[out] A token that represents the generic parameter.</span></span>  
+ <span data-ttu-id="281a4-113">[out] A token that represents the generic parameter.</span><span class="sxs-lookup"><span data-stu-id="281a4-113">[out] A token that represents the generic parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dd0ec-114">需求</span><span class="sxs-lookup"><span data-stu-id="dd0ec-114">Requirements</span></span>  
- <span data-ttu-id="dd0ec-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dd0ec-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="281a4-114">需求</span><span class="sxs-lookup"><span data-stu-id="281a4-114">Requirements</span></span>  
+ <span data-ttu-id="281a4-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="281a4-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dd0ec-116">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="dd0ec-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="281a4-116">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="281a4-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="dd0ec-117">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="dd0ec-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="281a4-117">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="281a4-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="dd0ec-118">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dd0ec-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="281a4-118">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="281a4-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd0ec-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dd0ec-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="281a4-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="281a4-119">See also</span></span>
 
-- [<span data-ttu-id="dd0ec-120">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="dd0ec-120">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="dd0ec-121">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="dd0ec-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="281a4-120">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="281a4-120">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="281a4-121">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="281a4-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ecd786e8-f9a4-4190-a6ef-af18e8c6d654
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 270fdecb6afbf252b7d0531cab0f18dded44298d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b5da781f148c23efcc909ad65e198e4f3c6fe5b5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777115"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447880"
 ---
-# <a name="imetadataemit2savedeltatostream-method"></a><span data-ttu-id="e0721-102">IMetaDataEmit2::SaveDeltaToStream 方法</span><span class="sxs-lookup"><span data-stu-id="e0721-102">IMetaDataEmit2::SaveDeltaToStream Method</span></span>
-<span data-ttu-id="e0721-103">將變更儲存從目前的編輯和繼續工作階段指定的資料流。</span><span class="sxs-lookup"><span data-stu-id="e0721-103">Saves changes from the current edit-and-continue session to the specified stream.</span></span>  
+# <a name="imetadataemit2savedeltatostream-method"></a><span data-ttu-id="c22b0-102">IMetaDataEmit2::SaveDeltaToStream 方法</span><span class="sxs-lookup"><span data-stu-id="c22b0-102">IMetaDataEmit2::SaveDeltaToStream Method</span></span>
+<span data-ttu-id="c22b0-103">Saves changes from the current edit-and-continue session to the specified stream.</span><span class="sxs-lookup"><span data-stu-id="c22b0-103">Saves changes from the current edit-and-continue session to the specified stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e0721-104">語法</span><span class="sxs-lookup"><span data-stu-id="e0721-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c22b0-104">語法</span><span class="sxs-lookup"><span data-stu-id="c22b0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SaveDeltaToStream (  
@@ -36,23 +34,23 @@ HRESULT SaveDeltaToStream (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e0721-105">參數</span><span class="sxs-lookup"><span data-stu-id="e0721-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c22b0-105">參數</span><span class="sxs-lookup"><span data-stu-id="c22b0-105">Parameters</span></span>  
  `pIStream`  
- <span data-ttu-id="e0721-106">[in]要儲存的變更可寫入的資料流介面指標。</span><span class="sxs-lookup"><span data-stu-id="e0721-106">[in] An interface pointer to the writable stream to which to save changes.</span></span>  
+ <span data-ttu-id="c22b0-106">[in] An interface pointer to the writable stream to which to save changes.</span><span class="sxs-lookup"><span data-stu-id="c22b0-106">[in] An interface pointer to the writable stream to which to save changes.</span></span>  
   
  `dwSaveFlags`  
- <span data-ttu-id="e0721-107">[in] 保留。</span><span class="sxs-lookup"><span data-stu-id="e0721-107">[in] Reserved.</span></span> <span data-ttu-id="e0721-108">此值必須是零。</span><span class="sxs-lookup"><span data-stu-id="e0721-108">This value must be zero.</span></span>  
+ <span data-ttu-id="c22b0-107">[in] 保留。</span><span class="sxs-lookup"><span data-stu-id="c22b0-107">[in] Reserved.</span></span> <span data-ttu-id="c22b0-108">This value must be zero.</span><span class="sxs-lookup"><span data-stu-id="c22b0-108">This value must be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e0721-109">需求</span><span class="sxs-lookup"><span data-stu-id="e0721-109">Requirements</span></span>  
- <span data-ttu-id="e0721-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e0721-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c22b0-109">需求</span><span class="sxs-lookup"><span data-stu-id="c22b0-109">Requirements</span></span>  
+ <span data-ttu-id="c22b0-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c22b0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e0721-111">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e0721-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c22b0-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c22b0-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e0721-112">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="e0721-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c22b0-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c22b0-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e0721-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0721-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c22b0-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c22b0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0721-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e0721-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c22b0-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="c22b0-114">See also</span></span>
 
-- [<span data-ttu-id="e0721-115">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="e0721-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="e0721-116">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="e0721-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="c22b0-115">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="c22b0-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="c22b0-116">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="c22b0-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

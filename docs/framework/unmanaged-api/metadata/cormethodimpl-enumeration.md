@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0c88c12646a13e5a24f2475bd2db04c8c831141c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a76a7a2d4ad68e367e38e175377aff40ce399346
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781759"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450203"
 ---
-# <a name="cormethodimpl-enumeration"></a><span data-ttu-id="ca898-102">CorMethodImpl 列舉</span><span class="sxs-lookup"><span data-stu-id="ca898-102">CorMethodImpl Enumeration</span></span>
-<span data-ttu-id="ca898-103">包含值，這些值描述方法實作功能。</span><span class="sxs-lookup"><span data-stu-id="ca898-103">Contains values that describe method implementation features.</span></span>  
+# <a name="cormethodimpl-enumeration"></a><span data-ttu-id="125b7-102">CorMethodImpl 列舉</span><span class="sxs-lookup"><span data-stu-id="125b7-102">CorMethodImpl Enumeration</span></span>
+<span data-ttu-id="125b7-103">包含值，這些值描述方法實作功能。</span><span class="sxs-lookup"><span data-stu-id="125b7-103">Contains values that describe method implementation features.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ca898-104">語法</span><span class="sxs-lookup"><span data-stu-id="ca898-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="125b7-104">語法</span><span class="sxs-lookup"><span data-stu-id="125b7-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorMethodImpl {  
@@ -54,34 +52,34 @@ typedef enum CorMethodImpl {
 } CorMethodImpl;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ca898-105">成員</span><span class="sxs-lookup"><span data-stu-id="ca898-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="125b7-105">Members</span><span class="sxs-lookup"><span data-stu-id="125b7-105">Members</span></span>  
   
-|<span data-ttu-id="ca898-106">成員</span><span class="sxs-lookup"><span data-stu-id="ca898-106">Member</span></span>|<span data-ttu-id="ca898-107">說明</span><span class="sxs-lookup"><span data-stu-id="ca898-107">Description</span></span>|  
+|<span data-ttu-id="125b7-106">成員</span><span class="sxs-lookup"><span data-stu-id="125b7-106">Member</span></span>|<span data-ttu-id="125b7-107">描述</span><span class="sxs-lookup"><span data-stu-id="125b7-107">Description</span></span>|  
 |------------|-----------------|  
-|`miCodeTypeMask`|<span data-ttu-id="ca898-108">描述程式碼類型的旗標。</span><span class="sxs-lookup"><span data-stu-id="ca898-108">Flags that describe code type.</span></span>|  
-|`miIL`|<span data-ttu-id="ca898-109">指定方法實作是 Microsoft intermediate language (MSIL)。</span><span class="sxs-lookup"><span data-stu-id="ca898-109">Specifies that the method implementation is Microsoft intermediate language (MSIL).</span></span>|  
-|`miNative`|<span data-ttu-id="ca898-110">指定方法實作為原生。</span><span class="sxs-lookup"><span data-stu-id="ca898-110">Specifies that the method implementation is native.</span></span>|  
-|`miOPTIL`|<span data-ttu-id="ca898-111">指定方法實作為 OPTIL。</span><span class="sxs-lookup"><span data-stu-id="ca898-111">Specifies that the method implementation is OPTIL.</span></span>|  
-|`miRuntime`|<span data-ttu-id="ca898-112">指定方法實作由通用語言執行平台。</span><span class="sxs-lookup"><span data-stu-id="ca898-112">Specifies that the method implementation is provided by the common language runtime.</span></span>|  
-|`miManagedMask`|<span data-ttu-id="ca898-113">表示程式碼是否為 managed 或 unmanaged 的旗標。</span><span class="sxs-lookup"><span data-stu-id="ca898-113">Flags that indicate whether the code is managed or unmanaged.</span></span>|  
-|`miUnmanaged`|<span data-ttu-id="ca898-114">指定方法實作為非受控。</span><span class="sxs-lookup"><span data-stu-id="ca898-114">Specifies that the method implementation is unmanaged.</span></span>|  
-|`miManaged`|<span data-ttu-id="ca898-115">指定方法實作管理。</span><span class="sxs-lookup"><span data-stu-id="ca898-115">Specifies that the method implementation is managed.</span></span>|  
-|`miForwardRef`|<span data-ttu-id="ca898-116">指定已定義的方法。</span><span class="sxs-lookup"><span data-stu-id="ca898-116">Specifies that the method is defined.</span></span> <span data-ttu-id="ca898-117">這個旗標時，可使用主要合併。</span><span class="sxs-lookup"><span data-stu-id="ca898-117">This flag is used primarily in merge scenarios.</span></span>|  
-|`miPreserveSig`|<span data-ttu-id="ca898-118">指定方法簽章不會受損 HRESULT 轉換。</span><span class="sxs-lookup"><span data-stu-id="ca898-118">Specifies that the method signature cannot be mangled for an HRESULT conversion.</span></span>|  
-|`miInternalCall`|<span data-ttu-id="ca898-119">保留供內部使用的 common language runtime。</span><span class="sxs-lookup"><span data-stu-id="ca898-119">Reserved for internal use by the common language runtime.</span></span>|  
-|`miSynchronized`|<span data-ttu-id="ca898-120">指定的方法是單一執行緒，透過其主體。</span><span class="sxs-lookup"><span data-stu-id="ca898-120">Specifies that the method is single-threaded through its body.</span></span>|  
-|`miNoInlining`|<span data-ttu-id="ca898-121">指定方法無法內嵌。</span><span class="sxs-lookup"><span data-stu-id="ca898-121">Specifies that the method cannot be inlined.</span></span>|  
-|`miAggressiveInlining`|<span data-ttu-id="ca898-122">指定方法應內嵌的話。</span><span class="sxs-lookup"><span data-stu-id="ca898-122">Specifies that the method should be inlined if possible.</span></span>|  
-|`miNoOptimization`|<span data-ttu-id="ca898-123">指定未最佳化的方法。</span><span class="sxs-lookup"><span data-stu-id="ca898-123">Specifies that the method should not be optimized.</span></span>|  
-|`miMaxMethodImplVal`|<span data-ttu-id="ca898-124">最大有效值`CorMethodImpl`。</span><span class="sxs-lookup"><span data-stu-id="ca898-124">The maximum valid value for a `CorMethodImpl`.</span></span>|  
+|`miCodeTypeMask`|<span data-ttu-id="125b7-108">Flags that describe code type.</span><span class="sxs-lookup"><span data-stu-id="125b7-108">Flags that describe code type.</span></span>|  
+|`miIL`|<span data-ttu-id="125b7-109">Specifies that the method implementation is Microsoft intermediate language (MSIL).</span><span class="sxs-lookup"><span data-stu-id="125b7-109">Specifies that the method implementation is Microsoft intermediate language (MSIL).</span></span>|  
+|`miNative`|<span data-ttu-id="125b7-110">指定方法實作為原生。</span><span class="sxs-lookup"><span data-stu-id="125b7-110">Specifies that the method implementation is native.</span></span>|  
+|`miOPTIL`|<span data-ttu-id="125b7-111">Specifies that the method implementation is OPTIL.</span><span class="sxs-lookup"><span data-stu-id="125b7-111">Specifies that the method implementation is OPTIL.</span></span>|  
+|`miRuntime`|<span data-ttu-id="125b7-112">Specifies that the method implementation is provided by the common language runtime.</span><span class="sxs-lookup"><span data-stu-id="125b7-112">Specifies that the method implementation is provided by the common language runtime.</span></span>|  
+|`miManagedMask`|<span data-ttu-id="125b7-113">Flags that indicate whether the code is managed or unmanaged.</span><span class="sxs-lookup"><span data-stu-id="125b7-113">Flags that indicate whether the code is managed or unmanaged.</span></span>|  
+|`miUnmanaged`|<span data-ttu-id="125b7-114">Specifies that the method implementation is unmanaged.</span><span class="sxs-lookup"><span data-stu-id="125b7-114">Specifies that the method implementation is unmanaged.</span></span>|  
+|`miManaged`|<span data-ttu-id="125b7-115">Specifies that the method implementation is managed.</span><span class="sxs-lookup"><span data-stu-id="125b7-115">Specifies that the method implementation is managed.</span></span>|  
+|`miForwardRef`|<span data-ttu-id="125b7-116">Specifies that the method is defined.</span><span class="sxs-lookup"><span data-stu-id="125b7-116">Specifies that the method is defined.</span></span> <span data-ttu-id="125b7-117">This flag is used primarily in merge scenarios.</span><span class="sxs-lookup"><span data-stu-id="125b7-117">This flag is used primarily in merge scenarios.</span></span>|  
+|`miPreserveSig`|<span data-ttu-id="125b7-118">Specifies that the method signature cannot be mangled for an HRESULT conversion.</span><span class="sxs-lookup"><span data-stu-id="125b7-118">Specifies that the method signature cannot be mangled for an HRESULT conversion.</span></span>|  
+|`miInternalCall`|<span data-ttu-id="125b7-119">Reserved for internal use by the common language runtime.</span><span class="sxs-lookup"><span data-stu-id="125b7-119">Reserved for internal use by the common language runtime.</span></span>|  
+|`miSynchronized`|<span data-ttu-id="125b7-120">Specifies that the method is single-threaded through its body.</span><span class="sxs-lookup"><span data-stu-id="125b7-120">Specifies that the method is single-threaded through its body.</span></span>|  
+|`miNoInlining`|<span data-ttu-id="125b7-121">指定方法無法內嵌。</span><span class="sxs-lookup"><span data-stu-id="125b7-121">Specifies that the method cannot be inlined.</span></span>|  
+|`miAggressiveInlining`|<span data-ttu-id="125b7-122">Specifies that the method should be inlined if possible.</span><span class="sxs-lookup"><span data-stu-id="125b7-122">Specifies that the method should be inlined if possible.</span></span>|  
+|`miNoOptimization`|<span data-ttu-id="125b7-123">Specifies that the method should not be optimized.</span><span class="sxs-lookup"><span data-stu-id="125b7-123">Specifies that the method should not be optimized.</span></span>|  
+|`miMaxMethodImplVal`|<span data-ttu-id="125b7-124">The maximum valid value for a `CorMethodImpl`.</span><span class="sxs-lookup"><span data-stu-id="125b7-124">The maximum valid value for a `CorMethodImpl`.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ca898-125">需求</span><span class="sxs-lookup"><span data-stu-id="ca898-125">Requirements</span></span>  
- <span data-ttu-id="ca898-126">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ca898-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="125b7-125">需求</span><span class="sxs-lookup"><span data-stu-id="125b7-125">Requirements</span></span>  
+ <span data-ttu-id="125b7-126">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="125b7-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ca898-127">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="ca898-127">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="125b7-127">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="125b7-127">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="ca898-128">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca898-128">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="125b7-128">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="125b7-128">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca898-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ca898-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="125b7-129">請參閱</span><span class="sxs-lookup"><span data-stu-id="125b7-129">See also</span></span>
 
-- [<span data-ttu-id="ca898-130">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="ca898-130">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="125b7-130">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="125b7-130">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

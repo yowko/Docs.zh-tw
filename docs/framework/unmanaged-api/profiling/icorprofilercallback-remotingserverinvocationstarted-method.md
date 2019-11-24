@@ -15,33 +15,31 @@ helpviewer_keywords:
 ms.assetid: 86051a11-ad8e-4ace-9a11-ff0f982a5e11
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 710a33583e45b27cec66278f4e20152acfae97dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ccb970fb2eb387f1be795f9322d5bf9650593a35
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782885"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445775"
 ---
-# <a name="icorprofilercallbackremotingserverinvocationstarted-method"></a><span data-ttu-id="1fc85-102">ICorProfilerCallback::RemotingServerInvocationStarted 方法</span><span class="sxs-lookup"><span data-stu-id="1fc85-102">ICorProfilerCallback::RemotingServerInvocationStarted Method</span></span>
-<span data-ttu-id="1fc85-103">通知分析工具處理程序會叫用遠端方法引動過程要求的回應中的方法。</span><span class="sxs-lookup"><span data-stu-id="1fc85-103">Notifies the profiler that the process is invoking a method in response to a remote method invocation request.</span></span>  
+# <a name="icorprofilercallbackremotingserverinvocationstarted-method"></a><span data-ttu-id="74480-102">ICorProfilerCallback::RemotingServerInvocationStarted 方法</span><span class="sxs-lookup"><span data-stu-id="74480-102">ICorProfilerCallback::RemotingServerInvocationStarted Method</span></span>
+<span data-ttu-id="74480-103">Notifies the profiler that the process is invoking a method in response to a remote method invocation request.</span><span class="sxs-lookup"><span data-stu-id="74480-103">Notifies the profiler that the process is invoking a method in response to a remote method invocation request.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1fc85-104">語法</span><span class="sxs-lookup"><span data-stu-id="1fc85-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="74480-104">語法</span><span class="sxs-lookup"><span data-stu-id="74480-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RemotingServerInvocationStarted();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="1fc85-105">需求</span><span class="sxs-lookup"><span data-stu-id="1fc85-105">Requirements</span></span>  
- <span data-ttu-id="1fc85-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1fc85-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="74480-105">需求</span><span class="sxs-lookup"><span data-stu-id="74480-105">Requirements</span></span>  
+ <span data-ttu-id="74480-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="74480-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1fc85-107">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1fc85-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="74480-107">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="74480-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="1fc85-108">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1fc85-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="74480-108">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="74480-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1fc85-109">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1fc85-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="74480-109">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="74480-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1fc85-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1fc85-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="74480-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="74480-110">See also</span></span>
 
-- [<span data-ttu-id="1fc85-111">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="1fc85-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="74480-111">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="74480-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
