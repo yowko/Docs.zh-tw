@@ -1,54 +1,54 @@
 ---
-title: 寬鬆委派轉換 (Visual Basic)
+title: 寬鬆委派轉換
 ms.date: 07/20/2015
 helpviewer_keywords:
 - relaxed delegate conversion [Visual Basic]
 - delegates [Visual Basic], relaxed conversion
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
-ms.openlocfilehash: ac1246764d26d694d10b817b9195b13169d6d9be
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ffb242842553382ba26121333c38fc65eaa168a9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651262"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345223"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>寬鬆委派轉換 (Visual Basic)
-寬鬆的委派轉換，可讓您將 sub 和函式指派給委派或處理常式，即使它們的簽章並不相同。 因此，委派繫結會變成一致與繫結中允許的方法引動過程。  
+Relaxed delegate conversion enables you to assign subs and functions to delegates or handlers even when their signatures are not identical. Therefore, binding to delegates becomes consistent with the binding already allowed for method invocations.  
   
-## <a name="parameters-and-return-type"></a>參數和傳回類型  
- 簽章完全相符項目，取代寬鬆的轉換必須符合下列條件時`Option Strict`設為`On`:  
+## <a name="parameters-and-return-type"></a>Parameters and Return Type  
+ In place of exact signature match, relaxed conversion requires that the following conditions be met when `Option Strict` is set to `On`:  
   
-- 擴展轉換至指派的函式的對應參數的資料類型時，必須從每個委派參數的資料型別或`Sub`。 在下列範例中，委派`Del1`有一個參數， `Integer`。 參數`m`中指派的 lambda 運算式必須具有擴展轉換的資料類型`Integer`，例如`Long`或`Double`。  
+- A widening conversion must exist from the data type of each delegate parameter to the data type of the corresponding parameter of the assigned function or `Sub`. In the following example, the delegate `Del1` has one parameter, an `Integer`. Parameter `m` in the assigned lambda expressions must have a data type for which there is a widening conversion from `Integer`, such as `Long` or `Double`.  
   
      [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
      [!code-vb[VbVbalrRelaxedDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#2)]  
   
-     縮小轉換允許時，才`Option Strict`設為`Off`。  
+     Narrowing conversions are permitted only when `Option Strict` is set to `Off`.  
   
      [!code-vb[VbVbalrRelaxedDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#8)]  
   
-- 擴展轉換必須存在於相反的方向，從指派的函式的傳回型別或`Sub`委派的傳回型別。 在下列範例中，每個指派的 lambda 運算式的主體必須評估為資料類型可擴展成`Integer`的傳回類型，因為`del1`是`Integer`。  
+- A widening conversion must exist in the opposite direction from the return type of the assigned function or `Sub` to the return type of the delegate. In the following examples, the body of each assigned lambda expression must evaluate to a data type that widens to `Integer` because the return type of `del1` is `Integer`.  
   
      [!code-vb[VbVbalrRelaxedDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#3)]  
   
- 如果`Option Strict`設為`Off`、 擴展限制兩個方向中已移除。  
+ If `Option Strict` is set to `Off`, the widening restriction is removed in both directions.  
   
  [!code-vb[VbVbalrRelaxedDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#4)]  
   
-## <a name="omitting-parameter-specifications"></a>省略參數規格  
- 寬鬆的委派也可讓您完全略過指派方法中的參數規格：  
+## <a name="omitting-parameter-specifications"></a>Omitting Parameter Specifications  
+ Relaxed delegates also allow you to completely omit parameter specifications in the assigned method:  
   
  [!code-vb[VbVbalrRelaxedDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#5)]  
   
  [!code-vb[VbVbalrRelaxedDelegates#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#6)]  
   
- 請注意，您無法指定一些參數並省略其他人。  
+ Note that you cannot specify some parameters and omit others.  
   
  [!code-vb[VbVbalrRelaxedDelegates#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#15)]  
   
- 省略參數的能力是很有幫助的情況下，例如定義事件處理常式，其中牽涉到多個複雜參數。 不會使用一些事件處理常式的引數。 相反地，處理常式直接存取的控制項的事件註冊，並會忽略引數的狀態。 寬鬆的委派可讓您略過這類宣告時沒有模稜兩可的結果中的引數。 在下列範例中，完整指定的方法`OnClick`可以重寫為`RelaxedOnClick`。  
+ The ability to omit parameters is helpful in a situation such as defining an event handler, where several complex parameters are involved. The arguments to some event handlers are not used. Instead, the handler directly accesses the state of the control on which the event is registered, and ignores the arguments. Relaxed delegates allow you to omit the arguments in such declarations when no ambiguities result. In the following example, the fully specified method `OnClick` can be rewritten as `RelaxedOnClick`.  
   
 ```vb  
 Sub OnClick(ByVal sender As Object, ByVal e As EventArgs) Handles b.Click  
@@ -60,10 +60,10 @@ Sub RelaxedOnClick() Handles b.Click
 End Sub  
 ```  
   
-## <a name="addressof-examples"></a>AddressOf 範例  
- 前一個範例中所用 lambda 運算式，以方便看到的類型關聯性。 不過，允許使用的委派指派相同 relaxations `AddressOf`， `Handles`，或`AddHandler`。  
+## <a name="addressof-examples"></a>AddressOf Examples  
+ Lambda expressions are used in the previous examples to make the type relationships easy to see. However, the same relaxations are permitted for delegate assignments that use `AddressOf`, `Handles`, or `AddHandler`.  
   
- 在下列範例中，函式`f1`， `f2`， `f3`，以及`f4`所有可指派給`Del1`。  
+ In the following example, functions `f1`, `f2`, `f3`, and `f4` can all be assigned to `Del1`.  
   
  [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
@@ -71,22 +71,22 @@ End Sub
   
  [!code-vb[VbVbalrRelaxedDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#9)]  
   
- 下列範例是時才有效`Option Strict`設為`Off`。  
+ The following example is valid only when `Option Strict` is set to `Off`.  
   
  [!code-vb[VbVbalrRelaxedDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#14)]  
   
-## <a name="dropping-function-returns"></a>卸除函數會傳回  
- 寬鬆的委派轉換可讓您指派的函式`Sub`委派，有效地略過函式的傳回值。 不過，您無法指派`Sub`函式委派。 在下列範例中，函式的位址`doubler`指派給`Sub`委派`Del3`。  
+## <a name="dropping-function-returns"></a>Dropping Function Returns  
+ Relaxed delegate conversion enables you to assign a function to a `Sub` delegate, effectively ignoring the return value of the function. However, you cannot assign a `Sub` to a function delegate. In the following example, the address of function `doubler` is assigned to `Sub` delegate `Del3`.  
   
  [!code-vb[VbVbalrRelaxedDelegates#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#10)]  
   
  [!code-vb[VbVbalrRelaxedDelegates#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#11)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Lambda 運算式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [擴展和縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [委派](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [如何：傳遞至另一個程序，在 Visual Basic 中的程序](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [如何：在 Visual Basic 中將程序傳遞至其他程序](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
 - [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

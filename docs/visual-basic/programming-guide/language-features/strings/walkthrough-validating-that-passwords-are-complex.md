@@ -1,22 +1,22 @@
 ---
-title: 驗證密碼複雜性 (Visual Basic)
+title: Validating Passwords Complexity
 ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: ff0ac933be917b5604966240ff1fbd331a34ba77
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e8697379a6fbb5cc15b60291e5b822897c2c013
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663620"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348333"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>逐步解說：驗證密碼確實複雜 (Visual Basic)
-這個方法會檢查一些強式密碼的特性，並以了解哪種檢查密碼失敗的資訊更新字串參數。  
+This method checks for some strong-password characteristics and updates a string parameter with information about which checks the password fails.  
   
- 密碼可以用在安全的系統，來授權使用者。 不過，密碼必須很難猜出未經授權的使用者。 攻擊者可以使用*字典攻擊*的程式，可逐一查看所有字典 （或不同的語言中的多個字典） 中的文字，並測試是否有任何文字做為使用者的密碼。 弱式密碼，例如"洋基隊 」 或 「 Mustang 」 可以快速地猜到。 強式密碼，例如"？您 'L1N3vaFiNdMeyeP@sSWerd！ 」，比較不容易猜到。 受密碼保護的系統應該確保使用者選擇強式密碼。  
+ Passwords can be used in a secure system to authorize a user. However, the passwords must be difficult for unauthorized users to guess. Attackers can use a *dictionary attack* program, which iterates through all of the words in a dictionary (or multiple dictionaries in different languages) and tests whether any of the words work as a user's password. Weak passwords such as "Yankees" or "Mustang" can be guessed quickly. Stronger passwords, such as "?You'L1N3vaFiNdMeyeP@sSWerd!", are much less likely to be guessed. A password-protected system should ensure that users choose strong passwords.  
   
- 強式密碼很複雜 （包含大寫、 小寫、 數字和特殊字元的混合），而且不是一個字。 此範例示範如何驗證複雜性。  
+ A strong password is complex (containing a mixture of uppercase, lowercase, numeric, and special characters) and is not a word. This example demonstrates how to verify complexity.  
   
 ## <a name="example"></a>範例  
   
@@ -24,26 +24,26 @@ ms.locfileid: "64663620"
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 呼叫這個方法，傳遞包含該密碼的字串。  
+ Call this method by passing the string that contains that password.  
   
  這個範例需要：  
   
 - <xref:System.Text.RegularExpressions> 命名空間成員的存取權。 新增 `Imports` 陳述式 (如果未在程式碼中完整限定成員名稱)。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
 ## <a name="security"></a>安全性  
- 如果您要透過網路移動的密碼，您需要將資料傳輸會使用安全的方法。 如需詳細資訊，請參閱 < [ASP.NET Web 應用程式安全性](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))。
+ If you're moving the password across a network, you need to use a secure method for transferring data. For more information, see [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
- 您可以改善的精確度`ValidatePassword`加上額外的複雜性檢查函式：  
+ You can improve the accuracy of the `ValidatePassword` function by adding additional complexity checks:  
   
-- 密碼和使用者的名稱、 使用者識別碼和應用程式定義的字典的子字串比較。 執行比較時，此外，將視為對等項目看起來類似的字元。 比方說，視為字母"l"和"e"等於"1"和"3"的數字。  
+- Compare the password and its substrings against the user's name, user identifier, and an application-defined dictionary. In addition, treat visually similar characters as equivalent when performing the comparisons. For example, treat the letters "l" and "e" as equivalent to the numerals "1" and "3".  
   
-- 如果只有一個大寫字元，請確定它不是密碼的第一個字元。  
+- If there is only one uppercase character, make sure it is not the password's first character.  
   
-- 請確定密碼的最後兩個字元的字母字元。  
+- Make sure that the last two characters of the password are letter characters.  
   
-- 不允許在其中從鍵盤上方資料列輸入所有符號的密碼。  
+- Do not allow passwords in which all the symbols are entered from the keyboard's top row.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Text.RegularExpressions.Regex>
 - [ASP.NET Web 應用程式安全性](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))

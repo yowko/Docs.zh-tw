@@ -1,15 +1,15 @@
 ---
-title: .NET Framework 中使用 Visual Basic 的連接埠作業
+title: .NET Framework 中的連接埠作業
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ports, Visual Basic
 ms.assetid: 1eba223b-7bd3-401a-b097-982bce96df1b
-ms.openlocfilehash: 10488f896ff7c6761e831d2a8af52249a19cf7d6
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 68f0c67b8135c6bb7ce8a134e2a324bc12c0aad9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524380"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345509"
 ---
 # <a name="port-operations-in-the-net-framework-with-visual-basic"></a>.NET Framework 中使用 Visual Basic 的連接埠作業
 

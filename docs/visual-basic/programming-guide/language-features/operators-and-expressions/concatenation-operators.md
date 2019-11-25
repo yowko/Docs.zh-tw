@@ -1,5 +1,5 @@
 ---
-title: Visual Basic 中的串連運算子
+title: 串連運算子
 ms.date: 07/20/2015
 helpviewer_keywords:
 - '& operator [Visual Basic], concatenation'
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - + operator [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-ms.openlocfilehash: 789478cafc4ed7506d34fb4198531d437683075d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: f86245c649647be4e040a61083d8b93eee4d7422
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583301"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353681"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Visual Basic 中的串連運算子
 
@@ -32,9 +32,9 @@ Dim y As String = "Mic" + "ro" + "soft"
 
 ## <a name="differences-between-the-two-concatenation-operators"></a>兩種串連運算子之間的差異
 
-[+ 運算子](../../../../visual-basic/language-reference/operators/addition-operator.md)的主要目的是要加入兩個數字。 不過，它也可以串連數值運算元與字串運算元。 `+` 運算子有一組複雜的規則，可判斷是要相加、串連、通知編譯器錯誤，還是擲回執行階段 <xref:System.InvalidCastException> 例外狀況。
+The [+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md) has the primary purpose of adding two numbers. 不過，它也可以串連數值運算元與字串運算元。 `+` 運算子有一組複雜的規則，可判斷是要相加、串連、通知編譯器錯誤，還是擲回執行階段 <xref:System.InvalidCastException> 例外狀況。
 
-[& 運算子](../../../../visual-basic/language-reference/operators/concatenation-operator.md)只會針對 `String` 的運算元定義，而不論 `Option Strict` 的設定為何，它一律會將其運算元擴大至 `String`。 建議使用 `&` 運算元進行字串串連，因為它的定義為專門針對字串，且能減少您產生意外轉換的機會。
+The [& Operator](../../../../visual-basic/language-reference/operators/concatenation-operator.md) is defined only for `String` operands, and it always widens its operands to `String`, regardless of the setting of `Option Strict`. 建議使用 `&` 運算元進行字串串連，因為它的定義為專門針對字串，且能減少您產生意外轉換的機會。
 
 ## <a name="performance-string-and-stringbuilder"></a>效能：String 和 StringBuilder
 
@@ -43,7 +43,7 @@ Dim y As String = "Mic" + "ro" + "soft"
 ## <a name="see-also"></a>請參閱
 
 - [Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [Visual Basic 中的字串操作方法類型](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)
-- [Visual Basic 中的算術運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Visual Basic 中的邏輯和位運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Types of String Manipulation Methods in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)
+- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

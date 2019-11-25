@@ -1,5 +1,5 @@
 ---
-title: My.Resources 物件 (Visual Basic)
+title: My.Resources 物件
 ms.date: 07/20/2015
 f1_keywords:
 - My.Resources
@@ -8,76 +8,76 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: 02e29b17404da0e868973364b0b17b5c4ca418c6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7f5d81194123ad2151a494a3cb79aa1955e0fdad
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647621"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350332"
 ---
 # <a name="myresources-object"></a>My.Resources 物件
-提供屬性和類別來存取應用程式的資源。  
+Provides properties and classes for accessing the application's resources.  
   
 ## <a name="remarks"></a>備註  
- `My.Resources`物件提供應用程式的資源的存取權，並讓您以動態方式擷取應用程式的資源。 如需詳細資訊，請參閱 <<c0> [ 管理的應用程式資源 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)。  
+ The `My.Resources` object provides access to the application's resources and lets you dynamically retrieve resources for your application. For more information, see [Managing Application Resources (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
- `My.Resources`物件會公開僅有全域資源。 它不提供與表單相關聯的資源檔案的存取權。 您必須從表單來存取表單資源。  
+ The `My.Resources` object exposes only global resources. It does not provide access to resource files associated with forms. You must access the form resources from the form.  
   
- 您可以存取應用程式的特定文化特性資源檔從`My.Resources`物件。 根據預設，`My.Resources`物件會比對中的文化特性的資源檔的資源查閱<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A>屬性。 不過，您可以覆寫這個行為，並指定特定的文化特性，若要使用的資源。 如需詳細資訊，請參閱[桌面應用程式中的資源](../../../framework/resources/index.md)。  
+ You can access the application's culture-specific resource files from the `My.Resources` object. By default, the `My.Resources` object looks up resources from the resource file that matches the culture in the <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> property. However, you can override this behavior and specify a particular culture to use for the resources. 如需詳細資訊，請參閱[桌面應用程式中的資源](../../../framework/resources/index.md)。  
   
-## <a name="properties"></a>屬性  
- 屬性`My.Resources`物件提供唯讀存取您的應用程式資源。 若要新增或移除資源，請使用**專案設計工具**。 您可以存取透過新增的資源**專案設計工具**利用`My.Resources.` *resourceName*。  
+## <a name="properties"></a>內容  
+ The properties of the `My.Resources` object provide read-only access to your application's resources. To add or remove resources, use the **Project Designer**. You can access resources added through the **Project Designer** by using `My.Resources.`*resourceName*.  
   
- 您也可以新增或移除選取的專案中的資源檔**方案總管**，然後按一下**加入新項目**或是**加入現有項目**從**專案**功能表。 您可以利用這個方式加入的資源`My.Resources.` *resourceFileName*`.`*resourceName*。  
+ You can also add or remove resource files by selecting your project in **Solution Explorer** and clicking **Add New Item** or **Add Existing Item** from the **Project** menu. You can access resources added in this manner by using `My.Resources.`*resourceFileName*`.`*resourceName*.  
   
- 每個資源名稱、 類別和值，而且這些資源的設定可讓您決定要存取之資源的屬性會出現在`My.Resources`物件。 在 加入資源**專案設計工具**:  
+ Each resource has a name, category, and value, and these resource settings determine how the property to access the resource appears in the `My.Resources` object. For resources added in the **Project Designer**:  
   
-- 名稱決定屬性的名稱  
+- The name determines the name of the property,  
   
-- 資源資料是屬性的值  
+- The resource data is the value of the property,  
   
-- 類別會決定屬性的型別：  
+- The category determines the type of the property:  
   
-|分類|屬性資料型別|  
+|Category|Property data type|  
 |---|---|  
 |**字串**|[String](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
 |**影像**|<xref:System.Drawing.Bitmap>|  
 |**圖示**|<xref:System.Drawing.Icon>|  
-|**音效**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> <xref:System.IO.UnmanagedMemoryStream>類別衍生自<xref:System.IO.Stream>類別中，因此它可以搭配方法，例如需要資料流，<xref:Microsoft.VisualBasic.Devices.Audio.Play%2A>方法。|  
-|**檔案**|-   [字串](../../../visual-basic/language-reference/data-types/string-data-type.md)文字檔。<br />-   <xref:System.Drawing.Bitmap> 映像檔案。<br />-   <xref:System.Drawing.Icon> 圖示檔案。<br />-   <xref:System.IO.UnmanagedMemoryStream> 為音效檔。|  
-|**其他**|由在設計工具中的資訊來判定**型別**資料行。|  
+|**音效**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> The <xref:System.IO.UnmanagedMemoryStream> class derives from the <xref:System.IO.Stream> class, so it can be used with methods that take streams, such as the <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> method.|  
+|**檔案**|-   [String](../../../visual-basic/language-reference/data-types/string-data-type.md) for text files.<br />-   <xref:System.Drawing.Bitmap> for image files.<br />-   <xref:System.Drawing.Icon> for icon files.<br />-   <xref:System.IO.UnmanagedMemoryStream> for sound files.|  
+|**其他**|Determined by the information in the designer's **Type** column.|  
   
 ## <a name="classes"></a>類別  
- `My.Resources`物件會將每個資源檔公開為具有共用屬性的類別。 類別名稱是資源檔的名稱相同。 上一節所述，就會將資源檔中的資源公開為類別中的屬性。  
+ The `My.Resources` object exposes each resource file as a class with shared properties. The class name is the same as the name of the resource file. As described in the previous section, the resources in a resource file are exposed as properties in the class.  
   
 ## <a name="example"></a>範例  
- 本範例會將表單的標題為指定的字串資源`Form1Title`應用程式資源檔中。 針對此範例才能運作，應用程式必須具備名為一個字串`Form1Title`其資源檔中。  
+ This example sets the title of a form to the string resource named `Form1Title` in the application resource file. For the example to work, the application must have a string named `Form1Title` in its resource file.  
   
  [!code-vb[VbVbalrMyResources#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#1)]  
   
 ## <a name="example"></a>範例  
- 此範例會將名為圖示表單的圖示`Form1Icon`均會儲存在應用程式的資源檔中。 針對此範例才能運作，應用程式必須具有名為圖示`Form1Icon`其資源檔中。  
+ This example sets the icon of the form to the icon named `Form1Icon` that is stored in the application's resource file. For the example to work, the application must have an icon named `Form1Icon` in its resource file.  
   
  [!code-vb[VbVbalrMyResources#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#2)]  
   
 ## <a name="example"></a>範例  
- 此範例中設定的背景影像的表單名為映像資源`Form1Background`，這是應用程式資源檔中。 針對此範例正常運作，應用程式必須具有名為的映像資源`Form1Background`其資源檔中。  
+ This example sets the background image of a form to the image resource named `Form1Background`, which is in the application resource file. For this example to work, the application must have an image resource named `Form1Background` in its resource file.  
   
  [!code-vb[VbVbalrMyResources#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#3)]  
   
 ## <a name="example"></a>範例  
- 此範例會播放聲音儲存為音訊的資源，名為`Form1Greeting`應用程式的資源檔中。 針對此範例才能運作，應用程式必須具有名為的音訊資源`Form1Greeting`其資源檔中。 `My.Computer.Audio.Play`方法是僅適用於 Windows Forms 應用程式。  
+ This example plays the sound that is stored as an audio resource named `Form1Greeting` in the application's resource file. For the example to work, the application must have an audio resource named `Form1Greeting` in its resource file. The `My.Computer.Audio.Play` method is available only for Windows Forms applications.  
   
  [!code-vb[VbVbalrMyResources#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#4)]  
   
 ## <a name="example"></a>範例  
- 此範例會擷取字串資源的應用程式的法文文化特性版本。 資源名為`Message`。 若要變更文化特性所`My.Resources`物件使用，此範例會使用<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>。  
+ This example retrieves the French-culture version of a  string resource of the application. The resource is named `Message`. To change the culture that the `My.Resources` object uses, the example uses <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.  
   
- 針對此範例正常運作，應用程式必須具備名為一個字串`Message`中其資源檔和應用程式應有的資源檔案，Resources.fr-FR.resx 法文文化特性版本。 如果應用程式並沒有法文文化特性的資源檔案版本，`My.Resource`物件會擷取預設文化特性資源檔中的資源。  
+ For this example to work, the application must have a string named `Message` in its resource file, and the application should have the French-culture version of that resource file, Resources.fr-FR.resx. If the application does not have the French-culture version of the resource file, the `My.Resource` object retrieves the resource from the default-culture resource file.  
   
  [!code-vb[VbVbalrMyResources#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#10)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [管理應用程式資源 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)
 - [桌面應用程式中的資源](../../../framework/resources/index.md)

@@ -1,15 +1,15 @@
 ---
-title: 處理非同步應用程式中的重新進入（Visual Basic）
+title: 處理非同步應用程式中的重新進入
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 466ff3ba4cdb627143b3ffc988ae4a16348e6ca6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: cd8b43aa9b2373b5ce038e5007678778201f0746
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775529"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354271"
 ---
-# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>處理非同步應用程式中的重新進入（Visual Basic）
+# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Handling Reentrancy in Async Apps (Visual Basic)
 
 當您將非同步程式碼納入您的應用程式時，應該考慮並防止可能發生的重新進入，也就是在完成前重新進入的非同步作業。 如果您不找出並處理重新進入的可能性，它可能會導致非預期的結果。
 
@@ -17,7 +17,7 @@ ms.locfileid: "72775529"
 > 若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。
 
 > [!NOTE]
-> 傳輸層安全性（TLS）版本1.2 現在是應用程式開發中所使用的最低版本。 如果您的應用程式以低於4.7 的 .NET framework 版本為目標，請參閱下列文章，以瞭解[傳輸層安全性（TLS）與 .NET Framework 的最佳做法](../../../../framework/network-programming/tls.md) 
+> Transport Layer Security (TLS) version 1.2 is now the minimum version to use in your app development. If your app targets a .NET framework version earlier than 4.7, please refer to the following article for [Transport Layer Security (TLS) best practices with the .NET Framework](../../../../framework/network-programming/tls.md) 
 
 ## <a name="BKMK_RecognizingReentrancy"></a> 辨識重新進入
 
@@ -126,7 +126,7 @@ End Sub
 
 您不必停用 [開始] 按鈕，您可以讓按鈕保持作用中，但如果使用者再次選擇該按鈕，請取消已在執行的作業，並讓最近啟動的作業繼續執行。
 
-如需取消的詳細資訊，請參閱[微調非同步應用程式（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)。
+For more information about cancellation, see [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
 
 若要設定此案例，請對[檢閱及執行範例應用程式](#BKMD_SettingUpTheExample)中提供的基本程式碼進行下列變更。 您也可以從[非同步範例︰重新進入 .NET 桌面應用程式](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下載完成的應用程式。 此專案的名稱是 CancelAndRestart。
 
@@ -139,7 +139,7 @@ End Sub
         Dim cts As CancellationTokenSource
     ```
 
-2. 在 `StartButton_Click` 中，判定作業是否已在進行中。 如果 `cts` 的值為 `Nothing`，則沒有任何作業已在使用中。 如果未 `Nothing`值，則已取消已在執行中的作業。
+2. 在 `StartButton_Click` 中，判定作業是否已在進行中。 If the value of `cts` is `Nothing`, no operation is already active. If the value isn't `Nothing`, the operation that is already running is canceled.
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -156,7 +156,7 @@ End Sub
     cts = newCTS
     ```
 
-4. 在 `StartButton_Click` 結束時，目前的進程已完成，因此請將 `cts` 的值設定回 `Nothing`。
+4. At the end of `StartButton_Click`, the current process is complete, so set the value of `cts` back to `Nothing`.
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -248,7 +248,7 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function
 ```
 
-如果您在此應用程式執行時，選擇 [**開始**] 按鈕多次，則應該會產生類似下列輸出的結果：
+If you choose the **Start** button several times while this app is running, it should produce results that resemble the following output:
 
 ```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
@@ -516,7 +516,7 @@ End Function
   TOTAL bytes returned:  915908
   ```
 
-- 只有先啟動群組 A，才會在 `FinishOneGroupAsync` 開頭 `Nothing` `pendingWork` 工作。 當群組 A 到達 `FinishOneGroupAsync` 時，它尚未完成 await 運算式。 因此，尚未將控制項返回 `AccessTheWebAsync`，且尚未針對 `pendingWork` 進行第一次指派。
+- The `pendingWork` task is `Nothing` at the start of `FinishOneGroupAsync` only for group A, which started first. 當群組 A 到達 `FinishOneGroupAsync` 時，它尚未完成 await 運算式。 因此，尚未將控制項返回 `AccessTheWebAsync`，且尚未針對 `pendingWork` 進行第一次指派。
 
 - 下列兩行一律會在輸出中一起出現。 在 `StartButton_Click` 中啟動群組的作業，與將群組的工作指派給 `pendingWork` 之間，程式碼永遠不會中斷
 
@@ -560,11 +560,11 @@ End Function
 
      [ **新增專案** ] 對話方塊隨即開啟。
 
-3. 在 [**已安裝的範本**] 窗格中，展開 [ **Visual Basic**]，然後展開 [ **Windows**]。
+3. In the **Installed Templates** pane, expand **Visual Basic**, and then expand **Windows**.
 
 4. 在專案類型清單中，選擇 [WPF 應用程式]。
 
-5. 將專案命名為 `WebsiteDownloadWPF`，選擇4.6 或更高版本的 .NET Framework，然後按一下 [**確定]** 按鈕。
+5. Name the project `WebsiteDownloadWPF`, choose .NET Framework version of 4.6 or higher and then click the **OK** button.
 
      新的專案隨即出現在方案總管中。
 
@@ -592,13 +592,13 @@ End Function
 
      包含文字方塊和按鈕的簡易視窗會出現在 MainWindow.xaml 的 [設計] 檢視中。
 
-8. 在**方案總管**中，以滑鼠右鍵按一下 [**參考**]，然後選取 [**新增參考**]。
+8. In **Solution Explorer**, right-click on **References** and select **Add Reference**.
 
-     新增 <xref:System.Net.Http> 的參考（如果尚未選取）。
+     Add a reference for <xref:System.Net.Http>, if it is not selected already.
 
-9. 在**方案總管**中，開啟 mainwindow.xaml 的快捷方式功能表，然後選擇 [ **View Code**]。
+9. In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.
 
-10. 在 Mainwindow.xaml 中，將程式碼取代為下列程式碼。
+10. In MainWindow.xaml.vb , replace the code with the following code.
 
     ```vb
     ' Add the following Imports statements, and add a reference for System.Net.Http.

@@ -1,16 +1,16 @@
 ---
-title: 開始使用 Visual Basic
+title: 開始使用
 ms.date: 09/10/2018
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: c5cd4ab82fde1604dea14718b3cdd1a104fdf922
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 386f7aa74efbcb69e1a2fc0e528c88f25b1d5e2b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425142"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344819"
 ---
 # <a name="get-started-with-visual-basic"></a>開始使用 Visual Basic
 
@@ -47,13 +47,13 @@ ms.locfileid: "73425142"
 - [逐步解說](../../visual-basic/walkthroughs.md)\
 提供示範 Visual Basic 語言相關方面的 [說明] 頁清單。
 
-- [Visual Studio \ 的意見反應選項](/visualstudio/ide/feedback-options)
+- [Feedback options for Visual Studio](/visualstudio/ide/feedback-options)\
 說明如何接受支援和提供意見。
 
 - [Visual Studio](/visualstudio/)\
 提供 Visual Studio 文件的連結。
 
-- [C#](../../csharp/index.md)\
+- [C#](../../csharp/index.yml)\
 提供利用 Visual C# 進行應用程式開發的相關文件連結。
 
 - [Visual C++](/cpp/)\

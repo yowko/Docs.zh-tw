@@ -1,16 +1,16 @@
 ---
-title: A-E 語句（Visual Basic）
+title: A-E 陳述式
 ms.date: 07/20/2015
 ms.assetid: af97c2bf-dddb-48a8-8eb6-798cd219430b
-ms.openlocfilehash: cfe28b28f197759bb2620d12d550a057d47f4d74
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 7d56c059ac4f2f136e57aedc161c4819022f028a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591992"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350232"
 ---
 # <a name="a-e-statements"></a>A-E 陳述式
-下表包含 Visual Basic language 語句的清單。  
+The following table contains a listing of Visual Basic language statements.  
   
 |||||  
 |---|---|---|---|  
@@ -20,7 +20,7 @@ ms.locfileid: "71591992"
 |[Enum](enum-statement.md)|[Erase](erase-statement.md)|[錯誤](error-statement.md)|[Event](event-statement.md)|  
 |[結束](exit-statement.md)||||  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [F-P 陳述式](f-p-statements.md)
 - [Q-Z 陳述式](q-z-statements.md)

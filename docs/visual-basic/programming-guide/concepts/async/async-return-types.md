@@ -1,17 +1,17 @@
 ---
-title: 非同步傳回類型（Visual Basic）
+title: Async 傳回型別
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: a5553070dd68a0bc3eaad1c5e8c000f7a31f8783
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 96d3a945a49a12f7c2d5d60e8ee59ce047a0bae6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423962"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347983"
 ---
-# <a name="async-return-types-visual-basic"></a>非同步傳回類型（Visual Basic）
+# <a name="async-return-types-visual-basic"></a>Async Return Types (Visual Basic)
 
-非同步方法有三種可能的傳回類型：<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task> 和 void。 在 Visual Basic 中，void 傳回型別會撰寫為 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 程序。 如需非同步方法的詳細資訊，請參閱[使用 async 和 Await 進行非同步程式設計（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/index.md)。
+非同步方法有三種可能的傳回類型：<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task> 和 void。 在 Visual Basic 中，void 傳回型別會撰寫為 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 程序。 For more information about async methods, see [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).
 
 每個傳回型別在下列其中一節探討，您可以在主題結尾處找到使用全部三種類型的完整範例。
 
@@ -20,7 +20,7 @@ ms.locfileid: "73423962"
 
 ## <a name="BKMK_TaskTReturnType"></a> Task(T) 傳回型別
 
-<xref:System.Threading.Tasks.Task%601> 傳回型別用於非同步方法，其中包含[return](../../../../visual-basic/language-reference/statements/return-statement.md)語句，其中運算元的型別為 `TResult`。
+The <xref:System.Threading.Tasks.Task%601> return type is used for an async method that contains a [Return](../../../../visual-basic/language-reference/statements/return-statement.md) statement in which the operand has type `TResult`.
 
 在下列範例中，`TaskOfT_MethodAsync` 非同步方法包含一個傳回整數的 return 陳述式。 因此，方法宣告必須指定 `Task(Of Integer)` 傳回型別。
 
@@ -47,7 +47,7 @@ Async Function TaskOfT_MethodAsync() As Task(Of Integer)
 End Function
 ```
 
-從 await 運算式內呼叫 `TaskOfT_MethodAsync` 時，await 運算式會擷取儲存在 `TaskOfT_MethodAsync` 所傳回之工作中的整數值 (`leisureHours` 的值)。 如需 await 運算式的詳細資訊，請參閱[Await 運算子](../../../../visual-basic/language-reference/operators/await-operator.md)。
+從 await 運算式內呼叫 `TaskOfT_MethodAsync` 時，await 運算式會擷取儲存在 `TaskOfT_MethodAsync` 所傳回之工作中的整數值 (`leisureHours` 的值)。 For more information about await expressions, see [Await Operator](../../../../visual-basic/language-reference/operators/await-operator.md).
 
 下列程式碼會呼叫並等候方法 `TaskOfT_MethodAsync`。 結果會指派給 `result1` 變數。
 
@@ -83,7 +83,7 @@ textBox1.Text &= $"Value of resultTask.Result:  {integerTask.Result}" & vbCrLf
 
 ## <a name="BKMK_TaskReturnType"></a> 工作傳回型別
 
-不包含 return 陳述式的非同步方法，或包含不會傳回運算元的 return 陳述式的非同步方法，通常具有傳回型別 <xref:System.Threading.Tasks.Task>。 這類方法是撰寫成同步執行的[Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)程式。 如果您針對非同步方法使用 `Task` 傳回型別，則除非被呼叫的非同步方法完成，否則呼叫的方法可以使用 `Await` 運算子暫止呼叫端完成。
+不包含 return 陳述式的非同步方法，或包含不會傳回運算元的 return 陳述式的非同步方法，通常具有傳回型別 <xref:System.Threading.Tasks.Task>。 Such methods would be [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedures if they were written to run synchronously. 如果您針對非同步方法使用 `Task` 傳回型別，則除非被呼叫的非同步方法完成，否則呼叫的方法可以使用 `Await` 運算子暫止呼叫端完成。
 
 在下列範例中，非同步方法 `Task_MethodAsync` 不包含 return 陳述式。 因此，您為方法指定 `Task` 傳回型別，如此可等候 `Task_MethodAsync`。 `Task` 類型的定義不包含用來儲存傳回值的 `Result` 屬性。
 
@@ -101,7 +101,7 @@ Async Function Task_MethodAsync() As Task
 End Function
 ```
 
-使用 await 陳述式呼叫並等候 `Task_MethodAsync`，而不是使用 await 運算式，類似於同步 `Sub` 或傳回 void 方法的呼叫陳述式。 在此情況下，`Await` 運算子的應用不會產生值。
+使用 await 陳述式呼叫並等候 `Task_MethodAsync`，而不是使用 await 運算式，類似於同步 `Sub` 或傳回 void 方法的呼叫陳述式。 The application of an `Await` operator in this case doesn't produce a value.
 
 下列程式碼會呼叫並等候方法 `Task_MethodAsync`。
 
@@ -110,7 +110,7 @@ End Function
 Await Task_MethodAsync()
 ```
 
-如同先前的 <xref:System.Threading.Tasks.Task%601> 範例，您可以從 `Await` 運算子的應用程式中分隔 `Task_MethodAsync` 的呼叫，如下列程式碼所示。 不過，請記住，`Task` 沒有 `Result` 屬性，且將 await 運算子套用至 `Task` 時不會產生任何值。
+As in the previous <xref:System.Threading.Tasks.Task%601> example, you can separate the call to `Task_MethodAsync` from the application of an `Await` operator, as the following code shows. 不過，請記住，`Task` 沒有 `Result` 屬性，且將 await 運算子套用至 `Task` 時不會產生任何值。
 
 下列程式碼會區隔 `Task_MethodAsync` 的呼叫與等候 `Task_MethodAsync` 傳回的工作。
 
@@ -126,7 +126,7 @@ Await simpleTask
 
 ## <a name="BKMK_VoidReturnType"></a> Void 傳回型別
 
-`Sub` 程式的主要用途是在事件處理常式中，沒有傳回型別（稱為其他語言的 void 傳回型別）。 void 傳回也可用來覆寫傳回 void 的方法，或執行可分類為「射後不理」(fire and forget) 之活動的方法。 不過，您應該盡可能傳回 `Task`，因為無法等候傳回 void 的非同步方法。 這種方法的任何呼叫端必須要能夠繼續完成而不需等待呼叫的非同步方法完成，且呼叫端必須與非同步方法產生的任何值或例外狀況無關。
+The primary use of `Sub` procedures is in event handlers, where there is no return type (referred to as a void return type in other languages). void 傳回也可用來覆寫傳回 void 的方法，或執行可分類為「射後不理」(fire and forget) 之活動的方法。 不過，您應該盡可能傳回 `Task`，因為無法等候傳回 void 的非同步方法。 這種方法的任何呼叫端必須要能夠繼續完成而不需等待呼叫的非同步方法完成，且呼叫端必須與非同步方法產生的任何值或例外狀況無關。
 
 傳回 void 的非同步方法的呼叫端無法攔截方法擲回的例外狀況，這類未處理的例外狀況有可能造成應用程式失敗。 如果例外狀況發生在會傳回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 的非同步方法，則例外狀況會儲存在傳回的工作中，並在等候工作時再次擲回。 因此，請確定任何可能會產生例外狀況的非同步方法具有傳回型別 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>，且會等候對方法的呼叫。
 
@@ -161,7 +161,7 @@ End Sub
 
      [ **新增專案** ] 對話方塊隨即開啟。
 
-3. 在 [**已安裝**的**範本**] 分類中，選擇 [ **Visual Basic**]，然後選擇 [ **Windows**]。 在專案類型清單中，選擇 [WPF 應用程式]。
+3. In the **Installed**, **Templates** category, choose **Visual Basic**, and then choose **Windows**. 在專案類型清單中，選擇 [WPF 應用程式]。
 
 4. 輸入 `AsyncReturnTypes` 作為專案的名稱，然後選擇 [確定] 按鈕。
 
@@ -188,7 +188,7 @@ End Sub
 
      包含文字方塊和按鈕的簡單視窗會出現在 MainWindow.xaml 的 [設計] 視窗中。
 
-7. 在**方案總管**中，開啟 mainwindow.xaml 的快捷方式功能表，然後選擇 [ **View Code**]。
+7. In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.
 
 8. 以下列程式碼取代 MainWindow.xaml.vb 中的程式碼。
 
@@ -279,7 +279,7 @@ End Sub
 
 9. 選擇 F5 鍵以執行程式，然後選擇 [ **開始** ] 按鈕。
 
-     應該會出現下列輸出：
+     The following output should appear:
 
     ```console
     Application can continue working while the Task<T> runs. . . .

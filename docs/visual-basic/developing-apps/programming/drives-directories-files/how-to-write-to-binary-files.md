@@ -1,19 +1,19 @@
 ---
-title: HOW TO：在 Visual Basic 中寫入二進位檔案
+title: 如何：寫入二進位檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], binary access
 - WriteAllBytes method [Visual Basic]
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
-ms.openlocfilehash: ab42fa50aaf39397ac51db8a4cc3a3b00f6ce878
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 72d019f5f49868bd84d0507535e8ebc547b50e25
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039408"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334437"
 ---
-# <a name="how-to-write-to-binary-files-in-visual-basic"></a>作法：在 Visual Basic 中寫入二進位檔案
+# <a name="how-to-write-to-binary-files-in-visual-basic"></a>如何：在 Visual Basic 中寫入二進位檔案
 
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> 方法會將資料寫入二進位檔案。 如果 `append` 參數為 `True`，它會將資料附加至檔案；若否，則會覆寫檔案中的資料。
 
@@ -43,7 +43,7 @@ ms.locfileid: "71039408"
 
 - 使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
 - [如何：將文字寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)

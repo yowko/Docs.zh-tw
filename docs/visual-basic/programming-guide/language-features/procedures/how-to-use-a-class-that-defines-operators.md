@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用一個類別來定義運算子 (Visual Basic)
+title: 如何：使用定義運算子的類別
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -11,35 +11,35 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: bd512adf2f06ed0fbd3d36ed3175a0928bf1c57c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ec4b4c07910100dd02cc86e882b44aa7dbd2ced
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863489"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346043"
 ---
-# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>HOW TO：使用一個類別來定義運算子 (Visual Basic)
-如果您使用的類別或結構，定義自己的運算子，您可以從 Visual Basic 中存取這些運算子。  
+# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>如何：使用定義運算子的類別 (Visual Basic)
+If you are using a class or structure that defines its own operators, you can access those operators from Visual Basic.  
   
- 類別或結構上定義的運算子，也稱為*多載*運算子。  
+ Defining an operator on a class or structure is also called *overloading* the operator.  
   
 ## <a name="example"></a>範例  
- 下列範例會存取 SQL 結構<xref:System.Data.SqlTypes.SqlString>，其定義轉換運算子 ([CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)) 中的 SQL 字串和 Visual Basic 字串之間的兩個方向。 使用`CType(` *SQL 字串運算式*，`String)`將 SQL 字串轉換成 Visual Basic 字串，並`CType(` *Visual Basic 字串運算式*， <xref:System.Data.SqlTypes.SqlString> `)`另一個方向的轉換。  
+ The following example accesses the SQL structure <xref:System.Data.SqlTypes.SqlString>, which defines the conversion operators ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) in both directions between a SQL string and a Visual Basic string. Use `CType(`*SQL string expression*, `String)` to convert a SQL string to a Visual Basic string, and `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` to convert in the other direction.  
   
  [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
   
  [!code-vb[VbVbcnProcedures#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#31)]  
   
- <xref:System.Data.SqlTypes.SqlString>結構會定義轉換運算子 ([CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)) 從`String`來<xref:System.Data.SqlTypes.SqlString>，從另一種<xref:System.Data.SqlTypes.SqlString>至`String`。 指派的陳述式`title`要`jobTitle`會使用第一個運算子，而<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>函式呼叫會使用第二個。  
+ The <xref:System.Data.SqlTypes.SqlString> structure defines a conversion operator ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) from `String` to <xref:System.Data.SqlTypes.SqlString> and another from <xref:System.Data.SqlTypes.SqlString> to `String`. The statement that assigns `title` to `jobTitle` makes use of the first operator, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function call uses the second.  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 請務必在類別或您使用的結構會定義您想要使用的運算子。 請勿假設類別或結構定義每個適用於多載的運算子。 如需可用的運算子，請參閱[Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)。  
+ Be sure the class or structure you are using defines the operator you want to use. Do not assume that the class or structure has defined every operator available for overloading. For a list of available operators, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
- 包含適當`Imports`原始程式檔的 SQL 字串開頭的陳述式 (在此情況下<xref:System.Data.SqlTypes>)。  
+ Include the appropriate `Imports` statement for the SQL string at the beginning of your source file (in this case <xref:System.Data.SqlTypes>).  
   
- 您的專案必須參考 System.Data 和 System.XML。  
+ Your project must have references to System.Data and System.XML.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [運算子程序](./operator-procedures.md)
 - [如何：定義運算子](./how-to-define-an-operator.md)

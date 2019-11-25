@@ -1,5 +1,5 @@
 ---
-title: Partial (Visual Basic)
+title: Partial
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Partial
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: acfe47f52ede289093b3554a7dd190ef3f0e2c80
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: df85571b757fd54496677bad1195fab9690b79cc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592119"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351351"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 表示類別宣告為類型的部分定義。  
@@ -27,7 +27,7 @@ ms.locfileid: "71592119"
  您可以使用 `Partial` 關鍵字，將一個類型的定義分割成數個宣告。 您可以在任意數目的不同原始程式檔中，使用任意數目的部分宣告。 不過，所有宣告都必須位於相同的組件和相同的命名空間中。  
   
 > [!NOTE]
-> Visual Basic 支援*部分方法*，通常會在部分類別中執行。 如需詳細資訊，請參閱[部分方法](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)和[子語句](../../../visual-basic/language-reference/statements/sub-statement.md)。  
+> Visual Basic supports *partial methods*, which are typically implemented in partial classes. For more information, see [Partial Methods](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) and [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md).  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,20 +45,20 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 |詞彙|定義|  
 |---|---|  
-|`attrlist`|選擇性。 套用至此類型的屬性清單。 您必須將[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)放在角括弧中（`< >`）。|  
-|`accessmodifier`|選擇性。 指定哪些程式碼可以存取此類型。 請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`Shadows`|選擇性。 請參閱[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
-|`MustInherit`|選擇性。 請參閱[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。|  
-|`NotInheritable`|選擇性。 請參閱[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)。|  
+|`attrlist`|選擇項。 套用至此類型的屬性清單。 You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets (`< >`).|  
+|`accessmodifier`|選擇項。 指定哪些程式碼可以存取此類型。 請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`Shadows`|選擇項。 See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`MustInherit`|選擇項。 See [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
+|`NotInheritable`|選擇項。 See [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
 |`name`|必要項。 此類型的名稱。 必須符合相同類型的所有其他部分宣告中定義的名稱。|  
-|`Of`|選擇性。 指定這是否為泛型類型。 請參閱[Visual Basic 中的泛型型別](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。|  
-|`typelist`|如果您使用，則[為必要項](../../../visual-basic/language-reference/statements/of-clause.md)。 請參閱[類型清單](../../../visual-basic/language-reference/statements/type-list.md)。|  
-|`Inherits`|選擇性。 請參閱[Inherits 語句](../../../visual-basic/language-reference/statements/inherits-statement.md)。|  
+|`Of`|選擇項。 指定這是否為泛型類型。 See [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
+|`typelist`|Required if you use [Of](../../../visual-basic/language-reference/statements/of-clause.md). See [Type List](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Inherits`|選擇項。 See [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
 |`classname`|如果您使用 `Inherits`，則此為必要項。 此類別衍生自的類別或介面名稱。|  
-|`Implements`|選擇性。 請參閱[Implements 語句](../../../visual-basic/language-reference/statements/implements-statement.md)。|  
+|`Implements`|選擇項。 See [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md).|  
 |`interfacenames`|如果您使用 `Implements`，則此為必要項。 此類型實作的介面名稱。|  
-|`variabledeclarations`|選擇性。 宣告類型的其他變數和事件的陳述式。|  
-|`proceduredeclarations`|選擇性。 宣告和定義類型的其他程序的陳述式。|  
+|`variabledeclarations`|選擇項。 宣告類型的其他變數和事件的陳述式。|  
+|`proceduredeclarations`|選擇項。 宣告和定義類型的其他程序的陳述式。|  
 |`End Class` 或 `End Structure`|結束此部分 `Class` 或 `Structure` 定義。|  
   
 ## <a name="remarks"></a>備註  
@@ -74,9 +74,9 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 ## <a name="behavior"></a>行為  
   
-- **宣告的聯集。** 編譯器會將此類型視為其所有部分宣告的等位。 每個部分定義的每個修飾詞都會套用至整個類型，而每個部分定義的每個成員均可用於整個類型。  
+- **Union of Declarations.** 編譯器會將此類型視為其所有部分宣告的等位。 每個部分定義的每個修飾詞都會套用至整個類型，而每個部分定義的每個成員均可用於整個類型。  
   
-- **模組中的部分類型不允許型別提升。** 如果部分定義在某個模組內，則該類型的類型提升會自動失效。 在這種情況下，一組部分定義可能會導致非預期的結果，甚至是編譯器錯誤。 如需詳細資訊，請參閱[型別提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)。  
+- **Type Promotion Not Allowed For Partial Types in Modules.** 如果部分定義在某個模組內，則該類型的類型提升會自動失效。 在這種情況下，一組部分定義可能會導致非預期的結果，甚至是編譯器錯誤。 For more information, see [Type Promotion](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
   
      只有在完整路徑相同時，編譯器才會合併部分定義。  
   
@@ -93,7 +93,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
  上述範例中的兩個部分定義可位於相同的原始程式檔或在兩個不同的原始程式檔中。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)

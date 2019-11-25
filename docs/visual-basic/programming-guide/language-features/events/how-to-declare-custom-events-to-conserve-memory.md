@@ -1,33 +1,33 @@
 ---
-title: HOW TO：宣告自訂事件以節省記憶體 (Visual Basic)
+title: 如何：宣告自訂事件以節省記憶體
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring events [Visual Basic], custom
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 87ebee87-260c-462f-979c-407874debd19
-ms.openlocfilehash: e4132f51f4dd85ad964042d05f7c5bc0a2e6e3cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3cc2d3ea57f1a8daf704c2c929baf3f2acf78c17
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973156"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345135"
 ---
-# <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>HOW TO：宣告自訂事件以節省記憶體 (Visual Basic)
-重要的應用程式保持其記憶體使用量低時，有幾種情況。 自訂事件可讓應用程式使用的記憶體只會針對它所處理的事件。  
+# <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>如何：宣告自訂事件以節省記憶體 (Visual Basic)
+There are several circumstances when it is important that an application keep its memory usage low. Custom events allow the application to use memory only for the events that it handles.  
   
- 根據預設，當類別宣告事件時，編譯器會配置記憶體來儲存事件資訊的欄位。 如果類別有許多未使用的事件，會不必要地佔用記憶體。  
+ By default, when a class declares an event, the compiler allocates memory for a field to store the event information. If a class has many unused events, they needlessly take up memory.  
   
- 而不是使用 Visual Basic 提供的事件的預設實作，您可以使用自訂的事件，更仔細管理的記憶體使用量。  
+ Instead of using the default implementation of events that Visual Basic provides, you can use custom events to manage the memory usage more carefully.  
   
 ## <a name="example"></a>範例  
- 在此範例中，類別會使用一個執行個體<xref:System.ComponentModel.EventHandlerList>類別，儲存在`Events`欄位，用於儲存事件的相關資訊。 <xref:System.ComponentModel.EventHandlerList>類別是設計用來保存委派的最佳化的清單類別。  
+ In this example, the class uses one instance of the <xref:System.ComponentModel.EventHandlerList> class, stored in the `Events` field, to store information about the events in use. The <xref:System.ComponentModel.EventHandlerList> class is an optimized list class designed to hold delegates.  
   
- 類別使用中的所有事件`Events`欄位來追蹤哪些方法會處理每個事件。  
+ All events in the class use the `Events` field to keep track of what methods are handling each event.  
   
  [!code-vb[VbVbalrEvents#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#22)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ComponentModel.EventHandlerList>
 - [事件](../../../../visual-basic/programming-guide/language-features/events/index.md)

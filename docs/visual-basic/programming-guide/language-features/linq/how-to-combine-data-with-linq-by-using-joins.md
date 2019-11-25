@@ -1,5 +1,5 @@
 ---
-title: HOW TO：以 LINQ 合併資料使用聯結 (Visual Basic)
+title: 'How to: Combine Data with LINQ by Using Joins'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], joins
@@ -9,77 +9,77 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: 127e1afa7707f31584e93f3d4b08e865d7fcedf6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7279908c5d262b65f4c4da9cd9b6c1b4117bc402
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775878"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344994"
 ---
-# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>HOW TO：以 LINQ 合併資料使用聯結 (Visual Basic)
-Visual Basic 提供`Join`和`Group Join`查詢子句可讓您結合多個集合之間的一般值為基礎的集合的內容。 這些值稱為*金鑰*值。 開發人員熟悉關聯式資料庫概念會辨識`Join`INNER JOIN 子句和`Group Join`做為有效，LEFT OUTER JOIN 子句。  
+# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>如何：使用 Joins 以 LINQ 合併資料 (Visual Basic)
+Visual Basic provides the `Join` and `Group Join` query clauses to enable you to combine the contents of multiple collections based on common values between the collections. These values are known as *key* values. Developers familiar with relational database concepts will recognize the `Join` clause as an INNER JOIN and the `Group Join` clause as, effectively, a LEFT OUTER JOIN.  
   
- 本主題中的範例將示範幾種方式使用合併資料`Join`和`Group Join`查詢子句。  
+ The examples in this topic demonstrate a few ways to combine data by using the `Join` and `Group Join` query clauses.  
   
-## <a name="create-a-project-and-add-sample-data"></a>建立專案，並將範例資料  
+## <a name="create-a-project-and-add-sample-data"></a>Create a Project and Add Sample Data  
   
-#### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>若要建立包含範例資料和類型的專案  
+#### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>To create a project that contains sample data and types  
   
-1. 若要執行本主題中的範例，請開啟 Visual Studio，並加入新的 Visual Basic 主控台應用程式專案。 按兩下建立 Visual basic 的 Module1.vb 檔案。  
+1. To run the samples in this topic, open Visual Studio and add a new Visual Basic Console Application project. Double-click the Module1.vb file created by Visual Basic.  
   
-2. 在本主題使用範例`Person`和`Pet`類型和下列程式碼範例中的資料。 此程式碼複製到預設`Module1`Visual Basic 所建立的模組。  
+2. The samples in this topic use the `Person` and `Pet` types and data from the following code example. Copy this code into the default `Module1` module created by Visual Basic.  
   
      [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
     [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
   
-## <a name="perform-an-inner-join-by-using-the-join-clause"></a>使用 Join 子句執行內部聯結  
- INNER JOIN 結合來自兩個集合的資料。 會包含符合指定的索引鍵值的項目。 會排除任何兩個集合的項目，在另一個集合中沒有相符的項目。  
+## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Perform an Inner Join by Using the Join Clause  
+ An INNER JOIN combines data from two collections. Items for which the specified key values match are included. Any items from either collection that do not have a matching item in the other collection are excluded.  
   
- 在 Visual Basic 中的 LINQ 提供執行內部聯結的兩個選項： 隱含聯結和明確聯結。  
+ In Visual Basic, LINQ provides two options for performing an INNER JOIN: an implicit join and an explicit join.  
   
- 隱含聯結指定的集合加入`From`子句，並指出在比對的索引鍵欄位`Where`子句。 Visual Basic 隱含聯結兩個集合根據指定的索引鍵欄位。  
+ An implicit join specifies the collections to be joined in a `From` clause and identifies the matching key fields in a `Where` clause. Visual Basic implicitly joins the two collections based on the specified key fields.  
   
- 您可以使用，以指定明確的聯結`Join`子句，當您想要特定的對哪一個索引鍵欄位在聯結中使用。 在此情況下，`Where`子句仍可用來篩選查詢結果。  
+ You can specify an explicit join by using the `Join` clause when you want to be specific about which key fields to use in the join. In this case, a `Where` clause can still be used to filter the query results.  
   
-#### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>若要執行使用 Join 子句的 Inner Join  
+#### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>To perform an Inner Join by using the Join clause  
   
-1. 將下列程式碼加入`Module1`若要查看這兩個隱含和明確內部聯結的範例專案中的模組。  
+1. Add the following code to the `Module1` module in your project to see examples of both an implicit and explicit inner join.  
   
      [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
-## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>使用 Group Join 子句來執行左方外部聯結  
- 左外部聯結中包含的所有項目左側集合的聯結，以及僅比對從聯結的右方集合的值。 從查詢結果會排除任何從聯結的右方集合的項目左邊的集合中沒有相符的項目。  
+## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Perform a Left Outer Join by Using the Group Join Clause  
+ A LEFT OUTER JOIN includes all the items from the left-side collection of the join and only matching values from the right-side collection of the join. Any items from the right-side collection of the join that do not have a matching item in the left-side collection are excluded from the query result.  
   
- `Group Join`子句執行時，實際上，LEFT OUTER JOIN。 通常稱左外部聯結和之間的差異`Group Join`是的子句會傳回`Group Join`右側集合中的每個項目左邊的集合中的聯結子句群組結果。 在關聯式資料庫中，左外部聯結會傳回已取消群組的結果，在查詢中的每個項目會造成在其中包含符合的項目，從這兩個聯結的集合。 在此情況下，從聯結的左側集合的項目會重複的每個相符的項目，從右邊的集合。 您會看到看起來像這樣當您完成下一個程序。  
+ The `Group Join` clause performs, in effect, a LEFT OUTER JOIN. The difference between what is typically known as a LEFT OUTER JOIN and what the `Group Join` clause returns is that the `Group Join` clause groups results from the right-side collection of the join for each item in the left-side collection. In a relational database, a LEFT OUTER JOIN returns an ungrouped result in which each item in the query result contains matching items from both collections in the join. In this case, the items from the left-side collection of the join are repeated for each matching item from the right-side collection. You will see what this looks like when you complete the next procedure.  
   
- 您可以擷取的結果`Group Join`做為已取消群組的結果，藉由擴充您的查詢傳回的項目，針對每個群組的查詢結果的查詢。 若要這麼做，您必須確定您查詢上`DefaultIfEmpty`的群組集合的方法。 這可確保，從聯結的左側集合的項目仍然包含在查詢結果即使它們有沒有符合的結果，從右邊的集合。 您可以將程式碼加入您的查詢，以從聯結的右方集合沒有相符的值時提供預設的結果值。  
+ You can retrieve the results of a `Group Join` query as an ungrouped result by extending your query to return an item for each grouped query result. To accomplish this, you have to ensure that you query on the `DefaultIfEmpty` method of the grouped collection. This ensures that items from the left-side collection of the join are still included in the query result even if they have no matching results from the right-side collection. You can add code to your query to provide a default result value when there is no matching value from the right-side collection of the join.  
   
-#### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>若要執行左方外部聯結使用 Group Join 子句  
+#### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>To perform a Left Outer Join by using the Group Join clause  
   
-1. 將下列程式碼加入`Module1`以查看群組的左方外部聯結和已取消群組的左方外部聯結的範例專案中的模組。  
+1. Add the following code to the `Module1` module in your project to see examples of both a grouped left outer join and an ungrouped left outer join.  
   
      [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
-## <a name="perform-a-join-by-using-a-composite-key"></a>使用複合索引鍵執行聯結  
- 您可以使用`And`中的關鍵字`Join`或`Group Join`子句來識別比對時所要使用的多個索引鍵欄位值所聯結之集合中。 `And`關鍵字會指定所有指定的索引鍵欄位必須符合要加入的項目。  
+## <a name="perform-a-join-by-using-a-composite-key"></a>Perform a Join by Using a Composite Key  
+ You can use the `And` keyword in a `Join` or `Group Join` clause to identify multiple key fields to use when matching values from the collections being joined. The `And` keyword specifies that all specified key fields must match for items to be joined.  
   
-#### <a name="to-perform-a-join-by-using-a-composite-key"></a>若要使用複合索引鍵執行聯結  
+#### <a name="to-perform-a-join-by-using-a-composite-key"></a>To perform a Join by using a composite key  
   
-1. 將下列程式碼加入`Module1`即可查看使用複合索引鍵的聯結的範例專案中的模組。  
+1. Add the following code to the `Module1` module in your project to see examples of a join that uses a composite key.  
   
      [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
-## <a name="run-the-code"></a>執行程式碼  
+## <a name="run-the-code"></a>Run the Code  
   
-#### <a name="to-add-code-to-run-the-examples"></a>加入程式碼以執行範例  
+#### <a name="to-add-code-to-run-the-examples"></a>To add code to run the examples  
   
-1. 取代`Sub Main`在`Module1`下列的程式碼，以執行本主題中的範例專案中的模組。  
+1. Replace the `Sub Main` in the `Module1` module in your project with the following code to run the examples in this topic.  
   
      [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
-2. 按 F5 執行範例。  
+2. Press F5 to run the examples.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

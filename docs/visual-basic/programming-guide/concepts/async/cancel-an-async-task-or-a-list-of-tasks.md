@@ -1,19 +1,19 @@
 ---
-title: 取消一項非同步工作或工作清單（Visual Basic）
+title: 取消一項非同步工作或工作清單
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 89a78e9e423ab4cce9fd3627ec433072ade238dc
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 2956582cd0c8e044fcd37ffab13686489a7c854c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419859"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347958"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>取消一項非同步工作或工作清單（Visual Basic）
+# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Cancel an Async Task or a List of Tasks (Visual Basic)
 
 如果您不想要等候非同步應用程式完成，則可以設定可用來取消非同步應用程式的按鈕。 遵循本主題中的範例，即可將取消按鈕新增至下載某個網站內容或網站清單的應用程式。
 
-這些範例會使用[微調非同步應用程式（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)所述的 UI。
+The examples use the UI that [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) describes.
 
 > [!NOTE]
 > 若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。
@@ -30,7 +30,7 @@ ms.locfileid: "73419859"
 
 2. 在功能表列上，依序選擇 [檔案]、[開啟舊檔]及 [專案/方案]。
 
-3. 在 [**開啟專案**] 對話方塊中，開啟保存解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningVB 的方案（.sln）檔案。
+3. In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.
 
 4. 在方案總管中，開啟 **CancelATask** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
 
@@ -38,7 +38,7 @@ ms.locfileid: "73419859"
 
      選擇 CTRL+F5 鍵以執行專案，而不進行偵錯。
 
- 如果您不想要下載專案，您可以參閱本主題結尾的 Mainwindow.xaml。
+ If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.
 
 ### <a name="building-the-example"></a>建置範例
 
@@ -46,7 +46,7 @@ ms.locfileid: "73419859"
 
 若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [StarterCode] 作為 [啟始專案]，而非 [CancelATask]。
 
-然後將下列變更新增至該專案的 Mainwindow.xaml 檔案。
+Then add the following changes to the MainWindow.xaml.vb file of that project.
 
 1. 宣告 `CancellationTokenSource` 變數 `cts`，這是在存取它之所有方法的範圍內。
 
@@ -124,14 +124,14 @@ ms.locfileid: "73419859"
     End Function
     ```
 
-5. 如果您未取消程式，則會產生下列輸出：
+5. If you don’t cancel the program, it produces the following output:
 
     ```console
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-    如果您在程式完成下載內容之前選擇 [**取消**] 按鈕，程式會產生下列輸出：
+    If you choose the **Cancel** button before the program finishes downloading the content, the program produces the following output:
 
     ```console
     Ready to download.
@@ -150,7 +150,7 @@ ms.locfileid: "73419859"
 
 2. 在功能表列上，依序選擇 [檔案]、[開啟舊檔]及 [專案/方案]。
 
-3. 在 [**開啟專案**] 對話方塊中，開啟保存解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningVB 的方案（.sln）檔案。
+3. In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.
 
 4. 在方案總管中，開啟 **CancelAListOfTasks** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
 
@@ -158,7 +158,7 @@ ms.locfileid: "73419859"
 
      選擇 CTRL+F5 鍵以執行專案，而不進行偵錯。
 
- 如果您不想要下載專案，您可以參閱本主題結尾的 Mainwindow.xaml。
+ If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.
 
 ### <a name="building-the-example"></a>建置範例
 
@@ -221,7 +221,7 @@ ms.locfileid: "73419859"
     Await AccessTheWebAsync(cts.Token)
     ```
 
-5. 如果您未取消程式，則會產生下列輸出：
+5. If you don’t cancel the program, it produces the following output:
 
     ```console
     Length of the downloaded string: 35939.
@@ -261,7 +261,7 @@ ms.locfileid: "73419859"
 
 ### <a name="cancel-a-task-example"></a>取消工作範例
 
-下列程式碼是取消單一工作之範例的完整 Mainwindow.xaml。
+The following code is the complete MainWindow.xaml.vb file for the example that cancels a single task.
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -346,7 +346,7 @@ End Class
 
 ### <a name="cancel-a-list-of-tasks-example"></a>取消工作清單範例
 
-下列程式碼是取消工作清單之範例的完整 Mainwindow.xaml 檔案。
+The following code is the complete MainWindow.xaml.vb file for the example that cancels a list of tasks.
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.

@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Basic 中存取 XML
+title: 存取 XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], accessing XML
@@ -8,53 +8,53 @@ helpviewer_keywords:
 - XML [Visual Basic], axis properties
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
-ms.openlocfilehash: 0540c52cf3e4cd7594f051c10832ea99cf58a34e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1fa1d94fc710272ac0ba9ea7167989da42a51fcd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756958"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351753"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>在 Visual Basic 中存取 XML
-Visual Basic 提供的 XML 軸屬性，用於存取和瀏覽[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]結構。 這些屬性會使用特殊的語法，可讓您指定的 XML 名稱來存取元素和屬性。  
+Visual Basic provides XML axis properties for accessing and navigating [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] structures. These properties use a special syntax to enable you to access elements and attributes by specifying the XML names.  
   
- 下表列出的語言功能可讓您存取 XML 項目和 Visual Basic 中的屬性。  
+ The following table lists the language features that enable you to access XML elements and attributes in Visual Basic.  
   
 ### <a name="xml-axis-properties"></a>XML 軸屬性  
   
-|屬性描述|範例|描述|  
+|Property description|範例|描述|  
 |--------------------------|-------------|-----------------|  
-|*子軸*|`contact.<phone>`|取得所有`phone`子項目的項目`contact`項目。|  
-|*屬性軸*|`phone.@type`|取得所有`type`屬性的`phone`項目。|  
-|*descendant 軸*|`contacts...<name>`|取得所有`name`的項目`contacts`項目，不論發生的階層中深度。|  
-|*擴充索引子*|`contacts...<name>(0)`|取得第一個`name`序列中的項目。|  
-|*value*|`contacts...<name>.Value`|取得第一個物件的字串表示，在順序中，或`Nothing`如果序列是空的。|  
+|*child axis*|`contact.<phone>`|Gets all `phone` elements that are child elements of the `contact` element.|  
+|*attribute axis*|`phone.@type`|Gets all `type` attributes of the `phone` element.|  
+|*descendant axis*|`contacts...<name>`|Gets all `name` elements of the `contacts` element, regardless of how deep in the hierarchy they occur.|  
+|*extension indexer*|`contacts...<name>(0)`|Gets the first `name` element from the sequence.|  
+|*值*|`contacts...<name>.Value`|Gets the string representation of the first object in the sequence, or `Nothing` if the sequence is empty.|  
   
-## <a name="in-this-section"></a>本節內容  
- [如何：存取 XML 子代項目](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
- 示範如何使用 descendant 軸屬性來存取所有的 XML 項目中具有指定的名稱，以及包含在指定的 XML 項目。  
+## <a name="in-this-section"></a>本章節內容  
+ [如何：存取 XML 子系項目](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
+ Shows how to use a descendant axis property to access all XML elements that have a specified name and that are contained under a specified XML element.  
   
  [如何：存取 XML 子項目](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-child-elements.md)  
- 示範如何使用子系軸屬性，來存取所有的 XML 子項目中的 XML 項目具有指定的名稱。  
+ Shows how to use a child axis property to access all XML child elements that have a specified name in an XML element.  
   
  [如何：存取 XML 屬性](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-attributes.md)  
- 示範如何使用屬性軸屬性，存取所有的 XML 屬性中的 XML 項目具有指定的名稱。  
+ Shows how to use an attribute axis property to access all XML attributes that have a specified name in an XML element.  
   
  [如何：宣告和使用 XML 命名空間前置詞](../../../../visual-basic/programming-guide/language-features/xml/how-to-declare-and-use-xml-namespace-prefixes.md)  
- 示範如何宣告 XML 命名空間前置詞，並使用它來建立及存取 XML 項目。  
+ Shows how to declare an XML namespace prefix and use it to create and access XML elements.  
   
 ## <a name="related-sections"></a>相關章節  
  [XML 軸屬性](../../../../visual-basic/language-reference/xml-axis/index.md)  
- 提供各節描述各種不同的 XML 存取內容的連結。  
+ Provides links to sections describing the various XML access properties.  
   
  [Visual Basic 中的 LINQ to XML 概觀](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- 簡介如何使用[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Visual Basic 中。  
+ Provides an introduction to using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
   
  [在 Visual Basic 中建立 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- 提供在 Visual Basic 中使用 XML 常值的簡介。  
+ Provides an introduction to using XML literals in Visual Basic.  
   
  [在 Visual Basic 中管理 XML](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
- 提供載入及修改 XML，在 Visual Basic 中的相關章節的連結。  
+ Provides links to sections about loading and modifying XML in Visual Basic.  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- 提供描述如何使用章節的連結[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Visual Basic 中。
+ Provides links to sections describing how to use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.

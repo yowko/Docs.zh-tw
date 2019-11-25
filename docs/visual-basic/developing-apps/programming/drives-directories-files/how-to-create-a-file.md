@@ -1,27 +1,31 @@
 ---
-title: 作法：在 Visual Basic 中建立檔案
+title: 如何：建立檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - text files [Visual Basic], creating
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
-ms.openlocfilehash: f24fdd6ce1fea7540c33e4a2fdfc06885825f76a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 20533ec01d3198d499312ed0c15ec8cca2ff70bd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628990"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348802"
 ---
-# <a name="how-to-create-a-file-in-visual-basic"></a>作法：在 Visual Basic 中建立檔案
+# <a name="how-to-create-a-file-in-visual-basic"></a>如何：在 Visual Basic 中建立檔案
+
 這個範例會在 <xref:System.IO.File> 類別中使用 <xref:System.IO.File.Create%2A> 方法，以在指定的路徑中建立空白文字檔。  
   
 ## <a name="example"></a>範例  
+
  [!code-vb[VbFileIOMisc#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/class2.vb#1)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
+
  使用 `file` 變數，以寫入檔案。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
+
  如果檔案已存在，則會予以取代。  
   
  以下條件可能會造成例外狀況：  
@@ -39,13 +43,14 @@ ms.locfileid: "64628990"
 - 此路徑只是一個冒號 ":" (<xref:System.NotSupportedException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
+
  在部分信任環境中，可能會擲回 <xref:System.Security.SecurityException>。  
   
  <xref:System.IO.File.Create%2A> 方法呼叫需要 <xref:System.Security.Permissions.FileIOPermission>。  
   
  如果使用者無權建立檔案，則會擲回 <xref:System.UnauthorizedAccessException>。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO>
 - <xref:System.IO.File.Create%2A>

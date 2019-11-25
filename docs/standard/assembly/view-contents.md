@@ -1,5 +1,5 @@
 ---
-title: 如何：視圖元件內容
+title: 'How to: View assembly contents'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, viewing information
@@ -14,28 +14,28 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: e59f58b5d7acc2c5501c7dc4037bd0e90620caba
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 72b02209d74b6b183af6c11d9bd037889ea08543
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732925"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347048"
 ---
-# <a name="how-to-view-assembly-contents"></a>如何：視圖元件內容
+# <a name="how-to-view-assembly-contents"></a>How to: View assembly contents
 
-您可以使用 [Ildasm.exe (IL 反組譯工具)](../../framework/tools/ildasm-exe-il-disassembler.md) 來檢視檔案中的 Microsoft 中繼語言 (MSIL) 資訊。 如果正在檢查的檔案是元件，這種資訊可以包含元件的屬性和其他模組和元件的參考。 這項資訊有助於判斷檔案是否為元件或元件的一部分，以及檔案是否有其他模組或元件的參考。
+您可以使用 [Ildasm.exe (IL 反組譯工具)](../../framework/tools/ildasm-exe-il-disassembler.md) 來檢視檔案中的 Microsoft 中繼語言 (MSIL) 資訊。 If the file being examined is an assembly, this information can include the assembly's attributes and references to other modules and assemblies. This information can be helpful in determining whether a file is an assembly or part of an assembly and whether the file has references to other modules or assemblies.
 
-若要使用*Ildasm*顯示元件的內容，請在命令提示字元中輸入**Ildasm \<元件名稱 >** 。 例如，下列命令會反組譯*Hello .exe*元件。
+To display the contents of an assembly using *Ildasm.exe*, enter **ildasm \<assembly name>** at a command prompt. For example, the following command disassembles the *Hello.exe* assembly.
 
 ```cmd
 ildasm Hello.exe
 ```
 
-若要查看組件資訊清單資訊，請按兩下 [MSIL 解譯器] 視窗中的**資訊清單**圖示。
+To view assembly manifest information, double-click the **Manifest** icon in the MSIL Disassembler window.
 
 ## <a name="example"></a>範例
 
-下列範例會從基本的「Hello World」程式開始。 編譯器之後，請使用*Ildasm*來拆解 *.exe*元件，並查看組件資訊清單。
+The following example starts with a basic "Hello World" program. After compiling the program, use *Ildasm.exe* to disassemble the *Hello.exe* assembly and view the assembly manifest.
 
 ```cpp
 using namespace System;
@@ -68,8 +68,6 @@ class MainApp
 ```
 
 ```vb
-Imports System
-
 Class MainApp
     Public Shared Sub Main()
         Console.WriteLine("Hello World using Visual Basic!")
@@ -77,7 +75,7 @@ Class MainApp
 End Class
 ```
 
-在 *.exe*元件*上執行*命令 tlbimp.exe，然後按兩下 [MSIL 解譯器] 視窗中的**資訊清單**圖示，會產生下列輸出：
+Running the command *ildasm.exe* on the *Hello.exe* assembly and double-clicking the **Manifest** icon in the MSIL Disassembler window produces the following output:
 
 ```output
 // Metadata version: v4.0.30319
@@ -104,27 +102,27 @@ End Class
 // Image base: 0x00600000
 ```
 
-下表描述範例中使用的 *.exe*元件之組件資訊清單中的每個指示詞：
+The following table describes each directive in the assembly manifest of the *Hello.exe* assembly used in the example:
 
 |指示詞|描述|
 |---------------|-----------------|
-|**。元件 extern \<元件名稱 >**|指定另一個組件，其中包含目前模組所參考的項目 (在此範例中為 `mscorlib`)。|
-|**。 publickeytoken \<token >**|指定所參考組件之實際金鑰的權杖。|
-|**ver \<版本號碼 >**|指定所參考組件的版本號碼。|
-|**。元件 \<元件名稱 >**|指定組件名稱。|
-|**雜湊演算法 \<int32 值 >**|指定使用的雜湊演算法。|
-|**ver \<版本號碼 >**|指定組件的版本號碼。|
-|**。模組 \<檔案名 >**|指定構成組件之模組的名稱。 在此範例中，組件只包含一個檔案。|
-|**。子系統 \<值 >**|指定程式所需的應用程式環境。 在此範例中，值 3 指出從主控台執行這個可執行檔。|
+|**.assembly extern \<assembly name>**|指定另一個組件，其中包含目前模組所參考的項目 (在此範例中為 `mscorlib`)。|
+|**.publickeytoken \<token>**|指定所參考組件之實際金鑰的權杖。|
+|**.ver \<version number>**|指定所參考組件的版本號碼。|
+|**.assembly \<assembly name>**|指定組件名稱。|
+|**.hash algorithm \<int32 value>**|指定使用的雜湊演算法。|
+|**.ver \<version number>**|指定組件的版本號碼。|
+|**.module \<file name>**|指定構成組件之模組的名稱。 在此範例中，組件只包含一個檔案。|
+|**.subsystem \<value>**|指定程式所需的應用程式環境。 在此範例中，值 3 指出從主控台執行這個可執行檔。|
 |**.corflags**|中繼資料中目前保留的欄位。|
 
-根據組件的內容，組件資訊清單可以包含許多不同的指示詞。 如需組件資訊清單中的詳細指示詞清單，請參閱 Ecma 檔，特別是「分割區 II：元資料定義和語義」和「資料分割 III： CIL 指令集」：
+根據組件的內容，組件資訊清單可以包含許多不同的指示詞。 For an extensive list of the directives in the assembly manifest, see the Ecma documentation, especially "Partition II: Metadata Definition and Semantics" and "Partition III: CIL Instruction Set":
 
-- [ECMA C#和通用語言基礎結構標準](/dotnet/standard/components#applicable-standards)
-- [標準 ECMA-335-通用語言基礎結構（CLI）](http://www.ecma-international.org/publications/standards/Ecma-335.htm)
+- [ECMA C# and Common Language Infrastructure standards](/dotnet/standard/components#applicable-standards)
+- [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)
 
 ## <a name="see-also"></a>請參閱
 
 - [應用程式定義域和組件](../../framework/app-domains/application-domains.md#application-domains-and-assemblies)
-- [應用程式域和元件的 how to 主題](../../framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
+- [Application domains and assemblies how-to topics](../../framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
 - [Ildasm.exe (IL 反組譯工具)](../../framework/tools/ildasm-exe-il-disassembler.md)

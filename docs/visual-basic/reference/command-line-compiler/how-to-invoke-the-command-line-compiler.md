@@ -1,5 +1,5 @@
 ---
-title: 作法：叫用命令列編譯器（Visual Basic）
+title: 如何：叫用命令列編譯器
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -7,58 +7,58 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: a81d5b4f4eae76b0306e2d27475cb8527bda0ff2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3b34ebba68c9c9b2a8335822d0ffaef2a9b06d7c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054223"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344264"
 ---
-# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>作法：叫用命令列編譯器（Visual Basic）
+# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>如何：叫用命令列編譯器 (Visual Basic)
 
-您可以叫用命令列編譯器，方法是在命令列中輸入其可執行檔的名稱，也就是 MS-DOS 提示字元。 如果您從預設的 Windows 命令提示字元進行編譯，則必須輸入可執行檔的完整路徑。 若要覆寫此預設行為，您可以使用 Visual Studio 的開發人員命令提示字元，或修改 PATH 環境變數。 這兩種方法都可讓您直接輸入編譯器名稱，從任何目錄進行編譯。
+You can invoke the command-line compiler by typing the name of its executable file into the command line, also known as the MS-DOS prompt. If you compile from the default Windows Command Prompt, you must type the fully qualified path to the executable file. To override this default behavior, you can either use the Developer Command Prompt for Visual Studio, or modify the PATH environment variable. Both allow you to compile from any directory by simply typing the compiler name.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>若要使用適用于 Visual Studio 的開發人員命令提示字元叫用編譯器
+## <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>To invoke the compiler using the Developer Command Prompt for Visual Studio
 
-1. 開啟 Microsoft Visual Studio 程式群組內的 [Visual Studio Tools 程式] 資料夾。
+1. Open the Visual Studio Tools program folder within the Microsoft Visual Studio program group.
 
-2. 如果安裝 Visual Studio，您可以使用 Visual Studio 的開發人員命令提示字元，從電腦上的任何目錄存取編譯器。
+2. You can use the Developer Command Prompt for Visual Studio to access the compiler from any directory on your machine, if Visual Studio is installed.
 
-3. 叫用 Visual Studio 的開發人員命令提示字元。
+3. Invoke the Developer Command Prompt for Visual Studio.
 
-4. 在命令列中輸入`vbc.exe` *sourceFileName* ，然後按 enter。
+4. At the command line, type `vbc.exe` *sourceFileName* and then press ENTER.
 
-    例如，如果您將原始程式碼儲存在名`SourceFiles`為的目錄中，您會開啟命令提示字元，然後輸入`cd SourceFiles`以變更至該目錄。 如果目錄包含名為`Source.vb`的原始程式檔，您可以輸入`vbc.exe Source.vb`來編譯它。
+    For example, if you stored your source code in a directory called `SourceFiles`, you would open the Command Prompt and type `cd SourceFiles` to change to that directory. If the directory contained a source file named `Source.vb`, you could compile it by typing `vbc.exe Source.vb`.
 
-## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>若要將 PATH 環境變數設定為 Windows 命令提示字元的編譯器
+## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>To set the PATH environment variable to the compiler for the Windows Command Prompt
 
-1. 使用 Windows 搜尋功能，在您的本機磁片上尋找 Vbc。
+1. Use the Windows Search feature to find Vbc.exe on your local disk.
 
-    編譯器所在目錄的確切名稱，取決於 Windows 目錄的位置和安裝的「.NET Framework」版本。 如果您已安裝多個版本的「.NET Framework」，您必須決定要使用哪個版本（通常是最新版本）。
+    The exact name of the directory where the compiler is located depends on the location of the Windows directory and the version of the ".NET Framework" installed. If you have more than one version of the ".NET Framework" installed, you must determine which version to use (typically the latest version).
 
-2. 在 **開始** 功能表中，以滑鼠右鍵按一下 **我的電腦**，然後從快捷方式功能表按一下 **屬性**。
+2. From your **Start** Menu, right-click **My Computer**, and then click **Properties** from the shortcut menu.
 
-3. 按一下 [ **Advanced** ] 索引標籤，然後按一下 [**環境變數**]。
+3. Click the **Advanced** tab, and then click **Environment Variables**.
 
-4. 在 [**系統**變數] 窗格中，從清單中選取 [**路徑**]，然後按一下 [**編輯**]。
+4. In the **System** variables pane, select **Path** from the list and click **Edit**.
 
-5. 在 [**編輯系統**變數] 對話方塊中，將插入點移至 [**變數值**] 欄位中的字串結尾，然後輸入分號（;)後面接著在步驟1中找到的完整目錄名稱。
+5. In the **Edit System** Variable dialog box, move the insertion point to the end of the string in the **Variable Value** field and type a semicolon (;) followed by the full directory name found in Step 1.
 
-6. 按一下 **[確定]** 以確認您的編輯，並關閉對話方塊。
+6. Click **OK** to confirm your edits and close the dialog boxes.
 
-     變更 PATH 環境變數之後，您可以從電腦上的任何目錄，在 Windows 命令提示字元中執行 Visual Basic 編譯器。
+     After you change the PATH environment variable, you can run the Visual Basic compiler at the Windows Command Prompt from any directory on the computer.
 
-## <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>使用 Windows 命令提示字元叫用編譯器
+## <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>To invoke the compiler using the Windows Command Prompt
 
-1. 在 [**開始**] 功能表中，按一下 [**附屬**應用程式] 資料夾，然後開啟**Windows 命令提示**字元。
+1. From the **Start** menu, click on the **Accessories** folder, and then open the **Windows Command Prompt**.
 
-2. 在命令列中輸入`vbc.exe` *sourceFileName* ，然後按 enter。
+2. At the command line, type `vbc.exe`*sourceFileName* and then press ENTER.
 
-     例如，如果您將原始程式碼儲存在名`SourceFiles`為的目錄中，您會開啟命令提示字元，然後輸入`cd SourceFiles`以變更至該目錄。 如果目錄包含名為`Source.vb`的原始程式檔，您可以輸入`vbc.exe Source.vb`來編譯它。
+     For example, if you stored your source code in a directory called `SourceFiles`, you would open the Command Prompt and type `cd SourceFiles` to change to that directory. If the directory contained a source file named `Source.vb`, you could compile it by typing `vbc.exe Source.vb`.
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

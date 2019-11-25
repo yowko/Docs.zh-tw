@@ -1,5 +1,5 @@
 ---
-title: Join 子句 (Visual Basic)
+title: Join 子句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryJoinIn
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: b5211d0ed3f618013dc9fe764a6d7b2db8177c26
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: b0baca9f897a00b3c6c67699629477ff385d6ef7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582286"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353270"
 ---
 # <a name="join-clause-visual-basic"></a>Join 子句 (Visual Basic)
 
-將兩個集合合併成單一集合。 聯結作業是以相符的索引鍵為基礎，並使用 `Equals` 運算子。
+將兩個集合合併成單一集合。 The join operation is based on matching keys and uses the `Equals` operator.
 
 ## <a name="syntax"></a>語法
 
@@ -32,45 +32,45 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 
 ## <a name="parts"></a>組件
 
-需要 `element`。 要聯結之集合的控制項變數。
+需要 `element`。 The control variable for the collection being joined.
 
 `collection`  
-必要項。 要與 `Join` 運算子左邊所識別之集合結合的集合。 @No__t_0 子句可以嵌套在另一個 `Join` 子句中，或在 `Group Join` 子句中。
+必要項。 The collection to combine with the collection identified on the left side of the `Join` operator. A `Join` clause can be nested in another `Join` clause, or in a `Group Join` clause.
 
 `joinClause`  
-選擇項。 一或多個額外的 `Join` 子句，以進一步精簡查詢。
+選擇項。 One or more additional `Join` clauses to further refine the query.
 
 `groupJoinClause`  
-選擇項。 一或多個額外的 `Group Join` 子句，以進一步精簡查詢。
+選擇項。 One or more additional `Group Join` clauses to further refine the query.
 
 `key1` `Equals` `key2`  
-必要項。 識別要聯結之集合的索引鍵。 您必須使用 `Equals` 運算子來比較所聯結之集合中的索引鍵。 您可以使用 `And` 運算子來結合聯結條件，以識別多個索引鍵。 `key1` 必須來自 `Join` 運算子左邊的集合。 `key2` 必須來自 `Join` 運算子右邊的集合。
+必要項。 Identifies keys for the collections being joined. You must use the `Equals` operator to compare keys from the collections being joined. You can combine join conditions by using the `And` operator to identify multiple keys. `key1` must be from the collection on the left side of the `Join` operator. `key2` must be from the collection on the right side of the `Join` operator.
 
-聯結條件中使用的索引鍵可以是包含集合中一個以上專案的運算式。 不過，每個索引鍵運算式只能包含其各自集合中的專案。
+The keys used in the join condition can be expressions that include more than one item from the collection. However, each key expression can contain only items from its respective collection.
 
 ## <a name="remarks"></a>備註
 
-@No__t_0 子句會根據所聯結之集合中的相符索引鍵值，結合兩個集合。 產生的集合可以包含 `Join` 運算子左邊識別之集合中的任何值組合，以及在 `Join` 子句中識別的集合。 查詢只會傳回符合 `Equals` 運算子所指定條件的結果。 這相當於 SQL 中的 `INNER JOIN`。
+The `Join` clause combines two collections based on matching key values from the collections being joined. The resulting collection can contain any combination of values from the collection identified on the left side of the `Join` operator and the collection identified in the `Join` clause. The query will return only results for which the condition specified by the `Equals` operator is met. This is equivalent to an `INNER JOIN` in SQL.
 
-您可以在查詢中使用多個 `Join` 子句，將兩個或更多個集合聯結至單一集合。
+You can use multiple `Join` clauses in a query to join two or more collections into a single collection.
 
-您可以執行隱含聯結來結合集合，而不使用 `Join` 子句。 若要這麼做，請在您的 `From` 子句中包含多個 `In` 子句，並指定 `Where` 子句來識別您要用於聯結的索引鍵。
+You can perform an implicit join to combine collections without the `Join` clause. To do this, include multiple `In` clauses in your `From` clause and specify a `Where` clause that identifies the keys that you want to use for the join.
 
-您可以使用 `Group Join` 子句，將集合合併成單一階層式集合。 這就像是 SQL 中的 `LEFT OUTER JOIN`。
+You can use the `Group Join` clause to combine collections into a single hierarchical collection. This is like a `LEFT OUTER JOIN` in SQL.
 
 ## <a name="example"></a>範例
 
-下列程式碼範例會執行隱含聯結，以結合客戶清單與訂單。
+The following code example performs an implicit join to combine a list of customers with their orders.
 
 [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]
 
 ## <a name="example"></a>範例
 
-下列程式碼範例會使用 `Join` 子句來聯結兩個集合。
+The following code example joins two collections by using the `Join` clause.
 
 [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]
 
-這個範例會產生類似下列的輸出：
+This example will produce output similar to the following:
 
 `winlogon (968), Windows Logon`
 
@@ -80,11 +80,11 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 
 ## <a name="example"></a>範例
 
-下列程式碼範例會使用具有兩個索引鍵資料行的 `Join` 子句來聯結兩個集合。
+The following code example joins two collections by using the `Join` clause with two key columns.
 
 [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]
 
-此範例會產生類似下列的輸出：
+The example will produce output similar to the following:
 
 `winlogon (968), Windows Logon, Priority = 13`
 

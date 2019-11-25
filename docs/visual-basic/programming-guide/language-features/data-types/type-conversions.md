@@ -1,5 +1,5 @@
 ---
-title: Visual Basic 中的類型轉換
+title: 類型轉換
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [Visual Basic], type
@@ -10,38 +10,38 @@ helpviewer_keywords:
 - changing data types [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
-ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbf0c9877cf9a9b4364c8c058c61e847ad7bf049
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663280"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348714"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Visual Basic 中的類型轉換
-值從一種資料類型變更為另一種類型的程序稱為*轉換*。 轉換為*widening*或是*縮小*，取決於相關類型的資料容量。 它們也是*隱含*或是*明確*，取決於在原始程式碼中的語法。  
+The process of changing a value from one data type to another type is called *conversion*. Conversions are either *widening* or *narrowing*, depending on the data capacities of the types involved. They are also *implicit* or *explicit*, depending on the syntax in the source code.  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [擴展和縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- 說明轉換的目的型別是否可以存放資料分類。  
+ Explains conversions classified by whether the destination type can hold the data.  
   
  [隱含和明確轉換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- 討論分類是否 Visual Basic 它們會自動執行的轉換。  
+ Discusses conversions classified by whether Visual Basic performs them automatically.  
   
  [字串與其他類型之間的轉換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- 說明轉換字串和數字，介於`Boolean`，或日期/時間值。  
+ Illustrates converting between strings and numeric, `Boolean`, or date/time values.  
   
- [如何：將物件轉換成 Visual Basic 中的另一個類型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- 示範如何轉換`Object`變數設為任何其他資料類型。  
+ [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ Shows how to convert an `Object` variable to any other data type.  
   
  [陣列轉換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- 逐步執行不同的資料類型的陣列之間轉換的程序。  
+ Steps you through the process of converting between arrays of different data types.  
   
 ## <a name="related-sections"></a>相關章節  
  [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- 介紹 Visual Basic 資料類型，並說明如何使用它們。  
+ Introduces the Visual Basic data types and describes how to use them.  
   
  [資料類型](../../../../visual-basic/language-reference/data-types/index.md)  
- 列出 Visual Basic 所提供的基本資料類型。  
+ Lists the elementary data types supplied by Visual Basic.  
   
  [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- 討論使用資料型別時可能發生的一些常見問題。
+ Discusses some common problems that can arise when working with data types.

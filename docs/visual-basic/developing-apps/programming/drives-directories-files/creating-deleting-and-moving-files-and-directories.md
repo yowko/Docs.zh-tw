@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Basic 中建立、刪除和移動檔案和目錄
+title: 建立、刪除和移動檔案和目錄
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [Visual Basic], moving files and directories
@@ -22,17 +22,19 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming folders
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
-ms.openlocfilehash: 8b734b553e0ef4c14e372892e53b1184798390e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8e0b291c0bb526c21654a1e8c08bd168d95ac53a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590942"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348915"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>在 Visual Basic 中建立、刪除和移動檔案和目錄
+
 本節會列出在 Visual Basic 中與建立、刪除、移動和重新命名檔案及目錄建立關聯的工作。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
+
  [如何：將具有特定模式的檔案複製到目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
  示範如何將有特定檔名模式的檔案，例如僅 .txt 檔案，複製到目錄。  
   
@@ -76,6 +78,7 @@ ms.locfileid: "33590942"
  示範如何使用 `My` 方法來合併檔案路徑。  
   
 ## <a name="reference"></a>參考資料  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  描述 `My.Computer.FileSystem` 物件和其成員。  
   
@@ -116,6 +119,7 @@ ms.locfileid: "33590942"
  描述 `SpecialDirectories` 物件。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  列出與讀取檔案建立關聯的工作。  
   

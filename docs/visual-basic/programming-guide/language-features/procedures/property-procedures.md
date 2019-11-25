@@ -1,5 +1,5 @@
 ---
-title: 屬性程序 (Visual Basic)
+title: 屬性程序
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Set statement [Visual Basic], Property procedures
@@ -13,35 +13,35 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: 118c9e776813f303ed921946f4cf6f1236ac02e3
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a4b8ac3e27348764f537ee9502ce1fbb165bb3ef
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040965"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352568"
 ---
 # <a name="property-procedures-visual-basic"></a>屬性程序 (Visual Basic)
 
-屬性程式是一系列的 Visual Basic 語句，可操作模組、類別或結構上的自訂屬性。 屬性程式也稱為*屬性存取*子。
+A property procedure is a series of Visual Basic statements that manipulate a custom property on a module, class, or structure. Property procedures are also known as *property accessors*.
 
-Visual Basic 提供下列屬性程式：
+Visual Basic provides for the following property procedures:
 
-- `Get` 程式會傳回屬性的值。 當您存取運算式中的屬性時，就會呼叫它。
-- `Set` 程式會將屬性設定為值，包括物件參考。 當您將值指派給屬性時，就會呼叫它。
+- A `Get` procedure returns the value of a property. It is called when you access the property in an expression.
+- A `Set` procedure sets a property to a value, including an object reference. It is called when you assign a value to the property.
 
-您通常會使用 `Get` 和 `Set` 語句來定義成對的屬性程式，但如果該屬性為唯讀（[Get 語句](../../../../visual-basic/language-reference/statements/get-statement.md)）或僅限寫入（[Set 語句](../../../../visual-basic/language-reference/statements/set-statement.md)），則可以單獨定義其中一個程式。
+You usually define property procedures in pairs, using the `Get` and `Set` statements, but you can define either procedure alone if the property is read-only ([Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md)) or write-only ([Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md)).
 
-使用自動執行的屬性時，您可以省略 `Get` 和 `Set` 程式。 如需詳細資訊，請參閱[自動實作的屬性](./auto-implemented-properties.md)。
+You can omit the `Get` and `Set` procedure when using an auto-implemented property. 如需詳細資訊，請參閱[自動實作的屬性](./auto-implemented-properties.md)。
 
-您可以在類別、結構和模組中定義屬性。 預設會 `Public` 屬性，這表示您可以從應用程式中可存取屬性容器的任何位置呼叫它們。
+You can define properties in classes, structures, and modules. Properties are `Public` by default, which means you can call them from anywhere in your application that can access the property's container.
 
-如需屬性和變數的比較，請參閱[Visual Basic 中屬性和變數之間的差異](differences-between-properties-and-variables.md)。
+For a comparison of properties and variables, see [Differences Between Properties and Variables in Visual Basic](differences-between-properties-and-variables.md).
 
-## <a name="declaration-syntax"></a>宣告語法
+## <a name="declaration-syntax"></a>Declaration syntax
 
-屬性本身是由包含在[Property 語句](../../../../visual-basic/language-reference/statements/property-statement.md)和 `End Property` 語句內的程式碼區塊所定義。 在此區塊內，每個屬性程式會顯示為包含在宣告語句（`Get` 或 `Set`）和相符 `End` 宣告中的內部區塊。
+A property itself is defined by a block of code enclosed within the [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. Inside this block, each property procedure appears as an internal block enclosed within a declaration statement (`Get` or `Set`) and the matching `End` declaration.
 
-宣告屬性和其程式的語法如下：
+The syntax for declaring a property and its procedures is as follows:
 
 ```vb
 [Default] [Modifiers] Property PropertyName[(ParameterList)] [As DataType]
@@ -60,62 +60,62 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]
 ```
 
-`Modifiers` 可以指定有關多載、覆寫、共用和遮蔽的存取層級，以及屬性為唯讀或僅限寫入的相關資訊。 `Get` 或 `Set` 程式上的 `AccessLevel` 可以是比為屬性本身指定之存取層級更嚴格的任何層級。 如需詳細資訊，請參閱[Property 語句](../../../../visual-basic/language-reference/statements/property-statement.md)。
+The `Modifiers` can specify access level and information regarding overloading, overriding, sharing, and shadowing, as well as whether the property is read-only or write-only. The `AccessLevel` on the `Get` or `Set` procedure can be any level that is more restrictive than the access level specified for the property itself. For more information, see [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md).
 
 ### <a name="data-type"></a>資料類型
 
-屬性的資料類型和主體存取層級是在 `Property` 語句中定義，而不是在屬性程式中。 屬性只能有一個資料類型。 例如，您不能定義屬性來儲存 `Decimal` 值，而是抓取 `Double` 值。
+A property's data type and principal access level are defined in the `Property` statement, not in the property procedures. A property can have only one data type. For example, you cannot define a property to store a `Decimal` value but retrieve a `Double` value.
 
-### <a name="access-level"></a>存取層級
+### <a name="access-level"></a>Access Level
 
-不過，您可以定義屬性的主體存取層級，並在其中一個屬性程式中進一步限制存取層級。 例如，您可以定義一個 `Public` 屬性，然後定義一個 `Private Set` 的程式。 `Get` 程式仍然 `Public`。 您只能在其中一個屬性程式中變更存取層級，而且只能讓它比主要存取層級更嚴格。 如需詳細資訊，請參閱[如何：使用混合存取層級宣告屬性](how-to-declare-a-property-with-mixed-access-levels.md)。
+However, you can define a principal access level for a property and further restrict the access level in one of its property procedures. For example, you can define a `Public` property and then define a `Private Set` procedure. The `Get` procedure remains `Public`. You can change the access level in only one of a property's procedures, and you can only make it more restrictive than the principal access level. For more information, see [How to: Declare a Property with Mixed Access Levels](how-to-declare-a-property-with-mixed-access-levels.md).
 
-## <a name="parameter-declaration"></a>參數宣告
+## <a name="parameter-declaration"></a>Parameter declaration
 
-您可以用與[Sub 程式](sub-procedures.md)相同的方式宣告每個參數，但必須 `ByVal`傳遞機制。
+You declare each parameter the same way you do for [Sub Procedures](sub-procedures.md), except that the passing mechanism must be `ByVal`.
 
-參數清單中每個參數的語法如下：
+The syntax for each parameter in the parameter list is as follows:
 
 ```vb
 [Optional] ByVal [ParamArray] parametername As datatype
 ```
 
-如果參數是選擇性的，您也必須提供預設值做為其宣告的一部分。 指定預設值的語法如下：
+If the parameter is optional, you must also supply a default value as part of its declaration. The syntax for specifying a default value is as follows:
 
 ```vb
 Optional ByVal parametername As datatype = defaultvalue
 ```
 
-## <a name="property-value"></a>屬性值
+## <a name="property-value"></a>Property value
 
-在 `Get` 程式中，傳回值會提供給呼叫運算式做為屬性的值。
+In a `Get` procedure, the return value is supplied to the calling expression as the value of the property.
 
-在 `Set` 程式中，新的屬性值會傳遞至 `Set` 語句的參數。 如果您明確宣告參數，則必須使用與屬性相同的資料類型來宣告它。 如果您未宣告參數，編譯器會使用隱含參數 `Value` 來代表要指派給屬性的新值。
+In a `Set` procedure, the new property value is passed to the parameter of the `Set` statement. If you explicitly declare a parameter, you must declare it with the same data type as the property. If you do not declare a parameter, the compiler uses the implicit parameter `Value` to represent the new value to be assigned to the property.
 
-## <a name="calling-syntax"></a>呼叫語法
+## <a name="calling-syntax"></a>Calling syntax
 
-藉由參考屬性，您可以隱含地叫用屬性程式。 使用屬性的名稱與使用變數名稱的方式相同，不同之處在于您必須為非選擇性的所有引數提供值，而且必須將引數清單括在括弧中。 如果未提供任何引數，您可以選擇性地省略括弧。
+You invoke a property procedure implicitly by making reference to the property. You use the name of the property the same way you would use the name of a variable, except that you must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses.
 
-隱含呼叫 `Set` 程式的語法如下所示：
+The syntax for an implicit call to a `Set` procedure is as follows:
 
 ```vb
 propertyname[(argumentlist)] = expression
 ```
 
-隱含呼叫 `Get` 程式的語法如下所示：
+The syntax for an implicit call to a `Get` procedure is as follows:
 
 ```vb
 lvalue = propertyname[(argumentlist)]
 Do While (propertyname[(argumentlist)] > expression)
 ```
 
-### <a name="illustration-of-declaration-and-call"></a>宣告和呼叫的圖例
+### <a name="illustration-of-declaration-and-call"></a>Illustration of declaration and call
 
-下列屬性會將完整名稱儲存為兩個組成名稱、名字和姓氏。 當呼叫程式碼讀取 `fullName`時，`Get` 程式會結合兩個組成名稱，並傳回完整名稱。 當呼叫程式碼指派新的完整名稱時，`Set` 程式會嘗試將它分成兩個組成的名稱。 如果找不到空間，則會將它全部儲存為名字。
+The following property stores a full name as two constituent names, the first name and the last name. When the calling code reads `fullName`, the `Get` procedure combines the two constituent names and returns the full name. When the calling code assigns a new full name, the `Set` procedure attempts to break it into two constituent names. If it does not find a space, it stores it all as the first name.
 
 [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]
 
-下列範例會顯示 `fullName`的屬性程式的一般呼叫：
+The following example shows typical calls to the property procedures of `fullName`:
 
 [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]
 
@@ -125,9 +125,9 @@ Do While (propertyname[(argumentlist)] > expression)
 - [函式程序](function-procedures.md)
 - [運算子程序](operator-procedures.md)
 - [程序參數和引數](procedure-parameters-and-arguments.md)
-- [Visual Basic 中的屬性和變數之間的差異](differences-between-properties-and-variables.md)
+- [Differences Between Properties and Variables in Visual Basic](differences-between-properties-and-variables.md)
 - [如何：建立屬性](how-to-create-a-property.md)
 - [如何：呼叫屬性程序](how-to-call-a-property-procedure.md)
-- [如何：在 Visual Basic 中宣告及呼叫預設屬性](how-to-declare-and-call-a-default-property.md)
+- [How to: Declare and Call a Default Property in Visual Basic](how-to-declare-and-call-a-default-property.md)
 - [如何：將值置入屬性](how-to-put-a-value-in-a-property.md)
 - [如何：取得屬性值](how-to-get-a-value-from-a-property.md)

@@ -1,5 +1,5 @@
 ---
-title: 使用 DebugView 屬性 (Visual Basic) 的語法
+title: Syntax used by DebugView property
 description: 描述 DebugView 屬性用來產生運算式樹狀架構之字串呈現的特殊語法
 author: zspitz
 ms.author: wiwagn
@@ -8,18 +8,18 @@ ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: ae2c75607f7b9cdc40fc5c163ce533f0472ab454
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 98ceba37aa226fab68ae1c1028e2a1139b3b8e7e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689547"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346873"
 ---
 # <a name="debugview-syntax"></a>`DebugView` 語法
 
 `DebugView` 屬性 (僅於偵錯時提供使用) 能提供運算式樹狀架構的字串呈現。 此語法大部分皆相當容易了解；其特殊案例已於下列各節中描述。
 
-每個範例後面的註解區塊包含`DebugView`。
+Each example is followed by a comment block containing the `DebugView`.
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -45,9 +45,9 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 
 對於代表整數值、字串和 `null` 的 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 物件，會顯示常數的值。
 
-對於某些數值類型，尾碼新增到的值：
+For some numeric types, a suffix is added to the value:
 
-| 類型 | 關鍵字 | 尾碼 |
+| 輸入 | 關鍵字 | 尾碼 |
 |--|--|--|
 | <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |

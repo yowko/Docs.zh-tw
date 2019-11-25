@@ -1,19 +1,19 @@
 ---
-title: <include> (Visual Basic)
+title: <include>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: d9c1c1a50f0e3530c842a6058e288b8d2be15f95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f2bebfd06d4614f05cb66834cc5bef40524ce3b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940903"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348454"
 ---
-# <a name="include-visual-basic"></a>\<包含 > (Visual Basic)
-參考描述的類型和成員在原始程式碼中的另一個檔案。  
+# <a name="include-visual-basic"></a>\<include> (Visual Basic)
+Refers to another file that describes the types and members in your source code.  
   
 ## <a name="syntax"></a>語法  
   
@@ -23,28 +23,28 @@ ms.locfileid: "61940903"
   
 ## <a name="parameters"></a>參數  
  `filename`  
- 必要項。 包含文件的檔案名稱。 檔案名稱可以使用路徑進行限定。 括住`filename`以雙引號 ("")。  
+ 必要項。 包含文件的檔案名稱。 檔案名稱可以使用路徑進行限定。 Enclose `filename` in double quotation marks (" ").  
   
  `tagpath`  
- 必要項。 `filename` 中導致 `name` 標記的標記路徑。 請將路徑括在雙引號 ("")。  
+ 必要項。 `filename` 中導致 `name` 標記的標記路徑。 Enclose the path in double quotation marks (" ").  
   
  `name`  
- 必要項。 在註解前面的標記名稱規範。 `Name` 將會有`id`。  
+ 必要項。 The name specifier in the tag that precedes the comments. `Name` will have an `id`.  
   
  `id`  
- 必要項。 位在註解前面的標記識別碼。 請將識別碼括在單引號 (' ')。  
+ 必要項。 位在註解前面的標記識別碼。 Enclose the ID in single quotation marks (' ').  
   
 ## <a name="remarks"></a>備註  
- 使用`<include>`標記來參考另一個檔案中描述的類型的註解和在原始程式碼中的成員。 這是將文件註解直接放在原始程式碼檔中的替代方案。  
+ Use the `<include>` tag to refer to comments in another file that describe the types and members in your source code. 這是將文件註解直接放在原始程式碼檔中的替代方案。  
   
- `<include>`標記使用 W3C XML 路徑語言 (XPath) 1.0 版建議事項。 如需有關如何自訂您`<include>`使用，請參閱<https://www.w3.org/TR/xpath>。  
+ The `<include>` tag uses the W3C XML Path Language (XPath) Version 1.0 Recommendation. For more information about ways to customize your `<include>` use, see <https://www.w3.org/TR/xpath>.  
   
 ## <a name="example"></a>範例  
- 這個範例會使用`<include>`從名為的檔案匯入成員文件註解的標記`commentFile.xml`。  
+ This example uses the `<include>` tag to import member documentation comments from a file called `commentFile.xml`.  
   
  [!code-vb[VbVbcnXmlDocComments#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#4)]  
   
- 格式`commentFile.xml`如下所示。  
+ The format of the `commentFile.xml` is as follows.  
   
 ```xml  
 <Docs>  
@@ -59,6 +59,6 @@ ms.locfileid: "61940903"
 </Docs>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)

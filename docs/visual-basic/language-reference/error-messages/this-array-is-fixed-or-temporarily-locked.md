@@ -1,33 +1,33 @@
 ---
-title: 此陣列為固定長度或暫時鎖定 (Visual Basic)
+title: 這是固定陣列，或陣列暫被鎖定
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
-ms.openlocfilehash: c7b5372b6046e25aad87131ba141cb71c580e12c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d5e4add2d92a575126fb934ac3874a2e37685f5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625947"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350780"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>此陣列為固定長度或暫時鎖定 (Visual Basic)
-此錯誤有下列可能的原因：  
+This error has the following possible causes:  
   
-- 使用`ReDim`若要變更的固定大小陣列的項目數。  
+- Using `ReDim` to change the number of elements of a fixed-size array.  
   
-- Redimensioning 模組層級動態陣列，在其中一個項目已傳遞做為引數給程序。 如果傳遞的項目，則陣列會鎖定以防止解除配置記憶體的程序內參考參數。  
+- Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure. If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.  
   
-- 嘗試指派值給`Variant`變數，其中包含陣列，但`Variant`目前已鎖定。  
+- Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. 將原始陣列設為動態，而不是藉由宣告它與已修正`ReDim`（如果陣列宣告程序內），或藉由宣告但未指定的元素數目 （如果陣列在模組層級中宣告。  
+1. Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.  
   
-2. 判斷您是否真的需要將項目，因為它是在模組中的所有程序內為可見。  
+2. Determine whether you really need to pass the element, since it is visible within all procedures in the module.  
   
-3. 判斷功能正鎖住`Variant`並加以修正它。  
+3. Determine what is locking the `Variant` and remedy it.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)

@@ -1,27 +1,27 @@
 ---
-title: 使用權限遭拒 (Visual Basic)
+title: 權限遭拒
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
-ms.openlocfilehash: ad75c556748bf5c0f9cef55310c4ffa7b01fd458
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 410301a1e99040fc617ab1bf1e851329ab3072d2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920831"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347008"
 ---
 # <a name="permission-denied-visual-basic"></a>使用權限遭拒 (Visual Basic)
-已嘗試寫入防寫保護的磁碟，或存取鎖定的檔案。  
+An attempt was made to write to a write-protected disk or to access a locked file.  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. 若要開啟防寫保護的檔案，變更檔案的寫入保護屬性。  
+1. To open a write-protected file, change the write-protection attribute of the file.  
   
-2. 請確定其他處理序不會鎖定檔案，並等候開啟檔案，直到其他處理序釋放它為止。  
+2. Make sure that another process has not locked the file, and wait to open the file until the other process releases it.  
   
-3. 若要存取登錄，請檢查您的使用者權限包含這種類型的登錄存取權。  
+3. To access the registry, check that your user permissions include this type of registry access.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [錯誤類型](../../../visual-basic/programming-guide/language-features/error-types.md)

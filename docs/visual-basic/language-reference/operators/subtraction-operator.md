@@ -1,5 +1,5 @@
 ---
-title: '- 運算子（Visual Basic）'
+title: '- 運算子'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Negate
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: 5f6b6b67e2999d380cfca078a43162b3e1db2206
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9687c366c5b23693c05ab5c6b34f50c04131dfda
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701294"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348229"
 ---
 # <a name="--operator-visual-basic"></a>- 運算子 (Visual Basic)
-傳回兩個數值運算式之間的差異，或數值運算式的負數值。  
+Returns the difference between two numeric expressions or the negative value of a numeric expression.  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,37 +44,37 @@ expression1 – expression2
  必要項。 任何數值運算式。  
   
  `expression2`  
- 除非`–`運算子正在計算負數值，否則為必要。 任何數值運算式。  
+ Required unless the `–` operator is calculating a negative value. 任何數值運算式。  
   
 ## <a name="result"></a>結果  
- 結果是和`expression1` `expression2`之間的差異， `expression1`或的負值。  
+ The result is the difference between `expression1` and `expression2`, or the negated value of `expression1`.  
   
- 結果資料類型是適用于和`expression1` `expression2`之資料類型的數數值型別。 請參閱[運算子結果的資料類型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)中的「整數算術」資料表。  
+ The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
 ## <a name="supported-types"></a>支援的型別  
- 所有數值類型。 這包括不帶正負號的和浮點類型`Decimal`，以及。  
+ 所有數值類型。 This includes the unsigned and floating-point types and `Decimal`.  
   
 ## <a name="remarks"></a>備註  
- 在先前所示的語法中，第一次使用時，`–` 運算子是*二元*算術減法運算子，用於兩個數值運算式之間的差異。  
+ In the first usage shown in the syntax shown previously, the `–` operator is the *binary* arithmetic subtraction operator for the difference between two numeric expressions.  
   
- 在先前所示語法中所顯示的第二個使用方式中，`–` 運算子是運算式負數值的*一元*否定運算子。 就這一點而言，否定是由反轉的正負號`expression1`所組成，因此如果`expression1`為負數，則結果為正數。  
+ In the second usage shown in the syntax shown previously, the `–` operator is the *unary* negation operator for the negative value of an expression. In this sense, the negation consists of reversing the sign of `expression1` so that the result is positive if `expression1` is negative.  
   
- 如果任一運算式評估為[不是任何值](../../../visual-basic/language-reference/nothing.md)，則 `–`運算子會將它視為零。  
+ If either expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the `–` operator treats it as zero.  
   
 > [!NOTE]
-> @No__t-0 運算子可以多載 *，這*表示當運算元具有該類別或結構的類型時，類別或結構可以重新定義其行為。 如果您的程式碼在這類類別或結構上使用這個運算子，請確定您瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+> The `–` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, make sure that you understand its redefined behavior. 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`–`運算子來計算並傳回兩個數字之間的差異，然後再將數位否定。  
+ The following example uses the `–` operator to calculate and return the difference between two numbers, and then to negate a number.  
   
  [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
- 執行這些語句之後，`binaryResult` 包含124.45，而 `unaryResult` 包含–334.90。  
+ Following the execution of these statements, `binaryResult` contains 124.45 and `unaryResult` contains –334.90.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [-= 運算子（Visual Basic）](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+- [-= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
 - [算術運算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic 中的算術運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

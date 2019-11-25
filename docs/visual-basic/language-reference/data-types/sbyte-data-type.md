@@ -1,5 +1,5 @@
 ---
-title: SByte 資料類型 (Visual Basic)
+title: SByte 資料類型
 ms.date: 04/20/2017
 f1_keywords:
 - vb.sbyte
@@ -14,39 +14,39 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: a962200195002858257b92e92e0dd1383d4fb2d2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 01a0a4a261213d7e6e2016bf49128092e5b22308
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582509"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343942"
 ---
-# <a name="sbyte-data-type-visual-basic"></a>SByte 資料類型（Visual Basic）
+# <a name="sbyte-data-type-visual-basic"></a>SByte data type (Visual Basic)
 
-保存帶正負號的8位（1個位元組）整數，其範圍介於-128 到127之間。
+Holds signed 8-bit (1-byte) integers that range in value from -128 through 127.
 
 ## <a name="remarks"></a>備註
 
-使用 [`SByte`] 資料類型，包含不需要完整資料寬度的 `Integer`，或甚至是 `Short` 的一半資料寬度的整數值。 在某些情況下，通用語言執行時間可能可以將您的 `SByte` 變數緊密地封裝在一起，並節省記憶體耗用量。
+Use the `SByte` data type to contain integer values that do not require the full data width of `Integer` or even the half data width of `Short`. In some cases, the common language runtime might be able to pack your `SByte` variables closely together and save memory consumption.
 
 `SByte` 的預設值為 0。
 
-## <a name="literal-assignments"></a>常值指派
+## <a name="literal-assignments"></a>Literal assignments
 
-您可以藉由指派十進位常值、十六進位常值、八進位常值，或二進位常值（從 Visual Basic 2017）來宣告和初始化 `SByte` 變數。
+You can declare and initialize an `SByte` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal.
 
-在下列範例中，以十進位、十六進位和二進位常值表示的整數等於-102，會指派給 `SByte` 值。 這個範例需要您使用 `/removeintchecks` 編譯器參數編譯。
+In the following example, integers equal to -102 that are represented as decimal, hexadecimal, and binary literals are assigned to `SByte` values. This example requires that you compile with the `/removeintchecks` compiler switch.
 
 [!code-vb[SByte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByte)]
 
 > [!NOTE]
-> 您可以使用前置詞 `&h` 或 `&H` 來表示十六進位常值、前置詞 `&b` 或 `&B` 來表示二進位常值，而前置詞 `&o` 或 `&O` 表示八進位常值。 十進位常值沒有前置詞。
+> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. 十進位常值沒有前置詞。
 
-從 Visual Basic 2017 開始，您也可以使用底線字元（`_`）做為數位分隔符號，以增強可讀性，如下列範例所示。
+Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
 
 [!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]
 
-從 Visual Basic 15.5 開始，您也可以使用底線字元（`_`）做為前置詞和十六進位、二進位或八進位數位之間的前置分隔符號。 例如:
+Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. 例如:
 
 ```vb
 Dim number As SByte = &H_F9
@@ -54,23 +54,23 @@ Dim number As SByte = &H_F9
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-如果整數常值超出 `SByte` 的範圍 (亦即，如果小於 <xref:System.SByte.MinValue?displayProperty=nameWithType> 或大於 <xref:System.SByte.MaxValue?displayProperty=nameWithType>)，就會發生編譯錯誤。 當整數常值沒有後置詞時，就會推斷[整數](integer-data-type.md)。 如果整數常值超出 `Integer` 類型的範圍，則會推斷出[Long](long-data-type.md) 。 這表示在先前的範例中，`0x9A` 和 `0b10011010` 的數值常值會被視為32位帶正負號的整數，其值為156，超過 <xref:System.SByte.MaxValue?displayProperty=nameWithType>。 若要成功編譯這類程式碼，將非十進位整數指派給 `SByte`，您可以執行下列其中一項動作：
+如果整數常值超出 `SByte` 的範圍 (亦即，如果小於 <xref:System.SByte.MinValue?displayProperty=nameWithType> 或大於 <xref:System.SByte.MaxValue?displayProperty=nameWithType>)，就會發生編譯錯誤。 When an integer literal has no suffix, an [Integer](integer-data-type.md) is inferred. If the integer literal is outside the range of the `Integer` type, a [Long](long-data-type.md) is inferred. This means that, in the previous examples, the numeric literals `0x9A` and `0b10011010` are interpreted as 32-bit signed integers with a value of 156, which exceeds <xref:System.SByte.MaxValue?displayProperty=nameWithType>. To successfully compile code like this that assigns a non-decimal integer to an `SByte`, you can do either of the following:
 
-- 使用 `/removeintchecks` 編譯器參數來編譯，以停用整數界限檢查。
+- Disable integer bounds checks by compiling with the `/removeintchecks` compiler switch.
 
-- 使用[類型字元](../../programming-guide/language-features/data-types/type-characters.md)來明確定義您想要指派給 `SByte` 的常值。 下列範例會將負常值 `Short` 值指派給 `SByte`。 請注意，若為負數，必須設定數值常值之高序位單字的高序位位。 在我們的範例中，這是常值的位15，`Short` 值。
+- Use a [type character](../../programming-guide/language-features/data-types/type-characters.md) to explicitly define the literal value that you want to assign to the `SByte`. The following example assigns a negative literal `Short` value to an `SByte`. Note that, for negative numbers, the high-order bit of the high-order word of the numeric literal must be set. In the case of our example, this is bit 15 of the literal `Short` value.
 
    [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
 
 ## <a name="programming-tips"></a>程式設計提示
 
-- **CLS 合規性。** @No__t_0 資料類型不是[Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) （CLS）的一部分，因此符合 cls 標準的程式碼無法使用它所使用的元件。
+- **CLS Compliance.** The `SByte` data type is not part of the [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), so CLS-compliant code cannot consume a component that uses it.
 
-- **加寬.** @No__t_0 資料類型會擴展到 `Short`、`Integer`、`Long`、`Decimal`、`Single` 和 `Double`。 這表示您可以將 `SByte` 轉換成這些類型的任何一種，而不會遇到 <xref:System.OverflowException?displayProperty=nameWithType> 錯誤。
+- **Widening.** The `SByte` data type widens to `Short`, `Integer`, `Long`, `Decimal`, `Single`, and `Double`. This means you can convert `SByte` to any of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
 
-- **輸入字元。** `SByte` 沒有常數值型別字元或識別項型別字元。
+- **Type Characters.** `SByte` has no literal type character or identifier type character.
 
-- **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.SByte?displayProperty=nameWithType> 結構。
+- **Framework Type.** 在 .NET Framework 中對應的類型為 <xref:System.SByte?displayProperty=nameWithType> 結構。
 
 ## <a name="see-also"></a>請參閱
 

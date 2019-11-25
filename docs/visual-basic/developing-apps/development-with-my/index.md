@@ -1,5 +1,5 @@
 ---
-title: 使用 My 進行開發 (Visual Basic)
+title: 使用 My 進行開發
 ms.date: 07/20/2015
 f1_keywords:
 - My.MyWpfExtension.Windows
@@ -9,23 +9,25 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-ms.openlocfilehash: 1d9dc1cd26b4bf110526fe6d136e943be730a443
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ee9373098d4355628a43ec46302c97c26de5bf9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014166"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330290"
 ---
 # <a name="development-with-my-visual-basic"></a>使用 My 進行開發 (Visual Basic)
+
 Visual Basic 提供可進行快速應用程式開發的新功能來提高產能且易於使用，同時還能提供電源。 這其中一個功能稱為 `My`，可提供對與應用程式及其執行階段環境相關資訊和預設物件執行個體的存取。 此資訊的組織方式是以可透過 IntelliSense 進行探索且邏輯上根據使用方式分隔的格式來進行。  
   
  `My` 的最上層成員會公開為物件。 每個物件的運作方式類似具有 `Shared` 成員的命名空間或類別，而它會公開一組相關的成員。  
   
  此表格顯示最上層 `My` 物件及其彼此間的關聯性。  
   
- ![圖中顯示的物件模型我。](./media/index/my-object-model-relationships.gif)  
+ ![Diagram shows the object model for My.](./media/index/my-object-model-relationships.gif)  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
+
  [使用 My.Application、My.Computer 和 My.User 執行工作](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
  描述三種中央 `My` 物件 (`My.Application`、`My.Computer` 和 `My.User`)，它們提供對資訊和功能的存取。  
   
@@ -36,12 +38,12 @@ Visual Basic 提供可進行快速應用程式開發的新功能來提高產能�
  描述 `My.Resources` 和 `My.Settings` 物件，它們提供對應用程式資源和設定的存取。  
   
  [Visual Basic 應用程式模型概觀](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- 描述 Visual Basic 應用程式啟動/關機模型。  
+ Describes the Visual Basic Application Startup/Shutdown model.  
   
  [My 如何相依於專案類型](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  提供有關 `My` 功能可在不同專案型別中使用的詳細資料。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>

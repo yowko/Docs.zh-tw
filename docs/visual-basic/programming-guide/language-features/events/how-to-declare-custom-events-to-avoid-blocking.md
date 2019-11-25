@@ -1,33 +1,33 @@
 ---
-title: HOW TO：宣告自訂事件以避免封鎖 (Visual Basic)
+title: 如何：宣告自訂事件以避免封鎖
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring events [Visual Basic], custom
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 998b6a90-67c5-4d2c-8b11-366d3e355505
-ms.openlocfilehash: 6eea47ea2c8aee697eb34ca904dad22ca88e6ce4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d73d9c4590afb33e7176f647069cafcb3a9d7d8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051893"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345140"
 ---
-# <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>HOW TO：宣告自訂事件以避免封鎖 (Visual Basic)
-有幾種情況時很重要的一個事件處理常式不會封鎖後續的事件處理常式。 自訂事件可讓要以非同步方式呼叫其事件處理常式的事件。  
+# <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>如何：宣告自訂事件以避免封鎖 (Visual Basic)
+There are several circumstances when it is important that one event handler not block subsequent event handlers. Custom events allow the event to call its event handlers asynchronously.  
   
- 根據預設，事件宣告備份存放區欄位會是以序列方式結合了所有事件處理常式的多點傳送的委派。 這表示，如果有一個處理常式會花很長的時間才能完成，它會封鎖其他處理常式到完成為止。 （正常運作的事件處理常式應該永遠不會執行長時間或潛在的封鎖作業）。  
+ By default, the backing-store field for an event declaration is a multicast delegate that serially combines all the event handlers. This means that if one handler takes a long time to complete, it blocks the other handlers until it completes. (Well-behaved event handlers should never perform lengthy or potentially blocking operations.)  
   
- 而不是使用 Visual Basic 提供的事件的預設實作，您可以使用自訂的事件，以非同步方式執行的事件處理常式。  
+ Instead of using the default implementation of events that Visual Basic provides, you can use a custom event to execute the event handlers asynchronously.  
   
 ## <a name="example"></a>範例  
- 在此範例中，`AddHandler`存取子新增的每個處理常式的委派`Click`事件，以<xref:System.Collections.ArrayList>儲存在`EventHandlerList`欄位。  
+ In this example, the `AddHandler` accessor adds the delegate for each handler of the `Click` event to an <xref:System.Collections.ArrayList> stored in the `EventHandlerList` field.  
   
- 當程式碼會引發`Click`事件，`RaiseEvent`存取子會以非同步方式使用的所有事件處理常式委派叫都用<xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>方法。 該方法會叫用背景工作執行緒上的每個處理常式，並會立即傳回，讓處理常式無法封鎖彼此。  
+ When code raises the `Click` event, the `RaiseEvent` accessor invokes all the event handler delegates asynchronously using the <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> method. That method invokes each handler on a worker thread and returns immediately, so handlers cannot block one another.  
   
  [!code-vb[VbVbalrEvents#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#27)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.ArrayList>
 - <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>

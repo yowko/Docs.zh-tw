@@ -1,5 +1,5 @@
 ---
-title: Visual Basic 中屬性和變數的差別
+title: 屬性和變數之間的差異
 ms.date: 07/20/2015
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -14,45 +14,45 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: de4800e23519c2cc1c8b2b219287b9fa018b9bbf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbed3248840803d36607a67c8373fed15c07445f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864570"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341214"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Visual Basic 中屬性和變數的差別
-變數和屬性都代表您可以存取的值。 不過，有儲存體和實作差異。  
+Variables and properties both represent values that you can access. However, there are differences in storage and implementation.  
   
 ## <a name="variables"></a>變數  
- A*變數*直接對應至記憶體位置。 您定義的單一宣告陳述式的變數。 變數可以是*區域變數*、 定義程序內，只能在該程序，也可以很*成員變數*，定義在模組、 類別或結構，但不是能在任何程序。 成員變數亦稱為*欄位*。  
+ A *variable* corresponds directly to a memory location. You define a variable with a single declaration statement. A variable can be a *local variable*, defined inside a procedure and available only within that procedure, or it can be a *member variable*, defined in a module, class, or structure but not inside any procedure. A member variable is also called a *field*.  
   
-## <a name="properties"></a>屬性  
- A*屬性*是一個模組、 類別或結構上定義的資料元素。 您定義的屬性之間的程式碼區塊`Property`和`End Property`陳述式。 程式碼區塊包含`Get`程序，`Set`程序，或兩者。 這些程序稱為*屬性程序*或是*屬性存取子*。 除了擷取或儲存屬性的值，它們也可以執行自訂動作，例如更新存取計數器。  
+## <a name="properties"></a>內容  
+ A *property* is a data element defined on a module, class, or structure. You define a property with a code block between the `Property` and `End Property` statements. The code block contains a `Get` procedure, a `Set` procedure, or both. These procedures are called *property procedures* or *property accessors*. In addition to retrieving or storing the property's value, they can also perform custom actions, such as updating an access counter.  
   
-## <a name="differences"></a>差異  
- 下表顯示變數和屬性之間的一些重要差異。  
+## <a name="differences"></a>Differences  
+ The following table shows some important differences between variables and properties.  
   
-|差異點|變數|屬性|  
+|Point of difference|變數|屬性|  
 |-------------------------|--------------|--------------|  
-|宣告|單一宣告陳述式|系列的程式碼區塊中的陳述式|  
-|實作|單一儲存體位置|可執行程式碼 （屬性程序）|  
-|存放裝置|直接相關聯的變數值|通常會有提供之外的屬性包含類別或模組的內部儲存體<br /><br /> 屬性的值可能會或可能不會存在做為預存的項目<sup>1</sup>|  
-|可執行程式碼|None|必須至少一個程序|  
-|讀取和寫入權限|讀寫或唯讀|讀取/寫入、 唯讀或唯寫|  
-|自訂動作 （除了接受或傳回值）|不可能|可以執行設定或擷取屬性值的一部分|  
+|宣告|Single declaration statement|Series of statements in a code block|  
+|實作|Single storage location|Executable code (property procedures)|  
+|存放裝置|Directly associated with variable's value|Typically has internal storage not available outside the property's containing class or module<br /><br /> Property's value might or might not exist as a stored element <sup>1</sup>|  
+|Executable code|None|Must have at least one procedure|  
+|Read and write access|Read/write or read-only|Read/write, read-only, or write-only|  
+|Custom actions (in addition to accepting or returning value)|Not possible|Can be performed as part of setting or retrieving property value|  
   
- <sup>1</sup>不同變數中，於屬性的值可能不直接對應到儲存體的單一項目。 儲存體可能會分割成片段，方便或安全性，或值可能會以加密形式儲存。 在這些情況下`Get`程序會組合在一起，或解密儲存的值，而`Set`程序會加密新的值，或將它分割為組成的儲存體。 屬性值在此情況下可能是暫時的例如一天時間，`Get`程序會計算會即時每次存取屬性。  
+ <sup>1</sup> Unlike a variable, the value of a property might not correspond directly to a single item of storage. The storage might be split into pieces for convenience or security, or the value might be stored in an encrypted form. In these cases the `Get` procedure would assemble the pieces or decrypt the stored value, and the `Set` procedure would encrypt the new value or split it into the constituent storage. A property value might be ephemeral, like time of day, in which case the `Get` procedure would calculate it on the fly each time you access the property.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [屬性程序](./property-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [Property 陳述式](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [如何：建立屬性](./how-to-create-a-property.md)
-- [如何：宣告混合的存取層級的屬性](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [如何：宣告混合存取層級的屬性](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [如何：呼叫屬性程序](./how-to-call-a-property-procedure.md)
-- [如何：宣告，並在 Visual Basic 中呼叫預設屬性](./how-to-declare-and-call-a-default-property.md)
-- [如何：將值放在屬性中](./how-to-put-a-value-in-a-property.md)
+- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [如何：將值置入屬性](./how-to-put-a-value-in-a-property.md)
 - [如何：取得屬性值](./how-to-get-a-value-from-a-property.md)

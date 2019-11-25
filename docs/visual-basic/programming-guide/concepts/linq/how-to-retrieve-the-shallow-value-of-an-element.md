@@ -1,15 +1,15 @@
 ---
-title: 如何：取出元素的淺層值（Visual Basic）
+title: 如何：擷取項目的淺層值
 ms.date: 07/20/2015
 ms.assetid: 730a6670-fb8c-41fc-8a1b-eb97a837e432
-ms.openlocfilehash: 184186a92865b022118b9989633a97c75274e7f4
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 7449d6d1230313aef6005284270370bb9d243a3f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320426"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346917"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>如何：取出元素的淺層值（Visual Basic）
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>How to: Retrieve the Shallow Value of an Element (Visual Basic)
 
 本主題說明如何取得項目的表層值。 表層值僅是特定項目的值。與深層值不同的是，深層值包含了由所有子代項目連結成單一字串的值。
 

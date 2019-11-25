@@ -1,17 +1,17 @@
 ---
-title: 物件導向程式設計 (Visual Basic)
+title: Object-oriented programming
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-ms.openlocfilehash: 058d8b932e50f784d4a5cefa9fadfb31953687f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3739919273f4cdd285d519c414c542f1a82a16d2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783509"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348153"
 ---
-# <a name="object-oriented-programming-visual-basic"></a>物件導向程式設計 (Visual Basic)
+# <a name="object-oriented-programming-visual-basic"></a>Object-oriented programming (Visual Basic)
 
-Visual Basic 為包括封裝、 繼承和多型的物件導向程式設計提供完整的支援。
+Visual Basic provides full support for object-oriented programming including encapsulation, inheritance, and polymorphism.
 
  「封裝」指的是將一組相關的屬性、方法和其他成員，視為單一單位或物件。
 
@@ -23,18 +23,18 @@ Visual Basic 為包括封裝、 繼承和多型的物件導向程式設計提供
 
 - [類別與物件](#classes-and-objects)
   - [類別成員](#class-members)
-    - [屬性和欄位](#properties-and-fields)
+    - [Properties and fields](#properties-and-fields)
     - [方法](#methods)
     - [建構函式](#constructors)
     - [解構函式](#destructors)
     - [事件](#events)
-    - [巢狀的類別](#nested-classes)
-  - [存取修飾詞和存取層級](#access-modifiers-and-access-levels)
-    - [具現化類別](#instantiating-classes)
-    - [共用的類別和成員](#shared-classes-and-members)
+    - [Nested classes](#nested-classes)
+  - [Access modifiers and access levels](#access-modifiers-and-access-levels)
+    - [Instantiating classes](#instantiating-classes)
+    - [Shared classes and members](#shared-classes-and-members)
     - [匿名型別](#anonymous-types)
 - [繼承](#inheritance)
-  - [覆寫成員](#overriding-members)
+  - [Overriding members](#overriding-members)
 - [介面](#interfaces)
 - [泛型](#generics)
 - [委派](#delegates)
@@ -50,7 +50,7 @@ Class SampleClass
 End Class
 ```
 
-Visual Basic 也提供輕量版的類別，稱為*結構*時您必須建立龐大物件陣列而有多實用不想要使用太多記憶體時，這個。
+Visual Basic also provides a light version of classes called *structures* that are useful when you need to create large array of objects and do not want to consume too much memory for that.
 
 若要定義結構：
 
@@ -64,11 +64,11 @@ End Structure
 - [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)
 
-### <a name="class-members"></a>類別成員
+### <a name="class-members"></a>Class members
 
 每個類別都有不同的「類別成員」，包括描述類別資料的屬性、定義類別行為的方法，以及提供不同類別與物件之間通訊的事件。
 
-#### <a name="properties-and-fields"></a>屬性和欄位
+#### <a name="properties-and-fields"></a>Properties and fields
 
 欄位和屬性表示物件包含的資訊。 欄位就像是變數，可直接讀取或設定。
 
@@ -82,7 +82,7 @@ End Class
 
 屬性具有取得和設定程序，讓您更容易控制設定與傳回數值的方式。
 
-Visual Basic 可讓您建立私用欄位來儲存屬性值，或是使用所謂自動實作屬性，建立此欄位，自動在幕後，並提供屬性程序的基本邏輯。
+Visual Basic allows you either to create a private field for storing the property value or use so-called auto-implemented properties that create this field automatically behind the scenes and provide the basic logic for the property procedures.
 
 若要定義自動實作屬性：
 
@@ -150,7 +150,7 @@ Overloads Sub Display(ByVal theInteger As Integer)
 End Sub
 ```
 
-在多數情況下，您是在類別定義中宣告方法。 不過，Visual Basic 也支援*擴充方法*，可讓您將方法加入至現有的類別之類別的實際定義之外。
+在多數情況下，您是在類別定義中宣告方法。 However, Visual Basic also supports *extension methods* that allow you to add methods to an existing class outside the actual definition of the class.
 
 如需詳細資訊，請參閱:
 
@@ -173,7 +173,7 @@ Class SampleClass
 End Class
 ```
 
-如需詳細資訊，請參閱:[物件存留期：如何建立和終結物件](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。
+For more information, see: [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 #### <a name="destructors"></a>解構函式
 
@@ -181,19 +181,19 @@ End Class
 
 如需 .NET Framework 中之解構函式和記憶體回收的詳細資訊，請參閱[記憶體回收](../../../standard/garbage-collection/index.md)。
 
-#### <a name="events"></a>事件
+#### <a name="events"></a>「事件」
 
 事件可讓類別或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或引發) 事件的類別稱為「發行者」，而接收 (或處理) 事件的類別則稱為「訂閱者」。 如需事件的詳細資訊以及如何引發和處理事件，請參閱[處理和引發事件](../../../standard/events/index.md)。
 
-- 若要宣告事件，請使用[Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)。
+- To declare events, use the [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).
 
-- 若要引發事件，請使用[RaiseEvent 陳述式](../../../visual-basic/language-reference/statements/raiseevent-statement.md)。
+- To raise events, use the [RaiseEvent Statement](../../../visual-basic/language-reference/statements/raiseevent-statement.md).
 
-- 若要指定事件處理常式宣告的方式，使用[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)陳述式並[處理](../../../visual-basic/language-reference/statements/handles-clause.md)子句。
+- To specify event handlers using a declarative way, use the [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) statement and the [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) clause.
 
-- 若要能夠以動態方式新增、 移除及變更與事件相關聯的事件處理常式，使用[AddHandler 陳述式](../../../visual-basic/language-reference/statements/addhandler-statement.md)並[RemoveHandler 陳述式](../../../visual-basic/language-reference/statements/removehandler-statement.md)搭配[AddressOf運算子](../../../visual-basic/language-reference/operators/addressof-operator.md)。
+- To be able to dynamically add, remove, and change the event handler associated with an event, use the [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md) and [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md) together with the [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md).
 
-#### <a name="nested-classes"></a>巢狀的類別
+#### <a name="nested-classes"></a>Nested classes
 
 在類別中定義的另一個類別即稱為「巢狀」類別。 巢狀類別預設為私用。
 
@@ -211,7 +211,7 @@ End Class
 Dim nestedInstance As Container.Nested = New Container.Nested()
 ```
 
-### <a name="access-modifiers-and-access-levels"></a>存取修飾詞和存取層級
+### <a name="access-modifiers-and-access-levels"></a>Access modifiers and access levels
 
 所有類別及類別成員都可以使用「存取修飾詞」，指定要提供給其他類別的存取層級。
 
@@ -225,9 +225,9 @@ Dim nestedInstance As Container.Nested = New Container.Nested()
 |[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|類型或成員可由相同組件中的任何程式碼存取，但是不包括其他組件中的程式碼。|
 |`Protected Friend`|類型或成員可由相同組件中的任何程式碼，或是其他組件中的任何衍生類別存取。|
 
-如需詳細資訊，請參閱 <<c0> [ 存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
+For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-### <a name="instantiating-classes"></a>具現化類別
+### <a name="instantiating-classes"></a>Instantiating classes
 
 若要建立物件，您必須將類別執行個體化，或是建立類別執行個體。
 
@@ -256,11 +256,11 @@ Dim sampleObject = New SampleClass With
 - [New 運算子](../../../visual-basic/language-reference/operators/new-operator.md)
 - [物件初始設定式：具名和匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-### <a name="shared-classes-and-members"></a>共用的類別和成員
+### <a name="shared-classes-and-members"></a>Shared classes and members
 
- 共用類別的成員是屬性、 程序或共用的所有類別的執行個體的欄位。
+ A shared member of the class is a property, procedure, or field that is shared by all instances of a class.
 
- 若要定義共用的成員：
+ To define a shared member:
 
 ```vb
 Class SampleClass
@@ -268,13 +268,13 @@ Class SampleClass
 End Class
 ```
 
- 若要存取共用的成員，請使用類別的名稱而不需建立此類別的物件：
+ To access the shared member, use the name of the class without creating an object of this class:
 
 ```vb
 MsgBox(SampleClass.SampleString)
 ```
 
- 在 Visual Basic 中的共用的模組共用僅包含成員，且無法具現化。 共用的成員也無法存取非共用的屬性、 欄位或方法
+ Shared modules in Visual Basic have shared members only and cannot be instantiated. Shared members also cannot access non-shared properties, fields or methods
 
  如需詳細資訊，請參閱:
 
@@ -293,14 +293,14 @@ Dim sampleObject =
     New With {Key .FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-如需詳細資訊，請參閱:[匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。
+如需詳細資訊，請參閱[匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。
 
 ## <a name="inheritance"></a>繼承
 
-繼承可讓您建立新類別以重複使用、擴充和修改其他類別中定義的行為。 成員被繼承的類別稱為「基底類別」，而繼承這種成員的類別即稱為「衍生類別」。 不過，在 Visual Basic 中的所有類別都隱含都繼承從<xref:System.Object>類別支援.NET 類別階層架構，為所有類別提供低階服務。
+繼承可讓您建立新類別以重複使用、擴充和修改其他類別中定義的行為。 成員被繼承的類別稱為「基底類別」，而繼承這種成員的類別即稱為「衍生類別」。 However, all classes in Visual Basic implicitly inherit from the <xref:System.Object> class that supports .NET class hierarchy and provides low-level services to all classes.
 
 > [!NOTE]
-> Visual Basic 不支援多重繼承。 也就是說，您只能為衍生類別指定一個基底類別。
+> Visual Basic doesn't support multiple inheritance. 也就是說，您只能為衍生類別指定一個基底類別。
 
 若要繼承基底類別：
 
@@ -332,7 +332,7 @@ End Class
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 
-### <a name="overriding-members"></a>覆寫成員
+### <a name="overriding-members"></a>Overriding members
 
 衍生類別預設會從其基底類別繼承所有成員。 如果想要變更所繼承成員的行為，您必須覆寫這個成員。 也就是說，您可以定義衍生類別中方法、屬性或事件的新實作。
 
@@ -343,7 +343,7 @@ End Class
 |[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|允許在衍生類別中覆寫類別成員。|
 |[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|覆寫在基底類別中定義的虛擬 (可覆寫) 成員。|
 |[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|防止在繼承的類別中覆寫成員。|
-|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|要求在衍生類別中覆寫類別成員。|
+|[New](../../../visual-basic/language-reference/modifiers/mustoverride.md)|要求在衍生類別中覆寫類別成員。|
 |[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|隱藏繼承自基底類別的成員。|
 
 ## <a name="interfaces"></a>介面
@@ -377,7 +377,7 @@ End Class
 
 ## <a name="generics"></a>泛型
 
-類別、 結構、 介面和方法在.NET 中的可以包含*型別參數*可定義類型的物件，其可儲存或使用。 泛型最常見的範例是集合，您可以在其中指定要儲存於集合之物件的類型。
+Classes, structures, interfaces and methods in .NET can include *type parameters* that define types of objects that they can store or use. 泛型最常見的範例是集合，您可以在其中指定要儲存於集合之物件的類型。
 
 若要定義泛型類別：
 
@@ -434,6 +434,6 @@ End Class
 - [Delegate 陳述式](../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [AddressOf 運算子](../../../visual-basic/language-reference/operators/addressof-operator.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [Visual Basic 程式設計手冊](../../../visual-basic/programming-guide/index.md)
+- [Visual Basic 程式設計指南](../../../visual-basic/programming-guide/index.md)

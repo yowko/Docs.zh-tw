@@ -1,33 +1,33 @@
 ---
-title: HOW TO：在 Visual Basic 中的字串中的存取字元
+title: 如何：存取字串中的字元
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: 840a769b0bb322ef7b878a312437c5ec200ab074
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44a021ed3ce1d10613cf6ab7c959c62feec6046c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054025"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352467"
 ---
-# <a name="how-to-access-characters-in-strings-in-visual-basic"></a>HOW TO：在 Visual Basic 中的字串中的存取字元
-此範例示範如何使用<xref:System.String.Chars%2A>屬性來存取字串中指定的位置處的字元。  
+# <a name="how-to-access-characters-in-strings-in-visual-basic"></a>如何：在 Visual Basic 中存取字串中的字元
+This example demonstrates how to use the <xref:System.String.Chars%2A> property to access the character at the specified location in a string.  
   
 ## <a name="example"></a>範例  
- 有時候最好擁有您的字串與這些字元在字串中的位置中的字元資料。 您可以將字串視為字元陣列 (`Char`執行個體)，您可以藉由參考到該字元的索引來擷取特定字元<xref:System.String.Chars%2A>屬性。  
+ Sometimes it is useful to have data about the characters in your string and the positions of those characters within your string. You can think of a string as an array of characters (`Char` instances); you can retrieve a particular character by referencing the index of that character through the <xref:System.String.Chars%2A> property.  
   
  [!code-vb[VbVbalrStrings#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#49)]  
   
- `index`參數<xref:System.String.Chars%2A>屬性是以零為起始。  
+ The `index` parameter of the <xref:System.String.Chars%2A> property is zero-based.  
   
 ## <a name="robust-programming"></a>穩固程式設計  
- <xref:System.String.Chars%2A>屬性會傳回指定位置處的字元。 不過，某些 Unicode 字元可以表示多個字元。 如需有關如何使用 Unicode 字元的詳細資訊，請參閱[How to:將字串轉換為字元陣列](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)。  
+ The <xref:System.String.Chars%2A> property returns the character at the specified position. However, some Unicode characters can be represented by more than one character. For more information on how to work with Unicode characters, see [How to: Convert a String to an Array of Characters](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md).  
   
- <xref:System.String.Chars%2A>屬性會擲回<xref:System.IndexOutOfRangeException>例外狀況如果`index`參數是否大於或等於字串的長度，或如果它小於零  
+ The <xref:System.String.Chars%2A> property throws an <xref:System.IndexOutOfRangeException> exception if the `index` parameter is greater than or equal to the length of the string, or if it is less than zero  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.String.Chars%2A>
 - [如何：將字串轉換為字元陣列](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)

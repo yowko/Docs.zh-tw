@@ -1,5 +1,5 @@
 ---
-title: Visual Basic 中的命名空間
+title: 命名空間
 ms.date: 07/20/2015
 f1_keywords:
 - vb.global
@@ -16,34 +16,34 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: dd7ac0487a5878122d9b1717a5e5fc8bf21a4ea7
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: ec892167f30a7ded739dc188ab4096cb3a5d154c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972047"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347322"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic 中的命名空間
 命名空間可組織組件中定義的物件。 組件可包含多個命名空間，而命名空間也可包含其他命名空間。 在使用類別庫等大型物件群組時，命名空間可避免語意模糊並簡化參考。  
   
- 例如，.NET Framework 會<xref:System.Windows.Forms.ListBox> <xref:System.Windows.Forms?displayProperty=nameWithType>在命名空間中定義類別。 下列程式碼片段示範如何使用這個類別的完整名稱來宣告變數：  
+ For example, the .NET Framework defines the <xref:System.Windows.Forms.ListBox> class in the <xref:System.Windows.Forms?displayProperty=nameWithType> namespace. 下列程式碼片段示範如何使用這個類別的完整名稱來宣告變數：  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>避免名稱衝突  
- .NET Framework 命名空間會解決問題，有時稱為*命名空間污染*，其中類別庫的開發人員會在另一個程式庫中使用類似的名稱而受到阻礙。 這些與現有元件的衝突有時稱為 *「名稱衝突」* (name collision)。  
+ .NET Framework namespaces address a problem sometimes called *namespace pollution*, in which the developer of a class library is hampered by the use of similar names in another library. 這些與現有元件的衝突有時稱為 *「名稱衝突」* (name collision)。  
   
- 例如，如果您建立了一個名為 `ListBox`的新類別，您不需提供完整名稱就可以在專案內使用它。 不過，如果您想要在相同的<xref:System.Windows.Forms.ListBox>專案中使用 .NET Framework 類別，則必須使用完整參考，讓參考成為唯一的。 如果參考不是唯一的，Visual Basic 會產生錯誤，指出名稱不明確。 下列程式碼範例示範如何宣告這些物件：  
+ 例如，如果您建立了一個名為 `ListBox`的新類別，您不需提供完整名稱就可以在專案內使用它。 However, if you want to use the .NET Framework <xref:System.Windows.Forms.ListBox> class in the same project, you must use a fully qualified reference to make the reference unique. If the reference is not unique, Visual Basic produces an error stating that the name is ambiguous. 下列程式碼範例示範如何宣告這些物件：  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
- 下圖顯示兩個命名空間階層，兩者都包含名`ListBox`為的物件：  
+ The following illustration shows two namespace hierarchies, both containing an object named `ListBox`:  
   
- ![顯示兩個命名空間階層的螢幕擷取畫面。](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
+ ![Screenshot that shows two namespace hierarchies.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
   
- 根據預設，您使用 Visual Basic 建立的每個可執行檔，都會包含一個與專案同名的命名空間。 例如，如果您在名為 `ListBoxProject`的專案中定義物件，則可執行檔 ListBoxProject.exe 會包含一個稱為 `ListBoxProject`的命名空間。  
+ By default, every executable file you create with Visual Basic contains a namespace with the same name as your project. 例如，如果您在名為 `ListBoxProject`的專案中定義物件，則可執行檔 ListBoxProject.exe 會包含一個稱為 `ListBoxProject`的命名空間。  
   
- 多個組件可以使用相同的命名空間。 Visual Basic 會將它們視為一組名稱。 例如，您可以在名為 `SomeNameSpace` 的組件中為稱為 `Assemb1`的命名空間定義類別，並自一個名為 `Assemb2`的組件中為相同的命名空間定義其他類別。  
+ 多個組件可以使用相同的命名空間。 Visual Basic treats them as a single set of names. 例如，您可以在名為 `SomeNameSpace` 的組件中為稱為 `Assemb1`的命名空間定義類別，並自一個名為 `Assemb2`的組件中為相同的命名空間定義其他類別。  
   
 ## <a name="fully-qualified-names"></a>完整名稱  
  完整名稱是物件參考，前面會加上定義物件之命名空間的名稱。 如果您建立類別的參考 (在 [專案] 功能表中選擇 [加入參考] )，就可以使用其他專案中所定義的物件，並且在程式碼中使用該物件的完整名稱。 下列程式碼片段示範如何使用另一個專案命名空間之物件的完整名稱：  
@@ -60,7 +60,7 @@ ms.locfileid: "70972047"
   
  [!code-vb[VbVbalrApplication#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#11)]  
   
- 如果您嘗試在沒有`Class1`完整限定的情況下使用，Visual Basic 會產生錯誤，指出`Class1`名稱不明確。  
+ If you attempt to use `Class1` without fully qualifying it, Visual Basic produces an error stating that the name `Class1` is ambiguous.  
   
 ## <a name="namespace-level-statements"></a>命名空間層級陳述式  
  在命名空間中，您可以定義模組、介面、類別、委派、列舉、結構和其他命名空間等項目。 您無法在命名空間層級定義屬性、程序、變數和事件等項目。 這些項目必須在模組、結構或類別等容器內宣告。  
@@ -119,11 +119,11 @@ End Namespace
   
  [!code-vb[VbVbalrApplication#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/module1.vb#21)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms?displayProperty=nameWithType>
 - [.NET 中的組件](../../../standard/assembly/index.md)
 - [參考和 Imports 陳述式](references-and-the-imports-statement.md)
 - [Imports 陳述式 (.NET 命名空間和類型)](../../language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [Writing Code in Office Solutions](/visualstudio/vsto/writing-code-in-office-solutions)
+- [撰寫 Office 方案中的程式碼](/visualstudio/vsto/writing-code-in-office-solutions)
