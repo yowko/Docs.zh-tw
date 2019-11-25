@@ -22,13 +22,13 @@ ms.locfileid: "73100698"
 
 這個新部署模式的獨特優點是會建置可執行檔而非程式庫，這意謂著您可以直接執行您的應用程式，而無須先叫用 `dotnet`。
 
-## <a name="core"></a>核心
+## <a name="core"></a>Core
 
 **處理執行階段服務中的事件**
 
-您可能常常會想要監視應用程式的執行階段服務使用情況 (例如 GC、JIT 及 ThreadPool)，以了解這些服務對您應用程式的影響。 在 Windows 系統上，這通常是藉由監視目前進程的 ETW 事件來完成。 雖然這會繼續運作，但如果您是在低許可權環境或 Linux 或 macOS 上執行，則不一定能夠使用 ETW。 
+您可能常常會想要監視應用程式的執行階段服務使用情況 (例如 GC、JIT 及 ThreadPool)，以了解這些服務對您應用程式的影響。 在 Windows 系統上，通常是藉由監視目前程序的 ETW 事件來達到此目的。 雖然此方法持續行得通，但如果您是在低權限環境或是在 Linux 或 macOS 中執行，則未必總是能夠使用 ETW。 
 
-從 .NET Core 2.2 開始，現在已可使用 <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType> 類別來取用 CoreCLR 事件。 這些事件將這類執行階段服務的行為描述為 GC、JIT、ThreadPool 及 Interop。 這些是作為 CoreCLR ETW 提供者之一部分公開的相同事件。  這可讓應用程式取用這些事件，或使用傳輸機制將它們傳送至遙測匯總服務。 您可以從下列程式碼範例了解如何訂閱事件：
+從 .NET Core 2.2 開始，現在已可使用 <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType> 類別來取用 CoreCLR 事件。 這些事件將這類執行階段服務的行為描述為 GC、JIT、ThreadPool 及 Interop。 這些是作為 CoreCLR ETW 提供者之一部分公開的相同事件。  這可讓應用程式取用這些事件，或使用傳輸機制將事件傳送給遙測彙總服務。 您可以從下列程式碼範例了解如何訂閱事件：
 
 ```csharp
 internal sealed class SimpleEventListener : EventListener
@@ -94,7 +94,7 @@ internal sealed class SimpleEventListener : EventListener
 
 如需詳細資訊，請參閱[主機啟動勾點](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/host-startup-hook.md) \(英文\)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Core 的新功能](index.md)
 - [ASP.NET Core 2.2 的新功能](/aspnet/core/release-notes/aspnetcore-2.2)
