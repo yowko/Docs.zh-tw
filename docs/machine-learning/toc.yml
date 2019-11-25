@@ -7,7 +7,7 @@
       items:
         - name: ML.NET API
           href: how-does-mldotnet-work.md
-    - name: 工具
+    - name: 模型建立器與 CLI
       items:
         - name: ML.NET 模型建立器工具
           href: automate-training-with-model-builder.md
@@ -97,7 +97,7 @@
               href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
             - name: 將模型部署到 Web API
               href: how-to-guides/serve-model-web-api-ml-net.md
-    - name: 工具
+    - name: 模型建立器與 CLI
       items:
         - name: 將資料載入到模型建立器
           href: how-to-guides/load-data-model-builder.md
@@ -109,18 +109,12 @@
           href: how-to-guides/how-to-use-the-automl-api.md
 - name: 參考資料
   items:
-    - name: API
-      items:
-        - name: ML.NET API 參考
-          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
-        - name: ML.NET API 預覽 API 參考
-          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
-    - name: 工具
-      items:
-        - name: CLI 參考
-          href: reference/ml-net-cli-reference.md
-        - name: ML.NET AutoML API 參考
-          href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
+    - name: ML.NET API 參考
+      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+    - name: ML.NET API 預覽 API 參考
+      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
+    - name: CLI 參考
+      href: reference/ml-net-cli-reference.md
 - name: 資源
   items:
     - name: 總覽
