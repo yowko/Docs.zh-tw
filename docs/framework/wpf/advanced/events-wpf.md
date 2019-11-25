@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70fbd1a4c4062708ab6082c4ec39e3e99354b004
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010341"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460498"
 ---
 # <a name="events-wpf"></a>事件 (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 介紹可以叫用處理常式的路由事件，此處理常式存在於應用程式項目樹狀結構的不同接聽程式上。  
@@ -29,7 +29,7 @@ ms.locfileid: "62010341"
  [弱式事件模式](weak-event-patterns.md)  
  [HOW-TO 主題](events-how-to-topics.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
@@ -41,9 +41,9 @@ ms.locfileid: "62010341"
   [WPF 中的 XAML](xaml-in-wpf.md)  
   [基底項目](base-elements.md)  
   [項目樹狀結構和序列化](element-tree-and-serialization.md)  
-  [屬性](properties-wpf.md)  
+  [內容](properties-wpf.md)  
   [輸入](input-wpf.md)  
   [資源](resources-wpf.md)  
-  [樣式設定和範本化](../controls/styling-and-templating.md)  
+  [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [WPF 內容模型](../controls/wpf-content-model.md)  
   [執行緒模型](threading-model.md)

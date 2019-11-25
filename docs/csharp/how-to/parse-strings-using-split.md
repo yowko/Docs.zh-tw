@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 String.Split 剖析字串 (C# 指南)
+title: 如何使用字串剖析字串。分割（C#指南）
 description: String.Split 會傳回從一組分隔符號分割的字串陣列。 它容易剖析字串。
 ms.date: 01/03/2018
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: a8cb3a62497379f60e9cc6dec3d342192361f865
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: b46429f3b55658e1f2a7d21eed714c1d02236c57
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603709"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973227"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>HOW TO：使用 String.Split 剖析字串 (C# 指南)
+# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>如何使用字串剖析字串。分割（C#指南）
 
 <xref:System.String.Split%2A?displayProperty=nameWithType> 方法會根據一或多個分隔符號來分割輸入字串，以建立子字串陣列。 這通常是分隔字組界限上字串的最簡單方式。 它也用來分割其他特定字元或字串上的字串。
 
@@ -50,7 +50,7 @@ ms.locfileid: "54603709"
 
 您可以查看 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的程式碼，來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../programming-guide/index.md)
 - [字串](../programming-guide/strings/index.md)

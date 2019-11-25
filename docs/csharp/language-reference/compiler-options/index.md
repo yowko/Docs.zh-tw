@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: dab91ddd1f2b9c91560329eeb1c51ca7f6f175bd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 787f9c5fff79eb67e2d74043782532c1fc4034b5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455242"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972754"
 ---
 # <a name="c-compiler-options"></a>C# 編譯器選項
 
@@ -29,7 +29,7 @@ ms.locfileid: "73455242"
 
 - [使用 Csc 建立命令列](command-line-building-with-csc-exe.md)從命令列建立視覺化C#應用程式的相關資訊。
 
-- [如何：設定 Visual Studio 命令列的環境變數](how-to-set-environment-variables-for-the-visual-studio-command-line.md)提供執行*vsvars32.bat*的步驟，以啟用命令列組建。
+- [如何設定 Visual Studio 命令列的環境變數](how-to-set-environment-variables-for-the-visual-studio-command-line.md)提供執行*vsvars32.bat*的步驟，以啟用命令列組建。
 
 - [依分類列出的編譯器選項C# ](listed-by-category.md)編譯器選項的類別清單。
 

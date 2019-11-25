@@ -2,26 +2,26 @@
 title: WCF Web HTTP 服務說明網頁
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: 60fd909d6e7d3ba0e0c0254024ef7eb40263b59e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d798c8080bf1afee87305cd00a27db2ece7e970
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050401"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975929"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP 服務說明網頁
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 會為 WCF WEB HTTP 服務提供自動說明頁面。 此說明頁面會列出每項作業、要求與回應格式和結構描述的說明。 此功能預設為關閉。 當使用者瀏覽至 WCF WEB HTTP 服務並附加在 「 / 說明 」 的 URL，例如後面 `http://localhost:8000/Customers/Help` ，一樣會顯示下列說明頁面。  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 會為 WCF WEB HTTP 服務提供自動說明頁面。 此說明頁面會列出每項作業、要求與回應格式和結構描述的說明。 此功能預設為關閉。 當使用者流覽至 WCF WEB HTTP 服務，並將 "/Help" 附加至 URL 結尾（例如 `http://localhost:8000/Customers/Help`）時，會顯示如下的說明頁面。  
   
- ![WCF REST 說明頁面的瀏覽器開啟。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
+ ![已開啟 WCF REST 說明頁面的瀏覽器。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
  使用者可以按一下說明頁面中列出的任何方法，該作業的詳細資訊頁面便會顯示，提供有關該方法的詳細資訊，包括訊息格式和回應範例。 下圖是方法之說明頁面的範例。  
   
- ![GetCustomers 方法的 WCF REST 說明頁面詳細資料的瀏覽器開啟。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
+ ![已開啟 GetCustomers 方法的 WCF REST 說明頁面詳細資料的瀏覽器。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>使用 WCF Web HTTP 說明頁面  
  WCF WEB HTTP 說明頁面會顯示每項作業的簡短描述，您可以使用 <xref:System.ComponentModel.DescriptionAttribute> 來指定任何一項。 此屬性會使用包含作業所套用之簡短描述的字串。 例如，下列程式碼示範如何使用 <xref:System.ComponentModel.DescriptionAttribute>來提供簡短描述。  
   
-```  
+```csharp
 [OperationContract]  
 [WebGet(UriTemplate="/template1", BodyStyle = WebMessageBodyStyle.Bare)]  
 [Description("Description for GET /template1")]  
@@ -47,7 +47,7 @@ SyndicationFeedFormatter GetTemplate1();
   
  若要在程式碼中啟用 WCF Web HTTP 說明頁面，請加入服務端點，並將 <xref:System.ServiceModel.Description.WebHttpBehavior> 加入至端點設定，再將 <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> 設定為 `true`。 下列程式碼示範如何執行這項操作。  
   
-```  
+```csharp
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
 {  
    host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");
@@ -240,4 +240,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- 如需有關資料合約序列化結構描述的詳細資訊，請參閱[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。
+ 如需資料合約序列化架構的詳細資訊，請參閱[資料合約架構參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。

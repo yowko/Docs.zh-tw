@@ -1,5 +1,5 @@
 ---
-title: HOW TO：指定資料服務要求的用戶端認證（WCF Data Services）
+title: HOW TO：指定資料服務要求的用戶端認證 (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: 4177b7f5138bd3e3ddd63e4a0d8d4bcb2be01fbb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bb25319e3a4b1f8c7a3586c546ce1d589b48e438
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790332"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975145"
 ---
-# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>作法：指定資料服務要求的用戶端認證（WCF Data Services）
-預設情況下，將要求傳送至 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服務時，用戶端程式庫不提供認證。 不過，您可以透過為 <xref:System.Net.NetworkCredential> 的 <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> 屬性提供 <xref:System.Data.Services.Client.DataServiceContext>，藉以指定要傳送的認證來驗證要求。 如需詳細資訊，請參閱 [Securing WCF Data Services](securing-wcf-data-services.md)。 本主題中的範例會示範如何在從資料服務要求資料時，明確地提供 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端所使用的認證。  
+# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>HOW TO：指定資料服務要求的用戶端認證 (WCF Data Services)
+根據預設，用戶端程式庫在將要求傳送至 OData 服務時，不會提供認證。 不過，您可以透過為 <xref:System.Net.NetworkCredential> 的 <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> 屬性提供 <xref:System.Data.Services.Client.DataServiceContext>，藉以指定要傳送的認證來驗證要求。 如需詳細資訊，請參閱 [Securing WCF Data Services](securing-wcf-data-services.md)。 本主題中的範例會示範如何在從資料服務要求資料時，明確地提供 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端所使用的認證。  
   
- 本主題中的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成[WCF Data Services 快速入門](quickstart-wcf-data-services.md)時，會建立此服務和用戶端資料類別。 您也可以使用在[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]網站上發行的[Northwind 範例資料服務](https://go.microsoft.com/fwlink/?LinkId=187426); 此範例資料服務是唯讀的，而且嘗試儲存變更時，會傳回錯誤。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]網站上的範例資料服務允許匿名驗證。  
+ 本主題中的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成[WCF Data Services 快速入門](quickstart-wcf-data-services.md)時，會建立此服務和用戶端資料類別。 您也可以使用在 OData 網站上發行的[Northwind 範例資料服務](https://go.microsoft.com/fwlink/?LinkId=187426);這個範例資料服務是唯讀的，而且嘗試儲存變更時，會傳回錯誤。 OData 網站上的範例資料服務允許匿名驗證。  
   
 ## <a name="example"></a>範例  
  下列範例來自 Extensible Application Markup Language （XAML）檔案的程式碼後置頁面，也就是 Windows Presentation Framework 應用程式的主頁面。 此範例會顯示 `LoginWindow` 執行個體，以便向使用者收集驗證認證，然後在要求資料服務時使用這些認證。  
@@ -52,7 +52,7 @@ ms.locfileid: "70790332"
   
  如需詳細資訊，請參閱 [Securing WCF Data Services](securing-wcf-data-services.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [保護 WCF 資料服務的安全](securing-wcf-data-services.md)
 - [WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)

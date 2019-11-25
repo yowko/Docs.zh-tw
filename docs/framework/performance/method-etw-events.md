@@ -7,32 +7,20 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48e1c2271d6d011296d347e7d74fb363cc4d8527
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: fd29d07b6253cb8c177cc1e8854435ce0079b520
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834557"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974922"
 ---
 # <a name="method-etw-events"></a>方法 ETW 事件
 
-<a name="top"></a> 這些事件會收集方法的特定資訊。 若要進行符號解析，需使用這些事件的承載。 此外，這些事件會提供實用資訊，例如呼叫方法的次數。
+這些事件會收集方法的特定資訊。 若要進行符號解析，需使用這些事件的承載。 此外，這些事件會提供實用資訊，例如呼叫方法的次數。
 
 所有方法事件都具「告知性 (4)」的層級。 所有方法的詳細資訊事件都具「詳細資訊 (5)」的層級。
 
 所有方法事件都是由執行階段提供者下的 `JITKeyword` (0x10) 關鍵字或 `NGenKeyword` (0x20) 關鍵字，或由取消提供者下的 `JitRundownKeyword` (0x10) 或 `NGENRundownKeyword` (0x20) 所引發。
-
-CLR 方法事件會進一步細分為下列：
-
-- [方法事件](#clr_method_events)
-
-- [CLR 方法標記事件](#clr_method_marker_events)
-
-- [CLR 方法詳細資料事件](#clr_method_verbose_events)
-
-- [MethodJittingStarted 事件](#methodjittingstarted_event)
-
-<a name="clr_method_events"></a>
 
 ## <a name="clr-method-events"></a>方法事件
 
@@ -63,12 +51,8 @@ CLR 方法事件會進一步細分為下列：
 |MethodStartAddress|win:UInt64|方法的起始位址。|
 |MethodSize|win:UInt32|方法的大小。|
 |MethodToken|win:UInt32|0 代表動態方法和 JIT Helper。|
-|MethodFlags|win:UInt32|0x1動態方法。<br /><br /> 0x2泛型方法。<br /><br /> 0x4JIT 編譯的程式碼方法（否則為 NGEN 原生映射程式碼）。<br /><br /> 0x8Helper 方法。|
+|MethodFlags|win:UInt32|0x1：動態方法。<br /><br /> 0x2：泛型方法。<br /><br /> 0x4：JIT 編譯的程式碼方法 (否則為 NGEN 原生映像程式碼)。<br /><br /> 0x8：Helper 方法。|
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|
-
-[回到頁首](#top)
-
-<a name="clr_method_marker_events"></a>
 
 ## <a name="clr-method-marker-events"></a>CLR 方法標記事件
 
@@ -96,10 +80,6 @@ CLR 方法事件會進一步細分為下列：
 |欄位名稱|資料類型|描述|
 |----------------|---------------|-----------------|
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|
-
-[回到頁首](#top)
-
-<a name="clr_method_verbose_events"></a>
 
 ## <a name="clr-method-verbose-events"></a>CLR 方法詳細資料事件
 
@@ -130,15 +110,11 @@ CLR 方法事件會進一步細分為下列：
 |MethodStartAddress|win:UInt64|起始位址：|
 |MethodSize|win:UInt32|方法的長度。|
 |MethodToken|win:UInt32|0 代表動態方法和 JIT Helper。|
-|MethodFlags|win:UInt32|0x1動態方法。<br /><br /> 0x2泛型方法。<br /><br /> 0x4JIT 編譯的方法（否則由 Ngen.exe 產生）<br /><br /> 0x8Helper 方法。|
+|MethodFlags|win:UInt32|0x1：動態方法。<br /><br /> 0x2：泛型方法。<br /><br /> 0x4：JIT 編譯方法 (否則由 NGen.exe 產生)<br /><br /> 0x8：Helper 方法。|
 |MethodNameSpace|win:UnicodeString|與方法相關聯的完整命名空間名稱。|
 |MethodName|win:UnicodeString|與方法相關聯的完整類別名稱。|
 |MethodSignature|win:UnicodeString|方法的簽章 (以逗號分隔的類型名稱清單)。|
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|
-
-[回到頁首](#top)
-
-<a name="methodjittingstarted_event"></a>
 
 ## <a name="methodjittingstarted-event"></a>MethodJittingStarted 事件
 
@@ -170,6 +146,6 @@ CLR 方法事件會進一步細分為下列：
 |MethodSignature|win:UnicodeString|方法的簽章 (以逗號分隔的類型名稱清單)。|
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [CLR ETW 事件](clr-etw-events.md)

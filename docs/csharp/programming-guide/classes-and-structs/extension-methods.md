@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: e37fc792f79044345d52b2bc463813c0bde22f5b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5cce8eb3ad36208c3d376bc8c94da484e9f9181e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970912"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971058"
 ---
 # <a name="extension-methods-c-programming-guide"></a>擴充方法 (C# 程式設計手冊)
 擴充方法可讓您在現有類型中「加入」方法，而不需要建立新的衍生類型、重新編譯，或是修改原始類型。 擴充方法是一種特殊的靜態方法，但是會將它們當成擴充類型上的執行個體方法來呼叫。 對於以 C#、F# 和 Visual Basic 撰寫的用戶端程式碼，呼叫擴充方法或是在類型中實際定義的方法，兩者之間並沒有明顯的差別。  
@@ -44,7 +44,7 @@ int i = s.WordCount();
   
  在您的程式碼中，可以利用執行個體方法語法來叫用擴充方法。 不過，編譯器所產生的中繼語言 (IL) 會將您的程式碼轉譯為靜態方法上的呼叫。 因此，實際上並未違反封裝 (Encapsulation) 的準則。 事實上，擴充方法無法存取它們所擴充之類型中的私用變數。  
   
- 如需詳細資訊，請參閱[如何：實作和呼叫自訂擴充方法](./how-to-implement-and-call-a-custom-extension-method.md)。  
+ 如需詳細資訊，請參閱[如何執行和呼叫自訂擴充方法](./how-to-implement-and-call-a-custom-extension-method.md)。
   
  一般而言，您呼叫擴充方法的頻率將遠高於實作自己的方法。 因為擴充方法是使用執行個體方法語法進行呼叫，所以不需要任何特殊知識就可以從用戶端程式碼使用它們。 若要啟用特定類型的擴充方法，只要針對定義這些方法所在的命名空間加入 `using` 指示詞即可。 例如，若要使用標準查詢運算子，請將下面這個 `using` 指示詞加入至程式碼：  
   
@@ -52,7 +52,7 @@ int i = s.WordCount();
 using System.Linq;  
 ```  
   
- (您可能也要加入對 System.Core.dll 的參考)。您將會注意到，標準查詢運算子現在出現在 IntelliSense 中，做為適用於大部分 <xref:System.Collections.Generic.IEnumerable%601> 類型的額外方法。  
+ （您可能也必須新增對 system.string 的參考）。您會注意到，標準查詢運算子現在會出現在 IntelliSense 中，做為大部分 <xref:System.Collections.Generic.IEnumerable%601> 類型的其他可用方法。  
   
 ## <a name="binding-extension-methods-at-compile-time"></a>在編譯時期繫結擴充方法  
  您可以使用擴充方法來擴充類別或介面，但無法覆寫它們。 而且永遠不會呼叫擁有與介面或類別方法相同名稱和簽章的擴充方法。 在編譯時期，擴充方法的優先順序一律低於類型本身中定義的執行個體方法。 換句話說，如果類型具有名為 `Process(int i)` 的方法，而您的擴充方法也具有相同的簽章，則編譯器一律會繫結至執行個體方法。 編譯器遇到方法引動過程時，會先在類型的執行個體方法中尋找相符項目。 如果找不到相符項目，則會搜尋任何針對該類型定義的擴充方法，並繫結至找到的第一個擴充方法。 下列範例將示範編譯器如何判斷要繫結的擴充方法或執行個體方法。  
@@ -79,7 +79,7 @@ using System.Linq;
   
  針對實作的類別庫，您不應該使用擴充方法阻止組件的版本號碼遞增。 如果您要在擁有其原始程式碼的程式庫中加入重要功能，則應遵循組件版本控制的標準 .NET Framework 方針。 如需詳細資訊，請參閱[組件版本控制](../../../standard/assembly/versioning.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [平行程式設計範例 (包括許多範例擴充方法)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

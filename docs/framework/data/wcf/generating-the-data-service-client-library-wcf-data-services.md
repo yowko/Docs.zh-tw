@@ -6,20 +6,20 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: d53f2d209d6fb0a6f3cadb96245338060ece87db
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f73ea93fe76f31c81935dbfb29183c247e41d8cd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780284"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975277"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>產生資料服務用戶端程式庫 (WCF 資料服務)
-執行的[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]資料服務可以傳回服務元資料檔案，其中描述摘要所公開[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]的資料模型。 如需詳細資訊， [請參閱 OData：服務中繼資料](https://go.microsoft.com/fwlink/?LinkId=186070)檔。 您可以使用 Visual Studio 中的 [**加入服務參考**] 對話方塊，將參考加入[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]至架構的服務。 當您使用此工具將參考新增至用戶端專案中摘要所[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]傳回的中繼資料時，它會執行下列動作：  
+執行開放式資料通訊協定（OData）的資料服務可以傳回服務元資料檔案，其中描述 OData 摘要所公開的資料模型。 如需詳細資訊，請參閱[OData：服務元資料檔案](https://go.microsoft.com/fwlink/?LinkId=186070)。 您可以使用 Visual Studio 中的 [**加入服務參考**] 對話方塊，將參考新增至以 OData 為基礎的服務。 當您使用此工具將參考加入至用戶端專案中 OData 摘要所傳回的中繼資料時，它會執行下列動作：  
   
 - 要求資料服務中的服務中繼資料文件，然後解譯傳回的中繼資料。  
   
     > [!NOTE]
-    > 傳回的中繼資料會以 .edmx 檔案形式儲存在用戶端專案中。 這個 .edmx 檔案不能使用實體資料模型設計工具開啟，因為它的格式與 Entity Framework 使用的 .edmx 檔案格式不同。 您可以使用 XML 編輯器或任何文字編輯器檢視此中繼資料。 如需詳細資訊，請[參閱\[MC-\]EDMX：資料服務封裝格式](https://go.microsoft.com/fwlink/?LinkID=178833)規格的實體資料模型  
+    > 傳回的中繼資料會以 .edmx 檔案形式儲存在用戶端專案中。 這個 .edmx 檔案不能使用實體資料模型設計工具開啟，因為它的格式與 Entity Framework 使用的 .edmx 檔案格式不同。 您可以使用 XML 編輯器或任何文字編輯器檢視此中繼資料。 如需詳細資訊，請參閱[\[MC-EDMX\]：資料服務封裝格式](https://go.microsoft.com/fwlink/?LinkID=178833)規格的實體資料模型  
   
 - 產生服務的表示，成為繼承自 <xref:System.Data.Services.Client.DataServiceContext> 的實體容器類別。 這樣產生的實體容器類別與實體資料模型工具產生的實體容器相似。 如需詳細資訊，請參閱[物件服務概觀 (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100))。  
   
@@ -29,10 +29,10 @@ ms.locfileid: "70780284"
   
  如需詳細資訊，請參閱[如何：加入資料服務參考](how-to-add-a-data-service-reference-wcf-data-services.md)。  
   
- 您也可以在命令提示字元中使用[DataSvcUtil](wcf-data-service-client-utility-datasvcutil-exe.md)來產生用戶端資料服務類別。 如需詳細資訊，請參閱[如何：手動產生用戶端資料服務](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)類別。  
+ 您也可以在命令提示字元中使用[DataSvcUtil](wcf-data-service-client-utility-datasvcutil-exe.md)來產生用戶端資料服務類別。 如需詳細資訊，請參閱[如何：手動產生用戶端資料服務類別](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)。  
   
 ## <a name="client-data-type-mapping"></a>用戶端資料型別對應  
- 當您使用 Visual Studio或`DataSvcUtil.exe`工具中的 [加入服務參考] 對話方塊來產生根據[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要的用戶端資料類別時，.NET Framework 資料類型會對應至資料模型中的基本類型，如下所示：  
+ 當您使用 Visual Studio 或 `DataSvcUtil.exe` 工具中的 [**加入服務參考**] 對話方塊來產生以 OData 摘要為基礎的用戶端資料類別時，.NET Framework 資料類型會對應至資料模型中的基本類型，如下所示：  
   
 |資料模型型別|.NET Framework 資料型別|  
 |---------------------|------------------------------|  
@@ -50,9 +50,9 @@ ms.locfileid: "70780284"
 |`Edm.Single`|<xref:System.Single>|  
 |`Edm.String`|<xref:System.String>|  
   
- 如需詳細資訊， [請參閱 OData：基本資料類型](https://go.microsoft.com/fwlink/?LinkId=186072)。  
+ 如需詳細資訊，請參閱[OData：基本資料類型](https://go.microsoft.com/fwlink/?LinkId=186072)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)
 - [快速入門](quickstart-wcf-data-services.md)

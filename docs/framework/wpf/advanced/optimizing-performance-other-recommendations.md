@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: cf621ab5f423e2465999b26f32489af1132bece0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6b4a5379145ebdffde0d5b76d8c7b9ab57261007
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582442"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975781"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>最佳化效能：其他建議
 <a name="introduction"></a> 本主題提供[最佳化 WPF 應用程式效能](optimizing-wpf-application-performance.md)一節中主題所涵蓋內容以外的效能建議。  
@@ -41,7 +41,7 @@ ms.locfileid: "72582442"
   
 <a name="Navigation_Objects"></a>   
 ## <a name="navigation-to-object"></a>物件瀏覽  
- @No__t_0 物件衍生自 <xref:System.Windows.Window>，並以內容導覽支援加以延伸，主要是藉由匯總 <xref:System.Windows.Navigation.NavigationService> 和日誌。 您可以藉由指定統一資源識別元（URI）或物件，來更新 <xref:System.Windows.Navigation.NavigationWindow> 的工作區。 下列範例將顯示這兩種方法：  
+ <xref:System.Windows.Navigation.NavigationWindow> 物件衍生自 <xref:System.Windows.Window>，並以內容導覽支援加以延伸，主要是藉由匯總 <xref:System.Windows.Navigation.NavigationService> 和日誌。 您可以藉由指定統一資源識別元（URI）或物件，來更新 <xref:System.Windows.Navigation.NavigationWindow> 的工作區。 下列範例將顯示這兩種方法：  
   
  [!code-csharp[Performance#PerformanceSnippet14](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
  [!code-vb[Performance#PerformanceSnippet14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
@@ -56,21 +56,21 @@ ms.locfileid: "72582442"
   
 <a name="Hit_Testing"></a>   
 ## <a name="hit-testing-on-large-3d-surfaces"></a>大型立體表面的點擊測試  
- 就 CPU 的耗用量而言，大型立體表面的點擊測試是一項很耗損效能的作業。 當立體表面為動畫形式時，更是如此。 若您不需要對這些表面進行點擊測試，請停用點擊測試。 衍生自 <xref:System.Windows.UIElement> 的物件可以藉由將 <xref:System.Windows.UIElement.IsHitTestVisible%2A> 屬性設定為 `false` 來停用點擊測試。  
+ 就 CPU 的耗用量而言，大型立體表面的點擊測試是一項很耗損效能的作業。 當立體表面為動畫形式時，更是如此。 若您不需要對這些表面進行點擊測試，請停用點擊測試。 衍生自 <xref:System.Windows.UIElement> 的物件可以藉由將 <xref:System.Windows.UIElement.IsHitTestVisible%2A> 屬性設定為 `false`來停用點擊測試。  
   
 <a name="CompositionTarget_Rendering_Event"></a>   
 ## <a name="compositiontargetrendering-event"></a>CompositionTarget.Rendering 事件  
- @No__t_0 事件會導致 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 持續以動畫顯示。 若使用此事件，請盡可能中斷其連結。  
+ <xref:System.Windows.Media.CompositionTarget.Rendering?displayProperty=nameWithType> 事件會導致 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 持續以動畫顯示。 若使用此事件，請盡可能中斷其連結。  
   
 <a name="Avoid_Using_ScrollBarVisibility"></a>   
 ## <a name="avoid-using-scrollbarvisibilityauto"></a>避免使用 ScrollBarVisibility = Auto  
  請盡可能避免使用 `HorizontalScrollBarVisibility` 和 `VerticalScrollBarVisibility` 屬性的 <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> 值。 這些屬性是針對 <xref:System.Windows.Controls.RichTextBox>、<xref:System.Windows.Controls.ScrollViewer> 和 <xref:System.Windows.Controls.TextBox> 物件，以及 <xref:System.Windows.Controls.ListBox> 物件的附加屬性所定義。 相反地，請將 <xref:System.Windows.Controls.ScrollBarVisibility> 設定為 <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>、<xref:System.Windows.Controls.ScrollBarVisibility.Hidden> 或 <xref:System.Windows.Controls.ScrollBarVisibility.Visible>。  
   
- @No__t_0 值適用于空間受限的情況，捲軸應該只在必要時才顯示。 例如，使用此 <xref:System.Windows.Controls.ScrollBarVisibility> 值搭配 <xref:System.Windows.Controls.ListBox> 30 個專案，而非具有數百行文字的 <xref:System.Windows.Controls.TextBox>，可能會很有用。  
+ <xref:System.Windows.Controls.ScrollBarVisibility.Auto> 值適用于空間受限的情況，捲軸應該只在必要時才顯示。 例如，使用此 <xref:System.Windows.Controls.ScrollBarVisibility> 值搭配 <xref:System.Windows.Controls.ListBox> 30 個專案，而非具有數百行文字的 <xref:System.Windows.Controls.TextBox>，可能會很有用。  
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>設定字型快取服務以縮短啟動時間  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 字型快取服務可在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式之間共用字型資料。 您所執行的第一個 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式會啟動此服務 (若尚未執行)。 如果您使用 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]，您可以將 "Windows Presentation Foundation （WPF） Font-size Cache 3.0.0.0" 服務從 "Manual" （預設值）設定為 [自動（延遲開始）]，以減少 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式的初始啟動時間。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 字型快取服務可在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式之間共用字型資料。 您所執行的第一個 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式會啟動此服務 (若尚未執行)。 如果您使用的是 Windows Vista，可以將 "Windows Presentation Foundation （WPF） Font-size Cache 3.0.0.0" 服務從 "Manual" （預設值）設定為 [自動（延遲開始）]，以減少 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式的初始啟動時間。  
   
 ## <a name="see-also"></a>請參閱
 

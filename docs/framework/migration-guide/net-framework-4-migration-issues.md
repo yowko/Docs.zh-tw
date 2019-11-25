@@ -5,12 +5,12 @@ helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: 889e63feb71682065641fcdc56ada017dcf6c58c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: c1c3298d87ad0f481fa30182e40cd5edcd535d6a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735129"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975612"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 移轉問題
 
@@ -42,7 +42,7 @@ ms.locfileid: "73735129"
 | **Web.config 檔案中的行動組件** | 在舊版 ASP.NET 中，System.Web.Mobile.dll 組件參考包含在 `system.web`/`compilation` 之 `assemblies` 區段的根 Web.config 檔案中。 為了改善效能，已移除此組件的參考。<br><br>注意：System.Web.Mobile.dll 組件和 ASP.NET 行動控制項包含在 ASP.NET 4 中，但已遭取代。 | 如果您想要使用此組件中的類型，請在根 Web.config 檔案或應用程式 Web.config 檔案中新增組件參考。 |
 | **輸出快取** | 在 ASP.NET 1.0 中，Bug 會讓將 `Location="ServerAndClient"` 指定為輸出快取設定的已快取頁面在回應中發出 `Vary:*` HTTP 標頭。 這會影響如何告知用戶端瀏覽器永遠不要在本機快取頁面。 在 ASP.NET 1.1 中，已新增 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> 方法，其呼叫目的是要隱藏 `Vary:*` 標頭。 不過，Bug 報告會指出開發人員不知道現有 `SetOmitVaryStar` 行為。<br><br>在 ASP.NET 4 中，不再從指定下列指示詞的回應中發出 `Vary:*` HTTP 標頭：<br><br>`<%@ OutputCache Location="ServerAndClient" %>`<br><br>因此，不再需要 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> 方法，即可隱藏 `Vary:*` 標頭。 在針對 `Location` 屬性指定 "ServerAndClient" 的應用程式中，將會在瀏覽器中快取頁面，而不需要您呼叫 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A>。 | 如果應用程式中的頁面必須發出 `Vary:*`，則請呼叫 <xref:System.Web.HttpResponse.AppendHeader%2A> 方法，如下列範例所示：<br><br>`System.Web.HttpResponse.AppendHeader("Vary","*");`<br><br>或者，您可以將輸出快取 `Location` 屬性的值變更為 "Server"。 |
 | **頁面剖析** | 在 ASP.NET 4 中，ASP.NET 網頁 (.aspx 檔案) 和使用者控制項 (.ascx 檔案) 的頁面剖析器會比舊版 ASP.NET 更為嚴格，而且標示為無效的標記數目會多於舊版本。 | 檢查頁面執行時所產生的錯誤訊息，並修正從無效標記導致的錯誤。 |
-| **Passport 類型** | 基於 Passport 中的變更，ASP.NET 2.0 內建的 Passport 支援過時且不再支援 (現在為 Live ID SDK)。 因此，現在會使用 `ObsoleteAttribute` 屬性標示 <xref:System.Web.Security> 中與 Passport 有關的類型。 | 變更在 <xref:System.Web.Security> 命名空間中使用 Passport 類型的任何程式碼 (例如，<xref:System.Web.Security.PassportIdentity>) 使用 [SDK](https://go.microsoft.com/fwlink/?LinkId=106346)。 |
+| **Passport 類型** | 基於 Passport 中的變更，ASP.NET 2.0 內建的 Passport 支援過時且不再支援 (現在為 Live ID SDK)。 因此，現在會使用 `ObsoleteAttribute` 屬性標示 <xref:System.Web.Security> 中與 Passport 有關的類型。 | 變更您在 <xref:System.Web.Security> 命名空間中使用 Passport 類型的任何程式碼（例如 <xref:System.Web.Security.PassportIdentity>），以使用 Windows Live ID SDK。 |
 | **FilePath 屬性中的 PathInfo 資訊** | ASP.NET 4 不再將 `PathInfo` 值包含在 <xref:System.Web.HttpRequest.FilePath>、<xref:System.Web.HttpRequest.AppRelativeCurrentExecutionFilePath> 和 <xref:System.Web.HttpRequest.CurrentExecutionFilePath> 這類屬性的傳回值中。 相反地，<xref:System.Web.HttpRequest.PathInfo> 中提供 `PathInfo` 資訊。 例如，假設有下列 URL 片段：<br><br>`/testapp/Action.mvc/SomeAction`<br><br>在舊版 ASP.NET 中，<xref:System.Web.HttpRequest> 屬性具有下列值：<br><br>* <xref:System.Web.HttpRequest.FilePath>: `/testapp/Action.mvc/SomeAction`<br>* <xref:System.Web.HttpRequest.PathInfo>：(空白)<br><br>在 ASP.NET 4 中，<xref:System.Web.HttpRequest> 屬性改為具有下列值：<br><br>* <xref:System.Web.HttpRequest.FilePath>: `/testapp/Action.mvc`<br>* <xref:System.Web.HttpRequest.PathInfo>: `SomeAction` | 檢查您的程式碼，找出依賴 <xref:System.Web.HttpRequest> 類別之屬性來傳回路徑資訊的位置；請變更程式碼以反映路徑資訊傳回方式的變更。 |
 | **要求驗證** | 為了改善要求驗證，會在要求生命週期稍早叫用 ASP.NET 要求驗證。 因此，會針對不適用於 .aspx 檔案的要求執行要求驗證，例如 Web 服務和自訂處理常式。 自訂 HTTP 模組在要求處理管線中執行時，要求驗證也會使用中。<br><br>基於這項變更，.aspx 檔案以外之資源的要求可能會擲回要求驗證錯誤。 要求管線中所執行的自訂程式碼 (例如，自訂 HTTP 模組) 也可能會擲回要求驗證錯誤。 | 如果必要，您可以使用 Web 組態檔中的下列設定，還原為只有觸發要求驗證之 .aspx 頁面的舊行為：<br><br>`<httpRuntime requestValidationMode="2.0" />`<br><br>警告：如果您還原成舊的行為，請確定現有處理常式、模組和其他自訂程式碼中的所有程式碼都會檢查可能為 XSS 攻擊媒介的潛在不安全 HTTP 輸入。 |
 | **路由傳送** | 如果您在 Visual Studio 2010 中建立檔案系統網站，而且網站位於資料夾名稱中包含點 (.) 的資料夾，則無法可靠地進行 URL 路由傳送。 從某些虛擬路徑傳回 HTTP 404 錯誤。 發生原因是 Visual Studio 2010 使用根虛擬目錄的不正確路徑來啟動 Visual Studio 程式開發伺服器。 | * 在檔案式網站的 [屬性] 頁面中，將 [虛擬路徑] 屬性變更為 "/"。<br><br>-或-<br><br>* 建立 Web 應用程式專案，而不是網站專案。 Web 應用程式專案沒有這個問題，而且 URL 路由傳送會運作，即使專案資料夾的名稱中有一個點也是一樣。<br><br>-或-<br><br>* 建立裝載於 IIS 中的 HTTP 網站。 在虛擬路徑和專案檔資料夾中，裝載 IIS 的網站可以有點。 |
@@ -90,7 +90,7 @@ ms.locfileid: "73735129"
 
 | 特殊功能 | 3\.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
-| **損毀處理序狀態的例外狀況** | CLR 不再將損毀處理序狀態的例外狀況傳遞給 Managed 程式碼中的例外狀況處理常式。 | 這些例外狀況指出處理序狀態已損毀。 不建議您在此狀態下執行應用程式。<br><br>如需詳細資訊，請參閱 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> 以及 CLR Inside Out 部落格中的項目[Handling Corrupted State Exceptions](https://go.microsoft.com/fwlink/?LinkID=179681) (處理損毀的狀態例外狀況)。 |
+| **損毀處理序狀態的例外狀況** | CLR 不再將損毀處理序狀態的例外狀況傳遞給 Managed 程式碼中的例外狀況處理常式。 | 這些例外狀況指出處理序狀態已損毀。 不建議您在此狀態下執行應用程式。<br><br>如需詳細資訊，請參閱 MSDN 雜誌中的 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> 和[處理損毀狀態例外狀況](https://docs.microsoft.com/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions)的專案。 |
 | **執行引擎例外狀況** | 因為可攔截的例外狀況允許不穩定的處理序繼續執行，所以 <xref:System.ExecutionEngineException> 現在已過時。 這項變更可改善執行階段中的預測性和可靠性。 | 使用 <xref:System.InvalidOperationException> 對條件發出信號。 |
 
 ### <a name="reflection"></a>反射
@@ -277,7 +277,7 @@ ms.locfileid: "73735129"
 | **Namespace 屬性** | 為了避免資料損毀，<xref:System.Xml.XPath.XPathNavigator> 物件現在會正確地傳回 `x:xmlns` 屬性的本機名稱。 |
 | **命名空間宣告** | 子樹上的 <xref:System.Xml.XmlReader> 物件不再於一個 XML 項目內建立重複的命名空間宣告。 |
 | **結構描述驗證** | 為了防止錯誤的結構描述驗證，<xref:System.Xml.Schema.XmlSchemaSet> 類別允許正確且一致地編譯 XSD 結構描述。 這些結構描述可以包含其他結構描述；例如，`A.xsd` 可以包含 `B.xsd`，而後者可以包含 `C.xsd`。 編譯任何其中一個可周遊這個相依性圖表。 |
-| **指令碼函式** | 函式實際可用時，[function-available 函式](https://msdn.microsoft.com/library/ms256124(v=vs.110).aspx)不再正確地傳回 `false`。 |
+| **指令碼函式** | 函式實際可用時，[function-available 函式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256124(v=vs.100))不再正確地傳回 `false`。 |
 | **URI** | <xref:System.Xml.Linq.XElement.Load%2A> 方法現在會在 LINQ 查詢中傳回正確的 BaseURI。 |
 
 ### <a name="validation"></a>驗證

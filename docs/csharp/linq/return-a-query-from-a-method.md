@@ -3,14 +3,14 @@ title: 從方法傳回查詢
 description: 如何傳回查詢。
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
-ms.openlocfilehash: fe2192a3edb683d7284ffae3b66cb9f70e8854b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 1df533770f76301432b104d6f8398f1687750cce
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519095"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972516"
 ---
-# <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>HOW TO：從方法傳回查詢 (C# 程式設計手冊)
+# <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>如何從方法傳回查詢（C#程式設計手冊）
 這個範例示範如何以傳回值和 `out` 參數形式從方法中傳回查詢。  
   
  查詢物件是可編寫的，這表示您可以從方法傳回查詢。 代表查詢的物件不會儲存所產生的集合，而是在必要時產生結果的步驟。 從方法傳回查詢物件的優點，在於可以進一步編寫或修改它們。 因此，傳回查詢的方法的任何傳回值或 `out` 參數也必須具有該類型。 如果方法將查詢具體化到具體 <xref:System.Collections.Generic.List%601> 或 <xref:System.Array> 類型，則會視為傳回查詢結果，而不是查詢本身。 從方法傳回的查詢變數仍然可以進行編寫或修改。  
@@ -20,6 +20,6 @@ ms.locfileid: "54519095"
   
  [!code-csharp[csProgGuideLINQ#80](~/samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Language-Integrated Query (LINQ)](index.md)

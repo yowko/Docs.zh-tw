@@ -6,12 +6,12 @@ ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: da2d764e678debc78a25faeb8e48facb44fc4021
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 263004e67bf88af4182788e8c74cb410460e9201
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929427"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971409"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>ML.NET 的自動化機器學習
 
@@ -22,7 +22,7 @@ ms.locfileid: "70929427"
 - 用於特徵選取和模型定型 (以了解模型) 的原始程式碼
 
 > [!NOTE]
-> 這項功能目前處於預覽狀態，資料可能會有變更。 
+> 這項功能目前處於預覽狀態，資料可能會有變更。
 
 自動化 ML 目前僅限於二元分類、多元分類和迴歸的機器學習[工作](resources/tasks.md)。 未來版本將支援其他機器學習工作。
 

@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: eadb456bafb1703c687e73c6aecc81c9dccae72c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: bf0b4e5f85da48ad5d7cb08efd09ff925b6b04d9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739575"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975536"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和相依性
 
@@ -64,7 +64,7 @@ ms.locfileid: "73739575"
   > [!NOTE]
   > .NET framework 4.5.1 及 .NET Framework 4.5 在此處僅用於示範。 所述的原則適用于以較新版本 .NET Framework 為目標的任何應用程式，而不是安裝在執行的系統上。  
   
-.NET Framework 中的某些變更可能需要變更您的應用程式程式碼。 如果您正在 .NET Framework 4.5 或更新版本上執行現有的應用程式，請參閱[應用程式相容性](application-compatibility.md)。 如需安裝目前版本的詳細資訊，請參閱[安裝適用于開發人員的 .NET Framework](../install/guide-for-developers.md)。 如需 .NET Framework 支援的資訊，請參閱 Microsoft 技術支援網站上的 [Microsoft .NET Framework 支援週期原則](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)。  
+.NET Framework 中的某些變更可能需要變更您的應用程式程式碼；在您使用 .NET Framework 4.5 或更新版本執行現有應用程式之前，請參閱[應用程式相容性](application-compatibility.md)。 如需安裝目前版本的詳細資訊，請參閱[安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)。 如需 .NET Framework 支援的相關資訊，請參閱 .NET 網站上的[.NET Framework 官方支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)。
   
 ## <a name="target-and-run-apps-for-older-versions"></a>針對較舊版本的目標和執行應用程式  
 
@@ -85,5 +85,5 @@ ms.locfileid: "73739575"
 ## <a name="see-also"></a>請參閱
 
 - [版本相容性](version-compatibility.md)
-- [Microsoft .NET Framework 支援週期原則](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
+- [.NET Framework 官方支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
 - [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](../install/troubleshoot-blocked-installations-and-uninstallations.md)

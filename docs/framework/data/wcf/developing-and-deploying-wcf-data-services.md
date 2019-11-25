@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: d7ddae58874c69468eb6ff1762db9083897b1acd
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d6d0f6f357feba903e8345fc45251c146c5406db
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854075"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975321"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>開發和部署 WCF Data Services
 
@@ -20,7 +20,7 @@ ms.locfileid: "70854075"
 
 ## <a name="develop-wcf-data-services"></a>開發 WCF Data Services
 
-當您使用 WCF Data Services 建立支援的[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]資料服務時，您必須在開發期間執行下列基本工作：
+當您使用 WCF Data Services 建立支援開放式資料通訊協定（OData）的資料服務時，您必須在開發期間執行下列基本工作：
 
 1. **定義資料模型**
 
@@ -32,7 +32,7 @@ ms.locfileid: "70854075"
 
 3. **設定資料服務**
 
-     根據預設，WCF Data Services 會停用實體容器所公開的資源存取權。 <xref:System.Data.Services.DataServiceConfiguration>介面可讓您設定對資源和服務作業的存取、指定支援的 OData 版本，以及定義其他整個服務的行為，例如，批次處理行為或可傳回的最大實體數目在單一回應摘要中。 如需詳細資訊，請參閱設定[資料服務](configuring-the-data-service-wcf-data-services.md)。
+     根據預設，WCF Data Services 會停用實體容器所公開的資源存取權。 <xref:System.Data.Services.DataServiceConfiguration> 介面可讓您設定對資源和服務作業的存取、指定支援的 OData 版本，以及定義其他整個服務的行為，例如，批次處理行為或可在單一回應摘要中傳回的最大實體數目。 如需詳細資訊，請參閱設定[資料服務](configuring-the-data-service-wcf-data-services.md)。
 
 本主題主要涵蓋如何使用 Visual Studio 來開發和部署資料服務。 如需 WCF Data Services 用來將資料公開為 OData 摘要之彈性的詳細資訊，請參閱[定義 WCF Data Services](defining-wcf-data-services.md)。
 
@@ -42,7 +42,7 @@ ms.locfileid: "70854075"
 
 1. **本機 IIS 伺服器**
 
-     當您建立的資料服務是在 Internet Information Services （IIS）上執行的 ASP.NET 應用程式或 ASP.NET 網站時，建議您在本機電腦上使用 IIS 來開發和測試您的資料服務。 在 IIS 上執行資料服務時，更容易在偵錯期間追蹤 HTTP 要求。 這也讓您預先決定 IIS 用來存取資料服務所需之檔案、資料庫和其他資源時所需的必要權限。 若要在 IIS 上執行資料服務，您必須確定 IIS 和 Windows Communication Foundation （WCF）都已正確安裝和設定，並將存取權授與檔案系統和資料庫中的 IIS 帳戶。 如需詳細資訊，請參閱[如何：開發在 IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)上執行的 WCF 資料服務。
+     當您建立的資料服務是在 Internet Information Services （IIS）上執行的 ASP.NET 應用程式或 ASP.NET 網站時，建議您在本機電腦上使用 IIS 來開發和測試您的資料服務。 在 IIS 上執行資料服務時，更容易在偵錯期間追蹤 HTTP 要求。 這也讓您預先決定 IIS 用來存取資料服務所需之檔案、資料庫和其他資源時所需的必要權限。 若要在 IIS 上執行資料服務，您必須確定 IIS 和 Windows Communication Foundation （WCF）都已正確安裝和設定，並將存取權授與檔案系統和資料庫中的 IIS 帳戶。 如需詳細資訊，請參閱 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)。
 
     > [!NOTE]
     > 您必須以系統管理員許可權執行 Visual Studio，才能讓開發環境設定本機 IIS 伺服器。
@@ -63,7 +63,7 @@ ms.locfileid: "70854075"
 
     - 此伺服器無法處理區塊 HTTP 資料流程，這會在從資料服務存取大型二進位資料時，由 WCF Data Services 用戶端預設傳送。 如需詳細資訊，請參閱[串流處理提供者](streaming-provider-wcf-data-services.md)。
 
-    - 此伺服器在 URL 中處理句號（`.`）字元時發生問題，即使索引鍵值中的 WCF Data Services 支援這個字元亦然。
+    - 此伺服器在 URL 中處理句點（`.`）字元時發生問題，即使索引鍵值中 WCF Data Services 支援此字元。
 
     > [!TIP]
     > 雖然您可以在開發期間使用 Visual Studio 程式開發伺服器來測試您的資料服務，但您應該在部署到執行 IIS 的 Web 服務器之後，再次進行測試。
@@ -96,7 +96,7 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 您可以�
 
   - **用於 ASP.NET Web 應用程式的部署技術**
 
-    - [如何：在 Visual Studio 中建立 Web 部署套件](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
+    - [如何：在 Visual Studio 中建立 Web 部署封裝](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
 
     - [如何：在 Visual Studio 中使用單鍵發佈來部署 Web 專案](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
 
@@ -104,14 +104,14 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 您可以�
 
     - [如何：使用複製網站工具複製網站檔案](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
 
-    - [如何：發行網站](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
+    - [How to：發行網站](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
 
     - [逐步解說：使用 XCOPY 部署 ASP.NET Web 應用程式](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
 
      如需 ASP.NET 應用程式之部署選項的詳細資訊，請參閱[Visual Studio 和 ASP.NET 的 Web 部署總覽](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110))。
 
     > [!TIP]
-    > 在您嘗試將資料服務部署到 IIS 之前，請確認您已經測試執行 IIS 之 Web 伺服器的部署。 如需詳細資訊，請參閱[如何：開發在 IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)上執行的 WCF 資料服務。
+    > 在您嘗試將資料服務部署到 IIS 之前，請確認您已經測試執行 IIS 之 Web 伺服器的部署。 如需詳細資訊，請參閱 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)。
 
 - **Microsoft Azure**
 
@@ -121,11 +121,11 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 您可以�
 
 部署資料服務時，應該考慮下列事項：
 
-- 當您部署使用 Entity Framework 提供者來存取 SQL Server 資料庫的資料服務時，您可能也需要使用資料服務部署來傳播資料結構、資料或兩者。 Visual Studio 可以自動建立腳本（.sql 檔案）在目的地資料庫中執行此動作，而且這些腳本可以包含在 ASP.NET 應用程式的 Web 部署套件中。 如需詳細資訊，請參閱[如何：使用 Web 應用程式專案](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))部署資料庫。 對於 ASP.NET 網站，您可以使用 Visual Studio 中的 [**資料庫發行] Wizard**來執行此動作。 如需詳細資訊，請參閱[發行 SQL Database](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))。
+- 當您部署使用 Entity Framework 提供者來存取 SQL Server 資料庫的資料服務時，您可能也需要使用資料服務部署來傳播資料結構、資料或兩者。 Visual Studio 可以自動建立腳本（.sql 檔案）在目的地資料庫中執行此動作，而且這些腳本可以包含在 ASP.NET 應用程式的 Web 部署套件中。 如需詳細資訊，請參閱[如何：使用 Web 應用程式專案部署資料庫](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))。 對於 ASP.NET 網站，您可以使用 Visual Studio 中的 [**資料庫發行] Wizard**來執行此動作。 如需詳細資訊，請參閱[發行 SQL Database](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))。
 
 - 由於 WCF Data Services 包含基本的 WCF 執行，因此您可以使用 Windows Server AppFabric 監視部署至在 Windows Server 上執行之 IIS 的資料服務。 如需使用 Windows Server AppFabric 監視資料服務的詳細資訊，請參閱[使用 Windows Server appfabric 的文章追蹤 WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=202005)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [裝載資料服務](hosting-the-data-service-wcf-data-services.md)
 - [保護 WCF 資料服務的安全](securing-wcf-data-services.md)

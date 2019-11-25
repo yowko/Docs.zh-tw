@@ -2,12 +2,12 @@
 title: 評估中斷性變更 - .NET Core
 description: 深入了解 .NET Core 嘗試針對跨 .NET 版本開發人員維護相容性的方式。
 ms.date: 06/10/2019
-ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3ad3cbe36ee09d371e26dc7da36a31207a6c1b25
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739343"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973654"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>評估 .NET Core 中的中斷性變更
 
@@ -103,7 +103,7 @@ ms.locfileid: "73739343"
 
   請注意，引進覆寫可能會導致先前的取用者在呼叫[基礎映像](../../csharp/language-reference/keywords/base.md)時跳過覆寫。
 
-- **✔️ 如果類別先前沒有建構函式，則將建構函式與預設 (無參數) 建構函式一起新增至類別中**
+- **✔️將函式新增至類別，以及沒有參數的函式（如果類別先前沒有任何函式）**
 
    但是，不允許將建構函式新增至先前沒有建構函式且沒有新增無參數建構函式的類別。
 

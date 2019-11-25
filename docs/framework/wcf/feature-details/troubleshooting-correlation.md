@@ -2,12 +2,12 @@
 title: 疑難排解相互關聯
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: d4b7b4ecd724416256cf0b2499d7180200f4e75c
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: be48a55a87d199829de4038e7e2a7642c102acf2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291559"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976024"
 ---
 # <a name="troubleshooting-correlation"></a>疑難排解相互關聯
 相互關聯用於讓工作流程服務訊息彼此之間產生關聯，以及讓工作流程服務訊息和正確的工作流程執行個體產生關聯，但是，如果設定錯誤，將不會收到訊息，而且應用程式將不會正確運作。 本主題提供數個疑難排解相互關聯問題方法的概觀，同時也列出使用相互關聯時可能發生的部分常見問題。
@@ -47,9 +47,7 @@ class CustomFactory : WorkflowServiceHostFactory
 
  接著，您可以在服務的 <xref:System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory> 檔案中指定這個自訂 `svc`。
 
-```
-<% @ServiceHost Language="C#" Service="OrderServiceWorkflow" Factory="CustomFactory" %>
-```
+`<% @ServiceHost Language="C#" Service="OrderServiceWorkflow" Factory="CustomFactory" %>`
 
  叫用此處理常式時，可以使用 <xref:System.ServiceModel.UnknownMessageReceivedEventArgs.Message%2A> 的 <xref:System.ServiceModel.UnknownMessageReceivedEventArgs> 屬性擷取訊息，而且類似下列訊息。
 
@@ -116,7 +114,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 </configuration>
 ```
 
- 若要查看包含在 `service.svclog` 中的追蹤資訊，請使用[服務追蹤檢視器工具（svctraceviewer.exe .exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 。 疑難排解以內容為主的相互關聯問題時，這特別有用，因為您可以檢視訊息內容並正確地查看傳遞的內容，以及是否符合以內容為主之相互關聯的 <xref:System.ServiceModel.CorrelationQuery>。 如需 WCF 追蹤的詳細資訊，請參閱[服務追蹤檢視器工具（svctraceviewer.exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)、設定[追蹤](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)，以及[使用追蹤來疑難排解您的應用程式](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。
+ 若要查看 `service.svclog`中包含的追蹤資訊，請使用[服務追蹤檢視器工具（svctraceviewer.exe .exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 。 疑難排解以內容為主的相互關聯問題時，這特別有用，因為您可以檢視訊息內容並正確地查看傳遞的內容，以及是否符合以內容為主之相互關聯的 <xref:System.ServiceModel.CorrelationQuery>。 如需 WCF 追蹤的詳細資訊，請參閱[服務追蹤檢視器工具（svctraceviewer.exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)、設定[追蹤](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)，以及[使用追蹤來疑難排解您的應用程式](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。
 
 ## <a name="common-context-exchange-correlation-issues"></a>常見的內容交換相互關聯問題
  特定類型的相互關聯會要求使用特定的繫結類型，才能讓相互關聯正確運作。 範例包括要求-回覆相互關聯 (需要雙向繫結，例如 <xref:System.ServiceModel.BasicHttpBinding>) 與內容交換相互關聯 (需要以內容為主的繫結，例如 <xref:System.ServiceModel.BasicHttpContextBinding>)。 大部分的繫結都支援雙向作業，因此，這不是要求-回覆相互關聯的常見問題，但是只有少數以內容為主的繫結，包括 <xref:System.ServiceModel.BasicHttpContextBinding>、<xref:System.ServiceModel.WSHttpContextBinding> 和 <xref:System.ServiceModel.NetTcpContextBinding>。 如果未使用以上其中一個繫結，對工作流程服務的初始呼叫將會成功，但是後續的呼叫將會失敗，並產生下列 <xref:System.ServiceModel.FaultException>。
@@ -131,9 +129,9 @@ supports the context protocol and has a valid context initialized.
  用於內容相互關聯的內容資訊可以透過 <xref:System.ServiceModel.Activities.SendReply> 傳回到 <xref:System.ServiceModel.Activities.Receive> 活動，使用雙向作業時，這個活動會初始化內容關聯；如果是單向作業，則可透過呼叫者指定這個活動。 如果內容不是透過呼叫者傳送，或者不是透過工作流程服務傳回，則在叫用後續的作業時，將會傳回先前所述的相同 <xref:System.ServiceModel.FaultException>。
 
 ## <a name="common-request-reply-correlation-issues"></a>常見的要求-回覆相互關聯問題
- 要求-回復相互關聯會與 <xref:System.ServiceModel.Activities.Receive> @ no__t-1 @ no__t-2 配對搭配使用，以在工作流程服務中執行雙向作業，並具有 <xref:System.ServiceModel.Activities.Send> @ no__t-4 @ no__t-5 組，會在另一個 Web 服務中叫用雙向作業。 在 WCF 服務中叫用雙向作業時，服務可以是傳統的命令式程式碼型 WCF 服務，或者它可以是工作流程服務。 若要使用要求-回覆相互關聯，則必須使用雙向繫結，例如 <xref:System.ServiceModel.BasicHttpBinding>，而且必須是雙向作業。
+ 要求-回復相互關聯會與 <xref:System.ServiceModel.Activities.Receive>/<xref:System.ServiceModel.Activities.SendReply> 組搭配使用，以便在工作流程服務中執行雙向作業，並使用 <xref:System.ServiceModel.Activities.Send>/<xref:System.ServiceModel.Activities.ReceiveReply> 配對來叫用另一個 Web 服務中的雙向作業。 在 WCF 服務中叫用雙向作業時，服務可以是傳統的命令式程式碼型 WCF 服務，或者它可以是工作流程服務。 若要使用要求-回覆相互關聯，則必須使用雙向繫結，例如 <xref:System.ServiceModel.BasicHttpBinding>，而且必須是雙向作業。
 
- 如果工作流程服務以平行方式進行雙向作業，或重迭 <xref:System.ServiceModel.Activities.Receive> @ no__t-1 @ no__t-2 或 <xref:System.ServiceModel.Activities.Send> @ no__t-4 @ no__t-5 組，則 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 所提供的隱含相互關聯控制碼管理可能不足夠，特別是在高壓力中案例和訊息可能無法正確地路由傳送。 若要防止發生這個問題，建議您在使用要求-回覆相互關聯時，一律明確指定 <xref:System.ServiceModel.Activities.CorrelationHandle>。 在工作流程設計工具中，從 **工具箱** 的 訊息 區段使用  **sendandreceivereply**  和  **receiveandsendreply**  範本時，預設會明確設定 <xref:System.ServiceModel.Activities.CorrelationHandle>。 使用程式碼建立工作流程時，在配對中第一個活動的 <xref:System.ServiceModel.Activities.CorrelationHandle> 內，會指定 <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>。 以下範例會設定 <xref:System.ServiceModel.Activities.Receive> 活動，並在 <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> 中指定明確的 <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>。
+ 如果工作流程服務有平行的雙向作業，或重迭的 <xref:System.ServiceModel.Activities.Receive>/<xref:System.ServiceModel.Activities.SendReply> 或 <xref:System.ServiceModel.Activities.Send>/<xref:System.ServiceModel.Activities.ReceiveReply> 組，則 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 所提供的隱含相互關聯控制碼管理可能不足，特別是在高壓力的情況下，訊息可能無法正確地路由傳送。 若要防止發生這個問題，建議您在使用要求-回覆相互關聯時，一律明確指定 <xref:System.ServiceModel.Activities.CorrelationHandle>。 在工作流程設計工具中，從 **工具箱** 的 訊息 區段使用  **sendandreceivereply**  和  **receiveandsendreply**  範本時，預設會明確設定 <xref:System.ServiceModel.Activities.CorrelationHandle>。 使用程式碼建立工作流程時，在配對中第一個活動的 <xref:System.ServiceModel.Activities.CorrelationHandle> 內，會指定 <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>。 以下範例會設定 <xref:System.ServiceModel.Activities.Receive> 活動，並在 <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> 中指定明確的 <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>。
 
 ```csharp
 Variable<CorrelationHandle> RRHandle = new Variable<CorrelationHandle>();
@@ -161,7 +159,7 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.
 ```
 
- @No__t-0 @ no__t-1 @ no__t-2 組或 <xref:System.ServiceModel.Activities.Send> @ no__t-4 @ no__t-5 配對之間不允許持續性。 系統會建立不保存區域，這個區域會持續直到兩個活動都完成為止。 如果某個活動 (例如延遲活動) 位於這個不保存區域中，並且導致工作流程變成閒置，工作流程將不會保存，即使主機設定為在工作流程變成閒置時保存它們也一樣。 如果某個活動 (例如持續活動) 嘗試明確保存在不保存區域中，系統就會擲回嚴重的例外狀況、工作流程會中止，而且 <xref:System.ServiceModel.FaultException> 會傳回給呼叫端。 嚴重的例外狀況訊息為 "InvalidOperationException：保存活動不能包含在無持續性區塊中。」。 此例外狀況不會傳回給呼叫端，不過如果啟用了追蹤，就可以觀察此例外狀況。 傳回給呼叫端之 <xref:System.ServiceModel.FaultException> 的訊息為「無法執行作業，因為 WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6' 已完成」。
+ <xref:System.ServiceModel.Activities.Receive>/<xref:System.ServiceModel.Activities.SendReply> 組或 <xref:System.ServiceModel.Activities.Send>/<xref:System.ServiceModel.Activities.ReceiveReply> 配對之間不允許持續性。 系統會建立不保存區域，這個區域會持續直到兩個活動都完成為止。 如果某個活動 (例如延遲活動) 位於這個不保存區域中，並且導致工作流程變成閒置，工作流程將不會保存，即使主機設定為在工作流程變成閒置時保存它們也一樣。 如果某個活動 (例如持續活動) 嘗試明確保存在不保存區域中，系統就會擲回嚴重的例外狀況、工作流程會中止，而且 <xref:System.ServiceModel.FaultException> 會傳回給呼叫端。 嚴重的例外狀況訊息為「System.InvalidOperationException: 持續活動不能包含在無持續性區塊中」。 此例外狀況不會傳回給呼叫端，不過如果啟用了追蹤，就可以觀察此例外狀況。 傳回給呼叫端之 <xref:System.ServiceModel.FaultException> 的訊息為「無法執行作業，因為 WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6' 已完成」。
 
  如需有關要求-回復相互關聯的詳細資訊，請參閱[要求-回復](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。
 
@@ -188,7 +186,7 @@ MessageQuerySet = new MessageQuerySet
 }
 ```
 
- 如果 XPath 查詢的設定不正確，因此不會抓取任何相互關聯資料，則會傳回錯誤，並顯示下列訊息：「相互關聯查詢產生空白的結果集。 請確定已正確設定端點的相互關聯查詢」。 其中一種快速疑難排解此問題的方式為，將 XPath 查詢取代成常值，如上一節所述。 如果您在 [**加入相互關聯初始化運算式**] 或 [ **CorrelatesOn 定義**] 對話方塊中使用 XPath 查詢產生器，而且您的工作流程服務使用訊息合約，就可能會發生此問題。 在下列範例中，系統會定義訊息合約類別。
+ 如果 XPath 查詢的設定不正確，因而無法擷取任何相互關聯資料，系統就會傳回錯誤並顯示下列訊息：「相互關聯查詢產生空白的結果集。 請確定已正確設定端點的相互關聯查詢」。 其中一種快速疑難排解此問題的方式為，將 XPath 查詢取代成常值，如上一節所述。 如果您在 [**加入相互關聯初始化運算式**] 或 [ **CorrelatesOn 定義**] 對話方塊中使用 XPath 查詢產生器，而且您的工作流程服務使用訊息合約，就可能會發生此問題。 在下列範例中，系統會定義訊息合約類別。
 
 ```csharp
 [MessageContract]

@@ -7,25 +7,19 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 787c6221b651a53dbb932a5a9d0edea123e1d97d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046428"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974924"
 ---
 # <a name="interop-etw-events"></a>Interop ETW 事件
-<a name="top"></a> Interop 事件會擷取 Microsoft 中繼語言 (MSIL) Stub 之產生和快取的相關資訊。  
-  
- 這個類別包含下列事件：  
-  
-- [ILStubGenerated 事件](#ilstubgenerated_event)  
-  
-- [ILStubCacheHit 事件](#ilstubcachehit_event)  
-  
-<a name="ilstubgenerated_event"></a>   
-## <a name="ilstubgenerated-event"></a>ILStubGenerated 事件  
- 下表說明關鍵字和層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。  
+Interop 事件會擷取 Microsoft 中繼語言 (MSIL) Stub 之產生和快取的相關資訊。  
+
+## <a name="ilstubgenerated-event"></a>ILStubGenerated 事件
+
+下表說明關鍵字和層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。  
   
 |引發事件的關鍵字|層級|  
 |-----------------------------------|-----------|  
@@ -53,11 +47,9 @@ ms.locfileid: "71046428"
 |StubMethodILCode|win:UnicodeString|虛設常式方法的 MSIL 程式碼。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
- [回到頁首](#top)  
-  
-<a name="ilstubcachehit_event"></a>   
 ## <a name="ilstubcachehit-event"></a>ILStubCacheHit 事件  
- 下表說明關鍵字和層級。  
+
+下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|層級|  
 |-----------------------------------|-----------|  
@@ -81,8 +73,6 @@ ms.locfileid: "71046428"
 |ManagedInteropMethodSignature|win:UnicodeString|Managed interop 方法的簽章。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
- [回到頁首](#top)  
-  
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [CLR ETW 事件](clr-etw-events.md)

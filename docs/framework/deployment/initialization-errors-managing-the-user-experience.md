@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce022e92e8b6770c42800a04a349eff751bdb708
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3cd881044d45a276ec361d24097b59b8ce76b7e4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052068"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975691"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 初始化錯誤：管理使用者體驗
 
 Common Language Runtime (CLR) 啟用系統會決定將用來執行 Managed 應用程式碼的 CLR 版本。 在某些情況下，啟用系統可能找不到要載入的 CLR 版本。 應用程式需要無效或未安裝在指定電腦上的 CLR 版本時，通常會發生這種情況。 如果找不到要求的版本，CLR 啟用系統會從已呼叫的函式或介面傳回 HRESULT 錯誤碼，而且可能會向執行應用程式的使用者顯示錯誤訊息。 本文提供 HRESULT 代碼清單，並說明如何防止顯示錯誤訊息。
 
-CLR 提供記錄基礎結構來協助您對 CLR 啟用問題進行偵錯，如以下連結所述：[如何：對 CLR 啟用問題進行偵錯](how-to-debug-clr-activation-issues.md)。 此基礎結構不應該與[組件繫結記錄](../tools/fuslogvw-exe-assembly-binding-log-viewer.md)混淆，兩者完全不同。
+CLR 提供記錄基礎結構來協助您偵錯 CLR 啟用問題 (如[如何：偵錯 CLR 啟用問題](how-to-debug-clr-activation-issues.md)中所述)。 此基礎結構不應該與[組件繫結記錄](../tools/fuslogvw-exe-assembly-binding-log-viewer.md)混淆，兩者完全不同。
 
 ## <a name="clr-activation-hresult-codes"></a>CLR 啟用 HRESULT 代碼
 
@@ -49,7 +49,7 @@ CLR 啟用 API 會傳回 HRESULT 代碼，以向主機報告啟用作業的結�
 
 若要解決基礎問題，並提供最佳使用者體驗 (錯誤訊息較少)，建議使用下列各項：
 
-- .NET Framework 3.5 (和更早版本) 應用程式：設定應用程式以支援 .NET Framework 4 或更新版本 (請參閱[指示](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md))。
+- 針對 .NET Framework 3.5 （及更舊版本）的應用程式：設定您的應用程式以支援 .NET Framework 4 或更新版本（請參閱[指示](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)）。
 
 - .NET Framework 4 應用程式：在應用程式安裝期間安裝 .NET Framework 4 可轉散發套件。 請參閱[開發人員部署手冊](deployment-guide-for-developers.md)。
 
@@ -59,7 +59,7 @@ CLR 啟用 API 會傳回 HRESULT 代碼，以向主機報告啟用作業的結�
 
 [ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 方法會接受 [METAHOST_POLICY_FLAGS](../unmanaged-api/hosting/metahost-policy-flags-enumeration.md) 列舉成員作為輸入。 如果找不到所要求的 CLR 版本，您可以包括 METAHOST_POLICY_SHOW_ERROR_DIALOG 旗標來要求錯誤訊息。 根據預設，不會顯示錯誤訊息 ([ICLRMetaHost::GetRuntime](../unmanaged-api/hosting/iclrmetahost-getruntime-method.md) 方法不接受這個旗標，並且不提供任何其他方式來顯示錯誤訊息)。
 
-Windows 提供了 [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkID=255242) 函式，可讓您用來宣告是否要顯示處理序內執行的程式碼所造成的錯誤訊息。 您可以指定 SEM_FAILCRITICALERRORS 旗標，以防止顯示錯誤訊息。
+Windows 提供了 [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) 函式，可讓您用來宣告是否要顯示處理序內執行的程式碼所造成的錯誤訊息。 您可以指定 SEM_FAILCRITICALERRORS 旗標，以防止顯示錯誤訊息。
 
 不過，在某些情況下，務必覆寫應用程式處理序所設定的 SEM_FAILCRITICALERRORS 設定。 例如，如果您的原生 COM 元件裝載 CLR，並裝載在設定 SEM_FAILCRITICALERRORS 的處理序中，則根據在該特定應用程式處理序中顯示錯誤訊息的影響，您可能會想要覆寫旗標。 在此情況下，您可以使用下列其中一個旗標來覆寫 SEM_FAILCRITICALERRORS：
 
@@ -71,7 +71,7 @@ Windows 提供了 [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkID=25524
 
 CLR 會針對各種情況包括一組主機，而且這些主機只要在載入必要執行階段版本時發生問題時就會顯示錯誤訊息。 下表提供主機和其錯誤訊息原則清單。
 
-|CLR 主機|說明|錯誤訊息原則|可以停用錯誤訊息？|
+|CLR 主機|描述|錯誤訊息原則|可以停用錯誤訊息？|
 |--------------|-----------------|--------------------------|------------------------------------|
 |Managed EXE 主機|啟動 Managed EXE。|會在遺漏 .NET Framework 版本時顯示|否|
 |Managed COM 主機|將 Managed COM 元件載入處理序。|會在遺漏 .NET Framework 版本時顯示|是，設定 SEM_FAILCRITICALERRORS 旗標|
@@ -89,11 +89,11 @@ CLR 啟用系統在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上提供的�
 
 安裝 .NET Framework 3.5 時，使用者可以在其 [!INCLUDE[win8](../../../includes/win8-md.md)] 電腦上執行相依於 .NET Framework 2.0、3.0 或 3.5 的應用程式。 他們也可以執行 .NET Framework 1.0 和 1.1 應用程式，但前提是這些應用程式未明確地設定成只在 .NET Framework 1.0 或 1.1 上執行。 請參閱[從 .NET Framework 1.1 移轉](../migration-guide/migrating-from-the-net-framework-1-1.md)。
 
-從 .NET Framework 4.5 開始，已改善 CLR 啟用記錄，其中包含初始化錯誤訊息顯示時間和原因的記錄項目。 如需詳細資訊，請參閱[如何：對 CLR 啟用問題進行偵錯](how-to-debug-clr-activation-issues.md)。
+從 .NET Framework 4.5 開始，已改善 CLR 啟用記錄，其中包含初始化錯誤訊息顯示時間和原因的記錄項目。 如需詳細資訊，請參閱[如何：偵錯 CLR 啟用問題](how-to-debug-clr-activation-issues.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [開發人員部署手冊](deployment-guide-for-developers.md)
-- [如何：設定應用程式以支援 .NET Framework 4 或更新版本](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-- [如何：對 CLR 啟用問題進行偵錯](how-to-debug-clr-activation-issues.md)
+- [如何：將應用程式設定為支援 .NET Framework 4 或更新版本](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [如何：偵錯 CLR 啟用問題](how-to-debug-clr-activation-issues.md)
 - [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../install/dotnet-35-windows-10.md)

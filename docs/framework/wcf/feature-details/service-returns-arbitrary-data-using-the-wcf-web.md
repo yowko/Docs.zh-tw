@@ -2,21 +2,21 @@
 title: HOW TO：使用 WCF Web HTTP 程式設計模型建立傳回任意資料的服務
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 6c7dd0debb5c491bca84ea9a4845f46b6b57b4a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41d9f0e53401bcd6b57b04a38e76af5ddb9fb4cc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586248"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976093"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>HOW TO：使用 WCF Web HTTP 程式設計模型建立傳回任意資料的服務
-有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。 這是服務作業必須由 WCF 不支援的格式傳回資料的情況。 本主題說明如何使用 WCF WEB HTTP 程式設計模型建立這類服務。 該項服務提供一種會傳回資料流的作業。  
+有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。 當服務作業必須以 WCF 不支援的格式傳回資料時，就會發生這種情況。 本主題討論如何使用 WCF WEB HTTP 程式設計模型來建立這類服務。 該項服務提供一種會傳回資料流的作業。  
   
 ### <a name="to-implement-the-service-contract"></a>若要實作服務合約  
   
 1. 定義服務合約。 該合約名稱為 `IImageServer`，並且擁有會傳回 `GetImage`的<xref:System.IO.Stream> 方法。  
   
-    ```  
+    ```csharp  
     [ServiceContract]  
         public interface IImageServer  
         {  
@@ -25,41 +25,41 @@ ms.locfileid: "64586248"
         }  
     ```  
   
-     因為此方法會傳回<xref:System.IO.Stream>WCF 會假設作業具有完整控制權會從服務作業傳回的位元組，它會套用任何格式傳回的資料。  
+     因為方法會傳回 <xref:System.IO.Stream>，所以 WCF 會假設作業對於從服務作業傳回的位元組有完整的控制權，而且它不會對傳回的資料套用任何格式。  
   
 2. 實作服務合約。 該合約只能有一項作業 (`GetImage`)。 這個方法會產生一張點陣圖，然後以 JPG 格式儲存為 <xref:System.IO.MemoryStream>。 然後，這個作業會將該資料流傳回給呼叫者。  
   
-    ```  
-    public class Service : IImageServer  
-       {  
-           public Stream GetImage(int width, int height)  
-           {  
-               Bitmap bitmap = new Bitmap(width, height);  
-               for (int i = 0; i < bitmap.Width; i++)  
-               {  
-                   for (int j = 0; j < bitmap.Height; j++)  
-                   {  
-                       bitmap.SetPixel(i, j, (Math.Abs(i - j) < 2) ? Color.Blue : Color.Yellow);  
-                   }  
-               }  
-               MemoryStream ms = new MemoryStream();  
-               bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);  
-               ms.Position = 0;  
-               WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";  
-               return ms;  
-           }  
-       }  
+    ```csharp
+    public class Service : IImageServer
+    {
+        public Stream GetImage(int width, int height)
+        {
+            Bitmap bitmap = new Bitmap(width, height);
+            for (int i = 0; i < bitmap.Width; i++)
+            {
+                for (int j = 0; j < bitmap.Height; j++)
+                {
+                    bitmap.SetPixel(i, j, (Math.Abs(i - j) < 2) ? Color.Blue : Color.Yellow);
+                }
+            }
+            MemoryStream ms = new MemoryStream();
+            bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            ms.Position = 0;
+            WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";
+            return ms;
+        }
+    }
     ```  
   
      請注意程式碼的倒數第二行：`WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
-     這會將內容類型標頭`"image/jpeg"`。 雖然本範例示範的是如何傳回 JPG 檔案，但是您可以修改範例內容，使其傳回您所需的任何資料類型。 該作業必須要擷取或產生資料，然後將資料寫入資料流中。  
+     這會將內容類型標頭設定為 `"image/jpeg"`。 雖然本範例示範的是如何傳回 JPG 檔案，但是您可以修改範例內容，使其傳回您所需的任何資料類型。 該作業必須要擷取或產生資料，然後將資料寫入資料流中。  
   
 ### <a name="to-host-the-service"></a>若要裝載服務  
   
 1. 建立裝載服務的主控台應用程式。  
   
-    ```  
+    ```csharp
     class Program  
     {  
         static void Main(string[] args)  
@@ -70,31 +70,31 @@ ms.locfileid: "64586248"
   
 2. 建立一個變數，以保留該服務位於 `Main`方法內的基底位址。  
   
-    ```  
+    ```csharp
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
 3. 指定服務類別及基底位址，以建立該服務的 <xref:System.ServiceModel.ServiceHost> 執行個體。  
   
-    ```  
+    ```csharp
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
     ```  
   
 4. 利用 <xref:System.ServiceModel.WebHttpBinding> 及 <xref:System.ServiceModel.Description.WebHttpBehavior>加入一個端點。  
   
-    ```  
+    ```csharp  
     host.AddServiceEndpoint(typeof(IImageServer), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
 5. 開啟服務主機。  
   
-    ```  
-    host.Open()  
+    ```csharp  
+    host.Open();  
     ```  
   
 6. 等候使用者按下 ENTER 終止該服務。  
   
-    ```  
+    ```csharp
     Console.WriteLine("Service is running");  
     Console.Write("Press ENTER to close the host");  
     Console.ReadLine();  
@@ -110,7 +110,7 @@ ms.locfileid: "64586248"
 ## <a name="example"></a>範例  
  以下是這個主題的完整程式碼清單。  
   
-```  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Text;  
@@ -175,6 +175,6 @@ namespace RawImageService
   
 - 編譯範例程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

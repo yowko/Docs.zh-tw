@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 55034aa5-3c1d-442a-8293-f4692d8ea6ae
-ms.openlocfilehash: a1f7105ee6590314eb2ebbfa52b511f55f83dc05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0d3c5198c6c4146cf92201b08781041043c4a72
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926405"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453591"
 ---
 # <a name="base-elements"></a>基底項目
-四個重要類別-<xref:System.Windows.UIElement>， <xref:System.Windows.ContentElement>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.FrameworkContentElement>-實作 WPF 程式設計中，您可以使用的常見項目功能的重大百分比。 這四種類別稱為此 SDK 中的基底的項目類別。  
+四個主要類別--<xref:System.Windows.UIElement>、<xref:System.Windows.ContentElement>、<xref:System.Windows.FrameworkElement>和 <xref:System.Windows.FrameworkContentElement>--執行 WPF 程式設計中所提供的大量通用元素功能。 這四個類別在此 SDK 中稱為基底元素類別。  
   
 ## <a name="in-this-section"></a>本節內容  
  [基底項目概觀](base-elements-overview.md)  
@@ -22,7 +22,7 @@ ms.locfileid: "61926405"
  [對齊、邊界和填補概觀](alignment-margins-and-padding-overview.md)  
  [HOW-TO 主題](base-elements-how-to-topics.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.ContentElement>  
@@ -35,9 +35,9 @@ ms.locfileid: "61926405"
  [WPF 架構](wpf-architecture.md)  
   [WPF 中的 XAML](xaml-in-wpf.md)  
   [項目樹狀結構和序列化](element-tree-and-serialization.md)  
-  [屬性](properties-wpf.md)  
+  [內容](properties-wpf.md)  
   [事件](events-wpf.md)  
   [輸入](input-wpf.md)  
   [資源](resources-wpf.md)  
-  [樣式設定和範本化](../controls/styling-and-templating.md)  
+  [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [執行緒模型](threading-model.md)

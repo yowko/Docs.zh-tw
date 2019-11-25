@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91099b9b4d230839bc14c5fe4d5eafd05ac95541
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dc842713a16df8e5ada5ad6c71ca19f91ecbc405
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052150"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975560"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 系統管理員部署手冊
 
@@ -21,7 +21,7 @@ ms.locfileid: "71052150"
 > [!NOTE]
 > 在本文件中提到的軟體包括 (但不限於) .NET Framework 4.5、System Center Configuration Manager 和 Active Directory，這些軟體皆受授權條款和條件的限制。 這些指示假定軟體之適當使用人均已檢視並接受該等授權條款和條件。 這些指示不可撤回任何該等授權合約之規定條件。
 >
-> 如需 .NET Framework 支援的資訊，請參閱 Microsoft 技術支援網站上的 [Microsoft .NET Framework 支援週期原則](https://go.microsoft.com/fwlink/?LinkId=196607)。
+> 如需 .NET Framework 支援的相關資訊，請參閱 Microsoft 支援服務網站上的[.NET Framework 官方支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)。
 
 此主題包括下列章節：
 
@@ -55,7 +55,7 @@ ms.locfileid: "71052150"
 
 ## <a name="deploying-the-net-framework"></a>部署 .NET Framework
 
-您可以使用 System Center 2012 Configuration Manager 部署 .NET Framework 4.5 的無訊息安裝，亦即使用者不需與安裝程序互動。 請遵循下列步驟：
+您可以使用 System Center 2012 Configuration Manager 部署 .NET Framework 4.5 的無訊息安裝，亦即使用者不需與安裝程序互動。 請依照下列步驟：
 
 1. [建立集合](#creating_a_collection)。
 
@@ -131,13 +131,13 @@ ms.locfileid: "71052150"
 
 下表描述在步驟 7 中指定的命令列選項。
 
-|選項|說明|
+|選項|描述|
 |------------|-----------------|
 |**/q**|設定無訊息模式。 不需要使用者輸入，也不會顯示輸出。|
 |**/norestart**|避免安裝程式自動重新開機。 如果您使用這個選項，Configuration Manager 就必須處理電腦重新啟動。|
-|**/chainingpackage** *PackageName*|指定執行鏈結之封裝的名稱。 已註冊 [Microsoft 客戶經驗改進計劃](https://go.microsoft.com/fwlink/p/?LinkId=248244)的人將會收到這項資訊與其他安裝工作階段資訊的報告。 如果套件名稱包含空格，分隔符號請使用雙引號，例如： **/chainingpackage "Chaining Product"** 。|
+|**/chainingpackage** *PackageName*|指定執行鏈結之封裝的名稱。 這些資訊會向已註冊 Microsoft 客戶經驗改進計畫（CEIP）的使用者報告其他安裝會話資訊。 如果套件名稱包含空格，分隔符號請使用雙引號，例如： **/chainingpackage "Chaining Product"** 。|
 
-這些步驟會建立名為 .NET Framework 4.5 的套件。 程式會部署 .NET Framework 4.5 的無訊息安裝。 在無訊息安裝中，使用者不會與安裝程序互動，而鏈結應用程式必須擷取傳回碼並處理重新開機，請參閱[取得安裝套件的進度資訊](https://go.microsoft.com/fwlink/?LinkId=179606)。
+這些步驟會建立名為 .NET Framework 4.5 的套件。 程式會部署 .NET Framework 4.5 的無訊息安裝。 在無訊息安裝中，使用者不會與安裝程序互動，而鏈結應用程式必須擷取傳回碼並處理重新開機，請參閱[取得安裝套件的進度資訊](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))。
 
 <a name="select_dist_point"></a>
 
@@ -190,7 +190,7 @@ ms.locfileid: "71052150"
 9. 在精靈的 [使用者經驗] 頁面上，使用預設值並選擇 [下一步]。
 
     > [!WARNING]
-    > 您的實際執行環境可能有一些原則，而且這些原則需要不同的部署排程選項。 如需這些選項的資訊，請參閱 [Advertisement Name Properties:Schedule Tab](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29) (公告名稱屬性：排程索引標籤)。
+    > 您的實際執行環境可能有一些原則，而且這些原則需要不同的部署排程選項。 如需這些選項的詳細資訊，請參閱[公告名稱屬性：排程索引標籤](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29) \(英文\)。
 
 10. 在精靈的 [發佈點] 頁面上，使用預設值並選擇 [下一步]。
 
@@ -253,7 +253,7 @@ ms.locfileid: "71052150"
 
 如需詳細資訊的連結，請參閱下一節：[下載錯誤碼](#additional_error_codes)。
 
-|傳回碼|說明|
+|傳回碼|描述|
 |-----------------|-----------------|
 |0|安裝已順利完成。|
 |1602|使用者已取消安裝。|
@@ -278,7 +278,7 @@ ms.locfileid: "71052150"
 
 - [Windows Update 代理程式結果碼](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [開發人員部署手冊](deployment-guide-for-developers.md)
 - [系統需求](../get-started/system-requirements.md)

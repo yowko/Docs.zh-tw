@@ -12,29 +12,29 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: 4cc62696cb6589151e3abc59bbea64b693e8b3a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121723"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972106"
 ---
 # <a name="regular-expression-options"></a>規則運算式選項
 
-<a name="Top"></a>依預設，輸入字串與規則運算式模式中任何常值字元的比較會區分大小寫，規則運算式模式中的空白字元會解譯成常值空白字元，而規則運算式中的擷取群組會隱含也會明確命名。 您可以藉由指定規則運算式選項來修改這些預設規則運算式行為和幾個其他方面。 這些選項 (列示於下表) 可以內嵌為規則運算式模式的部分，或是提供給 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別建構函式或靜態模式比對方法，以做為 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列舉值。
+依預設，輸入字串與規則運算式模式中任何常值字元的比較會區分大小寫，規則運算式模式中的空白字元會解譯成常值空白字元，而規則運算式中的擷取群組會隱含也會明確命名。 您可以藉由指定規則運算式選項來修改這些預設規則運算式行為和幾個其他方面。 這些選項 (列示於下表) 可以內嵌為規則運算式模式的部分，或是提供給 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別建構函式或靜態模式比對方法，以做為 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列舉值。
 
 |RegexOptions 成員|內嵌字元|作用|
 |-------------------------|----------------------|------------|
-|<xref:System.Text.RegularExpressions.RegexOptions.None>|無法使用|使用預設行為。 如需詳細資訊，請參閱[預設選項](#Default)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|使用不區分大小寫的比對方式。 如需詳細資訊，請參閱[不區分大小寫比對](#Case)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|使用多行模式，其中 `^` 和 `$` 會比對每一行的開頭與結尾 (而不是輸入字串的開頭和結尾)。 如需詳細資訊，請參閱[多行模式](#Multiline)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|使用單行模式，其中句點 (.) 會比對每個字元 (而不是 `\n` 以外的每個字元)。 如需詳細資訊，請參閱[單行模式](#Singleline)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|不擷取未命名的群組。 唯一有效的擷取是明確命名或編號的群組，格式如下：`(?<`name`>` subexpression`)`。 如需詳細資訊，請參閱[僅明確擷取](#Explicit)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|無法使用|將規則運算式編譯為組件。 如需詳細資訊，請參閱[編譯的規則運算式](#Compiled)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|在模式中排除未逸出的空白字元，並且在數字符號 (`#`) 後面啟用註解。 如需詳細資訊，請參閱[忽略空白字元](#Whitespace)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|無法使用|變更搜尋方向。 搜尋方向為由右至左，而不是由左至右。 如需詳細資訊，請參閱[由右至左模式](#RightToLeft)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|無法使用|為運算式啟用符合 ECMAScript 規範的行為。 如需詳細資訊，請參閱 [ECMAScript 相符行為](#ECMAScript)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|無法使用|忽略語言中的文化特性差異。 如需詳細資訊，請參閱[使用不因國別而異的文化特性比較](#Invariant)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.None>|無法使用|使用預設行為。 如需詳細資訊，請參閱[預設選項](#default-options)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|使用不區分大小寫的比對方式。 如需詳細資訊，請參閱[不區分大小寫比對](#case-insensitive-matching)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|使用多行模式，其中 `^` 和 `$` 會比對每一行的開頭與結尾 (而不是輸入字串的開頭和結尾)。 如需詳細資訊，請參閱[多行模式](#multiline-mode)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|使用單行模式，其中句點 (.) 會比對每個字元 (而不是 `\n` 以外的每個字元)。 如需詳細資訊，請參閱[單行模式](#single-line-mode)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|不擷取未命名的群組。 唯一有效的擷取是明確命名或編號的群組，格式如下：`(?<`name`>` subexpression`)`。 如需詳細資訊，請參閱[僅明確擷取](#explicit-captures-only)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|無法使用|將規則運算式編譯為組件。 如需詳細資訊，請參閱[編譯的規則運算式](#compiled-regular-expressions)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|在模式中排除未逸出的空白字元，並且在數字符號 (`#`) 後面啟用註解。 如需詳細資訊，請參閱[忽略空白字元](#ignore-white-space)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|無法使用|變更搜尋方向。 搜尋方向為由右至左，而不是由左至右。 如需詳細資訊，請參閱[由右至左模式](#right-to-left-mode)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|無法使用|為運算式啟用符合 ECMAScript 規範的行為。 如需詳細資訊，請參閱 [ECMAScript 相符行為](#ecmascript-matching-behavior)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|無法使用|忽略語言中的文化特性差異。 如需詳細資訊，請參閱[使用不因國別而異的文化特性比較](#comparison-using-the-invariant-culture)。|
 
 ## <a name="specifying-the-options"></a>指定選項
 
@@ -108,8 +108,6 @@ ms.locfileid: "73121723"
 
 以下各節會列出 .NET 中規則運算式所支援的選項。
 
-<a name="Default"></a>
-
 ## <a name="default-options"></a>預設選項
 
 <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 選項指出未指定任何選項，而規則運算式引擎使用其預設行為。 其中包括下列項目：
@@ -135,10 +133,6 @@ ms.locfileid: "73121723"
 
 因為 <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 選項代表規則運算式引擎的預設行為，所以很少明確地指定在方法呼叫中， 而是會呼叫不含 `options` 參數的建構函式或靜態模式比對方法。
 
-[回到頁首](#Top)
-
-<a name="Case"></a>
-
 ## <a name="case-insensitive-matching"></a>不區分大小寫比對
 
 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> 選項 (或 `i` 內嵌選項) 提供不區分大小寫比對。 依預設，會使用目前文化特性的大小寫慣例。
@@ -152,10 +146,6 @@ ms.locfileid: "73121723"
 
 [!code-csharp[Conceptual.Regex.Language.Options#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/case2.cs#2)]
 [!code-vb[Conceptual.Regex.Language.Options#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/case2.vb#2)]
-
-[回到頁首](#Top)
-
-<a name="Multiline"></a>
 
 ## <a name="multiline-mode"></a>多行模式
 
@@ -184,10 +174,6 @@ ms.locfileid: "73121723"
 [!code-csharp[Conceptual.Regex.Language.Options#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/multiline2.cs#4)]
 [!code-vb[Conceptual.Regex.Language.Options#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/multiline2.vb#4)]
 
-[回到頁首](#Top)
-
-<a name="Singleline"></a>
-
 ## <a name="single-line-mode"></a>單行模式
 
 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項 (或 `s` 內嵌選項) 會使規則運算式引擎將輸入字串當作其包含單行。 其作法是變更句點 (`.`) 語言項目的行為，使其比對每個字元，而不是比對新行字元 `\n` 或 \u000A 以外的每個字元。
@@ -201,10 +187,6 @@ ms.locfileid: "73121723"
 
 [!code-csharp[Conceptual.Regex.Language.Options#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/singleline1.cs#5)]
 [!code-vb[Conceptual.Regex.Language.Options#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/singleline1.vb#5)]
-
-[回到頁首](#Top)
-
-<a name="Explicit"></a>
 
 ## <a name="explicit-captures-only"></a>僅明確擷取
 
@@ -244,10 +226,6 @@ ms.locfileid: "73121723"
 [!code-csharp[Conceptual.Regex.Language.Options#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/explicit3.cs#11)]
 [!code-vb[Conceptual.Regex.Language.Options#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/explicit3.vb#11)]
 
-[回到頁首](#Top)
-
-<a name="Compiled"></a>
-
 ## <a name="compiled-regular-expressions"></a>編譯的規則運算式
 
 預設會解譯 .NET 中的規則運算式。 將 <xref:System.Text.RegularExpressions.Regex> 物件具現化，或是呼叫靜態 <xref:System.Text.RegularExpressions.Regex> 方法時，會將規則運算式模式剖析成一組自訂 opcode，而解譯器會使用這些 opcode 來執行規則運算式。 這需要有所取捨：要將初始化規則運算式引擎的成本降到最低，就會犧牲執行時期效能。
@@ -269,10 +247,6 @@ ms.locfileid: "73121723"
 
 > [!NOTE]
 > <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 選項與 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> 方法無關，此方法會建立特殊用途的組件，其中包含預先定義的編譯規則運算式。
-
-[回到頁首](#Top)
-
-<a name="Whitespace"></a>
 
 ## <a name="ignore-white-space"></a>忽略空白字元
 
@@ -302,7 +276,7 @@ ms.locfileid: "73121723"
 
 `\b \(? ( (?>\w+) ,?\s? )+  [\.!?] \)? # Matches an entire sentence.`
 
-此模式類似[僅明確擷取](#Explicit)一節中定義的模式，只是其會使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 選項來忽略模式空白字元。
+此模式類似[僅明確擷取](#explicit-captures-only)一節中定義的模式，只是其會使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 選項來忽略模式空白字元。
 
 [!code-csharp[Conceptual.Regex.Language.Options#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace1.cs#12)]
 [!code-vb[Conceptual.Regex.Language.Options#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace1.vb#12)]
@@ -311,10 +285,6 @@ ms.locfileid: "73121723"
 
 [!code-csharp[Conceptual.Regex.Language.Options#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace2.cs#13)]
 [!code-vb[Conceptual.Regex.Language.Options#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace2.vb#13)]
-
-[回到頁首](#Top)
-
-<a name="RightToLeft"></a>
 
 ## <a name="right-to-left-mode"></a>由右至左模式
 
@@ -342,10 +312,6 @@ ms.locfileid: "73121723"
 |`,?`|比對零或一個逗號字元。|
 |`\s`|比對空白字元。|
 |`\d{4}`|比對四個十進位數字。|
-
-[回到頁首](#Top)
-
-<a name="ECMAScript"></a>
 
 ## <a name="ecmascript-matching-behavior"></a>ECMAScript 相符行為
 
@@ -386,10 +352,6 @@ ECMAScript 的行為與標準規則運算式有三個不同層面：字元類別
   |`\0` 後接 0 到 2 個八進位數字|解譯成八進位。 例如，`\044` 一律解譯成八進位值，且意思是 "$"。|相同行為。|
   |`\` 後接 1 到 9 的數字，後面不再接其他十進位數字。|解譯成反向參考。 例如，`\9` 一律表示反向參考 9，即使第 9 個擷取群組不存在也一樣。 如果擷取群組不存在，規則運算式剖析器會擲回 <xref:System.ArgumentException>。|如果單一十進位數字擷取群組存在，則反向參考至該數字。 否則，會將該值解譯成常值。|
   |`\` 後接 1 到 9 的數字，後面再接其他十進位數字。|將這些數字解譯成十進位值。 如果該擷取群組存在，則將運算式解譯成反向參考。<br /><br /> 否則，解譯前置八進位數字至八進位 377；也就是說，僅考慮該值的低 8 位元。 將其餘數字解譯成常值。 例如，在運算式 `\3000` 中，如果擷取群組 300 存在，則解譯成反向參考 300；如果擷取群組 300 不存在，則解譯成八進位 300 後接 0。|盡可能將多位數字轉換成可以參考擷取的十進位值，以解譯成反向參考。 如果沒有數字可供轉換，則使用前置八進位數字至八進位 377，以解譯成八進位；將其餘數字解譯成常值。|
-
-[回到頁首](#Top)
-
-<a name="Invariant"></a>
 
 ## <a name="comparison-using-the-invariant-culture"></a>使用不因國別而異的文化特性比較
 

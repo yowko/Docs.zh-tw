@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8f9624414a2b423bd43e8790d11b70ae1ca6286d
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216235"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973317"
 ---
 # <a name="exposing-net-core-components-to-com"></a>將 .NET Core 元件公開給 COM
 
@@ -23,7 +23,7 @@ ms.locfileid: "71216235"
 - 在建置您的 .NET Core 程式庫時，一併產生 COM 伺服器。
 - 自動為 Registry-Free COM 產生並存伺服器資訊清單。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 安裝[.Net Core 3.0 SDK](https://dotnet.microsoft.com/download)或更新版本。
 
@@ -39,7 +39,7 @@ ms.locfileid: "71216235"
 
 2. 開啟 `Class1.cs`。
 3. 將 `using System.Runtime.InteropServices;` 新增到檔案的頂端。
-4. 建立名為 `IServer` 的介面。 例如：
+4. 建立名為 `IServer` 的介面。 例如:
 
    [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
 
@@ -76,6 +76,6 @@ GitHub 上的 dotnet/samples 存放庫提供功能完整的 [COM 伺服器範例
 
 ## <a name="additional-notes"></a>其他備註
 
-不同於 .NET Framework，.NET Core 不支援從 .NET Core 組件產生 COM 型別程式庫 (TLB)。 您必須手動撰寫 IDL 檔案，或為您介面的原生宣告撰寫 C++ 標頭。
+不同於 .NET Framework，.NET Core 不支援從 .NET Core 組件產生 COM 型別程式庫 (TLB)。 本指南是針對 COM 介面的原生宣告，手動撰寫 IDLC++檔案或 C/標頭。
 
-此外，因為不支援將 .NET Framework 和 .NET Core 載入同一個處理序，所以支援將 .NET Core COM 伺服器載入 .NET Framework COM 用戶端處理序 (反之亦然)。
+此外，將 .NET Framework 和 .NET Core 載入相同的進程中，都有診斷限制。 主要的限制是 managed 元件的調試，因為無法同時進行 .NET Framework 和 .NET Core 的同時調試。 此外，這兩個執行時間實例不會共用 managed 元件。 這表示您無法在兩個執行時間之間共用實際的 .NET 類型，而是必須將所有互動限制為公開的 COM 介面合約。

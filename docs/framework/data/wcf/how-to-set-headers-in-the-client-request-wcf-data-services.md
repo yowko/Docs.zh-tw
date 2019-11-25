@@ -1,5 +1,5 @@
 ---
-title: 作法：設定用戶端要求中的標頭（WCF Data Services）
+title: HOW TO：設定用戶端要求中的標頭 (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
-ms.openlocfilehash: 42987b1a855589954d45dae13b70ffc056c35f3b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 420b13df0cc9d3f89087e18b58a2b416ce0bab7f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790463"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975255"
 ---
-# <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>作法：設定用戶端要求中的標頭（WCF Data Services）
-當您使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫存取支援 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 的資料服務時，用戶端程式庫會在傳送至資料服務的要求訊息中自動設定必要的 HTTP 標頭。 不過，在某些情況下，用戶端程式庫不知道要設定所需的訊息標頭，例如，當資料服務需要宣告架構的驗證或 Cookie 時。 如需詳細資訊，請參閱 [Securing WCF Data Services](securing-wcf-data-services.md#clientAuthentication)。 在這些情況下，您必須在以要求訊息中手動設定訊息標頭，然後再傳送出去。 本主題中的範例會示範如何處理 <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> 事件，以便將新的標頭加入至要求訊息中，然後再傳送至資料服務。  
+# <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>HOW TO：設定用戶端要求中的標頭 (WCF Data Services)
+當您使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫來存取支援開放式資料通訊協定（OData）的資料服務時，用戶端程式庫會自動在傳送至資料服務的要求訊息中設定所需的 HTTP 標頭。 不過，在某些情況下，用戶端程式庫不知道要設定所需的訊息標頭，例如，當資料服務需要宣告架構的驗證或 Cookie 時。 如需詳細資訊，請參閱 [Securing WCF Data Services](securing-wcf-data-services.md#clientAuthentication)。 在這些情況下，您必須在以要求訊息中手動設定訊息標頭，然後再傳送出去。 本主題中的範例會示範如何處理 <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> 事件，以便將新的標頭加入至要求訊息中，然後再傳送至資料服務。  
   
- 本主題中的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成[WCF Data Services 快速入門](quickstart-wcf-data-services.md)時，會建立此服務和用戶端資料類別。 您也可以使用在[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]網站上發行的[Northwind 範例資料服務](https://go.microsoft.com/fwlink/?LinkId=187426); 此範例資料服務是唯讀的，而且嘗試儲存變更時，會傳回錯誤。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]網站上的範例資料服務允許匿名驗證。  
+ 本主題中的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成[WCF Data Services 快速入門](quickstart-wcf-data-services.md)時，會建立此服務和用戶端資料類別。 您也可以使用在 OData 網站上發行的[Northwind 範例資料服務](https://go.microsoft.com/fwlink/?LinkId=187426);這個範例資料服務是唯讀的，而且嘗試儲存變更時，會傳回錯誤。 OData 網站上的範例資料服務允許匿名驗證。  
   
 ## <a name="example"></a>範例  
  下列範例會註冊 <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> 事件的處理常式，然後根據資料服務執行查詢。  
@@ -34,7 +34,7 @@ ms.locfileid: "70790463"
  [!code-csharp[Astoria Northwind Client#OnSendingRequest](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#onsendingrequest)]  
  [!code-vb[Astoria Northwind Client#OnSendingRequest](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#onsendingrequest)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [保護 WCF 資料服務的安全](securing-wcf-data-services.md)
 - [WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)

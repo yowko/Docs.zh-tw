@@ -1,15 +1,15 @@
 ---
-title: 作法：使用 Async 和 Await，同時發出多個 Web 要求 (C#)
+title: 如何使用 async 和 await （C#）以平行方式提出多個 web 要求
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 06b70f5f3b2e1f3e7e423b16463f0b6b613f62c2
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: a6eef947e8f657cff574ffdf3afcd8943c665b8d
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168386"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969953"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>作法：使用 Async 和 Await，同時發出多個 Web 要求 (C#)
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>如何使用 async 和 await （C#）以平行方式提出多個 web 要求
 在非同步方法中，工作會在建立後啟動。 由於在此方法中，必須等到工作完成後才能繼續處理，因此會將 [await](../../../language-reference/operators/await.md) 運算子套用至工作。 通常，工作會在建立後等候完成，如下列範例所示。  
   
 ```csharp  
@@ -37,7 +37,7 @@ var result = await myTask;
 > [!NOTE]
 > 若要完成此專案，您必須在電腦上安裝 Visual Studio 2012 或更高版本以及 .NET Framework 4.5 或更高版本。  
   
- 如需同時啟動多個工作的其他範例，請參閱[如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。  
+ 如需同時啟動多個工作的另一個範例，請參閱[如何使用 system.threading.tasks.task.whenall 擴充非同步逐步解說C#（）](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。
   
  您可以從[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)下載此範例的程式碼。  
   
@@ -224,8 +224,8 @@ namespace AsyncExample_MultipleTasks
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [逐步解說：使用 Async 和 Await 存取 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [逐步解說：使用 async 和 await 存取 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [使用 Async 和 Await 進行非同步程式設計 (C#)](./index.md)
-- [如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [如何使用 System.threading.tasks.task.whenall （C#）擴充非同步逐步解說](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: fe7704b9366bf46f0c9965f78ce441000ead6334
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1ac8964f915206205d5c9e6ab782fcaa59bf2a99
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460789"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975723"
 ---
 # <a name="control-authoring-overview"></a>控制項撰寫概觀
 
@@ -36,7 +36,7 @@ ms.locfileid: "73460789"
   > [!NOTE]
   > 雖然 <xref:System.Windows.Controls.RadioButton> 可以使用 <xref:System.Windows.DataTemplate>，但在此範例中，<xref:System.Windows.DataTemplate> 並不足夠。  <xref:System.Windows.DataTemplate> 會定義控制項內容的外觀。 在 <xref:System.Windows.Controls.RadioButton>的情況下，內容會顯示在圓形右邊的任何一處，指出是否已選取 <xref:System.Windows.Controls.RadioButton>。  在號誌燈的範例中，選項按鈕只需要是可以發亮的圓圈。 由於停止指示燈的外觀需求與 <xref:System.Windows.Controls.RadioButton>的預設面板不同，因此必須重新定義 <xref:System.Windows.Controls.ControlTemplate>。  一般來說，<xref:System.Windows.DataTemplate> 是用來定義控制項的內容（或資料），而 <xref:System.Windows.Controls.ControlTemplate> 則是用來定義控制項的結構化方式。
 
-- **觸發程序。** <xref:System.Windows.Trigger> 可讓您動態變更控制項的外觀和行為，而不需要建立新的控制項。 例如，假設您的應用程式中有多個 <xref:System.Windows.Controls.ListBox> 控制項，而且想要每個 <xref:System.Windows.Controls.ListBox> 中的專案在選取時都是粗體和紅色。 您的第一個直覺可能是建立繼承自 <xref:System.Windows.Controls.ListBox> 的類別，並覆寫 <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> 方法來變更所選項目的外觀，但更好的方法是將觸發程式新增至變更所選項目外觀的 <xref:System.Windows.Controls.ListBoxItem> 樣式. 觸發程序可讓您變更屬性值，或是依據屬性值採取動作。 <xref:System.Windows.EventTrigger> 可讓您在事件發生時採取動作。
+- **觸發程序。** <xref:System.Windows.Trigger> 可讓您動態變更控制項的外觀和行為，而不需要建立新的控制項。 例如，假設您的應用程式中有多個 <xref:System.Windows.Controls.ListBox> 控制項，而且想要每個 <xref:System.Windows.Controls.ListBox> 中的專案在選取時都是粗體和紅色。 您的第一個直覺可能是建立繼承自 <xref:System.Windows.Controls.ListBox> 的類別，並覆寫 <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> 方法來變更所選項目的外觀，但更好的方法是將觸發程式新增至變更所選項目外觀的 <xref:System.Windows.Controls.ListBoxItem> 樣式。 觸發程序可讓您變更屬性值，或是依據屬性值採取動作。 <xref:System.Windows.EventTrigger> 可讓您在事件發生時採取動作。
 
 如需樣式、範本和觸發程序的詳細資訊，請參閱[設定樣式和範本](styling-and-templating.md)。
 
@@ -187,7 +187,7 @@ ms.locfileid: "73460789"
 
 ### <a name="design-for-designers"></a>設計工具的設計
 
-若要獲得 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 中的自訂 WPF 控制項支援 (例如使用 [屬性] 視窗編輯屬性)，請遵循這些方針。  如需針對 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]進行開發的詳細資訊，請參閱[在 Visual Studio 中設計 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)。
+若要在 Visual Studio 的 WPF 設計工具中接收自訂 WPF 控制項的支援（例如，使用屬性視窗編輯屬性），請遵循這些指導方針。  如需 WPF 設計工具開發的詳細資訊，請參閱[在 Visual Studio 中設計 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)。
 
 #### <a name="dependency-properties"></a>相依性屬性
 

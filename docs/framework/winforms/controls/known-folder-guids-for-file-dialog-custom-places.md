@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: ae4b89eb45a82299b6f35827eb576968f6cc5bae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ae9c406e91bc947ec73bb2393bb05962ca41177
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962591"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974360"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>檔案對話方塊自訂位置的已知資料夾 GUID
-當<xref:System.Guid> 您將[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]資料夾新增至集合時,可以使用來指定已知的資料夾。<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> 已知的資料夾 Guid 並不區分大小寫, 而且會在 Windows SDK 中的 Knownfolders.h 檔案檔案中定義。  
+當您將資料夾新增至 <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> 集合時，您可以使用 <xref:System.Guid> 來指定 Windows Vista 已知資料夾。 已知的資料夾 Guid 並不區分大小寫，而且會在 Windows SDK 中的 Knownfolders.h 檔案檔案中定義。  
   
 > [!NOTE]
-> 在某些情況下, 新增至的<xref:System.Windows.Forms.FileDialogCustomPlacesCollection>已知資料夾將不會顯示在 [我的**最愛連結**] 區域中。 例如, 如果指定的已知資料夾不存在於執行應用程式的電腦上, 則不會顯示已知的資料夾。  
+> 在某些情況下，新增至 <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> 的已知資料夾將不會顯示在 [我的**最愛連結**] 區域中。 例如，如果指定的已知資料夾不存在於執行應用程式的電腦上，則不會顯示已知的資料夾。  
   
 ## <a name="list-of-guids"></a>Guid 清單  
- 下表列出[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]已知的資料夾及其相關聯<xref:System.Guid>的。  
+ 下表列出 Windows Vista 已知資料夾及其相關聯的 <xref:System.Guid>。  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -106,7 +106,7 @@ ms.locfileid: "69962591"
  InternetCache  
  352481E8-33BE-4251-BA85-6007CAEDCF9D  
   
- 連結  
+ 「連結」  
  BFB9D5E0-C6A9-404C-B2B2-AE6DB6AF4968  
   
  LocalAppData  
@@ -193,7 +193,7 @@ ms.locfileid: "69962591"
  PublicVideos  
  2400183A-6185-49FB-A2D8-4A392A602BA3  
   
- QuickLaunch  
+ 快速啟動  
  52A4F021-7B75-48A9-9F6B-4B87A210BC8F  
   
  最近  
@@ -286,7 +286,7 @@ ms.locfileid: "69962591"
  Windows  
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [如何：將自訂位置新增至檔案對話方塊](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [操作說明：將自訂位置加入至檔案對話方塊](how-to-add-a-custom-place-to-a-file-dialog-box.md)

@@ -1,16 +1,16 @@
 ---
-title: 如何：比較字串 - C# 手冊
+title: 如何比較字串- C#指南
 description: 了解如何比較和排序字串值，不論大小寫、不論文化特性特定的順序
 ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: a3e5f8dd9cfac809aafc2533463390cd5a64e0d6
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: dda3ec8cb6a0131867e6ea3bb0cf7199d86058ff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395448"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973326"
 ---
 # <a name="how-to-compare-strings-in-c"></a>如何：在 C\# 比較字串
 
@@ -33,7 +33,7 @@ ms.locfileid: "72395448"
 
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
 - <xref:System.String.Equals%2A?displayProperty=nameWithType>
-- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 和 <xref:System.String.op_Inequality%2A?displayProperty=nameWithType>，也就是分別[`==` 和 `!=` 的等號比較運算子](../language-reference/operators/equality-operators.md#string-equality)
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 和 <xref:System.String.op_Inequality%2A?displayProperty=nameWithType>，也就是等[號比較運算子分別 `==` 和 `!=`](../language-reference/operators/equality-operators.md#string-equality)
 
 執行區分大小寫的序數比較，並視需要使用目前的文化特性。 下列範例示範：
 
@@ -41,7 +41,7 @@ ms.locfileid: "72395448"
 
 比較字串時，預設序數比較並不會考慮語言規則。 其會在兩個字串中比較各 <xref:System.Char> 物件的二進位值。 如此一來，預設序數比較也會區分大小寫。
 
-請注意，與 <xref:System.String.Equals%2A?displayProperty=nameWithType> 和 `==` 和 @no__t 2 運算子相等的測試，與使用 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 和 <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> 方法的字串比較不同。 雖然相等的測試會執行區分大小寫的序數比較，但比較方法會使用目前的文化特性執行區分大小寫、區分文化特性的比較。 因為預設比較方法時常執行不同類型的比較，所以建議您皆透過呼叫明確指定要執行比較之類型的多載，以讓程式碼的意圖更加明確。
+請注意，使用 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 和 <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> 方法，與 <xref:System.String.Equals%2A?displayProperty=nameWithType> 和 `==` 和 `!=` 運算子相等的測試與字串比較不同。 雖然相等的測試會執行區分大小寫的序數比較，但比較方法會使用目前的文化特性執行區分大小寫、區分文化特性的比較。 因為預設比較方法時常執行不同類型的比較，所以建議您皆透過呼叫明確指定要執行比較之類型的多載，以讓程式碼的意圖更加明確。
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>不區分大小寫的序數比較
 

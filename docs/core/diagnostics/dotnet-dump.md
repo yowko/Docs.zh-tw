@@ -4,12 +4,12 @@ description: 安裝和使用 dotnet-傾印命令列工具。
 author: sdmaclea
 ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: 7eba0cba28f0575be4b374b26e9aca26a70df603
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321593"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973460"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>傾印集合和分析公用程式（`dotnet-dump`）
 
@@ -34,7 +34,7 @@ dotnet-dump [-h|--help] [--version] <command>
 
 ## <a name="description"></a>描述
 
-@No__t_0 的全域工具可讓您收集和分析 Windows 和 Linux 傾印，而不需要任何與 Linux `lldb` 相關的原生偵錯工具。 這項工具在 Alpine Linux 這類平臺上很重要，因為無法使用完整的 `lldb`。 @No__t_0 工具可讓您執行 SOS 命令來分析損毀和垃圾收集行程（GC），但它不是原生偵錯工具，因此不支援顯示原生堆疊框架之類的動作。
+`dotnet-dump` 的全域工具可讓您收集和分析 Windows 和 Linux 傾印，而不需要任何與 Linux `lldb` 相關的原生偵錯工具。 這項工具在 Alpine Linux 這類平臺上很重要，因為無法使用完整的 `lldb`。 `dotnet-dump` 工具可讓您執行 SOS 命令來分析損毀和垃圾收集行程（GC），但它不是原生偵錯工具，因此不支援顯示原生堆疊框架之類的動作。
 
 ## <a name="options"></a>選項
 
@@ -75,7 +75,7 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
 - **`--type <Heap|Mini>`**
 
-  指定可決定從進程收集之資訊種類的「啞型別」。 有兩種類型：
+  指定傾印類型，它會決定從進程收集的資訊種類。 有兩種類型：
 
   - `Heap`-包含模組清單、執行緒清單、所有堆疊、例外狀況資訊、處理資訊和所有記憶體（對應的影像除外）的大型且較完整的傾印。
   - `Mini`-包含模組清單、執行緒清單、例外狀況資訊和所有堆疊的小型傾印。
@@ -88,8 +88,8 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
   如果未指定：
 
-  - 預設為 Windows 上的 *.\dump_YYYYMMDD_HHMMSS.dmp* 。
-  - 預設為 */core_YYYYMMDD_HHMMSS* on Linux。
+  - 預設為 Windows 上的 *. \ dump_YYYYMMDD_HHMMSS dmp* 。
+  - 預設為 *./core_YYYYMMDD_HHMMSS* on Linux。
 
   YYYYMMDD 是年/月/日，而 HHMMSS 是小時/分鐘/秒。
 

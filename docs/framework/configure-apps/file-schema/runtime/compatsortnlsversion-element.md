@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-ms.openlocfilehash: f13265e2056c8eca62cd510154dd7c096eeabb00
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5de760fe07283ddee36b3475fa0975c8d46776e5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73117685"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969262"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 元素
 指定執行階段在執行字串比較時，應使用舊版排序次序。  
@@ -55,7 +55,7 @@ ms.locfileid: "73117685"
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 因為 .NET Framework 4 中 <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> 類別所執行的字串比較、排序和大小寫作業符合 Unicode 5.1 標準，所以字串比較方法（例如 <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> 和 <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>）的結果可能與舊版的不同.NET Framework。 如果您的應用程式相依于舊版行為，您可以在應用程式的設定檔中包含 `<CompatSortNLSVersion>` 元素，以還原 .NET Framework 3.5 和舊版中所使用的字串比較和排序規則。  
+ 因為 .NET Framework 4 中 <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> 類別所執行的字串比較、排序和大小寫作業符合 Unicode 5.1 標準，所以字串比較方法（例如 <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> 和 <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>）的結果可能會與舊版的 .NET Framework 不同。 如果您的應用程式相依于舊版行為，您可以在應用程式的設定檔中包含 `<CompatSortNLSVersion>` 元素，以還原 .NET Framework 3.5 和舊版中所使用的字串比較和排序規則。  
   
 > [!IMPORTANT]
 > 還原舊版字串比較和排序規則也必須要有可在本機系統上提供的 sort00001000.dll 動態連結程式庫。  
@@ -68,15 +68,15 @@ ms.locfileid: "73117685"
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- 當您執行 .NET Framework 4 上的範例時，它會顯示下列輸出。  
+ 當您執行 .NET Framework 4 上的範例時，它會顯示下列輸出：
   
-```  
+```console
 sta follows a in the sort order.  
 ```  
   
- 這與您在 .NET Framework 3.5 上執行範例時所顯示的輸出完全不同。  
+ 這與您在 .NET Framework 3.5 上執行範例時所顯示的輸出完全不同：
   
-```  
+```console
 sta equals a in the sort order.  
 ```  
   

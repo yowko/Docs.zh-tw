@@ -1,16 +1,16 @@
 ---
-title: 作法：修改字串內容 - C# 指南
+title: 如何修改字串內容- C#指南
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 2cc1166d98a6cc07e0827a138cecb09c0530b899
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
-ms.translationtype: HT
+ms.openlocfilehash: 539e313173d46c2c92399cefe94207c8beed03b4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267768"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973259"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>作法：在 C\# 中修改字串內容
+# <a name="how-to-modify-string-contents-in-c"></a>如何在 C\# 中修改字串內容
 
 本文示範多種技術，會藉由修改現有的 `string`來產生 `string`。 所有示範的技術均會傳回修改結果，作為新的 `string` 物件。 為明確示範此做法，所有的範例都會將結果儲存到新的變數。 接著，您可在執行各個範例時，對原本的 `string` 與修改後產生的 `string` 進行檢查。
 
@@ -24,7 +24,7 @@ ms.locfileid: "67267768"
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#1)]
 
-上述程式碼示範了字串的「固定」  屬性。 您可以看到在上述程式碼中，原本的字串 `source` 並未受到修改。 <xref:System.String.Replace%2A?displayProperty=nameWithType> 方法會建立包含修改項目的新 `string`。
+上述程式碼示範了字串的「固定」屬性。 您可以看到在上述程式碼中，原本的字串 `source` 並未受到修改。 <xref:System.String.Replace%2A?displayProperty=nameWithType> 方法會建立包含修改項目的新 `string`。
 
 <xref:System.String.Replace%2A> 方法可取代字串或單一字元。 在這兩種情況下，所找到之文字的每個項目均會受到取代。  下列範例將所有 ' ' 字元取代為 '\_'：
 
@@ -48,7 +48,7 @@ ms.locfileid: "67267768"
 
 您可使用[規則運算式](../../standard/base-types/regular-expressions.md)以新文字取代文字相符模式，可由模式定義。 下列範例使用 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別在來源字串中尋找模式，並以適當的大小寫加以取代。 <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> 方法會以提供取代項目邏輯的函式作為其引數之一。 在此範例中，該函式 `LocalReplaceMatchCase` 是在範例方法中宣告的**區域函式**。 `LocalReplaceMatchCase` 會使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別以適當的大小寫來建置取代字串。
 
-規則運算式在搜尋及取代遵循模式的文字時相當實用，但對於已知文字則否。 如需詳細資料，請參閱[如何：搜尋字串](search-strings.md)。 搜尋模式 "the\s" 會搜尋後面接著空白字元的字組 "the"。 模式的該部分會確認其不會對應來源字串中的 "there"。 如需規則運算式語言元素的詳細資訊，請參閱[規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)。
+規則運算式在搜尋及取代遵循模式的文字時相當實用，但對於已知文字則否。 如需詳細資訊，請參閱[如何搜尋字串](search-strings.md)。 搜尋模式 "the\s" 會搜尋後面接著空白字元的字組 "the"。 模式的該部分會確認其不會對應來源字串中的 "there"。 如需規則運算式語言元素的詳細資訊，請參閱[規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)。
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#5)]
 
@@ -71,7 +71,7 @@ ms.locfileid: "67267768"
 
 您可以查看 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的程式碼，來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Framework 規則運算式](../../standard/base-types/regular-expressions.md)
 - [規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)

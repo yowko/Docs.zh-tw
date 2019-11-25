@@ -2,12 +2,12 @@
 title: 工作階段、執行個體與並行
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: d780488f7bb0bd46a22ef205b3954b6b4614cae0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b8c0b40ca67de92f4f1b481298a8a26d96e887d4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969204"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976084"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>工作階段、執行個體與並行
 「 *工作階段* 」(Session) 是兩個端點之間所傳送之所有訊息的相互關聯。 「*執行個體* 」(Instancing) 是指控制使用者定義之服務物件的存留時間，以及其相關的 <xref:System.ServiceModel.InstanceContext> 物件。 「*並行* 」(Concurrency) 是指控制在 <xref:System.ServiceModel.InstanceContext> 中同時執行的執行緒數目。  
@@ -17,7 +17,7 @@ ms.locfileid: "69969204"
 ## <a name="sessions"></a>工作階段  
  當服務合約將 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>時，該合約會指出所有的呼叫 (即支援呼叫的基礎訊息交換模式) 必須是同一個對話的一部分。 如果合約指定其允許工作階段，但不需要工作階段，則用戶端可以連線，並選擇是否要建立工作階段。 如果工作階段終止並透過相同之工作階段型的通道傳送訊息，就會擲回例外狀況。  
   
- WCF 會話具有下列主要的概念功能:  
+ WCF 會話具有下列主要的概念功能：  
   
 - 工作階段是由呼叫的應用程式明確地初始化及終止。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "69969204"
   
 - 沒有與 WCF 會話相關聯的一般資料存放區。  
   
- 如果您熟悉 ASP.NET 應用程式<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>中的類別及其所提供的功能, 您可能會注意到這種會話與 WCF 會話之間的下列差異:  
+ 如果您熟悉 ASP.NET 應用程式中的 <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> 類別，以及它所提供的功能，您可能會注意到這種會話與 WCF 會話之間的下列差異：  
   
 - ASP.NET 會話一律是由伺服器起始。  
   
@@ -42,15 +42,15 @@ ms.locfileid: "69969204"
   
  以下為可用的執行個體模式：  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerCall>：會針對<xref:System.ServiceModel.InstanceContext>每個用戶端要求建立新的 (因此服務物件)。  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>：為每個用戶端要求所建立的新 <xref:System.ServiceModel.InstanceContext> (因此為服務物件)。  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerSession>：新<xref:System.ServiceModel.InstanceContext>的 (因此服務物件) 會針對每個新的用戶端會話建立, 並在該會話的存留期內進行維護 (這需要支援會話的系結)。  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>：為每個新用戶端工作階段所建立的新 <xref:System.ServiceModel.InstanceContext> (因此為服務物件)，並維持該工作階段的存留期 (這麼做需要支援工作階段的繫結)。  
   
-- <xref:System.ServiceModel.InstanceContextMode.Single>：單一<xref:System.ServiceModel.InstanceContext> (因此服務物件) 會處理應用程式存留期的所有用戶端要求。  
+- <xref:System.ServiceModel.InstanceContextMode.Single>：單一的 <xref:System.ServiceModel.InstanceContext> (因此為服務物件)，負責處理所有應用程式之存留期的用戶端要求。  
   
  下列程式碼範例示範預設的 <xref:System.ServiceModel.InstanceContextMode> 值，在服務類別上會明確地設定 <xref:System.ServiceModel.InstanceContextMode.PerSession> 。  
   
-```  
+```csharp  
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]   
 public class CalculatorService : ICalculatorInstance   
 {   
@@ -63,9 +63,9 @@ public class CalculatorService : ICalculatorInstance
 ### <a name="well-known-singleton-services"></a>已知的單一服務  
  單一執行個體服務物件的其中一個變化有時可能會很有用處：您可以自行建立服務物件，並建立使用該物件的服務主機。 若要這麼做，您必須同時將 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.ServiceModel.InstanceContextMode.Single> ，否則在開啟服務主機時會擲回例外狀況。  
   
- 請使用 <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> 建構函式建立此類服務。 當您想要將特定物件執行個體提供給單一服務使用時，它提供了另一種實作自訂 <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> 的方式。 當服務實作類型很難建構時 (例如，無法實作沒有參數的預設公用建構函式時)，您可以使用這個多載。  
+ 請使用 <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> 建構函式建立此類服務。 當您想要將特定物件執行個體提供給單一服務使用時，它提供了另一種實作自訂 <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> 的方式。 當您的服務實類型很難以建立時，您可以使用這個多載（例如，如果它不會執行無參數公用的函式）。  
   
- 請注意, 將物件提供給這個函式時, 與 Windows Communication Foundation (WCF) 實例行為相關的某些功能會以不同的方式運作。 例如，提供單一物件執行個體時，呼叫 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> 將沒有任何作用。 同樣的，也會忽略任何其他執行個體的釋放機制。 <xref:System.ServiceModel.ServiceHost> 的行為就像是所有作業都已將 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> 。  
+ 請注意，將物件提供給這個函式時，與 Windows Communication Foundation （WCF）實例行為相關的某些功能會以不同的方式運作。 例如，提供單一物件執行個體時，呼叫 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> 將沒有任何作用。 同樣的，也會忽略任何其他執行個體的釋放機制。 <xref:System.ServiceModel.ServiceHost> 的行為就像是所有作業都已將 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> 。  
   
 ### <a name="sharing-instancecontext-objects"></a>共用 InstanceContext 物件  
  您也可以自行執行該關聯，以控制哪個工作階段通道或呼叫應與哪個 <xref:System.ServiceModel.InstanceContext> 物件產生關聯。  
@@ -75,20 +75,20 @@ public class CalculatorService : ICalculatorInstance
   
  以下為可用的三種並行模式：  
   
-- <xref:System.ServiceModel.ConcurrencyMode.Single>：每個實例內容一次最多隻能有一個執行緒訊息。 其他希望使用相同執行個體內容的執行緒必須封鎖，直到原始的執行緒結束執行個體內容為止。  
+- <xref:System.ServiceModel.ConcurrencyMode.Single>：每一個執行個體內容同時最多可以在執行個體內容中，擁有一個處理訊息的執行緒。 其他希望使用相同執行個體內容的執行緒必須封鎖，直到原始的執行緒結束執行個體內容為止。  
   
-- <xref:System.ServiceModel.ConcurrencyMode.Multiple>：每個服務實例可以有多個執行緒同時處理訊息。 此服務實作必須是安全執行緒，才能使用這種並行模式。  
+- <xref:System.ServiceModel.ConcurrencyMode.Multiple>：每一個服務執行個體都可以同時擁有多個處理訊息的執行緒。 此服務實作必須是安全執行緒，才能使用這種並行模式。  
   
-- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>：每個服務實例一次會處理一則訊息, 但會接受重新進入作業呼叫。 服務只會在透過 WCF 用戶端物件呼叫時, 接受這些呼叫。  
+- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>：每一個服務執行個體在同一時間內會處理一個訊息，但接受可重新進入 (Re-entrant) 的作業呼叫。 服務只會在透過 WCF 用戶端物件呼叫時，接受這些呼叫。  
   
 > [!NOTE]
-> 您應該了解，開發能夠安全地使用一個以上之執行緒的程式碼，可能會很難順利地撰寫。 在使用 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 或 <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 值之前，請確定已適當地設計您的服務以使用這些模式 如需詳細資訊，請參閱 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>。  
+> 您應該了解，開發能夠安全地使用一個以上之執行緒的程式碼，可能會很難順利地撰寫。 在使用 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 或 <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 值之前，請確定已適當地設計您的服務以使用這些模式 如需詳細資訊，請參閱<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>。  
   
- 並存的使用與執行個體模式有關。 在<xref:System.ServiceModel.InstanceContextMode.PerCall>實例中, 並行與不相關, 因為每個訊息都是由<xref:System.ServiceModel.InstanceContext>新的所處理, 因此中不會有一個以上的<xref:System.ServiceModel.InstanceContext>使用中線程。  
+ 並存的使用與執行個體模式有關。 在 <xref:System.ServiceModel.InstanceContextMode.PerCall> 實例中，並行不相關，因為每個訊息都是由新的 <xref:System.ServiceModel.InstanceContext> 處理，因此 <xref:System.ServiceModel.InstanceContext>中永遠不會有一個以上的執行緒。  
   
  下列程式碼會示範將 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> 屬性設定為 <xref:System.ServiceModel.ConcurrencyMode.Multiple>。  
   
-```  
+```csharp
 [ServiceBehavior(ConcurrencyMode=ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.Single)]   
 public class CalculatorService : ICalculatorConcurrency   
 {   
@@ -103,15 +103,15 @@ public class CalculatorService : ICalculatorConcurrency
   
 |InstanceContextMode 值|<xref:System.ServiceModel.SessionMode.Required>|<xref:System.ServiceModel.SessionMode.Allowed>|<xref:System.ServiceModel.SessionMode.NotAllowed>|  
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|PerCall|-會話通道的行為:會話與<xref:System.ServiceModel.InstanceContext>每個呼叫的。<br />-無會話通道的行為:隨即擲回例外狀況。|-會話通道的行為:會話與<xref:System.ServiceModel.InstanceContext>每個呼叫的。<br />-無會話通道的行為:每個呼叫的。 <xref:System.ServiceModel.InstanceContext>|-會話通道的行為:隨即擲回例外狀況。<br />-無會話通道的行為:每個呼叫的。 <xref:System.ServiceModel.InstanceContext>|  
-|PerSession|-會話通道的行為:會話以及<xref:System.ServiceModel.InstanceContext>每個通道的。<br />-無會話通道的行為:隨即擲回例外狀況。|-會話通道的行為:會話以及<xref:System.ServiceModel.InstanceContext>每個通道的。<br />-無會話通道的行為:每個呼叫的。 <xref:System.ServiceModel.InstanceContext>|-會話通道的行為:隨即擲回例外狀況。<br />-無會話通道的行為:每個呼叫的。 <xref:System.ServiceModel.InstanceContext>|  
-|Single|-會話通道的行為:一個會話, 一個<xref:System.ServiceModel.InstanceContext>用於所有呼叫。<br />-無會話通道的行為:隨即擲回例外狀況。|-會話通道的行為:會話和<xref:System.ServiceModel.InstanceContext>所建立或使用者指定之 singleton 的。<br />-無會話通道的行為:<xref:System.ServiceModel.InstanceContext>所建立或使用者指定之 singleton 的。|-會話通道的行為:隨即擲回例外狀況。<br />-無會話通道的行為:<xref:System.ServiceModel.InstanceContext>針對每個建立的 singleton, 或使用者指定之 singleton 的。|  
+|PerCall|-會話通道的行為：會話與每個呼叫的 <xref:System.ServiceModel.InstanceContext>。<br />-無會話通道的行為：擲回例外狀況。|-會話通道的行為：會話與每個呼叫的 <xref:System.ServiceModel.InstanceContext>。<br />-無會話通道的行為：每個呼叫的 <xref:System.ServiceModel.InstanceContext>。|-會話通道的行為：擲回例外狀況。<br />-無會話通道的行為：每個呼叫的 <xref:System.ServiceModel.InstanceContext>。|  
+|PerSession|-會話通道的行為：每個通道的會話和 <xref:System.ServiceModel.InstanceContext>。<br />-無會話通道的行為：擲回例外狀況。|-會話通道的行為：每個通道的會話和 <xref:System.ServiceModel.InstanceContext>。<br />-無會話通道的行為：每個呼叫的 <xref:System.ServiceModel.InstanceContext>。|-會話通道的行為：擲回例外狀況。<br />-無會話通道的行為：每個呼叫的 <xref:System.ServiceModel.InstanceContext>。|  
+|Single|-會話通道的行為：會話和所有呼叫的一個 <xref:System.ServiceModel.InstanceContext>。<br />-無會話通道的行為：擲回例外狀況。|-會話通道的行為：已建立或使用者指定之 singleton 的會話和 <xref:System.ServiceModel.InstanceContext>。<br />-無會話通道的行為：所建立或使用者指定之 singleton 的 <xref:System.ServiceModel.InstanceContext>。|-會話通道的行為：擲回例外狀況。<br />-無會話通道的行為：每個建立的 singleton 或使用者指定的 singleton 的 <xref:System.ServiceModel.InstanceContext>。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用工作階段](../../../../docs/framework/wcf/using-sessions.md)
-- [如何：建立需要會話的服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
-- [如何：控制服務實例](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [如何：建立需要工作階段的服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [如何：控制服務執行個體](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
 - [並行](../../../../docs/framework/wcf/samples/concurrency.md)
 - [執行個體](../../../../docs/framework/wcf/samples/instancing.md)
-- [工作階段](../../../../docs/framework/wcf/samples/session.md)
+- [Session](../../../../docs/framework/wcf/samples/session.md)

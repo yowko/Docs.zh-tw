@@ -1,18 +1,18 @@
 ---
-title: 作法：在 C# 中定義常數
+title: 如何在中定義常數C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: ba5bc3d03dcaf5c8be94936a453a439670e8dc1f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6681b1987ec9b5bce40b3abffb9b7d11d4a82bcc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924480"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970952"
 ---
-# <a name="how-to-define-constants-in-c"></a>作法：在 C\# 中定義常數
+# <a name="how-to-define-constants-in-c"></a>如何在 C\# 中定義常數
 常數是欄位，其值於編譯時期設定且絕對不會變更。 使用常數提供有意義的名稱，而不是特殊值的數值常值 (「神奇號碼」)。  
   
 > [!NOTE]
@@ -27,6 +27,6 @@ ms.locfileid: "69924480"
   
  使用類別名稱限定詞，可協助確保您和其他常數使用者了解它是無法修改的常數。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [類別和結構](./index.md)

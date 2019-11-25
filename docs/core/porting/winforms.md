@@ -5,14 +5,14 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 7480c86af1acd482adff5e3e24dc229f24af0e5b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 64920f1d226fcc8265d0be252d4751f2ba278cc1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216314"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973283"
 ---
-# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>作法：將 Windows Forms 傳統型應用程式移植到 .NET Core
+# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>如何將 Windows Forms 桌面應用程式移植到 .NET Core
 
 此文章說明如何將 Windows Forms 傳統型應用程式從 .NET Framework 移植到 .NET Core 3.0。 .NET Core 3.0 SDK 支源 Windows Forms 應用程式。 Windows Forms 仍然是僅限 Windows 的架構，只能在 Windows 上執行。 本範例使用 .NET Core SDK CLI 來建立和管理您的專案。
 
@@ -25,7 +25,7 @@ ms.locfileid: "71216314"
 | **MyFormsCore.csproj** | 您所建立的新 .NET Core 專案的名稱。 |
 | **MyAppCore.exe** | .NET Core Windows Forms 應用程式可執行檔。 |
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 適用於您想要執行之任何設計工具工作的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 。
 

@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: 582f5f2d6d82613736ed795eebe5129284cdac6e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d30b2e30639837730ecb185a2c0f659a63955004
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052988"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975402"
 ---
 # <a name="create-the-data-service"></a>建立資料服務
 
-在本主題中，您會建立範例資料服務，使用 WCF Data Services 來公開[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]以 Northwind 範例資料庫為基礎的摘要。 這個工作包含下列基本步驟：
+在本主題中，您會建立範例資料服務，使用 WCF Data Services 來公開以 Northwind 範例資料庫為基礎的開放式資料通訊協定（OData）摘要。 這個工作包含下列基本步驟：
 
 1. 建立 ASP.NET Web 應用程式。
 
@@ -30,15 +30,15 @@ ms.locfileid: "71052988"
 
 1. 在 [**新增專案**] 對話方塊的 [Visual Basic] 或 [ C#視覺效果] 底下，選取 [ **web** ] 類別，然後選取 [ **ASP.NET web 應用程式**]。
 
-1. 輸入`NorthwindService`作為專案的名稱，然後選取 **[確定]** 。
+1. 輸入 `NorthwindService` 做為專案的名稱，然後選取 **[確定]** 。
 
 1. 在 [**新增 ASP.NET Web 應用程式**] 對話方塊中，選取 [**空白**]，然後選取 **[確定]** 。
 
-1. (選擇性) 指定 Web 應用程式的連接埠號碼。 注意：此通訊埠`12345`編號會用於這一系列的快速入門主題。
+1. (選擇性) 指定 Web 應用程式的連接埠號碼。 注意： `12345` 的通訊埠編號用於這一系列的快速入門主題。
 
     1. 在**方案總管**中，以滑鼠右鍵按一下您剛建立的 ASP.NET 專案，然後選擇 [**屬性**]。
 
-    2. 選取 [ **Web** ] 索引標籤，並將 [**特定埠**] 文字方塊的`12345`值設定為。
+    2. 選取 [ **Web** ] 索引標籤，並將 [**特定埠**] 文字方塊的值設定為 [`12345`]。
 
 ## <a name="define-the-data-model"></a>定義資料模型
 
@@ -46,13 +46,13 @@ ms.locfileid: "71052988"
 
 2. 在 [**加入新專案**] 對話方塊中，選取 [**資料**] 類別，然後選取 [ **ADO.NET 實體資料模型**]。
 
-3. 針對資料模型的名稱，輸入`Northwind.edmx`。
+3. 針對資料模型的名稱，輸入 `Northwind.edmx`。
 
 4. 在**實體資料模型 Wizard**中，從 [資料庫] 選取 [ **EF Designer**]，然後按 **[下一步]** 。
 
 5. 執行下列其中一個步驟，將資料模型連接至資料庫，然後按 **[下一步]** ：
 
-    - 如果您尚未設定資料庫連接，請按一下 [**新增連接**]，然後建立新的連接。 如需詳細資訊，請參閱[如何：建立 SQL Server 資料庫](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))的連接。 此 SQL Server 執行個體必須已附加 Northwind 範例資料庫。
+    - 如果您尚未設定資料庫連接，請按一下 [**新增連接**]，然後建立新的連接。 如需詳細資訊，請參閱 [How to: Create Connections to SQL Server Databases](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))。 此 SQL Server 執行個體必須已附加 Northwind 範例資料庫。
 
          \-或-
 
@@ -73,9 +73,9 @@ ms.locfileid: "71052988"
    > [!NOTE]
    > **WCF 資料服務**範本可在 Visual Studio 2015 中取得，但 Visual Studio 2017 則不提供。
 
-3. 針對服務的名稱，輸入`Northwind`。
+3. 在 [服務名稱] 中，輸入 `Northwind`。
 
-     Visual Studio 會針對新的服務建立 XML 標記和程式碼檔案。 根據預設，程式碼編輯器視窗隨即開啟。 在 [**方案總管] 中**，此服務具有名稱 Northwind，副檔名 *.svc.cs*或 *.svc.vb*。
+     Visual Studio 會針對新的服務建立 XML 標記和程式碼檔案。 根據預設，程式碼編輯器視窗隨即開啟。 在**方案總管**中，服務的名稱為 Northwind，副檔名為*svc.cs*或 *.svc*。
 
 4. 在資料服務的程式碼裡，於定義資料服務和型別的類別定義中，取代註解 `/* TODO: put your data source class name here */`，該型別是資料模型的實體容器，在這個案例中是 `NorthwindEntities`。 類別定義看起來應如下列：
 
@@ -101,6 +101,6 @@ ms.locfileid: "71052988"
 > [!div class="nextstepaction"]
 > [從網頁瀏覽器存取服務](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ADO.NET 實體資料模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

@@ -1,15 +1,15 @@
 ---
-title: 作法：執行運算式樹狀架構 (C#)
+title: 如何執行運算式樹狀架構（C#）
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: 4a73201d06d21964a40fbbe57fa952da35c5942c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e7d408ea154572dc8b45d2e67bca3f05837868d2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924363"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969887"
 ---
-# <a name="how-to-execute-expression-trees-c"></a>作法：執行運算式樹狀架構 (C#)
+# <a name="how-to-execute-expression-trees-c"></a>如何執行運算式樹狀架構（C#）
 本主題示範如何執行運算式樹狀架構。 執行運算式樹狀架構可能會傳回一個值，或者只是執行某個動作，例如呼叫方法。  
   
  您只能執行代表 Lambda 運算式的運算式樹狀架構。 代表 Lambda 運算式的運算式樹狀架構為 <xref:System.Linq.Expressions.LambdaExpression> 或 <xref:System.Linq.Expressions.Expression%601> 類型。 若要執行這些運算式樹狀架構，請呼叫 <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> 方法建立可執行委派，然後叫用該委派。  
@@ -46,7 +46,7 @@ Console.WriteLine(result);
   
 - 加入 System.Linq.Expressions 命名空間。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [運算式樹狀結構 (C#)](./index.md)
-- [如何：修改運算式樹狀架構 (C#)](./how-to-modify-expression-trees.md)
+- [如何修改運算式樹狀架構（C#）](./how-to-modify-expression-trees.md)

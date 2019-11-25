@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 05006ff3-02dc-410e-831e-54ec3e7e24ef
-ms.openlocfilehash: b9280936a16d50283c01120c9dc046e65a0a79ae
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 26cfee95f7cd3b956ff263d90b713e9d70b98202
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790866"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975337"
 ---
 # <a name="defining-wcf-data-services"></a>定義 WCF 資料服務
 
-本節說明如何建立和設定 WCF Data Services，以將資料公開為[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 如需建立資料服務所需之基本步驟的詳細資訊，請參閱[將資料公開為服務](exposing-your-data-as-a-service-wcf-data-services.md)。
+本節說明如何建立和設定 WCF Data Services，以將資料公開為開放式資料通訊協定（OData）摘要。 如需建立資料服務所需之基本步驟的詳細資訊，請參閱[將資料公開為服務](exposing-your-data-as-a-service-wcf-data-services.md)。
 
-## <a name="in-this-section"></a>本節內容
+## <a name="in-this-section"></a>本章節內容
 
  [設定資料服務](configuring-the-data-service-wcf-data-services.md)
 
@@ -57,8 +57,8 @@ ms.locfileid: "70790866"
 
  描述 WCF Data Services 目前未執行的 OData 通訊協定的選擇性功能。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)
 - [存取資料服務資源](accessing-data-service-resources-wcf-data-services.md)
-- [快速入門](getting-started-with-wcf-data-services.md)
+- [使用者入門](getting-started-with-wcf-data-services.md)

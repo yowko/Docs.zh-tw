@@ -1,18 +1,18 @@
 ---
-title: 作法：使用 LINQ 查詢 ArrayList (C#)
+title: 如何：使用 LINQ 查詢 ArrayList (C#)
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: 51c42296b8acb6be1c9c4505f9af3d6fbaf248ce
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c22cd6ef22b5ca182266c1e8db10151e07567fc6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253444"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969817"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-c"></a>HOW TO：使用 LINQ 查詢 ArrayList (C#)
+# <a name="how-to-query-an-arraylist-with-linq-c"></a>如何：使用 LINQ 查詢 ArrayList (C#)
 使用 LINQ 查詢非泛型 <xref:System.Collections.IEnumerable> 集合時 (例如 <xref:System.Collections.ArrayList>)，您必須明確宣告範圍變數的類型，以反映集合中特定類型的物件。 例如，如果您有 `Student` 物件的 <xref:System.Collections.ArrayList>，您的 [from 子句](../../../language-reference/keywords/from-clause.md)看起來應該如下：  
   
-```csharp  
+```csharp
 var query = from Student s in arrList  
 //...
 ```  
@@ -83,6 +83,6 @@ namespace NonGenericLINQ
 */  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)

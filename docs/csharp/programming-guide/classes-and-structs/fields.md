@@ -5,27 +5,27 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: c07f058eb081fa1c9e0a3756959570d1ba9e47f6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 3a04d07f90ea9e1e536082f2cf0151555305d9e6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924522"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971048"
 ---
 # <a name="fields-c-programming-guide"></a>欄位 (C# 程式設計手冊)
-「欄位」  是任意類型的變數，可在[類別](../../language-reference/keywords/class.md)或[結構](../../language-reference/keywords/struct.md)中直接宣告。 欄位是其包含類型的「成員」  。  
+「欄位」是任意類型的變數，可在[類別](../../language-reference/keywords/class.md)或[結構](../../language-reference/keywords/struct.md)中直接宣告。 欄位是其包含類型的「成員」。  
   
- 類別或結構可能會有執行個體欄位或靜態欄位，或者兩者都有。 執行個體欄位是專屬於某種類型的執行個體。 如果您有搭配執行個體欄位 F 的類別 T，您可以建立兩個類型 T 的物件，然後修改每個物件中的 F 值，而不會影響另一個物件中的值。 相較之下，靜態欄位屬類別本身所擁有，並在該類別的所有執行個體之間共用。 對執行個體 A 所做的變更，執行個體 B 和 C 只要存取該欄位就會立即看到。  
+ 類別或結構可能會有執行個體欄位或靜態欄位，或者兩者都有。 執行個體欄位是專屬於某種類型的執行個體。 如果您有搭配執行個體欄位 F 的類別 T，您可以建立兩個類型 T 的物件，然後修改每個物件中的 F 值，而不會影響另一個物件中的值。 相較之下，靜態欄位屬類別本身所擁有，並在該類別的所有執行個體之間共用。 從實例 A 進行的變更將會立即顯示給實例 B 和 C （如果它們存取欄位）。  
   
- 一般而言，您應該只針對具有 private 或 protected 存取範圍的變數使用欄位。 您的類別公開給用戶端程式碼的資料應透過[方法](./methods.md)、[屬性](./properties.md)和[索引子](../indexers/index.md)來提供。 藉由使用這些建構來間接存取內部欄位，即可防範無效的輸入值。 儲存由公用屬性公開之資料的私用欄位稱為「備份存放區」  或「支援欄位」  。  
+ 一般而言，您應該只針對具有 private 或 protected 存取範圍的變數使用欄位。 您的類別公開給用戶端程式碼的資料應透過[方法](./methods.md)、[屬性](./properties.md)和[索引子](../indexers/index.md)來提供。 藉由使用這些建構來間接存取內部欄位，即可防範無效的輸入值。 儲存由公用屬性公開之資料的私用欄位稱為「備份存放區」或「支援欄位」。  
   
- 這些欄位通常會儲存必須可供多個類別方法存取的資料，以及其儲存時間必須比任何一個方法的存留期都還要長的資料。 例如，表示行事曆日期的類別可能會有三個整數欄位，分別代表月、日和年。 未在單一方法以外範圍使用的變數，應在方法主體本身內宣告為「區域變數」  。  
+ 這些欄位通常會儲存必須可供多個類別方法存取的資料，以及其儲存時間必須比任何一個方法的存留期都還要長的資料。 例如，表示行事曆日期的類別可能會有三個整數欄位，分別代表月、日和年。 未在單一方法以外範圍使用的變數，應在方法主體本身內宣告為「區域變數」。  
   
- 請依序指定欄位的存取層級、欄位的類型和欄位的名稱，以在類別區塊中宣告欄位。 例如：  
+ 請依序指定欄位的存取層級、欄位的類型和欄位的名稱，以在類別區塊中宣告欄位。 例如:  
   
  [!code-csharp[csProgGuideObjects#61](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#61)]  
   
- 若要存取物件中的欄位，請在物件名稱後面加上句號，再加上欄位的名稱，就像是 `objectname.fieldname`。 例如：  
+ 若要存取物件中的欄位，請在物件名稱後面加上句號，再加上欄位的名稱，就像是 `objectname.fieldname`。 例如:  
   
  [!code-csharp[csProgGuideObjects#62](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#62)]  
   
@@ -47,7 +47,7 @@ ms.locfileid: "69924522"
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](./index.md)

@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9294d702-b4e5-441c-a930-e63d27b86bfd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b6916c223aee615fad0bb9e5a47691122db41c98
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 321ad53ca5f773191c5b5d1084b36caa6aeae4dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752063"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137054"
 ---
-# <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR 列舉
+# <a name="cor_prf_monitor-enumeration"></a>COR_PRF_MONITOR 列舉
 包含值，這些值用於指定分析工具想要訂閱的行為、功能或事件。  
   
 ## <a name="syntax"></a>語法  
@@ -99,8 +97,8 @@ typedef enum {
 } COR_PRF_MONITOR;  
 ```  
   
-## <a name="members"></a>成員  
- 下面各節列出`COR_PRF_MONITOR`依類別目錄的列舉型別成員。 分類如下︰  
+## <a name="members"></a>Members  
+ 下列各節依類別列出 `COR_PRF_MONITOR` 列舉成員。 分類包括：  
   
 - [未設定任何旗標](#None)  
   
@@ -110,7 +108,7 @@ typedef enum {
   
 - [設定旗標](#Config)  
   
-- [組合旗標](#Composite)  
+- [複合旗標](#Composite)  
   
 <a name="None"></a>   
 ### <a name="no-flags-set"></a>未設定任何旗標  
@@ -125,39 +123,39 @@ typedef enum {
 |成員|描述|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_ALL`|啟用所有回呼事件。|  
-|`COR_PRF_MONITOR_APPDOMAIN_LOADS`|控制項`AppDomainCreation*`並`AppDomainShutdown*`中的回呼[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)介面。|  
-|`COR_PRF_MONITOR_ASSEMBLY_LOADS`|控制項`AssemblyLoad*`並`AssemblyUnload*`中的回呼[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)介面。|  
-|`COR_PRF_MONITOR_CACHE_SEARCHES`|控制項`JITCachedFunctionSearch*`中的回呼[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)介面。<br /><br /> 此旗標的行為已在 .NET Framework 2.0 版中變更。|  
-|`COR_PRF_MONITOR_CCW`|控制項`COMClassicVTable*`中的回呼[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)介面。|  
-|`COR_PRF_MONITOR_CLASS_LOADS`|控制項`ClassLoad*`並`ClassUnload*`中的回呼[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)介面。|  
-|`COR_PRF_MONITOR_CLR_EXCEPTIONS`|控制項`ExceptionCLRCatcher*`中的回呼[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)介面。|  
-|`COR_PRF_MONITOR_CODE_TRANSITIONS`|控制項[UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)並[ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)中的回呼[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)介面|  
-|`COR_PRF_MONITOR_ENTERLEAVE`|控制項`FunctionEnter*`， `FunctionLeave*`，並`FunctionTailCall*`[分析全域靜態函式](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)。|  
-|`COR_PRF_MONITOR_EXCEPTIONS`|控制項[ExceptionThrown](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionthrown-method.md)回呼， `ExceptionSearch*`， `ExceptionOSHandler*`， `ExceptionUnwind*`，和`ExceptionCatcher*`中的回呼[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)介面。|  
-|`COR_PRF_MONITOR_FUNCTION_UNLOADS`|控制項[FunctionUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-functionunloadstarted-method.md)中的回撥[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)介面。|  
-|`COR_PRF_MONITOR_GC`|控制項[GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)， [GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)， [MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)， [MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)， [SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)， [SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md)， [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)， [ObjectsAllocatedByClass](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectsallocatedbyclass-method.md)， [RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)， [RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)， [HandleCreated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)， [HandleDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)，以及[FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)中的回呼`ICorProfilerCallback*`介面。 當`COR_PRF_MONITOR_GC`是配置、 並行記憶體回收集合已關閉。|  
-|`COR_PRF_MONITOR_JIT_COMPILATION`|控制項`JITCompilation*`， [JITFunctionPitched](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitfunctionpitched-method.md)，以及[JITInlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md)中的回呼[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)介面。|  
-|`COR_PRF_MONITOR_MODULE_LOADS`|控制項`ModuleLoad*`， `ModuleUnload*`，並[ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md)中的回呼[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)介面。|  
-|`COR_PRF_MONITOR_OBJECT_ALLOCATED`|控制項[ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)中的回撥[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)介面。|  
-|`COR_PRF_MONITOR_REMOTING`|控制項`Remoting*`中的回呼[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)介面。|  
+|`COR_PRF_MONITOR_APPDOMAIN_LOADS`|控制 `AppDomainCreation*`ICorProfilerCallback`AppDomainShutdown*` 介面中的 [ 及 ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 回呼。|  
+|`COR_PRF_MONITOR_ASSEMBLY_LOADS`|控制 `AssemblyLoad*`ICorProfilerCallback`AssemblyUnload*` 介面中的 [ 及 ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 回呼。|  
+|`COR_PRF_MONITOR_CACHE_SEARCHES`|控制 `JITCachedFunctionSearch*`ICorProfilerCallback[ 介面中的 ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 回呼。<br /><br /> 此旗標的行為已在 .NET Framework 2.0 版中變更。|  
+|`COR_PRF_MONITOR_CCW`|控制 `COMClassicVTable*`ICorProfilerCallback[ 介面中的 ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 回呼。|  
+|`COR_PRF_MONITOR_CLASS_LOADS`|控制 `ClassLoad*`ICorProfilerCallback`ClassUnload*` 介面中的 [ 及 ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 回呼。|  
+|`COR_PRF_MONITOR_CLR_EXCEPTIONS`|控制 `ExceptionCLRCatcher*`ICorProfilerCallback[ 介面中的 ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 回呼。|  
+|`COR_PRF_MONITOR_CODE_TRANSITIONS`|控制 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) 介面中的 [UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) 及 [ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 回呼。|  
+|`COR_PRF_MONITOR_ENTERLEAVE`|控制 `FunctionEnter*`、`FunctionLeave*`和 `FunctionTailCall*`[分析全域靜態](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)函式。|  
+|`COR_PRF_MONITOR_EXCEPTIONS`|控制 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionthrown-method.md) 介面中的 `ExceptionSearch*`ExceptionThrown`ExceptionOSHandler*` 回呼以及 `ExceptionUnwind*`、`ExceptionCatcher*`、[ 及 ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 回呼。|  
+|`COR_PRF_MONITOR_FUNCTION_UNLOADS`|控制 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-functionunloadstarted-method.md) 介面中的 [FunctionUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 回呼。|  
+|`COR_PRF_MONITOR_GC`|控制 [ 介面中的 ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)GarbageCollectionStarted[、](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)GarbageCollectionFinished[、](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)MovedReferences[、](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)MovedReferences2[、](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)SurvivingReferences[、](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md)SurvivingReferences2[、](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)ObjectReferences[、](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectsallocatedbyclass-method.md)ObjectsAllocatedByClass[、](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)RootReferences[、](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)RootReferences2[、](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)HandleCreated[、](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)HandleDestroyed[ 及 ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)FinalizeableObjectQueued`ICorProfilerCallback*` 回呼。 配置 `COR_PRF_MONITOR_GC` 時，會關閉並行垃圾收集。|  
+|`COR_PRF_MONITOR_JIT_COMPILATION`|控制 `JITCompilation*`ICorProfilerCallback[ 介面中的 ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitfunctionpitched-method.md)、[JITFunctionPitched](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md) 及 [JITInlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 回呼。|  
+|`COR_PRF_MONITOR_MODULE_LOADS`|控制 `ModuleLoad*`ICorProfilerCallback`ModuleUnload*` 介面中的 [、](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) 及 [ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 回呼。|  
+|`COR_PRF_MONITOR_OBJECT_ALLOCATED`|控制 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md) 介面中的 [ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 回呼。|  
+|`COR_PRF_MONITOR_REMOTING`|控制 `Remoting*`ICorProfilerCallback[ 介面中的 ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 回呼。|  
 |`COR_PRF_MONITOR_REMOTING_ASYNC`|控制 `Remoting*` 回呼是否會監視非同步事件。|  
 |`COR_PRF_MONITOR_REMOTING_COOKIE`|控制 Cookie 是否傳遞至 `Remoting*` 回呼。|  
-|`COR_PRF_MONITOR_SUSPENDS`|控制項`RuntimeSuspend*`， `RuntimeResume*`， [RuntimeThreadSuspended](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)，並[RuntimeThreadResumed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md)中的回呼[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)介面。|  
-|`COR_PRF_MONITOR_THREADS`|控制項[ThreadCreated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)， [ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)， [ThreadAssignedToOSThread](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadassignedtoosthread-method.md)，以及[ThreadNameChanged](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md)中的回呼[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)並[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)介面。|  
+|`COR_PRF_MONITOR_SUSPENDS`|控制 `RuntimeSuspend*`ICorProfilerCallback`RuntimeResume*` 介面中的 [、](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)、[RuntimeThreadSuspended](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md) 及 [RuntimeThreadResumed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 回呼。|  
+|`COR_PRF_MONITOR_THREADS`|控制 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md) 及 [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) 介面中的 [ThreadCreated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadassignedtoosthread-method.md)、[ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md)、[ThreadAssignedToOSThread](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 及 [ThreadNameChanged](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) 回呼。|  
   
 <a name="Feature"></a>   
 ### <a name="feature-enabling-flags"></a>功能啟用旗標  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
-|`COR_PRF_ENABLE_FRAME_INFO`|允許擷取的確切`ClassID`藉由呼叫泛型函式[GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法`COR_PRF_FRAME_INFO`所傳回的值[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)回呼。|  
-|`COR_PRF_ENABLE_FUNCTION_ARGS`|使用追蹤可讓引數[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)回呼或[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)回呼並[GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)方法。|  
-|`COR_PRF_ENABLE_FUNCTION_RETVAL`|能夠追蹤使用的傳回值[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)回呼或[FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)回呼並[GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md)方法。|  
+|`COR_PRF_ENABLE_FRAME_INFO`|啟用透過搭配 `ClassID`FunctionEnter2[ 回呼所傳回的 ](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) 值呼叫 `COR_PRF_FRAME_INFO`GetFunctionInfo2[ 方法，擷取泛型函式的確切 ](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)。|  
+|`COR_PRF_ENABLE_FUNCTION_ARGS`|啟用使用 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) 回呼，或 [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) 回呼及 [GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) 方法追蹤引數。|  
+|`COR_PRF_ENABLE_FUNCTION_RETVAL`|啟用使用 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) 回呼，或 [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) 回呼及 [GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) 方法追蹤傳回值。|  
 |`COR_PRF_ENABLE_INPROC_DEBUGGING`|已取代。<br /><br /> 不支援同處理序偵錯。 此旗標無效。|  
-|`COR_PRF_ENABLE_JIT_MAPS`|已取代。<br /><br /> 可讓分析工具使用，以取得 IL-原生的對應[GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)。 從 .NET Framework 2.0 開始，執行階段會一律追蹤 IL 與原生的對應；所以會一律將此旗標視為必須設定。|  
-|`COR_PRF_ENABLE_OBJECT_ALLOCATED`|通知執行階段，分析工具可能想要物件配置通知。 必須在初始化期間設定此旗標。 它可讓後續使用分析工具`COR_PRF_MONITOR_OBJECT_ALLOCATED`旗標，以接收[ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)回呼。|  
-|`COR_PRF_ENABLE_REJIT`|啟用呼叫[RequestReJIT](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrejit-method.md)並[RequestRevert](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrevert-method.md)方法。 分析工具必須在啟動時設定此旗標。  若分析工具指定此旗標，則必須也要指定 `COR_PRF_DISABLE_ALL_NGEN_IMAGES`。|  
-|`COR_PRF_ENABLE_STACK_SNAPSHOT`|啟用呼叫[DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法。|  
+|`COR_PRF_ENABLE_JIT_MAPS`|已取代。<br /><br /> 允許分析工具使用 [GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) 取得 IL 與原生 (IL-to-native) 的對應。 從 .NET Framework 2.0 開始，執行階段會一律追蹤 IL 與原生的對應；所以會一律將此旗標視為必須設定。|  
+|`COR_PRF_ENABLE_OBJECT_ALLOCATED`|通知執行階段，分析工具可能想要物件配置通知。 必須在初始化期間設定此旗標。 這可讓分析工具在後續使用 `COR_PRF_MONITOR_OBJECT_ALLOCATED` 旗標接收 [ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md) 回呼。|  
+|`COR_PRF_ENABLE_REJIT`|啟用呼叫 [RequestReJIT](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrejit-method.md) 及 [RequestRevert](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrevert-method.md) 方法。 分析工具必須在啟動時設定此旗標。  若分析工具指定此旗標，則必須也要指定 `COR_PRF_DISABLE_ALL_NGEN_IMAGES`。|  
+|`COR_PRF_ENABLE_STACK_SNAPSHOT`|啟用呼叫 [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) 方法。|  
   
 <a name="Config"></a>   
 ### <a name="configuration-flags"></a>組態旗標  
@@ -173,7 +171,7 @@ typedef enum {
 <a name="Composite"></a>   
 ### <a name="composite-flags"></a>組合旗標  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |`COR_PRF_ALL`|代表所有 `COR_PRF_MONITOR` 旗標值。|  
 |`COR_PRF_ALLOWABLE_AFTER_ATTACH`|代表所有 `COR_PRF_MONITOR` 旗標，這些旗標可在分析工具連結至執行中的應用程式之後加以設定。 語法區段指出此位元遮罩中存在的個別旗標。|  
@@ -182,18 +180,18 @@ typedef enum {
 |`COR_PRF_REQUIRE_PROFILE_IMAGE`|代表需要設定檔增強影像的所有 `COR_PRF_MONITOR` 旗標。|  
   
 ## <a name="remarks"></a>備註  
- A`COR_PRF_MONITOR`值搭配[icorprofilerinfo:: Geteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)並[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)定義通用語言執行平台所產生的事件通知的方法分析工具。  
+ `COR_PRF_MONITOR` 值可用於搭配 [ICorProfilerInfo::GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md) 及 [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) 方法，定義 Common Language Runtime 建立給分析工具的事件通知。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorProf.idl, CorProf.h  
+ **標頭：** CorProf.idl、CorProf.h  
   
- **LIBRARY:** CorGuids.lib  
+ **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
 - [GetEventMask 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)

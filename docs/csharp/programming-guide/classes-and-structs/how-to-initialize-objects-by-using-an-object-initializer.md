@@ -1,25 +1,25 @@
 ---
-title: 作法：使用物件初始設定式初始化物件 - C# 程式設計手冊
+title: 如何使用物件初始化運算式初始化物件- C#程式設計指南
 ms.custom: seodec18
 ms.date: 12/20/2018
 helpviewer_keywords:
 - object initializers [C#], how to use
 - objects [C#], initializing
 ms.assetid: 4b75ebb2-2e29-43de-929c-d736a8f27ce6
-ms.openlocfilehash: 7b31e28c23a70e9f0794c82feb2a984c40ee9d0f
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
-ms.translationtype: HT
+ms.openlocfilehash: be555688a645c7689e76b5b4499c44255c18dbc8
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267577"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970885"
 ---
-# <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>作法：使用物件初始設定式初始化物件 (C# 程式設計手冊)
+# <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>如何使用物件初始化運算式初始化物件（C#程式設計手冊）
 
 您可以使用物件初始設定式以宣告方式初始化類型物件，而不需要明確叫用該類型的建構函式。  
   
 下列範例示範如何搭配具名物件使用物件初始設定式。 編譯器會先存取預設執行個體建構函式，再處理成員初始化，來處理物件初始設定式。 因此，如果無參數建構函式在類別中宣告為 `private`，需要公用存取的物件初始設定式將會失敗。
   
-如果您要定義匿名型別，則必須使用物件初始設定式。 如需詳細資訊，請參閱[如何：在查詢中傳回項目屬性的子集](how-to-return-subsets-of-element-properties-in-a-query.md)。  
+如果您要定義匿名型別，則必須使用物件初始設定式。 如需詳細資訊，請參閱[如何在查詢中傳回專案屬性的子集](how-to-return-subsets-of-element-properties-in-a-query.md)。  
   
 ## <a name="example"></a>範例  
 
@@ -31,7 +31,7 @@ ms.locfileid: "67267577"
 
 [!code-csharp[InitializerIndexerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/HowToIndexInitializer.cs#HowToIndexInitializer)]  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [物件和集合初始設定式](object-and-collection-initializers.md)

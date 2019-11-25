@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: f7f8c25844f41dd8915c0f4404d6714b4c81233c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 039ae0cb314eba2f1bb3e5b39f2127a5e694f334
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458471"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974162"
 ---
 # <a name="collection-type-dependency-properties"></a>集合類型相依性屬性
 本主題提供如何實作屬性類型為集合類型之相依性屬性的指引和建議模式。  
@@ -28,8 +28,11 @@ ms.locfileid: "73458471"
 ## <a name="initializing-the-collection-beyond-the-default-value"></a>初始化超過預設值的集合  
  建立相依性屬性時，未指定屬性預設值為初始欄位值。 而是透過相依性屬性中繼資料指定預設值。 如果屬性是參考類型，則在相依性屬性中繼資料中指定的預設值不是每個執行個體的預設值，而是適用於所有類型執行個體的預設值。 因此您必須小心不要使用集合屬性中繼資料所定義的單一靜態集合，當成您類型新建執行個體的工作預設值。 您必須改確定刻意將唯一 (執行個體) 集合的集合值設定為類別建構函式邏輯的一部分。 否則會建立意外的單一類別。  
   
- 請參考下列範例。 以下範例區段顯示類別 `Aquarium` 的定義。 類別會定義 `AquariumObjects`的集合類型相依性屬性，它會使用具有 <xref:System.Windows.FrameworkElement> 類型條件約束的泛型 <xref:System.Collections.Generic.List%601> 類型。 在相依性屬性的 <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> 呼叫中，中繼資料會將預設值建立為新的泛型 <xref:System.Collections.Generic.List%601>。  
-  
+ 請參考下列範例。 下列範例區段顯示類別 `Aquarium`的定義，其中包含具有預設值的缺點。 類別會定義 `AquariumObjects`的集合類型相依性屬性，它會使用具有 <xref:System.Windows.FrameworkElement> 類型條件約束的泛型 <xref:System.Collections.Generic.List%601> 類型。 在相依性屬性的 <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> 呼叫中，中繼資料會將預設值建立為新的泛型 <xref:System.Collections.Generic.List%601>。
+
+> [!WARNING]
+> 下列程式碼的行為不正確。
+
  [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
  [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   

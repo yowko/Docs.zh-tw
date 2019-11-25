@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: d2fd43644949c842ff883731d3c7f00228cabfd7
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c3550a593eafb9b50fa7e419e2f747c3e7a0e2ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038859"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972633"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>型別測試和轉換運算子 (C# 參考)
 
@@ -154,5 +154,5 @@ E is T ? (T)(E) : (T)null
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)
-- [如何：使用模式比對、is 和 as 運算子，安全地進行轉換](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [如何使用模式比對和 is 和 as 運算子，安全地轉換](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [.NET 的泛型](../../../standard/generics/index.md)

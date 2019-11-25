@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: 21ae73054935373607909902e0b3e82ba5146f43
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a64a09195101cd4b1ec3c6f990dd09d54466aea0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791141"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975405"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>呼叫服務作業 (WCF Data Services)
-[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 會定義資料服務的服務作業。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可讓您在資料服務上定義像方法那樣的作業。 就像其他資料服務資源，這些服務作業會使用 URI 來定址。 服務作業可以傳回實體類型集合、單一實體類型執行個體以及整數和字串等基本類型。 服務作業還可以傳回 `null` (在 Visual Basic 中為 `Nothing`)。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫可以用來存取支援 HTTP GET 要求的服務作業。 這些服務作業類型是定義為已套用 <xref:System.ServiceModel.Web.WebGetAttribute> 的方法。 如需詳細資訊，請參閱[服務作業](service-operations-wcf-data-services.md)。  
+開放式資料通訊協定（OData）會定義資料服務的服務作業。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可讓您在資料服務上定義像方法那樣的作業。 就像其他資料服務資源，這些服務作業會使用 URI 來定址。 服務作業可以傳回實體類型集合、單一實體類型執行個體以及整數和字串等基本類型。 服務作業還可以傳回 `null` (在 Visual Basic 中為 `Nothing`)。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫可以用來存取支援 HTTP GET 要求的服務作業。 這些服務作業類型是定義為已套用 <xref:System.ServiceModel.Web.WebGetAttribute> 的方法。 如需詳細資訊，請參閱[服務作業](service-operations-wcf-data-services.md)。  
   
- 服務作業會在實作 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 之資料服務所傳回的中繼資料中公開。 在中繼資料中，服務作業會以 `FunctionImport` 元素來表示。 產生強型別 <xref:System.Data.Services.Client.DataServiceContext> 時，[加入服務參考] 和 DataSvcUtil.exe 工具會忽略此元素。 因此，您在內容上找不到可用來直接呼叫服務作業的方法。 但是，您仍然可以使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端，透過下列兩種方式呼叫服務作業：  
+ 服務作業會在執行 OData 的資料服務所傳回的中繼資料中公開。 在中繼資料中，服務作業會以 `FunctionImport` 元素來表示。 產生強型別 <xref:System.Data.Services.Client.DataServiceContext> 時，[加入服務參考] 和 DataSvcUtil.exe 工具會忽略此元素。 因此，您在內容上找不到可用來直接呼叫服務作業的方法。 但是，您仍然可以使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端，透過下列兩種方式呼叫服務作業：  
   
 - 提供服務作業的 URI 並搭配任何參數，以呼叫 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 上的 <xref:System.Data.Services.Client.DataServiceContext> 方法。 此方法用於呼叫任何 GET 服務作業。  
   
@@ -24,7 +24,7 @@ ms.locfileid: "70791141"
 ## <a name="considerations-for-calling-service-operations"></a>呼叫服務作業的考量  
  使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端呼叫服務作業時，適用下列考量。  
   
-- 以非同步方式<xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A>存取資料服務時，您必須使用上<xref:System.Data.Services.Client.DataServiceContext>的對等非同步<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> / / <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A>方法，或<xref:System.Data.Services.Client.DataServiceQuery%601>上的<xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A>方法。  
+- 以非同步方式存取資料服務時，您必須在 <xref:System.Data.Services.Client.DataServiceContext> 上使用對等的非同步 <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A>/<xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> 方法，或 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A>上 /<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> <xref:System.Data.Services.Client.DataServiceQuery%601>方法。  
   
 - [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫無法具體化傳回單一基本類型集合之服務作業的結果。  
   
@@ -34,20 +34,20 @@ ms.locfileid: "70791141"
   
 - 如果在工具產生的強型別 <xref:System.Data.Services.Client.DataServiceContext> 部分類別上建立擴充方法，這個方法使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 或 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法來呼叫服務作業。 這可讓您直接從內容中呼叫服務作業。 如需詳細資訊，請參閱 blog 文章[服務作業和 WCF Data Services 用戶端](https://go.microsoft.com/fwlink/?LinkId=215668)。  
   
-- 當您使用<xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A>呼叫服務作業時，用戶端程式庫會藉由執行保留字元<xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>的百分比編碼，自動將提供的字元（例如，& （&））和單引號的轉義strings. 不過，當您呼叫其中一個*Execute*方法來呼叫服務作業時，您必須記得對任何使用者提供的字串值執行這項轉義。 URI 中的單引號是以一對單引號的形式來逸出。  
+- 當您使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 來呼叫服務作業時，用戶端程式庫會藉由執行保留字元的百分比編碼（例如連字號（&），以及字串中的單引號的轉義），自動將提供給 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 的字元進行轉義。 不過，當您呼叫其中一個*Execute*方法來呼叫服務作業時，您必須記得對任何使用者提供的字串值執行這項轉義。 URI 中的單引號是以一對單引號的形式來逸出。  
   
 ## <a name="examples-of-calling-service-operations"></a>呼叫服務作業的範例  
  本節包含下列範例，說明如何使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫呼叫服務作業：  
   
-- [呼叫 Execute&lt;T&gt;以傳回實體集合](calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
+- [呼叫 Execute&lt;T&gt; 以傳回實體集合](calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
   
-- [使用 CreateQuery&lt;T&gt;傳回實體的集合](calling-service-operations-wcf-data-services.md#CreateQueryIQueryable)  
+- [使用 CreateQuery&lt;T&gt; 傳回實體的集合](calling-service-operations-wcf-data-services.md#CreateQueryIQueryable)  
   
-- [呼叫 Execute&lt;T&gt;以傳回單一實體](calling-service-operations-wcf-data-services.md#ExecuteSingleEntity)  
+- [呼叫 Execute&lt;T&gt; 以傳回單一實體](calling-service-operations-wcf-data-services.md#ExecuteSingleEntity)  
   
-- [呼叫 Execute&lt;T&gt;以傳回基本值的集合](calling-service-operations-wcf-data-services.md#ExecutePrimitiveCollection)  
+- [呼叫 Execute&lt;T&gt; 以傳回基本值的集合](calling-service-operations-wcf-data-services.md#ExecutePrimitiveCollection)  
   
-- [呼叫 Execute&lt;T&gt;以傳回單一基本值](calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
+- [呼叫 Execute&lt;T&gt; 以傳回單一基本值](calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
   
 - [呼叫不傳回任何資料的服務作業](calling-service-operations-wcf-data-services.md#ExecuteVoid)  
   
@@ -124,6 +124,6 @@ ms.locfileid: "70791141"
  [!code-csharp[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#onasyncqueryexecutioncomplete)]
  [!code-vb[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#onasyncqueryexecutioncomplete)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)

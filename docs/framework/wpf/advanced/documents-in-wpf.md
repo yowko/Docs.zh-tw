@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: fbd4df8820073a3cdf2a8d5aad9c56bd7ca751df
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 36704d56b66de977ac7f63fd7e766c925ef9023b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460523"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974677"
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供廣泛的檔功能，可讓您建立更容易存取和讀取的高精確度內容，而不是在舊版的 Windows 中。 除了增強功能和品質，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也針對文件顯示、封裝和安全性提供整合式服務。 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文件類型和文件封裝的簡介。  
@@ -125,13 +125,13 @@ ms.locfileid: "73460523"
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>XPS 文件  
- XML 檔規格（XPS）檔是一種套件，其中包含一或多個固定檔，以及呈現所需的所有資源和資訊。  XPS 也是原生 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 列印多工緩衝處理檔案格式。  <xref:System.Windows.Xps.Packaging.XpsDocument> 儲存在標準 ZIP 資料集中，而且可以包含 XML 和二進位元件的組合，例如影像和字型檔案。 [PackageRelationships](#PackageRelationships) 可用來定義完整呈現文件所需的內容和資源之間的相依性。  <xref:System.Windows.Xps.Packaging.XpsDocument> 設計提供單一、高精確度的檔解決方案，可支援多個用途：  
+ XML 檔規格（XPS）檔是一種套件，其中包含一或多個固定檔，以及呈現所需的所有資源和資訊。  XPS 也是原生的 Windows Vista 列印多工緩衝處理檔案格式。  <xref:System.Windows.Xps.Packaging.XpsDocument> 儲存在標準 ZIP 資料集中，而且可以包含 XML 和二進位元件的組合，例如影像和字型檔案。 [PackageRelationships](#PackageRelationships) 可用來定義完整呈現文件所需的內容和資源之間的相依性。  <xref:System.Windows.Xps.Packaging.XpsDocument> 設計提供單一、高精確度的檔解決方案，可支援多個用途：  
   
 - 將固定格式文件內容和資源當做單一可攜式且容易散發的檔案，進行讀取、寫入及儲存。  
   
 - 使用 XPS 檢視器應用程式顯示檔。  
   
-- 以 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的原生列印多工緩衝處理輸出格式來輸出文件。  
+- 以 Windows Vista 的原生列印多工緩衝處理輸出格式輸出檔案。  
   
 - 將檔直接路由傳送到與 XPS 相容的印表機。  
   

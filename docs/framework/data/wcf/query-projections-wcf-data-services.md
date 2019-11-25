@@ -10,22 +10,22 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 8128fd3cab0ca20da87a1a98c2657aefab96beaf
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17475cccf461371a909660bfe3f8db29bf1fa2fe
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779825"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975179"
 ---
 # <a name="query-projections-wcf-data-services"></a>查詢投影 (WCF 資料服務)
 
-投射在中[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]提供一種機制，藉由指定在回應中只傳回實體的特定屬性，來減少查詢所傳回之摘要中的資料量。 如需詳細資訊， [請參閱 OData：選取 [系統查詢選項（$select](https://go.microsoft.com/fwlink/?LinkId=186076)）]。
+投射提供開放式資料通訊協定（OData）中的機制，藉由指定在回應中只傳回實體的特定屬性，來減少查詢所傳回之摘要中的資料量。 如需詳細資訊，請參閱[OData： Select 系統查詢選項（$select）](https://go.microsoft.com/fwlink/?LinkId=186076)。
 
 本主題描述如何定義查詢投影、實體與非實體類型的需求為何、對投影結果進行更新、建立投影類型，以及列出一些投影考量因素。
 
 ## <a name="defining-a-query-projection"></a>定義查詢投影
 
-您可以在 URI 中使用`$select`查詢選項，或在 LINQ 查詢中使用[select](../../../csharp/language-reference/keywords/select-clause.md)子句（在 Visual Basic 中[選取](../../../visual-basic/language-reference/queries/select-clause.md)），將投影子句加入至查詢。 傳回的實體資料可以投影至用戶端上的實體類型或非實體類型。 此主題中的範例將示範如何在 LINQ 查詢中使用 `select` 子句。
+您可以在 URI 中使用 `$select` 查詢選項，或在 LINQ 查詢中使用[select](../../../csharp/language-reference/keywords/select-clause.md)子句（在 Visual Basic 中[選取](../../../visual-basic/language-reference/queries/select-clause.md)），將投影子句加入至查詢。 傳回的實體資料可以投影至用戶端上的實體類型或非實體類型。 此主題中的範例將示範如何在 LINQ 查詢中使用 `select` 子句。
 
 > [!IMPORTANT]
 > 當您儲存對投影類型所進行的更新時，資料服務中可能會遺失資料。 如需詳細資訊，請參閱[預測考慮](#considerations)。
@@ -38,7 +38,7 @@ ms.locfileid: "70779825"
 
 - 當類型具有名為 `ID` 的屬性時。
 
-- 當類型具有名為*type* `ID`的屬性時，其中*type*是類型的名稱。
+- 當類型具有名為*type*`ID`的屬性時，其中*type*是類型的名稱。
 
 根據預設，當您將查詢結果投影至用戶端上定義的類型時，投影中要求的屬性必須是用戶端上現有的類型。 但是，當您為 `true` 的 <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> 屬性指定 <xref:System.Data.Services.Client.DataServiceContext> 值時，投影中指定的屬性就不一定要用戶端上現有的類型。
 
@@ -81,7 +81,7 @@ ms.locfileid: "70779825"
    [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithconstructor)]
    [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithconstructor)]
 
-- 實體類型：引發 <xref:System.NotSupportedException>。
+- 實體類型：會引發 <xref:System.NotSupportedException>。
 
 - 非實體類型：支援
 
@@ -92,7 +92,7 @@ ms.locfileid: "70779825"
    [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithtransform)]
    [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithtransform)]
 
-- 實體類型：實體類型不支援此種轉換，因為它可能造成混淆且可能覆寫屬於另一個實體之資料來源中的資料。 引發 <xref:System.NotSupportedException>。
+- 實體類型：此轉換不支援實體類型，因為它可能會造成混淆，而且可能會覆寫屬於另一個實體之資料來源中的資料。 引發 <xref:System.NotSupportedException>。
 
 - 非實體類型：支援
 
@@ -114,8 +114,8 @@ ms.locfileid: "70779825"
 
 - 查詢用戶端上的投影查詢會轉譯為在要求 URI 中使用 `$select` 查詢選項。 若針對舊版 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 執行使用投影的查詢 (該版本不支援 `$select` 查詢選項)，會傳回錯誤。 在將資料服務之 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 的 <xref:System.Data.Services.DataServiceBehavior> 設定為 <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> 值時也會發生這種情況。 如需詳細資訊，請參閱[資料服務版本](data-service-versioning-wcf-data-services.md)設定。
 
-如需詳細資訊，請參閱[如何：專案查詢結果](how-to-project-query-results-wcf-data-services.md)。
+如需詳細資訊，請參閱[如何：投影查詢結果](how-to-project-query-results-wcf-data-services.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [查詢資料服務](querying-the-data-service-wcf-data-services.md)

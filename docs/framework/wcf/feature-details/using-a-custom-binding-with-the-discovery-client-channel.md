@@ -2,20 +2,20 @@
 title: 使用具有探索用戶端通道的自訂繫結
 ms.date: 03/30/2017
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-ms.openlocfilehash: 6fe9370bb22ca424774fc8cb4566e0802bc06697
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 406a53dece6370fbb56daa5a30b52621ca1dcd6d
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918615"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975984"
 ---
 # <a name="using-a-custom-binding-with-the-discovery-client-channel"></a>使用具有探索用戶端通道的自訂繫結
 使用自訂繫結配合 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 時，您必須定義建立 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 執行個體的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>。  
   
 ## <a name="creating-a-discoveryendpointprovider"></a>建立 DiscoveryEndpointProvider  
- <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>負責建立<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>隨選執行個體。 若要定義探索端點提供者，請從 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 衍生一個類別，覆寫 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> 方法並傳回新的探索端點。 下列範例示範如何建立探索端點提供者。  
+ <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 會負責視需要建立 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 實例。 若要定義探索端點提供者，請從 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 衍生一個類別，覆寫 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> 方法並傳回新的探索端點。 下列範例示範如何建立探索端點提供者。  
   
-```  
+```csharp
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  
 // to the DiscoveryClientBindingElement. The Discovery ClientChannel   
 // uses this endpoint to send Probe message.  
@@ -30,7 +30,7 @@ public class UdpDiscoveryEndpointProvider : DiscoveryEndpointProvider
   
  定義探索端點提供者之後，即可建立自訂繫結，並且加入 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>，此項目會參考探索端點提供者，如下列範例所示。  
   
-```  
+```csharp
 DiscoveryClientBindingElement discoveryBindingElement = new DiscoveryClientBindingElement();  
   
 // Provide the search criteria and the endpoint over which the probe is sent.  
@@ -43,9 +43,9 @@ CustomBinding customBinding = new CustomBinding(new NetTcpBinding());
 customBinding.Elements.Insert(0, discoveryBindingElement);  
 ```  
   
- 如需使用探索用戶端通道的詳細資訊，請參閱 <<c0> [ 使用探索用戶端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)。 
+ 如需有關使用探索用戶端通道的詳細資訊，請參閱[使用探索用戶端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)。 
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [使用探索用戶端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UseRandomizedStringHashAlgorithm element
 - <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
-ms.openlocfilehash: cc9708b8cca6520932fbf0e1975a05cad5fad485
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3863bc1376d89ef804022fb9c87fac3a25fc910f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115047"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968837"
 ---
 # <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > 元素
 判斷 common language runtime 是否會針對每個應用程式網域，計算字串的雜湊碼。  
@@ -70,7 +70,7 @@ ms.locfileid: "73115047"
   
  當您執行範例但未提供設定檔時，它會顯示類似下列的輸出。 請注意，字串的雜湊碼在兩個應用程式域中都相同。  
   
-```  
+```console
 String 'This is a string.' in domain 'PerDomain.exe': 941BCEAC  
 String 'This is a string.' in domain 'NewDomain': 941BCEAC  
 ```  
@@ -88,7 +88,7 @@ String 'This is a string.' in domain 'NewDomain': 941BCEAC
   
  當設定檔存在時，此範例會顯示下列輸出：  
   
-```  
+```console
 String 'This is a string.' in domain 'PerDomain.exe': 5435776D  
 String 'This is a string.' in domain 'NewDomain': 75CC8236  
 ```  

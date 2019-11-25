@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 15122984dbaf3245436ff21836065c05131f71d1
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 3abcd901bcb8a175aa6f30e53b142cbbde56a579
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894324"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975247"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>裝載資料服務 (WCF 資料服務)
-藉由使用 WCF Data Services，您可以建立將資料公開為[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要的服務。 這個資料服務會定義為繼承自 <xref:System.Data.Services.DataService%601> 的類別。 這個類別會提供處理要求訊息、針對資料來源執行更新，以及產生 OData 所需的回應訊息所需的功能。 不過，資料服務無法系結至網路通訊端並在其中接聽傳入的 HTTP 要求。 對於這個必要的功能而言，資料服務會依賴裝載的元件。
+藉由使用 WCF Data Services，您可以建立將資料公開為開放式資料通訊協定（OData）摘要的服務。 這個資料服務會定義為繼承自 <xref:System.Data.Services.DataService%601> 的類別。 這個類別會提供處理要求訊息、針對資料來源執行更新，以及產生 OData 所需的回應訊息所需的功能。 不過，資料服務無法系結至網路通訊端並在其中接聽傳入的 HTTP 要求。 對於這個必要的功能而言，資料服務會依賴裝載的元件。
 
  資料服務主機會代表資料服務執行下列工作：
 
@@ -73,7 +73,7 @@ ms.locfileid: "70894324"
 
 - 驗證查詢字串中的參數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [定義 WCF Data Services](defining-wcf-data-services.md)
 - [將資料當作服務公開](exposing-your-data-as-a-service-wcf-data-services.md)

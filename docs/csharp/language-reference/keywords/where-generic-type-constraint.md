@@ -7,16 +7,16 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 4e51c5dd226533e7d1ce79a136dba19cbb252f92
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 24ae6e285b8b4270188462b05f39c6142c6901ae
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253920"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972718"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (泛型類型條件約束) (C# 參考)
 
-泛型定義中的 `where` 子句指定型別上的條件約束，以用來作為泛型型別、方法、委派或本機函式中型別參數的引數。 條件約束可以指定介面、基類, 或要求泛型型別為參考、值或非受控型別。 它們會宣告型別引數必須擁有的功能。
+泛型定義中的 `where` 子句指定型別上的條件約束，以用來作為泛型型別、方法、委派或本機函式中型別參數的引數。 條件約束可以指定介面、基類，或要求泛型型別為參考、值或非受控型別。 它們會宣告型別引數必須擁有的功能。
 
 例如，您可以宣告泛型類別 `MyGenericClass`，讓型別參數 `T` 實作 <xref:System.IComparable%601> 介面：
 
@@ -33,10 +33,10 @@ ms.locfileid: "70253920"
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-`where`子句可以`notnull`包含條件約束。 `notnull`條件約束會將類型參數限制為不可為 null 的類型。 該類型可能是實[數值型別](struct.md)或不可為 null 的參考型別。 從8.0 開始, 針對[ `nullable enable`內容](../../nullable-references.md#nullable-contexts)中編譯的程式碼提供條件約束。`notnull` C# 與其他條件約束不同的是, 如果類型`notnull`引數違反條件約束, 則編譯器會產生警告, 而不是錯誤。 只有在`nullable enable`內容中才會產生警告。 
+`where` 子句可能包括 `notnull` 條件約束。 `notnull` 條件約束會將類型參數限制為不可為 null 的類型。 該類型可能是實[數值型別](struct.md)或不可為 null 的參考型別。 從C# 8.0 開始，針對[`nullable enable` 內容](../../nullable-references.md#nullable-contexts)中編譯的程式碼，可以使用 `notnull` 條件約束。 與其他條件約束不同的是，如果類型引數違反 `notnull` 條件約束，則編譯器會產生警告，而不是錯誤。 只有在 `nullable enable` 內容中才會產生警告。 
 
 > [!IMPORTANT]
-> 包含`notnull`條件約束的泛型宣告可以在可為 null 的遺忘式內容中使用, 但編譯器不會強制執行條件約束。
+> 包含 `notnull` 條件約束的泛型宣告可以在可為 null 的遺忘式內容中使用，但編譯器不會強制執行條件約束。
 
 [!code-csharp[using the nonnull constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#NotNull)]
 
@@ -44,7 +44,7 @@ ms.locfileid: "70253920"
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-`where` 子句也可能包含建構函式條件約束 `new()`。 該條件約束可讓您使用 `new` 運算子建立型別參數執行個體。 [new() 條件約束](new-constraint.md)可讓編譯器知道提供的任何類型引數都必須有可存取的無參數或預設建構函式。 例如：
+`where` 子句也可能包含建構函式條件約束 `new()`。 該條件約束可讓您使用 `new` 運算子建立型別參數執行個體。 [New （）條件約束](new-constraint.md)可讓編譯器知道提供的任何型別引數都必須具有可存取的無參數函數。 例如:
 
 [!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 
@@ -70,7 +70,7 @@ ms.locfileid: "70253920"
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

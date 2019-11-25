@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 9995a509bf997298d991a1f66cfdf3cae6cd0395
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4beaba24e42b15ebc45ece6e5319a2b14df54ab6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790961"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975386"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>建立 .NET Framework 用戶端應用程式 (WCF 資料服務快速入門)
 
-這是 WCF Data Services 快速入門的最後一項工作。 在這項工作中，您會在方案中加入主控台應用程式、在這個新[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]的用戶端應用程式中加入摘要的參考，並使用產生的用戶端資料服務類別和用戶端程式庫，從用戶端應用程式存取 OData 饋送.
+這是 WCF Data Services 快速入門的最後一項工作。 在這項工作中，您會在方案中加入主控台應用程式、在這個新的用戶端應用程式中加入開放式資料通訊協定（OData）摘要的參考，並使用產生的用戶端資料服務類別和用戶端，從用戶端應用程式存取 OData 摘要磁帶.
 
 > [!NOTE]
 > 不需要 .NET Framework 架構的用戶端應用程式也可存取資料摘要。 任何取用 OData 摘要的應用程式元件都可存取資料服務。 如需詳細資訊，請參閱[在用戶端應用程式中使用資料服務](using-a-data-service-in-a-client-application-wcf-data-services.md)。
@@ -25,7 +25,7 @@ ms.locfileid: "70790961"
 
 2. 在左窗格中，選取 [**已安裝**] > [**視覺C#效果**] 或 [ **Visual Basic**] > **Windows 桌面**]，然後選取 [ **WPF 應用程式** 範本。
 
-3. 針對`NorthwindClient` [專案名稱] 輸入，然後按一下 **[確定]** 。
+3. 輸入 `NorthwindClient` 作為 [專案名稱]，然後按一下 **[確定]** 。
 
 4. 開啟 MainWindow.xaml 檔案，並以下列程式碼取代 XAML 程式碼：
 
@@ -37,7 +37,7 @@ ms.locfileid: "70790961"
 
      這會顯示您在第一個工作中建立的 Northwind 資料服務。
 
-2. 在 [**命名空間**] 文字方塊中`Northwind`，輸入，然後按一下 **[確定]** 。
+2. 在 [**命名空間**] 文字方塊中，輸入 `Northwind`，然後按一下 **[確定]** 。
 
      這會將新的程式碼檔案加入至專案中，此專案包含的資料類別可用來存取做為物件的資料服務資源，並與之進行互動。 在命名空間 `NorthwindClient.Northwind` 中建立資料類別。
 
@@ -47,7 +47,7 @@ ms.locfileid: "70790961"
 
 2. 在 [**加入參考**] 對話方塊中，按一下 [ **.net** ] 索引標籤，選取 [system.web] 元件，然後按一下 **[確定]** 。
 
-3. 在 [ **NorthwindClient**] 下的`using` **方案總管**中，開啟 mainwindow.xaml 檔案的字碼頁，並加入下列語句（`Imports`在 Visual Basic 中）。
+3. 在 [ **NorthwindClient**] 下的**方案總管**中，開啟 mainwindow.xaml 檔案的字碼頁，然後在 Visual Basic 中加入下列 `using` 語句（`Imports`）。
 
     [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#using)]
     [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#using)]
@@ -86,7 +86,7 @@ ms.locfileid: "70790961"
 
 如需從 .NET Framework 應用程式存取 OData 摘要的詳細資訊，請參閱[WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [快速入門](getting-started-with-wcf-data-services.md)
+- [使用者入門](getting-started-with-wcf-data-services.md)
 - [資源](wcf-data-services-resources.md)

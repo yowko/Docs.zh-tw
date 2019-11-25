@@ -4,12 +4,12 @@ description: 本進階教學課程提供可為 Null 的參考類型簡介。 您
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 9cb9ac1b292e61d6a8a5f84be29a6a6c323725fc
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039678"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969352"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教學課程：使用可為 null 的參考型別來遷移現有程式碼
 
@@ -32,7 +32,7 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 
 ## <a name="explore-the-sample-application"></a>探索應用程式範例
 
-您將遷移的應用程式範例是一個 RSS 摘要讀取器 Web 應用程式。 它會從單一 RSS 摘要讀取，並顯示最新文章的摘要。 您可以按一下任何一篇文章，前往網站。 應用程式相對較新，但是在可為 Null 參考型別開放使用前撰寫的。 應用程式的設計決策代表了健全的準則，但並未利用這項重要的語言功能。
+您將遷移的應用程式範例是一個 RSS 摘要讀取器 Web 應用程式。 它會從單一 RSS 摘要讀取，並顯示最新文章的摘要。 您可以選取任何文章來造訪網站。 應用程式相對較新，但是在可為 Null 參考型別開放使用前撰寫的。 應用程式的設計決策代表了健全的準則，但並未利用這項重要的語言功能。
 
 應用程式範例包含了單元測試程式庫，可驗證應用程式的主要功能。 若您根據所產生的警告變更任何實作，該專案可使安全升級更為容易。 您可以從 [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/start) GitHub 存放庫下載起始程式碼。
 

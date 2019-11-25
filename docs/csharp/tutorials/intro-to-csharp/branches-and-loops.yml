@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: 清單集合
-  ms.openlocfilehash: 445017337663aea428af2f8dcd4027d716d05751
-  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+  ms.openlocfilehash: ab709b6b30b5a173e2faf08b577e4d7a3d9a9034
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 10/09/2019
-  ms.locfileid: "72179877"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969419"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: 使用 if 陳述式來做決策
   durationInMinutes: 4
   content: >
-    在互動式視窗中執行下列程式碼。 若要這樣做，請在互動式視窗中輸入下列程式碼區塊，並按一下 [執行] 按鈕：
+    在互動式視窗中執行下列程式碼。 選取 [**進入焦點模式]** 按鈕。 然後，在互動式視窗中輸入下列程式碼區塊，然後選取 [**執行**]：
 
 
     ```csharp
@@ -51,7 +51,7 @@ items:
     ```
 
 
-    再按一下 [執行] 按鈕。 因為答案小於 10，所以不會印出任何東西。 您正在測試的**條件**為 False。 您尚未有可執行的程式碼，因為您在 `if` 陳述式中僅撰寫了一個可能的分支：True 分支。
+    再次選取 [**執行**] 按鈕。 因為答案小於 10，所以不會印出任何東西。 您正在測試的**條件**為 False。 您尚未有可執行的程式碼，因為您在 `if` 陳述式中僅撰寫了一個可能的分支：True 分支。
 
 
     > [!TIP]
@@ -221,7 +221,7 @@ items:
     > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - title: 恭喜您！
   content: >-
-    您已經完成＜分支和迴圈＞互動式教學課程。 您可以按一下以下的**清單集合**連結來啟動下一個互動式教學課程，或者您可以瀏覽 [.NET 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)來下載 .NET Core SDK，以在您的電腦上建立專案並繼續撰寫程式碼。 「後續步驟」一節會帶您回到這些教學課程。
+    您已經完成＜分支和迴圈＞互動式教學課程。 您可以選取下方的**清單集合**連結來啟動下一個互動式教學課程，或者您可以流覽[.net 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)來下載 .NET Core SDK、在您的電腦上建立專案，並繼續撰寫程式碼。 「後續步驟」一節會帶您回到這些教學課程。
 
 
     您可以在下列主題中深入了解這些概念：

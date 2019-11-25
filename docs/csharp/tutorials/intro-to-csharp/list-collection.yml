@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: fb08cef284a016dd65c99a1efb0a661624a731f1
-  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+  ms.openlocfilehash: f7fd68120defbfcda6ac11e14bc749bf4d69c109
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 10/09/2019
-  ms.locfileid: "72179001"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969381"
 items:
 - durationInMinutes: 1
   content: >
@@ -22,7 +22,7 @@ items:
 - title: 建立清單
   durationInMinutes: 2
   content: >
-    在互動式視窗中執行下列程式碼。 若要這樣做，請在互動式視窗中輸入下列程式碼區塊 (以您的名稱取代 `<name>`)，然後按一下 [執行] 按鈕：
+    在互動式視窗中執行下列程式碼。 選取 [**進入焦點模式]** 按鈕。 然後，在互動式視窗中輸入下列程式碼區塊（將 `<name>` 取代為您的名稱），然後選取 [**執行**]：
 
 
     ```csharp
@@ -106,7 +106,7 @@ items:
     ```
 
 
-    再次按一下 [執行] 來查看結果。 在 C# 中，索引是從 0 開始，因此最大的有效索引數目為清單項目數目減去 1。
+    再次選取 [**執行**] 以查看結果。 在 C# 中，索引是從 0 開始，因此最大的有效索引數目為清單項目數目減去 1。
 
 
     > [!NOTE]

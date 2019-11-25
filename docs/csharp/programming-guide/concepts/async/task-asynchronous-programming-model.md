@@ -2,12 +2,12 @@
 title: 使用 async 和 await 進行非同步工作程式設計模型 (TAP) (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 644830ac62a4df23f22d8f91e9b3c768dd611451
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8f88ecc05fd21a3526478cf564dc4fa97f309f7e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395698"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969959"
 ---
 # <a name="task-asynchronous-programming-model"></a>非同步工作程式設計模型
 
@@ -114,7 +114,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com/dot
 
 圖表中的數字會對應到下列步驟中，並在使用者按一下 [開始] 按鈕時起始。
 
-1. 事件處理常式會呼叫並等候 @no__t 0 的非同步方法。
+1. 事件處理常式會呼叫並等候 `AccessTheWebAsync` 的非同步方法。
 
 2. `AccessTheWebAsync` 會建立 <xref:System.Net.Http.HttpClient> 執行個體並呼叫 <xref:System.Net.Http.HttpClient.GetStringAsync%2A> 非同步方法，將網站的內容當做字串下載。
 
@@ -144,13 +144,13 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com/dot
 
 ## <a name="BKMK_APIAsyncMethods"></a> API 非同步方法
 
-您可能會想知道哪裡可以找到支援非同步程式設計的方法，例如 `GetStringAsync`。 .NET Framework 4.5 或更新版本以及 .NET Core 包含許多使用 `async` 和 `await` 的成員。 您可以透過附加至成員名稱的 "Async" 尾碼，以及其傳回類型 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 來辨識它們。 例如，相對於同步方法 <xref:System.IO.Stream.CopyTo%2A>、<xref:System.IO.Stream.Read%2A> 和 <xref:System.IO.Stream.Write%2A>，`System.IO.Stream` 類別也包含一些方法，例如 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A>。
+您可能會想知道哪裡可以找到支援非同步程式設計的方法，例如 `GetStringAsync`。 .NET Framework 4.5 或更新版本以及 .NET Core 包含許多使用 `async` 和 `await` 的成員。 您可以透過附加至成員名稱的 "Async" 尾碼，以及其傳回類型的 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>來辨識它們。 例如，相對於同步方法 <xref:System.IO.Stream.CopyTo%2A>、<xref:System.IO.Stream.Read%2A> 和 <xref:System.IO.Stream.Write%2A>，`System.IO.Stream` 類別也包含一些方法，例如 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A>。
 
 Windows 執行階段也包含許多您可以在 Windows 應用程式中與 `async` 和 `await` 搭配使用的方法。 如需詳細資訊，請參閱適用於 UWP 開發的[執行緒和非同步程式設計](/windows/uwp/threading-async/)，如果您使用舊版的 Windows 執行階段，則請參閱[非同步程式設計 (Microsoft Store 應用程式)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)) 和[快速入門：在 C# 或 Visual Basic 中呼叫非同步 API](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10))。
 
 ## <a name="BKMK_Threads"></a> 執行緒
 
-非同步方法主要做為非封鎖作業使用。 當等候的工作正在執行時，非同步方法中的 @no__t 0 運算式不會封鎖目前的執行緒。 運算式會改為註冊方法的其餘部分做為接續，並將控制權交還給非同步方法的呼叫端。
+非同步方法主要做為非封鎖作業使用。 當等候的工作正在執行時，非同步方法中的 `await` 運算式不會封鎖目前的執行緒。 運算式會改為註冊方法的其餘部分做為接續，並將控制權交還給非同步方法的呼叫端。
 
 `async` 和 `await` 關鍵字不會導致建立其他執行緒。 由於非同步方法不會在本身的執行緒上執行，因此非同步方法不需要多執行緒。 方法會在目前的同步處理內容執行，而且只有在方法為作用中時才會在執行緒上花費時間。 您可以使用 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 將受限於 CPU 的工作移到背景執行緒，但是背景執行緒無法協助處理正在等待結果產生的處理序。
 
@@ -162,11 +162,11 @@ Windows 執行階段也包含許多您可以在 Windows 應用程式中與 `asyn
 
 - 標記的非同步方法可以使用 [await](../../../language-reference/operators/await.md) 來指定暫停點。 `await` 運算子會告知編譯器，非同步方法只有在等候的非同步處理序完成後，才能繼續通過該點。 同時，控制權會返回非同步方法的呼叫端。
 
-     非同步方法在 @no__t 0 的運算式暫止不會構成從方法結束，而且不會執行 @no__t 1 區塊。
+     非同步方法在 `await` 運算式上的暫止不會構成從方法結束的，而且 `finally` 區塊不會執行。
 
 - 標記的非同步方法本身可以做為其呼叫方法的等候目標。
 
-非同步方法通常包含一或多個 `await` 運算子的出現，但缺少 @no__t 1 運算式不會造成編譯器錯誤。 如果非同步方法未使用 `await` 運算子來標記暫停點，則即使 `async` 修飾詞，方法還是會當做同步方法來執行。 編譯器將對這類方法發出警告。
+非同步方法通常包含一或多個 `await` 運算子的出現，但缺少 `await` 運算式不會造成編譯器錯誤。 如果非同步方法未使用 `await` 運算子來標記暫停點，則即使 `async` 修飾詞，方法還是會當做同步方法來執行。 編譯器將對這類方法發出警告。
 
 `async` 和 `await` 都是內容關鍵字。 如需詳細資訊和範例，請參閱下列主題：
 
@@ -183,7 +183,7 @@ async 方法通常會傳回 <xref:System.Threading.Tasks.Task> 或 <xref:System.
 
 從 C# 7.0 開始，您也可以指定任何其他傳回型別，前提是該類型包括 `GetAwaiter` 方法。 這類類型的範例是 <xref:System.Threading.Tasks.ValueTask%601>。 它提供於 [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet 套件中。
 
-下列範例顯示如何宣告和呼叫傳回 <xref:System.Threading.Tasks.Task%601> 或 <xref:System.Threading.Tasks.Task> 的方法：
+下列範例顯示如何宣告和呼叫傳回 <xref:System.Threading.Tasks.Task%601> 或 <xref:System.Threading.Tasks.Task>的方法：
 
 ```csharp
 // Signature specifies Task<TResult>
@@ -219,7 +219,7 @@ await GetTaskAsync();
 
 非同步方法的傳回型別也可以是 `void`。 這個傳回類型主要用於定義需要 `void` 傳回類型的事件處理常式。 非同步事件處理常式通常做為非同步程式的起點。
 
-具有 @no__t 0 傳回類型的非同步方法無法等候，而且 void 傳回方法的呼叫端無法攔截方法擲回的任何例外狀況。
+無法等候具有 `void` 傳回類型的非同步方法，而且傳回 void 的方法的呼叫端無法攔截方法擲回的任何例外狀況。
 
 非同步方法無法宣告 [in](../../../language-reference/keywords/in-parameter-modifier.md)、[ref](../../../language-reference/keywords/ref.md) 或 [out](../../../language-reference/keywords/out-parameter-modifier.md) 參數，但是此方法可以呼叫具有這類參數的方法。 同樣地，async 方法無法以傳址方式傳回值，但可以使用 ref 傳回值呼叫方法。
 
@@ -243,8 +243,8 @@ Windows 執行階段程式設計中的非同步 API 具有下列其中一種傳�
 |標題|描述|範例|
 |-----------|-----------------|------------|
 |[逐步解說：使用 async 和 await 存取 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)|顯示如何將同步 WPF 方案轉換為非同步 WPF 方案。 應用程式會下載一系列的網站。|[非同步範例：存取 Web 逐步解說 (英文)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|
-|[如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|將 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 加入至前一個逐步解說。 使用 `WhenAll` 會同時開始進行所有的下載。||
-|[如何：使用 async 和 await，同時發出多個 Web 要求 (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|示範如何同時啟動數個工作。|[非同步範例：平行進行多個 Web 要求 (英文)](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|
+|[如何使用 System.threading.tasks.task.whenall （C#）擴充非同步逐步解說](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|將 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 加入至前一個逐步解說。 使用 `WhenAll` 會同時開始進行所有的下載。||
+|[如何使用 async 和 await （C#）以平行方式提出多個 web 要求](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|示範如何同時啟動數個工作。|[非同步範例：平行進行多個 Web 要求 (英文)](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|
 |[非同步方法的傳回型別 (C#)](./async-return-types.md)|說明非同步方法可以傳回的類型，並解釋每種類型的適用時機。||
 |[非同步程式中的控制流程 (C#)](./control-flow-in-async-programs.md)|在非同步程式中詳細追蹤一連串 await 運算式的控制流程。|[非同步範例：非同步程式中的控制流程 (英文)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|
 |[微調非同步應用程式 (C#)](./fine-tuning-your-async-application.md)|顯示如何將下列功能加入至您的非同步方案：<br /><br /> - [取消一項非同步工作或工作清單 (C#)](./cancel-an-async-task-or-a-list-of-tasks.md)<br />- [在一段時間後取消非同步工作 (C#)](./cancel-async-tasks-after-a-period-of-time.md)<br />- [當其中一項非同步工作完成時，取消剩餘的非同步工作 (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md)<br />- [啟動多項非同步工作並在它們完成時進行處理 (C#)](./start-multiple-async-tasks-and-process-them-as-they-complete.md)|[非同步範例：微調應用程式 (英文)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|

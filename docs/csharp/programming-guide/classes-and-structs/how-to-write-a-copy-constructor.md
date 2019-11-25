@@ -1,19 +1,19 @@
 ---
-title: 作法：撰寫複製建構函式 - C# 程式設計手冊
+title: 如何撰寫複製函式-程式C#設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# Language, copy constructor
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
-ms.openlocfilehash: bdc352566052f4cec1686176131e9b1e1b768794
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 4ac7ccb55775019eb86d5345797d2fd74d3b9527
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596600"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970394"
 ---
-# <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>作法：撰寫複製建構函式 (C# 程式設計手冊)
+# <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>如何撰寫複製函式（C#程式設計手冊）
 C# 未提供物件的複製建構函式，但您可以自行撰寫一個。  
   
 ## <a name="example"></a>範例  
@@ -21,7 +21,7 @@ C# 未提供物件的複製建構函式，但您可以自行撰寫一個。
   
  [!code-csharp[csProgGuideObjects#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#16)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ICloneable>
 - [C# 程式設計指南](../index.md)

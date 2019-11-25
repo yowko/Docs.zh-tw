@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Office 程式設計中使用具名引數和選用引數 - C# 程式設計指南
+title: 如何在 Office 程式設計中使用命名和選擇性自C#變數-程式設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 90b60a6410ffbe7f9802b01bf3303b6e842a1424
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: d7efd13f26912f8cd944bcbc5568e9bbca92c3a0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002797"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970499"
 ---
-# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>HOW TO：在 Office 程式設計中使用具名引數和選用引數 (C# 程式設計指南)
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>如何在 Office 程式設計中使用命名和選擇性自C#變數（程式設計手冊）
 
 C# 4 中引進的具名引數和選擇性引數，可加強 C# 程式設計的便利性、彈性和可讀性。 此外，這些功能還可大幅加速對 COM 介面 (例如 Microsoft Office Automation API) 的存取。
 
@@ -28,7 +28,7 @@ C# 4 中引進的具名引數和選擇性引數，可加強 C# 程式設計的�
 
 1. 啟動 Visual Studio。
 
-2. 在 [檔案] 功能表中，指向 [新增]，然後按一下 [專案]。
+2. 在 [檔案] **Deploying Office Solutions** 功能表中，指向 [新增]，然後按一下 [專案]。
 
 3. 在 [範本類別] 窗格中，展開 [Visual C#]，然後按一下 [Windows]。
 
@@ -40,7 +40,7 @@ C# 4 中引進的具名引數和選擇性引數，可加強 C# 程式設計的�
 
 7. 按一下 [確定]。
 
-     新的專案隨即會出現在**方案總管**中。
+     新的專案隨即出現在方案總管中。
 
 ## <a name="to-add-a-reference"></a>若要加入參考
 
@@ -74,7 +74,7 @@ C# 4 中引進的具名引數和選擇性引數，可加強 C# 程式設計的�
 
      [!code-csharp[csProgGuideNamedAndOptional#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#8)]
 
-2. 按<kbd>CTRL</kbd>+<kbd>F5</kbd>來執行專案。 隨即會出現含有指定文字的 Word 文件。
+2. 按<kbd>CTRL</kbd>+<kbd>F5</kbd>以執行專案。 隨即會出現含有指定文字的 Word 文件。
 
 ## <a name="to-change-the-text-to-a-table"></a>將文字變更為表格
   
@@ -86,11 +86,11 @@ C# 4 中引進的具名引數和選擇性引數，可加強 C# 程式設計的�
 
      [!code-csharp[csProgGuideNamedAndOptional#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#9)]
 
-     在舊版中C#，對 `ConvertToTable` 的呼叫需要每個參數都有參考引數，如下列程式碼所示：
+     在舊版中C#，`ConvertToTable` 的呼叫需要每個參數的參考引數，如下列程式碼所示：
   
      [!code-csharp[csProgGuideNamedAndOptional#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#14)]
 
-2. 按<kbd>CTRL</kbd>+<kbd>F5</kbd>來執行專案。
+2. 按<kbd>CTRL</kbd>+<kbd>F5</kbd>以執行專案。
 
 ## <a name="to-experiment-with-other-parameters"></a>試驗其他參數
 
@@ -108,6 +108,6 @@ C# 4 中引進的具名引數和選擇性引數，可加強 C# 程式設計的�
 
  [!code-csharp[csProgGuideNamedAndOptional#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#12)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [具名和選擇性引數](./named-and-optional-arguments.md)

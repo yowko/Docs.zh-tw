@@ -4,12 +4,12 @@ description: 如何使用 ML.NET 模型建立器來自動定型機器學習服�
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 77fe56dba3532617ad9fb0c89bfaac7c8e031ce7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929474"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971530"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>什麼是模型建立器且其如何運作？
 
@@ -22,13 +22,13 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 ![模型建立器 Visual Studio 延伸模組使用者介面動畫](media/ml-dotnet-model-builder.gif)
 
 > [!NOTE]
-> 模型建立器目前為預覽版。
+> 模型產生器目前為預覽版。
 
 ## <a name="scenarios"></a>案例
 
 您可以在模型建立器中放入許多不同的案例，以產生應用程式的機器學習模型。
 
-案例是您想要使用資料進行的預測類型描述。 例如：
+案例是您想要使用資料進行的預測類型描述。 例如:
 
 - 根據歷史銷售資料預測未來的產品銷售量
 - 根據客戶評論將人氣分類為正面或負面
@@ -60,7 +60,7 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 
 #### <a name="predict-a-category-when-there-are-three-or-more-categories"></a>預測類別 (當有三個或多個類別時)
 
-多元分類可用來將資料分類為三或多個類別。 
+多元分類可用來將資料分類為三或多個類別。
 
 ![多元分類的範例，包括文件和產品分類、支援票證路由，以及客戶問題優先順序](media/multiclass-classification-examples.png)
 
@@ -109,13 +109,13 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 
 如果您還沒有自己的資料，請嘗試下列資料集之一：
 
-|狀況|模型類型|資料|ThisAddIn|功能|
+|情節|模型類型|資料|ThisAddIn|功能|
 |-|-|-|-|-|
 |價格預測|公式|[計程車費用資料](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|費用|行車時間、距離|
-|異常偵測|二元分類|[產品銷售資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|產品銷售|Month|
+|異常偵測|二元分類|[產品銷售資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|產品銷售|月份|
 |情感分析|二元分類|[網站留言資料](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|標籤 (負面人氣時為 0，正面人氣時為 1)|留言、年度|
 |詐騙偵測|二元分類|[信用卡資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|類別 (詐騙時為 1，否則為 0)|數量、V1-V28 (匿名特性)|
-|文字分類|多元分類|[GitHub 問題資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|區域|標題、描述|
+|文字分類|多元分類|[GitHub 問題資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|區域圖|標題、描述|
 
 ## <a name="train"></a>指導
 

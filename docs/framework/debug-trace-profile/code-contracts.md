@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e40f93be7f2dad4a80a4f4d23f61f3c93061751
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 103d668dd7a7436fd1acdccdc0afc2431ed8372a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874935"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975001"
 ---
 # <a name="code-contracts"></a>程式碼合約
 
@@ -24,19 +24,19 @@ ms.locfileid: "61874935"
 
 程式碼合約的優點包括：
 
-- 改良的測試：程式碼合約提供靜態合約驗證、 執行階段檢查，以及文件產生。
+- 改良的測試：程式碼合約提供靜態合約驗證、執行階段檢查，以及文件產生。
 
-- 自動測試工具：您可以使用程式碼合約來產生更有意義的單元測試篩選出不符合前置條件的無意義的測試引數。
+- 自動測試工具：您可以使用程式碼合約來篩選掉不符合前置條件的無意義的測試引數，以產生較有意義的單元測試。
 
 - 靜態驗證：靜態檢查工具可以決定是否有任何合約違規，而不需要執行程式。 它會檢查隱含的合約，例如 null 取值和陣列界限，以及明確的合約。
 
-- 參考文件：文件產生器增強了現有的合約資訊的 XML 文件檔案。 此外，還有一些可搭配 [Sandcastle](https://github.com/EWSoftware/SHFB) 使用的樣式表，能夠讓產生的文件頁面具有合約區段。
+- 參考文件：文件產生器會使用合約資訊來增強現有的 XML 文件檔案。 此外，還有一些可搭配 [Sandcastle](https://github.com/EWSoftware/SHFB) 使用的樣式表，能夠讓產生的文件頁面具有合約區段。
 
 所有 .NET Framework 語言都可以立即利用合約；您不必撰寫特殊的剖析器或編譯器。 Visual Studio 增益集可讓您指定所要執行之程式碼合約分析的層級。 分析器可以確認合約語式正確 (類型檢查和名稱解析)，並且可以產生 Microsoft 中繼語言 (MSIL) 格式合約的編譯形式。 在 Visual Studio 中撰寫合約，可讓您利用該工具所提供的標準 IntelliSense。
 
 合約類別中的大部分方法都是有條件地編譯；也就是說，唯有當您使用 `#define` 指示詞，來定義特殊符號 CONTRACTS_FULL 時，編譯器才會發出呼叫至這些方法。 CONTRACTS_FULL 可讓您在程式碼中撰寫合約，而不需使用 `#ifdef` 指示詞；您可以產生不同的組建，有些有合約，有些則沒有。
 
-如需使用程式碼協定的工具和詳細指示，請參閱 MSDN DevLabs 網站上的[程式碼合約](https://go.microsoft.com/fwlink/?LinkId=152461)。
+如需使用程式碼合約的工具和詳細指示，請參閱 Visual Studio marketplace 網站上的程式[代碼合約](https://marketplace.visualstudio.com/items?itemName=RiSEResearchinSoftwareEngineering.CodeContractsforNET)。
 
 ## <a name="preconditions"></a>前置條件
 
@@ -69,7 +69,7 @@ if (x == null) throw new ...
 Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ```
 
-請注意，先前測試中的條件是否定的前置條件。 (實際的前置條件是 `x != null`。)否定的前置條件是具有高度限制：必須在上一個範例中，所示撰寫也就是說，不應包含任何`else`子句，而且主體`then`子句必須是單一`throw`陳述式。 `if` 測試受限於單純性和可視性規則 (請參閱[使用方式方針](#usage_guidelines))，但是 `throw` 運算式只受限於單純性規則。 不過，所擲回之例外狀況的類型可視性，必須與發生合約的方法相同。
+請注意，先前測試中的條件是否定的前置條件。 （實際的前置條件會 `x != null`）。否定的前置條件具有高度限制：必須如前一個範例所示加以撰寫。也就是說，它應該不會包含 `else` 子句，而 `then` 子句的主體必須是單一 `throw` 語句。 `if` 測試受限於單純性和可視性規則 (請參閱[使用方式方針](#usage_guidelines))，但是 `throw` 運算式只受限於單純性規則。 不過，所擲回之例外狀況的類型可視性，必須與發生合約的方法相同。
 
 ## <a name="postconditions"></a>Postconditions
 
@@ -101,11 +101,11 @@ Contract.EnsuresOnThrow<T>(this.F > 0);
 
 下列方法僅限用於後置條件中：
 
-- 若要參考後置條件中的方法傳回值，您可以使用 `Contract.Result<T>()` 運算式，其中 `T` 要取代為方法的傳回類型。 當編譯器無法推斷類型時，您必須明確地提供類型。 例如，C#編譯器會無法推斷類型的方法不會接受任何引數，因此需要下列後置條件：`Contract.Ensures(0 <Contract.Result<int>())` 方法的傳回型別`void`不能參考`Contract.Result<T>()`其後置條件中。
+- 若要參考後置條件中的方法傳回值，您可以使用 `Contract.Result<T>()` 運算式，其中 `T` 要取代為方法的傳回類型。 當編譯器無法推斷類型時，您必須明確地提供類型。 例如，C# 編譯器無法推斷沒有採用任何引數之方法的類型，因此需要下列後置條件：`Contract.Ensures(0 <Contract.Result<int>())` 傳回類型為 `void` 的方法，不能參考其後置條件中的 `Contract.Result<T>()`。
 
-- 後置條件中的 prestate 值是指位於方法或屬性開頭之運算式的值。 它會使用 `Contract.OldValue<T>(e)` 運算式，其中 `T` 是 `e` 的類型。 只要編譯器能夠推斷其類型，您就可以省略泛型類型引數。 (例如，C# 編譯器一律會推斷類型，因為它會採用引數。)關於 `e` 中會發生什麼事，以及可能會出現舊運算式的內容，有幾項限制。 舊運算式不能包含另一個舊運算式。 最重要的是，舊的運算式必須參考存在於方法前置條件狀態中的值。 換句話說，只要方法的前置條件是 `true`，它就必須是可供評估的運算式。 以下是該規則的一些執行個體。
+- 後置條件中的 prestate 值是指位於方法或屬性開頭之運算式的值。 它會使用 `Contract.OldValue<T>(e)` 運算式，其中 `T` 是 `e` 的類型。 只要編譯器能夠推斷其類型，您就可以省略泛型類型引數。 （例如， C#編譯器一律會推斷類型，因為它接受引數）。`e` 和可能出現舊運算式的內容有幾項限制。 舊運算式不能包含另一個舊運算式。 最重要的是，舊的運算式必須參考存在於方法前置條件狀態中的值。 換句話說，只要方法的前置條件是 `true`，它就必須是可供評估的運算式。 以下是該規則的一些執行個體。
 
-  - 該值必須存在於方法的前置條件狀態中。 若要參考的物件上的欄位，前置條件必須保證該物件一律為非 null。
+  - 該值必須存在於方法的前置條件狀態中。 為了參考物件上的欄位，前置條件必須保證物件一律為非 null。
 
   - 您不能在舊運算式中參考方法的傳回值：
 
@@ -165,7 +165,7 @@ protected void ObjectInvariant ()
 }
 ```
 
-CONTRACTS_FULL 前置處理器符號會有條件地定義非變異值。 在執行階段檢查期間，會在每個公用方法的結尾檢查非變異值。 如果非變異值提及在相同類別中的公用方法，則會停用通常在該公用方法結尾進行的非變異檢查。 此檢查反而只會發生在該類別最外層的方法呼叫結尾。 如果因為呼叫另一個類別上的方法而重新輸入此類別，也會進行這項檢查。 物件完成項不會檢查非變異值和<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>實作。
+CONTRACTS_FULL 前置處理器符號會有條件地定義非變異值。 在執行階段檢查期間，會在每個公用方法的結尾檢查非變異值。 如果非變異值提及在相同類別中的公用方法，則會停用通常在該公用方法結尾進行的非變異檢查。 此檢查反而只會發生在該類別最外層的方法呼叫結尾。 如果因為呼叫另一個類別上的方法而重新輸入此類別，也會進行這項檢查。 不會檢查物件完成項和 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 實作為不變數。
 
 <a name="usage_guidelines"></a>
 

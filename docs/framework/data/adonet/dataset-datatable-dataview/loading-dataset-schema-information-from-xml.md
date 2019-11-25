@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: db0df68aa89cdd5c8bf94ad95a2b8bc9b36d5685
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d834f0c4517f4ff9fe8645257d5a947c03893881
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786216"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968402"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>從 XML 載入資料集結構描述資訊
-的架構<xref:System.Data.DataSet> （其資料表、資料行、關聯和條件約束）可以透過程式設計方式定義、由的**Fill**或**FillSchema**方法<xref:System.Data.Common.DataAdapter>建立，或是從 XML 檔載入。 若要從 XML 檔載入**資料集**架構資訊，您可以使用**資料集**的**ReadXmlSchema**或**InferXmlSchema**方法。 **ReadXmlSchema**可讓您從包含 xml 架構定義語言（XSD）架構的檔，或具有內嵌 xml 架構的 xml 檔，載入或推斷**資料集**架構資訊。 **InferXmlSchema**可讓您從 XML 檔推斷架構，同時忽略您指定的特定 XML 命名空間。  
+<xref:System.Data.DataSet> 的架構（其資料表、資料行、關聯和條件約束）可以透過程式設計方式定義、由 <xref:System.Data.Common.DataAdapter>的**Fill**或**FillSchema**方法建立，或從 XML 檔載入。 若要從 XML 檔載入**資料集**架構資訊，您可以使用**資料集**的**ReadXmlSchema**或**InferXmlSchema**方法。 **ReadXmlSchema**可讓您從包含 xml 架構定義語言（XSD）架構的檔，或具有內嵌 xml 架構的 xml 檔，載入或推斷**資料集**架構資訊。 **InferXmlSchema**可讓您從 XML 檔推斷架構，同時忽略您指定的特定 XML 命名空間。  
   
 > [!NOTE]
 > 當您使用 Web 服務或 XML 序列化來傳送使用 XSD 結構（例如，嵌套關聯）在記憶體中建立的**資料集**時，可能不會保留**資料集**內的資料表順序。 因此，在此情況下，**資料集**的收件者不應該相依于資料表排序。 不過，如果要傳送之**資料集**的架構是從 XSD 檔案讀取，而不是在記憶體中建立，則一律會保留資料表順序。  
@@ -40,7 +40,7 @@ dataSet.ReadXmlSchema("schema.xsd");
 ```  
   
 ```vb  
-Dim xmlStream As System.IO.StreamReader = New System.IO.StreamReader ("schema.xsd");  
+Dim xmlStream As New System.IO.StreamReader("schema.xsd")
 Dim dataSet As DataSet = New DataSet  
 dataSet.ReadXmlSchema(xmlStream)  
 xmlStream.Close()  
@@ -73,7 +73,7 @@ xmlStream.Close();
 </NewDataSet>  
 ```  
   
- 因為先前 XML 檔中的專案指定了屬性，所以**ReadXmlSchema**方法和**ReadXml**方法（ **XmlReadMode**為**InferSchema** ）會針對中的每個元素建立資料表記錄**分類**、**類別**目錄、類別**名稱**、**描述**、**產品**、 **ProductID**、 **ReorderLevel**和已**停止**。 （如需詳細資訊，請參閱[從 XML 推斷資料集關聯式結構](inferring-dataset-relational-structure-from-xml.md)）。不過，更適當的結構是只建立 category 和**Products**資料表，**然後在 category 資料表中** **建立 [類別**目錄 **]、[** **類別名稱**] 和 [**描述**] 資料行，以及 **Products**資料表中的 ProductID、 **ReorderLevel**和已**停止**資料行。 為確保推斷的架構忽略 XML 元素中指定的屬性，請使用**InferXmlSchema**方法，並指定要忽略之**officedata**的 XML 命名空間，如下列範例所示。  
+ 由於針對前述 XML 檔中的專案所指定的屬性， **ReadXmlSchema**方法和**ReadXml**方法（具有**XmlReadMode**的**InferSchema** ）會為檔中的每個專案建立資料表：分類、**類別**名稱、**類別名稱**、**描述**、**產品**、 **ProductID**、 **ReorderLevel**和已**停止**。 （如需詳細資訊，請參閱[從 XML 推斷資料集關聯式結構](inferring-dataset-relational-structure-from-xml.md)）。不過，更適當的結構是只建立 category 和**products**資料表，**然後在 [category] 資料表**中建立 **[類別目錄** **]、[** **類別名稱**] 和 [**描述**] 資料行，以及在**Products**資料表中建立**ProductID**、 **ReorderLevel**和已**停止**的資料行。 為確保推斷的架構忽略 XML 元素中指定的屬性，請使用**InferXmlSchema**方法，並指定要忽略之**officedata**的 XML 命名空間，如下列範例所示。  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -85,7 +85,7 @@ DataSet dataSet = new DataSet();
 dataSet.InferXmlSchema("input_od.xml", new string[] "urn:schemas-microsoft-com:officedata");  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [在 DataSet 中使用 XML](using-xml-in-a-dataset.md)
 - [從 XML 結構描述 (XSD) 衍生資料集關聯式結構](deriving-dataset-relational-structure-from-xml-schema-xsd.md)

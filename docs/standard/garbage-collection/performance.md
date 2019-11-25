@@ -6,48 +6,30 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 833bf46b973988196fea37da18bac9923ecd6dcc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141364"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974754"
 ---
 # <a name="garbage-collection-and-performance"></a>記憶體回收和效能
 
-<a name="top"></a> 本主題描述記憶體回收和記憶體使用量的相關問題。 它解決關於 Managed 堆積的問題，並說明如何將記憶體回收對應用程式的影響降至最低。 每個問題已連結至程序，可讓您用來調查問題。
-
-此主題包括下列章節：
-
-- [效能分析工具](#performance_analysis_tools)
-
-- [針對效能問題進行疑難排解](#troubleshooting_performance_issues)
-
-- [疑難排解方針](#troubleshooting_guidelines)
-
-- [效能檢查程序](#performance_check_procedures)
-
-<a name="performance_analysis_tools"></a>
+本主題描述記憶體回收和記憶體使用量的相關問題。 它解決關於 Managed 堆積的問題，並說明如何將記憶體回收對應用程式的影響降至最低。 每個問題已連結至程序，可讓您用來調查問題。
 
 ## <a name="performance-analysis-tools"></a>效能分析工具
 
-下列各節說明可用來調查記憶體使用量和記憶體回收問題的工具。 本主題稍後提供的[程序](#performance_check_procedures)會參考這些工具。
-
-<a name="perf_counters"></a>
+下列各節說明可用來調查記憶體使用量和記憶體回收問題的工具。 本主題稍後提供的[程序](#performance-check-procedures)會參考這些工具。
 
 ### <a name="memory-performance-counters"></a>記憶體效能計數器
 
 您可以使用效能計數器來收集效能資料。 如需相關指示，請參閱[執行階段分析](../../../docs/framework/debug-trace-profile/runtime-profiling.md)。 效能計數器的 .NET CLR 記憶體類別，如 [.NET Framework 中的效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)中所述，會提供記憶體回收行程的相關資訊。
-
-<a name="sos"></a>
 
 ### <a name="debugging-with-sos"></a>以 SOS 偵錯
 
 您可以使用 [Windows 偵錯工具 (WinDbg)](/windows-hardware/drivers/debugger/index) 來檢查 Managed 堆積上的物件。
 
 若要安裝 WinDbg，請從[下載 Debugging Tools for Windows](/windows-hardware/drivers/debugger/debugger-download-tools) 頁面安裝 Debugging Tools for Windows。
-
-<a name="etw"></a>
 
 ### <a name="garbage-collection-etw-events"></a>記憶體回收 ETW 事件
 
@@ -61,8 +43,6 @@ Windows 事件追蹤 (ETW) 是補充 .NET Framework 所提供之程式碼剖析�
 
 ETW 事件記錄很有效率，且不會遮蓋與記憶體回收相關聯的任何效能問題。 處理程序可以提供自己的事件來搭配 ETW 事件。 記錄時，應用程式的事件和記憶體回收事件都可以相互關聯，以判斷堆積問題發生的方式和時間。 例如，伺服器應用程式可以在用戶端要求開始和結束時提供事件。
 
-<a name="profiling_api"></a>
-
 ### <a name="the-profiling-api"></a>程式碼剖析 API
 
 Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期間受影響之物件的詳細相關資訊。 當記憶體回收開始和結束時，會通知程式碼剖析工具。 它可以提供 Managed 堆積上之物件的相關報告，包括每個層代中的物件識別碼。 如需詳細資訊，請參閱[分析概觀](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)。
@@ -72,10 +52,6 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 ### <a name="application-domain-resource-monitoring"></a>應用程式定義域資源監視
 
 從 .NET Framework 4 開始，應用程式定義域資源監視 (ARM) 可讓主機監視應用程式定義域的 CPU 和記憶體使用量。 如需詳細資訊，請參閱[應用程式定義域資源監視](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)。
-
-[回到頁首](#top)
-
-<a name="troubleshooting_performance_issues"></a>
 
 ## <a name="troubleshooting-performance-issues"></a>效能問題疑難排解
 
@@ -213,10 +189,6 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 |------------------------|
 |[判斷高 CPU 使用量是否由於記憶體回收所造成。](#HighCPU)<br /><br /> [在記憶體回收結尾處設定中斷點。](#GenBreak)|
 
-[回到頁首](#top)
-
-<a name="troubleshooting_guidelines"></a>
-
 ## <a name="troubleshooting-guidelines"></a>疑難排解方針
 
 本節描述當您開始調查時，應該考慮的方針。
@@ -258,10 +230,6 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
   如果回收層代 2 物件，以進行記憶體回收之後，執行了 **RestartEE**，則此命令會強制中斷。
 
   在伺服器記憶體回收中，只有一個執行緒呼叫 **RestartEE**，因此中斷點只會在層代 2 記憶體回收期間發生一次。
-
-[回到頁首](#top)
-
-<a name="performance_check_procedures"></a>
 
 ## <a name="performance-check-procedures"></a>效能檢查程序
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: a5a32fa0a98cda37d7f599b20ef2b507cadd730c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: d8858acb2743b26cc3a5172edf4765976d81adf4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69604208"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973006"
 ---
 # <a name="built-in-reference-types-c-reference"></a>內建參考型別 (C# 參考)
 
@@ -60,7 +60,7 @@ string a = "good " + "morning";
 
 這會建立包含 "good morning" 的字串物件。
 
-字串是「不可變的」  ；在建立物件之後，就無法變更字串物件的內容，雖然語法讓它看起來就像您可以這麼做一樣。 例如，當您撰寫此程式碼時，編譯器實際上會建立新的字串物件，以保存新序列的字元，並且會將新物件指派給 `b`。 已配置給 `b` 的記憶體 (當其包含字串 "h" 時) 即適用於記憶體回收。
+字串是「不可變的」；在建立物件之後，就無法變更字串物件的內容，雖然語法讓它看起來就像您可以這麼做一樣。 例如，當您撰寫此程式碼時，編譯器實際上會建立新的字串物件，以保存新序列的字元，並且會將新物件指派給 `b`。 已配置給 `b` 的記憶體 (當其包含字串 "h" 時) 即適用於記憶體回收。
 
 ```csharp
 string b = "h";
@@ -105,13 +105,13 @@ Console.WriteLine(a);
 > [!NOTE]
 > 逸出代碼 `\udddd` (其中 `dddd` 是四位數字) 代表 Unicode 字元 U+`dddd`。 也會辨識八位數 Unicode 逸出代碼︰`\Udddddddd`。
 
-[逐字字串常值](../tokens/verbatim.md)的開頭為 `@`，也會用雙引號括住。 例如：
+[逐字字串常值](../tokens/verbatim.md)的開頭為 `@`，也會用雙引號括住。 例如:
 
 ```csharp
 @"good morning"  // a string literal
 ```
 
-逐字字串的優點是「不會」  處理逸出序列，例如，這可讓您輕鬆地撰寫完整 Windows 檔案名稱︰
+逐字字串的優點是「不會」處理逸出序列，例如，這可讓您輕鬆地撰寫完整 Windows 檔案名稱︰
 
 ```csharp
 @"c:\Docs\Source\a.txt"  // rather than "c:\\Docs\\Source\\a.txt"
@@ -144,7 +144,7 @@ public delegate int AnotherDelegate(MyType m, long num);
 
 在大多數情況下，`dynamic` 類型的行為與 `object` 類型類似。 特別是，任何非 Null 運算式都可轉換成 `dynamic` 型別。 `dynamic` 型別與 `object` 的不同之處在於，包含型別 `dynamic` 運算式的操作，不會由編譯器解析或進行型別檢查。 編譯器會將作業資訊封裝在一起，而且稍後在執行階段會使用這項資訊來評估作業。 在此程序期間，會將 `dynamic` 類型的變數編譯為 `object` 類型的變數。 因此，`dynamic` 類型只存在於編譯時期，而非執行階段。
 
-下列範例會對照 `dynamic` 類型的變數與 `object` 類型的變數。 若要在編譯時期驗證每個變數的類型，請將滑鼠指標放在 `WriteLine` 陳述式中的 `dyn` 或 `obj` 上方。 將下列程式碼複製到可使用 IntelliSense 的編輯器。 IntelliSense 會顯示「動態」  來表示 `dyn`，並顯示「物件」  來表示 `obj`。
+下列範例會對照 `dynamic` 類型的變數與 `object` 類型的變數。 若要在編譯時期驗證每個變數的類型，請將滑鼠指標放在 `WriteLine` 陳述式中的 `dyn` 或 `obj` 上方。 將下列程式碼複製到可使用 IntelliSense 的編輯器。 IntelliSense 會顯示「動態」來表示 `dyn`，並顯示「物件」來表示 `obj`。
 
 [!code-csharp[csrefKeywordsTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#21)]
 
@@ -168,7 +168,7 @@ obj = obj + 3;
 
 [!code-csharp[csrefKeywordsTypes#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic2.cs#25)]
 
-### <a name="see-also"></a>另請參閱
+### <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 關鍵字](../keywords/index.md)
@@ -178,7 +178,7 @@ obj = obj + 3;
 - [基本字串作業](../../../standard/base-types/basic-string-operations.md)
 - [建立新字串](../../../standard/base-types/creating-new.md)
 - [型別測試和轉換運算子](../operators/type-testing-and-cast.md)
-- [如何：使用模式比對、as 和 is 運算子，安全地進行轉換](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [如何使用模式比對和 as 和 is 運算子安全地轉換](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [逐步解說：建立和使用動態物件](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
 - <xref:System.Object?displayProperty=nameWithType>
 - <xref:System.String?displayProperty=nameWithType>

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: d578b9834ca39a33e284d3066eef85890c224a2f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5204165370459466b1258897e72c488ab7e7fadb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740806"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975771"
 ---
 # <a name="printing-overview"></a>列印概觀
-透過 Microsoft .NET Framework，使用 Windows Presentation Foundation （WPF）的應用程式開發人員有一組豐富的列印和列印系統管理 Api。 藉由 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]，某些列印系統增強功能也可供建立 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式的開發人員和使用 Unmanaged 程式碼的開發人員使用。 這項新功能的核心是新的 XML 論文規格（XPS）檔案格式和 XPS 列印路徑。  
+透過 Microsoft .NET Framework，使用 Windows Presentation Foundation （WPF）的應用程式開發人員有一組豐富的列印和列印系統管理 Api。 在 Windows Vista 中，這些列印系統的一些增強功能也適用于使用非受控碼建立 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式和開發人員的開發人員。 這項新功能的核心是新的 XML 論文規格（XPS）檔案格式和 XPS 列印路徑。  
   
  此主題包括下列章節。  
   

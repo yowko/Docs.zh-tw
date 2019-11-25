@@ -1,18 +1,18 @@
 ---
-title: 如何：在查詢運算式中使用隱含類型區域變數和陣列-程式C#設計指南
+title: 如何在查詢運算式中使用隱含類型區域變數和陣列-程式C#設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: 3cb47f9e80e1fc067a8bac860aa06f3e1860d33d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c6022aaa4c37bc0c11c09375d3637d8287fce61a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419312"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970427"
 ---
-# <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>如何：在查詢運算式中使用隱含類型區域變數和陣列 (C# 程式設計手冊)
+# <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>如何在查詢運算式中使用隱含類型區域變數和陣列（C#程式設計手冊）
 每次您希望編譯器判斷區域變數的類型時，可以使用隱含型別區域變數。 您必須使用隱含型別區域變數來儲存查詢運算式中常用的匿名型別。 下列範例說明在查詢中選擇性使用和必須使用隱含型別區域變數的情況。  
   
  隱含型別區域變數是透過 [var](../../language-reference/keywords/var.md) 內容關鍵字宣告。 如需詳細資訊，請參閱[隱含型別區域變數](./implicitly-typed-local-variables.md)和[隱含型別陣列](../arrays/implicitly-typed-arrays.md)。  

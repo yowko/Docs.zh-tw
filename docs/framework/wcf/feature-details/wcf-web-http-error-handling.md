@@ -2,33 +2,36 @@
 title: WCF Web HTTP 錯誤處理
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: 491c39d97c48e2f92ff258ac42b9576d407b898e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34912bccaefb645541f47d083c5c307b20ff77c5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648425"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975962"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF Web HTTP 錯誤處理
-Windows Communication Foundation (WCF) Web HTTP 錯誤處理可讓您從指定的 HTTP 狀態碼，並傳回錯誤詳細資料，使用相同的格式與作業 （例如 XML 或 JSON） 的 WCF Web HTTP 服務傳回錯誤。  
+Windows Communication Foundation （WCF） Web HTTP 錯誤處理可讓您從指定 HTTP 狀態碼的 WCF Web HTTP 服務傳回錯誤，並使用與作業相同的格式（例如 XML 或 JSON）傳回錯誤詳細資料。  
   
 ## <a name="wcf-web-http-error-handling"></a>WCF Web HTTP 錯誤處理  
  <xref:System.ServiceModel.Web.WebFaultException> 類別會定義一個建構函式，供您指定 HTTP 狀態碼。 然後，這個狀態碼會傳回用戶端。 <xref:System.ServiceModel.Web.WebFaultException> 類別的泛型版本 <xref:System.ServiceModel.Web.WebFaultException%601> 可讓您傳回使用者定義的型別，其中包含已發生錯誤的相關資訊。 此自訂物件會使用作業指定的格式序列化，然後傳回用戶端。 下列範例示範如何傳回 HTTP 狀態碼。  
   
-```  
-Public string Operation1()  
-{   // Operation logic  
-   // ...  
-   Throw new WebFaultException(HttpStatusCode.Forbidden);  
+```csharp
+public string Operation1()
+{
+    // Operation logic  
+   // ...
+   throw new WebFaultException(HttpStatusCode.Forbidden);
 }  
 ```  
   
  下列範例示範如何傳回 HTTP 狀態碼，以及使用者定義型別中的額外資訊。 `MyErrorDetail` 是使用者定義的型別，其中包含有關已發生之錯誤的額外資訊。  
   
-```  
-Public string Operation2()  
+```csharp
+public string Operation2()
+{
    // Operation logic  
-   // ...   MyErrorDetail detail = new MyErrorDetail  
+   // ...
+   MyErrorDetail detail = new MyErrorDetail()
    {  
       Message = "Error Message",  
       ErrorCode = 123,  
@@ -45,11 +48,11 @@ Public string Operation2()
   
 - 透過存取 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 之 <xref:System.ServiceModel.Web.OutgoingWebResponseContext> 屬性的值。  
   
- 如需有關這些值如何影響作業的格式設定的詳細資訊，請參閱[WCF Web HTTP 格式化](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)。  
+ 如需這些值如何影響作業格式的詳細資訊，請參閱[WCF WEB HTTP 格式](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)。  
   
  <xref:System.ServiceModel.Web.WebFaultException> 是一個 <xref:System.ServiceModel.FaultException>，因此可以針對公開 SOAP 端點以及 Web HTTP 端點的服務，用來當做服務的錯誤例外狀況程式撰寫模型。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [WCF Web HTTP 格式化](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)

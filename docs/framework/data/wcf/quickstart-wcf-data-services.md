@@ -5,22 +5,22 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: df6806cd77e7ff109d79f7ba61866763de4c7fc1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d0002182c5ae519c36348acdd2587bca499fe72e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790372"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975132"
 ---
 # <a name="quickstart-wcf-data-services"></a>快速入門 (WCF 資料服務)
 
-本快速入門可協助您[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]透過一系列支援[消費者入門](getting-started-with-wcf-data-services.md)主題的工作，熟悉 WCF Data Services 和。
+本快速入門可協助您透過一系列支援[消費者入門](getting-started-with-wcf-data-services.md)主題的工作，熟悉 WCF Data Services 和開放式資料通訊協定（OData）。
 
 ## <a name="what-youll-learn"></a>您將瞭解的內容
 
 本快速入門中的第一個工作會示範如何建立資料服務，以公開 Northwind 範例資料庫中的 OData 摘要。 在後續的主題中，您將使用網頁瀏覽器來存取 OData 摘要，並使用用戶端程式庫建立使用 OData 摘要的 Windows Presentation Foundation （WPF）用戶端應用程式。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 若要完成本快速入門，您必須安裝下列元件：
 
@@ -52,6 +52,6 @@ ms.locfileid: "70790372"
 > [!div class="nextstepaction"]
 > [開始快速入門](creating-the-data-service.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ADO.NET Entity Framework](../adonet/ef/index.md)

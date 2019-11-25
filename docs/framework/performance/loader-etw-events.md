@@ -7,32 +7,19 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6177bdff873feb75eb15dba53bcdb5197260fa9d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a6928b5ac41a6af36dc7d5e7f5bb02074ba742e5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046397"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974595"
 ---
 # <a name="loader-etw-events"></a>載入器 ETW 事件
-<a name="top"></a> 這些事件收集載入及卸載應用程式定義域、組件和模組的相關資訊。  
+這些事件收集載入及卸載應用程式定義域、組件和模組的相關資訊。  
   
  所有的載入器事件都會在 `LoaderKeyword` (0x8) 關鍵字底下引發。 `DCStart` 和 `DCEnd` 事件會在啟用 `StartRundown`/`EndRundown` 時，於 `LoaderRundownKeyword` (0x8) 底下引發。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。  
-  
- 載入器事件可細分為下列事件：  
-  
-- [應用程式定義域事件](#application_domain_events)  
-  
-- [CLR 載入器組件事件](#clr_loader_assembly_events)  
-  
-- [模組事件](#module_events)  
-  
-- [CLR 定義域模組事件](#clr_domain_module_events)  
-  
-- [模組範圍事件](#module_range_events)  
-  
-<a name="application_domain_events"></a>   
-## <a name="application-domain-events"></a>應用程式定義域事件  
+
+## <a name="application-domain-events"></a>應用程式定義域事件
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|Event - 事件|層級|  
@@ -43,7 +30,7 @@ ms.locfileid: "71046397"
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|說明|  
+|Event - 事件|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`AppDomainLoad_V1` (針對所有應用程式定義域記錄)|156|每當在處理序的存留期間建立應用程式定義域時引發。|  
 |`AppDomainUnLoad_V1`|157|每當在處理序的存留期間終結應用程式定義域時引發。|  
@@ -55,14 +42,11 @@ ms.locfileid: "71046397"
 |欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|應用程式定義域的唯一識別項。|  
-|AppDomainFlags|win:UInt32|0x1預設網域。<br /><br /> 0x2作品.<br /><br /> 0x4應用程式域，位28-31：正在共用此網域的原則。<br /><br /> 0共用網域。|  
+|AppDomainFlags|win:UInt32|0x1：預設定義域。<br /><br /> 0x2：可執行檔。<br /><br /> 0x4：應用程式定義域，位元 28-31：這個定義域的共用原則。<br /><br /> 0：共用的定義域。|  
 |AppDomainName|win:UnicodeString|易記的應用程式定義域名稱。 在處理序的存留期間可能會變更。|  
 |AppDomainIndex|win:UInt32|這個應用程式定義域的索引。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
-  
- [回到頁首](#top)  
-  
-<a name="clr_loader_assembly_events"></a>   
+
 ## <a name="clr-loader-assembly-events"></a>CLR 載入器組件事件  
  下表說明關鍵字和層級。  
   
@@ -74,7 +58,7 @@ ms.locfileid: "71046397"
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|說明|  
+|Event - 事件|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|載入組件時引發。|  
 |`AssemblyUnload_V1`|155|卸載組件時引發。|  
@@ -88,14 +72,11 @@ ms.locfileid: "71046397"
 |AssemblyID|win:UInt64|組件的唯一 ID。|  
 |AppDomainID|win:UInt64|這個組件之定義域的 ID。|  
 |BindingID|win:UInt64|可唯一識別組件繫結的 ID。|  
-|AssemblyFlags|win:UInt32|0x1網域中性元件。<br /><br /> 0x2動態元件。<br /><br /> 0x4元件具有原生映射。<br /><br /> 0x8可回收元件。|  
+|AssemblyFlags|win:UInt32|0x1：定義域中性組件。<br /><br /> 0x2：動態組件。<br /><br /> 0x4：組件具有原生映像。<br /><br /> 0x8：可回收組件。|  
 |AssemblyName|win:UnicodeString|完整的組件名稱。|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
-  
- [回到頁首](#top)  
-  
-<a name="module_events"></a>   
-## <a name="module-events"></a>模組事件  
+|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|   
+
+## <a name="module-events"></a>模組事件
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|Event - 事件|層級|  
@@ -120,7 +101,7 @@ ms.locfileid: "71046397"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|模組的唯一 ID。|  
 |AssemblyID|win:UInt64|這個模組所在之組件的 ID。|  
-|ModuleFlags|win:UInt32|0x1網域中性模組。<br /><br /> 0x2模組具有原生映射。<br /><br /> 0x4動態模組。<br /><br /> 0x8資訊清單模組。|  
+|ModuleFlags|win:UInt32|0x1：定義域中性模組。<br /><br /> 0x2：模組具有原生映像。<br /><br /> 0x4：動態模組。<br /><br /> 0x8：資訊清單模組。|  
 |Reserved1|win:UInt32|保留的欄位。|  
 |ModuleILPath|win:UnicodeString|模組之 Microsoft Intermediate Language (MSIL) 映像的路徑，或動態模組名稱 (如果它是動態組件 (以 Null 終止) 的話)。|  
 |ModuleNativePath|win:UnicodeString|模組原生映像的路徑 (如果存在的話 (以 Null 終止))。|  
@@ -139,11 +120,8 @@ ms.locfileid: "71046397"
 - 以 "ManagedPdb" 開頭的欄位名稱表示受管理的 PDB 所對應的 MSIL 模組，其是由受管理的編譯器 (例如 C# 或 Visual Basic 的編譯器) 所產生。 這個 PDB 會使用受管理的 PDB 格式，並描述各個項目如何從原始的受管理來源程式碼 (例如檔案、行號和符號名稱) 對應至編譯成 MSIL 模組的 MSIL 項目。  
   
 - 以 "NativePdb" 開頭的欄位名稱表示該 NGen PDB 是透過呼叫 `NGEN createPDB`而產生。 這個 PDB 會使用受管理的 PDB 格式，並描述各個項目如何從原始的受管理來源程式碼 (例如檔案、行號和符號名稱) 對應至編譯成 NGen 模組的原生項目。  
-  
- [回到頁首](#top)  
-  
-<a name="clr_domain_module_events"></a>   
-## <a name="clr-domain-module-events"></a>CLR 定義域模組事件  
+
+## <a name="clr-domain-module-events"></a>CLR 定義域模組事件
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|Event - 事件|層級|  
@@ -162,21 +140,18 @@ ms.locfileid: "71046397"
   
  下表說明事件資料。  
   
-|欄位名稱|資料類型|說明|  
+|欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|識別這個模組所屬的組件。|  
 |AssemblyID|win:UInt64|這個模組所在之組件的 ID。|  
 |AppDomainID|win:UInt64|使用這個模組之應用程式定義域的 ID。|  
-|ModuleFlags|win:UInt32|0x1網域中性模組。<br /><br /> 0x2模組具有原生映射。<br /><br /> 0x4動態模組。<br /><br /> 0x8資訊清單模組。|  
+|ModuleFlags|win:UInt32|0x1：定義域中性模組。<br /><br /> 0x2：模組具有原生映像。<br /><br /> 0x4：動態模組。<br /><br /> 0x8：資訊清單模組。|  
 |Reserved1|win:UInt32|保留的欄位。|  
 |ModuleILPath|win:UnicodeString|模組之 MSIL 映像的路徑，或動態模組名稱 (如果它是動態組件 (以 Null 終止) 的話)。|  
 |ModuleNativePath|win:UnicodeString|模組原生映像的路徑 (如果存在的話 (以 Null 終止))。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
-  
- [回到頁首](#top)  
-  
-<a name="module_range_events"></a>   
-## <a name="module-range-events"></a>模組範圍事件  
+
+## <a name="module-range-events"></a>模組範圍事件
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|Event - 事件|層級|  
@@ -212,6 +187,6 @@ ms.locfileid: "71046397"
   
  模組範圍事件會在任何 ETW 層級大於或等於 4 且分類為告知性事件時引發。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [CLR ETW 事件](clr-etw-events.md)

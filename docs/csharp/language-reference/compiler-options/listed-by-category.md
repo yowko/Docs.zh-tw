@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 7319d424b84d5edd41fc255e3aea763da55961a9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 5cd5607c25dabd8f56ebb58366116666e8e649ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606738"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972711"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>依分類列出的 C# 編譯器選項
 
@@ -96,7 +96,7 @@ ms.locfileid: "69606738"
 |[-codepage](codepage-compiler-option.md)|指定編譯過程中所有原始程式碼檔使用的字碼頁。|
 |[-help](help-compiler-option.md)|將編譯器選項列出至 stdout。|
 |[-highentropyva](highentropyva-compiler-option.md)|指定可執行檔支援位址空間配置隨機載入 (ASLR)。|
-|[-langversion](langversion-compiler-option.md)|指定語言版本：預設、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3 或最新 |
+|[-langversion](langversion-compiler-option.md)|指定語言版本：Default、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3 或 Latest |
 |[-main](main-compiler-option.md)|指定 **Main** 方法的位置。|
 |[-noconfig](noconfig-compiler-option.md)|指示編譯器不要使用 csc.rsp 進行編譯。|
 |[-nologo](nologo-compiler-option.md)|隱藏編譯器橫幅資訊。|
@@ -105,7 +105,7 @@ ms.locfileid: "69606738"
 |[-unsafe](unsafe-compiler-option.md)|啟用使用 [unsafe](../keywords/unsafe.md) 關鍵字的程式碼編譯。|
 |[-utf8output](utf8output-compiler-option.md)|使用 UTF-8 編碼顯示編譯器輸出。|
 |-parallel[+&#124;-]|指定是否要使用並行組建 (+)。|
-|-checksumalgorithm:\<alg>|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 (預設) 或 SHA256。<br>由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256。|
+|-checksumalgorithm:\<alg>|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 (預設值) 或 SHA256。<br>由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256。|
 
 ## <a name="obsolete-options"></a>過時的選項
 
@@ -113,8 +113,8 @@ ms.locfileid: "69606738"
 |---|---|
 |-incremental|啟用累加編譯。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 編譯器選項](index.md)
 - [依字母順序列出 C# 編譯器選項](listed-alphabetically.md)
-- [如何：為 Visual Studio 命令列設定環境變數](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [如何設定 Visual Studio 命令列的環境變數](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 663dd7a785200ddbc78cc0cd1fb5b43531982f42
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5803d656d765f3f4fe3039e28b9c06202218fcfc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458951"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973993"
 ---
 # <a name="dependency-properties-overview"></a>相依性屬性概觀
 
@@ -168,7 +168,7 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 如需詳細資訊，請參閱[屬性值繼承](property-value-inheritance.md)。
 
 ### <a name="wpf-designer-integration"></a>WPF 設計工具整合
-有實作為相依性屬性之屬性的自訂控制項會獲得適當的 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 支援。 其中一例就是能夠使用 [屬性] 視窗編輯直接和附加的相依性屬性。 如需詳細資訊，請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)。
+具有實作為相依性屬性之屬性的自訂控制項，將會收到適用于 Visual Studio 支援的適當 WPF 設計工具。 其中一例就是能夠使用 [屬性] 視窗編輯直接和附加的相依性屬性。 如需詳細資訊，請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)。
 
 ## <a name="dependency-property-value-precedence"></a>相依性屬性值優先順序
 當您取得相依性屬性的值時，您就可能取得一個值，此值原透過參與 WPF 屬性系統的任何其他屬性型輸入來設定在該屬性上。 相依性屬性值有優先順序，所以屬性如何取得其值的各種案例才能以可預測的方式互動。

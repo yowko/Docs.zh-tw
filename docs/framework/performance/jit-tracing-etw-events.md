@@ -7,26 +7,19 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 145a53363c9d7aca622ee0b1ccb2700e5984397d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4daa0fc0d689815e3a2c65df09c6c046d06a25c4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046419"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975503"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT 追蹤 ETW 事件
-<a name="top"></a> 這些事件會收集 just-in-time (JIT) 內嵌和 JIT tail 呼叫成功或失敗的相關資訊。  
-  
- JIT 追蹤事件包含下列兩種類別：  
-  
-- [JIT 內嵌事件](#jit_inlining_events)  
-  
-- [JIT Tail 呼叫事件](#jit_tail_call_events)  
-  
-<a name="jit_inlining_events"></a>   
-## <a name="jit-inlining-events"></a>JIT 內嵌事件  
-  
-### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed 事件  
+這些事件會收集 just-in-time (JIT) 內嵌和 JIT tail 呼叫成功或失敗的相關資訊。
+
+## <a name="jit-inlining-events"></a>JIT 內嵌事件
+
+### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed 事件
  下表說明關鍵字和層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。  
   
 |引發事件的關鍵字|層級|  
@@ -83,10 +76,7 @@ ms.locfileid: "71046419"
 |InlineeName|win:UnicodeString|編譯器嘗試要內嵌的方法 (而非產生呼叫)。|  
 |InlineeNameSignature|win:UnicodeString|被內嵌者的簽章。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
-  
- [回到頁首](#top)  
-  
-<a name="jit_tail_call_events"></a>   
+
 ## <a name="jit-tail-call-events"></a>JIT Tail 呼叫事件  
   
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed 事件  
@@ -149,6 +139,6 @@ ms.locfileid: "71046419"
 |TailCallType|win:UnicodeString|Tail 呼叫的類型。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [CLR ETW 事件](clr-etw-events.md)

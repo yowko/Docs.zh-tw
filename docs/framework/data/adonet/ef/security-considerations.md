@@ -2,12 +2,12 @@
 title: 安全性考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: d9adf4ed9e340ff589117f160e370c7d1595a207
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039872"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968409"
 ---
 # <a name="security-considerations-entity-framework"></a>安全性考量 (Entity Framework)
 本主題說明開發、部署和執行 Entity Framework 應用程式特有的安全性考慮。 您也應該遵循建立安全 .NET Framework 應用程式的建議。 如需詳細資訊，請參閱[安全性總覽](../security-overview.md)。  
@@ -119,11 +119,11 @@ ms.locfileid: "73039872"
  基於下列原因，應避免從公開至可能未受信任之呼叫端的方法傳回 <xref:System.Linq.IQueryable%601> 類型：  
   
 - 會公開 <xref:System.Linq.IQueryable%601> 類型的查詢消費者可能會針對結果呼叫方法，而該些方法會公開安全資料或增加結果集的大小。 例如，請考慮下列方法簽章：  
-  
-    ```csharp  
-    public IQueryable<Customer> GetCustomer(int customerId)  
-    ```  
-  
+
+    ```csharp
+    public IQueryable<Customer> GetCustomer(int customerId)
+    ```
+
     此查詢的消費者可能會針對傳回的 `.Include("Orders")`呼叫 `IQueryable<Customer>` ，以擷取查詢未打算公開的資料。 將方法的傳回型別變更為 <xref:System.Collections.Generic.IEnumerable%601> 並呼叫會具體化結果的方法 (例如 `.ToList()`)，便可以避免發生此情況。  
   
 - 因為 <xref:System.Linq.IQueryable%601> 查詢會在反覆查看結果時執行，所以會公開 <xref:System.Linq.IQueryable%601> 型別的查詢消費者可以攔截被擲回的例外狀況。 例外狀況可能包含消費者不適用的資訊。  

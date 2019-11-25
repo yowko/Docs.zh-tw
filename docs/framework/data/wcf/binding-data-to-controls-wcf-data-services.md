@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: a734240fd8a7ec5217674342dc20b3cf8cbdf4ab
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 605ff7a9acaaa217f0e482579968757dd451aed9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739635"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974839"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>將資料繫結至控制項 (WCF 資料服務)
-有了 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以將類似 `ComboBox` 和 `ListView` 的控制項繫結至 <xref:System.Data.Services.Client.DataServiceCollection%601> 類別的執行個體。 這個集合 (繼承自 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別) 包含 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 摘要中的資料。 此類別表示動態資料集合會在加入或移除項目時提供通知。 當您使用 <xref:System.Data.Services.Client.DataServiceCollection%601> 的實例進行資料系結時，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫會處理這些事件，以確保 <xref:System.Data.Services.Client.DataServiceContext> 追蹤的物件會與系結 UI 專案中的資料保持同步。  
+有了 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以將類似 `ComboBox` 和 `ListView` 的控制項繫結至 <xref:System.Data.Services.Client.DataServiceCollection%601> 類別的執行個體。 這個集合繼承自 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別，其中包含來自開放式資料通訊協定（OData）摘要的資料。 此類別表示動態資料集合會在加入或移除項目時提供通知。 當您使用 <xref:System.Data.Services.Client.DataServiceCollection%601> 的實例進行資料系結時，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫會處理這些事件，以確保 <xref:System.Data.Services.Client.DataServiceContext> 追蹤的物件會與系結 UI 專案中的資料保持同步。  
   
  在集合中加入或移除物件時，<xref:System.Data.Services.Client.DataServiceCollection%601> 類別會 (間接) 實作 <xref:System.Collections.Specialized.INotifyCollectionChanged> 介面以警示內容。 與 <xref:System.Data.Services.Client.DataServiceCollection%601> 搭配使用的資料服務類型物件也必須實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面，以便在繫結集合中的物件屬性發生變更時警示 <xref:System.Data.Services.Client.DataServiceCollection%601>。  
   
@@ -25,7 +25,7 @@ ms.locfileid: "73739635"
 > 當您使用 [**加入服務參考**] 對話方塊或 [ [DataSvcUtil](wcf-data-service-client-utility-datasvcutil-exe.md) ] 工具搭配 [`/dataservicecollection`] 選項來產生用戶端資料服務類別時，產生的資料類別會執行 <xref:System.ComponentModel.INotifyPropertyChanged> 介面。 如需詳細資訊，請參閱[如何：手動產生用戶端資料服務類別](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)。  
   
 ## <a name="creating-the-binding-collection"></a>建立繫結集合  
- 以提供的 <xref:System.Data.Services.Client.DataServiceCollection%601> 執行個體及選擇性的 <xref:System.Data.Services.Client.DataServiceContext> 或 LINQ 查詢 (執行此查詢時會傳回 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體) 呼叫其中一個類別建構函式方法，建立一個新的 <xref:System.Collections.Generic.IEnumerable%601> 類別執行個體。 這個 <xref:System.Collections.Generic.IEnumerable%601> 會提供系結集合的物件來源，而此系結是從 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要具體化而來。 如需詳細資訊，請參閱[物件具體化](object-materialization-wcf-data-services.md)。 根據預設，<xref:System.Data.Services.Client.DataServiceContext>會自動追蹤對插入於集合中的繫結物件和項目所進行的變更。 如果您需要手動追蹤這些變更，請呼叫其中一個使用 `trackingMode` 參數的方法，並指定 <xref:System.Data.Services.Client.TrackingMode.None>的值。  
+ 以提供的 <xref:System.Data.Services.Client.DataServiceCollection%601> 執行個體及選擇性的 <xref:System.Data.Services.Client.DataServiceContext> 或 LINQ 查詢 (執行此查詢時會傳回 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體) 呼叫其中一個類別建構函式方法，建立一個新的 <xref:System.Collections.Generic.IEnumerable%601> 類別執行個體。 這個 <xref:System.Collections.Generic.IEnumerable%601> 會提供系結集合的物件來源，而此系結會從 OData 摘要中具體化。 如需詳細資訊，請參閱[物件具體化](object-materialization-wcf-data-services.md)。 根據預設，<xref:System.Data.Services.Client.DataServiceContext>會自動追蹤對插入於集合中的繫結物件和項目所進行的變更。 如果您需要手動追蹤這些變更，請呼叫其中一個使用 `trackingMode` 參數的方法，並指定 <xref:System.Data.Services.Client.TrackingMode.None>的值。  
   
  下列範例示範如何根據所提供的 <xref:System.Data.Services.Client.DataServiceCollection%601> 以及傳回所有客戶與相關訂單的 <xref:System.Data.Services.Client.DataServiceContext> 建立 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體。  
   

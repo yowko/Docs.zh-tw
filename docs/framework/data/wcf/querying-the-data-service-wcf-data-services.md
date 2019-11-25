@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: cc0e8a5e7d254fc4b34566d2252869a2da4af3db
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e37a1654bdc62937bbb27c293a110293c9928645
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894290"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975158"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>查詢資料服務 (WCF 資料服務)
 
@@ -24,7 +24,7 @@ ms.locfileid: "70894290"
 
 <xref:System.Data.Services.Client.DataServiceQuery%601> 泛型類別表示傳回零個或多個實體型別執行個體之集合的查詢。 資料服務查詢永遠屬於現有的資料服務內容。 此內容會維持撰寫及執行查詢所需的服務 URI 和中繼資料 (Metadata) 資訊。
 
-當您使用 [**加入服務參考**] 對話方塊將資料服務加入至以 .NET Framework 為基礎的用戶端應用程式時，會建立繼承自<xref:System.Data.Services.Client.DataServiceContext>類別的實體容器類別。 這個類別包含會傳回具型別之 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體的屬性。 每一個實體集都有一個屬性，並由資料服務公開。 這些屬性可以讓具型別 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體的建立作業更為容易。
+當您使用 [**加入服務參考**] 對話方塊將資料服務加入至以 .NET Framework 為基礎的用戶端應用程式時，會建立繼承自 <xref:System.Data.Services.Client.DataServiceContext> 類別的實體容器類別。 這個類別包含會傳回具型別之 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體的屬性。 每一個實體集都有一個屬性，並由資料服務公開。 這些屬性可以讓具型別 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體的建立作業更為容易。
 
 以下情況下會執行查詢：
 
@@ -45,11 +45,11 @@ ms.locfileid: "70894290"
 
 如需詳細資訊，請參閱[如何：執行資料服務查詢](how-to-execute-data-service-queries-wcf-data-services.md)。
 
-用戶端支援晚期繫結物件的查詢，例如當您在中C#使用*動態*類型時。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 不過，基於效能因素，您應該一律針對資料服務撰寫強型別的查詢。 用戶端不支援 <xref:System.Tuple> 型別和動態物件。
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端支援晚期繫結物件的查詢，例如當您在中C#使用*動態*類型時。 不過，基於效能因素，您應該一律針對資料服務撰寫強型別的查詢。 用戶端不支援 <xref:System.Tuple> 型別和動態物件。
 
 ## <a name="linq-queries"></a>LINQ 查詢
 
-由於類別會執行 linq <xref:System.Linq.IQueryable%601>所[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]定義的介面，因此用戶端程式庫可以針對實體集資料將 linq 查詢轉換為 URI，以代表針對資料服務評估的查詢運算式<xref:System.Data.Services.Client.DataServiceQuery%601>resource. 下列範例是 LINQ 查詢，其相當於以前的 <xref:System.Data.Services.Client.DataServiceQuery%601>，它會傳回運費成本超過 $30 的 `Orders`，並依運費成本排序結果：
+由於 <xref:System.Data.Services.Client.DataServiceQuery%601> 類別會執行 LINQ 所定義的 <xref:System.Linq.IQueryable%601> 介面，因此 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫可以將實體集資料的 LINQ 查詢轉換為 URI，以代表針對資料服務資源評估的查詢運算式。 下列範例是 LINQ 查詢，其相當於以前的 <xref:System.Data.Services.Client.DataServiceQuery%601>，它會傳回運費成本超過 $30 的 `Orders`，並依運費成本排序結果：
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
@@ -93,7 +93,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 [!code-csharp[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqqueryclientevalspecific)]
 [!code-vb[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqqueryclientevalspecific)]
 
-在此範例中，運算式 `(basePrice – (basePrice * discount))` 會在用戶端上進行評估。 因此，傳送至資料服務的實際查詢 URI `http://localhost:12345/northwind.svc/Products()?$filter=(UnitPrice gt 90.00M) and substringof('bike',ProductName)` 在 filter 子句中，包含已經計算的十進位值 `90`。 篩選運算式的另一個部分 (包括子字串運算式)，則由資料服務評估。 在用戶端上評估的運算式會遵循 Common Language Runtime (CLR) 語意，而傳送到資料服務的運算式則會依賴 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 通訊協定的資料服務實作。 您也應該知道這個個別評估的案例可能會造成非預期的結果，例如，當用戶端和服務同時在不同的時區中執行以時間為基礎的評估時。
+在此範例中，運算式 `(basePrice – (basePrice * discount))` 會在用戶端上進行評估。 因此，傳送至資料服務的實際查詢 URI `http://localhost:12345/northwind.svc/Products()?$filter=(UnitPrice gt 90.00M) and substringof('bike',ProductName)` 在 filter 子句中，包含已經計算的十進位值 `90`。 篩選運算式的另一個部分 (包括子字串運算式)，則由資料服務評估。 在用戶端上評估的運算式會遵循 common language runtime （CLR）的語義，而傳送至資料服務的運算式會依賴 OData 通訊協定的資料服務執行。 您也應該知道這個個別評估的案例可能會造成非預期的結果，例如，當用戶端和服務同時在不同的時區中執行以時間為基礎的評估時。
 
 ## <a name="query-responses"></a>查詢回應
 
@@ -118,7 +118,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 - <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> - 傳回包含下一頁結果之 URI 的 <xref:System.Data.Services.Client.DataServiceQueryContinuation> 物件。
 
-根據預設， [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]只會傳回查詢 URI 明確選取的資料。 它還提供選項可讓您於必要時，從資料服務明確載入其他資料。 每次您從資料服務明確載入資料時，就會傳送一個要求至資料服務。 可以明確載入的資料包括相關實體、分頁的回應資料，以及二進位資料流。
+根據預設，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 只會傳回查詢 URI 所明確選取的資料。 它還提供選項可讓您於必要時，從資料服務明確載入其他資料。 每次您從資料服務明確載入資料時，就會傳送一個要求至資料服務。 可以明確載入的資料包括相關實體、分頁的回應資料，以及二進位資料流。
 
 > [!NOTE]
 > 因為資料服務可能傳回分頁的回應，我們建議您的應用程式使用程式設計模式來處理分頁的資料服務回應。 如需詳細資訊，請參閱[載入延](loading-deferred-content-wcf-data-services.md)後的內容。
@@ -129,9 +129,9 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 在部分情況下，這麼做有助於得知實體集中的實體總數，且不僅是查詢傳回的數目。 在 <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> 上呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法，以要求集合中的這項實體總計數包含在查詢結果中。 在此案例中，傳回之 <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> 的 <xref:System.Data.Services.Client.QueryOperationResponse%601> 屬性會傳回集合中的實體總數。
 
-您也可以分別呼叫 <xref:System.Int32> 或 <xref:System.Int64> 方法，藉此只取得集合中的實體總計數，以做為 <xref:System.Linq.Enumerable.Count%2A> 或做為 <xref:System.Linq.Enumerable.LongCount%2A> 值。 呼叫這些方法時，並未傳回 <xref:System.Data.Services.Client.QueryOperationResponse%601>；只會傳回計數值。 如需詳細資訊，請參閱[如何：判斷查詢](number-of-entities-returned-by-a-query-wcf.md)傳回的實體數目。
+您也可以分別呼叫 <xref:System.Int32> 或 <xref:System.Int64> 方法，藉此只取得集合中的實體總計數，以做為 <xref:System.Linq.Enumerable.Count%2A> 或做為 <xref:System.Linq.Enumerable.LongCount%2A> 值。 呼叫這些方法時，並未傳回 <xref:System.Data.Services.Client.QueryOperationResponse%601>；只會傳回計數值。 如需詳細資訊，請參閱[如何：判斷查詢傳回的實體數目](number-of-entities-returned-by-a-query-wcf.md)。
 
-## <a name="in-this-section"></a>本節內容
+## <a name="in-this-section"></a>本章節內容
 
 - [查詢投影](query-projections-wcf-data-services.md)
 
@@ -141,7 +141,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 - [如何：執行資料服務查詢](how-to-execute-data-service-queries-wcf-data-services.md)
 
-- [如何：將查詢選項加入至資料服務查詢](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [如何：將查詢選項新增至資料服務查詢](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
 
 - [如何：判斷查詢傳回的實體數目](number-of-entities-returned-by-a-query-wcf.md)
 
@@ -149,8 +149,8 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 - [如何：設定用戶端要求中的標頭](how-to-set-headers-in-the-client-request-wcf-data-services.md)
 
-- [如何：專案查詢結果](how-to-project-query-results-wcf-data-services.md)
+- [如何：投影查詢結果](how-to-project-query-results-wcf-data-services.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)

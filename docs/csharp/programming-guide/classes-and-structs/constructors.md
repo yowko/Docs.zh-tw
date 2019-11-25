@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: ea780fc983ed46c8a5ccb54ab618d1a0a2a928d1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 13597275460c075309b7457485a17655cf93f251
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597097"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971101"
 ---
 # <a name="constructors-c-programming-guide"></a>建構函式 (C# 程式設計手冊)
 
@@ -20,7 +20,7 @@ ms.locfileid: "69597097"
 
 ## <a name="parameterless-constructors"></a>無參數建構函式
   
-如不提供類別的建構函式，C# 預設會建立一個可具現化物件的建構函式，並將成員變數設定為預設值，如[預設值表](../../language-reference/keywords/default-values-table.md)中所列。 若未提供結構的建構函式，C# 會依賴「隱含無參數建構函式」  來自動將實值型別的每個欄位初始化為其預設值，如[預設值表](../../language-reference/keywords/default-values-table.md)中所列。 如需詳細資訊及範例，請參閱[執行個體建構函式](./instance-constructors.md)。  
+如不提供類別的建構函式，C# 預設會建立一個可具現化物件的建構函式，並將成員變數設定為預設值，如[預設值表](../../language-reference/keywords/default-values-table.md)中所列。 若未提供結構的建構函式，C# 會依賴「隱含無參數建構函式」 來自動將實值型別的每個欄位初始化為其預設值，如[預設值表](../../language-reference/keywords/default-values-table.md)中所列。 如需詳細資訊及範例，請參閱[執行個體建構函式](./instance-constructors.md)。  
 
 ## <a name="constructor-syntax"></a>建構函式語法
 
@@ -46,7 +46,7 @@ ms.locfileid: "69597097"
 
 如需詳細資訊及範例，請參閱[靜態建構函式](./static-constructors.md)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [使用建構函式](./using-constructors.md)  
   
  [執行個體建構函式](./instance-constructors.md)  
@@ -55,12 +55,12 @@ ms.locfileid: "69597097"
   
  [靜態建構函式](./static-constructors.md)  
   
- [如何：撰寫複製建構函式](./how-to-write-a-copy-constructor.md)  
+ [如何撰寫複製的構造函式](./how-to-write-a-copy-constructor.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](./index.md)
 - [完成項](./destructors.md)
 - [static](../../language-reference/keywords/static.md)
-- [為什麼初始設定式執行的順序與建構函式相反？第一部](https://blogs.msdn.microsoft.com/ericlippert/2008/02/15/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)
+- [為什麼初始化運算式是以相反的循序執行，做為構造函式？第一部](https://blogs.msdn.microsoft.com/ericlippert/2008/02/15/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)

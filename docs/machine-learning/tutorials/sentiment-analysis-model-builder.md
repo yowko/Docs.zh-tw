@@ -6,14 +6,14 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4a97fb70caafd7b0003830259ddbb0ec72a2ca8a
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 5e5b60a53db70b33ed798bcf33497b74911ba727
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180276"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974801"
 ---
-# <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>教學課程：在 web 應用程式中使用 ML.NET 模型產生器來分析網站批註的情感
+# <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>教學課程：使用 ML.NET 模型產生器來分析 web 應用程式中的網站批註情感
 
 瞭解如何在 web 應用程式內即時分析批註中的情感。
 
@@ -36,7 +36,7 @@ ms.locfileid: "72180276"
 
 您可以在[dotnet/machinelearning 範例](https://github.com/dotnet/machinelearning-samples)存放庫中找到本教學課程的原始程式碼。
 
-## <a name="pre-requisites"></a>先決條件
+## <a name="pre-requisites"></a>必要條件
 
 如需必要條件和安裝指示清單，請瀏覽[模型產生器安裝指南](../how-to-guides/install-model-builder.md)。
 
@@ -60,9 +60,9 @@ ms.locfileid: "72180276"
 
 | 情感 | SentimentText |
 | :---: | :---: |
-1 | ==沒禮貌== 哥們，把那張卡爾的相片上傳回來之類的真是太沒禮貌了。
-1 | = = OK！ == 沒問題! == 嗯，我會把狂野 WIKI 弄壞!!!
-0 | 我希望這有幫助。
+1 | = = 「強制」 = = Dude，您可以將 carl 的上傳放回，或其他。
+1 | = = OK！ = = IM 即將 VANDALIZE 萬用字元 WIKI 然後!!!
+0 | 我希望這有説明。
 
 ## <a name="choose-a-scenario"></a>選擇案例
 
@@ -75,7 +75,7 @@ ms.locfileid: "72180276"
 
 ## <a name="load-the-data"></a>載入資料
 
-模型產生器會接受來自兩個來源的資料、SQL Server 資料庫或 `csv` 或 @no__t 1 格式的本機檔案。
+模型產生器會接受來自兩個來源的資料、SQL Server 資料庫或 `csv` 或 `tsv` 格式的本機檔案。
 
 1. 在模型產生器工具的資料步驟中，從資料來源下拉式清單中選取 [檔案]。
 1. 選取 [**選取**檔案] 文字方塊旁的按鈕，然後使用 [檔案瀏覽器] 流覽並選取 [*維琪百科-detox-250-line-data.tsv* ] 檔案。
@@ -117,14 +117,14 @@ ms.locfileid: "72180276"
 
     下列專案應該會出現在**方案總管**中：
 
-    - *SentimentRazorML. consoleapp.exe*：包含模型定型和預測程式碼的 .NET Core 主控台應用程式。
-    - *SentimentRazorML。模型*：.NET Standard 類別庫，其中包含定義輸入和輸出模型資料之架構的資料模型，以及定型期間所儲存的最佳執行模型版本。
+    - *SentimentRazorML. consoleapp.exe*： .Net Core 主控台應用程式，其中包含模型訓練和預測程式碼。
+    - *SentimentRazorML*： .NET Standard 類別庫，其中包含的資料模型會定義輸入和輸出模型資料的架構，以及定型期間所儲存的最佳執行模型版本。
 
     在本教學課程中，只會使用*SentimentRazorML 模型*專案，因為會在*SentimentRazor* web 應用程式中，而不是在主控台中進行預測。 雖然*SentimentRazorML*不會用於計分，但它可以用來在稍後使用新資料重新定型模型。 不過，重新定型已超出本教學課程的範圍。
 
 ### <a name="configure-the-predictionengine-pool"></a>設定 PredictionEngine 集區
 
-若要進行單一預測，您必須建立[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全執行緒。 此外，您必須在應用程式內需要的任何地方建立它的實例。 當您的應用程式成長時，此進程可能會變得難以管理。 為了改善效能和執行緒安全性，請使用相依性插入和 `PredictionEnginePool` 服務的組合，這會建立[@no__t 4](xref:Microsoft.ML.PredictionEngine%602)物件的[@no__t 2](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) ，以便在整個應用程式中使用。
+若要進行單一預測，您必須建立[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全執行緒。 此外，您必須在應用程式內需要的任何地方建立它的實例。 當您的應用程式成長時，此進程可能會變得難以管理。 為了改善效能和執行緒安全性，請使用相依性插入和 `PredictionEnginePool` 服務的組合，這會建立[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)物件的[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) ，以便在整個應用程式中使用。
 
 1. 安裝*Microsoft.Extensions.ML* NuGet 套件：
 
@@ -150,7 +150,7 @@ ms.locfileid: "72180276"
     private readonly string _modelPath;
     ```
 
-1. 模型檔案會連同應用程式的元件檔案一起儲存在組建目錄中。 若要讓它更容易存取，請在 `Configure` 方法之後，建立一個名為 @no__t 的 helper 方法
+1. 模型檔案會連同應用程式的元件檔案一起儲存在組建目錄中。 若要讓它更容易存取，請在 `Configure` 方法之後，建立稱為 `GetAbsolutePath` 的 helper 方法
 
     ```csharp
     public static string GetAbsolutePath(string relativePath)
@@ -160,10 +160,10 @@ ms.locfileid: "72180276"
 
         string fullPath = Path.Combine(assemblyFolderPath, relativePath);
         return fullPath;
-    }    
+    }
     ```
 
-1. 使用 `Startup` 類別的函式中的 `GetAbsolutePath` 方法來設定 `_modelPath`。
+1. 使用 `Startup` 類別函式中的 `GetAbsolutePath` 方法來設定 `_modelPath`。
 
     ```csharp
     _modelPath = GetAbsolutePath("MLModel.zip");
@@ -187,26 +187,26 @@ ms.locfileid: "72180276"
     using SentimentRazorML.Model;
     ```
 
-    若要使用在 `Startup` 類別中設定的 `PredictionEnginePool`，您必須將它插入您想要使用它的模型的函式中。
+    若要使用 `Startup` 類別中所設定的 `PredictionEnginePool`，您必須將它插入您想要使用它的模型的函式中。
 
-1. 新增變數來參考 `IndexModel` 類別內的 `PredictionEnginePool`。
+1. 新增變數以參考 `IndexModel` 類別內的 `PredictionEnginePool`。
 
     ```csharp
     private readonly PredictionEnginePool<ModelInput, ModelOutput> _predictionEnginePool;
     ```
 
-1. 在 `IndexModel` 類別中建立一個函式，並將 @no__t 1 服務插入其中。
+1. 在 `IndexModel` 類別中建立一個函數，並將 `PredictionEnginePool` 服務插入其中。
 
     ```csharp
     public IndexModel(PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
     {
         _predictionEnginePool = predictionEnginePool;
-    }    
+    }
     ```
 
-1. 建立方法處理常式，使用 `PredictionEnginePool`，從網頁收到的使用者輸入進行預測。
+1. 建立方法處理常式，以使用 `PredictionEnginePool` 從網頁收到的使用者輸入進行預測。
 
-    1. 在 `OnGet` 方法底下，建立名為 `OnGetAnalyzeSentiment` 的新方法
+    1. 在 `OnGet` 方法底下，建立名為的新方法 `OnGetAnalyzeSentiment`
 
         ```csharp
         public IActionResult OnGetAnalyzeSentiment([FromQuery] string text)
@@ -215,13 +215,13 @@ ms.locfileid: "72180276"
         }
         ```
 
-    1. 在 `OnGetAnalyzeSentiment` 方法中，如果使用者輸入空白或為 null，則傳回*中性*情感。
+    1. 在 `OnGetAnalyzeSentiment` 方法中，如果使用者的輸入空白或為 null，則傳回*中性*情感。
 
         ```csharp
         if (String.IsNullOrEmpty(text)) return Content("Neutral");
         ```
 
-    1. 指定有效的輸入，請建立 `ModelInput` 的新實例。
+    1. 指定有效的輸入，建立 `ModelInput`的新實例。
 
         ```csharp
         var input = new ModelInput { SentimentText = text };
@@ -233,7 +233,7 @@ ms.locfileid: "72180276"
         var prediction = _predictionEnginePool.Predict(input);
         ```
 
-    1. 使用下列程式碼，將預測的 `bool` 值轉換為有毒或 not 有毒。
+    1. 使用下列程式碼，將預測的 `bool` 值轉換成有毒或 not 有毒。
 
         ```csharp
         var sentiment = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
@@ -247,7 +247,7 @@ ms.locfileid: "72180276"
 
 ### <a name="configure-the-web-page"></a>設定網頁
 
-@No__t-0 所傳回的結果將會動態顯示在 `Index` 網頁上。
+`OnGetAnalyzeSentiment` 所傳回的結果會動態顯示在 `Index` 網頁上。
 
 1. 開啟*Pages*目錄中的*Index. cshtml*檔案，並以下列程式碼取代其內容：
 
@@ -257,21 +257,21 @@ ms.locfileid: "72180276"
 
     [!code-css [CssStyling](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/css/site.css#L61-L105)]
 
-1. 之後，請加入程式碼，將 web 網頁的輸入傳送至 `OnGetAnalyzeSentiment` 處理常式。
+1. 之後，請加入程式碼，從網頁將輸入傳送至 `OnGetAnalyzeSentiment` 處理常式。
 
-    1. 在位於*wwwroot\js*目錄中的*網站 .js*檔案中，建立名為 `getSentiment` 的函式，以向 @no__t 3 處理常式的使用者輸入提出 GET HTTP 要求。
+    1. 在位於*wwwroot\js*目錄中的*網站 .js*檔案中，建立稱為 `getSentiment` 的函式，以向 `OnGetAnalyzeSentiment` 處理常式的使用者輸入提出 GET HTTP 要求。
 
         [!code-javascript [GetSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L5-L10)]
 
-    1. 如下所示，新增另一個名為 `updateMarker` 的函式，以在預測情感時動態更新網頁上標記的位置。
+    1. 在下面，新增另一個名為 `updateMarker` 的函式，以在預測情感時動態更新網頁上標記的位置。
 
         [!code-javascript [UpdateMarkerMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L12-L15)]
 
-    1. 建立名為 `updateSentiment` 的事件處理常式函式，以取得使用者的輸入、使用 @no__t 2 函式將它傳送至 @no__t 1 函式，並使用 `updateMarker` 函式更新標記。
+    1. 建立名為 `updateSentiment` 的事件處理常式函式，以取得使用者的輸入、使用 `getSentiment` 函式將它傳送至 `OnGetAnalyzeSentiment` 函式，並使用 `updateMarker` 函數更新標記。
 
         [!code-javascript [UpdateSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L17-L34)]
 
-    1. 最後，請註冊事件處理常式，並將它系結至具有 `id=Message` 屬性的 @no__t 0 元素。
+    1. 最後，註冊事件處理常式，並將它系結至具有 `id=Message` 屬性的 `textarea` 元素。
 
         [!code-javascript [UpdateSentimentEvtHandler](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L36)]
 

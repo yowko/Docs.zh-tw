@@ -1,20 +1,20 @@
 ---
 title: 序列
 description: 當您有大量F# 、已排序的資料集合，但不一定會使用所有元素時，瞭解如何使用序列。
-ms.date: 02/19/2019
-ms.openlocfilehash: 76aeeb8b89ed8146ee1b7f909af6bf0764fcc55d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: 34e03f1cead0a9f678f637afcb6c8397ef7572bc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424974"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971439"
 ---
 # <a name="sequences"></a>序列
 
 > [!NOTE]
 > 本文中的 API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
 
-「*序列*」是一種專案的邏輯數列，全都屬於一個型別。 當您有大量、已排序的資料集合，但不一定會使用所有的元素時，序列會特別有用。 個別序列元素只會視需要計算，因此在不使用所有元素的情況下，序列可以提供比清單更好的效能。 序列是以 `seq<'T>` 類型表示，也就是 `System.Collections.Generic.IEnumerable`的別名。 因此，任何執行 `System.IEnumerable` 的 .NET Framework 類型都可以當做序列使用。 [Seq 模組](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)可支援涉及序列的操作。
+「*序列*」是一種專案的邏輯數列，全都屬於一個型別。 當您有大量、已排序的資料集合，但不一定會使用所有的元素時，序列會特別有用。 個別序列元素只會視需要計算，因此在不使用所有元素的情況下，序列可以提供比清單更好的效能。 序列是以 `seq<'T>` 類型表示，也就是 <xref:System.Collections.Generic.IEnumerable%601>的別名。 因此，任何實 <xref:System.Collections.Generic.IEnumerable%601> 介面的 .NET 型別都可以當做序列使用。 [Seq 模組](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)可支援涉及序列的操作。
 
 ## <a name="sequence-expressions"></a>順序運算式
 
@@ -22,17 +22,17 @@ ms.locfileid: "73424974"
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-序列運算式是由產生序列F#值的運算式所組成。 它們可以使用 `yield` 關鍵字來產生會成為序列一部分的值。
-
-以下是範例。
+序列運算式是由產生序列F#值的運算式所組成。 您也可以透過程式設計方式產生值：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1503.fs)]
 
-您可以使用 `->` 運算子，而不是 `yield`，在此情況下，您可以省略 `do` 關鍵字，如下列範例所示。
+先前的範例使用 `->` 運算子，可讓您指定一個運算式，其值會成為序列的一部分。 只有在之後的程式碼的每個部分傳回值時，您才能使用 `->`。
+
+或者，您可以指定 `do` 關鍵字，以及如下所示的選擇性 `yield`：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1504.fs)]
 
-下列程式碼會在代表方格的陣列中，產生座標配對的清單，以及一個索引。
+下列程式碼會在代表方格的陣列中，產生座標配對的清單，以及一個索引。 請注意，第一個 `for` 運算式需要指定 `do`。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1505.fs)]
 
@@ -40,9 +40,34 @@ ms.locfileid: "73424974"
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1506.fs)]
 
-當您在反復專案中使用 `yield` 或 `->` 時，每個反復專案都應該產生序列的單一元素。 如果每個反復專案都會產生一系列的專案，請使用 `yield!`。 在此情況下，會串連每個反復專案上產生的元素，以產生最終的序列。
+如先前所述，此處需要 `do`，因為沒有與 `if``else` 分支。 如果您嘗試使用 `->`，您會收到錯誤訊息，指出並非所有分支都傳回值。
 
-您可以在序列運算式中結合多個運算式。 每個運算式所產生的元素會串連在一起。 如需範例，請參閱本主題的「範例」一節。
+## <a name="the-yield-keyword"></a>`yield!` 關鍵字
+
+有時候，您可能會想要將一連串的專案包含在另一個序列中。 若要在另一個序列中包含順序，您必須使用 `yield!` 關鍵字：
+
+```fsharp
+// Repeats '1 2 3 4 5' ten times
+seq {
+    for _ in 1..10 do
+        yield! seq { 1; 2; 3; 4; 5}
+}
+```
+
+另一個思考 `yield!` 的方法，就是它會壓平合併內部序列，然後將其包含在包含序列中。
+
+在運算式中使用 `yield!` 時，所有其他的單一值都必須使用 `yield` 關鍵字：
+
+```fsharp
+// Combine repeated values with their values
+seq {
+    for x in 1..10 do
+        yield x
+        yield! seq { for i in 1..x -> i}
+}
+```
+
+只有在上述範例中指定 `x` 會導致序列不產生任何值。
 
 ## <a name="examples"></a>範例
 
@@ -50,7 +75,7 @@ ms.locfileid: "73424974"
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1507.fs)]
 
-下列程式碼會使用 `yield` 來建立由三個元素的元組組成的乘法資料表，每個專案都包含兩個因素和產品。
+下列範例會建立一個由三個元素的元組組成的乘法資料表，每個專案都包含兩個因素和產品：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1508.fs)]
 
@@ -62,7 +87,7 @@ ms.locfileid: "73424974"
 
 序列支援許多與[清單](lists.md)相同的功能。 序列也支援使用索引鍵產生函式的分組和計算之類的作業。 序列也支援更多樣化的函式來解壓縮個子序列。
 
-許多資料類型（例如清單、陣列、集合和對應）都是隱含的序列，因為它們是可列舉的集合。 除了任何會執行 `System.Collections.Generic.IEnumerable<'T>`的 .NET Framework 資料類型之外，接受序列做為F#引數的函式可與任何通用資料類型搭配使用。 相較于接受清單做為引數的函式，它只能接受清單。 類型 `seq<'T>` 是 `IEnumerable<'T>`的類型縮寫。 這表示任何實作為泛型 `System.Collections.Generic.IEnumerable<'T>`的型別（其中包括中F#的陣列、清單、集合和對應，以及大部分 .NET Framework 的集合類型）都與 `seq` 型別相容，而且可以在預期序列的任何位置使用。
+許多資料類型（例如清單、陣列、集合和對應）都是隱含的序列，因為它們是可列舉的集合。 除了任何會執行 `System.Collections.Generic.IEnumerable<'T>`的 .NET 資料類型之外，接受序列做為F#引數的函式也可搭配任何一般資料類型使用。 相較于接受清單做為引數的函式，它只能接受清單。 類型 `seq<'T>` 是 `IEnumerable<'T>`的類型縮寫。 這表示任何實作為泛型 `System.Collections.Generic.IEnumerable<'T>`的型別（其中包括中F#的陣列、清單、集合和對應，以及大多數的 .net 集合型別）都與 `seq` 型別相容，而且可以在預期序列的任何地方使用。
 
 ## <a name="module-functions"></a>模組函式
 

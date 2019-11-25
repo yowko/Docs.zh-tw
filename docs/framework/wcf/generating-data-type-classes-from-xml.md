@@ -2,12 +2,12 @@
 title: 從 XML 產生資料型別類型
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: bf5596211e78842153b7406273626a7fa3c3aeea
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 977b12b5c61c196a4f033361d37785e4ed0af73a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990280"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975847"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>從 XML 產生資料型別類型
 .NET Framework 4.5 包含從 XML 產生資料類型類別的新功能。 本主題說明如何自動產生 .NET Blog RSS 饋送的資料類型。  
@@ -28,13 +28,13 @@ ms.locfileid: "70990280"
   
 3. 選取 [**編輯**]、[**貼上特殊**]、[貼上 XML]**作為類別**。  
   
-4. 名`link`為`rss`、、 、`rssChannelImage`和的類別，是使用存取RSS摘要中的專案所需的成員所建立。`rssChannelItemGuid` `rssChannel` `rssChannelItem`  
+4. 名為 `link`、`rss`、`rssChannel`、`rssChannelImage`、`rssChannelItem` 和 `rssChannelItemGuid` 的類別會使用必要的成員來建立，以存取 RSS 摘要中的元素。  
   
 ### <a name="using-the-generated-classes"></a>使用產生的類別  
   
 1. 這些類別一旦產生，就可以像其他類別一樣在程式碼中使用。 下列程式碼範例會傳回 `rssChannelImage` 類別的新執行個體。  
   
-    ```csharp  
+    ```csharp
     var channelImage = new rssChannelImage()   
     {   
         title = "MyImage",   
