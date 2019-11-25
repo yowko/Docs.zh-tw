@@ -4,12 +4,12 @@ description: 探索收集使用方式資訊以進行分析的 .NET Core SDK 遙�
 author: KathleenDollard
 ms.date: 08/27/2019
 ms.custom: seodec18
-ms.openlocfilehash: 253f69392f034e330a75ed387d9346e8a5ae2a08
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
-ms.translationtype: HT
+ms.openlocfilehash: ecb8dbed036a04726867d004dbadf6205c1fa09f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133690"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281780"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遙測
 
@@ -17,13 +17,13 @@ ms.locfileid: "70133690"
 
 根據 [Creative Commons Attribution 授權](https://creativecommons.org/licenses/by/4.0/)，所收集的資料為匿名，且將會以彙總形式發佈。 
 
-## <a name="scope"></a>範圍
+## <a name="scope"></a>`Scope`
 
-`dotnet` 有兩個功能：執行應用程式，以及執行 CLI 命令。 使用 `dotnet` 啟動應用程式時 (格式如下)，「不會收集」  遙測：
+`dotnet` 有兩個功能：執行應用程式，以及執行 CLI 命令。 使用 `dotnet` 啟動應用程式時 (格式如下)，「不會收集」遙測：
 
 - `dotnet [path-to-app].dll`
 
-使用以下任何 [.NET Core CLI 命令](index.md) 時，則「會收集」  遙測：
+使用以下任何 [.NET Core CLI 命令](index.md) 時，則「會收集」遙測：
 
 - `dotnet build`
 - `dotnet pack`
@@ -57,13 +57,13 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 | SDK 版本 | 資料 |
 |--------------|------|
-| All          | 叫用的時間戳記。 |
-| All          | 叫用的命令 (例如 "build")，從 2.1 開始已雜湊。 |
-| All          | 用來判斷地理位置的三個八位元 IP 位址。 |
-| All          | 作業系統和版本。 |
-| All          | SDK 正在執行的執行階段識別碼 (RID)。 |
-| All          | .NET Core SDK 版本。 |
-| All          | 遙測設定檔：選擇性值，只能透過明確的使用者加入使用，且只能在 Microsoft 內部使用。 |
+| 全部          | 叫用的時間戳記。 |
+| 全部          | 叫用的命令 (例如 "build")，從 2.1 開始已雜湊。 |
+| 全部          | 用來判斷地理位置的三個八位元 IP 位址。 |
+| 全部          | 作業系統和版本。 |
+| 全部          | SDK 正在執行的執行階段識別碼 (RID)。 |
+| 全部          | .NET Core SDK 版本。 |
+| 全部          | 遙測設定檔：選擇性值，只能透過明確的使用者加入使用，且只能在 Microsoft 內部使用。 |
 | >=2.0        | 命令引數和選項：會收集數個引數和選項 (不是任意字串)。 請參閱[收集的選項](#collected-options)。 2\.1.300 之後已雜湊。 |
 | >=2.0         | SDK 是否正在容器中執行。 |
 | >=2.0         | 目標 Framework (來自 `TargetFramework` 事件)，從 2.1 開始已雜湊。 |
@@ -114,7 +114,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 下列範例會顯示所收集的資料類型：
 
-```
+```console
 System.IO.IOException
 at System.ConsolePal.WindowsConsoleStream.Write(Byte[] buffer, Int32 offset, Int32 count)
 at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)

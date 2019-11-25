@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: f43cd61fbcb3c1c872961476449822c574f76cff
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: b55b2f9266477a0bb12c39840c9f2108a5c0f0c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835273"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283924"
 ---
 # <a name="net-architectural-components"></a>.NET 架構元件
 
@@ -88,7 +88,7 @@ UWP 是用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用
 
 C#語言和通用語言基礎結構（CLI）規格會透過[ECMA International®](https://www.ecma-international.org/)標準化。 這些標準的前幾個版本是由 Ecma 在2001年12月發行。
 
-標準的後續修訂已由程式設計語言技術委員會（[TC49](https://www.ecma-international.org/memento/tc49.htm)）C#內的 TC49-TG2 （）和 TC49-TG3 （CLI）工作組所開發，並由 ECMA 一般元件和 ISO/IEC JTC 1 所採用透過 ISO 快速追蹤程式。
+標準的後續修訂是由程式語言技術委員會（[TC49](https://www.ecma-international.org/memento/tc49.htm)）內C#的 TC49-TG2 （）和 TC49-TG3 （CLI）工作組所開發，並由 Ecma 一般元件所採用，並在 iso/IEC JTC 1 之後透過 iso 快速追蹤程式來使用。
 
 ### <a name="latest-standards"></a>最新標準
 
@@ -110,6 +110,6 @@ C#語言和通用語言基礎結構（CLI）規格會透過[ECMA International®
 - [.NET Standard](net-standard.md)
 - [.NET Core 指南](../core/index.md)
 - [.NET Framework 指南](../framework/index.md)
-- [C# 指南](../csharp/index.md)
+- [C# 指南](../csharp/index.yml)
 - [F# 指南](../fsharp/index.md)
 - [VB.NET 指南](../visual-basic/index.md)

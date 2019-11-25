@@ -1,19 +1,19 @@
 ---
-title: HOW TO：定義抽象屬性 - C# 程式設計手冊
+title: 如何定義抽象屬性-程式C#設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 57fd2ed3a26bf5986f9c8a1a6cae6b041811e84c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1b6dc1dfe932ffff161b0eef667bd35a75b66cf9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970891"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970996"
 ---
-# <a name="how-to-define-abstract-properties-c-programming-guide"></a>作法：定義抽象屬性 (C# 程式設計手冊)
+# <a name="how-to-define-abstract-properties-c-programming-guide"></a>如何定義抽象屬性（C#程式設計手冊）
 下例示範如何定義[抽象](../../language-reference/keywords/abstract.md)屬性。 抽象屬性宣告不提供屬性存取子實作 -- 它會宣告類別支援屬性，但保留衍生類別的存取子實作。 下例示範如何實作繼承自基底類別的抽象屬性。  
   
  這個範例包含三個檔案，每個檔案都是各自編譯，產生的組件是下次編譯參考的對象：  
@@ -35,7 +35,7 @@ ms.locfileid: "70970891"
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
-- 屬性的修飾詞是放在屬性宣告中。 例如：  
+- 屬性的修飾詞是放在屬性宣告中。 例如:  
   
     ```csharp  
     public abstract double Area  

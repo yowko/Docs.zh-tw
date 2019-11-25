@@ -1,5 +1,5 @@
 ---
-title: 作法：宣告及使用讀寫屬性 - C# 程式設計指南
+title: 如何宣告及使用讀寫屬性-程式C#設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 010c3d4c1ae976091b5382f00a982400746f6436
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 2865feb74692e7075c92a9ee2b5cd2a7735a8e62
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596924"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971019"
 ---
-# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>作法：宣告及使用讀寫屬性 (C# 程式設計指南)
-屬性會提供公用資料成員的便利性，卻沒有不受保護、控制和驗證存取物件資料所附帶的風險。 這是透過「存取子」  完成的：從基礎資料成員指派和擷取值的特殊方法。 [set](../../language-reference/keywords/set.md) 存取子可讓資料成員被指派，而 [get](../../language-reference/keywords/get.md) 存取子可擷取資料成員值。  
+# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>如何宣告及使用讀寫屬性（C#程式設計手冊）
+屬性會提供公用資料成員的便利性，卻沒有不受保護、控制和驗證存取物件資料所附帶的風險。 這是透過「存取子」完成的：從基礎資料成員指派和擷取值的特殊方法。 [set](../../language-reference/keywords/set.md) 存取子可讓資料成員被指派，而 [get](../../language-reference/keywords/get.md) 存取子可擷取資料成員值。  
   
  這個範例會示範有兩個屬性的 `Person` 類別：`Name` (字串) 和 `Age` (整數)。 這兩個屬性都提供 `get` 和 `set` 存取子，所以它們被視為讀取/寫入屬性。  
   
