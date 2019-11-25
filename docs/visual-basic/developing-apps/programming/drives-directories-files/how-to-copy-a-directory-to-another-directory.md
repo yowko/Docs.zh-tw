@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中將目錄複製到另一個目錄
+title: 如何：將目錄複製到另一個目錄
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], copying directories
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: d8f32da0f4b701d745cd5f70feb7cc461a09842f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a23079f093f53ab8e20eb71c684a594dcf7f894b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039461"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348855"
 ---
-# <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>HOW TO：在 Visual Basic 中將目錄複製到另一個目錄
+# <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>如何：在 Visual Basic 中將目錄複製到另一個目錄
 
 使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> 方法可將目錄複製到另一個目錄。 這個方法會複製目錄內容以及目錄本身。 如果目標目錄不存在，則會予以建立。 如果目標位置存在同名的目錄且 `overwrite` 設為 `False`，即合併兩個目錄的內容。 您可以在作業期間指定目錄的新名稱。
 
@@ -26,7 +26,7 @@ ms.locfileid: "71039461"
 
     [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]
 
-    這個程式碼範例也可用為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，它位於 [檔案系統 - 處理磁碟、資料夾和檔案] 中。 如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。
+    這個程式碼範例也可用為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，它位於 [檔案系統 - 處理磁碟、資料夾和檔案] 中。 如需詳細資訊，請參閱 [Code Snippets](/visualstudio/ide/code-snippets)。
 
 ## <a name="robust-programming"></a>穩固程式設計
 
@@ -62,7 +62,7 @@ ms.locfileid: "71039461"
 
 - 目的地檔案存在，但無法存取 (<xref:System.UnauthorizedAccessException>)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>
 - [如何：尋找具有特定模式的子目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)

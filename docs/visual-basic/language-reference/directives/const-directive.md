@@ -1,5 +1,5 @@
 ---
-title: '#Const 指示詞（Visual Basic）'
+title: '#Const 指示詞'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.#Const
@@ -15,15 +15,16 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 031f35df24fd52aeeafcb7b4c0208806d7fc5fc4
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 278219edb1bb5d1c0bb015611d69cbe4ae70014b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774748"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343837"
 ---
 # <a name="const-directive"></a>#Const 指示詞
-定義 Visual Basic 的條件式編譯器常數。  
+
+Defines conditional compiler constants for Visual Basic.  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,25 +33,28 @@ ms.locfileid: "72774748"
 ```  
   
 ## <a name="parts"></a>組件  
+
  `constname`  
- 必要項。 所定義之常數的名稱。  
+ 必要項。 Name of the constant being defined.  
   
  `expression`  
- 必要項。 常值、其他條件式編譯器常數，或包含 `Is` 以外之任何或所有算術或邏輯運算子的任何組合。  
+ 必要項。 Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.  
   
 ## <a name="remarks"></a>備註  
- 條件式編譯器常數一律為其出現所在檔案的私用。 您無法使用 `#Const` 指示詞來建立公用編譯器常數;您只能在使用者介面中，或使用 `/define` 編譯器選項來建立它們。  
+
+ Conditional compiler constants are always private to the file in which they appear. You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.  
   
- 您只能在 `expression` 中使用條件式編譯器常數和常值。 使用以 `Const` 定義的標準常數會造成錯誤。 相反地，您可以使用以 `#Const` 關鍵字定義的常數，僅適用于條件式編譯。 常數也可以是未定義的，在此情況下，它們的值為 `Nothing`。  
+ You can use only conditional compiler constants and literals in `expression`. Using a standard constant defined with `Const` causes an error. Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation. Constants can also be undefined, in which case they have a value of `Nothing`.  
   
 ## <a name="example"></a>範例  
+
  此範例使用 `#Const` 指示詞。  
   
  [!code-vb[VbVbalrConditionalComp#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>請參閱
 
-- [-define （Visual Basic）](../../../visual-basic/reference/command-line-compiler/define.md)
+- [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
 - [#If...Then...#Else 指示詞](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md)
 - [條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

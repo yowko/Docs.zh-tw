@@ -1,5 +1,5 @@
 ---
-title: Delegate 語句（Visual Basic）
+title: Delegate 陳述式
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Delegate
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 4a8260da4d2224551de71fd54f734007c7fa214f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 662d2c3c0767adfe406e0a6f1b1e6dccd704e795
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583449"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354079"
 ---
 # <a name="delegate-statement"></a>Delegate 陳述式
-用來宣告委派。 「委派」（delegate）是參考型別，它是指型別的 `Shared` 方法或物件的實例方法。 任何具有相符參數和傳回類型的程式都可以用來建立此委派類別的實例。 稍後可以透過委派實例叫用此程式。  
+Used to declare a delegate. A delegate is a reference type that refers to a `Shared` method of a type or to an instance method of an object. Any procedure with matching parameter and return types can be used to create an instance of this delegate class. The procedure can then later be invoked by means of the delegate instance.  
   
 ## <a name="syntax"></a>語法  
   
@@ -28,20 +28,20 @@ ms.locfileid: "72583449"
   
 |詞彙|定義|  
 |---|---|  
-|`attrlist`|選擇項。 適用于此委派的屬性清單。 以逗號分隔多個屬性。 您必須將[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)放在角括弧中（「`<`」和「`>`」）。|  
-|`accessmodifier`|選擇項。 指定哪些程式碼可以存取委派。 可以是下列其中一項：<br /><br /> - [公用](../../../visual-basic/language-reference/modifiers/public.md)。 任何可以存取宣告委派之專案的程式碼都可以存取它。<br />-   [保護](../../../visual-basic/language-reference/modifiers/protected.md)。 只有委派類別或衍生類別內的程式碼可以存取它。<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)。 只有相同元件中的程式碼可以存取委派。<br />- [私](../../../visual-basic/language-reference/modifiers/private.md)用。 只有宣告委派之元素內的程式碼才能存取它。<br /><br /> - [受保護的 Friend](../../language-reference/modifiers/protected-friend.md)僅限委派的類別、衍生類別或相同元件中的程式碼，才能存取委派。 <br />-  只在委派的類別或相同元件中的衍生類別中，[私用保護](../../language-reference/modifiers/private-protected.md)的程式碼可以存取委派。 |  
-|`Shadows`|選擇項。 表示這個委派會重新宣告並隱藏基類中名稱相同的程式設計項目，或一組多載元素。 您可以使用任何其他類型遮蔽任何一種已宣告的項目。<br /><br /> 無法從遮蔽項目的衍生類別內使用遮蔽的項目，除了從無法存取遮蔽項目的位置以外。 例如，如果 `Private` 專案遮蔽基類元素，則沒有許可權存取 `Private` 專案的程式碼會改為存取基類元素。|  
-|`Sub`|選擇性，但 `Sub` 或 `Function` 必須出現。 將此程式宣告為不會傳回值的委派 `Sub` 程式。|  
-|`Function`|選擇性，但 `Sub` 或 `Function` 必須出現。 將此程式宣告為傳回值的委派 `Function` 程式。|  
-|`name`|必要項。 委派類型的名稱;遵循標準變數命名慣例。|  
-|`typeparamlist`|選擇項。 此委派的型別參數清單。 多個類型參數會以逗號分隔。 或者，您可以使用 `In` 和 `Out` 泛型修飾詞，將每個型別參數宣告為 variant。 您必須將[類型清單](../../../visual-basic/language-reference/statements/type-list.md)括在括弧中，並使用 `Of` 關鍵字加以引進。|  
-|`parameterlist`|選擇項。 呼叫時傳遞至程式的參數清單。 您必須將[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)括在括弧中。|  
-|`type`|如果您指定 `Function` 程式，則為必要。 傳回值的資料類型。|  
+|`attrlist`|選擇項。 List of attributes that apply to this delegate. 以逗號分隔多個屬性。 You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").|  
+|`accessmodifier`|選擇項。 Specifies what code can access the delegate. 可以是下列其中一項：<br /><br /> - [Public](../../../visual-basic/language-reference/modifiers/public.md). Any code that can access the element that declares the delegate can access it.<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md). Only code within the delegate's class or a derived class can access it.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Only code within the same assembly can access the delegate.<br />- [Private](../../../visual-basic/language-reference/modifiers/private.md). Only code within the element that declares the delegate can access it.<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md) Only code within the delegate's class, a derived class, or the same assembly can access the delegate. <br />- [Private Protected](../../language-reference/modifiers/private-protected.md) Only code within the delegate's class or in a derived class in the same assembly can access the delegate. |  
+|`Shadows`|選擇項。 Indicates that this delegate redeclares and hides an identically named programming element, or set of overloaded elements, in a base class. 您可以使用任何其他類型遮蔽任何一種已宣告的項目。<br /><br /> 無法從遮蔽項目的衍生類別內使用遮蔽的項目，除了從無法存取遮蔽項目的位置以外。 For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.|  
+|`Sub`|Optional, but either `Sub` or `Function` must appear. Declares this procedure as a delegate `Sub` procedure that does not return a value.|  
+|`Function`|Optional, but either `Sub` or `Function` must appear. Declares this procedure as a delegate `Function` procedure that returns a value.|  
+|`name`|必要項。 Name of the delegate type; follows standard variable naming conventions.|  
+|`typeparamlist`|選擇項。 List of type parameters for this delegate. Multiple type parameters are separated by commas. Optionally, each type parameter can be declared variant by using `In` and `Out` generic modifiers. You must enclose the [Type List](../../../visual-basic/language-reference/statements/type-list.md) in parentheses and introduce it with the `Of` keyword.|  
+|`parameterlist`|選擇項。 List of parameters that are passed to the procedure when it is called. You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.|  
+|`type`|Required if you specify a `Function` procedure. Data type of the return value.|  
   
 ## <a name="remarks"></a>備註  
- @No__t_0 語句會定義委派類別的參數和傳回類型。 任何具有相符參數和傳回類型的程式都可以用來建立此委派類別的實例。 稍後可以藉由呼叫委派的 `Invoke` 方法，透過委派實例叫用此程式。  
+ The `Delegate` statement defines the parameter and return types of a delegate class. Any procedure with matching parameters and return types can be used to create an instance of this delegate class. The procedure can then later be invoked by means of the delegate instance, by calling the delegate's `Invoke` method.  
   
- 委派可以在命名空間、模組、類別或結構層級宣告，但不能在程式內宣告。  
+ Delegates can be declared at the namespace, module, class, or structure level, but not within a procedure.  
   
  每個委派類別會為傳遞的建構函式定義物件方法的規格。 對委派建構函式的引數必須是對方法的參考或 lambda 運算式。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72583449"
  如需委派的詳細資訊，請參閱[委派](../../../visual-basic/programming-guide/language-features/delegates/index.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用 `Delegate` 語句來宣告委派，以對兩個數字進行操作並傳回數位。 @No__t_0 方法會採用此類型的委派實例，並使用它來對數位配對進行操作。  
+ The following example uses the `Delegate` statement to declare a delegate for operating on two numbers and returning a number. The `DelegateTest` method takes an instance of a delegate of this type and uses it to operate on pairs of numbers.  
   
  [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   

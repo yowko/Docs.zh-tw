@@ -1,5 +1,5 @@
 ---
-title: Widening (Visual Basic)
+title: Widening
 ms.date: 07/20/2015
 f1_keywords:
 - vb.widening
@@ -10,30 +10,30 @@ helpviewer_keywords:
 - Widening keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
-ms.openlocfilehash: d7d43d4f5f931881d5c8b663c719fe7f92559799
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c9aa78549ca6e41c9fe54c12e0aaec8e7cc30cb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778660"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347837"
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
-表示轉換運算子 (`CType`) 將類別或結構轉換成的型別，可以保留原始的類別或結構的所有可能的值。  
+Indicates that a conversion operator (`CType`) converts a class or structure to a type that can hold all possible values of the original class or structure.  
   
-## <a name="converting-with-the-widening-keyword"></a>轉換擴展關鍵字  
- 轉換程序必須指定`Public Shared`除了`Widening`。  
+## <a name="converting-with-the-widening-keyword"></a>Converting with the Widening Keyword  
+ The conversion procedure must specify `Public Shared` in addition to `Widening`.  
   
- 擴展轉換時，一律在執行階段成功，而且永遠不會造成資料遺失。 範例包括`Single`要`Double`，`Char`到`String`，和其基底類型衍生型別。 因為衍生的型別包含基底類型的所有成員，因此是基底類型的執行個體，則會擴展這個最後一個轉換。  
+ Widening conversions always succeed at run time and never incur data loss. Examples are `Single` to `Double`, `Char` to `String`, and a derived type to its base type. This last conversion is widening because the derived type contains all the members of the base type and thus is an instance of the base type.  
   
- 使用的程式碼不需要使用`CType`的擴展轉換，即使`Option Strict`是`On`。  
+ The consuming code does not have to use `CType` for widening conversions, even if `Option Strict` is `On`.  
   
- `Widening`關鍵字可以用在此內容中：  
+ The `Widening` keyword can be used in this context:  
   
  [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- 定義擴展和縮小轉換運算子，例如看到[How to:定義轉換運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)。  
+ For example definitions of widening and narrowing conversion operators, see [How to: Define a Conversion Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)

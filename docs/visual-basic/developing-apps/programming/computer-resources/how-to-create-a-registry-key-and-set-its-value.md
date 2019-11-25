@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Visual Basic 中建立登錄機碼並設定其值
+title: 如何：建立登錄機碼並設定其值
 ms.date: 07/20/2015
 f1_keywords:
 - RegistryKey.CreateSubKey
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 84fc824ad5911621c679d70f480d9b5e83c095ad
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 459c4b3f971009ee4b6b669c55bc058db0826595
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054124"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349193"
 ---
-# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>HOW TO：在 Visual Basic 中建立登錄機碼並設定其值
+# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>如何：在 Visual Basic 中建立登錄機碼並設定其值
 
 `My.Computer.Registry` 物件的 `CreateSubKey` 方法可以用來建立登錄機碼。
 
@@ -74,7 +74,7 @@ ms.locfileid: "71054124"
 
 若要執行此程序，您的組件需要由 <xref:System.Security.Permissions.RegistryPermission> 類別授與的權限層級。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 同樣地，使用者必須有正確的 ACL，才能建立或寫入設定。 例如，具有程式碼存取安全性權限的本機應用程式，可能不具有作業系統權限。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](../../../../framework/misc/code-access-security-basics.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>

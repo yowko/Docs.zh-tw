@@ -1,5 +1,5 @@
 ---
-title: -refout （Visual Basic）
+title: -refout
 ms.date: 03/16/2018
 f1_keywords:
 - /refout
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: 552e611f222bfcc3ce12520ecdb891fd7b8b21de
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 3649a24a52cc6a448ea7cf4d850915adf02147fb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775554"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348658"
 ---
-# <a name="-refout-visual-basic"></a>-refout （Visual Basic）
+# <a name="-refout-visual-basic"></a>-refout (Visual Basic)
 
 **-refout** 選項指定參考組件應該輸出的檔案路徑。
 
@@ -29,13 +29,13 @@ ms.locfileid: "72775554"
 ## <a name="arguments"></a>引數
 
 `filepath`  
-參考元件的路徑和檔案名。 它通常應該位於主要元件的子資料夾中。 建議慣例 (由 MSBuild 使用) 是將參考組件放在相對於主要組件的 "ref/" 子資料夾中。 @No__t_0 中的所有資料夾都必須存在;編譯器不會建立它們。
+The path and filename of the reference assembly. It should generally be in a sub-folder of the primary assembly. 建議慣例 (由 MSBuild 使用) 是將參考組件放在相對於主要組件的 "ref/" 子資料夾中。 All folders in `filepath` must exist; the compiler does not create them.
 
 ## <a name="remarks"></a>備註
 
-Visual Basic 支援從15.3 版開始的 `-refout` 交換器。
+Visual Basic supports the `-refout` switch starting with version 15.3.
 
-參考元件是一種特殊類型的元件，其中只包含代表程式庫公用 API 介面所需的最小中繼資料量。 其中包括在建立工具中參考元件時，所有重要成員的宣告，但會排除所有成員的執行，以及對其 API 合約沒有明顯影響的私用成員宣告。 如需詳細資訊，請參閱 .NET 中的[參考元件](../../../standard/assembly/reference-assemblies.md)指南。
+Reference assemblies are a special type of assembly that contain only the minimum amount of metadata required to represent the library's public API surface. They include declarations for all members that are significant when referencing an assembly in build tools, but exclude all member implementations and declarations of private members that have no observable impact on their API contract. For more information, see [Reference assemblies](../../../standard/assembly/reference-assemblies.md) in .NET Guide.
 
 `-refout` 和 [`-refonly`](refonly-compiler-option.md) 選項互斥。
 

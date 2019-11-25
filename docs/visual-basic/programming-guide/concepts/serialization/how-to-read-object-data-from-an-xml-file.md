@@ -1,15 +1,15 @@
 ---
-title: HOW TO：讀取物件資料，從 XML 檔案 (Visual Basic)
+title: 如何：從 XML 檔案讀取物件資料
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: b1e9033d7aba8b4f423f29cd4fb4f7efbbe17a29
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c997af4729a24a6b5bd5b22d0153860cff3282d7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624380"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346428"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>HOW TO：讀取物件資料，從 XML 檔案 (Visual Basic)
+# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>How to: Read Object Data from an XML File (Visual Basic)
 此範例會讀取先前使用 <xref:System.Xml.Serialization.XmlSerializer> 類別來寫入 XML 檔案的物件資料。  
   
 ## <a name="example"></a>範例  
@@ -30,7 +30,7 @@ End Sub
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 以內含序列化資料之檔案的名稱取代檔案名稱 "c:\temp\SerializationOverview.xml"。 如需將資料序列化的詳細資訊，請參閱[如何：將物件資料寫入至 XML 檔案 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)。  
+ 以內含序列化資料之檔案的名稱取代檔案名稱 "c:\temp\SerializationOverview.xml"。 For more information about serializing data, see [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
   
  此類別必須有不具參數的公用建構函式。  
   
@@ -48,9 +48,9 @@ End Sub
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  永遠會驗證輸入，而且絕不會還原序列化來自未受信任來源的資料。 重新建立的物件會以還原序列化該物件之程式碼的權限，在本機電腦上執行。 在應用程式中使用這些資料之前，請先驗證所有輸入值。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO.StreamWriter>
-- [如何：將物件資料寫入至 XML 檔案 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+- [如何：將物件資料寫入 XML 檔案 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
 - [序列化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [Visual Basic 程式設計手冊](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic 程式設計指南](../../../../visual-basic/programming-guide/index.md)

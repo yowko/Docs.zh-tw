@@ -1,15 +1,15 @@
 ---
-title: AttributeUsage （Visual Basic）
+title: AttributeUsage
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: dbfbfaa6124eacfd9e4043eab9e4769103e554ca
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 7e54e82c1e9edfd0d9d393a014f9d91f82970363
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524312"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353535"
 ---
-# <a name="attributeusage-visual-basic"></a>AttributeUsage （Visual Basic）
+# <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 
 決定如何使用自訂屬性類別。 `AttributeUsage` 是一個屬性，可套用至自訂屬性定義來控制如何套用新屬性。 明確套用時，預設設定看起來會像這樣︰
 
@@ -36,10 +36,6 @@ End Class
 第一個 `AttributeUsage` 引數必須是 <xref:System.AttributeTargets> 列舉的一或多個元素。 您可以使用 OR 運算子來連結多個目標類型，與下面類似：
 
 ```vb
-Imports System
-```
-
-```vb
 <AttributeUsage(AttributeTargets.Property Or AttributeTargets.Field)>
 Class NewPropertyOrFieldAttribute
     Inherits Attribute
@@ -47,10 +43,6 @@ End Class
 ```
 
 如果 `AllowMultiple` 引數設為 `true`，則可以將產生的屬性多次套用至單一實體，與下面類似：
-
-```vb
-Imports System
-```
 
 ```vb
 <AttributeUsage(AttributeTargets.Class, AllowMultiple:=True)>
@@ -66,10 +58,6 @@ End Class
 在此情況下，因為 `AllowMultiple` 設為 `true`，所以可以重複套用 `MultiUseAttr`。 套用多個屬性所顯示的兩種格式都有效。
 
 如果 `Inherited` 設為 `false`，則衍生自已屬性化類別的類別不會繼承屬性。 例如:
-
-```vb
-Imports System
-```
 
 ```vb
 <AttributeUsage(AttributeTargets.Class, Inherited:=False)>
@@ -98,10 +86,6 @@ End Class
 ## <a name="example"></a>範例
 
 下列範例示範 `AttributeUsage` 屬性的 `Inherited` 和 `AllowMultiple` 引數的效果，以及如何列舉套用至類別的自訂屬性。
-
-```vb
-Imports System
-```
 
 ```vb
 ' Create some custom attributes:

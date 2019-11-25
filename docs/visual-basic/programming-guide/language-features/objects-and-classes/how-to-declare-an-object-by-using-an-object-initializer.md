@@ -1,5 +1,5 @@
 ---
-title: 作法：宣告物件使用物件初始設定式 (Visual Basic)
+title: 如何：使用物件初始設定式宣告物件
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring objects using object initializer
@@ -7,59 +7,59 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 850e20fe8b5b6bfd392c80c87950a81a1a8a5c24
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae04d338b61027c3917ad3a7f62ff40f0a95e53e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755206"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347129"
 ---
-# <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>HOW TO：宣告物件使用物件初始設定式 (Visual Basic)
-物件初始設定式可讓您宣告並具現化類別，以單一陳述式的執行個體。 此外，您可以在此同時，初始化執行個體的一或多個成員，而不叫用的參數化建構函式。  
+# <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>如何：使用物件初始設定式宣告物件 (Visual Basic)
+Object initializers enable you to declare and instantiate an instance of a class in a single statement. In addition, you can initialize one or more members of the instance at the same time, without invoking a parameterized constructor.  
   
- 當您使用物件初始設定式來建立具名型別的執行個體時，會呼叫類別的無參數建構函式，後面接著初始化指定的成員，您所指定的順序。  
+ When you use an object initializer to create an instance of a named type, the parameterless constructor for the class is called, followed by initialization of designated members in the order you specify.  
   
- 下列程序示範如何建立的執行個體`Student`方式有三種類別。 此類別具有名字、 姓氏和年級屬性等等。 三個宣告的每個建立的新執行個體`Student`，具有屬性`First`設定為"Michael，"屬性`Last`設定為"Tucker"，而所有其他成員設定為其預設值。 在程序中的每個宣告的結果就相當於下列範例中，不會使用物件初始設定式項目。  
+ The following procedure shows how to create an instance of a `Student` class in three different ways. The class has first name, last name, and class year properties, among others. Each of the three declarations creates a new instance of `Student`, with property `First` set to "Michael", property `Last` set to "Tucker", and all other members set to their default values. The result of each declaration in the procedure is equivalent to the following example, which does not use an object initializer.  
   
  [!code-vb[VbVbalrObjectInit#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#20)]  
   
- 如需實作的`Student`類別，請參閱[How to:建立項目清單](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)。 您可以複製設定的類別，並建立一份該主題中的程式碼`Student`可用的物件。  
+ For an implementation of the `Student` class, see [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). You can copy the code from that topic to set up the class and create a list of `Student` objects to work with.  
   
-### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>若要使用物件初始設定式建立具名類別的物件  
+### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>To create an object of a named class by using an object initializer  
   
-1. 如果您打算使用建構函式，請開始宣告。  
+1. Begin the declaration as if you planned to use a constructor.  
   
      `Dim student1 As New Student`  
   
-2. 輸入關鍵字`With`，後面接著括號括住的初始化清單。  
+2. Type the keyword `With`, followed by an initialization list in braces.  
   
      `Dim student1 As New Student With { <initialization list> }`  
   
-3. 在初始設定清單中，包含每個您想要初始化，並將初始值指派給它的屬性。 屬性的名稱前面有一個句號。  
+3. In the initialization list, include each property that you want to initialize and assign an initial value to it. The name of the property is preceded by a period.  
   
      [!code-vb[VbVbalrObjectInit#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#21)]  
   
-     您可以初始化類別的一或多個成員。  
+     You can initialize one or more members of the class.  
   
-4. 或者，您可以宣告類別的新執行個體，並再將值指派給它。 首先，宣告的執行個體`Student`:  
+4. Alternatively, you can declare a new instance of the class and then assign a value to it. First, declare an instance of `Student`:  
   
      `Dim student2 As Student`  
   
-5. 開始建立的執行個體`Student`以一般方式。  
+5. Begin the creation of an instance of `Student` in the normal way.  
   
      `Dim student2 As Student = New Student`  
   
-6. 型別`With`，然後物件初始設定式來初始化新執行個體的一或多個成員。  
+6. Type `With` and then an object initializer to initialize one or more members of the new instance.  
   
      [!code-vb[VbVbalrObjectInit#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#22)]  
   
-7. 您可以簡化在上一個步驟中的定義，藉由略過`As Student`。 如果您這麼做時，編譯器會判斷所`student3`的執行個體`Student`使用區域型別推斷。  
+7. You can simplify the definition in the previous step by omitting `As Student`. If you do this, the compiler determines that `student3` is an instance of `Student` by using local type inference.  
   
      [!code-vb[VbVbalrObjectInit#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#23)]  
   
-     如需詳細資訊，請參閱 <<c0> [ 區域型別推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
+     For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [如何：建立項目清單](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)

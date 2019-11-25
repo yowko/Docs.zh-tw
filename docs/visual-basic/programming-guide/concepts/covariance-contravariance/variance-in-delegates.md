@@ -1,17 +1,17 @@
 ---
-title: 委派中的變異數 (Visual Basic)
+title: 委派中的變異數
 ms.date: 07/20/2015
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-ms.openlocfilehash: 0c52fd3fb36162de16a91a85088018f4f579611c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 11146bc4a60f55fc0373f0b5dfa5d44dcf748a5b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664347"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349006"
 ---
-# <a name="variance-in-delegates-visual-basic"></a>委派中的變異數 (Visual Basic)
+# <a name="variance-in-delegates-visual-basic"></a>Variance in Delegates (Visual Basic)
 
-.NET Framework 3.5 引進了變異數支援, 以便在和 Visual Basic 中C#的所有委派中, 將方法簽章與委派類型相符。 這表示您可以指派給委派的不只是具有相符簽章的方法，也可以是會傳回更多衍生型別 (共變數) 的方法，或接受衍生型別 (反變數) 比委派型別指定少的參數的方法。 這包括泛型和非泛型委派。
+.NET Framework 3.5 introduced variance support for matching method signatures with delegate types in all delegates in C# and Visual Basic. 這表示您可以指派給委派的不只是具有相符簽章的方法，也可以是會傳回更多衍生型別 (共變數) 的方法，或接受衍生型別 (反變數) 比委派型別指定少的參數的方法。 這包括泛型和非泛型委派。
 
 例如，請考慮下列程式碼，有兩個類別和兩個委派︰泛型和非泛型。
 
@@ -76,11 +76,11 @@ Dim dGeneric As SampleGenericDelegate(Of Second, First) = AddressOf ASecondRFirs
 Dim dGenericConversion As SampleGenericDelegate(Of Second, First) = AddressOf AFirstRSecond
 ```
 
-如需更多範例, 請參閱[在委派中使用變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)和[針對 Func 和 Action 泛型委派使用變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。
+For more examples, see [Using Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
 
 ## <a name="variance-in-generic-type-parameters"></a>泛型型別參數中的差異
 
-在 .NET Framework 4 和更新版本中, 您可以啟用委派之間的隱含轉換, 讓具有泛型型別參數所指定之不同類型的泛型委派可以指派給彼此, 如果類型是由所需的彼此繼承變化.
+In .NET Framework 4 and later you can enable implicit conversion between delegates, so that generic delegates that have different types specified by generic type parameters can be assigned to each other, if the types are inherited from each other as required by variance.
 
 若要啟用隱含轉換，您必須使用 `in` 或 `out` 關鍵字，明確宣告委派中的泛型參數為 Covariant 或 Contravariant。
 
@@ -99,7 +99,7 @@ End Sub
 
 如果您使用唯一的差異支援來比對方法簽章與委派型別，請不要使用 `in` 和 `out` 關鍵字，因為您會發現，有時候您會使用相同的 lambda 運算式或方法具現化委派，但無法將一個委派指派給另一個。
 
-在下列程式碼範例中`SampleGenericDelegate(Of String)` , 不能明確地`SampleGenericDelegate(Of Object)`轉換為`String` , `Object`不過會繼承。 您可以使用 `out` 關鍵字標記泛型參數 `T`，修正這個問題。
+In the following code example, `SampleGenericDelegate(Of String)` can't be explicitly converted to `SampleGenericDelegate(Of Object)`, although `String` inherits `Object`. 您可以使用 `out` 關鍵字標記泛型參數 `T`，修正這個問題。
 
 ```vb
 Public Delegate Function SampleGenericDelegate(Of T)() As T
@@ -133,7 +133,7 @@ End Sub
 
 - <xref:System.Converter%602> 委派
 
-如需詳細資訊和範例, 請參閱針對[Func 和 Action 泛型委派使用變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。
+For more information and examples, see [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
 
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>宣告泛型委派中的 Variant 型別參數
 
@@ -152,7 +152,7 @@ Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 ```
 
 > [!IMPORTANT]
-> `ByRef`Visual Basic 中的參數不能標記為 variant。
+> `ByRef` parameters in Visual Basic can't be marked as variant.
 
 您也可以支援相同委派中不同型別參數的差異和共變數。 這在下列範例中顯示。
 
@@ -171,7 +171,7 @@ dvariant("test")
 
 ### <a name="combining-variant-generic-delegates"></a>結合 Variant 泛型委派
 
-您不應該組合 Variant 委派。 <xref:System.Delegate.Combine%2A> 方法不支援 Variant 委派轉換，且委派的類型必須完全一致。 當<xref:System.Delegate.Combine%2A>您使用方法 (在和 Visual Basic 中C# ), `+`或使用運算子 (在中C#) 結合委派時, 這可能會導致執行時間例外狀況, 如下列程式碼範例所示。
+您不應該組合 Variant 委派。 <xref:System.Delegate.Combine%2A> 方法不支援 Variant 委派轉換，且委派的類型必須完全一致。 This can lead to a run-time exception when you combine delegates either by using the <xref:System.Delegate.Combine%2A> method (in C# and Visual Basic) or by using the `+` operator (in C#), as shown in the following code example.
 
 ```vb
 Dim actObj As Action(Of Object) = Sub(x) Console.WriteLine("object: {0}", x)
@@ -183,7 +183,7 @@ Dim actStr As Action(Of String) = Sub(x) Console.WriteLine("string: {0}", x)
 
 ## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>實值型別和參考型別的泛型型別參數中的差異
 
-僅參考型別支援泛型型別參數的差異。 例如, `DVariant(Of Int)`無法以隱含方式轉換成`DVariant(Of Object)`或`DVariant(Of Long)`, 因為 integer 是實值型別。
+僅參考型別支援泛型型別參數的差異。 For example, `DVariant(Of Int)`can't be implicitly converted to `DVariant(Of Object)` or `DVariant(Of Long)`, because integer is a value type.
 
 下例示範實值型別不支援的泛型型別參數的差異。
 
@@ -207,11 +207,11 @@ Sub Test()
 End Sub
 ```
 
-## <a name="relaxed-delegate-conversion-in-visual-basic"></a>Visual Basic 中的寬鬆委派轉換
+## <a name="relaxed-delegate-conversion-in-visual-basic"></a>Relaxed Delegate Conversion in Visual Basic
 
-寬鬆委派轉換可讓您更有彈性地比對方法簽章與委派類型。 例如, 當您將方法指派給委派時, 它可讓您省略參數規格並省略函數傳回值。 如需詳細資訊, 請參閱[寬鬆委派轉換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。
+Relaxed delegate conversion enables more flexibility in matching method signatures with delegate types. For example, it lets you omit parameter specifications and omit function return values when you assign a method to a delegate. For more information, see [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [泛型](../../../../standard/generics/index.md)
 - [針對 Func 與 Action 泛型委派使用變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

@@ -1,5 +1,5 @@
 ---
-title: 錯誤訊息 (Visual Basic)
+title: 錯誤訊息
 ms.date: 07/20/2015
 helpviewer_keywords:
 - errors [Visual Basic]
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - trappable errors
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-ms.openlocfilehash: 822c0f266e7dd68f063043d98a9f4af308ae93fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15d12802c92e7b9ed99c83885bd38e381c8b687d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013812"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353705"
 ---
 # <a name="error-messages-visual-basic"></a>錯誤訊息 (Visual Basic)
 當您撰寫、編譯或執行 Visual Basic 應用程式時，可能發生下列類型的錯誤：  
@@ -26,7 +26,7 @@ ms.locfileid: "62013812"
  如需有關如何針對特定錯誤進行疑難排解的詳細資訊，請參閱[Visual Basic 程式設計人員的其他資源](../../../visual-basic/getting-started/additional-resources.md)。  
   
 ## <a name="run-time-errors"></a>執行階段錯誤  
- 如果是 Visual Basic 應用程式嘗試執行系統無法執行的動作時，就會發生執行階段錯誤，和 Visual Basic 會擲回`Exception`物件。 Visual Basic 可以產生自訂錯誤的任何資料類型，包括`Exception`物件，使用`Throw`陳述式。 應用程式可以透過顯示已攔截例外狀況的錯誤碼和訊息來識別錯誤。 如果未攔截到錯誤，應用程式便會結束。  
+ If a Visual Basic application tries to perform an action that the system can't execute, a run-time error occurs, and Visual Basic throws an `Exception` object. Visual Basic can generate custom errors of any data type, including `Exception` objects, by using the `Throw` statement. 應用程式可以透過顯示已攔截例外狀況的錯誤碼和訊息來識別錯誤。 如果未攔截到錯誤，應用程式便會結束。  
   
  程式碼可以攔截並檢查執行階段錯誤。 如果您將產生錯誤的程式碼包含在 `Try` 區塊中，您可以攔截相對應 `Catch` 區塊內的所有擲回錯誤。 如需有關如何在程式碼中於執行階段攔截錯誤並加以回應的詳細資訊，請參閱 [Try...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
   

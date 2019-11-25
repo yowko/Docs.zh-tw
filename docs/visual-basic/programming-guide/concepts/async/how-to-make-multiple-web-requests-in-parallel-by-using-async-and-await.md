@@ -1,17 +1,17 @@
 ---
-title: 如何：使用 Async 和 Await，同時發出多個 Web 要求（Visual Basic）
+title: 如何：使用 Async 和 Await，同時發出多個 Web 要求
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 9241a54b4b0d1a8871ef496d44e1e6db5581af7b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 616efca79312883f17ba837d17a5ee9c97d15b34
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583158"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346141"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>如何：使用 Async 和 Await，同時發出多個 Web 要求（Visual Basic）
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)
 
-在非同步方法中，工作會在建立後啟動。 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)運算子會套用至方法中的工作點，在此情況下無法繼續處理，直到工作完成為止。 通常，工作會在建立後等候完成，如下列範例所示。
+在非同步方法中，工作會在建立後啟動。 The [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operator is applied to the task at the point in the method where processing can’t continue until the task finishes. 通常，工作會在建立後等候完成，如下列範例所示。
 
 ```vb
 Dim result = Await someWebAccessMethodAsync(url)
@@ -39,25 +39,25 @@ Dim result = Await myTask
 > [!NOTE]
 > 若要完成此專案，您必須在電腦上安裝 Visual Studio 2012 或更高版本以及 .NET Framework 4.5 或更高版本。
 
-如需同時啟動多個工作的另一個範例，請參閱[如何：使用 System.threading.tasks.task.whenall 擴充非同步逐步解說（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。
+For another example that starts multiple tasks at the same time, see [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 
 您可以從[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)下載此範例的程式碼。
 
 ### <a name="to-set-up-the-project"></a>若要設定專案
 
-1. 若要設定 WPF 應用程式，請完成下列步驟。 您可以在[逐步解說：使用 Async 和 Await 存取 Web （Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)中找到這些步驟的詳細指示。
+1. 若要設定 WPF 應用程式，請完成下列步驟。 You can find detailed instructions for these steps in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).
 
     - 建立 WPF 應用程式，其中包含一個文字方塊和一個按鈕。 將按鈕命名為 `startButton`，並將文字方塊命名為 `resultsTextBox`。
 
     - 加入 <xref:System.Net.Http> 的參考。
 
-    - 在 Mainwindow.xaml 中，加入 `System.Net.Http` 的 `Imports` 語句。
+    - In the MainWindow.xaml.vb file, add an `Imports` statement for `System.Net.Http`.
 
 ### <a name="to-add-the-code"></a>新增程式碼
 
-1. 在設計視窗 Mainwindow.xaml 中，按兩下按鈕以在 Mainwindow.xaml 中建立 `startButton_Click` 事件處理常式。
+1. In the design window, MainWindow.xaml, double-click the button to create the `startButton_Click` event handler in MainWindow.xaml.vb.
 
-2. 複製下列程式碼，並將它貼入 Mainwindow.xaml 中的 `startButton_Click` 主體。
+2. Copy the following code, and paste it into the body of `startButton_Click` in MainWindow.xaml.vb.
 
     ```vb
     resultsTextBox.Clear()
@@ -73,7 +73,7 @@ Dim result = Await myTask
 
     - `DisplayResults` 會顯示每個 URL 的位元組陣列中的位元組數目。 當每個工作完成下載時，即會顯示此畫面。
 
-     複製下列方法，並將它們貼入 Mainwindow.xaml 中的 `startButton_Click` 事件處理常式之後。
+     Copy the following methods, and paste them after the `startButton_Click` event handler in MainWindow.xaml.vb.
 
     ```vb
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)

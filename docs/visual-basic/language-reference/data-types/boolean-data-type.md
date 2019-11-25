@@ -1,5 +1,5 @@
 ---
-title: Boolean 資料類型 (Visual Basic)
+title: Boolean 資料類型
 ms.date: 07/20/2015
 f1_keywords:
 - vb.FALSE
@@ -12,38 +12,42 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: b1e4add39cee6c733a6f4b95aa1668975f2f2d6d
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 5d05514207c5d07e81aab897f40f728570f6bd87
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268262"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347852"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean 資料類型 (Visual Basic)
-可以只保留值`True`或`False`。 關鍵字`True`並`False`對應至兩個狀態的`Boolean`變數。  
+
+Holds values that can be only `True` or `False`. The keywords `True` and `False` correspond to the two states of `Boolean` variables.  
   
 ## <a name="remarks"></a>備註  
- 使用[布林資料類型 (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md)是/否或是開/關包含兩個狀態的值，例如 true/false。  
+
+ Use the [Boolean Data Type (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) to contain two-state values such as true/false, yes/no, or on/off.  
   
  `Boolean` 的預設值為 `False`。  
   
- `Boolean` 值不會儲存為 數字，並儲存的值並非為等同於數字。 您不需撰寫程式碼，以針對對等數值`True`和`False`。 可能的話，您應該限制的使用方式`Boolean`它們設計的邏輯值的變數。  
+ `Boolean` values are not stored as numbers, and the stored values are not intended to be equivalent to numbers. You should never write code that relies on equivalent numeric values for `True` and `False`. Whenever possible, you should restrict usage of `Boolean` variables to the logical values for which they are designed.  
   
 ## <a name="type-conversions"></a>類型轉換  
- 當 Visual Basic 數值資料型別將值轉換成`Boolean`，0 會變成`False`和所有其他值會變成`True`。 當 Visual Basic 會將轉換`Boolean`為數字類型，值`False`會變成 0 和`True`變成-1。  
+
+ When Visual Basic converts numeric data type values to `Boolean`, 0 becomes `False` and all other values become `True`. When Visual Basic converts `Boolean` values to numeric types, `False` becomes 0 and `True` becomes -1.  
   
- 當您將轉換之間`Boolean`值和數值資料類型，請記住，.NET Framework 轉換方法不一定會產生與 Visual Basic 轉換關鍵字相同的結果。 這是因為 Visual Basic 轉換會保留與舊版相容的行為。 如需詳細資訊，請參閱"布林類型不會無法轉換以數值類型正確 」 中[疑難排解資料型別](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。  
+ When you convert between `Boolean` values and numeric data types, keep in mind that the .NET Framework conversion methods do not always produce the same results as the Visual Basic conversion keywords. This is because the Visual Basic conversion retains behavior compatible with previous versions. For more information, see "Boolean Type Does Not Convert to Numeric Type Accurately" in [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="programming-tips"></a>程式設計提示  
   
-- **負數的數字。** `Boolean` 不是數值類型，因此無法表示為負數值。 在任何情況下，您不應該使用`Boolean`來保存數字值。  
+- **Negative Numbers.** `Boolean` is not a numeric type and cannot represent a negative value. In any case, you should not use `Boolean` to hold numeric values.  
   
-- **類型字元。** `Boolean` 沒有任何常值類型字元或識別項類型字元。  
+- **Type Characters.** `Boolean` has no literal type character or identifier type character.  
   
-- **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.Boolean?displayProperty=nameWithType> 結構。  
+- **Framework Type.** 在 .NET Framework 中對應的類型為 <xref:System.Boolean?displayProperty=nameWithType> 結構。  
   
 ## <a name="example"></a>範例  
- 在下列範例中，`runningVB`是`Boolean`儲存是/否設定簡單的變數。  
+
+ In the following example, `runningVB` is a `Boolean` variable, which stores a simple yes/no setting.  
   
 ```vb  
 Dim runningVB As Boolean  
@@ -53,7 +57,7 @@ If scriptEngine = "VB" Then
 End If  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Boolean?displayProperty=nameWithType>
 - [資料類型](../../../visual-basic/language-reference/data-types/index.md)

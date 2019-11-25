@@ -1,24 +1,25 @@
 ---
-title: 疑難排解：記錄檔接聽程式 (Visual Basic)
+title: 疑難排解：記錄檔接聽程式
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs, troubleshooting
 - troubleshooting Visual Basic, event logs
 - troubleshooting event logs
 ms.assetid: ac6eb760-3d5d-461e-aedd-40599ee22e49
-ms.openlocfilehash: 12282df50bc42d2a153a9aa8db01f2654acd91ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: dd139935dae7fe4d1334b861e6590df29bab7202
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299523"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346861"
 ---
 # <a name="troubleshooting-log-listeners-visual-basic"></a>疑難排解：記錄檔接聽程式 (Visual Basic)
+
 您可以使用 `My.Application.Log` 和 `My.Log` 物件來記錄應用程式中發生之事件的相關資訊。  
   
  若要判斷哪些記錄檔接聽程式接收這些訊息，請參閱[逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。  
   
- `Log` 物件可以使用記錄檔篩選來限制記錄的資訊數量。 如果篩選條件設定錯誤，記錄檔可能包含錯誤的資訊。 如需篩選的詳細資訊，請參閱[逐步解說：篩選 My.Application.Log 輸出](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。  
+ `Log` 物件可以使用記錄檔篩選來限制記錄的資訊數量。 如果篩選條件設定錯誤，記錄檔可能包含錯誤的資訊。 如需詳細資訊，請參閱[逐步解說：篩選 My.Application.Log 輸出](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。  
   
  不過，如果記錄檔設定不正確，您可能需要目前組態的詳細資訊。 您可以透過記錄檔的進階 `TraceSource` 屬性來取得這項資訊。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "59299523"
   
      如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)

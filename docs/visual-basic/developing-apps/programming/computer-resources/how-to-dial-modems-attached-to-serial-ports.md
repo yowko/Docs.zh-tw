@@ -1,19 +1,20 @@
 ---
-title: HOW TO：在 Visual Basic 中撥接與序列埠連接的數據機
+title: 如何：撥接與序列埠連接的數據機
 ms.date: 07/20/2015
 helpviewer_keywords:
 - modems [Visual Basic], dialing
 - serial ports [Visual Basic], dialing
 - My.Computer.Ports object
 ms.assetid: 3834db40-f431-45f1-b671-dc91787164b6
-ms.openlocfilehash: db482af7750012d8805d4f834063a2c82224cf67
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: febec0a8579d34f8ff59066da5b5aa59c1cce6b2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337028"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345631"
 ---
-# <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>HOW TO：在 Visual Basic 中撥接與序列埠連接的數據機
+# <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>如何：在 Visual Basic 中撥接與序列埠連接的數據機
+
 本主題描述如何在 Visual Basic 中使用 `My.Computer.Ports` 撥接數據機。  
   
  一般而言，數據機會連接至電腦上的其中一個序列埠。 您的應用程式必須將命令傳送至適當的序列埠，才能與數據機通訊。  
@@ -37,21 +38,24 @@ ms.locfileid: "59337028"
      [!code-vb[VbVbalrMyComputer#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#30)]  
   
 ## <a name="example"></a>範例  
+
  [!code-vb[VbVbalrMyComputer#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#27)]  
   
- 這個程式碼範例也可用為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，該程式碼片段會位於 [連接和網路] 中。 如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。  
+ 這個程式碼範例也可用為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，該程式碼片段會位於 [連接和網路] 中。 如需詳細資訊，請參閱 [Code Snippets](/visualstudio/ide/code-snippets)。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
+
  此範例需要 <xref:System?displayProperty=nameWithType> 命名空間的參考。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
+
  此範例假設數據機已連接至 COM1。 建議您的程式碼允許使用者從可用序列埠清單中選取想要的序列埠。 如需詳細資訊，請參閱[如何：顯示可用的序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)。  
   
  此範例使用 `Using` 區塊以確保應用程式即使擲回例外狀況，也可關閉序列埠。 如需詳細資訊，請參閱 [Using 陳述式](../../../../visual-basic/language-reference/statements/using-statement.md)。  
   
  在此範例中，應用程式會在撥接數據機之後中斷與序列埠的連接。 實際上，您會想要將資料傳輸至數據機，或從中傳輸出。 如需詳細資訊，請參閱[如何：接收來自序列埠的字串](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>

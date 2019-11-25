@@ -1,17 +1,17 @@
 ---
-title: 存取應用程式 Web 服務 (Visual Basic)
+title: 存取應用程式 Web 服務
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Web services [Visual Basic], My.WebServices object
 - My.WebServices object
 - applications [Visual Basic], Web services
 ms.assetid: 8ad5405b-e771-42b1-82d3-ce97af2cea9e
-ms.openlocfilehash: faefb49e252445216bdce2e5606b1eb3fbcd430d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ad616bd46f92261ec5ad6ae81d0db48138631ed1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582001"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349231"
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>存取應用程式 Web 服務 (Visual Basic)
 

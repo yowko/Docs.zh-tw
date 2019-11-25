@@ -1,19 +1,19 @@
 ---
-title: 逐步解說：使用 Async 和 Await 存取 Web (Visual Basic)
+title: 逐步解說：使用 Async 和 Await 存取 Web
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: feaa1e298cda852492e020a5fa81845fb887f102
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: c13e592eb155d14c2e7cb2388a96925a7f1fa413
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197022"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349100"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>逐步解說：使用 Async 和 Await 存取 Web (Visual Basic)
 
 您可以使用 async/await 功能，以更容易且直觀的方式撰寫非同步程式。 您可以撰寫非同步程式碼，使其看起來像是同步程式碼，讓編譯器處理困難的回呼函式和非同步程式碼通常需要的接續。
 
-如需非同步功能的詳細資訊，請參閱[使用 async 和 Await 進行非同步程式設計（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/index.md)。
+For more information about the Async feature, see [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).
 
 本逐步解說從同步化 Windows Presentation Foundation (WPF) 應用程式開始，該應用程式會加總網站清單中的位元組數目。 然後逐步解說會藉由使用新功能，將應用程式轉換為非同步解決方案。
 
@@ -23,23 +23,23 @@ ms.locfileid: "73197022"
 
 > [!div class="checklist"]
 >
-> - [建立 WPF 應用程式](#create-a-wpf-application)
-> - [設計簡單的 WPF Mainwindow.xaml](#design-a-simple-wpf-mainwindow)
-> - [新增參考](#add-a-reference)
-> - [新增必要的 Imports 語句](#add-necessary-imports-statements)
-> - [建立同步應用程式](#create-a-synchronous-application)
-> - [測試同步解決方案](#test-the-synchronous-solution)
-> - [將 Geturlcontents 轉換轉換為非同步方法](#convert-geturlcontents-to-an-asynchronous-method)
-> - [將 Sumpagesizes 轉換轉換為非同步方法](#convert-sumpagesizes-to-an-asynchronous-method)
-> - [將 startButton_Click 轉換為非同步方法](#convert-startbutton_click-to-an-asynchronous-method)
-> - [測試非同步方案](#test-the-asynchronous-solution)
-> - [將 Geturlcontentsasync 為方法取代為 .NET Framework 方法](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
+> - [Create a WPF application](#create-a-wpf-application)
+> - [Design a simple WPF MainWindow](#design-a-simple-wpf-mainwindow)
+> - [Add a reference](#add-a-reference)
+> - [Add necessary Imports statements](#add-necessary-imports-statements)
+> - [Create a synchronous application](#create-a-synchronous-application)
+> - [Test the synchronous solution](#test-the-synchronous-solution)
+> - [Convert GetURLContents to an asynchronous method](#convert-geturlcontents-to-an-asynchronous-method)
+> - [Convert SumPageSizes to an asynchronous method](#convert-sumpagesizes-to-an-asynchronous-method)
+> - [Convert startButton_Click to an asynchronous method](#convert-startbutton_click-to-an-asynchronous-method)
+> - [Test the asynchronous solution](#test-the-asynchronous-solution)
+> - [Replace the GetURLContentsAsync method with a .NET Framework method](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
 
-如需完整的非同步範例，請參閱[範例](#example)一節。
+See the [Example](#example) section for the complete asynchronous example.
 
 ## <a name="prerequisites"></a>Prerequisites
 
-您的電腦上必須安裝 Visual Studio 2012 或更新版本。 如需詳細資訊，請參閱 Visual Studio[下載](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)頁面。
+您的電腦上必須安裝 Visual Studio 2012 或更新版本。 For more information, see the Visual Studio [Downloads](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) page.
 
 ## <a name="create-a-wpf-application"></a>建立 WPF 應用程式
 
@@ -49,7 +49,7 @@ ms.locfileid: "73197022"
 
     [ **新增專案** ] 對話方塊隨即開啟。
 
-3. 在 [**已安裝的範本**] 窗格中，選擇 [Visual Basic]，然後從專案類型清單中選擇 [ **WPF 應用程式**]。
+3. In the **Installed Templates** pane, choose Visual Basic, and then choose **WPF Application** from the list of project types.
 
 4. 在 [名稱] 文字方塊中，輸入 `AsyncExampleWPF`，然後選擇 [確定] 按鈕。
 
@@ -99,11 +99,11 @@ ms.locfileid: "73197022"
 
 6. 選擇 [確定] 按鈕以關閉對話方塊。
 
-## <a name="add-necessary-imports-statements"></a>新增必要的 Imports 語句
+## <a name="add-necessary-imports-statements"></a>Add necessary Imports statements
 
-1. 在**方案總管**中，開啟 mainwindow.xaml 的快捷方式功能表，然後選擇 [ **View Code**]。
+1. In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.
 
-2. 在程式碼檔案的頂端新增下列 `Imports` 語句（如果尚未存在的話）。
+2. Add the following `Imports` statements at the top of the code file if they’re not already present.
 
     ```vb
     Imports System.Net.Http
@@ -111,11 +111,11 @@ ms.locfileid: "73197022"
     Imports System.IO
     ```
 
-## <a name="create-a-synchronous-application"></a>建立同步應用程式
+## <a name="create-a-synchronous-application"></a>Create a synchronous application
 
-1. 在設計視窗 Mainwindow.xaml 中，按兩下 [**開始**] 按鈕，以在 mainwindow.xaml 中建立 `startButton_Click` 事件處理常式。
+1. In the design window, MainWindow.xaml, double-click the **Start** button to create the `startButton_Click` event handler in MainWindow.xaml.vb.
 
-2. 在 Mainwindow.xaml 中，將下列程式碼複製到 `startButton_Click`的主體中：
+2. In MainWindow.xaml.vb, copy the following code into the body of `startButton_Click`:
 
     ```vb
     resultsTextBox.Clear()
@@ -135,7 +135,7 @@ ms.locfileid: "73197022"
 
     - `DisplayResults`，會顯示每個 URL 的位元組陣列中的位元組數目。
 
-    複製下列四種方法，然後將它們貼入 Mainwindow.xaml 中的 `startButton_Click` 事件處理常式底下：
+    Copy the following four methods, and then paste them under the `startButton_Click` event handler in MainWindow.xaml.vb:
 
     ```vb
     Private Sub SumPageSizes()
@@ -238,7 +238,7 @@ ms.locfileid: "73197022"
 
 ## <a name="convert-geturlcontents-to-an-asynchronous-method"></a>將 GetURLContents 轉換為非同步方法
 
-1. 若要將同步方案轉換成非同步方案，最好的起點是 `GetURLContents`，因為呼叫 <xref:System.Net.HttpWebRequest.GetResponse%2A?displayProperty=nameWithType> 方法和 <xref:System.IO.Stream.CopyTo%2A?displayProperty=nameWithType> 方法是應用程式存取 web 的位置。 .NET Framework 會讓轉換變得簡單，方法是提供這兩種方法的非同步版本。
+1. To convert the synchronous solution to an asynchronous solution, the best place to start is in `GetURLContents` because the calls to the <xref:System.Net.HttpWebRequest.GetResponse%2A?displayProperty=nameWithType> method and to the <xref:System.IO.Stream.CopyTo%2A?displayProperty=nameWithType> method are where the application accesses the web. .NET Framework 會讓轉換變得簡單，方法是提供這兩種方法的非同步版本。
 
     如需 `GetURLContents` 中所用之方法的詳細資訊，請參閱 <xref:System.Net.WebRequest>。
 
@@ -253,7 +253,7 @@ ms.locfileid: "73197022"
 
 2. `GetResponseAsync` 會傳回 <xref:System.Threading.Tasks.Task%601>。 在此情況下，工作傳回變數 `TResult` 具有類型 <xref:System.Net.WebResponse>。 工作承諾會在已下載要求的資料及工作執行完成之後，產生實際 `WebResponse` 物件。
 
-    若要從工作中取出 `WebResponse` 值，請將[Await](../../../../visual-basic/language-reference/operators/await-operator.md)運算子套用至 `GetResponseAsync`的呼叫，如下列程式碼所示。
+    To retrieve the `WebResponse` value from the task, apply an [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operator to the call to `GetResponseAsync`, as the following code shows.
 
     ```vb
     Using response As WebResponse = Await webReq.GetResponseAsync()
@@ -268,11 +268,11 @@ ms.locfileid: "73197022"
     Using response As WebResponse = Await responseTask
     ```
 
-    對 `webReq.GetResponseAsync` 的呼叫會傳回 `Task(Of WebResponse)` 或 `Task<WebResponse>`。 然後會將 `Await` 運算子套用至工作，以取得 `WebResponse` 值。
+    對 `webReq.GetResponseAsync` 的呼叫會傳回 `Task(Of WebResponse)` 或 `Task<WebResponse>`。 Then an `Await` operator is applied to the task to retrieve the `WebResponse` value.
 
-    如果非同步方法有不需要依賴工作完成的工作要執行，此方法可以在呼叫非同步方法之後，以及套用 await 運算子之前，繼續這兩個陳述式之間的工作。 如需範例，請參閱[如何：使用 Async 和 Await 以平行方式提出多個 Web 要求（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)和[如何：使用 system.threading.tasks.task.whenall （Visual Basic）來擴充非同步逐步](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)解說。
+    如果非同步方法有不需要依賴工作完成的工作要執行，此方法可以在呼叫非同步方法之後，以及套用 await 運算子之前，繼續這兩個陳述式之間的工作。 For examples, see [How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) and [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 
-3. 由於您在上一個步驟中加入 `Await` 運算子，所以發生編譯器錯誤。 運算子只能用在以[Async](../../../../visual-basic/language-reference/modifiers/async.md)修飾詞標示的方法中。 當您重複轉換步驟以將對 `CopyTo` 的呼叫取代為對 `CopyToAsync` 的呼叫時，略過錯誤。
+3. 由於您在上一個步驟中加入 `Await` 運算子，所以發生編譯器錯誤。 The operator can be used only in methods that are marked with the [Async](../../../../visual-basic/language-reference/modifiers/async.md) modifier. 當您重複轉換步驟以將對 `CopyTo` 的呼叫取代為對 `CopyToAsync` 的呼叫時，略過錯誤。
 
     - 變更方法的名稱，該方法會呼叫 <xref:System.IO.Stream.CopyToAsync%2A>。
 
@@ -293,15 +293,15 @@ ms.locfileid: "73197022"
         Await copyTask
         ```
 
-4. `GetURLContents` 中還需要完成的工作是調整方法簽章。 您只能在以[Async](../../../../visual-basic/language-reference/modifiers/async.md)修飾詞標示的方法中使用 `Await` 運算子。 新增修飾詞以將方法標示為「非同步方法」，如下列程式碼所示。
+4. `GetURLContents` 中還需要完成的工作是調整方法簽章。 You can use the `Await` operator only in methods that are marked with the [Async](../../../../visual-basic/language-reference/modifiers/async.md) modifier. 新增修飾詞以將方法標示為「非同步方法」，如下列程式碼所示。
 
     ```vb
     Private Async Function GetURLContents(url As String) As Byte()
     ```
 
-5. 非同步方法的傳回型別只能 <xref:System.Threading.Tasks.Task>，<xref:System.Threading.Tasks.Task%601>。 在 Visual Basic 中，方法必須是 `Function`，會傳回 `Task` 或 `Task(Of T)`，或者方法必須是 `Sub`。 一般來說，`Sub` 方法僅適用于非同步事件處理常式，其中需要 `Sub`。 在其他情況下，如果完成的方法具有傳回類型 T 之值的[Return](../../../../visual-basic/language-reference/statements/return-statement.md)語句，您就會使用 `Task(T)`，如果完成的方法不會傳回有意義的值，您就會使用 `Task`。
+5. The return type of an async method can only be <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>. 在 Visual Basic 中，方法必須是 `Function`，會傳回 `Task` 或 `Task(Of T)`，或者方法必須是 `Sub`。 Typically, a `Sub` method  is used only in an async event handler, where `Sub` is required. In other cases, you use `Task(T)` if the completed method has a [Return](../../../../visual-basic/language-reference/statements/return-statement.md) statement that returns a value of type T, and you use `Task` if the completed method doesn’t return a meaningful value.
 
-    如需詳細資訊，請參閱[非同步傳回類型（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。
+    For more information, see [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
 
     方法 `GetURLContents` 有 return 陳述式，陳述式會傳回位元組陣列。 因此，非同步版本的傳回類型是 Task(T)，其中 T 是位元組陣列。 在方法簽章中進行下列變更：
 
@@ -346,7 +346,7 @@ ms.locfileid: "73197022"
 
     - 將 "Async" 加入至方法名稱。
 
-    - 沒有工作傳回變數 T，這次是因為 `SumPageSizesAsync` 不會傳回 T 的值（此方法沒有 `Return` 的語句）。不過，此方法必須傳回要可等候的 `Task`。 因此，請將方法類型從 `Sub` 變更為 `Function`。 函式的傳回類型是 `Task`。
+    - There is no task return variable, T, this time because `SumPageSizesAsync` doesn’t return a value for T. (The method has no `Return` statement.) However, the method must return a `Task` to be awaitable. Therefore, change the method type from `Sub` to `Function`. 函式的傳回類型是 `Task`。
 
     下列程式碼會顯示這些變更。
 
@@ -389,7 +389,7 @@ ms.locfileid: "73197022"
     startButton.IsEnabled = True
     ```
 
-    如需重新進入的詳細資訊，請參閱[處理非同步應用程式中的重新進入（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)。
+    For more information about reentrancy, see [Handling Reentrancy in Async Apps (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).
 
 4. 最後，將 `Async` 修飾詞加入宣告，讓事件處理常式可以等候 `SumPagSizesAsync`。
 
@@ -397,7 +397,7 @@ ms.locfileid: "73197022"
     Async Sub startButton_Click(sender As Object, e As RoutedEventArgs) Handles startButton.Click
     ```
 
-    一般而言，事件處理常式的名稱並沒有改變。 傳回類型不會變更為 `Task`，因為事件處理常式必須是 Visual Basic 中 `Sub` 的程式。
+    一般而言，事件處理常式的名稱並沒有改變。 The return type isn’t changed to `Task` because event handlers must be `Sub` procedures in Visual Basic.
 
     專案從同步到非同步處理的轉換已完成。
 
@@ -411,11 +411,11 @@ ms.locfileid: "73197022"
 
     - 最重要的是，不會在下載期間封鎖 UI 執行緒。 您可以移動視窗或調整其大小，同時下載、計算及顯示 Web 資源。 如果其中一個網站變慢或沒有回應，您可以選擇 [關閉] 按鈕 (右上角紅色欄位中的 x)，取消作業。
 
-## <a name="replace-the-geturlcontentsasync-method-with-a-net-framework-method"></a>將 Geturlcontentsasync 為方法取代為 .NET Framework 方法
+## <a name="replace-the-geturlcontentsasync-method-with-a-net-framework-method"></a>Replace the GetURLContentsAsync method with a .NET Framework method
 
-1. .NET Framework 提供許多您可以使用的非同步方法。 其中一個是 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29?displayProperty=nameWithType> 方法，就是您在此逐步解說中所需的功能。 您可以使用這個方法，而不是 `GetURLContentsAsync` 方法，這是您在先前的程序中建立的方法。
+1. The .NET Framework provides many async methods that you can use. One of them, the <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29?displayProperty=nameWithType> method, does just what you need for this walkthrough. 您可以使用這個方法，而不是 `GetURLContentsAsync` 方法，這是您在先前的程序中建立的方法。
 
-    第一個步驟是在 `SumPageSizesAsync` 方法中建立 <xref:System.Net.Http.HttpClient> 物件。 在方法的開頭，加入下列宣告。
+    The first step is to create an <xref:System.Net.Http.HttpClient> object in the `SumPageSizesAsync` method. 在方法的開頭，加入下列宣告。
 
     ```vb
     ' Declare an HttpClient object and increase the buffer size. The
@@ -438,7 +438,7 @@ ms.locfileid: "73197022"
 
 ## <a name="example"></a>範例
 
-以下是使用非同步 `GetURLContentsAsync` 方法之已轉換非同步方案的完整範例。 請注意，它極為類似原始的同步方案。
+The following is the full example of the converted asynchronous solution that uses the asynchronous `GetURLContentsAsync` method. 請注意，它極為類似原始的同步方案。
 
 ```vb
 ' Add the following Imports statements, and add a reference for System.Net.Http.

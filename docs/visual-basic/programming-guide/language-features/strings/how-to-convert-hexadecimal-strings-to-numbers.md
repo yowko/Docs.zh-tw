@@ -1,5 +1,5 @@
 ---
-title: HOW TO：十六進位字串轉換為數字 (Visual Basic)
+title: 如何：將十六進位字串轉換為數字
 ms.date: 01/31/2018
 helpviewer_keywords:
 - numbers [Visual Basic], hexadecimals
@@ -8,33 +8,33 @@ helpviewer_keywords:
 - decimals [Visual Basic], hexadecimals
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-ms.openlocfilehash: ddb7b39f7a47234c003ca16e1d7ea013e113c108
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0a97a0c212a64bfa4db4606ee526b666f07877a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054038"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347165"
 ---
-# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>HOW TO：十六進位字串轉換為數字 (Visual Basic)
+# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>如何：將十六進位字串轉換為數字 (Visual Basic)
 
-此範例會將十六進位字串轉換成整數使用<xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>方法。
+This example converts a hexadecimal string to an integer using the <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> method.
 
-## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>若要為十六進位字串轉換為數字
+## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>To convert a hexadecimal string to a number
 
-- 使用<xref:System.Convert.ToInt32(System.String,System.Int32)>方法，以轉換數字表示成整數的基底為 16。
+- Use the <xref:System.Convert.ToInt32(System.String,System.Int32)> method to convert the number expressed in base-16 to an integer.
 
-  第一個引數<xref:System.Convert.ToInt32(System.String,System.Int32)>方法是要轉換的字串。 第二個引數描述中，表示的數字基底十六進位為基底 16。
+  The first argument of the <xref:System.Convert.ToInt32(System.String,System.Int32)> method is the string to convert. The second argument describes what base the number is expressed in; hexadecimal is base 16.
 
   [!code-vb[VbVbalrStrings#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#62)]
 
-- 請注意十六進位字串具有下列限制：
+- Note that the hexadecimal string has the following restrictions:
 
-  - 它不能包含`&h`前置詞。
-  - 它不能包含`_`千位分隔符號。
+  - It cannot include the `&h` prefix.
+  - It cannot include the `_` digit separator.
 
-  前置詞或數字分隔符號是否存在，呼叫<xref:System.Convert.ToInt32(System.String,System.Int32)>方法會擲回<xref:System.FormatException>。
+  If the prefix or a digit separator is present, the call to the <xref:System.Convert.ToInt32(System.String,System.Int32)> method throws a <xref:System.FormatException>.
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
 - <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>

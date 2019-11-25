@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Visual Basic 中從固定寬度的文字檔讀取
+title: 'How to: read from fixed-width text Files'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fixed-width text file
@@ -8,14 +8,15 @@ helpviewer_keywords:
 - text files [Visual Basic], tasks
 - text files [Visual Basic], reading
 ms.assetid: 99be5692-967a-4e85-993e-cd18139a5a69
-ms.openlocfilehash: 1df1c84e6eaf90b737b51e5512638e4a15de6866
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 3cea9bfe2388f0ca510b15cb020f899b81c4603c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623443"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334631"
 ---
 # <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>如何：在 Visual Basic 中從固定寬度的文字檔讀取
+
 `TextFieldParser` 物件可讓您輕鬆有效率地剖析結構化文字檔，例如記錄檔。  
   
  `TextFieldType` 屬性會定義所剖析的檔案是有分隔符號的檔案，還是具有固定寬度文字欄位的檔案。 在固定寬度的文字檔中，結尾欄位可以有可變寬度。 若要指定結尾欄位是否有可變寬度，請將其寬度定義為小於或等於零。  
@@ -39,11 +40,13 @@ ms.locfileid: "64623443"
      [!code-vb[VbFileIORead#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#12)]  
   
 ## <a name="example"></a>範例  
+
  此範例會從檔案 `test.log` 讀取。  
   
  [!code-vb[VbFileIORead#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#13)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
+
  以下條件可能會造成例外狀況：  
   
 - 無法使用指定格式剖析資料列 (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>)。 例外狀況訊息指出造成例外狀況的文字行，而 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> 屬性被指派至包含於該文字行中的文字。  
@@ -56,7 +59,7 @@ ms.locfileid: "64623443"
   
 - 使用者沒有足夠權限以存取檔案 (<xref:System.UnauthorizedAccessException>)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - [如何：從逗號分隔文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)

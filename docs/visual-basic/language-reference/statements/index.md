@@ -1,20 +1,20 @@
 ---
-title: 陳述式 (Visual Basic)
+title: 陳述式
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [Visual Basic]
 ms.assetid: 1cbd7703-8d3b-48fd-831e-14c9cc85675a
-ms.openlocfilehash: 6c77a0e921038aca6cd9d2ed28cc34e588d9079f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5c755b1ee67fcb6121fe128d90b235fd53ad663
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784211"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353564"
 ---
 # <a name="statements-visual-basic"></a>陳述式 (Visual Basic)
 本節中的主題包含 Visual Basic 宣告和可執行陳述式的表格，以及套用至許多陳述式的重要清單。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [A-E 陳述式](../../../visual-basic/language-reference/statements/a-e-statements.md)  
   
  [F-P 陳述式](../../../visual-basic/language-reference/statements/f-p-statements.md)  

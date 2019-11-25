@@ -1,33 +1,33 @@
 ---
-title: 堆疊空間不足 (Visual Basic)
+title: 堆疊空間用盡
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: 29dbdf74808fc98bb856483c3fd8e3a09a72113b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ae604a9727413f2705d42a4b68f5a50b7dd3feb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925576"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349188"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>堆疊空間不足 (Visual Basic)
-堆疊是執行程式的需求使用動態記憶體成長和縮減工作區域。 已超過其限制。  
+The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program. Its limits have been exceeded.  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. 請檢查該程序無巢狀太深。  
+1. Check that procedures are not nested too deeply.  
   
-2. 請確定遞迴程序會正確地終止。  
+2. Make sure recursive procedures terminate properly.  
   
-3. 如果本機變數需要更多區域的變數空間大於可用，請嘗試宣告一些變數，在模組層級。 您也可以宣告程序中的所有變數靜態前面`Property`， `Sub`，或`Function`關鍵字搭配`Static`。 或者您可以使用`Static`陳述式來宣告程序內的個別靜態變數。  
+3. If local variables require more local variable space than is available, try declaring some variables at the module level. You can also declare all variables in the procedure static by preceding the `Property`, `Sub`, or `Function` keyword with `Static`. Or you can use the `Static` statement to declare individual static variables within procedures.  
   
-4. 重新定義部分的可變長度的字串，為您固定長度字串的固定長度字串使用堆疊空間較可變長度的字串。 您也可以定義在模組層級，它不需要堆疊空間的字串。  
+4. Redefine some of your fixed-length strings as variable-length strings, as fixed-length strings use more stack space than variable-length strings. You can also define the string at module level where it requires no stack space.  
   
-5. 檢查數目巢狀`DoEvents`函式呼叫，使用`Calls`對話方塊來檢視哪些程序會在堆疊上作用。  
+5. Check the number of nested `DoEvents` function calls, by using the `Calls` dialog box to view which procedures are active on the stack.  
   
-6. 請確定您不會觸發已將事件程序呼叫堆疊的事件 」 事件 cascade"。 事件串聯類似於未結束的遞迴程序呼叫，但它是較不明顯，因為 Visual Basic，而不是明確呼叫程式碼中的進行呼叫。 使用`Calls`對話方塊來檢視哪些程序會在堆疊上作用。  
+6. Make sure you did not cause an "event cascade" by triggering an event that calls an event procedure already on the stack. An event cascade is similar to an unterminated recursive procedure call, but it is less obvious, since the call is made by Visual Basic rather than an explicit call in the code. Use the `Calls` dialog box to view which procedures are active on the stack.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [記憶體視窗](/visualstudio/debugger/memory-windows)

@@ -1,5 +1,5 @@
 ---
-title: -refonly （Visual Basic）
+title: -refonly
 ms.date: 03/16/2018
 f1_keywords:
 - -refonly
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /refonly compiler option [Visual Basic]
 - -refonly compiler option [Visual Basic]
 - refonly compiler option [Visual Basic]
-ms.openlocfilehash: 8e64989ac1410b51991027ffcb33e8dae0c0284b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b906178abf8d159083d95e41448596d512e857de
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775558"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348581"
 ---
-# <a name="-refonly-visual-basic"></a>-refonly （Visual Basic）
+# <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
 
-**-Refonly**選項指出編譯的主要輸出應該是參考元件，而不是實作為元件。 `-refonly` 參數以無訊息模式停用輸出 PDB，因為無法執行參考組件。
+The **-refonly** option indicates that the primary output of the compilation should be a reference assembly instead of an implementation assembly. `-refonly` 參數以無訊息模式停用輸出 PDB，因為無法執行參考組件。
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -28,9 +28,9 @@ ms.locfileid: "72775558"
 
 ## <a name="remarks"></a>備註
 
-Visual Basic 支援從15.3 版開始的 `-refonly` 交換器。
+Visual Basic supports the `-refonly` switch starting with version 15.3.
 
-參考元件是一種特殊類型的元件，其中只包含代表程式庫公用 API 介面所需的最小中繼資料量。 其中包括在建立工具中參考元件時，所有重要成員的宣告，但會排除所有成員的執行，以及對其 API 合約沒有明顯影響的私用成員宣告。 如需詳細資訊，請參閱 .NET 中的[參考元件](../../../standard/assembly/reference-assemblies.md)指南。
+Reference assemblies are a special type of assembly that contain only the minimum amount of metadata required to represent the library's public API surface. They include declarations for all members that are significant when referencing an assembly in build tools, but exclude all member implementations and declarations of private members that have no observable impact on their API contract. For more information, see [Reference assemblies](../../../standard/assembly/reference-assemblies.md) in .NET Guide.
 
 `-refonly` 和 [`-refout`](refout-compiler-option.md) 選項互斥。
 

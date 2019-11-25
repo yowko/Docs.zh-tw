@@ -1,30 +1,30 @@
 ---
-title: 如何：使用 LINQ 轉換 XML (Visual Basic)
+title: 如何：使用 LINQ 轉換 XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [Visual Basic], transforming
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
-ms.openlocfilehash: 347ca45c2417c1ffb9a86f3bcb51c75f3382bfad
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a531b189074ac7bdd1c02935368c408ff506a6f1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524814"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353641"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>如何：使用 LINQ 轉換 XML (Visual Basic)
 
-[Xml 常](../../../../visual-basic/language-reference/xml-literals/index.md)值可讓您輕鬆地從一個來源讀取 xml，並將它轉換成新的 xml 格式。 您可以利用 LINQ 查詢來抓取要轉換的內容，或將現有檔中的內容變更為新的 XML 格式。
+[XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md) make it easy to read XML from one source and transform it to a new XML format. You can take advantage of LINQ queries to retrieve the content to transform, or change content in an existing document to a new XML format.
 
-本主題中的範例會將 XML 來源文件中的內容轉換成 HTML，以便在瀏覽器中查看。
+The example in this topic transforms content from an XML source document to HTML to be viewed in a browser.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-### <a name="to-transform-an-xml-document"></a>轉換 XML 檔
+### <a name="to-transform-an-xml-document"></a>To transform an XML document
 
-1. 在 Visual Studio 中，于 [**主控台應用程式**] 專案範本中建立新的 Visual Basic 專案。
+1. In Visual Studio, create a new Visual Basic project in the **Console Application** project template.
 
-2. 按兩下專案中建立的 [Module1] 檔案，以修改 Visual Basic 程式碼。 將下列程式碼新增至 `Module1` 模組的 `Sub Main`。 此程式碼會將來源 XML 檔建立為 <xref:System.Xml.Linq.XDocument> 物件。
+2. Double-click the Module1.vb file created in the project to modify the Visual Basic code. Add the following code to the `Sub Main` of the `Module1` module. This code creates the source XML document as an <xref:System.Xml.Linq.XDocument> object.
 
     ```vb
     Dim catalog =
@@ -58,11 +58,11 @@ ms.locfileid: "72524814"
         </Catalog>
     ```
 
-     [如何：從檔案、字串或資料流程載入 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)。
+     [How to: Load XML from a File, String, or Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).
 
-3. 在建立來源 XML 檔的程式碼之後，新增下列程式碼，以從物件取出所有 \<Book > 專案，並將它們轉換成 HTML 檔案。 @No__t_0Book 的 > 專案清單是使用 LINQ 查詢所建立的，它會傳回包含已轉換 HTML 之 <xref:System.Xml.Linq.XElement> 物件的集合。 您可以使用內嵌的運算式，將來源文件中的值放入新的 XML 格式。
+3. After the code to create the source XML document, add the following code to retrieve all the \<Book> elements from the object and transform them into an HTML document. The list of \<Book> elements is created by using a LINQ query that returns a collection of <xref:System.Xml.Linq.XElement> objects that contain the transformed HTML. You can use embedded expressions to put the values from the source document in the new XML format.
 
-     產生的 HTML 檔案會使用 <xref:System.Xml.Linq.XElement.Save%2A> 方法寫入檔案。
+     The resulting HTML document is written to a file by using the <xref:System.Xml.Linq.XElement.Save%2A> method.
 
     ```vb
     Dim htmlOutput =
@@ -83,11 +83,11 @@ ms.locfileid: "72524814"
     htmlOutput.Save("BookDescription.html")
     ```
 
-4. @No__t_1 `Sub Main` 之後，請加入新的方法（`Sub`），將 \<Description > 節點轉換成指定的 HTML 格式。 這個方法是由上一個步驟中的程式碼所呼叫，用來保留 \<Description > 元素的格式。
+4. After `Sub Main` of `Module1`, add a new method (`Sub`) to transform a \<Description> node into the specified HTML format. This method is called by the code in the previous step and is used to preserve the format of the \<Description> elements.
 
-     這個方法會以 HTML 取代 \<Description > 元素的子項目。 @No__t_0 方法是用來保留子項目的位置。 @No__t_0Description > 元素的已轉換內容包含在 HTML 段落（\<p >）元素中。 @No__t_0 屬性是用來抓取 \<Description > 元素的已轉換內容。 這可確保子項目會包含在已轉換的內容中。
+     This method replaces sub-elements of the \<Description> element with HTML. The `ReplaceWith` method is used to preserve the location of the sub-elements. The transformed content of the \<Description> element is included in an HTML paragraph (\<p>) element. The <xref:System.Xml.Linq.XContainer.Nodes%2A> property is used to retrieve the transformed content of the \<Description> element. This ensures that sub-elements are included in the transformed content.
 
-     在 `Module1` `Sub Main` 之後加入下列程式碼。
+     Add the following code after `Sub Main` of `Module1`.
 
     ```vb
     Public Function TransformDescription(ByVal desc As XElement) As XElement
@@ -117,7 +117,7 @@ ms.locfileid: "72524814"
 
 5. 儲存您的變更。
 
-6. 按 F5 執行程式碼。 所產生的儲存檔會如下所示：
+6. Press F5 to run the code. The resulting saved document will resemble the following:
 
     ```html
     <?xml version="1.0"?>

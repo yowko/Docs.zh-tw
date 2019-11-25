@@ -1,5 +1,5 @@
 ---
-title: 選擇性參數 (Visual Basic)
+title: 選擇性參數
 ms.date: 07/20/2015
 helpviewer_keywords:
 - parameters [Visual Basic], optional
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: 9236080d50638bc38bbdd3ddaf8aabf9e675e43f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d859f7eaaefa051cfdf703d8589bc8c679a3ee85
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639132"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345957"
 ---
 # <a name="optional-parameters-visual-basic"></a>選擇性參數 (Visual Basic)
-您可以將程序參數指定為選擇項，當該程序被呼叫時就不必提供引數。 *選擇性參數*由`Optional`程序定義中的關鍵字。 可套用下列規則：  
+您可以將程序參數指定為選擇項，當該程序被呼叫時就不必提供引數。 *Optional parameters* are indicated by the `Optional` keyword in the procedure definition. 可套用下列規則：  
   
 - 程序定義中的每一個選擇性參數都必須指定一個預設值。  
   
@@ -50,7 +50,7 @@ Sub name(argument 1, , , argument 4)
  [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>判斷是否有選擇性引數  
- 程序在執行階段時無法偵測指定的引數是否已省略，或者呼叫程式碼已明確提供預設值。 如果您需要有所區別，可以將一個不常用的值設定為預設值。 下列程序定義選擇性參數`office`，並為其預設值的測試`QJZ`，以查看是否在呼叫中將其省略：  
+ 程序在執行階段時無法偵測指定的引數是否已省略，或者呼叫程式碼已明確提供預設值。 如果您需要有所區別，可以將一個不常用的值設定為預設值。 The following procedure defines the optional parameter `office`, and tests for its default value, `QJZ`, to see if it has been omitted in the call:  
   
  [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
   
@@ -59,7 +59,7 @@ Sub name(argument 1, , , argument 4)
 ## <a name="optional-parameters-and-overloading"></a>選擇性參數和多載化  
  另一個用選擇性參數定義程序的方式是使用多載化 (Overloading)。 如果您有一個選擇性參數，您可以定義程序的兩個多載版本，其中一個接受該參數，而另一個則不接受。 隨著選擇性參數數目的增加，這個方法會變得比較複雜。 但是，它的優點是可以完全確定呼叫程式是否提供每一個選擇性引數。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [程序](./index.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)

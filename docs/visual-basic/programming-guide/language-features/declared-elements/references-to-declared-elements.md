@@ -1,24 +1,24 @@
 ---
-title: 已宣告之項目的參考 (Visual Basic)
+title: References to Declared Elements
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declared elements [Visual Basic]
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: de4d42803be48a87f4dfd37a92b1b22fa2d5c554
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a6477a9f0abaf8eb9176f4f6ab2a920af6c8f500
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524549"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345294"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>已宣告之項目的參考 (Visual Basic)
-當您的程式碼參考宣告的元素時，Visual Basic 編譯器會將參考中的名稱與該名稱的適當宣告相符。 如果以相同的名稱宣告多個專案，您可以藉由*限定*其名稱來控制要參考哪些元素。  
+When your code refers to a declared element, the Visual Basic compiler matches the name in your reference to the appropriate declaration of that name. If more than one element is declared with the same name, you can control which of those elements is to be referenced by *qualifying* its name.  
   
- 編譯器會嘗試將名稱參考與最小*範圍*的名稱宣告進行比對。 這表示它會從進行參考的程式碼開始，並透過包含專案的後續層級向外運作。  
+ The compiler attempts to match a name reference to a name declaration with the *narrowest scope*. This means it starts with the code making the reference and works outward through successive levels of containing elements.  
   
- 下列範例會顯示兩個名稱相同的變數參考。 此範例會宣告兩個變數，分別命名為 `totalCount`，位於模組 `container` 中不同的範圍層級。 當程式 `showCount` 顯示沒有限定的 `totalCount` 時，Visual Basic 編譯器會以最窄的範圍（亦即 `showCount` 內的區域宣告）解析宣告的參考。 當它符合包含模組 `container` 的 `totalCount` 資格時，編譯器會將參考解析為範圍較廣的宣告。  
+ The following example shows references to two variables with the same name. The example declares two variables, each named `totalCount`, at different levels of scope in module `container`. When the procedure `showCount` displays `totalCount` without qualification, the Visual Basic compiler resolves the reference to the declaration with the narrowest scope, namely the local declaration inside `showCount`. When it qualifies `totalCount` with the containing module `container`, the compiler resolves the reference to the declaration with the broader scope.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -41,16 +41,16 @@ Module callingModule
 End Module  
 ```  
   
-## <a name="qualifying-an-element-name"></a>限定元素名稱  
- 如果您想要覆寫此搜尋程式，並指定在更廣泛範圍中宣告的名稱，您必須使用更廣泛範圍的包含元素*來限定*名稱。 在某些情況下，您可能也必須限定包含元素。  
+## <a name="qualifying-an-element-name"></a>Qualifying an Element Name  
+ If you want to override this search process and specify a name declared in a broader scope, you must *qualify* the name with the containing element of the broader scope. In some cases, you might also have to qualify the containing element.  
   
- 限定名稱表示在您的 source 語句中的前面加上可識別目標元素定義位置的資訊。 這種資訊稱為*限定性字串*。 它可以包含一或多個命名空間和模組、類別或結構。  
+ Qualifying a name means preceding it in your source statement with information that identifies where the target element is defined. This information is called a *qualification string*. It can include one or more namespaces and a module, class, or structure.  
   
- 限定性字串應該明確地指定包含目標元素的模組、類別或結構。 容器可能會轉而位於另一個包含元素中，通常是命名空間。 您可能需要在限定性字串中包含數個包含元素。  
+ The qualification string should unambiguously specify the module, class, or structure containing the target element. The container might in turn be located in another containing element, usually a namespace. You might need to include several containing elements in the qualification string.  
   
-#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>藉由限定名稱來存取宣告的元素  
+#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>To access a declared element by qualifying its name  
   
-1. 判斷定義元素的位置。 這可能包括命名空間，甚至是命名空間的階層。 在最低層級的命名空間中，元素必須包含在模組、類別或結構中。  
+1. Determine the location in which the element has been defined. This might include a namespace, or even a hierarchy of namespaces. Within the lowest-level namespace, the element must be contained in a module, class, or structure.  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2. 根據目標元素的位置判斷限定性路徑。 從最高層級的命名空間開始，繼續進行最低層級的命名空間，並以包含目標元素的模組、類別或結構做為結尾。 路徑中的每個元素都必須包含其後的元素。  
+2. Determine a qualification path based on the target element's location. Start with the highest-level namespace, proceed to the lowest-level namespace, and end with the module, class, or structure containing the target element. Each element in the path must contain the element that follows it.  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3. 準備目標元素的限定性字串。 在路徑中的每個元素之後放置句點（`.`）。 您的應用程式必須能夠存取您的限定性字串中的每個元素。  
+3. Prepare the qualification string for the target element. Place a period (`.`) after every element in the path. Your application must have access to every element in your qualification string.  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4. 撰寫以一般方式參考目標元素的運算式或指派語句。  
+4. Write the expression or assignment statement referring to the target element in the normal way.  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5. 在目標元素名稱前面加上限定性字串。 名稱應該緊接在包含元素的模組、類別或結構後面的句點（`.`）後面。  
+5. Precede the target element name with the qualification string. The name should immediately follow the period (`.`) that follows the module, class, or structure that contains the element.  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,9 +93,9 @@ End Module
     End Module  
     ```  
   
-6. 編譯器會使用限定性字串來尋找清楚且明確的宣告，使其可以符合目標專案參考。  
+6. The compiler uses the qualification string to find a clear, unambiguous declaration to which it can match the target element reference.  
   
- 如果您的應用程式可以存取多個具有相同名稱的程式設計項目，您可能也必須限定名稱參考。 例如，<xref:System.Windows.Forms> 和 <xref:System.Web.UI.WebControls> 命名空間都包含 `Label` 類別（<xref:System.Windows.Forms.Label?displayProperty=nameWithType> 和 <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>）。 如果您的應用程式同時使用，或如果它定義自己的 `Label` 類別，您就必須區分不同的 `Label` 物件。 在變數宣告中包含命名空間或匯入別名。 下列範例會使用匯入別名。  
+ You might also have to qualify a name reference if your application has access to more than one programming element that has the same name. For example, the <xref:System.Windows.Forms> and <xref:System.Web.UI.WebControls> namespaces both contain a `Label` class (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> and <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). If your application uses both, or if it defines its own `Label` class, you must distinguish the different `Label` objects. Include the namespace or import alias in the variable declaration. The following example uses the import alias.  
   
 ```vb  
 ' The following statement must precede all your declarations.  
@@ -104,21 +104,21 @@ Imports win = System.Windows.Forms, web = System.Web.UI.WebControls
 Dim winLabel As New win.Label()  
 ```  
   
-## <a name="members-of-other-containing-elements"></a>其他包含元素的成員  
- 當您使用另一個類別或結構的非共用成員時，必須先使用指向類別或結構實例的變數或運算式來限定成員名稱。 在下列範例中，`demoClass` 是名為 `class1` 之類別的實例。  
+## <a name="members-of-other-containing-elements"></a>Members of Other Containing Elements  
+ When you use a nonshared member of another class or structure, you must first qualify the member name with a variable or expression that points to an instance of the class or structure. In the following example, `demoClass` is an instance of a class named `class1`.  
   
 ```vb  
 Dim demoClass As class1 = New class1()  
 demoClass.someSub[(argumentlist)]  
 ```  
   
- 您不能使用類別名稱本身來限定未[共用](../../../../visual-basic/language-reference/modifiers/shared.md)的成員。 您必須先在物件變數中建立實例（在此案例中為 `demoClass`），然後再以變數名稱加以參考。  
+ You cannot use the class name itself to qualify a member that is not [Shared](../../../../visual-basic/language-reference/modifiers/shared.md). You must first create an instance in an object variable (in this case `demoClass`) and then reference it by the variable name.  
   
- 如果類別或結構具有 `Shared` 的成員，您可以使用類別或結構名稱或指向實例的變數或運算式來限定該成員。  
+ If a class or structure has a `Shared` member, you can qualify that member either with the class or structure name or with a variable or expression that points to an instance.  
   
- 模組沒有任何個別的實例，而且其所有成員預設都會 `Shared`。 因此，您可以使用模組名稱來限定模組成員。  
+ A module does not have any separate instances, and all its members are `Shared` by default. Therefore, you qualify a module member with the module name.  
   
- 下列範例會顯示模組成員程式的限定參考。 此範例會在專案的不同模組中，宣告兩個 `Sub` 程式，兩個都有名稱 `perform`。 您可以指定每個模組，而不限定其本身的模組，但如果從任何其他位置參考，則必須限定。 因為 `module3` 中的最後一個參考不符合 `perform`，所以編譯器無法解析該參考。  
+ The following example shows qualified references to module member procedures. The example declares two `Sub` procedures, both named `perform`, in different modules in a project. Each one can be specified without qualification within its own module but must be qualified if referenced from anywhere else. Because the final reference in `module3` does not qualify `perform`, the compiler cannot resolve that reference.  
   
 ```vb  
 ' Assume these three modules are all in the same assembly.  
@@ -149,10 +149,10 @@ Module module3
 End Module  
 ```  
   
-## <a name="references-to-projects"></a>專案的參考  
- 若要使用另一個專案中定義的[公用](../../../../visual-basic/language-reference/modifiers/public.md)元素，您必須先設定該專案元件或類型程式庫的*參考*。 若要設定參考，請按一下 [**專案**] 功能表上的 [**加入參考**]，或使用[-reference （Visual Basic）](../../../../visual-basic/reference/command-line-compiler/reference.md)命令列編譯器選項。  
+## <a name="references-to-projects"></a>References to Projects  
+ To use [Public](../../../../visual-basic/language-reference/modifiers/public.md) elements defined in another project, you must first set a *reference* to that project's assembly or type library. To set a reference, click **Add Reference** on the **Project** menu, or use the [-reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) command-line compiler option.  
   
- 例如，您可以使用 .NET Framework 的 XML 物件模型。 如果您設定 <xref:System.Xml> 命名空間的參考，您可以宣告並使用它的任何類別，例如 <xref:System.Xml.XmlDocument>。 下列範例會使用 <xref:System.Xml.XmlDocument>。  
+ For example, you can use the XML object model of the .NET Framework. If you set a reference to the <xref:System.Xml> namespace, you can declare and use any of its classes, such as <xref:System.Xml.XmlDocument>. The following example uses <xref:System.Xml.XmlDocument>.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -160,8 +160,8 @@ End Module
 Dim xDoc As System.Xml.XmlDocument  
 ```  
   
-## <a name="importing-containing-elements"></a>匯入包含元素  
- 您可以使用[Imports 語句（.Net 命名空間和類型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)匯*入*包含您要使用之模組或類別的命名空間。 這可讓您參考已匯入之命名空間中定義的元素，而不需完整限定其名稱。 下列範例會重寫前一個範例，以匯入 <xref:System.Xml> 命名空間。  
+## <a name="importing-containing-elements"></a>Importing Containing Elements  
+ You can use the [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to *import* the namespaces that contain the modules or classes that you want to use. This enables you to refer to the elements defined in an imported namespace without fully qualifying their names. The following example rewrites the previous example to import the <xref:System.Xml> namespace.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -171,7 +171,7 @@ Imports System.Xml
 Dim xDoc As XmlDocument  
 ```  
   
- 此外，`Imports` 語句可以為每個匯入的命名空間定義匯*入別名*。 這可讓原始程式碼變得更短且更容易閱讀。 下列範例會重寫上一個範例，以使用 `xD` 做為 <xref:System.Xml> 命名空間的別名。  
+ In addition, the `Imports` statement can define an *import alias* for each imported namespace. This can make the source code shorter and easier to read. The following example rewrites the previous example to use `xD` as an alias for the <xref:System.Xml> namespace.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -181,17 +181,17 @@ Imports xD = System.Xml
 Dim xDoc As xD.XmlDocument  
 ```  
   
- @No__t_0 語句不會將其他專案中的元素提供給您的應用程式。 也就是說，它不會取代設定參考。 匯入命名空間只會移除限定該命名空間中所定義名稱的需求。  
+ The `Imports` statement does not make elements from other projects available to your application. That is, it does not take the place of setting a reference. Importing a namespace just removes the requirement to qualify the names defined in that namespace.  
   
- 您也可以使用 `Imports` 語句來匯入模組、類別、結構和列舉。 然後您可以使用這類匯入專案的成員，而不需要限定。 不過，您一律必須使用評估為類別或結構實例的變數或運算式，來限定類別和結構的非共用成員。  
+ You can also use the `Imports` statement to import modules, classes, structures, and enumerations. You can then use the members of such imported elements without qualification. However, you must always qualify nonshared members of classes and structures with a variable or expression that evaluates to an instance of the class or structure.  
   
 ## <a name="naming-guidelines"></a>命名方針  
- 當您定義兩個或多個名稱相同的程式設計專案時，當編譯器嘗試解析該名稱的參考時，可能會造成*名稱不明確*的問題。 如果範圍內有一個以上的定義，或如果沒有定義在範圍內，則參考會是兩難。 如需範例，請參閱此說明頁面上的「限定參考範例」。  
+ When you define two or more programming elements that have the same name, a *name ambiguity* can result when the compiler attempts to resolve a reference to that name. If more than one definition is in scope, or if no definition is in scope, the reference is irresolvable. For an example, see "Qualified Reference Example" on this Help page.  
   
- 您可以提供所有元素的唯一名稱，以避免名稱不明確。 然後您可以參考任何專案，而不需要以命名空間、模組或類別來限定其名稱。 您也可以減少意外參考錯誤元素的機會。  
+ You can avoid name ambiguity by giving all your elements unique names. Then you can make reference to any element without having to qualify its name with a namespace, module, or class. You also reduce the chances of accidentally referring to the wrong element.  
   
 ## <a name="shadowing"></a>遮蔽  
- 當兩個程式設計項目共用相同名稱時，其中一個專案可以隱藏或*遮蔽*另一個。 有陰影的元素無法供參考;相反地，當您的程式碼使用陰影專案名稱時，Visual Basic 編譯器會將它解析成遮蔽元素。 如需範例的詳細說明，請參閱[Visual Basic 中的陰影](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
+ When two programming elements share the same name, one of them can hide, or *shadow*, the other one. A shadowed element is not available for reference; instead, when your code uses the shadowed element name, the Visual Basic compiler resolves it to the shadowing element. For a more detailed explanation with examples, see [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
 ## <a name="see-also"></a>請參閱
 
