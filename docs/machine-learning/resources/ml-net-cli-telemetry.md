@@ -4,12 +4,12 @@ description: 了解 ML.NET CLI 遙測特性，它會收集用於分析、要收�
 ms.topic: conceptual
 ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: 77a24416a8008d36006c293cb174b5a8c2f516b7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: edd74b6f3d3c50d5eff012629f0b1db6b62d9021
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929272"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977258"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>依 ML.NET CLI 排列的遙測集合
 
@@ -17,15 +17,15 @@ ms.locfileid: "70929272"
 
 ## <a name="how-microsoft-uses-the-data"></a>Microsoft 如何使用資料
 
-產品小組會使用 ML.NET CLI 遙測資料協助您了解如何改善工具。 例如，如果客戶不常使用特定的機器學習工作，產品小組會調查原因並使用結果來排定特性開發的優先順序。 ML.NET CLI 遙測也可協助偵錯問題，例如當機和程式碼異常。 
+產品小組會使用 ML.NET CLI 遙測資料協助您了解如何改善工具。 例如，如果客戶不常使用特定的機器學習工作，產品小組會調查原因並使用結果來排定特性開發的優先順序。 ML.NET CLI 遙測也可協助偵錯問題，例如當機和程式碼異常。
 
 雖然產品小組感激此見解，但我們也知道不是所有人都願意傳送此資料。 [了解如何停用遙測。](#opt-out-of-data-collection)
 
-## <a name="scope"></a>`Scope`
+## <a name="scope"></a>範圍
 
 `mlnet` 命令會啟動 ML.NET CLI，但命令本身不會收集遙測。
 
-當您執行 `mlnet` 命令不附加任何其他命令時，「不啟用」遙測。 例如：
+當您執行 `mlnet` 命令不附加任何其他命令時，「不啟用」遙測。 例如:
 
 - `mlnet`
 - `mlnet --help`
@@ -51,12 +51,13 @@ ms.locfileid: "70929272"
 - 經雜湊處理的資料集檔案名稱
 - 資料集檔案大小貯體
 - 作業系統和版本
-- --task 參數的值：類別值，例如 `regression`、`binary-classification` 和 `multiclass-classification`
+- --Task 參數的值：類別值，例如 `regression`、`binary-classification`和 `multiclass-classification`
 - ML.NET CLI 版本（也就是0.3.27703.4）
 
 資料會使用 [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) 技術安全傳送至 Microsoft 伺服器、保留在限制存取權下，並在安全 [Azure 儲存體](https://azure.microsoft.com/services/storage/)系統的嚴格安全性控制項下使用。
 
 ### <a name="data-points-not-collected"></a>未收集資料點
+
 遙測特性「不」收集：
 
 - 個人資料，例如使用者姓名
@@ -67,15 +68,15 @@ ms.locfileid: "70929272"
 
 ## <a name="license"></a>使用權
 
-Microsoft 的 ML.NET CLI 散發由 [Microsoft 軟體授權所授權：Microsoft .NET 程式庫](https://aka.ms/dotnet-core-eula)。 如需資料收集與處理的詳細資訊，請參閱＜資料＞一節。
+Microsoft 的 ML.NET CLI 散發已獲得[Microsoft 軟體授權條款： microsoft .Net Library](https://aka.ms/dotnet-core-eula)。 如需資料收集與處理的詳細資訊，請參閱＜資料＞一節。
 
 ## <a name="disclosure"></a>公開
 
 當您第一次執行 [ML.NET CLI 命令](../reference/ml-net-cli-reference.md)時，例如 `mlnet auto-train`，ML.NET CLI 工具會顯示揭露文字，告訴您如何選擇退出遙測。 文字可能因您執行的 CLI 版本而略有不同。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ML.NET CLI 參考](../reference/ml-net-cli-reference.md)
-- [MICROSOFT 軟體授權條款：Microsoft .NET 程式庫](https://aka.ms/dotnet-core-eula)
+- [Microsoft 軟體授權條款： Microsoft .NET 程式庫](https://aka.ms/dotnet-core-eula)
 - [Microsoft 隱私權](https://www.microsoft.com/trustcenter/privacy/)
 - [Microsoft 隱私權聲明](https://privacy.microsoft.com/privacystatement)

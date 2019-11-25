@@ -10,21 +10,21 @@ helpviewer_keywords:
 - clear element, connectionManagement
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
-ms.openlocfilehash: 17b380b12977423669fd413132d69a3082daca41
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: a76df48a9de084e1121a5e96b22edf7aa3acba23
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698364"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088478"
 ---
-# <a name="clear-element-for-connectionmanagement-network-settings"></a>適用于 Connectionmanagement 專案的 @no__t 0clear > 元素（網路設定）
+# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<清除 Connectionmanagement 專案的 > 元素（網路設定）
 清除連接管理清單。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<clear >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<connectionmanagement 專案 >** ](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
+
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -37,17 +37,17 @@ ms.locfileid: "71698364"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**描述**|  
+|**目**|**說明**|  
 |-----------------|---------------------|  
-|[connectionManagement](connectionmanagement-element-network-settings.md)|指定連接至網路主機的連線數目上限。|  
+|[Connectionmanagement 專案](connectionmanagement-element-network-settings.md)|指定連接至網路主機的連線數目上限。|  
   
 ## <a name="remarks"></a>備註  
- @No__t-0 元素會清除連接管理清單中的所有專案。  
+ `clear` 元素會清除連接管理清單中的所有專案。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
@@ -67,7 +67,7 @@ ms.locfileid: "71698364"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>

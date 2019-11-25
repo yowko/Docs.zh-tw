@@ -5,18 +5,18 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 1628d0669d8a9e677ff39b5869d3802d89d96410
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 735782a4a0877a917b6e1885f009aa49d834170f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397707"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976970"
 ---
 # <a name="re-train-a-model"></a>重新定型模型
 
 了解如何在 ML.NET 中重新定型機器學習模型。
 
-世界和其周圍的資料都會不斷地改變。 因此，模型也需要變更和更新。 ML.NET 提供使用學習模型的參數作為起點來重新定型模行的功能，以繼續根據先前的經驗進行建置，而非每次都從頭開始。  
+世界和其周圍的資料都會不斷地改變。 因此，模型也需要變更和更新。 ML.NET 提供使用學習模型的參數作為起點來重新定型模行的功能，以繼續根據先前的經驗進行建置，而非每次都從頭開始。
 
 下列演算法在 ML.NET 中可重新定型：
 
@@ -33,7 +33,7 @@ ms.locfileid: "67397707"
 
 ## <a name="load-pre-trained-model"></a>載入預先定型的模型
 
-首先，將預先定型的模型載入應用程式。 若要深入了解載入定型管線和模型，請參閱相關的[操作說明文章](./consuming-model-ml-net.md)。
+首先，將預先定型的模型載入應用程式。 若要深入瞭解如何載入定型管線和模型，請參閱[儲存和載入定型的模型](save-load-machine-learning-models-ml-net.md)。
 
 ```csharp
 // Create MLContext
@@ -55,13 +55,13 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ```csharp
 // Extract trained model parameters
-LinearRegressionModelParameters originalModelParameters = 
+LinearRegressionModelParameters originalModelParameters =
     ((ISingleFeaturePredictionTransformer<object>)trainedModel).Model as LinearRegressionModelParameters;
 ```
 
 ## <a name="re-train-model"></a>重新定型模型
 
-重新定型模型的流程與定型模型的流程沒什麼不同。 唯一的差別在於，除了資料外，[`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*) 方法也會接受輸入原始定型模型的參數，並用它們作為重新定型流程的起點。  
+重新定型模型的流程與定型模型的流程沒什麼不同。 唯一的差別在於，除了資料外，[`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*) 方法也會接受輸入原始定型模型的參數，並用它們作為重新定型流程的起點。
 
 ```csharp
 // New Data
@@ -94,7 +94,7 @@ IDataView newData = mlContext.Data.LoadFromEnumerable<HousingData>(housingData);
 IDataView transformedNewData = dataPrepPipeline.Transform(newData);
 
 // Retrain model
-RegressionPredictionTransformer<LinearRegressionModelParameters> retrainedModel = 
+RegressionPredictionTransformer<LinearRegressionModelParameters> retrainedModel =
     mlContext.Regression.Trainers.OnlineGradientDescent()
         .Fit(transformedNewData, originalModelParameters);
 ```
@@ -108,7 +108,7 @@ RegressionPredictionTransformer<LinearRegressionModelParameters> retrainedModel 
 LinearRegressionModelParameters retrainedModelParameters = retrainedModel.Model as LinearRegressionModelParameters;
 
 // Inspect Change in Weights
-var weightDiffs = 
+var weightDiffs =
     originalModelParameters.Weights.Zip(
         retrainedModelParameters.Weights, (original, retrained) => original - retrained).ToArray();
 
@@ -119,7 +119,7 @@ for(int i=0;i < weightDiffs.Count();i++)
 }
 ```
 
-下表顯示輸出可能呈現的結果。 
+下表顯示輸出可能呈現的結果。
 
 |原始 | 重新定型 | 差異 |
 |---|---|---|

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 2105a6dd25a7f6e5e4c1ce286be7f60beae1dca0
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 625c3cb82a8659c742b540724e5cf31be65a705e
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697614"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089105"
 ---
-# <a name="smtp-element-network-settings"></a>@no__t 0smtp > 元素（網路設定）
+# <a name="smtp-element-network-settings"></a>\<smtp > 元素（網路設定）
 設定傳送電子郵件的傳遞格式、傳遞方法和寄件者位址。  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<mailSettings >** ](mailsettings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<smtp >**  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<mailSettings >** ](mailsettings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**smtp >**
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +46,7 @@ ms.locfileid: "71697614"
 |`deliveryMethod`|指定電子郵件的傳遞方法。 可接受的值為 Network、PickupDirectoryFromIis 和 SpecifiedPickupDirectory。|  
 |`from`|指定外寄電子郵件的寄件者位址。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |屬性|描述|  
 |---------------|-----------------|  
@@ -55,7 +55,7 @@ ms.locfileid: "71697614"
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**描述**|  
+|**目**|**說明**|  
 |-----------------|---------------------|  
 |[\<mailSettings> 項目 (網路設定)](mailsettings-element-network-settings.md)|設定郵件傳送選項。|  
   
@@ -78,7 +78,7 @@ ms.locfileid: "71697614"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>

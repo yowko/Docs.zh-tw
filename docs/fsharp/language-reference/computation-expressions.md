@@ -1,13 +1,13 @@
 ---
 title: 計算運算式
 description: 瞭解如何在中F#建立可使用控制流程結構和系結進行排序和合併的方便撰寫運算語法。
-ms.date: 03/15/2019
-ms.openlocfilehash: 2f0eb7686378766f6b379f0401589490f01a1963
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: c9ac0454221782a7ccb3d41850ca6aba4e20a72a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424748"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976794"
 ---
 # <a name="computation-expressions"></a>計算運算式
 
@@ -112,6 +112,34 @@ for sq in squares do
     printfn "%d" sq
 ```
 
+在大部分的情況下，呼叫端可能會省略它。 省略 `yield` 的最常見方式是使用 `->` 運算子：
+
+```fsharp
+let squares =
+    seq {
+        for i in 1..10 -> i * i
+    }
+
+for sq in squares do
+    printfn "%d" sq
+```
+
+若為更複雜的運算式，可能會產生許多不同的值，而且可能有條件地省略關鍵字，可以執行下列動作：
+
+```fsharp
+let weekdays includeWeekend =
+    seq {
+        "Monday"
+        "Tuesday"
+        "Wednesday"
+        "Thursday"
+        "Friday"
+        if includeWeekend then
+            "Saturday"
+            "Sunday"
+    }
+```
+
 如同[ C#中的 yield 關鍵字](../../csharp/language-reference/keywords/yield.md)，計算運算式中的每個專案都會在反覆運算時傳回。
 
 `yield` 是由產生器型別上的 `Yield(x)` 成員所定義，其中 `x` 是要傳回的專案。
@@ -143,6 +171,8 @@ printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 評估時，`yield!` 所呼叫的計算運算式會將其專案逐一傳回，並將結果簡維。
 
 `yield!` 是由產生器型別上的 `YieldFrom(x)` 成員所定義，其中 `x` 是值的集合。
+
+不同于 `yield`，必須明確指定 `yield!`。 其行為在計算運算式中不是隱含的。
 
 ### `return`
 
@@ -394,7 +424,7 @@ comp |> step |> step |> step |> step
 type Microsoft.FSharp.Linq.QueryBuilder with
 
     [<CustomOperation("existsNot")>]
-    member __.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
+    member _.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
         Enumerable.Any (source.Source, Func<_,_>(predicate)) |> not
 ```
 

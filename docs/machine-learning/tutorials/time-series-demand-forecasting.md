@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: e913c27c3501c4c553d7d62f948de31abb3d6f49
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 2482709abfadad0505a40f4c37fd58cee4a2634c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740543"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978193"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>教學課程：使用時間序列分析和 ML.NET 預測自行車出租服務需求
 
@@ -37,9 +37,9 @@ ms.locfileid: "73740543"
 
 ## <a name="understand-the-problem"></a>了解問題
 
-為了執行有效率的作業，清查管理扮演重要的角色。 存貨中有太多產品，表示坐在貨架上的 unsold 產品不會產生任何收益。 產品過少會導致銷售和客戶從競爭者購買。 因此，常數的問題是，最適合的清查數量為何？ 時間序列分析會查看歷程記錄資料、識別模式，並使用此資訊來預測未來一些時間的值，以協助提供這些問題的答案。 
+為了執行有效率的作業，清查管理扮演重要的角色。 存貨中有太多產品，表示坐在貨架上的 unsold 產品不會產生任何收益。 產品過少會導致銷售和客戶從競爭者購買。 因此，常數的問題是，最適合的清查數量為何？ 時間序列分析會查看歷程記錄資料、識別模式，並使用此資訊來預測未來一些時間的值，以協助提供這些問題的答案。
 
-分析本教學課程中使用的資料的技術是單一變數時間序列分析。 單一變數時間序列分析會以特定間隔（例如每月銷售），查看一段時間內的單一數值觀察。 
+分析本教學課程中使用的資料的技術是單一變數時間序列分析。 單一變數時間序列分析會以特定間隔（例如每月銷售），查看一段時間內的單一數值觀察。
 
 本教學課程中使用的演算法是[單一頻譜分析（SSA）](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf)。 SSA 的運作方式是將時間序列分解成一組主要元件。 這些元件可以解讀為與趨勢、雜訊、季節性和許多其他因素相對應的信號部分。 然後，系統會重建這些元件，並用來預測未來一些時間的值。
 
@@ -62,7 +62,7 @@ ms.locfileid: "73740543"
 > [!NOTE]
 > 本教學課程中使用的資料來自[UCI 自行車共用資料集](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)。 Fanaee-T、Hadi 和 Gama、Joao、「結合集團偵測器和背景知識的事件標記」、人工智慧中的進度（2013）： pp 1-15、Springer link 柏林 Heidelberg、 [Web 連結](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3)。
 
-原始資料集包含數個對應至季節性和氣象的資料行。 為了簡潔起見，因為本教學課程中使用的演算法只需要單一數值資料行中的值，所以原始資料集已壓縮成隻包含下列資料行：  
+原始資料集包含數個對應至季節性和氣象的資料行。 為了簡潔起見，因為本教學課程中使用的演算法只需要單一數值資料行中的值，所以原始資料集已壓縮成隻包含下列資料行：
 
 - **dteday**：觀察的日期。
 - **year**：觀察的編碼年份（0 = 2011，1 = 2012）。
@@ -94,7 +94,7 @@ CREATE TABLE [Rentals] (
 
 1. 建立 `ModelInput` 類別。 在 `Program` 類別底下，新增下列程式碼。
 
-    [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L120-L127)]    
+    [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L120-L127)]
 
     `ModelInput` 類別包含下列資料行：
 
@@ -134,7 +134,7 @@ CREATE TABLE [Rentals] (
 
     [!code-csharp [DefineSQLQuery](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L25)]
 
-    ML.NET 演算法預期資料的類型[`Single`](xref:System.Single)。 因此，來自資料庫的數值若不是[`Real`](xref:System.Data.SqlDbType)的類型，則必須將單精確度浮點數轉換成[`Real`](xref:System.Data.SqlDbType)。 
+    ML.NET 演算法預期資料的類型[`Single`](xref:System.Single)。 因此，來自資料庫的數值若不是[`Real`](xref:System.Data.SqlDbType)的類型，則必須將單精確度浮點數轉換成[`Real`](xref:System.Data.SqlDbType)。
 
     [`Year`] 和 [`TotalRental`] 資料行都是資料庫中的兩個整數類型。 使用 `CAST` 內建函數時，它們都會轉換成 `Real`。
 
@@ -146,7 +146,7 @@ CREATE TABLE [Rentals] (
 
     [!code-csharp [LoadData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L31)]
 
-1. 此資料集包含兩年的資料。 只有第一年的資料會用於定型，第二年則是用來比較實際值與模型產生的預測。 使用[`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*)轉換來篩選資料。 
+1. 此資料集包含兩年的資料。 只有第一年的資料會用於定型，第二年則是用來比較實際值與模型產生的預測。 使用[`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*)轉換來篩選資料。
 
     [!code-csharp [SplitData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L33-L34)]
 
@@ -158,7 +158,7 @@ CREATE TABLE [Rentals] (
 
     [!code-csharp [DefinePipeline](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L36-L45)]
 
-    `forecastingPipeline` 會在第一年取得365資料點，並取樣，或將時間序列資料集分割成 `seriesLength` 參數所指定的30天（每月）間隔。 每個範例都是透過每週或7天的時段進行分析。 在判斷下一個期間的預測值為何時，會使用過去七天的值進行預測。 此模型設定為以 `horizon` 參數定義的未來預測七個週期。 由於預測是一種明智的猜測，因此不一定總是100% 精確。 因此，最好能在最佳和最糟的案例中，根據上限和下限所定義的值範圍來瞭解。 在此情況下，較低和上限的信心層級會設定為95%。 信賴等級可以相應增加或減少。 值愈高，範圍的寬度就會介於上限和下限之間，以達到所需的信心層級。 
+    `forecastingPipeline` 會在第一年取得365資料點，並取樣，或將時間序列資料集分割成 `seriesLength` 參數所指定的30天（每月）間隔。 每個範例都是透過每週或7天的時段進行分析。 在判斷下一個期間的預測值為何時，會使用過去七天的值進行預測。 此模型設定為以 `horizon` 參數定義的未來預測七個週期。 由於預測是一種明智的猜測，因此不一定總是100% 精確。 因此，最好能在最佳和最糟的案例中，根據上限和下限所定義的值範圍來瞭解。 在此情況下，較低和上限的信心層級會設定為95%。 信賴等級可以相應增加或減少。 值愈高，範圍的寬度就會介於上限和下限之間，以達到所需的信心層級。
 
 1. 使用[`Fit`](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator.Fit*)方法來定型模型，並將資料符合先前定義的 `forecastingPipeline`。
 
@@ -173,7 +173,7 @@ CREATE TABLE [Rentals] (
     ```csharp
     static void Evaluate(IDataView testData, ITransformer model, MLContext mlContext)
     {
-        
+
     }
     ```
 
@@ -200,7 +200,7 @@ CREATE TABLE [Rentals] (
     若要評估效能，會使用下列計量：
 
     - **平均絕對錯誤**：測量接近預測與實際值的方式。 這個值的範圍介於0與無限大之間。 愈接近0，模型的品質愈好。
-    - **根平均平方誤差**：摘要說明模型中的憑證錯誤。 這個值的範圍介於0與無限大之間。 愈接近0，模型的品質愈好。
+    - **根平均平方誤差**：摘要說明模型中的錯誤。 這個值的範圍介於0與無限大之間。 愈接近0，模型的品質愈好。
 
 1. 將計量輸出至主控台。
 
@@ -278,7 +278,7 @@ CREATE TABLE [Rentals] (
 
 ![實際與預測比較](./media/time-series-demand-forecasting/forecast.png)
 
-雖然預測的值不會預測確切的租用數目，但它們提供的值範圍較窄，可讓作業優化資源的使用。 
+雖然預測的值不會預測確切的租用數目，但它們提供的值範圍較窄，可讓作業優化資源的使用。
 
 恭喜您！ 您現在已成功建立時間序列機器學習模型來預測自行車出租需求。
 

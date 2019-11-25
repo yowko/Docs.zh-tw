@@ -7,27 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - BC32500
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
-ms.openlocfilehash: d27c326b6a88271ba4abf0144e71027f6671b17e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7b6e42480075666ce9f7e8fc6966bd4bb6b888a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054376"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977321"
 ---
-# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>'\<屬性 >' 無法套用，因為 GUID 的格式'\<編號 >' 不正確
-A`COMClassAttribute`屬性區塊指定全域唯一識別碼 (GUID) guid 不符合為適當格式。 `COMClassAttribute` 使用 Guid 來唯一識別類別、 介面，以及建立事件。  
+# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>'\<屬性 > ' 無法套用，因為 GUID '\<號碼 > ' 的格式不正確
+
+`COMClassAttribute` 屬性區塊會指定不符合 GUID 適當格式的全域唯一識別碼（GUID）。 `COMClassAttribute` 使用 Guid 來唯一識別類別、介面和建立事件。  
   
- GUID 由 16 個位元組組成，前八位是數字，後八位是二進位。 它由 Microsoft 公用程式，例如 uuidgen.exe 所產生，而且保證是唯一的時間和空間內。  
+ GUID 由 16 個位元組組成，前八位是數字，後八位是二進位。 它是由 Microsoft 公用程式（例如 uuidgen）所產生，並保證在空間和時間中是唯一的。  
   
- **錯誤 ID:** BC32500  
+ **錯誤識別碼：** BC32500  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. 判斷正確的 GUID 或需要識別 COM 物件的 Guid。  
+1. 判斷識別 COM 物件所需的正確 GUID 或 Guid。  
   
 2. 請確定正確複製要呈現給 `COMClassAttribute` 屬性區塊的 GUID 字串。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Guid>
 - [屬性概觀](../../../visual-basic/programming-guide/concepts/attributes/index.md)

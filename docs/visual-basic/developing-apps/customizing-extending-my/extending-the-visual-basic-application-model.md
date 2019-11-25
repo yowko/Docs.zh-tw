@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: 02a964506d976cb10f3f28f83f0655fecc447e59
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 46c18ab540c90c4147514685c2acc824755b435f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582755"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976854"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>擴充 Visual Basic 應用程式模型
 
@@ -31,7 +31,7 @@ Visual Basic 應用程式模型也會提供 <xref:Microsoft.VisualBasic.Applicat
 
 ## <a name="overriding-the-base-methods"></a>覆寫基底方法
 
-@No__t_0 方法會定義 `Application` 方法的執行順序。 根據預設，Windows Forms 應用程式的 `Sub Main` 程式會呼叫 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> 方法。
+<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> 方法會定義 `Application` 方法的執行順序。 根據預設，Windows Forms 應用程式的 `Sub Main` 程式會呼叫 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> 方法。
 
 如果應用程式是一般應用程式（多重實例應用程式）或單一實例應用程式的第一個實例，則 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> 方法會依下列循序執行 `Overridable` 方法：
 
@@ -39,11 +39,11 @@ Visual Basic 應用程式模型也會提供 <xref:Microsoft.VisualBasic.Applicat
 
      如果此函數傳回 `False`，則會取消應用程式啟動順序。 當應用程式不應該執行的情況下，這會很有用。
 
-     @No__t_0 方法會呼叫下列方法：
+     <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> 方法會呼叫下列方法：
 
     1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> 決定應用程式是否已定義啟動顯示畫面，如果有，則會在個別的執行緒上顯示啟動顯示畫面。
 
-         @No__t_0 方法包含的程式碼，會在至少顯示 [<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>] 屬性所指定之毫秒數的啟動顯示畫面。 若要使用這項功能，您必須使用 [**專案設計**工具] （將 [`My.Application.MinimumSplashScreenDisplayTime`] 屬性設為兩秒），將啟動顯示畫面新增至應用程式，或在覆寫 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> 或 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> 方法的方法中設定 `My.Application.MinimumSplashScreenDisplayTime` 屬性。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>。
+         <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> 方法包含的程式碼，會在至少顯示 [<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>] 屬性所指定之毫秒數的啟動顯示畫面。 若要使用這項功能，您必須使用 [**專案設計**工具] （將 [`My.Application.MinimumSplashScreenDisplayTime`] 屬性設為兩秒），將啟動顯示畫面新增至應用程式，或在覆寫 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> 或 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> 方法的方法中設定 `My.Application.MinimumSplashScreenDisplayTime` 屬性。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>。
 
     2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> 允許設計工具發出初始化啟動顯示畫面的程式碼。
 
@@ -79,10 +79,11 @@ Visual Basic 應用程式模型也會提供 <xref:Microsoft.VisualBasic.Applicat
 
  如果應用程式是單一實例應用程式，且應用程式已在執行中，則應用程式的後續實例會在應用程式的原始實例上呼叫 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A> 方法，然後結束。
 
- @No__t_0 的函式會呼叫 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 屬性，以決定要用於應用程式表單的文字轉譯引擎。 根據預設，<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 屬性會傳回 `False`，表示使用的是 GDI 文字轉譯引擎，這是 Visual Basic 2005 和更新版本中的預設值。 您可以覆寫 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 屬性以傳回 `True`，這表示會使用 GDI + 文字轉譯引擎，這是 Visual Basic .NET 2002 和 Visual Basic .NET 2003 中的預設值。
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> 的函式會呼叫 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 屬性，以決定要用於應用程式表單的文字轉譯引擎。 根據預設，<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 屬性會傳回 `False`，表示使用的是 GDI 文字轉譯引擎，這是 Visual Basic 2005 和更新版本中的預設值。 您可以覆寫 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 屬性以傳回 `True`，這表示會使用 GDI + 文字轉譯引擎，這是 Visual Basic .NET 2002 和 Visual Basic .NET 2003 中的預設值。
 
 ## <a name="configuring-the-application"></a>設定應用程式
- @No__t_0 類別是 Visual Basic 應用程式模型的一部分，提供設定應用程式的受保護屬性。 這些屬性應設定于實作為執行類別的函式中。
+
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 類別是 Visual Basic 應用程式模型的一部分，提供設定應用程式的受保護屬性。 這些屬性應設定于實作為執行類別的函式中。
 
  在預設的 Windows Forms 專案中，[**專案設計**工具] 會建立程式碼，以使用設計工具設定來設定屬性。 只有在應用程式啟動時，才會使用這些屬性;在應用程式啟動後設定它們不會有任何作用。
 

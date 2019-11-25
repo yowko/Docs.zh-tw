@@ -8,20 +8,20 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: 96a8c9accc56274b5cc13dc2a871165857b3a2d9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: ca0a9a4b37f28eb03f58de4fd9b120cb7e654e0c
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699815"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088647"
 ---
-# <a name="cryptographysettings-element"></a>@no__t 0cryptographySettings > 元素
+# <a name="cryptographysettings-element"></a>\<cryptographySettings > 元素
 包含密碼編譯設定。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<cryptographySettings >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<cryptographySettings >**
+
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -35,22 +35,22 @@ ms.locfileid: "71699815"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
-|[\<cryptoNameMapping>](cryptonamemapping-element.md)|包含易記名稱的類別對應。|  
-|[\<oidMap>](oidmap-element.md)|包含對類別的 asn.1 物件識別元（OID）對應。|  
+|[\<cryptoNameMapping >](cryptonamemapping-element.md)|包含易記名稱的類別對應。|  
+|[\<oidMap >](oidmap-element.md)|包含對類別的 asn.1 物件識別元（OID）對應。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`mscorlib`|`cryptographySettings`包含元素。|  
+|`mscorlib`|包含 `cryptographySettings` 元素。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 **@no__t 1cryptographySettings >** 元素來包含密碼編譯名稱對應和 OID 對應。 這個範例會設定執行時間，讓 <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> 會傳回 `MyHashClass` 物件，而 @no__t 2 類別則會對應至物件識別碼1.3.36.2.1。  
+ 下列範例示範如何使用\<的**cryptographySettings >** 元素來包含密碼編譯名稱對應和 OID 對應。 這個範例會設定執行時間，讓 <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> 傳回 `MyHashClass` 物件，而 `MyCryptoClass` 類別則會對應至物件識別碼1.3.36.2.1。  
   
 ```xml  
 <configuration>  
@@ -76,8 +76,8 @@ ms.locfileid: "71699815"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [組態檔結構描述](../index.md)
 - [密碼編譯設定結構描述](index.md)
-- [The signature is valid](../../../../standard/security/cryptographic-services.md)
+- [密碼編譯服務](../../../../standard/security/cryptographic-services.md)

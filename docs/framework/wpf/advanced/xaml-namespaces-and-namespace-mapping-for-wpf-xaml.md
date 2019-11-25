@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 8f381a06aa916be378052d00f0d65f37ef910433
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5cce8ff04dbf163aba95346447f0557da14197da
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740658"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976770"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML 的 XAML 命名空間和命名空間對應
 本主題會進一步說明 WPF XAML 檔案根標記中常見的兩個 XAML 命名空間對應之現況與目的。 本文也會說明如何產生類似的對應，以使用自己的程式碼中所定義的項目和 (或) 個別組件內的項目。  
@@ -112,7 +112,7 @@ End Namespace
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>設計工具命名空間和其他來自 XAML 範本的前置詞  
  如果您是使用 WPF XAML 的開發環境及/或設計工具，您可能會注意到 XAML 標記內含有其他已定義的 XAML 命名空間/前置詞。  
   
- [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 使用的設計工具命名空間，通常會對應至前置詞 `d:`。 WPF 的較新專案範本可能會預先進行這個 XAML 命名空間的對應，以支援 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 和其他設計環境之間的 XAML 交換。 這種 XAML 命名空間的設計用意是為了在設計工具中以 XAML 為基礎的 UI 之間來回時，永久保存設計狀態。 它也會用於 `d:IsDataSource` 這類功能，以啟用設計工具中的執行階段資料來源。  
+ Visual Studio 的 WPF 設計工具會使用通常對應至前置詞 `d:`的設計工具命名空間。 WPF 的較新專案範本可能會預先對應這個 XAML 命名空間，以支援 Visual Studio 和其他設計環境的 WPF 設計工具之間的 XAML 交換。 這種 XAML 命名空間的設計用意是為了在設計工具中以 XAML 為基礎的 UI 之間來回時，永久保存設計狀態。 它也會用於 `d:IsDataSource` 這類功能，以啟用設計工具中的執行階段資料來源。  
   
  另一個您可能會看到的對應前置詞是 `mc:`。 `mc:` 適用於標記相容性，其可運用的標記相容性模式不一定為 XAML 特有。 標記相容性功能在某種程度來說，可以用來在架構之間或跨支援實作的其他界限交換 XAML、進行 XAML 結構描述內容之間的工作、在設計工具中的限制模式提供相容性等等。 如需標記相容性概念以及其與 WPF 之關聯的詳細資訊，請參閱[標記相容性 (mc:) 語言功能](markup-compatibility-mc-language-features.md)。  
   

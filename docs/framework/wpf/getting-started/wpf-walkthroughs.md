@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: 34cd7e96442a570a3951e6303d2ac90ce5da6239
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: fbd5006611a0a8e0d90b589df7b2cb6a34101457
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920402"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977035"
 ---
 # <a name="wpf-walkthroughs"></a>WPF 逐步解說
 逐步解說提供常見案例的逐步指示。 因此是開始學習產品或特定功能領域的最佳入門。
@@ -21,11 +21,11 @@ ms.locfileid: "72920402"
 
 |標題|描述|
 |-----------|-----------------|
-|[逐步解說：使用 WPF 設計工具建立簡單的 WPF 應用程式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|示範如何使用 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]建立簡單的 WPF 應用程式。|
+|[逐步解說：使用 WPF 設計工具建立簡單的 WPF 應用程式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|示範如何使用 WPF 設計工具來建立簡單的 WPF 應用程式。|
 |[逐步解說：建立動態版面配置](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|示範如何使用 <xref:System.Windows.Controls.Grid> 面板控制項來建立動態版面配置。|
 |[逐步解說：使用 WPF 設計工具建立可調整大小的應用程式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546954(v=vs.100))|示範如何建立可讓使用者在執行時間調整大小的視窗版面配置。|
-|[逐步解說：使用 WPF 設計工具建立資料系結](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|示範如何使用 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] 來建立將資料連線至控制項的資料系結。|
-|[逐步解說：使用 DesignInstance 系結至設計工具中的資料](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|示範如何在設計階段使用 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]，針對在執行時間指派的資料內容建立資料系結。|
+|[逐步解說：使用 WPF 設計工具建立資料系結](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|示範如何使用 WPF 設計工具來建立將資料連線至控制項的資料系結。|
+|[逐步解說：使用 DesignInstance 系結至設計工具中的資料](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|示範如何使用 WPF 設計工具，在設計階段針對在執行時間指派的資料內容建立資料系結。|
 
 ## <a name="wpf-walkthroughs"></a>WPF 逐步解說
 

@@ -1,14 +1,14 @@
 ---
 title: 如何使用 ML.NET 自動化的 ML API
 description: ML.NET 自動化的 ML API 會自動化模型建置程序，並產生隨時可供部署的模型。 了解您可用來設定自動化機器學習工作的選項。
-ms.date: 04/24/2019
+ms.date: 11/7/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: bb1cd66e7341f2ada57d533d8b2dcbb48f08f726
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c1c18decc48bc1499aa55210becff305cdec4a53
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774557"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977122"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>如何使用 ML.NET 自動化的機器學習 API
 
@@ -32,6 +32,7 @@ using Microsoft.ML.AutoML;
 ```
 
 ## <a name="select-the-machine-learning-task-type"></a>選取機器學習工作類型
+
 建立實驗之前，請先決定您想要解決的機器學習問題種類。 自動化的機器學習支援下列 ML 工作：
 
 * 二元分類
@@ -62,7 +63,7 @@ using Microsoft.ML.AutoML;
 
 ## <a name="configure-experiment-settings"></a>設定實驗設定
 
-實驗的可設定程度很高。 如需組態設定的完整清單，請參閱 [AutoML API 文件](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet)。
+實驗的可設定程度很高。 如需組態設定的完整清單，請參閱 [AutoML API 文件](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview)。
 
 其中某些範例包括：
 

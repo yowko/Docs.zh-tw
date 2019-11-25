@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: c4f7e31422ccd8129599db1120f9b0cb327d9319
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: b59144f4772c940f8c7e6ca19aa21666069b4b55
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697203"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088823"
 ---
-# <a name="source-element"></a>@no__t 0source > 元素
+# <a name="source-element"></a>\<來源 > 元素
 指定起始追蹤訊息的追蹤來源。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. 診斷 >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<source >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<系統診斷 >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<來源**](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**來源 >**
+
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -38,13 +38,13 @@ ms.locfileid: "71697203"
 |屬性|描述|  
 |---------------|-----------------|  
 |`name`|選擇性屬性。<br /><br /> 指定追蹤來源的名稱。|  
-|`switchName`|選擇性屬性。<br /><br /> 指定應用程式中追蹤參數實例的名稱。 如果參數在 `<switches>` 元素中找不到，則值會指定參數的層級。|  
+|`switchName`|選擇性屬性。<br /><br /> 指定應用程式中追蹤參數實例的名稱。 如果 `<switches>` 元素中找不到參數，則值會指定參數的層級。|  
 |`switchType`|選擇性屬性。<br /><br /> 指定追蹤參數的類型。 如果存在的話，類型必須是有效的類別名稱，而且不能是空字串。|  
 |`extraAttribute`|選擇性屬性。<br /><br /> 針對該追蹤來源的 <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> 方法所識別的追蹤來源特定屬性，指定其值。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<listeners>](listeners-element-for-source.md)|包含收集、儲存及路由傳送訊息的接聽程式。|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "71697203"
  此元素可用於電腦設定檔（Machine.config）和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 `<source>` 元素來新增追蹤來源 `mySource`，並設定名為 `sourceSwitch` 之來源交換器的層級。 隨即加入主控台追蹤接聽程式，將追蹤資訊寫入主控台。  
+ 下列範例示範如何使用 `<source>` 專案來新增追蹤來源 `mySource` 並設定名為 `sourceSwitch`之來源交換器的層級。 隨即加入主控台追蹤接聽程式，將追蹤資訊寫入主控台。  
   
 ```xml  
 <configuration>  
@@ -82,7 +82,7 @@ ms.locfileid: "71697203"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [追蹤和偵錯設定結構描述](index.md)
 - [追蹤參數](../../../debug-trace-profile/trace-switches.md)

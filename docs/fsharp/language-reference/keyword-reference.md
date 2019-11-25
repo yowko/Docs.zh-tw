@@ -1,13 +1,13 @@
 ---
 title: 關鍵字參考
 description: 尋找所有F#語言關鍵字的相關資訊連結。
-ms.date: 05/16/2016
-ms.openlocfilehash: 2be6d078653a4595cbdfe97be7aab8e3b3c10ea9
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: 64bb680a0861f4b8287f887ea67edb6fcf4f88a6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425089"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976625"
 ---
 # <a name="keyword-reference"></a>關鍵字參考
 
@@ -87,7 +87,7 @@ ms.locfileid: "73425089"
 |`when`|[條件約束](./generics/constraints.md)|用於模式比對上的布林值條件（若有*防護*），並引進泛型型別參數的條件約束子句。|
 |`while`|[迴圈：`while...do` 運算式](loops-while-do-expression.md)|引進迴圈結構。|
 |`with`|[比對運算式](match-expressions.md)<br /><br />[物件運算式](object-expressions.md)<br /><br />[複製和更新記錄運算式](copy-and-update-record-expressions.md)<br /><br />[類型延伸模組](type-extensions.md)<br /><br />[例外狀況：`try...with` 運算式](./exception-handling/the-try-with-expression.md)|與模式比對運算式中的 `match` 關鍵字一起使用。 也用於物件運算式、記錄複製運算式，以及引入成員定義的類型延伸，以及引進例外狀況處理常式。|
-|`yield`|[序列](sequences.md)|用於序列運算式中，以產生序列的值。|
+|`yield`|[清單](lists.md)、[陣列](arrays.md)、[順序](sequences.md)|用於清單、陣列或序列運算式中，以產生序列的值。 通常可以省略，因為在大部分的情況下，它是隱含的。|
 |`yield!`|[計算運算式](computation-expressions.md)<br /><br />[非同步工作流程](asynchronous-workflows.md)|用於計算運算式中，將指定計算運算式的結果附加至包含計算運算式的結果集合。|
 
 下列標記會保留在中F# ，因為它們是 OCaml 語言中的關鍵字：

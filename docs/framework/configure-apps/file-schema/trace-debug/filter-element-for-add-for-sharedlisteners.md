@@ -1,5 +1,5 @@
 ---
-title: 適用于 <sharedListeners> <add> 的 <filter> 元素
+title: 適用于 <add> 的 <filter> 元素 <sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 4e92f80e9f6069b5fa70501e13a55d5a6fe95e7a
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e04ecd773bd6aa7791858711edbd72128dc391ea
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697317"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088873"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<sharedListeners 的 \<add > 的 @no__t 0filter > 元素 >
+# <a name="filter-element-for-add-for-sharedlisteners"></a>針對 \<s 的 \<新增 > \<篩選 > 元素 >
 將篩選新增至 `sharedListeners` 集合中的接聽項。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. 診斷 >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sharedListeners >** ](sharedlisteners-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<add >** ](add-element-for-sharedlisteners.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<filter >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<系統診斷 >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<s >** ](sharedlisteners-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<新增 >** ](add-element-for-sharedlisteners.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<篩選 >**
+
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -40,10 +40,10 @@ ms.locfileid: "71697317"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|**type**|必要屬性。<br /><br /> 指定篩選準則的類型。 您只能使用類型的完整名稱（格式為 <xref:System.Type.FullName%2A?displayProperty=nameWithType> 屬性），也可以使用包含元件資訊的完整型別名稱（格式為 <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> 屬性）。 如需建立完整型別名稱的相關資訊，請參閱[指定完整的型別名稱](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
+|**type**|必要屬性。<br /><br /> 指定篩選準則的類型。 您只能使用類型的完整名稱（以 <xref:System.Type.FullName%2A?displayProperty=nameWithType> 屬性的格式），也可以使用包含元件資訊的完整型別名稱（以 <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> 屬性的格式）。 如需建立完整型別名稱的相關資訊，請參閱[指定完整的型別名稱](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
 |**initializeData**|選擇性屬性。<br /><br /> 傳遞至指定類別之函數的字串。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -56,12 +56,12 @@ ms.locfileid: "71697317"
 |`add`|將接聽程式加入至**s**集合。|  
   
 ## <a name="remarks"></a>備註  
- 如果接聽程式是在 `<sharedListeners>` 元素的 `<add>` 元素中定義，則該接聽程式的篩選器應該定義于屬於 `<add>` 元素子系的 @no__t 2 元素中。  
+ 如果接聽程式是在 `<sharedListeners>` 專案的 `<add>` 專案中定義，則該接聽程式的篩選器應定義于屬於 `<add>` 專案子系的 `<filter>` 元素中。  
   
  此元素可用於電腦設定檔（Machine.config）和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 `<filter>` 元素，將篩選準則加入至 @no__t 2 集合中的追蹤接聽項 `console`。  
+ 下列範例顯示如何使用 `<filter>` 專案，將篩選加入至 `sharedListeners` 集合中的追蹤接聽項 `console`。  
   
 ```xml  
 <configuration>  
@@ -85,7 +85,7 @@ ms.locfileid: "71697317"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Diagnostics.TraceFilter>
 - <xref:System.Diagnostics.TraceListener>

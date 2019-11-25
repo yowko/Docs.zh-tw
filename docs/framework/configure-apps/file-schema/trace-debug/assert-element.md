@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: 30ec24aefcf8c4d1e110238a2c60a958eded5545
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: f3c1a1670139a8262dea449bfff99c7c1c19f088
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699391"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088939"
 ---
-# <a name="assert-element"></a>@no__t 0assert > 元素
+# <a name="assert-element"></a>\<assert > 元素
 指定呼叫 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法時是否要顯示訊息方塊，此外也會指定寫入訊息之目的地檔案的名稱。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. 診斷 >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<assert >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<系統診斷 >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<assert >**
+
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -45,7 +45,7 @@ ms.locfileid: "71699391"
 |`true`|顯示訊息方塊。 這是預設值。|  
 |`false`|不會顯示訊息方塊。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -56,10 +56,10 @@ ms.locfileid: "71699391"
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
   
 ## <a name="remarks"></a>備註  
- 在這兩個屬性 **\<判斷提示>** 是選擇性的項目。 您可以停用訊息方塊，但不指定要寫入訊息的檔案，或者您也可以指定要寫入訊息的檔案，同時讓訊息方塊保持啟用。  
+ **\<assert >** 元素中的兩個屬性都是選擇性的。 您可以停用訊息方塊，但不指定要寫入訊息的檔案，或者您也可以指定要寫入訊息的檔案，同時讓訊息方塊保持啟用。  
   
 ## <a name="example"></a>範例  
- 下列範例顯示當您呼叫**Debug. Assert**並將訊息寫入 `c:\log.txt` 時，如何停用顯示訊息方塊。  
+ 下列範例顯示當您呼叫**Debug. Assert**並將訊息寫入 `c:\log.txt`時，如何停用顯示訊息方塊。  
   
 ```xml  
 <configuration>  
@@ -69,7 +69,7 @@ ms.locfileid: "71699391"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Diagnostics.Debug>
 - [追蹤和偵錯設定結構描述](index.md)

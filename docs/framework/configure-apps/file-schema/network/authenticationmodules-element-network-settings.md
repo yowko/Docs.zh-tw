@@ -8,20 +8,20 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: 4fe44deba951e5302518ed855589ad1b0ca75343
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: bacaaf92464a355804a9ea8307f6e6f1caac1f05
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699526"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087618"
 ---
-# <a name="authenticationmodules-element-network-settings"></a>@no__t 0authenticationModules > 元素（網路設定）
+# <a name="authenticationmodules-element-network-settings"></a>\<Authenticationmodules 專案 > 元素（網路設定）
 指定用來驗證網路要求的模組。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<authenticationModules >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<authenticationmodules 專案 >**
+
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -35,9 +35,9 @@ ms.locfileid: "71699526"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
-|**目**|**描述**|  
+|**目**|**說明**|  
 |-----------------|---------------------|  
 |[add](add-element-for-authenticationmodules-network-settings.md)|將驗證模組新增至應用程式。|  
 |[clear](clear-element-for-authenticationmodules-network-settings.md)|清除應用程式中的所有驗證模組。|  
@@ -45,12 +45,12 @@ ms.locfileid: "71699526"
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**描述**|  
+|**目**|**說明**|  
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   
 ## <a name="remarks"></a>備註  
- @No__t-0 元素會指定用來進行伺服器驗證程式的驗證模組。 驗證模組必須執行 0 @no__t 介面。  
+ `authenticationModule` 元素會指定用來進行伺服器驗證程式的驗證模組。 驗證模組必須執行 <xref:System.Net.IAuthenticationModule> 介面。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
@@ -69,7 +69,7 @@ ms.locfileid: "71699526"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>

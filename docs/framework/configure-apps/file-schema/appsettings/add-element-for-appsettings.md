@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09864ea8f174d0c23f26db49f8cc0d43608522a0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 865c693bf8f23bf050064ac097b72aa6fa3b371e
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119331"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088751"
 ---
 # <a name="add-element-for-appsettings"></a>\<新增 \<appSettings 的 > 元素 >
 
 新增自訂應用程式設定。
 
-[ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<新增 >**
 
 ## <a name="syntax"></a>語法

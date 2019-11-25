@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-ms.openlocfilehash: b125b3c6527da405deb600ba7334ef18220f1601
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0e88303f2bac2dae90a97f9d2de92af1d2a0f80d
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132873"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976483"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework 中的類型轉換
-<a name="top"></a>每個值都有相關聯的類型，該類型定義屬性，例如配置給值的空間量、能夠擁有的可能值範圍，以及提供的成員。 許多值都可以表示成多種類型。 例如，數值 4 就可以表示成整數值或浮點 (Floating-Point) 值。 類型轉換會建立新類型的值，與舊類型的值相等，但是不一定會保留原始物件的識別 (或實際的值)。  
+每個值都有相關聯的類型，該類型定義屬性，例如配置給值的空間量、能夠擁有的可能值範圍，以及提供的成員。 許多值都可以表示成多種類型。 例如，數值 4 就可以表示成整數值或浮點 (Floating-Point) 值。 類型轉換會建立新類型的值，與舊類型的值相等，但是不一定會保留原始物件的識別 (或實際的值)。  
   
  .NET Framework 自動支援下列轉換︰  
   
@@ -46,17 +46,16 @@ ms.locfileid: "73132873"
   
  除了這些自動轉換以外，.NET Framework 還提供多個支援自訂類型轉換的功能。 這些需求包括下列各項：  
   
-- `Implicit` 運算子，這個運算子定義類型之間可用的擴展轉換。 如需詳細資訊，請參閱[使用 Implicit 運算子的隱含轉換](#implicit_conversion_with_the_implicit_operator)一節。  
+- `Implicit` 運算子，這個運算子定義類型之間可用的擴展轉換。 如需詳細資訊，請參閱[使用 Implicit 運算子的隱含轉換](#implicit-conversion-with-the-implicit-operator)一節。  
   
-- `Explicit` 運算子，這個運算子定義類型之間可用的縮小轉換。 如需詳細資訊，請參閱[使用 Explicit 運算子的明確轉換](#explicit_conversion_with_the_explicit_operator)一節。  
+- `Explicit` 運算子，這個運算子定義類型之間可用的縮小轉換。 如需詳細資訊，請參閱[使用 Explicit 運算子的明確轉換](#explicit-conversion-with-the-explicit-operator)一節。  
   
-- <xref:System.IConvertible> 介面，這個介面定義轉換至每一個基底 .NET Framework 資料類型的方式。 如需詳細資訊，請參閱 [IConvertible 介面](#the_iconvertible_interface)一節。  
+- <xref:System.IConvertible> 介面，這個介面定義轉換至每一個基底 .NET Framework 資料類型的方式。 如需詳細資訊，請參閱 [IConvertible 介面](#the-iconvertible-interface)一節。  
   
-- <xref:System.Convert> 類別，這個類別提供一組方法，這些方法實作 <xref:System.IConvertible> 介面中的方法。 如需詳細資訊，請參閱 [Convert 類別](#Convert)一節。  
+- <xref:System.Convert> 類別，這個類別提供一組方法，這些方法實作 <xref:System.IConvertible> 介面中的方法。 如需詳細資訊，請參閱 [Convert 類別](#the-convert-class)一節。  
   
-- <xref:System.ComponentModel.TypeConverter> 類別，這個類別是基底類別，可以擴充來支援從指定的類型轉換至其他任何類型。 如需詳細資訊，請參閱 [TypeConverter 類別](#the_typeconverter_class)一節。  
-  
-<a name="implicit_conversion_with_the_implicit_operator"></a>   
+- <xref:System.ComponentModel.TypeConverter> 類別，這個類別是基底類別，可以擴充來支援從指定的類型轉換至其他任何類型。 如需詳細資訊，請參閱 [TypeConverter 類別](#the-typeconverter-class)一節。  
+
 ## <a name="implicit-conversion-with-the-implicit-operator"></a>使用隱含運算子的隱含轉換  
  擴展轉換包含從現有類型的值來建立新的值，這個類型具有比目標類型更嚴格的範圍或更受限制的成員清單。 擴展轉換不可能導致資料遺失 (雖然可能導致精確度降低)。 因為不可能遺失資料，編譯器可以隱含地 (或直接地) 處理轉換，而不需要使用明確的轉換方法或轉型運算子。  
   
@@ -77,10 +76,7 @@ ms.locfileid: "73132873"
   
  [!code-csharp[Conceptual.Conversion#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/implicit1.cs#3)]
  [!code-vb[Conceptual.Conversion#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/implicit1.vb#3)]  
-  
- [回到頁首](#top)  
-  
-<a name="explicit_conversion_with_the_explicit_operator"></a>   
+
 ## <a name="explicit-conversion-with-the-explicit-operator"></a>使用明確運算子的明確轉換  
  縮小轉換包含從現有類型的值來建立新的值，這個類型具有比目標類型更廣的範圍或更大的成員清單。 因為縮小轉換可能導致資料遺失，編譯器通常會要求必須透過呼叫轉換方法或轉型運算子來明確執行轉換。 也就是說，開發人員程式碼中必須明確處理轉換。  
   
@@ -95,7 +91,7 @@ ms.locfileid: "73132873"
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> 大於 <xref:System.Int32.MaxValue?displayProperty=nameWithType>。|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> 大於 <xref:System.Int32.MaxValue?displayProperty=nameWithType>。|  
   
- 為了處理縮小轉換，.NET Framework 允許類型定義 `Explicit` 運算子。 然後，個別語言編譯器就可以使用自己的語法來實作這個運算子，也可以呼叫 <xref:System.Convert> 類別的成員來執行轉換。 （如需有關 <xref:System.Convert> 類別的詳細資訊，請參閱本主題稍後[的 Convert 類別](#Convert)）。下列範例說明如何使用語言功能來處理將這些可能超出範圍的整數值明確轉換成 <xref:System.Int32> 值。  
+ 為了處理縮小轉換，.NET Framework 允許類型定義 `Explicit` 運算子。 然後，個別語言編譯器就可以使用自己的語法來實作這個運算子，也可以呼叫 <xref:System.Convert> 類別的成員來執行轉換。 （如需有關 <xref:System.Convert> 類別的詳細資訊，請參閱本主題稍後[的 Convert 類別](#the-convert-class)）。下列範例說明如何使用語言功能來處理將這些可能超出範圍的整數值明確轉換成 <xref:System.Int32> 值。  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -120,10 +116,7 @@ ms.locfileid: "73132873"
   
  [!code-csharp[Conceptual.Conversion#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#6)]
  [!code-vb[Conceptual.Conversion#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#6)]  
-  
- [回到頁首](#top)  
-  
-<a name="the_iconvertible_interface"></a>   
+
 ## <a name="the-iconvertible-interface"></a>IConvertible 介面  
  為了支援從任何類型轉換至通用語言執行平台基底類型，.NET Framework 提供 <xref:System.IConvertible> 介面。 實作類型需要提供下列項目：  
   
@@ -138,17 +131,14 @@ ms.locfileid: "73132873"
  [!code-csharp[Conceptual.Conversion#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/iconvertible1.cs#7)]
  [!code-vb[Conceptual.Conversion#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/iconvertible1.vb#7)]  
   
- 由於必須呼叫其介面上的轉換方法，而不是呼叫實作類型上的轉換方法，這種需求使得明確介面實作相當耗費資源。 相反地，在通用語言執行平台基底類型之間轉換時，我們建議您呼叫 <xref:System.Convert> 類別的適當成員。 如需詳細資訊，請參閱下一節 [Convert 類別](#Convert)。  
+ 由於必須呼叫其介面上的轉換方法，而不是呼叫實作類型上的轉換方法，這種需求使得明確介面實作相當耗費資源。 相反地，在通用語言執行平台基底類型之間轉換時，我們建議您呼叫 <xref:System.Convert> 類別的適當成員。 如需詳細資訊，請參閱下一節 [Convert 類別](#the-convert-class)。  
   
 > [!NOTE]
 > 除了 .NET Framework 提供的 <xref:System.IConvertible> 介面和 <xref:System.Convert> 類別之外，個別語言可能還會提供執行轉換的方式。 例如，C# 使用轉型 (Casting) 運算子、Visual Basic 使用編譯器實作的轉換函式，例如 `CType`、`CInt` 和 `DirectCast`。  
   
- 在大多數情況下，<xref:System.IConvertible> 介面的設計主要是支援在 .NET Framework 中的各基底類型之間轉換。 不過，也可以使用自訂類型來實作介面，以支援從該類型轉換至其他自訂類型。 如需詳細資訊，請參閱本主題稍後的[使用 ChangeType 方法的自訂轉換](#ChangeType)一節。  
-  
- [回到頁首](#top)  
-  
-<a name="Convert"></a>   
-## <a name="the-convert-class"></a>Convert 類別  
+ 在大多數情況下，<xref:System.IConvertible> 介面的設計主要是支援在 .NET Framework 中的各基底類型之間轉換。 不過，也可以使用自訂類型來實作介面，以支援從該類型轉換至其他自訂類型。 如需詳細資訊，請參閱本主題稍後的[使用 ChangeType 方法的自訂轉換](#custom-conversions-with-the-changetype-method)一節。
+
+## <a name="the-convert-class"></a>Convert 類別
  雖然可以呼叫每一個基底類別的 <xref:System.IConvertible> 介面實作來執行類型轉換，但建議的語言中立方式是呼叫 <xref:System.Convert?displayProperty=nameWithType> 類別的方法，在不同的基底類型之間轉換。 此外，也可以使用 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法將指定的自訂類型轉換為另一種類型。  
   
 ### <a name="conversions-between-base-types"></a>在基底類型之間轉換  
@@ -168,8 +158,7 @@ ms.locfileid: "73132873"
  [!code-vb[Conceptual.Conversion#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#9)]  
   
  如需同時列出 <xref:System.Convert> 類別所支援之擴展和縮小轉換的表格，請參閱[類型轉換表](../../../docs/standard/base-types/conversion-tables.md)。  
-  
-<a name="ChangeType"></a>   
+
 ### <a name="custom-conversions-with-the-changetype-method"></a>使用 ChangeType 方法的自訂轉換  
  <xref:System.Convert> 類別除了支援轉換為每一個基底類型，也可以用於將自訂類型轉換為一個或多個預先定義的類型。 這種轉換由 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法執行，而這個方法會進一步包裝對於 <xref:System.IConvertible.ToType%2A?displayProperty=nameWithType> 參數之 `value` 方法的呼叫。 這表示由 `value` 參數所表示的物件必須提供 <xref:System.IConvertible> 介面的實作。  
   
@@ -185,10 +174,7 @@ ms.locfileid: "73132873"
   
  [!code-csharp[Conceptual.Conversion#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/iconvertible2.cs#11)]
  [!code-vb[Conceptual.Conversion#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/iconvertible2.vb#11)]  
-  
- [回到頁首](#top)  
-  
-<a name="the_typeconverter_class"></a>   
+
 ## <a name="the-typeconverter-class"></a>TypeConverter 類別  
  .NET Framework 也可讓您延伸 <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType> 類別，並透過 <xref:System.ComponentModel.TypeConverterAttribute?displayProperty=nameWithType> 屬性來建立類型轉換子與類型之間的關聯，以定義自訂類型的類型轉換子。 下表特別強調這種作法與實作自訂類型之 <xref:System.IConvertible> 介面的差異。  
   

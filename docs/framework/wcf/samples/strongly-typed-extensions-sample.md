@@ -2,12 +2,12 @@
 title: 強型別延伸範例
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: 5ee2f13df9d3c0841b3e8b62b1633ea4520d3860
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8dc6bca87989b1ee8e1ee440b0d64e2c196cc28f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421517"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978244"
 ---
 # <a name="strongly-typed-extensions-sample"></a>強型別延伸範例
 基於示範用途，此範例會使用 <xref:System.ServiceModel.Syndication.SyndicationFeed> 類別。 不過在此範例中所示範的模式，可以與所有支援延伸資料的新聞訂閱類別一起使用。  
@@ -90,7 +90,7 @@ public class InReplyToElement : IXmlSerializable
   
  `InReplyToElement` 類別會實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面，這個介面允許直接控制要以何種方式從 XML 讀取物件執行個體，以及將物件執行個體寫入至 XML。 `ReadXml` 方法會先從傳遞給它的 `Ref` 讀取 `HRef`、`Source`、`MediaType` 以及 <xref:System.Xml.XmlReader> 屬性的值。 任何未知的屬性都會儲存在 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 集合中。 當讀取過所有屬性之後，就會呼叫 <xref:System.Xml.XmlReader.ReadStartElement> 使讀取器前進至下一個項目。 由於此類別建立模型的項目沒有所需的子系，因此子項目會緩衝處理至 `XElement` 執行個體並儲存在 <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> 集合中，如下列程式碼所示。  
   
-```csharp  
+```csharp
 public void ReadXml(System.Xml.XmlReader reader)  
 {  
     bool isEmpty = reader.IsEmptyElement;  
@@ -146,7 +146,7 @@ public void ReadXml(System.Xml.XmlReader reader)
   
  在 `WriteXml` 中，`InReplyToElement` 方法會先寫出 `Ref`、`HRef`、`Source` 和 `MediaType` 屬性 (Property) 的值做為 XML 屬性 (Attribute) (`WriteXml` 不負責自己寫入實際外部項目，因為這項作業是由 `WriteXml` 的呼叫者來完成)。 此外，它也會將 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 和 <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> 的內容寫入至寫入器，如下列程式碼所示。  
   
-```csharp  
+```csharp
 public void WriteXml(System.Xml.XmlWriter writer)  
 {  
     if (this.Ref != null)  
@@ -189,7 +189,7 @@ public void WriteXml(System.Xml.XmlWriter writer)
   
  `ThreadedFeed` 類別繼承自 `SyndicationFeed`，並且會覆寫 `OnCreateItem` 以傳回 `ThreadedItem`。 它也實作用來存取 `Items` 集合做為 `ThreadedItems` 的方法，如下列程式碼所示。  
   
-```csharp  
+```csharp
 public class ThreadedFeed : SyndicationFeed  
 {  
     public ThreadedFeed()  
@@ -213,7 +213,7 @@ public class ThreadedFeed : SyndicationFeed
   
  類別 `ThreadedItem` 繼承自 `SyndicationItem`，並且會使 `InReplyToElement` 成為強型別屬性。 這可提供方便、程式設計的方式來存取 `InReplyTo` 延伸資料。 它也會實作 `TryParseElement` 和 `WriteElementExtensions` 以便讀取和寫入其延伸資料，如下列程式碼所示。  
   
-```csharp  
+```csharp
 public class ThreadedItem : SyndicationItem  
 {  
     private InReplyToElement inReplyTo;  

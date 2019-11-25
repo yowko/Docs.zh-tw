@@ -2,12 +2,12 @@
 title: 訊息偵測器
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 01553084aa049688cd05fa36e46fb6f67983fb21
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7b8cc0f8e8aa0544c531566a8fe35f54a3914896
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424143"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977299"
 ---
 # <a name="message-inspectors"></a>訊息偵測器
 這個範例會示範如何實作與設定用戶端和服務訊息偵測器。  
@@ -19,7 +19,7 @@ ms.locfileid: "73424143"
 ## <a name="message-inspector"></a>訊息偵測器  
  用戶端訊息偵測器會實作 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> 介面，而服務訊息偵測器會實作 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> 介面。 該實作可以從用於兩端的訊息偵測器結合至單一類別。 這個範例就會實作這類結合的訊息偵測器。 對已驗證之傳入和傳出訊息傳遞一組結構描述而建構偵測器，該偵測器並可讓開發人員指定是否要驗證傳入或傳出訊息，以及偵測器是否處於分派或用戶端模式，而這都會影響本主題之後會討論的錯誤處理方式。  
   
-```csharp  
+```csharp
 public class SchemaValidationMessageInspector : IClientMessageInspector, IDispatchMessageInspector  
 {  
     XmlSchemaSet schemaSet;  
@@ -206,7 +206,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
   
  下列 `SchemaValidationBehavior` 類別是用來將此範例的訊息偵測器新增至用戶端或分派執行階段的行為。 在這兩個例子中，實作都相當基本。 在 <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> 和 <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> 中，會建立訊息偵測器並新增至相對之執行階段的 <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> 集合中。  
   
-```csharp  
+```csharp
 public class SchemaValidationBehavior : IEndpointBehavior  
 {  
     XmlSchemaSet schemaSet;   
@@ -299,7 +299,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
   
  當執行階段在建置用戶端或端點的同時評估組態資料時，覆寫的 `CreateBehavior` 方法便會將組態資料轉換為行為物件。  
   
-```csharp  
+```csharp
 public class SchemaValidationBehaviorExtensionElement : BehaviorExtensionElement  
 {  
     public SchemaValidationBehaviorExtensionElement()  

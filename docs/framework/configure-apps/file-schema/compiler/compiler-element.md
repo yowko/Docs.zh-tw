@@ -10,21 +10,21 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-ms.openlocfilehash: a19cf8182cdb338fd8596ef38311916de0daae37
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 46676f25597f85596598d6f67c98930971cb0447
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168946"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088048"
 ---
 # <a name="compiler-element"></a>\<編譯器 > 元素
 
 指定語言提供者的編譯器組態屬性。
 
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<system.object >** ](system-codedom-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<編譯器 >** ](compilers-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<編譯器 >**  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system.object >** ](system-codedom-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<編譯器 >** ](compilers-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**編譯器 >**
 
 ## <a name="syntax"></a>語法
 
@@ -46,13 +46,13 @@ ms.locfileid: "70168946"
 
 |屬性|描述|
 |---------------|-----------------|
-|`compilerOptions`|選擇性屬性。<br /><br /> 指定編譯的其他編譯器特定引數。 `compilerOptions`屬性的值通常會列在編譯器的編譯器選項主題中。|
-|`extension`|必要屬性。<br /><br /> 提供語言提供者的原始程式檔所使用的檔案名副檔名清單 (以分號分隔)。 例如, ".cs"。|
-|`language`|必要屬性。<br /><br /> 提供語言提供者所支援的語言名稱清單 (以分號分隔)。 例如, "c #; cs; csharp"。|
-|`type`|必要屬性。<br /><br /> 指定語言提供者的類型名稱, 包括包含提供者實作為元件的名稱。 型別名稱必須符合[指定完整限定型別名稱](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)中所定義的需求。|
+|`compilerOptions`|選擇性屬性。<br /><br /> 指定編譯的其他編譯器特定引數。 `compilerOptions` 屬性的值通常會列在編譯器的編譯器選項主題中。|
+|`extension`|必要屬性。<br /><br /> 提供語言提供者的原始程式檔所使用的檔案名副檔名清單（以分號分隔）。 例如，".cs"。|
+|`language`|必要屬性。<br /><br /> 提供語言提供者所支援的語言名稱清單（以分號分隔）。 例如，"c #; cs; csharp"。|
+|`type`|必要屬性。<br /><br /> 指定語言提供者的類型名稱，包括包含提供者實作為元件的名稱。 型別名稱必須符合[指定完整限定型別名稱](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)中所定義的需求。|
 |`warningLevel`|選擇性屬性。<br /><br /> 指定預設的編譯器警告層級;決定語言提供者將編譯警告視為錯誤的層級。|
 
-### <a name="child-elements"></a>子元素
+### <a name="child-elements"></a>子項目
 
 |項目|描述|
 |-------------|-----------------|
@@ -64,15 +64,15 @@ ms.locfileid: "70168946"
 |-------------|-----------------|
 |[\<configuration> 項目](../configuration-element.md)|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|
 |[\<system.object > 元素](system-codedom-element.md)|指定可用語言提供者的編譯器組態設定。|
-|[\<編譯器 > 元素](compilers-element.md)|編譯器設定元素的容器;包含零個或`<compiler>`多個元素。|
+|[\<編譯器 > 元素](compilers-element.md)|編譯器設定元素的容器;包含零個或多個 `<compiler>` 元素。|
 
 ## <a name="remarks"></a>備註
 
-每`<compiler>`個元素都會指定特定語言提供者的編譯器設定屬性。 提供者會擴充<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>特定語言的類別`<compiler>` ; 元素會定義語言提供者的編譯器和程式碼產生器設定。
+每個 `<compiler>` 元素都會指定特定語言提供者的編譯器設定屬性。 提供者會擴充特定語言的 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 類別;`<compiler>` 元素會定義語言提供者的編譯器和程式碼產生器設定。
 
 .NET Framework 會在電腦組態檔 (Machine.config) 中定義初始編譯器設定。 開發人員和編譯器廠商可以為新的 <xref:System.CodeDom.Compiler.CodeDomProvider> 實作新增組態設定。 使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 方法，以程式設計方式列舉電腦上的語言提供者和編譯器組態設定。
 
-應用程式或 Web 設定檔中的編譯器元素可以補充或覆寫電腦設定檔中的設定。 如果針對相同的語言名稱或相同的副檔名設定了一個以上的提供者, 則最後一個比對設定會覆寫任何先前針對該語言名稱或副檔名所設定的提供者。
+應用程式或 Web 設定檔中的編譯器元素可以補充或覆寫電腦設定檔中的設定。 如果針對相同的語言名稱或相同的副檔名設定了一個以上的提供者，則最後一個比對設定會覆寫任何先前針對該語言名稱或副檔名所設定的提供者。
 
 ## <a name="configuration-file"></a>組態檔
 
@@ -80,7 +80,7 @@ ms.locfileid: "70168946"
 
 ## <a name="example"></a>範例
 
-下列範例說明典型的編譯器設定元素:
+下列範例說明典型的編譯器設定元素：
 
 ```xml
 <configuration>
@@ -100,11 +100,11 @@ ms.locfileid: "70168946"
 </configuration>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [組態檔結構描述](../index.md)
 - [\<編譯器 > 元素](compilers-element.md)
 - [指定完整的類型名稱](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)
-- [編譯編譯器的編譯器元素 (ASP.NET 設定架構)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))
+- [編譯編譯器的編譯器元素（ASP.NET 設定架構）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

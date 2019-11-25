@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 399e4ac223d2fcb728ece2c92d25a087990992f2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 6d89978b907c8f124b5162c97de5edc034cf1e95
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458665"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976676"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding 標記延伸
 將控制項樣板中的屬性值連結成為樣板化控制項上另一個屬性的值。  
@@ -38,7 +38,7 @@ ms.locfileid: "73458665"
 |`sourceProperty`|存在於樣板化類型上的另一個相依性屬性，由其 <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> 所指定。<br /><br /> -或-<br /><br /> 「穿插句點」的屬性名稱，由樣板化目標類型以外的不同類型所定義。 這實際上是一個 <xref:System.Windows.PropertyPath>。 請參閱[PROPERTYPATH XAML 語法](propertypath-xaml-syntax.md)。|  
   
 ## <a name="remarks"></a>備註  
- `TemplateBinding` 是範本[案例的最佳](binding-markup-extension.md)系結形式，類似于 `{Binding RelativeSource={RelativeSource TemplatedParent}}`所結構的 `Binding`。 `TemplateBinding` 永遠是單向繫結，即使相關的屬性是預設為雙向繫結也一樣。 相關的兩個屬性必須是相依性屬性。 為了達成樣板化父系的雙向系結，請改用下列 binding 語句 `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`。 
+ `TemplateBinding` 是範本[案例的最佳](binding-markup-extension.md)系結形式，類似于 `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`所結構的 `Binding`。 `TemplateBinding` 永遠是單向繫結，即使相關的屬性是預設為雙向繫結也一樣。 相關的兩個屬性必須是相依性屬性。 為了達成樣板化父系的雙向系結，請改用下列 binding 語句 `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`。 
   
  [RelativeSource](relativesource-markupextension.md)是另一個標記延伸，有時會與或（而不是 `TemplateBinding`）搭配使用，以便在範本內執行相對屬性系結。  
   

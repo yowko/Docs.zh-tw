@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f5010f944dba007e24d3c0e22d4e339f9ed0522a
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459181"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977348"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>教學課程：使用模型產生器的回歸預測價格
 
@@ -126,7 +126,7 @@ ms.locfileid: "73459181"
     using TaxiFarePredictionML.Model;
     ```
 
-1. 若要使用模型對新資料進行預測，請在應用程式的 `Main` 方法內，建立 `ModelInput` 類別的新實例。 請注意，費用金額不是輸入的一部分。 這是因為模型會為它產生預測。 
+1. 若要使用模型對新資料進行預測，請在應用程式的 `Main` 方法內，建立 `ModelInput` 類別的新實例。 請注意，費用金額不是輸入的一部分。 這是因為模型會為它產生預測。
 
     ```csharp
     // Create sample data
@@ -140,7 +140,7 @@ ms.locfileid: "73459181"
     };
     ```
 
-1. 使用來自 `ConsumeModel` 類別的 `Predict` 方法。 `Predict` 方法會載入定型的模型、建立模型的[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ，並使用它來對新資料進行預測。 
+1. 使用來自 `ConsumeModel` 類別的 `Predict` 方法。 `Predict` 方法會載入定型的模型、建立模型的[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ，並使用它來對新資料進行預測。
 
     ```csharp
     // Make prediction

@@ -10,21 +10,21 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 95a190dac3a9512b404a054c60c48de9c4574790
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5832d120824df75d374fc94cb0aa4e08189cb965
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698333"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088492"
 ---
-# <a name="clear-element-for-webrequestmodules-network-settings"></a>適用于 Webrequestmodules 專案的 @no__t 0clear > 元素（網路設定）
+# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<清除 Webrequestmodules 專案的 > 元素（網路設定）
 從應用程式中移除所有已註冊的 Web 要求模組。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<clear >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webrequestmodules 專案 >** ](webrequestmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
+
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -37,17 +37,17 @@ ms.locfileid: "71698333"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**描述**|  
+|**目**|**說明**|  
 |-----------------|---------------------|  
-|[webRequestModules](webrequestmodules-element-network-settings.md)|指定要用來要求網路主機資訊的模組。|  
+|[Webrequestmodules 專案](webrequestmodules-element-network-settings.md)|指定要用來要求網路主機資訊的模組。|  
   
 ## <a name="remarks"></a>備註  
- @No__t-0 元素會移除先前在設定檔或設定階層中較高層級定義的所有已註冊 Web 要求模組。  
+ `clear` 元素會移除先前在設定檔或設定階層中較高層級定義的所有已註冊 Web 要求模組。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
@@ -69,7 +69,7 @@ ms.locfileid: "71698333"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Net.WebRequest>
 - [網路設定結構描述](index.md)

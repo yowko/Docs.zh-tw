@@ -5,12 +5,12 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 2d960a43f7934e262fa0e19abfea0209aa4e9ff0
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5b4541b527559ee05c9b97d84324e9e70599a014
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425208"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977385"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>教學課程：使用矩陣 factorizaton 搭配 ML.NET 來建立電影推薦
 
@@ -102,7 +102,7 @@ ML.NET 程序的第一個步驟是準備並載入模型定型和測試資料。
 | `movieId`      |               |
 | `timestamp`     |               |
 
-由您決定使用哪些 `Features` 來預測 `Label`。 您也可以使用類似[特徵排列重要性](../how-to-guides/determine-global-feature-importance-in-model.md)的功能，來協助您選取最合適的 `Features`。
+由您決定使用哪些 `Features` 來預測 `Label`。 您也可以使用[排列功能重要性](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)之類的方法，協助您選取最佳的 `Features`。
 
 在此情況下，您應該排除 `timestamp` 資料行為 `Feature`，因為時間戳記並不會實際影響使用者對特定影片的評分方式，因此無法提供更精確的預測：
 
@@ -373,7 +373,7 @@ public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataVie
 
 ### <a name="use-your-saved-model"></a>使用您已儲存的模型
 
-一旦您儲存已定型模型，您即可以在不同的環境中取用模型 (請參閱[《使用說明指南》](../how-to-guides/consuming-model-ml-net.md)以了解如何在應用程式中讓已定型的機器學習模型能夠運作)。
+儲存定型模型之後，您就可以在不同的環境中使用模型。 請參閱[儲存和載入定型的模型](../how-to-guides/save-load-machine-learning-models-ml-net.md)，以瞭解如何在應用程式中讓已定型的機器學習模型。
 
 ## <a name="results"></a>結果
 
@@ -420,7 +420,7 @@ Movie 10 is recommended for user 6
 
 為每位使用者和影片識別碼新增更多具有足夠樣本的已定型資料，有助於改善推薦模型的品質。
 
-[交叉驗證](../how-to-guides/train-cross-validation-ml-net.md)是一種評估模型技術，會將資料隨機分割成子集 (而不是像本教學課程從資料集擷取出測試資料)，並採用部分群組作為定型資料，以及部分群組作為測試資料。 此方法在模型品質方面的表現優於定型/測試分割。
+[交叉驗證](../how-to-guides/train-machine-learning-model-cross-validation-ml-net.md)是一種評估模型技術，會將資料隨機分割成子集 (而不是像本教學課程從資料集擷取出測試資料)，並採用部分群組作為定型資料，以及部分群組作為測試資料。 此方法在模型品質方面的表現優於定型/測試分割。
 
 ### <a name="features"></a>功能
 
@@ -428,7 +428,7 @@ Movie 10 is recommended for user 6
 
 雖然這是不錯的起點，但在實際操作時，建議您新增其他屬性或 `Features` (例如年齡、性別、地理位置等)，如果這些也包含在資料集內。 新增更多相關 `Features` 有助於改善推薦模型的效能。
 
-如果您不確定哪些 `Features` 可能與您的機器學習工作最相關，您也可以利用功能比重計算 (FCC) 和[功能排列重要性](../how-to-guides/determine-global-feature-importance-in-model.md)，讓 ML.NET 探索最具影響力的 `Features`。
+如果您不確定哪些 `Features` 可能與您的機器學習工作最相關，您也可以利用「功能貢獻計算」（FCC）和[排列功能重要性](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)，其 ML.NET 提供來探索最具影響力的 `Features`。
 
 ### <a name="algorithm-hyperparameters"></a>演算法超參數
 

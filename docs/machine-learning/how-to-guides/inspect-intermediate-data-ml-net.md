@@ -5,19 +5,19 @@ ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: d6ddeb523fb229eb0ebc9c2f22809312060e4266
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 11df1d5caaa7b7974360d863f85afbff18985e47
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402381"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977094"
 ---
 # <a name="inspect-intermediate-data-during-processing"></a>在處理期間檢查中繼資料
 
 了解如何在 ML.NET 中，於載入、處理和模型定型步驟期間檢查中繼資料。 中繼資料是機器學習服務管線中每個階段的輸出。
 
 您可以在 ML.NET 中透過各種方式檢查與以下內容相似且會載入 [`IDataView`](xref:Microsoft.ML.IDataView) 的中繼資料。
- 
+
 ```csharp
 HousingData[] housingData = new HousingData[]
 {
@@ -62,7 +62,7 @@ HousingData[] housingData = new HousingData[]
 
 ## <a name="convert-idataview-to-ienumerable"></a>將 IDataView 轉換成 IEnumerable
 
-其中一個檢查 [`IDataView`](xref:Microsoft.ML.IDataView) 最快速的方式便是將它轉換成 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)。 若要將 [`IDataView`](xref:Microsoft.ML.IDataView) 轉換成 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)，請使用 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 方法。 
+其中一個檢查 [`IDataView`](xref:Microsoft.ML.IDataView) 最快速的方式便是將它轉換成 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)。 若要將 [`IDataView`](xref:Microsoft.ML.IDataView) 轉換成 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)，請使用 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 方法。
 
 若要最佳化效能，請將 `reuseRowObject` 設為 `true`。 如此會使用目前資料列的資料，在評估時才延遲填入相同的物件，而非為資料集中的每個資料列建立新物件。
 
@@ -100,7 +100,7 @@ HousingData firstRow = housingDataArray[0];
 HousingData secondRow = housingDataArray[1];
 HousingData thirdRow = housingDataArray[2];
 float averageCurrentPrice = (firstRow.CurrentPrice + secondRow.CurrentPrice + thirdRow.CurrentPrice) / 3;
-``` 
+```
 
 ## <a name="inspect-values-in-a-single-column"></a>檢查單一資料行中的值
 
@@ -115,7 +115,7 @@ IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();
 [`IDataView`](xref:Microsoft.ML.IDataView) 會延遲評估。 若要逐一查看 [`IDataView`](xref:Microsoft.ML.IDataView)，而不將其轉換成 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)(如本文件先前章節所示範)，請使用 [`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor*) 方法並將您 [`IDataView`](xref:Microsoft.ML.IDataView) 的 [DataViewSchema](xref:Microsoft.ML.DataViewSchema) 作為參數傳遞，來建立 [`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor)。 然後，若要逐一查看資料列，請使用 [`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext*) 指標方法，搭配 [`ValueGetter`](xref:Microsoft.ML.ValueGetter%601) 委派來從每個資料行擷取個別的值。
 
 > [!IMPORTANT]
-> 基於效能考量，ML.NET 中的向量會使用 [`VBuffer`](xref:Microsoft.ML.Data.VBuffer%601)，而非原生集合類型 (即 `Vector`、`float[]` 等)。 
+> 基於效能考量，ML.NET 中的向量會使用 [`VBuffer`](xref:Microsoft.ML.Data.VBuffer%601)，而非原生集合類型 (即 `Vector`、`float[]` 等)。
 
 ```csharp
 // Get DataViewSchema of IDataView
@@ -133,7 +133,7 @@ using (DataViewRowCursor cursor = data.GetRowCursor(columns))
     ValueGetter<float> sizeDelegate = cursor.GetGetter<float>(columns[0]);
     ValueGetter<VBuffer<float>> historicalPriceDelegate = cursor.GetGetter<VBuffer<float>>(columns[1]);
     ValueGetter<float> currentPriceDelegate = cursor.GetGetter<float>(columns[2]);
-    
+
     // Iterate over each row
     while (cursor.MoveNext())
     {

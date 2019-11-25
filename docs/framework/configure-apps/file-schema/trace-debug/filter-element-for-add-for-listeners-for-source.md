@@ -1,5 +1,5 @@
 ---
-title: <add> 的 <filter> 元素用於 <source> 的 <listeners>
+title: 適用于 <source> 之 <listeners> <add> 的 <filter> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-ms.openlocfilehash: ec288685f47c8a35e2371c31d359b604a4967196
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 766088b8a26ce3218031df74b193658ba8024280
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697166"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088900"
 ---
-# <a name="filter-element-for-add-for-listeners-for-source"></a>\<filter > 元素，用於 \<source > @no__t 2listeners > 的 @no__t 1add >
+# <a name="filter-element-for-add-for-listeners-for-source"></a>\<篩選 > 元素，以 \<為 \<來源 > 的 \<接聽程式新增 > >
 將篩選新增至追蹤來源之 `Listeners` 集合中的接聽項。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. 診斷 >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9[ **&nbsp;2add >** ](add-element-for-listeners-for-source.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 @ no__t-10 @ no__t-11 **&nbsp;3filter >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<系統診斷 >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<來源**](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**來源 >** ](source-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](listeners-element-for-source.md)接聽程式 >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<新增 >** ](add-element-for-listeners-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**篩選 >**
+
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -42,10 +42,10 @@ ms.locfileid: "71697166"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`type`|必要屬性。<br /><br /> 指定篩選準則的類型，應該繼承自 <xref:System.Diagnostics.TraceFilter> 類別。 您可以使用類型的命名空間限定名稱，它會對應至類型的 <xref:System.Type.FullName%2A> 屬性，或者您可以使用包含元件資訊的完整類型名稱，這會對應至 @no__t 1 屬性。 如需完整型別名稱的詳細資訊，請參閱[指定完整的型別名稱](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
+|`type`|必要屬性。<br /><br /> 指定篩選準則的類型，應該繼承自 <xref:System.Diagnostics.TraceFilter> 類別。 您可以使用類型的命名空間限定名稱，它會對應至類型的 <xref:System.Type.FullName%2A> 屬性，或者您可以使用包含元件資訊的完整類型名稱，這會對應至 <xref:System.Type.AssemblyQualifiedName%2A> 屬性。 如需完整型別名稱的詳細資訊，請參閱[指定完整的型別名稱](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
 |`initializeData`|選擇性屬性。<br /><br /> 傳遞給指定之篩選類別之函數的字串。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -60,12 +60,12 @@ ms.locfileid: "71697166"
 |`add`|將接聽項新增至追蹤來源的 `Listeners` 集合。|  
   
 ## <a name="remarks"></a>備註  
- 在指定接聽程式類型的追蹤來源接聽程式（而不只是在[@no__t > 3sharedListeners](sharedlisteners-element.md)中定義的接聽程式名稱）中，@no__t 0 元素必須包含在 @no__t 1 元素中。 如果接聽程式是在[@no__t 1sharedListeners >](sharedlisteners-element.md)中定義，則必須在該元素中定義該接聽程式的篩選準則。  
+ 在指定接聽程式類型的追蹤來源接聽程式中，`<filter>` 元素必須包含在 `<add>` 元素中，而不只是在[\<s >](sharedlisteners-element.md)中定義之接聽項的名稱。 如果接聽程式是在[\<s >](sharedlisteners-element.md)中定義，則必須在該元素中定義該接聽程式的篩選準則。  
   
  此元素可用於電腦設定檔（Machine.config）和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 `<filter>` 元素，將篩選準則加入至追蹤 @no__t 來源的 `Listeners` 集合中的接聽程式 `console`，並將篩選事件層級指定為 `Error`。  
+ 下列範例會示範如何使用 `<filter>` 專案，將篩選準則加入至追蹤來源 `myTraceSource`之 `Listeners` 集合中的接聽程式 `console`，並將篩選事件層級指定為 [`Error`]。  
   
 ```xml  
 <configuration>  
@@ -90,7 +90,7 @@ ms.locfileid: "71697166"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>

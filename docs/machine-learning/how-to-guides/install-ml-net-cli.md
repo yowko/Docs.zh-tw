@@ -3,12 +3,12 @@ title: 如何安裝 ML.NET 命令列介面 (CLI) 工具
 description: ML.NET 命令列介面 (CLI) 工具的概觀與安裝。
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: baced9bbcc72153458d42d4b6d8206921bf187b8
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: feeb4832b5bbd39f28ac2c6f6caa40d60b4f3aa9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117996"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977087"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>如何安裝 ML.NET 命令列介面 (CLI) 工具
 
@@ -25,11 +25,11 @@ ML.NET CLI (命令列介面) 是您可以在任何命令提示字元 (Windows、
 
 您可以使用 Visual Studio F5 或 `dotnet run` (.NET Core CLI) 執行已產生的 C# 程式碼專案。
 
-注意：如果在安裝 [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) 後，`dotnet tool` 命令無法運作，請登出 Windows，並再次登入。
+注意：如果安裝[.Net Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2)之後，`dotnet tool` 命令無法運作，請登出 Windows 並重新登入。
 
 ## <a name="install"></a>安裝
 
-ML.NET CLI 的安裝就像任何其他 dotnet 通用工具。 您會使用 `dotnet tool install` .NET Core CLI 命令。 
+ML.NET CLI 的安裝就像任何其他 dotnet 通用工具。 您會使用 `dotnet tool install` .NET Core CLI 命令。
 
 下列範例示範如何在 NuGet 摘要位置中安裝 ML.NET CLI：
 
@@ -112,7 +112,7 @@ dotnet tool update -g mlnet
 
     ```console
     echo $profile
-    ``` 
+    ```
 
 (若為其他 shell，請[尋求](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22)或提出[問題](https://github.com/dotnet/System.CommandLine/issues)。)
 
@@ -120,7 +120,7 @@ dotnet tool update -g mlnet
 
 ML.NET CLI 可以安裝在預設目錄或特定位置。 預設目錄如下：
 
-| 作業系統          | 路徑                          |
+| OS          | 路徑                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -132,9 +132,9 @@ ML.NET CLI 可以安裝在預設目錄或特定位置。 預設目錄如下：
 通用工具也可以安裝在特定目錄中。 安裝在特定目錄時，使用者必須確保命令可用，方法是在路徑中包含該目錄、使用指定的目錄呼叫命令，或從指定的目錄中呼叫工具。
 在此情況下，.NET Core CLI 不會將這個位置自動新增至 PATH 環境變數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [＜ML.NET CLI 工具使用者入門＞的教學課程](../tutorials/mlnet-cli.md)
 - [如何使用 ML.NET CLI 工具自動定型模型](../automate-training-with-cli.md)
-- [ML.NET CLI 自動定型命令參考指南](../reference/ml-net-cli-reference.md) 
+- [ML.NET CLI auto-train 命令參考指南](../reference/ml-net-cli-reference.md)
 - [ML.NET CLI 中的遙測](../resources/ml-net-cli-telemetry.md)

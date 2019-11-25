@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-ms.openlocfilehash: 748ab027fa8206c163578c89b94460665563cbce
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: f33adf6bac5efab87fecd9e95437ac8cff6d1f16
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197875"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976549"
 ---
 # <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>逐步解說：在 Windows Form 中裝載立體 WPF 複合控制項
 
@@ -40,7 +40,7 @@ ms.locfileid: "73197875"
 
 1. 建立名為 `HostingWpfUserControlInWf`的**WPF 使用者控制項程式庫**專案。
 
-2. 在 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]中開啟 UserControl1。
+2. 在 WPF 設計工具中開啟 UserControl1。
 
 3. 將產生的程式碼取代為下列程式碼：
 

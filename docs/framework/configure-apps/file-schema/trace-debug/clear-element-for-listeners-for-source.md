@@ -1,5 +1,5 @@
 ---
-title: 適用于 <source> <listeners> 的 <clear> 元素
+title: 適用于 <listeners> 的 <clear> 元素 <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,23 +7,23 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 05c20040ef59f4dee6b15bbe0b0369281b532754
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4567f236397435e89371ca4c80730ff964fddd21
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697197"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088925"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<source 的 \<listeners > 的 @no__t 0clear > 元素 >
+# <a name="clear-element-for-listeners-for-source"></a>\<清除 \<來源的 \<接聽程式 > 元素 > >
 清除追蹤來源的 `Listeners` 集合。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. 診斷 >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<系統診斷 >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<來源**](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**來源 >** ](source-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](listeners-element-for-source.md)接聽程式 >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
+
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -36,7 +36,7 @@ ms.locfileid: "71697197"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -50,13 +50,13 @@ ms.locfileid: "71697197"
 |`listeners`|指定收集、儲存及路由傳送訊息的接聽程式。|  
   
 ## <a name="remarks"></a>備註  
- @No__t-0 元素會從追蹤來源的 `Listeners` 集合中移除所有接聽程式，包括 <xref:System.Diagnostics.DefaultTraceListener>。 您可以使用 `<clear>` 元素，然後再使用 `<add>` 元素，以確定集合中沒有其他作用中的接聽程式。  
+ `<clear>` 元素會從追蹤來源的 `Listeners` 集合中移除所有接聽程式，包括 <xref:System.Diagnostics.DefaultTraceListener>。 您可以使用 `<clear>` 專案，然後再使用 `<add>` 元素，以確保集合中沒有其他作用中的接聽程式。  
   
 ## <a name="configuration-file"></a>組態檔  
  此元素可用於電腦設定檔（Machine.config）和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 `<clear>` 專案，然後再使用 `<add>` 元素，將接聽程式 `console` 和 `textListener` 新增至追蹤來源 `TraceSourceApp` 的 `Listeners` 集合。  
+ 下列範例示範如何使用 `<clear>` 專案，然後使用 `<add>` 元素，將接聽程式 `console` 和 `textListener` 加入至追蹤來源 `Listeners` 的 `TraceSourceApp`集合。  
   
 ```xml  
 <configuration>  
@@ -84,7 +84,7 @@ ms.locfileid: "71697197"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>

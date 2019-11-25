@@ -2,12 +2,12 @@
 title: 使用 Windows 市集用戶端應用程式存取 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 7a50454c5189c48704adfaaed2c90d2638dd677f
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f5cc18973231f327ee161946a235cb8b8b2ea5a7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928978"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978188"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>使用 Windows 市集用戶端應用程式存取 WCF 服務
 Windows 8 引入新的應用程式型別，稱為 Windows 市集應用程式。 這些應用程式都是以觸控式螢幕介面為設計主軸。 .NET Framework 4.5 可讓 Windows 市集應用程式呼叫 WCF 服務。  
@@ -55,7 +55,7 @@ Windows 8 引入新的應用程式型別，稱為 Windows 市集應用程式。 
  同時支援二進位和文字編碼方式。 支援所有 WCF 傳輸模式。 如需詳細資訊，請參閱 [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)。  
   
 ### <a name="add-service-reference"></a>加入服務參考  
- 若要從 Windows 市集應用程式呼叫 WCF 服務，請使用 Visual Studio 2012 的 [加入服務參考] 功能。 在 Windows 市集應用程式中執行時，您會發現 [加入服務參考] 的功能有一些變更。 首先是沒有產生組態檔。 Windows 市集應用程式不使用組態檔，因此必須在程式碼中進行設定。 您可以在 [加入服務參考] 產生的 References.cs 檔案中找到這個組態程式碼。 若要查看此檔案，請務必選取 [方案瀏覽器] 中的 [顯示所有檔案]。 檔案位於 [服務參考] 底下，專案內的 Reference.svcmap 節點中。 在 Windows 市集應用程式中，針對 WCF 服務產生的所有作業都會使用以工作為基礎的非同步模式，且都是非同步。 如需詳細資訊，請參閱[非同步工作-使用工作簡化非同步程式設計](https://msdn.microsoft.com/magazine/ff959203.aspx)。  
+ 若要從 Windows 市集應用程式呼叫 WCF 服務，請使用 Visual Studio 2012 的 [加入服務參考] 功能。 在 Windows 市集應用程式中執行時，您會發現 [加入服務參考] 的功能有一些變更。 首先是沒有產生組態檔。 Windows 市集應用程式不使用組態檔，因此必須在程式碼中進行設定。 您可以在 [加入服務參考] 產生的 References.cs 檔案中找到這個組態程式碼。 若要查看此檔案，請務必選取 [方案瀏覽器] 中的 [顯示所有檔案]。 檔案位於 [服務參考] 底下，專案內的 Reference.svcmap 節點中。 在 Windows 市集應用程式中，針對 WCF 服務產生的所有作業都會使用以工作為基礎的非同步模式，且都是非同步。 如需詳細資訊，請參閱[非同步工作-使用工作簡化非同步程式設計](https://docs.microsoft.com/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks)。  
   
  由於組態現在是以程式碼來產生，因此每次服務參考更新時，在 Reference.cs 檔案中所做的任何變更都會被覆寫。 若要補救這種情況，您可以在用戶端 Proxy 類別中實作部分方法，讓組態程式碼由部分方法來產生。 部分方法的宣告如下：  
   
@@ -120,7 +120,7 @@ Windows Store 應用程式支援下列安全性模式：
   
 Windows Store 應用程式支援下列用戶端認證類型：
   
-1. 無  
+1. None  
   
 2. 基本  
   
@@ -139,7 +139,7 @@ Windows Store 應用程式支援下列用戶端認證類型：
  若要讓 Windows 市集應用程式存取和傳送預設 Windows 認證，您必須在 Package.appmanifest 檔案中啟用這個功能。 開啟此檔案並選取 [功能] 索引標籤，然後選取 [預設的 Windows 認證]。 這可讓應用程式連接至需要網域認證的內部網路資源。  
   
 > [!IMPORTANT]
-> 為了讓 Windows Store 應用程式進行跨電腦呼叫，您必須啟用另一個稱為「家庭/工作網路」的功能。 這個設定也位於 [功能] 索引標籤下的 Package.appmanifest 檔案中。選取 [家用/工作場所網路] 核取方塊。 這可提供應用程式對使用者所信任之位置 (例如，家裡或公司) 的網路進行傳入及傳出存取的權限。 永遠封鎖關鍵的傳入連接埠。 如果是存取網際網路上的服務，您還必須啟用網際網路 (用戶端) 功能。  
+> 為了讓 Windows Store 應用程式進行跨電腦呼叫，您必須啟用另一個稱為「家庭/工作網路」的功能。 此設定也位於 [功能] 索引標籤下的 appmanifest 檔案中。請選取 [家用/工作網路] 核取方塊。 這可提供應用程式對使用者所信任之位置 (例如，家裡或公司) 的網路進行傳入及傳出存取的權限。 永遠封鎖關鍵的傳入連接埠。 如果是存取網際網路上的服務，您還必須啟用網際網路 (用戶端) 功能。  
   
 ### <a name="misc"></a>其他  
  Windows 市集應用程式支援使用下列類別：  
@@ -174,7 +174,7 @@ void async SomeMethod()
   
  請注意，在進行非同步呼叫的方法上使用 async 關鍵字，並在呼叫非同步方法時使用 await 關鍵字。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Windows Store 應用程式中的 WCF Blog](https://blogs.msdn.microsoft.com/piyushjo/2011/09/21/wcf-in-windows-8-metro-styled-apps-absolutely-supported/)
 - [WCF Windows Store 用戶端和安全性](https://blogs.msdn.microsoft.com/piyushjo/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security/)

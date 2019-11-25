@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: fc735f28bad91b9714d7e6bf2a9c7c620acacc4d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0e0f43225b9bf243c31b3095817bdcbdb3123012
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929339"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976765"
 ---
 # <a name="train-and-evaluate-a-model"></a>定型和評估模型
 
@@ -98,9 +98,9 @@ ML.NET 演算法針對輸入資料行類型具有條件約束。 此外，若沒
 
 ### <a name="working-with-expected-column-types"></a>使用預期的資料行類型
 
-ML.NET 中的機器學習演算法預期收到大小已知浮動向量作為輸入。 當所有資料都已是數字格式，且可一起進行處理時 (例如影像像素)，請將 [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) 屬性套用到您的資料模型。 
+ML.NET 中的機器學習演算法預期收到大小已知浮動向量作為輸入。 當所有資料都已是數字格式，且可一起進行處理時 (例如影像像素)，請將 [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) 屬性套用到您的資料模型。
 
-若資料並非全部都是數字格式，且您希望為每個資料行個別套用不同的資料轉換時，請在所有資料行都已經過處理後使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 方法來將所有個別資料行合併成單一特徵向量，輸出到新資料行。 
+若資料並非全部都是數字格式，且您希望為每個資料行個別套用不同的資料轉換時，請在所有資料行都已經過處理後使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 方法來將所有個別資料行合併成單一特徵向量，輸出到新資料行。
 
 下列程式碼片段會將 `Size` 和 `HistoricalPrices` 資料行合併成單一特徵向量，輸出到稱為 `Features` 的新資料行。 因為規模不同，[`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) 會套用到 `Features` 資料行以正常化資料。
 
@@ -121,9 +121,9 @@ IDataView transformedTrainingData = dataPrepTransformer.Transform(trainData);
 
 ### <a name="working-with-default-column-names"></a>使用預設資料行名稱
 
-ML.NET 演算法會在沒有指定任何項目時使用預設資料行名稱。 所有訓練員都具有一個稱為 `featureColumnName` 的參數作為演算法的輸入，且當適用時，他們也會針對預期值擁有一個稱為 `labelColumnName` 的參數。 根據預設，這些值分別是 `Features` 和 `Label`。 
+ML.NET 演算法會在沒有指定任何項目時使用預設資料行名稱。 所有訓練員都具有一個稱為 `featureColumnName` 的參數作為演算法的輸入，且當適用時，他們也會針對預期值擁有一個稱為 `labelColumnName` 的參數。 根據預設，這些值分別是 `Features` 和 `Label`。
 
-透過在預先處理期間使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 方法來建立稱為 `Features` 的新資料行，便不需要在演算法的參數中指定特徵資料行名稱，因為它們已存在於預先處理的 `IDataView` 中。 標籤資料行是 `CurrentPrice`，但因為已在資料模型中使用 [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 屬性，ML.NET 會將 `CurrentPrice` 資料行重新命名成 `Label`，使其不再需要提供 `labelColumnName` 參數給機器學習服務演算法的估算。 
+透過在預先處理期間使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 方法來建立稱為 `Features` 的新資料行，便不需要在演算法的參數中指定特徵資料行名稱，因為它們已存在於預先處理的 `IDataView` 中。 標籤資料行是 `CurrentPrice`，但因為已在資料模型中使用 [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 屬性，ML.NET 會將 `CurrentPrice` 資料行重新命名成 `Label`，使其不再需要提供 `labelColumnName` 參數給機器學習服務演算法的估算。
 
 若您不想要使用預設資料行名稱，請在定義機器學習服務演算法估算時將特徵和標籤資料行的名稱作為參數傳遞，如接下來的程式碼片段所示：
 
@@ -145,21 +145,21 @@ var trainedModel = sdcaEstimator.Fit(transformedTrainingData);
 
 ## <a name="extract-model-parameters"></a>擷取模型參數
 
-在定型模型後，請擷取學習到的 [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) 以進行檢查或重新定型。 [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) 可提供偏差和學習到的相關係數，或是定型模型的權數。 
+在定型模型後，請擷取學習到的 [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) 以進行檢查或重新定型。 [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) 可提供偏差和學習到的相關係數，或是定型模型的權數。
 
 ```csharp
 var trainedModelParameters = trainedModel.Model as LinearRegressionModelParameters;
 ```
 
 > [!NOTE]
-> 其他模型也具有其工作限定的參數。 例如，[K-平均演算法](xref:Microsoft.ML.Trainers.KMeansTrainer)會根據距心將資料放入叢集，[`KMeansModelParameters`](xref:Microsoft.ML.Trainers.KMeansModelParameters) 則包含儲存這些所學習到距心的屬性。 若要深入了解，請前往 [`Microsoft.ML.Trainers` API 文件](xref:Microsoft.ML.Trainers)並尋找其名稱中包含 `ModelParameters` 的類別。 
+> 其他模型也具有其工作限定的參數。 例如，[K-平均演算法](xref:Microsoft.ML.Trainers.KMeansTrainer)會根據距心將資料放入叢集，[`KMeansModelParameters`](xref:Microsoft.ML.Trainers.KMeansModelParameters) 則包含儲存這些所學習到距心的屬性。 若要深入了解，請前往 [`Microsoft.ML.Trainers` API 文件](xref:Microsoft.ML.Trainers)並尋找其名稱中包含 `ModelParameters` 的類別。
 
 ## <a name="evaluate-model-quality"></a>評估模型品質
 
 若要協助選擇最佳的執行模型，評估其在測試資料上的效能非常重要。 請使用 [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) 方法來針對定型後的模型測量各種計量。
 
 > [!NOTE]
-> `Evaluate` 方法會根據執行的機器學習服務工作類型，產生不同的計量。 如需詳細資訊，請前往 [`Microsoft.ML.Data` API 文件](xref:Microsoft.ML.Data)並尋找其名稱中包含 `Metrics` 的類別。 
+> `Evaluate` 方法會根據執行的機器學習服務工作類型，產生不同的計量。 如需詳細資訊，請前往 [`Microsoft.ML.Data` API 文件](xref:Microsoft.ML.Data)並尋找其名稱中包含 `Metrics` 的類別。
 
 ```csharp
 // Measure trained model performance
@@ -174,9 +174,9 @@ RegressionMetrics trainedModelMetrics = mlContext.Regression.Evaluate(testDataPr
 double rSquared = trainedModelMetrics.RSquared;
 ```
 
-在先前的程式碼範例中：  
+在先前的程式碼範例中：
 
-1. 測試資料集已使用先前定義的資料準備轉換進行預先處理。 
+1. 測試資料集已使用先前定義的資料準備轉換進行預先處理。
 2. 定型後的機器學習模型會用來針對測試資料進行預測。
 3. 在 `Evaluate` 方法中，測試資料集 `CurrentPrice` 資料行中的值會和新輸出預測的 `Score` 資料行比較，計算迴歸模型的計量，其中一個的決定係數儲存在 `rSquared` 變數中。
 

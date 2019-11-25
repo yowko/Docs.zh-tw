@@ -4,12 +4,12 @@ description: 對於您在 ML.NET 中建置自訂模型來說，相當實用的�
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: cb5681f1f72776ec9a8cbcfe45519befe02b8caf
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: bd4f2db701f537d5c87529115a6bd44035432534
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180179"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977292"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機器學習詞彙的重要字詞
 
@@ -29,9 +29,9 @@ ms.locfileid: "72180179"
 
 ## <a name="calibration"></a>校正
 
-校正是將未經處理分數對應到二元和多元分類類別成員資格的程序。 有一些 ML.NET 定型器有 `NonCalibrated` 尾碼。 這些演算法會產生必須對應至類別機率的未經處理分數。 
+校正是將未經處理分數對應到二元和多元分類類別成員資格的程序。 有一些 ML.NET 定型器有 `NonCalibrated` 尾碼。 這些演算法會產生必須對應至類別機率的未經處理分數。
 
-## <a name="catalog"></a>Catalog 
+## <a name="catalog"></a>Catalog
 
 在 ML.NET 中，目錄是延伸模組函式集合，依一般用途分組。
 
@@ -45,7 +45,7 @@ ms.locfileid: "72180179"
 
 在[迴歸](#regression)中，指出資料與模型相符程度的評估計量。 範圍為 0 到 1。 值為 0 時，表示資料為隨機資料，或與模型不相符。 值為 1 時，表示模型與資料完全相符。 這通常稱為r<sup>2</sup>R<sup>2</sup> 或 R 平方。
 
-## <a name="data"></a>Data
+## <a name="data"></a>資料
 
 資料是所有機器學習應用程式的中心。 在 ML.NET 中，資料是由 <xref:Microsoft.ML.IDataView> 物件表示。 資料檢視物件：
 
@@ -65,7 +65,7 @@ ML.NET 中實作 <xref:Microsoft.ML.IEstimator%601> 介面的類別。
 
 擴充方法密集用在 ML.NET 中，以建構[評估工具](#estimator)的執行個體。
 
-## <a name="feature"></a>功能
+## <a name="feature"></a>特殊功能
 
 所評估之現象的可評估屬性，通常是一個數 (雙精度浮點數) 值。 多個特徵會稱為**特徵向量**，且通常會儲存成 `double[]`。 特徵定義了所評估之現象的重要特性。 如需詳細資訊，請參閱維基百科上的[特徵](https://en.wikipedia.org/wiki/Feature_(machine_learning)) \(英文\) 一文。
 
@@ -138,7 +138,7 @@ Loss 函式是定型標籤值和模型所做預測之間的差異。 模型的�
 - $L_1$ 正規化零加權不顯著的特性。 在這種正規化後，已儲存的模型大小可能會變得較小。
 - $L _2 $ 正規化可將不重要功能的權數範圍降至最低。 這是較一般的程式，對極端值而言較不敏感。
 
-## <a name="regression"></a>迴歸
+## <a name="regression"></a>回復
 
 輸出為實際值 (例如雙精度浮點數) 的[機器學習](#supervised-machine-learning)工作。 範例包括預測股價。 如需詳細資訊，請參閱[機器學習工作](tasks.md)主題的[迴歸](tasks.md#regression)一節。
 
@@ -170,7 +170,7 @@ Loss 函式是定型標籤值和模型所做預測之間的差異。 模型的�
 
 實作 <xref:Microsoft.ML.ITransformer> 介面的 ML.NET 類別。
 
-轉換器會將一個 <xref:Microsoft.ML.IDataView> 轉換成另一個。 轉換器是透過定型[評估工具](#estimator)或評估管線所建立。 
+轉換器會將一個 <xref:Microsoft.ML.IDataView> 轉換成另一個。 轉換器是透過定型[評估工具](#estimator)或評估管線所建立。
 
 ## <a name="unsupervised-machine-learning"></a>非監督式機器學習
 

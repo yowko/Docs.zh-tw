@@ -9,20 +9,20 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: 0ca35d9be5e1eaf36a2c9cae99efc2736ef3403d
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: a903d009f2056e65414c1792494fbbd20e224413
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699213"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088808"
 ---
-# <a name="sources-element"></a>@no__t 0sources > 元素
+# <a name="sources-element"></a>\<來源 > 元素
 指定起始追蹤訊息的追蹤來源。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. 診斷 >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<sources >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<系統診斷 >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<來源 >**
+
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -37,9 +37,9 @@ ms.locfileid: "71699213"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<source>](source-element.md)|必要項目。<br /><br /> 指定起始追蹤訊息的追蹤來源。|  
   
@@ -54,7 +54,7 @@ ms.locfileid: "71699213"
  此元素可用於電腦設定檔（Machine.config）和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 `<sources>` 元素來新增追蹤來源 `mySource`，並設定名為 `sourceSwitch` 之來源交換器的層級。 隨即加入主控台追蹤接聽程式，將追蹤資訊寫入主控台。  
+ 下列範例示範如何使用 `<sources>` 專案來新增追蹤來源 `mySource` 並設定名為 `sourceSwitch`之來源交換器的層級。 隨即加入主控台追蹤接聽程式，將追蹤資訊寫入主控台。  
   
 ```xml  
 <configuration>  
@@ -79,7 +79,7 @@ ms.locfileid: "71699213"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>

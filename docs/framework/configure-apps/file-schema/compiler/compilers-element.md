@@ -9,20 +9,20 @@ helpviewer_keywords:
 - <compilers> element
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-ms.openlocfilehash: 5232c5bd2d4fad8104d156bfa86141ceb7f0dd93
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: b09c2a1f67974a67a3f9d58af7cb8cf66a197026
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167695"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088692"
 ---
 # <a name="compilers-element"></a>\<編譯器 > 元素
 編譯器組態項目的容器；內含零或多個 [\<compiler>](compiler-element.md) 項目。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<system.object >** ](system-codedom-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<編譯器 >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system.object >** ](system-codedom-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<編譯器 >**
+
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -37,7 +37,7 @@ ms.locfileid: "70167695"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -51,9 +51,9 @@ ms.locfileid: "70167695"
 |[\<system.object > 元素](system-codedom-element.md)|指定可用語言提供者的編譯器組態設定。|  
   
 ## <a name="remarks"></a>備註  
- 編譯器 > 元素包含電腦上語言提供者的編譯器設定。 [ \< ](compilers-element.md) 每個[ \<編譯器 >](compiler-element.md)元素都會指定特定語言提供者的編譯器設定屬性。  
+ [\<編譯器 >](compilers-element.md)元素包含電腦上語言提供者的編譯器配置設定。 每個[\<編譯器 >](compiler-element.md)元素都會指定特定語言提供者的編譯器設定屬性。  
   
- .NET Framework 會定義電腦設定檔 (Machine.config) 中的初始編譯器和語言提供者設定。 開發人員和編譯器廠商可以為新的 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 實作新增組態設定。 使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 方法，以程式設計方式列舉電腦上的語言提供者和編譯器組態設定。  
+ .NET Framework 會定義電腦設定檔（Machine.config）中的初始編譯器和語言提供者設定。 開發人員和編譯器廠商可以為新的 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 實作新增組態設定。 使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 方法，以程式設計方式列舉電腦上的語言提供者和編譯器組態設定。  
   
 ## <a name="configuration-file"></a>組態檔  
  此元素可以在電腦設定檔和應用程式佈建檔中使用。  
@@ -77,7 +77,7 @@ ms.locfileid: "70167695"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>

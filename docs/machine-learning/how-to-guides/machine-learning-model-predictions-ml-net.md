@@ -5,12 +5,12 @@ ms.date: 09/18/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: f764d2147ec56f8dcc38f96d566ac746cf205650
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 182350cc5143155133385c6fd77986b271f6db91
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799130"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977038"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>使用定型的模型預測
 
@@ -55,7 +55,7 @@ class HousingPrediction
 無論是建立單一或批次預測，預測管線都需要載入到應用程式中。 此管線包含資料前置處理轉換以及定型的模型。 下列程式碼片段會從名為 `model.zip` 的檔案載入預測管線。
 
 ```csharp
-//Create MLContext 
+//Create MLContext
 MLContext mlContext = new MLContext();
 
 // Load Trained Model

@@ -2,21 +2,21 @@
 title: schemeSettings 的 <remove> 項目 (URI 設定)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-ms.openlocfilehash: 0dc8c6111157ba1f23d4a0449bee8f6626027e23
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: faf254174527ea74638442a139841eb2365d1e5d
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697853"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089154"
 ---
-# <a name="remove-element-for-schemesettings-uri-settings"></a>適用于 Schemesettings 專案的 @no__t 0remove > 元素（Uri 設定）
+# <a name="remove-element-for-schemesettings-uri-settings"></a>\<移除 Schemesettings 專案的 > 元素（Uri 設定）
 移除配置名稱的配置設定。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<uri >** ](uri-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<schemesettings 專案 >** ](schemesettings-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<移除 >**
+
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -32,9 +32,9 @@ ms.locfileid: "71697853"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|name|套用此設定的配置名稱。 唯一支援的值為 name = "HTTP" 和 name = "HTTPs"。|  
+|NAME|套用此設定的配置名稱。 唯一支援的值為 name = "HTTP" 和 name = "HTTPs"。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -44,7 +44,7 @@ ms.locfileid: "71697853"
 |[\<schemeSettings> 項目 (URI 設定)](schemesettings-element-uri-settings.md)|指定如何針對特定配置剖析 <xref:System.Uri>。|  
   
 ## <a name="remarks"></a>備註  
- 根據預設，在執行路徑壓縮之前，@no__t 0 類別會取消轉義百分比編碼的路徑分隔符號。 這會實作為安全性機制來對抗下列攻擊：  
+ 根據預設，<xref:System.Uri?displayProperty=nameWithType> 類別會在執行路徑壓縮之前取消轉義百分比編碼的路徑分隔符號。 這會實作為安全性機制來對抗下列攻擊：  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -52,7 +52,7 @@ ms.locfileid: "71697853"
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- 因此，<xref:System.Uri?displayProperty=nameWithType> 類別會先取消轉義路徑分隔符號，然後套用路徑壓縮。 將上述惡意 URL 傳遞給 @no__t 0 類別的函式，會產生下列 URI：  
+ 基於這個理由，<xref:System.Uri?displayProperty=nameWithType> 類別會先取消轉義路徑分隔符號，然後套用路徑壓縮。 將上述惡意 URL 傳遞給 <xref:System.Uri?displayProperty=nameWithType> 類別的函式，會產生下列 URI：  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -62,7 +62,7 @@ ms.locfileid: "71697853"
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會顯示 <xref:System.Uri> 類別所使用的設定，其會移除 HTTP 配置的任何配置設定。  
+ 下列範例會顯示 <xref:System.Uri> 類別所使用的設定，以移除 HTTP 配置的任何配置設定。  
   
 ```xml  
 <configuration>  
@@ -74,7 +74,7 @@ ms.locfileid: "71697853"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>

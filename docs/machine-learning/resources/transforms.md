@@ -4,12 +4,12 @@ description: 探索 ML.NET 中支援的特徵工程元件。
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 25da3cceb3c9090661b34254ed240207aaf3b9d7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb191b1688dce8f703bdabcd220eb39efe68fd48
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929247"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977239"
 ---
 # <a name="data-transformations"></a>資料轉換
 
@@ -21,7 +21,7 @@ ms.locfileid: "70929247"
 
 本指南中的轉換會傳回能實作 [IEstimator](xref:Microsoft.ML.IEstimator%601) 介面的類別。 資料轉換可以鏈結在一起。 每個轉換都會預期和產生特定類型及格式的資料，其已詳述於連結的參考文件中。
 
-某些資料轉換需要定型資料以計算其參數。 例如：<xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> 轉換器會在 `Fit()` 作業期間計算定型資料的平均數和變異數，並將那些參數用於 `Transform()` 作業。 
+某些資料轉換需要定型資料以計算其參數。 例如：<xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> 轉換器會在 `Fit()` 作業期間計算定型資料的平均數和變異數，並將那些參數用於 `Transform()` 作業。
 
 其他資料轉換並不需要定型資料。 例如：<xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> 轉換可以在無須於 `Fit()` 作業期間查看任何定型資料的情況下執行 `Transform()` 作業。
 
@@ -62,7 +62,7 @@ ms.locfileid: "70929247"
 
 | 資料轉換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | 將文字資料行轉換為標準化 ngram 和 char-gram 計數的浮動陣列 | 
+| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | 將文字資料行轉換為標準化 ngram 和 char-gram 計數的浮動陣列 |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords*> | 將一或多個文字資料行分割為個別字詞 |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoCharactersAsKeys*> | 將一或多個文字資料行分割為於一組主題上的個別字元浮點數 |
 | <xref:Microsoft.ML.TextCatalog.NormalizeText*> | 變更大小寫，移除變音符號、標點符號及數字 |

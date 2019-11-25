@@ -1,25 +1,29 @@
 ---
 title: 什麼是 ML.NET，它如何運作？
 description: 不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用此功能，您可以使用應用程式可用的資料來建立自動預測，而不需要連線至網路來使用 ML.NET。 本文說明 ML.NET 的機器學習基本概念。
-ms.date: 09/27/2019
+ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 1ae6b82ada841ad172cbe6a59b667aaaf619e714
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 5d8093c77799a55f4bc13e82c06c856dbb8d85cd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592054"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976731"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什麼是 ML.NET，它如何運作？
 
-不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用此功能，您可以使用應用程式可用的資料來建立自動預測，而不需要連線至網路。 本文說明 ML.NET 的機器學習基本概念。
+不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用這項功能，您可以使用應用程式可用的資料來建立自動預測。
+
+ML.NET 的核心是機器學習**模型**。 模型會指定將輸入資料轉換成預測所需的步驟。 透過 ML.NET，您可以藉由指定演算法來定型自訂模型，或者您也可以匯入預先定型的 TensorFlow 和 ONNX 模型。
+
+一旦有了模型之後，您就可以將它新增至您的應用程式以進行預測。
 
 ML.NET 會使用 .NET Core，或使用 .NET Framework 在 windows、Linux 和 macOS 上執行。 所有平臺都支援64位。 Windows 上支援32位，但 TensorFlow、LightGBM 和 ONNX 相關的功能除外。
 
-您可使用 ML.NET 建立的預測類型範例包括：
+您可以使用 ML.NET 進行的預測類型範例：
 
 |||
 |-|-|
@@ -27,16 +31,18 @@ ML.NET 會使用 .NET Core，或使用 .NET Framework 在 windows、Linux 和 ma
 |迴歸/預測連續值|根據大小和位置預測房價|
 |異常偵測|偵測詐騙的銀行交易 |
 |建議|根據線上購物者之前的購買記錄，建議他們可能想要購買的產品|
+|時間序列/順序資料|預測氣象/產品銷售|
+|影像分類|分類醫學影像中的 pathologies|
 
 ## <a name="hello-mlnet-world"></a>Hello ML.NET World
 
-下列程式碼片段中程式碼會示範最簡單的 ML.NET 應用程式。 此範例會建構線性迴歸模型，使用房子大小及價格資料來預測房價。 在實際的應用程式中，您的資料和模型會更複雜。
+下列程式碼片段中程式碼會示範最簡單的 ML.NET 應用程式。 此範例會建構線性迴歸模型，使用房子大小及價格資料來預測房價。 
 
  ```csharp
     using System;
     using Microsoft.ML;
     using Microsoft.ML.Data;
-    
+
     class Program
     {
         public class HouseData
@@ -44,17 +50,17 @@ ML.NET 會使用 .NET Core，或使用 .NET Framework 在 windows、Linux 和 ma
             public float Size { get; set; }
             public float Price { get; set; }
         }
-    
+
         public class Prediction
         {
             [ColumnName("Score")]
             public float Price { get; set; }
         }
-    
+
         static void Main(string[] args)
         {
             MLContext mlContext = new MLContext();
-    
+
             // 1. Import or create training data
             HouseData[] houseData = {
                 new HouseData() { Size = 1.1F, Price = 1.2F },
@@ -66,10 +72,10 @@ ML.NET 會使用 .NET Core，或使用 .NET Framework 在 windows、Linux 和 ma
             // 2. Specify data preparation and model training pipeline
             var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
                 .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100));
-    
+
             // 3. Train model
             var model = pipeline.Fit(trainingData);
-    
+
             // 4. Make a prediction
             var size = new HouseData() { Size = 2.5F };
             var price = mlContext.Model.CreatePredictionEngine<HouseData, Prediction>(model).Predict(size);
@@ -78,7 +84,7 @@ ML.NET 會使用 .NET Core，或使用 .NET Framework 在 windows、Linux 和 ma
 
             // Predicted price for size: 2500 sq ft= $261.98k
         }
-    } 
+    }
 ```
 
 ## <a name="code-workflow"></a>程式碼工作流程
@@ -93,7 +99,7 @@ ML.NET 會使用 .NET Core，或使用 .NET Framework 在 windows、Linux 和 ma
 - 將模型載回至 **ITransformer** 物件
 - 呼叫 **CreatePredictionEngine.Predict()** 以建立預測
 
-![ML.NET 應用程式開發流程包括產生資料、開發管線、定型模型、評估模型和使用模型的元件](./media/mldotnet-annotated-workflow.png) 
+![ML.NET 應用程式開發流程包括產生資料、開發管線、定型模型、評估模型和使用模型的元件](./media/mldotnet-annotated-workflow.png)
 
 讓我們稍微深入探討這些概念。
 
@@ -103,7 +109,7 @@ ML.NET 模型是一個物件，包含要對輸入資料執行的轉換，以達�
 
 ### <a name="basic"></a>基本
 
-最基本的模型是二維線性迴歸，其中一個持續數量和另一個成正比，如上述的房價範例所示。 
+最基本的模型是二維線性迴歸，其中一個持續數量和另一個成正比，如上述的房價範例所示。
 
 ![使用偏差和加權參數的線性迴歸模型](./media/linear-regression-model.svg)
 
@@ -113,7 +119,7 @@ ML.NET 模型是一個物件，包含要對輸入資料執行的轉換，以達�
 
 更複雜模型會使用交易的文字描述將財務交易分類成類別。
 
-每條交易描述會移除多餘的字詞和字元，並計算字詞和字元組合，細分成一組特性。 以定型資料中的類別集為基礎，用特性集定型線性模型。 新描述與定型集中的描述愈相似，愈可能指派給同一分類。 
+每條交易描述會移除多餘的字詞和字元，並計算字詞和字元組合，細分成一組特性。 以定型資料中的類別集為基礎，用特性集定型線性模型。 新描述與定型集中的描述愈相似，愈可能指派給同一分類。
 
 ![文字分類模型](./media/text-classification-model.svg)
 
@@ -131,7 +137,7 @@ ML.NET 模型是一個物件，包含要對輸入資料執行的轉換，以達�
 
 ## <a name="model-evaluation"></a>模型評估
 
-定型模型之後，您怎麼知道它對未來的預測有多準？ 使用 ML.NET，您可以利用某些新的測試資料來評估模型。 
+定型模型之後，您怎麼知道它對未來的預測有多準？ 使用 ML.NET，您可以利用某些新的測試資料來評估模型。
 
 每種機器學習工作都有針對測試資料集，用來評估模型正確性和精確度的計量。
 
@@ -148,7 +154,7 @@ ML.NET 模型是一個物件，包含要對輸入資料執行的轉換，以達�
 
         var testHouseDataView = mlContext.Data.LoadFromEnumerable(testHouseData);
         var testPriceDataView = model.Transform(testHouseDataView);
-                
+
         var metrics = mlContext.Regression.Evaluate(testPriceDataView, labelColumnName: "Price");
 
         Console.WriteLine($"R^2: {metrics.RSquared:0.##}");
@@ -225,7 +231,7 @@ ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一�
     var predEngine = mlContext.CreatePredictionEngine<HouseData, Prediction>(model);
     var price = predEngine.Predict(size);
 ```
- 
+
 `CreatePredictionEngine()` 方法接受輸入類別和輸出類別。 欄位名稱及/或程式碼屬性決定模型定型和預測期間所用的資料行名稱。 您可以閱讀＜做法＞一節中的[如何建立單一預測](./how-to-guides/single-predict-model-ml-net.md)。
 
 ### <a name="data-models-and-schema"></a>資料模型和結構描述
@@ -254,7 +260,7 @@ ML.NET 機器學習管線的核心是 [DataView](xref:Microsoft.ML.IDataView) �
         [ColumnName("Score")]
         public float Price { get; set; }
     }
-```    
+```
 
 您可以在[機器學習工作](resources/tasks.md)指南中深入了解不同機器學習工作的輸出資料行。
 
@@ -270,14 +276,14 @@ DataView 物件的重要屬性是它們都**延遲**評估。 資料檢視只會
 
 在實際的應用程式中，您的模型定型和評估程式碼與預測無關。 事實上，這兩項活動通常是由不同的小組執行。 您的模型開發小組可以儲存模型，供預測應用程式使用。
 
-```csharp   
+```csharp
    mlContext.Model.Save(model, trainingData.Schema,"model.zip");
 ```
 
-## <a name="where-to-now"></a>接下來去哪？
+## <a name="next-steps"></a>後續步驟
 
-您可以在[教學課程](./tutorials/index.md)中了解如何使用不同機器學習工作搭配更實際的資料集來建置應用程式。
+* 瞭解如何使用不同的機器學習工作，在[教學](./tutorials/index.md)課程中搭配更實際的資料集來建立應用程式。
 
-或者您可以在[操作指南](./how-to-guides/index.md)中深入了解特定的主題。
+* 深入瞭解[如何指南](./how-to-guides/index.md)中的特定主題。
 
-如果您很急切，您可以直接深入 [API 參考文件](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)！
+* 如果您很榮幸，可以直接深入探索[API 參考檔](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)。

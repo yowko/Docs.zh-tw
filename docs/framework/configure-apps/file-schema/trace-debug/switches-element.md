@@ -9,20 +9,20 @@ helpviewer_keywords:
 - switches element
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-ms.openlocfilehash: c161f842192396101dcc6850f3b3da328958eac3
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4aeb3cb0cd75f0fb27e3b359b86da61a77b491c7
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697090"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088795"
 ---
-# <a name="switches-element"></a>@no__t 0switches > 元素
+# <a name="switches-element"></a>\<參數 > 元素
 包含追蹤參數及設定追蹤參數的層級。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. 診斷 >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<switches >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<系統診斷 >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<交換器 >**
+
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -36,9 +36,9 @@ ms.locfileid: "71697090"
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<add>](add-element-for-switches.md)|指定設定追蹤參數的層級。|  
   
@@ -50,10 +50,10 @@ ms.locfileid: "71697090"
 |`System.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
   
 ## <a name="remarks"></a>備註  
- 您可以變更追蹤參數的層級，方法是將它放在設定檔中。 如果參數為 <xref:System.Diagnostics.BooleanSwitch>，您可以開啟或關閉它。 如果參數為 <xref:System.Diagnostics.TraceSwitch>，您可以為其指派不同的層級，以指定應用程式輸出的追蹤或 debug 訊息的類型。  
+ 您可以變更追蹤參數的層級，方法是將它放在設定檔中。 如果參數是 <xref:System.Diagnostics.BooleanSwitch>，您可以開啟或關閉它。 如果參數是 <xref:System.Diagnostics.TraceSwitch>，您可以為其指派不同的層級，以指定應用程式輸出的追蹤或 debug 訊息的類型。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 **\<切換>** 要設定項目`General`追蹤參數設<xref:System.Diagnostics.TraceLevel>層級，並且啟用`Data`布林追蹤參數。  
+ 下列範例示範如何使用 **\<switch >** 元素，將 `General` 追蹤參數設定為 <xref:System.Diagnostics.TraceLevel> 層級，並啟用 `Data` 布林追蹤參數。  
   
 ```xml  
 <configuration>  
@@ -66,10 +66,9 @@ ms.locfileid: "71697090"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
 - [追蹤和偵錯設定結構描述](index.md)
- 

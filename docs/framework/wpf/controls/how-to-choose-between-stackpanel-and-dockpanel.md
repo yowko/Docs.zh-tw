@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 StackPanel 和 DockPanel 之間選擇
+title: 如何：在 StackPanel 和 DockPanel 之間選擇
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,27 +11,27 @@ helpviewer_keywords:
 - StackPanel control [WPF], DockPanel control compared to
 - controls [WPF], StackPanel
 ms.assetid: f9239086-451f-42e6-81f7-ef89ef349742
-ms.openlocfilehash: 8338421dfb1bea856c15edf9d324cec955584f9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bdf4b38e67a7856136224368e86609c135e5ad6f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911233"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976433"
 ---
-# <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>HOW TO：在 StackPanel 和 DockPanel 之間選擇
-此範例示範如何使用之間選擇<xref:System.Windows.Controls.StackPanel>或是<xref:System.Windows.Controls.DockPanel>堆疊內容中的當<xref:System.Windows.Controls.Panel>。  
-  
-## <a name="example"></a>範例  
- 雖然您可以使用<xref:System.Windows.Controls.DockPanel>或<xref:System.Windows.Controls.StackPanel>來堆疊子項目，兩個控制項不一定會產生相同的結果。 例如，您將項目子系順序可能會影響中子項目的大小<xref:System.Windows.Controls.DockPanel>但未顯示於<xref:System.Windows.Controls.StackPanel>。 不同的行為就會發生<xref:System.Windows.Controls.StackPanel>量值在堆疊的方向<xref:System.Double>。<xref:System.Double.PositiveInfinity>; 不過，<xref:System.Windows.Controls.DockPanel>量值使用的大小。  
-  
- 下列範例示範此之間的主要差異<xref:System.Windows.Controls.DockPanel>和<xref:System.Windows.Controls.StackPanel>。  
-  
+# <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>如何：在 StackPanel 和 DockPanel 之間選擇
+這個範例示範當您在 <xref:System.Windows.Controls.Panel>中堆疊內容時，如何選擇使用 <xref:System.Windows.Controls.StackPanel> 或 <xref:System.Windows.Controls.DockPanel>。
+
+## <a name="example"></a>範例
+ 雖然您可以使用 <xref:System.Windows.Controls.DockPanel> 或 <xref:System.Windows.Controls.StackPanel> 來堆疊子項目，但這兩個控制項不一定會產生相同的結果。 例如，您放置子專案的順序可能會影響 <xref:System.Windows.Controls.DockPanel> 中子專案的大小，但無法在 <xref:System.Windows.Controls.StackPanel>中。 之所以會發生這種不同的行為，是因為 <xref:System.Windows.Controls.StackPanel> 在[PositiveInfinity](xref:System.Double.PositiveInfinity)的堆疊方向測量。不過，<xref:System.Windows.Controls.DockPanel> 只會測量可用的大小。
+
+ 下列範例示範 <xref:System.Windows.Controls.DockPanel> 和 <xref:System.Windows.Controls.StackPanel>之間的主要差異。
+
  [!code-cpp[StackPanelOvw4#1](~/samples/snippets/cpp/VS_Snippets_Wpf/StackPanelOvw4/CPP/StackPanel_Ovw_Sample4.cpp#1)]
  [!code-csharp[StackPanelOvw4#1](~/samples/snippets/csharp/VS_Snippets_Wpf/StackPanelOvw4/CSharp/StackPanel_Ovw_Sample4.cs#1)]
  [!code-vb[StackPanelOvw4#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelOvw4/VisualBasic/StackPanelSamp.vb#1)]
- [!code-xaml[StackPanelOvw4#1](~/samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
-  
-## <a name="see-also"></a>另請參閱
+ [!code-xaml[StackPanelOvw4#1](~/samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]
+
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Controls.StackPanel>
 - <xref:System.Windows.Controls.DockPanel>

@@ -1,13 +1,13 @@
 ---
 title: Byrefs
 description: 深入瞭解中F#的 byref 和 byref 型別，其適用于低層級的程式設計。
-ms.date: 09/02/2018
-ms.openlocfilehash: 453de2a5f30dc532dcd7f873b7f5defefdc814cd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: 2c46cea2329b6817dd753e67c6702fb163ce2193
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424768"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976820"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -200,9 +200,9 @@ printfn "%d" sum // 'sum' is of type 'int'
 type C() =
     let mutable nums = [| 1; 3; 7; 15; 31; 63; 127; 255; 511; 1023 |]
 
-    override __.ToString() = String.Join(' ', nums)
+    override _.ToString() = String.Join(' ', nums)
 
-    member __.FindLargestSmallerThan(target: int) =
+    member _.FindLargestSmallerThan(target: int) =
         let mutable ctr = nums.Length - 1
 
         while ctr > 0 && nums.[ctr] >= target do ctr <- ctr - 1

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: fd1649edbf7a2c8546992019df667f27df68e02c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9261a430642cb4d5ac4507835bd0fd3561bd8c02
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698322"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088433"
 ---
-# <a name="defaultftpcachepolicy-element-network-settings"></a>@no__t 0defaultFtpCachePolicy > 元素（網路設定）
+# <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy > 元素（網路設定）
 描述 FTP 快取是否作用中，並描述預設的快取原則。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<requestCaching >** ](requestcaching-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<defaultFtpCachePolicy >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<requestcaching> >** ](requestcaching-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultFtpCachePolicy >**
+
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -38,7 +38,7 @@ ms.locfileid: "71698322"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`policyLevel`|指定 FTP 快取原則。 預設值為 `Default`。|  
+|`policyLevel`|指定 FTP 快取原則。 預設值是 `Default`。|  
   
 ## <a name="policylevel-attribute"></a>policyLevel 屬性  
   
@@ -53,19 +53,19 @@ ms.locfileid: "71698322"
 |`NoCacheNoStore`|如果快取的資源已存在，則會予以刪除。 資源會從伺服器下載，並傳回給呼叫端。|  
 |`Revalidate`|如果時間戳記與伺服器上資源的時間戳記相同，請使用資源的快取複本來滿足要求;否則，資源會從伺服器下載、呈現給呼叫端，並儲存在快取中。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[requestCaching](requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
+|[Requestcaching>](requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="example"></a>範例  
- 下列範例顯示如何指定 `NoCacheNoStore` 的 FTP 快取原則。  
+ 下列範例顯示如何指定 `NoCacheNoStore`的 FTP 快取原則。  
   
 ```xml  
 <configuration>  
@@ -79,7 +79,7 @@ ms.locfileid: "71698322"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
