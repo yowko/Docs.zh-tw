@@ -1,19 +1,19 @@
 ---
-title: HOW TO：產生的 XML 從 CSV 檔案 (Visual Basic)
+title: 如何：從 CSV 檔案產生 XML
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 056cb1545ac296f0b0861155c5ec5c08b19dd5b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e2d76fdae8473e47e397f2559f3051c47a180fd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780584"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344599"
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a><span data-ttu-id="6a0a2-102">HOW TO：產生的 XML 從 CSV 檔案 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6a0a2-102">How to: Generate XML from CSV Files (Visual Basic)</span></span>
-<span data-ttu-id="6a0a2-103">此範例顯示如何使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，從以逗號分隔的 (CSV) 檔案產生 XML 檔案。</span><span class="sxs-lookup"><span data-stu-id="6a0a2-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a><span data-ttu-id="68fc5-102">How to: Generate XML from CSV Files (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="68fc5-102">How to: Generate XML from CSV Files (Visual Basic)</span></span>
+<span data-ttu-id="68fc5-103">此範例顯示如何使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，從以逗號分隔的 (CSV) 檔案產生 XML 檔案。</span><span class="sxs-lookup"><span data-stu-id="68fc5-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6a0a2-104">範例</span><span class="sxs-lookup"><span data-stu-id="6a0a2-104">Example</span></span>  
- <span data-ttu-id="6a0a2-105">下列程式碼會在字串的陣列上執行 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢。</span><span class="sxs-lookup"><span data-stu-id="6a0a2-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="68fc5-104">範例</span><span class="sxs-lookup"><span data-stu-id="68fc5-104">Example</span></span>  
+ <span data-ttu-id="68fc5-105">下列程式碼會在字串的陣列上執行 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢。</span><span class="sxs-lookup"><span data-stu-id="68fc5-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
   
 ```vb  
       ' Create the text file.  
@@ -48,7 +48,7 @@ Dim cust As XElement = _
 Console.WriteLine(cust)  
 ```  
   
- <span data-ttu-id="6a0a2-106">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="6a0a2-106">This code produces the following output:</span></span>  
+ <span data-ttu-id="68fc5-106">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="68fc5-106">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -107,6 +107,6 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6a0a2-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6a0a2-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="68fc5-107">請參閱</span><span class="sxs-lookup"><span data-stu-id="68fc5-107">See also</span></span>
 
-- [<span data-ttu-id="6a0a2-108">投影和轉換 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6a0a2-108">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="68fc5-108">Projections and Transformations (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="68fc5-108">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
