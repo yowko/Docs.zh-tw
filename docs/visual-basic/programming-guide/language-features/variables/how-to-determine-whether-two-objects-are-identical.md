@@ -1,56 +1,56 @@
 ---
-title: HOW TO：判斷兩個物件是否相同 (Visual Basic)
+title: 如何：判斷兩個物件是否相同
 ms.date: 07/20/2015
 helpviewer_keywords:
 - testing [Visual Basic], objects
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: aae053ae0473ed6ced0f28da3d5e5afc0be629df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5deebd4ffc5b277c94f5ae36c00fd6e5010a1551
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769079"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348603"
 ---
-# <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>HOW TO：判斷兩個物件是否相同 (Visual Basic)
-在 Visual Basic 中，兩個變數的參考會視為相同其指標都相同，也就是說，如果兩個變數都指向相同的類別執行個體，在記憶體中。 比方說，在 Windows Forms 應用程式中，您可能想要進行比較來決定是否目前的執行個體 (`Me`) 等同於特定的執行個體，例如`Form2`。  
+# <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>如何：判斷兩個物件是否相同 (Visual Basic)
+In Visual Basic, two variable references are considered identical if their pointers are the same, that is, if both variables point to the same class instance in memory. For example, in a Windows Forms application, you might want to make a comparison to determine whether the current instance (`Me`) is the same as a particular instance, such as `Form2`.  
   
- Visual Basic 提供兩個運算子比較指標。 [Is 運算子](../../../../visual-basic/language-reference/operators/is-operator.md)會傳回`True`如果物件相同，而[IsNot 運算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)傳回`True`如果它們不是。  
+ Visual Basic provides two operators to compare pointers. The [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) returns `True` if the objects are identical, and the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) returns `True` if they are not.  
   
-## <a name="determining-if-two-objects-are-identical"></a>判斷兩個物件是否相同  
+## <a name="determining-if-two-objects-are-identical"></a>Determining if Two Objects Are Identical  
   
-#### <a name="to-determine-if-two-objects-are-identical"></a>若要判斷兩個物件是否相同  
+#### <a name="to-determine-if-two-objects-are-identical"></a>To determine if two objects are identical  
   
-1. 設定`Boolean`來測試兩個物件的運算式。  
+1. Set up a `Boolean` expression to test the two objects.  
   
-2. 在您測試的運算式中，使用`Is`運算子與運算元為兩個物件。  
+2. In your testing expression, use the `Is` operator with the two objects as operands.  
   
-     `Is` 傳回`True`如果物件指向相同的類別執行個體。  
+     `Is` returns `True` if the objects point to the same class instance.  
   
-## <a name="determining-if-two-objects-are-not-identical"></a>判斷兩個物件是否不相同  
- 您想要執行的動作，如果兩個物件並不相同，而且很難結合的有時`Not`並`Is`，例如`If Not obj1 Is obj2`。 在此情況下您可以使用`IsNot`運算子。  
+## <a name="determining-if-two-objects-are-not-identical"></a>Determining if Two Objects Are Not Identical  
+ Sometimes you want to perform an action if the two objects are not identical, and it can be awkward to combine `Not` and `Is`, for example `If Not obj1 Is obj2`. In such a case you can use the `IsNot` operator.  
   
-#### <a name="to-determine-if-two-objects-are-not-identical"></a>若要判斷兩個物件是否不相同  
+#### <a name="to-determine-if-two-objects-are-not-identical"></a>To determine if two objects are not identical  
   
-1. 設定`Boolean`來測試兩個物件的運算式。  
+1. Set up a `Boolean` expression to test the two objects.  
   
-2. 在您測試的運算式中，使用`IsNot`運算子與運算元為兩個物件。  
+2. In your testing expression, use the `IsNot` operator with the two objects as operands.  
   
-     `IsNot` 傳回`True`如果物件不會指向相同的類別執行個體。  
+     `IsNot` returns `True` if the objects do not point to the same class instance.  
   
 ## <a name="example"></a>範例  
- 下列範例會測試組`Object`變數上以查看是否它們指向相同的類別執行個體。  
+ The following example tests pairs of `Object` variables to see if they point to the same class instance.  
   
  [!code-vb[VbVbalrKeywords#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#14)]  
   
- 上述範例中會顯示下列輸出。  
+ The preceding example displays the following output.  
   
  `objA different from objB? True`  
   
  `objA identical to objC? True`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

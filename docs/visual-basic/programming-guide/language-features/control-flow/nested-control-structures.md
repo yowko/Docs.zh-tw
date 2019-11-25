@@ -1,5 +1,5 @@
 ---
-title: 巢狀控制結構 (Visual Basic)
+title: 巢狀控制結構
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, control flow
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: f559bf603605873f1b9155e9a96cb367e5420343
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5818b13661fb4415c6f531b741b8a963a80bd2b8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941678"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348143"
 ---
 # <a name="nested-control-structures-visual-basic"></a>巢狀控制結構 (Visual Basic)
-您可以將控制語句放在其他控制語句中, 例如`If...Then...Else` `For...Next`迴圈內的區塊。 放在另一個控制項語句內的控制語句稱為「已*嵌套*」。  
+You can place control statements inside other control statements, for example an `If...Then...Else` block within a `For...Next` loop. A control statement placed inside another control statement is said to be *nested*.  
   
-## <a name="nesting-levels"></a>嵌套層級  
- Visual Basic 中的控制結構可以嵌套成您想要的多個層級。 一般做法是將每個結構的主體縮排, 使其更容易閱讀。 整合式開發環境 (IDE) 編輯器會自動執行此工作。  
+## <a name="nesting-levels"></a>Nesting Levels  
+ Control structures in Visual Basic can be nested to as many levels as you want. It is common practice to make nested structures more readable by indenting the body of each one. The integrated development environment (IDE) editor automatically does this.  
   
- 在下列範例中, `sumRows`程式會將矩陣的每個資料列的正元素加在一起。  
+ In the following example, the procedure `sumRows` adds together the positive elements of each row of the matrix.  
   
 ```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- 在上述範例中, 第一個`Next`語句會關閉內部`For`迴圈, 而最後`Next`一個語句會關閉`For`外部迴圈。  
+ In the preceding example, the first `Next` statement closes the inner `For` loop and the last `Next` statement closes the outer `For` loop.  
   
- 同樣地, 在`If` nested 語句中`End If` , 語句會自動套用至最`If`接近的先前語句。 嵌套`Do`迴圈的工作方式類似, 最內層`Loop`的語句與最內層`Do`的語句相符。  
+ Likewise, in nested `If` statements, the `End If` statements automatically apply to the nearest prior `If` statement. Nested `Do` loops work in a similar fashion, with the innermost `Loop` statement matching the innermost `Do` statement.  
   
 > [!NOTE]
-> 對於許多控制項結構而言, 當您按一下關鍵字時, 結構中的所有關鍵詞都會反白顯示。 `If`例如, 當您`If...Then...Else`在`If`結構中按一下時, 會反白顯示`Then`結構中`Else`、、 `End If` `ElseIf`、和的所有實例。 若要移至下一個或上一個反白顯示的關鍵字, 請按 CTRL + SHIFT + 向下鍵或 CTRL + SHIFT + 向上鍵。  
+> For many control structures, when you click a keyword, all of the keywords in the structure are highlighted. For instance, when you click `If` in an `If...Then...Else` construction, all instances of `If`, `Then`, `ElseIf`, `Else`, and `End If` in the construction are highlighted. To move to the next or previous highlighted keyword, press CTRL+SHIFT+DOWN ARROW or CTRL+SHIFT+UP ARROW.  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>嵌套不同種類的控制結構  
- 您可以在另一種類型中嵌套一種控制結構。 `With`下列範例會使用`For Each`迴圈內的區塊和區塊內`If`的`With`嵌套區塊。  
+## <a name="nesting-different-kinds-of-control-structures"></a>Nesting Different Kinds of Control Structures  
+ You can nest one kind of control structure within another kind. The following example uses a `With` block inside a `For Each` loop and nested `If` blocks inside the `With` block.  
   
 ```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -64,14 +64,14 @@ For Each ctl As System.Windows.Forms.Control In Me.Controls
 Next ctl  
 ```  
   
-## <a name="overlapping-control-structures"></a>重迭的控制項結構  
- 您不能重迭控制結構。 這表示任何嵌套的結構都必須完全包含在下一個最內層的結構內。 例如, 下列相片順序無效, 因為`For`迴圈會在內部`With`區塊終止之前終止。  
+## <a name="overlapping-control-structures"></a>Overlapping Control Structures  
+ You cannot overlap control structures. This means that any nested structure must be completely contained within the next innermost structure. For example, the following arrangement is invalid because the `For` loop terminates before the inner `With` block terminates.  
   
- ![顯示無效嵌套範例的圖表。](./media/nested-control-structures/example-invalid-nesting.gif) 
+ ![Diagram that shows an example of invalid nesting.](./media/nested-control-structures/example-invalid-nesting.gif) 
   
- Visual Basic 編譯器會偵測到這類重迭的控制項結構, 併發出編譯時期錯誤。  
+ The Visual Basic compiler detects such overlapping control structures and signals a compile-time error.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [控制流程](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [決策結構](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
