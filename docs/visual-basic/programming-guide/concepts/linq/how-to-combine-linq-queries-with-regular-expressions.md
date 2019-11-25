@@ -1,21 +1,24 @@
 ---
-title: 如何：合併 LINQ 查詢與規則運算式 (Visual Basic)
+title: How to combine LINQ queries with regular expressions
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-ms.openlocfilehash: cdcd4d604f36ec8ed4211d90c976ff8b35d4a0dc
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 27fc46056ad78567339ca0c5818aef38d0fbb9a6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524194"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348424"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a><span data-ttu-id="9052c-102">如何：合併 LINQ 查詢與規則運算式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9052c-102">How to: Combine LINQ Queries with Regular Expressions (Visual Basic)</span></span>
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a><span data-ttu-id="6fa67-102">How to combine LINQ queries with regular expressions (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6fa67-102">How to combine LINQ queries with regular expressions (Visual Basic)</span></span>
 
-<span data-ttu-id="9052c-103">此範例會示範如何使用 <xref:System.Text.RegularExpressions.Regex> 類別來建立規則運算式，以在文字字串中進行更複雜的比對。</span><span class="sxs-lookup"><span data-stu-id="9052c-103">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="9052c-104">LINQ 查詢讓您輕鬆地準確篩選出您想要用規則運算式搜尋的檔案，並調整結果。</span><span class="sxs-lookup"><span data-stu-id="9052c-104">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>
+<span data-ttu-id="6fa67-103">此範例會示範如何使用 <xref:System.Text.RegularExpressions.Regex> 類別來建立規則運算式，以在文字字串中進行更複雜的比對。</span><span class="sxs-lookup"><span data-stu-id="6fa67-103">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="6fa67-104">LINQ 查詢讓您輕鬆地準確篩選出您想要用規則運算式搜尋的檔案，並調整結果。</span><span class="sxs-lookup"><span data-stu-id="6fa67-104">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>
 
-## <a name="example"></a><span data-ttu-id="9052c-105">範例</span><span class="sxs-lookup"><span data-stu-id="9052c-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="6fa67-105">範例</span><span class="sxs-lookup"><span data-stu-id="6fa67-105">Example</span></span>
 
 ```vb
+Imports System.IO
+Imports System.Text.RegularExpressions
+
 Class LinqRegExVB
 
     Shared Sub Main()
@@ -27,11 +30,10 @@ Class LinqRegExVB
         'Dim startFolder As String = "C:\Program Files (x86)\Microsoft Visual Studio\2017\"
 
         ' Take a snapshot of the file system.
-        Dim fileList As IEnumerable(Of System.IO.FileInfo) = GetFiles(startFolder)
+        Dim fileList As IEnumerable(Of FileInfo) = GetFiles(startFolder)
 
         ' Create a regular expression to find all things "Visual".
-        Dim searchTerm As System.Text.RegularExpressions.Regex =
-            New System.Text.RegularExpressions.Regex("Visual (Basic|C#|C\+\+|Studio)")
+        Dim searchTerm As New Regex("Visual (Basic|C#|C\+\+|Studio)")
 
         ' Search the contents of each .htm file.
         ' Remove the where clause to find even more matches!
@@ -42,11 +44,11 @@ Class LinqRegExVB
         ' generic IEnumerable collection.
         Dim queryMatchingFiles = From afile In fileList
                                 Where afile.Extension = ".htm"
-                                Let fileText = System.IO.File.ReadAllText(afile.FullName)
+                                Let fileText = File.ReadAllText(afile.FullName)
                                 Let matches = searchTerm.Matches(fileText)
                                 Where (matches.Count > 0)
                                 Select Name = afile.FullName,
-                                       Matches = From match As System.Text.RegularExpressions.Match In matches
+                                       Matches = From match As Match In matches
                                                  Select match.Value
 
         ' Execute the query.
@@ -71,22 +73,22 @@ Class LinqRegExVB
 
     ' Function to retrieve a list of files. Note that this is a copy
     ' of the file information.
-    Shared Function GetFiles(ByVal root As String) As IEnumerable(Of System.IO.FileInfo)
+    Shared Function GetFiles(root As String) As IEnumerable(Of FileInfo)
         Return From file In My.Computer.FileSystem.GetFiles(
                    root, FileIO.SearchOption.SearchAllSubDirectories, "*.*")
-               Select New System.IO.FileInfo(file)
+               Select New FileInfo(file)
     End Function
 
 End Class
 ```
 
-<span data-ttu-id="9052c-106">請注意，您也可以對由 `RegEx` 搜尋所傳回的 <xref:System.Text.RegularExpressions.MatchCollection> 物件進行查詢。</span><span class="sxs-lookup"><span data-stu-id="9052c-106">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="9052c-107">在本例中，結果只會產生每個相符項目的值。</span><span class="sxs-lookup"><span data-stu-id="9052c-107">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="9052c-108">不過，它也可以使用 LINQ 對該集合執行所有種類的篩選、排序及群組。</span><span class="sxs-lookup"><span data-stu-id="9052c-108">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="9052c-109">因為 <xref:System.Text.RegularExpressions.MatchCollection> 為非泛型 <xref:System.Collections.IEnumerable> 集合，所以您必須在查詢中明確地陳述範圍變數的類型。</span><span class="sxs-lookup"><span data-stu-id="9052c-109">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>
+<span data-ttu-id="6fa67-106">請注意，您也可以對由 `RegEx` 搜尋所傳回的 <xref:System.Text.RegularExpressions.MatchCollection> 物件進行查詢。</span><span class="sxs-lookup"><span data-stu-id="6fa67-106">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="6fa67-107">在本例中，結果只會產生每個相符項目的值。</span><span class="sxs-lookup"><span data-stu-id="6fa67-107">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="6fa67-108">不過，它也可以使用 LINQ 對該集合執行所有種類的篩選、排序及群組。</span><span class="sxs-lookup"><span data-stu-id="6fa67-108">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="6fa67-109">因為 <xref:System.Text.RegularExpressions.MatchCollection> 為非泛型 <xref:System.Collections.IEnumerable> 集合，所以您必須在查詢中明確地陳述範圍變數的類型。</span><span class="sxs-lookup"><span data-stu-id="6fa67-109">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>
 
-## <a name="compiling-the-code"></a><span data-ttu-id="9052c-110">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="9052c-110">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="6fa67-110">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="6fa67-110">Compiling the code</span></span>
 
-<span data-ttu-id="9052c-111">建立 VB.NET 主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。</span><span class="sxs-lookup"><span data-stu-id="9052c-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="6fa67-111">Create a VB.NET console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.</span><span class="sxs-lookup"><span data-stu-id="6fa67-111">Create a VB.NET console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="9052c-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="9052c-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6fa67-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="6fa67-112">See also</span></span>
 
-- [<span data-ttu-id="9052c-113">LINQ 和字串（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="9052c-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="9052c-114">LINQ 與檔案目錄 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9052c-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="6fa67-113">LINQ and Strings (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6fa67-113">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
+- [<span data-ttu-id="6fa67-114">LINQ 與檔案目錄 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6fa67-114">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)
