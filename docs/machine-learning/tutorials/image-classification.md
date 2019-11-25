@@ -1,55 +1,49 @@
 ---
-title: 教學課程：從預先定型的 TensorFlow 模型產生 ML.NET 影像分類模型
-description: 瞭解如何將現有 TensorFlow 模型的知識，轉移到新的 ML.NET 影像分類模型。 TensorFlow 模型已定型，可將影像分類為一千個類別。 ML.NET 模型利用轉移學習，將影像分類成較少的類別。
-ms.date: 10/30/2019
+title: 'Tutorial: Generate an ML.NET image classification model from a pre-trained TensorFlow model'
+description: Learn how to transfer the knowledge from an existing TensorFlow model into a new ML.NET image classification model. The TensorFlow model was trained to classify images into a thousand categories. The ML.NET model makes use of transfer learning to classify images into fewer broader categories.
+ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 author: natke
 ms.author: nakersha
-ms.openlocfilehash: bd25a24e467148c46958b6e7ce7b18e181dab5fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 952ce5c52bcd09b8c4e4e40d5ddf85835a26478d
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129594"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204992"
 ---
-# <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>教學課程：從預先定型的 TensorFlow 模型產生 ML.NET 影像分類模型
+# <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Tutorial: Generate an ML.NET image classification model from a pre-trained TensorFlow model
 
-瞭解如何將現有 TensorFlow 模型的知識，轉移到新的 ML.NET 影像分類模型。
+Learn how to transfer the knowledge from an existing TensorFlow model into a new ML.NET image classification model.
 
-TensorFlow 模型已定型，可將影像分類為一千個類別。 ML.NET 模型會在其管線中使用部分的 TensorFlow 模型來定型模型，以將影像分類成3個類別。
+The TensorFlow model was trained to classify images into a thousand categories. The ML.NET model makes use of part of the TensorFlow model in its pipeline to train a model to classify images into 3 categories.
 
-若要從頭對[影像分類](https://en.wikipedia.org/wiki/Outline_of_object_recognition) \(英文\) 模型進行定型，將會需要設定數以百萬計的參數、眾多已標籤的定型資料，以及大量的計算資源 (數以百計的 GPU 小時)。 遷移學習的效能雖然不如從頭對自訂模型進行定型來得有效，但它能讓您透過僅需處理數以千計的影像 (而非數以百萬計的已標籤影像) 來縮短此程序，並以較為快速的方式建置自訂模型 (在不具備 GPU 的電腦上於一小時內便能完成)。 本教學課程會更進一步調整該程式，只使用數十個訓練影像。
+若要從頭對[影像分類](https://en.wikipedia.org/wiki/Outline_of_object_recognition) \(英文\) 模型進行定型，將會需要設定數以百萬計的參數、眾多已標籤的定型資料，以及大量的計算資源 (數以百計的 GPU 小時)。 遷移學習的效能雖然不如從頭對自訂模型進行定型來得有效，但它能讓您透過僅需處理數以千計的影像 (而非數以百萬計的已標籤影像) 來縮短此程序，並以較為快速的方式建置自訂模型 (在不具備 GPU 的電腦上於一小時內便能完成)。 This tutorial scales that process down even further, using only a dozen training images.
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
 >
 > * 了解問題
-> * 將預先定型的 TensorFlow 模型納入 ML.NET 管線中
-> * 定型和評估 ML.NET 模型
-> * 分類測試影像
+> * Incorporate the pre-trained TensorFlow model into the ML.NET pipeline
+> * Train and evaluate the ML.NET model
+> * Classify a test image
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) 存放庫中找到本教學課程的原始程式碼。 請注意，根據預設，本教學課程的 .NET 專案組態以 .NET Core 2.2 為目標。
 
 ## <a name="what-is-transfer-learning"></a>什麼是傳輸學習？
 
-轉移學習是在解決一個問題，並將其套用至不同但相關的問題時，使用所獲得知識的過程。
+Transfer learning is the process of using knowledge gained while solving one problem and applying it to a different but related problem.
 
-在本教學課程中，您會使用已定型的部分 TensorFlow 模型，將影像分類成一千個類別-在 ML.NET 模型中，將影像分類成3個類別。
+For this tutorial, you use part of a TensorFlow model - trained to classify images into a thousand categories - in an ML.NET model that classifies images into 3 categories.
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-* 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)版本。
-
-* Microsoft.ML 1.3.1 Nuget 套件
-* ImageAnalytics 1.3.1 Nuget 套件
-* TensorFlow 1.3.1 Nuget 套件
-
+* [Visual Studio 2017 version 15.6 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) with the ".NET Core cross-platform development" workload installed.
 * [教學課程資產目錄 .ZIP 檔案](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
-
 * [InceptionV1 機器學習模型](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
-## <a name="select-the-right-machine-learning-task"></a>選取適當的機器學習工作
+## <a name="select-the-right-machine-learning-task"></a>Select the right machine learning task
 
 ### <a name="deep-learning"></a>深度學習
 
@@ -58,14 +52,14 @@ TensorFlow 模型已定型，可將影像分類為一千個類別。 ML.NET 模�
 深度學習模型是使用包含多個學習層級的大量[已標籤資料](https://en.wikipedia.org/wiki/Labeled_data) \(英文\) 及[神經網路](https://en.wikipedia.org/wiki/Artificial_neural_network)來定型的。 深度學習：
 
 * 能在某些工作上產生較好的效能，例如電腦視覺。
-* 需要大量的定型資料。
+* Requires huge amounts of training data.
 
-影像分類是常見的 Machine Learning 工作，可讓我們自動將影像分類為下列類別：
+Image Classification is a common Machine Learning task that allows us to automatically classify images into categories such as:
 
 * 是否能在影像中偵測到人類面孔。
-* 偵測貓與狗。
+* Detecting cats vs. dogs.
 
- 或如下列影像所示，判斷影像是否為（n）食物、玩具或設備：
+ Or as in the following images, determining if an image is a(n)  food, toy, or appliance:
 
 ![披薩影像](./media/image-classification/220px-Pepperoni_pizza.jpg)
 ![玩具熊影像](./media/image-classification/119px-Nalle_-_a_small_brown_teddy_bear.jpg)
@@ -78,27 +72,27 @@ TensorFlow 模型已定型，可將影像分類為一千個類別。 ML.NET 模�
 > * "119px-Nalle_-_a_small_brown_teddy_bear.jpg" 攝影者：[Jonik](https://commons.wikimedia.org/wiki/User:Jonik) \(英文\) - 自行拍攝，CC BY-SA 2.0， https://commons.wikimedia.org/w/index.php?curid=48166 \(英文\)。
 > * "193px-Broodrooster.jpg" 攝影者：[M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) \(英文\) - 自行創作，CC BY-SA 3.0， https://commons.wikimedia.org/w/index.php?curid=27403 \(英文\)
 
-`Inception model` 經過訓練，可將影像分類為一千個類別，但在本教學課程中，您需要將影像分類為較小的類別集，而僅限於那些類別。 這就是 `transfer learning` (遷移學習) 名稱中 `transfer` (遷移) 這部分派上用場的時候。 您可以將 `Inception model` 辨識及分類影像的能力遷移至您自訂影像分類器新的受限類別之中。
+The `Inception model` is trained to classify images into a thousand categories, but for this tutorial, you need to classify images in a smaller category set, and only those categories. 這就是 `transfer learning` (遷移學習) 名稱中 `transfer` (遷移) 這部分派上用場的時候。 您可以將 `Inception model` 辨識及分類影像的能力遷移至您自訂影像分類器新的受限類別之中。
 
 * Food (食物)
 * Toy (玩具)
 * Appliance (設備)
 
-本教學課程使用 TensorFlow[開始模型](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)深度學習模型，這是在 `ImageNet` 資料集上定型的熱門影像識別模型。 TensorFlow 模型會將整個影像分類為一千個類別，例如 "傘"、"Jersey" 和 "洗碗機"。
+This tutorial uses the TensorFlow [Inception model](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip) deep learning model, a popular image recognition model trained on the `ImageNet` dataset. The TensorFlow model classifies entire images into a thousand classes, such as “Umbrella”, “Jersey”, and “Dishwasher”.
 
-因為 `Inception model` 已在數千個不同的映射上預先定型，所以內部會包含影像識別所需的[影像功能](https://en.wikipedia.org/wiki/Feature_(computer_vision))。 我們可以利用模型中的這些內部影像功能，以更少的類別來定型新模型。
+Because the `Inception model` has already been pre trained on thousands of different images, internally it contains the [image features](https://en.wikipedia.org/wiki/Feature_(computer_vision)) needed for image identification. We can make use of these internal image features in the model to train a new model with far fewer classes.
 
-如下圖所示，您會在 .NET Core 或 .NET Framework 應用程式中新增對 ML.NET NuGet 套件的參考。 實際上，ML.NET 包含並參考原生 `TensorFlow` 程式庫，可讓您撰寫程式碼來載入現有已定型的 `TensorFlow` 模型檔案。
+如下圖所示，您會在 .NET Core 或 .NET Framework 應用程式中新增對 ML.NET NuGet 套件的參考。 Under the covers, ML.NET includes and references the native `TensorFlow` library that allows you to write code that loads an existing trained `TensorFlow` model file.
 
 ![TensorFlow 轉換 ML.NET 架構圖表](./media/image-classification/tensorflow-mlnet.png)
 
 ### <a name="multiclass-classification"></a>多元分類
 
-在使用 TensorFlow 起始模型來解壓縮適用于傳統機器學習演算法輸入的功能之後，我們會新增一個 ML.NET 的[多類別分類器](../resources/tasks.md#multiclass-classification)。
+After using the TensorFlow inception model to extract features suitable as input for a classical machine learning algorithm, we add an ML.NET [multi-class classifier](../resources/tasks.md#multiclass-classification).
 
-在此案例中使用的特定訓練員是[多維度羅吉斯回歸演算法](https://en.wikipedia.org/wiki/Multinomial_logistic_regression)。
+The specific trainer used in this case is the [multinomial logistic regression algorithm](https://en.wikipedia.org/wiki/Multinomial_logistic_regression).
 
-這個定型者所實行的演算法會在大量功能的問題上順利執行，這是在影像資料上操作的深度學習模型的情況。
+The algorithm implemented by this trainer performs well on problems with a large number of features, which is the case for a deep learning model operating on image data.
 
 ### <a name="data"></a>資料
 
@@ -118,7 +112,7 @@ toaster2.png    appliance
 <!-- markdownlint-enable MD010 -->
 
 定型及測試影像都位於您將以 zip 檔案下載的資產資料夾中。 這些影像皆由 Wikimedia Commons 所有。
-> *[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208) \(英文\), the free media repository*。 從取得10:48 年10月 17 2018 日： https://commons.wikimedia.org/wiki/Pizza https://commons.wikimedia.org/wiki/Toaster https://commons.wikimedia.org/wiki/Teddy_bear
+> *[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208) \(英文\), the free media repository*。 Retrieved 10:48, October 17, 2018 from: https://commons.wikimedia.org/wiki/Pizza https://commons.wikimedia.org/wiki/Toaster https://commons.wikimedia.org/wiki/Teddy_bear
 
 ## <a name="setup"></a>安裝程式
 
@@ -130,12 +124,12 @@ toaster2.png    appliance
 
     * 在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。
     * 選擇 [nuget.org] 作為 [套件來源]，選取 [瀏覽] 索引標籤，搜尋 **Microsoft.ML**。
-    * 按一下 [**版本**] 下拉式清單，選取清單中的 [ **1.3.1** ] 套件，然後選取 [**安裝**] 按鈕。
-    * 選取 [**預覽變更**] 對話方塊上的 [**確定]** 按鈕。
-    * 如果您同意所列套件的授權條款，請選取 [**授權接受**] 對話方塊上的 [**我接受**] 按鈕。
-    * 針對**ImageAnalytics v 1.3.1**和**TensorFlow v 1.3.1**重複這些步驟。
+    * Click on the **Version** drop-down, select the **1.4.0** package in the list, and select the **Install** button.
+    * Select the **OK** button on the **Preview Changes** dialog.
+    * Select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.
+    * Repeat these steps for **Microsoft.ML.ImageAnalytics v1.4.0**, **SciSharp.TensorFlow.Redist v1.15.0** and **Microsoft.ML.TensorFlow v1.4.0**.
 
-### <a name="download-assets"></a>下載資產
+### <a name="download-assets"></a>Download assets
 
 1. 下載[專案資產目錄 zip 檔案](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)，然後將它解壓縮。
 
@@ -155,11 +149,11 @@ toaster2.png    appliance
 
     [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#AddUsings)]
 
-1. 將下列程式碼新增至 `Main` 方法上方的一行，以指定資產路徑：
+1. Add the following code to the line right above the `Main` method to specify the asset paths:
 
     [!code-csharp[DeclareGlobalVariables](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DeclareGlobalVariables)]
 
-1. 為輸入資料和預測建立類別。
+1. Create classes for your input data, and predictions.
 
     [!code-csharp[DeclareImageData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DeclareImageData)]
 
@@ -177,7 +171,7 @@ toaster2.png    appliance
     * `Score` 包含指定影像分類的信賴百分比。
     * `PredictedLabelValue` 包含已預測影像分類標籤的值。
 
-    `ImagePrediction` 是在模型定型後，用來進行預測的類別。 它具有影像路徑的 `string` (`ImagePath`)。 `Label` 可用來重複使用和定型模型。 `PredictedLabelValue` 的使用時機是在進行預測和評估的期間。 就評估而言，會使用含有定型資料、預設值及模型的輸入。
+    `ImagePrediction` 是在模型定型後，用來進行預測的類別。 它具有影像路徑的 `string` (`ImagePath`)。 The `Label` is used to reuse and train the model. `PredictedLabelValue` 的使用時機是在進行預測和評估的期間。 就評估而言，會使用含有定型資料、預設值及模型的輸入。
 
 ### <a name="initialize-variables-in-main"></a>在 Main 中初始化變數
 
@@ -187,9 +181,9 @@ toaster2.png    appliance
 
     [MLContext 類別](xref:Microsoft.ML.MLContext)是所有 ML.NET 作業的起點，且初始化 `mlContext` 會建立新的 ML.NET 環境，其可在模型建立工作流程物件之間共用。 就概念而言，類似於 Entity Framework 中的 `DBContext`。
 
-### <a name="create-a-struct-for-inception-model-parameters"></a>建立用於開始模型參數的結構
+### <a name="create-a-struct-for-inception-model-parameters"></a>Create a struct for Inception model parameters
 
-1. 開始模型有數個您需要傳入的參數。 使用下列程式碼，在 `Main()` 方法後面建立結構，以將參數值對應至易記名稱：
+1. The Inception model has several parameters you need to pass in. Create a struct to map the parameter values to friendly names with the following code, just after the `Main()` method:
 
     [!code-csharp[InceptionSettings](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#InceptionSettings)]
 
@@ -206,7 +200,7 @@ toaster2.png    appliance
     }
     ```
 
-1. 填入 `DisplayResults` 方法的主體：
+1. Fill in the body of the `DisplayResults` method:
 
     [!code-csharp[DisplayPredictions](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayPredictions)]
 
@@ -221,13 +215,13 @@ toaster2.png    appliance
     }
     ```
 
-1. 填入 `ReadFromTsv` 方法的主體：
+1. Fill in the body of the `ReadFromTsv` method:
 
     [!code-csharp[ReadFromTsv](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReadFromTsv)]
 
-    程式碼會剖析 `tags.tsv` 檔案，將檔案路徑新增至 `ImagePath` 屬性的影像檔案名稱，並將它和 `Label` 載入 `ImageData` 物件中。
+    The code parses through the `tags.tsv` file to add the file path to the image file name for the `ImagePath` property and load it and the `Label` into an `ImageData` object.
 
-### <a name="create-a-method-to-make-a-prediction"></a>建立方法以進行預測
+### <a name="create-a-method-to-make-a-prediction"></a>Create a method to make a prediction
 
 1. 請使用下列程式碼，緊接在 `DisplayResults()` 方法之前，建立 `ClassifySingleImage()` 方法：
 
@@ -238,15 +232,15 @@ toaster2.png    appliance
     }
     ```
 
-1. 建立 `ImageData` 物件，其中包含單一 `ImagePath`的完整路徑和影像檔案名稱。 將下列程式碼新增為 `ClassifySingleImage()` 方法中的下一行：
+1. Create an `ImageData` object that contains the fully qualified path and image file name for the single `ImagePath`. 將下列程式碼新增為 `ClassifySingleImage()` 方法中的下一行：
 
     [!code-csharp[LoadImageData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadImageData)]
 
-1. 藉由新增下列程式碼做為 `ClassifySingleImage` 方法中的下一行，進行單一預測：
+1. Make a single prediction, by adding the following code as the next line in the `ClassifySingleImage` method:
 
     [!code-csharp[PredictSingle](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#PredictSingle)]
 
-    若要取得預測，請使用[Predict （）](xref:Microsoft.ML.PredictionEngine%602.Predict%2A)方法。 [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API，可讓您在單一資料實例上執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全執行緒。 可接受在單一執行緒或原型環境中使用。 為了改善生產環境中的效能和執行緒安全，請使用 `PredictionEnginePool` 服務，這會建立[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)物件的[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) ，以便在整個應用程式中使用。 請參閱本指南，以瞭解如何[在 ASP.NET Core WEB API 中使用 `PredictionEnginePool`](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)。
+    To get the prediction, use the [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) method. The [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) is a convenience API, which allows you to perform a prediction on a single instance of data. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全執行緒。 It's acceptable to use in single-threaded or prototype environments. For improved performance and thread safety in production environments, use the `PredictionEnginePool` service, which creates an [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) of [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) objects for use throughout your application. See this guide on how to [use `PredictionEnginePool` in an ASP.NET Core Web API](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
     > [!NOTE]
     > `PredictionEnginePool` 服務延伸模組目前處於預覽狀態。
@@ -255,13 +249,13 @@ toaster2.png    appliance
 
    [!code-csharp[DisplayPrediction](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayPrediction)]
 
-## <a name="construct-the-mlnet-model-pipeline"></a>建立 ML.NET 模型管線
+## <a name="construct-the-mlnet-model-pipeline"></a>Construct the ML.NET model pipeline
 
-ML.NET 模型管線是一鏈估算器。 請注意，管線結構中不會執行任何動作。 系統會建立估計工具物件，但不會執行。
+An ML.NET model pipeline is a chain of estimators. Note that no execution happens during pipeline construction. The estimator objects are created but not executed.
 
-1. 新增方法以產生模型
+1. Add a method to generate the model
 
-    這個方法是教學課程的核心。 它會建立模型的管線，並訓練管線以產生 ML.NET 模型。 它也會針對某些先前看不見的測試資料評估模型。
+    This method is the heart of the tutorial. It creates a pipeline for the model, and trains the pipeline to produce the ML.NET model. It also evaluates the model against some previously unseen test data.
 
     使用下列程式碼，緊接在 `InceptionSettings` 結構之後及 `DisplayResults()` 方法之前，建立 `GenerateModel()` 方法：
 
@@ -272,68 +266,68 @@ ML.NET 模型管線是一鏈估算器。 請注意，管線結構中不會執行
     }
     ```
 
-1. 新增估算器以載入、調整大小，並從影像資料中將圖元解壓縮：
+1. Add the estimators to load, resize and extract the pixels from the image data:
 
     [!code-csharp[ImageTransforms](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ImageTransforms)]
 
-    影像資料必須處理成 TensorFlow 模型所預期的格式。 在此情況下，影像會載入記憶體中，並調整為一致大小，而圖元會解壓縮為數值向量。
+    The image data needs to be processed into the format that the TensorFlow model expects. In this case, the images are loaded into memory, resized to a consistent size, and the pixels are extracted into a numeric vector.
 
-1. 新增估計工具以載入 TensorFlow 模型，並對它進行評分：
+1. Add the estimator to load the TensorFlow model, and score it:
 
     [!code-csharp[ScoreTensorFlowModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ScoreTensorFlowModel)]
 
-    管線中的這個階段會將 TensorFlow 模型載入記憶體中，然後透過 TensorFlow 模型網路處理圖元值的向量。 將輸入套用至深度學習模型，並使用模型產生輸出，稱為**計分**。 整體使用模型時，計分會進行推斷或預測。
+    This stage in the pipeline loads the TensorFlow model into memory, then processes the vector of pixel values through the TensorFlow model network. Applying inputs to a deep learning model, and generating an output using the model, is referred to as **Scoring**. When using the model in its entirety, scoring makes an inference, or prediction.
 
-    在此情況下，您會使用最後一層以外的所有 TensorFlow 模型，這是進行推斷的層。 倒數第二圖層的輸出會標示為 `softmax_2_preactivation`。 此圖層的輸出實際上是特徵的向量，可描述原始輸入影像。
+    In this case, you use all of the TensorFlow model except the last layer, which is the layer that makes the inference. The output of the penultimate layer is labeled `softmax_2_preactivation`. The output of this layer is effectively a vector of features that characterize the original input images.
 
-    TensorFlow 模型所產生的此功能向量將用來做為 ML.NET 定型演算法的輸入。
+    This feature vector generated by the TensorFlow model will be used as input to an ML.NET training algorithm.
 
-1. 新增估計工具，以將定型資料中的字串標籤對應到整數索引鍵值：
+1. Add the estimator to map the string labels in the training data to integer key values:
 
     [!code-csharp[MapValueToKey](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#MapValueToKey)]
 
-    接下來附加的 ML.NET 訓練員要求其標籤必須是 `key` 格式，而不是任一字元串。 「索引鍵」是一個數位，其中包含一個與字串值的對應。
+    The ML.NET trainer that is appended next requires its labels to be in `key` format rather than arbitrary strings. A key is a number that has a one to one mapping to a string value.
 
-1. 新增 ML.NET 訓練演算法：
+1. Add the ML.NET training algorithm:
 
     [!code-csharp[AddTrainer](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#AddTrainer)]
 
-1. 新增估計工具以將預測的索引鍵值對應回字串：
+1. Add the estimator to map the predicted key value back into a string:
 
     [!code-csharp[MapKeyToValue](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#MapKeyToValue)]
 
 ## <a name="train-the-model"></a>將模型定型
 
-1. 使用[LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile(Microsoft.ML.DataOperationsCatalog,System.String,Microsoft.ML.Data.TextLoader.Options))包裝函式載入定型資料。 將下列程式碼加入為 `GenerateModel()` 方法中的下一行：
+1. Load the training data using the [LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile(Microsoft.ML.DataOperationsCatalog,System.String,Microsoft.ML.Data.TextLoader.Options)) wrapper. 將下列程式碼加入為 `GenerateModel()` 方法中的下一行：
 
     [!code-csharp[LoadData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadData "Load the data")]
 
     ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。 `IDataView` 是彈性且有效率的表格式資料描述方式 (數值和文字)。 資料可以從文字或即時 (例如 SQL 資料庫或記錄檔) 載入至 `IDataView` 物件。
 
-1. 使用上述載入的資料來定型模型：
+1. Train the model with the data loaded above:
 
     [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#TrainModel)]
 
-    `Fit()` 方法會將訓練資料集套用至管線，以訓練您的模型。
+    The `Fit()` method trains your model by applying the training dataset to the pipeline.
 
-## <a name="evaluate-the-accuracy-of-the-model"></a>評估模型的精確度
+## <a name="evaluate-the-accuracy-of-the-model"></a>Evaluate the accuracy of the model
 
-1. 將下列程式碼新增至 `GenerateModel` 方法的下一行，以載入並轉換測試資料：
+1. Load and transform the test data, by adding the following code to the next line of the `GenerateModel` method:
 
     [!code-csharp[LoadAndTransformTestData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadAndTransformTestData "Load and transform test data")]
 
-    您可以使用幾個範例影像來評估模型。 就像定型資料一樣，這些都需要載入 `IDataView`，讓模型可以轉換它們。
+    There are a few sample images that you can use to evaluate the model. Like the training data, these need to be loaded into an `IDataView`, so that they can be transformed by the model.
 
-1. 將下列程式碼新增至 `GenerateModel()` 方法，以評估模型：
+1. Add the following code to the `GenerateModel()` method to evaluate the model:
 
     [!code-csharp[Evaluate](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#Evaluate)]
 
     當您具有預測之後，請設定 [Evaluate()](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A) 方法：
 
-    * 評估模型（比較預測值與測試資料集 `labels`）。
+    * Assesses the model (compares the predicted values with the test dataset `labels`).
     * 傳回模型效能計量。
 
-1. 顯示模型精確度計量
+1. Display the model accuracy metrics
 
     使用下列程式碼來顯示計量、共用結果，然後依結果採取動作：
 
@@ -342,23 +336,23 @@ ML.NET 模型管線是一鏈估算器。 請注意，管線結構中不會執行
     下列計量會針對影像分類進行評估：
 
     * `Log-loss`：請參閱[記錄檔遺失](../resources/glossary.md#log-loss)。 建議讓記錄檔遺失盡量接近零。
-    * `Per class Log-loss`. 建議讓每個類別的記錄檔遺失盡量接近零。
+    * `Per class Log-loss` 建議讓每個類別的記錄檔遺失盡量接近零。
 
 1. 新增下列程式碼來將定型後的模型作為下一行傳回：
 
     [!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReturnModel)]
 
-## <a name="run-the-application"></a>執行應用程式！
+## <a name="run-the-application"></a>Run the application!
 
-1. 在建立 MLCoNtext 類別之後，將呼叫新增至 `Main` 方法中的 `GenerateModel`：
+1. Add the call to `GenerateModel` in the `Main` method after the creation of the MLContext class:
 
     [!code-csharp[CallGenerateModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallGenerateModel)]
 
-1. 將呼叫新增至 `ClassifySingleImage()` 方法，做為 `Main` 方法中的下一行程式碼：
+1. Add the call to the `ClassifySingleImage()` method as the next line of code in the `Main` method:
 
     [!code-csharp[CallClassifySingleImage](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallClassifySingleImage)]
 
-1. 執行主控台應用程式（Ctrl + F5）。 您的結果應該與下列輸出類似。  您可能會看到警告或處理中訊息，但為了讓結果變得清楚，這些訊息已從下列結果中移除。
+1. Run your console app (Ctrl + F5). 您的結果應該與下列輸出類似。  您可能會看到警告或處理中訊息，但為了讓結果變得清楚，這些訊息已從下列結果中移除。
 
     ```console
     =============== Training classification model ===============
@@ -372,7 +366,7 @@ ML.NET 模型管線是一鏈估算器。 請注意，管線結構中不會執行
     Image: toaster3.jpg predicted as: appliance with score: 0.9646884
     ```
 
-恭喜您！ 您現在已成功地為影像分類建立機器學習模型，其方式是在 ML.NET 中將轉移學習套用至 `TensorFlow` 模型。
+恭喜您！ You've now successfully built a machine learning model for image classification by applying transfer learning to a `TensorFlow` model in ML.NET.
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) 存放庫中找到本教學課程的原始程式碼。
 
@@ -380,9 +374,9 @@ ML.NET 模型管線是一鏈估算器。 請注意，管線結構中不會執行
 > [!div class="checklist"]
 >
 > * 了解問題
-> * 將預先定型的 TensorFlow 模型納入 ML.NET 管線中
-> * 定型和評估 ML.NET 模型
-> * 分類測試影像
+> * Incorporate the pre-trained TensorFlow model into the ML.NET pipeline
+> * Train and evaluate the ML.NET model
+> * Classify a test image
 
 請查看機器學習範例 GitHub 存放庫，以探索更複雜的影像分類範例。
 > [!div class="nextstepaction"]

@@ -1,17 +1,17 @@
 ---
-title: 集合初始設定式 (Visual Basic)
+title: 集合初始設定式
 ms.date: 07/20/2015
 f1_keywords:
 - vb.CollectionInitializer
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: 538efc11e477a4e90b7bca286da4ed56105d7ecb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbdd116298c530ae54677631eff7dac2f22c0fe2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906824"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346787"
 ---
 # <a name="collection-initializers-visual-basic"></a>集合初始設定式 (Visual Basic)
 
@@ -39,7 +39,7 @@ ms.locfileid: "61906824"
 > [!NOTE]
 > 您無法合併使用集合初始設定式與物件初始設定式來初始化相同的集合物件。 您可以使用物件初始設定式來初始化集合初始設定式中的物件。
 
-## <a name="creating-a-collection-by-using-a-collection-initializer"></a>使用集合初始設定式建立集合
+## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Creating a Collection by Using a Collection Initializer
 
 當您使用集合初始設定式建立集合時，集合初始設定式中所提供的每個值都會傳遞給集合的適當 `Add` 方法。 例如，如果您使用集合初始設定式建立 <xref:System.Collections.Generic.List%601>，則會將集合初始設定式中的每個字串值傳遞給 <xref:System.Collections.Generic.List%601.Add%2A> 方法。 如果您想要使用集合初始設定式建立集合，則指定的類型必須是有效的集合類型。 有效集合類型的範例包括可實作 <xref:System.Collections.Generic.IEnumerable%601> 介面或繼承 <xref:System.Collections.CollectionBase> 類別的類別。 指定的類型也必須公開符合下列準則的 `Add` 方法。
 
@@ -57,7 +57,7 @@ ms.locfileid: "61906824"
 
 [!code-vb[VbVbalrCollectionInitializers#10](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#10)]
 
-如果集合的 `Add` 方法具有與 `Customer` 物件建構函式相符的參數，則可以將 `Add` 方法的參數值巢狀在集合初始設定式內，如下節所述。 如果集合沒有這類 `Add` 方法，您可以建立此方法作為擴充方法。 如需如何建立的範例`Add`方法作為擴充方法的集合，請參閱[How to:建立 Add 擴充方法，集合初始設定式使用](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)。 如需如何建立自訂的集合，可以搭配集合初始設定式的範例，請參閱[How to:建立集合，集合初始設定式使用](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)。
+如果集合的 `Add` 方法具有與 `Customer` 物件建構函式相符的參數，則可以將 `Add` 方法的參數值巢狀在集合初始設定式內，如下節所述。 如果集合沒有這類 `Add` 方法，您可以建立此方法作為擴充方法。 如需如何建立 `Add` 方法作為集合之擴充方法的範例，請參閱[如何：建立集合初始設定式所使用的 Add 擴充方法](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)。 如需如何建立可與集合初始設定式搭配使用之自訂集合的範例，請參閱[如何：建立集合初始設定式所使用的集合](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)。
 
 ## <a name="nesting-collection-initializers"></a>巢狀集合初始設定式
 
@@ -75,19 +75,19 @@ ms.locfileid: "61906824"
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|說明|
+|標題|描述|
 |---|---|
-|[如何：建立新增為集合初始設定式所使用的擴充方法](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|示範如何建立稱為 `Add` 的擴充方法，以用來將集合初始設定式中的值填入集合。|
-|[如何：建立集合，集合初始設定式使用](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|示範如何將 `Add` 方法包括在可實作 `IEnumerable` 的集合類別中，以啟用集合初始設定式。|
+|[如何：建立集合初始設定式所使用的 Add 擴充方法](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|示範如何建立稱為 `Add` 的擴充方法，以用來將集合初始設定式中的值填入集合。|
+|[如何：建立集合初始設定式所使用的集合](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|示範如何將 `Add` 方法包括在可實作 `IEnumerable` 的集合類別中，以啟用集合初始設定式。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [集合](../../../../visual-basic/programming-guide/concepts/collections.md)
 - [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [物件初始設定式：具名和匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)
 - [自動實作的屬性](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
-- [如何：初始化陣列變數在 Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [如何：在 Visual Basic 中初始化陣列變數](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
 - [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

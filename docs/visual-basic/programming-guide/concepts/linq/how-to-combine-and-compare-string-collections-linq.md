@@ -1,15 +1,15 @@
 ---
-title: HOW TO：合併和比較字串集合（LINQ）（Visual Basic）
+title: 如何：合併和比較字串集合 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: d521e56f9ae311eea53028ba189416db289839cd
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: e9bc8a5f88585bd8625633c54796a1c658c7a7af
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352878"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348430"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>HOW TO：合併和比較字串集合（LINQ）（Visual Basic）
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>How to: Combine and Compare String Collections (LINQ) (Visual Basic)
 
 本例示範如何合併包含文字行的檔案，然後排序結果。 具體來說，它會示範如何在兩組文字行上執行簡單的串連、等位和交集。
 
@@ -165,9 +165,9 @@ End Class
 
 ## <a name="compiling-the-code"></a>編譯程式碼
 
-建立 VB.NET 主控台應用程式專案，並在 System. Linq 命名空間中使用 `Imports` 的語句。
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [LINQ 和字串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

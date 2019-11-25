@@ -1,5 +1,5 @@
 ---
-title: Module <keyword> (Visual Basic)
+title: Module <keyword>
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ModuleAttribute
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - Module modifier
 - attribute blocks, Module keyword
 ms.assetid: d971b940-05ab-4d56-8485-e3b8a661906b
-ms.openlocfilehash: f6ded1184aedf1702f4b6e5eebb85709cf8e39f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd2f762181b5a702f0b0defd5b71bb7bdf129c7b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920701"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351557"
 ---
-# <a name="module-keyword-visual-basic"></a>模組\<關鍵字 > (Visual Basic)
-指定在原始程式檔開頭的屬性會套用至目前的組件模組。  
+# <a name="module-keyword-visual-basic"></a>Module \<keyword> (Visual Basic)
+Specifies that an attribute at the beginning of a source file applies to the current assembly module.  
   
 ## <a name="remarks"></a>備註  
- 許多屬性都屬於個別的程式設計元素，例如類別或屬性。 您套用這類屬性所附加的屬性區塊，在角括弧內 (`< >`)，直接向宣告陳述式。  
+ Many attributes pertain to an individual programming element, such as a class or property. You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.  
   
- 如果屬性屬於不只到下列項目，但目前的組件模組，您將屬性區塊放在原始程式檔開頭，並找出具有屬性`Module`關鍵字。 適用於整個組件時，如果您使用[組件](../../../visual-basic/language-reference/modifiers/assembly.md)關鍵字。  
+ If an attribute pertains not only to the following element but to the current assembly module, you place the attribute block at the beginning of the source file and identify the attribute with the `Module` keyword. If it applies to the entire assembly, you use the [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) keyword.  
   
- `Module`修飾詞不是相同[模組的陳述式](../../../visual-basic/language-reference/statements/module-statement.md)。  
+ The `Module` modifier is not the same as the [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
 - [Module 陳述式](../../../visual-basic/language-reference/statements/module-statement.md)

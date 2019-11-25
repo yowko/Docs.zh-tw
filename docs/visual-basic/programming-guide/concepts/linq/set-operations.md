@@ -1,15 +1,15 @@
 ---
-title: 設定作業（Visual Basic）
+title: 設定作業
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: fe8dbff00ecd6da9b3b0e9792e67422583a00180
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: fe9d910415f30fe672dc702f719fdefdb9c0b3d1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582927"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350622"
 ---
-# <a name="set-operations-visual-basic"></a>設定作業（Visual Basic）
+# <a name="set-operations-visual-basic"></a>Set Operations (Visual Basic)
 
 LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是根據相同或不同集合 (集) 內是否有對等項目而定。
 
@@ -17,7 +17,7 @@ LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是
 
 ## <a name="methods"></a>方法
 
-|方法名稱|描述|Visual Basic 查詢運算式語法|更多資訊|
+|方法名稱|描述|Visual Basic Query Expression Syntax|更多資訊|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |Distinct|移除集合中的重複值。|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|
 |例外|傳回集差異，表示未出現在第二個集合中的某個集合中的項目。|不適用。|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|
@@ -36,7 +36,7 @@ LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是
 
 下圖說明 <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType> 的行為。 所傳回的序列只包含第一個輸入序列中不在第二個輸入序列中的項目。
 
-![顯示 Except&#40;&#41;動作的圖形。](./media/set-operations/except-behavior-graphic.png "顯示 Except 的行為。")
+![Graphic showing the action of Except&#40;&#41;.](./media/set-operations/except-behavior-graphic.png "Shows the behavior of Except.")
 
 ### <a name="intersect"></a>交集
 
@@ -52,7 +52,7 @@ LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是
 
 ## <a name="query-expression-syntax-example"></a>查詢運算式語法範例
 
-下列範例會使用 LINQ 查詢中的 `Distinct` 子句，從整數清單中傳回唯一的數位。
+The following example uses the `Distinct` clause in a LINQ query to return the unique numbers from a list of integers.
 
 [!code-vb[CsLINQSetOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQSetOps/VB/setops.vb#1)]
 
@@ -61,5 +61,5 @@ LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是
 - <xref:System.Linq>
 - [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Distinct 子句](../../../../visual-basic/language-reference/queries/distinct-clause.md)
-- [如何：合併和比較字串集合（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
-- [如何：尋找兩個清單之間的集合差異（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+- [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

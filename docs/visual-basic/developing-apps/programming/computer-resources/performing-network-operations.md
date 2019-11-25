@@ -1,21 +1,23 @@
 ---
-title: 執行網路作業 (Visual Basic)
+title: 執行網路作業
 ms.date: 07/20/2015
 helpviewer_keywords:
 - network operations, performing
 - My.Computer.Network object, tasks
 ms.assetid: 8ecc47ce-7730-49cd-b21d-3a13477eec6b
-ms.openlocfilehash: 1bf4aed9d10aaf39bc94be24e3cf258318ca2b89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cb39f45ec9382e39569a08e5ba400d43cbc6bbd2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583431"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345545"
 ---
 # <a name="performing-network-operations-visual-basic"></a>執行網路作業 (Visual Basic)
+
 下表列出與 `My.Computer.Network` 物件建立關聯的工作。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
+
  [如何：上傳檔案](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
  示範如何使用 `My.Computer.Network` 上傳檔案，並將它儲存到遠端位置。  
   
@@ -26,6 +28,7 @@ ms.locfileid: "33583431"
  示範如何判斷電腦是否具有正常運作的網路連線。  
   
 ## <a name="reference"></a>參考資料  
+
  <xref:Microsoft.VisualBasic.Devices.Network>  
  列出正在使用網路的方法、屬性和事件。  
   

@@ -1,19 +1,19 @@
 ---
-title: <permission> （Visual Basic）
+title: <permission>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: 904d573514bf35b773d47321b7fd3b6a86e90262
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 71b00b669804e644d1171480192b9d55455bdf53
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524696"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352270"
 ---
-# <a name="permission-visual-basic"></a>\<permission > （Visual Basic）
-指定成員的必要許可權。  
+# <a name="permission-visual-basic"></a>\<permission> (Visual Basic)
+Specifies a required permission for the member.  
   
 ## <a name="syntax"></a>語法  
   
@@ -23,18 +23,18 @@ ms.locfileid: "72524696"
   
 ## <a name="parameters"></a>參數  
  `member`  
- 可從目前編譯環境呼叫的成員或欄位參考。 編譯器會檢查指定的程式碼項目是否存在，並將 `member` 轉譯為輸出 XML 中的標準項目名稱。 將 `member` 括在引號（""）中。  
+ 可從目前編譯環境呼叫的成員或欄位參考。 編譯器會檢查指定的程式碼項目是否存在，並將 `member` 轉譯為輸出 XML 中的標準項目名稱。 Enclose `member` in quotation marks (" ").  
   
  `description`  
  成員存取權的描述。  
   
 ## <a name="remarks"></a>備註  
- 使用 `<permission>` 標記來記錄成員的存取。 使用 <xref:System.Security.PermissionSet> 類別來指定成員的存取權。  
+ Use the `<permission>` tag to document the access of a member. Use the <xref:System.Security.PermissionSet> class to specify access to a member.  
   
  使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 編譯可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
- 這個範例會使用 `<permission>` 標記來描述 `ReadFile` 方法所需的 <xref:System.Security.Permissions.FileIOPermission>。  
+ This example uses the `<permission>` tag to describe that the <xref:System.Security.Permissions.FileIOPermission> is required by the `ReadFile` method.  
   
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   

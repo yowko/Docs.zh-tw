@@ -1,39 +1,39 @@
 ---
-title: 目錄和檔案摘要 (Visual Basic)
+title: 目錄和檔案摘要
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic]
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-ms.openlocfilehash: f7d21c3e29cb59f2d2690ab9797c6c50e7d3009b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c7e1ef37b8abffee89c207ac1dcfb5cbef25c29
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802948"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349842"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>目錄和檔案摘要 (Visual Basic)
-Visual Basic 語言關鍵字和執行階段程式庫成員依用途組織，並使用。  
+Visual Basic language keywords and run-time library members are organized by purpose and use.  
   
- 使用`My`功能可讓您更強大的產能和效能的檔案 I/O 作業比使用這些成員。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.FileIO.FileSystem>。  
+ Using the `My` feature gives you greater productivity and performance in file I/O operations than using these members. 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.FileIO.FileSystem>。  
   
 |**動作**|**語言項目**|  
 |----------------|--------------------------|  
-|變更目錄或資料夾。|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
-|變更磁碟機。|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
-|複製檔案。|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
-|讓目錄或資料夾。|<xref:Microsoft.VisualBasic.FileSystem.MkDir%2A>|  
-|移除目錄或資料夾。|<xref:Microsoft.VisualBasic.FileSystem.RmDir%2A>|  
-|重新命名檔案、 目錄或資料夾。|<xref:Microsoft.VisualBasic.FileSystem.Rename%2A>|  
-|傳回目前的路徑。|<xref:Microsoft.VisualBasic.FileSystem.CurDir%2A>|  
-|傳回檔案的日期/時間戳記。|<xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>|  
-|傳回的檔案、 目錄或標籤屬性。|<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>|  
-|傳回檔案的長度。|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
-|傳回檔案的名稱或磁碟區標籤。|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
-|設定檔屬性資訊。|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
+|Change a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
+|Change the drive.|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
+|Copy a file.|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
+|Make a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.MkDir%2A>|  
+|Remove a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.RmDir%2A>|  
+|Rename a file, directory, or folder.|<xref:Microsoft.VisualBasic.FileSystem.Rename%2A>|  
+|Return the current path.|<xref:Microsoft.VisualBasic.FileSystem.CurDir%2A>|  
+|Return a file's date/time stamp.|<xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>|  
+|Return file, directory, or label attributes.|<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>|  
+|Return a file's length.|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
+|Return a file's name or volume label.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
+|Set attribute information for a file.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 執行階段程式庫成員](../../../visual-basic/language-reference/runtime-library-members.md)

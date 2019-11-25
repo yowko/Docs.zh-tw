@@ -1,28 +1,28 @@
 ---
-title: 集合物件摘要 (Visual Basic)
+title: 集合物件摘要
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Collection object, summary
 ms.assetid: c4586369-d817-4453-9cb0-1a272fc66737
-ms.openlocfilehash: 50174f2af5e52b0fd71a590e7daf0285b5e043ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92247c55fb247864b25670a2ca25d867e5b22d15
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802437"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349921"
 ---
 # <a name="collection-object-summary-visual-basic"></a>集合物件摘要 (Visual Basic)
-Visual Basic 語言關鍵字和執行階段程式庫成員依用途組織，並使用。  
+Visual Basic language keywords and run-time library members are organized by purpose and use.  
   
 |動作|語言項目|  
 |------------|----------------------|  
 |建立 `Collection` 物件。|<xref:Microsoft.VisualBasic.Collection>|  
-|將項目新增至集合。|<xref:Microsoft.VisualBasic.Collection.Add*>|  
-|從集合移除的物件。|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
-|參考集合中的項目。|<xref:Microsoft.VisualBasic.Collection.Item*>|  
-|會傳回參考<xref:System.Collections.IEnumerator>介面。|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
+|Add an item to a collection.|<xref:Microsoft.VisualBasic.Collection.Add*>|  
+|Remove an object from a collection.|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
+|Reference an item in a collection.|<xref:Microsoft.VisualBasic.Collection.Item*>|  
+|Return a reference to an <xref:System.Collections.IEnumerator> interface.|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 執行階段程式庫成員](../../../visual-basic/language-reference/runtime-library-members.md)

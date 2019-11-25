@@ -1,5 +1,5 @@
 ---
-title: TryCast 運算子 (Visual Basic)
+title: TryCast 運算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.trycast
@@ -7,39 +7,39 @@ f1_keywords:
 helpviewer_keywords:
 - TryCast keyword [Visual Basic]
 ms.assetid: d1ef5d47-fef4-491e-b014-1d910628f65c
-ms.openlocfilehash: c0eea4565d5040bb00743fc7864ac15b0fccdea9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53306575cfc385039be3939fd87cf993b4509af4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013461"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348205"
 ---
 # <a name="trycast-operator-visual-basic"></a>TryCast 運算子 (Visual Basic)
-採用的型別轉換作業不會擲回例外狀況。  
+Introduces a type conversion operation that does not throw an exception.  
   
 ## <a name="remarks"></a>備註  
- 如果嘗試的轉換失敗，`CType`並`DirectCast`同時擲回<xref:System.InvalidCastException>時發生錯誤。 這可能會影響您的應用程式的效能。 `TryCast` 會傳回[Nothing](../../../visual-basic/language-reference/nothing.md)，如此一來，而不必處理可能的例外狀況，您只需要測試傳回的結果，對`Nothing`。  
+ If an attempted conversion fails, `CType` and `DirectCast` both throw an <xref:System.InvalidCastException> error. This can adversely affect the performance of your application. `TryCast` returns [Nothing](../../../visual-basic/language-reference/nothing.md), so that instead of having to handle a possible exception, you need only test the returned result against `Nothing`.  
   
- 您使用`TryCast`關鍵字您所使用的相同方式[CType 函式](../../../visual-basic/language-reference/functions/ctype-function.md)並[DirectCast 運算子](../../../visual-basic/language-reference/operators/directcast-operator.md)關鍵字。 您提供的運算式，做為第一個引數並將它轉換成做為第二個引數的型別。 `TryCast` 僅操作於參考類型，例如類別和介面。 它需要兩個類型之間的繼承或實作關聯性。 這表示一種類型必須繼承自或實作其他。  
+ You use the `TryCast` keyword the same way you use the [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) and the [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) keyword. You supply an expression as the first argument and a type to convert it to as the second argument. `TryCast` operates only on reference types, such as classes and interfaces. It requires an inheritance or implementation relationship between the two types. This means that one type must inherit from or implement the other.  
   
-## <a name="errors-and-failures"></a>錯誤和失敗  
- `TryCast` 偵測到沒有繼承或實作關聯性存在時，會產生編譯器錯誤。 但是沒有編譯器錯誤並不保證成功的轉換。 如果所需的轉換縮小，它可能無法在執行階段。 如果發生這種情況`TryCast`會傳回[Nothing](../../../visual-basic/language-reference/nothing.md)。  
+## <a name="errors-and-failures"></a>Errors and Failures  
+ `TryCast` generates a compiler error if it detects that no inheritance or implementation relationship exists. But the lack of a compiler error does not guarantee a successful conversion. If the desired conversion is narrowing, it could fail at run time. If this happens, `TryCast` returns [Nothing](../../../visual-basic/language-reference/nothing.md).  
   
 ## <a name="conversion-keywords"></a>轉換關鍵字  
- 類型轉換關鍵字的比較如下所示。  
+ A comparison of the type conversion keywords is as follows.  
   
-|關鍵字|資料類型|引數的關聯性|執行階段失敗|  
+|關鍵字|資料類型|Argument relationship|Run-time failure|  
 |---|---|---|---|  
-|[CType 函式](../../../visual-basic/language-reference/functions/ctype-function.md)|任何資料類型|兩個資料類型之間，則必須定義擴展或縮小轉換|會擲回 <xref:System.InvalidCastException>|  
-|[DirectCast 運算子](../../../visual-basic/language-reference/operators/directcast-operator.md)|任何資料類型|一種類型必須繼承自或實作另一個型別|會擲回 <xref:System.InvalidCastException>|  
-|`TryCast`|僅參考型別|一種類型必須繼承自或實作另一個型別|傳回[Nothing](../../../visual-basic/language-reference/nothing.md)|  
+|[CType 函式](../../../visual-basic/language-reference/functions/ctype-function.md)|Any data types|Widening or narrowing conversion must be defined between the two data types|Throws <xref:System.InvalidCastException>|  
+|[DirectCast 運算子](../../../visual-basic/language-reference/operators/directcast-operator.md)|Any data types|One type must inherit from or implement the other type|Throws <xref:System.InvalidCastException>|  
+|`TryCast`|Reference types only|One type must inherit from or implement the other type|Returns [Nothing](../../../visual-basic/language-reference/nothing.md)|  
   
 ## <a name="example"></a>範例  
  下列範例示範如何使用 `TryCast`。  
   
  [!code-vb[VbVbalrKeywords#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [擴展和縮小轉換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [隱含和明確轉換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

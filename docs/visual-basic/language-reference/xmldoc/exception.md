@@ -1,19 +1,19 @@
 ---
-title: <exception> (Visual Basic)
+title: <exception>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: 16ffb4f6b57dabb3650376c913a7d7608a00646d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: e1e7f2d0fb06599f83ba224ed52a10429d9b11fe
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523928"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346965"
 ---
-# <a name="exception-visual-basic"></a>\<exception > （Visual Basic）
-指定可以擲回的例外狀況。  
+# <a name="exception-visual-basic"></a>\<exception> (Visual Basic)
+Specifies which exceptions can be thrown.  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,12 +29,12 @@ ms.locfileid: "72523928"
  描述。  
   
 ## <a name="remarks"></a>備註  
- 使用 `<exception>` 標記來指定可以擲回的例外狀況。 此標記會套用到方法定義。  
+ Use the `<exception>` tag to specify which exceptions can be thrown. 此標記會套用到方法定義。  
   
  使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 編譯可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
- 這個範例會使用 `<exception>` 標記來描述 `IntDivide` 函數可以擲回的例外狀況。  
+ This example uses the `<exception>` tag to describe an exception that the `IntDivide` function can throw.  
   
  [!code-vb[VbVbcnXmlDocComments#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#3)]  
   

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - parts [WPF], ListBox
 - ListBox [WPF], styles and templates
 ms.assetid: fc5764cb-c27b-495b-88d4-d969a8213ccb
-ms.openlocfilehash: 279683752e6767bbf3e5bc359ec1e72193602c00
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: cb7043a21020193a4b2a2569ec610f311834a698
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459288"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283746"
 ---
 # <a name="listbox-styles-and-templates"></a>ListBox 樣式和範本
-本主題描述 <xref:System.Windows.Controls.ListBox> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
+本主題描述 <xref:System.Windows.Controls.ListBox> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
   
 ## <a name="listbox-parts"></a>ListBox 組件  
  <xref:System.Windows.Controls.ListBox> 控制項沒有任何已命名的元件。  
@@ -43,7 +43,7 @@ ms.locfileid: "73459288"
 |-|-|-|  
 |一般|CommonStates|預設狀態。|  
 |MouseOver|CommonStates|滑鼠指標移到控制項上。|  
-|Disabled|CommonStates|項目已停用。|  
+|已停用|CommonStates|項目已停用。|  
 |已取得焦點|FocusStates|項目已取得焦點。|  
 |未取得焦點|FocusStates|項目未取得焦點。|  
 |未選取|SelectionStates|項目未獲選取。|  
@@ -71,4 +71,4 @@ ms.locfileid: "73459288"
 - [控制項的樣式和範本](control-styles-and-templates.md)
 - [控制項自訂](control-customization.md)
 - [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)
+- [建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)

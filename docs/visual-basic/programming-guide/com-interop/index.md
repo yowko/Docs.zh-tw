@@ -1,37 +1,37 @@
 ---
-title: COM Interop (Visual Basic)
+title: COM Interop
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: 1bcfba25c86c46f986c061241a5d09f9aaa6d248
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: dcfdb5f3661292dda2e084eca22afab9bbec15d3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627077"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347997"
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
-元件物件模型 (COM) 可讓物件向其他元件公開其功能以及主控應用程式。 大部分的現今軟體都會包括 COM 物件。 雖然 .NET 組件是新應用程式的最佳選擇，但您有時可能需要採用 COM 物件。 本節涵蓋一些與透過 Visual Basic 建立和使用 COM 物件相關聯的問題。  
+元件物件模型 (COM) 可讓物件向其他元件公開其功能以及主控應用程式。 大部分的現今軟體都會包括 COM 物件。 雖然 .NET 組件是新應用程式的最佳選擇，但您有時可能需要採用 COM 物件。 This section covers some of the issues associated with creating and using COM objects with Visual Basic.  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [COM Interop 簡介](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  提供 COM 互通性的概觀。  
   
- [如何：從 Visual Basic 參考 COM 物件](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
+ [如何：參考 Visual Basic 的 COM 物件](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
  涵蓋如何將參考新增至具有型別程式庫的 COM 物件。  
   
- [如何：使用 ActiveX 控制項](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- 示範如何使用現有的 ActiveX 控制項, 將功能加入至 Visual Studio 工具箱。  
+ [操作說明：使用 ActiveX 控制項](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
+ Demonstrates how to use existing ActiveX controls to add features to the Visual Studio Toolbox.  
   
  [逐步解說：呼叫 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  逐步解說如何呼叫屬於 Windows 作業系統之 API 的程序。  
   
- [如何：呼叫 Windows API](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
+ [操作說明：呼叫 Windows API](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
  示範如何在 User32.dll 中定義和呼叫 `MessageBox` 函式。  
   
- [如何：呼叫使用不帶正負號類型的 Windows 函式](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [操作說明：呼叫使用不帶正負號類型的 Windows 函式](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  示範如何呼叫具有不帶正負號類型之參數的 Windows 函式。  
   
  [逐步解說：使用 Visual Basic 建立 COM 物件](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  

@@ -1,5 +1,5 @@
 ---
-title: 使用者定義常數 (Visual Basic)
+title: 使用者定義的常數
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic], circular references
@@ -9,53 +9,53 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: 5d4fe5d1b9048f4a8ae22a84e14456318ca38f0f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 194a420b3749ca5c858a65c07b8c164287c1582a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645853"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354012"
 ---
 # <a name="user-defined-constants-visual-basic"></a>使用者定義常數 (Visual Basic)
-常數是有意義的名稱來取代數字或字串，不會變更。 如同它的名稱所示，常數用來儲存應用程式執行過程中維持不變的值。 您可以使用常數所定義的控制項或元件使用，或建立您自己。 您可以建立自己的常數會被稱為*使用者定義*。  
+A constant is a meaningful name that takes the place of a number or string that does not change. 如同它的名稱所示，常數用來儲存應用程式執行過程中維持不變的值。 You can use constants that are defined by the controls or components you work with, or you can create your own. Constants you create yourself are described as *user-defined*.  
   
- 您可使用宣告常數`Const`陳述式中，使用相同的指導方針，您會建立變數的名稱。 如果`Option Strict`是`On`，您必須明確宣告常數的類型。  
+ You declare a constant with the `Const` statement, using the same guidelines you would for creating a variable name. If `Option Strict` is `On`, you must explicitly declare the constant type.  
   
-## <a name="const-statement-usage"></a>Const 陳述式使用方式  
- A`Const`陳述式可以代表數學或日期/時間數量：  
+## <a name="const-statement-usage"></a>Const Statement Usage  
+ A `Const` statement can represent a mathematical or date/time quantity:  
   
  [!code-vb[VbEnumsTask#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#10)]  
   
- 它也可以定義`String`常數：  
+ It also can define `String` constants:  
   
  [!code-vb[VbEnumsTask#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#13)]  
   
- 等號右邊的運算式 ( `=` ) 通常是數字或常值字串，但它也可以是運算式所產生的數字或字串中 （雖然該運算式無法包含函式的呼叫）。 您甚至可以定義常數，根據先前定義的常數：  
+ The expression on the right side of the equal sign ( `=` ) is often a number or literal string, but it also can be an expression that results in a number or string (although that expression cannot contain calls to functions). You can even define constants in terms of previously defined constants:  
   
  [!code-vb[VbEnumsTask#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#15)]  
   
-## <a name="scope-of-user-defined-constants"></a>使用者定義的常數的範圍  
- A`Const`陳述式的範圍是在相同的位置所宣告的變數相同。 您可以使用下列任一方式來指定範圍：  
+## <a name="scope-of-user-defined-constants"></a>Scope of User-Defined Constants  
+ A `Const` statement's scope is the same as that of a variable declared in the same location. You can specify scope in any of the following ways:  
   
-- 若要建立程序內只能存在一個常數，請將它宣告內該程序。  
+- To create a constant that exists only within a procedure, declare it within that procedure.  
   
-- 若要建立所有的程序，在類別中，但不是屬於該模組外的任何程式碼可以使用的常數，請將它宣告之類別的宣告區段中。  
+- To create a constant available to all procedures within a class, but not to any code outside that module, declare it in the declarations section of the class.  
   
-- 若要建立外部的用戶端組件的所有成員的組件，但不是使用的常數，宣告使用`Friend`類別的 「 宣告 」 區段中的關鍵字。  
+- To create a constant that is available to all members of an assembly, but not to outside clients of the assembly, declare it using the `Friend` keyword in the declarations section of the class.  
   
-- 若要建立整個應用程式，您可以使用的常數，宣告使用`Public`關鍵字在宣告中的區段的類別。  
+- To create a constant available throughout the application, declare it using the `Public` keyword in the declarations section the class.  
   
- 如需詳細資訊，請參閱[如何：宣告常數](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)。  
+ For more information, see [How to: Declare A Constant](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md).  
   
-### <a name="avoiding-circular-references"></a>避免循環參考  
- 根據其他常數，就可以定義常數，因為很可能會不小心建立*循環*，或兩個或多個常數之間的循環參考。 當您有兩個或多個公用常數，每一個都以另一個，如下列範例所示定義時，就會發生循環：  
+### <a name="avoiding-circular-references"></a>Avoiding Circular References  
+ Because constants can be defined in terms of other constants, it is possible to inadvertently create a *cycle*, or circular reference, between two or more constants. A cycle occurs when you have two or more public constants, each of which is defined in terms of the other, as in the following example:  
   
  [!code-vb[VbEnumsTask#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#16)]  
 [!code-vb[VbEnumsTask#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#17)]  
   
- 如果發生循環，Visual Basic 會產生編譯器錯誤。  
+ If a cycle occurs, Visual Basic generates a compiler error.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Const 陳述式](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [常數和常值資料類型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
@@ -63,6 +63,6 @@ ms.locfileid: "64645853"
 - [常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)
 - [列舉的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [常數的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [如何：宣告列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [列舉和名稱限定性條件](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

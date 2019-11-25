@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Basic 中寫入檔案
+title: 寫入檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], writing to files
@@ -8,17 +8,19 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
-ms.openlocfilehash: 92e9d717eb52fa393d9215068d8fe70c84f613ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8511a96c7abcc28997c293a09ef10bad543dc261
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588115"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352143"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>在 Visual Basic 中寫入檔案
+
 本節說明如何執行涉及寫入檔案的工作。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
+
  [如何：將文字寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
  示範如何寫入文字檔。  
   
@@ -35,6 +37,7 @@ ms.locfileid: "33588115"
  示範如何使用 <xref:System.IO.StreamWriter?displayProperty=nameWithType> 物件寫入檔案。  
   
 ## <a name="reference"></a>參考資料  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  描述 `My.Computer.FileSystem` 物件及其方法和屬性。  
   
@@ -48,6 +51,7 @@ ms.locfileid: "33588115"
  描述 `WriteAllText` 方法。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  說明如何執行涉及讀取檔案的工作。  
   

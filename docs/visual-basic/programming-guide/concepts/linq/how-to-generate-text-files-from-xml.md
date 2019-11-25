@@ -1,19 +1,19 @@
 ---
-title: 如何：從 XML 產生文字檔（Visual Basic）
+title: 如何：從 XML 產生文字檔
 ms.date: 07/20/2015
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-ms.openlocfilehash: 1b383a0f3656558286bfe449ed72c633426b9410
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: b30596df1a490d78d1333c688a23ed4ab30bcb82
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320540"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344568"
 ---
-# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>如何：從 XML 產生文字檔（Visual Basic）
+# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>How to: Generate Text Files from XML (Visual Basic)
 此範例顯示如何從 XML 檔案產生以逗號分隔的 (CSV) 檔案。  
   
 ## <a name="example"></a>範例  
- Visual Basic 版本使用程式性程式碼，將字串集合匯總成單一字串。  
+ The Visual Basic version uses procedural code to aggregate the collection of strings into a single string.  
   
  此範例使用下列 XML 文件︰[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
   
@@ -53,4 +53,4 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
   
 ## <a name="see-also"></a>請參閱
 
-- [投影和轉換（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

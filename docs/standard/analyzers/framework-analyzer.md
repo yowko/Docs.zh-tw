@@ -1,16 +1,16 @@
 ---
-title: .NET Security Analyzer - .NET
-description: 了解如何使用 .NET Framework Analyzers 套件中的 .NET Security Analyzer 來尋找和解決安全性風險
+title: .NET Framework Analyzers - .NET
+description: Learn how to use the .NET Framework Analyzers in the .NET Framework Analyzers package to find and address security risks
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 03268375739b34a43f38c60fbfd2c993da9f3840
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 7e64b00eb6fd2c2dbb12c54a2c725590b4d22e15
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197958"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345954"
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework Analyzer
 
@@ -20,7 +20,7 @@ ms.locfileid: "73197958"
 
 ## <a name="installing-and-configuring-the-net-framework-analyzer"></a>安裝和設定 .NET Framework Analyzer
 
-.NET Security Analyzer 在您想要執行它們的每個專案上，都必須安裝為 NuGet 套件。 只有一位開發人員必須將它們新增至專案。 分析器套件是一種專案相依性，而且會在具有已更新方案之後，於每位開發人員的電腦上執行。
+The .NET Framework Analyzers must be installed as a NuGet package on every project where you want them to run. 只有一位開發人員必須將它們新增至專案。 分析器套件是一種專案相依性，而且會在具有已更新方案之後，於每位開發人員的電腦上執行。
 
 [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/) NuGet 套件提供 .NET Framework Analyzer。 此套件只提供 .NET Framework 特有的分析器，包含安全性分析器。 在大部分情況下，您會想要有 [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet 套件。 FxCopAnalyzers 彙總套件包含 Framework.Analyzers 套件中所含的所有架構分析器以及下列分析器：
 

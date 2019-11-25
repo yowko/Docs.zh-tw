@@ -1,22 +1,22 @@
 ---
-title: 作法：呼叫擴充方法 (Visual Basic)
+title: 如何：呼叫擴充方法
 ms.date: 07/20/2015
 helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: f2058162ab939d2619d7255c884d88c35ee63715
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: a19705a8f90833d48869df26a18d19b0ad1488e0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512665"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340400"
 ---
-# <a name="how-to-call-an-extension-method-visual-basic"></a>作法：呼叫擴充方法 (Visual Basic)
+# <a name="how-to-call-an-extension-method-visual-basic"></a>如何：呼叫擴充方法 (Visual Basic)
 
-擴充方法可讓您將方法加入至現有的類別。 在宣告擴充方法並將其納入範圍之後, 您就可以像它所擴充之類型的實例方法一樣呼叫它。 如需如何撰寫擴充方法的詳細資訊, 請參閱[如何:撰寫擴充方法](./how-to-write-an-extension-method.md)。
+Extension methods enable you to add methods to an existing class. After an extension method is declared and brought into scope, you can call it like an instance method of the type that it extends. For more information about how to write an extension method, see [How to: Write an Extension Method](./how-to-write-an-extension-method.md).
 
- 下列指示會參考擴充方法`PrintAndPunctuate`, 它會顯示叫用它的字串實例, 後面接著針對第二個`punc`參數傳送的任何值。
+ The following instructions refer to extension method `PrintAndPunctuate`, which will display the string instance that invokes it, followed by whatever value is sent in for the second parameter, `punc`.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -31,40 +31,40 @@ Module StringExtensions
 End Module
 ```
 
-方法在呼叫時必須在範圍內。
+The method must be in scope when it is called.
 
-### <a name="to-call-an-extension-method"></a>呼叫擴充方法
+### <a name="to-call-an-extension-method"></a>To call an extension method
 
-1. 宣告具有擴充方法第一個參數之資料類型的變數。 針對`PrintAndPunctuate`, 您需要一個<xref:System.String>變數:
+1. Declare a variable that has the data type of the first parameter of the extension method. For `PrintAndPunctuate`, you need a <xref:System.String> variable:
 
     ```vb
     Dim example = "Ready"
     ```
 
-2. 該變數會叫用擴充方法, 而且其值會系結至第一個參數`aString`。 將會顯示`Ready?`下列呼叫語句。
+2. That variable will invoke the extension method, and its value is bound to the first parameter, `aString`. The following calling statement will display `Ready?`.
 
     ```vb
     example.PrintAndPunctuate("?")
     ```
 
-     請注意, 此擴充方法的呼叫看起來就像是呼叫任何一個<xref:System.String>需要一個參數的實例方法一樣:
+     Notice that the call to this extension method looks just like a call to any one of the <xref:System.String> instance methods that require one parameter:
 
     ```vb
     example.EndsWith("dy")
     example.IndexOf("R")
     ```
 
-3. 請宣告另一個字串變數, 然後再次呼叫方法, 以查看它是否能與任何字串搭配使用。
+3. Declare another string variable and call the method again to see that it works with any string.
 
     ```vb
     Dim example2 = " or not"
     example2.PrintAndPunctuate("!!!")
     ```
 
-     這次的結果是: `or not!!!`。
+     The result this time is: `or not!!!`.
 
 ## <a name="example"></a>範例
- 下列程式碼是建立和使用簡單擴充方法的完整範例。
+ The following code is a complete example of the creation and use of a simple extension method.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -95,8 +95,8 @@ End Module
 ' Goodbye?
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [如何：撰寫擴充方法](./how-to-write-an-extension-method.md)
 - [擴充方法](./extension-methods.md)
-- [Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

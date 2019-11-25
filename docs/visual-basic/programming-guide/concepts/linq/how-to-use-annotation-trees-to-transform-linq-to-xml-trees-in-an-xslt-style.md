@@ -1,15 +1,15 @@
 ---
-title: 如何：使用注釋轉換 XSLT 樣式中的 LINQ to XML 樹狀結構（Visual Basic）
+title: 如何：使用註釋將 LINQ to XML 樹狀轉換為 XSLT 樣式
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: b8f15c4dc6016e48619d26e7cc8717a2a3c5acd5
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: d9cb32462535f099107343bd9069b4da3508c5b0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581982"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348348"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>如何：使用注釋轉換 XSLT 樣式中的 LINQ to XML 樹狀結構（Visual Basic）
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (Visual Basic)
 
 附註可用於簡化 XML 樹狀的轉換。
 
@@ -19,7 +19,7 @@ ms.locfileid: "72581982"
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>
 ```
 
-針對任何指定的文字節點，可能會有任何數目的 `<b>` 和 `<i>` 子項目。 這個方法會延伸到數個其他情況：例如，可以包含各種子專案的頁面，例如一般段落、點符段落和點陣圖。 資料表中的儲存格可能包含文字、下拉式清單或點陣圖。 文件中心 XML 的其中一個主要特性為，您不知道任何特定項目將會有哪個子項目。
+針對任何指定的文字節點，可能會有任何數目的 `<b>` 和 `<i>` 子項目。 This approach extends to a number of other situations: such as, pages that can contain a variety of child elements, such as regular paragraphs, bulleted paragraphs, and bitmaps. 資料表中的儲存格可能包含文字、下拉式清單或點陣圖。 文件中心 XML 的其中一個主要特性為，您不知道任何特定項目將會有哪個子項目。
 
 如果您要在樹狀結構中，轉換您不一定了解太多您要轉換之項目子系的項目，則使用附註的這個方法是一個有效的方法。
 
@@ -43,7 +43,7 @@ ms.locfileid: "72581982"
 
 ## <a name="transforming-a-tree"></a>轉換樹狀結構
 
-第一個範例會將所有 `Paragraph` 節點重新命名為 `para`：
+This first example renames all `Paragraph` nodes to `para`:
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -83,7 +83,7 @@ End Module
 </Root>
 ```
 
-## <a name="a-more-complicated-transform"></a>更複雜的轉換
+## <a name="a-more-complicated-transform"></a>A more complicated transform
 
 下列範例會查詢樹狀結構並計算 `Data` 項目的平均值和總和，然後將它們加入為樹狀結構中的新項目。
 
@@ -158,29 +158,29 @@ After Transform
 </Root>
 ```
 
-## <a name="effecting-the-transform"></a>影響轉換
+## <a name="effecting-the-transform"></a>Effecting the transform
 
 `XForm` 這個小函式會從原始的附註樹狀結構建立轉換的新樹狀結構。
 
 函式的虛擬程式碼相當簡單：
 
-> 函式會採用 System.xml.linq.xelement> 做為引數，並傳回 System.xml.linq.xelement>。
+> The function takes an XElement as an argument and returns an XElement.
 >
-> 如果元素具有 System.xml.linq.xelement> 注釋，則會傳回新的 System.xml.linq.xelement>：
+> If an element has an XElement annotation, then return a new XElement:
 >
-> - 新 System.xml.linq.xelement> 的名稱是 annotation 元素的名稱。
-> - 所有屬性都會從注釋複製到新的節點。
-> - 所有子節點都會從注釋複製，但特殊節點 xf： ApplyTransforms 會被辨識，而來源專案的子節點會逐一查看。 如果來源子節點不是 System.xml.linq.xelement>，則會將它複製到新的樹狀結構。 如果來源子系是 System.xml.linq.xelement>，則會以遞迴方式呼叫此函式來轉換它。
+> - The name of the new XElement is the annotation element's name.
+> - All attributes are copied from the annotation to the new node.
+> - All child nodes are copied from the annotation, with the exception that the special node xf:ApplyTransforms is recognized, and the source element's child nodes are iterated. If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
 >
-> 如果元素沒有標注：
+> If an element is not annotated:
 >
-> - 傳回新的 System.xml.linq.xelement>
->   - 新 System.xml.linq.xelement> 的名稱是來源元素的名稱。
->   - 所有屬性都會從來源元素複製到目的地的元素。
->   - 所有子節點都會從來源元素複製。
->   - 如果來源子節點不是 System.xml.linq.xelement>，則會將它複製到新的樹狀結構。 如果來源子系是 System.xml.linq.xelement>，則會以遞迴方式呼叫此函式來轉換它。
+> - Return a new XElement
+>   - The name of the new XElement is the source element's name.
+>   - All attributes are copied from the source element to the destination's element.
+>   - All child nodes are copied from the source element.
+>   - If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
 
-下列程式碼是此函式的實作為：
+The following code is the implementation of this function:
 
 ```vb
 ' Build a transformed XML tree per the annotations.
@@ -227,7 +227,6 @@ End Function
 下列程式碼是包含 `XForm` 函式的完整範例。 此範例包含一些此類型轉換的一般用法：
 
 ```vb
-Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Text
@@ -377,4 +376,4 @@ After Transform
 
 ## <a name="see-also"></a>請參閱
 
-- [Advanced LINQ to XML 程式設計（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

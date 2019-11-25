@@ -1,34 +1,34 @@
 ---
-title: 列舉類型的概觀 (Visual Basic)
+title: 列舉概觀
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, enumerations
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
-ms.openlocfilehash: 1c3465a3b2d12b110096ceedf2602d6560b82f4d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 623a3db818f589fb98f2c7efb02ea2f4a3b5b0ca
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907396"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347477"
 ---
 # <a name="enumerations-overview-visual-basic"></a>列舉類型的概觀 (Visual Basic)
-列舉型別提供便利的方式來使用相關常數組和名稱相關聯的常數值。 例如，您可以宣告列舉來當作一組與當週的日次建立關聯的整數常數，接著在程式碼中使用日次的名稱而不是它們的整數值。  
+Enumerations provide a convenient way to work with sets of related constants and to associate constant values with names. 例如，您可以宣告列舉來當作一組與當週的日次建立關聯的整數常數，接著在程式碼中使用日次的名稱而不是它們的整數值。  
   
-## <a name="tasks-involving-enumerations"></a>包含列舉工作  
- 下表列出列舉的常見工作。  
+## <a name="tasks-involving-enumerations"></a>Tasks involving Enumerations  
+ The following table lists common tasks involving enumerations.  
   
-|若要執行此工作|請參閱|  
+|若要執行這項操作|請參閱|  
 |----------------|---------|  
-|尋找預先定義的列舉型別|[常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)|  
-|宣告列舉|[如何：宣告列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)|  
-|完整限定的列舉名稱|[列舉和名稱限定性條件](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)|  
-|參考列舉成員|[如何：參考列舉成員](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)|  
-|逐一查看列舉類型|[如何：逐一查看 Visual Basic 中列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)|  
-|決定與列舉型別相關聯的字串|[如何：決定與列舉值關聯的字串](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)|  
-|決定何時使用列舉型別|[何時使用列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
+|Find a pre-defined enumeration|[常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)|  
+|Declare an enumeration|[How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)|  
+|Fully qualify an enumeration's name|[列舉和名稱限定性條件](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)|  
+|Refer to an enumeration member|[如何：參考列舉成員](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)|  
+|Iterate through an enumeration|[How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)|  
+|Determine the string associated with an enumeration|[如何：決定與列舉值相關聯的字串](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)|  
+|Decide when to use an enumeration|[何時使用列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [常數的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [使用者定義的常數](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)

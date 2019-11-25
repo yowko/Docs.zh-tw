@@ -1,17 +1,17 @@
 ---
-title: 一般屬性（Visual Basic）
+title: 常見屬性
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 5bc568279a6952fdc5e0a000b1208cd7f9cfd6e7
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2889411779a275baa8c91862d4cac2f820d660d0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524277"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353533"
 ---
-# <a name="common-attributes-visual-basic"></a>一般屬性（Visual Basic）
+# <a name="common-attributes-visual-basic"></a>Common Attributes (Visual Basic)
 
-本主題描述最常在 Visual Basic 程式中使用的屬性。
+This topic describes the attributes that are most commonly used in Visual Basic programs.
 
 - [全域屬性](#Global)
 
@@ -21,7 +21,7 @@ ms.locfileid: "72524277"
 
 - [呼叫端資訊屬性](#CallerInfo)
 
-- [Visual Basic 屬性](#VB)
+- [Visual Basic Attributes](#VB)
 
 ## <a name="Global"></a> 全域屬性
 
@@ -31,7 +31,7 @@ ms.locfileid: "72524277"
 <Assembly: AssemblyVersion("1.0.0.0")>
 ```
 
-全域屬性會出現在原始程式碼中任何頂層 `Imports` 語句之後，以及任何類型、模組或命名空間宣告之前。 全域屬性可以出現在多個原始程式檔中，但必須使用單一編譯階段編譯檔案。 對於 Visual Basic 專案，全域屬性通常會放在 AssemblyInfo .vb 檔案中（當您在 Visual Studio 中建立專案時，就會自動建立檔案）。
+Global attributes appear in the source code after any top-level `Imports` statements and before any type, module, or namespace declarations. 全域屬性可以出現在多個原始程式檔中，但必須使用單一編譯階段編譯檔案。 For Visual Basic projects, global attributes are generally put in the AssemblyInfo.vb file (the file is created automatically when you create a project in Visual Studio).
 
 組件屬性是提供組件相關資訊的值。 它們的分類如下：
 
@@ -130,8 +130,8 @@ b.NewMethod()
 
 ```vb
 #Const TRACE_ON = True
-Imports System
 Imports System.Diagnostics
+
 Module TestConditionalAttribute
     Public Class Trace
         <Conditional("TRACE_ON")>
@@ -228,32 +228,32 @@ End Class
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|包含呼叫端的原始程式檔完整路徑。 這是編譯時期的路徑。|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|原始程式檔中呼叫方法的行號。|`Integer`|
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼叫端的方法名稱或屬性名稱。 如需詳細資訊，請參閱[呼叫端資訊（Visual Basic）](../../../../visual-basic/programming-guide/concepts/caller-information.md)。|`String`|
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼叫端的方法名稱或屬性名稱。 For more information, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|
 
-如需有關「呼叫端資訊」屬性的詳細資訊，請參閱[呼叫端資訊（Visual Basic）](../../../../visual-basic/programming-guide/concepts/caller-information.md)。
+For more information about the Caller Info attributes, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).
 
-## <a name="VB"></a>Visual Basic 屬性
+## <a name="VB"></a> Visual Basic Attributes
 
-下表列出 Visual Basic 特有的屬性。
+The following table lists the attributes that are specific to Visual Basic.
 
 |屬性|用途|
 |---------------|-------------|
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|向編譯器表示類別應該公開為 COM 物件。|
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|允許只使用模組所需的限定性來存取模組成員。|
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|指定結構中固定長度字串的大小，以與檔案輸入和輸出函數搭配使用。|
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|指定結構中固定陣列的大小，以與檔案輸入和輸出函數搭配使用。|
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Indicates to the compiler that the class should be exposed as a COM object.|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Allows module members to be accessed using only the qualification needed for the module.|
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Specifies the size of a fixed-length string in a structure for use with file input and output functions.|
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Specifies the size of a fixed array in a structure for use with file input and output functions.|
 
 ### <a name="comclassattribute"></a>COMClassAttribute
 
-使用 `COMClassAttribute` 來簡化從 Visual Basic 建立 COM 元件的程式。 COM 物件與 .NET Framework 元件有很大的不同，而沒有 `COMClassAttribute`，您需要遵循幾個步驟，從 Visual Basic 產生 COM 物件。 對於標記為 `COMClassAttribute` 的類別，編譯器會自動執行其中許多步驟。
+Use `COMClassAttribute` to simplify the process of creating COM components from Visual Basic. COM objects are considerably different from .NET Framework assemblies, and without `COMClassAttribute`, you need to follow a number of steps to generate a COM object from Visual Basic. For classes marked with `COMClassAttribute`, the compiler performs many of these steps automatically.
 
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute
 
-使用 `HideModuleNameAttribute`，讓模組成員只能使用模組所需的限定性來存取。
+Use `HideModuleNameAttribute` to allow module members to be accessed by using only the qualification needed for the module.
 
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute
 
-使用 `VBFixedStringAttribute` 強制 Visual Basic 建立固定長度的字串。 字串預設為可變長度，而且當您將字串儲存至檔案時，這個屬性會很有用。 下列程式碼示範這種情況：
+Use `VBFixedStringAttribute` to force Visual Basic to create a fixed-length string. Strings are of variable length by default, and this attribute is useful when storing strings to files. The following code demonstrates this:
 
 ```vb
 Structure Worker
@@ -267,7 +267,7 @@ End Structure
 
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute
 
-使用 `VBFixedArrayAttribute` 來宣告大小固定的陣列。 如同 Visual Basic 字串，陣列預設為可變長度。 將資料序列化或寫入檔案時，這個屬性很有用。
+Use `VBFixedArrayAttribute` to declare arrays that are fixed in size. Like Visual Basic strings, arrays are of variable length by default. This attribute is useful when serializing or writing data to files.
 
 ## <a name="see-also"></a>請參閱
 

@@ -1,18 +1,18 @@
 ---
-title: HOW TO：非同步呼叫 Web 服務 (Visual Basic)
+title: 如何：非同步呼叫 Web 服務
 ms.date: 07/20/2015
 helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: 01d2fad6be94f23457ba37cbb15521765e0bea17
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: HT
+ms.openlocfilehash: 0eeb358ba38836ba6302f98f9e3e0314b83510f0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376197"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352126"
 ---
-# <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>作法：非同步呼叫 Web 服務 (Visual Basic)
+# <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>如何：非同步呼叫 Web 服務 (Visual Basic)
 
 這個範例會將處理常式連接到 Web 服務的非同步處理常式事件，讓它能擷取非同步方法呼叫的結果。 此範例使用 DemoTemperatureService Web 服務，網址為 `http://www.xmethods.net`。
 
@@ -66,7 +66,7 @@ Proxy 類別允許您同步呼叫 Web 服務方法，您的應用程式會在該
 
     若要非同步地呼叫 `getTemp` Web 方法，請呼叫 `CallGetTempAsync` 方法。 當 Web 方法完成時，它的傳回值會傳到 `getTempCompletedHandler` 事件處理常式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [存取應用程式 Web 服務](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
 - [My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)

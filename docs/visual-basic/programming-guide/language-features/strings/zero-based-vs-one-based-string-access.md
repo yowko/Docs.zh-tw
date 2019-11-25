@@ -1,26 +1,26 @@
 ---
-title: 以零為起始與在 Visual Basic 中的其中一個基礎字串存取
+title: Zero-based vs. One-based String Access
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
-ms.openlocfilehash: cc8f286de41d7e44225e889e73ff3c7b1fdbd881
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 97e60038bc7ec0f030939d0980b786bffebcfb9a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591743"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354293"
 ---
-# <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>以零為起始與在 Visual Basic 中的其中一個基礎字串存取
-本主題會比較 Visual Basic 和.NET Framework 提供字串中字元的權限。 .NET Framework 一律會提供以零為起始的存取權的字元在字串中，而 Visual Basic 提供的以零為起始與以一為基的存取，視函數而定。  
+# <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Visual Basic 中以零起始與以一起始的字串存取之比較
+This topic compares how Visual Basic and the .NET Framework provide access to the characters in a string. The .NET Framework always provides zero-based access to the characters in a string, whereas Visual Basic provides zero-based and one-based access, depending on the function.  
   
-## <a name="one-based"></a>以一為  
- 如需以一為基的 Visual Basic 函式的範例，請考慮`Mid`函式。 它會指出子字串將會開始，從位置 1 開始的字元位置的引數。 .NET Framework<xref:System.String.Substring%2A?displayProperty=nameWithType>方法採用索引之字元的子字串開始，已在字串中從開始位置 0。 因此，如果您有一個字串"ABCDE"時，個別字元的編號搭配 id:1,2,3,4,5`Mid`函式，但搭配 0,1,2,3,4<xref:System.String.Substring%2A?displayProperty=nameWithType>方法。  
+## <a name="one-based"></a>One-Based  
+ For an example of a one-based Visual Basic function, consider the `Mid` function. It takes an argument that indicates the character position at which the substring will start, starting with position 1. The .NET Framework <xref:System.String.Substring%2A?displayProperty=nameWithType> method takes an index of the character in the string at which the substring is to start, starting with position 0. Thus, if you have a string "ABCDE", the individual characters are numbered 1,2,3,4,5 for use with the `Mid` function, but 0,1,2,3,4 for use with the <xref:System.String.Substring%2A?displayProperty=nameWithType> method.  
   
-## <a name="zero-based"></a>以零為起始  
- 如需以零為起始的 Visual Basic 函式的範例，請考慮`Split`函式。 它會將字串分割，並傳回陣列，包含子字串。 .NET Framework<xref:System.String.Split%2A?displayProperty=nameWithType>方法也會將字串分割，並傳回陣列，包含子字串。 因為`Split`函式和<xref:System.String.Split%2A>方法傳回.NET Framework 的陣列，它們必須是以零為起始。  
+## <a name="zero-based"></a>Zero-Based  
+ For an example of a zero-based Visual Basic function, consider the `Split` function. It splits a string and returns an array containing the substrings. The .NET Framework <xref:System.String.Split%2A?displayProperty=nameWithType> method also splits a string and returns an array containing the substrings. Because the `Split` function and <xref:System.String.Split%2A> method return .NET Framework arrays, they must be zero-based.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.Strings.Mid%2A>
 - <xref:Microsoft.VisualBasic.Strings.Split%2A>

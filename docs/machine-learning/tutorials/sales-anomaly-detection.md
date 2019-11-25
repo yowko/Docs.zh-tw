@@ -1,17 +1,17 @@
 ---
-title: 教學課程：偵測產品銷售中的異常
+title: 'Tutorial: Detect anomalies in product sales'
 description: 了解如何建置產品銷售資料的異常偵測應用程式。 此教學課程會示範如何在 Visual Studio 2019 中使用 C# 建立 .NET Core 主控台應用程式。
-ms.date: 07/17/2019
+ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 37c6b99fbd7db63c19201e0c6dce9b2b6d9f1932
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: fe2904dee349f32feb115ea533adbb4b1d8b7140
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423579"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204933"
 ---
-# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>教學課程：使用 ML.NET 偵測產品銷售額中的異常
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Tutorial: Detect anomalies in product sales with ML.NET
 
 了解如何建置產品銷售資料的異常偵測應用程式。 此教學課程會示範如何在 Visual Studio 中使用 C# 建立 .NET Core 主控台應用程式。
 
@@ -28,7 +28,7 @@ ms.locfileid: "73423579"
 
 ## <a name="prerequisites"></a>Prerequisites
 
-* 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)版本。
+* [Visual Studio 2017 version 15.6 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) with the ".NET Core cross-platform development" workload installed.
 
 * [product-sales.csv 資料集](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
 
@@ -44,7 +44,7 @@ ms.locfileid: "73423579"
 
 3. 安裝「Microsoft.ML NuGet 套件」：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、從清單中選取 **v1.0.0** 套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。 為 **Microsoft.ML.TimeSeries v0.12.0** 重複這些步驟。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.ML** and select the **Install** button. 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。 Repeat these steps for **Microsoft.ML.TimeSeries**.
 
 4. 在您的 *Program.cs* 檔案最上方新增下列 `using` 陳述式：
 
@@ -127,14 +127,14 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 異常偵測會標記未預期或不尋常的事件或行為。 它可提供尋找問題的線索，協助您回答「這奇不奇怪？」的問題。
 
-![「這是奇怪的異常偵測」的範例。](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
+![Example of the "Is this weird" anomaly detection.](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
 
 異常偵測是偵測時間序列資料極端值的程序，它們是指定輸入時間序列中非預期或「奇怪」行為的資料點。
 
 異常偵測適用於許多方面。 若是執行個體：
 
-如果您有車輛，您可能會想知道：此石油量測計是否正常閱讀，或是否有流失？
-如果您要監視電源耗用量，您會想知道：是否有中斷？
+If you have a car, you might want to know: Is this oil gauge reading normal, or do I have a leak?
+If you're monitoring power consumption, you’d want to know: Is there an outage?
 
 可偵測到的時間序列異常有兩種：
 
@@ -152,7 +152,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 尖峰偵測目標是找出明顯有別於大部分時間序列資料值的突然卻短暫暴增。 請務必及時偵測這些可疑的罕見項目、事件或觀測，將影響降至最低。 下列方法可用來偵測各種異常，例如：中斷、網路攻擊或病毒式 Web 內容。 下圖是時間序列資料集的尖峰範例：
 
-![顯示兩個尖峰偵測的螢幕擷取畫面。](./media/sales-anomaly-detection/two-spike-detections.png)
+![Screenshot that shows two spike detections.](./media/sales-anomaly-detection/two-spike-detections.png)
 
 ### <a name="add-the-createemptydataview-method"></a>新增 CreateEmptyDataView() 方法
 
@@ -266,7 +266,7 @@ Alert   Score   P-Value
 
 `Change points` 是值之時間序列事件資料流分佈的持續變更，例如層級變更和趨勢。 這些持續變更延續的時間比 `spikes` 長，可能表示災難性事件。 `Change points` 通常無法為肉眼所見，但可以使用下列方法，在您的資料中偵測到。  下圖是變更點偵測的範例：
 
-![顯示變更點偵測的螢幕擷取畫面。](./media/sales-anomaly-detection/change-point-detection.png)
+![Screenshot that shows a change point detection.](./media/sales-anomaly-detection/change-point-detection.png)
 
 ### <a name="create-the-detectchangepoint-method"></a>建立 DetectChangepoint() 方法
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 57fd4ab59a1162145087b375cbbb71816a10e78c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: cf9c0ad345ce8762e700bb46b431804dccb79409
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420345"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283055"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 語言和 .NET Framework 簡介
 
@@ -68,5 +68,4 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
 ## <a name="see-also"></a>請參閱
 
-- [C#](../index.md)
 - [使用視覺效果消費者入門C#](/visualstudio/ide/quickstart-csharp-console)

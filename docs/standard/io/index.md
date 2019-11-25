@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3b3dcc3b96e12f89508f4d2708c5ab083516dba
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
-ms.translationtype: HT
+ms.openlocfilehash: 889271ca41fb84b44757adfffc61ffbfbc0a03a8
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025495"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204790"
 ---
 # <a name="file-and-stream-io"></a>檔案和資料流 I/O
 
@@ -47,7 +47,7 @@ ms.locfileid: "67025495"
 
 除了使用這些類別之外，Visual Basic 使用者還可以使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> 類別針對檔案 I/O 提供的方法。
 
-請參閱[如何：複製目錄](how-to-copy-directories.md)，[如何：建立目錄清單](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))，及[如何：列舉目錄與檔案](how-to-enumerate-directories-and-files.md)。
+請參閱[如何：複製目錄](how-to-copy-directories.md)、[如何：建立目錄清單](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))，以及[如何：列舉目錄和檔案](how-to-enumerate-directories-and-files.md)。
 
 ## <a name="streams"></a>資料流
 
@@ -95,11 +95,11 @@ ms.locfileid: "67025495"
 
 - <xref:System.IO.TextReader> 和 <xref:System.IO.TextWriter> – 做為其他讀取和寫入二進位資料以外的字元與字串之讀取器和寫入器的抽象基底類別。
 
-請參閱[如何：從檔案讀取文字](how-to-read-text-from-a-file.md)，[如何：將文字寫入檔案](how-to-write-text-to-a-file.md)，[如何：從字串讀取字元](how-to-read-characters-from-a-string.md)，及[如何：將字元寫入字串](how-to-write-characters-to-a-string.md)。
+請參閱[如何：從檔案讀取文字](how-to-read-text-from-a-file.md)、[如何：將文字寫入檔案](how-to-write-text-to-a-file.md)、[如何：從字串讀取字元](how-to-read-characters-from-a-string.md)，以及[如何：將字元寫入字串](how-to-write-characters-to-a-string.md)。
 
 ## <a name="asynchronous-io-operations"></a>非同步 I/O 作業
 
-讀取或寫入大量資料可能會耗用大量資源。 如果您的應用程式需要保持對使用者的回應能力，您應該以非同步方式執行這些工作。 進行同步 I/O 作業時，UI 執行緒會遭到封鎖，直至耗用資源的作業完成為止。  開發 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式時請使用非同步 I/O 作業，避免造成應用程式停止運作的印象。
+讀取或寫入大量資料可能會耗用大量資源。 如果您的應用程式需要保持對使用者的回應能力，您應該以非同步方式執行這些工作。 進行同步 I/O 作業時，UI 執行緒會遭到封鎖，直至耗用資源的作業完成為止。  Use asynchronous I/O operations when developing Windows 8.x Store apps to prevent creating the impression that your app has stopped working.
 
 非同步成員的名稱中包含 `Async`，例如 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.FlushAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A> 方法。 這些方法可搭配 `async` 和 `await` 關鍵字使用。
 
@@ -129,7 +129,7 @@ ms.locfileid: "67025495"
 
 隔離儲存區 (Isolated Storage) 為資料儲存機制，藉著定義標準化方式，將程式碼與儲存的資料產生關聯，以提供隔離和安全。 儲存區提供依使用者、組件和 (選擇性) 網域隔離的虛擬檔案系統。 隔離儲存區在應用程式未具備存取使用者檔案的權限時特別實用。 您可以藉由電腦的安全性原則所控制的方式儲存應用程式的設定或檔案。
 
-隔離儲存區 (Isolated Storage) 不適用於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，請改為使用 <xref:Windows.Storage?displayProperty=nameWithType> 命名空間中的應用程式資料類別。 如需詳細資訊，請參閱[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29)。
+Isolated storage is not available for Windows 8.x Store apps; instead, use application data classes in the <xref:Windows.Storage?displayProperty=nameWithType> namespace. 如需詳細資訊，請參閱[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29)。
 
 以下是實作隔離儲存區時經常使用的類別：
 
@@ -145,7 +145,7 @@ ms.locfileid: "67025495"
 
 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 包含許多用於讀取和寫入資料流的類型，不過這個集合並未包含所有 .NET Framework I/O 類型。
 
-以下是在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式中使用 I/O 作業時要注意的一些重要差異：
+Some important differences to note when using I/O operations in Windows 8.x Store apps:
 
 - <xref:System.IO.File> 中未包含與檔案作業特別相關的類型，例如 <xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> 和 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]。 您應該改為使用 Windows 執行階段之 <xref:Windows.Storage?displayProperty=nameWithType> 命名空間中的型別，例如 <xref:Windows.Storage.StorageFile> 與 <xref:Windows.Storage.StorageFolder>。
 
@@ -155,15 +155,15 @@ ms.locfileid: "67025495"
 
 - 無法使用路徑壓縮類型 <xref:System.IO.Compression.ZipFile> 和 <xref:System.IO.Compression.ZipFileExtensions>。 您應該改為使用 <xref:Windows.Storage.Compression?displayProperty=nameWithType> 命名空間中的型別。
 
-如有需要，您可以在 .NET Framework 資料流和 Windows 執行階段資料流之間進行轉換。 如需詳細資訊，請參閱[如何：在 .NET Framework 資料流及 Windows 執行階段資料流之間](how-to-convert-between-dotnet-streams-and-winrt-streams.md)或 <xref:System.IO.WindowsRuntimeStreamExtensions> 之間轉換。
+如有需要，您可以在 .NET Framework 資料流和 Windows 執行階段資料流之間進行轉換。 For more information, see [How to: Convert Between .NET Framework Streams and Windows Runtime Streams](how-to-convert-between-dotnet-streams-and-winrt-streams.md) or <xref:System.IO.WindowsRuntimeStreamExtensions>.
 
-如需有關在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中 I/O 作業的詳細資訊，請參閱[快速入門：讀取及寫入檔案](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10))。
+For more information about I/O operations in a Windows 8.x Store app, see [Quickstart: Reading and writing files](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
 
 ## <a name="io-and-security"></a>I/O 及安全性
 
 當您使用 <xref:System.IO?displayProperty=nameWithType> 命名空間中的類別時，必須遵循作業系統安全性需求，例如存取控制清單 (ACL)，以控制對檔案和目錄的存取。 任何 <xref:System.Security.Permissions.FileIOPermission> 需求上都會附加這個需求。 您可以用程式設計的方式管理 ACL。 如需詳細資訊，請參閱[如何：新增或移除存取控制清單項目](how-to-add-or-remove-access-control-list-entries.md)。
 
-預設安全性原則可避免網際網路或內部網路應用程式存取使用者電腦上的檔案。 因此，撰寫將透過網際網路或內部網路下載的程式碼時，請不要使用需要實體檔案路徑的 I/O 類別。 對於傳統 .NET Framework 應用程式請改用[隔離儲存區](isolated-storage.md)，對於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式則改用[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。
+預設安全性原則可避免網際網路或內部網路應用程式存取使用者電腦上的檔案。 因此，撰寫將透過網際網路或內部網路下載的程式碼時，請不要使用需要實體檔案路徑的 I/O 類別。 Instead, use [isolated storage](isolated-storage.md) for traditional .NET Framework applications, or use [application data](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) for Windows 8.x Store apps.
 
 只會對已建構的資料流進行安全性檢查。 因此，請不要開啟資料流，然後將它傳遞至較不受信任的程式碼或應用程式定義域。
 

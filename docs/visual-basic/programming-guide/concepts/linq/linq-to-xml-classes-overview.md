@@ -1,21 +1,21 @@
 ---
-title: LINQ to XML 類別概觀 (Visual Basic)
+title: LINQ to XML 類別概觀
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
-ms.openlocfilehash: 10a6384167ee6ad6463a7f2f993b871fc8baea9e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b7c1e13d462bbee38f4e958bb3ef90a8c7d32f3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610747"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352001"
 ---
-# <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML 類別概觀 (Visual Basic)
+# <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML Classes Overview (Visual Basic)
 本主題提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 命名空間 (Namespace) 中的 <xref:System.Xml.Linq> 類別 (Class) 清單，以及每個類別的簡短說明。  
   
 ## <a name="linq-to-xml-classes"></a>LINQ to XML 類別  
   
 ### <a name="xattribute-class"></a>XAttribute 類別  
- <xref:System.Xml.Linq.XAttribute> 代表 XML 屬性。 如需詳細的資訊和範例，請參閱 < [XAttribute 類別概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xattribute-class-overview.md)。  
+ <xref:System.Xml.Linq.XAttribute> 代表 XML 屬性。 For detailed information and examples, see [XAttribute Class Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xattribute-class-overview.md).  
   
 ### <a name="xcdata-class"></a>XCData 類別  
  <xref:System.Xml.Linq.XCData> 代表 CDATA 文字節點。  
@@ -34,16 +34,16 @@ ms.locfileid: "64610747"
  <xref:System.Xml.Linq.XDeclaration> 代表 XML 宣告。 XML 宣告用於宣告 XML 版本與文件的編碼。 此外，XML 宣告會指定 XML 文件是否為獨立的。 如果文件是獨立的，外部 DTD 或內部子集所參考的外部參數實體 (Entity) 就不會包含任何外部標記宣告。  
   
 ### <a name="xdocument-class"></a>XDocument 類別  
- <xref:System.Xml.Linq.XDocument> 代表 XML 文件。 如需詳細的資訊和範例，請參閱 < [XDocument 類別概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md)。  
+ <xref:System.Xml.Linq.XDocument> 代表 XML 文件。 For detailed information and examples, see [XDocument Class Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).  
   
 ### <a name="xdocumenttype-class"></a>XDocumentType 類別  
  <xref:System.Xml.Linq.XDocumentType> 代表 XML 文件類型定義 (DTD)。  
   
 ### <a name="xelement-class"></a>XElement 類別  
- <xref:System.Xml.Linq.XElement> 代表 XML 項目。 如需詳細的資訊和範例，請參閱 < [XElement 類別概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md)。  
+ <xref:System.Xml.Linq.XElement> 代表 XML 項目。 For detailed information and examples, see [XElement Class Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md).  
   
 ### <a name="xname-class"></a>XName 類別  
- <xref:System.Xml.Linq.XName> 代表項目的名稱 (<xref:System.Xml.Linq.XElement>) 與屬性 (<xref:System.Xml.Linq.XAttribute>)。 如需詳細的資訊和範例，請參閱 < [XDocument 類別概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md)。  
+ <xref:System.Xml.Linq.XName> 代表項目的名稱 (<xref:System.Xml.Linq.XElement>) 與屬性 (<xref:System.Xml.Linq.XAttribute>)。 For detailed information and examples, see [XDocument Class Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的設計是讓 XML 名稱盡可能直接。 由於其複雜性的緣故，XML 名稱通常被視為 XML 的進階主題。 在論證上，這個複雜性不是來自於開發人員一般用於程式設計的命名空間，而是來自於命名空間前置詞。 命名空間前置詞在減少輸入 XML 時所需的按鍵或在讓 XML 更容易讀取上，可能相當實用。 不過，前置詞通常只是用來使用完整 XML 命名空間的捷徑，因此大部分情況中都不需要。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會將所有前置詞解析為其對應的 XML 命名空間，藉以簡化 XML 名稱。 如果需要前置詞，可透過 <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A> 方法使用。  
   
@@ -86,6 +86,6 @@ ms.locfileid: "64610747"
 ### <a name="xtext-class"></a>XText 類別  
  <xref:System.Xml.Linq.XText> 代表文字節點。 在大部分的情況下，您不必使用這個類別。 這個類別主要用於混合的內容。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [LINQ to XML 程式設計概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

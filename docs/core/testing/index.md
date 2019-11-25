@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 006ccf0370f8014e5021275c4d38cc50bf1c076f
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 9fbffea82d75fc06a5aa3b11beffdd2cb540da83
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522905"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74282260"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 與 .NET Standard 中的單元測試
 
@@ -39,7 +39,7 @@ ms.locfileid: "72522905"
 
 以下語言支援 .NET Core 單元測試專案：
 
-- [C#](../../csharp/index.md)
+- [C#](../../csharp/index.yml)
 - [F#](../../fsharp/index.md)
 - [Visual Basic](../../visual-basic/index.md) 
 

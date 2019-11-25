@@ -1,61 +1,61 @@
 ---
-title: 在 Visual Basic 中將規則運算式與 MaskedTextBox 控制項一起搭配使用
+title: 將規則運算式與 MaskedTextBox 控制項搭配使用
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: e0165fb8d573878ae19378b2656d89627680b804
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12d500fa0ff4945dcf2d5009bdba6d337834707e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024504"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346255"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>在 Visual Basic 中將規則運算式與 MaskedTextBox 控制項一起搭配使用
-這個範例示範如何將簡單的規則運算式，才能使用<xref:System.Windows.Forms.MaskedTextBox>控制項。  
+This example demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.  
   
-## <a name="description-of-the-masking-language"></a>遮罩語言的說明  
- 標準<xref:System.Windows.Forms.MaskedTextBox>遮罩語言會根據所使用的`Masked Edit`控制在 Visual Basic 6.0 和應該很熟悉從該平台移轉的使用者。  
+## <a name="description-of-the-masking-language"></a>Description of the Masking Language  
+ The standard <xref:System.Windows.Forms.MaskedTextBox> masking language is based on the one used by the `Masked Edit` control in Visual Basic 6.0 and should be familiar to users migrating from that platform.  
   
- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>屬性<xref:System.Windows.Forms.MaskedTextBox>控制項指定要使用何種輸入的遮罩。 遮罩必須是一或多個下表中的遮罩項目所組成的字串。  
+ The <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of the <xref:System.Windows.Forms.MaskedTextBox> control specifies what input mask to use. The mask must be a string composed of one or more of the masking elements from the following table.  
   
-|遮罩項目|描述|規則運算式項目|  
+|Masking element|描述|Regular expression element|  
 |---------------------|-----------------|--------------------------------|  
-|0|介於 0 到 9 之間任何單一數字。 必要項目。|\d|  
-|9|數字或空格。 選擇性的項目。|[ \d]?|  
-|#|數字或空格。 選擇性的項目。 如果這個位置空白遮罩中，它會轉譯為空格。 加號 （+） 和減號 （-） 允許符號。|[ \d+-]?|  
-|L|ASCII 字母。 必要項目。|[a-zA-Z]|  
-|?|ASCII 字母。 選擇性的項目。|[a-zA-Z]?|  
-|&|字元。 必要項目。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
-|C|字元。 選擇性的項目。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
-|A|英數字元。 選擇性的項目。|\W|  
-|。|適當的文化特性的小數預留位置。|不適用。|  
-|,|適當數以千計的文化特性的預留位置。|不適用。|  
-|:|適當的文化特性的時間分隔符號。|不適用。|  
-|/|適當的文化特性的日期分隔符號。|不適用。|  
-|$|適當的文化特性的貨幣符號。|不適用。|  
-|\<|將轉換成小寫之後的所有字元。|不適用。|  
-|>|將轉換成大寫之後的所有字元。|不適用。|  
-|&#124;|復原上一個 shift 向上或向下移動。|不適用。|  
-|&#92;|逸出的遮罩字元，將它轉換成常值。 「\\\\」 是一個反斜線逸出序列。|&#92;|  
-|所有其他字元。|常值。 所有非遮罩項目會顯示為本身內<xref:System.Windows.Forms.MaskedTextBox>。|所有其他字元。|  
+|0|Any single digit between 0 and 9. Entry required.|\d|  
+|9|Digit or space. Entry optional.|[ \d]?|  
+|#|Digit or space. Entry optional. If this position is left blank in the mask, it will be rendered as a space. Plus (+) and minus (-) signs are allowed.|[ \d+-]?|  
+|L|ASCII letter. Entry required.|[a-zA-Z]|  
+|?|ASCII letter. Entry optional.|[a-zA-Z]?|  
+|&|字元。 Entry required.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
+|C|字元。 Entry optional.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
+|A|Alphanumeric. Entry optional.|\W|  
+|執行個體時提供 SQL Server 登入。|Culture-appropriate decimal placeholder.|不適用。|  
+|、[重試]|Culture-appropriate thousands placeholder.|不適用。|  
+|:|Culture-appropriate time separator.|不適用。|  
+|/|Culture-appropriate date separator.|不適用。|  
+|$|Culture-appropriate currency symbol.|不適用。|  
+|\<|Converts all characters that follow to lowercase.|不適用。|  
+|>|Converts all characters that follow to uppercase.|不適用。|  
+|&#124;|Undoes a previous shift up or shift down.|不適用。|  
+|&#92;|Escapes a mask character, turning it into a literal. "\\\\" is the escape sequence for a backslash.|&#92;|  
+|All other characters.|Literals. All non-mask elements will appear as themselves within <xref:System.Windows.Forms.MaskedTextBox>.|All other characters.|  
   
- 小數點 （.）、 千分之一秒 （，）、 （:） 的時間、 日期 （/） 和貨幣 （$） 符號預設值所定義的應用程式的文化特性顯示這些符號。 您可以強制使用顯示另一個文化特性的符號<xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A>屬性。  
+ The decimal (.), thousandths (,), time (:), date (/), and currency ($) symbols default to displaying those symbols as defined by the application's culture. You can force them to display symbols for another culture by using the <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> property.  
   
-## <a name="regular-expressions-and-masks"></a>規則運算式與遮罩  
- 雖然您可以使用規則運算式和遮罩來驗證使用者輸入，則不完全相等。 規則運算式可以表示更複雜的模式與遮罩，但更簡潔的方式和文化特性相關格式遮罩可以用相同的資訊來表示。  
+## <a name="regular-expressions-and-masks"></a>Regular Expressions and Masks  
+ Although you can use regular expressions and masks to validate user input, they are not completely equivalent. Regular expressions can express more complex patterns than masks, but masks can express the same information more succinctly and in a culturally relevant format.  
   
- 下表會比較每個四個規則運算式和對等的遮罩。  
+ The following table compares four regular expressions and the equivalent mask for each.  
   
-|規則運算式|遮罩|注意|  
+|規則運算式|遮罩|備註|  
 |------------------------|----------|-----------|  
-|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|`/`遮罩中的字元是邏輯日期分隔符號，以及適用於應用程式的目前文化特性的日期分隔符號形式顯示給使用者。|  
-|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|格式的日期 （日期、 月份縮寫及年份） 美國顯示與第一個字母大寫後面兩個小寫字母的三個字母月份縮寫。|  
-|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|美國電話號碼，選擇性的區碼。 如果使用者不希望輸入的選擇性字元，她可以輸入空格，或直接將滑鼠指標置於第一個 0 表示遮罩中的位置。|  
-|`$\d{6}.00`|`$999,999.00`|範圍內的 0 到 999999 貨幣值。 在執行階段會取代 「 貨幣、 千位數和小數點字元 」，以相對的特定文化特性。|  
+|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|The `/` character in the mask is a logical date separator, and it will appear to the user as the date separator appropriate to the application's current culture.|  
+|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|A date (day, month abbreviation, and year) in United States format in which the three-letter month abbreviation is displayed with an initial uppercase letter followed by two lowercase letters.|  
+|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|United States phone number, area code optional. If the user does not wish to enter the optional characters, she can either enter spaces or place the mouse pointer directly at the position in the mask represented by the first 0.|  
+|`$\d{6}.00`|`$999,999.00`|A currency value in the range of 0 to 999999. The currency, thousandth, and decimal characters will be replaced at run-time with their culture-specific equivalents.|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>

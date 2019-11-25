@@ -1,5 +1,5 @@
 ---
-title: Sub 陳述式 (Visual Basic)
+title: Sub 陳述式
 ms.date: 05/12/2018
 f1_keywords:
 - vb.Sub
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 7dc0ea1f1b30f5ffb0db8917538adf440c5ef891
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: da498a5e0a3633eb98882aaed145fcd21ab169fd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583193"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346445"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub 陳述式 (Visual Basic)
 
-宣告定義 `Sub` 程式的名稱、參數和程式碼。
+Declares the name, parameters, and code that define a `Sub` procedure.
 
 ## <a name="syntax"></a>語法
 
@@ -55,11 +55,11 @@ End Sub
 
 - `attributelist`
 
-  選擇項。 請參閱[屬性清單](attribute-list.md)。
+  選擇項。 See [Attribute List](attribute-list.md).
 
 - `Partial`
 
-  選擇項。 表示部分方法的定義。 請參閱[部分方法](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)。
+  選擇項。 Indicates definition of a partial method. See [Partial Methods](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).
 
 - `accessmodifier`
 
@@ -99,31 +99,31 @@ End Sub
 
 - `Shared`
 
-  選擇項。 請參閱[共用](../modifiers/shared.md)。
+  選擇項。 See [Shared](../modifiers/shared.md).
 
 - `Shadows`
 
-  選擇項。 請參閱[Shadows](../modifiers/shadows.md)。
+  選擇項。 See [Shadows](../modifiers/shadows.md).
 
 - `Async`
 
-  選擇項。 請參閱[Async](../modifiers/async.md)。
+  選擇項。 See [Async](../modifiers/async.md).
 
 - `name`
 
-  必要項。 程式的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。 若要建立類別的函式程式，請將 `Sub` 程式的名稱設定為 `New` 關鍵字。 如需詳細資訊，請參閱[物件存留期：物件的建立和終結方式](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。
+  必要項。 Name of the procedure. 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。 To create a constructor procedure for a class, set the name of a `Sub` procedure to the `New` keyword. For more information, see [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 - `typeparamlist`
 
-  選擇項。 泛型程式的類型參數清單。 請參閱[類型清單](type-list.md)。
+  選擇項。 List of type parameters for a generic procedure. See [Type List](type-list.md).
 
 - `parameterlist`
 
-  選擇項。 本機變數名稱的清單，代表此程式的參數。 請參閱[參數清單](parameter-list.md)。
+  選擇項。 List of local variable names representing the parameters of this procedure. See [Parameter List](parameter-list.md).
 
 - `Implements`
 
-  選擇項。 指出此程式會執行一或多個 `Sub` 程式，其中每一個都是在由這個程式的包含類別或結構所實的介面中定義。 請參閱[Implements 語句](implements-statement.md)。
+  選擇項。 Indicates that this procedure implements one or more `Sub` procedures, each one defined in an interface implemented by this procedure's containing class or structure. See [Implements Statement](implements-statement.md).
 
 - `implementslist`
 
@@ -137,16 +137,16 @@ End Sub
 
   |組件|描述|
   |---|---|
-  |`interface`|必要項。 此程式的包含類別或結構所實作為介面的名稱。|
+  |`interface`|必要項。 Name of an interface implemented by this procedure's containing class or structure.|
   |`definedname`|必要項。 名稱，據以在 `interface` 中定義程序。|
 
 - `Handles`
 
-  選擇項。 指出此程式可以處理一或多個特定事件。 請參閱[控制碼](handles-clause.md)。
+  選擇項。 Indicates that this procedure can handle one or more specific events. See [Handles](handles-clause.md).
 
 - `eventlist`
 
-  如果使用 `Handles`，則為必要項。 此程式處理的事件清單。
+  如果使用 `Handles`，則為必要項。 List of events this procedure handles.
 
   `eventspecifier [ , eventspecifier ... ]`
 
@@ -156,34 +156,34 @@ End Sub
 
   |組件|描述|
   |---|---|
-  |`eventvariable`|必要項。 以引發事件之類別或結構的資料類型宣告的物件變數。|
-  |`event`|必要項。 這個程式處理的事件名稱。|
+  |`eventvariable`|必要項。 Object variable declared with the data type of the class or structure that raises the event.|
+  |`event`|必要項。 Name of the event this procedure handles.|
 
 - `statements`
 
-  選擇項。 要在此程式內執行的語句區塊。
+  選擇項。 Block of statements to run within this procedure.
 
 - `End Sub`
 
-  終止這個程式的定義。
+  Terminates the definition of this procedure.
 
 ## <a name="remarks"></a>備註
 
-所有可執行檔程式碼都必須在程式內。 當您不想要將值傳回給呼叫程式碼時，請使用 `Sub` 程式。 當您想要傳回值時，請使用 `Function` 程式。
+All executable code must be inside a procedure. Use a `Sub` procedure when you don't want to return a value to the calling code. Use a `Function` procedure when you want to return a value.
 
-## <a name="defining-a-sub-procedure"></a>定義 Sub 程式
+## <a name="defining-a-sub-procedure"></a>Defining a Sub Procedure
 
-您只能在模組層級定義 `Sub` 程式。 Sub 程式的宣告內容必須是類別、結構、模組或介面，而且不能是原始程式檔、命名空間、程式或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](declaration-contexts-and-default-access-levels.md)。
+You can define a `Sub` procedure only at the module level. The declaration context for a sub procedure must, therefore, be a class, a structure, a module, or an interface and can't be a source file, a namespace, a procedure, or a block. 如需詳細資訊，請參閱[宣告內容和預設存取層級](declaration-contexts-and-default-access-levels.md)。
 
-`Sub` 程式預設為公開存取。 您可以使用存取修飾詞來調整其存取層級。
+`Sub` procedures default to public access. You can adjust their access levels by using the access modifiers.
 
-如果程式使用 `Implements` 關鍵字，則包含的類別或結構必須具有緊接在其 `Class` 或 `Structure` 語句後面的 `Implements` 語句。 @No__t_0 語句必須包含 `implementslist` 中指定的每個介面。 不過，介面用來定義 `Sub` （在 `definedname` 中）的名稱不一定要符合此程式的名稱（在 `name` 中）。
+If the procedure uses the `Implements` keyword, the containing class or structure must have an `Implements` statement that immediately follows its `Class` or `Structure` statement. The `Implements` statement must include each interface that's specified in `implementslist`. However, the name by which an interface defines the `Sub` (in `definedname`) doesn't have to match the name of this procedure (in `name`).
 
-## <a name="returning-from-a-sub-procedure"></a>從 Sub 程式傳回
+## <a name="returning-from-a-sub-procedure"></a>Returning from a Sub Procedure
 
-當 `Sub` 程式傳回呼叫程式碼時，會在呼叫它的語句後面繼續執行語句。
+When a `Sub` procedure returns to the calling code, execution continues with the statement after the statement that called it.
 
-下列範例顯示從 `Sub` 程式傳回的。
+The following example shows a return from a `Sub` procedure.
 
 ```vb
 Sub mySub(ByVal q As String)
@@ -191,46 +191,46 @@ Sub mySub(ByVal q As String)
 End Sub
 ```
 
-@No__t_0 和 `Return` 語句會導致立即離開 `Sub` 程式。 任何數目的 `Exit Sub` 和 `Return` 語句都可以出現在程式中的任何位置，而且您可以混合 `Exit Sub` 和 `Return` 語句。
+The `Exit Sub` and `Return` statements cause an immediate exit from a `Sub` procedure. Any number of `Exit Sub` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Sub` and `Return` statements.
 
-## <a name="calling-a-sub-procedure"></a>呼叫 Sub 程式
+## <a name="calling-a-sub-procedure"></a>Calling a Sub Procedure
 
-您可以使用語句中的程式名稱來呼叫 `Sub` 程式，然後在該名稱後面加上括弧中的引數清單。 只有在未提供任何引數時，才可以省略括弧。 不過，如果您一律包含括弧，則程式碼會更容易閱讀。
+You call a `Sub` procedure by using the procedure name in a statement and then following that name with its argument list in parentheses. You can omit the parentheses only if you don't supply any arguments. However, your code is more readable if you always include the parentheses.
 
-@No__t_0 程式和 `Function` 程式都可以有參數，並執行一連串的語句。 不過，`Function` 程式會傳回值，而 `Sub` 程式則不會。 因此，您不能在運算式中使用 `Sub` 程式。
+A `Sub` procedure and a `Function` procedure  can have parameters and perform a series of statements. However, a `Function` procedure returns a value, and a `Sub` procedure doesn't. Therefore, you can't use a `Sub` procedure in an expression.
 
-當您呼叫 `Sub` 程式時，可以使用 `Call` 關鍵字，但不建議在大部分的情況下使用該關鍵字。 如需詳細資訊，請參閱[Call 語句](call-statement.md)。
+You can use the `Call` keyword when you call a `Sub` procedure, but that keyword isn't recommended for most uses. For more information, see [Call Statement](call-statement.md).
 
-Visual Basic 有時會重新排列算術運算式，以提高內部效率。 基於這個理由，如果您的引數清單包含呼叫其他程式的運算式，您就不應該假設這些運算式會以特定順序呼叫。
+Visual Basic sometimes rearranges arithmetic expressions to increase internal efficiency. For that reason, if your argument list includes expressions that call other procedures, you shouldn't assume that those expressions will be called in a particular order.
 
-## <a name="async-sub-procedures"></a>非同步 Sub 程式
+## <a name="async-sub-procedures"></a>Async Sub Procedures
 
-藉由使用非同步功能，您可以叫用非同步函式，而不需使用明確回呼，或手動將程式碼分割成多個函數或 lambda 運算式。
+By using the Async feature, you can invoke asynchronous functions without using explicit callbacks or manually splitting your code across multiple functions or lambda expressions.
 
-如果您使用[Async](../modifiers/async.md)修飾詞來標記程式，您可以在程式中使用[Await](../../../visual-basic/language-reference/operators/await-operator.md)運算子。 當控制項到達 `Async` 程式中的 `Await` 運算式時，控制項會回到呼叫端，而程式中的進度會暫停，直到等候的工作完成為止。 當工作完成時，可以在程式中繼續執行。
+If you mark a procedure with the [Async](../modifiers/async.md) modifier, you can use the [Await](../../../visual-basic/language-reference/operators/await-operator.md) operator in the procedure. When control reaches an `Await` expression in the `Async` procedure, control returns to the caller, and progress in the procedure is suspended until the awaited task completes. When the task is complete, execution can resume in the procedure.
 
 > [!NOTE]
-> 當遇到第一個尚未完成的等候物件或到達 `Async` 程式的結尾（以先發生者為准）時，`Async` 程式會傳回呼叫端。
+> An `Async` procedure returns to the caller when either the first awaited object that’s not yet complete is encountered or the end of the `Async` procedure is reached, whichever occurs first.
 
-您也可以使用 `Async` 修飾詞來標記[函數語句](function-statement.md)。 @No__t_0 函式的傳回型別可以是 <xref:System.Threading.Tasks.Task%601> 或 <xref:System.Threading.Tasks.Task>。 本主題稍後的範例會顯示具有 <xref:System.Threading.Tasks.Task%601> 傳回類型的 `Async` 函式。
+You can also mark a [Function Statement](function-statement.md) with the `Async` modifier. An `Async` function can have a return type of <xref:System.Threading.Tasks.Task%601> or <xref:System.Threading.Tasks.Task>. An example later in this topic shows an `Async` function that has a return type of <xref:System.Threading.Tasks.Task%601>.
 
-`Async` `Sub` 程式主要用於事件處理常式，因此無法傳回值。 無法等候 `Async` `Sub` 程式，`Async` `Sub` 程式的呼叫端無法攔截 `Sub` 程式擲回的例外狀況。
+`Async` `Sub` procedures are primarily used for event handlers, where a value can't be returned. An `Async` `Sub` procedure can't be awaited, and the caller of an `Async` `Sub` procedure can't catch exceptions that the `Sub` procedure throws.
 
-@No__t_0 程式無法宣告任何[ByRef](../modifiers/byref.md)參數。
+An `Async` procedure can't declare any [ByRef](../modifiers/byref.md) parameters.
 
-如需 `Async` 程式的詳細資訊，請參閱[使用 async 和 Await 進行非同步程式設計](../../../visual-basic/programming-guide/concepts/async/index.md)、[非同步程式中的控制流程](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)和[非同步傳回類型](../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。
+For more information about `Async` procedures, see [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md), [Control Flow in Async Programs](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md), and [Async Return Types](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
 
 ## <a name="example"></a>範例
 
-下列範例會使用 `Sub` 語句來定義構成 `Sub` 程式主體的名稱、參數和代碼。
+The following example uses the `Sub` statement to define the name, parameters, and code that form the body of a `Sub` procedure.
 
 [!code-vb[VbVbalrStatements#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#58)]
 
 ## <a name="example"></a>範例
 
-在下列範例中，`DelayAsync` 是具有 <xref:System.Threading.Tasks.Task%601> 傳回類型的 `Async` `Function`。 `DelayAsync` 具有傳回整數的 `Return` 陳述式。 因此，`DelayAsync` 的函式宣告必須具有 `Task(Of Integer)` 的傳回類型。 因為傳回型別是 `Task(Of Integer)`，所以 `DoSomethingAsync` 中 `Await` 運算式的評估會產生整數，如下列語句所示： `Dim result As Integer = Await delayTask`。
+In the following example, `DelayAsync` is an `Async` `Function` that has a return type of <xref:System.Threading.Tasks.Task%601>. `DelayAsync` 具有傳回整數的 `Return` 陳述式。 Therefore, the function declaration of `DelayAsync` must have a return type of `Task(Of Integer)`. Because the return type is `Task(Of Integer)`, the evaluation of the `Await` expression in `DoSomethingAsync` produces an integer, as the following statement shows: `Dim result As Integer = Await delayTask`.
 
-@No__t_0 的程式是 `Async Sub` 程式的範例。 因為 `DoSomethingAsync` 是 `Async` 函式，所以必須等候 `DoSomethingAsync` 呼叫的工作，如下列語句所示： `Await DoSomethingAsync()`。 @No__t_0 `Sub` 程式必須使用 `Async` 修飾詞加以定義，因為它有 `Await` 運算式。
+The `startButton_Click` procedure is an example of an `Async Sub` procedure. Because `DoSomethingAsync` is an `Async` function, the task for the call to `DoSomethingAsync` must be awaited, as the following statement shows: `Await DoSomethingAsync()`. The `startButton_Click` `Sub` procedure must be defined with the `Async` modifier because it has an `Await` expression.
 
 [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]
 

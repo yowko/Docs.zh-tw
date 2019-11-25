@@ -1,57 +1,57 @@
 ---
-title: 作法：將資料移入和移出變數 (Visual Basic)
+title: 如何：移入和移出變數資料
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], retrieving values
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
-ms.openlocfilehash: df55f122c4ea029a383196f8d9684295ac8926aa
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bc5a7377a5e2e4c7ebe7291fd5f0093c4d6e996d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631118"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346895"
 ---
-# <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>作法：將資料移入和移出變數 (Visual Basic)
+# <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>如何：移入和移出變數資料 (Visual Basic)
 
-您可以藉由將變數名稱放在指派語句的左邊, 將值儲存在變數中。
+You store a value in a variable by putting the variable name on the left side of an assignment statement.
 
-## <a name="putting-data-in-a-variable"></a>將資料放入變數中
+## <a name="putting-data-in-a-variable"></a>Putting Data in a Variable
 
-#### <a name="to-store-a-value-in-a-variable"></a>將值儲存在變數中
+#### <a name="to-store-a-value-in-a-variable"></a>To store a value in a variable
 
-- 在指派語句的左邊使用變數名稱。
+- Use the variable name on the left side of an assignment statement.
 
-    下列範例會設定變數`alpha`的值。
+    The following example sets the value of the variable `alpha`.
 
     ```vb
     alpha = (beta * 6.27) / (gamma + 2.1)
     ```
 
-    在指派語句的右邊產生的值會儲存在變數中。
+    The value generated on the right side of the assignment statement is stored in the variable.
 
-## <a name="getting-data-from-a-variable"></a>從變數取得資料
+## <a name="getting-data-from-a-variable"></a>Getting Data from a Variable
 
-您可以藉由在運算式中包含變數名稱, 來取出變數的值。
+You retrieve a variable's value by including the variable name in an expression.
 
-#### <a name="to-retrieve-a-value-from-a-variable"></a>若要從變數中取出值
+#### <a name="to-retrieve-a-value-from-a-variable"></a>To retrieve a value from a variable
 
-- 在運算式中使用變數名稱。 除了定義常數值的運算式以外, 您可以在任何可使用常數或常值的地方使用變數。
+- Use the variable name in an expression. You can use a variable anywhere you can use a constant or a literal, except in an expression that defines the value of a constant.
 
   \-或-
 
-- 在指派語句中的等號 (`=`) 後面使用變數名稱。
+- Use the variable name following the equal (`=`) sign in an assignment statement.
 
-  下列範例會讀取變數`startValue`的值, 然後在運算式中使用變數`counter`的值。
+  The following example reads the value of the variable `startValue` and then uses the value of the variable `counter` in an expression.
 
   ```vb
   counter = startValue
   cellValue = (counter + 5) ^ 2
   ```
 
-  變數的值會以常數的形式參與運算式, 然後儲存在指派語句左側的變數或屬性中。
+  The value of the variable participates in the expression just as a constant would, and then it is stored in the variable or property on the left side of the assignment statement.
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [變數](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

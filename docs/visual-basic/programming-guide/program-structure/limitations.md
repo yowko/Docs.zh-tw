@@ -1,5 +1,5 @@
 ---
-title: Visual Basic 的限制
+title: 限制
 ms.date: 07/20/2015
 helpviewer_keywords:
 - limits
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 9fa0844f4508906ae30b936e41fb4392b74d1437
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f7e19977a011565bb4b1536af5cab195f8a01017
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648737"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347360"
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic 的限制
-舊版的 Visual Basic 會強制執行中程式碼，例如變數名稱，變數中的模組，以及模組大小所允許的數目的長度的界限。 在 Visual Basic.NET 中，這些限制已經被放寬，讓您更充分的自由撰寫及排列您的程式碼。  
+Earlier versions of Visual Basic enforced boundaries in code, such as the length of variable names, the number of variables allowed in modules, and module size. In Visual Basic .NET, these restrictions have been relaxed, giving you greater freedom in writing and arranging your code.  
   
- 實體的限制會更依賴於執行階段的記憶體，比在編譯時期的考量。 如果您使用容錯度加倍的程式設計作法，並分成多個類別和模組中的大型應用程式時，就很少機會遇到內部的 Visual Basic 限制。  
+ Physical limits are dependent more on run-time memory than on compile-time considerations. If you use prudent programming practices, and divide large applications into multiple classes and modules, then there is very little chance of encountering an internal Visual Basic limitation.  
   
- 以下是在極端情況下可能會遇到一些限制：  
+ The following are some limitations that you might encounter in extreme cases:  
   
-- **名稱長度。** 沒有最大的每個宣告的程式設計項目名稱的字元數。 如果為限定的項目名稱，這個最大值會套用到整個限定性條件字串。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+- **Name Length.** There is a maximum number of characters for the name of every declared programming element. This maximum applies to an entire qualification string if the element name is qualified. 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
-- **行長度。** 沒有實體的來源程式碼行中的 65535 個字元的最大值。 如果您使用行接續字元的長度時，能邏輯的原始程式碼行。 請參閱[如何：中斷和合併程式碼中的陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)。  
+- **Line Length.** There is a maximum of 65535 characters in a physical line of source code. The logical source code line can be longer if you use line continuation characters. See [How to: Break and Combine Statements in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
-- **陣列維度。** 沒有您可以宣告為陣列的維度數目上限。 這會限制您可以使用指定的陣列元素的幾個索引。 請參閱[Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)。  
+- **Array Dimensions.** There is a maximum number of dimensions you can declare for an array. This limits how many indexes you can use to specify an array element. See [Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
   
-- **字串長度。** 沒有您可以儲存在單一字串的 Unicode 字元的數目上限。 請參閱[字串資料類型](../../../visual-basic/language-reference/data-types/string-data-type.md)。  
+- **String Length.** There is a maximum number of Unicode characters you can store in a single string. See [String Data Type](../../../visual-basic/language-reference/data-types/string-data-type.md).  
   
-- **環境字串長度。** 沒有任何做為命令列引數的環境字串 32768 個字元的最大值。 這是在所有平台上的限制。  
+- **Environment String Length.** There is a maximum of 32768 characters for any environment string used as a command-line argument. This is a limitation on all platforms.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [程式結構和程式碼慣例](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Visual Basic 命名慣例](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

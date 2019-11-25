@@ -1,5 +1,5 @@
 ---
-title: 決定物件類型 (Visual Basic)
+title: 決定物件類型
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], discovering which an object belongs to
@@ -9,42 +9,42 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a77cc0603a0b61f58a4aa703c4b1e6ef4c26729c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050515"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345192"
 ---
 # <a name="determining-object-type-visual-basic"></a>決定物件類型 (Visual Basic)
-泛型的物件變數 (也就是變數宣告為`Object`) 可以保留任何類別的物件。 使用型別的變數時`Object`，您可能需要採取不同的物件類別為基礎的動作; 例如，某些物件可能不支援的特定屬性或方法。 Visual Basic 提供兩種決定物件變數中儲存的物件類型：`TypeName`函式和`TypeOf...Is`運算子。  
+Generic object variables (that is, variables you declare as `Object`) can hold objects from any class. When using variables of type `Object`, you may need to take different actions based on the class of the object; for example, some objects might not support a particular property or method. Visual Basic provides two means of determining which type of object is stored in an object variable: the `TypeName` function and the `TypeOf...Is` operator.  
   
-## <a name="typename-and-typeofis"></a>類型名稱，TypeOf...是  
- `TypeName`函式傳回字串，是最佳選擇，當您需要儲存或顯示類別物件的名稱，如下列程式碼片段所示：  
+## <a name="typename-and-typeofis"></a>TypeName and TypeOf…Is  
+ The `TypeName` function returns a string and is the best choice when you need to store or display the class name of an object, as shown in the following code fragment:  
   
  [!code-vb[VbVbalrOOP#92](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#92)]  
   
- `TypeOf...Is`運算子會測試物件的類型的最佳選擇，因為它的速度比對等字串比較使用`TypeName`。 下列程式碼片段會使用`TypeOf...Is`內`If...Then...Else`陳述式：  
+ The `TypeOf...Is` operator is the best choice for testing an object's type, because it is much faster than an equivalent string comparison using `TypeName`. The following code fragment uses `TypeOf...Is` within an `If...Then...Else` statement:  
   
  [!code-vb[VbVbalrOOP#93](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#93)]  
   
- 注意這裡會到期。 `TypeOf...Is`運算子會傳回`True`如果物件是特定的類型，或衍生自特定的型別。 幾乎所有項目中所做的 Visual Basic 牽涉到物件，其中包含一些通常不會視為物件，例如字串和整數的項目。 這些物件衍生自和繼承方法<xref:System.Object>。 當傳遞`Integer`和評估與`Object`，則`TypeOf...Is`運算子會傳回`True`。 下列範例會報告的參數`InParam`兼具`Object`和`Integer`:  
+ A word of caution is due here. The `TypeOf...Is` operator returns `True` if an object is of a specific type, or is derived from a specific type. Almost everything you do with Visual Basic involves objects, which include some elements not normally thought of as objects, such as strings and integers. These objects are derived from and inherit methods from <xref:System.Object>. When passed an `Integer` and evaluated with `Object`, the `TypeOf...Is` operator returns `True`. The following example reports that the parameter `InParam` is both an `Object` and an `Integer`:  
   
  [!code-vb[VbVbalrOOP#94](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#94)]  
   
- 下列範例會使用這兩者`TypeOf...Is`並`TypeName`來判斷物件傳遞至該型別`Ctrl`引數。 `TestObject`程序呼叫`ShowType`使用三種不同的控制項。  
+ The following example uses both `TypeOf...Is` and `TypeName` to determine the type of object passed to it in the `Ctrl` argument. The `TestObject` procedure calls `ShowType` with three different kinds of controls.  
   
 #### <a name="to-run-the-example"></a>執行範例  
   
-1. 建立新的 Windows 應用程式專案並加入<xref:System.Windows.Forms.Button>控制<xref:System.Windows.Forms.CheckBox>控制項，和<xref:System.Windows.Forms.RadioButton>控制項加入表單。  
+1. Create a new Windows Application project and add a <xref:System.Windows.Forms.Button> control, a <xref:System.Windows.Forms.CheckBox> control, and a <xref:System.Windows.Forms.RadioButton> control to the form.  
   
-2. 從您的表單上的按鈕，呼叫`TestObject`程序。  
+2. From the button on your form, call the `TestObject` procedure.  
   
-3. 將下列程式碼新增至您的表單：  
+3. Add the following code to your form:  
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [使用字串名稱呼叫屬性或方法](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)

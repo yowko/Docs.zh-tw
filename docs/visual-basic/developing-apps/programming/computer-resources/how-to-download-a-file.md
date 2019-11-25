@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中下載檔案
+title: 如何：下載一個檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - downloading Internet resources [Visual Basic], files
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - files [Visual Basic], downloading
 - files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
-ms.openlocfilehash: 4dd45ef70dbe3b1949e6d787748bbb27bb88d52c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 4923feb46ff638de9514a4d70fc00367491a6f44
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046618"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345627"
 ---
-# <a name="how-to-download-a-file-in-visual-basic"></a>作法：在 Visual Basic 中下載檔案
+# <a name="how-to-download-a-file-in-visual-basic"></a>如何：在 Visual Basic 中下載檔案
 
 <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> 方法可以用來下載遠端檔案，並將它儲存到特定位置。 如果 `ShowUI` 參數設定為 `True`，則會顯示對話方塊以顯示下載進度，並允許使用者取消作業。 根據預設，不會覆寫具有相同名稱的現有檔案；如果您想要覆寫現有檔案，請將 `overwrite` 參數設定為 `True`。
 
@@ -55,7 +55,7 @@ ms.locfileid: "70046618"
   > [!IMPORTANT]
   > `DownLoadFile` 方法所使用的 FTP 通訊協定會以純文字傳送資訊 (包括密碼)，不應用於傳輸機密資訊。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.Devices.Network>
 - <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>

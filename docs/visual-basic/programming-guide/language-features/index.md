@@ -1,25 +1,25 @@
 ---
-title: Visual Basic 語言功能
+title: 語言功能
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8cb0b017410e991628bad59a6986ba37426c913f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053778"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345059"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 語言功能
-下列主題將介紹並討論 Visual Basic 中，物件導向的程式設計語言的基本元件。 使用表單和控制項建立應用程式的使用者介面之後，您必須撰寫程式碼來定義應用程式的行為。 如同任何新式的程式設計語言，Visual Basic 支援許多通用程式設計建構和語言項目。  
+The following topics introduce and discuss the essential components of Visual Basic, an object-oriented programming language. 使用表單和控制項建立應用程式的使用者介面之後，您必須撰寫程式碼來定義應用程式的行為。 As with any modern programming language, Visual Basic supports a number of common programming constructs and language elements.  
   
- 如果您曾經使用其他語言進行程式設計，則可能會覺得本節涵蓋的大多數內容似曾相識。 雖然大部分的結構類似於其他語言，Visual Basic 的事件導向本質導入了一些微妙的差異。  
+ 如果您曾經使用其他語言進行程式設計，則可能會覺得本節涵蓋的大多數內容似曾相識。 While most of the constructs are similar to those in other languages, the event-driven nature of Visual Basic introduces some subtle differences.  
   
- 如果您是程式設計的新手，可將本節的內容當做用來撰寫程式碼的基本建置組塊簡介。 一旦您了解基本概念，您可以建立功能強大的應用程式使用 Visual Basic。  
+ 如果您是程式設計的新手，可將本節的內容當做用來撰寫程式碼的基本建置組塊簡介。 Once you understand the basics, you can create powerful applications using Visual Basic.  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  討論如何宣告和使用陣列來保留多個相關聯的值，藉以讓您的程式碼更精簡且功能更強大。  
   
@@ -83,4 +83,4 @@ ms.locfileid: "62053778"
  說明部分由 .NET Framework 提供的集合型別。 示範如何使用簡單集合及金鑰/值組集合。  
   
  [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)  
- 提供 Visual Basic 程式設計的各個層面的參考資訊。
+ Provides reference information on various aspects of Visual Basic programming.

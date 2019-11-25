@@ -2,12 +2,12 @@
 title: -target:winmdobj (C# 編譯器選項)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: fe1332f9ed6de9c50c2509e29f22ed7c0e57ade9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 85ae9a3f5e9b038c0c56935ec5af2b9b09d19f20
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606352"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204484"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (C# 編譯器選項)
 如果您使用 **-target:winmdobj** 編譯器選項，編譯器會建立一個可轉換成 Windows 執行階段二進位檔案 (.winmd) 的中繼 .winmdobj 檔案。 除了 Managed 語言程式之外，JavaScript 和 C++ 程式也可以使用 .winmd 檔案。  
@@ -29,13 +29,13 @@ ms.locfileid: "69606352"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>若要在 Visual Studio IDE 中為 Windows 市集應用程式設定這個編譯器選項  
   
-1. 在方案總管  中，開啟專案的捷徑功能表，然後選擇 [屬性]  。  
+1. 在方案總管中，開啟專案的捷徑功能表，然後選擇 [屬性]。  
   
-2. 選擇 [應用程式]  索引標籤。  
+2. 選擇 [應用程式] 索引標籤。  
   
-3. 在 [輸出類型]  清單中，選擇 [WinMD 檔案]  。  
+3. 在 [輸出類型] 清單中，選擇 [WinMD 檔案]。  
   
-     [WinMD 檔案]  選項僅適用於 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 應用程式範本。  
+     The **WinMD File** option is available only for Windows 8.x Store app templates.  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "69606352"
 csc -target:winmdobj filename.cs  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [-target (C# 編譯器選項)](./target-compiler-option.md)
 - [C# 編譯器選項](./index.md)

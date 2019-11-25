@@ -1,15 +1,15 @@
 ---
-title: XPath 使用者的 LINQ to XML （Visual Basic）
+title: XPath 使用者適用的 LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
-ms.openlocfilehash: 53908ba70fbb2b01b1214afece9cb5c8df03296d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4d5749e72acc8b051db2180b751051696ae04d57
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424414"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345474"
 ---
-# <a name="linq-to-xml-for-xpath-users-visual-basic"></a>XPath 使用者的 LINQ to XML （Visual Basic）
+# <a name="linq-to-xml-for-xpath-users-visual-basic"></a>LINQ to XML for XPath Users (Visual Basic)
 
 這組主題顯示多個 XPath 運算式及其 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 對等用法。  
   
@@ -20,25 +20,25 @@ ms.locfileid: "73424414"
 |主題|描述|  
 |-----------|-----------------|  
 |[XPath 和 LINQ to XML 的比較](../../../../csharp/programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md)|提供 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 之間的相同處與相異處概觀。|  
-|[如何：尋找子項目（XPath-LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md)|比較 XPath 子項目座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> 方法。<br /><br /> 相關聯的 XPath 運算式為：`"DeliveryNotes"`。|  
-|[如何：尋找子項目的清單（XPath-LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md)|比較 XPath 子項目座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 座標軸。<br /><br /> 相關聯的 XPath 運算式為：`"./*"`|  
-|[如何：尋找根項目（XPath-LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-root-element-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 取得根項目。<br /><br /> 相關聯的 XPath 運算式為：`"/PurchaseOrders"`|  
-|[如何：尋找子代元素（XPath-LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendant-elements-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 取得具有特定名稱的子代項目。<br /><br /> 相關聯的 XPath 運算式為：`"//Name"`|  
-|[如何：篩選屬性（XPath-LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-filter-on-an-attribute-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 取得具有指定之名稱以及具有指定值之屬性的子代項目。<br /><br /> 相關聯的 XPath 運算式為：`"./Address[@Type='Shipping']"`|  
-|[如何：尋找相關元素（XPath-LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-related-elements-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 取得在另一個項目值參考的屬性上選取的項目。<br /><br /> 相關聯的 XPath 運算式為：`"./Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]"`|  
-|[如何：在命名空間中尋找元素（XPath-LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-elements-in-a-namespace.md)|比較 XPath <xref:System.Xml.XmlNamespaceManager> 類別的用法與 <xref:System.Xml.Linq.XName> 類別的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XName.Namespace%2A> 屬性，以便與 XML 命名空間搭配使用。<br /><br /> 相關聯的 XPath 運算式為：`"./aw:*"`|  
-|[如何：尋找先前的同級（XPath-LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-preceding-siblings-xpath-linq-to-xml.md)|比較 XPath `preceding-sibling` 座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 子系 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> 座標軸。<br /><br /> 相關聯的 XPath 運算式為：`"preceding-sibling::*"`|  
-|[如何：尋找子專案的子代（XPath-LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 取得具有特定名稱之子項目的子代項目。<br /><br /> 相關聯的 XPath 運算式為：`"./Paragraph//Text/text()"`|  
-|[如何：尋找兩個位置路徑的聯集（XPath-LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath.md)|比較等位運算子 <code>&#124;</code> 在 XPath 中的用法與 <xref:System.Linq.Enumerable.Concat%2A> 標準查詢運算子在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的用法。<br /><br /> 相關聯的 XPath 運算式為：<code>"//Category&#124;//Price"</code>|  
-|[如何：尋找同輩節點（XPath-LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 尋找具有特定名稱之節點的所有同層級。<br /><br /> 相關聯的 XPath 運算式為：`"../Book"`|  
-|[如何：尋找父系的屬性（XPath-LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 導覽到父項目並尋找相關聯的屬性。<br /><br /> 相關聯的 XPath 運算式為：`"../@id"`|  
-|[如何：尋找具有特定名稱之同級的屬性（XPath-LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 尋找內容節點之同層級的特定屬性。<br /><br /> 相關聯的 XPath 運算式為：`"../Book/@id"`|  
-|[如何：尋找具有特定屬性的元素（XPath-LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 尋找包含特定屬性的所有項目。<br /><br /> 相關聯的 XPath 運算式為：`"./*[@Select]"`|  
-|[如何：根據位置尋找子項目（XPath-LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，根據其相對位置尋找項目。<br /><br /> 相關聯的 XPath 運算式為：`"Test[position() >= 2 and position() <= 4]"`|  
-|[如何：尋找緊接在的正則的兄弟（XPath-LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 尋找節點正前面的同層級。<br /><br /> 相關聯的 XPath 運算式為：`"preceding-sibling::*[1]"`|  
+|[How to: Find a Child Element (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md)|比較 XPath 子項目座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> 方法。<br /><br /> 相關聯的 XPath 運算式為：`"DeliveryNotes"`。|  
+|[How to: Find a List of Child Elements (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md)|比較 XPath 子項目座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 座標軸。<br /><br /> 相關聯的 XPath 運算式為：`"./*"`|  
+|[How to: Find the Root Element (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-root-element-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 取得根項目。<br /><br /> 相關聯的 XPath 運算式為：`"/PurchaseOrders"`|  
+|[How to: Find Descendant Elements (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendant-elements-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 取得具有特定名稱的子代項目。<br /><br /> 相關聯的 XPath 運算式為：`"//Name"`|  
+|[How to: Filter on an Attribute (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-filter-on-an-attribute-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 取得具有指定之名稱以及具有指定值之屬性的子代項目。<br /><br /> 相關聯的 XPath 運算式為：`"./Address[@Type='Shipping']"`|  
+|[How to: Find Related Elements (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-related-elements-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 取得在另一個項目值參考的屬性上選取的項目。<br /><br /> 相關聯的 XPath 運算式為：`"./Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]"`|  
+|[How to: Find Elements in a Namespace (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-elements-in-a-namespace.md)|比較 XPath <xref:System.Xml.XmlNamespaceManager> 類別的用法與 <xref:System.Xml.Linq.XName> 類別的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XName.Namespace%2A> 屬性，以便與 XML 命名空間搭配使用。<br /><br /> 相關聯的 XPath 運算式為：`"./aw:*"`|  
+|[How to: Find Preceding Siblings (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-preceding-siblings-xpath-linq-to-xml.md)|比較 XPath `preceding-sibling` 座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 子系 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> 座標軸。<br /><br /> 相關聯的 XPath 運算式為：`"preceding-sibling::*"`|  
+|[How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 取得具有特定名稱之子項目的子代項目。<br /><br /> 相關聯的 XPath 運算式為：`"./Paragraph//Text/text()"`|  
+|[How to: Find a Union of Two Location Paths (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath.md)|比較等位運算子 <code>&#124;</code> 在 XPath 中的用法與 <xref:System.Linq.Enumerable.Concat%2A> 標準查詢運算子在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的用法。<br /><br /> 相關聯的 XPath 運算式為：<code>"//Category&#124;//Price"</code>|  
+|[How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 尋找具有特定名稱之節點的所有同層級。<br /><br /> 相關聯的 XPath 運算式為：`"../Book"`|  
+|[How to: Find an Attribute of the Parent (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 導覽到父項目並尋找相關聯的屬性。<br /><br /> 相關聯的 XPath 運算式為：`"../@id"`|  
+|[How to: Find Attributes of Siblings with a Specific Name (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 尋找內容節點之同層級的特定屬性。<br /><br /> 相關聯的 XPath 運算式為：`"../Book/@id"`|  
+|[How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 尋找包含特定屬性的所有項目。<br /><br /> 相關聯的 XPath 運算式為：`"./*[@Select]"`|  
+|[How to: Find Child Elements Based on Position (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，根據其相對位置尋找項目。<br /><br /> 相關聯的 XPath 運算式為：`"Test[position() >= 2 and position() <= 4]"`|  
+|[How to: Find the Immediate Preceding Sibling (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 尋找節點正前面的同層級。<br /><br /> 相關聯的 XPath 運算式為：`"preceding-sibling::*[1]"`|  
   
 ## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XPath?displayProperty=nameWithType>
-- [查詢 XML 樹狀結構（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
+- [Querying XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
 - [使用 XPath 資料模型處理 XML 資料](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

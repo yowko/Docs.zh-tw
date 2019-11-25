@@ -1,5 +1,5 @@
 ---
-title: 宣告項目名稱 (Visual Basic)
+title: Declared Element Names
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declared elements [Visual Basic], case sensitivity
@@ -23,36 +23,36 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 0ace2b13473db30a4500648a67f6ce34edf3e587
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: e8620517b934a5f1a97ea25c5a94c8b932bb47b2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197555"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345423"
 ---
 # <a name="declared-element-names-visual-basic"></a>宣告項目名稱 (Visual Basic)
-每個宣告的專案都有名稱，也稱為「識別碼」（ *identifier*），這就是程式碼用來參考它的專案。  
+Every declared element has a name, also called an *identifier*, which is what the code uses to refer to it.  
   
 ## <a name="rules"></a>規則  
- Visual Basic 中的元素名稱必須遵守下列規則：  
+ An element name in Visual Basic must observe the following rules:  
   
-- 其開頭必須是字母字元或底線（`_`）。  
+- It must begin with an alphabetic character or an underscore (`_`).  
   
-- 它必須只包含字母字元、十進位數和底線。  
+- It must only contain alphabetic characters, decimal digits, and underscores.  
   
-- 如果開頭是底線，它必須包含至少一個字母字元或十進位數。  
+- It must contain at least one alphabetic character or decimal digit if it begins with an underscore.  
   
-- 長度不得超過1023個字元。  
+- It must not be more than 1023 characters long.  
   
- 1023個字元的長度限制也適用于完整名稱的整個字串，例如 `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`。  
+ The length limit of 1023 characters also applies to the entire string of a fully qualified name, such as `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
   
- 下列範例顯示一些有效的元素名稱。  
+ The following example shows some valid element names.  
   
  `aB123__45`  
   
  `_567`  
   
- 下列範例顯示一些不正確元素名稱。 第一個只包含底線，第二個開頭為十進位數，而第三個包含不正確字元（$）。  
+ The following example shows some invalid element names. The first contains only an underscore, the second begins with a decimal digit, and the third contains an invalid character ($).  
   
  `' Three INVALID element names`  
   
@@ -63,31 +63,31 @@ ms.locfileid: "73197555"
  `xyz$wv`  
   
 > [!CAUTION]
-> 以底線（`_`）開頭的元素名稱不是[語言獨立性和與語言無關的元件](../../../../standard/language-independence-and-language-independent-components.md)（CLS）的一部分，因此符合 CLS 標準的程式碼無法使用定義這類名稱的元件。 不過，元素名稱中任何其他位置的底線都符合 CLS 標準。  
+> Element names starting with an underscore (`_`) are not part of the [Language Independence and Language-Independent Components](../../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot use a component that defines such names. However, an underscore in any other position in an element name is CLS-compliant.  
   
-### <a name="name-length-guidelines"></a>名稱長度指導方針  
- 實際上，您的名稱應該越短越好，同時仍能清楚地識別元素的本質。 這可以改善程式碼的可讀性，並縮短行長度和原始程式檔大小。  
+### <a name="name-length-guidelines"></a>Name Length Guidelines  
+ As a practical matter, your name should be as short as possible while still clearly identifying the nature of the element. This improves the readability of your code and reduces line length and source-file size.  
   
- 另一方面，您的名稱應該不會太短，因為它不會適當地描述專案所代表的內容，以及您的程式碼使用它的方式。 這對於您的程式碼可讀性很重要。 如果有人嘗試瞭解它，或如果您在撰寫完之後，想要很長的時間查看它，適當的元素名稱可以節省大量的時間。  
+ On the other hand, your name should not be so short that it does not adequately describe what the element represents and how your code uses it. This is important for the readability of your code. If somebody else is trying to understand it, or if you yourself are looking at it a long time after you wrote it, suitable element names can save a considerable amount of time.  
   
-## <a name="escaped-names"></a>轉義的名稱  
- 一般來說，專案名稱不能符合 Visual Basic 所保留的任何關鍵字，例如 `Case` 或 `Friend`。 不過，您可以定義以方括弧（`[ ]`）括住的*轉義名稱*。 轉義的名稱可以符合任何 Visual Basic 關鍵字，因為方括弧會移除任何不明確的。 當您稍後在程式碼中參考名稱時，也會使用括弧。  
+## <a name="escaped-names"></a>Escaped Names  
+ Generally, an element name must not match any of the keywords reserved by Visual Basic, such as `Case` or `Friend`. However, you can define an *escaped name*, which is enclosed by brackets (`[ ]`). An escaped name can match any Visual Basic keyword, since the brackets remove any ambiguity. You also use the brackets when you refer to the name later in your code.  
   
- 一般而言，只有在下列情況下，才應該使用轉義名稱：  
+ In general, you should use escaped names only when:  
   
-- 您的程式碼已從舊版的 Visual Basic 進行遷移，但未保留做為名稱使用的關鍵字;或  
+- Your code has migrated from a previous version of Visual Basic that did not reserve the keyword being used as a name; or  
   
-- 您正在使用以另一種語言撰寫的程式碼，其中指定的關鍵字不是保留的。  
+- You are working with code written in another language in which the given keyword is not reserved.  
   
- 否則，如果元素的名稱與關鍵字衝突，您應該考慮重新命名專案。 整合式開發環境（IDE）提供簡單的方法來執行此動作。 如需詳細資訊，請參閱[重構](/visualstudio/ide/refactoring-in-visual-studio)。  
+ Otherwise, you should consider renaming the element if its name conflicts with a keyword. The integrated development environment (IDE) provides an easy way to do this. For more information, see [Refactoring](/visualstudio/ide/refactoring-in-visual-studio).  
   
-## <a name="case-sensitivity-in-names"></a>名稱區分大小寫  
- Visual Basic 中的元素名稱不區分大小寫。 這表示當編譯器只比較字母大小寫不同的兩個名稱時，它會將它們解讀為相同的名稱。 例如，它會將 `ABC` 和 `abc` 視為相同的宣告元素。  
+## <a name="case-sensitivity-in-names"></a>Case Sensitivity in Names  
+ Element names in Visual Basic are case-insensitive. This means that when the compiler compares two names that differ in alphabetic case only, it interprets them as the same name. 例如，它會將 `ABC` 和 `abc` 視為相同的宣告元素。  
   
- 不過，common language runtime （CLR）使用區分大小寫的系結。 因此，當您產生一個組件或 DLL 並讓其他組件使用時，您的名稱將會區分大小寫。 例如，如果您使用名為 `ABC`的元素來定義類別，而其他組件透過 Common Language Runtime 使用您的類別，則這些組件必須以 `ABC`來表示該元素。 如果您接著重新編譯類別，並將元素的名稱變更為 `abc`，則使用類別的其他元件將無法再存取該專案。 因此，當您發行組件的更新版本時，不應該變更任何公用元素的字母大小寫。  
+ However, the common language runtime (CLR) uses case-sensitive binding. 因此，當您產生一個組件或 DLL 並讓其他組件使用時，您的名稱將會區分大小寫。 例如，如果您使用名為 `ABC`的元素來定義類別，而其他組件透過 Common Language Runtime 使用您的類別，則這些組件必須以 `ABC`來表示該元素。 If you subsequently recompile your class and change the element's name to `abc`, the other assemblies using your class could no longer access that element. 因此，當您發行組件的更新版本時，不應該變更任何公用元素的字母大小寫。  
   
-## <a name="names-and-locales"></a>名稱和地區設定  
- 名稱的比較與地區設定無關。 如果兩個名稱符合一個地區設定，則會保證所有地區設定的相符。  
+## <a name="names-and-locales"></a>Names and Locales  
+ Comparison of names is independent of locale. If two names match in one locale, they are guaranteed to match in all locales.  
   
 ## <a name="see-also"></a>請參閱
 

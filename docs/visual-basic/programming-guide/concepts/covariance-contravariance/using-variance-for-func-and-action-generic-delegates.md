@@ -1,19 +1,19 @@
 ---
-title: 針對 Func 和 Action 泛型委派使用變異數（Visual Basic）
+title: 針對 Func 與 Action 泛型委派使用變異數
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: a85d6ae2fa32547958e557bbe45b9405e9b660ef
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2678abd03f55224720d00509dc44f2db16551193
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524238"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349038"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>針對 Func 和 Action 泛型委派使用變異數（Visual Basic）
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Using Variance for Func and Action Generic Delegates (Visual Basic)
 
 下列範例示範如何在 `Func` 和 `Action` 泛型委派中使用共變數和反變數，以便在您的程式碼中重複使用方法並提供更多彈性。
 
-如需共變數和逆變性的詳細資訊，請參閱[委派中的變異數（Visual Basic）](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。
+For more information about covariance and contravariance, see [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
 
 ## <a name="using-delegates-with-covariant-type-parameters"></a>使用具有 Covariant 型別參數的委派
 

@@ -1,5 +1,5 @@
 ---
-title: 函式程序 (Visual Basic)
+title: 函式程序
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Function procedures
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: 4fd24369380e5f8ccf8de939c36ba72a12dc872e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b62a730e8ade211821826afbb55fa8858ea311a3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649621"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341093"
 ---
 # <a name="function-procedures-visual-basic"></a>函式程序 (Visual Basic)
-A`Function`程序是一系列的 Visual Basic 陳述式加上`Function`和`End Function`陳述式。 `Function`程序執行的工作，然後將控制權傳回呼叫程式碼。 當它傳回控制項時，它也會傳回值，呼叫程式碼。  
+A `Function` procedure is a series of Visual Basic statements enclosed by the `Function` and `End Function` statements. The `Function` procedure performs a task and then returns control to the calling code. When it returns control, it also returns a value to the calling code.  
   
- 此程序呼叫時，它的陳述式執行時，每次開始之後的第一個可執行陳述式`Function`陳述式，並與第一個結束`End Function`， `Exit Function`，或`Return`陳述式時發生。  
+ Each time the procedure is called, its statements run, starting with the first executable statement after the `Function` statement and ending with the first `End Function`, `Exit Function`, or `Return` statement encountered.  
   
- 您可以定義`Function`模組、 類別或結構中的程序。 它是`Public`根據預設，這表示您可以從任何位置呼叫它可存取模組、 類別或結構定義它的應用程式中。  
+ You can define a `Function` procedure in a module, class, or structure. It is `Public` by default, which means you can call it from anywhere in your application that has access to the module, class, or structure in which you defined it.  
   
- A`Function`程序可以取得引數，例如常數、 變數或運算式，這會傳遞給它所呼叫的程式碼。  
+ A `Function` procedure can take arguments, such as constants, variables, or expressions, which are passed to it by the calling code.  
   
 ## <a name="declaration-syntax"></a>宣告語法  
- 宣告的語法`Function`程序如下所示：  
+ The syntax for declaring a `Function` procedure is as follows:  
   
 ```vb  
 [Modifiers] Function FunctionName [(ParameterList)] As ReturnType  
@@ -34,12 +34,12 @@ A`Function`程序是一系列的 Visual Basic 陳述式加上`Function`和`End F
 End Function  
 ```  
   
- *修飾詞*可以指定存取層級和多載、 覆寫，將分享，與遮蔽的相關資訊。 如需詳細資訊，請參閱 < [Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)。  
+ The *modifiers* can specify access level and information regarding overloading, overriding, sharing, and shadowing. For more information, see [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
   
- 您所進行的相同方式宣告的每個參數[Sub 程序](./sub-procedures.md)。  
+ You declare each parameter the same way you do for [Sub Procedures](./sub-procedures.md).  
   
 ### <a name="data-type"></a>資料類型  
- 每個`Function`程序中的資料類型，只要為每個變數。 此資料型別由`As`子句中的`Function`陳述式，並判斷函式傳回給呼叫程式碼之值的資料類型。 下列範例宣告可說明這點。  
+ Every `Function` procedure has a data type, just as every variable does. This data type is specified by the `As` clause in the `Function` statement, and it determines the data type of the value the function returns to the calling code. The following sample declarations illustrate this.  
   
 ```vb  
 Function yesterday() As Date  
@@ -49,12 +49,12 @@ Function findSqrt(ByVal radicand As Single) As Single
 End Function  
 ```  
   
- 如需詳細資訊，請參閱 「 組件 」 中[Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)。  
+ For more information, see "Parts" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
   
-## <a name="returning-values"></a>傳回值  
- 值`Function`程序會傳送回到呼叫端程式碼會呼叫它的傳回值。 程序會傳回此值中有兩種：  
+## <a name="returning-values"></a>Returning Values  
+ The value a `Function` procedure sends back to the calling code is called its return value. The procedure returns this value in one of two ways:  
   
-- 它會使用`Return`陳述式來指定傳回值，並傳回立即控制權傳輸至呼叫端程式。 下列範例將說明這點。  
+- It uses the `Return` statement to specify the return value, and returns control immediately to the calling program. 下列範例將說明這點。  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -64,7 +64,7 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
-- 它將值指派給自己的程序的一或多個陳述式中的函式名稱。 控制項不會傳回給呼叫程式，直到`Exit Function`或`End Function`陳述式。 下列範例將說明這點。  
+- It assigns a value to its own function name in one or more statements of the procedure. Control does not return to the calling program until an `Exit Function` or `End Function` statement is executed. 下列範例將說明這點。  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -74,31 +74,31 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
- 將傳回的值指派給函式名稱的優點是，控制項不會傳回從程序直到遇到`Exit Function`或`End Function`陳述式。 這可讓您指派的初步的值，並視需要稍後調整它。  
+ The advantage of assigning the return value to the function name is that control does not return from the procedure until it encounters an `Exit Function` or `End Function` statement. This allows you to assign a preliminary value and adjust it later if necessary.  
   
- 如需有關傳回值的詳細資訊，請參閱[Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)。 如需傳回陣列的詳細資訊，請參閱[陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+ For more information about returning values, see [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md). For information about returning arrays, see [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-## <a name="calling-syntax"></a>呼叫語法  
- 您可以叫用`Function`程序包括其名稱和引數是在指派陳述式或運算式的右側。 您必須提供值不是選擇性的所有引數，您必須將引數清單括在括號中。 如果已不提供任何引數，您可以選擇性地省略括號。  
+## <a name="calling-syntax"></a>Calling Syntax  
+ You invoke a `Function` procedure by including its name and arguments either on the right side of an assignment statement or in an expression. You must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses.  
   
- 呼叫語法`Function`程序如下所示：  
+ The syntax for a call to a `Function` procedure is as follows:  
   
  *lvalue*  `=`  *functionname* `[(` *argumentlist* `)]`  
   
  `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=`  *expression* `) Then`  
   
- 當您呼叫`Function`程序中，您就不必使用它的傳回值。 如果您不這樣做，函式的所有動作皆都執行，但傳回的值會被忽略。 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 通常稱為以這種方式。  
+ When you call a `Function` procedure, you do not have to use its return value. If you do not, all the actions of the function are performed, but the return value is ignored. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> is often called in this manner.  
   
-### <a name="illustration-of-declaration-and-call"></a>宣告和呼叫的圖例  
- 下列`Function`程序會計算已知值的其他兩個邊直角三角形斜邊的最長的側邊。  
+### <a name="illustration-of-declaration-and-call"></a>Illustration of Declaration and Call  
+ The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides.  
   
  [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
- 下列範例示範的典型呼叫`hypotenuse`。  
+ The following example shows a typical call to `hypotenuse`.  
   
  [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [程序](./index.md)
 - [Sub 程序](./sub-procedures.md)
@@ -106,6 +106,6 @@ End Function
 - [運算子程序](./operator-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [如何：建立程序傳回值](./how-to-create-a-procedure-that-returns-a-value.md)
-- [如何：從程序傳回值](./how-to-return-a-value-from-a-procedure.md)
+- [如何：建立傳回值的程序](./how-to-create-a-procedure-that-returns-a-value.md)
+- [如何：傳回程序的值](./how-to-return-a-value-from-a-procedure.md)
 - [如何：呼叫傳回值的程序](./how-to-call-a-procedure-that-returns-a-value.md)

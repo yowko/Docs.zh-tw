@@ -1,5 +1,5 @@
 ---
-title: 遞迴程序 (Visual Basic)
+title: 遞迴程序
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -10,36 +10,36 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: b08a06a07f134b7c95251848862d39339e59fe61
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 646d4e29ed7a0b6367d4b35a7f8641bcf659e616
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274348"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352547"
 ---
 # <a name="recursive-procedures-visual-basic"></a>遞迴程序 (Visual Basic)
 
-*遞迴*程式是一種呼叫本身的程式。 一般來說，這不是撰寫 Visual Basic 程式碼最有效率的方式。  
+A *recursive* procedure is one that calls itself. In general, this is not the most effective way to write Visual Basic code.  
   
- 下列程式會使用遞迴來計算其原始引數的階乘。  
+ The following procedure uses recursion to calculate the factorial of its original argument.  
   
  [!code-vb[VbVbcnProcedures#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#51)]  
   
-## <a name="considerations-with-recursive-procedures"></a>遞迴程式的考慮
+## <a name="considerations-with-recursive-procedures"></a>Considerations with Recursive Procedures
 
- **限制條件**。 您必須設計遞迴程式來測試至少一個可終止遞迴的條件，而且您也必須處理在合理數目的遞迴呼叫中不滿足這類條件的情況。 若沒有至少一個可以符合的條件而不會失敗，則您的程式會在無限迴圈中執行高風險。
+ **Limiting Conditions**. You must design a recursive procedure to test for at least one condition that can terminate the recursion, and you must also handle the case where no such condition is satisfied within a reasonable number of recursive calls. Without at least one condition that can be met without fail, your procedure runs a high risk of executing in an infinite loop.
 
- **記憶體使用量**。 您的應用程式對於本機變數的空間數量有限。 每次程式呼叫本身時，它會使用更多該空間來取得其區域變數的其他複本。 如果此程式會無限期地繼續，最後<xref:System.StackOverflowException>會造成錯誤。
+ **記憶體使用量**。 Your application has a limited amount of space for local variables. Each time a procedure calls itself, it uses more of that space for additional copies of its local variables. If this process continues indefinitely, it eventually causes a <xref:System.StackOverflowException> error.
 
- **效率**。 您幾乎可以將迴圈替換成遞迴。 迴圈不會有傳遞引數、初始化額外的儲存體和傳回值的額外負荷。 在沒有遞迴呼叫的情況下，您的效能可能更好。
+ **Efficiency**. You can almost always substitute a loop for recursion. A loop does not have the overhead of passing arguments, initializing additional storage, and returning values. Your performance can be much better without recursive calls.
 
- **相互遞迴**。 如果兩個程式彼此呼叫，您可能會發現效能不佳，甚至是無限迴圈。 這種設計會以單一遞迴程式的方式呈現相同的問題，但可能難以偵測和偵錯工具。
+ **Mutual Recursion**. You might observe very poor performance, or even an infinite loop, if two procedures call each other. Such a design presents the same problems as a single recursive procedure, but can be harder to detect and debug.
 
- **使用括弧呼叫**。 `Function`當程式以遞迴方式呼叫本身時，即使沒有引數清單，您也必須在程式名稱後面加上括弧。 否則，會採用函式名稱來表示函數的傳回值。
+ **Calling with Parentheses**. When a `Function` procedure calls itself recursively, you must follow the procedure name with parentheses, even if there is no argument list. Otherwise, the function name is taken as representing the return value of the function.
 
- **測試**。 如果您撰寫遞迴程式，您應該小心進行測試，確定它一定符合某些限制條件。 您也應該確保因為有太多遞迴呼叫而無法用盡記憶體。
+ **Testing**. If you write a recursive procedure, you should test it very carefully to make sure it always meets some limiting condition. You should also ensure that you cannot run out of memory due to having too many recursive calls.
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.StackOverflowException>
 - [程序](index.md)

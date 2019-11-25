@@ -1,20 +1,22 @@
 ---
 title: 從檔案和其他來源載入資料
-description: 此操作說明教學會示範如何將資料載入 ML.NET 以進行處理和定型。 資料原先是儲存在檔案或其他資料來源中，例如資料庫、JSON、XML 或記憶體內部集合。
+description: Learn how to load data for processing and training into ML.NET using the API. Data is stored in files, databases, JSON, XML or in-memory collections.
 ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 07b3e7f5302a03f5fa4c936679c8a3c00d19a7b0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 83aaae2d2e75b3076841750bf5d505390a538bc0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740557"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344747"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>從檔案和其他來源載入資料
 
-此操作說明教學會示範如何將資料載入 ML.NET 以進行處理和定型。 資料原先是儲存在檔案或其他資料來源中，例如資料庫、JSON、XML 或記憶體內部集合。
+Learn how to load data for processing and training into ML.NET using the API. 資料原先是儲存在檔案或其他資料來源中，例如資料庫、JSON、XML 或記憶體內部集合。
+
+If you're using Model Builder, see [Load training data into Model Builder](load-data-model-builder.md).
 
 ## <a name="create-the-data-model"></a>建立資料模型
 
@@ -105,14 +107,14 @@ TextLoader textLoader = mlContext.Data.CreateTextLoader<HousingData>(separatorCh
 IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubFolder2/1.txt");
 ```
 
-## <a name="load-data-from-a-relational-database"></a>從關係資料庫載入資料
+## <a name="load-data-from-a-relational-database"></a>Load data from a relational database
 
-ML.NET 支援從[`System.Data`](xref:System.Data)所支援的各種關係資料庫載入資料，其中包括 SQL Server、Azure SQL Database、Oracle、SQLite、于 postgresql、進度、IBM DB2 等等。
+ML.NET supports loading data from a variety of relational databases supported by [`System.Data`](xref:System.Data) that include SQL Server, Azure SQL Database, Oracle, SQLite, PostgreSQL, Progress, IBM DB2, and many more.
 
 > [!NOTE]
-> 若要使用 `DatabaseLoader`，請參考[SqlClient](https://www.nuget.org/packages/System.Data.SqlClient) NuGet 套件。
+> To use `DatabaseLoader`, reference the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient) NuGet package.
 
-假設資料庫具有名為 `House` 的資料表和下列架構：
+Given a database with a table named `House` and the following schema:
 
 ```SQL
 CREATE TABLE [House] (
@@ -130,14 +132,14 @@ CREATE TABLE [House] (
 public class HouseData
 {
     public float Size { get; set; }
-    
+
     public float NumBed { get; set; }
 
     public float Price { get; set; }
 }
 ```
 
-然後，在您的應用程式內建立 `DatabaseLoader`。
+Then, inside of your application, create a `DatabaseLoader`.
 
 ```csharp
 MLContext mlContext = new MLContext();
@@ -145,7 +147,7 @@ MLContext mlContext = new MLContext();
 DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
 ```
 
-定義您的連接字串，以及要在資料庫上執行的 SQL 命令，並建立 `DatabaseSource` 實例。 這個範例會使用具有檔案路徑的 LocalDB SQL Server 資料庫。 不過，DatabaseLoader 會針對內部部署和雲端中的資料庫支援任何其他有效的連接字串。
+Define your connection string as well as the SQL command to be executed on the database and create a `DatabaseSource` instance. This sample uses a LocalDB SQL Server database with a file path. However, DatabaseLoader supports any other valid connection string for databases on-premises and in the cloud.
 
 ```csharp
 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
@@ -155,9 +157,9 @@ string sqlCommand = "SELECT Size, CAST(NumBed as REAL) as NumBed, Price FROM Hou
 DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
 ```
 
-不屬於[`Real`](xref:System.Data.SqlDbType)類型的數值資料必須轉換成[`Real`](xref:System.Data.SqlDbType)。 [`Real`](xref:System.Data.SqlDbType)型別會以單精確度浮點數或[`Single`](xref:System.Single)（ML.NET 演算法所預期的輸入型別）來表示。 在此範例中，`NumBed` 資料行是資料庫中的一個整數。 使用 `CAST` 內建函數，它會轉換成[`Real`](xref:System.Data.SqlDbType)。 因為 `Price` 屬性已經是型別， [`Real`](xref:System.Data.SqlDbType)它會載入為。
+Numerical data that is not of type [`Real`](xref:System.Data.SqlDbType) has to be converted to [`Real`](xref:System.Data.SqlDbType). The [`Real`](xref:System.Data.SqlDbType) type is represented as a single-precision floating-point value or [`Single`](xref:System.Single), the input type expected by ML.NET algorithms. In this sample, the `NumBed` column is an integer in the database. Using the `CAST` built-in function, it's converted to [`Real`](xref:System.Data.SqlDbType). Because the `Price` property is already of type [`Real`](xref:System.Data.SqlDbType) it is loaded as is.
 
-使用 `Load` 方法，將資料載入[`IDataView`](xref:Microsoft.ML.IDataView)。
+Use the `Load` method to load the data into an [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ```csharp
 IDataView data = loader.Load(dbSource);
@@ -213,4 +215,5 @@ IDataView data = mlContext.Data.LoadFromEnumerable<HousingData>(inMemoryCollecti
 
 ## <a name="next-steps"></a>後續步驟
 
-如果您使用模型產生器來定型機器學習模型，請參閱將[定型資料載入模型](load-data-model-builder.md)產生器。
+- To clean or otherwise process data, see [Prepare data for building a model](prepare-data-ml-net.md).
+- When you're ready to build a model, see [Train and evaluate a model](train-machine-learning-model-ml-net.md).

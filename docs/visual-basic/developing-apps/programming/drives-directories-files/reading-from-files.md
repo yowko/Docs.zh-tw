@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Basic 中讀取檔案
+title: 從檔案讀取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data [Visual Basic], reading from files
@@ -8,17 +8,19 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-ms.openlocfilehash: f81ee980d861ac0eb41df9c41b3966512589af12
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: HT
+ms.openlocfilehash: afba0df89aabad7ddf8b641fbab421800718deb3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593379"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333815"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>在 Visual Basic 中讀取檔案
+
 本節說明如何執行與讀取檔案建立關聯的工作。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
+
  [如何：從文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
  示範如何從文字檔讀取。  
   
@@ -34,10 +36,11 @@ ms.locfileid: "65593379"
  [如何：讀取二進位檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
  示範如何從二進位檔案讀取。  
   
- [如何：使用 StreamReader 從檔案讀取文字](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
+ [如何：以 StreamReader 從檔案讀取文字](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
  示範如何使用 <xref:System.IO.StreamReader> 以從檔案讀取。  
   
 ## <a name="reference"></a>參考資料  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  描述 `My.Computer.FileSystem` 物件和其成員。  
   
@@ -54,6 +57,7 @@ ms.locfileid: "65593379"
  描述 `OpenTextFileReader` 方法。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [在剪貼簿儲存和讀取資料](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
  說明如何執行與 `My.Computer.Clipboard` 建立關聯的工作，例如從剪貼簿讀取資料或將資料寫入其中。  
   

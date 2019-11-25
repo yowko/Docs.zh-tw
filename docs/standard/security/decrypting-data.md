@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cf0ffae2c5803324d4941581855d5dc10224e07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e287d3c73df247febf99967a9dc4b0413f01def0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795222"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353855"
 ---
 # <a name="decrypting-data"></a>解密資料
 
@@ -43,12 +43,11 @@ CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateDecryptor(K
 下列範例顯示建立資料流、解密資料流、從資料流讀取，然後關閉資料流的整個程序。 會建立 <xref:System.Net.Sockets.TcpListener> 物件，它會在建立接聽物件的連線時初始化網路資料流。 接著會使用 **CryptoStream** 類別和 **RijndaelManaged** 類別解密網路資料流。 這個範例假設金鑰和 IV 已成功傳輸，或是事先已同意。 它不會顯示加密和傳輸這些值所需的程式碼。
 
 ```vb
-Imports System
-Imports System.Net.Sockets
-Imports System.Threading
 Imports System.IO
 Imports System.Net
+Imports System.Net.Sockets
 Imports System.Security.Cryptography
+Imports System.Threading
 
 Module Module1
     Sub Main()
@@ -105,11 +104,11 @@ End Module
 
 ```csharp
 using System;
-using System.Net.Sockets;
-using System.Threading;
 using System.IO;
 using System.Net;
+using System.Net.Sockets;
 using System.Security.Cryptography;
+using System.Threading;
 
 class Class1
 {
@@ -175,9 +174,9 @@ class Class1
 
 ## <a name="asymmetric-decryption"></a>非對稱解密
 
-一般而言，有一方 (A 方) 會同時產生公開和私密金鑰，並將金鑰儲存在記憶體或密碼編譯金鑰容器中。 A 方接著會將公開金鑰傳送給另一方 (B 方)。 使用公開金鑰，B 方會加密資料和將資料傳送回給 a 方。接收資料之後, 合作對象 A 會解密使用對應的私密金鑰。 只有在 A 方使用的私密金鑰對應於 B 方用來加密資料的公開金鑰時，解密才會成功。
+一般而言，有一方 (A 方) 會同時產生公開和私密金鑰，並將金鑰儲存在記憶體或密碼編譯金鑰容器中。 A 方接著會將公開金鑰傳送給另一方 (B 方)。 Using the public key, party B encrypts data and sends the data back to party A. After receiving the data, party A decrypts it using the private key that corresponds. 只有在 A 方使用的私密金鑰對應於 B 方用來加密資料的公開金鑰時，解密才會成功。
 
-如需如何儲存非對稱金鑰在安全的密碼編譯金鑰容器，以及稍後如何擷取非對稱金鑰，請參閱[How to:將對稱金鑰儲存到金鑰容器中](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。
+如需如何在安全的密碼編譯金鑰容器儲存非對稱金鑰，以及稍後如何擷取非對稱金鑰的相關資訊，請參閱 [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。
 
 下列範例說明代表對稱金鑰和 IV 的兩個位元組陣列的解密。 如需如何從 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 物件擷取非對稱式公開金鑰，且使用的格式可以輕鬆地傳送給第三方的相關資訊，請參閱 [Encrypting Data](../../../docs/standard/security/encrypting-data.md)的 Managed 資料流的值。
 
@@ -205,8 +204,8 @@ symmetricKey = rsa.Decrypt(encryptedSymmetricKey, false);
 symmetricIV = rsa.Decrypt(encryptedSymmetricIV , false);
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [產生加密和解密金鑰](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [加密資料](../../../docs/standard/security/encrypting-data.md)
-- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)
+- [密碼編譯服務](../../../docs/standard/security/cryptographic-services.md)

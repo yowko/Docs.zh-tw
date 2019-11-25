@@ -1,5 +1,5 @@
 ---
-title: HOW TO：呼叫運算子程序 (Visual Basic)
+title: 如何：呼叫運算子程序
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -11,49 +11,49 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a685be7cc3b346b271413e2c29faae5a839313f4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863931"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340237"
 ---
-# <a name="how-to-call-an-operator-procedure-visual-basic"></a>HOW TO：呼叫運算子程序 (Visual Basic)
-您可以在運算式中使用運算子符號，以呼叫運算子程序。 轉換運算子，在您呼叫[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)將值從一種資料類型轉換到另一個。  
+# <a name="how-to-call-an-operator-procedure-visual-basic"></a>如何：呼叫運算子程序 (Visual Basic)
+You call an operator procedure by using the operator symbol in an expression. In the case of a conversion operator, you call the [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) to convert a value from one data type to another.  
   
- 您未明確呼叫運算子程序。 您只使用運算子，或`CType`函式，在指派陳述式或運算式，您通常會使用運算子相同的方式。 Visual Basic 可讓運算子程序的呼叫。  
+ You do not call operator procedures explicitly. You just use the operator, or the `CType` function, in an assignment statement or an expression, the same way you ordinarily use an operator. Visual Basic makes the call to the operator procedure.  
   
- 類別或結構上定義的運算子，也稱為*多載*運算子。  
+ Defining an operator on a class or structure is also called *overloading* the operator.  
   
-### <a name="to-call-an-operator-procedure"></a>若要呼叫運算子程序  
+### <a name="to-call-an-operator-procedure"></a>To call an operator procedure  
   
-1. 在運算式中使用運算子符號，以一般方式。  
+1. Use the operator symbol in an expression in the ordinary way.  
   
-2. 請確定資料類型的運算元是適用於運算子，且有正確的順序。  
+2. Be sure the data types of the operands are appropriate for the operator, and in the correct order.  
   
-3. 如預期般，運算子會提供給運算式的值。  
+3. The operator contributes to the value of the expression as expected.  
   
-### <a name="to-call-a-conversion-operator-procedure"></a>若要呼叫的轉換運算子程序  
+### <a name="to-call-a-conversion-operator-procedure"></a>To call a conversion operator procedure  
   
-1. 使用`CType`在運算式中。  
+1. Use `CType` inside an expression.  
   
-2. 請確定資料類型的運算元會適當轉換，並以正確的順序。  
+2. Be sure the data types of the operands are appropriate for the conversion, and in the correct order.  
   
-3. `CType` 呼叫轉換運算子程序，並傳回已轉換的值。  
+3. `CType` calls the conversion operator procedure and returns the converted value.  
   
 ## <a name="example"></a>範例  
- 下列範例會建立兩個<xref:System.TimeSpan>、 將它們相加，並將結果儲存在第三個<xref:System.TimeSpan>結構。 <xref:System.TimeSpan>結構會定義數個標準運算子的多載的運算子程序。  
+ The following example creates two <xref:System.TimeSpan> structures, adds them together, and stores the result in a third <xref:System.TimeSpan> structure. The <xref:System.TimeSpan> structure defines operator procedures to overload several standard operators.  
   
  [!code-vb[VbVbcnProcedures#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#29)]  
   
- 因為<xref:System.TimeSpan>多載標準`+`運算子，前一個範例會呼叫運算子程序計算的值時`combinedSpan`。  
+ Because <xref:System.TimeSpan> overloads the standard `+` operator, the previous example calls an operator procedure when it calculates the value of `combinedSpan`.  
   
- 如需呼叫交談運算子程序的範例，請參閱[How to:使用定義運算子的類別](./how-to-use-a-class-that-defines-operators.md)。  
+ For an example of calling a conversation operator procedure, see [How to: Use a Class that Defines Operators](./how-to-use-a-class-that-defines-operators.md).  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 請務必在類別或您使用的結構會定義您想要使用的運算子。  
+ Be sure the class or structure you are using defines the operator you want to use.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [運算子程序](./operator-procedures.md)
 - [如何：定義運算子](./how-to-define-an-operator.md)

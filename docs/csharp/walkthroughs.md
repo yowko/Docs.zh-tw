@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 757cbce98c73821a19ee162b7828fa4ad952de3c
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a997cc62b03a0d92d5ef76173981f5a9e287b13a
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195496"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204596"
 ---
 # <a name="c-walkthroughs"></a>C# 逐步解說
 逐步解說提供常見情節的逐步指示，使其成為開始學習產品或特定功能區域的最佳去處。  
@@ -24,7 +24,7 @@ ms.locfileid: "73195496"
  說明如何使用 [async](./language-reference/keywords/async.md) 和 [await](./language-reference/operators/await.md) 建立非同步解決方案。  
   
  [以 C# 或 Visual Basic 建立 Windows 執行階段元件，然後從 JavaScript 呼叫該元件](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- 示範如何建立 Windows 執行階段類型，將其封裝於 Windows 執行階段元件元件中，然後從使用 JavaScript 針對 Windows 所建置的 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 應用程式中呼叫該元件。  
+ Shows how to create a Windows Runtime type, package it in a Windows Runtime component, and then call the component from a Windows 8.x Store app that's built for Windows by using JavaScript.  
   
  [Office 程式設計 (C# 和 Visual Basic)](./programming-guide/interop/walkthrough-office-programming.md)  
  顯示如何使用 C# 和 Visual Basic 來建立 Excel 活頁簿和 Word 文件。  

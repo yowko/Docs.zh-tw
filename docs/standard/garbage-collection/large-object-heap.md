@@ -1,17 +1,17 @@
 ---
-title: Windows 系統上的大型物件堆積
+title: Windows 上的 LOH-.NET
 ms.date: 05/02/2018
 helpviewer_keywords:
 - large object heap (LOH)"
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: 618db9faff137e6ff0f878c928e3a889cff37838
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5125b76dd26ffa4fb363ecf8449f65b490f57b93
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120941"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283626"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 系統上的大型物件堆積
 
@@ -22,7 +22,7 @@ ms.locfileid: "73120941"
 
 ## <a name="how-an-object-ends-up-on-the-large-object-heap-and-how-gc-handles-them"></a>物件最後如何送入大型物件堆積以及 GC 如何處理它們
 
-如果物件大於或等於 85,000 個位元組，就會視為大型物件。 這個數目取決於效能微調。 當物件配置要求是針對 85,000 個以上的位元組時，執行階段會將它配置在大型物件堆積上。
+如果物件的大小大於或等於85000個位元組，就會被視為大型物件。 這個數目取決於效能微調。 當物件配置要求是針對 85,000 個以上的位元組時，執行階段會將它配置在大型物件堆積上。
 
 若要了解這表示什麼意思，請務必查看有關 .NET GC 的某些基本概念。
 
@@ -32,7 +32,7 @@ ms.locfileid: "73120941"
 
 大型物件屬於層代 2，因為只有在層代 2 回收期間才會回收它們。 回收層代時，也會回收其所有較年輕的層代。 舉例來說，發生層代 1 GC 時，會同時回收層代 1 和 0。 而發生層代 2 GC 時，就會回收整個堆積。 基於這個理由，層代 2 GC 也稱為「完整 GC」。 本文引用層代 2 GC，而不是完整 GC，但這些詞彙可以互換。
 
-層代提供 GC 堆積的邏輯檢視。 實際上，物件是存留在受控堆積區段中。 「受控堆積區段」是記憶體的區塊，由 GC 代替受控程式碼向 OS (透過呼叫 [VirtualAlloc 函式](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)) 要求保留。 載入 CLR 時，GC 會配置兩個初始堆積區段：一個針對小型物件 (小型物件堆積或 SOH)，另一個針對大型物件 (大型物件堆積)。
+層代提供 GC 堆積的邏輯檢視。 實際上，物件是存留在受控堆積區段中。 「受控堆積區段」是記憶體的區塊，由 GC 代替受控程式碼向 OS (透過呼叫 [VirtualAlloc 函式](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)) 要求保留。 載入 CLR 時，GC 會配置兩個初始堆積區段：一個用於小型物件（小型物件堆積或 SOH），一個用於大型物件（大型物件堆積）。
 
 藉由將受控物件置於這些受控堆積區段中，就可以滿足配置的要求了。 如果物件小於 85,000 個位元組，它會置於 SOH 的區段上；否則，它會置於 LOH 區段。 隨著愈來愈多的物件配置在區段之上，這些區段就會被認可 (以較小的區塊)。
 對於 SOH，在 GC 之後存留下來的物件會提升至下一個層代。 層代 0 回收之後存留下來的物件目前被視為層代 1 物件，依此類推。 然而，通過最老層代存留的物件仍可視為屬於最老的層代。 換句話說，來自層代 2 的存留者就是層代 2 物件；來自 LOH 的存留者就是 LOH 的物件 (用 gen2 來回收)。
@@ -154,7 +154,7 @@ ms.locfileid: "73120941"
 
 查看效能計數器的常用方式，就是利用效能監視器 (perfmon.exe)。 請使用 [新增計數器]，為您關心的處理序新增有意義的計數器。 您可以將效能計數器資料儲存到記錄檔中，如圖 4 所示：
 
-![螢幕擷取畫面顯示新增效能計數器。](media/large-object-heap/add-performance-counter.png)
+![螢幕擷取畫面，其中顯示新增效能計數器。](media/large-object-heap/add-performance-counter.png)
 圖 4：層代 2 GC 之後的 LOH
 
 效能計數器也可以用程式設計的方式來查詢。 許多人都會使用這種方式在日常測試程序中收集相關資訊。 當他們發覺到計數器有不正常的數值時，就可以使用其他方式取得詳細資料，來協助進行調查。
@@ -306,7 +306,7 @@ LOH 堆積的大小是 (16,754,224 + 16,699,288 + 16,284,504) = 49,738,016 個�
 bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 ```
 
-此命令會中斷並進入偵錯工具，並且只有在配置大小大於 8MB (0x800000) 的情況下呼叫 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 時，才會顯示呼叫堆疊。
+這個命令會中斷偵錯工具，只有在呼叫[VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)的配置大小大於8mb （0x800000）時，才會顯示呼叫堆疊。
 
 CLR 2.0 中新增了稱為 *VM Hoarding* 的功能，對於經常取得再釋放區段 (包括在大型與小型物件堆積上) 的案例，此功能非常有用。 若要指定 VM Hoarding，您可以透過裝載 API 指定稱為 `STARTUP_HOARD_GC_VM` 的啟動旗標。 CLR 會取消認可這些區段上的記憶體並將其放置於待命清單上，而不會將空的區段釋放歸還給 OS。 （請注意，CLR 不會針對太大的區段執行此動作）。CLR 稍後會使用這些區段來滿足新的區段要求。 下次您的應用程式需要新的區段時，CLR 如果能夠找到夠大的區段，就會使用此待命清單中的區段。
 

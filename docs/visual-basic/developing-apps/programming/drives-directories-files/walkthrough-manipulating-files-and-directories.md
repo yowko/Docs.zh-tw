@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Basic 中管理檔案和目錄
+title: 管理檔案和目錄
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], reading text
@@ -15,21 +15,22 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 4d0aac533759f8cc20ac4f19d7f0e49fef17bf56
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: HT
+ms.openlocfilehash: 83dc6ce0d29c1c368c36b51fc84ecad34d72e01f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59314681"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333812"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>逐步解說：在 Visual Basic 中管理檔案和目錄
+
 本逐步解說提供 Visual Basic 中檔案 I/O 的基本概念簡介。 其中說明如何建立一個小型應用程式，以提列並檢查目錄中的文字檔案。 針對每個選取的文字檔案，應用程式會提供檔案屬性和第一行內容。 您也可以選擇將資訊寫入記錄檔。  
   
  本逐步解說使用 Visual Basic 所提供的 `My.Computer.FileSystem Object` 成員。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.FileIO.FileSystem>。 本逐步解說最後會提供使用來自 <xref:System.IO> 命名空間之類別的對等範例。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-the-project"></a>若要建立專案  
+### <a name="to-create-the-project"></a>建立專案  
   
 1. 按一下 [檔案] 功能表上的 [新增專案]。  
   
@@ -46,9 +47,9 @@ ms.locfileid: "59314681"
     |控制項|屬性|值|  
     |-------------|--------------|-----------|  
     |**ListBox**|**名稱**|`filesListBox`|  
-    |**按鈕**|**名稱**<br /><br /> **Text**|`browseButton`<br /><br /> **瀏覽**|  
-    |**按鈕**|**名稱**<br /><br /> **Text**|`examineButton`<br /><br /> **檢查**|  
-    |**核取方塊**|**名稱**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **儲存結果**|  
+    |**Button**|**名稱**<br /><br /> **Text**|`browseButton`<br /><br /> **瀏覽**|  
+    |**Button**|**名稱**<br /><br /> **Text**|`examineButton`<br /><br /> **檢查**|  
+    |**CheckBox**|**名稱**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **儲存結果**|  
     |**FolderBrowserDialog**|**名稱**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>若要選取資料夾，並列出資料夾中的檔案  
@@ -79,7 +80,7 @@ ms.locfileid: "59314681"
   
 ### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a>若要取得檔案的屬性以及文字檔案的內容  
   
-1. 按兩下表單上的控制項，以建立 `examineButton` 的 `Click` 事件處理常式。  
+1. 按兩下表單的控制項，以建立 `examineButton` 的 `Click` 事件處理常式。  
   
 2. 將下列程式碼加入至 `Click` 事件處理常式。  
   
@@ -150,16 +151,18 @@ ms.locfileid: "59314681"
 6. 執行應用程式。 如果 `ListBox` 中未選取項目，則會停用 [儲存結果] 核取方塊和 [檢查] 按鈕。  
   
 ## <a name="full-example-using-mycomputerfilesystem"></a>使用 My.Computer.FileSystem 的完整範例  
+
  下列是完整範例。  
   
  [!code-vb[VbVbcnMyFileSystem#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#101)]  
   
 ## <a name="full-example-using-systemio"></a>使用 System.IO 的完整範例  
+
  下列對等範例使用來自 <xref:System.IO> 命名空間的類別，而不是使用 `My.Computer.FileSystem` 物件。  
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

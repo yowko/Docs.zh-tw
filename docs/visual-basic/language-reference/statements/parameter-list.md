@@ -1,5 +1,5 @@
 ---
-title: 參數清單 (Visual Basic)
+title: 參數清單
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-ms.openlocfilehash: 0dded7fd68256b9b9de8ebe4b48073eb40696c12
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ec4ce0f12b540478d889832fb18f1ef008613f1f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582173"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346487"
 ---
 # <a name="parameter-list-visual-basic"></a>參數清單 (Visual Basic)
 
-指定程式在呼叫時所預期的參數。 多個參數會以逗號分隔。 以下是一個參數的語法。
+Specifies the parameters a procedure expects when it is called. Multiple parameters are separated by commas. The following is the syntax for one parameter.
 
 ## <a name="syntax"></a>語法
 
@@ -31,62 +31,62 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 ## <a name="parts"></a>組件
 
 `attributelist`  
-選擇項。 適用于此參數的屬性清單。 您必須將[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)放在角括弧中（「`<`」和「`>`」）。
+選擇項。 List of attributes that apply to this parameter. You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").
 
 `Optional`  
-選擇項。 指定在呼叫程式時，不需要這個參數。
+選擇項。 Specifies that this parameter is not required when the procedure is called.
 
 `ByVal`  
-選擇項。 指定程式無法取代或重新指派呼叫程式碼中對應引數基礎的變數元素。
+選擇項。 Specifies that the procedure cannot replace or reassign the variable element underlying the corresponding argument in the calling code.
 
 `ByRef`  
-選擇項。 指定程式可以修改呼叫程式碼中的基礎變數元素，方法就和呼叫程式碼本身相同。
+選擇項。 Specifies that the procedure can modify the underlying variable element in the calling code the same way the calling code itself can.
 
 `ParamArray`  
-選擇項。 指定參數清單中的最後一個參數是指定之資料類型的選擇性元素陣列。 這可讓呼叫程式碼將任意數目的引數傳遞至程式。
+選擇項。 Specifies that the last parameter in the parameter list is an optional array of elements of the specified data type. This lets the calling code pass an arbitrary number of arguments to the procedure.
 
 `parametername`  
-必要項。 代表參數的本機變數名稱。
+必要項。 Name of the local variable representing the parameter.
 
 `parametertype`  
-如果 `Option Strict` `On`，則為必要。 代表參數之本機變數的資料類型。
+Required if `Option Strict` is `On`. Data type of the local variable representing the parameter.
 
 `defaultvalue`  
-@No__t_0 參數所需。 評估為參數資料類型的任何常數或常數運算式。 如果類型是 `Object`，或是類別、介面、陣列或結構，則預設值只能 `Nothing`。
+Required for `Optional` parameters. Any constant or constant expression that evaluates to the data type of the parameter. If the type is `Object`, or a class, interface, array, or structure, the default value can only be `Nothing`.
 
 ## <a name="remarks"></a>備註
 
-參數會以括弧括住，並以逗號分隔。 參數可以使用任何資料類型來宣告。 如果您未指定 `parametertype`，它會預設為 `Object`。
+Parameters are surrounded by parentheses and separated by commas. A parameter can be declared with any data type. If you do not specify `parametertype`, it defaults to `Object`.
 
-當呼叫程式碼呼叫程式時，它會將*引數*傳遞給每個必要的參數。 如需詳細資訊，請參閱[參數和引數之間的差異](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md)。
+When the calling code calls the procedure, it passes an *argument* to each required parameter. For more information, see [Differences Between Parameters and Arguments](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).
 
-呼叫程式碼傳遞至每個參數的引數是呼叫程式碼中基礎元素的指標。 如果這個元素是不*變數*（常數、常值、列舉或運算式），任何程式碼都無法變更它。 如果它是*變數*元素（宣告的變數、field、property、array 元素或 structure 元素），則呼叫程式碼可以變更它。 如需詳細資訊，請參閱可[修改的和不可變引數之間的差異](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md)。
+The argument the calling code passes to each parameter is a pointer to an underlying element in the calling code. If this element is *nonvariable* (a constant, literal, enumeration, or expression), it is impossible for any code to change it. If it is a *variable* element (a declared variable, field, property, array element, or structure element), the calling code can change it. For more information, see [Differences Between Modifiable and Nonmodifiable Arguments](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).
 
-如果將變數元素傳遞 `ByRef`，程式也可以變更它。 如需詳細資訊，請參閱[依值和傳址方式傳遞引數之間的差異](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md)。
+If a variable element is passed `ByRef`, the procedure can change it as well. For more information, see [Differences Between Passing an Argument By Value and By Reference](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md).
 
 ## <a name="rules"></a>規則
 
-- **後.** 如果您指定參數清單，則必須將它括在括弧中。 如果沒有參數，您仍然可以使用括住空白清單的括弧。 這會藉由明確說明元素為程式，來改善程式碼的可讀性。
+- **Parentheses.** If you specify a parameter list, you must enclose it in parentheses. If there are no parameters, you can still use parentheses enclosing an empty list. This improves the readability of your code by clarifying that the element is a procedure.
 
-- **選擇性參數。** 如果您在參數上使用 `Optional` 修飾詞，則清單中的所有後續參數也必須是選擇性的，並且使用 `Optional` 修飾詞進行宣告。
+- **Optional Parameters.** If you use the `Optional` modifier on a parameter, all subsequent parameters in the list must also be optional and be declared by using the `Optional` modifier.
 
-     每個選擇性參數宣告都必須提供 `defaultvalue` 子句。
+     Every optional parameter declaration must supply the `defaultvalue` clause.
 
-     如需詳細資訊，請參閱[選擇性參數](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)。
+     For more information, see [Optional Parameters](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).
 
-- **參數陣列。** 您必須指定 `ParamArray` 參數的 `ByVal`。
+- **Parameter Arrays.** You must specify `ByVal` for a `ParamArray` parameter.
 
-     您不能同時在相同的參數清單中使用 `Optional` 和 `ParamArray`。
+     You cannot use both `Optional` and `ParamArray` in the same parameter list.
 
-     如需詳細資訊，請參閱[參數陣列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)。
+     For more information, see [Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).
 
-- **傳遞機制。** 每個引數的預設機制都是 `ByVal`，這表示程式無法變更基礎變數元素。 不過，如果元素是參考型別，程式可以修改基礎物件的內容或成員，即使它無法取代或重新指派物件本身也一樣。
+- **Passing Mechanism.** The default mechanism for every argument is `ByVal`, which means the procedure cannot change the underlying variable element. However, if the element is a reference type, the procedure can modify the contents or members of the underlying object, even though it cannot replace or reassign the object itself.
 
-- **參數名稱。** 如果參數的資料類型是陣列，請依照括弧立即 `parametername`。 如需參數名稱的詳細資訊，請參閱宣告的[元素名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。
+- **Parameter Names.** If the parameter's data type is an array, follow `parametername` immediately by parentheses. For more information on parameter names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
 ## <a name="example"></a>範例
 
-下列範例顯示的 `Function` 程式會定義兩個參數。
+The following example shows a `Function` procedure that defines two parameters.
 
 [!code-vb[VbVbalrStatements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#2)]
 

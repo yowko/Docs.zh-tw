@@ -1,5 +1,5 @@
 ---
-title: 使用 Visual Basic 存取檔案
+title: 檔案存取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file access
@@ -14,17 +14,19 @@ helpviewer_keywords:
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-ms.openlocfilehash: f9cbb255dea8c6915951b5099f40bfd0ba66c8aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 22bcd0f1f3acb0c0ad899b83ad2d879ead948f12
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583301"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348902"
 ---
 # <a name="file-access-with-visual-basic"></a>使用 Visual Basic 存取檔案
+
 `My.Computer.FileSystem` 物件提供用於處理檔案和資料夾的工具。 其屬性、方法和事件可讓您建立、複製、移動、調查及刪除檔案和資料夾。 `My.Computer.FileSystem` 比 Visual Basic 所提供的舊版函式 (`FileOpen`、`FileClose`、`Input`、`InputString`、`LineInput` 等) 提供更佳效能，以利回溯相容性。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
+
  [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  列出主題，說明如何使用 `My.Computer.FileSystem` 物件從檔案讀取  
   

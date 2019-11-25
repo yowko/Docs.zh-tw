@@ -1,5 +1,5 @@
 ---
-title: HOW TO：多載不定數目參數 (Visual Basic) 的程序
+title: 如何：多載使用不確定參數數目的程序
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], parameters
@@ -10,50 +10,50 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 3cf75fc6221364704379eb23d308481c34e6c0d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 047d566c13f03803d2e5c3bc6cce0db56df4a3f0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955736"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345842"
 ---
-# <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>HOW TO：多載不定數目參數 (Visual Basic) 的程序
-如果程序[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)參數，您不能定義採用的參數陣列的一維陣列的多載的版本。 如需詳細資訊，請參閱 「 隱含多載的參數陣列參數 」 中[多載化程序中的考量](./considerations-in-overloading-procedures.md)。  
+# <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>如何：多載使用不定數目參數的程序 (Visual Basic)
+If a procedure has a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter, you cannot define an overloaded version taking a one-dimensional array for the parameter array. For more information, see "Implicit Overloads for a ParamArray Parameter" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
   
-### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>若要多載接受各種數目參數的程序  
+### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>To overload a procedure that takes a variable number of parameters  
   
-1. 確認此程序與呼叫程式碼邏輯方面，從多載版本，從多個`ParamArray`參數。 請參閱中的 < 多載和參數陣列 >[多載化程序的考量](./considerations-in-overloading-procedures.md)。  
+1. Ascertain that the procedure and calling code logic benefits from overloaded versions more than from a `ParamArray` parameter. See "Overloads and ParamArrays" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
   
-2. 判斷程序應該接受的提供值的數字中變數參數清單的一部分。 這可能包括的任何值，大小寫，且它可能包含單一的一維陣列的大小寫。  
+2. Determine which numbers of supplied values the procedure should accept in the variable part of the parameter list. This might include the case of no value, and it might include the case of a single one-dimensional array.  
   
-3. 針對每個可接受提供的值數目，撰寫`Sub`或`Function`定義對應的參數清單的宣告陳述式。 請勿使用`Optional`或`ParamArray`在這個多載的版本中的關鍵字。  
+3. For each acceptable number of supplied values, write a `Sub` or `Function` declaration statement that defines the corresponding parameter list. Do not use either the `Optional` or the `ParamArray` keyword in this overloaded version.  
   
-4. 在每個宣告中，在前面`Sub`或是`Function`關鍵字搭配[多載](../../../../visual-basic/language-reference/modifiers/overloads.md)關鍵字。  
+4. In each declaration, precede the `Sub` or `Function` keyword with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword.  
   
-5. 下列每個宣告中，撰寫呼叫程式碼提供與該宣告的參數清單的對應值時執行的程序程式碼。  
+5. Following each declaration, write the procedure code that should execute when the calling code supplies values corresponding to that declaration's parameter list.  
   
-6. 終止與每個程序`End Sub`或`End Function`適當的陳述式。  
+6. Terminate each procedure with the `End Sub` or `End Function` statement as appropriate.  
   
 ## <a name="example"></a>範例  
- 下列範例示範使用定義的程序[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)參數，然後按一下 對等一組多載程序。  
+ The following example shows a procedure defined with a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter, and then an equivalent set of overloaded procedures.  
   
  [!code-vb[VbVbcnProcedures#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#69)]  
   
  [!code-vb[VbVbcnProcedures#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#70)]  
   
- 您無法多載會採用參數陣列的一維陣列的參數清單的這類的程序。 不過，您可以使用其他隱含的多載的簽章。 下列宣告將說明這點。  
+ You cannot overload such a procedure with a parameter list that takes a one-dimensional array for the parameter array. However, you can use the signatures of the other implicit overloads. The following declarations illustrate this.  
   
  [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
- 若要測試是否呼叫程式碼提供一個或多個值並沒有多載的版本中的程式碼`ParamArray`參數，或如果是的話，多少。 Visual Basic 會將控制項傳遞至比對呼叫的引數清單的版本。  
+ The code in the overloaded versions does not have to test whether the calling code supplied one or more values for the `ParamArray` parameter, or if so, how many. Visual Basic passes control to the version matching the calling argument list.  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 因為程序時使用`ParamArray`參數相當於一組多載版本，您無法多載，這樣的程序對應到任何這些隱含的多載的參數清單。 如需詳細資訊，請參閱 <<c0> [ 多載化程序中的考量](./considerations-in-overloading-procedures.md)。  
+ Because a procedure with a `ParamArray` parameter is equivalent to a set of overloaded versions, you cannot overload such a procedure with a parameter list corresponding to any of these implicit overloads. For more information, see [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 每當您處理陣列，其中可能會無限期地大，會有風險的造成滿溢內部應用程式的容量。 如果您接受參數陣列時，您應該測試呼叫程式碼傳遞給它，陣列的長度，並採取適當的步驟，如果它是對您的應用程式而言太大。  
+ Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array, you should test for the length of the array the calling code passed to it, and take appropriate steps if it is too large for your application.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [程序](./index.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
@@ -61,7 +61,7 @@ ms.locfileid: "61955736"
 - [參數陣列](./parameter-arrays.md)
 - [程序多載化](./procedure-overloading.md)
 - [程序的疑難排解](./troubleshooting-procedures.md)
-- [如何：定義多個版本的程序](./how-to-define-multiple-versions-of-a-procedure.md)
+- [如何：定義程序的多個版本](./how-to-define-multiple-versions-of-a-procedure.md)
 - [如何：呼叫多載程序](./how-to-call-an-overloaded-procedure.md)
-- [如何：多載會採用選擇性參數的程序](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [如何：使用選擇性參數的多載程序](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [多載解析](./overload-resolution.md)

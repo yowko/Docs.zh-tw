@@ -1,5 +1,5 @@
 ---
-title: XML 文件常值 (Visual Basic)
+title: XML 文件常值
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlLiteralDocument
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML documents [Visual Basic], creating
 - document literal [Visual Basic]
 ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
-ms.openlocfilehash: 8a489be46295c213b7a8b355eb3c9786d49dd8f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: db77cccd26c87e271d6db45ce514ab6dabbc53e3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958506"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349375"
 ---
 # <a name="xml-document-literal-visual-basic"></a>XML 文件常值 (Visual Basic)
-代表<xref:System.Xml.Linq.XDocument>物件的常值。  
+A literal representing an <xref:System.Xml.Linq.XDocument> object.  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,30 +32,30 @@ rootElement
   
 |詞彙|定義|  
 |---|---|  
-|`encoding`|選擇性。 常值文字, 用來宣告檔所使用的編碼方式。|  
-|`standalone`|選擇性。 常值文字。 必須是 "yes" 或 "no"。|  
-|`piCommentList`|選擇性。 XML 處理指示和 XML 批註的清單。 採用下列格式:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> 每`piComment`個都可以是下列其中一項:<br /><br /> -   [XML 處理指示常](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)值。<br />-   [XML 批註常](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)值。|  
-|`rootElement`|必要項。 檔的根項目。 格式為下列其中一項:<br /><br /> <ul><li>[XML 元素常](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)值。</li><li>表單`<%=` `elementExp`的內嵌運算式。`%>` `elementExp`會傳回下列其中一項:<br /><br /> <ul><li><xref:System.Xml.Linq.XElement> 物件。</li><li>包含一個<xref:System.Xml.Linq.XElement>物件和任意數目之<xref:System.Xml.Linq.XProcessingInstruction>和<xref:System.Xml.Linq.XComment>物件的集合。</li></ul></li></ul><br /> 如需詳細資訊, 請參閱[XML 中的內嵌運算式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。|  
+|`encoding`|選擇項。 Literal text declaring which encoding the document uses.|  
+|`standalone`|選擇項。 Literal text. Must be "yes" or "no".|  
+|`piCommentList`|選擇項。 List of XML processing instructions and XML comments. Takes the following format:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Each `piComment` can be one of the following:<br /><br /> -   [XML Processing Instruction Literal](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [XML Comment Literal](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
+|`rootElement`|必要項。 Root element of the document. The format is one of the following:<br /><br /> <ul><li>[XML Element Literal](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Embedded expression of the form `<%=` `elementExp` `%>`. The `elementExp` returns one of the following:<br /><br /> <ul><li><xref:System.Xml.Linq.XElement> 物件。</li><li>A collection that contains one <xref:System.Xml.Linq.XElement> object and any number of <xref:System.Xml.Linq.XProcessingInstruction> and <xref:System.Xml.Linq.XComment> objects.</li></ul></li></ul><br /> For more information, see [Embedded Expressions in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
   
 ## <a name="return-value"></a>傳回值  
  <xref:System.Xml.Linq.XDocument> 物件。  
   
 ## <a name="remarks"></a>備註  
- XML 檔常值是由文字開頭的 XML 宣告所識別。 雖然每個 XML 檔常值必須只有一個根 XML 元素, 但它可以有任意數目的 XML 處理指示和 XML 批註。  
+ An XML document literal is identified by the XML declaration at the start of the literal. Although each XML document literal must have exactly one root XML element, it can have any number of XML processing instructions and XML comments.  
   
- Xml 檔常值不能出現在 XML 元素中。  
+ An XML document literal cannot appear in an XML element.  
   
 > [!NOTE]
-> XML 常值可以跨越多行, 而不需要使用行接續字元。 這可讓您從 XML 檔案複製內容, 並將它直接貼到 Visual Basic 程式中。  
+> An XML literal can span multiple lines without using line continuation characters. This enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
   
- Visual Basic 編譯器會將 XML 檔常值轉換成呼叫<xref:System.Xml.Linq.XDocument.%23ctor%2A>和<xref:System.Xml.Linq.XDeclaration.%23ctor%2A>構造函式。  
+ The Visual Basic compiler converts the XML document literal into calls to the <xref:System.Xml.Linq.XDocument.%23ctor%2A> and <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> constructors.  
   
 ## <a name="example"></a>範例  
- 下列範例會建立 XML 檔, 其中具有 XML 宣告、處理指示、批註, 以及包含另一個元素的專案。  
+ The following example creates an XML document that has an XML declaration, a processing instruction, a comment, and an element that contains another element.  
   
  [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Linq.XElement>
 - <xref:System.Xml.Linq.XProcessingInstruction>

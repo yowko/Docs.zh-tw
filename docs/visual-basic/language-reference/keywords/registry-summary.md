@@ -1,28 +1,28 @@
 ---
-title: 登錄摘要 (Visual Basic)
+title: 登錄摘要
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 6e90eb8a-1a4e-4387-8a68-9287dc7875e8
-ms.openlocfilehash: 88b9c530da3da39c0d70d9d8e90626bd5e133cf3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6564b4c3ad2025da4ebaeaca84e23c97a85f007d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802411"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351676"
 ---
 # <a name="registry-summary-visual-basic"></a>登錄摘要 (Visual Basic)
-Visual Studio 語言關鍵字和執行階段程式庫成員依用途組織，並使用。  
+Visual Studio language keywords and run-time library members are organized by purpose and use.  
   
- 使用`My`功能為您提供更高的產能和效能的登錄作業比這些項目。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>。  
+ Using the `My` feature provides you with greater productivity and performance in registry operations than these elements. 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>。  
   
 |**動作**|**語言項目**|  
 |----------------|--------------------------|  
-|刪除程式設定。|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
-|讀取程式的設定。|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>、 <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A>|  
-|儲存程式的設定。|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
+|Delete program settings.|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
+|Read program settings.|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>、 <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A>|  
+|Save program settings.|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 執行階段程式庫成員](../../../visual-basic/language-reference/runtime-library-members.md)

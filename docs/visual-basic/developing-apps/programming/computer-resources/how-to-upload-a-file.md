@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中上傳檔案
+title: 如何：上傳一個檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - networks, uploading files
@@ -8,14 +8,15 @@ helpviewer_keywords:
 - UploadFile method [Visual Basic]
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
-ms.openlocfilehash: b2c313078e3438c84068b6cc54d787b567a768b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 52b731606c74ab7ff06a42dfdbe078616ba33d88
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662706"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345564"
 ---
-# <a name="how-to-upload-a-file-in-visual-basic"></a>作法：在 Visual Basic 中上傳檔案
+# <a name="how-to-upload-a-file-in-visual-basic"></a>如何：在 Visual Basic 中上載檔案
+
 <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> 方法可以用於上傳檔案，並將其存放到遠端位置。 如果 `ShowUI` 參數設定為 `True`，則會顯示對話方塊以顯示上傳進度，並允許使用者取消作業。  
   
 ### <a name="to-upload-a-file"></a>上傳檔案  
@@ -37,6 +38,7 @@ ms.locfileid: "64662706"
      [!code-vb[VbResourceTasks#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#8)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
+
  下列條件可能會擲回例外狀況：  
   
 - 本機檔案路徑無效 (<xref:System.ArgumentException>)。  
@@ -45,7 +47,7 @@ ms.locfileid: "64662706"
   
 - 連線逾時 (<xref:System.TimeoutException>)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>

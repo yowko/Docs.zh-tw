@@ -2,12 +2,12 @@
 title: Azure 監視器
 description: 使用 Azure 監視器來取得系統的可見度。
 ms.date: 09/23/2019
-ms.openlocfilehash: fa7b4e103f4d1245710f88319271a9e8b7a24b04
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 27503627217c71e4090674945830f6332b202a5b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087687"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281640"
 ---
 # <a name="azure-monitor"></a>Azure 監視器
 
@@ -34,7 +34,7 @@ ms.locfileid: "73087687"
 
 Application Insights 提供一種強大的查詢語言，稱為 Kusto，可用來尋找記錄、匯總它們，甚至繪製圖表。 例如，此查詢會找出2007年11月的所有記錄、依州/省分組，然後將前10個圖繪製為圓形圖。
 
-```
+```kusto
 StormEvents
 | where StartTime >= datetime(2007-11-01) and StartTime < datetime(2007-12-01)
 | summarize count() by State

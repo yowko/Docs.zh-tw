@@ -1,5 +1,5 @@
 ---
-title: -link （Visual Basic）
+title: -link
 ms.date: 03/10/2018
 helpviewer_keywords:
 - l compiler option [Visual Basic]
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 0a6a6b6436210e699d8fd176dc1ba6e4aded7c8d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: ecb7b0448b8ee9c1c1fc1eb9542b693d60a38ffd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523989"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335854"
 ---
-# <a name="-link-visual-basic"></a>-link （Visual Basic）
+# <a name="-link-visual-basic"></a>-link (Visual Basic)
 讓編譯器將所指定組件的 COM 類型資訊全部提供給您目前編譯的專案。  
   
 ## <a name="syntax"></a>語法  
@@ -57,9 +57,9 @@ ms.locfileid: "72523989"
   
 - 所叫用的欄位、屬性、事件或方法具有組件 B 的傳回型別或參數類型。  
   
- 請使用[-libpath](libpath.md)來指定您的一或多個元件參考所在的目錄。  
+ Use [-libpath](libpath.md) to specify the directory in which one or more of your assembly references is located.  
   
- 如同[-reference](reference.md)編譯器選項，`-link` 編譯器選項會使用 Vbc 回應檔，該檔案會參考經常使用的 .NET Framework 元件。 如果您不想要編譯器使用 Vbc .rsp 檔案，請使用[-noconfig](noconfig.md)編譯器選項。  
+ Like the [-reference](reference.md) compiler option, the `-link` compiler option uses the Vbc.rsp response file, which references frequently used .NET Framework assemblies. Use the [-noconfig](noconfig.md) compiler option if you do not want the compiler to use the Vbc.rsp file.  
   
  `-link` 的簡短形式為 `-l`。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "72523989"
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>範例  
- 下列命令列會將原始程式檔 `OfficeApp.vb` 和參考元件從 `COMData1.dll` 和 `COMData2.dll` 編譯成產生 `OfficeApp.exe`。  
+ The following command line compiles source file `OfficeApp.vb` and reference assemblies from `COMData1.dll` and `COMData2.dll` to produce `OfficeApp.exe`.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
@@ -93,7 +93,7 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
 
 - [Visual Basic 命令列編譯器](index.md)
 - [逐步解說：從 Managed 組件內嵌類型](../../../standard/assembly/embed-types-visual-studio.md)
-- [-reference （Visual Basic）](reference.md)
+- [-reference (Visual Basic)](reference.md)
 - [-noconfig](noconfig.md)
 - [-libpath](libpath.md)
 - [編譯命令列範例](sample-compilation-command-lines.md)

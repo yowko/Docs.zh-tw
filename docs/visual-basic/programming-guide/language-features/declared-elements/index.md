@@ -1,13 +1,13 @@
 ---
-title: Visual Basic 的宣告項目
+title: 宣告項目
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-ms.openlocfilehash: 3430517aea32eeb79aeb586d3a1eb0df1524998b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a61ba32e2235bfb6a2112a28f1de7479ca82556c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639181"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345338"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Visual Basic 的宣告項目
 「宣告項目」是宣告陳述式中定義的程式設計項目。 宣告項目包含變數、常數、列舉、類別、結構、模組、介面、程序、程序參數、函式傳回、外部程序參考、運算子、屬性、事件和委派。  
@@ -42,7 +42,7 @@ ms.locfileid: "64639181"
   
 - [Delegate 陳述式](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
  描述如何為項目命名與使用字母大小寫。  
   

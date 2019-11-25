@@ -1,5 +1,5 @@
 ---
-title: 複合資料類型 (Visual Basic)
+title: 複合資料類型
 ms.date: 04/25/2017
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,38 +11,38 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: 768559c7a6caf064f7529786675e51ce19667d6b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 1c099c5082f1c4173a50c70998c99135c94821e6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581718"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346381"
 ---
 # <a name="composite-data-types-visual-basic"></a>複合資料類型 (Visual Basic)
-除了 Visual Basic 提供的基本資料類型之外，您也可以組合不同類型的專案來建立*複合資料型別*，例如結構、陣列和類別。 您可以從基本類型和其他複合類型建立複合資料型別。 例如，您可以定義結構專案的陣列，或是包含陣列成員的結構。  
+In addition to the elementary data types Visual Basic supplies, you can also assemble items of different types to create *composite data types* such as structures, arrays, and classes. You can build composite data types from elementary types and from other composite types. For example, you can define an array of structure elements, or a structure with array members.  
   
 ## <a name="data-types"></a>資料類型  
- 複合類型與任何元件的資料類型不同。 例如，`Integer` 元素的陣列不是 `Integer` 的資料類型。  
+ A composite type is different from the data type of any of its components. For example, an array of `Integer` elements is not of the `Integer` data type.  
   
- 陣列資料類型通常會在必要時使用元素類型、括弧和逗號來表示。 例如，`String` 專案的一維陣列會以 `String()` 表示，而 `Boolean` 元素的二維陣列則會以 `Boolean(,)` 表示。  
+ An array data type is normally represented using the element type, parentheses, and commas as necessary. For example, a one-dimensional array of `String` elements is represented as `String()`, and a two-dimensional array of `Boolean` elements is represented as `Boolean(,)`.  
   
-## <a name="structure-types"></a>結構類型  
- 沒有組成所有結構的單一資料類型。 相反地，結構的每個定義都代表唯一的資料類型，即使兩個結構以相同的順序定義相同的元素。 不過，如果您建立相同結構的兩個或多個實例，Visual Basic 會將它們視為相同的資料類型。  
+## <a name="structure-types"></a>Structure Types  
+ There is no single data type comprising all structures. Instead, each definition of a structure represents a unique data type, even if two structures define identical elements in the same order. However, if you create two or more instances of the same structure, Visual Basic considers them to be of the same data type.  
   
 ## <a name="tuples"></a>Tuple
 
-元組是輕量結構，其中包含兩個或多個預先定義類型的欄位。 從 Visual Basic 2017 開始支援元組。 元組最常用來傳回單一方法呼叫中的多個值，而不需要以傳址方式傳遞引數，或將傳回的欄位封裝在較高的權數類別或結構中。 如需元組的詳細資訊，請參閱[元組](tuples.md)主題。
+A tuple is a lightweight structure that contains two or more fields whose types are predefined. Tuples are supported starting with Visual Basic 2017. Tuples are most commonly used to return multiple values from a single method call without having to pass arguments by reference or packaging the returned fields in a more heavy-weight class or structure. See the [Tuples](tuples.md) topic for more information on tuples.
 
-## <a name="array-types"></a>陣列類型  
- 沒有組成所有陣列的單一資料類型。 陣列特定實例的資料類型取決於下列各項：  
+## <a name="array-types"></a>Array Types  
+ There is no single data type comprising all arrays. The data type of a particular instance of an array is determined by the following:  
   
-- 成為陣列的事實  
+- The fact of being an array  
   
-- 陣列的順位（維度數目）  
+- The rank (number of dimensions) of the array  
   
-- 陣列的元素類型  
+- The element type of the array  
   
- 特別是，指定維度的長度不是實例資料類型的一部分。 下列範例將說明這點。  
+ In particular, the length of a given dimension is not part of the instance's data type. 下列範例將說明這點。  
   
 ```vb  
 Dim arrayA( ) As Byte = New Byte(12) {}  
@@ -52,14 +52,14 @@ Dim arrayD( , ) As Short
 Dim arrayE( , ) As Short = New Short(4, 10) {}  
 ```  
   
- 在上述範例中，`arrayA` 和 `arrayB` 的陣列變數會被視為相同的資料類型（`Byte()`），即使它們已初始化為不同的長度也一樣。 @No__t_0 和 `arrayC` 的變數不屬於相同類型，因為它們的元素類型不同。 @No__t_0 和 `arrayD` 的變數不屬於相同類型，因為它們的次序不同。 @No__t_0 和 `arrayE` 的變數具有相同的類型（`Short(,)`），因為它們的次序和元素類型相同，即使 `arrayD` 尚未初始化也一樣。  
+ In the preceding example, array variables `arrayA` and `arrayB` are considered to be of the same data type — `Byte()` — even though they are initialized to different lengths. Variables `arrayB` and `arrayC` are not of the same type because their element types are different. Variables `arrayC` and `arrayD` are not of the same type because their ranks are different. Variables `arrayD` and `arrayE` have the same type — `Short(,)` — because their ranks and element types are the same, even though `arrayD` is not yet initialized.  
   
- 如需陣列的詳細資訊，請參閱[陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+ For more information on arrays, see [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="class-types"></a>類別類型  
- 沒有組成所有類別的單一資料類型。 雖然一個類別可以繼承自另一個類別，但每個都是不同的資料類型。 相同類別的多個實例屬於相同的資料類型。 如果您將一個類別執行個體變數指派給另一個，不只是它們具有相同的資料類型，而是指向記憶體中的相同類別實例。  
+ There is no single data type comprising all classes. Although one class can inherit from another class, each is a separate data type. Multiple instances of the same class are of the same data type. If you assign one class instance variable to another, not only do they have the same data type, they point to the same class instance in memory.  
   
- 如需類別的詳細資訊，請參閱[物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
+ For more information on classes, see [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="see-also"></a>請參閱
 
@@ -67,7 +67,7 @@ Dim arrayE( , ) As Short = New Short(4, 10) {}
 - [基礎資料類型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [值類型和參考類型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [結構](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [如何：在變數中存放多個值](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)

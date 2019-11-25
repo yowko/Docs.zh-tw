@@ -1,5 +1,5 @@
 ---
-title: 關鍵字 (Visual Basic)
+title: 關鍵字
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reserved keywords, Visual Basic
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: 08444d757ed4186494100e54415e504c1ef117ce
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 8fd6389db453da4352fee12e870edc3004ce8f1b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197516"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74338784"
 ---
 # <a name="keywords-visual-basic"></a>關鍵字 (Visual Basic)
 
-下表列出所有 Visual Basic 語言關鍵字。
+The following tables list all Visual Basic language keywords.
 
 ## <a name="reserved-keywords"></a>保留關鍵字
 
@@ -80,7 +80,7 @@ ms.locfileid: "73197516"
 |[<\<=](../operators/left-shift-assignment-operator.md)|
 
 > [!NOTE]
-> `EndIf`、`GoSub`、`Variant`和 `Wend` 會保留為保留的關鍵字，但不會再用於 Visual Basic 中。 `Let` 關鍵字的意義已變更。 `Let` 現在用於 LINQ 查詢中。 如需詳細資訊，請參閱 [Let 子句](../queries/let-clause.md)。
+> `EndIf`, `GoSub`, `Variant`, and `Wend` are retained as reserved keywords, although they are no longer used in Visual Basic. `Let` 關鍵字的意義已變更。 `Let` 現在用於 LINQ 查詢中。 如需詳細資訊，請參閱 [Let 子句](../queries/let-clause.md)。
 
 ## <a name="unreserved-keywords"></a>未保留關鍵字
 

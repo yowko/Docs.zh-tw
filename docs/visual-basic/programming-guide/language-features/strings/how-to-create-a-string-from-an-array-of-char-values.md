@@ -1,32 +1,32 @@
 ---
-title: HOW TO：從 Char 值 (Visual Basic) 的陣列建立字串
+title: 如何：使用字元值陣列建立字串
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [Visual Basic], arrays
 - examples [Visual Basic], Char data type
 ms.assetid: 69f94e85-d57c-4ccc-a62a-426e829f5c5e
-ms.openlocfilehash: 1f72cb86ffa38dc929062fab2f5592a781f2de27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03138a851afc55f735cc66edeb345817428a0452
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054051"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344391"
 ---
-# <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>HOW TO：從 Char 值 (Visual Basic) 的陣列建立字串
-此範例會建立從個別字元的字串"abcd"。  
+# <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>如何：使用字元值陣列建立字串 (Visual Basic)
+This example creates the string "abcd" from individual characters.  
   
 ## <a name="example"></a>範例  
  [!code-vb[VbVbalrStrings#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#61)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 這個方法沒有任何特殊的需求。  
+ This method has no special requirements.  
   
- 語法`"a"c`，其中單一`c`會遵循在引號內的單一字元，用來建立字元常值。  
+ The syntax `"a"c`, where a single `c` follows a single character in quotation marks, is used to create a character literal.  
   
 ## <a name="robust-programming"></a>穩固程式設計  
- Null 字元 (等於`Chr(0)`) 字串中會導致非預期的結果時使用的字串。 Null 字元會包含字串，但在某些情況下不會顯示在 null 字元後面的字元。  
+ Null characters (equivalent to `Chr(0)`) in the string lead to unexpected results when using the string. The null character will be included with the string, but characters following the null character will not be displayed in some situations.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.String>
 - [Char 資料類型](../../../../visual-basic/language-reference/data-types/char-data-type.md)
