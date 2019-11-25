@@ -1,5 +1,5 @@
 ---
-title: Imports 語句-.NET 命名空間和類型（Visual Basic）
+title: Imports Statement - .NET Namespace and Type
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Imports
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-ms.openlocfilehash: 573bb7383b292e0ad2e85a4355d89cf92fe8dd7d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 39fa4e74f973bcb575b5751c387c0b879f4e398d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040732"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351073"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports 陳述式 (.NET 命名空間和類型)
 
-在不限定命名空間的情況下，允許參考型別名稱。
+Enables type names to be referenced without namespace qualification.
 
 ## <a name="syntax"></a>語法
 
@@ -39,54 +39,54 @@ Imports [ aliasname = ] namespace.element
 
 |詞彙|定義|
 |---|---|
-|`aliasname`|選擇項。 匯*入別名*或名稱，由程式碼用來參考 `namespace`，而不是完整限定字串。 請參閱 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)。|
-|`namespace`|必要項。 要匯入之命名空間的完整名稱。 可以是嵌套于任何層級的命名空間字串。|
-|`element`|選擇項。 命名空間中宣告的程式設計項目名稱。 可以是任何容器元素。|
+|`aliasname`|選擇項。 An *import alias* or name by which code can refer to `namespace` instead of the full qualification string. 請參閱 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)。|
+|`namespace`|必要項。 The fully qualified name of the namespace being imported. Can be a string of namespaces nested to any level.|
+|`element`|選擇項。 The name of a programming element declared in the namespace. Can be any container element.|
 
 ## <a name="remarks"></a>備註
 
-`Imports` 語句可讓您直接參考指定命名空間中包含的類型。
+The `Imports` statement enables types that are contained in a given namespace to be referenced directly.
 
-您可以提供單一命名空間名稱或一個嵌套命名空間的字串。 每個嵌套的命名空間會與下一個較高層級的命名空間隔開（`.`），如下列範例所示：
+You can supply a single namespace name or a string of nested namespaces. Each nested namespace is separated from the next higher level namespace by a period (`.`), as the following example illustrates:
 
 ```vb
 Imports System.Collections.Generic
 ```
 
-每個來源檔案都可以包含任意數目的 `Imports` 語句。 這些必須遵循任何選項宣告（例如 `Option Strict` 語句），而且必須在任何程式設計專案宣告之前，例如 `Module` 或 `Class` 語句。
+Each source file can contain any number of `Imports` statements. These must follow any option declarations, such as the `Option Strict` statement, and they must precede any programming element declarations, such as `Module` or `Class` statements.
 
-您只能在檔案層級使用 `Imports`。 這表示匯入的宣告內容必須是原始程式檔，而且不能是命名空間、類別、結構、模組、介面、程式或區塊。
+You can use `Imports` only at file level. This means the declaration context for importation must be a source file, and cannot be a namespace, class, structure, module, interface, procedure, or block.
 
-請注意，`Imports` 語句不會將其他專案和元件中的元素提供給您的專案。 匯入不會取代設定參考。 這只是不需要限定已可用於您專案的名稱。 如需詳細資訊，請參閱宣告專案[參考](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)中的「匯入包含元素」。
+Note that the `Imports` statement does not make elements from other projects and assemblies available to your project. Importing does not take the place of setting a reference. It only removes the need to qualify names that are already available to your project. For more information, see "Importing Containing Elements" in [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
 
 > [!NOTE]
-> 您可以使用 [專案設計工具] 的 [[參考] 頁面（[Visual Basic]）](/visualstudio/ide/reference/references-page-project-designer-visual-basic)來定義隱含的 `Imports` 語句。 如需詳細資訊，請參閱[如何：新增或移除匯入的命名空間（Visual Basic）](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)。
+> You can define implicit `Imports` statements by using the [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). For more information, see [How to: Add or Remove Imported Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).
 
 ## <a name="import-aliases"></a>匯入別名
 
-匯*入別名*會定義命名空間或類型的別名。 當您需要使用與一個或多個命名空間中宣告的相同名稱的專案時，匯入別名會很有用。 如需詳細資訊和範例，請參閱宣告[元素的參考](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)中的「限定專案名稱」。
+An *import alias* defines the alias for a namespace or type. Import aliases are useful when you need to use items with the same name that are declared in one or more namespaces. For more information and an example, see "Qualifying an Element Name" in [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
 
-您不應該使用與 `aliasname` 相同的名稱來宣告模組層級的成員。 如果您這樣做，Visual Basic 編譯器只會針對宣告的成員使用 `aliasname`，而不再將它辨識為匯入別名。
+You should not declare a member at module level with the same name as `aliasname`. If you do, the Visual Basic compiler uses `aliasname` only for the declared member and no longer recognizes it as an import alias.
 
-雖然用來宣告匯入別名的語法就像是用來匯入 XML 命名空間前置詞，但結果並不相同。 匯入別名可以當做程式碼中的運算式使用，而 XML 命名空間前置詞只能用在 XML 常值或 XML 軸屬性中，做為限定專案或屬性名稱的前置詞。
+Although the syntax used for declaring an import alias is like that used for importing an XML namespace prefix, the results are different. An import alias can be used as an expression in your code, whereas an XML namespace prefix can be used only in XML literals or XML axis properties as the prefix for a qualified element or attribute name.
 
 ### <a name="element-names"></a>項目名稱
 
-如果您提供 `element`，它必須代表*容器元素*，也就是可以包含其他元素的程式設計項目。 容器元素包括類別、結構、模組、介面和列舉。
+If you supply `element`, it must represent a *container element*, that is, a programming element that can contain other elements. Container elements include classes, structures, modules, interfaces, and enumerations.
 
-`Imports` 語句所提供的元素範圍，視您是否指定 `element`而定。 如果您只指定 `namespace`，就可以使用該命名空間的所有唯一名稱成員，以及該命名空間內的容器元素成員，而無需限定。 如果您同時指定 `namespace` 和 `element`，則只有該元素的成員可以使用，而不需要限定。
+The scope of the elements made available by an `Imports` statement depends on whether you specify `element`. If you specify only `namespace`, all uniquely named members of that namespace, and members of container elements within that namespace, are available without qualification. If you specify both `namespace` and `element`, only the members of that element are available without qualification.
 
 ## <a name="example"></a>範例
 
-下列範例會使用 <xref:System.IO.DirectoryInfo> 類別，傳回*C：\\* 目錄中的所有資料夾：
+The following example returns all the folders in the *C:\\* directory by using the <xref:System.IO.DirectoryInfo> class:
 
-此程式碼在檔案的頂端沒有 `Imports` 的語句。 因此，<xref:System.IO.DirectoryInfo>、<xref:System.Text.StringBuilder>和 <xref:Microsoft.VisualBasic.ControlChars.CrLf> 參考都是以命名空間完整限定。
+The code has no `Imports` statements at the top of the file. Therefore, the <xref:System.IO.DirectoryInfo>, <xref:System.Text.StringBuilder>, and <xref:Microsoft.VisualBasic.ControlChars.CrLf> references are all fully qualified with the namespaces.
 
 [!code-vb[VbVbalrStatements#152](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#152)]
 
 ## <a name="example"></a>範例
 
-下列範例包含所參考之命名空間的 `Imports` 語句。 因此，類型不一定要使用命名空間來完整限定。
+The following example includes `Imports` statements for the referenced namespaces. Therefore, the types do not have to be fully qualified with the namespaces.
 
 [!code-vb[VbVbalrStatements#153](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#153)]
 
@@ -94,7 +94,7 @@ Imports System.Collections.Generic
   
 ## <a name="example"></a>範例
 
-下列範例包含 `Imports` 語句，以建立參考之命名空間的別名。 類型是以別名限定。
+The following example includes `Imports` statements that create aliases for the referenced namespaces. The types are qualified with the aliases.
 
 [!code-vb[VbVbalrStatements#155](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#155)]
 
@@ -102,7 +102,7 @@ Imports System.Collections.Generic
 
 ## <a name="example"></a>範例
 
-下列範例包含 `Imports` 語句，以建立參考類型的別名。 別名是用來指定類型。
+The following example includes `Imports` statements that create aliases for the referenced types. Aliases are used to specify the types.
 
 [!code-vb[VbVbalrStatements#157](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#157)]
 
@@ -111,7 +111,7 @@ Imports System.Collections.Generic
 ## <a name="see-also"></a>請參閱
 
 - [Namespace 陳述式](namespace-statement.md)
-- [Visual Basic 中的命名空間](../../programming-guide/program-structure/namespaces.md)
+- [Namespaces in Visual Basic](../../programming-guide/program-structure/namespaces.md)
 - [參考和 Imports 陳述式](../../programming-guide/program-structure/references-and-the-imports-statement.md)
 - [Imports 陳述式 (XML 命名空間)](imports-statement-xml-namespace.md)
 - [對已宣告項目的參考](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

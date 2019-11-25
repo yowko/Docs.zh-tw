@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 7010c38797ab64e5106c96c06cd814c143ca9c24
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: dab708bfbc33458bc2664c0d04757f0badcc2575
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419380"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141598"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隱含類型區域變數 (C# 程式設計手冊)
 
@@ -30,13 +30,13 @@ ms.locfileid: "73419380"
 - 在 [for](../../language-reference/keywords/for.md) 初始化陳述式中。
 
     ```csharp
-    for(var x = 1; x < 10; x++)
+    for (var x = 1; x < 10; x++)
     ```
 
 - 在 [foreach](../../language-reference/keywords/foreach-in.md) 初始化陳述式中。
 
     ```csharp
-    foreach(var item in list){...}
+    foreach (var item in list) {...}
     ```
 
 - 在 [using](../../language-reference/keywords/using-statement.md) 陳述式中。
@@ -45,7 +45,7 @@ ms.locfileid: "73419380"
     using (var file = new StreamReader("C:\\myfile.txt")) {...}
     ```
 
-如需詳細資訊，請參閱[如何：在查詢運算式中使用隱含型別區域變數和陣列](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。
+如需詳細資訊，請參閱[如何在查詢運算式中使用隱含類型區域變數和陣列](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。
 
 ## <a name="var-and-anonymous-types"></a>var 和匿名型別
 
@@ -63,7 +63,7 @@ ms.locfileid: "73419380"
 
 - `var` 無法在類別範圍的欄位中使用。
 
-- 使用 `var` 宣告的變數無法在初始化運算式中使用。 換句話說，此運算式是合法的 `: int i = (i = 20);`，但此運算式會產生編譯時期錯誤︰`var i = (i = 20);`
+- 使用 `var` 宣告的變數無法在初始化運算式中使用。 換句話說，這個運算式是合法的： `int i = (i = 20);` 但這個運算式會產生編譯時期錯誤： `var i = (i = 20);`
 
 - 無法在相同的陳述式中初始化多個隱含型別變數。
 
@@ -95,7 +95,7 @@ private var bookTitles = new List<string>();
 
 - [C# 參考](../../language-reference/index.md)
 - [隱含型別陣列](../arrays/implicitly-typed-arrays.md)
-- [如何：在查詢運算式中使用隱含型別區域變數和陣列](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
+- [如何在查詢運算式中使用隱含類型區域變數和陣列](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
 - [匿名類型](anonymous-types.md)
 - [物件和集合初始設定式](object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)

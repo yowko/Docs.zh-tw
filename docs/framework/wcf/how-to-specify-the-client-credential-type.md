@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: d62011728b6b03023ef4039480cea8dfa0ec8f02
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: df18f89ee18bfa33ecc0aced617d168c805e3515
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321291"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138572"
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>HOW TO：指定用戶端認證類型
 在設定過安全性模式 (傳輸或訊息) 後，您就會擁有設定用戶端認證類型的選項。 這個屬性會指定用戶端必須提供給服務以進行驗證的認證類型。 如需設定安全性模式的詳細資訊（設定用戶端認證類型之前的必要步驟），請參閱[如何：設定安全性模式](how-to-set-the-security-mode.md)。  
@@ -31,13 +31,13 @@ ms.locfileid: "72321291"
   
 ### <a name="to-set-the-client-credential-type-in-configuration"></a>透過組態設定用戶端認證類型  
   
-1. 將[\<system system.servicemodel >](../configure-apps/file-schema/wcf/system-servicemodel.md)元素新增至設定檔。  
+1. 將[\<system.servicemodel >](../configure-apps/file-schema/wcf/system-servicemodel.md)元素新增至設定檔。  
   
-2. 做為子專案，請加入[\<bindings >](../configure-apps/file-schema/wcf/bindings.md)元素。  
+2. 做為子項目，請將[\<](../configure-apps/file-schema/wcf/bindings.md)系結加入 > 元素。  
   
-3. 新增適當的繫結。 這個範例會使用[\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md)元素。  
+3. 新增適當的繫結。 這個範例會使用[\<的 wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md)元素。  
   
-4. 新增[\<binding >](../misc/binding.md)元素，並將 `name` 屬性設定為適當的值。 這個範例會使用 "SecureBinding" 的名稱。  
+4. 將\<系結加入[>](../configure-apps/file-schema/wcf/bindings.md)元素，並將 `name` 屬性設定為適當的值。 這個範例會使用 "SecureBinding" 的名稱。  
   
 5. 新增 `<security>` 繫結。 將 `mode` 屬性設定為適當值。 這個範例會將其設定為 `"Message"`。  
   

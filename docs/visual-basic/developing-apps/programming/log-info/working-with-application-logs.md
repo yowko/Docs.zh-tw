@@ -1,17 +1,17 @@
 ---
-title: 在 Visual Basic 中使用應用程式記錄檔
+title: 使用應用程式記錄檔
 ms.date: 07/20/2015
 helpviewer_keywords:
 - logs, application
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: 00c54a59ccfe2a49dcf35b322ca077a10a48ae7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 617b940d2cf15779ae3c10e4663b63c9771d44b6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839635"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345893"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>在 Visual Basic 中使用應用程式記錄檔
 
@@ -33,7 +33,7 @@ ms.locfileid: "58839635"
 
 如果組件沒有組態檔， `My.Application.Log` 和 `My.Log` 物件會寫入至應用程式的偵錯輸出 (透過 <xref:System.Diagnostics.DefaultTraceListener> 類別)。 此外，`My.Application.Log` 物件會寫入組件的記錄檔 (透過 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 類別)，而 `My.Log` 物件會寫入 ASP.NET 網頁的輸出 (透過 <xref:System.Web.WebPageTraceListener> 類別)。
 
-以偵錯模式執行應用程式時，您可以在 Visual Studio [輸出] 視窗中檢視偵錯輸出。 若要開啟 [輸出] 視窗，請按一下 [偵錯] 功能表項目並指向 [Windows] ，然後按一下 [輸出] 。 在 [輸出]  視窗中，從 [顯示輸出來源]  方塊中選取 [偵錯]  。
+以偵錯模式執行應用程式時，您可以在 Visual Studio [輸出] 視窗中檢視偵錯輸出。 若要開啟 [輸出] 視窗，請按一下 [偵錯] 功能表項目並指向 [Windows] ，然後按一下 [輸出] 。 在 [輸出] 視窗中，從 [顯示輸出來源] 方塊中選取 [偵錯] 。
 
 根據預設， `My.Application.Log` 寫入至位於使用者應用程式資料路徑中的記錄檔。 您可以從 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> 物件的 <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> 屬性取得路徑。 該路徑的格式如下所示︰
 
@@ -45,11 +45,11 @@ C:\Documents and Settings\\`username`\Application Data
 
 `CompanyName`、 `ProductName`和 `ProductVersion` 的值都來自應用程式的組件資訊。 記錄檔名稱的格式為 *AssemblyName*.log，其中 *AssemblyName* 為不含副檔名的組件檔案名稱。 若需要多個記錄檔 (像是當應用程式嘗試寫入至記錄檔而原始記錄檔無法使用時)，記錄檔名稱的格式為 *AssemblyName*-*iteration*.log，其中 `iteration` 為正 `Integer`。
 
-您可以藉由加入或變更電腦和應用程式的組態檔以覆寫預設行為。 如需詳細資訊，請參閱[逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)。
+您可以藉由加入或變更電腦和應用程式的組態檔以覆寫預設行為。 如需詳細資訊，請參閱 [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)。
 
 ## <a name="configuring-log-settings"></a>設定記錄檔設定
 
-`Log` 物件具有不需應用程式組態檔 app.config 即可運作的預設實作。若要變更預設，您必須加入具有新設定的組態檔。 如需詳細資訊，請參閱[逐步解說：篩選 My.Application.Log 輸出](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。
+The `Log` object has a default implementation that works without an application configuration file, app.config. To change the defaults, you must add a configuration file with the new settings. 如需詳細資訊，請參閱 [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。
 
 記錄檔組態區段位於 app.config 檔案主 `<system.diagnostics>` 節點的 `<configuration>` 節點中。 記錄檔資訊在數個節點內定義︰
 
@@ -106,7 +106,7 @@ C:\Documents and Settings\\`username`\Application Data
 
 - **避免拒絕服務的發生。** 如果您的應用程式將過多的資訊寫入記錄檔，它可能會填滿記錄檔或讓您難以尋找重要資訊。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [記錄來自應用程式的資訊](../../../../visual-basic/developing-apps/programming/log-info/index.md)

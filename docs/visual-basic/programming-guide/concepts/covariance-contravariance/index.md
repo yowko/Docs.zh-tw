@@ -1,13 +1,13 @@
 ---
-title: 共變數和反變數 (Visual Basic)
+title: 共變數和反變數
 ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-ms.openlocfilehash: 8315a272aca891820f7349d854a16375abdae900
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a75970d98890cb1fb363d4672bd90d376bccf89c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524262"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352152"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>共變數和反變數 (Visual Basic)
 
@@ -79,7 +79,7 @@ Shared Sub Test()
 End Sub
 ```
 
-在 .NET Framework 4 或更新版本中，Visual Basic 支援泛型介面和委派中的共變數和反變數，並允許泛型型別參數的隱含轉換。 如需詳細資訊，請參閱[泛型介面中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) 和[委派中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。
+In .NET Framework 4 or later, Visual Basic supports covariance and contravariance in generic interfaces and delegates and allows for implicit conversion of generic type parameters. 如需詳細資訊，請參閱[泛型介面中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) 和[委派中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。
 
 下列程式碼範例示範泛型介面的隱含參考轉換。
 

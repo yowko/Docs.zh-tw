@@ -8,21 +8,21 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 3fe6b19d0055aafad859b55960800d9786d7fa08
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 58a2bf5118a3a2cd9c33301eca5dcc751c2351bf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697992"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283084"
 ---
-# <a name="performancecounter-element-network-settings"></a>@no__t 0performanceCounter > 元素（網路設定）
+# <a name="performancecounter-element-network-settings"></a>\<performanceCounter > 元素（網路設定）
 啟用或停用網路效能計數器。  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<performanceCounters >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<設定 >** ](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<performanceCounters >**
+
 ## <a name="syntax"></a>語法  
   
 ```xml  
@@ -32,13 +32,13 @@ ms.locfileid: "71697992"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`enabled`|指定是否啟用網路效能計數器。 預設值為 `false`。|  
+|`enabled`|指定是否啟用網路效能計數器。 預設值是 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -52,14 +52,14 @@ ms.locfileid: "71697992"
 ## <a name="remarks"></a>備註  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
- 需要在組態檔中啟用，才能使用網路效能計數器。 藉由組態檔中的單一設定可啟用或停用所有網路效能計數器。 不能啟用或停用個別的網路效能計數器。 如需特定網路效能計數器的詳細資訊，請參閱[網路效能計數器](../../../debug-trace-profile/performance-counters.md#networking)。  
+ 需要在組態檔中啟用，才能使用網路效能計數器。 藉由組態檔中的單一設定可啟用或停用所有網路效能計數器。 不能啟用或停用個別的網路效能計數器。 如需特定網路效能計數器的詳細資訊，請參閱[網路效能計數器](../../../debug-trace-profile/performance-counters.md#networking-performance-counters)。  
   
  預設值是網路效能計數器已停用。  
   
- @No__t-0 屬性可以用來從適用的設定檔取得**已啟用**屬性的目前值。  
+ <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> 屬性可以用來從適用的設定檔取得**已啟用**屬性的目前值。  
   
 ## <a name="example"></a>範例  
- 下列範例顯示如何設定 @no__t 0 和相關的命名空間，以啟用網路效能計數器。  
+ 下列範例顯示如何設定 <xref:System.Net> 和相關的命名空間，以啟用網路效能計數器。  
   
 ```xml  
 <configuration>  
@@ -73,9 +73,9 @@ ms.locfileid: "71697992"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
 - [網路設定結構描述](index.md)
-- [網路效能計數器](../../../debug-trace-profile/performance-counters.md#networking)
+- [網路效能計數器](../../../debug-trace-profile/performance-counters.md#networking-performance-counters)

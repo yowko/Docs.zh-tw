@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: df5601fb0dbf088bd28da91f7279a330f2bb3494
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: 94d435d8f50683c24e7ca28100fbf5abf0fdcc19
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170691"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204784"
 ---
 # <a name="isolated-storage"></a>隔離儲存區
 <a name="top"></a> 對於傳統型應用程式而言，隔離儲存區為資料儲存機制，藉著定義標準化方式，將程式碼與儲存的資料產生關聯，以提供隔離和安全。 標準化也提供其他利益。 系統管理員可以使用設計來操作隔離儲存區的工具，設定檔案存放空間、設定安全性原則，和刪除未使用的資料。 有了隔離儲存區，您的程式碼不再需要唯一路徑去指定檔案系統中的安全位置，並且資料也被保護以免受到只擁有隔離儲存區存取權的其他應用程式的影響。 指示應用程式之存放區域所在位置的硬式編碼資訊是沒有必要的。
 
 > [!IMPORTANT]
-> [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式無法使用隔離儲存區。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的 [應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) 。
+> Isolated storage is not available for Windows 8.x Store apps. 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。
 
 此主題包括下列章節：
 
@@ -164,17 +164,17 @@ ms.locfileid: "67170691"
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|說明|
+|標題|描述|
 |-----------|-----------------|
 |[隔離的類型](../../../docs/standard/io/types-of-isolation.md)|描述各種類型的隔離。|
-|[如何：取得隔離儲存區的存放區](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|提供使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別的範例，示範如何使用它來取得使用者和組件所隔離的存放區。|
-|[如何：列舉隔離儲存區的存放區](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|示範如何使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> 方法來計算使用者之所有隔離儲存區的大小。|
-|[如何：刪除隔離儲存區中的存放區](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|示範如何使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> 方法，以兩種不同的方式刪除隔離存放區。|
-|[如何：預期隔離儲存區發生空間不足的情況](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|示範如何測量隔離存放區內的剩餘空間。|
-|[如何：在隔離儲存區中建立檔案和目錄](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|提供一些在隔離存放區中建立檔案和目錄的範例。|
-|[如何：尋找隔離儲存區中的現有檔案和目錄](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|示範如何在隔離儲存區中讀取目錄結構和檔案。|
-|[如何：讀取和寫入隔離儲存區中的檔案](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|提供將字串寫入至隔離儲存區檔案並將它讀回的範例。|
-|[如何：刪除隔離儲存區中的檔案和目錄](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|示範如何刪除隔離儲存區的檔案和目錄。|
+|[操作說明：取得隔離儲存區的存放區](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|提供使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別的範例，示範如何使用它來取得使用者和組件所隔離的存放區。|
+|[操作說明：列舉隔離儲存區的存放區](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|示範如何使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> 方法來計算使用者之所有隔離儲存區的大小。|
+|[操作說明：刪除隔離儲存區中的存放區](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|示範如何使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> 方法，以兩種不同的方式刪除隔離存放區。|
+|[操作說明：預期隔離儲存區發生空間不足的情況](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|示範如何測量隔離存放區內的剩餘空間。|
+|[操作說明：在隔離儲存區中建立檔案和目錄](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|提供一些在隔離存放區中建立檔案和目錄的範例。|
+|[操作說明：尋找隔離儲存區中的現有檔案和目錄](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|示範如何在隔離儲存區中讀取目錄結構和檔案。|
+|[操作說明：讀取和寫入隔離儲存區中的檔案](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|提供將字串寫入至隔離儲存區檔案並將它讀回的範例。|
+|[操作說明：刪除隔離儲存區中的檔案和目錄](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|示範如何刪除隔離儲存區的檔案和目錄。|
 |[檔案和資料流 I/O](../../../docs/standard/io/index.md)|說明如何執行同步和非同步檔案及資料流存取。|
 
 <a name="reference"></a>

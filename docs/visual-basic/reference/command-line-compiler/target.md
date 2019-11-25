@@ -1,21 +1,21 @@
 ---
-title: -target （Visual Basic）
+title: -target
 ms.date: 03/13/2018
 helpviewer_keywords:
 - target compiler options [Visual Basic]
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: 78b01082a3918212255d2a2ab094b5892f4dd681
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: bd79d95a18fb1935d97fff2d1b2c7767752b9765
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582129"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351724"
 ---
-# <a name="-target-visual-basic"></a>-target （Visual Basic）
+# <a name="-target-visual-basic"></a>-target (Visual Basic)
 
-指定編譯器輸出的格式。
+Specifies the format of compiler output.
 
 ## <a name="syntax"></a>語法
 
@@ -25,34 +25,34 @@ ms.locfileid: "72582129"
 
 ## <a name="remarks"></a>備註
 
-下表摘要說明 [`-target`] 選項的效果。
+The following table summarizes the effect of the `-target` option.
 
 |**選項**|**Behavior**|
 |----------------|------------------|
-|`-target:exe`|讓編譯器建立可執行檔主控台應用程式。<br /><br /> 這是未指定任何 `-target` 選項時的預設選項。 可執行檔是以 .exe 副檔名來建立。<br /><br /> 除非另有 `/out` 選項指定，否則輸出檔名稱會採用包含 `Sub Main` 程式之輸入檔的名稱。<br /><br /> 編譯成 .exe 檔案的原始程式碼檔中只需要一個 `Sub Main` 程式。 使用 `-main` 編譯器選項，指定哪個類別包含 `Sub Main` 程式。|
-|`-target:library`|讓編譯器建立動態連結程式庫（DLL）。<br /><br /> 動態連結程式庫檔案是使用 .dll 副檔名所建立。<br /><br /> 除非另有指定 `-out` 選項，否則輸出檔名稱會採用第一個輸入檔的名稱。<br /><br /> 建立 DLL 時，不需要 `Sub Main` 程式。|
-|`-target:module`|使編譯器產生可新增至元件的模組。<br /><br /> 系統會使用副檔名 .netmodule 來建立輸出檔案。<br /><br /> .NET common language runtime 無法載入沒有元件的檔案。 不過，您可以使用 `-reference`，將這類檔案併入元件的組件資訊清單中。<br /><br /> 當某個模組中的程式碼參考另一個模組中的內部類型時，必須使用 `-reference` 將這兩個模組併入組件資訊清單。<br /><br /> [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)選項會從模組匯入中繼資料。|
-|`-target:winexe`|讓編譯器建立可執行檔 Windows 應用程式。<br /><br /> 可執行檔是以 .exe 副檔名來建立。 以 Windows 為基礎的應用程式則是從 .NET Framework Class Library 或 Windows Api 提供使用者介面。<br /><br /> 除非另有 `-out` 選項指定，否則輸出檔名稱會採用包含 `Sub Main` 程式之輸入檔的名稱。<br /><br /> 編譯成 .exe 檔案的原始程式碼檔中只需要一個 `Sub Main` 程式。 如果您的程式碼有多個具有 `Sub Main` 程式的類別，請使用 `-main` 編譯器選項來指定哪一個類別包含 `Sub Main` 程式|
-|`-target:appcontainerexe`|讓編譯器建立可執行檔 Windows 應用程式，必須在應用程式容器中執行。 此設定是設計用於 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 應用程式。<br /><br /> **Appcontainerexe**設定會在[可移植的可執行](/windows/desktop/Debug/pe-format)檔的 [特性] 欄位中設定一個位。 此位表示應用程式必須在應用程式容器中執行。 設定此位時，如果 `CreateProcess` 方法嘗試在應用程式容器外啟動應用程式，就會發生錯誤。 除了這個位設定外， **-target： appcontainerexe**相當於 **-target： winexe**。<br /><br /> 可執行檔是以 .exe 副檔名來建立。<br /><br /> 除非您使用 `-out` 選項另行指定，否則輸出檔名稱會採用包含 `Sub Main` 程式之輸入檔的名稱。<br /><br /> 編譯成 .exe 檔案的原始程式碼檔中只需要一個 `Sub Main` 程式。 如果您的程式碼包含多個具有 `Sub Main` 程式的類別，請使用 `-main` 編譯器選項來指定哪一個類別包含 `Sub Main` 程式|
-|`-target:winmdobj`|讓編譯器建立可轉換成 Windows 執行階段二進位（winmd）檔案的中繼檔案。 除了 managed 語言程式以外，JavaScript 和C++程式也可以使用 winmd 檔案。<br /><br /> 中繼檔案是以副檔名 winmdobj 來建立。<br /><br /> 除非您使用 `-out` 選項另行指定，否則輸出檔名稱會採用第一個輸入檔的名稱。 不需要 `Sub Main` 程式。<br /><br /> Winmdobj 檔案的設計是用來做為 <xref:Microsoft.Build.Tasks.WinMDExp> 匯出工具的輸入，以產生 Windows 中繼資料（WinMD）檔案。 WinMD 檔案具有 winmd 副檔名，並同時包含來自原始程式庫的程式碼，以及 JavaScript、 C++和 Windows 執行階段使用的 WinMD 定義。|
+|`-target:exe`|Causes the compiler to create an executable console application.<br /><br /> This is the default option when no `-target` option is specified. The executable file is created with an .exe extension.<br /><br /> Unless otherwise specified with the `/out` option, the output file name takes the name of the input file that contains the `Sub Main` procedure.<br /><br /> Only one `Sub Main` procedure is required in the source-code files that are compiled into an .exe file. Use the `-main` compiler option to specify which class contains the `Sub Main` procedure.|
+|`-target:library`|Causes the compiler to create a dynamic-link library (DLL).<br /><br /> The dynamic-link library file is created with a .dll extension.<br /><br /> Unless otherwise specified with the `-out` option, the output file name takes the name of the first input file.<br /><br /> When building a DLL, a `Sub Main` procedure is not required.|
+|`-target:module`|Causes the compiler to generate a module that can be added to an assembly.<br /><br /> The output file is created with an extension of .netmodule.<br /><br /> The .NET common language runtime cannot load a file that does not have an assembly. However, you can incorporate such a file into the assembly manifest of an assembly by using `-reference`.<br /><br /> When code in one module references internal types in another module, both modules must be incorporated into an assembly manifest by using `-reference`.<br /><br /> The [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) option imports metadata from a module.|
+|`-target:winexe`|Causes the compiler to create an executable Windows-based application.<br /><br /> The executable file is created with an .exe extension. A Windows-based application is one that provides a user interface from either the .NET Framework class library or with the Windows APIs.<br /><br /> Unless otherwise specified with the `-out` option, the output file name takes the name of the input file that contains the `Sub Main` procedure.<br /><br /> Only one `Sub Main` procedure is required in the source-code files that are compiled into an .exe file. In cases where your code has more than one class that has a `Sub Main` procedure, use the `-main` compiler option to specify which class contains the `Sub Main` procedure|
+|`-target:appcontainerexe`|Causes the compiler to create an executable Windows-based application that must be run in an app container. This setting is designed to be used for Windows 8.x Store applications.<br /><br /> The **appcontainerexe** setting sets a bit in the Characteristics field of the [Portable Executable](/windows/desktop/Debug/pe-format) file. This bit indicates that the app must be run in an app container. When this bit is set, an error occurs if the `CreateProcess` method tries to launch the application outside of an app container. Aside from this bit setting, **-target:appcontainerexe** is equivalent to **-target:winexe**.<br /><br /> The executable file is created with an .exe extension.<br /><br /> Unless you specify otherwise by using the `-out` option, the output file name takes the name of the input file that contains the `Sub Main` procedure.<br /><br /> Only one `Sub Main` procedure is required in the source-code files that are compiled into an .exe file. If your code contains more than one class that has a `Sub Main` procedure, use the `-main` compiler option to specify which class contains the `Sub Main` procedure|
+|`-target:winmdobj`|Causes the compiler to create an intermediate file that you can convert to a Windows Runtime binary (.winmd) file. The .winmd file can be consumed by JavaScript and C++ programs, in addition to managed language programs.<br /><br /> The intermediate file is created with a .winmdobj extension.<br /><br /> Unless you specify otherwise by using the `-out` option, the output file name takes the name of the first input file. A `Sub Main` procedure isn’t required.<br /><br /> The .winmdobj file is designed to be used as input for the <xref:Microsoft.Build.Tasks.WinMDExp> export tool to produce a Windows metadata (WinMD) file. The WinMD file has a .winmd extension and contains both the code from the original library and the WinMD definitions that JavaScript, C++, and  the Windows Runtime use.|
 
-除非您指定 `-target:module`，否則 `-target` 會將 .NET Framework 組件資訊清單新增至輸出檔。
+Unless you specify `-target:module`, `-target` causes a .NET Framework assembly manifest to be added to an output file.
 
-每個 Vbc 實例最多會產生一個輸出檔案。 如果您指定編譯器選項，例如 `-out` 或 `-target` 多次，編譯器處理的最後一個會生效。 編譯中所有檔案的相關資訊會加入資訊清單中。 除了以 `-target:module` 建立的所有輸出檔，都包含資訊清單中的元件中繼資料。 使用[Ildasm （IL](../../../framework/tools/ildasm-exe-il-disassembler.md)解譯器）來查看輸出檔案中的中繼資料。
+Each instance of Vbc.exe produces, at most, one output file. If you specify a compiler option such as `-out` or `-target` more than one time, the last one the compiler processes is put into effect. Information about all files in a compilation is added to the manifest. All output files except those created with `-target:module` contain assembly metadata in the manifest. Use [Ildasm.exe (IL Disassembler)](../../../framework/tools/ildasm-exe-il-disassembler.md) to view the metadata in an output file.
 
 `-target` 的簡短形式為 `-t`。
 
-### <a name="to-set--target-in-the-visual-studio-ide"></a>若要在 Visual Studio IDE 中設定目標
+### <a name="to-set--target-in-the-visual-studio-ide"></a>To set -target in the Visual Studio IDE
 
 1. 在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。
 
 2. 按一下 [應用程式] 索引標籤。
 
-3. 修改 [**應用程式類型**] 方塊中的值。
+3. Modify the value in the **Application Type** box.
 
 ## <a name="example"></a>範例
 
-下列程式碼會編譯 `in.vb`，並建立 `in.dll`：
+The following code compiles `in.vb`, creating `in.dll`:
 
 ```console
 vbc -target:library in.vb
@@ -62,8 +62,8 @@ vbc -target:library in.vb
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
-- [-out （Visual Basic）](../../../visual-basic/reference/command-line-compiler/out.md)
-- [-reference （Visual Basic）](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
+- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
 - [.NET 中的組件](../../../standard/assembly/index.md)

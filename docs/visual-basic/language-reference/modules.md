@@ -1,35 +1,36 @@
 ---
-title: 模組 (Visual Basic)
+title: 模組
 ms.date: 07/20/2015
 helpviewer_keywords:
 - modules, Visual Basic
 ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
-ms.openlocfilehash: 0bb33b102358fd2d0290fd413b09448255522856
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48092fd39128f0068a27029541216c9dd9ba9d97
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778647"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344175"
 ---
 # <a name="modules-visual-basic"></a>模組 (Visual Basic)
-Visual Basic 提供數個模組，可讓您簡化一般工作包括管理字串，執行數學計算，取得系統資訊、 執行檔案和目錄的作業，在您的程式碼等等。 下表列出 Visual Basic 所提供的模組。  
+
+Visual Basic provides several modules that enable you to simplify common tasks in your code, including manipulating strings, performing mathematical calculations, getting system information, performing file and directory operations, and so on. The following table lists the modules provided by Visual Basic.  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.Constants>|包含其他常數。 這些常數可在您的程式碼中的任何地方使用。|  
-|<xref:Microsoft.VisualBasic.ControlChars>|包含常數的控制項來列印及顯示文字的字元。|  
-|<xref:Microsoft.VisualBasic.Conversion>|包含數字的字串、 數字的字串和一個資料類型到另一個將十進位數字轉換成其他的基底的成員。|  
-|<xref:Microsoft.VisualBasic.DateAndTime>|包含成員，取得目前的日期或時間、 執行日期計算傳回日期或時間、 設定日期或時間，或處理程序的持續時間的時間。|  
-|<xref:Microsoft.VisualBasic.ErrObject>|包含執行階段錯誤和方法來引發，或清除 錯誤的相關資訊。|  
-|<xref:Microsoft.VisualBasic.FileSystem>|包含執行檔案、 目錄或資料夾，以及系統作業的成員。|  
-|<xref:Microsoft.VisualBasic.Financial>|包含用來執行財務計算的程序。|  
-|<xref:Microsoft.VisualBasic.Globals>|包含目前指令碼的引擎版本的相關資訊。|  
-|<xref:Microsoft.VisualBasic.Information>|包含的成員，傳回、 測試，或確認資訊，例如陣列的大小、 類型名稱等等。|  
-|<xref:Microsoft.VisualBasic.Interaction>|包含與物件、 應用程式和系統互動的成員。|  
-|<xref:Microsoft.VisualBasic.Strings>|包含執行字串作業，例如重新格式化字串，搜尋字串，取得字串，長度等等的成員。|  
-|<xref:Microsoft.VisualBasic.VBMath>|包含成員執行數學運算。|  
+|<xref:Microsoft.VisualBasic.Constants>|Contains miscellaneous constants. These constants can be used anywhere in your code.|  
+|<xref:Microsoft.VisualBasic.ControlChars>|Contains constant control characters for printing and displaying text.|  
+|<xref:Microsoft.VisualBasic.Conversion>|Contains members that convert decimal numbers to other bases, numbers to strings, strings to numbers, and one data type to another.|  
+|<xref:Microsoft.VisualBasic.DateAndTime>|Contains members that get the current date or time, perform date calculations, return a date or time, set the date or time, or time the duration of a process.|  
+|<xref:Microsoft.VisualBasic.ErrObject>|Contains information about run-time errors and methods to raise or clear an error.|  
+|<xref:Microsoft.VisualBasic.FileSystem>|Contains members that perform file, directory or folder, and system operations.|  
+|<xref:Microsoft.VisualBasic.Financial>|Contains procedures that are used to perform financial calculations.|  
+|<xref:Microsoft.VisualBasic.Globals>|Contains information about the current scripting engine version.|  
+|<xref:Microsoft.VisualBasic.Information>|Contains the members that return, test for, or verify information such as array size, type names, and so on.|  
+|<xref:Microsoft.VisualBasic.Interaction>|Contains members interact with objects, applications, and systems.|  
+|<xref:Microsoft.VisualBasic.Strings>|Contains members that perform string operations such as reformatting strings, searching a string, getting the length of a string, and so on.|  
+|<xref:Microsoft.VisualBasic.VBMath>|Contains members perform mathematical operations.|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Basic 語言參考](../../visual-basic/language-reference/index.md)
 - [Visual Basic](../../visual-basic/index.md)

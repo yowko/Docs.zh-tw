@@ -1,5 +1,5 @@
 ---
-title: CStr 函式的傳回值 (Visual Basic)
+title: 傳回 CStr 函式的值
 ms.date: 07/20/2015
 helpviewer_keywords:
 - times [Visual Basic], CStr Function return values
@@ -11,29 +11,29 @@ helpviewer_keywords:
 - dates [Visual Basic]
 - String data type [Visual Basic], converting
 ms.assetid: 3aa744e7-1419-45d5-85e3-e5abc2953673
-ms.openlocfilehash: cd525ea5a295411e509f3bc37285675d15a8c4f4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4a40777c7290ec6d8c0d032f2edca5d889e20f04
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930042"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349993"
 ---
 # <a name="return-values-for-the-cstr-function-visual-basic"></a>CStr 函式的傳回值 (Visual Basic)
-下表描述`CStr`適用于之`expression`不同資料類型的傳回值。  
+The following table describes the return values for `CStr` for different data types of `expression`.  
   
-|如果`expression`類型為|`CStr` 傳回|  
+|If `expression` type is|`CStr` 傳回|  
 |-----------------------------|--------------------|  
-|[Boolean 資料類型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|包含 "True" 或 "False" 的字串。|  
-|[Date 資料類型](../../../visual-basic/language-reference/data-types/date-data-type.md)|字串, 包含`Date`您系統的簡短日期格式的值 (日期和時間)。|  
-|[數值資料類型](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|表示數位的字串。|  
+|[Boolean 資料類型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|A string containing "True" or "False".|  
+|[Date 資料類型](../../../visual-basic/language-reference/data-types/date-data-type.md)|A string containing a `Date` value (date and time) in the short date format of your system.|  
+|[數值資料類型](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|A string representing the number.|  
   
-## <a name="cstr-and-date"></a>CStr 和 Date  
- `Date`類型一律同時包含日期和時間資訊。 基於類型轉換的目的, Visual Basic 會將 1/1/0001 (第1年1月1日) 視為日期的*中性值*, 而 00:00:00 (午夜) 則是時間的中性值。 `CStr`不會在產生的字串中包含中性值。 例如, 如果您將轉換`#January 1, 0001 9:30:00#`成字串, 則結果會是 "9:30:00 AM"; 日期資訊會隱藏起來。 不過, 日期資訊仍然會出現在原始`Date`值中, 而且可以使用<xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>之類的函數來復原。  
+## <a name="cstr-and-date"></a>CStr and Date  
+ The `Date` type always contains both date and time information. For purposes of type conversion, Visual Basic considers 1/1/0001 (January 1 of the year 1) to be a *neutral value* for the date, and 00:00:00 (midnight) to be a neutral value for the time. `CStr` does not include neutral values in the resulting string. For example, if you convert `#January 1, 0001 9:30:00#` to a string, the result is "9:30:00 AM"; the date information is suppressed. However, the date information is still present in the original `Date` value and can be recovered with functions such as <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
   
 > [!NOTE]
-> `CStr`函式會根據應用程式目前的文化特性設定來執行其轉換。 若要取得特定文化特性之數位的字串表示, 請使用數位的`ToString(IFormatProvider)`方法。 例如, 將類型<xref:System.Double.ToString%2A?displayProperty=nameWithType> `Double`的值轉換為`String`時, 請使用。  
+> The `CStr` function performs its conversion based on the current culture settings for the application. To get the string representation of a number in a particular culture, use the number's `ToString(IFormatProvider)` method. For example, use <xref:System.Double.ToString%2A?displayProperty=nameWithType> when converting a value of type `Double` to a `String`.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>
 - [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)

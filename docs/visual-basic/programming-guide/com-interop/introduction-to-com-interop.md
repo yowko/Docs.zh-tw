@@ -1,57 +1,57 @@
 ---
-title: COM Interop 簡介 (Visual Basic)
+title: COM Interop 簡介
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 5eb862d75f8870da40af4cd817fa32a3d2781f38
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c7909b3b6a2c9f0b397b9621b7e5125c232be313
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592728"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353205"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Interop 簡介 (Visual Basic)
-元件物件模型 (COM) 可讓您公開其功能給其他元件和主控件應用程式的物件。 雖然 COM 物件已被 Windows 程式設計許多年的基礎，專為 common language runtime (CLR) 所設計的應用程式會提供許多優點。  
+The Component Object Model (COM) lets an object expose its functionality to other components and to host applications. While COM objects have been fundamental to Windows programming for many years, applications designed for the common language runtime (CLR) offer many advantages.  
   
- .NET framework 應用程式最終會取代這些開發 com。 在那之前，您可能要使用，或使用 Visual Studio 建立 COM 物件。 與 COM 互通性或*COM interop*，可讓您使用現有的 COM 物件轉換成.NET Framework，以您自己的步調。  
+ .NET Framework applications will eventually replace those developed with COM. Until then, you may have to use or create COM objects by using Visual Studio. Interoperability with COM, or *COM interop*, enables you to use existing COM objects while transitioning to the .NET Framework at your own pace.  
   
- 使用.NET Framework 來建立 COM 元件，您可以使用免註冊 COM interop。 這可讓您控制哪些 DLL 版本已啟用時的電腦上，安裝一個以上的版本，而且可讓使用者可以使用 XCOPY 或 FTP 複製到他們的電腦上的適當目錄的應用程式可以執行它。 如需詳細資訊，請參閱 <<c0> [ 免註冊 COM Interop](../../../framework/interop/registration-free-com-interop.md)。  
+ By using the .NET Framework to create COM components, you can use registration-free COM interop. This lets you control which DLL version is enabled when more than one version is installed on a computer, and lets end users use XCOPY or FTP to copy your application to an appropriate directory on their computer where it can be run. For more information, see [Registration-Free COM Interop](../../../framework/interop/registration-free-com-interop.md).  
   
-## <a name="managed-code-and-data"></a>Managed 程式碼和資料  
- 程式碼開發的.NET Framework 指*managed 程式碼*，且包含 CLR 所使用的中繼資料。 .NET Framework 應用程式所使用的資料就會呼叫*受管理的資料*因為執行階段會管理資料相關工作，例如配置和回收記憶體，以及執行類型檢查。 根據預設，Visual Basic.NET 使用 managed 程式碼和資料，但您可以存取 unmanaged 程式碼和資料的 COM 物件使用 interop 組件 （在此頁面稍後說明）。  
+## <a name="managed-code-and-data"></a>Managed Code and Data  
+ Code developed for the .NET Framework is referred to as *managed code*, and contains metadata that is used by the CLR. Data used by .NET Framework applications is called *managed data* because the runtime manages data-related tasks such as allocating and reclaiming memory and performing type checking. By default, Visual Basic .NET uses managed code and data, but you can access the unmanaged code and data of COM objects using interop assemblies (described later on this page).  
   
 ## <a name="assemblies"></a>組件  
- 組件是.NET Framework 應用程式的主要建置組塊。 它是功能，可建置、 版本設定，以及部署為包含一或多個檔案的單一實作單元的集合。 每個組件包含組件資訊清單。  
+ An assembly is the primary building block of a .NET Framework application. It is a collection of functionality that is built, versioned, and deployed as a single implementation unit containing one or more files. Each assembly contains an assembly manifest.  
   
-## <a name="type-libraries-and-assembly-manifests"></a>型別程式庫和組件資訊清單  
- 型別程式庫描述 COM 物件，例如成員名稱和資料類型的特性。 組件資訊清單會執行相同的函式，.NET Framework 應用程式。 其中包括下列資訊：  
+## <a name="type-libraries-and-assembly-manifests"></a>Type Libraries and Assembly Manifests  
+ Type libraries describe characteristics of COM objects, such as member names and data types. Assembly manifests perform the same function for .NET Framework applications. They include information about the following:  
   
-- 組件身分識別、 版本、 文化特性和數位簽章。  
+- Assembly identity, version, culture, and digital signature.  
   
-- 構成組件實作的檔案。  
+- Files that make up the assembly implementation.  
   
-- 型別和構成組件的資源。 這包括從其匯出。  
+- Types and resources that make up the assembly. This includes those that are exported from it.  
   
-- 對其他組件的編譯時間相依性。  
+- Compile-time dependencies on other assemblies.  
   
-- 若要正確執行的組件所需的權限。  
+- Permissions required for the assembly to run correctly.  
   
- 如需有關組件和組件資訊清單的詳細資訊，請參閱 <<c0> [ 在.NET 中的組件](../../../standard/assembly/index.md)。  
+ For more information about assemblies and assembly manifests, see [Assemblies in .NET](../../../standard/assembly/index.md).  
   
-### <a name="importing-and-exporting-type-libraries"></a>匯入和匯出類型程式庫  
- Visual Studio 包含公用程式時，Tlbimp，可讓您從類型程式庫資訊匯入到.NET Framework 應用程式。 您可以使用 Tlbexp 公用程式，從組件產生類型程式庫。  
+### <a name="importing-and-exporting-type-libraries"></a>Importing and Exporting Type Libraries  
+ Visual Studio contains a utility, Tlbimp, that lets you import information from a type library into a .NET Framework application. You can generate type libraries from assemblies by using the Tlbexp utility.  
   
- 如需 Tlbimp 和 Tlbexp 資訊，請參閱[Tlbimp.exe （型別程式庫匯入工具）](../../../framework/tools/tlbimp-exe-type-library-importer.md)並[Tlbexp.exe （類型程式庫匯出工具）](../../../framework/tools/tlbexp-exe-type-library-exporter.md)。  
+ For information about Tlbimp and Tlbexp, see [Tlbimp.exe (Type Library Importer)](../../../framework/tools/tlbimp-exe-type-library-importer.md) and [Tlbexp.exe (Type Library Exporter)](../../../framework/tools/tlbexp-exe-type-library-exporter.md).  
   
-## <a name="interop-assemblies"></a>Interop 組件  
- Interop 組件是.NET Framework 組件之間的橋樑 managed 和 unmanaged 程式碼，將 COM 物件成員對應至對等的.NET Framework 管理成員。 Visual Basic.NET 所建立的 interop 組件可處理許多使用 COM 物件，例如交互操作性封送處理的詳細資料。  
+## <a name="interop-assemblies"></a>Interop Assemblies  
+ Interop assemblies are .NET Framework assemblies that bridge between managed and unmanaged code, mapping COM object members to equivalent .NET Framework managed members. Interop assemblies created by Visual Basic .NET handle many of the details of working with COM objects, such as interoperability marshaling.  
   
-## <a name="interoperability-marshaling"></a>互通性封送處理  
- 所有的.NET Framework 應用程式會共用一組常見的類型，可讓物件，不論使用的程式設計語言的互通性。 參數和傳回值的 COM 物件有時會使用不同的 managed 程式碼中所使用的資料類型。 *互通性封送處理*移動的 COM 物件會封裝參數和傳回的值為對等的資料類型的程序。 如需詳細資訊，請參閱 < [Interop 封送處理](../../../framework/interop/interop-marshaling.md)。  
+## <a name="interoperability-marshaling"></a>Interoperability Marshaling  
+ All .NET Framework applications share a set of common types that enable interoperability of objects, regardless of the programming language that is used. The parameters and return values of COM objects sometimes use data types that differ from those used in managed code. *Interoperability marshaling* is the process of packaging parameters and return values into equivalent data types as they move to and from COM objects. For more information, see [Interop Marshaling](../../../framework/interop/interop-marshaling.md).  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [逐步解說：實作 COM 物件的繼承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)

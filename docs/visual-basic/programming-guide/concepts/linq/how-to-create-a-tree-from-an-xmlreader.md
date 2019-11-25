@@ -1,15 +1,15 @@
 ---
-title: 如何：從 XmlReader 建立樹狀結構（Visual Basic）
+title: 如何：從 XmlReader 建立樹狀結構
 ms.date: 07/20/2015
 ms.assetid: 6de683d8-177d-402b-b0de-d0539f1ce5d8
-ms.openlocfilehash: c90fbee29a380824cdc32dd62622e55ea40044fd
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 7d8d7f5b6389bef520e11fd2b7cc3e1c7e862e73
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583032"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353091"
 ---
-# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>如何：從 XmlReader 建立樹狀結構（Visual Basic）
+# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>How to: Create a Tree from an XmlReader (Visual Basic)
 
 這個主題顯示如何從 <xref:System.Xml.XmlReader> 直接建立 XML 樹狀結構。 若要從 <xref:System.Xml.Linq.XElement> 建立 <xref:System.Xml.XmlReader>，您必須將 <xref:System.Xml.XmlReader> 定位在項目節點上。 <xref:System.Xml.XmlReader> 將會略過註解與處理指示，但是，如果 <xref:System.Xml.XmlReader> 定位在文字節點上，則會擲出錯誤。 若要避免此類的錯誤，請務必將 <xref:System.Xml.XmlReader> 定位在項目上，然後再從 <xref:System.Xml.XmlReader> 建立 XML 樹狀結構。
 
@@ -56,4 +56,4 @@ Console.WriteLine(e)
 
 ## <a name="see-also"></a>請參閱
 
-- [剖析 XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

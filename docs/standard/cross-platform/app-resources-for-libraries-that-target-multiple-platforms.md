@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e846f45b55ac09d6ce6af4f3223c3bdba1dc83ba
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: b32c2e354ea48e25ddb0aa561eb576cbfd89e3fb
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506006"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204746"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>以多平台為目標之函式庫的應用程式資源
-您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)專案類型，以確保您類別庫中的資源，可從多個平台。 這個專案類型會是適用於 Visual Studio 2012，並以.NET Framework 類別庫的可攜式子集為目標。 使用可攜式類別庫可確保您的程式庫，可以從傳統型應用程式、 Silverlight 應用程式、 Windows Phone 應用程式，存取和[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式。
+You can use the .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) project type to ensure that resources in your class libraries can be accessed from multiple platforms. This project type is available in Visual Studio 2012 and targets the portable subset of the .NET Framework class library. Using  a Portable Class Library ensures that your library can be accessed from desktop apps, Silverlight apps, Windows Phone apps, and Windows 8.x Store apps.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
- 可攜式類別庫專案可讓只有非常有限的中的類型子集<xref:System.Resources>命名空間提供給您的應用程式，但確實可讓您使用<xref:System.Resources.ResourceManager>類別來擷取資源。 不過，如果您要使用 Visual Studio 建立應用程式，則應該使用 Visual Studio 所建立的強類型包裝函式，而不要直接使用 <xref:System.Resources.ResourceManager> 類別。
+ The Portable Class Library project makes only a very limited subset of the types in the <xref:System.Resources> namespace available to your application, but it does allow you to use the <xref:System.Resources.ResourceManager> class to retrieve resources. 不過，如果您要使用 Visual Studio 建立應用程式，則應該使用 Visual Studio 所建立的強類型包裝函式，而不要直接使用 <xref:System.Resources.ResourceManager> 類別。
 
- 若要在 Visual Studio 中建立的強型別包裝函式，設定主要資源檔的**存取修飾詞**Visual Studio 資源設計工具中**公用**。 這樣會建立包含強類型 ResourceManager 包裝函式的 [resourceFileName].designer.cs 或 [resourceFileName].designer.vb 檔。 如需使用的強類型的資源包裝函式的詳細資訊，請參閱 「 產生強類型資源類別 > 一節[Resgen.exe （資源檔產生器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)主題。
+ To create a strongly typed wrapper in Visual Studio, set the main resource file's **Access Modifier** in the Visual Studio Resource Designer to **Public**. 這樣會建立包含強類型 ResourceManager 包裝函式的 [resourceFileName].designer.cs 或 [resourceFileName].designer.vb 檔。 For more information about using a strongly typed resource wrapper, see the "Generating a Strongly Typed Resource Class" section in the [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) topic.
 
-## <a name="resource-manager-in-the-portable-class-library"></a>可攜式類別庫中的 resource Manager
- 在可攜式類別庫專案中，所有資源的存取權都由<xref:System.Resources.ResourceManager>類別。 因為中的型別<xref:System.Resources>命名空間，例如<xref:System.Resources.ResourceReader>和<xref:System.Resources.ResourceSet>，會無法存取從可攜式類別庫專案，它們不會用來存取資源。
+## <a name="resource-manager-in-the-portable-class-library"></a>Resource Manager in the Portable Class Library
+ In a Portable Class Library project, all access to resources is handled by the <xref:System.Resources.ResourceManager> class. Because types in the <xref:System.Resources> namespace, such as <xref:System.Resources.ResourceReader> and <xref:System.Resources.ResourceSet>, are not accessible from a Portable Class Library project, they cannot be used to access resources.
 
- 可攜式類別庫專案包含四個<xref:System.Resources.ResourceManager>下表中列出的成員。 這些建構函式和方法可讓您具現化 <xref:System.Resources.ResourceManager> 物件並擷取字串資源。
+ The Portable Class Library project includes the four <xref:System.Resources.ResourceManager> members listed in the following table. 這些建構函式和方法可讓您具現化 <xref:System.Resources.ResourceManager> 物件並擷取字串資源。
 
 |`ResourceManager` 成員|描述|
 |------------------------------|-----------------|
@@ -42,18 +42,18 @@ ms.locfileid: "67506006"
 |<xref:System.Resources.ResourceManager.GetString%28System.String%29>|擷取目前文化特性的具名資源。|
 |<xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>|擷取屬於所指定文化特性的具名資源。|
 
- 其他排除<xref:System.Resources.ResourceManager>無法從資源檔擷取序列化物件、 非字串資料，以及映像的可攜式類別庫方法從的成員。 若要從可攜式類別庫中使用的資源，您應該以字串形式來儲存物件的所有資料。 例如，您可以將數值轉換成字串以便儲存到資源檔中，並且可以擷取這些字串，然後使用數值資料類型的 `Parse` 或 `TryParse` 方法將它們轉換回數字。 您可以藉由呼叫 <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> 方法將影像或其他二進位資料轉換成字串表示，並且藉由呼叫 <xref:System.Convert.FromBase64String%2A?displayProperty=nameWithType> 方法將它們還原為位元組陣列。
+ The exclusion of other <xref:System.Resources.ResourceManager> members from the Portable Class Library means that serialized objects, non-string data, and images cannot be retrieved from a resource file. To use resources from a Portable Class Library, you should store all  object data in string form. 例如，您可以將數值轉換成字串以便儲存到資源檔中，並且可以擷取這些字串，然後使用數值資料類型的 `Parse` 或 `TryParse` 方法將它們轉換回數字。 您可以藉由呼叫 <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> 方法將影像或其他二進位資料轉換成字串表示，並且藉由呼叫 <xref:System.Convert.FromBase64String%2A?displayProperty=nameWithType> 方法將它們還原為位元組陣列。
 
-## <a name="the-portable-class-library-and-windows-store-apps"></a>可攜式類別庫和 Windows 市集應用程式
- 可攜式類別庫專案會儲存在.resx 檔，然後編譯成.resources 檔並在編譯時期內嵌至主要組件或附屬組件中的資源。 另一方面，[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式則需要將資源儲存到 .resw 檔中，這些檔案接著會編譯成單一封裝資源索引 (PRI) 檔。 不過，儘管不相容的檔案格式中，您的可攜式類別庫將運作[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式。
+## <a name="the-portable-class-library-and-windows-store-apps"></a>The Portable Class Library and Windows Store Apps
+ Portable Class Library projects store resources in .resx files, which are then compiled into .resources files and embedded in the main assembly or in satellite assemblies at compile time. Windows 8.x Store apps, on the other hand, require resources to be stored in .resw files, which are then compiled into a single package resource index (PRI) file. However, despite the incompatible file formats, your Portable Class Library will work in a Windows 8.x Store app.
 
- 若要從 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式使用您的類別庫，請在 Windows 市集應用程式專案中加入其參考。 Visual Studio 會以透明的方式從您的組件至.resw 檔擷取資源並用它來產生 PRI 檔案，Windows 執行階段可以從中擷取資源。 在執行階段，Windows 執行階段在可攜式類別庫，執行程式碼，但它會從 PRI 檔案中擷取您的可攜式類別庫資源。
+ To consume your class library from a Windows 8.x Store app, add a reference to it in your Windows Store app project. Visual Studio will transparently extract the resources from your assembly into a .resw file and use it to generate a PRI file from which the Windows Runtime can extract resources. At run time, the Windows Runtime executes the code in your Portable Class Library, but it retrieves your Portable Class Library's resources from the PRI file.
 
- 如果您的可攜式類別庫專案包含當地語系化的資源，您可以使用中樞和支點模型來部署它們，就像您一樣的傳統型應用程式中的程式庫。 若要使用 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式中的主要資源檔和任何當地語系化資源檔，可以加入主要組件的參考。 在編譯時期，Visual Studio 會將您的主要資源檔和所有當地語系化資源檔中的資源擷取至不同的 .resw 檔。 然後會.resw 檔案編譯成單一 PRI 檔案在執行階段存取的 Windows 執行階段。
+ If your Portable Class Library project includes localized resources, you use the hub-and-spoke model to deploy them just as you would for a library in a desktop app. To consume your main resource file and any localized resource files in your Windows 8.x Store app, you add a reference to the main assembly. 在編譯時期，Visual Studio 會將您的主要資源檔和所有當地語系化資源檔中的資源擷取至不同的 .resw 檔。 It then compiles the .resw files into a single PRI file that the Windows Runtime accesses at run time.
 
 <a name="NonLoc"></a>
-## <a name="example-non-localized-portable-class-library"></a>範例：非當地語系化的可攜式類別庫
- 下列簡單、 非當地語系化的可攜式類別庫範例會使用資源，來儲存資料行的名稱，並判斷要為表格式資料保留的字元數。 這個範例會使用名為 LibResources.resx 的檔案儲存下表中列出的字串資源。
+## <a name="example-non-localized-portable-class-library"></a>Example: Non-Localized Portable Class Library
+ The following simple, non-localized Portable Class Library example uses resources to store the names of columns and to determine the number of characters to reserve for tabular data. 這個範例會使用名為 LibResources.resx 的檔案儲存下表中列出的字串資源。
 
 |資源名稱|資源值|
 |-------------------|--------------------|
@@ -63,26 +63,26 @@ ms.locfileid: "67506006"
 |HiredLength|12|
 |識別碼|識別碼|
 |ID.Length|12|
-|名稱|名稱|
+|[屬性]|[屬性]|
 |NameLength|25|
 |標題|員工資料庫|
 
- 下列程式碼定義`UILibrary`類別，會使用名為資源管理員包裝函式`resources`Visual Studio 所產生時**存取修飾詞**檔案變更為**公用**. UILibrary 類別會在必要時剖析字串資料。 。 請注意，該類別位於 `MyCompany.Employees` 命名空間中。
+ The following code defines a `UILibrary` class that uses the Resource Manager wrapper named `resources` generated by Visual Studio when the **Access Modifier** for the file is changed to **Public**. UILibrary 類別會在必要時剖析字串資料。 執行個體時提供 SQL Server 登入。 請注意，該類別位於 `MyCompany.Employees` 命名空間中。
 
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
 
- 下列程式碼將示範如何從主控台模式應用程式存取 `UILibrary` 類別及其資源。 它需要可以加入至 主控台應用程式專案的 UILibrary.dll 的參考。
+ 下列程式碼將示範如何從主控台模式應用程式存取 `UILibrary` 類別及其資源。 It requires a reference to UILibrary.dll to be added to the console app project.
 
  [!code-csharp[Conceptual.Resources.Portable#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program.cs#2)]
  [!code-vb[Conceptual.Resources.Portable#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module1.vb#2)]
 
- 下列程式碼將示範如何從 `UILibrary`應用程式存取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 類別及其資源。 它需要可以加入至 Windows 市集應用程式專案的 UILibrary.dll 的參考。
+ The following code illustrates how the `UILibrary` class and its resources can be accessed from a Windows 8.x Store app. It requires a reference to UILibrary.dll to be added to the Windows Store app project.
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
-## <a name="example-localized-portable-class-library"></a>範例：當地語系化的可攜式類別庫
- 下列當地語系化的可攜式類別庫範例包含法文 （法國） 和英文 （美國） 文化特性的資源。 英文 （美國） 文化特性是應用程式的預設文化特性;它的資源會顯示在資料表中[上一節](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)。 法文 (法國) 文化特性的資源檔命名為 LibResources.fr-FR.resx，並且包含下表所列的字串資源。 `UILibrary` 類別的原始程式碼與前一節中所顯示的內容相同。
+## <a name="example-localized-portable-class-library"></a>Example: Localized Portable Class Library
+ The following localized Portable Class Library example includes resources for the French (France) and English (United States) cultures. The English (United States) culture is the app's default culture; its resources are shown in the table in the [previous section](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). 法文 (法國) 文化特性的資源檔命名為 LibResources.fr-FR.resx，並且包含下表所列的字串資源。 `UILibrary` 類別的原始程式碼與前一節中所顯示的內容相同。
 
 |資源名稱|資源值|
 |-------------------|--------------------|
@@ -91,20 +91,20 @@ ms.locfileid: "67506006"
 |Hired|Date embauché|
 |HiredLength|16|
 |識別碼|識別碼|
-|名稱|Nom|
+|[屬性]|Nom|
 |標題|Base de données des employés|
 
- 下列程式碼將示範如何從主控台模式應用程式存取 `UILibrary` 類別及其資源。 它需要可以加入至 主控台應用程式專案的 UILibrary.dll 的參考。
+ 下列程式碼將示範如何從主控台模式應用程式存取 `UILibrary` 類別及其資源。 It requires a reference to UILibrary.dll to be added to the console app project.
 
  [!code-csharp[Conceptual.Resources.Portable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program2.cs#3)]
  [!code-vb[Conceptual.Resources.Portable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module2.vb#3)]
 
- 下列程式碼將示範如何從 `UILibrary`應用程式存取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 類別及其資源。 它需要可以加入至 Windows 市集應用程式專案的 UILibrary.dll 的參考。 它會使用靜態 `ApplicationLanguages.PrimaryLanguageOverride` 屬性將應用程式的慣用語言設定為法文。
+ The following code illustrates how the `UILibrary` class and its resources can be accessed from a Windows 8.x Store app. It requires a reference to UILibrary.dll to be added to the Windows Store app project. 它會使用靜態 `ApplicationLanguages.PrimaryLanguageOverride` 屬性將應用程式的慣用語言設定為法文。
 
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Resources.ResourceManager>
 - [桌面應用程式中的資源](../../../docs/framework/resources/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 字串資料類型 (Visual Basic)
+title: Single 資料類型
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Single
@@ -20,34 +20,36 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-ms.openlocfilehash: af75f5eb5a4281f6efae8ec3c9442ce2b28f595e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 60a688c510f6e36dca5809566b37a388429e18c7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646989"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343923"
 ---
 # <a name="single-data-type-visual-basic"></a>字串資料類型 (Visual Basic)
-保存帶正負號的 IEEE 32 位元 （4 個位元組） 單精確度浮點數，值範圍從-3.4028235E + 38 到-1.401298E-45 負值，以及從 1.401298E-45 到 3.4028235E + 38 的正數值。 單精確度數字儲存的是實數的近似值。  
+
+Holds signed IEEE 32-bit (4-byte) single-precision floating-point numbers ranging in value from -3.4028235E+38 through -1.401298E-45 for negative values and from 1.401298E-45 through 3.4028235E+38 for positive values. Single-precision numbers store an approximation of a real number.  
   
 ## <a name="remarks"></a>備註  
- 使用`Single`資料類型可包含不需要完整的資料寬度的浮點值`Double`。 在某些情況下的 common language runtime 可能可以將封裝您`Single`緊密合作，並將記憶體耗用量儲存的變數。  
+
+ Use the `Single` data type to contain floating-point values that do not require the full data width of `Double`. In some cases the common language runtime might be able to pack your `Single` variables closely together and save memory consumption.  
   
  `Single` 的預設值為 0。  
   
 ## <a name="programming-tips"></a>程式設計提示  
   
-- **有效位數。** 當您使用浮點數時，記住其在記憶體中不一定有精確的表示法。 這可能會導致非預期的結果從某些作業，例如要做數值比較，`Mod`運算子。 如需詳細資訊，請參閱 <<c0> [ 疑難排解資料型別](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。  
+- **Precision.** When you work with floating-point numbers, keep in mind that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
-- **擴展。** `Single`資料類型可擴展為`Double`。 這表示您可以將轉換`Single`要`Double`而不會發生<xref:System.OverflowException?displayProperty=nameWithType>時發生錯誤。  
+- **Widening.** The `Single` data type widens to `Double`. This means you can convert `Single` to `Double` without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.  
   
-- **尾端零。** 浮點資料類型沒有任何結尾 0 字元的內部表示法。 比方說，它們無法區分 4.2000 與 4.2。 因此，結尾 0 字元時，沒有出現在顯示或列印浮點數的值。  
+- **Trailing Zeros.** The floating-point data types do not have any internal representation of trailing 0 characters. For example, they do not distinguish between 4.2000 and 4.2. Consequently, trailing 0 characters do not appear when you display or print floating-point values.  
   
-- **類型字元。** 將常值類型字元 `F` 附加到常值，會強制其成為 `Single` 資料類型。 將識別項類型字元 `!` 附加到任何識別項，會強制其成為 `Single`。  
+- **Type Characters.** 將常值類型字元 `F` 附加到常值，會強制其成為 `Single` 資料類型。 將識別項類型字元 `!` 附加到任何識別項，會強制其成為 `Single`。  
   
-- **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.Single?displayProperty=nameWithType> 結構。  
+- **Framework Type.** 在 .NET Framework 中對應的類型為 <xref:System.Single?displayProperty=nameWithType> 結構。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Single?displayProperty=nameWithType>
 - [資料類型](../../../visual-basic/language-reference/data-types/index.md)

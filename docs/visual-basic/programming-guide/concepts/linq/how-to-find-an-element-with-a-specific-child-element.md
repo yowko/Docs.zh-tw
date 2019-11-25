@@ -1,21 +1,21 @@
 ---
-title: 作法：尋找具有特定子項目的元素（Visual Basic）
+title: 如何：尋找具有特定子項目的項目
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
-ms.openlocfilehash: 4df2f8f55a516665c02d12c3bdf6569601db30c2
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: a00ca238c67e2edf4e2e68a46fbd7e2cb480ba15
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249916"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352911"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>作法：尋找具有特定子項目的元素（Visual Basic）
+# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>How to: Find an Element with a Specific Child Element (Visual Basic)
 本主題顯示如何利用特定的值尋找具有子項目的特定項目。  
   
 ## <a name="example"></a>範例  
  此範例會利用 "Examp2.EXE" 這個值，尋找具有 `Test` 子項目的 `CommandLine` 項目。  
   
- 此範例使用下列 XML 文件：[XML 範例檔：測試組態 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：測試組態 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)。  
   
 ```vb  
 Dim root As XElement = XElement.Load("TestConfig.xml")  
@@ -35,12 +35,12 @@ Next
 0006  
 ```  
   
- 請注意，此範例使用[Xml 子軸屬性](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)、 [xml 屬性軸屬性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)和[xml 值屬性](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。  
+ Note that this example uses the [XML Child axis property](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), the [XML Attribute axis property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md), and the [XML Value property](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
 ## <a name="example"></a>範例  
- 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[命名空間總覽（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)。  
+ 下列範例顯示命名空間中之 XML 的相同查詢。 For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- 此範例使用下列 XML 文件：[XML 範例檔：測試命名空間中的組態](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：命名空間中的測試組態](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)。  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -66,10 +66,10 @@ End Module
 0006  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [基本查詢（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 - [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [投射作業（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Projection Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

@@ -2,64 +2,64 @@
 title: HOW TO：在可靠的工作階段內交換訊息
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: aad4eae870e3ba603c56a28a620fe8bc0e31ceb6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58a392fc6295e82f41e08c80a3343b4059afad7e
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778361"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141685"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>HOW TO：在可靠的工作階段內交換訊息
 
-本主題概要說明透過其中一個系統提供的繫結啟用可靠工作階段 (此繫結支援此類工作階段，但非預設) 所需的步驟。 啟用可靠工作階段，命令式程式碼或是宣告式組態檔。 若要啟用可靠工作階段，並規定訊息依照傳送的相同順序送達，此程序會使用用戶端和服務組態檔。
+本主題概要說明透過其中一個系統提供的繫結啟用可靠工作階段 (此繫結支援此類工作階段，但非預設) 所需的步驟。 您可以使用程式碼或以宣告方式在您的設定檔中啟用可靠會話。 此程式會使用用戶端和服務設定檔來啟用可靠會話，並規定訊息送達的順序與傳送的相同。
 
-此程序的重要部分是端點組態項目包含`bindingConfiguration`參考名為繫結組態的屬性`Binding1`。 [ **\<繫結 >** ](../../../../docs/framework/misc/binding.md)組態項目會參考此名稱，藉此啟用可靠工作階段`enabled`屬性[ **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100))項目`true`。 您可以將 `ordered` 屬性設為 `true`，為可靠工作階段指定依序傳遞保證。
+此程式的主要部分是端點設定元素包含一個 `bindingConfiguration` 屬性，其參考名為 `Binding1`的系結設定。 \<系結[ **>** ](../../configure-apps/file-schema/wcf/bindings.md) configuration 專案會參考此名稱，藉由將[ **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100))專案的 `enabled` 屬性設定為 [`true`] 來啟用可靠會話。 您可以將 `ordered` 屬性設為 `true`，為可靠工作階段指定依序傳遞保證。
 
-如需此範例中的來源複本，請參閱[WS 可靠工作階段](../../../../docs/framework/wcf/samples/ws-reliable-session.md)。
+如需此範例的來源複本，請參閱[WS 可靠會話](../../../../docs/framework/wcf/samples/ws-reliable-session.md)。
 
-### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>透過 WSHttpBinding 使用可靠工作階段設定服務
+### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>以 WSHttpBinding 設定服務以使用可靠會話
 
 1. 定義服務類型的服務合約。
 
    [!code-csharp[c_HowTo_UseReliableSession#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1121)]
 
-1. 在服務類別中實作服務合約。 請注意，位址或繫結資訊不指定的服務實作內。 您不需要撰寫程式碼來擷取組態檔中的位址或繫結資訊。
+1. 在服務類別中實作服務合約。 請注意，不會在服務的執行中指定位址或系結資訊。 您不需要撰寫程式碼，就能從設定檔抓取位址或系結資訊。
 
    [!code-csharp[c_HowTo_UseReliableSession#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1122)]
 
-1. 建立*Web.config*檔案來設定的端點`CalculatorService`使用<xref:System.ServiceModel.WSHttpBinding>與可靠工作階段啟用，並依序傳遞所需的訊息。
+1. 建立*web.config*檔案，以設定 `CalculatorService` 的端點，以使用已啟用可靠會話的 <xref:System.ServiceModel.WSHttpBinding>，以及所需訊息的排序傳遞。
 
    [!code-xml[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]
 
-1. 建立*Service.svc*檔案，其中包含的列：
+1. 建立包含這一行的*服務 .svc*檔案：
 
    ```
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
-1. 地方*Service.svc* Internet Information Services (IIS) 虛擬目錄中的檔案。
+1. 將*服務 .svc*檔案放在您的 INTERNET INFORMATION SERVICES （IIS）虛擬目錄中。
 
-### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>透過 WSHttpBinding 使用可靠工作階段設定的用戶端
+### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>以 WSHttpBinding 設定用戶端以使用可靠會話
 
-1. 使用[ServiceModel Metadata Utility Tool (*Svcutil.exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)從命令列，從服務中繼資料產生程式碼：
+1. 從命令列使用[System.servicemodel 中繼資料公用程式工具（*Svcutil*）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ，以從服務中繼資料產生程式碼：
 
    ```console
    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
    ```
 
-1. 產生的用戶端包含`ICalculator`定義必須滿足的用戶端實作的服務合約的介面。
+1. 產生的用戶端會包含 `ICalculator` 介面，以定義用戶端執行必須滿足的服務合約。
 
    [!code-csharp[C_HowTo_UseReliableSession#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1221)]
 
-1. 產生的用戶端應用程式也包含 `ClientCalculator` 的實作。 請注意，位址和繫結資訊不內部指定的服務實作。 您不需要撰寫程式碼來擷取組態檔中的位址或繫結資訊。
+1. 產生的用戶端應用程式也包含 `ClientCalculator` 的實作。 請注意，在服務的執行內的任何位置都不會指定位址和系結資訊。 您不需要撰寫程式碼，就能從設定檔抓取位址或系結資訊。
 
    [!code-csharp[C_HowTo_UseReliableSession#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1222)]
 
-1. *Svcutil.exe*也會產生的組態使用的用戶端<xref:System.ServiceModel.WSHttpBinding>類別。 組態檔命名*App.config*時使用 Visual Studio。
+1. *Svcutil*也會為使用 <xref:System.ServiceModel.WSHttpBinding> 類別的用戶端產生設定。 使用 Visual Studio 時，將設定檔命名為*app.config。*
 
    [!code-xml[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]
 
-1. 建立的執行個體`ClientCalculator`應用程式中呼叫服務作業。
+1. 在應用程式中建立 `ClientCalculator` 的實例，並呼叫服務作業。
 
    [!code-csharp[C_HowTo_UseReliableSession#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1223)]
 
@@ -75,8 +75,8 @@ ms.locfileid: "61778361"
 
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 
-如需如何建立支援可靠工作階段的自訂繫結的範例，請參閱[How to:使用 HTTPS 建立自訂可靠工作階段繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)。
+如需如何建立支援可靠會話之自訂系結的範例，請參閱[如何：使用 HTTPS 建立自訂可靠會話](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)系結。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [可靠工作階段](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

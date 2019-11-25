@@ -1,21 +1,20 @@
 ---
-ms.openlocfilehash: 65bac44c84589fb55d2b04c39088c2825c451a6b
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b91cdc7a0d2e4258662155a840500ce21ab35760
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394205"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74100760"
 ---
 ### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>授權： AddAuthorization 多載已移至不同的元件
 
-用來存放在 `Microsoft.AspNetCore.Authorization` 中的核心 `AddAuthorization` 方法已重新命名為 `AddAuthorizationCore`。 舊的 `AddAuthorization` 方法仍然存在，但卻是在 `Microsoft.AspNetCore.Authorization.Policy` 封裝中。 使用這兩種方法的應用程式應該看不到任何影響。 未使用原則套件的應用程式必須切換為使用 `AddAuthorizationCore`。
+用來存放在 `Microsoft.AspNetCore.Authorization` 中的核心 `AddAuthorization` 方法已重新命名為 `AddAuthorizationCore`。 舊的 `AddAuthorization` 方法仍然存在，但卻是在 `Microsoft.AspNetCore.Authorization.Policy` 元件中。 使用這兩種方法的應用程式應該看不到任何影響。 請注意，`Microsoft.AspNetCore.Authorization.Policy` 現在隨附于共用架構中，而不是獨立套件，如[共用架構：從 AspNetCore 移除的元件](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)中所述。
 
 #### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
-
 `AddAuthorization` 方法存在於 `Microsoft.AspNetCore.Authorization` 中。
 
 #### <a name="new-behavior"></a>新的行為
@@ -30,7 +29,7 @@ ms.locfileid: "72394205"
 
 請將參考新增至 `Microsoft.AspNetCore.Authorization.Policy`，或改為使用 `AddAuthorizationCore`。
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>Category
 
 ASP.NET Core
 

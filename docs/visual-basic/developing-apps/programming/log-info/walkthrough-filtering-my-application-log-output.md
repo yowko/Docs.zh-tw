@@ -1,17 +1,17 @@
 ---
-title: 篩選 My.Application.Log 輸出 (Visual Basic)
+title: 篩選 My.Application.Log 輸出
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Log object, filtering output
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 16cbbf9bf82e0c1e48eaacfcc9f07f718ed8de49
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: f18556bbe1ca2d77925482319246d403892d31ef
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524793"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353595"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>逐步解說：篩選 My.Application.Log 輸出 (Visual Basic)
 

@@ -1,5 +1,5 @@
 ---
-title: ReDim 陳述式 (Visual Basic)
+title: ReDim 陳述式
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ReDim
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: a9384ba118df2a84fbd2581e6a8bacb58e41ddcc
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: fabfd9a45d47cc1b881b3743181a03e89158f939
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582089"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346744"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim 陳述式 (Visual Basic)
 重新配置陣列變數的儲存空間。  
@@ -59,31 +59,31 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="rules"></a>規則  
   
-- **多個變數。** 您可以在相同的宣告語句中調整數個數組變數的大小，並指定每個變數的 `name` 和 `boundlist` 部分。 以逗號分隔多個變數。  
+- **Multiple Variables.** You can resize several array variables in the same declaration statement and specify the `name` and `boundlist` parts for each variable. 以逗號分隔多個變數。  
   
-- **陣列界限。** @No__t_0 中的每個專案都可以指定該維度的下限和上限。 下限一律為 0 (零)。 上限是該維度可能的最高索引值，不是維度長度 (上限加 1)。 每個維度的索引從 0 到上限值不等。  
+- **Array Bounds.** Each entry in `boundlist` can specify the lower and upper bounds of that dimension. 下限一律為 0 (零)。 上限是該維度可能的最高索引值，不是維度長度 (上限加 1)。 每個維度的索引從 0 到上限值不等。  
   
      `boundlist` 中的維度數目必須符合陣列的原始維度 (陣序) 數目。  
   
-- **資料類型。** @No__t_0 語句無法變更陣列變數或其元素的資料類型。  
+- **Data Types.** The `ReDim` statement cannot change the data type of an array variable or its elements.  
   
-- **初始.** @No__t_0 語句無法為陣列元素提供新的初始化值。  
+- **Initialization.** The `ReDim` statement cannot provide new initialization values for the array elements.  
   
-- **等級.** @No__t_0 語句無法變更陣列的順位（維度數目）。  
+- **Rank.** The `ReDim` statement cannot change the rank (the number of dimensions) of the array.  
   
-- **使用 [保留] 調整大小。** 如果您使用 `Preserve`，您可以只調整陣列的最後一個維度。 至於其他每個維度，您必須指定現有陣列的界限。  
+- **Resizing with Preserve.** If you use `Preserve`, you can resize only the last dimension of the array. 至於其他每個維度，您必須指定現有陣列的界限。  
   
      例如，如果您的陣列只有一個維度，您可以調整該維度的大小，但仍保留陣列的所有內容，因為您變更的只有最後一個維度。 不過，如果您的陣列有兩個或以上的維度，如果使用 `Preserve`，就只能變更最後一個維度的大小。  
   
-- **屬性.** 您可以在保存值陣列的屬性上使用 `ReDim`。  
+- **Properties.** You can use `ReDim` on a property that holds an array of values.  
   
 ## <a name="behavior"></a>行為  
   
-- **陣列取代。** `ReDim` 會釋放現有的陣列，並建立具有相同次序的新陣列。 新的陣列會取代陣列變數中已釋放的陣列。  
+- **Array Replacement.** `ReDim` releases the existing array and creates a new array with the same rank. 新的陣列會取代陣列變數中已釋放的陣列。  
   
-- **初始化但不保留。** 如果您未指定 `Preserve`，`ReDim` 會使用其資料類型的預設值，初始化新陣列的元素。  
+- **Initialization without Preserve.** If you do not specify `Preserve`, `ReDim` initializes the elements of the new array by using the default value for their data type.  
   
-- **具有 Preserve 的初始化。** 如果您指定 `Preserve`，Visual Basic 會將元素從現有的陣列複製到新的陣列。  
+- **Initialization with Preserve.** If you specify `Preserve`, Visual Basic copies the elements from the existing array to the new array.  
   
 ## <a name="example"></a>範例  
  下列範例會增加動態陣列最後一個維度的大小，但不會遺失陣列現有的任何資料，再以遺失部分資料的方式減少大小。 最後，大小減少回其原始值，並重新初始化所有陣列項目。  
@@ -98,7 +98,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  第三個 `ReDim` 建立另一個新的陣列，並從每個圖層的每一列結尾移除另外五欄。 這次不複製任何現有的項目。 這個陳述式會將陣列還原成原始大小。 因為陳述式不包含 `Preserve` 修飾詞，所以所有的陣列項目都設為原始預設值。  
   
- 如需其他範例，請參閱[陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+ For additional examples, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="see-also"></a>請參閱
 

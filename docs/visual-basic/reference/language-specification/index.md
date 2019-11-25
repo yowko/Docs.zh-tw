@@ -1,20 +1,20 @@
 ---
-title: Visual Basic 語言規格
+title: 語言規格
 ms.date: 08/02/2017
 helpviewer_keywords:
 - resources [Visual Basic], specifications
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: 399bc15f3249c99f1c94338869e77befc8c26015
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0df3f0a49d1dc84f5a6f3218b23f20ce3d43a1fc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766424"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352859"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic 語言規格
-Visual Basic 語言規格是有關 Visual Basic 文法和語法的所有問題的解答的授權來源。 它包含的語言，包括 Visual Basic 參考文件中未涵蓋的許多相關的詳細的資訊。  
+The Visual Basic Language Specification is the authoritative source for answers to all questions about Visual Basic grammar and syntax. It contains detailed information about the language, including many points not covered in the Visual Basic reference documentation.  
   
  此規格可在 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=188623)取得。  
   
@@ -22,7 +22,7 @@ Visual Basic 語言規格是有關 Visual Basic 文法和語法的所有問題�
 
 規格的相關問題應該在 [dotnet/vblang](https://github.com/dotnet/vblang/issues) 存放庫中建立。 或者，如果您想要修正所發現的任何錯誤，可以提交[提取要求](https://github.com/dotnet/vblang/pulls) \(英文\) 至相同的存放庫。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)
 
