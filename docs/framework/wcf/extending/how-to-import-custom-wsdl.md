@@ -2,57 +2,57 @@
 title: HOW TO：匯入自訂 WSDL
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-ms.openlocfilehash: 930cb92d8193ba3ffc1f62191f2012e104091190
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 10fc3282560d35e61044a367f8172571096d76bd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796998"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975894"
 ---
-# <a name="how-to-import-custom-wsdl"></a><span data-ttu-id="34d0e-102">HOW TO：匯入自訂 WSDL</span><span class="sxs-lookup"><span data-stu-id="34d0e-102">How to: Import Custom WSDL</span></span>
-<span data-ttu-id="34d0e-103">這個主題會描述如何匯入自訂 WSDL。</span><span class="sxs-lookup"><span data-stu-id="34d0e-103">This topic describes how to import custom WSDL.</span></span> <span data-ttu-id="34d0e-104">若要處理自訂 WSDL，您必須實作 <xref:System.ServiceModel.Description.IWsdlImportExtension> 介面。</span><span class="sxs-lookup"><span data-stu-id="34d0e-104">To handle the custom WSDL, you must implement the <xref:System.ServiceModel.Description.IWsdlImportExtension> interface.</span></span>  
+# <a name="how-to-import-custom-wsdl"></a><span data-ttu-id="65117-102">HOW TO：匯入自訂 WSDL</span><span class="sxs-lookup"><span data-stu-id="65117-102">How to: Import Custom WSDL</span></span>
+<span data-ttu-id="65117-103">這個主題會描述如何匯入自訂 WSDL。</span><span class="sxs-lookup"><span data-stu-id="65117-103">This topic describes how to import custom WSDL.</span></span> <span data-ttu-id="65117-104">若要處理自訂 WSDL，您必須實作 <xref:System.ServiceModel.Description.IWsdlImportExtension> 介面。</span><span class="sxs-lookup"><span data-stu-id="65117-104">To handle the custom WSDL, you must implement the <xref:System.ServiceModel.Description.IWsdlImportExtension> interface.</span></span>  
   
-### <a name="to-import-custom-wsdl"></a><span data-ttu-id="34d0e-105">匯入自訂 WSDL</span><span class="sxs-lookup"><span data-stu-id="34d0e-105">To import custom WSDL</span></span>  
+### <a name="to-import-custom-wsdl"></a><span data-ttu-id="65117-105">匯入自訂 WSDL</span><span class="sxs-lookup"><span data-stu-id="65117-105">To import custom WSDL</span></span>  
   
-1. <span data-ttu-id="34d0e-106">實作 <xref:System.ServiceModel.Description.IWsdlImportExtension>。</span><span class="sxs-lookup"><span data-stu-id="34d0e-106">Implement <xref:System.ServiceModel.Description.IWsdlImportExtension>.</span></span> <span data-ttu-id="34d0e-107">實作 <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%28System.Web.Services.Description.ServiceDescriptionCollection%2CSystem.Xml.Schema.XmlSchemaSet%2CSystem.Collections.Generic.ICollection%7BSystem.Xml.XmlElement%7D%29> 方法，以便於匯入中繼資料前進行修改。</span><span class="sxs-lookup"><span data-stu-id="34d0e-107">Implement the <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%28System.Web.Services.Description.ServiceDescriptionCollection%2CSystem.Xml.Schema.XmlSchemaSet%2CSystem.Collections.Generic.ICollection%7BSystem.Xml.XmlElement%7D%29> method to modify the metadata before it is imported.</span></span> <span data-ttu-id="34d0e-108">實作 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> 和 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 方法，以便修改從中繼資料匯入的合約和端點。</span><span class="sxs-lookup"><span data-stu-id="34d0e-108">Implement the <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> and <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> methods to modify contracts and endpoints imported from the metadata.</span></span> <span data-ttu-id="34d0e-109">若要存取匯入的合約或端點，請使用相對應的內容物件 (<xref:System.ServiceModel.Description.WsdlContractConversionContext> 或 <xref:System.ServiceModel.Description.WsdlEndpointConversionContext>)：</span><span class="sxs-lookup"><span data-stu-id="34d0e-109">To access the imported contract or endpoint, use the corresponding context object (<xref:System.ServiceModel.Description.WsdlContractConversionContext> or <xref:System.ServiceModel.Description.WsdlEndpointConversionContext>):</span></span>  
+1. <span data-ttu-id="65117-106">實作 <xref:System.ServiceModel.Description.IWsdlImportExtension>。</span><span class="sxs-lookup"><span data-stu-id="65117-106">Implement <xref:System.ServiceModel.Description.IWsdlImportExtension>.</span></span> <span data-ttu-id="65117-107">實作 <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%28System.Web.Services.Description.ServiceDescriptionCollection%2CSystem.Xml.Schema.XmlSchemaSet%2CSystem.Collections.Generic.ICollection%7BSystem.Xml.XmlElement%7D%29> 方法，以便於匯入中繼資料前進行修改。</span><span class="sxs-lookup"><span data-stu-id="65117-107">Implement the <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%28System.Web.Services.Description.ServiceDescriptionCollection%2CSystem.Xml.Schema.XmlSchemaSet%2CSystem.Collections.Generic.ICollection%7BSystem.Xml.XmlElement%7D%29> method to modify the metadata before it is imported.</span></span> <span data-ttu-id="65117-108">實作 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> 和 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 方法，以便修改從中繼資料匯入的合約和端點。</span><span class="sxs-lookup"><span data-stu-id="65117-108">Implement the <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> and <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> methods to modify contracts and endpoints imported from the metadata.</span></span> <span data-ttu-id="65117-109">若要存取匯入的合約或端點，請使用相對應的內容物件 (<xref:System.ServiceModel.Description.WsdlContractConversionContext> 或 <xref:System.ServiceModel.Description.WsdlEndpointConversionContext>)：</span><span class="sxs-lookup"><span data-stu-id="65117-109">To access the imported contract or endpoint, use the corresponding context object (<xref:System.ServiceModel.Description.WsdlContractConversionContext> or <xref:System.ServiceModel.Description.WsdlEndpointConversionContext>):</span></span>  
   
-    ```  
-    public class WsdlDocumentationImporter : IWsdlImportExtension  
-       {  
-          public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
-    {  
-            // Contract documentation  
-         if (context.WsdlPortType.Documentation != null)  
-         {  
-               context.Contract.Behaviors.Add(new WsdlDocumentationImporter(context.WsdlPortType.Documentation));  
-    }  
-    // Operation documentation  
-    foreach (Operation operation in context.WsdlPortType.Operations)  
-    {  
-    if (operation.Documentation != null)  
-    {  
-    OperationDescription operationDescription = context.Contract.Operations.Find(operation.Name);  
-    if (operationDescription != null)  
-    {  
-                            operationDescription.Behaviors.Add(new WsdlDocumentationImporter(operation.Documentation));  
-    }  
-    }  
-    }  
-    }  
+    ```csharp
+    public class WsdlDocumentationImporter : IWsdlImportExtension
+    {
+        public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)
+        {
+            // Contract documentation
+            if (context.WsdlPortType.Documentation != null)
+            {
+                context.Contract.Behaviors.Add(new WsdlDocumentationImporter(context.WsdlPortType.Documentation));
+            }
+            // Operation documentation
+            foreach (Operation operation in context.WsdlPortType.Operations)
+            {
+                if (operation.Documentation != null)
+                {
+                    OperationDescription operationDescription = context.Contract.Operations.Find(operation.Name);
+                    if (operationDescription != null)
+                    {
+                        operationDescription.Behaviors.Add(new WsdlDocumentationImporter(operation.Documentation));
+                    }
+                }
+            }
+        }
+
+        public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection<XmlElement> policy)
+        {
+            Console.WriteLine("BeforeImport called.");
+        }
+
+        public void ImportEndpoint(WsdlImporter importer, WsdlEndpointConversionContext context)
+        {
+            Console.WriteLine("ImportEndpoint called.");
+        }
+    }
+    ```
   
-    public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection<XmlElement> policy)   
-            {  
-                Console.WriteLine("BeforeImport called.");  
-            }  
-  
-    public void ImportEndpoint(WsdlImporter importer, WsdlEndpointConversionContext context)   
-            {  
-                Console.WriteLine("ImportEndpoint called.");  
-            }  
-       }  
-    ```  
-  
-2. <span data-ttu-id="34d0e-110">設定用戶端應用程式以使用自訂 WSDL 匯入工具。</span><span class="sxs-lookup"><span data-stu-id="34d0e-110">Configure the client application to use the custom WSDL importer.</span></span> <span data-ttu-id="34d0e-111">請注意，如果正在使用 Svcutil.exe，您應該針對 Svcutil.exe (Svcutil.exe.config) 將此組態新增至組態檔：</span><span class="sxs-lookup"><span data-stu-id="34d0e-111">Note that if you are using Svcutil.exe, you should add this configuration to the configuration file for Svcutil.exe (Svcutil.exe.config):</span></span>  
+2. <span data-ttu-id="65117-110">設定用戶端應用程式以使用自訂 WSDL 匯入工具。</span><span class="sxs-lookup"><span data-stu-id="65117-110">Configure the client application to use the custom WSDL importer.</span></span> <span data-ttu-id="65117-111">請注意，如果正在使用 Svcutil.exe，您應該針對 Svcutil.exe (Svcutil.exe.config) 將此組態新增至組態檔：</span><span class="sxs-lookup"><span data-stu-id="65117-111">Note that if you are using Svcutil.exe, you should add this configuration to the configuration file for Svcutil.exe (Svcutil.exe.config):</span></span>  
   
     ```xml  
     <system.serviceModel>  
@@ -71,14 +71,15 @@ ms.locfileid: "70796998"
         </system.serviceModel>  
     ```  
   
-3. <span data-ttu-id="34d0e-112">建立新的 <xref:System.ServiceModel.Description.WsdlImporter> 執行個體 (在包含您要匯入之 WSDL 文件的 <xref:System.ServiceModel.Description.MetadataSet> 執行個體中傳遞)，並且呼叫 <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>：</span><span class="sxs-lookup"><span data-stu-id="34d0e-112">Create a new <xref:System.ServiceModel.Description.WsdlImporter> instance (passing in the <xref:System.ServiceModel.Description.MetadataSet> instance that contains the WSDL documents that you want to import), and call <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>:</span></span>  
+3. <span data-ttu-id="65117-112">建立新的 <xref:System.ServiceModel.Description.WsdlImporter> 執行個體 (在包含您要匯入之 WSDL 文件的 <xref:System.ServiceModel.Description.MetadataSet> 執行個體中傳遞)，並且呼叫 <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>：</span><span class="sxs-lookup"><span data-stu-id="65117-112">Create a new <xref:System.ServiceModel.Description.WsdlImporter> instance (passing in the <xref:System.ServiceModel.Description.MetadataSet> instance that contains the WSDL documents that you want to import), and call <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>:</span></span>  
   
-    ```  
-    WsdlImporter importer = new WsdlImporter(metaDocs);          System.Collections.ObjectModel.Collection<ContractDescription> contracts  = importer.ImportAllContracts();  
+    ```csharp
+    WsdlImporter importer = new WsdlImporter(metaDocs);
+    System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="34d0e-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="34d0e-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="65117-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="65117-113">See also</span></span>
 
-- [<span data-ttu-id="34d0e-114">中繼資料</span><span class="sxs-lookup"><span data-stu-id="34d0e-114">Metadata</span></span>](../feature-details/metadata.md)
-- [<span data-ttu-id="34d0e-115">匯出和匯入中繼資料</span><span class="sxs-lookup"><span data-stu-id="34d0e-115">Exporting and Importing Metadata</span></span>](../feature-details/exporting-and-importing-metadata.md)
-- [<span data-ttu-id="34d0e-116">自訂 WSDL 發行集</span><span class="sxs-lookup"><span data-stu-id="34d0e-116">Custom WSDL Publication</span></span>](../samples/custom-wsdl-publication.md)
+- [<span data-ttu-id="65117-114">中繼資料</span><span class="sxs-lookup"><span data-stu-id="65117-114">Metadata</span></span>](../feature-details/metadata.md)
+- [<span data-ttu-id="65117-115">匯出和匯入中繼資料</span><span class="sxs-lookup"><span data-stu-id="65117-115">Exporting and Importing Metadata</span></span>](../feature-details/exporting-and-importing-metadata.md)
+- [<span data-ttu-id="65117-116">自訂 WSDL 發行集</span><span class="sxs-lookup"><span data-stu-id="65117-116">Custom WSDL Publication</span></span>](../samples/custom-wsdl-publication.md)

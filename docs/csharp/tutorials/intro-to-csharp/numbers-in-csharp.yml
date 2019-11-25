@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: C# 中的分支與迴圈
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 31647906dd3e1286220077831d2ce90b65a5b73c
-  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+  ms.openlocfilehash: b417ba7ff340019c74b0c3430242f59d6217b07f
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 10/22/2019
-  ms.locfileid: "72774005"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969359"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: 探索整數運算
   durationInMinutes: 4
   content: >
-    在互動式視窗中執行下列程式碼。 若要這樣做，請在互動式視窗中輸入下列程式碼區塊，並按一下 [執行] 按鈕：
+    在互動式視窗中執行下列程式碼。 選取 [**進入焦點模式]** 按鈕。 然後，在互動式視窗中輸入下列程式碼區塊，然後選取 [**執行**]：
 
 
     ```csharp
@@ -58,7 +58,7 @@ items:
     > 在整個互動式教學課程中，您可以修改在互動式視窗中撰寫的程式碼，以自行探索各種變化。 本教學課程在每個步驟都有供您嘗試的範例。
 
 
-    讓我們開始探索這些不同的運算。 修改第三行來嘗試每種運算。 在每次編輯之後，按一下 [執行] 按鈕。
+    讓我們開始探索這些不同的運算。 修改第三行來嘗試每種運算。 在每次編輯之後，選取 [**執行**] 按鈕。
 
 
     減法：
@@ -181,7 +181,7 @@ items:
     ```
 
 
-    再次按一下 [執行] 來查看結果。
+    再次選取 [**執行**] 以查看結果。
 
 
     > [!NOTE]
@@ -415,7 +415,7 @@ items:
 
     > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - content: >-
-    您已經完成＜C# 中的數字＞互動式教學課程。 您可以按一下以下的**分支和迴圈**連結來啟動下一個互動式教學課程，或者您可以瀏覽 [.NET 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) \(英文\) 以下載 .NET Core SDK、在您的機器上建立專案，並繼續撰寫程式碼。 「後續步驟」一節會帶您回到這些教學課程。
+    您已經完成＜C# 中的數字＞互動式教學課程。 您可以選取下方的 [**分支和迴圈**] 連結來啟動下一個互動式教學課程，或者您可以流覽[.net 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)來下載 .NET Core SDK、在您的電腦上建立專案，並繼續撰寫程式碼。 「後續步驟」一節會帶您回到這些教學課程。
 
 
     您可以在下列主題中深入了解 C# 中的數字：

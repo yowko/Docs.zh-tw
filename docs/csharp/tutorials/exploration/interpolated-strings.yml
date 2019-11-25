@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: c3c4927a4afbf69f2101aa2596389e6f94cea243
-  ms.sourcegitcommit: 4aeac5d588ded58246f58030919e56b70a7674e4
+  ms.openlocfilehash: bc2d600afabbac9783e8fb12e3bd47e83a3495b7
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 10/27/2019
-  ms.locfileid: "72966971"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969434"
 items:
 - durationInMinutes: 2
   content: >
@@ -22,7 +22,7 @@ items:
 - title: 建立插入字串
   durationInMinutes: 2
   content: >
-    在互動式視窗中執行下列程式碼。 若要這樣做，請在互動式視窗中鍵入程式碼 (將 `<name>`取代為您的名稱)，然後選取 [執行]：
+    在互動式視窗中執行下列程式碼。 選取 [**進入焦點模式]** 按鈕。 然後，在互動式視窗中輸入下列程式碼區塊（將 `<name>` 取代為您的名稱），然後選取 [**執行**]：
 
 
     ```csharp
@@ -58,7 +58,7 @@ items:
     在前一個步驟中，您使用字串插補將某個字串插入至另一個字串內部。 不過，每個屬於插入字串運算式的插入運算式都可以是任意資料類型。 請包含插入字串運算式中各種資料類型的值。
 
 
-    在下列範例中，我們先定義具有 [、](../../tuples.md) 與 `Name` 成員的 `Price`tuple`perPackage`。 在互動式視窗中執行下列程式碼：
+    在下列範例中，我們先定義具有 `Name`、`Price` 與 `perPackage` 成員的 [tuple](../../tuples.md)。 在互動式視窗中執行下列程式碼：
 
 
     ```csharp
@@ -103,7 +103,7 @@ items:
     在插入運算式後面接著冒號 (":") 和格式字串，即可指定格式字串。 "d" 是[標準日期和時間格式字串](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)，可呈現簡短日期格式。 "C2" 是[標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)，可將數字呈現為小數點後面有兩位數的貨幣值。
 
 
-    .NET 程式庫中有多種類型都支援一組預先定義的格式字串。 其中包含所有數值類型以及日期和時間類型。 如需支援格式字串之類型的完整清單，請參閱[在 .NET 中格式化類型](../../../standard/base-types/formatting-types.md#format-strings-and-net-types)一文中的[格式字串和 .NET 類別庫類型](../../../standard/base-types/formatting-types.md)。
+    .NET 程式庫中有多種類型都支援一組預先定義的格式字串。 其中包含所有數值類型以及日期和時間類型。 如需支援格式字串之類型的完整清單，請參閱[在 .NET 中格式化類型](../../../standard/base-types/formatting-types.md)一文中的[格式字串和 .NET 類別庫類型](../../../standard/base-types/formatting-types.md#format-strings-and-net-types)。
 
 
     嘗試修改範例中的格式字串，以查看它們對日期和時間以及數值格式的影響。 將 `{date:d}` 中的 "d" 變更為 "t" (顯示簡短時間格式)、"y" (顯示年份和月份) 以及 "yyyy" (將年份顯示為四位數)。 將 `{price:C2}` 中的 "C2" 變更為 "e" (適用於指數標記法) 和 "F3" (適用於小數點後面有三位數的數值)。
