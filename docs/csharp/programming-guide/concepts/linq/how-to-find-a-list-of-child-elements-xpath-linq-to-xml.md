@@ -1,23 +1,23 @@
 ---
-title: 作法：尋找子項目的清單 (XPath-LINQ to XML) (C#)
+title: 如何尋找子項目的清單（XPath-LINQ to XML）（C#）
 ms.date: 07/20/2015
 ms.assetid: 7c589dd8-f680-4cdb-9d6a-78d57e2555e8
-ms.openlocfilehash: 63b0fec504ff8424e9e96318c46191a150b72f46
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2b6f6031441e7d1bd015e25a8debad7dd7f3b261
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253842"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141222"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="e1d8e-102">HOW TO：尋找子項目的清單 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="e1d8e-102">How to: Find a List of Child Elements (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="e1d8e-103">這個主題會比較 XPath 子項目座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 座標軸。</span><span class="sxs-lookup"><span data-stu-id="e1d8e-103">This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>  
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="88580-102">如何尋找子項目的清單（XPath-LINQ to XML）（C#）</span><span class="sxs-lookup"><span data-stu-id="88580-102">How to find a list of child elements (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="88580-103">這個主題會比較 XPath 子項目座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 座標軸。</span><span class="sxs-lookup"><span data-stu-id="88580-103">This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>  
   
- <span data-ttu-id="e1d8e-104">XPath 運算式為：`./*`</span><span class="sxs-lookup"><span data-stu-id="e1d8e-104">The XPath expression is: `./*`</span></span>  
+ <span data-ttu-id="88580-104">XPath 運算式為：`./*`</span><span class="sxs-lookup"><span data-stu-id="88580-104">The XPath expression is: `./*`</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e1d8e-105">範例</span><span class="sxs-lookup"><span data-stu-id="e1d8e-105">Example</span></span>  
- <span data-ttu-id="e1d8e-106">此範例會尋找 `Address` 項目的所有子項目。</span><span class="sxs-lookup"><span data-stu-id="e1d8e-106">This example finds all of the child elements of the `Address` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="88580-105">範例</span><span class="sxs-lookup"><span data-stu-id="88580-105">Example</span></span>  
+ <span data-ttu-id="88580-106">此範例會尋找 `Address` 項目的所有子項目。</span><span class="sxs-lookup"><span data-stu-id="88580-106">This example finds all of the child elements of the `Address` element.</span></span>  
   
- <span data-ttu-id="e1d8e-107">此範例使用下列 XML 文件：[XML 範例檔：多個訂購單 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="e1d8e-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="88580-107">此範例使用下列 XML 文件︰[範例 XML 檔：多份採購單 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="88580-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  
@@ -38,7 +38,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="e1d8e-108">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="e1d8e-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="88580-108">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="88580-108">This example produces the following output:</span></span>  
   
 ```output  
 Results are identical  

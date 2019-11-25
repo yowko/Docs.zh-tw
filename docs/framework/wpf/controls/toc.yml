@@ -394,8 +394,8 @@
       items:
         - name: 樣式設定和範本化
           href: styling-and-templating.md
-        - name: 透過建立 ControlTemplate 自訂現有控制項的外觀
-          href: customizing-the-appearance-of-an-existing-control.md
+        - name: 使用 ControlTemplate 自訂現有的控制項
+          href: ../../../desktop-wpf/themes/how-to-create-apply-template.md
         - name: 作法：尋找 ControlTemplate 產生的元素
           href: how-to-find-controltemplate-generated-elements.md
     - name: 控制項自訂

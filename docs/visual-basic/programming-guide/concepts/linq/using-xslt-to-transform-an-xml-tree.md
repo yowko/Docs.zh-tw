@@ -1,19 +1,19 @@
 ---
-title: 使用 XSLT 轉換 XML 樹狀結構（Visual Basic）
+title: 使用 XSLT 轉換 XML 樹狀結構
 ms.date: 07/20/2015
 ms.assetid: 3390ca68-c270-4e1d-b64b-6a063a77017c
-ms.openlocfilehash: 0d6255767b241083f5623a8b379ab6554b03f0e9
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: f8d7de508fb954148b8b16ddf24966289f191bbb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582339"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350521"
 ---
-# <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a><span data-ttu-id="0176d-102">使用 XSLT 轉換 XML 樹狀結構（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="0176d-102">Using XSLT to Transform an XML Tree (Visual Basic)</span></span>
+# <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a><span data-ttu-id="d0950-102">Using XSLT to Transform an XML Tree (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d0950-102">Using XSLT to Transform an XML Tree (Visual Basic)</span></span>
 
-<span data-ttu-id="0176d-103">您可以建立 XML 樹狀結構、從 XML 樹狀結構建立 <xref:System.Xml.XmlReader>、建立新文件，然後建立將寫入新文件中的 <xref:System.Xml.XmlWriter>。</span><span class="sxs-lookup"><span data-stu-id="0176d-103">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document.</span></span> <span data-ttu-id="0176d-104">然後，您可以叫用 (Invoke) XSLT 轉換，將 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 傳遞至轉換。</span><span class="sxs-lookup"><span data-stu-id="0176d-104">Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation.</span></span> <span data-ttu-id="0176d-105">轉換成功完成後，系統會使用轉換的結果填入新的 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="0176d-105">After the transformation successfully completes, the new XML tree is populated with the results of the transform.</span></span>
+<span data-ttu-id="d0950-103">您可以建立 XML 樹狀結構、從 XML 樹狀結構建立 <xref:System.Xml.XmlReader>、建立新文件，然後建立將寫入新文件中的 <xref:System.Xml.XmlWriter>。</span><span class="sxs-lookup"><span data-stu-id="d0950-103">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document.</span></span> <span data-ttu-id="d0950-104">然後，您可以叫用 (Invoke) XSLT 轉換，將 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 傳遞至轉換。</span><span class="sxs-lookup"><span data-stu-id="d0950-104">Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation.</span></span> <span data-ttu-id="d0950-105">轉換成功完成後，系統會使用轉換的結果填入新的 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="d0950-105">After the transformation successfully completes, the new XML tree is populated with the results of the transform.</span></span>
 
-## <a name="example"></a><span data-ttu-id="0176d-106">範例</span><span class="sxs-lookup"><span data-stu-id="0176d-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d0950-106">範例</span><span class="sxs-lookup"><span data-stu-id="d0950-106">Example</span></span>
 
 ```vb
 Dim xslMarkup As XDocument = _
@@ -52,7 +52,7 @@ End Using
 Console.WriteLine(newTree)
 ```
 
-<span data-ttu-id="0176d-107">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="0176d-107">This example produces the following output:</span></span>
+<span data-ttu-id="d0950-107">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="d0950-107">This example produces the following output:</span></span>
 
 ```xml
 <Root>
@@ -61,8 +61,8 @@ Console.WriteLine(newTree)
 </Root>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="0176d-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="0176d-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0950-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="d0950-108">See also</span></span>
 
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="0176d-109">Advanced LINQ to XML 程式設計（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="0176d-109">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [<span data-ttu-id="d0950-109">Advanced LINQ to XML Programming (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d0950-109">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

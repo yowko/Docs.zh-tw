@@ -1,25 +1,25 @@
 ---
-title: HOW TO：尋找同層級節點 (XPath-LINQ to XML) (C#)
+title: 如何尋找同輩節點（XPath-LINQ to XML）（C#）
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: 6c7509ea0667bb84d62ee804f4d232d74fa7f6e0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 24bad37151f3d63b03ec28c0fbea95bef02ab614
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253617"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141020"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a><span data-ttu-id="30ac9-102">作法：尋找同層級節點 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="30ac9-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="30ac9-103">您可能想要尋找具有特定名稱之節點的所有同層級。</span><span class="sxs-lookup"><span data-stu-id="30ac9-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="30ac9-104">如果內容節點也有特定的名稱，所產生的集合可能包含內容節點。</span><span class="sxs-lookup"><span data-stu-id="30ac9-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a><span data-ttu-id="66808-102">如何尋找同輩節點（XPath-LINQ to XML）（C#）</span><span class="sxs-lookup"><span data-stu-id="66808-102">How to find sibling nodes (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="66808-103">您可能想要尋找具有特定名稱之節點的所有同層級。</span><span class="sxs-lookup"><span data-stu-id="66808-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="66808-104">如果內容節點也有特定的名稱，所產生的集合可能包含內容節點。</span><span class="sxs-lookup"><span data-stu-id="66808-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
   
- <span data-ttu-id="30ac9-105">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="30ac9-105">The XPath expression is:</span></span>  
+ <span data-ttu-id="66808-105">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="66808-105">The XPath expression is:</span></span>  
   
  `../Book`  
   
-## <a name="example"></a><span data-ttu-id="30ac9-106">範例</span><span class="sxs-lookup"><span data-stu-id="30ac9-106">Example</span></span>  
- <span data-ttu-id="30ac9-107">此範例會先尋找 `Book` 項目，然後尋找名稱為 `Book` 的所有同層級項目。</span><span class="sxs-lookup"><span data-stu-id="30ac9-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="30ac9-108">所產生的集合包含內容節點。</span><span class="sxs-lookup"><span data-stu-id="30ac9-108">The resulting collection includes the context node.</span></span>  
+## <a name="example"></a><span data-ttu-id="66808-106">範例</span><span class="sxs-lookup"><span data-stu-id="66808-106">Example</span></span>  
+ <span data-ttu-id="66808-107">此範例會先尋找 `Book` 項目，然後尋找名稱為 `Book` 的所有同層級項目。</span><span class="sxs-lookup"><span data-stu-id="66808-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="66808-108">所產生的集合包含內容節點。</span><span class="sxs-lookup"><span data-stu-id="66808-108">The resulting collection includes the context node.</span></span>  
   
- <span data-ttu-id="30ac9-109">此範例使用下列 XML 文件：[XML 範例檔：書籍 (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="30ac9-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="66808-109">此範例使用下列 XML 文件︰[範例 XML 檔：書籍 (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="66808-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -49,7 +49,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="30ac9-110">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="30ac9-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="66808-110">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="66808-110">This example produces the following output:</span></span>  
   
 ```output  
 Results are identical  

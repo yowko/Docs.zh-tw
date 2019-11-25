@@ -9,7 +9,7 @@
 - name: .NET 桌面指南 - WPF
   href: desktop-wpf/
 - name: 'C# 指南'
-  href: csharp/
+  href: csharp/index.yml
 - name: 'F# 指南'
   href: fsharp/
 - name: Visual Basic 指南
