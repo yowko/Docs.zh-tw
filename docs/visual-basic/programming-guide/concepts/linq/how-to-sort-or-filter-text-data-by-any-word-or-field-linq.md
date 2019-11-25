@@ -1,23 +1,23 @@
 ---
-title: 如何：依任何字或欄位排序或篩選文字資料 (LINQ) (Visual Basic)
+title: 如何：依任何字或欄位排序或篩選文字資料 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: fa9efc51f72a47acfa32d42fc9ff8e5aadf61721
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 15e7666a5fcb5a16628216354c18599f87c7d905
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524122"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341521"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a><span data-ttu-id="a6089-102">如何：依任何字或欄位排序或篩選文字資料 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a6089-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a><span data-ttu-id="416aa-102">如何：依任何字或欄位排序或篩選文字資料 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="416aa-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="a6089-103">下列範例示範如何依行中的任一欄位，來排序多行結構化文字 (例如逗號分隔值)。</span><span class="sxs-lookup"><span data-stu-id="a6089-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="a6089-104">此欄位可能會在執行階段以動態方式指定。</span><span class="sxs-lookup"><span data-stu-id="a6089-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="a6089-105">假設 scores.csv 中的欄位各代表學生的學號和四個測驗分數。</span><span class="sxs-lookup"><span data-stu-id="a6089-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>
+<span data-ttu-id="416aa-103">下列範例示範如何依行中的任一欄位，來排序多行結構化文字 (例如逗號分隔值)。</span><span class="sxs-lookup"><span data-stu-id="416aa-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="416aa-104">此欄位可能會在執行階段以動態方式指定。</span><span class="sxs-lookup"><span data-stu-id="416aa-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="416aa-105">假設 scores.csv 中的欄位各代表學生的學號和四個測驗分數。</span><span class="sxs-lookup"><span data-stu-id="416aa-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>
 
-### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="a6089-106">建立內含資料的檔案</span><span class="sxs-lookup"><span data-stu-id="a6089-106">To create a file that contains data</span></span>
+### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="416aa-106">建立內含資料的檔案</span><span class="sxs-lookup"><span data-stu-id="416aa-106">To create a file that contains data</span></span>
 
-<span data-ttu-id="a6089-107">從[如何：從不同的檔案聯結內容（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)主題複製分數 .csv 資料，並將它儲存至您的方案資料夾。</span><span class="sxs-lookup"><span data-stu-id="a6089-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>
+<span data-ttu-id="416aa-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span><span class="sxs-lookup"><span data-stu-id="416aa-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>
 
-## <a name="example"></a><span data-ttu-id="a6089-108">範例</span><span class="sxs-lookup"><span data-stu-id="a6089-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="416aa-108">範例</span><span class="sxs-lookup"><span data-stu-id="416aa-108">Example</span></span>
 
 ```vb
 Class SortLines
@@ -70,12 +70,12 @@ End Class
 ' 115, 35, 72, 91, 70
 ```
 
-<span data-ttu-id="a6089-109">這個範例也會示範如何從函式傳回查詢變數。</span><span class="sxs-lookup"><span data-stu-id="a6089-109">This example also demonstrates how to return a query variable from a Function.</span></span>
+<span data-ttu-id="416aa-109">This example also demonstrates how to return a query variable from a Function.</span><span class="sxs-lookup"><span data-stu-id="416aa-109">This example also demonstrates how to return a query variable from a Function.</span></span>
 
-## <a name="compiling-the-code"></a><span data-ttu-id="a6089-110">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="a6089-110">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="416aa-110">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="416aa-110">Compiling the Code</span></span>
 
-<span data-ttu-id="a6089-111">建立 VB.NET 主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。</span><span class="sxs-lookup"><span data-stu-id="a6089-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="416aa-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span><span class="sxs-lookup"><span data-stu-id="416aa-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a6089-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="a6089-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="416aa-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="416aa-112">See also</span></span>
 
-- [<span data-ttu-id="a6089-113">LINQ 和字串（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="a6089-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="416aa-113">LINQ and Strings (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="416aa-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

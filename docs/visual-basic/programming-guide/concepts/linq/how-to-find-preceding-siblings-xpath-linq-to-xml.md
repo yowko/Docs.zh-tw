@@ -1,27 +1,27 @@
 ---
-title: 作法：尋找前面的兄弟（XPath-LINQ to XML）（Visual Basic）
+title: 如何：尋找前一個同層級項目 (XPath-LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 59055718-d0a7-4db3-8901-18dd33587703
-ms.openlocfilehash: 1ad57c1b6f06843bd757257c8ecda637ad0e71b6
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: be6c546465f659eb633017e47434c86b9f036bf2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250081"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344683"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="85053-102">作法：尋找前面的兄弟（XPath-LINQ to XML）（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="85053-102">How to: Find Preceding Siblings (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="85053-103">這個主題會比較 XPath `preceding-sibling` 座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 子系 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> 座標軸。</span><span class="sxs-lookup"><span data-stu-id="85053-103">This topic compares the XPath `preceding-sibling` axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] child <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> axis.</span></span>  
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="97f96-102">How to: Find Preceding Siblings (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97f96-102">How to: Find Preceding Siblings (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="97f96-103">這個主題會比較 XPath `preceding-sibling` 座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 子系 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> 座標軸。</span><span class="sxs-lookup"><span data-stu-id="97f96-103">This topic compares the XPath `preceding-sibling` axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] child <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> axis.</span></span>  
   
- <span data-ttu-id="85053-104">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="85053-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="97f96-104">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="97f96-104">The XPath expression is:</span></span>  
   
  `preceding-sibling::*`  
   
- <span data-ttu-id="85053-105">請注意，<xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> 和 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> 的結果都會以文件的順序排列。</span><span class="sxs-lookup"><span data-stu-id="85053-105">Note that the results of both <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> and <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> are in document order.</span></span>  
+ <span data-ttu-id="97f96-105">請注意，<xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> 和 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> 的結果都會以文件的順序排列。</span><span class="sxs-lookup"><span data-stu-id="97f96-105">Note that the results of both <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> and <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> are in document order.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="85053-106">範例</span><span class="sxs-lookup"><span data-stu-id="85053-106">Example</span></span>  
- <span data-ttu-id="85053-107">下列範例會尋找 `FullAddress` 項目，然後使用 `preceding-sibling` 座標軸擷取先前的項目。</span><span class="sxs-lookup"><span data-stu-id="85053-107">The following example finds the `FullAddress` element, and then retrieves the previous elements using the `preceding-sibling` axis.</span></span>  
+## <a name="example"></a><span data-ttu-id="97f96-106">範例</span><span class="sxs-lookup"><span data-stu-id="97f96-106">Example</span></span>  
+ <span data-ttu-id="97f96-107">下列範例會尋找 `FullAddress` 項目，然後使用 `preceding-sibling` 座標軸擷取先前的項目。</span><span class="sxs-lookup"><span data-stu-id="97f96-107">The following example finds the `FullAddress` element, and then retrieves the previous elements using the `preceding-sibling` axis.</span></span>  
   
- <span data-ttu-id="85053-108">此範例使用下列 XML 文件：[XML 範例檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="85053-108">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="97f96-108">此範例使用下列 XML 文件︰[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="97f96-108">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -45,7 +45,7 @@ For Each el As XElement In list2
 Next  
 ```  
   
- <span data-ttu-id="85053-109">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="85053-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="97f96-109">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="97f96-109">This example produces the following output:</span></span>  
   
 ```console
 Results are identical  
@@ -55,6 +55,6 @@ Results are identical
 <Phone>(503) 555-7555</Phone>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="85053-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="85053-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="97f96-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="97f96-110">See also</span></span>
 
-- [<span data-ttu-id="85053-111">XPath 使用者的 LINQ to XML （Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="85053-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="97f96-111">LINQ to XML for XPath Users (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97f96-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
