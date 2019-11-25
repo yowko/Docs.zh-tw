@@ -1,5 +1,5 @@
 ---
-title: 擴充 Visual Basic 中的 My 命名空間
+title: 擴充 My 命名空間
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AddingMyExtensions
@@ -8,83 +8,83 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: 6da0914c9d2d4dc1220ede5d6fa9f1aa6b43426a
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 2a7b0b84061fccd9a333a68e4a19477bd19ca4ff
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775293"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330306"
 ---
-# <a name="extending-the-my-namespace-in-visual-basic"></a>擴充中的 `My` 命名空間 Visual Basic
+# <a name="extending-the-my-namespace-in-visual-basic"></a>Extending the `My` Namespace in Visual Basic
 
-Visual Basic 中的 `My` 命名空間會公開屬性和方法，讓您可以輕鬆地利用 .NET Framework 的強大功能。 @No__t_0 命名空間簡化了常見的程式設計問題，通常會減少一行程式碼的困難工作。 此外，`My` 命名空間是完全可延伸的，因此您可以自訂 `My` 的行為，並將新的服務新增至其階層，以適應特定的應用程式需求。 本主題討論如何自訂 `My` 命名空間的現有成員，以及如何將您自己的自訂類別加入 `My` 命名空間。
+The `My` namespace in Visual Basic exposes properties and methods that enable you to easily take advantage of the power of the .NET Framework. The `My` namespace simplifies common programming problems, often reducing a difficult task to a single line of code. Additionally, the `My` namespace is fully extensible so that you can customize the behavior of `My` and add new services to its hierarchy to adapt to specific application needs. This topic discusses both how to customize existing members of the `My` namespace and how to add your own custom classes to the `My` namespace.
 
-## <a name="customizing-existing-my-namespace-members"></a>自訂現有的 `My` 命名空間成員
+## <a name="customizing-existing-my-namespace-members"></a>Customizing existing `My` namespace members
 
-Visual Basic 中的 `My` 命名空間會公開有關您的應用程式、電腦及其他的常用資訊。 如需 `My` 命名空間中物件的完整清單，請參閱[我的參考](../../language-reference/keywords/my-reference.md)。 您可能必須自訂 `My` 命名空間的現有成員，使其更符合應用程式的需求。 @No__t_0 命名空間中，物件的任何屬性都不是唯讀的，可以設定為自訂值。
+The `My` namespace in Visual Basic exposes frequently used information about your application, your computer, and more. For a complete list of the objects in the `My` namespace, see [My Reference](../../language-reference/keywords/my-reference.md). You may have to customize existing members of the `My` namespace so that they better match the needs of your application. Any property of an object in the `My` namespace that is not read-only can be set to a custom value.
 
-例如，假設您經常使用 `My.User` 物件來存取執行應用程式之使用者的目前安全性內容。 不過，您的公司會使用自訂的使用者物件，為公司內的使用者公開其他資訊和功能。 在此案例中，您可以使用您自己的自訂主體物件的實例來取代 `My.User.CurrentPrincipal` 屬性的預設值，如下列範例所示：
+For example, assume that you frequently use the `My.User` object to access the current security context for the user running your application. However, your company uses a custom user object to expose additional information and capabilities for users within the company. In this scenario, you can replace the default value of the `My.User.CurrentPrincipal` property with an instance of your own custom principal object, as shown in the following example:
 
 [!code-vb[VbVbcnExtendingMy#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#1)]
 
-在 `My.User` 物件上設定 `CurrentPrincipal` 屬性會變更執行應用程式所用的身分識別。 接著，`My.User` 物件會傳回新指定使用者的相關資訊。
+Setting the `CurrentPrincipal` property on the `My.User` object changes the identity under which the application runs. The `My.User` object, in turn, returns information about the newly specified user.
   
-## <a name="adding-members-to-my-objects"></a>將成員新增至 `My` 物件
+## <a name="adding-members-to-my-objects"></a>Adding members to `My` objects
 
-從 `My.Application` 和 `My.Computer` 傳回的類型會定義為 `Partial` 類別。 因此，您可以藉由建立名為 `MyApplication` 或 `MyComputer` 的 `Partial` 類別，來擴充 `My.Application` 和 `My.Computer` 物件。 類別不可以是 `Private` 類別。 如果您將類別指定為 `My` 命名空間的一部分，您可以加入 `My.Application` 或 `My.Computer` 物件中將包含的屬性和方法。
+The types returned from `My.Application` and `My.Computer` are defined as `Partial` classes. Therefore, you can extend the `My.Application` and `My.Computer` objects by creating a `Partial` class named `MyApplication` or `MyComputer`. The class cannot be a `Private` class. If you specify the class as part of the `My` namespace, you can add properties and methods that will be included with the `My.Application` or `My.Computer` objects.
 
-下列範例會將名為 `DnsServerIPAddresses` 的屬性新增至 `My.Computer` 物件：
+The following example adds a property named `DnsServerIPAddresses` to the `My.Computer` object:
 
 [!code-vb[VbVbcnExtendingMy#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class2.vb#2)]
 
-## <a name="adding-custom-objects-to-the-my-namespace"></a>將自訂物件新增至 `My` 命名空間
+## <a name="adding-custom-objects-to-the-my-namespace"></a>Adding custom objects to the `My` namespace
 
-雖然 `My` 命名空間提供許多常見程式設計工作的解決方案，但您可能會遇到 `My` 命名空間無法解決的工作。 例如，您的應用程式可能會存取使用者資料的自訂目錄服務，或者您的應用程式可能會使用預設不會隨 Visual Basic 安裝的元件。 您可以擴充 `My` 命名空間，以將自訂解決方案納入您環境特有的一般工作。 您可以輕鬆地擴充 `My` 命名空間來加入新成員，以符合成長中的應用程式需求。 此外，您也可以將 `My` 的命名空間延伸模組部署至其他開發人員，做為 Visual Basic 範本。
+Although the `My` namespace provides solutions for many common programming tasks, you may encounter tasks that the `My` namespace does not address. For example, your application might access custom directory services for user data, or your application might use assemblies that are not installed by default with Visual Basic. You can extend the `My` namespace to include custom solutions to common tasks that are specific to your environment. The `My` namespace can easily be extended to add new members to meet growing application needs. Additionally, you can deploy your `My` namespace extensions to other developers as a Visual Basic template.
   
-### <a name="adding-members-to-the-my-namespace"></a>將成員新增至 `My` 命名空間
+### <a name="adding-members-to-the-my-namespace"></a>Adding members to the `My` namespace
 
-因為 `My` 的命名空間與其他命名空間相似，所以只要加入模組並指定 `My` 的 `Namespace`，就可以將最上層的屬性新增至其中。 使用 `HideModuleName` 屬性來標注模組，如下列範例所示。 @No__t_0 屬性可確保 IntelliSense 在顯示 `My` 命名空間的成員時，不會顯示模組名稱。
+Because `My` is a namespace like any other namespace, you can add top-level properties to it by just adding a module and specifying a `Namespace` of `My`. Annotate the module with the `HideModuleName` attribute as shown in the following example. The `HideModuleName` attribute ensures that IntelliSense will not display the module name when it displays the members of the `My` namespace.
 
 [!code-vb[VbVbcnExtendingMy#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#3)]
 
-若要將成員新增至 `My` 命名空間，請視需要將屬性新增至模組。 針對加入至 `My` 命名空間的每個屬性，加入 `ThreadSafeObjectProvider(Of T)` 類型的私用欄位，其中類型是自訂屬性所傳回的類型。 這個欄位是用來建立由屬性傳回的安全線程物件實例，其方式是呼叫 `GetInstance` 方法。 因此，每個存取擴充屬性的執行緒都會收到自己的傳回型別實例。 下列範例會將名為 `SampleExtension` 的屬性加入 `SampleExtension` `My` 命名空間的類型：
+To add members to the `My` namespace, add properties as needed to the module. For each property added to the `My` namespace, add a private field of type `ThreadSafeObjectProvider(Of T)`, where the type is the type returned by your custom property. This field is used to create thread-safe object instances to be returned by the property by calling the `GetInstance` method. As a result, each thread that is accessing the extended property receives its own instance of the returned type. The following example adds a property named `SampleExtension` that is of type `SampleExtension` to the `My` namespace:
 
 [!code-vb[VbVbcnExtendingMy#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#4)]
 
-## <a name="adding-events-to-custom-my-objects"></a>將事件加入至自訂 `My` 物件
+## <a name="adding-events-to-custom-my-objects"></a>Adding events to custom `My` objects
 
-您可以藉由擴充 `My` 命名空間中的 `MyApplication` 部分類別，使用 `My.Application` 物件來公開自訂 `My` 物件的事件。 對於以 Windows 為基礎的專案，您可以在**方案總管**中按兩下專案的 [**我的專案**] 節點。 在 Visual Basic**專案設計**工具中，按一下 [**應用程式**] 索引標籤，然後按一下 [**視圖應用程式事件**] 按鈕。 將會建立名為*applicationevents.vb*的新檔案。 其中包含用來擴充 `MyApplication` 類別的下列程式碼：
+You can use the `My.Application` object to expose events for your custom `My` objects by extending the `MyApplication` partial class in the `My` namespace. For Windows-based projects, you can double-click the **My Project** node in for your project in **Solution Explorer**. In the Visual Basic **Project Designer**, click the **Application** tab and then click the **View Application Events** button. A new file that is named *ApplicationEvents.vb* will be created. It contains the following code for extending the `MyApplication` class:
 
 [!code-vb[VbVbcnExtendingMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#5)]
 
-您可以藉由將自訂事件處理常式加入 `MyApplication` 類別中，為您的自訂 `My` 物件加入事件處理常式。 自訂事件可讓您加入在加入、移除事件處理常式或引發事件時，將執行的程式碼。 請注意，只有當使用者新增程式碼來處理事件時，才會執行自訂事件的 `AddHandler` 程式碼。 例如，假設上一節中的 `SampleExtension` 物件有您想要為其加入自訂事件處理常式的 `Load` 事件。 下列程式碼範例顯示名為 `SampleExtensionLoad` 的自訂事件處理常式，當發生 `My.SampleExtension.Load` 事件時將會叫用。 加入程式碼以處理新的 `My.SampleExtensionLoad` 事件時，會執行此自訂事件程式碼的 `AddHandler` 部分。 @No__t_0 的方法包含在程式碼範例中，以顯示處理 `My.SampleExtensionLoad` 事件的事件處理常式範例。 請注意，當您編輯*applicationevents.vb*檔時，如果您在程式碼編輯器上方的左側下拉式清單中選取 [**我的應用程式事件**] 選項，就可以使用 [`SampleExtensionLoad`] 事件。
+You can add event handlers for your custom `My` objects by adding custom event handlers to the `MyApplication` class. Custom events enable you to add code that will execute when an event handler is added, removed, or the event is raised. Note that the `AddHandler` code for a custom event runs only if code is added by a user to handle the event. For example, consider that the `SampleExtension` object from the previous section has a `Load` event that you want to add a custom event handler for. The following code example shows a custom event handler named `SampleExtensionLoad` that will be invoked when the `My.SampleExtension.Load` event occurs. When code is added to handle the new `My.SampleExtensionLoad` event, the `AddHandler` part of this custom event code is executed. The `MyApplication_SampleExtensionLoad` method is included in the code example to show an example of an event handler that handles the `My.SampleExtensionLoad` event. Note that the `SampleExtensionLoad` event will be available when you select the **My Application Events** option in the left drop-down list above the Code Editor when you are editing the *ApplicationEvents.vb* file.
 
 [!code-vb[VbVbcnExtendingMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#6)]
 
-## <a name="design-guidelines"></a>設計指導方針
+## <a name="design-guidelines"></a>Design guidelines
 
-當您開發 `My` 命名空間的延伸模組時，請使用下列指導方針來協助將延伸模組元件的維護成本降至最低：
+When you develop extensions to the `My` namespace, use the following guidelines to help minimize the maintenance costs of your extension components:
 
-- **只包含延伸模組邏輯。** @No__t_0 命名空間延伸模組中包含的邏輯，應該只包含在 `My` 命名空間中公開必要功能所需的程式碼。 因為您的延伸模組會在使用者專案中做為原始程式碼，所以更新延伸模組元件會產生較高的維護成本，而且應該盡可能避免。
-- **最小化專案假設。** 當您建立 `My` 命名空間的延伸模組時，請勿假設一組參考、專案層級匯入或特定編譯器設定（例如，`Option Strict` 關閉）。 相反地，請將相依性最小化，並使用 `Global` 關鍵字來完整限定所有類型參考。 此外，請確定延伸模組會使用 `Option Strict` 進行編譯，以將擴充功能中的錯誤降至最低。
-- **隔離延伸模組程式碼。** 將程式碼放在單一檔案中，可讓您輕鬆地將擴充功能部署為 Visual Studio 專案範本。 如需詳細資訊，請參閱本主題稍後的「封裝和部署擴充功能」。 將所有的 `My` 命名空間延伸模組程式碼放入單一檔案或專案中的個別資料夾，也有助於使用者找到 `My` 的命名空間延伸模組。
+- **Include only the extension logic.** The logic included in the `My` namespace extension should include only the code that is needed to expose the required functionality in the `My` namespace. Because your extension will reside in user projects as source code, updating the extension component incurs a high maintenance cost and should be avoided if possible.
+- **Minimize project assumptions.** When you create your extensions of the `My` namespace, do not assume a set of references, project-level imports, or specific compiler settings (for example, `Option Strict` off). Instead, minimize dependencies and fully qualify all type references by using the `Global` keyword. Also, ensure that the extension compiles with `Option Strict` on to minimize errors in the extension.
+- **Isolate the extension code.** Placing the code in a single file makes your extension easily deployable as a Visual Studio item template. For more information, see "Packaging and Deploying Extensions" later in this topic. Placing all the `My` namespace extension code in a single file or a separate folder in a project will also help users locate the `My` namespace extension.
 
-## <a name="designing-class-libraries-for-my"></a>設計 `My` 的類別庫
+## <a name="designing-class-libraries-for-my"></a>Designing class libraries for `My`
 
-就像大部分的物件模型一樣，某些設計模式在 `My` 命名空間中會良好運作，而其他則不適用。 設計 `My` 命名空間的延伸模組時，請考慮下列原則：
+As is the case with most object models, some design patterns work well in the `My` namespace and others do not. When designing an extension to the `My` namespace, consider the following principles:
 
-- **無狀態方法。** @No__t_0 命名空間中的方法應該為特定工作提供完整的解決方案。 請確定傳遞至方法的參數值提供完成特定工作所需的所有輸入。 避免建立依賴先前狀態的方法，例如開啟資源的連接。
-- **全域實例。** 在 `My` 命名空間中維護的唯一狀態，對專案而言是全域的。 例如，`My.Application.Info` 會封裝在整個應用程式中共用的狀態。
-- **簡單的參數類型。** 避免複雜的參數類型，讓事情保持簡單。 相反地，請建立不接受參數輸入或接受簡單輸入類型（例如字串、基本類型等等）的方法。
-- **Factory 方法。** 有些類型一定很難具現化。 提供 factory 方法做為 `My` 命名空間的延伸模組，可讓您更輕鬆地探索及使用屬於此類別的類型。 @No__t_0，這是一種良好運作的 factory 方法範例。 .NET Framework 中有數個可用的資料流程類型。 藉由明確指定文字檔，`OpenTextFileReader` 可協助使用者瞭解要使用哪一個資料流程。
+- **Stateless methods.** Methods in the `My` namespace should provide a complete solution to a specific task. Ensure that the parameter values that are passed to the method provide all the input required to complete the particular task. Avoid creating methods that rely on prior state, such as open connections to resources.
+- **Global instances.** The only state that is maintained in the `My` namespace is global to the project. For example, `My.Application.Info` encapsulates state that is shared throughout the application.
+- **Simple parameter types.** Keep things simple by avoiding complex parameter types. Instead, create methods that either take no parameter input or that take simple input types such as strings, primitive types, and so on.
+- **Factory methods.** Some types are necessarily difficult to instantiate. Providing factory methods as extensions to the `My` namespace enables you to more easily discover and consume types that fall into this category. An example of a factory method that works well is `My.Computer.FileSystem.OpenTextFileReader`. There are several stream types available in the .NET Framework. By specifying text files specifically, the `OpenTextFileReader` helps the user understand which stream to use.
 
-這些指導方針不會排除類別庫的一般設計原則。 相反地，它們是針對使用 Visual Basic 和 `My` 命名空間的開發人員優化的建議。 如需建立類別庫的一般設計原則，請參閱[架構設計方針](../../../standard/design-guidelines/index.md)。
+These guidelines do not preclude general design principles for class libraries. Rather, they are recommendations that are optimized for developers who are using Visual Basic and the `My` namespace. For general design principles for creating class libraries, see [Framework Design Guidelines](../../../standard/design-guidelines/index.md).
 
-## <a name="packaging-and-deploying-extensions"></a>封裝和部署擴充功能
+## <a name="packaging-and-deploying-extensions"></a>Packaging and deploying extensions
 
-您可以在 Visual Studio 專案範本中包含 `My` 命名空間延伸模組，也可以封裝您的擴充功能，並將其部署為 Visual Studio 專案範本。 當您將 `My` 命名空間延伸模組封裝為 Visual Studio 專案範本時，您可以利用 Visual Basic 所提供的其他功能。 這些功能可讓您在專案參考特定元件時包含延伸模組，或讓使用者使用 Visual Basic 專案設計工具的 [**我的延伸**模組] 頁面，明確加入您的 `My` 命名空間延伸模組。
+You can include `My` namespace extensions in a Visual Studio project template, or you can package your extensions and deploy them as a Visual Studio item template. When you package your `My` namespace extensions as a Visual Studio item template, you can take advantage of additional capabilities provided by Visual Basic. These capabilities enable you to include an extension when a project references a particular assembly, or enable users to explicitly add your `My` namespace extension by using the **My Extensions** page of the Visual Basic Project Designer.
 
-如需如何部署 `My` 命名空間延伸模組的詳細資訊，請參閱[封裝和部署自訂 My extensions](packaging-and-deploying-custom-my-extensions.md)。
+For details about how to deploy `My` namespace extensions, see [Packaging and Deploying Custom My Extensions](packaging-and-deploying-custom-my-extensions.md).
 
 ## <a name="see-also"></a>請參閱
 

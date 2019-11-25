@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Basic 的字串和其他資料類型之間轉換
+title: Converting between strings and other data types
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, strings
@@ -7,33 +7,33 @@ helpviewer_keywords:
 - conversions [Visual Basic], Visual Basic
 - string conversion [Visual Basic], Visual Basic
 ms.assetid: 06085ed5-191d-4930-8fbc-da63930da400
-ms.openlocfilehash: 5b30bfe180bed62ea330b78ec50d8fbfa1bcd9c1
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: da9f4fb707b2df2812afd0f8b0a5317a75e69935
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580998"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352483"
 ---
-# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>在 Visual Basic 的字串和其他資料類型之間轉換
+# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Converting between strings and other data types in Visual Basic
 
-本節說明如何將字串轉換成其他資料類型。
+This section describes how to convert strings into other data types.
 
 ## <a name="in-this-section"></a>本章節內容
 
-[如何：將位元組陣列轉換成中的字串 Visual Basic](how-to-convert-an-array-of-bytes-into-a-string.md)  
-如何將位元組陣列中的位元組轉換成字串。
+[How to: Convert an Array of Bytes into a String in Visual Basic](how-to-convert-an-array-of-bytes-into-a-string.md)  
+How to convert the bytes from a byte array into a string.
 
-[如何：在 Visual Basic 中將字串轉換為位元組陣列](how-to-convert-strings-into-an-array-of-bytes.md)  
-如何將字串轉換為位元組陣列。
+[How to: Convert Strings into an Array of Bytes in Visual Basic](how-to-convert-strings-into-an-array-of-bytes.md)  
+How to convert a string into an array of bytes.
 
 [如何：從字元值陣列建立字串](how-to-create-a-string-from-an-array-of-char-values.md)  
-如何從個別字元建立字串 "abcd"。
+How to create the string "abcd" from individual characters.
 
 [如何：將十六進位字串轉換為數字](how-to-convert-hexadecimal-strings-to-numbers.md)  
-如何將十六進位字串轉換成整數。
+How to convert a hexadecimal string into an integer.
 
-[如何：在 Visual Basic 中將字串轉換為字元陣列](how-to-convert-a-string-to-an-array-of-characters.md)  
-如何將字串轉換成字元陣列。
+[How to: Convert a String to an Array of Characters in Visual Basic](how-to-convert-a-string-to-an-array-of-characters.md)  
+How to convert a string into an array of characters.
 
-[如何：在 Visual Basic 中存取字串中的字元](how-to-access-characters-in-strings.md)  
-如何依索引存取字串中的字元。
+[How to: Access Characters in Strings in Visual Basic](how-to-access-characters-in-strings.md)  
+How to access a character in a string by its index.

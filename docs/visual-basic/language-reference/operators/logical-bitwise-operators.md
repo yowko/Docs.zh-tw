@@ -1,19 +1,19 @@
 ---
-title: 邏輯位元運算子 (Visual Basic)
+title: 邏輯位元運算子
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [Visual Basic], logical
 - logical operators [Visual Basic], Visual Basic
 ms.assetid: 55de4889-7679-4859-8063-bee15abca53f
-ms.openlocfilehash: b501d21efd02a0b96d98bc32af7968a61aae1f29
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f957a6e4f2dfea3f744365d2d065442d3b85183
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774786"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350933"
 ---
 # <a name="logicalbitwise-operators-visual-basic"></a>邏輯/位元運算子 (Visual Basic)
-以下是定義在 Visual Basic 中的邏輯/位元運算子。  
+The following are the logical/bitwise operators defined in Visual Basic.  
   
  [And 運算子](../../../visual-basic/language-reference/operators/and-operator.md)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "61774786"
   
  [IsTrue 運算子](../../../visual-basic/language-reference/operators/istrue-operator.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [在 Visual Basic 中的邏輯和位元運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: edb4e4d2-3166-44d4-8b17-bf302f7ea093
 topic_type:
 - apiref
-ms.openlocfilehash: 826dfceb28512e4fd3157c432b7a4d94fba704fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2f8337f96239948189ffd58923d87fd05c79b0c3
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097865"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204854"
 ---
 # <a name="cordebugngenpolicy-enumeration"></a>CorDebugNGenPolicy 列舉
 提供用來判定偵錯工具是否從原生影像快取載入原生 (NGen) 影像的值。  
@@ -38,10 +38,10 @@ enum CorDebugNGENPolicy {
   
 |成員名稱|描述|  
 |-----------------|-----------------|  
-|`DISABLE_LOCAL_NIC`|在 [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] 應用程式中，會停用本機原生映射快取中的影像。 在桌面應用程式中，這項設定沒有作用。|  
+|`DISABLE_LOCAL_NIC`|In a Windows 8.x Store app, the use of images from the local native image cache is disabled. In a desktop app, this setting has no effect.|  
   
 ## <a name="remarks"></a>備註  
- [ICorDebugProcess5：： EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md)方法會使用 `CorDebugNGENPolicy` 列舉。 停用本機原生映射快取中的影像，可以藉由確保偵錯工具載入可調試的 JIT 編譯影像，而不是優化的原生映射，來提供一致的偵測體驗。  
+ The `CorDebugNGENPolicy` enumeration is used by the [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) method. Disabling the use of images from the local native image cache provides for a consistent debugging experience by ensuring that the debugger loads debuggable JIT-compiled images instead of optimized native images.  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -50,7 +50,7 @@ enum CorDebugNGENPolicy {
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

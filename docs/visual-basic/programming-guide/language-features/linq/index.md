@@ -1,20 +1,20 @@
 ---
-title: Visual Basic 中的 LINQ
+title: LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-ms.openlocfilehash: 286e6266ef8f11a7a09a9e9fe898276a6734a96d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea6754d9d93a7d400ac3494b01b850374e9ec02d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756490"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354173"
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic 中的 LINQ
 本節包含概觀、範例與背景資訊，可協助您了解與使用 Visual Basic 和 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  提供 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者、運算子、查詢結構及語言功能的簡介。  
   
@@ -36,16 +36,16 @@ ms.locfileid: "61756490"
  [如何：篩選查詢結果](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)  
  提供如何使用 LINQ 在查詢中加入搜尋準則的範例。  
   
- [如何：計數、 加總或平均資料](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)  
+ [如何：統計、加總或平均資料](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)  
  提供如何使用 LINQ 加入彙總函式以針對查詢所傳回的資料進行統計、加總或平均的範例。  
   
- [如何：尋找查詢結果中的最小值或最大值](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
+ [如何：尋找查詢結果中的最小或最大值](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
  提供如何使用 LINQ 加入彙總函式以判斷查詢傳回之資料的最小或最大值的範例。  
   
- [如何：將 LINQ 查詢結果傳回成特定的類型](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
+ [如何：將 LINQ 查詢結果當做特定類型傳回](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
  提供以特定型別而非匿名型別傳回 LINQ 查詢結果的範例。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Visual Basic 中的 LINQ to XML 概觀](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)

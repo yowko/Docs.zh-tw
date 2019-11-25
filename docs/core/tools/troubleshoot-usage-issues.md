@@ -3,12 +3,12 @@ title: 針對 .NET Core 工具使用問題進行疑難排解
 description: 探索執行 .NET Core 工具和可能的解決方案時常見的問題。
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: fc6c520ab57235c78148a6b77717cbd80a989451
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318298"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74282508"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>針對 .NET Core 工具使用問題進行疑難排解
 
@@ -25,7 +25,7 @@ ms.locfileid: "72318298"
 
 如果找不到可執行檔，您會看到類似下面的訊息：
 
-```
+```console
 Could not execute because the specified command or file was not found.
 Possible reasons for this include:
   * You misspelled a built-in dotnet command.
@@ -63,7 +63,7 @@ Possible reasons for this include:
 
 * 本機工具
 
-  如果您嘗試執行本機工具，請確認目前目錄或其任何父目錄中有一個稱為*dotnet*的資訊清單檔案。 這個檔案也可以存留在專案資料夾階層中名為 *.config*的資料夾底下，而不是根資料夾。 如果*dotnet*存在，請將它開啟，並檢查您嘗試執行的工具。 如果檔案未包含 `"isRoot": true` 的專案，則也請進一步檢查檔案階層，以取得其他工具資訊清單檔。
+  如果您嘗試執行本機工具，請確認目前目錄或其任何父目錄中有一個稱為*dotnet*的資訊清單檔案。 這個檔案也可以存留在專案資料夾階層中名為 *.config*的資料夾底下，而不是根資料夾。 如果*dotnet*存在，請將它開啟，並檢查您嘗試執行的工具。 如果檔案未包含 `"isRoot": true`的專案，則也請進一步檢查檔案階層，以取得其他工具資訊清單檔。
 
   如果您嘗試執行以指定路徑安裝的 .NET Core 工具，則需要在使用此工具時包含該路徑。 使用工具路徑安裝工具的範例如下：
 
@@ -101,7 +101,7 @@ dotnet --info
 
 安裝 .NET Core 的全域或本機工具可能會失敗的原因有很多。 當工具安裝失敗時，您會看到類似下面的訊息：
 
-```
+```console
 Tool '{0}' failed to install. This failure may have been caused by:
 
 * You are attempting to install a preview release and did not use the --version option to specify the version.
@@ -146,13 +146,13 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 
 如果您嘗試安裝屬於一般 NuGet 套件而不是 .NET Core 工具的 NuGet 套件，您會看到類似下面的錯誤：
 
-> NU1212： `<ToolName>` 的專案套件組合無效。 DotnetToolReference 專案樣式只能包含 DotnetTool 類型的參考。
+> NU1212： `<ToolName>`的專案套件組合無效。 DotnetToolReference 專案樣式只能包含 DotnetTool 類型的參考。
 
 ### <a name="nuget-feed-cant-be-accessed"></a>無法存取 NuGet 摘要
 
 * 無法存取所需的 NuGet 摘要，可能是因為網際網路連線問題所致。
 
-工具安裝需要存取包含工具套件的 NuGet 摘要。 如果饋送無法使用，則會失敗。 您可以使用 `nuget.config` 來改變摘要、要求特定的 `nuget.config` 檔案，或使用 `--add-source` 參數指定額外的摘要。 根據預設，NuGet 會針對無法連接的任何摘要擲回錯誤。 旗標 `--ignore-failed-sources` 可以略過這些無法連線的來源。
+工具安裝需要存取包含工具套件的 NuGet 摘要。 如果饋送無法使用，則會失敗。 您可以使用 `nuget.config`來改變摘要、要求特定的 `nuget.config` 檔案，或使用 `--add-source` 參數指定額外的摘要。 根據預設，NuGet 會針對無法連接的任何摘要擲回錯誤。 旗標 `--ignore-failed-sources` 可以略過這些無法連線的來源。
 
 ### <a name="package-id-incorrect"></a>套件識別碼不正確
 

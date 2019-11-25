@@ -1,5 +1,5 @@
 ---
-title: 部分方法 (Visual Basic)
+title: 部分方法
 ms.date: 07/20/2015
 f1_keywords:
 - vb.PartialMethod
@@ -11,36 +11,36 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: 50d7f24fd9f854d36bb2ed48c2e41a996c29dfe8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7abf0565a985f1fb44fcf2bb91b9220d57a10f20
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638876"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352629"
 ---
 # <a name="partial-methods-visual-basic"></a>部分方法 (Visual Basic)
-部分方法可讓開發人員程式碼中插入自訂邏輯。 一般而言，程式碼會是類別的一部分的設計工具所產生。 部分方法中所建立的程式碼產生器中，部分類別定義，它們通常用來提供的項目已變更的通知。 它們可讓開發人員指定自訂的行為變更的回應。  
+Partial methods enable developers to insert custom logic into code. Typically, the code is part of a designer-generated class. Partial methods are defined in a partial class that is created by a code generator, and they are commonly used to provide notification that something has been changed. They enable the developer to specify custom behavior in response to the change.  
   
- 程式碼產生器的設計工具定義方法簽章和方法的一個或多個呼叫。 如果他們想要自訂產生的程式碼的行為，開發人員可以接著會提供方法的實作。 提供任何實作時，對方法的呼叫會移除的編譯器，產生任何額外的效能負擔。  
+ The designer of the code generator defines only the method signature and one or more calls to the method. Developers can then provide implementations for the method if they want to customize the behavior of the generated code. When no implementation is provided, calls to the method are removed by the compiler, resulting in no additional performance overhead.  
   
 ## <a name="declaration"></a>宣告  
- 產生的程式碼會加上關鍵字標記的部分方法定義`Partial`簽名行開頭。  
+ The generated code marks the definition of a partial method by placing the keyword `Partial` at the start of the signature line.  
   
 ```vb  
 Partial Private Sub QuantityChanged()  
 End Sub  
 ```  
   
- 定義必須符合下列條件：  
+ The definition must meet the following conditions:  
   
-- 這個方法必須是`Sub`，而非`Function`。  
+- The method must be a `Sub`, not a `Function`.  
   
-- 方法的主體必須是空白。  
+- The body of the method must be left empty.  
   
-- 存取修飾詞必須是`Private`。  
+- The access modifier must be `Private`.  
   
 ## <a name="implementation"></a>實作  
- 實作主要包含填入部分方法的主體。 實作通常是在不同的部分類別定義，並寫入由開發人員想要擴充產生的程式碼。  
+ The implementation consists primarily of filling in the body of the partial method. The implementation is typically in a separate partial class from the definition, and is written by a developer who wants to extend the generated code.  
   
 ```vb  
 Private Sub QuantityChanged()  
@@ -48,29 +48,29 @@ Private Sub QuantityChanged()
 End Sub  
 ```  
   
- 上述範例重複項目中宣告的簽章，但可能會有變化。 特別是，其他修飾詞，可以加入這類`Overloads`或`Overrides`。 只有一個`Overrides`允許修飾詞。 如需有關方法的修飾詞的詳細資訊，請參閱 < [Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)。  
+ The previous example duplicates the signature in the declaration exactly, but variations are possible. In particular, other modifiers can be added, such as `Overloads` or `Overrides`. Only one `Overrides` modifier is permitted. For more information about method modifiers, see [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).  
   
-## <a name="use"></a>使用  
- 您呼叫的部分方法時，就會呼叫任何其他`Sub`程序。 如果方法已實作，會評估引數，並執行方法的主體。 不過請記住，實作部分方法是選擇性的。 如果未實作方法，呼叫它沒有任何作用，並不會評估運算式做為引數傳遞至方法。  
+## <a name="use"></a>請使用  
+ You call a partial method as you would call any other `Sub` procedure. If the method has been implemented, the arguments are evaluated and the body of the method is executed. However, remember that implementing a partial method is optional. If the method is not implemented, a call to it has no effect, and expressions passed as arguments to the method are not evaluated.  
   
 ## <a name="example"></a>範例  
- 在檔案中名為 Product.Designer.vb，定義`Product`類別具有`Quantity`屬性。  
+ In a file named Product.Designer.vb, define a `Product` class that has a `Quantity` property.  
   
  [!code-vb[VbVbalrPartialMeths#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#4)]  
   
- 在檔案中名為 Product.vb，提供實作`QuantityChanged`。  
+ In a file named Product.vb, provide an implementation for `QuantityChanged`.  
   
  [!code-vb[VbVbalrPartialMeths#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#5)]  
   
- 最後，在專案的 Main 方法中，宣告`Product`執行個體，並提供初始值其`Quantity`屬性。  
+ Finally, in the Main method of a project, declare a `Product` instance and provide an initial value for its `Quantity` property.  
   
  [!code-vb[VbVbalrPartialMeths#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#6)]  
   
- 應該會出現訊息方塊，會顯示下列訊息：  
+ A message box should appear that displays this message:  
   
  `Quantity was changed to 100`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Sub 程序](./sub-procedures.md)

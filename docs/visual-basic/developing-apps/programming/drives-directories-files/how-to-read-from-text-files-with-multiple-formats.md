@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Visual Basic 中使用多種格式從文字檔讀取
+title: 'How to: Read from text files with multiple formats'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: dc726f7648c1c0a564594331023f03d20569d766
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: b36c781d5f8333749d346bb8f19540f0d1bd1692
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736814"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334577"
 ---
-# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>HOW TO：在 Visual Basic 中，從具有多種格式的 fext 檔案讀取
+# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>How to: Read from fext files with multiple formats in Visual Basic
 
 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 物件可讓您輕鬆有效率地剖析結構化文字檔，例如記錄檔。 您可以使用 `PeekChars` 方法來處理具有多種格式的檔案，以在剖析整個檔案時判斷每行格式。
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>剖析具有多種格式的文字檔
 
-1. 將名為*testfile.txt*的文字檔新增至您的專案。 將下列內容新增至文字檔：
+1. Add a text file named *testfile.txt* to your project. Add the following content to the text file:
 
     ```text
     Err  1001 Cannot access resource.
@@ -53,7 +53,7 @@ ms.locfileid: "71736814"
 
 ## <a name="example"></a>範例
 
-以下是從檔案讀取 `testfile.txt` 的完整範例：
+The following is the complete example that reads from the file `testfile.txt`:
 
  [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]
 
@@ -67,7 +67,7 @@ ms.locfileid: "71736814"
 - 路徑太長 (<xref:System.IO.PathTooLongException>)。
 - 使用者沒有足夠權限以存取檔案 (<xref:System.UnauthorizedAccessException>)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>

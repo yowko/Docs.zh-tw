@@ -8,23 +8,21 @@ helpviewer_keywords:
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 283b3b1aa0d56b50b6f9e67b66de3e0b68ae2331
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: HT
+ms.openlocfilehash: e17fa07fe2dd19cdcd03bc923940abfef886219c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44216538"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283128"
 ---
 # <a name="exception-class-and-properties"></a>Exception 類別和屬性
 
 <xref:System.Exception> 類別是例外狀況所繼承的基底類別。 例如 <xref:System.InvalidCastException> 類別的階層如下：
 
-```
-Object
-  Exception
-    SystemException
-       InvalidCastException
-```
+<xref:System.Object>\
+&nbsp;&nbsp;<xref:System.Exception>\
+&nbsp;&nbsp;&nbsp;&nbsp;<xref:System.SystemException>\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<xref:System.InvalidCastException>
 
 <xref:System.Exception> 類別具有下列屬性，讓您更容易了解例外狀況。
 
@@ -41,6 +39,6 @@ Object
 
 建議只擲回及攔截衍生自 <xref:System.Exception> 的物件，但您可以擲回任何衍生自 <xref:System.Object> 類別的物件作為例外狀況。 請注意，並非所有語言都能擲回及攔截不是衍生自 <xref:System.Exception> 的物件。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [例外狀況](index.md)

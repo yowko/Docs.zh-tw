@@ -1,21 +1,21 @@
 ---
-title: 作法：計算中繼值 (C#)
+title: 如何計算中繼值（C#）
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
-ms.openlocfilehash: fe3f992e85b3fb508fced943e1428a4fb6ae2490
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 3ead3bfb02f7c9192db96996c1f1e01a86a4191a
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205376"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141443"
 ---
-# <a name="how-to-calculate-intermediate-values-c"></a>作法：計算中繼值 (C#)
+# <a name="how-to-calculate-intermediate-values-c"></a>如何計算中繼值（C#）
 這個範例顯示如何計算可用於排序、篩選與選取的中繼值。  
   
 ## <a name="example"></a>範例  
  下列範例使用 `Let` 子句。  
   
- 此範例使用下列 XML 文件：[XML 範例檔：數值資料 (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：數值資料 (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md)。  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -42,7 +42,7 @@ foreach (decimal ex in extensions)
 ## <a name="example"></a>範例  
  下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[命名空間概觀 (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。  
   
- 此範例使用下列 XML 文件：[XML 範例檔：命名空間中的數值資料](./sample-xml-file-numerical-data-in-a-namespace.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：命名空間中的數值資料](./sample-xml-file-numerical-data-in-a-namespace.md)。  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  

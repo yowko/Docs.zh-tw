@@ -9,15 +9,15 @@ helpviewer_keywords:
 - states [WPF], Frame
 - styles [WPF], Frame
 ms.assetid: a01c32e2-c951-46a0-a82f-2614ca241f0b
-ms.openlocfilehash: 89f4fc21637d20ca226507463093bc6bae2241fc
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: de853198c97c99319bea4a816c9a6eca5dc5d917
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460318"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283737"
 ---
 # <a name="frame-styles-and-templates"></a>Frame 樣式和範本
-本主題描述 <xref:System.Windows.Controls.Frame> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
+本主題描述 <xref:System.Windows.Controls.Frame> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
   
 ## <a name="frame-parts"></a>框架元件  
  下表列出 <xref:System.Windows.Controls.Frame> 控制項的已命名元件。  
@@ -53,4 +53,4 @@ ms.locfileid: "73460318"
 - [控制項的樣式和範本](control-styles-and-templates.md)
 - [控制項自訂](control-customization.md)
 - [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)
+- [建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)

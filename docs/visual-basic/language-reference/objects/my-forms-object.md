@@ -1,5 +1,5 @@
 ---
-title: Forms 物件（Visual Basic）
+title: My.Forms 物件
 ms.date: 07/20/2015
 f1_keywords:
 - My.Forms
@@ -7,68 +7,68 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: 9a0b3b9202972122aea4a7147d8d872486418264
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: db86704fdc8120ccac5f4489c80a515834ad888f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581875"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350365"
 ---
 # <a name="myforms-object"></a>My.Forms 物件
 
-提供屬性，以存取目前專案中宣告之每個 Windows form 的實例。
+Provides properties for accessing an instance of each Windows form declared in the current project.
 
 ## <a name="remarks"></a>備註
 
-@No__t_0 物件會在目前的專案中提供每個表單的實例。 屬性的名稱與屬性所存取的表單名稱相同。
+The `My.Forms` object provides an instance of each form in the current project. The name of the property is the same as the name of the form that the property accesses.
 
-您可以使用表單的名稱，而不需限定，來存取 `My.Forms` 物件所提供的表單。 因為屬性名稱與表單的類型名稱相同，所以可讓您存取表單，就像它有預設的實例一樣。 例如，`My.Forms.Form1.Show` 等於 `Form1.Show`。
+You can access the forms provided by the `My.Forms` object by using the name of the form, without qualification. Because the property name is the same as the form's type name, this allows you to access a form as if it had a default instance. 例如，`My.Forms.Form1.Show` 等於 `Form1.Show`。
 
-@No__t_0 物件只會公開與目前專案相關聯的表單。 它不會提供參考的 Dll 中所宣告之表單的存取權。 若要存取 DLL 提供的表單，您必須使用表單的限定名稱，此格式寫成*DllName*。*FormName*。
+The `My.Forms` object exposes only the forms associated with the current project. It does not provide access to forms declared in referenced DLLs. To access a form that a DLL provides, you must use the qualified name of the form, written as *DllName*.*FormName*.
 
-您可以使用 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> 屬性來取得應用程式所有開啟表單的集合。
+You can use the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> property to get a collection of all the application's open forms.
 
-物件及其屬性僅適用于 Windows 應用程式。
+The object and its properties are available only for Windows applications.
 
 ## <a name="properties"></a>內容
 
-@No__t_0 物件的每個屬性都可讓您存取目前專案中的表單實例。 屬性的名稱與屬性所存取的表單名稱相同，而且屬性類型與表單的類型相同。
+Each property of the `My.Forms` object provides access to an instance of a form in the current project. The name of the property is the same as the name of the form that the property accesses, and the property type is the same as the form's type.
 
 > [!NOTE]
-> 如果發生名稱衝突，存取表單的屬性名稱是*RootNamespace*_*Namespace* \_*FormName*。 例如，假設有兩個名為的表單 `Form1.`If 其中一個表單位於根命名空間中 `WindowsApplication1` 而且在命名空間 `Namespace1` 中，您會透過 `My.Forms.WindowsApplication1_Namespace1_Form1` 來存取該表單。
+> If there is a name collision, the property name to access a form is *RootNamespace*_*Namespace*\_*FormName*. For example, consider two forms named `Form1.`If one of these forms is in the root namespace `WindowsApplication1` and in the namespace `Namespace1`, you would access that form through `My.Forms.WindowsApplication1_Namespace1_Form1`.
 
-@No__t_0 物件提供在啟動時所建立之應用程式主要表單實例的存取權。 對於所有其他表單，`My.Forms` 物件會在存取並儲存表單時，建立其新的實例。 後續嘗試存取該屬性時，會傳回該表單的實例。
+The `My.Forms` object provides access to the instance of the application's main form that was created on startup. For all other forms, the `My.Forms` object creates a new instance of the form when it is accessed and stores it. Subsequent attempts to access that property return that instance of the form.
 
-您可以藉由將 `Nothing` 指派給該表單的屬性來處置表單。 屬性 setter 會呼叫表單的 <xref:System.Windows.Forms.Form.Close%2A> 方法，然後將 `Nothing` 指派給儲存的值。 如果您將 `Nothing` 以外的任何值指派給屬性，則 setter 會擲回 <xref:System.ArgumentException> 例外狀況。
+You can dispose of a form by assigning `Nothing` to the property for that form. The property setter calls the <xref:System.Windows.Forms.Form.Close%2A> method of the form, and then assigns `Nothing` to the stored value. If you assign any value other than `Nothing` to the property, the setter throws an <xref:System.ArgumentException> exception.
 
-您可以使用 `Is` 或 `IsNot` 運算子，測試 `My.Forms` 物件的屬性是否儲存表單的實例。 您可以使用這些運算子來檢查屬性的值是否為 `Nothing`。
+You can test whether a property of the `My.Forms` object stores an instance of the form by using the `Is` or `IsNot` operator. You can use those operators to check if the value of the property is `Nothing`.
 
 > [!NOTE]
-> 一般來說，`Is` 或 `IsNot` 運算子必須讀取屬性的值，才能執行比較。 不過，如果屬性目前儲存 `Nothing`，則屬性會建立表單的新實例，然後傳回該實例。 不過，Visual Basic 編譯器會以不同的方式來處理 `My.Forms` 物件的屬性，並允許 `Is` 或 `IsNot` 運算子檢查屬性的狀態，而不需要變更其值。
+> Typically, the `Is` or `IsNot` operator has to read the value of the property to perform the comparison. However, if the property currently stores `Nothing`, the property creates a new instance of the form and then returns that instance. However, the Visual Basic compiler treats the properties of the `My.Forms` object differently and allows the `Is` or `IsNot` operator to check the status of the property without altering its value.
 
 ## <a name="example"></a>範例
 
-這個範例會變更預設 `SidebarMenu` 表單的標題。
+This example changes the title of the default `SidebarMenu` form.
 
 [!code-vb[VbVbalrMyForms#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyForms/VB/Class1.vb#2)]
 
-若要讓此範例能夠正常執行，您的專案必須具有名為 `SidebarMenu` 的表單。
+For this example to work, your project must have a form named `SidebarMenu`.
 
-這段程式碼只適用于 Windows 應用程式專案。
+This code will work only in a Windows Application project.
 
 ## <a name="requirements"></a>需求
 
-### <a name="availability-by-project-type"></a>依專案類型的可用性
+### <a name="availability-by-project-type"></a>Availability by Project Type
 
 |專案類型|可用|
 |---|---|
 |Windows 應用程式|**是**|
 |類別庫|否|
 |主控台應用程式|否|
-|Windows 控制項程式庫|否|
-|Web 控制項程式庫|否|
+|Windows Control Library|否|
+|Web Control Library|否|
 |Windows 服務|否|
-|網站|否|
+|Web Site|否|
 
 ## <a name="see-also"></a>請參閱
 

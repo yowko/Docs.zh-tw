@@ -1,15 +1,15 @@
 ---
-title: HOW TO：尋找兩個位置路徑的集合聯集 (XPath-LINQ to XML) (C#)
+title: 如何尋找兩個位置路徑的聯集（XPath-LINQ to XML）（C#）
 ms.date: 07/20/2015
 ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
-ms.openlocfilehash: ebb2ddc3a7ba5e08e99cecca01294e5ad3182e8b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 17a3310f367cb68b3b80b1a3f30af40428f6d2c7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253851"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141217"
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>HOW TO：尋找兩個位置路徑的集合聯集 (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>如何尋找兩個位置路徑的聯集（XPath-LINQ to XML）（C#）
 XPath 可讓您尋找兩個 XPath 位置路徑結果的等位。  
   
  XPath 運算式為：  
@@ -21,7 +21,7 @@ XPath 可讓您尋找兩個 XPath 位置路徑結果的等位。
 ## <a name="example"></a>範例  
  此範例會尋找所有 `Category` 項目與所有 `Price` 項目，然後將它們串連為單一集合。 請注意，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢會呼叫 <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> 來排列結果。 XPath 運算式評估的結果也是以文件的順序排列。  
   
- 此範例使用下列 XML 文件：[XML 範例檔：數值資料 (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：數值資料 (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md)。  
   
 ```csharp  
 XDocument data = XDocument.Load("Data.xml");  

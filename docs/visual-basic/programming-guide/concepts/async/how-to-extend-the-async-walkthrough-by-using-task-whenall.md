@@ -1,34 +1,34 @@
 ---
-title: 如何：使用 System.threading.tasks.task.whenall （Visual Basic）擴充非同步逐步解說
+title: 如何：使用 Task.WhenAll 擴充非同步逐步解說的內容
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-ms.openlocfilehash: 0a1d55fb8433d789326b03c402841dcaf3cc3994
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 6df29a90ff0012564c6d966c8156434d25cacdb1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524316"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354237"
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>如何：使用 System.threading.tasks.task.whenall （Visual Basic）擴充非同步逐步解說
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)
 
-您可以使用 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法，在逐步解說[：使用 async 和 Await 存取 Web （Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)中改善非同步方案的效能。 此方法會以非同步方式等候多個非同步作業進行，這些作業是以工作集合來表示。
+You can improve the performance of the async solution in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) by using the <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> method. 此方法會以非同步方式等候多個非同步作業進行，這些作業是以工作集合來表示。
 
 您在此逐步解說中可能已注意到網站下載的速度各自不同。 有時其中一個網站的速度很慢，而導致所有其餘下載延後執行。 當您執行在此逐步解說中建立的非同步方案時，如果不想要等候，您可以輕鬆地結束程式；但更好的做法是同時啟動所有下載，並讓較快的下載繼續執行而不等候延遲的下載。
 
 您可以將 `Task.WhenAll` 方法套用至工作集合。 套用 `WhenAll` 會傳回未完成的單一工作，直到集合中的所有工作都完成為止。 工作似乎會平行執行，但不會建立其他任何執行緒。 工作可以依任何順序完成。
 
 > [!IMPORTANT]
-> 下列程式描述在[逐步解說：使用 async 和 Await 存取 Web （Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)中開發之非同步應用程式的延伸模組。 您可以藉由完成此逐步解說，或從[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下載程式碼，來開發應用程式。
+> The following procedures describe extensions to the async applications that are developed in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). 您可以藉由完成此逐步解說，或從[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下載程式碼，來開發應用程式。
 >
 > 若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本。
 
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>將 Task.WhenAll 新增至您的 GetURLContentsAsync 方案
 
-1. 將 `ProcessURLAsync` 方法新增至在[逐步解說：使用 Async 和 Await 存取 Web （Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)中開發的第一個應用程式。
+1. Add the `ProcessURLAsync` method to the first application that's developed in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).
 
-    - 如果您已從[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下載程式代碼，請開啟 AsyncWalkthrough 專案，然後將 `ProcessURLAsync` 新增至 mainwindow.xaml。
+    - If you downloaded the code from  [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), open the AsyncWalkthrough project, and then add `ProcessURLAsync` to the MainWindow.xaml.vb file.
 
-    - 如果您藉由完成此逐步解說來開發程式碼，請將 `ProcessURLAsync` 新增至包含 `GetURLContentsAsync` 方法的應用程式。 此應用程式的 Mainwindow.xaml 是「逐步解說中完整的程式碼範例」一節中的第一個範例。
+    - 如果您藉由完成此逐步解說來開發程式碼，請將 `ProcessURLAsync` 新增至包含 `GetURLContentsAsync` 方法的應用程式。 The MainWindow.xaml.vb file for this application is the first example in the "Complete Code Examples from the Walkthrough" section.
 
      `ProcessURLAsync` 方法會合併原始逐步解說中 `SumPageSizesAsync` 之 `For Each` 迴圈主體內的動作。 此方法會以非同步方式將指定網站的內容下載為位元組陣列，然後顯示並傳回位元組陣列的長度。
 
@@ -97,11 +97,11 @@ ms.locfileid: "72524316"
 
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>將 Task.WhenAll 新增至 HttpClient.GetByteArrayAsync 方案
 
-1. 將下列 `ProcessURLAsync` 版本新增至在[逐步解說：使用 Async 和 Await 存取 Web （Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)中開發的第二個應用程式。
+1. Add the following version of `ProcessURLAsync` to the second application that's developed in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).
 
-    - 如果您已從[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下載程式代碼，請開啟 AsyncWalkthrough_HttpClient 專案，然後將 `ProcessURLAsync` 新增至 mainwindow.xaml。
+    - If you downloaded the code from [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), open the AsyncWalkthrough_HttpClient project, and then add `ProcessURLAsync` to the MainWindow.xaml.vb file.
 
-    - 如果您藉由完成此逐步解說來開發程式碼，請將 `ProcessURLAsync` 新增至使用 `HttpClient.GetByteArrayAsync` 方法的應用程式。 此應用程式的 Mainwindow.xaml 是「逐步解說中完整的程式碼範例」一節中的第二個範例。
+    - 如果您藉由完成此逐步解說來開發程式碼，請將 `ProcessURLAsync` 新增至使用 `HttpClient.GetByteArrayAsync` 方法的應用程式。 The MainWindow.xaml.vb file for this application is the second example in the "Complete Code Examples from the Walkthrough" section.
 
      `ProcessURLAsync` 方法會合併原始逐步解說中 `SumPageSizesAsync` 之 `For Each` 迴圈主體內的動作。 此方法會以非同步方式將指定網站的內容下載為位元組陣列，然後顯示並傳回位元組陣列的長度。
 
@@ -170,7 +170,7 @@ ms.locfileid: "72524316"
 
 ### <a name="to-test-the-taskwhenall-solutions"></a>測試 Task.WhenAll 方案
 
-針對任一方案，選擇 F5 鍵以執行程式，然後選擇 [開始] 按鈕。 輸出應該類似于[逐步解說：使用 async 和 Await 存取 Web （Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)中非同步解決方案的輸出。 不過請注意，網站每次出現的順序都不同。
+針對任一方案，選擇 F5 鍵以執行程式，然後選擇 [開始] 按鈕。 The output should resemble the output from the async solutions in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). 不過請注意，網站每次出現的順序都不同。
 
 ## <a name="example"></a>範例
 

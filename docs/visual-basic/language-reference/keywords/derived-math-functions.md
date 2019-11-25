@@ -1,5 +1,5 @@
 ---
-title: 衍生的數學函式 (Visual Basic)
+title: 衍生的數學函式
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arithmetic operations, derived math functions
@@ -21,39 +21,39 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-ms.openlocfilehash: 0d0606c52d1d50fcc2fd8eea3ad2851c95b18a69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73cf56dd72f2baac0474d6f5c4e88228a1fe38cf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801890"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349843"
 ---
 # <a name="derived-math-functions-visual-basic"></a>衍生的數學函式 (Visual Basic)
-下表顯示可以衍生自的內建數學函式的非內建的數學函式<xref:System.Math?displayProperty=nameWithType>物件。 您可以存取內建數學函式，藉由新增`Imports System.Math`至您的檔案或專案。  
+The following table shows non-intrinsic math functions that can be derived from the intrinsic math functions of the <xref:System.Math?displayProperty=nameWithType> object. You can access the intrinsic math functions by adding `Imports System.Math` to your file or project.  
   
-|功能|衍生對等項目|  
+|功能|Derived equivalents|  
 |--------------|-------------------------|  
-|正割 (Sec(x))|1 / Cos(x)|  
-|餘割 (Csc(x))|1 / Sin(x)|  
-|餘切值 (Ctan(x))|1 / Tan(x)|  
-|反正弦 (Asin(x))|Atan (x / Sqrt (-x * x + 1))|  
-|反餘弦 (Acos(x))|Atan(-x / Sqrt(-x * x + 1)) + 2 \* Atan(1)|  
-|反向的正割 (Asec(x))|2 * Atan(1) – Atan(Sign(x) / Sqrt (x \* x – 1))|  
-|反餘割 (Acsc(x))|Atan(Sign(x) / Sqrt (x * x – 1))|  
-|反餘切 (Acot(x))|2 * Atan(1) - Atan(x)|  
-|雙曲正弦值 (Sinh(x))|(Exp(x) – Exp(-x)) / 2|  
-|雙曲餘弦值 (Cosh(x))|(Exp(x) + Exp(-x)) / 2|  
-|雙曲正切 (Tanh(x))|(Exp(x) – Exp(-x)) / (Exp(x) + Exp(-x))|  
-|雙曲正割 (Sech(x))|2 / (Exp(x) + Exp(-x))|  
-|雙曲餘割 (Csch(x))|2 / (Exp(x) – Exp(-x))|  
-|雙曲餘切值 (Coth(x))|(Exp(x) + Exp(-x)) / (Exp(x) – Exp(-x))|  
-|反雙曲正弦 (Asinh(x))|記錄檔 (x + Sqrt (x * x + 1))|  
-|反雙曲餘弦 (Acosh(x))|記錄檔 (x + Sqrt (x * x – 1))|  
-|反雙曲正切 (Atanh(x))|記錄 ((1 + x) / (1 – x)) / 2|  
-|數值的反雙曲正割 (AsecH(x))|Log ((Sqrt (-x * x + 1) + 1) / x)|  
-|數值的反雙曲餘割 (Acsch(x))|Log((Sign(x) * Sqrt (x \* x + 1) + 1) / x)|  
-|數值的反雙曲餘切值 (Acoth(x))|記錄 ((x + 1) / (x – 1)) / 2|  
+|Secant (Sec(x))|1 / Cos(x)|  
+|Cosecant (Csc(x))|1 / Sin(x)|  
+|Cotangent (Ctan(x))|1 / Tan(x)|  
+|Inverse sine (Asin(x))|Atan(x / Sqrt(-x * x + 1))|  
+|Inverse cosine (Acos(x))|Atan(-x / Sqrt(-x * x + 1)) + 2 \* Atan(1)|  
+|Inverse secant (Asec(x))|2 * Atan(1) – Atan(Sign(x) / Sqrt(x \* x – 1))|  
+|Inverse cosecant (Acsc(x))|Atan(Sign(x) / Sqrt(x * x – 1))|  
+|Inverse cotangent (Acot(x))|2 * Atan(1) - Atan(x)|  
+|Hyperbolic sine (Sinh(x))|(Exp(x) – Exp(-x)) / 2|  
+|Hyperbolic cosine (Cosh(x))|(Exp(x) + Exp(-x)) / 2|  
+|Hyperbolic tangent (Tanh(x))|(Exp(x) – Exp(-x)) / (Exp(x) + Exp(-x))|  
+|Hyperbolic secant (Sech(x))|2 / (Exp(x) + Exp(-x))|  
+|Hyperbolic cosecant (Csch(x))|2 / (Exp(x) – Exp(-x))|  
+|Hyperbolic cotangent (Coth(x))|(Exp(x) + Exp(-x)) / (Exp(x) – Exp(-x))|  
+|Inverse hyperbolic sine (Asinh(x))|Log(x + Sqrt(x * x + 1))|  
+|Inverse hyperbolic cosine (Acosh(x))|Log(x + Sqrt(x * x – 1))|  
+|Inverse hyperbolic tangent (Atanh(x))|Log((1 + x) / (1 – x)) / 2|  
+|Inverse hyperbolic secant (AsecH(x))|Log((Sqrt(-x * x + 1) + 1) / x)|  
+|Inverse hyperbolic cosecant (Acsch(x))|Log((Sign(x) * Sqrt(x \* x + 1) + 1) / x)|  
+|Inverse hyperbolic cotangent (Acoth(x))|Log((x + 1) / (x – 1)) / 2|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [數學函式](../../../visual-basic/language-reference/functions/math-functions.md)

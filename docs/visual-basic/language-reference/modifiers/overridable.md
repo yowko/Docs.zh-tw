@@ -1,5 +1,5 @@
 ---
-title: Overridable (Visual Basic)
+title: Overrides
 ms.date: 07/20/2015
 f1_keywords:
 - Overridable
@@ -16,31 +16,31 @@ helpviewer_keywords:
 - Overridable keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-ms.openlocfilehash: 91a1cedc66fd66e336b6e7976ad87ad638cb43c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c639665fd92a56de6fb6e5147cda873ef457b45
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053895"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351393"
 ---
 # <a name="overridable-visual-basic"></a>Overridable (Visual Basic)
-指定的屬性或程序可覆寫同名的屬性或衍生類別中的程序。  
+Specifies that a property or procedure can be overridden by an identically named property or procedure in a derived class.  
   
 ## <a name="remarks"></a>備註  
- `Overridable`修飾詞允許在衍生類別中覆寫類別中的屬性或方法。 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)修飾詞可防止屬性或方法覆寫衍生類別中。  如需詳細資訊，請參閱[繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。  
+ The `Overridable` modifier allows a property or method in a class to be overridden in a derived class. The [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) modifier prevents a property or method from being overridden in a derived class.  如需詳細資訊，請參閱[繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。  
   
- 如果`Overridable`或`NotOverridable`修飾詞未指定，預設值取決於是否屬性或方法會覆寫基底類別屬性或方法。 如果屬性或方法覆寫基底類別屬性或方法，預設值是`Overridable`; 否則它是`NotOverridable`。  
+ If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method. If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.  
   
- 您可以遮蔽或覆寫，以重新定義繼承的項目，但有兩種方法之間有顯著的差異。 如需詳細資訊，請參閱 < [Visual Basic 中的遮蔽功能](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
+ You can shadow or override to redefine an inherited element, but there are significant differences between the two approaches. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
- 可以覆寫的項目有時稱為*虛擬*項目。 如果它可以覆寫，但不一定要時，有時也稱為*具體*項目。  
+ An element that can be overridden is sometimes referred to as a *virtual* element. If it can be overridden, but does not have to be, it is sometimes also called a *concrete* element.  
   
- 您只能在屬性或程序宣告陳述式中使用 `Overridable`。  
+ You can use `Overridable` only in a property or procedure declaration statement.  
   
-## <a name="combined-modifiers"></a>結合的修飾詞  
- 您無法指定`Overridable`或是`NotOverridable`如`Private`方法。  
+## <a name="combined-modifiers"></a>Combined Modifiers  
+ You cannot specify `Overridable` or `NotOverridable` for a `Private` method.  
   
- 您無法指定`Overridable`連同`MustOverride`， `NotOverridable`，或`Shared`相同宣告中。  
+ You cannot specify `Overridable` together with `MustOverride`, `NotOverridable`, or `Shared` in the same declaration.  
   
  因為覆寫項目可隱含覆寫，您無法結合 `Overridable` 與 `Overrides`。  
   
@@ -53,12 +53,12 @@ ms.locfileid: "62053895"
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [修飾詞](../../../visual-basic/language-reference/modifiers/index.md)
 - [繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
-- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
-- [Visual Basic 中的遮蔽功能](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

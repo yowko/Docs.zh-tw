@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Window [WPF], styles and templates
 - states [WPF], Window
 ms.assetid: 2dfdf025-347b-4342-bf28-95206c273f35
-ms.openlocfilehash: 48fe5887ebad86efad1b1aae39ba03a26fda3bd8
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 01233c5d0179e1a6f9bed651cd1f18058bfac168
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460013"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283605"
 ---
 # <a name="window-styles-and-templates"></a>Window 樣式和範本
-本主題描述 <xref:System.Windows.Window> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
+本主題描述 <xref:System.Windows.Window> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
   
 ## <a name="window-parts"></a>視窗元件  
  <xref:System.Windows.Window> 控制項沒有任何已命名的元件。  
@@ -50,4 +50,4 @@ ms.locfileid: "73460013"
 - [控制項的樣式和範本](control-styles-and-templates.md)
 - [控制項自訂](control-customization.md)
 - [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)
+- [建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)

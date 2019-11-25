@@ -1,15 +1,15 @@
 ---
-title: 作法：合併和比較字串集合 (LINQ) (C#)
+title: 如何合併和比較字串集合（LINQ）（C#）
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 414d9764d8de0a1d7cd395a3192a097d48983856
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 23089835e710a7905693f8e3e3b57173085d0694
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205360"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141424"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>作法：合併和比較字串集合 (LINQ) (C#)
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>如何合併和比較字串集合（LINQ）（C#）
 本例示範如何合併包含文字行的檔案，然後排序結果。 具體來說，它會示範如何在兩組文字行上執行簡單的串連、等位和交集。  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>設定專案和文字檔案  
@@ -171,7 +171,7 @@ class MergeStrings
 ## <a name="compiling-the-code"></a>編譯程式碼  
  建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ 和字串 (C#)](./linq-and-strings.md)
 - [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)

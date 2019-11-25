@@ -2,12 +2,12 @@
 title: WorkFlow 服務登錄工具 (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: bb0989fb8747a5065ce3d7332311cdefba95b80d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6b1a0b990b1657e724f527b5beccce0e8a6391a6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425294"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281675"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>WorkFlow 服務登錄工具 (WFServicesReg.exe)
 Workflow 服務登錄工具 (WFServicesReg.exe) 是一個獨立工具，可用於新增、移除或修復 Windows Workflow Foundation (WF) 服務的組態項目。  
@@ -19,7 +19,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ```  
   
 ## <a name="remarks"></a>備註  
- 此工具可以在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 安裝位置中找到，也就是 %windir%\Microsoft.NET\Framework\v3.5 或 64 位元電腦中的 %windir%\Microsoft.NET\Framework64\v3.5。  
+ 此工具可以在 .NET Framework 3.5 安裝位置（特別是%windir%\Microsoft.NET\Framework\v3.5）或64位電腦的%windir%\Microsoft.NET\Framework64\v3.5 中找到。  
   
  下表描述可與 Workflow 服務登錄工具 (WFServicesReg.exe) 搭配使用的選項。  
   
@@ -34,7 +34,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="registration"></a>註冊  
  工具會檢查 Web.config 檔案並註冊下列項目：  
   
-- [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 參考組件。  
+- .NET Framework 3.5 參考元件。  
   
 - .xoml 檔案的組建提供者。  
   
@@ -70,7 +70,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="usage-scenarios"></a>使用案例  
   
 ### <a name="installing-iis-after-net-framework-35-is-installed"></a>在安裝 .NET Framework 3.5 之後安裝 IIS  
- 在 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 電腦上安裝 IIS 之前，先安裝 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]。 由於無法使用 IIS Metabase，因此能夠在未安裝 .xoml 和 .rules Scriptmap 的情況下成功安裝 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]。  
+ 在 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 機上，.NET Framework 3.5 會在 IIS 安裝之前安裝。 由於 IIS 元資料庫無法用，因此 .NET Framework 3.5 的安裝會成功，而不需要安裝 xoml 和. 規則腳本。  
   
  安裝 IIS 之後，您可以使用 WFServicesReg.exe 工具搭配 `/c` 參數來安裝這些特定 Scriptmap。  
   
@@ -85,4 +85,4 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
  若要修復特定網站的已刪除處理常式，您應該執行 "Wfservicesreg.exe/r" 以從所有網站移除處理常式，然後執行 "Wfservicesreg.exe" 來為所有網站建立適當的處理常式。  
   
 ### <a name="configuring-handlers-after-switching-iis-mode"></a>在切換 IIS 模式之後設定處理常式  
- 當 IIS 處於共用組態模式，並且已安裝 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 時，便會在共用位置下設定 IIS Metabase。 如果將 IIS 切換為非共用組態模式，本機 Metabase 將不會包含所需的處理常式。 若要正確設定本機的元資料庫，您可以將共用的元資料庫匯入到本機，或執行 "Wfservicesreg.exe"，以設定本機的元資料庫。
+ 當 IIS 處於共用設定模式且已安裝 .NET Framework 3.5 時，會在共用位置下設定 IIS 元資料庫。 如果將 IIS 切換為非共用組態模式，本機 Metabase 將不會包含所需的處理常式。 若要正確設定本機的元資料庫，您可以將共用的元資料庫匯入到本機，或執行 "Wfservicesreg.exe"，以設定本機的元資料庫。

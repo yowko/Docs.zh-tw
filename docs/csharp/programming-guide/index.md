@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: c9d879d1760f543d5a4722977d4dee8bca856016
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ad4e953941e189e6ed9baefb6cb07e7955000c7f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739187"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283108"
 ---
 # <a name="c-programming-guide"></a>C# 程式設計手冊
 
@@ -48,7 +48,7 @@ ms.locfileid: "73739187"
   
  [字串](./strings/index.md)  
   
- [屬性](./classes-and-structs/properties.md)  
+ [內容](./classes-and-structs/properties.md)  
   
  [索引子](./indexers/index.md)  
   
@@ -80,13 +80,12 @@ ms.locfileid: "73739187"
   
  [例外狀況和例外狀況處理](./exceptions/index.md)  
   
- [檔案系統和登錄 (C# 程式設計指南)](./file-system/index.md)  
+ [檔案系統和登錄 (C# 程式設計手冊)](./file-system/index.md)  
   
  [互通性](./interop/index.md)  
   
  [反映](./concepts/reflection.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../language-reference/index.md)
-- [C#](../index.md)

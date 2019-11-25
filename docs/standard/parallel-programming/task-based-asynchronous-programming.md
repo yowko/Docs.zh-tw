@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 36ff76db984a864a201313ddb7478cc1e93888fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 51292d977f2be87cec7c3481f5004fe5fe756224
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139992"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204546"
 ---
 # <a name="task-based-asynchronous-programming"></a>工作型非同步程式設計
 
@@ -268,7 +268,7 @@ TPL 提供數個新的公用類型，這些類型在平行處理和序列處理�
 
 建議您不要繼承自 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>， 建議您改用 <xref:System.Threading.Tasks.Task.AsyncState%2A> 屬性，建立其他資料或狀態與 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 物件的關聯。 您也可以使用擴充方法，擴充 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 類別的功能。 如需擴充方法的詳細資訊，請參閱[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)和[擴充方法](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)。
 
-如果必須繼承自 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>，則不可以使用 <xref:System.Threading.Tasks.Task.Run%2A>、<xref:System.Threading.Tasks.Task.Run%2A> 或 <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>、<xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> 類別來建立自訂工作類型的執行個體，因為這些機制只會建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。 此外，也不可以使用 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.TaskFactory> 和 <xref:System.Threading.Tasks.TaskFactory%601> 所提供的工作接續機制來建立自訂工作類型執行個體，因為這些機制也是只建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。
+If you must inherit from <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>, you cannot use <xref:System.Threading.Tasks.Task.Run%2A>, or the <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType>, or <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> classes to create instances of your custom task type because these mechanisms create only <xref:System.Threading.Tasks.Task> and <xref:System.Threading.Tasks.Task%601> objects. 此外，也不可以使用 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.TaskFactory> 和 <xref:System.Threading.Tasks.TaskFactory%601> 所提供的工作接續機制來建立自訂工作類型執行個體，因為這些機制也是只建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。
 
 ## <a name="related-topics"></a>相關主題
 

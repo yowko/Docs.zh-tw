@@ -1,23 +1,23 @@
 ---
-title: In 子句 (Visual Basic)
+title: In 子句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.In
 helpviewer_keywords:
 - In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
-ms.openlocfilehash: 6826489970137605bf2b07f88b5a64f2ec6bfc2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf7a21e694b245ea72916e0930f11c332a3c9726
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638281"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353582"
 ---
 # <a name="in-clause-visual-basic"></a>In 子句 (Visual Basic)
-指定迴圈變數来周遊的群組`For Each`迴圈，或指定的集合中查詢`From`， `Join`，或`Group Join`子句。  
+Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.  
   
 ## <a name="remarks"></a>備註  
- `In`關鍵字可以用在下列情況：  
+ The `In` keyword can be used in the following contexts:  
   
  [For Each...Next 陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
@@ -27,6 +27,6 @@ ms.locfileid: "61638281"
   
  [Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

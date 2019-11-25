@@ -1,5 +1,5 @@
 ---
-title: GetType 運算子 (Visual Basic)
+title: GetType Operator
 ms.date: 07/20/2015
 f1_keywords:
 - vb.GetType
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: 2e3e05973f2ef72fef5e429bc98cc58b4b21f2c2
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 4e59bcfaa24c9545ed75c6b5c1d29cad398ac2de
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592157"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349555"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType 運算子 (Visual Basic)
-傳回指定之類型的 <xref:System.Type> 物件。 @No__t-0 物件提供類型的相關資訊，例如其屬性、方法和事件。  
+Returns a <xref:System.Type> object for the specified type. The <xref:System.Type> object provides information about the type such as its properties, methods, and events.  
   
 ## <a name="syntax"></a>語法  
   
@@ -27,37 +27,37 @@ GetType(typename)
   
 |參數|描述|  
 |---|---|  
-|`typename`|您想要其資訊的類型名稱。|  
+|`typename`|The name of the type for which you desire information.|  
   
 ## <a name="remarks"></a>備註  
- @No__t-0 運算子會針對指定的 `typename` 傳回 <xref:System.Type> 物件。 您可以在 `typename` 中傳遞任何已定義類型的名稱。 其中包括下列項目：  
+ The `GetType` operator returns the <xref:System.Type> object for the specified `typename`. You can pass the name of any defined type in `typename`. 其中包括下列項目：  
   
-- 任何 Visual Basic 資料類型，例如 `Boolean` 或 `Date`。  
+- Any Visual Basic data type, such as `Boolean` or `Date`.  
   
-- 任何 .NET Framework 類別、結構、模組或介面，例如 <xref:System.ArgumentException?displayProperty=nameWithType> 或 <xref:System.Double?displayProperty=nameWithType>。  
+- Any .NET Framework class, structure, module, or interface, such as <xref:System.ArgumentException?displayProperty=nameWithType> or <xref:System.Double?displayProperty=nameWithType>.  
   
-- 您的應用程式所定義的任何類別、結構、模組或介面。  
+- Any class, structure, module, or interface defined by your application.  
   
-- 您的應用程式所定義的任何陣列。  
+- Any array defined by your application.  
   
-- 您的應用程式所定義的任何委派。  
+- Any delegate defined by your application.  
   
-- Visual Basic、.NET Framework 或您的應用程式所定義的任何列舉。  
+- Any enumeration defined by Visual Basic, the .NET Framework, or your application.  
   
- 如果您想要取得物件變數的類型物件，請使用 <xref:System.Type.GetType%2A?displayProperty=nameWithType> 方法。  
+ If you want to get the type object of an object variable, use the <xref:System.Type.GetType%2A?displayProperty=nameWithType> method.  
   
- 在下列情況下，`GetType` 運算子可能會很有用：  
+ The `GetType` operator can be useful in the following circumstances:  
   
-- 您必須在執行時間存取類型的中繼資料。 @No__t 0 物件提供中繼資料，例如類型成員和部署資訊。 例如，您需要此來反映元件。 如需詳細資訊，請參閱<xref:System.Reflection?displayProperty=nameWithType>。  
+- You must access the metadata for a type at run time. The <xref:System.Type> object supplies metadata such as type members and deployment information. You need this, for example, to reflect over an assembly. 如需詳細資訊，請參閱<xref:System.Reflection?displayProperty=nameWithType>。  
   
-- 您想要比較兩個物件參考，以查看它們是否參考相同類型的實例。 如果有，`GetType` 會傳回相同 <xref:System.Type> 物件的參考。  
+- You want to compare two object references to see if they refer to instances of the same type. If they do, `GetType` returns references to the same <xref:System.Type> object.  
   
 ## <a name="example"></a>範例  
- 下列範例顯示使用中的 `GetType` 運算子。  
+ The following examples show the `GetType` operator in use.  
   
  [!code-vb[VbVbalrOperators#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#26)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

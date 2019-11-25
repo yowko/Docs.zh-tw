@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 9a8db0670fff604cc9db8279ab1566e6e3fd3c8d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 29792726567373c907898cf6ced9891577f11588
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320680"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141622"
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用組態檔設定服務
 使用設定檔設定 Windows Communication Foundation （WCF）服務，可讓您在部署時（而不是在設計階段）提供端點和服務行為資料的彈性。 本主題概要說明可用的主要技巧。  
   
- WCF 服務可使用 .NET Framework 設定技術來設定。 最常見的情況是，XML 元素會加入至裝載 WCF 服務的 Internet Information Services （IIS）網站的 web.config 檔案中。 這些項目允許您變更詳細資料，例如各電腦的端點位址 (用於與服務通訊的實際位址)。 此外，WCF 還包含數個系統提供的元素，可讓您快速選取最基本的服務功能。 從 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 開始，WCF 會隨附新的預設設定模型，以簡化 WCF 設定需求。 如果您未提供特定服務的任何 WCF 設定，執行時間會自動以一些標準端點和預設系結/行為來設定您的服務。 實際上，撰寫設定是 WCF 應用程式設計的主要部分。  
+ WCF 服務可使用 .NET Framework 設定技術來設定。 最常見的情況是，XML 元素會加入至裝載 WCF 服務的 Internet Information Services （IIS）網站的 web.config 檔案中。 這些項目允許您變更詳細資料，例如各電腦的端點位址 (用於與服務通訊的實際位址)。 此外，WCF 還包含數個系統提供的元素，可讓您快速選取最基本的服務功能。 從 .NET Framework 4 開始，WCF 會隨附新的預設設定模型，以簡化 WCF 設定需求。 如果您未提供特定服務的任何 WCF 設定，執行時間會自動以一些標準端點和預設系結/行為來設定您的服務。 實際上，撰寫設定是 WCF 應用程式設計的主要部分。  
   
  如需詳細資訊，請參閱設定[服務](configuring-bindings-for-wcf-services.md)的系結。 如需最常用元素的清單，請參閱[系統提供](system-provided-bindings.md)的系結。 如需預設端點、繫結和行為的詳細資訊，請參閱[簡化的組態](simplified-configuration.md)和 [WCF 服務的簡化組態](./samples/simplified-configuration-for-wcf-services.md)。  
   
@@ -66,12 +66,12 @@ ms.locfileid: "72320680"
 > [!NOTE]
 > 繫結和行為區段都是選用的，而且只會在必要時才納入。  
   
-### <a name="the-services-element"></a>@No__t_0services > 元素  
- `services` 項目包含所有由應用程式裝載的服務規格。 從 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]簡化的組態模型開始，本節為選擇性。  
+### <a name="the-services-element"></a>\<services > 元素  
+ `services` 項目包含所有由應用程式裝載的服務規格。 從 .NET Framework 4 的簡化設定模型開始，此區段是選擇性的。  
   
  [\<services >](../configure-apps/file-schema/wcf/services.md)  
   
-### <a name="the-service-element"></a>@No__t_0service > 元素  
+### <a name="the-service-element"></a>\<服務 > 元素  
  每項服務都有下列屬性：  
   
 - `name` 指定用來提供服務合約實作的型別。 這是由命名空間、句號和型別名稱組成的完整名稱。 例如 `"MyNameSpace.myServiceType"`。  
@@ -80,7 +80,7 @@ ms.locfileid: "72320680"
   
 - [\<service >](../configure-apps/file-schema/wcf/service.md)  
   
-### <a name="the-endpoint-element"></a>@No__t_0endpoint > 元素  
+### <a name="the-endpoint-element"></a>\<端點 > 元素  
  每個端點都需要下列屬性代表的位址、繫結和合約：  
   
 - `address` 指定服務的統一資源識別元 (URI)，此識別元可以是絕對位址，或是相對於服務基底位址的相對位址。 如果設為空字串，則代表在建立服務的 <xref:System.ServiceModel.ServiceHost> 時，指定的基底位址將有可用的端點。  
@@ -93,27 +93,27 @@ ms.locfileid: "72320680"
   
 - [\<endpoint >](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
-### <a name="the-bindings-element"></a>@No__t_0bindings > 元素  
+### <a name="the-bindings-element"></a>\<系結 > 元素  
  `bindings` 項目包含所有繫結的規格，在任何服務中定義的任何端點都可以使用這些繫結。  
   
- [\<bindings >](../configure-apps/file-schema/wcf/bindings.md)  
+ [\<系結 >](../configure-apps/file-schema/wcf/bindings.md)  
   
-### <a name="the-binding-element"></a>@No__t_0binding > 元素  
+### <a name="the-binding-element"></a>\<系結 > 元素  
  包含在 `bindings` 元素中的 `binding` 元素可以是其中一個系統提供的系結（請參閱[系統提供](system-provided-bindings.md)的系結）或自訂系結（請參閱[自訂](./extending/custom-bindings.md)系結）。 `binding` 項目具有的 `name` 屬性可將繫結與 `bindingConfiguration` 項目的 `endpoint` 屬性所指定的端點相互關聯。 如果未指定名稱，則該繫結會對應於該繫結型別的預設值。  
   
 如需設定服務和用戶端的詳細資訊，請參閱設定[WCF 服務](configuring-services.md)。
   
- [\<binding >](../misc/binding.md)  
+ [\<binding >](../configure-apps/file-schema/wcf/bindings.md)  
   
-### <a name="the-behaviors-element"></a>@No__t_0behaviors > 元素  
+### <a name="the-behaviors-element"></a>\<行為 > 元素  
  這是定義服務行為之 `behavior` 項目的容器項目。  
   
- [\<behaviors >](../configure-apps/file-schema/wcf/behaviors.md)  
+ [\<行為 >](../configure-apps/file-schema/wcf/behaviors.md)  
   
-### <a name="the-behavior-element"></a>@No__t_0behavior > 元素  
+### <a name="the-behavior-element"></a>\<行為 > 元素  
  每個 `behavior` 元素都是由 `name` 屬性識別，並提供系統提供的行為，例如 < `throttling` > 或自訂行為。 如果未指定名稱，則該行為項目會對應於預設服務或端點行為。  
   
- [\<behavior >](../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [\<行為 >](../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>如何使用繫結與行為組態  
  WCF 可讓您輕鬆地在設定中使用參照系統，在端點之間共用設定。 與其直接指派組態值給端點，繫結相關的組態值會被分類到 `bindingConfiguration` 區段的 `<binding>` 項目群組中。 一個繫結組態是繫結上的一個具名的設定群組。 然後，端點可以依照名稱來參考 `bindingConfiguration` 。  
@@ -148,7 +148,7 @@ ms.locfileid: "72320680"
 </configuration>  
 ```  
   
- `name` 的 `bindingConfiguration` 會在 `<binding>` 項目中設定。 @No__t_0 必須是系結型別範圍內的唯一字串，在此案例中為[< basicHttpBinding \>](../configure-apps/file-schema/wcf/basichttpbinding.md)，或為參考預設系結的空值。 端點會將 `bindingConfiguration` 屬性設為此字串來連結至組態。  
+ `name` 的 `bindingConfiguration` 會在 `<binding>` 項目中設定。 `name` 必須是系結型別範圍內的唯一字串，在此案例中為[< basicHttpBinding\>](../configure-apps/file-schema/wcf/basichttpbinding.md)，或為參考預設系結的空值。 端點會將 `bindingConfiguration` 屬性設為此字串來連結至組態。  
   
  如下列範例所示， `behaviorConfiguration` 也是以同樣方式來實作。  
   
@@ -267,4 +267,4 @@ ms.locfileid: "72320680"
 - [簡化設定](simplified-configuration.md)
 - [設定 WCF 服務](configuring-services.md)
 - [\<service >](../configure-apps/file-schema/wcf/service.md)
-- [\<binding >](../misc/binding.md)
+- [\<binding >](../configure-apps/file-schema/wcf/bindings.md)

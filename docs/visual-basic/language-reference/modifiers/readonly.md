@@ -1,5 +1,5 @@
 ---
-title: ReadOnly (Visual Basic)
+title: ReadOnly
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ReadOnly
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: ba09bdbc35779afba3dd24f6352cb99a49f931c8
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 8c7e7e7c1571fd7c595ebfd54fb5767078ef41f8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583048"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351284"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
-指定可以讀取但不能寫入變數或屬性。
+Specifies that a variable or property can be read but not written.
 
 ## <a name="remarks"></a>備註
 
 ## <a name="rules"></a>規則
 
-- **宣告內容。** 您只能在模組層級使用 `ReadOnly`。 這表示 `ReadOnly` 元素的宣告內容必須是類別、結構或模組，而且不能是原始程式檔、命名空間或程式。
+- **Declaration Context.** 您只能在模組層級使用 `ReadOnly`。 This means the declaration context for a `ReadOnly` element must be a class, structure, or module, and cannot be a source file, namespace, or procedure.
 
-- **合併的修飾詞。** 您不能在相同的宣告中同時指定與 `Static` `ReadOnly`。
+- **Combined Modifiers.** You cannot specify `ReadOnly` together with `Static` in the same declaration.
 
-- **指派值。** 使用 `ReadOnly` 屬性的程式碼無法設定其值。 但可存取基礎儲存體的程式碼可以隨時指派或變更此值。
+- **Assigning a Value.** Code consuming a `ReadOnly` property cannot set its value. But code that has access to the underlying storage can assign or change the value at any time.
 
-     您只能在其宣告中，或在其定義所在之類別或結構的函式中，將值指派給 `ReadOnly` 變數。
+     You can assign a value to a `ReadOnly` variable only in its declaration or in the constructor of a class or structure in which it is defined.
 
-## <a name="when-to-use-a-readonly-variable"></a>使用 ReadOnly 變數的時機
+## <a name="when-to-use-a-readonly-variable"></a>When to Use a ReadOnly Variable
 
-在某些情況下，您無法使用[Const 語句](../../../visual-basic/language-reference/statements/const-statement.md)來宣告和指派常數值。 例如，`Const` 語句可能不會接受您想要指派的資料類型，或者您可能無法在編譯時期使用常數運算式來計算該值。 您甚至可能不知道編譯時間的值。 在這些情況下，您可以使用 `ReadOnly` 變數來保存常數值。
+There are situations in which you cannot use a [Const Statement](../../../visual-basic/language-reference/statements/const-statement.md) to declare and assign a constant value. For example, the `Const` statement might not accept the data type you want to assign, or you might not be able to compute the value at compile time with a constant expression. You might not even know the value at compile time. In these cases, you can use a `ReadOnly` variable to hold a constant value.
 
 > [!IMPORTANT]
-> 如果變數的資料類型是參考型別（例如陣列或類別實例），即使變數本身 `ReadOnly`，也可以變更其成員。 下列範例將說明這點。
+> If the data type of the variable is a reference type, such as an array or a class instance, its members can be changed even if the variable itself is `ReadOnly`. 下列範例將說明這點。
 
 ```vb
 ReadOnly characterArray() As Char = {"x"c, "y"c, "z"c}
@@ -46,13 +46,13 @@ Sub ChangeArrayElement()
 End Sub
 ```
 
-當初始化時，由 `characterArray()` 指向的陣列會保留 "x"、"y" 和 "z"。 因為變數 `characterArray` 是 `ReadOnly`，所以在初始化之後，您就無法變更它的值;也就是說，您無法為它指派新的陣列。 不過，您可以變更一個或多個陣列成員的值。 呼叫程式 `ChangeArrayElement` 之後，`characterArray()` 所指向的陣列會保留 "x"、"M" 和 "z"。
+When initialized, the array pointed to by `characterArray()` holds "x", "y", and "z". Because the variable `characterArray` is `ReadOnly`, you cannot change its value once it is initialized; that is, you cannot assign a new array to it. However, you can change the values of one or more of the array members. Following a call to the procedure `ChangeArrayElement`, the array pointed to by `characterArray()` holds "x", "M", and "z".
 
-請注意，這類似于將程式參數宣告為[ByVal](byval.md)，這可防止程式變更呼叫引數本身，但允許它變更其成員。
+Note that this is similar to declaring a procedure parameter to be [ByVal](byval.md), which prevents the procedure from changing the calling argument itself but allows it to change its members.
 
 ## <a name="example"></a>範例
 
-下列範例會針對雇用員工的日期定義 `ReadOnly` 屬性。 類別會在內部將屬性值儲存為 `Private` 變數，而且只有類別內的程式碼可以變更該值。 不過，屬性是 `Public`，而且任何可存取類別的程式碼都可以讀取屬性。
+The following example defines a `ReadOnly` property for the date on which an employee was hired. The class stores the property value internally as a `Private` variable, and only code inside the class can change that value. However, the property is `Public`, and any code that can access the class can read the property.
 
 [!code-vb[VbVbalrKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#4)]
 

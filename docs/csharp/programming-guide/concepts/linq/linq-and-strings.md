@@ -2,18 +2,18 @@
 title: LINQ 和字串 (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: c7a1b86cc611d5f38ceab814b4594f5ad953fbc4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: fb1714c54331ead80cd28435cf3ed1c4c54a704e
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744617"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140906"
 ---
 # <a name="linq-and-strings-c"></a>LINQ 和字串 (C#)
 
 您可以使用 LINQ 查詢及轉換字串與字串集合。 針對文字檔案中的半結構化資料，這種做法特別有用。 LINQ 查詢可以結合傳統字串函式和規則運算式。 例如，您可以使用 <xref:System.String.Split%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> 方法，來建立您接著可以使用 LINQ 查詢或修改的字串陣列。 您可以在 LINQ 查詢的 `where` 子句中使用 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法。 您可以使用 LINQ 查詢或修改規則運算式所傳回的 <xref:System.Text.RegularExpressions.MatchCollection> 結果。
 
-您也可以使用本節所述的技巧，將半結構化的文字資料轉換成 XML。 如需詳細資訊，請參閱[＜How to：從 CSV 檔案產生 XML](how-to-generate-xml-from-csv-files.md)。
+您也可以使用本節所述的技巧，將半結構化的文字資料轉換成 XML。 如需詳細資訊，請參閱[如何：從 CSV 檔案產生 XML](how-to-generate-xml-from-csv-files.md)。
 
 本節中的範例分為兩類：
 
@@ -21,7 +21,7 @@ ms.locfileid: "54744617"
 
 您可以查詢和分析文字區塊，並使用 <xref:System.String.Split%2A?displayProperty=nameWithType> 方法或 <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> 方法將它們分割為可查詢的較小字串陣列來進行修改。 您可以將原始程式文字分割成單字、句子、段落、頁面或任何其他準則，再依據您的查詢需求執行其他分割。
 
-- [如何：統計某個字在字串中出現的次數 (LINQ) (C#)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
+- [如何計算文字在字串中出現的次數（LINQ）（C#）](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
   示範如何使用 LINQ 進行簡單的文字查詢。
 
 - [如何：查詢包含指定字組的句子 (LINQ) (C#)](how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)
@@ -32,7 +32,7 @@ ms.locfileid: "54744617"
 
   示範當字串為可查詢型別時的情況。
 
-- [如何：使用規則運算式合併 LINQ 查詢 (C#)](how-to-combine-linq-queries-with-regular-expressions.md)
+- [如何結合 LINQ 查詢與正則運算式（C#）](how-to-combine-linq-queries-with-regular-expressions.md)
 
   示範如何在 LINQ 查詢中使用規則運算式，針對篩選的查詢結果進行複雜模式比對。
 
@@ -48,11 +48,11 @@ ms.locfileid: "54744617"
 
   示範如何依任何字或欄位排序文字行。
 
-- [如何：重新排列分隔檔中的欄位 (LINQ) (C#)](how-to-reorder-the-fields-of-a-delimited-file-linq.md)
+- [如何：重新排列有分隔符號之檔案中的欄位 (LINQ) (C#)](how-to-reorder-the-fields-of-a-delimited-file-linq.md)
 
   示範如何重新排列 .csv 檔案行中的欄位。
 
-- [如何：合併和比較字串集合 (LINQ) (C#)](how-to-combine-and-compare-string-collections-linq.md)
+- [如何：合併和比較字串集合（LINQ）（C#）](how-to-combine-and-compare-string-collections-linq.md)
 
   示範結合字串清單的各種方式。
 
@@ -60,7 +60,7 @@ ms.locfileid: "54744617"
 
   示範如何將多個文字檔案作為資料來源以建立物件集合。
 
-- [如何：聯結不同檔案中的內容 (LINQ) (C#)](how-to-join-content-from-dissimilar-files-linq.md)
+- [如何：從不同的檔案聯結內容 (LINQ) (C#)](how-to-join-content-from-dissimilar-files-linq.md)
   
   示範如何使用相符的索引鍵，將兩份清單中的字串結合為單一字串。
 
@@ -68,11 +68,11 @@ ms.locfileid: "54744617"
   
   示範如何將單一檔案作為資料來源以建立新的檔案。
 
-- [如何：計算 CSV 文字檔中的欄值 (LINQ) (C#)](how-to-compute-column-values-in-a-csv-text-file-linq.md)
+- [如何計算 CSV 文字檔中的資料行值（LINQ）（C#）](how-to-compute-column-values-in-a-csv-text-file-linq.md)
   
   示範如何針對 .csv 檔案中的文字資料執行數學計算。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Language-Integrated Query (LINQ) (C#)](index.md)
 - [如何：從 CSV 檔案產生 XML](how-to-generate-xml-from-csv-files.md)

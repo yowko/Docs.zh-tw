@@ -9,15 +9,15 @@ helpviewer_keywords:
 - templates [WPF], ScrollBar
 - parts [WPF], ScrollBar
 ms.assetid: 066ea45a-e27d-43b0-adfe-cce6934c22f5
-ms.openlocfilehash: f30a0abb3e4252737e513b531b8d5f49a0d47f0b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7093a78555aefd73f9bb05c0a7b5fab6b66176fc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458440"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283406"
 ---
 # <a name="scrollbar-styles-and-templates"></a>ScrollBar 樣式和範本
-本主題描述 <xref:System.Windows.Controls.Primitives.ScrollBar> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
+本主題描述 <xref:System.Windows.Controls.Primitives.ScrollBar> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
   
 ## <a name="scrollbar-parts"></a>捲軸部分  
  下表列出 <xref:System.Windows.Controls.Primitives.ScrollBar> 控制項的已命名元件。  
@@ -33,7 +33,7 @@ ms.locfileid: "73458440"
 |----------------------|---------------------------|-----------------|  
 |一般|CommonStates|預設狀態。|  
 |MouseOver|CommonStates|滑鼠指標移到控制項上。|  
-|Disabled|CommonStates|已停用控制項。|  
+|已停用|CommonStates|已停用控制項。|  
 |驗證|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，而 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性則 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性 `true`，且控制項具有焦點。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性 `true`，而且控制項沒有焦點。|  
@@ -56,4 +56,4 @@ ms.locfileid: "73458440"
 - [控制項的樣式和範本](control-styles-and-templates.md)
 - [控制項自訂](control-customization.md)
 - [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)
+- [建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)

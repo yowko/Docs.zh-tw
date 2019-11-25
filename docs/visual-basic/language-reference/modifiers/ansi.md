@@ -1,5 +1,5 @@
 ---
-title: Ansi (Visual Basic)
+title: Ansi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Ansi
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - ANSI, Visual Basic
 - ANSI
 ms.assetid: 4f1fa6ff-5557-41ab-b6da-90baf4c15917
-ms.openlocfilehash: 98dafab3e524ea371bba228eb231e28d46cc3b4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c38c2b81af7b4cb8fd1723853a09c5413f805af
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802553"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344745"
 ---
 # <a name="ansi-visual-basic"></a>Ansi (Visual Basic)
-指定 Visual Basic 應封送處理至 Institute (ANSI) 值，不論所宣告外部程序名稱的所有字串。  
+Specifies that Visual Basic should marshal all strings to American National Standards Institute (ANSI) values regardless of the name of the external procedure being declared.  
   
- 當您呼叫在專案以外定義的程序時，Visual Basic 編譯器並沒有存取還需要正確地呼叫程序的資訊。 此資訊包括程序所在的位置、 其識別方式、 其呼叫的順序和傳回型別，以及字串字元設定它使用。 [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)會建立外部程序的參考，並提供這些必要的資訊。  
+ When you call a procedure defined outside your project, the Visual Basic compiler does not have access to the information it needs to call the procedure correctly. This information includes where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) creates a reference to an external procedure and supplies this necessary information.  
   
- `charsetmodifier`部分`Declare`陳述式提供在外部的程序呼叫封送處理字串的字元組資訊。 它也會影響 Visual Basic 會將外部檔案的外部程序名稱的搜尋。 `Ansi`修飾詞會指定 Visual Basic 應封送處理為 ANSI 值的所有字串，並應該查閱而不需要在搜尋期間修改其名稱的程序。  
+ The `charsetmodifier` part in the `Declare` statement supplies the character set information for marshaling strings during a call to the external procedure. It also affects how Visual Basic searches the external file for the external procedure name. The `Ansi` modifier specifies that Visual Basic should marshal all strings to ANSI values and should look up the procedure without modifying its name during the search.  
   
- 如果未不指定任何字元組修飾詞，則`Ansi`是預設值。  
+ If no character set modifier is specified, `Ansi` is the default.  
   
 ## <a name="remarks"></a>備註  
- `Ansi`修飾詞，請使用此內容中：  
+ The `Ansi` modifier can be used in this context:  
   
  [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## <a name="smart-device-developer-notes"></a>智慧型裝置開發人員注意事項  
- 不支援此關鍵字。  
+## <a name="smart-device-developer-notes"></a>Smart Device Developer Notes  
+ This keyword is not supported.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
 - [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)

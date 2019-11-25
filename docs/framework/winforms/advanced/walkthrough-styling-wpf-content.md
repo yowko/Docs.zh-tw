@@ -9,12 +9,12 @@ ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 581fcbfdfd7806b8f0f70347ac96f1bf09fa9098
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d0aa2c54f05cea658c95dc2c23b7ba4bb78835c9
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460943"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138923"
 ---
 # <a name="walkthrough-style-wpf-content"></a>逐步解說：樣式 WPF 內容
 
@@ -61,7 +61,7 @@ ms.locfileid: "73460943"
 
    `UserControl1` 會在 WPF 設計工具中開啟。
 
-1. 在 [XAML] 檢閱中，插入下列 XAML 到 `<UserControl>` 開頭標記後面。 此 XAML 會建立具有對比漸層框線的漸層。 按一下控制項時，漸層會變更，產生已按下的按鈕外觀。 如需詳細資訊，請參閱 [設定樣式和範本](../../wpf/controls/styling-and-templating.md)。
+1. 在 [XAML] 檢閱中，插入下列 XAML 到 `<UserControl>` 開頭標記後面。 此 XAML 會建立具有對比漸層框線的漸層。 按一下控制項時，漸層會變更，產生已按下的按鈕外觀。 如需詳細資訊，請參閱 [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)。
 
    ```xaml
    <UserControl.Resources>
@@ -142,4 +142,4 @@ ms.locfileid: "73460943"
 - [使用 WPF 控制項](using-wpf-controls.md)
 - [在 Visual Studio 中設計 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [XAML 概觀 (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
-- [設定樣式和範本](../../wpf/controls/styling-and-templating.md)
+- [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

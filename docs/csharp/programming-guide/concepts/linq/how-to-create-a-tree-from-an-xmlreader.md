@@ -1,15 +1,15 @@
 ---
-title: 如何：從 XmlReader 建立樹狀結構 (C#)
+title: 如何從 XmlReader 建立樹狀結構（C#）
 ms.date: 07/20/2015
 ms.assetid: 60951c9c-7087-406c-b5bb-c60e58609b21
-ms.openlocfilehash: a0cff596e0a6d50aefab3645a99beec3277d05ec
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 196779a10678bdd3aa5399cf883af8c4b074e5df
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418315"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141320"
 ---
-# <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>如何：從 XmlReader 建立樹狀結構 (C#)
+# <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>如何從 XmlReader 建立樹狀結構（C#）
 這個主題顯示如何從 <xref:System.Xml.XmlReader> 直接建立 XML 樹狀結構。 若要從 <xref:System.Xml.Linq.XElement> 建立 <xref:System.Xml.XmlReader>，您必須將 <xref:System.Xml.XmlReader> 定位在項目節點上。 <xref:System.Xml.XmlReader> 將會略過註解與處理指示，但是，如果 <xref:System.Xml.XmlReader> 定位在文字節點上，則會擲出錯誤。 若要避免此類的錯誤，請務必將 <xref:System.Xml.XmlReader> 定位在項目上，然後再從 <xref:System.Xml.XmlReader> 建立 XML 樹狀結構。  
   
 ## <a name="example"></a>範例  

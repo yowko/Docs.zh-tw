@@ -4,12 +4,12 @@ description: 了解如何使用 XML 文件註解記錄您的程式碼，並在�
 ms.date: 02/14/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: a9142b36586de4d08dec6c4b72bfd1725b4830ac
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c858a92309710a0ac6b68e9194f2d7ef4c9577a0
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037659"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140661"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 註解記錄您的程式碼
 
@@ -21,16 +21,16 @@ XML 文件註解具特殊性，因為編譯器可以處理它們以在編譯時�
 
 您可以執行下列其中一項動作，以在編譯時期產生 XML 檔案︰
 
-- 如果您正在從命令列使用 .NET Core 開發應用程式，則可以將 [DocumentationFile 項目](/visualstudio/msbuild/common-msbuild-project-properties)新增至 .csproj 專案檔的 `<PropertyGroup>` 區段。 下列範例會在根檔案名稱與組件相同的專案目錄中產生 XML 檔案：
+- 如果您是從命令列使用 .NET Core 開發應用程式，您可以將 `GenerateDocumentationFile` 元素加入 .csproj 專案檔的 `<PropertyGroup>` 區段中。 您也可以使用[`DocumentationFile` 元素](/visualstudio/msbuild/common-msbuild-project-properties)直接指定檔案的路徑。 下列範例會在根檔案名稱與組件相同的專案目錄中產生 XML 檔案：
 
+   ```xml
+   <GenerateDocumentationFile>true</GenerateDocumentationFile>
+   ```
+   
+   這個運算式就相當於下列運算式：
+   
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-   ```
-
-   您也可以指定 XML 檔案的確切絕對或相對路徑和名稱。 下列範例會在與應用程式的偵錯版本相同的目錄中產生 XML 檔案︰
-
-   ```xml
-   <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
    ```
 
 - 如果您正在使用 Visual Studio 開發應用程式，請以滑鼠右鍵按一下專案，然後選取 [屬性]。 在屬性對話方塊中，選取 [建置] 索引標籤，然後檢查 [XML 文件檔案]。 您也可以變更編譯器寫入檔案的位置。

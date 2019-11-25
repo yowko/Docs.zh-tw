@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: b00f5dd31ba572a2c8fb5301cc7ae9ddda77f0e5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9b5d839bb4a678f105e128671fbda729e2c730b7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045042"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141800"
 ---
 # <a name="duplex"></a>雙工
 
@@ -166,12 +166,12 @@ client.Close();
 
 1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2. 若要建立C#方案C++的、或 Visual Basic .net 版本, 請遵循[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
+2. 若要建立C#方案C++的、或 Visual Basic .net 版本，請遵循[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 
-3. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
+3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
     > [!IMPORTANT]
-    > 在跨電腦設定中執行用戶端時, 請務必在`address` [ \< \<用戶端 > 元素的端點 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md)屬性和`clientBaseAddress`的屬性 (attribute [ )中取代"localhost"以\<](../../../../docs/framework/misc/binding.md)適當電腦的名稱系結[ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)專案的 > 元素, 如下所示:
+    > 在跨電腦設定中執行用戶端時，請務必將[\<client > 專案的\<端點 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md)的 `address` 屬性，以及 `clientBaseAddress` [wsDualHttpBinding\<](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)專案之 > 系結[\<](../../configure-apps/file-schema/wcf/bindings.md)元素的 > 屬性取代為適當的電腦名稱稱，如下所示：
 
     ```xml
     <client>
@@ -191,6 +191,6 @@ client.Close();
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Duplex`

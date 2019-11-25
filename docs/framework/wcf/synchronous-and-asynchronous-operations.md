@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 61dfa257676d6c274d846300c7ccae75a219cf4c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 39a7db3fb7dc3651f2cf6c850e7ebb5525e24963
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424903"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281637"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和非同步作業
 本主題討論實作和呼叫非同步服務作業。  
@@ -56,7 +56,7 @@ ms.locfileid: "73424903"
 3. IAsyncResult 非同步模式  
   
 #### <a name="task-based-asynchronous-pattern"></a>以工作為基礎的非同步模式  
- 工作架構非同步模式是實作非同步作業的慣用方式，因為這是最簡單且最直接的方式。 若要使用這個方法，只需實作服務作業並指定 Task\<T> 的傳回類型，其中 T 是由邏輯作業傳回的類型。 例如:  
+ 工作架構非同步模式是實作非同步作業的慣用方式，因為這是最簡單且最直接的方式。 若要使用這個方法，只需實作服務作業並指定 Task\<T> 的傳回類型，其中 T 是由邏輯作業傳回的類型。 例如：  
   
 ```csharp  
 public class SampleService:ISampleService   
@@ -166,7 +166,7 @@ Function EndDoWork(ByRef inout As String, ByRef outonly As String, ByVal result 
 await simpleServiceClient.SampleMethodTaskAsync("hello, world");  
 ```  
   
- 使用事件架構非同步模式時，只需要加入事件處理常式以接收回應的通知 -- 結果事件會自動在使用者介面執行緒上引發。 若要使用此方法，請使用 [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 同時指定 **/async** 和 **/tcv:Version35** 命令選項，如下列範例所示。  
+ 使用事件架構非同步模式時，只需要加入事件處理常式以接收回應的通知 -- 結果事件會自動在使用者介面執行緒上引發。 若要使用此方法，請使用 **ServiceModel 中繼資料公用程式工具 (Svcutil.exe)** 同時指定 **/async** 和 [/tcv:Version35](servicemodel-metadata-utility-tool-svcutil-exe.md) 命令選項，如下列範例所示。  
   
 ```console  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
@@ -174,7 +174,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
   
  當完成時，Svcutil.exe 會產生 WCF 用戶端類別，其中的事件基礎結構能夠呼叫應用程式去實作與指派事件處理常式，以接收回應並採取適當的動作。 如需完整範例，請參閱[如何：以非同步方式呼叫服務作業](./feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
- 但是，事件架構非同步呼叫只能在 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 中使用。 此外，使用 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 建立 WCF 用戶端通道時，即使在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 中亦不支援此呼叫。 透過 WCF 用戶端通道物件，您必須使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 物件以非同步方式叫用您的作業。 若要使用此方法，請使用 [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 指定 **/async** 命令選項，如下列範例所示。  
+ 不過，事件架構非同步模型僅適用于 .NET Framework 3.5。 此外，在使用 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>建立 WCF 用戶端通道時，即使在 .NET Framework 3.5 中也不支援。 透過 WCF 用戶端通道物件，您必須使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 物件以非同步方式叫用您的作業。 若要使用此方法，請使用 **ServiceModel 中繼資料公用程式工具 (Svcutil.exe)** 指定 [/async](servicemodel-metadata-utility-tool-svcutil-exe.md) 命令選項，如下列範例所示。  
   
 ```console  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
@@ -182,7 +182,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
   
  這會產生服務合約，其中的每個作業會模型化為其 `<Begin>` 屬性會設為 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 的 `true` 方法，和對應的 `<End>` 方法。 如需使用 <xref:System.ServiceModel.ChannelFactory%601> 的完整範例，請參閱[如何：使用通道處理站以非同步方式呼叫作業](./feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)。  
   
- 無論何種情況下，即使是以同步方式實作服務，應用程式仍可以使用非同步方式叫用作業，而透過相同的方式，應用程式可以使用相同的模式，以非同步方式叫用本機同步方法。 執行作業的方式對用戶端來說並不重要;回應訊息抵達時，其內容會分派至用戶端的非同步 < `End` > 方法，而用戶端則會抓取資訊。  
+ 無論何種情況下，即使是以同步方式實作服務，應用程式仍可以使用非同步方式叫用作業，而透過相同的方式，應用程式可以使用相同的模式，以非同步方式叫用本機同步方法。 執行作業的方式對用戶端來說並不重要;回應訊息抵達時，其內容會分派至用戶端的非同步 <`End`> 方法，而用戶端則會抓取資訊。  
   
 ### <a name="one-way-message-exchange-patterns"></a>單向訊息交換模式  
  您也可以建立非同步訊息交換模式，而在這個模式中，用戶端或服務可以不管另一端，以任何方向傳送單向作業 (這是 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 為 `true` 的作業，而且沒有相關聯的回應) （這會搭配使用雙工訊息交換模式與單向訊息）。在此情況下，服務合約會指定單向訊息交換，其中任一端都可以適當地實作為非同步呼叫或執行。 一般來說，當合約為單向訊息交換時，就可以大量地非同步實作，因為一旦傳送訊息時，應用程式不會等待回覆就可繼續執行其他工作。  

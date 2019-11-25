@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: c98035ef0b4ea1add22b09fb9927bcd49c00cd9b
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d9cf092cf47d4fb70b15033d039777d3279b633a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920047"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283565"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>建立外觀可自訂的控制項
 
@@ -36,9 +36,9 @@ ms.locfileid: "72920047"
 ![NumericUpDown 自訂控制項。](./media/ndp-numericupdown.png "NDP_NumericUPDown")
 自訂 NumericUpDown 控制項
 
-此主題包括下列章節：
+本主題包含下列各節：
 
-- [先決條件](#prerequisites)
+- [必要條件](#prerequisites)
 
 - [元件和狀態模型](#parts_and_states_model)
 
@@ -52,9 +52,9 @@ ms.locfileid: "72920047"
 
 <a name="prerequisites"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
-本主題假設您知道如何為現有的控制項建立新的 <xref:System.Windows.Controls.ControlTemplate>、熟悉控制項合約上的元素為何，以及瞭解在[自訂現有控制項的外觀時所討論的概念，方法是建立ControlTemplate](customizing-the-appearance-of-an-existing-control.md)。
+本主題假設您知道如何為現有的控制項建立新的 <xref:System.Windows.Controls.ControlTemplate>、熟悉控制項合約上的元素為何，以及瞭解[建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)中所討論的概念。
 
 > [!NOTE]
 > 若要建立可自訂其外觀的控制項，您必須建立繼承自 <xref:System.Windows.Controls.Control> 類別的控制項，或是 <xref:System.Windows.Controls.UserControl>以外的其中一個子類別。  繼承自 <xref:System.Windows.Controls.UserControl> 的控制項是可以快速建立的控制項，但不會使用 <xref:System.Windows.Controls.ControlTemplate>，而且您無法自訂其外觀。
@@ -77,7 +77,7 @@ ms.locfileid: "72920047"
 
 ## <a name="defining-the-visual-structure-and-visual-behavior-of-a-control-in-a-controltemplate"></a>在 ControlTemplate 中定義控制項的視覺化結構和視覺行為
 
-當您使用「元件和狀態」模型來建立自訂控制項時，您可以在其 <xref:System.Windows.Controls.ControlTemplate> 而不是在其邏輯中，定義控制項的視覺化結構和視覺效果行為。  控制項的視覺化結構是組成控制項的 <xref:System.Windows.FrameworkElement> 物件的複合。  視覺行為是控制項處於特定狀態時的顯示方式。   如需建立 <xref:System.Windows.Controls.ControlTemplate> 以指定控制項的視覺化結構和視覺行為的詳細資訊，請參閱藉[由建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。
+當您使用「元件和狀態」模型來建立自訂控制項時，您可以在其 <xref:System.Windows.Controls.ControlTemplate> 而不是在其邏輯中，定義控制項的視覺化結構和視覺效果行為。  控制項的視覺化結構是組成控制項的 <xref:System.Windows.FrameworkElement> 物件的複合。  視覺行為是控制項處於特定狀態時的顯示方式。   如需建立 <xref:System.Windows.Controls.ControlTemplate> 的詳細資訊，以指定控制項的視覺化結構和視覺行為，請參閱[建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)。
 
 在 `NumericUpDown` 控制項的範例中，視覺化結構包含兩個 <xref:System.Windows.Controls.Primitives.RepeatButton> 控制項和一個 <xref:System.Windows.Controls.TextBlock>。  如果您在 `NumericUpDown` 控制項的程式碼中加入這些控制項--在其函式中（例如），則這些控制項的位置會是改變。  您不需要在其程式碼中定義控制項的視覺化結構和視覺行為，而是在 <xref:System.Windows.Controls.ControlTemplate>中定義它。  然後，應用程式開發人員自訂按鈕和 <xref:System.Windows.Controls.TextBlock> 的位置，並指定 `Value` 為負數時所發生的行為，因為可以取代 <xref:System.Windows.Controls.ControlTemplate>。
 
@@ -85,7 +85,7 @@ ms.locfileid: "72920047"
 
 [!code-xaml[VSMCustomControl#VisualStructure](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]
 
-`NumericUpDown` 控制項的視覺行為是，如果值為負數，則其值為紅色字型。  如果您在 `Value` 為負數時，在程式碼中變更 <xref:System.Windows.Controls.TextBlock> 的 <xref:System.Windows.Controls.TextBlock.Foreground%2A>，則 `NumericUpDown` 一律會顯示紅色的負數值。 您可以藉由將 <xref:System.Windows.VisualState> 物件加入至 <xref:System.Windows.Controls.ControlTemplate>，在 <xref:System.Windows.Controls.ControlTemplate> 中指定控制項的視覺行為。  下列範例顯示 `Positive` 和 `Negative` 狀態的 <xref:System.Windows.VisualState> 物件。  `Positive` 和 `Negative` 互斥（控制項一律為兩者的其中一個），因此範例會將 <xref:System.Windows.VisualState> 物件放入單一 <xref:System.Windows.VisualStateGroup>中。  當控制項進入 `Negative` 狀態時，<xref:System.Windows.Controls.TextBlock> 的 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 會變成紅色。  當控制項處於 `Positive` 狀態時，<xref:System.Windows.Controls.TextBlock.Foreground%2A> 會回到其原始值。  藉[由建立 ControlTemplate，在自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)中，進一步討論在 <xref:System.Windows.Controls.ControlTemplate> 中定義 <xref:System.Windows.VisualState> 物件。
+`NumericUpDown` 控制項的視覺行為是，如果值為負數，則其值為紅色字型。  如果您在 `Value` 為負數時，在程式碼中變更 <xref:System.Windows.Controls.TextBlock> 的 <xref:System.Windows.Controls.TextBlock.Foreground%2A>，則 `NumericUpDown` 一律會顯示紅色的負數值。 您可以藉由將 <xref:System.Windows.VisualState> 物件加入至 <xref:System.Windows.Controls.ControlTemplate>，在 <xref:System.Windows.Controls.ControlTemplate> 中指定控制項的視覺行為。  下列範例顯示 `Positive` 和 `Negative` 狀態的 <xref:System.Windows.VisualState> 物件。  `Positive` 和 `Negative` 互斥（控制項一律為兩者的其中一個），因此範例會將 <xref:System.Windows.VisualState> 物件放入單一 <xref:System.Windows.VisualStateGroup>中。  當控制項進入 `Negative` 狀態時，<xref:System.Windows.Controls.TextBlock> 的 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 會變成紅色。  當控制項處於 `Positive` 狀態時，<xref:System.Windows.Controls.TextBlock.Foreground%2A> 會回到其原始值。  [建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)中會進一步討論在 <xref:System.Windows.Controls.ControlTemplate> 中定義 <xref:System.Windows.VisualState> 物件。
 
 > [!NOTE]
 > 請務必在 <xref:System.Windows.Controls.ControlTemplate>的根 <xref:System.Windows.FrameworkElement> 上設定 <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> 附加屬性。
@@ -168,7 +168,7 @@ ms.locfileid: "72920047"
 
 如果您在控制項已處於該狀態時，將狀態名稱傳遞給 <xref:System.Windows.VisualStateManager.GoToState%2A>，<xref:System.Windows.VisualStateManager.GoToState%2A> 不會執行任何動作，因此您不需要檢查控制項的目前狀態。  例如，如果 `Value` 從一個負數變更為另一個負數，則 `Negative` 狀態的分鏡腳本不會中斷，使用者也不會在控制項中看到變更。
 
-當您呼叫 <xref:System.Windows.VisualStateManager.GoToState%2A>時，<xref:System.Windows.VisualStateManager> 會使用 <xref:System.Windows.VisualStateGroup> 物件來決定要結束的狀態。 控制項在其 <xref:System.Windows.Controls.ControlTemplate> 中定義的每個 <xref:System.Windows.VisualStateGroup> 一定會處於一種狀態，而且只有在從相同 <xref:System.Windows.VisualStateGroup>進入另一個狀態時，才會離開狀態。 例如，`NumericUpDown` 控制項的 <xref:System.Windows.Controls.ControlTemplate> 會定義一個<xref:System.Windows.VisualState> 中的 `Positive` 和 `Negative`<xref:System.Windows.VisualStateGroup> 物件，以及另一個 `Focused` 中的 `Unfocused`和<xref:System.Windows.VisualState> 物件。 （當控制項從 `Positive` 狀態變成 `Negative` 狀態時，您可以查看本主題的[完整範例](#complete_example)一節中所定義的 `Focused` 和 `Unfocused`<xref:System.Windows.VisualState>，反之亦然，控制項會保留在 `Focused` 或 `Unfocused`狀態.
+當您呼叫 <xref:System.Windows.VisualStateManager.GoToState%2A>時，<xref:System.Windows.VisualStateManager> 會使用 <xref:System.Windows.VisualStateGroup> 物件來決定要結束的狀態。 控制項在其 <xref:System.Windows.Controls.ControlTemplate> 中定義的每個 <xref:System.Windows.VisualStateGroup> 一定會處於一種狀態，而且只有在從相同 <xref:System.Windows.VisualStateGroup>進入另一個狀態時，才會離開狀態。 例如，`NumericUpDown` 控制項的 <xref:System.Windows.Controls.ControlTemplate> 會定義一個 <xref:System.Windows.VisualState> 中的 `Positive` 和 `Negative`<xref:System.Windows.VisualStateGroup> 物件，以及另一個 `Focused` 中的 `Unfocused`和 <xref:System.Windows.VisualState> 物件。 （當控制項從 `Positive` 狀態變成 `Negative` 狀態時，您可以查看本主題的[完整範例](#complete_example)一節中所定義的 `Focused` 和 `Unfocused`<xref:System.Windows.VisualState>，反之亦然，控制項會保持在 `Focused` 或 `Unfocused` 狀態。
 
 有三個典型的位置，控制項的狀態可能會變更：
 
@@ -255,5 +255,5 @@ ms.locfileid: "72920047"
 
 ## <a name="see-also"></a>請參閱
 
-- [透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)
+- [建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)
 - [控制項自訂](control-customization.md)

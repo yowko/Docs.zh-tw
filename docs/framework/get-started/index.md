@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: cb56097d49b194234031aba3ee9811b961ae6c64
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ca2a4e6c44a26889a2fffa5cc5fa2cbba3eab782
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107728"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281824"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 使用者入門
 
@@ -65,7 +65,7 @@ ms.locfileid: "73107728"
 
 1. 如果未在作業系統上預先安裝，請安裝要當成應用程式目標的 .NET Framework 版本。 最近的生產版本是 .NET Framework 4.8。 它已預先安裝在 Windows 10 May 2019 Update 上，在舊版 Windows 作業系統上則必須自行下載。 如需 .NET Framework 系統需求，請參閱[系統需求](system-requirements.md)。 如需安裝其他 .NET Framework 版本的資訊，請參閱[安裝指南](../install/guide-for-developers.md)。 其他.NET Framework 套件會在頻外發行，也就是在任何定期或排程發行週期以外輪流發行。 如需這些套件的資訊，請參閱 [.NET Framework 和不定期發行](the-net-framework-and-out-of-band-releases.md)。
 
-2. 選取您要用來開發應用程式且 .NET Framework 也支援的語言。 有多種語言可供選擇，包括 Microsoft 的 [Visual Basic](../../visual-basic/index.md)[C#](../../csharp/index.md)、[F#](../../fsharp/index.md) 及 [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp)。 (可讓您開發 .NET Framework 應用程式的程式設計語言會遵循[通用語言基礎結構 (CLI) 規格](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/))。
+2. 選取您要用來開發應用程式且 .NET Framework 也支援的語言。 有多種語言可供選擇，包括 Microsoft 的 [Visual Basic](../../visual-basic/index.md)[C#](../../csharp/index.yml)、[F#](../../fsharp/index.md) 及 [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp)。 (可讓您開發 .NET Framework 應用程式的程式設計語言會遵循[通用語言基礎結構 (CLI) 規格](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/))。
 
 3. 選取並安裝要用來建立應用程式，且支援所選程式設計語言的開發環境。 適用於 .NET Framework 應用程式的 Microsoft 整合式開發環境 (IDE) 為 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 並有多個版本可供使用。
 

@@ -4,18 +4,18 @@ description: 了解如何對 Windows 上的 .NET for Apache Spark 應用程式�
 ms.date: 08/15/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: dcaca96f6eb871c15a37adc18190b073c63c8e93
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 098c7519fe99ef04773c5e4b81685ca0f06f1272
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206151"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281521"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>對 .NET for Apache Spark 應用程式進行偵錯
 
 此操作說明提供對 Windows 上的 .NET for Apache Spark 應用程式和 Scala 程式碼進行偵錯時，所需執行的命令。
 
-## <a name="debug-your-application"></a>為您的應用程式偵錯
+## <a name="debug-your-application"></a>對應用程式進行 Debug
 
 開啟新的命令提示字元視窗，執行下列命令：
 
@@ -29,7 +29,7 @@ spark-submit \
 
 當您執行命令時，您會看到下列輸出：
 
-```
+```console
 ***********************************************************************
 * .NET Backend running debug mode. Press enter to exit *
 ***********************************************************************

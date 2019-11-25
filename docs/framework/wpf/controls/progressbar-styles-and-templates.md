@@ -9,15 +9,15 @@ helpviewer_keywords:
 - templates [WPF], ProgressBar
 - states [WPF], ProgressBar
 ms.assetid: 935aa600-16e6-4947-a905-37a189a583dd
-ms.openlocfilehash: 3a1bea39ba9b6d2cff9937a3fee1d1de41daf16b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 6551701e86dd6abcd42f143f146c7bdadfeabbcf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459879"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283445"
 ---
 # <a name="progressbar-styles-and-templates"></a>ProgressBar 樣式和範本
-本主題描述 <xref:System.Windows.Controls.ProgressBar> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
+本主題描述 <xref:System.Windows.Controls.ProgressBar> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
   
 ## <a name="progressbar-parts"></a>ProgressBar 元件  
  下表列出 <xref:System.Windows.Controls.ProgressBar> 控制項的已命名元件。  
@@ -57,4 +57,4 @@ ms.locfileid: "73459879"
 - [控制項的樣式和範本](control-styles-and-templates.md)
 - [控制項自訂](control-customization.md)
 - [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)
+- [建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)

@@ -1,5 +1,5 @@
 ---
-title: MustOverride (Visual Basic)
+title: New
 ms.date: 07/20/2015
 f1_keywords:
 - vb.MustOverride
@@ -15,28 +15,28 @@ helpviewer_keywords:
 - MustOverride keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-ms.openlocfilehash: f5932b28c4664dd59dad829228f2186e78108af5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dc6a153a604fd0e5cee9d7d46ebcd63294f33628
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661247"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351487"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
-指定屬性或程序不這個類別中實作，而且必須覆寫衍生類別中才可以使用。  
+Specifies that a property or procedure is not implemented in this class and must be overridden in a derived class before it can be used.  
   
 ## <a name="remarks"></a>備註  
- 您只能在屬性或程序宣告陳述式中使用 `MustOverride`。 屬性或程序，指定`MustOverride`必須是類別的成員，且該類別必須標示[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。  
+ You can use `MustOverride` only in a property or procedure declaration statement. The property or procedure that specifies `MustOverride` must be a member of a class, and the class must be marked [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).  
   
 ## <a name="rules"></a>規則  
   
-- **不完整的宣告。** 當您指定`MustOverride`，您未提供任何額外的數行程式碼的屬性或程序中，不甚至`End Function`， `End Property`，或`End Sub`陳述式。  
+- **Incomplete Declaration.** When you specify `MustOverride`, you do not supply any additional lines of code for the property or procedure, not even the `End Function`, `End Property`, or `End Sub` statement.  
   
-- **結合的修飾詞。** 您無法指定`MustOverride`連同`NotOverridable`， `Overridable`，或`Shared`相同宣告中。  
+- **Combined Modifiers.** You cannot specify `MustOverride` together with `NotOverridable`, `Overridable`, or `Shared` in the same declaration.  
   
-- **遮蔽和覆寫。** 遮蔽和覆寫都會重新定義繼承的項目，但這兩種方法之間有顯著的差異。 如需詳細資訊，請參閱 < [Visual Basic 中的遮蔽功能](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
+- **Shadowing and Overriding.** 遮蔽和覆寫都會重新定義繼承的項目，但這兩種方法之間有顯著的差異。 For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
-- **替代的字詞。** 不使用以外，覆寫中的項目有時稱為*純虛擬*項目。  
+- **Alternate Terms.** An element that cannot be used except in an override is sometimes called a *pure virtual* element.  
   
  `MustOverride` 修飾詞可用於以下內容：  
   
@@ -46,11 +46,11 @@ ms.locfileid: "64661247"
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
-- [Visual Basic 中的遮蔽功能](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

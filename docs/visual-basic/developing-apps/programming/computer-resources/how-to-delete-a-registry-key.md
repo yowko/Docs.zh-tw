@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中刪除登錄機碼
+title: 如何：刪除登錄機碼
 ms.date: 07/20/2015
 f1_keywords:
 - vb.DeleteSetting
@@ -11,14 +11,15 @@ helpviewer_keywords:
 - registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-ms.openlocfilehash: 2e0c8990fcc55bc4208b1c23690ff748b7167002
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f38301a3a717a35b98e55804d6435d046bbbbab4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662762"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345646"
 ---
-# <a name="how-to-delete-a-registry-key-in-visual-basic"></a>作法：在 Visual Basic 中刪除登錄機碼
+# <a name="how-to-delete-a-registry-key-in-visual-basic"></a>如何：在 Visual Basic 中刪除登錄機碼
+
 <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 和 <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> 方法可用來刪除登錄機碼。  
   
 ## <a name="procedure"></a>程序  
@@ -30,6 +31,7 @@ ms.locfileid: "64662762"
      [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
+
  如果機碼/值組不存在，則 `DeleteSubKey` 方法會傳回空字串。  
   
  以下條件可能會造成例外狀況：  
@@ -43,9 +45,10 @@ ms.locfileid: "64662762"
 - 登錄機碼為唯讀 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
+
  如果未授與足夠的執行階段權限 (<xref:System.Security.Permissions.RegistryPermission>)，或使用者沒有建立或寫入至設定的正確存取權 (透過 ACL 所決定)，則登錄呼叫會失敗。 例如，具有程式碼存取安全性權限的本機應用程式，可能不具有作業系統權限。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey>

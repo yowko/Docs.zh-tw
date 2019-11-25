@@ -1,15 +1,15 @@
 ---
-title: 作法：尋找子項目的子系 (XPath-LINQ to XML) (C#)
+title: 如何尋找子專案的子代（XPath-LINQ to XML）（C#）
 ms.date: 07/20/2015
 ms.assetid: 505b7512-bb8b-4f85-abbf-491f039c961e
-ms.openlocfilehash: f17d723aa03c45daa4e7e741ea6b14c637537ccf
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: fb3e20ce21c1f6d2a71f2f71b8acec7cecf0f3ed
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253708"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141089"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>作法：尋找子項目的子系 (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>如何尋找子專案的子代（XPath-LINQ to XML）（C#）
 本主題顯示如何利用特定名稱取得子項目的子代項目。  
   
  XPath 運算式為：  

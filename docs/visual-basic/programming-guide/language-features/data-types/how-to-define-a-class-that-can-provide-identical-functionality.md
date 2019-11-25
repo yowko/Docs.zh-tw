@@ -1,5 +1,5 @@
 ---
-title: 作法：定義的類別，可提供完全相同的功能上不同的資料類型 (Visual Basic)
+title: 如何：定義可以在不同資料類型上提供完全相同功能的類別
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data type arguments [Visual Basic], using
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 19988e766d0f9ec895a24dddfcd17d0854aaf8ad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d80623d9e55358d37aa45f11f1525c80a09b91a6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757405"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350046"
 ---
-# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>作法：定義的類別，可提供完全相同的功能上不同的資料類型 (Visual Basic)
+# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>如何：定義可以在不同資料類型上提供完全相同功能的類別 (Visual Basic)
 您可以定義一個類別，以從中建立可在不同資料類型上提供相同功能的物件。 若要這樣做，請在定義中指定一個或多個 *「類型參數」* (type parameter)。 類別之後可以作為使用各種資料類型之物件的範本。 使用這種方法所定義的類別稱為 *「泛型類別」* (generic class)。  
   
  定義泛型類別的優點是只需要定義一次，而且您的程式碼可以使用它來建立許多使用各種資料類型的物件。 這所導致的效能優於定義具有 `Object` 類型的類別。  
@@ -62,7 +62,7 @@ ms.locfileid: "67757405"
   
 6. 請確定您的程式碼只會使用它可提供給 `itemType`之任何資料類型所支援的作業和方法。  
   
-     下列範例定義可管理極簡單清單的類別。 它會將清單保留在內部陣列 `items`中，而 using 程式碼可以宣告清單項目的資料類型。 參數化建構函式可讓您使用程式碼以設定上限`items`，並無參數建構函式設定這個項目為 9 (總共 10 個項目）。  
+     下列範例定義可管理極簡單清單的類別。 它會將清單保留在內部陣列 `items`中，而 using 程式碼可以宣告清單項目的資料類型。 A parameterized constructor allows the using code to set the upper bound of `items`, and the parameterless constructor sets this to 9 (for a total of 10 items).  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
@@ -74,7 +74,7 @@ ms.locfileid: "67757405"
   
      [!code-vb[VbVbalrDataTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#8)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

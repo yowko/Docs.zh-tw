@@ -2,15 +2,15 @@
 title: 延伸對錯誤處理和報告的控制
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: d7efc87d7d8a913642c4ac0e3d6d19cd0a9259c5
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: abb747a0deecb7e07776d9cd6ef5bc3775b1be9d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989937"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281697"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>延伸對錯誤處理和報告的控制
-這個範例會示範如何使用<xref:System.ServiceModel.Dispatcher.IErrorHandler>介面，在 Windows Communication Foundation （WCF）服務中擴充錯誤處理和錯誤報表的控制。 此範例是以[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎，並在服務中加入一些額外的程式碼來處理錯誤。 用戶端會強制產生數個錯誤狀況。 服務則攔截這些錯誤並記錄在檔案中。  
+這個範例會示範如何使用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 介面，在 Windows Communication Foundation （WCF）服務中擴充錯誤處理和錯誤報表的控制。 此範例是以[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎，並在服務中加入一些額外的程式碼來處理錯誤。 用戶端會強制產生數個錯誤狀況。 服務則攔截這些錯誤並記錄在檔案中。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -19,39 +19,39 @@ ms.locfileid: "70989937"
   
  在這個範例中，`CalculatorErrorHandler` 型別會實作 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 介面。 在  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> 方法中，`CalculatorErrorHandler` 會將錯誤記錄寫入 c:\logs 中的 Error.txt 文字檔。 請注意，此範例會記錄錯誤，但不加以隱藏，目的是為了將該錯誤回報到用戶端。  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> 方法中，`CalculatorErrorHandler` 會將錯誤的記錄寫入 c:\logs 中的錯誤 .txt 文字檔。 請注意，此範例會記錄錯誤，但不加以隱藏，目的是為了將該錯誤回報到用戶端。  
   
-```csharp  
-public class CalculatorErrorHandler : IErrorHandler  
-{  
-        // Provide a fault. The Message fault parameter can be replaced, or set to  
-        // null to suppress reporting a fault.  
-  
-        public void ProvideFault(Exception error, MessageVersion version, ref Message fault)  
-        {  
-        }  
-  
-        // HandleError. Log an error, then allow the error to be handled as usual.  
-        // Return true if the error is considered as already handled  
-  
-        public bool HandleError(Exception error)  
-        {  
-            using (TextWriter tw = File.AppendText(@"c:\logs\error.txt"))  
-            {  
-                if (error != null)  
-                {  
-                    tw.WriteLine("Exception: " + error.GetType().Name + " - " + error.Message);  
-                }  
-                tw.Close();  
-            }  
-            return true;  
-        }  
-    }  
+```csharp
+public class CalculatorErrorHandler : IErrorHandler
+{
+    // Provide a fault. The Message fault parameter can be replaced, or set to
+    // null to suppress reporting a fault.
+
+    public void ProvideFault(Exception error, MessageVersion version, ref Message fault)
+    {
+    }
+
+    // HandleError. Log an error, then allow the error to be handled as usual.
+    // Return true if the error is considered as already handled
+
+    public bool HandleError(Exception error)
+    {
+        using (TextWriter tw = File.AppendText(@"c:\logs\error.txt"))
+        {
+            if (error != null)
+            {
+                tw.WriteLine("Exception: " + error.GetType().Name + " - " + error.Message);
+            }
+            tw.Close();
+        }
+        return true;
+    }
+}  
 ```  
   
  `ErrorBehaviorAttribute` 是向服務註冊錯誤處理常式的機制。 這個屬性接受單一型別參數。 此型別必須實作 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 介面，而且必須具有空的公用建構函式。 屬性會接著產生錯誤處理常式型別執行個體的實體，然後將它安裝到服務中。 而方式是實作 <xref:System.ServiceModel.Description.IServiceBehavior> 介面，然後再使用 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> 方法將錯誤處理常式的執行個體新增至服務。  
   
-```csharp  
+```csharp
 // This attribute can be used to install a custom error handler for a service.  
 public class ErrorBehaviorAttribute : Attribute, IServiceBehavior  
 {  
@@ -98,8 +98,8 @@ public class ErrorBehaviorAttribute : Attribute, IServiceBehavior
   
  這個範例會實作一個計算機服務。 用戶端刻意將不合法的值提供給參數，導致服務上發生兩個錯誤。 `CalculatorErrorHandler` 使用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 介面將錯誤記錄到本機檔案，然後讓這些錯誤回報至用戶端。 用戶端便會強制產生「除以零」和「引數超出範圍」的狀況。  
   
-```csharp  
-try  
+```csharp
+try
 {  
     Console.WriteLine("Forcing an error in Divide");  
     // Call the Divide service operation - trigger a divide by 0 error.  
@@ -120,7 +120,7 @@ catch (Exception e)
   
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 您將會看到其中已將「除以零」和「引數超出範圍」的狀況回報為錯誤。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
-```  
+```console  
 Add(15,3) = 18  
 Subtract(145,76) = 69  
 Multiply(9,81) = 729  
@@ -143,17 +143,17 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
   
 1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。  
+2. 若要建立方案，請依照[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。  
   
 3. 確定您已為 error.txt 檔案建立 c:\logs 目錄。 或者，修改 `CalculatorErrorHandler.HandleError` 中使用的檔案名稱。  
   
-4. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  

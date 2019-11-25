@@ -1,15 +1,15 @@
 ---
-title: 作法：根據位置尋找子項目 (XPath-LINQ to XML) (C#)
+title: 如何根據位置尋找子項目（XPath-LINQ to XML）（C#）
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
-ms.openlocfilehash: 1adbbb6dd074ffcb39269a800024e444cf8791d1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cc0ff5639345d36ebb0423a12b66de8f1a70ade1
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253764"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141115"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>作法：根據位置尋找子項目 (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>如何根據位置尋找子項目（XPath-LINQ to XML）（C#）
 有時候您會想要根據項目的位置尋找這些項目。 您可能想要尋找第二個項目，或者想要尋找第三到第五個項目。  
   
  XPath 運算式為：  
@@ -21,7 +21,7 @@ ms.locfileid: "70253764"
 ## <a name="example"></a>範例  
  這個範例會尋找第二到第四個 `Test` 項目。 結果為項目的集合。  
   
- 此範例使用下列 XML 文件：[XML 範例檔：測試組態 (LINQ to XML)](./sample-xml-file-test-configuration-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：測試組態 (LINQ to XML)](./sample-xml-file-test-configuration-linq-to-xml.md)。  
   
 ```csharp  
 XElement testCfg = XElement.Load("TestConfig.xml");  

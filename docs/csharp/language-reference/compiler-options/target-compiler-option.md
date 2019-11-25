@@ -9,18 +9,18 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: 073660fa732c04cdc987af5617b894a277ebcc0f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: af7bd917f57c8752a2026fbb98aa8b22adc98db7
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970119"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204521"
 ---
 # <a name="-target-c-compiler-options"></a>-target (C# 編譯器選項)
 您可以使用四種形式之一來指定 **-target** 編譯器選項︰  
   
  [-target:appcontainerexe](./target-appcontainerexe-compiler-option.md)  
- 建立 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]應用程式的 .exe 檔。  
+ To create an .exe file for Windows 8.x Store apps.  
   
  [-target:exe](./target-exe-compiler-option.md)  
  建立 .exe 檔案。  
@@ -37,7 +37,7 @@ ms.locfileid: "70970119"
  [-target:winmdobj](./target-winmdobj-compiler-option.md)  
  建立中繼 .winmdobj 檔案。  
   
- 除非您指定 **-target:module**，否則 **-target** 會將 .NET Framework 組件資訊清單放入輸出檔案中。 如需詳細資訊，請參閱[.net 中的元件](../../../standard/assembly/index.md)和[通用屬性](../../programming-guide/concepts/attributes/common-attributes.md)。  
+ 除非您指定 **-target:module**，否則 **-target** 會將 .NET Framework 組件資訊清單放入輸出檔案中。 For more information, see [Assemblies in .NET](../../../standard/assembly/index.md) and [Common Attributes](../../programming-guide/concepts/attributes/common-attributes.md).  
   
  編譯時，組件資訊清單會放在第一個 .exe 輸出檔，如果沒有 .exe 輸出檔，則會放在第一個 DLL 中。 例如，在下列命令列中，資訊清單會放在 `1.exe` 中：  
   
@@ -62,7 +62,7 @@ public class TestClass
   
  如需以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

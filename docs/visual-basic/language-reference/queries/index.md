@@ -1,64 +1,64 @@
 ---
-title: 查詢 (Visual Basic)
+title: 查詢
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: 1ea49b16f70c0af87bbd3a8978fb10fe08d5ce6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a4a926d089a8bec1abaa47404f6c9112687e6df2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052140"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350446"
 ---
 # <a name="queries-visual-basic"></a>查詢 (Visual Basic)
-Visual Basic 可讓您建立[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]程式碼中的運算式。  
+Visual Basic enables you to create [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- 描述`Aggregate`子句，這會套用至集合的一個或多個彙總函式。  
+ Describes the `Aggregate` clause, which applies one or more aggregate functions to a collection.  
   
  [Distinct 子句](../../../visual-basic/language-reference/queries/distinct-clause.md)  
- 描述`Distinct`子句，限制目前的範圍變數，以消除重複的值，查詢結果中的值。  
+ Describes the `Distinct` clause, which restricts the values of the current range variable to eliminate duplicate values in query results.  
   
  [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
- 描述`From`子句，指定的集合和查詢的範圍變數。  
+ Describes the `From` clause, which specifies a collection and a range variable for a query.  
   
  [Group By 子句](../../../visual-basic/language-reference/queries/group-by-clause.md)  
- 描述`Group By`子句，分組查詢結果的項目，而且可用來將彙總函式套用至每個群組。  
+ Describes the `Group By` clause, which groups the elements of a query result and can be used to apply aggregate functions to each group.  
   
  [Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- 描述`Group Join`子句結合成單一階層式集合的兩個集合。  
+ Describes the `Group Join` clause, which combines two collections into a single hierarchical collection.  
   
  [Join 子句](../../../visual-basic/language-reference/queries/join-clause.md)  
- 描述`Join`子句結合成單一集合的兩個集合。  
+ Describes the `Join` clause, which combines two collections into a single collection.  
   
  [Let 子句](../../../visual-basic/language-reference/queries/let-clause.md)  
- 描述`Let`子句，可計算值，並將它指派給新的變數，在查詢中。  
+ Describes the `Let` clause, which computes a value and assigns it to a new variable in the query.  
   
  [Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- 描述`Order By`子句，指定在查詢中的資料行的排序次序。  
+ Describes the `Order By` clause, which specifies the sort order for columns in a query.  
   
  [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
- 描述`Select`子句，其中會宣告一組查詢的範圍變數。  
+ Describes the `Select` clause, which declares a set of range variables for a query.  
   
  [Skip 子句](../../../visual-basic/language-reference/queries/skip-clause.md)  
- 描述`Skip`子句，可略過指定的集合中的元素數目，然後傳回其餘項目。  
+ Describes the `Skip` clause, which bypasses a specified number of elements in a collection and then returns the remaining elements.  
   
  [Skip While 子句](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- 描述`Skip While`子句，可略過集合中的項目，只要指定的條件是`true`然後傳回其餘項目。  
+ Describes the `Skip While` clause, which bypasses elements in a collection as long as a specified condition is `true` and then returns the remaining elements.  
   
  [Take 子句](../../../visual-basic/language-reference/queries/take-clause.md)  
- 描述`Take`子句，從集合開頭傳回指定的數目的連續項目。  
+ Describes the `Take` clause, which returns a specified number of contiguous elements from the start of a collection.  
   
  [Take While 子句](../../../visual-basic/language-reference/queries/take-while-clause.md)  
- 描述`Take While`子句，其中包含集合中的項目，只要指定的條件是`true`並略過其餘項目。  
+ Describes the `Take While` clause, which includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.  
   
  [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)  
- 描述`Where`子句，指定查詢的篩選條件。  
+ Describes the `Where` clause, which specifies a filtering condition for a query.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

@@ -1,15 +1,15 @@
 ---
-title: 作法：偵錯空的查詢結果集 (C#)
+title: 如何調試空的查詢結果集（C#）
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: 12d2132f1f088050fdd109d067069870b82f2661
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 2716f7c525ac6bee8d2fb374e4ecc4c975d852a0
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205313"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141288"
 ---
-# <a name="how-to-debug-empty-query-results-sets-c"></a>作法：偵錯空的查詢結果集 (C#)
+# <a name="how-to-debug-empty-query-results-sets-c"></a>如何調試空的查詢結果集（C#）
 查詢 XML 時所遇到的其中一個最常見的問題是，如果 XML 樹狀結構有預設的命名空間，即使 XML 不在命名空間中，開發人員有時候還是會撰寫查詢。  
   
  本主題中的第一組範例會顯示將 XML 載入預設命名空間而且查詢錯誤的常見方式。  

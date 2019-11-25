@@ -1,5 +1,5 @@
 ---
-title: SyncLock 語句（Visual Basic）
+title: SyncLock 陳述式
 ms.date: 07/20/2015
 f1_keywords:
 - vb.SyncLock
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: e981ee727b66ecda392014fd3ee8ca6f1526cd2e
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 0f430edce99513b0de9ef437d70648a128b336b8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578904"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352810"
 ---
 # <a name="synclock-statement"></a>SyncLock 陳述式
-在執行區塊之前，取得語句區塊的獨佔鎖定。  
+Acquires an exclusive lock for a statement block before executing the block.  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,62 +29,62 @@ End SyncLock
   
 ## <a name="parts"></a>組件  
  `lockobject`  
- 必要項。 評估為物件參考的運算式。  
+ 必要項。 Expression that evaluates to an object reference.  
   
  `block`  
- 選擇項。 取得鎖定時要執行的語句區塊。  
+ 選擇項。 Block of statements that are to execute when the lock is acquired.  
   
  `End SyncLock`  
- 終止 `SyncLock` 區塊。  
+ Terminates a `SyncLock` block.  
   
 ## <a name="remarks"></a>備註  
- @No__t_0 語句可確保多個執行緒不會同時執行語句區塊。 `SyncLock` 可防止每個執行緒進入區塊，直到沒有其他執行緒正在執行它為止。  
+ The `SyncLock` statement ensures that multiple threads do not execute the statement block at the same time. `SyncLock` prevents each thread from entering the block until no other thread is executing it.  
   
- @No__t_0 最常見的用法是保護資料，使其不會同時由一個以上的執行緒更新。 如果運算元據的語句必須在不中斷的情況下進入完成，請將它們放在 `SyncLock` 區塊內。  
+ The most common use of `SyncLock` is to protect data from being updated by more than one thread simultaneously. If the statements that manipulate the data must go to completion without interruption, put them inside a `SyncLock` block.  
   
- 獨佔鎖定所保護的語句區塊有時稱為*重要區段*。  
+ A statement block protected by an exclusive lock is sometimes called a *critical section*.  
   
 ## <a name="rules"></a>規則  
   
-- 分支. 您無法從區塊外部分支到 `SyncLock` 區塊。  
+- Branching. You cannot branch into a `SyncLock` block from outside the block.  
   
-- 鎖定物件值。 @No__t_0 的值無法 `Nothing`。 您必須先建立鎖定物件，才能在 `SyncLock` 語句中使用它。  
+- Lock Object Value. The value of `lockobject` cannot be `Nothing`. You must create the lock object before you use it in a `SyncLock` statement.  
   
-     執行 `SyncLock` 區塊時，您無法變更 `lockobject` 的值。 此機制會要求鎖定物件保持不變。  
+     You cannot change the value of `lockobject` while executing a `SyncLock` block. The mechanism requires that the lock object remain unchanged.  
   
-- 您不能在 `SyncLock` 區塊中使用[Await](../../../visual-basic/language-reference/operators/await-operator.md)運算子。  
+- You can't use the [Await](../../../visual-basic/language-reference/operators/await-operator.md) operator in a `SyncLock` block.  
   
 ## <a name="behavior"></a>行為  
   
-- 機構. 當執行緒到達 `SyncLock` 語句時，它會評估 `lockobject` 運算式並暫停執行，直到它取得運算式所傳回之物件的獨佔鎖定為止。 當另一個執行緒到達 `SyncLock` 語句時，它就不會取得鎖定，直到第一個執行緒執行 `End SyncLock` 語句為止。  
+- Mechanism. When a thread reaches the `SyncLock` statement, it evaluates the `lockobject` expression and suspends execution until it acquires an exclusive lock on the object returned by the expression. When another thread reaches the `SyncLock` statement, it does not acquire a lock until the first thread executes the `End SyncLock` statement.  
   
-- 受保護的資料。 如果 `lockobject` 是 `Shared` 變數，獨佔鎖定會防止在任何其他執行緒執行時，類別的任何實例中的執行緒執行 `SyncLock` 區塊。 這會保護所有實例之間共用的資料。  
+- Protected Data. If `lockobject` is a `Shared` variable, the exclusive lock prevents a thread in any instance of the class from executing the `SyncLock` block while any other thread is executing it. This protects data that is shared among all the instances.  
   
-     如果 `lockobject` 是執行個體變數（而非 `Shared`），鎖定會防止在目前實例中執行的執行緒，與相同實例中的另一個執行緒同時執行 `SyncLock` 區塊。 這會保護個別實例維護的資料。  
+     If `lockobject` is an instance variable (not `Shared`), the lock prevents a thread running in the current instance from executing the `SyncLock` block at the same time as another thread in the same instance. This protects data maintained by the individual instance.  
   
-- 取得與發行。 @No__t_0 區塊的行為就像是 `Try...Finally` 結構，`Try` 區塊會在 `lockobject` 上取得獨佔鎖定，而 `Finally` 區塊則會釋放它。 因此，不論您結束區塊的方式為何，`SyncLock` 區塊都會保證鎖定的版本。 即使是未處理的例外狀況，也是如此。  
+- Acquisition and Release. A `SyncLock` block behaves like a `Try...Finally` construction in which the `Try` block acquires an exclusive lock on `lockobject` and the `Finally` block releases it. Because of this, the `SyncLock` block guarantees release of the lock, no matter how you exit the block. This is true even in the case of an unhandled exception.  
   
-- 架構呼叫。 @No__t_0 區塊會藉由呼叫 <xref:System.Threading> 命名空間中 `Monitor` 類別的 `Enter` 和 `Exit` 方法，來取得和釋放獨佔鎖定。  
+- Framework Calls. The `SyncLock` block acquires and releases the exclusive lock by calling the `Enter` and `Exit` methods of the `Monitor` class in the <xref:System.Threading> namespace.  
   
-## <a name="programming-practices"></a>程式設計實務  
- @No__t_0 運算式應一律評估為僅屬於您類別的物件。 您應該宣告 `Private` 物件變數來保護屬於目前實例的資料，或 `Private Shared` 物件變數來保護所有實例的通用資料。  
+## <a name="programming-practices"></a>Programming Practices  
+ The `lockobject` expression should always evaluate to an object that belongs exclusively to your class. You should declare a `Private` object variable to protect data belonging to the current instance, or a `Private Shared` object variable to protect data common to all instances.  
   
- 您不應該使用 `Me` 關鍵字來提供實例資料的鎖定物件。 如果您類別的外部程式碼具有類別實例的參考，它可以使用該參考做為 `SyncLock` 區塊與您完全不同的鎖定物件，以保護不同的資料。 如此一來，您的類別和其他類別可能會彼此封鎖，使其無法執行其不相關的 `SyncLock` 區塊。 同樣地，鎖定字串可能會造成問題，因為使用相同字串之進程中的任何其他程式碼將會共用相同的鎖定。  
+ You should not use the `Me` keyword to provide a lock object for instance data. If code external to your class has a reference to an instance of your class, it could use that reference as a lock object for a `SyncLock` block completely different from yours, protecting different data. In this way, your class and the other class could block each other from executing their unrelated `SyncLock` blocks. Similarly locking on a string can be problematic since any other code in the process using the same string will share the same lock.  
   
- 您也不應該使用 `Me.GetType` 方法來提供共用資料的鎖定物件。 這是因為 `GetType` 一律會針對指定的類別名稱傳回相同的 `Type` 物件。 外部程式碼可以在您的類別上呼叫 `GetType`，並取得您所使用的相同鎖定物件。 這會導致兩個類別從其 `SyncLock` 區塊彼此封鎖。  
+ You should also not use the `Me.GetType` method to provide a lock object for shared data. This is because `GetType` always returns the same `Type` object for a given class name. External code could call `GetType` on your class and obtain the same lock object you are using. This would result in the two classes blocking each other from their `SyncLock` blocks.  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="description"></a>描述  
- 下列範例顯示維護簡單訊息清單的類別。 它會將訊息保留在陣列中，並將該陣列的最後一個使用中元素放在變數中。 @No__t_0 程式會遞增最後一個元素，並儲存新的訊息。 這兩個作業會受到 `SyncLock` 和 `End SyncLock` 語句的保護，因為一旦最後一個專案已遞增，就必須先儲存新的訊息，其他執行緒才能再次遞增最後一個元素。  
+ The following example shows a class that maintains a simple list of messages. It holds the messages in an array and the last used element of that array in a variable. The `addAnotherMessage` procedure increments the last element and stores the new message. Those two operations are protected by the `SyncLock` and `End SyncLock` statements, because once the last element has been incremented, the new message must be stored before any other thread can increment the last element again.  
   
- 如果 `simpleMessageList` 類別在其所有實例之間共用一個訊息清單，`messagesList` 和 `messagesLast` 的變數會宣告為 `Shared`。 在此情況下，`messagesLock` 變數也應該 `Shared`，以便每個實例都使用單一鎖定物件。  
+ If the `simpleMessageList` class shared one list of messages among all its instances, the variables `messagesList` and `messagesLast` would be declared as `Shared`. In this case, the variable `messagesLock` should also be `Shared`, so that there would be a single lock object used by every instance.  
   
 ### <a name="code"></a>程式碼  
  [!code-vb[VbVbalrThreading#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/Class1.vb#1)]  
   
 ### <a name="description"></a>描述  
- 下列範例會使用執行緒和 `SyncLock`。 只要有 `SyncLock` 語句，語句區塊就是關鍵區段，`balance` 絕對不會成為負數。 您可以將 `SyncLock` 和 `End SyncLock` 語句標記為批註，以查看離開 `SyncLock` 關鍵字的效果。  
+ The following example uses threads and `SyncLock`. As long as the `SyncLock` statement is present, the statement block is a critical section and `balance` never becomes a negative number. You can comment out the `SyncLock` and `End SyncLock` statements to see the effect of leaving out the `SyncLock` keyword.  
   
 ### <a name="code"></a>程式碼  
  [!code-vb[VbVbalrThreading#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/class2.vb#21)]  

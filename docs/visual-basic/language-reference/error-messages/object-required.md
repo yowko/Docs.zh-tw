@@ -1,29 +1,29 @@
 ---
-title: 必須提供物件 (Visual Basic)
+title: 需要的物件
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID424
 ms.assetid: afdc660b-81a5-4c92-ac7e-9c3a3105fc16
-ms.openlocfilehash: 8fdb702a03d4cfe17954d48215c4a16a3bdbcc82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a083ef1bf6f95f46f31786ba54476f54ce882cf2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925667"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349669"
 ---
 # <a name="object-required-visual-basic"></a>必須提供物件 (Visual Basic)
-屬性和方法的參考，通常需要指定明確的物件識別碼。 這是這種情況。  
+References to properties and methods often require an explicit object qualifier. This is such a case.  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. 請檢查參考的物件屬性或方法具有有效的物件限定詞。 如果您未提供其中一個，請指定物件限定詞。  
+1. Check that references to an object property or method have valid object qualifier. Specify an object qualifier if you didn't provide one.  
   
-2. 物件限定詞的拼字檢查，並確定該物件會顯示在程式中會參考它的一部分。  
+2. Check the spelling of the object qualifier and make sure the object is visible in the part of the program in which you are referencing it.  
   
-3. 如果主應用程式提供的路徑**開啟舊檔**命令，請檢查引數正確無誤。  
+3. If a path is supplied to a host application's **File Open** command, check that the arguments in it are correct.  
   
-4. 檢查物件的文件，並確定是有效的動作。  
+4. Check the object's documentation and make sure the action is valid.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [錯誤類型](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -1,76 +1,76 @@
 ---
-title: 自訂 My 中可用的物件 (Visual Basic)
+title: 自訂 My 可以使用的物件
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: bb3f8eb2e8b1cf5bce364fc4b3ce0587769bb5f9
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 0387aca08e3a31b0a2045369919894d88caf5b76
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775204"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330318"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>自訂 My 中可用的物件 (Visual Basic)
 
-本主題描述如何藉由設定專案的 `_MYTYPE` 條件式編譯常數，來控制要啟用哪些 `My` 物件。 Visual Studio 的整合式開發環境（IDE）會讓專案的 `_MYTYPE` 條件式編譯常數與專案的類型同步。  
+This topic describes how you can control which `My` objects are enabled by setting your project's `_MYTYPE` conditional-compilation constant. The Visual Studio Integrated Development Environment (IDE) keeps the `_MYTYPE` conditional-compilation constant for a project in sync with the project's type.  
   
-## <a name="predefined-_mytype-values"></a>預先定義的 \_MYTYPE 值  
+## <a name="predefined-_mytype-values"></a>Predefined \_MYTYPE Values  
 
-您必須使用 `/define` 編譯器選項來設定 `_MYTYPE` 的條件式編譯常數。 為 `_MYTYPE` 常數指定您自己的值時，您必須將字串值括在反斜線/引號（\\ "）序列中。 例如，您可以使用：  
+You must use the `/define` compiler option to set the `_MYTYPE` conditional-compilation constant. When specifying your own value for the `_MYTYPE` constant, you must enclose the string value in backslash/quotation mark (\\") sequences. For example, you could use:  
   
 ```console  
 /define:_MYTYPE=\"WindowsForms\"  
 ```  
   
- 下表顯示針對數個專案類型，`_MYTYPE` 的條件式編譯常數設定為。  
+ This table shows what the `_MYTYPE` conditional-compilation constant is set to for several project types.  
   
-|專案類型|\_MYTYPE 值|  
+|專案類型|\_MYTYPE value|  
 |------------------|--------------------|  
-|類別庫|時段|  
-|主控台應用程式|控制|  
-|Web|網路|  
-|Web 控制項程式庫|WebControl|  
-|Windows 應用程式|WindowsForms|  
-|Windows 應用程式（從自訂 `Sub Main` 開始）|"WindowsFormsWithCustomSubMain"|  
-|Windows 控制項程式庫|時段|  
-|Windows 服務|控制|  
-|Empty|空|  
+|類別庫|"Windows"|  
+|主控台應用程式|"Console"|  
+|Web|"Web"|  
+|Web Control Library|"WebControl"|  
+|Windows 應用程式|"WindowsForms"|  
+|Windows Application, when starting with custom `Sub Main`|"WindowsFormsWithCustomSubMain"|  
+|Windows Control Library|"Windows"|  
+|Windows 服務|"Console"|  
+|Empty|"Empty"|  
   
 > [!NOTE]
-> 所有條件式編譯字串的比較都會區分大小寫，不論如何設定 `Option Compare` 語句。  
+> All conditional-compilation string comparisons are case-sensitive, regardless of how the `Option Compare` statement is set.  
   
-## <a name="dependent-_my-compilation-constants"></a>相依 \_MY 編譯常數  
+## <a name="dependent-_my-compilation-constants"></a>Dependent \_MY Compilation Constants  
 
-@No__t_0 的條件式編譯常數則會控制數個其他 `_MY` 編譯常數的值：  
+The `_MYTYPE` conditional-compilation constant, in turn, controls the values of several other `_MY` compilation constants:  
   
 |\_MYTYPE|\_MYAPPLICATIONTYPE|\_MYCOMPUTERTYPE|\_MYFORMS|\_MYUSERTYPE|\_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|控制|控制|時段|未定義|時段|true|  
-|客戶|未定義|未定義|未定義|未定義|未定義|  
-|空|未定義|未定義|未定義|未定義|未定義|  
-|網路|未定義|網路|false|網路|false|  
-|WebControl|未定義|網路|false|網路|true|  
-|"Windows" 或 ""|時段|時段|未定義|時段|true|  
-|WindowsForms|WindowsForms|時段|true|時段|true|  
-|"WindowsFormsWithCustomSubMain"|控制|時段|true|時段|true|  
+|"Console"|"Console"|"Windows"|未定義|"Windows"|true|  
+|"Custom"|未定義|未定義|未定義|未定義|未定義|  
+|"Empty"|未定義|未定義|未定義|未定義|未定義|  
+|"Web"|未定義|"Web"|false|"Web"|false|  
+|"WebControl"|未定義|"Web"|false|"Web"|true|  
+|"Windows" or ""|"Windows"|"Windows"|未定義|"Windows"|true|  
+|"WindowsForms"|"WindowsForms"|"Windows"|true|"Windows"|true|  
+|"WindowsFormsWithCustomSubMain"|"Console"|"Windows"|true|"Windows"|true|  
   
- 根據預設，未定義的條件式編譯常數會解析為 `FALSE`。 您可以在編譯專案時指定未定義常數的值，以覆寫預設行為。  
+ By default, undefined conditional-compilation constants resolve to `FALSE`. You can specify values for the undefined constants when compiling your project to override the default behavior.  
   
 > [!NOTE]
-> 當 `_MYTYPE` 設定為 "Custom" 時，專案會包含 `My` 命名空間，但不包含任何物件。 不過，將 `_MYTYPE` 設定為「空白」，會使編譯器無法加入 `My` 命名空間及其物件。  
+> When `_MYTYPE` is set to "Custom", the project contains the `My` namespace, but it contains no objects. However, setting `_MYTYPE` to "Empty" prevents the compiler from adding the `My` namespace and its objects.  
   
- 下表描述 `_MY` 編譯常數之預先定義值的效果。  
+ This table describes the effects of the predefined values of the `_MY` compilation constants.  
   
 |常數|意義|  
 |--------------|-------------|  
-|`_MYAPPLICATIONTYPE`|啟用 `My.Application`，如果常數為 "Console"、"Windows" 或 "WindowsForms"：<br /><br /> -「主控台」版本衍生自 <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>。 和的成員數目少於 "Windows" 版本。<br />-"Windows" 版本衍生自 <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>。和的成員數目少於 "WindowsForms" 版本。<br />-@No__t_0 衍生自 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 的 "WindowsForms" 版本。 如果 `TARGET` 常數定義為 "winexe"，則類別會包含 `Sub Main` 方法。|  
-|`_MYCOMPUTERTYPE`|啟用 `My.Computer`，如果常數是 "Web" 或 "Windows"：<br /><br /> -「Web」版本衍生自 <xref:Microsoft.VisualBasic.Devices.ServerComputer>，而且具有比「Windows」版本少的成員。<br />-「Windows」版本的 `My.Computer` 衍生自 <xref:Microsoft.VisualBasic.Devices.Computer>。|  
-|`_MYFORMS`|如果 `TRUE` 常數，則啟用 `My.Forms`。|  
-|`_MYUSERTYPE`|啟用 `My.User`，如果常數是 "Web" 或 "Windows"：<br /><br /> -「Web」版本的 `My.User` 與目前 HTTP 要求的使用者識別相關聯。<br />-@No__t_0 的 "Windows" 版本與執行緒目前的主體相關聯。|  
-|`_MYWEBSERVICES`|如果 `TRUE` 常數，則啟用 `My.WebServices`。|  
-|`_MYTYPE`|啟用 `My.Log`、`My.Request` 和 `My.Response` （如果常數為「Web」）。|  
+|`_MYAPPLICATIONTYPE`|Enables `My.Application`, if the constant is "Console," Windows," or "WindowsForms":<br /><br /> -   The "Console" version derives from <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>. and has fewer members than the "Windows" version.<br />-   The "Windows" version derives from <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>.and has fewer members than the "WindowsForms" version.<br />-   The "WindowsForms" version of `My.Application` derives from <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>. If the `TARGET` constant is defined to be "winexe", then the class includes a `Sub Main` method.|  
+|`_MYCOMPUTERTYPE`|Enables `My.Computer`, if the constant is "Web" or "Windows":<br /><br /> -   The "Web" version derives from <xref:Microsoft.VisualBasic.Devices.ServerComputer>, and has fewer members than the "Windows" version.<br />-   The "Windows" version of `My.Computer` derives from <xref:Microsoft.VisualBasic.Devices.Computer>.|  
+|`_MYFORMS`|Enables `My.Forms`, if the constant is `TRUE`.|  
+|`_MYUSERTYPE`|Enables `My.User`, if the constant is "Web" or "Windows":<br /><br /> -   The "Web" version of `My.User` is associated with the user identity of the current HTTP request.<br />-   The "Windows" version of `My.User` is associated with the thread's current principal.|  
+|`_MYWEBSERVICES`|Enables `My.WebServices`, if the constant is `TRUE`.|  
+|`_MYTYPE`|Enables `My.Log`, `My.Request`, and `My.Response`, if the constant is "Web".|  
   
 ## <a name="see-also"></a>請參閱
 
@@ -80,7 +80,7 @@ ms.locfileid: "72775204"
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>
 - [My 如何相依於專案類型](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
 - [條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [-define （Visual Basic）](../../../visual-basic/reference/command-line-compiler/define.md)
+- [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
 - [My.Forms 物件](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [My.Request 物件](../../../visual-basic/language-reference/objects/my-request-object.md)
 - [My.Response 物件](../../../visual-basic/language-reference/objects/my-response-object.md)

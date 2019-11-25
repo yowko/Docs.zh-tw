@@ -1,5 +1,5 @@
 ---
-title: Integer 資料類型 (Visual Basic)
+title: Integer 資料類型
 ms.date: 01/31/2018
 f1_keywords:
 - vb.Integer
@@ -21,37 +21,39 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-ms.openlocfilehash: b553471fad6411cd5aa2edf42d8424aa652e9589
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c5b1041b8ef0ca9898a846fea03888537bb4abbf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592105"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343988"
 ---
-# <a name="integer-data-type-visual-basic"></a>Integer 資料類型 (Visual Basic)
+# <a name="integer-data-type-visual-basic"></a>Integer data type (Visual Basic)
+
 保存帶正負號的 32 位元 (4 位元組) 整數，值的範圍從 -2,147,483,648 到 2,147,483,647。  
   
 ## <a name="remarks"></a>備註
+
  `Integer` 資料類型可對 32 位元處理器提供最佳效能。 其他整數類資料類型在記憶體中載入和儲存的速度較慢。  
   
  `Integer` 的預設值為 0。  
 
-## <a name="literal-assignments"></a>常值的指派
+## <a name="literal-assignments"></a>Literal assignments
 
-您可以宣告並初始化`Integer`變數指派十進位常值、 十六進位常值、 八進位的常值，或 （Visual Basic 2017 年起） 二進位常值。 如果整數常值超出 `Integer` 的範圍 (亦即，如果小於 <xref:System.Int32.MinValue?displayProperty=nameWithType> 或大於 <xref:System.Int32.MaxValue?displayProperty=nameWithType>)，就會發生編譯錯誤。
+You can declare and initialize an `Integer` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. 如果整數常值超出 `Integer` 的範圍 (亦即，如果小於 <xref:System.Int32.MinValue?displayProperty=nameWithType> 或大於 <xref:System.Int32.MaxValue?displayProperty=nameWithType>)，就會發生編譯錯誤。
 
 在下列範例中，以十進位、十六進位和二進位常值表示的 90,946 整數，會指派給 `Integer` 值。
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Int)]  
 
 > [!NOTE]
-> 使用前置詞`&h`或是`&H`來表示十六進位常值前置詞`&b`或`&B`代表二進位常值，以及前置詞`&o`或`&O`代表八進位的常值。 十進位常值沒有前置詞。
+> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. 十進位常值沒有前置詞。
 
-從 Visual Basic 2017 開始，您也可以使用底線字元`_`，作為數字分隔符號，以提升可讀性，如下列範例所示。
+Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
 
-從 Visual Basic 15.5 開始，您也可以使用底線字元 (`_`) 作為前置分隔符號之間的前置詞和十六進位、 二進位或八進位數字。 例如：
+Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. 例如:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -59,7 +61,7 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-也可以包含數值常值`I`[型別字元](../../programming-guide/language-features/data-types/type-characters.md)表示`Integer`資料型別，如下列範例所示。
+Numeric literals can also include the `I` [type character](../../programming-guide/language-features/data-types/type-characters.md) to denote the `Integer` data type, as the following example shows.
 
 ```vb
 Dim number = &H_035826I
@@ -67,13 +69,13 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>程式設計提示
 
-- **Interop 考量。** 如果您要使用的元件不是撰寫.NET framework，例如 Automation 或 COM 物件，請記住，`Integer`在其他環境中有不同的資料寬度 （16 位元）。 如果您要將 16 位元引數傳遞至這類元件，請在新的 Visual Basic 程式碼中將它宣告為 `Short`，而不是 `Integer`。  
+- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, such as Automation or COM objects, remember that `Integer` has a different data width (16 bits) in other environments. 如果您要將 16 位元引數傳遞至這類元件，請在新的 Visual Basic 程式碼中將它宣告為 `Short`，而不是 `Integer`。  
   
-- **擴展。** `Integer` 資料類型可擴展為 `Long`、`Decimal`、`Single` 或 `Double`。 這表示，您可以將 `Integer` 轉換成這些類型的任何一種，而不會發生 <xref:System.OverflowException?displayProperty=nameWithType> 錯誤。  
+- **Widening.** `Integer` 資料類型可擴展為 `Long`、`Decimal`、`Single` 或 `Double`。 這表示，您可以將 `Integer` 轉換成這些類型的任何一種，而不會發生 <xref:System.OverflowException?displayProperty=nameWithType> 錯誤。  
   
-- **類型字元。** 將常值類型字元 `I` 附加到常值，會強制其成為 `Integer` 資料類型。 將識別項類型字元 `%` 附加到任何識別項，會強制其成為 `Integer`。  
+- **Type Characters.** 將常值類型字元 `I` 附加到常值，會強制其成為 `Integer` 資料類型。 將識別項類型字元 `%` 附加到任何識別項，會強制其成為 `Integer`。  
   
-- **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.Int32?displayProperty=nameWithType> 結構。  
+- **Framework Type.** 在 .NET Framework 中對應的類型為 <xref:System.Int32?displayProperty=nameWithType> 結構。  
   
 ## <a name="range"></a>Range
 
@@ -93,7 +95,7 @@ k = 4.5
 k = 5.5  
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Int32?displayProperty=nameWithType>
 - [資料類型](../../../visual-basic/language-reference/data-types/index.md)

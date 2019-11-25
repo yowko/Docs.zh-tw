@@ -1,19 +1,19 @@
 ---
-title: <typeparam> （Visual Basic）
+title: <typeparam>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - typeparam XML tag
 - <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-ms.openlocfilehash: dbd99997fed33c192a2160fb45a739addbae254a
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 00cb62827381146c172e0d15a2c64b167c21f025
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524617"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352194"
 ---
-# <a name="typeparam-visual-basic"></a>\<typeparam > （Visual Basic）
-定義類型參數名稱和描述。  
+# <a name="typeparam-visual-basic"></a>\<typeparam> (Visual Basic)
+Defines a type parameter name and description.  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,15 +26,15 @@ ms.locfileid: "72524617"
  型別參數的名稱。 以雙引號 (" ") 括住名稱。  
   
  `description`  
- 類型參數的描述。  
+ A description of the type parameter.  
   
 ## <a name="remarks"></a>備註  
- 在泛型型別或泛型成員宣告的批註中使用 `<typeparam>` 標記，以描述其中一個類型參數。  
+ Use the `<typeparam>` tag in the comment for a generic type or generic member declaration to describe one of the type parameters.  
   
  使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 編譯可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
- 這個範例會使用 `<typeparam>` 標記來描述 `id` 參數。  
+ This example uses the `<typeparam>` tag to describe the `id` parameter.  
   
  [!code-vb[VbVbcnXmlDocComments#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#8)]  
   

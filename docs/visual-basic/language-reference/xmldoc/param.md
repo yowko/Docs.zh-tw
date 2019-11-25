@@ -1,19 +1,19 @@
 ---
-title: <param> （Visual Basic）
+title: <param>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: c62eab6b1fb1ba1cc7de83c12d7205cf0bbe46fa
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 4405fdf2defbb27aa2146d20083fd406d1f07236
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524727"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352291"
 ---
-# <a name="param-visual-basic"></a>\<param > （Visual Basic）
-定義參數名稱和描述。  
+# <a name="param-visual-basic"></a>\<param> (Visual Basic)
+Defines a parameter name and description.  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,18 +29,18 @@ ms.locfileid: "72524727"
  參數的描述。  
   
 ## <a name="remarks"></a>備註  
- @No__t_0 標記應該用於方法宣告的批註中，以描述方法的其中一個參數。  
+ The `<param>` tag should be used in the comment for a method declaration to describe one of the parameters for the method.  
   
- @No__t_0 標記的文字會出現在下列位置：  
+ The text for the `<param>` tag will appear in the following locations:  
   
-- IntelliSense 的參數資訊。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。  
+- Parameter Info of IntelliSense. 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。  
   
-- 物件瀏覽器。 如需詳細資訊，請參閱[檢視程式碼的結構](/visualstudio/ide/viewing-the-structure-of-code)。  
+- Object Browser. 如需詳細資訊，請參閱[檢視程式碼的結構](/visualstudio/ide/viewing-the-structure-of-code)。  
   
  使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 編譯可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
- 這個範例會使用 `<param>` 標記來描述 `id` 參數。  
+ This example uses the `<param>` tag to describe the `id` parameter.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

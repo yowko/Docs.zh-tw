@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], DatePicker
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
-ms.openlocfilehash: 323768b6221061d46446ab18f85555f5f7415e74
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 002d1c3271827239dcd3a319621f66fb5bc68d4e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460376"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283778"
 ---
 # <a name="datepicker-styles-and-templates"></a>DatePicker 樣式和範本
-本主題描述 <xref:System.Windows.Controls.DatePicker> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
+本主題描述 <xref:System.Windows.Controls.DatePicker> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
   
 ## <a name="datepicker-parts"></a>DatePicker 元件  
  下表列出 <xref:System.Windows.Controls.DatePicker> 控制項的已命名元件。  
@@ -35,7 +35,7 @@ ms.locfileid: "73460376"
 |VisualState 名稱|VisualStateGroup 名稱|描述|  
 |-|-|-|  
 |一般|CommonStates|預設狀態。|  
-|Disabled|CommonStates|<xref:System.Windows.Controls.DatePicker> 已停用。|  
+|已停用|CommonStates|<xref:System.Windows.Controls.DatePicker> 已停用。|  
 |驗證|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，而 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性則 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是控制項具有焦點 `true`。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是 `true` 控制項沒有焦點。|  
@@ -54,7 +54,7 @@ ms.locfileid: "73460376"
 |VisualState 名稱|VisualStateGroup 名稱|描述|  
 |-|-|-|  
 |一般|CommonStates|預設狀態。|  
-|Disabled|CommonStates|<xref:System.Windows.Controls.Primitives.DatePickerTextBox> 已停用。|  
+|已停用|CommonStates|<xref:System.Windows.Controls.Primitives.DatePickerTextBox> 已停用。|  
 |MouseOver|CommonStates|滑鼠指標位於 <xref:System.Windows.Controls.Primitives.DatePickerTextBox>上。|  
 |ReadOnly|CommonStates|使用者無法變更 <xref:System.Windows.Controls.Primitives.DatePickerTextBox>中的文字。|  
 |已取得焦點|FocusStates|控制項已取得焦點。|  
@@ -83,4 +83,4 @@ ms.locfileid: "73460376"
 - [控制項的樣式和範本](control-styles-and-templates.md)
 - [控制項自訂](control-customization.md)
 - [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)
+- [建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)

@@ -1,5 +1,5 @@
 ---
-title: MustInherit (Visual Basic)
+title: MustInherit
 ms.date: 07/20/2015
 f1_keywords:
 - MustInherit
@@ -10,44 +10,44 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-ms.openlocfilehash: 05b1e6b646c519216eba2d4f0df7a3e32f3dafbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 30befaaf194d78d26a57f29c59bf0a603e9f07a3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661252"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351502"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
-指定可用來只當做基底類別的類別，您無法直接從它建立物件。  
+Specifies that a class can be used only as a base class and that you cannot create an object directly from it.  
   
 ## <a name="remarks"></a>備註  
- 目的*基底類別*(也稱為*抽象類別*) 是定義從它衍生的所有類別的通用功能。 這讓衍生的類別不必重新定義的通用元素。 在某些情況下，此常用功能不夠完整，若要使用的物件，並不會定義每個衍生的類別缺少的功能。 在此情況下，您只能從衍生類別中建立物件使用的程式碼。 您使用`MustInherit`在強制執行此基底類別。  
+ The purpose of a *base class* (also known as an *abstract class*) is to define functionality that is common to all the classes derived from it. This saves the derived classes from having to redefine the common elements. In some cases, this common functionality is not complete enough to make a usable object, and each derived class defines the missing functionality. In such a case, you want the consuming code to create objects only from the derived classes. You use `MustInherit` on the base class to enforce this.  
   
- 另一個使用`MustInherit`類別是限制一組相關的類別變數。 您可以定義基底類別，並從中衍生所有這些相關的類別。 基底類別不需要提供任何功能通用於所有衍生的類別，但它可以做為篩選，以將值指派給變數。 如果您使用的程式碼會宣告一個變數的基底類別，Visual Basic 可讓您指派給只從其中一個衍生的類別，該變數。  
+ Another use of a `MustInherit` class is to restrict a variable to a set of related classes. You can define a base class and derive all these related classes from it. The base class does not need to provide any functionality common to all the derived classes, but it can serve as a filter for assigning values to variables. If your consuming code declares a variable as the base class, Visual Basic allows you to assign only an object from one of the derived classes to that variable.  
   
- .NET Framework 會定義數個`MustInherit`類別，在它們之間<xref:System.Array>， <xref:System.Enum>，和<xref:System.ValueType>。 <xref:System.ValueType> 是基底類別，可限制變數的範例。 所有實值型別衍生自<xref:System.ValueType>。 如果您宣告變數，以做為<xref:System.ValueType>，您可以將實值型別只能指派給該變數。  
+ The .NET Framework defines several `MustInherit` classes, among them <xref:System.Array>, <xref:System.Enum>, and <xref:System.ValueType>. <xref:System.ValueType> is an example of a base class that restricts a variable. All value types derive from <xref:System.ValueType>. If you declare a variable as <xref:System.ValueType>, you can assign only value types to that variable.  
   
 ## <a name="rules"></a>規則  
   
-- **宣告內容。** 您可以使用`MustInherit`只能在`Class`陳述式。  
+- **Declaration Context.** You can use `MustInherit` only in a `Class` statement.  
   
-- **結合的修飾詞。** 您無法指定`MustInherit`搭配`NotInheritable`相同宣告中。  
+- **Combined Modifiers.** You cannot specify `MustInherit` together with `NotInheritable` in the same declaration.  
   
 ## <a name="example"></a>範例  
- 下列範例說明強制的繼承和強制覆寫。 基底類別`shape`定義的變數， `acrossLine`。 類別`circle`並`square`衍生自`shape`。 它們繼承的定義`acrossLine`，但它們必須定義函式`area`由於該計算各有不同的每一種圖形。  
+ The following example illustrates both forced inheritance and forced overriding. The base class `shape` defines a variable `acrossLine`. The classes `circle` and `square` derive from `shape`. They inherit the definition of `acrossLine`, but they must define the function `area` because that calculation is different for each kind of shape.  
   
  [!code-vb[VbVbalrKeywords#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#2)]  
   
- 您可以宣告`shape1`並`shape2`是類型`shape`。 不過，您無法建立物件的`shape`因為其欠缺函式的功能`area`，並標示`MustInherit`。  
+ You can declare `shape1` and `shape2` to be of type `shape`. However, you cannot create an object from `shape` because it lacks the functionality of the function `area` and is marked `MustInherit`.  
   
- 因為它們會宣告為`shape`，變數`shape1`並`shape2`限於從衍生類別物件`circle`和`square`。 Visual Basic 不允許您將任何其他物件指派給這些變數時，它將提供高層級的型別安全。  
+ Because they are declared as `shape`, the variables `shape1` and `shape2` are restricted to objects from the derived classes `circle` and `square`. Visual Basic does not allow you to assign any other object to these variables, which gives you a high level of type safety.  
   
 ## <a name="usage"></a>使用量  
- `MustInherit`修飾詞，請使用此內容中：  
+ The `MustInherit` modifier can be used in this context:  
   
  [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)

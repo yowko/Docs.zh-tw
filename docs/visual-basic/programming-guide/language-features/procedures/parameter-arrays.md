@@ -1,5 +1,5 @@
 ---
-title: 參數陣列 (Visual Basic)
+title: 參數陣列
 ms.date: 07/20/2015
 helpviewer_keywords:
 - parameter arrays [Visual Basic], about parameter arrays
@@ -10,47 +10,47 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: 285a5f10e2394fcb001a652fad66e8128b9fbc1a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ffb532fbac70b9aa8ab210450e4d9207f5e0291f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424609"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351117"
 ---
 # <a name="parameter-arrays-visual-basic"></a>參數陣列 (Visual Basic)
-通常，您不能使用比程式宣告指定的多個引數來呼叫程式。 當您需要不限數目的引數時，您可以宣告*參數陣列*，讓程式接受參數值陣列。 當您定義程式時，不需要知道參數陣列中的元素數目。 陣列大小是由程式的每個呼叫個別決定。  
+Usually, you cannot call a procedure with more arguments than the procedure declaration specifies. When you need an indefinite number of arguments, you can declare a *parameter array*, which allows a procedure to accept an array of values for a parameter. You do not have to know the number of elements in the parameter array when you define the procedure. The array size is determined individually by each call to the procedure.  
   
-## <a name="declaring-a-paramarray"></a>宣告 ParamArray  
- 您可以使用[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)關鍵字來表示參數清單中的參數陣列。 可套用下列規則：  
+## <a name="declaring-a-paramarray"></a>Declaring a ParamArray  
+ You use the [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) keyword to denote a parameter array in the parameter list. 可套用下列規則：  
   
-- 程式只能定義一個參數陣列，而且它必須是程序定義中的最後一個參數。  
+- A procedure can define only one parameter array, and it must be the last parameter in the procedure definition.  
   
-- 參數陣列必須以傳值方式傳遞。 在程序定義中明確包含[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)關鍵字是良好的程式設計作法。  
+- The parameter array must be passed by value. It is good programming practice to explicitly include the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword in the procedure definition.  
   
-- 參數陣列是自動選擇的。 其預設值為參數陣列的元素類型的一維空陣列。  
+- The parameter array is automatically optional. Its default value is an empty one-dimensional array of the parameter array's element type.  
   
-- 參數陣列前面的所有參數都必須是必要的。 參數陣列必須是唯一的選擇性參數。  
+- All parameters preceding the parameter array must be required. The parameter array must be the only optional parameter.  
   
-## <a name="calling-a-paramarray"></a>呼叫 ParamArray  
- 當您呼叫定義參數陣列的程式時，您可以使用下列任何一種方式提供引數：  
+## <a name="calling-a-paramarray"></a>Calling a ParamArray  
+ When you call a procedure that defines a parameter array, you can supply the argument in any one of the following ways:  
   
-- 沒有，也就是說，您可以省略[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)引數。 在此情況下，會將空的陣列傳遞給程式。 如果您明確地傳遞[not 關鍵字，](../../../../visual-basic/language-reference/nothing.md)則會將 null 陣列傳遞給程式，如果被呼叫的程式未檢查這個條件，可能會產生 NullReferenceException。
+- Nothing — that is, you can omit the [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) argument. In this case, an empty array is passed to the procedure. If you explicitly pass the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, a null array is passed to the procedure and may result in a NullReferenceException if the called procedure does not check for this condition.
   
-- 任意數目的引數清單（以逗號分隔）。 每個引數的資料類型必須可以隱含地轉換成 `ParamArray` 的元素類型。  
+- A list of an arbitrary number of arguments, separated by commas. The data type of each argument must be implicitly convertible to the `ParamArray` element type.  
   
-- 陣列，其元素類型與參數陣列的元素類型相同。  
+- An array with the same element type as the parameter array's element type.  
   
- 在所有情況下，程式內的程式碼會將參數陣列視為一維陣列，其中包含與 `ParamArray` 資料類型相同之資料類型的元素。  
+ In all cases, the code within the procedure treats the parameter array as a one-dimensional array with elements of the same data type as the `ParamArray` data type.  
   
 > [!IMPORTANT]
-> 當您處理可能會無限大的陣列時，會有 overrunning 應用程式的一些內部容量的風險。 如果您接受參數陣列，您應該測試呼叫程式碼傳遞給它的陣列大小。 如果您的應用程式太大，請採取適當的步驟。 如需詳細資訊，請參閱[陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+> Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array, you should test for the size of the array that the calling code passed to it. Take appropriate steps if it is too large for your application. 如需詳細資訊，請參閱[陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會定義和呼叫函式 `calcSum`。 參數的 `ParamArray` 修飾詞 `args` 可讓函式接受可變數目的引數。  
+ The following example defines and calls the function `calcSum`. The `ParamArray` modifier for the parameter `args` enables the function to accept a variable number of arguments.  
   
  [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   
- 下列範例會定義具有參數陣列的程式，並輸出傳遞至參數陣列之所有陣列元素的值。  
+ The following example defines a procedure with a parameter array, and outputs the values of all the array elements passed to the parameter array.  
   
  [!code-vb[VbVbcnProcedures#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#48)]  
   

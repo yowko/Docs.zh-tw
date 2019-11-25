@@ -1,15 +1,15 @@
 ---
-title: 在 Visual Studio (Visual Basic) 中保存物件
+title: 在 Visual Studio 中保存物件
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 6f25c2a6f06b56dcbb5ba7e63165d06ff77d9ca8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbd342c929e8519571c0f6bb76d4091efcfe4476
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937368"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350401"
 ---
-# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>逐步解說：在 Visual Studio (Visual Basic) 中保存物件
+# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>逐步解說：在 Visual Studio 中保存物件 (Visual Basic)
 雖然您可以在設計階段將物件的屬性設為預設值，但當物件終結時，於執行階段輸入的任何值都會遺失。 您可以使用序列化來保存執行個體之間的物件資料，藉此儲存值，並在下次將物件具現化時加以擷取。  
   
 > [!NOTE]
@@ -215,7 +215,7 @@ ms.locfileid: "69937368"
   
  您現在可以再次建置並執行應用程式。 一開始，文字方塊中會顯示預設值。 請嘗試變更值，並在第四個文字方塊中輸入名稱。 關閉應用程式，然後再重新執行。 請注意，現在文字方塊中會出現新的值。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [序列化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [Visual Basic 程式設計手冊](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic 程式設計指南](../../../../visual-basic/programming-guide/index.md)

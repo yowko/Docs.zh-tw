@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: a59e47e529a5002c806e37dba7267b2cf8318a35
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: cbae03c52f3cc39f7afd422a34b16e99a60d9f3a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912704"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283211"
 ---
 # <a name="endpoint-addresses"></a>端點位址
-每個端點都有與其相關聯的位址，以便用來找出並識別端點。 這個位址主要包含一個可指定端點位置的統一資源識別元 (URI)。 在由 Windows Communication Foundation (WCF) 程式設計模型中表示端點位址<xref:System.ServiceModel.EndpointAddress>類別，其中包含選擇性<xref:System.ServiceModel.EndpointAddress.Identity%2A>屬性可讓其他端點之端點的驗證，交換訊息，以及一組選擇性的<xref:System.ServiceModel.EndpointAddress.Headers%2A>屬性，定義取用服務時所需任何其他 SOAP 標頭。 選擇性標頭會提供額外與更詳細的定址資訊，以便識別端點或與服務端點互動。 端點位址會在網路上表示為 WS-Addressing 端點參考 (EPR)。  
+每個端點都有與其相關聯的位址，以便用來找出並識別端點。 這個位址主要包含一個可指定端點位置的統一資源識別元 (URI)。 端點位址是在 Windows Communication Foundation （WCF）程式設計模型中，由 <xref:System.ServiceModel.EndpointAddress> 類別表示，其中包含選擇性的 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 屬性，可讓與其交換訊息的其他端點驗證端點，以及一組選擇性的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 屬性，其定義與服務所需的任何其他 SOAP 標頭。 選擇性標頭會提供額外與更詳細的定址資訊，以便識別端點或與服務端點互動。 端點位址會在網路上表示為 WS-Addressing 端點參考 (EPR)。  
   
 ## <a name="uri-structure-of-an-address"></a>位址的 URI 結構  
- 大部分傳輸的位址 URI 具有四個部分。 例如，URI 的四個部分`http://www.fabrikam.com:322/mathservice.svc/secureEndpoint`可以分項列出，如下所示：  
+ 大部分傳輸的位址 URI 具有四個部分。 例如，URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` 的四個部分可以詳細說明如下：  
   
 - 配置： `http:`
   
 - 電腦： `www.fabrikam.com`  
   
-- （選擇性）連接埠：322  
+- (選擇性) 連接埠：322  
   
 - 路徑：/mathservice.svc/secureEndpoint  
   
@@ -31,15 +31,15 @@ ms.locfileid: "64912704"
  您可以強制使用程式碼，或是透過組態以宣告的形式來指定服務的端點位址。 在程式碼中定義端點通常不太實用，因為部署之服務的繫結和位址通常與開發服務時所使用的繫結和位址不同。 一般來說，透過組態來定義服務端點會比透過程式碼來得實際一些。 如果將繫結和定址資訊留在程式碼外面，就可以讓您變更這些資訊，而且不需要重新編譯或重新部署應用程式。  
   
 ### <a name="defining-an-address-in-configuration"></a>在組態中定義位址  
- 若要在組態檔中定義端點，請使用[\<端點 >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)項目。 如需詳細資訊和範例，請參閱 <<c0> [ 指定端點位址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)。  
+ 若要在設定檔中定義端點，請使用[\<端點 >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)元素。 如需詳細資訊和範例，請參閱[指定端點位址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)。  
   
 ### <a name="defining-an-address-in-code"></a>在程式碼中定義位址  
- 您可以使用 <xref:System.ServiceModel.EndpointAddress> 類別，在程式碼中建立端點位址。 如需詳細資訊和範例，請參閱 <<c0> [ 指定端點位址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)。  
+ 您可以使用 <xref:System.ServiceModel.EndpointAddress> 類別，在程式碼中建立端點位址。 如需詳細資訊和範例，請參閱[指定端點位址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)。  
   
 ### <a name="endpoints-in-wsdl"></a>WSDL 中的端點  
- 您也可以在對應端點的 `wsdl:port` 項目中，透過 WSDL 將端點位址表示為 WS-Addressing EPR 項目。 EPR 包含端點的位址以及任何位址屬性。 如需詳細資訊和範例，請參閱 <<c0> [ 指定端點位址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)。  
+ 您也可以在對應端點的 `wsdl:port` 項目中，透過 WSDL 將端點位址表示為 WS-Addressing EPR 項目。 EPR 包含端點的位址以及任何位址屬性。 如需詳細資訊和範例，請參閱[指定端點位址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)。  
   
-## <a name="multiple-iis-binding-support-in-net-framework-35"></a>多個 IIS 繫結支援.NET Framework 3.5 中  
+## <a name="multiple-iis-binding-support-in-net-framework-35"></a>.NET Framework 3.5 中的多個 IIS 系結支援  
  網際網路服務提供者通常會在相同的伺服器與網站上裝載許多應用程式，以增加網站密度並降低整體經營成本， 而這些應用程式通常會繫結至不同的基底位址。 網際網路資訊服務 (IIS) 網站可以包含多個應用程式， 網站中的應用程式則可以透過一或多個 IIS 繫結來存取。  
   
  IIS 繫結提供繫結通訊協定和繫結這兩項資訊。 繫結通訊協定會定義產生通訊的配置，而繫結資訊則是用來存取網站的資訊。  
@@ -48,11 +48,11 @@ ms.locfileid: "64912704"
   
 - 繫結通訊協定：HTTP  
   
-- 繫結資訊：IP 位址、 連接埠、 主機標頭  
+- 繫結資訊：IP 位址、連接埠、主機標頭  
   
- IIS 可以為每個網站指定多個繫結，讓每個配置都有多個基底位址。 之前[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]，WCF 會不支援多個位址的結構描述，和指定，會擲回<xref:System.ArgumentException>在啟用期間。  
+ IIS 可以為每個網站指定多個繫結，讓每個配置都有多個基底位址。 在 .NET Framework 3.5 之前，WCF 不支援架構的多個位址，如果已指定，則會在啟用期間擲回 <xref:System.ArgumentException>。  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 可讓網際網路服務提供者在同一個網站上裝載多個應用程式，而且同一個配置中可以有不同的基底位址。  
+ .NET Framework 3.5 可讓網際網路服務提供者在同一個網站上裝載多個應用程式，且具有相同配置的不同基底位址。  
   
  例如，網站可能包含下列基底位址：  
   
@@ -60,7 +60,7 @@ ms.locfileid: "64912704"
   
 - `http://shipping.myorg.com/Service.svc`
   
- 有了 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]，您就可以透過組態檔在 AppDomain 層級指定前置詞篩選條件。 即可達到這個[ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)元素，其中包含的前置詞清單。 IIS 提供的傳入基底位址會依據選擇性的前置詞清單經過篩選。 根據預設，如果沒有指定前置詞，則所有位址都會通過。 如果指定前置詞，則只會產生相符的基底位址讓該配置通過。  
+ 使用 .NET Framework 3.5，您可以在設定檔案的 AppDomain 層級指定前置詞篩選準則。 您可以使用[\<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)元素來執行此動作，其中包含前置詞的清單。 IIS 提供的傳入基底位址會依據選擇性的前置詞清單經過篩選。 根據預設，如果沒有指定前置詞，則所有位址都會通過。 如果指定前置詞，則只會產生相符的基底位址讓該配置通過。  
   
  下列示範使用前置詞篩選條件的組態程式碼。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "64912704"
 </system.serviceModel>  
 ```  
   
- 在上述範例中，`net.tcp://payroll.myorg.com:8000`和`http://shipping.myorg.com:8000`會的唯一基底位址，對於其各自的結構描述，都會通過。  
+ 在上述範例中，`net.tcp://payroll.myorg.com:8000` 和 `http://shipping.myorg.com:8000` 是唯一的基底位址，適用于其各自的配置，其會透過傳遞。  
   
  `baseAddressPrefixFilter` 不支援萬用字元。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "64912704"
 ## <a name="multiple-iis-binding-support-in-net-framework-4-and-later"></a>.NET Framework 4 及更新版本中的多重 IIS 繫結支援  
  從 .NET 4 開始，您就可以將 <xref:System.ServiceModel.ServiceHostingEnvironment> 的 <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> 設定設為 true，藉以啟用 IIS 的多重繫結支援，而不需要挑選單一基底位址。 這項支援僅限 HTTP 通訊協定配置。  
   
- 以下是使用 multipleSiteBindingsEnabled 的組態程式碼範例[ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)。  
+ 以下是在[\<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)上使用 multipleSiteBindingsEnabled 的設定程式碼範例。  
   
 ```xml  
 <system.serviceModel>  
@@ -95,10 +95,10 @@ ms.locfileid: "64912704"
   
  使用這項設定來啟用多重網站繫結時，系統會針對 HTTP 和非 HTTP 通訊協定忽略任何 baseAddressPrefixFilters 設定。  
   
- 如需詳細資訊和範例，請參閱 <<c0> [ 支援多重 IIS 網站繫結](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)和<xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>。  
+ 如需詳細資訊和範例，請參閱[支援多個 IIS 網站](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)系結和 <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>。  
   
 ## <a name="extending-addressing-in-wcf-services"></a>擴充 WCF 服務中的定址  
- 預設定址模型之 WCF 服務使用的端點位址 URI 用於下列用途：  
+ WCF 服務的預設定址模型會針對下列目的使用端點位址 URI：  
   
 - 指定服務接聽位址，亦即端點接聽訊息時的位置。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "64912704"
   
 - 在程式碼中，可以使用 <xref:System.ServiceModel.Channels.AddressHeader> 類別來建立自訂位址標頭，然後用來建構 <xref:System.ServiceModel.EndpointAddress>。  
   
-- 在組態中，自訂[\<標頭 >](../../configure-apps/file-schema/wcf/headers.md)指定為的子系[\<端點 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md)項目。  
+- 在設定中，自訂[\<標頭 >](../../configure-apps/file-schema/wcf/headers.md)會指定為[\<端點 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md)元素的子系。  
   
  與程式碼相較之下，建議您使用組態，因為程式碼可讓您在部署後變更標頭。  
   
@@ -130,14 +130,14 @@ ms.locfileid: "64912704"
   
 - 在程式碼中，可以將 <xref:System.ServiceModel.Description.ClientViaBehavior> 類別新增至端點的行為集合中，以指定自訂接聽位址。  
   
-- 在組態中，指定 使用自訂接聽位址`ListenUri`的服務屬性[\<端點 >](../../configure-apps/file-schema/wcf/endpoint-element.md)項目。  
+- 在 [設定] 中，使用服務[\<端點 >](../../configure-apps/file-schema/wcf/endpoint-element.md)元素的 `ListenUri` 屬性來指定自訂接聽位址。  
   
 ### <a name="custom-soap-address-filter"></a>自訂 SOAP 位址篩選條件  
  <xref:System.ServiceModel.EndpointAddress.Uri%2A> 可以與任何 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 屬性搭配使用，以定義端點的 SOAP 位址篩選條件 (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>)。 根據預設，這項篩選條件會確認傳入訊息所包含的 `To` 訊息標頭符合端點 URI，而且所有必要的端點標頭都出現在訊息中。  
   
  在某些情況中，端點會接收抵達基礎傳輸的所有訊息，而不只有包含適當 `To` 標頭的訊息。 若要啟用這項功能，使用者可以使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 類別。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [指定端點位址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
 - [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

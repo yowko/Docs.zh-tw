@@ -1,17 +1,17 @@
 ---
-title: 如何：在匿名類型宣告中推斷屬性名稱和類型 (Visual Basic)
+title: 如何：在匿名類型宣告中推斷屬性名稱和類型
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inferring property names [Visual Basic]
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 5bd4e0a760bcedf8f5e96c2cebe3a71b9050a420
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 89a39e8e9cd66b1d774da70be47c7c6824cccef2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582273"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350028"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>如何：在匿名類型宣告中推斷屬性名稱和類型 (Visual Basic)
 

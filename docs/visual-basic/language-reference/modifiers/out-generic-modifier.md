@@ -1,5 +1,5 @@
 ---
-title: Out (泛型修飾詞) (Visual Basic)
+title: In (泛型修飾詞)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.VarianceOut
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: fa14e83af16cd30a72ca1c165596fa9320842fce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0460015b44971fa638dba47183690ffcc89ca55f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053921"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351428"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (泛型修飾詞) (Visual Basic)
 
-泛型型別參數`Out`關鍵字可讓您指定的型別是 covariant。
+For generic type parameters, the `Out` keyword specifies that the type is covariant.
 
 ## <a name="remarks"></a>備註
 
 共變數可讓您使用比泛型參數指定的衍生程度更高的衍生型別。 這可隱含轉換實作 Variant 介面的類別和隱含轉換委派型別。
 
-如需詳細資訊，請參閱 [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md) (共變數和反變數 (C# 和 Visual Basic))。
+如需詳細資訊，請參閱 [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md) (共變數和反變數)。
 
 ## <a name="rules"></a>規則
 
@@ -37,11 +37,11 @@ ms.locfileid: "62053921"
 
 - 型別參數不是用為介面方法的泛型條件約束。
 
-在泛型委派中，類型參數可以宣告為 covariant 如果它是僅用為方法的傳回型別，不用於方法引數。
+In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.
 
 參考型別支援共變數和反變數，但實值型別不支援它們。
 
-在 Visual Basic 中，您無法宣告 covariant 介面中的事件，但未指定的委派型別。 此外，類別、 列舉或結構，covariant 介面不能有巢狀，但可以有巢狀介面。
+In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type. Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.
 
 ## <a name="behavior"></a>行為
 
@@ -57,11 +57,11 @@ Covariant 委派可以指派給同型別的另一個委派，但具有衍生程�
 
 ## <a name="example"></a>範例
 
-下例會示範如何宣告、具現化及叫用 Covariant 泛型委派。 它也會示範如何使用隱含轉換為委派類型。
+下例會示範如何宣告、具現化及叫用 Covariant 泛型委派。 It also shows how you can use implicit conversion for delegate types.
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [泛型介面中的變異數](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
 - [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

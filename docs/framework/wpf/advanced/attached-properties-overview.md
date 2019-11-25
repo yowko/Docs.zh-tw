@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: 403c4e76e302536513b9de0694ab7b0de621d5d2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f4e8ea9fb0643a4a434bf20fa719c3fd2d01435b
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455515"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089324"
 ---
 # <a name="attached-properties-overview"></a>附加屬性概觀
 
@@ -123,7 +123,7 @@ WPF 中附加的屬性沒有一般的 CLR 「包裝函式」方法，可輕鬆�
 
 #### <a name="attached-property-attributes"></a>附加屬性 (property) 的屬性 (attribute)
 
-WPF 會定義數個 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)]，以便將附加屬性的相關資訊提供給反映進程，以及反映的一般使用者和屬性資訊（例如設計工具）。 因為附加屬性的類型為無限制範圍，所以設計人員需要方法來避免使用 XAML 的特定技術實作中所定義之所有附加屬性的全域清單，讓使用者無所適從。 WPF 為附加屬性所定義的 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)]，可以用來限定給定附加屬性應該顯示在 [屬性] 視窗中的情況。 您也可以考慮針對您自己的自訂附加屬性套用這些屬性。 適當的參考頁面會描述 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] 的用途和語法：
+WPF 會定義數個 .NET 屬性，其目的是要將附加屬性的相關資訊提供給反映進程，以及反映的一般使用者和屬性資訊（例如設計工具）。 因為附加屬性的類型為無限制範圍，所以設計人員需要方法來避免使用 XAML 的特定技術實作中所定義之所有附加屬性的全域清單，讓使用者無所適從。 WPF 為附加屬性定義的 .NET 屬性可用來界定給定附加屬性應該顯示在 [屬性] 視窗中的狀況範圍。 您也可以考慮針對您自己的自訂附加屬性套用這些屬性。 如需 .NET 屬性的用途和語法，請參閱適當的參考頁面：
 
 - <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 

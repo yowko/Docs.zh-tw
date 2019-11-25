@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: ac69b38df3439932be7f65d871c64700585538cb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 65990c699bafa8eec1ba7dcbce624c88316cbb72
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774292"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283277"
 ---
 # <a name="working-with-certificates"></a>使用憑證
 
@@ -72,7 +72,7 @@ ms.locfileid: "72774292"
 
 在建立新服務時，您可能使用並非由信任的根憑證所發行的憑證，或者發行的憑證本身並非位於 [受信任的根憑證授權單位] 存放區中。 如果只是做為開發用途，您可以暫時停用檢查憑證之信任鏈結的機制。 若要這麼做，請將 `CertificateValidationMode` 屬性 (Property) 設為 `PeerTrust` 或 `PeerOrChainTrust`。 每種模式都會將憑證指定為自動發行 (對等信任) 或是信任鏈結的一部分。 您可以在下列任何一個類別中設定屬性。
 
-|執行個體|屬性|
+|類別|屬性|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -113,7 +113,7 @@ PowerShell SelfSignedCertificate 指令碼會建立 x.509 憑證和私密金鑰/
 
 ### <a name="service-certificates"></a>服務憑證
 
-服務憑證的主要工作就是對用戶端驗證伺服器。 當用戶端驗證伺服器時，首先要執行的檢查項目之一就是將 [主體] 欄位的值與用來連絡服務的統一資源識別元 (URI) 加以比較：兩者的 DNS 必須相符。 例如，如果服務的 URI 是 `http://www.contoso.com/endpoint/` 則 [主旨] 欄位也必須包含 **`www.contoso.com` 的值**。
+服務憑證的主要工作就是對用戶端驗證伺服器。 當用戶端驗證伺服器時，首先要執行的檢查項目之一就是將 [主體] 欄位的值與用來連絡服務的統一資源識別元 (URI) 加以比較：兩者的 DNS 必須相符。 例如，如果服務的 URI 是 `http://www.contoso.com/endpoint/` 則 [主旨] 欄位也必須包含 **`www.contoso.com`的值**。
 
 請注意，該欄位可以包含數個值，每個值都可加上代表該值的初始化前置詞。 最常見的情況是，一般名稱的初始化是 "CN"，例如 `CN = www.contoso.com`。 您也可以將 [主體] 欄位留空，在這種情況下，[主體別名] 欄位則可包含 [DNS 名稱] 值。
 
@@ -135,13 +135,13 @@ PowerShell SelfSignedCertificate 指令碼會建立 x.509 憑證和私密金鑰/
 
 一旦發生這種情況，任何來自已撤銷憑證的鏈結會同時失效，而且在驗證程序期間將不會受到信任。 為了找出已撤銷的憑證，每個簽發者會發佈一個包含時間與日期戳記的「憑證撤銷清單」(CRL)。 您也可以透過將下列類別的 `RevocationMode` 或 `DefaultRevocationMode` 屬性設為其中一個 <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 列舉值的方式，使用線上撤銷或離線撤銷來檢查此清單：<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>、<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>、<xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> 與 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 類別。 所有屬性的預設值為 `Online`。
 
-您也可以在組態中同時使用 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (屬於 [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)) 和 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (屬於 [\<endpointBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)) `revocationMode` 屬性來設定模式。
+您也可以在組態中同時使用 `revocationMode`[authentication>\< (屬於 ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[serviceBehaviors>\<) 和 ](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)[authentication>\< (屬於 ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[endpointBehaviors>\<) ](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 屬性來設定模式。
 
 ## <a name="the-setcertificate-method"></a>SetCertificate 方法
 
 在 WCF 中，您必須經常指定服務或用戶端用來驗證、加密或數位簽署訊息的憑證或憑證集。 您也可以使用代表 X.509 憑證之各種類別的 `SetCertificate` 方法，以程式設計方式來執行這項工作。 下列類別會使用 `SetCertificate` 方法來指定憑證。
 
-|執行個體|方法|
+|類別|方法|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|
@@ -168,7 +168,7 @@ IIS 與 Active Directory 的其中一項功能，就是能夠將憑證對應至 
 
 如需使用 Active Directory 對應的詳細資訊，請參閱[將用戶端憑證與目錄服務進行對應](https://go.microsoft.com/fwlink/?LinkId=88918)。
 
-一旦您啟用這項功能，就可以將 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 類別的 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 屬性設為 `true`。 在組態中，您可以將 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 元素的 `mapClientCertificateToWindowsAccount` 屬性設為 `true`，如下列程式碼所示。
+一旦您啟用這項功能，就可以將 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 類別的 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 屬性設為 `true`。 在組態中，您可以將 `mapClientCertificateToWindowsAccount`[authentication>\< 元素的 ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 屬性設為 `true`，如下列程式碼所示。
 
 ```xml
 <serviceBehaviors>
@@ -184,7 +184,7 @@ IIS 與 Active Directory 的其中一項功能，就是能夠將憑證對應至 
 
 將 X.509 憑證對應至代表 Windows 使用者帳戶的權杖可視為權限的提升，因為一旦對應之後，就可以使用 Windows 權杖針對受保護的資源取得其存取權限。 因此，網域原則要求 X.509 憑證在執行對應之前必須先符合此原則規定。 *SChannel* 安全性套件會強制執行此要求。
 
-當使用 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 或更新版本時，WCF 會確保憑證符合網域原則，然後才將憑證對應至 Windows 帳戶。
+使用 .NET Framework 3.5 或更新版本時，WCF 會確保憑證符合網域原則，然後才會將它對應到 Windows 帳戶。
 
 在第一版的 WCF 中，您不需要諮詢網域原則便可進行對應。 因此，當啟用對應功能且 X.509 憑證無法滿足網域原則要求時，以往在第一版中能夠順利執行的舊版應用程式可能會無法執行。
 
@@ -194,4 +194,4 @@ IIS 與 Active Directory 的其中一項功能，就是能夠將憑證對應至 
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType>
-- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

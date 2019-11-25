@@ -1,15 +1,15 @@
 ---
-title: 作法：使用規則運算式合併 LINQ 查詢 (C#)
+title: 如何結合 LINQ 查詢與正則運算式（C#）
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: 7e3540dfe6d93f5262790bce615cc7fe3f1fbb93
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 97551f7d9d8cf13f05449c2f825ed4d29eb3d86e
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594039"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141405"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>作法：使用規則運算式合併 LINQ 查詢 (C#)
+# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>如何結合 LINQ 查詢與正則運算式（C#）
 此範例會示範如何使用 <xref:System.Text.RegularExpressions.Regex> 類別來建立規則運算式，以在文字字串中進行更複雜的比對。 LINQ 查詢讓您輕鬆地準確篩選出您想要用規則運算式搜尋的檔案，並調整結果。  
   
 ## <a name="example"></a>範例  
@@ -98,7 +98,7 @@ class QueryWithRegEx
 ## <a name="compiling-the-code"></a>編譯程式碼  
  建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ 和字串 (C#)](./linq-and-strings.md)
 - [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)

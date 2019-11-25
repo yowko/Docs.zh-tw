@@ -3,14 +3,14 @@ title: 使用預設介面方法建立 mixin 類型
 description: 使用預設介面成員，您可以使用實作者的選擇性預設實作為擴充介面。
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: 798413f0071159893de39f3e190a9b2693571bb7
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039280"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140854"
 ---
-# <a name="tutorial-mix-in-functionality-when-creating-classes-using-interfaces-with-default-interface-methods"></a>教學課程：使用具有預設介面方法的介面建立類別時混用功能
+# <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>教學課程：使用具有預設介面方法的介面建立類別時，混合中的功能
 
 從 C# 8.0 開始，您可以在宣告介面成員時，於 .NET Core 3.0 上定義實作。 這項功能提供新的功能，您可以在其中為介面中宣告的功能定義預設的執行方式。 類別可以挑選何時覆寫功能、何時使用預設功能，以及何時不宣告對離散功能的支援。
 

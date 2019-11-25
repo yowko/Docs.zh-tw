@@ -1,5 +1,5 @@
 ---
-title: HOW TO：宣告混合的存取層級 (Visual Basic) 的屬性
+title: 如何：宣告混合存取層級的屬性
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access levels [Visual Basic], properties
@@ -10,39 +10,39 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: e899b57e02f492b0e4909aca84c069e5b7688618
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d74e23f33fbf7d9d29ab84b9b1bd4fc08863ac48
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863684"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349689"
 ---
-# <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>HOW TO：宣告混合的存取層級 (Visual Basic) 的屬性
-如果您想`Get`並`Set`有不同的存取層級屬性的程序，您可以使用中的更寬鬆的層級`Property`陳述式並在更嚴格的層級`Get`或`Set`陳述式。 當您想要能夠取得屬性的值，程式碼的特定組件和其他部分的程式碼能夠將值變更時，您可以使用在屬性上的混合的存取層級。  
+# <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>如何：宣告混合存取層級的屬性 (Visual Basic)
+If you want the `Get` and `Set` procedures on a property to have different access levels, you can use the more permissive level in the `Property` statement and the more restrictive level in either the `Get` or `Set` statement. You use mixed access levels on a property when you want certain parts of the code to be able to get the property's value, and certain other parts of the code to be able to change the value.  
   
- 如需有關存取層級的詳細資訊，請參閱[存取 Visual Basic 中的層級](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ For more information on access levels, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
-### <a name="to-declare-a-property-with-mixed-access-levels"></a>若要宣告混合的存取層級的屬性  
+### <a name="to-declare-a-property-with-mixed-access-levels"></a>To declare a property with mixed access levels  
   
-1. 宣告屬性，以一般方式，並指定較不嚴格的存取層級 (例如`Public`) 中`Property`陳述式。  
+1. Declare the property in the normal way, and specify the less restrictive access level (such as `Public`) in the `Property` statement.  
   
-2. 宣告其中`Get`或`Set`程序並指定更嚴格的存取層級 (例如`Friend`)。  
+2. Declare either the `Get` or the `Set` procedure specifying the more restrictive access level (such as `Friend`).  
   
-3. 未指定存取層級上的其他屬性程序。 它會假設中宣告的存取層級`Property`陳述式。 您可以限制只有其中一個屬性程序的存取。  
+3. Do not specify an access level on the other property procedure. It assumes the access level declared in the `Property` statement. You can restrict access on only one of the property procedures.  
   
      [!code-vb[VbVbcnProcedures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#10)]  
   
-     在上述範例中，`Get`程序中的相同`Protected`屬性本身的存取權時`Set`程序中的`Private`存取。 類別衍生自`employee`可以讀取`salary`值，但僅限`employee`類別也可以設定它。  
+     In the preceding example, the `Get` procedure has the same `Protected` access as the property itself, while the `Set` procedure has `Private` access. A class derived from `employee` can read the `salary` value, but only the `employee` class can set it.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [程序](./index.md)
 - [屬性程序](./property-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [Property 陳述式](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [在 Visual Basic 中屬性和變數之間的差異](./differences-between-properties-and-variables.md)
+- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
 - [如何：建立屬性](./how-to-create-a-property.md)
 - [如何：呼叫屬性程序](./how-to-call-a-property-procedure.md)
-- [如何：宣告，並在 Visual Basic 中呼叫預設屬性](./how-to-declare-and-call-a-default-property.md)
-- [如何：將值放在屬性中](./how-to-put-a-value-in-a-property.md)
+- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [如何：將值置入屬性](./how-to-put-a-value-in-a-property.md)
 - [如何：取得屬性值](./how-to-get-a-value-from-a-property.md)

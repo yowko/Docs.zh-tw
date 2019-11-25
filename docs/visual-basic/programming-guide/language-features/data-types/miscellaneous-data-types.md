@@ -1,36 +1,36 @@
 ---
-title: 其他資料類型 (Visual Basic)
+title: 其他資料類型
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-ms.openlocfilehash: 4808d87322d5b21b70ec38e2eb31b2b204938745
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cc6262b5bb305bb839917e222d831fa3340a1b14
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008237"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346340"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>其他資料類型 (Visual Basic)
-Visual Basic 提供幾種資料類型不是目標數字或字元。 相反地，它們會處理特殊資料這類是/否值，日期/時間值和物件位址。  
+Visual Basic supplies several data types that are not oriented toward numbers or characters. Instead, they deal with specialized data such as yes/no values, date/time values, and object addresses.  
   
- 資料表中顯示的 Visual Basic 資料類型的並排顯示比較，請參閱[資料型別](../../../../visual-basic/language-reference/data-types/index.md)。  
+ For a table showing a side-by-side comparison of the Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/index.md).  
   
-## <a name="boolean-type"></a>布林值類型  
- [布林資料型別](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)是不帶正負號的值，會解譯為其中一個`True`或`False`。 它的資料寬度取決於實作的平台。 如果是/否或是開/關，變數可以包含只有兩個狀態例如 true/false 的值，將它宣告為`Boolean`。  
+## <a name="boolean-type"></a>Boolean Type  
+ The [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) is an unsigned value that is interpreted as either `True` or `False`. Its data width depends on the implementing platform. If a variable can contain only two-state values such as true/false, yes/no, or on/off, declare it as `Boolean`.  
   
-## <a name="date-type"></a>日期類型  
- [日期資料型別](../../../../visual-basic/language-reference/data-types/date-data-type.md)是 64 位元值，會保留日期和時間資訊。 每個增量會代表西曆日曆 1 年的 1 年 1 月開始 （上午 12:00） 之後的經過時間的 100 奈秒。 如果變數可以包含日期值、 時間值，或兩者，將它宣告為`Date`。  
+## <a name="date-type"></a>Date Type  
+ The [Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md) is a 64-bit value that holds both date and time information. Each increment represents 100 nanoseconds of elapsed time since the beginning (12:00 AM) of January 1 of the year 1 in the Gregorian calendar. If a variable can contain a date value, a time value, or both, declare it as `Date`.  
   
 ## <a name="object-type"></a>物件類型  
- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)是指向您的應用程式或其他一些應用程式中的物件執行個體的 32 位元位址。 `Object`變數可以參考任何物件辨識出您的應用程式，或任何資料類型的資料。 這同時包含*實值型別*，這類`Integer`， `Boolean`，和結構的執行個體，並*參考型別*，這是執行個體，例如建立類別的物件`String`和<xref:System.Windows.Forms.Form>，和陣列執行個體。  
+ The [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) is a 32-bit address that points to an object instance within your application or in some other application. An `Object` variable can refer to any object your application recognizes, or to data of any data type. This includes both *value types*, such as `Integer`, `Boolean`, and structure instances, and *reference types*, which are instances of objects created from classes such as `String` and <xref:System.Windows.Forms.Form>, and array instances.  
   
- 如果變數會儲存在編譯時期不知道類別的執行個體的指標，或者它可以指向各種資料類型的資料，將它宣告為`Object`。  
+ If a variable stores a pointer to an instance of a class that you do not know at compile time, or if it can point to data of various data types, declare it as `Object`.  
   
- 利用`Object`資料型別時，您可以使用它來儲存任何資料類型的資料。 缺點是會產生額外的作業需要更多的執行時間，讓您的應用程式執行速度變慢。 如果您使用`Object`實值型別變數，您需要支付*boxing*並*unboxing*。 如果您使用參考型別，會產生*晚期繫結*。  
+ The advantage of the `Object` data type is that you can use it to store data of any data type. The disadvantage is that you incur extra operations that take more execution time and make your application perform slower. If you use an `Object` variable for value types, you incur *boxing* and *unboxing*. If you use it for reference types, you incur *late binding*.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [類型字元](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [基礎資料類型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)

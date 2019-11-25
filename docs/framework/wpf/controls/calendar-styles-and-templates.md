@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Calendar [WPF], styles and templates
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-ms.openlocfilehash: 49d9ced42572ac06a4ff824ec41a59c14497d215
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 64cb62a3459a3eeea6aa5e91b433a58a88ab08ea
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460933"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283551"
 ---
 # <a name="calendar-styles-and-templates"></a>Calendar 樣式和範本
-本主題描述 <xref:System.Windows.Controls.Calendar> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
+本主題描述 <xref:System.Windows.Controls.Calendar> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
   
 ## <a name="calendar-parts"></a>行事曆元件  
  下表列出 <xref:System.Windows.Controls.Calendar> 控制項的已命名元件。  
@@ -73,7 +73,7 @@ ms.locfileid: "73460933"
 |VisualState 名稱|VisualStateGroup 名稱|描述|  
 |-|-|-|  
 |一般|CommonStates|預設狀態。|  
-|Disabled|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> 已停用。|  
+|已停用|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> 已停用。|  
 |MouseOver|CommonStates|滑鼠指標位於 <xref:System.Windows.Controls.Primitives.CalendarDayButton>上。|  
 |按下|CommonStates|已按下 <xref:System.Windows.Controls.Primitives.CalendarDayButton>。|  
 |已選取|SelectionStates|已選取此按鈕。|  
@@ -101,7 +101,7 @@ ms.locfileid: "73460933"
 |VisualState 名稱|VisualStateGroup 名稱|描述|  
 |-|-|-|  
 |一般|CommonStates|預設狀態。|  
-|Disabled|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> 已停用。|  
+|已停用|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> 已停用。|  
 |MouseOver|CommonStates|滑鼠指標位於 <xref:System.Windows.Controls.Primitives.CalendarButton>上。|  
 |按下|CommonStates|已按下 <xref:System.Windows.Controls.Primitives.CalendarButton>。|  
 |已選取|SelectionStates|已選取此按鈕。|  
@@ -134,4 +134,4 @@ ms.locfileid: "73460933"
 - [控制項的樣式和範本](control-styles-and-templates.md)
 - [控制項自訂](control-customization.md)
 - [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)
+- [建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)

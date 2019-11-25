@@ -1,5 +1,5 @@
 ---
-title: 宣告項目特性 (Visual Basic)
+title: 宣告項目特性
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declared elements [Visual Basic], lifetime
@@ -13,53 +13,53 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: f0ec2c56403e43f2ce04b394a1a4a59eafaa7311
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 4e03cd28fed5e0ae109337739251c11a0ff3424a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912979"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331631"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>宣告項目特性 (Visual Basic)
-A*特性*的宣告的項目是如何與其互動的程式碼會影響該元素的層面。 每個宣告的項目有一或多個與它相關的下列特性：  
+A *characteristic* of a declared element is an aspect of that element that affects how code can interact with it. Every declared element has one or more of the following characteristics associated with it:  
   
-- *資料型別*-項目可以保留的值，以及它如何儲存這些值。 如需詳細資訊，請參閱[資料類型](../../../../visual-basic/language-reference/data-types/index.md)。  
+- *Data type* — the values the element can hold, and how it stores those values. 如需詳細資訊，請參閱[資料類型](../../../../visual-basic/language-reference/data-types/index.md)。  
   
-- *存留期*— 這段期間執行期間的項目是可供使用。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Basic 中的存留期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。  
+- *Lifetime* — the period of execution time during which the element is available for use. For more information, see [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
-- *範圍*— 可以參考的項目未限定其名稱的所有程式碼的集合。 如需詳細資訊，請參閱[如何：控制變數的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)。  
+- *Scope* — the set of all code that can refer to the element without qualifying its name. For more information, see [How to: Control the Scope of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
   
-- *存取層級*— 進行程式碼的權限使用的項目。 如需詳細資訊，請參閱[如何：控制變數的可用性](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)。  
+- *Access level* — the permission for code to make use of the element. For more information, see [How to: Control the Availability of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
   
-## <a name="characteristics-of-the-elements"></a>項目特性  
- 下表顯示宣告的項目並套用至每一個的特性。  
+## <a name="characteristics-of-the-elements"></a>Characteristics of the Elements  
+ The following table shows the declared elements and the characteristics that apply to each one.  
   
-|項目|資料類型|存留期|範圍<sup>1</sup>|存取層級|  
+|項目|資料類型|存留期|Scope <sup>1</sup>|Access Level|  
 |-------------|---------------|--------------|------------------------|------------------|  
-|變數|是|是|是|是|  
-|常數|是|否|是|是|  
-|列舉|是|否|是|是|  
-|結構|否|否|是|是|  
-|屬性|是|是|是|是|  
-|方法|否|是|是|是|  
-|程序 (`Sub`或`Function`)|否|是|是|是|  
-|程序參數|是|是|是|否|  
-|函式傳回|是|是|是|否|  
-|運算子|是|否|是|是|  
-|介面|否|否|是|是|  
-|類別|否|否|是|是|  
-|Event - 事件|否|否|是|是|  
-|Delegate - 委派|否|否|是|是|  
+|變數|[是]|[是]|[是]|[是]|  
+|常數|[是]|否|[是]|[是]|  
+|列舉|[是]|否|[是]|[是]|  
+|結構|否|否|[是]|[是]|  
+|屬性|[是]|[是]|[是]|[是]|  
+|方法|否|[是]|[是]|[是]|  
+|Procedure (`Sub` or `Function`)|否|[是]|[是]|[是]|  
+|程序參數|[是]|[是]|[是]|否|  
+|Function return|[是]|[是]|[是]|否|  
+|運算子|[是]|否|[是]|[是]|  
+|介面|否|否|[是]|[是]|  
+|執行個體|否|否|[是]|[是]|  
+|Event - 事件|否|否|[是]|[是]|  
+|Delegate - 委派|否|否|[是]|[是]|  
   
- <sup>1</sup>範圍有時稱為*可視性*。  
+ <sup>1</sup> Scope is sometimes referred to as *visibility*.  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [宣告項目](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
 - [宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [對已宣告項目的參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [在 Visual Basic 中的存留期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [在 Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [在 Visual Basic 中的存取層級](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

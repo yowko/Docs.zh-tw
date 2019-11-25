@@ -1,5 +1,5 @@
 ---
-title: Set 陳述式 (Visual Basic)
+title: Set 陳述式
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Set
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: cb0dc76d110f3e6a3ea3e74cc0bfb5a669b35396
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 75ad6d87f1785fea13a282d953f117c9c234e203
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583228"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349560"
 ---
 # <a name="set-statement-visual-basic"></a>Set 陳述式 (Visual Basic)
-宣告用來將值指派給屬性的 `Set` 屬性程式。  
+Declares a `Set` property procedure used to assign a value to a property.  
   
 ## <a name="syntax"></a>語法  
   
@@ -30,10 +30,10 @@ End Set
   
 ## <a name="parts"></a>組件  
  `attributelist`  
- 選擇項。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。  
+ 選擇項。 See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `accessmodifier`  
- 在此屬性中的最多一個 `Get` 和 `Set` 語句上為選擇性。 可以是下列其中一項：  
+ Optional on at most one of the `Get` and `Set` statements in this property. 可以是下列其中一項：  
   
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
@@ -46,44 +46,44 @@ End Set
  請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `value`  
- 必要項。 包含屬性之新值的參數。  
+ 必要項。 Parameter containing the new value for the property.  
   
  `datatype`  
- 如果 `Option Strict` `On`，則為必要。 @No__t_0 參數的資料類型。 指定的資料類型必須與宣告此 `Set` 語句之屬性的資料類型相同。  
+ Required if `Option Strict` is `On`. Data type of the `value` parameter. The data type specified must be the same as the data type of the property where this `Set` statement is declared.  
   
  `statements`  
- 選擇項。 呼叫 `Set` 屬性程式時，所執行的一或多個語句。  
+ 選擇項。 One or more statements that run when the `Set` property procedure is called.  
   
  `End Set`  
- 必要項。 結束 `Set` 屬性程式的定義。  
+ 必要項。 Terminates the definition of the `Set` property procedure.  
   
 ## <a name="remarks"></a>備註  
- 除非屬性標示為 `ReadOnly`，否則每個屬性都必須有 `Set` 的屬性程式。 @No__t_0 程式是用來設定屬性的值。  
+ Every property must have a `Set` property procedure unless the property is marked `ReadOnly`. The `Set` procedure is used to set the value of the property.  
   
- 當指派語句提供要儲存在屬性中的值時，Visual Basic 會自動呼叫屬性的 `Set` 程式。  
+ Visual Basic automatically calls a property's `Set` procedure when an assignment statement provides a value to be stored in the property.  
   
- Visual Basic 在屬性指派期間，將參數傳遞給 `Set` 程式。 如果您未提供 `Set` 的參數，整合式開發環境（IDE）會使用名為 `value` 的隱含參數。 參數會保留要指派給屬性的值。 您通常會將此值儲存在私用區域變數中，並在每次呼叫 `Get` 程式時傳回它。  
+ Visual Basic passes a parameter to the `Set` procedure during property assignments. If you do not supply a parameter for `Set`, the integrated development environment (IDE) uses an implicit parameter named `value`. The parameter holds the value to be assigned to the property. You typically store this value in a private local variable and return it whenever the `Get` procedure is called.  
   
- 屬性宣告的主體只能包含屬性的 `Get`，以及[屬性語句](../../../visual-basic/language-reference/statements/property-statement.md)和 `End Property` 語句之間的 `Set` 程式。 它不能儲存那些程式以外的任何專案。 特別是，它無法儲存屬性的目前值。 您必須將此值儲存在屬性之外，因為如果您將它儲存在其中一個屬性程式中，另一個屬性程式就無法存取它。 一般的方法是將值儲存在與屬性相同層級所宣告的[私](../../../visual-basic/language-reference/modifiers/private.md)用變數中。 您必須在套用的屬性內定義 `Set` 程式。  
+ The body of the property declaration can contain only the property's `Get` and `Set` procedures between the [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. It cannot store anything other than those procedures. In particular, it cannot store the property's current value. You must store this value outside the property, because if you store it inside either of the property procedures, the other property procedure cannot access it. The usual approach is to store the value in a [Private](../../../visual-basic/language-reference/modifiers/private.md) variable declared at the same level as the property. You must define a `Set` procedure inside the property to which it applies.  
   
- 除非您在 `Set` 語句中使用 `accessmodifier`，否則 `Set` 程式預設為其包含屬性的存取層級。  
+ The `Set` procedure defaults to the access level of its containing property unless you use `accessmodifier` in the `Set` statement.  
   
 ## <a name="rules"></a>規則  
   
-- **混合存取層級。** 如果您要定義讀寫屬性，您可以選擇性地為 `Get` 或 `Set` 程式指定不同的存取層級，但不能同時為兩者。 如果您這樣做，程式存取層級必須比屬性的存取層級更嚴格。 例如，如果屬性是 `Friend` 宣告的，您可以宣告 `Set` 程式 `Private` 但不會 `Public`。  
+- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Set` procedure `Private`, but not `Public`.  
   
-     如果您要定義 `WriteOnly` 屬性，`Set` 程式會代表整個屬性。 您無法為 `Set` 宣告不同的存取層級，因為這會為屬性設定兩個存取層級。  
+     If you are defining a `WriteOnly` property, the `Set` procedure represents the entire property. You cannot declare a different access level for `Set`, because that would set two access levels for the property.  
   
 ## <a name="behavior"></a>行為  
   
-- **從屬性程式傳回。** 當 `Set` 程式回到呼叫程式碼時，執行會在提供要儲存之值的語句後面繼續進行。  
+- **Returning from a Property Procedure.** When the `Set` procedure returns to the calling code, execution continues following the statement that provided the value to be stored.  
   
-     `Set` 屬性程式可以使用[Return 語句](../../../visual-basic/language-reference/statements/return-statement.md)或[Exit 語句](../../../visual-basic/language-reference/statements/exit-statement.md)傳回。  
+     `Set` property procedures can return using either the [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) or the [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md).  
   
-     @No__t_0 和 `Return` 語句會導致立即離開屬性程式。 任何數目的 `Exit Property` 和 `Return` 語句都可以出現在程式中的任何位置，而且您可以混合 `Exit Property` 和 `Return` 語句。  
+     The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.  
   
 ## <a name="example"></a>範例  
- 下列範例會使用 `Set` 語句來設定屬性的值。  
+ The following example uses the `Set` statement to set the value of a property.  
   
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  
   

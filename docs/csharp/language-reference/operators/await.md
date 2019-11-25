@@ -1,19 +1,19 @@
 ---
 title: await 運算子 - C# 參考
 ms.custom: seodec18
-ms.date: 08/30/2019
+ms.date: 11/08/2019
 f1_keywords:
 - await_CSharpKeyword
 helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 5ed9d467bcbfa37a9809a530d11b3692fd2b984e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 36cb4a5def6b75281edbe878d89af0c18ab226ec
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036342"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140651"
 ---
 # <a name="await-operator-c-reference"></a>await 運算子 (C# 參考)
 
@@ -31,6 +31,8 @@ ms.locfileid: "73036342"
 您只能在以 [async](../keywords/async.md) 關鍵字修改的方法、[Lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](delegate-operator.md)中使用 `await` 運算子。 在非同步方法中，您無法在同步函式主體、[lock 陳述式](../keywords/lock-statement.md)區塊和 [unsafe](../keywords/unsafe.md) 內容中使用 `await` 運算子。
 
 `await` 運算子的運算元通常是下列其中一個 .NET 類型：<xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.ValueTask> 或 <xref:System.Threading.Tasks.ValueTask%601>。 不過，任何可等候運算式都可以是 `await` 運算子的運算元。 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[可等候運算式](~/_csharplang/spec/expressions.md#awaitable-expressions)一節。
+
+從C# 8.0 開始，您可以使用 `await foreach` 語句來取用非同步資料串流。 如需詳細資訊，請參閱[8.0 的新功能文章C#中](../../whats-new/csharp-8.md)的[非同步資料流程](../../whats-new/csharp-8.md#asynchronous-streams)一節。
 
 如果運算式 `t` 的類型為 <xref:System.Threading.Tasks.Task%601> 或 <xref:System.Threading.Tasks.ValueTask%601>，則運算式 `await t` 的類型為 `TResult`。 如果 `t` 的類型為 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.ValueTask>，則 `await t` 的類型為 `void`。 在這兩種情況下，如果 `t` 擲回例外狀況，`await t` 會重新擲回該例外狀況。 如需例外狀況處理的詳細資訊，請參閱 [try-catch 陳述式](../keywords/try-catch.md)一文的[非同步方法中的例外狀況](../keywords/try-catch.md#exceptions-in-async-methods)一節。
 
@@ -53,3 +55,4 @@ ms.locfileid: "73036342"
 - [非同步程式設計](../../async.md)
 - [深入了解非同步](../../../standard/async-in-depth.md)
 - [逐步解說：使用 async 和 await 存取 Web](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [教學課程：使用C# 8.0 和 .net Core 3.0 產生和取用非同步資料流程](../../tutorials/generate-consume-asynchronous-stream.md)

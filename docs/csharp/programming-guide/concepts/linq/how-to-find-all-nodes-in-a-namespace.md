@@ -1,15 +1,15 @@
 ---
-title: 作法：在命名空間中尋找所有節點 (C#)
+title: 如何尋找命名空間中的所有節點（C#）
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: f8a6f33084417e0dd489002eaa5d2de509e30d39
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253778"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141191"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>作法：在命名空間中尋找所有節點 (C#)
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>如何尋找命名空間中的所有節點（C#）
 您可以在每個項目或屬性的命名空間上篩選，尋找該特定命名空間中的所有節點。  
   
 ## <a name="example"></a>範例  
@@ -46,7 +46,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>範例  
  下列查詢所存取的 XML 檔案包含兩種不同命名空間中的採購訂單。 此查詢只會使用其中一個命名空間中的項目建立新的樹狀。  
   
- 此範例使用下列 XML 文件：[XML 範例檔：合併的訂購單](./sample-xml-file-consolidated-purchase-orders.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：合併的採購訂單](./sample-xml-file-consolidated-purchase-orders.md)。  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  

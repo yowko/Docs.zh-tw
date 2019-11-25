@@ -13,12 +13,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 5de7e565560928b1867ba96c8937fd354c276806
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a5707e8cfff11dd9d27fffc9deb41662fb2c4460
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774125"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281758"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令列引數 (C# 程式設計指南)
 
@@ -28,15 +28,28 @@ ms.locfileid: "72774125"
 
 [!code-csharp[csProgGuideMain#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#17)]
 
-## <a name="overview"></a>總覽
+## <a name="overview"></a>概觀
 
 - `Main` 方法是可執行程式的進入點；它是程式控制開始和結束的位置。
 - `Main` 會宣告於類別或結構內部。 `Main` 必須是 [static](../../language-reference/keywords/static.md)，但不必是 [public](../../language-reference/keywords/public.md)。 （在先前的範例中，它會接收[私](../../language-reference/keywords/private.md)用的預設存取權）。封入類別或結構不需要是靜態的。
 - `Main` 的傳回型別可以是 `void`、`int`，或是 `Task`、`Task<int>` (從 C# 7.1 開始)。
 - 只有當 `Main` 傳回 `Task` 或 `Task<int>` 時，`Main` 的宣告才可以包含 [`async`](../../language-reference/keywords/async.md) 修飾詞。 請注意，上列敘述排除了 `async void Main` 方法。
-- `Main` 方法不一定要使用包含命令列引數的 `string[]` 參數來宣告。 使用 Visual Studio 建立 Windows 應用程式時，您可以手動新增參數，或使用 <xref:System.Environment.GetCommandLineArgs> 方法來取得[命令列引數](command-line-arguments.md)。 參數會讀入來做為以零為基礎的命令列引數。 不同于 C C++和，程式的名稱不會被視為`args`陣列中的第一個命令列引數，但它是<xref:System.Environment.GetCommandLineArgs>方法的第一個元素。
+- `Main` 方法不一定要使用包含命令列引數的 `string[]` 參數來宣告。 使用 Visual Studio 建立 Windows 應用程式時，您可以手動新增參數，或使用 <xref:System.Environment.GetCommandLineArgs> 方法來取得[命令列引數](command-line-arguments.md)。 參數會讀入來做為以零為基礎的命令列引數。 不同于 C C++和，程式的名稱不會被視為 `args` 陣列中的第一個命令列引數，但它是 <xref:System.Environment.GetCommandLineArgs> 方法的第一個元素。
 
-當主控台應用程式必須啟動且等待 `Main` 中的 `await` 非同步作業時，新增的 `async` 與 `Task`、`Task<int>` 傳回型別可簡化程式碼。
+以下是有效 `Main` 簽章的清單：
+
+```csharp
+public static void Main() { }
+public static int Main() { }
+public static void Main(string[] args) { }
+public static int Main(string[] args) { }
+public static async Task Main() { }
+public static async Task<int> Main() { }
+public static async Task Main(string[] args) { }
+public static async Task<int> Main(string[] args) { }
+```
+
+當主控台應用程式必須啟動且等待 `async` 中的 `Task` 非同步作業時，新增的 `Task<int>` 與 `await`、`Main` 傳回型別可簡化程式碼。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

@@ -2,15 +2,15 @@
 title: -target:appcontainerexe (C# 編譯器選項)
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
-ms.openlocfilehash: 09ae01d95138b72a0012f294189d288fc71c74b2
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 64661e72f9efe190606cadd93558678cb849e8cc
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606542"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204528"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (C# 編譯器選項)
-如果您使用 **-target:appcontainerexe** 編譯器選項，編譯器會建立一個必須在應用程式容器中執行的 Windows 可執行檔 (.exe)。 這個選項相當於 [-target:winexe](./target-winexe-compiler-option.md)，但是專為 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 應用程式所設計。  
+如果您使用 **-target:appcontainerexe** 編譯器選項，編譯器會建立一個必須在應用程式容器中執行的 Windows 可執行檔 (.exe)。 This option is equivalent to [-target:winexe](./target-winexe-compiler-option.md) but is designed for Windows 8.x Store apps.  
   
 ## <a name="syntax"></a>語法  
   
@@ -27,11 +27,11 @@ ms.locfileid: "69606542"
   
 ### <a name="to-set-this-compiler-option-in-the-ide"></a>若要在 IDE 中設定這個編譯器選項  
   
-1. 在方案總管  中，開啟專案的捷徑功能表，然後選擇 [屬性]  。  
+1. 在方案總管中，開啟專案的捷徑功能表，然後選擇 [屬性]。  
   
-2. 在 [應用程式]  索引標籤上，選擇 [輸出類型]  清單中的 [Windows 市集應用程式]  。  
+2. 在 [應用程式] 索引標籤上，選擇 [輸出類型] 清單中的 [Windows 市集應用程式]。  
   
-     這個選項只適用於 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]應用程式範本。  
+     This option is available only for Windows 8.x Store app templates.  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "69606542"
 csc -target:appcontainerexe filename.cs  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [-target (C# 編譯器選項)](./target-compiler-option.md)
 - [-target:winexe (C# 編譯器選項)](./target-winexe-compiler-option.md)

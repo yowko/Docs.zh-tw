@@ -1,5 +1,5 @@
 ---
-title: HOW TO：定義轉換運算子 (Visual Basic)
+title: 'How to: Define a Conversion Operator'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-ms.openlocfilehash: cf7bfdd09c7f3429f9c730a7aec34b24af3f2e9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ff95390206947e5a28f7a5b85547b496746a9cc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863710"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344892"
 ---
-# <a name="how-to-define-a-conversion-operator-visual-basic"></a>HOW TO：定義轉換運算子 (Visual Basic)
-如果您已定義類別或結構，您可以定義您自己的類別或結構的類型與另一個資料類型之間的型別轉換運算子 (例如`Integer`， `Double`，或`String`)。  
+# <a name="how-to-define-a-conversion-operator-visual-basic"></a>如何：定義轉換運算子 (Visual Basic)
+If you have defined a class or structure, you can define a type conversion operator between the type of your class or structure and another data type (such as `Integer`, `Double`, or `String`).  
   
- 定義類型轉換成[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)類別或結構內的程序。 所有的轉換程序必須是`Public Shared`，以及每一個都必須指定[Widening](../../../../visual-basic/language-reference/modifiers/widening.md)或是[Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)。  
+ Define the type conversion as a [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) procedure within the class or structure. All conversion procedures must be `Public Shared`, and each one must specify either [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) or [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md).  
   
- 類別或結構上定義的運算子，也稱為*多載*運算子。  
+ Defining an operator on a class or structure is also called *overloading* the operator.  
   
 ## <a name="example"></a>範例  
- 下列範例會定義結構，稱為之間的轉換運算子`digit`和`Byte`。  
+ The following example defines conversion operators between a structure called `digit` and a `Byte`.  
   
  [!code-vb[VbVbcnProcedures#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#27)]  
   
- 您可以測試結構`digit`為下列程式碼。  
+ You can test the structure `digit` with the following code.  
   
  [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [運算子程序](./operator-procedures.md)
 - [如何：定義運算子](./how-to-define-an-operator.md)

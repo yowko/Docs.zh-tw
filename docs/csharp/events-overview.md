@@ -3,12 +3,12 @@ title: 事件簡介
 description: 透過此概觀了解 .NET Core 中的事件，以及事件的語言設計目標。
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: b1fd2ebe2ae91b55c9179f280d8894f6b40ced9b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ceae2b9319a1de9f01102987735c7db2c2883f18
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771909"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138527"
 ---
 # <a name="introduction-to-events"></a>事件簡介
 
@@ -26,18 +26,18 @@ ms.locfileid: "72771909"
 
 ## <a name="design-goals-for-event-support"></a>事件支援的設計目標
 
-事件的語言設計有這些目標。
+事件的語言設計以下列目標為目標：
 
-首先，讓事件來源和事件接收之間的結合程度降至最低。 這兩個元件可能不是由相同的組織所撰寫，甚至可能依完全不同的排程更新。
+- 在事件來源與事件接收器之間啟用極少的結合。 這兩個元件可能不是由相同的組織所撰寫，甚至可能依完全不同的排程更新。
 
-其次，訂閱事件應該非常簡單，取消訂閱相同事件也一樣。
+- 訂閱事件和取消訂閱該相同事件應該非常簡單。
 
-最後，事件來源應該支援多個事件訂閱者。 它也應該支援不附加任何事件訂閱者。
+- 事件來源應該支援多個事件訂閱者。 它也應該支援不附加任何事件訂閱者。
 
 您可以看到事件的目標與委派的目標非常相似。
 這就是事件語言支援建立在委派語言支援上的原因。
 
-## <a name="language-support-for-events"></a>事件語言支援
+## <a name="language-support-for-events"></a>事件的語言支援
 
 定義事件以及訂閱或取消訂閱事件的語法，是委派的語法延伸模組。
 
@@ -69,7 +69,7 @@ EventHandler<FileListArgs> onProgress = (sender, eventArgs) =>
 fileLister.Progress += onProgress;
 ```
 
-處理常式方法通常是前置詞 'On' 後面接事件名稱，如上所示。
+處理常式方法的前置詞前面通常會加上事件名稱，如上所示。
 
 使用 `-=` 運算子取消訂閱事件：
 

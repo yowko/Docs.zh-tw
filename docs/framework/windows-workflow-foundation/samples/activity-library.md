@@ -2,15 +2,15 @@
 title: 活動程式庫
 ms.date: 03/30/2017
 ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
-ms.openlocfilehash: b701d382c25644181b23f3c0f0cd8e019b8d37d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15260fc2ad96e1761a8a41ccc84b2c199e3d448a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909177"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283158"
 ---
 # <a name="activity-library"></a>活動程式庫
-本節包含示範進階自訂活動中 Windows Workflow Foundation (WF) 範例。  
+本節包含的範例示範如何在 Windows Workflow Foundation （WF）中進行先進的自訂活動。  
   
 ## <a name="in-this-section"></a>本節內容
 
@@ -21,10 +21,10 @@ ms.locfileid: "61909177"
  示範 `ThrottleParallelForEach` 活動與 <xref:System.Activities.Statements.ParallelForEach%601> 活動如何類似，唯一的例外是它允許設定並行因數來限制同時執行的分支數目。
   
  [資料庫存取活動](database-access-activities.md)  
- 示範如何建立活動，可讓您存取資料庫以擷取或修改資訊以及使用[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)來存取資料庫。  
+ 示範如何建立活動，以允許存取資料庫來抓取或修改資訊，以及使用[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)來存取資料庫。  
   
  [.NET Framework 4.5 中的外顯化原則活動](externalized-policy-activity-in-net-framework-4-5.md)  
- 示範 ExternalizedPolicy4 活動如何讓執行中的現有 Windows Workflow Foundation [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>物件中的 Windows Workflow foundation [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) 直接使用規則引擎也就是WF 3.5 隨附。 
+ 示範 ExternalizedPolicy4 活動如何使用 WF 3.5 中隨附的規則引擎，直接在 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] （WF 4.5） Windows Workflow Foundation 中的 .NET Framework 3.5 （WF 3.5）中執行現有的 Windows Workflow Foundation <xref:System.Workflow.Activities.Rules.RuleSet> 物件。 
   
  [非泛型 ForEach](non-generic-foreach.md)  
  示範如何建立非泛型 <xref:System.Activities.Statements.ForEach%601> 活動版本。  

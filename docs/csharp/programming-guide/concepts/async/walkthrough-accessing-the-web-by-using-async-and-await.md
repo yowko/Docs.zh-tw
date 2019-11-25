@@ -2,12 +2,12 @@
 title: 逐步解說：使用 async 和 await 存取 Web (C#)
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 30677be2299dfa4411263dc5c61093fc0ca0f442
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 42b09dab26fd514e184163eaf41aff117d3a463f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195645"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281788"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>逐步解說：使用 async 和 await 存取 Web (C#)
 
@@ -34,7 +34,7 @@ ms.locfileid: "73195645"
 
 4. 在 [名稱] 文字方塊中，輸入 `AsyncExampleWPF`，然後選擇 [確定] 按鈕。
 
-     新的專案隨即出現在方案總管中。
+     新的專案隨即會出現在**方案總管**中。
 
 ## <a name="design-a-simple-wpf-mainwindow"></a>設計簡單的 WPF MainWindow
 
@@ -70,7 +70,7 @@ ms.locfileid: "73195645"
 
 2. 在功能表列上，選擇 [專案]  >  [加入參考]。
 
-     **[參考管理員]** 對話方塊隨即顯示。
+     [**參考管理員**] 對話方塊隨即顯示。
 
 3. 在對話方塊上方，請確認專案的目標是 .NET Framework 4.5 或更新版本。
 
@@ -82,7 +82,7 @@ ms.locfileid: "73195645"
 
 ## <a name="add-necessary-using-directives"></a>加入必要的 using 指示詞
 
-1. 在方案總管中，開啟 MainWindow.xaml.cs 的捷徑功能表，然後選擇 [檢視程式碼]。
+1. 在方案總管中開啟 MainWindow.xaml.cs 的捷徑功能表，然後選擇 [檢視程式碼]。
 
 2. 如果尚未顯示，請將下列 `using` 指示詞加入程式碼檔案頂端。
 
@@ -254,7 +254,7 @@ Control returned to startButton_Click.
 
      對 `webReq.GetResponseAsync` 的呼叫會傳回 `Task(Of WebResponse)` 或 `Task<WebResponse>`。 await 運算子會套用至工作以擷取 `WebResponse` 值。
 
-     如果非同步方法有不需要依賴工作完成的工作要執行，此方法可以在呼叫非同步方法之後，以及套用 `await` 運算子之前，繼續這兩個陳述式之間的工作。 如需範例，請參閱[如何：使用 Async 和 Await，同時發出多個 Web 要求 (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) 以及[如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。
+     如果非同步方法有不需要依賴工作完成的工作要執行，此方法可以在呼叫非同步方法之後，以及套用 `await` 運算子之前，繼續這兩個陳述式之間的工作。 如需範例，請參閱[如何使用 async 和 await 以平行方式提出多個 webC#要求（）](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)和[如何使用 system.threading.tasks.task.whenall （C#）擴充非同步逐步](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)解說。
 
 3. 由於您在上一個步驟中加入 `await` 運算子，所以發生編譯器錯誤。 此運算子只能用於以 [async](../../../language-reference/keywords/async.md) 修飾詞標示的方法。 當您重複轉換步驟以將對 `CopyTo` 的呼叫取代為對 `CopyToAsync` 的呼叫時，略過錯誤。
 
@@ -277,13 +277,13 @@ Control returned to startButton_Click.
         //await copyTask;
         ```
 
-4. `GetURLContents` 中還需要完成的工作是調整方法簽章。 您只能在以 [async](../../../language-reference/keywords/async.md) 修飾詞標示的方法中使用 `await` 運算子。 新增修飾詞以將方法標示為「非同步方法」，如下列程式碼所示。
+4. `GetURLContents` 中還需要完成的工作是調整方法簽章。 您只能在以 `await`async[ 修飾詞標示的方法中使用 ](../../../language-reference/keywords/async.md) 運算子。 新增修飾詞以將方法標示為「非同步方法」，如下列程式碼所示。
 
     ```csharp
     private async byte[] GetURLContents(string url)
     ```
 
-5. 非同步方法的傳回型別在 C# 中只能是 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `void`。 一般而言，`void` 的傳回型別只適用於非同步事件處理常式，其中 `void` 為必要項目。 在其他情況下，如果完成的方法有 [return](../../../language-reference/keywords/return.md) 陳述式，則會傳回類型 T 的值，請使用 `Task(T)`；如果完成的方法不會傳回有意義的值，則使用 `Task`。 您可以將 `Task` 傳回類型想成是有意義的 "Task(void)"。
+5. 非同步方法的傳回型別在 C# 中只能是 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `void`。 一般而言，`void` 的傳回型別只適用於非同步事件處理常式，其中 `void` 為必要項目。 在其他情況下，如果完成的方法有 `Task(T)`return[ 陳述式，則會傳回類型 T 的值，請使用 ](../../../language-reference/keywords/return.md)；如果完成的方法不會傳回有意義的值，則使用 `Task`。 您可以將 `Task` 傳回類型想成是有意義的 "Task(void)"。
 
      如需詳細資訊，請參閱[非同步方法的傳回型別 (C#)](./async-return-types.md)。
 
@@ -346,7 +346,7 @@ Control returned to startButton_Click.
 
 2. 因為 `SumPageSizesAsync` 是非同步方法，在事件處理常式中變更程式碼以等候結果。
 
-     對 `SumPageSizesAsync` 的呼叫會鏡射 `GetURLContentsAsync` 中對 `CopyToAsync` 的呼叫。 呼叫會傳回 `Task`，而不是 `Task(T)`。
+     對 `SumPageSizesAsync` 的呼叫會鏡射 `CopyToAsync` 中對 `GetURLContentsAsync` 的呼叫。 呼叫會傳回 `Task`，而不是 `Task(T)`。
 
      如同先前的程序，您可以使用一個陳述式或兩個陳述式轉換呼叫。 下列程式碼會顯示這些變更。
 
@@ -381,7 +381,7 @@ Control returned to startButton_Click.
     private async void startButton_Click(object sender, RoutedEventArgs e)
     ```
 
-     一般而言，事件處理常式的名稱並沒有改變。 因為事件處理常式必須傳回 `void`，所以傳回型別不會變更為 `Task`。
+     一般而言，事件處理常式的名稱並沒有改變。 因為事件處理常式必須傳回 `Task`，所以傳回型別不會變更為 `void`。
 
      專案從同步到非同步處理的轉換已完成。
 
@@ -399,7 +399,7 @@ Control returned to startButton_Click.
 
 1. .NET Framework 4.5 提供許多您可以使用的非同步方法。 其中一個方法 (<xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>) 會執行這個逐步解說所需的工作。 您可以使用這個方法，而不是 `GetURLContentsAsync` 方法，這是您在先前的程序中建立的方法。
 
-     第一個步驟是在方法 `SumPageSizesAsync` 中建立 `HttpClient` 物件。 在方法的開頭，加入下列宣告。
+     第一個步驟是在方法 `HttpClient` 中建立 `SumPageSizesAsync` 物件。 在方法的開頭，加入下列宣告。
 
     ```csharp
     // Declare an HttpClient object and increase the buffer size. The
@@ -690,11 +690,11 @@ namespace AsyncExampleWPF
 
 ## <a name="see-also"></a>請參閱
 
-- [(非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [(非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hh300224(v=vs.110))
 - [async](../../../language-reference/keywords/async.md)
 - [await](../../../language-reference/operators/await.md)
-- [使用 Async 和 Await 進行非同步程式設計 (C#)](./index.md)
+- [使用 async 和 await 進行非同步程式設計 (C#)](./index.md)
 - [非同步方法的傳回型別 (C#)](./async-return-types.md)
 - [Task-based Asynchronous Programming (TAP)](https://www.microsoft.com/download/details.aspx?id=19957) (以工作為基礎的非同步程式設計 (TAP))
-- [如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [如何：使用 async 和 await，同時發出多個 Web 要求 (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [如何使用 System.threading.tasks.task.whenall （C#）擴充非同步逐步解說](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [如何使用 async 和 await （C#）以平行方式提出多個 web 要求](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

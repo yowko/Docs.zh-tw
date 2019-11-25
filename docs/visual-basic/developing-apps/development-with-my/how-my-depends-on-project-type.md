@@ -1,59 +1,62 @@
 ---
-title: My 如何相依於專案類型 (Visual Basic)
+title: My 與專案類型的相依關係
 ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 989329da7dc57cd50b9ce6c88117152d0cb93d66
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 975b8feb001bcab22185be0a360b0512de099b79
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775193"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330273"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My 如何相依於專案類型 (Visual Basic)
-`My` 只會公開特定專案類型所需的物件。 例如，`My.Forms` 物件可在 Windows Forms 應用程式中使用，但無法在主控台應用程式中使用。 本主題描述哪些 `My` 物件可用於不同的專案類型。  
+
+`My` exposes only those objects required by a particular project type. For example, the `My.Forms` object is available in a Windows Forms application but not available in a console application. This topic describes which `My` objects are available in different project types.  
   
-## <a name="my-in-windows-applications-and-web-sites"></a>我的 Windows 應用程式和網站  
- `My` 只會公開在目前專案類型中有用的物件;它會隱藏不適用的物件。 例如，下圖顯示 Windows Forms 專案中的 `My` 物件模型。  
+## <a name="my-in-windows-applications-and-web-sites"></a>My in Windows Applications and Web Sites  
+
+ `My` exposes only objects that are useful in the current project type; it suppresses objects that are not applicable. For example, the following image shows the `My` object model in a Windows Forms project.  
   
- ![此圖顯示 Windows Forms 應用程式中的「我的物件模型」。](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
+ ![Diagram that shows the My object model in a Windows Forms application.](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
   
- 在網站專案中，`My` 會公開與 Web 開發人員相關的物件（例如 `My.Request` 和 `My.Response` 物件），同時隱藏不相關的物件（例如 `My.Forms` 物件）。 下圖顯示網站專案中的 `My` 物件模型：  
+ In a Web site project, `My` exposes objects that are relevant to a Web developer (such as the `My.Request` and `My.Response` objects) while suppressing objects that are not relevant (such as the `My.Forms` object). The following image shows the `My` object model in a Web site project:  
   
- ![顯示 Web 應用程式中「我的物件模型」的圖表。](./media/how-my-depends-on-project-type/my-object-model-web.png)  
+ ![Diagram that shows the My object model in a Web application.](./media/how-my-depends-on-project-type/my-object-model-web.png)  
   
-## <a name="project-details"></a>專案詳細資料  
- 下表顯示預設會針對八個專案類型啟用哪些 `My` 物件： Windows 應用程式、類別庫、主控台應用程式、Windows 控制項程式庫、Web 控制項程式庫、Windows 服務、空白和網站。  
+## <a name="project-details"></a>Project Details  
+
+ The following table shows which `My` objects are enabled by default for eight project types: Windows application, class Library, console application, Windows control library, Web control library, Windows service, empty, and Web site.  
   
- `My.Application` 物件有三個版本、兩個版本的 `My.Computer` 物件，以及兩個 `My.User` 物件版本;如需這些版本的詳細資訊，請閱讀資料表後面的註腳。  
+ There are three versions of the `My.Application` object, two versions of the `My.Computer` object, and two versions of `My.User` object; details about these versions are given in the footnotes after the table.  
   
-|我的物件|Windows 應用程式|類別庫|主控台應用程式|Windows 控制項程式庫|Web 控制項程式庫|Windows 服務|Empty|網站|  
+|My Object|Windows 應用程式|類別庫|主控台應用程式|Windows Control Library|Web Control Library|Windows 服務|Empty|Web Site|  
 |---|---|---|---|---|---|---|---|---|  
-|`My.Application`|**是** <sup>1</sup>|**是** <sup>2</sup>|**是** <sup>3</sup>|**是** <sup>2</sup>|否|**是** <sup>3</sup>|否|否|  
-|`My.Computer`|**是** <sup>4</sup>|**是** <sup>4</sup>|**是** <sup>4</sup>|**是** <sup>4</sup>|**是** <sup>5</sup>|**是** <sup>4</sup>|否|**是** <sup>5</sup>|  
+|`My.Application`|**Yes** <sup>1</sup>|**Yes** <sup>2</sup>|**Yes** <sup>3</sup>|**Yes** <sup>2</sup>|否|**Yes** <sup>3</sup>|否|否|  
+|`My.Computer`|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>5</sup>|**Yes** <sup>4</sup>|否|**Yes** <sup>5</sup>|  
 |`My.Forms`|**是**|否|否|**是**|否|否|否|否|  
 |`My.Log`|否|否|否|否|否|否|否|**是**|  
 |`My.Request`|否|否|否|否|否|否|否|**是**|  
 |`My.Resources`|**是**|**是**|**是**|**是**|**是**|**是**|否|否|  
 |`My.Response`|否|否|否|否|否|否|否|**是**|  
 |`My.Settings`|**是**|**是**|**是**|**是**|**是**|**是**|否|否|  
-|`My.User`|**是** <sup>6</sup>|**是** <sup>6</sup>|**是** <sup>6</sup>|**是** <sup>6</sup>|**是** <sup>7</sup>|**是** <sup>6</sup>|否|**是** <sup>7</sup>|  
+|`My.User`|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>7</sup>|**Yes** <sup>6</sup>|否|**Yes** <sup>7</sup>|  
 |`My.WebServices`|**是**|**是**|**是**|**是**|**是**|**是**|否|否|  
   
- <sup>1</sup> Windows Forms 版本的 `My.Application`。 衍生自主控台版本（請參閱注3）;新增與應用程式視窗互動的支援，並提供 Visual Basic 應用程式模型。  
+ <sup>1</sup> Windows Forms version of `My.Application`. Derives from the console version (see Note 3); adds support for interacting with the application's windows and provides the Visual Basic Application model.  
   
- <sup>2</sup>程式庫版本的 `My.Application`。 提供應用程式所需的基本功能：提供寫入應用程式記錄檔和存取應用程式資訊的成員。  
+ <sup>2</sup> Library version of `My.Application`. Provides the basic functionality needed by an application: provides members for writing to the application log and accessing application information.  
   
- <sup>3</sup> `My.Application` 的主控台版本。 衍生自程式庫版本（請參閱注2），並新增其他成員來存取應用程式的命令列引數和 ClickOnce 部署資訊。  
+ <sup>3</sup> Console version of `My.Application`. Derives from the library version (see Note 2), and adds additional members for accessing the application's command-line arguments and ClickOnce deployment information.  
   
- <sup>4</sup> `My.Computer` 的 Windows 版本。 衍生自伺服器版本（請參閱注5），並提供用戶端電腦上有用物件（例如鍵盤、螢幕和滑鼠）的存取權。  
+ <sup>4</sup> Windows version of `My.Computer`. Derives from the Server version (see Note 5), and provides access to useful objects on a client machine, such as the keyboard, screen, and mouse.  
   
- <sup>5</sup>伺服器版本的 `My.Computer`。 提供電腦的基本資訊，例如名稱、存取時鐘等等。  
+ <sup>5</sup> Server version of `My.Computer`. Provides basic information about the computer, such as the name, access to the clock, and so on.  
   
- <sup>6</sup> Windows 版本的 `My.User`。 這個物件與執行緒目前的身分識別相關聯。  
+ <sup>6</sup> Windows version of `My.User`. This object is associated with the thread's current identity.  
   
- <sup>7</sup> Web 版本的 `My.User`。 此物件與應用程式目前 HTTP 要求的使用者識別相關聯。  
+ <sup>7</sup> Web version of `My.User`. This object is associated with the user identity of the application's current HTTP request.  
   
 ## <a name="see-also"></a>請參閱
 
@@ -63,7 +66,7 @@ ms.locfileid: "72775193"
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>
 - [自訂 My 中可用的物件](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
 - [條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [-define （Visual Basic）](../../../visual-basic/reference/command-line-compiler/define.md)
+- [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
 - [My.Forms 物件](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [My.Request 物件](../../../visual-basic/language-reference/objects/my-request-object.md)
 - [My.Response 物件](../../../visual-basic/language-reference/objects/my-response-object.md)

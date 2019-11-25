@@ -1,19 +1,19 @@
 ---
-title: 在委派中使用變異數（Visual Basic）
+title: 在委派中使用變異數
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-ms.openlocfilehash: ebba7e862e1b4677d9438aa301ef2b713fba3712
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 9c2aad0e4b9408939600938412fe5c3e73b5bf15
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169073"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349035"
 ---
-# <a name="using-variance-in-delegates-visual-basic"></a>在委派中使用變異數（Visual Basic）
+# <a name="using-variance-in-delegates-visual-basic"></a>Using Variance in Delegates (Visual Basic)
 
 當您將方法指派給委派時，「共變數」和「反變數」可讓您彈性地比對委派類型和方法簽章。 共變數允許某個方法的傳回型別與定義於委派中的傳回型別相比，其衍生程度較大。 反變數允許某個方法的參數類型與委派類型中的參數類型相比，其衍生程度較小。
 
-## <a name="example-1-covariance"></a>範例 1：共變數
+## <a name="example-1-covariance"></a>範例 1︰共變數
 
 ### <a name="description"></a>描述
 
@@ -86,7 +86,7 @@ Private Sub Form1_Load(ByVal sender As System.Object,
 End Sub
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [委派中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
 - [針對 Func 與 Action 泛型委派使用變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

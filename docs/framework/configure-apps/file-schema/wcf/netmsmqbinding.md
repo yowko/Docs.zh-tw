@@ -2,12 +2,12 @@
 title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 4bc8884b2d4cb6f8201e2038894c69d0805bddda
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 7456c6373c64e07b73e15e7e2bb229dce4032121
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738828"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140744"
 ---
 # <a name="netmsmqbinding"></a>\<netMsmqBinding >
 定義適合跨電腦通訊的佇列繫結。  
@@ -75,7 +75,7 @@ ms.locfileid: "73738828"
 |`maxBufferPoolSize`|指定此繫結之緩衝區集區大小上限的整數。 預設值為 8。|  
 |`maxReceivedMessageSize`|正整數，定義此繫結可以處理的訊息大小上限 (以位元組為單位，包括標頭)。 超出此限制之訊息的寄件者將會收到 SOAP 錯誤。 收件者會捨棄訊息，然後在追蹤記錄檔中建立此事件的項目。 預設值為 65536。 這項關於訊息大小的限制是為了避免受到阻絕服務 (DoS) 攻擊。|  
 |`maxRetryCycles`|整數，指出有害訊息偵測功能使用的重試循環次數。 當訊息無法在循環的傳遞嘗試中成功傳遞，便成為有害訊息。 預設值為 3。 如需詳細資訊，請參閱<xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>。|  
-|`name`|必要屬性。 包含繫結之組態名稱的字串。 這個值應該是唯一的，因為它會當做繫結的識別使用。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需預設設定和無相關系結和行為的詳細資訊，請參閱[簡化](../../../wcf/simplified-configuration.md)的設定和[WCF 服務的簡化](../../../wcf/samples/simplified-configuration-for-wcf-services.md)設定。|  
+|`name`|必要屬性。 包含繫結之組態名稱的字串。 這個值應該是唯一的，因為它會當做繫結的識別使用。 從 .NET Framework 4 開始，系結和行為都不需要有名稱。 如需預設設定和無相關系結和行為的詳細資訊，請參閱[簡化](../../../wcf/simplified-configuration.md)的設定和[WCF 服務的簡化](../../../wcf/samples/simplified-configuration-for-wcf-services.md)設定。|  
 |`openTimeout`|<xref:System.TimeSpan> 值，指定提供用來讓開啟作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |`QueueTransferProtocol`|有效的 <xref:System.ServiceModel.QueueTransferProtocol> 值，指定此繫結所使用的佇列通訊通道傳輸。 當使用 SOAP Reliable Messaging Protocol 時，MSMQ 不支援 Active Directory 定址。 因此，當 `useActiveDirectory` 屬性設定為 `true`時，您不應該將這個屬性設定為 `Srmp` 或 `Srmps`。|  
 |`receiveErrorHandling`|<xref:System.ServiceModel.ReceiveErrorHandling> 值，指定如何處理有害和不可分派的訊息。|  
@@ -93,13 +93,13 @@ ms.locfileid: "73738828"
 |項目|描述|  
 |-------------|-----------------|  
 |[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
-|[\<security >](security-of-netmsmqbinding.md)|定義繫結的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>。|  
+|[\<安全性 >](security-of-netmsmqbinding.md)|定義繫結的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<bindings >](bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
+|[\<系結 >](bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
  `netMsmqBinding` 繫結利用 Microsoft Message Queuing (MSMQ) 做為傳輸來提供對於佇列的支援，並可支援結合鬆散的應用程式、失敗隔離、負載撫平和中斷連接作業。 如需這些功能的討論，請參閱[WCF 中的佇列](../../../wcf/feature-details/queues-in-wcf.md)。  

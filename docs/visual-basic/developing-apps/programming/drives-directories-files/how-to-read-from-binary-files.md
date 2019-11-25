@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中從二進位檔案讀取
+title: 如何：讀取二進位檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - binary files [Visual Basic], reading from
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - ReadAllBytes method [Visual Basic], reading from binary files
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
-ms.openlocfilehash: 72e9361193a5b099841d989e842ff36662cf690d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: c33bc72a5c79901e3715ed6a587ffdb8e3565e48
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623725"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335286"
 ---
-# <a name="how-to-read-from-binary-files-in-visual-basic"></a>作法：在 Visual Basic 中從二進位檔案讀取
+# <a name="how-to-read-from-binary-files-in-visual-basic"></a>如何：在 Visual Basic 中從二進位檔案讀取
+
 `My.Computer.FileSystem` 物件提供用來讀取二進位檔案的 `ReadAllBytes` 方法。  
   
 ### <a name="to-read-from-a-binary-file"></a>讀取二進位檔案  
@@ -28,6 +29,7 @@ ms.locfileid: "64623725"
      [!code-vb[VbVbcnMyFileSystem#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#91)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
+
  下列條件可能會造成擲回例外狀況：  
   
 - 因下列其中一項原因而導致路徑無效：它是長度為零的字串、它只包含空白字元、它包含無效的字元，或者它是裝置路徑 (<xref:System.ArgumentException>)。  
@@ -50,7 +52,7 @@ ms.locfileid: "64623725"
   
  在應用程式中使用這些資料之前，請先驗證所有輸入值。 檔案內容可能與預期不同，並從檔案讀取資料的方法會失敗。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>

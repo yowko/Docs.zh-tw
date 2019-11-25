@@ -1,15 +1,15 @@
 ---
-title: HOW TO：利用命名空間建立文件 (LINQ to XML) (Visual Basic)
+title: 'How to: Create a Document with Namespaces (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-ms.openlocfilehash: c61076da5616d98673c4b9258125e3ff0c8821aa
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: bbd23840b0356cf14d2c7d6cb71591fe6461a8bd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710448"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332591"
 ---
-# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>HOW TO：利用命名空間建立文件 (LINQ to XML) (Visual Basic)
+# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>如何：建立包含命名空間的文件 (LINQ to XML) (Visual Basic)
 本主題顯示如何在 Visual Basic 中建立具有命名空間 (Namespace) 的文件。  
   
  在 Visual Basic 中使用 XML 常值時，使用者可以定義一個預設的 XML 全域命名空間。 這個命名空間同時為 XML 常值和 XML 屬性的預設命名空間。 XML 預設命名空間可在專案層級或檔案層級定義。 如果是在檔案層級定義，該命名空間會覆寫專案層級的預設命名空間。  
@@ -18,7 +18,7 @@ ms.locfileid: "68710448"
   
  您可以使用 `Imports` 關鍵字，同時定義預設命名空間與具有前置詞的命名空間。  
   
- 如需詳細資訊, 請參閱[Visual Basic 中的 XML 常值簡介](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md)。  
+ For more information, see [Introduction to XML Literals in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).  
   
  請注意，XML 預設命名空間僅適用於項目，而不適用於屬性。 根據預設，屬性一定會在沒有命名空間中。 不過，您可以使用命名空間前置詞，將屬性放到命名空間中。  
   
@@ -114,6 +114,6 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [命名空間總覽 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

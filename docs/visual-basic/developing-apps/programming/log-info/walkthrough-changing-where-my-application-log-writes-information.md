@@ -1,16 +1,16 @@
 ---
-title: 變更 My.Application.Log 寫入資訊的位置 (Visual Basic)
+title: 變更 My.Application.Log 寫入資訊的位置
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: 358638d50e347334487665b950b33a045b6a39f9
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: bdee0a91360580b156c1734ef4c82139b18ce2b5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524417"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336726"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>逐步解說：變更 My.Application.Log 寫入資訊的位置 (Visual Basic)
 

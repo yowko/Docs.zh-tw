@@ -6,19 +6,19 @@ helpviewer_keywords:
 - application domains, shadow copying assemblies
 - shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
-ms.openlocfilehash: 40a1b5062d45b7b540af7058b82b77c664070d2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9fc8a4aeeeca40f71ed9114a9db40b9a56e5fe6b
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119785"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204564"
 ---
 # <a name="shadow-copying-assemblies"></a>陰影複製組件
 
 陰影複製可讓應用程式定義域中使用的組件更新，而不需卸載應用程式定義域。 這對必須連續運作的應用程式特別有用，例如 ASP.NET 網站。
 
 > [!IMPORTANT]
-> [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式不支援陰影複製。
+> Shadow copying is not supported in Windows 8.x Store apps.
 
 Common Language Runtime 在載入組件時會鎖定組件檔案，因此在卸載組件之前無法更新檔案。 若要從應用程式定義域卸載組件，唯一的方式為卸載應用程式定義域，如此在正常情況下，就無法在磁碟上更新組件，直到使用組件的所有應用程式定義域已卸載為止。
 

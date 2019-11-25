@@ -1,35 +1,35 @@
 ---
-title: 運算子 (Visual Basic)
+title: 運算子
 ms.date: 10/17/2018
 helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: 3d3421df-fcc5-4888-9249-d78f16774ce6
-ms.openlocfilehash: a2a9fb5343c4e07fa28d87bc991beea4c390b042
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 1398b58c1e95bfb172c9b314e562262003632713
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035594"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330982"
 ---
 # <a name="operators-visual-basic"></a>運算子 (Visual Basic)
 
 ## <a name="in-this-section"></a>本節內容
 
-- [Visual Basic 中的運算子優先順序](operator-precedence.md)
-- [依功能列出的運算子](operators-listed-by-functionality.md)
-- [運算子結果的資料類型](data-types-of-operator-results.md)
-- [DirectCast 運算子](directcast-operator.md)
-- [TryCast 運算子](trycast-operator.md)
-- [NameOf 運算子](nameof.md)
-- [New 運算子](new-operator.md)
-- [Null 條件運算子](null-conditional-operators.md)
+- [Operator precedence in Visual Basic](operator-precedence.md)
+- [Operators listed by functionality](operators-listed-by-functionality.md)
+- [Data types of operator results](data-types-of-operator-results.md)
+- [DirectCast operator](directcast-operator.md)
+- [TryCast operator](trycast-operator.md)
+- [NameOf operator](nameof.md)
+- [New operator](new-operator.md)
+- [Null-conditional operators](null-conditional-operators.md)
 - [算術運算子](arithmetic-operators.md)
 - [指派運算子](assignment-operators.md)
-- [位移位運算子](bit-shift-operators.md)
+- [Bit Shift operators](bit-shift-operators.md)
 - [比較運算子](comparison-operators.md)
-- [串連運算子](concatenation-operators.md)
-- [邏輯/位運算子](logical-bitwise-operators.md)
-- [其他運算子](miscellaneous-operators.md)
+- [Concatenation operators](concatenation-operators.md)
+- [Logical/Bitwise operators](logical-bitwise-operators.md)
+- [Miscellaneous operators](miscellaneous-operators.md)
 
 ## <a name="related-sections"></a>相關章節
 

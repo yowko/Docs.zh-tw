@@ -1,15 +1,15 @@
 ---
-title: 作法：比較兩個資料夾的內容 (LINQ) (C#)
+title: 如何比較兩個資料夾的內容（LINQ）（C#）
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: df71712ca1b59c706ede66488af8b1580677e299
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f64c82fcc63085c9479b0a3af91f0bdf5ee9eb95
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924229"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141388"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>作法：比較兩個資料夾的內容 (LINQ) (C#)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>如何比較兩個資料夾的內容（LINQ）（C#）
 本例示範三種比較兩個檔案清單的方式︰  
   
 - 查詢指定兩個檔案清單是否完全相同的布林值。  
@@ -128,7 +128,7 @@ namespace QueryCompareTwoDirs
 ## <a name="compiling-the-code"></a>編譯程式碼  
  建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
 - [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)

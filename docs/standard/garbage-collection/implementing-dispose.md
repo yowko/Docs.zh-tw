@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 95726d4bfae6da43cd845d461caf8f1848d774f1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 0583329ae75fa54cf000212479895ccebdbd30d8
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424325"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74142063"
 ---
 # <a name="implementing-a-dispose-method"></a>實作 Dispose 方法
 
@@ -103,7 +103,7 @@ ms.locfileid: "73424325"
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>實作衍生類別的處置模式
 
-從實作 <xref:System.IDisposable> 介面的類別衍生的類別不應該實作 <xref:System.IDisposable>，因為 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 的基底類別實作會由其衍生類別繼承。 因此，若要實作衍生類別的處置模式，請改為提供下列項目：  
+從實作 <xref:System.IDisposable> 介面的類別衍生的類別不應該實作 <xref:System.IDisposable>，因為 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 的基底類別實作會由其衍生類別繼承。 相反地，若要釋放衍生類別的資源，請提供下列各項：  
   
 - 覆寫基底類別方法及實際釋放衍生類別之資源的 `protected Dispose(Boolean)` 方法。 此方法也應呼叫基底類別的 `Dispose(Boolean)` 方法，並傳遞其處置狀態作為引數。  
   

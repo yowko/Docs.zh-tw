@@ -2,16 +2,16 @@
 title: 使用 WorkflowIdentity 與版本控制
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 6b769224edcd9dfc51879c2c99e061a0e3f77e8d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 66ef4fed682554d9fab2a7b0f85bb9cfaf8e8a29
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958381"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74142042"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>使用 WorkflowIdentity 與版本控制
 
-<xref:System.Activities.WorkflowIdentity> 提供一種方法，讓工作流程應用程式開發人員能夠將名稱和 <xref:System.Version> 與工作流程定義建立關聯，並為這項資訊與持續性的工作流程執行個體建立關聯。 此身分識別資訊可由工作流程應用程式開發人員使用以啟用案例 (例如並存執行多個版本的工作流程定義)，以及提供動態更新等其他功能的基礎。 本主題提供使用 <xref:System.Activities.WorkflowIdentity> 搭配 <xref:System.Activities.WorkflowApplication> 裝載的概觀。 如需在工作流程服務中並存執行工作流程定義的詳細資訊, 請參閱[WorkflowServiceHost 中的並存版本控制](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)。 如需動態更新的詳細資訊, 請參閱[動態更新](dynamic-update.md)。
+<xref:System.Activities.WorkflowIdentity> 提供一種方法，讓工作流程應用程式開發人員能夠將名稱和 <xref:System.Version> 與工作流程定義建立關聯，並為這項資訊與持續性的工作流程執行個體建立關聯。 此身分識別資訊可由工作流程應用程式開發人員使用以啟用案例 (例如並存執行多個版本的工作流程定義)，以及提供動態更新等其他功能的基礎。 本主題提供使用 <xref:System.Activities.WorkflowIdentity> 搭配 <xref:System.Activities.WorkflowApplication> 裝載的概觀。 如需在工作流程服務中並存執行工作流程定義的詳細資訊，請參閱[WorkflowServiceHost 中的並存版本控制](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)。 如需動態更新的詳細資訊，請參閱[動態更新](dynamic-update.md)。
 
 ## <a name="in-this-topic"></a>本主題內容
 
@@ -89,9 +89,9 @@ The WorkflowIdentity ('MortgageWorkflow v1; Version=1.0.0.0') of the loaded inst
 為了擷取持續性工作流程執行個體的 <xref:System.Activities.WorkflowIdentity>，會使用 <xref:System.Activities.WorkflowApplication.GetInstance%2A> 方法。 <xref:System.Activities.WorkflowApplication.GetInstance%2A> 方法會採用持續性工作流程執行個體的 <xref:System.Activities.WorkflowApplication.Id%2A> 及包含持續性執行個體的 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>，並且傳回 <xref:System.Activities.WorkflowApplicationInstance>。 <xref:System.Activities.WorkflowApplicationInstance> 包含持續性工作流程執行個體的相關資訊，包括與其相關聯的 <xref:System.Activities.WorkflowIdentity>。 載入及繼續工作流程執行個體時，主機可以使用此相關聯的 <xref:System.Activities.WorkflowIdentity> 來提供正確的工作流程定義。
 
 > [!NOTE]
-> Null <xref:System.Activities.WorkflowIdentity> 為有效，而且可讓主機用來將沒有相關聯 <xref:System.Activities.WorkflowIdentity> 的持續性執行個體，對應至適當的工作流程定義。 當工作流程應用程式一開始未以工作流程版本控制撰寫時，或是當應用程式從 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]升級時，就會發生這種案例。 如需詳細資訊, 請參閱[升級 .NET Framework 4 持續性資料庫以支援工作流程版本控制](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。
+> Null <xref:System.Activities.WorkflowIdentity> 為有效，而且可讓主機用來將沒有相關聯 <xref:System.Activities.WorkflowIdentity> 的持續性執行個體，對應至適當的工作流程定義。 當工作流應用程式一開始不是以工作流程版本設定來撰寫，或從 .NET Framework 4 升級應用程式時，就可能發生此情況。 如需詳細資訊，請參閱[升級 .NET Framework 4 持續性資料庫以支援工作流程版本控制](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。
 
-`Dictionary<WorkflowIdentity, Activity>`在下列範例中, 是用來將<xref:System.Activities.WorkflowIdentity>實例與其相符的工作流程定義產生關聯, 並使用`MortgageWorkflow` `identityV1`工作流程定義<xref:System.Activities.WorkflowIdentity>來啟動工作流程.
+在下列範例中，會使用 `Dictionary<WorkflowIdentity, Activity>` 將 <xref:System.Activities.WorkflowIdentity> 實例與其相符的工作流程定義產生關聯，並使用與 `identityV1` <xref:System.Activities.WorkflowIdentity>相關聯的 `MortgageWorkflow` 工作流程定義來啟動工作流程。
 
 ```csharp
 WorkflowIdentity identityV1 = new WorkflowIdentity
@@ -146,9 +146,9 @@ wfApp.Load(instance);
 
 ## <a name="UpdatingWF4PersistenceDatabases"></a>升級 .NET Framework 4 持續性資料庫以支援工作流程版本控制
 
-提供 SqlWorkflowInstanceStoreSchemaUpgrade.sql 資料庫指令碼，以升級使用 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 資料庫指令碼建立的持續性資料庫。 此腳本會更新資料庫, 以支援 .NET Framework 4.5 中引進的新版本控制功能。 資料庫中的任何持續性工作流程執行個體，都會有版本控制預設值，並可以參與並存執行和動態更新。
+提供 Sqlworkflowinstancestoreschemaupgrade.sql 的 sql database 腳本，以升級使用 .NET Framework 4 資料庫腳本所建立的持續性資料庫。 此腳本會更新資料庫，以支援 .NET Framework 4.5 中引進的新版本控制功能。 資料庫中的任何持續性工作流程執行個體，都會有版本控制預設值，並可以參與並存執行和動態更新。
 
-如果 .NET Framework 4.5 工作流程應用程式嘗試在尚未使用所提供的腳本升級的持續性資料庫上使用新版本設定功能的任何持續性作業<xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> , 則會擲回, 並顯示類似下列的訊息:下列訊息。
+如果 .NET Framework 4.5 工作流程應用程式嘗試在尚未使用所提供的腳本升級的持續性資料庫上使用新版本設定功能的任何持續性作業，則會擲回 <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException>，並顯示類似下列訊息的訊息。
 
 ```
 The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' cannot be run against this database version.  Please upgrade the database to '4.5.0.0'.
@@ -156,14 +156,14 @@ The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersis
 
 ### <a name="ToUpgrade"></a>若要升級資料庫架構
 
-1. 開啟 SQL Server Management Studio 並連接到持續性資料庫伺服器, 例如 **.\SQLEXPRESS**。
+1. 開啟 SQL Server Management Studio 並連接到持續性資料庫伺服器，例如 **.\SQLEXPRESS**。
 
-2. 從 [檔案 ] 功能表中選擇 [**開啟**]、[檔案]。 瀏覽至下列資料夾：`C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`
+2. 從 **[檔案**] 功能表中選擇 [**開啟** **]、[** 檔案]。 瀏覽至下列資料夾：`C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`
 
-3. 選取**sqlworkflowinstancestoreschemaupgrade.sql** , 然後按一下 [**開啟**]。
+3. 選取**sqlworkflowinstancestoreschemaupgrade.sql** ，然後按一下 [**開啟**]。
 
-4. 在 [**可用的資料庫**] 下拉式選單中, 選取持續性資料庫的名稱。
+4. 在 [**可用的資料庫**] 下拉式選單中，選取持續性資料庫的名稱。
 
 5. 從 [**查詢**] 功能表中選擇 [**執行**]。
 
-查詢完成時，資料庫結構描述即已升級，若有需要，可以檢視指派給持續性工作流程執行個體的預設工作流程識別。 在 [**物件總管**] 的 [**資料庫**] 節點中展開您的持續性資料庫, 然後展開 [ **Views** ] 節點。 以滑鼠右鍵按一下 [ **DurableInstancing** ], 然後選擇 [**選取前 1000**個數據列]。 滾動到資料行的結尾, 並請注意, 在此視圖中已加入六個額外的資料行:**IdentityName**、 **IdentityPackage**、 **Build**、**主要**、**次要**和**修訂**。 任何持續性的工作流程在這些欄位中都會有**null**值, 代表 null 工作流程身分識別。
+查詢完成時，資料庫結構描述即已升級，若有需要，可以檢視指派給持續性工作流程執行個體的預設工作流程識別。 在 [**物件總管**] 的 [**資料庫**] 節點中展開您的持續性資料庫，然後展開 [ **Views** ] 節點。 以滑鼠右鍵按一下 [ **DurableInstancing** ]，然後選擇 [**選取前 1000**個數據列]。 滾動到資料行的結尾，並請注意，有六個額外的資料行已加入至視圖： **IdentityName**、 **IdentityPackage**、 **Build**、**主要**、**次要**和**修訂**。 任何持續性的工作流程在這些欄位中都會有**null**值，代表 null 工作流程身分識別。

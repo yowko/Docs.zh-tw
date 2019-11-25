@@ -1,21 +1,23 @@
 ---
-title: Visual Basic 中的程式設計
+title: Programming
 ms.date: 07/20/2015
 helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 68c200b3e47a0f96963e5872c854633a7c24e938
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 048bc70c2b5416d4377c5abcfdaf18a9312068db
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423981"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352112"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic 中的程式設計
+
 本節將討論您可能想要在建立 Visual Basic 應用程式時深入了解的程式設計工作。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [存取電腦資源](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
  包含的文件說明如何使用 `My.Computer` 物件來存取應用程式執行所在的電腦相關資訊，以及如何控制該電腦。  
   

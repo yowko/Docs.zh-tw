@@ -1,23 +1,23 @@
 ---
-title: Private Protected (Visual Basic)
+title: Private Protected
 ms.date: 05/10/2018
 helpviewer_keywords:
 - Private Protected keyword [Visual Basic]
 - Private Protected keyword [Visual Basic], syntax
-ms.openlocfilehash: fea43558ac0fe8181f2786b69f2621346d446b2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 265141f77f4a61a61414a07214830feaa8a1ab05
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920493"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351349"
 ---
 # <a name="private-protected-visual-basic"></a>Private Protected (Visual Basic)
 
-`Private Protected` 關鍵字組合是成員存取修飾詞。 A`Private Protected`成員是其包含的類別中的所有成員，以及衍生自包含類別，型別，可供存取，但前提是其包含的組件中找到。
+`Private Protected` 關鍵字組合是成員存取修飾詞。 A `Private Protected` member is accessible by all members in its containing class, as well as by types derived from the containing class, but only if they are found in its containing assembly.
 
-您可以指定`Private Protected`只能在類別; 的成員上不能套用`Private Protected`的結構成員因為結構無法被繼承。
+You can specify `Private Protected` only on members of classes; you cannot apply `Private Protected` to members of a structure because structures cannot be inherited.
 
-`Private Protected` Visual Basic 15.5 和更新版本支援的存取修飾詞。 若要使用它，您可以將下列項目新增至 Visual Basic 專案 (\*.vbproj) 檔案。 只要 Visual Basic 15.5 或更新版本安裝在您的系統上，它可讓您充分利用所有最新版本的 Visual Basic 編譯器所支援的語言功能：
+The `Private Protected` access modifier is supported by Visual Basic 15.5 and later. To use it, you can add the following element to your Visual Basic project (\*.vbproj) file. As long as Visual Basic 15.5 or later is installed on your system, it lets you take advantage of all the language features supported by the latest version of the Visual Basic compiler:
 
 ```xml
 <PropertyGroup>
@@ -25,55 +25,55 @@ ms.locfileid: "61920493"
 </PropertyGroup>
 ```
 
-如需詳細資訊，請參閱[設定的 Visual Basic 語言版本](../../language-reference/configure-language-version.md)。
+For more information see [setting the Visual Basic language version](../../language-reference/configure-language-version.md).
 
 > [!NOTE]
-> 在 Visual Studio 中，選取 上的 F1 說明`private protected`提供的其中一個 說明[私人](private.md)或是[保護](protected.md)。 IDE 會挑選單一語彙基元，在資料指標，而不是複合字。
+> In Visual Studio, selecting F1 help on `private protected` provides help for either [private](private.md) or [protected](protected.md). The IDE picks the single token under the cursor rather than the compound word.
 
 ## <a name="rules"></a>規則
 
-- **宣告內容。** 您可以使用`Private Protected`只能在類別層級。 這表示的宣告內容`Protected`項目必須是類別，，而且不能是原始程式檔、 命名空間、 介面、 模組、 結構或程序。
+- **Declaration Context.** You can use `Private Protected` only at the class level. This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
 
 ## <a name="behavior"></a>行為
 
-- **存取層級。** 在類別中的所有程式碼可以存取其項目。 在任何類別都衍生自基底類別，而且會包含在相同的組件中的程式碼可以存取所有`Private Protected`基底類別的項目。 不過，任何類別都衍生自基底類別，而且會包含在不同的組件中的程式碼無法存取的基底類別`Private Protected`項目。
+- **Access Level.** All code in a class can access its elements. Code in any class that derives from a base class and is contained in the same assembly can access all the `Private Protected` elements of the base class. However, code in any class that derives from a base class and is contained in a different assembly can't access the base class `Private Protected` elements.
 
-- **存取修飾詞。** 指定存取層級的關鍵字稱為*存取修飾詞*。 如需存取修飾詞的比較，請參閱 <<c0> [ 存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
+- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
 `Private Protected` 修飾詞可用於以下內容：
 
-- [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)的巢狀類別
+- [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) of a nested class
 
 - [Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md)
 
 - [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)
 
-- [Delegate 陳述式](../../../visual-basic/language-reference/statements/delegate-statement.md)委派的巢狀類別中
+- [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) of a delegate nested in a class
 
 - [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)
 
-- [Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md)列舉型別的巢狀類別中
+- [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md) of an enumeration nested in a class
 
 - [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)
 
 - [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)
 
-- [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)介面的巢狀類別中
+- [Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md) of an interface nested in a class
 
 - [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)
 
-- [結構，陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)結構的巢狀類別中
+- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) of a structure nested in a class
 
 - [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Protected Friend](./protected-friend.md)
-- [在 Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

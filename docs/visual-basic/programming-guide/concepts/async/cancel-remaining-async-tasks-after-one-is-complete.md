@@ -1,15 +1,15 @@
 ---
-title: 完成一項作業之後，取消剩餘的非同步工作（Visual Basic）
+title: 當其中一項非同步工作完成時，取消剩餘的非同步工作
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 329c1eb738f065ae34540e9980c80d44248da05c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e6747f35e665611ac7a48a87f955c8b893ee2b99
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419794"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347931"
 ---
-# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>完成一項作業之後，取消剩餘的非同步工作（Visual Basic）
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Cancel Remaining Async Tasks after One Is Complete (Visual Basic)
 
 搭配使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法與 <xref:System.Threading.CancellationToken>，即可在其中一個工作完成時取消所有剩餘的工作。 `WhenAny` 方法會接受本身為一組工作的引數。 這個方法會啟動所有工作，並傳回單一工作。 集合中的任何工作完成時，單一工作即完成。
 
@@ -26,7 +26,7 @@ ms.locfileid: "73419794"
 
 2. 在功能表列上，依序選擇 [檔案]、[開啟舊檔]及 [專案/方案]。
 
-3. 在 [**開啟專案**] 對話方塊中，開啟保存解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningVB 的方案（.sln）檔案。
+3. In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.
 
 4. 在方案總管中，開啟 **CancelAfterOneTask** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
 
@@ -36,15 +36,15 @@ ms.locfileid: "73419794"
 
 6. 執行程式數次，確認先完成不同的下載。
 
-如果您不想要下載專案，您可以參閱本主題結尾的 Mainwindow.xaml。
+If you don't want to download the project, you can review the MainWindow.xaml.vb file at the end of this topic.
 
 ## <a name="building-the-example"></a>建置範例
 
-本主題中的範例會新增至 [取消非同步工作][或工作清單](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)中所開發的專案，以取消工作清單。 雖然未明確地使用 [取消] 按鈕，但是此範例會使用相同的 UI。
+The example in this topic adds to the project that's developed in [Cancel an Async Task or a List of Tasks](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to cancel a list of tasks. 雖然未明確地使用 [取消] 按鈕，但是此範例會使用相同的 UI。
 
 若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelAListOfTasks] 作為 [啟始專案]。 將本主題中的變更新增至該專案。
 
-在**CancelAListOfTasks**專案的 mainwindow.xaml 檔案中，將每個網站的處理步驟從 `AccessTheWebAsync` 中的迴圈移至下列非同步方法，以開始轉換。
+In the MainWindow.xaml.vb file of the **CancelAListOfTasks** project, start the transition by moving the processing steps for each website from the loop in `AccessTheWebAsync` to the following async method.
 
 ```vb
 ' ***Bundle the processing steps for a website into one async method.
@@ -107,7 +107,7 @@ End Function
 
 ## <a name="complete-example"></a>完整範例
 
-下列程式碼是範例的完整 Mainwindow.xaml 或 MainWindow.xaml.cs 檔案。 星號會標記已針對此範例新增的項目。
+The following code is the complete MainWindow.xaml.vb or MainWindow.xaml.cs file for the example. 星號會標記已針對此範例新增的項目。
 
 請注意，您必須新增 <xref:System.Net.Http> 的參考。
 

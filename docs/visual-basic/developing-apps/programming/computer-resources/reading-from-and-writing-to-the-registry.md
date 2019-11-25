@@ -1,24 +1,26 @@
 ---
-title: 讀取和寫入登錄 (Visual Basic)
+title: 讀取和寫入登錄
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Registry object, tasks
 - registry [Visual Basic], writing to
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
-ms.openlocfilehash: fcc13d82a2b27221c13f9277585c21196b47003d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: HT
+ms.openlocfilehash: 89db9ef9db4235c069d6239d32e4f8679fbabf0b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591473"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349755"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>讀取和寫入登錄 (Visual Basic)
+
 本主題描述與登錄建立關聯的工作和概念主題。  
   
  在 Visual Basic 中進行程式設計時，您可以選擇透過 Visual Basic 所提供的函式或是 .NET Framework 的登錄類別來存取登錄。 登錄會裝載作業系統的資訊，以及電腦所裝載的應用程式的資訊。 如果允許不適當地存取系統資源或受保護資訊，則使用登錄可能會危及安全性。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
+
  [如何：建立登錄機碼並設定其值](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
  描述如何使用 `My.Computer.Registry` 物件的 `CreateSubKey` 和 `SetValue` 方法來建立登錄機碼，並設定其值。  
   
@@ -35,6 +37,7 @@ ms.locfileid: "65591473"
  討論與登錄有關的安全性問題。  
   
 ## <a name="related-sections"></a>相關章節  
+
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
  列出並說明 `My.Computer.Registry` 物件的成員。  
   

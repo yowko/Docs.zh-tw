@@ -1,5 +1,5 @@
 ---
-title: Narrowing (Visual Basic)
+title: Narrowing
 ms.date: 07/20/2015
 f1_keywords:
 - vb.narrowing
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - Narrowing keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: a207ee91-aca4-4771-b4e2-713f029bf2bb
-ms.openlocfilehash: eb5f021371291483b8eb2a13727a9fda94540638
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b252f7939e812f31103d4bd98ffd50953679f042
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920636"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351468"
 ---
 # <a name="narrowing-visual-basic"></a>Narrowing (Visual Basic)
-表示轉換運算子 (`CType`) 將類別或結構轉換成可能無法保留一些可能的值，原始的類別或結構的類型。  
+Indicates that a conversion operator (`CType`) converts a class or structure to a type that might not be able to hold some of the possible values of the original class or structure.  
   
-## <a name="converting-with-the-narrowing-keyword"></a>轉換以縮小關鍵字  
- 轉換程序必須指定`Public Shared`除了`Narrowing`。  
+## <a name="converting-with-the-narrowing-keyword"></a>Converting with the Narrowing Keyword  
+ The conversion procedure must specify `Public Shared` in addition to `Narrowing`.  
   
- 縮小轉換執行不一定成功在執行階段，並可能會失敗或者會造成資料遺失。 範例包括`Long`來`Integer`，`String`到`Date`，並為衍生類型的基底型別。 這個最後一個轉換縮小，因為基底型別可能不會包含衍生型別的所有成員，而且不是衍生型別的執行個體。  
+ Narrowing conversions do not always succeed at run time, and can fail or incur data loss. Examples are `Long` to `Integer`, `String` to `Date`, and a base type to a derived type. This last conversion is narrowing because the base type might not contain all the members of the derived type and thus is not an instance of the derived type.  
   
- 如果`Option Strict`已`On`，使用程式碼必須使用`CType`所有的縮小轉換。  
+ If `Option Strict` is `On`, the consuming code must use `CType` for all narrowing conversions.  
   
- `Narrowing`關鍵字可以用在此內容中：  
+ The `Narrowing` keyword can be used in this context:  
   
  [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../visual-basic/language-reference/modifiers/widening.md)

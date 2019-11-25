@@ -1,15 +1,15 @@
 ---
-title: 作法：篩選屬性 (XPath-LINQ to XML) (C#)
+title: 如何篩選屬性（XPath-LINQ to XML）（C#）
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: 2537fbbac4f16a56d8a7f074b5fd10a4fcd0c09c
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: ab2cd439f4dd1454de4fa565658ef5dac14b8c22
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205306"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141283"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>作法：篩選屬性 (XPath-LINQ to XML) (C#)
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>如何篩選屬性（XPath-LINQ to XML）（C#）
 本主題顯示如何取得具有指定之名稱以及具有指定值之屬性的子代項目。  
   
  XPath 運算式為：  
@@ -19,7 +19,7 @@ ms.locfileid: "70205306"
 ## <a name="example"></a>範例  
  此範例會尋找具有 `Address` 之名稱，以及具有值為 "Shipping" 之 `Type` 屬性的所有子代項目。  
   
- 此範例使用下列 XML 文件：[XML 範例檔：多個訂購單 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：多份採購單 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  

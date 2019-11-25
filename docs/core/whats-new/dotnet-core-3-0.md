@@ -3,16 +3,15 @@ title: .NET Core 3.0 的新功能
 description: 了解 .NET Core 3.0 所提供的新功能。
 dev_langs:
 - csharp
-- vb
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: dcbf1073c12650101efdcf6022db0b29ace2eb3f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9cb2568aa36af9ced0525660962966375d69e35b
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420764"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140676"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
@@ -117,19 +116,32 @@ dotnet publish -r <rid> -c Release
 
 TC 的主要優點是能夠啟用較慢品質但較快層級，或較高品質但較慢層級的 JIT (重新) 編譯方法。 由於行經各種執行階段 (從啟動到穩定狀態)，因此有助於提升應用程式的效能。 這與非 TC 方法相反，在非 TC 方法中，所有方法都是以單一方式 (與高品質層相同) 進行編譯，這會偏重穩定狀態而非啟動效能。
 
-若要啟用 Quick JIT (層級 0 JIT 編譯的程式碼)，請在您的專案檔中使用此設定：
+當 TC 已啟用時，在啟動時，會呼叫下列方法：
+
+- 如果方法具有 AOT 編譯器代碼（ReadyToRun），則會使用預先產生程式碼。
+- 否則，此方法將會進行 jit 編譯。 一般而言，這些方法是泛型而不是實數值型別。
+  - 快速 JIT 會更快速地產生較低品質的程式碼。 .NET Core 3.0 中的快速 JIT 預設會針對不包含迴圈且在啟動時慣用的方法啟用。
+  - 完全優化 JIT 產生較高品質的程式碼會更慢。 針對不使用快速 JIT 的方法（例如，如果方法是使用 `[MethodImpl(MethodImplOptions.AggressiveOptimization)]`進行屬性化），則會使用完全優化的 JIT。
+
+最後，當方法被呼叫數次之後，就會在背景中使用完全優化的 JIT 來重新編譯它們。
+
+快速 JIT 產生的程式碼可能會以較慢的速度執行、配置更多記憶體，或使用更多堆疊空間。 如果有問題，可能會在您的專案檔中使用此設定來停用快速 JIT：
 
 ```xml
 <PropertyGroup>
-  <TieredCompilationQuickJit>true</TieredCompilationQuickJit>
+  <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
 </PropertyGroup>
 ```
 
 若要完全停用 TC，請在您的專案檔中使用此設定：
 
 ```xml
-<TieredCompilation>false</TieredCompilation>
+<PropertyGroup>
+  <TieredCompilation>false</TieredCompilation>
+</PropertyGroup>
 ```
+
+對專案檔中上述設定所做的任何變更，都可能需要反映乾淨的組建（刪除 `obj` 並 `bin` 目錄並重建）。
 
 ### <a name="readytorun-images"></a>ReadyToRun 映像
 
@@ -332,12 +344,12 @@ GPIO 套件包含 *GPIO*、*SPI*、*I2C* 和 *PWM* 裝置的 API。 IoT 繫結�
 
 .NET Core 3.0 在 Linux 系統上使用 **OpenSSL 1.1.1**、**OpenSSL 1.1.0** 或 **OpenSSL 1.0.2** (若可供使用)。 當 **OpenSSL 1.1.1** 可供使用時，<xref:System.Net.Security.SslStream?displayProperty=nameWithType> 和 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 類型就會使用 **TLS 1.3** (假設用戶端和伺服器都支援 **TLS 1.3**)。
 
->[!IMPORTANT]
->Windows 和 macOS 尚未支援 **TLS 1.3**。 .NET Core 3.0 將在有支援可用時，在這些作業系統上支援 **TLS 1.3**。
+> [!IMPORTANT]
+> Windows 和 macOS 尚未支援 **TLS 1.3**。 .NET Core 3.0 將在有支援可用時，在這些作業系統上支援 **TLS 1.3**。
 
 下列 C# 8.0 範例示範連線至 <https://www.cloudflare.com> 之 Ubuntu 18.10 上的 .NET Core 3.0：
 
-[!CODE-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
+[!code-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
 
 ### <a name="cryptography-ciphers"></a>密碼編譯加密方式
 
@@ -345,7 +357,7 @@ GPIO 套件包含 *GPIO*、*SPI*、*I2C* 和 *PWM* 裝置的 API。 IoT 繫結�
 
 下列程式碼示範如何使用 `AesGcm` 加密方式將隨機資料加密和解密。
 
-[!CODE-csharp[AesGcm](~/samples/snippets/core/whats-new/whats-new-in-30/cs/Cipher.cs#AesGcm)]
+[!code-csharp[AesGcm](~/samples/snippets/core/whats-new/whats-new-in-30/cs/Cipher.cs#AesGcm)]
 
 ### <a name="cryptographic-key-importexport"></a>密碼編譯金鑰匯入/匯出
 
@@ -370,7 +382,7 @@ RSA 金鑰也支援：
 
 匯出方法會產生 DER 編碼的二進位資料，而匯入方法也是如此。 如果金鑰是以適合文字的 PEM 格式儲存的，呼叫端在呼叫匯入方法之前，就必須先對內容進行 Base64 解碼。
 
-[!CODE-csharp[RSA](~/samples/snippets/core/whats-new/whats-new-in-30/cs/RSA.cs#Rsa)]
+[!code-csharp[RSA](~/samples/snippets/core/whats-new/whats-new-in-30/cs/RSA.cs#Rsa)]
 
 **PKCS#8** 檔案可以使用 <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?displayProperty=nameWithType> 來檢查，而 **PFX/PKCS#12** 檔案可以使用 <xref:System.Security.Cryptography.Pkcs.Pkcs12Info?displayProperty=nameWithType> 來檢查。 **PFX/PKCS#12** 檔案可以使用 <xref:System.Security.Cryptography.Pkcs.Pkcs12Builder?displayProperty=nameWithType> 來操作。
 
@@ -495,15 +507,15 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 預設通訊協定會保持為 HTTP/1.1，但 HTTP/2 可以兩種不同的方式啟用。 首先，您可以設定 HTTP 要求訊息來使用 HTTP/2：
 
-[!CODE-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
+[!code-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
 
 再來，您可以變更 <xref:System.Net.Http.HttpClient> 來預設使用 HTTP/2：
 
-[!CODE-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
+[!code-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
 
 當您在開發應用程式時，經常會想要使用未加密的連線。 如果您知道目標端點會使用 HTTP/2，便可以針對 HTTP/2 開啟未加密的連線。 若要開啟它，您可以將 `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT` 環境變數設定為 `1`，或是在應用程式內容中啟用它：
 
-[!CODE-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
+[!code-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: bc525aeefe2c247c610886fae6ae7d79cb9e6517
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: d0ea5aefa62dd4029610ab8a7f7ce9ed52a59600
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274326"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283929"
 ---
 # <a name="welcome-to-net"></a>歡迎使用 .NET
 
@@ -47,7 +47,7 @@ ms.locfileid: "71274326"
 - [.NET 指南](standard/index.md)
 - [.NET Core 指南](core/index.md)
 - [.NET Framework 指南](framework/index.md)
-- [C# 指南](csharp/index.md)
+- [C# 指南](csharp/index.yml)
 - [F# 指南](fsharp/index.md)
 - [Visual Basic 指南](visual-basic/index.md)
 - [ML.NET 指南](machine-learning/index.yml)
@@ -72,7 +72,7 @@ ms.locfileid: "71274326"
 - [.NET Core CLI](https://github.com/dotnet/cli)
 - [Roslyn (C# and Visual Basic) Compiler Platform and IDE Tools](https://github.com/dotnet/roslyn) (Roslyn (C# 和 Visual Basic) 編譯器平台和 IDE 工具)
 - [F# Compiler and IDE Tools](https://github.com/microsoft/visualfsharp) (F# 編譯器和 IDE 工具)
-- [Windows Forms](https://github.com/dotnet/winforms)
+- [Windows Form](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 
 您可以加入已活躍於 [.NET 社群 (英文)](https://dotnet.microsoft.com/platform/community) 的其他人，了解最新消息或尋求協助。

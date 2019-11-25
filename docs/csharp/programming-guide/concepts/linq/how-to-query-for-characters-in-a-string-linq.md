@@ -1,15 +1,15 @@
 ---
-title: 作法：查詢字串中的字元 (LINQ) (C#)
+title: 如何：查詢字串中的字元 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: 1212ebcf264aab756eca1acb81ae617c2218a065
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: bc72c4370ff408a60f48aa020a16dae7f48f702a
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592885"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140968"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>作法：查詢字串中的字元 (LINQ) (C#)
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>如何：查詢字串中的字元 (LINQ) (C#)
 因為 <xref:System.String> 類別會實作泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面，所以可以用字元序列的形式查詢任何字串。 不過，這不是常見的 LINQ 用法。 對於複雜的模式比對作業，使用 <xref:System.Text.RegularExpressions.Regex> 類別。  
   
 ## <a name="example"></a>範例  
@@ -57,7 +57,7 @@ class QueryAString
 ## <a name="compiling-the-code"></a>編譯程式碼  
  建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ 和字串 (C#)](./linq-and-strings.md)
-- [如何：使用規則運算式合併 LINQ 查詢 (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)
+- [如何結合 LINQ 查詢與正則運算式（C#）](./how-to-combine-linq-queries-with-regular-expressions.md)

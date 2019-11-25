@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 8159f24e92608677cc832448fd2d79a1846ab12a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: d05307735506db0f0e4abab067334e4f0466ee6a
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739218"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204644"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型別參數的條件約束 (C# 程式設計手冊)
 
@@ -20,20 +20,18 @@ ms.locfileid: "73739218"
 
 |條件約束|描述|
 |----------------|-----------------|
-|`where T : struct`|型別引數必須是不可為 null 的實值型別。 如需可為 null 的實數值型別的詳細資訊，請參閱[nullable 實數值型別](../../language-reference/builtin-types/nullable-value-types.md)|
+|`where T : struct`|The type argument must be a non-nullable value type. For information about nullable value types, see [Nullable value types](../../language-reference/builtin-types/nullable-value-types.md). Because all value types have an accessible parameterless constructor, the `struct` constraint implies the `new()` constraint and can't be combined with the `new()` constraint. You also cannot combine the `struct` constraint with the `unmanaged` constraint.|
 |`where T : class`|型別引數必須是參考型別。 此條件約束也適用於任何類別、介面、委派或陣列型別。|
-|`where T : notnull`|型別引數必須是不可為 null 的型別。 引數可以是8.0 或更新版本中C#不可為 null 的參考型別，或不可為 null 的實數值型別。 此條件約束也適用於任何類別、介面、委派或陣列型別。|
-|`where T : unmanaged`|型別引數必須是 [unmanaged 型別](../../language-reference/builtin-types/unmanaged-types.md)。|
-|`where T : new()`|型別引數必須有公用無參數建構函式。 與其他條件約束搭配使用時，`new()` 條件約束必須是最後一個指定的。|
+|`where T : notnull`|The type argument must be a non-nullable type. The argument can be a non-nullable reference type in C# 8.0 or later, or a not nullable value type. 此條件約束也適用於任何類別、介面、委派或陣列型別。|
+|`where T : unmanaged`|The type argument must be a non-nullable [unmanaged type](../../language-reference/builtin-types/unmanaged-types.md). The `unmanaged` constraint implies the `struct` constraint and can't be combined with either the `struct` or `new()` constraints.|
+|`where T : new()`|型別引數必須有公用無參數建構函式。 與其他條件約束搭配使用時，`new()` 條件約束必須是最後一個指定的。 The `new()` constraint can't be combined with the `struct` and `unmanaged` constraints.|
 |`where T :` *\<基底類別名稱>*|型別引數必須是或衍生自指定的基底類別。|
 |`where T :` *\<介面名稱>*|型別引數必須是或實作指定的介面。 您可以指定多個介面條件約束。 條件約束介面也是泛型。|
 |`where T : U`|針對 T 提供的型別引數必須是或衍生自針對 U 所提供的引數。|
 
-有些條件約束會互斥。 所有實值型別都必須有可存取的無參數建構函式。 `struct` 條件約束意指 `new()` 條件約束，而 `new()` 條件約束無法與 `struct` 條件約束結合。 `unmanaged` 條件約束表示 `struct` 條件約束。 `unmanaged` 條件約束無法與 `struct` 或 `new()` 條件約束結合。
-
 ## <a name="why-use-constraints"></a>為什麼使用條件約束
 
-透過限制型別參數，即可增加條件約束類型和其繼承階層中所有類型所支援項目的允許作業和方法呼叫數目。 當您設計泛型類別或方法時，如果您要在簡單指派以外的泛型成員上執行任何作業，或呼叫 <xref:System.Object?displayProperty=nameWithType>不支援的任何方法，則必須將條件約束套用至類型參數。 例如，基底類別條件約束會告知編譯器只有這個類型的物件或衍生自這個類型的物件才會用作型別引數。 編譯器具有這項保證之後，就可以允許在泛型類別中呼叫該類型的方法。 下列程式碼範例示範您可以套用基底類別條件約束來新增至 `GenericList<T>` 類別的功能 (在[泛型簡介](../../../standard/generics/index.md)中)。
+透過限制型別參數，即可增加條件約束類型和其繼承階層中所有類型所支援項目的允許作業和方法呼叫數目。 When you design generic classes or methods, if you'll be performing any operation on the generic members beyond simple assignment or calling any methods not supported by <xref:System.Object?displayProperty=nameWithType>, you'll have to apply constraints to the type parameter. 例如，基底類別條件約束會告知編譯器只有這個類型的物件或衍生自這個類型的物件才會用作型別引數。 編譯器具有這項保證之後，就可以允許在泛型類別中呼叫該類型的方法。 下列程式碼範例示範您可以套用基底類別條件約束來新增至 `GenericList<T>` 類別的功能 (在[泛型簡介](../../../standard/generics/index.md)中)。
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#9)]
 
@@ -47,7 +45,7 @@ ms.locfileid: "73739218"
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#11)]
 
-編譯器只知道 `T` 在編譯時期是參考型別，而且必須使用對所有參考型別都有效的預設運算子。 如果您必須測試值是否相等，則建議同時套用 `where T : IEquatable<T>` 或 `where T : IComparable<T>` 條件約束，並在任何將用來建構泛型類別的類別中實作介面。
+The compiler only knows that `T` is a reference type at compile time and must use the default operators that are valid for all reference types. 如果您必須測試值是否相等，則建議同時套用 `where T : IEquatable<T>` 或 `where T : IComparable<T>` 條件約束，並在任何將用來建構泛型類別的類別中實作介面。
 
 ## <a name="constraining-multiple-parameters"></a>限制多個參數
 
@@ -59,7 +57,7 @@ ms.locfileid: "73739218"
 
  沒有條件約束的型別參數 (例如公用類別 `SampleClass<T>{}` 中的 T) 稱為「未繫結的型別參數」。 未繫結的型別參數具有下列規則：
 
-- `!=` 和 `==` 運算子無法使用，因為不保證具體類型引數會支援這些運算子。
+- The `!=` and `==` operators can't be used because there's no guarantee that the concrete type argument will support these operators.
 - 它們可以與 `System.Object` 進行來回轉換，或明確轉換成任何介面類型。
 - 您可以將它們與 [Null](../../language-reference/keywords/null.md) 比較。 如果未繫結的參數與 `null` 進行比較，則型別引數是實值型別時，比較一律會傳回 false。
 
@@ -77,23 +75,25 @@ ms.locfileid: "73739218"
 
 型別參數作為條件約束對泛型類別來說不實用，因為編譯器除了會假設型別參數衍生自 `System.Object` 之外，不會再做其他任何假設。 如果您要強制兩個型別參數之間具有繼承關係，請在泛型類別上將型別參數用作條件約束。
 
-## <a name="notnull-constraint"></a>NotNull 條件約束
+## <a name="notnull-constraint"></a>NotNull constraint
 
-從C# 8.0 開始，您可以使用 `notnull` 條件約束，指定型別引數必須是不可為 null 的實值型別或不可為 null 的參考型別。 `notnull` 條件約束只能用在 `nullable enable` 內容中。 如果您在可為 null 的遺忘式內容中加入 `notnull` 條件約束，編譯器會產生警告。 
+Beginning with C# 8.0, you can use the `notnull` constraint to specify that the type argument must be a non-nullable value type or non-nullable reference type. The `notnull` constraint can only be used in a `nullable enable` context. The compiler generates a warning if you add the `notnull` constraint in a nullable oblivious context. 
 
-不同于其他條件約束，當類型引數違反 `notnull` 條件約束時，編譯器會在 `nullable enable` 內容中編譯該程式碼時產生警告。 如果程式碼是在可為 null 的遺忘式內容中編譯，則編譯器不會產生任何警告或錯誤。
+Unlike other constraints, when a type argument violates the `notnull` constraint, the compiler generates a warning when that code is compiled in a `nullable enable` context. If the code is compiled in a nullable oblivious context, the compiler doesn't generate any warnings or errors.
 
 ## <a name="unmanaged-constraint"></a>非受控條件約束
 
-從 C# 7.3 開始，您可以使用 `unmanaged` 條件約束指定型別參數必須是[非受控型別](../../language-reference/builtin-types/unmanaged-types.md)。 `unmanaged` 條件約束可讓您撰寫可重複使用的常式來使用型別，而型別可以操作為記憶體區塊，如下列範例所示：
+Beginning with C# 7.3, you can use the `unmanaged` constraint to specify that the type parameter must be a non-nullable [unmanaged type](../../language-reference/builtin-types/unmanaged-types.md). `unmanaged` 條件約束可讓您撰寫可重複使用的常式來使用型別，而型別可以操作為記憶體區塊，如下列範例所示：
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 
 上述方法必須在 `unsafe` 內容中進行編譯，因為它在不知道是內建型別的型別上使用 `sizeof` 運算子。 如果沒有 `unmanaged` 條件約束，則 `sizeof` 運算子無法使用。
 
+The `unmanaged` constraint implies the `struct` constraint and can't be combined with it. Because the `struct` constraint implies the `new()` constraint, the `unmanaged` constraint can't be combined with the `new()` constraint as well.
+
 ## <a name="delegate-constraints"></a>委派條件約束
 
-而且，從 C# 7.3 開始，您可以使用 <xref:System.Delegate?displayProperty=nameWithType> 或 <xref:System.MulticastDelegate?displayProperty=nameWithType> 作為基底類別條件約束。 CLR 一律允許這個條件約束，但 C# 語言不允許它。 `System.Delegate` 條件約束可讓您撰寫程式碼，以型別安全方式使用委派。 下列程式碼會定義擴充方法，以結合兩個委派，前提是它們是相同的類型：
+而且，從 C# 7.3 開始，您可以使用 <xref:System.Delegate?displayProperty=nameWithType> 或 <xref:System.MulticastDelegate?displayProperty=nameWithType> 作為基底類別條件約束。 CLR 一律允許這個條件約束，但 C# 語言不允許它。 `System.Delegate` 條件約束可讓您撰寫程式碼，以型別安全方式使用委派。 The following code defines an extension method that combines two delegates provided they're the same type:
 
 [!code-csharp[using the delegate constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#16)]
 
@@ -101,7 +101,7 @@ ms.locfileid: "73739218"
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#17)]
 
-如果您將最後一行取消註解，則不會編譯它。 `first` 和 `test` 都是委派類型，但它們是不同的委派類型。
+如果您將最後一行取消註解，則不會編譯它。 Both `first` and `test` are delegate types, but they're different delegate types.
 
 ## <a name="enum-constraints"></a>列舉條件約束
 

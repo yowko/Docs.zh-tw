@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-ms.openlocfilehash: 2443e82dd9c6d8b5447c2fa16b537a9feed8ddaf
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8aff6afb09c97d7d01f5e7b7f1b92ae24bb99fb7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895151"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141761"
 ---
 # <a name="enabling-transaction-flow"></a>啟用交易流程
 Windows Communication Foundation （WCF）提供高度彈性的選項來控制交易流程。 服務的異動流程設定可以使用屬性和組態的組合來表示。  
@@ -35,10 +35,10 @@ Windows Communication Foundation （WCF）提供高度彈性的選項來控制�
 |---------------------------------|--------------------------------------|----------------------------------------------|------------------------------|  
 |強制|true|WS-AT|異動必須以可互通的 WS-AT 格式來流動。|  
 |強制|true|OleTransactions|交易必須以 WCF OleTransactions 格式流動。|  
-|強制|false|不適用|由於不是有效的組態而不適用。|  
+|強制|False|不適用|由於不是有效的組態而不適用。|  
 |Allowed|true|WS-AT|交易可以用可互通的 WS-AT 格式來流動。|  
 |Allowed|true|OleTransactions|交易可能會以 WCF OleTransactions 格式流動。|  
-|Allowed|false|任何值|未流動交易。|  
+|Allowed|False|任何值|未流動交易。|  
 |NotAllowed|任何值|任何值|未流動交易。|  
   
  下表摘要說明訊息處理的結果。  
@@ -59,13 +59,13 @@ Windows Communication Foundation （WCF）提供高度彈性的選項來控制�
  在服務合約中的所有方法不一定有相同的異動流程需求。 因此，WCF 也會提供以屬性為基礎的機制，以允許表示每個方法的交易流程喜好設定。 指定服務作業接受異動標頭時所位於之層級的 <xref:System.ServiceModel.TransactionFlowAttribute> 會完成這項動作。 若要啟用交易流程，您應該要使用這個屬性來標記您的服務合約方法。 這個屬性會接受其中一個 <xref:System.ServiceModel.TransactionFlowOption> 列舉值，其預設值為 <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>。 如果已指定 <xref:System.ServiceModel.TransactionFlowOption.NotAllowed> 以外的任何值，即表示此方法一定不能是單向方法。 開發人員可以使用這個屬性來指定方法層級的交易流程需求，或是設計階段的條件約束。  
   
 ## <a name="enabling-transaction-flow-at-the-endpoint-level"></a>啟用端點層級上的交易流程  
- 除了<xref:System.ServiceModel.TransactionFlowAttribute>屬性所提供的方法層級交易流程設定之外，WCF 還提供交易流程的整個端點設定，讓系統管理員可以控制較高層級的交易流程。  
+ 除了 <xref:System.ServiceModel.TransactionFlowAttribute> 屬性所提供的方法層級交易流程設定之外，WCF 還提供交易流程的整個端點設定，讓系統管理員能夠控制較高層級的交易流程。  
   
  <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 會完成這個動作，它可讓您在端點的繫結設定中啟用或停用傳入交易流程，並且指定傳入交易的所需交易通訊協定格式。  
   
  如果該繫結已停用交易流程，但是服務合約上的其中一個作業需要傳入交易，則會在服務啟動時擲回驗證例外狀況。  
   
- WCF 提供的大部分系結都包含`transactionFlow`和`transactionProtocol`屬性，可讓您將特定的系結設定為接受傳入交易。 如需設定 configuration 元素的詳細資訊，請[ \<](../../../../docs/framework/misc/binding.md)參閱系結 >。  
+ WCF 提供的大部分系結都包含 `transactionFlow` 和 `transactionProtocol` 屬性，可讓您將特定的系結設定為接受傳入交易。 如需設定 configuration 元素的詳細資訊，請參閱\<系結[>](../../configure-apps/file-schema/wcf/bindings.md)。  
   
  系統管理員或部署者都可以透過組態檔，在部署時使用端點層級異動流程來設定異動流程需求或條件約束。  
   

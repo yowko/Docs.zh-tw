@@ -1,5 +1,5 @@
 ---
-title: On Error 陳述式 (Visual Basic)
+title: On Error 陳述式
 ms.date: 07/20/2015
 f1_keywords:
 - vb.OnError
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 4474b217147aca74f2c6e5376c8f55318a05bf4a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d62c2ba1849b7015ed877d503220026a2dfeff57
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046506"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353811"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 陳述式 (Visual Basic)
-啟用錯誤處理常式, 並在程式中指定常式的位置;也可以用來停用錯誤處理常式。 `On Error`語句用於非結構化錯誤處理中, 而且可以用來取代結構化例外狀況處理。 [結構化例外狀況處理](../../../standard/exceptions/index.md)內建于 .net 中, 通常更有效率, 而且在處理應用程式中的執行階段錯誤時建議使用。
+Enables an error-handling routine and specifies the location of the routine within a procedure; can also be used to disable an error-handling routine. The `On Error` statement is used in unstructured error handling and can be used instead of structured exception handling. [Structured exception handling](../../../standard/exceptions/index.md) is built into .NET, is generally more efficient, and so is recommended when handling runtime errors in your application.
 
- 如果沒有錯誤處理或例外狀況處理, 則發生的任何執行階段錯誤都是嚴重的: 會顯示錯誤訊息, 並停止執行。
+ Without error handling or exception handling, any run-time error that occurs is fatal: an error message is displayed, and execution stops.
 
 > [!NOTE]
-> 關鍵字也用於[Error 語句](../../../visual-basic/language-reference/statements/error-statement.md), 這是為了回溯相容性所支援的。 `Error`
+> The `Error` keyword is also used in the [Error Statement](../../../visual-basic/language-reference/statements/error-statement.md), which is supported for backward compatibility.
 
 ## <a name="syntax"></a>語法
 
@@ -47,76 +47,76 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 
 |詞彙|定義|
 |---|---|
-|`GoTo`*行*|啟用在必要*行*引數中指定的行開始的錯誤處理常式。 *Line*引數是任何行標籤或行號。 如果發生執行階段錯誤, 請將分支控制到指定的行, 使錯誤處理常式變成作用中。 指定的行必須與`On Error`語句位於相同的程式中, 否則會發生編譯時期錯誤。|
-|`GoTo 0`|停用目前程式中已啟用的錯誤處理常式, `Nothing`並將它重設為。|
-|`GoTo -1`|停用目前程式中已啟用的例外狀況, `Nothing`並將它重設為。|
-|`Resume Next`|指定發生執行階段錯誤時, 控制權會移至緊接在發生錯誤的語句之後的語句, 並從該點繼續執行。 `On Error GoTo`在存取物件時, 請使用此表單, 而不是。|
+|`GoTo` *line*|Enables the error-handling routine that starts at the line specified in the required *line* argument. The *line* argument is any line label or line number. If a run-time error occurs, control branches to the specified line, making the error handler active. The specified line must be in the same procedure as the `On Error` statement or a compile-time error will occur.|
+|`GoTo 0`|Disables enabled error handler in the current procedure and resets it to `Nothing`.|
+|`GoTo -1`|Disables enabled exception in the current procedure and resets it to `Nothing`.|
+|`Resume Next`|Specifies that when a run-time error occurs, control goes to the statement immediately following the statement where the error occurred, and execution continues from that point. Use this form rather than `On Error GoTo` when accessing objects.|
 
 ## <a name="remarks"></a>備註
 
 > [!NOTE]
-> 我們建議您盡可能在程式碼中使用結構化例外狀況處理, 而不是使用非結構化`On Error`例外狀況處理和語句。 如需詳細資訊，請參閱 [Try...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。
+> We recommend that you use structured exception handling in your code whenever possible, rather than using unstructured exception handling and the `On Error` statement. 如需詳細資訊，請參閱 [Try...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。
 
- 「已啟用」錯誤處理常式是由`On Error`語句開啟的。 「作用中」錯誤處理常式是已啟用的處理常式, 正在處理錯誤。
+ An "enabled" error handler is one that is turned on by an `On Error` statement. An "active" error handler is an enabled handler that is in the process of handling an error.
 
- 如果錯誤處理常式正在使用中時發生錯誤 (發生錯誤`Resume`和、 `Exit Sub`、 `Exit Function`或`Exit Property`語句), 則目前程式的錯誤處理常式無法處理錯誤。 控制項會回到呼叫程式。
+ If an error occurs while an error handler is active (between the occurrence of the error and a `Resume`, `Exit Sub`, `Exit Function`, or `Exit Property` statement), the current procedure's error handler cannot handle the error. Control returns to the calling procedure.
   
- 如果呼叫程式具有已啟用的錯誤處理常式, 就會啟動以處理錯誤。 如果呼叫程式的錯誤處理常式也是作用中, 則控制權會透過先前的呼叫程式回傳, 直到找到已啟用但非使用中的錯誤處理常式為止。 如果找不到這類錯誤處理常式, 則錯誤在實際發生的時間點是嚴重的。
+ If the calling procedure has an enabled error handler, it is activated to handle the error. If the calling procedure's error handler is also active, control passes back through previous calling procedures until an enabled, but inactive, error handler is found. If no such error handler is found, the error is fatal at the point at which it actually occurred.
   
- 每次錯誤處理常式將控制權回傳給呼叫的進程時, 該程式就會成為目前的程式。 一旦任何程式中的錯誤處理常式處理錯誤之後, 就會在`Resume`語句所指定的目前程式中繼續執行。
+ Each time the error handler passes control back to a calling procedure, that procedure becomes the current procedure. Once an error is handled by an error handler in any procedure, execution resumes in the current procedure at the point designated by the `Resume` statement.
   
 > [!NOTE]
-> 錯誤處理常式不是一個`Sub`程式`Function`或程式。 它是以線條標籤或行號標記的程式碼區段。
+> An error-handling routine is not a `Sub` procedure or a `Function` procedure. It is a section of code marked by a line label or a line number.
   
-## <a name="number-property"></a>Number 屬性
- 錯誤處理常式會依賴`Number` `Err`物件之屬性中的值, 以判斷錯誤的原因。 常式應該先測試或儲存物件中的`Err`相關屬性值, 然後才會發生任何其他錯誤, 或呼叫可能造成錯誤的程式之前。 `Err`物件中的屬性值只會反映最近的錯誤。 與`Err.Number`相關聯的錯誤訊息包含在`Err.Description`中。  
+## <a name="number-property"></a>Number Property
+ Error-handling routines rely on the value in the `Number` property of the `Err` object to determine the cause of the error. The routine should test or save relevant property values in the `Err` object before any other error can occur or before a procedure that might cause an error is called. The property values in the `Err` object reflect only the most recent error. The error message associated with `Err.Number` is contained in `Err.Description`.  
   
 ## <a name="throw-statement"></a>Throw 陳述式  
- 以`Err.Raise`方法引發的錯誤會`Exception`將屬性設定為<xref:System.Exception>類別的新建立實例。 為了支援引發衍生的例外狀況類型的例外狀況, `Throw`語言中支援語句。 這會採用單一參數, 也就是要擲回的例外狀況實例。 下列範例顯示如何將這些功能與現有的例外狀況處理支援搭配使用:
+ An error that is raised with the `Err.Raise` method sets the `Exception` property to a newly created instance of the <xref:System.Exception> class. In order to support the raising of exceptions of derived exception types, a `Throw` statement is supported in the language. This takes a single parameter that is the exception instance to be thrown. The following example shows how these features can be used with the existing exception handling support:
 
  [!code-vb[VbVbalrErrorHandling#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#17)]  
   
- 請注意, `On Error GoTo`語句會捕捉所有錯誤, 而不論例外狀況類別為何。
+ Notice that the `On Error GoTo` statement traps all errors, regardless of the exception class.
   
-## <a name="on-error-resume-next"></a>發生錯誤時繼續下一步
- `On Error Resume Next`讓執行繼續進行, 緊接在導致執行階段錯誤的語句之後的語句, 或緊接在包含`On Error Resume Next`語句的程式之外的最後一次呼叫後面的語句。 即使執行階段錯誤, 此語句仍可繼續執行。 您可以將錯誤處理常式放在發生錯誤的位置, 而不是將控制權轉移到程式內的另一個位置。 呼叫`On Error Resume Next`另一個程式時, 語句會變成非作用中, 因此, `On Error Resume Next`如果您想要在該常式內進行內嵌錯誤處理, 則應該在每個呼叫的常式中執行語句。
+## <a name="on-error-resume-next"></a>On Error Resume Next
+ `On Error Resume Next` causes execution to continue with the statement immediately following the statement that caused the run-time error, or with the statement immediately following the most recent call out of the procedure containing the `On Error Resume Next` statement. This statement allows execution to continue despite a run-time error. You can place the error-handling routine where the error would occur rather than transferring control to another location within the procedure. An `On Error Resume Next` statement becomes inactive when another procedure is called, so you should execute an `On Error Resume Next` statement in each called routine if you want inline error handling within that routine.
   
 > [!NOTE]
-> 在`On Error Resume Next`處理存取其他物件期間`On Error GoTo`所產生的錯誤時, 可能會比較理想。 在`Err`每個與物件的互動之後檢查, 會移除程式碼所存取的物件不明確。 您可以確定哪個物件將錯誤碼放在中`Err.Number`, 以及最初產生錯誤的物件 (在中`Err.Source`指定的物件)。
+> The `On Error Resume Next` construct may be preferable to `On Error GoTo` when handling errors generated during access to other objects. Checking `Err` after each interaction with an object removes ambiguity about which object was accessed by the code. You can be sure which object placed the error code in `Err.Number`, as well as which object originally generated the error (the object specified in `Err.Source`).
 
 ## <a name="on-error-goto-0"></a>On Error GoTo 0
- `On Error GoTo 0`停用目前程式中的錯誤處理。 它不會將第0行指定為錯誤處理常式代碼的開頭, 即使套裝程式含編號為0的行。 如果沒有`On Error GoTo 0`語句, 當程式結束時, 就會自動停用錯誤處理常式。
+ `On Error GoTo 0` disables error handling in the current procedure. It doesn't specify line 0 as the start of the error-handling code, even if the procedure contains a line numbered 0. Without an `On Error GoTo 0` statement, an error handler is automatically disabled when a procedure is exited.
 
-## <a name="on-error-goto--1"></a>發生錯誤時為-1
- `On Error GoTo -1`停用目前程式中的例外狀況。 它不會指定行-1 做為錯誤處理常式代碼的開頭, 即使套裝程式含編號為-1 的行。 如果沒有`On Error GoTo -1`語句, 當程式結束時, 就會自動停用例外狀況。
+## <a name="on-error-goto--1"></a>On Error GoTo -1
+ `On Error GoTo -1` disables the exception in the current procedure. It does not specify line -1 as the start of the error-handling code, even if the procedure contains a line numbered -1. Without an `On Error GoTo -1` statement, an exception is automatically disabled when a procedure is exited.
 
- 若要防止錯誤處理常式代碼在未發生錯誤時執行, 請將`Exit Sub`、 `Exit Function`或`Exit Property`語句立即放在錯誤處理常式之前, 如下列片段所示:
+ To prevent error-handling code from running when no error has occurred, place an `Exit Sub`, `Exit Function`, or `Exit Property` statement immediately before the error-handling routine, as in the following fragment:
 
  [!code-vb[VbVbalrErrorHandling#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#18)]
 
- 在這裡, 錯誤處理常式代碼會遵循`Exit Sub`語句, 並在`End Sub`語句之前, 將它與程式流程分開。 您可以將錯誤處理常式代碼放在程式中的任何位置。
+ Here, the error-handling code follows the `Exit Sub` statement and precedes the `End Sub` statement to separate it from the procedure flow. You can place error-handling code anywhere in a procedure.
 
-## <a name="untrapped-errors"></a>Untrapped 錯誤
- 當物件當做可執行檔執行時, 物件中的 Untrapped 錯誤會傳回給控制應用程式。 在開發環境中, 只有在設定適當的選項時, 才會將 untrapped 錯誤傳回給控制應用程式。 請參閱主應用程式的檔, 以瞭解在調試過程中應該設定哪些選項、如何設定它們, 以及主機是否可以建立類別的描述。
+## <a name="untrapped-errors"></a>Untrapped Errors
+ Untrapped errors in objects are returned to the controlling application when the object is running as an executable file. Within the development environment, untrapped errors are returned to the controlling application only if the proper options are set. See your host application's documentation for a description of which options should be set during debugging, how to set them, and whether the host can create classes.
 
- 如果您建立的物件會存取其他物件, 您應該嘗試處理其傳回的任何未處理錯誤。 如果您無法這樣做, 請將中`Err.Number`的錯誤碼對應至您自己的其中一個錯誤, 然後將它們傳回給物件的呼叫者。 您應該將錯誤碼新增至`VbObjectError`常數來指定錯誤。 例如, 如果您的錯誤碼為 1052, 請將其指派如下:
+ If you create an object that accesses other objects, you should try to handle any unhandled errors they pass back. If you cannot, map the error codes in `Err.Number` to one of your own errors and then pass them back to the caller of your object. You should specify your error by adding your error code to the `VbObjectError` constant. For example, if your error code is 1052, assign it as follows:
 
  [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]
 
 > [!CAUTION]
-> 呼叫 Windows 動態連結程式庫 (Dll) 期間發生系統錯誤, 並不會引發例外狀況, 也無法在 Visual Basic 錯誤捕捉時加以攔截。 呼叫 DLL 函式時, 您應該檢查每個傳回值是否成功或失敗 (根據 API 規格), 並在發生失敗時檢查`Err` `LastDLLError`物件屬性中的值。
+> System errors during calls to Windows dynamic-link libraries (DLLs) do not raise exceptions and cannot be trapped with Visual Basic error trapping. When calling DLL functions, you should check each return value for success or failure (according to the API specifications), and in the event of a failure, check the value in the `Err` object's `LastDLLError` property.
 
 ## <a name="example"></a>範例
- 這個範例會先使用`On Error GoTo`語句來指定程式內的錯誤處理常式位置。 在此範例中, 嘗試零除會產生錯誤號碼6。 錯誤會在錯誤處理常式中處理, 然後再將控制權傳回給造成錯誤的語句。 `On Error GoTo 0`語句會關閉錯誤捕捉。 然後, `On Error Resume Next`語句會用來延遲錯誤捕捉, 讓下一個語句所產生的錯誤內容可以知道。 請注意`Err.Clear` , 在處理錯誤之後`Err` , 會用來清除物件的屬性。
+ This example first uses the `On Error GoTo` statement to specify the location of an error-handling routine within a procedure. In the example, an attempt to divide by zero generates error number 6. The error is handled in the error-handling routine, and control is then returned to the statement that caused the error. The `On Error GoTo 0` statement turns off error trapping. Then the `On Error Resume Next` statement is used to defer error trapping so that the context for the error generated by the next statement can be known for certain. Note that `Err.Clear` is used to clear the `Err` object's properties after the error is handled.
 
  [!code-vb[VbVbalrErrorHandling#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#20)]
 
 ## <a name="requirements"></a>需求
- **命名空間：** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)
+ **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)
 
- **Assembly**Visual Basic Runtime Library (位於 Microsoft.VisualBasic.dll)
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.Information.Err%2A>
 - <xref:Microsoft.VisualBasic.ErrObject.Number%2A>

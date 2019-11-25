@@ -1,15 +1,15 @@
 ---
-title: 建立自訂屬性（Visual Basic）
+title: 建立自訂屬性
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 3b1b03f69229bd4d824d6fff734b83400c2aab44
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 773a3e8e974f37a1554892dd3441c115681c5bae
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524296"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350150"
 ---
-# <a name="creating-custom-attributes-visual-basic"></a>建立自訂屬性（Visual Basic）
+# <a name="creating-custom-attributes-visual-basic"></a>Creating Custom Attributes (Visual Basic)
 
 您可以建立自己的自訂屬性，方法是定義屬性類別，這是直接或間接衍生自 <xref:System.Attribute> 的類別，它能快速且簡單地在中繼資料中識別屬性定義。 假設您想要用撰寫類型的程式設計人員姓名來標記類型。 您可能會定義自訂的 `Author` 屬性類別：
 
@@ -71,4 +71,4 @@ End Class
 - [反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [屬性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
 - [使用反映存取屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-- [AttributeUsage （Visual Basic）](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+- [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

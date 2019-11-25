@@ -1,5 +1,5 @@
 ---
-title: 使用 My.Application、My.Computer 和 My.User 執行工作 (Visual Basic)
+title: 使用 My.Application、My.Computer 及 My.User 執行工作
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application object [Visual Basic], developing applications
@@ -9,34 +9,36 @@ helpviewer_keywords:
 - My.Computer object [Visual Basic], developing applications
 - My.User object [Visual Basic], developing applications
 ms.assetid: c8af61bd-4dd3-4a0f-9af5-795b594b240b
-ms.openlocfilehash: 0372fbf63f6d12e266674f92225183911aa4ca30
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc9fd9093a3db4785bfc94719dbae9ec1d586050
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014124"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329584"
 ---
 # <a name="performing-tasks-with-myapplication-mycomputer-and-myuser-visual-basic"></a>使用 My.Application、My.Computer 和 My.User 執行工作 (Visual Basic)
-三種中央`My`提供使用功能的存取權對資訊和常用的物件`My.Application`(<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>)， `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)，以及`My.User`(<xref:Microsoft.VisualBasic.ApplicationServices.User>)。 您可以使用這些物件分別存取與目前的應用程式、，安裝應用程式的電腦或目前使用者的應用程式時，相關的資訊。  
+
+The three central `My` objects that provide access to information and commonly used functionality are `My.Application` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>), `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>), and `My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>). You can use these objects to access information that is related to the current application, the computer that the application is installed on, or the current user of the application, respectively.  
   
-## <a name="myapplication-mycomputer-and-myuser"></a>My.Application、 My.Computer 和 My.User  
- 下列範例示範如何資訊可能會使用擷取`My`。  
+## <a name="myapplication-mycomputer-and-myuser"></a>My.Application, My.Computer, and My.User  
+
+ The following examples demonstrate how information can be retrieved using `My`.  
   
  [!code-vb[VbVbcnMy#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#1)]  
   
  [!code-vb[VbVbcnMy#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#2)]  
   
- 除了擷取資訊，透過這三個物件所公開的成員也可讓您執行該物件相關聯的方法。 比方說，您可以存取各種不同的方法來操作檔案，或更新透過登錄`My.Computer`。  
+ In addition to retrieving information, the members exposed through these three objects also allow you to execute methods related to that object. For instance, you can access a variety of methods to manipulate files or update the registry through `My.Computer`.  
   
- 檔案 I/O 大幅會更方便且更快速地`My`，其中包含各種不同的方法和屬性來操作檔案、 目錄和磁碟機。 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>物件可讓您讀取已分隔的大型結構化的檔案或固定寬度的欄位。 此範例會開啟`TextFieldParser``reader`並使用它來讀取`C:\TestFolder1\test1.txt`。  
+ File I/O is significantly easier and faster with `My`, which includes a variety of methods and properties for manipulating files, directories, and drives. The <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object allows you to read from large structured files that have delimited or fixed-width fields. This example opens the `TextFieldParser` `reader` and uses it to read from `C:\TestFolder1\test1.txt`.  
   
  [!code-vb[VbVbalrTextFieldParser#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#23)]  
   
- `My.Application` 可讓您變更您的應用程式的文化特性。 下列範例會示範如何呼叫此方法。  
+ `My.Application` allows you to change the culture for your application. The following example demonstrates how this method can be called.  
   
  [!code-vb[VbVbcnMy#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#3)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>

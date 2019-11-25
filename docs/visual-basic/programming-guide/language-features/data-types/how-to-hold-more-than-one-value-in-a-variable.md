@@ -1,5 +1,5 @@
 ---
-title: 作法：在變數中保存一個以上的值（Visual Basic）
+title: 如何：在變數中存放多個值
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,38 +11,38 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 8d07a34a98303f9d220dba0a3c955120b421340e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d452fbf35f9d200348234b38c40f8636f0ec4b4e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054189"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350012"
 ---
-# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>作法：在變數中保存一個以上的值（Visual Basic）
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>如何：在變數中存放多個值 (Visual Basic)
 
-如果您將變數宣告為*複合資料型別*，則會保留一個以上的值。
+A variable holds more than one value if you declare it to be of a *composite data type*.
 
-[複合資料型別](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)包括結構、陣列和類別。 複合資料型別的變數可以保存基本資料類型和其他複合類型的組合。 結構和類別可以保存程式碼及資料。
+[Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) include structures, arrays, and classes. A variable of a composite data type can hold a combination of elementary data types and other composite types. Structures and classes can hold code as well as data.
 
-## <a name="to-hold-more-than-one-value-in-a-variable"></a>在變數中保存一個以上的值
+## <a name="to-hold-more-than-one-value-in-a-variable"></a>To hold more than one value in a variable
 
-1. 決定您想要用於變數的複合資料型別。
+1. Determine what composite data type you want to use for your variable.
 
-2. 如果尚未定義複合資料型別，請定義它，讓您的變數可以使用它。
+2. If the composite data type is not already defined, define it so that your variable can use it.
 
-    - 使用[結構語句](../../../../visual-basic/language-reference/statements/structure-statement.md)定義結構。
+    - Define a structure with a [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md).
 
-    - 使用[Dim 語句](../../../../visual-basic/language-reference/statements/dim-statement.md)定義陣列。
+    - Define an array with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).
 
-    - 使用[Class 語句](../../../../visual-basic/language-reference/statements/class-statement.md)定義類別。
+    - Define a class with a [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md).
 
-3. 使用`Dim`語句宣告您的變數。
+3. Declare your variable with a `Dim` statement.
 
-4. 請在變數名稱後面加`As`上子句。
+4. Follow the variable name with an `As` clause.
 
-5. 請在`As`關鍵字後面加上適當的複合資料型別名稱。
+5. Follow the `As` keyword with the name of the appropriate composite data type.
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [資料類型](../../../../visual-basic/language-reference/data-types/index.md)
 - [類型字元](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
@@ -50,4 +50,4 @@ ms.locfileid: "71054189"
 - [結構](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [值類型和參考類型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

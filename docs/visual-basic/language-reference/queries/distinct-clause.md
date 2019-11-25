@@ -1,5 +1,5 @@
 ---
-title: Distinct 子句 (Visual Basic)
+title: Distinct 子句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryDistinct
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Distinct statement [Visual Basic]
 - queries [Visual Basic], Distinct
 ms.assetid: 86f42614-0d8f-4ffc-b888-ce8a37a8d36a
-ms.openlocfilehash: e8d3e38261a04c4d29faab351d24d6710413b09a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 94471898807ef4552564c3e01465f2b2f6211d0c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004799"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335370"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct 子句 (Visual Basic)
-限制目前範圍變數的值，以排除後續查詢子句中的重複值。  
+Restricts the values of the current range variable to eliminate duplicate values in subsequent query clauses.  
   
 ## <a name="syntax"></a>語法  
   
@@ -25,14 +25,14 @@ Distinct
 ```  
   
 ## <a name="remarks"></a>備註  
- 您可以使用 `Distinct` 子句來傳回唯一專案的清單。 @No__t 0 子句會導致查詢忽略重複的查詢結果。 @No__t-0 子句適用于 `Select` 子句所指定之所有傳回欄位的重複值。 如果未指定任何 `Select` 子句，則 `Distinct` 子句會套用至在 `From` 子句中識別之查詢的範圍變數。 如果範圍變數不是不可變的類型，則只有當類型的所有成員符合現有的查詢結果時，查詢才會忽略查詢結果。  
+ You can use the `Distinct` clause to return a list of unique items. The `Distinct` clause causes the query to ignore duplicate query results. The `Distinct` clause applies to duplicate values for all return fields specified by the `Select` clause. If no `Select` clause is specified, the `Distinct` clause is applied to the range variable for the query identified in the `From` clause. If the range variable is not an immutable type, the query will only ignore a query result if all members of the type match an existing query result.  
   
 ## <a name="example"></a>範例  
- 下列查詢運算式會聯結客戶清單和客戶訂單清單。 包含的 `Distinct` 子句會傳回唯一客戶名稱和訂單日期的清單。  
+ The following query expression joins a list of customers and a list of customer orders. The `Distinct` clause is included to return a list of unique customer names and order dates.  
   
  [!code-vb[VbSimpleQuerySamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#20)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [查詢](../../../visual-basic/language-reference/queries/index.md)

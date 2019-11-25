@@ -5,19 +5,19 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 17354c8aaf9131bbcf5e2274eff44d9af611582c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7d7ad0f86ff327c3273664fc1c7395c88d38a5bf
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853863"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204719"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>在 Windows XP 和 Windows Server 2003 上安裝 .NET Framework
 
 > [!NOTE]
 > Microsoft 已不再支援 Windows XP。 建議您升級至 Windows 10，這是受支援的版本，而且包含最新版的 .NET Framework。 本文件僅供用來作為有幫助的疑難排解指南。
 
-在 Windows 上執行許多應用程式時需要 .NET Framework。 您可以使用下列指令來安裝它。 嘗試執行應用程式並在電腦上看到下列對話方塊之後，可能會進入此頁面。
+在 Windows 上執行許多應用程式時需要 .NET Framework。 您可以使用下列指示來安裝它。 嘗試執行應用程式並在電腦上看到下列對話方塊之後，可能會進入此頁面。
 
 ![無法啟動這個應用程式](./media/this-application-could-not-be-started.png)
 
@@ -25,19 +25,19 @@ ms.locfileid: "70853863"
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 
-[.NET Framework 4.0.3](https://go.microsoft.com/fwlink/?LinkID=213834) 是 Windows XP 和 Windows Server 2003 上支援的最新 .NET Framework 版本。 .NET Framework 4.0.3 會要求必須先安裝 [.NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=213834)。 這兩個 .NET Framework 版本都已不再受 Microsoft 支援。
+[.NET Framework 4.0.3](https://www.microsoft.com/download/details.aspx?id=29053) 是 Windows XP 和 Windows Server 2003 上支援的最新 .NET Framework 版本。 .NET Framework 4.0.3 會要求必須先安裝 [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40)。 這兩個 .NET Framework 版本都已不再受 Microsoft 支援。
 
 ## <a name="net-framework-4"></a>.NET Framework 4
 
-您可以在 Windows XP 上安裝 [.NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs)。 Microsoft 已不再支援它。
+您可以在 Windows XP 上安裝 [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40)。 Microsoft 已不再支援它。
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
-您可以在 Windows XP 上安裝 [.NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs)。
+您可以在 Windows XP 上安裝 [.NET Framework 3.5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1)。
 
 .NET Framework 3.5 可用來執行針對 .NET Framework 1.0 到 3.5 建置的應用程式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [下載 .NET Framework](https://dotnet.microsoft.com/download)
 - [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md)

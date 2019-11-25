@@ -1,5 +1,5 @@
 ---
-title: IsTrue 運算子 (Visual Basic)
+title: IsTrue 運算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.istrue
@@ -7,44 +7,44 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: 1152f4b512a85ae183f8fc8d476b69685e2926ef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4b863eed8406a10b9a44d7139f8659ac5cb758ad
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966923"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349505"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue 運算子 (Visual Basic)
-判斷運算式是否為`True`。  
+Determines whether an expression is `True`.  
   
- 您無法在`IsTrue`程式碼中明確呼叫, 但是 Visual Basic 編譯器可以使用它來產生來自子句`OrElse`的程式碼。 如果您定義了類別或結構, 然後在`OrElse`子句中使用該類型的變數, 您必須在該類別或結構上定義。 `IsTrue`  
+ You cannot call `IsTrue` explicitly in your code, but the Visual Basic compiler can use it to generate code from `OrElse` clauses. If you define a class or structure and then use a variable of that type in an `OrElse` clause, you must define `IsTrue` on that class or structure.  
   
- 編譯器會將`IsTrue`和`IsFalse`運算子視為相符的*配對*。 這表示如果您定義其中一個, 則也必須定義另一個。  
+ The compiler considers the `IsTrue` and `IsFalse` operators as a *matched pair*. This means that if you define one of them, you must also define the other one.  
   
-## <a name="compiler-use-of-istrue"></a>編譯器使用 IsTrue  
- 當您定義了類別或結構時, 可以在`For`、 `If`、 `Else If`或`While`語句中, 或在`When`子句中使用該類型的變數。 如果您這樣做, 編譯器需要一個運算子, 將您的型別轉換`Boolean`成值, 讓它可以測試條件。 它會依下列順序搜尋適合的運算子:  
+## <a name="compiler-use-of-istrue"></a>Compiler Use of IsTrue  
+ When you have defined a class or structure, you can use a variable of that type in a `For`, `If`, `Else If`, or `While` statement, or in a `When` clause. If you do this, the compiler requires an operator that converts your type into a `Boolean` value so it can test a condition. It searches for a suitable operator in the following order:  
   
-1. 從您的類別或結構到`Boolean`的擴輾轉換運算子。  
+1. A widening conversion operator from your class or structure to `Boolean`.  
   
-2. 從您的類別或結構到`Boolean?`的擴輾轉換運算子。  
+2. A widening conversion operator from your class or structure to `Boolean?`.  
   
-3. 類別`IsTrue`或結構上的運算子。  
+3. The `IsTrue` operator on your class or structure.  
   
-4. 的縮小轉換`Boolean?`不牽涉到從`Boolean`轉換成`Boolean?`的。  
+4. A narrowing conversion to `Boolean?` that does not involve a conversion from `Boolean` to `Boolean?`.  
   
-5. 從您的類別或結構到`Boolean`的縮小轉換運算子。  
+5. A narrowing conversion operator from your class or structure to `Boolean`.  
   
- 如果您尚未定義任何對`Boolean` `IsTrue`或運算子的轉換, 則編譯器會發出錯誤信號。  
+ If you have not defined any conversion to `Boolean` or an `IsTrue` operator, the compiler signals an error.  
   
 > [!NOTE]
-> 運算子可以多載, 這表示當類別或結構的運算元具有該類別或結構的類型時, 可以重新定義其行為。 `IsTrue` 如果您的程式碼在這類類別或結構上使用這個運算子, 請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+> The `IsTrue` operator can be *overloaded*, which means that a class or structure can redefine its behavior when its operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例會定義包含`IsFalse`和`IsTrue`運算子之定義的結構外框。  
+ The following code example defines the outline of a structure that includes definitions for the `IsFalse` and `IsTrue` operators.  
   
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IsFalse 運算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)
 - [如何：定義運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
