@@ -2,6 +2,46 @@
   href: index.md
 - name: 關於 .NET Core
   href: about.md
+- name: 安裝
+  items:
+    - name: 總覽
+      href: install/index.md
+    - name: 安裝 SDK
+      href: install/sdk.md
+    - name: 安裝執行階段
+      href: install/runtime.md
+    - name: 支援的 OS 和相依性
+      href: install/dependencies.md
+    - name: 如何檢查 .NET Core 版本
+      href: install/how-to-detect-installed-versions.md
+    - name: Linux 套件管理員
+      items:
+        - name: RHEL 7
+          href: install/linux-package-manager-rhel7.md
+        - name: RHEL 8.1
+          href: install/linux-package-manager-rhel81.md
+        - name: Ubuntu 16.04
+          href: install/linux-package-manager-ubuntu-1604.md
+        - name: Ubuntu 18.04
+          href: install/linux-package-manager-ubuntu-1804.md
+        - name: Ubuntu 19.04
+          href: install/linux-package-manager-ubuntu-1904.md
+        - name: Debian 9
+          href: install/linux-package-manager-debian9.md
+        - name: Debian 10
+          href: install/linux-package-manager-debian10.md
+        - name: Fedora 29
+          href: install/linux-package-manager-fedora29.md
+        - name: Fedora 30
+          href: install/linux-package-manager-fedora30.md
+        - name: CentOS 7
+          href: install/linux-package-manager-centos7.md
+        - name: OpenSUSE 15
+          href: install/linux-package-manager-opensuse15.md
+        - name: SLES 12
+          href: install/linux-package-manager-sles12.md
+        - name: SLES 15
+          href: install/linux-package-manager-sles15.md
 - name: 開始使用
   href: get-started.md
   items:
@@ -23,12 +63,6 @@
       href: tutorials/testing-library-with-visual-studio.md
     - name: 在 Visual Studio 2017 中取用 .NET Standard 程式庫
       href: tutorials/consuming-library-with-visual-studio.md
-- name: Windows 必要條件
-  href: windows-prerequisites.md
-- name: macOS 必要條件
-  href: macos-prerequisites.md
-- name: Linux 必要條件
-  href: linux-prerequisites.md
 - name: .NET Core 的新功能
   items:
     - name: .NET Core 3.0 的新功能
@@ -54,13 +88,13 @@
           href: tutorials/cli-templates-create-template-pack.md
     - name: 開始在 macOS 上使用 .NET Core
       href: tutorials/using-on-macos.md
-    - name: 使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core
+    - name: 以 Visual Studio for Mac 開始使用 .NET Core
       href: tutorials/using-on-mac-vs.md
-    - name: 使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案
+    - name: 在 macOS 上建置完整的 .NET Core 解決方案
       href: tutorials/using-on-mac-vs-full-solution.md
     - name: 使用 CLI 工具開始使用 .NET Core
       href: tutorials/using-with-xplat-cli.md
-    - name: 使用 .NET Core 命令列組織和測試專案
+    - name: 使用 .NET Core CLI 組織和測試專案
       href: tutorials/testing-with-cli.md
     - name: 使用跨平台工具開發程式庫
       href: tutorials/libraries.md
@@ -70,9 +104,15 @@
       href: tutorials/aspnet-core.md
     - name: 從機器碼裝載 .NET Core
       href: tutorials/netcore-hosting.md
+- name: 執行階段設定
+  items:
+    - name: 設定
+      href: run-time-config/index.md
+    - name: 記憶體回收行程設定
+      href: run-time-config/garbage-collector.md
 - name: 原生互通性
   items:
-    - name: 將 .NET 核心元件公開給 COM
+    - name: 將 .NET Core 元件公開給 COM
       href: native-interop/expose-components-to-com.md
 - name: 套件、中繼套件和架構
   href: packages.md

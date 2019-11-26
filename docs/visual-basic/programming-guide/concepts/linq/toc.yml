@@ -65,7 +65,7 @@
           href: how-to-query-for-sentences-that-contain-a-specified-set-of-words.md
         - name: 作法：查詢字串中的字元 (LINQ)
           href: how-to-query-for-characters-in-a-string-linq.md
-        - name: 作法：合併 LINQ 查詢與規則運算式
+        - name: 如何合併 LINQ 查詢與規則運算式
           href: how-to-combine-linq-queries-with-regular-expressions.md
         - name: 作法：尋找兩份清單之間的集合差異 (LINQ)
           href: how-to-find-the-set-difference-between-two-lists-linq.md
@@ -103,7 +103,7 @@
           href: how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md
         - name: 作法：查詢樹狀目錄中的重複檔案 (LINQ)
           href: how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
-        - name: 作法：查詢資料夾中的檔案內容 (LINQ)
+        - name: 如何查詢資料夾中的檔案內容 (LINQ)
           href: how-to-query-the-contents-of-files-in-a-folder-linq.md
         - name: 作法：使用 LINQ 查詢 ArrayList
           href: how-to-query-an-arraylist-with-linq.md
