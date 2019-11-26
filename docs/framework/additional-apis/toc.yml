@@ -43,6 +43,12 @@
               href: system.data.sqltypes.sqlstreamchars.setlength.md
             - name: Write 方法
               href: system.data.sqltypes.sqlstreamchars.write.md
+    - name: System.IO
+      items:
+        - name: MemoryStream 類別
+          items:
+            - name: InternalGetOriginAndLength 方法
+              href: system.io.memorystream.internalgetoriginandlength.md
     - name: System.Net
       items:
         - name: Connection 類別
@@ -57,7 +63,7 @@
               href: m_connectionlist.md
         - name: ConnectStream 類別
           items:
-            - name: ConnectStream 屬性
+            - name: Connection 屬性
               href: system.net.connectstream.connection.md
         - name: CoreResponseData 類別
           href: coreresponsedata.md
@@ -78,6 +84,8 @@
           items:
             - name: NetworkStream 屬性
               href: system.net.pooledstream.networkstream.md
+        - name: RtcState 類別
+          href: system.net.rtcstate.md
         - name: ServicePoint 類別
           items:
             - name: m_ConnectionGroupList 欄位
@@ -94,6 +102,14 @@
           items:
             - name: SslProtocol 屬性
               href: system.net.security.sslstate.sslprotocol.md
+    - name: System.ServiceModel.Channels
+      items:
+        - name: 訊息類別
+          items:
+            - name: BodyToString 方法
+              href: system.servicemodel.channels.message.bodytostring.md
+            - name: WriteStartHeaders 方法
+              href: system.servicemodel.channels.message.writestartheaders.md
     - name: System.Windows.Diagnostics
       items:
         - name: VisualDiagnostics 類別
@@ -110,11 +126,11 @@
       items:
         - name: XpsDocumentWriter
           items:
-            - name: raise__WritingCancelled Method
+            - name: raise__WritingCancelled 方法
               href: xpsdocumentwriter-raise-writingcancelled-method-system-windows-xps.md
-            - name: raise__WritingCompleted Method
+            - name: raise__WritingCompleted 方法
               href: xpsdocumentwriter-raise-writingcompleted-method-system-windows-xps.md
-            - name: raise__WritingPrintTicketRequired Method
+            - name: raise__WritingPrintTicketRequired 方法
               href: xpsdocumentwriter-raise-writingprintticketrequired-method-system-windows-xps.md
             - name: raise__WritingProgressChanged
               href: xpsdocumentwriter-raise-writingprogresschanged-method-system-windows-xps.md
@@ -132,7 +148,7 @@
               href: system.xml.xmlreader.createsqlreader.md
     - name: adodb 命名空間
       items:
-        - name: 連線介面
+        - name: Connection 介面
           href: adodb.connection.md
         - name: EventReason 列舉
           href: adodb.eventreasonenum.md
