@@ -13,77 +13,77 @@ ms.locfileid: "74349985"
 ---
 # <a name="string-functions-visual-basic"></a>字串函式 (Visual Basic)
 
-The following table lists the functions that Visual Basic provides in the <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> class to search and manipulate strings. They can be regarded as Visual Basic intrinsic functions; that is, you do not have to call them as explicit members of a class, as the examples show. Additional methods, and in some cases complementary methods, are available in the <xref:System.String?displayProperty=nameWithType> class.
+下表列出 Visual Basic 在 <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> 類別中提供用來搜尋和操作字串的函數。 它們可以視為 Visual Basic 內建函式;也就是說，您不需要將它們當做類別的明確成員呼叫，如範例所示。 在 <xref:System.String?displayProperty=nameWithType> 類別中可取得其他方法，以及在某些情況下互補方法。
 
-|.NET Framework method|描述|
+|.NET Framework 方法|描述|
 |---------------------------|-----------------|
-|<xref:Microsoft.VisualBasic.Strings.Asc%2A>、 <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Returns an `Integer` value representing the character code corresponding to a character.|
-|<xref:Microsoft.VisualBasic.Strings.Chr%2A>、 <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Returns the character associated with the specified character code.|
-|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Returns a zero-based array containing a subset of a `String` array based on specified filter criteria.|
-|<xref:Microsoft.VisualBasic.Strings.Format%2A>|Returns a string formatted according to instructions contained in a format `String` expression.|
-|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Returns an expression formatted as a currency value using the currency symbol defined in the system control panel.|
-|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|Returns a string expression representing a date/time value.|
-|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|Returns an expression formatted as a number.|
+|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|傳回 `Integer` 值，表示對應至字元的字元碼。|
+|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|傳回與指定的字元碼相關聯的字元。|
+|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|根據指定的篩選準則，傳回以零為基底的陣列，其中包含 `String` 陣列的子集。|
+|<xref:Microsoft.VisualBasic.Strings.Format%2A>|根據包含在格式 `String` 運算式中的指示，傳回已格式化的字串。|
+|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|使用系統控制台中定義的貨幣符號，傳回格式化為貨幣值的運算式。|
+|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|傳回表示日期/時間值的字串運算式。|
+|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|傳回格式化為數位的運算式。|
 |<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|傳回格式化為百分比 (也就是乘以 100) 且尾端包含 % 字元的運算式。|
-|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|Returns an integer specifying the start position of the first occurrence of one string within another.|
-|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|Returns the position of the first occurrence of one string within another, starting from the right side of the string.|
-|<xref:Microsoft.VisualBasic.Strings.Join%2A>|Returns a string created by joining a number of substrings contained in an array.|
-|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|Returns a string or character converted to lowercase.|
-|<xref:Microsoft.VisualBasic.Strings.Left%2A>|Returns a string containing a specified number of characters from the left side of a string.|
-|<xref:Microsoft.VisualBasic.Strings.Len%2A>|Returns an integer that contains the number of characters in a string.|
-|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|Returns a left-aligned string containing the specified string adjusted to the specified length.|
-|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Returns a string containing a copy of a specified string with no leading spaces.|
-|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|Returns a string containing a specified number of characters from a string.|
-|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Returns a string in which a specified substring has been replaced with another substring a specified number of times.|
-|<xref:Microsoft.VisualBasic.Strings.Right%2A>|Returns a string containing a specified number of characters from the right side of a string.|
-|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|Returns a right-aligned string containing the specified string adjusted to the specified length.|
-|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Returns a string containing a copy of a specified string with no trailing spaces.|
-|<xref:Microsoft.VisualBasic.Strings.Space%2A>|Returns a string consisting of the specified number of spaces.|
-|<xref:Microsoft.VisualBasic.Strings.Split%2A>|Returns a zero-based, one-dimensional array containing a specified number of substrings.|
-|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|Returns -1, 0, or 1, based on the result of a string comparison.|
-|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|Returns a string converted as specified.|
-|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|Returns a string or object consisting of the specified character repeated the specified number of times.|
-|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|Returns a string in which the character order of a specified string is reversed.|
-|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Returns a string containing a copy of a specified string with no leading or trailing spaces.|
-|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Returns a string or character containing the specified string converted to uppercase.|
+|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|傳回整數，指定一個字串在另一個字串中第一次出現的開始位置。|
+|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|從字串的右邊開始，傳回一個字串在另一個字串中第一次出現的位置。|
+|<xref:Microsoft.VisualBasic.Strings.Join%2A>|傳回由聯結陣列中包含的多個子字串所建立的字串。|
+|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|傳回轉換成小寫的字串或字元。|
+|<xref:Microsoft.VisualBasic.Strings.Left%2A>|從字串的左邊傳回包含指定字元數的字串。|
+|<xref:Microsoft.VisualBasic.Strings.Len%2A>|傳回一個整數，其中包含字串中的字元數。|
+|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|傳回靠左對齊的字串，其中包含已調整為指定之長度的指定字串。|
+|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|傳回字串，其中包含指定之字串的複本，但沒有開頭空白。|
+|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|從字串中傳回包含指定字元數的字串。|
+|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|傳回字串，其中指定的子字串已由另一個子字串取代為指定的次數。|
+|<xref:Microsoft.VisualBasic.Strings.Right%2A>|從字串的右邊傳回包含指定字元數的字串。|
+|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|傳回靠右對齊的字串，其中包含已調整為指定之長度的指定字串。|
+|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|傳回字串，其中包含指定之字串的複本，但沒有尾端空格。|
+|<xref:Microsoft.VisualBasic.Strings.Space%2A>|傳回由指定的空格數目所組成的字串。|
+|<xref:Microsoft.VisualBasic.Strings.Split%2A>|傳回以零為基底的一維陣列，其中包含指定數目的子字串。|
+|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|根據字串比較的結果，傳回-1、0或1。|
+|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|傳回以指定方式轉換的字串。|
+|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|傳回由重複指定次數的指定字元所組成的字串或物件。|
+|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|傳回字串，其中指定之字串的字元順序會反轉。|
+|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|傳回字串，其中包含指定字串的複本，其中沒有開頭或尾端空格。|
+|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|傳回字串或字元，其中包含轉換成大寫的指定字串。|
 
-You can use the [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) statement to set whether strings are compared using a case-insensitive text sort order determined by your system's locale (`Text`) or by the internal binary representations of the characters (`Binary`). The default text comparison method is `Binary`.
+您可以使用[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)語句來設定是否要使用由系統的地區設定（`Text`）所決定的區分大小寫文字排序次序，或字元（`Binary`）的內部二進位標記法來比較字串。 預設的文字比較方法為 `Binary`。
 
-## <a name="example-ucase"></a>Example: UCase
+## <a name="example-ucase"></a>範例： UCase
 
-This example uses the `UCase` function to return an uppercase version of a string.
+這個範例會使用 `UCase` 函數來傳回字串的大寫版本。
 [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]
 
-## <a name="example-ltrim"></a>Example: LTrim
+## <a name="example-ltrim"></a>範例： LTrim
 
-This example uses the `LTrim` function to strip leading spaces and the `RTrim` function to strip trailing spaces from a string variable. It uses the `Trim` function to strip both types of spaces.
+這個範例會使用 `LTrim` 函式來去除開頭空格和 `RTrim` 函數，從字串變數中去除尾端空格。 它會使用 `Trim` 函式來去除這兩種類型的空間。
 
 [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]
 
-## <a name="example-mid"></a>Example: Mid
+## <a name="example-mid"></a>範例：中間
 
-This example uses the `Mid` function to return a specified number of characters from a string.
+這個範例會使用 `Mid` 函數，從字串傳回指定的字元數。
 
 [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]
 
-## <a name="example-len"></a>Example: Len
+## <a name="example-len"></a>範例： Len
 
-This example uses `Len` to return the number of characters in a string.
+這個範例會使用 `Len` 來傳回字串中的字元數。
 
 [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]
 
-## <a name="example-instr"></a>Example: InStr
+## <a name="example-instr"></a>範例： InStr
 
-This example uses the `InStr` function to return the position of the first occurrence of one string within another.
+這個範例會使用 `InStr` 函式，傳回一個字串在另一個字串中第一次出現的位置。
 
 [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]
 
-## <a name="example-format"></a>Example: Format
+## <a name="example-format"></a>範例：格式
 
-This example shows various uses of the `Format` function to format values using both `String` formats and user-defined formats. For the date separator (`/`), time separator (`:`), and the AM/PM indicators (`t` and `tt`), the actual formatted output displayed by your system depends on the locale settings the code is using. When times and dates are displayed in the development environment, the short time format and short date format of the code locale are used.
+這個範例示範如何使用 `String` 格式和使用者定義格式，`Format` 函數的各種用法來格式化值。 針對日期分隔符號（`/`）、時間分隔符號（`:`）和 AM/PM 指標（`t` 和 `tt`），您系統所顯示的實際格式化輸出取決於程式碼所使用的地區設定。 在開發環境中顯示時間和日期時，會使用程式碼地區設定的簡短時間格式和簡短日期格式。
 
 > [!NOTE]
-> For locales that use a 24-hour clock, the AM/PM indicators (`t` and `tt`) display nothing.
+> 如果是使用24小時制的地區設定，AM/PM 指標（`t` 和 `tt`）就不會顯示任何內容。
 
 [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]
 
@@ -92,4 +92,4 @@ This example shows various uses of the `Format` function to format values using 
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 執行階段程式庫成員](../../../visual-basic/language-reference/runtime-library-members.md)
 - [字串操作摘要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
-- [System.String class methods](xref:System.String#methods)
+- [System.string 類別方法](xref:System.String#methods)

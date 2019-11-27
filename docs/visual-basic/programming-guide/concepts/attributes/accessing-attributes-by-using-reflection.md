@@ -9,9 +9,9 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353549"
 ---
-# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Accessing Attributes by Using Reflection (Visual Basic)
+# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>使用反映存取屬性（Visual Basic）
 
-您可以定義自訂屬性並將它們放在原始程式碼的事實，對於擷取並處理該項資訊並沒有什麼幫助。 使用反射，即可擷取已使用自訂屬性所定義的資訊。 重要方法是 `GetCustomAttributes`，這會傳回為來源程式碼屬性的執行階段對等項目的物件陣列。 這個方法有數個多載的版本。 如需詳細資訊，請參閱<xref:System.Attribute>。
+您可以定義自訂屬性並將它們放在原始程式碼的事實，對於擷取並處理該項資訊並沒有什麼幫助。 使用反射，即可擷取已使用自訂屬性所定義的資訊。 重要方法是 `GetCustomAttributes`，這會傳回為來源程式碼屬性的執行階段對等項目的物件陣列。 這個方法有數個多載的版本。 如需詳細資訊，請參閱 <xref:System.Attribute>。
 
 屬性規格，例如︰
 
@@ -29,7 +29,7 @@ Dim anonymousAuthorObject As Author = New Author("P. Ackerman")
 anonymousAuthorObject.version = 1.1
 ```
 
-不過，程式碼會等到查詢 `SampleClass` 的屬性才會執行程式碼。 在 `SampleClass` 上呼叫 `GetCustomAttributes`，會如上建構和初始化 `Author` 物件。 如果類別有其他屬性，則以類似的方式建構其他屬性物件。 `GetCustomAttributes` 接著會傳回 `Author` 物件以及陣列中的任何其他屬性物件。 您接著可以逐一查看這個陣列、根據每個陣列項目的類型來決定已套用的屬性，以及從屬性物件擷取資訊。
+不過，程式碼會等到查詢 `SampleClass` 的屬性才會執行程式碼。 在 `GetCustomAttributes` 上呼叫 `SampleClass`，會如上建構和初始化 `Author` 物件。 如果類別有其他屬性，則以類似的方式建構其他屬性物件。 `GetCustomAttributes` 接著會傳回 `Author` 物件以及陣列中的任何其他屬性物件。 您接著可以逐一查看這個陣列、根據每個陣列項目的類型來決定已套用的屬性，以及從屬性物件擷取資訊。
 
 ## <a name="example"></a>範例
 

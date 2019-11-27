@@ -9,11 +9,11 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354262"
 ---
-# <a name="converting-data-types-visual-basic"></a>Converting Data Types (Visual Basic)
+# <a name="converting-data-types-visual-basic"></a>轉換資料類型（Visual Basic）
 
 轉換方法會變更輸入物件的類型。
 
- LINQ 查詢中的轉換作業可用於各種應用程式。 The following are some examples:
+ LINQ 查詢中的轉換作業可用於各種應用程式。 下列是部份範例：
 
 - <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> 方法可以用來隱藏類型之標準查詢運算子的自訂實作。
 
@@ -27,7 +27,7 @@ ms.locfileid: "74354262"
 
 此表格中名稱開頭為"As" 的轉換方法會變更來源集合的靜態類型，而不是列舉它。 名稱開頭為 "To" 的方法會列舉來源集合，並將項目放入對應的集合類型。
 
-|方法名稱|描述|Visual Basic Query Expression Syntax|更多資訊|
+|方法名稱|描述|Visual Basic 查詢運算式語法|詳細資訊|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |AsEnumerable|傳回 <xref:System.Collections.Generic.IEnumerable%601> 類型的輸入。|不適用。|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
 |AsQueryable|將 (泛型) <xref:System.Collections.IEnumerable> 轉換成 (泛型) <xref:System.Linq.IQueryable>。|不適用。|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
@@ -40,7 +40,7 @@ ms.locfileid: "74354262"
 
 ## <a name="query-expression-syntax-example"></a>查詢運算式語法範例
 
-The following code example uses the `From As` clause to cast a type to a subtype before accessing a member that is available only on the subtype.
+下列程式碼範例會使用 `From As` 子句，將類型轉換成子類型，然後才存取只能在子類型上使用的成員。
 
 ```vb
 Class Plant
@@ -85,4 +85,4 @@ End Sub
 - <xref:System.Linq>
 - [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [How to: Query an ArrayList with LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [如何：使用 LINQ 查詢 ArrayList （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

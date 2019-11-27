@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445626"
 ---
 # <a name="linkresource-method"></a>LinkResource 方法
-Links in a resource.  
+資源中的連結。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,25 +38,25 @@ HRESULT LinkResource(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- ID of the assembly.  
+ 元件的識別碼。  
   
  `pszFileName`  
  檔案的名稱。  
   
  `pszNewLocation`  
- Optional new file name. If non-NULL, `pszFileName` will be copied to pszNewLocation.  
+ 選擇性的新檔案名。 如果不是 Null，`pszFileName` 會複製到 pszNewLocation。  
   
  `pszResourceName`  
  資源的名稱。  
   
  `dwFlags`  
- Accessibility flags such as `mrPublic` and `mrPrivate`. This parameter may be passed to [DefineManifestResource Method](../metadata/imetadataassemblyemit-definemanifestresource-method.md).  
+ 協助工具旗標，例如 `mrPublic` 和 `mrPrivate`。 這個參數可以傳遞至[DefineManifestResource 方法](../metadata/imetadataassemblyemit-definemanifestresource-method.md)。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h.  
+ 需要 alink. h。  
   
 ## <a name="see-also"></a>請參閱
 

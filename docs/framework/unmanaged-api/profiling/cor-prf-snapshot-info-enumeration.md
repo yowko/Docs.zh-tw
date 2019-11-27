@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427265"
 ---
 # <a name="cor_prf_snapshot_info-enumeration"></a>COR_PRF_SNAPSHOT_INFO 列舉
-Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.  
+指定在每次呼叫分析工具的[StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)函數時，要傳回多少資料給堆疊快照集。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,12 +38,12 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
   
 |Members|描述|  
 |-------------|-----------------|  
-|`COR_PRF_SNAPSHOT_DEFAULT`|Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.|  
-|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.|  
-|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|Indicates that a simpler, alternative stack-walking algorithm will be used.|  
+|`COR_PRF_SNAPSHOT_DEFAULT`|表示必須傳遞所有 `StackSnapshotCallback` 參數的值，但 `context` 參數除外。|  
+|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|表示必須傳遞所有 `StackSnapshotCallback` 參數的值，包括 `context` 參數。|  
+|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|表示將使用更簡單的替代堆疊流覽演算法。|  
   
 ## <a name="remarks"></a>備註  
- Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.  
+ `COR_PRF_SNAPSHOT_INFO` 列舉所提供的值會當做參數傳遞給[DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430277"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>ICorProfilerCallback::RuntimeThreadResumed 方法
-Notifies the profiler that the specified thread has resumed after being suspended.  
+通知分析工具，指定的執行緒在暫止後已繼續。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ HRESULT RuntimeThreadResumed(
   
 ## <a name="parameters"></a>參數  
  `threadId`  
- [in] The ID of the thread that has been resumed.  
+ 在已繼續之執行緒的識別碼。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

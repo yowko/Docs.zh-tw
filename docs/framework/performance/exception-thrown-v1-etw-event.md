@@ -25,7 +25,7 @@ ms.locfileid: "74447624"
   
  下表顯示事件資訊。  
   
-|Event - 事件|事件 ID|引發的時機|  
+|事件|事件識別碼|引發的時機|  
 |-----------|--------------|-----------------|  
 |`ExceptionThrown_V1`|80|擲回 Managed 例外狀況。|  
   
@@ -37,7 +37,7 @@ ms.locfileid: "74447624"
 |例外狀況訊息|win:UnicodeString|實際的例外狀況訊息。|  
 |EIPCodeThrow|win:Pointer|發生例外狀況的指令指標。|  
 |ExceptionHR|win:UInt32|例外狀況 [HRESULT](https://docs.microsoft.com/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)。|  
-|ExceptionFlags|win:UInt16|0x01：HasInnerException (請參閱 Visual Basic 文件的 [CLR ETW 事件](clr-etw-events.md))。<br /><br /> 0x02：IsNestedException。<br /><br /> 0x04：IsRethrownException。<br /><br /> 0x08: IsCorruptedStateException (indicates that the process state is corrupt; see [Handling Corrupted State Exceptions](https://docs.microsoft.com/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions)).<br /><br /> 0x10：IsCLSCompliant (衍生自 <xref:System.Exception> 的例外狀況符合 CLS 標準，否則與 CLS 不相容)。|  
+|ExceptionFlags|win:UInt16|0x01：HasInnerException (請參閱 Visual Basic 文件的 [CLR ETW 事件](clr-etw-events.md))。<br /><br /> 0x02：IsNestedException。<br /><br /> 0x04：IsRethrownException。<br /><br /> 0x08： IsCorruptedStateException （表示進程狀態已損毀，請參閱[處理損毀狀態例外狀況](https://docs.microsoft.com/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions)）。<br /><br /> 0x10：IsCLSCompliant (衍生自 <xref:System.Exception> 的例外狀況符合 CLS 標準，否則與 CLS 不相容)。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
 ## <a name="see-also"></a>請參閱

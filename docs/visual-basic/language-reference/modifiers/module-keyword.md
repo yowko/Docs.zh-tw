@@ -1,5 +1,5 @@
 ---
-title: Module <keyword>
+title: 模組 <keyword>
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ModuleAttribute
@@ -15,18 +15,18 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351557"
 ---
-# <a name="module-keyword-visual-basic"></a>Module \<keyword> (Visual Basic)
-Specifies that an attribute at the beginning of a source file applies to the current assembly module.  
+# <a name="module-keyword-visual-basic"></a>Module \<關鍵字 > （Visual Basic）
+指定來源檔案開頭的屬性會套用至目前的元件模組。  
   
 ## <a name="remarks"></a>備註  
- Many attributes pertain to an individual programming element, such as a class or property. You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.  
+ 許多屬性都屬於個別的程式設計項目，例如類別或屬性。 您可以將屬性區塊（位於角括弧（`< >`）內）直接附加至宣告語句，以套用這類屬性。  
   
- If an attribute pertains not only to the following element but to the current assembly module, you place the attribute block at the beginning of the source file and identify the attribute with the `Module` keyword. If it applies to the entire assembly, you use the [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) keyword.  
+ 如果屬性僅與下列專案有關，但對目前的元件模組不相關，您可以將屬性區塊放在原始程式檔的開頭，並使用 `Module` 關鍵字來識別該屬性。 如果它套用至整個元件，請使用[assembly](../../../visual-basic/language-reference/modifiers/assembly.md)關鍵字。  
   
- The `Module` modifier is not the same as the [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).  
+ `Module` 修飾詞與[Module 語句](../../../visual-basic/language-reference/statements/module-statement.md)不同。  
   
 ## <a name="see-also"></a>請參閱
 
-- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [組件](../../../visual-basic/language-reference/modifiers/assembly.md)
 - [Module 陳述式](../../../visual-basic/language-reference/statements/module-statement.md)
 - [屬性概觀](../../../visual-basic/programming-guide/concepts/attributes/index.md)

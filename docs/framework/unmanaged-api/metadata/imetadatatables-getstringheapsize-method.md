@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426668"
 ---
 # <a name="imetadatatablesgetstringheapsize-method"></a>IMetaDataTables::GetStringHeapSize 方法
-Gets the size, in bytes, of the string heap.  
+取得字串堆積的大小（以位元組為單位）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,14 +35,14 @@ HRESULT GetStringHeapSize (
   
 ## <a name="parameters"></a>參數  
  `pcbStrings`  
- [out] A pointer to the size, in bytes, of the string heap.  
+ 脫銷字串堆積大小的指標，以位元組為單位。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

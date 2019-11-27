@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353232"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
-Causes the current class or interface to inherit the attributes, variables, properties, procedures, and events from another class or set of interfaces.  
+導致目前的類別或介面繼承另一個類別或一組介面的屬性、變數、屬性、程式和事件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -28,40 +28,40 @@ Inherits basetypenames
   
 |詞彙|定義|  
 |---|---|  
-|`basetypenames`|必要項。 The name of the class from which this class derives.<br /><br /> -或-<br /><br /> The names of the interfaces from which this interface derives. Use commas to separate multiple names.|  
+|`basetypenames`|必要。 這個類別衍生來源的類別名稱。<br /><br /> -或-<br /><br /> 這個介面衍生自的介面名稱。 使用逗號來分隔多個名稱。|  
   
 ## <a name="remarks"></a>備註  
- If used, the `Inherits` statement must be the first non-blank, non-comment line in a class or interface definition. It should immediately follow the `Class` or `Interface` statement.  
+ 如果使用，則 `Inherits` 語句必須是類別或介面定義中第一個非空白的非批註行。 它應該緊接在 `Class` 或 `Interface` 語句後面。  
   
- You can use `Inherits` only in a class or interface. This means the declaration context for an inheritance cannot be a source file, namespace, structure, module, procedure, or block.  
+ 您只能在類別或介面中使用 `Inherits`。 這表示繼承的宣告內容不能是原始程式檔、命名空間、結構、模組、程式或區塊。  
   
 ## <a name="rules"></a>規則  
   
-- **Class Inheritance.** If a class uses the `Inherits` statement, you can specify only one base class.  
+- **類別繼承。** 如果類別使用 `Inherits` 語句，您只能指定一個基類。  
   
-     A class cannot inherit from a class nested within it.  
+     類別無法繼承自其內嵌套的類別。  
   
-- **Interface Inheritance.** If an interface uses the `Inherits` statement, you can specify one or more base interfaces. You can inherit from two interfaces even if they each define a member with the same name. If you do so, the implementing code must use name qualification to specify which member it is implementing.  
+- **介面繼承。** 如果介面使用 `Inherits` 語句，您可以指定一或多個基底介面。 您可以從兩個介面繼承，即使它們各自訂具有相同名稱的成員。 如果您這樣做，則執行程式碼必須使用名稱限定性來指定它所要執行的成員。  
   
-     An interface cannot inherit from another interface with a more restrictive access level. For example, a `Public` interface cannot inherit from a `Friend` interface.  
+     介面無法繼承自具有更嚴格存取層級的另一個介面。 例如，`Public` 介面無法繼承自 `Friend` 介面。  
   
-     An interface cannot inherit from an interface nested within it.  
+     介面無法繼承自其內所嵌套的介面。  
   
- An example of class inheritance in the .NET Framework is the <xref:System.ArgumentException> class, which inherits from the <xref:System.SystemException> class. This provides to <xref:System.ArgumentException> all the predefined properties and procedures required by system exceptions, such as the <xref:System.Exception.Message%2A> property and the <xref:System.Exception.ToString%2A> method.  
+ .NET Framework 中的類別繼承範例是 <xref:System.ArgumentException> 類別，它繼承自 <xref:System.SystemException> 類別。 這會提供 <xref:System.ArgumentException> 系統例外狀況所需的所有預先定義屬性和程式，例如 <xref:System.Exception.Message%2A> 屬性和 <xref:System.Exception.ToString%2A> 方法。  
   
- An example of interface inheritance in the .NET Framework is the <xref:System.Collections.ICollection> interface, which inherits from the <xref:System.Collections.IEnumerable> interface. This causes <xref:System.Collections.ICollection> to inherit the definition of the enumerator required to traverse a collection.  
+ .NET Framework 中的介面繼承範例是 <xref:System.Collections.ICollection> 介面，它會繼承自 <xref:System.Collections.IEnumerable> 介面。 這會導致 <xref:System.Collections.ICollection> 繼承遍歷集合所需的列舉值定義。  
   
 ## <a name="example"></a>範例  
- The following example uses the `Inherits` statement to show how a class named `thisClass` can inherit all the members of a base class named `anotherClass`.  
+ 下列範例會使用 `Inherits` 語句，顯示名為 `thisClass` 的類別如何繼承名為 `anotherClass`之基類的所有成員。  
   
  [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
 ## <a name="example"></a>範例  
- The following example shows inheritance of multiple interfaces.  
+ 下列範例會顯示多個介面的繼承。  
   
  [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  
   
- The interface named `thisInterface` now includes all the definitions in the <xref:System.IComparable>, <xref:System.IDisposable>, and <xref:System.IFormattable> interfaces The inherited members provide respectively for type-specific comparison of two objects, releasing allocated resources, and expressing the value of an object as a `String`. A class that implements `thisInterface` must implement every member of every base interface.  
+ 名為 `thisInterface` 的介面現在包含 <xref:System.IComparable>、<xref:System.IDisposable>和 <xref:System.IFormattable> 介面中的所有定義，而繼承的成員會分別針對兩個物件的類型特定比較提供，釋出已配置的資源，並將物件的值表示為 `String`。 執行 `thisInterface` 的類別必須實作為每一個基底介面的每個成員。  
   
 ## <a name="see-also"></a>請參閱
 

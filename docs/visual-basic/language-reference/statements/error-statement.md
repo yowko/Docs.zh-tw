@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351241"
 ---
 # <a name="error-statement"></a>Error 陳述式
-Simulates the occurrence of an error.  
+模擬發生錯誤的次數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -28,29 +28,29 @@ Error errornumber
   
 ## <a name="parts"></a>組件  
  `errornumber`  
- 必要項。 Can be any valid error number.  
+ 必要。 可以是任何有效的錯誤號碼。  
   
 ## <a name="remarks"></a>備註  
- The `Error` statement is supported for backward compatibility. In new code, especially when creating objects, use the `Err` object's `Raise` method to generate run-time errors.  
+ 支援 `Error` 語句以提供回溯相容性。 在新程式碼中，尤其是在建立物件時，請使用 `Err` 物件的 `Raise` 方法來產生執行階段錯誤。  
   
- If `errornumber` is defined, the `Error` statement calls the error handler after the properties of the `Err` object are assigned the following default values:  
+ 如果定義了 `errornumber`，`Error` 語句會在將下列預設值指派給 `Err` 物件的屬性之後，呼叫錯誤處理常式：  
   
 |屬性|值|  
 |--------------|-----------|  
-|`Number`|Value specified as argument to `Error` statement. Can be any valid error number.|  
-|`Source`|Name of the current Visual Basic project.|  
-|`Description`|String expression corresponding to the return value of the `Error` function for the specified `Number`, if this string exists. If the string does not exist, `Description` contains a zero-length string ("").|  
-|`HelpFile`|The fully qualified drive, path, and file name of the appropriate Visual Basic Help file.|  
-|`HelpContext`|The appropriate Visual Basic Help file context ID for the error corresponding to the `Number` property.|  
-|`LastDLLError`|Zero.|  
+|`Number`|指定為 `Error` 語句之引數的值。 可以是任何有效的錯誤號碼。|  
+|`Source`|目前 Visual Basic 專案的名稱。|  
+|`Description`|對應至指定 `Number`之 `Error` 函數傳回值的字串運算式（如果這個字串存在）。 如果字串不存在，`Description` 會包含長度為零的字串（""）。|  
+|`HelpFile`|適當 Visual Basic 說明檔的完整磁片磁碟機、路徑和檔案名。|  
+|`HelpContext`|適當的 Visual Basic 說明 `Number` 屬性對應之錯誤的說明檔內容識別碼。|  
+|`LastDLLError`|零.|  
   
- If no error handler exists, or if none is enabled, an error message is created and displayed from the `Err` object properties.  
+ 如果沒有錯誤處理常式存在，或未啟用，則會建立錯誤訊息，並顯示在 `Err` 物件屬性中。  
   
 > [!NOTE]
-> Some Visual Basic host applications cannot create objects. See your host application's documentation to determine whether it can create classes and objects.  
+> 某些 Visual Basic 主應用程式無法建立物件。 請參閱主機應用程式的檔，以判斷它是否可以建立類別和物件。  
   
 ## <a name="example"></a>範例  
- This example uses the `Error` statement to generate error number 11.  
+ 這個範例會使用 `Error` 語句來產生錯誤號碼11。  
   
 ```vb  
 On Error Resume Next   ' Defer error handling.  
@@ -58,9 +58,9 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>需求  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **命名空間：** [Microsoft.](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **元件：** Visual Basic 執行時間程式庫（在 Microsoft 中）  
   
 ## <a name="see-also"></a>請參閱
 

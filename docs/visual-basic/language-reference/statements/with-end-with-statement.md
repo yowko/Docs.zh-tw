@@ -38,9 +38,9 @@ End With
 
 |詞彙|定義|
 |---|---|
-|`objectExpression`|必要項。 判斷值為物件的運算式。 運算式可能會很複雜，而且只會評估一次。 運算式可以判斷值為任何資料類型，包括基礎類型。|
-|`statements`|選擇項。 在 `With` 和 `End With` 之間的一個或多個陳述式，這些陳述式可能會參考由 `objectExpression` 的評估所產生之物件的成員。|
-|`End With`|必要項。 終止 `With` 區塊的定義。|
+|`objectExpression`|必要。 判斷值為物件的運算式。 運算式可能會很複雜，而且只會評估一次。 運算式可以判斷值為任何資料類型，包括基礎類型。|
+|`statements`|選擇性。 在 `With` 和 `End With` 之間的一個或多個陳述式，這些陳述式可能會參考由 `objectExpression` 的評估所產生之物件的成員。|
+|`End With`|必要。 終止 `With` 區塊的定義。|
 
 ## <a name="remarks"></a>備註
 
@@ -64,10 +64,10 @@ End With
 
 您無法從區塊外部分支進入 `With` 陳述式區塊。
 
-除非區塊包含迴圈，否則陳述式只會執行一次。 您可以巢狀方式處理不同種類的控制結構。 For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
+除非區塊包含迴圈，否則陳述式只會執行一次。 您可以巢狀方式處理不同種類的控制結構。 如需詳細資訊，請參閱[嵌套控制項結構](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)。
 
 > [!NOTE]
-> 您可以在物件初始設定式中使用 `With` 關鍵字。 For more information and examples, see [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) and [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+> 您可以在物件初始設定式中使用 `With` 關鍵字。 如需詳細資訊和範例，請參閱[物件初始化運算式：名稱和匿名](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)型別和[匿名](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)型別。
 >
 > 如果您只有在初始化剛具現化之物件的屬性或欄位時使用 `With` 區塊，請考慮改用物件初始設定式。
 

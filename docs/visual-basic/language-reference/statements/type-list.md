@@ -33,7 +33,7 @@ ms.locfileid: "74352780"
 ---
 # <a name="type-list-visual-basic"></a>類型清單 (Visual Basic)
 
-Specifies the *type parameters* for a *generic* programming element. Multiple parameters are separated by commas. Following is the syntax for one type parameter.
+指定*泛型*程式設計項目的*類型參數*。 多個參數會以逗號分隔。 以下是一個型別參數的語法。
 
 ## <a name="syntax"></a>語法
 
@@ -45,55 +45,55 @@ Specifies the *type parameters* for a *generic* programming element. Multiple pa
 
 |詞彙|定義|
 |---|---|
-|`genericmodifier`|選擇項。 Can be used only in generic interfaces and delegates. You can declare a type covariant by using the [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) keyword or contravariant by using the [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) keyword. 請參閱 [共變數和反變數](../../programming-guide/concepts/covariance-contravariance/index.md)。|
-|`typename`|必要項。 Name of the type parameter. This is a placeholder, to be replaced by a defined type supplied by the corresponding type argument.|
-|`constraintlist`|選擇項。 List of requirements that constrain the data type that can be supplied for `typename`. If you have multiple constraints, enclose them in curly braces (`{ }`) and separate them with commas. You must introduce the constraint list with the [As](../../../visual-basic/language-reference/statements/as-clause.md) keyword. You use `As` only once, at the beginning of the list.|
+|`genericmodifier`|選擇性。 只能在泛型介面和委派中使用。 您可以使用[Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)關鍵字或逆變性來宣告類型的協變數，方法是使用[In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)關鍵字。 請參閱 [共變數和反變數](../../programming-guide/concepts/covariance-contravariance/index.md)。|
+|`typename`|必要。 型別參數的名稱。 這是預留位置，要由對應的類型引數所提供的已定義類型取代。|
+|`constraintlist`|選擇性。 限制可為 `typename`提供之資料類型的需求清單。 如果您有多個條件約束，請以大括弧（`{ }`）括住，並以逗號分隔。 您必須使用[As](../../../visual-basic/language-reference/statements/as-clause.md)關鍵字來引進條件約束清單。 您只需要在清單的開頭使用 `As` 一次。|
 
 ## <a name="remarks"></a>備註
 
-Every generic programming element must take at least one type parameter. A type parameter is a placeholder for a specific type (a *constructed element*) that client code specifies when it creates an instance of the generic type. You can define a generic class, structure, interface, procedure, or delegate.
+每個泛型程式設計項目都必須採用至少一個型別參數。 類型參數是用戶端程式代碼在建立泛型型別的實例時所指定之特定類型（*結構化元素*）的預留位置。 您可以定義泛型類別、結構、介面、程式或委派。
 
-For more information on when to define a generic type, see [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md). For more information on type parameter names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+如需何時定義泛型型別的詳細資訊，請參閱[Visual Basic 中的泛型型別](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。 如需型別參數名稱的詳細資訊，請參閱宣告的[元素名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。
 
 ## <a name="rules"></a>規則
 
-- **Parentheses.** If you supply a type parameter list, you must enclose it in parentheses, and you must introduce the list with the [Of](../../../visual-basic/language-reference/statements/of-clause.md) keyword. You use `Of` only once, at the beginning of the list.
+- **後.** 如果您提供型別參數清單，您必須將它括在括弧中，而且您必須使用關鍵字[來](../../../visual-basic/language-reference/statements/of-clause.md)引進清單。 您只需要在清單的開頭使用 `Of` 一次。
 
-- **Constraints.** A list of *constraints* on a type parameter can include the following items in any combination:
+- **條件.** 類型參數的*條件約束*清單可以包含下列任何組合中的專案：
 
-  - Any number of interfaces. The supplied type must implement every interface in this list.
+  - 任何數目的介面。 提供的類型必須執行此清單中的每個介面。
 
-  - At most one class. The supplied type must inherit from that class.
+  - 最多一個類別。 提供的類型必須繼承自該類別。
 
-  - `New` 關鍵字。 The supplied type must expose a parameterless constructor that your generic type can access. This is useful if you constrain a type parameter by one or more interfaces. A type that implements interfaces does not necessarily expose a constructor, and depending on the access level of a constructor, the code within the generic type might not be able to access it.
+  - `New` 關鍵字。 提供的型別必須公開您的泛型型別可以存取的無參數的函式。 如果您透過一或多個介面來限制型別參數，這就很有用。 實介面的型別不一定會公開一個函式，而視函式的存取層級而定，泛型型別中的程式碼可能無法存取它。
 
-  - Either the `Class` keyword or the `Structure` keyword. The `Class` keyword constrains a generic type parameter to require that any type argument passed to it be a reference type, for example a string, array, or delegate, or an object created from a class. The `Structure` keyword constrains a generic type parameter to require that any type argument passed to it be a value type, for example a structure, enumeration, or elementary data type. You cannot include both `Class` and `Structure` in the same `constraintlist`.
+  - `Class` 關鍵字或 `Structure` 關鍵字。 `Class` 關鍵字會限制泛型型別參數，要求傳遞給它的任何型別引數都是參考型別，例如字串、陣列或委派，或是從類別建立的物件。 `Structure` 關鍵字會限制泛型型別參數，要求傳遞至它的任何型別引數都是實值型別，例如結構、列舉或基本資料型別。 您不能在相同的 `constraintlist`中同時包含 `Class` 和 `Structure`。
 
-  The supplied type must satisfy every requirement you include in `constraintlist`.
+  提供的類型必須滿足您在 `constraintlist`中包含的每個需求。
 
-  Constraints on each type parameter are independent of constraints on other type parameters.
+  每個型別參數的條件約束與其他型別參數上的條件約束無關。
 
 ## <a name="behavior"></a>行為
 
-- **Compile-Time Substitution.** When you create a constructed type from a generic programming element, you supply a defined type for each type parameter. The Visual Basic compiler substitutes that supplied type for every occurrence of `typename` within the generic element.
+- **編譯時間替代。** 當您從泛型程式設計專案建立結構化型別時，您會為每個型別參數提供一個已定義的型別。 Visual Basic 編譯器會針對泛型專案中每個出現的 `typename`，替代提供的型別。
 
-- **Absence of Constraints.** If you do not specify any constraints on a type parameter, your code is limited to the operations and members supported by the [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md) for that type parameter.
+- **沒有條件約束。** 如果您未在類型參數上指定任何條件約束，則您的程式碼會限制為該類型參數的[Object 資料類型](../../../visual-basic/language-reference/data-types/object-data-type.md)所支援的作業和成員。
 
 ## <a name="example"></a>範例
 
-The following example shows a skeleton definition of a generic dictionary class, including a skeleton function to add a new entry to the dictionary.
+下列範例顯示泛型字典類別的基本架構定義，包括將新專案加入字典的基本架構函數。
 
 [!code-vb[VbVbalrStatements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#3)]
 
 ## <a name="example"></a>範例
 
-Because `dictionary` is generic, the code that uses it can create a variety of objects from it, each having the same functionality but acting on a different data type. The following example shows a line of code that creates a `dictionary` object with `String` entries and `Integer` keys.
+因為 `dictionary` 是泛型的，所以使用它的程式碼可以從它建立各種不同的物件，而每一個都有相同的功能，但作用於不同的資料類型。 下列範例顯示的程式程式碼，會建立具有 `String` 專案和 `Integer` 索引鍵的 `dictionary` 物件。
 
 [!code-vb[VbVbalrStatements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#4)]
 
 ## <a name="example"></a>範例
 
-The following example shows the equivalent skeleton definition generated by the preceding example.
+下列範例會顯示上述範例所產生的對等基本架構定義。
 
 [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]
 
@@ -101,8 +101,8 @@ The following example shows the equivalent skeleton definition generated by the 
 
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)
 - [New 運算子](../../../visual-basic/language-reference/operators/new-operator.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Object 資料類型](../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)

@@ -19,39 +19,39 @@ ms.locfileid: "74352706"
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>印刷樣式與程式碼慣例 (Visual Basic)
 
-Visual Basic documentation uses the following typographic and code conventions.  
+Visual Basic 檔會使用下列印刷樣式和程式碼慣例。  
   
-## <a name="typographic-conventions"></a>Typographic Conventions  
-  
-|範例|描述|  
-|-------------|-----------------|  
-|`Sub`、 `If`、 `ChDir`、 `Print`、 `True`、 `Debug`|Language-specific keywords and runtime members have initial uppercase letters and are formatted as shown in this example.|  
-|**SmallProject**, **ButtonCollection**|Words and phrases you are instructed to type are formatted as shown in this example.|  
-|[Module 陳述式](../../visual-basic/language-reference/statements/module-statement.md)|Links you can click to go to another Help page are formatted as shown in this example.|  
-|*object*, *variableName*, `argumentList`|Placeholders for information that you supply are formatted as shown in this example.|  
-|[ Shadows ], [ *expressionList* ]|In syntax, optional items are enclosed in brackets.|  
-|{ `Public` &#124; `Friend` &#124; `Private` }|In syntax, when you must make a choice between two or more items, the items are enclosed in braces and separated by vertical bars.<br /><br /> You must select one, and only one, of the items.|  
-|[ `Protected` &#124; `Friend` ]|In syntax, when you have the option of selecting between two or more items, the items are enclosed in square brackets and separated by vertical bars.<br /><br /> You can select any combination of the items, or no item.|  
-|[{ `ByVal` &#124; `ByRef` }]|In syntax, when you can select no more than one item, but you can also omit the items completely, the items are enclosed in square brackets surrounded by braces and separated by vertical bars.|  
-|*memberName*1, *memberName*2, *memberName*3|Multiple instances of the same placeholder are differentiated by subscripts, as shown in the example.|  
-|*memberName1*<br /><br /> ...<br /><br /> *memberNameN*|In syntax, an ellipsis (...) is used to indicate an indefinite number of items of the kind immediately in front of the ellipsis.<br /><br /> In code, ellipses signify code omitted for the sake of clarity.|  
-|ESC, ENTER|Key names and key sequences on the keyboard appear in all uppercase letters.|  
-|ALT+F1|When plus signs (+) appear between key names, you must hold down one key while pressing the other. For example, ALT+F1 means hold down the ALT key while pressing the F1 key.|  
-  
-## <a name="code-conventions"></a>Code Conventions  
+## <a name="typographic-conventions"></a>印刷樣式慣例  
   
 |範例|描述|  
 |-------------|-----------------|  
-|`sampleString = "Hello, world!"`|Code samples appear in a fixed-pitch font and are formatted as shown in this example.|  
-|The previous statement sets the value of `sampleString` to "Hello, world!"|Code elements in explanatory text appear in a fixed-pitch font, as shown in this example.|  
-|`' This is a comment.`<br /><br /> `REM This is also a comment.`|Code comments are introduced by an apostrophe (') or the REM keyword.|  
-|`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|A space followed by an underscore ( _) at the end of a line indicates that the statement continues on the following line.|  
+|`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|特定語言的關鍵字和執行時間成員都有初始大寫字母，而且會格式化，如下列範例所示。|  
+|**SmallProject**、 **ButtonCollection**|您所指示類型的單字和片語會格式化，如下列範例所示。|  
+|[Module 陳述式](../../visual-basic/language-reference/statements/module-statement.md)|如本範例所示，您可以按一下以移至另一個說明頁的連結。|  
+|*object*、 *variableName*、`argumentList`|如本範例所示，您所提供之資訊的預留位置會格式化。|  
+|[Shadows]，[ *expressionList* ]|在語法中，選擇性專案會以方括弧括住。|  
+|{`Public` &#124; `Friend` &#124; `Private`}|在語法中，當您必須在兩個或多個專案之間進行選擇時，專案會以大括弧括住，並以分隔號分隔。<br /><br /> 您必須只選取一個專案。|  
+|[`Protected` &#124; `Friend`]|在語法中，當您可以選擇兩個或多個專案時，這些專案會以方括弧括住，並以分隔號分隔。<br /><br /> 您可以選取專案的任何組合，或沒有專案。|  
+|[{`ByVal` &#124; `ByRef`}]|在語法中，如果您可以選取一個以上的專案，但也可以完全省略專案，則專案會以括弧括住，並以分隔號分隔。|  
+|*成員名稱*1、*成員名稱*2、*成員*名稱3|相同預留位置的多個實例會以注標區分，如範例中所示。|  
+|*成員名稱*<br /><br /> ...<br /><br /> *memberNameN*|在語法中，省略號（...）是用來表示緊接在省略號前面的類型專案數不定。<br /><br /> 在程式碼中，省略號表示為了清楚起見而省略的程式碼。|  
+|ESC 鍵，輸入|鍵盤上的索引鍵名稱和按鍵順序會以全部大寫字母顯示。|  
+|ALT+F1|當索引鍵名稱之間出現加號（+）時，您必須按住某個按鍵，同時按另一個鍵。 例如，ALT + F1 表示在按下 F1 鍵時按住 ALT 鍵。|  
+  
+## <a name="code-conventions"></a>程式碼慣例  
+  
+|範例|描述|  
+|-------------|-----------------|  
+|`sampleString = "Hello, world!"`|程式碼範例會以固定音調的字型顯示，格式如下列範例所示。|  
+|先前的語句會將 `sampleString` 的值設定為 "Hello，world！"|解說文字中的程式碼專案會以固定音調的字型顯示，如下列範例所示。|  
+|`' This is a comment.`<br /><br /> `REM This is also a comment.`|程式碼批註是以單引號（'）或 REM 關鍵字引進。|  
+|`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|在行尾加上底線（_）的空格表示語句會繼續在下面這一行。|  
   
 ## <a name="see-also"></a>請參閱
 
 - [Visual Basic 語言參考](../../visual-basic/language-reference/index.md)
 - [關鍵字](../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 執行階段程式庫成員](../../visual-basic/language-reference/runtime-library-members.md)
-- [Visual Basic Naming Conventions](../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic 命名慣例](../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [操作說明：在程式碼內中斷和合併陳述式](../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
 - [程式碼中的註解](../../visual-basic/programming-guide/program-structure/comments-in-code.md)

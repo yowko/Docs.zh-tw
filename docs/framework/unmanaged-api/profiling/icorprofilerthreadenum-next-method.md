@@ -50,7 +50,7 @@ HRESULT Next (    [in]  ULONG      celt,
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已傳回 `celt` 項目。|  
+|S_OK|傳回 `celt` 元素。|  
 |S_FALSE|傳回少於 `celt` 的項目數，表示列舉已完成。|  
   
 ## <a name="requirements"></a>需求  

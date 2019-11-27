@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442862"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs 方法
-Returns an array of IDs that identify all JIT-recompiled versions of the specified function that are still allocated. This includes JIT-recompiled versions of functions that have been subsequently reverted but not yet freed (for example, when the application domain that contains the reverted function is still in use).  
+傳回識別碼的陣列，識別仍然配置的指定函式的所有 JIT 重新編譯版本。 這包括 JIT 重新編譯的函式版本，這些函數之後已還原但尚未釋放（例如，當包含已還原函式的應用程式域仍在使用中時）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,19 +37,19 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>參數  
  `functionId`  
- [in] The `FunctionID` of the function instance for which to enumerate versions.  
+ 在要列舉版本之函式實例的 `FunctionID`。  
   
  `cReJitIds`  
- [in] The number of JIT-recompiled IDs allocated in the `reJitIds` array.  
+ 在在 `reJitIds` 陣列中配置的 JIT 重新編譯識別碼數目。  
   
  `pcReJitIds`  
- [out] The actual number of JIT-recompiled IDs.  
+ 脫銷JIT 重新編譯識別碼的實際數目。  
   
  `reJitIds`  
- [out] A caller-allocated array that will contain the JIT-recompiled IDs for the specified function.  
+ 脫銷呼叫端配置的陣列，其中將包含所指定函式的 JIT 重新編譯識別碼。  
   
 ## <a name="remarks"></a>備註  
- `GetReJITIDs` enumerates the active JIT-recompiled IDs for a given function instance. It follows the same usage pattern as other `ICorProfilerInfo` functions that accept caller-allocated buffers.  
+ `GetReJITIDs` 列舉指定函式實例的使用中 JIT 重新編譯識別碼。 它會遵循與其他接受呼叫者配置緩衝區的 `ICorProfilerInfo` 函式相同的使用模式。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

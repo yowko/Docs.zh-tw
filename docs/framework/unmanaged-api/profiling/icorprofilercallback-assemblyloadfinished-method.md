@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445179"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished 方法
-Notifies the profiler that an assembly has finished loading.  
+通知分析工具元件已完成載入。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,15 +35,15 @@ HRESULT AssemblyLoadFinished(
   
 ## <a name="parameters"></a>參數  
  `assemblyId`  
- [in] Identifies the assembly that was loaded.  
+ 在識別已載入的元件。  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the assembly finished loading successfully.  
+ 在HRESULT，指出元件是否已成功載入。  
   
 ## <a name="remarks"></a>備註  
- The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.  
+ 在呼叫 `AssemblyLoadFinished` 方法之前，`assemblyId` 的值對資訊要求而言是不正確。  
   
- Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.  
+ 載入元件的某些部分可能會在 `AssemblyLoadFinished` 回呼之後繼續進行。 `hrStatus` 中的失敗 HRESULT 表示失敗。 不過，`hrStatus` 中的成功 HRESULT 只會指出載入元件的第一個部分已成功。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

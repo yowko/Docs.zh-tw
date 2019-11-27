@@ -10,15 +10,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350722"
 ---
 # <a name="q-z-statements"></a>Q-Z 陳述式
-The following table contains a listing of Visual Basic language statements.  
+下表包含 Visual Basic language 語句的清單。  
   
 |||||  
 |---|---|---|---|  
 |[RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)|[ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|[REM](../../../visual-basic/language-reference/statements/rem-statement.md)|[RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)|  
-|[Resume](../../../visual-basic/language-reference/statements/resume-statement.md)|[Return](../../../visual-basic/language-reference/statements/return-statement.md)|[Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)|[Set](../../../visual-basic/language-reference/statements/set-statement.md)|  
-|[Stop](../../../visual-basic/language-reference/statements/stop-statement.md)|[Structure](../../../visual-basic/language-reference/statements/structure-statement.md)|[Sub](../../../visual-basic/language-reference/statements/sub-statement.md)|[SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)|  
-|[Then](../../../visual-basic/language-reference/statements/then-statement.md)|[Throw](../../../visual-basic/language-reference/statements/throw-statement.md)|[Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[Using](../../../visual-basic/language-reference/statements/using-statement.md)|  
-|[While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)|[With...End With](../../../visual-basic/language-reference/statements/with-end-with-statement.md)|[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)||  
+|[Resume](../../../visual-basic/language-reference/statements/resume-statement.md)|[Return](../../../visual-basic/language-reference/statements/return-statement.md)|[選取 .。。例圖](../../../visual-basic/language-reference/statements/select-case-statement.md)|[Set](../../../visual-basic/language-reference/statements/set-statement.md)|  
+|[Stop](../../../visual-basic/language-reference/statements/stop-statement.md)|[表示](../../../visual-basic/language-reference/statements/structure-statement.md)|[Sub](../../../visual-basic/language-reference/statements/sub-statement.md)|[SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)|  
+|[Then](../../../visual-basic/language-reference/statements/then-statement.md)|[Throw](../../../visual-basic/language-reference/statements/throw-statement.md)|[嘗試 .。。Catch .。。一點](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[Using](../../../visual-basic/language-reference/statements/using-statement.md)|  
+|[While .。。結束時間](../../../visual-basic/language-reference/statements/while-end-while-statement.md)|[使用 .。。結尾為](../../../visual-basic/language-reference/statements/with-end-with-statement.md)|[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)||  
   
 ## <a name="see-also"></a>請參閱
 

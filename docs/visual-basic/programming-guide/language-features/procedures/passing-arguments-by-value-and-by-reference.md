@@ -17,53 +17,53 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352611"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>以傳值和傳址方式傳遞引數 (Visual Basic)
-In Visual Basic, you can pass an argument to a procedure *by value* or *by reference*. This is known as the *passing mechanism*, and it determines whether the procedure can modify the programming element underlying the argument in the calling code. The procedure declaration determines the passing mechanism for each parameter by specifying the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword.  
+在 Visual Basic 中，您可以透過*值*或傳*址*方式將引數傳遞給程式。 這就是所謂的*傳遞機制*，它會判斷程式是否可以修改呼叫程式碼中引數基礎的程式設計項目。 程式宣告會藉由指定[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)關鍵字，來判斷每個參數的傳遞機制。  
   
-## <a name="distinctions"></a>Distinctions  
- When passing an argument to a procedure, be aware of several different distinctions that interact with each other:  
+## <a name="distinctions"></a>加以  
+ 將引數傳遞至程式時，請留意幾個彼此互動的不同區別：  
   
-- Whether the underlying programming element is modifiable or nonmodifiable  
+- 基礎程式設計項目是否為可修改或不可修改  
   
-- Whether the argument itself is modifiable or nonmodifiable  
+- 引數本身是否為可修改或不可變  
   
-- Whether the argument is being passed by value or by reference  
+- 引數是以傳值方式或依參考方式傳遞  
   
-- Whether the argument data type is a value type or a reference type  
+- 引數資料類型是否為實數值型別或參考型別  
   
- For more information, see [Differences Between Modifiable and Nonmodifiable Arguments](./differences-between-modifiable-and-nonmodifiable-arguments.md) and [Differences Between Passing an Argument By Value and By Reference](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+ 如需詳細資訊，請參閱可[修改的和不可變的引數之間的差異](./differences-between-modifiable-and-nonmodifiable-arguments.md)，以及透過[值和傳址方式傳遞引數的差異](./differences-between-passing-an-argument-by-value-and-by-reference.md)。  
   
-## <a name="choice-of-passing-mechanism"></a>Choice of Passing Mechanism  
- You should choose the passing mechanism carefully for each argument.  
+## <a name="choice-of-passing-mechanism"></a>選擇傳遞機制  
+ 您應該針對每個引數仔細選擇傳遞機制。  
   
-- **Protection**. In choosing between the two passing mechanisms, the most important criterion is the exposure of calling variables to change. The advantage of passing an argument `ByRef` is that the procedure can return a value to the calling code through that argument. The advantage of passing an argument `ByVal` is that it protects a variable from being changed by the procedure.  
+- **保護**。 在兩個傳遞機制之間選擇時，最重要的條件是公開呼叫變數以進行變更。 傳遞引數 `ByRef` 的優點是程式可以透過該引數將值傳回給呼叫程式碼。 傳遞引數 `ByVal` 的優點是它會保護變數，使其不會被程式變更。  
   
-- **Performance**. Although the passing mechanism can affect the performance of your code, the difference is usually insignificant. One exception to this is a value type passed `ByVal`. In this case, Visual Basic copies the entire data contents of the argument. Therefore, for a large value type such as a structure, it can be more efficient to pass it `ByRef`.  
+- **效能**。 雖然傳遞機制可能會影響您程式碼的效能，但兩者之間的差異通常不明顯。 其中一個例外狀況是傳遞 `ByVal`的實值型別。 在此情況下，Visual Basic 會複製引數的整個資料內容。 因此，對於大型實數值型別（例如結構），將它傳遞 `ByRef`會更有效率。  
   
-     For reference types, only the pointer to the data is copied (four bytes on 32-bit platforms, eight bytes on 64-bit platforms). Therefore, you can pass arguments of type `String` or `Object` by value without harming performance.  
+     針對參考型別，只會複製資料的指標（32位平臺上的四個位元組，64位平臺上為8個位元組）。 因此，您可以將類型 `String` 或 `Object` 的引數傳遞給值，而不會犧牲效能。  
   
-## <a name="determination-of-the-passing-mechanism"></a>Determination of the Passing Mechanism  
- The procedure declaration specifies the passing mechanism for each parameter. The calling code can't override a `ByVal` mechanism.  
+## <a name="determination-of-the-passing-mechanism"></a>判斷傳遞機制  
+ 程式宣告會指定每個參數的傳遞機制。 呼叫程式碼無法覆寫 `ByVal` 機制。  
   
- If a parameter is declared with `ByRef`, the calling code can force the mechanism to `ByVal` by enclosing the argument name in parentheses in the call. For more information, see [How to: Force an Argument to Be Passed by Value](./how-to-force-an-argument-to-be-passed-by-value.md).  
+ 如果參數是使用 `ByRef`所宣告，則呼叫程式碼可以藉由在呼叫的括弧中括住引數名稱，強制將機制 `ByVal`。 如需詳細資訊，請參閱[如何：強制以傳值方式傳遞引數](./how-to-force-an-argument-to-be-passed-by-value.md)。  
   
- The default in Visual Basic is to pass arguments by value.  
+ Visual Basic 中的預設值是以傳值方式傳遞引數。  
   
-## <a name="when-to-pass-an-argument-by-value"></a>When to Pass an Argument by Value  
+## <a name="when-to-pass-an-argument-by-value"></a>以傳值方式傳遞引數的時機  
   
-- If the calling code element underlying the argument is a nonmodifiable element, declare the corresponding parameter [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). No code can change the value of a nonmodifiable element.  
+- 如果引數基礎的呼叫程式碼元素是無法修改的元素，請宣告對應的參數[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)。 沒有任何程式碼可以變更無法修改的元素值。  
   
-- If the underlying element is modifiable, but you do not want the procedure to be able to change its value, declare the parameter `ByVal`. Only the calling code can change the value of a modifiable element passed by value.  
+- 如果基礎元素是可修改的，但您不想讓程式能夠變更其值，請 `ByVal`宣告參數。 只有呼叫程式碼可以變更以傳值方式傳遞之可修改元素的值。  
   
-## <a name="when-to-pass-an-argument-by-reference"></a>When to Pass an Argument by Reference  
+## <a name="when-to-pass-an-argument-by-reference"></a>以傳址方式傳遞引數的時機  
   
-- If the procedure has a genuine need to change the underlying element in the calling code, declare the corresponding parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
+- 如果程式確實需要變更呼叫程式碼中的基礎元素，請宣告對應的參數[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)。  
   
-- If the correct execution of the code depends on the procedure changing the underlying element in the calling code, declare the parameter `ByRef`. If you pass it by value, or if the calling code overrides the `ByRef` passing mechanism by enclosing the argument in parentheses, the procedure call might produce unexpected results.  
+- 如果程式碼的正確執行取決於變更呼叫程式碼中基礎元素的程式，請 `ByRef`宣告參數。 如果您以傳值方式傳遞它，或是呼叫程式碼藉由以括弧括住引數來覆寫 `ByRef` 傳遞機制，則程序呼叫可能會產生非預期的結果。  
   
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- The following example illustrates when to pass arguments by value and when to pass them by reference. Procedure `Calculate` has both a `ByVal` and a `ByRef` parameter. Given an interest rate, `rate`, and a sum of money, `debt`, the task of the procedure is to calculate a new value for `debt` that is the result of applying the interest rate to the original value of `debt`. Because `debt` is a `ByRef` parameter, the new total is reflected in the value of the argument in the calling code that corresponds to `debt`. Parameter `rate` is a `ByVal` parameter because `Calculate` should not change its value.  
+ 下列範例說明何時以傳值方式傳遞引數，以及何時以傳址方式傳遞。 程式 `Calculate` 同時具有 `ByVal` 和 `ByRef` 參數。 假設有利率、`rate`和 money 的總和，`debt`，程式的工作就是為 `debt` 計算新的值，這是將利率套用至原始 `debt`值的結果。 因為 `debt` 是 `ByRef` 參數，所以新的總計會反映在呼叫程式碼中對應至 `debt`的引數值。 參數 `rate` 是 `ByVal` 參數，因為 `Calculate` 不應變更其值。  
   
 ### <a name="code"></a>程式碼  
  [!code-vb[VbVbcnProcedures#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class2.vb#74)]  

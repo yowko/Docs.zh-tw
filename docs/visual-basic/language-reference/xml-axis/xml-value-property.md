@@ -18,7 +18,7 @@ ms.locfileid: "74349425"
 ---
 # <a name="xml-value-property-visual-basic"></a>XML Value 屬性 (Visual Basic)
 
-Provides access to the value of the first element of a collection of <xref:System.Xml.Linq.XElement> objects.
+提供 <xref:System.Xml.Linq.XElement> 物件集合中第一個元素的值存取。
 
 ## <a name="syntax"></a>語法
 
@@ -30,30 +30,30 @@ object.Value
 
 |詞彙|定義|  
 |---|---|  
-|`object`|必要項。 <xref:System.Xml.Linq.XElement> 物件的集合。|  
+|`object`|必要。 <xref:System.Xml.Linq.XElement> 物件的集合。|  
 
 ## <a name="return-value"></a>傳回值
 
- A `String` that contains the value of the first element of the collection, or `Nothing` if the collection is empty.
+ `String`，其中包含集合中第一個元素的值，如果集合是空的，則為 `Nothing`。
 
 ## <a name="remarks"></a>備註
 
- The <xref:System.Xml.Linq.XElement.Value%2A> property makes it easy to access the value of the first element in a collection of <xref:System.Xml.Linq.XElement> objects. This property first checks whether the collection contains at least one object. If the collection is empty, this property returns `Nothing`. Otherwise, this property returns the value of the <xref:System.Xml.Linq.XElement.Value%2A> property of the first element in the collection.
+ <xref:System.Xml.Linq.XElement.Value%2A> 屬性可讓您輕鬆地存取 <xref:System.Xml.Linq.XElement> 物件集合中第一個元素的值。 這個屬性會先檢查集合是否至少包含一個物件。 如果集合是空的，此屬性會傳回 `Nothing`。 否則，這個屬性會傳回集合中第一個元素的 <xref:System.Xml.Linq.XElement.Value%2A> 屬性值。
 
 > [!NOTE]
-> When you access the value of an XML attribute using the '\@' identifier, the attribute value is returned as a `String` and you do not need to explicitly specify the <xref:System.Xml.Linq.XAttribute.Value%2A> property.
+> 當您使用 '\@' 識別碼來存取 XML 屬性的值時，屬性值會當做 `String` 傳回，而且您不需要明確指定 <xref:System.Xml.Linq.XAttribute.Value%2A> 屬性。
 
- To access other elements in a collection, you can use the XML extension indexer property. For more information, see [Extension Indexer Property](extension-indexer-property.md).
+ 若要存取集合中的其他元素，您可以使用 XML 延伸模組索引子屬性。 如需詳細資訊，請參閱[擴充索引子屬性](extension-indexer-property.md)。
 
 ## <a name="inheritance"></a>繼承
 
- Most users will not have to implement <xref:System.Collections.Generic.IEnumerable%601>, and can therefore ignore this section.
+ 大部分的使用者都不需要執行 <xref:System.Collections.Generic.IEnumerable%601>，因此可以忽略這個區段。
 
- The <xref:System.Xml.Linq.XElement.Value%2A> property is an extension property for types that implement `IEnumerable(Of XElement)`. The binding of this extension property is like the binding of extension methods: if a type implements one of the interfaces and defines a property that has the name "Value", that property has precedence over the extension property. In other words, this <xref:System.Xml.Linq.XElement.Value%2A> property can be overridden by defining a new property in a class that implements `IEnumerable(Of XElement)`.
+ <xref:System.Xml.Linq.XElement.Value%2A> 屬性是實作為型別的延伸模組屬性，可執行 `IEnumerable(Of XElement)`。 此延伸模組屬性的系結就像是擴充方法的系結：如果型別會實作為其中一個介面，並定義一個名稱為 "Value" 的屬性，則該屬性的優先順序高於擴充屬性。 換句話說，這個 <xref:System.Xml.Linq.XElement.Value%2A> 屬性可以藉由在執行 `IEnumerable(Of XElement)`的類別中定義新的屬性來覆寫。
 
 ## <a name="example"></a>範例
 
- The following example shows how to use the <xref:System.Xml.Linq.XElement.Value%2A> property to access the first node in a collection of <xref:System.Xml.Linq.XElement> objects. The example uses the child axis property to get the collection of all child nodes named `phone` that are in the `contact` object.
+ 下列範例顯示如何使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性來存取 <xref:System.Xml.Linq.XElement> 物件集合中的第一個節點。 此範例會使用 [子軸] 屬性，取得 `contact` 物件中名為 `phone` 之所有子節點的集合。
 
  [!code-vb[VbXMLSamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#15)]
 
@@ -63,7 +63,7 @@ object.Value
 
 ## <a name="example"></a>範例
 
- The following example shows how to get the value of an XML attribute from a collection of <xref:System.Xml.Linq.XAttribute> objects. The example uses the attribute axis property to display the value of the `type` attribute for all of the `phone` elements.
+ 下列範例顯示如何從 <xref:System.Xml.Linq.XAttribute> 物件的集合中取得 XML 屬性的值。 此範例會使用 [屬性軸] 屬性來顯示所有 `phone` 元素的 `type` 屬性值。
 
  [!code-vb[VbXMLSamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#16)]
 

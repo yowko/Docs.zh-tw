@@ -12,11 +12,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350800"
 ---
 # <a name="subscript-out-of-range-visual-basic"></a>陣列索引超出範圍 (Visual Basic)
-An array subscript is not valid because it falls outside the allowable range. The lowest subscript value for a dimension is always 0, and the highest subscript value is returned by the `GetUpperBound` method for that dimension.  
+陣列注標無效，因為它落在允許的範圍外。 維度的最低注標值一律為0，而最高的注標值則是由該維度的 `GetUpperBound` 方法傳回。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- Change the subscript so it falls within the valid range.  
+- 請變更注標，使其落在有效範圍內。  
   
 ## <a name="see-also"></a>請參閱
 

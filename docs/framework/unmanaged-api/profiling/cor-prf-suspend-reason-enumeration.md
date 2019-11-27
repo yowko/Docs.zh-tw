@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447714"
 ---
 # <a name="cor_prf_suspend_reason-enumeration"></a>COR_PRF_SUSPEND_REASON 列舉
-Indicates the reason that the runtime is suspended.  
+指出執行時間暫止的原因。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,17 +42,17 @@ typedef enum {
   
 |成員|描述|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_SUSPEND_OTHER`|The runtime is suspended for an unspecified reason.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|The runtime is suspended to service a garbage collection request.<br /><br /> The garbage collection-related callbacks occur between the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) and [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callbacks.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|The runtime is suspended so that an `AppDomain` can be shut down.<br /><br /> While the runtime is suspended, the runtime will determine which threads are in the `AppDomain` that is being shut down and set them to abort when they resume. There are no `AppDomain`-specific callbacks during this suspension.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|The runtime is suspended so that code pitching can occur.<br /><br /> Code pitching ensues only when the just-in-time (JIT) compiler is active with code pitching enabled. Code pitching callbacks occur between the `ICorProfilerCallback::RuntimeSuspendFinished` and `ICorProfilerCallback::RuntimeResumeStarted` callbacks. **Note:**  The CLR JIT does not pitch functions in the .NET Framework version 2.0, so this value is not used in 2.0.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|The runtime is suspended so that it can shut down. It must suspend all threads to complete the operation.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|The runtime is suspended for in-process debugging.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|The runtime is suspended to prepare for a garbage collection.|  
-|`COR_PRF_SUSPEND_FOR_REJIT`|The runtime is suspended for JIT recompilation.|  
+|`COR_PRF_FIELD_SUSPEND_OTHER`|執行時間因未指定的原因而暫止。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|執行時間已暫止，以服務垃圾收集要求。<br /><br /> 垃圾收集相關的回呼會在[ICorProfilerCallback：： RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)和[ICorProfilerCallback：： RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)回呼之間發生。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|執行時間已暫停，因此可以關閉 `AppDomain`。<br /><br /> 當執行時間暫止時，執行時間會判斷哪些執行緒位於正在關閉的 `AppDomain` 中，並將它們設定為在繼續執行時中止。 在此暫止期間，沒有任何 `AppDomain`特定的回呼。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|執行時間已暫止，因此可以進行程式碼推銷。<br /><br /> 只有在已啟用程式碼推銷的即時（JIT）編譯器處於作用中狀態時，才會進行程式碼推銷接踵而來。 程式碼推銷回呼會在 `ICorProfilerCallback::RuntimeSuspendFinished` 和 `ICorProfilerCallback::RuntimeResumeStarted` 回呼之間發生。 **注意：** CLR JIT 不會在 .NET Framework 版本2.0 中使用函式，因此此值不會用於2.0。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|執行時間已暫止，使其可以關閉。 它必須暫停所有線程才能完成作業。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|執行時間已暫止以進行同進程的偵錯工具。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|執行時間已暫止，準備進行垃圾收集。|  
+|`COR_PRF_SUSPEND_FOR_REJIT`|執行時間已暫停以進行 JIT 重新編譯。|  
   
 ## <a name="remarks"></a>備註  
- All runtime threads that are in unmanaged code are permitted to continue running until they try to re-enter the runtime, at which point they will also be suspended until the runtime resumes. This also applies to new threads that enter the runtime. All threads within the runtime are either suspended immediately if they are in interruptible code, or asked to suspend when they do reach interruptible code.  
+ 在非受控碼中的所有運行時間表程，都允許繼續執行，直到它們嘗試重新進入執行時間為止，此時它們也會暫止，直到執行時間繼續為止。 這也適用于輸入執行時間的新執行緒。 執行時間中的所有線程如果處於可中斷的程式碼中，就會立即暫停，或在到達可中斷的程式碼時要求暫停。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

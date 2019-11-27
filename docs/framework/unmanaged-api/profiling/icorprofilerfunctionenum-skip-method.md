@@ -33,18 +33,18 @@ HRESULT Skip([in] ULONG celt);
   
 ## <a name="parameters"></a>參數  
  `celt`  
- [in] The number of elements to be skipped.  
+ 在要略過的元素數目。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`celt` elements were skipped.|  
-|S_FALSE|Fewer than `celt` elements were skipped, which indicates that there are no more elements.|  
+|S_OK|已略過 `celt` 元素。|  
+|S_FALSE|略過的元素少於 `celt`，表示沒有更多元素。|  
   
 ## <a name="remarks"></a>備註  
- The new position of this enumerator's cursor is (current position) + `celt`.  
+ 這個列舉值的資料指標的新位置是（目前的位置） + `celt`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

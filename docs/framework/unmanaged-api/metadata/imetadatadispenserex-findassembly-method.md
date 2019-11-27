@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442287"
 ---
 # <a name="imetadatadispenserexfindassembly-method"></a>IMetaDataDispenserEx::FindAssembly 方法
-這個方法尚未實作。 If called, it returns E_NOTIMPL.  
+這個方法尚未實作。 如果呼叫，它會傳回 E_NOTIMPL。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,32 +41,32 @@ HRESULT FindAssembly(
   
 ## <a name="parameters"></a>參數  
  `szAppBase`  
- [in] Not used.  
+ 在未使用。  
   
  `szPrivateBin`  
- [in] Not used.  
+ 在未使用。  
   
  `szGlobalBin`  
- [in] Not used.  
+ 在未使用。  
   
  `szAssemblyName`  
- [in] The assembly to be found.  
+ 在要尋找的元件。  
   
  `szName`  
- [out] The simple name of the assembly.  
+ 脫銷元件的簡單名稱。  
   
  `cchName`  
- [in] The size, in bytes, of `szName`.  
+ 在`szName`的大小（以位元組為單位）。  
   
  `pcName`  
- [out] The number of characters actually returned in `szName`.  
+ 脫銷`szName`中實際傳回的字元數。  
   
 ## <a name="requirements"></a>需求  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **平臺：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

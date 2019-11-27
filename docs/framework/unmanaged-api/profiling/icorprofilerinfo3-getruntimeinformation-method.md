@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449689"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation 方法
-Provides version information about the common language runtime (CLR) that is being profiled.  
+提供所分析之 common language runtime （CLR）的版本資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,34 +43,34 @@ HRESULT GetRuntimeInformation(
   
 ## <a name="parameters"></a>參數  
  `pClrInstanceId`  
- [out] The representative ID of a running CLR instance in a process. This is the same as the `ClrInstanceID` that the event tracing for Windows (ETW) startup event reports.  
+ 脫銷進程中執行中 CLR 實例的代表識別碼。 這與 Windows 事件追蹤（ETW）啟動附隨報告的 `ClrInstanceID` 相同。  
   
  `pRuntimeType`  
- [out] The runtime type. This parameter returns `COR_PRF_DESKTOP_CLR` for the desktop version of the CLR, or `COR_PRF_CORE_CLR` for the core version of the CLR used in Silverlight.  
+ 脫銷執行時間類型。 此參數會傳回適用于 CLR 桌上出版本的 `COR_PRF_DESKTOP_CLR`，或用於 Silverlight 中所使用之 CLR 核心版本的 `COR_PRF_CORE_CLR`。  
   
  `pMajorVersion`  
- [out] The major version number of the CLR.  
+ 脫銷CLR 的主要版本號碼。  
   
  `pMinorVersion`  
- [out] The minor version number of the CLR.  
+ 脫銷CLR 的次要版本號碼。  
   
  `pBuildVersion`  
- [out] The build version number of the CLR.  
+ 脫銷CLR 的組建版本號碼。  
   
  `pQFEVersion`  
- [out] The version number of the CLR that is associated with a software update.  
+ 脫銷與軟體更新相關聯之 CLR 的版本號碼。  
   
  `cchVersionString`  
- [in] The length, in characters, of the buffer that `szVersionString` points to.  
+ 在`szVersionString` 指向之緩衝區的長度（以字元為單位）。  
   
  `pcchVersionString`  
- [out] The length, in characters, of `szVersionString`.  
+ 脫銷`szVersionString`的長度（以字元為單位）。  
   
  `szVersionString`  
- [out] The CLR version string.  
+ 脫銷CLR 版本字串。  
   
 ## <a name="remarks"></a>備註  
- You may pass null for any parameter. However, `pcchVersionString` cannot be null unless `szVersionString` is also null.  
+ 您可以為任何參數傳遞 null。 不過，除非 `szVersionString` 也是 null，否則 `pcchVersionString` 不可以是 null。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

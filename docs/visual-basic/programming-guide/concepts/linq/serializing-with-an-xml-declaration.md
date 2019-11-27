@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350626"
 ---
-# <a name="serializing-with-an-xml-declaration-visual-basic"></a>Serializing with an XML Declaration (Visual Basic)
+# <a name="serializing-with-an-xml-declaration-visual-basic"></a>使用 XML 宣告序列化（Visual Basic）
 這個主題描述如何控制序列化是否產生 XML 宣告。  
   
 ## <a name="xml-declaration-generation"></a>XML 宣告產生  
@@ -63,4 +63,4 @@ Console.WriteLine(sb.ToString())
   
 ## <a name="see-also"></a>請參閱
 
-- [Serializing XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [序列化 XML 樹狀結構（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

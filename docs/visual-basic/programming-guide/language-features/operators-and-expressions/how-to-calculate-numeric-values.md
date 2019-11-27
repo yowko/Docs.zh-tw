@@ -19,13 +19,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348960"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>如何：計算數值 (Visual Basic)
-You can calculate numeric values through the use of numeric expressions. A *numeric expression* is an expression that contains literals, constants, and variables representing numeric values, and operators that act on those values.  
+您可以透過使用數值運算式來計算數值。 *數值運算式*是一個運算式，其中包含代表數值的常值、常數和變數，以及作用於那些值的運算子。  
   
-## <a name="calculating-numeric-values"></a>Calculating Numeric Values  
+## <a name="calculating-numeric-values"></a>計算數值  
   
-#### <a name="to-calculate-a-numeric-value"></a>To calculate a numeric value  
+#### <a name="to-calculate-a-numeric-value"></a>計算數值  
   
-- Combine one or more numeric literals, constants, and variables into a numeric expression. The following example shows some valid numeric expressions.  
+- 將一個或多個數值常值、常數和變數結合成數值運算式。 下列範例顯示一些有效的數值運算式。  
   
      `93.217`  
   
@@ -35,32 +35,32 @@ You can calculate numeric values through the use of numeric expressions. A *nume
   
      `4 * (67 + i)`  
   
-     The first three lines show a literal, a constant, and a variable. Each one forms a valid numeric expression by itself. The final line shows a combination of a variable with two literals.  
+     前三行顯示常值、常數和變數。 每一個都會單獨形成有效的數值運算式。 最後一行顯示具有兩個常值之變數的組合。  
   
-     Note that a numeric expression does not form a complete Visual Basic statement by itself. You must use the expression as part of a complete statement.  
+     請注意，數值運算式本身並不會形成完整的 Visual Basic 語句。 您必須使用運算式做為完整語句的一部分。  
   
-#### <a name="to-store-a-numeric-value"></a>To store a numeric value  
+#### <a name="to-store-a-numeric-value"></a>若要儲存數值  
   
-- You can use an assignment statement to assign the value represented by a numeric expression to a variable, as the following example demonstrates.  
+- 您可以使用指派語句，將數值運算式所表示的值指派給變數，如下列範例所示。  
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
-     In the preceding example, the value of the expression on the right side of the equal operator (`=`) is assigned to the variable `j` on the left side of the operator, so `j` evaluates to 276.  
+     在上述範例中，等號運算子（`=`）右側的運算式值會指派給運算子左邊的變數 `j`，因此 `j` 會評估為276。  
   
      如需詳細資訊，請參閱[陳述式](../../../../visual-basic/language-reference/statements/index.md)。  
   
-## <a name="multiple-operators"></a>Multiple Operators  
- If the numeric expression contains more than one operator, the order in which they are evaluated is determined by the rules of operator precedence. To override the rules of operator precedence, you enclose expressions in parentheses, as in the above example; the enclosed expressions are evaluated first.  
+## <a name="multiple-operators"></a>多個運算子  
+ 如果數值運算式包含多個運算子，則評估它們的順序是由運算子優先順序的規則所決定。 若要覆寫運算子優先順序的規則，請將運算式括在括弧中，如上述範例所示：會先評估括住的運算式。  
   
-#### <a name="to-override-normal-operator-precedence"></a>To override normal operator precedence  
+#### <a name="to-override-normal-operator-precedence"></a>若要覆寫一般運算子優先順序  
   
-- Use parentheses to enclose the operations you want to be performed first. The following example shows two different results with the same operands and operators.  
+- 使用括弧括住您想要先執行的作業。 下列範例顯示兩個具有相同運算元和運算子的不同結果。  
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
-     In the preceding example, the calculation for `j` performs the addition operator (`+`) first because the parentheses around `(67 + i)` override normal precedence, and the value assigned to `j` is 276 (4 times 69). The calculation for `k` performs the operators in their normal precedence (`*` before `+`), and the value assigned to `k` is 270 (268 plus 2).  
+     在上述範例中，`j` 的計算會先執行加法運算子（`+`），因為 `(67 + i)` 覆寫一般優先順序，而指派給 `j` 的值是276（4倍69）。 `k` 的計算會以其一般優先順序（`*` 前 `+`）執行運算子，而指派給 `k` 的值為270（268加2）。  
   
-     For more information, see [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+     如需詳細資訊，請參閱[Visual Basic 中的運算子優先順序](../../../../visual-basic/language-reference/operators/operator-precedence.md)。  
   
 ## <a name="see-also"></a>請參閱
 

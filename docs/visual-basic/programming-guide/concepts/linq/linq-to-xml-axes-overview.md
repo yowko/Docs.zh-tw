@@ -16,7 +16,7 @@ ms.locfileid: "74352030"
   
  除了會傳回集合的座標軸方法之外，還有其他兩個常用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的方法。 <xref:System.Xml.Linq.XContainer.Element%2A> 方法會傳回單一的 <xref:System.Xml.Linq.XElement>。 <xref:System.Xml.Linq.XElement.Attribute%2A> 方法會傳回單一的 <xref:System.Xml.Linq.XAttribute>。  
   
- 就許多用途而言，[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢會提供最強大的方式來檢查樹狀結構、從其中擷取資料並加以轉換。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢會在實作 <xref:System.Collections.Generic.IEnumerable%601> 的物件上運作，而 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 軸會傳回 <xref:System.Xml.Linq.XElement> 集合的 <xref:System.Collections.Generic.IEnumerable%601> 以及 <xref:System.Xml.Linq.XAttribute> 集合的 <xref:System.Collections.Generic.IEnumerable%601>。 您需要這些集合，才能執行您的查詢。  
+ 就許多用途而言，[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢會提供最強大的方式來檢查樹狀結構、從其中擷取資料並加以轉換。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢會在實作 <xref:System.Collections.Generic.IEnumerable%601> 的物件上運作，而 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 軸會傳回 <xref:System.Collections.Generic.IEnumerable%601> 集合的 <xref:System.Xml.Linq.XElement> 以及 <xref:System.Collections.Generic.IEnumerable%601> 集合的 <xref:System.Xml.Linq.XAttribute>。 您需要這些集合，才能執行您的查詢。  
   
  除了擷取項目和屬性之集合的座標軸方法之外，還有其他座標軸方法可讓您仔細逐一查看樹狀結構。 例如，您可以使用樹狀結構的節點，而不是處理項目和屬性。 這些節點是比項目和屬性還要細微的位移單位等級。 使用節點時，您可以檢查 XML 註解、文字節點、處理指示等等。 這個功能對於撰寫字組處理器與想要將文件另存為 XML 之類的人而言，相當重要。 不過，多數的 XML 程式設計人員關心的都是項目、屬性及其值。  
   

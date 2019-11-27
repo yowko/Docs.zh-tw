@@ -22,7 +22,7 @@ ms.locfileid: "74351823"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>物件變數指派 (Visual Basic)
 
-You use a normal assignment statement to assign an object to an object variable. You can assign an object expression or the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, as the following example illustrates.
+您可以使用一般指派語句，將物件指派給物件變數。 您可以指派物件運算式或不使用[關鍵字，](../../../../visual-basic/language-reference/nothing.md)如下列範例所示。
 
 ```vb
 Dim thisObject As Object
@@ -32,22 +32,22 @@ thisObject = Form1
 thisObject = Nothing
 ```
 
-`Nothing` means there is no object currently assigned to the variable.
+`Nothing` 表示目前沒有任何物件指派給該變數。
 
 ## <a name="initialization"></a>初始化
 
-When your code begins running, your object variables are initialized to `Nothing`. Those whose declarations include initialization are reinitialized to the values you specify when the declaration statements are executed.
+當您的程式碼開始執行時，您的物件變數會初始化為 `Nothing`。 其宣告包含初始化的使用者會重新初始化為您在宣告語句執行時所指定的值。
 
-You can include initialization in your declaration by using the [New](../../../../visual-basic/language-reference/operators/new-operator.md) keyword. The following declaration statements declare object variables `testUri` and `ver` and assign specific objects to them. Each uses one of the overloaded constructors of the appropriate class to initialize the object.
+您可以使用[New](../../../../visual-basic/language-reference/operators/new-operator.md)關鍵字，在宣告中包含初始化。 下列宣告語句會宣告 `testUri` 的物件變數，並 `ver` 並將特定物件指派給它們。 每個都會使用適當類別的其中一個多載的函式來初始化物件。
 
 ```vb
 Dim testUri As New System.Uri("https://www.microsoft.com")
 Dim ver As New System.Version(6, 1, 0)
 ```
 
-## <a name="disassociation"></a>Disassociation
+## <a name="disassociation"></a>解除
 
-Setting an object variable to `Nothing` discontinues the association of the variable with any specific object. This prevents you from accidentally changing the object by changing the variable. It also allows you to test whether the object variable points to a valid object, as the following example shows.
+將物件變數設定為 `Nothing` 會中止變數與任何特定物件的關聯。 這可防止您藉由變更變數而不小心變更物件。 它也可讓您測試物件變數是否指向有效的物件，如下列範例所示。
 
 ```vb
 If otherObject IsNot Nothing Then
@@ -55,17 +55,17 @@ If otherObject IsNot Nothing Then
 End If
 ```
 
-If the object your variable refers to is in another application, this test cannot determine whether that application has terminated or just invalidated the object.
+如果您的變數所參考的物件位於另一個應用程式中，則此測試無法判斷該應用程式是否已終止，或只使物件失效。
 
-An object variable with a value of `Nothing` is also called a *null reference*.
+值為 `Nothing` 的物件變數也稱為*null 參考*。
 
-## <a name="current-instance"></a>Current Instance
+## <a name="current-instance"></a>目前的實例
 
-The *current instance* of an object is the one in which the code is currently executing. Since all code executes inside a procedure, the current instance is the one in which the procedure was invoked.
+目前物件的實例就是程式碼執行所在的*實例*。 由於所有程式碼都是在程式中執行，因此目前的實例就是叫用此程式的其中一個。
 
-The `Me` keyword acts as an object variable referring to the current instance. If a procedure is not [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), it can use the `Me` keyword to obtain a pointer to the current instance. Shared procedures cannot be associated with a specific instance of a class.
+`Me` 關鍵字會作為參考目前實例的物件變數。 如果程式不是[共用](../../../../visual-basic/language-reference/modifiers/shared.md)的，它可以使用 `Me` 關鍵字來取得目前實例的指標。 共用程式無法與類別的特定實例建立關聯。
 
-Using `Me` is particularly useful for passing the current instance to a procedure in another module. For example, suppose you have a number of XML documents and wish to add some standard text to all of them. The following example defines a procedure to do this.
+使用 `Me` 特別適合用來將目前的實例傳遞至另一個模組中的程式。 例如，假設您有多個 XML 檔，而且想要在其中新增一些標準文字。 下列範例會定義執行這項操作的程式。
 
 ```vb
 Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
@@ -73,7 +73,7 @@ Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
 End Sub
 ```
 
-Every XML document object could then call the procedure and pass its current instance as an argument. 下列範例為其示範。
+然後，每個 XML 檔物件都可以呼叫程式，並將其目前的實例當做引數傳遞。 下列範例為其示範。
 
 ```vb
 addStandardText(Me)
@@ -84,6 +84,6 @@ addStandardText(Me)
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [物件變數宣告](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [物件變數值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [How to: Declare an Object Variable and Assign an Object to It in Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
+- [如何：在 Visual Basic 中宣告物件變數並指派物件給它](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
 - [如何：讓物件變數不參考執行個體](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)
 - [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

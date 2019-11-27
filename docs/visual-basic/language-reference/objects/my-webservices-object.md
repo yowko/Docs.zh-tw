@@ -15,52 +15,52 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350342"
 ---
 # <a name="mywebservices-object"></a>My.WebServices 物件
-Provides properties for creating and accessing a single instance of each XML Web service referenced by the current project.  
+提供屬性，用來建立及存取目前專案所參考之每個 XML Web Service 的單一實例。  
   
 ## <a name="remarks"></a>備註  
- `My.WebServices` 物件會提供目前專案所參考之每個 Web 服務的執行個體。 每個執行個體都是依需要具現化。 您可以透過 `My.WebServices` 物件的屬性來存取這些 Web 服務。 屬性名稱和屬性存取的 Web 服務名稱相同。 任何繼承自 <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> 的類別都是 Web 服務。 For information about adding Web services to a project, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ `My.WebServices` 物件會提供目前專案所參考之每個 Web 服務的執行個體。 每個執行個體都是依需要具現化。 您可以透過 `My.WebServices` 物件的屬性來存取這些 Web 服務。 屬性名稱和屬性存取的 Web 服務名稱相同。 任何繼承自 <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> 的類別都是 Web 服務。 如需將 Web 服務新增至專案的詳細資訊，請參閱[存取應用程式 Web 服務](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)。  
   
- The `My.WebServices` object exposes only the Web services associated with the current project. It does not provide access to Web services declared in referenced DLLs. To access a Web service that a DLL provides, you must use the qualified name of the Web service, in the form *DllName*.*WebServiceName*. For more information, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ `My.WebServices` 物件只會公開與目前專案相關聯的 Web 服務。 它不會提供參考 Dll 中所宣告之 Web 服務的存取權。 若要存取 DLL 提供的 Web 服務，您必須使用 Web 服務的限定名稱，格式為*DllName*。*WebServiceName*。 如需詳細資訊，請參閱[存取應用程式 Web 服務](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)。  
   
- The object and its properties are not available for Web applications.  
+ Web 應用程式無法使用物件及其屬性。  
   
 ## <a name="properties"></a>內容  
- Each property of the `My.WebServices` object provides access to an instance of a Web service referenced by the current project. The name of the property is the same as the name of the Web service that the property accesses, and the property type is the same as the Web service's type.  
+ `My.WebServices` 物件的每個屬性都會提供目前專案所參考之 Web 服務實例的存取權。 屬性的名稱與屬性所存取之 Web 服務的名稱相同，而且屬性類型與 Web 服務的類型相同。  
   
 > [!NOTE]
-> If there is a name collision, the property name for accessing a Web service is *RootNamespace*_*Namespace*\_*ServiceName*. For example, consider two Web services named `Service1`. If one of these services is in the root namespace `WindowsApplication1` and in the namespace `Namespace1`, you would access that service by using `My.WebServices.WindowsApplication1_Namespace1_Service1`.  
+> 如果發生名稱衝突，則用來存取 Web 服務的屬性名稱是*RootNamespace*_*Namespace*\_*ServiceName*。 例如，假設有兩個名為 `Service1`的 Web 服務。 如果其中一項服務位於根命名空間中 `WindowsApplication1` 而且在命名空間 `Namespace1`中，您會使用 `My.WebServices.WindowsApplication1_Namespace1_Service1`來存取該服務。  
   
- When you first access one of the `My.WebServices` object's properties, it creates a new instance of the Web service and stores it. Subsequent accesses of that property return that instance of the Web service.  
+ 當您第一次存取其中一個 `My.WebServices` 物件的屬性時，它會建立新的 Web 服務實例並加以儲存。 後續存取該屬性會傳回該 Web 服務的實例。  
   
- You can dispose of a Web service by assigning `Nothing` to the property for that Web service. The property setter assigns `Nothing` to the stored value. If you assign any value other than `Nothing` to the property, the setter throws an <xref:System.ArgumentException> exception.  
+ 您可以藉由將 `Nothing` 指派給該 Web 服務的屬性來處置 Web 服務。 屬性 setter 會將 `Nothing` 指派給儲存的值。 如果您將 `Nothing` 以外的任何值指派給屬性，則 setter 會擲回 <xref:System.ArgumentException> 例外狀況。  
   
- You can test whether a property of the `My.WebServices` object stores an instance of the Web service by using the `Is` or `IsNot` operator. You can use those operators to check if the value of the property is `Nothing`.  
+ 您可以使用 `Is` 或 `IsNot` 運算子，測試 `My.WebServices` 物件的屬性是否儲存 Web 服務的實例。 您可以使用這些運算子來檢查屬性的值是否為 `Nothing`。  
   
 > [!NOTE]
-> Typically, the `Is` or `IsNot` operator has to read the value of the property to perform the comparison. However, if the property currently stores `Nothing`, the property creates a new instance of the Web service and then returns that instance. However, the Visual Basic compiler treats the properties of the `My.WebServices` object specially, and allows the `Is` or `IsNot` operator to check the status of the property without altering its value.  
+> 一般來說，`Is` 或 `IsNot` 運算子必須讀取屬性的值，才能執行比較。 不過，如果屬性目前儲存 `Nothing`，則屬性會建立 Web 服務的新實例，然後傳回該實例。 不過，Visual Basic 編譯器會特別處理 `My.WebServices` 物件的屬性，並允許 `Is` 或 `IsNot` 運算子檢查屬性的狀態，而不需要變更其值。  
   
 ## <a name="example"></a>範例  
- This example calls the `FahrenheitToCelsius` method of the `TemperatureConverter` XML Web service, and returns the result.  
+ 這個範例會呼叫 `TemperatureConverter` XML Web Service 的 `FahrenheitToCelsius` 方法，並傳回結果。  
   
  [!code-vb[VbVbalrMyWebService#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWebService/VB/Form1.vb#1)]  
   
- For this example to work, your project must reference a Web service named `Converter`, and that Web service must expose the `ConvertTemperature` method. For more information, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ 若要讓此範例正常執行，您的專案必須參考名為 `Converter`的 Web 服務，而且該 Web 服務必須公開 `ConvertTemperature` 方法。 如需詳細資訊，請參閱[存取應用程式 Web 服務](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)。  
   
- This code does not work in a Web application project.  
+ 這段程式碼無法在 Web 應用程式專案中運作。  
   
 ## <a name="requirements"></a>需求  
   
-### <a name="availability-by-project-type"></a>Availability by Project Type  
+### <a name="availability-by-project-type"></a>依專案類型的可用性  
   
 |專案類型|可用|  
 |---|---|  
 |Windows 應用程式|**是**|  
 |類別庫|**是**|  
 |主控台應用程式|**是**|  
-|Windows Control Library|**是**|  
-|Web Control Library|**是**|  
+|Windows 控制項程式庫|**是**|  
+|Web 控制項程式庫|**是**|  
 |Windows 服務|**是**|  
-|Web Site|否|  
+|網站|否|  
   
 ## <a name="see-also"></a>請參閱
 

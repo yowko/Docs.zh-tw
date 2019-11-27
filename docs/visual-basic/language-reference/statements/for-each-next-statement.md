@@ -31,7 +31,7 @@ ms.locfileid: "74351199"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 陳述式 (Visual Basic)
 
-Repeats a group of statements for each element in a collection.
+針對集合中的每個元素重複一組語句。
 
 ## <a name="syntax"></a>語法
 
@@ -49,110 +49,110 @@ Next [ element ]
 
 |詞彙|定義|
 |---|---|
-|`element`|Required in the `For Each` statement. Optional in the `Next` statement. Variable. Used to iterate through the elements of the collection.|
-|`datatype`|Optional if [`Option Infer`](option-infer-statement.md) is on (the default) or `element` is already declared; required if `Option Infer` is off and `element` isn't already declared. `element`的資料型別。|
-|`group`|必要項。 A variable with a type that's a collection type or Object. Refers to the collection over which the `statements` are to be repeated.|
-|`statements`|選擇項。 One or more statements between `For Each` and `Next` that run on each item in `group`.|
-|`Continue For`|選擇項。 Transfers control to the start of the `For Each` loop.|
-|`Exit For`|選擇項。 Transfers control out of the `For Each` loop.|
-|`Next`|必要項。 Terminates the definition of the `For Each` loop.|
+|`element`|在 `For Each` 語句中是必要的。 在 `Next` 語句中為選擇性。 變. 用來逐一查看集合的元素。|
+|`datatype`|如果[`Option Infer`](option-infer-statement.md)是 on （預設值）或 `element` 已經宣告，則為選擇性;如果 `Option Infer` 已關閉，而且 `element` 尚未宣告，則為必要。 `element`的資料型別。|
+|`group`|必要。 類型為的變數，其為集合類型或物件。 這是要重複 `statements` 的集合。|
+|`statements`|選擇性。 在 `group`中的每個專案上執行的 `For Each` 和 `Next` 之間的一個或多個語句。|
+|`Continue For`|選擇性。 將控制權轉移至 `For Each` 迴圈的開頭。|
+|`Exit For`|選擇性。 將控制權轉移 `For Each` 迴圈。|
+|`Next`|必要。 結束 `For Each` 迴圈的定義。|
 
-## <a name="simple-example"></a>Simple Example
+## <a name="simple-example"></a>簡單範例
 
-Use a `For Each`...`Next` loop when you want to repeat a set of statements for each element of a collection or array.
+當您想要針對集合或陣列的每個元素重複一組語句時，請使用 `For Each`...`Next` 迴圈。
 
 > [!TIP]
-> A [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md) works well when you can associate each iteration of a loop with a control variable and determine that variable's initial and final values. However, when you are dealing with a collection, the concept of initial and final values isn't meaningful, and you don't necessarily know how many elements the collection has. In this kind of case, a `For Each`...`Next` loop is often a better choice.
+> [適用于 。](../../../visual-basic/language-reference/statements/for-next-statement.md)當您可以將迴圈的每個反復專案與控制項變數產生關聯，並判斷該變數的初始值和最後一個值時，下一個語句就很好用。 不過，當您處理集合時，初始和最終值的概念並沒有意義，而且您不一定知道集合具有多少元素。 在這種情況下，`For Each`...`Next` 迴圈通常是較佳的選擇。
 
-In the following example, the `For Each`…`Next` statement iterates through all the elements of a List collection.
+在下列範例中，`For Each`...`Next` 語句會逐一查看清單集合的所有元素。
 
 [!code-vb[VbVbalrStatements#121](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#121)]
 
-For more examples, see [Collections](../../../standard/collections/index.md) and [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+如需更多範例，請參閱[集合](../../../standard/collections/index.md)和[陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)。
 
-## <a name="nested-loops"></a>Nested Loops
+## <a name="nested-loops"></a>巢狀迴圈
 
-You can nest `For Each` loops by putting one loop within another.
+您可以藉由將一個迴圈放在另一個迴圈中，來將 `For Each` 迴圈。
 
-The following example demonstrates nested `For Each`…`Next` structures.
+下列範例示範 nested `For Each`...`Next` 構造.
 
 [!code-vb[VbVbalrStatements#122](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#122)]
 
-When you nest loops, each loop must have a unique `element` variable.
+當您嵌套迴圈時，每個迴圈都必須有唯一的 `element` 變數。
 
-You can also nest different kinds of control structures within each other. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
+您也可以在彼此之間嵌套不同類型的控制結構。 如需詳細資訊，請參閱[嵌套控制項結構](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)。
 
-## <a name="exit-for-and-continue-for"></a>Exit For and Continue For
+## <a name="exit-for-and-continue-for"></a>結束並繼續進行
 
-The [Exit For](../../../visual-basic/language-reference/statements/exit-statement.md) statement causes execution to exit the `For`…`Next` loop and transfers control to the statement that follows the `Next` statement.
+[Exit For](../../../visual-basic/language-reference/statements/exit-statement.md)語句會導致執行結束 `For`...`Next` 迴圈，並將控制權轉移至 `Next` 語句後面的語句。
 
-The `Continue For` statement transfers control immediately to the next iteration of the loop. For more information, see [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md).
+`Continue For` 語句會立即將控制權轉移到迴圈的下一個反復專案。 如需詳細資訊，請參閱[Continue 語句](../../../visual-basic/language-reference/statements/continue-statement.md)。
 
-The following example shows how to use the `Continue For` and `Exit For` statements.
+下列範例顯示如何使用 `Continue For` 和 `Exit For` 語句。
 
 [!code-vb[VbVbalrStatements#123](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#123)]
 
-You can put any number of `Exit For` statements in a `For Each` loop. When used within nested `For Each` loops, `Exit For` causes execution to exit the innermost loop and transfers control to the next higher level of nesting.
+您可以將任意數目的 `Exit For` 語句放在 `For Each` 迴圈中。 在 nested `For Each` 迴圈中使用時，`Exit For` 會使執行結束最內層的迴圈，並將控制權轉移至下一個較高層級的嵌套。
 
-`Exit For` is often used after an evaluation of some condition, for example, in an `If`...`Then`...`Else` structure. You might want to use `Exit For` for the following conditions:
+`Exit For` 通常會在評估某些條件之後使用，例如，在 `If`...`Then`...`Else` 結構中。 在下列情況中，您可能會想要使用 `Exit For`：
 
-- Continuing to iterate is unnecessary or impossible. This might be caused by an erroneous value or a termination request.
+- 繼續進行反覆運算是不必要或不可能的。 這可能是由錯誤值或終止要求所造成。
 
-- An exception is caught in a `Try`...`Catch`...`Finally`. You might use `Exit For` at the end of the `Finally` block.
+- `Try`...`Catch`...`Finally`中攔截到例外狀況。您可以使用 `Finally` 區塊結尾處的 `Exit For`。
 
-- There an endless loop, which is a loop that could run a large or even infinite number of times. If you detect such a condition, you can use `Exit For` to escape the loop. For more information, see [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md).
+- 有一個無止盡的迴圈，這是一種迴圈，可能會執行很長或甚至無限次的次數。 如果您偵測到這種情況，您可以使用 `Exit For` 來對迴圈進行 escape。 如需詳細資訊，請參閱[Do 。Loop 語句](../../../visual-basic/language-reference/statements/do-loop-statement.md)。
 
-## <a name="iterators"></a>Iterators
+## <a name="iterators"></a>Iterator
 
-You use an *iterator* to perform a custom iteration over a collection. An iterator can be a function or a `Get` accessor. It uses a `Yield` statement to return each element of the collection one at a time.
+您可以使用*反覆運算器*，在集合上執行自訂反復專案。 Iterator 可以是函數或 `Get` 存取子。 它會使用 `Yield` 語句，一次傳回一個集合的每個專案。
 
-You call an iterator by using a `For Each...Next` statement. `For Each` 迴圈的每個反覆項目都會呼叫迭代器。 When a `Yield` statement is reached in the iterator, the expression in the `Yield` statement is returned, and the current location in code is retained. 下一次呼叫迭代器時，便會從這個位置重新開始執行。
+您可以使用 `For Each...Next` 語句來呼叫反覆運算器。 `For Each` 迴圈的每個反覆項目都會呼叫迭代器。 當反覆運算器中到達 `Yield` 語句時，會傳回 `Yield` 語句中的運算式，並保留程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。
 
-The following example uses an iterator function. The iterator function has a `Yield` statement that's inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. In the `ListEvenNumbers` method, each iteration of the `For Each` statement body creates a call to the iterator function, which proceeds to the next `Yield` statement.
+下列範例會使用 iterator 函數。 Iterator 函式的 `Yield` 語句位於[For 。下一個](../../../visual-basic/language-reference/statements/for-next-statement.md)迴圈。 在 `ListEvenNumbers` 方法中，`For Each` 語句主體的每個反復專案都會建立對 iterator 函式的呼叫，該函數會繼續進行下一個 `Yield` 語句。
 
 [!code-vb[VbVbalrStatements#127](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#127)]
 
-For more information, see [Iterators](../../programming-guide/concepts/iterators.md), [Yield Statement](../../../visual-basic/language-reference/statements/yield-statement.md), and [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).
+如需詳細資訊，請參閱[反覆運算](../../programming-guide/concepts/iterators.md)器、 [Yield 語句](../../../visual-basic/language-reference/statements/yield-statement.md)和[Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)。
 
 ## <a name="technical-implementation"></a>技術實作
 
-When a `For Each`…`Next` statement runs, Visual Basic evaluates the collection only one time, before the loop starts. If your statement block changes `element` or `group`, these changes don't affect the iteration of the loop.
+當 `For Each`...`Next` 語句會執行，Visual Basic 在迴圈開始之前，只會評估集合一次。 如果您的語句區塊 `element` 或 `group`變更，這些變更不會影響迴圈的反復專案。
 
-When all the elements in the collection have been successively assigned to `element`, the `For Each` loop stops and control passes to the statement following the `Next` statement.
+當集合中的所有專案都連續指派給 `element`時，`For Each` 迴圈就會停止，並將控制權傳遞至 `Next` 語句之後的語句。
 
-If [Option Infer](option-infer-statement.md) is on (its default setting), the Visual Basic compiler can infer the data type of `element`. If it is off and `element` hasn't been declared outside the loop, you must declare it in the `For Each` statement. To declare the data type of `element` explicitly, use an `As` clause. Unless the data type of element is defined outside the `For Each`...`Next` construct, its scope is the body of the loop. Note that you cannot declare `element` both outside and inside the loop.
+如果[Option 推斷](option-infer-statement.md)為 on （其預設設定），則 Visual Basic 編譯器可以推斷 `element`的資料類型。 如果已關閉，且 `element` 未在迴圈外宣告，您必須在 `For Each` 語句中宣告它。 若要明確宣告 `element` 的資料類型，請使用 `As` 子句。 除非元素的資料類型是在 `For Each`...`Next` 結構外定義，否則其範圍就是迴圈的主體。 請注意，您無法在迴圈的外部和內部宣告 `element`。
 
-You can optionally specify `element` in the `Next` statement. This improves the readability of your program, especially if you have nested `For Each` loops. You must specify the same variable as the one that appears in the corresponding `For Each` statement.
+您可以選擇性地在 `Next` 語句中指定 `element`。 這可以改善程式的可讀性，特別是如果您有嵌套的 `For Each` 迴圈。 您必須指定與在對應的 `For Each` 語句中出現的相同變數。
 
-You might want to avoid changing the value of `element` inside a loop. Doing this can make it more difficult to read and debug your code. Changing the value of `group` doesn't affect the collection or its elements, which were determined when the loop was first entered.
+您可能想要避免在迴圈內變更 `element` 的值。 這麼做可能會讓您更難以讀取和偵錯工具代碼。 變更 `group` 的值不會影響集合或其元素，這是在第一次進入迴圈時決定的。
 
-When you're nesting loops, if a `Next` statement of an outer nesting level is encountered before the `Next` of an inner level, the compiler signals an error. However, the compiler can detect this overlapping error only if you specify `element` in every `Next` statement.
+當您要嵌套迴圈時，如果在內部層級的 `Next` 之前遇到外部嵌套層級的 `Next` 語句，則編譯器會發出錯誤信號。 不過，只有當您在每個 `Next` 語句中指定 `element` 時，編譯器才能夠偵測到這個重迭的錯誤。
 
-If your code depends on traversing a collection in a particular order, a `For Each`...`Next` loop isn't the best choice, unless you know the characteristics of the enumerator object the collection exposes. The order of traversal isn't determined by Visual Basic, but by the <xref:System.Collections.IEnumerator.MoveNext%2A> method of the enumerator object. Therefore, you might not be able to predict which element of the collection is the first to be returned in `element`, or which is the next to be returned after a given element. You might achieve more reliable results using a different loop structure, such as `For`...`Next` or `Do`...`Loop`.
+如果您的程式碼相依于依特定順序來進行集合，則除非您知道集合所公開之列舉值物件的特性，否則 `For Each`...`Next` 迴圈不是最佳選擇。 「遍歷」的順序不是由 Visual Basic，而是由列舉值物件的 <xref:System.Collections.IEnumerator.MoveNext%2A> 方法所決定。 因此，您可能無法預測集合的哪個元素是要在 `element`中傳回的第一個專案，或在指定的專案之後要傳回的下一個專案。 您可以使用不同的迴圈結構（例如 `For`...`Next` 或 `Do`...`Loop`）來達到更可靠的結果。
 
-The runtime must be able to convert the elements in `group` to `element`. The [`Option Strict`] statement controls whether both widening and narrowing conversions are allowed (`Option Strict` is off, its default value), or whether only widening conversions are allowed (`Option Strict` is on). For more information, see [Narrowing conversions](#narrowing-conversions).
+執行時間必須能夠將 `group` 中的元素轉換成 `element`。 [`Option Strict`] 語句控制是否允許擴展和縮小轉換（`Option Strict` 已關閉、其預設值），或只允許擴輾轉換（`Option Strict` 是 on）。 如需詳細資訊，請參閱[縮小轉換](#narrowing-conversions)。
 
-The data type of `group` must be a reference type that refers to a collection or an array that's enumerable. Most commonly this means that `group` refers to an object that implements the <xref:System.Collections.IEnumerable> interface of the `System.Collections` namespace or the <xref:System.Collections.Generic.IEnumerable%601> interface of the `System.Collections.Generic` namespace. `System.Collections.IEnumerable` defines the <xref:System.Collections.IEnumerable.GetEnumerator%2A> method, which returns an enumerator object for the collection. The enumerator object implements the `System.Collections.IEnumerator` interface of the `System.Collections` namespace and exposes the <xref:System.Collections.IEnumerator.Current%2A> property and the <xref:System.Collections.IEnumerator.Reset%2A> and <xref:System.Collections.IEnumerator.MoveNext%2A> methods. Visual Basic uses these to traverse the collection.
+`group` 的資料類型必須是參考型別，而這種類型是指可列舉的集合或陣列。 最常見的意思是，`group` 指的是一個物件，它會執行 `System.Collections` 命名空間的 <xref:System.Collections.IEnumerable> 介面，或 `System.Collections.Generic` 命名空間的 <xref:System.Collections.Generic.IEnumerable%601> 介面。 `System.Collections.IEnumerable` 定義 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法，這會傳回集合的列舉值物件。 列舉值物件會執行 `System.Collections` 命名空間的 `System.Collections.IEnumerator` 介面，並公開 <xref:System.Collections.IEnumerator.Current%2A> 屬性和 <xref:System.Collections.IEnumerator.Reset%2A> 和 <xref:System.Collections.IEnumerator.MoveNext%2A> 方法。 Visual Basic 會使用這些來遍歷集合。
 
 ### <a name="narrowing-conversions"></a>縮小轉換
 
-When `Option Strict` is set to `On`, narrowing conversions ordinarily cause compiler errors. In a `For Each` statement, however, conversions from the elements in `group` to `element` are evaluated and performed at run time, and compiler errors caused by narrowing conversions are suppressed.
+當 `Option Strict` 設定為 `On`時，縮小轉換通常會造成編譯器錯誤。 不過，在 `For Each` 語句中，從 `group` 中的專案轉換成 `element` 會在執行時間進行評估和執行，而縮小轉換所造成的編譯器錯誤則會隱藏起來。
 
-In the following example, the assignment of `m` as the initial value for `n` doesn't compile when `Option Strict` is on because the conversion of a `Long` to an `Integer` is a narrowing conversion. In the `For Each` statement, however, no compiler error is reported, even though the assignment to `number` requires the same conversion from `Long` to `Integer`. In the `For Each` statement that contains a large number, a run-time error occurs when <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> is applied to the large number.
+在下列範例中，當 `Option Strict` 為 on 時，`m` 指派為 `n` 的初始值不會編譯，因為 `Long` 轉換成 `Integer` 是縮小轉換。 不過，在 `For Each` 語句中，不會報告任何編譯器錯誤，即使 `number` 的指派需要從 `Long` 到 `Integer`的相同轉換也一樣。 在包含大數位的 `For Each` 語句中，當 <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> 套用至大量時，就會發生執行階段錯誤。
 
 [!code-vb[VbVbalrStatements#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class3.vb#89)]
 
-### <a name="ienumerator-calls"></a>IEnumerator Calls
+### <a name="ienumerator-calls"></a>IEnumerator 呼叫
 
-When execution of a `For Each`...`Next` loop starts, Visual Basic verifies that `group` refers to a valid collection object. If not, it throws an exception. Otherwise, it calls the <xref:System.Collections.IEnumerator.MoveNext%2A> method and the <xref:System.Collections.IEnumerator.Current%2A> property of the enumerator object to return the first element. If `MoveNext` indicates that there is no next element, that is, if the collection is empty, the `For Each` loop stops and control passes to the statement following the `Next` statement. Otherwise, Visual Basic sets `element` to the first element and runs the statement block.
+當 `For Each`...`Next` 迴圈開始執行時，Visual Basic 會驗證 `group` 是指有效的集合物件。 如果沒有，則會擲回例外狀況。 否則，它會呼叫列舉值物件的 <xref:System.Collections.IEnumerator.MoveNext%2A> 方法和 <xref:System.Collections.IEnumerator.Current%2A> 屬性，以傳回第一個元素。 如果 `MoveNext` 指出沒有下一個專案，也就是說，如果集合是空的，`For Each` 迴圈就會停止，並將控制權傳遞至後面接著 `Next` 語句的語句。 否則，Visual Basic 會將 `element` 設定為第一個元素，並執行語句區塊。
 
-Each time Visual Basic encounters the `Next` statement, it returns to the `For Each` statement. Again it calls `MoveNext` and `Current` to return the next element, and again it either runs the block or stops the loop depending on the result. This process continues until `MoveNext` indicates that there is no next element or an `Exit For` statement is encountered.
+每次 Visual Basic 遇到 `Next` 語句時，它會回到 `For Each` 語句。 同樣地，它會呼叫 `MoveNext` 並 `Current` 傳回下一個元素，然後再根據結果執行區塊或停止迴圈。 此程式會繼續進行，直到 `MoveNext` 指出沒有下一個元素，或遇到 `Exit For` 的語句為止。
 
-**Modifying the Collection.** The enumerator object returned by <xref:System.Collections.IEnumerable.GetEnumerator%2A> normally doesn't let you change the collection by adding, deleting, replacing, or reordering any elements. If you change the collection after you have initiated a `For Each`...`Next` loop, the enumerator object becomes invalid, and the next attempt to access an element causes an <xref:System.InvalidOperationException> exception.
+**修改集合。** <xref:System.Collections.IEnumerable.GetEnumerator%2A> 所傳回的列舉值物件，通常不會讓您藉由新增、刪除、取代或重新排列任何元素來變更集合。 如果您在起始 `For Each`...`Next` 迴圈後變更集合，則列舉值物件會變成無效，而下次嘗試存取專案會導致 <xref:System.InvalidOperationException> 例外狀況。
 
-However, this blocking of modification isn't determined by Visual Basic, but rather by the implementation of the <xref:System.Collections.IEnumerable> interface. It is possible to implement `IEnumerable` in a way that allows for modification during iteration. If you are considering doing such dynamic modification, make sure that you understand the characteristics of the `IEnumerable` implementation on the collection you are using.
+不過，這項修改封鎖不是由 Visual Basic 所決定，而是由 <xref:System.Collections.IEnumerable> 介面的實作為來執行。 您可以使用允許在反復專案期間進行修改的方式來執行 `IEnumerable`。 如果您考慮進行這類動態修改，請確定您瞭解所使用之集合上的 `IEnumerable` 實特性。
 
-**Modifying Collection Elements.** The <xref:System.Collections.IEnumerator.Current%2A> property of the enumerator object is [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), and it returns a local copy of each collection element. This means that you cannot modify the elements themselves in a `For Each`...`Next` loop. Any modification you make affects only the local copy from `Current` and isn't reflected back into the underlying collection. However, if an element is a reference type, you can modify the members of the instance to which it points. The following example modifies the `BackColor` member of each `thisControl` element. You cannot, however, modify `thisControl` itself.
+**修改集合元素。** 列舉值物件的 <xref:System.Collections.IEnumerator.Current%2A> 屬性是[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)，它會傳回每個集合元素的本機複本。 這表示您無法在 `For Each`...`Next` 迴圈中修改元素本身。 您所做的任何修改只會影響 `Current` 的本機複本，而且不會反映回基礎集合中。 不過，如果專案是參考型別，您可以修改它所指向之實例的成員。 下列範例會修改每個 `thisControl` 元素的 `BackColor` 成員。 但是，您無法修改 `thisControl` 本身。
 
 ```vb
 Sub LightBlueBackground(thisForm As System.Windows.Forms.Form)
@@ -162,23 +162,23 @@ Sub LightBlueBackground(thisForm As System.Windows.Forms.Form)
 End Sub
 ```
 
-The previous example can modify the `BackColor` member of each `thisControl` element, although it cannot modify `thisControl` itself.
+上一個範例可以修改每個 `thisControl` 元素的 `BackColor` 成員，不過它無法修改 `thisControl` 本身。
 
-**Traversing Arrays.** Because the <xref:System.Array> class implements the <xref:System.Collections.IEnumerable> interface, all arrays expose the <xref:System.Array.GetEnumerator%2A> method. This means that you can iterate through an array with a `For Each`...`Next` loop. However, you can only read the array elements. You cannot change them.
+**遍歷陣列。** 因為 <xref:System.Array> 類別會執行 <xref:System.Collections.IEnumerable> 介面，所以所有陣列都會公開 <xref:System.Array.GetEnumerator%2A> 方法。 這表示您可以使用 `For Each`...`Next` 迴圈逐一查看陣列。 不過，您只能讀取陣列元素。 您無法加以變更。
 
 ## <a name="example"></a>範例
 
-The following example lists all the folders in the C:\ directory by using the <xref:System.IO.DirectoryInfo> class.
+下列範例會列出 C：\ 中的所有資料夾目錄，方法是使用 <xref:System.IO.DirectoryInfo> 類別。
 
 [!code-vb[VbVbalrStatements#124](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#124)]
 
 ## <a name="example"></a>範例
 
-下列範例說明排序集合的程序。 The example sorts instances of a `Car` class that are stored in a <xref:System.Collections.Generic.List%601>. `Car` 類別實作 <xref:System.IComparable%601> 介面，而這個介面要求實作 <xref:System.IComparable%601.CompareTo%2A> 方法。
+下列範例說明排序集合的程序。 此範例會排序儲存在 <xref:System.Collections.Generic.List%601>中 `Car` 類別的實例。 `Car` 類別實作 <xref:System.IComparable%601> 介面，而這個介面要求實作 <xref:System.IComparable%601.CompareTo%2A> 方法。
 
-Each call to the <xref:System.IComparable%601.CompareTo%2A> method makes a single comparison that's used for sorting. 當目前物件和另一個物件比較時，在 `CompareTo` 方法中的使用者撰寫程式碼會傳回值。 如果目前物件比另一個物件小則傳回的值小於零，如果目前物件比另一個物件大則傳回的值大於零，如果它們相等則傳回零。 這可讓您以程式碼定義大於、小於、等於的準則。
+<xref:System.IComparable%601.CompareTo%2A> 方法的每個呼叫都會進行用於排序的單一比較。 當目前物件和另一個物件比較時，在 `CompareTo` 方法中的使用者撰寫程式碼會傳回值。 如果目前物件比另一個物件小則傳回的值小於零，如果目前物件比另一個物件大則傳回的值大於零，如果它們相等則傳回零。 這可讓您以程式碼定義大於、小於、等於的準則。
 
-在 `ListCars` 方法中，`cars.Sort()` 陳述式會排序清單。 對 <xref:System.Collections.Generic.List%601> 之 <xref:System.Collections.Generic.List%601.Sort%2A> 方法的這個呼叫，會導致 `CompareTo` 方法對 `List` 的 `Car` 物件自動呼叫。
+在 `ListCars` 方法中，`cars.Sort()` 陳述式會排序清單。 對 <xref:System.Collections.Generic.List%601.Sort%2A> 之 <xref:System.Collections.Generic.List%601> 方法的這個呼叫，會導致 `CompareTo` 方法對 `Car` 的 `List` 物件自動呼叫。
 
 [!code-vb[VbVbalrStatements#125](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#125)]
 

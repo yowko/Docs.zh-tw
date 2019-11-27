@@ -24,227 +24,227 @@ ms.locfileid: "74352495"
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic 中的陳述式
 
-A statement in Visual Basic is a complete instruction. It can contain keywords, operators, variables, constants, and expressions. Each statement belongs to one of the following categories:
+Visual Basic 中的語句是完整的指示。 它可以包含關鍵字、運算子、變數、常數和運算式。 每個語句屬於下列其中一個類別：
 
-- **Declaration Statements**, which name a variable, constant, or procedure, and can also specify a data type.
+- 宣告**語句**，它會將變數、常數或程式命名為，而且也可以指定資料類型。
 
-- **Executable Statements**, which initiate actions. These statements can call a method or function, and they can loop or branch through blocks of code. Executable statements include **Assignment Statements**, which assign a value or expression to a variable or constant.
+- **可執行檔語句**，會起始動作。 這些語句可以呼叫方法或函式，也可以透過程式碼區塊來迴圈或分支。 可執行檔語句包含指派**語句**，可將值或運算式指派給變數或常數。
 
-This topic describes each category. Also, this topic describes how to combine multiple statements on a single line and how to continue a statement over multiple lines.
+本主題描述每個類別目錄。 此外，本主題描述如何將多個語句結合在同一行上，以及如何繼續執行多行語句。
 
 ## <a name="declaration-statements"></a>宣告陳述式
 
-You use declaration statements to name and define procedures, variables, properties, arrays, and constants. When you declare a programming element, you can also define its data type, access level, and scope. For more information, see [Declared Element Characteristics](./declared-elements/declared-element-characteristics.md).
+您可以使用宣告語句來命名和定義程式、變數、屬性、陣列和常數。 當您宣告程式設計項目時，您也可以定義其資料類型、存取層級和範圍。 如需詳細資訊，請參閱宣告的[元素特性](./declared-elements/declared-element-characteristics.md)。
 
-The following example contains three declarations.
+下列範例包含三個宣告。
 
 [!code-vb[VbVbalrStatements#80](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#80)]
 
-The first declaration is the `Sub` statement. Together with its matching `End Sub` statement, it declares a procedure named `applyFormat`. It also specifies that `applyFormat` is `Public`, which means that any code that can refer to it can call it.
+第一個宣告是 `Sub` 語句。 它與其相符的 `End Sub` 語句一起宣告一個名為 `applyFormat`的程式。 它也會指定 `Public``applyFormat`，這表示任何可以參考它的程式碼都可以呼叫它。
 
-The second declaration is the `Const` statement, which declares the constant `limit`, specifying the `Integer` data type and a value of 33.
+第二個宣告是 `Const` 語句，它會宣告常數 `limit`，並指定 `Integer` 資料類型和值33。
 
-The third declaration is the `Dim` statement, which declares the variable `thisWidget`. The data type is a specific object, namely an object created from the `Widget` class. You can declare a variable to be of any elementary data type or of any object type that is exposed in the application you are using.
+第三個宣告是 `Dim` 語句，它會宣告變數 `thisWidget`。 資料類型是特定的物件，亦即從 `Widget` 類別建立的物件。 您可以將變數宣告為任何基本資料類型或任何在您所使用之應用程式中公開的物件類型。
 
-### <a name="initial-values"></a>Initial Values
+### <a name="initial-values"></a>初始值
 
-When the code containing a declaration statement runs, Visual Basic reserves the memory required for the declared element. If the element holds a value, Visual Basic initializes it to the default value for its data type. For more information, see "Behavior" in [Dim Statement](../../language-reference/statements/dim-statement.md).
+當包含宣告語句的程式碼執行時，Visual Basic 會保留所宣告元素所需的記憶體。 如果元素包含值，Visual Basic 會將它初始化為其資料類型的預設值。 如需詳細資訊，請參閱[Dim 語句](../../language-reference/statements/dim-statement.md)中的「行為」。
 
-You can assign an initial value to a variable as part of its declaration, as the following example illustrates.
+您可以將初始值指派給變數，做為其宣告的一部分，如下列範例所示。
 
 [!code-vb[VbVbalrStatements#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#81)]
 
-If a variable is an object variable, you can explicitly create an instance of its class when you declare it by using the [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) keyword, as the following example illustrates.
+如果變數是物件變數，當您使用[New Operator](../../../visual-basic/language-reference/operators/new-operator.md)關鍵字來宣告它時，可以明確建立其類別的實例，如下列範例所示。
 
 [!code-vb[VbVbalrStatements#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#82)]
 
-Note that the initial value you specify in a declaration statement is not assigned to a variable until execution reaches its declaration statement. Until that time, the variable contains the default value for its data type.
+請注意，您在宣告語句中指定的初始值不會指派給變數，直到執行達到其宣告語句為止。 在該時間之前，變數會包含其資料類型的預設值。
 
-## <a name="executable-statements"></a>Executable statements
+## <a name="executable-statements"></a>可執行語句
 
-An executable statement performs an action. It can call a procedure, branch to another place in the code, loop through several statements, or evaluate an expression. An assignment statement is a special case of an executable statement.
+可執行檔語句會執行動作。 它可以呼叫程式、分支至程式碼中的另一個位置、迴圈執行數個語句，或評估運算式。 指派語句是可執行語句的特殊案例。
 
-The following example uses an `If...Then...Else` control structure to run different blocks of code based on the value of a variable. Within each block of code, a `For...Next` loop runs a specified number of times.
+下列範例會根據變數的值，使用 `If...Then...Else` 控制結構來執行不同的程式碼區塊。 在每個程式碼區塊內，`For...Next` 迴圈都會執行指定的次數。
 
 [!code-vb[VbVbalrStatements#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#83)]
 
-The `If` statement in the preceding example checks the value of the parameter `clockwise`. If the value is `True`, it calls the `spinClockwise` method of `aWidget`. If the value is `False`, it calls the `spinCounterClockwise` method of `aWidget`. The `If...Then...Else` control structure ends with `End If`.
+上述範例中的 `If` 語句會檢查參數的值 `clockwise`。 如果值是 `True`，它會呼叫 `aWidget`的 `spinClockwise` 方法。 如果值是 `False`，它會呼叫 `aWidget`的 `spinCounterClockwise` 方法。 `If...Then...Else` 控制結構的結尾是 `End If`。
 
-The `For...Next` loop within each block calls the appropriate method a number of times equal to the value of the `revolutions` parameter.
+每個區塊內的 `For...Next` 迴圈都會呼叫適當的方法，其次數等於 `revolutions` 參數的值。
 
-## <a name="assignment-statements"></a>Assignment statements
+## <a name="assignment-statements"></a>指派語句
 
-Assignment statements carry out assignment operations, which consist of taking the value on the right side of the assignment operator (`=`) and storing it in the element on the left, as in the following example.
+指派語句會執行指派作業，其中包括接受指派運算子右邊的值（`=`），並將其儲存在左側的元素中，如下列範例所示。
 
 [!code-vb[VbVbalrStatements#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#73)]
 
-In the preceding example, the assignment statement stores the literal value 42 in the variable `v`.
+在上述範例中，指派語句會將常值42儲存在 `v`變數中。
 
-### <a name="eligible-programming-elements"></a>Eligible programming elements
+### <a name="eligible-programming-elements"></a>合格的程式設計項目
 
-The programming element on the left side of the assignment operator must be able to accept and store a value. This means it must be a variable or property that is not [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), or it must be an array element. In the context of an assignment statement, such an element is sometimes called an *lvalue*, for "left value."
+指派運算子左邊的程式設計項目必須能夠接受並儲存值。 這表示它必須是不是[唯讀](../../../visual-basic/language-reference/modifiers/readonly.md)的變數或屬性，或者必須是陣列元素。 在指派語句的內容中，這類專案有時*稱為左值，適用*于 "left value"。
 
-The value on the right side of the assignment operator is generated by an expression, which can consist of any combination of literals, constants, variables, properties, array elements, other expressions, or function calls. 下列範例將說明這點。
+指派運算子右邊的值是由運算式所產生，它可以包含常值、常數、變數、屬性、陣列元素、其他運算式或函式呼叫的任意組合。 下列範例將說明這點。
 
 [!code-vb[VbVbalrStatements#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#74)]
 
-The preceding example adds the value held in variable `y` to the value held in variable `z`, and then adds the value returned by the call to function `findResult`. The total value of this expression is then stored in variable `x`.
+上述範例會將 `y` 變數中保留的值加入變數 `z`中保留的值，然後將呼叫所傳回的值加入至函數 `findResult`。 此運算式的總計值會儲存在變數 `x`中。
 
-### <a name="data-types-in-assignment-statements"></a>Data types in assignment statements
+### <a name="data-types-in-assignment-statements"></a>指派語句中的資料類型
 
-In addition to numeric values, the assignment operator can also assign `String` values, as the following example illustrates.
+除了數值以外，指派運算子也可以指派 `String` 值，如下列範例所示。
 
 [!code-vb[VbVbalrStatements#75](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#75)]
 
-You can also assign `Boolean` values, using either a `Boolean` literal or a `Boolean` expression, as the following example illustrates.
+您也可以使用 `Boolean` 常值或 `Boolean` 運算式來指派 `Boolean` 值，如下列範例所示。
 
 [!code-vb[VbVbalrStatements#76](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#76)]
 
-Similarly, you can assign appropriate values to programming elements of the `Char`, `Date`, or `Object` data type. You can also assign an object instance to an element declared to be of the class from which that instance is created.
+同樣地，您可以將適當的值指派給 `Char`、`Date`或 `Object` 資料類型的程式設計項目。 您也可以將物件實例指派給宣告為的專案，而該專案是建立該實例的類別。
 
-### <a name="compound-assignment-statements"></a>Compound assignment statements
+### <a name="compound-assignment-statements"></a>複合指派語句
 
-*Compound assignment statements* first perform an operation on an expression before assigning it to a programming element. The following example illustrates one of these operators, `+=`, which increments the value of the variable on the left side of the operator by the value of the expression on the right.
+*複合指派語句*會先對運算式執行運算，再將它指派給程式設計項目。 下列範例說明其中一個運算子，`+=`，這會以右邊運算式的值來遞增運算子左邊的變數值。
 
 [!code-vb[VbVbalrStatements#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#77)]
 
-The preceding example adds 1 to the value of `n`, and then stores that new value in `n`. It is a shorthand equivalent of the following statement:
+上述範例會將1加到 `n`的值，然後在 `n`中儲存新的值。 它是下列語句的簡寫對應項：
 
 [!code-vb[VbVbalrStatements#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#78)]
 
-A variety of compound assignment operations can be performed using operators of this type. For a list of these operators and more information about them, see [Assignment Operators](../../../visual-basic/language-reference/operators/assignment-operators.md).
+您可以使用此類型的運算子來執行各種複合指派運算。 如需這些運算子的清單和相關的詳細資訊，請參閱[指派運算子](../../../visual-basic/language-reference/operators/assignment-operators.md)。
 
-The concatenation assignment operator (`&=`) is useful for adding a string to the end of already existing strings, as the following example illustrates.
+串連指派運算子（`&=`）適用于將字串新增至已經存在的字串結尾，如下列範例所示。
 
 [!code-vb[VbVbalrStatements#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#79)]
 
-### <a name="type-conversions-in-assignment-statements"></a>Type Conversions in Assignment Statements
+### <a name="type-conversions-in-assignment-statements"></a>指派語句中的類型轉換
 
-The value you assign to a variable, property, or array element must be of a data type appropriate to that destination element. In general, you should try to generate a value of the same data type as that of the destination element. However, some types can be converted to other types during assignment.
+您指派給變數、屬性或陣列元素的值，必須是適合該目的地元素的資料類型。 一般來說，您應該嘗試產生與目的地元素相同之資料類型的值。 不過，某些類型可在指派期間轉換成其他類型。
 
-For information on converting between data types, see [Type Conversions in Visual Basic](./data-types/type-conversions.md). In brief, Visual Basic automatically converts a value of a given type to any other type to which it widens. A *widening conversion* is one in that always succeeds at run time and does not lose any data. For example, Visual Basic converts an `Integer` value to `Double` when appropriate, because `Integer` widens to `Double`. 如需詳細資訊，請參閱 [Widening and Narrowing Conversions](./data-types/widening-and-narrowing-conversions.md)。
+如需在資料類型之間轉換的詳細資訊，請參閱[Visual Basic 中的類型轉換](./data-types/type-conversions.md)。 簡單地說，Visual Basic 會自動將指定型別的值轉換成它所擴展的任何其他型別。 *擴輾轉換*是中的一項，在執行時間一律會成功，而且不會遺失任何資料。 例如，Visual Basic 會在適當的情況下將 `Integer` 值轉換成 `Double`，因為 `Integer` 會擴大至 `Double`。 如需詳細資訊，請參閱 [Widening and Narrowing Conversions](./data-types/widening-and-narrowing-conversions.md)。
 
-*Narrowing conversions* (those that are not widening) carry a risk of failure at run time, or of data loss. You can perform a narrowing conversion explicitly by using a type conversion function, or you can direct the compiler to perform all conversions implicitly by setting `Option Strict Off`. For more information, see [Implicit and Explicit Conversions](./data-types/implicit-and-explicit-conversions.md).
+*縮小轉換*（不是擴展的）會在執行時間發生失敗或資料遺失的風險。 您可以使用類型轉換函式來明確地執行縮小轉換，也可以指示編譯器透過設定 `Option Strict Off`，以隱含方式執行所有轉換。 如需詳細資訊，請參閱[隱含和明確轉換](./data-types/implicit-and-explicit-conversions.md)。
 
-## <a name="putting-multiple-statements-on-one-line"></a>Putting multiple statements on one line
+## <a name="putting-multiple-statements-on-one-line"></a>將多個語句放在同一行上
 
-You can have multiple statements on a single line separated by the colon (`:`) character. 下列範例將說明這點。
+您可以在單一行上有多個語句，並以冒號（`:`）字元分隔。 下列範例將說明這點。
 
 [!code-vb[VbVbalrStatements#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#70)]
 
-Though occasionally convenient, this form of syntax makes your code hard to read and maintain. Thus, it is recommended that you keep one statement to a line.
+雖然偶爾很方便，但這種形式的語法會使您的程式碼難以閱讀和維護。 因此，建議您將一個語句保留在一行。
 
-## <a name="continuing-a-statement-over-multiple-lines"></a>Continuing a statement over multiple lines
+## <a name="continuing-a-statement-over-multiple-lines"></a>繼續執行多行語句
 
-A statement usually fits on one line, but when it is too long, you can continue it onto the next line using a line-continuation sequence, which consists of a space followed by an underscore character (`_`) followed by a carriage return. In the following example, the `MsgBox` executable statement is continued over two lines.
+語句通常會放在一行上，但如果太長，您可以使用行接續序列將它繼續放在下一行，這是由空格後面接著底線字元（`_`）後面接著一個回車。 在下列範例中，`MsgBox` 可執行檔語句會延續兩行。
 
 [!code-vb[VbVbalrStatements#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#71)]
 
-### <a name="implicit-line-continuation"></a>Implicit line continuation
+### <a name="implicit-line-continuation"></a>隱含行接續
 
-In many cases, you can continue a statement on the next consecutive line without using the underscore character (`_`). The following syntax elements implicitly continue the statement on the next line of code.
+在許多情況下，您可以在下一個連續行繼續執行語句，而不使用底線字元（`_`）。 下列語法元素會隱含地繼續下一行程式碼上的語句。
 
-- After a comma (`,`). 例如:
+- 在逗號（`,`）後面。 例如：
 
    [!code-vb[VbVbalrLineContinuation#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#1)]
 
-- After an open parenthesis (`(`) or before a closing parenthesis (`)`). 例如:
+- 在左括弧（`(`）或右括弧（`)`）前面。 例如：
 
    [!code-vb[VbVbalrLineContinuation#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#2)]
 
-- After an open curly brace (`{`) or before a closing curly brace (`}`). 例如:
+- 在左大括弧（`{`）或右大括弧（`}`）前面。 例如：
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
-    For more information, see [Object Initializers: Named and Anonymous Types](./objects-and-classes/object-initializers-named-and-anonymous-types.md) or [Collection Initializers](./collection-initializers/index.md).
+    如需詳細資訊，請參閱[物件初始化運算式：名稱和匿名型別](./objects-and-classes/object-initializers-named-and-anonymous-types.md)或[集合初始化運算式](./collection-initializers/index.md)。
 
-- After an open embedded expression (`<%=`) or before the close of an embedded expression (`%>`) within an XML literal. 例如:
+- 在 open embedded 運算式（`<%=`）之後，或在 XML 常值內的內嵌運算式（`%>`）前面。 例如：
 
    [!code-vb[VbVbalrLineContinuation#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#4)]
 
-   For more information, see [Embedded Expressions in XML](./xml/embedded-expressions-in-xml.md).
+   如需詳細資訊，請參閱[XML 中的內嵌運算式](./xml/embedded-expressions-in-xml.md)。
 
-- After the concatenation operator (`&`). 例如:
+- 在串連運算子（`&`）後面。 例如：
 
    [!code-vb[VbVbcnConventions#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/vb/Class1.vb#9)]
 
-   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   如需詳細資訊，請參閱[依功能列出的運算子](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。
 
-- After assignment operators (`=`, `&=`, `:=`, `+=`, `-=`, `*=`, `/=`, `\=`, `^=`, `<<=`, `>>=`). 例如:
+- 在指派運算子（`=`、`&=`、`:=`、`+=`、`-=`、`*=`、`/=`、`\=`、`^=`、`<<=`、`>>=`）之後。 例如：
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   如需詳細資訊，請參閱[依功能列出的運算子](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。
 
-- After binary operators (`+`, `-`, `/`, `*`, `Mod`, `<>`, `<`, `>`, `<=`, `>=`, `^`, `>>`, `<<`, `And`, `AndAlso`, `Or`, `OrElse`, `Like`, `Xor`) within an expression. 例如:
+- 在運算式內的二元運算子（`+`、`-`、`/`、`*`、`Mod`、`<>`、`<`、`>`、`<=`、`>=`、`^`、`>>`、`<<`、`And`、`AndAlso`）之後。`Or``OrElse``Like``Xor` 例如：
 
    [!code-vb[VbVbalrLineContinuation#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#7)]
 
-   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   如需詳細資訊，請參閱[依功能列出的運算子](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。
 
-- After the `Is` and `IsNot` operators. 例如:
+- 在 `Is` 和 `IsNot` 運算子之後。 例如：
 
    [!code-vb[VbVbalrLineContinuation#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#8)]
 
-   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   如需詳細資訊，請參閱[依功能列出的運算子](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。
 
-- After a member qualifier character (`.`) and before the member name. 例如:
+- 在成員辨識符號字元（`.`）和成員名稱之前。 例如：
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   However, you must include a line-continuation character (`_`) following a member qualifier character when you are using the `With` statement or supplying values in the initialization list for a type. Consider breaking the line after the assignment operator (for example, `=`) when you are using `With` statements or object initialization lists. 例如:
+   不過，當您使用 `With` 語句或在類型的初始化清單中提供值時，您必須在成員限定詞字元後面加上行接續字元（`_`）。 當您使用 `With` 的語句或物件初始化清單時，請考慮中斷指派運算子後面的那一行（例如，`=`）。 例如：
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   For more information, see [With...End With Statement](../../../visual-basic/language-reference/statements/with-end-with-statement.md) or [Object Initializers: Named and Anonymous Types](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
+   如需詳細資訊，請參閱[With .。。結尾為語句](../../../visual-basic/language-reference/statements/with-end-with-statement.md)或[物件初始化運算式：名稱和匿名型別](./objects-and-classes/object-initializers-named-and-anonymous-types.md)。
 
-- After an XML axis property qualifier (`.` or `.@` or `...`). However, you must include a line-continuation character (`_`) when you specify a member qualifier when you are using the `With` keyword. 例如:
+- 在 XML 軸屬性辨識符號（`.` 或 `.@` 或 `...`）之後。 不過，當您使用 `With` 關鍵字時，當您指定成員限定詞時，必須包含行接續字元（`_`）。 例如：
 
    [!code-vb[VbVbalrLineContinuation#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#9)]
 
-   For more information, see [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/index.md).
+   如需詳細資訊，請參閱[XML 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)。
 
-- After a less-than sign (<) or before a greater-than sign (`>`) when you specify an attribute. Also after a greater-than sign (`>`) when you specify an attribute. However, you must include a line-continuation character (`_`) when you specify assembly-level or module-level attributes. 例如:
+- 當您指定屬性時，小於符號（<）或大於符號（`>`）。 當您指定屬性時，也會在大於符號（`>`）之後。 不過，當您指定元件層級或模組層級的屬性時，必須包含行接續字元（`_`）。 例如：
 
    [!code-vb[VbVbalrLineContinuation#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#10)]
 
-   For more information, see [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md).
+   如需詳細資訊，請參閱[屬性總覽](../../../visual-basic/programming-guide/concepts/attributes/index.md)。
 
-- Before and after query operators (`Aggregate`, `Distinct`, `From`, `Group By`, `Group Join`, `Join`, `Let`, `Order By`, `Select`, `Skip`, `Skip While`, `Take`, `Take While`, `Where`, `In`, `Into`, `On`, `Ascending`, and `Descending`). You cannot break a line between the keywords of query operators that are made up of multiple keywords (`Order By`, `Group Join`, `Take While`, and `Skip While`). 例如:
+- 在查詢運算子之前和之後（`Aggregate`、`Distinct`、`From`、`Group By`、`Group Join`、`Join`、`Let`、`Order By`、`Select`、`Skip`、`Skip While`、`Take`、`Take While`、`Where`、`In`、`Into`、`On`、`Ascending`和 `Descending`）。 您不能在由多個關鍵字（`Order By`、`Group Join`、`Take While`和 `Skip While`）組成之查詢運算子的關鍵字之間中斷一行。 例如：
 
    [!code-vb[VbVbalrLineContinuation#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#11)]
 
-   For more information, see [Queries](../../../visual-basic/language-reference/queries/index.md).
+   如需詳細資訊，請參閱[查詢](../../../visual-basic/language-reference/queries/index.md)。
 
-- After the `In` keyword in a `For Each` statement. 例如:
+- 在 `For Each` 語句中的 `In` 關鍵字之後。 例如：
 
    [!code-vb[VbVbalrLineContinuation#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#12)]
 
-   For more information, see [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md).
+   如需詳細資訊，請參閱[For Each .。。下一個語句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)。
 
-- After the `From` keyword in a collection initializer. 例如:
+- 在集合初始化運算式中的 `From` 關鍵字之後。 例如：
 
    [!code-vb[VbVbalrLineContinuation#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#13)]
 
    如需詳細資訊，請參閱[集合初始設定式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。
 
-## <a name="adding-comments"></a>Adding comments
+## <a name="adding-comments"></a>新增批註
 
-Source code is not always self-explanatory, even to the programmer who wrote it. To help document their code, therefore, most programmers make liberal use of embedded comments. Comments in code can explain a procedure or a particular instruction to anyone reading or working with it later. Visual Basic ignores comments during compilation, and they do not affect the compiled code.
+原始程式碼並不一定一目了然，即使是撰寫程式碼的程式設計人員也一樣。 為了協助記錄其程式碼，大部分程式設計人員會大量使用內嵌的批註。 程式碼中的批註可以向稍後閱讀或使用的任何人解釋程式或特定指示。 Visual Basic 會在編譯期間忽略批註，而不會影響已編譯的程式碼。
 
-Comment lines begin with an apostrophe (`'`) or `REM` followed by a space. They can be added anywhere in code, except within a string. To append a comment to a statement, insert an apostrophe or `REM` after the statement, followed by the comment. Comments can also go on their own separate line. The following example demonstrates these possibilities.
+批註行開頭為單引號（`'`）或 `REM` 後面接著一個空格。 它們可以加入程式碼中的任何位置，但不包括在字串中。 若要將批註附加至語句，請在語句後面插入單引號或 `REM`，後面加上批註。 批註也可以單獨放在自己的一行。 下列範例示範這些可能性。
 
 [!code-vb[VbVbalrStatements#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#72)]
 
-## <a name="checking-compilation-errors"></a>Checking compilation errors
+## <a name="checking-compilation-errors"></a>檢查編譯錯誤
 
-If, after you type a line of code, the line is displayed with a wavy blue underline (an error message may appear as well), there is a syntax error in the statement. You must find out what is wrong with the statement (by looking in the task list, or hovering over the error with the mouse pointer and reading the error message) and correct it. Until you have fixed all syntax errors in your code, your program will fail to compile correctly.
+如果您在輸入一行程式碼之後，以波浪式藍色底線顯示行（也可能出現錯誤訊息），則語句中會發生語法錯誤。 您必須找出語句的問題（方法是在 [工作清單] 中查看，或將滑鼠指標停留在錯誤上方並閱讀錯誤訊息）並加以更正。 在您已修正程式碼中的所有語法錯誤之前，您的程式將無法正確編譯。
 
 ## <a name="related-sections"></a>相關章節
 
 |詞彙|定義|
 |---|---|
-|[指派運算子](../../../visual-basic/language-reference/operators/assignment-operators.md)|Provides links to language reference pages covering assignment operators such as `=`, `*=`, and `&=`.|
-|[運算子和運算式](./operators-and-expressions/index.md)|Shows how to combine elements with operators to yield new values.|
-|[操作說明：在程式碼內中斷和合併陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Shows how to break a single statement into multiple lines and how to place multiple statements on the same line.|
-|[操作說明：標記陳述式](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Shows how to label a line of code.|
+|[指派運算子](../../../visual-basic/language-reference/operators/assignment-operators.md)|提供涵蓋指派運算子（例如 `=`、`*=`和 `&=`）之語言參考頁面的連結。|
+|[運算子和運算式](./operators-and-expressions/index.md)|示範如何結合元素與運算子來產生新的值。|
+|[操作說明：在程式碼內中斷和合併陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|說明如何將單一語句分成多行，以及如何將多個語句放在同一行。|
+|[操作說明：標記陳述式](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|示範如何為程式程式碼加上標籤。|

@@ -48,7 +48,7 @@ ms.locfileid: "74350127"
   
  類似的項目是頭部可拆卸的螺絲起子組。 您可以檢查需要轉動的螺絲，並選取該螺絲的正確螺絲起子頭 (一字、十字、星形)。 將正確的螺絲起子頭插入螺絲起子握把之後，即可執行與螺絲起子完全相同的功能，即轉動螺絲。  
   
- ![Diagram of a screwdriver set with different heads.](./media/generic-types/generic-screwdriver-set.gif)  
+ ![具有不同標題的螺絲起子組的圖表。](./media/generic-types/generic-screwdriver-set.gif)  
   
  當您定義泛型類型時，即使用一個或多個資料類型對其進行參數化。 這可讓您使用程式碼來調整資料類型，使其符合需求。 您的程式碼可以宣告泛型項目的數個不同程式設計項目，而且各代表一組不同的資料類型。 但是，宣告的項目不論使用何種資料類型，都會執行相同的邏輯。  
   
@@ -73,10 +73,10 @@ ms.locfileid: "74350127"
   
  [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- For a more complete example, see [How to: Define a Class That Can Provide Identical Functionality on Different Data Types](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ 如需更完整的範例，請參閱[如何：定義可在不同資料類型上提供完全相同功能的類別](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)。  
   
 ## <a name="eligible-programming-elements"></a>合格的程式設計項目  
- 您可以定義和使用泛型類別、結構、介面、程序和委派。 Note that the .NET Framework defines several generic classes, structures, and interfaces that represent commonly used generic elements. <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間提供字典、清單、佇列和堆疊。 定義您自己的泛型項目之前，請查看它是否已在 <xref:System.Collections.Generic?displayProperty=nameWithType>中。  
+ 您可以定義和使用泛型類別、結構、介面、程序和委派。 請注意，.NET Framework 會定義數個泛型類別、結構和介面，以代表常用的泛型元素。 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間提供字典、清單、佇列和堆疊。 定義您自己的泛型項目之前，請查看它是否已在 <xref:System.Collections.Generic?displayProperty=nameWithType>中。  
   
  程序不是類型，但您可以定義和使用泛型程序。 請參閱 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "74350127"
   
 - **類型安全。** 泛型類型會強制執行編譯階段類型檢查。 以 `Object` 為基礎的類型會接受任何資料類型，而且您必須撰寫程式碼來檢查是否可以接受輸入資料類型。 使用泛型類型，編譯器可以在執行階段之前捕捉類型不符。  
   
-- **效能。** 泛型類型不需要 *Box* 和 *Unbox* 資料，因為每種泛型類型都是一種資料類型特有的。 以 `Object` 為基礎的作業必須對輸入資料類型進行 Box 處理以將它們轉換成 `Object` ，並對要進行輸出的資料進行 Unbox 處理。 Box 和 Unbox 處理會降低效能。  
+- **效能。** 泛型類型不需要 *Box* 和 *unBox* 資料，因為每種泛型類型都是一種資料類型特有的。 以 `Object` 為基礎的作業必須對輸入資料類型進行 Box 處理以將它們轉換成 `Object` ，並對要進行輸出的資料進行 Unbox 處理。 Box 和 Unbox 處理會降低效能。  
   
      以 `Object` 為基礎的類型也會進行晚期繫結，這表示在執行階段時存取其成員需要額外撰寫程式碼。 這也會降低效能。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "74350127"
   
 - 類型引數必須是 *「參考類型」* (reference type)，或必須是 *「實值類型」* (value type)  
   
- 如果您需要多個需求，請在大括弧 ( *) 內使用逗號分隔的* 「條件約束清單」`{ }`(constraint list)。 To require an accessible constructor, you include the [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) keyword in the list. 若需要參考類型，請包括 `Class` 關鍵字；若需要實值類型，請包括 `Structure` 關鍵字。  
+ 如果您需要多個需求，請在大括弧 ( *) 內使用逗號分隔的* 「條件約束清單」`{ }`(constraint list)。 若要要求可存取的函式，您必須在清單中包含[新的 Operator](../../../../visual-basic/language-reference/operators/new-operator.md)關鍵字。 若需要參考類型，請包括 `Class` 關鍵字；若需要實值類型，請包括 `Structure` 關鍵字。  
   
  如需條件約束的詳細資訊，請參閱 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)。  
   
@@ -151,11 +151,11 @@ ms.locfileid: "74350127"
 - [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [類型字元](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [值類型和參考類型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [資料類型](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [共變數和反變數](../../concepts/covariance-contravariance/index.md)
 - [迭代器](../../../../visual-basic/programming-guide/concepts/iterators.md)

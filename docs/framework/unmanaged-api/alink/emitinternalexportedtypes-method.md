@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446493"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes 方法
-Emits types added to the assembly. Call this method after known internal types have been added.  
+發出加入至元件的類型。 在新增已知的內部類型之後，呼叫這個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,13 +35,13 @@ HRESULT EmitInternalExportedTypes(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- ID of assembly.  
+ 元件的識別碼。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h  
+ 需要 alink. h  
   
 ## <a name="see-also"></a>請參閱
 

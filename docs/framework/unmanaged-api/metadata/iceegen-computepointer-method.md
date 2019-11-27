@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448750"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer 方法
-Determines the buffer for the specified code section.  
+判斷指定之程式碼區段的緩衝區。  
   
- This method is obsolete and should not be used.  
+ 這個方法已過時，不應使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,20 +39,20 @@ HRESULT ComputePointer (
   
 ## <a name="parameters"></a>參數  
  `section`  
- [in] The code section for which to return a buffer.  
+ 在要傳回緩衝區的程式碼區段。  
   
  `RVA`  
- [in] The relative virtual address of the method for which to get a pointer.  
+ 在要取得指標之方法的相對虛擬位址。  
   
  `lpBuffer`  
- [out] A pointer to the returned buffer.  
+ 脫銷傳回之緩衝區的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

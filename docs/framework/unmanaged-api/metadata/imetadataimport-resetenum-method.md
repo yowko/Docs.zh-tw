@@ -36,17 +36,17 @@ HRESULT ResetEnum (
   
 ## <a name="parameters"></a>參數  
  `hEnum`  
- [in] The enumerator to reset.  
+ 在要重設的列舉值。  
   
  `ulPos`  
- [in] The new position at which to place the enumerator.  
+ 在要放置枚舉器的新位置。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

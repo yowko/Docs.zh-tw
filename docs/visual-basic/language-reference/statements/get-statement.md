@@ -19,7 +19,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351177"
 ---
 # <a name="get-statement"></a>Get 陳述式
-Declares a `Get` property procedure used to retrieve the value of a property.  
+宣告用來取出屬性值的 `Get` 屬性程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,43 +33,43 @@ End Get
   
 |詞彙|定義|  
 |---|---|  
-|`attributelist`|選擇項。 See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Optional on at most one of the `Get` and `Set` statements in this property. 可以是下列其中一項：<br /><br /> -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`statements`|選擇項。 One or more statements that run when the `Get` property procedure is called.|  
-|`End Get`|必要項。 Terminates the definition of the `Get` property procedure.|  
+|`attributelist`|選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
+|`accessmodifier`|在此屬性中的最多一個 `Get` 和 `Set` 語句上為選擇性。 可以是下列其中一項：<br /><br /> -   [保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私](../../../visual-basic/language-reference/modifiers/private.md)用<br />-   `Protected Friend`<br /><br /> 請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`statements`|選擇性。 呼叫 `Get` 屬性程式時，所執行的一或多個語句。|  
+|`End Get`|必要。 結束 `Get` 屬性程式的定義。|  
   
 ## <a name="remarks"></a>備註  
- Every property must have a `Get` property procedure unless the property is marked `WriteOnly`. The `Get` procedure is used to return the current value of the property.  
+ 除非屬性標示為 `WriteOnly`，否則每個屬性都必須有 `Get` 的屬性程式。 `Get` 程式是用來傳回屬性的目前值。  
   
- Visual Basic automatically calls a property's `Get` procedure when an expression requests the property's value.  
+ 當運算式要求屬性的值時，Visual Basic 會自動呼叫屬性的 `Get` 程式。  
   
- The body of the property declaration can contain only the property's `Get` and `Set` procedures between the [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. It cannot store anything other than those procedures. In particular, it cannot store the property's current value. You must store this value outside the property, because if you store it inside either of the property procedures, the other property procedure cannot access it. The usual approach is to store the value in a [Private](../../../visual-basic/language-reference/modifiers/private.md) variable declared at the same level as the property. You must define a `Get` procedure inside the property to which it applies.  
+ 屬性宣告的主體只能包含屬性的 `Get`，以及[屬性語句](../../../visual-basic/language-reference/statements/property-statement.md)和 `End Property` 語句之間的 `Set` 程式。 它不能儲存那些程式以外的任何專案。 特別是，它無法儲存屬性的目前值。 您必須將此值儲存在屬性之外，因為如果您將它儲存在其中一個屬性程式中，另一個屬性程式就無法存取它。 一般的方法是將值儲存在與屬性相同層級所宣告的[私](../../../visual-basic/language-reference/modifiers/private.md)用變數中。 您必須在套用的屬性內定義 `Get` 程式。  
   
- The `Get` procedure defaults to the access level of its containing property unless you use `accessmodifier` in the `Get` statement.  
+ 除非您在 `Get` 語句中使用 `accessmodifier`，否則 `Get` 程式預設為其包含屬性的存取層級。  
   
 ## <a name="rules"></a>規則  
   
-- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Get` procedure `Private`, but not `Public`.  
+- **混合存取層級。** 如果您要定義讀寫屬性，您可以選擇性地為 `Get` 或 `Set` 程式指定不同的存取層級，但不能同時為兩者。 如果您這樣做，程式存取層級必須比屬性的存取層級更嚴格。 例如，如果屬性是 `Friend`宣告的，您可以宣告 `Get` 程式 `Private`但不會 `Public`。  
   
-     If you are defining a `ReadOnly` property, the `Get` procedure represents the entire property. You cannot declare a different access level for `Get`, because that would set two access levels for the property.  
+     如果您要定義 `ReadOnly` 屬性，`Get` 程式會代表整個屬性。 您無法為 `Get`宣告不同的存取層級，因為這會為屬性設定兩個存取層級。  
   
-- **Return Type.** The [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) can declare the data type of the value it returns. The `Get` procedure automatically returns that data type. You can specify any data type or the name of an enumeration, structure, class, or interface.  
+- **傳回類型。** [Property 語句](../../../visual-basic/language-reference/statements/property-statement.md)可以宣告它所傳回之值的資料類型。 `Get` 程式會自動傳回該資料類型。 您可以指定任何資料類型，或是列舉、結構、類別或介面的名稱。  
   
-     If the `Property` statement does not specify `returntype`, the procedure returns `Object`.  
+     如果 `Property` 語句未指定 `returntype`，程式會傳回 `Object`。  
   
 ## <a name="behavior"></a>行為  
   
-- **Returning from a Procedure.** When the `Get` procedure returns to the calling code, execution continues within the statement that requested the property value.  
+- **從程式傳回。** 當 `Get` 程式回到呼叫程式碼時，會在要求屬性值的語句中繼續執行。  
   
-     `Get` property procedures can return a value using either the [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) or by assigning the return value to the property name. For more information, see "Return Value" in [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md).  
+     `Get` 屬性程式可以使用[Return 語句](../../../visual-basic/language-reference/statements/return-statement.md)或將傳回值指派給屬性名稱來傳回值。 如需詳細資訊，請參閱[Function 語句](../../../visual-basic/language-reference/statements/function-statement.md)中的「傳回值」。  
   
-     The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.  
+     `Exit Property` 和 `Return` 語句會導致立即離開屬性程式。 任何數目的 `Exit Property` 和 `Return` 語句都可以出現在程式中的任何位置，而且您可以混合 `Exit Property` 和 `Return` 語句。  
   
-- **Return Value.** To return a value from a `Get` procedure, you can either assign the value to the property name or include it in a [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md). The `Return` statement simultaneously assigns the `Get` procedure return value and exits the procedure.  
+- **傳回值。** 若要從 `Get` 程式傳回值，您可以將值指派給屬性名稱，或將它包含在[Return 語句](../../../visual-basic/language-reference/statements/return-statement.md)中。 `Return` 語句會同時指派 `Get` 程式傳回值並結束程式。  
   
-     If you use `Exit Property` without assigning a value to the property name, the `Get` procedure returns the default value for the property's data type. For more information, see "Return Value" in [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md).  
+     如果您使用 `Exit Property` 而不指派屬性名稱的值，則 `Get` 程式會傳回屬性之資料類型的預設值。 如需詳細資訊，請參閱[Function 語句](../../../visual-basic/language-reference/statements/function-statement.md)中的「傳回值」。  
   
-     The following example illustrates two ways the read-only property `quoteForTheDay` can return the value held in the private variable `quoteValue`.  
+     下列範例說明唯讀屬性 `quoteForTheDay` 可以傳回 `quoteValue`的私用變數中保留之值的兩種方式。  
   
      [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]  
   
@@ -78,7 +78,7 @@ End Get
      [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>範例  
- The following example uses the `Get` statement to return the value of a property.  
+ 下列範例會使用 `Get` 語句來傳回屬性的值。  
   
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  
   

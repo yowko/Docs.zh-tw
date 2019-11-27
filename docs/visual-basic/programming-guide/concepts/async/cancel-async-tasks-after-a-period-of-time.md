@@ -9,14 +9,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347953"
 ---
-# <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>Cancel Async Tasks after a Period of Time (Visual Basic)
+# <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>在一段時間後取消非同步工作（Visual Basic）
 
 如果不想等候作業完成，則可以使用 <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> 方法，在一段時間之後取消非同步作業。 這個方法排定取消未在 `CancelAfter` 運算式所指定之2期間內完成的任何相關工作。
 
-This example adds to the code that’s developed in [Cancel an Async Task or a List of Tasks (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to download a list of websites and to display the length of the contents of each one.
+這個範例會將新增至 [[取消非同步工作] 或 [工作清單（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) ] 中所開發的程式碼，以下載網站清單並顯示每一項的內容長度。
 
 > [!NOTE]
-> To run the examples, you must have Visual Studio 2012 or later and the .NET Framework 4.5 or later installed on your computer.
+> 若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本，以及 .NET Framework 4.5 或更新版本。
 
 ## <a name="downloading-the-example"></a>下載範例
 
@@ -26,21 +26,21 @@ This example adds to the code that’s developed in [Cancel an Async Task or a L
 
 2. 在功能表列上，依序選擇 [檔案]、[開啟舊檔]及 [專案/方案]。
 
-3. In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.
+3. 在 [**開啟專案**] 對話方塊中，開啟保存解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningVB 的方案（.sln）檔案。
 
 4. 在方案總管中，開啟 **CancelAfterTime** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
 
-5. 選擇 F5 鍵以執行專案。
+5. 選擇 F5 鍵執行執行專案。
 
      選擇 CTRL+F5 鍵以執行專案，而不進行偵錯。
 
 6. 執行程式數次，確認輸出可能會顯示所有網站、沒有網站或某些網站的輸出。
 
- If you don't want to download the project, you can review the MainWindow.xaml.vb file at the end of this topic.
+ 如果您不想要下載專案，您可以參閱本主題結尾的 Mainwindow.xaml。
 
 ## <a name="building-the-example"></a>建置範例
 
-The example in this topic adds to the project that's developed in [Cancel an Async Task or a List of Tasks (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to cancel a list of tasks. 雖然未明確地使用 [取消] 按鈕，但是此範例會使用相同的 UI。
+本主題中的範例會新增至取消一項非同步工作[或工作清單（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)中所開發的專案，以取消工作清單。 雖然未明確地使用 [取消] 按鈕，但是此範例會使用相同的 UI。
 
 若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelAListOfTasks] 作為 [啟始專案]。 將本主題中的變更新增至該專案。
 
@@ -74,7 +74,7 @@ Private Async Sub startButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub
 ```
 
-執行程式數次，確認輸出可能會顯示所有網站、沒有網站或某些網站的輸出。 The following output is a sample:
+執行程式數次，確認輸出可能會顯示所有網站、沒有網站或某些網站的輸出。 下列輸出是一個範例：
 
 ```console
 Length of the downloaded string: 35990.
@@ -88,7 +88,7 @@ Downloads canceled.
 
 ## <a name="complete-example"></a>完整範例
 
-The following code is the complete text of the MainWindow.xaml.vb file for the example. 星號會標記已針對此範例新增的項目。
+下列程式碼是範例的 Mainwindow.xaml 檔案的完整文字。 星號會標記已針對此範例新增的項目。
 
 請注意，您必須新增 <xref:System.Net.Http> 的參考。
 
@@ -197,6 +197,6 @@ End Class
 
 - [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [逐步解說：使用 Async 和 Await 存取 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Cancel an Async Task or a List of Tasks (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
+- [取消一項非同步工作或工作清單（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
 - [微調非同步應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [非同步範例：微調應用程式 (英文)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式)

@@ -9,11 +9,11 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347958"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Cancel an Async Task or a List of Tasks (Visual Basic)
+# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>取消一項非同步工作或工作清單（Visual Basic）
 
 如果您不想要等候非同步應用程式完成，則可以設定可用來取消非同步應用程式的按鈕。 遵循本主題中的範例，即可將取消按鈕新增至下載某個網站內容或網站清單的應用程式。
 
-The examples use the UI that [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) describes.
+這些範例會使用[微調非同步應用程式（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)所述的 UI。
 
 > [!NOTE]
 > 若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。
@@ -30,15 +30,15 @@ The examples use the UI that [Fine-Tuning Your Async Application (Visual Basic)]
 
 2. 在功能表列上，依序選擇 [檔案]、[開啟舊檔]及 [專案/方案]。
 
-3. In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.
+3. 在 [**開啟專案**] 對話方塊中，開啟保存解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningVB 的方案（.sln）檔案。
 
 4. 在方案總管中，開啟 **CancelATask** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
 
-5. 選擇 F5 鍵以執行專案。
+5. 選擇 F5 鍵執行執行專案。
 
      選擇 CTRL+F5 鍵以執行專案，而不進行偵錯。
 
- If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.
+ 如果您不想要下載專案，您可以參閱本主題結尾的 Mainwindow.xaml。
 
 ### <a name="building-the-example"></a>建置範例
 
@@ -46,7 +46,7 @@ The examples use the UI that [Fine-Tuning Your Async Application (Visual Basic)]
 
 若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [StarterCode] 作為 [啟始專案]，而非 [CancelATask]。
 
-Then add the following changes to the MainWindow.xaml.vb file of that project.
+然後將下列變更新增至該專案的 Mainwindow.xaml 檔案。
 
 1. 宣告 `CancellationTokenSource` 變數 `cts`，這是在存取它之所有方法的範圍內。
 
@@ -78,7 +78,7 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
       cts = New CancellationTokenSource()
       ```
 
-    - 在下載所指定網站內容的 `AccessTheWebAsync` 呼叫中，傳送 `cts` 的 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 屬性作為引數。 如果要求取消，則 `Token` 屬性會傳播訊息。 新增 catch 區塊，以在使用者選擇取消下載作業時顯示訊息。 下列程式碼示範這些變更。
+    - 在下載所指定網站內容的 `AccessTheWebAsync` 呼叫中，傳送 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 的 `cts` 屬性作為引數。 如果要求取消，則 `Token` 屬性會傳播訊息。 新增 catch 區塊，以在使用者選擇取消下載作業時顯示訊息。 下列程式碼示範這些變更。
 
       ```vb
       Try
@@ -97,7 +97,7 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
       End Try
       ```
 
-4. 在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient> 型別中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 多載來下載網站的內容。 將 `ct` (`AccessTheWebAsync` 的 <xref:System.Threading.CancellationToken> 參數) 傳遞為第二個引數。 如果使用者選擇 [取消] 按鈕，則權杖會夾帶訊息。
+4. 在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 型別中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient> 多載來下載網站的內容。 將 `ct` (<xref:System.Threading.CancellationToken> 的 `AccessTheWebAsync` 參數) 傳遞為第二個引數。 如果使用者選擇 [取消] 按鈕，則權杖會夾帶訊息。
 
     下列程式碼示範 `AccessTheWebAsync` 中的變更。
 
@@ -124,14 +124,14 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
     End Function
     ```
 
-5. If you don’t cancel the program, it produces the following output:
+5. 如果您未取消程式，則會產生下列輸出：
 
     ```console
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-    If you choose the **Cancel** button before the program finishes downloading the content, the program produces the following output:
+    如果您在程式完成下載內容之前選擇 [**取消**] 按鈕，程式會產生下列輸出：
 
     ```console
     Ready to download.
@@ -150,15 +150,15 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
 
 2. 在功能表列上，依序選擇 [檔案]、[開啟舊檔]及 [專案/方案]。
 
-3. In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.
+3. 在 [**開啟專案**] 對話方塊中，開啟保存解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningVB 的方案（.sln）檔案。
 
 4. 在方案總管中，開啟 **CancelAListOfTasks** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
 
-5. 選擇 F5 鍵以執行專案。
+5. 選擇 F5 鍵執行執行專案。
 
      選擇 CTRL+F5 鍵以執行專案，而不進行偵錯。
 
- If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.
+ 如果您不想要下載專案，您可以參閱本主題結尾的 Mainwindow.xaml。
 
 ### <a name="building-the-example"></a>建置範例
 
@@ -221,7 +221,7 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
     Await AccessTheWebAsync(cts.Token)
     ```
 
-5. If you don’t cancel the program, it produces the following output:
+5. 如果您未取消程式，則會產生下列輸出：
 
     ```console
     Length of the downloaded string: 35939.
@@ -261,7 +261,7 @@ Then add the following changes to the MainWindow.xaml.vb file of that project.
 
 ### <a name="cancel-a-task-example"></a>取消工作範例
 
-The following code is the complete MainWindow.xaml.vb file for the example that cancels a single task.
+下列程式碼是取消單一工作之範例的完整 Mainwindow.xaml。
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -346,7 +346,7 @@ End Class
 
 ### <a name="cancel-a-list-of-tasks-example"></a>取消工作清單範例
 
-The following code is the complete MainWindow.xaml.vb file for the example that cancels a list of tasks.
+下列程式碼是取消工作清單之範例的完整 Mainwindow.xaml 檔案。
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -469,4 +469,4 @@ End Class
 - <xref:System.Threading.CancellationToken>
 - [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [微調非同步應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [非同步範例：微調應用程式 (英文)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式)

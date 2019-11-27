@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426719"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints 方法
-Gets an enumerator for an array of generic parameter constraints associated with the generic parameter represented by the specified token.  
+取得與指定標記所代表的泛型參數相關聯之泛型參數條件約束陣列的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,33 +39,33 @@ HRESULT EnumGenericParamConstraints (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in、out]列舉值的指標。  
   
  `tk`  
- [in]   A token that represents the generic parameter whose constraints are to be enumerated.  
+ 在  Token，代表要列舉其條件約束的泛型參數。  
   
  `rGenericParamConstraints`  
- [out] The array of generic parameter constraints to enumerate.  
+ 脫銷要列舉的泛型參數條件約束陣列。  
   
  `cMax`  
- [in]   The requested maximum number of tokens to place in `rGenericParamConstraints`.  
+ 在  要在 `rGenericParamConstraints`中放置的最大權杖數目。  
   
  `pcGenericParamConstraints`  
- [out] A pointer to the number of tokens placed in `rGenericParamConstraints`.  
+ 脫銷放在 `rGenericParamConstraints`中之標記數目的指標。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParameterConstraints` returned successfully.|  
-|`S_FALSE`|`phEnum` has no member elements. In this case, `pcGenericParameterConstraints` is set to 0 (zero).|  
+|`S_OK`|已成功傳回 `EnumGenericParameterConstraints`。|  
+|`S_FALSE`|`phEnum` 沒有成員元素。 在此情況下，`pcGenericParameterConstraints` 會設定為0（零）。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

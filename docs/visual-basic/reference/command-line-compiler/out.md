@@ -13,7 +13,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352380"
 ---
-# <a name="-out-visual-basic"></a>-out (Visual Basic)
+# <a name="-out-visual-basic"></a>-out （Visual Basic）
 指定輸出檔案的名稱。  
   
 ## <a name="syntax"></a>語法  
@@ -26,19 +26,19 @@ ms.locfileid: "74352380"
   
 |詞彙|定義|  
 |---|---|  
-|`filename`|必要項。 The name of the output file the compiler creates. If the file name contains a space, enclose the name in quotation marks (" ").|  
+|`filename`|必要。 編譯器所建立之輸出檔的名稱。 如果檔案名包含空格，請將名稱括在引號（""）中。|  
   
 ## <a name="remarks"></a>備註  
- Specify the full name and extension of the file to create. If you do not, the .exe file takes its name from the source-code file containing the `Sub Main` procedure, and the .dll file takes its name from the first source-code file.  
+ 指定要建立之檔案的完整名稱和副檔名。 如果不這麼做，.exe 檔案會從包含 `Sub Main` 程式的原始程式碼檔取得其名稱，而 .dll 檔案會從第一個原始程式碼檔案取得其名稱。  
   
- If you specify a file name without an .exe or .dll extension, the compiler automatically adds the extension for you, depending on the value specified for the `-target` compiler option.  
+ 如果您指定不含 .exe 或 .dll 副檔名的檔案名，編譯器會自動為您加入延伸模組，視針對 `-target` 編譯器選項所指定的值而定。  
   
-|To set -out in the Visual Studio integrated development environment|  
+|在 Visual Studio 的整合式開發環境中設定|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. 在 [專案] 功能表上，按一下 [屬性]。 <br />2.  Click the **Application** tab.<br />3.  Modify the value in the **Assembly Name** box.|  
+|1. 在**方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2. 按一下 [**應用程式**] 索引標籤。<br />3. 修改 [**元件名稱**] 方塊中的值。|  
   
 ## <a name="example"></a>範例  
- The following code compiles `T2.vb` and creates output file `T2.exe`.  
+ 下列程式碼會編譯 `T2.vb` 並建立 `T2.exe`的輸出檔。  
   
 ```console
 vbc t2.vb -out:t3.exe  
@@ -47,5 +47,5 @@ vbc t2.vb -out:t3.exe
 ## <a name="see-also"></a>請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-target （Visual Basic）](../../../visual-basic/reference/command-line-compiler/target.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

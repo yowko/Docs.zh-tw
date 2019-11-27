@@ -174,7 +174,7 @@ class Class1
 
 ## <a name="asymmetric-decryption"></a>非對稱解密
 
-一般而言，有一方 (A 方) 會同時產生公開和私密金鑰，並將金鑰儲存在記憶體或密碼編譯金鑰容器中。 A 方接著會將公開金鑰傳送給另一方 (B 方)。 Using the public key, party B encrypts data and sends the data back to party A. After receiving the data, party A decrypts it using the private key that corresponds. 只有在 A 方使用的私密金鑰對應於 B 方用來加密資料的公開金鑰時，解密才會成功。
+一般而言，有一方 (A 方) 會同時產生公開和私密金鑰，並將金鑰儲存在記憶體或密碼編譯金鑰容器中。 A 方接著會將公開金鑰傳送給另一方 (B 方)。 使用公開金鑰時，合作物件 B 會加密資料，並將資料傳回給合作物件 A。在收到資料之後，合作物件 A 會使用對應的私密金鑰來解密它。 只有在 A 方使用的私密金鑰對應於 B 方用來加密資料的公開金鑰時，解密才會成功。
 
 如需如何在安全的密碼編譯金鑰容器儲存非對稱金鑰，以及稍後如何擷取非對稱金鑰的相關資訊，請參閱 [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。
 

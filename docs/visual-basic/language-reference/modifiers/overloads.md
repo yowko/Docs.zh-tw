@@ -23,15 +23,15 @@ ms.locfileid: "74351415"
 
 ## <a name="remarks"></a>備註
 
-*Overloading* is the practice of supplying more than one definition for a given property or procedure name in the same scope. Redeclaring a property or procedure with a different signature is sometimes called *hiding by signature*.
+多*載是針對*相同範圍內的指定屬性或程式名稱提供一個以上定義的作法。 以不同的簽章重新宣告屬性或程式，有時稱為*依*簽章隱藏。
 
 ## <a name="rules"></a>規則
 
-- **Declaration Context.** You can use `Overloads` only in a property or procedure declaration statement.
+- **宣告內容。** 您只能在屬性或程式宣告語句中使用 `Overloads`。
 
-- **Combined Modifiers.** You cannot specify `Overloads` together with [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) in the same procedure declaration.
+- **合併的修飾詞。** 您不能在相同的程式宣告中同時指定 `Overloads` 與[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) 。
 
-- **Required Differences.** The *signature* in this declaration must be different from the signature of every property or procedure that it overloads. 簽章包含屬性或程序名稱，以及下列項目：
+- **必要的差異。** 此*宣告中的*簽章必須與它多載之每個屬性或程式的簽章不同。 簽章包含屬性或程序名稱，以及下列項目：
 
   - 參數的數目
 
@@ -45,7 +45,7 @@ ms.locfileid: "74351415"
 
   所有多載必須有相同的名稱，但每個多載的名稱在一或多個上述方面中必須和其他多載不同。 這可讓編譯器在程式碼呼叫屬性或程序時可識別要使用的版本。
 
-- **Disallowed Differences.** 變更下列一或多個項目，對於多載屬性或程序是無效的，因為它們屬於簽章：
+- **不允許的差異。** 變更下列一或多個項目，對於多載屬性或程序是無效的，因為它們屬於簽章：
 
   - 是否傳回值 (適用於程序)
 
@@ -59,9 +59,9 @@ ms.locfileid: "74351415"
 
   - 屬性或程序修飾詞關鍵字 (例如 `Public` 或 `Shared`)
 
-- **Optional Modifier.** You do not have to use the `Overloads` modifier when you are defining multiple overloaded properties or procedures in the same class. 不過，如果您在其中一個宣告中使用 `Overloads`，您必須在全部的宣告中使用它。
+- **選擇性的修飾詞。** 當您在同一個類別中定義多個多載屬性或程式時，不需要使用 `Overloads` 修飾詞。 不過，如果您在其中一個宣告中使用 `Overloads`，您必須在全部的宣告中使用它。
 
-- **Shadowing and Overloading.** `Overloads` can also be used to shadow an existing member, or set of overloaded members, in a base class. 以此方式使用 `Overloads` 時，即表示您會宣告同名的屬性或方法和相同的參數清單作為基底類別成員，而且您並未提供 `Shadows` 關鍵字。
+- **遮蔽和多載。** `Overloads` 也可以用來在基類中遮蔽現有的成員或一組多載成員。 以此方式使用 `Overloads` 時，即表示您會宣告同名的屬性或方法和相同的參數清單作為基底類別成員，而且您並未提供 `Shadows` 關鍵字。
 
 如果您使用 `Overrides`，編譯器會隱含地新增 `Overloads`，讓程式庫 API 更容易使用 C#。
 
@@ -69,7 +69,7 @@ ms.locfileid: "74351415"
 
 - [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)
 
-- [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
 
 - [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)
 
@@ -79,6 +79,6 @@ ms.locfileid: "74351415"
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [程序多載化](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic 中的泛型型別](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
 - [如何：定義轉換運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

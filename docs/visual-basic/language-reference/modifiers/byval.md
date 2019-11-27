@@ -1,5 +1,5 @@
 ---
-title: ByVal
+title: ParamArray
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ByVal
@@ -16,10 +16,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351589"
 ---
 # <a name="byval-visual-basic"></a>ByVal (Visual Basic)
-Specifies that an argument is passed [by value](../../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md), so that the called procedure or property cannot change the value of a variable underlying the argument in the calling code. If no modifier is specified, ByVal is the default.
+指定以傳[值方式](../../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)傳遞引數，讓被呼叫的程式或屬性無法變更呼叫程式碼中引數基礎的變數值。 如果未指定任何修飾詞，則預設值為 ByVal。
 
 > [!NOTE]
-> Because it is the default, you do not have to explicitly specify the `ByVal` keyword in method signatures. It tends to produce noisy code and often leads to the non-default `ByRef` keyword being overlooked.
+> 因為它是預設值，所以您不需要在方法簽章中明確指定 `ByVal` 關鍵字。 它通常會產生雜訊的程式碼，而且經常會導致非預設的 `ByRef` 關鍵字被忽略。
 
 ## <a name="remarks"></a>備註
  `ByVal` 修飾詞可用於以下內容：
@@ -28,14 +28,14 @@ Specifies that an argument is passed [by value](../../programming-guide/language
 
  [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)
   
- [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)
+ [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
   
  [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)
 
 ## <a name="example"></a>範例
- The following example demonstrates the use of the `ByVal` parameter passing mechanism with a reference type argument. In the example, the argument is `c1`, an instance of class `Class1`. `ByVal` prevents the code in the procedures from changing the underlying value of the reference argument, `c1`, but does not protect the accessible fields and properties of `c1`.
+ 下列範例示範如何使用 `ByVal` 參數傳遞機制搭配參考型別引數。 在此範例中，引數是 `c1`，類別的實例 `Class1`。 `ByVal` 可防止程式中的程式碼變更參考引數的基礎值，`c1`，但不會保護 `c1`的可存取欄位和屬性。
 
  [!code-vb[VbVbalrKeywords#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class5.vb#10)]
 

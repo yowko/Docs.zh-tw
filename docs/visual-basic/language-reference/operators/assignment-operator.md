@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350194"
 ---
 # <a name="-operator-visual-basic"></a>= 運算子 (Visual Basic)
-Assigns a value to a variable or property.  
+將值指派給變數或屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,22 +26,22 @@ variableorproperty = value
   
 ## <a name="parts"></a>組件  
  `variableorproperty`  
- Any writable variable or any property.  
+ 任何可寫入的變數或任何屬性。  
   
  `value`  
- Any literal, constant, or expression.  
+ 任何常值、常數或運算式。  
   
 ## <a name="remarks"></a>備註  
- The element on the left side of the equal sign (`=`) can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). The `=` operator assigns the value on its right to the variable or property on its left.  
+ 等號（`=`）左邊的元素可以是簡單的純量變數、屬性或陣列的元素。 變數或屬性不可為[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。 `=` 運算子會將其右邊的值指派給其左邊的變數或屬性。  
   
 > [!NOTE]
-> The `=` operator is also used as a comparison operator. For details, see [Comparison Operators](../../../visual-basic/language-reference/operators/comparison-operators.md).  
+> `=` 運算子也會用來做為比較運算子。 如需詳細資訊，請參閱[比較運算子](../../../visual-basic/language-reference/operators/comparison-operators.md)。  
   
 ## <a name="overloading"></a>多載化  
- The `=` operator can be overloaded only as a relational comparison operator, not as an assignment operator. 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ `=` 運算子只能多載為關聯式比較運算子，而不是指派運算子。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- The following example demonstrates the assignment operator. The value on the right is assigned to the variable on the left.  
+ 下列範例示範指派運算子。 右邊的值會指派給左邊的變數。  
   
  [!code-vb[VbVbalrOperators#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#9)]  
   
@@ -50,9 +50,9 @@ variableorproperty = value
 - [&= 運算子](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
 - [*= 運算子](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)
 - [+= 運算子](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)
-- [-= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
-- [/= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
-- [\\= Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [-= 運算子（Visual Basic）](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+- [/= 運算子（Visual Basic）](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [\\= 運算子](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
 - [^= 運算子](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
 - [陳述式](../../../visual-basic/programming-guide/language-features/statements.md)
 - [比較運算子](../../../visual-basic/language-reference/operators/comparison-operators.md)

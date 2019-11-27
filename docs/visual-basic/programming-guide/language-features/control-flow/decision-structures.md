@@ -17,33 +17,33 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353968"
 ---
 # <a name="decision-structures-visual-basic"></a>決策結構 (Visual Basic)
-Visual Basic lets you test conditions and perform different operations depending on the results of that test. You can test for a condition being true or false, for various values of an expression, or for various exceptions generated when you execute a series of statements.  
+Visual Basic 可讓您測試條件，並根據該測試的結果來執行不同的作業。 您可以針對運算式的各種值，或在執行一連串語句時產生的各種例外狀況，測試條件為 true 或 false。  
   
- The following illustration shows a decision structure that tests for a condition being true and takes different actions depending on whether it is true or false.  
+ 下圖顯示的決策結構會測試條件是否為 true，並根據其為 true 或 false 來採取不同的動作。  
   
- ![A flow chart of an If...Then...Else construction.](./media/decision-structures/if-then-else-construction.gif)  
+ ![If...Then...Else 結構。](./media/decision-structures/if-then-else-construction.gif)  
   
-## <a name="ifthenelse-construction"></a>If...Then...Else Construction  
- `If...Then...Else` constructions let you test for one or more conditions and run one or more statements depending on each condition. You can test conditions and take actions in the following ways:  
+## <a name="ifthenelse-construction"></a>If...Then...Else 結構  
+ `If...Then...Else` 結構可讓您測試一或多個條件，並根據每個條件執行一或多個語句。 您可以透過下列方式來測試條件並採取動作：  
   
-- Run one or more statements if a condition is `True`  
+- 如果條件 `True`，請執行一或多個語句  
   
-- Run one or more statements if a condition is `False`  
+- 如果條件 `False`，請執行一或多個語句  
   
-- Run some statements if a condition is `True` and others if it is `False`  
+- 如果條件 `True`，則執行一些語句，如果是 `False` 則為其他語句  
   
-- Test an additional condition if a prior condition is `False`  
+- 如果先前的條件 `False`，請測試其他條件  
   
- The control structure that offers all these possibilities is the [If...Then...Else Statement](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). You can use a single-line version if you have just one test and one statement to run. If you have a more complex set of conditions and actions, you can use the multiple-line version.  
+ 提供所有這些可能性的控制結構是[If .。。然後 .。。Else 語句](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)。 如果您只有一個測試和一個語句要執行，則可以使用單行版本。 如果您有一組更複雜的條件和動作，則可以使用多行版本。  
   
-## <a name="selectcase-construction"></a>Select...Case Construction  
- The `Select...Case` construction lets you evaluate an expression one time and run different sets of statements based on different possible values. For more information, see [Select...Case Statement](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
+## <a name="selectcase-construction"></a>Select...Case 結構  
+ `Select...Case` 結構可讓您評估一次運算式，並根據不同的可能值來執行不同的語句集。 如需詳細資訊，請參閱[Select .。。Case 語句](../../../../visual-basic/language-reference/statements/select-case-statement.md)。  
   
-## <a name="trycatchfinally-construction"></a>Try...Catch...Finally Construction  
- `Try...Catch...Finally` constructions let you run a set of statements under an environment that retains control if any one of your statements causes an exception. You can take different actions for different exceptions. You can optionally specify a block of code that runs before you exit the whole `Try...Catch...Finally` construction, regardless of what occurs. 如需詳細資訊，請參閱 [Try...Catch...Finally 陳述式](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
+## <a name="trycatchfinally-construction"></a>Try...Catch...Finally 結構  
+ `Try...Catch...Finally` 結構可讓您在環境中執行一組語句，如果其中任何一個語句造成例外狀況，就會保留控制。 您可以針對不同的例外狀況採取不同的動作。 您可以選擇性地指定在結束整個 `Try...Catch...Finally` 結構之前執行的程式碼區塊，而不論發生什麼事。 如需詳細資訊，請參閱 [Try...Catch...Finally 陳述式](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
   
 > [!NOTE]
-> For many control structures, when you click a keyword, all of the keywords in the structure are highlighted. For instance, when you click `If` in an `If...Then...Else` construction, all instances of `If`, `Then`, `ElseIf`, `Else`, and `End If` in the construction are highlighted. To move to the next or previous highlighted keyword, press CTRL+SHIFT+DOWN ARROW or CTRL+SHIFT+UP ARROW.  
+> 對於許多控制項結構而言，當您按一下關鍵字時，結構中的所有關鍵詞都會反白顯示。 例如，當您在 `If...Then...Else` 結構中按一下 `If` 時，會反白顯示該結構中 `If`、`Then`、`ElseIf`、`Else`和 `End If` 的所有實例。 若要移至下一個或上一個反白顯示的關鍵字，請按 CTRL + SHIFT + 向下鍵或 CTRL + SHIFT + 向上鍵。  
   
 ## <a name="see-also"></a>請參閱
 

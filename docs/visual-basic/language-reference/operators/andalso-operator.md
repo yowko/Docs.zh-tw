@@ -19,7 +19,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350242"
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso 運算子 (Visual Basic)
-Performs short-circuiting logical conjunction on two expressions.  
+在兩個運算式上執行短路邏輯結合。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,45 +31,45 @@ result = expression1 AndAlso expression2
   
 |詞彙|定義|  
 |---|---|  
-|`result`|必要項。 任何 `Boolean` 運算式。 The result is the `Boolean` result of comparison of the two expressions.|  
-|`expression1`|必要項。 任何 `Boolean` 運算式。|  
-|`expression2`|必要項。 任何 `Boolean` 運算式。|  
+|`result`|必要。 任何 `Boolean` 運算式。 結果會是兩個運算式比較的 `Boolean` 結果。|  
+|`expression1`|必要。 任何 `Boolean` 運算式。|  
+|`expression2`|必要。 任何 `Boolean` 運算式。|  
   
 ## <a name="remarks"></a>備註  
- A logical operation is said to be *short-circuiting* if the compiled code can bypass the evaluation of one expression depending on the result of another expression. If the result of the first expression evaluated determines the final result of the operation, there is no need to evaluate the second expression, because it cannot change the final result. Short-circuiting can improve performance if the bypassed expression is complex, or if it involves procedure calls.  
+ *如果已*編譯的程式碼可以根據另一個運算式的結果，略過一個運算式的評估，則邏輯作業稱為「最少運算」。 如果第一個運算式評估的結果決定了作業的最後結果，就不需要評估第二個運算式，因為它無法變更最終的結果。 如果略過的運算式很複雜，或如果它牽涉到程序呼叫，則最少運算可以改善效能。  
   
- If both expressions evaluate to `True`, `result` is `True`. The following table illustrates how `result` is determined.  
+ 如果兩個運算式都評估為 `True`，`result` 就會 `True`。 下表說明如何決定 `result`。  
   
-|If `expression1` is|And `expression2` is|The value of `result` is|  
+|如果 `expression1` 為|而 `expression2` 為|`result` 的值為|  
 |---|---|---|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`False`|  
-|`False`|(not evaluated)|`False`|  
+|`False`|（未評估）|`False`|  
   
 ## <a name="data-types"></a>資料類型  
- The `AndAlso` operator is defined only for the [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic converts each operand as necessary to `Boolean` before evaluating the expression. If you assign the result to a numeric type, Visual Basic converts it from `Boolean` to that type such that `False` becomes `0` and `True` becomes `-1`.
-For more information, see [Boolean Type Conversions](../data-types/boolean-data-type.md#type-conversions).
+ `AndAlso` 運算子只會針對[布林資料類型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)定義。 Visual Basic 在評估運算式之前，會視需要將每個運算元轉換成 `Boolean`。 如果您將結果指派給數數值型別，Visual Basic 會將它從 `Boolean` 轉換成該類型，如此 `False` 就會變成 `0` 而 `True` 會變成 `-1`。
+如需詳細資訊，請參閱布林型別[轉換](../data-types/boolean-data-type.md#type-conversions)。
   
 ## <a name="overloading"></a>多載化  
- The [And Operator](../../../visual-basic/language-reference/operators/and-operator.md) and the [IsFalse Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md) can be *overloaded*, which means that a class or structure can redefine their behavior when an operand has the type of that class or structure. Overloading the `And` and `IsFalse` operators affects the behavior of the `AndAlso` operator. If your code uses `AndAlso` on a class or structure that overloads `And` and `IsFalse`, be sure you understand their redefined behavior. 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ [And 運算子](../../../visual-basic/language-reference/operators/and-operator.md)和[IsFalse 運算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)可以多載，這表示當運算元具有該類別或結構的類型*時，類別*或結構可以重新定義其行為。 多載 `And` 和 `IsFalse` 運算子會影響 `AndAlso` 運算子的行為。 如果您的程式碼在多載 `And` 和 `IsFalse`的類別或結構上使用 `AndAlso`，請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- The following example uses the `AndAlso` operator to perform a logical conjunction on two expressions. The result is a `Boolean` value that represents whether the entire conjoined expression is true. If the first expression is `False`, the second is not evaluated.  
+ 下列範例會使用 `AndAlso` 運算子，在兩個運算式上執行邏輯結合。 結果為 `Boolean` 值，表示整個子句運算式是否為 true。 如果 `False`第一個運算式，則不會評估第二個運算式。  
   
  [!code-vb[VbVbalrOperators#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#24)]  
   
- The preceding example produces results of `True`, `False`, and `False`, respectively. In the calculation of `secondCheck`, the second expression is not evaluated because the first is already `False`. However, the second expression is evaluated in the calculation of `thirdCheck`.  
+ 上述範例會分別產生 `True`、`False`和 `False`的結果。 在 `secondCheck`的計算中，因為第一個運算式已經 `False`，所以不會進行評估。 不過，會在 `thirdCheck`的計算中評估第二個運算式。  
   
 ## <a name="example"></a>範例  
- The following example shows a `Function` procedure that searches for a given value among the elements of an array. If the array is empty, or if the array length has been exceeded, the `While` statement does not test the array element against the search value.  
+ 下列範例顯示的 `Function` 程式會在陣列的元素之間搜尋指定的值。 如果陣列是空的，或超過陣列長度，則 `While` 語句不會針對搜尋值測試陣列元素。  
   
  [!code-vb[VbVbalrOperators#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#25)]  
   
 ## <a name="see-also"></a>請參閱
 
-- [Logical/Bitwise Operators (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [邏輯/位運算子（Visual Basic）](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [And 運算子](../../../visual-basic/language-reference/operators/and-operator.md)
 - [IsFalse 運算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic 中的邏輯和位運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

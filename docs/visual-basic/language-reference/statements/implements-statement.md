@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351143"
 ---
 # <a name="implements-statement"></a>Implements 陳述式
-Specifies one or more interfaces, or interface members, that must be implemented in the class or structure definition in which it appears.  
+指定一個或多個介面或介面成員，必須在其出現所在的類別或結構定義中執行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,29 +29,29 @@ Implements interfacename.interfacemember [, ...]
   
 ## <a name="parts"></a>組件  
  `interfacename`  
- 必要項。 An interface whose properties, procedures, and events are to be implemented by corresponding members in the class or structure.  
+ 必要。 介面，其屬性、程式和事件會由類別或結構中的對應成員來執行。  
   
  `interfacemember`  
- 必要項。 The member of an interface that is being implemented.  
+ 必要。 正在執行之介面的成員。  
   
 ## <a name="remarks"></a>備註  
- An interface is a collection of prototypes representing the members (properties, procedures, and events) the interface encapsulates. Interfaces contain only the declarations for members; classes and structures implement these members. 如需詳細資訊，請參閱[介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。  
+ 「介面」（interface）是原型的集合，代表介面封裝的成員（屬性、程式和事件）。 介面只包含成員的宣告;類別和結構會執行這些成員。 如需詳細資訊，請參閱 [介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)中定義的介面的私用 C++ 專屬實作。  
   
- The `Implements` statement must immediately follow the `Class` or `Structure` statement.  
+ `Implements` 語句必須緊接在 `Class` 或 `Structure` 語句之後。  
   
- When you implement an interface, you must implement all the members declared in the interface. Omitting any member is considered to be a syntax error. To implement an individual member, you specify the [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) keyword (which is separate from the `Implements` statement) when you declare the member in the class or structure. 如需詳細資訊，請參閱[介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。  
+ 當您執行介面時，您必須執行介面中宣告的所有成員。 省略任何成員會被視為語法錯誤。 若要執行個別成員，當您在類別或結構中宣告成員時，可以指定[Implements](../../../visual-basic/language-reference/statements/implements-clause.md)關鍵字（與 `Implements` 語句分開）。 如需詳細資訊，請參閱 [介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)中定義的介面的私用 C++ 專屬實作。  
   
- Classes can use [Private](../../../visual-basic/language-reference/modifiers/private.md) implementations of properties and procedures, but these members are accessible only by casting an instance of the implementing class into a variable declared to be of the type of the interface.  
+ 類別可以使用屬性和程式的[私](../../../visual-basic/language-reference/modifiers/private.md)用實作為，但只有將實做類別的實例轉換成宣告為介面類別型的變數，才能存取這些成員。  
   
 ## <a name="example"></a>範例  
- The following example shows how to use the `Implements` statement to implement members of an interface. It defines an interface named `ICustomerInfo` with an event, a property, and a procedure. The class `customerInfo` implements all the members defined in the interface.  
+ 下列範例顯示如何使用 `Implements` 語句來執行介面的成員。 它會定義名為 `ICustomerInfo` 的介面，其中包含事件、屬性和程式。 類別 `customerInfo` 會執行介面中定義的所有成員。  
   
  [!code-vb[VbVbalrStatements#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#33)]  
   
- Note that the class `customerInfo` uses the `Implements` statement on a separate source code line to indicate that the class implements all the members of the `ICustomerInfo` interface. Then each member in the class uses the `Implements` keyword as part of its member declaration to indicate that it implements that interface member.  
+ 請注意，類別 `customerInfo` 在不同的源程式碼上使用 `Implements` 語句，表示該類別會執行 `ICustomerInfo` 介面的所有成員。 然後，類別中的每個成員都會使用 `Implements` 關鍵字做為其成員宣告的一部分，以表示它會實作為該介面成員。  
   
 ## <a name="example"></a>範例  
- The following two procedures show how you could use the interface implemented in the preceding example. To test the implementation, add these procedures to your project and call the `testImplements` procedure.  
+ 下列兩個程式顯示如何使用上述範例中所實的介面。 若要測試執行，請將這些程式新增至您的專案，並呼叫 `testImplements` 程式。  
   
  [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   

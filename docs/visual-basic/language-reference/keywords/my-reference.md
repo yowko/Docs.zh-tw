@@ -13,20 +13,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351689"
 ---
 # <a name="my-reference-visual-basic"></a>My 參考 (Visual Basic)
-The `My` feature makes programming faster and easier by giving you intuitive access to commonly used methods, properties, and events. This table lists the objects contained in `My`, and the actions that can be performed with each.  
+`My` 功能可讓您以直覺的方式存取常用的方法、屬性和事件，讓程式設計更快速且更容易。 下表列出包含在 `My`中的物件，以及可對每個執行的動作。  
   
 |**動作**|**物件**|  
 |----------------|----------------|  
-|Accessing application information and services.|`My.Application` 物件包含下列類別：<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> 提供適用於所有專案的成員。<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 提供適用於 Windows Forms 應用程式的成員。<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> 提供適用於主控台應用程式的成員。|  
-|Accessing the host computer and its resources, services, and data.|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|  
-|Accessing the forms in the current project.|[My.Forms 物件](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
-|Accessing the application log.|`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|  
-|Accessing the current web request.|[My.Request 物件](../../../visual-basic/language-reference/objects/my-request-object.md)|  
-|Accessing resource elements.|[My.Resources 物件](../../../visual-basic/language-reference/objects/my-resources-object.md)|  
-|Accessing the current web response.|[My.Response 物件](../../../visual-basic/language-reference/objects/my-response-object.md)|  
-|Accessing user and application level settings.|[My.Settings 物件](../../../visual-basic/language-reference/objects/my-settings-object.md)|  
-|Accessing the current user's security context.|`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|  
-|Accessing XML Web services referenced by the current project.|[My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
+|存取應用程式資訊和服務。|`My.Application` 物件包含下列類別：<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> 提供適用於所有專案的成員。<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 提供適用於 Windows Forms 應用程式的成員。<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> 提供適用於主控台應用程式的成員。|  
+|存取主機電腦及其資源、服務和資料。|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|  
+|存取目前專案中的表單。|[My.Forms 物件](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
+|存取應用程式記錄檔。|`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|  
+|存取目前的 web 要求。|[My.Request 物件](../../../visual-basic/language-reference/objects/my-request-object.md)|  
+|存取資源元素。|[My.Resources 物件](../../../visual-basic/language-reference/objects/my-resources-object.md)|  
+|存取目前的 web 回應。|[My.Response 物件](../../../visual-basic/language-reference/objects/my-response-object.md)|  
+|存取使用者和應用層級設定。|[My.Settings 物件](../../../visual-basic/language-reference/objects/my-settings-object.md)|  
+|存取目前使用者的安全性內容。|`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|  
+|存取目前專案所參考的 XML Web Service。|[My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
   
 ## <a name="see-also"></a>請參閱
 

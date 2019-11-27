@@ -19,7 +19,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353790"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit 陳述式 (Visual Basic)
-Forces explicit declaration of all variables in a file, or allows implicit declarations of variables.  
+強制明確宣告檔案中的所有變數，或允許變數的隱含宣告。  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,38 +29,38 @@ Option Explicit { On | Off }
   
 ## <a name="parts"></a>組件  
  `On`  
- 選擇項。 Enables `Option Explicit` checking. If `On` or `Off` is not specified, the default is `On`.  
+ 選擇性。 啟用 `Option Explicit` 檢查。 如果未指定 `On` 或 `Off`，則預設值為 `On`。  
   
  `Off`  
- 選擇項。 Disables `Option Explicit` checking.  
+ 選擇性。 停用 `Option Explicit` 檢查。  
   
 ## <a name="remarks"></a>備註  
- When `Option Explicit On` or `Option Explicit` appears in a file, you must explicitly declare all variables by using the `Dim` or `ReDim` statements. If you try to use an undeclared variable name, an error occurs at compile time. The `Option Explicit Off` statement allows implicit declaration of variables.  
+ 當 `Option Explicit On` 或 `Option Explicit` 出現在檔案中時，您必須使用 `Dim` 或 `ReDim` 語句來明確宣告所有變數。 如果您嘗試使用未宣告的變數名稱，則會在編譯時期發生錯誤。 `Option Explicit Off` 語句允許變數的隱含宣告。  
   
- If used, the `Option Explicit` statement must appear in a file before any other source code statements.  
+ 如果使用的話，`Option Explicit` 語句必須出現在檔案中的任何其他原始程式碼語句之前。  
   
 > [!NOTE]
-> Setting `Option Explicit` to `Off` is generally not a good practice. 一或多個位置中的變數名稱可能有拼字錯誤，這會在程式執行時造成非預期的結果。  
+> 將 `Option Explicit` 設定為 `Off` 通常不是很好的作法。 一或多個位置中的變數名稱可能有拼字錯誤，這會在程式執行時造成非預期的結果。  
   
-## <a name="when-an-option-explicit-statement-is-not-present"></a>When an Option Explicit Statement Is Not Present  
- If the source code does not contain an `Option Explicit` statement, the **Option Explicit** setting on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used. If the command-line compiler is used, the [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) compiler option is used.  
+## <a name="when-an-option-explicit-statement-is-not-present"></a>當 Option Explicit 語句不存在時  
+ 如果原始程式碼不包含 `Option Explicit` 語句，則會使用 [編譯] 頁面上的 [**選項明確**設定]，也就是 [[專案設計工具（Visual Basic）](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) ]。 如果使用命令列編譯器，則會使用[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)編譯器選項。  
   
-#### <a name="to-set-option-explicit-in-the-ide"></a>To set Option Explicit in the IDE  
+#### <a name="to-set-option-explicit-in-the-ide"></a>若要在 IDE 中設定 Option Explicit  
   
 1. 在方案總管中選取專案。 在 [專案] 功能表上，按一下 [屬性]。  
   
 2. 按一下 [編譯] 索引標籤。  
   
-3. Set the value in the **Option Explicit** box.  
+3. 在 [**選項明確**] 方塊中設定值。  
   
- When you create a new project, the **Option Explicit** setting on the **Compile** tab is set to the **Option Explicit** setting in the **VB Defaults** dialog box. To access the **VB Defaults** dialog box, on the **Tools** menu, click **Options**. 在 [選項] 對話方塊中，展開 [專案和方案]，然後按一下 [VB 預設值]。 The initial default setting in **VB Defaults** is `On`.  
+ 當您建立新的專案時，[**編譯**] 索引標籤上的 [ **option explicit** ] 設定會設定為 [ **VB 預設值**] 對話方塊中的 [ **option explicit** ] 設定。 若要存取 [ **VB 預設值**] 對話方塊，請在 [**工具**] 功能表上按一下 [**選項**]。 在 [選項] 對話方塊中，展開 [專案和方案]，然後按一下 [VB 預設值]。 **VB 預設值**中的初始預設設定是 `On`。  
   
-#### <a name="to-set-option-explicit-on-the-command-line"></a>To set Option Explicit on the command line  
+#### <a name="to-set-option-explicit-on-the-command-line"></a>若要在命令列上設定 Option Explicit  
   
-- Include the [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) compiler option in the **vbc** command.  
+- 在**vbc**命令中包含[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)編譯器選項。  
   
 ## <a name="example"></a>範例  
- The following example uses the `Option Explicit` statement to force explicit declaration of all variables. Attempting to use an undeclared variable causes an error at compile time.  
+ 下列範例會使用 `Option Explicit` 語句來強制執行所有變數的明確宣告。 嘗試使用未宣告的變數會在編譯時期導致錯誤。  
   
  [!code-vb[VbVbalrStatements#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#47)]  
   

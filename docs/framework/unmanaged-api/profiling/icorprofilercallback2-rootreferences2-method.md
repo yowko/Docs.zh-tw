@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439676"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2 方法
-Notifies the profiler about root references after a garbage collection has occurred. This method is an extension of the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) method.  
+在垃圾收集發生後，通知分析工具關於根參考。 這個方法是[ICorProfilerCallback：： RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)方法的延伸。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,30 +38,30 @@ HRESULT RootReferences2(
   
 ## <a name="parameters"></a>參數  
  `cRootRefs`  
- [in] The number of elements in the `rootRefIds`, `rootKinds`, `rootFlags`, and `rootIds` arrays.  
+ 在`rootRefIds`、`rootKinds`、`rootFlags`和 `rootIds` 陣列中的元素數目。  
   
  `rootRefIds`  
- [in] An array of object IDs, each of which references either a static object or an object on the stack. Elements in the `rootKinds` array provide information to classify corresponding elements in the `rootRefIds` array.  
+ 在物件識別碼的陣列，其中每一個都會參考堆疊上的靜態物件或物件。 `rootKinds` 陣列中的元素會提供資訊來分類 `rootRefIds` 陣列中的對應元素。  
   
  `rootKinds`  
- [in] An array of [COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) values that indicate the type of the garbage collection root.  
+ 在[COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md)值的陣列，表示垃圾收集根目錄的類型。  
   
  `rootFlags`  
- [in] An array of [COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) values that describe the properties of a garbage collection root.  
+ 在[COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md)值的陣列，描述垃圾收集根目錄的屬性。  
   
  `rootIds`  
- [in] An array of UINT_PTR values that point to an integer that contains additional information about the garbage collection root, depending on the value of the `rootKinds` parameter.  
+ 在UINT_PTR 值的陣列，這些值會指向包含垃圾收集根目錄之其他資訊的整數，視 `rootKinds` 參數的值而定。  
   
- If the type of the root is a stack, the root ID is for the function that contains the variable. If that root ID is 0, the function is an unnamed function that is internal to the CLR. If the type of the root is a handle, the root ID is for the garbage collection handle. For the other root types, the ID is an opaque value and should be ignored.  
+ 如果根的類型是堆疊，則根識別碼適用于包含變數的函式。 如果該根識別碼為0，則函式是 CLR 內部的未命名函數。 如果根的類型是控制碼，則根識別碼是用於垃圾收集控制碼。 對於其他根類型，識別碼是不透明的值，應該予以忽略。  
   
 ## <a name="remarks"></a>備註  
- The `rootRefIds`, `rootKinds`, `rootFlags`, and `rootIds` arrays are parallel arrays. That is, `rootRefIds[i]`, `rootKinds[i]`, `rootFlags[i]`, and `rootIds[i]` all concern the same root.  
+ `rootRefIds`、`rootKinds`、`rootFlags`和 `rootIds` 陣列都是平行陣列。 也就是說，`rootRefIds[i]`、`rootKinds[i]`、`rootFlags[i]`和 `rootIds[i]` 全都關心相同的根。  
   
- Both `RootReferences` and `RootReferences2` are called to notify the profiler. Profilers will normally implement one method or the other, but not both, because the information passed in `RootReferences2` is a superset of that passed in `RootReferences`.  
+ `RootReferences` 和 `RootReferences2` 都會呼叫來通知分析工具。 分析工具通常會實作為一個方法，但不能同時執行兩者，因為傳入的資訊 `RootReferences2` 是傳入 `RootReferences`的超集合。  
   
- It is possible for entries in `rootRefIds` to be zero, which implies that the corresponding root reference is null and does not refer to an object on the managed heap.  
+ `rootRefIds` 中的專案可能是零，這表示對應的根參考是 null，而且不會參考 managed 堆積上的物件。  
   
- The object IDs returned by `RootReferences2` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects from old addresses to new addresses. 因此，分析工具不應嘗試在 `RootReferences2` 呼叫期間檢查物件。 When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, all objects have been moved to their new locations and can be safely inspected.  
+ 在回呼本身期間，`RootReferences2` 傳回的物件識別碼無效，因為垃圾收集可能正在將物件從舊位址移至新位址。 因此，分析工具不應嘗試在 `RootReferences2` 呼叫期間檢查物件。 呼叫[ICorProfilerCallback2：： GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)時，所有物件都已移至其新位置，而且可以安全地進行檢查。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

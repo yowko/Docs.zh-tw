@@ -39,38 +39,38 @@ HRESULT EnumMembers (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in、out]列舉值的指標。  
   
  `cl`  
- [in] A TypeDef token representing the type whose members are to be enumerated.  
+ 在TypeDef token，代表要列舉其成員的類型。  
   
  `rMembers`  
- [out] The array used to hold the MemberDef tokens.  
+ 脫銷用來保存 MemberDef 標記的陣列。  
   
  `cMax`  
  [in] `rMembers` 陣列的大小上限。  
   
  `pcTokens`  
- [out] The actual number of MemberDef tokens returned in `rMembers`.  
+ 脫銷`rMembers`中傳回的實際 MemberDef token 數目。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers` returned successfully.|  
-|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|已成功傳回 `EnumMembers`。|  
+|`S_FALSE`|沒有要列舉的 MemberDef token。 在此情況下，`pcTokens` 為零。|  
   
 ## <a name="remarks"></a>備註  
- When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class. It does not return any members that the class inherits, even if the class provides an implementation for those inherited members. To enumerate inherited members, the caller must explicitly walk the inheritance chain. Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.
+ 列舉類別的成員集合時，`EnumMembers` 只會傳回直接在類別上定義的成員（欄位和方法，但**不會**傳回屬性或事件）。 它不會傳回類別所繼承的任何成員，即使類別提供這些繼承成員的執行。 若要列舉繼承的成員，呼叫者必須明確地引導繼承鏈。 請注意，繼承鏈的規則可能會根據發出原始中繼資料的語言或編譯器而有所不同。
  
- Properties and events are not enumerated by `EnumMembers`. To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).
+ `EnumMembers`不會列舉屬性和事件。 若要列舉這些，請使用[EnumProperties](imetadataimport-enumproperties-method.md)或[EnumEvents](imetadataimport-enumevents-method.md)。
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

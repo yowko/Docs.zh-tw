@@ -13,27 +13,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353219"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>如何：使用 ActiveX 控制項 (Visual Basic)
-ActiveX controls are COM components or objects you can insert into a Web page or other application to reuse packaged functionality someone else has programmed. You can use ActiveX controls developed for Visual Basic 6.0 and earlier versions to add features to the **Toolbox** of Visual Studio.  
+ActiveX 控制項是 COM 元件或物件，您可以將其插入網頁或其他應用程式中，以重複使用其他人所編寫的封裝功能。 您可以使用針對 Visual Basic 6.0 和舊版所開發的 ActiveX 控制項，將功能加入 Visual Studio 的 [**工具箱**] 中。  
   
-### <a name="to-add-activex-controls-to-the-toolbox"></a>To add ActiveX controls to the toolbox  
+### <a name="to-add-activex-controls-to-the-toolbox"></a>將 ActiveX 控制項加入至工具箱  
   
-1. On the **Tools** menu, click **Choose Toolbox Items**.  
+1. 在 [**工具**] 功能表上，按一下 **[選擇工具箱專案**]。  
   
-     The **Choose Toolbox** dialog box appears.  
+     [**選擇工具箱**] 對話方塊隨即出現。  
   
-2. Click the **COM Components** tab.  
+2. 按一下 [ **COM 元件**] 索引標籤。  
   
-3. Select the check box next to the ActiveX control you want to use, and then click **OK**.  
+3. 選取您想要使用之 ActiveX 控制項旁的核取方塊，然後按一下 **[確定]** 。  
   
-     The new control appears with the other tools in the **Toolbox**.  
+     新的控制項隨即出現，並顯示 [**工具箱**] 中的其他工具。  
   
     > [!NOTE]
-    > You can use the Aximp utility to manually create an interop assembly for ActiveX controls. For more information, see [Aximp.exe (Windows Forms ActiveX Control Importer)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  
+    > 您可以使用 Aximp.exe 公用程式，以手動方式建立 ActiveX 控制項的 interop 元件。 如需詳細資訊，請參閱[aximp.exe （Windows Forms ActiveX 控制項匯入工具）](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)。  
   
 ## <a name="see-also"></a>請參閱
 
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
-- [操作說明：將 ActiveX 控制項新增至 Windows Forms](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
+- [如何：將 ActiveX 控制項新增至 Windows Forms](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
 - [Aximp.exe (Windows Forms ActiveX 控制項匯入工具)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [在 Windows Forms 上裝載 ActiveX 控制項的考慮因素](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)
 - [互通性的疑難排解](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

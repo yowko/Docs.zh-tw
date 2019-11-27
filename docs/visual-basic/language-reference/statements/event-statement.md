@@ -58,26 +58,26 @@ End Event
   
 |組件|描述|  
 |---|---|  
-|`attrlist`|選擇項。 套用至此事件的屬性清單。 以逗號分隔多個屬性。 You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").|  
-|`accessmodifier`|選擇項。 指定哪些程式碼可以存取此事件。 可以是下列其中一項：<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)—any code that can access the element that declares it can access it.<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)—only code within its class or a derived class can access it.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)—only code in the same assembly can access it.<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)—only code in the element that declares it can access it.<br /> -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)-only code in the event's class, a derived class, or the same assembly can access it. <br />- [Private Protected](../../language-reference/modifiers/private-protected.md)-only code in the event's class or a derived class in the same assembly can access it.|  
-|`Shared`|選擇項。 指定此事件與類別或結構的特定執行個體不相關。|  
-|`Shadows`|選擇項。 指出這個事件會在基底類別中重新宣告並隱藏相同名稱的程式設計項目，或一組多載項目。 您可以使用任何其他類型遮蔽任何一種已宣告的項目。<br /><br /> 無法從遮蔽項目的衍生類別內使用遮蔽的項目，除了從無法存取遮蔽項目的位置以外。 例如，如果 `Private` 項目會遮蔽基底類別項目，沒有 `Private` 項目存取權限的程式碼會改為存取基底類別項目。|  
-|`eventname`|必要項。 事件的名稱；依照標準變數命名慣例。|  
-|`parameterlist`|選擇項。 本機變數清單，表示此事件的參數。 You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.|  
-|`Implements`|選擇項。 指出此事件會實作介面的事件。|  
-|`implementslist`|如果使用 `Implements`，則為必要項。 實作之 `Sub` 程序的清單。 以逗號分隔多個程序：<br /><br /> *implementedprocedure* [ , *implementedprocedure* ... ]<br /><br /> 每個 `implementedprocedure` 都具有下列語法和組件：<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` - Required. 介面名稱，該介面實作包含類別或結構的此程序。<br />-   `Definedname` - Required. 名稱，據以在 `interface` 中定義程序。 不一定要與 `name` 相同，這是此程序用來實作已定義程序的名稱。|  
-|`Custom`|必要項。 事件宣告為 `Custom` 必須定義自訂 `AddHandler`、`RemoveHandler` 和 `RaiseEvent` 存取子。|  
-|`delegatename`|選擇項。 委派的名稱，指定事件處理常式簽章。|  
-|`AddHandler`|必要項。 宣告 `AddHandler` 存取子，指定加入事件處理常式時要執行的陳述式，可以明確地使用 `AddHandler` 陳述式或隱含地使用 `Handles` 子句。|  
-|`End AddHandler`|必要項。 終止 `AddHandler` 區塊。|  
-|`value`|必要項。 參數名稱。|  
-|`RemoveHandler`|必要項。 宣告 `RemoveHandler` 存取子，指定使用 `RemoveHandler` 陳述式移除事件處理常式時要執行的陳述式。|  
-|`End RemoveHandler`|必要項。 終止 `RemoveHandler` 區塊。|  
-|`RaiseEvent`|必要項。 宣告 `RaiseEvent` 存取子，指定使用 `RaiseEvent` 陳述式引發事件處理常式時要執行的陳述式。 一般而言，這樣會叫用 `AddHandler` 和 `RemoveHandler` 存取子所維護的委派。|  
-|`End RaiseEvent`|必要項。 終止 `RaiseEvent` 區塊。|  
-|`delegatesignature`|必要項。 參數的清單，符合 `delegatename` 委派所需的參數。 You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.|  
-|`statements`|選擇項。 陳述式，包含 `AddHandler`、`RemoveHandler` 和 `RaiseEvent` 方法的內文。|  
-|`End Event`|必要項。 終止 `Event` 區塊。|  
+|`attrlist`|選擇性。 套用至此事件的屬性清單。 以逗號分隔多個屬性。 您必須將[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)放在角括弧中（「`<`」和「`>`」）。|  
+|`accessmodifier`|選擇性。 指定哪些程式碼可以存取此事件。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)-任何可以存取宣告它之專案的程式碼都可以存取它。<br />-   [保護](../../../visual-basic/language-reference/modifiers/protected.md)-只有其類別或衍生類別內的程式碼可以存取它。<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)—只有相同元件中的程式碼可以存取它。<br />-   [私](../../../visual-basic/language-reference/modifiers/private.md)用-只有在宣告它的專案中的程式碼可以存取它。<br /> 在事件的類別、衍生類別或相同元件中，-   [受保護](../../language-reference/modifiers/protected-friend.md)的僅限 Friend 程式碼可以存取它。 <br />在事件類別或相同元件中的衍生類別中，- [私用受保護](../../language-reference/modifiers/private-protected.md)的程式碼可以存取它。|  
+|`Shared`|選擇性。 指定此事件與類別或結構的特定執行個體不相關。|  
+|`Shadows`|選擇性。 指出這個事件會在基底類別中重新宣告並隱藏相同名稱的程式設計項目，或一組多載項目。 您可以使用任何其他類型遮蔽任何一種已宣告的項目。<br /><br /> 無法從遮蔽項目的衍生類別內使用遮蔽的項目，除了從無法存取遮蔽項目的位置以外。 例如，如果 `Private` 項目會遮蔽基底類別項目，沒有 `Private` 項目存取權限的程式碼會改為存取基底類別項目。|  
+|`eventname`|必要。 事件的名稱；依照標準變數命名慣例。|  
+|`parameterlist`|選擇性。 本機變數清單，表示此事件的參數。 您必須將[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)括在括弧中。|  
+|`Implements`|選擇性。 指出此事件會實作介面的事件。|  
+|`implementslist`|如果使用 `Implements`，則為必要項。 實作之 `Sub` 程序的清單。 以逗號分隔多個程序：<br /><br /> *implementedprocedure* [， *implementedprocedure* ...]<br /><br /> 每個 `implementedprocedure` 都具有下列語法和組件：<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`-必要。 介面名稱，該介面實作包含類別或結構的此程序。<br />-   `Definedname`-必要。 名稱，據以在 `interface` 中定義程序。 不一定要與 `name` 相同，這是此程序用來實作已定義程序的名稱。|  
+|`Custom`|必要。 事件宣告為 `Custom` 必須定義自訂 `AddHandler`、`RemoveHandler` 和 `RaiseEvent` 存取子。|  
+|`delegatename`|選擇性。 委派的名稱，指定事件處理常式簽章。|  
+|`AddHandler`|必要。 宣告 `AddHandler` 存取子，指定加入事件處理常式時要執行的陳述式，可以明確地使用 `AddHandler` 陳述式或隱含地使用 `Handles` 子句。|  
+|`End AddHandler`|必要。 終止 `AddHandler` 區塊。|  
+|`value`|必要。 參數名稱。|  
+|`RemoveHandler`|必要。 宣告 `RemoveHandler` 存取子，指定使用 `RemoveHandler` 陳述式移除事件處理常式時要執行的陳述式。|  
+|`End RemoveHandler`|必要。 終止 `RemoveHandler` 區塊。|  
+|`RaiseEvent`|必要。 宣告 `RaiseEvent` 存取子，指定使用 `RaiseEvent` 陳述式引發事件處理常式時要執行的陳述式。 一般而言，這樣會叫用 `AddHandler` 和 `RemoveHandler` 存取子所維護的委派。|  
+|`End RaiseEvent`|必要。 終止 `RaiseEvent` 區塊。|  
+|`delegatesignature`|必要。 參數的清單，符合 `delegatename` 委派所需的參數。 您必須將[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)括在括弧中。|  
+|`statements`|選擇性。 陳述式，包含 `AddHandler`、`RemoveHandler` 和 `RaiseEvent` 方法的內文。|  
+|`End Event`|必要。 終止 `Event` 區塊。|  
   
 ## <a name="remarks"></a>備註  
  一旦已經宣告事件，使用 `RaiseEvent` 陳述式來引發事件。 一般事件可能會如下列片段所示宣告和引發：  
@@ -89,9 +89,9 @@ End Event
   
  若要處理事件，您必須使用 `Handles` 或 `AddHandler` 陳述式，建立它與事件處理常式副程式的關聯。 副程式與事件的簽章必須相符。 若要處理共用的事件，您必須使用 `AddHandler` 陳述式。  
   
- 您只能在模組層級使用 `Event`。 This means the *declaration context* for an event must be a class, structure, module, or interface, and cannot be a source file, namespace, procedure, or block. 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+ 您只能在模組層級使用 `Event`。 這表示事件的宣告*內容*必須是類別、結構、模組或介面，而且不能是原始程式檔、命名空間、程式或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
   
- 在大部分情況下，您可以使用本主題「語法」一節中的第一個語法來宣告事件。 不過，某些情況下需要您對詳細事件行為有更多掌控。 本主題中「語法」一節中的最後一個語法使用 `Custom` 關鍵字，藉由讓您定義自訂事件以提供控制權。 在自訂事件中，您完整指定當程式碼於事件中加入或移除事件處理常式，或是當程式碼引發事件時，會發生什麼情況。 For examples, see [How to: Declare Custom Events To Conserve Memory](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) and [How to: Declare Custom Events To Avoid Blocking](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
+ 在大部分情況下，您可以使用本主題「語法」一節中的第一個語法來宣告事件。 不過，某些情況下需要您對詳細事件行為有更多掌控。 本主題中「語法」一節中的最後一個語法使用 `Custom` 關鍵字，藉由讓您定義自訂事件以提供控制權。 在自訂事件中，您完整指定當程式碼於事件中加入或移除事件處理常式，或是當程式碼引發事件時，會發生什麼情況。 如需範例，請參閱[如何：宣告自訂事件以節省記憶體](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)和[如何：宣告自訂事件以避免封鎖](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會使用事件以從 10 秒到 0 秒倒數計時。 程式碼會說明數個事件相關的方法、屬性和陳述式。 包括 `RaiseEvent` 陳述式。  
@@ -102,7 +102,7 @@ End Event
   
  `Form1` 的程式碼會指定表單的初始和終止狀態。 它也包含引發事件時執行的程式碼。  
   
- 若要使用此範例，請建立新的 Windows Form 專案。 然後新增一個名為 `Button1` 的按鈕，和名為 `TextBox1` 的文字方塊到名為 `Form1` 的主表單中。 Then right-click the form and click **View Code** to open the code editor.  
+ 若要使用此範例，請建立新的 Windows Form 專案。 然後新增一個名為 `Button1` 的按鈕，和名為 `TextBox1` 的文字方塊到名為 `Form1` 的主表單中。 然後以滑鼠右鍵按一下表單，再按一下 [**查看程式碼**] 以開啟程式碼編輯器。  
   
  將 `WithEvents` 變數加入至 `Form1` 類別的宣告區段：  
   
@@ -112,10 +112,10 @@ End Event
   
  [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
- Press F5 to run the previous example, and click the button labeled **Start**. 第一個文字方塊會開始倒數計時。 在經過完整時間 (10 秒) 之後，第一個文字方塊會顯示 [完成]。  
+ 按 F5 執行前一個範例，然後按一下標示為 [**開始**] 的按鈕。 第一個文字方塊會開始倒數計時。 在經過完整時間 (10 秒) 之後，第一個文字方塊會顯示 [完成]。  
   
 > [!NOTE]
-> `My.Application.DoEvents` 方法不會以與表單相同的方式處理事件。 若要啟用表單以直接處理事件，您可以使用多執行緒。 For more information, see [Managed Threading](../../../standard/threading/index.md).  
+> `My.Application.DoEvents` 方法不會以與表單相同的方式處理事件。 若要啟用表單以直接處理事件，您可以使用多執行緒。 如需詳細資訊，請參閱[Managed 執行緒](../../../standard/threading/index.md)。  
   
 ## <a name="see-also"></a>請參閱
 
@@ -128,5 +128,5 @@ End Event
 - [Delegate 陳述式](../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [如何：宣告自訂事件以節省記憶體](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
 - [如何：宣告自訂事件以避免封鎖](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)
-- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
+- [共用](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)

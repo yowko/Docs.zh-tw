@@ -12,23 +12,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350729"
 ---
 # <a name="myapplication-object"></a>My.Application 物件
-Provides properties, methods, and events related to the current application.  
+提供與目前應用程式相關的屬性、方法和事件。  
   
 ## <a name="remarks"></a>備註  
- For information about the methods and properties of the `My.Application` object, see the following resources:  
+ 如需 `My.Application` 物件的方法和屬性的詳細資訊，請參閱下列資源：  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> for members that are available in all projects.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> 所有專案中可用的成員。  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> for members that are available in Windows Forms applications.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> Windows Forms 應用程式中可用的成員。  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> for members that are available in console applications.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> 主控台應用程式中可用的成員。  
   
 ## <a name="requirements"></a>需求  
  **命名空間︰** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (the base class <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> provides members available in console applications, and its base class <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> provides the members that are available in all projects)  
+ **類別：** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> （基類 <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> 提供主控台應用程式中可用的成員，而其基類 <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> 提供所有專案中的可用成員）  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **元件：** Visual Basic 執行時間程式庫（在 Microsoft 中）  
   
 ## <a name="see-also"></a>請參閱
 

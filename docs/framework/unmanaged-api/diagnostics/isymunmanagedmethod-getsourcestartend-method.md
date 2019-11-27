@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448859"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd 方法
-Gets the start and end document positions for the source of this method. The first array position is the start, and the second array position is the end.  
+取得這個方法之來源的開始和結束檔位置。 第一個陣列位置是 start，而第二個數組位置是結尾。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,22 +37,22 @@ HRESULT GetSourceStartEnd(
   
 ## <a name="parameters"></a>參數  
  `docs`  
- [in] The starting and ending source documents.  
+ 在開始和結束的來源文件。  
   
  `lines`  
- [in] The starting and ending lines in the corresponding source documents.  
+ 在對應來源文件中的開始和結束行。  
   
  `columns`  
- [in] The starting and ending columns in the corresponding source documents.  
+ 在對應來源文件中的開始和結束資料行。  
   
  `pRetVal`  
- [out] `true` if positions were defined; otherwise, `false`.  
+ [out] `true` 如果已定義位置，則為，否則，`false`。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
 ## <a name="see-also"></a>請參閱
 

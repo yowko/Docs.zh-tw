@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431725"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>IMetaDataEmit::DefineModuleRef 方法
-Creates the metadata signature for a module with the specified name.  
+建立具有指定名稱之模組的中繼資料簽章。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,17 +36,17 @@ HRESULT DefineModuleRef (
   
 ## <a name="parameters"></a>參數  
  `szName`  
- [in] The name of the other metadata file, typically a DLL. This is the file name only. Do not use a full path name.  
+ 在其他中繼資料檔案的名稱，通常是 DLL。 此為檔案名。 請勿使用完整路徑名稱。  
   
  `pmur`  
- [out] The assigned `mdModuleRef` token.  
+ 脫銷指派的 `mdModuleRef` token。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

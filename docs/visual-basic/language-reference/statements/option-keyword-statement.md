@@ -13,11 +13,11 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353781"
 ---
-# <a name="option-keyword-statement"></a>Option \<keyword> Statement
-Introduces a statement that specifies a compiler option that applies to the entire source file.  
+# <a name="option-keyword-statement"></a>Option \<關鍵字 > 語句
+引進的語句會指定套用至整個原始程式檔的編譯器選項。  
   
 ## <a name="remarks"></a>備註  
- The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.  
+ 編譯器選項可以控制是否必須明確宣告所有變數、縮小類型轉換是否必須是明確的，或字串是否應做為文字或二進位數量進行比較。  
   
  `Option` 關鍵字可用於以下內容：  
   

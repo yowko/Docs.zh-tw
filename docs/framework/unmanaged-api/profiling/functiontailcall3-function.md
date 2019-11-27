@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427367"
 ---
 # <a name="functiontailcall3-function"></a>FunctionTailcall3 函式
-Notifies the profiler that the currently executing function is about to perform a tail call to another function.  
+通知分析工具，目前正在執行的函式即將對另一個函式執行 tail 呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,27 +32,27 @@ void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>參數  
  `functionOrRemappedID`  
- [in] The identifier of the currently executing function that is about to make a tail call.  
+ 在即將進行 tail 呼叫之目前正在執行之函式的識別碼。  
   
 ## <a name="remarks"></a>備註  
- The `FunctionTailcall3` callback function notifies the profiler as functions are being called. Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.  
+ `FunctionTailcall3` 回呼函式會通知分析工具，因為已呼叫函式。 請使用[ICorProfilerInfo3：： SetEnterLeaveFunctionHooks3 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)來註冊此函式的實作為。  
   
- The `FunctionTailcall3` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
+ `FunctionTailcall3` 函數是回呼;您必須加以執行。 此執行必須使用 `__declspec(naked)` 儲存類別屬性。  
   
- The execution engine does not save any registers before calling this function.  
+ 在呼叫此函式之前，執行引擎不會儲存任何暫存器。  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- 輸入時，您必須儲存您所使用的所有暫存器，包括浮點單位（FPU）中的暫存器。  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- 結束時，您必須透過關閉其呼叫者推送的所有參數來還原堆疊。  
   
- The implementation of `FunctionTailcall3` should not block, because it will delay garbage collection. The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionTailcall3` returns.  
+ `FunctionTailcall3` 的執行不應該封鎖，因為它會延遲垃圾收集。 執行不應嘗試垃圾收集，因為堆疊可能不會處於垃圾收集的唯讀狀態。 如果嘗試垃圾收集，執行時間將會封鎖，直到 `FunctionTailcall3` 傳回為止。  
   
- The `FunctionTailcall3` function must not call into managed code or cause a managed memory allocation in any way.  
+ `FunctionTailcall3` 函式不得呼叫 managed 程式碼，或以任何方式造成 managed 記憶體配置。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorProf.idl  
+ **標頭：** Corprof.idl .idl  
   
  **程式庫：** CorGuids.lib  
   

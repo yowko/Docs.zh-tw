@@ -1,5 +1,5 @@
 ---
-title: Object doesn't support current locale setting
+title: 物件不支援目前的地區設定
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID447

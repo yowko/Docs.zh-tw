@@ -1,5 +1,5 @@
 ---
-title: Can't perform requested operation
+title: 無法執行要求的作業
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID17

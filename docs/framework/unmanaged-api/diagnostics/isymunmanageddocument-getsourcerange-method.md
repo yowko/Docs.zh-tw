@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449144"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange 方法
-Returns the specified range of the embedded source into the given buffer. The buffer must be large enough to hold the source.  
+將內嵌來源的指定範圍傳回到給定的緩衝區。 緩衝區必須夠大，才能容納來源。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,28 +41,28 @@ HRESULT GetSourceRange(
   
 ## <a name="parameters"></a>參數  
  `startLine`  
- [in] The starting line in the current document.  
+ 在目前檔中的起始行。  
   
  `startColumn`  
- [in] The starting column in the current document.  
+ 在目前檔中的起始資料行。  
   
  `endLine`  
- [in] The final line in the current document.  
+ 在目前檔中的最後一行。  
   
  `endColumn`  
- [in] The final column in the current document.  
+ 在目前檔中的最後一個資料行。  
   
  `cSourceBytes`  
- [in] The size of the source, in bytes.  
+ 在來源的大小（以位元組為單位）。  
   
  `pcSourceBytes`  
- [out] A pointer to a variable that receives the source size.  
+ 脫銷接收來源大小之變數的指標。  
   
  `source`  
- [out] The size and length of the specified range of the source document, in bytes.  
+ 脫銷來源文件指定範圍的大小和長度（以位元組為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds.  
+ 如果方法成功，則 S_OK。  
   
 ## <a name="see-also"></a>請參閱
 

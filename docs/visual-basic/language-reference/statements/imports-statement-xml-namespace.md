@@ -1,5 +1,5 @@
 ---
-title: Imports Statement - XML Namespace
+title: Imports 語句-XML 命名空間
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ImportsXmlns
@@ -18,7 +18,7 @@ ms.locfileid: "74351055"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports 陳述式 (XML 命名空間)
 
-Imports XML namespace prefixes for use in XML literals and XML axis properties.
+匯入 XML 常值和 XML 軸屬性中所使用的 XML 命名空間前置詞。
 
 ## <a name="syntax"></a>語法
 
@@ -29,28 +29,28 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="parts"></a>組件
 
 `xmlNamespacePrefix`  
-選擇項。 The string by which XML elements and attributes can refer to `xmlNamespaceName`. If no `xmlNamespacePrefix` is supplied, the imported XML namespace is the default XML namespace. Must be a valid XML identifier. For more information, see [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).
+選擇性。 XML 元素和屬性可以參考 `xmlNamespaceName`的字串。 如果未提供任何 `xmlNamespacePrefix`，則匯入的 XML 命名空間是預設的 XML 命名空間。 必須是有效的 XML 識別碼。 如需詳細資訊，請參閱宣告[的 XML 元素和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。
 
 `xmlNamespaceName`  
-必要項。 The string identifying the XML namespace being imported.
+必要。 識別正在匯入之 XML 命名空間的字串。
 
 ## <a name="remarks"></a>備註
 
-You can use the `Imports` statement to define global XML namespaces that you can use with XML literals and XML axis properties, or as parameters passed to the `GetXmlNamespace` operator. (For information about using the `Imports` statement to import an alias that can be used where type names are used in your code, see [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) The syntax for declaring an XML namespace by using the `Imports` statement is identical to the syntax used in XML. Therefore, you can copy a namespace declaration from an XML file and use it in an `Imports` statement.
+您可以使用 `Imports` 語句來定義可用於 XML 常值和 XML 軸屬性的全域 XML 命名空間，或做為傳遞給 `GetXmlNamespace` 運算子的參數。 （如需有關使用 `Imports` 語句匯入可在程式碼中使用類型名稱之別名的詳細資訊，請參閱[Imports 語句（.Net 命名空間和類型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。使用 `Imports` 語句來宣告 XML 命名空間的語法，與 XML 中使用的語法相同。 因此，您可以從 XML 檔案複製命名空間宣告，並在 `Imports` 語句中使用它。
 
-XML namespace prefixes are useful when you want to repeatedly create XML elements that are from the same namespace. The XML namespace prefix declared with the `Imports` statement is global in the sense that it is available to all code in the file. You can use it when you create XML element literals and when you access XML axis properties. For more information, see [XML Element Literal](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) and [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/index.md).
+當您想要重複建立來自相同命名空間的 XML 元素時，XML 命名空間前置詞非常有用。 以 `Imports` 語句宣告的 XML 命名空間前置詞，在檔案中的所有程式碼都可供使用時，是全域的。 當您建立 XML 專案常值時，以及當您存取 XML 軸屬性時，可以使用它。 如需詳細資訊，請參閱[Xml 元素常](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)值和[xml 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)。
 
-If you define a global XML namespace without a namespace prefix (for example, `Imports <xmlns="http://SomeNameSpace>"`), that namespace is considered the default XML namespace. The default XML namespace is used for any XML element literals or XML attribute axis properties that do not explicitly specify a namespace. The default namespace is also used if the specified namespace is the empty namespace (that is, `xmlns=""`). The default XML namespace does not apply to XML attributes in XML literals or to XML attribute axis properties that do not have a namespace.
+如果您定義不含命名空間前置詞的全域 XML 命名空間（例如 `Imports <xmlns="http://SomeNameSpace>"`），該命名空間會被視為預設的 XML 命名空間。 預設的 XML 命名空間會用於未明確指定命名空間的任何 XML 專案常值或 XML 屬性軸屬性。 如果指定的命名空間是空的命名空間（也就是 `xmlns=""`），也會使用預設的命名空間。 預設的 XML 命名空間不適用於 XML 常值中的 XML 屬性，或是沒有命名空間的 XML 屬性軸屬性。
 
-XML namespaces that are defined in an XML literal, which are called *local XML namespaces*, take precedence over XML namespaces that are defined by the `Imports` statement as global. XML namespaces that are defined by the `Imports` statement take precedence over XML namespaces imported for a Visual Basic project. If an XML literal defines an XML namespace, that local namespace does not apply to embedded expressions.
+Xml 常值中定義的 XML 命名空間（稱為*本機 XML 命名空間*）優先于 `Imports` 語句定義為全域的 xml 命名空間。 `Imports` 語句所定義的 XML 命名空間會優先于針對 Visual Basic 專案匯入的 XML 命名空間。 如果 XML 常值定義 XML 命名空間，該本機命名空間就不會套用至內嵌運算式。
 
-Global XML namespaces follow the same scoping and definition rules as .NET Framework namespaces. As a result, you can include an `Imports` statement to define a global XML namespace anywhere you can import a .NET Framework namespace. This includes both code files and project-level imported namespaces. For information about project-level imported namespaces, see [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).
+全域 XML 命名空間會遵循與 .NET Framework 命名空間相同的範圍和定義規則。 因此，您可以在任何可匯入 .NET Framework 命名空間的位置加入 `Imports` 語句，以定義全域 XML 命名空間。 這包括程式碼檔案和專案層級的匯入命名空間。 如需專案層級匯入之命名空間的詳細資訊，請參閱[專案設計工具、參考頁（Visual Basic）](/visualstudio/ide/reference/references-page-project-designer-visual-basic)。
 
-Each source file can contain any number of `Imports` statements. These must follow option declarations, such as the `Option Strict` statement, and they must precede programming element declarations, such as `Module` or `Class` statements.
+每個來源檔案都可以包含任意數目的 `Imports` 語句。 這些必須遵循 option 宣告（例如 `Option Strict` 語句），而且必須在程式設計專案宣告之前，例如 `Module` 或 `Class` 語句。
 
 ## <a name="example"></a>範例
 
-The following example imports a default XML namespace and an XML namespace identified with the prefix `ns`. It then creates XML literals that use both namespaces.
+下列範例會匯入預設的 XML 命名空間和以前置詞 `ns`識別的 XML 命名空間。 然後，它會建立同時使用這兩個命名空間的 XML 常值。
 
 [!code-vb[VbXMLSamples#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/Module1.vb#45)]
 
@@ -67,7 +67,7 @@ The following example imports a default XML namespace and an XML namespace ident
 
 ## <a name="example"></a>範例
 
-The following example imports the XML namespace prefix `ns`. It then creates an XML literal that uses the namespace prefix and displays the element's final form.
+下列範例會將 XML 命名空間前置詞彙入 `ns`。 然後，它會建立使用命名空間前置詞的 XML 常值，並顯示專案的最終格式。
 
 [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]
 
@@ -82,11 +82,11 @@ The following example imports the XML namespace prefix `ns`. It then creates an 
 </ns:outer>
 ```
 
-Notice that the compiler converted the XML namespace prefix from a global prefix to a local prefix definition.
+請注意，編譯器會將 XML 命名空間前置詞從全域前置詞轉換成本機前置詞定義。
 
 ## <a name="example"></a>範例
 
-The following example imports the XML namespace prefix `ns`. 然後它會使用命名空間的前置詞來建立 XML 常值，以及存取完整名稱為 `ns:name` 的第一個子節點。
+下列範例會將 XML 命名空間前置詞彙入 `ns`。 然後它會使用命名空間的前置詞來建立 XML 常值，以及存取完整名稱為 `ns:name` 的第一個子節點。
 
 [!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]
 

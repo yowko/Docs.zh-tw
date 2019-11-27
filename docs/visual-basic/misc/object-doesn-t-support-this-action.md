@@ -1,5 +1,5 @@
 ---
-title: Object doesn't support this action
+title: 物件不支援此動作
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID445

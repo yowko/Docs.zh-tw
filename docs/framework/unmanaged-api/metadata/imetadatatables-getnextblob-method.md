@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448404"
 ---
 # <a name="imetadatatablesgetnextblob-method"></a>IMetaDataTables::GetNextBlob 方法
-Gets the index of the next binary large object (BLOB) in the table.  
+取得資料表中下一個二進位大型物件（BLOB）的索引。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,17 +36,17 @@ HRESULT GetNextBlob (
   
 ## <a name="parameters"></a>參數  
  `ixBlob`  
- [in] The index, as returned from a column of BLOBs.  
+ 在從 Blob 的資料行傳回的索引。  
   
  `pNext`  
- [out] A pointer to the index of the next BLOB.  
+ 脫銷下一個 BLOB 之索引的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448491"
 ---
 # <a name="ibindingdisplayinitializeforprocess-method"></a>IBindingDisplay::InitializeForProcess 方法
-Initializes the [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) object.  
+初始化[IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,17 +35,17 @@ HRESULT InitializeForProcess (
   
 ## <a name="parameters"></a>參數  
  `pid`  
- [in] The process identifier.  
+ 在處理序識別碼。  
   
 ## <a name="remarks"></a>備註  
- The debugger calls the `InitializeForProcess` method at creation time to initialize the binding display. `InitializeForProcess` must be called at creation time before any other method on `IBindingDisplay` is called.  
+ 偵錯工具會在建立時呼叫 `InitializeForProcess` 方法，以初始化系結顯示。 在呼叫 `IBindingDisplay` 上的任何其他方法之前，必須在建立期間呼叫 `InitializeForProcess`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** BindingDisplay.h  
+ **標頭：** BindingDisplay。h  
   
- **Library:** BindingDisplay.idl  
+ 連結**庫：** BindingDisplay .idl  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

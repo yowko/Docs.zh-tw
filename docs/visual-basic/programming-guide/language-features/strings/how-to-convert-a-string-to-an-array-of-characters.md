@@ -16,15 +16,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352451"
 ---
 # <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>如何：在 Visual Basic 中將字串轉換為字元陣列
-Sometimes it is useful to have data about the characters in your string and the positions of those characters within your string, such as when you are parsing a string. This example shows how you can get an array of the characters in a string by calling the string's <xref:System.String.ToCharArray%2A> method.  
+有時候，您的字串中有字元的相關資料，以及字串內這些字元的位置，例如當您剖析字串時，會很有用。 這個範例示範如何藉由呼叫字串的 <xref:System.String.ToCharArray%2A> 方法，來取得字串中的字元陣列。  
   
 ## <a name="example"></a>範例  
- This example demonstrates how to split a string into a `Char` array, and how to split a string into a `String` array of its Unicode text characters. The reason for this distinction is that Unicode text characters can be composed of two or more `Char` characters (such as a surrogate pair or a combining character sequence). For more information, see <xref:System.Globalization.TextElementEnumerator> and [The Unicode Standard](https://www.unicode.org/standard/standard.html).  
+ 這個範例示範如何將字串分割成 `Char` 陣列，以及如何將字串分割成 Unicode 文字字元的 `String` 陣列。 這項區別的原因是 Unicode 文字字元可以由兩個或多個 `Char` 字元組成（例如代理程式配對或結合字元序列）。 如需詳細資訊，請參閱 <xref:System.Globalization.TextElementEnumerator> 和[Unicode 標準](https://www.unicode.org/standard/standard.html)。  
   
  [!code-vb[VbVbalrStrings#75](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class4.vb#75)]  
   
 ## <a name="example"></a>範例  
- It is more difficult to split a string into its Unicode text characters, but this is necessary if you need information about the visual representation of a string. This example uses the <xref:System.Globalization.StringInfo.SubstringByTextElements%2A> method to get information about the Unicode text characters that make up a string.  
+ 比較難以將字串分割成 Unicode 文字字元，但如果您需要字串的視覺標記法的相關資訊，這就是必要的。 這個範例會使用 <xref:System.Globalization.StringInfo.SubstringByTextElements%2A> 方法來取得組成字串之 Unicode 文字字元的相關資訊。  
   
  [!code-vb[VbVbalrStrings#76](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class4.vb#76)]  
   

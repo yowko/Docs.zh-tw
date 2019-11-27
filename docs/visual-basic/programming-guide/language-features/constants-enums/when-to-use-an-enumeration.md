@@ -12,35 +12,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353951"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>何時使用列舉 (Visual Basic)
-Enumerations offer an easy way to work with sets of related constants. An enumeration, or `Enum`, is a symbolic name for a set of values. Enumerations are treated as data types, and you can use them to create sets of constants for use with variables and properties.  
+列舉提供了一種簡單的方式來處理相關的常數集合。 列舉（或 `Enum`）是一組值的符號名稱。 列舉會視為資料類型，您可以使用它們來建立常數集，以便搭配變數和屬性使用。  
   
 ## <a name="when-to-use-an-enumeration"></a>何時使用列舉類型  
- Whenever a procedure accepts a limited set of variables, consider using an enumeration. Enumerations make for clearer and more readable code, particularly when meaningful names are used.  
+ 每當程式接受一組有限的變數時，請考慮使用列舉。 列舉會產生更清楚且更容易閱讀的程式碼，特別是在使用有意義的名稱時。  
   
- The benefits of using enumerations include:  
+ 使用列舉的優點包括：  
   
-- Reduces errors caused by transposing or mistyping numbers.  
+- 減少因轉置或錯誤的數位而造成的錯誤。  
   
-- Makes it easy to change values in the future.  
+- 可讓您在未來輕鬆變更值。  
   
-- Makes code easier to read, which means it is less likely that errors will creep into it.  
+- 讓程式碼更容易閱讀，這表示錯誤不太可能會蔓延到其中。  
   
-- Ensures forward compatibility. With enumerations, your code is less likely to fail if in the future someone changes the values corresponding to the member names.  
+- 確保向前相容性。 使用列舉時，如果未來有人變更對應至成員名稱的值，您的程式碼較不可能失敗。  
   
-## <a name="naming-enumerations"></a>Naming Enumerations  
- Use a naming convention for enumeration members. When Visual Basic encounters an enumeration member name, an exception may be thrown if other referenced type libraries contain the same name. Use a unique prefix that identifies the values from your application or component.  
+## <a name="naming-enumerations"></a>命名列舉  
+ 使用列舉成員的命名慣例。 當 Visual Basic 遇到列舉成員名稱時，如果其他參考的類型程式庫包含相同的名稱，則可能會擲回例外狀況（exception）。 使用唯一的前置詞，以識別來自您應用程式或元件的值。  
   
- When referring to a member of an enumeration, you must qualify the member name with the enumeration name or else use the `Imports` statement. For more information, see [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
+ 當參考列舉的成員時，您必須以列舉名稱限定成員名稱，否則請使用 `Imports` 語句。 如需詳細資訊，請參閱列舉[和名稱限定](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)性。  
   
-## <a name="predefined-enumerations"></a>Predefined Enumerations  
- Visual Basic provides a number of predefined enumerations, such as `FirstDayOfWeek` and `MsgBoxResult`, to facilitate your code. For a list of these see [Constants and Enumerations](../../../../visual-basic/language-reference/constants-and-enumerations.md).  
+## <a name="predefined-enumerations"></a>預先定義的列舉  
+ Visual Basic 提供許多預先定義的列舉，例如 `FirstDayOfWeek` 和 `MsgBoxResult`，以協助您的程式碼。 如需這些[常數和](../../../../visual-basic/language-reference/constants-and-enumerations.md)列舉的清單，請參閱。  
   
 ## <a name="see-also"></a>請參閱
 
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [如何：宣告列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [如何：參考列舉成員](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [列舉和名稱限定性條件](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
+- [如何：在 Visual Basic 中逐一查看列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
 - [如何：決定與列舉值相關聯的字串](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [Enum 陳述式](../../../../visual-basic/language-reference/statements/enum-statement.md)
 - [常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)
