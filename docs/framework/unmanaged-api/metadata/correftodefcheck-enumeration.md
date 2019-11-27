@@ -40,16 +40,16 @@ typedef enum CorRefToDefCheck {
   
 |成員|描述|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Specifies that type references and member references should be converted to definitions. This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
-|`MDRefToDefAll`|Specifies that all referenced items should be converted to definitions.|  
-|`MDRefToDefNone`|Specifies that no referenced items should be converted to definitions.|  
-|`MDTypeRefToDef`|Specifies that only type references should be converted to type definitions.|  
-|`MDMemberRefToDef`|Specifies that only member references should be converted to definitions. That is, member references should be converted to either method definitions or field definitions.|  
+|`MDRefToDefDefault`|指定型別參考和成員參考應該轉換成定義。 這是預設值（`MDTypeRefToDef` &#124; `MDMemberRefToDef`）。|  
+|`MDRefToDefAll`|指定所有參考的專案都應該轉換成定義。|  
+|`MDRefToDefNone`|指定不應該將參考的專案轉換成定義。|  
+|`MDTypeRefToDef`|指定只有型別參考應該轉換成型別定義。|  
+|`MDMemberRefToDef`|指定只應將成員參考轉換成定義。 也就是，成員參考應該轉換成方法定義或欄位定義。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

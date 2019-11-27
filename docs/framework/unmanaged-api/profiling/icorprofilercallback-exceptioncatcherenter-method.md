@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445012"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>ICorProfilerCallback::ExceptionCatcherEnter 方法
-Notifies the profiler that control is being passed to the appropriate `catch` block.  
+通知分析工具，控制項正傳遞至適當的 `catch` 區塊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,17 +35,17 @@ HRESULT ExceptionCatcherEnter(
   
 ## <a name="parameters"></a>參數  
  `functionId`  
- [in] The identifier of the function containing the `catch` block.  
+ 在包含 `catch` 區塊之函式的識別碼。  
   
  `objectId`  
- [in] The identifier of the exception being handled.  
+ 在所處理之例外狀況的識別碼。  
   
 ## <a name="remarks"></a>備註  
- The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler. An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification. The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.  
+ 只有當 catch 點位於以即時（JIT）編譯器編譯的程式碼中時，才會呼叫 `ExceptionCatcherEnter` 方法。 在非受控碼或執行時間的內部程式碼中攔截到的例外狀況不會呼叫此通知。 因為 `ExceptionThrown` 通知之後，垃圾收集可能已經移動物件，所以會再次傳遞 `objectId` 值。  
   
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ 分析工具不應在此方法的執行中封鎖，因為堆疊可能不是處於允許垃圾收集的狀態，因此無法啟用「搶先垃圾收集」。 如果分析工具在此處封鎖並嘗試垃圾收集，執行時間將會封鎖，直到這個回呼傳回為止。  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ 分析工具的此方法的執行不應呼叫 managed 程式碼，或以任何方式進行，以造成 managed 記憶體配置。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

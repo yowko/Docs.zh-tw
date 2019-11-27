@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439900"
 ---
 # <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a>ICorProfilerCallback::UnmanagedToManagedTransition 方法
-Notifies the profiler that a transition from unmanaged code to managed code has occurred.  
+通知分析工具，已發生從非受控碼到 managed 程式碼的轉換。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,15 +35,15 @@ HRESULT UnmanagedToManagedTransition(
   
 ## <a name="parameters"></a>參數  
  `functionId`  
- [in] The ID of the function that is being called.  
+ 在所呼叫之函式的識別碼。  
   
  `reason`  
- [in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into managed code from unmanaged code, or because of a return from an unmanaged function called by a managed one.  
+ 在[COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md)列舉的值，指出轉換是因為來自非受控程式碼的 managed 程式碼呼叫，還是因為由 managed 函式所呼叫的非受控函數傳回而發生。  
   
 ## <a name="remarks"></a>備註  
- If the value of `reason` is COR_PRF_TRANSITION_RETURN and `functionId` is not null, the function ID is that of the unmanaged function, and will never have been compiled using the just-in-time (JIT) compiler. Unmanaged functions have some basic information associated with them, such as a name and some metadata.  
+ 如果 `reason` 的值為 COR_PRF_TRANSITION_RETURN 且 `functionId` 不是 null，則函式識別碼會是非受控函式的 ID，而且永遠不會使用即時（JIT）編譯器來編譯。 非受控函式有一些與其相關聯的基本資訊，例如名稱和一些中繼資料。  
   
- If the value of `reason` is COR_PRF_TRANSITION_CALL, it may be possible that the called function (that is, the managed function) has not yet been JIT-compiled.  
+ 如果 `reason` 的值為 COR_PRF_TRANSITION_CALL，則可能是被呼叫的函式（也就是 managed 函數）尚未進行 JIT 編譯。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449716"
 ---
 # <a name="icorprofilerinfo3getfunctionleave3info-method"></a>ICorProfilerInfo3::GetFunctionLeave3Info 方法
-Provides the stack frame and return value of the function that is being reported to the profiler by the [FunctionLeave3WithInfo function](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function. 只能在 `FunctionLeave3WithInfo` 回呼期間呼叫這個方法。  
+提供[FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)函式函式所回報給分析工具的函式之堆疊框架和傳回值。 只能在 `FunctionLeave3WithInfo` 回呼期間呼叫這個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,16 +37,16 @@ HRESULT GetFunctionLeave3Info(
   
 ## <a name="parameters"></a>參數  
  `functionId`  
- [in] The `FunctionID` of the function that is returning.  
+ 在傳回之函數的 `FunctionID`。  
   
  `eltInfo`  
- [in] 代表特定堆疊框架之資訊的不透明控制代碼。 The profiler should provide the same `eltInfo` that was given to the profiler by the [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.  
+ [in] 代表特定堆疊框架之資訊的不透明控制代碼。 分析工具應該提供[FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)函式所指定給 profiler 的相同 `eltInfo`。  
   
  `pFrameInfo`  
- [out] 代表特定堆疊框架之泛型資訊的不透明控制代碼。 此控制代碼只有在程式碼剖析工具呼叫 `GetFunctionLeave3Info` 方法的 `FunctionLeave3WithInfo` 回呼中有效。  
+ [out] 代表特定堆疊框架之泛型資訊的不透明控制代碼。 此控制代碼只有在程式碼剖析工具呼叫 `FunctionLeave3WithInfo` 方法的 `GetFunctionLeave3Info` 回呼中有效。  
   
  `pRetvalRange`  
- [out] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that contains the value that is returned from the function. To access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set. The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags.  
+ 脫銷[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)結構的指標，其中包含從函數傳回的值。 若要存取傳回值資訊，必須設定 `COR_PRF_ENABLE_FUNCTION_RETVAL` 旗標。 分析工具可以使用[ICorProfilerInfo：： SetEventMask 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)來設定事件旗標。  
   
 ## <a name="remarks"></a>備註  
   

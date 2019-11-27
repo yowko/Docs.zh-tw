@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448325"
 ---
 # <a name="isymunmanagedreadergetglobalvariables-method"></a>ISymUnmanagedReader::GetGlobalVariables 方法
-Returns all global variables.  
+傳回所有全域變數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,19 +37,19 @@ HRESULT GetGlobalVariables(
   
 ## <a name="parameters"></a>參數  
  `cVars`  
- [in] The length of the buffer pointed to by `pcVars`.  
+ 在`pcVars`所指向之緩衝區的長度。  
   
  `pcVars`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the variables.  
+ 脫銷`ULONG32` 的指標，接收包含變數所需的緩衝區大小。  
   
  `pVars`  
- [out] A buffer that contains the variables.  
+ 脫銷包含變數的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
 ## <a name="see-also"></a>請參閱
 

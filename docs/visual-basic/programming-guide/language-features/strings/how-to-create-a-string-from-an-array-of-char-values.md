@@ -13,18 +13,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344391"
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>如何：使用字元值陣列建立字串 (Visual Basic)
-This example creates the string "abcd" from individual characters.  
+這個範例會從個別字元建立字串 "abcd"。  
   
 ## <a name="example"></a>範例  
  [!code-vb[VbVbalrStrings#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#61)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- This method has no special requirements.  
+ 這個方法沒有特殊需求。  
   
- The syntax `"a"c`, where a single `c` follows a single character in quotation marks, is used to create a character literal.  
+ 語法 `"a"c`，其中單一 `c` 遵循引號中的單一字元，用來建立字元常值。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
- Null characters (equivalent to `Chr(0)`) in the string lead to unexpected results when using the string. The null character will be included with the string, but characters following the null character will not be displayed in some situations.  
+ 使用字串時，字串中的 Null 字元（相當於 `Chr(0)`）會導致非預期的結果。 Null 字元將會包含在字串中，但在某些情況下，將不會顯示 null 字元之後的字元。  
   
 ## <a name="see-also"></a>請參閱
 

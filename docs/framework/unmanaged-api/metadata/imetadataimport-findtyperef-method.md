@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437794"
 ---
 # <a name="imetadataimportfindtyperef-method"></a>IMetaDataImport::FindTypeRef 方法
-Gets a pointer to the TypeRef token for the <xref:System.Type> reference that is in the specified scope and that has the specified name.  
+取得位於指定範圍且具有指定名稱之 <xref:System.Type> 參考的 TypeRef token 指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,20 +37,20 @@ HRESULT FindTypeRef (
   
 ## <a name="parameters"></a>參數  
  `tkResolutionScope`  
- [in] A ModuleRef, AssemblyRef, or TypeRef token that specifies the module, assembly, or type, respectively, in which the type reference is defined.  
+ 在ModuleRef、AssemblyRef 或 TypeRef token，分別指定定義類型參考的模組、元件或類型。  
   
  `szName`  
- [in] The name of the type reference to search for.  
+ 在要搜尋之類型參考的名稱。  
   
  `ptr`  
- [out] A pointer to the matching TypeRef token.  
+ 脫銷符合的 TypeRef 標記的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

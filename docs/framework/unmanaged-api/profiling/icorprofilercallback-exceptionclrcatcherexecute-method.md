@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444936"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a>ICorProfilerCallback::ExceptionCLRCatcherExecute 方法
-Called when a `catch` block for an exception is executed inside the common language runtime (CLR) itself. This method is obsolete in the .NET Framework version 2.0.  
+在 common language runtime （CLR）本身內執行例外狀況的 `catch` 區塊時呼叫。 這個方法在 .NET Framework 版本2.0 中已過時。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +38,7 @@ HRESULT ExceptionCLRCatcherExecute();
   
  **程式庫：** CorGuids.lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **.NET Framework 版本：** 1.1、1。0  
   
 ## <a name="see-also"></a>請參閱
 

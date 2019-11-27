@@ -15,11 +15,11 @@ ms.locfileid: "74441385"
 ---
 # <a name="ui-automation-fundamentals"></a>UI 自動化基礎觀念
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- This section contains high-level overviews of the [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API.  
+ 本節包含 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API 的高階概覽。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [UI 自動化概觀](ui-automation-overview.md)  
  [UI 自動化和 Microsoft Active Accessibility](ui-automation-and-microsoft-active-accessibility.md)  
  [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)  
@@ -29,7 +29,7 @@ ms.locfileid: "74441385"
  [UI 自動化安全性概觀](ui-automation-security-overview.md)  
  [使用 UI 自動化進行自動化測試](using-ui-automation-for-automated-testing.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Automation>  
   
  <xref:System.Windows.Automation.Provider>  

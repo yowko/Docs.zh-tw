@@ -39,29 +39,29 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>參數  
  `szName`  
- [in] The name of the file to be consumed.  
+ 在要使用的檔案名。  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the assembly.  
+ 在與元件相關聯之雜湊資料的指標。  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ 在`pbHashValue`的大小（以位元組為單位）。  
   
  `dwFileFlags`  
- [in] A bitwise combination of `FileFlags` values that specify property settings.  
+ 在指定屬性設定之 `FileFlags` 值的位元組合。  
   
  `pmdf`  
- [out] A pointer to the returned `File` token.  
+ 脫銷傳回之 `File` token 的指標。  
   
 ## <a name="remarks"></a>備註  
- One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.  
+ 在建立此元件時，必須針對屬於此元件的每個檔案定義一個 `File` 元資料結構，但不包括包含中繼資料的檔案。  
   
 ## <a name="requirements"></a>需求  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **平臺：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

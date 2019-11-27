@@ -22,19 +22,19 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440978"
 ---
 # <a name="inotifysink2-interface"></a>INotifySink2 介面
-Declares methods for sink notification.  
+宣告接收器通知的方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[OnSyncCallEnter 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|Gets invoked when entering a call.|  
-|[OnSyncCallExit 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|Gets invoked when exiting a call.|  
-|[OnSyncCallOut 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|Gets invoked when a call is out.|  
-|[OnSyncCallReturn 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|Gets invoked when a call returns.|  
+|[OnSyncCallEnter 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|在輸入呼叫時叫用。|  
+|[OnSyncCallExit 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|會在結束呼叫時叫用。|  
+|[OnSyncCallOut 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|當呼叫完成時，就會叫用。|  
+|[OnSyncCallReturn 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|當呼叫傳回時，就會叫用。|  
   
 ## <a name="requirements"></a>需求  
- **Header:** ProtocolNotify2.idl  
+ **標頭：** ProtocolNotify2 .idl  
   
 ## <a name="see-also"></a>請參閱
 

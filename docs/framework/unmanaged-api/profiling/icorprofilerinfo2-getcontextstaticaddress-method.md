@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433197"
 ---
 # <a name="icorprofilerinfo2getcontextstaticaddress-method"></a>ICorProfilerInfo2::GetContextStaticAddress 方法
-Gets the address for the specified context-static field that is in the scope of the specified context.  
+取得位於指定內容約制內指定內容靜態欄位的位址。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,25 +37,25 @@ HRESULT GetContextStaticAddress(
   
 ## <a name="parameters"></a>參數  
  `classId`  
- [in] The ID of the class that contains the requested context-static field.  
+ 在包含所要求內容靜態欄位之類別的識別碼。  
   
  `fieldToken`  
- [in] The metadata token for the requested context-static field.  
+ 在所要求內容靜態欄位的元資料標記。  
   
  `contextId`  
- [in] The ID of the context that is the scope for the requested context-static field.  
+ 在內容的識別碼，這是所要求內容靜態欄位的範圍。  
   
  `ppAddress`  
- [out] A pointer to the address of the static field that is within the specified context.  
+ 脫銷位於指定內容內之靜態欄位位址的指標。  
   
 ## <a name="remarks"></a>備註  
- The `GetContextStaticAddress` method may return one of the following:  
+ `GetContextStaticAddress` 方法可能會傳回下列其中一項：  
   
-- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
+- 如果未在指定的內容中指派位址給給定的靜態欄位，CORPROF_E_DATAINCOMPLETE HRESULT。  
   
-- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
+- 可能位於垃圾收集堆積中之物件的位址。 這些位址在垃圾收集後可能會變成無效，因此在垃圾收集之後，分析工具不應假設它們是有效的。  
   
- Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
+ 在類別的類別的函式完成之前，`GetContextStaticAddress` 將會傳回其所有靜態欄位的 CORPROF_E_DATAINCOMPLETE，雖然某些靜態欄位可能已經初始化，並且會對垃圾收集物件進行根。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

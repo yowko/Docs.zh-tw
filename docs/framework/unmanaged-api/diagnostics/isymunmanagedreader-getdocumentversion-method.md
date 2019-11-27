@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448303"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>ISymUnmanagedReader::GetDocumentVersion 方法
-Gets the specified version of the specified document. The document version starts at 1 and is incremented each time the document is updated using the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method. If the `pbCurrent` parameter is `true`, this is the latest version of the document.  
+取得指定檔的指定版本。 檔版本從1開始，而且每次使用[UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)方法更新檔時，都會遞增。 如果 `pbCurrent` 參數是 `true`，這就是檔的最新版本。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,19 +36,19 @@ HRESULT GetDocumentVersion (
   
 ## <a name="parameters"></a>參數  
  `pDoc`  
- [in] The specified document.  
+ 在指定的檔。  
   
  `version`  
- [out] A pointer to a variable that receives the version of the specified document.  
+ 脫銷接收指定檔之版本之變數的指標。  
   
  `pbCurrent`  
- [out] A pointer to a variable that receives `true` if this is the latest version of the document, or `false` if it isn't the latest version.  
+ 脫銷如果這是檔的最新版本，則為接收 `true` 之變數的指標，如果不是最新版本，則為 `false`。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
 ## <a name="see-also"></a>請參閱
 

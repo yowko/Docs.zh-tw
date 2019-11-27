@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450107"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags 列舉
-Provides flag values used for registration when installing a module or composite image.  
+提供安裝模組或複合影像時，用來註冊的旗標值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,16 +39,16 @@ typedef enum
   
 |成員|描述|  
 |------------|-----------------|  
-|`regNoCopy`|Specifies that files should not be copied into the destination.|  
-|`regConfig`|Specifies that the module or composite is a configuration.|  
-|`regHasRefs`|Specifies that the module or composite has class references.|  
+|`regNoCopy`|指定不應該將檔案複製到目的地。|  
+|`regConfig`|指定模組或複合為設定。|  
+|`regHasRefs`|指定模組或複合具有類別參考。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

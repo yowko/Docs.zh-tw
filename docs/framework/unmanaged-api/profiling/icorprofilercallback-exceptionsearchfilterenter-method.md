@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445378"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a>ICorProfilerCallback::ExceptionSearchFilterEnter 方法
-Notifies the profiler that the search phase of exception handling has begun executing a user-defined exception filter.  
+通知分析工具，例外狀況處理的搜尋階段已開始執行使用者定義的例外狀況篩選準則。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ HRESULT ExceptionSearchFilterEnter(
   
 ## <a name="parameters"></a>參數  
  `functionId`  
- [in] The ID of the function that contains the filter.  
+ 在包含篩選準則之函數的識別碼。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

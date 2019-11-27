@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450289"
 ---
 # <a name="corfilemapping-enumeration"></a>CorFileMapping 列舉
-Contains values that describe the type of file mapping that is returned from a call to the [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) method.  
+包含值，描述從[IMetaDataInfo：： GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)方法的呼叫所傳回的檔對應類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,13 +39,13 @@ typedef enum CorFileMapping {
   
 |成員|描述|  
 |------------|-----------------|  
-|`fmFlat`|The file is mapped as a data file. That is, the `SEC_IMAGE` flag was not passed to the Microsoft Win32 `CreateFileMapping` function.|  
-|`fmExecutableImage`|The file is mapped for execution, by using either the `LoadLibrary` function or the `CreateFileMapping` function with the `SEC_IMAGE` flag.|  
+|`fmFlat`|檔案會對應為資料檔案。 也就是說，`SEC_IMAGE` 旗標不會傳遞至 Microsoft Win32 `CreateFileMapping` 函數。|  
+|`fmExecutableImage`|檔案會使用 `LoadLibrary` 函式或 `CreateFileMapping` 函式加上 `SEC_IMAGE` 旗標，進行對應以供執行。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

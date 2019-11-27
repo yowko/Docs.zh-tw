@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449353"
 ---
 # <a name="isymunmanagedbindergetreaderforfile-method"></a>ISymUnmanagedBinder::GetReaderForFile 方法
-Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.  
+提供中繼資料介面和檔案名，會傳回正確的[ISymUnmanagedReader](isymunmanagedreader-interface.md)介面，以便讀取與模組相關聯的偵錯工具符號。  
   
- This method will open the program database (PDB) file only if it is next to the executable file. This change has been made for security purposes. If you need a more extensive search for the PDB file, use the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) method.  
+ 只有當程式資料庫（PDB）位於可執行檔的旁邊時，這個方法才會開啟該檔案。 這是基於安全性考慮而進行的變更。 如果您需要更廣泛的 PDB 檔案搜尋，請使用[ISymUnmanagedBinder2：： GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,22 +39,22 @@ HRESULT GetReaderForFile(
   
 ## <a name="parameters"></a>參數  
  `importer`  
- [in] A pointer to the metadata import interface.  
+ 在中繼資料匯入介面的指標。  
   
  `fileName`  
- [in] A pointer to the file name.  
+ 在檔案名的指標。  
   
  `searchPath`  
- [in] A pointer to the search path.  
+ 在搜尋路徑的指標。  
   
  `pRetVal`  
- [out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.  
+ 脫銷設定為所傳回[ISymUnmanagedReader](isymunmanagedreader-interface.md)介面的指標。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
 ## <a name="see-also"></a>請參閱
 

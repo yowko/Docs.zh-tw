@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431529"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty 方法
-Creates a property definition for the specified type, with the specified `get` and `set` method accessors, and gets a token to that property definition.  
+使用指定的 `get` 和 `set` 方法存取子，為指定的類型建立屬性定義，並取得該屬性定義的 token。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,47 +46,47 @@ HRESULT DefineProperty (
   
 ## <a name="parameters"></a>參數  
  `td`  
- [in] The token for class or interface on which the property is being defined.  
+ 在要在其上定義屬性之類別或介面的 token。  
   
  `szProperty`  
- [in] The name of the property.  
+ 在屬性的名稱。  
   
  `dwPropFlags`  
- [in] The property flags.  
+ 在屬性旗標。  
   
  `pvSig`  
- [in] The property signature.  
+ 在屬性簽章。  
   
  `cbSig`  
- [in] The count of bytes in `pvSig`.  
+ 在`pvSig`中的位元組計數。  
   
  `dwCPlusTypeFlag`  
- [in] The type of the property's default value.  
+ 在屬性的預設值類型。  
   
  `pValue`  
- [in] The default value for the property.  
+ 在屬性的預設值。  
   
  `cchValue`  
- [in] The count of (Unicode) characters in `pValue`.  
+ 在`pValue`中的（Unicode）字元計數。  
   
  `mdSetter`  
- [in] The method that sets the property value.  
+ 在設定屬性值的方法。  
   
  `mdGetter`  
- [in] The method that gets the property value.  
+ 在取得屬性值的方法。  
   
  `rmdOtherMethods[]`  
- [in] An array of other methods associated with the property. Terminate the array with an `mdTokenNil`.  
+ 在與屬性相關聯之其他方法的陣列。 使用 `mdTokenNil`終止陣列。  
   
  `pmdProp`  
- [out] The `mdProperty` token assigned.  
+ 脫銷指派的 `mdProperty` token。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

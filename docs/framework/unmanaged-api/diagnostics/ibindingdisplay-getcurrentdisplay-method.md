@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448500"
 ---
 # <a name="ibindingdisplaygetcurrentdisplay-method"></a>IBindingDisplay::GetCurrentDisplay 方法
-Returns the current binding display information.  
+傳回目前的系結顯示資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,19 +35,19 @@ HRESULT GetCurrentDisplay (
   
 ## <a name="parameters"></a>參數  
  `display`  
- [out, retval] A pointer to a safearray containing the binding display information.  
+ [out，retval]包含系結顯示資訊之 safearray 的指標。  
   
 ## <a name="remarks"></a>備註  
- The [IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) method must have previously succeeded, and the program must be stopped by a debugger.  
+ [IBindingDisplay：： InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)方法先前必須已成功，而且偵錯工具必須停止此程式。  
   
- The caller must deallocate the returned `SAFEARRAY` memory by using [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).  
+ 呼叫端必須使用[SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy)，將傳回的 `SAFEARRAY` 記憶體解除配置。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** BindingDisplay.h  
+ **標頭：** BindingDisplay。h  
   
- **Library:** BindingDisplay.idl  
+ 連結**庫：** BindingDisplay .idl  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -46,7 +46,7 @@ HRESULT ConditionalWeakTableElementReferences(
 [in] 物件 ID 陣列，針對相依性控制代碼配對中的主要項目，各包含一個 `ObjectID`。
 
 `valueRefIds`\
-[in] 物件 ID 陣列，針對相依性控制代碼配對中的次要項目，各包含一個 `ObjectID`。 (`keyRefIds[i]` keeps `valueRefIds[i]` alive.)
+[in] 物件 ID 陣列，針對相依性控制代碼配對中的次要項目，各包含一個 `ObjectID`。 （`keyRefIds[i]` 保持 `valueRefIds[i]` 運作）。
 
 `rootIds`\
 [in] `GCHandleID` 值陣列，這些值會指向包含記憶體回收根目錄相關資訊的整數。
@@ -55,7 +55,7 @@ HRESULT ConditionalWeakTableElementReferences(
 
 ## <a name="example"></a>範例
 
-The following code example demonstrates how to implement [ICorProfilerCallback5](icorprofilercallback5-interface.md) and use this method.
+下列程式碼範例示範如何執行[ICorProfilerCallback5](icorprofilercallback5-interface.md) ，並使用此方法。
 
 ```cpp
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
@@ -80,7 +80,7 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 ## <a name="remarks"></a>備註
 
-A profiler for the .NET Framework 4.5 or later versions implements the [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface and records the dependencies specified by the `ConditionalWeakTableElementReferences` method. `ICorProfilerCallback5` provides the complete set of dependencies among live objects represented by `ConditionalWeakTable` entries. These dependencies and the member field references specified by the [ICorProfilerCallback::ObjectReferences](icorprofilercallback-objectreferences-method.md) method enable a managed profiler to generate the full object graph of live objects.
+.NET Framework 4.5 或更新版本的 profiler 會執行[ICorProfilerCallback5](icorprofilercallback5-interface.md)介面，並記錄 `ConditionalWeakTableElementReferences` 方法所指定的相依性。 `ICorProfilerCallback5` 提供 `ConditionalWeakTable` 專案所表示之即時物件之間的完整相依性集合。 這些相依性和[ICorProfilerCallback：： ObjectReferences](icorprofilercallback-objectreferences-method.md)方法所指定的成員欄位參考，可讓 managed profiler 產生即時物件的完整物件圖形。
 
 ## <a name="requirements"></a>需求
 

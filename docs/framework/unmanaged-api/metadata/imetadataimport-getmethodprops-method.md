@@ -44,41 +44,41 @@ HRESULT GetMethodProps (
   
 ## <a name="parameters"></a>參數  
  `mb`  
- [in] The MethodDef token that represents the method to return metadata for.  
+ 在MethodDef token，表示要傳回中繼資料的方法。  
   
  `pClass`  
- [out] A Pointer to a TypeDef token that represents the type that implements the method.  
+ 脫銷TypeDef token 的指標，表示可執行方法的類型。  
   
  `szMethod`  
- [out] A Pointer to a buffer that has the method's name.  
+ 脫銷具有方法名稱之緩衝區的指標。  
   
  `cchMethod`  
- [in] The requested size of `szMethod`.  
+ 在要求的 `szMethod`大小。  
   
  `pchMethod`  
- [out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.  
+ 脫銷`szMethod`的寬字元大小指標，或在截斷的情況下，方法名稱中的寬字元實際數目。  
   
  `pdwAttr`  
- [out] A pointer to any flags associated with the method.  
+ 脫銷與方法相關聯之任何旗標的指標。  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the method.  
+ 脫銷方法之二進位中繼資料簽章的指標。  
   
  `pcbSigBlob`  
- [out] A Pointer to the size in bytes of `ppvSigBlob`.  
+ 脫銷以位元組為單位的 `ppvSigBlob`大小的指標。  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the method.  
+ 脫銷方法之相對虛擬位址的指標。  
   
  `pdwImplFlags`  
- [out] A pointer to any implementation flags for the method.  
+ 脫銷方法之任何執行旗標的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

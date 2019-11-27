@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435920"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>ICorProfilerCallback::ClassUnloadFinished 方法
-Notifies the profiler that a class has finished unloading.  
+通知分析工具，類別已完成卸載。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,13 +35,13 @@ HRESULT ClassUnloadFinished(
   
 ## <a name="parameters"></a>參數  
  `classId`  
- [in] Identifies the class that was unloaded.  
+ 在識別已卸載的類別。  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the class was unloaded successfully.  
+ 在HRESULT，指出是否已成功卸載類別。  
   
 ## <a name="remarks"></a>備註  
- Some parts of unloading the class might continue after the `ClassUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.  
+ 卸載類別的某些部分可能會在 `ClassUnloadFinished` 回呼之後繼續進行。 `hrStatus` 中的失敗 HRESULT 表示失敗。 不過，`hrStatus` 中的成功 HRESULT 只會指出卸載類別的第一個部分已成功。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

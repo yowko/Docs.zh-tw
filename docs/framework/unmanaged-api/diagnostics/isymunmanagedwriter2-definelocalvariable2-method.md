@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438301"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2 方法
-在目前的語彙範圍中定義單一變數。 This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope. In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.  
+在目前的語彙範圍中定義單一變數。 這個方法可以針對相同名稱的變數多次呼叫，其具有整個範圍中的多個家庭。 不過，在此情況下，`startOffset` 和 `endOffset` 參數的值不得重迭。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,37 +42,37 @@ HRESULT DefineLocalVariable2(
   
 ## <a name="parameters"></a>參數  
  `name`  
- [in] The local variable name.  
+ 在本機變數名稱。  
   
  `attributes`  
- [in] The local variable attributes.  
+ 在區域變數屬性。  
   
  `sigToken`  
- [in] The metadata token of the signature.  
+ 在簽章的元資料標記。  
   
  `addrKind`  
- [in] The address type.  
+ 在網址類別型。  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ 在參數規格的第一個位址。  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ 在參數規格的第二個位址。  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ 在參數規格的第三個位址。  
   
  `startOffset`  
- [in] The start offset for the variable. 這是選擇性參數。 If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
+ 在變數的開始位移。 這是選擇性參數。 如果為0，則會忽略此參數，並在整個範圍中定義變數。 如果是非零值，則變數會落在目前範圍的位移內。  
   
  `endOffset`  
- [in] The end offset for the variable. 這是選擇性參數。 If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
+ 在變數的結束位移。 這是選擇性參數。 如果為0，則會忽略此參數，並在整個範圍中定義變數。 如果是非零值，則變數會落在目前範圍的位移內。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl  
+ **標頭：** CorSym .idl  
   
 ## <a name="see-also"></a>請參閱
 

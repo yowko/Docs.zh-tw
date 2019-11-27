@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445934"
 ---
 # <a name="icorprofilercallbackmoduleloadfinished-method"></a>ICorProfilerCallback::ModuleLoadFinished 方法
-Notifies the profiler that a module has finished loading.  
+通知 profiler 模組已完成載入。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,15 +35,15 @@ HRESULT ModuleLoadFinished(
   
 ## <a name="parameters"></a>參數  
  `moduleId`  
- [in] The ID of the module that has finished loading.  
+ 在已完成載入之模組的識別碼。  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the module was loaded successfully.  
+ 在HRESULT，指出模組是否已成功載入。  
   
 ## <a name="remarks"></a>備註  
- The value of `moduleId` is not valid for an information request until the `ModuleLoadFinished` method is called.  
+ 在呼叫 `ModuleLoadFinished` 方法之前，`moduleId` 的值對資訊要求而言是不正確。  
   
- Some parts of loading the module might continue after the `ModuleLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the module has succeeded.  
+ 載入模組的某些部分可能會在 `ModuleLoadFinished` 回呼之後繼續進行。 `hrStatus` 中的失敗 HRESULT 表示失敗。 不過，`hrStatus` 中的成功 HRESULT 只會指出載入模組的第一個部分已成功。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

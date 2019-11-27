@@ -42,28 +42,28 @@ HRESULT GetILToNativeMapping(
  [in] 包含程式碼的函式 ID。  
   
  `pReJitId`  
- [in] 經過 JIT 重新編譯的函式識別。 The identity must be zero in the .NET Framework 4.5.  
+ [in] 經過 JIT 重新編譯的函式識別。 .NET Framework 4.5 中的身分識別必須為零。  
   
  `cMap`  
  [in] `map` 陣列的大小上限。  
   
  `pcMap`  
- [out] The total number of available COR_DEBUG_IL_TO_NATIVE_MAP structures.  
+ [out] 可用的 COR_DEBUG_IL_TO_NATIVE_MAP 結構總數。  
   
  `map`  
  [out] `COR_DEBUG_IL_TO_NATIVE_MAP` 結構的陣列，每個結構都有指定位移。 `GetILToNativeMapping2` 方法傳回之後，`map` 將會包含部分或所有 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構。  
   
 ## <a name="remarks"></a>備註  
- `GetILToNativeMapping2` is similar to the [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) method, except that it will allow the profiler to specify the ID of the recompiled function in future releases.  
+ `GetILToNativeMapping2` 類似于[ICorProfilerInfo：： GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)方法，不同之處在于它可讓分析工具在未來的版本中指定重新編譯函式的識別碼。  
   
 > [!NOTE]
-> The [ICorProfilerFunctionControl::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) method is not implemented in the .NET Framework 4.5, so functions that have been JIT-recompiled cannot have an IL-to-native mapping that differs from the originally compiled function. As such, `GetILToNativeMapping2` cannot be called with a nonzero JIT-recompiled ID in the .NET Framework 4.5.  
+> [ICorProfilerFunctionControl：： SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md)方法不會在 .NET Framework 4.5 中執行，因此已進行 JIT 重新編譯的函式不能有與原始編譯函式不同的 IL 與原生對應。 因此，在 .NET Framework 4.5 中，無法以非零的 JIT 重新編譯識別碼來呼叫 `GetILToNativeMapping2`。  
   
- `GetILToNativeMapping2` 方法會傳回 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構的陣列。 To convey that certain ranges of native instructions correspond to special regions of code (for example, the prolog), an entry in the array can have its `ilOffset` field set to a value of the [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) enumeration.  
+ `GetILToNativeMapping2` 方法會傳回 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構的陣列。 為了傳達原生指令的特定範圍對應至程式碼的特殊區域（例如初構），陣列中的專案可以將其 `ilOffset` 欄位設定為[CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md)列舉的值。  
   
  `GetILToNativeMapping2` 傳回之後，您必須確認 `map` 緩衝區夠大，可以包含所有 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構。 若要這樣做，請比較 `cMap` 的值與 `pcMap` 參數的值。 如果 `pcMap` 值乘以 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構的大小之後大於 `cMap`，請配置較大的 `map` 緩衝區，以新的較大大小更新 `cMap`，然後重新呼叫 `GetILToNativeMapping2`。  
   
- 或者，您也可以先使用長度為零的 `map` 緩衝區來呼叫 `GetILToNativeMapping2`，以取得正確的緩衝區大小。 接著您就可以將緩衝區大小設定為 `pcMap` 中傳回的值，並再次呼叫 `GetILToNativeMapping2`。  
+ 或者，您也可以先使用長度為零的 `GetILToNativeMapping2` 緩衝區來呼叫 `map`，以取得正確的緩衝區大小。 接著您就可以將緩衝區大小設定為 `pcMap` 中傳回的值，並再次呼叫 `GetILToNativeMapping2`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

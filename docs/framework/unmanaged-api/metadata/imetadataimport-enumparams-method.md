@@ -39,33 +39,33 @@ HRESULT EnumParams (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in、out]列舉值的指標。 第一次呼叫此方法時，此值必須為 Null。  
   
  `mb`  
- [in] A MethodDef token representing the method with the parameters to enumerate.  
+ 在MethodDef token，代表具有要列舉之參數的方法。  
   
  `rParams`  
- [out] The array used to store the ParamDef tokens.  
+ 脫銷用來儲存 ParamDef 標記的陣列。  
   
  `cMax`  
  [in] `rParams` 陣列的大小上限。  
   
  `pcTokens`  
- [out] The number of ParamDef tokens returned in `rParams`.  
+ 脫銷`rParams`中傳回的 ParamDef token 數目。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumParams` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|已成功傳回 `EnumParams`。|  
+|`S_FALSE`|沒有要列舉的權杖。 在此情況下，`pcTokens` 為零。|  
   
 ## <a name="requirements"></a>需求  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **平臺：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439768"
 ---
 # <a name="icorprofilercallback2handlecreated-method"></a>ICorProfilerCallback2::HandleCreated 方法
-Notifies the code profiler that a garbage collection handle has been created.  
+通知程式碼分析工具，已建立垃圾收集控制碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,10 +35,10 @@ HRESULT HandleCreated(
   
 ## <a name="parameters"></a>參數  
  `handleId`  
- [in] The ID of the handle for the garbage collection.  
+ 在垃圾收集的控制碼識別碼。  
   
  `initialObjectId`  
- [in] The ID of the object for which the garbage collection handle was created.  
+ 在已建立垃圾收集控制碼之物件的識別碼。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

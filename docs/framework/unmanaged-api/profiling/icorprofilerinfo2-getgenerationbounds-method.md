@@ -42,14 +42,14 @@ HRESULT GetGenerationBounds(
  [out] 指定範圍總數的整數指標，其中某些或全部都將在 `ranges` 陣列傳回。  
   
  `ranges`  
- [out] An array of [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structures, each of which describes a range (that is, block) of memory within the generation that is undergoing garbage collection.  
+ 脫銷[COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)結構的陣列，其中每一個都會在正在進行垃圾收集的層代中描述記憶體的範圍（也就是區塊）。  
   
 ## <a name="remarks"></a>備註  
  `GetGenerationBounds` 方法可以從任何分析工具回呼中呼叫，前提是尚未進行記憶體回收。
 
  多數層代移位發生在記憶體回收期間。 層代可能會在回收之間成長，但通常不會移動。 因此，呼叫 `GetGenerationBounds` 最有趣的地方位於 `ICorProfilerCallback2::GarbageCollectionStarted` 和 `ICorProfilerCallback2::GarbageCollectionFinished`。  
   
- 在程式啟動期間，某些物件會由 Common Language Runtime (CLR) 本身所配置，通常在層代 3 和 0 中。 因此，Managed 程式碼開始執行時，這些層代將已包含物件。 除了由記憶體回收行程所產生的 Dummy 物件之外，層代 1 和 2 通常是空的。 (The size of dummy objects is 12 bytes in 32-bit implementations of the CLR; the size is larger in 64-bit implementations.) You might also see generation 2 ranges that are inside modules produced by the Native Image Generator (NGen.exe). In this case, the objects in generation 2 are *frozen objects*, which are allocated when NGen.exe runs rather than by the garbage collector.  
+ 在程式啟動期間，某些物件會由 Common Language Runtime (CLR) 本身所配置，通常在層代 3 和 0 中。 因此，Managed 程式碼開始執行時，這些層代將已包含物件。 除了由記憶體回收行程所產生的 Dummy 物件之外，層代 1 和 2 通常是空的。 （虛擬物件的大小是 CLR 32 位執行中的12個位元組; 在64位的實值中，大小較大）。您也可能會看到原生映射產生器（Ngen.exe）所產生之模組內的第2代範圍。 在此情況下，層代2中的物件是*凍結的物件*，在 ngen.exe 執行時配置，而不是由垃圾收集行程所配置。  
   
  這個函式會使用呼叫端配置的緩衝區。  
   

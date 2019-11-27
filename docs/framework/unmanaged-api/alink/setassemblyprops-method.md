@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445581"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps 方法
-Assigns assembly-level properties.  
+指派元件層級的屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,22 +37,22 @@ HRESULT SetAssemblyProps(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- ID of the assembly.  
+ 元件的識別碼。  
   
  `FileToken`  
- File that defines the property. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
+ 定義屬性的檔案。 如果 `AssemblyID` 未指出未系結的 .netmodule，則可以是 Null。  
   
  `Option`  
- Indicates the option to modify.  
+ 表示要修改的選項。  
   
  `Value`  
- New value of the option.  
+ 選項的新值。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h.  
+ 需要 alink. h。  
   
 ## <a name="see-also"></a>請參閱
 

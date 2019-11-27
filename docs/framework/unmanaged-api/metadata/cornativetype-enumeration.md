@@ -91,56 +91,56 @@ typedef enum CorNativeType {
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|已過時。|  
 |`NATIVE_TYPE_VOID`|已過時。|  
-|`NATIVE_TYPE_BOOLEAN`|A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.|  
-|`NATIVE_TYPE_I1`|A signed 8-bit integer value.|  
-|`NATIVE_TYPE_U1`|An unsigned 8-bit integer value.|  
-|`NATIVE_TYPE_I2`|A signed 16-bit integer value.|  
-|`NATIVE_TYPE_U2`|An unsigned 16-bit integer value.|  
+|`NATIVE_TYPE_BOOLEAN`|4位元組的布林值，其中 TRUE 為非零，而 FALSE 為零。|  
+|`NATIVE_TYPE_I1`|帶正負號的8位整數值。|  
+|`NATIVE_TYPE_U1`|不帶正負號的8位整數值。|  
+|`NATIVE_TYPE_I2`|帶正負號的16位整數值。|  
+|`NATIVE_TYPE_U2`|不帶正負號的16位整數值。|  
 |`NATIVE_TYPE_I4`|帶正負號的 32 位元整數值。|  
 |`NATIVE_TYPE_U4`|32 位元不帶正負號的整數值。|  
-|`NATIVE_TYPE_I8`|A signed 64-bit integer value.|  
-|`NATIVE_TYPE_U8`|An unsigned 64-bit integer value.|  
-|`NATIVE_TYPE_R4`|A 4-byte floating-point numeric value.|  
-|`NATIVE_TYPE_R8`|An 8-byte floating-point numeric value.|  
+|`NATIVE_TYPE_I8`|帶正負號的64位整數值。|  
+|`NATIVE_TYPE_U8`|不帶正負號的64位整數值。|  
+|`NATIVE_TYPE_R4`|4位元組浮點數值。|  
+|`NATIVE_TYPE_R8`|8位元組浮點數值。|  
 |`NATIVE_TYPE_SYSCHAR`|已過時。|  
 |`NATIVE_TYPE_VARIANT`|已過時。|  
-|`NATIVE_TYPE_CURRENCY`|A numeric COM type that corresponds to the managed <xref:System.Decimal> type.|  
+|`NATIVE_TYPE_CURRENCY`|對應至 managed <xref:System.Decimal> 類型的數值 COM 類型。|  
 |`NATIVE_TYPE_PTR`|已過時。|  
 |`NATIVE_TYPE_DECIMAL`|已過時。|  
 |`NATIVE_TYPE_DATE`|已過時。|  
-|`NATIVE_TYPE_BSTR`|COM Interop.|  
-|`NATIVE_TYPE_LPSTR`|An LPSTR string value.|  
-|`NATIVE_TYPE_LPWSTR`|An LPWSTR string value.|  
-|`NATIVE_TYPE_LPTSTR`|An LPTSTR string value.|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|A fixed, system-defined string value.|  
+|`NATIVE_TYPE_BSTR`|COM Interop。|  
+|`NATIVE_TYPE_LPSTR`|LPSTR 字串值。|  
+|`NATIVE_TYPE_LPWSTR`|LPWSTR 字串值。|  
+|`NATIVE_TYPE_LPTSTR`|LPTSTR 字串值。|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|固定的系統定義字串值。|  
 |`NATIVE_TYPE_OBJECTREF`|已過時。|  
-|`NATIVE_TYPE_IUNKNOWN`|COM Interop.|  
-|`NATIVE_TYPE_IDISPATCH`|COM Interop.|  
-|`NATIVE_TYPE_STRUCT`|A native structure value.|  
-|`NATIVE_TYPE_INTF`|COM Interop.|  
-|`NATIVE_TYPE_SAFEARRAY`|COM Interop.|  
-|`NATIVE_TYPE_FIXEDARRAY`|A fixed-length array value.|  
-|`NATIVE_TYPE_INT`|A native 16-bit signed integer value.|  
-|`NATIVE_TYPE_UINT`|A native 16-bit unsigned integer value.|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|已過時。<br /><br /> Use NATIVE_TYPE_STRUCT.|  
-|`NATIVE_TYPE_BYVALSTR`|COM Interop.|  
-|`NATIVE_TYPE_ANSIBSTR`|COM Interop.|  
-|`NATIVE_TYPE_TBSTR`|COM Interop.<br /><br /> Select BSTR or ANSIBSTR depending on the platform.|  
-|`NATIVE_TYPE_VARIANTBOOL`|A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.|  
+|`NATIVE_TYPE_IUNKNOWN`|COM Interop。|  
+|`NATIVE_TYPE_IDISPATCH`|COM Interop。|  
+|`NATIVE_TYPE_STRUCT`|原生結構值。|  
+|`NATIVE_TYPE_INTF`|COM Interop。|  
+|`NATIVE_TYPE_SAFEARRAY`|COM Interop。|  
+|`NATIVE_TYPE_FIXEDARRAY`|固定長度的陣列值。|  
+|`NATIVE_TYPE_INT`|原生16位帶正負號的整數值。|  
+|`NATIVE_TYPE_UINT`|原生16位不帶正負號整數值。|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|已過時。<br /><br /> 使用 NATIVE_TYPE_STRUCT。|  
+|`NATIVE_TYPE_BYVALSTR`|COM Interop。|  
+|`NATIVE_TYPE_ANSIBSTR`|COM Interop。|  
+|`NATIVE_TYPE_TBSTR`|COM Interop。<br /><br /> 選取 [BSTR] 或 [ANSIBSTR] （視平臺而定）。|  
+|`NATIVE_TYPE_VARIANTBOOL`|2個位元組的布林值，其中 TRUE 為-1，而 FALSE 為零。|  
 |`NATIVE_TYPE_FUNC`|函式指標。|  
-|`NATIVE_TYPE_ASANY`|A reference to any native type.|  
-|`NATIVE_TYPE_ARRAY`|A reference to an array with members of an unspecified type.|  
-|`NATIVE_TYPE_LPSTRUCT`|A 32-bit integer pointer to a structure.|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|A custom marshaler native type.<br /><br /> This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"|  
-|`NATIVE_TYPE_ERROR`|COM Interop.<br /><br /> With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.|  
-|`NATIVE_TYPE_IINSPECTABLE`|A native `IInspectable` type.|  
-|`NATIVE_TYPE_HSTRING`|A native `HString`.|  
-|`NATIVE_TYPE_MAX`|An invalid value.|  
+|`NATIVE_TYPE_ASANY`|任何原生類型的參考。|  
+|`NATIVE_TYPE_ARRAY`|具有未指定類型成員之陣列的參考。|  
+|`NATIVE_TYPE_LPSTRUCT`|結構的32位整數指標。|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|自訂封送處理器原生類型。<br /><br /> 後面必須接下列格式的字串： "Native type name/0Custom 封送處理器類型 name/0Optional cookie/0" 或 "{Native type GUID}/0Custom 封送處理器類型名稱/0Optional cookie/0"|  
+|`NATIVE_TYPE_ERROR`|COM Interop。<br /><br /> 在 ELEMENT_TYPE_I4，此類型會對應到 VT_HRESULT。|  
+|`NATIVE_TYPE_IINSPECTABLE`|原生 `IInspectable` 類型。|  
+|`NATIVE_TYPE_HSTRING`|原生 `HString`。|  
+|`NATIVE_TYPE_MAX`|不正確值。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

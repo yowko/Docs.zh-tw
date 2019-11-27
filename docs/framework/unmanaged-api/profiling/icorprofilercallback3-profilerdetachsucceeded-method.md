@@ -35,7 +35,7 @@ HRESULT ProfilerDetachSucceeded();
  忽略此回呼傳回的值。  
   
 ## <a name="remarks"></a>備註  
- 所有執行緒都結束分析工具的程式碼後，就會核發 `ProfilerDetachSucceeded` 回呼。 呼叫這個方法時，分析工具應該執行任何不適合其解構函式的最後一刻工作，例如通知其 UI 或記錄元件。 However, the profiler must not call functions on interfaces that are provided by the CLR during this callback (such as the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) or `IMetaData*` interfaces).  
+ 所有執行緒都結束分析工具的程式碼後，就會核發 `ProfilerDetachSucceeded` 回呼。 呼叫這個方法時，分析工具應該執行任何不適合其解構函式的最後一刻工作，例如通知其 UI 或記錄元件。 不過，分析工具不得在此回呼期間（例如[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)或 `IMetaData*` 介面）于 CLR 提供的介面上呼叫函式。  
   
  CLR 會在 Windows 應用程式事件記錄檔中建立項目，表示中斷連結作業成功。  
   

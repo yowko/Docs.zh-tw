@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434376"
 ---
 # <a name="imetadataemitdeletefieldmarshal-method"></a>IMetaDataEmit::DeleteFieldMarshal 方法
-Destroys the PInvoke marshaling metadata signature for the object referenced by the specified token.  
+為指定之標記所參考的物件，終結 PInvoke 封送處理中繼資料簽章。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,14 +35,14 @@ HRESULT DeleteFieldMarshal (
   
 ## <a name="parameters"></a>參數  
  `tk`  
- [in] An `mdFieldDef` or `mdParamDef` token that represents the field or parameter for which to delete the marshaling metadata signature.  
+ 在`mdFieldDef` 或 `mdParamDef` token，表示要刪除封送處理中繼資料簽章的欄位或參數。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

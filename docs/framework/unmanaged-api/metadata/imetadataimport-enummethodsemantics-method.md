@@ -39,36 +39,36 @@ HRESULT EnumMethodSemantics (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in、out]列舉值的指標。 第一次呼叫此方法時，此值必須為 Null。  
   
  `mb`  
- [in] A MethodDef token that limits the scope of the enumeration.  
+ 在會限制列舉範圍的 MethodDef token。  
   
  `rEventProp`  
- [out] The array used to store the events or properties.  
+ 脫銷用來儲存事件或屬性的陣列。  
   
  `cMax`  
  [in] `rEventProp` 陣列的大小上限。  
   
  `pcEventProp`  
- [out] The number of events or properties returned in `rEventProp`.  
+ 脫銷`rEventProp`中傳回的事件或屬性數目。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSemantics` returned successfully.|  
-|`S_FALSE`|There are no events or properties to enumerate. In that case, `pcEventProp` is zero.|  
+|`S_OK`|已成功傳回 `EnumMethodSemantics`。|  
+|`S_FALSE`|沒有要列舉的事件或屬性。 在此情況下，`pcEventProp` 為零。|  
   
 ## <a name="remarks"></a>備註  
- Many common language runtime types define *Property*`Changed` events and `On`*Property*`Changed` methods related to their properties. For example, the <xref:System.Windows.Forms.Control?displayProperty=nameWithType> type defines a <xref:System.Windows.Forms.Control.Font%2A> property, a <xref:System.Windows.Forms.Control.FontChanged> event, and an <xref:System.Windows.Forms.Control.OnFontChanged%2A> method. The set accessor method of the <xref:System.Windows.Forms.Control.Font%2A> property calls <xref:System.Windows.Forms.Control.OnFontChanged%2A> method, which in turn raises the <xref:System.Windows.Forms.Control.FontChanged> event. You would call `EnumMethodSemantics` using the MethodDef for <xref:System.Windows.Forms.Control.OnFontChanged%2A> to get references to the <xref:System.Windows.Forms.Control.Font%2A> property and the <xref:System.Windows.Forms.Control.FontChanged> event.  
+ 許多通用語言執行時間型別會定義*屬性*`Changed` 事件，以及與屬性相關的 `On`*屬性*`Changed` 方法。 例如，<xref:System.Windows.Forms.Control?displayProperty=nameWithType> 型別會定義 <xref:System.Windows.Forms.Control.Font%2A> 屬性、<xref:System.Windows.Forms.Control.FontChanged> 事件和 <xref:System.Windows.Forms.Control.OnFontChanged%2A> 方法。 <xref:System.Windows.Forms.Control.Font%2A> 屬性的 set 存取子方法會呼叫 <xref:System.Windows.Forms.Control.OnFontChanged%2A> 方法，進而引發 <xref:System.Windows.Forms.Control.FontChanged> 事件。 您會使用 <xref:System.Windows.Forms.Control.OnFontChanged%2A> 的 MethodDef 來呼叫 `EnumMethodSemantics`，以取得 <xref:System.Windows.Forms.Control.Font%2A> 屬性和 <xref:System.Windows.Forms.Control.FontChanged> 事件的參考。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

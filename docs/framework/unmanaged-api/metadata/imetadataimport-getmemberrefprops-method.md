@@ -41,32 +41,32 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>參數  
  `mr`  
- [in] The MemberRef token to return associated metadata for.  
+ 在要為其傳回相關聯中繼資料的 MemberRef token。  
   
  `ptk`  
- [out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.  
+ 脫銷TypeDef 或 TypeRef 或 TypeSpec token，代表宣告成員的類別，或是代表宣告成員之模組類別的 ModuleRef token，或代表該成員的 MethodDef。  
   
  `szMember`  
- [out] A string buffer for the member's name.  
+ 脫銷成員名稱的字串緩衝區。  
   
  `cchMember`  
- [in] The requested size in wide characters of `szMember`.  
+ 在要求的大小，以 `szMember`的寬字元為單位。  
   
  `pchMember`  
- [out] The returned size in wide characters of `szMember`.  
+ 脫銷`szMember`的寬字元傳回大小。  
   
  `ppvSibBlob`  
- [out] A pointer to the binary metadata signature for the member.  
+ 脫銷成員之二進位中繼資料簽章的指標。  
   
  `pbSig`  
- [out] The size in bytes of `ppvSigBlob`.  
+ 脫銷`ppvSigBlob`的大小（以位元組為單位）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

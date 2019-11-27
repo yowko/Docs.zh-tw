@@ -42,16 +42,16 @@ typedef enum CorPropertyAttr {
   
 |成員|描述|  
 |------------|-----------------|  
-|`prSpecialName`|Specifies that the property is special, and that its name describes how.|  
-|`prReservedMask`|Reserved for internal use by the common language runtime.|  
-|`prRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the property name.|  
-|`prHasDefault`|Specifies that the property has a default value.|  
+|`prSpecialName`|指定屬性是特殊的，而且其名稱描述了如何。|  
+|`prReservedMask`|保留供 common language runtime 內部使用。|  
+|`prRTSpecialName`|指定 common language runtime 中繼資料內部 Api 應檢查屬性名稱的編碼方式。|  
+|`prHasDefault`|指定屬性具有預設值。|  
 |`prUnused`|未使用。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

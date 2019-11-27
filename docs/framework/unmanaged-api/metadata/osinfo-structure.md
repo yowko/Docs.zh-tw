@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430727"
 ---
 # <a name="osinfo-structure"></a>OSINFO 結構
-Contains details about the operating system for an assembly or module.  
+包含元件或模組之作業系統的詳細資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,19 +38,19 @@ typedef struct {
   
 |成員|描述|  
 |------------|-----------------|  
-|`dwOSPlatformId`|One of the identifier values defined by the Microsoft Windows platform function `GetVersionEx`. The following values are supported:<br /><br /> -   VER_PLATFORM_WIN32s, or 0x0000, to specify Microsoft Windows 3.1.<br />-   VER_PLATFORM_WIN32_WINDOWS, or 0x0001, to specify Windows 95, Windows 98, or operating systems descended from them.<br />-   VER_PLATFORM_WIN32_NT, or 0x0010, to specify Windows NT or operating systems descended from it.|  
-|`dwOSMajorVersion`|The operating system major version, or a NULL value to indicate any version.|  
-|`dwOSMinorVersion`|The operating system minor version, or a NULL value to indicate any version.|  
+|`dwOSPlatformId`|Microsoft Windows 平臺函數所定義的其中一個識別碼值 `GetVersionEx`。 支援下列值：<br /><br /> -VER_PLATFORM_WIN32s 或0x0000，以指定 Microsoft Windows 3.1。<br />-VER_PLATFORM_WIN32_WINDOWS 或0x0001，用來指定 Windows 95、Windows 98 或其下的作業系統。<br />-VER_PLATFORM_WIN32_NT 或0x0010，用來指定從它繼承的 Windows NT 或作業系統。|  
+|`dwOSMajorVersion`|作業系統主要版本，或表示任何版本的 Null 值。|  
+|`dwOSMinorVersion`|作業系統次要版本，或表示任何版本的 Null 值。|  
   
 ## <a name="remarks"></a>備註  
- `OSINFO` is based on the `OSVERSIONINFOEX` structure that is used in calls to the Microsoft Windows platform function `GetVersionEx`. This structure is used by the ASSEMBLYMETADATA structure to indicate its operating system support.  
+ `OSINFO` 是以呼叫 Microsoft Windows 平臺函式 `GetVersionEx`所用的 `OSVERSIONINFOEX` 結構為基礎。 ASSEMBLYMETADATA 結構會使用此結構來表示其作業系統支援。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

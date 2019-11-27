@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447362"
 ---
 # <a name="cor_prf_gc_root_kind-enumeration"></a>COR_PRF_GC_ROOT_KIND 列舉
-Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.  
+表示[ICorProfilerCallback2：： RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)回呼所公開的垃圾收集根目錄種類。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,10 +39,10 @@ typedef enum {
   
 |成員|描述|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_STACK`|The root is a variable on the stack.|  
-|`COR_PRF_GC_ROOT_FINALIZER`|The root is an entry in the finalizer queue.|  
-|`COR_PRF_GC_ROOT_HANDLE`|The root is a garbage collection handle.|  
-|`COR_PRF_GC_ROOT_OTHER`|The kind of root is unspecified.|  
+|`COR_PRF_GC_ROOT_STACK`|根是堆疊上的變數。|  
+|`COR_PRF_GC_ROOT_FINALIZER`|根是完成項佇列中的專案。|  
+|`COR_PRF_GC_ROOT_HANDLE`|根是垃圾收集控制碼。|  
+|`COR_PRF_GC_ROOT_OTHER`|未指定根類型。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

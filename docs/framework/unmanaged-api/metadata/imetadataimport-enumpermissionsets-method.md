@@ -40,36 +40,36 @@ HRESULT EnumPermissionSets
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in、out]列舉值的指標。 第一次呼叫此方法時，此值必須為 Null。  
   
  `tk`  
- [in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.  
+ 在限制搜尋範圍的元資料標記，或 Null 表示搜尋最廣泛的範圍。  
   
  `dwActions`  
- [in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.  
+ 在旗標，代表要包含在 `rPermission`中的 <xref:System.Security.Permissions.SecurityAction> 值，否則為零以傳回所有動作。  
   
  `rPermission`  
- [out] The array used to store the Permission tokens.  
+ 脫銷用來儲存許可權標記的陣列。  
   
  `cMax`  
  [in] `rPermission` 陣列的大小上限。  
   
  `pcTokens`  
- [out] The number of Permission tokens returned in `rPermission`.  
+ 脫銷`rPermission`中傳回的許可權權杖數目。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|已成功傳回 `EnumPermissionSets`。|  
+|`S_FALSE`|沒有要列舉的權杖。 在此情況下，`pcTokens` 為零。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

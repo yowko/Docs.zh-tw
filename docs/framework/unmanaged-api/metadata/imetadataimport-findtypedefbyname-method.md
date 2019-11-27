@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437846"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>IMetaDataImport::FindTypeDefByName 方法
-Gets a pointer to the TypeDef metadata token for the <xref:System.Type> with the specified name.  
+取得具有指定名稱之 <xref:System.Type> 的 TypeDef 元資料標記指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,20 +37,20 @@ HRESULT FindTypeDefByName
   
 ## <a name="parameters"></a>參數  
  `szTypeDef`  
- [in] The name of the type for which to get the TypeDef token.  
+ 在要取得其 TypeDef token 的類型名稱。  
   
  `tkEnclosingClass`  
- [in] A TypeDef or TypeRef token representing the enclosing class. If the type to find is not a nested class, set this value to NULL.  
+ 在表示封入類別的 TypeDef 或 TypeRef token。 如果要尋找的類型不是嵌套類別，請將此值設定為 Null。  
   
  `ptd`  
- [out] A pointer to the matching TypeDef token.  
+ 脫銷對應之 TypeDef token 的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

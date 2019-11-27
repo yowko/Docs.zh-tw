@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438721"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass 方法
-Determines whether the specified class is an array class.  
+判斷指定的類別是否為數組類別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,19 +37,19 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>參數  
  `classId`  
- [in] The ID of the class to be examined.  
+ 在要檢查之類別的識別碼。  
   
  `pBaseElemType`  
- [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
+ 脫銷CorElementType 列舉值的指標，指出陣列元素的類型。  
   
  `pBaseClassId`  
- [out] A pointer to the class ID of the array elements, when available.  
+ 脫銷陣列元素的類別 ID 指標（如果有的話）。  
   
  `pcRank`  
- [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
+ 脫銷整數的指標，指出陣列的順位（也就是維度的數目）。  
   
 ## <a name="remarks"></a>備註  
- If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
+ 如果指定的類別是陣列類別，則 `IsArrayClass` 方法會針對任何非 null 的輸出參數傳回 S_OK 的 HRESULT 和值。 否則，它會傳回 S_FALSE。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

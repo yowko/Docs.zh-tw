@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438564"
 ---
 # <a name="exporttype-method"></a>ExportType 方法
-Specifies that a type is exportable.  
+指定類型為可匯出。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,28 +39,28 @@ HRESULT ExportType(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- ID of the assembly to export from.  
+ 要匯出之元件的識別碼。  
   
  `FileToken`  
- File token or assembly ID of file that defines the exportable type.  
+ 檔案的檔案標記或元件識別碼，其定義可匯出的類型。  
   
  `TypeToken`  
- Token of type to be made exportable.  
+ 要成為可匯出之類型的 Token。  
   
  `pszTypename`  
- Fully qualified type name to be made exportable.  
+ 要成為可匯出的完整型別名稱。  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This parameter may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` 旗標，例如 `tdPublic` 或 `tdNested`。 這個參數可以傳遞至[DefineExportedType 方法](../metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
   
  `pType`  
- Receives token for exported type.  
+ 接收匯出類型的 token。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h  
+ 需要 alink. h  
   
 ## <a name="see-also"></a>請參閱
 

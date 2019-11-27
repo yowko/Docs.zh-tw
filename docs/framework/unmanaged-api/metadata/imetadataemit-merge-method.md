@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448065"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge 方法
-Adds the specified imported scope to the list of scopes to be merged.  
+將指定的匯入範圍加入要合併的範圍清單。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,23 +37,23 @@ HRESULT Merge (
   
 ## <a name="parameters"></a>參數  
  `pImport`  
- [in] A pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) object that identifies the imported scope to be merged.  
+ 在[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)物件的指標，識別要合併的匯入範圍。  
   
  `pIMap`  
- [in] A pointer to an [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) object that specifies the token re-map.  
+ 在指定標記重新對應之[IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)物件的指標。  
   
  `pHandler`  
- [in] A pointer to an [IUnknown](/cpp/atl/iunknown) object that specifies the errors.  
+ 在指定錯誤之[IUnknown](/cpp/atl/iunknown)物件的指標。  
   
 ## <a name="remarks"></a>備註  
- Call [IMetaDataEmit::MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) to trigger the merger of metadata into a single scope.  
+ 呼叫[IMetaDataEmit：： MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md)以觸發將中繼資料合併到單一範圍中。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
