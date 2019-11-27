@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353013"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>How to: Find a List of Child Elements (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>如何：尋找子項目的清單（XPath-LINQ to XML）（Visual Basic）
 這個主題會比較 XPath 子項目座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 座標軸。  
   
  XPath 運算式為：`./*`  
@@ -17,7 +17,7 @@ ms.locfileid: "74353013"
 ## <a name="example"></a>範例  
  此範例會尋找 `Address` 項目的所有子項目。  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：多份採購單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：多份採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -54,4 +54,4 @@ Results are identical
   
 ## <a name="see-also"></a>請參閱
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 使用者的 LINQ to XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

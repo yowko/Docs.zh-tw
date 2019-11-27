@@ -36,19 +36,19 @@ ms.locfileid: "74345627"
 
 ### <a name="to-download-a-file"></a>下載檔案
 
-- 使用 `DownloadFile` 方法下載檔案，並以字串或 URI 形式指定目標檔案的位置，以及指定要儲存檔案的位置。 此範例會從 `http://www.cohowinery.com/downloads` 下載 `WineList.txt` 檔案，然後將它儲存至 `C:\Documents and Settings\All Users\Documents`：
+- 使用 `DownloadFile` 方法下載檔案，並以字串或 URI 形式指定目標檔案的位置，以及指定要儲存檔案的位置。 此範例會從 `WineList.txt` 下載 `http://www.cohowinery.com/downloads` 檔案，然後將它儲存至 `C:\Documents and Settings\All Users\Documents`：
 
   [!code-vb[VbResourceTasks#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#9)]
 
 ### <a name="to-download-a-file-specifying-a-time-out-interval"></a>下載檔案並指定逾時間隔
 
-- 使用 `DownloadFile` 方法下載檔案，並以字串或 URI 形式指定目標檔案的位置、指定要儲存檔案的位置，以及指定以毫秒為單位的逾時間隔 (預設值為 1000)。 此範例會從 `http://www.cohowinery.com/downloads` 下載 `WineList.txt` 檔案，然後將它儲存至 `C:\Documents and Settings\All Users\Documents`，並指定 500 毫秒的逾時間隔：
+- 使用 `DownloadFile` 方法下載檔案，並以字串或 URI 形式指定目標檔案的位置、指定要儲存檔案的位置，以及指定以毫秒為單位的逾時間隔 (預設值為 1000)。 此範例會從 `WineList.txt` 下載 `http://www.cohowinery.com/downloads` 檔案，然後將它儲存至 `C:\Documents and Settings\All Users\Documents`，並指定 500 毫秒的逾時間隔：
 
   [!code-vb[VbResourceTasks#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#10)]
 
 ### <a name="to-download-a-file-supplying-a-user-name-and-password"></a>下載檔案並提供使用者名稱和密碼
 
-- 使用 `DownLoadFile` 方法下載檔案，並以字串或 URI 形式指定目標檔案的位置，以及指定要儲存檔案、使用者名稱和密碼的位置。 此範例會從 `http://www.cohowinery.com/downloads` 下載 `WineList.txt` 檔案，然後將它儲存至具有使用者名稱 `anonymous` 和空白密碼的 `C:\Documents and Settings\All Users\Documents`。
+- 使用 `DownLoadFile` 方法下載檔案，並以字串或 URI 形式指定目標檔案的位置，以及指定要儲存檔案、使用者名稱和密碼的位置。 此範例會從 `WineList.txt` 下載 `http://www.cohowinery.com/downloads` 檔案，然後將它儲存至具有使用者名稱 `C:\Documents and Settings\All Users\Documents` 和空白密碼的 `anonymous`。
 
   [!code-vb[VbResourceTasks#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#11)]
 

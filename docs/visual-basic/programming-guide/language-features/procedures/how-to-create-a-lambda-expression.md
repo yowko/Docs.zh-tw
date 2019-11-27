@@ -13,94 +13,94 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349747"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>如何：建立 Lambda 運算式 (Visual Basic)
-A *lambda expression* is a function or subroutine that does not have a name. A lambda expression can be used wherever a delegate type is valid.  
+*Lambda 運算式*是不具有名稱的函數或副程式。 只要委派型別有效，就可以使用 lambda 運算式。  
   
-### <a name="to-create-a-single-line-lambda-expression-function"></a>To create a single-line lambda expression function  
+### <a name="to-create-a-single-line-lambda-expression-function"></a>建立單行 lambda 運算式函數  
   
-1. In any situation where a delegate type could be used, type the keyword `Function`, as in the following example:  
+1. 在可以使用委派類型的任何情況下，輸入關鍵字 `Function`，如下列範例所示：  
   
      `Dim add1 =`   `Function`  
   
-2. In parentheses, directly after `Function`, type the parameters of the function. Notice that you do not specify a name after `Function`.  
+2. 在括弧中，直接在 `Function`之後，輸入函數的參數。 請注意，您不會在 `Function`之後指定名稱。  
   
      `Dim add1 = Function`   `(num As Integer)`  
   
-3. Following the parameter list, type a single expression as the body of the function. The value that the expression evaluates to is the value returned by the function. You do not use an `As` clause to specify the return type.  
+3. 在 [參數清單] 後面，輸入單一運算式做為函式的主體。 運算式評估為的值是函式所傳回的值。 您不能使用 `As` 子句來指定傳回型別。  
   
      [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
-     You call the lambda expression by passing in an integer argument.  
+     您可以藉由傳入整數引數來呼叫 lambda 運算式。  
   
      [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
-4. Alternatively, the same result is accomplished by the following example:  
+4. 或者，也可以透過下列範例來完成相同的結果：  
   
      [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
-### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>To create a single-line lambda expression subroutine  
+### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>建立單行 lambda 運算式副程式  
   
-1. In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example.  
+1. 在可以使用委派類型的任何情況下，輸入關鍵字 `Sub`，如下列範例所示。  
   
      `Dim add1 =`   `Sub`  
   
-2. In parentheses, directly after `Sub`, type the parameters of the subroutine. Notice that you do not specify a name after `Sub`.  
+2. 在括弧中，直接在 `Sub`之後，輸入副程式的參數。 請注意，您不會在 `Sub`之後指定名稱。  
   
      `Dim add1 = Sub`   `(msg As String)`  
   
-3. Following the parameter list, type a single statement as the body of the subroutine.  
+3. 在 [參數清單] 後面，輸入單一語句作為副程式的主體。  
   
      [!code-vb[VbVbalrLambdas#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#17)]  
   
-     You call the lambda expression by passing in a string argument.  
+     您可以藉由傳入字串引數來呼叫 lambda 運算式。  
   
      [!code-vb[VbVbalrLambdas#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#18)]  
   
-### <a name="to-create-a-multiline-lambda-expression-function"></a>To create a multiline lambda expression function  
+### <a name="to-create-a-multiline-lambda-expression-function"></a>若要建立多行 lambda 運算式函數  
   
-1. In any situation where a delegate type could be used, type the keyword `Function`, as shown in the following example.  
+1. 在可以使用委派類型的任何情況下，輸入關鍵字 `Function`，如下列範例所示。  
   
      `Dim add1 =`   `Function`  
   
-2. In parentheses, directly after `Function`, type the parameters of the function. Notice that you do not specify a name after `Function`.  
+2. 在括弧中，直接在 `Function`之後，輸入函數的參數。 請注意，您不會在 `Function`之後指定名稱。  
   
      `Dim add1 = Function`   `(index As Integer)`  
   
-3. 請按 ENTER 鍵。 The `End Function` statement is automatically added.  
+3. 請按 ENTER 鍵。 系統會自動新增 `End Function` 語句。  
   
-4. Within the body of the function, add the following code to create an expression and return the value. You do not use an `As` clause to specify the return type.  
+4. 在函式主體內，新增下列程式碼以建立運算式並傳回值。 您不能使用 `As` 子句來指定傳回型別。  
   
      [!code-vb[VbVbalrLambdas#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#19)]  
   
-     You call the lambda expression by passing in an integer argument.  
+     您可以藉由傳入整數引數來呼叫 lambda 運算式。  
   
      [!code-vb[VbVbalrLambdas#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#20)]  
   
-### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>To create a multiline lambda expression subroutine  
+### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>若要建立多行 lambda 運算式副程式  
   
-1. In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example:  
+1. 在可以使用委派類型的任何情況下，輸入關鍵字 `Sub`，如下列範例所示：  
   
      `Dim add1 =`   `Sub`  
   
-2. In parentheses, directly after `Sub`, type the parameters of the subroutine. Notice that you do not specify a name after `Sub`.  
+2. 在括弧中，直接在 `Sub`之後，輸入副程式的參數。 請注意，您不會在 `Sub`之後指定名稱。  
   
      `Dim add1 = Sub`  `(msg As String)`  
   
-3. 請按 ENTER 鍵。 The `End Sub` statement is automatically added.  
+3. 請按 ENTER 鍵。 系統會自動新增 `End Sub` 語句。  
   
-4. Within the body of the function, add the following code to execute when the subroutine is invoked.  
+4. 在函式主體內，新增下列程式碼，以在叫用副程式時執行。  
   
      [!code-vb[VbVbalrLambdas#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#21)]  
   
-     You call the lambda expression by passing in a string argument.  
+     您可以藉由傳入字串引數來呼叫 lambda 運算式。  
   
      [!code-vb[VbVbalrLambdas#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#22)]  
   
 ## <a name="example"></a>範例  
- A common use of lambda expressions is to define a function that can be passed in as the argument for a parameter whose type is `Delegate`. In the following example, the <xref:System.Diagnostics.Process.GetProcesses%2A> method returns an array of the processes running on the local computer. The <xref:System.Linq.Enumerable.Where%2A> method from the <xref:System.Linq.Enumerable> class requires a `Boolean` delegate as its argument. The lambda expression in the example is used for that purpose. It returns `True` for each process that has only one thread, and those are selected in `filteredList`.  
+ Lambda 運算式的常見用法是定義一個函式，該函式可當做參數（其類型為 `Delegate`的引數）傳入。 在下列範例中，<xref:System.Diagnostics.Process.GetProcesses%2A> 方法會傳回本機電腦上執行的進程陣列。 來自 <xref:System.Linq.Enumerable> 類別的 <xref:System.Linq.Enumerable.Where%2A> 方法需要 `Boolean` 委派做為其引數。 範例中的 lambda 運算式用於該目的。 它會針對只有一個執行緒的每個進程傳回 `True`，並在 `filteredList`中選取這些程式。  
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
   
- The previous example is equivalent to the following code, which is written in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] syntax:  
+ 上一個範例相當於下列程式碼，以 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 語法撰寫：  
   
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   
