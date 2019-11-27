@@ -31,7 +31,7 @@ ms.locfileid: "74283084"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和元素  
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -41,7 +41,7 @@ ms.locfileid: "74283084"
 |`enabled`|指定是否啟用網路效能計數器。 預設值是 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
- 無。  
+ None。  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -73,7 +73,7 @@ ms.locfileid: "74283084"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>

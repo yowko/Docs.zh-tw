@@ -352,11 +352,11 @@ WCF 藉由使用安全傳輸（HTTPS）、以 WS-MANAGEMENT 撰寫，以及與 W
 
 - R2301：若要保護 ws-reliablemessaging 序列的完整性，以及個別訊息的完整性和機密性，WCF 需要使用 WS-安全交談。
 
-- R2302： AWS-必須先建立安全對話會話，然後再建立 WS-RELIABLEMESSAGING 序列。
+- R2302：在建立 WS-ReliableMessaging 序列之前，必須先建立 WS-Secure Conversation 工作階段。
 
 - R2303：如果 WS-ReliableMessaging 序列的存留期超過 WS-Secure Conversation 工作階段的存留期，則使用 WS-Secure Conversation 建立的 `SecurityContextToken` 必須透過對應的 WS-Secure Conversation 更新繫結來加以更新。
 
-- B2304： ws-reliablemessaging 序列或一對相互關聯的反向序列一律會系結至單一的 SecureConversation 會話。
+- B2304：WS-ReliableMessaging 序列或是一對相互關聯的反向序列一律繫結至單一 WS-SecureConversation 工作階段。
 
 - R2305：當以 WS-安全對話撰寫時，WCF 回應者會要求 `CreateSequence` 訊息包含 `wsse:SecurityTokenReference` 元素和 `wsrm:UsesSequenceSTR` 標頭。
 

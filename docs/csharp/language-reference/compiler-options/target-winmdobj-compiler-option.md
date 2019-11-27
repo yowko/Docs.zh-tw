@@ -35,7 +35,7 @@ ms.locfileid: "74204484"
   
 3. 在 [輸出類型] 清單中，選擇 [WinMD 檔案]。  
   
-     The **WinMD File** option is available only for Windows 8.x Store app templates.  
+     [ **WinMD**檔案] 選項僅適用于 Windows 8.X 存放區應用程式範本。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "74204484"
 csc -target:winmdobj filename.cs  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [-target (C# 編譯器選項)](./target-compiler-option.md)
 - [C# 編譯器選項](./index.md)

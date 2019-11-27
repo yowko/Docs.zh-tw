@@ -23,7 +23,7 @@ ms.locfileid: "74428227"
 ## <a name="determine-if-a-remote-host-is-reachable"></a>判斷是否可以連線遠端主機  
  您可以使用 <xref:System.Net.NetworkInformation.Ping> 類別，判斷網路上的遠端主機是否啟動且可連線。 如需詳細資訊，請參閱[如何：Ping 主機](how-to-ping-a-host.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [網路程式設計範例](network-programming-samples.md)
 

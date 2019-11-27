@@ -65,7 +65,7 @@ ms.locfileid: "74204546"
 [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/asyncstate.cs#23)]
 [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/asyncstate.vb#23)]
 
-<xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 都會公開靜態 <xref:System.Threading.Tasks.Task.Factory%2A> 屬性，這個屬性會傳回 <xref:System.Threading.Tasks.TaskFactory> 的預設執行個體，讓您以 `Task.Factory.StartNew()` 的形式呼叫這個方法。 另外，在下面範例中，每個工作都屬於 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 類型，因此它們都各自具有包含計算結果的公用 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性。 這些工作會以非同步方式執行，且可能以任何順序完成。 如果在計算完成之前就存取 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性，則這個屬性會封鎖呼叫端執行緒，直到有值為止。
+<xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 都會公開一個靜態 <xref:System.Threading.Tasks.Task.Factory%2A> 屬性，以傳回 <xref:System.Threading.Tasks.TaskFactory>的預設實例，讓您可以呼叫方法做為 `Task.Factory.StartNew()`。 另外，在下面範例中，每個工作都屬於 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 類型，因此它們都各自具有包含計算結果的公用 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性。 這些工作會以非同步方式執行，且可能以任何順序完成。 如果在計算完成之前就存取 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性，則這個屬性會封鎖呼叫端執行緒，直到有值為止。
 
 [!code-csharp[TPL_TaskIntro#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/result1.cs#4)]
 [!code-vb[TPL_TaskIntro#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/result1.vb#4)]
@@ -133,7 +133,7 @@ ms.locfileid: "74204546"
 
 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> 方法可讓您指定在「前項工作」(Antecedent Task) 完成時要啟動的工作。 前項工作的參考會傳遞給接續工作的委派，以便檢查前項工作的狀態，並可藉由擷取 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性的值，使用前項的輸出做為接續的輸入。
 
-在下面範例中，`getData` 工作是透過呼叫 <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> 方法來啟動。 當 `processData` 完成時，會自動啟動 `getData` 工作，而 `displayData` 完成時會啟動 `processData`。 `getData` 會產生整數陣列，`processData` 工作可透過 `getData` 工作的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性存取該陣列。 `processData` 工作會處理該陣列並傳回結果，這個結果的類型是從傳遞給 <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> 方法之 Lambda 運算式的傳回類型推斷而來。 當 `displayData` 完成時，`processData` 工作會自動執行，而 <xref:System.Tuple%603> Lambda 運算式傳回的 `processData` 物件可供 `displayData` 工作透過 `processData` 工作的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性來存取。 `displayData` 工作會接受 `processData` 工作的結果並且產生結果，這個結果的類型也是以類似方式推斷而來，且這個結果會放在 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性中讓程式取得。
+在下面範例中，`getData` 工作是透過呼叫 <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> 方法來啟動。 當 `processData` 完成時，會自動啟動 `getData` 工作，而 `displayData` 完成時會啟動 `processData`。 `getData` 會產生可透過 `getData` 工作的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性來存取 `processData` 工作的整數陣列。 `processData` 工作會處理該陣列並傳回結果，這個結果的類型是從傳遞給 <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> 方法之 Lambda 運算式的傳回類型推斷而來。 當 `displayData` 完成時，`processData` 工作會自動執行，而 <xref:System.Tuple%603> Lambda 運算式傳回的 `processData` 物件可供 `displayData` 工作透過 `processData` 工作的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性來存取。 `displayData` 工作會接受 `processData` 工作的結果並且產生結果，這個結果的類型也是以類似方式推斷而來，且這個結果會放在 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性中讓程式取得。
 
 [!code-csharp[TPL_TaskIntro#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/continuations1.cs#5)]
 [!code-vb[TPL_TaskIntro#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/continuations1.vb#5)]
@@ -186,7 +186,7 @@ ms.locfileid: "74204546"
 
 有些多載可讓您指定逾時，有些多載則額外接受一個 <xref:System.Threading.CancellationToken> 做為輸入參數，讓等候作業本身也可以取消 (不管是透過程式設計還是做為對使用者輸入的回應)。
 
-等候工作時，也會隱含等候該工作之所有使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項建立的子系。 如果工作已完成，則 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 會立即傳回。 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法會擲回工作所引發的任何例外狀況，即使 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法是在工作完成之後才呼叫也一樣。
+等候工作時，也會隱含等候該工作之所有使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項建立的子系。 如果工作已經完成，<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 會立即傳回。 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法會擲回工作所引發的任何例外狀況，即使 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法是在工作完成之後才呼叫也一樣。
 
 ## <a name="composing-tasks"></a>組成工作
 
@@ -254,11 +254,11 @@ ms.locfileid: "74204546"
 
 ## <a name="tasks-without-delegates"></a>不含委派的工作
 
-在某些情況下，您可能需要使用 <xref:System.Threading.Tasks.Task> 來封裝由外部元件 (而非您自己的使用者委派) 所執行的一些非同步作業。 如果作業是根據非同步程式設計模型 Begin/End 模式，您可以使用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法。 如果不是根據這個模式，您可以使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 物件將作業包裝在工作中，進而享有利用 <xref:System.Threading.Tasks.Task> 撰寫程式的一些優點，例如支援例外狀況傳播和接續。 如需詳細資訊，請參閱<xref:System.Threading.Tasks.TaskCompletionSource%601>。
+在某些情況下，您可能需要使用 <xref:System.Threading.Tasks.Task> 來封裝由外部元件 (而非您自己的使用者委派) 所執行的一些非同步作業。 如果作業是根據非同步程式設計模型 Begin/End 模式，您可以使用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法。 如果不是根據這個模式，您可以使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 物件將作業包裝在工作中，進而享有利用 <xref:System.Threading.Tasks.Task> 撰寫程式的一些優點，例如支援例外狀況傳播和接續。 如需詳細資訊，請參閱 <xref:System.Threading.Tasks.TaskCompletionSource%601>。
 
 ## <a name="custom-schedulers"></a>自訂排程器
 
-大部分的應用程式或程式庫開發人員並不在意工作會在哪一個處理器上執行、工作會如何將自己的成品與其他工作同步，或是工作會如何排定在 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 上。 他們只要求工作能夠在主機電腦上盡可能有效率地執行。 如果您需要進一步控制排程細節，工作平行程式庫可讓您設定預設工作排程器上的某些設定，甚至可讓您提供自訂的排程器。 如需詳細資訊，請參閱<xref:System.Threading.Tasks.TaskScheduler>。
+大部分的應用程式或程式庫開發人員並不在意工作會在哪一個處理器上執行、工作會如何將自己的成品與其他工作同步，或是工作會如何排定在 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 上。 他們只要求工作能夠在主機電腦上盡可能有效率地執行。 如果您需要進一步控制排程細節，工作平行程式庫可讓您設定預設工作排程器上的某些設定，甚至可讓您提供自訂的排程器。 如需詳細資訊，請參閱 <xref:System.Threading.Tasks.TaskScheduler>。
 
 ## <a name="related-data-structures"></a>相關資料結構
 
@@ -268,7 +268,7 @@ TPL 提供數個新的公用類型，這些類型在平行處理和序列處理�
 
 建議您不要繼承自 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>， 建議您改用 <xref:System.Threading.Tasks.Task.AsyncState%2A> 屬性，建立其他資料或狀態與 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 物件的關聯。 您也可以使用擴充方法，擴充 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 類別的功能。 如需擴充方法的詳細資訊，請參閱[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)和[擴充方法](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)。
 
-If you must inherit from <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>, you cannot use <xref:System.Threading.Tasks.Task.Run%2A>, or the <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType>, or <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> classes to create instances of your custom task type because these mechanisms create only <xref:System.Threading.Tasks.Task> and <xref:System.Threading.Tasks.Task%601> objects. 此外，也不可以使用 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.TaskFactory> 和 <xref:System.Threading.Tasks.TaskFactory%601> 所提供的工作接續機制來建立自訂工作類型執行個體，因為這些機制也是只建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。
+如果您必須繼承自 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>，則無法使用 <xref:System.Threading.Tasks.Task.Run%2A>或 <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>、<xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType>或 <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> 類別來建立自訂工作類型的實例，因為這些機制只會建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。 此外，也不可以使用 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.TaskFactory> 和 <xref:System.Threading.Tasks.TaskFactory%601> 所提供的工作接續機制來建立自訂工作類型執行個體，因為這些機制也是只建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。
 
 ## <a name="related-topics"></a>相關主題
 
@@ -287,7 +287,7 @@ If you must inherit from <xref:System.Threading.Tasks.Task> or <xref:System.Thre
 |[資料平行處理原則](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.For%2A> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 建立資料的平行迴圈。|
 |[平行程式設計](../../../docs/standard/parallel-programming/index.md)|.NET Framework 平行程式設計的最上層節點。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [平行程式設計](../../../docs/standard/parallel-programming/index.md)
 - [使用 .NET Framework 進行平行程式設計的範例](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

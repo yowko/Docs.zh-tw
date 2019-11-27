@@ -66,6 +66,6 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
  如需 .NET Framework 的詳細資訊，請參閱 [Microsoft.NET Framework 概觀 (英文)](../../framework/get-started/overview.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用視覺效果消費者入門C#](/visualstudio/ide/quickstart-csharp-console)

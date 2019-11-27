@@ -1,5 +1,5 @@
 ---
-title: How to create and run a long-running workflow
+title: 如何建立和執行長時間執行的工作流程
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,54 +12,54 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204886"
 ---
-# <a name="how-to-create-and-run-a-long-running-workflow"></a>How to create and run a long-running workflow
+# <a name="how-to-create-and-run-a-long-running-workflow"></a>如何建立和執行長時間執行的工作流程
 
-One of the central features of Windows Workflow Foundation (WF) is the runtime’s ability to persist and unload idle workflows to a database. The steps in [How to: Run a Workflow](how-to-run-a-workflow.md) demonstrated the basics of workflow hosting using a console application. 範例包括啟動工作流程、工作流程開發週期處理常式，以及繼續使用書籤。 為有效示範工作流程持續性，必須要有較複雜的工作流程主機，以支援啟動與繼續使用多個工作流程執行個體。 教學課程中的這個步驟，示範如何建立 Windows 表單主應用程式，以支援啟動與繼續使用多個工作流程執行個體、工作流程持續性，並且為後續教學課程步驟中示範的追蹤和版本設定等進階功能提供基礎。
-
-> [!NOTE]
-> This tutorial step and the subsequent steps use all three workflow types from [How to: Create a Workflow](how-to-create-a-workflow.md). If you did not complete all three types you can download a completed version of the steps from [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).
+Windows Workflow Foundation （WF）的其中一項主要功能是執行時間將閒置工作流程保存和卸載至資料庫的能力。 [如何：執行工作流程](how-to-run-a-workflow.md)中的步驟示範使用主控台應用程式裝載工作流程的基本概念。 範例包括啟動工作流程、工作流程開發週期處理常式，以及繼續使用書籤。 為有效示範工作流程持續性，必須要有較複雜的工作流程主機，以支援啟動與繼續使用多個工作流程執行個體。 教學課程中的這個步驟，示範如何建立 Windows 表單主應用程式，以支援啟動與繼續使用多個工作流程執行個體、工作流程持續性，並且為後續教學課程步驟中示範的追蹤和版本設定等進階功能提供基礎。
 
 > [!NOTE]
-> To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).
+> 本教學課程步驟和後續步驟會使用[如何：建立工作流程](how-to-create-a-workflow.md)中的三種工作流程類型。 如果您未完成這三種類型，您可以從[Windows Workflow Foundation （WF45）-消費者入門教學](https://go.microsoft.com/fwlink/?LinkID=248976)課程下載完整的步驟版本。
+
+> [!NOTE]
+> 若要下載教學課程的完整版或觀看影片逐步解說，請參閱[Windows Workflow Foundation （WF45）-消費者入門教學](https://go.microsoft.com/fwlink/?LinkID=248976)課程。
 
 ## <a name="to-create-the-persistence-database"></a>若要建立持續性資料庫
 
-1. Open SQL Server Management Studio and connect to the local server, for example **.\SQLEXPRESS**. Right-click the **Databases** node on the local server, and select **New Database**. Name the new database **WF45GettingStartedTutorial**, accept all other values, and select **OK**.
+1. 開啟 SQL Server Management Studio 並連接到本機伺服器，例如 **.\SQLEXPRESS**。 以滑鼠右鍵按一下本機伺服器上的 [**資料庫**] 節點，然後選取 [**新增資料庫**]。 將新的資料庫命名為**WF45GettingStartedTutorial**，接受所有其他值，然後選取 **[確定]** 。
 
     > [!NOTE]
-    > Ensure that you have **Create Database** permission on the local server before creating the database.
+    > 在建立資料庫之前，請確定您已在本機伺服器上**建立資料庫**許可權。
 
-2. Choose **Open**, **File** from the **File** menu. Browse to the following folder: *C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en*
+2. 從 **[檔案**] 功能表中選擇 [**開啟** **]、[** 檔案]。 流覽至下列資料夾： *C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en*
 
-    Select the following two files and click **Open**.
+    選取下列兩個檔案，然後按一下 [**開啟**]。
 
-    - *SqlWorkflowInstanceStoreLogic.sql*
+    - *Sqlworkflowinstancestorelogic.sql .sql*
 
-    - *SqlWorkflowInstanceStoreSchema.sql*
+    - *Sqlworkflowinstancestoreschema.sql .sql*
 
-3. Choose **SqlWorkflowInstanceStoreSchema.sql** from the **Window** menu. Ensure that **WF45GettingStartedTutorial** is selected in the **Available Databases** drop-down and choose **Execute** from the **Query** menu.
+3. 從 [**視窗]** 功能表選擇 [ **sqlworkflowinstancestoreschema.sql** ]。 確定已在 [**可用的資料庫**] 下拉式選單中選取 [ **WF45GettingStartedTutorial** ]，然後從 [**查詢**] 功能表中選擇 [**執行**]。
 
-4. Choose **SqlWorkflowInstanceStoreLogic.sql** from the **Window** menu. Ensure that **WF45GettingStartedTutorial** is selected in the **Available Databases** drop-down and choose **Execute** from the **Query** menu.
+4. 從 [**視窗]** 功能表選擇 [ **sqlworkflowinstancestorelogic.sql** ]。 確定已在 [**可用的資料庫**] 下拉式選單中選取 [ **WF45GettingStartedTutorial** ]，然後從 [**查詢**] 功能表中選擇 [**執行**]。
 
     > [!WARNING]
     > 務必按照正確順序執行前面的兩個步驟。 如果未按照正確順序執行查詢，會發生錯誤，而且也無法正確地設定持續性資料庫。
 
 ## <a name="to-add-the-reference-to-the-durableinstancing-assemblies"></a>將參考加入至 DurableInstancing 組件
 
-1. Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and select **Add Reference**.
+1. 以滑鼠右鍵按一下**方案總管**中的 [ **[numberguessworkflowhost]** ]，然後選取 [**新增參考**]。
 
-2. Select **Assemblies** from the **Add Reference** list, and type `DurableInstancing` into the **Search Assemblies** box. 如此會篩選組件，讓您更容易選取所需的參考。
+2. 從 [**加入參考**] 清單中選取 [**元件**]，然後在 [**搜尋元件**] 方塊中輸入 `DurableInstancing`。 如此會篩選組件，讓您更容易選取所需的參考。
 
-3. Check the checkbox beside **System.Activities.DurableInstancing** and **System.Runtime.DurableInstancing** from the **Search Results** list, and click **OK**.
+3. 從 [**搜尋結果**] 清單中核取 [ **DurableInstancing** ] 和 [ **DurableInstancing** ] 旁邊的核取方塊，然後按一下 **[確定]** 。
 
 ## <a name="to-create-the-workflow-host-form"></a>建立工作流程主表單
 
 > [!NOTE]
-> 此程序中的步驟描述如何手動加入及設定表單。 如果需要，可以下載教學課程的方案檔，並將完成的表單加入到專案中。 To download the tutorial files, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976). Once the files are downloaded, right-click **NumberGuessWorkflowHost** and choose **Add Reference**. Add a reference to **System.Windows.Forms** and **System.Drawing**. These references are added automatically if you add a new form from the **Add**, **New Item** menu, but must be added manually when importing a form. Once the references are added, right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Existing Item**. Browse to the `Form` folder in the project files, select **WorkflowHostForm.cs** (or **WorkflowHostForm.vb**), and click **Add**. If you choose to import the form, then you can skip down to the next section, [To add the properties and helper methods of the form](#to-add-the-properties-and-helper-methods-of-the-form).
+> 此程序中的步驟描述如何手動加入及設定表單。 如果需要，可以下載教學課程的方案檔，並將完成的表單加入到專案中。 若要下載教學課程檔案，請參閱[Windows Workflow Foundation （WF45）-消費者入門教學](https://go.microsoft.com/fwlink/?LinkID=248976)課程。 下載檔案之後，以滑鼠右鍵按一下 [ **[numberguessworkflowhost]** ]，然後選擇 [**加入參考**]。 新增對**system.web**和**system.web**的參考。 如果您從 [新增]、[**新專案**] 功能表加入新的表單，但必須在匯入表單時手動**加入，則**會自動加入這些參考。 加入參考之後，以滑鼠右鍵按一下**方案總管**中的 [ **[numberguessworkflowhost]** ]，然後選擇 [**加入**]、[**現有專案**]。 流覽至專案檔中的 `Form` 資料夾，選取  **WorkflowHostForm.cs**  （或   **workflowhostform**），然後按一下 **新增**。 如果您選擇匯入表單，則可以跳到下一節，[以加入表單的屬性和 helper 方法](#to-add-the-properties-and-helper-methods-of-the-form)。
 
-1. Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **New Item**.
+1. 以滑鼠右鍵按一下**方案總管**中的 **[numberguessworkflowhost]** ，然後選擇 [**加入**]、[**新增專案**]。
 
-2. In the **Installed** templates list, choose **Windows Form**, type `WorkflowHostForm` in the **Name** box, and click **Add**.
+2. 在 [**已安裝**的範本] 清單中，選擇 [ **Windows Form**]，在 [**名稱**] 方塊中輸入 `WorkflowHostForm`，然後按一下 [**新增**]。
 
 3. 設定表單中的下列屬性。
 
@@ -71,40 +71,40 @@ One of the central features of Windows Workflow Foundation (WF) is the runtime�
 
 4. 依指定順序將下列控制項加入到表單中，並依指示設定屬性。
 
-    |控制項|Property: Value|
+    |控制項|屬性：值|
     |-------------|---------------------|
-    |**Button**|Name: NewGame<br /><br /> Location: 13, 13<br /><br /> Size: 75, 23<br /><br /> Text: New Game|
-    |**標籤**|Location: 94, 18<br /><br /> Text: Guess a number from 1 to|
-    |**ComboBox**|Name: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> Items: 10, 100, 1000<br /><br /> Location: 228, 12<br /><br /> Size: 143, 21|
-    |**標籤**|Location: 13, 43<br /><br /> Text: Workflow type|
-    |**ComboBox**|Name: WorkflowType<br /><br /> DropDownStyle: DropDownList<br /><br /> Items: StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow<br /><br /> Location: 94, 40<br /><br /> Size: 277, 21|
-    |**標籤**|Name: WorkflowVersion<br /><br /> Location: 13, 362<br /><br /> Text: Workflow version|
-    |**GroupBox**|Location: 13, 67<br /><br /> Size: 358, 287<br /><br /> Text: Game|
+    |**Button**|名稱： NewGame<br /><br /> 位置：13、13<br /><br /> 大小：75、23<br /><br /> 文字：新遊戲|
+    |**標籤**|位置：94、18<br /><br /> Text：猜測從1到的數位|
+    |**ComboBox**|名稱： NumberRange<br /><br /> DropDownStyle： DropDownList<br /><br /> 專案：10、100、1000<br /><br /> 位置：228、12<br /><br /> 大小：143、21|
+    |**標籤**|位置：13，43<br /><br /> 文字：工作流程類型|
+    |**ComboBox**|名稱： WorkflowType<br /><br /> DropDownStyle： DropDownList<br /><br /> 專案： StateMachineNumberGuessWorkflow、FlowchartNumberGuessWorkflow、SequentialNumberGuessWorkflow<br /><br /> 位置：94、40<br /><br /> 大小：277、21|
+    |**標籤**|名稱： WorkflowVersion<br /><br /> 位置：13，362<br /><br /> 文字：工作流程版本|
+    |**GroupBox**|位置：13，67<br /><br /> 大小：358、287<br /><br /> 文字：遊戲|
 
     > [!NOTE]
-    > When adding the following controls, put them into the GroupBox.
+    > 新增下列控制項時，請將它們放入群組方塊中。
 
-    |控制項|Property: Value|
+    |控制項|屬性：值|
     |-------------|---------------------|
-    |**標籤**|Location: 7, 20<br /><br /> Text: Workflow Instance Id|
-    |**ComboBox**|Name: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Location: 121, 17<br /><br /> Size: 227, 21|
-    |**標籤**|Location: 7, 47<br /><br /> Text: Guess|
-    |**TextBox**|Name: Guess<br /><br /> Location: 50, 44<br /><br /> Size: 65, 20|
-    |**Button**|Name: EnterGuess<br /><br /> Location: 121, 42<br /><br /> Size: 75, 23<br /><br /> Text: Enter Guess|
-    |**Button**|Name: QuitGame<br /><br /> Location: 274, 42<br /><br /> Size: 75, 23<br /><br /> Text: Quit|
-    |**TextBox**|Name: WorkflowStatus<br /><br /> Location: 10, 73<br /><br /> Multiline: True<br /><br /> ReadOnly: True<br /><br /> ScrollBars: Vertical<br /><br /> Size: 338, 208|
+    |**標籤**|位置：7、20<br /><br /> 文字：工作流程實例識別碼|
+    |**ComboBox**|名稱： InstanceId<br /><br /> DropDownStyle： DropDownList<br /><br /> 位置：121、17<br /><br /> 大小：227、21|
+    |**標籤**|位置：7、47<br /><br /> 文字：猜測|
+    |**TextBox**|名稱：猜測<br /><br /> 位置：50、44<br /><br /> 大小：65、20|
+    |**Button**|名稱： EnterGuess<br /><br /> 位置：121、42<br /><br /> 大小：75、23<br /><br /> 文字：輸入猜測|
+    |**Button**|名稱： QuitGame<br /><br /> 位置：274、42<br /><br /> 大小：75、23<br /><br /> 文字： Quit|
+    |**TextBox**|名稱： WorkflowStatus<br /><br /> 位置：10、73<br /><br /> 多行： True<br /><br /> ReadOnly： True<br /><br /> 捲軸：垂直<br /><br /> 大小：338、208|
 
-5. Set the **AcceptButton** property of the form to **EnterGuess**.
+5. 將表單的**AcceptButton**屬性設定為**EnterGuess**。
 
  下列範例示範完成的表單。
 
- ![Screenshot of a Windows Workflow Foundation Workflow Host Form.](./media/how-to-create-and-run-a-long-running-workflow/windows-workflow-foundation-workflowhostform.png)
+ ![Windows Workflow Foundation 工作流程主機表單的螢幕擷取畫面。](./media/how-to-create-and-run-a-long-running-workflow/windows-workflow-foundation-workflowhostform.png)
 
 ## <a name="to-add-the-properties-and-helper-methods-of-the-form"></a>加入表單的屬性和 Helper 方法
 
 本節中的步驟會將設定表單 UI 的屬性和 Helper 方法加入到表單類別中，以支援執行及繼續使用數字猜測工作流程。
 
-1. Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.
+1. 以滑鼠右鍵按一下**方案總管**中的   **workflowhostform** ，然後選擇 **查看程式碼**。
 
 2. 將下列 `using` (或 `Imports`) 陳述式加入至檔案最上方的其他 `using` (或 `Imports`) 陳述式。
 
@@ -124,7 +124,7 @@ One of the central features of Windows Workflow Foundation (WF) is the runtime�
     using System.Windows.Forms;
     ```
 
-3. Add the following member declarations to the **WorkflowHostForm** class.
+3. 將下列成員宣告加入至 **workflowhostform**類別。
 
     ```vb
     Const connectionString = "Server=.\SQLEXPRESS;Initial Catalog=WF45GettingStartedTutorial;Integrated Security=SSPI"
@@ -165,9 +165,9 @@ One of the central features of Windows Workflow Foundation (WF) is the runtime�
     }
     ```
 
-    The `InstanceId` combo box displays a list of persisted workflow instance ids, and the `WorkflowInstanceId` property returns the currently selected workflow.
+    [`InstanceId`] 下拉式方塊會顯示持續性工作流程實例識別碼的清單，而 [`WorkflowInstanceId`] 屬性則會傳回目前選取的工作流程。
 
-5. 加入表單 `Load` 事件的處理常式。 To add the handler, switch to **Design View** for the form, click the **Events** icon at the top of the **Properties** window, and double-click **Load**.
+5. 加入表單 `Load` 事件的處理常式。 若要加入處理常式，請切換至表單的**設計檢視**，按一下 [**屬性**] 視窗頂端的 [**事件**] 圖示，然後按兩下 [**載入**]。
 
     ```vb
     Private Sub WorkflowHostForm_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -212,7 +212,7 @@ One of the central features of Windows Workflow Foundation (WF) is the runtime�
 
     當表單載入時，會設定 `SqlWorkflowInstanceStore`，範圍和工作流程型別下拉式方塊會設為預設值，而且持續性工作流程執行個體會加入至 `InstanceId` 下拉式方塊。
 
-7. 加入 `SelectedIndexChanged` 的 `InstanceId` 處理常式。 To add the handler, switch to **Design View** for the form, select the `InstanceId` combo box, click the **Events** icon at the top of the **Properties** window, and double-click **SelectedIndexChanged**.
+7. 加入 `SelectedIndexChanged` 的 `InstanceId` 處理常式。 若要加入處理常式，請切換至表單的 [**設計檢視**]，選取 [`InstanceId`] 下拉式方塊，按一下 [**屬性**] 視窗頂端的 [**事件**] 圖示，然後按兩下 [ **SelectedIndexChanged**]。
 
     ```vb
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged
@@ -321,7 +321,7 @@ One of the central features of Windows Workflow Foundation (WF) is the runtime�
     }
     ```
 
-    `ListPersistedWorkflows` 會在執行個體存放區中查詢持續性工作流成執行個體，並將執行個體識別碼加入 `cboInstanceId` 下拉式方塊。
+    `ListPersistedWorkflows` 會在實例存放區中查詢持續性的工作流程實例，並將實例識別碼加入至 [`cboInstanceId`] 下拉式方塊。
 
 10. 將下列 `UpdateStatus` 方法及對應的委派加入至表單類別。 此方法會將表單上的狀態視窗更新為目前執行中的工作流程狀態。
 
@@ -370,7 +370,7 @@ One of the central features of Windows Workflow Foundation (WF) is the runtime�
     }
     ```
 
-11. 將下列 `GameOver` 方法及對應的委派加入至表單類別。 When a workflow completes, this method updates the form UI by removing the instance id of the completed workflow from the **InstanceId** combo box.
+11. 將下列 `GameOver` 方法及對應的委派加入至表單類別。 當工作流程完成時，這個方法會從**InstanceId**下拉式方塊中移除已完成工作流程的實例識別碼，以更新表單 UI。
 
     ```vb
     Private Delegate Sub GameOverDelegate()
@@ -432,7 +432,7 @@ One of the central features of Windows Workflow Foundation (WF) is the runtime�
     wfApp.InstanceStore = store;
     ```
 
-3. 接下來，建立 `StringWriter` 執行個體，並將其加入到 `Extensions` 的 `WorkflowApplication` 集合中。 When a `StringWriter` is added to the extensions it captures all `WriteLine` activity output. 工作流程閒置時，可以從 `WriteLine` 擷取 `StringWriter` 輸出並顯示在表單上。
+3. 接下來，建立 `StringWriter` 執行個體，並將其加入到 `Extensions` 的 `WorkflowApplication` 集合中。 當 `StringWriter` 新增至擴充功能時，它會捕捉所有 `WriteLine` 活動輸出。 工作流程閒置時，可以從 `WriteLine` 擷取 `StringWriter` 輸出並顯示在表單上。
 
     ```vb
     ' Add a StringWriter to the extensions. This captures the output
@@ -542,7 +542,7 @@ One of the central features of Windows Workflow Foundation (WF) is the runtime�
     };
     ```
 
-    <xref:System.Activities.PersistableIdleAction> 列舉有三個值：<xref:System.Activities.PersistableIdleAction.None>、<xref:System.Activities.PersistableIdleAction.Persist> 及 <xref:System.Activities.PersistableIdleAction.Unload>。 <xref:System.Activities.PersistableIdleAction.Persist> 會使工作流程繼續持續，但不會導致工作流程卸載。 <xref:System.Activities.PersistableIdleAction.Unload> 會使工作流程繼續持續並卸載。
+    <xref:System.Activities.PersistableIdleAction> 列舉有三個值：<xref:System.Activities.PersistableIdleAction.None>、<xref:System.Activities.PersistableIdleAction.Persist> 及 <xref:System.Activities.PersistableIdleAction.Unload>。 <xref:System.Activities.PersistableIdleAction.Persist> 會導致工作流程持續存在，但不會導致工作流程卸載。 <xref:System.Activities.PersistableIdleAction.Unload> 會導致工作流程保存並卸載。
 
     下列範例是完成的 `ConfigureWorkflowApplication` 方法。
 
@@ -649,9 +649,9 @@ One of the central features of Windows Workflow Foundation (WF) is the runtime�
 
 ## <a name="to-enable-starting-and-resuming-multiple-workflow-types"></a>使其能夠啟動和繼續使用多個工作流程類型
 
-主機必須提供工作流程定義，才能繼續工作流程執行個體。 本教學課程包含三種工作流程型別，後續的教學課程將介紹這些類型的多個版本。 `WorkflowIdentity` 提供方法，讓主應用程式能夠將識別資訊與持續的工作流程執行個體建立關聯。 本節中的步驟示範如何建立公用程式類別，以協助將持續性工作流程執行個體的工作流程識別對應至相對應的工作流程定義。 For more information about `WorkflowIdentity` and versioning, see [Using WorkflowIdentity and Versioning](using-workflowidentity-and-versioning.md).
+主機必須提供工作流程定義，才能繼續工作流程執行個體。 本教學課程包含三種工作流程型別，後續的教學課程將介紹這些類型的多個版本。 `WorkflowIdentity` 提供一種方式，讓主應用程式將識別資訊與持續性的工作流程實例產生關聯。 本節中的步驟示範如何建立公用程式類別，以協助將持續性工作流程執行個體的工作流程識別對應至相對應的工作流程定義。 如需 `WorkflowIdentity` 和版本控制的詳細資訊，請參閱[使用 WorkflowIdentity 和版本控制](using-workflowidentity-and-versioning.md)。
 
-1. Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Class**. Type `WorkflowVersionMap` into the **Name** box and click **Add**.
+1. 以滑鼠右鍵按一下**方案總管**中的 **[numberguessworkflowhost]** ，然後選擇 [**新增**]、[**類別**]。 在 [**名稱**] 方塊中輸入 `WorkflowVersionMap`，然後按一下 [**新增**]。
 
 2. 將下列 `using` 或 `Imports` 陳述式加入至檔案最上方的其他 `using` 或 `Imports` 陳述式。
 
@@ -763,11 +763,11 @@ One of the central features of Windows Workflow Foundation (WF) is the runtime�
     }
     ```
 
-    `WorkflowVersionMap` 包含三個工作流程識別，其對應於此教學課程中的三個工作流程定義，在下列章節中，啟動及繼續使用工作流程時會使用這些識別。
+    `WorkflowVersionMap` 包含三個工作流程身分識別，這些身分識別會對應到此教學課程中的三個工作流程定義，並在工作流程啟動和繼續時用於下列各節中。
 
 ## <a name="to-start-a-new-workflow"></a>啟動新的工作流程
 
-1. 加入 `Click` 的 `NewGame` 處理常式。 To add the handler, switch to **Design View** for the form, and double-click `NewGame`. 會加入 `NewGame_Click` 處理常式，且表單的檢視會切換成程式碼檢視。 每當使用者按一下此按鈕，就會啟動新的工作流程。
+1. 加入 `Click` 的 `NewGame` 處理常式。 若要加入處理常式，請切換至表單的**設計檢視**，然後按兩下 [`NewGame`]。 會加入 `NewGame_Click` 處理常式，且表單的檢視會切換成程式碼檢視。 每當使用者按一下此按鈕，就會啟動新的工作流程。
 
     ```vb
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click
@@ -962,7 +962,7 @@ One of the central features of Windows Workflow Foundation (WF) is the runtime�
 
 ## <a name="to-resume-a-workflow"></a>繼續使用工作流程
 
-1. 加入 `Click` 的 `EnterGuess` 處理常式。 To add the handler, switch to **Design View** for the form, and double-click `EnterGuess`. 每當使用者按一下此按鈕，就會繼續使用該工作流程。
+1. 加入 `Click` 的 `EnterGuess` 處理常式。 若要加入處理常式，請切換至表單的**設計檢視**，然後按兩下 [`EnterGuess`]。 每當使用者按一下此按鈕，就會繼續使用該工作流程。
 
     ```vb
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click
@@ -1174,7 +1174,7 @@ One of the central features of Windows Workflow Foundation (WF) is the runtime�
 
 ## <a name="to-terminate-a-workflow"></a>終止工作流程
 
-1. 加入 `Click` 的 `QuitGame` 處理常式。 To add the handler, switch to **Design View** for the form, and double-click `QuitGame`. 每當使用者按一下此按鈕，就會終止目前選取的工作流程。
+1. 加入 `Click` 的 `QuitGame` 處理常式。 若要加入處理常式，請切換至表單的**設計檢視**，然後按兩下 [`QuitGame`]。 每當使用者按一下此按鈕，就會終止目前選取的工作流程。
 
     ```vb
     Private Sub QuitGame_Click(sender As Object, e As EventArgs) Handles QuitGame.Click
@@ -1246,7 +1246,7 @@ One of the central features of Windows Workflow Foundation (WF) is the runtime�
 
 ## <a name="to-build-and-run-the-application"></a>若要建置及執行應用程式
 
-1. Double-click **Program.cs** (or **Module1.vb**) in **Solution Explorer** to display the code.
+1. 按兩下**方案總管**中的 [ **Program.cs** ] （或 [ **Module1**]）以顯示程式碼。
 
 2. 將下列 `using` (或 `Imports`) 陳述式加入至檔案最上方的其他 `using` (或 `Imports`) 陳述式。
 
@@ -1258,7 +1258,7 @@ One of the central features of Windows Workflow Foundation (WF) is the runtime�
     using System.Windows.Forms;
     ```
 
-3. Remove or comment out the existing workflow hosting code from [How to: Run a Workflow](how-to-run-a-workflow.md), and replace it with the following code.
+3. 從[如何：執行工作流程](how-to-run-a-workflow.md)中移除或批註現有的工作流程裝載程式碼，並以下列程式碼取代它。
 
     ```vb
     Sub Main()
@@ -1275,14 +1275,14 @@ One of the central features of Windows Workflow Foundation (WF) is the runtime�
     }
     ```
 
-4. Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Properties**. In the **Application** tab, specify **Windows Application** for the **Output type**. 此步驟是選用性的，但如果不進行此步驟，除了表單外還會顯示主控台視窗。
+4. 以滑鼠右鍵按一下**方案總管**中的 [ **[numberguessworkflowhost]** ]，然後選擇 [**屬性**]。 在 [**應用程式**] 索引標籤中，指定 [ **Windows 應用程式**] 作為**輸出類型**。 此步驟是選用性的，但如果不進行此步驟，除了表單外還會顯示主控台視窗。
 
 5. 按 Ctrl+Shift+B 建置應用程式。
 
-6. Ensure that **NumberGuessWorkflowHost** is set as the startup application, and press Ctrl+F5 to start the application.
+6. 確定 [ **[numberguessworkflowhost]** ] 已設定為 [啟動應用程式]，然後按下 Ctrl + F5 啟動應用程式。
 
-7. Select a range for the guessing game and the type of workflow to start, and click **New Game**. Enter a guess in the **Guess** box and click **Go** to submit your guess. 請注意，`WriteLine` 活動的輸出會顯示在表單上。
+7. 選取猜測遊戲的範圍和要啟動的工作流程類型，然後按一下 [**新遊戲**]。 在 [**猜測**] 方塊中輸入猜測，然後按一下 [**移**至] 以提交您的猜測。 請注意，`WriteLine` 活動的輸出會顯示在表單上。
 
-8. Start several workflows using different workflow types and number ranges, enter some guesses, and switch between the workflows by selecting from the **Workflow Instance Id** list.
+8. 啟動數個使用不同工作流程類型和數位範圍的工作流程、輸入一些猜測，然後從 [**工作流程實例識別碼**] 清單中選取來切換工作流程。
 
-    請注意，當您切換到新的工作流程時，先前的猜測和工作流程的進度都不會顯示在狀態視窗中。 不顯示狀態的原因是未擷取狀態，也未儲存在任何位置。 In the next step of the tutorial, [How to: Create a Custom Tracking Participant](how-to-create-a-custom-tracking-participant.md), you create a custom tracking participant that saves this information.
+    請注意，當您切換到新的工作流程時，先前的猜測和工作流程的進度都不會顯示在狀態視窗中。 不顯示狀態的原因是未擷取狀態，也未儲存在任何位置。 在教學課程的下一個步驟中，[如何：建立自訂追蹤參與者](how-to-create-a-custom-tracking-participant.md)，您可以建立可儲存這項資訊的自訂追蹤參與者。

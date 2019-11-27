@@ -62,7 +62,7 @@ ms.locfileid: "74283599"
 
 - 您也可以呼叫 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> 方法，在低延遲期間強制層代 2 回收。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.GC?displayProperty=nameWithType>
 - [引發的收集](../../../docs/standard/garbage-collection/induced.md)

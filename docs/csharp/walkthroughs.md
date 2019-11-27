@@ -18,13 +18,13 @@ ms.locfileid: "74204596"
   
  本節包含 C# 程式設計逐步解說連結。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
  [使用 Async 和 Await 存取 Web](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  說明如何使用 [async](./language-reference/keywords/async.md) 和 [await](./language-reference/operators/await.md) 建立非同步解決方案。  
   
  [以 C# 或 Visual Basic 建立 Windows 執行階段元件，然後從 JavaScript 呼叫該元件](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- Shows how to create a Windows Runtime type, package it in a Windows Runtime component, and then call the component from a Windows 8.x Store app that's built for Windows by using JavaScript.  
+ 示範如何建立 Windows 執行階段類型、將它封裝在 Windows 執行階段元件中，然後從使用 JavaScript 為 Windows 建立的 Windows 8.x 存放應用程式呼叫元件。  
   
  [Office 程式設計 (C# 和 Visual Basic)](./programming-guide/interop/walkthrough-office-programming.md)  
  顯示如何使用 C# 和 Visual Basic 來建立 Excel 活頁簿和 Word 文件。  
@@ -69,7 +69,7 @@ ms.locfileid: "74204596"
  [部署範例和逐步解說](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  提供通用部署情節的逐步範例。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](./programming-guide/index.md)
 - [Visual Studio 範例](/visualstudio/ide/visual-studio-ide)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428124"
 ---
 # <a name="icorprofilerobjectenumskip-method"></a>ICorProfilerObjectEnum::Skip 方法
-Advances the cursor of this enumerator from its current position so that the specified number of elements are skipped.  
+將此列舉值的資料指標從其目前位置前移，以略過指定數目的元素。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,10 +35,10 @@ HRESULT Skip (
   
 ## <a name="parameters"></a>參數  
  `celt`  
- [in] The number of elements to be skipped.  
+ 在要略過的元素數目。  
   
 ## <a name="remarks"></a>備註  
- The new position of this enumerator's cursor is: (current position) + `celt` .  
+ 這個列舉值的資料指標的新位置是：（目前位置） + `celt`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -49,6 +49,6 @@ HRESULT Skip (
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerObjectEnum 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

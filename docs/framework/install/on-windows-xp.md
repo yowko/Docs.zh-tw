@@ -17,7 +17,7 @@ ms.locfileid: "74204719"
 > [!NOTE]
 > Microsoft 已不再支援 Windows XP。 建議您升級至 Windows 10，這是受支援的版本，而且包含最新版的 .NET Framework。 本文件僅供用來作為有幫助的疑難排解指南。
 
-在 Windows 上執行許多應用程式時需要 .NET Framework。 您可以使用下列指示來安裝它。 嘗試執行應用程式並在電腦上看到下列對話方塊之後，可能會進入此頁面。
+在 Windows 上執行許多應用程式時需要 .NET Framework。 您可以使用下列指令來安裝它。 嘗試執行應用程式並在電腦上看到下列對話方塊之後，可能會進入此頁面。
 
 ![無法啟動這個應用程式](./media/this-application-could-not-be-started.png)
 
@@ -37,7 +37,7 @@ ms.locfileid: "74204719"
 
 .NET Framework 3.5 可用來執行針對 .NET Framework 1.0 到 3.5 建置的應用程式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [下載 .NET Framework](https://dotnet.microsoft.com/download)
 - [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md)

@@ -20,57 +20,57 @@ ms.locfileid: "74204947"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援
 
-The .NET Framework 4.5 supports a number of software development scenarios with the Windows Runtime. 這些案例可分成三個類別︰
+.NET Framework 4.5 支援多個具有 Windows 執行階段的軟體發展案例。 這些案例可分成三個類別︰
 
-- Developing Windows 8.x Store apps with XAML controls, as described in [Roadmap for Windows Store apps using C# or Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [How tos (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)), and [.NET for Windows Store apps overview](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
+- 依照[使用C#或 Visual Basic 的 windows Store 應用程式藍圖](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))中所述，使用 XAML 控制項開發 windows 8.x 存放應用程式、[如何（XAML）](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))和[適用于 windows store 應用程式的 .net 總覽](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))。
 
-- Developing class libraries to use in the Windows 8.x Store apps that you create with the .NET Framework.
+- 開發類別庫，以在您使用 .NET Framework 建立的 Windows 8.x 存放區應用程式中使用。
 
-- Developing Windows Runtime Components, packaged in .WinMD files, which can be used by any programming language that supports the Windows Runtime. For example, see [Creating Windows Runtime Components in C# and Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
+- 開發 Windows 執行階段元件，封裝在中。WinMD 檔案，可供支援 Windows 執行階段的任何程式設計語言使用。 例如，請參閱[在和 Visual Basic 中C#建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)。
 
-This topic outlines the support that the .NET Framework provides for all three categories, and describes the scenarios for Windows Runtime Components. The first section includes basic information about the relationship between the .NET Framework and the Windows Runtime, and explains some oddities you might encounter in the Help system and the IDE. The [second section](#WindowsRuntimeComponents) discusses scenarios for developing Windows Runtime Components.
+本主題概述 .NET Framework 提供給這三個類別的支援，並說明 Windows 執行階段元件的案例。 第一節包含有關 .NET Framework 與 Windows 執行階段之間關聯性的基本資訊，並說明您可能會在協助系統和 IDE 中遇到的一些奇觀。 [第二個章節](#WindowsRuntimeComponents)討論開發 Windows 執行階段元件的案例。
 
-## <a name="the-basics"></a>基本概念
+## <a name="the-basics"></a>基本知識
 
-The .NET Framework supports the three development scenarios listed earlier by providing [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], and by supporting the Windows Runtime itself.
+.NET Framework 藉由提供 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，以及支援 Windows 執行階段本身，來支援先前所列的三種開發案例。
 
-- [.NET Framework and Windows Runtime namespaces](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) provides a streamlined view of the .NET Framework class libraries and include only the types and members you can use to create Windows 8.x Store apps and Windows Runtime Components.
+- [.NET Framework 和 Windows 執行階段命名空間](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces)提供 .NET Framework 類別庫的精簡觀點，而且只包含您可以用來建立 Windows 8.X 存放區應用程式和 Windows 執行階段元件的類型和成員。
 
-  - When you use Visual Studio (Visual Studio 2012 or later) to develop a Windows 8.x Store app or a Windows Runtime component, a set of reference assemblies ensures that you see only the relevant types and members.
+  - 當您使用 Visual Studio （Visual Studio 2012 或更新版本）來開發 Windows 8.x 存放區應用程式或 Windows 執行階段元件時，一組參考元件可確保您只會看到相關的類型和成員。
 
-  - This streamlined API set is simplified further by the removal of features that are duplicated within the .NET Framework or that duplicate Windows Runtime features. For example, it contains only the generic versions of collection types, and the XML document object model is eliminated in favor of the Windows Runtime XML API set.
+  - 藉由移除在 .NET Framework 內重複的功能，或重複的 Windows 執行階段功能，可進一步簡化此簡化的 API 集。 例如，它只包含集合類型的泛型版本，而 XML 檔物件模型則會排除 Windows 執行階段 XML API 集。
 
-  - Features that simply wrap the operating system API are also removed, because the Windows Runtime is easy to call from managed code.
+  - 簡單地包裝作業系統 API 的功能也會移除，因為 Windows 執行階段很容易就能從 managed 程式碼呼叫。
 
-  To read more about the [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], see the [.NET for Windows Store apps overview](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). To read about the API selection process, see the [.NET for Metro style apps](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) entry in the .NET blog.
+  若要深入瞭解 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，請參閱[適用于 Windows Store 應用程式的 .net 總覽](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))。 若要閱讀 API 選取程式的相關資訊，請參閱 .NET blog 中的[適用于 Metro 樣式應用程式的 .net](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/)專案。
 
-- The [Windows Runtime](/uwp/api/) provides the user interface elements for building Windows 8.x Store apps, and provides access to operating system features. Like the .NET Framework, the Windows Runtime has metadata that enables the C# and Visual Basic compilers to use the Windows Runtime the way they use the .NET Framework class libraries. The .NET Framework makes it easier to use the Windows Runtime by hiding some differences:
+- [Windows 執行階段](/uwp/api/)提供用來建立 Windows 8.X 存放區應用程式的使用者介面元素，並提供作業系統功能的存取權。 如同 .NET Framework，Windows 執行階段的中繼資料可讓C#和 Visual Basic 編譯器使用 .NET Framework 類別庫的 Windows 執行階段方式。 .NET Framework 藉由隱藏一些差異，讓您更輕鬆地使用 Windows 執行階段：
 
-  - Some differences in programming patterns between the .NET Framework and the Windows Runtime, such as the pattern for adding and removing event handlers, are hidden. 您僅需使用 .NET Framework 模式。
+  - .NET Framework 和 Windows 執行階段之間的程式設計模式有一些差異，例如新增和移除事件處理常式的模式，則會隱藏起來。 您僅需使用 .NET Framework 模式。
 
-  - 常用類型 (例如基本類型和集合) 中的差異，即會予以隱藏。 You simply use the .NET Framework type, as discussed in [Differences That Are Visible in the IDE](#DifferencesVisibleInIDE), later in this article.
+  - 常用類型 (例如基本類型和集合) 中的差異，即會予以隱藏。 您只需使用 .NET Framework 類型，如本文稍後[的 IDE 中可見的差異](#DifferencesVisibleInIDE)中所述。
 
-Most of the time, .NET Framework support for the Windows Runtime is transparent. The next section discusses some of the apparent differences between managed code and the Windows Runtime.
+大部分的情況下，.NET Framework Windows 執行階段的支援都是透明的。 下一節將討論 managed 程式碼與 Windows 執行階段之間的一些明顯差異。
 
 <a name="AboutReferenceDocumentation"></a>
 
-### <a name="the-net-framework-and-the-windows-runtime-reference-documentation"></a>The .NET Framework and the Windows Runtime Reference Documentation
+### <a name="the-net-framework-and-the-windows-runtime-reference-documentation"></a>.NET Framework 和 Windows 執行階段參考檔
 
-The Windows Runtime and the .NET Framework documentation sets are separate. 如果您按下 F1 鍵顯示類型或成員的 [說明]，則會顯示適當集合的參考文件。 However, if you browse through the [Windows Runtime reference](/uwp/api/) you might encounter examples that seem puzzling:
+Windows 執行階段和 .NET Framework 檔集是分開的。 如果您按下 F1 鍵顯示類型或成員的 [說明]，則會顯示適當集合的參考文件。 不過，如果您流覽[Windows 執行階段參考](/uwp/api/)，您可能會遇到看起來令人困惑的範例：
 
-- Topics such as the <xref:Windows.Foundation.Collections.IIterable%601> interface don't have declaration syntax for Visual Basic or C#. Instead, a note appears above the syntax section (in this case, ".NET: This interface appears as System.Collections.Generic.IEnumerable\<T>"). This is because the .NET Framework and the Windows Runtime provide similar functionality with different interfaces. 此外，還有行為的差異︰`IIterable` 採用 `First` 方法，而不是 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法傳回列舉值。 Instead of forcing you to learn a different way of performing a common task, the .NET Framework supports the Windows Runtime by making your managed code appear to use the type you're familiar with. You won't see the `IIterable` interface in the IDE, and therefore the only way you'll encounter it in the Windows Runtime reference documentation is by browsing through that documentation directly.
+- <xref:Windows.Foundation.Collections.IIterable%601> 介面之類的主題沒有 Visual Basic 或C#的宣告語法。 相反地，附注會出現在語法區段的上方（在此案例中為「.NET：此介面會顯示為 System.object\<T >」）。 這是因為 .NET Framework 和 Windows 執行階段會提供具有不同介面的類似功能。 此外，還有行為的差異︰`IIterable` 採用 `First` 方法，而不是 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法傳回列舉值。 .NET Framework 不會強迫您學習不同的方式來執行一般工作，而是讓您的 managed 程式碼看起來使用您熟悉的型別，藉此支援 Windows 執行階段。 您不會在 IDE 中看到 `IIterable` 介面，因此您在 Windows 執行階段參考檔中遇到的唯一方法，就是直接流覽該檔。
 
-- The <xref:Windows.Web.Syndication.SyndicationFeed.%23ctor(System.String,System.String,Windows.Foundation.Uri)> documentation illustrates a closely related issue: Its parameter types appear to be different for different languages. 若為 C# 和 Visual Basic，參數類型為 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Uri?displayProperty=nameWithType>。 同樣地，這是因為 .NET Framework 有自己的 `String` 和 `Uri` 類型，而針對這類常用類型，強制 .NET Framework 使用者了解其他執行工作的方式並不合理。 In the IDE, the .NET Framework hides the corresponding Windows Runtime types.
+- <xref:Windows.Web.Syndication.SyndicationFeed.%23ctor(System.String,System.String,Windows.Foundation.Uri)> 檔說明密切相關的問題：不同語言的參數類型外觀不同。 若為 C# 和 Visual Basic，參數類型為 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Uri?displayProperty=nameWithType>。 同樣地，這是因為 .NET Framework 有自己的 `String` 和 `Uri` 類型，而針對這類常用類型，強制 .NET Framework 使用者了解其他執行工作的方式並不合理。 在 IDE 中，.NET Framework 會隱藏對應的 Windows 執行階段類型。
 
-- In a few cases, such as the <xref:Windows.UI.Xaml.GridLength> structure, the .NET Framework provides a type with the same name but more functionality. 例如，建構函式和屬性的主題集與 `GridLength`相關聯，但它們只有適用於 Visual Basic 和 C# 的語法區塊，這是因為成員僅適用於 Managed 程式碼。 In the Windows Runtime, structures have only fields. The Windows Runtime structure requires a helper class, <xref:Windows.UI.Xaml.GridLengthHelper>, to provide equivalent functionality. 您不會在撰寫 Managed 程式碼時，於 IDE 中看到該協助程式類別。
+- 在少數情況下，例如 <xref:Windows.UI.Xaml.GridLength> 結構，.NET Framework 提供具有相同名稱但具有更多功能的類型。 例如，建構函式和屬性的主題集與 `GridLength`相關聯，但它們只有適用於 Visual Basic 和 C# 的語法區塊，這是因為成員僅適用於 Managed 程式碼。 在 Windows 執行階段中，結構只有欄位。 Windows 執行階段結構需要 helper 類別，<xref:Windows.UI.Xaml.GridLengthHelper>，才能提供對等的功能。 您不會在撰寫 Managed 程式碼時，於 IDE 中看到該協助程式類別。
 
-- In the IDE, Windows Runtime types appear to derive from <xref:System.Object?displayProperty=nameWithType>. 它們似乎具有繼承自 <xref:System.Object>，例如 <xref:System.Object.ToString%2A?displayProperty=nameWithType>。 These members operate as they would if the types actually inherited from <xref:System.Object>, and Windows Runtime types can be cast to <xref:System.Object>. This functionality is part of the support that the .NET Framework provides for the Windows Runtime. However, if you view the types in the Windows Runtime reference documentation, no such members appear. 這些明顯繼承成員的文件由 <xref:System.Object?displayProperty=nameWithType> 參考文件提供。
+- 在 IDE 中，Windows 執行階段類型會顯示為衍生自 <xref:System.Object?displayProperty=nameWithType>。 它們似乎具有繼承自 <xref:System.Object>，例如 <xref:System.Object.ToString%2A?displayProperty=nameWithType>。 這些成員的運作方式與實際繼承自 <xref:System.Object>的類型相同，而且 Windows 執行階段類型可以轉換成 <xref:System.Object>。 這項功能屬於 .NET Framework 為 Windows 執行階段提供的支援。 不過，如果您在 Windows 執行階段參考檔中查看類型，則不會顯示這類成員。 這些明顯繼承成員的文件由 <xref:System.Object?displayProperty=nameWithType> 參考文件提供。
 
 <a name="DifferencesVisibleInIDE"></a>
 
 ### <a name="differences-that-are-visible-in-the-ide"></a>IDE 中可見的差異
 
-In more advanced programming scenarios, such as using a Windows Runtime component written in C# to provide the application logic for a Windows 8.x Store app built for Windows using JavaScript, such differences are apparent in the IDE as well as in the documentation. When your component returns an `IDictionary<int, string>` to JavaScript, and you look at it in the JavaScript debugger, you'll see the methods of `IMap<int, string>` because JavaScript uses the Windows Runtime type. 下表顯示一些常用的集合類型，其會在兩種語言中以不同的方式出現︰
+在更先進的程式設計案例中，例如使用在中C#撰寫的 Windows 執行階段元件，為使用 JavaScript 為 windows 建立的 Windows 8.x 存放應用程式提供應用程式邏輯，這類差異在 IDE 和檔中都很明顯。 當您的元件傳回 JavaScript 的 `IDictionary<int, string>`，並在 JavaScript 偵錯工具中查看時，您會看到 `IMap<int, string>` 的方法，因為 JavaScript 會使用 Windows 執行階段類型。 下表顯示一些常用的集合類型，其會在兩種語言中以不同的方式出現︰
 
 |Windows 執行階段類型|對應的 .NET Framework 類型|
 |--------------------------------------------------------------|---------------------------------------|
@@ -86,17 +86,17 @@ In more advanced programming scenarios, such as using a Windows Runtime componen
 |`Windows.UI.Xaml.Data.PropertyChangedEventHandler`|`System.ComponentModel.PropertyChangedEventHandler`|
 |`Windows.UI.Xaml.Data.PropertyChangedEventArgs`|`System.ComponentModel.PropertyChangedEventArgs`|
 
-In the Windows Runtime, `IMap<K, V>` and `IMapView<K, V>` are iterated using `IKeyValuePair`. 當您將其傳遞至 Managed 程式碼時，它們會顯示成 `IDictionary<TKey, TValue>` 與 `IReadOnlyDictionary<TKey, TValue>`，以便您使用 `System.Collections.Generic.KeyValuePair<TKey, TValue>` 加以列舉。
+在 Windows 執行階段中，`IMap<K, V>` 和 `IMapView<K, V>` 會使用 `IKeyValuePair`進行反覆運算。 當您將其傳遞至 Managed 程式碼時，它們會顯示成 `IDictionary<TKey, TValue>` 與 `IReadOnlyDictionary<TKey, TValue>`，以便您使用 `System.Collections.Generic.KeyValuePair<TKey, TValue>` 加以列舉。
 
-介面在 Managed 程式碼中的顯示方式，會影響到實作這些介面之型别的顯示方式。 例如　`PropertySet` 類別會實作 `IMap<K, V>`，而這在 Managed 程式碼中會顯示為 `IDictionary<TKey, TValue>`。 `PropertySet` 會以實作了 `IDictionary<TKey, TValue>` (而不是 `IMap<K, V>`) 的形態出現，因此在 Managed 程式碼中，其看似具有 `Add` 方法 (此方法的行為類似於 .NET Framework 字典上的 `Add` 方法。 它看起來並沒有 `Insert` 方法。
+介面在 Managed 程式碼中的顯示方式，會影響到實作這些介面之類型的顯示方式。 例如　`PropertySet` 類別會實作 `IMap<K, V>`，而這在 Managed 程式碼中會顯示為 `IDictionary<TKey, TValue>`。 `PropertySet` 看起來就像是實 `IDictionary<TKey, TValue>` 而不是 `IMap<K, V>`，因此在 managed 程式碼中，它看起來會有 `Add` 方法，其行為類似 `Add` 字典上的 .NET Framework 方法。 它看起來並沒有 `Insert` 方法。
 
-For more information about using the .NET Framework to create a Windows Runtime component, and a walkthrough that shows how to use such a component with JavaScript, see [Creating Windows Runtime Components in C# and Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
+如需使用 .NET Framework 建立 Windows 執行階段元件的詳細資訊，以及示範如何搭配使用這類元件與 JavaScript 的逐步解說，請參閱[在和 Visual Basic 中C#建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)。
 
 ### <a name="primitive-types"></a>基本類型
 
-To enable the natural use of the Windows Runtime in managed code, .NET Framework primitive types appear instead of Windows Runtime primitive types in your code. 在 .NET Framework 中，基本型别 (如 `Int32` 結構) 具有許多有用的屬性和方法，例如 `Int32.TryParse` 方法。 By contrast, primitive types and structures in the Windows Runtime have only fields. 在 Managed 程式碼中使用基本項目時，將會顯示成 .NET Framework 類型，而您可以如常使用這些 .NET Framework 類型的屬性和方法。 下列清單提供摘要︰
+若要在 managed 程式碼中啟用 Windows 執行階段的自然用法，.NET Framework 基本型別會出現，而不是在程式碼中 Windows 執行階段基本型別的類型。 在 .NET Framework 中，基本型别 (如 `Int32` 結構) 具有許多有用的屬性和方法，例如 `Int32.TryParse` 方法。 相較之下，Windows 執行階段中的基本型別和結構只有欄位。 在 Managed 程式碼中使用基本項目時，將會顯示成 .NET Framework 類型，而您可以如常使用這些 .NET Framework 類型的屬性和方法。 下列清單提供摘要︰
 
-- For the Windows Runtime primitives `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (an immutable collection of Unicode characters), `Enum`, `UInt32`, `UInt64`, and `Guid`, use the type of the same name in the `System` namespace.
+- 針對 Windows 執行階段基本 `Int32`、`Int64`、`Single`、`Double`、`Boolean`、`String` （Unicode 字元的不可變集合）、`Enum`、`UInt32`、`UInt64`和 `Guid`，請在 `System` 命名空間中使用相同名稱的類型。
 
 - 對於 `UInt8`，請使用 `System.Byte`。
 
@@ -106,62 +106,62 @@ To enable the natural use of the Windows Runtime in managed code, .NET Framework
 
 - 若為 `HRESULT`，搭配使用結構與一個 `System.Int32` 成員。
 
-As with interface types, the only time you might see evidence of this representation is when your .NET Framework project is a Windows Runtime component that is used by a Windows 8.x Store app built using JavaScript.
+如同介面類別型，只有當您的 .NET Framework 專案是使用 JavaScript 建立的 Windows 8.x 存放區應用程式所使用的 Windows 執行階段元件時，您才會看到此標記法的辨識項。
 
-Other basic, commonly used Windows Runtime types that appear in managed code as their .NET Framework equivalents include the `Windows.Foundation.DateTime` structure, which appears in managed code as the <xref:System.DateTimeOffset?displayProperty=nameWithType> structure, and the `Windows.Foundation.TimeSpan` structure, which appears as the <xref:System.TimeSpan?displayProperty=nameWithType> structure.
+在 managed 程式碼中顯示為其 .NET Framework 對等專案的其他基本、常用 Windows 執行階段類型，包括 `Windows.Foundation.DateTime` 結構（出現在 managed 程式碼中作為 <xref:System.DateTimeOffset?displayProperty=nameWithType> 結構），以及 `Windows.Foundation.TimeSpan` 結構（顯示為 <xref:System.TimeSpan?displayProperty=nameWithType> 結構）。
 
 ### <a name="other-differences"></a>其他差異
 
-In a few cases, the fact that .NET Framework types appear in your code instead of Windows Runtime types requires action on your part. For example, the <xref:Windows.Foundation.Uri?displayProperty=nameWithType> class appears as <xref:System.Uri?displayProperty=nameWithType> in .NET Framework code. <xref:System.Uri?displayProperty=nameWithType> allows a relative URI, but <xref:Windows.Foundation.Uri?displayProperty=nameWithType> requires an absolute URI. Therefore, when you pass a URI to a Windows Runtime method, you must ensure that it's absolute. See [Passing a URI to the Windows Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
+在少數情況下，.NET Framework 類型會出現在您的程式碼中，而不是 Windows 執行階段類型需要您採取動作。 例如，<xref:Windows.Foundation.Uri?displayProperty=nameWithType> 類別在 .NET Framework 程式碼中會顯示為 <xref:System.Uri?displayProperty=nameWithType>。 <xref:System.Uri?displayProperty=nameWithType> 允許相對 URI，但 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 需要絕對 URI。 因此，當您將 URI 傳遞至 Windows 執行階段方法時，您必須確定它是絕對的。 請參閱將[URI 傳遞給 Windows 執行階段](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)。
 
 <a name="WindowsRuntimeComponents"></a>
 
 ## <a name="scenarios-for-developing-windows-runtime-components"></a>開發 Windows 執行階段元件的案例
 
-The scenarios that are supported for managed Windows Runtime Components depend on the following general principles:
+受管理 Windows 執行階段元件支援的案例取決於下列一般原則：
 
-- Windows Runtime Components that are built using the .NET Framework have no apparent differences from other Windows Runtimelibraries. For example, if you re-implement a native Windows Runtime component by using managed code, the two components are outwardly indistinguishable. 使用您元件的程式碼不會察覺到該元件是以 Managed 程式碼撰寫，即使該程式碼本身為 Managed 程式碼亦然。 但在內部中，您的元件是實際的 Managed 程式碼且會在通用語言執行平台 (CLR) 上執行。
+- 使用 .NET Framework 建立 Windows 執行階段元件，與其他 Windows Runtimelibraries 沒有明顯的差異。 例如，如果您使用 managed 程式碼重新執行原生 Windows 執行階段元件，則這兩個元件外表無法區分。 使用您元件的程式碼不會察覺到該元件是以 Managed 程式碼撰寫，即使該程式碼本身為 Managed 程式碼亦然。 但在內部中，您的元件是實際的 Managed 程式碼且會在通用語言執行平台 (CLR) 上執行。
 
-- Components can contain types that implement application logic, Windows 8.x Store UI controls, or both.
-
-  > [!NOTE]
-  > 將 UI 項目與應用程式邏輯分開是很好的做法。 Also, you can't use Windows 8.x Store UI controls in a Windows 8.x Store app built for Windows using JavaScript and HTML.
-
-- A component can be a project within a Visual Studio solution for a Windows 8.x Store app, or a reusable component that you can add to multiple solutions.
+- 元件可以包含用來執行應用程式邏輯、Windows 8.x 儲存 UI 控制項或兩者的類型。
 
   > [!NOTE]
-  > If your component will be used only with C# or Visual Basic, there's no reason to make it a Windows Runtime component. If you make it an ordinary .NET Framework class library instead, you don't have to restrict its public API surface to Windows Runtime types.
+  > 將 UI 項目與應用程式邏輯分開是很好的做法。 此外，您不能在使用 JavaScript 和 HTML 為 Windows 建立的 Windows 8.x 存放區應用程式中使用 Windows 8.x 存放區 UI 控制項。
 
-- You can release versions of reusable components by using the Windows Runtime <xref:Windows.Foundation.Metadata.VersionAttribute> attribute to identify which types (and which members within a type) were added in different versions.
+- 元件可以是 Windows 8.x 存放區應用程式的 Visual Studio 方案內的專案，或是可新增至多個解決方案的可重複使用元件。
 
-- The types in your component can derive from Windows Runtime types. Controls can derive from the primitive control types in the <xref:Windows.UI.Xaml.Controls.Primitives> namespace or from more finished controls such as <xref:Windows.UI.Xaml.Controls.Button>.
+  > [!NOTE]
+  > 如果您的元件只會搭配C#或 Visual Basic 使用，則不需要讓它成為 Windows 執行階段元件。 如果您將它設為一般 .NET Framework Class Library，就不需要將其公用 API 介面限制為 Windows 執行階段類型。
+
+- 您可以使用 Windows 執行階段 <xref:Windows.Foundation.Metadata.VersionAttribute> 屬性來識別哪些類型（以及類型中的哪些成員）已在不同版本中新增，以發行可重複使用元件的版本。
+
+- 元件中的類型可以衍生自 Windows 執行階段類型。 控制項可以衍生自 <xref:Windows.UI.Xaml.Controls.Primitives> 命名空間中的基本控制項類型，或從更多完成的控制項（例如 <xref:Windows.UI.Xaml.Controls.Button>）。
 
   > [!IMPORTANT]
-  > Starting with [!INCLUDE[win8](../../../includes/win8-md.md)] and the .NET Framework 4.5, all public types in a managed Windows Runtime component must be sealed. A type in another Windows Runtime component can't derive from them. 如果您想要在元件中提供多型行為，您可以建立介面並在多型類型中加以實作。
+  > 從 [!INCLUDE[win8](../../../includes/win8-md.md)] 和 .NET Framework 4.5 開始，managed Windows 執行階段元件中的所有公用類型都必須是密封的。 另一個 Windows 執行階段元件中的類型無法衍生自它們。 如果您想要在元件中提供多型行為，您可以建立介面並在多型類型中加以實作。
 
-- All parameter and return types on the public types in your component must be Windows Runtime types (including the Windows Runtime types that your component defines).
+- 元件中公用類型上的所有參數和傳回類型，都必須是 Windows 執行階段類型（包括元件所定義的 Windows 執行階段類型）。
 
 下列各節提供常見案例的範例。
 
-### <a name="application-logic-for-a-windows-8x-store-app-with-javascript"></a>Application Logic for a Windows 8.x Store App with JavaScript
+### <a name="application-logic-for-a-windows-8x-store-app-with-javascript"></a>使用 JavaScript 的 Windows 8.x 儲存應用程式的應用程式邏輯
 
-When you develop a Windows 8.x Store app for Windows using JavaScript, you might find that some parts of the application logic perform better in managed code, or are easier to develop. JavaScript 不能直接使用 .NET Framework 類別庫，但是您可以將類別庫作為 .WinMD 檔案。 In this scenario, the Windows Runtime component is an integral part of the app, so it doesn't make sense to provide version attributes.
+當您使用 JavaScript 開發適用于 Windows 的 Windows 8.x 存放應用程式時，您可能會發現應用程式邏輯的某些部分在 managed 程式碼中的執行效能較佳，或更容易開發。 JavaScript 不能直接使用 .NET Framework 類別庫，但是您可以將類別庫作為 .WinMD 檔案。 在此案例中，Windows 執行階段元件是應用程式不可或缺的一部分，所以提供版本屬性並沒有意義。
 
-### <a name="reusable-windows-8x-store-ui-controls"></a>Reusable Windows 8.x Store UI Controls
+### <a name="reusable-windows-8x-store-ui-controls"></a>可重複使用的 Windows 8.x 存放區 UI 控制項
 
-You can package a set of related UI controls in a reusable Windows Runtime component. 元件可以自我行銷，或作為您建立之應用程式中的項目。 In this scenario, it makes sense to use the Windows Runtime <xref:Windows.Foundation.Metadata.VersionAttribute> attribute to improve compatibility.
+您可以在可重複使用的 Windows 執行階段元件中封裝一組相關的 UI 控制項。 元件可以自我行銷，或作為您建立之應用程式中的項目。 在此案例中，使用 Windows 執行階段 <xref:Windows.Foundation.Metadata.VersionAttribute> 屬性來改善相容性是合理的。
 
 ### <a name="reusable-application-logic-from-existing-net-framework-apps"></a>來自現有 .NET Framework 應用程式的可重複使用應用程式邏輯
 
-You can package managed code from your existing desktop apps as a standalone Windows Runtime component. This enables you to use the component in Windows 8.x Store apps built using C++ or JavaScript, as well as in Windows 8.x Store apps built using C# or Visual Basic. 如果程式碼有多個重複使用的案例，也可選擇進行版本控制。
+您可以將現有桌面應用程式中的受控碼封裝為獨立 Windows 執行階段元件。 這可讓您在使用C++或 JavaScript 建立的 windows 8.x 應用程式中，以及使用C#或 Visual Basic 建立的 windows 8.x 存放應用程式中使用此元件。 如果程式碼有多個重複使用的案例，也可選擇進行版本控制。
 
 ## <a name="related-topics"></a>相關主題
 
 |標題|描述|
 |-----------|-----------------|
-|[適用於 Windows 市集應用程式的 .NET 概觀](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|Describes the .NET Framework types and members that you can use to create Windows 8.x Store apps and Windows RuntimeComponents. (在 Windows 開發人員中心中。)|
-|[Roadmap for Windows Store apps using C# or Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Provides key resources to help you get started developing Windows 8.x Store apps by using C# or Visual Basic, including many Quickstart topics, guidelines, and best practices. (在 Windows 開發人員中心中。)|
-|[How tos (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|Provides key resources to help you get started developing Windows 8.x Store apps by using C# or Visual Basic, including many Quickstart topics, guidelines, and best practices. (在 Windows 開發人員中心中。)|
-|[在 C++ 和 Visual Basic 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|Describes how to create a Windows Runtime component using the .NET Framework, explains how to use it as part of a Windows 8.x Store app built for Windows using JavaScript, and describes how to debug the combination with Visual Studio. (在 Windows 開發人員中心中。)|
-|[Windows Runtime reference](/uwp/api/)|The reference documentation for the Windows Runtime. (在 Windows 開發人員中心中。)|
-|[將 URI 傳遞給 Windows 執行階段](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Describes an issue that can arise when you pass a URI from managed code to the Windows Runtime, and how to avoid it.|
+|[適用於 Windows 市集應用程式的 .NET 概觀](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|說明您可以用來建立 Windows 8.x Store 應用程式和 Windows RuntimeComponents 的 .NET Framework 類型和成員。 (在 Windows 開發人員中心中。)|
+|[使用C#或 Visual Basic 的 Windows Store 應用程式藍圖](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|提供重要資源，協助您使用C#或 Visual Basic 來開始開發 Windows 8.x 存放應用程式，包括許多快速入門主題、指導方針和最佳作法。 (在 Windows 開發人員中心中。)|
+|[How to （XAML）](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|提供重要資源，協助您使用C#或 Visual Basic 來開始開發 Windows 8.x 存放應用程式，包括許多快速入門主題、指導方針和最佳作法。 (在 Windows 開發人員中心中。)|
+|[在 C++ 和 Visual Basic 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|說明如何使用 .NET Framework 建立 Windows 執行階段元件、說明如何將它當做使用 JavaScript 為 Windows 建立之 Windows 8.x 存放區應用程式的一部分，並說明如何以 Visual Studio 來進行程式設計的組合。 (在 Windows 開發人員中心中。)|
+|[Windows 執行階段參考](/uwp/api/)|Windows 執行階段的參考檔。 (在 Windows 開發人員中心中。)|
+|[將 URI 傳遞給 Windows 執行階段](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|描述當您將 URI 從 managed 程式碼傳遞至 Windows 執行階段時可能發生的問題，以及如何避免此錯誤。|

@@ -1,5 +1,5 @@
 ---
-title: Connection Class (System.Net)
+title: Connection 類別（System.Net）
 ms.date: 05/01/2017
 ms.technology: dotnet-networking
 topic_type:
@@ -22,7 +22,7 @@ ms.locfileid: "74429356"
 ---
 # <a name="connection-class"></a>Connection 類別
 
-The `Connection` class parses server responses, queue requests, and pipeline requests.
+`Connection` 類別會剖析伺服器回應、佇列要求和管線要求。
 
 ## <a name="syntax"></a>語法
   
@@ -31,14 +31,14 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> The `Connection` class is internal and is not meant to be used directly in your code.
+> `Connection` 類別是內部的，而且不適合直接在程式碼中使用。
 > 
-> Microsoft does not support the use of this class in a production application under any circumstance.
+> 在任何情況下，Microsoft 不支援在生產應用程式中使用此類別。
 
 ## <a name="requirements"></a>需求
 
 **命名空間︰** <xref:System.Net>
 
-**Assembly:** System (in System.dll)
+**元件：** 系統（在 System .dll 中）
 
-**.NET Framework versions:** Available since 2.0.
+**.NET Framework 版本：** 自2.0 開始提供。

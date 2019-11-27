@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427837"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute 方法
-Defines a custom attribute based upon its name. These attributes are held in the symbol store, unlike metadata custom attributes.  
+根據名稱定義自訂屬性。 這些屬性會保留在符號存放區中，不同于中繼資料自訂屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,23 +37,23 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>參數  
  `parent`  
- [in] The metadata token for which the attribute is being defined.  
+ 在要定義屬性的元資料標記。  
   
  `name`  
- [in] A pointer to a `WCHAR` that contains the attribute name.  
+ 在包含屬性名稱之 `WCHAR` 的指標。  
   
  `cData`  
- [in] A `ULONG32` that indicates the size of the `data` array.  
+ 在表示 `data` 陣列大小的 `ULONG32`。  
   
  `data`  
- [in] The attribute value.  
+ 在屬性值。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

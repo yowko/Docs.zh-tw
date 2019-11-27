@@ -10,7 +10,7 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204528"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (C# 編譯器選項)
-如果您使用 **-target:appcontainerexe** 編譯器選項，編譯器會建立一個必須在應用程式容器中執行的 Windows 可執行檔 (.exe)。 This option is equivalent to [-target:winexe](./target-winexe-compiler-option.md) but is designed for Windows 8.x Store apps.  
+如果您使用 **-target:appcontainerexe** 編譯器選項，編譯器會建立一個必須在應用程式容器中執行的 Windows 可執行檔 (.exe)。 此選項相當於[-target： winexe](./target-winexe-compiler-option.md) ，但是針對 Windows 8.X 存放區應用程式所設計。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,7 +31,7 @@ ms.locfileid: "74204528"
   
 2. 在 [應用程式] 索引標籤上，選擇 [輸出類型] 清單中的 [Windows 市集應用程式]。  
   
-     This option is available only for Windows 8.x Store app templates.  
+     此選項僅適用于 Windows 8.x 存放區應用程式範本。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "74204528"
 csc -target:appcontainerexe filename.cs  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [-target (C# 編譯器選項)](./target-compiler-option.md)
 - [-target:winexe (C# 編譯器選項)](./target-winexe-compiler-option.md)

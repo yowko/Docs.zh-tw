@@ -12,13 +12,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430489"
 ---
-# <a name="gccpugroup-element"></a>\<GCCpuGroup> Element
+# <a name="gccpugroup-element"></a>\<GCCpuGroup > 元素
 
 指定記憶體回收是否支援多個 CPU 群組。
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**
+&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup >**
 
 ## <a name="syntax"></a>語法
 
@@ -27,9 +27,9 @@ ms.locfileid: "74430489"
    enabled="true|false"/>
 ```
 
-## <a name="attributes-and-elements"></a>屬性和項目
+## <a name="attributes-and-elements"></a>屬性和元素
 
-下列各節描述屬性、子項目和父項目。
+下列章節說明屬性、子元素和父元素。
 
 ### <a name="attributes"></a>屬性
 
@@ -41,12 +41,12 @@ ms.locfileid: "74430489"
 
 |值|描述|
 |-----------|-----------------|
-|`false`|Garbage collection does not support multiple CPU groups. 這是預設值。|
-|`true`|Garbage collection supports multiple CPU groups, if server garbage collection is enabled.|
+|`false`|垃圾收集不支援多個 CPU 群組。 這是預設值。|
+|`true`|如果已啟用伺服器垃圾收集，垃圾收集支援多個 CPU 群組。|
 
-### <a name="child-elements"></a>子項目
+### <a name="child-elements"></a>子元素
 
-無。
+None。
 
 ### <a name="parent-elements"></a>父項目
 
@@ -57,14 +57,14 @@ ms.locfileid: "74430489"
 
 ## <a name="remarks"></a>備註
 
-When a computer has multiple CPU groups and server garbage collection is enabled (see the [\<gcServer>](gcserver-element.md) element), enabling this element extends garbage collection across all CPU groups and takes all cores into account when creating and balancing heaps.
+當電腦具有多個 CPU 群組並啟用伺服器垃圾收集時（請參閱[\<gcServer >](gcserver-element.md)元素），啟用此元素會延伸所有 CPU 群組的垃圾收集，並在建立和平衡堆積時將所有核心納入考慮。
 
 > [!NOTE]
-> This element applies only to garbage collection threads. To enable the runtime to distribute user threads across all CPU groups, you must also enable the [\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md) element.
+> 這個元素只適用于垃圾收集執行緒。 若要讓執行時間將使用者執行緒分散到所有的 CPU 群組，您也必須啟用[\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)元素。
 
 ## <a name="example"></a>範例
 
-The following example shows how to enable garbage collection for multiple CPU groups.
+下列範例顯示如何啟用多個 CPU 群組的垃圾收集。
 
 ```xml
 <configuration>
@@ -75,9 +75,9 @@ The following example shows how to enable garbage collection for multiple CPU gr
 </configuration>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段設定結構描述](index.md)
 - [組態檔結構描述](../index.md)
-- [To disable concurrent garbage collection](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [停用並行垃圾收集](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [工作站和伺服器記憶體回收](../../../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)

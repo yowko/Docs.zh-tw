@@ -53,7 +53,7 @@ ms.locfileid: "74205012"
  請注意，除了漫遊存放區之外，電腦一律以隱含方式將隔離儲存區隔離，因為它會使用指定電腦本機的儲存設施。  
   
 > [!IMPORTANT]
-> Isolated storage is not available for Windows 8.x Store apps. 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。  
+> Windows 8.x 存放區應用程式無法使用隔離儲存區。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的 [應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) 。  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>依使用者和組件隔離  
@@ -75,7 +75,7 @@ ms.locfileid: "74205012"
   
 <a name="UserDomainAssembly"></a>   
 ## <a name="isolation-by-user-domain-and-assembly"></a>依使用者、網域和組件隔離  
- 如果您的應用程式使用需要私人資料存放區的協力廠商組件，您可以使用隔離儲存區來儲存私人資料。 依使用者、網域和組件隔離可確保只有指定之組件中的程式碼可以存取資料，而且只有在組件由建立存放區時所執行的應用程式使用的情況下，以及只有在建立存放區之使用者執行應用程式的情況下，才可以存取。 依使用者、網域和組件隔離可防止協力廠商組件向其他應用程式洩漏資料。 如果您知道您想要使用隔離儲存區，但不確定要使用哪一種隔離，這種隔離類型應該是預設選擇。 呼叫 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 的靜態 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 方法，並傳入使用者、網域和組件 <xref:System.IO.IsolatedStorage.IsolatedStorageScope> 會傳回具有這種隔離的儲存區。  
+ 如果您的應用程式使用需要私人資料存放區的協力廠商組件，您可以使用隔離儲存區來儲存私人資料。 依使用者、網域和組件隔離可確保只有指定之組件中的程式碼可以存取資料，而且只有在組件由建立存放區時所執行的應用程式使用的情況下，以及只有在建立存放區之使用者執行應用程式的情況下，才可以存取。 依使用者、網域和組件隔離可防止協力廠商組件向其他應用程式洩漏資料。 如果您知道您想要使用隔離儲存區，但不確定要使用哪一種隔離，這種隔離類型應該是預設選擇。 呼叫 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 的靜態 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 方法，並傳入使用者、網域和組件 <xref:System.IO.IsolatedStorage.IsolatedStorageScope> 會傳回具有這種隔離的儲存區。  
   
  下列程式碼範例會擷取依使用者、網域和組件隔離的存放區。 您可以透過 `isoFile` 物件存取這個存放區。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "74205012"
  [!code-csharp[Conceptual.IsolatedStorage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#12)]
  [!code-vb[Conceptual.IsolatedStorage#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#12)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
 - [隔離儲存區](../../../docs/standard/io/isolated-storage.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438735"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>ICorProfilerInfo::GetTokenAndMetadataFromFunction 方法
-Gets the metadata token and a metadata interface instance that can be used against the token for the specified function.  
+取得元資料標記，以及可用於指定函式之標記的中繼資料介面實例。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,16 +37,16 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
 ## <a name="parameters"></a>參數  
  `functionId`  
- [in] The ID of the function for which to get the metadata token and metadata interface.  
+ 在要取得元資料標記和中繼資料介面的函式識別碼。  
   
  `riid`  
- [in] The reference ID of the metadata interface to get the instance of.  
+ 在要取得實例之中繼資料介面的參考識別碼。  
   
  `ppImport`  
- [out] A pointer to the address of the metadata interface instance that can be used against the token for the specified function.  
+ 脫銷中繼資料介面實例位址的指標，可用於所指定函式的 token。  
   
  `pToken`  
- [out] A pointer to the metadata token for the specified function.  
+ 脫銷所指定函式之元資料標記的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -57,6 +57,6 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

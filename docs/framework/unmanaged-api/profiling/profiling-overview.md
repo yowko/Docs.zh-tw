@@ -1,5 +1,5 @@
 ---
-title: 分析概觀
+title: 程式碼剖析概觀
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed code, profiling API support
@@ -34,7 +34,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427099"
 ---
-# <a name="profiling-overview"></a>分析概觀
+# <a name="profiling-overview"></a>程式碼剖析概觀
 
 分析工具是監視另一個應用程式執行狀況的工具。 Common Language Runtime (CLR) 分析工具是動態連結程式庫 (DLL) 由數個函式所組成，可使用分析 API，從 CLR 接收訊息，以及傳送訊息至 CLR。 CLR 會在執行階段載入分析工具 DLL。
 
@@ -46,26 +46,26 @@ ms.locfileid: "74427099"
 
 ## <a name="the-profiling-api"></a>程式碼剖析 API
 
-Typically, the profiling API is used to write a *code profiler*, which is a program that monitors the execution of a managed application.
+分析 API 通常是用來撰寫程式*代碼 profiler*，這是監視 managed 應用程式執行的程式。
 
-分析工具 DLL 會使用分析 API，它會載入與所分析之應用程式相同的程序中。 The profiler DLL implements a callback interface ([ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) in the .NET Framework version 1.0 and 1.1, [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) in version 2.0 and later). CLR 會在該介面中呼叫方法，以通知分析工具所分析之程序中的事件。 The profiler can call back into the runtime by using the methods in the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) and [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) interfaces to obtain information about the state of the profiled application.
+分析工具 DLL 會使用分析 API，它會載入與所分析之應用程式相同的程序中。 分析工具 DLL 會執行回呼介面（.NET Framework 1.0 和1.1 版中的[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) ，在2.0 和更新版本中則為[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) ）。 CLR 會在該介面中呼叫方法，以通知分析工具所分析之程序中的事件。 分析工具可以使用[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)和[ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)介面中的方法來回呼執行時間，以取得已剖析之應用程式狀態的相關資訊。
 
 > [!NOTE]
 > 只有分析工具解決方案的資料蒐集部分，應該要在與所分析之應用程式相同的程序中執行。 所有使用者介面和資料分析都應該在分開的處理序中執行。
 
 下圖顯示分析工具 DLL 如何與正在分析的應用程式和 CLR 互動。
 
-![Screenshot that shows the profiling architecture.](./media/profiling-overview/profiling-architecture.png)
+![顯示分析架構的螢幕擷取畫面。](./media/profiling-overview/profiling-architecture.png)
 
 ### <a name="the-notification-interfaces"></a>通知介面
 
-[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) and [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) can be considered notification interfaces. These interfaces consist of methods such as [ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md), and [JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md). 每當 CLR 載入或卸載類別、編譯函式等等，都會在分析工具的 `ICorProfilerCallback` 或 `ICorProfilerCallback2` 介面上呼叫對應的方法。
+[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)和[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)可以視為通知介面。 這些介面是由[ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)、 [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)和[JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)等方法所組成。 每當 CLR 載入或卸載類別、編譯函式等等，都會在分析工具的 `ICorProfilerCallback` 或 `ICorProfilerCallback2` 介面上呼叫對應的方法。
 
-For example, a profiler could measure code performance through two notification functions: [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) and [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md). 它會即時戳記每個通知、彙總結果，並輸出一個清單，指出在應用程式執行期間，哪些函式耗用最多 CPU 或時鐘時間。
+例如，分析工具可以透過兩個通知函式來測量程式碼效能： [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)和[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)。 它會即時戳記每個通知、彙總結果，並輸出一個清單，指出在應用程式執行期間，哪些函式耗用最多 CPU 或時鐘時間。
 
 ### <a name="the-information-retrieval-interfaces"></a>資訊擷取介面
 
-The other main interfaces involved in profiling are [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) and [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md). 分析工具會視需要呼叫這些介面，以取得更多資訊來協助進行分析。 For example, whenever the CLR calls the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function, it supplies a function identifier. The profiler can get more information about that function by calling the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method to discover the function's parent class, its name, and so on.
+與分析相關的其他主要介面為[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)和[ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)。 分析工具會視需要呼叫這些介面，以取得更多資訊來協助進行分析。 例如，每當 CLR 呼叫[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)函式時，它就會提供函式識別碼。 分析工具可以藉由呼叫[ICorProfilerInfo2：： GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法來取得該函式的詳細資訊，以探索函式的父類別、其名稱等等。
 
 ## <a name="supported-features"></a>支援的功能
 
@@ -105,7 +105,7 @@ The other main interfaces involved in profiling are [ICorProfilerInfo](../../../
 
 在 CPU 和記憶體耗用量方面，此 API 很有效率。 分析並不會對所分析的應用程式造成足以誤導結果的變更。
 
-分析 API 對取樣和非取樣分析工具都非常有用。 A *sampling profiler* inspects the profile at regular clock ticks, say, at 5 milliseconds apart. A *non-sampling profiler* is informed of an event synchronously with the thread that causes the event.
+分析 API 對取樣和非取樣分析工具都非常有用。 *取樣*分析工具會以固定頻率刻度檢查設定檔，例如，相距5毫秒。 *非取樣*分析工具會以同步方式向引發事件的執行緒通知事件。
 
 ### <a name="unsupported-functionality"></a>不支援的功能
 
@@ -127,9 +127,9 @@ The other main interfaces involved in profiling are [ICorProfilerInfo](../../../
 
 ## <a name="notification-threads"></a>通知執行緒
 
-在大部分情況下，產生事件的執行緒也會執行通知。 Such notifications (for example, [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) and [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)) do not need to supply the explicit `ThreadID`. 此外，根據受影響執行緒的 `ThreadID`，分析工具可能會決定使用執行緒區域儲存區來儲存和更新其分析區塊，而不是在全域儲存體中將分析區塊編製索引。
+在大部分情況下，產生事件的執行緒也會執行通知。 這類通知（例如， [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)和[FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)）不需要提供明確的 `ThreadID`。 此外，根據受影響執行緒的 `ThreadID`，分析工具可能會決定使用執行緒區域儲存區來儲存和更新其分析區塊，而不是在全域儲存體中將分析區塊編製索引。
 
-請注意，這些回呼不會序列化。 使用者必須藉由下列方式保護他們的程式碼：建立執行緒安全資料結構，並且鎖定分析工具程式碼，進而防止從多個執行緒進行平行存取。 因此，在某些情況下，您會收到不尋常的回呼序列。 例如，假設 Managed 應用程式正在繁衍兩個正在執行相同程式碼的執行緒。 In this case, it is possible to receive a [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) event for some function from one thread and a `FunctionEnter` callback from the other thread before receiving the [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) callback. 在此情況下，使用者將會因為可能尚未完全 Just-In-Time (JIT) 編譯的函式，而收到 `FunctionEnter` 回呼。
+請注意，這些回呼不會序列化。 使用者必須藉由下列方式保護他們的程式碼：建立執行緒安全資料結構，並且鎖定分析工具程式碼，進而防止從多個執行緒進行平行存取。 因此，在某些情況下，您會收到不尋常的回呼序列。 例如，假設 Managed 應用程式正在繁衍兩個正在執行相同程式碼的執行緒。 在此情況下，您可以從一個執行緒接收某個函式的[ICorProfilerCallback：： JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)事件，並從另一個執行緒收到 `FunctionEnter` 回呼，然後再接收[ICorProfilerCallback：： JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)回呼。 在此情況下，使用者將會因為可能尚未完全 Just-In-Time (JIT) 編譯的函式，而收到 `FunctionEnter` 回呼。
 
 ## <a name="security"></a>安全性
 
@@ -145,9 +145,9 @@ The other main interfaces involved in profiling are [ICorProfilerInfo](../../../
 
 雖然從設計的觀點來看，這是可行的，但是分析 API 並不支援 Managed 元件。 CLR 分析工具必須是完全 Unmanaged。 嘗試將 Managed 和 Unmanaged 程式碼結合在 CLR 分析工具中，可能會造成存取違規、程式失敗或死結。 分析工具的 Managed 元件會引發事件回到其 Unmanaged 元件，Unmanaged 元件接著又會呼叫 Managed 的元件，而導致循環參考。
 
-CLR 分析工具可以安全呼叫 Managed 程式碼的唯一位置，是在方法的 Microsoft 中繼語言 (MSIL) 主體中。 The recommended practice for modifying the MSIL body is to use the  JIT recompilation methods in the [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface.
+CLR 分析工具可以安全呼叫 Managed 程式碼的唯一位置，是在方法的 Microsoft 中繼語言 (MSIL) 主體中。 修改 MSIL 主體的建議做法是在[ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)介面中使用 JIT 重新編譯方法。
 
-另外也可以使用較舊的檢測方法修改 MSIL。 Before the just-in-time (JIT) compilation of a function is completed, the profiler can insert managed calls in the MSIL body of a method and then JIT-compile it (see the [ICorProfilerInfo::GetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbody-method.md) method). 這項技術可以成功用於選擇性的 Managed 程式碼檢測，或是用來收集 JIT 的相關統計資料和效能資料。
+另外也可以使用較舊的檢測方法修改 MSIL。 在函式的即時（JIT）編譯完成之前，分析工具可以在方法的 MSIL 主體中插入 managed 呼叫，然後再將其進行 JIT 編譯（請參閱[ICorProfilerInfo：： GetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbody-method.md)方法）。 這項技術可以成功用於選擇性的 Managed 程式碼檢測，或是用來收集 JIT 的相關統計資料和效能資料。
 
 或者，程式碼分析工具在呼叫 Unmanaged 程式碼之每個 Managed 函式的 MSIL 主體中，插入原生攔截程序。 這項技術可以用於檢測和涵蓋範圍。 例如，程式碼分析工具可以在每個 MSIL 區塊後面，插入檢測攔截程序，以確保該區塊已被執行。 方法的 MSIL 主體修改是非常精細的作業，而且有許多應該列入考量的因素。
 
@@ -161,11 +161,11 @@ Common Language Runtime (CLR) 分析 API 為分析 Unmanaged 程式碼提供最�
 
 在 .NET Framework 1.0 和 1.1 版中，這些方法可用於 CLR 偵錯 API 的整個同處理序子集。 其定義在 CorDebug.idl 檔案中。
 
-In the .NET Framework 2.0 and later, you can use the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method for this functionality.
+在 .NET Framework 2.0 和更新版本中，您可以使用[ICorProfilerInfo2：:D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法來取得這項功能。
 
 ## <a name="using-com"></a>使用 COM
 
-雖然分析介面被定義為 COM 介面，但是 Common Language Runtime (CLR) 並不會實際初始化 COM 來使用這些介面。 The reason is to avoid having to set the threading model by using the [CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize) function before the managed application has had a chance to specify its desired threading model. 同樣地，分析工具本身也不應該呼叫 `CoInitialize`，因為它所選擇的執行緒模型可能會與正在分析的應用程式不相容，而導致應用程式失敗。
+雖然分析介面被定義為 COM 介面，但是 Common Language Runtime (CLR) 並不會實際初始化 COM 來使用這些介面。 原因是要避免在受控應用程式有機會指定其所需的執行緒模型之前，使用[CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize)函式來設定執行緒模型。 同樣地，分析工具本身也不應該呼叫 `CoInitialize`，因為它所選擇的執行緒模型可能會與正在分析的應用程式不相容，而導致應用程式失敗。
 
 ## <a name="call-stacks"></a>呼叫堆疊
 
@@ -175,11 +175,11 @@ In the .NET Framework 2.0 and later, you can use the [ICorProfilerInfo2::DoStack
 
 堆疊快照是執行緒堆疊的即時追蹤。 分析 API 支援追蹤堆疊上的 Managed 函式，但會將 Unmanaged 函式的追蹤交由分析工具本身的堆疊查核器處理。
 
-For more information about how to program the profiler to walk managed stacks, see the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method in this documentation set, and [Profiler Stack Walking in the .NET Framework 2.0: Basics and Beyond](https://go.microsoft.com/fwlink/?LinkId=73638).
+如需如何編寫分析工具來逐步執行受控堆疊的詳細資訊，請參閱本檔集中的[ICorProfilerInfo2：:D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法和分析工具[堆疊，流覽 .NET Framework 2.0：基本概念和](https://go.microsoft.com/fwlink/?LinkId=73638)其他功能。
 
 ### <a name="shadow-stack"></a>陰影堆疊
 
-過於頻繁使用快照方法，很快就會產生效能問題。 If you want to take stack traces frequently, your profiler should instead build a shadow stack by using the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md), and [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) exception callbacks. 每當需要堆疊快照時，陰影堆疊一定都是當前的，而且可以快速複製到儲存體。
+過於頻繁使用快照方法，很快就會產生效能問題。 如果您想要經常採取堆疊追蹤，您的分析工具應該改為使用[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)、 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)、 [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)和[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)例外狀況回呼來建立陰影堆疊。 每當需要堆疊快照時，陰影堆疊一定都是當前的，而且可以快速複製到儲存體。
 
 陰影堆疊可能會取得函式引數、傳回值，以及泛型具現化的相關資訊。 此資訊只能透過陰影堆疊來使用，並且可以在將控制權交給函式時取得。 不過，之後在函式執行期間，可能無法使用這項資訊。
 

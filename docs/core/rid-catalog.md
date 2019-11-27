@@ -108,7 +108,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
   - `win10-arm`
   - `win10-arm64`
 
-See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-windows) for more information.
+如需詳細資訊，請參閱[.Net Core 相依性和需求](install/dependencies.md?tabs=netcore30&pivots=os-windows)。
 
 ## <a name="linux-rids"></a>Linux RID
 
@@ -126,7 +126,7 @@ See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netco
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-linux) for more information.
+如需詳細資訊，請參閱[.Net Core 相依性和需求](install/dependencies.md?tabs=netcore30&pivots=os-linux)。
 
 ## <a name="macos-rids"></a>macOS RID
 
@@ -145,8 +145,8 @@ macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新的�
 - macOS 10.14 Mojave (.NET Core 1.1 或更新版本)
   - `osx.10.14-x64`
 
-See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-macos) for more information.
+如需詳細資訊，請參閱[.Net Core 相依性和需求](install/dependencies.md?tabs=netcore30&pivots=os-macos)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段識別碼](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/readme.md)

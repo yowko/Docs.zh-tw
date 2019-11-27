@@ -50,9 +50,9 @@ ms.locfileid: "74429659"
   
 |編譯器|編譯器選項|  
 |--------------|---------------------|  
-|Visual Basic|[-platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
+|Visual Basic|[-platform （Visual Basic）](../visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[-platform (C# 編譯器選項)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|您可以使用 **/clr:safe** 建立各平台適用的 Microsoft 中繼語言 (MSIL) 應用程式。 For more information, see [-clr (Common Language Runtime Compilation)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ 針對每個 64 位元作業系統包含了個別的編譯器。 如需如何使用 Visual C++ 建立可在 64 位元 Windows 作業系統上執行之原生應用程式的詳細資訊，請參閱 [64 位元程式設計](/cpp/build/configuring-programs-for-64-bit-visual-cpp)。|  
+|Visual C++|您可以使用 **/clr:safe** 建立各平台適用的 Microsoft 中繼語言 (MSIL) 應用程式。 如需詳細資訊，請參閱[-clr （Common Language Runtime 編譯）](/cpp/build/reference/clr-common-language-runtime-compilation)。<br /><br /> Visual C++ 針對每個 64 位元作業系統包含了個別的編譯器。 如需如何使用 Visual C++ 建立可在 64 位元 Windows 作業系統上執行之原生應用程式的詳細資訊，請參閱 [64 位元程式設計](/cpp/build/configuring-programs-for-64-bit-visual-cpp)。|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>判斷 .exe 檔或 .dll 檔的狀態  
  若要判斷 .exe 檔或 .dll 檔案是否只能在特定平台上或在 WOW64 下執行，請使用不含選項的 [CorFlags.exe (CorFlags 轉換工具)](./tools/corflags-exe-corflags-conversion-tool.md)。 您也可以使用 CorFlags.exe 來變更 .exe 檔或 .dll 檔的平台狀態。 Visual Studio 組件的 CLR 標頭中的執行階段主要版本號碼設為 2，而執行階段次要版本號碼設為 5。 將次要執行階段版本設定為 0 的應用程式會被視為舊版應用程式，並一律在 WOW64 下執行。  
