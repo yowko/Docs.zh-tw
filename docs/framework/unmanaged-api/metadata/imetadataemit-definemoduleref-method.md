@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431725"
 ---
-# <a name="imetadataemitdefinemoduleref-method"></a><span data-ttu-id="b02f0-102">IMetaDataEmit::DefineModuleRef 方法</span><span class="sxs-lookup"><span data-stu-id="b02f0-102">IMetaDataEmit::DefineModuleRef Method</span></span>
-<span data-ttu-id="b02f0-103">Creates the metadata signature for a module with the specified name.</span><span class="sxs-lookup"><span data-stu-id="b02f0-103">Creates the metadata signature for a module with the specified name.</span></span>  
+# <a name="imetadataemitdefinemoduleref-method"></a><span data-ttu-id="edc3b-102">IMetaDataEmit::DefineModuleRef 方法</span><span class="sxs-lookup"><span data-stu-id="edc3b-102">IMetaDataEmit::DefineModuleRef Method</span></span>
+<span data-ttu-id="edc3b-103">建立具有指定名稱之模組的中繼資料簽章。</span><span class="sxs-lookup"><span data-stu-id="edc3b-103">Creates the metadata signature for a module with the specified name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b02f0-104">語法</span><span class="sxs-lookup"><span data-stu-id="b02f0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="edc3b-104">語法</span><span class="sxs-lookup"><span data-stu-id="edc3b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineModuleRef (     
@@ -34,23 +34,23 @@ HRESULT DefineModuleRef (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b02f0-105">參數</span><span class="sxs-lookup"><span data-stu-id="b02f0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="edc3b-105">參數</span><span class="sxs-lookup"><span data-stu-id="edc3b-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="b02f0-106">[in] The name of the other metadata file, typically a DLL.</span><span class="sxs-lookup"><span data-stu-id="b02f0-106">[in] The name of the other metadata file, typically a DLL.</span></span> <span data-ttu-id="b02f0-107">This is the file name only.</span><span class="sxs-lookup"><span data-stu-id="b02f0-107">This is the file name only.</span></span> <span data-ttu-id="b02f0-108">Do not use a full path name.</span><span class="sxs-lookup"><span data-stu-id="b02f0-108">Do not use a full path name.</span></span>  
+ <span data-ttu-id="edc3b-106">在其他中繼資料檔案的名稱，通常是 DLL。</span><span class="sxs-lookup"><span data-stu-id="edc3b-106">[in] The name of the other metadata file, typically a DLL.</span></span> <span data-ttu-id="edc3b-107">此為檔案名。</span><span class="sxs-lookup"><span data-stu-id="edc3b-107">This is the file name only.</span></span> <span data-ttu-id="edc3b-108">請勿使用完整路徑名稱。</span><span class="sxs-lookup"><span data-stu-id="edc3b-108">Do not use a full path name.</span></span>  
   
  `pmur`  
- <span data-ttu-id="b02f0-109">[out] The assigned `mdModuleRef` token.</span><span class="sxs-lookup"><span data-stu-id="b02f0-109">[out] The assigned `mdModuleRef` token.</span></span>  
+ <span data-ttu-id="edc3b-109">脫銷指派的 `mdModuleRef` token。</span><span class="sxs-lookup"><span data-stu-id="edc3b-109">[out] The assigned `mdModuleRef` token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b02f0-110">需求</span><span class="sxs-lookup"><span data-stu-id="b02f0-110">Requirements</span></span>  
- <span data-ttu-id="b02f0-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b02f0-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="edc3b-110">需求</span><span class="sxs-lookup"><span data-stu-id="edc3b-110">Requirements</span></span>  
+ <span data-ttu-id="edc3b-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="edc3b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b02f0-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b02f0-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="edc3b-112">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="edc3b-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b02f0-113">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b02f0-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="edc3b-113">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="edc3b-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b02f0-114">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b02f0-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="edc3b-114">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="edc3b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b02f0-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="b02f0-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="edc3b-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="edc3b-115">See also</span></span>
 
-- [<span data-ttu-id="b02f0-116">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="b02f0-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="b02f0-117">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="b02f0-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="edc3b-116">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="edc3b-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="edc3b-117">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="edc3b-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
