@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350904"
 ---
 # <a name="sub-expression-visual-basic"></a>Sub 運算式 (Visual Basic)
-Declares the parameters and code that define a subroutine lambda expression.  
+宣告定義副程式 lambda 運算式的參數和程式碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -30,30 +30,30 @@ End Sub
   
 |詞彙|定義|  
 |---|---|  
-|`parameterlist`|選擇項。 A list of local variable names that represent the parameters of the procedure. The parentheses must be present even when the list is empty. 如需詳細資訊，請參閱 [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
-|`statement`|必要項。 A single statement.|  
-|`statements`|必要項。 A list of statements.|  
+|`parameterlist`|選擇性。 本機變數名稱的清單，代表程式的參數。 即使清單是空的，括弧也必須存在。 如需詳細資訊，請參閱 [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
+|`statement`|必要。 單一語句。|  
+|`statements`|必要。 陳述式的清單。|  
   
 ## <a name="remarks"></a>備註  
- A *lambda expression* is a subroutine that does not have a name and that executes one or more statements. You can use a lambda expression anywhere that you can use a delegate type, except as an argument to `RemoveHandler`. For more information about delegates, and the use of lambda expressions with delegates, see [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) and [Relaxed Delegate Conversion](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ *Lambda 運算式*是沒有名稱，且會執行一或多個語句的副程式。 除了 `RemoveHandler`的引數之外，您可以在任何可使用委派類型的位置使用 lambda 運算式。 如需委派的詳細資訊，以及搭配使用 lambda 運算式和委派的用法，請參閱[委派語句](../../../visual-basic/language-reference/statements/delegate-statement.md)和[寬鬆委派轉換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。  
   
 ## <a name="lambda-expression-syntax"></a>Lambda 運算式語法  
- The syntax of a lambda expression resembles that of a standard subroutine. The differences are as follows:  
+ Lambda 運算式的語法與標準副程式類似。 差異如下：  
   
-- A lambda expression does not have a name.  
+- Lambda 運算式沒有名稱。  
   
-- A lambda expression cannot have a modifier, such as `Overloads` or `Overrides`.  
+- Lambda 運算式不能有修飾詞，例如 `Overloads` 或 `Overrides`。  
   
-- The body of a single-line lambda expression must be a statement, not an expression. The body can consist of a call to a sub procedure, but not a call to a function procedure.  
+- 單行 lambda 運算式的主體必須是語句，而不是運算式。 主體可以包含 sub 程式的呼叫，而不是函式呼叫的呼叫。  
   
-- In a lambda expression, either all parameters must have specified data types or all parameters must be inferred.  
+- 在 lambda 運算式中，所有參數都必須具有指定的資料類型，否則必須推斷所有的參數。  
   
-- Optional and `ParamArray` parameters are not permitted in lambda expressions.  
+- Lambda 運算式中不允許選擇性和 `ParamArray` 參數。  
   
-- Generic parameters are not permitted in lambda expressions.  
+- Lambda 運算式中不允許使用泛型參數。  
   
 ## <a name="example"></a>範例  
- Following is an example of a lambda expression that writes a value to the console. The example shows both the single-line and multiline lambda expression syntax for a subroutine. For more examples, see [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ 以下是將值寫入主控台的 lambda 運算式範例。 此範例會顯示副程式的單行和多行 lambda 運算式語法。 如需更多範例，請參閱[Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   
  [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   

@@ -21,32 +21,32 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350115"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>有效率地使用資料類型 (Visual Basic)
-Undeclared variables and variables declared without a data type are assigned the `Object` data type. This makes it easy to write programs quickly, but it can cause them to execute more slowly.
+未宣告的變數和不含資料類型的變數會被指派 `Object` 資料類型。 這可讓您快速撰寫程式，但它可能會導致執行速度變慢。
 
-## <a name="strong-typing"></a>Strong Typing
- Specifying data types for all your variables is known as *strong typing*. Using strong typing has several advantages:
+## <a name="strong-typing"></a>強式類型
+ 指定所有變數的資料類型稱為*強式類型*。 使用強型別有幾個優點：
 
-- It enables IntelliSense support for your variables. This allows you to see their properties and other members as you type in the code.
+- 它會針對您的變數啟用 IntelliSense 支援。 這可讓您在程式碼中輸入時，看到其屬性和其他成員。
 
-- It takes advantage of compiler type checking. This catches statements that can fail at run time due to errors such as overflow. It also catches calls to methods on objects that do not support them.
+- 它會利用編譯器類型檢查。 這會捕捉可能因為溢位錯誤而在執行時間失敗的語句。 它也會攔截不支援之物件上方法的呼叫。
 
-- It results in faster execution of your code.
+- 這會導致程式碼的執行速度更快。
 
-## <a name="most-efficient-data-types"></a>Most Efficient Data Types
- For variables that never contain fractions, the integral data types are more efficient than the nonintegral types. In Visual Basic, `Integer` and `UInteger` are the most efficient numeric types.
+## <a name="most-efficient-data-types"></a>最有效率的資料類型
+ 對於永不包含小數的變數而言，整數資料類型比非整數類型更有效率。 在 Visual Basic 中，`Integer` 和 `UInteger` 是最有效率的數數值型別。
 
- For fractional numbers, `Double` is the most efficient data type, because the processors on current platforms perform floating-point operations in double precision. However, operations with `Double` are not as fast as with the integral types such as `Integer`.
+ 就小數而言，`Double` 是最有效率的資料類型，因為目前平臺上的處理器會以雙精確度執行浮點運算。 不過，具有 `Double` 的作業不如使用整數類資料類型（例如 `Integer`）的速度快。
 
-## <a name="specifying-data-type"></a>Specifying Data Type
- Use the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) to declare a variable of a specific type. You can simultaneously specify its access level by using the [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), or [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword, as in the following example.
+## <a name="specifying-data-type"></a>指定資料類型
+ 使用[Dim 語句](../../../../visual-basic/language-reference/statements/dim-statement.md)來宣告特定類型的變數。 您可以使用[Public](../../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)、 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)或[Private](../../../../visual-basic/language-reference/modifiers/private.md)關鍵字，同時指定其存取層級，如下列範例所示。
 
 ```vb
 Private x As Double
 Protected s As String
 ```
 
-## <a name="character-conversion"></a>Character Conversion
- The `AscW` and `ChrW` functions operate in Unicode. You should use them in preference to `Asc` and `Chr`, which must translate into and out of Unicode.
+## <a name="character-conversion"></a>字元轉換
+ `AscW` 和 `ChrW` 函數會以 Unicode 運作。 您應該在喜好設定中使用它們來 `Asc` 和 `Chr`，這必須轉譯成 Unicode。
 
 ## <a name="see-also"></a>請參閱
 

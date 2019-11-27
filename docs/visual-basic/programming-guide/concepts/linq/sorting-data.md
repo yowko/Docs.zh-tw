@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350593"
 ---
-# <a name="sorting-data-visual-basic"></a>Sorting Data (Visual Basic)
+# <a name="sorting-data-visual-basic"></a>排序資料（Visual Basic）
 
 排序作業會根據一個或多個屬性來排序序列的項目。 第一個排序準則會執行元素的主要排序； 您可以藉由指定第二個排序準則來排序每一個主要排序群組內的元素。
 
@@ -21,7 +21,7 @@ ms.locfileid: "74350593"
 
 ## <a name="methods"></a>方法
 
-|方法名稱|描述|Visual Basic Query Expression Syntax|更多資訊|
+|方法名稱|描述|Visual Basic 查詢運算式語法|詳細資訊|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |OrderBy|依遞增順序排序值。|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|
 |OrderByDescending|依遞減順序排序值。|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|
@@ -153,4 +153,4 @@ MsgBox(sb.ToString())
 - [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Order By 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)
 - [如何：排序查詢結果](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
-- [How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [如何：依任何字或欄位排序或篩選文字資料（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
