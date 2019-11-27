@@ -14,24 +14,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349842"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>目錄和檔案摘要 (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic 語言關鍵字和執行時間程式庫成員是依用途和使用來組織。  
   
- Using the `My` feature gives you greater productivity and performance in file I/O operations than using these members. 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.FileIO.FileSystem>。  
+ 使用 `My` 功能可提升檔案 i/o 作業的產能和效能，而不是使用這些成員。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.FileIO.FileSystem>。  
   
 |**動作**|**語言項目**|  
 |----------------|--------------------------|  
-|Change a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
-|Change the drive.|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
-|Copy a file.|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
-|Make a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.MkDir%2A>|  
-|Remove a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.RmDir%2A>|  
-|Rename a file, directory, or folder.|<xref:Microsoft.VisualBasic.FileSystem.Rename%2A>|  
-|Return the current path.|<xref:Microsoft.VisualBasic.FileSystem.CurDir%2A>|  
-|Return a file's date/time stamp.|<xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>|  
-|Return file, directory, or label attributes.|<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>|  
-|Return a file's length.|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
-|Return a file's name or volume label.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
-|Set attribute information for a file.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
+|變更目錄或資料夾。|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
+|變更磁片磁碟機。|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
+|複製檔案。|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
+|建立目錄或資料夾。|<xref:Microsoft.VisualBasic.FileSystem.MkDir%2A>|  
+|移除目錄或資料夾。|<xref:Microsoft.VisualBasic.FileSystem.RmDir%2A>|  
+|重新命名檔案、目錄或資料夾。|<xref:Microsoft.VisualBasic.FileSystem.Rename%2A>|  
+|傳回目前的路徑。|<xref:Microsoft.VisualBasic.FileSystem.CurDir%2A>|  
+|傳回檔案的日期/時間戳記。|<xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>|  
+|傳回檔案、目錄或標籤屬性。|<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>|  
+|傳回檔案的長度。|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
+|傳回檔案的名稱或磁片區標籤。|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
+|設定檔案的屬性資訊。|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
 ## <a name="see-also"></a>請參閱
 

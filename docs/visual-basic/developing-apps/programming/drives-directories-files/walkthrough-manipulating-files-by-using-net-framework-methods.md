@@ -1,5 +1,5 @@
 ---
-title: 使用 .NET Framework 方法管理檔案 (Visual Basic)
+title: 使用 .NET Framework 方法管理檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], walkthroughs
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: fc02b795834dba4a777dc78f4c8179238ac593af
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 02cdbcc59e8817ff4ec06c2f78f835cad77b10f2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582487"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333776"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>逐步解說：使用 .NET Framework 方法管理檔案 (Visual Basic)
 
@@ -38,17 +38,17 @@ ms.locfileid: "72582487"
 
 2. 按一下 [新增專案] 窗格的 [Windows 應用程式]。
 
-3. 在 [名稱] 方塊中，輸入 `MyDiary` 並按一下 [確定]。
+3. 在 [名稱] 方塊中，輸入  **並按一下 [確定]。** `MyDiary`
 
      Visual Studio 即會將專案新增至 [方案總管]，並開啟 [Windows Form 設計工具]。
 
 4. 將下表的控制項新增至表單，並設定其屬性的對應值。
 
-|**物件**|**屬性**|**值**|
+|**物件**|**內容**|**值**|
 |---|---|---|
-|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**|`Submit`<br /><br /> **提交項目**|
-|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**|`Clear`<br /><br /> **清除項目**|
-|<xref:System.Windows.Forms.TextBox>|**名稱**<br /><br /> **Text**<br /><br /> **多行**|`Entry`<br /><br /> **請輸入某些內容。**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文字**|`Submit`<br /><br /> **提交項目**|
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文字**|`Clear`<br /><br /> **清除項目**|
+|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **文字**<br /><br /> **多行**|`Entry`<br /><br /> **請輸入某些內容。**<br /><br /> `False`|
 
 ## <a name="writing-to-the-file"></a>寫入檔案
 
@@ -71,7 +71,7 @@ ms.locfileid: "72582487"
 > [!NOTE]
 > Visual Studio 整合式開發環境 (IDE) 會返回程式碼編輯器，並在事件處理常式中放入您應該新增程式碼的位置插入點。
 
-1. 若要寫入檔案，請使用 <xref:System.IO.StreamWriter> 類別的 <xref:System.IO.StreamWriter.Write%2A> 方法。 將下列程式碼新增至 `Dim fw As StreamWriter` 正後方。 您不用擔心系統會在找不到檔案時擲回例外狀況，因為若檔案不存在，系統會加以建立。
+1. 若要寫入檔案，請使用 <xref:System.IO.StreamWriter.Write%2A> 類別的 <xref:System.IO.StreamWriter> 方法。 將下列程式碼新增至 `Dim fw As StreamWriter` 正後方。 您不用擔心系統會在找不到檔案時擲回例外狀況，因為若檔案不存在，系統會加以建立。
 
      [!code-vb[VbVbcnMyFileSystem#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#37)]
 
@@ -93,16 +93,16 @@ ms.locfileid: "72582487"
 
 在本節逐步解說中，請將下表的控制項新增至表單，並設定其屬性的對應值。
 
-|控制項|屬性|值|
+|控制項|內容|值|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.TextBox>|**名稱**<br /><br /> **可見**<br /><br /> **Size**<br /><br /> **多行**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
-|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**|`Display`<br /><br /> **顯示**|
-|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **文字**|`GetEntries`<br /><br /> **取得項目**|
-|<xref:System.Windows.Forms.ComboBox>|**名稱**<br /><br /> **Text**<br /><br /> **已啟用**|`PickEntries`<br /><br /> **選取項目**<br /><br /> `False`|
+|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **可見**<br /><br /> **Size**<br /><br /> **多行**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文字**|`Display`<br /><br /> **顯示**|
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文字**|`GetEntries`<br /><br /> **取得項目**|
+|<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **文字**<br /><br /> **已啟用**|`PickEntries`<br /><br /> **選取項目**<br /><br /> `False`|
 
 ### <a name="to-populate-the-combo-box"></a>若要填入下拉式方塊
 
-1. 系統會使用 `PickEntries`<xref:System.Windows.Forms.ComboBox> 來顯示使用者提交每個項目的日期，因此使用者可以選取特定日期的項目。 對 `GetEntries` 按鈕建立 <xref:System.Windows.Forms.Control.Click> 事件處理常式，並加入下列程式碼。
+1. 系統會使用 `PickEntries`<xref:System.Windows.Forms.ComboBox> 來顯示使用者提交每個項目的日期，因此使用者可以選取特定日期的項目。 對 <xref:System.Windows.Forms.Control.Click> 按鈕建立 `GetEntries` 事件處理常式，並加入下列程式碼。
 
      [!code-vb[VbVbcnMyFileSystem#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#41)]
 
@@ -110,7 +110,7 @@ ms.locfileid: "72582487"
 
 ### <a name="to-choose-and-display-individual-entries"></a>若要選擇並顯示個別項目
 
-1. 為 `Display` 按鈕建立 <xref:System.Windows.Forms.Control.Click> 事件處理常式，並加入下列程式碼。
+1. 為 <xref:System.Windows.Forms.Control.Click> 按鈕建立 `Display` 事件處理常式，並加入下列程式碼。
 
      [!code-vb[VbVbcnMyFileSystem#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#42)]
 
@@ -122,11 +122,11 @@ ms.locfileid: "72582487"
 
 將下表的控制項新增至表單，並設定其屬性的對應值。
 
-|控制項|屬性|值|
+|控制項|內容|值|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**<br /><br /> **已啟用**|`DeleteEntry`<br /><br /> **刪除項目**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**<br /><br /> **已啟用**|`EditEntry`<br /><br /> **編輯項目**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**<br /><br /> **已啟用**|`SubmitEdit`<br /><br /> **提交編輯**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文字**<br /><br /> **已啟用**|`DeleteEntry`<br /><br /> **刪除項目**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文字**<br /><br /> **已啟用**|`EditEntry`<br /><br /> **編輯項目**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **文字**<br /><br /> **已啟用**|`SubmitEdit`<br /><br /> **提交編輯**<br /><br /> `False`|
 
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>若要啟用項目的刪除和修改功能
 
@@ -134,25 +134,25 @@ ms.locfileid: "72582487"
 
      [!code-vb[VbVbcnMyFileSystem#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#43)]
 
-2. 為 `DeleteEntry` 按鈕建立 <xref:System.Windows.Forms.Control.Click> 事件處理常式，並加入下列程式碼。
+2. 為 <xref:System.Windows.Forms.Control.Click> 按鈕建立 `DeleteEntry` 事件處理常式，並加入下列程式碼。
 
      [!code-vb[VbVbcnMyFileSystem#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#44)]
 
-3. 當使用者顯示項目時，`EditEntry` 按鈕即變成啟用。 將下列程式碼加入 `Display` 按鈕的 <xref:System.Windows.Forms.Control.Click> 事件，放在 `DisplayEntry.Text = ReadString` 之後。
+3. 當使用者顯示項目時，`EditEntry` 按鈕即變成啟用。 將下列程式碼加入 <xref:System.Windows.Forms.Control.Click> 按鈕的 `Display` 事件，放在 `DisplayEntry.Text = ReadString` 之後。
 
      [!code-vb[VbVbcnMyFileSystem#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#45)]
 
-4. 為 `EditEntry` 按鈕建立 <xref:System.Windows.Forms.Control.Click> 事件處理常式，並加入下列程式碼。
+4. 為 <xref:System.Windows.Forms.Control.Click> 按鈕建立 `EditEntry` 事件處理常式，並加入下列程式碼。
 
      [!code-vb[VbVbcnMyFileSystem#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#46)]
 
-5. 為 `SubmitEdit` 按鈕建立 <xref:System.Windows.Forms.Control.Click> 事件處理常式，並加入下列程式碼
+5. 為 <xref:System.Windows.Forms.Control.Click> 按鈕建立 `SubmitEdit` 事件處理常式，並加入下列程式碼
 
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]
 
 若要測試您的程式碼，請按 F5 以編譯應用程式。 按一下 [取得項目]，並選取項目，然後按一下 [顯示]。 此項目會出現在 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中。 按一下 [編輯項目]。 此項目會出現在 `Entry`<xref:System.Windows.Forms.TextBox> 中。 編輯 `Entry`<xref:System.Windows.Forms.TextBox> 中的項目，然後按一下 [提交編輯]。 開啟 `MyDiary.txt` 檔案，確認您的修正。 現在，選取項目，然後按一下 [刪除項目]。 當 <xref:System.Windows.Forms.MessageBox> 要求確認時，請按一下 [確定]。 關閉應用程式，並開啟 `MyDiary.txt` 以確認刪除。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>

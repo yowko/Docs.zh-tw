@@ -12,12 +12,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346717"
 ---
 # <a name="how-to-create-an-add-extension-method-used-by-a-collection-initializer-visual-basic"></a>如何：建立集合初始設定式所使用的 Add 擴充方法 (Visual Basic)
-When you use a collection initializer to create a collection, the Visual Basic compiler searches for an `Add` method of the collection type for which the parameters for the `Add` method match the types of the values in the collection initializer. This `Add` method is used to populate the collection with the values from the collection initializer.  
+當您使用集合初始化運算式來建立集合時，Visual Basic 編譯器會搜尋集合類型的 `Add` 方法，其中 `Add` 方法的參數會符合集合初始化運算式中的數值型別。 這個 `Add` 方法是用來在集合中填入集合初始化運算式的值。  
   
- If no matching `Add` method exists and you cannot modify the code for the collection, you can add an extension method called `Add` that takes the parameters that are required by the collection initializer. This is typically what you need to do when you use collection initializers for generic collections.  
+ 如果沒有相符的 `Add` 方法存在，而且您無法修改集合的程式碼，您可以加入名為 `Add` 的擴充方法，以接受集合初始化運算式所需的參數。 當您使用泛型集合的集合初始化運算式時，這通常是您需要執行的動作。  
   
 ## <a name="example"></a>範例  
- The following example shows how to add an extension method to the generic <xref:System.Collections.Generic.List%601> type so that a collection initializer can be used to add objects of type `Employee`. The extension method enables you to use the shortened collection initializer syntax.  
+ 下列範例示範如何將擴充方法加入至泛型 <xref:System.Collections.Generic.List%601> 類型，以便將集合初始化運算式用來加入 `Employee`類型的物件。 擴充方法可讓您使用簡短的集合初始化運算式語法。  
   
  [!code-vb[VbVbalrCollectionInitializersHowTo1#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializersHowTo1/VB/Module1.vb#1)]  
   

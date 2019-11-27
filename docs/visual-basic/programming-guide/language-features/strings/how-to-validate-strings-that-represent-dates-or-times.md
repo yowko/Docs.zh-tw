@@ -13,16 +13,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344347"
 ---
 # <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>如何：驗證代表日期或時間的字串 (Visual Basic)
-The following code example sets a `Boolean` value that indicates whether a string represents a valid date or time.  
+下列程式碼範例會設定 `Boolean` 值，指出字串是否代表有效的日期或時間。  
   
 ## <a name="example"></a>範例  
  [!code-vb[VbVbcnRegEx#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#2)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- Replace `("01/01/03")` and `"9:30 PM"` with the date and time you want to validate. You can replace the string with another hard-coded string, with a `String` variable, or with a method that returns a string, such as `InputBox`.  
+ 以您想要驗證的日期和時間取代 `("01/01/03")` 和 `"9:30 PM"`。 您可以使用另一個硬式編碼字串、`String` 變數或傳回字串的方法（例如 `InputBox`）來取代字串。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
- Use this method to validate the string before trying to convert the `String` to a `DateTime` variable. By checking the date or time first, you can avoid generating an exception at run time.  
+ 嘗試將 `String` 轉換成 `DateTime` 變數之前，請使用這個方法來驗證字串。 藉由先檢查日期或時間，您可以避免在執行時間產生例外狀況。  
   
 ## <a name="see-also"></a>請參閱
 

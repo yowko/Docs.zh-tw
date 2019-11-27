@@ -20,31 +20,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345214"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>使用字串名稱呼叫屬性或方法 (Visual Basic)
-In most cases, you can discover the properties and methods of an object at design time, and write code to handle them. However, in some cases you may not know about an object's properties and methods in advance, or you may just want the flexibility of enabling an end user to specify properties or execute methods at run time.  
+在大部分的情況下，您可以在設計階段探索物件的屬性和方法，並撰寫程式碼來處理它們。 不過，在某些情況下，您可能不會事先知道物件的屬性和方法，或者您可能只想要讓使用者在執行時間指定屬性或執行方法的彈性。  
   
-## <a name="callbyname-function"></a>CallByName Function  
- Consider, for example, a client application that evaluates expressions entered by the user by passing an operator to a COM component. Suppose you are constantly adding new functions to the component that require new operators. When you use standard object access techniques, you must recompile and redistribute the client application before it could use the new operators. To avoid this, you can use the `CallByName` function to pass the new operators as strings, without changing the application.  
+## <a name="callbyname-function"></a>CallByName 函式  
+ 例如，假設用戶端應用程式會將運算子傳遞至 COM 元件，以評估使用者所輸入的運算式。 假設您持續將新的函式加入至需要新運算子的元件。 當您使用標準物件存取技術時，必須先重新編譯和轉散發用戶端應用程式，才能使用新的運算子。 若要避免這種情況，您可以使用 `CallByName` 函式，以字串形式傳遞新的運算子，而不需要變更應用程式。  
   
- The `CallByName` function lets you use a string to specify a property or method at run time. The signature for the `CallByName` function looks like this:  
+ `CallByName` 函數可讓您在執行時間使用字串來指定屬性或方法。 `CallByName` 函數的簽章看起來像這樣：  
   
- *Result* = `CallByName`(*Object*, *ProcedureName*, *CallType*, *Arguments*())  
+ *Result* = `CallByName`（*Object*、*程式名稱*、 *CallType*、 *Arguments*（））  
   
- The first argument, *Object*, takes the name of the object you want to act upon. The *ProcedureName* argument takes a string that contains the name of the method or property procedure to be invoked. The *CallType* argument takes a constant that represents the type of procedure to invoke: a method (`Microsoft.VisualBasic.CallType.Method`), a property read (`Microsoft.VisualBasic.CallType.Get`), or a property set (`Microsoft.VisualBasic.CallType.Set`). The *Arguments* argument, which is optional, takes an array of type `Object` that contains any arguments to the procedure.  
+ 第一個引數（ *Object*）會採用您想要採取動作的物件名稱。 *程式名稱*引數會採用包含要叫用之方法或屬性程式名稱的字串。 *CallType*引數會採用常數，代表要叫用的程式類型：方法（`Microsoft.VisualBasic.CallType.Method`）、屬性讀取（`Microsoft.VisualBasic.CallType.Get`）或屬性集（`Microsoft.VisualBasic.CallType.Set`）。 *引數*引數是選擇性的，它會採用類型 `Object` 的陣列，其中包含程式的任何引數。  
   
- You can use `CallByName` with classes in your current solution, but it is most often used to access COM objects or objects from .NET Framework assemblies.  
+ 您可以在目前的方案中使用 `CallByName` 搭配類別，但最常用來從 .NET Framework 元件存取 COM 物件或物件。  
   
- Suppose you add a reference to an assembly that contains a class named `MathClass`, which has a new function named `SquareRoot`, as shown in the following code:  
+ 假設您新增的元件參考包含名為 `MathClass`的類別，其中具有名為 `SquareRoot`的新函式，如下列程式碼所示：  
   
  [!code-vb[VbVbalrOOP#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#53)]  
   
- Your application could use text box controls to control which method will be called and its arguments. For example, if `TextBox1` contains the expression to be evaluated, and `TextBox2` is used to enter the name of the function, you can use the following code to invoke the `SquareRoot` function on the expression in `TextBox1`:  
+ 您的應用程式可以使用文字方塊控制項來控制將呼叫的方法及其引數。 例如，如果 `TextBox1` 包含要評估的運算式，而 `TextBox2` 用來輸入函數的名稱，您可以使用下列程式碼，在 `TextBox1`的運算式上叫用 `SquareRoot` 函數：  
   
  [!code-vb[VbVbalrOOP#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#54)]  
   
- If you enter "64" in `TextBox1`, "SquareRoot" in `TextBox2`, and then call the `CallMath` procedure, the square root of the number in `TextBox1` is evaluated. The code in the example invokes the `SquareRoot` function (which takes a string that contains the expression to be evaluated as a required argument) and returns "8" in `TextBox1` (the square root of 64). Of course, if the user enters an invalid string in `TextBox2`, if the string contains the name of a property instead of a method, or if the method had an additional required argument, a run-time error occurs. You have to add robust error-handling code when you use `CallByName` to anticipate these or any other errors.  
+ 如果您在 `TextBox1`中輸入 "64"，`TextBox2`中的 "SquareRoot"，然後呼叫 `CallMath` 程式，則會評估 `TextBox1` 中數位的平方根。 範例中的程式碼會叫用 `SquareRoot` 函式（採用包含要評估為必要引數之運算式的字串），並在 `TextBox1` （64的平方根）中傳回 "8"。 當然，如果使用者在 `TextBox2`中輸入不正確字串，如果字串包含屬性（而不是方法）的名稱，或如果方法有額外的必要引數，就會發生執行階段錯誤。 當您使用 `CallByName` 來預期這些或任何其他錯誤時，您必須加入健全的錯誤處理常式代碼。  
   
 > [!NOTE]
-> While the `CallByName` function may be useful in some cases, you must weigh its usefulness against the performance implications — using `CallByName` to invoke a procedure is slightly slower than a late-bound call. If you are invoking a function that is called repeatedly, such as inside a loop, `CallByName` can have a severe effect on performance.  
+> 雖然在某些情況下，`CallByName` 函式可能很有用，但您必須對效能影響權衡其實用性，使用 `CallByName` 叫用程式比晚期繫結呼叫稍微慢一點。 如果您叫用重複呼叫的函式，例如在迴圈內，`CallByName` 可能會對效能造成嚴重的影響。  
   
 ## <a name="see-also"></a>請參閱
 

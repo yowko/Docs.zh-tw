@@ -16,13 +16,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332346"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML 中內嵌的運算式 (Visual Basic)
-Embedded expressions enable you to create XML literals that contain expressions that are evaluated at run time. The syntax for an embedded expression is `<%=` `expression` `%>`, which is the same as the syntax used in ASP.NET.  
+內嵌運算式可讓您建立 XML 常值，其中包含在執行時間評估的運算式。 內嵌運算式的語法是 `<%=` `expression` `%>`，這與 ASP.NET 中所使用的語法相同。  
   
- For example, you can create an XML element literal, combining embedded expressions with literal text content.  
+ 例如，您可以建立 XML 元素常值，並結合內嵌運算式與常值文字內容。  
   
  [!code-vb[VbXMLSamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#27)]  
   
- If `isbnNumber` contains the integer 12345 and `modifiedDate` contains the date 3/5/2006, when this code executes, the value of `book` is:  
+ 如果 `isbnNumber` 包含整數12345，而 `modifiedDate` 包含日期3/5/2006，則當此程式碼執行時，`book` 的值為：  
   
 ```xml  
 <book category="fiction" isbn="12345">  
@@ -30,55 +30,55 @@ Embedded expressions enable you to create XML literals that contain expressions 
 </book>  
 ```  
   
-## <a name="embedded-expression-location-and-validation"></a>Embedded Expression Location and Validation  
- Embedded expressions can appear only at certain locations within XML literal expressions. The expression location controls which types the expression can return and how `Nothing` is handled. The following table describes the allowed locations and types of embedded expressions.  
+## <a name="embedded-expression-location-and-validation"></a>內嵌運算式位置和驗證  
+ 內嵌運算式只能出現在 XML 常值運算式內的特定位置。 運算式位置會控制運算式可以傳回的類型，以及處理 `Nothing` 的方式。 下表描述內嵌運算式的允許位置和類型。  
   
-|Location in literal|Type of expression|Handling of `Nothing`|  
+|常值中的位置|運算式的類型|`Nothing` 的處理|  
 |---|---|---|  
-|XML element name|<xref:System.Xml.Linq.XName>|錯誤|  
-|XML element content|`Object` or array of `Object`|略過|  
-|XML element attribute name|<xref:System.Xml.Linq.XName>|Error, unless the attribute value is also `Nothing`|  
-|XML element attribute value|`Object`|Attribute declaration ignored|  
-|XML element attribute|<xref:System.Xml.Linq.XAttribute> or a collection of <xref:System.Xml.Linq.XAttribute>|略過|  
-|XML document root element|<xref:System.Xml.Linq.XElement> or a collection of one <xref:System.Xml.Linq.XElement> object and an arbitrary number of <xref:System.Xml.Linq.XProcessingInstruction> and <xref:System.Xml.Linq.XComment> objects|略過|  
+|XML 元素名稱|<xref:System.Xml.Linq.XName>|錯誤|  
+|XML 元素內容|`Object` 的 `Object` 或陣列|略過|  
+|XML 元素屬性名稱|<xref:System.Xml.Linq.XName>|錯誤，除非屬性值也 `Nothing`|  
+|XML 元素屬性值|`Object`|已忽略屬性宣告|  
+|XML 元素屬性|<xref:System.Xml.Linq.XAttribute> 或 <xref:System.Xml.Linq.XAttribute> 的集合|略過|  
+|XML 檔根項目|<xref:System.Xml.Linq.XElement> 或一個 <xref:System.Xml.Linq.XElement> 物件的集合，以及任意數目的 <xref:System.Xml.Linq.XProcessingInstruction> 和 <xref:System.Xml.Linq.XComment> 物件|略過|  
   
-- Example of an embedded expression in an XML element name:  
+- XML 元素名稱中內嵌運算式的範例：  
   
      [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
-- Example of an embedded expression in the content of an XML element:  
+- XML 元素內容中的內嵌運算式範例：  
   
      [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
-- Example of an embedded expression in an XML element attribute name:  
+- XML 元素屬性名稱中的內嵌運算式範例：  
   
      [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
-- Example of an embedded expression in an XML element attribute value:  
+- XML 元素屬性值中的內嵌運算式範例：  
   
      [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
-- Example of an embedded expression in an XML element attribute:  
+- XML 元素屬性中的內嵌運算式範例：  
   
      [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
-- Example of an embedded expression in an XML document root element:  
+- XML 檔根項目中的內嵌運算式範例：  
   
      [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   
- If you enable `Option Strict`, the compiler checks that the type of each embedded expression widens to the required type. The only exception is for the root element of an XML document, which is verified when the code runs. If you compile without `Option Strict`, you can embed expressions of type `Object` and their type is verified at run time.  
+ 如果您啟用 `Option Strict`，編譯器會檢查每個內嵌運算式的類型是否加寬成所需的類型。 唯一的例外是針對 XML 檔的根項目，這會在程式碼執行時進行驗證。 如果您編譯時沒有 `Option Strict`，您可以內嵌類型 `Object` 的運算式，並在執行時間驗證其類型。  
   
- In locations where content is optional, embedded expressions that contain `Nothing` are ignored. This means you do not have to check that element content, attribute values, and array elements are not `Nothing` before you use an XML literal. Required values, such as element and attribute names, cannot be `Nothing`.  
+ 在內容為選擇性的位置中，會忽略包含 `Nothing` 的內嵌運算式。 這表示您不需要在使用 XML 常值之前，檢查元素內容、屬性值和陣列元素是否 `Nothing`。 無法 `Nothing`必要的值，例如元素和屬性名稱。  
   
- For more information about using an embedded expression in a particular type of literal, see [XML Document Literal](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+ 如需在特定類型的常值中使用內嵌運算式的詳細資訊，請參閱[Xml 檔常](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)值、 [xml 元素常](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)值。  
   
 ## <a name="scoping-rules"></a>範圍規則  
- The compiler converts each XML literal into a constructor call for the appropriate literal type. The literal content and embedded expressions in an XML literal are passed as arguments to the constructor. This means that all Visual Basic programming elements available to an XML literal are also available to its embedded expressions.  
+ 編譯器會將每個 XML 常值轉換成適當常數值型別的函式呼叫。 XML 常值中的常值內容和內嵌運算式會當做引數傳遞至函式。 這表示可用於 XML 常值的所有 Visual Basic 程式設計專案也可用於其內嵌運算式。  
   
- Within an XML literal, you can access the XML namespace prefixes declared with the `Imports` statement. You can declare a new XML namespace prefix, or shadow an existing XML namespace prefix, in an element by using the `xmlns` attribute. The new namespace is available to the child nodes of that element, but not to XML literals in embedded expressions.  
+ 在 XML 常值內，您可以存取以 `Imports` 語句宣告的 XML 命名空間前置詞。 您可以使用 `xmlns` 屬性，在元素中宣告新的 XML 命名空間前置詞，或遮蔽現有的 XML 命名空間前置詞。 新的命名空間可用於該元素的子節點，但不能用於內嵌運算式中的 XML 常值。  
   
 > [!NOTE]
-> When you declare an XML namespace prefix by using the `xmlns` namespace attribute, the attribute value must be a constant string. In this regard, using the `xmlns` attribute is like using the `Imports` statement to declare an XML namespace. You cannot use an embedded expression to specify the XML namespace value.  
+> 當您使用 `xmlns` namespace 屬性來宣告 XML 命名空間前置詞時，屬性值必須是常數位串。 在這方面，使用 `xmlns` 屬性就像使用 `Imports` 語句來宣告 XML 命名空間。 您不能使用內嵌運算式來指定 XML 命名空間值。  
   
 ## <a name="see-also"></a>請參閱
 

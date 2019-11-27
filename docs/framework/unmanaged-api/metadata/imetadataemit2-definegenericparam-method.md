@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444647"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>IMetaDataEmit2::DefineGenericParam 方法
-Creates a definition for a generic type parameter, and gets a token to that generic type parameter.  
+建立泛型型別參數的定義，並取得該泛型型別參數的 token。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,32 +41,32 @@ HRESULT DefineGenericParam (
   
 ## <a name="parameters"></a>參數  
  `tk`  
- [in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.  
+ 在`mdTypeDef` 或 `mdMethodDef` token，表示要定義泛型參數的方法或函式。  
   
  `ulParamSeq`  
- [in] The index of the generic parameter.  
+ 在泛型參數的索引。  
   
  `dwParamFlags`  
- [in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.  
+ 在[CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)列舉的值，描述泛型參數的類型。  
   
  `szname`  
- [in] The name of the parameter.  
+ 在參數的名稱。  
   
  `reserved`  
- [in] This parameter is reserved for future extensibility.  
+ 在此參數保留供未來擴充性之用。  
   
  `rtkConstraints`  
- [in] A zero-terminated array of type constraints. Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.  
+ 在類型條件約束之以零結束的陣列。 陣列成員必須是 `mdTypeDef`、`mdTypeRef`或 `mdTypeSpec` 的元資料標記。  
   
  `pgp`  
- [out] A token that represents the generic parameter.  
+ 脫銷表示泛型參數的 token。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

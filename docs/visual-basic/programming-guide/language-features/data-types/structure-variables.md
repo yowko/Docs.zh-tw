@@ -16,7 +16,7 @@ ms.locfileid: "74346298"
 ---
 # <a name="structure-variables-visual-basic"></a>結構變數 (Visual Basic)
 
-Once you have created a structure, you can declare procedure-level and module-level variables as that type. For example, you can create a structure that records information about a computer system. 下列範例為其示範。
+建立結構之後，您可以將程式層級和模組層級變數宣告為該類型。 例如，您可以建立一個結構來記錄電腦系統的相關資訊。 下列範例為其示範。
 
 ```vb
 Public Structure systemInfo
@@ -26,18 +26,18 @@ Public Structure systemInfo
 End Structure
 ```
 
-You can now declare variables of that type. The following declaration illustrates this.
+您現在可以宣告該類型的變數。 下列宣告說明這種情況。
 
 ```vb
 Dim mySystem, yourSystem As systemInfo
 ```
 
 > [!NOTE]
-> In classes and modules, structures declared using the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) default to public access. If you intend a structure to be private, make sure you declare it using the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword.
+> 在類別和模組中，使用[Dim 語句](../../../../visual-basic/language-reference/statements/dim-statement.md)宣告的結構會預設為公用存取。 如果您想要將結構設為私用，請務必使用[private](../../../../visual-basic/language-reference/modifiers/private.md)關鍵字來宣告。
 
-## <a name="access-to-structure-values"></a>Access to Structure Values
+## <a name="access-to-structure-values"></a>結構值的存取權
 
-To assign and retrieve values from the elements of a structure variable, you use the same syntax as you use to set and get properties on an object. You place the member access operator (`.`) between the structure variable name and the element name. The following example accesses elements of the variables previously declared as type `systemInfo`.
+若要從結構變數的元素指派和抓取值，您可以使用與用來設定和取得物件屬性的相同語法。 您可以將成員存取運算子（`.`）放在結構變數名稱和元素名稱之間。 下列範例會存取先前宣告為類型 `systemInfo`之變數的元素。
 
 ```vb
 mySystem.cPU = "486"
@@ -45,15 +45,15 @@ Dim tooOld As Boolean
 If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True
 ```
 
-## <a name="assigning-structure-variables"></a>Assigning Structure Variables
+## <a name="assigning-structure-variables"></a>指派結構變數
 
-You can also assign one variable to another if both are of the same structure type. This copies all the elements of one structure to the corresponding elements in the other. The following declaration illustrates this.
+如果兩者都是相同的結構類型，您也可以將一個變數指派給另一個。 這會將一個結構的所有專案複製到另一個結構中的對應元素。 下列宣告說明這種情況。
 
 ```vb
 yourSystem = mySystem
 ```
 
-If a structure element is a reference type, such as a `String`, `Object`, or array, the pointer to the data is copied. In the previous example, if `systemInfo` had included an object variable, then the preceding example would have copied the pointer from `mySystem` to `yourSystem`, and a change to the object's data through one structure would be in effect when accessed through the other structure.
+如果結構專案是參考型別（例如 `String`、`Object`或陣列），則會複製資料的指標。 在上述範例中，如果 `systemInfo` 包含物件變數，則上述範例會將指標從 `mySystem` 複製到 `yourSystem`，而透過某個結構的物件資料變更會在透過其他結構存取時生效。
 
 ## <a name="see-also"></a>請參閱
 

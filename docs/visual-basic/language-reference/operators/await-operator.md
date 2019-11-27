@@ -18,12 +18,12 @@ ms.locfileid: "74336270"
 
 您在非同步方法或 Lambda 運算式的運算元中套用 `Await` 運算子，讓方法暫停執行，直到等候的工作完成。 工作代表進行中的工作。
 
-The method in which `Await` is used must have an [Async](../../../visual-basic/language-reference/modifiers/async.md) modifier. 這種方法是使用 `Async` 修飾詞所定義，且通常包含一或多個 `Await` 運算式，我們稱之為「非同步方法」。
+使用 `Await` 的方法必須有[Async](../../../visual-basic/language-reference/modifiers/async.md)修飾詞。 這種方法是使用 `Async` 修飾詞所定義，且通常包含一或多個 `Await` 運算式，我們稱之為「非同步方法」。
 
 > [!NOTE]
-> `Async` 和 `Await` 關鍵字是在 Visual Studio 2012 中引入。 For an introduction to async programming, see [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md).
+> `Async` 和 `Await` 關鍵字是在 Visual Studio 2012 中引入。 如需非同步程式設計的簡介，請參閱[使用 async 和 Await 進行非同步程式設計](../../../visual-basic/programming-guide/concepts/async/index.md)。
 
-Typically, the task to which you apply the `Await` operator is the return value from a call to a method that implements the [Task-Based Asynchronous Pattern](https://go.microsoft.com/fwlink/?LinkId=204847), that is, a <xref:System.Threading.Tasks.Task> or a <xref:System.Threading.Tasks.Task%601>.
+一般來說，您套用 `Await` 運算子的工作，就是呼叫方法的傳回值，該方法會執行以工作為[基礎的非同步模式](https://go.microsoft.com/fwlink/?LinkId=204847)，也就是 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。
 
 在下列程式碼中，<xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 會傳回 `getContentsTask`，也就是 `Task(Of Byte())`。 這個工作可保證作業完成時，一定會產生實際位元組陣列。 `Await` 運算子會套用至 `getContentsTask` 以暫停在 `SumPageSizesAsync` 中執行，直到 `getContentsTask` 完成。 同時，控制權會返回 `SumPageSizesAsync` 的呼叫端。 當 `getContentsTask` 完成之後，`Await` 運算式會評估為位元組陣列。
 
@@ -58,7 +58,7 @@ Await AsyncMethodThatReturnsTask()
 
 `Await` 運算式或陳述式不會封鎖其執行所在的執行緒。 但是它會造成編譯器將 `Await` 運算式之後的其餘非同步方法註冊為所等候工作的接續。 控制權接著會返回非同步方法的呼叫端。 當工作完成時，它會叫用其接續，並從中斷處繼續執行非同步方法。
 
-`Await` 運算式可能只會在 `Async` 修飾詞所標示之立即封入方法或 Lambda 運算式主體中發生。 The term *Await* serves as a keyword only in that context. 在其他內容中，它會解譯為識別項。 Within the async method or lambda expression, an `Await` expression cannot occur in a query expression, in the `catch` or `finally` block of a [Try…Catch…Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) statement, in the loop control variable expression of a `For` or `For Each` loop, or in the body of a [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) statement.
+`Await` 運算式可能只會在 `Async` 修飾詞所標示之立即封入方法或 Lambda 運算式主體中發生。 *Await*一詞僅作為該內容中的關鍵字。 在其他內容中，它會解譯為識別項。 在非同步方法或 lambda 運算式中，`Await` 運算式不能出現在查詢運算式中、Try 的 `catch` 或 `finally` 區塊中。 [Catch 。Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)語句，在 `For` 或 `For Each` 迴圈的迴圈控制變數運算式中，或在[SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)語句的主體中。
 
 ## <a name="exceptions"></a>例外狀況
 
@@ -70,11 +70,11 @@ Await AsyncMethodThatReturnsTask()
 
 處於錯誤狀態的單一工作可能反映多個例外狀況。  例如，工作可能是對 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 呼叫的結果。 當您等候這類工作時，await 作業只會重新擲回其中一個例外狀況。 不過，您無法預測重新擲回哪個例外狀況。
 
-For examples of error handling in async methods, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
+如需非同步方法中錯誤處理的範例，請參閱[嘗試 。Catch 。Finally 語句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。
 
 ## <a name="example"></a>範例
 
-下列 Windows Form 範例說明如何在非同步方法 `WaitAsynchronouslyAsync` 中使用 `Await`。 請對照該方法的行為與 `WaitSynchronously` 的行為。 若沒有 `Await` 運算子，儘管在定義中使用 `WaitSynchronously` 修飾詞並在主體中呼叫 `Async`，<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> 仍會以同步方式執行。
+下列 Windows Form 範例說明如何在非同步方法 `Await` 中使用 `WaitAsynchronouslyAsync`。 請對照該方法的行為與 `WaitSynchronously` 的行為。 若沒有 `Await` 運算子，儘管在定義中使用 `WaitSynchronously` 修飾詞並在主體中呼叫 `Async`，<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> 仍會以同步方式執行。
 
 ```vb
 Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

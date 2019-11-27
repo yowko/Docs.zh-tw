@@ -17,74 +17,74 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346321"
 ---
 # <a name="structures-and-classes-visual-basic"></a>結構和類別 (Visual Basic)
-Visual Basic unifies the syntax for structures and classes, with the result that both entities support most of the same features. However, there are also important differences between structures and classes.  
+Visual Basic 會將結構和類別的語法統一，而且這兩個實體都支援相同的大部分功能。 不過，結構與類別之間也有重要的差異。  
   
- Classes have the advantage of being reference types — passing a reference is more efficient than passing a structure variable with all its data. On the other hand, structures do not require allocation of memory on the global heap.  
+ 類別的優點是參考型別，傳遞參考比傳遞結構變數及其所有資料更有效率。 另一方面，結構不需要在全域堆積上配置記憶體。  
   
- Because you cannot inherit from a structure, structures should be used only for objects that do not need to be extended. Use structures when the object you wish to create has a small instance size, and take into account the performance characteristics of classes versus structures.  
+ 因為您無法從結構繼承，所以結構應該僅用於不需要擴充的物件。 當您想要建立的物件具有小型實例大小時，請使用結構，並將類別與結構的效能特性納入考慮。  
   
-## <a name="similarities"></a>Similarities  
- Structures and classes are similar in the following respects:  
+## <a name="similarities"></a>相似  
+ 結構和類別在下列方面很類似：  
   
-- Both are *container* types, meaning that they contain other types as members.  
+- 兩者都是*容器*類型，這表示它們包含其他類型做為成員。  
   
-- Both have members, which can include constructors, methods, properties, fields, constants, enumerations, events, and event handlers. However, do not confuse these members with the declared *elements* of a structure.  
+- 兩者都有成員，其中可以包含函數、方法、屬性、欄位、常數、列舉、事件和事件處理常式。 不過，請不要將這些成員與結構的宣告*元素*混淆。  
   
-- Members of both can have individualized access levels. For example, one member can be declared `Public` and another `Private`.  
+- 兩者的成員可以具有個人化的存取層級。 例如，一個成員可以 `Public` 宣告，另一個 `Private`。  
   
-- Both can implement interfaces.  
+- 兩者都可以執行介面。  
   
-- Both can have shared constructors, with or without parameters.  
+- 兩者都可以有共用的處理函式，以及或不含參數。  
   
-- Both can expose a *default property*, provided that property takes at least one parameter.  
+- 這兩者都可以公開*預設屬性*，前提是該屬性至少接受一個參數。  
   
-- Both can declare and raise events, and both can declare delegates.  
+- 兩者都可以宣告和引發事件，而且兩者都可以宣告委派。  
   
-## <a name="differences"></a>Differences  
- Structures and classes differ in the following particulars:  
+## <a name="differences"></a>差異  
+ 結構和類別在下列細節方面有所不同：  
   
-- Structures are *value types*; classes are *reference types*. A variable of a structure type contains the structure's data, rather than containing a reference to the data as a class type does.  
+- 結構是實*數值型別*;類別是*參考型別*。 結構類型的變數包含結構的資料，而不是包含資料的參考做為類別類型。  
   
-- Structures use stack allocation; classes use heap allocation.  
+- 結構使用堆疊配置;類別會使用堆積配置。  
   
-- All structure elements are `Public` by default; class variables and constants are `Private` by default, while other class members are `Public` by default. This behavior for class members provides compatibility with the Visual Basic 6.0 system of defaults.  
+- 預設會 `Public` 所有結構元素;預設會 `Private` 類別變數和常數，而其他類別成員則 `Public` 預設。 類別成員的這個行為會提供與 Visual Basic 6.0 系統預設值的相容性。  
   
-- A structure must have at least one nonshared variable or nonshared, noncustom event element; a class can be completely empty.  
+- 結構必須至少有一個非共用的變數或非共用的 noncustom 事件元素;類別可以完全空白。  
   
-- Structure elements cannot be declared as `Protected`; class members can.  
+- 結構元素不可以宣告為 `Protected`;類別成員可以。  
   
-- A structure procedure can handle events only if it is a [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)`Sub` procedure, and only by means of the [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md); any class procedure can handle events, using either the [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) keyword or the `AddHandler` statement. 如需詳細資訊，請參閱[事件](../../../../visual-basic/programming-guide/language-features/events/index.md)。  
+- 結構程式只能處理事件（如果它是[共用](../../../../visual-basic/language-reference/modifiers/shared.md)的`Sub` 程式），而且只能使用[AddHandler 語句](../../../../visual-basic/language-reference/statements/addhandler-statement.md);任何類別程式都可以使用[Handles](../../../../visual-basic/language-reference/statements/handles-clause.md)關鍵字或 `AddHandler` 語句來處理事件。 如需詳細資訊，請參閱 [事件](../../../../visual-basic/programming-guide/language-features/events/index.md)中定義的介面的私用 C++ 專屬實作。  
   
-- Structure variable declarations cannot specify initializers or initial sizes for arrays; class variable declarations can.  
+- 結構變數宣告不能指定陣列的初始化運算式或初始大小;類別變數宣告可以。  
   
-- Structures implicitly inherit from the <xref:System.ValueType?displayProperty=nameWithType> class and cannot inherit from any other type; classes can inherit from any class or classes other than <xref:System.ValueType?displayProperty=nameWithType>.  
+- 結構會隱含繼承自 <xref:System.ValueType?displayProperty=nameWithType> 類別，而且無法繼承自任何其他類型;類別可以繼承自 <xref:System.ValueType?displayProperty=nameWithType>以外的任何類別或類別。  
   
-- Structures are not inheritable; classes are.  
+- 結構不可繼承;類別為。  
   
-- Structures are never terminated, so the common language runtime (CLR) never calls the <xref:System.Object.Finalize%2A> method on any structure; classes are terminated by the garbage collector (GC), which calls <xref:System.Object.Finalize%2A> on a class when it detects there are no active references remaining.  
+- 結構永遠不會終止，因此 common language runtime （CLR）永遠不會在任何結構上呼叫 <xref:System.Object.Finalize%2A> 方法。類別會由垃圾收集行程（GC）終止，當偵測不到任何使用中的參考時，會呼叫類別上的 <xref:System.Object.Finalize%2A>。  
   
-- A structure does not require a constructor; a class does.  
+- 結構不需要使用函數，類別會執行。  
   
-- Structures can have nonshared constructors only if they take parameters; classes can have them with or without parameters.  
+- 結構只有在接受參數時，才可以有非共用的函式;類別可以有或不使用參數。  
   
- Every structure has an implicit public constructor without parameters. This constructor initializes all the structure's data elements to their default values. You cannot redefine this behavior.  
+ 每個結構都有一個不含參數的隱含公用函數。 此函式會將所有結構的資料元素初始化為其預設值。 您無法重新定義此行為。  
   
-## <a name="instances-and-variables"></a>Instances and Variables  
- Because structures are value types, each structure variable is permanently bound to an individual structure instance. But classes are reference types, and an object variable can refer to various class instances at different times. This distinction affects your usage of structures and classes in the following ways:  
+## <a name="instances-and-variables"></a>實例和變數  
+ 因為結構是實值型別，所以每個結構變數都會永久系結至個別的結構實例。 但是類別是參考型別，而物件變數可以在不同的時間參考各種類別實例。 這項區別會以下列方式影響您對結構和類別的使用：  
   
-- **Initialization.** A structure variable implicitly includes an initialization of the elements using the structure's parameterless constructor. Therefore, `Dim s As struct1` is equivalent to `Dim s As struct1 = New struct1()`.  
+- **初始.** 結構變數會使用結構的無參數的函式，隱含地包含初始化元素。 因此，`Dim s As struct1` 相當於 `Dim s As struct1 = New struct1()`。  
   
-- **Assigning Variables.** When you assign one structure variable to another, or pass a structure instance to a procedure argument, the current values of all the variable elements are copied to the new structure. When you assign one object variable to another, or pass an object variable to a procedure, only the reference pointer is copied.  
+- **指派變數。** 當您將某個結構變數指派給另一個，或將結構實例傳遞給程式引數時，所有變數元素的目前值都會複製到新的結構。 當您將某個物件變數指派給另一個，或將物件變數傳遞至程式時，只會複製參考指標。  
   
-- **Assigning Nothing.** You can assign the value [Nothing](../../../../visual-basic/language-reference/nothing.md) to a structure variable, but the instance continues to be associated with the variable. You can still call its methods and access its data elements, although variable elements are reinitialized by the assignment.  
+- **不指派任何內容。** 您可以將值 [[無](../../../../visual-basic/language-reference/nothing.md)] 指派給結構變數，但是實例會繼續與變數相關聯。 您仍然可以呼叫其方法並存取其資料元素，雖然指派會重新初始化變數元素。  
   
-     In contrast, if you set an object variable to `Nothing`, you dissociate it from any class instance, and you cannot access any members through the variable until you assign another instance to it.  
+     相反地，如果您將物件變數設定為 `Nothing`，就會將它與任何類別實例中斷關聯，而且您無法透過變數存取任何成員，直到您將另一個實例指派給它為止。  
   
-- **Multiple Instances.** An object variable can have different class instances assigned to it at different times, and several object variables can refer to the same class instance at the same time. Changes you make to the values of class members affect those members when accessed through another variable pointing to the same instance.  
+- **多個實例。** 物件變數可以在不同時間指派不同的類別實例，而且有數個物件變數可以同時參考相同的類別實例。 當您對類別成員的值所做的變更，會在透過指向相同實例的另一個變數存取時，影響這些成員。  
   
-     Structure elements, however, are isolated within their own instance. Changes to their values are not reflected in any other structure variables, even in other instances of the same `Structure` declaration.  
+     不過，結構專案會隔離在自己的實例中。 對其值所做的變更不會反映在其他任何結構變數中，即使在相同 `Structure` 宣告的其他實例中也一樣。  
   
-- **Equality.** Equality testing of two structures must be performed with an element-by-element test. Two object variables can be compared using the <xref:System.Object.Equals%2A> method. <xref:System.Object.Equals%2A> indicates whether the two variables point to the same instance.  
+- **等效.** 兩個結構的相等測試必須以元素 by 元素測試來執行。 您可以使用 <xref:System.Object.Equals%2A> 方法來比較兩個物件變數。 <xref:System.Object.Equals%2A> 指出兩個變數是否指向相同的實例。  
   
 ## <a name="see-also"></a>請參閱
 

@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331746"
 ---
-# <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML Security (Visual Basic)
+# <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML 安全性（Visual Basic）
 這個主題描述與 LINQ to XML 相關聯的安全性問題。 此外，還提供減少暴露安全性的部分指引。  
   
 ## <a name="linq-to-xml-security-overview"></a>LINQ to XML 安全性概觀  
@@ -101,4 +101,4 @@ ms.locfileid: "74331746"
   
 ## <a name="see-also"></a>請參閱
 
-- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [程式設計指南（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

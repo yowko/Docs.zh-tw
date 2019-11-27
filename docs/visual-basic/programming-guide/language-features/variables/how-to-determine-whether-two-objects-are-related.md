@@ -15,20 +15,20 @@ ms.locfileid: "74348622"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>如何：判斷兩個物件是否關聯 (Visual Basic)
 
-You can compare two objects to determine the relationship, if any, between the classes from which they are created. The <xref:System.Type.IsInstanceOfType%2A> method of the <xref:System.Type?displayProperty=nameWithType> class returns `True` if the specified class inherits from the current class, or if the current type is an interface supported by the specified class.
+您可以比較兩個物件來判斷其建立所在的類別之間的關聯性（如果有的話）。 如果指定的類別繼承自目前的類別，或如果目前的類型是指定類別所支援的介面，則 <xref:System.Type?displayProperty=nameWithType> 類別的 <xref:System.Type.IsInstanceOfType%2A> 方法會傳回 `True`。
 
-### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>To determine if one object inherits from another object's class or interface
+### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>判斷其中一個物件是否繼承自另一個物件的類別或介面
 
-1. On the object you think might be of the base type, invoke the <xref:System.Object.GetType%2A> method.
+1. 在您認為可能是基底類型的物件上，叫用 <xref:System.Object.GetType%2A> 方法。
 
-2. On the <xref:System.Type?displayProperty=nameWithType> object returned by <xref:System.Object.GetType%2A>, invoke the <xref:System.Type.IsInstanceOfType%2A> method.
+2. 在 <xref:System.Object.GetType%2A>傳回的 <xref:System.Type?displayProperty=nameWithType> 物件上，叫用 <xref:System.Type.IsInstanceOfType%2A> 方法。
 
-3. In the argument list for <xref:System.Type.IsInstanceOfType%2A>, specify the object you think might be of the derived type.
+3. 在 <xref:System.Type.IsInstanceOfType%2A>的引數清單中，指定您認為可能是衍生類型的物件。
 
-    <xref:System.Type.IsInstanceOfType%2A> returns `True` if its argument type inherits from the <xref:System.Type?displayProperty=nameWithType> object type.
+    如果其引數類型繼承自 <xref:System.Type?displayProperty=nameWithType> 物件類型，<xref:System.Type.IsInstanceOfType%2A> 會傳回 `True`。
 
 ## <a name="example"></a>範例
- The following example determines whether one object represents a class derived from another object's class.
+ 下列範例會判斷其中一個物件是否代表衍生自另一個物件類別的類別。
 
 ```vb
 Public Class baseClass
@@ -46,14 +46,14 @@ Public Class testTheseClasses
 End Class
 ```
 
-Note the unexpected placement of the two object variables in the call to <xref:System.Type.IsInstanceOfType%2A>. The supposed base type is used to generate the <xref:System.Type?displayProperty=nameWithType> class, and the supposed derived type is passed as an argument to the <xref:System.Type.IsInstanceOfType%2A> method.
+請注意 <xref:System.Type.IsInstanceOfType%2A>的呼叫中，兩個物件變數的非預期位置。 預期的基底類型是用來產生 <xref:System.Type?displayProperty=nameWithType> 類別，而預期的衍生型別會當做引數傳遞給 <xref:System.Type.IsInstanceOfType%2A> 方法。
 
 ## <a name="see-also"></a>請參閱
 
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>
-- [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [物件變數值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
 - [如何：判斷兩個物件是否相同](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

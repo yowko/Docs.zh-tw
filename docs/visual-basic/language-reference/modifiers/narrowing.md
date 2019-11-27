@@ -18,22 +18,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351468"
 ---
 # <a name="narrowing-visual-basic"></a>Narrowing (Visual Basic)
-Indicates that a conversion operator (`CType`) converts a class or structure to a type that might not be able to hold some of the possible values of the original class or structure.  
+表示轉換運算子（`CType`）會將類別或結構轉換成可能無法保存原始類別或結構之某些可能值的類型。  
   
-## <a name="converting-with-the-narrowing-keyword"></a>Converting with the Narrowing Keyword  
- The conversion procedure must specify `Public Shared` in addition to `Narrowing`.  
+## <a name="converting-with-the-narrowing-keyword"></a>使用縮小關鍵字進行轉換  
+ 轉換程式除了 `Narrowing`之外，還必須指定 `Public Shared`。  
   
- Narrowing conversions do not always succeed at run time, and can fail or incur data loss. Examples are `Long` to `Integer`, `String` to `Date`, and a base type to a derived type. This last conversion is narrowing because the base type might not contain all the members of the derived type and thus is not an instance of the derived type.  
+ 縮小轉換在執行時間不一定會成功，而且可能會失敗或產生資料遺失。 範例 `Long` `Integer`、`String` `Date`，以及基底類型到衍生類型。 最後一個轉換會縮小，因為基底類型可能不包含衍生類型的所有成員，因此不是衍生類型的實例。  
   
- If `Option Strict` is `On`, the consuming code must use `CType` for all narrowing conversions.  
+ 如果 `On``Option Strict`，則取用程式碼必須使用 `CType` 來進行所有的縮小轉換。  
   
- The `Narrowing` keyword can be used in this context:  
+ `Narrowing` 關鍵字可以在此內容中使用：  
   
- [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
 ## <a name="see-also"></a>請參閱
 
-- [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
 - [擴展和縮小轉換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [如何：定義運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)

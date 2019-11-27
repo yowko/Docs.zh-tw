@@ -12,32 +12,32 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347307"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>處理 XML 檔案 (Visual Basic)
-編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 (For information on how to tag your code, see [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/index.md).) The ID string uniquely identifies the construct. Programs that process the XML file can use the ID string to identify the corresponding .NET Framework metadata/reflection item.  
+編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 （如需如何標記程式碼的相關資訊，請參閱[XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)）。識別碼字串可唯一識別結構。 處理 XML 檔案的程式可以使用識別碼字串來識別對應的 .NET Framework 中繼資料/反映專案。  
   
- The XML file is not a hierarchical representation of your code; it is a flat list with a generated ID for each element.  
+ XML 檔案不是程式碼的階層式標記法;它是包含每個元素所產生之識別碼的一般清單。  
   
  編譯器在產生識別碼字串時會遵守下列規則：  
   
 - 字串中未放置任何空白字元。  
   
-- 識別碼字串的第一個部分會識別所識別的成員種類，格式為單一字元後面接著一個冒號。 The following member types are used.  
+- 識別碼字串的第一個部分會識別所識別的成員種類，格式為單一字元後面接著一個冒號。 會使用下列成員類型。  
   
 |字元|描述|  
 |---|---|  
-|N|namespace<br /><br /> You cannot add documentation comments to a namespace, but you can make CREF references to them, where supported.|  
-|T|type: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
-|F|field: `Dim`|  
-|P|property: `Property` (including default properties)|  
-|M|method: `Sub`, `Function`, `Declare`, `Operator`|  
-|E|event: `Event`|  
-|!|錯誤字串<br /><br /> 字串的其餘部分提供與錯誤相關的資訊。 The Visual Basic compiler generates error information for links that cannot be resolved.|  
+|N|namespace<br /><br /> 您無法將檔批註新增至命名空間，但在支援的情況下，您可以對其進行 CREF 參考。|  
+|T|類型： `Class`、`Module`、`Interface`、`Structure`、`Enum`、`Delegate`|  
+|F|欄位： `Dim`|  
+|P|屬性： `Property` （包括預設屬性）|  
+|M|方法： `Sub`、`Function`、`Declare`、`Operator`|  
+|E|事件： `Event`|  
+|!|錯誤字串<br /><br /> 字串的其餘部分提供與錯誤相關的資訊。 Visual Basic 編譯器會針對無法解析的連結產生錯誤資訊。|  
   
-- The second part of the `String` is the fully qualified name of the item, starting at the root of the namespace. The name of the item, its enclosing type(s), and the namespace are separated by periods. If the name of the item itself contains periods, they are replaced by the number sign (#). It is assumed that no item has a number sign directly in its name. For example, the fully qualified name of the `String` constructor would be `System.String.#ctor`.  
+- `String` 的第二個部分是專案的完整名稱，從命名空間的根目錄開始。 專案的名稱、其封入類型及命名空間會以句號分隔。 如果專案本身的名稱包含句號，則會以數位記號（#）取代。 假設沒有任何專案直接在其名稱中包含數位記號。 例如，`String` 的函式的完整名稱會是 `System.String.#ctor`。  
   
-- 針對屬性和方法，如果有方法的引數，則後面會接著以括弧括住的引數清單。 如果沒有任何引數，就不會出現括弧。 引數會以逗號分隔。 The encoding of each argument follows directly how it is encoded in a .NET Framework signature.  
+- 針對屬性和方法，如果有方法的引數，則後面會接著以括弧括住的引數清單。 如果沒有任何引數，就不會出現括弧。 引數會以逗號分隔。 每個引數的編碼會直接遵循其在 .NET Framework 簽章中的編碼方式。  
   
 ## <a name="example"></a>範例  
- The following code shows how the ID strings for a class and its members are generated.  
+ 下列程式碼顯示如何產生類別及其成員的識別碼字串。  
   
  [!code-vb[VbVbcnXmlDocComments#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#10)]  
   

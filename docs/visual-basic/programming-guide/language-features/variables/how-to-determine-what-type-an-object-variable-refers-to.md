@@ -15,18 +15,18 @@ ms.locfileid: "74348609"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>如何：決定物件變數參考的類型 (Visual Basic)
 
-An object variable contains a pointer to data that is stored elsewhere. The type of that data can change during run time. At any moment, you can use the <xref:System.Type.GetTypeCode%2A> method to determine the current run-time type, or the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to find out if the current run-time type is compatible with a specified type.
+物件變數包含儲存在其他位置之資料的指標。 該資料的類型可能會在執行時間變更。 您隨時都可以使用 <xref:System.Type.GetTypeCode%2A> 方法來判斷目前的執行時間型別，或使用[TypeOf 運算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)來找出目前的執行時間型別是否與指定的型別相容。
 
-### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a>To determine the exact type an object variable currently refers to
+### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a>判斷物件變數目前所參考的確切型別
 
-1. On the object variable, call the <xref:System.Object.GetType%2A> method to retrieve a <xref:System.Type?displayProperty=nameWithType> object.
+1. 在物件變數上，呼叫 <xref:System.Object.GetType%2A> 方法來取出 <xref:System.Type?displayProperty=nameWithType> 物件。
 
     ```vb
     Dim myObject As Object
     myObject.GetType()
     ```
 
-2. On the <xref:System.Type?displayProperty=nameWithType> class, call the shared method <xref:System.Type.GetTypeCode%2A> to retrieve the <xref:System.TypeCode> enumeration value for the object's type.
+2. 在 <xref:System.Type?displayProperty=nameWithType> 類別上，呼叫 shared 方法 <xref:System.Type.GetTypeCode%2A>，以取得物件類型的 <xref:System.TypeCode> 列舉值。
 
     ```vb
     Dim myObject As Object
@@ -34,11 +34,11 @@ An object variable contains a pointer to data that is stored elsewhere. The type
     MsgBox("myObject currently has type code " & CStr(datTyp))
     ```
 
-    You can test the <xref:System.TypeCode> enumeration value against whichever enumeration members are of interest, such as `Double`.
+    您可以針對任何想要的列舉成員（例如 `Double`）測試 <xref:System.TypeCode> 列舉值。
 
-### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>To determine whether an object variable's type is compatible with a specified type
+### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>判斷物件變數的類型是否與指定的類型相容
 
-- Use the `TypeOf` operator in combination with the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) to test the object with a `TypeOf`...`Is` expression.
+- 使用 `TypeOf` 運算子搭配[Is 運算子](../../../../visual-basic/language-reference/operators/is-operator.md)來測試具有 `TypeOf``Is` 運算式的物件。
 
     ```vb
     If TypeOf objA Is System.Windows.Forms.Control Then
@@ -46,13 +46,13 @@ An object variable contains a pointer to data that is stored elsewhere. The type
     End If
     ```
 
-    The `TypeOf`...`Is` expression returns `True` if the object's run-time type is compatible with the specified type.
+    如果物件的執行時間類型與指定的類型相容，則 `TypeOf`...`Is` 運算式會傳回 `True`。
 
-    The criterion for compatibility depends on whether the specified type is a class, structure, or interface. In general, the types are compatible if the object is of the same type as, inherits from, or implements the specified type. For more information, see [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md).
+    相容性的準則取決於指定的類型是否為類別、結構或介面。 一般而言，如果物件的類型與相同、繼承自或實作為指定的類型，則類型是相容的。 如需詳細資訊，請參閱[TypeOf 運算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)。
 
 ## <a name="compiling-the-code"></a>編譯程式碼
 
-Note that the specified type cannot be a variable or expression. It must be the name of a defined type, such as a class, structure, or interface. This includes intrinsic types such as `Integer` and `String`.
+請注意，指定的類型不可以是變數或運算式。 它必須是已定義類型的名稱，例如類別、結構或介面。 這包括內部類型，例如 `Integer` 和 `String`。
 
 ## <a name="see-also"></a>請參閱
 
@@ -62,4 +62,4 @@ Note that the specified type cannot be a variable or expression. It must be the 
 - <xref:System.TypeCode>
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [物件變數值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)

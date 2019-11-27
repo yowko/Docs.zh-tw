@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332306"
 ---
 # <a name="how-to-access-xml-descendant-elements-visual-basic"></a>如何：存取 XML 子代項目 (Visual Basic)
-This example shows how to use a descendant axis property to access all XML elements that have a specified name and that are contained under an XML element. In particular, it uses the `Value` property to get the value of the first element in the collection that the `name` descendant axis property returns. The `name` descendant axis property gets all elements named `name` that are contained in the `contacts` object. This example also uses the `phone` descendant axis property to access all descendants named `phone` that are contained in the `contacts` object.  
+這個範例示範如何使用子代軸屬性來存取所有具有指定名稱且包含在 XML 專案底下的 XML 專案。 特別是，它會使用 `Value` 屬性，取得集合中 `name` 下階軸屬性傳回的第一個元素的值。 [`name` 下階軸] 屬性會取得包含在 `contacts` 物件中名為 `name` 的所有元素。 這個範例也會使用 `phone` 子代軸屬性來存取包含在 `contacts` 物件中名為 `phone` 的所有子系。  
   
 ## <a name="example"></a>範例  
  [!code-vb[VbXMLSamples#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#31)]  

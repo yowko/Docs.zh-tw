@@ -11,17 +11,17 @@ ms.locfileid: "74345257"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>如何：叫用委派方法 (Visual Basic)
 
-This example shows how to associate a method with a delegate and then invoke that method through the delegate.
+這個範例示範如何將方法與委派產生關聯，然後透過委派叫用該方法。
 
-### <a name="create-the-delegate-and-matching-procedures"></a>Create the delegate and matching procedures
+### <a name="create-the-delegate-and-matching-procedures"></a>建立委派和比對程式
 
-1. Create a delegate named `MySubDelegate`.
+1. 建立名為 `MySubDelegate`的委派。
 
     ```vb
     Delegate Sub MySubDelegate(ByVal x As Integer)
     ```
 
-2. Declare a class that contains a method with the same signature as the delegate.
+2. 宣告一個類別，其中包含具有與委派相同簽章的方法。
 
     ```vb
     Class class1
@@ -31,7 +31,7 @@ This example shows how to associate a method with a delegate and then invoke tha
     End Class
     ```
 
-3. Define a method that creates an instance of the delegate and invokes the method associated with the delegate by calling the built-in `Invoke` method.
+3. 定義方法來建立委派的實例，並藉由呼叫內建的 `Invoke` 方法，叫用與委派相關聯的方法。
 
     ```vb
     Protected Sub DelegateTest()

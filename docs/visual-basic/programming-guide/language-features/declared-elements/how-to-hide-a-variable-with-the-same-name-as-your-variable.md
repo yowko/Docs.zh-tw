@@ -21,32 +21,32 @@ ms.locfileid: "74345361"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>如何：隱藏與您的變數名稱相同的變數 (Visual Basic)
 
-You can hide a variable by *shadowing* it, that is, by redefining it with a variable of the same name. You can shadow the variable you want to hide in two ways:
+您可以藉由將變數*遮蔽*來加以隱藏，也就是使用相同名稱的變數重新加以定義。 您可以透過兩種方式遮蔽要隱藏的變數：
 
-- **Shadowing Through Scope.** You can shadow it through scope by redeclaring it inside a subregion of the region containing the variable you want to hide.
+- **透過範圍遮蔽。** 您可以透過範圍來遮蔽它，方法是在包含您要隱藏之變數的區域的子領域內重新宣告它。
 
-- **Shadowing Through Inheritance.** If the variable you want to hide is defined at class level, you can shadow it through inheritance by redeclaring it with the [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) keyword in a derived class.
+- **透過繼承進行遮蔽。** 如果您要隱藏的變數是在類別層級定義的，您可以在衍生類別中使用[Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)關鍵字重新宣告，藉以透過繼承來遮蔽它。
 
-## <a name="two-ways-to-hide-a-variable"></a>Two Ways to Hide a Variable
+## <a name="two-ways-to-hide-a-variable"></a>隱藏變數的兩種方式
 
-#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>To hide a variable by shadowing it through scope
+#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>藉由在範圍內遮蔽來隱藏變數
 
-1. Determine the region defining the variable you want to hide, and determine a subregion in which to redefine it with your variable.
+1. 判斷定義您想要隱藏之變數的區域，並決定要在其中使用變數重新定義的子領域。
 
-    |Variable's region|Allowable subregion for redefining it|
+    |變數的區域|用於重新定義它的允許子領域|
     |-----------------------|-------------------------------------------|
-    |Module|A class within the module|
-    |執行個體|A subclass within the class<br /><br /> A procedure within the class|
+    |模組|模組中的類別|
+    |執行個體|類別內的子類別<br /><br /> 類別中的程式|
 
-    You cannot redefine a procedure variable in a block within that procedure, for example in an `If`...`End If` construction or a `For` loop.
+    您不能在該程式內的區塊中重新定義過程變數，例如在 `If`...`End If` 結構或 `For` 迴圈中。
 
-2. Create the subregion if it does not already exist.
+2. 建立子領域（如果尚未存在的話）。
 
-3. Within the subregion, write a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) declaring the shadowing variable.
+3. 在子領域內，撰寫用來宣告遮蔽變數的[Dim 語句](../../../../visual-basic/language-reference/statements/dim-statement.md)。
 
-    When code inside the subregion refers to the variable name, the compiler resolves the reference to the shadowing variable.
+    當子領域內的程式碼參考變數名稱時，編譯器會解析遮蔽變數的參考。
 
-    The following example illustrates shadowing through scope, as well as a reference that bypasses the shadowing.
+    下列範例說明如何透過範圍進行遮蔽，以及略過遮蔽的參考。
 
     ```vb
     Module shadowByScope
@@ -68,21 +68,21 @@ You can hide a variable by *shadowing* it, that is, by redefining it with a vari
     End Module
     ```
 
-    The preceding example declares the variable `num` both at module level and at procedure level (in the procedure `show`). The local variable `num` shadows the module-level variable `num` within `show`, so the local variable is set to 2. However, there is no local variable to shadow `num` in the `useModuleLevelNum` procedure. Therefore, `useModuleLevelNum` sets the value of the module-level variable to 1.
+    上述範例會在模組層級和程式層級（在程式 `show`中）宣告變數 `num`。 本機變數 `num` 在 `show`內遮蔽模組層級變數 `num`，因此本機變數會設定為2。 不過，`useModuleLevelNum` 程式中沒有可陰影 `num` 的本機變數。 因此，`useModuleLevelNum` 會將模組層級變數的值設定為1。
 
-    The `MsgBox` call inside `show` bypasses the shadowing mechanism by qualifying `num` with the module name. Therefore, it displays the module-level variable instead of the local variable.
+    `show` 內的 `MsgBox` 呼叫會藉由使用模組名稱來限定 `num`，以略過遮蔽機制。 因此，它會顯示模組層級變數，而不是本機變數。
 
-#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>To hide a variable by shadowing it through inheritance
+#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>藉由透過繼承來遮蔽變數以加以隱藏
 
-1. Be sure the variable you want to hide is declared in a class, and at class level (outside any procedure). Otherwise you cannot shadow it through inheritance.
+1. 請確定您要隱藏的變數是在類別中宣告，而在類別層級（在任何程式之外）宣告。 否則，您就無法透過繼承來遮蔽它。
 
-2. Define a class derived from the variable's class if one does not already exist.
+2. 定義衍生引數類別的類別（如果尚未存在的話）。
 
-3. Inside the derived class, write a `Dim` statement declaring your variable. Include the [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) keyword in the declaration.
+3. 在衍生類別中，撰寫宣告變數的 `Dim` 語句。 在宣告中包含[Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)關鍵字。
 
-    When code in the derived class refers to the variable name, the compiler resolves the reference to your variable.
+    當衍生類別中的程式碼參考變數名稱時，編譯器會解析變數的參考。
 
-    The following example illustrates shadowing through inheritance. It makes two references, one that accesses the shadowing variable and one that bypasses the shadowing.
+    下列範例說明透過繼承的遮蔽。 它會建立兩個參考，一個存取遮蔽變數，另一個則會略過遮蔽。
 
     ```vb
     Public Class shadowBaseClass
@@ -99,16 +99,16 @@ You can hide a variable by *shadowing* it, that is, by redefining it with a vari
     End Class
     ```
 
-    The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class. The procedure `showStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified. It then displays the shadowed version when `shadowString` is qualified with the `MyBase` keyword.
+    上述範例會在基類中宣告變數 `shadowString`，並將其遮蔽在衍生類別中。 當名稱 `shadowString` 不合格時，衍生類別中 `showStrings` 的程式會顯示字串的遮蔽版本。 然後，當使用 `MyBase` 關鍵字限定 `shadowString` 時，就會顯示陰影的版本。
 
 ## <a name="robust-programming"></a>穩固程式設計
 
-Shadowing introduces more than one version of a variable with the same name. When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string. This can increase the risk of referring to an unintended version of a shadowed variable. You can lower that risk by fully qualifying all references to a shadowed variable.
+遮蔽導入了一個以上具有相同名稱的變數版本。 當程式碼語句參考變數名稱時，編譯器解析參考的目標版本取決於程式碼語句的位置，以及符合資格的字串是否存在等因素。 這可能會增加參考非預期版本的陰影變數的風險。 您可以藉由完整限定遮蔽變數的所有參考，來降低風險。
 
 ## <a name="see-also"></a>請參閱
 
 - [對已宣告項目的參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic 中的陰影](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [遮蔽和覆寫的差異](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
 - [如何：隱藏繼承的變數](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
 - [如何：存取衍生類別所隱藏的變數](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)

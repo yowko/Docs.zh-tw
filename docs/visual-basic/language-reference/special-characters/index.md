@@ -8,9 +8,9 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349596"
 ---
-# <a name="special-characters-visual-basic-reference"></a>Special Characters (Visual Basic Reference)
+# <a name="special-characters-visual-basic-reference"></a>特殊字元（Visual Basic 參考）
 
-Special characters are predefined, contextual characters that modifies the program element to which they are prepended. Visual Basic supports the following special character:
+特殊字元是預先定義的內容字元，可修改前面加上的程式元素。 Visual Basic 支援下列特殊字元：
 
 - [$](interpolated.md)，內插字串字元。
 

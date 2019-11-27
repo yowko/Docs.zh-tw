@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432982"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo 方法
-Gets a value that indicates the kind of static that applies to the specified field.  
+取得值，指出套用至指定欄位的靜態類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,18 +36,18 @@ HRESULT GetStaticFieldInfo (
   
 ## <a name="parameters"></a>參數  
  `classId`  
- [in] The ID of the class in which the static field is defined.  
+ 在定義靜態欄位之類別的識別碼。  
   
  `fieldToken`  
- [in] The metadata token for the static field.  
+ 在靜態欄位的元資料標記。  
   
  `pFieldInfo`  
- [out] A pointer to a value of the [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) enumeration that indicates whether the specified field is static, and if so, the kind of static that applies to the field.  
+ 脫銷[COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md)列舉值的指標，指出指定的欄位是否為靜態，如果是，則套用至欄位的靜態類型。  
   
 ## <a name="remarks"></a>備註  
- This information can be used to determine which function to call to get the address of the static field.  
+ 這項資訊可以用來判斷要呼叫哪個函式，以取得靜態欄位的位址。  
   
- The profiler code should still check the metadata for a static field to ensure that it actually has an address. Static literals (that is, constants) exist only in the metadata and do not have an address.  
+ 分析工具程式碼仍應檢查靜態欄位的中繼資料，以確保它實際上有位址。 靜態常值（也就是常數）只存在於中繼資料中，而且沒有位址。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

@@ -14,35 +14,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346032"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>如何：傳回程序的值 (Visual Basic)
-A `Function` procedure returns a value to the calling code either by executing a `Return` statement or by encountering an `Exit Function` or `End Function` statement.  
+`Function` 程式會藉由執行 `Return` 語句或遇到 `Exit Function` 或 `End Function` 語句，將值傳回給呼叫程式碼。  
   
-### <a name="to-return-a-value-using-the-return-statement"></a>To return a value using the Return statement  
+### <a name="to-return-a-value-using-the-return-statement"></a>使用 Return 語句傳回值  
   
-1. Put a `Return` statement at the point where the procedure's task is completed.  
+1. 將 `Return` 語句放在程式的工作完成的位置。  
   
-2. Follow the `Return` keyword with an expression that yields the value you want to return to the calling code.  
+2. 請在 `Return` 關鍵字後面加上運算式，其會產生您想要傳回給呼叫程式碼的值。  
   
 3. 同一個程序中可以有多個 `Return` 陳述式。  
   
-     The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, and returns it to the calling code.  
+     下列 `Function` 程式會計算直角三角形的最長端（或斜邊），並將它傳回給呼叫程式碼。  
   
      [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
-     The following example shows a typical call to `hypotenuse`, which stores the returned value.  
+     下列範例示範 `hypotenuse`的一般呼叫，它會儲存傳回的值。  
   
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
-### <a name="to-return-a-value-using-exit-function-or-end-function"></a>To return a value using Exit Function or End Function  
+### <a name="to-return-a-value-using-exit-function-or-end-function"></a>使用 Exit 函數或 End 函式傳回值  
   
-1. In at least one place in the `Function` procedure, assign a value to the procedure's name.  
+1. 在 `Function` 程式的至少一個位置中，將值指派給程式的名稱。  
   
-2. When you execute an `Exit Function` or `End Function` statement, Visual Basic returns the value most recently assigned to the procedure's name.  
+2. 當您執行 `Exit Function` 或 `End Function` 語句時，Visual Basic 會傳回最近指派給程式名稱的值。  
   
 3. 同一個程序中可以有多個 `Exit Function` 陳述式，也可以混合 `Return` 和 `Exit Function` 陳述式。  
   
-4. You can have only one `End Function` statement in a `Function` procedure.  
+4. `Function` 程式中只能有一個 `End Function` 語句。  
   
-     For more information and an example, see "Return Value" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
+     如需詳細資訊和範例，請參閱[Function 語句](../../../../visual-basic/language-reference/statements/function-statement.md)中的「傳回值」。  
   
 ## <a name="see-also"></a>請參閱
 

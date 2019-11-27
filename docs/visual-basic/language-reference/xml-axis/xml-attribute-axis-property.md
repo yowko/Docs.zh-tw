@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352664"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML 屬性軸屬性 (Visual Basic)
-Provides access to the value of an attribute for an <xref:System.Xml.Linq.XElement> object or to the first element in a collection of <xref:System.Xml.Linq.XElement> objects.  
+提供 <xref:System.Xml.Linq.XElement> 物件的屬性值，或 <xref:System.Xml.Linq.XElement> 物件集合中第一個專案的存取權。  
   
 ## <a name="syntax"></a>語法  
   
@@ -30,40 +30,40 @@ object.@<attribute>
   
 ## <a name="parts"></a>組件  
  `object`  
- 必要項。 An <xref:System.Xml.Linq.XElement> object or a collection of <xref:System.Xml.Linq.XElement> objects.  
+ 必要。 <xref:System.Xml.Linq.XElement> 物件或 <xref:System.Xml.Linq.XElement> 物件的集合。  
   
  .@  
- 必要項。 Denotes the start of an attribute axis property.  
+ 必要。 表示屬性軸屬性的開頭。  
   
  <  
- 選擇項。 Denotes the beginning of the name of the attribute when `attribute` is not a valid identifier in Visual Basic.  
+ 選擇性。 當 `attribute` 不是 Visual Basic 中的有效識別碼時，代表屬性名稱的開頭。  
   
  `attribute`  
- 必要項。 Name of the attribute to access, of the form [`prefix`:]`name`.  
+ 必要。 要存取的屬性名稱，格式為 [`prefix`：]`name`。  
   
 |組件|描述|  
 |----------|-----------------|  
-|`prefix`|選擇項。 XML namespace prefix for the attribute. 必須是以 `Imports` 陳述式定義的全域 XML 命名空間。|  
-|`name`|必要項。 Local attribute name. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`prefix`|選擇性。 屬性的 XML 命名空間前置詞。 必須是以 `Imports` 陳述式定義的全域 XML 命名空間。|  
+|`name`|必要。 區域屬性名稱。 請參閱宣告[的 XML 元素和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
   
  \>  
- 選擇項。 Denotes the end of the name of the attribute when `attribute` is not a valid identifier in Visual Basic.  
+ 選擇性。 當 `attribute` 不是 Visual Basic 中的有效識別碼時，代表屬性名稱的結尾。  
   
 ## <a name="return-value"></a>傳回值  
- A string that contains the value of `attribute`. If the attribute name does not exist, `Nothing` is returned.  
+ 包含 `attribute`值的字串。 如果屬性名稱不存在，則會傳回 `Nothing`。  
   
 ## <a name="remarks"></a>備註  
- You can use an XML attribute axis property to access the value of an attribute by name from an <xref:System.Xml.Linq.XElement> object or from the first element in a collection of <xref:System.Xml.Linq.XElement> objects. You can retrieve an attribute value by name, or add a new attribute to an element by specifying a new name preceded by the @ identifier.  
+ 您可以使用 XML 屬性軸屬性，依名稱從 <xref:System.Xml.Linq.XElement> 物件或 <xref:System.Xml.Linq.XElement> 物件集合中的第一個元素存取屬性的值。 您可以依名稱抓取屬性值，或指定新的名稱，並在前面加上 @ identifier，將新的屬性加入至元素。  
   
- When you refer to an XML attribute using the @ identifier, the attribute value is returned as a string and you do not need to explicitly specify the <xref:System.Xml.Linq.XAttribute.Value%2A> property.  
+ 當您使用 @ identifier 來參考 XML 屬性時，屬性值會當做字串傳回，而且您不需要明確指定 <xref:System.Xml.Linq.XAttribute.Value%2A> 屬性。  
   
- The naming rules for XML attributes differ from the naming rules for Visual Basic identifiers. To access an XML attribute that has a name that is not a valid Visual Basic identifier, enclose the name in angle brackets (\< and >).  
+ XML 屬性的命名規則不同于 Visual Basic 識別碼的命名規則。 若要存取名稱不是有效 Visual Basic 識別碼的 XML 屬性，請以角括弧（\< 和 >）括住名稱。  
   
 ## <a name="xml-namespaces"></a>XML 命名空間  
- The name in an attribute axis property can use only XML namespace prefixes declared globally by using the `Imports` statement. 它不能使用在 XML 項目常值內本機宣告的 XML 命名空間前置詞。 For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
+ 屬性軸屬性中的名稱只能使用在全域宣告的 XML 命名空間前置詞，方法是使用 `Imports` 語句。 它不能使用在 XML 項目常值內本機宣告的 XML 命名空間前置詞。 如需詳細資訊，請參閱[Imports 語句（XML 命名空間）](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)。  
   
 ## <a name="example"></a>範例  
- The following example shows how to get the values of the XML attributes named `type` from a collection of XML elements that are named `phone`.  
+ 下列範例顯示如何從名為 `phone`的 XML 專案集合中，取得名為 `type` 的 XML 屬性值。  
   
  [!code-vb[VbXMLSamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#12)]  
   
@@ -78,7 +78,7 @@ object.@<attribute>
  `</phoneTypes>`  
   
 ## <a name="example"></a>範例  
- The following example shows how to create attributes for an XML element both declaratively, as part of the XML, and dynamically by adding an attribute to an instance of an <xref:System.Xml.Linq.XElement> object. The `type` attribute is created declaratively and the `owner` attribute is created dynamically.  
+ 下列範例示範如何以宣告的方式，將 XML 專案的屬性建立為 XML 的一部分，並透過將屬性新增至 <xref:System.Xml.Linq.XElement> 物件的實例，以動態的方式建立它們。 `type` 屬性是以宣告方式建立，而且 `owner` 屬性是動態建立的。  
   
  [!code-vb[VbXMLSamples#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#44)]  
   
@@ -89,7 +89,7 @@ object.@<attribute>
 ```  
   
 ## <a name="example"></a>範例  
- The following example uses the angle bracket syntax to get the value of the XML attribute named `number-type`, which is not a valid identifier in Visual Basic.  
+ 下列範例會使用角括弧語法來取得名為 `number-type`之 XML 屬性的值，這不是 Visual Basic 中的有效識別碼。  
   
  [!code-vb[VbXMLSamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#13)]  
   
@@ -98,7 +98,7 @@ object.@<attribute>
  `Phone type: work`  
   
 ## <a name="example"></a>範例  
- 下列範例會宣告 `ns` 作為 XML 命名空間前置詞。 It then uses the prefix of the namespace to create an XML literal and access the first child node with the qualified name "`ns:name`".  
+ 下列範例會宣告 `ns` 作為 XML 命名空間前置詞。 然後，它會使用命名空間的前置詞來建立 XML 常值，並存取具有限定名稱 "`ns:name`" 的第一個子節點。  
   
  [!code-vb[VbXMLSamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples6.vb#14)]  
   

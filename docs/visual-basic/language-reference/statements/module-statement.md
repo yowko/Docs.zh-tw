@@ -22,7 +22,7 @@ ms.locfileid: "74348011"
 ---
 # <a name="module-statement"></a>Module 陳述式
 
-Declares the name of a module and introduces the definition of the variables, properties, events, and procedures that the module comprises.
+宣告模組的名稱，並引進模組所組成之變數、屬性、事件和程式的定義。
 
 ## <a name="syntax"></a>語法
 
@@ -35,10 +35,10 @@ End Module
 ## <a name="parts"></a>組件
 
 `attributelist`  
-選擇項。 See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).
+選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。
 
 `accessmodifier`  
-選擇項。 可以是下列其中一項：
+選擇性。 可以是下列其中一項：
 
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 
@@ -47,55 +47,55 @@ End Module
 請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
 
 `name`  
-必要項。 Name of this module. 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。
+必要。 此模組的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。
 
 `statements`  
-選擇項。 Statements which define the variables, properties, events, procedures, and nested types of this module.
+選擇性。 定義此模組之變數、屬性、事件、程式和巢狀型別的語句。
 
 `End Module`  
-Terminates the `Module` definition.
+終止 `Module` 定義。
 
 ## <a name="remarks"></a>備註
 
-A `Module` statement defines a reference type available throughout its namespace. A *module* (sometimes called a *standard module*) is similar to a class but with some important distinctions. Every module has exactly one instance and does not need to be created or assigned to a variable. Modules do not support inheritance or implement interfaces. Notice that a module is not a *type* in the sense that a class or structure is — you cannot declare a programming element to have the data type of a module.
+`Module` 語句會定義在其命名空間中可用的參考型別。 *模組*（有時稱為*標準模組*）類似于類別，但有一些重要的區別。 每個模組只有一個實例，不需要建立或指派給變數。 模組不支援繼承或執行介面。 請注意，模組不是類別或結構所用的*型*別，您無法宣告程式設計專案來擁有模組的資料型別。
 
-You can use `Module` only at namespace level. This means the *declaration context* for a module must be a source file or namespace, and cannot be a class, structure, module, interface, procedure, or block. You cannot nest a module within another module, or within any type. 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。
+您只能在命名空間層級使用 `Module`。 這表示模組的宣告*內容*必須是原始程式檔或命名空間，而且不能是類別、結構、模組、介面、程式或區塊。 您不能將模組放在另一個模組中，或在任何類型內。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。
 
-A module has the same lifetime as your program. Because its members are all `Shared`, they also have lifetimes equal to that of the program.
+模組與您的程式具有相同的存留期。 因為其成員全都 `Shared`，所以其存留期也會等於程式的存留期間。
 
-Modules default to [Friend](../../../visual-basic/language-reference/modifiers/friend.md) access. You can adjust their access levels with the access modifiers. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+模組預設為[Friend](../../../visual-basic/language-reference/modifiers/friend.md)存取。 您可以使用存取修飾詞來調整其存取層級。 如需詳細資訊，請參閱[Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
 
-All members of a module are implicitly `Shared`.
+模組的所有成員都會以隱含方式 `Shared`。
 
-## <a name="classes-and-modules"></a>Classes and Modules
+## <a name="classes-and-modules"></a>類別和模組
 
-These elements have many similarities, but there are some important differences as well.
+這些元素有許多相似之處，但也有一些重要的差異。
 
-- **Terminology.** Previous versions of Visual Basic recognize two types of modules: *class modules* (.cls files) and *standard modules* (.bas files). The current version calls these *classes* and *modules*, respectively.
+- **庫.** 舊版的 Visual Basic 會辨識兩種類型的模組：*類別模組*（cls 檔）和*標準模組*（bas 檔案）。 目前的版本會分別呼叫這些*類別*和*模組*。
 
-- **Shared Members.** You can control whether a member of a class is a shared or instance member.
+- **共用成員。** 您可以控制類別的成員是否為共用或實例成員。
 
-- **Object Orientation.** Classes are object-oriented, but modules are not. So only classes can be instantiated as objects. For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).
+- **物件方向。** 類別是物件導向，但模組則不是。 因此，只有類別可以具現化為物件。 如需詳細資訊，請參閱[物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。
 
 ## <a name="rules"></a>規則
 
-- **Modifiers.** All module members are implicitly [Shared](../../../visual-basic/language-reference/modifiers/shared.md). You cannot use the `Shared` keyword when declaring a member, and you cannot alter the shared status of any member.
+- **修改.** 所有模組成員都是隱含[共用](../../../visual-basic/language-reference/modifiers/shared.md)的。 您不能在宣告成員時使用 `Shared` 關鍵字，而且也不能改變任何成員的共用狀態。
 
-- **繼承**： A module cannot inherit from any type other than <xref:System.Object>, from which all modules inherit. In particular, one module cannot inherit from another.
+- **繼承**： 模組無法繼承自所有模組所繼承之 <xref:System.Object>以外的任何類型。 特別是一個模組無法繼承自另一個模組。
 
-  You cannot use the [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md) in a module definition, even to specify <xref:System.Object>.
+  您不能在模組定義中使用[Inherits 語句](../../../visual-basic/language-reference/statements/inherits-statement.md)，甚至可以指定 <xref:System.Object>。
 
-- **Default Property.** You cannot define any default properties in a module. For more information, see [Default](../../../visual-basic/language-reference/modifiers/default.md).
+- **Default 屬性。** 您不能在模組中定義任何預設屬性。 如需詳細資訊，請參閱[Default](../../../visual-basic/language-reference/modifiers/default.md)。
 
 ## <a name="behavior"></a>行為
 
-- **Access Level.** Within a module, you can declare each member with its own access level. Module members default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access, except variables and constants, which default to [Private](../../../visual-basic/language-reference/modifiers/private.md) access. When a module has more restricted access than one of its members, the specified module access level takes precedence.
+- **存取層級。** 在模組中，您可以使用自己的存取層級來宣告每個成員。 模組成員預設為[公用](../../../visual-basic/language-reference/modifiers/public.md)存取，但變數和常數除外，預設為[私](../../../visual-basic/language-reference/modifiers/private.md)用存取。 當模組的存取權高於其中一個成員時，會優先使用指定的模組存取層級。
 
-- **Scope.** A module is in scope throughout its namespace.
+- **範圍.** 模組在整個命名空間的範圍內。
 
-  The scope of every module member is the entire module. Notice that all members undergo *type promotion*, which causes their scope to be promoted to the namespace containing the module. For more information, see [Type Promotion](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).
+  每個模組成員的範圍都是整個模組。 請注意，所有成員都會經歷*型別提升*，使其範圍升級為包含模組的命名空間。 如需詳細資訊，請參閱[型別提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)。
 
-- **Qualification.** You can have multiple modules in a project, and you can declare members with the same name in two or more modules. However, you must qualify any reference to such a member with the appropriate module name if the reference is from outside that module. 如需詳細資訊，請參閱 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。
+- **加.** 專案中可以有多個模組，而且可以在兩個或多個模組中宣告具有相同名稱的成員。 不過，如果參考來自于該模組之外，則您必須使用適當的模組名稱來限定這類成員的任何參考。 如需詳細資訊，請參閱 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。
 
 ## <a name="example"></a>範例
 

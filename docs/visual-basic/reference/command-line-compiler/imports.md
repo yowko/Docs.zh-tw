@@ -13,8 +13,8 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332959"
 ---
-# <a name="-imports-visual-basic"></a>-imports (Visual Basic)
-Imports namespaces from a specified assembly.  
+# <a name="-imports-visual-basic"></a>-imports （Visual Basic）
+從指定的元件匯入命名空間。  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,19 +26,19 @@ Imports namespaces from a specified assembly.
   
 |詞彙|定義|  
 |---|---|  
-|`namespaceList`|必要項。 Comma-delimited list of namespaces to be imported.|  
+|`namespaceList`|必要。 要匯入的命名空間清單（以逗號分隔）。|  
   
 ## <a name="remarks"></a>備註  
- The `-imports` option imports any namespace defined within the current set of source files or from any referenced assembly.  
+ `-imports` 選項會匯入目前原始程式檔集或任何參考元件中定義的任何命名空間。  
   
- The members in a namespace specified with `-imports` are available to all source-code files in the compilation. Use the [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to use a namespace in a single source-code file.  
+ 使用 `-imports` 指定之命名空間中的成員，可供編譯中的所有原始程式碼檔案使用。 使用[Imports 語句（.Net 命名空間和類型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) ，在單一原始程式碼檔案中使用命名空間。  
   
-|To set /imports in the Visual Studio integrated development environment|  
+|在 Visual Studio 的整合式開發環境中設定/imports|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. 在 [專案] 功能表上，按一下 [屬性]。 <br />2.  Click the **References** tab.<br />3.  Enter the namespace name in the box beside the **Add User Import** button.<br />4.  Click the **Add User Import** button.|  
+|1. 在**方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2. 按一下 [**參考**] 索引標籤。<br />3. 在 [**新增使用者匯入**] 按鈕旁邊的方塊中輸入命名空間名稱。<br />4. 按一下 [**新增使用者匯入**] 按鈕。|  
   
 ## <a name="example"></a>範例  
- The following code compiles when `/imports:system.globalization` is specified. Without it, successful compilation requires either that an `Imports System.Globalization` statement be included at the beginning of the source code file, or that the property be fully qualified as `System.Globalization.CultureInfo.CurrentCulture.Name`.
+ 下列程式碼會在指定 `/imports:system.globalization` 時進行編譯。 如果沒有它，成功的編譯就必須在原始程式碼檔的開頭包含 `Imports System.Globalization` 語句，或者屬性是完全符合 `System.Globalization.CultureInfo.CurrentCulture.Name`。
 
 ```vb
 Module Example

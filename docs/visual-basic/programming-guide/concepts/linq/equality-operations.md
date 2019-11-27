@@ -9,12 +9,12 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346839"
 ---
-# <a name="equality-operations-visual-basic"></a>Equality Operations (Visual Basic)
+# <a name="equality-operations-visual-basic"></a>等號比較運算（Visual Basic）
 對應項目相等且具有相同數目項目的兩個序列，會視為相等。  
   
 ## <a name="methods"></a>方法  
   
-|方法名稱|描述|Visual Basic Query Expression Syntax|更多資訊|  
+|方法名稱|描述|Visual Basic 查詢運算式語法|詳細資訊|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |SequenceEqual|以成對方式比較項目，判斷兩個序列是否相等。|不適用。|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
@@ -22,4 +22,4 @@ ms.locfileid: "74346839"
 
 - <xref:System.Linq>
 - [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)
+- [如何：比較兩個資料夾的內容（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)

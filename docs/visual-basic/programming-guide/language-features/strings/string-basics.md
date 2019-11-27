@@ -14,10 +14,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344286"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic 中的字串基礎
-`String` 資料類型代表一系列字元 (每個依序代表 `Char` 資料類型的一個執行個體)。 This topic introduces the basic concepts of strings in Visual Basic.  
+`String` 資料類型代表一系列字元 (每個依序代表 `Char` 資料類型的一個執行個體)。 本主題介紹 Visual Basic 中字串的基本概念。  
   
 ## <a name="string-variables"></a>字串變數  
- 可將代表字元數列的常值指派給字串的執行個體。 例如:  
+ 可將代表字元數列的常值指派給字串的執行個體。 例如：  
   
  [!code-vb[VbVbalrStrings#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#63)]  
   
@@ -29,7 +29,7 @@ ms.locfileid: "74344286"
   
  [!code-vb[VbVbalrStrings#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#65)]  
   
- 此程式碼會造成錯誤，因為編譯器會終止第二個引號後的字串，並將字串的其餘部分解譯為程式碼。 To solve this problem, Visual Basic interprets two quotation marks in a string literal as one quotation mark in the string. 下列範例示範在字串中包含引號的正確方式：  
+ 此程式碼會造成錯誤，因為編譯器會終止第二個引號後的字串，並將字串的其餘部分解譯為程式碼。 為了解決這個問題，Visual Basic 將字串常值中的兩個引號視為字串中的一個引號。 下列範例示範在字串中包含引號的正確方式：  
   
  [!code-vb[VbVbalrStrings#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#66)]  
   
@@ -50,18 +50,18 @@ World]]></xml>.Value
 ```  
   
 ## <a name="characters-in-strings"></a>字串中的字元  
- 字串可以視為 `Char` 值序列，且 `String` 類型具有內建函式，可讓您在字串上執行許多操作 (類似於陣列所允許的操作)。 Like all array in .NET Framework, these are zero-based arrays. 您可以透過 `Chars` 屬性參考字串中的特殊字元 ，讓您能夠依字元在字串中的出現位置存取該字元。 例如:  
+ 字串可以視為 `Char` 值序列，且 `String` 類型具有內建函式，可讓您在字串上執行許多操作 (類似於陣列所允許的操作)。 就像 .NET Framework 中的所有陣列一樣，這些都是以零為基底的陣列。 您可以透過 `Chars` 屬性參考字串中的特殊字元 ，讓您能夠依字元在字串中的出現位置存取該字元。 例如：  
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
   
- 在上述範例中，字串的 `Chars` 屬性會傳回字串中的第四個字元，也就是 `D`，並將其指派給 `myChar`。 您也可以透過 `Length` 屬性取得特定字串的長度。 如果您需要在字串上執行多個陣列類型操作，您可以使用字串的 `ToCharArray` 函式將它轉換為 `Char` 執行個體陣列。 例如:  
+ 在上述範例中，字串的 `Chars` 屬性會傳回字串中的第四個字元，也就是 `D`，並將其指派給 `myChar`。 您也可以透過 `Length` 屬性取得特定字串的長度。 如果您需要在字串上執行多個陣列類型操作，您可以使用字串的 `Char` 函式將它轉換為 `ToCharArray` 執行個體陣列。 例如：  
   
  [!code-vb[VbVbalrStrings#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#68)]  
   
  變數 `myArray` 現在包含 `Char` 值的陣列，每個都代表 `myString` 的一個字元。  
   
 ## <a name="the-immutability-of-strings"></a>字串的不變性  
- A string is *immutable*, which means its value cannot be changed once it has been created. 不過，這不會讓您將多個值指派給一個字串變數。 參考下列範例：  
+ 字串是*不可變*的，這表示一旦建立之後，就無法變更其值。 不過，這不會讓您將多個值指派給一個字串變數。 參考下列範例：  
   
  [!code-vb[VbVbalrStrings#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#69)]  
   

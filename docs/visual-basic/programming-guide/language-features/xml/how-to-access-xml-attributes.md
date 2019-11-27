@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332320"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>如何：存取 XML 屬性 (Visual Basic)
-This example shows how to use an attribute axis property to access XML attributes in an XML element by name. In particular, it uses the `type` attribute axis property to access the attribute named `type` in the `phone` object.  
+這個範例示範如何使用屬性軸屬性，依名稱存取 XML 元素中的 XML 屬性。 特別是，它會使用 `type` 屬性軸 屬性來存取 `phone` 物件中名為 `type` 的屬性。  
   
 ## <a name="example"></a>範例  
  [!code-vb[VbXMLSamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#11)]  

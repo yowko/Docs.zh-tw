@@ -15,7 +15,7 @@ ms.locfileid: "74354131"
 ---
 # <a name="const-statement-visual-basic"></a>Const 陳述式 (Visual Basic)
 
-Declares and defines one or more constants.
+宣告並定義一或多個常數。
 
 ## <a name="syntax"></a>語法
 
@@ -27,16 +27,16 @@ Const constantlist
 ## <a name="parts"></a>組件
 
 `attributelist`  
-選擇項。 List of attributes that apply to all the constants declared in this statement. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").
+選擇性。 套用至此語句中宣告之所有常數的屬性清單。 請參閱以角括弧括住的[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)（「`<`」和「`>`」）。
 
 `accessmodifier`  
-選擇項。 Use this to specify what code can access these constants. Can be [Public](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), [Protected Friend](../modifiers/protected-friend.md), [Private](../../../visual-basic/language-reference/modifiers/private.md), or [Private Protected](../../language-reference/modifiers/private-protected.md).
+選擇性。 使用此項來指定哪些程式碼可以存取這些常數。 可以是[公用](../../../visual-basic/language-reference/modifiers/public.md)、[受保護](../../../visual-basic/language-reference/modifiers/protected.md)、 [Friend](../../../visual-basic/language-reference/modifiers/friend.md)、[受保護的 Friend](../modifiers/protected-friend.md)、[私](../../../visual-basic/language-reference/modifiers/private.md)用或[私用保護](../../language-reference/modifiers/private-protected.md)。
 
 `Shadows`  
-選擇項。 Use this to redeclare and hide a programming element in a base class. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+選擇性。 使用此專案來重新宣告和隱藏基類中的程式設計項目。 請參閱[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。
 
 `constantlist`  
-必要項。 List of constants being declared in this statement.
+必要。 在此語句中宣告的常數清單。
 
 `constant` `[ ,` `constant` `... ]`
 
@@ -46,63 +46,63 @@ Const constantlist
 
 |組件|描述|
 |----------|-----------------|
-|`constantname`|必要項。 Name of the constant. 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|
-|`datatype`|Required if `Option Strict` is `On`. Data type of the constant.|
-|`initializer`|必要項。 Expression that is evaluated at compile time and assigned to the constant.|
+|`constantname`|必要。 常數的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|
+|`datatype`|如果 `Option Strict` `On`，則為必要。 常數的資料類型。|
+|`initializer`|必要。 在編譯時期評估並指派給常數的運算式。|
 
 ## <a name="remarks"></a>備註
 
-If you have a value that never changes in your application, you can define a named constant and use it in place of a literal value. A name is easier to remember than a value. You can define the constant just once and use it in many places in your code. If in a later version you need to redefine the value, the `Const` statement is the only place you need to make a change.
+如果您的應用程式中有永不變更的值，您可以定義已命名的常數，並將其取代為常值。 名稱比值更容易記住。 您可以只定義常數一次，並將其用於程式碼中的許多位置。 如果在較新的版本中，您必須重新定義值，則 `Const` 語句是您唯一需要進行變更的位置。
 
-You can use `Const` only at module or procedure level. This means the *declaration context* for a variable must be a class, structure, module, procedure, or block, and cannot be a source file, namespace, or interface. 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。
+您只能在模組或程式層級使用 `Const`。 這表示變數的宣告*內容*必須是類別、結構、模組、程式或區塊，而且不能是原始程式檔、命名空間或介面。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。
 
-Local constants (inside a procedure) default to public access, and you cannot use any access modifiers on them. Class and module member constants (outside any procedure) default to private access, and structure member constants default to public access. You can adjust their access levels with the access modifiers.
+本機常數（在程式內）預設為公用存取，而且您不能在其上使用任何存取修飾詞。 類別和模組成員常數（在任何程式之外）預設為私用存取，而結構成員常數則預設為公用存取。 您可以使用存取修飾詞來調整其存取層級。
 
 ## <a name="rules"></a>規則
 
-- **Declaration Context.** A constant declared at module level, outside any procedure, is a *member constant*; it is a member of the class, structure, or module that declares it.
+- **宣告內容。** 在任何程式以外的模組層級宣告的常數是*成員常數*;它是宣告它的類別、結構或模組的成員。
 
-  A constant declared at procedure level is a *local constant*; it is local to the procedure or block that declares it.
+  在程式層級宣告的常數是*本機常數*;它是在宣告它的程式或區塊的本機。
 
-- **Attributes.** You can apply attributes only to member constants, not to local constants. An attribute contributes information to the assembly's metadata, which is not meaningful for temporary storage such as local constants.
+- **特性.** 您只能將屬性套用至成員常數，而不能套用至本機常數。 屬性會將資訊提供給元件的中繼資料，這對暫存儲存體（例如本機常數）沒有意義。
 
-- **Modifiers.** By default, all constants are `Shared`, `Static`, and `ReadOnly`. You cannot use any of these keywords when declaring a constant.
+- **修改.** 根據預設，所有常數都是 `Shared`、`Static`和 `ReadOnly`。 宣告常數時，您無法使用任何這些關鍵字。
 
-  At procedure level, you cannot use `Shadows` or any access modifiers to declare local constants.
+  在程式層級中，您無法使用 `Shadows` 或任何存取修飾詞來宣告本機常數。
 
-- **Multiple Constants.** You can declare several constants in the same declaration statement, specifying the `constantname` part for each one. Multiple constants are separated by commas.
+- **多個常數。** 您可以在同一個宣告語句中宣告數個常數，為每個常數指定 `constantname` 部分。 以逗號分隔多個常數。
 
-## <a name="data-type-rules"></a>Data Type Rules
+## <a name="data-type-rules"></a>資料類型規則
 
-- **Data Types.** The `Const` statement can declare the data type of a variable. You can specify any data type or the name of an enumeration.
+- **資料類型。** `Const` 語句可以宣告變數的資料類型。 您可以指定任何資料類型或列舉的名稱。
 
-- **Default Type.** If you do not specify `datatype`, the constant takes the data type of `initializer`. If you specify both `datatype` and `initializer`, the data type of `initializer` must be convertible to `datatype`. If neither `datatype` nor `initializer` is present, the data type defaults to `Object`.
+- **預設類型。** 如果您未指定 `datatype`，常數會採用 `initializer`的資料類型。 如果您同時指定 `datatype` 和 `initializer`，`initializer` 的資料類型必須可轉換為 `datatype`。 如果 `datatype` 或 `initializer` 都不存在，則資料類型會預設為 [`Object`]。
 
-- **Different Types.** You can specify different data types for different constants by using a separate `As` clause for each variable you declare. However, you cannot declare several constants to be of the same type by using a common `As` clause.
+- **不同的類型。** 您可以針對您所宣告的每個變數使用個別的 `As` 子句，為不同的常數指定不同的資料類型。 但是，您無法使用 common `As` 子句，將數個常數宣告為相同類型。
 
-- **Initialization.** You must initialize the value of every constant in `constantlist`. You use `initializer` to supply an expression to be assigned to the constant. The expression can be any combination of literals, other constants that are already defined, and enumeration members that are already defined. You can use arithmetic and logical operators to combine such elements.
+- **初始.** 您必須初始化 `constantlist`中每個常數的值。 您可以使用 `initializer` 來提供要指派給常數的運算式。 運算式可以是常值的任何組合、已定義的其他常數，以及已定義的列舉成員。 您可以使用算術和邏輯運算子來結合這類元素。
 
-  You cannot use variables or functions in `initializer`. However, you can use conversion keywords such as `CByte` and `CShort`. You can also use `AscW` if you call it with a constant `String` or `Char` argument, since that can be evaluated at compile time.
+  您不能在 `initializer`中使用變數或函數。 不過，您可以使用轉換關鍵字，例如 `CByte` 和 `CShort`。 如果您以常數 `String` 或 `Char` 引數呼叫它，您也可以使用 `AscW`，因為這可以在編譯時期進行評估。
 
 ## <a name="behavior"></a>行為
 
-- **Scope.** Local constants are accessible only from within their procedure or block. Member constants are accessible from anywhere within their class, structure, or module.
+- **範圍.** 本機常數只能從其程式或區塊記憶體取。 成員常數可從其類別、結構或模組內的任何位置存取。
 
-- **Qualification.** Code outside a class, structure, or module must qualify a member constant's name with the name of that class, structure, or module. Code outside a procedure or block cannot refer to any local constants within that procedure or block.
+- **加.** 類別、結構或模組之外的程式碼必須使用該類別、結構或模組的名稱來限定成員常數的名稱。 程式或區塊外的程式碼無法參考該程式或區塊中的任何本機常數。
 
 ## <a name="example"></a>範例
 
-The following example uses the `Const` statement to declare constants for use in place of literal values.
+下列範例會使用 `Const` 語句來宣告用來取代常值的常數。
 
 [!code-vb[VbVbalrStatements#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#13)]
 
 ## <a name="example"></a>範例
 
-If you define a constant with data type `Object`, the Visual Basic compiler gives it the type of `initializer`, instead of `Object`. In the following example, the constant `naturalLogBase` has the run-time type `Decimal`.
+如果您定義了資料類型 `Object`的常數，Visual Basic 編譯器會提供 `initializer`的類型，而不是 `Object`。 在下列範例中，常數 `naturalLogBase` 具有 `Decimal`的執行時間類型。
 
 [!code-vb[VbVbalrStatements#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#87)]
 
-The preceding example uses the <xref:System.Type.ToString%2A> method on the <xref:System.Type> object returned by the [GetType Operator](../../../visual-basic/language-reference/operators/gettype-operator.md), because <xref:System.Type> cannot be converted to `String` using `CStr`.
+上述範例會在[GetType 運算子](../../../visual-basic/language-reference/operators/gettype-operator.md)傳回的 <xref:System.Type> 物件上使用 <xref:System.Type.ToString%2A> 方法，因為 <xref:System.Type> 無法使用 `CStr`轉換成 `String`。
 
 ## <a name="see-also"></a>請參閱
 

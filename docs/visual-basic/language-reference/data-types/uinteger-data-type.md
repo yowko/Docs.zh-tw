@@ -25,30 +25,30 @@ ms.locfileid: "74343893"
 ---
 # <a name="uinteger-data-type"></a>UInteger 資料類型
 
-Holds unsigned 32-bit (4-byte) integers ranging in value from 0 through 4,294,967,295.
+保留不帶正負號的32位（4位元組）整數，範圍是從0到4294967295的值。
 
 ## <a name="remarks"></a>備註
 
-The `UInteger` data type provides the largest unsigned value in the most efficient data width.
+`UInteger` 資料類型會以最有效率的資料寬度提供最大不帶正負號的值。
 
 `UInteger` 的預設值為 0。
 
-## <a name="literal-assignments"></a>Literal assignments
+## <a name="literal-assignments"></a>常值指派
 
-You can declare and initialize a `UInteger` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. 如果整數常值超出 `UInteger` 的範圍 (亦即，如果小於 <xref:System.UInt32.MinValue?displayProperty=nameWithType> 或大於 <xref:System.UInt32.MaxValue?displayProperty=nameWithType>)，就會發生編譯錯誤。
+您可以藉由指派十進位常值、十六進位常值、八進位常值，或二進位常值（從 Visual Basic 2017）來宣告和初始化 `UInteger` 變數。 如果整數常值超出 `UInteger` 的範圍 (亦即，如果小於 <xref:System.UInt32.MinValue?displayProperty=nameWithType> 或大於 <xref:System.UInt32.MaxValue?displayProperty=nameWithType>)，就會發生編譯錯誤。
 
 在下列範例中，以十進位、十六進位和二進位常值表示的 3,000,000,000 整數，會指派給 `UInteger` 值。
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UInt)]
 
 > [!NOTE]
-> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. 十進位常值沒有前置詞。
+> 您可以使用前置詞 `&h` 或 `&H` 來表示十六進位常值、前置詞 `&b` 或 `&B` 來表示二進位常值，而前置詞 `&o` 或 `&O` 表示八進位常值。 十進位常值沒有前置詞。
 
-Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
+從 Visual Basic 2017 開始，您也可以使用底線字元（`_`）做為數位分隔符號，以增強可讀性，如下列範例所示。
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]
 
-Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. 例如:
+從 Visual Basic 15.5 開始，您也可以使用底線字元（`_`）做為前置詞和十六進位、二進位或八進位數位之間的前置分隔符號。 例如：
 
 ```vb
 Dim number As UInteger = &H_0F8C_0326
@@ -56,7 +56,7 @@ Dim number As UInteger = &H_0F8C_0326
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Numeric literals can also include the `UI` or `ui` [type character](../../programming-guide/language-features/data-types/type-characters.md) to denote the `UInteger` data type, as the following example shows.
+數值常值也可以包含 `UI` 或 `ui`[類型字元](../../programming-guide/language-features/data-types/type-characters.md)來表示 `UInteger` 資料類型，如下列範例所示。
 
 ```vb
 Dim number = &H_0FAC_14D7ui
@@ -64,19 +64,19 @@ Dim number = &H_0FAC_14D7ui
 
 ## <a name="programming-tips"></a>程式設計提示
 
-The `UInteger` and `Integer` data types provide optimal performance on a 32-bit processor, because the smaller integer types (`UShort`, `Short`, `Byte`, and `SByte`), even though they use fewer bits, take more time to load, store, and fetch.
+`UInteger` 和 `Integer` 資料類型會在32位處理器上提供最佳效能，因為較小的整數類型（`UShort`、`Short`、`Byte`和 `SByte`），即使使用較少的位，也需要更多時間來載入、儲存和提取。
 
-- **Negative Numbers.** Because `UInteger` is an unsigned type, it cannot represent a negative number. If you use the unary minus (`-`) operator on an expression that evaluates to type `UInteger`, Visual Basic converts the expression to `Long` first.
+- **負數。** 因為 `UInteger` 是不帶正負號的類型，所以不能代表負數。 如果您在評估為類型 `UInteger`的運算式上使用一元減號（`-`）運算子，Visual Basic 會先將運算式轉換成 `Long`。
 
-- **CLS Compliance.** The `UInteger` data type is not part of the [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), so CLS-compliant code cannot consume a component that uses it.
+- **CLS 合規性。** `UInteger` 資料類型不是[Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) （CLS）的一部分，因此符合 cls 標準的程式碼無法使用它所使用的元件。
 
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that types such as `uint` can have a different data width (16 bits) in other environments. If you are passing a 16-bit argument to such a component, declare it as `UShort` instead of `UInteger` in your managed Visual Basic code.
+- **Interop 考慮。** 如果您要使用的元件不是針對 .NET Framework 所撰寫（例如 Automation 或 COM 物件），請記住，`uint` 之類的類型在其他環境中可能會有不同的資料寬度（16位）。 如果您要將16位引數傳遞至這類元件，請將它宣告為 `UShort`，而不是在您的 managed Visual Basic 程式碼中 `UInteger`。
 
-- **Widening.** The `UInteger` data type widens to `Long`, `ULong`, `Decimal`, `Single`, and `Double`. This means you can convert `UInteger` to any of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
+- **加寬.** `UInteger` 資料類型會擴展到 `Long`、`ULong`、`Decimal`、`Single`和 `Double`。 這表示您可以將 `UInteger` 轉換成這些類型的任何一種，而不會遇到 <xref:System.OverflowException?displayProperty=nameWithType> 錯誤。
 
-- **Type Characters.** Appending the literal type characters `UI` to a literal forces it to the `UInteger` data type. `UInteger` has no identifier type character.
+- **輸入字元。** 將常數值型別字元附加到常值 `UI` 會強制其成為 `UInteger` 的資料類型。 `UInteger` 沒有識別項型別字元。
 
-- **Framework Type.** 在 .NET Framework 中對應的類型為 <xref:System.UInt32?displayProperty=nameWithType> 結構。
+- **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.UInt32?displayProperty=nameWithType> 結構。
 
 ## <a name="see-also"></a>請參閱
 

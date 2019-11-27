@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create a C-C++ Union by Using Attributes'
+title: 如何：使用屬性建立 CC++ Union
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
 ms.openlocfilehash: acb8dc781e2872ae46e5aa058a98b3dd98f3e064
@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349503"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>How to: Create a C/C++ Union by Using Attributes (Visual Basic)
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>如何：使用屬性建立 C/C++等位（Visual Basic）
 
 您可以使用屬性，自訂如何在記憶體中配置結構。 例如，您可以使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 屬性，以 C/C++ 建立所謂的等位。
 

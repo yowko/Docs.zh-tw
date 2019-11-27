@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434323"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>IMetaDataEmit::GetTokenFromSig 方法
-Gets a token for the specified metadata signature.  
+取得指定之中繼資料簽章的 token。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,20 +37,20 @@ HRESULT GetTokenFromSig (
   
 ## <a name="parameters"></a>參數  
  `pvSig`  
- [in] The signature to be persisted and stored.  
+ 在要保存並儲存的簽章。  
   
  `cbSig`  
- [in] The count of bytes in `pvSig`.  
+ 在`pvSig`中的位元組計數。  
   
  `pmsig`  
- [out] The `mdSignature` token assigned.  
+ 脫銷指派的 `mdSignature` token。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

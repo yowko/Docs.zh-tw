@@ -31,35 +31,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347475"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>如何：宣告常數 (Visual Basic)
-You use the `Const` statement to declare a constant and set its value. By declaring a constant, you assign a meaningful name to a value. Once a constant is declared, it cannot be modified or assigned a new value.  
+您可以使用 `Const` 語句來宣告常數並設定其值。 藉由宣告常數，您可以將有意義的名稱指派給值。 一旦宣告了常數，就無法修改或指派新的值。  
   
- You declare a constant within a procedure or in the declarations section of a module, class, or structure. Class or structure-level constants are `Private` by default, but may also be declared as `Public`, `Friend`, `Protected`, or `Protected Friend` for the appropriate level of code access.  
+ 您在程式內或在模組、類別或結構的宣告區段中宣告常數。 類別或結構層級常數預設為 `Private`，但也可以宣告為適當的程式碼存取層級 `Public`、`Friend`、`Protected`或 `Protected Friend`。  
   
- The constant must have a valid symbolic name (the rules are the same as those for creating variable names) and an expression composed of numeric or string constants and operators (but no function calls).  
+ 常數必須具有有效的符號名稱（規則與建立變數名稱的規則相同），以及由數值或字串常數和運算子（但不含函式呼叫）組成的運算式。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-declare-a-constant"></a>To declare a constant  
+### <a name="to-declare-a-constant"></a>若要宣告常數  
   
-- Write a declaration that includes an access specifier, the `Const` keyword, and an expression, as in the following examples:  
+- 撰寫包含存取規範、`Const` 關鍵字和運算式的宣告，如下列範例所示：  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
-     When [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) is `Off` and [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) is `On`, you must declare a constant explicitly by specifying a data type (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, or `String`).  
+     當[Option 推斷](../../../../visual-basic/language-reference/statements/option-infer-statement.md)為 `Off`，且[option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)為 `On`時，您必須指定資料類型（`Boolean`、`Byte`、`Char`、`DateTime`、`Decimal`、`Double`、`Integer`、`Long`、`Short`、`Single`或 `String`）明確地宣告常數。  
   
-     When `Option Infer` is `On` or `Option Strict` is `Off`, you can declare a constant without specifying a data type with an `As` clause. The compiler determines the type of the constant from the type of the expression. For more information, see [Constant and Literal Data Types](constant-and-literal-data-types.md).  
+     當 `Option Infer` `On` 或 `Option Strict` `Off`時，您可以宣告常數，而不需使用 `As` 子句來指定資料類型。 編譯器會從運算式的類型判斷常數的類型。 如需詳細資訊，請參閱[常數和常值資料類型](constant-and-literal-data-types.md)。  
   
-### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>To declare a constant that has an explicitly stated data type  
+### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>若要宣告具有明確陳述之資料類型的常數  
   
-- Write a declaration that includes the `As` keyword and an explicit data type, as in the following examples:  
+- 撰寫包含 `As` 關鍵字和明確資料類型的宣告，如下列範例所示：  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
-     You can declare multiple constants on a single line, although your code is more readable if you declare only a single constant per line. If you declare multiple constants on a single line, they must all have the same access level (`Public`, `Private`, `Friend`, `Protected`, or `Protected Friend`).  
+     您可以在同一行宣告多個常數，不過，如果您的程式碼在每行只宣告一個常數，則會更容易閱讀。 如果您在單一行上宣告多個常數，它們都必須具有相同的存取層級（`Public`、`Private`、`Friend`、`Protected`或 `Protected Friend`）。  
   
-### <a name="to-declare-multiple-constants-on-a-single-line"></a>To declare multiple constants on a single line  
+### <a name="to-declare-multiple-constants-on-a-single-line"></a>若要在同一行宣告多個常數  
   
-- Separate the declarations with a comma and a space, as in the following example:  
+- 以逗號和空格分隔宣告，如下列範例所示：  
   
     ```vb  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
@@ -84,7 +84,7 @@ You use the `Const` statement to declare a constant and set its value. By declar
 
 - [列舉的概觀](enumerations-overview.md)
 - [常數的概觀](constants-overview.md)
-- [How to: Declare an Enumeration](how-to-declare-enumerations.md)
+- [如何：宣告列舉](how-to-declare-enumerations.md)
 - [列舉和名稱限定性條件](enumerations-and-name-qualification.md)
 - [Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)

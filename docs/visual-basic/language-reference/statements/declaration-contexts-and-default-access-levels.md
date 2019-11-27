@@ -17,39 +17,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354094"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>宣告內容和預設存取層級 (Visual Basic)
-This topic describes which Visual Basic types can be declared within which other types, and what their access levels default to if not specified.  
+本主題描述哪些 Visual Basic 類型可以在哪些其他類型中宣告，以及其存取層級預設為（如果未指定）。  
   
-## <a name="declaration-context-levels"></a>Declaration Context Levels  
- The *declaration context* of a programming element is the region of code in which it is declared. This is often another programming element, which is then called the *containing element*.  
+## <a name="declaration-context-levels"></a>宣告內容層級  
+ 程式設計專案的宣告*內容*是宣告它之程式碼的區域。 這通常是另一個程式設計項目，這又稱為*包含元素*。  
   
- The levels for declaration contexts are the following:  
+ 宣告內容的層級如下：  
   
-- *Namespace level* — within a source file or namespace but not within a class, structure, module, or interface  
+- *命名空間層級*-在來源檔案或命名空間中，但不在類別、結構、模組或介面中  
   
-- *Module level* — within a class, structure, module, or interface but not within a procedure or block  
+- *模組層級*-在類別、結構、模組或介面中，但不在程式或區塊內  
   
-- *Procedure level* — within a procedure or block (such as `If` or `For`)  
+- 程式*層級*-在程式或區塊中（例如 `If` 或 `For`）  
   
- The following table shows the default access levels for various declared programming elements, depending on their declaration contexts.  
+ 下表顯示各種宣告的程式設計專案的預設存取層級，視其宣告內容而定。  
   
-|宣告項目|Namespace level|Module level|Procedure level|  
+|宣告項目|命名空間層級|模組層級|程式層級|  
 |----------------------|---------------------|------------------|---------------------|  
-|Variable ([Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md))|不允許|`Private` (`Public` in `Structure`, not allowed in `Interface`)|`Public`|  
-|Constant ([Const Statement](../../../visual-basic/language-reference/statements/const-statement.md))|不允許|`Private` (`Public` in `Structure`, not allowed in `Interface`)|`Public`|  
-|Enumeration ([Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|不允許|  
-|Class ([Class Statement](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|不允許|  
-|Structure ([Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|不允許|  
-|Module ([Module Statement](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|不允許|不允許|  
-|Interface ([Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|不允許|  
-|Procedure ([Function Statement](../../../visual-basic/language-reference/statements/function-statement.md), [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md))|不允許|`Public`|不允許|  
-|External reference ([Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md))|不允許|`Public` (not allowed in `Interface`)|不允許|  
-|Operator ([Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md))|不允許|`Public` (not allowed in `Interface` or `Module`)|不允許|  
-|Property ([Property Statement](../../../visual-basic/language-reference/statements/property-statement.md))|不允許|`Public`|不允許|  
-|Default property ([Default](../../../visual-basic/language-reference/modifiers/default.md))|不允許|`Public` (not allowed in `Module`)|不允許|  
-|Event ([Event Statement](../../../visual-basic/language-reference/statements/event-statement.md))|不允許|`Public`|不允許|  
-|Delegate ([Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md))|`Friend`|`Public`|不允許|  
+|Variable （[Dim 語句](../../../visual-basic/language-reference/statements/dim-statement.md)）|不允許|`Private` （在 `Structure`中`Public`，`Interface`中不允許）|`Public`|  
+|常數（[Const 語句](../../../visual-basic/language-reference/statements/const-statement.md)）|不允許|`Private` （在 `Structure`中`Public`，`Interface`中不允許）|`Public`|  
+|列舉（[Enum 語句](../../../visual-basic/language-reference/statements/enum-statement.md)）|`Friend`|`Public`|不允許|  
+|Class （[Class 語句](../../../visual-basic/language-reference/statements/class-statement.md)）|`Friend`|`Public`|不允許|  
+|Structure （[Structure 語句](../../../visual-basic/language-reference/statements/structure-statement.md)）|`Friend`|`Public`|不允許|  
+|Module （[模組語句](../../../visual-basic/language-reference/statements/module-statement.md)）|`Friend`|不允許|不允許|  
+|Interface （[介面語句](../../../visual-basic/language-reference/statements/interface-statement.md)）|`Friend`|`Public`|不允許|  
+|Procedure （[Function 語句](../../../visual-basic/language-reference/statements/function-statement.md)， [Sub 語句](../../../visual-basic/language-reference/statements/sub-statement.md)）|不允許|`Public`|不允許|  
+|外部參考（[Declare 語句](../../../visual-basic/language-reference/statements/declare-statement.md)）|不允許|`Public` （在 `Interface`中不允許）|不允許|  
+|運算子（[Operator 語句](../../../visual-basic/language-reference/statements/operator-statement.md)）|不允許|`Public` （在 `Interface` 或 `Module`中不允許）|不允許|  
+|Property （[Property 語句](../../../visual-basic/language-reference/statements/property-statement.md)）|不允許|`Public`|不允許|  
+|Default 屬性（[預設值](../../../visual-basic/language-reference/modifiers/default.md)）|不允許|`Public` （在 `Module`中不允許）|不允許|  
+|Event （[Event 語句](../../../visual-basic/language-reference/statements/event-statement.md)）|不允許|`Public`|不允許|  
+|Delegate （[委派語句](../../../visual-basic/language-reference/statements/delegate-statement.md)）|`Friend`|`Public`|不允許|  
   
- For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ 如需詳細資訊，請參閱[Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
 ## <a name="see-also"></a>請參閱
 

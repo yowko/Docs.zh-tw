@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439060"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread 方法
-Maps the ID of a thread to a Win32 thread handle.  
+將執行緒的識別碼對應至 Win32 執行緒控制碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,13 +35,13 @@ HRESULT GetHandleFromThread(
   
 ## <a name="parameters"></a>參數  
  `threadId`  
- [in] The thread ID to be mapped.  
+ 在要對應的執行緒識別碼。  
   
  `phThread`  
- [out] A pointer to a Win32 thread handle.  
+ 脫銷Win32 執行緒控制碼的指標。  
   
 ## <a name="remarks"></a>備註  
- The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.  
+ 分析工具必須先呼叫控制碼上的 Win32 `DuplicateHandle` 函式，才能使用它。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

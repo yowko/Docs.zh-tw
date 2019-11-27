@@ -34,7 +34,7 @@ HRESULT GetCount (    [out] ULONG * pcelt
   
 ## <a name="parameters"></a>參數  
  `celt`  
- [out] The number of threads used by the application.  
+ 脫銷應用程式所使用的執行緒數目。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

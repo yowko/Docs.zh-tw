@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446938"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown 方法
-Notifies the profiler that the application is shutting down.  
+通知 profiler 應用程式正在關閉。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,11 +32,11 @@ HRESULT Shutdown();
 ```  
   
 ## <a name="remarks"></a>備註  
- The profiler code cannot safely call methods of the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface after the `Shutdown` method is called. Any calls to `ICorProfilerInfo` methods result in undefined behavior after the `Shutdown` method returns. Certain immutable events may still occur after shutdown; the profiler should take care to return immediately when this occurs.  
+ 呼叫 `Shutdown` 方法之後，分析工具程式碼無法安全地呼叫[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)介面的方法。 `ICorProfilerInfo` 方法的任何呼叫都會在 `Shutdown` 方法傳回之後導致未定義的行為。 某些不可變事件在關機後可能仍會發生;分析工具應該小心在發生這種情況時立即傳回。  
   
- The `Shutdown` method will be called only if the managed application that is being profiled started as managed code (that is, the initial frame on the process stack is managed). If the application started as unmanaged code but later jumped into managed code, thereby creating an instance of the common language runtime (CLR), then `Shutdown` will not be called. For these cases, the profiler should include in its library a `DllMain` routine that uses the DLL_PROCESS_DETACH value to free any resources and perform clean-up processing of its data, such as flushing traces to disk and so on.  
+ 只有當正在分析的 managed 應用程式啟動為受控碼（也就是管理進程堆疊上的初始框架）時，才會呼叫 `Shutdown` 方法。 如果應用程式是以非受控碼啟動，但之後跳到 managed 程式碼，藉此建立 common language runtime （CLR）的實例，則不會呼叫 `Shutdown`。 在這些情況下，分析工具應該包含在其程式庫中的 `DllMain` 常式，其中使用 DLL_PROCESS_DETACH 值來釋放任何資源，並執行其資料的清除處理，例如將追蹤排清到磁片等等。  
   
- In general, the profiler must cope with unexpected shutdowns. For example, a process might be halted by Win32's `TerminateProcess` method (declared in Winbase.h). In other cases, the CLR will halt certain managed threads (background threads) without delivering orderly destruction messages for them.  
+ 一般來說，分析工具必須處理非預期的關機。 例如，Win32 `TerminateProcess` 方法（在 Winbase 中宣告）可能會暫停處理常式。 在其他情況下，CLR 將會停止特定的 managed 執行緒（背景執行緒），而不會為它們傳遞有序的析構訊息。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

@@ -25,20 +25,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345865"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements 子句 (Visual Basic)
-Indicates that a class or structure member is providing the implementation for a member defined in an interface.  
+表示類別或結構成員正為介面中定義的成員提供執行。  
   
 ## <a name="remarks"></a>備註  
-The `Implements` keyword is not the same as the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md). You use the `Implements` statement to specify that a class or structure implements one or more interfaces, and then for each member you use the `Implements` keyword to specify which interface and which member it implements.
+`Implements` 關鍵字與[Implements 語句](../../../visual-basic/language-reference/statements/implements-statement.md)不同。 您可以使用 `Implements` 語句來指定類別或結構會執行一或多個介面，然後針對每個成員使用 `Implements` 關鍵字來指定它所要執行的介面和哪一個成員。
 
-If a class or structure implements an interface, it must include the `Implements` statement immediately after the [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) or [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md), and it must implement all the members defined by the interface.
+如果類別或結構實作為介面，它就必須在[Class 語句](../../../visual-basic/language-reference/statements/class-statement.md)或[structure 語句](../../../visual-basic/language-reference/statements/structure-statement.md)之後加入 `Implements` 語句，而且它必須執行介面所定義的所有成員。
 
-## <a name="reimplementation"></a>Reimplementation  
-In a derived class, you can reimplement an interface member that the base class has already implemented. This is different from overriding the base class member in the following respects:
+## <a name="reimplementation"></a>重新實作  
+在衍生類別中，您可以重新執行基類已實作為的介面成員。 這與覆寫基類成員的方式不同，如下所示：
 
-- The base class member does not need to be [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) to be reimplemented.
-- You can reimplement the member with a different name.
+- 基類成員不需要是可覆[寫](../../../visual-basic/language-reference/modifiers/overridable.md)的根據重新實作。
+- 您可以使用不同的名稱來重新實現成員。
 
-The `Implements` keyword can be used in the following contexts:
+`Implements` 關鍵字可以用於下列內容：
 
 - [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)

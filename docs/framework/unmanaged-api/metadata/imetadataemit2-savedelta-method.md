@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447901"
 ---
 # <a name="imetadataemit2savedelta-method"></a>IMetaDataEmit2::SaveDelta 方法
-Saves changes from the current edit-and-continue session to the specified file.  
+將目前的「編輯後繼續」會話的變更儲存至指定的檔案。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,17 +36,17 @@ HRESULT SaveDelta (
   
 ## <a name="parameters"></a>參數  
  `szFile`  
- [in] The file name under which to save changes.  
+ 在用來儲存變更的檔案名。  
   
  `dwSaveFlags`  
- [in] 保留。 Must be zero.  
+ [in] 保留。 必須為零。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

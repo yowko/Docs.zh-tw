@@ -15,19 +15,19 @@ ms.locfileid: "74330850"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>如何：修改 XML 常值 (Visual Basic)
 
-Visual Basic provides convenient ways to modify XML literals. You can add or delete elements and attributes, and you can also replace an existing element with a new XML element. This topic provides several examples of how to modify an existing XML literal.
+Visual Basic 提供便利的方式來修改 XML 常值。 您可以新增或刪除專案和屬性，也可以使用新的 XML 元素來取代現有的專案。 本主題提供數個範例，說明如何修改現有的 XML 常值。
 
-### <a name="to-modify-the-value-of-an-xml-literal"></a>To modify the value of an XML literal
+### <a name="to-modify-the-value-of-an-xml-literal"></a>修改 XML 常值
 
-1. To modify the value of an XML literal, obtain a reference to the XML literal and set the `Value` property to the desired value.
+1. 若要修改 XML 常值的值，請取得 XML 常值的參考，並將 `Value` 屬性設為所需的值。
 
-    The following code example updates the value of all the \<Price> elements in an XML document.
+    下列程式碼範例會更新 XML 檔中所有 \<Price > 元素的值。
 
     [!code-vb[VbXmlSamples2#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#4)]
 
-    The following shows sample source XML and modified XML from this code example.
+    以下顯示此程式碼範例中的範例來源 XML 和修改過的 XML。
 
-    Source XML:
+    來源 XML：
 
     ```xml
     <?xml version="1.0"?>
@@ -45,7 +45,7 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
     </Catalog>
     ```
 
-    Modified XML:
+    修改過的 XML：
 
     ```xml
     <?xml version="1.0"?>
@@ -64,17 +64,17 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
     ```
 
     > [!NOTE]
-    > The `Value` property refers to the first XML element in a collection. If there is more than one element that has the same name in a collection, setting the `Value` property affects only the first element in the collection.
+    > `Value` 屬性指的是集合中的第一個 XML 元素。 如果集合中有一個以上的專案具有相同的名稱，則設定 `Value` 屬性只會影響集合中的第一個元素。
 
-### <a name="to-add-an-attribute-to-an-xml-literal"></a>To add an attribute to an XML literal
+### <a name="to-add-an-attribute-to-an-xml-literal"></a>若要將屬性加入至 XML 常值
 
-1. To add an attribute to an XML literal, first obtain a reference to the XML literal. You can then add an attribute by adding a new XML attribute axis property. You can also add a new <xref:System.Xml.Linq.XAttribute> object to the XML literal by using the <xref:System.Xml.Linq.XContainer.Add%2A> method. The following example shows both options.
+1. 若要將屬性加入至 XML 常值，請先取得 XML 常值的參考。 然後，您可以加入新的 XML 屬性軸屬性來新增屬性。 您也可以使用 <xref:System.Xml.Linq.XContainer.Add%2A> 方法，將新的 <xref:System.Xml.Linq.XAttribute> 物件加入至 XML 常值。 下列範例會顯示這兩個選項。
 
     [!code-vb[VbXmlSamples2#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#5)]
 
-    The following shows sample source XML and modified XML from this code example.
+    以下顯示此程式碼範例中的範例來源 XML 和修改過的 XML。
 
-    Source XML:
+    來源 XML：
 
     ```xml
     <?xml version="1.0"?>
@@ -92,7 +92,7 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
     </Catalog>
     ```
 
-    Modified XML:
+    修改過的 XML：
 
     ```xml
     <?xml version="1.0"?>
@@ -110,21 +110,21 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
     </Catalog>
     ```
 
-    For more information about XML attribute axis properties, see [XML Attribute Axis Property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md).
+    如需 XML 屬性軸屬性的詳細資訊，請參閱[Xml 屬性軸屬性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)。
 
-### <a name="to-add-an-element-to-an-xml-literal"></a>To add an element to an XML literal
+### <a name="to-add-an-element-to-an-xml-literal"></a>若要將元素加入至 XML 常值
 
-1. To add an element to an XML literal, first obtain a reference to the XML literal. You can then add a new <xref:System.Xml.Linq.XElement> object as the last sub-element of the element by using the <xref:System.Xml.Linq.XContainer.Add%2A> method. You can add a new <xref:System.Xml.Linq.XElement> object as the first sub-element by using the <xref:System.Xml.Linq.XContainer.AddFirst%2A> method.
+1. 若要將元素加入至 XML 常值，請先取得 XML 常值的參考。 接著，您可以使用 <xref:System.Xml.Linq.XContainer.Add%2A> 方法，將新的 <xref:System.Xml.Linq.XElement> 物件當做專案的最後一個子項目加入。 您可以使用 <xref:System.Xml.Linq.XContainer.AddFirst%2A> 方法，加入新的 <xref:System.Xml.Linq.XElement> 物件做為第一個子項目。
 
-    To add a new element in a specific location relative to other sub-elements, first obtain a reference to an adjacent sub-element. You can then add the new <xref:System.Xml.Linq.XElement> object before the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> method. You can also add the new <xref:System.Xml.Linq.XElement> object after the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddAfterSelf%2A> method.
+    若要在相對於其他子項目的特定位置加入新專案，請先取得相鄰子項目的參考。 接著，您可以使用 <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> 方法，在相鄰子項目之前加入新的 <xref:System.Xml.Linq.XElement> 物件。 您也可以使用 <xref:System.Xml.Linq.XNode.AddAfterSelf%2A> 方法，在連續的子項目後面加入新的 <xref:System.Xml.Linq.XElement> 物件。
 
-    The following example shows examples of each of these techniques.
+    下列範例顯示每個技術的範例。
 
     [!code-vb[VbXmlSamples2#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#6)]
 
-    The following shows sample source XML and modified XML from this code example.
+    以下顯示此程式碼範例中的範例來源 XML 和修改過的 XML。
 
-    Source XML:
+    來源 XML：
 
     ```xml
     <?xml version="1.0"?>
@@ -142,7 +142,7 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
     </Catalog>
     ```
 
-    Modified XML:
+    修改過的 XML：
 
     ```xml
     <?xml version="1.0"?>
@@ -164,15 +164,15 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
     </Catalog>
     ```
 
-### <a name="to-remove-an-element-or-attribute-from-an-xml-literal"></a>To remove an element or attribute from an XML literal
+### <a name="to-remove-an-element-or-attribute-from-an-xml-literal"></a>若要從 XML 常值中移除元素或屬性
 
-1. To remove an element or an attribute from an XML literal, obtain a reference to the element or attribute and call the `Remove` method, as shown in the following example.
+1. 若要從 XML 常值中移除元素或屬性，請取得元素或屬性的參考，並呼叫 `Remove` 方法，如下列範例所示。
 
     [!code-vb[VbXmlSamples2#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#7)]
 
-    The following shows sample source XML and modified XML from this code example.
+    以下顯示此程式碼範例中的範例來源 XML 和修改過的 XML。
 
-    Source XML:
+    來源 XML：
 
     ```xml
     <?xml version="1.0"?>
@@ -192,7 +192,7 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
     </Catalog>
     ```
 
-    Modified XML:
+    修改過的 XML：
 
     ```xml
     <?xml version="1.0"?>
@@ -210,21 +210,21 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
       </Book></Catalog>
     ```
 
-    To remove all elements or attributes from an XML literal, obtain a reference to the XML literal and call the <xref:System.Xml.Linq.XElement.RemoveAll%2A> method.
+    若要從 XML 常值中移除所有元素或屬性，請取得 XML 常值的參考，並呼叫 <xref:System.Xml.Linq.XElement.RemoveAll%2A> 方法。
 
-### <a name="to-modify-an-xml-literal"></a>To modify an XML literal
+### <a name="to-modify-an-xml-literal"></a>修改 XML 常值
 
-1. To change the name of an XML element, first obtain a reference to the element. You can then create a new <xref:System.Xml.Linq.XElement> object that has a new name and pass the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XNode.ReplaceWith%2A> method of the existing <xref:System.Xml.Linq.XElement> object.
+1. 若要變更 XML 元素的名稱，請先取得元素的參考。 接著，您可以建立新的 <xref:System.Xml.Linq.XElement> 物件，其中包含新的名稱，並將新的 <xref:System.Xml.Linq.XElement> 物件傳遞至現有 <xref:System.Xml.Linq.XElement> 物件的 <xref:System.Xml.Linq.XNode.ReplaceWith%2A> 方法。
 
-    If the element that you are replacing has sub-elements that must be preserved, set the value of the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the existing element. This will set the value of the new element to the inner XML of the existing element. Otherwise, you can set the value of the new element to the `Value` property of the existing element.
+    如果您要取代的元素具有必須保留的子項目，請將新 <xref:System.Xml.Linq.XElement> 物件的值設定為現有專案的 <xref:System.Xml.Linq.XContainer.Nodes%2A> 屬性。 這會將新元素的值設定為現有專案的內部 XML。 否則，您可以將新元素的值設定為現有元素的 `Value` 屬性。
 
-    The following code example replaces all \<Description> elements with an \<Abstract> element. The content of the \<Description> element is preserved in the new \<Abstract> element by using the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the \<Description> <xref:System.Xml.Linq.XElement> object.
+    下列程式碼範例會以 \<抽象 > 專案取代所有 \<描述 > 元素。 \<描述 > 元素的內容會使用 <xref:System.Xml.Linq.XContainer.Nodes%2A> \<物件 > 描述的 <xref:System.Xml.Linq.XElement> 屬性，保留在新的 \<Abstract > 專案中。
 
     [!code-vb[VbXmlSamples2#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#8)]
 
-    The following shows sample source XML and modified XML from this code example.
+    以下顯示此程式碼範例中的範例來源 XML 和修改過的 XML。
 
-    Source XML:
+    來源 XML：
 
     ```xml
     <?xml version="1.0"?>
@@ -256,7 +256,7 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
     </Catalog>
     ```
 
-    Modified XML:
+    修改過的 XML：
 
     ```xml
     <?xml version="1.0"?>

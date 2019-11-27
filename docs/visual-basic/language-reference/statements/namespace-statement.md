@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74329650"
 ---
 # <a name="namespace-statement"></a>Namespace 陳述式
-Declares the name of a namespace and causes the source code that follows the declaration to be compiled within that namespace.  
+宣告命名空間的名稱，並使宣告後面的原始程式碼在該命名空間內進行編譯。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,66 +32,66 @@ End Namespace
   
 ## <a name="parts"></a>組件  
  Global  
- 選擇項。 Allows you to define a namespace out of the root namespace of your project. See [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ 選擇性。 可讓您從專案的根命名空間定義命名空間。 請參閱[Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)。  
   
  `name`  
- 必要項。 A unique name that identifies the namespace. Must be a valid Visual Basic identifier. For more information, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ 必要。 識別命名空間的唯一名稱。 必須是有效的 Visual Basic 識別碼。 如需詳細資訊，請參閱宣告的[元素名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
  `componenttypes`  
- 選擇項。 Elements that make up the namespace. These include, but are not limited to, enumerations, structures, interfaces, classes, modules, delegates, and other namespaces.  
+ 選擇性。 組成命名空間的元素。 這些包括（但不限於）列舉、結構、介面、類別、模組、委派和其他命名空間。  
   
  `End Namespace`  
- Terminates a `Namespace` block.  
+ 終止 `Namespace` 區塊。  
   
 ## <a name="remarks"></a>備註  
- Namespaces are used as an organizational system. They provide a way to classify and present programming elements that are exposed to other programs and applications. Note that a namespace is not a *type* in the sense that a class or structure is—you cannot declare a programming element to have the data type of a namespace.  
+ 命名空間是當做組織系統使用。 它們提供一種方式來分類和呈現公開給其他程式和應用程式的程式設計項目。 請注意，命名空間不是類別或結構所用的*型*別，您無法宣告程式設計專案以具有命名空間的資料型別。  
   
- All programming elements declared after a `Namespace` statement belong to that namespace. Visual Basic continues to compile elements into the last declared namespace until it encounters either an `End Namespace` statement or another `Namespace` statement.  
+ 在 `Namespace` 語句之後宣告的所有程式設計項目都屬於該命名空間。 Visual Basic 會繼續將專案編譯成最後一個已宣告的命名空間，直到遇到 `End Namespace` 語句或另一個 `Namespace` 語句為止。  
   
- If a namespace is already defined, even outside your project, you can add programming elements to it. To do this, you use a `Namespace` statement to direct Visual Basic to compile elements into that namespace.  
+ 如果已定義命名空間，甚至是在您的專案之外，您可以在其中加入程式設計項目。 若要這麼做，您可以使用 `Namespace` 語句來指示 Visual Basic 將元素編譯到該命名空間。  
   
- You can use a `Namespace` statement only at the file or namespace level. This means the *declaration context* for a namespace must be a source file or another namespace, and cannot be a class, structure, module, interface, or procedure. 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+ 您只能在檔案或命名空間層級使用 `Namespace` 語句。 這表示命名空間的宣告*內容*必須是原始程式檔或其他命名空間，而且不能是類別、結構、模組、介面或程式。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
   
- You can declare one namespace within another. There is no strict limit to the levels of nesting you can declare, but remember that when other code accesses the elements declared in the innermost namespace, it must use a qualification string that contains all the namespace names in the nesting hierarchy.  
+ 您可以在另一個命名空間內宣告。 您可以宣告的嵌套層級沒有嚴格的限制，但請記住，當其他程式碼存取最內層命名空間中宣告的元素時，它必須使用包含在嵌套階層架構中所有命名空間名稱的限定性字串。  
   
-## <a name="access-level"></a>Access Level  
- Namespaces are treated as if they have a `Public` access level. A namespace can be accessed from code anywhere in the same project, from other projects that reference the project, and from any assembly built from the project.  
+## <a name="access-level"></a>存取層級  
+ 命名空間會視為具有 `Public` 存取層級。 命名空間可以從相同專案中的程式碼、從參考專案的其他專案，以及從專案所建立的任何元件中存取。  
   
- Programming elements declared at namespace level, meaning in a namespace but not inside any other element, can have `Public` or `Friend` access. If unspecified, the access level of such an element uses `Friend` by default. Elements you can declare at namespace level include classes, structures, modules, interfaces, enumerations, and delegates. 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+ 在命名空間層級宣告的程式設計項目（表示在命名空間中，但不在任何其他專案內）可以有 `Public` 或 `Friend` 存取。 如果未指定，這類元素的存取層級預設會使用 `Friend`。 您可以在命名空間層級宣告的元素包括類別、結構、模組、介面、列舉和委派。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
   
-## <a name="root-namespace"></a>Root Namespace  
- All namespace names in your project are based on a *root namespace*. Visual Studio 會針對專案中的所有程式碼，將專案名稱指派為預設根命名空間。 例如，如果專案已命名為 `Payroll`，其程式設計項目會屬於命名空間 `Payroll`。 If you declare `Namespace funding`, the full name of that namespace is `Payroll.funding`.  
+## <a name="root-namespace"></a>根命名空間  
+ 專案中的所有命名空間名稱都是以*根命名空間*為基礎。 Visual Studio 會針對專案中的所有程式碼，將專案名稱指派為預設根命名空間。 例如，如果專案已命名為 `Payroll`，其程式設計項目會屬於命名空間 `Payroll`。 如果您宣告 `Namespace funding`，就會 `Payroll.funding`該命名空間的完整名稱。  
   
- If you want to specify an existing namespace in a `Namespace` statement, such as in the generic list class example, you can set your root namespace to a null value. To do this, click **Project Properties** from the **Project** menu and then clear the **Root namespace** entry so that the box is empty. If you did not do this in the generic list class example, the Visual Basic compiler would take `System.Collections.Generic` as a new namespace within project `Payroll`, with the full name of `Payroll.System.Collections.Generic`.  
+ 如果您想要在 `Namespace` 語句中指定現有的命名空間，例如在泛型清單類別範例中，您可以將根命名空間設定為 null 值。 若要這樣做，請從 [**專案**] 功能表中按一下 [**專案屬性**]，然後清除 [**根命名空間**] 專案，讓方塊空白。 如果您未在泛型清單類別範例中執行此動作，Visual Basic 編譯器會將 `System.Collections.Generic` 做為專案 `Payroll`內的新命名空間，並具有 `Payroll.System.Collections.Generic`的完整名稱。  
   
- Alternatively, you can use the `Global` keyword to refer to elements of namespaces defined outside your project. Doing so lets you retain your project name as the root namespace. This reduces the chance of unintentionally merging your programming elements together with those of existing namespaces. For more information, see the "Global Keyword in Fully Qualified Names" section in [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ 或者，您可以使用 `Global` 關鍵字來參考在專案外部定義的命名空間元素。 這麼做可讓您保留專案名稱做為根命名空間。 這可減少不小心將您的程式設計項目與現有命名空間的合併在一起的機會。 如需詳細資訊，請參閱[Visual Basic 的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)中的「完整名稱中的全域關鍵字」一節。  
   
- The `Global` keyword can also be used in a Namespace statement. 這可讓您從專案的根命名空間定義一個命名空間。 For more information, see the "Global Keyword in Namespace Statements" section in [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ `Global` 關鍵字也可以在 Namespace 語句中使用。 這可讓您從專案的根命名空間定義一個命名空間。 如需詳細資訊，請參閱[Visual Basic 的命名](../../../visual-basic/programming-guide/program-structure/namespaces.md)空間中的「命名空間語句中的全域關鍵字」一節。  
   
- **Troubleshooting.** The root namespace can lead to unexpected concatenations of namespace names. If you make reference to namespaces defined outside your project, the Visual Basic compiler can construe them as nested namespaces in the root namespace. In such a case, the compiler does not recognize any types that have been already defined in the external namespaces. To avoid this, either set your root namespace to a null value as described in "Root Namespace," or use the `Global` keyword to access elements of external namespaces.  
+ **疑難排解.** 根命名空間可能會導致非預期的命名空間名稱串連。 如果您參考在專案外部定義的命名空間，Visual Basic 編譯器可以在根命名空間中將其 construe 為嵌套命名空間。 在這種情況下，編譯器無法辨識已在外部命名空間中定義的任何類型。 若要避免這個情況，請將根命名空間設定為 null 值（如「根命名空間」中所述），或使用 `Global` 關鍵字來存取外部命名空間的元素。  
   
-## <a name="attributes-and-modifiers"></a>Attributes and Modifiers  
- You cannot apply attributes to a namespace. An attribute contributes information to the assembly's metadata, which is not meaningful for source classifiers such as namespaces.  
+## <a name="attributes-and-modifiers"></a>屬性和修飾詞  
+ 您無法將屬性套用至命名空間。 屬性會將資訊提供給元件的中繼資料，這對來源分類器（例如命名空間）沒有意義。  
   
- You cannot apply any access or procedure modifiers, or any other modifiers, to a namespace. Because it is not a type, these modifiers are not meaningful.  
+ 您不能將任何存取或程式修飾詞或任何其他修飾詞套用至命名空間。 因為這不是型別，所以這些修飾詞沒有意義。  
   
 ## <a name="example"></a>範例  
- The following example declares two namespaces, one nested in the other.  
+ 下列範例會宣告兩個命名空間，其中一個是在另一個。  
   
  [!code-vb[VbVbalrStatements#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#43)]  
   
 ## <a name="example"></a>範例  
- The following example declares multiple nested namespaces on a single line, and it is equivalent to the previous example.  
+ 下列範例會在單一程式列上宣告多個嵌套的命名空間，而且它相當於先前的範例。  
   
  [!code-vb[VbVbalrStatements#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#41)]  
   
 ## <a name="example"></a>範例  
- The following example accesses the class defined in the previous examples.  
+ 下列範例會存取先前範例中定義的類別。  
   
  [!code-vb[VbVbalrStatements#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#42)]  
   
 ## <a name="example"></a>範例  
- The following example defines the skeleton of a new generic list class and adds it to the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace.  
+ 下列範例會定義新泛型清單類別的基本架構，並將其新增至 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間。  
   
 ```vb  
 Namespace System.Collections.Generic  
@@ -106,4 +106,4 @@ End Namespace
 
 - [Imports 陳述式 (.NET 命名空間和類型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)

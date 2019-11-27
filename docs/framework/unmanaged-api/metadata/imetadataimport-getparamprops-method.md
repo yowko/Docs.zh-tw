@@ -44,45 +44,45 @@ HRESULT GetParamProps (
   
 ## <a name="parameters"></a>參數  
  `tk`  
- [in] A ParamDef token that represents the parameter to return metadata for.  
+ 在ParamDef token，表示要傳回中繼資料的參數。  
   
  `pmd`  
- [out] A pointer to a MethodDef token representing the method that takes the parameter.  
+ 脫銷MethodDef token 的指標，代表接受參數的方法。  
   
  `pulSequence`  
- [out] The ordinal position of the parameter in the method argument list.  
+ 脫銷方法引數清單中參數的序數位置。  
   
  `szName`  
- [out] A buffer to hold the name of the parameter.  
+ 脫銷保存參數名稱的緩衝區。  
   
  `cchName`  
- [in] The requested size in wide characters of `szName`.  
+ 在要求的大小，以 `szName`的寬字元為單位。  
   
  `pchName`  
- [out] The returned size in wide characters of `szName`.  
+ 脫銷`szName`的寬字元傳回大小。  
   
  `pdwAttr`  
- [out] A pointer to any attribute flags associated with the parameter. This is a bitmask of `CorParamAttr` values.  
+ 脫銷與參數相關聯之任何屬性旗標的指標。 這是 `CorParamAttr` 值的位元遮罩。  
   
  `pdwCPlusTypeFlag`  
- [out] A pointer to a flag specifying that the parameter is a <xref:System.ValueType>.  
+ 脫銷旗標的指標，指定參數為 <xref:System.ValueType>。  
   
  `ppValue`  
- [out] A pointer to a constant string returned by the parameter.  
+ 脫銷參數所傳回之常數位串的指標。  
   
  `pcchValue`  
- [out] The size of `ppValue` in wide characters, or zero if `ppValue` does not hold a string.  
+ 脫銷`ppValue` 的大小，以寬字元為單位，如果 `ppValue` 不包含字串，則為零。  
   
 ## <a name="remarks"></a>備註
 
-The sequence values in `pulSequence` begin with 1 for parameters. A return value has a sequence number of 0.
+`pulSequence` 中的順序值會以1為參數開頭。 傳回值的序號為0。
 
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

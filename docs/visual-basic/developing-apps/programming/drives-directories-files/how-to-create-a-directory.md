@@ -14,13 +14,13 @@ ms.locfileid: "74348805"
 ---
 # <a name="how-to-create-a-directory-in-visual-basic"></a>如何：在 Visual Basic 中建立目錄
 
-使用 `My.Computer.FileSystem` 物件的 `CreateDirectory` 方法來建立目錄。  
+使用 `CreateDirectory` 物件的 `My.Computer.FileSystem` 方法來建立目錄。  
   
  如果目錄已經存在，則不會擲回例外狀況。  
   
 ### <a name="to-create-a-directory"></a>建立目錄  
   
-- 指定應該建立目錄之位置的完整路徑，以使用 `CreateDirectory` 方法。 這個範例會在 `C:\Documents and Settings\All Users\Documents` 中建立 `NewDirectory` 目錄。  
+- 指定應該建立目錄之位置的完整路徑，以使用 `CreateDirectory` 方法。 這個範例會在 `NewDirectory` 中建立 `C:\Documents and Settings\All Users\Documents` 目錄。  
   
      [!code-vb[VbVbcnMyFileSystem#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#2)]  
   

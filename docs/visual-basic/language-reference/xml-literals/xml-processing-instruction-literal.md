@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347038"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>XML 處理指示常值 (Visual Basic)
-A literal representing an <xref:System.Xml.Linq.XProcessingInstruction> object.  
+表示 <xref:System.Xml.Linq.XProcessingInstruction> 物件的常值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,37 +26,37 @@ A literal representing an <xref:System.Xml.Linq.XProcessingInstruction> object.
   
 ## <a name="parts"></a>組件  
  `<?`  
- 必要項。 Denotes the start of the XML processing instruction literal.  
+ 必要。 表示 XML 處理指示常值的開頭。  
   
  `piName`  
- 必要項。 Name indicating which application the processing instruction targets. Cannot begin with "xml" or "XML".  
+ 必要。 指出處理指示以哪個應用程式為目標的名稱。 不能以 "xml" 或 "XML" 開頭。  
   
  `piData`  
- 選擇項。 String indicating how the application targeted by `piName` should process the XML document.  
+ 選擇性。 字串，指出 `piName` 的目標應用程式應該如何處理 XML 檔。  
   
  `?>`  
- 必要項。 Denotes the end of the processing instruction.  
+ 必要。 表示處理指示的結尾。  
   
 ## <a name="return-value"></a>傳回值  
  <xref:System.Xml.Linq.XProcessingInstruction> 物件。  
   
 ## <a name="remarks"></a>備註  
- XML processing instruction literals indicate how applications should process an XML document. When an application loads an XML document, the application can check the XML processing instructions to determine how to process the document. The application interprets the meaning of `piName` and `piData`.  
+ XML 處理指示常值指出應用程式應該如何處理 XML 檔。 當應用程式載入 XML 檔時，應用程式可以檢查 XML 處理指示，以決定如何處理檔。 應用程式會解讀 `piName` 和 `piData`的意義。  
   
- The XML document literal uses syntax that is similar to that of the XML processing instruction. For more information, see [XML Document Literal](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
-  
-> [!NOTE]
-> The `piName` element cannot begin with the strings "xml" or "XML", because the XML 1.0 specification reserves those identifiers.  
-  
- You can assign an XML processing instruction literal to a variable or include it in an XML document literal.  
+ XML 檔常值會使用類似于 XML 處理指示的語法。 如需詳細資訊，請參閱[XML 檔常](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)值。  
   
 > [!NOTE]
-> An XML literal can span multiple lines without needing line continuation characters. This enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+> `piName` 元素的開頭不能是 "xml" 或 "XML" 字串，因為 XML 1.0 規格會保留這些識別碼。  
   
- The Visual Basic compiler converts the XML processing instruction literal to a call to the <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> constructor.  
+ 您可以將 XML 處理指示常值指派給變數，或將它包含在 XML 檔常值中。  
+  
+> [!NOTE]
+> XML 常值可以跨越多行，而不需要行接續字元。 這可讓您從 XML 檔案複製內容，並將它直接貼到 Visual Basic 程式中。  
+  
+ Visual Basic 編譯器會將 XML 處理指示常值轉換為呼叫 <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> 的函式。  
   
 ## <a name="example"></a>範例  
- The following example creates a processing instruction identifying a style-sheet for an XML document.  
+ 下列範例會建立一個處理指示，以識別 XML 檔的樣式表單。  
   
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   

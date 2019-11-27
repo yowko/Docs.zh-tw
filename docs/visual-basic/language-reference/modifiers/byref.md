@@ -1,5 +1,5 @@
 ---
-title: RemoveHandler
+title: ByRef
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ByRef
@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351599"
 ---
 # <a name="byref-visual-basic"></a>ByRef (Visual Basic)
-Specifies that an argument is passed in such a way that the called procedure can change the value of a variable underlying the argument in the calling code.  
+指定傳遞引數的方式，就是呼叫的程式可以變更呼叫程式碼中引數基礎的變數值。  
   
 ## <a name="remarks"></a>備註  
  `ByRef` 修飾詞可用於以下內容：  

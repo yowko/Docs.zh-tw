@@ -14,17 +14,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340951"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>如何：呼叫不傳回值的程序 (Visual Basic)
-A `Sub` procedure does not return a value to the calling code. You call it explicitly with a stand-alone calling statement. You cannot call it by simply using its name within an expression.  
+`Sub` 程式不會將值傳回給呼叫程式碼。 您可以使用獨立的呼叫語句來明確地呼叫它。 您不能只在運算式內使用它的名稱來呼叫它。  
   
-### <a name="to-call-a-sub-procedure"></a>To call a Sub procedure  
+### <a name="to-call-a-sub-procedure"></a>呼叫 Sub 程式  
   
-1. Specify the name of the `Sub` procedure.  
+1. 指定 `Sub` 程式的名稱。  
   
-2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
+2. 請在程式名稱後面加上括弧，以括住引數清單。 如果沒有引數，您可以選擇性地省略括弧。 不過，使用括弧可讓您的程式碼更容易閱讀。  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Sub` procedure defines the corresponding parameters.  
+3. 將引數放在括弧內的引數清單中，並以逗號分隔。 請務必以 `Sub` 程式定義對應參數的相同順序來提供引數。  
   
-     The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> function to activate an application window. <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> takes the window title as its sole argument. It does not return a value to the calling code. If a Notepad process is not running, the example throws an <xref:System.ArgumentException>. The `Shell` procedure assumes the applications are in the paths specified.  
+     下列範例會呼叫 Visual Basic <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> 函式來啟動應用程式視窗。 <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> 會採用視窗標題作為其唯一的引數。 它不會將值傳回給呼叫程式碼。 如果「記事本」進程未執行，則範例會擲回 <xref:System.ArgumentException>。 `Shell` 程式會假設應用程式位於指定的路徑中。  
   
      [!code-vb[VbVbalrCatRef#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#11)]  
   
@@ -38,4 +38,4 @@ A `Sub` procedure does not return a value to the calling code. You call it expli
 - [Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [如何：建立程序](./how-to-create-a-procedure.md)
 - [如何：呼叫傳回值的程序](./how-to-call-a-procedure-that-returns-a-value.md)
-- [How to: Call an Event Handler in Visual Basic](./how-to-call-an-event-handler.md)
+- [如何：在 Visual Basic 中呼叫事件處理常式](./how-to-call-an-event-handler.md)

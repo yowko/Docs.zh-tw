@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444308"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags 列舉
-Contains values that describe run-time features of an assembly.  
+包含描述元件執行時間功能的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,21 +40,21 @@ typedef enum {
   
 |成員|描述|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|Specifies that exported type definitions are implicit within the files that comprise the assembly. In the .NET Framework versions 1.0 and 1.1, this value is always assumed to be set.|  
-|`afImplicitResources`|Specifies that resource definitions are implicit within the files that comprise the assembly. In the .NET Framework 1.0 and 1.1, this value is always assumed to be set.|  
-|`afNonSideBySideAppDomain`|Specifies that the assembly cannot execute with other versions if they are running in the same application domain.|  
-|`afNonSideBySideProcess`|Specifies that the assembly cannot execute with other versions if they are running in the same process.|  
-|`afNonSideBySideMachine`|Specifies that the assembly cannot execute with other versions if they are running on the same computer.|  
+|`afImplicitExportedTypes`|指定匯出的類型定義在組成元件的檔案中是隱含的。 在 .NET Framework 版本1.0 和1.1 中，一律假設已設定此值。|  
+|`afImplicitResources`|指定資源定義在組成元件的檔案中是隱含的。 在 .NET Framework 1.0 和1.1 中，一律假設已設定此值。|  
+|`afNonSideBySideAppDomain`|指定如果元件在相同的應用程式域中執行，則無法與其他版本一起執行。|  
+|`afNonSideBySideProcess`|指定如果元件在相同的進程中執行，則無法與其他版本一起執行。|  
+|`afNonSideBySideMachine`|指定如果元件在同一部電腦上執行，則無法與其他版本一起執行。|  
   
 ## <a name="remarks"></a>備註  
- The values between 0x0010 and 0x0070, inclusive, are used to describe side-by-side compatibility features of the referenced assembly. If none of these values are set, the assembly is assumed to be side-by-side compatible.  
+ 0x0010 和0x0070 之間的值（含）是用來描述所參考元件的並存相容性功能。 如果未設定這些值，則會假設元件與並存相容。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** MsCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

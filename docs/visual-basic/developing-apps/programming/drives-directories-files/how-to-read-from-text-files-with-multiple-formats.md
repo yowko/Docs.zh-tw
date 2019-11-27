@@ -1,5 +1,5 @@
 ---
-title: 'How to: Read from text files with multiple formats'
+title: 如何：從具有多種格式的文字檔讀取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
@@ -18,13 +18,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74334577"
 ---
-# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>How to: Read from fext files with multiple formats in Visual Basic
+# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>如何：在 Visual Basic 中使用多種格式從 fext 檔案讀取
 
 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 物件可讓您輕鬆有效率地剖析結構化文字檔，例如記錄檔。 您可以使用 `PeekChars` 方法來處理具有多種格式的檔案，以在剖析整個檔案時判斷每行格式。
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>剖析具有多種格式的文字檔
 
-1. Add a text file named *testfile.txt* to your project. Add the following content to the text file:
+1. 將名為*testfile.txt*的文字檔新增至您的專案。 將下列內容新增至文字檔：
 
     ```text
     Err  1001 Cannot access resource.
@@ -53,7 +53,7 @@ ms.locfileid: "74334577"
 
 ## <a name="example"></a>範例
 
-The following is the complete example that reads from the file `testfile.txt`:
+以下是從檔案讀取 `testfile.txt`的完整範例：
 
  [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]
 

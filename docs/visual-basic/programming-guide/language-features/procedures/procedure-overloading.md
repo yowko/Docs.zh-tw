@@ -26,65 +26,65 @@ ms.locfileid: "74352591"
 ---
 # <a name="procedure-overloading-visual-basic"></a>程序多載化 (Visual Basic)
 
-*Overloading* a procedure means defining it in multiple versions, using the same name but different parameter lists. The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name. You do this by varying the parameter list.
+多載程式表示使用相同名稱但不同的參數清單，在多個版本中定義它。 多載的目的是要定義程式的數個緊密相關版本，而不需要依名稱區分。 您可以藉由改變參數清單來執行這項操作。
 
-## <a name="overloading-rules"></a>Overloading Rules
+## <a name="overloading-rules"></a>多載規則
 
-When you overload a procedure, the following rules apply:
+當您多載程式時，適用下列規則：
 
-- **Same Name**. Each overloaded version must use the same procedure name.
+- **相同名稱**。 每個多載的版本都必須使用相同的程式名稱。
 
-- **Different Signature**. Each overloaded version must differ from all other overloaded versions in at least one of the following respects:
+- **不同**的簽章。 每個多載的版本都必須與所有其他多載版本的差異，至少為下列其中一個方面：
 
-  - Number of parameters
+  - 參數數目
 
-  - Order of the parameters
+  - 參數的順序
 
-  - Data types of the parameters
+  - 參數的資料類型
 
-  - Number of type parameters (for a generic procedure)
+  - 型別參數的數目（適用于泛型程式）
 
-  - Return type (only for a conversion operator)
+  - 傳回類型（僅適用于轉換運算子）
 
-  Together with the procedure name, the preceding items are collectively called the *signature* of the procedure. When you call an overloaded procedure, the compiler uses the signature to check that the call correctly matches the definition.
+  加上程式名稱，前面的專案統稱為*程式的簽*章。 當您呼叫多載程式時，編譯器會使用簽章來檢查呼叫是否正確符合定義。
 
-- **Items Not Part of Signature**. You cannot overload a procedure without varying the signature. In particular, you cannot overload a procedure by varying only one or more of the following items:
+- **專案不是簽章的一部分**。 您無法多載程式，而不會改變簽章。 特別的是，您無法藉由只改變下列一個或多個專案，來多載程式：
 
-  - Procedure modifier keywords, such as `Public`, `Shared`, and `Static`
+  - 程式修飾詞關鍵字，例如 `Public`、`Shared`和 `Static`
 
-  - Parameter or type parameter names
+  - 參數或類型參數名稱
 
-  - Type parameter constraints (for a generic procedure)
+  - 類型參數條件約束（適用于泛型程式）
 
-  - Parameter modifier keywords, such as `ByRef` and `Optional`
+  - 參數修飾詞關鍵字，例如 `ByRef` 和 `Optional`
 
-  - Whether it returns a value
+  - 是否傳回值
 
-  - The data type of the return value (except for a conversion operator)
+  - 傳回值的資料類型（轉換運算子除外）
 
-  The items in the preceding list are not part of the signature. Although you cannot use them to differentiate between overloaded versions, you can vary them among overloaded versions that are properly differentiated by their signatures.
+  上述清單中的專案不是簽章的一部分。 雖然您無法使用它們來區別多載的版本，但您可以在多載的版本中，根據其簽章適當地區分它們。
 
-- **Late-Bound Arguments**. If you intend to pass a late bound object variable to an overloaded version, you must declare the appropriate parameter as <xref:System.Object>.
+- **晚期繫結引數**。 如果您想要將晚期繫結物件變數傳遞至多載版本，您必須將適當的參數宣告為 <xref:System.Object>。
 
-## <a name="multiple-versions-of-a-procedure"></a>Multiple Versions of a Procedure
+## <a name="multiple-versions-of-a-procedure"></a>程式的多個版本
 
-Suppose you are writing a `Sub` procedure to post a transaction against a customer's balance, and you want to be able to refer to the customer either by name or by account number. To accommodate this, you can define two different `Sub` procedures, as in the following example:
+假設您正在撰寫一個 `Sub` 程式，以根據客戶的餘額來張貼交易，而且您希望能夠依名稱或帳戶號碼來參考客戶。 為了配合此，您可以定義兩個不同的 `Sub` 程式，如下列範例所示：
 
 [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]
 
-### <a name="overloaded-versions"></a>Overloaded Versions
+### <a name="overloaded-versions"></a>多載版本
 
-An alternative is to overload a single procedure name. You can use the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword to define a version of the procedure for each parameter list, as follows:
+另一個方法是多載單一程式名稱。 您可以使用[Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)關鍵字，為每個參數清單定義程式的版本，如下所示：
 
 [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]
 
-#### <a name="additional-overloads"></a>Additional Overloads
+#### <a name="additional-overloads"></a>其他多載
 
-If you also wanted to accept a transaction amount in either `Decimal` or `Single`, you could further overload `post` to allow for this variation. If you did this to each of the overloads in the preceding example, you would have four `Sub` procedures, all with the same name but with four different signatures.
+如果您也想要接受 `Decimal` 或 `Single`中的交易量，您可以進一步多載 `post`，以允許這種變化。 如果您對上述範例中的每個多載執行此操作，則會有四個 `Sub` 程式，全都具有相同的名稱，但具有四個不同的簽章。
 
-## <a name="advantages-of-overloading"></a>Advantages of Overloading
+## <a name="advantages-of-overloading"></a>多載的優點
 
-The advantage of overloading a procedure is in the flexibility of the call. To use the `post` procedure declared in the preceding example, the calling code can obtain the customer identification as either a `String` or an `Integer`, and then call the same procedure in either case. 下面這個範例可說明這點：
+多載程式的優點是呼叫的彈性。 若要使用上述範例中所宣告的 `post` 程式，呼叫程式碼可以取得客戶識別做為 `String` 或 `Integer`，然後在任一情況下呼叫相同的程式。 下面這個範例可說明這點：
 
 [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]
 
@@ -100,4 +100,4 @@ The advantage of overloading a procedure is in the flexibility of the call. To u
 - [多載化程序的考慮因素](./considerations-in-overloading-procedures.md)
 - [多載解析](./overload-resolution.md)
 - [多載](../../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic 中的泛型型別](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

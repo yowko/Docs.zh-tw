@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348060"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface 陳述式 (Visual Basic)
-Declares the name of an interface and introduces the definitions of the members that the interface comprises.  
+宣告介面的名稱，並引進介面所組成的成員定義。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,80 +37,80 @@ End Interface
   
 |詞彙|定義|  
 |---|---|  
-|`attributelist`|選擇項。 See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|選擇項。 可以是下列其中一項：<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-  [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> 請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`Shadows`|選擇項。 See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`name`|必要項。 Name of this interface. 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`Of`|選擇項。 Specifies that this is a generic interface.|  
-|`typelist`|Required if you use the [Of](../../../visual-basic/language-reference/statements/of-clause.md) keyword. List of type parameters for this interface. Optionally, each type parameter can be declared variant by using `In` and `Out` generic modifiers. See [Type List](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|選擇項。 Indicates that this interface inherits the attributes and members of another interface or interfaces. See [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
-|`interfacenames`|Required if you use the `Inherits` statement. The names of the interfaces from which this interface derives.|  
-|`modifiers`|選擇項。 Appropriate modifiers for the interface member being defined.|  
-|`Property`|選擇項。 Defines a property that is a member of the interface.|  
-|`Function`|選擇項。 Defines a `Function` procedure that is a member of the interface.|  
-|`Sub`|選擇項。 Defines a `Sub` procedure that is a member of the interface.|  
-|`Event`|選擇項。 Defines an event that is a member of the interface.|  
-|`Interface`|選擇項。 Defines an interface that is a nested within this interface. The nested interface definition must terminate with an `End Interface` statement.|  
-|`Class`|選擇項。 Defines a class that is a member of the interface. The member class definition must terminate with an `End Class` statement.|  
-|`Structure`|選擇項。 Defines a structure that is a member of the interface. The member structure definition must terminate with an `End Structure` statement.|  
-|`membername`|Required for each property, procedure, event, interface, class, or structure defined as a member of the interface. 成員的名稱。|  
-|`End Interface`|Terminates the `Interface` definition.|  
+|`attributelist`|選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
+|`accessmodifier`|選擇性。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私](../../../visual-basic/language-reference/modifiers/private.md)用<br />-  [受保護的 Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [私用保護](../../language-reference/modifiers/private-protected.md)<br /><br /> 請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`Shadows`|選擇性。 請參閱[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
+|`name`|必要。 此介面的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`Of`|選擇性。 指定這是泛型介面。|  
+|`typelist`|如果您使用 of 關鍵字，則[為必要項](../../../visual-basic/language-reference/statements/of-clause.md)。 此介面的型別參數清單。 或者，您可以使用 `In` 和 `Out` 泛型修飾詞，將每個型別參數宣告為 variant。 請參閱[類型清單](../../../visual-basic/language-reference/statements/type-list.md)。|  
+|`Inherits`|選擇性。 指出此介面會繼承另一個介面或介面的屬性和成員。 請參閱[Inherits 語句](../../../visual-basic/language-reference/statements/inherits-statement.md)。|  
+|`interfacenames`|如果您使用 `Inherits` 語句，則為必要。 這個介面衍生自的介面名稱。|  
+|`modifiers`|選擇性。 定義之介面成員的適當修飾詞。|  
+|`Property`|選擇性。 定義屬於介面成員的屬性。|  
+|`Function`|選擇性。 定義屬於介面成員的 `Function` 程式。|  
+|`Sub`|選擇性。 定義屬於介面成員的 `Sub` 程式。|  
+|`Event`|選擇性。 定義屬於介面成員的事件。|  
+|`Interface`|選擇性。 定義在此介面內嵌套的介面。 嵌套介面定義必須以 `End Interface` 語句終止。|  
+|`Class`|選擇性。 定義屬於介面成員的類別。 成員類別定義必須以 `End Class` 語句終止。|  
+|`Structure`|選擇性。 定義屬於介面成員的結構。 成員結構定義必須以 `End Structure` 語句終止。|  
+|`membername`|定義為介面成員的每個屬性、程式、事件、介面、類別或結構都是必要專案。 成員的名稱。|  
+|`End Interface`|終止 `Interface` 定義。|  
   
 ## <a name="remarks"></a>備註  
- An *interface* defines a set of members, such as properties and procedures, that classes and structures can implement. The interface defines only the signatures of the members and not their internal workings.  
+ *介面*會定義類別和結構可以實作為的一組成員，例如屬性和程式。 介面只會定義成員的簽章，而不是其內部工作的簽章。  
   
- A class or structure implements the interface by supplying code for every member defined by the interface. Finally, when the application creates an instance from that class or structure, an object exists and runs in memory. For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) and [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ 類別或結構會藉由提供介面所定義之每個成員的程式碼，來實作為介面。 最後，當應用程式從該類別或結構建立實例時，物件存在並在記憶體中執行。 如需詳細資訊，請參閱[物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)和[介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。  
   
- You can use `Interface` only at namespace or module level. This means the *declaration context* for an interface must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block. 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+ 您只能在命名空間或模組層級使用 `Interface`。 這表示介面的宣告*內容*必須是原始程式檔、命名空間、類別、結構、模組或介面，而且不能是程式或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
   
- Interfaces default to [Friend](../../../visual-basic/language-reference/modifiers/friend.md) access. You can adjust their access levels with the access modifiers. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ 介面預設為[Friend](../../../visual-basic/language-reference/modifiers/friend.md)存取。 您可以使用存取修飾詞來調整其存取層級。 如需詳細資訊，請參閱[Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
 ## <a name="rules"></a>規則  
   
-- **Nesting Interfaces.** You can define one interface within another. The outer interface is called the *containing interface*, and the inner interface is called a *nested interface*.  
+- **嵌套介面。** 您可以在另一個中定義一個介面。 外部介面稱為*包含介面*，而內部介面稱為「*嵌套介面*」。  
   
-- **Member Declaration.** When you declare a property or procedure as a member of an interface, you are defining only the *signature* of that property or procedure. This includes the element type (property or procedure), its parameters and parameter types, and its return type. Because of this, the member definition uses only one line of code, and terminating statements such as `End Function` or `End Property` are not valid in an interface.  
+- **成員宣告。** 當您將屬性或程式宣告為介面的成員時，您只會*定義該屬性或程式的簽*章。 這包括元素類型（屬性或程式）、其參數和參數類型，以及其傳回類型。 因此，成員定義只會使用一行程式碼，而 `End Function` 或 `End Property` 之類的終止語句在介面中是不正確。  
   
-     In contrast, when you define an enumeration or structure, or a nested class or interface, it is necessary to include their data members.  
+     相反地，當您定義列舉或結構或是嵌套類別或介面時，必須包含其資料成員。  
   
-- **Member Modifiers.** You cannot use any access modifiers when defining module members, nor can you specify [Shared](../../../visual-basic/language-reference/modifiers/shared.md) or any procedure modifier except [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md). You can declare any member with [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md), and you can use [Default](../../../visual-basic/language-reference/modifiers/default.md) when defining a property, as well as [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) or [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
+- **成員修飾詞。** 您不能在定義模組成員時使用任何存取修飾詞，也不能指定[共用](../../../visual-basic/language-reference/modifiers/shared.md)或任何程式修飾詞，但多[載除外。](../../../visual-basic/language-reference/modifiers/overloads.md) 您可以使用[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)宣告任何成員，而且可以在定義屬性時使用[預設值](../../../visual-basic/language-reference/modifiers/default.md)，以及[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)或[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)。  
   
-- **繼承**： If the interface uses the [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), you can specify one or more base interfaces. You can inherit from two interfaces even if they each define a member with the same name. If you do so, the implementing code must use name qualification to specify which member it is implementing.  
+- **繼承**： 如果介面使用[Inherits 語句](../../../visual-basic/language-reference/statements/inherits-statement.md)，您可以指定一或多個基底介面。 您可以從兩個介面繼承，即使它們各自訂具有相同名稱的成員。 如果您這樣做，則執行程式碼必須使用名稱限定性來指定它所要執行的成員。  
   
-     An interface cannot inherit from another interface with a more restrictive access level. For example, a `Public` interface cannot inherit from a `Friend` interface.  
+     介面無法繼承自具有更嚴格存取層級的另一個介面。 例如，`Public` 介面無法繼承自 `Friend` 介面。  
   
-     An interface cannot inherit from an interface nested within it.  
+     介面無法繼承自其內所嵌套的介面。  
   
-- **Implementation.** When a class uses the [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) statement to implement this interface, it must implement every member defined within the interface. Furthermore, each signature in the implementing code must exactly match the corresponding signature defined in this interface. However, the name of the member in the implementing code does not have to match the member name as defined in the interface.  
+- **實作.** 當類別使用[Implements](../../../visual-basic/language-reference/statements/implements-clause.md)語句來執行此介面時，它必須執行介面中定義的每個成員。 此外，執行程式碼中的每個簽章都必須完全符合此介面中定義的對應簽章。 不過，執行程式碼中的成員名稱不需要符合介面中定義的成員名稱。  
   
-     When a class is implementing a procedure, it cannot designate the procedure as `Shared`.  
+     當類別正在執行程式時，它無法將程式指定為 `Shared`。  
   
-- **Default Property.** An interface can specify at most one property as its *default property*, which can be referenced without using the property name. You specify such a property by declaring it with the [Default](../../../visual-basic/language-reference/modifiers/default.md) modifier.  
+- **Default 屬性。** 介面最多可以指定一個屬性做為其*預設屬性*，而不需要使用屬性名稱即可加以參考。 您可以使用[預設](../../../visual-basic/language-reference/modifiers/default.md)的修飾詞來宣告這類屬性，以指定此屬性。  
   
-     Notice that this means that an interface can define a default property only if it inherits none.  
+     請注意，這表示介面只有在繼承 none 時，才可以定義預設屬性。  
   
 ## <a name="behavior"></a>行為  
   
-- **Access Level.** All interface members implicitly have [Public](../../../visual-basic/language-reference/modifiers/public.md) access. You cannot use any access modifier when defining a member. However, a class implementing the interface can declare an access level for each implemented member.  
+- **存取層級。** 所有介面成員都隱含具有[公用](../../../visual-basic/language-reference/modifiers/public.md)存取權。 定義成員時，您無法使用任何存取修飾詞。 不過，執行介面的類別可以宣告每個已實成員的存取層級。  
   
-     If you assign a class instance to a variable, the access level of its members can depend on whether the data type of the variable is the underlying interface or the implementing class. 下列範例將說明這點。  
+     如果您將類別實例指派給變數，其成員的存取層級可能取決於變數的資料類型為基礎介面或實作為類別。 下列範例將說明這點。  
   
      [!code-vb[VbVbalrStatements#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#39)]  
   
-     If you access class members through `varAsInterface`, they all have public access. However, if you access members through `varAsClass`, the `Sub` procedure `doSomething` has private access.  
+     如果您透過 `varAsInterface`存取類別成員，則它們都具有公用存取權。 不過，如果您透過 `varAsClass`存取成員，則 `Sub` 程式 `doSomething` 具有私用存取權。  
   
-- **Scope.** An interface is in scope throughout its namespace, class, structure, or module.  
+- **範圍.** 介面會在其命名空間、類別、結構或模組的範圍內。  
   
-     The scope of every interface member is the entire interface.  
+     每個介面成員的範圍都是整個介面。  
   
-- **Lifetime.** An interface does not itself have a lifetime, nor do its members. When a class implements an interface and an object is created as an instance of that class, the object has a lifetime within the application in which it is running. For more information, see "Lifetime" in [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md).  
+- **期.** 介面本身不具有存留期，也不會有其成員。 當類別執行介面，並將物件建立為該類別的實例時，物件在其執行所在的應用程式內會有存留期。 如需詳細資訊，請參閱[Class 語句](../../../visual-basic/language-reference/statements/class-statement.md)中的「存留期」。  
   
 ## <a name="example"></a>範例  
- The following example uses the `Interface` statement to define an interface named `thisInterface`, which must be implemented with a `Property` statement and a `Function` statement.  
+ 下列範例會使用 `Interface` 語句來定義名為 `thisInterface`的介面，它必須使用 `Property` 語句和 `Function` 語句來執行。  
   
  [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  
   
- Note that the `Property` and `Function` statements do not introduce blocks ending with `End Property` and `End Function` within the interface. The interface defines only the signatures of its members. The full `Property` and `Function` blocks appear in a class that implements `thisInterface`.  
+ 請注意，`Property` 和 `Function` 語句不會在介面中引進以 `End Property` 和 `End Function` 結尾的區塊。 介面只會定義其成員的簽章。 完整的 `Property` 和 `Function` 區塊會出現在執行 `thisInterface`的類別中。  
   
 ## <a name="see-also"></a>請參閱
 
@@ -121,7 +121,7 @@ End Interface
 - [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic 中的泛型型別](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [泛型介面中的變異數](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
 - [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
 - [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

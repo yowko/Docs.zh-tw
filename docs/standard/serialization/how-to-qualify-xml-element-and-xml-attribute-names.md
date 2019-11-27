@@ -9,16 +9,16 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 04e9dd3c135c516fa5554b9b547306337fb6a668
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f79caf6ff295d793c615b17d387cdd165e440e7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755395"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353104"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>HOW TO：限定 XML 元素和 XML 屬性名稱
 
-執行個體所包含的 XML 命名空間<xref:System.Xml.Serialization.XmlSerializerNamespaces>類別必須符合全球資訊網協會 (W3C) 規格[Namespaces in XML](https://www.w3.org/TR/REC-xml-names/)。
+<xref:System.Xml.Serialization.XmlSerializerNamespaces> 類別的實例所包含的 XML 命名空間，必須符合[在 XML 中稱為命名空間](https://www.w3.org/TR/REC-xml-names/)的全球資訊網協會（W3C）規格。
 
 XML 命名空間提供限定 XML 文件中 XML 項目和 XML 屬性名稱的方法。 限定名稱 (Qualified Name) 是由前置詞和本機名稱所組成，並以半形冒號 (:) 隔開。 前置詞的作用只是個替代符號 (Placeholder)，它會對應到指定命名空間的 URI。 通用管理的 URI 命名空間和本機名稱的組合會產生保證是通用唯一的名稱。
 
@@ -40,8 +40,9 @@ XML 命名空間提供限定 XML 文件中 XML 項目和 XML 屬性名稱的方�
 
 ## <a name="example"></a>範例
 
-下列範例建立 `XmlSerializerNamespaces`，並在物件加入兩個前置詞和命名空間配對。 程式碼建立用來系列化 `XmlSerializer` 類別執行個體的 `Books`。 程式碼以 `Serialize``XmlSerializerNamespaces`呼叫  方法，讓 XML 能包含有前置詞的命名空間。
+下列範例建立 `XmlSerializerNamespaces`，並在物件加入兩個前置詞和命名空間配對。 程式碼建立用來系列化 `XmlSerializer` 類別執行個體的 `Books`。 程式碼以 `Serialize``XmlSerializerNamespaces`呼叫 {3} 方法，讓 XML 能包含有前置詞的命名空間。
 
+<!-- TODO: THE FOLLOWING VB SNIPPET ISN'T CORRECT!! -->
 ```vb
 Option Explicit
 public class Price
@@ -169,13 +170,13 @@ public class Book
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [XML 結構描述定義工具和 XML 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [XML 序列化簡介](introducing-xml-serialization.md)
 - [XmlSerializer 類別](xref:System.Xml.Serialization.XmlSerializer)
 - [可控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)
-- [如何：指定 XML Stream 的替代項目名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [如何：將物件序列化](how-to-serialize-an-object.md)
+- [如何：指定 XML 資料流的替代元素名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [如何：序列化物件](how-to-serialize-an-object.md)
 - [如何：還原序列化物件](how-to-deserialize-an-object.md)

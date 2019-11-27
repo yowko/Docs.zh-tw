@@ -12,23 +12,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349582"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub 或 Function 未定義 (Visual Basic)
-A `Sub` or `Function` must be defined in order to be called. 可能導致本錯誤的原因包括：  
+必須定義 `Sub` 或 `Function`，才能呼叫。 可能導致本錯誤的原因包括：  
   
-- Misspelling the procedure name.  
+- 程式名稱拼錯。  
   
-- Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.  
+- 嘗試從另一個專案呼叫程式，但未在 [**參考**] 對話方塊中明確加入該專案的參考。  
   
-- Specifying a procedure that is not visible to the calling procedure.  
+- 指定呼叫程式看不到的程式。  
   
-- Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.  
+- 宣告不在指定之程式庫或程式碼資源中的 Windows 動態連結程式庫（DLL）常式或 Macintosh 程式碼資源常式。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. Make sure that the procedure name is spelled correctly.  
+1. 請確定程式名稱的拼寫正確。  
   
-2. Find the name of the project containing the procedure you want to call in the **References** dialog box. If it does not appear, click the **Browse** button to search for it. Select the check box to the left of the project name, and then click **OK**.  
+2. 在 [**參考**] 對話方塊中，尋找包含您要呼叫之程式的專案名稱。 如果沒有出現，請按一下 [**流覽]** 按鈕來搜尋它。 選取專案名稱左邊的核取方塊，然後按一下 **[確定]** 。  
   
-3. Check the name of the routine.  
+3. 檢查常式的名稱。  
   
 ## <a name="see-also"></a>請參閱
 

@@ -16,28 +16,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341226"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>以傳值或傳址方式傳遞引數的差別 (Visual Basic)
-When you pass one or more arguments to a procedure, each argument corresponds to an underlying programming element in the calling code. You can pass either the value of this underlying element, or a reference to it. This is known as the *passing mechanism*.  
+當您將一或多個引數傳遞至程式時，每個引數都會對應至呼叫程式碼中的基礎程式設計項目。 您可以傳遞這個基礎元素的值，或它的參考。 這就是所謂的*傳遞機制*。  
   
 ## <a name="passing-by-value"></a>以傳值方式傳遞  
- You pass an argument *by value* by specifying the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic copies the value of the underlying programming element into a local variable in the procedure. The procedure code does not have any access to the underlying element in the calling code.  
+ 您可以藉由在程序定義中指定對應參數的[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)關鍵字，以傳*值*方式傳遞引數。 當您使用這個傳遞機制時，Visual Basic 會將基礎程式設計項目的值複製到程式中的區域變數。 程式碼沒有呼叫程式碼中基礎元素的任何存取權。  
   
-## <a name="passing-by-reference"></a>Passing by Reference  
- You pass an argument *by reference* by specifying the [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic gives the procedure a direct reference to the underlying programming element in the calling code.  
+## <a name="passing-by-reference"></a>以傳址方式傳遞  
+ 您可以在程序定義中指定對應參數的[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)關鍵字，以傳*址方式*傳遞引數。 當您使用這個傳遞機制時，Visual Basic 可讓程式直接參考呼叫程式碼中的基礎程式設計項目。  
   
-## <a name="passing-mechanism-and-element-type"></a>Passing Mechanism and Element Type  
- The choice of passing mechanism is not the same as the classification of the underlying element type. Passing by value or by reference refers to what Visual Basic supplies to the procedure code. A value type or reference type refers to how a programming element is stored in memory.  
+## <a name="passing-mechanism-and-element-type"></a>傳遞機制和元素類型  
+ 傳遞機制的選擇與基礎元素類型的分類不同。 以傳值或傳址方式傳遞是指 Visual Basic 提供給程式碼的內容。 實值型別或參考型別是指程式設計專案在記憶體中的儲存方式。  
   
- However, the passing mechanism and element type are interrelated. The value of a reference type is a pointer to the data elsewhere in memory. This means that when you pass a reference type by value, the procedure code has a pointer to the underlying element's data, even though it cannot access the underlying element itself. For example, if the element is an array variable, the procedure code does not have access to the variable itself, but it can access the array members.  
+ 不過，傳遞機制和元素類型是相互關聯的。 參考型別的值是記憶體中其他位置的資料指標。 這表示當您以傳值方式傳遞參考型別時，程式碼會有基礎專案資料的指標，即使它無法存取基礎元素本身也一樣。 例如，如果元素是陣列變數，程式碼就不會有變數本身的存取權，但它可以存取陣列成員。  
   
-## <a name="ability-to-modify"></a>Ability to Modify  
- When you pass a nonmodifiable element as an argument, the procedure can never modify it in the calling code, whether it is passed `ByVal` or `ByRef`.  
+## <a name="ability-to-modify"></a>能夠修改  
+ 當您傳遞無法修改的元素做為引數時，不論是傳遞 `ByVal` 或 `ByRef`，程式都不能在呼叫程式碼中加以修改。  
   
- For a modifiable element, the following table summarizes the interaction between the element type and the passing mechanism.  
+ 對於可修改的元素，下表摘要說明專案類型與傳遞機制之間的互動。  
   
-|項目類型|Passed `ByVal`|Passed `ByRef`|  
+|項目類型|已通過 `ByVal`|已通過 `ByRef`|  
 |------------------|--------------------|--------------------|  
-|Value type (contains only a value)|The procedure cannot change the variable or any of its members.|The procedure can change the variable and its members.|  
-|Reference type (contains a pointer to a class or structure instance)|The procedure cannot change the variable but can change members of the instance to which it points.|The procedure can change the variable and members of the instance to which it points.|  
+|實值型別（只包含值）|程式無法變更變數或其任何成員。|程式可以變更變數及其成員。|  
+|參考型別（包含類別或結構實例的指標）|程式無法變更變數，但是可以變更它所指向之實例的成員。|此程式可以變更其指向之實例的變數和成員。|  
   
 ## <a name="see-also"></a>請參閱
 

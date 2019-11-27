@@ -26,38 +26,38 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345319"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic 中的遮蔽功能
-When two programming elements share the same name, one of them can hide, or *shadow*, the other one. In such a situation, the shadowed element is not available for reference; instead, when your code uses the element name, the Visual Basic compiler resolves it to the shadowing element.  
+當兩個程式設計項目共用相同名稱時，其中一個專案可以隱藏或*遮蔽*另一個。 在這種情況下，陰影元素無法供參考;相反地，當您的程式碼使用元素名稱時，Visual Basic 編譯器會將它解析成遮蔽專案。  
   
-## <a name="purpose"></a>用途  
- The main purpose of shadowing is to protect the definition of your class members. The base class might undergo a change that creates an element with the same name as one you have already defined. If this happens, the `Shadows` modifier forces references through your class to be resolved to the member you defined, instead of to the new base class element.  
+## <a name="purpose"></a>目的  
+ 遮蔽的主要目的是保護類別成員的定義。 基類可能會進行一項變更，以建立一個與您已定義的專案名稱相同的元素。 如果發生這種情況，`Shadows` 修飾詞會強制透過類別的參考解析成您所定義的成員，而不是新的基類元素。  
   
-## <a name="types-of-shadowing"></a>Types of Shadowing  
- An element can shadow another element in two different ways. The shadowing element can be declared inside a subregion of the region containing the shadowed element, in which case the shadowing is accomplished *through scope*. Or a deriving class can redefine a member of a base class, in which case the shadowing is done *through inheritance*.  
+## <a name="types-of-shadowing"></a>遮蔽的類型  
+ 元素可以用兩種不同的方式來遮蔽另一個專案。 遮蔽專案可以在包含陰影專案之區域的子領域內宣告，在此情況下，遮蔽會*透過範圍*來完成。 或者，衍生類別可以重新定義基類的成員，在這種情況下，會*透過繼承*來完成遮蔽。  
   
-### <a name="shadowing-through-scope"></a>Shadowing Through Scope  
- It is possible for programming elements in the same module, class, or structure to have the same name but different scope. When two elements are declared in this manner and the code refers to the name they share, the element with the narrower scope shadows the other element (block scope is the narrowest).  
+### <a name="shadowing-through-scope"></a>透過範圍遮蔽  
+ 相同模組、類別或結構中的程式設計專案可能具有相同的名稱，但範圍不同。 當以這種方式宣告兩個專案，且程式碼參考其共用的名稱時，具有較窄範圍的元素會遮蔽另一個元素（區塊範圍是最小的）。  
   
- For example, a module can define a `Public` variable named `temp`, and a procedure within the module can declare a local variable also named `temp`. References to `temp` from within the procedure access the local variable, while references to `temp` from outside the procedure access the `Public` variable. In this case, the procedure variable `temp` shadows the module variable `temp`.  
+ 例如，模組可以定義名為 `temp`的 `Public` 變數，而模組內的程式可以宣告名為 `temp`的本機變數。 從程式內 `temp` 的參考會存取本機變數，而從程式外部 `temp` 的參考則會存取 `Public` 變數。 在此情況下，程式變數 `temp` 會遮蔽模組變數 `temp`。  
   
- The following illustration shows two variables, both named `temp`. The local variable `temp` shadows the member variable `temp` when accessed from within its own procedure `p`. However, the `MyClass` keyword bypasses the shadowing and accesses the member variable.  
+ 下圖顯示兩個名為 `temp`的變數。 本機變數 `temp` 會遮蔽成員變數，`temp` 從其本身的程式 `p`存取時。 不過，`MyClass` 關鍵字會略過遮蔽並存取成員變數。  
   
- ![Graphic that shows shadowing through scope.](./media/shadowing/shadow-scope-diagram.gif)
+ ![顯示透過範圍遮蔽的圖形。](./media/shadowing/shadow-scope-diagram.gif)
   
- For an example of shadowing through scope, see [How to: Hide a Variable with the Same Name as Your Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
+ 如需透過範圍進行遮蔽的範例，請參閱[如何：隱藏與您的變數名稱相同的變數](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)。  
   
-### <a name="shadowing-through-inheritance"></a>Shadowing Through Inheritance  
- If a derived class redefines a programming element inherited from a base class, the redefining element shadows the original element. You can shadow any type of declared element, or set of overloaded elements, with any other type. For example, an `Integer` variable can shadow a `Function` procedure. If you shadow a procedure with another procedure, you can use a different parameter list and a different return type.  
+### <a name="shadowing-through-inheritance"></a>透過繼承進行遮蔽  
+ 如果衍生類別重新定義繼承自基類的程式設計專案，重新定義元素會遮蔽原始專案。 您可以使用任何其他類型來遮蔽任何類型的已宣告元素或多載專案集。 例如，`Integer` 變數可以遮蔽 `Function` 程式。 如果您使用另一個程式來遮蔽程式，則可以使用不同的參數清單和不同的傳回型別。  
   
- The following illustration shows a base class `b` and a derived class `d` that inherits from `b`. The base class defines a procedure named `proc`, and the derived class shadows it with another procedure of the same name. The first `Call` statement accesses the shadowing `proc` in the derived class. However, the `MyBase` keyword bypasses the shadowing and accesses the shadowed procedure in the base class.  
+ 下圖顯示基類 `b`，以及繼承自 `b`的衍生類別 `d`。 基類會定義名為 `proc`的程式，而衍生的類別會使用相同名稱的另一個程式來遮蔽該程式。 第一個 `Call` 語句會存取衍生類別中的遮蔽 `proc`。 不過，`MyBase` 關鍵字會略過遮蔽，並存取基類中的陰影程式。  
   
  ![透過繼承遮蔽示意圖](./media/shadowing/shadowing-inherit-diagram.gif)  
   
- For an example of shadowing through inheritance, see [How to: Hide a Variable with the Same Name as Your Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) and [How to: Hide an Inherited Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
+ 如需透過繼承進行遮蔽的範例，請參閱[如何：隱藏與您的變數名稱相同的變數](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)和[如何：隱藏繼承的變數](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)。  
   
-#### <a name="shadowing-and-access-level"></a>Shadowing and Access Level  
- The shadowing element is not always accessible from the code using the derived class. For example, it might be declared `Private`. In such a case, shadowing is defeated and the compiler resolves any reference to the same element it would have if there had been no shadowing. This element is the accessible element the fewest derivational steps backward from the shadowing class. If the shadowed element is a procedure, the resolution is to the closest accessible version with the same name, parameter list, and return type.  
+#### <a name="shadowing-and-access-level"></a>遮蔽和存取層級  
+ 使用衍生類別時，程式碼不一定可以存取遮蔽元素。 例如，它可能會宣告 `Private`。 在這種情況下，遮蔽會失效，而編譯器會解析任何對相同專案的參考（如果沒有任何遮蔽）。 此元素是可存取的元素，這是從遮蔽類別回溯的最少 derivational 步驟。 如果遮蔽的專案是程式，則解決方式會是具有相同名稱、參數清單和傳回類型的最接近可存取版本。  
   
- The following example shows an inheritance hierarchy of three classes. Each class defines a `Sub` procedure `display`, and each derived class shadows the `display` procedure in its base class.  
+ 下列範例顯示三個類別的繼承階層架構。 每個類別都會定義一個 `Sub` 程式 `display`，而每個衍生類別都會在其基類中遮蔽 `display` 程式。  
   
 ```vb  
 Public Class firstClass  
@@ -92,23 +92,23 @@ Module callDisplay
 End Module  
 ```  
   
- In the preceding example, the derived class `secondClass` shadows `display` with a `Private` procedure. When module `callDisplay` calls `display` in `secondClass`, the calling code is outside `secondClass` and therefore cannot access the private `display` procedure. Shadowing is defeated, and the compiler resolves the reference to the base class `display` procedure.  
+ 在上述範例中，衍生類別 `secondClass` shadows `display` 加上 `Private` 程式。 當模組 `callDisplay` 在 `secondClass`中呼叫 `display` 時，呼叫程式碼會在 `secondClass` 外，因此無法存取私用 `display` 程式。 遮蔽會失效，而且編譯器會解析基類 `display` 程式的參考。  
   
- However, the further derived class `thirdClass` declares `display` as `Public`, so the code in `callDisplay` can access it.  
+ 不過，進一步的衍生類別 `thirdClass` 會將 `display` 宣告為 `Public`，因此 `callDisplay` 中的程式碼可以存取它。  
   
-## <a name="shadowing-and-overriding"></a>Shadowing and Overriding  
- Do not confuse shadowing with overriding. Both are used when a derived class inherits from a base class, and both redefine one declared element with another. But there are significant differences between the two. For a comparison, see [Differences Between Shadowing and Overriding](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md).  
+## <a name="shadowing-and-overriding"></a>遮蔽和覆寫  
+ 請勿將遮蔽與覆寫混淆。 當衍生類別繼承自基類時，會使用這兩個專案，而且這兩個專案都是以另一個宣告的元素重新定義。 但是兩者之間有顯著的差異。 如需比較，請參閱[遮蔽和覆寫之間的差異](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)。  
   
-## <a name="shadowing-and-overloading"></a>Shadowing and Overloading  
- If you shadow the same base class element with more than one element in your derived class, the shadowing elements become overloaded versions of that element. 如需詳細資訊，請參閱 [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)。  
+## <a name="shadowing-and-overloading"></a>遮蔽和多載  
+ 如果您在衍生類別中遮蔽具有多個專案的相同基類元素，則遮蔽專案會變成該元素的多載版本。 如需詳細資訊，請參閱 [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)。  
   
-## <a name="accessing-a-shadowed-element"></a>Accessing a Shadowed Element  
- When you access an element from a derived class, you normally do so through the current instance of that derived class, by qualifying the element name with the `Me` keyword. If your derived class shadows the element in the base class, you can access the base class element by qualifying it with the `MyBase` keyword.  
+## <a name="accessing-a-shadowed-element"></a>存取陰影元素  
+ 當您從衍生類別存取專案時，通常會透過使用 `Me` 關鍵字來限定專案名稱，藉此在該衍生類別的目前實例中執行此動作。 如果您的衍生類別會遮蔽基類中的專案，您可以使用 `MyBase` 關鍵字來限定基類元素，藉以存取該專案。  
   
- For an example of accessing a shadowed element, see [How to: Access a Variable Hidden by a Derived Class](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).  
+ 如需存取陰影元素的範例，請參閱[如何：存取衍生類別所隱藏的變數](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)。  
   
-### <a name="declaration-of-the-object-variable"></a>Declaration of the Object Variable  
- How you create the object variable can also affect whether the derived class accesses a shadowing element or the shadowed element. The following example creates two objects from a derived class, but one object is declared as the base class and the other as the derived class.  
+### <a name="declaration-of-the-object-variable"></a>物件變數的宣告  
+ 您建立物件變數的方式也會影響衍生類別是要存取遮蔽專案還是陰影元素。 下列範例會從衍生類別建立兩個物件，但是一個物件宣告為基類，另一個則做為衍生類別。  
   
 ```vb  
 Public Class baseCls  
@@ -135,12 +135,12 @@ Public Class useClasses
 End Class  
 ```  
   
- In the preceding example, the variable `basObj` is declared as the base class. Assigning a `dervCls` object to it constitutes a widening conversion and is therefore valid. However, the base class cannot access the shadowing version of the variable `z` in the derived class, so the compiler resolves `basObj.z` to the original base class value.  
+ 在上述範例中，變數 `basObj` 會宣告為基類。 將 `dervCls` 物件指派給它會構成擴輾轉換，因此是有效的。 不過，基底類別無法存取衍生類別中 `z` 變數的遮蔽版本，因此編譯器會將 `basObj.z` 解析為原始的基類值。  
   
 ## <a name="see-also"></a>請參閱
 
 - [對已宣告項目的參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [擴展和縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)

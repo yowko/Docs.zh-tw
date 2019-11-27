@@ -11,12 +11,12 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343509"
 ---
-# <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic compiler options listed alphabetically
-The Visual Basic command-line compiler is provided as an alternative to compiling programs from the Visual Studio integrated development environment (IDE). The following is a list of the Visual Basic command-line compiler options sorted alphabetically.  
+# <a name="visual-basic-compiler-options-listed-alphabetically"></a>依字母順序列出 Visual Basic 編譯器選項
+提供 Visual Basic 命令列編譯器，做為從 Visual Studio 整合式開發環境（IDE）編譯器的替代方案。 以下是依字母順序排序的 Visual Basic 命令列編譯器選項清單。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-|選項|用途|  
+|選項|目的|  
 |------------|-------------|  
 |[@ (指定回應檔)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|指定回應檔。|  
 |[-?](../../../visual-basic/reference/command-line-compiler/help.md)|顯示編譯器選項。 此命令的效用等同於指定 `-help` 選項。 未執行編譯。|  
@@ -25,27 +25,27 @@ The Visual Basic command-line compiler is provided as an alternative to compilin
 |`-analyzer`|從這個組件執行分析器 (簡短形式：-a)|  
 |.[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|指定 DLL 的基底位址。|  
 |[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|建立檔案，其中包含可簡化錯誤回報的資訊。|  
-|`-checksumalgorithm:<alg>`|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 (預設值) 或 SHA256。 <br>Due to collision problems with SHA1, Microsoft recommends SHA256 or better.|  
+|`-checksumalgorithm:<alg>`|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 (預設值) 或 SHA256。 <br>由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256 或更好的方式。|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|指定編譯過程中所有原始程式碼檔使用的字碼頁。|  
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|產生偵錯資訊。|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|定義條件式編譯的符號。|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|指定將要完整簽署還是部分簽署組件。|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|可讓編譯器輸出在輸入相同時編譯之間二進位內容相同的組件。|
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|將文件註解處理成 XML 檔案。|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Specifies how the Visual Basic compiler should report internal compiler errors.|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|指定 Visual Basic 編譯器應該如何報告內部編譯器錯誤。|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|指定要對齊輸出檔案區段的位置。|  
 |[-help](../../../visual-basic/reference/command-line-compiler/help.md)|顯示編譯器選項。 此命令的效用等同於指定 `-?` 選項。 未執行編譯。|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|指出特定可執行檔是否支援高熵位址空間配置隨機載入 (ASLR)。|  
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|從指定的組件匯入命名空間。|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|指定金鑰組的金鑰容器名稱，為組件提供強式名稱。|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|指定一個檔案，其中包含可為組件提供強式名稱的金鑰或金鑰組。|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Specify language version: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
-|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Specifies the location of assemblies referenced by the [-reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|指定語言版本： 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0。|  
+|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|指定[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)選項所參考之元件的位置。|  
 |[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|建立與 Managed 資源的連結。|  
-|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Specifies the class that contains the `Sub Main` procedure to use at startup.|  
+|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|指定類別，其中包含要在啟動時使用的 `Sub Main` 程式。|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|指定將包含模組的組件名稱。|  
 |`-modulename:<string>`|指定來源模組的名稱|  
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Sets the compiler to target the .NET Compact Framework.|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|設定編譯器以 .NET Compact Framework 為目標。|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|不使用 Vbc.rsp 進行編譯。|  
 |[-nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|隱藏編譯器橫幅資訊。|  
 |[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|使編譯器不要參考標準程式庫。|  
@@ -63,8 +63,8 @@ The Visual Basic command-line compiler is provided as an alternative to compilin
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|防止編譯器顯示語法相關錯誤和警告的程式碼。|  
 |[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|搜尋要編譯之原始程式檔的子目錄。|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|從組匯入中繼資料。|  
-|[-refonly](refonly-compiler-option.md)|Outputs only a reference assembly.|
-|[-refout](refout-compiler-option.md)|Specifies the output path of a reference assembly.|
+|[-refonly](refonly-compiler-option.md)|只輸出參考元件。|
+|[-refout](refout-compiler-option.md)|指定參考元件的輸出路徑。|
 |[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|停用整數的溢位檢查。|  
 |[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|將 Managed 資源內嵌至組件中。|  
 |[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|指定所有類型宣告的命名空間。|  

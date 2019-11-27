@@ -20,27 +20,27 @@ ms.locfileid: "74350012"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>如何：在變數中存放多個值 (Visual Basic)
 
-A variable holds more than one value if you declare it to be of a *composite data type*.
+如果您將變數宣告為*複合資料型別*，則會保留一個以上的值。
 
-[Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) include structures, arrays, and classes. A variable of a composite data type can hold a combination of elementary data types and other composite types. Structures and classes can hold code as well as data.
+[複合資料型別](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)包括結構、陣列和類別。 複合資料型別的變數可以保存基本資料類型和其他複合類型的組合。 結構和類別可以保存程式碼及資料。
 
-## <a name="to-hold-more-than-one-value-in-a-variable"></a>To hold more than one value in a variable
+## <a name="to-hold-more-than-one-value-in-a-variable"></a>在變數中保存一個以上的值
 
-1. Determine what composite data type you want to use for your variable.
+1. 決定您想要用於變數的複合資料型別。
 
-2. If the composite data type is not already defined, define it so that your variable can use it.
+2. 如果尚未定義複合資料型別，請定義它，讓您的變數可以使用它。
 
-    - Define a structure with a [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md).
+    - 使用[結構語句](../../../../visual-basic/language-reference/statements/structure-statement.md)定義結構。
 
-    - Define an array with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).
+    - 使用[Dim 語句](../../../../visual-basic/language-reference/statements/dim-statement.md)定義陣列。
 
-    - Define a class with a [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md).
+    - 使用[Class 語句](../../../../visual-basic/language-reference/statements/class-statement.md)定義類別。
 
-3. Declare your variable with a `Dim` statement.
+3. 使用 `Dim` 語句來宣告變數。
 
-4. Follow the variable name with an `As` clause.
+4. 請在變數名稱後面加上 `As` 子句。
 
-5. Follow the `As` keyword with the name of the appropriate composite data type.
+5. 請在 `As` 關鍵字後面加上適當的複合資料型別名稱。
 
 ## <a name="see-also"></a>請參閱
 

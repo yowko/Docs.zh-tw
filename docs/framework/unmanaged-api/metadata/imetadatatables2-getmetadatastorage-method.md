@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442649"
 ---
 # <a name="imetadatatables2getmetadatastorage-method"></a>IMetaDataTables2::GetMetaDataStorage 方法
-Gets the size and contents of the metadata stored in the specified section.  
+取得儲存在指定之區段中的中繼資料大小和內容。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,17 +36,17 @@ HRESULT GetMetaDataStorage (
   
 ## <a name="parameters"></a>參數  
  `ppvMd`  
- [in, out] A pointer to a metadata section.  
+ [in、out]中繼資料區段的指標。  
   
  `pcbMd`  
- [out] The size of the metadata stream.  
+ 脫銷中繼資料資料流程的大小。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

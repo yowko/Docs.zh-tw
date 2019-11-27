@@ -16,7 +16,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344274"
 ---
-# <a name="-help---visual-basic"></a>-help、-? (Visual Basic)
+# <a name="-help---visual-basic"></a>-help、-? （Visual Basic）
 顯示編譯器選項。  
   
 ## <a name="syntax"></a>語法  
@@ -32,13 +32,13 @@ ms.locfileid: "74344274"
 ```  
   
 ## <a name="remarks"></a>備註  
- If you include this option in a compilation, no output file is created and no compilation takes place.  
+ 如果您在編譯中包含此選項，則不會建立任何輸出檔案，也不會進行任何編譯。  
   
 > [!NOTE]
-> The `-help` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> Visual Studio 開發環境中無法使用 [`-help`] 選項;只有在從命令列編譯時，才可以使用它。  
   
 ## <a name="example"></a>範例  
- The following code displays help from the command line.  
+ 下列程式碼會顯示命令列的說明。  
   
 ```console  
 vbc -help  

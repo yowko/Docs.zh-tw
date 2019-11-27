@@ -15,20 +15,20 @@ ms.locfileid: "74347400"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>如何：摺疊和隱藏程式碼區段 (Visual Basic)
 
-The `#Region` directive enables you to collapse and hide sections of code in Visual Basic files. The `#Region` directive lets you specify a block of code that you can expand or collapse when using the Visual Studio code editor. The ability to hide code selectively makes your files more manageable and easier to read. 如需詳細資訊，請參閱[大綱](/visualstudio/ide/outlining)。
+`#Region` 指示詞可讓您折迭和隱藏 Visual Basic 檔案中的程式碼區段。 [`#Region`] 指示詞可讓您指定程式碼區塊，當您使用 Visual Studio 程式碼編輯器時，可以展開或折迭。 可以選擇性地隱藏程式碼，讓您的檔案更容易管理且更易於閱讀。 如需詳細資訊，請參閱[大綱](/visualstudio/ide/outlining)。
 
-`#Region` directives support code block semantics such as `#If...#End If`. This means they cannot begin in one block and end in another; the start and end must be in the same block. `#Region` directives are not supported within functions.
+`#Region` 指示詞支援程式碼區塊語義，例如 `#If...#End If`。 這表示它們不能在一個區塊中開始，也不能在另一個區塊中結束;開始和結束必須在相同的區塊中。 函數中不支援 `#Region` 指示詞。
 
-## <a name="to-collapse-and-hide-a-section-of-code"></a>To collapse and hide a section of code
+## <a name="to-collapse-and-hide-a-section-of-code"></a>折迭和隱藏程式碼區段
 
-Place the section of code between the `#Region` and `#End Region` statements, as in the following example:
+將程式碼區段放在 `#Region` 和 `#End Region` 語句之間，如下列範例所示：
 
 [!code-vb[VbVbalrConditionalComp#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#6)]
 
-The `#Region` block can be used multiple times in a code file; thus, users can define their own blocks of procedures and classes that can, in turn, be collapsed. `#Region` blocks can also be nested within other `#Region` blocks.
+在程式碼檔案中，可以多次使用 `#Region` 區塊;因此，使用者可以定義自己的程式和類別區塊，然後再折迭。 `#Region` 區塊也可以嵌套在其他 `#Region` 區塊內。
 
 > [!NOTE]
-> Hiding code does not prevent it from being compiled and does not affect `#If...#End If` statements.
+> 隱藏程式碼不會使其無法編譯，也不會影響 `#If...#End If` 語句。
 
 ## <a name="see-also"></a>請參閱
 

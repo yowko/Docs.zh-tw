@@ -12,14 +12,14 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349937"
 ---
 # <a name="arrays-summary-visual-basic"></a>陣列摘要 (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic 語言關鍵字和執行時間程式庫成員是依用途和使用來組織。  
   
 |動作|語言項目|  
 |------------|----------------------|  
-|Verify an array.|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|  
-|Declare and initialize an array.|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md), [Private](../../../visual-basic/language-reference/modifiers/private.md), [Public](../../../visual-basic/language-reference/modifiers/public.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
-|Find the limits of an array.|<xref:Microsoft.VisualBasic.Information.LBound%2A>、 <xref:Microsoft.VisualBasic.Information.UBound%2A>|  
-|Reinitialize an array|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
+|驗證陣列。|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|  
+|宣告和初始化陣列。|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md)、 [Private](../../../visual-basic/language-reference/modifiers/private.md)、 [Public](../../../visual-basic/language-reference/modifiers/public.md)、 [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
+|尋找陣列的限制。|<xref:Microsoft.VisualBasic.Information.LBound%2A>, <xref:Microsoft.VisualBasic.Information.UBound%2A>|  
+|重新初始化陣列|[清除](../../../visual-basic/language-reference/statements/erase-statement.md)、 [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
   
 ## <a name="see-also"></a>請參閱
 

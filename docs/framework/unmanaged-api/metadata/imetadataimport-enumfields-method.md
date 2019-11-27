@@ -39,33 +39,33 @@ HRESULT EnumFields (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in、out]列舉值的指標。  
   
  `cl`  
- [in] The TypeDef token of the class whose fields are to be enumerated.  
+ 在要列舉其欄位之類別的 TypeDef token。  
   
  `rFields`  
- [out] The list of FieldDef tokens.  
+ 脫銷FieldDef token 的清單。  
   
  `cMax`  
  [in] `rFields` 陣列的大小上限。  
   
  `pcTokens`  
- [out] The actual number of FieldDef tokens returned in `rFields`.  
+ 脫銷`rFields`中傳回的實際 FieldDef token 數目。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields` returned successfully.|  
-|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|已成功傳回 `EnumFields`。|  
+|`S_FALSE`|沒有可列舉的欄位。 在此情況下，`pcTokens` 為零。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

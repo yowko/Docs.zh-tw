@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443112"
 ---
 # <a name="icorprofilerinfo2getthreadappdomain-method"></a>ICorProfilerInfo2::GetThreadAppDomain 方法
-Gets the ID of the application domain in which the specified thread is currently executing code.  
+取得指定的執行緒目前正在執行程式碼的應用程式域識別碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,10 +35,10 @@ HRESULT GetThreadAppDomain(
   
 ## <a name="parameters"></a>參數  
  `threadId`  
- [in] The ID specifying the thread.  
+ 在指定執行緒的識別碼。  
   
  `pAppDomainId`  
- [out] A pointer to the ID of the application domain.  
+ 脫銷應用程式域的識別碼指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

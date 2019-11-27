@@ -18,14 +18,14 @@ ms.locfileid: "74347218"
 ## <a name="remarks"></a>備註  
  如需方法和 `My.Computer.FileSystem.SpecialDirectories` 物件屬性的資訊，請參閱 <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>。  
   
- For more information, see [How to: Retrieve the Contents of the My Documents Directory](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md).  
+ 如需詳細資訊，請參閱[如何：取出我的文件目錄的內容](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)。  
   
 ## <a name="requirements"></a>需求  
  **命名空間︰** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)  
+ **類別：** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> （提供 <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>的存取權）  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **元件：** Visual Basic 執行時間程式庫（在 Microsoft 中）  
   
 ## <a name="see-also"></a>請參閱
 

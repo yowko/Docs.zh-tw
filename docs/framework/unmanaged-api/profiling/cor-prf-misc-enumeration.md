@@ -38,9 +38,9 @@ typedef enum {
   
 |成員|描述|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|The default identifier used by [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) for a module that has not yet been attached to an assembly.|  
-|`PROFILER_GLOBAL_CLASS`|The default class identifier for global constants that do not belong to a class.|  
-|`PROFILER_GLOBAL_MODULE`|The default module identifier for global objects that do not belong to a module.|  
+|`PROFILER_PARENT_UNKNOWN`|尚未附加至元件之模組的[ICorProfilerInfo：： GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md)所使用的預設識別碼。|  
+|`PROFILER_GLOBAL_CLASS`|不屬於類別之全域常數的預設類別識別碼。|  
+|`PROFILER_GLOBAL_MODULE`|不屬於模組之全域物件的預設模組識別碼。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

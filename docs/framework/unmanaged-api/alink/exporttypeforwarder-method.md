@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448713"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder 方法
-Adds a type forwarder to the type table of the given assembly.  
+將類型轉寄站加入至指定元件的類型資料表。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,22 +37,22 @@ HRESULT ExportTypeForwarder(
   
 ## <a name="parameters"></a>參數  
  `tkAssemblyRef`  
- Reference to the assembly to which the type forwarder refers.  
+ 參考型別轉寄站所參考的元件。  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ 要匯出的完整類型名稱。  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` 旗標，例如 `tdPublic` 或 `tdNested`。 這個值可能會傳遞給[DefineExportedType 方法](../metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
   
  `pType`  
- Receives the token of the exported type. This is necessary only for emitting nested types.  
+ 接收匯出類型的 token。 這只有在發出巢狀型別時才需要。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h  
+ 需要 alink. h  
   
 ## <a name="see-also"></a>請參閱
 

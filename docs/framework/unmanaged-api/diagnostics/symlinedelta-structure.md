@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438007"
 ---
 # <a name="symlinedelta-structure"></a>SYMLINEDELTA 結構
-Provides information to the symbol handler about methods that were moved as a result of edits.  
+提供相關資訊給符號處理常式，而這些方法是因編輯結果而移動。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,11 +38,11 @@ typedef struct _SYMLINEDELTA
   
 |成員|描述|  
 |------------|-----------------|  
-|`mdMethod`|The method's metadata token.|  
-|`delta`|The number of lines the method was moved.|  
+|`mdMethod`|方法的元資料標記。|  
+|`delta`|方法已移動的行數。|  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl  
+ **標頭：** CorSym .idl  
   
 ## <a name="see-also"></a>請參閱
 

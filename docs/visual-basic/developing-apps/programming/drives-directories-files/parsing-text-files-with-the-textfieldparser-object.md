@@ -1,5 +1,5 @@
 ---
-title: Parsing text files with the TextFieldParser object
+title: 使用 TextFieldParser 物件剖析文字檔
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, using
@@ -33,7 +33,7 @@ ms.locfileid: "74333850"
   
 ## <a name="parsing-files-with-multiple-formats"></a>剖析有多種格式的檔案  
 
- `TextFieldParser` 物件的 `PeekChars` 方法可用來先檢查，然後再讀取每個欄位，讓您定義多種欄位格式，並據以採取動作。 如需詳細資訊，請參閱[如何：讀取多種格式的文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)。  
+ `PeekChars` 物件的 `TextFieldParser` 方法可用來先檢查，然後再讀取每個欄位，讓您定義多種欄位格式，並據以採取動作。 如需詳細資訊，請參閱[如何：讀取多種格式的文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)。  
   
 ## <a name="see-also"></a>請參閱
 

@@ -40,36 +40,36 @@ HRESULT EnumMethodImpls (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in、out]列舉值的指標。 第一次呼叫此方法時，此值必須為 Null。  
   
  `td`  
- [in] A TypeDef token for the type whose method implementations to enumerate.  
+ 在要列舉其方法實作為之類型的 TypeDef 標記。  
   
  `rMethodBody`  
- [out] The array to store the MethodBody tokens.  
+ 脫銷要儲存 MethodBody token 的陣列。  
   
  `rMethodDecl`  
- [out] The array to store the MethodDeclaration tokens.  
+ 脫銷要儲存 Ethoddeclaration token 的陣列。  
   
  `cMax`  
- [in] The maximum size of the `rMethodBody` and `rMethodDecl` arrays.  
+ 在`rMethodBody` 和 `rMethodDecl` 陣列的大小上限。  
   
  `pcTokens`  
- [in] The actual number of methods returned in `rMethodBody` and `rMethodDecl`.  
+ 在`rMethodBody` 和 `rMethodDecl`中傳回的實際方法數目。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls` returned successfully.|  
-|`S_FALSE`|There are no method tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|已成功傳回 `EnumMethodImpls`。|  
+|`S_FALSE`|沒有要列舉的方法權杖。 在此情況下，`pcTokens` 為零。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

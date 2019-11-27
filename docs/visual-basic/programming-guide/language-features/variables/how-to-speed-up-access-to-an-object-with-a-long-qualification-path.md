@@ -17,19 +17,19 @@ ms.locfileid: "74346822"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>如何：加快存取具有限定性條件長路徑的物件 (Visual Basic)
 
-If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.
+如果您經常存取需要數個方法和屬性之限定性路徑的物件，您可以藉由不重複限定性路徑來加速程式碼。
 
-There are two ways you can avoid repeating the qualification path. You can assign the object to a variable, or you can use it in a `With`...`End With` block.
+有兩種方式可以避免重複限定性路徑。 您可以將物件指派給變數，也可以在 `With`...`End With` 區塊中使用它。
 
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>To speed up access to a heavily qualified object by assigning it to a variable
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>藉由將非常限定的物件指派給變數來加速其存取
 
-1. Declare a variable of the type of the object that you are accessing frequently. Specify the qualification path in the initialization part of the declaration.
+1. 宣告您經常存取之物件類型的變數。 在宣告的初始化部分中指定限定性路徑。
 
     ```vb
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl
     ```
 
-2. Use the variable to access the object's members.
+2. 使用變數來存取物件的成員。
 
     ```vb
     ctrlActv.Text = "Test"
@@ -37,15 +37,15 @@ There are two ways you can avoid repeating the qualification path. You can assig
     ctrlActv.Show()
     ```
 
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>To speed up access to a heavily qualified object by using a With...End With block
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>若要使用 [...] 來加速存取高度限定的物件結尾為 block
 
-1. Put the qualification path in a `With` statement.
+1. 將限定性路徑放在 `With` 語句中。
 
     ```vb
     With someForm.ActiveForm.ActiveControl
     ```
 
-2. Access the object's members inside the `With` block, before the `End With` statement.
+2. 在 `With` 區塊內，于 `End With` 語句之前存取物件的成員。
 
     ```vb
         .Text = "Test"

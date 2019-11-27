@@ -9,11 +9,11 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347771"
 ---
-# <a name="how-to-project-an-object-graph-visual-basic"></a>How to: Project an Object Graph (Visual Basic)
+# <a name="how-to-project-an-object-graph-visual-basic"></a>如何：投影物件圖形（Visual Basic）
 本主題說明如何從 XML 規劃或填入物件圖形。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會填入具有 `Address`、`PurchaseOrder` 及來自[範例 XML 檔：典型採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML 文件之 `PurchaseOrderItem` 類別的物件圖形。  
+ 下列程式碼會填入具有 `Address`、`PurchaseOrder` 及來自`PurchaseOrderItem`範例 XML 檔：典型採購訂單 (LINQ to XML)[ XML 文件之 ](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) 類別的物件圖形。  
   
 ```vb  
 Class Address  
@@ -296,7 +296,7 @@ Sub Main()
 End Sub  
 ```  
   
- 在此範例中，[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的結果會當作 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 傳回。 `PurchaseOrder` 類別中的項目是 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 類型。 程式碼使用 <xref:System.Linq.Enumerable.ToList%2A> 擴充方法以從查詢結果建立 <xref:System.Collections.Generic.List%601> 集合。  
+ 在此範例中，[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的結果會當作 <xref:System.Collections.Generic.IEnumerable%601> 的 `PurchaseOrderItem` 傳回。 `PurchaseOrder` 類別中的項目是 <xref:System.Collections.Generic.IEnumerable%601> 的 `PurchaseOrderItem` 類型。 程式碼使用 <xref:System.Linq.Enumerable.ToList%2A> 擴充方法以從查詢結果建立 <xref:System.Collections.Generic.List%601> 集合。  
   
  這個範例會產生下列輸出：  
   
@@ -341,4 +341,4 @@ ShipDate: 5/21/1999
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [投影和轉換（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Declare Enumerations'
+title: 如何：宣告列舉
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [Visual Basic], enumerations
@@ -14,31 +14,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354050"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>如何：宣告列舉 (Visual Basic)
-You create an enumeration with the `Enum` statement in the declarations section of a class or module. You cannot declare an enumeration within a method. To specify the appropriate level of access, use `Private`, `Protected`, `Friend`, or `Public`.  
+您可以使用類別或模組之宣告區段中的 `Enum` 語句來建立列舉。 您無法在方法中宣告列舉。 若要指定適當的存取層級，請使用 `Private`、`Protected`、`Friend`或 `Public`。  
   
- An `Enum` type has a name, an underlying type, and a set of fields, each representing a constant. The name must be a valid Visual Basic .NET qualifier. The underlying type must be one of the integer types—`Byte`, `Short`, `Long` or `Integer`. `Integer` 是預設值。 Enumerations are always strongly typed and are not interchangeable with integer number types.  
+ `Enum` 型別具有名稱、基礎型別，以及一組欄位，每個都代表一個常數。 此名稱必須是有效的 Visual Basic .NET 辨識符號。 基礎類型必須是其中一個整數類型，`Byte`、`Short`、`Long` 或 `Integer`。 預設值為 `Integer`。 列舉一律是強型別，而且無法與整數數位類型互換。  
   
- Enumerations cannot have floating-point values. If an enumeration is assigned a floating-point value with `Option Strict On`, a compiler error results. If `Option Strict` is `Off`, the value is automatically converted to the `Enum` type.  
+ 列舉不能有浮點值。 如果列舉已指派具有 `Option Strict On`的浮點值，則會產生編譯器錯誤。 如果 `Off``Option Strict`，此值會自動轉換成 `Enum` 類型。  
   
- For information on names, and how to use the `Imports` statement to make name qualification unnecessary, see [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
+ 如需名稱的相關資訊，以及如何使用 `Imports` 語句來進行不必要的名稱限定，請參閱列舉[和名稱限定](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)性。  
   
-### <a name="to-declare-an-enumeration"></a>To declare an enumeration  
+### <a name="to-declare-an-enumeration"></a>若要宣告列舉  
   
-1. Write a declaration that includes a code access level, the `Enum` keyword, and a valid name, as in the following examples, each of which declares a different `Enum`.  
+1. 撰寫包含程式碼存取層級、`Enum` 關鍵字和有效名稱的宣告，如下列範例所示，每個都宣告不同的 `Enum`。  
   
      [!code-vb[VbEnumsTask#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#3)]  
   
-2. Define the constants in the enumeration. By default, the first constant in an enumeration is initialized to `0`, and subsequent constants are initialized to a value of one more than the previous constant. For example, the following enumeration, `Days`, contains a constant named `Sunday` with the value `0`, a constant named `Monday` with the value `1`, a constant named `Tuesday` with the value of `2`, and so on.  
+2. 定義列舉中的常數。 根據預設，列舉中的第一個常數會初始化為 `0`，而後續的常數會初始化為比上一個常數更多的值。 例如，下列列舉 `Days`包含名為 `Sunday` 的常數，其值為 `0`、名為 `Monday` 且值為 `1`的常數、名為 `Tuesday` 的常數，其值為 `2`等等。  
   
      [!code-vb[VbEnumsTask#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#4)]  
   
-3. You can explicitly assign values to constants in an enumeration by using an assignment statement. You can assign any integer value, including negative numbers. For example, you may want constants with values less than zero to represent error conditions. In the following enumeration, the constant `Invalid` is explicitly assigned the value `–1`, and the constant `Sunday` is assigned the value `0`. Because it is the first constant in the enumeration, `Saturday` is also initialized to the value `0`. The value of `Monday` is `1` (one more than the value of `Sunday`); the value of `Tuesday` is `2`, and so on.  
+3. 您可以使用指派語句，明確地將值指派給列舉中的常數。 您可以指派任何整數值，包括負數。 例如，您可能想要值小於零的常數來表示錯誤狀況。 在下列列舉中，會明確地將值指派給常數 `Invalid` `–1`，並將值指派給常數 `Sunday` `0`。 因為它是列舉中的第一個常數，所以 `Saturday` 也會初始化為 `0`的值。 `Monday` 的值 `1` （一個大於 `Sunday`的值）;`Tuesday` 的值為 `2`，依此類推。  
   
      [!code-vb[VbEnumsTask#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#5)]  
   
-### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>To declare an enumeration as an explicit type  
+### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>將列舉宣告為明確類型  
   
-- Specify the type of the enum by using the `As` clause, as shown in the following example.  
+- 使用 `As` 子句來指定列舉的類型，如下列範例所示。  
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
@@ -46,7 +46,7 @@ You create an enumeration with the `Enum` statement in the declarations section 
 
 - [列舉和名稱限定性條件](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [如何：參考列舉成員](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
+- [如何：在 Visual Basic 中逐一查看列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
 - [如何：決定與列舉值相關聯的字串](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [何時使用列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [常數的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)

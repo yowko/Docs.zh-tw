@@ -22,7 +22,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348300"
 ---
 # <a name="not-operator-visual-basic"></a>Not 運算子 (Visual Basic)
-Performs logical negation on a `Boolean` expression, or bitwise negation on a numeric expression.  
+在 `Boolean` 運算式上執行邏輯否定，或在數值運算式上執行位否定。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,52 +32,52 @@ result = Not expression
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要項。 Any `Boolean` or numeric expression.  
+ 必要。 任何 `Boolean` 或數值運算式。  
   
  `expression`  
- 必要項。 Any `Boolean` or numeric expression.  
+ 必要。 任何 `Boolean` 或數值運算式。  
   
 ## <a name="remarks"></a>備註  
- For `Boolean` expressions, the following table illustrates how `result` is determined.  
+ 針對 `Boolean` 運算式，下表說明如何決定 `result`。  
   
-|If `expression` is|The value of `result` is|  
+|如果 `expression` 為|`result` 的值為|  
 |------------------------|------------------------------|  
 |`True`|`False`|  
 |`False`|`True`|  
   
- For numeric expressions, the `Not` operator inverts the bit values of any numeric expression and sets the corresponding bit in `result` according to the following table.  
+ 對於數值運算式，`Not` 運算子會反轉任何數值運算式的位值，並根據下表設定 `result` 中的對應位。  
   
-|If bit in `expression` is|The bit in `result` is|  
+|如果 `expression` 中的位為|`result` 中的位是|  
 |-------------------------------|----------------------------|  
 |1|0|  
 |0|1|  
   
 > [!NOTE]
-> Since the logical and bitwise operators have a lower precedence than other arithmetic and relational operators, any bitwise operations should be enclosed in parentheses to ensure accurate execution.  
+> 由於邏輯和位運算子的優先順序比其他算術和關係運算子低，因此應該將任何位運算括在括弧中，以確保正確執行。  
   
 ## <a name="data-types"></a>資料類型  
- For a Boolean negation, the data type of the result is `Boolean`. For a bitwise negation, the result data type is the same as that of `expression`. However, if expression is `Decimal`, the result is `Long`.  
+ 如果是布林值否定，結果的資料類型會是 `Boolean`。 若為位否定，結果資料類型與 `expression`相同。 不過，如果 expression 為 `Decimal`，則會 `Long`結果。  
   
 ## <a name="overloading"></a>多載化  
- The `Not` operator can be *overloaded*, which means that a class or structure can redefine its behavior when its operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ `Not` 運算子可以多載 *，這*表示當類別或結構的運算元具有該類別或結構的類型時，就可以重新定義其行為。 如果您的程式碼在這類類別或結構上使用這個運算子，請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- The following example uses the `Not` operator to perform logical negation on a `Boolean` expression. The result is a `Boolean` value that represents the reverse of the value of the expression.  
+ 下列範例會使用 `Not` 運算子，在 `Boolean` 運算式上執行邏輯否定。 結果為 `Boolean` 值，表示運算式值的反轉。  
   
  [!code-vb[VbVbalrOperators#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#33)]  
   
- The preceding example produces results of `False` and `True`, respectively.  
+ 上述範例會分別產生 `False` 和 `True`的結果。  
   
 ## <a name="example"></a>範例  
- The following example uses the `Not` operator to perform logical negation of the individual bits of a numeric expression. The bit in the result pattern is set to the reverse of the corresponding bit in the operand pattern, including the sign bit.  
+ 下列範例會使用 `Not` 運算子，來執行數值運算式之個別位的邏輯否定。 結果模式中的位會設定為運算元模式中對應位的反向，包括符號位。  
   
  [!code-vb[VbVbalrOperators#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#34)]  
   
- The preceding example produces results of –11, –9, and –7, respectively.  
+ 上述範例會分別產生–11、–9和–7的結果。  
   
 ## <a name="see-also"></a>請參閱
 
-- [Logical/Bitwise Operators (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [邏輯/位運算子（Visual Basic）](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic 中的邏輯和位運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

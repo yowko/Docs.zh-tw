@@ -13,7 +13,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350843"
 ---
-# <a name="-utf8output-visual-basic"></a>-utf8output (Visual Basic)
+# <a name="-utf8output-visual-basic"></a>-utf8output （Visual Basic）
 使用 UTF-8 編碼顯示編譯器輸出。  
   
 ## <a name="syntax"></a>語法  
@@ -24,16 +24,16 @@ ms.locfileid: "74350843"
   
 ## <a name="arguments"></a>引數  
  `+` &#124; `-`  
- 選擇項。 The default for this option is `-utf8output-`, which means compiler output does not use UTF-8 encoding. 指定 `-utf8output` 等同於指定 `-utf8output+`。  
+ 選擇性。 此選項的預設值為 `-utf8output-`，這表示編譯器輸出不會使用 UTF-8 編碼。 指定 `-utf8output` 等同於指定 `-utf8output+`。  
   
 ## <a name="remarks"></a>備註  
- In some international configurations, compiler output cannot be displayed correctly in the console. In such situations, use `-utf8output` and redirect compiler output to a file.  
+ 在某些國際設定中，編譯器輸出無法正確地顯示在主控台中。 在這種情況下，請使用 `-utf8output`，並將編譯器輸出重新導向至檔案。  
   
 > [!NOTE]
-> The `-utf8output` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> Visual Studio 開發環境中無法使用 [`-utf8output`] 選項;只有在從命令列編譯時，才可以使用它。  
   
 ## <a name="example"></a>範例  
- The following code compiles `In.vb` and directs the compiler to display output using UTF-8 encoding.  
+ 下列程式碼會編譯 `In.vb`，並指示編譯器使用 UTF-8 編碼來顯示輸出。  
   
 ```console  
 vbc -utf8output in.vb  

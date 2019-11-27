@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436325"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps 方法
-Gets the set of properties of the manifest resource with the specified metadata signature.  
+取得具有指定之中繼資料簽章之資訊清單資源的屬性集。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,32 +41,32 @@ HRESULT GetManifestResourceProps (
   
 ## <a name="parameters"></a>參數  
  `mdmr`  
- [in] An `mdManifestResource` token that represents the resource for which to get the properties.  
+ 在`mdManifestResource` token，代表要取得其屬性的資源。  
   
  `szName`  
- [out] The name of the resource.  
+ 脫銷資源的名稱。  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ 在`szName`的大小（以寬字元為單位）。  
   
  `pchName`  
- [out] A pointer to the number of wide chars actually returned in `szName`.  
+ 脫銷`szName`中實際傳回的寬字元數指標。  
   
  `ptkImplementation`  
- [out] A pointer to an `mdFile` token or an `mdAssemblyRef` token that represents the file or assembly, respectively, that contains the resource.  
+ 脫銷`mdFile` token 或 `mdAssemblyRef` token 的指標，分別代表包含資源的檔案或元件。  
   
  `pdwOffset`  
- [out] A pointer to a value that specifies the offset to the beginning of the resource within the file.  
+ 脫銷值的指標，指定檔案內資源開頭的位移。  
   
  `pdwResourceFlags`  
- [out] A pointer to flags that describe the metadata applied to a resource. The flags value is a combination of one or more [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) values.  
+ 脫銷旗標的指標，描述套用至資源的中繼資料。 旗標值是一個或多個[CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md)值的組合。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: c206faf81868d6e871327a73ef0680936b132918
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 17ad1b4b5eae38a4f1dc90e154841b1315dea1b2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459246"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349768"
 ---
 # <a name="examples-of-xml-serialization"></a>XML 序列化的範例
 
@@ -206,9 +206,8 @@ public class Item
 您可以實作 <xref:System.Collections.ICollection> 介面來建立自己的集合類別，並且使用 <xref:System.Xml.Serialization.XmlSerializer> 對這些類別的執行個體序列化。 請注意，當類別實作 <xref:System.Collections.ICollection> 介面時，只會序列化該類別包含的集合。 加入至該類別的任何公共屬性或欄位都不會序列化。 該類別必須包含要序列化的 **Add** 方法以及 **Item** 屬性 (C# 索引子)。
 
 ```vb
-Imports System
-Imports System.IO
 Imports System.Collections
+Imports System.IO
 Imports System.Xml.Serialization
 
 Public Class Test
@@ -298,8 +297,8 @@ End Class
 
 ```csharp
 using System;
-using System.IO;
 using System.Collections;
+using System.IO;
 using System.Xml.Serialization;
 
 public class Test {
@@ -373,10 +372,9 @@ public class Employee {
 `ReadPo` 方法比較簡單。 它只會建立要還原序列化的物件，並讀出它們的值。 如同 `CreatePo` 方法，您必須先建立 <xref:System.Xml.Serialization.XmlSerializer>，傳遞要還原序列化之類別的型別以還原序列化為函式。 同時，需要有 <xref:System.IO.FileStream> 讀取 XML 文件。 若要還原序列化物件，以 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 做為引數呼叫 <xref:System.IO.FileStream> 方法。 還原序列化物件必須轉型為型別 `PurchaseOrder`{2}的物件變數。 然後程式碼會讀取已還原序列化的 `PurchaseOrder`{2}值。 請注意，您也可以讀取已建立的 PO.xml 檔案，檢視實際的 XML 輸出。
 
 ```vb
-Imports System
+Imports System.IO
 Imports System.Xml
 Imports System.Xml.Serialization
-Imports System.IO
 Imports Microsoft.VisualBasic
 
 ' The XmlRoot attribute allows you to set an alternate name
@@ -553,9 +551,9 @@ End Class 'Test
 
 ```csharp
 using System;
+using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
-using System.IO;
 
 // The XmlRoot attribute allows you to set an alternate name
 // (PurchaseOrder) for the XML element and its namespace. By
@@ -769,7 +767,7 @@ XML 輸出可能類似下列所示。
 </PurchaseOrder>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 序列化簡介](introducing-xml-serialization.md)
 - [使用屬性控制 XML 序列化](controlling-xml-serialization-using-attributes.md)

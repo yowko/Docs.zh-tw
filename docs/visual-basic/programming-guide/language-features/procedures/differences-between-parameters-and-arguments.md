@@ -19,23 +19,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341367"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>參數和引數之間的差異 (Visual Basic)
-In most cases, a procedure must have some information about the circumstances in which it has been called. A procedure that performs repeated or shared tasks uses different information for each call. This information consists of variables, constants, and expressions that you pass to the procedure when you call it.  
+在大部分情況下，程式必須有一些有關已呼叫它的情況的資訊。 執行重複或共用工作的程式會針對每個呼叫使用不同的資訊。 這項資訊是由您在呼叫它時傳遞給程式的變數、常數和運算式所組成。  
   
- To communicate this information to the procedure, the procedure defines a *parameter*, and the calling code passes an *argument* to that parameter. You can think of the parameter as a parking space and the argument as an automobile. Just as different automobiles can park in a parking space at different times, the calling code can pass a different argument to the same parameter every time that it calls the procedure.  
+ 為了將此資訊傳達給程式，此程式會定義一個*參數*，而呼叫的程式碼會將*引數*傳遞給該參數。 您可以將參數視為停車空間，並將引數視為汽車。 就如同不同的汽車可以在停車空間中的不同時間靜止，呼叫程式碼可以在每次呼叫程式時，將不同的引數傳遞至相同的參數。  
   
 ## <a name="parameters"></a>參數  
- A *parameter* represents a value that the procedure expects you to pass when you call it. The procedure's declaration defines its parameters.  
+ *參數*代表當您呼叫它時，程式預期會傳遞的值。 程式的宣告會定義其參數。  
   
- When you define a `Function` or `Sub` procedure, you specify a *parameter list* in parentheses immediately following the procedure name. For each parameter, you specify a name, a data type, and a passing mechanism ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). You can also indicate that a parameter is optional. This means that the calling code does not have to pass a value for it.  
+ 當您定義 `Function` 或 `Sub` 程式時，您會緊接在程式名稱後面的括弧中指定*參數清單*。 針對每個參數，您可以指定名稱、資料類型和傳遞機制（[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)）。 您也可以指出參數是選擇性的。 這表示呼叫程式碼不需要傳遞值給它。  
   
- The name of each parameter serves as a *local variable* in the procedure. You use the parameter name the same way you use any other variable.  
+ 在程式中，每個參數的名稱都可做為*區域變數*。 使用參數名稱的方式與使用任何其他變數相同。  
   
 ## <a name="arguments"></a>引數  
- An *argument* represents the value that you pass to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure.  
+ *引數*代表當您呼叫程式時，傳遞給 procedure 參數的值。 呼叫程式碼會在呼叫程式時提供引數。  
   
- When you call a `Function` or `Sub` procedure, you include an *argument list* in parentheses immediately following the procedure name. Each argument corresponds to the parameter in the same position in the list.  
+ 當您呼叫 `Function` 或 `Sub` 程式時，您會緊接在程式名稱後面的括弧中包含*引數清單*。 每個引數都會對應至清單中相同位置的參數。  
   
- In contrast to parameter definition, arguments do not have names. Each argument is an expression, which can contain zero or more variables, constants, and literals. The data type of the evaluated expression should typically match the data type defined for the corresponding parameter, and in any case it must be convertible to the parameter type.  
+ 相對於參數定義，引數沒有名稱。 每個引數都是運算式，其中可以包含零個或多個變數、常數和常值。 已評估運算式的資料類型通常應該符合針對對應參數所定義的資料類型，而且在任何情況下都必須可轉換為參數類型。  
   
 ## <a name="see-also"></a>請參閱
 

@@ -14,23 +14,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351662"
 ---
 # <a name="string-manipulation-summary-visual-basic"></a>字串操作摘要 (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic 語言關鍵字和執行時間程式庫成員是依用途和使用來組織。  
   
 |動作|語言項目|  
 |------------|----------------------|  
-|Compare two strings.|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|  
-|Convert strings.|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  
-|Reverse a string.|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>、 <xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|  
-|Convert to lowercase or uppercase.|<xref:Microsoft.VisualBasic.Strings.Format%2A>、<xref:Microsoft.VisualBasic.Strings.LCase%2A>、<xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
-|Create a string of repeating characters.|<xref:Microsoft.VisualBasic.Strings.Space%2A>、 <xref:Microsoft.VisualBasic.Strings.StrDup%2A>|  
-|Find the length of a string.|<xref:Microsoft.VisualBasic.Strings.Len%2A>|  
-|Format a string.|<xref:Microsoft.VisualBasic.Strings.Format%2A>、 <xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>、 <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>、 <xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>、 <xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|  
-|Manipulate strings.|<xref:Microsoft.VisualBasic.Strings.InStr%2A>, <xref:Microsoft.VisualBasic.Strings.Left%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, <xref:Microsoft.VisualBasic.Strings.Mid%2A>, <xref:Microsoft.VisualBasic.Strings.Right%2A>, <xref:Microsoft.VisualBasic.Strings.RTrim%2A>, <xref:Microsoft.VisualBasic.Strings.Trim%2A>|  
-|Set string comparison rules.|[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)|  
-|Work with ASCII and ANSI values.|<xref:Microsoft.VisualBasic.Strings.Asc%2A>、<xref:Microsoft.VisualBasic.Strings.AscW%2A>、<xref:Microsoft.VisualBasic.Strings.Chr%2A><xref:Microsoft.VisualBasic.Strings.ChrW%2A>|  
-|Replace a specified substring.|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|  
-|Return a filter-based string array.|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|  
-|Return a specified number of substrings.|<xref:Microsoft.VisualBasic.Strings.Split%2A>、 <xref:Microsoft.VisualBasic.Strings.Join%2A>|  
+|比較兩個字串。|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|  
+|轉換字串。|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  
+|反轉字串。|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>, <xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|  
+|轉換成小寫或大寫。|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>, <xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
+|建立重複字元的字串。|<xref:Microsoft.VisualBasic.Strings.Space%2A>, <xref:Microsoft.VisualBasic.Strings.StrDup%2A>|  
+|尋找字串的長度。|<xref:Microsoft.VisualBasic.Strings.Len%2A>|  
+|格式化字串。|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>, <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>, <xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>, <xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|  
+|操作字串。|<xref:Microsoft.VisualBasic.Strings.InStr%2A>, <xref:Microsoft.VisualBasic.Strings.Left%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, <xref:Microsoft.VisualBasic.Strings.Mid%2A>, <xref:Microsoft.VisualBasic.Strings.Right%2A>, <xref:Microsoft.VisualBasic.Strings.RTrim%2A>, <xref:Microsoft.VisualBasic.Strings.Trim%2A>|  
+|設定字串比較規則。|[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)|  
+|使用 ASCII 和 ANSI 值。|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|  
+|取代指定的子字串。|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|  
+|傳回以篩選為基礎的字串陣列。|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|  
+|傳回指定數目的子字串。|<xref:Microsoft.VisualBasic.Strings.Split%2A>, <xref:Microsoft.VisualBasic.Strings.Join%2A>|  
   
 ## <a name="see-also"></a>請參閱
 

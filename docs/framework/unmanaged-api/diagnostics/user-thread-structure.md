@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437977"
 ---
 # <a name="user_thread-structure"></a>USER_THREAD 結構
-Provides information to a debugger about a thread. For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.  
+提供有關執行緒的詳細資訊給偵錯工具。 如需詳細資訊，請參閱[INotifySource2：： SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,12 +39,12 @@ typedef struct tagUSER_THREAD
   
 |成員|描述|  
 |------------|-----------------|  
-|`pSidBuffer`|Address of thread buffer.|  
-|`dwSidLen`|Length of thread buffer, in bytes.|  
-|`dwTid`|Thread ID.|  
+|`pSidBuffer`|執行緒緩衝區的位址。|  
+|`dwSidLen`|執行緒緩衝區的長度（以位元組為單位）。|  
+|`dwTid`|執行緒識別碼。|  
   
 ## <a name="requirements"></a>需求  
- **Header:** ProtocolNotify2.idl  
+ **標頭：** ProtocolNotify2 .idl  
   
 ## <a name="see-also"></a>請參閱
 

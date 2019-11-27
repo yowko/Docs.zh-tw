@@ -17,8 +17,8 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336061"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp; Operator (Visual Basic)
-Generates a string concatenation of two expressions.  
+# <a name="amp-operator-visual-basic"></a>&amp; 運算子（Visual Basic）
+產生兩個運算式的字串串連。  
   
 ## <a name="syntax"></a>語法  
   
@@ -28,27 +28,27 @@ result = expression1 & expression2
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要項。 Any `String` or `Object` variable.  
+ 必要。 任何 `String` 或 `Object` 變數。  
   
  `expression1`  
- 必要項。 Any expression with a data type that widens to `String`.  
+ 必要。 具有擴展為 `String`之資料類型的任何運算式。  
   
  `expression2`  
- 必要項。 Any expression with a data type that widens to `String`.  
+ 必要。 具有擴展為 `String`之資料類型的任何運算式。  
   
 ## <a name="remarks"></a>備註  
- If the data type of `expression1` or `expression2` is not `String` but widens to `String`, it is converted to `String`. If either of the data types does not widen to `String`, the compiler generates an error.  
+ 如果 `expression1` 或 `expression2` 的資料類型不 `String` 但擴大到 `String`，則會轉換成 `String`。 如果其中一種資料類型不會擴展到 `String`，編譯器會產生錯誤。  
   
- The data type of `result` is `String`. If one or both expressions evaluate to [Nothing](../../../visual-basic/language-reference/nothing.md) or have a value of <xref:System.DBNull.Value?displayProperty=nameWithType>, they are treated as a string with a value of "".  
-  
-> [!NOTE]
-> The `&` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ `result` 的資料類型為 `String`。 如果其中一個或兩個運算式評估為不是[任何](../../../visual-basic/language-reference/nothing.md)值，或具有 <xref:System.DBNull.Value?displayProperty=nameWithType>的值，則會將其視為字串，其值為 ""。  
   
 > [!NOTE]
-> The ampersand (&) character can also be used to identify variables as type `Long`. For more information, see [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
+> `&` 運算子可以多載 *，這*表示當運算元具有該類別或結構的類型時，類別或結構可以重新定義其行為。 如果您的程式碼在這類類別或結構上使用這個運算子，請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+  
+> [!NOTE]
+> & 符號（&）字元也可以用來將變數識別為類型 `Long`。 如需詳細資訊，請參閱[類型字元](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)。  
   
 ## <a name="example"></a>範例  
- This example uses the `&` operator to force string concatenation. The result is a string value representing the concatenation of the two string operands.  
+ 這個範例會使用 `&` 運算子來強制執行字串串連。 結果為字串值，表示兩個字串運算元的串連。  
   
  [!code-vb[VbVbalrOperators#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#2)]  
   
@@ -58,4 +58,4 @@ result = expression1 & expression2
 - [串連運算子](../../../visual-basic/language-reference/operators/concatenation-operators.md)
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Concatenation Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic 中的串連運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

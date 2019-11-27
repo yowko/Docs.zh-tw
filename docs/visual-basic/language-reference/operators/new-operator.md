@@ -20,26 +20,26 @@ ms.locfileid: "74348309"
 ---
 # <a name="new-operator-visual-basic"></a>New 運算子 (Visual Basic)
 
-Introduces a `New` clause to create a new object instance, specifies a constructor constraint on a type parameter, or identifies a `Sub` procedure as a class constructor.
+引進了一個 `New` 子句來建立新的物件實例、在型別參數上指定一個函式條件約束，或將 `Sub` 的程式識別為類別的函式。
 
 ## <a name="remarks"></a>備註
 
-In a declaration or assignment statement, a `New` clause must specify a defined class from which the instance can be created. This means that the class must expose one or more constructors that the calling code can access.
+在宣告或指派語句中，`New` 子句必須指定可從中建立實例的已定義類別。 這表示類別必須公開呼叫程式碼可以存取的一個或多個函式。
 
-You can use a `New` clause in a declaration statement or an assignment statement. When the statement runs, it calls the appropriate constructor of the specified class, passing any arguments you have supplied. The following example demonstrates this by creating instances of a `Customer` class that has two constructors, one that takes no parameters and one that takes a string parameter:
+您可以在宣告語句或指派語句中使用 `New` 子句。 當語句執行時，它會呼叫指定類別的適當的函式，並傳遞您所提供的任何引數。 下列範例會藉由建立具有兩個函式的 `Customer` 類別實例（其中一個不接受參數，另一個採用字串參數）來示範：
 
 [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]
 
-Since arrays are classes, `New` can create a new array instance, as shown in the following example:
+由於陣列是類別，因此 `New` 可以建立新的陣列實例，如下列範例所示：
 
 [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]
 
-The common language runtime (CLR) throws an <xref:System.OutOfMemoryException> error if there is insufficient memory to create the new instance.
+如果記憶體不足，無法建立新的實例，則 common language runtime （CLR）會擲回 <xref:System.OutOfMemoryException> 錯誤。
 
 > [!NOTE]
-> The `New` keyword is also used in type parameter lists to specify that the supplied type must expose an accessible parameterless constructor. For more information about type parameters and constraints, see [Type List](../statements/type-list.md).
+> `New` 關鍵字也會用於型別參數清單中，以指定提供的型別必須公開可存取的無參數函數。 如需型別參數和條件約束的詳細資訊，請參閱[Type List](../statements/type-list.md)。
 
-To create a constructor procedure for a class, set the name of a `Sub` procedure to the `New` keyword. For more information, see [Object Lifetime: How Objects Are Created and Destroyed](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+若要建立類別的函式程式，請將 `Sub` 程式的名稱設定為 `New` 關鍵字。 如需詳細資訊，請參閱[物件存留期：物件的建立和終結方式](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。
 
 `New` 關鍵字可用於以下內容：
 
@@ -52,5 +52,5 @@ To create a constructor procedure for a class, set the name of a `Sub` procedure
 - <xref:System.OutOfMemoryException>
 - [關鍵字](../keywords/index.md)
 - [類型清單](../statements/type-list.md)
-- [Generic Types in Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic 中的泛型型別](../../programming-guide/language-features/data-types/generic-types.md)
 - [物件存留期：物件的建立和終結](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

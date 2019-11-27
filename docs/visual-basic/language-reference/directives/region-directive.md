@@ -32,12 +32,12 @@ ms.locfileid: "74343785"
   
 |詞彙|定義|  
 |---|---|  
-|`identifier_string`|必要項。 做為摺疊區域標題的字串。 區域預設會摺疊。|  
+|`identifier_string`|必要。 做為摺疊區域標題的字串。 區域預設會摺疊。|  
 |`#End Region`|終止 `#Region` 區塊。|  
   
 ## <a name="remarks"></a>備註  
 
- 使用 `#Region` 指示詞來指定程式碼區段，以在使用 Visual Studio 程式碼編輯器的大綱功能時展開或摺疊。 You can place, or *nest*, regions within other regions to group similar regions together.  
+ 使用 `#Region` 指示詞來指定程式碼區段，以在使用 Visual Studio 程式碼編輯器的大綱功能時展開或摺疊。 您可以將區域放在其他區域中，或加以*嵌套*，將類似的區域群組在一起。  
   
 ## <a name="example"></a>範例  
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431074"
 ---
 # <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a>ISymUnmanagedDocument::GetCheckSumAlgorithmId 方法
-Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.  
+取得總和檢查碼演算法識別碼，如果沒有總和檢查碼，則傳回所有零的 GUID。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,10 +34,10 @@ HRESULT GetCheckSumAlgorithmId(
   
 ## <a name="parameters"></a>參數  
  `pRetVal`  
- [out] A pointer to a variable that receives the checksum algorithm identifier.  
+ 脫銷接收總和檢查碼演算法識別碼之變數的指標。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds.  
+ 如果方法成功，則 S_OK。  
   
 ## <a name="see-also"></a>請參閱
 

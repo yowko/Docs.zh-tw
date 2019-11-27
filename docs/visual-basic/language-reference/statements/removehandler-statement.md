@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333042"
 ---
 # <a name="removehandler-statement"></a>RemoveHandler 陳述式
-Removes the association between an event and an event handler.  
+移除事件與事件處理常式之間的關聯。  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,14 +29,14 @@ RemoveHandler event, AddressOf eventhandler
   
 |詞彙|定義|  
 |---|---|  
-|`event`|The name of the event being handled.|  
-|`eventhandler`|The name of the procedure currently handling the event.|  
+|`event`|正在處理的事件名稱。|  
+|`eventhandler`|目前處理事件的程式名稱。|  
   
 ## <a name="remarks"></a>備註  
- The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling for a specific event at any time during program execution.  
+ `AddHandler` 和 `RemoveHandler` 語句可讓您在程式執行期間的任何時間，啟動和停止特定事件的事件處理。  
   
 > [!NOTE]
-> For custom events, the `RemoveHandler` statement invokes the event's `RemoveHandler` accessor. For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
+> 若為自訂事件，`RemoveHandler` 語句會叫用事件的 `RemoveHandler` 存取子。 如需自訂事件的詳細資訊，請參閱[Event 語句](../../../visual-basic/language-reference/statements/event-statement.md)。  
   
 ## <a name="example"></a>範例  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  

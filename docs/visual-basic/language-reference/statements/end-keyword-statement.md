@@ -13,9 +13,9 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343741"
 ---
-# <a name="end-keyword-statement-visual-basic"></a>End \<keyword> Statement (Visual Basic)
+# <a name="end-keyword-statement-visual-basic"></a>End \<關鍵字 > 語句（Visual Basic）
 
-When followed by an additional keyword, terminates the definition of the statement block introduced by that keyword.
+後面接著一個額外的關鍵字時，會終止該關鍵字所引進之語句區塊的定義。
 
 ## <a name="syntax"></a>語法
 
@@ -48,34 +48,34 @@ End With
 
 |組件|描述|
 |---|---|
-|`End`|必要項。 Terminates the definition of the programming element.|
-|`AddHandler`|Required to terminate an `AddHandler` accessor begun by a matching `AddHandler` statement in a custom [Event Statement](event-statement.md).|
-|`Class`|Required to terminate a class definition begun by a matching [Class Statement](class-statement.md).|
-|`Enum`|Required to terminate an enumeration definition begun by a matching [Enum Statement](enum-statement.md).|
-|`Event`|Required to terminate a `Custom` event definition begun by a matching [Event Statement](event-statement.md).|  
-|`Function`|Required to terminate a `Function` procedure definition begun by a matching [Function Statement](function-statement.md). If execution encounters an `End Function` statement, control returns to the calling code.|
-|`Get`|Required to terminate a `Property` procedure definition begun by a matching [Get Statement](get-statement.md). If execution encounters an `End Get` statement, control returns to the statement requesting the property's value.|
-|`If`|Required to terminate an `If`...`Then`...`Else` block definition begun by a matching `If` statement. See [If...Then...Else Statement](if-then-else-statement.md).|
-|`Interface`|Required to terminate an interface definition begun by a matching [Interface Statement](interface-statement.md).|
-|`Module`|Required to terminate a module definition begun by a matching [Module Statement](module-statement.md).|
-|`Namespace`|Required to terminate a namespace definition begun by a matching [Namespace Statement](namespace-statement.md).|
-|`Operator`|Required to terminate an operator definition begun by a matching [Operator Statement](operator-statement.md).|
-|`Property`|Required to terminate a property definition begun by a matching [Property Statement](property-statement.md).|
-|`RaiseEvent`|Required to terminate a `RaiseEvent` accessor begun by a matching `RaiseEvent` statement in a custom [Event Statement](event-statement.md).|
-|`RemoveHandler`|Required to terminate a `RemoveHandler` accessor begun by a matching `RemoveHandler` statement in a custom [Event Statement](event-statement.md).|
-|`Select`|Required to terminate a `Select`...`Case` block definition begun by a matching `Select` statement. See [Select...Case Statement](select-case-statement.md).  
-|`Set`|Required to terminate a `Property` procedure definition begun by a matching [Set Statement](set-statement.md). If execution encounters an `End Set` statement, control returns to the statement setting the property's value.  
-|`Structure`|Required to terminate a structure definition begun by a matching [Structure Statement](structure-statement.md).  
-|`Sub`|Required to terminate a `Sub` procedure definition begun by a matching [Sub Statement](sub-statement.md). If execution encounters an `End Sub` statement, control returns to the calling code.  
-|`SyncLock`|Required to terminate a `SyncLock` block definition begun by a matching `SyncLock` statement. See [SyncLock Statement](synclock-statement.md).  
-|`Try`|Required to terminate a `Try`...`Catch`...`Finally` block definition begun by a matching `Try` statement. See [Try...Catch...Finally Statement](try-catch-finally-statement.md).  
-|`While`|Required to terminate a `While` loop definition begun by a matching `While` statement. See [While...End While Statement](while-end-while-statement.md).  
-|`With`| Required to terminate a `With` block definition begun by a matching `With` statement. See [With...End With Statement](with-end-with-statement.md).  
+|`End`|必要。 結束程式設計項目的定義。|
+|`AddHandler`|需要終止自訂[事件語句](event-statement.md)中符合的 `AddHandler` 語句開始的 `AddHandler` 存取子。|
+|`Class`|需要終止由相符的[Class 語句](class-statement.md)開始的類別定義。|
+|`Enum`|需要終止相符的[Enum 語句](enum-statement.md)所開始的列舉定義。|
+|`Event`|終止由相符的[事件語句](event-statement.md)開始的 `Custom` 事件定義時所需。|  
+|`Function`|終止由相符的[Function 語句](function-statement.md)開始的 `Function` 程序定義所需。 如果執行遇到 `End Function` 語句，則控制權會回到呼叫程式碼。|
+|`Get`|終止由相符的[Get 語句](get-statement.md)開始的 `Property` 程序定義所需。 如果執行遇到 `End Get` 語句，則控制權會回到要求屬性值的語句。|
+|`If`|需要終止 `If`...`Then`...`Else` 由相符的 `If` 語句開始的區塊定義。 查看[是否 .。。然後 .。。Else 語句](if-then-else-statement.md)。|
+|`Interface`|必須有，才能結束字元合的[介面語句](interface-statement.md)所開始的介面定義。|
+|`Module`|必須有此項，才能終止由相符[模組語句](module-statement.md)開始的模組定義。|
+|`Namespace`|需要終止相符的[命名空間語句](namespace-statement.md)所開始的命名空間定義。|
+|`Operator`|終止由相符的[運算子語句](operator-statement.md)開始的運算子定義時所需。|
+|`Property`|需要結束字元合的[屬性語句](property-statement.md)開始的屬性定義。|
+|`RaiseEvent`|需要終止自訂[事件語句](event-statement.md)中符合的 `RaiseEvent` 語句開始的 `RaiseEvent` 存取子。|
+|`RemoveHandler`|需要終止自訂[事件語句](event-statement.md)中符合的 `RemoveHandler` 語句開始的 `RemoveHandler` 存取子。|
+|`Select`|需要終止 `Select`...`Case` 區塊定義（由相符的 `Select` 語句開始）。 請參閱[Select .。。Case 語句](select-case-statement.md)。  
+|`Set`|終止由相符[Set 語句](set-statement.md)開始的 `Property` 程序定義所需。 如果執行遇到 `End Set` 語句，則控制權會回到設定屬性值的語句。  
+|`Structure`|需要終止由相符的[Structure 語句](structure-statement.md)開始的結構定義。  
+|`Sub`|終止由相符的[Sub 語句](sub-statement.md)開始的 `Sub` 程序定義所需。 如果執行遇到 `End Sub` 語句，則控制權會回到呼叫程式碼。  
+|`SyncLock`|需要結束字元合的 `SyncLock` 語句開始的 `SyncLock` 區塊定義。 請參閱[SyncLock 語句](synclock-statement.md)。  
+|`Try`|需要終止 `Try`...`Catch`...`Finally` 由相符的 `Try` 語句開始的區塊定義。 請參閱[嘗試 .。。Catch .。。Finally 語句](try-catch-finally-statement.md)。  
+|`While`|需要結束字元合的 `While` 語句開始的 `While` 迴圈定義。 請參閱[While .。。End While 語句](while-end-while-statement.md)。  
+|`With`| 需要結束字元合的 `With` 語句開始的 `With` 區塊定義。 請參閱[With .。。結尾為語句](with-end-with-statement.md)。  
 |||
   
 ## <a name="directives"></a>指示詞
 
-When preceded by a number sign (`#`), the `End` keyword terminates a preprocessing block introduced by the corresponding directive.  
+當前面加上數位記號（`#`）時，`End` 關鍵字會終止對應指示詞所引進的前置處理區塊。  
 
 ```vb
 #End ExternalSource
@@ -85,19 +85,19 @@ When preceded by a number sign (`#`), the `End` keyword terminates a preprocessi
 
 |組件|描述|
 |---|---|
-|`#End`|必要項。 Terminates the definition of the preprocessing block.|
-|`ExternalSource`|Required to terminate an external source block begun by a matching [#ExternalSource Directive](../directives/externalsource-directive.md).|
-|`If`|Required to terminate a conditional compilation block begun by a matching `#If` directive. See [#If...Then...#Else Directives](../directives/if-then-else-directives.md).|
-|`Region`|Required to terminate a source region block begun by a matching [#Region Directive](../directives/region-directive.md).|
+|`#End`|必要。 終止前置處理區塊的定義。|
+|`ExternalSource`|需要結束字元合的[#ExternalSource](../directives/externalsource-directive.md)指示詞開始的外部來源區塊。|
+|`If`|終止由相符的 `#If` 指示詞開始的條件式編譯區塊時所需。 請參閱[#If .。。Then ... #Else](../directives/if-then-else-directives.md)指示詞。|
+|`Region`|終止由相符的[#Region](../directives/region-directive.md)指示詞開始的來源區域區塊時所需。|
 |||
 
 ## <a name="remarks"></a>備註
 
-The [End Statement](end-statement.md), without an additional keyword, terminates execution immediately.
+[結尾語句](end-statement.md)（不含額外的關鍵字）會立即終止執行。
 
-## <a name="smart-device-developer-notes"></a>Smart Device Developer Notes  
+## <a name="smart-device-developer-notes"></a>智慧型裝置開發人員注意事項  
 
-The `End` statement, without an additional keyword, is not supported.  
+不支援不含額外關鍵字的 `End` 語句。  
   
 ## <a name="see-also"></a>請參閱
 

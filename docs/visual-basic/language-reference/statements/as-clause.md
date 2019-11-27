@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350178"
 ---
 # <a name="as-clause-visual-basic"></a>As 子句 (Visual Basic)
-Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.  
+引進了一個 `As` 子句，它會識別宣告語句中的資料類型或泛型型別參數的條件約束清單。  
   
 ## <a name="remarks"></a>備註  
  `As` 關鍵字可用於以下內容：  
@@ -37,9 +37,9 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [For...Next Statements](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [針對 .。。下一個語句](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [For Each...Next Statements](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [針對每個 .。。下一個語句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -49,7 +49,7 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
  [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
   
@@ -57,7 +57,7 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [Try...Catch...Finally Statements](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [嘗試 .。。Catch .。。Finally 語句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>請參閱
 
@@ -65,5 +65,5 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
 - [資料類型](../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [變數宣告](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [類型清單](../../../visual-basic/language-reference/statements/type-list.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic 中的泛型型別](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

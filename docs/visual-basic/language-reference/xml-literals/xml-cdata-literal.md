@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349439"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA 常值 (Visual Basic)
-A literal representing an <xref:System.Xml.Linq.XCData> object.  
+表示 <xref:System.Xml.Linq.XCData> 物件的常值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,33 +26,33 @@ A literal representing an <xref:System.Xml.Linq.XCData> object.
   
 ## <a name="parts"></a>組件  
  `<![CDATA[`  
- 必要項。 Denotes the start of the XML CDATA section.  
+ 必要。 表示 XML CDATA 區段的開頭。  
   
  `content`  
- 必要項。 Text content to appear in the XML CDATA section.  
+ 必要。 要出現在 XML CDATA 區段中的文字內容。  
   
  `]]>`  
- 必要項。 Denotes the end of the section.  
+ 必要。 表示區段的結尾。  
   
 ## <a name="return-value"></a>傳回值  
  <xref:System.Xml.Linq.XCData> 物件。  
   
 ## <a name="remarks"></a>備註  
- XML CDATA sections contain raw text that should be included, but not parsed, with the XML that contains it. A XML CDATA section can contain any text. This includes reserved XML characters. The XML CDATA section ends with the sequence "]]>". This implies the following points:  
+ XML CDATA 區段包含應包含但未剖析的原始文字，以及包含它的 XML。 XML CDATA 區段可以包含任何文字。 這包括保留的 XML 字元。 XML CDATA 區段的結尾是序列 "]] >"。 這表示下列幾點：  
   
-- You cannot use an embedded expression in an XML CDATA literal because the embedded expression delimiters are valid XML CDATA content.  
+- 您不能在 XML CDATA 常值中使用內嵌運算式，因為內嵌的運算式分隔符號是有效的 XML CDATA 內容。  
   
-- XML CDATA sections cannot be nested, because `content` cannot contain the value "]]>".  
+- XML CDATA 區段無法嵌套，因為 `content` 不能包含值 "]] >"。  
   
- You can assign an XML CDATA literal to a variable, or include it in an XML element literal.  
+ 您可以將 XML CDATA 常值指派給變數，或將它包含在 XML 元素常值中。  
   
 > [!NOTE]
-> An XML literal can span multiple lines but does not use line continuation characters. This enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+> XML 常值可以跨越多行，但不會使用行接續字元。 這可讓您從 XML 檔案複製內容，並將它直接貼到 Visual Basic 程式中。  
   
- The Visual Basic compiler converts the XML CDATA literal to a call to the <xref:System.Xml.Linq.XCData.%23ctor%2A> constructor.  
+ Visual Basic 編譯器會將 XML CDATA 常值轉換成呼叫 <xref:System.Xml.Linq.XCData.%23ctor%2A> 的函式。  
   
 ## <a name="example"></a>範例  
- The following example creates a CDATA section that contains the text "Can contain literal \<XML> tags".  
+ 下列範例會建立一個 CDATA 區段，其中包含「可以包含常值 \<XML > 標記」文字。  
   
  [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  
   

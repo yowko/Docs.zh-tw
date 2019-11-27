@@ -12,10 +12,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349054"
 ---
 # <a name="how-to-create-a-collection-used-by-a-collection-initializer-visual-basic"></a>如何：建立集合初始設定式所使用的集合 (Visual Basic)
-When you use a collection initializer to create a collection, the Visual Basic compiler searches for an `Add` method of the collection type for which the parameters for the `Add` method match the types of the values in the collection initializer. This `Add` method is used to populate the collection with the values from the collection initializer.  
+當您使用集合初始化運算式來建立集合時，Visual Basic 編譯器會搜尋集合類型的 `Add` 方法，其中 `Add` 方法的參數會符合集合初始化運算式中的數值型別。 這個 `Add` 方法是用來在集合中填入集合初始化運算式的值。  
   
 ## <a name="example"></a>範例  
- The following example shows an `OrderCollection` collection that contains a public `Add` method that a collection initializer can use to add objects of type `Order`. The `Add` method enables you to use the shortened collection initializer syntax.  
+ 下列範例顯示 `OrderCollection` 集合，其中包含集合初始化運算式可用來加入 `Order`類型物件的公用 `Add` 方法。 `Add` 方法可讓您使用縮短的集合初始化運算式語法。  
   
  [!code-vb[VbVbalrCollectionInitializersHowTo2#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializersHowTo2/VB/Module1.vb#4)]  
   

@@ -38,7 +38,7 @@ ms.locfileid: "74283565"
 
 本主題包含下列各節：
 
-- [必要條件](#prerequisites)
+- [先決條件](#prerequisites)
 
 - [元件和狀態模型](#parts_and_states_model)
 

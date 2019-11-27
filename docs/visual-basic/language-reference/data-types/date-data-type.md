@@ -38,7 +38,7 @@ ms.locfileid: "74344031"
 
 您必須將 `Date` 常值包含在數字符號 (`# #`) 中。 您必須指定 M/d/yyyy 格式 (例如 `#5/31/1993#`) 或 yyyy-MM-dd (例如 `#1993-5-31#`) 的日期值。 先指定年份時可以使用斜線。  這項需求與您的地區設定和電腦的日期和時間格式設定無關。
 
-之所以有這項限制，是因為您程式碼的意義絕不應根據您的應用程式執行所在的地區設定而變更。 假設您對 `#3/4/1998#` 的 `Date` 常值進行硬式編碼，並想要讓它代表 1998 年 3 月 4 日。 在使用 mm/dd/yyyy 的地區設定中，3/4/1998 會依照您的需求進行編譯。 But suppose you deploy your application in many countries/regions. 在使用 dd/mm/yyyy 的地區設定中，您硬式編碼的常值會編譯為 1998 年 4 月 3 日。 在使用 yyyy/mm/dd 的地區設定中，常值將是無效的 (0003 年 4 月 1998 日)，而且會導致編譯器錯誤。
+之所以有這項限制，是因為您程式碼的意義絕不應根據您的應用程式執行所在的地區設定而變更。 假設您對 `Date` 的 `#3/4/1998#` 常值進行硬式編碼，並想要讓它代表 1998 年 3 月 4 日。 在使用 mm/dd/yyyy 的地區設定中，3/4/1998 會依照您的需求進行編譯。 但假設您將應用程式部署在許多國家/地區。 在使用 dd/mm/yyyy 的地區設定中，您硬式編碼的常值會編譯為 1998 年 4 月 3 日。 在使用 yyyy/mm/dd 的地區設定中，常值將是無效的 (0003 年 4 月 1998 日)，而且會導致編譯器錯誤。
 
 ## <a name="workarounds"></a>替代解決辦法
 
@@ -68,11 +68,11 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
 
 ## <a name="programming-tips"></a>程式設計提示
 
-- **Interop Considerations.** 如果您要使用的元件不是針對 .NET Framework 所撰寫 (例如 Automation 或 COM 物件)，請記住，其他環境中的日期/時間類型與 Visual Basic `Date` 類型並不相融。 如果您要將日期/時間引數傳遞至這類元件，請在新的 Visual Basic 程式碼中將它宣告為 `Double` (而不是 `Date`)，並使用轉換方法 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> 和 <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>。
+- **Interop 考慮。** 如果您要使用的元件不是針對 .NET Framework 所撰寫 (例如 Automation 或 COM 物件)，請記住，其他環境中的日期/時間類型與 Visual Basic `Date` 類型並不相融。 如果您要將日期/時間引數傳遞至這類元件，請在新的 Visual Basic 程式碼中將它宣告為 `Double` (而不是 `Date`)，並使用轉換方法 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> 和 <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>。
 
-- **Type Characters.** `Date` has no literal type character or identifier type character. 不過，編譯器會將包含在數字符號 (`# #`) 內的常值視為 `Date`。
+- **輸入字元。** `Date` 沒有常數值型別字元或識別項型別字元。 不過，編譯器會將包含在數字符號 (`# #`) 內的常值視為 `Date`。
 
-- **Framework Type.** 在 .NET Framework 中對應的類型為 <xref:System.DateTime?displayProperty=nameWithType> 結構。
+- **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.DateTime?displayProperty=nameWithType> 結構。
 
 ## <a name="example"></a>範例
 
@@ -86,8 +86,8 @@ Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - [資料類型](../../../visual-basic/language-reference/data-types/index.md)
-- [標準日期和時間格式字串](../../../standard/base-types/standard-date-and-time-format-strings.md)
-- [自訂日期和時間格式字串](../../../standard/base-types/custom-date-and-time-format-strings.md)
+- [Standard Date and Time Format Strings](../../../standard/base-types/standard-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../standard/base-types/custom-date-and-time-format-strings.md)
 - [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [有效率地使用資料類型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

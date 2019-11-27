@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333019"
 ---
 # <a name="return-statement-visual-basic"></a>Return 陳述式 (Visual Basic)
-Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.  
+將控制權傳回給呼叫 `Function`、`Sub`、`Get`、`Set`或 `Operator` 程式的程式碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,20 +29,20 @@ Return expression
   
 ## <a name="part"></a>組件  
  `expression`  
- Required in a `Function`, `Get`, or `Operator` procedure. Expression that represents the value to be returned to the calling code.  
+ 在 `Function`、`Get`或 `Operator` 程式中為必要項。 運算式，表示要傳回給呼叫程式碼的值。  
   
 ## <a name="remarks"></a>備註  
- In a `Sub` or `Set` procedure, the `Return` statement is equivalent to an `Exit Sub` or `Exit Property` statement, and `expression` must not be supplied.  
+ 在 `Sub` 或 `Set` 程式中，`Return` 語句相當於 `Exit Sub` 或 `Exit Property` 語句，而且不得提供 `expression`。  
   
- In a `Function`, `Get`, or `Operator` procedure, the `Return` statement must include `expression`, and `expression` must evaluate to a data type that is convertible to the return type of the procedure. In a `Function` or `Get` procedure, you also have the alternative of assigning an expression to the procedure name to serve as the return value, and then executing an `Exit Function` or `Exit Property` statement. In an `Operator` procedure, you must use `Return expression`.  
+ 在 `Function`、`Get`或 `Operator` 程式中，`Return` 語句必須包含 `expression`，而且 `expression` 必須評估為可轉換成程式之傳回型別的資料型別。 在 `Function` 或 `Get` 程式中，您也可以選擇將運算式指派給程式名稱，以做為傳回值，然後執行 `Exit Function` 或 `Exit Property` 語句。 在 `Operator` 程式中，您必須使用 `Return expression`。  
   
- You can include as many `Return` statements as appropriate in the same procedure.  
+ 您可以在相同的程式中包含任意數目的 `Return` 語句。  
   
 > [!NOTE]
-> The code in a `Finally` block runs after a `Return` statement in a `Try` or `Catch` block is encountered, but before that `Return` statement executes. A `Return` statement cannot be included in a `Finally` block.  
+> `Finally` 區塊中的程式碼會在遇到 `Try` 或 `Catch` 區塊中的 `Return` 語句之後，但在該 `Return` 語句執行之前執行。 `Return` 語句不能包含在 `Finally` 區塊中。  
   
 ## <a name="example"></a>範例  
- The following example uses the `Return` statement several times to return to the calling code when the procedure does not have to do anything else.  
+ 下列範例會使用 `Return` 語句數次，以便在程式不需要執行任何動作時，返回呼叫程式碼。  
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   
@@ -52,7 +52,7 @@ Return expression
 - [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Get 陳述式](../../../visual-basic/language-reference/statements/get-statement.md)
 - [Set 陳述式](../../../visual-basic/language-reference/statements/set-statement.md)
-- [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Exit 陳述式](../../../visual-basic/language-reference/statements/exit-statement.md)
 - [Try...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

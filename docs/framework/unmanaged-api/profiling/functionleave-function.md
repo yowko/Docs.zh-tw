@@ -22,10 +22,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440582"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 函式
-Notifies the profiler that a function is about to return to the caller.  
+通知分析工具，函式即將傳回給呼叫者。  
   
 > [!NOTE]
-> The `FunctionLeave` function is deprecated in the .NET Framework 2.0. It will continue to work, but will incur a performance penalty. Use the [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) function instead.  
+> .NET Framework 2.0 中的 `FunctionLeave` 函數已被取代。 它會繼續工作，但會造成效能上的負面影響。 請改用[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)函數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,29 +37,29 @@ void __stdcall FunctionLeave (
   
 ## <a name="parameters"></a>參數  
  `funcID`  
- [in] The identifier of the function that is returning.  
+ 在傳回之函式的識別碼。  
   
 ## <a name="remarks"></a>備註  
- The `FunctionLeave` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
+ `FunctionLeave` 函數是回呼;您必須加以執行。 此執行必須使用 `__declspec`（`naked`）儲存類別屬性。  
   
- The execution engine does not save any registers before calling this function.  
+ 在呼叫此函式之前，執行引擎不會儲存任何暫存器。  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- 輸入時，您必須儲存您所使用的所有暫存器，包括浮點單位（FPU）中的暫存器。  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- 結束時，您必須透過關閉其呼叫者推送的所有參數來還原堆疊。  
   
- The implementation of `FunctionLeave` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionLeave` returns.  
+ `FunctionLeave` 的執行不應該封鎖，因為它會延遲垃圾收集。 執行不應嘗試垃圾收集，因為堆疊可能不會處於垃圾收集的唯讀狀態。 如果嘗試垃圾收集，執行時間將會封鎖，直到 `FunctionLeave` 傳回為止。  
   
- Also, the `FunctionLeave` function must not call into managed code or in any way cause a managed memory allocation.  
+ 此外，`FunctionLeave` 函式不能呼叫 managed 程式碼，或以任何方式執行 managed 記憶體配置。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorProf.idl  
+ **標頭：** Corprof.idl .idl  
   
  **程式庫：** CorGuids.lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **.NET Framework 版本：** 1.1、1。0  
   
 ## <a name="see-also"></a>請參閱
 

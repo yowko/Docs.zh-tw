@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354232"
 ---
-# <a name="deferred-execution-example-visual-basic"></a>Deferred Execution Example (Visual Basic)
+# <a name="deferred-execution-example-visual-basic"></a>延後執行範例（Visual Basic）
 
 本主題顯示延後執行與延遲評估如何影響您 LINQ to XML 查詢的執行。
 
@@ -63,4 +63,4 @@ Main: str GHI
 
 ## <a name="see-also"></a>請參閱
 
-- [Tutorial: Deferred Execution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [教學課程：延後執行（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

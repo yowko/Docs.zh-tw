@@ -1,5 +1,5 @@
 ---
-title: 'How to: Pass Procedures to Another Procedure'
+title: 如何：將程式傳遞至另一個進程
 ms.date: 07/20/2015
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
@@ -13,37 +13,37 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345253"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>如何：在 Visual Basic 中將程序傳遞至其他程序
-This example shows how to use delegates to pass a procedure to another procedure.  
+這個範例會示範如何使用委派將程式傳遞至另一個程式。  
   
- A delegate is a type that you can use like any other type in Visual Basic. The `AddressOf` operator returns a delegate object when applied to a procedure name.  
+ 委派是一種類型，您可以像 Visual Basic 中的任何其他類型一樣使用它。 `AddressOf` 運算子套用至程式名稱時，會傳回委派物件。  
   
- This example has a procedure with a delegate parameter that can take a reference to another procedure, obtained with the `AddressOf` operator.  
+ 這個範例有一個程式，其中包含可參考另一個程式（使用 `AddressOf` 運算子取得）的委派參數。  
   
-### <a name="create-the-delegate-and-matching-procedures"></a>Create the delegate and matching procedures  
+### <a name="create-the-delegate-and-matching-procedures"></a>建立委派和比對程式  
   
-1. Create a delegate named `MathOperator`.  
+1. 建立名為 `MathOperator`的委派。  
   
      [!code-vb[VbVbalrDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#1)]  
   
-2. Create a procedure named `AddNumbers` with parameters and return value that match those of `MathOperator`, so that the signatures match.  
+2. 建立名為 `AddNumbers` 的程式，其中包含符合 `MathOperator`的參數和傳回值，使簽章相符。  
   
      [!code-vb[VbVbalrDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#2)]  
   
-3. Create a procedure named `SubtractNumbers` with a signature that matches `MathOperator`.  
+3. 使用符合 `MathOperator`的簽章，建立名為 `SubtractNumbers` 的程式。  
   
      [!code-vb[VbVbalrDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#3)]  
   
-4. Create a procedure named `DelegateTest` that takes a delegate as a parameter.  
+4. 建立一個名為 `DelegateTest` 的程式，接受委派做為參數。  
   
-     This procedure can accept a reference to `AddNumbers` or `SubtractNumbers`, because their signatures match the `MathOperator` signature.  
+     此程式可以接受 `AddNumbers` 或 `SubtractNumbers`的參考，因為其簽章符合 `MathOperator` 簽章。  
   
      [!code-vb[VbVbalrDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#4)]  
   
-5. Create a procedure named `Test` that calls `DelegateTest` once with the delegate for `AddNumbers` as a parameter, and again with the delegate for `SubtractNumbers` as a parameter.  
+5. 建立名為 `Test` 的程式，其會使用做為參數的 `AddNumbers` 委派呼叫 `DelegateTest` 一次，並使用 `SubtractNumbers` 的委派做為參數。  
   
      [!code-vb[VbVbalrDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#5)]  
   
-     When `Test` is called, it first displays the result of `AddNumbers` acting on `5` and `3`, which is 8. Then the result of `SubtractNumbers` acting on `9` and `3` is displayed, which is 6.  
+     呼叫 `Test` 時，它會先顯示 `AddNumbers` 作用於 `5` 和 `3`（也就是8）的結果。 然後會顯示 `SubtractNumbers` 作用於 `9` 和 `3` 的結果，也就是6。  
   
 ## <a name="see-also"></a>請參閱
 

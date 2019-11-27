@@ -17,18 +17,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344892"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>如何：定義轉換運算子 (Visual Basic)
-If you have defined a class or structure, you can define a type conversion operator between the type of your class or structure and another data type (such as `Integer`, `Double`, or `String`).  
+如果您已定義類別或結構，您可以在類別或結構的類型與另一個資料類型（例如 `Integer`、`Double`或 `String`）之間定義類型轉換運算子。  
   
- Define the type conversion as a [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) procedure within the class or structure. All conversion procedures must be `Public Shared`, and each one must specify either [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) or [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md).  
+ 將類型轉換定義為類別或結構內的[CType 函數](../../../../visual-basic/language-reference/functions/ctype-function.md)程式。 所有的轉換程式都必須 `Public Shared`，而且每一個都必須指定[擴展](../../../../visual-basic/language-reference/modifiers/widening.md)或[縮小](../../../../visual-basic/language-reference/modifiers/narrowing.md)。  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ 在類別或結構上定義運算子*也稱為多*載運算子。  
   
 ## <a name="example"></a>範例  
- The following example defines conversion operators between a structure called `digit` and a `Byte`.  
+ 下列範例會在名為 `digit` 的結構和 `Byte`之間定義轉換運算子。  
   
  [!code-vb[VbVbcnProcedures#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#27)]  
   
- You can test the structure `digit` with the following code.  
+ 您可以使用下列程式碼來測試結構 `digit`。  
   
  [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   
@@ -38,7 +38,7 @@ If you have defined a class or structure, you can define a type conversion opera
 - [如何：定義運算子](./how-to-define-an-operator.md)
 - [如何：呼叫運算子程序](./how-to-call-an-operator-procedure.md)
 - [如何：使用定義運算子的類別](./how-to-use-a-class-that-defines-operators.md)
-- [Operator 陳述式](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)
 - [如何：宣告結構](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [隱含和明確轉換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

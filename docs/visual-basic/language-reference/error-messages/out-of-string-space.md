@@ -12,13 +12,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349168"
 ---
 # <a name="out-of-string-space-visual-basic"></a>超出字串空間 (Visual Basic)
-With Visual Basic, you can use very large strings. However, the requirements of other programs and the way you work with your strings can still cause this error.  
+使用 Visual Basic，您可以使用非常大的字串。 不過，其他程式的需求和您處理字串的方式仍然可能造成此錯誤。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. Make sure that an expression requiring temporary string creation during evaluation is not causing the error.  
+1. 請確定在評估期間需要暫存字串建立的運算式不會造成錯誤。  
   
-2. Remove any unnecessary applications from memory to create more space.  
+2. 從記憶體移除任何不必要的應用程式，以建立更多空間。  
   
 ## <a name="see-also"></a>請參閱
 

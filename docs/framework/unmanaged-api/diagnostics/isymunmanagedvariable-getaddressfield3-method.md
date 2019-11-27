@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446115"
 ---
 # <a name="isymunmanagedvariablegetaddressfield3-method"></a>ISymUnmanagedVariable::GetAddressField3 方法
-Gets the third address field for this variable. Its meaning depends on the kind of address.  
+取得這個變數的第三個位址欄位。 其意義取決於位址的種類。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,13 +34,13 @@ HRESULT GetAddressField3(
   
 ## <a name="parameters"></a>參數  
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the third address field.  
+ 脫銷接收第三個位址欄位之 `ULONG32` 的指標。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
 ## <a name="see-also"></a>請參閱
 

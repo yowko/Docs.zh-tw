@@ -16,13 +16,13 @@ ms.locfileid: "74351428"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (泛型修飾詞) (Visual Basic)
 
-For generic type parameters, the `Out` keyword specifies that the type is covariant.
+若為泛型型別參數，`Out` 關鍵字會指定型別為「協變數」。
 
 ## <a name="remarks"></a>備註
 
-共變數可讓您使用比泛型參數指定的衍生程度更高的衍生型別。 這可隱含轉換實作 Variant 介面的類別和隱含轉換委派型別。
+共變數可讓您使用比泛型參數指定的衍生程度更高的衍生型別。 這可隱含轉換實作 variant 介面的類別和隱含轉換委派類型。
 
-如需詳細資訊，請參閱 [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md) (共變數和反變數)。
+如需詳細資訊，請參閱 [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md) (共變數和反變數 (C# 和 Visual Basic))。
 
 ## <a name="rules"></a>規則
 
@@ -37,11 +37,11 @@ For generic type parameters, the `Out` keyword specifies that the type is covari
 
 - 型別參數不是用為介面方法的泛型條件約束。
 
-In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.
+在泛型委派中，如果型別參數僅做為方法傳回型別使用，而不是用於方法引數，則可以宣告為「不可變」。
 
 參考型別支援共變數和反變數，但實值型別不支援它們。
 
-In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type. Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.
+在 Visual Basic 中，您不能在不指定委派類型的情況下，于協變數介面中宣告事件。 此外，協變數介面不能有嵌套的類別、列舉或結構，但它們可以有嵌套介面。
 
 ## <a name="behavior"></a>行為
 
@@ -57,7 +57,7 @@ Covariant 委派可以指派給同型別的另一個委派，但具有衍生程�
 
 ## <a name="example"></a>範例
 
-下例會示範如何宣告、具現化及叫用 Covariant 泛型委派。 It also shows how you can use implicit conversion for delegate types.
+下例會示範如何宣告、具現化及叫用 Covariant 泛型委派。 它也會說明如何使用委派類型的隱含轉換。
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 

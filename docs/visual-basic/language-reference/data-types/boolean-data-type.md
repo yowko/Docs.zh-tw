@@ -21,33 +21,33 @@ ms.locfileid: "74347852"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean 資料類型 (Visual Basic)
 
-Holds values that can be only `True` or `False`. The keywords `True` and `False` correspond to the two states of `Boolean` variables.  
+保留只能 `True` 或 `False`的值。 `True` 和 `False` 的關鍵字會對應到 `Boolean` 變數的兩種狀態。  
   
 ## <a name="remarks"></a>備註  
 
- Use the [Boolean Data Type (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) to contain two-state values such as true/false, yes/no, or on/off.  
+ 使用[布林資料類型（Visual Basic）](../../../visual-basic/language-reference/data-types/boolean-data-type.md)來包含兩個狀態值： true/false、yes/no 或 on/off。  
   
  `Boolean` 的預設值為 `False`。  
   
- `Boolean` values are not stored as numbers, and the stored values are not intended to be equivalent to numbers. You should never write code that relies on equivalent numeric values for `True` and `False`. Whenever possible, you should restrict usage of `Boolean` variables to the logical values for which they are designed.  
+ `Boolean` 值不會儲存為數字，而且儲存的值不會等同于數位。 您絕對不應該撰寫依賴對等數值進行 `True` 和 `False`的程式碼。 可能的話，您應該將 `Boolean` 變數的使用限制為其設計的邏輯值。  
   
 ## <a name="type-conversions"></a>類型轉換  
 
- When Visual Basic converts numeric data type values to `Boolean`, 0 becomes `False` and all other values become `True`. When Visual Basic converts `Boolean` values to numeric types, `False` becomes 0 and `True` becomes -1.  
+ 當 Visual Basic 將數值資料類型值轉換成 `Boolean`時，0會變成 `False`，而所有其他值會變成 `True`。 當 Visual Basic 將 `Boolean` 值轉換為數數值型別時，`False` 會變成0，而 `True` 會變成-1。  
   
- When you convert between `Boolean` values and numeric data types, keep in mind that the .NET Framework conversion methods do not always produce the same results as the Visual Basic conversion keywords. This is because the Visual Basic conversion retains behavior compatible with previous versions. For more information, see "Boolean Type Does Not Convert to Numeric Type Accurately" in [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+ 當您在 `Boolean` 值和數值資料類型之間進行轉換時，請記住，.NET Framework 轉換方法不一定會產生與 Visual Basic 轉換關鍵字相同的結果。 這是因為 Visual Basic 轉換會保留與先前版本相容的行為。 如需詳細資訊，請參閱[疑難排解資料類型](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)中的「布林值類型未正確轉換為數數值型別」。  
   
 ## <a name="programming-tips"></a>程式設計提示  
   
-- **Negative Numbers.** `Boolean` is not a numeric type and cannot represent a negative value. In any case, you should not use `Boolean` to hold numeric values.  
+- **負數。** `Boolean` 不是數數值型別，而且不能代表負值。 在任何情況下，您不應該使用 `Boolean` 來保存數值。  
   
-- **Type Characters.** `Boolean` has no literal type character or identifier type character.  
+- **輸入字元。** `Boolean` 沒有常數值型別字元或識別項型別字元。  
   
-- **Framework Type.** 在 .NET Framework 中對應的類型為 <xref:System.Boolean?displayProperty=nameWithType> 結構。  
+- **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.Boolean?displayProperty=nameWithType> 結構。  
   
 ## <a name="example"></a>範例  
 
- In the following example, `runningVB` is a `Boolean` variable, which stores a simple yes/no setting.  
+ 在下列範例中，`runningVB` 是 `Boolean` 變數，它會儲存簡單的 [是/否] 設定。  
   
 ```vb  
 Dim runningVB As Boolean  

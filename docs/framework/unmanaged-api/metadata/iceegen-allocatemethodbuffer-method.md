@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436401"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>ICeeGen::AllocateMethodBuffer 方法
-Creates a buffer of the specified size for a method, and gets the relative virtual address of the method.  
+為方法建立指定大小的緩衝區，並取得方法的相對虛擬位址。  
   
- This method is obsolete and should not be used.  
+ 這個方法已過時，不應使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,20 +39,20 @@ HRESULT AllocateMethodBuffer (
   
 ## <a name="parameters"></a>參數  
  `cchBuffer`  
- [in] The length of the buffer to create.  
+ 在要建立的緩衝區長度。  
   
  `lpBuffer`  
- [out] The returned buffer.  
+ 脫銷傳回的緩衝區。  
   
  `RVA`  
- [out] The relative virtual address of the method.  
+ 脫銷方法的相對虛擬位址。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

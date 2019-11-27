@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445284"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionenter-method"></a>ICorProfilerCallback::ExceptionUnwindFunctionEnter 方法
-Notifies the profiler that the unwind phase of exception handling has begun to unwind a function.  
+通知分析工具，例外狀況處理的回溯階段已開始回溯函數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,12 +34,12 @@ HRESULT ExceptionUnwindFunctionEnter(
   
 ## <a name="parameters"></a>參數  
  `functionId`  
- [in] The ID of the function that is being unwound.  
+ 在要展開之函式的識別碼。  
   
 ## <a name="remarks"></a>備註  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ 分析工具不應在此方法的執行中封鎖，因為堆疊可能不是處於允許垃圾收集的狀態，因此無法啟用「搶先垃圾收集」。 如果分析工具在此處封鎖並嘗試垃圾收集，執行時間將會封鎖，直到這個回呼傳回為止。  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ 分析工具的此方法的執行不應呼叫 managed 程式碼，或以任何方式進行，以造成 managed 記憶體配置。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

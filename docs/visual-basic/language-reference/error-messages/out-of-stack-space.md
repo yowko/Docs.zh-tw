@@ -12,21 +12,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349188"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>堆疊空間不足 (Visual Basic)
-The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program. Its limits have been exceeded.  
+堆疊是記憶體的工作區域，會隨著執行程式的需求動態成長和縮減。 已超過其限制。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. Check that procedures are not nested too deeply.  
+1. 檢查程式是否的嵌套太深。  
   
-2. Make sure recursive procedures terminate properly.  
+2. 請確定遞迴程式已正確終止。  
   
-3. If local variables require more local variable space than is available, try declaring some variables at the module level. You can also declare all variables in the procedure static by preceding the `Property`, `Sub`, or `Function` keyword with `Static`. Or you can use the `Static` statement to declare individual static variables within procedures.  
+3. 如果本機變數需要的本機變數空間比可用的數目還要多，請嘗試在模組層級宣告一些變數。 您也可以在 `Property`、`Sub`或 `Function` 關鍵字前面加上 `Static`，以宣告程式中的所有變數。 或者，您可以使用 `Static` 語句，在程式內宣告個別的靜態變數。  
   
-4. Redefine some of your fixed-length strings as variable-length strings, as fixed-length strings use more stack space than variable-length strings. You can also define the string at module level where it requires no stack space.  
+4. 將部分固定長度的字串重新定義為可變長度字串，因為固定長度的字串會使用比可變長度字串更多的堆疊空間。 您也可以在模組層級定義不需要堆疊空間的字串。  
   
-5. Check the number of nested `DoEvents` function calls, by using the `Calls` dialog box to view which procedures are active on the stack.  
+5. 使用 [`Calls`] 對話方塊，查看堆疊上作用中的程式，以檢查嵌套 `DoEvents` 函式呼叫的數目。  
   
-6. Make sure you did not cause an "event cascade" by triggering an event that calls an event procedure already on the stack. An event cascade is similar to an unterminated recursive procedure call, but it is less obvious, since the call is made by Visual Basic rather than an explicit call in the code. Use the `Calls` dialog box to view which procedures are active on the stack.  
+6. 觸發呼叫已在堆疊上之事件程式的事件，以確定您未造成「事件 cascade」。 事件 cascade 類似于未結束的遞迴程序呼叫，但較不明顯，因為呼叫是由 Visual Basic，而不是程式碼中的明確呼叫所發出。 使用 [`Calls`] 對話方塊，即可查看堆疊上作用中的程式。  
   
 ## <a name="see-also"></a>請參閱
 

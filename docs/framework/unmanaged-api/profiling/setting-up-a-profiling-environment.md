@@ -19,7 +19,7 @@ ms.locfileid: "74427060"
 ---
 # <a name="setting-up-a-profiling-environment"></a>設定程式碼剖析環境
 > [!NOTE]
-> There have been substantial changes to profiling in the .NET Framework 4.  
+> .NET Framework 4 中的分析有大幅的變更。  
   
  當 Managed 處理序 (應用程式或服務) 啟動時，會載入 Common Language Runtime (CLR)。 初始化 CLR 時，會評估下列兩個環境變數來決定程序是否應該連接至程式碼剖析工具：  
   
@@ -35,43 +35,43 @@ ms.locfileid: "74427060"
  若要分析 CLR 應用程式，您必須先設定 COR_ENABLE_PROFILING 和 COR_PROFILER 環境變數，才能執行應用程式。 您也必須確認已註冊程式碼剖析工具 DLL。  
   
 > [!NOTE]
-> Starting with the .NET Framework 4, profilers do not have to be registered.  
+> 從 .NET Framework 4 開始，不需要註冊分析工具。  
   
 > [!NOTE]
-> To use .NET Framework versions 2.0, 3.0, and 3.5 profilers in the .NET Framework 4 and later versions, you must set the COMPLUS_ProfAPI_ProfilerCompatibilitySetting environment variable.  
+> 若要在 .NET Framework 4 和更新版本中使用 .NET Framework 版本2.0、3.0 和3.5 分析工具，您必須設定 COMPLUS_ProfAPI_ProfilerCompatibilitySetting 環境變數。  
   
 ## <a name="environment-variable-scope"></a>環境變數範圍  
  您設定 COR_ENABLE_PROFILING 和 COR_PROFILER 環境變數的方式將會決定其影響範圍。 您可以使用下列其中一種方式來設定這些變數：  
   
-- If you set the variables in an [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) call, they will apply only to the application that you are running at the time. (它們也會套用到繼承此環境之應用程式所啟動的其他應用程式。)  
+- 如果您在[ICorDebug：： CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)呼叫中設定變數，它們只會套用到您當時正在執行的應用程式。 (它們也會套用到繼承此環境之應用程式所啟動的其他應用程式。)  
   
 - 如果您在 [命令提示字元] 視窗中設定變數，則變數會套用到從該視窗啟動的所有應用程式。  
   
-- 如果您在使用者層次上設定變數，它們會套用至您使用 [檔案總管] 啟動的所有應用程式。 您在設定變數之後所開啟的 [命令提示字元] 視窗中會有這些環境設定，您從該視窗所啟動的任何應用程式也是。 To set environment variables at the user level, right-click **My Computer**, click **Properties**, click the **Advanced** tab, click **Environment Variables**, and add the variables to the **User variables** list.  
+- 如果您在使用者層次上設定變數，它們會套用至您使用 [檔案總管] 啟動的所有應用程式。 您在設定變數之後所開啟的 [命令提示字元] 視窗中會有這些環境設定，您從該視窗所啟動的任何應用程式也是。 若要在使用者層級設定環境變數，請以滑鼠右鍵按一下**我的電腦**，然後依序按一下 [**屬性**]、[ **Advanced** ] 索引標籤、[**環境變數**]，然後將變數加入至 [**使用者變數**] 清單。  
   
-- 如果您在電腦層級設定變數，變數會套用到該電腦啟動的所有應用程式。 您在該電腦開啟的 [命令提示字元] 視窗會有這些環境設定，從該視窗啟動的任何應用程式也是。 這表示在該電腦上的每個 Managed 處理序將以您的程式碼剖析工具做為起始。 To set environment variables at the computer level, right-click **My Computer**, click **Properties**, click the **Advanced** tab, click **Environment Variables**, add the variables to the **System variables** list, and then restart your computer. 重新啟動後，變數就可供系統範圍使用。  
+- 如果您在電腦層級設定變數，變數會套用到該電腦啟動的所有應用程式。 您在該電腦開啟的 [命令提示字元] 視窗會有這些環境設定，從該視窗啟動的任何應用程式也是。 這表示在該電腦上的每個 Managed 處理序將以您的程式碼剖析工具做為起始。 若要在電腦層級設定環境變數，請以滑鼠右鍵按一下**我的電腦**，按一下 [內容 **]，按一下**[ **Advanced** ] 索引標籤，按一下 [**環境變數**]，將變數新增至 [**系統變數**] 清單，然後重新開機您的電腦。 重新啟動後，變數就可供系統範圍使用。  
   
- 如果您正在程式碼剖析 Windows 服務，您必須在設定環境變數及註冊程式碼剖析工具 DLL 之後重新啟動電腦。 For more information about these considerations, see the section [Profiling a Windows Service](#windows_service).  
+ 如果您正在程式碼剖析 Windows 服務，您必須在設定環境變數及註冊程式碼剖析工具 DLL 之後重新啟動電腦。 如需這些考慮的詳細資訊，請參閱[分析 Windows 服務](#windows_service)一節。  
   
 ## <a name="additional-considerations"></a>其他考量  
   
-- The profiler class implements the [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) and [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) interfaces. 在 .NET Framework 2.0 版中，程式碼剖析工具必須實作 `ICorProfilerCallback2`。 如果沒有實作，就不會載入 `ICorProfilerCallback2`。  
+- Profiler 類別會實行[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)和[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)介面。 在 .NET Framework 2.0 版中，程式碼剖析工具必須實作 `ICorProfilerCallback2`。 如果沒有實作，就不會載入 `ICorProfilerCallback2`。  
   
 - 在指定環境中一次只能使用一個程式碼剖析工具來分析處理序。 您可以在不同環境中註冊兩個不同的程式碼剖析工具，但這兩個工具必須分析不同的處理序。 程式碼剖析工具必須實作為同處理序 COM 伺服器 DLL (其與剖析中之處理序的相同位址空間對應)。 這表示程式碼剖析工具執行同處理序。 .NET Framework 不支援任何其他類型的 COM 伺服器。 例如，如果程式碼剖析工具想要從遠端電腦監視應用程式，就必須在每一部電腦上實作收集器代理程式。 這些代理程式將會批次結果，並讓結果與中央資料收集電腦通訊。  
   
 - 由於程式碼剖析工具是可具現化同處理序的 COM 物件，所以每個經剖析的應用程式會有自己的程式碼剖析工具複本。 因此，單一程式碼剖析工具執行個體不須處理來自多個應用程式的資料。 不過，您必須將邏輯加入程式碼剖析工具的記錄程式碼，以防止記錄檔從其他經剖析的應用程式覆寫。  
   
 ## <a name="initializing-the-profiler"></a>初始化程式碼剖析工具  
- 當這兩個環境變數都檢查通過時，CLR 會以與 COM `CoCreateInstance` 函式類似的方式建立程式碼剖析工具的執行個體。 程式碼剖析工具不會透過直接呼叫載入至 `CoCreateInstance`。 因此會避免呼叫必須設定執行緒模型的 `CoInitialize`。 The CLR then calls the [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) method in the profiler. 這個方法的簽章如下所示。  
+ 當這兩個環境變數都檢查通過時，CLR 會以與 COM `CoCreateInstance` 函式類似的方式建立程式碼剖析工具的執行個體。 程式碼剖析工具不會透過直接呼叫載入至 `CoCreateInstance`。 因此會避免呼叫必須設定執行緒模型的 `CoInitialize`。 然後，CLR 會在分析工具中呼叫[ICorProfilerCallback：： Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)方法。 這個方法的簽章如下所示。  
   
 ```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
- The profiler must query `pICorProfilerInfoUnk` for an [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) or [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) interface pointer and save it so that it can request more information later during profiling.  
+ 分析工具必須查詢[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)或[ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)介面指標的 `pICorProfilerInfoUnk`，並加以儲存，以便稍後可在程式碼剖析期間要求更多的資訊。  
   
 ## <a name="setting-event-notifications"></a>設定事件通知  
- The profiler then calls the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to specify which categories of notifications it is interested in. 例如，如果程式碼剖析工具只對函式進入及離開通知和記憶體回收通知感興趣，會指定下列項目。  
+ 分析工具接著會呼叫[ICorProfilerInfo：： SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法，以指定其感興趣的通知類別。 例如，如果程式碼剖析工具只對函式進入及離開通知和記憶體回收通知感興趣，會指定下列項目。  
   
 ```cpp  
 ICorProfilerInfo* pInfo;  
@@ -91,7 +91,7 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
   
  請注意這些變更將會啟用以系統範圍為基礎的程式碼剖析。 若要防止進行後續執行之所有 Managed 應用程式的程式碼剖析，您應該在重新啟動目標電腦之後刪除系統環境變數。  
   
- 這項技術也會使每個 CLR 程序進行程式碼剖析。 The profiler should add logic to its [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback to detect whether the current process is of interest. 如果不是，程式碼剖析工具可以使回呼失敗，而不需執行初始化。  
+ 這項技術也會使每個 CLR 程序進行程式碼剖析。 分析工具應該將邏輯新增至其[ICorProfilerCallback：： Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)回呼，以偵測目前的處理常式是否相關。 如果不是，程式碼剖析工具可以使回呼失敗，而不需執行初始化。  
   
 ## <a name="see-also"></a>請參閱
 

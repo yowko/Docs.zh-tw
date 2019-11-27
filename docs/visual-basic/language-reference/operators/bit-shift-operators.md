@@ -14,9 +14,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336115"
 ---
 # <a name="bit-shift-operators-visual-basic"></a>位元移位運算子 (Visual Basic)
-The following are the bit shift operators defined in Visual Basic.  
+以下是在 Visual Basic 中定義的位移位運算子。  
   
- [<\< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
+ [<\< 運算子](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
   
  [>> 運算子](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
   

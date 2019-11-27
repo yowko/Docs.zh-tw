@@ -16,17 +16,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345098"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Visual Basic 中的繼承事件處理常式疑難排解
-This topic lists common issues that arise with event handlers in inherited components.  
+本主題列出繼承元件中的事件處理常式所引發的常見問題。  
   
 ## <a name="procedures"></a>程序  
   
-#### <a name="code-in-event-handler-executes-twice-for-every-call"></a>Code in Event Handler Executes Twice for Every Call  
+#### <a name="code-in-event-handler-executes-twice-for-every-call"></a>事件處理常式中的程式碼會針對每個呼叫執行兩次  
   
-- An inherited event handler must not include a [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) clause. The method in the base class is already associated with the event and will fire accordingly. Remove the `Handles` clause from the inherited method.  
+- 繼承的事件處理常式不能包含[Handles](../../../../visual-basic/language-reference/statements/handles-clause.md)子句。 基類中的方法已經與事件相關聯，並會據此引發。 請從繼承的方法中移除 `Handles` 子句。  
   
      [!code-vb[VbVbalrEvents#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#32)]  
   
-- If the inherited method does not have a `Handles` keyword, verify that your code does not contain an extra [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md) or any additional methods that handle the same event.  
+- 如果繼承的方法沒有 `Handles` 關鍵字，請確認您的程式碼未包含額外的[AddHandler 語句](../../../../visual-basic/language-reference/statements/addhandler-statement.md)，或任何處理相同事件的其他方法。  
   
 ## <a name="see-also"></a>請參閱
 

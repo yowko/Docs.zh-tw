@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447233"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope 方法
-Retrieves the scope of a given type.  
+抓取給定類型的範圍。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,22 +37,22 @@ HRESULT GetResolutionScope(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- ID of the assembly.  
+ 元件的識別碼。  
   
  `FileToken`  
- File that is in need of a reference.  
+ 需要參考的檔案。  
   
  `TargetFile`  
- Token of file that type is defined in, usually retrieved with [ImportFile Method](importfile-method.md).  
+ 類型定義于中的檔案 Token，通常會使用[ImportFile 方法](importfile-method.md)來抓取。  
   
  `pScope`  
- Receives the assembly or module reference.  
+ 接收元件或模組參考。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h.  
+ 需要 alink. h。  
   
 ## <a name="see-also"></a>請參閱
 

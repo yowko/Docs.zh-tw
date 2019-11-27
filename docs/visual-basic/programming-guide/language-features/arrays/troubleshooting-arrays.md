@@ -17,12 +17,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349071"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>疑難排解陣列 (Visual Basic)
-This page lists some common problems that can occur when working with arrays.  
+此頁面會列出使用陣列時可能發生的一些常見問題。  
   
-## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Compilation Errors Declaring and Initializing an Array  
- Compilation errors can arise from misunderstanding of the rules for declaring, creating, and initializing arrays. The most common causes of errors are the following:  
+## <a name="compilation-errors-declaring-and-initializing-an-array"></a>宣告和初始化陣列的編譯錯誤  
+ 編譯錯誤可能來自于宣告、建立和初始化陣列的規則誤解。 錯誤的最常見原因如下：  
   
-- Supplying a [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) clause after specifying dimension lengths in the array variable declaration. The following code lines show invalid declarations of this type.  
+- 在陣列變數宣告中指定維度長度之後，提供[新的 Operator](../../../../visual-basic/language-reference/operators/new-operator.md)子句。 下列程式程式碼會顯示此類型的無效宣告。  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ This page lists some common problems that can occur when working with arrays.
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
-- Specifying dimension lengths for more than the top-level array of a jagged array. The following code line shows an invalid declaration of this type.  
+- 指定超出不規則陣列最上層陣列的維度長度。 下列程式程式碼會顯示此類型的無效宣告。  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
-- Omitting the `New` keyword when specifying the element values. The following code line shows an invalid declaration of this type.  
+- 指定元素值時省略 `New` 關鍵字。 下列程式程式碼會顯示此類型的無效宣告。  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
-- Supplying a `New` clause without braces (`{}`). The following code lines show invalid declarations of this type.  
+- 提供不含大括弧（`{}`）的 `New` 子句。 下列程式程式碼會顯示此類型的無效宣告。  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   
@@ -48,14 +48,14 @@ This page lists some common problems that can occur when working with arrays.
   
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
-## <a name="accessing-an-array-out-of-bounds"></a>Accessing an Array Out of Bounds  
- The process of initializing an array assigns an upper bound and a lower bound to each dimension. Every access to an element of the array must specify a valid index, or subscript, for every dimension. If any index is below its lower bound or above its upper bound, an <xref:System.IndexOutOfRangeException> exception results. The compiler cannot detect such an error, so an error occurs at run time.  
+## <a name="accessing-an-array-out-of-bounds"></a>存取超出範圍的陣列  
+ 初始化陣列的程式會指派上限和下限給每個維度。 陣列元素的每個存取都必須為每個維度指定有效的索引或注標。 如果有任何索引低於其下限或高於上限，就會 <xref:System.IndexOutOfRangeException> 例外狀況結果。 編譯器無法偵測到這類錯誤，因此在執行時間發生錯誤。  
   
-### <a name="determining-bounds"></a>Determining Bounds  
- If another component passes an array to your code, for example as a procedure argument, you do not know the size of that array or the lengths of its dimensions. You should always determine the upper bound for every dimension of an array before you attempt to access any elements. If the array has been created by some means other than a Visual Basic `New` clause, the lower bound might be something other than 0, and it is safest to determine that lower bound as well.  
+### <a name="determining-bounds"></a>判斷界限  
+ 如果另一個元件將陣列傳遞至您的程式碼（例如當做程式引數），您就不知道該陣列的大小或其維度的長度。 在嘗試存取任何元素之前，您應該一律判斷陣列的每個維度的上限。 如果陣列是由 Visual Basic `New` 子句以外的某些方法所建立，則下限可能是0以外的專案，而且也可以最安全地判斷下限。  
   
-### <a name="specifying-the-dimension"></a>Specifying the Dimension  
- When determining the bounds of a multidimensional array, take care how you specify the dimension. The `dimension` parameters of the <xref:System.Array.GetLowerBound%2A> and <xref:System.Array.GetUpperBound%2A> methods are 0-based, while the `Rank` parameters of the Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> and <xref:Microsoft.VisualBasic.Information.UBound%2A> functions are 1-based.  
+### <a name="specifying-the-dimension"></a>指定維度  
+ 在判斷多維陣列的界限時，請留意您指定維度的方式。 <xref:System.Array.GetLowerBound%2A> 和 <xref:System.Array.GetUpperBound%2A> 方法的 `dimension` 參數是以0為基礎，而 Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> 和 <xref:Microsoft.VisualBasic.Information.UBound%2A> 函數的 `Rank` 參數則是以1為基礎。  
   
 ## <a name="see-also"></a>請參閱
 

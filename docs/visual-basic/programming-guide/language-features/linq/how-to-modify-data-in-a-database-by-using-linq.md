@@ -1,5 +1,5 @@
 ---
-title: 'How to: Modify Data in a Database by Using LINQ'
+title: 如何：使用 LINQ 修改資料庫中的資料
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
@@ -21,51 +21,51 @@ ms.locfileid: "74344950"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>如何：使用 LINQ 修改資料庫中的資料 (Visual Basic)
 
-Language-Integrated Query (LINQ) queries make it easy to access database information and modify values in the database.
+語言整合式查詢（LINQ）查詢可讓您輕鬆地存取資料庫資訊並修改資料庫中的值。
 
-The following example shows how to create a new application that retrieves and updates information in a SQL Server database.
+下列範例示範如何建立新的應用程式，以抓取和更新 SQL Server 資料庫中的資訊。
 
-The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).
+本主題中的範例會使用 Northwind 範例資料庫。 如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載中心下載。 如需指示，請參閱[下載範例資料庫](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)。
 
-### <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database
+### <a name="to-create-a-connection-to-a-database"></a>建立資料庫的連接
 
-1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking the **View** menu, and then select **Server Explorer**/**Database Explorer**.
+1. 在 Visual Studio 中，按一下 [ **View** ] 功能表以開啟**伺服器總管**/**資料庫總管**，然後選取 [**伺服器總管** **/資料庫總管]。**
 
-2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer**, and click **Add Connection**.
+2. 以滑鼠右鍵按一下**伺服器總管**/**資料庫總管**中的 [**資料連線**]，然後按一下 [**新增連接**]。
 
-3. Specify a valid connection to the Northwind sample database.
+3. 請指定與 Northwind 範例資料庫的有效連接。
 
-### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>To add a Project with a LINQ to SQL file
+### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>若要加入具有 LINQ to SQL 檔案的專案
 
-1. 在 Visual Studio 的 [檔案] 功能表上，指向 [新增]，然後按一下 [專案]。 Select Visual Basic **Windows Forms Application** as the project type.
+1. 在 Visual Studio 的 [檔案] 功能表上，指向 [新增]，然後按一下 [專案]。 選取 [Visual Basic **Windows Forms 應用程式**] 做為 [專案類型]。
 
-2. 在 [專案] 功能表中，按一下 [加入新項目]。 Select the **LINQ to SQL Classes** item template.
+2. 在 [專案] 功能表中，按一下 [加入新項目]。 選取 [ **LINQ to SQL 類別**] 專案範本。
 
-3. 將檔案命名為 `northwind.dbml`。 按一下 [加入]。 The Object Relational Designer (O/R Designer) is opened for the `northwind.dbml` file.
+3. 將檔案命名為 `northwind.dbml`。 按一下 [加入]。 `northwind.dbml` 檔案的物件關聯式設計工具（O/R 設計工具）隨即開啟。
 
-### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>To add tables to query and modify to the designer
+### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>若要將資料表加入至設計工具並進行查詢和修改
 
-1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Tables** folder.
+1. 在**伺服器總管**/**資料庫總管**中，展開 Northwind 資料庫的連接。 展開 [**資料表]** 資料夾。
 
-     If you have closed the O/R Designer, you can reopen it by double-clicking the `northwind.dbml` file that you added earlier.
+     如果您已經關閉 O/R 設計工具，可以按兩下先前加入的 `northwind.dbml` 檔案來重新開啟它。
 
-2. Click the Customers table and drag it to the left pane of the designer.
+2. 按一下 [Customers] 資料表，並將它拖曳至設計工具的左窗格。
 
-     The designer creates a new Customer object for your project.
+     設計工具會為您的專案建立新的 Customer 物件。
 
-3. Save your changes and close the designer.
+3. 儲存您的變更並關閉設計工具。
 
 4. 儲存您的專案。
 
-### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>To add code to modify the database and display the results
+### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>若要加入程式碼來修改資料庫並顯示結果
 
-1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.
+1. 從 [**工具箱**] 中，將 [<xref:System.Windows.Forms.DataGridView>] 控制項拖曳至您的專案 [Form1] 的預設 Windows Form。
 
-2. When you added tables to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object to your project. This object contains code that you can use to access the Customers table. It also contains code that defines  a local Customer object and a Customers collection for the table. The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.
+2. 當您將資料表加入至 O/R 設計工具時，設計工具會將 <xref:System.Data.Linq.DataContext> 物件新增至您的專案。 此物件包含您可以用來存取 Customers 資料表的程式碼。 它也包含定義本機 Customer 物件和資料表之 Customers 集合的程式碼。 專案的 <xref:System.Data.Linq.DataContext> 物件是根據 .dbml 檔案的名稱來命名。 針對此專案，<xref:System.Data.Linq.DataContext> 物件的名稱為 `northwindDataContext`。
 
-     You can create an instance of the <xref:System.Data.Linq.DataContext> object in your code and query and modify the Customers collection specified by the O/R Designer. Changes that you make to the Customers collection are not reflected in the database until you submit them by calling the <xref:System.Data.Linq.DataContext.SubmitChanges%2A> method of the <xref:System.Data.Linq.DataContext> object.
+     您可以在程式碼中建立 <xref:System.Data.Linq.DataContext> 物件的實例，並查詢和修改 O/R 設計工具所指定的 Customers 集合。 您對 Customers 集合所做的變更不會反映在資料庫中，直到您藉由呼叫 <xref:System.Data.Linq.DataContext> 物件的 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 方法來提交為止。
 
-     Double-click the Windows Form, Form1, to add code to the <xref:System.Windows.Forms.Form.Load> event to query the Customers table that is exposed as a property of your <xref:System.Data.Linq.DataContext>. 加入下列程式碼：
+     按兩下 Windows Form Form1，將程式碼加入 <xref:System.Windows.Forms.Form.Load> 事件，以查詢公開為 <xref:System.Data.Linq.DataContext>屬性的 Customers 資料表。 加入下列程式碼：
 
     ```vb
     Private db As northwindDataContext
@@ -87,9 +87,9 @@ The examples in this topic use the Northwind sample database. If you do not have
     End Sub
     ```
 
-3. From the **Toolbox**, drag three <xref:System.Windows.Forms.Button> controls onto the form. Select the first `Button` control. In the **Properties** window, set the `Name` of the `Button` control to `AddButton` and the `Text` to `Add`. Select the second button and set the `Name` property to `UpdateButton` and the `Text` property to `Update`. Select the third button and set the `Name` property to `DeleteButton` and the `Text` property to `Delete`.
+3. 從 [**工具箱**] 中，將三個 <xref:System.Windows.Forms.Button> 控制項拖曳至表單上。 選取第一個 `Button` 控制項。 在 **屬性** 視窗中，將 `Button` 控制項的 `Name` 設定為 `AddButton` 以及要 `Add`的 `Text`。 選取第二個按鈕，並將 [`Name`] 屬性設定為 [`UpdateButton`]，將 `Text` 屬性設為 [`Update`]。 選取第三個按鈕，並將 [`Name`] 屬性設定為 [`DeleteButton`]，並將 `Text` 屬性設為 `Delete`。
 
-4. Double-click the **Add** button to add code to its `Click` event. 加入下列程式碼：
+4. 按兩下 [**新增**] 按鈕，將程式碼新增至其 `Click` 事件。 加入下列程式碼：
 
     ```vb
     Private Sub AddButton_Click(ByVal sender As System.Object,
@@ -114,7 +114,7 @@ The examples in this topic use the Northwind sample database. If you do not have
     End Sub
     ```
 
-5. Double-click the **Update** button to add code to its `Click` event. 加入下列程式碼：
+5. 按兩下 [**更新**] 按鈕，將程式碼新增至其 `Click` 事件。 加入下列程式碼：
 
     ```vb
     Private Sub UpdateButton_Click(ByVal sender As System.Object, _
@@ -138,7 +138,7 @@ The examples in this topic use the Northwind sample database. If you do not have
     End Sub
     ```
 
-6. Double-click the **Delete** button to add code to its `Click` event. 加入下列程式碼：
+6. 按兩下 [**刪除**] 按鈕，將程式碼加入其 `Click` 事件。 加入下列程式碼：
 
     ```vb
     Private Sub DeleteButton_Click(ByVal sender As System.Object, _
@@ -159,7 +159,7 @@ The examples in this topic use the Northwind sample database. If you do not have
     End Sub
     ```
 
-7. 請按 F5 執行您的專案。 Click **Add** to add a new record. Click **Update** to modify the new record. Click **Delete** to delete the new record.
+7. 請按 F5 執行您的專案。 按一下 **[新增]** 以新增記錄。 按一下 [**更新**] 以修改新的記錄。 按一下 [**刪除**] 以刪除新的記錄。
 
 ## <a name="see-also"></a>請參閱
 

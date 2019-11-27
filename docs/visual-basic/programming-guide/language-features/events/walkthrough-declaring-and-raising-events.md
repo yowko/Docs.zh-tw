@@ -17,47 +17,47 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345093"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>逐步解說：宣告和引發事件 (Visual Basic)
-This walkthrough demonstrates how to declare and raise events for a class named `Widget`. After you complete the steps, you might want to read the companion topic, [Walkthrough: Handling Events](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), which shows how to use events from `Widget` objects to provide status information in an application.  
+本逐步解說示範如何針對名為 `Widget`的類別，宣告和引發事件。 完成這些步驟之後，您可能會想要閱讀「[逐步解說：處理事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)」主題，其中會顯示如何使用來自 `Widget` 物件的事件，在應用程式中提供狀態資訊。  
   
-## <a name="the-widget-class"></a>The Widget Class  
- Assume for the moment that you have a `Widget` class. Your `Widget` class has a method that can take a long time to execute, and you want your application to be able to put up some kind of completion indicator.  
+## <a name="the-widget-class"></a>Widget 類別  
+ 假設您有 `Widget` 類別。 您的 `Widget` 類別有一個可能需要很長時間才能執行的方法，而且您想要讓應用程式能夠放置某種類型的完成指標。  
   
- Of course, you could make the `Widget` object show a percent-complete dialog box, but then you would be stuck with that dialog box in every project in which you used the `Widget` class. A good principle of object design is to let the application that uses an object handle the user interface—unless the whole purpose of the object is to manage a form or dialog box.  
+ 當然，您可以讓 `Widget` 物件顯示 [完成百分比] 對話方塊，但是您會在使用 `Widget` 類別的每個專案中，停滯該對話方塊。 物件設計的一個良好原則是讓使用物件的應用程式處理使用者介面，除非物件的整個目的是要管理表單或對話方塊。  
   
- The purpose of `Widget` is to perform other tasks, so it is better to add a `PercentDone` event and let the procedure that calls `Widget`'s methods handle that event and display status updates. The `PercentDone` event can also provide a mechanism for canceling the task.  
+ `Widget` 的目的是要執行其他工作，因此最好加入 `PercentDone` 事件，然後讓呼叫 `Widget`的方法的程式處理該事件並顯示狀態更新。 `PercentDone` 事件也可以提供取消工作的機制。  
   
-#### <a name="to-build-the-code-example-for-this-topic"></a>To build the code example for this topic  
+#### <a name="to-build-the-code-example-for-this-topic"></a>若要建立本主題的程式碼範例  
   
-1. Open a new Visual Basic Windows Application project and create a form named `Form1`.  
+1. 開啟新的 Visual Basic Windows 應用程式專案，並建立名為 `Form1`的表單。  
   
-2. Add two buttons and a label to `Form1`.  
+2. 將兩個按鈕和標籤新增至 `Form1`。  
   
 3. 依照下表所示的方式，命名物件。  
   
-    |Object|屬性|設定|  
+    |物件|屬性|設定|  
     |------------|--------------|-------------|  
-    |`Button1`|`Text`|Start Task|  
+    |`Button1`|`Text`|啟動工作|  
     |`Button2`|`Text`|取消|  
-    |`Label`|`(Name)`、 `Text`|lblPercentDone, 0|  
+    |`Label`|`(Name)`, `Text`|lblPercentDone，0|  
   
-4. On the **Project** menu, choose **Add Class** to add a class named `Widget.vb` to the project.  
+4. 在 [**專案**] 功能表上，選擇 [**加入類別**]，將名為 `Widget.vb` 的類別加入至專案。  
   
-#### <a name="to-declare-an-event-for-the-widget-class"></a>To declare an event for the Widget class  
+#### <a name="to-declare-an-event-for-the-widget-class"></a>若要宣告 Widget 類別的事件  
   
-- Use the `Event` keyword to declare an event in the `Widget` class. Note that an event can have `ByVal` and `ByRef` arguments, as `Widget`'s `PercentDone` event demonstrates:  
+- 使用 `Event` 關鍵字來宣告 `Widget` 類別中的事件。 請注意，事件可以有 `ByVal` 和 `ByRef` 引數，如 `Widget`的 `PercentDone` 事件所示：  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   
- When the calling object receives a `PercentDone` event, the `Percent` argument contains the percentage of the task that is complete. The `Cancel` argument can be set to `True` to cancel the method that raised the event.  
+ 當呼叫物件收到 `PercentDone` 事件時，`Percent` 引數會包含已完成之工作的百分比。 `Cancel` 引數可以設定為 `True` 取消引發事件的方法。  
   
 > [!NOTE]
-> You can declare event arguments just as you do arguments of procedures, with the following exceptions: Events cannot have `Optional` or `ParamArray` arguments, and events do not have return values.  
+> 您可以宣告事件引數，就如同執行程式的引數一樣，但下列例外狀況除外：事件不能有 `Optional` 或 `ParamArray` 引數，而且事件沒有傳回值。  
   
- The `PercentDone` event is raised by the `LongTask` method of the `Widget` class. `LongTask` takes two arguments: the length of time the method pretends to be doing work, and the minimum time interval before `LongTask` pauses to raise the `PercentDone` event.  
+ `PercentDone` 事件是由 `Widget` 類別的 `LongTask` 方法所引發。 `LongTask` 接受兩個引數：方法假裝為執行工作的時間長度，以及 `LongTask` 暫停之前的最小時間間隔，以引發 `PercentDone` 事件。  
   
-#### <a name="to-raise-the-percentdone-event"></a>To raise the PercentDone event  
+#### <a name="to-raise-the-percentdone-event"></a>若要引發 PercentDone 事件  
   
-1. To simplify access to the `Timer` property used by this class, add an `Imports` statement to the top of the declarations section of your class module, above the `Class Widget` statement.  
+1. 若要簡化這個類別所使用之 `Timer` 屬性的存取，請將 `Imports` 語句加入至類別模組之宣告區段的頂端（在 `Class Widget` 語句上方）。  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
@@ -65,13 +65,13 @@ This walkthrough demonstrates how to declare and raise events for a class named 
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
- When your application calls the `LongTask` method, the `Widget` class raises the `PercentDone` event every `MinimumInterval` seconds. When the event returns, `LongTask` checks to see if the `Cancel` argument was set to `True`.  
+ 當您的應用程式呼叫 `LongTask` 方法時，`Widget` 類別每隔 `MinimumInterval` 秒就會引發 `PercentDone` 事件。 當事件傳回時，`LongTask` 檢查 `Cancel` 引數是否設定為 `True`。  
   
- A few disclaimers are necessary here. For simplicity, the `LongTask` procedure assumes you know in advance how long the task will take. This is almost never the case. Dividing tasks into chunks of even size can be difficult, and often what matters most to users is simply the amount of time that passes before they get an indication that something is happening.  
+ 這裡有幾個必要的免責聲明。 為了簡單起見，`LongTask` 程式會假設您事先知道工作會花多少時間。 幾乎不會發生這種情況。 將工作劃分成甚至大小的區塊可能會很難，而對使用者而言，最重要的就是在收到某個專案的指示之前傳遞的時間量。  
   
- You may have spotted another flaw in this sample. The `Timer` property returns the number of seconds that have passed since midnight; therefore, the application gets stuck if it is started just before midnight. A more careful approach to measuring time would take boundary conditions such as this into consideration, or avoid them altogether, using properties such as `Now`.  
+ 您可能已在此範例中發現另一個缺陷。 `Timer` 屬性會傳回從午夜以來已過的秒數;因此，如果應用程式在午夜之前就啟動，就會停滯。 更小心測量時間的方法會將界限條件（例如這種情況）納入考慮，或使用 `Now`之類的屬性加以避免。  
   
- Now that the `Widget` class can raise events, you can move to the next walkthrough. [Walkthrough: Handling Events](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md) demonstrates how to use `WithEvents` to associate an event handler with the `PercentDone` event.  
+ 現在 `Widget` 類別可以引發事件，您可以移至下一個逐步解說。 [逐步解說：處理事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)示範如何使用 `WithEvents`，將事件處理常式與 `PercentDone` 事件產生關聯。  
   
 ## <a name="see-also"></a>請參閱
 

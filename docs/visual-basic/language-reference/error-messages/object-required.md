@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349669"
 ---
 # <a name="object-required-visual-basic"></a>必須提供物件 (Visual Basic)
-References to properties and methods often require an explicit object qualifier. This is such a case.  
+屬性和方法的參考通常需要明確的物件限定詞。 這就是這種情況。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. Check that references to an object property or method have valid object qualifier. Specify an object qualifier if you didn't provide one.  
+1. 檢查物件屬性或方法的參考是否具有有效的物件辨識符號。 如果您未提供物件辨識符號，請指定它。  
   
-2. Check the spelling of the object qualifier and make sure the object is visible in the part of the program in which you are referencing it.  
+2. 檢查物件辨識符號的拼寫，並確定物件在您參考它的程式的部分中是可見的。  
   
-3. If a path is supplied to a host application's **File Open** command, check that the arguments in it are correct.  
+3. 如果將路徑提供給主應用程式的 [檔案] [**開啟**] 命令，請檢查其中的引數是否正確。  
   
-4. Check the object's documentation and make sure the action is valid.  
+4. 請檢查物件的檔，並確定此動作有效。  
   
 ## <a name="see-also"></a>請參閱
 

@@ -36,7 +36,7 @@ ms.locfileid: "74354081"
 ---
 # <a name="declare-statement"></a>Declare Statement
 
-Declares a reference to a procedure implemented in an external file.
+宣告在外部檔案中執行之程式的參考。
 
 ## <a name="syntax"></a>語法
 
@@ -54,92 +54,92 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 |詞彙|定義|
 |---|---|
-|`attributelist`|選擇項。 See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).|
-|`accessmodifier`|選擇項。 可以是下列其中一項：<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> 請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|
-|`Shadows`|選擇項。 See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|
-|`charsetmodifier`|選擇項。 Specifies character set and file search information. 可以是下列其中一項：<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) (default)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)|
-|`Sub`|Optional, but either `Sub` or `Function` must appear. Indicates that the external procedure does not return a value.|
-|`Function`|Optional, but either `Sub` or `Function` must appear. Indicates that the external procedure returns a value.|
-|`name`|必要項。 Name of this external reference. For more information, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
-|`Lib`|必要項。 Introduces a `Lib` clause, which identifies the external file (DLL or code resource) that contains an external procedure.|
-|`libname`|必要項。 Name of the file that contains the declared procedure.|
-|`Alias`|選擇項。 Indicates that the procedure being declared cannot be identified within its file by the name specified in `name`. You specify its identification in `aliasname`.|
-|`aliasname`|Required if you use the `Alias` keyword. String that identifies the procedure in one of two ways:<br /><br /> The entry point name of the procedure within its file, within quotes (`""`)<br /><br /> -或-<br /><br /> A number sign (`#`) followed by an integer specifying the ordinal number of the procedure's entry point within its file|
-|`parameterlist`|Required if the procedure takes parameters. See [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).|
-|`returntype`|Required if `Function` is specified and `Option Strict` is `On`. Data type of the value returned by the procedure.|
+|`attributelist`|選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|
+|`accessmodifier`|選擇性。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私](../../../visual-basic/language-reference/modifiers/private.md)用<br />- [受保護的 Friend](../../language-reference/modifiers/protected-friend.md)<br />- [私用保護](../../language-reference/modifiers/private-protected.md)<br /><br /> 請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|
+|`Shadows`|選擇性。 請參閱[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。|
+|`charsetmodifier`|選擇性。 指定字元集和檔案搜尋資訊。 可以是下列其中一項：<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) （預設值）<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)|
+|`Sub`|選擇性，但 `Sub` 或 `Function` 必須出現。 表示外部程式不會傳回值。|
+|`Function`|選擇性，但 `Sub` 或 `Function` 必須出現。 表示外部程式會傳回值。|
+|`name`|必要。 此外部參考的名稱。 如需詳細資訊，請參閱宣告的[元素名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|
+|`Lib`|必要。 引進了一個 `Lib` 子句，可識別包含外部程式的外部檔案（DLL 或程式碼資源）。|
+|`libname`|必要。 包含宣告之程式的檔案名。|
+|`Alias`|選擇性。 指出所宣告的程式在其檔案中無法依照 `name`中指定的名稱來識別。 您會在 `aliasname`中指定其識別。|
+|`aliasname`|如果您使用 `Alias` 關鍵字，則為必要。 以兩種方式之一來識別程式的字串：<br /><br /> 程式在其檔案中的進入點名稱，以引號括住（`""`）<br /><br /> -或-<br /><br /> 數位記號（`#`），後面接著一個整數，指定程式在其檔案內的進入點序號|
+|`parameterlist`|如果程式採用參數，則為必要。 請參閱[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)。|
+|`returntype`|如果指定 `Function`，且 `On``Option Strict`，則為必要。 程式所傳回值的資料類型。|
 
 ## <a name="remarks"></a>備註
 
-Sometimes you need to call a procedure defined in a file (such as a DLL or code resource) outside your project. When you do this, the Visual Basic compiler does not have access to the information it needs to call the procedure correctly, such as where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The `Declare` statement creates a reference to an external procedure and supplies this necessary information.
+有時候您需要呼叫專案外部檔案中定義的程式（例如 DLL 或程式碼資源）。 當您這麼做時，Visual Basic 編譯器無法存取正確呼叫程式所需的資訊，例如程式所在位置、識別方式、其呼叫順序和傳回類型，以及它所使用的字串字元集。 `Declare` 語句會建立外部程式的參考，並提供此必要資訊。
 
-您只能在模組層級使用 `Declare`。 This means the *declaration context* for an external reference must be a class, structure, or module, and cannot be a source file, namespace, interface, procedure, or block. 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。
+您只能在模組層級使用 `Declare`。 這表示外部參考的宣告*內容*必須是類別、結構或模組，而且不能是原始程式檔、命名空間、介面、程式或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。
 
-External references default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access. You can adjust their access levels with the access modifiers.
+外部參考預設為[公用](../../../visual-basic/language-reference/modifiers/public.md)存取。 您可以使用存取修飾詞來調整其存取層級。
 
 ## <a name="rules"></a>規則
 
-- **Attributes.** You can apply attributes to an external reference. Any attribute you apply has effect only in your project, not in the external file.
+- **特性.** 您可以將屬性套用至外部參考。 您套用的任何屬性只有在您的專案中才有效，而不是在外部檔案中。
 
-- **Modifiers.** External procedures are implicitly [Shared](../../../visual-basic/language-reference/modifiers/shared.md). You cannot use the `Shared` keyword when declaring an external reference, and you cannot alter its shared status.
+- **修改.** 外部程式會隱含[共用](../../../visual-basic/language-reference/modifiers/shared.md)。 當您宣告外部參考時，無法使用 `Shared` 關鍵字，而且您無法改變其共用狀態。
 
-  An external procedure cannot participate in overriding, implement interface members, or handle events. Accordingly, you cannot use the `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements`, or `Handles` keyword in a `Declare` statement.
+  外部程式無法參與覆寫、執行介面成員或處理事件。 因此，您不能在 `Implements`語句中使用 `Overrides`、`Overridable`、`NotOverridable`、`MustOverride`、`Handles` 或 `Declare` 關鍵字。
 
-- **External Procedure Name.** You do not have to give this external reference the same name (in `name`) as the procedure's entry-point name within its external file (`aliasname`). You can use an `Alias` clause to specify the entry-point name. This can be useful if the external procedure has the same name as a Visual Basic reserved modifier or a variable, procedure, or any other programming element in the same scope.
-
-  > [!NOTE]
-  > Entry-point names in most DLLs are case-sensitive.
-
-- **External Procedure Number.** Alternatively, you can use an `Alias` clause to specify the ordinal number of the entry point within the export table of the external file. To do this, you begin `aliasname` with a number sign (`#`). This can be useful if any character in the external procedure name is not allowed in Visual Basic, or if the external file exports the procedure without a name.
-
-## <a name="data-type-rules"></a>Data Type Rules
-
-- **Parameter Data Types.** If `Option Strict` is `On`, you must specify the data type of each parameter in `parameterlist`. This can be any data type or the name of an enumeration, structure, class, or interface. Within `parameterlist`, you use an `As` clause to specify the data type of the argument to be passed to each parameter.
+- **外部程式名稱。** 您不需要授與此外部參考與外部檔案（`aliasname`）中程式的進入點名稱相同的名稱（在 `name`中）。 您可以使用 `Alias` 子句來指定進入點名稱。 如果外部程式的名稱與 Visual Basic 保留的修飾詞或變數、程式或相同範圍中的任何其他程式設計項目同名，這就很有用。
 
   > [!NOTE]
-  > If the external procedure was not written for the .NET Framework, you must take care that the data types correspond. For example, if you declare an external reference to a Visual Basic 6.0 procedure with an `Integer` parameter (16 bits in Visual Basic 6.0), you must identify the corresponding argument as `Short` in the `Declare` statement, because that is the 16-bit integer type in Visual Basic. Similarly, `Long` has a different data width in Visual Basic 6.0, and `Date` is implemented differently.
+  > 大部分 Dll 中的進入點名稱都區分大小寫。
 
-- **Return Data Type.** If the external procedure is a `Function` and `Option Strict` is `On`, you must specify the data type of the value returned to the calling code. This can be any data type or the name of an enumeration, structure, class, or interface.
+- **外部程式編號。** 或者，您可以使用 `Alias` 子句來指定外部檔案之匯出資料表內進入點的序號。 若要這麼做，您可以使用數位記號（`#`）開始 `aliasname`。 如果 Visual Basic 中不允許外部程式名稱中的任何字元，或如果外部檔案匯出程式但沒有名稱，這會很有用。
+
+## <a name="data-type-rules"></a>資料類型規則
+
+- **參數資料類型。** 如果 `On``Option Strict`，您就必須在 `parameterlist`中指定每個參數的資料類型。 這可以是任何資料類型，或是列舉、結構、類別或介面的名稱。 在 `parameterlist`中，您可以使用 `As` 子句來指定要傳遞至每個參數之引數的資料類型。
 
   > [!NOTE]
-  > The Visual Basic compiler does not verify that your data types are compatible with those of the external procedure. If there is a mismatch, the common language runtime generates a <xref:System.Runtime.InteropServices.MarshalDirectiveException> exception at run time.
+  > 如果未針對 .NET Framework 寫入外部程式，您必須注意資料類型對應。 例如，如果您使用 `Integer` 參數（Visual Basic 6.0 中的16位）來宣告 Visual Basic 6.0 程式的外部參考，則必須將對應的引數識別為 `Declare` 語句中的 `Short`，因為這是 Visual Basic 中的16位整數類型。 同樣地，`Long` 在 Visual Basic 6.0 中有不同的資料寬度，而 `Date` 則以不同的方式執行。
 
-- **Default Data Types.** If `Option Strict` is `Off` and you do not specify the data type of a parameter in `parameterlist`, the Visual Basic compiler converts the corresponding argument to the [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md). Similarly, if you do not specify `returntype`, the compiler takes the return data type to be `Object`.
+- **傳回資料類型。** 如果外部程式是 `Function` 而且 `Option Strict` 是 `On`，您就必須指定傳回給呼叫程式碼之值的資料類型。 這可以是任何資料類型，或是列舉、結構、類別或介面的名稱。
 
   > [!NOTE]
-  > Because you are dealing with an external procedure that might have been written on a different platform, it is dangerous to make any assumptions about data types or to allow them to default. It is much safer to specify the data type of every parameter and of the return value, if any. This also improves the readability of your code.
+  > Visual Basic 編譯器不會驗證您的資料類型是否與外部程式的相容。 如果出現不相符的情況，common language runtime 會在執行時間產生 <xref:System.Runtime.InteropServices.MarshalDirectiveException> 的例外狀況。
+
+- **預設資料類型。** 如果 `Option Strict` 是 `Off`，而您未在 `parameterlist`中指定參數的資料類型，則 Visual Basic 編譯器會將對應的引數轉換為[Object 資料類型](../../../visual-basic/language-reference/data-types/object-data-type.md)。 同樣地，如果您未指定 `returntype`，編譯器會將傳回資料類型設為 `Object`。
+
+  > [!NOTE]
+  > 由於您正在處理的外部程式可能是在不同的平臺上撰寫的，因此，對資料類型或允許其預設值的任何假設都是危險的。 指定每個參數的資料類型和傳回值（如果有的話），會比較安全。 這也可以改善程式碼的可讀性。
 
 ## <a name="behavior"></a>行為
 
-- **Scope.** An external reference is in scope throughout its class, structure, or module.
+- **範圍.** 外部參考在其類別、結構或模組的範圍內。
 
-- **Lifetime.** An external reference has the same lifetime as the class, structure, or module in which it is declared.
+- **期.** 外部參考具有與宣告所在的類別、結構或模組相同的存留期。
 
-- **Calling an External Procedure.** You call an external procedure the same way you call a `Function` or `Sub` procedure—by using it in an expression if it returns a value, or by specifying it in a [Call Statement](../../../visual-basic/language-reference/statements/call-statement.md) if it does not return a value.
+- **呼叫外部程式。** 您以呼叫 `Function` 或 `Sub` 程式的相同方式呼叫外部程式（如果它傳回值，則在運算式中使用它），或在[呼叫語句](../../../visual-basic/language-reference/statements/call-statement.md)中指定它（如果未傳回值）。
 
-  You pass arguments to the external procedure exactly as specified by `parameterlist` in the `Declare` statement. Do not take into account how the parameters were originally declared in the external file. Similarly, if there is a return value, use it exactly as specified by `returntype` in the `Declare` statement.
+  您將引數傳遞給外部程式的方式，與 `Declare` 語句中 `parameterlist` 所指定的完全相同。 請勿將參數原本在外部檔案中宣告的方式納入考慮。 同樣地，如果有傳回值，請使用與 `Declare` 語句中 `returntype` 所指定的相同。
 
-- **Character Sets.** You can specify in `charsetmodifier` how Visual Basic should marshal strings when it calls the external procedure. The `Ansi` modifier directs Visual Basic to marshal all strings to ANSI values, and the `Unicode` modifier directs it to marshal all strings to Unicode values. The `Auto` modifier directs Visual Basic to marshal strings according to .NET Framework rules based on the external reference `name`, or `aliasname` if specified. 預設值是 `Ansi`。
+- **字元集。** 您可以在 `charsetmodifier` 中指定 Visual Basic 應如何在呼叫外部程式時封送處理字串。 `Ansi` 修飾詞會指示 Visual Basic 將所有字串封送處理為 ANSI 值，而 `Unicode` 修飾詞會指示它將所有字串封送處理成 Unicode 值。 `Auto` 修飾詞會指示 Visual Basic 根據外部參考 `name`的 .NET Framework 規則封送處理字串，或 `aliasname` （如果指定的話）。 預設值是 `Ansi`。
 
-  `charsetmodifier` also specifies how Visual Basic should look up the external procedure within its external file. `Ansi` and `Unicode` both direct Visual Basic to look it up without modifying its name during the search. `Auto` directs Visual Basic to determine the base character set of the run-time platform and possibly modify the external procedure name, as follows:
+  `charsetmodifier` 也會指定 Visual Basic 如何查詢其外部檔案中的外部程式。 `Ansi` 和 `Unicode` 直接 Visual Basic 在搜尋期間不修改其名稱來進行查詢。 `Auto` 會指示 Visual Basic 判斷執行時間平臺的基底字元集，而且可能會修改外部程式名稱，如下所示：
 
-  - On an ANSI platform, such as Windows 95, Windows 98, or Windows Millennium Edition, first look up the external procedure with no name modification. If that fails, append "A" to the end of the external procedure name and look it up again.
+  - 在 ANSI 平臺上（例如 Windows 95、Windows 98 或 Windows Millennium Edition），請先查閱外部程式而不修改名稱。 如果失敗，請將 "A" 附加至外部程式名稱的結尾，然後重新查詢。
 
-  - On a Unicode platform, such as Windows NT, Windows 2000, or Windows XP, first look up the external procedure with no name modification. If that fails, append "W" to the end of the external procedure name and look it up again.
+  - 在 Unicode 平臺上（例如 Windows NT、Windows 2000 或 Windows XP），請先查閱外部程式而不修改名稱。 如果失敗，請將 "W" 附加至外部程式名稱的結尾，然後重新查詢。
 
-- **Mechanism.** Visual Basic uses the .NET Framework *platform invoke* (PInvoke) mechanism to resolve and access external procedures. The `Declare` statement and the <xref:System.Runtime.InteropServices.DllImportAttribute> class both use this mechanism automatically, and you do not need any knowledge of PInvoke. For more information, see [Walkthrough: Calling Windows APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).
+- **機構.** Visual Basic 使用 .NET Framework*平台叫用*（PInvoke）機制來解析和存取外部程式。 `Declare` 語句和 <xref:System.Runtime.InteropServices.DllImportAttribute> 類別都會自動使用這項機制，而且您不需要任何的 PInvoke 知識。 如需詳細資訊，請參閱[逐步解說：呼叫 Windows api](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。
 
 > [!IMPORTANT]
-> If the external procedure runs outside the common language runtime (CLR), it is *unmanaged code*. When you call such a procedure, for example a Windows API function or a COM method, you might expose your application to security risks. For more information, see [Secure Coding Guidelines for Unmanaged Code](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).
+> 如果外部程式是在 common language runtime （CLR）外部執行，則為*非受控碼*。 當您呼叫這類程式（例如，Windows API 函式或 COM 方法）時，可能會讓您的應用程式暴露于安全性風險下。 如需詳細資訊，請參閱[安全的非受控碼程式碼撰寫方針](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)。
 
 ## <a name="example"></a>範例
 
-The following example declares an external reference to a `Function` procedure that returns the current user name. It then calls the external procedure `GetUserNameA` as part of the `getUser` procedure.
+下列範例會宣告傳回目前使用者名稱之 `Function` 程式的外部參考。 然後，它會呼叫外部程式 `GetUserNameA` 做為 `getUser` 程式的一部分。
 
 [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]
 
 ## <a name="example"></a>範例
 
-The <xref:System.Runtime.InteropServices.DllImportAttribute> provides an alternative way of using functions in unmanaged code. The following example declares an imported function without using a `Declare` statement.
+<xref:System.Runtime.InteropServices.DllImportAttribute> 提供在非受控碼中使用函數的替代方式。 下列範例會宣告已匯入的函式，而不使用 `Declare` 語句。
 
 [!code-vb[VbVbalrStatements#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#16)]
 

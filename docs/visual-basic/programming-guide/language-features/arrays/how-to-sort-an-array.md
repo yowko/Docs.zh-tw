@@ -1,5 +1,5 @@
 ---
-title: 'How to: Sort An Array'
+title: 如何：排序陣列
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -14,13 +14,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351845"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a>How to: sort an array in Visual Basic
+# <a name="how-to-sort-an-array-in-visual-basic"></a>如何：在 Visual Basic 中排序陣列
 
-This article shows an example of how to sort an array of strings in Visual Basic.
+本文說明如何在 Visual Basic 中排序字串陣列的範例。
 
 ## <a name="example"></a>範例
 
-This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:
+這個範例會宣告名為 `zooAnimals`的 `String` 物件陣列，填入它，然後依字母順序排序：
   
 ```vb
 Private Sub SortAnimals()
@@ -36,9 +36,9 @@ End Sub
 
 以下條件可能會造成例外狀況：
 
-- Array is empty (<xref:System.ArgumentNullException> class).
-- Array is multidimensional (<xref:System.RankException> class).
-- One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).
+- 陣列是空的（<xref:System.ArgumentNullException> 類別）。
+- Array 是多維度（<xref:System.RankException> 類別）。
+- 陣列的一或多個元素不會執行 <xref:System.IComparable> 介面（<xref:System.InvalidOperationException> 類別）。
 
 ## <a name="see-also"></a>請參閱
 

@@ -14,7 +14,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447830"
 ---
 # <a name="metadata-global-static-functions"></a>中繼資料全域靜態函式
-Beginning with the .NET Framework 4, the documentation for the `_Cor*`, `CoInitialize*`, `CoUninitialize*`, and `CoEEShutDownCOM` functions, which pertain to hosting, is located in [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md). 沒有與中繼資料相關的全域靜態函式。  
+從 .NET Framework 4 開始，適用于裝載的 `_Cor*`、`CoInitialize*`、`CoUninitialize*`和 `CoEEShutDownCOM` 函數的檔位於已[淘汰的 CLR 裝載](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)函式中。 沒有與中繼資料相關的全域靜態函式。  
   
 ## <a name="related-sections"></a>相關章節  
  [中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

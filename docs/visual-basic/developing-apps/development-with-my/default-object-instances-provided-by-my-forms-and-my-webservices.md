@@ -16,17 +16,17 @@ ms.locfileid: "74330211"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>My.Forms 和 My.WebServices 提供的預設物件執行個體 (Visual Basic)
 
-The [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) and [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) objects provide access to forms, data sources, and XML Web services used by your application. They do this by providing collections of *default instances* of each of these objects.  
+[WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)物件可讓您存取應用程式所[使用的窗](../../../visual-basic/language-reference/objects/my-forms-object.md)體、資料來源和 XML Web Service。 他們會藉由提供每個物件的*預設實例*集合來執行這項操作。  
   
-## <a name="default-instances"></a>Default Instances  
+## <a name="default-instances"></a>預設實例  
 
- A default instance is an instance of the class that is provided by the runtime and does not need to be declared and instantiated using the `Dim` and `New` statements. The following example demonstrates how you might have declared and instantiated an instance of a <xref:System.Windows.Forms.Form> class called `Form1`, and how you are now able to get a default instance of this <xref:System.Windows.Forms.Form> class through `My.Forms`.  
+ 預設實例是執行時間所提供之類別的實例，不需要使用 `Dim` 和 `New` 語句來宣告和具現化。 下列範例示範如何宣告並具現化稱為 `Form1`之 <xref:System.Windows.Forms.Form> 類別的實例，以及如何透過 `My.Forms`取得此 <xref:System.Windows.Forms.Form> 類別的預設實例。  
   
  [!code-vb[VbVbcnMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#5)]  
   
  [!code-vb[VbVbcnMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#6)]  
   
- The `My.Forms` object returns a collection of default instances for every `Form` class that exists in your project. Similarly, `My.WebServices` provides a default instance of the proxy class for every Web service that you have created a reference to in your application.  
+ `My.Forms` 物件會針對存在於專案中的每個 `Form` 類別，傳回預設實例的集合。 同樣地，`My.WebServices` 會針對您在應用程式中建立參考的每個 Web 服務，提供 proxy 類別的預設實例。  
   
 ## <a name="see-also"></a>請參閱
 

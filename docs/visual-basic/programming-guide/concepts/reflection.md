@@ -9,10 +9,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349272"
 ---
-# <a name="reflection-visual-basic"></a>Reflection (Visual Basic)
+# <a name="reflection-visual-basic"></a>反映（Visual Basic）
 反映提供的物件 (類型為 <xref:System.Type>) 可描述組件、模組和類型。 您可以使用反映來動態建立類型的執行個體、將類型繫結至現有的物件，或從現有的物件取得類型，並叫用其方法或存取其欄位及屬性。 如果您在程式碼中使用屬性，則反映可讓您存取它們。 如需詳細資訊，請參閱[屬性](../../../standard/attributes/index.md)。  
   
- 以下簡單反映範例使用 `Object` 基底類別的所有類型所繼承的靜態方法 `GetType` 來取得變數的類型︰  
+ 以下簡單反映範例使用 `GetType` 基底類別的所有類型所繼承的靜態方法 `Object` 來取得變數的類型︰  
   
 ```vb  
 ' Using GetType to obtain type information:  

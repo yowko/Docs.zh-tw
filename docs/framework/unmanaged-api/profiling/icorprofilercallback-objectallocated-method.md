@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445846"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated 方法
-Notifies the profiler that memory within the heap has been allocated for an object.  
+通知分析工具，堆積內的記憶體已配置給物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,13 +35,13 @@ HRESULT ObjectAllocated(
   
 ## <a name="parameters"></a>參數  
  `objectId`  
- [in] The ID of the object for which memory was allocated.  
+ 在配置記憶體之物件的識別碼。  
   
  `classId`  
- [in] The ID of the class of which the object is an instance.  
+ 在物件為實例之類別的識別碼。  
   
 ## <a name="remarks"></a>備註  
- The `ObjectedAllocated` method is not called for allocations from either the stack or unmanaged memory. The `classId` parameter can refer to a class in managed code that has not been loaded yet. The profiler will receive a class load callback for that class immediately after the `ObjectAllocated` callback.  
+ 不會針對來自堆疊或非受控記憶體的配置呼叫 `ObjectedAllocated` 方法。 `classId` 參數可以參考尚未載入之 managed 程式碼中的類別。 分析工具會在 `ObjectAllocated` 回呼之後，立即收到該類別的類別載入回呼。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

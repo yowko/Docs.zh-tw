@@ -15,14 +15,14 @@ ms.locfileid: "74347216"
 提供屬性，以取得電腦的記憶體、已載入組件、名稱和作業系統的相關資訊。  
   
 ## <a name="remarks"></a>備註  
- For information about the properties of the `My.Computer.Info` object, see <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
+ 如需 `My.Computer.Info` 物件屬性的詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Devices.ComputerInfo>。  
   
 ## <a name="requirements"></a>需求  
  **命名空間︰** <xref:Microsoft.VisualBasic.Devices>  
   
  **類別︰** <xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **元件：** Visual Basic 執行時間程式庫（在 Microsoft 中）  
   
 ## <a name="see-also"></a>請參閱
 

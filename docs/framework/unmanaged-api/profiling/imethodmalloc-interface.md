@@ -22,19 +22,19 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447556"
 ---
 # <a name="imethodmalloc-interface"></a>IMethodMalloc 介面
-Provides a method to allocate memory for a new Microsoft intermediate language (MSIL) function body.  
+提供方法來為新的 Microsoft 中繼語言（MSIL）函數主體配置記憶體。  
   
 > [!NOTE]
-> The `IMethodMalloc` interface is a simple memory allocator. It allows you to allocate memory, but not to free it.  
+> `IMethodMalloc` 介面是簡單的記憶體配置器。 它可讓您配置記憶體，但不能釋放它。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Alloc 方法](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Attempts to allocate a specified amount of memory for a new MSIL function body.|  
+|[Alloc 方法](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|嘗試為新的 MSIL 函數主體配置指定的記憶體數量。|  
   
 ## <a name="remarks"></a>備註  
- Each allocator is module-specific and ensures that the function body will be at a positive offset from the base of the module. Memory above the base of a module can be precious, so the allocator should be used to allocate memory only for a function body.  
+ 每個配置器都是模組特有的，並可確保函式主體會位於模組基底的正位移。 高於模組基底的記憶體可能非常寶貴，因此應該使用配置器只為函式主體配置記憶體。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

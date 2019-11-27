@@ -48,7 +48,7 @@ HRESULT SetILFunctionBody(
 |S_OK|取代成功。|  
   
 ## <a name="remarks"></a>備註  
- Unlike the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, the `SetILFunctionBody` method manages the memory required for the new CIL body. This means that the CIL body provided by the profiler does not have to be allocated by using the [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface or allocated within a particular range. 它可以配置於任何堆積上。 The profiler can free the memory used for its CIL body after `SetILFunctionBody` returns.  
+ 不同于[ICorProfilerInfo：： SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)方法，`SetILFunctionBody` 方法會管理新的 CIL 主體所需的記憶體。 這表示分析工具所提供的 CIL 主體不需要使用[IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)介面來配置，或在特定範圍內配置。 它可以配置於任何堆積上。 分析工具可以在 `SetILFunctionBody` 傳回之後釋放用於其 CIL 主體的記憶體。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

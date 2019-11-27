@@ -16,96 +16,96 @@ ms.locfileid: "74345045"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>逐步解說：建立和實作介面 (Visual Basic)
 
-Interfaces describe the characteristics of properties, methods, and events, but leave the implementation details up to structures or classes.  
+介面會描述屬性、方法和事件的特性，但會將執行詳細資料保持在結構或類別的最上方。  
   
- This walkthrough demonstrates how to declare and implement an interface.  
+ 本逐步解說示範如何宣告和執行介面。  
   
 > [!NOTE]
-> This walkthrough doesn't provide information about how to create a user interface.  
+> 本逐步解說並未提供如何建立使用者介面的相關資訊。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="to-define-an-interface"></a>To define an interface
+## <a name="to-define-an-interface"></a>若要定義介面
   
 1. 開啟新的 Visual Basic Windows 應用程式專案。  
   
-2. Add a new module to the project by clicking **Add Module** on the **Project** menu.  
+2. 按一下 [**專案**] 功能表上的 [**加入模組**]，將新的模組加入至專案。  
   
-3. Name the new module `Module1.vb` and click **Add**. The code for the new module is displayed.  
+3. 將新的模組命名為 `Module1.vb`，然後按一下 [**新增**]。 新模組的程式碼隨即顯示。  
   
-4. Define an interface named `TestInterface` within `Module1` by typing `Interface TestInterface` between the `Module` and `End Module` statements, and then pressing ENTER. The **Code Editor** indents the `Interface` keyword and adds an `End Interface` statement to form a code block.  
+4. 輸入 `Module` 和 `End Module` 語句之間的 `Interface TestInterface`，然後按 ENTER，以在 `Module1` 中定義名為 `TestInterface` 的介面。 [程式**代碼編輯器**] 會縮排 `Interface` 關鍵字，並加入 `End Interface` 語句以形成程式碼區塊。  
   
-5. Define a property, method, and event for the interface by placing the following code between the `Interface` and `End Interface` statements:  
+5. 藉由將下列程式碼放在 `Interface` 和 `End Interface` 語句之間，定義介面的屬性、方法和事件：  
   
      [!code-vb[VbVbalrOOP#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#98)]
   
 ## <a name="implementation"></a>實作
 
- You may notice that the syntax used to declare interface members is different from the syntax used to declare class members. This difference reflects the fact that interfaces cannot contain implementation code.  
+ 您可能會注意到，用來宣告介面成員的語法與用來宣告類別成員的語法不同。 這種差異反映了介面不能包含實作為程式碼的事實。  
   
-### <a name="to-implement-the-interface"></a>To implement the interface
+### <a name="to-implement-the-interface"></a>若要執行介面
   
-1. Add a class named `ImplementationClass` by adding the following statement to `Module1`, after the `End Interface` statement but before the `End Module` statement, and then pressing ENTER:  
+1. 將下列語句加入至 `Module1`、在 `End Interface` 語句之後、`End Module` 語句之前，然後按 ENTER 鍵，以新增名為 `ImplementationClass` 的類別：  
   
      [!code-vb[VbVbalrOOP#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#99)]
   
-     If you are working within the integrated development environment, the **Code Editor** supplies a matching `End Class` statement when you press ENTER.  
+     如果您在整合式開發環境中工作，則當您按下 ENTER 時，程式**代碼編輯器**會提供相符的 `End Class` 語句。  
   
-2. Add the following `Implements` statement to `ImplementationClass`, which names the interface the class implements:  
+2. 將下列 `Implements` 語句加入 `ImplementationClass`，這會為該類別所執行的介面命名：  
   
      [!code-vb[VbVbalrOOP#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#100)]
   
-     When listed separately from other items at the top of a class or structure, the `Implements` statement indicates that the class or structure implements an interface.  
+     與類別或結構頂端的其他專案分開列出時，`Implements` 語句會指出類別或結構會執行介面。  
   
-     If you are working within the integrated development environment, the **Code Editor** implements the class members required by `TestInterface` when you press ENTER, and you can skip the next step.  
+     如果您在整合式開發環境中工作，程式**代碼編輯器**會在您按下 enter 時，執行 `TestInterface` 所需的類別成員，而您可以略過下一個步驟。  
   
-3. If you are not working within the integrated development environment, you must implement all the members of the interface `MyInterface`. Add the following code to `ImplementationClass` to implement `Event1`, `Method1`, and `Prop1`:  
+3. 如果您不是在整合式開發環境中工作，就必須執行介面的所有成員 `MyInterface`。 將下列程式碼新增至 `ImplementationClass`，以執行 `Event1`、`Method1`和 `Prop1`：  
   
      [!code-vb[VbVbalrOOP#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#101)]
   
-     The `Implements` statement names the interface and interface member being implemented.  
+     `Implements` 語句會命名要實作為介面和介面成員。  
   
-4. Complete the definition of `Prop1` by adding a private field to the class that stored the property value:  
+4. 藉由將私用欄位新增至儲存屬性值的類別，完成 `Prop1` 的定義：  
   
      [!code-vb[VbVbalrOOP#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#102)]
   
-     Return the value of the `pval` from the property get accessor.  
+     從屬性 get 存取子傳回 `pval` 的值。  
   
      [!code-vb[VbVbalrOOP#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#103)]
   
-     Set the value of `pval` in the property set accessor.  
+     設定屬性 set 存取子中的 `pval` 值。  
   
      [!code-vb[VbVbalrOOP#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#104)]
   
-5. Complete the definition of `Method1` by adding the following code.  
+5. 新增下列程式碼，以完成 `Method1` 的定義。  
   
      [!code-vb[VbVbalrOOP#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#105)]
   
-### <a name="to-test-the-implementation-of-the-interface"></a>To test the implementation of the interface
+### <a name="to-test-the-implementation-of-the-interface"></a>測試介面的執行
   
-1. Right-click the startup form for your project in the **Solution Explorer**, and click **View Code**. The editor displays the class for your startup form. By default, the startup form is called `Form1`.  
+1. 在 **方案總管**中，以滑鼠右鍵按一下專案的 啟動 表單，然後按一下 **查看程式碼**。 編輯器會顯示您的啟動表單的類別。 預設會呼叫啟動表單 `Form1`。  
   
-2. Add the following `testInstance` field to the `Form1` class:  
+2. 將下列 `testInstance` 欄位新增至 `Form1` 類別：  
   
      [!code-vb[VbVbalrOOP#120](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#120)]
   
-     By declaring `testInstance` as `WithEvents`, the `Form1` class can handle its events.  
+     藉由將 `testInstance` 宣告為 `WithEvents`，`Form1` 類別可以處理其事件。  
   
-3. Add the following event handler to the `Form1` class to handle events raised by `testInstance`:  
+3. 將下列事件處理常式新增至 `Form1` 類別，以處理 `testInstance`所引發的事件：  
   
      [!code-vb[VbVbalrOOP#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#106)]
   
-4. Add a subroutine named `Test` to the `Form1` class to test the implementation class:  
+4. 將名為 `Test` 的副程式新增至 `Form1` 類別，以測試執行類別：  
   
      [!code-vb[VbVbalrOOP#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#107)]
   
-     The `Test` procedure creates an instance of the class that implements `MyInterface`, assigns that instance to the `testInstance` field, sets a property, and runs a method through the interface.  
+     `Test` 程式會建立可執行 `MyInterface`的類別實例、將該實例指派給 `testInstance` 欄位、設定屬性，以及透過介面執行方法。  
   
-5. Add code to call the `Test` procedure from the `Form1 Load` procedure of your startup form:  
+5. 新增程式碼，以從啟動表單的 `Form1 Load` 程式中呼叫 `Test` 程式：  
   
      [!code-vb[VbVbalrOOP#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#108)]
   
-6. Run the `Test` procedure by pressing F5. The message "Prop1 was set to 9" is displayed. After you click OK, the message "The X parameter for Method1 is 5" is displayed. Click OK, and the message "The event handler caught the event" is displayed.  
+6. 按 F5 鍵執行 `Test` 程式。 [Prop1 已設定為 9] 訊息隨即顯示。 按一下 [確定] 之後，就會顯示「Method1 的 X 參數是5」的訊息。 按一下 [確定]，就會顯示 [事件處理常式攔截事件] 訊息。  
   
 ## <a name="see-also"></a>請參閱
 

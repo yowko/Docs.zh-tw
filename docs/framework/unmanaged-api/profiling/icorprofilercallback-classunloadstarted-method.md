@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445074"
 ---
 # <a name="icorprofilercallbackclassunloadstarted-method"></a>ICorProfilerCallback::ClassUnloadStarted 方法
-Notifies the profiler that a class is being unloaded.  
+通知分析工具，類別正在卸載。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,10 +34,10 @@ HRESULT ClassUnloadStarted(
   
 ## <a name="parameters"></a>參數  
  `classId`  
- [in] Identifies the class that is being unloaded.  
+ 在識別要卸載的類別。  
   
 ## <a name="remarks"></a>備註  
- The value of `classId` is not valid for an information request after the `ClassUnloadStarted` method returns — this is the profiler's last chance to obtain information about this class.  
+ `ClassUnloadStarted` 方法傳回之後，`classId` 的值對資訊要求無效，這是分析工具的最後機會取得此類別的相關資訊。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

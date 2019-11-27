@@ -14,42 +14,42 @@ ms.locfileid: "74346895"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>如何：移入和移出變數資料 (Visual Basic)
 
-You store a value in a variable by putting the variable name on the left side of an assignment statement.
+您可以藉由將變數名稱放在指派語句的左邊，將值儲存在變數中。
 
-## <a name="putting-data-in-a-variable"></a>Putting Data in a Variable
+## <a name="putting-data-in-a-variable"></a>將資料放入變數中
 
-#### <a name="to-store-a-value-in-a-variable"></a>To store a value in a variable
+#### <a name="to-store-a-value-in-a-variable"></a>將值儲存在變數中
 
-- Use the variable name on the left side of an assignment statement.
+- 在指派語句的左邊使用變數名稱。
 
-    The following example sets the value of the variable `alpha`.
+    下列範例會將變數的值設定 `alpha`。
 
     ```vb
     alpha = (beta * 6.27) / (gamma + 2.1)
     ```
 
-    The value generated on the right side of the assignment statement is stored in the variable.
+    在指派語句的右邊產生的值會儲存在變數中。
 
-## <a name="getting-data-from-a-variable"></a>Getting Data from a Variable
+## <a name="getting-data-from-a-variable"></a>從變數取得資料
 
-You retrieve a variable's value by including the variable name in an expression.
+您可以藉由在運算式中包含變數名稱，來取出變數的值。
 
-#### <a name="to-retrieve-a-value-from-a-variable"></a>To retrieve a value from a variable
+#### <a name="to-retrieve-a-value-from-a-variable"></a>若要從變數中取出值
 
-- Use the variable name in an expression. You can use a variable anywhere you can use a constant or a literal, except in an expression that defines the value of a constant.
+- 在運算式中使用變數名稱。 除了定義常數值的運算式以外，您可以在任何可使用常數或常值的地方使用變數。
 
   \-或-
 
-- Use the variable name following the equal (`=`) sign in an assignment statement.
+- 在指派語句中的等號（`=`）後面使用變數名稱。
 
-  The following example reads the value of the variable `startValue` and then uses the value of the variable `counter` in an expression.
+  下列範例會讀取 `startValue` 變數的值，然後在運算式中使用變數 `counter` 的值。
 
   ```vb
   counter = startValue
   cellValue = (counter + 5) ^ 2
   ```
 
-  The value of the variable participates in the expression just as a constant would, and then it is stored in the variable or property on the left side of the assignment statement.
+  變數的值會以常數的形式參與運算式，然後儲存在指派語句左側的變數或屬性中。
 
 ## <a name="see-also"></a>請參閱
 

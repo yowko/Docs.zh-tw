@@ -19,31 +19,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344850"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>如何：將引數傳遞至程序 (Visual Basic)
-When you call a procedure, you follow the procedure name with an argument list in parentheses. You supply an argument corresponding to every required parameter the procedure defines, and you can optionally supply arguments to the `Optional` parameters. If you do not supply an `Optional` parameter in the call, you must include a comma to mark its place in the argument list if you are supplying any subsequent arguments.  
+當您呼叫程式時，您會在括弧中的程式名稱後面加上引數清單。 您提供的引數會對應至程式所定義的每個必要參數，而且您可以選擇性地提供引數給 `Optional` 參數。 如果您未在呼叫中提供 `Optional` 參數，當您提供任何後續的引數時，必須包含逗號來將其位置標記在引數清單中。  
   
- If you intend to pass an argument of a data type different from that of its corresponding parameter, such as `Byte` to `String`, you can set the type-checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) to `Off`. If `Option Strict` is `On`, you must use either widening conversions or explicit conversion keywords. For more information, see [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) and [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+ 如果您想要傳遞的資料類型引數與其對應參數（例如 `Byte` `String`）不同，您可以將類型檢查參數（[Option Strict 語句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)）設定為 [`Off`]。 如果 `On``Option Strict`，您就必須使用擴輾轉換或明確轉換關鍵字。 如需詳細資訊，請參閱[擴展和縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)和[類型轉換](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)函式。  
   
- For more information, see [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md).  
+ 如需詳細資訊，請參閱程式[參數和引數](./procedure-parameters-and-arguments.md)。  
   
-### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>To pass one or more arguments to a procedure  
+### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>將一個或多個引數傳遞至程式  
   
-1. In the calling statement, follow the procedure name with parentheses.  
+1. 在呼叫語句中，在程式名稱後面加上括弧。  
   
-2. Inside the parentheses, put an argument list. Include an argument for each required parameter the procedure defines, and separate the arguments with commas.  
+2. 在括弧內，放入引數清單。 包含程式所定義之每個必要參數的引數，並以逗號分隔引數。  
   
-3. Make sure each argument is a valid expression that evaluates to a data type convertible to the type the procedure defines for the corresponding parameter.  
+3. 請確定每個引數都是有效的運算式，它會評估為可轉換成該程式針對對應參數所定義之類型的資料類型。  
   
-4. If a parameter is defined as [Optional](../../../../visual-basic/language-reference/modifiers/optional.md), you can either include it in the argument list or omit it. If you omit it, the procedure uses the default value defined for that parameter.  
+4. 如果將參數定義為[選擇性](../../../../visual-basic/language-reference/modifiers/optional.md)，您可以將它包含在引數清單中，或將其省略。 如果您省略它，程式會使用針對該參數定義的預設值。  
   
-5. If you omit an argument for an `Optional` parameter and there is another parameter after it in the parameter list, you can mark the place of the omitted argument by an extra comma in the argument list.  
+5. 如果您省略 `Optional` 參數的引數，且參數清單中有另一個參數，您可以在引數清單中，將省略的引數的位置標記為額外的逗號。  
   
-     The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function.  
+     下列範例會呼叫 Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 函數。  
   
      [!code-vb[VbVbcnProcedures#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#34)]  
   
-     The preceding example supplies the required first argument, which is the message string to be displayed. It omits an argument for the optional second parameter, which specifies the buttons to be displayed on the message box. Because the call does not supply a value, `MsgBox` uses the default value, `MsgBoxStyle.OKOnly`, which displays only an **OK** button.  
+     上述範例會提供必要的第一個引數，也就是要顯示的訊息字串。 它會省略選擇性第二個參數的引數，這會指定要在訊息方塊上顯示的按鈕。 因為此呼叫不提供值，`MsgBox` 會使用預設值 `MsgBoxStyle.OKOnly`，這只會顯示 **[確定]** 按鈕。  
   
-     The second comma in the argument list marks the place of the omitted second argument, and the last string is passed to the optional third parameter of `MsgBox`, which is the text to be displayed in the title bar.  
+     引數清單中的第二個逗號會標記省略的第二個引數的位置，而最後一個字串會傳遞給 `MsgBox`的選擇性第三個參數，也就是要在標題列中顯示的文字。  
   
 ## <a name="see-also"></a>請參閱
 

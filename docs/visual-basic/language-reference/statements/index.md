@@ -14,7 +14,7 @@ ms.locfileid: "74353564"
 # <a name="statements-visual-basic"></a>陳述式 (Visual Basic)
 本節中的主題包含 Visual Basic 宣告和可執行陳述式的表格，以及套用至許多陳述式的重要清單。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [A-E 陳述式](../../../visual-basic/language-reference/statements/a-e-statements.md)  
   
  [F-P 陳述式](../../../visual-basic/language-reference/statements/f-p-statements.md)  

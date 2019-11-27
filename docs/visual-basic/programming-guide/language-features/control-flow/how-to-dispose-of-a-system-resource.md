@@ -18,15 +18,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353950"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>如何：處置系統資源 (Visual Basic)
-You can use a `Using` block to guarantee that the system disposes of a resource when your code exits the block. This is useful if you are using a system resource that consumes a large amount of memory, or that other components also want to use.  
+您可以使用 `Using` 區塊，確保當您的程式碼結束區塊時，系統會處置資源。 如果您使用的系統資源會耗用大量的記憶體，或其他元件也想要使用，這就很有用。  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>To dispose of a database connection when your code is finished with it  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>若要在程式碼完成時處置資料庫連接  
   
-1. Make sure you include the appropriate [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) for the database connection at the beginning of your source file (in this case, <xref:System.Data.SqlClient>).  
+1. 請確定您在來源檔案的開頭包含資料庫連接的適當[Imports 語句（.Net 命名空間和類型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) （在此案例中為 <xref:System.Data.SqlClient>）。  
   
-2. Create a `Using` block with the `Using` and `End Using` statements. Inside the block, put the code that deals with the database connection.  
+2. 使用 `Using` 和 `End Using` 語句來建立 `Using` 區塊。 在區塊內，放入處理資料庫連接的程式碼。  
   
-3. Declare the connection and create an instance of it as part of the `Using` statement.  
+3. 宣告連接，並建立它的實例做為 `Using` 語句的一部分。  
   
     ```vb  
     ' Insert the following line at the beginning of your source file.  
@@ -38,11 +38,11 @@ You can use a `Using` block to guarantee that the system disposes of a resource 
     End Sub  
     ```  
   
-     The system disposes of the resource no matter how you exit the block, including the case of an unhandled exception.  
+     無論您如何結束區塊，系統都會處置資源，包括未處理之例外狀況的情況。  
   
-     Note that you cannot access `sqc` from outside the `Using` block, because its scope is limited to the block.  
+     請注意，您無法從 `Using` 區塊外部存取 `sqc`，因為它的範圍限制為區塊。  
   
-     You can use this same technique on a system resource such as a file handle or a COM wrapper. You use a `Using` block when you want to be sure to leave the resource available for other components after you have exited the `Using` block.  
+     您可以在系統資源（例如檔案控制代碼或 COM 包裝函式）上使用這項相同的技術。 當您想要在結束 [`Using`] 區塊之後，保留其他元件的可用資源時，請使用 `Using` 區塊。  
   
 ## <a name="see-also"></a>請參閱
 

@@ -14,9 +14,9 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344785"
 ---
-# <a name="-debug-visual-basic"></a>-debug (Visual Basic)
+# <a name="-debug-visual-basic"></a>-debug （Visual Basic）
 
-Causes the compiler to generate debugging information and place it in the output file(s).
+使編譯器產生調試資訊，並將它放在輸出檔中。
 
 ## <a name="syntax"></a>語法
 
@@ -34,24 +34,24 @@ Causes the compiler to generate debugging information and place it in the output
 
 |詞彙|定義|
 |---|---|
-|`+` &#124; `-`|選擇項。 Specifying `+` or `/debug` causes the compiler to generate debugging information and place it in a .pdb file. Specifying `-` has the same effect as not specifying `/debug`.|
-|`full` &#124; `pdbonly`|選擇項。 指定編譯器所產生的偵錯資訊類型。 If you do not specify `/debug:pdbonly`, the default is `full`, which enables you to attach a debugger to the running program. The `pdbonly` argument allows source-code debugging when the program is started in the debugger, but it displays assembly-language code only when the running program is attached to the debugger.|
+|`+` &#124; `-`|選擇性。 指定 `+` 或 `/debug` 會導致編譯器產生調試資訊，並將它放在 .pdb 檔案中。 指定 `-` 與未指定 `/debug`的效果相同。|
+|`full` &#124; `pdbonly`|選擇性。 指定編譯器所產生的偵錯資訊類型。 如果您未指定 `/debug:pdbonly`，預設值為 `full`，這可讓您將偵錯工具附加至執行中的程式。 `pdbonly` 引數可在偵錯工具中啟動程式時，允許原始程式碼的偵錯工具，但只有在執行中的程式附加至偵錯工具時，才會顯示元件語言代碼。|
 
 ## <a name="remarks"></a>備註
 
-若要建立偵錯組建，請使用此選項。 If you do not specify `/debug`, `/debug+`, or `/debug:full`, you will be unable to debug the output file of your program.
+若要建立偵錯組建，請使用此選項。 如果您未指定 `/debug`、`/debug+`或 `/debug:full`，將無法對程式的輸出檔案進行偵錯工具。
 
-By default, debugging information is not emitted (`/debug-`). To emit debugging information, specify `/debug` or `/debug+`.
+根據預設，不會發出偵錯工具資訊（`/debug-`）。 若要發出調試資訊，請指定 `/debug` 或 `/debug+`。
 
 如需如何設定應用程式效能偵錯的資訊，請參閱[使映像偵錯更容易](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md)。
 
-|To set -debug in the Visual Studio integrated development environment|
+|在 Visual Studio 的整合式開發環境中設定-debug|
 |---|
-|1.  With a project selected in **Solution Explorer**, on the **Project** menu, click **Properties**. <br />2.  Click the **Compile** tab.<br />3.  Click **Advanced Compile Options**.<br />4.  Modify the value in the **Generate Debug Info** box.|
+|1. 在**方案總管**中選取專案時，按一下 [**專案**] 功能表上的 [**屬性**]。 <br />2. 按一下 [**編譯**] 索引標籤。<br />3. 按一下 [**高級編譯選項**]。<br />4. 修改 [**產生調試資訊**] 方塊中的值。|
 
 ## <a name="example"></a>範例
 
-The following example puts debugging information in output file `App.exe`.
+下列範例會將調試資訊放在輸出檔 `App.exe`。
 
 ```console
 vbc -debug -out:app.exe test.vb

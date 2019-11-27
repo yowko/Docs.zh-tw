@@ -1,5 +1,5 @@
 ---
-title: 機碼
+title: 索引鍵
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AnonymousKey
@@ -16,40 +16,40 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351511"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
-The `Key` keyword enables you to specify behavior for properties of anonymous types. Only properties you designate as key properties participate in tests of equality between anonymous type instances, or calculation of hash code values. The values of key properties cannot be changed.  
+`Key` 關鍵字可讓您指定匿名型別屬性的行為。 只有您指定為索引鍵屬性的屬性，才會參與匿名型別實例之間的相等測試，或計算雜湊碼值。 無法變更索引鍵屬性的值。  
   
- You designate a property of an anonymous type as a key property by placing the keyword `Key` in front of its declaration in the initialization list. In the following example, `Airline` and `FlightNo` are key properties, but `Gate` is not.  
+ 將關鍵字 `Key` 放在初始化清單中的宣告前面，即可指定匿名型別的屬性做為索引鍵屬性。 在下列範例中，`Airline` 和 `FlightNo` 是索引鍵屬性，但 `Gate` 不是。  
   
  [!code-vb[VbVbalrAnonymousTypes#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#26)]  
   
- When a new anonymous type is created, it inherits directly from <xref:System.Object>. The compiler overrides three inherited members: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>. The override code that is produced for <xref:System.Object.Equals%2A> and <xref:System.Object.GetHashCode%2A> is based on key properties. If there are no key properties in the type, <xref:System.Object.GetHashCode%2A> and <xref:System.Object.Equals%2A> are not overridden.  
+ 建立新的匿名型別時，它會直接繼承 <xref:System.Object>。 編譯器會覆寫三個繼承的成員： <xref:System.Object.Equals%2A>、<xref:System.Object.GetHashCode%2A>和 <xref:System.Object.ToString%2A>。 針對 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 產生的覆寫程式碼是以索引鍵屬性為基礎。 如果類型中沒有任何索引鍵屬性，則不會覆寫 <xref:System.Object.GetHashCode%2A> 和 <xref:System.Object.Equals%2A>。  
   
 ## <a name="equality"></a>相等  
- Two anonymous type instances are equal if they are instances of the same type and if the values of their key properties are equal. In the following examples, `flight2` is equal to `flight1` from the previous example because they are instances of the same anonymous type and they have matching values for their key properties. However, `flight3` is not equal to `flight1` because it has a different value for a key property, `FlightNo`. Instance `flight4` is not the same type as `flight1` because they designate different properties as key properties.  
+ 如果兩個匿名型別實例都是相同類型的實例，而且其索引鍵屬性的值相等，則兩者相等。 在下列範例中，`flight2` 等於上一個範例中的 `flight1`，因為它們是相同匿名型別的實例，而且它們的索引鍵屬性具有相符的值。 不過，`flight3` 不等於 `flight1`，因為它的索引鍵屬性有不同的值，`FlightNo`。 實例 `flight4` 的類型與 `flight1` 不同，因為它們會將不同的屬性指定為索引鍵屬性。  
   
  [!code-vb[VbVbalrAnonymousTypes#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#27)]  
   
- If two instances are declared with only non-key properties, identical in name, type, order, and value, the two instances are not equal. An instance without key properties is equal only to itself.  
+ 如果兩個實例僅使用非索引鍵屬性來宣告，則名稱、類型、順序和值都相同，這兩個實例不相等。 沒有索引鍵屬性的實例只等於其本身。  
   
- For more information about the conditions under which two anonymous type instances are instances of the same anonymous type, see [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+ 如需有關兩個匿名型別實例在相同匿名型別實例之下的條件的詳細資訊，請參閱[匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
   
-## <a name="hash-code-calculation"></a>Hash Code Calculation  
- Like <xref:System.Object.Equals%2A>, the hash function that is defined in <xref:System.Object.GetHashCode%2A> for an anonymous type is based on the key properties of the type. The following examples show the interaction between key properties and hash code values.  
+## <a name="hash-code-calculation"></a>雜湊程式碼計算  
+ 如同 <xref:System.Object.Equals%2A>，在匿名型別的 <xref:System.Object.GetHashCode%2A> 中定義的雜湊函式是以類型的索引鍵屬性為基礎。 下列範例會顯示索引鍵屬性與雜湊碼值之間的互動。  
   
- Instances of an anonymous type that have the same values for all key properties have the same hash code value, even if non-key properties do not have matching values. The following statement returns `True`.  
+ 匿名型別的實例若具有相同的雜湊碼值，則所有索引鍵屬性的值都相同，即使非索引鍵屬性沒有相符的值。 下列語句會傳回 `True`。  
   
  [!code-vb[VbVbalrAnonymousTypes#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#37)]  
   
- Instances of an anonymous type that have different values for one or more key properties have different hash code values. The following statement returns `False`.  
+ 匿名型別的實例若具有一或多個索引鍵屬性的不同值，就會有不同的雜湊碼值。 下列語句會傳回 `False`。  
   
  [!code-vb[VbVbalrAnonymousTypes#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#38)]  
   
- Instances of anonymous types that designate different properties as key properties are not instances of the same type. They have different hash code values even when the names and values of all properties are the same. The following statement returns `False`.  
+ 將不同屬性指定為索引鍵屬性的匿名型別實例不是相同類型的實例。 即使所有屬性的名稱和值都相同，它們也有不同的雜湊碼值。 下列語句會傳回 `False`。  
   
  [!code-vb[VbVbalrAnonymousTypes#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#39)]  
   
-## <a name="read-only-values"></a>Read-Only Values  
- The values of key properties cannot be changed. For example, in `flight1` in the earlier examples, the `Airline` and `FlightNo` fields are read-only, but `Gate` can be changed.  
+## <a name="read-only-values"></a>唯讀值  
+ 無法變更索引鍵屬性的值。 例如，在先前範例的 `flight1` 中，[`Airline`] 和 [`FlightNo`] 欄位是唯讀的，但 `Gate` 可以變更。  
   
  [!code-vb[VbVbalrAnonymousTypes#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#28)]  
   

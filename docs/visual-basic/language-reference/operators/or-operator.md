@@ -23,7 +23,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348245"
 ---
 # <a name="or-operator-visual-basic"></a>Or 運算子 (Visual Basic)
-Performs a logical disjunction on two `Boolean` expressions, or a bitwise disjunction on two numeric expressions.  
+在兩個 `Boolean` 運算式上執行邏輯分離，或在兩個數值運算式上執行位析取。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,18 +33,18 @@ result = expression1 Or expression2
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要項。 Any `Boolean` or numeric expression. For `Boolean` comparison, `result` is the inclusive logical disjunction of two `Boolean` values. For bitwise operations, `result` is a numeric value representing the inclusive bitwise disjunction of two numeric bit patterns.  
+ 必要。 任何 `Boolean` 或數值運算式。 針對 `Boolean` 比較，`result` 是兩個 `Boolean` 值的內含邏輯分離。 對於位運算而言，`result` 是數值，代表兩個數值位模式的內含位分離。  
   
  `expression1`  
- 必要項。 Any `Boolean` or numeric expression.  
+ 必要。 任何 `Boolean` 或數值運算式。  
   
  `expression2`  
- 必要項。 Any `Boolean` or numeric expression.  
+ 必要。 任何 `Boolean` 或數值運算式。  
   
 ## <a name="remarks"></a>備註  
- For `Boolean` comparison, `result` is `False` if and only if both `expression1` and `expression2` evaluate to `False`. The following table illustrates how `result` is determined.  
+ 針對 `Boolean` 比較，只有在 `expression1` 和 `expression2` 都評估為 `False`時，才會 `False` `result`。 下表說明如何決定 `result`。  
   
-|If `expression1` is|And `expression2` is|The value of `result` is|  
+|如果 `expression1` 為|而 `expression2` 為|`result` 的值為|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`True`|  
@@ -52,11 +52,11 @@ result = expression1 Or expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
-> In a `Boolean` comparison, the `Or` operator always evaluates both expressions, which could include making procedure calls. The [OrElse Operator](../../../visual-basic/language-reference/operators/orelse-operator.md) performs *short-circuiting*, which means that if `expression1` is `True`, then `expression2` is not evaluated.  
+> 在 `Boolean` 比較中，`Or` 運算子一律會評估兩個運算式，這可能包括進行程序呼叫。 [OrElse 運算子](../../../visual-basic/language-reference/operators/orelse-operator.md)會執行最少運算，這表示如果 `True` *`expression1`，則*不會評估 `expression2`。  
   
- For bitwise operations, the `Or` operator performs a bitwise comparison of identically positioned bits in two numeric expressions and sets the corresponding bit in `result` according to the following table.  
+ 對於位運算，`Or` 運算子會在兩個數值運算式中執行相同位置位的位比較，並根據下表設定 `result` 中的對應位。  
   
-|If bit in `expression1` is|And bit in `expression2` is|The bit in `result` is|  
+|如果 `expression1` 中的位為|`expression2` 中的和位是|`result` 中的位是|  
 |--------------------------------|---------------------------------|----------------------------|  
 |1|1|1|  
 |1|0|1|  
@@ -64,34 +64,34 @@ result = expression1 Or expression2
 |0|0|0|  
   
 > [!NOTE]
-> Since the logical and bitwise operators have a lower precedence than other arithmetic and relational operators, any bitwise operations should be enclosed in parentheses to ensure accurate execution.  
+> 由於邏輯和位運算子的優先順序比其他算術和關係運算子低，因此應該將任何位運算括在括弧中，以確保正確執行。  
   
 ## <a name="data-types"></a>資料類型  
- If the operands consist of one `Boolean` expression and one numeric expression, Visual Basic converts the `Boolean` expression to a numeric value (–1 for `True` and 0 for `False`) and performs a bitwise operation.  
+ 如果運算元包含一個 `Boolean` 運算式和一個數值運算式，Visual Basic 會將 `Boolean` 運算式轉換成數值（-1 代表 `True`，0代表 `False`），並執行位運算。  
   
- For a `Boolean` comparison, the data type of the result is `Boolean`. For a bitwise comparison, the result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Relational and Bitwise Comparisons" table in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ 若要進行 `Boolean` 比較，會 `Boolean`結果的資料類型。 針對位比較，結果資料類型是適用于 `expression1` 和 `expression2`的資料類型的數數值型別。 請參閱[運算子結果的資料類型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)中的「關聯式和位比較」資料表。  
   
 ## <a name="overloading"></a>多載化  
- The `Or` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ `Or` 運算子可以多載 *，這*表示當運算元具有該類別或結構的類型時，類別或結構可以重新定義其行為。 如果您的程式碼在這類類別或結構上使用這個運算子，請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- The following example uses the `Or` operator to perform an inclusive logical disjunction on two expressions. The result is a `Boolean` value that represents whether either of the two expressions is `True`.  
+ 下列範例會使用 `Or` 運算子，在兩個運算式上執行內含邏輯分離。 結果為 `Boolean` 值，表示是否 `True`兩個運算式的其中一個。  
   
  [!code-vb[VbVbalrOperators#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#35)]  
   
- The preceding example produces results of `True`, `True`, and `False`, respectively.  
+ 上述範例會分別產生 `True`、`True`和 `False`的結果。  
   
 ## <a name="example"></a>範例  
- The following example uses the `Or` operator to perform inclusive logical disjunction on the individual bits of two numeric expressions. The bit in the result pattern is set if either of the corresponding bits in the operands is set to 1.  
+ 下列範例會使用 `Or` 運算子，在兩個數值運算式的個別位上執行內含邏輯分離。 如果運算元中的其中一個對應位設為1，則結果模式中的位會設定為。  
   
  [!code-vb[VbVbalrOperators#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#36)]  
   
- The preceding example produces results of 10, 14, and 14, respectively.  
+ 上述範例會分別產生10、14和14的結果。  
   
 ## <a name="see-also"></a>請參閱
 
-- [Logical/Bitwise Operators (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [邏輯/位運算子（Visual Basic）](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [OrElse 運算子](../../../visual-basic/language-reference/operators/orelse-operator.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic 中的邏輯和位運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

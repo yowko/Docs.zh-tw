@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349921"
 ---
 # <a name="collection-object-summary-visual-basic"></a>集合物件摘要 (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic 語言關鍵字和執行時間程式庫成員是依用途和使用來組織。  
   
 |動作|語言項目|  
 |------------|----------------------|  
 |建立 `Collection` 物件。|<xref:Microsoft.VisualBasic.Collection>|  
-|Add an item to a collection.|<xref:Microsoft.VisualBasic.Collection.Add*>|  
-|Remove an object from a collection.|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
-|Reference an item in a collection.|<xref:Microsoft.VisualBasic.Collection.Item*>|  
-|Return a reference to an <xref:System.Collections.IEnumerator> interface.|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
+|將專案新增至集合。|<xref:Microsoft.VisualBasic.Collection.Add*>|  
+|從集合中移除物件。|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
+|參考集合中的專案。|<xref:Microsoft.VisualBasic.Collection.Item*>|  
+|傳回 <xref:System.Collections.IEnumerator> 介面的參考。|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
   
 ## <a name="see-also"></a>請參閱
 

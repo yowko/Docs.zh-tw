@@ -13,7 +13,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347883"
 ---
-# <a name="-nowin32manifest-visual-basic"></a>-nowin32manifest (Visual Basic)
+# <a name="-nowin32manifest-visual-basic"></a>-nowin32manifest （Visual Basic）
 指示編譯器不要將任何應用程式資訊清單內嵌在可執行檔中。  
   
 ## <a name="syntax"></a>語法  
@@ -23,11 +23,11 @@ ms.locfileid: "74347883"
 ```  
   
 ## <a name="remarks"></a>備註  
- 使用此選項時，應用程式在 Windows Vista 上會虛擬化，除非您在 Win32 資源檔案中或於更新版本組建步驟期間提供應用程式資訊清單。 For more information about virtualization, see [ClickOnce Deployment on Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).  
+ 使用此選項時，應用程式在 Windows Vista 上會虛擬化，除非您在 Win32 資源檔案中或於更新版本組建步驟期間提供應用程式資訊清單。 如需虛擬化的詳細資訊，請參閱[Windows Vista 上的 ClickOnce 部署](/visualstudio/deployment/clickonce-deployment-on-windows-vista)。  
   
- For more information about manifest creation, see [-win32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md).  
+ 如需建立資訊清單的詳細資訊，請參閱[-win32manifest （Visual Basic）](../../../visual-basic/reference/command-line-compiler/win32manifest.md)。  
   
 ## <a name="see-also"></a>請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
-- [專案設計工具、應用程式頁面 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [專案設計工具、應用程式頁 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

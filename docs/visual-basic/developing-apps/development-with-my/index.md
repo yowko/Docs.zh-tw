@@ -24,9 +24,9 @@ Visual Basic 提供可進行快速應用程式開發的新功能來提高產能�
   
  此表格顯示最上層 `My` 物件及其彼此間的關聯性。  
   
- ![Diagram shows the object model for My.](./media/index/my-object-model-relationships.gif)  
+ ![圖表顯示 My 的物件模型。](./media/index/my-object-model-relationships.gif)  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
  [使用 My.Application、My.Computer 和 My.User 執行工作](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
  描述三種中央 `My` 物件 (`My.Application`、`My.Computer` 和 `My.User`)，它們提供對資訊和功能的存取。  
@@ -38,7 +38,7 @@ Visual Basic 提供可進行快速應用程式開發的新功能來提高產能�
  描述 `My.Resources` 和 `My.Settings` 物件，它們提供對應用程式資源和設定的存取。  
   
  [Visual Basic 應用程式模型概觀](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Describes the Visual Basic Application Startup/Shutdown model.  
+ 描述 Visual Basic 應用程式啟動/關閉模型。  
   
  [My 如何相依於專案類型](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  提供有關 `My` 功能可在不同專案型別中使用的詳細資料。  

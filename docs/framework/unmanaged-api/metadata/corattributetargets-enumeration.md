@@ -62,32 +62,32 @@ typedef enum CorAttributeTargets
   
 |成員|描述|  
 |------------|-----------------|  
-|`catAssembly`|Attribute can be applied to an assembly.|  
-|`catModule`|Attribute can be applied to a portable executable (.dll or .exe) module.|  
-|`catClass`|Attribute can be applied to a class.|  
-|`catStruct`|Attribute can be applied to a structure; that is, a value type.|  
-|`catEnum`|Attribute can be applied to an enumeration.|  
-|`catConstructor`|Attribute can be applied to a constructor.|  
-|`catMethod`|Attribute can be applied to a method.|  
-|`catProperty`|Attribute can be applied to a property.|  
-|`catField`|Attribute can be applied to a field.|  
-|`catEvent`|Attribute can be applied to an event.|  
-|`catInterface`|Attribute can be applied to an interface.|  
-|`catParameter`|Attribute can be applied to a parameter.|  
-|`catDelegate`|Attribute can be applied to a delegate.|  
-|`catGenericParameter`|Attribute can be applied to a generic parameter.|  
-|`catAll`|Attribute can be applied to any application element.|  
-|`catClassMembers`|Attribute can be applied to a member of a class.|  
+|`catAssembly`|屬性可以套用至元件。|  
+|`catModule`|屬性可以套用至可移植的可執行檔（.dll 或 .exe）模組。|  
+|`catClass`|屬性可以套用至類別。|  
+|`catStruct`|屬性可以套用至結構;也就是實值型別。|  
+|`catEnum`|屬性可以套用至列舉。|  
+|`catConstructor`|屬性可以套用至函式。|  
+|`catMethod`|屬性可以套用至方法。|  
+|`catProperty`|屬性可以套用至屬性。|  
+|`catField`|屬性可以套用至欄位。|  
+|`catEvent`|屬性可以套用至事件。|  
+|`catInterface`|屬性可以套用至介面。|  
+|`catParameter`|屬性可以套用至參數。|  
+|`catDelegate`|屬性可以套用至委派。|  
+|`catGenericParameter`|屬性可以套用至泛型參數。|  
+|`catAll`|屬性可以套用至任何應用程式元素。|  
+|`catClassMembers`|屬性可以套用至類別的成員。|  
   
 ## <a name="remarks"></a>備註  
- The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.  
+ `CorAttributeTargets` 的列舉值可以與位 OR 運算結合，以取得慣用的組合。  
   
- The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.  
+ `CorAttributeTargets` 等同于 managed <xref:System.AttributeTargets?displayProperty=nameWithType> 列舉。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

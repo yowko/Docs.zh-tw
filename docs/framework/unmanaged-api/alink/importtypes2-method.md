@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445673"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 方法
-Initiates the import of types. Call this method to begin importing types from each scope imported via [ImportFile Method](importfile-method.md).  
+起始類型的匯入。 呼叫這個方法，以開始從每個透過[ImportFile 方法](importfile-method.md)匯入的範圍匯入類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,28 +39,28 @@ HRESULT ImportTypes2(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- ID of assembly into which to import.  
+ 要匯入之元件的識別碼。  
   
  `FileToken`  
- ID of file to from which to import.  
+ 要從中匯入之檔案的識別碼。  
   
  `dwScope`  
- Zero-based scope from which to import.  
+ 要匯入之以零為基底的範圍。  
   
  `phEnum`  
- Receives enumerator handle for the types in the given scope.  
+ 接收指定範圍內之類型的列舉值控制碼。  
   
  `ppImportScope`  
- Optionally receives [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface.  
+ 選擇性地接收[IMetaDataImport2 介面](../metadata/imetadataimport2-interface.md)介面。  
   
  `pdwCountOfTypes`  
- Optionally receives count of types in the specified scope.  
+ 選擇性地接收指定範圍內的類型計數。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h  
+ 需要 alink. h  
   
 ## <a name="see-also"></a>請參閱
 

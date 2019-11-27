@@ -35,17 +35,17 @@ BOOL IsValidToken (
   
 ## <a name="parameters"></a>參數  
  `tk`  
- [in] The token to check the reference validity for.  
+ 在要檢查其參考有效性的 token。  
   
 ## <a name="return-value"></a>傳回值  
- `true` if `tk` is a valid metadata token within the current scope. 否則為 `false`。  
+ `true`，如果 `tk` 是目前範圍內有效的元資料標記。 否則為 `false`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

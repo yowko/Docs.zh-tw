@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437679"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>IMetaDataImport::GetCustomAttributeByName 方法
-Gets the custom attribute, given its name and owner.  
+取得自訂屬性，並指定其名稱和擁有者。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,26 +38,26 @@ HRESULT GetCustomAttributeByName (
   
 ## <a name="parameters"></a>參數  
  `tkObj`  
- [in] A metadata token representing the object that owns the custom attribute.  
+ 在元資料標記，代表擁有自訂屬性的物件。  
   
  `szName`  
- [in] The name of the custom attribute.  
+ 在自訂屬性的名稱。  
   
  `ppData`  
- [out] A pointer to an array of data that is the value of the custom attribute.  
+ 脫銷資料陣列的指標，這是自訂屬性的值。  
   
  `pcbData`  
- [out] The size in bytes of the data returned in *`ppData`.  
+ 脫銷*`ppData`中傳回的資料大小（以位元組為單位）。  
   
 ## <a name="remarks"></a>備註  
- It is legal to define multiple custom attributes for the same owner; they may even have the same name. However, `GetCustomAttributeByName` returns only one instance. (`GetCustomAttributeByName` returns the first instance that it encounters.) To find all instances of a custom attribute, call the [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) method.  
+ 為相同擁有者定義多個自訂屬性是合法的：他們甚至可能會有相同的名稱。 不過，`GetCustomAttributeByName` 只會傳回一個實例。 （`GetCustomAttributeByName` 會傳回第一個遇到的實例）。若要尋找自訂屬性的所有實例，請呼叫[IMetaDataImport：： EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346662"
 ---
 # <a name="type-mismatch-visual-basic"></a>類型不符 (Visual Basic)
-You attempted to convert a value to another type in a way that is not valid.  
+您嘗試以不正確方式，將值轉換成另一種類型。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. Check the assignment to make sure it is valid.  
+1. 請檢查指派以確定它是有效的。  
   
-2. Make sure you did not pass an object to a procedure that expects a single property or value.  
+2. 請確定您未將物件傳遞給需要單一屬性或值的程式。  
   
-3. Make sure you did not use a module or project name where an expression was expected.  
+3. 請確定您未使用預期運算式的模組或專案名稱。  
   
 ## <a name="see-also"></a>請參閱
 

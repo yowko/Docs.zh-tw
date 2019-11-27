@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350933"
 ---
 # <a name="logicalbitwise-operators-visual-basic"></a>邏輯/位元運算子 (Visual Basic)
-The following are the logical/bitwise operators defined in Visual Basic.  
+以下是在 Visual Basic 中定義的邏輯/位運算子。  
   
  [And 運算子](../../../visual-basic/language-reference/operators/and-operator.md)  
   
@@ -34,4 +34,4 @@ The following are the logical/bitwise operators defined in Visual Basic.
 ## <a name="see-also"></a>請參閱
 
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic 中的邏輯和位運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

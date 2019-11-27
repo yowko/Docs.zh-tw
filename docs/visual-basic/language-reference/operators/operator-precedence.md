@@ -22,63 +22,63 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348272"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic 中的運算子優先順序
-When several operations occur in an expression, each part is evaluated and resolved in a predetermined order called *operator precedence*.
+當運算式中發生數個作業時，每個元件都會以預先決定的順序（稱為*運算子優先順序*）進行評估和解析。
 
-## <a name="precedence-rules"></a>Precedence Rules
- When expressions contain operators from more than one category, they are evaluated according to the following rules:
+## <a name="precedence-rules"></a>優先順序規則
+ 當運算式包含來自多個類別的運算子時，會根據下列規則進行評估：
 
-- The arithmetic and concatenation operators have the order of precedence described in the following section, and all have greater precedence than the comparison, logical, and bitwise operators.
+- 算術和串連運算子具有下一節所描述的優先順序順序，而且所有的優先順序高於比較、邏輯和位運算子。
 
-- All comparison operators have equal precedence, and all have greater precedence than the logical and bitwise operators, but lower precedence than the arithmetic and concatenation operators.
+- 所有比較運算子都具有相同的優先順序，而且所有的優先順序高於邏輯和位運算子，但較低的優先順序高於算術和串連運算子。
 
-- The logical and bitwise operators have the order of precedence described in the following section, and all have lower precedence than the arithmetic, concatenation, and comparison operators.
+- 邏輯和位運算子具有下一節所描述的優先順序順序，而且所有的優先順序都低於算術、串連和比較運算子。
 
-- Operators with equal precedence are evaluated left to right in the order in which they appear in the expression.
+- 具有相等優先順序的運算子會依其在運算式中出現的順序向右評估。
 
-## <a name="precedence-order"></a>Precedence Order
- Operators are evaluated in the following order of precedence:
+## <a name="precedence-order"></a>優先順序
+ 運算子會依照下列優先順序來進行評估：
 
 ### <a name="await-operator"></a>Await 運算子
- Await
+ 遇到
 
-### <a name="arithmetic-and-concatenation-operators"></a>Arithmetic and Concatenation Operators
- Exponentiation (`^`)
+### <a name="arithmetic-and-concatenation-operators"></a>算術和串連運算子
+ 乘冪（`^`）
 
- Unary identity and negation (`+`, `–`)
+ 一元識別和否定（`+`，`–`）
 
- Multiplication and floating-point division (`*`, `/`)
+ 乘法和浮點除法（`*`，`/`）
 
- Integer division (`\`)
+ 整數除法（`\`）
 
- Modular arithmetic (`Mod`)
+ 模組化算術（`Mod`）
 
- Addition and subtraction (`+`, `–`)
+ 加法和減法（`+`，`–`）
 
- String concatenation (`&`)
+ 字串串連（`&`）
 
- Arithmetic bit shift (`<<`, `>>`)
+ 算術位移位（`<<`、`>>`）
 
 ### <a name="comparison-operators"></a>比較運算子
- All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)
+ 所有比較運算子（`=`、`<>`、`<`、`<=`、`>`、`>=`、`Is`、`IsNot`、`Like`、`TypeOf`...`Is`）
 
 ### <a name="logical-and-bitwise-operators"></a>邏輯運算子和位元運算子
- Negation (`Not`)
+ 否定（`Not`）
 
- Conjunction (`And`, `AndAlso`)
+ 結合（`And`、`AndAlso`）
 
- Inclusive disjunction (`Or`, `OrElse`)
+ 內含析取（`Or`、`OrElse`）
 
- Exclusive disjunction (`Xor`)
+ 獨佔分離（`Xor`）
 
 ### <a name="comments"></a>註解
- The `=` operator is only the equality comparison operator, not the assignment operator.
+ `=` 運算子只是相等比較運算子，而不是指派運算子。
 
- The string concatenation operator (`&`) is not an arithmetic operator, but in precedence it is grouped with the arithmetic operators.
+ 字串串連運算子（`&`）不是算術運算子，但在優先順序上，它會與算術運算子群組在一起。
 
- The `Is` and `IsNot` operators are object reference comparison operators. They do not compare the values of two objects; they check only to determine whether two object variables refer to the same object instance.
+ `Is` 和 `IsNot` 運算子都是物件參考比較運算子。 它們不會比較兩個物件的值。它們只會檢查以判斷兩個物件變數是否參考相同的物件實例。
 
 ## <a name="associativity"></a>順序關聯性
- When operators of equal precedence appear together in an expression, for example multiplication and division, the compiler evaluates each operation as it encounters it from left to right. 下列範例將說明這點。
+ 當相等優先順序的運算子同時出現在運算式中時（例如乘法和除法），編譯器會在每個作業從左至右遇到時進行評估。 下列範例將說明這點。
 
 ```vb
 Dim n1 As Integer = 96 / 8 / 4
@@ -86,12 +86,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)
 ```
 
- The first expression evaluates the division 96 / 8 (which results in 12) and then the division 12 / 4, which results in three. Because the compiler evaluates the operations for `n1` from left to right, the evaluation is the same when that order is explicitly indicated for `n2`. Both `n1` and `n2` have a result of three. By contrast, `n3` has a result of 48, because the parentheses force the compiler to evaluate 8 / 4 first.
+ 第一個運算式會評估除法 96/8 （這會產生12），然後是除法 12/4，這會產生三個。 因為編譯器會從左至右評估 `n1` 的作業，所以當明確指出 `n2`的順序時，評估會是相同的。 `n1` 和 `n2` 都有三個結果。 相較之下，`n3` 的結果為48，因為括弧會強制編譯器先評估 8/4。
 
- Because of this behavior, operators are said to be *left associative* in Visual Basic.
+ 基於此行為，運算子稱為 Visual Basic 中的*左關聯*。
 
-## <a name="overriding-precedence-and-associativity"></a>Overriding Precedence and Associativity
- You can use parentheses to force some parts of an expression to be evaluated before others. This can override both the order of precedence and the left associativity. Visual Basic always performs operations that are enclosed in parentheses before those outside. However, within parentheses, it maintains ordinary precedence and associativity, unless you use parentheses within the parentheses. 下列範例將說明這點。
+## <a name="overriding-precedence-and-associativity"></a>覆寫優先順序和關聯性
+ 您可以使用括弧來強制評估運算式的某些部分。 這可能會覆寫優先順序和左側關聯性的順序。 Visual Basic 一律會執行以括弧括住的作業，而不是在外部。 不過，在括弧內，除非您在括弧內使用括弧，否則會維持一般優先順序和關聯性。 下列範例將說明這點。
 
 ```vb
 Dim a, b, c, d, e, f, g As Double

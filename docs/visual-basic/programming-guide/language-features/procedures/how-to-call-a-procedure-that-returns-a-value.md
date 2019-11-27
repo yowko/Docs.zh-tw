@@ -15,32 +15,32 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340734"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>如何：呼叫傳回值的程序 (Visual Basic)
-A `Function` procedure returns a value to the calling code. You call it by including its name and arguments either on the right side of an assignment statement or in an expression.  
+`Function` 程式會將值傳回給呼叫程式碼。 您可以將其名稱和引數包含在指派語句的右邊或運算式中，藉以呼叫它。  
   
-### <a name="to-call-a-function-procedure-within-an-expression"></a>To call a Function procedure within an expression  
+### <a name="to-call-a-function-procedure-within-an-expression"></a>若要在運算式內呼叫函式程式  
   
-1. Use the `Function` procedure name the same way you would use a variable. You can use a `Function` procedure call anywhere you can use a variable or constant in an expression.  
+1. 使用 `Function` 程式名稱，方法與使用變數的方式相同。 您可以在任何可在運算式中使用變數或常數的位置，使用 `Function` 程序呼叫。  
   
-2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
+2. 請在程式名稱後面加上括弧，以括住引數清單。 如果沒有引數，您可以選擇性地省略括弧。 不過，使用括弧可讓您的程式碼更容易閱讀。  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Function` procedure defines the corresponding parameters.  
+3. 將引數放在括弧內的引數清單中，並以逗號分隔。 請務必以 `Function` 程式定義對應參數的相同順序來提供引數。  
   
-     Alternatively, you can pass one or more arguments by name. For more information, see [Passing Arguments by Position and by Name](./passing-arguments-by-position-and-by-name.md).  
+     或者，您可以依名稱傳遞一或多個引數。 如需詳細資訊，請參閱[依位置和名稱傳遞引數](./passing-arguments-by-position-and-by-name.md)。  
   
-4. The value returned from the procedure participates in the expression just as the value of a variable or constant would.  
+4. 從程式傳回的值會參與運算式，就如同變數或常數的值一樣。  
   
-### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>To call a Function procedure in an assignment statement  
+### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>若要在指派語句中呼叫函數程式  
   
-1. Use the `Function` procedure name following the equal (`=`) sign in the assignment statement.  
+1. 在指派語句中的等號（`=`）後面，使用 `Function` 程式名稱。  
   
-2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
+2. 請在程式名稱後面加上括弧，以括住引數清單。 如果沒有引數，您可以選擇性地省略括弧。 不過，使用括弧可讓您的程式碼更容易閱讀。  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Function` procedure defines the corresponding parameters, unless you are passing them by name.  
+3. 將引數放在括弧內的引數清單中，並以逗號分隔。 請務必以 `Function` 程式定義對應參數的相同順序來提供引數，除非您依名稱傳遞它們。  
   
-4. The value returned from the procedure is stored in the variable or property on the left side of the assignment statement.  
+4. 從程式傳回的值會儲存在指派語句左側的變數或屬性中。  
   
 ## <a name="example"></a>範例  
- The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> to retrieve the value of an operating system environment variable. The first line calls `Environ` within an expression, and the second line calls it in an assignment statement. `Environ` takes the variable name as its sole argument. It returns the variable's value to the calling code.  
+ 下列範例會呼叫 Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> 來取出作業系統環境變數的值。 第一行會呼叫運算式中的 `Environ`，而第二行則會在指派語句中呼叫它。 `Environ` 會將變數名稱當做其唯一引數。 它會將變數的值傳回給呼叫程式碼。  
   
  [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   

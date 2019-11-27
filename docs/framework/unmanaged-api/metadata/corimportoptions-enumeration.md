@@ -46,20 +46,20 @@ typedef enum CorImportOptions {
   
 |成員|描述|  
 |------------|-----------------|  
-|`MDImportOptionDefault`|Indicates the default behavior, which is to skip deleted records.|  
-|`MDImportOptionAll`|Indicates that all metadata should be enumerated.|  
-|`MDImportOptionAllTypeDefs`|Indicates that all TypeDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllMethodDefs`|Indicates that all MethodDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllFieldDefs`|Indicates that all FieldDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllProperties`|Indicates that all PropertyDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllEvents`|Indicates that all EventDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllCustomAttributes`|Indicates that all custom attributes, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllExportedTypes`|Indicates that all exported types, including deleted ones, should be enumerated.|  
+|`MDImportOptionDefault`|指出預設行為，也就是略過已刪除的記錄。|  
+|`MDImportOptionAll`|表示應該列舉所有中繼資料。|  
+|`MDImportOptionAllTypeDefs`|表示應該列舉所有的 Typedef （包括已刪除的）。|  
+|`MDImportOptionAllMethodDefs`|表示應該列舉所有 MethodDefs （包括已刪除的）。|  
+|`MDImportOptionAllFieldDefs`|表示應該列舉所有 FieldDefs （包括已刪除的）。|  
+|`MDImportOptionAllProperties`|表示應該列舉所有 PropertyDefs （包括已刪除的）。|  
+|`MDImportOptionAllEvents`|表示應該列舉所有 EventDefs （包括已刪除的）。|  
+|`MDImportOptionAllCustomAttributes`|表示應該列舉所有的自訂屬性，包括已刪除的屬性。|  
+|`MDImportOptionAllExportedTypes`|表示應該列舉所有匯出的類型，包括已刪除的型別。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

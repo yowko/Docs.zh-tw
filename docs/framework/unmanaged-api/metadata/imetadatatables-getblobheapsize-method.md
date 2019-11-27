@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442034"
 ---
 # <a name="imetadatatablesgetblobheapsize-method"></a>IMetaDataTables::GetBlobHeapSize 方法
-Gets the size, in bytes, of the binary large object (BLOB) heap.  
+取得二進位大型物件（BLOB）堆積的大小（以位元組為單位）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,14 +35,14 @@ HRESULT GetBlobHeapSize (
   
 ## <a name="parameters"></a>參數  
  `pcbBlobs`  
- [out] A pointer to the size, in bytes, of the BLOB heap.  
+ 脫銷BLOB 堆積大小的指標（以位元組為單位）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

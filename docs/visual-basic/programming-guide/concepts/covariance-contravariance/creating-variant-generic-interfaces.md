@@ -9,19 +9,19 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347061"
 ---
-# <a name="creating-variant-generic-interfaces-visual-basic"></a>Creating Variant Generic Interfaces (Visual Basic)
+# <a name="creating-variant-generic-interfaces-visual-basic"></a>建立 Variant 泛型介面（Visual Basic）
 
 您可以在介面中將泛型型別參數宣告為 Covariant 或 Contravariant。 「共變數」允許介面方法具有比泛型型別參數衍生程度更大的傳回型別。 「反變數」允許介面具有比泛型參數所指定引數型別衍生程度更小的引數類型。 具有 Covariant 或 Contravariant 泛型型別參數的泛型介面稱為「變異」。
 
 > [!NOTE]
-> .NET Framework 4 針對數個現有泛型介面推出了差異支援。 For the list of the variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
+> .NET Framework 4 針對數個現有泛型介面推出了差異支援。 如需 .NET Framework 中的 variant 介面清單，請參閱[泛型介面中的變異數（Visual Basic）](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。
 
 ## <a name="declaring-variant-generic-interfaces"></a>宣告 Variant 泛型介面
 
 您可以使用泛型型別參數的 `in` 和 `out` 關鍵字宣告 Variant 泛型介面。
 
 > [!IMPORTANT]
-> `ByRef` parameters in Visual Basic cannot be variant. 實值型別也不支援變異數。
+> Visual Basic 中的 `ByRef` 參數不可以是 variant。 實值型別也不支援變異數。
 
 您可以使用 `out` 關鍵字將泛型型別參數宣告為 Covariant 。 Covariant 類型必須滿足下列條件︰
 
@@ -35,7 +35,7 @@ ms.locfileid: "74347061"
     End Interface
     ```
 
-    這個規則只有一個例外。 如果您以 Contravariant 泛型委派作為方法參數，則可將類型用作委派的泛型型別參數。 以下範例的 `R` 類型說明這種情況： For more information, see [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+    這個規則只有一個例外。 如果您以 Contravariant 泛型委派作為方法參數，則可將類型用作委派的泛型型別參數。 以下範例的 `R` 類型說明這種情況： 如需詳細資訊，請參閱[委派中的變異數（Visual Basic）](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)和[針對 Func 與 Action 泛型委派使用變異數（Visual Basic）](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。
 
     ```vb
     Interface ICovariant(Of Out R)
@@ -75,7 +75,7 @@ Interface IVariant(Of Out R, In A)
 End Interface
 ```
 
-In Visual Basic, you can't declare events in variant interfaces without specifying the delegate type. Also, a variant interface can't have nested classes, enums, or structures, but it can have nested interfaces. 下列程式碼說明此情形。
+在 Visual Basic 中，您不能在 variant 介面中宣告事件，而不需要指定委派類型。 此外，變體介面不能有嵌套的類別、列舉或結構，但它可以有嵌套介面。 下列程式碼說明此情形。
 
 ```vb
 Interface ICovariant(Of Out R)
@@ -149,7 +149,7 @@ Interface IExtCovariant(Of Out T)
 End Interface
 ```
 
-In the `Invariant(Of T)` interface, the generic type parameter `T` is invariant, whereas in `IExtCovariant (Of Out T)`the type parameter is covariant, although both interfaces extend the same interface. 相同的規則也套用至 Contravariant 泛型型別參數。
+在 `Invariant(Of T)` 介面中，泛型型別參數 `T` 是不變的，而在 `IExtCovariant (Of Out T)`型別參數是協變數的，雖然這兩個介面都會擴充相同的介面。 相同的規則也套用至 Contravariant 泛型型別參數。
 
 您可以建立介面，以便擴充 `T` 泛型型別參數為 Covariant 的介面，以及如果在擴充介面中， `T` 泛型型別參數為非變異的情況下，擴充其為 Contravariant 的介面。 下列程式碼範例說明此情形。
 
@@ -184,7 +184,7 @@ End Interface
 例如，如果您在一個類別中，明確地實作相同 Variant 泛型介面與不同泛型型別參數，它可能會造成語意模糊。 在此情況下，編譯器不會產生錯誤，但未指定在執行階段將選擇哪個介面實作。 這可能會導致您的程式碼中有細微錯誤。 請參考下列程式碼範例。
 
 > [!NOTE]
-> With `Option Strict Off`, Visual Basic generates a compiler warning when there is an ambiguous interface implementation. With `Option Strict On`, Visual Basic generates a compiler error.
+> 使用 `Option Strict Off`時，Visual Basic 會在有不明確的介面執行時產生編譯器警告。 有了 `Option Strict On`，Visual Basic 就會產生編譯器錯誤。
 
 ```vb
 ' Simple class hierarchy.

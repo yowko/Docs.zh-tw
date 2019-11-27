@@ -17,7 +17,7 @@ ms.locfileid: "74350166"
 ---
 # <a name="call-statement-visual-basic"></a>Call 陳述式 (Visual Basic)
 
-Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedure.  
+將控制權轉移至 `Function`、`Sub`或動態連結程式庫（DLL）程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,21 +29,21 @@ Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedur
 
 |||
 |---|---|
-|`procedureName`|必要項。 Name of the procedure to call.|
-|`argumentList`|選擇項。 List of variables or expressions representing arguments that are passed to the procedure when it is called. Multiple arguments are separated by commas. If you include `argumentList`, you must enclose it in parentheses.|
+|`procedureName`|必要。 要呼叫的程式名稱。|
+|`argumentList`|選擇性。 變數或運算式的清單，代表呼叫時傳遞給程式的引數。 以逗號分隔多個引數。 如果您包含 `argumentList`，就必須將它括在括弧中。|
 |||
   
 ## <a name="remarks"></a>備註
 
- You can use the `Call` keyword when you call a procedure. For most procedure calls, you aren’t required to use this  keyword.
+ 當您呼叫程式時，可以使用 `Call` 關鍵字。 對於大部分的程序呼叫，您不需要使用此關鍵字。
 
- You typically use the `Call` keyword when the called expression doesn’t start with an identifier. Use of the `Call` keyword for other uses isn't recommended.
+ 當被呼叫的運算式不是以識別碼開頭時，您通常會使用 `Call` 關鍵字。 不建議針對其他用途使用 `Call` 關鍵字。
 
- If the procedure returns a value, the `Call` statement discards it.
+ 如果程式傳回值，`Call` 語句會將它捨棄。
 
 ## <a name="example"></a>範例
 
- The following code shows two examples where the `Call` keyword is necessary to call a procedure. In both examples, the called expression doesn't start with an identifier.
+ 下列程式碼顯示兩個範例，其中需要 `Call` 關鍵字來呼叫程式。 在這兩個範例中，被呼叫的運算式不是以識別碼開頭。
 
  [!code-vb[VbVbalrStatements#97](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#97)]  
   

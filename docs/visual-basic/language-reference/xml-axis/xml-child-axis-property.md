@@ -30,24 +30,24 @@ object.<child>
   
 |詞彙|定義|  
 |---|---|  
-|`object`|必要項。 <xref:System.Xml.Linq.XElement> 物件、<xref:System.Xml.Linq.XDocument> 物件、<xref:System.Xml.Linq.XElement> 物件集合或 <xref:System.Xml.Linq.XDocument> 物件集合。|  
-|.<|必要項。 代表子軸屬性的開頭。|  
-|`child`|必要項。 Name of the child nodes to access, of the form [`prefix:]name`.<br /><br /> -   `Prefix` - Optional. 子節點的 XML 命名空間前置詞。 必須是以 `Imports` 陳述式定義的全域 XML 命名空間。<br />-   `Name` - Required. 本機子節點名稱。 See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
-|>|必要項。 代表子軸屬性的結尾。|  
+|`object`|必要。 <xref:System.Xml.Linq.XElement> 物件、<xref:System.Xml.Linq.XDocument> 物件、<xref:System.Xml.Linq.XElement> 物件集合或 <xref:System.Xml.Linq.XDocument> 物件集合。|  
+|. <|必要。 代表子軸屬性的開頭。|  
+|`child`|必要。 要存取的子節點名稱，格式為 [`prefix:]name`。<br /><br /> -   `Prefix`-選擇性。 子節點的 XML 命名空間前置詞。 必須是以 `Imports` 陳述式定義的全域 XML 命名空間。<br />-   `Name`-必要。 本機子節點名稱。 請參閱宣告[的 XML 元素和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
+|>|必要。 代表子軸屬性的結尾。|  
   
 ## <a name="return-value"></a>傳回值  
  <xref:System.Xml.Linq.XElement> 物件的集合。  
   
 ## <a name="remarks"></a>備註  
- 您可以使用 XML 子軸屬性，從 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument> 物件，或從 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument> 物件集合依據名稱存取子節點。 使用 XML `Value` 屬性來存取傳回的集合中第一個子節點的值。 For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ 您可以使用 XML 子軸屬性，從 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument> 物件，或從 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument> 物件集合依據名稱存取子節點。 使用 XML `Value` 屬性來存取傳回的集合中第一個子節點的值。 如需詳細資訊，請參閱[XML Value 屬性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。  
   
- The Visual Basic compiler converts child axis properties to calls to the <xref:System.Xml.Linq.XContainer.Elements%2A> method.  
+ Visual Basic 編譯器會將子軸屬性轉換為 <xref:System.Xml.Linq.XContainer.Elements%2A> 方法的呼叫。  
   
 ## <a name="xml-namespaces"></a>XML 命名空間  
- 子軸屬性中的名稱只可以使用以 `Imports` 陳述式全域宣告的 XML 命名空間前置詞。 它不能使用在 XML 項目常值內本機宣告的 XML 命名空間前置詞。 For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
+ 子軸屬性中的名稱只可以使用以 `Imports` 陳述式全域宣告的 XML 命名空間前置詞。 它不能使用在 XML 項目常值內本機宣告的 XML 命名空間前置詞。 如需詳細資訊，請參閱[Imports 語句（XML 命名空間）](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何從 `contact` 物件存取名為 `phone` 的子節點。  
+ 下列範例示範如何從 `phone` 物件存取名為 `contact` 的子節點。  
   
  [!code-vb[VbXMLSamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#17)]  
   
@@ -56,7 +56,7 @@ object.<child>
  `Home Phone = 206-555-0144`  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何從 `contacts` 物件的 `contact` 子軸屬性傳回的集合存取名為 `phone` 的子節點。  
+ 下列範例示範如何從 `phone` 物件的 `contact` 子軸屬性傳回的集合存取名為 `contacts` 的子節點。  
   
  [!code-vb[VbXMLSamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#18)]  
   

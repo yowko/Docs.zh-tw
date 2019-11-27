@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331487"
 ---
 # <a name="concatenation-operators-visual-basic"></a>串連運算子 (Visual Basic)
-The following are the concatenation operators defined in Visual Basic.  
+以下是在 Visual Basic 中定義的串連運算子。  
   
  [& 運算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
   
@@ -24,4 +24,4 @@ The following are the concatenation operators defined in Visual Basic.
 - <xref:System.Text>
 - <xref:System.Text.StringBuilder>
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Concatenation Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic 中的串連運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

@@ -20,7 +20,7 @@ ms.locfileid: "74343719"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum 陳述式 (Visual Basic)
 
-Declares an enumeration and defines the values of its members.
+宣告列舉，並定義其成員的值。
 
 ## <a name="syntax"></a>語法
 
@@ -35,13 +35,13 @@ End Enum
 
 - `attributelist`
 
-  選擇項。 List of attributes that apply to this enumeration. You must enclose the [attribute list](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").
+  選擇性。 套用至此列舉的屬性清單。 您必須將[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)放在角括弧中（「`<`」和「`>`」）。
 
-  The <xref:System.FlagsAttribute> attribute indicates that the value of an instance of the enumeration can include multiple enumeration members, and that each member represents a bit field in the enumeration value.
+  <xref:System.FlagsAttribute> 屬性指出列舉實例的值可以包含多個列舉成員，而且每個成員都代表列舉值中的位欄位。
 
 - `accessmodifier`
 
-  選擇項。 Specifies what code can access this enumeration. 可以是下列其中一項：
+  選擇性。 指定哪些程式碼可以存取此列舉。 可以是下列其中一項：
 
   - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 
@@ -57,26 +57,26 @@ End Enum
 
 - `Shadows`
 
-  選擇項。 Specifies that this enumeration redeclares and hides an identically named programming element, or set of overloaded elements, in a base class. You can specify [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) only on the enumeration itself, not on any of its members.
+  選擇性。 指定在基類中，這個列舉會重新宣告並隱藏名稱相同的程式設計項目，或一組多載元素。 您只能在列舉本身（而不是其任何成員）上指定[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) 。
 
 - `enumerationname`
 
-  必要項。 Name of the enumeration. For information on valid names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+  必要。 列舉的名稱。 如需有效名稱的資訊，請參閱宣告的[元素名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。
 
 - `datatype`
 
-  選擇項。 Data type of the enumeration and all its members.
+  選擇性。 列舉及其所有成員的資料類型。
 
 - `memberlist`
 
-  必要項。 List of member constants being declared in this statement. Multiple members appear on individual source code lines.
+  必要。 在此語句中宣告的成員常數清單。 多個成員會出現在個別的源程式碼上。
 
-  Each `member` has the following syntax and parts: `[<attribute list>] member name [ = initializer ]`
+  每個 `member` 都具有下列語法和部分： `[<attribute list>] member name [ = initializer ]`
 
   |組件|描述|
   |---|---|
-  |`membername`|必要項。 Name of this member.|
-  |`initializer`|選擇項。 Expression that is evaluated at compile time and assigned to this member.|
+  |`membername`|必要。 這個成員的名稱。|
+  |`initializer`|選擇性。 在編譯時期評估並指派給這個成員的運算式。|
 
 - `End` `Enum`
 
@@ -84,103 +84,103 @@ End Enum
 
 ## <a name="remarks"></a>備註
 
-If you have a set of unchanging values that are logically related to each other, you can define them together in an enumeration. This provides meaningful names for the enumeration and its members, which are easier to remember than their values. You can then use the enumeration members in many places in your code.
+如果您有一組不變的值是以邏輯方式相互關聯，您可以在列舉中將它們定義在一起。 這會為列舉及其成員提供有意義的名稱，這比它們的值更容易記住。 然後您可以在程式碼中的許多地方使用列舉成員。
 
-The benefits of using enumerations include the following:
+使用列舉的優點包括下列各項：
 
-- Reduces errors caused by transposing or mistyping numbers.
+- 減少因轉置或錯誤的數位而造成的錯誤。
 
-- Makes it easy to change values in the future.
+- 可讓您在未來輕鬆變更值。
 
-- Makes code easier to read, which means it is less likely that errors will be introduced.
+- 可讓程式碼更容易閱讀，這表示不太可能會引進錯誤。
 
-- Ensures forward compatibility. If you use enumerations, your code is less likely to fail if in the future someone changes the values corresponding to the member names.
+- 確保向前相容性。 如果您使用列舉，當未來有人變更對應至成員名稱的值時，您的程式碼較不可能失敗。
 
-An enumeration has a name, an underlying data type, and a set of members. Each member represents a constant.
+列舉具有名稱、基礎資料類型和一組成員。 每個成員都代表一個常數。
 
-An enumeration declared at class, structure, module, or interface level, outside any procedure, is a *member enumeration*. It is a member of the class, structure, module, or interface that declares it.
+在任何程式之外的類別、結構、模組或介面層級宣告的列舉是*成員列舉*。 它是宣告它的類別、結構、模組或介面的成員。
 
-Member enumerations can be accessed from anywhere within their class, structure, module, or interface. Code outside a class, structure, or module must qualify a member enumeration's name with the name of that class, structure, or module. You can avoid the need to use fully qualified names by adding an [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) statement to the source file.
+成員列舉可以從其類別、結構、模組或介面中的任何位置存取。 類別、結構或模組之外的程式碼必須使用該類別、結構或模組的名稱來限定成員列舉的名稱。 您可以藉由將[Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)語句加入至原始程式檔，來避免需要使用完整名稱。
 
-An enumeration declared at namespace level, outside any class, structure, module, or interface, is a member of the namespace in which it appears.
+在命名空間層級（在任何類別、結構、模組或介面外）宣告的列舉，是其出現所在之命名空間的成員。
 
-The *declaration context* for an enumeration must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure. 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。
+列舉的宣告*內容*必須是原始程式檔、命名空間、類別、結構、模組或介面，而且不能是程式。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。
 
-You can apply attributes to an enumeration as a whole, but not to its members individually. An attribute contributes information to the assembly's metadata.
+您可以將屬性套用至整個列舉，但不能個別套用到其成員。 屬性會將資訊提供給元件的中繼資料。
 
 ## <a name="data-type"></a>資料類型
 
-The `Enum` statement can declare the data type of an enumeration. Each member takes the enumeration's data type. You can specify `Byte`, `Integer`, `Long`, `SByte`, `Short`, `UInteger`, `ULong`, or `UShort`.
+`Enum` 語句可以宣告列舉的資料類型。 每個成員都會採用列舉的資料類型。 您可以指定 `Byte`、`Integer`、`Long`、`SByte`、`Short`、`UInteger`、`ULong`或 `UShort`。
 
-If you do not specify `datatype` for the enumeration, each member takes the data type of its `initializer`. If you specify both `datatype` and `initializer`, the data type of `initializer` must be convertible to `datatype`. If neither `datatype` nor `initializer` is present, the data type defaults to `Integer`.
+如果您未指定列舉的 `datatype`，每個成員都會接受其 `initializer`的資料類型。 如果您同時指定 `datatype` 和 `initializer`，`initializer` 的資料類型必須可轉換為 `datatype`。 如果 `datatype` 或 `initializer` 都不存在，則資料類型會預設為 [`Integer`]。
 
-## <a name="initializing-members"></a>Initializing Members
+## <a name="initializing-members"></a>初始化成員
 
-The `Enum` statement can initialize the contents of selected members in `memberlist`. You use `initializer` to supply an expression to be assigned to the member.
+`Enum` 語句可以初始化 `memberlist`中所選取成員的內容。 您可以使用 `initializer` 來提供要指派給成員的運算式。
 
-If you do not specify `initializer` for a member, Visual Basic initializes it either to zero (if it is the first `member` in `memberlist`), or to a value greater by one than that of the immediately preceding `member`.
+如果您未指定成員的 `initializer`，Visual Basic 會將它初始化為零（如果它是 `memberlist`中的第一個 `member`），或設為大於前一個 `member`的值。
 
-The expression supplied in each `initializer` can be any combination of literals, other constants that are already defined, and enumeration members that are already defined, including a previous member of this enumeration. You can use arithmetic and logical operators to combine such elements.
+每個 `initializer` 中提供的運算式可以是常值的任何組合、其他已定義的常數，以及已定義的列舉成員，包括此列舉的上一個成員。 您可以使用算術和邏輯運算子來結合這類元素。
 
-You cannot use variables or functions in `initializer`. However, you can use conversion keywords such as `CByte` and `CShort`. You can also use `AscW` if you call it with a constant `String` or `Char` argument, since that can be evaluated at compile time.
+您不能在 `initializer`中使用變數或函數。 不過，您可以使用轉換關鍵字，例如 `CByte` 和 `CShort`。 如果您以常數 `String` 或 `Char` 引數呼叫它，您也可以使用 `AscW`，因為這可以在編譯時期進行評估。
 
-Enumerations cannot have floating-point values. If a member is assigned a floating-point value and `Option Strict` is set to on, a compiler error occurs. If `Option Strict` is off, the value is automatically converted to the `Enum` type.
+列舉不能有浮點值。 如果將浮點值指派給成員，且 `Option Strict` 設為 on，就會發生編譯器錯誤。 如果 `Option Strict` 為 off，則此值會自動轉換成 `Enum` 類型。
 
-If the value of a member exceeds the allowable range for the underlying data type, or if you initialize any member to the maximum value allowed by the underlying data type, the compiler reports an error.
+如果成員的值超過基礎資料類型允許的範圍，或是您將任何成員初始化為基礎資料類型所允許的最大值，則編譯器會報告錯誤。
 
 ## <a name="modifiers"></a>修飾詞
 
-Class, structure, module, and interface member enumerations default to public access. You can adjust their access levels with the access modifiers. Namespace member enumerations default to friend access. You can adjust their access levels to public, but not to private or protected. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+類別、結構、模組和介面成員列舉預設為公用存取。 您可以使用存取修飾詞來調整其存取層級。 命名空間成員列舉預設為 friend 存取。 您可以將其存取層級調整為 [公用]，而不是 [私人] 或 [受保護]。 如需詳細資訊，請參閱[Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
 
-All enumeration members have public access, and you cannot use any access modifiers on them. However, if the enumeration itself has a more restricted access level, the specified enumeration access level takes precedence.
+所有列舉成員都具有公用存取權，而且您不能在其上使用任何存取修飾詞。 不過，如果列舉本身具有更受限制的存取層級，則會優先使用指定的列舉存取層級。
 
-By default, all enumerations are types and their fields are constants. Therefore the `Shared`, `Static`, and `ReadOnly` keywords cannot be used when declaring an enumeration or its members.
+根據預設，所有列舉都是類型，而其欄位是常數。 因此，在宣告列舉或其成員時，不能使用 `Shared`、`Static`和 `ReadOnly` 關鍵字。
 
-## <a name="assigning-multiple-values"></a>Assigning Multiple Values
+## <a name="assigning-multiple-values"></a>指派多個值
 
-Enumerations typically represent mutually exclusive values. By including the <xref:System.FlagsAttribute> attribute in the `Enum` declaration, you can instead assign multiple values to an instance of the enumeration. The <xref:System.FlagsAttribute> attribute specifies that the enumeration be treated as a bit field, that is, a set of flags. These are called *bitwise* enumerations.
+列舉通常代表互斥的值。 藉由在 `Enum` 宣告中包含 <xref:System.FlagsAttribute> 屬性，您可以改為將多個值指派給列舉的實例。 <xref:System.FlagsAttribute> 屬性指定將列舉視為位欄位，也就是一組旗標。 這些稱為*位*列舉。
 
-When you declare an enumeration by using the <xref:System.FlagsAttribute> attribute, we recommend that you use powers of 2, that is, 1, 2, 4, 8, 16, and so on, for the values. We also recommend that "None" be the name of a member whose value is 0. For additional guidelines, see <xref:System.FlagsAttribute> and <xref:System.Enum>.
+當您使用 <xref:System.FlagsAttribute> 屬性宣告列舉時，我們建議您使用2的乘冪（也就是1、2、4、8、16等等）來取得值。 我們也建議 "None" 是值為0的成員名稱。 如需其他指導方針，請參閱 <xref:System.FlagsAttribute> 和 <xref:System.Enum>。
 
 ## <a name="example"></a>範例
 
-下列範例顯示如何使用 `Enum` 陳述式。 Note that the member is referred to as `EggSizeEnum.Medium`, and not as `Medium`.
+下列範例顯示如何使用 `Enum` 陳述式。 請注意，成員稱為 `EggSizeEnum.Medium`，而不是 `Medium`。
 
 [!code-vb[VbEnumsTask#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#41)]
 
 ## <a name="example"></a>範例
 
-The method in the following example is outside the `Egg` class. Therefore, `EggSizeEnum` is fully qualified as `Egg.EggSizeEnum`.
+下列範例中的方法是在 `Egg` 類別之外。 因此，`EggSizeEnum` 完全符合 `Egg.EggSizeEnum`。
 
 [!code-vb[VbEnumsTask#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#42)]
 
 ## <a name="example"></a>範例
 
-The following example uses the `Enum` statement to define a related set of named constant values. In this case, the values are colors you might choose to design data entry forms for a database.
+下列範例會使用 `Enum` 語句來定義一組相關的已命名常數值。 在此情況下，這些值是您可能選擇用來設計資料庫之資料輸入表單的色彩。
 
 [!code-vb[VbEnumsTask#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#30)]
 
 ## <a name="example"></a>範例
 
-The following example shows values that include both positive and negative numbers.
+下列範例會顯示包含正數和負數的值。
 
 [!code-vb[VbEnumsTask#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#31)]
 
 ## <a name="example"></a>範例
 
-In the following example, an `As` clause is used to specify the `datatype` of an enumeration.
+在下列範例中，會使用 `As` 子句來指定列舉的 `datatype`。
 
 [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]
 
 ## <a name="example"></a>範例
 
-The following example shows how to use a bitwise enumeration. Multiple values can be assigned to an instance of a bitwise enumeration. The `Enum` declaration includes the <xref:System.FlagsAttribute> attribute, which indicates that the enumeration can be treated as a set of flags.
+下列範例顯示如何使用位列舉。 可以將多個值指派給位列舉的實例。 `Enum` 宣告包含 <xref:System.FlagsAttribute> 屬性，這表示列舉可視為一組旗標。
 
 [!code-vb[VbEnumsTask#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#61)]
 
 ## <a name="example"></a>範例
 
-The following example iterates through an enumeration. It uses the <xref:System.Enum.GetNames%2A> method to retrieve an array of member names from the enumeration, and <xref:System.Enum.GetValues%2A> to retrieve an array of member values.
+下列範例會逐一查看列舉。 它會使用 <xref:System.Enum.GetNames%2A> 方法來抓取列舉中的成員名稱陣列，並 <xref:System.Enum.GetValues%2A> 來抓取成員值的陣列。
 
 [!code-vb[VbEnumsTask#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#51)]
 

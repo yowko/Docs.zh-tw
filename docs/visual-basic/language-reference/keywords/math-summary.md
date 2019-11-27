@@ -15,16 +15,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348498"
 ---
 # <a name="math-summary-visual-basic"></a>數學摘要 (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic 語言關鍵字和執行時間程式庫成員是依用途和使用來組織。  
   
 |動作|語言項目|  
 |------------|----------------------|  
-|Derive trigonometric functions.|<xref:System.Math.Atan%2A>、<xref:System.Math.Cos%2A>、<xref:System.Math.Sin%2A><xref:System.Math.Tan%2A>|  
-|General calculations.|<xref:System.Math.Exp%2A>、<xref:System.Math.Log%2A>、<xref:System.Math.Sqrt%2A>|  
-|Generate random numbers.|<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>、 <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|  
-|Get absolute value.|<xref:System.Math.Abs%2A>|  
-|Get the sign of an expression.|<xref:System.Math.Sign%2A>|  
-|Perform numeric conversions.|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>、 <xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
+|衍生三角函數。|<xref:System.Math.Atan%2A>, <xref:System.Math.Cos%2A>, <xref:System.Math.Sin%2A>, <xref:System.Math.Tan%2A>|  
+|一般計算。|<xref:System.Math.Exp%2A>, <xref:System.Math.Log%2A>, <xref:System.Math.Sqrt%2A>|  
+|產生亂數字。|<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>, <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|  
+|取得絕對值。|<xref:System.Math.Abs%2A>|  
+|取得運算式的正負號。|<xref:System.Math.Sign%2A>|  
+|執行數值轉換。|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
   
 ## <a name="see-also"></a>請參閱
 

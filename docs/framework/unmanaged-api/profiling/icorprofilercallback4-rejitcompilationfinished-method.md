@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439314"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>ICorProfilerCallback4::ReJITCompilationFinished 方法
-Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.  
+通知分析工具，及時（JIT）編譯器已完成重新編譯函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,18 +36,18 @@ HRESULT ReJITCompilationFinished(
   
 ## <a name="parameters"></a>參數  
  `functionId`  
- [in] The ID of the function that was recompiled.  
+ 在重新編譯之函式的識別碼。  
   
  `rejitId`  
  [in] 經過 JIT 重新編譯的函式識別。  
   
  `hrStatus`  
- [in] A value that indicates whether the JIT recompilation was successful.  
+ 在值，指出 JIT 重新編譯是否成功。  
   
  `fIsSafeToBlock`  
- [in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.  
+ [in] `true`，表示封鎖可能會導致執行時間等候呼叫執行緒從這個回呼傳回;`false`，表示封鎖作業不會影響執行時間的作業。  
   
- A value of `true` does not harm the runtime, but can affect the profiling results.  
+ `true` 的值不會傷害執行時間，但可能會影響分析結果。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

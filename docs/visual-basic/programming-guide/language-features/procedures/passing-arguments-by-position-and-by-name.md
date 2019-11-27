@@ -31,57 +31,57 @@ ms.locfileid: "74352612"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>依位置和名稱傳遞引數 (Visual Basic)
 
-When you call a `Sub` or `Function` procedure, you can pass arguments *by position* — in the order in which they appear in the procedure's definition — or you can pass them *by name*, without regard to position.
+當您呼叫 `Sub` 或 `Function` 程式時，您可以*依位置*傳遞引數（以它們出現在程式定義中的順序），也可以*依名稱*傳遞它們，而不考慮位置。
 
-When you pass an argument by name, you specify the argument's declared name followed by a colon and an equal sign (`:=`), followed by the argument value. You can supply named arguments in any order.
+當您依名稱傳遞引數時，您可以指定引數的宣告名稱，後面接著冒號和等號（`:=`），後面接著引數值。 您可以依任何順序提供具名引數。
 
-For example, the following `Sub` procedure takes three arguments:
+例如，下列 `Sub` 程式會採用三個引數：
 
 [!code-vb[SampleProcedure](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#1)]
 
-When you call this procedure, you can supply the arguments by position, by name, or by using a mixture of both.
+當您呼叫此程式時，您可以依位置、名稱或混合使用兩者來提供引數。
 
-## <a name="passing-arguments-by-position"></a>Passing Arguments by Position
+## <a name="passing-arguments-by-position"></a>依位置傳遞引數
 
-You can call the `Display` method with its arguments passed by position and delimited by commas, as shown in the following example:
+您可以呼叫 `Display` 方法，其其引數是由位置傳遞，並以逗號分隔，如下列範例所示：
 
 [!code-vb[ByPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#2)]
 
-If you omit an optional argument in a positional argument list, you must hold its place with a comma. The following example calls the `Display` method without the `age` argument:
+如果您省略位置引數清單中的選擇性引數，則必須使用逗號來保存其位置。 下列範例會呼叫不含 `age` 引數的 `Display` 方法：
 
 [!code-vb[ByPositionWithOptionalArgument](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#3)]
 
-## <a name="passing-arguments-by-name"></a>Passing Arguments by Name
+## <a name="passing-arguments-by-name"></a>依名稱傳遞引數
 
-Alternatively, you can call `Display` with the arguments passed by name, also delimited by commas, as shown in the following example:
+或者，您可以使用以名稱傳遞的引數（也以逗號分隔）來呼叫 `Display`，如下列範例所示：
 
 [!code-vb[ByName](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#4)]
 
-Passing arguments by name in this way is especially useful when you call a procedure that has more than one optional argument. If you supply arguments by name, you do not have to use consecutive commas to denote missing positional arguments. Passing arguments by name also makes it easier to keep track of which arguments you are passing and which ones you are omitting.
+當您呼叫具有多個選擇性引數的程式時，以這種方式依名稱傳遞引數特別有用。 如果您依名稱提供引數，則不需要使用連續的逗號來表示遺漏的位置引數。 以名稱傳遞引數也能讓您更輕鬆地追蹤您要傳遞的引數，以及您要省略哪一個。
 
-## <a name="mixing-arguments-by-position-and-by-name"></a>Mixing Arguments by Position and by Name
+## <a name="mixing-arguments-by-position-and-by-name"></a>依位置和名稱來混合引數
 
-You can supply arguments both by position and by name in a single procedure call, as shown in the following example:
+您可以在單一程序呼叫中，依位置和名稱提供引數，如下列範例所示：
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#5)]
 
-In the preceding example, no extra comma is necessary to hold the place of the omitted `age` argument, since `birth` is passed by name.
+在上述範例中，不需要額外的逗號來保存省略之 `age` 引數的位置，因為 `birth` 是以名稱傳遞。
 
-In versions of Visual Basic before 15.5, when you supply arguments by a mixture of position and name, the positional arguments must all come first. Once you supply an argument by name, any remaining arguments must all be passed by name.  For example, the following call to the `Display` method displays compiler error [BC30241: Named argument expected](../../../misc/bc30241.md).
+在15.5 之前的 Visual Basic 版本中，當您以位置和名稱的混合來提供引數時，位置引數必須全部排在最前面。 當您依名稱提供引數之後，所有剩餘的引數都必須以名稱傳遞。  例如，下列對 `Display` 方法的呼叫會顯示編譯器錯誤[BC30241：預期的具名引數](../../../misc/bc30241.md)。
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)]
 
-Starting with Visual Basic 15.5, positional arguments can follow named arguments if the ending positional arguments are in the correct position. If compiled under Visual Basic 15.5, the previous call to the `Display` method compiles successfully and no longer generates compiler error [BC30241](../../../misc/bc30241.md).
+從 Visual Basic 15.5 開始，如果結束位置引數位於正確的位置，位置引數就可以跟隨具名引數。 如果在 Visual Basic 15.5 下編譯，則先前對 `Display` 方法的呼叫會編譯成功，且不再產生編譯器錯誤[BC30241](../../../misc/bc30241.md)。
 
-This ability to mix and match named and positional arguments in any order is particularly useful when you want to use a named argument to make your code more readable. For example, the following `Person` class constructor requires two arguments of type `Person`, both of which can be `Nothing`.
+當您想要使用具名引數，讓程式碼更容易閱讀時，這項混合和比對名稱和位置引數的功能特別有用。 例如，下列 `Person` 類別的函式需要 `Person`類型的兩個引數，兩者都可以 `Nothing`。
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#7)]
 
-Using mixed named and positional arguments helps to make the intent of the code clear when the value of the `father` and `mother` arguments is `Nothing`:
+當 `father` 和 `mother` 引數的值 `Nothing`時，使用混合名稱和位置引數有助於讓程式碼的意圖清楚明瞭：
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#8)]
 
-To follow positional arguments with named arguments, you must add the following element to your Visual Basic project (\*.vbproj) file:
+若要遵循具有具名引數的位置引數，您必須將下列專案加入至您的 Visual Basic 專案（\*. vbproj）檔案：
 
 ```xml
 <PropertyGroup>
@@ -89,13 +89,13 @@ To follow positional arguments with named arguments, you must add the following 
 </PropertyGroup>
 ```
 
-For more information see [setting the Visual Basic language version](../../../language-reference/configure-language-version.md).
+如需詳細資訊，請參閱[設定 Visual Basic 語言版本](../../../language-reference/configure-language-version.md)。
 
-## <a name="restrictions-on-supplying-arguments-by-name"></a>Restrictions on Supplying Arguments by Name
+## <a name="restrictions-on-supplying-arguments-by-name"></a>依名稱提供引數的限制
 
-You cannot pass arguments by name to avoid entering required arguments. You can omit only the optional arguments.
+您無法依名稱傳遞引數，以避免輸入必要的引數。 您只能省略選擇性的引數。
 
-You cannot pass a parameter array by name. This is because when you call the procedure, you supply an indefinite number of comma-separated arguments for the parameter array, and the compiler cannot associate more than one argument with a single name.
+您無法依名稱傳遞參數陣列。 這是因為當您呼叫程式時，會為參數陣列提供不限數目的逗點分隔引數，而且編譯器無法將多個引數與單一名稱建立關聯。
 
 ## <a name="see-also"></a>請參閱
 

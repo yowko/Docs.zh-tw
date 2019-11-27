@@ -16,26 +16,26 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341382"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>可修改引數和不可修改引數之間的差異 (Visual Basic)
-When you call a procedure, you typically pass one or more arguments to it. Each argument corresponds to an underlying programming element. Both the underlying elements and the arguments themselves can be either modifiable or nonmodifiable.  
+當您呼叫程式時，通常會傳遞一或多個引數給它。 每個引數都會對應至基礎程式設計項目。 基礎元素和引數本身都可以是可修改或不可修改的。  
   
-## <a name="modifiable-and-nonmodifiable-elements"></a>Modifiable and Nonmodifiable Elements  
- A programming element can be either a *modifiable element*, which can have its value changed, or a *nonmodifiable element*, which has a fixed value once it has been created.  
+## <a name="modifiable-and-nonmodifiable-elements"></a>可修改和不可修改的元素  
+ 程式設計專案可以是可*修改的元素*，其值可能會變更，或無法修改的*元素*，其在建立後已有固定值。  
   
- The following table lists modifiable and nonmodifiable programming elements.  
+ 下表列出可修改和不可修改的程式設計項目。  
   
-|Modifiable elements|Nonmodifiable elements|  
+|可修改的元素|不可修改元素|  
 |-------------------------|----------------------------|  
-|Local variables (declared inside procedures), including object variables, except for read-only|Read-only variables, fields, and properties|  
-|Fields (member variables of modules, classes, and structures), except for read-only|Constants and literals|  
-|Properties, except for read-only|Enumeration members|  
-|Array elements|Expressions (even if their elements are modifiable)|  
+|本機變數（在程式內宣告），包括物件變數（唯讀除外）|唯讀變數、欄位和屬性|  
+|欄位（模組、類別和結構的成員變數），除了唯讀以外|常數和常值|  
+|屬性，除了唯讀以外|列舉成員|  
+|陣列元素|運算式（即使它們的元素是可修改的）|  
   
-## <a name="modifiable-and-nonmodifiable-arguments"></a>Modifiable and Nonmodifiable Arguments  
- A *modifiable argument* is one with a modifiable underlying element. The calling code can store a new value at any time, and if you pass the argument [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the code in the procedure can also modify the underlying element in the calling code.  
+## <a name="modifiable-and-nonmodifiable-arguments"></a>可修改和不可修改的引數  
+ 可*修改的引數*是一個具有可修改的基礎元素。 呼叫程式碼可以隨時儲存新的值，而且如果您傳遞引數[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，程式中的程式碼也可以修改呼叫程式碼中的基礎元素。  
   
- A *nonmodifiable argument* either has a nonmodifiable underlying element or is passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). The procedure cannot modify the underlying element in the calling code, even if it is a modifiable element. If it is a nonmodifiable element, the calling code itself cannot modify it.  
+ 不可修改的*引數*具有無法修改的基礎元素，或已傳遞[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)。 程式無法修改呼叫程式碼中的基礎元素，即使它是可修改的元素。 如果它是無法修改的元素，則呼叫程式碼本身無法加以修改。  
   
- The called procedure might modify its local copy of a nonmodifiable argument, but that modification does not affect the underlying element in the calling code.  
+ 被呼叫的程式可能會修改其不可變引數的本機複本，但該修改不會影響呼叫程式碼中的基礎元素。  
   
 ## <a name="see-also"></a>請參閱
 

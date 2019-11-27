@@ -1,5 +1,5 @@
 ---
-title: Implementing IEnumerable
+title: 執行 IEnumerable
 ms.date: 07/31/2018
 helpviewer_keywords:
 - control flow [Visual Basic]
@@ -15,81 +15,81 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333692"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>逐步解說：在 Visual Basic 中實作 IEnumerable(Of T)
-The <xref:System.Collections.Generic.IEnumerable%601> interface is implemented by classes that can return a sequence of values one item at a time. The advantage of returning data one item at a time is that you do not have to load the complete set of data into memory to work with it. You only have to use sufficient memory to load a single item from the data. Classes that implement the `IEnumerable(T)` interface can be used with `For Each` loops or LINQ queries.  
+<xref:System.Collections.Generic.IEnumerable%601> 介面是由類別所實，可以一次傳回一個專案的一連串值。 將資料一次傳回一個專案的優點是，您不需要將一組完整的資料載入記憶體中，就可以使用它。 您只需要使用足夠的記憶體，即可從資料載入單一專案。 執行 `IEnumerable(T)` 介面的類別可以搭配 `For Each` 迴圈或 LINQ 查詢使用。  
   
- For example, consider an application that must read a large text file and return each line from the file that matches particular search criteria. The application uses a LINQ query to return lines from the file that match the specified criteria. To query the contents of the file by using a LINQ query, the application could load the contents of the file into an array or a collection. However, loading the whole file into an array or collection would consume far more memory than is required. The LINQ query could instead query the file contents by using an enumerable class, returning only values that match the search criteria. Queries that return only a few matching values would consume far less memory.  
+ 例如，假設有一個應用程式必須讀取大型文字檔，並從檔案傳回符合特定搜尋條件的每一行。 應用程式會使用 LINQ 查詢來傳回檔案中符合指定準則的行。 若要使用 LINQ 查詢來查詢檔案的內容，應用程式可以將檔案內容載入陣列或集合中。 不過，將整個檔案載入陣列或集合會耗用比所需更多的記憶體。 LINQ 查詢可以改為使用可列舉的類別來查詢檔案內容，只傳回符合搜尋條件的值。 只傳回幾個相符值的查詢會耗用較少的記憶體。  
   
- You can create a class that implements the <xref:System.Collections.Generic.IEnumerable%601> interface to expose source data as enumerable data. Your class that implements the `IEnumerable(T)` interface will require another class that implements the <xref:System.Collections.Generic.IEnumerator%601> interface to iterate through the source data. These two classes enable you to return items of data sequentially as a specific type.  
+ 您可以建立一個執行 <xref:System.Collections.Generic.IEnumerable%601> 介面的類別，將來源資料公開為可列舉的資料。 您的類別若要執行 `IEnumerable(T)` 介面，將需要另一個實作為 <xref:System.Collections.Generic.IEnumerator%601> 介面的類別，以反復查看來源資料。 這兩個類別可讓您以特定類型順序傳回資料的專案。  
   
- In this walkthrough, you will create a class that implements the `IEnumerable(Of String)` interface and a class that implements the `IEnumerator(Of String)` interface to read a text file one line at a time.  
+ 在此逐步解說中，您將建立一個類別，它會執行 `IEnumerable(Of String)` 介面，以及一個會實作為 `IEnumerator(Of String)` 介面的類別，以便一次一行讀取文字檔。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="creating-the-enumerable-class"></a>Creating the Enumerable Class  
+## <a name="creating-the-enumerable-class"></a>建立可列舉類別  
   
-**Create the enumerable class project**
+**建立可列舉的類別專案**
 
-1. In Visual Basic, on the **File** menu, point to **New** and then click **Project**.
+1. **在 Visual Basic 的 [檔案**] 功能表上，指向 [**新增**]，然後按一下 [**專案**]。
 
-1. 在 [新增專案] 對話方塊的 [專案類型] 窗格中，確認已選取 [Windows]。 在 [範本] 窗格中，選取 [類別庫]。 在 [名稱] 方塊中，輸入 `StreamReaderEnumerable` 並按一下 [確定]。 The new project is displayed.
+1. 在 [新增專案] 對話方塊的 [專案類型] 窗格中，確認已選取 [Windows]。 在 [範本] 窗格中，選取 [類別庫]。 在 [名稱] 方塊中，輸入 `StreamReaderEnumerable` 並按一下 [確定]。 隨即顯示新專案。
 
-1. In **Solution Explorer**, right-click the Class1.vb file and click **Rename**. 將檔案重新命名為 `StreamReaderEnumerable.vb`，然後按 ENTER。 重新命名檔案時，也會將類別重新命名為 `StreamReaderEnumerable`。 此類別會實作 `IEnumerable(Of String)` 介面。
+1. 在**方案總管**中，以滑鼠右鍵按一下 [Class1] 檔案，然後按一下 [**重新命名**]。 將檔案重新命名為 `StreamReaderEnumerable.vb`，然後按 ENTER。 重新命名檔案時，也會將類別重新命名為 `StreamReaderEnumerable`。 此類別會實作 `IEnumerable(Of String)` 介面。
 
-1. Right-click the StreamReaderEnumerable project, point to **Add**, and then click **New Item**. Select the **Class** template. In the **Name** box, type `StreamReaderEnumerator.vb` and click **OK**.
+1. 以滑鼠右鍵按一下 [StreamReaderEnumerable] 專案，指向 [**加入**]，然後按一下 [**新增專案**]。 選取 [**類別**] 範本。 在 [**名稱**] 方塊中，輸入 `StreamReaderEnumerator.vb`，然後按一下 **[確定]** 。
 
- The first class in this project is the enumerable class and will implement the `IEnumerable(Of String)` interface. This generic interface implements the <xref:System.Collections.IEnumerable> interface and guarantees that consumers of this class can access values typed as `String`.  
+ 這個專案中的第一個類別是可列舉的類別，並將會執行 `IEnumerable(Of String)` 介面。 這個泛型介面會執行 <xref:System.Collections.IEnumerable> 介面，並保證此類別的取用者可以存取輸入為 `String`的值。  
   
-**Add the code to implement IEnumerable**
+**新增程式碼以執行 IEnumerable**
 
-1. Open the StreamReaderEnumerable.vb file.
+1. 開啟 [StreamReaderEnumerable] 檔案。
 
-2. On the line after `Public Class StreamReaderEnumerable`, type the following and press ENTER.
+2. 在 `Public Class StreamReaderEnumerable`之後的那一行輸入下列程式碼，然後按 ENTER 鍵。
 
      [!code-vb[VbVbalrIteratorWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#1)]
 
-   Visual Basic automatically populates the class with the members that are required by the `IEnumerable(Of String)` interface.
+   Visual Basic 會使用 `IEnumerable(Of String)` 介面所需的成員，自動填入類別。
   
-3. This enumerable class will read lines from a text file one line at a time. Add the following code to the class to expose a public constructor that takes a file path as an input parameter.
+3. 這個可列舉的類別會一次從文字檔讀取一行的程式程式碼。 將下列程式碼新增至類別，以公開公用的函式，以接受檔案路徑做為輸入參數。
 
      [!code-vb[VbVbalrIteratorWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#2)]
 
-4. Your implementation of the <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method of the `IEnumerable(Of String)` interface will return a new instance of the `StreamReaderEnumerator` class. The implementation of the `GetEnumerator` method of the `IEnumerable` interface can be made `Private`, because you have to expose only members of the `IEnumerable(Of String)` interface. Replace the code that Visual Basic generated for the `GetEnumerator` methods with the following code.
+4. 您的 `IEnumerable(Of String)` 介面之 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法的執行，將會傳回 `StreamReaderEnumerator` 類別的新實例。 `IEnumerable` 介面的 `GetEnumerator` 方法可以 `Private`執行，因為您必須只公開 `IEnumerable(Of String)` 介面的成員。 使用下列程式碼取代為 `GetEnumerator` 方法所產生 Visual Basic 程式碼。
 
      [!code-vb[VbVbalrIteratorWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#3)]  
   
-**Add the code to implement IEnumerator**
+**新增程式碼以執行 IEnumerator**
 
-1. Open the StreamReaderEnumerator.vb file.
+1. 開啟 [StreamReaderEnumerator] 檔案。
 
-2. On the line after `Public Class StreamReaderEnumerator`, type the following and press ENTER.
+2. 在 `Public Class StreamReaderEnumerator`之後的那一行輸入下列程式碼，然後按 ENTER 鍵。
 
      [!code-vb[VbVbalrIteratorWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#4)]
 
-   Visual Basic automatically populates the class with the members that are required by the `IEnumerator(Of String)` interface.
+   Visual Basic 會使用 `IEnumerator(Of String)` 介面所需的成員，自動填入類別。
 
-3. The enumerator class opens the text file and performs the file I/O to read the lines from the file. Add the following code to the class to expose a public constructor that takes a file path as an input parameter and open the text file for reading.
+3. 列舉值類別會開啟文字檔，並執行檔案 i/o 以讀取檔案中的行。 將下列程式碼新增至類別，以公開公用的函式，以使用檔案路徑做為輸入參數，並開啟文字檔進行讀取。
 
      [!code-vb[VbVbalrIteratorWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#5)]
 
-4. The `Current` properties for both the `IEnumerator(Of String)` and `IEnumerator` interfaces return the current item from the text file as a `String`. The implementation of the `Current` property of the `IEnumerator` interface can be made `Private`, because you have to expose only members of the `IEnumerator(Of String)` interface. Replace the code that Visual Basic generated for the `Current` properties with the following code.
+4. `IEnumerator(Of String)` 和 `IEnumerator` 介面的 `Current` 屬性都會以 `String`的形式，從文字檔傳回目前的專案。 `IEnumerator` 介面的 `Current` 屬性的執行可以 `Private`進行，因為您必須只公開 `IEnumerator(Of String)` 介面的成員。 使用下列程式碼，將 Visual Basic 為 `Current` 屬性產生的程式碼加以取代。
 
      [!code-vb[VbVbalrIteratorWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#6)]
 
-5. The `MoveNext` method of the `IEnumerator` interface navigates to the next item in the text file and updates the value that is returned by the `Current` property. If there are no more items to read, the `MoveNext` method returns `False`; otherwise the `MoveNext` method returns `True`. 將下列程式碼加入至 `MoveNext` 方法。
+5. `IEnumerator` 介面的 `MoveNext` 方法會導覽至文字檔中的下一個專案，並更新 `Current` 屬性所傳回的值。 如果沒有其他要讀取的專案，`MoveNext` 方法會傳回 `False`;否則，`MoveNext` 方法會傳回 `True`。 將下列程式碼加入至 `MoveNext` 方法。
 
      [!code-vb[VbVbalrIteratorWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#7)]
 
-6. The `Reset` method of the `IEnumerator` interface directs the iterator to point to the start of the text file and clears the current item value. 將下列程式碼加入至 `Reset` 方法。
+6. `IEnumerator` 介面的 `Reset` 方法會指示反覆運算器指向文字檔的開頭，並清除目前的專案值。 將下列程式碼加入至 `Reset` 方法。
 
      [!code-vb[VbVbalrIteratorWalkthrough#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#8)]
 
-7. The `Dispose` method of the `IEnumerator` interface guarantees that all unmanaged resources are released before the iterator is destroyed. The file handle that is used by the `StreamReader` object is an unmanaged resource and must be closed before the iterator instance is destroyed. Replace the code that Visual Basic generated for the `Dispose` method with the following code.
+7. `IEnumerator` 介面的 `Dispose` 方法可確保在反覆運算器終結之前釋放所有非受控資源。 `StreamReader` 物件所使用的檔案控制代碼是非受控資源，必須在反覆運算器實例終結之前關閉。 使用下列程式碼取代為 `Dispose` 方法所產生的 Visual Basic 程式碼。
 
      [!code-vb[VbVbalrIteratorWalkthrough#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#9)] 
   
-## <a name="using-the-sample-iterator"></a>Using the Sample Iterator
+## <a name="using-the-sample-iterator"></a>使用範例反覆運算器
 
- You can use an enumerable class in your code together with control structures that require an object that implements `IEnumerable`, such as a `For Next` loop or a LINQ query. The following example shows the `StreamReaderEnumerable` in a LINQ query.  
+ 您可以在程式碼中使用可列舉的類別，以及需要可執行 `IEnumerable`之物件的控制項結構，例如 `For Next` 迴圈或 LINQ 查詢。 下列範例會顯示 LINQ 查詢中的 `StreamReaderEnumerable`。  
   
  [!code-vb[VbVbalrIteratorWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/Module1.vb#10)]  
   

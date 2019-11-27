@@ -16,17 +16,17 @@ ms.locfileid: "74351788"
 ---
 # <a name="object-variables-in-visual-basic"></a>Visual Basic 中的物件變數
 
-In addition to storing values directly, a variable can refer to an object. You assign an object to a variable for the same reasons you assign any value to a variable:
+除了直接儲存值之外，變數也可以參考物件。 將物件指派給變數的原因，是因為您將任何值指派給變數：
 
-- A variable name is often shorter and easier to remember than the full path of methods and properties necessary to access the object itself.
+- 變數名稱通常比存取物件本身所需之方法和屬性的完整路徑更短且更容易記憶。
 
-- Using a variable that refers to an object is more efficient than repeatedly accessing the object itself through the necessary methods or properties.
+- 使用參考物件的變數會比透過必要的方法或屬性重複存取物件本身更有效率。
 
-- You can change a variable to refer to other objects while your code is running.
+- 當您的程式碼正在執行時，您可以變更變數來參考其他物件。
 
-## <a name="making-code-shorter"></a>Making Code Shorter
+## <a name="making-code-shorter"></a>使程式碼更短
 
-You can use object variables to shorten the code you have to type. The following example uses the full path of methods and properties to access a <xref:System.Windows.Forms.Control> object.
+您可以使用物件變數來縮短您必須輸入的程式碼。 下列範例會使用方法和屬性的完整路徑來存取 <xref:System.Windows.Forms.Control> 物件。
 
 ```vb
 ' Assume Me is a valid Form, or replace Me with a valid Form.
@@ -35,7 +35,7 @@ Me.ActiveForm.ActiveControl.Location = New Point(100, 100)
 Me.ActiveForm.ActiveControl.Show()
 ```
 
-You can shorten this code, and speed up execution, if you use an object variable for the control. You should declare the object variable with the specific class that you intend to assign to it (`Control` in this case). Once you assign an object to the variable, you can treat it exactly the same as you treat the object to which it refers. You can set or retrieve the properties of the object or use any of its methods. The following example uses an object variable to simplify the code in the preceding example.
+如果您使用控制項的物件變數，可以縮短此程式碼並加快執行速度。 您應該使用您想要指派給它的特定類別（在此案例中為`Control`）來宣告物件變數。 將物件指派給變數之後，您就可以將它視為您處理它所參考的物件完全相同。 您可以設定或取出物件的屬性，或使用其任何方法。 下列範例會使用物件變數來簡化上述範例中的程式碼。
 
 ```vb
 Dim ctrlActv As System.Windows.Forms.Control = Me.ActiveForm.ActiveControl

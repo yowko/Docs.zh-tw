@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332319"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>如何：存取 XML 子項目 (Visual Basic)
-This example shows how to use a child axis property to access all XML child elements that have a specified name in an XML element. In particular, it uses the <xref:System.Xml.Linq.XElement.Value%2A> property to get the value of the first element in the collection that the `name` child axis property returns. The `name` child axis property gets all child elements named `phone` in the `contact` object. This example also uses the `phone` child axis property to access all child elements named `phone` that are contained in the `contact` object.  
+這個範例示範如何使用子軸屬性來存取 XML 元素中具有指定名稱的所有 XML 子專案。 特別是，它會使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性來取得集合中的第一個專案的值，`name` 的子軸屬性會傳回該元素。 `name` 的子軸屬性會取得 `contact` 物件中名為 `phone` 的所有子項目。 這個範例也會使用 `phone` 的子軸屬性，存取包含在 `contact` 物件中名為 `phone` 的所有子項目。  
   
 ## <a name="example"></a>範例  
  [!code-vb[VbXMLSamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#10)]  

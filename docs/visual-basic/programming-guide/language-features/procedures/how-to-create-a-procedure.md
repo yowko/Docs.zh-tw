@@ -17,41 +17,41 @@ ms.locfileid: "74344915"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>如何：建立程序 (Visual Basic)
 
-You enclose a procedure between a starting declaration statement (`Sub` or `Function`) and an ending declaration statement (`End Sub` or `End Function`). All the procedure's code lies between these statements.
+您可以將程式括在起始宣告語句（`Sub` 或 `Function`）與結束宣告語句（`End Sub` 或 `End Function`）之間。 所有程式的程式碼都位於這些語句之間。
 
- A procedure cannot contain another procedure, so its starting and ending statements must be outside any other procedure.
+ 程式不能包含另一個程式，因此它的開始和結束語句必須在任何其他程式之外。
 
- If you have code that performs the same task in different places, you can write the task once as a procedure and then call it from different places in your code.
+ 如果您的程式碼在不同的位置執行相同的工作，您可以撰寫一次工作，然後從程式碼中的不同位置呼叫它。
 
-### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>To create a procedure that does not return a value
+### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>若要建立不會傳回值的程式
 
-1. Outside any other procedure, use a `Sub` statement, followed by an `End Sub` statement.
+1. 在任何其他程式之外，請使用 `Sub` 語句，後面接著 `End Sub` 語句。
 
-2. In the `Sub` statement, follow the `Sub` keyword with the name of the procedure, then the parameter list in parentheses.
+2. 在 `Sub` 語句中，在 `Sub` 關鍵字後面加上程式的名稱，然後以括弧括住參數清單。
 
-3. Place the procedure's code statements between the `Sub` and `End Sub` statements.
+3. 將程式的程式碼語句放在 `Sub` 和 `End Sub` 語句之間。
 
-### <a name="to-create-a-procedure-that-returns-a-value"></a>To create a procedure that returns a value
+### <a name="to-create-a-procedure-that-returns-a-value"></a>若要建立會傳回值的程式
 
-1. Outside any other procedure, use a `Function` statement, followed by an `End Function` statement.
+1. 在任何其他程式之外，請使用 `Function` 語句，後面接著 `End Function` 語句。
 
-2. In the `Function` statement, follow the `Function` keyword with the name of the procedure, then the parameter list in parentheses, and then an `As` clause specifying the data type of the return value.
+2. 在 `Function` 語句中，請在 `Function` 關鍵字後面加上程式的名稱，然後以括弧括住參數清單，然後再指定傳回值的資料類型 `As` 子句。
 
-3. Place the procedure's code statements between the `Function` and `End Function` statements.
+3. 將程式的程式碼語句放在 `Function` 和 `End Function` 語句之間。
 
-4. Use a `Return` statement to return the value to the calling code.
+4. 使用 `Return` 語句，將值傳回給呼叫程式碼。
 
-### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>To connect your new procedure with the old, repetitive blocks of code
+### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>將您的新程式與舊的重複程式碼區塊連接
 
-1. Make sure you define the new procedure in a place where the old code has access to it.
+1. 請務必將新程式定義在舊程式碼有權存取的位置。
 
-2. In your old, repetitive code block, replace the statements that perform the repetitive task with a single statement that calls the `Sub` or `Function` procedure.
+2. 在舊的重複程式碼區塊中，以呼叫 `Sub` 或 `Function` 程式的單一語句取代執行重複性工作的語句。
 
-3. If your procedure is a `Function` that returns a value, ensure that your calling statement performs an action with the returned value, such as storing it in a variable, or else the value will be lost.
+3. 如果您的程式是會傳回值的 `Function`，請確定您的呼叫語句會執行具有傳回值的動作，例如將它儲存在變數中，否則值會遺失。
 
 ## <a name="example"></a>範例
 
- The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides:
+ 下列 `Function` 程式會計算直角三角形的最長邊（或斜邊），並指定其他兩邊的值：
 
  [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]
 

@@ -15,12 +15,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331841"
 ---
 # <a name="on-visual-basic"></a>On (Visual Basic)
-Introduces a response to a run-time error or turns a compiler option on.  
+引進執行階段錯誤的回應，或開啟編譯器選項。  
   
- In queries, identifies keys for the collections being joined.  
+ 在 [查詢] 中，識別要聯結之集合的索引鍵。  
   
 ## <a name="remarks"></a>備註  
- The `On` keyword is used in these contexts:  
+ `On` 關鍵字會用於這些內容中：  
   
  [Group Join 子句](../../visual-basic/language-reference/queries/group-join-clause.md)  
   

@@ -14,28 +14,28 @@ ms.locfileid: "74347412"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>如何：在 Visual Basic 中建立 XML 文件
 
-This example shows how to add XML documentation comments to your code.
+這個範例會示範如何將 XML 檔批註加入至您的程式碼。
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-create-xml-documentation-for-a-type-or-member"></a>To create XML documentation for a type or member
+## <a name="to-create-xml-documentation-for-a-type-or-member"></a>若要建立類型或成員的 XML 檔
 
-1. In the **Code Editor**, position your cursor on the line above the type or member for which you want to create documentation.
+1. 在 [程式**代碼編輯器**] 中，將游標放在您想要建立檔的類型或成員上的那一行。
 
-2. Type `'''` (three single-quotation marks).
+2. 輸入 `'''` （三個單引號）。
 
-    An XML skeleton for the type or member is added in the **Code Editor**.
+    在程式**代碼編輯器**中，會加入類型或成員的 XML 基本架構。
 
-3. Add descriptive information between the appropriate tags.
+3. 在適當的標記之間新增描述性資訊。
 
     > [!NOTE]
-    > If you add additional lines within the XML documentation block, each line must begin with `'''`.
+    > 如果您在 XML 檔區塊內新增額外的行，則每一行必須以 `'''`開頭。
 
-4. Add additional code that uses the type or member with the new XML documentation comments.
+4. 使用新的 XML 檔批註，加入使用類型或成員的其他程式碼。
 
-    IntelliSense displays the text from the \<summary> tag for the type or member.
+    IntelliSense 會顯示類型或成員的 \<摘要 > 標記中的文字。
 
-5. Compile the code to generate an XML file containing the documentation comments. 如需詳細資訊，請參閱 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)。
+5. 編譯器代碼，以產生包含檔批註的 XML 檔案。 如需詳細資訊，請參閱 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)。
 
 ## <a name="see-also"></a>請參閱
 

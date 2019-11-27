@@ -14,25 +14,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349714"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>如何：建立傳回值的程序 (Visual Basic)
-You use a `Function` procedure to return a value to the calling code.  
+您可以使用 `Function` 程式，將值傳回給呼叫程式碼。  
   
-### <a name="to-create-a-procedure-that-returns-a-value"></a>To create a procedure that returns a value  
+### <a name="to-create-a-procedure-that-returns-a-value"></a>若要建立會傳回值的程式  
   
-1. Outside any other procedure, use a `Function` statement, followed by an `End Function` statement.  
+1. 在任何其他程式之外，請使用 `Function` 語句，後面接著 `End Function` 語句。  
   
-2. In the `Function` statement, follow the `Function` keyword with the name of the procedure, and then the parameter list in parentheses.  
+2. 在 `Function` 語句中，在 `Function` 關鍵字後面加上程式的名稱，然後以括弧括住參數清單。  
   
-3. Follow the parentheses with an `As` clause to specify the data type of the returned value.  
+3. 請在括弧後面加上 `As` 子句，以指定傳回值的資料類型。  
   
-4. Place the procedure's code statements between the `Function` and `End Function` statements.  
+4. 將程式的程式碼語句放在 `Function` 和 `End Function` 語句之間。  
   
-5. Use a `Return` statement to return the value to the calling code.  
+5. 使用 `Return` 語句，將值傳回給呼叫程式碼。  
   
-     The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides.  
+     下列 `Function` 程式會計算直角三角形的最長邊（或斜邊），並指定其他兩邊的值。  
   
      [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
-     The following example shows a typical call to `hypotenuse`.  
+     下列範例顯示 `hypotenuse`的一般呼叫。  
   
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   

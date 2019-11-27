@@ -19,25 +19,25 @@ ms.locfileid: "74344053"
 ---
 # <a name="char-data-type-visual-basic"></a>Char 資料類型 (Visual Basic)
 
-Holds unsigned 16-bit (2-byte) code points ranging in value from 0 through 65535. Each *code point*, or character code, represents a single Unicode character.
+保留不帶正負號的16位（2位元組）程式碼點，範圍介於0到65535之間。 每個程式*代碼點*或字元碼都代表一個 Unicode 字元。
 
 ## <a name="remarks"></a>備註
 
-Use the `Char` data type when you need to hold only a single character and do not need the overhead of `String`. In some cases you can use `Char()`, an array of `Char` elements, to hold multiple characters.
+當您只需要保存單一字元，而且不需要 `String`的額外負荷時，請使用 `Char` 資料類型。 在某些情況下，您可以使用 `Char()`（`Char` 元素陣列）來保存多個字元。
 
-The default value of `Char` is the character with a code point of 0.
+`Char` 的預設值是程式碼點為0的字元。
 
 ## <a name="unicode-characters"></a>Unicode 字元
 
-The first 128 code points (0–127) of Unicode correspond to the letters and symbols on a standard U.S. keyboard. These first 128 code points are the same as those the ASCII character set defines. The second 128 code points (128–255) represent special characters, such as Latin-based alphabet letters, accents, currency symbols, and fractions. Unicode uses the remaining code points (256-65535) for a wide variety of symbols, including worldwide textual characters, diacritics, and mathematical and technical symbols.
+Unicode 的第一個128程式碼點（0–127）對應到標準美式鍵盤上的字母和符號。 這些前128個程式碼點與 ASCII 字元集所定義的相同。 第二個128程式碼片段（128–255）代表特殊字元，例如以拉丁為基礎的字母、重音、貨幣符號和分數。 Unicode 會針對各種不同的符號使用其餘的程式碼點（256-65535），包括全球文字字元、變音符號和數學和技術符號。
 
-You can use methods like <xref:System.Char.IsDigit%2A> and <xref:System.Char.IsPunctuation%2A> on a `Char` variable to determine its Unicode classification.
+您可以使用 <xref:System.Char.IsDigit%2A> 之類的方法，並在 `Char` 變數上 <xref:System.Char.IsPunctuation%2A>，以判斷其 Unicode 分類。
 
 ## <a name="type-conversions"></a>類型轉換
 
-Visual Basic does not convert directly between `Char` and the numeric types. You can use the <xref:Microsoft.VisualBasic.Strings.Asc%2A> or <xref:Microsoft.VisualBasic.Strings.AscW%2A> function to convert a `Char` value to an `Integer` that represents its code point. You can use the <xref:Microsoft.VisualBasic.Strings.Chr%2A> or <xref:Microsoft.VisualBasic.Strings.ChrW%2A> function to convert an `Integer` value to a `Char` that has that code point.
+Visual Basic 不會直接在 `Char` 和數數值型別之間進行轉換。 您可以使用 <xref:Microsoft.VisualBasic.Strings.Asc%2A> 或 <xref:Microsoft.VisualBasic.Strings.AscW%2A> 函數，將 `Char` 值轉換為代表其程式碼點的 `Integer`。 您可以使用 <xref:Microsoft.VisualBasic.Strings.Chr%2A> 或 <xref:Microsoft.VisualBasic.Strings.ChrW%2A> 函數，將 `Integer` 值轉換為具有該程式碼點的 `Char`。
 
-If the type checking switch (the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)) is on, you must append the literal type character to a single-character string literal to identify it as the `Char` data type. 下列範例將說明這點。 The first assignment to the `charVar` variable generates compiler error [BC30512](../../misc/bc30512.md) because `Option Strict` is on. The second compiles successfully because the `c` literal type character identifies the literal as a `Char` value.
+如果類型檢查參數（ [Option Strict 語句](../../../visual-basic/language-reference/statements/option-strict-statement.md)）為 on，您就必須將常數值型別字元附加至單一字元字串常值，以將它識別為 `Char` 資料類型。 下列範例將說明這點。 第一次指派 `charVar` 變數會產生編譯器錯誤[BC30512](../../misc/bc30512.md) ，因為 `Option Strict` 是 on。 第二個編譯成功，因為 `c` 的常數值型別字元將常值識別為 `Char` 值。
 
 ```vb
 Option Strict On
@@ -57,15 +57,15 @@ End Module
 
 ## <a name="programming-tips"></a>程式設計提示
 
-- **Negative Numbers.** `Char` is an unsigned type and cannot represent a negative value. In any case, you should not use `Char` to hold numeric values.
+- **負數。** `Char` 是不帶正負號的類型，而且不能代表負值。 在任何情況下，您不應該使用 `Char` 來保存數值。
 
-- **Interop Considerations.** If you interface with components not written for the .NET Framework, for example Automation or COM objects, remember that character types have a different data width (8 bits) in other environments. If you pass an 8-bit argument to such a component, declare it as `Byte` instead of `Char` in your new Visual Basic code.
+- **Interop 考慮。** 如果您使用不是針對 .NET Framework 所撰寫的元件（例如 Automation 或 COM 物件）來進行介面，請記住，在其他環境中，字元類型具有不同的資料寬度（8位）。 如果您將8位引數傳遞給這類元件，請將它宣告為 `Byte`，而不是在新的 Visual Basic 程式碼中 `Char`。
 
-- **Widening.** The `Char` data type widens to `String`. This means you can convert `Char` to `String` and will not encounter a <xref:System.OverflowException?displayProperty=nameWithType>.
+- **加寬.** `Char` 資料類型會擴大至 `String`。 這表示您可以將 `Char` 轉換成 `String`，而且不會遇到 <xref:System.OverflowException?displayProperty=nameWithType>。
 
-- **Type Characters.** Appending the literal type character `C` to a single-character string literal forces it to the `Char` data type. `Char` has no identifier type character.
+- **輸入字元。** 將常數值型別字元 `C` 附加至單一字元字串常值，會強制其成為 `Char` 的資料類型。 `Char` 沒有識別項型別字元。
 
-- **Framework Type.** 在 .NET Framework 中對應的類型為 <xref:System.Char?displayProperty=nameWithType> 結構。
+- **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.Char?displayProperty=nameWithType> 結構。
 
 ## <a name="see-also"></a>請參閱
 

@@ -23,7 +23,7 @@ ms.locfileid: "74447428"
   
 4. 部署和執行應用程式，以使用針對疑難排解所提供的網路隔離工具對其進行測試。  
   
- For more detailed information on how to configure network capabilities and isolation tools used for troubleshooting network isolation, see [How to configure network isolation capabilities](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) in the Windows 8.x Store developer documentation.
+ 如需有關如何設定用於疑難排解網路隔離的網路功能和隔離工具的詳細資訊，請參閱如何在 Windows 8.x 存放區開發人員檔中[設定網路隔離功能](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))。
   
 ## <a name="see-also"></a>請參閱
 

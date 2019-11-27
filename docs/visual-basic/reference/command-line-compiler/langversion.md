@@ -13,8 +13,8 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344204"
 ---
-# <a name="-langversion-visual-basic"></a>-langversion (Visual Basic)
-Causes the compiler to accept only syntax that is included in the specified Visual Basic language version.  
+# <a name="-langversion-visual-basic"></a>-langversion （Visual Basic）
+使編譯器只接受指定的 Visual Basic 語言版本中所包含的語法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -24,21 +24,21 @@ Causes the compiler to accept only syntax that is included in the specified Visu
   
 ## <a name="arguments"></a>引數  
  `version`  
- 必要項。 The language version to be used during the compilation. Accepted values are `9`, `10`, `11`, `12`, `14`, `15`, `15.3`, `15.5`, `default` and `latest`.
+ 必要。 要在編譯期間使用的語言版本。 接受的值為 `9`、`10`、`11`、`12`、`14`、`15`、`15.3`、`15.5`、`default` 和 `latest`。
 
- Any of the whole numbers may also be specified using `.0` as the minor version, for example, `11.0`.
+ 您也可以使用 `.0` 做為次要版本來指定任何整數，例如 `11.0`。
 
- You can see the list of all possible values by specifying `-langversion:?` on the command line.  
+ 您可以藉由在命令列上指定 `-langversion:?`，查看所有可能值的清單。  
   
 ## <a name="remarks"></a>備註  
- The `-langversion` option specifies what syntax the compiler accepts. For example, if you specify that the language version is 9.0, the compiler generates errors for syntax that is valid only in version 10.0 and later.  
+ `-langversion` 選項會指定編譯器接受的語法。 例如，如果您指定語言版本是9.0，則編譯器會針對只有10.0 版和更新版本中有效的語法產生錯誤。  
   
- You can use this option when you develop applications that target different versions of the .NET Framework. For example, if you are targeting .NET Framework 3.5, you could use this option to ensure that you do not use syntax from language version 10.0.  
+ 當您開發以不同 .NET Framework 版本為目標的應用程式時，可以使用此選項。 例如，如果您的目標是 .NET Framework 3.5，您可以使用此選項來確保不會使用語言版本10.0 中的語法。  
   
- You can set `-langversion` directly only by using the command line. 如需詳細資訊，請參閱[以特定的 .NET Framework 版本為目標](/visualstudio/ide/visual-studio-multi-targeting-overview)。  
+ 您只能使用命令列來直接設定 `-langversion`。 如需詳細資訊，請參閱[以特定的 .NET Framework 版本為目標](/visualstudio/ide/visual-studio-multi-targeting-overview)。  
   
 ## <a name="example"></a>範例  
- The following code compiles `sample.vb` for Visual Basic 9.0.  
+ 下列程式碼會編譯 Visual Basic 9.0 的 `sample.vb`。  
   
 ```console  
 vbc -langversion:9.0 sample.vb  

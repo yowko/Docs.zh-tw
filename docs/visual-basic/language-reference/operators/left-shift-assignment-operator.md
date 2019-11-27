@@ -18,8 +18,8 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350960"
 ---
-# <a name="-operator-visual-basic"></a>\<\<= Operator (Visual Basic)
-Performs an arithmetic left shift on the value of a variable or property and assigns the result back to the variable or property.  
+# <a name="-operator-visual-basic"></a>\<\<= 運算子（Visual Basic）
+在變數或屬性的值上執行算術左移位，並將結果指派回變數或屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,23 +29,23 @@ variableorproperty <<= amount
   
 ## <a name="parts"></a>組件  
  `variableorproperty`  
- 必要項。 Variable or property of an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).  
+ 必要。 整數類資料類型的變數或屬性（`SByte`、`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long`或 `ULong`）。  
   
  `amount`  
- 必要項。 Numeric expression of a data type that widens to `Integer`.  
+ 必要。 擴展為 `Integer`之資料類型的數值運算式。  
   
 ## <a name="remarks"></a>備註  
- The element on the left side of the `<<=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ `<<=` 運算子左邊的元素可以是簡單的純量變數、屬性或陣列的元素。 變數或屬性不可為[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  
   
- The `<<=` operator first performs an arithmetic left shift on the value of the variable or property. The operator then assigns the result of that operation back to that variable or property.  
+ `<<=` 運算子會先在變數或屬性的值上執行算術左移位。 然後，運算子會將該作業的結果指派回該變數或屬性。  
   
- Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. In an arithmetic left shift, the bits shifted beyond the range of the result data type are discarded, and the bit positions vacated on the right are set to zero.  
+ 算術移位不是迴圈的，這表示不會在另一端重新進入從結果的一端移位的位。 在算術左移位中，會捨棄超出結果資料類型範圍的位，而且右邊空出的位位置會設定為零。  
   
 ## <a name="overloading"></a>多載化  
- The [<< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `<<` operator affects the behavior of the `<<=` operator. If your code uses `<<=` on a class or structure that overloads `<<`, be sure you understand its redefined behavior. 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ [< < 運算子](../../../visual-basic/language-reference/operators/left-shift-operator.md)*可以多載，這*表示當運算元具有該類別或結構的類型時，類別或結構可以重新定義其行為。 多載 `<<` 運算子會影響 `<<=` 運算子的行為。 如果您的程式碼在多載 `<<`的類別或結構上使用 `<<=`，請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- The following example uses the `<<=` operator to shift the bit pattern of an `Integer` variable left by the specified amount and assign the result to the variable.  
+ 下列範例會使用 `<<=` 運算子，將 `Integer` 變數的位模式向左移動指定的數量，並將結果指派給該變數。  
   
  [!code-vb[VbVbalrOperators#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#13)]  
   

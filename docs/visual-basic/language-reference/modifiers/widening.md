@@ -18,24 +18,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347837"
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
-Indicates that a conversion operator (`CType`) converts a class or structure to a type that can hold all possible values of the original class or structure.  
+表示轉換運算子（`CType`）會將類別或結構轉換成可保存原始類別或結構之所有可能值的類型。  
   
-## <a name="converting-with-the-widening-keyword"></a>Converting with the Widening Keyword  
- The conversion procedure must specify `Public Shared` in addition to `Widening`.  
+## <a name="converting-with-the-widening-keyword"></a>使用加寬關鍵字進行轉換  
+ 轉換程式除了 `Widening`之外，還必須指定 `Public Shared`。  
   
- Widening conversions always succeed at run time and never incur data loss. Examples are `Single` to `Double`, `Char` to `String`, and a derived type to its base type. This last conversion is widening because the derived type contains all the members of the base type and thus is an instance of the base type.  
+ 擴輾轉換一律會在執行時間成功，而且永遠不會產生資料遺失。 範例 `Single` `Double`、`Char` `String`，以及衍生型別到其基底型別。 最後一次轉換是擴大的，因為衍生類型包含基底類型的所有成員，因此是基底類型的實例。  
   
- The consuming code does not have to use `CType` for widening conversions, even if `Option Strict` is `On`.  
+ 取用程式碼不需要使用 `CType` 進行擴輾轉換，即使 `Option Strict` `On`。  
   
- The `Widening` keyword can be used in this context:  
+ `Widening` 關鍵字可以在此內容中使用：  
   
- [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- For example definitions of widening and narrowing conversion operators, see [How to: Define a Conversion Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ 如需擴展和縮小轉換運算子的範例定義，請參閱[如何：定義轉換運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)。  
   
 ## <a name="see-also"></a>請參閱
 
-- [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [擴展和縮小轉換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [如何：定義運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)

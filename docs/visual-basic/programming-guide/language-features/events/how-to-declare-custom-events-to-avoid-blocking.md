@@ -14,16 +14,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345140"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>如何：宣告自訂事件以避免封鎖 (Visual Basic)
-There are several circumstances when it is important that one event handler not block subsequent event handlers. Custom events allow the event to call its event handlers asynchronously.  
+有幾種情況很重要：一個事件處理常式不會封鎖後續的事件處理常式。 自訂事件可讓事件以非同步方式呼叫其事件處理常式。  
   
- By default, the backing-store field for an event declaration is a multicast delegate that serially combines all the event handlers. This means that if one handler takes a long time to complete, it blocks the other handlers until it completes. (Well-behaved event handlers should never perform lengthy or potentially blocking operations.)  
+ 根據預設，事件宣告的「備份存放區」欄位是一個多播委派，可將所有事件處理常式序列結合在一起。 這表示如果某個處理常式需要很長的時間才能完成，它會封鎖其他處理常式，直到它完成為止。 （行為良好的事件處理常式應該永遠不會執行冗長或可能封鎖的作業）。  
   
- Instead of using the default implementation of events that Visual Basic provides, you can use a custom event to execute the event handlers asynchronously.  
+ 您可以使用自訂事件，以非同步方式執行事件處理常式，而不是使用 Visual Basic 提供之事件的預設執行。  
   
 ## <a name="example"></a>範例  
- In this example, the `AddHandler` accessor adds the delegate for each handler of the `Click` event to an <xref:System.Collections.ArrayList> stored in the `EventHandlerList` field.  
+ 在此範例中，`AddHandler` 存取子會將 `Click` 事件之每個處理常式的委派加入至儲存在 `EventHandlerList` 欄位中的 <xref:System.Collections.ArrayList>。  
   
- When code raises the `Click` event, the `RaiseEvent` accessor invokes all the event handler delegates asynchronously using the <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> method. That method invokes each handler on a worker thread and returns immediately, so handlers cannot block one another.  
+ 當程式碼引發 `Click` 事件時，`RaiseEvent` 存取子會使用 <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> 方法，以非同步方式叫用所有的事件處理常式委派。 該方法會叫用工作者執行緒上的每個處理常式，並立即傳回，因此處理程式無法彼此封鎖。  
   
  [!code-vb[VbVbalrEvents#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#27)]  
   

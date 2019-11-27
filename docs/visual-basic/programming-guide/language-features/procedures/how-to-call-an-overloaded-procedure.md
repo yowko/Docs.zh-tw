@@ -16,17 +16,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340200"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>如何：呼叫多載程序 (Visual Basic)
-The advantage of overloading a procedure is in the flexibility of the call. The calling code can obtain the information it needs to pass to the procedure and then call a single procedure name, no matter what arguments it is passing.  
+多載程式的優點是呼叫的彈性。 呼叫程式碼可以取得傳遞至程式所需的資訊，然後呼叫單一程式名稱，而不論其傳遞的引數為何。  
   
-### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>To call a procedure that has more than one version defined  
+### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>呼叫已定義一個以上版本的程式  
   
-1. In the calling code, determine which data to pass to the procedure.  
+1. 在呼叫程式碼中，判斷要傳遞給程式的資料。  
   
-2. Write the procedure call in the normal way, presenting the data in the argument list. Be sure the arguments match the parameter list in one of the versions defined for the procedure.  
+2. 以一般方式撰寫程序呼叫，並在引數清單中呈現資料。 請確定引數符合為程式定義的其中一個版本中的參數清單。  
   
-3. You do not have to determine which version of the procedure to call. Visual Basic passes control to the version matching your argument list.  
+3. 您不需要決定要呼叫的程式版本。 Visual Basic 會將控制權傳遞至符合引數清單的版本。  
   
-     The following example calls the `post` procedure declared in [How to: Define Multiple Versions of a Procedure](./how-to-define-multiple-versions-of-a-procedure.md). It obtains the customer identification, determines whether it is a `String` or an `Integer`, and then in either case calls the same procedure.  
+     下列範例會呼叫[如何：定義程式的多個版本](./how-to-define-multiple-versions-of-a-procedure.md)中所宣告的 `post` 程式。 它會取得客戶識別、判斷其是否為 `String` 或 `Integer`，然後在任一情況下呼叫相同的程式。  
   
      [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]  
   

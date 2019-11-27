@@ -17,8 +17,8 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347815"
 ---
-# <a name="-operator-visual-basic"></a>>> Operator (Visual Basic)
-Performs an arithmetic right shift on a bit pattern.  
+# <a name="-operator-visual-basic"></a>> > 運算子（Visual Basic）
+在位模式上執行算術右移位。  
   
 ## <a name="syntax"></a>語法  
   
@@ -28,63 +28,63 @@ result = pattern >> amount
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要項。 Integral numeric value. The result of shifting the bit pattern. The data type is the same as that of `pattern`.  
+ 必要。 整數數值。 移位位模式的結果。 資料類型與 `pattern`相同。  
   
  `pattern`  
- 必要項。 Integral numeric expression. The bit pattern to be shifted. The data type must be an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).  
+ 必要。 整數數值運算式。 要移位的位模式。 資料類型必須是整數類型（`SByte`、`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long`或 `ULong`）。  
   
  `amount`  
- 必要項。 Numeric expression. The number of bits to shift the bit pattern. The data type must be `Integer` or widen to `Integer`.  
+ 必要。 數值運算式。 要移位位模式的位數。 資料類型必須 `Integer` 或擴展為 `Integer`。  
   
 ## <a name="remarks"></a>備註  
- Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. In an arithmetic right shift, the bits shifted beyond the rightmost bit position are discarded, and the leftmost (sign) bit is propagated into the bit positions vacated at the left. This means that if `pattern` has a negative value, the vacated positions are set to one; otherwise they are set to zero.  
+ 算術移位不是迴圈的，這表示不會在另一端重新進入從結果的一端移位的位。 在算術右移位中，會捨棄超出最右邊位位置的位，而最左邊的（符號）位會傳播到左側空出的位位置。 這表示，如果 `pattern` 的值為負值，空出的位置會設定為1。否則會設定為零。  
   
- Note that the data types `Byte`, `UShort`, `UInteger`, and `ULong` are unsigned, so there is no sign bit to propagate. If `pattern` is of any unsigned type, the vacated positions are always set to zero.  
+ 請注意，`Byte`、`UShort`、`UInteger`和 `ULong` 的資料類型不帶正負號，因此不會傳播任何符號位。 如果 `pattern` 是任何不帶正負號的類型，空出的位置一律會設定為零。  
   
- To prevent shifting by more bits than the result can hold, Visual Basic masks the value of `amount` with a size mask corresponding to the data type of `pattern`. The binary AND of these values is used for the shift amount. The size masks are as follows:  
+ 為了避免超過結果所能容納的位數，Visual Basic 會以對應于 `pattern`資料類型的大小遮罩來遮罩 `amount` 的值。 這些值的二進位和會用於移位量。 大小遮罩如下所示：  
   
-|Data type of `pattern`|Size mask (decimal)|Size mask (hexadecimal)|  
+|`pattern` 的資料類型|大小遮罩（十進位）|大小遮罩（十六進位）|  
 |----------------------------|---------------------------|-------------------------------|  
-|`SByte`、 `Byte`|7|&H00000007|  
-|`Short`、 `UShort`|15|&H0000000F|  
-|`Integer`、 `UInteger`|31|&H0000001F|  
-|`Long`、 `ULong`|63|&H0000003F|  
+|`SByte`, `Byte`|7|& H00000007|  
+|`Short`, `UShort`|15|& H0000000F|  
+|`Integer`, `UInteger`|31|& H0000001F|  
+|`Long`, `ULong`|63|& H0000003F|  
   
- If `amount` is zero, the value of `result` is identical to the value of `pattern`. If `amount` is negative, it is taken as an unsigned value and masked with the appropriate size mask.  
+ 如果 `amount` 為零，則 `result` 的值與 `pattern`的值相同。 如果 `amount` 為負數，則會將它視為不帶正負號的值，並以適當的大小遮罩加以遮罩。  
   
- Arithmetic shifts never generate overflow exceptions.  
+ 算術移位絕不會產生溢位例外狀況。  
   
 ## <a name="overloading"></a>多載化  
- The `>>` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ `>>` 運算子可以多載 *，這*表示當運算元具有該類別或結構的類型時，類別或結構可以重新定義其行為。 如果您的程式碼在這類類別或結構上使用這個運算子，請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- The following example uses the `>>` operator to perform arithmetic right shifts on integral values. The result always has the same data type as that of the expression being shifted.  
+ 下列範例會使用 `>>` 運算子，在整數值上執行算術右移位。 結果的資料類型一律會與移動的運算式相同。  
   
  [!code-vb[VbVbalrOperators#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#14)]  
   
- The results of the preceding example are as follows:  
+ 上述範例的結果如下所示：  
   
-- `result1` is 2560 (0000 1010 0000 0000).  
+- `result1` 為2560（0000 1010 0000 0000）。  
   
-- `result2` is 160 (0000 0000 1010 0000).  
+- `result2` 為160（0000 0000 1010 0000）。  
   
-- `result3` is 2 (0000 0000 0000 0010).  
+- `result3` 是2（0000 0000 0000 0010）。  
   
-- `result4` is 640 (0000 0010 1000 0000).  
+- `result4` 為640（0000 0010 1000 0000）。  
   
-- `result5` is 0 (shifted 15 places to the right).  
+- `result5` 為0（向右移動15個位置）。  
   
- The shift amount for `result4` is calculated as 18 AND 15, which equals 2.  
+ `result4` 的移位量會計算為18和15，等於2。  
   
- The following example shows arithmetic shifts on a negative value.  
+ 下列範例顯示負數值的算術移位。  
   
  [!code-vb[VbVbalrOperators#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#55)]  
   
- The results of the preceding example are as follows:  
+ 上述範例的結果如下所示：  
   
-- `negresult1` is -512 (1111 1110 0000 0000).  
+- `negresult1` 為-512 （1111 1110 0000 0000）。  
   
-- `negresult2` is -1 (the sign bit is propagated).  
+- `negresult2` 為-1 （傳播符號位）。  
   
 ## <a name="see-also"></a>請參閱
 
@@ -93,4 +93,4 @@ result = pattern >> amount
 - [>>= 運算子](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic 中的算術運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

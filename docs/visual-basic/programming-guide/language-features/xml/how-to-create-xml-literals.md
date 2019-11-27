@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332995"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>如何：建立 XML 常值 (Visual Basic)
-You can create an XML document, fragment, or element directly in code by using an XML literal. The examples in this topic demonstrate how to create an XML element that has three child elements, and how to create an XML document.  
+您可以使用 XML 常值，直接在程式碼中建立 XML 檔、片段或元素。 本主題中的範例將示範如何建立具有三個子項目的 XML 專案，以及如何建立 XML 檔。  
   
- You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. 如需詳細資訊，請參閱<xref:System.Xml.Linq.XElement>。  
+ 您也可以使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Api 來建立 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 物件。 如需詳細資訊，請參閱 <xref:System.Xml.Linq.XElement>。  
   
-### <a name="to-create-an-xml-element"></a>To create an XML element  
+### <a name="to-create-an-xml-element"></a>若要建立 XML 元素  
   
-- Create the XML inline by using the XML literal syntax, which is the same as the actual XML syntax.  
+- 使用 XML 常值語法建立 XML 內嵌，這與實際的 XML 語法相同。  
   
      [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
-     執行程式碼。 The output of this code is:  
+     執行程式碼。 此程式碼的輸出為：  
   
      `<contact>`  
   
@@ -34,13 +34,13 @@ You can create an XML document, fragment, or element directly in code by using a
   
      `</contact>`  
   
-### <a name="to-create-an-xml-document"></a>To create an XML document  
+### <a name="to-create-an-xml-document"></a>若要建立 XML 檔  
   
-- Create the XML document inline. The following code creates an XML document that has literal syntax, an XML declaration, a processing instruction, a comment, and an element that contains another element.  
+- 建立內嵌的 XML 檔。 下列程式碼會建立 XML 檔，其中具有常值語法、XML 宣告、處理指示、批註，以及包含另一個元素的專案。  
   
      [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-     執行程式碼。 The output of this code is:  
+     執行程式碼。 此程式碼的輸出為：  
   
      `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
   

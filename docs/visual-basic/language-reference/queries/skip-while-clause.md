@@ -28,17 +28,17 @@ Skip While expression
   
 |詞彙|定義|  
 |---|---|  
-|`expression`|必要項。 An expression that represents a condition to test elements for. The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.|  
+|`expression`|必要。 運算式，表示要測試元素的條件。 運算式必須傳回 `Boolean` 值或函式對等功能，例如要評估為 `Boolean`的 `Integer`。|  
   
 ## <a name="remarks"></a>備註  
- The `Skip While` clause bypasses elements from the beginning of a query result until the supplied `expression` returns `false`. After `expression` returns `false`, the query returns all the remaining elements. The `expression` is ignored for the remaining results.  
+ `Skip While` 子句會略過查詢結果開頭的元素，直到提供的 `expression` 傳回 `false`為止。 `expression` 傳回 `false`之後，查詢會傳回所有剩餘的元素。 會忽略其餘結果的 `expression`。  
   
- The `Skip While` clause differs from the `Where` clause in that the `Where` clause can be used to exclude all elements from a query that do not meet a particular condition. The `Skip While` clause excludes elements only until the first time that the condition is not satisfied. The `Skip While` clause is most useful when you are working with an ordered query result.  
+ `Skip While` 子句與 `Where` 子句不同之處在于，`Where` 子句可以用來排除不符合特定條件之查詢中的所有元素。 `Skip While` 子句只會排除元素，直到第一次不符合條件為止。 當您使用已排序的查詢結果時，`Skip While` 子句最有用。  
   
- You can bypass a specific number of results from the beginning of a query result by using the `Skip` clause.  
+ 您可以使用 `Skip` 子句，從查詢結果的開頭略過特定數目的結果。  
   
 ## <a name="example"></a>範例  
- The following code example uses the `Skip While` clause to bypass results until the first customer from the United States is found.  
+ 下列程式碼範例會使用 `Skip While` 子句來略過結果，直到找到美國的第一個客戶為止。  
   
  [!code-vb[VbSimpleQuerySamples#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#3)]  
   

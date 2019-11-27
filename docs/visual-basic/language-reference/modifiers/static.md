@@ -15,42 +15,42 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350765"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
-Specifies that one or more declared local variables are to continue to exist and retain their latest values after termination of the procedure in which they are declared.  
+指定一個或多個宣告的區域變數要繼續存在，並在終止宣告它們的程式之後保留其最新值。  
   
 ## <a name="remarks"></a>備註  
- Normally, a local variable in a procedure ceases to exist as soon as the procedure stops. A static variable continues to exist and retains its most recent value. The next time your code calls the procedure, the variable is not reinitialized, and it still holds the latest value that you assigned to it. A static variable continues to exist for the lifetime of the class or module that it is defined in.  
+ 一般來說，程式停止時，程式中的區域變數就會停止存在。 靜態變數會繼續存在，並保留其最新的值。 下一次您的程式碼呼叫程式時，變數不會重新初始化，而且仍然會保留您指派給它的最新值。 靜態變數會繼續存在於其定義所在之類別或模組的存留期間。  
   
 ## <a name="rules"></a>規則  
   
-- **Declaration Context.** You can use `Static` only on local variables. This means the declaration context for a `Static` variable must be a procedure or a block in a procedure, and it cannot be a source file, namespace, class, structure, or module.  
+- **宣告內容。** 您只能在本機變數上使用 `Static`。 這表示 `Static` 變數的宣告內容必須是程式或程式中的區塊，而且不能是原始程式檔、命名空間、類別、結構或模組。  
   
-     You cannot use `Static` inside a structure procedure.  
+     您不能在結構程式中使用 `Static`。  
   
-- The data types of `Static` local variables cannot be inferred. For more information, see [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+- 無法推斷 `Static` 本機變數的資料類型。 如需詳細資訊，請參閱[區欄位型別推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
   
-- **Combined Modifiers.** You cannot specify `Static` together with `ReadOnly`, `Shadows`, or `Shared` in the same declaration.  
+- **合併的修飾詞。** 您不能在相同的宣告中同時指定 `Static` 與 `ReadOnly`、`Shadows`或 `Shared`。  
   
 ## <a name="behavior"></a>行為  
- When you declare a static variable in a `Shared` procedure, only one copy of the static variable is available for the whole application. You call a `Shared` procedure by using the class name, not a variable that points to an instance of the class.  
+ 當您在 `Shared` 程式中宣告靜態變數時，整個應用程式只能有一個靜態變數複本。 您可以使用類別名稱來呼叫 `Shared` 程式，而不是指向類別實例的變數。  
   
- When you declare a static variable in a procedure that isn't `Shared`, only one copy of the variable is available for each instance of the class. You call a non-shared procedure by using a variable that points to a specific instance of the class.  
+ 當您在不 `Shared`的程式中宣告靜態變數時，類別的每個實例只能有一個變數複本。 您可以使用指向類別之特定實例的變數來呼叫非共用程式。  
   
 ## <a name="example"></a>範例  
  下列範例示範 `Static` 的用法。  
   
  [!code-vb[VbVbalrKeywords#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#5)]  
   
- The `Static` variable `totalSales` is initialized to 0 only one time. Each time that you enter `updateSales`, `totalSales` still has the most recent value that you calculated for it.  
+ `Static` 變數 `totalSales` 只會初始化為0一次。 每次您輸入 `updateSales`時，`totalSales` 仍會有您為它計算的最新值。  
   
- The `Static` modifier can be used in this context:  
+ `Static` 修飾詞可以在此內容中使用：  
   
  [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
 ## <a name="see-also"></a>請參閱
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
-- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [共用](../../../visual-basic/language-reference/modifiers/shared.md)
+- [Visual Basic 中的存留期](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [變數宣告](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

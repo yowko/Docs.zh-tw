@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345957"
 ---
 # <a name="optional-parameters-visual-basic"></a>選擇性參數 (Visual Basic)
-您可以將程序參數指定為選擇項，當該程序被呼叫時就不必提供引數。 *Optional parameters* are indicated by the `Optional` keyword in the procedure definition. 可套用下列規則：  
+您可以將程序參數指定為選擇項，當該程序被呼叫時就不必提供引數。 *選擇性參數*會以程序定義中的 `Optional` 關鍵字來表示。 可套用下列規則：  
   
 - 程序定義中的每一個選擇性參數都必須指定一個預設值。  
   
@@ -43,14 +43,14 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 Sub name(argument 1, , , argument 4)  
 ```  
   
- 下列範例會建立數個對 `MsgBox` 函式的呼叫。 `MsgBox` 會有一個必要參數和兩個選擇性參數。  
+ 下列範例會建立數個對 `MsgBox` 函式的呼叫。 `MsgBox` 有一個必要參數和兩個選擇性參數。  
   
  第一個對 `MsgBox` 的呼叫會依照 `MsgBox` 定義的引數順序提供這三個引數。 第二個呼叫只會提供必要引數。 第三個和第四個呼叫會提供第一個和第三個引數。 第三個呼叫會依位置執行這個動作，第四個呼叫則會依名稱執行。  
   
  [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>判斷是否有選擇性引數  
- 程序在執行階段時無法偵測指定的引數是否已省略，或者呼叫程式碼已明確提供預設值。 如果您需要有所區別，可以將一個不常用的值設定為預設值。 The following procedure defines the optional parameter `office`, and tests for its default value, `QJZ`, to see if it has been omitted in the call:  
+ 程序在執行階段時無法偵測指定的引數是否已省略，或者呼叫程式碼已明確提供預設值。 如果您需要有所區別，可以將一個不常用的值設定為預設值。 下列程式會定義選擇性參數 `office`，並測試其預設值 `QJZ`，以查看它是否已在呼叫中省略：  
   
  [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
   

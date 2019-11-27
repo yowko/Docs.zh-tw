@@ -18,19 +18,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345161"
 ---
 # <a name="error-types-visual-basic"></a>錯誤類型 (Visual Basic)
-In Visual Basic, errors fall into one of three categories: syntax errors, run-time errors, and logic errors.
+在 Visual Basic 中，錯誤會屬於下列三個類別之一：語法錯誤、執行階段錯誤和邏輯錯誤。
 
 ## <a name="syntax-errors"></a>語法錯誤
- *Syntax errors* are those that appear while you write code. If you're using Visual Studio, Visual Basic checks your code as you type it in the **Code Editor** window and alerts you if you make a mistake, such as misspelling a word or using a language element improperly. If you compile from the command line, Visual Basic displays a compiler error with information about the syntax error. Syntax errors are the most common type of errors. You can fix them easily in the coding environment as soon as they occur.
+ *語法錯誤*是您撰寫程式碼時所顯示的錯誤。 如果您使用 Visual Studio，當您在 [程式**代碼編輯器**] 視窗中輸入程式碼時，Visual Basic 會檢查它，並在犯錯誤時向您發出警告，例如拼錯單字或使用 language 元素不正確。 如果您從命令列進行編譯，Visual Basic 會顯示編譯器錯誤，其中包含語法錯誤的相關資訊。 語法錯誤是最常見的錯誤類型。 您可以輕鬆地在程式碼撰寫環境中進行修正。
 
 > [!NOTE]
-> The `Option Explicit` statement is one means of avoiding syntax errors. It forces you to declare, in advance, all the variables to be used in the application. Therefore, when those variables are used in the code, any typographic errors are caught immediately and can be fixed.
+> `Option Explicit` 語句是避免語法錯誤的一種方法。 它會強制您事先宣告要在應用程式中使用的所有變數。 因此，在程式碼中使用這些變數時，任何印刷樣式錯誤都會立即捕捉，而且可以修正。
 
-## <a name="run-time-errors"></a>Run-Time Errors
- *Run-time errors* are those that appear only after you compile and run your code. These involve code that may appear to be correct in that it has no syntax errors, but that will not execute. For example, you might correctly write a line of code to open a file. But if the file does not exist, the application cannot open the file, and it throws an exception. You can fix most run-time errors by rewriting the faulty code or by using [exception handling](../../language-reference/statements/try-catch-finally-statement.md), and then recompiling and rerunning it.
+## <a name="run-time-errors"></a>執行階段錯誤
+ *執行階段錯誤*是指只有在您編譯和執行程式碼之後才會出現的錯誤。 這些程式碼包含可能正確的程式碼，因為它沒有任何語法錯誤，但不會執行。 例如，您可以正確地撰寫一行程式碼來開啟檔案。 但是，如果檔案不存在，應用程式就無法開啟檔案，而且會擲回例外狀況。 您可以藉由重寫錯誤的程式碼或使用[例外狀況處理](../../language-reference/statements/try-catch-finally-statement.md)來修正大部分的執行階段錯誤，然後重新編譯並重新執行它。
   
-## <a name="logic-errors"></a>Logic Errors
- *Logic errors* are those that appear once the application is in use. They are most often faulty assumptions made by the developer, or unwanted or unexpected results in response to user actions. For example, a mistyped key might provide incorrect information to a method, or you may assume that a valid value is always supplied to a method when that is not the case. Although logic errors can be handled by using [exception handling](../../language-reference/statements/try-catch-finally-statement.md) (for example, by testing whether an argument is `Nothing` and throwing an <xref:System.ArgumentNullException>), most commonly they should be addressed by correcting the error in logic and recompiling the application.
+## <a name="logic-errors"></a>邏輯錯誤
+ *邏輯錯誤*是應用程式在使用中時出現的錯誤。 這通常是開發人員所做的錯誤假設，或回應使用者動作的不必要或非預期的結果。 例如，輸入錯誤的索引鍵可能會提供不正確的資訊給方法，或者您可能會假設有效的值一律會提供給方法（如果不是這種情況）。 雖然邏輯錯誤可以使用[例外狀況處理](../../language-reference/statements/try-catch-finally-statement.md)來處理（例如，藉由測試引數是否 `Nothing` 和擲回 <xref:System.ArgumentNullException>），但通常應該藉由更正邏輯中的錯誤並重新編譯應用程式來解決。
 
 ## <a name="see-also"></a>請參閱
 

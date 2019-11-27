@@ -10,13 +10,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350232"
 ---
 # <a name="a-e-statements"></a>A-E 陳述式
-The following table contains a listing of Visual Basic language statements.  
+下表包含 Visual Basic language 語句的清單。  
   
 |||||  
 |---|---|---|---|  
 |[AddHandler](addhandler-statement.md)|[Call](call-statement.md)|[類別](class-statement.md)|[Const](const-statement.md)|  
 |[Continue](continue-statement.md)|[Declare](declare-statement.md)|[Delegate](delegate-statement.md)|[Dim](dim-statement.md)|  
-|[Do...Loop](do-loop-statement.md)|[Else](else-statement.md)|[End](end-statement.md)|[End \<關鍵字>](end-keyword-statement.md)|  
+|[Do .。。進入](do-loop-statement.md)|[Else](else-statement.md)|[End](end-statement.md)|[End \<關鍵字>](end-keyword-statement.md)|  
 |[Enum](enum-statement.md)|[Erase](erase-statement.md)|[錯誤](error-statement.md)|[Event](event-statement.md)|  
 |[結束](exit-statement.md)||||  
   

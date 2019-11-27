@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436391"
 ---
 # <a name="iceegenemitstring-method"></a>ICeeGen::EmitString 方法
-Emits the specified string into the code base.  
+將指定的字串發出至程式碼基底。  
   
- This method is obsolete and should not be used.  
+ 這個方法已過時，不應使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,17 +38,17 @@ HRESULT EmitString (
   
 ## <a name="parameters"></a>參數  
  `lpString`  
- [in] The string to emit.  
+ 在要發出的字串。  
   
  `RVA`  
- [out] The relative virtual address of the emitted string.  
+ 脫銷發出之字串的相對虛擬位址。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

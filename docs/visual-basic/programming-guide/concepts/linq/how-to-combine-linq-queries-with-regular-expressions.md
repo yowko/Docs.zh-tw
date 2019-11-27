@@ -1,5 +1,5 @@
 ---
-title: How to combine LINQ queries with regular expressions
+title: 如何合併 LINQ 查詢與規則運算式
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
 ms.openlocfilehash: 27fc46056ad78567339ca0c5818aef38d0fbb9a6
@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348424"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>How to combine LINQ queries with regular expressions (Visual Basic)
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>如何結合 LINQ 查詢與正則運算式（Visual Basic）
 
 此範例會示範如何使用 <xref:System.Text.RegularExpressions.Regex> 類別來建立規則運算式，以在文字字串中進行更複雜的比對。 LINQ 查詢讓您輕鬆地準確篩選出您想要用規則運算式搜尋的檔案，並調整結果。
 
@@ -82,13 +82,13 @@ Class LinqRegExVB
 End Class
 ```
 
-請注意，您也可以對由 `RegEx` 搜尋所傳回的 <xref:System.Text.RegularExpressions.MatchCollection> 物件進行查詢。 在本例中，結果只會產生每個相符項目的值。 不過，它也可以使用 LINQ 對該集合執行所有種類的篩選、排序及群組。 因為 <xref:System.Text.RegularExpressions.MatchCollection> 為非泛型 <xref:System.Collections.IEnumerable> 集合，所以您必須在查詢中明確地陳述範圍變數的類型。
+請注意，您也可以對由 <xref:System.Text.RegularExpressions.MatchCollection> 搜尋所傳回的 `RegEx` 物件進行查詢。 在本例中，結果只會產生每個相符項目的值。 不過，它也可以使用 LINQ 對該集合執行所有種類的篩選、排序及群組。 因為 <xref:System.Text.RegularExpressions.MatchCollection> 為非泛型 <xref:System.Collections.IEnumerable> 集合，所以您必須在查詢中明確地陳述範圍變數的類型。
 
 ## <a name="compiling-the-code"></a>編譯程式碼
 
-Create a VB.NET console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.
+建立 VB.NET 主控台應用程式專案、複製並貼上程式碼範例，然後調整專案屬性中的啟始物件值。
 
 ## <a name="see-also"></a>請參閱
 
-- [LINQ and Strings (Visual Basic)](linq-and-strings.md)
+- [LINQ 和字串（Visual Basic）](linq-and-strings.md)
 - [LINQ 與檔案目錄 (Visual Basic)](linq-and-file-directories.md)

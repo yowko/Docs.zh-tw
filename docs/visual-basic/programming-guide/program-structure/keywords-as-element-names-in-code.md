@@ -15,23 +15,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347398"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>程式碼中以關鍵字做為項目名稱 (Visual Basic)
-Any program element — such as a variable, class, or member — can have the same name as a restricted keyword. For example, you can create a variable named `Loop`. However, to refer to your version of it — which has the same name as the restricted `Loop` keyword — you must either precede it with a full qualification string or enclose it in square brackets (`[ ]`), as the following example shows.  
+任何程式元素（例如變數、類別或成員）的名稱都可以與受限關鍵字相同。 例如，您可以建立名為 `Loop`的變數。 不過，若要參考您的版本（其名稱與受限制的 `Loop` 關鍵字相同），您必須在其前面加上完整限定字串，或將其括在方括弧（`[ ]`）中，如下列範例所示。  
   
  [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
   
- If you do not do either of these, then Visual Basic assumes use of the intrinsic `Loop` keyword and produces an error, as in the following example:  
+ 如果您未執行上述任一項，則 Visual Basic 會假設使用內建 `Loop` 關鍵字並產生錯誤，如下列範例所示：  
   
  `' The following statement causes a compiler error.`  
   
  `Loop.Visible = True`  
   
- You can use square brackets when referring to forms and controls, and when declaring a variable or defining a procedure with the same name as a restricted keyword. It can be easy to forget to qualify names or include square brackets, and thus introduce errors into your code and make it harder to read. For this reason, we recommend that you not use restricted keywords as the names of program elements. However, if a future version of Visual Basic defines a new keyword that conflicts with an existing form or control name, then you can use this technique when updating your code to work with the new version.  
+ 您可以在參考表單和控制項時，以及在宣告變數或使用與受限制關鍵字相同的名稱來定義程式時，使用方括弧。 您可能很容易忘記限定名稱或包含方括弧，因此在您的程式碼中引進錯誤，使其更難以閱讀。 基於這個理由，我們建議您不要使用受限制的關鍵字做為程式元素的名稱。 不過，如果 Visual Basic 的未來版本定義了與現有表單或控制項名稱衝突的新關鍵字，則在更新程式碼以使用新版本時，您可以使用這項技術。  
   
 > [!NOTE]
-> Your program also might include element names provided by other referenced assemblies. If these names conflict with restricted keywords, then placing square brackets around them causes Visual Basic to interpret them as your defined elements.  
+> 您的程式也可能包含其他參考元件所提供的元素名稱。 如果這些名稱與受限制的關鍵字衝突，則在其周圍加上方括弧會導致 Visual Basic 將它們解讀為您定義的元素。  
   
 ## <a name="see-also"></a>請參閱
 
-- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic 命名慣例](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [程式結構和程式碼慣例](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

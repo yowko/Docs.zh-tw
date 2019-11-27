@@ -15,17 +15,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349522"
 ---
 # <a name="isfalse-operator-visual-basic"></a>IsFalse 運算子 (Visual Basic)
-Determines whether an expression is `False`.  
+判斷運算式是否 `False`。  
   
- You cannot call `IsFalse` explicitly in your code, but the Visual Basic compiler can use it to generate code from `AndAlso` clauses. If you define a class or structure and then use a variable of that type in an `AndAlso` clause, you must define `IsFalse` on that class or structure.  
+ 您無法在程式碼中明確地呼叫 `IsFalse`，但 Visual Basic 編譯器可以使用它從 `AndAlso` 子句產生程式碼。 如果您定義了類別或結構，然後在 `AndAlso` 子句中使用該類型的變數，就必須在該類別或結構上定義 `IsFalse`。  
   
- The compiler considers the `IsFalse` and `IsTrue` operators as a *matched pair*. This means that if you define one of them, you must also define the other one.  
+ 編譯器會將 `IsFalse` 和 `IsTrue` 運算子視為相符的*配對*。 這表示如果您定義其中一個，則也必須定義另一個。  
   
 > [!NOTE]
-> The `IsFalse` operator can be *overloaded*, which means that a class or structure can redefine its behavior when its operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+> `IsFalse` 運算子可以多載 *，這*表示當類別或結構的運算元具有該類別或結構的類型時，就可以重新定義其行為。 如果您的程式碼在這類類別或結構上使用這個運算子，請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- The following code example defines the outline of a structure that includes definitions for the `IsFalse` and `IsTrue` operators.  
+ 下列程式碼範例會定義結構的外框，其中包含 `IsFalse` 和 `IsTrue` 運算子的定義。  
   
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   

@@ -14,8 +14,8 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335440"
 ---
-# <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
-Suppresses display of the copyright banner and informational messages during compilation.  
+# <a name="-nologo-visual-basic"></a>-nologo （Visual Basic）
+在編譯期間隱藏著作權橫幅和參考用訊息。  
   
 ## <a name="syntax"></a>語法  
   
@@ -24,13 +24,13 @@ Suppresses display of the copyright banner and informational messages during com
 ```  
   
 ## <a name="remarks"></a>備註  
- If you specify `-nologo`, the compiler does not display a copyright banner. `-nologo` 預設為非作用中。  
+ 如果您指定 `-nologo`，編譯器不會顯示著作權橫幅。 `-nologo` 預設為非作用中。  
   
 > [!NOTE]
-> The `-nologo` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> Visual Studio 開發環境中無法使用 [`-nologo`] 選項;只有在從命令列編譯時，才可以使用它。  
   
 ## <a name="example"></a>範例  
- The following code compiles `T2.vb` and does not display a copyright banner.  
+ 下列程式碼會編譯 `T2.vb`，且不會顯示著作權橫幅。  
   
 ```console
 vbc -nologo t2.vb  

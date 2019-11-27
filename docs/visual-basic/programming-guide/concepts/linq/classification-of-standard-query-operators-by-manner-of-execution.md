@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345721"
 ---
-# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Classification of Standard Query Operators by Manner of Execution (Visual Basic)
+# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>依執行方式分類標準查詢運算子（Visual Basic）
 會使用兩種主要方式之一執行標準查詢運算子方法的 LINQ to Objects 實作：立即或延後。 使用延後執行的查詢運算子可以另外細分成兩個分類︰資料流和非資料流。 如果您知道如何執行不同的查詢運算子，則可以協助您了解透過給定查詢所取得的結果。 如果資料來源變更，或您所建置的查詢是根據另一個查詢，則這特別有用。 本主題會根據執行方式來分類標準查詢運算子。  
   
 ## <a name="manners-of-execution"></a>執行方式  
@@ -34,7 +34,7 @@ ms.locfileid: "74345721"
 > [!NOTE]
 > 如果在兩個資料行中標記運算子，則作業包含兩個輸入序列，而且會以不同的方式評估每個序列。 在這些情況下，它一律是參數清單中以延後資料流方式評估的第一個序列。  
   
-|標準查詢運算子|傳回型別|立即執行|延後資料流執行|延後非資料流執行|  
+|標準查詢運算子|傳回類型|立即執行|延後資料流執行|延後非資料流執行|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  
 |<xref:System.Linq.Enumerable.Aggregate%2A>|TSource|x|||  
 |<xref:System.Linq.Enumerable.All%2A>|<xref:System.Boolean>|x|||  
@@ -91,5 +91,5 @@ ms.locfileid: "74345721"
 
 - <xref:System.Linq.Enumerable>
 - [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Query Expression Syntax for Standard Query Operators (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [標準查詢運算子的查詢運算式語法（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

@@ -24,40 +24,40 @@ ms.locfileid: "74345280"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic 中的範圍
 
-The *scope* of a declared element is the set of all code that can refer to it without qualifying its name or making it available through an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). An element can have scope at one of the following levels:
+已宣告專案的*範圍*是一組可以參考它的程式碼，但不限定其名稱，或透過[Imports 語句（.net 命名空間和類型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)提供它。 元素的範圍可以是下列其中一個層級：
 
 |層級|描述|
 |-----------|-----------------|
-|區塊範圍|Available only within the code block in which it is declared|
-|Procedure scope|Available to all code within the procedure in which it is declared|
-|Module scope|Available to all code within the module, class, or structure in which it is declared|
-|Namespace scope|Available to all code in the namespace in which it is declared|
+|區塊範圍|只能在其宣告所在的程式碼區塊中使用|
+|程式範圍|可供宣告之程式內的所有程式碼使用|
+|模組範圍|適用于其宣告所在之模組、類別或結構內的所有程式碼|
+|命名空間範圍|可供宣告之命名空間中的所有程式碼使用|
 
-These levels of scope progress from the narrowest (block) to the widest (namespace), where *narrowest scope* means the smallest set of code that can refer to the element without qualification. For more information, see "Levels of Scope" on this page.
+從最窄（區塊）到最廣泛（命名空間）的這些範圍進度層級，其中最*窄的範圍*表示可以參考該專案但未限定的程式碼之一集。 如需詳細資訊，請參閱此頁面上的「範圍層級」。
 
-## <a name="specifying-scope-and-defining-variables"></a>Specifying Scope and Defining Variables
+## <a name="specifying-scope-and-defining-variables"></a>指定範圍和定義變數
 
-You specify the scope of an element when you declare it. The scope can depend on the following factors:
+當您宣告元素時，您可以指定專案的範圍。 範圍可以視下列因素而定：
 
-- The region (block, procedure, module, class, or structure) in which you declare the element
+- 您在其中宣告元素的區域（區塊、程式、模組、類別或結構）
 
-- The namespace containing the element's declaration
+- 包含元素宣告的命名空間
 
-- The access level you declare for the element
+- 您為元素宣告的存取層級
 
-Use care when you define variables with the same name but different scope, because doing so can lead to unexpected results. 如需詳細資訊，請參閱 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。
+當您定義具有相同名稱但範圍不同的變數時，請小心使用，因為這樣做可能會導致非預期的結果。 如需詳細資訊，請參閱 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。
 
-## <a name="levels-of-scope"></a>Levels of Scope
+## <a name="levels-of-scope"></a>範圍層級
 
-A programming element is available throughout the region in which you declare it. All code in the same region can refer to the element without qualifying its name.
+程式設計項目可在您宣告它的整個區域中使用。 相同區域中的所有程式碼都可以參考該元素，而不會限定其名稱。
 
-### <a name="block-scope"></a>Block Scope
+### <a name="block-scope"></a>封鎖範圍
 
-A block is a set of statements enclosed within initiating and terminating declaration statements, such as the following:
+區塊是包含在起始和結束宣告語句中的一組語句，如下所示：
 
 - `Do` 和 `Loop`
 
-- `For` [`Each`] and `Next`
+- `For` [`Each`] 和 `Next`
 
 - `If` 和 `End If`
 
@@ -71,7 +71,7 @@ A block is a set of statements enclosed within initiating and terminating declar
 
 - `With` 和 `End With`
 
-If you declare a variable within a block, you can use it only within that block. In the following example, the scope of the integer variable `cube` is the block between `If` and `End If`, and you can no longer refer to `cube` when execution passes out of the block.
+如果您在區塊內宣告變數，就只能在該區塊內使用它。 在下列範例中，整數變數 `cube` 的範圍是 `If` 和 `End If`之間的區塊，而當執行超出區塊時，您就不能再參考 `cube`。
 
 ```vb
 If n < 1291 Then
@@ -81,26 +81,26 @@ End If
 ```
 
 > [!NOTE]
-> Even if the scope of a variable is limited to a block, its lifetime is still that of the entire procedure. If you enter the block more than once during the procedure, each block variable retains its previous value. To avoid unexpected results in such a case, it is wise to initialize block variables at the beginning of the block.
+> 即使變數的範圍限制為區塊，它的存留期仍然是整個程式的存留時間。 如果您在程式期間多次輸入區塊，每個區塊變數都會保留其先前的值。 為了避免這種情況發生非預期的結果，在區塊開頭初始化區塊變數是明智的做法。
 
-### <a name="procedure-scope"></a>Procedure Scope
+### <a name="procedure-scope"></a>程式範圍
 
-An element declared within a procedure is not available outside that procedure. Only the procedure that contains the declaration can use it. Variables at this level are also known as *local variables*. You declare them with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), with or without the [Static](../../../../visual-basic/language-reference/modifiers/static.md) keyword.
+在程式中宣告的元素無法在該程式之外使用。 只有包含宣告的程式可以使用它。 此層級的變數也稱為「*區域變數」（local variables*）。 您可以使用[Dim 語句](../../../../visual-basic/language-reference/statements/dim-statement.md)來宣告它們，其中包含或不使用[Static](../../../../visual-basic/language-reference/modifiers/static.md)關鍵字。
 
-Procedure and block scope are closely related. If you declare a variable inside a procedure but outside any block within that procedure, you can think of the variable as having block scope, where the block is the entire procedure.
+程式與區塊領域密切相關。 如果您在程式中宣告變數，但在該程式內的任何區塊外，您可以將變數視為具有區塊範圍，其中區塊是整個程式。
 
 > [!NOTE]
-> All local elements, even if they are `Static` variables, are private to the procedure in which they appear. You cannot declare any element using the [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword within a procedure.
+> 所有的本機元素（即使是 `Static` 變數）都是其出現所在程式的私用專案。 您不能在程式內使用[Public](../../../../visual-basic/language-reference/modifiers/public.md)關鍵字來宣告任何專案。
 
-### <a name="module-scope"></a>Module Scope
+### <a name="module-scope"></a>模組範圍
 
-For convenience, the single term *module level* applies equally to modules, classes, and structures. You can declare elements at this level by placing the declaration statement outside of any procedure or block but within the module, class, or structure.
+為了方便起見，單一詞彙*模組層級*同樣適用于模組、類別和結構。 您可以在此層級宣告專案，方法是將宣告語句放在任何程式或區塊的外部，但是在模組、類別或結構中。
 
-When you make a declaration at the module level, the access level you choose determines the scope. The namespace that contains the module, class, or structure also affects the scope.
+當您在模組層級進行宣告時，您選擇的存取層級會決定範圍。 包含模組、類別或結構的命名空間也會影響範圍。
 
-Elements for which you declare [Private](../../../../visual-basic/language-reference/modifiers/private.md) access level are available to every procedure in that module, but not to any code in a different module. The `Dim` statement at module level defaults to `Private` if you do not use any access level keywords. However, you can make the scope and access level more obvious by using the `Private` keyword in the `Dim` statement.
+您宣告[私](../../../../visual-basic/language-reference/modifiers/private.md)用存取層級的專案可用於該模組中的每個程式，但不適用於不同模組中的任何程式碼。 如果您未使用任何存取層級關鍵字，模組層級的 `Dim` 語句會預設為 `Private`。 不過，您可以使用 `Dim` 語句中的 `Private` 關鍵字，讓範圍和存取層級更明顯。
 
-In the following example, all procedures defined in the module can refer to the string variable `strMsg`. When the second procedure is called, it displays the contents of the string variable `strMsg` in a dialog box.
+在下列範例中，在模組中定義的所有程式都可以參考 `strMsg`的字串變數。 呼叫第二個程式時，會在對話方塊中顯示 `strMsg` 的字串變數內容。
 
 ```vb
 ' Put the following declaration at module level (not in any procedure).
@@ -115,40 +115,40 @@ Sub usePrivateVariable()
 End Sub
 ```
 
-### <a name="namespace-scope"></a>Namespace Scope
+### <a name="namespace-scope"></a>命名空間範圍
 
-If you declare an element at module level using the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) or [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword, it becomes available to all procedures throughout the namespace in which the element is declared. With the following alteration to the preceding example, the string variable `strMsg` can be referred to by code anywhere in the namespace of its declaration.
+如果您使用[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)或[Public](../../../../visual-basic/language-reference/modifiers/public.md)關鍵字在模組層級宣告專案，它會變成可供在宣告專案之命名空間中的所有程式使用。 在上述範例中的下列改變之後，字串變數 `strMsg` 可以在其宣告之命名空間中的任何位置參考。
 
 ```vb
 ' Include this declaration at module level (not inside any procedure).
 Public strMsg As String
 ```
 
-Namespace scope includes nested namespaces. An element available from within a namespace is also available from within any namespace nested inside that namespace.
+命名空間範圍包含嵌套的命名空間。 您也可以從命名空間內的任何命名空間中，取得可從命名空間中取得的專案。
 
-If your project does not contain any [Namespace Statement](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, everything in the project is in the same namespace. In this case, namespace scope can be thought of as project scope. `Public` elements in a module, class, or structure are also available to any project that references their project.
+如果您的專案未包含任何[命名空間語句](../../../../visual-basic/language-reference/statements/namespace-statement.md)，則專案中的所有內容都會位於相同的命名空間中。 在此情況下，可以將命名空間範圍視為專案範圍。 模組、類別或結構中的 `Public` 元素也可供參考其專案的任何專案使用。
 
-## <a name="choice-of-scope"></a>Choice of Scope
+## <a name="choice-of-scope"></a>選擇範圍
 
-When you declare a variable, you should keep in mind the following points when choosing its scope.
+當您宣告變數時，在選擇其範圍時，您應該記住下列幾點。
 
-### <a name="advantages-of-local-variables"></a>Advantages of Local Variables
+### <a name="advantages-of-local-variables"></a>本機變數的優點
 
-Local variables are a good choice for any kind of temporary calculation, for the following reasons:
+針對任何類型的暫時計算而言，本機變數都是不錯的選擇，原因如下：
 
-- **Name Conflict Avoidance.** Local variable names are not susceptible to conflict. For example, you can create several different procedures containing a variable called `intTemp`. As long as each `intTemp` is declared as a local variable, each procedure recognizes only its own version of `intTemp`. Any one procedure can alter the value in its local `intTemp` without affecting `intTemp` variables in other procedures.
+- **避免名稱衝突。** 本機變數名稱不容易發生衝突。 例如，您可以建立數個不同的程式，其中包含稱為 `intTemp`的變數。 只要每個 `intTemp` 宣告為區域變數，每個程式都只會辨識自己的 `intTemp`版本。 任何一個程式都可以改變其本機 `intTemp` 中的值，而不會影響其他程式中 `intTemp` 變數。
 
-- **Memory Consumption.** Local variables consume memory only while their procedure is running. Their memory is released when the procedure returns to the calling code. By contrast, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) and [Static](../../../../visual-basic/language-reference/modifiers/static.md) variables consume memory resources until your application stops running, so use them only when necessary. *Instance variables* consume memory while their instance continues to exist, which makes them less efficient than local variables, but potentially more efficient than `Shared` or `Static` variables.
+- **記憶體耗用量。** 本機變數只有在其程式正在執行時才會耗用記憶體。 當程式返回呼叫的程式碼時，就會釋放其記憶體。 相反地，[共用](../../../../visual-basic/language-reference/modifiers/shared.md)和[靜態](../../../../visual-basic/language-reference/modifiers/static.md)變數會耗用記憶體資源，直到您的應用程式停止執行為止，因此只有在必要時才使用它們。 *執行個體變數*會耗用記憶體，而其實例會繼續存在，讓它們比區域變數更有效率，但可能比 `Shared` 或 `Static` 變數更有效率。
 
-### <a name="minimizing-scope"></a>Minimizing Scope
+### <a name="minimizing-scope"></a>最小化範圍
 
-In general, when declaring any variable or constant, it is good programming practice to make the scope as narrow as possible (block scope is the narrowest). This helps conserve memory and minimizes the chances of your code erroneously referring to the wrong variable. Similarly, you should declare a variable to be [Static](../../../../visual-basic/language-reference/modifiers/static.md) only when it is necessary to preserve its value between procedure calls.
+一般來說，在宣告任何變數或常數時，最好的程式設計作法是讓範圍盡可能縮小（區塊範圍是最窄的）。 這有助於節省記憶體，並將程式碼錯誤地參考錯誤變數的機率降到最低。 同樣地，您應該將變數宣告為[靜態](../../../../visual-basic/language-reference/modifiers/static.md)，只有在必要時，才必須在程序呼叫之間保留其值。
 
 ## <a name="see-also"></a>請參閱
 
 - [宣告項目特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [如何：控制變數的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
-- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic 中的存留期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Visual Basic 中的存取層級](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [對已宣告項目的參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

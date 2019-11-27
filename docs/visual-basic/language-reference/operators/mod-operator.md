@@ -19,9 +19,9 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350911"
 ---
-# <a name="mod-operator-visual-basic"></a>Mod operator (Visual Basic)
+# <a name="mod-operator-visual-basic"></a>Mod 運算子（Visual Basic）
 
-Divides two numbers and returns only the remainder.
+將兩個數字相除，然後只傳回餘數。
 
 ## <a name="syntax"></a>語法
 
@@ -32,26 +32,26 @@ result = number1 Mod number2
 ## <a name="parts"></a>組件
 
 `result` \
-必要項。 Any numeric variable or property.
+必要。 任何數值變數或屬性。
 
 `number1` \
-必要項。 任何數值運算式。
+必要。 任何數值運算式。
 
 `number2` \
-必要項。 任何數值運算式。
+必要。 任何數值運算式。
 
-## <a name="supported-types"></a>Supported types
+## <a name="supported-types"></a>支援的類型
 
-所有數值類型。 This includes the unsigned and floating-point types and `Decimal`.
+所有數值類型。 這包括不帶正負號的和浮點類型，以及 `Decimal`。
 
 ## <a name="result"></a>結果
 
-The result is the remainder after `number1` is divided by `number2`. For example, the expression `14 Mod 4` evaluates to 2.
+結果是 `number1` 除以 `number2`之後的餘數。 例如，運算式 `14 Mod 4` 會評估為2。
 
 > [!NOTE]
-> There is a difference between *remainder* and *modulus* in mathematics, with different results for negative numbers. The `Mod` operator in Visual Basic, the .NET Framework `op_Modulus` operator, and the underlying [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL instruction all perform a remainder operation.
+> 在數學中，*餘數*與*模數*之間會有不同的結果，而負數的結果則有所不同。 Visual Basic 中的 `Mod` 運算子、.NET Framework `op_Modulus` 運算子，以及基礎的[rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL 指令全部都會執行餘數運算。
 
-The result of a `Mod` operation retains the sign of the dividend, `number1`, and so it may be positive or negative. The result is always in the range (-`number2`, `number2`), exclusive. 例如:
+`Mod` 作業的結果會保留被除數的正負號，`number1`，因此它可能是正數或負數。 結果一律在範圍內（-`number2`，`number2`），獨佔。 例如：
 
 ```vb
 Public Module Example
@@ -71,48 +71,48 @@ End Module
 
 ## <a name="remarks"></a>備註
 
-If either `number1` or `number2` is a floating-point value, the floating-point remainder of the division is returned. The data type of the result is the smallest data type that can hold all possible values that result from division with the data types of `number1` and `number2`.
+如果 `number1` 或 `number2` 是浮點值，則會傳回除法的浮點餘數。 結果的資料類型是最小的資料類型，可以保存與 `number1` 和 `number2`的資料類型相除所產生的所有可能值。
 
-If `number1` or `number2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.
+如果 `number1` 或 `number2` 評估為[沒有任何](../../../visual-basic/language-reference/nothing.md)值，則會將它視為零。
 
-Related operators include the following:
+相關的運算子包括下列各項：
 
-- The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient of a division. For example, the expression `14 \ 4` evaluates to 3.
+- [\ 運算子（Visual Basic）](../../../visual-basic/language-reference/operators/integer-division-operator.md)會傳回除法的整數商。 例如，運算式 `14 \ 4` 會評估為3。
 
-- The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) returns the full quotient, including the remainder, as a floating-point number. For example, the expression `14 / 4` evaluates to 3.5.
+- [/運算子（Visual Basic）](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)會傳回完整的商，包括餘數，做為浮點數。 例如，運算式 `14 / 4` 會評估為3.5。
 
-## <a name="attempted-division-by-zero"></a>Attempted division by zero
+## <a name="attempted-division-by-zero"></a>嘗試除數為零
 
-If `number2` evaluates to zero, the behavior of the `Mod` operator depends on the data type of the operands:
+如果 `number2` 評估為零，則 `Mod` 運算子的行為取決於運算元的資料類型：
 
-- An integral division throws a <xref:System.DivideByZeroException> exception if `number2` cannot be determined in compile-time and generates a compile-time error `BC30542 Division by zero occurred while evaluating this expression` if `number2` is evaluated to zero at compile-time.
-- A floating-point division returns <xref:System.Double.NaN?displayProperty=nameWithType>.
+- 如果無法在編譯時期判斷 `number2`，而且在編譯時期將 `number2` 評估為零 `BC30542 Division by zero occurred while evaluating this expression`，則整數除法會擲回 <xref:System.DivideByZeroException> 例外狀況。
+- 浮點除法會傳回 <xref:System.Double.NaN?displayProperty=nameWithType>。
 
-## <a name="equivalent-formula"></a>Equivalent formula
+## <a name="equivalent-formula"></a>對等公式
 
-The expression `a Mod b` is equivalent to either of the following formulas:
+運算式 `a Mod b` 相當於下列其中一個公式：
 
 `a - (b * (a \ b))`
 
 `a - (b * Fix(a / b))`
 
-## <a name="floating-point-imprecision"></a>Floating-point imprecision
+## <a name="floating-point-imprecision"></a>浮點不精確
 
-When you work with floating-point numbers, remember that they do not always have a precise decimal representation in memory. This can lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+當您使用浮點數時，請記住，記憶體中不一定有精確的十進位標記法。 這可能會導致某些作業產生非預期的結果，例如值比較和 `Mod` 運算子。 如需詳細資訊，請參閱針對[資料類型進行疑難排解](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。
 
 ## <a name="overloading"></a>多載化
 
-The `Mod` operator can be *overloaded*, which means that a class or structure can redefine its behavior. If your code applies `Mod` to an instance of a class or structure that includes such an overload, be sure you understand its redefined behavior. 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。
+`Mod`*運算子可以多載，這*表示類別或結構可以重新定義其行為。 如果您的程式碼套用 `Mod` 至包含這類多載之類別或結構的實例，請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。
 
 ## <a name="example"></a>範例
 
-The following example uses the `Mod` operator to divide two numbers and return only the remainder. If either number is a floating-point number, the result is a floating-point number that represents the remainder.
+下列範例會使用 `Mod` 運算子來將兩個數字相除，然後只傳回餘數。 如果任一個數位是浮點數，則結果會是代表餘數的浮點數。
 
 [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]
 
 ## <a name="example"></a>範例
 
-The following example demonstrates the potential imprecision of floating-point operands. In the first statement, the operands are `Double`, and 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001. In the second statement, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation.
+下列範例示範浮點運算元的潛在不精確。 在第一個語句中，運算元是 `Double`，而0.2 則是具有儲存值0.20000000000000001 的無限重複二進位分數。 在第二個語句中，常數值型別字元 `D` 會強制執行這兩個運算元 `Decimal`，而0.2 具有精確的標記法。
 
 [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]
 
@@ -124,5 +124,5 @@ The following example demonstrates the potential imprecision of floating-point o
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [資料類型的疑難排解](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [Visual Basic 中的算術運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [\ 運算子（Visual Basic）](../../../visual-basic/language-reference/operators/integer-division-operator.md)

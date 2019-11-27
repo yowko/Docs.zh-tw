@@ -12,8 +12,8 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352308"
 ---
-# <a name="para-visual-basic"></a>\<para> (Visual Basic)
-Specifies that the content is formatted as a paragraph.  
+# <a name="para-visual-basic"></a>\<段落 > （Visual Basic）
+指定將內容格式化為段落。  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,12 +26,12 @@ Specifies that the content is formatted as a paragraph.
  段落的文字。  
   
 ## <a name="remarks"></a>備註  
- The `<para>` tag is for use inside a tag, such as [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), or [\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md), and lets you add structure to the text.  
+ `<para>` 標記用於標記內部，例如[\<摘要 >](../../../visual-basic/language-reference/xmldoc/summary.md)、 [\<備註 >](../../../visual-basic/language-reference/xmldoc/remarks.md)或\<會傳回[>](../../../visual-basic/language-reference/xmldoc/returns.md)，並可讓您將結構新增至文字。  
   
  使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 編譯可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
- This example uses the `<para>` tag to split the remarks section for the `UpdateRecord` method into two paragraphs.  
+ 這個範例會使用 `<para>` 標記，將 `UpdateRecord` 方法的備註區段分割成兩個段落。  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

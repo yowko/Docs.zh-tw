@@ -17,9 +17,9 @@ ms.locfileid: "74283171"
 
 |專案名稱|描述|主要檔案|
 |-|-|-|
-|ExternalizedPolicy4|包含 ExternalizedPolicy4 活動及其 WF 4.5 設計工具。|**ExternalizedPolicy4.cs**：活動定義。<br /><br /> **ExternalizedPolicy4Designer.xaml**：ExternalizedPolicy4 活動的自訂設計工具。 它使用 WF 3.5 規則引擎中的規則編輯器 (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>)。|
-|ImperativeCodeClientSample|範例用戶端應用程式，透過使用命令式 C# 程式碼 (未使用設計工具) 的 ExternalizedPolicy4 應用程式，來設定及執行工作流程。|**ApplyDiscount.rules**：具有 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 規則定義的檔案。<br /><br /> **Order.cs**：代表客戶訂單的類型。 規則套用至這個類型的物件。<br /><br /> **Program.cs**：設定及執行工作流程，其中有 Policy4 活動會將 ApplyDiscount.rules 中定義的規則套用至 Order 物件執行個體。<br /><br /> App.config：具有規則檔路徑的組態檔。|
-|DesignerClientSample|範例用戶端應用程式，透過使用 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 設計工具的 ExternalPolicy4 應用程式，來設定及執行工作流程。|**Sequence1.xaml**：使用 Policy4 活動執行規則評估的循序工作流程。<br /><br /> **Program.cs**：執行 Sequence1.xaml 中定義的工作流程執行個體。|
+|ExternalizedPolicy4|包含 ExternalizedPolicy4 活動及其 WF 4.5 設計工具。|**ExternalizedPolicy4.cs**：活動定義。<br /><br /> **ExternalizedPolicy4Designer**： ExternalizedPolicy4 活動的自訂設計工具。 它使用 WF 3.5 規則引擎中的規則編輯器 (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>)。|
+|ImperativeCodeClientSample|範例用戶端應用程式，透過使用命令式 C# 程式碼 (未使用設計工具) 的 ExternalizedPolicy4 應用程式，來設定及執行工作流程。|**Applydiscount.rules**：具有 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 規則定義的檔案。<br /><br /> **Order.cs**：代表客戶訂單的類型。 規則套用至這個類型的物件。<br /><br /> **Program.cs**：設定和執行具有 Policy4 活動的工作流程，以將 applydiscount.rules 中定義的規則套用至 Order 物件的實例。<br /><br /> App.config：具有規則檔路徑的組態檔。|
+|DesignerClientSample|範例用戶端應用程式，透過使用 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 設計工具的 ExternalPolicy4 應用程式，來設定及執行工作流程。|**Sequence1**：使用 Policy4 活動執行規則評估的序列工作流程。<br /><br /> **Program.cs**：執行 Sequence1 中所定義之工作流程的實例。|
 
 ## <a name="the-externalizedpolicy4-activity"></a>ExternalizedPolicy4 活動
 
@@ -52,7 +52,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 ## <a name="externalizedpolicy4-activity-designer"></a>ExternalizedPolicy4 活動設計工具
 
-ExternalizedPolicy4 設計工具讓您不需要撰寫程式碼，即可設定活動使用現有的 RuleSet。 只要設定 .rules 檔案所在路徑，並指定您要使用的 <xref:System.Workflow.Activities.Rules.RuleSet> 名稱。 它也可以讓您修改 <xref:System.Workflow.Activities.Rules.RuleSet>。 在建置方案之後，可在工具箱的 Microsoft.Samples.Activities.Rules 區段中找到它。 此設計工具可讓您選取 .rules 檔案和 <xref:System.Workflow.Activities.Rules.RuleSet>。 按一下 [**Edit RuleSet**] 按鈕時，就會顯示 WF 3.5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>。 這個對話方塊是重新裝載的 WF 3.5 規則編輯器，可用來檢視及編輯 ExternalizedPolicy4 活動執行的規則。
+ExternalizedPolicy4 設計工具讓您不需要撰寫程式碼，即可設定活動使用現有的 RuleSet。 只要設定 .rules 檔案所在路徑，並指定您要使用的 <xref:System.Workflow.Activities.Rules.RuleSet> 名稱。 它也可以讓您修改 <xref:System.Workflow.Activities.Rules.RuleSet>。 在建置方案之後，可在工具箱的 Microsoft.Samples.Activities.Rules 區段中找到它。 此設計工具可讓您選取 .rules 檔案和 <xref:System.Workflow.Activities.Rules.RuleSet>。 按一下 [**編輯規則集**] 按鈕時，會顯示 WF 3.5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>。 這個對話方塊是重新裝載的 WF 3.5 規則編輯器，可用來檢視及編輯 ExternalizedPolicy4 活動執行的規則。
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 和 ExternalPolicy4
 
@@ -68,7 +68,7 @@ ExternalizedPolicy4 設計工具讓您不需要撰寫程式碼，即可設定活
 
 1. 使用 Visual Studio，開啟 [ *policy4sample.sln* ] 方案檔。
 
-2. 在 [**方案總管**] 中，以滑鼠右鍵按一下 **ImperativeCodeClientSample** 專案，然後選取 [**設定為啟始專案**]。
+2. 在**方案總管**中，以滑鼠右鍵按一下**ImperativeCodeClientSample**專案，然後選取 [**設定為啟始專案**]。
 
 3. 若要執行專案，請按**Ctrl**+**F5**。
 
@@ -76,7 +76,7 @@ ExternalizedPolicy4 設計工具讓您不需要撰寫程式碼，即可設定活
 
 1. 使用 Visual Studio，開啟 [ *policy4sample.sln* ] 方案檔。
 
-2. 在 [**方案總管**] 中，以滑鼠右鍵按一下 **DesignerClientSample** 專案，然後選取 [**設定為啟始專案**]。
+2. 在**方案總管**中，以滑鼠右鍵按一下**DesignerClientSample**專案，然後選取 [**設定為啟始專案**]。
 
 3. 按**Ctrl**+**Shift**+**B**來編譯專案。
 

@@ -16,9 +16,9 @@ ms.locfileid: "74430683"
 # <a name="metadata-unions"></a>中繼資料等位
 本節說明中繼資料應用程式開發介面所使用的 Unmanaged 等位。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [CeeSectionRelocExtra 等位](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
- Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section  
+ 表示[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)介面用來重新放置區段的位址位移。  
   
 ## <a name="related-sections"></a>相關章節  
  [中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

@@ -14,25 +14,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349339"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>撰寫第一個 LINQ 查詢 (Visual Basic)
-「查詢」是指從資料來源中擷取資料的運算式。 Queries are expressed in a dedicated query language. Over time, different languages have been developed for different types of data sources, for example, SQL for relational databases and XQuery for XML. This makes it necessary for the application developer to learn a new query language for each type of data source or data format that is supported.  
+「查詢」是指從資料來源中擷取資料的運算式。 查詢是以專用的查詢語言表示。 經過一段時間後，針對不同類型的資料來源（例如，適用于關係資料庫的 SQL 和 XQuery for XML）開發了不同的語言。 如此一來，應用程式開發人員就必須針對支援的每種資料來源或資料格式，學習新的查詢語言。  
   
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] simplifies the situation by offering a consistent model for working with data across various kinds of data sources and formats. 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢中，您所處理的一定是物件。 You use the same basic coding patterns to query and transform data in XML documents, SQL databases, ADO.NET datasets and entities, .NET Framework collections, and any other source or format for which a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider is available. This document describes the three phases of the creation and use of basic [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries.  
+ [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 藉由提供一致的模型來處理各種資料來源和格式的資料，來簡化這種情況。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢中，您所處理的一定是物件。 您可以使用相同的基本編碼模式來查詢和轉換 XML 檔、SQL 資料庫、ADO.NET 資料集和實體、.NET Framework 集合，以及可使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者的任何其他來源或格式的資料。 本檔說明建立和使用基本 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的三個階段。  
   
-## <a name="three-stages-of-a-query-operation"></a>Three Stages of a Query Operation  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query operations consist of three actions:  
+## <a name="three-stages-of-a-query-operation"></a>查詢作業的三個階段  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢作業包含三個動作：  
   
-1. Obtain the data source or sources.  
+1. 取得資料來源或來源。  
   
 2. 建立查詢。  
   
 3. 執行查詢。  
   
- In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], the execution of a query is distinct from the creation of the query. You do not retrieve any data just by creating a query. 本主題稍後會詳細討論這一點。  
+ 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]中，查詢的執行與查詢的建立方式不同。 您只要建立查詢，就不會抓取任何資料。 本主題稍後會詳細討論這一點。  
   
- The following example illustrates the three parts of a query operation. The example uses an array of integers as a convenient data source for demonstration purposes. However, the same concepts also apply to other data sources.  
+ 下列範例說明查詢作業的三個部分。 此範例會使用整數陣列做為示範用途的方便資料來源。 不過，相同的概念也適用于其他資料來源。  
   
 > [!NOTE]
-> On the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), ensure that **Option infer** is set to **On**.  
+> 在 [[編譯] 頁面上，[專案設計工具] （Visual Basic）](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)，確定 [**選項推斷**] 已設定為 [**開啟**]。  
   
  [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
@@ -41,15 +41,15 @@ ms.locfileid: "74349339"
  `0 2 4 6`  
   
 ## <a name="the-data-source"></a>資料來源  
- Because the data source in the previous example is an array, it implicitly supports the generic <xref:System.Collections.Generic.IEnumerable%601> interface. It is this fact that enables you to use an array as a data source for a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query. 支援 <xref:System.Collections.Generic.IEnumerable%601> 或衍生介面的類型，例如泛型 <xref:System.Linq.IQueryable%601> 稱為*可查詢的類型*。  
+ 因為上一個範例中的資料來源是陣列，所以它會隱含支援泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面。 這就是讓您使用陣列做為 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的資料來源的事實。 支援 <xref:System.Collections.Generic.IEnumerable%601> 或衍生介面的類型，例如泛型 <xref:System.Linq.IQueryable%601> 稱為*可查詢的類型*。  
   
- As an implicitly queryable type, the array requires no modification or special treatment to serve as a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] data source. The same is true for any collection type that supports <xref:System.Collections.Generic.IEnumerable%601>, including the generic <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602>, and other classes in the .NET Framework class library.  
+ 以隱含方式查詢的類型而言，陣列不需要進行修改或特殊處理，就能做為 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 資料來源。 任何支援 <xref:System.Collections.Generic.IEnumerable%601>的集合類型也是如此，包括泛型 <xref:System.Collections.Generic.List%601>、<xref:System.Collections.Generic.Dictionary%602>，以及 .NET Framework Class Library 中的其他類別。  
   
- If the source data does not already implement <xref:System.Collections.Generic.IEnumerable%601>, a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider is needed to implement the functionality of the *standard query operators* for that data source. For example, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] handles the work of loading an XML document into a queryable <xref:System.Xml.Linq.XElement> type, as shown in the following example. For more information about standard query operators, see [Standard Query Operators Overview (Visual Basic)](standard-query-operators-overview.md).  
+ 如果來源資料尚未 <xref:System.Collections.Generic.IEnumerable%601>執行，則需要有 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者，才能為該資料來源的*標準查詢運算子*執行功能。 例如，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會處理將 XML 檔載入可查詢 <xref:System.Xml.Linq.XElement> 類型的工作，如下列範例所示。 如需標準查詢運算子的詳細資訊，請參閱[標準查詢運算子總覽（Visual Basic）](standard-query-operators-overview.md)。  
   
  [!code-vb[VbLINQFirstQuery#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#2)]  
   
- With [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], you first create an object-relational mapping at design time, either manually or by using the [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) in Visual Studio. 您可以針對物件撰寫查詢，而 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 則會在執行階段處理與資料庫之間的通訊。 In the following example, `customers` represents a specific table in the database, and <xref:System.Data.Linq.Table%601> supports generic <xref:System.Linq.IQueryable%601>.  
+ 使用 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]，您可以在設計階段以手動方式或在 Visual Studio 的 Visual Studio 中使用[LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)，來建立物件關聯式對應。 您可以針對物件撰寫查詢，而 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 則會在執行階段處理與資料庫之間的通訊。 在下列範例中，`customers` 代表資料庫中的特定資料表，而且 <xref:System.Data.Linq.Table%601> 支援泛型 <xref:System.Linq.IQueryable%601>。  
   
 ```vb  
 ' Create a data source from a SQL table.  
@@ -57,33 +57,33 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- 如需如何建立特定資料來源類型的詳細資訊，請參閱各種 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者的文件。 (For a list of these providers, see [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) The basic rule is simple: a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] data source is any object that supports the generic <xref:System.Collections.Generic.IEnumerable%601> interface, or an interface that inherits from it.  
+ 如需如何建立特定資料來源類型的詳細資訊，請參閱各種 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者的文件。 （如需這些提供者的清單，請參閱[LINQ （語言整合式查詢）](../../../../visual-basic/programming-guide/concepts/linq/index.md)）。基本規則很簡單： [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 資料來源是支援泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面的任何物件，或繼承自它的介面。  
   
 > [!NOTE]
-> Types such as <xref:System.Collections.ArrayList> that support the non-generic <xref:System.Collections.IEnumerable> interface can also be used as [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] data sources. For an example that uses an <xref:System.Collections.ArrayList>, see [How to: Query an ArrayList with LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
+> 支援非泛型 <xref:System.Collections.IEnumerable> 介面的類型（例如 <xref:System.Collections.ArrayList>）也可用來做為 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 資料來源。 如需使用 <xref:System.Collections.ArrayList>的範例，請參閱[如何：使用 LINQ 查詢 ArrayList （Visual Basic）](how-to-query-an-arraylist-with-linq.md)。  
   
-## <a name="the-query"></a>The Query  
- In the query, you specify what information you want to retrieve from the data source or sources. You also have the option of specifying how that information should be sorted, grouped, or structured before it is returned. To enable query creation, Visual Basic has incorporated new query syntax into the language.  
+## <a name="the-query"></a>查詢  
+ 在查詢中，您可以指定您想要從資料來源或來源中取出的資訊。 您也可以選擇指定該資訊在傳回之前應如何排序、分組或結構化。 若要啟用查詢建立，Visual Basic 已將新的查詢語法併入語言中。  
   
- When it is executed, the query in the following example returns all the even numbers from an integer array, `numbers`.  
+ 執行時，下列範例中的查詢會傳回整數陣列中的所有偶數數位，`numbers`。  
   
  [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
- The query expression contains three clauses: `From`, `Where`, and `Select`. The specific function and purpose of each query expression clause is discussed in [Basic Query Operations (Visual Basic)](basic-query-operations.md). For more information, see [Queries](../../../../visual-basic/language-reference/queries/index.md). Note that in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], a query definition often is stored in a variable and executed later. The query variable, such as `evensQuery` in the previous example, must be a queryable type. The type of `evensQuery` is `IEnumerable(Of Integer)`, assigned by the compiler using local type inference.  
+ 查詢運算式包含三個子句： `From`、`Where`和 `Select`。 [基本查詢作業（Visual Basic）](basic-query-operations.md)中會討論每個查詢運算式子句的特定函數和用途。 如需詳細資訊，請參閱[查詢](../../../../visual-basic/language-reference/queries/index.md)。 請注意，在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]中，查詢定義通常會儲存在變數中，並于稍後執行。 查詢變數（例如上一個範例中的 `evensQuery`）必須是可查詢的類型。 `evensQuery` 的類型是由編譯器使用區欄位型別推斷來指派 `IEnumerable(Of Integer)`。  
   
- It is important to remember that the query variable itself takes no action and returns no data. It only stores the query definition. In the previous example, it is the `For Each` loop that executes the query.  
+ 請務必記住，查詢變數本身不會採取任何動作，也不會傳回任何資料。 它只會儲存查詢定義。 在上述範例中，它是執行查詢的 `For Each` 迴圈。  
   
 ## <a name="query-execution"></a>查詢執行  
- Query execution is separate from query creation. Query creation defines the query, but execution is triggered by a different mechanism. A query can be executed as soon as it is defined (*immediate execution*), or the definition can be stored and the query can be executed later (*deferred execution*).  
+ 查詢執行與查詢建立分開。 查詢建立會定義查詢，但執行是由不同的機制所觸發。 查詢可以在定義（*立即執行*）時立即執行，或可以儲存定義，而且稍後可以執行查詢（*延後執行*）。  
   
 ### <a name="deferred-execution"></a>延後執行  
- A typical [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query resembles the one in the previous example, in which `evensQuery` is defined. It creates the query but does not execute it immediately. Instead, the query definition is stored in the query variable `evensQuery`. You execute the query later, typically by using a `For Each` loop, which returns a sequence of values, or by applying a standard query operator, such as `Count` or `Max`. This process is referred to as *deferred execution*.  
+ 一般的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢與上一個範例中的類似，其中定義了 `evensQuery`。 它會建立查詢，但不會立即執行。 相反地，查詢定義會儲存在 `evensQuery`的查詢變數中。 您稍後會執行查詢，通常是使用 `For Each` 迴圈來傳回值的序列，或套用標準查詢運算子（例如 `Count` 或 `Max`）。 此程式稱為*延後執行*。  
   
  [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
   
- For a sequence of values, you access the retrieved data by using the iteration variable in the `For Each` loop (`number` in the previous example). Because the query variable, `evensQuery`, holds the query definition rather than the query results, you can execute a query as often as you want by using the query variable more than one time. For example, you might have a database in your application that is being updated continually by a separate application. After you have created a query that retrieves data from that database, you can use a `For Each` loop to execute the query repeatedly, retrieving the most recent data every time.  
+ 針對一連串的值，您可以使用 `For Each` 迴圈（在上一個範例中為`number`）中的反復專案變數來存取抓取的資料。 由於查詢變數（`evensQuery`）會保存查詢定義，而不是查詢結果，因此您可以使用多次查詢變數，依您想要的頻率執行查詢。 例如，您的應用程式中可能會有另一個應用程式持續更新的資料庫。 建立可從該資料庫抓取資料的查詢之後，您可以使用 `For Each` 迴圈來重複執行查詢，每次都會抓取最新的資料。  
   
- The following example demonstrates how deferred execution works. After `evensQuery2` is defined and executed with a `For Each` loop, as in the previous examples, some elements in the data source `numbers` are changed. Then a second `For Each` loop runs `evensQuery2` again. The results are different the second time, because the `For Each` loop executes the query again, using the new values in `numbers`.  
+ 下列範例示範順延強制的運作方式。 使用 `For Each` 迴圈來定義和執行 `evensQuery2` 之後（如先前的範例所示），資料來源 `numbers` 中的某些元素會變更。 然後再次 `evensQuery2` 執行第二個 `For Each` 迴圈。 第二次會產生不同的結果，因為 `For Each` 迴圈會使用 `numbers`中的新值，再次執行查詢。  
   
  [!code-vb[VbLINQFirstQuery#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#3)]  
   
@@ -98,25 +98,25 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  `0  10  2  22  8`  
   
 ### <a name="immediate-execution"></a>立即執行  
- In deferred execution of queries, the query definition is stored in a query variable for later execution. In immediate execution, the query is executed at the time of its definition. Execution is triggered when you apply a method that requires access to individual elements of the query result. Immediate execution often is forced by using one of the standard query operators that return single values. Examples are `Count`, `Max`, `Average`, and `First`. These standard query operators execute the query as soon as they are applied in order to calculate and return a singleton result. For more information about standard query operators that return single values, see [Aggregation Operations](aggregation-operations.md), [Element Operations](element-operations.md), and [Quantifier Operations](quantifier-operations.md).  
+ 在延後執行查詢時，查詢定義會儲存在查詢變數中，以供稍後執行。 在立即執行中，查詢會在其定義時執行。 當您套用需要存取查詢結果之個別元素的方法時，就會觸發執行。 通常會使用傳回單一值的其中一個標準查詢運算子來強制立即執行。 範例包括 `Count`、`Max`、`Average`和 `First`。 這些標準查詢運算子會在套用查詢時立即執行，以便計算並傳回單一結果。 如需傳回單一值之標準查詢運算子的詳細資訊，請參閱[匯總作業](aggregation-operations.md)、[元素作業](element-operations.md)和[數量詞作業](quantifier-operations.md)。  
   
- The following query returns a count of the even numbers in an array of integers. The query definition is not saved, and `numEvens` is a simple `Integer`.  
+ 下列查詢會傳回整數陣列中偶數數目的計數。 不會儲存查詢定義，而且 `numEvens` 是簡單的 `Integer`。  
   
  [!code-vb[VbLINQFirstQuery#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#4)]  
   
- You can achieve the same result by using the `Aggregate` method.  
+ 您可以使用 `Aggregate` 方法來達到相同的結果。  
   
  [!code-vb[VbLINQFirstQuery#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#5)]  
   
- You can also force execution of a query by calling the `ToList` or `ToArray` method on a query (immediate) or query variable (deferred), as shown in the following code.  
+ 您也可以在查詢（立即）或查詢變數（延後）上呼叫 `ToList` 或 `ToArray` 方法來強制執行查詢，如下列程式碼所示。  
   
  [!code-vb[VbLINQFirstQuery#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#6)]  
   
- In the previous examples, `evensQuery3` is a query variable, but `evensList` is a list and `evensArray` is an array.  
+ 在先前的範例中，`evensQuery3` 是一個查詢變數，但是 `evensList` 是一個清單，而 `evensArray` 是一個陣列。  
   
- Using `ToList` or `ToArray` to force immediate execution is especially useful in scenarios in which you want to execute the query immediately and cache the results in a single collection object. For more information about these methods, see [Converting Data Types](converting-data-types.md).  
+ 當您想要立即執行查詢，並將結果快取在單一集合物件中時，使用 `ToList` 或 `ToArray` 來強制立即執行會特別有用。 如需這些方法的詳細資訊，請參閱[轉換資料類型](converting-data-types.md)。  
   
- You can also cause a query to be executed by using an `IEnumerable` method such as the <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A> method.  
+ 您也可以使用 `IEnumerable` 方法（例如 <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A> 方法）來執行查詢。  
   
 ## <a name="see-also"></a>請參閱
 
