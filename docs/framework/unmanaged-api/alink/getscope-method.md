@@ -21,10 +21,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447200"
 ---
-# <a name="getscope-method"></a><span data-ttu-id="f88aa-102">GetScope 方法</span><span class="sxs-lookup"><span data-stu-id="f88aa-102">GetScope Method</span></span>
-<span data-ttu-id="f88aa-103">Gets an import scope.</span><span class="sxs-lookup"><span data-stu-id="f88aa-103">Gets an import scope.</span></span>  
+# <a name="getscope-method"></a><span data-ttu-id="0af13-102">GetScope 方法</span><span class="sxs-lookup"><span data-stu-id="0af13-102">GetScope Method</span></span>
+<span data-ttu-id="0af13-103">取得匯入範圍。</span><span class="sxs-lookup"><span data-stu-id="0af13-103">Gets an import scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f88aa-104">語法</span><span class="sxs-lookup"><span data-stu-id="f88aa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0af13-104">語法</span><span class="sxs-lookup"><span data-stu-id="0af13-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetScope(  
@@ -35,27 +35,27 @@ HRESULT GetScope(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f88aa-105">參數</span><span class="sxs-lookup"><span data-stu-id="f88aa-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0af13-105">參數</span><span class="sxs-lookup"><span data-stu-id="0af13-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="f88aa-106">Unique ID of assembly to import to.</span><span class="sxs-lookup"><span data-stu-id="f88aa-106">Unique ID of assembly to import to.</span></span>  
+ <span data-ttu-id="0af13-106">要匯入之元件的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="0af13-106">Unique ID of assembly to import to.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="f88aa-107">Unique ID of the file to import from.</span><span class="sxs-lookup"><span data-stu-id="f88aa-107">Unique ID of the file to import from.</span></span>  
+ <span data-ttu-id="0af13-107">要匯入之檔案的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="0af13-107">Unique ID of the file to import from.</span></span>  
   
  `dwScope`  
- <span data-ttu-id="f88aa-108">Zero-based scope to import.</span><span class="sxs-lookup"><span data-stu-id="f88aa-108">Zero-based scope to import.</span></span>  
+ <span data-ttu-id="0af13-108">要匯入之以零為基底的範圍。</span><span class="sxs-lookup"><span data-stu-id="0af13-108">Zero-based scope to import.</span></span>  
   
  `ppImportScope`  
- <span data-ttu-id="f88aa-109">Receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface for the scope.</span><span class="sxs-lookup"><span data-stu-id="f88aa-109">Receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface for the scope.</span></span>  
+ <span data-ttu-id="0af13-109">接收範圍的[IMetaDataImport 介面](../metadata/imetadataimport-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="0af13-109">Receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface for the scope.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f88aa-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="f88aa-110">Return Value</span></span>  
- <span data-ttu-id="f88aa-111">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="f88aa-111">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0af13-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="0af13-110">Return Value</span></span>  
+ <span data-ttu-id="0af13-111">如果方法成功，則傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="0af13-111">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f88aa-112">需求</span><span class="sxs-lookup"><span data-stu-id="f88aa-112">Requirements</span></span>  
- <span data-ttu-id="f88aa-113">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="f88aa-113">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0af13-112">需求</span><span class="sxs-lookup"><span data-stu-id="0af13-112">Requirements</span></span>  
+ <span data-ttu-id="0af13-113">需要 alink. h</span><span class="sxs-lookup"><span data-stu-id="0af13-113">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f88aa-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="f88aa-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0af13-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0af13-114">See also</span></span>
 
-- [<span data-ttu-id="f88aa-115">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="f88aa-115">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="f88aa-116">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="f88aa-116">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="f88aa-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="f88aa-117">ALink API</span></span>](index.md)
+- [<span data-ttu-id="0af13-115">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="0af13-115">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="0af13-116">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="0af13-116">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="0af13-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="0af13-117">ALink API</span></span>](index.md)

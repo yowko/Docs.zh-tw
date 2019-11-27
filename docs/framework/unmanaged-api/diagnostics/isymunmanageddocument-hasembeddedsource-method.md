@@ -22,23 +22,23 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449118"
 ---
-# <a name="isymunmanageddocumenthasembeddedsource-method"></a><span data-ttu-id="61239-102">ISymUnmanagedDocument::HasEmbeddedSource 方法</span><span class="sxs-lookup"><span data-stu-id="61239-102">ISymUnmanagedDocument::HasEmbeddedSource Method</span></span>
-<span data-ttu-id="61239-103">Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.</span><span class="sxs-lookup"><span data-stu-id="61239-103">Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.</span></span>  
+# <a name="isymunmanageddocumenthasembeddedsource-method"></a><span data-ttu-id="1e1cd-102">ISymUnmanagedDocument::HasEmbeddedSource 方法</span><span class="sxs-lookup"><span data-stu-id="1e1cd-102">ISymUnmanagedDocument::HasEmbeddedSource Method</span></span>
+<span data-ttu-id="1e1cd-103">如果檔具有內嵌在偵錯工具符號中的來源，則傳回 `true`。否則，會傳回 `false`。</span><span class="sxs-lookup"><span data-stu-id="1e1cd-103">Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="61239-104">語法</span><span class="sxs-lookup"><span data-stu-id="61239-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1e1cd-104">語法</span><span class="sxs-lookup"><span data-stu-id="1e1cd-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT HasEmbeddedSource(  
    [out, retval]  BOOL  *pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="61239-105">參數</span><span class="sxs-lookup"><span data-stu-id="61239-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1e1cd-105">參數</span><span class="sxs-lookup"><span data-stu-id="1e1cd-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="61239-106">[out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.</span><span class="sxs-lookup"><span data-stu-id="61239-106">[out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.</span></span>  
+ <span data-ttu-id="1e1cd-106">脫銷變數的指標，指出檔是否有內嵌在偵錯工具符號中的來源。</span><span class="sxs-lookup"><span data-stu-id="1e1cd-106">[out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="61239-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="61239-107">Return Value</span></span>  
- <span data-ttu-id="61239-108">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="61239-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1e1cd-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="1e1cd-107">Return Value</span></span>  
+ <span data-ttu-id="1e1cd-108">如果方法成功，則 S_OK。</span><span class="sxs-lookup"><span data-stu-id="1e1cd-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="61239-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="61239-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e1cd-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1e1cd-109">See also</span></span>
 
-- [<span data-ttu-id="61239-110">ISymUnmanagedDocument 介面</span><span class="sxs-lookup"><span data-stu-id="61239-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="1e1cd-110">ISymUnmanagedDocument 介面</span><span class="sxs-lookup"><span data-stu-id="1e1cd-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
