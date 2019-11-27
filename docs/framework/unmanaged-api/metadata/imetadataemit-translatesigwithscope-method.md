@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440469"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope 方法
-Imports an assembly into the current scope and gets a new metadata signature for the merged scope.  
+將元件匯入到目前的範圍，並為合併的範圍取得新的中繼資料簽章。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,48 +45,48 @@ HRESULT TranslateSigWithScope (
   
 ## <a name="parameters"></a>參數  
  `pAssemImport`  
- [in] The interface for import assembly (where the signature is defined).  
+ 在匯入元件的介面（定義簽章的位置）。  
   
  `pbHashValue`  
- [in] The hash blob for the assembly.  
+ 在元件的雜湊 blob。  
   
  `cbHashValue`  
- [in] The count of bytes in `pbHashValue`.  
+ 在`pbHashValue`中的位元組計數。  
   
  `import`  
- [in] The interface for import metadata scope.  
+ 在匯入中繼資料範圍的介面。  
   
  `pbSigBlob`  
- [in] The signature to be imported.  
+ 在要匯入的簽章。  
   
  `cbSigBlob`  
- [in] The size, in bytes, of `pbSigBlob`.  
+ 在`pbSigBlob`的大小（以位元組為單位）。  
   
  `pAssemEmit`  
- [in] The interface for export assembly.  
+ 在匯出元件的介面。  
   
  `emit`  
- [in] The interface for export metadata scope.  
+ 在用於匯出中繼資料範圍的介面。  
   
  `pvTranslatedSig`  
- [out] The buffer to hold the translated signature blob.  
+ 脫銷保存已轉譯之簽章 blob 的緩衝區。  
   
  `cbTranslatedSigMax`  
- [in] The capacity, in bytes, of `pvTranslatedSig`.  
+ 在`pvTranslatedSig`的容量（以位元組為單位）。  
   
  `pcbTranslatedSig`  
- [out] The number of actual bytes in the translated signature.  
+ 脫銷翻譯簽章中的實際位元組數。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
 - [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

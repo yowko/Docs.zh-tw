@@ -16,13 +16,13 @@ ms.locfileid: "74445700"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>UI 自動化控制項模式 HOW TO 主題
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本章節包含實作控制項模式的詳細資訊。  
   
-## <a name="in-this-section"></a>本章節內容  
- [使用 UI 自動化公開資料表的內容](expose-the-content-of-a-table-using-ui-automation.md)  
- [取得支援的 UI 自動化控制項模式](get-supported-ui-automation-control-patterns.md)  
- [使用 UI 自動化取得核取方塊的切換狀態](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [使用 UI 自動化叫用控制項](invoke-a-control-using-ui-automation.md)  
- [移動 UI 自動化項目](move-a-ui-automation-element.md)
+## <a name="in-this-section"></a>本節內容  
+ [Expose the Content of a Table Using UI Automation](expose-the-content-of-a-table-using-ui-automation.md)  
+ [Get Supported UI Automation Control Patterns](get-supported-ui-automation-control-patterns.md)  
+ [Get the Toggle State of a Check Box Using UI Automation](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [Invoke a Control Using UI Automation](invoke-a-control-using-ui-automation.md)  
+ [Move a UI Automation Element](move-a-ui-automation-element.md)

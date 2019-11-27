@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450254"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags 列舉
-Indicates the visibility of resources encoded in an assembly manifest.  
+表示在組件資訊清單中編碼的資源可見度。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,17 +40,17 @@ typedef enum CorManifestResourceFlags {
   
 |成員|描述|  
 |------------|-----------------|  
-|`mrVisibilityMask`|保留的。|  
-|`mrPublic`|The resources are public.|  
-|`mrPrivate`|The resources are private.|  
+|`mrVisibilityMask`|保留。|  
+|`mrPublic`|資源是公用的。|  
+|`mrPrivate`|資源是私用的。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445283"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished 方法
-Notifies the profiler that an application domain has been created.  
+通知分析工具已建立應用程式域。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,15 +35,15 @@ HRESULT AppDomainCreationFinished(
   
 ## <a name="parameters"></a>參數  
  `appDomainId`  
- [in] Identifies the domain which has been created.  
+ 在識別已建立的網域。  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether creation of the application domain completed successfully.  
+ 在HRESULT，指出是否已順利完成建立應用程式網域。  
   
 ## <a name="remarks"></a>備註  
- The application ID is not valid for any information request until the `AppDomainCreationFinished` method is called.  
+ 在呼叫 `AppDomainCreationFinished` 方法之前，應用程式識別碼對任何資訊要求而言都是不正確。  
   
- Some parts of loading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of creating the application domain has succeeded.  
+ 載入應用程式域的某些部分可能會在 `AppDomainCreationFinished` 回呼之後繼續進行。 `hrStatus` 中的失敗 HRESULT 表示失敗。 不過，`hrStatus` 中的成功 HRESULT 只會指出建立應用程式域的第一個部分已成功。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -54,6 +54,6 @@ HRESULT AppDomainCreationFinished(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

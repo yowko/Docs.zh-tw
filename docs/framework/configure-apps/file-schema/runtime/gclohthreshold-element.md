@@ -1,5 +1,5 @@
 ---
-title: GCLOHThreshold element
+title: GCLOHThreshold 元素
 ms.date: 11/20/2019
 helpviewer_keywords:
 - GCLOHThreshold element
@@ -11,13 +11,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451217"
 ---
-# <a name="gclohthreshold-element"></a>GCLOHThreshold element
+# <a name="gclohthreshold-element"></a>GCLOHThreshold 元素
 
-Specifies the threshold size, in bytes, that causes the garbage collector to put objects on the large object heap (LOH).
+指定導致垃圾收集行程將物件放在大型物件堆積（LOH）上的閾值大小（以位元組為單位）。
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold>
+&nbsp;&nbsp;[\<執行時間 >](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold >
 
 ## <a name="syntax"></a>語法
 
@@ -30,17 +30,17 @@ Specifies the threshold size, in bytes, that causes the garbage collector to put
 
 |屬性|描述|
 |---------------|-----------------|
-|`enabled`|必要屬性。<br /><br />Specifies the threshold size that causes objects to go on the large object heap.|
+|`enabled`|必要屬性。<br /><br />指定導致物件在大型物件堆積上執行的臨界值大小。|
 
-### <a name="enabled-attribute"></a>enabled attribute
+### <a name="enabled-attribute"></a>enabled 屬性
 
 |值|描述|
 |-----------|-----------------|
-|`nnnn`|The threshold size, in bytes, that causes objects to go on the large object heap.|
+|`nnnn`|導致物件在大型物件堆積上執行的臨界值大小（以位元組為單位）。|
 
 ## <a name="child-elements"></a>子元素
 
-無。
+None。
 
 ## <a name="parent-elements"></a>父元素
 
@@ -51,11 +51,11 @@ Specifies the threshold size, in bytes, that causes the garbage collector to put
 
 ## <a name="remarks"></a>備註
 
-This setting was introduced in .NET Framework 4.8.
+這項設定是在 .NET Framework 4.8 中引進。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Run-time settings schema](index.md)
+- [執行時間設定架構](index.md)
 - [組態檔結構描述](../index.md)
 - [記憶體回收的基本概念](../../../../standard/garbage-collection/fundamentals.md)
-- [NET Core run-time config options for GC](../../../../core/run-time-config/garbage-collector.md)
+- [GC 的 NET Core 執行時間設定選項](../../../../core/run-time-config/garbage-collector.md)

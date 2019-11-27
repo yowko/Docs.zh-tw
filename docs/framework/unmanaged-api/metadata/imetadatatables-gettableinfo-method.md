@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426666"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>IMetaDataTables::GetTableInfo 方法
-Gets the name, row size, number of rows, number of columns, and key column index of the specified table.  
+取得指定資料表的名稱、資料列大小、資料列數目、資料行數目和索引鍵資料行索引。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,33 +40,33 @@ HRESULT GetTableInfo (
   
 ## <a name="parameters"></a>參數  
  `ixTbl`  
- [in] The identifier of the table whose properties to return.  
+ 在要傳回其屬性之資料表的識別碼。  
   
  `pcbRow`  
- [out] A pointer to the size, in bytes, of a table row.  
+ 脫銷資料表資料列大小（以位元組為單位）的指標。  
   
  `pcRows`  
- [out] A pointer to the number of rows in the table.  
+ 脫銷資料表中的資料列數目指標。  
   
  `pcCols`  
- [out] A pointer to the number of columns in the table.  
+ 脫銷資料表中的資料行數目指標。  
   
  `piKey`  
- [out] A pointer to the index of the key column, or -1 if the table has no key column.  
+ 脫銷索引鍵資料行之索引的指標，如果資料表沒有索引鍵資料行，則為-1。  
   
  `ppName`  
- [out] A pointer to a pointer to the table name.  
+ 脫銷指向資料表名稱之指標的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Exception 類別和屬性
+title: 例外狀況類別與屬性
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -26,7 +26,7 @@ ms.locfileid: "74283128"
 
 <xref:System.Exception> 類別具有下列屬性，讓您更容易了解例外狀況。
 
-| 屬性名稱 | 描述 |
+| 內容名稱 | 描述 |
 | ------------- | ----------- |
 | <xref:System.Exception.Data> | <xref:System.Collections.IDictionary> 會將任意資料保存在索引鍵/值組。 |
 | <xref:System.Exception.HelpLink> | 可保留說明檔的 URL (或 URN)，以提供有關例外狀況原因的廣泛資訊。 |
@@ -39,6 +39,6 @@ ms.locfileid: "74283128"
 
 建議只擲回及攔截衍生自 <xref:System.Exception> 的物件，但您可以擲回任何衍生自 <xref:System.Object> 類別的物件作為例外狀況。 請注意，並非所有語言都能擲回及攔截不是衍生自 <xref:System.Exception> 的物件。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [例外狀況](index.md)

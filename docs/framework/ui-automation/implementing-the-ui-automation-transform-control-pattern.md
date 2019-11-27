@@ -15,9 +15,9 @@ ms.locfileid: "74447052"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>實作 UI 自動化 Transform 控制項模式
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- 本主題簡介實作 <xref:System.Windows.Automation.Provider.ITransformProvider>的方針和慣例，包括屬性、方法和事件的相關資訊。 其他參考的連結列於主題的結尾。  
+ 本主題簡介實作 <xref:System.Windows.Automation.Provider.ITransformProvider>的方針和慣例，包括屬性、方法和事件的相關資訊。 其他參考的連結列於此主題的結尾部分。  
   
  <xref:System.Windows.Automation.TransformPattern> 控制項模式用來支援可在二維空間內移動、調整大小或旋轉的控制項。 如需實作此控制項模式的控制項範例，請參閱 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。  
   
@@ -37,14 +37,14 @@ ms.locfileid: "74447052"
 ## <a name="required-members-for-itransformprovider"></a>ITransformProvider 的必要成員  
  以下是實作 <xref:System.Windows.Automation.Provider.ITransformProvider>的必要屬性和方法。  
   
-|必要成員|成員類型|備註|  
+|必要成員|成員類型|注意事項|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|屬性|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|方法|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|方法|無|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|方法|無|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|方法|無|  
   
  此控制項模式沒有任何相關聯的事件。  
   
@@ -54,14 +54,14 @@ ms.locfileid: "74447052"
   
 |例外狀況類型|條件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> is false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> is false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> is false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> -如果 <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> 為 false。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -如果 <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> 為 false。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -如果 <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> 為 false。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
 - [在 UI 自動化中使用快取](use-caching-in-ui-automation.md)

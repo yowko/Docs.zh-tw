@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431696"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam 方法
-Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.  
+針對指定之標記所參考的方法，使用指定的簽章建立參數定義，並取得該參數定義的 token。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,42 +42,42 @@ HRESULT DefineParam (
   
 ## <a name="parameters"></a>參數  
  `md`  
- [in] The token for the method whose parameter is being defined.  
+ 在要定義其參數之方法的 token。  
   
  `ulParamSeq`  
- [in] The parameter sequence number.  
+ 在參數序號。  
   
  `szName`  
- [in] The name of the parameter in Unicode.  
+ 在Unicode 中的參數名稱。  
   
  `dwParamFlags`  
- [in] Flags for the parameter. This is a bitmask of `CorParamAttr` values.  
+ 在參數的旗標。 這是 `CorParamAttr` 值的位元遮罩。  
   
  `dwCPlusTypeFlag`  
- [in] `ELEMENT_TYPE_` *\** for the constant value.  
+ [in] `ELEMENT_TYPE_`常數值的 *\** 。  
   
  `pValue`  
- [in] The constant value for the parameter.  
+ 在參數的常數值。  
   
  `cchValue`  
- [in] The size, in Unicode characters, of `pValue`.  
+ 在`pValue`的大小，以 Unicode 字元為單位。  
   
  `ppd`  
- [out] The `mdParamDef` token assigned.  
+ 脫銷指派的 `mdParamDef` token。  
   
 ## <a name="remarks"></a>備註  
- The sequence values in `ulParamSeq` begin with 1 for parameters. A return value has a sequence number of 0.  
+ `ulParamSeq` 中的順序值會以1為參數開頭。 傳回值的序號為0。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

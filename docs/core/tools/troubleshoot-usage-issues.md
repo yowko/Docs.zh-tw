@@ -160,6 +160,6 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 
 失敗的常見原因是工具名稱不正確。 這可能是因為錯誤錯誤而發生，或是因為工具已移動或已被取代。 針對 NuGet.org 上的工具，確保您的名稱正確的方法之一，就是在 NuGet.org 搜尋工具並複製安裝命令。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 * [.NET Core 全域工具概觀](global-tools.md)

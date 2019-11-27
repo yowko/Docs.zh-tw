@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427927"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a>ISymUnmanagedWriter::OpenMethod 方法
-Opens a method into which symbol information is emitted. The given method becomes the current method for calls to define sequence points, parameters, and lexical scopes. There is an implicit lexical scope around the entire method. Reopening a method that was previously closed erases any previously defined symbols for that method. There can be only one open method at a time.  
+開啟用來發出符號資訊的方法。 給定的方法會成為呼叫的目前方法，以定義序列點、參數和詞彙範圍。 整個方法周圍有隱含的詞法範圍。 重新開啟先前已關閉的方法，會清除該方法先前定義的任何符號。 一次只能有一個開啟的方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,15 +34,15 @@ HRESULT OpenMethod(
   
 ## <a name="parameters"></a>參數  
  `method`  
- [in] The metadata token for the method to be opened.  
+ 在要開啟之方法的元資料標記。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [CloseMethod 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)

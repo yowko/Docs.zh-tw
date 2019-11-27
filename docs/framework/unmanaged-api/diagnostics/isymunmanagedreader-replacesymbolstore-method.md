@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445729"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>ISymUnmanagedReader::ReplaceSymbolStore 方法
-以差異符號存放區來取代現有的符號存放區。 This method is similar to the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method, except that the given delta acts as a complete replacement rather than an update.  
+以差異符號存放區來取代現有的符號存放區。 這個方法類似于[UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)方法，不同之處在于指定的差異會作為完整取代，而不是更新。  
   
 > [!NOTE]
-> You need specify only one of the `filename` or `pIStream` parameters, not both. If `filename` is specified, the symbol store will be updated with the symbols in that file. If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+> 您只需要指定其中一個 `filename` 或 `pIStream` 參數，而不是兩者。 如果指定了 `filename`，符號存放區將會以該檔案中的符號進行更新。 如果指定了 `pIStream`，將會使用來自 <xref:System.Runtime.InteropServices.ComTypes.IStream>的資料來更新存放區。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,17 +38,17 @@ HRESULT ReplaceSymbolStore (
   
 ## <a name="parameters"></a>參數  
  `filename`  
- [in] The name of the file containing the symbol store.  
+ 在包含符號存放區的檔案名。  
   
  `pIStream`  
- [in] The file stream, used as an alternative to the `filename` parameter.  
+ 在檔案資料流程，用來做為 `filename` 參數的替代方法。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

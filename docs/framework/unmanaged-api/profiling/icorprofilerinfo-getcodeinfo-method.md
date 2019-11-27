@@ -25,7 +25,7 @@ ms.locfileid: "74439235"
 # <a name="icorprofilerinfogetcodeinfo-method"></a>ICorProfilerInfo::GetCodeInfo 方法
 取得與指定函式識別碼相關聯的機器碼範圍。  
   
- 這個方法已過時。 Use the [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) method instead.  
+ 這個方法已過時。 請改用[ICorProfilerInfo2：： GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,9 +58,9 @@ HRESULT GetCodeInfo(
   
  **程式庫：** CorGuids.lib  
   
- **.NET Framework Versions:** 1.0  
+ **.NET Framework 版本：** 1。0  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436015"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout 方法
-Gets information about where the specified value type is located when it is boxed.  
+取得當指定的實值型別已被裝箱時，其所在位置的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,13 +35,13 @@ HRESULT GetBoxClassLayout(
   
 ## <a name="parameters"></a>參數  
  `classId`  
- [in] The ID of the class that describes the value type that is boxed.  
+ 在類別的識別碼，描述已裝箱的實值型別。  
   
  `pBufferOffset`  
- [out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.  
+ 脫銷整數，其為相對於實數值型別之已裝箱物件識別碼指標的位移。  
   
 ## <a name="remarks"></a>備註  
- The `pBufferOffset` value is the location of the value type within a box. After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.  
+ `pBufferOffset` 值是方塊內實數值型別的位置。 將 `pBufferOffset` 套用至已裝箱的物件之後，就可以使用實數值型別的類別配置來解讀物件的值。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -52,7 +52,7 @@ HRESULT GetBoxClassLayout(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

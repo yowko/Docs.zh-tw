@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441804"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodsFromDocumentPosition 方法
-Returns an array of methods, each of which contains the breakpoint at the given position in a document.  
+傳回方法的陣列，其中每一個都包含檔中指定位置的中斷點。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,29 +40,29 @@ HRESULT GetMethodsFromDocumentPosition (
   
 ## <a name="parameters"></a>參數  
  `document`  
- [in] The specified document.  
+ 在指定的檔。  
   
  `line`  
- [in] The line of the specified document.  
+ 在指定檔的行。  
   
  `column`  
- [in] The column of the specified document.  
+ 在指定檔的資料行。  
   
  `cMethod`  
  [in] `pRetVal` 陣列的大小。  
   
  `pcMethod`  
- [out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.  
+ 脫銷變數的指標，會接收 `pRetVal` 陣列中傳回的元素數目。  
   
  `pRetVal`  
- [out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.  
+ 脫銷指標陣列，其中每一個都會指向代表包含中斷點之方法的[ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)物件。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

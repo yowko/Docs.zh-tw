@@ -37,24 +37,24 @@ HRESULT GetNativeCallConvFromSig (
   
 ## <a name="parameters"></a>參數  
  `pvSig`  
- [in] A pointer to the metadata signature of the method to return the calling convention for.  
+ 在方法的中繼資料簽章指標，可傳回的呼叫慣例。  
   
  `cbSig`  
- [in] The size in bytes of `pvSig`.  
+ 在`pvSig`的大小（以位元組為單位）。  
   
  `pCallConv`  
- [out] A pointer to the native calling convention.  
+ 脫銷原生呼叫慣例的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.CallingConvention>
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

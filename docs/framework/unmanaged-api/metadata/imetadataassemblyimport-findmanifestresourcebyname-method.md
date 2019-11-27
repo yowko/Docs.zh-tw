@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448248"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>IMetaDataAssemblyImport::FindManifestResourceByName 方法
-Gets a pointer to the manifest resource with the specified name.  
+取得具有指定名稱之資訊清單資源的指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,24 +36,24 @@ HRESULT FindManifestResourceByName (
   
 ## <a name="parameters"></a>參數  
  `szName`  
- [in] The name of the resource.  
+ 在資源的名稱。  
   
  `ptkManifestResource`  
- [out] The array used to store the `mdManifestResource` metadata tokens, each of which represents a manifest resource.  
+ 脫銷用來儲存 `mdManifestResource` 元資料標記的陣列，每個 token 都代表一個資訊清單資源。  
   
 ## <a name="remarks"></a>備註  
- The `FindManifestResourceByName` method uses the standard rules employed by the common language runtime for resolving references.  
+ `FindManifestResourceByName` 方法會使用 common language runtime 所採用的標準規則來解析參考。  
   
 ## <a name="requirements"></a>需求  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **平臺：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
 - [執行階段如何找出組件](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

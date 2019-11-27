@@ -38,13 +38,13 @@ internal sealed class AssemblyAttributesGoHereS
 
 這個類型的參考會指出與安全性相關且不是多用途的自訂屬性。
 
-These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
+這些類型在 .NET Framework 內標記為「內部」，而且位於 <xref:System.Runtime.CompilerServices> 命名空間中。
 
 ## <a name="requirements"></a>需求
 
 mscorlib.dll
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [AssemblyAttributesGoHere](assemblyattributesgohere.md)
 - [AssemblyAttributesGoHereM](assemblyattributesgoherem.md)

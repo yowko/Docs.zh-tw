@@ -39,37 +39,37 @@ HRESULT EnumProperties (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in、out]列舉值的指標。 第一次呼叫此方法時，此值必須為 Null。  
   
  `td`  
- [in] A TypeDef token representing the type with properties to enumerate.  
+ 在TypeDef token，代表具有要列舉之屬性的類型。  
   
  `rProperties`  
- [out] The array used to store the PropertyDef tokens.  
+ 脫銷用來儲存 PropertyDef 標記的陣列。  
   
  `cMax`  
  [in] `rProperties` 陣列的大小上限。  
   
  `pcProperties`  
- [out] The number of PropertyDef tokens returned in `rProperties`.  
+ 脫銷`rProperties`中傳回的 PropertyDef token 數目。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumProperties` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcProperties` is zero.|  
+|`S_OK`|已成功傳回 `EnumProperties`。|  
+|`S_FALSE`|沒有要列舉的權杖。 在此情況下，`pcProperties` 為零。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -40,10 +40,10 @@ HRESULT RequestRevert (
  [in] 要還原的函式數目。  
   
  `moduleIds`  
- [in] 指定 (`module`, `methodDef`) 組的 `moduleId` 部分，這個部分可識別要還原的函式。  
+ [in] 指定 (`moduleId`, `module`) 組的 `methodDef` 部分，這個部分可識別要還原的函式。  
   
  `methodIds`  
- [in] 指定 (`module`, `methodDef`) 組的 `methodId` 部分，這個部分可識別要還原的函式。  
+ [in] 指定 (`methodId`, `module`) 組的 `methodDef` 部分，這個部分可識別要還原的函式。  
   
  `status`  
  [out] HRESULT 的陣列 (列於本主題稍後的＜狀態 HRESULT＞一節)。 每個 HRESULT 會指出嘗試還原平行陣列 `moduleIds` 和 `methodIds` 中所指定的每個函式是成功或失敗。  
@@ -54,9 +54,9 @@ HRESULT RequestRevert (
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|嘗試還原所有要求；不過，必須檢查傳回的狀態陣列，以判斷哪些函式成功還原。|  
-|CORPROF_E_CALLBACK4_REQUIRED|The profiler must implement the [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface for this call to be supported.|  
-|CORPROF_E_REJIT_NOT_ENABLED|尚未啟用 JIT 重新編譯。 You must enable JIT recompilation during initialization by using the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the `COR_PRF_ENABLE_REJIT` flag.|  
-|E_INVALIDARG|`cFunctions` 為 0，或者 `moduleIds` 或 `methodIds` 為 `NULL`。|  
+|CORPROF_E_CALLBACK4_REQUIRED|分析工具必須執行[ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)介面，才能支援此呼叫。|  
+|CORPROF_E_REJIT_NOT_ENABLED|尚未啟用 JIT 重新編譯。 在初始化期間，您必須使用[ICorProfilerInfo：： SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法來設定 `COR_PRF_ENABLE_REJIT` 旗標，以啟用 JIT 重新編譯。|  
+|E_INVALIDARG|`cFunctions` 為0，或 `moduleIds` 或 `methodIds` `NULL`。|  
 |E_OUTOFMEMORY|CLR 無法完成要求，因為記憶體不足。|  
   
 ## <a name="status-hresults"></a>狀態 HRESULT  
@@ -82,7 +82,7 @@ HRESULT RequestRevert (
   
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo4 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
 - [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443151"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 方法
-Maps a managed code instruction pointer to the JIT-recompiled version of a function.  
+將 managed 程式碼指令指標對應至 JIT 重新編譯的函式版本。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,19 +36,19 @@ HRESULT GetFunctionFromIP2(
   
 ## <a name="parameters"></a>參數  
  `ip`  
- [in] The instruction pointer in managed code.  
+ 在Managed 程式碼中的指令指標。  
   
  `pFunctionId`  
- [out] The function ID.  
+ 脫銷函數識別碼。  
   
  `pReJitId`  
- [out] The identity of the JIT-recompiled version of the function.  
+ 脫銷函式之 JIT 重新編譯版本的識別。  
   
 ## <a name="remarks"></a>備註  
- `GetFunctionFromIP2` is similar to `GetFunctionFromIP`, except that it gets the JIT-recompiled ID instead of the function ID of the function that contains the specified IP address.  
+ `GetFunctionFromIP2` 類似 `GetFunctionFromIP`，不同之處在于它會取得 JIT 重新編譯的識別碼，而不是包含指定之 IP 位址的函式的函數識別碼。  
   
 > [!NOTE]
-> `GetFunctionFromIP2` can trigger a garbage collection, whereas `GetFunctionFromIP` will not.  For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
+> `GetFunctionFromIP2` 可以觸發垃圾收集，而 `GetFunctionFromIP` 則不會。  如需詳細資訊，請參閱[CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -59,6 +59,6 @@ HRESULT GetFunctionFromIP2(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

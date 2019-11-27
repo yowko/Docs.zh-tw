@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437573"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>IMetaDataImport::GetFieldMarshal 方法
-Gets a pointer to the native, unmanaged type of the field represented by the specified field metadata token.  
+取得指定欄位元資料標記所代表之欄位的原生非受控類型指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,24 +37,24 @@ HRESULT GetFieldMarshal (
   
 ## <a name="parameters"></a>參數  
  `tk`  
- [in] The metadata token that represents the field to get interop marshaling information for.  
+ 在元資料標記，表示要取得其 interop 封送處理資訊的欄位。  
   
  `ppvNativeType`  
- [out] A pointer to the metadata signature of the field's native type.  
+ 脫銷欄位的原生類型之中繼資料簽章的指標。  
   
  `pcbNativeType`  
- [out] The size in bytes of `ppvNativeType`.  
+ 脫銷`ppvNativeType`的大小（以位元組為單位）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

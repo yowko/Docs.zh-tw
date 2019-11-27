@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439206"
 ---
 # <a name="icorprofilerinfogetfunctionfromip-method"></a>ICorProfilerInfo::GetFunctionFromIP 方法
-Maps a managed code instruction pointer to a `FunctionID`.  
+將 managed 程式碼指令指標對應至 `FunctionID`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,10 +35,10 @@ HRESULT GetFunctionFromIP(
   
 ## <a name="parameters"></a>參數  
  `ip`  
- [in] The instruction pointer in managed code.  
+ 在Managed 程式碼中的指令指標。  
   
  `pFunctionId`  
- [out] The returned function ID.  
+ 脫銷傳回的函式識別碼。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -49,6 +49,6 @@ HRESULT GetFunctionFromIP(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

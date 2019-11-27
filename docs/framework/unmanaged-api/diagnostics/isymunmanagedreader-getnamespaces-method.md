@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447728"
 ---
 # <a name="isymunmanagedreadergetnamespaces-method"></a>ISymUnmanagedReader::GetNamespaces 方法
-Gets the namespaces defined at global scope within this symbol store.  
+取得在這個符號存放區的全域範圍中定義的命名空間。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,20 +38,20 @@ HRESULT GetNamespaces (
   
 ## <a name="parameters"></a>參數  
  `cNameSpaces`  
- [in] The size of the namespaces array.  
+ 在命名空間陣列的大小。  
   
  `pcNameSpaces`  
- [out] A pointer to a variable that receives the length of the namespace list.  
+ 脫銷接收命名空間清單長度之變數的指標。  
   
  `namespaces`  
- [out] A pointer to a variable that receives the namespace list.  
+ 脫銷接收命名空間清單之變數的指標。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

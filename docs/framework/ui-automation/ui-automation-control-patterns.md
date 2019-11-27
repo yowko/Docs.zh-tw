@@ -16,11 +16,11 @@ ms.locfileid: "74441452"
 ---
 # <a name="ui-automation-control-patterns"></a>UI 自動化控制項模式
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- This section provides detailed information about how to use [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] control patterns.  
+ 本節提供如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 控制項模式的詳細資訊。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [實作 UI 自動化 Dock 控制項模式](implementing-the-ui-automation-dock-control-pattern.md)  
  [實作 UI 自動化 ExpandCollapse 控制項模式](implementing-the-ui-automation-expandcollapse-control-pattern.md)  
  [實作 UI 自動化 Grid 控制項模式](implementing-the-ui-automation-grid-control-pattern.md)  
@@ -38,4 +38,4 @@ ms.locfileid: "74441452"
  [實作 UI 自動化 Transform 控制項模式](implementing-the-ui-automation-transform-control-pattern.md)  
  [實作 UI 自動化 Value 控制項模式](implementing-the-ui-automation-value-control-pattern.md)  
  [實作 UI 自動化 Window 控制項模式](implementing-the-ui-automation-window-control-pattern.md)  
- [「如何」主題](ui-automation-control-patterns-how-to-topics.md)
+ [HOW-TO 主題](ui-automation-control-patterns-how-to-topics.md)

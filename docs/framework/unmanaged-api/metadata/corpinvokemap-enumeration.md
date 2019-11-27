@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441554"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap 列舉
-Specifies options for a PInvoke call.  
+指定 PInvoke 呼叫的選項。  
   
 ## <a name="syntax"></a>語法  
   
@@ -65,36 +65,36 @@ typedef enum  CorPinvokeMap {
   
 |成員|描述|  
 |------------|-----------------|  
-|`pmNoMangle`|Use each member name as specified.|  
-|`pmCharSetMask`|保留的。|  
-|`pmCharSetNotSpec`|保留的。|  
-|`pmCharSetAnsi`|Marshal strings as multiple-byte character strings.|  
-|`pmCharSetUnicode`|Marshal strings as Unicode 2-byte characters.|  
-|`pmCharSetAuto`|Automatically marshal strings appropriately for the target operating system. The default is Unicode on Windows NT, Windows 2000, Windows XP, and the Windows Server 2003 family; the default is ANSI on Windows 98 and Windows Me.|  
-|`pmBestFitUseAssem`|保留的。|  
-|`pmBestFitEnabled`|Perform best-fit mapping of Unicode characters that lack an exact match in the ANSI character set.|  
-|`pmBestFitDisabled`|Do not perform best-fit mapping of Unicode characters. In this case, all unmappable characters will be replaced by a ‘?’.|  
-|`pmBestFitMask`|保留的。|  
-|`pmThrowOnUnmappableCharUseAssem`|保留的。|  
-|`pmThrowOnUnmappableCharEnabled`|Throw an exception when the interop marshaler encounters an unmappable character.|  
-|`pmThrowOnUnmappableCharDisabled`|Do not throw an exception when the interop marshaler encounters an unmappable character.|  
+|`pmNoMangle`|使用指定的每個成員名稱。|  
+|`pmCharSetMask`|保留。|  
+|`pmCharSetNotSpec`|保留。|  
+|`pmCharSetAnsi`|將字串封送處理為多位元組字元字串。|  
+|`pmCharSetUnicode`|將字串封送處理為 Unicode 2 位元組字元。|  
+|`pmCharSetAuto`|會自動封送處理目標作業系統的字串。 Windows NT、Windows 2000、Windows XP 和 Windows Server 2003 系列上的預設值為 Unicode;Windows 98 和 Windows Me 上的預設值是 ANSI。|  
+|`pmBestFitUseAssem`|保留。|  
+|`pmBestFitEnabled`|執行 Unicode 字元的自動調整對應，其在 ANSI 字元集中缺少完全相符的項。|  
+|`pmBestFitDisabled`|請勿執行 Unicode 字元的自動調整對應。 在此情況下，所有無法映射的字元都會由 '？ ' 取代。|  
+|`pmBestFitMask`|保留。|  
+|`pmThrowOnUnmappableCharUseAssem`|保留。|  
+|`pmThrowOnUnmappableCharEnabled`|當 interop 封送處理器遇到無法映射的字元時，擲回例外狀況。|  
+|`pmThrowOnUnmappableCharDisabled`|當 interop 封送處理器遇到無法映射的字元時，不會擲回例外狀況。|  
 |`pmThrowOnUnmappableCharMask`|保留|  
-|`pmSupportsLastError`|Allow the callee to call the Win32 `SetLastError` function before returning from the attributed method.|  
+|`pmSupportsLastError`|允許被呼叫者先呼叫 Win32 `SetLastError` 函式，然後再從屬性化方法傳回。|  
 |`pmCallConvMask`|保留|  
-|`pmCallConvWinapi`|Use the default platform calling convention. For example, on Windows the default is `StdCall` and on Windows CE .NET it is `Cdecl`.|  
-|`pmCallConvCdecl`|Use the `Cdecl` calling convention. In this case, the caller cleans the stack. This enables calling functions with `varargs` (that is, functions that accept a variable number of parameters).|  
-|`pmCallConvStdcall`|Use the `StdCall` calling convention. In this case, the callee cleans the stack. This is the default convention for calling unmanaged functions with platform invoke.|  
-|`pmCallConvThiscall`|Use the `ThisCall` calling convention. In this case, the first parameter is the `this` pointer and is stored in register ECX. Other parameters are pushed on the stack. The `ThisCall` calling convention is used to call methods on classes exported from an unmanaged DLL.|  
-|`pmCallConvFastcall`|保留的。|  
-|`pmMaxValue`|保留的。|  
+|`pmCallConvWinapi`|使用預設的平臺呼叫慣例。 例如，在 Windows 上，預設值是 `StdCall`，而 Windows CE .NET 則 `Cdecl`。|  
+|`pmCallConvCdecl`|使用 `Cdecl` 呼叫慣例。 在此情況下，呼叫端會清除堆疊。 這可讓您使用 `varargs` （也就是接受可變數目參數的函式）來呼叫函式。|  
+|`pmCallConvStdcall`|使用 `StdCall` 呼叫慣例。 在此情況下，被呼叫端會清除堆疊。 這是使用平台叫用來呼叫非受控函式的預設慣例。|  
+|`pmCallConvThiscall`|使用 `ThisCall` 呼叫慣例。 在此情況下，第一個參數是 `this` 指標，並儲存在 register ECX 中。 堆疊上會推送其他參數。 `ThisCall` 呼叫慣例是用來在從非受控 DLL 匯出的類別上呼叫方法。|  
+|`pmCallConvFastcall`|保留。|  
+|`pmMaxValue`|保留。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

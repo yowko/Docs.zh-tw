@@ -39,40 +39,40 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>參數  
  `szName`  
- [in] The name of type to be exported. For version 1.1 of the common language runtime, the name of the exported type must exactly match the name given in the `TypeDef` for the type.  
+ 在要匯出之類型的名稱。 若是 common language runtime 的版本1.1，匯出類型的名稱必須完全符合類型的 `TypeDef` 中指定的名稱。  
   
  `tkImplementation`  
- [in] A token specifying where the exported type is implemented. The valid values and their associated meanings are:  
+ 在指定匯出類型的實作為位置的 token。 有效值和其相關意義如下：  
   
-- `mdFile` The type is implemented in a different file within this assembly.  
+- `mdFile` 類型是在此元件內的不同檔案中執行。  
   
-- `mdAssemblyRef` The type is implemented in a different assembly.  
+- `mdAssemblyRef` 類型是在不同的元件中執行。  
   
-- `mdExportedTYpe` The type is nested within some other type.  
+- `mdExportedTYpe` 類型會在其他類型內嵌套。  
   
-- `mdFileNil` The type is in the same file as the manifest and is not a nested type.  
+- `mdFileNil` 類型與資訊清單位於相同的檔案中，而且不是嵌套的類型。  
   
  `tkTypeDef`  
- [in] A token to the metadata that specifies the type to be exported. This value is entered in the `TypeDef` table in the file that implements the type and is relevant only if that file is in this assembly.  
+ 在中繼資料的 token，指定要匯出的類型。 這個值會在執行類型之檔案的 `TypeDef` 資料表中輸入，而且只有在該檔案位於此元件中時，才會相關。  
   
  `dwExportedTypeFlags`  
- [in] A bitwise combination of [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration values that define the property settings for the exported type.  
+ 在[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)列舉值的位元組合，這個組合會定義匯出類型的屬性設定。  
   
  `pmdct`  
- [out] A pointer to the returned metadata token that indicates the exported type.  
+ 脫銷傳回之元資料標記的指標，表示匯出的類型。  
   
 ## <a name="remarks"></a>備註  
- An `ExportedType` metadata structure must be defined for each type that is exposed by this assembly and that is implemented in a module other than the one containing the manifest.  
+ 您必須針對此元件所公開的每個類型定義 `ExportedType` 元資料結構，並在包含資訊清單的模組以外的模組中執行。  
   
 ## <a name="requirements"></a>需求  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **平臺：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

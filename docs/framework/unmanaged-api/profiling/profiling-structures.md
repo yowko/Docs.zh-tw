@@ -16,7 +16,7 @@ ms.locfileid: "74447690"
 # <a name="profiling-structures"></a>分析結構
 本節說明分析 API 所使用的 Unmanaged 結構。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [COR_PRF_ASSEMBLY_REFERENCE_INFO 結構](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)  
  提供在執行組件參考結束查核時，所應考量的參考組件相關資訊給通用語言執行平台。  
   

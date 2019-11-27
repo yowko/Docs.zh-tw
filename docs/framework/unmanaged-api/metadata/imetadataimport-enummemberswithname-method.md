@@ -40,43 +40,43 @@ HRESULT EnumMembersWithName (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in、out]列舉值的指標。  
   
  `cl`  
- [in] A TypeDef token representing the type with members to enumerate.  
+ 在TypeDef token，代表具有要列舉之成員的類型。  
   
  `szName`  
- [in] The member name that limits the scope of the enumerator.  
+ 在限制列舉值範圍的成員名稱。  
   
  `rMembers`  
- [out] The array used to store the MemberDef tokens.  
+ 脫銷用來儲存 MemberDef 標記的陣列。  
   
  `cMax`  
  [in] `rMembers` 陣列的大小上限。  
   
  `pcTokens`  
- [out] The actual number of MemberDef tokens returned in `rMembers`.  
+ 脫銷`rMembers`中傳回的實際 MemberDef token 數目。  
   
 ## <a name="remarks"></a>備註  
- This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` discards all field and member tokens that do not have the specified name.  
+ 這個方法會列舉欄位和方法，而不是屬性或事件。 不同于[IMetaDataImport：： EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md)，`EnumMembersWithName` 捨棄所有沒有指定名稱的欄位和成員 token。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` returned successfully.|  
-|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|已成功傳回 `EnumTypeDefs`。|  
+|`S_FALSE`|沒有要列舉的 MemberDef token。 在此情況下，`pcTokens` 為零。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

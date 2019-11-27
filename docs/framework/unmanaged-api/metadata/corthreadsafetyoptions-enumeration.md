@@ -39,18 +39,18 @@ typedef enum CorThreadSafetyOptions {
 
 |成員|描述|
 |------------|-----------------|
-|`MDThreadSafetyDefault`|Default value. 與 `MDThreadSafetyOff` 相同。|
-|`MDThreadSafetyOff`|Indicates that a reader/writer lock cannot be set.|
-|`MDThreadSafetyOn`|Indicates that a reader/writer lock can be set.|
+|`MDThreadSafetyDefault`|預設值。 與 `MDThreadSafetyOff` 相同。|
+|`MDThreadSafetyOff`|表示無法設定讀取器/寫入器鎖定。|
+|`MDThreadSafetyOn`|表示可以設定讀取器/寫入器鎖定。|
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**Header:** CorHdr.h
+**標頭：** Corhdr.h。h
 
 **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

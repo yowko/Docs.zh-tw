@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442323"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope 方法
-Opens an existing, on-disk file and maps its metadata into memory.  
+開啟現有的磁片上檔案，並將其中繼資料對應至記憶體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,38 +38,38 @@ HRESULT OpenScope (
   
 ## <a name="parameters"></a>參數  
  `szScope`  
- [in] The name of the file to be opened. The file must contain common language runtime (CLR) metadata.  
+ 在要開啟的檔案名。 檔案必須包含 common language runtime （CLR）中繼資料。  
   
  `dwOpenFlags`  
- [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.  
+ 在[CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)列舉的值，用來指定要開啟的模式（讀取、寫入等等）。  
   
  `riid`  
- [in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.  
+ 在要傳回之所需中繼資料介面的 IID;呼叫端會使用介面來匯入（讀取）或發出（寫入）中繼資料。  
   
- The value of `riid` must specify one of the "import" or "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.  
+ `riid` 的值必須指定其中一個「匯入」或「發出」介面。 有效的值為 IID_IMetaDataEmit、IID_IMetaDataImport、IID_IMetaDataAssemblyEmit、IID_IMetaDataAssemblyImport、IID_IMetaDataEmit2 或 IID_IMetaDataImport2。  
   
  `ppIUnk`  
- [out] The pointer to the returned interface.  
+ 脫銷傳回之介面的指標。  
   
 ## <a name="remarks"></a>備註  
- The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.  
+ 您可以使用其中一個「匯入」介面的方法來查詢中繼資料的記憶體中複本，或使用其中一個「發出」介面中的方法將其新增至。  
   
- If the target file does not contain CLR metadata, the `OpenScope` method will fail.  
+ 如果目標檔案不包含 CLR 中繼資料，`OpenScope` 方法將會失敗。  
   
- In the .NET Framework version 1.0 and version 1.1, if a scope is opened with `dwOpenFlags` set to ofRead, it is eligible for sharing. That is, if subsequent calls to `OpenScope` pass in the name of a file that was previously opened, the existing scope is reused and a new set of data structures is not created. However, problems can arise due to this sharing.  
+ 在 .NET Framework 版本1.0 和1.1 版中，如果已開啟範圍且 `dwOpenFlags` 設定為 ofRead，它就符合共用資格。 也就是說，如果後續呼叫 `OpenScope` 傳入先前開啟之檔案的名稱，就會重複使用現有的範圍，而且不會建立一組新的資料結構。 不過，由於此共用，可能會發生問題。  
   
- In the .NET Framework version 2.0, scopes opened with `dwOpenFlags` set to ofRead are no longer shared. Use the ofReadOnly value to allow the scope to be shared. When a scope is shared, queries that use "read/write" metadata interfaces will fail.  
+ 在 .NET Framework 版本2.0 中，已不再共用 `dwOpenFlags` 設定為 ofRead 的開啟範圍。 使用 ofReadOnly 值可允許共用範圍。 共用範圍時，使用「讀取/寫入」中繼資料介面的查詢將會失敗。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataDispenser 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
 - [IMetaDataDispenserEx 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)

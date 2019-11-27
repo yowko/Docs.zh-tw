@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447238"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken 方法
-Retrieves the public key token for a given keyfile or key container.  
+抓取指定的 keyfile 或金鑰容器的公開金鑰 token。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,24 +37,24 @@ HRESULT GetPublicKeyToken(
   
 ## <a name="parameters"></a>參數  
  `pszKeyFile`  
- Filename of the key.  
+ 金鑰的檔案名。  
   
  `pszKeyContainer`  
- Name of the key container.  
+ 金鑰容器的名稱。  
   
  `pvPublicKeyToken`  
- Address where key token is to be stored.  
+ 要儲存金鑰 token 的位址。  
   
  `pcbPublicKeyToken`  
- Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`. Upon return, contains actual number of bytes used.  
+ 指定 `pvPublicKeyToken`所指示的緩衝區大小（以位元組為單位）。 傳回時，包含實際使用的位元組數目。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h.  
+ 需要 alink. h。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink2 介面](ialink2-interface.md)
 - [IALink 介面](ialink-interface.md)

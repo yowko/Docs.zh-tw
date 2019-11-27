@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445220"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString 方法
-Gets the version number of the runtime that was used to build the assembly.  
+取得用來建立元件之執行時間的版本號碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,27 +37,27 @@ HRESULT GetVersionString (
   
 ## <a name="parameters"></a>參數  
  `pwzBuf`  
- [out] An array to store the string that specifies the version.  
+ 脫銷陣列，用來儲存指定版本的字串。  
   
  `ccBufSize`  
- [in] The size, in wide characters, of the `pwzBuf` array.  
+ 在`pwzBuf` 陣列的大小（以寬字元為單位）。  
   
  `pccBufSize`  
- [out] The number of wide characters, including a null terminator, returned in the `pwzBuf` array.  
+ 脫銷在 `pwzBuf` 陣列中傳回的寬字元數，包括 null 結束字元。  
   
 ## <a name="remarks"></a>備註  
- The `GetVersionString` method gets the built-for version of the current metadata scope. If the scope has never been saved, it will not have a built-for version, and an empty string will be returned.  
+ `GetVersionString` 方法會取得目前中繼資料範圍的內建版本。 如果從未儲存過範圍，它就不會有內建的版本，而且會傳回空字串。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

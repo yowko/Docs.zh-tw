@@ -1,6 +1,6 @@
 ---
-title: Check installed .NET Core versions on Windows, Linux, and macOS - .NET Core
-description: Learn how to list which versions of .NET Core are installed on your computer. This includes the .NET Core runtime and SDK.
+title: 檢查 Windows、Linux 和 macOS 上已安裝的 .NET Core 版本-.NET Core
+description: 瞭解如何列出電腦上已安裝的 .NET Core 版本。 這包括 .NET Core 執行時間和 SDK。
 author: thraka
 ms.author: adegeo
 ms.date: 11/01/2019
@@ -13,17 +13,17 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451091"
 ---
-# <a name="how-to-check-that-net-core-is-already-installed"></a>How to check that .NET Core is already installed
+# <a name="how-to-check-that-net-core-is-already-installed"></a>如何檢查是否已安裝 .NET Core
 
-This article teaches you how to check which versions of the .NET Core runtime and SDK are installed on your computer. .NET core may have already been installed if you have an integrated development environment, such as Visual Studio or Visual Studio for Mac.
+本文會教您如何檢查電腦上已安裝的 .NET Core 執行時間和 SDK 版本。 如果您有整合式開發環境（例如 Visual Studio 或 Visual Studio for Mac），則可能已經安裝 .NET core。
 
-Installing an SDK installs the corresponding runtime.
+安裝 SDK 會安裝對應的執行時間。
 
-If any command in this article fails, you don't have the runtime or SDK installed. For more information, see [Download and install .NET Core](index.md).
+如果本文中有任何命令失敗，您就不會安裝執行時間或 SDK。 如需詳細資訊，請參閱[下載並安裝 .Net Core](index.md)。
 
-## <a name="check-sdk-versions"></a>Check SDK versions
+## <a name="check-sdk-versions"></a>檢查 SDK 版本
 
-You can see which versions of the .NET Core SDK are currently installed with a terminal. Open a terminal and run the `dotnet --list-sdks` command.
+您可以查看目前已安裝終端機的 .NET Core SDK 版本。 開啟終端機並執行 `dotnet --list-sdks` 命令。
 
 ::: zone pivot="os-windows"
 
@@ -73,9 +73,9 @@ dotnet --list-sdks
 
 ::: zone-end
 
-## <a name="check-runtime-versions"></a>Check runtime versions
+## <a name="check-runtime-versions"></a>檢查執行階段版本
 
-You can see which versions of the .NET Core runtime are currently installed with the `dotnet --list-runtimes` command.
+您可以看到目前使用 `dotnet --list-runtimes` 命令安裝了哪些版本的 .NET Core 執行時間。
 
 ::: zone pivot="os-windows"
 
@@ -158,9 +158,9 @@ Microsoft.NETCore.App 3.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="more-information"></a>詳細資訊
 
-You can see both the SDK versions and runtime versions with the command `dotnet --info`. You'll also get other environmental related information, such as the operating system version and runtime identifier (RID).
+您可以使用 `dotnet --info`的命令來查看 SDK 版本和執行階段版本。 您也會取得其他環境相關資訊，例如作業系統版本和執行時間識別碼（RID）。
 
 ## <a name="next-steps"></a>後續步驟
 
-- [Install the .NET Core Runtime](runtime.md).
-- [Install the .NET Core SDK](sdk.md).
+- [安裝 .Net Core 運行](runtime.md)時間。
+- [安裝 .NET Core SDK](sdk.md)。

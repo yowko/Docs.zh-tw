@@ -72,7 +72,7 @@ ms.locfileid: "74283626"
 
   這是一般的情況；大部分 GC 的發生原因是由於受控堆積上的配置。
 
-- 已呼叫 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法。
+- 呼叫 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法。
 
   如果呼叫無參數的 <xref:System.GC.Collect?displayProperty=nameWithType> 方法或另一個多載傳遞 <xref:System.GC.MaxGeneration?displayProperty=nameWithType> 作為引數，LOH 會連同受控堆積的其餘部分一起回收。
 

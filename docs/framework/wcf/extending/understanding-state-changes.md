@@ -28,16 +28,16 @@ ms.locfileid: "74447495"
   
  每個 <xref:System.ServiceModel.ICommunicationObject> 一開始都處於 Created 狀態。 在這個狀態下，應用程式可以設定物件屬性。 一旦物件處於 Created 以外的狀態，就會被視為不變的。  
   
- ![Dataflow diagram of the channel state transition.](./media/understanding-state-changes/channel-state-transitions.gif)  
-Figure 1. ICommunicationObject 狀態機器。  
+ ![通道狀態轉換的資料流程圖。](./media/understanding-state-changes/channel-state-transitions.gif)  
+[圖 1] ICommunicationObject 狀態機器。  
   
- Windows Communication Foundation (WCF) provides an abstract base class named <xref:System.ServiceModel.Channels.CommunicationObject> that implements <xref:System.ServiceModel.ICommunicationObject> and the channel state machine. 下圖是 <xref:System.ServiceModel.Channels.CommunicationObject> 特定的狀態修訂圖。 除了 <xref:System.ServiceModel.ICommunicationObject> 狀態機器之外，它還說明了叫用其他 <xref:System.ServiceModel.Channels.CommunicationObject> 方法的時機。  
+ Windows Communication Foundation （WCF）提供名為 <xref:System.ServiceModel.Channels.CommunicationObject> 的抽象基類，該類別會執行 <xref:System.ServiceModel.ICommunicationObject> 和通道狀態機器。 下圖是 <xref:System.ServiceModel.Channels.CommunicationObject> 特定的狀態修訂圖。 除了 <xref:System.ServiceModel.ICommunicationObject> 狀態機器之外，它還說明了叫用其他 <xref:System.ServiceModel.Channels.CommunicationObject> 方法的時機。  
   
- ![Dataflow diagram of CommunicationObject implementation state changes.](./media/understanding-state-changes/communicationobject-implementation-state-machine.gif)
+ CommunicationObject 執行狀態變更的 ![資料流程圖。](./media/understanding-state-changes/communicationobject-implementation-state-machine.gif)
 圖 2。 CommunicationObject 狀態機器的 CommunicationObject 實作，包括呼叫事件和受保護的方法。  
   
 ### <a name="icommunicationobject-events"></a>ICommunicationObject 事件  
- <xref:System.ServiceModel.Channels.CommunicationObject> 會公開 <xref:System.ServiceModel.ICommunicationObject> 所定義的五個事件。 這些事件是為使用通訊物件以得知狀態轉換的程式碼而設計。 如上面圖 2 所示，在物件狀態轉換為依事件所指名的狀態之後，每個事件都會引發一次。 所有五個事件都屬於 `EventHandler` 型別，定義為：  
+ <xref:System.ServiceModel.Channels.CommunicationObject> 會公開 <xref:System.ServiceModel.ICommunicationObject>所定義的五個事件。 這些事件是為使用通訊物件以得知狀態轉換的程式碼而設計。 如上面圖 2 所示，在物件狀態轉換為依事件所指名的狀態之後，每個事件都會引發一次。 所有五個事件都屬於 `EventHandler` 型別，定義為：  
   
  `public delegate void EventHandler(object sender, EventArgs e);`  
   
@@ -52,19 +52,19 @@ Figure 1. ICommunicationObject 狀態機器。
   
  雖然 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A?displayProperty=nameWithType>、<xref:System.ServiceModel.Channels.CommunicationObject.OnClose%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.OnAbort%2A?displayProperty=nameWithType> 沒有預設實作，但其他回呼仍有狀態機器正確性需要的預設實作。 如果您要覆寫這些方法，請務必呼叫基底實作或正確地將它取代。  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>、<xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType> 會引發對應的 <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType>、<xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> 事件。 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> 會將物件狀態分別設定為 Opened 和 Closed，然後引發對應的 <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType> 事件。  
+ <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>，<xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType> 會引發對應的 <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType>、<xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> 事件。 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> 分別將物件狀態設定為 [開啟] 和 [關閉]，然後引發對應的 <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType> 事件。  
   
 ### <a name="state-transition-methods"></a>狀態轉換方法  
- <xref:System.ServiceModel.Channels.CommunicationObject> 提供了 Abort、Close 和 Open 實作。 此外，還提供 Fault 方法，會將狀態轉換為 Faulted 狀態。 圖 2 說明 <xref:System.ServiceModel.ICommunicationObject> 狀態機器，其中每個轉換都由造成轉換的方法所標記 (在造成上一個已標記轉換的方法實作內部，會發生未標記的轉換)。  
+ <xref:System.ServiceModel.Channels.CommunicationObject> 提供 Abort、Close 和 Open 的實現。 此外，還提供 Fault 方法，會將狀態轉換為 Faulted 狀態。 圖 2 說明 <xref:System.ServiceModel.ICommunicationObject> 狀態機器，其中每個轉換都由造成轉換的方法所標記 (在造成上一個已標記轉換的方法實作內部，會發生未標記的轉換)。  
   
 > [!NOTE]
 > <xref:System.ServiceModel.Channels.CommunicationObject> 所有的通訊狀態取得/設定實作，都是執行緒同步。  
   
  建構函式  
   
- <xref:System.ServiceModel.Channels.CommunicationObject> 提供了三個都會將物件置於 Created 狀態的建構函式。 這些建構函式定義為：  
+ <xref:System.ServiceModel.Channels.CommunicationObject> 提供三個「函式」，其中全部都會讓物件處於 [已建立] 狀態。 這些建構函式定義為：  
   
- The first constructor is a parameterless constructor that delegates to the constructor overload that takes an object:  
+ 第一個函式是一個無參數的函式，可委派給接受物件的函式多載：  
   
  `protected CommunicationObject() : this(new object()) { … }`  
   
@@ -90,7 +90,7 @@ Figure 1. ICommunicationObject 狀態機器。
   
  然後，將狀態設定為 Opening，並依序呼叫 OnOpening() (這會引發 Opening 事件)、OnOpen() 和 OnOpened()。 OnOpened() 會將狀態設定為 Opened，並且引發 Opened 事件。 如果任何這些呼叫擲回例外狀況，則 Open() 會呼叫 Fault()，並且將例外狀況反昇。 下圖詳細說明 Open 處理序。  
   
- ![Dataflow diagram of ICommunicationObject.Open state changes.](./media/understanding-state-changes/ico-open-process-override-onopen.gif)  
+ ![ICommunicationObject 的資料流程圖。開啟狀態變更。](./media/understanding-state-changes/ico-open-process-override-onopen.gif)  
 覆寫 OnOpen 方法以實作自訂開啟邏輯，例如開啟內部通訊物件。  
   
  Close 方法  
@@ -101,17 +101,17 @@ Figure 1. ICommunicationObject 狀態機器。
   
  在任何狀態下，都可以呼叫 Close() 方法。 這個方法會嘗試依正常程序關閉物件。 如果發生錯誤，則會終止物件。 如果目前狀態為 Closing 或 Closed，這個方法不會有任何作用。 否則，會將狀態設定為 Closing。 如果原始狀態為 Created、Opening 或 Faulted，則會呼叫 Abort() (請參閱下圖)。 如果原始狀態為 Opened，則會依序呼叫 OnClosing() (這會引發 Closing 事件)、OnClose() 和 OnClosed()。 如果任何這些呼叫擲回例外狀況，則 Close() 會呼叫 Abort()，並且將例外狀況反昇。 OnClosed() 會將狀態設定為 Closed，並且引發 Closed 事件。 下圖詳細說明 Close 處理序。  
   
- ![Dataflow diagram of ICommunicationObject.Close state changes.](./media/understanding-state-changes/ico-close-process-override-onclose.gif)  
+ ![ICommunicationObject 的資料流程圖。關閉狀態變更。](./media/understanding-state-changes/ico-close-process-override-onclose.gif)  
 覆寫 OnClose 方法以實作自訂關閉邏輯，例如關閉內部通訊物件。 因為 OnClose() 接受逾時參數，而且不是做為 Abort() 的一部分呼叫，所有長時間封鎖 (例如等待另一端回應) 的依正常程序關閉邏輯都應該在 OnClose() 之中實作。  
   
- Abort  
+ 中止  
   
  前置條件：無。  
 後置條件：狀態為 Closed。 可能會擲回例外狀況。  
   
  如果目前狀態為 Closed，或者物件已經終止 (例如，可能藉由在另一個執行緒上執行 Abort())，則 Abort() 方法不會有任何作用。 否則，方法會將狀態設定為 Closing，並且依序呼叫 OnClosing() (這會引發 Closing 事件)、OnAbort() 和 OnClosed() (不會呼叫 OnClose，因為物件正在終止，而未關閉)。 OnClosed() 會將狀態設定為 Closed，並且引發 Closed 事件。 如果任何這些呼叫擲回例外狀況，則會將例外狀況重新擲回至 Abort 的呼叫者。 OnClosing()、OnClosed() 和 OnAbort() 實作不應封鎖 (例如，於輸入/輸出時)。 下圖詳細說明 Abort 處理序。  
   
- ![Dataflow diagram of ICommunicationObject.Abort state changes.](./media/understanding-state-changes/ico-abort-process-override-onabort.gif)  
+ ![ICommunicationObject 的資料流程圖。中止狀態變更。](./media/understanding-state-changes/ico-abort-process-override-onabort.gif)  
 覆寫 OnAbort 方法以實作自訂終止邏輯，例如終止內部通訊物件。  
   
  Fault  
@@ -127,29 +127,29 @@ Figure 1. ICommunicationObject 狀態機器。
 ### <a name="throwifxxx-methods"></a>ThrowIfXxx 方法  
  CommunicationObject 有三個受保護的方法，當物件處於特定狀態時，可用來擲回例外狀況。  
   
- 如果狀態為 Closing、Closed 或 Faulted，<xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A> 會擲回例外狀況。  
+ 如果狀態為關閉、已關閉或發生錯誤，則 <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A> 會擲回例外狀況。  
   
- 如果狀態不是 Created，<xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A> 會擲回例外狀況。  
+ 如果未建立狀態，<xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A> 會擲回例外狀況。  
   
- 如果狀態不是 Opened，<xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A> 會擲回例外狀況。  
+ 如果未開啟狀態，<xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A> 會擲回例外狀況。  
   
  擲回的例外狀況取決於狀態。 下表說明不同狀態，以及在狀態下藉由呼叫 ThrowIfXxx 擲回的對應例外狀況型別。  
   
-|狀況|是否已呼叫 Abort？|例外|  
+|狀態|是否已呼叫 Abort？|例外狀況|  
 |-----------|----------------------------|---------------|  
 |建立時間|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |正在開啟|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Opened|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
-|Closing|[是]|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
+|Closing|是|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
 |Closing|否|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|已關閉|[是]|在先前明確呼叫 Abort 而關閉物件的情況下，為 <xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>。 如果在此物件上呼叫 Close，則會擲回 <xref:System.ObjectDisposedException?displayProperty=nameWithType>。|  
-|已關閉|否|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
+|關閉|是|當物件由上一個和明確呼叫 Abort 關閉時，<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>。 如果在此物件上呼叫 Close，則會擲回 <xref:System.ObjectDisposedException?displayProperty=nameWithType>。|  
+|關閉|否|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |Faulted|N/A|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   
 ### <a name="timeouts"></a>逾時  
  我們所討論的數個方法會接受逾時參數， 包括 Close、Open (某些多載和非同步版本)、OnClose 和 OnOpen。 這些方法的設計考慮到漫長作業 (例如，於輸入/輸出時封鎖，同時依正常程序關閉連線)，因此逾時參數會表示中斷前這類作業所需的時間。 任何這些方法的實作都應該使用提供的逾時值，以確保在逾時前傳回至呼叫者。 不接受逾時的其他方法實作，不是為漫長作業而設計，且不應於輸入/輸出時封鎖。  
   
- 但是 Open() 和 Close() 多載例外，這些方法多載不會接受逾時， 而是使用衍生類別所提供的預設逾時值。 <xref:System.ServiceModel.Channels.CommunicationObject> 會公開兩個名為 <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> 和 <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A> 的受保護抽象屬性，其定義為：  
+ 但是 Open() 和 Close() 多載例外，這些方法多載不會接受逾時， 而是使用衍生類別所提供的預設逾時值。 <xref:System.ServiceModel.Channels.CommunicationObject> 會公開名為 <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> 的兩個受保護的抽象屬性，而且 <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A> 定義為：  
   
  `protected abstract TimeSpan DefaultCloseTimeout { get; }`  
   

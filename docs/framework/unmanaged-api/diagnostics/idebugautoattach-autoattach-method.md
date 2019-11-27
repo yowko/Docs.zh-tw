@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445518"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach 方法
-Performs server-invoked debugger auto attach.  
+執行伺服器叫用的偵錯工具自動附加。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,26 +40,26 @@ HRESULT AutoAttach
   
 ## <a name="parameters"></a>參數  
  `guidPort`  
- [in] Always set to `GUID_NULL`.  
+ 在一律設定為 `GUID_NULL`。  
   
  `dwPid`  
- [in] Process ID, normally retrieved with the `GetCurrentProcessId` function.  
+ 在處理序識別碼，通常會使用 `GetCurrentProcessId` 函式來抓取。  
   
  `dwProgramType`  
- [in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.  
+ 在程式類型： `AUTOATTACH_PROGRAM_WIN32`、`AUTOATTACH_PROGRAM_COMPLUS`或 `AUTOATTACH_PROGRAM_UNKNOWN`。  
   
  `dwProgramId`  
- [in] Program ID.  
+ 在程式識別碼。  
   
  `pszSessionId`  
- [in] String passed by the debug verb.  
+ 在Debug 動詞命令所傳遞的字串。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds.  
+ 如果方法成功，則 S_OK。  
   
 ## <a name="requirements"></a>需求  
- **Header:** DbgAutoAttach.h  
+ **標頭：** DbgAutoAttach。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IDebugAutoAttach 介面](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)

@@ -22,10 +22,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440812"
 ---
 # <a name="functionenter-function"></a>FunctionEnter 函式
-Notifies the profiler that control is being passed to a function.  
+通知分析工具，控制項正在傳遞至函式。  
   
 > [!NOTE]
-> The `FunctionEnter` function is deprecated in the .NET Framework version 2.0, and its use will incur a performance penalty. Use the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function instead.  
+> .NET Framework 版本2.0 中的 `FunctionEnter` 函式已被取代，而且其使用方式會造成效能上的負面影響。 請改用[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)函數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,31 +37,31 @@ void __stdcall FunctionEnter (
   
 ## <a name="parameters"></a>參數  
  `funcID`  
- [in] The identifier of the function to which control is passed.  
+ 在傳遞控制項的函式識別碼。  
   
 ## <a name="remarks"></a>備註  
- The `FunctionEnter` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
+ `FunctionEnter` 函數是回呼;您必須加以執行。 此執行必須使用 `__declspec`（`naked`）儲存類別屬性。  
   
- The execution engine does not save any registers before calling this function.  
+ 在呼叫此函式之前，執行引擎不會儲存任何暫存器。  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- 輸入時，您必須儲存您所使用的所有暫存器，包括浮點單位（FPU）中的暫存器。  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- 結束時，您必須透過關閉其呼叫者推送的所有參數來還原堆疊。  
   
- The implementation of `FunctionEnter` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionEnter` returns.  
+ `FunctionEnter` 的執行不應該封鎖，因為它會延遲垃圾收集。 執行不應嘗試垃圾收集，因為堆疊可能不會處於垃圾收集的唯讀狀態。 如果嘗試垃圾收集，執行時間將會封鎖，直到 `FunctionEnter` 傳回為止。  
   
- Also, the `FunctionEnter` function must not call into managed code or in any way cause a managed memory allocation.  
+ 此外，`FunctionEnter` 函式不能呼叫 managed 程式碼，或以任何方式執行 managed 記憶體配置。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorProf.idl  
+ **標頭：** Corprof.idl .idl  
   
  **程式庫：** CorGuids.lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **.NET Framework 版本：** 1.1、1。0  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [FunctionEnter2 函式](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
 - [FunctionLeave2 函式](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)

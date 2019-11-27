@@ -1,6 +1,6 @@
 ---
-title: Garbage collector config settings
-description: Learn about run-time settings for configuring how the garbage collector manages memory.
+title: 垃圾收集行程 config 設定
+description: 瞭解用來設定垃圾收集行程如何管理記憶體的執行時間設定。
 ms.date: 11/13/2019
 ms.topic: reference
 ms.openlocfilehash: 220b94e92f61fd44d2ab13291e41b8007a287cc7
@@ -10,216 +10,216 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428707"
 ---
-# <a name="run-time-configuration-options-for-garbage-collection"></a>Run-time configuration options for garbage collection
+# <a name="run-time-configuration-options-for-garbage-collection"></a>用於垃圾收集的執行時間設定選項
 
-This page contains information about garbage collector (GC) settings that can be changed at run time. If you're trying to achieve peak performance of a running app, consider using these settings. However, the defaults provide optimum performance for most applications in typical situations.
+此頁面包含可在執行時間變更之垃圾收集行程（GC）設定的相關資訊。 如果您正嘗試達到執行中應用程式的尖峰效能，請考慮使用這些設定。 不過，在一般情況下，預設值可為大部分的應用程式提供最佳效能。
 
-Settings are arranged into groups on this page. The settings within each group are commonly used in conjunction with each other to achieve a specific result.
+這些設定會依此頁面的群組排列。 每個群組內的設定通常會彼此搭配使用，以達成特定結果。
 
 > [!NOTE]
 >
-> - These settings can also be changed dynamically by the app as it's running, so any run-time settings you set may be overridden.
-> - Some settings, such as [latency level](../../standard/garbage-collection/latency.md), are typically set only through the API at design time. Such settings are omitted from this page.
-> - For number values, use decimal notation for settings in the *runtimeconfig.json* file and hexadecimal notation for environment variable settings.
+> - 這些設定也可以在應用程式執行時動態變更，因此您設定的任何執行時間設定可能會遭到覆寫。
+> - 某些設定（例如[延遲層級](../../standard/garbage-collection/latency.md)）通常只會在設計階段透過 API 進行設定。 此頁面會省略這類設定。
+> - 針對 [數值]，使用十進位標記法做為 *.runtimeconfig.json*檔案中的設定，並針對環境變數設定使用十六進位標記法。
 
-## <a name="flavors-of-garbage-collection"></a>Flavors of garbage collection
+## <a name="flavors-of-garbage-collection"></a>垃圾收集的種類
 
-The two main flavors of garbage collection are workstation GC and server GC. For more information about differences between the two, see [Fundamentals of garbage collection](../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection).
+垃圾收集的兩個主要類別是工作站 GC 和伺服器 GC。 如需兩者之間差異的詳細資訊，請參閱[垃圾收集的基本](../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)概念。
 
-The subflavors of garbage collection are background and non-concurrent.
+垃圾收集的 subflavors 是背景和非並行的。
 
-Use the following settings to select flavors of garbage collection:
+使用下列設定來選取垃圾收集的種類：
 
-### <a name="systemgcservercomplus_gcserver"></a>System.GC.Server/COMPlus_gcServer
+### <a name="systemgcservercomplus_gcserver"></a>System.web/COMPlus_gcServer
 
-- Configures whether the application uses workstation garbage collection or server garbage collection.
-- Default: Workstation garbage collection (`false`).
+- 設定應用程式是否使用工作站垃圾收集或伺服器垃圾收集。
+- 預設值：工作站垃圾收集（`false`）。
 
-| | 設定名稱 | 值 | Version introduced |
+| | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | `System.GC.Server` | `false` - workstation<br/>`true` - server | .NET Core 1.0 |
-| **Environment variable** | `COMPlus_gcServer` | 0 - workstation<br/>1 - server | .NET Core 1.0 |
-| **app.config for .NET Framework** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false` - workstation<br/>`true` - server |  |
+| **.runtimeconfig.json json** | `System.GC.Server` | `false`-工作站<br/>`true`-伺服器 | .NET Core 1.0 |
+| **環境變數** | `COMPlus_gcServer` | 0-工作站<br/>1-伺服器 | .NET Core 1.0 |
+| **.NET Framework 的 app.config** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false`-工作站<br/>`true`-伺服器 |  |
 
-### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.GC.Concurrent/COMPlus_gcConcurrent
+### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.web/COMPlus_gcConcurrent
 
-- Configures whether background (concurrent) garbage collection is enabled.
-- Default: Enabled (`true`).
-- For more information, see [Background garbage collection](../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection) and [Background server garbage collection](../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection).
+- 設定是否啟用背景（並行）垃圾收集。
+- 預設：啟用（`true`）。
+- 如需詳細資訊，請參閱[背景垃圾收集](../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection)和[背景伺服器垃圾收集](../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection)。
 
-| | 設定名稱 | 值 | Version introduced |
+| | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | `System.GC.Concurrent` | `true` - background GC<br/>`false` - non-concurrent GC | .NET Core 1.0 |
-| **Environment variable** | `COMPlus_gcConcurrent` | `true` - background GC<br/>`false` - non-concurrent GC | .NET Core 1.0 |
-| **app.config for .NET Framework** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true` - background GC<br/>`false` - non-concurrent GC |  |
+| **.runtimeconfig.json json** | `System.GC.Concurrent` | `true`-背景 GC<br/>`false`-非並行 GC | .NET Core 1.0 |
+| **環境變數** | `COMPlus_gcConcurrent` | `true`-背景 GC<br/>`false`-非並行 GC | .NET Core 1.0 |
+| **.NET Framework 的 app.config** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true`-背景 GC<br/>`false`-非並行 GC |  |
 
-## <a name="manage-resource-usage"></a>Manage resource usage
+## <a name="manage-resource-usage"></a>管理資源使用量
 
-Use the settings described in this section to manage the garbage collector's memory and processor usage.
+使用本節所述的設定來管理垃圾收集行程的記憶體和處理器使用量。
 
-For more information about some of these settings, see the [Middle ground between workstation and server GC](https://devblogs.microsoft.com/dotnet/middle-ground-between-server-and-workstation-gc/) blog entry.
+如需有關這些設定的詳細資訊，請參閱[工作站與伺服器 GC 之間的中間](https://devblogs.microsoft.com/dotnet/middle-ground-between-server-and-workstation-gc/)專案 blog。
 
-### <a name="systemgcheapcountcomplus_gcheapcount"></a>System.GC.HeapCount/COMPlus_GCHeapCount
+### <a name="systemgcheapcountcomplus_gcheapcount"></a>HeapCount/COMPlus_GCHeapCount
 
-- Limits the number of heaps created by the garbage collector.
-- Applies to server garbage collection (GC) only.
-- If GC processor affinity is enabled, which is the default, the heap count setting affinitizes `n` GC heaps/threads to the first `n` processors. (Use the affinitize mask or affinitize ranges settings to specify exactly which processors to affinitize.)
-- If GC processor affinity is disabled, this setting limits the number of GC heaps.
-- For more information, see the [GCHeapCount remarks](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md#remarks).
+- 限制垃圾收集行程所建立的堆積數目。
+- 僅適用于伺服器垃圾收集（GC）。
+- 如果已啟用 GC 處理器親和性（這是預設值），則堆積計數設定會如何 `n` GC 堆積/執行緒到第一個 `n` 處理器。 （使用將相似化為 mask 或將相似化為範圍設定，以確切指定要將相似化為的處理器）。
+- 如果停用 GC 處理器親和性，這項設定會限制 GC 堆積的數目。
+- 如需詳細資訊，請參閱[GCHeapCount 備註](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md#remarks)。
 
-| | 設定名稱 | 值 | Version introduced |
+| | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | `System.GC.HeapCount` | *decimal value* | .NET Core 3.0 |
-| **Environment variable** | `COMPlus_GCHeapCount` | *hexadecimal value* | .NET Core 3.0 |
-| **app.config for .NET Framework** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | *decimal value* | 4.6.2 |
+| **.runtimeconfig.json json** | `System.GC.HeapCount` | *十進位值* | .NET Core 3.0 |
+| **環境變數** | `COMPlus_GCHeapCount` | *十六進位值* | .NET Core 3.0 |
+| **.NET Framework 的 app.config** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | *十進位值* | 4.6.2 |
 
 > [!TIP]
-> If you're setting the option in *runtimeconfig.json*, specify a decimal value. If you're setting the option as an environment variable, specify a hexadecimal value. For example, to limit the number of heaps to 16, the values would be 16 for the JSON file and 10 for the environment variable.
+> 如果您要在 *.runtimeconfig.json*中設定選項，請指定十進位值。 如果您要將選項設定為環境變數，請指定十六進位值。 例如，若要將堆積數目限制為16，JSON 檔案的值會是16，而環境變數的值會是10。
 
-### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System.GC.HeapAffinitizeMask/COMPlus_GCHeapAffinitizeMask
+### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>HeapAffinitizeMask/COMPlus_GCHeapAffinitizeMask
 
-- Specifies the exact processors that garbage collector threads should use.
-- If processor affinity is disabled by setting `System.GC.NoAffinitize` to `true`, this setting is ignored.
-- Applies to server garbage collection (GC) only.
-- The value is a bit mask that defines the processors that are available to the process. For example, a decimal value of 1023 (or a hexadecimal value of 3FF if you're using the environment variable) is 0011 1111 1111 in binary notation. This specifies that the first 10 processors are to be used. To specify the next 10 processors, that is, processors 10-19, specify a decimal value of 1047552 (or a hexadecimal value of FFC00), which is equivalent to a binary value of 1111 1111 1100 0000 0000.
+- 指定垃圾收集行程執行緒應該使用的確切處理器。
+- 如果藉由將 `System.GC.NoAffinitize` 設定為 `true`來停用處理器親和性，則會忽略此設定。
+- 僅適用于伺服器垃圾收集（GC）。
+- 值是一個位元遮罩，用來定義進程可用的處理器。 例如，十進位值1023（如果您使用環境變數，則為3FF 的十六進位值）是 0011 1111 1111 （二進位標記法）。 這會指定要使用前10個處理器。 若要指定接下來的10個處理器（也就是處理器10-19），請指定十進位值1047552（或 FFC00 的十六進位值），這相當於二進位值 1111 1111 1100 0000 0000。
 
-| | 設定名稱 | 值 | Version introduced |
+| | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | `System.GC.HeapAffinitizeMask` | *decimal value* | .NET Core 3.0 |
-| **Environment variable** | `COMPlus_GCHeapAffinitizeMask` | *hexadecimal value* | .NET Core 3.0 |
-| **app.config for .NET Framework** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | *decimal value* | 4.6.2 |
+| **.runtimeconfig.json json** | `System.GC.HeapAffinitizeMask` | *十進位值* | .NET Core 3.0 |
+| **環境變數** | `COMPlus_GCHeapAffinitizeMask` | *十六進位值* | .NET Core 3.0 |
+| **.NET Framework 的 app.config** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | *十進位值* | 4.6.2 |
 
-### <a name="systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges"></a>System.GC.GCHeapAffinitizeRanges/COMPlus_GCHeapAffinitizeRanges
+### <a name="systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges"></a>GCHeapAffinitizeRanges/COMPlus_GCHeapAffinitizeRanges
 
-- Specifies the list of processors to use for garbage collector threads.
-- This setting is similar to `System.GC.HeapAffinitizeMask`, except it allows you to specify more than 64 processors.
-- For Windows operating systems, prefix the processor number or range with the corresponding [CPU group](/windows/win32/procthread/processor-groups), for example, "0:1-10,0:12,1:50-52,1:70".
-- If processor affinity is disabled by setting `System.GC.NoAffinitize` to `true`, this setting is ignored.
-- Applies to server garbage collection (GC) only.
-- For more information, see [Making CPU configuration better for GC on machines with > 64 CPUs](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) on Maoni Stephens' blog.
+- 指定要用於垃圾收集行程執行緒的處理器清單。
+- 此設定類似于 `System.GC.HeapAffinitizeMask`，但它可讓您指定64個以上的處理器。
+- 若是 Windows 作業系統，請在處理器編號或範圍前面加上對應的[CPU 群組](/windows/win32/procthread/processor-groups)，例如 "0： 1-10，0：12，1： 50-52，1： 70"。
+- 如果藉由將 `System.GC.NoAffinitize` 設定為 `true`來停用處理器親和性，則會忽略此設定。
+- 僅適用于伺服器垃圾收集（GC）。
+- 如需詳細資訊，請參閱 Maoni Stephens 的 blog 上的[針對具有 > 64 cpu 的電腦，讓 CPU 設定更好用於 GC](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) 。
 
-| | 設定名稱 | 值 | Version introduced |
+| | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | `System.GC.GCHeapAffinitizeRanges` | Comma-separated list of processor numbers or ranges of processor numbers.<br/>Unix example: "1-10,12,50-52,70"<br/>Windows example: "0:1-10,0:12,1:50-52,1:70" | .NET Core 3.0 |
-| **Environment variable** | `COMPlus_GCHeapAffinitizeRanges` | Comma-separated list of processor numbers or ranges of processor numbers.<br/>Unix example: "1-10,12,50-52,70"<br/>Windows example: "0:1-10,0:12,1:50-52,1:70" | .NET Core 3.0 |
+| **.runtimeconfig.json json** | `System.GC.GCHeapAffinitizeRanges` | 以逗號分隔的處理器編號或處理器編號範圍清單。<br/>Unix 範例： "1-10，12，50-52，70"<br/>Windows 範例： "0： 1-10，0：12，1： 50-52，1： 70" | .NET Core 3.0 |
+| **環境變數** | `COMPlus_GCHeapAffinitizeRanges` | 以逗號分隔的處理器編號或處理器編號範圍清單。<br/>Unix 範例： "1-10，12，50-52，70"<br/>Windows 範例： "0： 1-10，0：12，1： 50-52，1： 70" | .NET Core 3.0 |
 
 ### <a name="complus_gccpugroup"></a>COMPlus_GCCpuGroup
 
-- Configures whether the garbage collector uses [CPU groups](/windows/win32/procthread/processor-groups) or not.
+- 設定垃圾收集行程是否使用[CPU 群組](/windows/win32/procthread/processor-groups)。
 
-  When a 64-bit Windows computer has multiple CPU groups, that is, there are more than 64 processors, enabling this element extends garbage collection across all CPU groups. The garbage collector uses all cores to create and balance heaps.
+  當64位 Windows 電腦具有多個 CPU 群組（也就是，有超過64個處理器）時，啟用這個元素會延伸所有 CPU 群組的垃圾收集。 垃圾收集行程會使用所有核心來建立和平衡堆積。
 
-- Applies to server garbage collection (GC) on 64-bit Windows operation systems only.
-- Default: Disabled (0).
-- For more information, see [Making CPU configuration better for GC on machines with > 64 CPUs](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) on Maoni Stephens' blog.
+- 僅適用于64位 Windows 作業系統上的伺服器垃圾收集（GC）。
+- 預設：停用（0）。
+- 如需詳細資訊，請參閱 Maoni Stephens 的 blog 上的[針對具有 > 64 cpu 的電腦，讓 CPU 設定更好用於 GC](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) 。
 
-| | 設定名稱 | 值 | Version introduced |
+| | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | N/A | N/A | N/A |
-| **Environment variable** | `COMPlus_GCCpuGroup` | 0 - disabled<br/>1 - enabled | .NET Core 1.0 |
-| **app.config for .NET Framework** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false` - disabled<br/>`true` - enabled |  |
+| **.runtimeconfig.json json** | N/A | N/A | N/A |
+| **環境變數** | `COMPlus_GCCpuGroup` | 0-已停用<br/>1-已啟用 | .NET Core 1.0 |
+| **.NET Framework 的 app.config** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false`-已停用<br/>已啟用 `true` |  |
 
 > [!NOTE]
-> To configure the common language runtime (CLR) to also distribute threads from the thread pool across all CPU groups, enable the [Thread_UseAllCpuGroups element](../../framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) option. For .NET Core apps, you can enable this option by setting the value of the `COMPlus_Thread_UseAllCpuGroups` environment variable to `1`.
+> 若要將 common language runtime （CLR）設定為同時將執行緒集區中的執行緒散發到所有 CPU 群組，請啟用 [ [Thread_UseAllCpuGroups 元素](../../framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)] 選項。 針對 .NET Core 應用程式，您可以將 `COMPlus_Thread_UseAllCpuGroups` 環境變數的值設定為 `1`來啟用此選項。
 
-### <a name="systemgcnoaffinitizecomplus_gcnoaffinitize"></a>System.GC.NoAffinitize/COMPlus_GCNoAffinitize
+### <a name="systemgcnoaffinitizecomplus_gcnoaffinitize"></a>NoAffinitize/COMPlus_GCNoAffinitize
 
-- Specifies whether to *affinitize* garbage collection threads with processors. To affinitize a GC thread means that it can only run on its specific CPU. A heap is created for each GC thread.
-- Applies to server garbage collection (GC) only.
-- Default: Affinitize garbage collection threads with processors (`false`).
+- 指定是否要使用處理器*將相似化為*垃圾收集執行緒。 若要將相似化為 GC 執行緒，這表示它只能在其特定的 CPU 上執行。 會針對每個 GC 執行緒建立堆積。
+- 僅適用于伺服器垃圾收集（GC）。
+- 預設值：使用處理器（`false`）將相似化為垃圾收集執行緒。
 
-| | 設定名稱 | 值 | Version introduced |
+| | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | `System.GC.NoAffinitize` | `false` - affinitize<br/>`true` - don't affinitize | .NET Core 3.0 |
-| **Environment variable** | `COMPlus_GCNoAffinitize` | 0 - affinitize<br/>1 - don't affinitize | .NET Core 3.0 |
-| **app.config for .NET Framework** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false` - affinitize<br/>`true` - don't affinitize | 4.6.2 |
+| **.runtimeconfig.json json** | `System.GC.NoAffinitize` | `false`-將相似化為<br/>`true`-不將相似化為 | .NET Core 3.0 |
+| **環境變數** | `COMPlus_GCNoAffinitize` | 0-將相似化為<br/>1-不將相似化為 | .NET Core 3.0 |
+| **.NET Framework 的 app.config** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false`-將相似化為<br/>`true`-不將相似化為 | 4.6.2 |
 
-### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System.GC.HeapHardLimit/COMPlus_GCHeapHardLimit
+### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>HeapHardLimit/COMPlus_GCHeapHardLimit
 
-- Specifies the maximum commit size, in bytes, for the GC heap and GC bookkeeping.
+- 指定 GC 堆積和 GC 簿記的認可大小上限（以位元組為單位）。
 
-| | 設定名稱 | 值 | Version introduced |
+| | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | `System.GC.HeapHardLimit` | *decimal value* | .NET Core 3.0 |
-| **Environment variable** | `COMPlus_GCHeapHardLimit` | *hexadecimal value* | .NET Core 3.0 |
+| **.runtimeconfig.json json** | `System.GC.HeapHardLimit` | *十進位值* | .NET Core 3.0 |
+| **環境變數** | `COMPlus_GCHeapHardLimit` | *十六進位值* | .NET Core 3.0 |
 
 > [!TIP]
-> If you're setting the option in *runtimeconfig.json*, specify a decimal value. If you're setting the option as an environment variable, specify a hexadecimal value. For example, to specify a heap hard limit of 80,000 bytes, the values would be 80000 for the JSON file and 13880 for the environment variable.
+> 如果您要在 *.runtimeconfig.json*中設定選項，請指定十進位值。 如果您要將選項設定為環境變數，請指定十六進位值。 例如，若要指定80000個位元組的堆積固定限制，JSON 檔案的值會是80000，而針對環境變數則是13880。
 
-### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System.GC.HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
+### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
 
-- Specifies the GC heap usage as a percentage of the total memory.
+- 將 GC 堆積使用量指定為總記憶體的百分比。
 
-| | 設定名稱 | 值 | Version introduced |
+| | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | `System.GC.HeapHardLimitPercent` | *decimal value* | .NET Core 3.0 |
-| **Environment variable** | `COMPlus_GCHeapHardLimitPercent` | *hexadecimal value* | .NET Core 3.0 |
+| **.runtimeconfig.json json** | `System.GC.HeapHardLimitPercent` | *十進位值* | .NET Core 3.0 |
+| **環境變數** | `COMPlus_GCHeapHardLimitPercent` | *十六進位值* | .NET Core 3.0 |
 
 > [!TIP]
-> If you're setting the option in *runtimeconfig.json*, specify a decimal value. If you're setting the option as an environment variable, specify a hexadecimal value. For example, to limit the heap usage to 30%, the values would be 30 for the JSON file and 1E for the environment variable.
+> 如果您要在 *.runtimeconfig.json*中設定選項，請指定十進位值。 如果您要將選項設定為環境變數，請指定十六進位值。 例如，若要將堆積使用量限制為30%，JSON 檔案的值會是30，而針對環境變數則是1E。
 
-### <a name="systemgcretainvmcomplus_gcretainvm"></a>System.GC.RetainVM/COMPlus_GCRetainVM
+### <a name="systemgcretainvmcomplus_gcretainvm"></a>RetainVM/COMPlus_GCRetainVM
 
-- Configures whether segments that should be deleted are put on a standby list for future use or are released back to the operating system (OS).
-- Default: Release segments back to the operating system (`false`).
+- 設定是否要將應該刪除的區段放在待命清單上以供日後使用，或發行回作業系統（OS）。
+- 預設值：將區段釋放回作業系統（`false`）。
 
-| | 設定名稱 | 值 | Version introduced |
+| | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | `System.GC.RetainVM` | `false` - release to OS<br/>`true` - put on standby| .NET Core 1.0 |
-| **Environment variable** | `COMPlus_GCRetainVM` | 0 - release to OS<br/>1 - put on standby | .NET Core 1.0 |
+| **.runtimeconfig.json json** | `System.GC.RetainVM` | `false`-發行至 OS<br/>`true`-put 待命| .NET Core 1.0 |
+| **環境變數** | `COMPlus_GCRetainVM` | 0-發行至 OS<br/>1-put 待命 | .NET Core 1.0 |
 
-## <a name="large-pages"></a>Large pages
+## <a name="large-pages"></a>大型頁面
 
 ### <a name="complus_gclargepages"></a>COMPlus_GCLargePages
 
-- Specifies whether large pages should be used when a heap hard limit is set.
-- Default: Disabled (0).
-- This is an experimental setting.
+- 指定在設定堆積固定限制時是否應該使用大型分頁。
+- 預設：停用（0）。
+- 這是實驗性設定。
 
-| | 設定名稱 | 值 | Version introduced |
+| | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | N/A | N/A | N/A |
-| **Environment variable** | `COMPlus_GCLargePages` | 0 - disabled<br/>1 - enabled | .NET Core 3.0 |
+| **.runtimeconfig.json json** | N/A | N/A | N/A |
+| **環境變數** | `COMPlus_GCLargePages` | 0-已停用<br/>1-已啟用 | .NET Core 3.0 |
 
-## <a name="large-objects"></a>Large objects
+## <a name="large-objects"></a>大型物件
 
 ### <a name="complus_gcallowverylargeobjects"></a>COMPlus_gcAllowVeryLargeObjects
 
-- Configures garbage collector support on 64-bit platforms for arrays that are greater than 2 gigabytes (GB) in total size.
-- Default: Enabled (1).
-- This option may become obsolete in a future version of .NET.
+- 針對大小總計大於 2 gb 的陣列，設定64位平臺上的垃圾收集行程支援。
+- 預設：啟用（1）。
+- 在未來的 .NET 版本中，此選項可能會過時。
 
-| | 設定名稱 | 值 | Version introduced |
+| | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | N/A | N/A | N/A |
-| **Environment variable** | `COMPlus_gcAllowVeryLargeObjects` | 1 - enabled<br/> 0 - disabled | .NET Core 1.0 |
-| **app.config for .NET Framework** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | 1 - enabled<br/> 0 - disabled | .NET Framework 4.5 |
+| **.runtimeconfig.json json** | N/A | N/A | N/A |
+| **環境變數** | `COMPlus_gcAllowVeryLargeObjects` | 1-已啟用<br/> 0-已停用 | .NET Core 1.0 |
+| **.NET Framework 的 app.config** | [Gcallowverylargeobjects>](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | 1-已啟用<br/> 0-已停用 | .NET Framework 4.5 |
 
-## <a name="large-object-heap-threshold"></a>Large object heap threshold
+## <a name="large-object-heap-threshold"></a>大型物件堆積閾值
 
-### <a name="systemgclohthresholdcomplus_gclohthreshold"></a>System.GC.LOHThreshold/COMPlus_GCLOHThreshold
+### <a name="systemgclohthresholdcomplus_gclohthreshold"></a>LOHThreshold/COMPlus_GCLOHThreshold
 
-- Specifies the threshold size, in bytes, that causes objects to go on the large object heap (LOH).
-- The default threshold is 85,000 bytes.
-- The value you specify must be larger than the default threshold.
+- 指定導致物件在大型物件堆積（LOH）上執行的閾值大小（以位元組為單位）。
+- 預設閾值為85000個位元組。
+- 您指定的值必須大於預設閾值。
 
-| | 設定名稱 | 值 | Version introduced |
+| | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | `System.GC.LOHThreshold` | *decimal value* | .NET Core 1.0 |
-| **Environment variable** | `COMPlus_GCLOHThreshold` | *hexadecimal value* | .NET Core 1.0 |
-| **app.config for .NET Framework** | [GCLOHThreshold](../../framework/configure-apps/file-schema/runtime/gclohthreshold-element.md) | *decimal value* | .NET Framework 4.8 |
+| **.runtimeconfig.json json** | `System.GC.LOHThreshold` | *十進位值* | .NET Core 1.0 |
+| **環境變數** | `COMPlus_GCLOHThreshold` | *十六進位值* | .NET Core 1.0 |
+| **.NET Framework 的 app.config** | [GCLOHThreshold](../../framework/configure-apps/file-schema/runtime/gclohthreshold-element.md) | *十進位值* | .NET Framework 4.8 |
 
 > [!TIP]
-> If you're setting the option in *runtimeconfig.json*, specify a decimal value. If you're setting the option as an environment variable, specify a hexadecimal value. For example, to set a threshold size of 120,000 bytes, the values would be 120000 for the JSON file and 1D4C0 for the environment variable.
+> 如果您要在 *.runtimeconfig.json*中設定選項，請指定十進位值。 如果您要將選項設定為環境變數，請指定十六進位值。 例如，若要設定120000個位元組的閾值大小，JSON 檔案的值會是120000，而針對環境變數則是1D4C0。
 
-## <a name="standalone-gc"></a>Standalone GC
+## <a name="standalone-gc"></a>獨立 GC
 
 ### <a name="complus_gcname"></a>COMPlus_GCName
 
-- Specifies a path to the library containing the garbage collector that the runtime intends to load.
-- For more information, see [Standalone GC loader design](https://github.com/dotnet/coreclr/blob/master/Documentation/design-docs/standalone-gc-loading.md).
+- 指定包含執行時間打算載入之垃圾收集行程的程式庫路徑。
+- 如需詳細資訊，請參閱[獨立 GC 載入器設計](https://github.com/dotnet/coreclr/blob/master/Documentation/design-docs/standalone-gc-loading.md)。
 
-| | 設定名稱 | 值 | Version introduced |
+| | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **runtimeconfig.json** | N/A | N/A | N/A |
-| **Environment variable** | `COMPlus_GCName` | *string_path* | .NET Core 2.0 |
+| **.runtimeconfig.json json** | N/A | N/A | N/A |
+| **環境變數** | `COMPlus_GCName` | *string_path* | .NET Core 2.0 |

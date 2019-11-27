@@ -19,7 +19,7 @@ ms.locfileid: "74447684"
 
 - [Logman](/windows-server/administration/windows-commands/logman) 和 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 命令列工具，隨附於 Windows 作業系統。
 
-- [Windows 效能工具組](/windows-hardware/test/wpt/)中的 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 工具。 如需 Xperf 的詳細資訊，請參閱 [Windows 效能部落格](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)。
+- [Windows 效能工具組](/windows-hardware/test/wpt/xperf-command-line-reference)中的 [Xperf](/windows-hardware/test/wpt/) 工具。 如需 Xperf 的詳細資訊，請參閱 [Windows 效能部落格](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)。
 
 若要擷取 CLR 事件資訊，您必須在電腦上安裝 CLR 提供者。 若要確認是否已安裝此提供者，請在命令提示字元中輸入 `logman query providers`。 提供者的清單隨即顯示。 此清單應該會包含 CLR 提供者的項目，如下所示。
 
@@ -29,7 +29,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-如果未列出 CLR 提供者，您可以使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令列工具，在 Windows Vista 和更新版本的作業系統上安裝此提供者。 以系統管理員身分開啟 [命令提示字元] 視窗。 Change the prompt directory to the .NET Framework 4 folder (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\ ). 這個資料夾包含 CLR-ETW.man 檔案。 在命令提示字元中，輸入下列命令，即可安裝 CLR 提供者：
+如果未列出 CLR 提供者，您可以使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令列工具，在 Windows Vista 和更新版本的作業系統上安裝此提供者。 以系統管理員身分開啟 [命令提示字元] 視窗。 將提示目錄變更為 .NET Framework 4 資料夾（%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET 版本 > \）。 這個資料夾包含 CLR-ETW.man 檔案。 在命令提示字元中，輸入下列命令，即可安裝 CLR 提供者：
 
 `wevtutil im CLR-ETW.man`
 
@@ -55,9 +55,9 @@ Provider                                 GUID
 
     - `-p` 參數會識別提供者 GUID。
 
-    - `0x1CCBD` 會指定即將引發之事件的分類。
+    - `0x1CCBD` 指定將引發之事件的類別目錄。
 
-    - `0x5` 會設定記錄的層級 (在本例中，設為詳細資訊 (5))。
+    - `0x5` 設定記錄層級（在此案例中為 verbose （5））。
 
     - `-ets` 參數會指示 Logman 傳送命令給事件追蹤工作階段。
 
@@ -111,7 +111,7 @@ Provider                                 GUID
 
      這個命令會讓 XPerf 以您可以檢視的逗點分隔值 (CSV) 檔案的形式傾印事件。 因為不同的事件有不同的欄位，所以這個 CSV 檔案中的資料前面會有多行標頭。 每行的第一個欄位都是事件類型，表示應使用哪一行的標頭來判斷其餘的欄位。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Windows Performance Toolkit](/windows-hardware/test/wpt/)
+- [Windows 效能工具組](/windows-hardware/test/wpt/)
 - [Common Language Runtime 中的 ETW 事件](etw-events-in-the-common-language-runtime.md)

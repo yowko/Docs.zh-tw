@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446515"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute 方法
-Call to set assembly-level custom attributes.  
+呼叫以設定元件層級的自訂屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,33 +41,33 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- ID of the assembly.  
+ 元件的識別碼。  
   
  `FileToken`  
- File that defiles the attribute. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
+ 定義屬性的檔案。 如果 `AssemblyID` 未指出未系結的 .netmodule，則可以是 Null。  
   
  `tkType`  
- Type of the custom attribute.  
+ 自訂屬性的類型。  
   
  `pCustomValue`  
- Custom value data.  
+ 自訂值資料。  
   
  `cbCustomValue`  
- Length of custom value data.  
+ 自訂值資料的長度。  
   
  `bSecurity`  
- TRUE if the custom attribute is related to assembly signing.  
+ 如果自訂屬性與元件簽署有關，則為 TRUE。  
   
  `bAllowMulti`  
- TRUE if multiple attributes are to be emitted.  
+ 如果要發出多個屬性，則為 TRUE。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h  
+ 需要 alink. h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

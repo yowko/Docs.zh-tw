@@ -60,33 +60,33 @@ typedef enum CorFieldAttr {
   
 |成員|描述|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|Specifies accessibility information.|  
-|`fdPrivateScope`|Specifies that the field cannot be referenced.|  
-|`fdPrivate`|Specifies that the field is accessible only by its parent type.|  
-|`fdFamANDAssem`|Specifies that the field is accessible by derived classes in its assembly.|  
-|`fdAssembly`|Specifies that the field is accessible by all types in its assembly.|  
-|`fdFamily`|Specifies that the field is accessible only by its type and derived classes.|  
-|`fdFamORAssem`|Specifies that the field is accessible by derived classes and by all types in its assembly.|  
-|`fdPublic`|Specifies that the field is accessible by all types with visibility of this scope.|  
-|`fdStatic`|Specifies that the field is a member of its type rather than an instance member.|  
-|`fdInitOnly`|Specifies that the field cannot be changed after it is initialized.|  
-|`fdLiteral`|Specifies that the field value is a compile-time constant.|  
-|`fdNotSerialized`|Specifies that the field is not serialized when its type is remoted.|  
-|`fdSpecialName`|Specifies that the field is special, and that its name describes how.|  
-|`fdPinvokeImpl`|Specifies that the field implementation is forwarded through PInvoke.|  
-|`fdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`fdRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the name.|  
-|`fdHasFieldMarshal`|Specifies that the field contains marshaling information.|  
-|`fdHasDefault`|Specifies that the field has a default value.|  
-|`fdHasFieldRVA`|Specifies that the field has a relative virtual address.|  
+|`fdFieldAccessMask`|指定協助工具資訊。|  
+|`fdPrivateScope`|指定無法參考欄位。|  
+|`fdPrivate`|指定欄位只能由其父類型存取。|  
+|`fdFamANDAssem`|指定欄位可由其元件中的衍生類別存取。|  
+|`fdAssembly`|指定欄位可由其元件中的所有類型存取。|  
+|`fdFamily`|指定欄位只能由其類型和衍生類別存取。|  
+|`fdFamORAssem`|指定欄位可由衍生類別以及其元件中的所有類型存取。|  
+|`fdPublic`|指定此欄位可供具有此範圍可見度的所有類型存取。|  
+|`fdStatic`|指定欄位是其類型的成員，而不是實例成員。|  
+|`fdInitOnly`|指定欄位在初始化之後就無法變更。|  
+|`fdLiteral`|指定域值是編譯時間常數。|  
+|`fdNotSerialized`|指定當欄位的類型是遠端時，不會序列化該欄位。|  
+|`fdSpecialName`|指定欄位為 [特殊]，而其名稱描述了如何。|  
+|`fdPinvokeImpl`|指定透過 PInvoke 轉送欄位執行。|  
+|`fdReservedMask`|保留供 common language runtime 內部使用。|  
+|`fdRTSpecialName`|指定 common language runtime 中繼資料內部 Api 應該檢查名稱的編碼方式。|  
+|`fdHasFieldMarshal`|指定欄位包含封送處理資訊。|  
+|`fdHasDefault`|指定欄位具有預設值。|  
+|`fdHasFieldRVA`|指定欄位具有相對的虛擬位址。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

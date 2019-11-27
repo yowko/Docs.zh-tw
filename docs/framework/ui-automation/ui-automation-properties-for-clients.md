@@ -17,7 +17,7 @@ ms.locfileid: "74441370"
 ---
 # <a name="ui-automation-properties-for-clients"></a>用戶端的 UI 自動化屬性
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本概觀向您介紹公開至使用者介面自動化用戶端應用程式的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性。  
   
@@ -27,15 +27,15 @@ ms.locfileid: "74441370"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性是唯讀的。 若要設定控制項的屬性，您必須使用適當控制項模式的方法。 例如，使用 <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> 來變更捲動中視窗的位置值。  
   
- 若要改善效能，擷取 <xref:System.Windows.Automation.AutomationElement> 物件時，可以快取控制項和控制項模式的屬性值。 For more information, see [Caching in UI Automation Clients](caching-in-ui-automation-clients.md).  
+ 若要改善效能，擷取 <xref:System.Windows.Automation.AutomationElement> 物件時，可以快取控制項和控制項模式的屬性值。 如需詳細資訊，請參閱[在 UI 自動化用戶端中](caching-in-ui-automation-clients.md)快取。  
   
 ## <a name="property-ids"></a>屬性識別碼  
- Property identifiers (IDs) are unique, constant values that are encapsulated in <xref:System.Windows.Automation.AutomationProperty> objects. UI Automation client applications get these IDs from the <xref:System.Windows.Automation.AutomationElement> class or from the appropriate control pattern class, such as <xref:System.Windows.Automation.ScrollPattern>. 使用者介面自動化提供者從 <xref:System.Windows.Automation.AutomationElementIdentifiers> 取得這些，或是從控制項模式識別項類別的其中一項取得，例如 <xref:System.Windows.Automation.ScrollPatternIdentifiers>。  
+ 屬性識別碼（Id）是封裝在 <xref:System.Windows.Automation.AutomationProperty> 物件中的唯一、常數值。 使用者介面自動化用戶端應用程式會從 <xref:System.Windows.Automation.AutomationElement> 類別或適當的控制項模式類別（例如 <xref:System.Windows.Automation.ScrollPattern>）取得這些識別碼。 使用者介面自動化提供者從 <xref:System.Windows.Automation.AutomationElementIdentifiers> 取得這些，或是從控制項模式識別項類別的其中一項取得，例如 <xref:System.Windows.Automation.ScrollPatternIdentifiers>。  
   
  提供者使用 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> 的 <xref:System.Windows.Automation.AutomationProperty> 數值來識別在 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> 方法中要查詢的屬性。 一般而言，用戶端應用程式不需要檢查 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>。 <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> 僅供偵錯和診斷之用。  
   
 ## <a name="property-conditions"></a>屬性條件  
- The property IDs are used in constructing <xref:System.Windows.Automation.PropertyCondition> objects used to find <xref:System.Windows.Automation.AutomationElement> objects. 例如，您要尋找有特定名稱的 <xref:System.Windows.Automation.AutomationElement> 或是所有已啟用的控制項。 每個 <xref:System.Windows.Automation.PropertyCondition> 都會指定一項 <xref:System.Windows.Automation.AutomationProperty> 識別項和必須與屬性相符的值。  
+ 屬性識別碼是用來建立用來尋找 <xref:System.Windows.Automation.AutomationElement> 物件的 <xref:System.Windows.Automation.PropertyCondition> 物件。 例如，您要尋找有特定名稱的 <xref:System.Windows.Automation.AutomationElement> 或是所有已啟用的控制項。 每個 <xref:System.Windows.Automation.PropertyCondition> 都會指定一項 <xref:System.Windows.Automation.AutomationProperty> 識別項和必須與屬性相符的值。  
   
  如需詳細資訊，請參閱下列主題：  
   
@@ -97,8 +97,8 @@ ms.locfileid: "74441370"
 |<xref:System.Windows.Automation.AutomationElement.FocusedElement%2A>|(靜態屬性) 具有輸入焦點的 <xref:System.Windows.Automation.AutomationElement> 。|  
 |<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|(靜態屬性) 根 <xref:System.Windows.Automation.AutomationElement>。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [UI 自動化用戶端中的快取](caching-in-ui-automation-clients.md)
+- [Caching in UI Automation Clients](caching-in-ui-automation-clients.md)
 - [伺服器端 UI 自動化提供者實作](server-side-ui-automation-provider-implementation.md)
 - [訂閱 UI 自動化事件](subscribe-to-ui-automation-events.md)

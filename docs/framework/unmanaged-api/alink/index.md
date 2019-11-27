@@ -16,7 +16,7 @@ ms.locfileid: "74445659"
 # <a name="alink-api-unmanaged-api-reference"></a>ALink API (Unmanaged API 參考)
 支援建立 .NET Framework 組件和未繫結的模組。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [AssemblyAttributesGoHere](assemblyattributesgohere.md)  
   
  [AssemblyAttributesGoHereM](assemblyattributesgoherem.md)  
@@ -37,6 +37,6 @@ ms.locfileid: "74445659"
   
  [IALink3 介面](ialink3-interface.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Unmanaged API 參考](../index.md)

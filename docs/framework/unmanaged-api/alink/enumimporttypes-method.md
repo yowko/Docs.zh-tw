@@ -24,7 +24,7 @@ ms.locfileid: "74448730"
 ---
 # <a name="enumimporttypes-method"></a>EnumImportTypes 方法
 
-Enumerates each type in each scope.
+列舉每個範圍中的每個類型。
 
 ## <a name="syntax"></a>語法
 
@@ -40,26 +40,26 @@ HRESULT EnumImportTypes(
 ## <a name="parameters"></a>參數
 
 `hEnum`\
-Handle for enumerator.
+列舉值的控制碼。
 
 `dwMax`\
-Maximum number of types to retrieve.
+要取出的類型數目上限。
 
 `aTypeDefs`\
-Receives type tokens, not to exceed `dwMax`.
+接收類型標記，而不是超過 `dwMax`。
 
 `pdwCount`\
-Receives actual number of type in `aTypeDefs`.
+在 `aTypeDefs`中，接收類型的實際數目。
 
 ## <a name="return-value"></a>傳回值
 
-Returns S_OK if the method succeeds.
+如果方法成功，則傳回 S_OK。
 
 ## <a name="requirements"></a>需求
 
-Requires alink.h
+需要 alink. h
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)
