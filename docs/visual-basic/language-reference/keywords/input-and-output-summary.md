@@ -14,24 +14,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348517"
 ---
 # <a name="input-and-output-summary-visual-basic"></a>輸入和輸出摘要 (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic 語言關鍵字和執行時間程式庫成員是依用途和使用來組織。  
   
 |動作|語言項目|  
 |------------|----------------------|  
-|Access or create a file.|<xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>|  
-|Close files.|<xref:Microsoft.VisualBasic.FileSystem.FileClose%2A>、 <xref:Microsoft.VisualBasic.FileSystem.Reset%2A>|  
-|Control output appearance.|<xref:Microsoft.VisualBasic.Strings.Format%2A>、 <xref:Microsoft.VisualBasic.FileSystem.Print%2A>、 <xref:Microsoft.VisualBasic.FileSystem.SPC%2A>、 <xref:Microsoft.VisualBasic.FileSystem.TAB%2A>、 <xref:Microsoft.VisualBasic.FileSystem.FileWidth%2A>|  
-|Copy a file.|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
-|Get information about a file.|<xref:Microsoft.VisualBasic.FileSystem.EOF%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>, <xref:Microsoft.VisualBasic.FileSystem.FreeFile%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.Loc%2A>, <xref:Microsoft.VisualBasic.FileSystem.LOF%2A>, <xref:Microsoft.VisualBasic.FileSystem.Seek%2A>|  
-|Get or provide information from/to the user by means of a control dialog box.|<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>、 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
-|Manage files.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>、<xref:Microsoft.VisualBasic.FileSystem.Kill%2A>、<xref:Microsoft.VisualBasic.FileSystem.Lock%2A><xref:Microsoft.VisualBasic.FileSystem.Unlock%2A>|  
-|Read from a file.|<xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>、 <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>、 <xref:Microsoft.VisualBasic.FileSystem.Input%2A>、 <xref:Microsoft.VisualBasic.FileSystem.InputString%2A>、 <xref:Microsoft.VisualBasic.FileSystem.LineInput%2A>|  
-|Return length of a file.|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
-|Set or get file attributes.|<xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>、<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>、<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
-|Set read-write position in a file.|<xref:Microsoft.VisualBasic.FileSystem.Seek%2A>|  
-|Write to a file.|<xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>、 <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A>、 <xref:Microsoft.VisualBasic.FileSystem.Print%2A>、 <xref:Microsoft.VisualBasic.FileSystem.Write%2A>、 <xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A>|  
+|存取或建立檔案。|<xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>|  
+|關閉 [檔案]。|<xref:Microsoft.VisualBasic.FileSystem.FileClose%2A>, <xref:Microsoft.VisualBasic.FileSystem.Reset%2A>|  
+|控制輸出外觀。|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.SPC%2A>, <xref:Microsoft.VisualBasic.FileSystem.TAB%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileWidth%2A>|  
+|複製檔案。|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
+|取得檔案的相關資訊。|+<xref:Microsoft.VisualBasic.FileSystem.EOF%2A>、<xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>、<xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>、<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>、<xref:Microsoft.VisualBasic.FileSystem.FreeFile%2A>、<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>、<xref:Microsoft.VisualBasic.FileSystem.Loc%2A>、<xref:Microsoft.VisualBasic.FileSystem.LOF%2A>、<xref:Microsoft.VisualBasic.FileSystem.Seek%2A>|  
+|透過控制項對話方塊，取得或提供使用者的資訊。|<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>, <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
+|管理檔案。|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>, <xref:Microsoft.VisualBasic.FileSystem.Kill%2A>, <xref:Microsoft.VisualBasic.FileSystem.Lock%2A>, <xref:Microsoft.VisualBasic.FileSystem.Unlock%2A>|  
+|從檔案讀取。|<xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Input%2A>, <xref:Microsoft.VisualBasic.FileSystem.InputString%2A>, <xref:Microsoft.VisualBasic.FileSystem.LineInput%2A>|  
+|傳回檔案的長度。|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
+|設定或取得檔案屬性。|<xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
+|在檔案中設定讀寫位置。|<xref:Microsoft.VisualBasic.FileSystem.Seek%2A>|  
+|寫入檔案。|<xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>, <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.Write%2A>, <xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A>|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 執行階段程式庫成員](../../../visual-basic/language-reference/runtime-library-members.md)

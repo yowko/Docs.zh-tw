@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443783"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor 列舉
-Specifies the metadata tokens that will be checked for duplicates.  
+指定將檢查是否有重複的元資料標記。  
   
 ## <a name="syntax"></a>語法  
   
@@ -68,41 +68,41 @@ typedef enum CorCheckDuplicatesFor {
   
 |成員|描述|  
 |------------|-----------------|  
-|`MDDupAll`|Check all metadata tokens for duplicates.|  
+|`MDDupAll`|檢查所有元資料標記的重複專案。|  
 |`MDDupENC`|未使用。|  
-|`MDNoDupChecks`|Do not check metadata tokens for duplicates.|  
-|`MDDupTypeDef`|Check for duplicates of `mdTypeDef` tokens.|  
-|`MDDupInterfaceImpl`|Check for duplicates of `mdInterfaceImpl` tokens.|  
-|`MDDupMethodDef`|Check for duplicates of `mdMethodDef` tokens.|  
-|`MDDupTypeRef`|Check for duplicates of `mdTypeRef` tokens.|  
-|`MDDupMemberRef`|Check for duplicates of `mdMemberRef` tokens.|  
-|`MDDupCustomAttribute`|Check for duplicates of `mdCustomAttribute` tokens.|  
-|`MDDupParamDef`|Check for duplicates of `mdParamDef` tokens.|  
-|`MDDupPermission`|Check for duplicates of `mdPermission` tokens.|  
-|`MDDupProperty`|Check for duplicates of `mdProperty` tokens.|  
-|`MDDupEvent`|Check for duplicates of `mdEvent` tokens.|  
-|`MDDupFieldDef`|Check for duplicates of `mdFieldDef` tokens.|  
-|`MDDupSignature`|Check for duplicates of `mdSignature` tokens.|  
-|`MDDupModuleRef`|Check for duplicates of `mdModuleRef` tokens.|  
-|`MDDupTypeSpec`|Check for duplicates of `mdTypeSpec` tokens.|  
-|`MDDupImplMap`|Check for duplicates of `mdImplMap` tokens.|  
-|`MDDupAssemblyRef`|Check for duplicates of `mdAssemblyRef` tokens.|  
-|`MDDupFile`|Check for duplicates of `mdFile` tokens.|  
-|`MDDupExportedType`|Check for duplicates of `mdExportedType` tokens.|  
-|`MDDupManifestResource`|Check for duplicates of `mdManifestResource` tokens.|  
-|`MDDupGenericParam`|Check for duplicates of `mdGenericParam` tokens.|  
-|`MDDupMethodSpec`|Check for duplicates of `mdMethodSpec` tokens.|  
-|`MDDupGenericParamConstraint`|Check for duplicates of `mdGenericParamConstraint` tokens.|  
-|`MDDupAssembly`|Check for duplicates of `mdAssembly` tokens.|  
-|`MDDupDefault`|Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.|  
+|`MDNoDupChecks`|請勿檢查元資料標記是否有重複的專案。|  
+|`MDDupTypeDef`|檢查 `mdTypeDef` token 的重複專案。|  
+|`MDDupInterfaceImpl`|檢查 `mdInterfaceImpl` token 的重複專案。|  
+|`MDDupMethodDef`|檢查 `mdMethodDef` token 的重複專案。|  
+|`MDDupTypeRef`|檢查 `mdTypeRef` token 的重複專案。|  
+|`MDDupMemberRef`|檢查 `mdMemberRef` token 的重複專案。|  
+|`MDDupCustomAttribute`|檢查 `mdCustomAttribute` token 的重複專案。|  
+|`MDDupParamDef`|檢查 `mdParamDef` token 的重複專案。|  
+|`MDDupPermission`|檢查 `mdPermission` token 的重複專案。|  
+|`MDDupProperty`|檢查 `mdProperty` token 的重複專案。|  
+|`MDDupEvent`|檢查 `mdEvent` token 的重複專案。|  
+|`MDDupFieldDef`|檢查 `mdFieldDef` token 的重複專案。|  
+|`MDDupSignature`|檢查 `mdSignature` token 的重複專案。|  
+|`MDDupModuleRef`|檢查 `mdModuleRef` token 的重複專案。|  
+|`MDDupTypeSpec`|檢查 `mdTypeSpec` token 的重複專案。|  
+|`MDDupImplMap`|檢查 `mdImplMap` token 的重複專案。|  
+|`MDDupAssemblyRef`|檢查 `mdAssemblyRef` token 的重複專案。|  
+|`MDDupFile`|檢查 `mdFile` token 的重複專案。|  
+|`MDDupExportedType`|檢查 `mdExportedType` token 的重複專案。|  
+|`MDDupManifestResource`|檢查 `mdManifestResource` token 的重複專案。|  
+|`MDDupGenericParam`|檢查 `mdGenericParam` token 的重複專案。|  
+|`MDDupMethodSpec`|檢查 `mdMethodSpec` token 的重複專案。|  
+|`MDDupGenericParamConstraint`|檢查 `mdGenericParamConstraint` token 的重複專案。|  
+|`MDDupAssembly`|檢查 `mdAssembly` token 的重複專案。|  
+|`MDDupDefault`|檢查 `mdMemberRef`、`mdTypeRef`、`mdSignature`、`mdTypeSpec`和 `mdMethodSpec` 權杖的重複專案。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

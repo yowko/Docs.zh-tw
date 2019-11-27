@@ -12,10 +12,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348045"
 ---
 # <a name="into-clause-visual-basic"></a>Into 子句 (Visual Basic)
-Identifies aggregate functions or groupings to apply to a collection.  
+識別要套用至集合的彙總函式或群組。  
   
 ## <a name="remarks"></a>備註  
- The `Each` keyword is used in the following contexts:  
+ `Each` 關鍵字會用於下列內容中：  
   
  [Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
@@ -23,6 +23,6 @@ Identifies aggregate functions or groupings to apply to a collection.
   
  [Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

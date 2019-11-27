@@ -16,7 +16,7 @@ ms.locfileid: "74445496"
 # <a name="diagnostics-symbol-store-unmanaged-api-reference"></a>診斷符號存放區 (Unmanaged API 參考)
 診斷符號存放區 API 可讓編譯器產生供偵錯工具使用的符號資訊。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
  說明診斷符號存放區 API 所使用的非受控介面。  
   

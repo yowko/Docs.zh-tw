@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445864"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass 方法
-Notifies the profiler about the number of instances of each specified class that have been created since the most recent garbage collection.  
+通知分析工具關於最近一次垃圾收集之後所建立之每個指定類別的實例數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,20 +36,20 @@ HRESULT ObjectsAllocatedByClass(
   
 ## <a name="parameters"></a>參數  
  `cClassCount`  
- [in] The size of the `classIds` and `cObjects` arrays.  
+ 在`classIds` 和 `cObjects` 陣列的大小。  
   
  `classIds`  
- [in] An array of class IDs, where each ID specifies a class with one or more instances.  
+ 在類別識別碼的陣列，其中的每個識別碼會指定具有一或多個實例的類別。  
   
  `cObjects`  
- [in] An array of integers, where each integer specifies the number of instances for the corresponding class in the `classIds` array.  
+ 在整數的陣列，其中每個整數會指定 `classIds` 陣列中對應類別的實例數目。  
   
 ## <a name="remarks"></a>備註  
- The `classIds` and `cObjects` arrays are parallel arrays. For example, `classIds[i]` and `cObjects[i]` reference the same class. If no instance of a class has been created since the previous garbage collection, the class is omitted. The `ObjectsAllocatedByClass` callback will not report objects allocated in the large object heap.  
+ `classIds` 和 `cObjects` 陣列是平行陣列。 例如，`classIds[i]` 和 `cObjects[i]` 參考相同的類別。 如果自從上一次垃圾收集之後，尚未建立類別的實例，則會省略類別。 `ObjectsAllocatedByClass` 回呼不會報告在大型物件堆積中所配置的物件。  
   
- The numbers reported by `ObjectsAllocatedByClass` are only estimates. For exact counts, use [ICorProfilerCallback::ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).  
+ `ObjectsAllocatedByClass` 回報的數位僅供估計。 如需確切計數，請使用[ICorProfilerCallback：： ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)。  
   
- The `classIds` array may contain one or more null entries if the corresponding `cObjects` array has types that are unloading.  
+ 如果對應的 `cObjects` 陣列具有正在卸載的類型，`classIds` 陣列可能會包含一或多個 null 專案。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -60,6 +60,6 @@ HRESULT ObjectsAllocatedByClass(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

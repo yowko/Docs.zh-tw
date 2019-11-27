@@ -30,9 +30,9 @@ ms.locfileid: "74345477"
 |-----------|----------------------------------|  
 |`AllAccess`|建立、讀取和寫入|  
 |`Create`|建立|  
-|`NoAccess`|沒有存取權|  
+|`NoAccess`|不允許存取|  
 |`Read`|讀取|  
-|`Write`|Write|  
+|`Write`|寫入|  
   
 ## <a name="checking-values-in-registry-keys"></a>檢查登錄機碼值  
 
@@ -41,7 +41,7 @@ ms.locfileid: "74345477"
 > [!IMPORTANT]
 > 從 Web 應用程式讀取登錄時，目前使用者的身分識別取決於 Web 應用程式中所實作的驗證和模擬。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - [讀取和寫入登錄](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

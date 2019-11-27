@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448884"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints 方法
-Gets all the sequence points within this method.  
+取得這個方法內的所有序列點。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,35 +41,35 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>參數  
  `cPoints`  
- [in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.  
+ 在`ULONG32`，會接收 `offsets`、`documents`、`lines`、`columns`、`endLines`和 `endColumns` 陣列的大小。  
   
  `pcPoints`  
- [out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.  
+ 脫銷`ULONG32` 的指標，接收包含序列點所需的緩衝區長度。  
   
  `offsets`  
- [in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.  
+ 在要在其中儲存序列點的方法開頭之 Microsoft 中繼語言（MSIL）位移的陣列。  
   
  `documents`  
- [in] An array in which to store the documents in which the sequence points are located.  
+ 在要在其中儲存序列點所在檔的陣列。  
   
  `lines`  
- [in] An array in which to store the lines in the documents at which the sequence points are located.  
+ 在要在其中儲存序列點所在檔中之行的陣列。  
   
  `columns`  
- [in] An array in which to store the columns in the documents at which the sequence points are located.  
+ 在要在其中儲存序列點所在檔中之資料行的陣列。  
   
  `endLines`  
- [in] The array of lines in the documents at which the sequence points end.  
+ 在序列點結尾之檔中的行陣列。  
   
  `endColumns`  
- [in] The array of columns in the documents at which the sequence points end.  
+ 在序列點結尾之檔中的資料行陣列。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

@@ -16,7 +16,7 @@ ms.locfileid: "74345545"
 
 下表列出與 `My.Computer.Network` 物件建立關聯的工作。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
  [如何：上傳檔案](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
  示範如何使用 `My.Computer.Network` 上傳檔案，並將它儲存到遠端位置。  
@@ -27,7 +27,7 @@ ms.locfileid: "74345545"
  [如何：檢查連接狀態](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
  示範如何判斷電腦是否具有正常運作的網路連線。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
 
  <xref:Microsoft.VisualBasic.Devices.Network>  
  列出正在使用網路的方法、屬性和事件。  

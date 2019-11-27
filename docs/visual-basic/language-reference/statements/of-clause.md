@@ -25,10 +25,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353846"
 ---
 # <a name="of-clause-visual-basic"></a>Of 子句 (Visual Basic)
-Introduces an `Of` clause, which identifies a *type parameter* on a *generic* class, structure, interface, delegate, or procedure. For information on generic types, see [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+引進了一個 `Of` 子句，它會識別*泛型*類別、結構、介面、委派或程式上的*型別參數*。 如需泛型型別的詳細資訊，請參閱[Visual Basic 中的泛型型別](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。  
   
-## <a name="using-the-of-keyword"></a>Using the Of Keyword  
- The following code example uses the `Of` keyword to define the outline of a class that takes two type parameters. It *constrains* the `keyType` parameter by the <xref:System.IComparable> interface, which means the consuming code must supply a type argument that implements <xref:System.IComparable>. This is necessary so that the `add` procedure can call the <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> method. 如需條件約束的詳細資訊，請參閱 [Type List](../../../visual-basic/language-reference/statements/type-list.md)。  
+## <a name="using-the-of-keyword"></a>使用 of 關鍵字  
+ 下列程式碼範例會使用 `Of` 關鍵字來定義接受兩個型別參數之類別的外框。 它會*限制*<xref:System.IComparable> 介面的 `keyType` 參數，這表示取用的程式碼必須提供實作為 <xref:System.IComparable>的型別引數。 這是必要的，因此 `add` 程式可以呼叫 <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> 方法。 如需條件約束的詳細資訊，請參閱 [Type List](../../../visual-basic/language-reference/statements/type-list.md)。  
   
 ```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
@@ -42,9 +42,9 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- If you complete the preceding class definition, you can construct a variety of `dictionary` classes from it. The types you supply to `entryType` and `keyType` determine what type of entry the class holds and what type of key it associates with each entry. Because of the constraint, you must supply to `keyType` a type that implements <xref:System.IComparable>.  
+ 如果您完成上述類別定義，您可以從它建立各種不同的 `dictionary` 類別。 您提供給 `entryType` 的型別，`keyType` 會決定類別所保存的專案類型，以及與每個專案相關聯的索引鍵類型。 由於條件約束的原因，您必須提供來 `keyType` 可執行 <xref:System.IComparable>的類型。  
   
- The following code example creates an object that holds `String` entries and associates an `Integer` key with each one. `Integer` implements <xref:System.IComparable> and therefore satisfies the constraint on `keyType`.  
+ 下列程式碼範例會建立一個物件，它會保存 `String` 專案，並將 `Integer` 索引鍵與每一個金鑰相關聯。 `Integer` 會執行 <xref:System.IComparable>，因此滿足 `keyType`上的條件約束。  
   
 ```vb  
 Dim d As New dictionary(Of String, Integer)  
@@ -64,10 +64,10 @@ Dim d As New dictionary(Of String, Integer)
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IComparable>
 - [類型清單](../../../visual-basic/language-reference/statements/type-list.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic 中的泛型型別](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
 - [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

@@ -14,7 +14,7 @@ ms.locfileid: "74446894"
 ---
 # <a name="obtaining-ui-automation-elements"></a>取得 UI 自動化項目
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主題描述取得 <xref:System.Windows.Automation.AutomationElement> 項目之 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 物件的各種方式。  
   
@@ -22,13 +22,13 @@ ms.locfileid: "74446894"
 > 如果用戶端應用程式可能會嘗試尋找本身使用者介面中的項目，您就必須在個別執行緒上進行所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 呼叫。 如需詳細資訊，請參閱 [UI Automation Threading Issues](ui-automation-threading-issues.md)。  
   
 <a name="The_Root_Element"></a>   
-## <a name="root-element"></a>根項目  
+## <a name="root-element"></a>Root 元素  
  對於 <xref:System.Windows.Automation.AutomationElement> 物件的所有搜尋都必須有一個開始位置。 這可以是任何項目，包括桌面、應用程式視窗或控制項。  
   
  受所有項目繼承的桌面根項目取自靜態 <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> 屬性。  
   
 > [!CAUTION]
-> 一般而言，您應該試著取得 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>的直接子系。 如果搜尋子代可能會逐一查看數百或甚至數千個項目，就很有可能會造成堆疊溢位。 如果您嘗試取得較低層級的特定項目，您應該從應用程式視窗或較低層級的容器開始搜尋。  
+> 一般而言，您應該試著取得 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>的直接子系。 如果搜尋子系可能會逐一查看數百或甚至數千個項目，就很有可能會造成堆疊溢位。 如果您嘗試取得較低層級的特定項目，您就應該要從應用程式視窗或較低層級的容器開始搜尋。  
   
 <a name="Using_Conditions"></a>   
 ## <a name="conditions"></a>Conditions  
@@ -96,7 +96,7 @@ ms.locfileid: "74446894"
 ### <a name="from-the-focused-control"></a>從取得焦點的控制項擷取  
  您可以從靜態 <xref:System.Windows.Automation.AutomationElement> 屬性擷取 <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> ，其代表取得焦點的控制項。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [根據屬性條件尋找 UI 自動化項目](find-a-ui-automation-element-based-on-a-property-condition.md)
 - [使用 TreeWalker 導覽 UI 自動化項目](navigate-among-ui-automation-elements-with-treewalker.md)

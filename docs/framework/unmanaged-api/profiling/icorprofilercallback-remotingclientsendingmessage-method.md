@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445796"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>ICorProfilerCallback::RemotingClientSendingMessage 方法
-Notifies the profiler that the client is sending a request to the server.  
+通知分析工具用戶端正在將要求傳送至伺服器。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,18 +35,18 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>參數  
  `pCookie`  
- [in] A value that corresponds with the value provided in [ICorProfilerCallback::RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) under these conditions:  
+ 在在下列情況下，對應于[ICorProfilerCallback：： RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md)中所提供之值的值：  
   
-- Remoting GUID cookies are active.  
+- 遠端 GUID cookie 為作用中。  
   
-- The channel succeeds in transmitting the message.  
+- 通道會成功傳輸訊息。  
   
-- GUID cookies are active on the server-side process.  
+- GUID cookie 會在伺服器端進程上作用。  
   
- This allows easy pairing of remoting calls and the creation of a logical call stack.  
+ 這可讓您輕鬆地配對遠端呼叫和邏輯呼叫堆疊的建立。  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ 在如果呼叫是非同步，則為 `true` 的值;否則，`false`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -57,6 +57,6 @@ HRESULT RemotingClientSendingMessage(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

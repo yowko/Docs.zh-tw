@@ -16,7 +16,7 @@ ms.locfileid: "74447145"
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>實作 UI 自動化 ExpandCollapse 控制項模式
 
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。
 
 本主題簡介實作 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>的方針和慣例，包括屬性、方法和事件的相關資訊。 其他參考的連結會在概觀的結尾列出。
 
@@ -53,12 +53,12 @@ ms.locfileid: "74447145"
 
 以下是實作 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>的必要屬性和方法。
 
-|必要成員|成員類型|備註|
+|必要成員|成員類型|注意事項|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|屬性|None|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|方法|None|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|方法|None|
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|Event - 事件|此控制項沒有相關聯的事件；使用這個泛型委派。|
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|屬性|無|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|方法|無|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|方法|無|
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|事件|此控制項沒有相關聯的事件；使用這個泛型委派。|
 
 <a name="Exceptions"></a>
 
@@ -70,11 +70,11 @@ ms.locfileid: "74447145"
 |--------------------|---------------|
 |<xref:System.InvalidOperationException>|當 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 或 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 時會呼叫 <xref:System.Windows.Automation.ExpandCollapseState> = <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
 - [使用 TreeWalker 導覽 UI 自動化項目](navigate-among-ui-automation-elements-with-treewalker.md)
 - [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
 - [在 UI 自動化中使用快取](use-caching-in-ui-automation.md)

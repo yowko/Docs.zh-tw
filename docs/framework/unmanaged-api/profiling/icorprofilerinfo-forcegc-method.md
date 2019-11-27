@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448195"
 ---
 # <a name="icorprofilerinfoforcegc-method"></a>ICorProfilerInfo::ForceGC 方法
-Forces garbage collection to occur within the common language runtime (CLR).  
+強制在 common language runtime （CLR）中進行垃圾收集。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,7 +32,7 @@ HRESULT ForceGC();
 ```  
   
 ## <a name="remarks"></a>備註  
- The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack. The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.  
+ 只能從從未執行 managed 程式碼，且在其堆疊上沒有任何分析工具回呼的執行緒呼叫 `ForceGC` 方法。 最方便的執行方式是在分析工具內建立個別的執行緒，以在收到信號時呼叫 `ForceGC`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -43,6 +43,6 @@ HRESULT ForceGC();
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

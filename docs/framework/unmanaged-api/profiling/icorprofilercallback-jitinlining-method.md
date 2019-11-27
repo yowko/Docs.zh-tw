@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449910"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>ICorProfilerCallback::JITInlining 方法
-Notifies the profiler that the just-in-time (JIT) compiler is about to insert a function in line with another function.  
+通知分析工具，及時（JIT）編譯器即將以另一個函式插入函數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,18 +36,18 @@ HRESULT JITInlining(
   
 ## <a name="parameters"></a>參數  
  `callerId`  
- [in] The ID of the function into which the `calleeId` function will be inserted.  
+ 在將插入 `calleeId` 函式的函式識別碼。  
   
  `calleeId`  
- [in] The ID of the function to be inserted.  
+ 在要插入之函式的識別碼。  
   
  `pfShouldInline`  
- [out] `true` to allow the insertion to occur; otherwise, `false`.  
+ [out] 允許進行插入的 `true`;否則，`false`。  
   
 ## <a name="remarks"></a>備註  
- The profiler can set `pfShouldInline` to `false` to prevent the `calleeId` function from being inserted into the `callerId` function. Also, the profiler can globally disable inline insertion by using the COR_PRF_DISABLE_INLINING value of the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.  
+ 分析工具可以將 `pfShouldInline` 設定為 `false`，以防止 `calleeId` 函式插入 `callerId` 函數中。 此外，分析工具也可以使用[COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列舉的 COR_PRF_DISABLE_INLINING 值，全域停用內嵌插入。  
   
- Functions inserted inline do not raise events for entering or leaving. Therefore, the profiler must set `pfShouldInline` to `false` in order to produce an accurate callgraph. Setting `pfShouldInline` to `false` will affect performance, because inline insertion typically increases speed and reduces the number of separate JIT compilation events for the inserted method.  
+ 插入的函式不會引發輸入或離開的事件。 因此，分析工具必須將 `pfShouldInline` 設定為 `false`，才能產生精確的 callgraph。 將 `pfShouldInline` 設定為 `false` 會影響效能，因為內嵌插入通常會增加速度並減少所插入方法的個別 JIT 編譯事件數。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -58,6 +58,6 @@ HRESULT JITInlining(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

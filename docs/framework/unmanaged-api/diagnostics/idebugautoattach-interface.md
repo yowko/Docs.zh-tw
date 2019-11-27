@@ -22,17 +22,17 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445515"
 ---
 # <a name="idebugautoattach-interface"></a>IDebugAutoAttach 介面
-Defines the interface for server-invoked debugger auto attach.  
+定義伺服器叫用偵錯工具自動附加的介面。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[AutoAttach 方法](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Performs server-invoked debugger auto attach.|  
+|[AutoAttach 方法](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|執行伺服器叫用的偵錯工具自動附加。|  
   
 ## <a name="requirements"></a>需求  
- **Header:** DbgAutoAttach.idl  
+ **標頭：** DbgAutoAttach .idl  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

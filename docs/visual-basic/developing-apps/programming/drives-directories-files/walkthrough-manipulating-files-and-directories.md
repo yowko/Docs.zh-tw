@@ -30,15 +30,15 @@ ms.locfileid: "74333812"
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-the-project"></a>建立專案  
+### <a name="to-create-the-project"></a>若要建立專案  
   
 1. 按一下 [檔案] 功能表上的 [新增專案]。  
   
-     [ **新增專案** ] 對話方塊隨即出現。  
+     此時會出現 [新增專案] 對話方塊。  
   
 2. 在 [已安裝的範本] 窗格中，展開 [Visual Basic]，然後按一下 [Windows]。 在中間的 [範本] 窗格中，按一下 [Windows Forms 應用程式]。  
   
-3. 在 [名稱] 方塊中，輸入 `FileExplorer` 以設定專案名稱，然後按一下 [確定]。  
+3. 在 [名稱] 方塊中，輸入  **以設定專案名稱，然後按一下 [確定]。** `FileExplorer`  
   
      Visual Studio 即會將專案新增至 [方案總管]，並開啟 [Windows Forms 設計工具]。  
   
@@ -46,15 +46,15 @@ ms.locfileid: "74333812"
   
     |控制項|屬性|值|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**名稱**|`filesListBox`|  
-    |**Button**|**名稱**<br /><br /> **Text**|`browseButton`<br /><br /> **瀏覽**|  
-    |**Button**|**名稱**<br /><br /> **Text**|`examineButton`<br /><br /> **檢查**|  
-    |**CheckBox**|**名稱**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **儲存結果**|  
-    |**FolderBrowserDialog**|**名稱**|`FolderBrowserDialog1`|  
+    |**ListBox**|**Name**|`filesListBox`|  
+    |**Button**|**Name**<br /><br /> **文字**|`browseButton`<br /><br /> **瀏覽**|  
+    |**Button**|**Name**<br /><br /> **文字**|`examineButton`<br /><br /> **檢查**|  
+    |**CheckBox**|**Name**<br /><br /> **文字**|`saveCheckBox`<br /><br /> **儲存結果**|  
+    |**FolderBrowserDialog**|**Name**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>若要選取資料夾，並列出資料夾中的檔案  
   
-1. 按兩下表單的控制項，以建立 `browseButton` 的 `Click` 事件處理常式。 [程式碼編輯器] 隨即開啟。  
+1. 按兩下表單上的控制項，以建立 `Click` 的 `browseButton` 事件處理常式。 [程式碼編輯器] 隨即開啟。  
   
 2. 將下列程式碼加入至 `Click` 事件處理常式。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "74333812"
   
 ### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a>若要取得檔案的屬性以及文字檔案的內容  
   
-1. 按兩下表單的控制項，以建立 `examineButton` 的 `Click` 事件處理常式。  
+1. 按兩下表單上的控制項，以建立 `Click` 的 `examineButton` 事件處理常式。  
   
 2. 將下列程式碼加入至 `Click` 事件處理常式。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "74333812"
   
      程式碼會將記錄檔路徑設為將記錄檔放入所選檔案的相同目錄中。 記錄項目的文字則會設為目前的日期和時間，後面接著檔案資訊。  
   
-     將 `append` 引數設定為 `True` 的 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法用來建立記錄項目。  
+     將 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 引數設定為 `append` 的 `True` 方法用來建立記錄項目。  
   
 2. 執行應用程式。 瀏覽至文字檔案，在 `ListBox` 中加以選取，並選取 [儲存結果] 核取方塊，然後按一下 [檢查]。 確認記錄項目已寫入 `log.txt` 檔案。  
   
@@ -140,15 +140,15 @@ ms.locfileid: "74333812"
   
      `SetEnabled` 方法會依據 `ListBox` 中是否選取項目，來啟用或停用控制項。  
   
-2. 按兩下表單的 `ListBox` 控制項，以建立 `filesListBox` 的 `SelectedIndexChanged` 事件處理常式。  
+2. 按兩下表單的 `SelectedIndexChanged` 控制項，以建立 `filesListBox` 的 `ListBox` 事件處理常式。  
   
-3. 在新的 `filesListBox_SelectedIndexChanged` 事件處理常式中，新增 `SetEnabled` 的呼叫。  
+3. 在新的 `SetEnabled` 事件處理常式中，新增 `filesListBox_SelectedIndexChanged` 的呼叫。  
   
-4. 在 `browseButton_Click` 事件處理常式結尾，新增 `SetEnabled` 的呼叫。  
+4. 在 `SetEnabled` 事件處理常式結尾，新增 `browseButton_Click` 的呼叫。  
   
-5. 在 `Form1_Load` 事件處理常式結尾，新增 `SetEnabled` 的呼叫。  
+5. 在 `SetEnabled` 事件處理常式結尾，新增 `Form1_Load` 的呼叫。  
   
-6. 執行應用程式。 如果 `ListBox` 中未選取項目，則會停用 [儲存結果] 核取方塊和 [檢查] 按鈕。  
+6. 執行應用程式。 如果  **中未選取項目，則會停用 [儲存結果] 核取方塊和 [檢查] 按鈕。** `ListBox`  
   
 ## <a name="full-example-using-mycomputerfilesystem"></a>使用 My.Computer.FileSystem 的完整範例  
 
@@ -162,7 +162,7 @@ ms.locfileid: "74333812"
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445190"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted 方法
-Notifies the profiler that an application domain is being unloaded from a process.  
+通知分析工具，應用程式域正在從進程中卸載。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,10 +34,10 @@ HRESULT AppDomainShutdownStarted(
   
 ## <a name="parameters"></a>參數  
  `appDomainId`  
- [in] Identifies the domain in which the application's assemblies are stored.  
+ 在識別用來儲存應用程式元件的網域。  
   
 ## <a name="remarks"></a>備註  
- The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.  
+ `AppDomainShutdownStarted` 方法傳回之後，`appDomainId` 的值對任何資訊要求而言都是不正確，這是分析工具的最後機會取得此應用程式域的相關資訊。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -48,6 +48,6 @@ HRESULT AppDomainShutdownStarted(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

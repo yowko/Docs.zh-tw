@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445413"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerleave-method"></a>ICorProfilerCallback::ExceptionOSHandlerLeave 方法
-未實作。 A profiler that needs unmanaged exception information must obtain this information through other means.  
+未實作。 需要非受控例外狀況資訊的 profiler 必須透過其他方式取得此資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,6 +41,6 @@ HRESULT ExceptionOSHandlerLeave(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

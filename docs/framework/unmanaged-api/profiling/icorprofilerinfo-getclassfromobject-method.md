@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448156"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject 方法
-Gets the `ClassID` of an object, given its `ObjectID`.  
+取得物件的 `ClassID`，指定其 `ObjectID`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,13 +35,13 @@ HRESULT GetClassFromObject(
   
 ## <a name="parameters"></a>參數  
  `objectId`  
- [in] The ID of the object for which to get the `ClassID`.  
+ 在要取得 `ClassID`之物件的識別碼。  
   
  `pClassId`  
- [out] A pointer to the returned `ClassID`.  
+ 脫銷傳回之 `ClassID`的指標。  
   
 ## <a name="remarks"></a>備註  
- A null `pClassId` indicates that `objectId` has a type that is unloading.  
+ Null `pClassId` 表示 `objectId` 具有正在卸載的類型。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -52,6 +52,6 @@ HRESULT GetClassFromObject(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

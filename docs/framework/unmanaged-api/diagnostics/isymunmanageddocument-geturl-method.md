@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449130"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL 方法
-Returns the uniform resource locator (URL) for this document.  
+傳回此檔的統一資源定位器（URL）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,17 +36,17 @@ HRESULT GetURL(
   
 ## <a name="parameters"></a>參數  
  `cchUrl`  
- [in] The size, in characters, of the `szURL` buffer.  
+ 在`szURL` 緩衝區的大小（以字元為單位）。  
   
  `pcchUrl`  
- [out] A pointer to a variable that receives the size of the URL, including the null termination.  
+ 脫銷接收 URL 大小之變數的指標，包括 null 終止。  
   
  `szUrl`  
- [out] The buffer containing the URL.  
+ 脫銷包含 URL 的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, an error code.  
+ 如果方法成功，則 S_OK;否則，錯誤碼為。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

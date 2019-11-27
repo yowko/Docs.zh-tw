@@ -59,7 +59,7 @@ ms.locfileid: "74348937"
 
 下表列出一般會使用資料流來完成的工作︰
 
-|若要|請參閱|
+|進行|請參閱|
 |---|---|
 |讀取和寫入資料檔案|[操作說明：讀取和寫入新建立的資料檔案](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
 |讀取檔案中的文字|[操作說明：從檔案讀取文字](../../../../standard/io/how-to-read-text-from-a-file.md)|
@@ -77,14 +77,14 @@ ms.locfileid: "74348937"
 
 下表列出與檔案存取和檔案屬性有關的工作︰
 
-|若要|請參閱|
+|進行|請參閱|
 |---|---|
 |開啟文字並將其附加至記錄檔|[操作說明：開啟並附加至記錄檔](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
 |判斷檔案的屬性|<xref:System.IO.FileAttributes>|
 
 ## <a name="file-permissions"></a>檔案權限
 
-使用 <xref:System.Security.Permissions.FileIOPermission> 類別可以控制檔案和目錄的存取。 這對於使用 Web Form 的開發人員來說可能特別重要，其根據預設在名為 ASPNET 的特殊本機使用者帳戶內容中執行，而該帳戶則是在 ASP.NET 和 .NET Framework 安裝期間一同建立的。 當這類應用程式要求存取資源時，ASPNET 使用者帳戶會具有有限的權限，這樣可能會讓使用者無法執行從 Web 應用程式寫入檔案這類動作。 如需詳細資訊，請參閱<xref:System.Security.Permissions.FileIOPermission>。
+使用 <xref:System.Security.Permissions.FileIOPermission> 類別可以控制檔案和目錄的存取。 這對於使用 Web Form 的開發人員來說可能特別重要，其根據預設在名為 ASPNET 的特殊本機使用者帳戶內容中執行，而該帳戶則是在 ASP.NET 和 .NET Framework 安裝期間一同建立的。 當這類應用程式要求存取資源時，ASPNET 使用者帳戶會具有有限的權限，這樣可能會讓使用者無法執行從 Web 應用程式寫入檔案這類動作。 如需詳細資訊，請參閱 <xref:System.Security.Permissions.FileIOPermission>。
 
 ## <a name="isolated-file-storage"></a>隔離檔案儲存區
 
@@ -92,7 +92,7 @@ ms.locfileid: "74348937"
 
 下表列出一般與隔離檔案儲存區相關聯的工作。
 
-|若要|請參閱|
+|進行|請參閱|
 |---|---|
 |建立隔離存放區|[操作說明：取得隔離儲存區的存放區](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
 |列舉隔離存放區|[操作說明：列舉隔離儲存區的存放區](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|
@@ -106,9 +106,9 @@ ms.locfileid: "74348937"
 
 <xref:System.IO.FileSystemWatcher> 元件可讓您監看系統或任何具有網路存取之電腦上的檔案和目錄變更。 例如，如果修改檔案，您可能要將已進行變更的警示傳送給使用者。 發生變更時，會引發一或多個事件、將其儲存在緩衝區中，並且交給 <xref:System.IO.FileSystemWatcher> 元件進行處理。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [撰寫資料流](../../../../standard/io/composing-streams.md)
 - [檔案和資料流 I/O](../../../../standard/io/index.md)
-- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [非同步檔案 I/O](../../../../standard/io/asynchronous-file-i-o.md)
 - [用於 .NET Framework 檔案 I/O 和檔案系統的類別 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

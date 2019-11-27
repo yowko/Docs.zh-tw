@@ -24,7 +24,7 @@ ms.locfileid: "74448035"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd 方法
 
-Merges into the current scope all the metadata scopes specified by one or more prior calls to [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).
+將一個或多個先前呼叫[IMetaDataEmit：： Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)所指定的所有中繼資料範圍合併到目前的範圍。
 
 ## <a name="syntax"></a>語法
 
@@ -34,45 +34,45 @@ HRESULT MergeEnd ();
 
 ## <a name="parameters"></a>參數
 
-This method takes no parameters.
+這個方法不接受任何參數。
 
 ## <a name="remarks"></a>備註
 
-This routine triggers the actual merge of metadata, of all import scopes specified by preceding calls to `IMetaDataEmit::Merge`, into the current output scope.
+此常式會在目前的輸出範圍中，觸發中繼資料的實際合併，這些是先前呼叫 `IMetaDataEmit::Merge`所指定的所有匯入範圍。
 
-The following special conditions apply to the merge:
+下列特殊條件適用于合併：
 
-- A module version identifier (MVID) is never imported, because it is unique to the metadata in the import scope.
+- 模組版本識別碼（MVID）永遠不會匯入，因為它對匯入範圍中的中繼資料是唯一的。
 
-- No existing module-wide properties are overwritten.
+- 不會覆寫任何現有的模組範圍屬性。
 
-  If module properties were already set for the current scope, no module properties are imported. However, if module properties have not been set in the current scope, they are imported only once, when they are first encountered. If those module properties are encountered again, they are duplicates. If the values of all module properties (except MVID) are compared and no duplicates are found, an error is raised.
+  如果已針對目前的範圍設定模組屬性，則不會匯入任何模組屬性。 不過，如果目前的範圍內尚未設定模組屬性，則會在第一次遇到時匯入。 如果再次發現這些模組屬性，它們就是重複的。 如果比較所有模組屬性（MVID 除外）的值，但找不到任何重複專案，就會引發錯誤。
 
-- For type definitions (`TypeDef`), no duplicates are merged into the current scope. `TypeDef` objects are checked for duplicates against each *fully-qualified object name* + *GUID* + *version number*. If there is a match on either name or GUID, and any of the other two elements is different, an error is raised. Otherwise, if all three items match, `MergeEnd` does a cursory check to ensure the entries are indeed duplicates; if not, an error is raised. This cursory check looks for:
+- 若為類型定義（`TypeDef`），則不會將任何重複專案合併到目前的範圍。 系統會針對每個*完整的物件名稱* + *GUID* + *版本號碼*，檢查 `TypeDef` 物件是否有重複專案。 如果名稱或 GUID 有相符專案，而且其他兩個專案的任何一個都不同，就會引發錯誤。 否則，如果這三個專案都相符，`MergeEnd` 會粗略檢查，以確保專案確實重複。如果不是，則會引發錯誤。 這個粗略的檢查會尋找：
 
-  - The same member declarations, occurring in the same order. Members that are flagged as `mdPrivateScope` (see the [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeration) are not included in this check; they are merged specially.
+  - 相同的成員宣告，以相同的順序出現。 標示為 `mdPrivateScope` 的成員（請參閱[CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)列舉）不會包含在這項檢查中;它們會以特殊的順序合併。
 
-  - The same class layout.
+  - 相同的類別版面配置。
 
-  This means that a `TypeDef` object must always be fully and consistently defined in every metadata scope in which it is declared; if its member implementations (for a class) are spread across multiple compilation units, the full definition is assumed to be present in every scope and not incremental to each scope. For example, if parameter names are relevant to the contract, they must be emitted the same way into every scope; if they are not relevant, they should not be emitted into metadata.
+  這表示在宣告的每個中繼資料範圍中，`TypeDef` 物件必須一律完整且一致地定義。如果它的成員實值（針對類別）會分散到多個編譯單位，則會假設完整定義出現在每個範圍中，而不是累加到每個範圍。 例如，如果參數名稱與合約有關，則它們必須以相同方式發出到每個範圍;如果不相關，則不應該將它們發出至中繼資料。
 
-  The exception is that a `TypeDef` object can have incremental members flagged as `mdPrivateScope`. On encountering these, `MergeEnd` incrementally adds them to the current scope without regard for duplicates. Because the compiler understands the private scope, the compiler must be responsible for enforcing rules.
+  例外狀況是 `TypeDef` 物件可以有標記為 `mdPrivateScope`的累加成員。 在遇到這些情況時，`MergeEnd` 會以累加方式將它們新增至目前的範圍，而不考慮重複專案。 因為編譯器瞭解私用範圍，所以編譯器必須負責強制執行規則。
 
-- Relative virtual addresses (RVAs) are not imported or merged; the compiler is expected to re-emit this information.
+- 相對虛擬位址（Rva）不會匯入或合併;編譯器應該會重新發出這則資訊。
 
-- Custom attributes are merged only when the item to which they are attached is merged. For example, custom attributes associated with a class are merged when the class is first encountered. If custom attributes are associated with a `TypeDef` or `MemberDef` that is specific to the compilation unit (such as the time stamp of a member compile), they are not merged and it is up to the compiler to remove or update such metadata.
+- 自訂屬性只有在其附加的專案合併時才會合並。 例如，當第一次遇到類別時，會合並與類別相關聯的自訂屬性。 如果自訂屬性與編譯單位特定的 `TypeDef` 或 `MemberDef` （例如成員編譯的時間戳記）相關聯，它們就不會合並，而是由編譯器負責移除或更新這類中繼資料。
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**Header:** Cor.h
+**標頭：** Cor。h
 
-**Library:** Used as a resource in MSCorEE.dll
+連結**庫：** 做為 Mscoree.dll 中的資源使用
 
 **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

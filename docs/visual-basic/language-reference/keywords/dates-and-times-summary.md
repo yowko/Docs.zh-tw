@@ -18,18 +18,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349881"
 ---
 # <a name="dates-and-times-summary-visual-basic"></a>日期和時間摘要 (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic 語言關鍵字和執行時間程式庫成員是依用途和使用來組織。  
   
 |動作|語言項目|  
 |------------|----------------------|  
-|Get the current date or time.|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>、<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>、<xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|  
-|Perform date calculations.|<xref:Microsoft.VisualBasic.DateAndTime.DateAdd%2A>、<xref:Microsoft.VisualBasic.DateAndTime.DateDiff%2A>、<xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>|  
-|Return a date.|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>、<xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A>、<xref:Microsoft.VisualBasic.DateAndTime.MonthName%2A><xref:Microsoft.VisualBasic.DateAndTime.WeekdayName%2A>|  
-|Return a time.|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>、 <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
-|Set the date or time.|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>、<xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>、<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A><xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|  
-|Time a process.|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|  
+|取得目前的日期或時間。|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Today%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|  
+|執行日期計算。|<xref:Microsoft.VisualBasic.DateAndTime.DateAdd%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateDiff%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>|  
+|傳回日期。|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A>, <xref:Microsoft.VisualBasic.DateAndTime.MonthName%2A>, <xref:Microsoft.VisualBasic.DateAndTime.WeekdayName%2A>|  
+|傳回時間。|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
+|設定日期或時間。|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|  
+|處理常式的時間。|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 執行階段程式庫成員](../../../visual-basic/language-reference/runtime-library-members.md)

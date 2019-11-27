@@ -165,13 +165,13 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447308"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe 錯誤訊息
-當您在 Visual Studio 2012 中使用 **Windows 執行階段元件**範本時，建置流程會呼叫 [Winmdexp.exe (Windows 執行階段中繼資料匯出工具)](winmdexp-exe-windows-runtime-metadata-export-tool.md)，因此 Winmdexp.exe 錯誤訊息就會出現在 [錯誤清單] 中。 Winmdexp.exe 會在使用 `/target:winmdobj` 選項編譯的模組上執行。 由於它需要編譯的模組做為輸入，因此除非編譯成功，否則其錯誤訊息不會出現。  
+當您在 Visual Studio 2012 中使用 [Windows 執行階段元件](winmdexp-exe-windows-runtime-metadata-export-tool.md)範本時，建置流程會呼叫 **Winmdexp.exe (Windows 執行階段中繼資料匯出工具)** ，因此 Winmdexp.exe 錯誤訊息就會出現在 [錯誤清單] 中。 Winmdexp.exe 會在使用 `/target:winmdobj` 選項編譯的模組上執行。 由於它需要編譯的模組做為輸入，因此除非編譯成功，否則其錯誤訊息不會出現。  
   
- 錯誤訊息的設計是包含解決回報之錯誤狀況所需的一切資訊。 不過，有些問題需要的資訊更多，而訊息中無法全部包含。 You can find additional information in [Diagnosing Windows Runtime component error conditions](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110)).  
+ 錯誤訊息的設計是包含解決回報之錯誤狀況所需的一切資訊。 不過，有些問題需要的資訊更多，而訊息中無法全部包含。 您可以在[診斷 Windows 執行階段元件錯誤狀況](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))中找到其他資訊。  
   
- 如果該文件中沒有討論到您遇到的錯誤，而您認為訊息中包含的資訊不足，無法解決這個問題，請使用該文件中的意見反應連結並納入錯誤訊息。 Alternatively, you can file a bug at the [Developer Community website](https://developercommunity.visualstudio.com/). 您也可以在 [Microsoft 論壇](https://social.msdn.microsoft.com/Forums/)上尋找詳細資訊。  
+ 如果該文件中沒有討論到您遇到的錯誤，而您認為訊息中包含的資訊不足，無法解決這個問題，請使用該文件中的意見反應連結並納入錯誤訊息。 或者，您也可以在[開發人員社區網站](https://developercommunity.visualstudio.com/)提出 bug。 您也可以在 [Microsoft 論壇](https://social.msdn.microsoft.com/Forums/)上尋找詳細資訊。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Winmdexp.exe (Windows 執行階段中繼資料匯出工具)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
 - [診斷 Windows 執行階段元件錯誤條件](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))

@@ -1,5 +1,5 @@
 ---
-title: 'How to: read from fixed-width text Files'
+title: 如何：從固定寬度的文字檔讀取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fixed-width text file
@@ -23,7 +23,7 @@ ms.locfileid: "74334631"
   
 ### <a name="to-parse-a-fixed-width-text-file"></a>剖析固定寬度的文字檔  
   
-1. 建立新的 `TextFieldParser`。 下列程式碼會建立名為 `Reader` 的 `TextFieldParser`，並開啟檔案 `test.log`。  
+1. 建立新的 `TextFieldParser`。 下列程式碼會建立名為 `TextFieldParser` 的 `Reader`，並開啟檔案 `test.log`。  
   
      [!code-vb[VbFileIORead#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#9)]  
   
@@ -35,7 +35,7 @@ ms.locfileid: "74334631"
   
      [!code-vb[VbFileIORead#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#11)]  
   
-4. 使用 `End While` 和 `End Using` 關閉 `While` 和 `Using` 區塊。  
+4. 使用 `While` 和 `Using` 關閉 `End While` 和 `End Using` 區塊。  
   
      [!code-vb[VbFileIORead#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#12)]  
   
@@ -59,7 +59,7 @@ ms.locfileid: "74334631"
   
 - 使用者沒有足夠權限以存取檔案 (<xref:System.UnauthorizedAccessException>)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - [如何：從逗號分隔文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448573"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind 列舉
-Indicates the type of memory address.  
+表示記憶體位址的類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,20 +46,20 @@ typedef enum CorSymAddrKind
   
 |成員|描述|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|Indicates a Microsoft intermediate language (MSIL) local variable or parameter index.|  
-|`ADDR_NATIVE_RVA`|Indicates a relative virtual address into a module.|  
-|`ADDR_NATIVE_REGISTER`|Indicates a CPU register.|  
-|`ADDR_NATIVE_REGREL`|Indicates that the first address is a register and the second address is an offset.|  
-|`ADDR_NATIVE_OFFSET`|Indicates an offset from a base address.|  
-|`ADDR_NATIVE_REGREG`|Indicates that the first address is the low portion of a register, and the second address is the high portion.|  
-|`ADDR_NATIVE_REGSTK`|Indicates that the first address is the low portion of a register, the second is the high portion, and the third is an offset.|  
-|`ADDR_NATIVE_STKREG`|Indicates that the first address is a register, the second is an offset, and the third is the high portion of the register.|  
-|`ADDR_BITFIELD`|Indicates that the first address is the start of a field and the second address is the field length.|  
-|`ADDR_NATIVE_ISECTOFFSET`|Indicates that the first address is the section and the second address is an offset.|  
+|`ADDR_IL_OFFSET`|表示 Microsoft 中繼語言（MSIL）本機變數或參數索引。|  
+|`ADDR_NATIVE_RVA`|表示模組中的相對虛擬位址。|  
+|`ADDR_NATIVE_REGISTER`|表示 CPU 暫存器。|  
+|`ADDR_NATIVE_REGREL`|表示第一個位址是暫存器，而第二個位址是位移。|  
+|`ADDR_NATIVE_OFFSET`|表示基底位址的位移。|  
+|`ADDR_NATIVE_REGREG`|表示第一個位址是暫存器的低部分，而第二個位址是最高的部分。|  
+|`ADDR_NATIVE_REGSTK`|表示第一個位址是暫存器的低部分，第二個是高部分，而第三個是位移。|  
+|`ADDR_NATIVE_STKREG`|表示第一個位址是暫存器，第二個是位移，而第三個是註冊的最高部分。|  
+|`ADDR_BITFIELD`|表示第一個位址是欄位的開頭，而第二個位址是欄位長度。|  
+|`ADDR_NATIVE_ISECTOFFSET`|表示第一個位址是區段，而第二個位址是位移。|  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [診斷符號存放區列舉](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

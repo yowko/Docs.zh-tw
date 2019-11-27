@@ -15,17 +15,17 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448511"
 ---
 # <a name="diagnostics-symbol-store-structures"></a>診斷符號存放區結構
-This topic describes the unmanaged structures that the diagnostics symbol store API uses.  
+本主題說明診斷符號存放區 API 所使用的非受控結構。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [CALL_ID 結構](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
- Provides information to a debugger about a function that is being called.  
+ 提供有關所呼叫函式之偵錯工具的資訊。  
   
  [SYMLINEDELTA 結構](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)  
- Provides information to the symbol handler about methods that were moved as a result of edits.  
+ 提供相關資訊給符號處理常式，而這些方法是因編輯結果而移動。  
   
  [USER_THREAD 結構](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
- Provides information to a debugger about a thread.  
+ 提供有關執行緒的詳細資訊給偵錯工具。  
   
 ## <a name="related-sections"></a>相關章節  
  [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

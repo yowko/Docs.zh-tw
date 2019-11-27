@@ -16,7 +16,7 @@ ms.locfileid: "74444615"
 # <a name="metadata-structures"></a>中繼資料結構
 本節說明中繼資料 API 所使用的 Unmanaged 結構。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  ASSEMBLYMETADATA  
  儲存組件中繼資料供稍後使用。  
   

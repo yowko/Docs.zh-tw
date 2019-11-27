@@ -13,13 +13,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345059"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 語言功能
-The following topics introduce and discuss the essential components of Visual Basic, an object-oriented programming language. 使用表單和控制項建立應用程式的使用者介面之後，您必須撰寫程式碼來定義應用程式的行為。 As with any modern programming language, Visual Basic supports a number of common programming constructs and language elements.  
+下列主題會介紹和討論 Visual Basic 的基本元件，這是物件導向程式設計語言。 使用表單和控制項建立應用程式的使用者介面之後，您必須撰寫程式碼來定義應用程式的行為。 如同任何現代化的程式設計語言，Visual Basic 支援許多常見的程式設計結構和語言元素。  
   
- 如果您曾經使用其他語言進行程式設計，則可能會覺得本節涵蓋的大多數內容似曾相識。 While most of the constructs are similar to those in other languages, the event-driven nature of Visual Basic introduces some subtle differences.  
+ 如果您曾經使用其他語言進行程式設計，則可能會覺得本節涵蓋的大多數內容似曾相識。 雖然大部分的結構都與其他語言類似，但 Visual Basic 的事件驅動性質會帶來一些細微的差異。  
   
- 如果您是程式設計的新手，可將本節的內容當做用來撰寫程式碼的基本建置組塊簡介。 Once you understand the basics, you can create powerful applications using Visual Basic.  
+ 如果您是程式設計的新手，可將本節的內容當做用來撰寫程式碼的基本建置組塊簡介。 瞭解基本概念之後，您可以使用 Visual Basic 建立功能強大的應用程式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  討論如何宣告和使用陣列來保留多個相關聯的值，藉以讓您的程式碼更精簡且功能更強大。  
   
@@ -83,4 +83,4 @@ The following topics introduce and discuss the essential components of Visual Ba
  說明部分由 .NET Framework 提供的集合型別。 示範如何使用簡單集合及金鑰/值組集合。  
   
  [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)  
- Provides reference information on various aspects of Visual Basic programming.
+ 提供 Visual Basic 程式設計各個層面的參考資訊。
