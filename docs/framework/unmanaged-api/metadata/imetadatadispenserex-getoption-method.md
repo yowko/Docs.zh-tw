@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436001"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>IMetaDataDispenserEx::GetOption 方法
-Gets the value of the specified option for the current metadata scope. The option controls how calls to the current metadata scope are handled.  
+取得目前中繼資料範圍中指定之選項的值。 選項會控制如何處理對目前中繼資料範圍的呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,13 +36,13 @@ HRESULT GetOption (
   
 ## <a name="parameters"></a>參數  
  `optionId`  
- [in] A pointer to a GUID that specifies the option to be retrieved. See the Remarks section for a list of supported GUIDs.  
+ 在GUID 的指標，指定要抓取的選項。 如需支援的 Guid 清單，請參閱備註一節。  
   
  `pValue`  
- [out] The value of the returned option. The type of this value will be a variant of the specified option's type.  
+ 脫銷傳回之選項的值。 此值的類型將是指定之選項類型的 variant。  
   
 ## <a name="remarks"></a>備註  
- The following list shows the GUIDs that are supported for this method. For descriptions, see the [IMetaDataDispenserEx::SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) method. If `optionId` is not in this list, this method returns HRESULT `E_INVALIDARG`, indicating an incorrect parameter.  
+ 下列清單顯示這個方法支援的 Guid。 如需說明，請參閱[IMetaDataDispenserEx：： SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md)方法。 如果 `optionId` 不在此清單中，這個方法會傳回 HRESULT `E_INVALIDARG`，表示參數不正確。  
   
 - MetaDataCheckDuplicatesFor  
   
@@ -59,15 +59,15 @@ HRESULT GetOption (
 - MetaDataLinkerOptions  
   
 ## <a name="requirements"></a>需求  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **平臺：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataDispenserEx 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
 - [IMetaDataDispenser 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

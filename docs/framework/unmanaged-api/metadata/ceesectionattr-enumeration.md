@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444255"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr 列舉
-Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
+提供值，指定區段的屬性供[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)介面使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,20 +41,20 @@ typedef enum  {
   
 |成員|描述|  
 |------------|-----------------|  
-|`sdNone`|Section has no attributes.|  
-|`sdReadOnly`|Section contains initialized data that can be only read, not updated.|  
-|`sdReadWrite`|Section contains initialized data that can be read or updated.|  
-|`sdExecute`|Section contains executable code that is allowed to be read and executed.|  
+|`sdNone`|區段沒有屬性。|  
+|`sdReadOnly`|區段包含只能讀取、未更新的初始化資料。|  
+|`sdReadWrite`|區段包含可讀取或更新的初始化資料。|  
+|`sdExecute`|區段包含允許讀取和執行的可執行程式碼。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

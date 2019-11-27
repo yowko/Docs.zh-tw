@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447896"
 ---
 # <a name="imetadataemit2savedeltatomemory-method"></a>IMetaDataEmit2::SaveDeltaToMemory 方法
-Saves changes from the current edit-and-continue session to memory.  
+將目前的「編輯後繼續」會話的變更儲存至記憶體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,21 +36,21 @@ HRESULT SaveDeltaToMemory (
   
 ## <a name="parameters"></a>參數  
  `pbData`  
- [out] The address at which to begin writing the metadata delta.  
+ 脫銷要開始寫入中繼資料差異的位址。  
   
  `cbData`  
- [in] The size of the changes. Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.  
+ 在變更的大小。 請使用[IMetaDataEmit2：： GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md)來判斷大小。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

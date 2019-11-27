@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445127"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished 方法
-Notifies the profiler that a class has finished loading.  
+通知 profiler，類別已完成載入。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,15 +35,15 @@ HRESULT ClassLoadFinished(
   
 ## <a name="parameters"></a>參數  
  `classId`  
- [in] Identifies the class that was loaded.  
+ 在識別已載入的類別。  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the class loaded successfully.  
+ 在HRESULT，指出類別是否已成功載入。  
   
 ## <a name="remarks"></a>備註  
- The value of `classId` is not valid for an information request until the `ClassLoadFinished` method is called.  
+ 在呼叫 `ClassLoadFinished` 方法之前，`classId` 的值對資訊要求而言是不正確。  
   
- Some parts of loading the class might continue after the `ClassLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the class has succeeded.  
+ 載入類別的某些部分可能會在 `ClassLoadFinished` 回呼之後繼續進行。 `hrStatus` 中的失敗 HRESULT 表示失敗。 不過，`hrStatus` 中的成功 HRESULT 只會指出載入類別的第一個部分已成功。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -54,7 +54,7 @@ HRESULT ClassLoadFinished(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ClassLoadStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)

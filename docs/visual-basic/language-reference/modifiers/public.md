@@ -1,5 +1,5 @@
 ---
-title: Public
+title: 公用
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Public
@@ -16,24 +16,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351286"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
-Specifies that one or more declared programming elements have no access restrictions.  
+指定一個或多個宣告的程式設計項目沒有存取限制。  
   
 ## <a name="remarks"></a>備註  
- If you are publishing a component or set of components, such as a class library, you usually want the programming elements to be accessible by any code that interoperates with your assembly. To confer such unlimited access on an element, you can declare it with `Public`.  
+ 如果您要發佈元件或元件集（例如類別庫），您通常會想要讓程式設計項目可供與您的元件互通的任何程式碼存取。 若要對專案授與這類無限制存取，您可以使用 `Public`來宣告。  
   
- Public access is the normal level for a programming element when you do not need to limit access to it. Note that the access level of an element declared within an interface, module, class, or structure defaults to `Public` if you do not declare it otherwise.  
+ 公用存取是程式設計項目的一般層級，當您不需要限制它的存取權時。 請注意，在介面、模組、類別或結構內宣告之元素的存取層級預設為 `Public` 如果您未將它宣告為。  
   
 ## <a name="rules"></a>規則  
   
-- **Declaration Context.** You can use `Public` only at module, interface, or namespace level. This means the declaration context for a `Public` element must be a source file, namespace, interface, module, class, or structure, and cannot be a procedure.  
+- **宣告內容。** 您只能在模組、介面或命名空間層級使用 `Public`。 這表示 `Public` 元素的宣告內容必須是原始程式檔、命名空間、介面、模組、類別或結構，而且不能是程式。  
   
 ## <a name="behavior"></a>行為  
   
-- **Access Level.** All code that can access a module, class, or structure can access its `Public` elements.  
+- **存取層級。** 所有可存取模組、類別或結構的程式碼都可以存取其 `Public` 元素。  
   
-- **Default Access.** Local variables inside a procedure default to public access, and you cannot use any access modifiers on them.  
+- **預設存取。** 程式內的區域變數預設為公用存取，而且您不能在這些變數上使用任何存取修飾詞。  
   
-- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **存取修飾詞。** 指定存取層級的關鍵字稱為*存取*修飾詞。 如需存取修飾詞的比較，請參閱[Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `Public` 修飾詞可用於以下內容：  
   
@@ -57,7 +57,7 @@ Specifies that one or more declared programming elements have no access restrict
   
  [Module 陳述式](../../../visual-basic/language-reference/statements/module-statement.md)  
   
- [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
  [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
   
@@ -65,14 +65,14 @@ Specifies that one or more declared programming elements have no access restrict
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

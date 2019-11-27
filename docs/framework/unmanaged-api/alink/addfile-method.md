@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446678"
 ---
 # <a name="addfile-method"></a>AddFile 方法
-Adds files to the assembly. Can also be used to create unbound modules.  
+將檔案加入至元件。 也可以用來建立未系結的模組。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,27 +39,27 @@ HRESULT AddFile(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- Unique ID of the assembly to be augmented.  
+ 要擴充之元件的唯一識別碼。  
   
  `pszFilename`  
- Fully qualified name of file to be added.  
+ 要新增之檔案的完整名稱。  
   
  `dwFlags`  
- COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
+ COM + FileDef 旗標，例如 `ffContainsNoMetaData` 和 `ffWriteable`。 `dwFlags` 會傳遞至[DefineFile 方法](../metadata/imetadataassemblyemit-definefile-method.md)。  
   
  `pEmitter`  
- [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.  
+ [IMetaDataEmit 介面](../metadata/imetadataemit-interface.md)介面，可用來發出中繼資料（如有必要）。  
   
  `pFileToken`  
- Pointer to where the unique ID of the added file will be stored.  
+ 要儲存所新增檔案之唯一識別碼的位置指標。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h.  
+ 需要 alink. h。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

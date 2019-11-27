@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353067"
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>How to: Debug Empty Query Results Sets (Visual Basic)
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>如何： Debug 空的查詢結果集（Visual Basic）
 
 查詢 XML 時所遇到的其中一個最常見的問題是，如果 XML 樹狀結構有預設的命名空間，即使 XML 不在命名空間中，開發人員有時候還是會撰寫查詢。
 
@@ -17,7 +17,7 @@ ms.locfileid: "74353067"
 
 第二組範例顯示所需的修正，讓您可以在命名空間中查詢 XML。
 
-For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).
+如需詳細資訊，請參閱[命名空間總覽（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)。
 
 ## <a name="example"></a>範例
 
@@ -54,7 +54,7 @@ End of result set
 
 此範例顯示 XML 在命名空間中的建立，以及編碼正確的查詢。
 
-The solution is to declare and initialize a global default namespace. 這會將所有 XML 屬性放在預設的命名空間中。 此範例不需要其他任何修改，就可以讓它正常運作。
+解決方案是宣告和初始化全域預設命名空間。 這會將所有 XML 屬性放在預設的命名空間中。 此範例不需要其他任何修改，就可以讓它正常運作。
 
 ```vb
 Imports <xmlns="http://www.adventure-works.com">
@@ -92,6 +92,6 @@ Result set follows:
 End of result set
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本查詢（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

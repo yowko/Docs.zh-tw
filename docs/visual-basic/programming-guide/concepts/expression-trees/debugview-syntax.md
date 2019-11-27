@@ -1,5 +1,5 @@
 ---
-title: Syntax used by DebugView property
+title: DebugView 屬性所使用的語法
 description: 描述 DebugView 屬性用來產生運算式樹狀架構之字串呈現的特殊語法
 author: zspitz
 ms.author: wiwagn
@@ -19,7 +19,7 @@ ms.locfileid: "74346873"
 
 `DebugView` 屬性 (僅於偵錯時提供使用) 能提供運算式樹狀架構的字串呈現。 此語法大部分皆相當容易了解；其特殊案例已於下列各節中描述。
 
-Each example is followed by a comment block containing the `DebugView`.
+每個範例後面會接著包含 `DebugView`的批註區塊。
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -43,17 +43,17 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 
 ## <a name="constantexpressions"></a>ConstantExpression
 
-對於代表整數值、字串和 `null` 的 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 物件，會顯示常數的值。
+對於代表整數值、字串和 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 的 `null` 物件，會顯示常數的值。
 
-For some numeric types, a suffix is added to the value:
+針對某些數數值型別，會將尾碼新增至值：
 
-| 輸入 | 關鍵字 | 尾碼 |
+| 類型 | 關鍵字 | 尾碼 |
 |--|--|--|
 | <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |
 | <xref:System.UInt64> | [ULong](../../../language-reference/data-types/ulong-data-type.md) | UL |
 | <xref:System.Double> | [Double](../../../language-reference/data-types/double-data-type.md) | D |
-| <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | F |
+| <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | 華氏 (F) |
 | <xref:System.Decimal> | [Decimal](../../../language-reference/data-types/decimal-data-type.md) | M |
 
 ### <a name="examples"></a>範例

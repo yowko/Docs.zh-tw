@@ -22,11 +22,11 @@ ms.locfileid: "74353261"
   
  `Log` 物件可提供將資訊寫入應用程式記錄檔接聽程式的方法，而 `Log` 物件的進階 `TraceSource` 屬性則提供詳細組態資訊。 `Log` 物件是由應用程式的組態檔進行設定。  
   
- `My.Log` 物件僅適用於 ASP.NET 應用程式。 若是用戶端應用程式，請使用 `My.Application.Log`。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Logging.Log>。  
+ `My.Log` 物件僅適用於 ASP.NET 應用程式。 若是用戶端應用程式，請使用 `My.Application.Log`。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Logging.Log>。  
   
 ## <a name="tasks"></a>工作  
   
-|若要|請參閱|  
+|進行|請參閱|  
 |--------|---------|  
 |將事件資訊寫入應用程式的記錄檔。|[如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
 |將例外狀況資訊寫入應用程式的記錄檔。|[如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
@@ -38,7 +38,7 @@ ms.locfileid: "74353261"
 |建立 `My.Application.Log` 的自訂記錄檔接聽程式。|[逐步解說：建立自訂的記錄檔接聽程式](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)|  
 |篩選 `My.Application.Log` 記錄檔的輸出。|[逐步解說：篩選 My.Application.Log 輸出](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)

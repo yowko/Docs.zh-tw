@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create unsigned friend assemblies'
+title: 如何：建立未簽署的 friend 元件
 ms.date: 08/19/2019
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
 dev_langs:
@@ -12,15 +12,15 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352441"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies"></a>How to: Create unsigned friend assemblies
+# <a name="how-to-create-unsigned-friend-assemblies"></a>如何：建立未簽署的 friend 元件
 
 此範例示範如何搭配未簽署的組件使用 friend 組件。
 
-## <a name="create-an-assembly-and-a-friend-assembly"></a>Create an assembly and a friend assembly
+## <a name="create-an-assembly-and-a-friend-assembly"></a>建立元件和 friend 元件
 
 1. 開啟命令提示字元。
 
-2. Create a C# or Visual Basic file named *friend_unsigned_A* that contains the following code. The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare *friend_unsigned_B* as a friend assembly.
+2. 建立名C#為*friend_unsigned_A*的或 Visual Basic 檔案，其中包含下列程式碼。 程式碼會使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性，將*friend_unsigned_B*宣告為 friend 元件。
 
    ```csharp
    // friend_unsigned_A.cs
@@ -73,7 +73,7 @@ ms.locfileid: "74352441"
    End Class
    ```
 
-3. Compile and sign *friend_unsigned_A* by using the following command:
+3. 使用下列命令來編譯和簽署*friend_unsigned_A* ：
 
    ```csharp
    csc /target:library friend_unsigned_A.cs
@@ -83,7 +83,7 @@ ms.locfileid: "74352441"
    vbc -target:library friend_unsigned_A.vb
    ```
 
-4. Create a C# or Visual Basic file named *friend_unsigned_B* that contains the following code. Because *friend_unsigned_A* specifies *friend_unsigned_B* as a friend assembly, the code in *friend_unsigned_B* can access `internal` (C#) or `Friend` (Visual Basic) types and members from *friend_unsigned_A*.
+4. 建立名C#為*friend_unsigned_B*的或 Visual Basic 檔案，其中包含下列程式碼。 由於*friend_unsigned_A*會將*friend_unsigned_B*指定為 friend 元件，因此*friend_unsigned_B*中的程式碼可以C#從 *`Friend`* 存取 `internal` （）或 Visual Basic （friend_unsigned_A）類型和成員。
 
    ```csharp
    // friend_unsigned_B.cs
@@ -125,7 +125,7 @@ ms.locfileid: "74352441"
    End Module
    ```
 
-5. Compile *friend_unsigned_B* by using the following command.
+5. 使用下列命令來編譯*friend_unsigned_B* 。
 
    ```csharp
    csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs
@@ -135,21 +135,21 @@ ms.locfileid: "74352441"
    vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb
    ```
 
-   編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 You must explicitly specify the name of the output assembly ( *.exe* or *.dll*) by using the `-out` compiler option. For more information, see [-out (C# compiler options)](../../csharp/language-reference/compiler-options/out-compiler-option.md) or [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)..
+   編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您必須使用 `-out` 編譯器選項，明確指定輸出元件（ *.exe*或 *.dll*）的名稱。 如需詳細資訊，請參閱[-C# out （編譯器選項）](../../csharp/language-reference/compiler-options/out-compiler-option.md)或[-out （Visual Basic）](../../visual-basic/reference/command-line-compiler/out.md)。
 
-6. Run the *friend_unsigned_B.exe* file.
+6. 執行*friend_unsigned_B .exe*檔案。
 
-   The program outputs two strings: **Class1.Test** and **Class2.Test**.
+   程式會輸出兩個字串： **Class1. test**和**Class2**。
 
 ## <a name="net-security"></a>.NET 安全性
 
-<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。 The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal`  or `Friend` (Visual Basic) types and members.
+<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。 主要差異在於 <xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全性許可權來執行特定的程式碼區段，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性則控制 `internal` 或 `Friend` （Visual Basic）類型和成員的可見度。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET 中的組件](index.md)
-- [Friend assemblies](friend.md)
-- [How to: Create signed friend assemblies](create-signed-friend.md)
+- [Friend 元件](friend.md)
+- [如何：建立已簽署的 friend 元件](create-signed-friend.md)
 - [C# 程式設計指南](../../csharp/programming-guide/index.md)
-- [Programming concepts (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)
+- [程式設計概念（Visual Basic）](../../visual-basic/programming-guide/concepts/index.md)

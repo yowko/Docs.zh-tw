@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436257"
 ---
 # <a name="imetadataconvertergettypelibfrommetadata-method"></a>IMetaDataConverter::GetTypeLibFromMetaData 方法
-Gets a pointer to an `ITypeLib` instance that represents the type library that has the specified library and module names.  
+取得 `ITypeLib` 實例的指標，表示具有指定之程式庫和模組名稱的類型程式庫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,23 +37,23 @@ HRESULT GetTypeLibFromMetaData (
   
 ## <a name="parameters"></a>參數  
  `strModule`  
- [in] The name of the type library's module.  
+ 在型別程式庫模組的名稱。  
   
  `strTlbName`  
- [in] The name of the type library.  
+ 在類型程式庫的名稱。  
   
  `ppITL`  
- [out] A pointer to a location that receives the address of the `ITypeLib` instance that represents the type library.  
+ 脫銷位置的指標，接收代表類型程式庫之 `ITypeLib` 實例的位址。  
   
 ## <a name="requirements"></a>需求  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **平臺：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataConverter 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)

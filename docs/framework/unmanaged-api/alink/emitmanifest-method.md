@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446489"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest 方法
-Emits the final manifest. Call this method after importing all other files and setting all options. Do not call this method for unbound modules.  
+發出最後的資訊清單。 在匯入所有其他檔案並設定所有選項之後，請呼叫這個方法。 請勿針對未系結的模組呼叫此方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,21 +37,21 @@ HRESULT EmitManifest(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- ID of the assembly.  
+ 元件的識別碼。  
   
  `pdwReserveSize`  
- Receives the size to reserve in the assembly file, retrieved from [StrongNameSignatureSize Function](../strong-naming/strongnamesignaturesize-function.md).  
+ 接收要在元件檔中保留的大小，並從[StrongNameSignatureSize](../strong-naming/strongnamesignaturesize-function.md)函式中取出。  
   
  `ptkManifest`  
- Optionally receives the assembly manifest token.  
+ 選擇性地接收組件資訊清單 token。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h.  
+ 需要 alink. h。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

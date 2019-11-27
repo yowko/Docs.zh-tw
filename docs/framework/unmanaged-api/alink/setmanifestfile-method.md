@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445569"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile 方法
-Enables you to specify or reset the manifest file that the linker uses when it creates the assembly.  
+可讓您指定或重設連結器在建立元件時所使用的資訊清單檔。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,18 +35,18 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>參數  
  `pszFile`  
   
- The name of the manifest file whose contents are put into the Win32 resources blob.  
+ 資訊清單檔案的名稱，其內容會放入 Win32 資源 blob 中。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="remarks"></a>備註  
- Call this before asking for the Win32ResBlob. The value of the `pszFile` parameter is the name of the manifest file whose contents are read and put in the Win32 resources with ID of RT_MANIFEST. When called by using a parameter of NULL, any previously read manifest is cleared. This enables one to reset the state of the linker to that of initialization time.  
+ 在要求 Win32ResBlob 之前，請先呼叫此程式。 `pszFile` 參數的值是資訊清單檔案的名稱，其內容會讀取並放在識別碼為 RT_MANIFEST 的 Win32 資源中。 使用 Null 的參數呼叫時，會清除任何先前讀取的資訊清單。 如此一來，就可以將連結器的狀態重設為初始化時間的狀態。  
   
 ## <a name="requirements"></a>需求  
- Requires aLink.h  
+ 需要 aLink. h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink3 介面](ialink3-interface.md)
 - [ALink API](index.md)

@@ -56,30 +56,30 @@ typedef enum CorMethodImpl {
   
 |成員|描述|  
 |------------|-----------------|  
-|`miCodeTypeMask`|Flags that describe code type.|  
-|`miIL`|Specifies that the method implementation is Microsoft intermediate language (MSIL).|  
+|`miCodeTypeMask`|描述程式碼類型的旗標。|  
+|`miIL`|指定方法實作為 Microsoft 中繼語言（MSIL）。|  
 |`miNative`|指定方法實作為原生。|  
-|`miOPTIL`|Specifies that the method implementation is OPTIL.|  
-|`miRuntime`|Specifies that the method implementation is provided by the common language runtime.|  
-|`miManagedMask`|Flags that indicate whether the code is managed or unmanaged.|  
-|`miUnmanaged`|Specifies that the method implementation is unmanaged.|  
-|`miManaged`|Specifies that the method implementation is managed.|  
-|`miForwardRef`|Specifies that the method is defined. This flag is used primarily in merge scenarios.|  
-|`miPreserveSig`|Specifies that the method signature cannot be mangled for an HRESULT conversion.|  
-|`miInternalCall`|Reserved for internal use by the common language runtime.|  
-|`miSynchronized`|Specifies that the method is single-threaded through its body.|  
+|`miOPTIL`|指定方法實作為 OPTIL。|  
+|`miRuntime`|指定方法實作為 common language runtime 所提供。|  
+|`miManagedMask`|旗標，指出程式碼為 managed 或非受控。|  
+|`miUnmanaged`|指定方法實作為未受管理。|  
+|`miManaged`|指定方法的實作為管理。|  
+|`miForwardRef`|指定方法已定義。 這個旗標主要用於合併案例中。|  
+|`miPreserveSig`|指定方法簽章不能因 HRESULT 轉換而改變。|  
+|`miInternalCall`|保留供 common language runtime 內部使用。|  
+|`miSynchronized`|指定方法是透過其主體的單一執行緒。|  
 |`miNoInlining`|指定方法無法內嵌。|  
-|`miAggressiveInlining`|Specifies that the method should be inlined if possible.|  
-|`miNoOptimization`|Specifies that the method should not be optimized.|  
-|`miMaxMethodImplVal`|The maximum valid value for a `CorMethodImpl`.|  
+|`miAggressiveInlining`|指定方法應該盡可能內嵌。|  
+|`miNoOptimization`|指定不應該優化方法。|  
+|`miMaxMethodImplVal`|`CorMethodImpl`的有效值上限。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

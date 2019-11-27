@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430710"
 ---
 # <a name="isymunmanageddisposedestroy-method"></a>ISymUnmanagedDispose::Destroy 方法
-Causes the underlying object to release all internal references and return failure on any subsequent method calls.  
+導致基礎物件釋放所有內部參考，並在任何後續的方法呼叫時傳回失敗。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,11 +32,11 @@ HRESULT Destroy();
 ```  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedDispose 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)

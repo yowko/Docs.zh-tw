@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440993"
 ---
 # <a name="inotifyconnection2unregisternotifysource-method"></a>INotifyConnection2::UnregisterNotifySource 方法
-Removes a specified notification source object from the connection.  
+從連接中移除指定的通知來源物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,15 +36,15 @@ HRESULT UnregisterNotifySource
   
 ## <a name="parameters"></a>參數  
  `in_pNotifySource`  
- [in] Notification object to be unregistered.  
+ 在要取消註冊的通知物件。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds.  
+ 如果方法成功，則 S_OK。  
   
 ## <a name="requirements"></a>需求  
- **Header:** ProtocolNotify2.idl  
+ **標頭：** ProtocolNotify2 .idl  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [INotifyConnection2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
 - [INotifySource2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)

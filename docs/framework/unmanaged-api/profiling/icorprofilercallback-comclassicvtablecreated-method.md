@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445056"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated 方法
-Notifies the profiler that a COM interop vtable for the specified IID and class has been created.  
+通知分析工具，指定之 IID 和類別的 COM Interop vtable 已建立。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,21 +37,21 @@ HRESULT COMClassicVTableCreated(
   
 ## <a name="parameters"></a>參數  
  `wrappedClasId`  
- [in] The ID of the class for which the vtable has been created.  
+ 在已建立 vtable 之類別的識別碼。  
   
  `implementedIID`  
- [in] The ID of the interface implemented by the class. This value may be NULL if the interface is internal only.  
+ 在類別所實作為介面的識別碼。 如果介面僅供內部用，這個值可能會是 Null。  
   
  `pVTable`  
- [in] A pointer to the start of the vtable.  
+ 在Vtable 開頭的指標。  
   
  `cSlots`  
- [in] The number of slots that are in the vtable.  
+ 在Vtable 中的插槽數目。  
   
 ## <a name="remarks"></a>備註  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ 分析工具不應在此方法的執行中封鎖，因為堆疊可能不是處於允許垃圾收集的狀態，因此無法啟用「搶先垃圾收集」。 如果分析工具在此處封鎖並嘗試垃圾收集，執行時間將會封鎖，直到這個回呼傳回為止。  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ 分析工具的此方法的執行不應呼叫 managed 程式碼，或以任何方式進行，以造成 managed 記憶體配置。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -62,7 +62,7 @@ HRESULT COMClassicVTableCreated(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [COMClassicVTableDestroyed 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtabledestroyed-method.md)

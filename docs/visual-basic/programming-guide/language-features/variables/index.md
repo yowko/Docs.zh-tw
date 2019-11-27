@@ -13,10 +13,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352404"
 ---
 # <a name="variables-in-visual-basic"></a>Visual Basic 中的變數
-You often have to store values when you perform calculations with Visual Basic. 例如，您可能想要計算和比較數個值，並根據比較結果，對它們執行不同的作業。 如果您想要比較值，則必須保留值。  
+當您使用 Visual Basic 執行計算時，通常必須儲存值。 例如，您可能想要計算和比較數個值，並根據比較結果，對它們執行不同的作業。 如果您想要比較值，則必須保留值。  
   
-## <a name="usage"></a>使用量  
- Visual Basic, just like most programming languages, uses variables for storing values. 「變數」具有名稱 (您用來參考該變數所含值的字組)。 變數也具有資料類型 (可判斷該變數可儲存的資料類型)。 如果陣列必須儲存一組編製過索引的緊密相關資料項目，則變數可以代表陣列。  
+## <a name="usage"></a>使用方式  
+ Visual Basic，就像大部分的程式語言一樣，會使用變數來儲存值。 「變數」具有名稱 (您用來參考該變數所含值的字組)。 變數也具有資料類型 (可判斷該變數可儲存的資料類型)。 如果陣列必須儲存一組編製過索引的緊密相關資料項目，則變數可以代表陣列。  
   
  區域型別推斷可讓您宣告變數，而不需要明確陳述資料類型。 相反地，編譯器是根據初始化運算式的類型來推斷變數的類型。 如需詳細資訊，請參閱[區域型別推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)和 [Option Infer 陳述式](../../../../visual-basic/language-reference/statements/option-infer-statement.md)。  
   
@@ -33,11 +33,11 @@ You often have to store values when you perform calculations with Visual Basic. 
 ## <a name="variables-and-properties"></a>變數和屬性  
  與變數類似，「屬性」代表您可存取的值。 不過，它比變數更為複雜。 屬性會使用程式碼區塊來控制如何設定和擷取其值。 如需詳細資訊，請參閱 [Visual Basic 中屬性和變數的差異](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [變數的疑難排解](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)
 - [如何：移入和移出變數資料](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
-- [Differences Between Properties and Variables in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)
+- [Visual Basic 中的屬性和變數之間的差異](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)
 - [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450327"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps 方法
-Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+設定或更新先前呼叫[IMetaDataEmit：:D efineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)所定義之事件的指定功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,36 +41,36 @@ HRESULT SetEventProps (
   
 ## <a name="parameters"></a>參數  
  `ev`  
- [in] The event token.  
+ 在事件 token。  
   
  `dwEventFlags`  
- [in] Event flags. This is a bitmask of `CorEventAttr` values.  
+ 在事件旗標。 這是 `CorEventAttr` 值的位元遮罩。  
   
  `tkEventType`  
- [in] The token for the event class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
+ 在事件類別的 token。 這可以是 `mdTypeDef` 或 `mdTypeRef` token。  
   
  `mdAddOn`  
- [in] The method used to subscribe to the event, or null.  
+ 在用來訂閱事件的方法，或 null。  
   
  `mdRemoveOn`  
- [in] The method used to unsubscribe to the event, or null.  
+ 在用來取消訂閱事件的方法，或 null。  
   
  `mdFire`  
- [in] The method used (by a derived class) to raise the event.  
+ 在用來引發事件的方法（由衍生類別）。  
   
  `rmdOtherMethods[]`  
- [in] An array of tokens for other methods associated with the event. The last element of the array must be `mdMethodDefNil`.  
+ 在與事件相關聯之其他方法的權杖陣列。 陣列的最後一個元素必須 `mdMethodDefNil`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

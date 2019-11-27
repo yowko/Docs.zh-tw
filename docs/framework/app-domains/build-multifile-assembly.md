@@ -1,5 +1,5 @@
 ---
-title: 'How to: Build a multifile assembly'
+title: 如何：建立多檔案元件
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -24,16 +24,16 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429564"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>How to: Build a multifile assembly
+# <a name="how-to-build-a-multifile-assembly"></a>如何：建立多檔案元件
 
 本文說明如何建立多檔案組件，並提供說明程序中每個步驟的程式碼。
 
 > [!NOTE]
-> 適用於 C# 和 Visual Basic 的 Visual Studio IDE 只能用來建立單一檔案組件。 如果您想建立多檔案組件，則必須使用命令列編譯器或搭配 Visual C++ 使用 Visual Studio。 Multifile assemblies are supported by .NET Framework only.
+> 適用於 C# 和 Visual Basic 的 Visual Studio IDE 只能用來建立單一檔案組件。 如果您想建立多檔案組件，則必須使用命令列編譯器或搭配 Visual C++ 使用 Visual Studio。 只有 .NET Framework 支援多檔案元件。
 
-## <a name="create-a-multifile-assembly"></a>Create a multifile assembly
+## <a name="create-a-multifile-assembly"></a>建立多檔案元件
 
-1. 將所有檔案編譯為程式碼模組，該檔案所包含的命名空間將由組件的其他模組參考。 The default extension for code modules is *.netmodule*.
+1. 將所有檔案編譯為程式碼模組，該檔案所包含的命名空間將由組件的其他模組參考。 程式碼模組的預設副檔名為 *.netmodule*。
 
    例如，假設 `Stringer` 檔案有名為 `myStringer` 的命名空間，其中包括名為 `Stringer` 的類別。 `Stringer` 類別含有 `StringerMethod`，可撰寫單行到主控台。
 
@@ -95,11 +95,11 @@ ms.locfileid: "74429564"
    vbc /t:module Stringer.vb
    ```
 
-   使用 **/t:** 編譯器選項指定 *module* 參數，表示應將檔案編譯成模組，而非編譯成組件。 The compiler produces a module called *Stringer.netmodule*, which can be added to an assembly.
+   使用 */t:* 編譯器選項指定 **module** 參數，表示應將檔案編譯成模組，而非編譯成組件。 編譯器會產生一個稱為 Stringer 的模組， *.netmodule*，它可以加入至元件。
 
 3. 使用必要的編譯器選項來編譯其他所有模組，以便指出程式碼中所參考的其他模組。 這個步驟使用 **/addmodule** 編譯器選項。
 
-   In the following example, a code module called *Client* has an entry point `Main` method that references a method in the *Stringer.dll* module created in step 1.
+   在下列範例中，名為*Client*的程式碼模組具有進入點 `Main` 方法，可參考步驟1中所建立之*Stringer*模組中的方法。
 
    ```cpp
    #using "Stringer.netmodule"
@@ -168,7 +168,7 @@ ms.locfileid: "74429564"
    vbc /addmodule:Stringer.netmodule /t:module Client.vb
    ```
 
-   請指定 **/t:module** 選項，因為這個模組將在下一個步驟中新增到組件。 Specify the **/addmodule** option because the code in *Client* references a namespace created by the code in *Stringer.netmodule*. The compiler produces a module called *Client.netmodule* that contains a reference to another module, *Stringer.netmodule*.
+   請指定 **/t:module** 選項，因為這個模組將在下一個步驟中新增到組件。 指定 **/addmodule**選項，因為*用戶端*中的程式碼會參考*Stringer. .netmodule*中的程式碼所建立的命名空間。 編譯器會產生名為 *.netmodule*的模組，其中包含對另一個模組*Stringer. .netmodule*的參考。
 
    > [!NOTE]
    > C# 和 Visual Basic 編譯器支援使用下列兩個不同的語法來直接建立多檔案組件。
@@ -211,9 +211,9 @@ ms.locfileid: "74429564"
 
     **al** \<*模組名稱*> \<*模組名稱*> … **/main:** \<*方法名稱*>  **/out:** \<*檔案名稱*>  **/target:** \<*組件檔案類型*>
 
-    在這個命令中，「模組名稱」引數會指定組件中包含的所有模組名稱。 **/main:** 選項指定方法名稱，這個名稱是組件的進入點。 **/out:** 選項指定輸出檔案的名稱，其中包含組件中繼資料。 The **/target:** option specifies that the assembly is a console application executable ( *.exe*) file, a Windows executable ( *.win*) file, or a library ( *.lib*) file.
+    在這個命令中，「模組名稱」引數會指定組件中包含的所有模組名稱。 **/main:** 選項指定方法名稱，這個名稱是組件的進入點。 **/out:** 選項指定輸出檔案的名稱，其中包含組件中繼資料。 **/Target：** 選項指定元件為主控台應用程式可執行檔（ *.Exe*）、Windows 可執行檔（*win.ini*）或程式庫（ *.lib*）檔案。
 
-    In the following example, *Al.exe* creates an assembly that is a console application executable called *myAssembly.exe*. The application consists of two modules called *Client.netmodule* and *Stringer.netmodule*, and the executable file called *myAssembly.exe*, which contains only assembly metadata. The entry point of the assembly is the `Main` method in the class `MainClientApp`, which is located in *Client.dll*.
+    在下列範例中， *al.exe*會建立一個元件，它是名為*myAssembly*的主控台應用程式可執行檔。 應用程式是由兩個稱為 *.netmodule*和*Stringer*的模組所組成，以及名為*myAssembly*的可執行檔，其中僅包含元件中繼資料。 元件的進入點是類別 `MainClientApp`（位於*Client .dll*）中的 `Main` 方法。
 
     ```cmd
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe
@@ -221,9 +221,9 @@ ms.locfileid: "74429564"
 
     您可以使用 [MSIL 反組譯工具 (Ildasm.exe)](../tools/ildasm-exe-il-disassembler.md) 來檢查組件的內容，或判斷檔案為組件或模組。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Create assemblies](../../standard/assembly/create.md)
-- [How to: View assembly contents](../../standard/assembly/view-contents.md)
+- [建立元件](../../standard/assembly/create.md)
+- [如何：視圖元件內容](../../standard/assembly/view-contents.md)
 - [執行階段如何找出組件](../deployment/how-the-runtime-locates-assemblies.md)
-- [Multifile assemblies](multifile-assemblies.md)
+- [多檔案元件](multifile-assemblies.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426224"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a>IMetaDataTables2::GetMetaDataStreamInfo 方法
-Gets the name, size, and contents of the metadata stream at the specified index.  
+取得指定索引處中繼資料資料流程的名稱、大小和內容。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,27 +38,27 @@ HRESULT GetMetaDataStreamInfo (
   
 ## <a name="parameters"></a>參數  
  `ix`  
- [in] The index of the requested metadata stream.  
+ 在要求之中繼資料資料流程的索引。  
   
  `ppchName`  
- [out] A pointer to the name of the stream.  
+ 脫銷資料流程名稱的指標。  
   
  `ppv`  
- [out] A pointer to the metadata stream.  
+ 脫銷中繼資料資料流程的指標。  
   
  `pcb`  
- [out] The size, in bytes, of `ppv`.  
+ 脫銷`ppv`的大小（以位元組為單位）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataTables2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
 - [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)

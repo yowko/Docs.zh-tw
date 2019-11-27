@@ -36,21 +36,21 @@ HRESULT IsGlobal (
   
 ## <a name="parameters"></a>參數  
  `pd`  
- [in] A metadata token that represents a type, field, or method.  
+ 在代表類型、欄位或方法的元資料標記。  
   
  `pbGlobal`  
- [out] 1 if the object has global scope; otherwise, 0 (zero).  
+ [out] 1，如果物件具有全域範圍，則為，否則為0（零）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

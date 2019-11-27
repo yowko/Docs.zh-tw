@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438324"
 ---
 # <a name="isymunmanagedwriter2defineconstant2-method"></a>ISymUnmanagedWriter2::DefineConstant2 方法
-Defines a name for a constant value.  
+定義常數值的名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,21 +36,21 @@ HRESULT DefineConstant2(
   
 ## <a name="parameters"></a>參數  
  `name`  
- [in] The constant name.  
+ 在常數名稱。  
   
  `value`  
- [in] The value of the constant.  
+ 在常數的值。  
   
  `sigToken`  
- [in] The metadata token of the constant.  
+ 在常數的元資料標記。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedWriter2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
 - [DefineConstant 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineconstant-method.md)

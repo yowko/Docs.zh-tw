@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353504"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Example that Outputs Office Open XML Document Parts (Visual Basic)
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>輸出 Office Open XML 檔部分（Visual Basic）的範例
 本主題顯示如何開啟 Office Open XML 文件並存取其中的一部分。  
   
 ## <a name="example"></a>範例  
@@ -64,6 +64,6 @@ Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Re
 End Using  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Details of Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Office Open XML WordprocessingML 檔的詳細資料（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

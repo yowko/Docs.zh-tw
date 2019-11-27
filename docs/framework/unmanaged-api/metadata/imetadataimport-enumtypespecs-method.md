@@ -38,37 +38,37 @@ HRESULT EnumTypeSpecs (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the enumerator. This value must be NULL for the first call of this method.  
+ [in、out]列舉值的指標。 這個方法的第一次呼叫時，這個值必須是 Null。  
   
  `rTypeSpecs`  
- [out] The array used to store the TypeSpec tokens.  
+ 脫銷用來儲存 TypeSpec 標記的陣列。  
   
  `cMax`  
  [in] `rTypeSpecs` 陣列的大小上限。  
   
  `pcTypeSpecs`  
- [out] The number of TypeSpec tokens returned in `rTypeSpecs`.  
+ 脫銷`rTypeSpecs`中傳回的 TypeSpec token 數目。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeSpecs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeSpecs` is zero.|  
+|`S_OK`|已成功傳回 `EnumTypeSpecs`。|  
+|`S_FALSE`|沒有要列舉的權杖。 在此情況下，`pcTypeSpecs` 為零。|  
   
 ## <a name="remarks"></a>備註  
- The TypeSpec tokens are created by the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.  
+ TypeSpec 標記是由[IMetaDataEmit：： GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md)方法所建立。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

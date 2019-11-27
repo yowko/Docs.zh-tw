@@ -39,20 +39,20 @@ typedef struct {
   
 |成員|描述|  
 |------------|-----------------|  
-|主要|Major version build number.|  
-|次要|Minor version build number.|  
-|Sub|Sub-build number.|  
-|組建|Build number.|  
+|重大|主要版本組建編號。|  
+|微幅|次要版本組建編號。|  
+|訂閱|子組建編號。|  
+|組建|組建編號。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料結構](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)

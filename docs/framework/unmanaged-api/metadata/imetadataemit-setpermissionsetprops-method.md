@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432334"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>IMetaDataEmit::SetPermissionSetProps 方法
-Sets or updates features of the metadata signature of a permission set defined by a prior call to [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
+設定或更新先前呼叫 IMetaDataEmit 時所定義之許可權集合的中繼資料簽章功能[：:D efinepermissionset](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,30 +39,30 @@ HRESULT SetPermissionSetProps (
   
 ## <a name="parameters"></a>參數  
  `tk`  
- [in] A metadata token that represents the object to be decorated.  
+ 在表示要裝飾之物件的元資料標記。  
   
  `dwAction`  
- [in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.  
+ 在[CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md)值，指定要使用的宣告式安全性類型。  
   
  `pvPermission`  
- [in] The permission BLOB.  
+ 在許可權 BLOB。  
   
  `cbPermission`  
- [in] The size, in bytes, of `pvPermission`.  
+ 在`pvPermission`的大小（以位元組為單位）。  
   
  `ppm`  
- [out] An `mdPermission` metadata token that represents the updated permissions.  
+ 脫銷`mdPermission` 元資料標記，表示已更新的許可權。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

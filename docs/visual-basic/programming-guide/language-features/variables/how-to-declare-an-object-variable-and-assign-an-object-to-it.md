@@ -1,5 +1,5 @@
 ---
-title: 'How to: Declare an Object Variable and Assign an Object to It'
+title: 如何：宣告物件變數並指派物件給它
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object variables [Visual Basic], declaring
@@ -14,18 +14,18 @@ ms.locfileid: "74352910"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>如何：在 Visual Basic 中宣告物件變數，並指派物件給它
 
-You declare a variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) by specifying `As Object` in a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md). You assign an object to such a variable by placing the object after the equal sign (`=`) in an assignment statement or initialization clause.
+您可以在[Dim 語句](../../../../visual-basic/language-reference/statements/dim-statement.md)中指定 `As Object`，以宣告[Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)的變數。 將物件放在指派語句或初始化子句中的等號（`=`）後面，即可將物件指派給這類變數。
 
 ## <a name="example"></a>範例
 
-The following example declares an `Object` variable and assigns the current instance to it.
+下列範例會宣告 `Object` 變數，並將目前的實例指派給它。
 
 ```vb
 Dim thisObject As Object
 thisObject = "This is an Object"
 ```
 
-You can combine the declaration and assignment by initializing the variable as part of its declaration. The following example is equivalent to the preceding example.
+您可以將變數初始化為其宣告的一部分，藉此結合宣告和指派。 下列範例相當於上述範例。
 
 ```vb
 Dim thisObject As Object= "This is an Object"
@@ -37,16 +37,16 @@ Dim thisObject As Object= "This is an Object"
 
 - <xref:System> 命名空間的參考。
 
-- A class, structure, or module in which to put the `Dim` statement.
+- 要在其中放置 `Dim` 語句的類別、結構或模組。
 
-- A procedure in which to put the assignment statement.
+- 要在其中放置指派語句的程式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [物件變數宣告](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

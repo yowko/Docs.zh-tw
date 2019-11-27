@@ -16,7 +16,7 @@ ms.locfileid: "74428539"
 ---
 # <a name="built-in-types-table-c-reference"></a>內建類型資料表 (C# 參考)
 
-The following table shows the keywords for built-in C# types, which are aliases of predefined types in the <xref:System> namespace:
+下表顯示內C#建類型的關鍵字，這些是 <xref:System> 命名空間中預先定義類型的別名：
 
 |C# 類型|.NET 型別|  
 |--------------|-------------------------|  
@@ -61,7 +61,7 @@ Console.WriteLine(doubleType.FullName);
 // System.Double
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

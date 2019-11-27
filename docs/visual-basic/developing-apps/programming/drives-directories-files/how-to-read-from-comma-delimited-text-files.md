@@ -1,5 +1,5 @@
 ---
-title: 'How to: read from comma-delimited text files'
+title: 如何：從逗號分隔文字檔讀取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], parsing
@@ -20,7 +20,7 @@ ms.locfileid: "74335067"
   
 ### <a name="to-parse-a-comma-delimited-text-file"></a>剖析逗號分隔文字檔  
   
-1. 建立新的 `TextFieldParser`。 下列程式碼會建立名為 `MyReader` 的 `TextFieldParser`，並開啟檔案 `test.txt`。  
+1. 建立新的 `TextFieldParser`。 下列程式碼會建立名為 `TextFieldParser` 的 `MyReader`，並開啟檔案 `test.txt`。  
   
      [!code-vb[VbFileIORead#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#15)]  
   
@@ -32,7 +32,7 @@ ms.locfileid: "74335067"
   
      [!code-vb[VbFileIORead#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#17)]  
   
-4. 使用 `End While` 和 `End Using` 關閉 `While` 和 `Using` 區塊。  
+4. 使用 `While` 和 `Using` 關閉 `End While` 和 `End Using` 區塊。  
   
      [!code-vb[VbFileIORead#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#18)]  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74335067"
   
 - 使用者沒有足夠權限以存取檔案 (<xref:System.UnauthorizedAccessException>)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - [如何：從固定寬度的文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)

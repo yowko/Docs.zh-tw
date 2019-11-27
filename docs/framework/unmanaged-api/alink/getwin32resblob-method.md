@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430696"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob 方法
-Retrieves Win32 resource blob. Call this method after setting assembly options.  
+抓取 Win32 資源 blob。 設定元件選項之後，請呼叫這個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,30 +39,30 @@ HRESULT GetWin32ResBlob(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- ID of the assembly.  
+ 元件的識別碼。  
   
  `FileToken`  
- File token used to retrieve the filename to be used when constructing the Win32 Version resource  
+ 用來抓取要在建立 Win32 版本資源時使用之檔案名的檔案標記  
   
  `fDll`  
- TRUE if file is a DLL, false for an EXE.  
+ 如果檔案是 DLL，則為 TRUE，如果是 EXE，則為 false。  
   
  `pszIconFile`  
- Optional icon to insert into the resource blob.  
+ 要插入資源 blob 的選擇性圖示。  
   
  `ppResBlob`  
- Receives the resource blob.  
+ 接收資源 blob。  
   
  `pcbResBlob`  
- Receives the size of the blob.  
+ 接收 blob 的大小。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h  
+ 需要 alink. h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Initialize an Array Variable'
+title: 如何：初始化陣列變數
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], initializing
@@ -15,45 +15,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351871"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>如何：在 Visual Basic 中初始化陣列變數
-You initialize an array variable by including an array literal in a `New` clause and specifying the initial values of the array. You can either specify the type or allow it to be inferred from the values in the array literal. For more information about how the type is inferred, see "Populating an Array with Initial Values" in [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+您可以藉由在 `New` 子句中包含陣列常值，並指定陣列的初始值來初始化陣列變數。 您可以指定類型，或允許它從陣列常值中的值推斷。 如需如何推斷類型的詳細資訊，請參閱[陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)中的「以初始值填入陣列」。  
   
-### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>To initialize an array variable by using an array literal  
+### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>若要使用陣列常值來初始化陣列變數  
   
-- Either in the `New` clause, or when you assign the array value, supply the element values inside braces (`{}`). The following example shows several ways to declare, create, and initialize a variable to contain an array that has elements of type `Char`.  
+- 在 `New` 子句中，或當您指派陣列值時，請在大括弧（`{}`）中提供元素值。 下列範例示範幾種宣告、建立和初始化變數的方式，以包含具有 `Char`類型之元素的陣列。  
   
      [!code-vb[VbVbalrArrays#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#16)]  
   
-     After each statement executes, the array that's created has a length of 3, with elements at index 0 through index 2 containing the initial values. If you supply both the upper bound and the values, you must include a value for every element from index 0 through the upper bound.  
+     在執行每個語句之後，所建立的陣列的長度為3，而索引0到索引2的元素包含初始值。 如果您同時提供上限和值，就必須在索引0到上限的每個元素中包含一個值。  
   
-     Notice that you do not have to specify the index upper bound if you supply element values in an array literal. If no upper bound is specified, the size of the array is inferred based on the number of values in the array literal.  
+     請注意，如果您在陣列常值中提供元素值，則不需要指定索引上限。 如果未指定上限，陣列的大小會根據陣列常值中的值數目來推斷。  
   
-### <a name="to-initialize-a-multidimensional-array-variable-by-using-array-literals"></a>To initialize a multidimensional array variable by using array literals  
+### <a name="to-initialize-a-multidimensional-array-variable-by-using-array-literals"></a>若要使用陣列常值來初始化多維度陣列變數  
   
-- Nest values inside braces (`{}`) within braces. Ensure that the nested array literals all infer as arrays of the same type and length. The following code example shows several examples of multidimensional array initialization.  
+- 在大括弧內的大括弧（`{}`）內嵌套值。 確定所有嵌套陣列常值都會推斷為相同類型和長度的陣列。 下列程式碼範例顯示多維度陣列初始化的幾個範例。  
   
      [!code-vb[VbVbalrArrays#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#17)]  
   
-- You can explicitly specify the array bounds, or leave them out and have the compiler infer the array bounds based on the values in the array literal. If you supply both the upper bounds and the values, you must include a value for every element from index 0 through the upper bound in every dimension. The following example shows several ways to declare, create, and initialize a variable to contain a two-dimensional array that has elements of type `Short`  
+- 您可以明確指定陣列界限，或將其保留出來，然後讓編譯器根據陣列常值中的值來推斷陣列界限。 如果您同時提供上限和值，則必須在每個維度的上限中包含索引0的每個元素的值。 下列範例示範幾種宣告、建立和初始化變數以包含具有類型元素之二維陣列的方式 `Short`  
   
      [!code-vb[VbVbalrArrays#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#18)]  
   
-     After each statement executes, the created array contains six initialized elements that have indexes `(0,0)`, `(0,1)`, `(0,2)`, `(1,0)`, `(1,1)`, and `(1,2)`. Each array location contains the value `10`.  
+     在執行每個語句之後，所建立的陣列會包含六個已初始化的專案，這些元素具有 `(0,0)`、`(0,1)`、`(0,2)`、`(1,0)`、`(1,1)`和 `(1,2)`的索引。 每個陣列位置都會包含 `10`的值。  
   
-- The following example iterates through a multidimensional array. In a Windows console application that is written in Visual Basic, paste the code inside the `Sub Main()` method. The last comments show the output.  
+- 下列範例會逐一查看多維陣列。 在以 Visual Basic 撰寫的 Windows 主控台應用程式中，貼上 `Sub Main()` 方法內的程式碼。 最後一個批註會顯示輸出。  
   
      [!code-vb[VbVbalrArrays#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#31)]  
   
-### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>To initialize a jagged array variable by using array literals  
+### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>若要使用陣列常值來初始化不規則陣列變數  
   
-- Nest object values inside braces (`{}`). Although you can also nest array literals that specify arrays of different lengths, in the case of a jagged array, make sure that the nested array literals are enclosed in parentheses (`()`). The parentheses force the evaluation of the nested array literals, and the resulting arrays are used as the initial values of the jagged array. The following code example shows two examples of jagged array initialization.  
+- 將物件值放在大括弧內（`{}`）。 雖然您也可以將指定不同長度陣列的陣列常值（如果是不規則陣列）加以嵌套，請確定已將嵌套陣列常值括在括弧中（`()`）。 括弧會強制評估嵌套陣列常值，而產生的陣列會當做不規則陣列的初始值使用。 下列程式碼範例顯示不規則陣列初始化的兩個範例。  
   
      [!code-vb[VbVbalrArrays#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#19)]  
   
-- The following example iterates through a jagged array. In a Windows console application that is written in Visual Basic, paste the code inside the `Sub Main()` method.  The last comments in the code show the output.  
+- 下列範例會逐一查看不規則陣列。 在以 Visual Basic 撰寫的 Windows 主控台應用程式中，貼上 `Sub Main()` 方法內的程式碼。  程式碼中的最後一個批註會顯示輸出。  
   
      [!code-vb[VbVbalrArrays#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#32)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [陣列的疑難排解](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448287"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName 方法
-Gets an array of assemblies with the specified `szAssemblyName` parameter, using the standard rules employed by the common language runtime (CLR) for resolving references.  
+使用 common language runtime （CLR）用來解析參考的標準規則，取得具有指定之 `szAssemblyName` 參數的元件陣列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,49 +40,49 @@ HRESULT FindAssembliesByName (
   
 ## <a name="parameters"></a>參數  
  `szAppBase`  
- [in] The root directory in which to search for the given assembly. If this value is set to `null`, `FindAssembliesByName` will look only in the global assembly cache for the assembly.  
+ 在要在其中搜尋指定元件的根目錄。 如果這個值設定為 `null`，`FindAssembliesByName` 只會查看元件的全域組件快取。  
   
  `szPrivateBin`  
- [in] A list of semicolon-delimited subdirectories (for example, "bin;bin2"), under the root directory, in which to search for the assembly. These directories are probed in addition to those specified in the default probing rules.  
+ 在根目錄底下以分號分隔的子目錄清單（例如，"bin; bin2"），在該目錄中會搜尋元件。 除了預設探查規則中指定的目錄以外，還會探查這些目錄。  
   
  `szAssemblyName`  
- [in] The name of the assembly to find. The format of this string is defined in the class reference page for <xref:System.Reflection.AssemblyName>.  
+ 在要尋找之元件的名稱。 這個字串的格式定義于 <xref:System.Reflection.AssemblyName>的 [類別參考] 頁面中。  
   
  `ppIUnk`  
- [in] An array of type [IUnknown](/cpp/atl/iunknown) in which to put the `IMetadataAssemblyImport` interface pointers.  
+ 在[IUnknown](/cpp/atl/iunknown)類型的陣列，要在其中放置 `IMetadataAssemblyImport` 介面指標。  
   
  `cMax`  
- [out] The maximum number of interface pointers that can be placed in `ppIUnk`.  
+ 脫銷可以放在 `ppIUnk`中的介面指標數目上限。  
   
  `pcAssemblies`  
- [out] The number of interface pointers returned. That is, the number of interface pointers actually placed in `ppIUnk`.  
+ 脫銷傳回的介面指標數目。 也就是，實際放在 `ppIUnk`中的介面指標數目。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`FindAssembliesByName` returned successfully.|  
-|`S_FALSE`|There are no assemblies.|  
+|`S_OK`|已成功傳回 `FindAssembliesByName`。|  
+|`S_FALSE`|沒有任何元件。|  
   
 ## <a name="remarks"></a>備註  
- Given an assembly name, the `FindAssembliesByName` method finds the assembly by following the standard rules for resolving assembly references. (For more information, see [How the Runtime Locates Assemblies](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` allows the caller to configure various aspects of the assembly resolver context, such as application base and private search path.  
+ 根據指定的元件名稱，`FindAssembliesByName` 方法會遵循解析元件參考的標準規則來尋找元件。 （如需詳細資訊，請參閱[執行時間如何找出元件](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)）。`FindAssembliesByName` 可讓呼叫者設定元件解析程式內容的各種層面，例如應用程式基底和私用搜尋路徑。  
   
- The `FindAssembliesByName` method requires the CLR to be initialized in the process in order to invoke the assembly resolution logic. Therefore, you must call [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (passing COINITEE_DEFAULT) before calling `FindAssembliesByName`, and then follow with a call to [CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md).  
+ `FindAssembliesByName` 方法需要在進程中初始化 CLR，才能叫用元件解析邏輯。 因此，在呼叫 `FindAssembliesByName`之前，您必須先呼叫[CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) （傳遞 COINITEE_DEFAULT），然後遵循[CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md)的呼叫。  
   
- `FindAssembliesByName` returns an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) pointer to the file containing the assembly manifest for the assembly name that is passed in. If the given assembly name is not fully specified (for example, if it does not include a version), multiple assemblies might be returned.  
+ `FindAssembliesByName` 會傳回檔案的[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)指標，此檔案包含傳入之元件名稱的組件資訊清單。 如果未完整指定給定的元件名稱（例如，如果它不包含版本），則可能會傳回多個元件。  
   
- `FindAssembliesByName` is commonly used by a compiler that attempts to find a referenced assembly at compile time.  
+ `FindAssembliesByName` 通常是由編譯器使用，而編譯器會在編譯時期嘗試尋找參考的元件。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段如何找出組件](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

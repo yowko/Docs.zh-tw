@@ -22,17 +22,17 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449223"
 ---
 # <a name="isymunmanageddispose-interface"></a>ISymUnmanagedDispose 介面
-Disposes of unmanaged resources.  
+處置非受控資源。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Destroy 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|Causes the underlying object to release all internal references and return failure on any subsequent method calls.|  
+|[Destroy 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|導致基礎物件釋放所有內部參考，並在任何後續的方法呼叫時傳回失敗。|  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

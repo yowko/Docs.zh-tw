@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427304"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps 方法
-Gets the metadata associated with the generic parameter represented by the specified token.  
+取得與指定標記所表示的泛型參數相關聯的中繼資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,39 +42,39 @@ HRESULT GetGenericParamProps (
   
 ## <a name="parameters"></a>參數  
  `gp`  
- [in] The token that represents the generic parameter for which to return metadata.  
+ 在Token，代表要傳回中繼資料的泛型參數。  
   
  `pulParamSeq`  
- [out] The ordinal position of the `Type` parameter in the parent constructor or method.  
+ 脫銷父函數或方法中 `Type` 參數的序數位置。  
   
  `pdwParamFlags`  
- [out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.  
+ 脫銷[CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)列舉的值，描述泛型參數的 `Type`。  
   
  `ptOwner`  
- [out] A TypeDef or MethodDef token that represents the owner of the parameter.  
+ 脫銷表示參數擁有者的 TypeDef 或 MethodDef token。  
   
  `reserved`  
- [out] Reserved for future extensibility.  
+ 脫銷保留以供未來擴充性之用。  
   
  `wzName`  
- [out] The name of the generic parameter.  
+ 脫銷泛型參數的名稱。  
   
  `cchName`  
- [in] The size of the `wzName` buffer.  
+ 在`wzName` 緩衝區的大小。  
   
  `pchName`  
- [out] The returned size of the name, in wide characters.  
+ 脫銷傳回的名稱大小（以寬字元為單位）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

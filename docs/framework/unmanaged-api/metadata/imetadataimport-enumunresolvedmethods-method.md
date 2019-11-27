@@ -38,39 +38,39 @@ HRESULT EnumUnresolvedMethods (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in、out]列舉值的指標。 第一次呼叫此方法時，此值必須為 Null。  
   
  `rMethods`  
- [out] The array used to store the MemberDef tokens.  
+ 脫銷用來儲存 MemberDef 標記的陣列。  
   
  `cMax`  
  [in] `rMethods` 陣列的大小上限。  
   
  `pcTokens`  
- [out] The number of MemberDef tokens returned in `rMethods`.  
+ 脫銷`rMethods`中傳回的 MemberDef token 數目。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|已成功傳回 `EnumUnresolvedMethods`。|  
+|`S_FALSE`|沒有要列舉的權杖。 在此情況下，`pcTokens` 為零。|  
   
 ## <a name="remarks"></a>備註  
- An unresolved method is one that has been declared but not implemented. A method is included in the enumeration if the method is marked `miForwardRef` and either `mdPinvokeImpl` or `miRuntime` is set to zero. In other words, an unresolved method is a class method that is marked `miForwardRef` but which is not implemented in unmanaged code (reached via PInvoke) nor implemented internally by the runtime itself  
+ 無法解析的方法是已宣告但未實作為的方法。 如果方法標記為 `miForwardRef`，且 `mdPinvokeImpl` 或 `miRuntime` 設定為零，則方法會包含在列舉中。 換句話說，未解析的方法是標示為 `miForwardRef` 但未在非受控碼中執行的類別方法（透過 PInvoke 取得），也不會在內部由執行時間本身執行  
   
- The enumeration excludes all methods that are defined either at module scope (globals) or in interfaces or abstract classes.  
+ 列舉會排除在模組範圍（globals）或介面或抽象類別中定義的所有方法。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

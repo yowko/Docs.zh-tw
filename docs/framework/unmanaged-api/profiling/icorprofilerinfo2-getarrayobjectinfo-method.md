@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436028"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo 方法
-Gets detailed information about an array object.  
+取得陣列物件的詳細資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,22 +38,22 @@ HRESULT GetArrayObjectInfo(
   
 ## <a name="parameters"></a>參數  
  `objectId`  
- [in] The ID of a valid array object.  
+ 在有效陣列物件的識別碼。  
   
  `cDimensions`  
- [in] The rank (number of dimensions) of the array.  
+ 在陣列的順位（維度數目）。  
   
  `pDimensionSizes`  
- [out] An array that contains integers, each representing the size of a dimension of the array.  
+ 脫銷包含整數的陣列，每個都代表陣列的維度大小。  
   
  `pDimensionLowerBounds`  
- [out] An array that contains integers, each representing the lower bound of a dimension of the array.  
+ 脫銷包含整數的陣列，每個都代表陣列維度的下限。  
   
  `ppData`  
- [out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.  
+ 脫銷陣列的原始緩衝區位址指標，會根據C++慣例進行配置。  
   
 ## <a name="remarks"></a>備註  
- The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.  
+ `pDimensionSizes` 和 `pDimensionLowerBounds` 是平行陣列，因此位於每個陣列中相同索引處的元素都是相同實體的特性。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -64,7 +64,7 @@ HRESULT GetArrayObjectInfo(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

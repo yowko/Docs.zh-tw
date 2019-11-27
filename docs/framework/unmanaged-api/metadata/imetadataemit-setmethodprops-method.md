@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442124"
 ---
 # <a name="imetadataemitsetmethodprops-method"></a>IMetaDataEmit::SetMethodProps 方法
-Sets or updates the feature, stored at the specified relative virtual address, of a method defined by a prior call to [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md).  
+設定或更新先前呼叫 IMetaDataEmit 時所定義之方法的功能（儲存在指定的相對虛擬位址） [：:D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,27 +38,27 @@ HRESULT SetMethodProps (
   
 ## <a name="parameters"></a>參數  
  `md`  
- [in] The token for the method to be changed.  
+ 在要變更之方法的 token。  
   
  `dwMethodFlags`  
- [in] The member attributes.  
+ 在成員屬性。  
   
  `ulCodeRVA`  
- [in] The address of the code.  
+ 在程式碼的位址。  
   
  `dwImplFlags`  
- [in] The implementation flags for the method.  
+ 在方法的執行旗標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

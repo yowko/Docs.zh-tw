@@ -45,48 +45,48 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>參數  
  `mb`  
- [in] A FieldDef token that represents the field to get associated metadata for.  
+ 在FieldDef token，表示要取得相關聯中繼資料的欄位。  
   
  `pClass`  
- [out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.  
+ 脫銷TypeDef token 的指標，代表欄位所屬類別的型別。  
   
  `szField`  
- [out] The name of the field.  
+ 脫銷欄位的名稱。  
   
  `cchField`  
- [in] The size in wide characters of the buffer for *szField*.  
+ 在*SzField*緩衝區的大小（以寬字元為單位）。  
   
  `pchField`  
- [out] The actual size of the returned buffer.  
+ 脫銷所傳回緩衝區的實際大小。  
   
  `pdwAttr`  
- [out] Flags associated with the field's metadata.  
+ 脫銷與欄位的中繼資料相關聯的旗標。  
   
  `ppvSigBlob`  
- [in] A pointer to the binary metadata value that describes the field.  
+ 在描述欄位之二進位中繼資料值的指標。  
   
  `pcbSigBlob`  
- [out] The size in bytes of `ppvSigBlob`.  
+ 脫銷`ppvSigBlob`的大小（以位元組為單位）。  
   
  `pdwCPlusTypeFlag`  
- [out] A flag that specifies the value type of the field.  
+ 脫銷指定欄位之數值型別的旗標。  
   
  `ppValue`  
- [out] A constant value for the field.  
+ 脫銷欄位的常數值。  
   
  `pcchValue`  
- [out] The size in chars of `ppValue`, or zero if no string exists.  
+ 脫銷`ppValue`的大小（以字元為單位），如果不存在任何字串，則為零。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

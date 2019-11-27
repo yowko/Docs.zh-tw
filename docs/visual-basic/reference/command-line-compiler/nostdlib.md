@@ -13,8 +13,8 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347917"
 ---
-# <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
-Causes the compiler not to automatically reference the standard libraries.  
+# <a name="-nostdlib-visual-basic"></a>-nostdlib （Visual Basic）
+導致編譯器不自動參考標準程式庫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -23,22 +23,22 @@ Causes the compiler not to automatically reference the standard libraries.
 ```  
   
 ## <a name="remarks"></a>備註  
- The `-nostdlib` option removes the automatic reference to the System.dll assembly and prevents the compiler from reading the Vbc.rsp file. The Vbc.rsp file, which is located in the same directory as the Vbc.exe file, references the commonly used .NET Framework assemblies and imports the `System` and `Microsoft.VisualBasic` namespaces.  
+ `-nostdlib` 選項會移除對 System.object 元件的自動參考，並防止編譯器讀取 Vbc .rsp 檔案。 與 Vbc 檔案位於相同目錄中的 Vbc .rsp 檔案，會參考常用的 .NET Framework 元件，並匯入 `System` 和 `Microsoft.VisualBasic` 命名空間。  
   
 > [!NOTE]
-> The Mscorlib.dll and Microsoft.VisualBasic.dll assemblies are always referenced.  
+> 我們一律會參考 Mscorlib.dll 和 Microsoft。  
   
 > [!NOTE]
-> The `-nostdlib` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> Visual Studio 開發環境中無法使用 [`-nostdlib`] 選項;只有在從命令列編譯時，才可以使用它。  
   
 ## <a name="example"></a>範例  
- The following code compiles `T2.vb` without referencing the standard libraries. You must set the `_MYTYPE` conditional-compilation constant to the string "Empty" to remove the `My` object.  
+ 下列程式碼會在不參考標準程式庫的情況下編譯 `T2.vb`。 您必須將 `_MYTYPE` 的條件式編譯常數設定為字串 "Empty"，才能移除 `My` 物件。  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)

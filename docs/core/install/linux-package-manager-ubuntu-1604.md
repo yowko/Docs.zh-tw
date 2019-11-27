@@ -1,6 +1,6 @@
 ---
-title: Install .NET Core on Ubuntu 16.04 package manager - .NET Core
-description: Use a package manager to install .NET Core SDK and runtime on Ubuntu 16.04.
+title: 在 Ubuntu 16.04 套件管理員上安裝 .NET Core-.NET Core
+description: 使用套件管理員在 Ubuntu 16.04 上安裝 .NET Core SDK 和執行時間。
 author: thraka
 ms.author: adegeo
 ms.date: 11/06/2019
@@ -11,32 +11,32 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450951"
 ---
-# <a name="ubuntu-1604-package-manager---install-net-core"></a>Ubuntu 16.04 Package Manager - Install .NET Core
+# <a name="ubuntu-1604-package-manager---install-net-core"></a>Ubuntu 16.04 套件管理員-安裝 .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-This article describes how to use a package manager to install .NET Core on Ubuntu 16.04. If you're installing the runtime, we suggest you install the [ASP.NET Core runtime](#install-the-aspnet-core-runtime), as it includes both .NET Core and ASP.NET Core runtimes.
+本文說明如何使用套件管理員在 Ubuntu 16.04 上安裝 .NET Core。 如果您要安裝執行時間，我們建議您安裝[ASP.NET Core 運行](#install-the-aspnet-core-runtime)時間，因為它同時包含 .net Core 和 ASP.NET Core 執行時間。
 
-## <a name="register-microsoft-key-and-feed"></a>Register Microsoft key and feed
+## <a name="register-microsoft-key-and-feed"></a>註冊 Microsoft 金鑰和摘要
 
-Before installing .NET, you'll need to:
+安裝 .NET 之前，您必須：
 
-- Register the Microsoft key
-- register the product repository
-- Install required dependencies
+- 註冊 Microsoft 金鑰
+- 註冊產品存放庫
+- 安裝必要的相依性
 
-This only needs to be done once per machine.
+這只需要針對每部機器執行一次。
 
-Open a terminal and run the following commands.
+開啟終端機並執行下列命令。
 
 ```bash
 wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-## <a name="install-the-net-core-sdk"></a>Install the .NET Core SDK
+## <a name="install-the-net-core-sdk"></a>安裝 .NET Core SDK
 
-Update the products available for installation, then install the .NET Core SDK. In your terminal, run the following commands.
+更新可供安裝的產品，然後安裝 .NET Core SDK。 在您的終端機中，執行下列命令。
 
 ```bash
 sudo apt-get update
@@ -46,11 +46,11 @@ sudo apt-get install dotnet-sdk-3.0
 ```
 
 > [!IMPORTANT]
-> If you receive an error message similar to **Unable to locate package dotnet-sdk-3.0**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.
+> 如果您收到類似 [**找不到封裝 dotnet-sdk-3.0**] 的錯誤訊息，請參閱[疑難排解套件管理員](#troubleshoot-the-package-manager)一節。
 
-## <a name="install-the-aspnet-core-runtime"></a>Install the ASP.NET Core runtime
+## <a name="install-the-aspnet-core-runtime"></a>安裝 ASP.NET Core 執行時間
 
-Update the products available for installation, then install the ASP.NET Core runtime. In your terminal, run the following commands.
+更新可供安裝的產品，然後安裝 ASP.NET Core 執行時間。 在您的終端機中，執行下列命令。
 
 ```bash
 sudo apt-get update
@@ -60,11 +60,11 @@ sudo apt-get install aspnetcore-runtime-3.0
 ```
 
 > [!IMPORTANT]
-> If you receive an error message similar to **Unable to locate package aspnetcore-runtime-3.0**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.
+> 如果您收到類似 [**找不到封裝 aspnetcore-執行時間-3.0**] 的錯誤訊息，請參閱[疑難排解封裝管理員](#troubleshoot-the-package-manager)一節。
 
-## <a name="install-the-net-core-runtime"></a>Install the .NET Core runtime
+## <a name="install-the-net-core-runtime"></a>安裝 .NET Core 執行時間
 
-Update the products available for installation, then install the .NET Core runtime. In your terminal, run the following commands.
+更新可供安裝的產品，然後安裝 .NET Core 執行時間。 在您的終端機中，執行下列命令。
 
 ```bash
 sudo apt-get update
@@ -74,15 +74,15 @@ sudo apt-get install dotnet-runtime-3.0
 ```
 
 > [!IMPORTANT]
-> If you receive an error message similar to **Unable to locate package dotnet-runtime-3.0**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.
+> 如果您收到類似 [**找不到封裝 dotnet-執行時間-3.0**] 的錯誤訊息，請參閱[疑難排解封裝管理員](#troubleshoot-the-package-manager)一節。
 
-## <a name="how-to-install-other-versions"></a>How to install other versions
+## <a name="how-to-install-other-versions"></a>如何安裝其他版本
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="troubleshoot-the-package-manager"></a>Troubleshoot the package manager
+## <a name="troubleshoot-the-package-manager"></a>針對套件管理員進行疑難排解
 
-If you receive an error message similar to **Unable to locate package {the .NET Core package}** , run the following commands.
+如果您收到類似「**找不到封裝 {.Net Core 封裝}** 」的錯誤訊息，請執行下列命令。
 
 ```bash
 sudo dpkg --purge packages-microsoft-prod && sudo dpkg -i packages-microsoft-prod.deb
@@ -90,7 +90,7 @@ sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
 
-If that doesn't work, you can run a manual install with the following commands.
+如果無法解決問題，您可以使用下列命令來執行手動安裝。
 
 ```bash
 sudo apt-get install -y gpg

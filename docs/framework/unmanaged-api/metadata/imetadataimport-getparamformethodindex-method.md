@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437172"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>IMetaDataImport::GetParamForMethodIndex 方法
-Gets the token that represents a specified parameter of the method represented by the specified MethodDef token.  
+取得權杖，表示指定的 MethodDef token 所表示之方法的指定參數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,24 +37,24 @@ HRESULT GetParamForMethodIndex (
   
 ## <a name="parameters"></a>參數  
  `md`  
- [in] A token that represents the method to return the parameter token for.  
+ 在Token，表示要為其傳回參數 token 的方法。  
   
  `ulParamSeq`  
- [in] The ordinal position in the parameter list where the requested parameter occurs. Parameters are numbered starting from one, with the method's return value in position zero.  
+ 在參數清單中要求的參數發生所在的序數位置。 參數是從1開始編號，且方法的傳回值位於位置零。  
   
  `ppd`  
- [out] A pointer to a ParamDef token that represents the requested parameter.  
+ 脫銷ParamDef token 的指標，表示要求的參數。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

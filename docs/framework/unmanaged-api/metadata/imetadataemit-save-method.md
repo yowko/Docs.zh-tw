@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435941"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save 方法
-Saves all metadata in the current scope to the file at the specified address.  
+將目前範圍中的所有中繼資料，儲存至指定位址的檔案。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,21 +36,21 @@ HRESULT Save (
   
 ## <a name="parameters"></a>參數  
  `wzFile`  
- [in] The name of the file to save to. If this value is null, the in-memory copy will be saved to the last location that was used.  
+ 在要儲存的檔案名。 如果此值為 null，則記憶體中的複本將會儲存到所使用的最後一個位置。  
   
  `dwSaveFlags`  
- [in] 保留。 Must be zero.  
+ [in] 保留。 必須為零。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

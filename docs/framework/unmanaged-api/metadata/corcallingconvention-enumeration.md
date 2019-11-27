@@ -52,27 +52,27 @@ typedef enum CorCallingConvention
   
 |成員|描述|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Indicates a default calling convention.|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|Indicates that the method takes a variable number of parameters.|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|Indicates that the call is to a field.|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Indicates that the call is to a local method.|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indicates that the call is to a property.|  
-|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Indicates that the call is unmanaged.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indicates a generic method instantiation.|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|Describes an invalid 4-bit value.|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|Indicates that the calling convention is described by the bottom four bits.|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indicates that the top bit describes a `this` parameter.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indicates that a `this` parameter is explicitly described in the signature.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indicates a generic method signature with an explicit number of type arguments. This precedes an ordinary parameter count.|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|表示預設的呼叫慣例。|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|表示方法會接受可變數目的參數。|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|表示呼叫的是欄位。|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|表示呼叫至區域方法。|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|表示呼叫的是屬性。|  
+|`IMAGE_CEE_CS_CALLCONV_UNMGD`|表示此呼叫未受管理。|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|表示泛型方法具現化。|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|表示對採用可變數目參數的方法進行64位 PInvoke 呼叫。|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|描述不正確4位值。|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|表示呼叫慣例是由下面四個位所描述。|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|指出上位會描述 `this` 參數。|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|表示在簽章中明確描述 `this` 參數。|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|表示具有明確數目之類型引數的泛型方法簽章。 這會優先于一般參數計數。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

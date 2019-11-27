@@ -17,7 +17,7 @@ ms.locfileid: "74428716"
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更新版本。
 - 您選擇的文字編輯器或程式碼編輯器。
@@ -114,7 +114,7 @@ dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj
 
 ## <a name="creating-the-first-test"></a>建立第一個測試
 
-您會撰寫一個失敗測試，讓它通過，然後重複此程序。 在 *PrimeService.Tests* 目錄中，將 *UnitTest1.vb* 檔案重新命名為 *PrimeService_IsPrimeShould.VB*，並將其整個內容取代為下列程式碼：
+撰寫一個會失敗的測試，再使其通過，然後重複這個過程。 在 *PrimeService.Tests* 目錄中，將 *UnitTest1.vb* 檔案重新命名為 *PrimeService_IsPrimeShould.VB*，並將其整個內容取代為下列程式碼：
 
 ```vb
 Imports NUnit.Framework
@@ -158,7 +158,7 @@ End Function
 
 [!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
-執行 `dotnet test`，然後會有兩個測試失敗。 若要讓所有測試都能通過，請變更 *PrimeServices.cs* 檔案中 `Main` 方法開頭處的 `if` 子句：
+執行 `dotnet test`，然後會有兩個測試失敗。 若要讓所有測試都能通過，請變更 `if`PrimeServices.cs`Main` 檔案中 *方法開頭處的* 子句：
 
 ```vb
 if candidate < 2

@@ -10,9 +10,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441201"
 ---
 # <a name="ui-automation-specification-and-community-promise"></a>UI 自動化規格和社群承諾
-UI Automation provides programmatic access to most user interface (UI) elements on the desktop, enabling assistive technology products such as screen readers to provide information about the UI to end users and to manipulate the UI by means other than standard input.  
+UI 自動化可讓您以程式設計方式存取桌面上大部分的使用者介面（UI）專案，啟用輔助技術產品（例如螢幕閱讀程式），將 UI 的相關資訊提供給使用者，以及透過標準輸入以外的方式來操作 UI.  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [UI Automation Specification](https://developer.microsoft.com/windows/accessible-apps)
-- [UI Automation Community Promise](https://developer.microsoft.com/windows/accessible-apps)
+- [使用者介面自動化規格](https://developer.microsoft.com/windows/accessible-apps)
+- [使用者介面自動化社區承諾](https://developer.microsoft.com/windows/accessible-apps)

@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350275"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf 運算子 (Visual Basic)
-Creates a delegate instance that references the specific procedure.  
+建立參考特定程式的委派實例。  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,24 +26,24 @@ AddressOf procedurename
   
 ## <a name="parts"></a>組件  
  `procedurename`  
- 必要項。 Specifies the procedure to be referenced by the newly created delegate.  
+ 必要。 指定新建立的委派所要參考的程式。  
   
 ## <a name="remarks"></a>備註  
- The `AddressOf` operator creates a delegate that points to the sub or function specified by `procedurename`. When the specified procedure is an instance method then the delegate refers to both the instance and the method. Then, when the  delegate is invoked the specified method of the specified instance is called.  
+ `AddressOf` 運算子會建立指向 `procedurename`所指定之子函數或函式的委派。 當指定的程式是實例方法時，委派會同時參考實例和方法。 然後，當叫用委派時，會呼叫指定實例的指定方法。  
   
- The `AddressOf` operator can be used as the operand of a delegate constructor or it can be used in a context in which the type of the delegate can be determined by the compiler.  
+ `AddressOf` 運算子可用來做為委派函式的運算元，或可用於可以由編譯器決定委派類型的內容中。  
   
 ## <a name="example"></a>範例  
- This example uses the `AddressOf` operator to designate a delegate to handle the `Click` event of a button.  
+ 這個範例會使用 `AddressOf` 運算子來指定委派，以處理按鈕的 `Click` 事件。  
   
  [!code-vb[VbVbalrDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>範例  
- The following example uses the `AddressOf` operator to designate the startup function for a thread.  
+ 下列範例會使用 `AddressOf` 運算子來指定執行緒的啟動函數。  
   
  [!code-vb[VbVbalrDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#9)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)

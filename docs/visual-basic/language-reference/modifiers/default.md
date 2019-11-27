@@ -1,5 +1,5 @@
 ---
-title: Default
+title: 預設
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Default
@@ -18,24 +18,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351573"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)
-Identifies a property as the default property of its class, structure, or interface.  
+將屬性識別為其類別、結構或介面的預設屬性。  
   
 ## <a name="remarks"></a>備註  
- A class, structure, or interface can designate at most one of its properties as the *default property*, provided that property takes at least one parameter. If code makes a reference to a class or structure without specifying a member, Visual Basic resolves that reference to the default property.  
+ 類別、結構或介面最多可以指定其中一個屬性做為*預設屬性*，前提是該屬性至少接受一個參數。 如果程式碼在不指定成員的情況下參考類別或結構，Visual Basic 會將該參考解析為預設屬性。  
   
- Default properties can result in a small reduction in source code-characters, but they can make your code more difficult to read. If the calling code is not familiar with your class or structure, when it makes a reference to the class or structure name it cannot be certain whether that reference accesses the class or structure itself, or a default property. This can lead to compiler errors or subtle run-time logic errors.  
+ 預設屬性可能會減少原始碼字元數，但它們可能會使您的程式碼更容易閱讀。 如果呼叫程式碼不熟悉您的類別或結構，當它對類別或結構名稱進行參考時，就無法確定該參考是要存取類別或結構本身，還是預設屬性。 這可能會導致編譯器錯誤或細微的執行時間邏輯錯誤。  
   
- You can somewhat reduce the chance of default property errors by always using the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md) to set compiler type checking to `On`.  
+ 您可以一律使用[Option Strict 語句](../../../visual-basic/language-reference/statements/option-strict-statement.md)，將編譯器類型檢查設定為 `On`，藉此減少預設屬性錯誤的機率。  
   
- If you are planning to use a predefined class or structure in your code, you must determine whether it has a default property, and if so, what its name is.  
+ 如果您打算在程式碼中使用預先定義的類別或結構，就必須判斷它是否有預設屬性，如果是，它的名稱為何。  
   
- Because of these disadvantages, you should consider not defining default properties. For code readability, you should also consider always referring to all properties explicitly, even default properties.  
+ 由於這些缺點，您應該考慮不要定義預設屬性。 為了讓程式碼更容易閱讀，您也應該考慮明確參考所有屬性，甚至是預設屬性。  
   
- The `Default` modifier can be used in this context:  
+ `Default` 修飾詞可以在此內容中使用：  
   
  [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [How to: Declare and Call a Default Property in Visual Basic](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
+- [如何：在 Visual Basic 中宣告及呼叫預設屬性](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

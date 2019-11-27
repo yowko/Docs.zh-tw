@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449531"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls 方法
-Enumerates all interfaces implemented by the specified `TypeDef`. 
+列舉指定之 `TypeDef`所實作為的所有介面。 
   
 ## <a name="syntax"></a>語法  
   
@@ -39,41 +39,41 @@ HRESULT EnumInterfaceImpls (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in、out]列舉值的指標。  
   
  `td`  
- [in] The token of the TypeDef whose MethodDef tokens representing interface implementations are to be enumerated.  
+ 在要列舉其 MethodDef token 代表介面執行的 TypeDef 標記。  
   
  `rImpls`  
- [out] The array used to store the MethodDef tokens.  
+ 脫銷用來儲存 MethodDef 標記的陣列。  
   
  `cMax`  
  [in] `rImpls` 陣列的大小上限。  
   
  `pcImpls`  
- [out] The actual number of tokens returned in `rImpls`.  
+ 脫銷`rImpls`中傳回的實際權杖數目。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls` returned successfully.|  
-|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcImpls` is set to zero.|  
+|`S_OK`|已成功傳回 `EnumInterfaceImpls`。|  
+|`S_FALSE`|沒有要列舉的 MethodDef 標記。 在此情況下，`pcImpls` 會設定為零。|  
 
 ## <a name="remarks"></a>備註
 
-The enumeration returns a collection of `mdInterfaceImpl` tokens for each interface implemented by the specified `TypeDef`. Interface tokens are returned in the order the interfaces were specified (through `DefineTypeDef` or `SetTypeDefProps`). Properties of the returned `mdInterfaceImpl` tokens can be queried using [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
+列舉會針對指定 `TypeDef`所實的每個介面，傳回 `mdInterfaceImpl` token 的集合。 介面 token 會依照指定介面的順序傳回（透過 `DefineTypeDef` 或 `SetTypeDefProps`）。 您可以使用[GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)來查詢傳回之 `mdInterfaceImpl` token 的屬性。
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

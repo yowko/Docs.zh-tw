@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432749"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>IMetaDataEmit2::DefineMethodSpec 方法
-Creates a generic instance of a method, and gets a token to the definition.  
+建立方法的泛型實例，並取得定義的 token。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,27 +38,27 @@ HRESULT DefineMethodSpec (
   
 ## <a name="parameters"></a>參數  
  `tkParent`  
- [in] A token for the method of which to create the generic instance. The token must be of type `mdMethodDef` or `mdMemberRef`.  
+ 在要建立泛型實例之方法的 token。 Token 的類型必須是 `mdMethodDef` 或 `mdMemberRef`。  
   
  `pvSigBlob`  
- [in] A pointer to the binary COM+ signature of the method.  
+ 在方法之二進位 COM + 簽章的指標。  
   
  `cbSibBlob`  
- [in] The size, in bytes, of `pvSigBlob`.  
+ 在`pvSigBlob`的大小（以位元組為單位）。  
   
  `pmi`  
- [out] A token to the metadata signature definition of the method.  
+ 脫銷方法之中繼資料簽章定義的 token。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

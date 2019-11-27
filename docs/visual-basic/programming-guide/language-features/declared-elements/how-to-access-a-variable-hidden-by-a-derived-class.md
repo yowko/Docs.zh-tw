@@ -18,17 +18,17 @@ ms.locfileid: "74345398"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>如何：存取衍生類別所隱藏的變數 (Visual Basic)
 
-When code in a derived class accesses a variable, the compiler normally resolves the reference to the closest accessible version, that is, the accessible version the fewest derivational steps backward from the accessing class. If the variable is defined in the derived class, the code normally accesses that definition.
+當衍生類別中的程式碼存取變數時，編譯器通常會將參考解析成最接近的可存取版本，也就是可存取的版本，最少的 derivational 步驟是從存取類別回溯。 如果變數是在衍生類別中定義，則程式碼通常會存取該定義。
 
-If the derived class variable shadows a variable in the base class, it hides the base class version. However, you can access the base class variable by qualifying it with the `MyBase` keyword.
+如果衍生類別變數遮蔽基類中的變數，則會隱藏基類版本。 不過，您可以使用 `MyBase` 關鍵字來限定基類變數，藉以存取此類別。
 
-### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>To access a base class variable hidden by a derived class
+### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>存取衍生類別所隱藏的基類變數
 
-- In an expression or assignment statement, precede the variable name with the `MyBase` keyword and a period (`.`).
+- 在運算式或指派語句中，在變數名稱前面加上 `MyBase` 關鍵字和句點（`.`）。
 
-    The compiler resolves the reference to the base class version of the variable.
+    編譯器會解析變數的基底類別版本參考。
 
-    The following example illustrates shadowing through inheritance. It makes two references, one that accesses the shadowing variable and one that bypasses the shadowing.
+    下列範例說明透過繼承的遮蔽。 它會建立兩個參考，一個存取遮蔽變數，另一個則會略過遮蔽。
 
     ```vb
     Public Class shadowBaseClass
@@ -45,16 +45,16 @@ If the derived class variable shadows a variable in the base class, it hides the
     End Class
     ```
 
-    The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class. The procedure `showStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified. It then displays the shadowed version when `shadowString` is qualified with the `MyBase`  keyword.
+    上述範例會在基類中宣告變數 `shadowString`，並將其遮蔽在衍生類別中。 當名稱 `shadowString` 不合格時，衍生類別中 `showStrings` 的程式會顯示字串的遮蔽版本。 然後，當使用 `MyBase` 關鍵字限定 `shadowString` 時，就會顯示陰影的版本。
 
-## <a name="robust-programming"></a>穩固程式設計
+## <a name="robust-programming"></a>最佳化程式設計
 
-To lower the risk of referring to an unintended version of a shadowed variable, you can fully qualify all references to a shadowed variable. Shadowing introduces more than one version of a variable with the same name. When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string. This can increase the risk of referring to the wrong version of the variable.
+若要降低參照非預期版本的陰影變數的風險，您可以完整限定遮蔽變數的所有參考。 遮蔽導入了一個以上具有相同名稱的變數版本。 當程式碼語句參考變數名稱時，編譯器解析參考的目標版本取決於程式碼語句的位置，以及符合資格的字串是否存在等因素。 這可能會增加參考錯誤版本的變數的風險。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [對已宣告項目的參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic 中的陰影](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [遮蔽和覆寫的差異](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
 - [如何：隱藏與您的變數名稱相同的變數](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [如何：隱藏繼承的變數](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)

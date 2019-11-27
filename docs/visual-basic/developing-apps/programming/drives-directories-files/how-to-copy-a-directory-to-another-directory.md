@@ -28,7 +28,7 @@ ms.locfileid: "74348855"
 
     這個程式碼範例也可用為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，它位於 [檔案系統 - 處理磁碟、資料夾和檔案] 中。 如需詳細資訊，請參閱 [Code Snippets](/visualstudio/ide/code-snippets)。
 
-## <a name="robust-programming"></a>穩固程式設計
+## <a name="robust-programming"></a>最佳化程式設計
 
 以下條件可能會造成例外狀況：
 
@@ -62,7 +62,7 @@ ms.locfileid: "74348855"
 
 - 目的地檔案存在，但無法存取 (<xref:System.UnauthorizedAccessException>)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>
 - [如何：尋找具有特定模式的子目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)

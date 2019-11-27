@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440113"
 ---
 # <a name="imetadataimportcloseenum-method"></a>IMetaDataImport::CloseEnum 方法
-Closes the enumerator that is identified by the specified handle.  
+關閉指定之控制碼所識別的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,21 +35,21 @@ void CloseEnum (
   
 ## <a name="parameters"></a>參數  
  `hEnum`  
- [in] The handle for the enumerator to close.  
+ 在要關閉之枚舉器的控制碼。  
   
 ## <a name="remarks"></a>備註  
- The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
+ `hEnum` 所指定的控制碼是從先前的 `Enum`*名稱*呼叫取得（例如， [IMetaDataImport：： EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

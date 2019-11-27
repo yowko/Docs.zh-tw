@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431699"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType 方法
-Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.  
+建立類型定義的中繼資料簽章、傳回該類型的 `mdTypeDef` token，並指定定義的類型是由 `tdEncloser` 參數所參考之類型的成員。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,33 +40,33 @@ HRESULT DefineNestedType (
   
 ## <a name="parameters"></a>參數  
  `szTypeDef`  
- [in] The name of the type in Unicode.  
+ 在Unicode 中的類型名稱。  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CorTypeAttr` values.  
+ [in] `TypeDef` 屬性。 這是 `CorTypeAttr` 值的位元遮罩。  
   
  `tkExtends`  
- [in] The token of the base class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
+ 在基類的 token。 這可以是 `mdTypeDef` 或 `mdTypeRef` token。  
   
  `rtkImplements`[]  
- [in] An array of tokens that specify the interfaces that this class or interface implements.  
+ 在權杖的陣列，指定此類別或介面所執行的介面。  
   
  `tdEncloser`  
- [in] The token of the enclosing type. The last element of the array must be `mdTokenNil`.  
+ 在封入類型的 token。 陣列的最後一個元素必須 `mdTokenNil`。  
   
  `ptd`  
- [out] The `mdTypeDef` token assigned.  
+ 脫銷指派的 `mdTypeDef` token。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

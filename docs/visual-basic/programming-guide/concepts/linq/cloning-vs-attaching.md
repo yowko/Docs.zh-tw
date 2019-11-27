@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345683"
 ---
-# <a name="cloning-vs-attaching-visual-basic"></a>Cloning vs. Attaching (Visual Basic)
+# <a name="cloning-vs-attaching-visual-basic"></a>複製與附加（Visual Basic）
 將 <xref:System.Xml.Linq.XNode> (包括 <xref:System.Xml.Linq.XElement>) 或 <xref:System.Xml.Linq.XAttribute> 物件加入到新的樹狀結構時，如果新內容沒有父代，這些物件只會附加到 XML 樹狀結構。 如果新內容已經成為父代，而且屬於其他 XML 樹狀結構的一部分，則會複製新內容。 然後，新複製的內容會附加到新的 XML 樹狀結構。  
   
 ## <a name="example"></a>範例  
@@ -50,6 +50,6 @@ Child1 was cloned
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [建立 XML 樹狀結構（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439749"
 ---
 # <a name="icorprofilercallback2handledestroyed-method"></a>ICorProfilerCallback2::HandleDestroyed 方法
-Notifies the code profiler that a garbage collection handle has been destroyed.  
+通知程式碼分析工具，垃圾收集控制碼已遭終結。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ HRESULT HandleDestroyed(
   
 ## <a name="parameters"></a>參數  
  `handleId`  
- [in] The ID of the handle for the garbage collection.  
+ 在垃圾收集的控制碼識別碼。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -45,7 +45,7 @@ HRESULT HandleDestroyed(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

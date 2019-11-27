@@ -22,7 +22,7 @@ ms.locfileid: "74353822"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>如何：建立 GenericPrincipal 和 GenericIdentity 物件
 
-You can use the <xref:System.Security.Principal.GenericIdentity> class in conjunction with the <xref:System.Security.Principal.GenericPrincipal> class to create an authorization scheme that exists independent of a Windows domain.
+您可以使用 <xref:System.Security.Principal.GenericIdentity> 類別搭配 <xref:System.Security.Principal.GenericPrincipal> 類別，建立獨立于 Windows 網域的授權配置。
 
 ### <a name="to-create-a-genericprincipal-object"></a>建立 GenericPrincipal 物件
 
@@ -48,7 +48,7 @@ You can use the <xref:System.Security.Principal.GenericIdentity> class in conjun
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. 使用下列程式碼將主體附加至目前的執行緒。 This is valuable in situations where the principal must be validated several times, it must be validated by other code running in your application, or it must be validated by a <xref:System.Security.Permissions.PrincipalPermission> object. 您仍然可以在主體物件上執行角色型驗證，而不需將它附加至執行緒。 如需詳細資訊，請參閱[取代 Principal 物件](../../../docs/standard/security/replacing-a-principal-object.md)。
+3. 使用下列程式碼將主體附加至目前的執行緒。 這在主體必須經過多次驗證的情況下很有用，必須由應用程式中執行的其他程式碼進行驗證，或者必須由 <xref:System.Security.Permissions.PrincipalPermission> 物件驗證。 您仍然可以在主體物件上執行角色型驗證，而不需將它附加至執行緒。 如需詳細資訊，請參閱[取代 Principal 物件](../../../docs/standard/security/replacing-a-principal-object.md)。
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal
@@ -141,7 +141,7 @@ The IsAuthenticated is: True
 Is this a Manager? True
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Security.Principal.GenericIdentity>
 - <xref:System.Security.Principal.GenericPrincipal>

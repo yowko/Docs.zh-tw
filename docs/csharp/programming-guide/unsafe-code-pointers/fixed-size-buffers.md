@@ -23,7 +23,7 @@ private fixed char name[30];
 
 ## <a name="remarks"></a>備註
 
-在安全的程式碼中，包含陣列的 C# 結構不包含陣列項目。 相反地，該結構會包含元素的參考。 您可以將固定大小的陣列嵌入用於[不安全](../../language-reference/keywords/unsafe.md)程式碼區塊的 [struct](../../language-reference/keywords/struct.md)。
+在安全的程式碼中，包含陣列的 C# 結構不包含陣列項目。 相反地，該結構會包含元素的參考。 您可以將固定大小的陣列嵌入用於[不安全](../../language-reference/keywords/struct.md)程式碼區塊的 [struct](../../language-reference/keywords/unsafe.md)。
 
 下列 `struct` 的大小為 8 個位元組。 `pathName` 陣列是參考：
 
@@ -33,7 +33,7 @@ private fixed char name[30];
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
 
-128 個元素的 `char` 陣列大小為 256 個位元組。 不論編碼為何，在固定大小的 [char](../../language-reference/builtin-types/char.md) 緩衝區中，每個字元一律會有兩個位元組。 即使 char 緩衝區使用 `CharSet = CharSet.Auto` 或 `CharSet = CharSet.Ansi` 封送處理至 API 方法或結構也一樣。 如需詳細資訊，請參閱<xref:System.Runtime.InteropServices.CharSet>。
+128 個元素的 `char` 陣列大小為 256 個位元組。 不論編碼為何，在固定大小的 [char](../../language-reference/builtin-types/char.md) 緩衝區中，每個字元一律會有兩個位元組。 即使 char 緩衝區使用 `CharSet = CharSet.Auto` 或 `CharSet = CharSet.Ansi` 封送處理至 API 方法或結構也一樣。 如需詳細資訊，請參閱 <xref:System.Runtime.InteropServices.CharSet>。
 
 上述範例示範如何存取 `fixed` 欄位而無需進行釘選，這是從 C# 7.3 開始可供使用的功能。
 
@@ -49,7 +49,7 @@ private fixed char name[30];
 - 陣列的宣告應包含計數，例如 `char id[8]`。 您不能使用 `char id[]`。
 - 不安全的緩衝區只能是不安全內容中結構的執行個體欄位。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [Unsafe 程式碼和指標](index.md)

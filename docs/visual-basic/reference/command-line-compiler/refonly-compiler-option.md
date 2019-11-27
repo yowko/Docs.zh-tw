@@ -14,9 +14,9 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348581"
 ---
-# <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
+# <a name="-refonly-visual-basic"></a>-refonly （Visual Basic）
 
-The **-refonly** option indicates that the primary output of the compilation should be a reference assembly instead of an implementation assembly. `-refonly` 參數以無訊息模式停用輸出 PDB，因為無法執行參考組件。
+**-Refonly**選項指出編譯的主要輸出應該是參考元件，而不是實作為元件。 `-refonly` 參數以無訊息模式停用輸出 PDB，因為無法執行參考組件。
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -28,13 +28,13 @@ The **-refonly** option indicates that the primary output of the compilation sho
 
 ## <a name="remarks"></a>備註
 
-Visual Basic supports the `-refonly` switch starting with version 15.3.
+Visual Basic 支援從15.3 版開始的 `-refonly` 交換器。
 
-Reference assemblies are a special type of assembly that contain only the minimum amount of metadata required to represent the library's public API surface. They include declarations for all members that are significant when referencing an assembly in build tools, but exclude all member implementations and declarations of private members that have no observable impact on their API contract. For more information, see [Reference assemblies](../../../standard/assembly/reference-assemblies.md) in .NET Guide.
+參考元件是一種特殊類型的元件，其中只包含代表程式庫公用 API 介面所需的最小中繼資料量。 其中包括在建立工具中參考元件時，所有重要成員的宣告，但會排除所有成員的執行，以及對其 API 合約沒有明顯影響的私用成員宣告。 如需詳細資訊，請參閱 .NET 中的[參考元件](../../../standard/assembly/reference-assemblies.md)指南。
 
 `-refonly` 和 [`-refout`](refout-compiler-option.md) 選項互斥。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [-refout](refout-compiler-option.md)
 - [Visual Basic 命令列編譯器](index.md)

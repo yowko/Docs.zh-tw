@@ -1,5 +1,5 @@
 ---
-title: 功能建構 (LINQ to XML)
+title: 函式建構 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
 ms.openlocfilehash: 6366c7781372d34e15d62f81a5ceae8ff4ccda2e
@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353457"
 ---
-# <a name="functional-construction-linq-to-xml-visual-basic"></a>Functional Construction (LINQ to XML) (Visual Basic)
+# <a name="functional-construction-linq-to-xml-visual-basic"></a>功能結構（LINQ to XML）（Visual Basic）
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供一種強大的方式來建立 XML 元素，稱為「函數式建構」。 功能結構是在單一陳述式中建立 XML 樹狀結構的能力。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 程式介面有數種主要功能可以使用功能結構：  
@@ -20,9 +20,9 @@ ms.locfileid: "74353457"
   
 - 如果物件實作 <xref:System.Collections.Generic.IEnumerable%601>，系統列舉物件中的集合，並加入集合中的所有項目。 如果集合包含 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 物件，系統會個別加入集合中的每個項目。 這是非常重要的，因為這可讓您將 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的結果傳遞到建構函式中。  
   
- 以下是一個範例：  
+ 下列為範例：  
   
- These features enable you to write code using XML literals to create an XML tree, and also to write code that uses the results of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries when you create an XML tree:  
+ 這些功能可讓您使用 XML 常值來撰寫程式碼，以建立 XML 樹狀結構，以及撰寫在建立 XML 樹狀結構時，使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢結果的程式碼：  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -56,6 +56,6 @@ Console.WriteLine(xmlTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [建立 XML 樹狀結構（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

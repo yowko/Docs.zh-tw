@@ -24,7 +24,7 @@ ms.locfileid: "74352052"
 
 ## <a name="to-add-and-configure-the-event-log-listener"></a>加入及設定事件記錄檔接聽程式
 
-1. 在 方案總管 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。
+1. 在 **方案總管** 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。
 
     \-或-
 
@@ -67,7 +67,7 @@ ms.locfileid: "74352052"
 
 設定組件的事件記錄檔接聽程式之後，接聽程式會接收從該組件寫入的所有訊息 `My.Application.Log` 。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>

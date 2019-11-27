@@ -25,7 +25,7 @@ ms.locfileid: "74351922"
 ### <a name="making-an-object-serializable"></a>讓物件可序列化  
  若要將物件序列化，您需要將要序列化的物件、將包含序列化物件的資料流，以及 <xref:System.Runtime.Serialization.Formatter>。 <xref:System.Runtime.Serialization> 包含序列化及還原序列化物件所需的類別。  
   
- 將 <xref:System.SerializableAttribute> 屬性套用至某個類型，以表示此類型的執行個體為可序列化。 如果您嘗試序列化但該類型沒有 <xref:System.SerializableAttribute> 屬性，則會擲回 <xref:System.Runtime.Serialization.SerializationException> 例外狀況。  
+ 將 <xref:System.SerializableAttribute> 屬性套用至某個類型，以表示此類型的執行個體為可序列化。 如果您嘗試序列化但該類型沒有 <xref:System.Runtime.Serialization.SerializationException> 屬性，則會擲回 <xref:System.SerializableAttribute> 例外狀況。  
   
  如果您不要將類別中的某個欄位序列化，請套用 <xref:System.NonSerializedAttribute> 屬性。 如果可序列化型別的欄位包含指標、控制代碼，或一些其他特定環境專屬的資料結構，且無法以有意義的方式在不同環境中重新建構該欄位，則您可能想要讓它成為不可序列化的。  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445436"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob 方法
-Gets a pointer to the binary large object (BLOB) at the specified column index.  
+取得位於指定之資料行索引處之二進位大型物件（BLOB）的指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,24 +37,24 @@ HRESULT GetBlob (
   
 ## <a name="parameters"></a>參數  
  `ixBlob`  
- [in] The memory address from which to get `ppData`.  
+ 在要從中取得 `ppData`的記憶體位址。  
   
  `pcbData`  
- [out] A pointer to the size, in bytes, of `ppData`.  
+ 脫銷`ppData`大小的指標（以位元組為單位）。  
   
  `ppData`  
- [out] A pointer to a pointer to the binary data retrieved.  
+ 脫銷所抓取之二進位資料指標的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

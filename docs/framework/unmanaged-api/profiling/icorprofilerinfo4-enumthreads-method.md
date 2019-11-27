@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442983"
 ---
 # <a name="icorprofilerinfo4enumthreads-method"></a>ICorProfilerInfo4::EnumThreads 方法
-Returns an enumerator that provides methods to sequentially iterate through the collection of all managed threads in the profiled process.  
+傳回列舉值，提供逐步逐一查看已分析進程中所有 managed 執行緒集合的方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ HRESULT EnumThreads([out]
   
 ## <a name="parameters"></a>參數  
  `ppEnum`  
- [out] A pointer to an [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.  
+ 脫銷指向[ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)介面的指標。  
   
 ## <a name="remarks"></a>備註  
   
@@ -47,7 +47,7 @@ HRESULT EnumThreads([out]
   
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerThreadEnum 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
 - [ICorProfilerInfo4 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)

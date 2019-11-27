@@ -11,13 +11,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351349"
 ---
-# <a name="private-protected-visual-basic"></a>Private Protected (Visual Basic)
+# <a name="private-protected-visual-basic"></a>私用保護（Visual Basic）
 
-`Private Protected` 關鍵字組合是成員存取修飾詞。 A `Private Protected` member is accessible by all members in its containing class, as well as by types derived from the containing class, but only if they are found in its containing assembly.
+`Private Protected` 關鍵字組合是成員存取修飾詞。 `Private Protected` 成員可由其包含類別中的所有成員，以及衍生自包含類別的類型來存取，但只有在其包含的元件中找到時，才會提供。
 
-You can specify `Private Protected` only on members of classes; you cannot apply `Private Protected` to members of a structure because structures cannot be inherited.
+您只能在類別的成員上指定 `Private Protected`;您無法將 `Private Protected` 套用到結構的成員，因為無法繼承結構。
 
-The `Private Protected` access modifier is supported by Visual Basic 15.5 and later. To use it, you can add the following element to your Visual Basic project (\*.vbproj) file. As long as Visual Basic 15.5 or later is installed on your system, it lets you take advantage of all the language features supported by the latest version of the Visual Basic compiler:
+Visual Basic 15.5 和更新版本支援 `Private Protected` 存取修飾詞。 若要使用它，您可以將下列元素加入至 Visual Basic 專案（\*. vbproj）檔案。 只要您的系統上已安裝 Visual Basic 15.5 或更新版本，它就可讓您利用最新版本的 Visual Basic 編譯器所支援的所有語言功能：
 
 ```xml
 <PropertyGroup>
@@ -25,55 +25,55 @@ The `Private Protected` access modifier is supported by Visual Basic 15.5 and la
 </PropertyGroup>
 ```
 
-For more information see [setting the Visual Basic language version](../../language-reference/configure-language-version.md).
+如需詳細資訊，請參閱[設定 Visual Basic 語言版本](../../language-reference/configure-language-version.md)。
 
 > [!NOTE]
-> In Visual Studio, selecting F1 help on `private protected` provides help for either [private](private.md) or [protected](protected.md). The IDE picks the single token under the cursor rather than the compound word.
+> 在 Visual Studio 中，在 `private protected` 上選取 [F1 說明] 會提供[私](private.md)用或[受保護](protected.md)的協助。 IDE 會挑選游標下的單一 token，而不是複合字組。
 
 ## <a name="rules"></a>規則
 
-- **Declaration Context.** You can use `Private Protected` only at the class level. This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+- **宣告內容。** 您只能在類別層級使用 `Private Protected`。 這表示 `Protected` 元素的宣告內容必須是類別，而且不能是原始程式檔、命名空間、介面、模組、結構或程式。
 
 ## <a name="behavior"></a>行為
 
-- **Access Level.** All code in a class can access its elements. Code in any class that derives from a base class and is contained in the same assembly can access all the `Private Protected` elements of the base class. However, code in any class that derives from a base class and is contained in a different assembly can't access the base class `Private Protected` elements.
+- **存取層級。** 類別中的所有程式碼都可以存取其元素。 任何衍生自基類且包含在相同元件中的類別中的程式碼，都可以存取基類的所有 `Private Protected` 元素。 不過，任何衍生自基類且包含在不同元件中的類別中的程式碼，都無法存取基底類別 `Private Protected` 元素。
 
-- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+- **存取修飾詞。** 指定存取層級的關鍵字稱為*存取*修飾詞。 如需存取修飾詞的比較，請參閱[Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
 
 `Private Protected` 修飾詞可用於以下內容：
 
-- [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) of a nested class
+- Nested 類別的[Class 語句](../../../visual-basic/language-reference/statements/class-statement.md)
 
 - [Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md)
 
 - [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)
 
-- [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) of a delegate nested in a class
+- 在類別中嵌套之委派的[委派語句](../../../visual-basic/language-reference/statements/delegate-statement.md)
 
 - [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)
 
-- [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md) of an enumeration nested in a class
+- 在類別中嵌套之列舉的[Enum 語句](../../../visual-basic/language-reference/statements/enum-statement.md)
 
 - [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)
 
 - [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)
 
-- [Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md) of an interface nested in a class
+- 類別中所嵌套介面的[介面語句](../../../visual-basic/language-reference/statements/interface-statement.md)
 
 - [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)
 
-- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) of a structure nested in a class
+- 類別中所嵌套結構的[結構語句](../../../visual-basic/language-reference/statements/structure-statement.md)
 
 - [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Protected Friend](./protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

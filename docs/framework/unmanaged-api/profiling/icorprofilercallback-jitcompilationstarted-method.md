@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426190"
 ---
 # <a name="icorprofilercallbackjitcompilationstarted-method"></a>ICorProfilerCallback::JITCompilationStarted 方法
-Notifies the profiler that the just-in-time (JIT) compiler has started to compile a function.  
+通知分析工具，及時（JIT）編譯器已開始編譯函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,17 +35,17 @@ HRESULT JITCompilationStarted(
   
 ## <a name="parameters"></a>參數  
  `functionId`  
- [in] The ID of the function for which the compilation is starting.  
+ 在正在啟動編譯之函式的識別碼。  
   
  `fIsSafeToBlock`  
- [in] A value indicating to the profiler whether blocking will affect the operation of the runtime. The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.  
+ 在值，表示封鎖器是否會影響執行時間的作業。 如果封鎖可能會導致執行時間等候呼叫執行緒從這個回呼傳回，則此值為 `true`。否則，`false`。  
   
- Although a value of `true` will not harm the runtime, it can skew the profiling results.  
+ 雖然 `true` 的值不會傷害執行時間，但它可能會扭曲分析結果。  
   
 ## <a name="remarks"></a>備註  
- It is possible to receive more than one pair of `JITCompilationStarted` and [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) calls for each function because of the way the runtime handles class constructors. For example, the runtime starts to JIT-compile method A, but the class constructor for class B needs to be run. Therefore, the runtime JIT-compiles the constructor for class B and runs it. While the constructor is running, it makes a call to method A, which causes method A to be JIT-compiled again. In this scenario, the first JIT compilation of method A is halted. However, both attempts to JIT-compile method A are reported with JIT-compilation events. If the profiler is going to replace Microsoft intermediate language (MSIL) code for method A by calling the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, it must do so for both `JITCompilationStarted` events, but it may use the same MSIL block for both.  
+ 您可以針對每個函式接收一對以上的 `JITCompilationStarted` 和[ICorProfilerCallback：： JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)呼叫，因為執行時間處理類別的方法。 例如，執行時間會開始 JIT 編譯方法 A，但必須執行類別 B 的類別構造函式。 因此，執行時間會 JIT 編譯類別 B 的函式，並加以執行。 當此函式正在執行時，它會呼叫方法 A，使方法 A 再次進行 JIT 編譯。 在此案例中，方法 A 的第一個 JIT 編譯會暫停。 不過，這兩次嘗試 JIT 編譯方法 A 都會使用 JIT 編譯事件來回報。 如果分析工具會藉由呼叫[ICorProfilerInfo：： SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)方法，來取代方法 A 的 Microsoft 中繼語言（MSIL）程式碼，則 `JITCompilationStarted` 這兩個事件都必須這麼做，但這兩者都可以使用相同的 MSIL 區塊。  
   
- Profilers must support the sequence of JIT callbacks in cases where two threads are simultaneously making callbacks. For example, thread A calls `JITCompilationStarted`. However, before thread A calls `JITCompilationFinished`, thread B calls [ICorProfilerCallback::ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) with the function ID from thread A's `JITCompilationStarted` callback. It might appear that the function ID should not yet be valid because a call to `JITCompilationFinished` had not yet been received by the profiler. However, in a case like this one, the function ID is valid.  
+ 分析工具在兩個執行緒同時進行回呼的情況下，必須支援 JIT 回呼的順序。 例如，執行緒 A 會呼叫 `JITCompilationStarted`。 不過，線上程 A 呼叫 `JITCompilationFinished`之前，執行緒 B 會呼叫[ICorProfilerCallback：： ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)與執行緒 a 的 `JITCompilationStarted` 回呼的函式識別碼。 可能會出現函式識別碼尚未生效的情況，因為分析工具尚未收到 `JITCompilationFinished` 的呼叫。 不過，在這種情況下，函數識別碼是有效的。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -56,7 +56,7 @@ HRESULT JITCompilationStarted(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [JITCompilationFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)

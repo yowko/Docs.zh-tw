@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448118"
 ---
 # <a name="imetadataemitsetcustomattributevalue-method"></a>IMetaDataEmit::SetCustomAttributeValue 方法
-Sets or updates the value of a custom attribute defined by a prior call to [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).  
+設定或更新先前呼叫[IMetaDataEmit：:D efinecustomattribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)所定義的自訂屬性值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,24 +37,24 @@ HRESULT SetCustomAttributeValue (
   
 ## <a name="parameters"></a>參數  
  `pcv`  
- [in] The token of the target custom attribute.  
+ 在目標自訂屬性的標記。  
   
  `pCustomAttribute`  
- [in] A pointer to the array that contains the custom attribute.  
+ 在包含自訂屬性之陣列的指標。  
   
  `cbCustomAttribute`  
- [in] The size, in bytes, of the custom attribute.  
+ 在自訂屬性的大小（以位元組為單位）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

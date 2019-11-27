@@ -25,7 +25,7 @@ ms.locfileid: "74348902"
 
 `My.Computer.FileSystem` 物件提供用於處理檔案和資料夾的工具。 其屬性、方法和事件可讓您建立、複製、移動、調查及刪除檔案和資料夾。 `My.Computer.FileSystem` 比 Visual Basic 所提供的舊版函式 (`FileOpen`、`FileClose`、`Input`、`InputString`、`LineInput` 等) 提供更佳效能，以利回溯相容性。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
  [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  列出主題，說明如何使用 `My.Computer.FileSystem` 物件從檔案讀取  

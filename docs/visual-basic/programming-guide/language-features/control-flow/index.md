@@ -19,9 +19,9 @@ ms.locfileid: "74353936"
 
 如果處於不受控制的狀態，則程式會從頭到尾執行其陳述式。 只要使用這種單向流程，就可以撰寫一些極簡單的程式。 不過，任何程式設計語言的大部分功能和效用都是來自於它們能夠使用控制陳述式和迴圈來變更執行順序。
 
- 控制結構可讓您規範程式的執行流程。 Using control structures, you can write Visual Basic code that makes decisions or that repeats actions. 其他控制結構可讓您確保資源的處置，或在相同的物件參考上執行一系列的陳述式。
+ 控制結構可讓您規範程式的執行流程。 使用控制結構，您可以撰寫 Visual Basic 程式碼，以做出決定或重複動作。 其他控制結構可讓您確保資源的處置，或在相同的物件參考上執行一系列的陳述式。
   
-## <a name="in-this-section"></a>本章節內容
+## <a name="in-this-section"></a>本節內容
 
  [決策結構](decision-structures.md)  
  描述用於分支的控制結構。

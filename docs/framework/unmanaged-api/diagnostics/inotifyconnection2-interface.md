@@ -22,19 +22,19 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445488"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 介面
-Declares methods for registering and unregistering a connection notification source.  
+宣告註冊和取消註冊連接通知來源的方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[RegisterNotifySource 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|Installs a specified notification source object.|  
-|[UnregisterNotifySource 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|Removes a specified notification source object from the connection.|  
+|[RegisterNotifySource 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|安裝指定的通知來源物件。|  
+|[UnregisterNotifySource 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|從連接中移除指定的通知來源物件。|  
   
 ## <a name="requirements"></a>需求  
- **Header:** ProtocolNotify2.idl  
+ **標頭：** ProtocolNotify2 .idl  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [INotifySink2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [INotifySource2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)

@@ -9,12 +9,12 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344590"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>如何：尋找兩個清單之間的集合差異（LINQ）（Visual Basic）
 此範例示範如何使用 LINQ 比較兩份字串清單，然後輸出在 names1.txt 但不在 names2.txt 中的字串行。  
   
 ### <a name="to-create-the-data-files"></a>建立資料檔  
   
-1. Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
+1. 將 names1.txt 和 names2.txt 複製到您的方案資料夾，如[如何：合併和比較字串集合（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)中所示。  
   
 ## <a name="example"></a>範例  
   
@@ -51,11 +51,11 @@ End Class
 ' Garcia, Debra  
 ```  
   
- Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.  
+ Visual Basic 中的某些查詢作業類型（例如 <xref:System.Linq.Enumerable.Except%2A>、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Union%2A>和 <xref:System.Linq.Enumerable.Concat%2A>）只能以以方法為基礎的語法來表示。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+建立 VB.NET 主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 和字串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

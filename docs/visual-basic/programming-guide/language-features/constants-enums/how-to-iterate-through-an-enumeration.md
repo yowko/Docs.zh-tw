@@ -1,5 +1,5 @@
 ---
-title: 'How to: Iterate Through An Enumeration'
+title: 如何：逐一查看列舉
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [Visual Basic], iterating
@@ -14,18 +14,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354028"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>如何：在 Visual Basic 中逐一查看列舉類型
-列舉提供使用相關常數組和建立常數值與名稱之關聯的便利方法。 To iterate through an enumeration, you can move it into an array using the <xref:System.Enum.GetValues%2A> method. You could also iterate through an enumeration using a `For...Each` statement, using the <xref:System.Enum.GetNames%2A> or <xref:System.Enum.GetValues%2A> method to extract the string or numeric value.  
+列舉提供使用相關常數組和建立常數值與名稱之關聯的便利方法。 若要逐一查看列舉，您可以使用 <xref:System.Enum.GetValues%2A> 方法，將它移至陣列中。 您也可以使用 `For...Each` 語句逐一查看列舉，使用 <xref:System.Enum.GetNames%2A> 或 <xref:System.Enum.GetValues%2A> 方法來解壓縮字串或數值。  
   
-### <a name="to-iterate-through-an-enumeration"></a>To iterate through an enumeration  
+### <a name="to-iterate-through-an-enumeration"></a>逐一查看列舉  
   
-- Declare an array and convert the enumeration to it with the <xref:System.Enum.GetValues%2A> method before passing the array as you would any other variable. The following example displays each member of the enumeration <xref:Microsoft.VisualBasic.FirstDayOfWeek> as it iterates through the enumeration.  
+- 宣告陣列，並使用 <xref:System.Enum.GetValues%2A> 方法，將列舉轉換為它，然後再傳遞陣列，就像任何其他變數一樣。 下列範例會在逐一查看列舉時，顯示列舉 <xref:Microsoft.VisualBasic.FirstDayOfWeek> 的每個成員。  
   
      [!code-vb[VbEnumsTask#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#7)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [列舉的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [如何：宣告列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [何時使用列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [如何：決定與列舉值相關聯的字串](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [如何：參考列舉成員](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)

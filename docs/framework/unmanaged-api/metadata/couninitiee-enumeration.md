@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436443"
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE 列舉
-Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.  
+指定初始化 common language runtime 時， [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)所使用的常數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,18 +38,18 @@ typedef enum tagCOUNINITEE
   
 |成員|描述|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|Indicates default uninitialization mode.|  
-|`COUNINITEE_DLL`|Indicates uninitialization mode for unloading an assembly.|  
+|`COUNINITEE_DEFAULT`|表示預設解除初始化模式。|  
+|`COUNINITEE_DLL`|表示卸載元件的解除初始化模式。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -6,15 +6,15 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429222"
 ---
-### <a name="removed-controls"></a>Removed controls
+### <a name="removed-controls"></a>移除的控制項
 
-Starting in .NET Core 3.1, some Windows Forms controls are no longer available.
+從 .NET Core 3.1 開始，部分 Windows Forms 控制項已無法再使用。
 
-#### <a name="change-description"></a>Change description
+#### <a name="change-description"></a>變更描述
 
-Starting with .NET Core 3.1, various Windows Forms controls are no longer available. Replacement controls that have better design and support were introduced in .NET Framework 2.0. The deprecated controls were previously removed from designer toolboxes but were still available to be used.
+從 .NET Core 3.1 開始，已不再提供各種 Windows Forms 控制項。 在 .NET Framework 2.0 中引進了更佳設計和支援的取代控制項。 已淘汰的控制項先前已從設計工具工具箱中移除，但仍可供使用。
 
-The following types are no longer available:
+下列類型已無法再使用：
 
 - <xref:System.Windows.Forms.Menu>
 - <xref:System.Windows.Forms.Menu.MenuItemCollection>
@@ -45,27 +45,27 @@ The following types are no longer available:
 - <xref:System.Windows.Forms.DataGrid.HitTestType>
 - <xref:System.Windows.Forms.Design.IMenuEditorService>
 
-#### <a name="version-introduced"></a>Version introduced
+#### <a name="version-introduced"></a>引進的版本
 
 3.1
 
-#### <a name="recommended-action"></a>Recommended action
+#### <a name="recommended-action"></a>建議的動作
 
-Each removed control has a recommended replacement control. Refer to the following table:
+每個移除的控制項都有建議的取代控制項。 請參閱下表：
 
-| Removed control (API) | Recommended replacement | Associated APIs that are removed |
+| 已移除控制項（API） | 建議取代 | 已移除的相關聯 Api |
 |-|-|-|
-| DataGrid | DataGridView | DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType |
-| ToolBar | ToolStrip | ToolBarAppearance |
-| ToolBarButton | ToolStripButton | ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButtonStyle, ToolBarTextAlign|
+| DataGrid | DataGridView | DataGridCell、DataGridRow、DataGridTableCollection、DataGridColumnCollection、DataGridTableStyle、System.windows.forms.datagridcolumnstyle>、DataGridLineStyle、DataGridParentRowsLabel、DataGridParentRowsLabelStyle、DataGridBoolColumn、DataGridTextBox、System.windows.forms.gridcolumnstylescollection>、System.windows.forms.gridtablestylescollection>、HitTestType |
+| ToolBar | ToolStrip | System.windows.forms.toolbar.appearance |
+| ToolBarButton | ToolStripButton | System.windows.forms.toolbarbuttonclickeventargs>、ToolBarButtonClickEventHandler、ToolBarButtonStyle、ToolBarTextAlign|
 | ContextMenu | ContextMenuStrip | |
-| 功能表 | ToolStripDropDown, ToolstripDropDownMenu | MenuItemCollection |
+| 功能表 | ToolStripDropDown、ToolstripDropDownMenu | MenuItemCollection |
 | MainMenu | MenuStrip | |
 | MenuItem | ToolstripMenuItem | |
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>分類
 
-Windows Forms
+Windows Form
 
 #### <a name="affected-apis"></a>受影響的 API
 

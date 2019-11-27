@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445243"
 ---
 # <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind 方法
-Gets a value identifying the nature of the code in the portable executable (PE) file, typically a DLL or EXE file, that is defined in the current metadata scope.  
+取得值，識別在目前中繼資料範圍中定義的可移植執行檔（PE）（通常是 DLL 或 EXE 檔案）中的程式碼本質。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,15 +36,15 @@ HRESULT GetPEKind (
   
 ## <a name="parameters"></a>參數  
  `pdwPEKind`  
- [out] A pointer to a value of the [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) enumeration that describes the PE file.  
+ 脫銷描述 PE 檔案之[CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)列舉值的指標。  
   
  `pdwMachine`  
- [out] A pointer to a value that identifies the architecture of the machine. See the next section for possible values.  
+ 脫銷識別機器架構的值指標。 如需可能的值，請參閱下一節。  
   
 ## <a name="remarks"></a>備註  
- The value referenced by the `pdwMachine` parameter can be one of the following.  
+ `pdwMachine` 參數所參考的值可以是下列其中一項。  
   
-|值|Machine architecture|  
+|值|電腦架構|  
 |-----------|--------------------------|  
 |IMAGE_FILE_MACHINE_I386<br /><br /> 0x014C|x86|  
 |IMAGE_FILE_MACHINE_IA64<br /><br /> 0x0200|Intel IPF|  
@@ -53,13 +53,13 @@ HRESULT GetPEKind (
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

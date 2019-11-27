@@ -18,9 +18,9 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444723"
 ---
-# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9::GetNativeCodeStartAddresses Method
+# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9：： GetNativeCodeStartAddresses 方法
 
-Given a functionId and rejitId, enumerates the native code start address of all jitted versions of this code that currently exist.
+假設有 functionId 和 rejitId，會列舉此程式碼中所有目前存在之已編譯版本的原生程式碼起始位址。
 
 ## <a name="syntax"></a>語法
 
@@ -35,7 +35,7 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 #### <a name="parameters"></a>參數
 
 `functionId` \
-[in] The ID of the function whose native code start addresses should be returned.
+在應傳回其原生程式碼起始位址的函式識別碼。
 
 `reJitId` \
 [in] 經過 JIT 重新編譯的函式識別。
@@ -44,25 +44,25 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 [in] `codeStartAddresses` 陣列的大小上限。
 
 `pcCodeStartAddresses` \
-[out] The number of available addresses.
+脫銷可用的位址數目。
 
 `codeStartAddresses` \
-[out] An array of `UINT_PTR`, each one of which is the start address for a native body for the specified function.
+脫銷`UINT_PTR`的陣列，其中每一個都是所指定函式的原生主體的起始位址。
 
 ## <a name="remarks"></a>備註
 
-When tiered compilation is enabled, a function may have more than one native code body.
+啟用階層式編譯時，函數可能會有一個以上的機器碼主體。
 
 ## <a name="requirements"></a>需求
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**平臺：** 請參閱[.Net Core 支援的作業系統](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)。
 
 **標頭：** CorProf.idl、CorProf.h
 
 **程式庫：** CorGuids.lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.Net 版本：** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)

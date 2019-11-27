@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345722"
 ---
-# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)
+# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>不可部分完成的 XName 和 XNamespace 物件（LINQ to XML）（Visual Basic）
 
 <xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 物件是「不可部分完成」的物件。也就是說，如果它們包含相同的限定名稱，它們就會參考相同的物件。 這會針對查詢產生效能優勢：當您比較兩個不可部分完成的名稱是否相等時，基礎中繼語言 (Intermediate Language) 只需要判斷這兩個參考是否指向相同的物件即可。 基礎程式碼不需要進行耗時的字串比較。
 
@@ -19,7 +19,7 @@ ms.locfileid: "74345722"
 
 若要讓某個類別 (Class) 啟用不可部分完成的物件，此類別的建構函式 (Constructor) 必須是私用 (Private) 而非公用 (Public)。 這是因為如果建構函式為公用，您就可以建立非不可部分完成的物件。 <xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 類別會實作隱含轉換運算子，將字串轉換成 <xref:System.Xml.Linq.XName> 或 <xref:System.Xml.Linq.XNamespace>。 這就是您取得這些物件之執行個體的方式。 您無法使用建構函式來取得執行個體，因為無法存取建構函式。
 
-<xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 也會實作等號比較運算子和不等比較運算子，以便判斷所比較的兩個物件是否為相同執行個體的參考。
+<xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 也會實作為相等和不等比較運算子，以判斷兩個要比較的物件是否為相同實例的參考。
 
 ## <a name="example"></a>範例
 
@@ -72,6 +72,6 @@ Next
 <C1>1</C1>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Performance (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [效能（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

@@ -32,7 +32,7 @@ ms.locfileid: "74428448"
 
 與參考型別不同，您無法從實值型別衍生新的類型。 不過，就像參考型別，結構可以實作介面。
 
-實值型別預設不可為 `null`。 However, variables of the corresponding [nullable value types](../builtin-types/nullable-value-types.md) can be `null`.
+實值型別預設不可為 `null`。 不過，可以 `null`對應的[可為 null 實數值型別](../builtin-types/nullable-value-types.md)的變數。
 
 每種實值型別都具有初始化該型別預設值的隱含無參數建構函式。 如需有關實值型別預設值的資訊，請參閱[預設值表](default-values-table.md)。
 
@@ -54,7 +54,7 @@ ms.locfileid: "74428448"
 
 - 常數運算式如果運算元全都是簡單型別常數，就會在編譯階段進行評估。
 
-如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的[簡單型別](~/_csharplang/spec/types.md#simple-types)一節。
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/types.md#simple-types)的[簡單型別](/dotnet/csharp/language-reference/language-specification/introduction)一節。
 
 ## <a name="initializing-value-types"></a>將實值型別初始化
 
@@ -102,7 +102,7 @@ var p = new Point(); // Invoke parameterless constructor for the struct.
 
 如需有關將數字型別輸出格式化的資訊，請參閱[格式化數值結果表](formatting-numeric-results-table.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 關鍵字](index.md)

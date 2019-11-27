@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434298"
 ---
 # <a name="imetadataemitgettokenfromtypespec-method"></a>IMetaDataEmit::GetTokenFromTypeSpec 方法
-Gets a metadata token for the type with the specified metadata signature.  
+取得具有指定之中繼資料簽章之類型的元資料標記。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,24 +37,24 @@ HRESULT GetTokenFromTypeSpec (
   
 ## <a name="parameters"></a>參數  
  `pvSig`  
- [in] The signature being defined.  
+ 在要定義的簽章。  
   
  `cbSig`  
- [in] The count of bytes in `pvSig`.  
+ 在`pvSig`中的位元組計數。  
   
  `ptypespec`  
- [out] The `mdTypeSpec` token assigned.  
+ 脫銷指派的 `mdTypeSpec` token。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431235"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>ISymUnmanagedReader::GetSymbolStoreFileName 方法
-Provides the on-disk file name of the symbol store.  
+提供符號存放區的磁片檔案名。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,20 +37,20 @@ HRESULT GetSymbolStoreFileName (
   
 ## <a name="parameters"></a>參數  
  `cchName`  
- [in] The size of the `szName` buffer.  
+ 在`szName` 緩衝區的大小。  
   
  `pcchName`  
- [out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.  
+ 脫銷此變數的指標，會接收 `szName`中傳回之名稱的長度，包括 null 終止。  
   
  `szName`  
- [out] A pointer to the variable that receives the file name of the symbol store.  
+ 脫銷接收符號存放區檔案名之變數的指標。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

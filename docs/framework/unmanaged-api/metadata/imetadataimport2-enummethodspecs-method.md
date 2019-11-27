@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428292"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>IMetaDataImport2::EnumMethodSpecs 方法
-Gets an enumerator for an array of MethodSpec tokens associated with the specified MethodDef or MemberRef token.  
+取得與指定的 MethodDef 或 MemberRef token 相關聯的 MethodSpec 標記陣列的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,37 +39,37 @@ HRESULT EnumMethodSpecs (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the enumerator for `rMethodSpecs`.  
+ [in、out]`rMethodSpecs`之列舉值的指標。  
   
  `tk`  
- [in] The MemberRef or MethodDef token that represents the method whose MethodSpec tokens are to be enumerated. If the value of `tk` is 0 (zero), all MethodSpec tokens in the scope will be enumerated.  
+ 在MemberRef 或 MethodDef token，代表要列舉其 MethodSpec 標記的方法。 如果 `tk` 的值為0（零），則會列舉範圍中的所有 MethodSpec token。  
   
  `rMethodSpecs`  
- [out] The array of MethodSpec tokens to enumerate.  
+ 脫銷要列舉之 MethodSpec 標記的陣列。  
   
  `cMax`  
- [in] The requested maximum number of tokens to place in `rMethodSpecs`.  
+ 在要在 `rMethodSpecs`中放置的最大權杖數目。  
   
  `pcMethodSpecs`  
- [out] The returned number of tokens placed in `rMethodSpecs`.  
+ 脫銷放在 `rMethodSpecs`中的傳回權杖數目。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSpecs` returned successfully.|  
-|`S_FALSE`|`phEnum` has no member elements. In this case, `pcMethodSpecs` is set to 0 (zero).|  
+|`S_OK`|已成功傳回 `EnumMethodSpecs`。|  
+|`S_FALSE`|`phEnum` 沒有成員元素。 在此情況下，`pcMethodSpecs` 會設定為0（零）。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

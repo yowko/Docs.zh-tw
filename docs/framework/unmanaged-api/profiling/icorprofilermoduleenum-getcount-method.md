@@ -33,7 +33,7 @@ HRESULT GetCount([out] ULONG * pcelt);
   
 ## <a name="parameters"></a>參數  
  `celt`  
- [out] The number of runtime modules in the collection.  
+ 脫銷集合中執行時間模組的數目。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -44,7 +44,7 @@ HRESULT GetCount([out] ULONG * pcelt);
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerModuleEnum 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
 - [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

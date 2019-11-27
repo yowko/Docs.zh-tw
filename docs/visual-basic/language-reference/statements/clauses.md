@@ -12,9 +12,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354145"
 ---
 # <a name="clauses-visual-basic"></a>子句 (Visual Basic)
-The topics in this section document Visual Basic run-time clauses.  
+本節中的主題說明 Visual Basic 執行時間子句。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
   
  [As](../../../visual-basic/language-reference/statements/as-clause.md)  

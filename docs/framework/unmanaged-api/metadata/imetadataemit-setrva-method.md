@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426817"
 ---
 # <a name="imetadataemitsetrva-method"></a>IMetaDataEmit::SetRVA 方法
-Sets the relative virtual address of the specified method.  
+設定指定方法的相對虛擬位址。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,21 +36,21 @@ HRESULT SetRVA (
   
 ## <a name="parameters"></a>參數  
  `md`  
- [in] The token for the target method or method implementation.  
+ 在目標方法或方法執行的 token。  
   
  `ulRVA`  
- [in] The address of the code or data area.  
+ 在程式碼或資料區域的位址。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -38,27 +38,27 @@ HRESULT GetModuleRefProps (
   
 ## <a name="parameters"></a>參數  
  `mur`  
- [in] The ModuleRef metadata token that references the module to get metadata information for.  
+ 在參考模組以取得中繼資料資訊的 ModuleRef 中繼資料 token。  
   
  `szName`  
- [out] A buffer to hold the module name.  
+ 脫銷用來存放模組名稱的緩衝區。  
   
  `cchName`  
- [in] The requested size of `szName` in wide characters.  
+ 在所要求的 `szName` 大小，以寬字元為單位。  
   
  `pchName`  
- [out] The returned size of `szName` in wide characters.  
+ 脫銷以寬字元傳回的 `szName` 大小。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

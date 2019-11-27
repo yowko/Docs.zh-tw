@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440759"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo 函式
-Notifies the profiler that control is being passed to a function, and provides a handle that can be passed to the [ICorProfilerInfo3::GetFunctionEnter3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to retrieve the stack frame and function arguments.  
+通知分析工具控制項正傳遞至函式，並提供可傳遞至[ICorProfilerInfo3：： GetFunctionEnter3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)的控制碼，以抓取堆疊框架和函式引數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,36 +34,36 @@ void __stdcall FunctionEnter3WithInfo(
   
 ## <a name="parameters"></a>參數  
  `functionIDOrClientID`  
- [in] The identifier of the function to which control is passed.  
+ 在傳遞控制項的函式識別碼。  
   
  `eltInfo`  
- [in] 代表特定堆疊框架之資訊的不透明控制代碼。 This handle is valid only during the callback to which it is passed.  
+ [in] 代表特定堆疊框架之資訊的不透明控制代碼。 這個控制碼只有在傳遞它的回呼期間才有效。  
   
 ## <a name="remarks"></a>備註  
- The `FunctionEnter3WithInfo` callback method notifies the profiler as functions are called, and enables the profiler to use the [ICorProfilerInfo3::GetFunctionEnter3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to inspect argument values. To access argument information, the `COR_PRF_ENABLE_FUNCTION_ARGS` flag has to be set. The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags, and then use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) to register your implementation of this function.  
+ `FunctionEnter3WithInfo` 回呼方法會在呼叫函式時通知分析工具，並讓分析工具使用[ICorProfilerInfo3：： GetFunctionEnter3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)來檢查引數值。 若要存取引數資訊，必須設定 `COR_PRF_ENABLE_FUNCTION_ARGS` 旗標。 分析工具可以使用[ICorProfilerInfo：： SetEventMask 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)來設定事件旗標，然後使用[ICorProfilerInfo3：： SetEnterLeaveFunctionHooks3WithInfo 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)來註冊此函式的實作為。  
   
- The `FunctionEnter3WithInfo` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
+ `FunctionEnter3WithInfo` 函數是回呼;您必須加以執行。 此執行必須使用 `__declspec(naked)` 儲存類別屬性。  
   
- The execution engine does not save any registers before calling this function.  
+ 在呼叫此函式之前，執行引擎不會儲存任何暫存器。  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- 輸入時，您必須儲存您所使用的所有暫存器，包括浮點單位（FPU）中的暫存器。  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- 結束時，您必須透過關閉其呼叫者推送的所有參數來還原堆疊。  
   
- The implementation of `FunctionEnter3WithInfo` should not block, because it will delay garbage collection. The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionEnter3WithInfo` returns.  
+ `FunctionEnter3WithInfo` 的執行不應該封鎖，因為它會延遲垃圾收集。 執行不應嘗試垃圾收集，因為堆疊可能不會處於垃圾收集的唯讀狀態。 如果嘗試垃圾收集，執行時間將會封鎖，直到 `FunctionEnter3WithInfo` 傳回為止。  
   
- The `FunctionEnter3WithInfo` function must not call into managed code or cause a managed memory allocation in any way.  
+ `FunctionEnter3WithInfo` 函式不得呼叫 managed 程式碼，或以任何方式造成 managed 記憶體配置。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorProf.idl  
+ **標頭：** Corprof.idl .idl  
   
  **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)
 - [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)

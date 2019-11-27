@@ -41,7 +41,7 @@ ms.locfileid: "74428908"
 
 如果您想要以多個 Framework 為目標，則可以將 `<TargetFrameworks>` 設定設為以分號隔開的多個 TFM 值。 您可以使用 `dotnet publish -f <TFM>` 命令來發佈其中一個 Framework。 例如，如果您的專案具有 `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` 並執行 `dotnet publish -f netcoreapp2.1`，就會建立以 .NET Core 2.1 為目標的二進位檔。
 
-除非另行設定，否則 [`dotnet publish`](../tools/dotnet-publish.md) 命令的輸出目錄為 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`。 除非使用 `-c` 參數加以變更，否則預設的**組建組態**模式為 [偵錯]。 例如，`dotnet publish -c Release -f netcoreapp2.1` 會發佈至 `myfolder/bin/Release/netcoreapp2.1/publish/`。
+除非另行設定，否則 [`dotnet publish`](../tools/dotnet-publish.md) 命令的輸出目錄為 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`。 除非使用  **參數加以變更，否則預設的**組建組態**模式為 [偵錯]** `-c`。 例如，`dotnet publish -c Release -f netcoreapp2.1` 會發佈至 `myfolder/bin/Release/netcoreapp2.1/publish/`。
 
 如果您使用 .NET Core SDK 3.0，則以 .NET Core 2.1 版、2.2 版或 3.0 版為目標的應用程式其預設發佈模式為 Framework 相依可執行檔。
 
@@ -59,7 +59,7 @@ ms.locfileid: "74428908"
 
 ## <a name="sample-app"></a>範例應用程式
 
-You can use the following app to explore the publishing commands. 在終端機中執行下列命令即可建立此應用程式：
+您可以使用下列應用程式來流覽發佈命令。 在終端機中執行下列命令即可建立此應用程式：
 
 ```dotnetcli
 mkdir apptest1
@@ -108,7 +108,7 @@ End Module
 
 若為 .NET Core SDK 2.x CLI，Framework 相依部署 (FDD) 是基本 `dotnet publish` 命令的預設模式。
 
-當您將應用程式發佈為 FDD 時，就會在 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` 資料夾中建立 `<PROJECT-NAME>.dll` 檔案。 若要執行您的應用程式，請巡覽至輸出資料夾，並使用 `dotnet <PROJECT-NAME>.dll` 命令。
+當您將應用程式發佈為 FDD 時，就會在 `<PROJECT-NAME>.dll` 資料夾中建立 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` 檔案。 若要執行您的應用程式，請巡覽至輸出資料夾，並使用 `dotnet <PROJECT-NAME>.dll` 命令。
 
 您的應用程式會設定為以 .NET Core 特定版本為目標。 該目標 .NET Core 執行階段必須位於您想要用來執行應用程式的電腦上。 例如，如果您的應用程式以 .NET Core 2.2 為目標，則應用程式執行所在的任何電腦都必須已安裝 .NET Core 2.2 執行階段。 依照[發佈基本概念](#publishing-basics)一節中所述，您可以編輯專案檔來變更預設的目標 Framework，或以多個 Framework 為目標。
 
@@ -116,7 +116,7 @@ End Module
 
 ## <a name="framework-dependent-executable"></a>Framework 相依可執行檔
 
-For the .NET Core SDK 3.x CLI, framework-dependent executable (FDE) is the default mode for the basic `dotnet publish` command. 只要您想要以目前的作業系統為目標，就不需要指定任何其他參數。
+針對 .NET Core SDK 3.x CLI，與 framework 相依的可執行檔（FDE）是基本 `dotnet publish` 命令的預設模式。 只要您想要以目前的作業系統為目標，就不需要指定任何其他參數。
 
 在此模式中，將會建立平台特定可執行檔主機來裝載您的跨平台應用程式。 此模式類似於 FDD，因為 FDD 需要 `dotnet` 命令形式的主機。 主機可執行檔的檔名因平台而異，且其名稱類似於 `<PROJECT-FILE>.exe`。 您可以直接執行這個可執行檔，而不是呼叫 `dotnet <PROJECT-FILE>.dll` (這仍然是可接受的應用程式執行方式)。
 
@@ -135,11 +135,11 @@ For the .NET Core SDK 3.x CLI, framework-dependent executable (FDE) is the defau
 如果您使用[範例應用程式](#sample-app)，請執行 `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`。 此命令會建立下列可執行檔： `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
-> 您可以啟用**全域無差異模式**來減少您部署的大小總計。 此模式適用於非全域應用程式，其能使用格式化慣例、大小寫慣例及字串比較，還有[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture)的排序次序。 For more information about **globalization invariant mode** and how to enable it, see [.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+> 您可以啟用**全域無差異模式**來減少您部署的大小總計。 此模式適用於非全域應用程式，其能使用格式化慣例、大小寫慣例及字串比較，還有[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture)的排序次序。 如需**全球化不變模式**和如何啟用的詳細資訊，請參閱[.Net Core 全球化不變模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)。
 
 ## <a name="self-contained-deployment"></a>自封式部署
 
-當您發佈獨立式部署 (SCD) 時，.NET Core SDK 會建立平台特定的可執行檔。 Publishing an SCD includes all required .NET Core files to run your app but it doesn't include the [native dependencies of .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). 在執行應用程式之前，系統上必須具有這些相依性。
+當您發佈獨立式部署 (SCD) 時，.NET Core SDK 會建立平台特定的可執行檔。 發佈 SCD 包含執行應用程式所需的所有 .NET Core 檔案，但不包含[.Net Core 的原生](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)相依性。 在執行應用程式之前，系統上必須具有這些相依性。
 
 發佈 SCD 會建立一個應用程式，該應用程式不會向前復原到最新可用的 .NET Core 安全性修補程式。 如需編譯時期版本繫結的詳細資訊，請參閱[選取要使用的 .NET Core 版本](../versions/selection.md#self-contained-deployments-include-the-selected-runtime)。
 
@@ -150,9 +150,9 @@ For the .NET Core SDK 3.x CLI, framework-dependent executable (FDE) is the defau
 - `--self-contained true` 此參數會指示 .NET Core SDK 將可執行檔建立為 SCD。
 
 > [!NOTE]
-> 您可以啟用**全域無差異模式**來減少您部署的大小總計。 此模式適用於非全域應用程式，其能使用格式化慣例、大小寫慣例及字串比較，還有[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture)的排序次序。 For more information about **globalization invariant mode** and how to enable it, see [.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+> 您可以啟用**全域無差異模式**來減少您部署的大小總計。 此模式適用於非全域應用程式，其能使用格式化慣例、大小寫慣例及字串比較，還有[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture)的排序次序。 如需**全球化不變模式**和如何啟用的詳細資訊，請參閱[.Net Core 全球化不變模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Core 應用程式部署概觀](index.md)
 - [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)

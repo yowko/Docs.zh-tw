@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431827"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef 方法
-Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.  
+定義對目前範圍外之模組成員的參考，並取得該參考定義的 token。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,30 +39,30 @@ HRESULT DefineMemberRef (
   
 ## <a name="parameters"></a>參數  
  `tkImport`  
- [in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.  
+ 在如果成員不是全域，則為目標成員的類別或介面的 Token;如果成員為全域，則為該其他檔案的 `mdModuleRef` token。  
   
  `szName`  
- [in] The name of the target member.  
+ 在目標成員的名稱。  
   
  `pvSigBlob`  
- [in] The signature of the target member.  
+ 在目標成員的簽章。  
   
  `cbSigBlob`  
- [in] The count of bytes in `pvSigBlob`.  
+ 在`pvSigBlob`中的位元組計數。  
   
  `pmr`  
- [out] The `mdMemberRef` token assigned.  
+ 脫銷指派的 `mdMemberRef` token。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

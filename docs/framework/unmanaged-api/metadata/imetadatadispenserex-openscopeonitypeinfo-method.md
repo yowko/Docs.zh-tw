@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431138"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo 方法
-這個方法尚未實作。 If called, it returns E_NOTIMPL.  
+這個方法尚未實作。 如果呼叫，它會傳回 E_NOTIMPL。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,27 +38,27 @@ HRESULT OpenScopeOnITypeInfo (
   
 ## <a name="parameters"></a>參數  
  `pITI`  
- [in] Pointer to an [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface that provides the type information on which to open the scope.  
+ 在[ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)介面的指標，提供要在其上開啟範圍的類型資訊。  
   
  `dwOpenFlags`  
- [in] The open mode flags.  
+ 在開啟模式旗標。  
   
  `riid`  
- [in] The desired interface.  
+ 在所需的介面。  
   
  `ppIUnk`  
- [out] Pointer to a pointer to the returned interface.  
+ 脫銷傳回之介面指標的指標。  
   
 ## <a name="requirements"></a>需求  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **平臺：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataDispenserEx 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
 - [IMetaDataDispenser 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

@@ -24,7 +24,7 @@ ms.locfileid: "74428172"
   
  如需提供者的詳細資訊，請參閱 [CLR ETW 提供者](clr-etw-providers.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [執行階段資訊事件](runtime-information-etw-events.md)  
  擷取執行階段的相關資訊，包含 SKU、版本號碼、執行階段啟用方式、用來啟動它的命令列參數、GUID (適用時)，以及其他相關資訊。  
   
@@ -61,10 +61,10 @@ ms.locfileid: "74428172"
  [堆疊事件](stack-etw-event.md)  
  擷取與其他事件搭配使用以在引發事件之後產生堆疊追蹤的資訊。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Improve Debugging And Performance Tuning With ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
-- [Windows Performance Blog](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
+- [使用 ETW 改善調試和效能微調](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
+- [Windows 效能 Blog](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
 - [控制 .NET Framework 記錄](controlling-logging.md)
 - [CLR ETW 提供者](clr-etw-providers.md)
 - [CLR ETW 關鍵字和層級](clr-etw-keywords-and-levels.md)

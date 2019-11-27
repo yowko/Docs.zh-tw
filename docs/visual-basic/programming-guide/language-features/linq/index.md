@@ -14,7 +14,7 @@ ms.locfileid: "74354173"
 # <a name="linq-in-visual-basic"></a>Visual Basic 中的 LINQ
 本節包含概觀、範例與背景資訊，可協助您了解與使用 Visual Basic 和 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  提供 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者、運算子、查詢結構及語言功能的簡介。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74354173"
  [如何：將 LINQ 查詢結果當做特定類型傳回](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
  提供以特定型別而非匿名型別傳回 LINQ 查詢結果的範例。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Visual Basic 中的 LINQ to XML 概觀](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)

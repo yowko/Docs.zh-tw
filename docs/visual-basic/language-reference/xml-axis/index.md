@@ -15,18 +15,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352684"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>XML 軸屬性 (Visual Basic)
-The topics in this section document the syntax of XML axis properties in Visual Basic. The XML axis properties make it easy to access XML directly in your code.  
+本節中的主題記載 Visual Basic 中 XML 軸屬性的語法。 XML 軸屬性可讓您輕鬆地直接在程式碼中存取 XML。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 |主題|描述|  
 |-----------|-----------------|  
-|[XML 屬性 (Attribute) 軸屬性 (Property)](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|Describes how to access the attributes of an <xref:System.Xml.Linq.XElement> object.|  
-|[XML 子代軸屬性](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|Describes how to access the children of an <xref:System.Xml.Linq.XElement> object.|  
-|[XML 子系軸屬性](../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|Describes how to access the descendants of an <xref:System.Xml.Linq.XElement> object.|  
-|[擴充索引子屬性](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|Describes how to access individual elements in a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects.|  
-|[XML Value 屬性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|Describes how to access the value of the first element of a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects.|  
+|[XML 屬性 (Attribute) 軸屬性 (Property)](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|描述如何存取 <xref:System.Xml.Linq.XElement> 物件的屬性。|  
+|[XML 子代軸屬性](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|描述如何存取 <xref:System.Xml.Linq.XElement> 物件的子系。|  
+|[XML 子系軸屬性](../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|描述如何存取 <xref:System.Xml.Linq.XElement> 物件的子系。|  
+|[擴充索引子屬性](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|描述如何存取 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 物件集合中的個別元素。|  
+|[XML Value 屬性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|描述如何存取 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 物件之集合中第一個元素的值。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

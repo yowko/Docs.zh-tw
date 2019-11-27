@@ -22,8 +22,8 @@ ms.locfileid: "74344088"
   
  **類別︰** <xref:Microsoft.VisualBasic.Devices.Clock>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **元件：** Visual Basic 執行時間程式庫（在 Microsoft 中）  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [My.Computer 物件](../../../visual-basic/language-reference/objects/my-computer-object.md)

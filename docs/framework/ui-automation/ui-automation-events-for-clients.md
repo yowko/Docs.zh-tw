@@ -14,18 +14,18 @@ ms.locfileid: "74441514"
 ---
 # <a name="ui-automation-events-for-clients"></a>用戶端的 UI 自動化事件
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主題描述使用者介面自動化用戶端如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 事件。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 允許用戶端訂閱感興趣的事件。 這項功能會提高效能，因為不必持續輪詢系統中的所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 項目，以查看是否有任何資訊、結構或狀態變更。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 可讓用戶端訂閱感的事件。 這項功能會提高效能，因為不必持續輪詢系統中的所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 項目，以查看是否有任何資訊、結構或狀態變更。  
   
  同時也因為能夠只接聽定義範圍內的事件，而改善效率。 例如，用戶端可以接聽樹狀結構中所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目的焦點變更事件，或是只接聽一個項目和其下階的焦點變更事件。  
   
 > [!NOTE]
 > 請勿假設所有可能的事件都由 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 提供者引發。 例如，並非所有的屬性變更都會導致 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控制項的標準 Proxy 提供者引發事件。  
   
- For a broader view of [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events, see [UI Automation Events Overview](ui-automation-events-overview.md).  
+ 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件的更廣泛觀點，請參閱[UI 自動化事件總覽](ui-automation-events-overview.md)。  
   
 <a name="Subscribing_to_Events"></a>   
 ## <a name="subscribing-to-events"></a>訂閱事件  
@@ -55,11 +55,11 @@ ms.locfileid: "74441514"
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|移除註冊使用 <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> 註冊的事件處理常式。|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|移除註冊所有已註冊的事件處理常式。|  
   
- For example code, see [Subscribe to UI Automation Events](subscribe-to-ui-automation-events.md).  
+ 如需範例程式碼，請參閱[訂閱使用者介面自動化事件](subscribe-to-ui-automation-events.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [訂閱 UI 自動化事件](subscribe-to-ui-automation-events.md)
 - [UI 自動化事件概觀](ui-automation-events-overview.md)
 - [UI 自動化屬性概觀](ui-automation-properties-overview.md)
-- [TrackFocus Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)
+- [TrackFocus 範例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

@@ -58,35 +58,35 @@ typedef enum CorDeclSecurity {
   
 |成員|描述|  
 |------------|-----------------|  
-|`dclActionMask`|保留的。|  
-|`dclActionNil`|保留的。|  
-|`dclRequest`|保留的。|  
+|`dclActionMask`|保留。|  
+|`dclActionNil`|保留。|  
+|`dclRequest`|保留。|  
 |`dclDemand`|呼叫堆疊中較高層的所有呼叫端，必須已獲得目前權限物件所指定的權限。|  
-|`dclAssert`|The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource|  
-|`dclDeny`|The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.|  
+|`dclAssert`|呼叫程式碼可以存取目前權限物件所識別的資源，即使堆疊中較高層的呼叫端未獲得存取資源的許可權也一樣。|  
+|`dclDeny`|存取目前權限物件所指定之資源的能力，會被拒絕呼叫端，即使已授與存取權。|  
 |`dclPermitOnly`|只可存取這個權限物件所指定的資源，即使程式碼已獲得其他資源存取權限亦然。|  
-|`dclLinktimeCheck`|The immediate caller is required to have been granted the specified permission for a given period of time.|  
-|`dclInheritanceCheck`|The derived class inheriting another class or overriding a method is required to have been granted the specified permission.|  
-|`dclRequestMinimum`|The caller can request for the minimum permissions required for code to run. 這個動作只能在組件的範圍內使用。|  
-|`dclRequestOptional`|The caller can request for additional permissions that are optional (not required to run). 這項要求會隱含拒絕未特別要求的所有其他權限。 這個動作只能在組件的範圍內使用。|  
-|`dclRequestRefuse`|The caller's request for permissions that might be misused will not be granted. 這個動作只能在組件的範圍內使用。|  
-|`dclPrejitGrant`|保留的。|  
-|`dclPrejitDenied`|保留的。|  
-|`dclNonCasDemand`|保留的。|  
+|`dclLinktimeCheck`|立即呼叫端必須在指定的時間內被授與指定的許可權。|  
+|`dclInheritanceCheck`|繼承另一個類別或覆寫方法的衍生類別，必須已授與指定的許可權。|  
+|`dclRequestMinimum`|呼叫端可以要求執行程式碼所需的最小許可權。 這個動作只能在組件的範圍內使用。|  
+|`dclRequestOptional`|呼叫端可以要求選擇性的其他許可權（不需要執行）。 這項要求會隱含拒絕未特別要求的所有其他權限。 這個動作只能在組件的範圍內使用。|  
+|`dclRequestRefuse`|系統將不會授與呼叫者對可能誤用之許可權的要求。 這個動作只能在組件的範圍內使用。|  
+|`dclPrejitGrant`|保留。|  
+|`dclPrejitDenied`|保留。|  
+|`dclNonCasDemand`|保留。|  
 |`dclNonCasLinkDemand`|直接呼叫端必須已獲得指定權限。|  
-|`dclNonCasInheritance`|保留的。|  
-|`dclLinkDemandChoice`|保留的。|  
-|`dclInheritanceDemandChoice`|保留的。|  
-|`dclDemandChoice`|保留的。|  
-|`dclMaximumValue`|保留的。|  
+|`dclNonCasInheritance`|保留。|  
+|`dclLinkDemandChoice`|保留。|  
+|`dclInheritanceDemandChoice`|保留。|  
+|`dclDemandChoice`|保留。|  
+|`dclMaximumValue`|保留。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434330"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize 方法
-Gets the estimated binary size of the assembly and its metadata in the current scope.  
+取得元件及其中繼資料在目前範圍中的估計二進位大小。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,34 +36,34 @@ HRESULT GetSaveSize (
   
 ## <a name="parameters"></a>參數  
  `fSave`  
- [in] A value of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) enumeration that specifies whether to get an accurate or approximate size. Only three values are valid: cssAccurate, cssQuick, and cssDiscardTransientCAs:  
+ 在[CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md)列舉的值，指定是否要取得精確或近似的大小。 只有三個有效的值： cssAccurate、cssQuick 和 cssDiscardTransientCAs：  
   
-- cssAccurate returns the exact save size but takes longer to calculate.  
+- cssAccurate 會傳回完全相同的儲存大小，但需要較長的時間來計算。  
   
-- cssQuick returns a size, padded for safety, but takes less time to calculate.  
+- cssQuick 會傳回大小，以填補安全性，但花費較少的時間來計算。  
   
-- cssDiscardTransientCAs tells `GetSaveSize` that it can throw away discardable custom attributes.  
+- cssDiscardTransientCAs 會告訴 `GetSaveSize` 它可以捨棄可捨棄的自訂屬性。  
   
  `pdwSaveSize`  
- [out] A pointer to the size that is required to save the file.  
+ 脫銷儲存檔案所需大小的指標。  
   
 ## <a name="remarks"></a>備註  
- `GetSaveSize` calculates the space required, in bytes, to save the assembly and all its metadata in the current scope. (A call to the [IMetaDataEmit::SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) method would emit this number of bytes.)  
+ `GetSaveSize` 會計算所需的空間（以位元組為單位），以將元件及其所有中繼資料儲存在目前的範圍中。 （呼叫[IMetaDataEmit：： SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md)方法會發出此位元組數目）。  
   
- If the caller implements the [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interface (through [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) or [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` will perform two passes over the metadata to optimize and compress it. Otherwise, no optimizations are performed.  
+ 如果呼叫者執行[IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)介面（透過[IMetaDataEmit：： SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)或[IMetaDataEmit：： Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)），`GetSaveSize` 將會對中繼資料執行兩次行程，以將其優化並加以壓縮。 否則，不會執行任何優化。  
   
- If optimization is performed, the first pass simply sorts the metadata structures to tune the performance of import-time searches. This step typically results in moving records around, with the side effect that tokens retained by the tool for future reference are invalidated. The metadata does not inform the caller of these token changes until after the second pass, however. In the second pass, various optimizations are performed that are intended to reduce the overall size of the metadata, such as optimizing away (early binding) `mdTypeRef` and `mdMemberRef` tokens when the reference is to a type or member that is declared in the current metadata scope. In this pass, another round of token mapping occurs. After this pass, the metadata engine notifies the caller, through its `IMapToken` interface, of any changed token values.  
+ 如果執行優化，第一次傳遞只會將元資料結構排序，以微調匯入時間搜尋的效能。 此步驟通常會導致移動記錄，而副作用是由工具所保留以供日後參考的權杖會失效。 不過，中繼資料不會通知呼叫者這些權杖變更，直到第二次傳遞為止。 在第二個階段中，會執行各種優化，以減少中繼資料的整體大小，例如在參考到目前中繼資料範圍內所宣告的類型或成員時，優化離開（早期繫結） `mdTypeRef` 和 `mdMemberRef` token。 在此階段中，會發生另一個標記對應的迴圈。 經過此傳遞之後，中繼資料引擎會透過其 `IMapToken` 介面，通知呼叫者任何已變更的 token 值。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

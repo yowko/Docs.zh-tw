@@ -15,46 +15,46 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346193"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML 常值概觀 (Visual Basic)
-An *XML literal* allows you to incorporate XML directly into your Visual Basic code. The XML literal syntax represents [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects, and it is the similar to the XML 1.0 syntax. This makes it easier to create XML elements and documents programmatically because your code has the same structure as the final XML.  
+*Xml 常*值可讓您將 xml 直接併入 Visual Basic 的程式碼中。 XML 常值語法代表 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 物件，而且類似于 XML 1.0 語法。 這可讓您更輕鬆地以程式設計方式建立 XML 元素和檔，因為您的程式碼與最終 XML 的結構相同。  
   
- Visual Basic compiles XML literals into [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] provides a simple object model for creating and manipulating XML, and this model integrates well with [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. 如需詳細資訊，請參閱<xref:System.Xml.Linq.XElement>。  
+ Visual Basic 會將 XML 常值編譯成 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 物件。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供一個簡單的物件模型來建立和管理 XML，而這個模型與 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]緊密整合。 如需詳細資訊，請參閱 <xref:System.Xml.Linq.XElement>。  
   
- You can embed a Visual Basic expression in an XML literal. At run time, your application creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object for each literal, incorporating the values of the embedded expressions. This lets you specify dynamic content inside an XML literal. For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ 您可以將 Visual Basic 運算式內嵌在 XML 常值中。 在執行時間，您的應用程式會為每個常值建立 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 物件，並併入內嵌運算式的值。 這可讓您指定 XML 常值內的動態內容。 如需詳細資訊，請參閱[XML 中的內嵌運算式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。  
   
- For more information about the differences between the XML literal syntax and the XML 1.0 syntax, see [XML Literals and the XML 1.0 Specification](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
+ 如需 XML 常值語法與 XML 1.0 語法之間差異的詳細資訊，請參閱[Xml 常值和 xml 1.0 規格](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)。  
   
-## <a name="simple-literals"></a>Simple Literals  
- You can create a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object in your Visual Basic code by typing or pasting in valid XML. An XML element literal returns an <xref:System.Xml.Linq.XElement> object. For more information, see [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) and [XML Literals and the XML 1.0 Specification](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md). The following example creates an XML element that has several child elements.  
+## <a name="simple-literals"></a>簡單常值  
+ 您可以藉由輸入或貼上有效的 XML，在您的 Visual Basic 程式碼中建立 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 物件。 XML 元素常值會傳回 <xref:System.Xml.Linq.XElement> 物件。 如需詳細資訊，請參閱[Xml 元素常](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)值和[xml 常值和 xml 1.0 規格](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)。 下列範例會建立具有數個子項目的 XML 專案。  
   
  [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
- You can create an XML document by starting an XML literal with `<?xml version="1.0"?>`, as shown in the following example. An XML document literal returns an <xref:System.Xml.Linq.XDocument> object. For more information, see [XML Document Literal](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
+ 您可以使用 `<?xml version="1.0"?>`啟動 XML 常值，以建立 XML 檔，如下列範例所示。 XML 檔常值會傳回 <xref:System.Xml.Linq.XDocument> 物件。 如需詳細資訊，請參閱[XML 檔常](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)值。  
   
  [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
 > [!NOTE]
-> The XML literal syntax in Visual Basic is not identical to the syntax in the XML 1.0 specification. For more information, see [XML Literals and the XML 1.0 Specification](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
+> Visual Basic 中的 XML 常值語法與 XML 1.0 規格中的語法不相同。 如需詳細資訊，請參閱[Xml 常值和 xml 1.0 規格](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)。  
   
-## <a name="line-continuation"></a>Line Continuation  
- An XML literal can span multiple lines without using line continuation characters (the space-underscore-enter sequence). This makes it easier to compare XML literals in code with XML documents.  
+## <a name="line-continuation"></a>行接續  
+ XML 常值可以跨越多行，而不需要使用行接續字元（空格-底線-enter 順序）。 這可讓您更輕鬆地比較程式碼中的 XML 常值與 XML 檔。  
   
- The compiler treats line continuation characters as part of an XML literal. Therefore, you should use the space-underscore-enter sequence only when it belongs in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object.  
+ 編譯器會將行接續字元視為 XML 常值的一部分。 因此，只有當它屬於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 物件時，您才應該使用空格鍵-底線-enter 序列。  
   
- However, you do need line continuation characters if you have a multiline expression in an embedded expression. For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ 不過，如果內嵌運算式中有多行運算式，您就需要行接續字元。 如需詳細資訊，請參閱[XML 中的內嵌運算式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。  
   
-## <a name="embedding-queries-in-xml-literals"></a>Embedding Queries in XML Literals  
- You can use a query in an embedded expression. When you do this, the elements returned by the query are added to the XML element. This lets you add dynamic content, such as the result of a user's query, to an XML literal.  
+## <a name="embedding-queries-in-xml-literals"></a>在 XML 常值中嵌入查詢  
+ 您可以使用內嵌運算式中的查詢。 當您執行這項操作時，查詢所傳回的元素會加入至 XML 元素。 這可讓您將動態內容（例如使用者查詢的結果）新增至 XML 常值。  
   
- For example, the following code uses an embedded query to create XML elements from the members of the `phoneNumbers2` array and then add those elements as children of `contact2`.  
+ 例如，下列程式碼會使用內嵌查詢，從 `phoneNumbers2` 陣列的成員建立 XML 元素，然後將這些元素加入 `contact2`的子系。  
   
  [!code-vb[VbXMLSamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#7)]  
   
-## <a name="how-the-compiler-creates-objects-from-xml-literals"></a>How the Compiler Creates Objects from XML Literals  
- The Visual Basic compiler translates XML literals into calls to the equivalent [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] constructors to build up the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object. For example, the Visual Basic compiler will translate the following code example into a call to the <xref:System.Xml.Linq.XProcessingInstruction> constructor for the XML version instruction, calls to the <xref:System.Xml.Linq.XElement> constructor for the `<contact>`, `<name>`, and `<phone>` elements, and calls to the <xref:System.Xml.Linq.XAttribute> constructor for the `type` attribute. Specifically, given the attributes in the following sample, the Visual Basic compiler will call the <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29> constructor twice. The first will pass the value `type` for the `name` parameter and the value `home` for the `value` parameter. The second will also pass the value `type` for the `name` parameter, but the value `work` for the `value` parameter.  
+## <a name="how-the-compiler-creates-objects-from-xml-literals"></a>編譯器如何從 XML 常值建立物件  
+ Visual Basic 編譯器會將 XML 常值轉譯為對等的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 處理函式的呼叫，以建立 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 物件。 例如，Visual Basic 編譯器會將下列程式碼範例轉譯為 XML 版本指令的 <xref:System.Xml.Linq.XProcessingInstruction> 函式呼叫、針對 `<contact>`、`<name>`和 `<phone>` 元素呼叫 <xref:System.Xml.Linq.XElement> 的函式，以及呼叫 <xref:System.Xml.Linq.XAttribute> 屬性的 `type` 函式。 具體而言，假設下列範例中的屬性，Visual Basic 編譯器會呼叫 <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29> 的兩次函式。 第一個會傳遞 `name` 參數的值 `type`，以及 `value` 參數的值 `home`。 第二個也會傳遞 `name` 參數的值 `type`，但 `value` 參數的值 `work`。  
   
  [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Linq.XElement>
 - [在 Visual Basic 中建立 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

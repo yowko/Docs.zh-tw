@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440246"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes 方法
-Enumerates custom attribute-definition tokens associated with the specified type or member.  
+列舉與指定的類型或成員相關聯的自訂屬性定義標記。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,40 +40,40 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the returned enumerator.  
+ [in、out]傳回之列舉值的指標。  
   
  `tk`  
- [in] A token for the scope of the enumeration, or zero for all custom attributes.  
+ 在列舉範圍的 token，如果是所有自訂屬性，則為零。  
   
  `tkType`  
- [in] A token for the constructor of the type of the attributes to be enumerated, or `null` for all types.  
+ 在要列舉之屬性類型的函式的 token，或所有類型的 `null`。  
   
  `rCustomAttributes`  
- [out] An array of custom attribute tokens.  
+ 脫銷自訂屬性標記的陣列。  
   
  `cMax`  
  [in] `rCustomAttributes` 陣列的大小上限。  
   
  `pcCustomAttributes`  
- [out, optional] The actual number of token values returned in `rCustomAttributes`.  
+ [out，optional]`rCustomAttributes`中傳回的實際標記值數目。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes` returned successfully.|  
-|`S_FALSE`|There are no custom attributes to enumerate. In that case, `pcCustomAttributes` is zero.|  
+|`S_OK`|已成功傳回 `EnumCustomAttributes`。|  
+|`S_FALSE`|沒有可列舉的自訂屬性。 在此情況下，`pcCustomAttributes` 為零。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Converting between strings and other data types
+title: 在字串和其他資料類型之間轉換
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, strings
@@ -14,26 +14,26 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352483"
 ---
-# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Converting between strings and other data types in Visual Basic
+# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>在 Visual Basic 的字串和其他資料類型之間轉換
 
-This section describes how to convert strings into other data types.
+本節說明如何將字串轉換成其他資料類型。
 
-## <a name="in-this-section"></a>本章節內容
+## <a name="in-this-section"></a>本節內容
 
-[How to: Convert an Array of Bytes into a String in Visual Basic](how-to-convert-an-array-of-bytes-into-a-string.md)  
-How to convert the bytes from a byte array into a string.
+[如何：將位元組陣列轉換成中的字串 Visual Basic](how-to-convert-an-array-of-bytes-into-a-string.md)  
+如何將位元組陣列中的位元組轉換成字串。
 
-[How to: Convert Strings into an Array of Bytes in Visual Basic](how-to-convert-strings-into-an-array-of-bytes.md)  
-How to convert a string into an array of bytes.
+[如何：在 Visual Basic 中將字串轉換為位元組陣列](how-to-convert-strings-into-an-array-of-bytes.md)  
+如何將字串轉換為位元組陣列。
 
 [如何：從字元值陣列建立字串](how-to-create-a-string-from-an-array-of-char-values.md)  
-How to create the string "abcd" from individual characters.
+如何從個別字元建立字串 "abcd"。
 
 [如何：將十六進位字串轉換為數字](how-to-convert-hexadecimal-strings-to-numbers.md)  
-How to convert a hexadecimal string into an integer.
+如何將十六進位字串轉換成整數。
 
-[How to: Convert a String to an Array of Characters in Visual Basic](how-to-convert-a-string-to-an-array-of-characters.md)  
-How to convert a string into an array of characters.
+[如何：在 Visual Basic 中將字串轉換為字元陣列](how-to-convert-a-string-to-an-array-of-characters.md)  
+如何將字串轉換成字元陣列。
 
-[How to: Access Characters in Strings in Visual Basic](how-to-access-characters-in-strings.md)  
-How to access a character in a string by its index.
+[如何：在 Visual Basic 中存取字串中的字元](how-to-access-characters-in-strings.md)  
+如何依索引存取字串中的字元。

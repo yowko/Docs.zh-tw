@@ -215,7 +215,7 @@ ms.locfileid: "74350401"
   
  您現在可以再次建置並執行應用程式。 一開始，文字方塊中會顯示預設值。 請嘗試變更值，並在第四個文字方塊中輸入名稱。 關閉應用程式，然後再重新執行。 請注意，現在文字方塊中會出現新的值。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [序列化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
 - [Visual Basic 程式設計指南](../../../../visual-basic/programming-guide/index.md)

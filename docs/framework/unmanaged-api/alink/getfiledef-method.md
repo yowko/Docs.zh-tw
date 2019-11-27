@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426044"
 ---
 # <a name="getfiledef-method"></a>GetFileDef 方法
-Retrieves the actual FileDef token used in metadata (as opposed to the token assigned by ALink).  
+抓取中繼資料中使用的實際 FileDef token （而不是由 ALink 指派的 token）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,21 +36,21 @@ HRESULT GetFileDef(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- ID of the assembly.  
+ 元件的識別碼。  
   
  `TargetFile`  
- Token of the added file as retrieved from AddFile Method or AddImport Method.  
+ 從 AddFile 方法或 AddImport 方法抓取之已加入檔案的 Token。  
   
  `pScope`  
- Receives the FileDef token.  
+ 接收 FileDef token。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h  
+ 需要 alink. h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink2 介面](ialink2-interface.md)
 - [IALink 介面](ialink-interface.md)

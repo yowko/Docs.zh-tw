@@ -15,20 +15,20 @@ ms.locfileid: "74447025"
 ---
 # <a name="accessibility"></a>Accessibility
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] is the new accessibility framework for Microsoft Windows. 它利用程式設計方式存取[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 的相關資訊，來解決輔助技術產品和自動化測試架構的需求。 此外，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 可讓控制項和應用程式開發人員提供其產品以供存取。  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 是適用于 Microsoft Windows 的新協助工具架構。 它利用程式設計方式存取[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 的相關資訊，來解決輔助技術產品和自動化測試架構的需求。 此外，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 可讓控制項和應用程式開發人員提供其產品以供存取。  
   
- This documentation describes the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API for managed code. 如需 C++ 中 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 程式設計的資訊，請參閱 [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal) (Win32 應用程式的使用者介面自動化)。  
+ 本檔說明適用于 managed 程式碼的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API。 如需 C++ 中 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 程式設計的資訊，請參閱 [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal) (Win32 應用程式的使用者介面自動化)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [協助工具最佳做法](accessibility-best-practices.md)  
  [使用者介面自動化基礎觀念](index.md)  
  [Managed 程式碼的使用者介面自動化提供者](ui-automation-providers-for-managed-code.md)  
  [Managed 程式碼的使用者介面自動化用戶端](ui-automation-clients-for-managed-code.md)  
  [使用者介面自動化控制項模式](ui-automation-control-patterns.md)  
  [使用者介面自動化文字模式](ui-automation-text-pattern.md)  
- [UI 自動化控制項類型](ui-automation-control-types.md)  
+ [UI Automation Control Types](ui-automation-control-types.md)  
  [使用者介面自動化規格和社群承諾](ui-automation-specification-and-community-promise.md)  
   
 ## <a name="related-sections"></a>相關章節  

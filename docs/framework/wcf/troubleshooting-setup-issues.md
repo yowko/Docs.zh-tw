@@ -25,7 +25,7 @@ ms.locfileid: "74281601"
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
- 如果您從 [**控制台**] 中的 [**新增/移除程式**] 小程式啟動 .NET Framework 3.0 安裝程式以執行修復，這些機碼仍無法重建。 若要正確地重新建立這些機碼，使用者必須解除安裝並重新安裝 .NET Framework 3.0。  
+ 如果您使用從 [**控制台**] 中的 [**新增/移除程式**] applet 啟動的 .NET Framework 3.0 安裝程式執行修復，則不會重新建立金鑰。 若要正確地重新建立這些機碼，使用者必須解除安裝並重新安裝 .NET Framework 3.0。  
   
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>WMI 服務損毀在 .NET Framework 3.0 套件安裝期間封鎖 Windows Communication Foundation WMI 提供者的安裝  
  WMI 服務損毀可能會封鎖 Windows Communication Foundation WMI 提供者的安裝。 在進行安裝時，Windows Communication Foundation 安裝程式無法使用 mofcomp.exe 元件來註冊 WCF .mof 檔。 可能徵兆如下所示：  
@@ -54,7 +54,7 @@ ms.locfileid: "74281601"
   
 1. 執行[2.0 版的 WMI Diagnosis Utility，](https://go.microsoft.com/fwlink/?LinkId=94685)以修復 WMI 服務。 如需使用此工具的詳細資訊，請參閱[WMI Diagnosis Utility](https://go.microsoft.com/fwlink/?LinkId=94686)主題。  
   
- 使用位於 [**控制台**] 中的 [**新增/移除程式**] 小程式來修復 .NET Framework 3.0 安裝，或是解除安裝/重新安裝 .NET Framework 3.0。  
+ 使用位於 [**控制台**] 中的 [**新增/移除程式**] applet，或卸載/重新安裝 .NET Framework 3.0，以修復 .NET Framework 3.0 安裝。  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>在安裝 .NET Framework 3.5 後修復 .NET Framework 3.0 會將 machine.config 中由 .NET Framework 3.5 引入的組態項目移除  
  如果您在安裝 .NET Framework 3.5 之後執行 .NET Framework 3.0 的修復，則會移除 machine.config 中 .NET Framework 3.5 所引進的 configuration 元素。 不過，web.config 會保持不變。 因應措施是透過 ARP 在此之後修復 .NET Framework 3.5，或搭配 `/c` 參數使用[工作流程服務註冊工具（wfservicesreg.exe）](workflow-service-registration-tool-wfservicesreg-exe.md) 。  
@@ -73,6 +73,6 @@ ms.locfileid: "74281601"
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [設定指示](./samples/set-up-instructions.md)

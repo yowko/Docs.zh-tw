@@ -20,29 +20,29 @@ ms.locfileid: "74351268"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 
-Specifies that a declared programming element redeclares and hides an identically named element, or set of overloaded elements, in a base class.
+指定宣告的程式設計專案會在基類中重新宣告並隱藏具有相同名稱的專案或多載元素的集合。
 
 ## <a name="remarks"></a>備註
 
-The main purpose of shadowing (which is also known as *hiding by name*) is to preserve the definition of your class members. The base class might undergo a change that creates an element with the same name as one you have already defined. If this happens, the `Shadows` modifier forces references through your class to be resolved to the member you defined, instead of to the new base class element.
+遮蔽的主要目的（也稱為「*依名稱隱藏*」）是保留類別成員的定義。 基類可能會進行一項變更，以建立一個與您已定義的專案名稱相同的元素。 如果發生這種情況，`Shadows` 修飾詞會強制透過類別的參考解析成您所定義的成員，而不是新的基類元素。
 
-遮蔽和覆寫都會重新定義繼承的項目，但這兩種方法之間有顯著的差異。 For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+遮蔽和覆寫都會重新定義繼承的項目，但這兩種方法之間有顯著的差異。 如需詳細資訊，請參閱[Visual Basic 中的陰影](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。
 
 ## <a name="rules"></a>規則
 
-- **Declaration Context.** You can use `Shadows` only at class level. This means the declaration context for a `Shadows` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+- **宣告內容。** 您只能在類別層級使用 `Shadows`。 這表示 `Shadows` 元素的宣告內容必須是類別，而且不能是原始程式檔、命名空間、介面、模組、結構或程式。
 
-  You can declare only one shadowing element in a single declaration statement.
+  您只能在單一宣告語句中宣告一個遮蔽元素。
 
-- **Combined Modifiers.** You cannot specify `Shadows` together with `Overloads`, `Overrides`, or `Static` in the same declaration.
+- **合併的修飾詞。** 您不能在相同的宣告中同時指定 `Shadows` 與 `Overloads`、`Overrides`或 `Static`。
 
-- **Element Types.** 您可以使用任何其他類型遮蔽任何一種已宣告的項目。 If you shadow a property or procedure with another property or procedure, the parameters and the return type do not have to match those in the base class property or procedure.
+- **元素類型。** 您可以使用任何其他類型遮蔽任何一種已宣告的項目。 如果您使用另一個屬性或程式來遮蔽屬性或程式，參數和傳回型別就不需要與基類屬性或程式中的相同。
 
-- **Accessing.** The shadowed element in the base class is normally unavailable from within the derived class that shadows it. However, the following considerations apply.
+- **正在.** 基類中的陰影元素通常無法從遮蔽它的衍生類別中使用。 不過，下列考慮適用于。
 
-  - If the shadowing element is not accessible from the code referring to it, the reference is resolved to the shadowed element. For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.
+  - 如果無法從參考的程式碼存取遮蔽專案，則會將參考解析為陰影專案。 例如，如果 `Private` 專案遮蔽基類元素，則沒有許可權存取 `Private` 專案的程式碼會改為存取基類元素。
 
-  - If you shadow an element, you can still access the shadowed element through an object declared with the type of the base class. You can also access it through `MyBase`.
+  - 如果您遮蔽某個元素，仍然可以透過以基類類型宣告的物件來存取陰影元素。 您也可以透過 `MyBase`來存取它。
 
 `Shadows` 修飾詞可用於以下內容：
 
@@ -70,16 +70,16 @@ The main purpose of shadowing (which is also known as *hiding by name*) is to pr
 
 - [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
+- [共用](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Static](../../../visual-basic/language-reference/modifiers/static.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Me、My、MyBase 和 MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
-- [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [多載](../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Overrides](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic 中的陰影](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

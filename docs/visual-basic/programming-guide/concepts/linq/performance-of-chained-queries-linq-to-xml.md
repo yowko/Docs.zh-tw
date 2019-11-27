@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353127"
 ---
-# <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>Performance of Chained Queries (LINQ to XML) (Visual Basic)
+# <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>連鎖查詢的效能（LINQ to XML）（Visual Basic）
 
 LINQ (和 LINQ to XML) 其中一個最重要的優點在於，鏈結查詢的執行效能就如同單一較大且更複雜的查詢。
 
@@ -45,6 +45,6 @@ Next
 
  因此，逐一查看 `query2` 的作業會直接與第一個查詢之來源中的項目數成正比 (亦即，線性時間)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Performance (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [效能（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

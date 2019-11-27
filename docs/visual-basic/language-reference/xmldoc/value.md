@@ -12,8 +12,8 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352178"
 ---
-# <a name="value-visual-basic"></a>\<value> (Visual Basic)
-Specifies the description of a property.  
+# <a name="value-visual-basic"></a>\<值 > （Visual Basic）
+指定屬性的描述。  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,15 +26,15 @@ Specifies the description of a property.
  屬性的描述。  
   
 ## <a name="remarks"></a>備註  
- Use the `<value>` tag to describe a property. Note that when you add a property using the code wizard in the Visual Studio development environment, it will add a [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md) tag for the new property. You should then manually add a `<value>` tag to describe the value that the property represents.  
+ 使用 `<value>` 標記來描述屬性。 請注意，當您在 Visual Studio 開發環境中使用程式碼 wizard 加入屬性時，它會為新的屬性加入[\<摘要 >](../../../visual-basic/language-reference/xmldoc/summary.md)標記。 接著，您應該手動加入 `<value>` 標記，以描述屬性所代表的值。  
   
  使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 編譯可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
- This example uses the `<value>` tag to describe what value the `Counter` property holds.  
+ 這個範例會使用 `<value>` 標記來描述 `Counter` 屬性所保存的值。  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)

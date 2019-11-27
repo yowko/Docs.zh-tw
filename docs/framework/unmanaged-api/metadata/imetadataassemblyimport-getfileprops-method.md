@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447219"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps 方法
-Gets the properties of the file with the specified metadata signature.  
+取得具有指定之中繼資料簽章之檔案的屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,35 +41,35 @@ HRESULT GetFileProps (
   
 ## <a name="parameters"></a>參數  
  `mdf`  
- [in] The `mdFile` metadata token that represents the file for which to get the properties.  
+ 在`mdFile` 元資料標記，代表要取得其屬性的檔案。  
   
  `szName`  
- [out] The simple name of the file.  
+ 脫銷檔案名的簡單名稱。  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ 在`szName`的大小（以寬字元為單位）。  
   
  `pchName`  
- [out] The number of wide chars actually returned in `szName`.  
+ 脫銷`szName`中實際傳回的寬字元數。  
   
  `ppbHashValue`  
- [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the file.  
+ 脫銷雜湊值的指標。 這是檔案的雜湊，使用 SHA-1 演算法。  
   
  `pcbHashValue`  
- [out] The number of wide chars in the returned hash value.  
+ 脫銷傳回的雜湊值中的寬字元數。  
   
  `pdwFileFlags`  
- [out] A pointer to the flags that describe the metadata applied to a file. The flags value is a combination of one or more [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values.  
+ 脫銷旗標的指標，描述套用至檔案的中繼資料。 旗標值是一個或多個[CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)值的組合。  
   
 ## <a name="requirements"></a>需求  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **平臺：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

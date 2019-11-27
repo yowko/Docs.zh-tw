@@ -9,13 +9,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344490"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>How to: Parse a String (Visual Basic)
-This topic shows how to create an XML tree in C#.  
+# <a name="how-to-parse-a-string-visual-basic"></a>如何：剖析字串（Visual Basic）
+本主題說明如何在中C#建立 XML 樹狀結構。  
   
 ## <a name="example"></a>範例  
- You can parse a string in Visual Basic by using the `XElement.Parse` method. However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.  
+ 您可以使用 `XElement.Parse` 方法來剖析 Visual Basic 中的字串。 不過，使用 XML 常值會更有效率（如下列程式碼所示），因為 XML 常值在從字串剖析 XML 時，不會受到相同的效能損失。  
   
- By using XML literals, you can just copy and paste your XML into your Visual Basic program.  
+ 藉由使用 XML 常值，您可以直接將 XML 複製並貼到 Visual Basic 程式中。  
   
 > [!NOTE]
 > 從文字檔剖析文字或載入 XML 文件比功能結構沒有效率。 如果您要從程式碼初始化 XML 樹狀，使用功能結構比剖析文字所花的處理器時間少。  
@@ -49,6 +49,6 @@ Dim contacts as XElement = _
     </Contacts>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [剖析 XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

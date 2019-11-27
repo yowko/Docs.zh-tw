@@ -37,24 +37,24 @@ HRESULT GetSigFromToken (
   
 ## <a name="parameters"></a>參數  
  `mdSig`  
- [in] The token to return the binary metadata signature for.  
+ 在要為其傳回二進位中繼資料簽章的 token。  
   
  `ppvSig`  
- [out] A pointer to the returned metadata signature.  
+ 脫銷傳回之中繼資料簽章的指標。  
   
  `pcbSig`  
- [out] The size in bytes of the binary metadata signature.  
+ 脫銷二進位中繼資料簽章的大小（以位元組為單位）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

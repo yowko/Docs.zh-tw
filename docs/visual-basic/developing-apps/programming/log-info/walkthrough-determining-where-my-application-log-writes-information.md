@@ -45,7 +45,7 @@ ms.locfileid: "74353612"
 
         如果這些區段不存在的話，則 `My.Application.Log` 只具有預設記錄檔接聽程式。
 
-3. 找出 <`listeners>` 區段中的 <`add>` 項目。
+3. 找出 <`add>` 區段中的 <`listeners>` 項目。
 
      這些項目將已命名的記錄檔接聽程式加入至 `My.Application.Log` 來源。
 
@@ -63,7 +63,7 @@ ms.locfileid: "74353612"
 
     - 如需其他記錄檔接聽程式類型在何處寫入資訊的相關資訊，請查閱該類型的文件。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:System.Diagnostics.DefaultTraceListener>

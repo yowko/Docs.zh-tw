@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting procedures
+title: 疑難排解程式
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting Visual Basic, procedures
@@ -15,13 +15,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352520"
 ---
-# <a name="troubleshooting-procedures-visual-basic"></a>Troubleshooting procedures (Visual Basic)
+# <a name="troubleshooting-procedures-visual-basic"></a>疑難排解程式（Visual Basic）
 
-This page lists some common problems that can occur when working with procedures.  
+此頁面會列出使用程式時可能發生的一些常見問題。  
   
-## <a name="returning-an-array-type-from-a-function-procedure"></a>Returning an array type from a function procedure
+## <a name="returning-an-array-type-from-a-function-procedure"></a>從函數程式傳回陣列型別
 
-If a `Function` procedure returns an array data type, you cannot use the `Function` name to store values in the elements of the array. If you attempt to do this, the compiler interprets it as a call to the `Function`. The following example generates compiler errors:
+如果 `Function` 程式傳回陣列資料類型，您就不能使用 `Function` 名稱，將值儲存在陣列的元素中。 如果您嘗試這麼做，編譯器會將它解讀為 `Function`的呼叫。 下列範例會產生編譯器錯誤：
   
 ```vb
 Function AllOnes(n As Integer) As Integer()
@@ -35,94 +35,94 @@ Function AllOnes(n As Integer) As Integer()
 End Function
 ```
 
-The statement `AllOnes(i) = 1` generates a compiler error because it appears to call `AllOnes` with an argument of the wrong data type (a scalar `Integer` instead of an `Integer` array). The statement `Return AllOnes()` generates a compiler error because it appears to call `AllOnes` with no argument.  
+語句 `AllOnes(i) = 1` 會產生編譯器錯誤，因為它似乎呼叫了錯誤資料類型之引數的 `AllOnes` （純量 `Integer`，而不是 `Integer` 陣列）。 語句 `Return AllOnes()` 會產生編譯器錯誤，因為它似乎不會呼叫沒有引數的 `AllOnes`。  
   
- **Correct approach:** To be able to modify the elements of an array that is to be returned, define an internal array as a local variable. The following example compiles without error:
+ **正確的方法：** 若要能夠修改要傳回之陣列的元素，請將內部陣列定義為本機變數。 下列範例會編譯而不會發生錯誤：
 
  [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]
 
-## <a name="argument-not-modified-by-procedure-call"></a>Argument not modified by procedure call
+## <a name="argument-not-modified-by-procedure-call"></a>程序呼叫未修改引數
 
-If you intend to allow a procedure to change a programming element underlying an argument in the calling code, you must pass it by reference. But a procedure can access the elements of a reference type argument even if you pass it by value.
+如果您想要允許程式變更呼叫程式碼中引數基礎的程式設計項目，您必須以傳址方式傳遞它。 但是，即使您以傳值方式傳遞參考型別引數的專案，程式也可以存取這些元素。
 
-- **Underlying variable**. To allow the procedure to replace the value of the underlying variable element itself, the procedure must declare the parameter [ByRef](../../../language-reference/modifiers/byref.md). Also, the calling code must not enclose the argument in parentheses, because that would override the `ByRef` passing mechanism.
+- **基礎變數**。 若要允許程式取代基礎變數元素本身的值，程式必須宣告參數[ByRef](../../../language-reference/modifiers/byref.md)。 此外，呼叫程式碼不能將引數括在括弧中，因為這會覆寫 `ByRef` 傳遞機制。
 
-- **Reference type elements**. If you declare a parameter [ByVal](../../../language-reference/modifiers/byval.md), the procedure cannot modify the underlying variable element itself. However, if the argument is a reference type, the procedure can modify the members of the object to which it points, even though it cannot replace the variable's value. For example, if the argument is an array variable, the procedure cannot assign a new array to it, but it can change one or more of its elements. The changed elements are reflected in the underlying array variable in the calling code.
+- **參考型別元素**。 如果您宣告了參數[ByVal](../../../language-reference/modifiers/byval.md)，程式就無法修改基礎變數元素本身。 不過，如果引數是參考型別，則程式可以修改它所指向之物件的成員，即使它無法取代變數的值也一樣。 例如，如果引數是陣列變數，則程式無法指派新的陣列給它，但它可以變更一個或多個其元素。 已變更的元素會反映在呼叫程式碼的基礎陣列變數中。
 
-The following example defines two procedures that take an array variable by value and operate on its elements. Procedure `increase` simply adds one to each element. Procedure `replace` assigns a new array to the parameter `a()` and then adds one to each element. However, the reassignment does not affect the underlying array variable in the calling code because `a()` is declared `ByVal`.
+下列範例會定義兩個程式，以傳值方式使用陣列變數，並在其元素上操作。 程式 `increase` 只會在每個元素中加入一個。 程式 `replace` 會將新的陣列指派給參數 `a()`，然後將其中一個加入至每個元素。 不過，重新指派並不會影響呼叫程式碼中的基礎陣列變數，因為 `a()` 是 `ByVal`宣告的。
 
 [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]
 
 [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]
 
-The following example makes calls to `increase` and `replace`:
+下列範例會呼叫 `increase` 和 `replace`：
 
 [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]
   
-The first `MsgBox` call displays "After increase(n): 11, 21, 31, 41". Because `n` is a reference type, `increase` can change its members, even though it is passed `ByVal`.
+第一個 `MsgBox` 呼叫會顯示「增加後（n）：11，21，31，41」。 因為 `n` 是參考型別，所以 `increase` 可以變更其成員，即使它已 `ByVal`傳遞也一樣。
 
-The second `MsgBox` call displays "After replace(n): 11, 21, 31, 41". Because `n` is passed `ByVal`, `replace` cannot modify the variable `n` by assigning a new array to it. When `replace` creates the new array instance `k` and assigns it to the local variable `a`, it loses the reference to `n` passed in by the calling code. When it increments the members of `a`, only the local array `k` is affected.
+第二個 `MsgBox` 呼叫會顯示「取代後（n）：11，21，31，41」。 因為 `ByVal`傳遞 `n`，`replace` 無法藉由指派新的陣列來修改變數 `n`。 當 `replace` 建立新的陣列實例 `k`，並將它指派給本機變數 `a`時，就會失去呼叫程式碼所傳入之 `n` 的參考。 當它遞增 `a`的成員時，只有本機陣列 `k` 會受到影響。
 
-**Correct approach:** To be able to modify an underlying variable element itself, pass it by reference. The following example shows the change in the declaration of `replace` that allows it to replace one array with another in the calling code:
+**正確的方法：** 若要能夠修改基礎變數元素本身，請以傳址方式傳遞它。 下列範例顯示 `replace` 宣告中的變更，可讓它以呼叫程式碼中的另一個陣列取代其中一個陣列：
 
 [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]
 
-## <a name="unable-to-define-an-overload"></a>Unable to define an overload
+## <a name="unable-to-define-an-overload"></a>無法定義多載
 
-If you want to define an overloaded version of a procedure, you must use the same name but a different signature. If the compiler cannot differentiate your declaration from an overload with the same signature, it generates an error.
+如果您想要定義程式的多載版本，您必須使用相同的名稱，但不能有不同的簽章。 如果編譯器無法區分您的宣告與具有相同簽章的多載，則會產生錯誤。
 
-The *signature* of a procedure is determined by the procedure name and the parameter list. Each overload must have the same name as all the other overloads but must differ from all of them in at least one of the other components of the signature. 如需詳細資訊，請參閱 [Procedure Overloading](./procedure-overloading.md)。
+程式*的簽章取決於過程*名稱和參數清單。 每個多載都必須與所有其他多載具有相同的名稱，但在簽章的其他其中一個元件中，必須與它們的全部相同。 如需詳細資訊，請參閱 [Procedure Overloading](./procedure-overloading.md)。
 
-The following items, even though they pertain to the parameter list, are not components of a procedure's signature:
+下列專案雖然與參數清單有關，但並不是程式簽章的元件：
 
-- Procedure modifier keywords, such as `Public`, `Shared`, and `Static`.
-- Parameter names.
-- Parameter modifier keywords, such as `ByRef` and `Optional`.
-- The data type of the return value (except for a conversion operator).
+- 程式修飾詞關鍵字，例如 `Public`、`Shared`和 `Static`。
+- 參數名稱。
+- 參數修飾詞關鍵字，例如 `ByRef` 和 `Optional`。
+- 傳回值的資料類型（轉換運算子除外）。
 
-You cannot overload a procedure by varying only one or more of the preceding items.
+您無法藉由只改變一或多個先前的專案來多載程式。
 
-**Correct approach:** To be able to define a procedure overload, you must vary the signature. Because you must use the same name, you must vary the number, order, or data types of the parameters. In a generic procedure, you can vary the number of type parameters. In a conversion operator ([CType Function](../../../language-reference/functions/ctype-function.md)), you can vary the return type.
+**正確的方法：** 若要能夠定義程式多載，您必須變更簽章。 因為您必須使用相同的名稱，所以您必須變更參數的數目、順序或資料類型。 在泛型程式中，您可以改變型別參數的數目。 在轉換運算子（[CType 函數](../../../language-reference/functions/ctype-function.md)）中，您可以改變傳回型別。
 
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Overload resolution with Optional and ParamArray arguments
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>具有選擇性和 ParamArray 引數的多載解析
 
-If you are overloading a procedure with one or more [Optional](../../../language-reference/modifiers/optional.md) parameters or a [ParamArray](../../../language-reference/modifiers/paramarray.md) parameter, you must avoid duplicating any of the *implicit overloads*. For information, see [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).
+如果您要多載具有一或多個[選擇性](../../../language-reference/modifiers/optional.md)參數或[ParamArray](../../../language-reference/modifiers/paramarray.md)參數的程式，您必須避免複製任何*隱含*的多載。 如需詳細資訊，請參閱多載[程式的考慮](./considerations-in-overloading-procedures.md)。
 
-## <a name="calling-the-wrong-version-of-an-overloaded-procedure"></a>Calling the wrong version of an overloaded procedure
+## <a name="calling-the-wrong-version-of-an-overloaded-procedure"></a>呼叫錯誤的多載程式版本
 
-If a procedure has several overloaded versions, you should be familiar with all their parameter lists and understand how Visual Basic resolves calls among the overloads. Otherwise you could call an overload other than the intended one.
+如果程式有數個多載版本，您應該熟悉其所有的參數清單，並瞭解 Visual Basic 如何解析多載之間的呼叫。 否則，您可以呼叫非預期的多載。
 
-When you have determined which overload you want to call, be careful to observe the following rules:
+當您決定要呼叫的多載時，請小心觀察下列規則：
 
-- Supply the correct number of arguments, and in the correct order.  
-- Ideally, your arguments should have the exact same data types as the corresponding parameters. In any case, the data type of each argument must widen to that of its corresponding parameter. This is true even with the [Option Strict Statement](../../../language-reference/statements/option-strict-statement.md) set to `Off`. If an overload requires any narrowing conversion from your argument list, that overload is not eligible to be called.
-- If you supply arguments that require widening, make their data types as close as possible to the corresponding parameter data types. If two or more overloads accept your argument data types, the compiler resolves your call to the overload that calls for the least amount of widening.
+- 請以正確的順序提供正確的引數數目。  
+- 在理想的情況下，您的引數應該具有與對應參數完全相同的資料類型。 在任何情況下，每個引數的資料型別都必須擴展為其對應參數的資料類型。 即使[Option Strict 語句](../../../language-reference/statements/option-strict-statement.md)設定為 `Off`也是如此。 如果多載需要引數清單的任何縮小轉換，該多載就不符合呼叫的資格。
+- 如果您提供需要擴展的引數，請將其資料類型盡可能靠近對應的參數資料類型。 如果有兩個以上的多載接受您的引數資料類型，則編譯器會解析呼叫最少量擴展的多載呼叫。
 
-You can reduce the chance of data type mismatches by using the [CType Function](../../../language-reference/functions/ctype-function.md) conversion keyword when preparing your arguments.
+準備引數時，您可以使用[CType 函數](../../../language-reference/functions/ctype-function.md)轉換關鍵字，來減少資料類型不符的機會。
 
-### <a name="overload-resolution-failure"></a>Overload resolution failure
+### <a name="overload-resolution-failure"></a>多載解析失敗
 
-When you call an overloaded procedure, the compiler attempts to eliminate all but one of the overloads. If it succeeds, it resolves the call to that overload. If it eliminates all the overloads, or if it cannot reduce the eligible overloads to a single candidate, it generates an error.
+當您呼叫多載的程式時，編譯器會嘗試排除其中一個多載。 如果成功，它會解析對該多載的呼叫。 如果它排除所有多載，或如果無法將合格的多載縮減為單一候選，則會產生錯誤。
 
-The following example illustrates the overload resolution process:
+下列範例說明多載解析程式：
 
 [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]
 
 [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]
   
-In the first call, the compiler eliminates the first overload because the type of the first argument (`Short`) narrows to the type of the corresponding parameter (`Byte`). It then eliminates the third overload because each argument type in the second overload (`Short` and `Single`) widens to the corresponding type in the third overload (`Integer` and `Single`). The second overload requires less widening, so the compiler uses it for the call.
+在第一次呼叫中，編譯器會排除第一個多載，因為第一個引數（`Short`）的類型會縮小為對應參數（`Byte`）的類型。 然後，它會排除第三個多載，因為第二個多載（`Short` 和 `Single`）中的每個引數類型會擴展到第三個多載（`Integer` 和 `Single`）中的對應類型 第二個多載需要較少的擴展，因此編譯器會使用它來進行呼叫。
 
-In the second call, the compiler cannot eliminate any of the overloads on the basis of narrowing. It eliminates the third overload for the same reason as in the first call, because it can call the second overload with less widening of the argument types. However, the compiler cannot resolve between the first and second overloads. Each has one defined parameter type that widens to the corresponding type in the other (`Byte` to `Short`, but `Single` to `Double`). The compiler therefore generates an overload resolution error.
+在第二次呼叫中，編譯器無法以縮小的基礎來排除任何多載。 它會在第一次呼叫時排除第三個多載，因為它可以呼叫具有較少引數類型的第二個多載。 不過，編譯器無法解析第一個和第二個多載。 每個都有一個已定義的參數類型，可擴大至另一個中的對應類型（`Byte` 以 `Short`，但 `Single` 為 `Double`）。 因此，編譯器會產生多載解析錯誤。
 
-**Correct approach:** To be able to call an overloaded procedure without ambiguity, use [CType Function](../../../language-reference/functions/ctype-function.md) to match the argument data types to the parameter types. The following example shows a call to `z` that forces resolution to the second overload.
+**正確的方法：** 若要能夠呼叫多載程式而不明確，請使用[CType 函數](../../../language-reference/functions/ctype-function.md)來比對引數資料類型與參數類型。 下列範例示範對 `z` 的呼叫，這會強制解決第二個多載。
 
 [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]
 
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Overload resolution with Optional and ParamArray arguments
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>具有選擇性和 ParamArray 引數的多載解析
 
-If two overloads of a procedure have identical signatures except that the last parameter is declared [Optional](../../../language-reference/modifiers/optional.md) in one and [ParamArray](../../../language-reference/modifiers/paramarray.md) in the other, the compiler resolves a call to that procedure according to the closest match. 如需詳細資訊，請參閱 [Overload Resolution](./overload-resolution.md)。
+如果程式的兩個多載具有相同的簽章，但最後一個參數在其中一個和[ParamArray](../../../language-reference/modifiers/paramarray.md)中宣告為[選擇性](../../../language-reference/modifiers/optional.md)，則編譯器會根據最接近的相符項來解析該程式的呼叫。 如需詳細資訊，請參閱 [Overload Resolution](./overload-resolution.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [程序](index.md)
 - [Sub 程序](sub-procedures.md)

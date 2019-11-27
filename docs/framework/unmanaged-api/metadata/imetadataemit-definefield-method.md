@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432554"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField 方法
-Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.  
+使用指定的中繼資料簽章建立欄位的定義，並取得該欄位定義的 token。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,42 +43,42 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>參數  
  `td`  
- [in] The `mdTypeDef` token for the enclosing class or interface.  
+ 在封入類別或介面的 `mdTypeDef` token。  
   
  `szName`  
- [in] The field name in Unicode.  
+ 在Unicode 中的功能變數名稱。  
   
  `dwFieldFlags`  
- [in] The field attributes. This is a bitmask of `CorFieldAttr` values.  
+ 在欄位屬性。 這是 `CorFieldAttr` 值的位元遮罩。  
   
  `pvSigBlob`  
- [in] The field signature as a BLOB.  
+ 在做為 BLOB 的欄位簽章。  
   
  `cbSigBlob`  
- [in] The count of bytes in `pvSigBlob`.  
+ 在`pvSigBlob`中的位元組計數。  
   
  `dwCPlusTypeFlag`  
- [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If not defining a constant value for the field, use `ELEMENT_TYPE_END`.  
+ 在常數值的 `ELEMENT_TYPE_` *\** 。 這是 `CorElementType` 值。 如果未定義欄位的常數值，請使用 `ELEMENT_TYPE_END`。  
   
  `pValue`  
- [in] The constant value for the field.  
+ 在欄位的常數值。  
   
  `cchValue`  
- [in] The size in (Unicode) characters of `pValue`.  
+ 在`pValue`的（Unicode）字元大小。  
   
  `pmd`  
- [out] The `mdFieldDef` token assigned.  
+ 脫銷指派的 `mdFieldDef` token。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

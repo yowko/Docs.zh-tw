@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428241"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet 方法
-Creates a set of security permissions to attach to the object referenced by the specified token.  
+建立一組安全性許可權，以附加至指定之標記所參考的物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,27 +38,27 @@ HRESULT DefineSecurityAttributeSet (
   
 ## <a name="parameters"></a>參數  
  `tkObj`  
- [in] The token to which the security information is attached.  
+ 在安全性資訊所附加的 token。  
   
  `rSecAttrs`  
- [in] An array of `COR_SECATTR` structures.  
+ 在`COR_SECATTR` 結構的陣列。  
   
  `cSecAttrs`  
- [in] The number of elements in `rSecAttrs`.  
+ 在`rSecAttrs`中的元素數目。  
   
  `pulErrorAttr`  
- [out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.  
+ 脫銷如果方法失敗，會在導致問題的元素 `rSecAttrs` 中指定索引。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

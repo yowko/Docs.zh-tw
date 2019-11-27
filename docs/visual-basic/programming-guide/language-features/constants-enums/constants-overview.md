@@ -12,39 +12,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74338347"
 ---
 # <a name="constants-overview-visual-basic"></a>常數的概觀 (Visual Basic)
-A constant is a meaningful name that takes the place of a number or string that does not change. Constants store values that, as the name implies, remain the same throughout the execution of an application. You can greatly improve the readability of your code and make it easier to maintain by using constants. Use them in code that contains values that reappear or that depends on certain numbers that are difficult to remember or have no obvious meaning.  
+常數是有意義的名稱，用來取代不會變更的數位或字串。 如同名稱所示，常數會儲存應用程式執行時保持不變的值。 您可以大幅改善程式碼的可讀性，並讓您更輕鬆地使用常數進行維護。 在程式碼中使用它們，其中包含重新出現的值，或取決於不容易記住或沒有明顯意義的特定數位。  
   
-## <a name="how-to-create-and-use-constants"></a>How to Create and Use Constants  
- Visual Basic contains a number of predefined constants, mainly using for printing and displaying. You can also create your own constants with the `Const` statement, using the same guidelines you would for creating a variable name. If `Option Strict` is `On`, you must explicitly declare the constant type.  
+## <a name="how-to-create-and-use-constants"></a>如何建立和使用常數  
+ Visual Basic 包含許多預先定義的常數，主要是用來列印和顯示。 您也可以使用 `Const` 語句來建立自己的常數，如同建立變數名稱所用的相同方針。 如果 `On``Option Strict`，則必須明確宣告常數類型。  
   
- A constant's scope, which is the set of all code that can refer to it without qualifying its name, is the same as that of a variable declared in the same location. To create a constant that exists within the scope of a particular procedure, declare it inside that procedure. To create a constant that is available throughout an application, declare it using the `Public` keyword in the declarations section of the class.  
+ 常數的範圍，這是一組可以參考它而不限定其名稱的程式碼，與相同位置中宣告的變數相同。 若要建立存在於特定程式範圍內的常數，請在該程式內宣告。 若要建立可在整個應用程式中使用的常數，請使用類別的宣告區段中的 `Public` 關鍵字來宣告。  
   
 > [!NOTE]
-> Although constants somewhat resemble variables, you cannot modify them or assign new values to them as you can to variables.  
+> 雖然常數有點類似變數，但是您無法修改它們，或將新值指派給它們，就像您可以變數一樣。  
   
- The constants you use in your code can be defined by the object model for controls or components you work with, or they can be user-defined (that is, those you create yourself).  
+ 您在程式碼中使用的常數可以由您所使用之控制項或元件的物件模型來定義，也可以是使用者定義的（也就是您自行建立的）。  
   
-## <a name="compile-time-and-run-time-constants"></a>Compile-time and Run-time Constants  
- A compile-time constant is computed at the time the code is compiled, while a run-time constant can only be computed while the application is running. A compile-time constant will have the same value each time an application runs, while a run-time constant may change each time. Compile-time constants are required for cases such as array bounds, case expressions, or enumerator initializers.  
+## <a name="compile-time-and-run-time-constants"></a>編譯時間和執行時間常數  
+ 編譯時間常數會在程式碼編譯時計算，而執行時間常數則只能在應用程式執行時計算。 每次執行應用程式時，編譯時間常數將會有相同的值，而執行時間常數可能會每次都變更。 如陣列界限、case 運算式或列舉值初始化運算式等案例，則需要編譯時間常數。  
   
-## <a name="in-this-section"></a>本章節內容  
-  
-|定義|詞彙|  
-|---|---|  
-|[如何：宣告常數](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Explains how to use the `Const` statement to declare a constant and set its value; by declaring a constant, you assign a meaningful name to the value.|  
-|[使用者定義的常數](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Describes how to create your own constants, including information on scoping and how to avoid circular references.|  
-|[常數和常值資料類型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Provides information on how the Visual Basic compiler initializes constants when `Option Explicit` is turned off.|  
-|[如何：將關聯的常數值群組在一起](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|Demonstrates how to group constant values that are related.|  
-  
-## <a name="reference"></a>參考資料  
+## <a name="in-this-section"></a>本節內容  
   
 |定義|詞彙|  
 |---|---|  
-|[常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Lists the constants predefined by Visual Basic.|  
-|[Const 陳述式](../../../../visual-basic/language-reference/statements/const-statement.md)|Describes the `Const` statement and its use.|  
-|[Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Describes the `Option Strict` statement and its use.|  
+|[如何：宣告常數](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|說明如何使用 `Const` 語句來宣告常數並設定其值;藉由宣告常數，您可以將有意義的名稱指派給值。|  
+|[使用者定義的常數](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|描述如何建立您自己的常數，包括範圍的資訊，以及如何避免迴圈參考。|  
+|[常數和常值資料類型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|提供當 `Option Explicit` 關閉時，Visual Basic 編譯器如何初始化常數的相關資訊。|  
+|[如何：將關聯的常數值群組在一起](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|示範如何將相關的常數值群組在一起。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="reference"></a>參考  
+  
+|定義|詞彙|  
+|---|---|  
+|[常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)|列出 Visual Basic 預先定義的常數。|  
+|[Const 陳述式](../../../../visual-basic/language-reference/statements/const-statement.md)|描述 `Const` 語句及其用法。|  
+|[Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|描述 `Option Strict` 語句及其用法。|  
+  
+## <a name="see-also"></a>另請參閱
 
 - [列舉的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [如何：在 Visual Basic 中初始化陣列變數](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

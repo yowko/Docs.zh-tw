@@ -39,37 +39,37 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in、out]列舉值的指標。  
   
  `td`  
- [in] The TypeDef token whose event definitions are to be enumerated.  
+ 在要列舉其事件定義的 TypeDef token。  
   
  `rEvents`  
- [out] The array of returned events.  
+ 脫銷傳回之事件的陣列。  
   
  `cMax`  
  [in] `rEvents` 陣列的大小上限。  
   
  `pcEvents`  
- [out] The actual number of events returned in `rEvents`.  
+ 脫銷`rEvents`中傳回的實際事件數目。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` returned successfully.|  
-|`S_FALSE`|There are no events to enumerate. In that case, `pcEvents` is zero.|  
+|`S_OK`|已成功傳回 `EnumEvents`。|  
+|`S_FALSE`|沒有要列舉的事件。 在此情況下，`pcEvents` 為零。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -45,22 +45,22 @@ typedef enum CorErrorIfEmitOutOfOrder {
   
 |成員|描述|  
 |------------|-----------------|  
-|`MDErrorOutOfOrderDefault`|Indicates the default behavior, which does not generate error messages.|  
-|`MDErrorOutOfOrderNone`|Indicates that the compiler should not generate error messages.|  
-|`MDErrorOutOfOrderAll`|Indicates that the compiler should generate an error message when a field, property, event, method, or parameter is emitted out of order.|  
-|`MDMethodOutOfOrder`|Indicates that the compiler should generate an error message when a method is emitted out of order.|  
-|`MDFieldOutOfOrder`|Indicates that the compiler should generate an error message when a field is emitted out of order.|  
-|`MDParamOutOfOrder`|Indicates that the compiler should generate an error message when a parameter is emitted out of order.|  
-|`MDPropertyOutOfOrder`|Indicates that the compiler should generate an error message when a property is emitted out of order.|  
-|`MDEventOutOfOrder`|Indicates that the compiler should generate an error message when an event is emitted out of order.|  
+|`MDErrorOutOfOrderDefault`|指出預設行為，這不會產生錯誤訊息。|  
+|`MDErrorOutOfOrderNone`|表示編譯器不應該產生錯誤訊息。|  
+|`MDErrorOutOfOrderAll`|指出當欄位、屬性、事件、方法或參數未按順序發出時，編譯器應該產生錯誤訊息。|  
+|`MDMethodOutOfOrder`|指出當方法未按順序發出時，編譯器應該產生錯誤訊息。|  
+|`MDFieldOutOfOrder`|指出當欄位未按順序發出時，編譯器應該產生錯誤訊息。|  
+|`MDParamOutOfOrder`|指出當參數未按順序發出時，編譯器應該產生錯誤訊息。|  
+|`MDPropertyOutOfOrder`|指出當屬性未按順序發出時，編譯器應該產生錯誤訊息。|  
+|`MDEventOutOfOrder`|指出當事件未按順序發出時，編譯器應該產生錯誤訊息。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

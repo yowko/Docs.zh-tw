@@ -29,11 +29,11 @@ ms.locfileid: "74449091"
 |方法|描述|  
 |------------|-----------------|  
 |[SetCheckSum 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|設定總和檢查碼資訊。|  
-|[SetSource 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|Sets embedded source for a document that is being written.|  
+|[SetSource 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|為正在寫入的檔設定內嵌來源。|  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

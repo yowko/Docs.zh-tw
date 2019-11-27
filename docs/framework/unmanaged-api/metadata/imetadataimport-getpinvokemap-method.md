@@ -40,33 +40,33 @@ HRESULT GetPinvokeMap (
   
 ## <a name="parameters"></a>參數  
  `tk`  
- [in] A FieldDef or MethodDef token to get the PInvoke mapping metadata for.  
+ 在要取得其 PInvoke 對應中繼資料的 FieldDef 或 MethodDef token。  
   
  `pdwMappingFlags`  
- [out] A pointer to flags used for mapping. This value is a bitmask from the [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeration.  
+ 脫銷用於對應之旗標的指標。 這個值是[CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md)列舉中的位元遮罩。  
   
  `szImportName`  
- [out] The name of the unmanaged target DLL.  
+ 脫銷非受控目標 DLL 的名稱。  
   
  `cchImportName`  
- [in] The size in wide characters of `szImportName`.  
+ 在`szImportName`的寬字元大小。  
   
  `pchImportName`  
- [out] The number of wide characters returned in `szImportName`.  
+ 脫銷`szImportName`中傳回的寬字元數。  
   
  `pmrImportDLL`  
- [out] A pointer to a ModuleRef token that represents the unmanaged target object library.  
+ 脫銷ModuleRef token 的指標，表示非受控目標物件程式庫。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

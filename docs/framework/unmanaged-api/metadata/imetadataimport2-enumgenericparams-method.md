@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428313"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams 方法
-Gets an enumerator for an array of generic parameter tokens associated with the specified TypeDef or MethodDef token.  
+取得與指定的 TypeDef 或 MethodDef token 相關聯之泛型參數標記陣列的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,37 +39,37 @@ HRESULT EnumGenericParams (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [in、out]列舉值的指標。  
   
  `tk`  
- [in] The TypeDef or MethodDef token whose generic parameters are to be enumerated.  
+ 在要列舉其泛型參數的 TypeDef 或 MethodDef token。  
   
  `rGenericParams`  
- [out] The array of generic parameters to enumerate.  
+ 脫銷要列舉的泛型參數陣列。  
   
  `cMax`  
- [in] The requested maximum number of tokens to place in `rGenericParams`.  
+ 在要在 `rGenericParams`中放置的最大權杖數目。  
   
  `pcGenericParams`  
- [out] The returned number of tokens placed in `rGenericParams`.  
+ 脫銷放在 `rGenericParams`中的傳回權杖數目。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` returned successfully.|  
-|`S_FALSE`|`phEnum` has no member elements. In this case, `pcGenericParams` is set to 0 (zero).|  
+|`S_OK`|已成功傳回 `EnumGenericParams`。|  
+|`S_FALSE`|`phEnum` 沒有成員元素。 在此情況下，`pcGenericParams` 會設定為0（零）。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

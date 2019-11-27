@@ -20,7 +20,7 @@ ms.locfileid: "74333956"
 
 您可以使用 Visual Basic，利用 `My.Computer.FileSystem` 物件來處理磁碟機、資料夾和檔案，這個物件提供更佳效能，而且比 `FileOpen` 和 `Write` 函式等傳統方法更容易使用 (不過仍然可供使用)。 下列各節詳細討論這些方法。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
  [使用 Visual Basic 存取檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)  
  說明如何使用 `My.Computer.FileSystem` 物件來處理檔案、磁碟機和資料夾。  

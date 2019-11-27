@@ -1,5 +1,5 @@
 ---
-title: Overload Resolution
+title: 多載解析
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -18,47 +18,47 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352638"
 ---
 # <a name="overload-resolution-visual-basic"></a>多載解析 (Visual Basic)
-When the Visual Basic compiler encounters a call to a procedure that is defined in several overloaded versions, the compiler must decide which of the overloads to call. It does this by performing the following steps:  
+當 Visual Basic 編譯器遇到數個多載版本中所定義的程式呼叫時，編譯器必須決定要呼叫哪些多載。 它會執行下列步驟來完成此動作：  
   
-1. **協助工具。** It eliminates any overload with an access level that prevents the calling code from calling it.  
+1. **協助工具。** 它會排除具有存取層級的任何多載，以防止呼叫程式碼呼叫它。  
   
-2. **Number of Parameters.** It eliminates any overload that defines a different number of parameters than are supplied in the call.  
+2. **參數的數目。** 它會排除定義與呼叫中所提供不同參數數目的任何多載。  
   
-3. **Parameter Data Types.** The compiler gives instance methods preference over extension methods. If any instance method is found that requires only widening conversions to match the procedure call, all extension methods are dropped and the compiler continues with only the instance method candidates. If no such instance method is found, it continues with both instance and extension methods.  
+3. **參數資料類型。** 編譯器會針對擴充方法提供實例方法喜好設定。 如果找到任何只需要擴輾轉換來符合程序呼叫的實例方法，則會卸載所有擴充方法，而且編譯器只會繼續使用實例方法候選項目。 如果找不到這類實例方法，它會繼續使用實例和擴充方法。  
   
-     In this step, it eliminates any overload for which the data types of the calling arguments cannot be converted to the parameter types defined in the overload.  
+     在此步驟中，它會排除呼叫引數的資料類型無法轉換成多載中所定義之參數類型的任何多載。  
   
-4. **Narrowing Conversions.** It eliminates any overload that requires a narrowing conversion from the calling argument types to the defined parameter types. This is true whether the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On` or `Off`.  
+4. **縮小轉換。** 它會排除需要從呼叫引數類型到已定義參數類型之縮小轉換的任何多載。 不論類型檢查參數（[Option Strict 語句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)）是否 `On` 或 `Off`，都是如此。  
   
-5. **Least Widening.** The compiler considers the remaining overloads in pairs. For each pair, it compares the data types of the defined parameters. If the types in one of the overloads all widen to the corresponding types in the other, the compiler eliminates the latter. That is, it retains the overload that requires the least amount of widening.  
+5. **最小的擴展。** 編譯器會將其餘多載視為成對。 它會針對每個配對，比較已定義參數的資料類型。 如果其中一個多載中的型別全部擴大至另一個中的對應型別，則編譯器會排除後者。 也就是說，它會保留需要最小擴展量的多載。  
   
-6. **Single Candidate.** It continues considering overloads in pairs until only one overload remains, and it resolves the call to that overload. If the compiler cannot reduce the overloads to a single candidate, it generates an error.  
+6. **單一候選。** 它會繼續考慮成對的多載，直到只有一個超載，而且它會解析對該多載的呼叫。 如果編譯器無法將多載縮減為單一候選，則會產生錯誤。  
   
- The following illustration shows the process that determines which of a set of overloaded versions to call.  
+ 下圖顯示的程式會決定一組要呼叫的多載版本。  
   
- ![Flow diagram of overload resolution process](./media/overload-resolution/determine-overloaded-version.gif "Resolving among overloaded versions")    
+ ![多載解析進程的流程圖](./media/overload-resolution/determine-overloaded-version.gif "在多載版本之間解析")    
   
- The following example illustrates this overload resolution process.  
+ 下列範例說明此多載解析程式。  
   
  [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
  [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
- In the first call, the compiler eliminates the first overload because the type of the first argument (`Short`) narrows to the type of the corresponding parameter (`Byte`). It then eliminates the third overload because each argument type in the second overload (`Short` and `Single`) widens to the corresponding type in the third overload (`Integer` and `Single`). The second overload requires less widening, so the compiler uses it for the call.  
+ 在第一次呼叫中，編譯器會排除第一個多載，因為第一個引數（`Short`）的類型會縮小為對應參數（`Byte`）的類型。 然後，它會排除第三個多載，因為第二個多載（`Short` 和 `Single`）中的每個引數類型會擴展到第三個多載（`Integer` 和 `Single`）中的對應類型 第二個多載需要較少的擴展，因此編譯器會使用它來進行呼叫。  
   
- In the second call, the compiler cannot eliminate any of the overloads on the basis of narrowing. It eliminates the third overload for the same reason as in the first call, because it can call the second overload with less widening of the argument types. However, the compiler cannot resolve between the first and second overloads. Each has one defined parameter type that widens to the corresponding type in the other (`Byte` to `Short`, but `Single` to `Double`). The compiler therefore generates an overload resolution error.  
+ 在第二次呼叫中，編譯器無法以縮小的基礎來排除任何多載。 它會在第一次呼叫時排除第三個多載，因為它可以呼叫具有較少引數類型的第二個多載。 不過，編譯器無法解析第一個和第二個多載。 每個都有一個已定義的參數類型，可擴大至另一個中的對應類型（`Byte` 以 `Short`，但 `Single` 為 `Double`）。 因此，編譯器會產生多載解析錯誤。  
   
-## <a name="overloaded-optional-and-paramarray-arguments"></a>Overloaded Optional and ParamArray Arguments  
- If two overloads of a procedure have identical signatures except that the last parameter is declared [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) in one and [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in the other, the compiler resolves a call to that procedure as follows:  
+## <a name="overloaded-optional-and-paramarray-arguments"></a>多載的選擇性和 ParamArray 引數  
+ 如果程式的兩個多載具有相同的簽章，但最後一個參數在其中一個和[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)中宣告為[選擇性](../../../../visual-basic/language-reference/modifiers/optional.md)，則編譯器會解析該程式的呼叫，如下所示：  
   
-|If the call supplies the last argument as|The compiler resolves the call to the overload declaring the last argument as|  
+|如果呼叫提供最後一個引數做為|編譯器會將宣告最後一個引數的多載呼叫解析為|  
 |---|---|  
-|No value (argument omitted)|`Optional`|  
-|A single value|`Optional`|  
-|Two or more values in a comma-separated list|`ParamArray`|  
-|An array of any length (including an empty array)|`ParamArray`|  
+|無值（已省略引數）|`Optional`|  
+|單一值|`Optional`|  
+|以逗號分隔的清單中的兩個或多個值|`ParamArray`|  
+|任何長度的陣列（包括空陣列）|`ParamArray`|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [選擇性參數](./optional-parameters.md)
 - [參數陣列](./parameter-arrays.md)

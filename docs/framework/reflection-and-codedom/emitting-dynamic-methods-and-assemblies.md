@@ -34,9 +34,9 @@ ms.locfileid: "74446779"
   
 除了 <xref:System.Reflection.Emit> 命名空間中的 Managed 類型，還有[中繼資料介面](../unmanaged-api/metadata/metadata-interfaces.md)參考文件中說明的 Unmanaged 中繼資料介面。 相較於 Unmanaged 中繼資料介面，Managed 反映發出提供較強的語意錯誤檢查，以及抽象層級較高的中繼資料。  
   
-另一項適用於中繼資料和 MSIL 的有用資源，是通用語言基礎結構 (CLI) 文件，尤其是＜第二部分：中繼資料定義和語意＞以及＜第三部分：CIL 指令集＞。 The documentation is available online at the [Ecma Web site](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+另一項適用於中繼資料和 MSIL 的有用資源，是通用語言基礎結構 (CLI) 文件，尤其是＜第二部分：中繼資料定義和語意＞以及＜第三部分：CIL 指令集＞。 您可以從[Ecma 網站](https://www.ecma-international.org/publications/standards/Ecma-335.htm)線上取得檔。  
   
-## <a name="in-this-section"></a>本章節內容
+## <a name="in-this-section"></a>本節內容
   
 [反映發出中的安全性問題](security-issues-in-reflection-emit.md)  
 說明有關使用反映發出來建立動態組件的安全性問題。  
@@ -53,7 +53,7 @@ ms.locfileid: "74446779"
 [動態類型產生的可回收組件](collectible-assemblies.md)   
 引進可回收組件，即動態組件，不需要卸載其建立所在的應用程式定義域即可予以卸載。
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
 
 <xref:System.Reflection.Emit.OpCodes>  
 將可用來建置方法主體的 MSIL 指令碼編製目錄。  

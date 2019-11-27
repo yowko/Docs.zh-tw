@@ -21,7 +21,7 @@ ms.locfileid: "74346450"
 ---
 # <a name="structure-statement"></a>Structure 陳述式
 
-Declares the name of a structure and introduces the definition of the variables, properties, events, and procedures that the structure comprises.
+宣告結構的名稱，並引進結構所組成之變數、屬性、事件和程式的定義。
 
 ## <a name="syntax"></a>語法
 
@@ -38,78 +38,78 @@ End Structure
 
 |詞彙|定義|
 |---|---|
-|`attributelist`|選擇項。 See [Attribute List](attribute-list.md).|
-|`accessmodifier`|選擇項。 可以是下列其中一項：<br /><br /> -   [Public](../modifiers/public.md)<br />-   [Protected](../modifiers/protected.md)<br />-   [Friend](../modifiers/friend.md)<br />-   [Private](../modifiers/private.md)<br />- [Protected Friend](../modifiers/protected-friend.md)<br/>- [Private Protected](../modifiers/private-protected.md) <br /><br /> 請參閱 [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)。|
-|`Shadows`|選擇項。 See [Shadows](../modifiers/shadows.md).|
-|`Partial`|選擇項。 Indicates a partial definition of the structure. See [Partial](../modifiers/partial.md).|
-|`name`|必要項。 Name of this structure. 請參閱 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)。|
-|`Of`|選擇項。 Specifies that this is a generic structure.|
-|`typelist`|Required if you use the [Of](of-clause.md) keyword. List of type parameters for this structure. See [Type List](type-list.md).|
-|`Implements`|選擇項。 Indicates that this structure implements the members of one or more interfaces. See [Implements Statement](implements-statement.md).|
-|`interfacenames`|Required if you use the `Implements` statement. The names of the interfaces this structure implements.|
-|`datamemberdeclarations`|必要項。 Zero or more `Const`, `Dim`, `Enum`, or `Event` statements declaring *data members* of the structure.|
-|`methodmemberdeclarations`|選擇項。 Zero or more declarations of `Function`, `Operator`, `Property`, or `Sub` procedures, which serve as *method members* of the structure.|
-|`End Structure`|必要項。 Terminates the `Structure` definition.|
+|`attributelist`|選擇性。 請參閱[屬性清單](attribute-list.md)。|
+|`accessmodifier`|選擇性。 可以是下列其中一項：<br /><br /> -   [公用](../modifiers/public.md)<br />-   [保護](../modifiers/protected.md)<br />-   [Friend](../modifiers/friend.md)<br />-   [私](../modifiers/private.md)用<br />- [受保護的 Friend](../modifiers/protected-friend.md)<br/>- [私用保護](../modifiers/private-protected.md) <br /><br /> 請參閱 [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)。|
+|`Shadows`|選擇性。 請參閱[Shadows](../modifiers/shadows.md)。|
+|`Partial`|選擇性。 表示結構的部分定義。 請參閱[部分](../modifiers/partial.md)。|
+|`name`|必要。 這個結構的名稱。 請參閱 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)。|
+|`Of`|選擇性。 指定這是泛型結構。|
+|`typelist`|如果您使用 of 關鍵字，則[為必要項](of-clause.md)。 此結構的類型參數清單。 請參閱[類型清單](type-list.md)。|
+|`Implements`|選擇性。 表示此結構會執行一或多個介面的成員。 請參閱[Implements 語句](implements-statement.md)。|
+|`interfacenames`|如果您使用 `Implements` 語句，則為必要。 這個結構所實作為介面的名稱。|
+|`datamemberdeclarations`|必要。 零或多個 `Const`、`Dim`、`Enum`或 `Event` 語句，宣告結構的*資料成員*。|
+|`methodmemberdeclarations`|選擇性。 零或多個 `Function`、`Operator`、`Property`或 `Sub` 程式的宣告，做為結構的*方法成員*。|
+|`End Structure`|必要。 終止 `Structure` 定義。|
 
 ## <a name="remarks"></a>備註
 
-The `Structure` statement defines a composite value type that you can customize. A *structure* is a generalization of the user-defined type (UDT) of previous versions of Visual Basic. For more information, see [Structures](../../programming-guide/language-features/data-types/structures.md).
+`Structure` 語句會定義您可以自訂的複合實數值型別。 「*結構*」（structure）是舊版 Visual Basic 的使用者定義型別（UDT）的一般化。 如需詳細資訊，請參閱[結構](../../programming-guide/language-features/data-types/structures.md)。
 
-Structures support many of the same features as classes. For example, structures can have properties and procedures, they can implement interfaces, and they can have parameterized constructors. However, there are significant differences between structures and classes in areas such as inheritance, declarations, and usage. Also, classes are reference types and structures are value types. For more information, see [Structures and Classes](../../programming-guide/language-features/data-types/structures-and-classes.md).
+結構支援許多與類別相同的功能。 例如，結構可以有屬性和程式，它們可以實作為介面，而且可以有參數化的函式。 不過，繼承、宣告和使用等領域中的結構與類別之間有顯著的差異。 此外，類別是參考型別，而結構是實數值型別。 如需詳細資訊，請參閱[結構和類別](../../programming-guide/language-features/data-types/structures-and-classes.md)。
 
-You can use `Structure` only at namespace or module level. This means the *declaration context* for a structure must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block. 如需詳細資訊，請參閱[宣告內容和預設存取層級](declaration-contexts-and-default-access-levels.md)。
+您只能在命名空間或模組層級使用 `Structure`。 這表示結構的宣告*內容*必須是原始程式檔、命名空間、類別、結構、模組或介面，而且不能是程式或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](declaration-contexts-and-default-access-levels.md)。
 
-Structures default to [Friend](../modifiers/friend.md) access. You can adjust their access levels with the access modifiers. For more information, see [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
+結構預設為[Friend](../modifiers/friend.md)存取。 您可以使用存取修飾詞來調整其存取層級。 如需詳細資訊，請參閱[Visual Basic 中的存取層級](../../programming-guide/language-features/declared-elements/access-levels.md)。
 
 ## <a name="rules"></a>規則
 
-- **Nesting.** You can define one structure within another. The outer structure is called the *containing structure*, and the inner structure is called a *nested structure*. However, you cannot access a nested structure's members through the containing structure. Instead, you must declare a variable of the nested structure's data type.
+- **嵌入.** 您可以在另一個中定義一個結構。 外部結構稱為「*包含結構*」，而內部結構稱為「*嵌套結構*」。 但是，您無法透過包含結構存取嵌套結構的成員。 相反地，您必須宣告嵌套結構之資料類型的變數。
 
-- **Member Declaration.** You must declare every member of a structure. A structure member cannot be [Protected](../modifiers/protected.md) or `Protected Friend` because nothing can inherit from a structure. The structure itself, however, can be `Protected` or `Protected Friend`.
+- **成員宣告。** 您必須宣告結構的每個成員。 結構成員無法[受到保護](../modifiers/protected.md)或 `Protected Friend`，因為沒有任何可繼承自結構的。 不過，結構本身可以 `Protected` 或 `Protected Friend`。
   
-     您可以在結構中宣告零個或多個非共用變數，或非共用、非自訂的事件。 You cannot have only constants, properties, and procedures, even if some of them are nonshared.
+     您可以在結構中宣告零個或多個非共用變數，或非共用、非自訂的事件。 您不能只有常數、屬性和程式，即使其中一些是非共用的。
 
-- **Initialization.** You cannot initialize the value of any nonshared data member of a structure as part of its declaration. You must either initialize such a data member by means of a parameterized constructor on the structure, or assign a value to the member after you have created an instance of the structure.
+- **初始.** 您無法初始化結構之任何非共用資料成員的值，做為其宣告的一部分。 您必須在結構上使用參數化的函式來初始化這類資料成員，或是在建立結構的實例之後，將值指派給成員。
 
-- **繼承**： A structure cannot inherit from any type other than <xref:System.ValueType>, from which all structures inherit. In particular, one structure cannot inherit from another.
+- **繼承**： 結構無法繼承自所有結構所繼承之 <xref:System.ValueType>以外的任何類型。 特別是，一個結構無法繼承自另一個。
 
-     You cannot use the [Inherits Statement](inherits-statement.md) in a structure definition, even to specify <xref:System.ValueType>.
+     您不能在結構定義中使用[Inherits 語句](inherits-statement.md)，甚至可以指定 <xref:System.ValueType>。
 
-- **Implementation.** If the structure uses the [Implements Statement](implements-statement.md), you must implement every member defined by every interface you specify in `interfacenames`.
+- **實作.** 如果結構使用[Implements 語句](implements-statement.md)，您就必須執行您在 `interfacenames`中指定的每個介面所定義的每個成員。
 
-- **Default Property.** A structure can specify at most one property as its *default property*, using the [Default](../modifiers/default.md) modifier. For more information, see [Default](../modifiers/default.md).
+- **Default 屬性。** 結構最多可以使用[預設](../modifiers/default.md)的修飾詞，指定一個屬性做為其*預設屬性*。 如需詳細資訊，請參閱[Default](../modifiers/default.md)。
 
 ## <a name="behavior"></a>行為
 
-- **Access Level.** Within a structure, you can declare each member with its own access level. All structure members default to [Public](../modifiers/public.md) access. Note that if the structure itself has a more restricted access level, this automatically restricts access to its members, even if you adjust their access levels with the access modifiers.
+- **存取層級。** 在結構中，您可以使用自己的存取層級來宣告每個成員。 所有結構成員都預設為[公用](../modifiers/public.md)存取。 請注意，如果結構本身有限制較多的存取層級，這會自動限制其成員的存取權，即使您使用存取修飾詞來調整其存取層級也一樣。
 
-- **Scope.** A structure is in scope throughout its containing namespace, class, structure, or module.
+- **範圍.** 結構會在其包含的命名空間、類別、結構或模組的範圍內。
 
-     The scope of every structure member is the entire structure.
+     每個結構成員的範圍都是整個結構。
 
-- **Lifetime.** A structure does not itself have a lifetime. Rather, each instance of that structure has a lifetime independent of all other instances.
+- **期.** 結構本身不會有存留期。 相反地，該結構的每個實例都有與其他所有實例無關的存留期。
 
-     The lifetime of an instance begins when it is created by a [New Operator](../operators/new-operator.md) clause. It ends when the lifetime of the variable that holds it ends.
+     實例的存留期會在[新的 Operator](../operators/new-operator.md)子句建立時開始。 它會在保留該變數的存留期結束時結束。
 
-     You cannot extend the lifetime of a structure instance. An approximation to static structure functionality is provided by a module. For more information, see [Module Statement](module-statement.md).
+     您無法擴充結構實例的存留期。 對靜態結構功能的近似值是由模組提供。 如需詳細資訊，請參閱[Module 語句](module-statement.md)。
 
-     Structure members have lifetimes depending on how and where they are declared. For more information, see "Lifetime" in [Class Statement](class-statement.md).
+     結構成員的存留期取決於宣告的方式和位置。 如需詳細資訊，請參閱[Class 語句](class-statement.md)中的「存留期」。
 
-- **Qualification.** Code outside a structure must qualify a member's name with the name of that structure.
+- **加.** 結構外的程式碼必須使用該結構的名稱來限定成員名稱。
 
-     If code inside a nested structure makes an unqualified reference to a programming element, Visual Basic searches for the element first in the nested structure, then in its containing structure, and so on out to the outermost containing element. 如需詳細資訊，請參閱 [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)。
+     如果嵌套結構內的程式碼會對程式設計項目進行不合格的參考，Visual Basic 會先在嵌套結構中搜尋該專案，然後在其包含結構中，依此類推，直到最外層的包含專案。 如需詳細資訊，請參閱 [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)。
 
-- **Memory Consumption.** As with all composite data types, you cannot safely calculate the total memory consumption of a structure by adding together the nominal storage allocations of its members. Furthermore, you cannot safely assume that the order of storage in memory is the same as your order of declaration. If you need to control the storage layout of a structure, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the `Structure` statement.
+- **記憶體耗用量。** 如同所有複合資料型別，您無法安全地計算結構的總記憶體耗用量，方法是將其成員的名義儲存體配置相加。 此外，您無法安全地假設記憶體中的儲存順序與您的宣告順序相同。 如果您需要控制結構的儲存配置，您可以將 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性套用至 `Structure` 語句。
 
 ## <a name="example"></a>範例
 
-The following example uses the `Structure` statement to define a set of related data for an employee. It shows the use of `Public`, `Friend`, and `Private` members to reflect the sensitivity of the data items. It also shows procedure, property, and event members.
+下列範例會使用 `Structure` 語句來定義員工的一組相關資料。 它會顯示 `Public`、`Friend`和 `Private` 成員的使用，以反映資料項目的敏感度。 它也會顯示程式、屬性和事件成員。
 
 [!code-vb[VbVbalrStatements#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#57)]
 
-For more information on how to use `Structure`s, see [Structure Variable](../../programming-guide/language-features/data-types/structure-variables.md).
+如需如何使用 `Structure`的詳細資訊，請參閱[結構變數](../../programming-guide/language-features/data-types/structure-variables.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Class 陳述式](class-statement.md)
 - [Interface 陳述式](interface-statement.md)
@@ -118,6 +118,6 @@ For more information on how to use `Structure`s, see [Structure Variable](../../
 - [Const 陳述式](const-statement.md)
 - [Enum 陳述式](enum-statement.md)
 - [Event 陳述式](event-statement.md)
-- [Operator 陳述式](operator-statement.md)
+- [Operator Statement](operator-statement.md)
 - [Property 陳述式](property-statement.md)
 - [結構和類別](../../programming-guide/language-features/data-types/structures-and-classes.md)

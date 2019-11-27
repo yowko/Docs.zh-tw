@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437582"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps 方法
-Gets metadata information for the event represented by the specified event token, including the declaring type, the add and remove methods for delegates, and any flags and other associated data.  
+取得指定的事件 token 所代表之事件的中繼資料資訊，包括宣告類型、委派的加入和移除方法，以及任何旗標和其他相關聯的資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,51 +47,51 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>參數  
  `ev`  
- [in] The event metadata token representing the event to get metadata for.  
+ 在事件元資料標記，代表要取得中繼資料的事件。  
   
  `pClass`  
- [out] A pointer to the TypeDef token representing the class that declares the event.  
+ 脫銷TypeDef token 的指標，代表宣告事件的類別。  
   
  `szEvent`  
- [out] The name of the event referenced by `ev`.  
+ 脫銷`ev`所參考的事件名稱。  
   
  `pchEvent`  
- [in] The requested length in wide characters of `szEvent`.  
+ 在要求的 `szEvent`長度（以寬字元為單位）。  
   
  `pdwEventFlags`  
- [out] The returned length in wide characters of `szEvent`.  
+ 脫銷以 `szEvent`的寬字元傳回的長度。  
   
  `ptkEventType`  
- [out] A pointer to a TypeRef or TypeDef metadata token representing the <xref:System.Delegate> type of the event.  
+ 脫銷表示事件之 <xref:System.Delegate> 類型的 TypeRef 或 TypeDef 元資料標記的指標。  
   
  `pmdAddOn`  
- [out] A pointer to the metadata token representing the method that adds handlers for the event.  
+ 脫銷元資料標記的指標，表示新增事件處理常式的方法。  
   
  `pmdRemoveOn`  
- [out] A pointer to the metadata token representing the method that removes handlers for the event.  
+ 脫銷元資料標記的指標，表示移除事件處理常式的方法。  
   
  `pmdFire`  
- [out] A pointer to the metadata token representing the method that raises the event.  
+ 脫銷元資料標記的指標，表示引發事件的方法。  
   
  `rmdOtherMethod`  
- [out] An array of token pointers to other methods associated with the event.  
+ 脫銷與事件相關聯之其他方法的 token 指標陣列。  
   
  `cMax`  
  [in] `rmdOtherMethod` 陣列的大小上限。  
   
  `pcOtherMethod`  
- [out] The number of tokens returned in `rmdOtherMethod`.  
+ 脫銷`rmdOtherMethod`中傳回的權杖數目。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

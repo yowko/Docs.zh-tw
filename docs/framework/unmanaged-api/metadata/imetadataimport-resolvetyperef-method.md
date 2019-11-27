@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431466"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef 方法
-Resolves a <xref:System.Type> reference represented by the specified TypeRef token.  
+解析指定的 TypeRef 標記所表示的 <xref:System.Type> 參考。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,36 +38,36 @@ HRESULT ResolveTypeRef (
   
 ## <a name="parameters"></a>參數  
  `tr`  
- [in] The TypeRef metadata token to return the referenced type information for.  
+ 在要傳回之參考型別資訊的 TypeRef 元資料標記。  
   
  `riid`  
- [in] The IID of the interface to return in `ppIScope`. Typically, this would be IID_IMetaDataImport.  
+ 在要在 `ppIScope`中傳回之介面的 IID。 一般來說，這會是 IID_IMetaDataImport。  
   
  `ppIScope`  
- [out] An interface to the module scope in which the referenced type is defined.  
+ 脫銷定義參考型別之模組範圍的介面。  
   
  `ptd`  
- [out] A pointer to a TypeDef token that represents the referenced type.  
+ 脫銷表示參考型別之 TypeDef token 的指標。  
   
 ## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]
-> Do not use this method if multiple application domains are loaded. The method does not respect application domain boundaries. If multiple versions of an assembly are loaded, and they contain the same type with the same namespace, the method returns the module scope of the first type it finds.  
+> 如果載入多個應用程式域，請勿使用這個方法。 方法不會遵守應用程式域界限。 如果載入元件的多個版本，而且它們包含具有相同命名空間的相同類型，則方法會傳回所找到之第一個類型的模組範圍。  
   
- The `ResolveTypeRef` method searches for the type definition in other modules. If the type definition is found, `ResolveTypeRef` returns an interface to that module scope as well as the TypeDef token for the type.  
+ `ResolveTypeRef` 方法會搜尋其他模組中的型別定義。 如果找到類型定義，`ResolveTypeRef` 會傳回該模組範圍的介面，以及該類型的 TypeDef token。  
   
- If the type reference to be resolved has a resolution scope of AssemblyRef, the `ResolveTypeRef` method searches for a match only in the metadata scopes that have already been opened with calls to either the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method or the [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method. This is because `ResolveTypeRef` cannot determine from only the AssemblyRef scope where on disk or in the global assembly cache the assembly is stored.  
+ 如果要解析的類型參考具有 AssemblyRef 的解析範圍，則 `ResolveTypeRef` 方法只會搜尋已經使用[IMetaDataDispenser：： OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)方法或[IMetaDataDispenser：： OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)方法的呼叫開啟的中繼資料範圍中的相符項。 這是因為 `ResolveTypeRef` 無法只從磁片或全域組件快取中儲存元件的 AssemblyRef 範圍判斷。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

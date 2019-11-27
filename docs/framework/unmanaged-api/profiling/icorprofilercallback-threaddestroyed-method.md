@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439937"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>ICorProfilerCallback::ThreadDestroyed 方法
-Notifies the profiler that a thread has been destroyed.  
+通知分析工具，執行緒已遭終結。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,10 +34,10 @@ HRESULT ThreadDestroyed(
   
 ## <a name="parameters"></a>參數  
  `threadId`  
- [in] The ID of the thread that has been destroyed.  
+ 在已終結之執行緒的識別碼。  
   
 ## <a name="remarks"></a>備註  
- The `threadId` value is no longer valid at the time of this call.  
+ 此呼叫時，`threadId` 值已不再有效。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -48,7 +48,7 @@ HRESULT ThreadDestroyed(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ThreadCreated 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)

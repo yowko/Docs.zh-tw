@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432880"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType 列舉
-Specifies how an object is serialized by the common language runtime.  
+指定通用語言執行時間如何序列化物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,34 +57,34 @@ typedef enum CorSerializationType {
   
 |成員|描述|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|Serialization of the object is undefined.|  
-|`SERIALIZATION_TYPE_BOOLEAN`|Object is serialized as a Boolean type|  
-|`SERIALIZATION_TYPE_CHAR`|Object is serialized as a character type.|  
-|`SERIALIZATION_TYPE_I1`|Object is serialized as a signed 1-byte integer.|  
-|`SERIALIZATION_TYPE_U1`|Object is serialized as an unsigned 1-byte integer.|  
-|`SERIALIZATION_TYPE_I2`|Object is serialized as a signed 2-byte integer.|  
-|`SERIALIZATION_TYPE_U2`|Object is serialized as an unsigned 2-byte integer.|  
-|`SERIALIZATION_TYPE_I4`|Object is serialized as a signed 4-byte integer.|  
-|`SERIALIZATION_TYPE_U4`|Object is serialized as an unsigned 4-byte integer.|  
-|`SERIALIZATION_TYPE_I8`|Object is serialized as a signed 8-byte integer.|  
-|`SERIALIZATION_TYPE_U8`|Object is serialized as an unsigned 8-byte integer.|  
-|`SERIALIZATION_TYPE_R4`|Object is serialized as a 4-byte floating point.|  
-|`SERIALIZATION_TYPE_R8`|Object is serialized as an 8-byte floating point.|  
-|`SERIALIZATION_TYPE_STRING`|Object is serialized as a System.String type.|  
-|`SERIALIZATION_TYPE_SZARRAY`|Object is serialized as a single-dimensional, zero lower-bound array.|  
-|`SERIALIZATION_TYPE_TYPE`|Object is serialized as a generic type.|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Object is serialized as a tagged object.|  
-|`SERIALIZATION_TYPE_FIELD`|Object is serialized as a field.|  
-|`SERIALIZATION_TYPE_PROPERTY`|Object is serialized as a property.|  
-|`SERIALIZATION_TYPE_ENUM`|Object is serialized as an enumeration.|  
+|`SERIALIZATION_TYPE_UNDEFINED`|未定義物件的序列化。|  
+|`SERIALIZATION_TYPE_BOOLEAN`|物件會序列化為布林類型|  
+|`SERIALIZATION_TYPE_CHAR`|物件會序列化為字元類型。|  
+|`SERIALIZATION_TYPE_I1`|物件會序列化為帶正負號的1位元組整數。|  
+|`SERIALIZATION_TYPE_U1`|物件會序列化為不帶正負號的1位元組整數。|  
+|`SERIALIZATION_TYPE_I2`|物件會序列化為帶正負號的2位元組整數。|  
+|`SERIALIZATION_TYPE_U2`|物件會序列化為不帶正負號的2位元組整數。|  
+|`SERIALIZATION_TYPE_I4`|物件會序列化為帶正負號的4位元組整數。|  
+|`SERIALIZATION_TYPE_U4`|物件會序列化為不帶正負號的4位元組整數。|  
+|`SERIALIZATION_TYPE_I8`|物件會序列化為帶正負號的8位元組整數。|  
+|`SERIALIZATION_TYPE_U8`|物件會序列化為不帶正負號的8位元組整數。|  
+|`SERIALIZATION_TYPE_R4`|物件會序列化為4個位元組的浮點數。|  
+|`SERIALIZATION_TYPE_R8`|物件會序列化為8位元組浮點數。|  
+|`SERIALIZATION_TYPE_STRING`|物件會序列化為 System.string 類型。|  
+|`SERIALIZATION_TYPE_SZARRAY`|物件會序列化為一維、零下限陣列。|  
+|`SERIALIZATION_TYPE_TYPE`|物件會序列化為泛型型別。|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|物件會序列化為加上標籤的物件。|  
+|`SERIALIZATION_TYPE_FIELD`|物件會序列化為欄位。|  
+|`SERIALIZATION_TYPE_PROPERTY`|物件會序列化為屬性。|  
+|`SERIALIZATION_TYPE_ENUM`|物件會序列化為列舉型別。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

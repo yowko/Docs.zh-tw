@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427991"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints 方法
-在目前的方法內定義一組序列點。 Each starting line and starting column define the start of a statement within a method. Each ending line and ending column define the end of a statement within a method. The arrays should be sorted in increasing order of offsets. The offset is always measured from the start of the method, in bytes.  
+在目前的方法內定義一組序列點。 每個起始行和起始欄都會定義方法內的語句開頭。 每個結尾行和結束資料行都會定義方法內的語句結尾。 陣列應該以遞增的位移順序排序。 一定會從方法的開頭來測量位移（以位元組為單位）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,32 +40,32 @@ HRESULT DefineSequencePoints(
   
 ## <a name="parameters"></a>參數  
  `document`  
- [in] The document object for which the sequence points are being defined.  
+ 在要定義序列點的檔物件。  
   
  `spCount`  
- [in] A `ULONG32` that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.  
+ 在`ULONG32`，指出每個 `offsets`、`lines`、`columns`、`endLines`和 `endColumns` 緩衝區的大小。  
   
  `offsets`  
- [in] The offset of the sequence points measured from the beginning of the method.  
+ 在從方法開頭測量之序列點的位移。  
   
  `lines`  
- [in] The starting line numbers of the sequence points.  
+ 在序列點的起始行號。  
   
  `columns`  
- [in] The starting column numbers of the sequence points.  
+ 在序列點的起始欄號。  
   
  `endLines`  
- [in] The ending line numbers of the sequence points. 這是選擇性參數。  
+ 在序列點的結束行號。 這個參數是選擇性的。  
   
  `endColumns`  
- [in] The ending column numbers of the sequence points. 這是選擇性參數。  
+ 在序列點的結束欄號。 這個參數是選擇性的。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

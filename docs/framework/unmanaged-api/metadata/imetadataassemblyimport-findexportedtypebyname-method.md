@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449455"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName 方法
-Gets a pointer to an exported type, given its name and enclosing type.  
+取得匯出類型的指標，並指定其名稱和封入類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,27 +37,27 @@ HRESULT FindExportedTypeByName (
   
 ## <a name="parameters"></a>參數  
  `szName`  
- [in] The name of the exported type.  
+ 在匯出之類型的名稱。  
   
  `mdtExportedType`  
- [in] The metadata token for the enclosing class of the exported type. This value is `mdExportedTypeNil` if the requested exported type is not a nested type.  
+ 在已匯出類型之封入類別的元資料標記。 如果要求的匯出型別不是嵌套型別，這個值就會 `mdExportedTypeNil`。  
   
  `ptkExportedType`  
- [out] A pointer to the `mdExportedType` token that represents the exported type.  
+ 脫銷表示已匯出類型之 `mdExportedType` token 的指標。  
   
 ## <a name="remarks"></a>備註  
- The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.  
+ `FindExportedTypeByName` 方法會使用 common language runtime 所採用的標準規則來解析參考。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
 - [執行階段如何找出組件](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

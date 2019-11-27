@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438114"
 ---
 # <a name="notify_filter-enumeration"></a>NOTIFY_FILTER 列舉
-Identifies callbacks for debugger functions. For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.  
+識別偵錯工具函式的回呼。 如需詳細資訊，請參閱[INotifySource2：： SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,17 +43,17 @@ enum tagNOTIFY_FILTER
   
 |成員|描述|  
 |------------|-----------------|  
-|`NOTIFY_FILTER_ONSYNCCALLOUT`|Indicates that the [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) method should be invoked.|  
-|`NOTIFY_FILTER_ONSYNCCALLENTER`|Indicates that the [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) method should be invoked.|  
-|`NOTIFY_FILTER_ONSYNCCALLEXIT`|Indicates that the [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) method should be invoked.|  
-|`NOTIFY_FILTER_ONSYNCCALLRETURN`|Indicates that the [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) method should be invoked.|  
-|`NOTIFY_FILTER_ALLSYNC`|Indicates that all of the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) methods should be invoked.|  
-|`NOTIFY_FILTER_ALL`|Activates all existing and future notifications.|  
-|`NOTIFY_FILTER_NONE`|Indicates that no notification methods should be invoked.|  
+|`NOTIFY_FILTER_ONSYNCCALLOUT`|表示應該叫用[INotifySink2：： OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)方法。|  
+|`NOTIFY_FILTER_ONSYNCCALLENTER`|表示應該叫用[INotifySink2：： OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)方法。|  
+|`NOTIFY_FILTER_ONSYNCCALLEXIT`|表示應該叫用[INotifySink2：： OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)方法。|  
+|`NOTIFY_FILTER_ONSYNCCALLRETURN`|表示應該叫用[INotifySink2：： OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)方法。|  
+|`NOTIFY_FILTER_ALLSYNC`|表示應該叫用所有的[INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)方法。|  
+|`NOTIFY_FILTER_ALL`|啟用所有現有和未來的通知。|  
+|`NOTIFY_FILTER_NONE`|表示不應叫用任何通知方法。|  
   
 ## <a name="requirements"></a>需求  
- **Header:** ProtocolNotify2.idl  
+ **標頭：** ProtocolNotify2 .idl  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [診斷符號存放區列舉](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
