@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448755"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType 列舉
-Specifies the type of a module.  
+指定模組的類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,23 +43,23 @@ typedef enum
   
 |成員|描述|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|The module is an invalid type.|  
-|`ValidatorModuleTypeMin`|The minimum value of the `CorValidatorModuleType` enum.|  
-|`ValidatorModuleTypePE`|The module is a portable executable (PE) file.|  
-|`ValidatorModuleTypeObj`|The module is a .obj file.|  
-|`ValidatorModuleTypeEnc`|The module is an edit-and-continue debugger session.|  
-|`ValidatorModuleTypeIncr`|The module is one that has been incrementally built.|  
-|`ValidatorModuleTypeMax`|The maximum value of the `CorValidatorModuleType` enum.|  
+|`ValidatorModuleTypeInvalid`|模組是不正確類型。|  
+|`ValidatorModuleTypeMin`|`CorValidatorModuleType` 列舉的最小值。|  
+|`ValidatorModuleTypePE`|此模組是可移植的可執行檔（PE）。|  
+|`ValidatorModuleTypeObj`|模組是 .obj 檔案。|  
+|`ValidatorModuleTypeEnc`|模組是「編輯後繼續」偵錯工具會話。|  
+|`ValidatorModuleTypeIncr`|模組是以累加方式建立的模組。|  
+|`ValidatorModuleTypeMax`|`CorValidatorModuleType` 列舉的最大值。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

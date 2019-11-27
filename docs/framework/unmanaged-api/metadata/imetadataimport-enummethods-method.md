@@ -39,37 +39,37 @@ HRESULT EnumMethods (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in、out]列舉值的指標。 第一次呼叫此方法時，此值必須為 Null。  
   
  `cl`  
- [in] A TypeDef token representing the type with the methods to enumerate.  
+ 在TypeDef token，代表具有要列舉之方法的類型。  
   
  `rMethods`  
- [out] The array to store the MethodDef tokens.  
+ 脫銷要儲存 MethodDef 標記的陣列。  
   
  `cMax`  
- [in] The maximum size of the MethodDef `rMethods` array.  
+ 在MethodDef `rMethods` 陣列的大小上限。  
   
  `pcTokens`  
- [out] The number of MethodDef tokens returned in `rMethods`.  
+ 脫銷`rMethods`中傳回的 MethodDef 權杖數目。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods` returned successfully.|  
-|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|已成功傳回 `EnumMethods`。|  
+|`S_FALSE`|沒有要列舉的 MethodDef 標記。 在此情況下，`pcTokens` 為零。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

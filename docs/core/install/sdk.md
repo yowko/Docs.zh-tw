@@ -1,6 +1,6 @@
 ---
-title: Install .NET Core SDK on Windows, Linux, and macOS - .NET Core
-description: Learn how to install .NET Core on Windows, Linux, and macOS. Discover the dependencies required to develop .NET Core apps.
+title: 在 Windows、Linux 和 macOS 上安裝 .NET Core SDK-.NET Core
+description: 瞭解如何在 Windows、Linux 和 macOS 上安裝 .NET Core。 探索開發 .NET Core 應用程式所需的相依性。
 author: thraka
 ms.author: adegeo
 ms.date: 11/06/2019
@@ -13,96 +13,96 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450874"
 ---
-# <a name="install-the-net-core-sdk"></a>Install the .NET Core SDK
+# <a name="install-the-net-core-sdk"></a>安裝 .NET Core SDK
 
-In this article, you'll learn how to install the .NET Core SDK. The .NET Core SDK is used to create .NET Core apps and libraries. The .NET Core runtime is always installed with the SDK.
+在本文中，您將瞭解如何安裝 .NET Core SDK。 .NET Core SDK 可用來建立 .NET Core 應用程式和程式庫。 .NET Core 執行時間一律會與 SDK 一起安裝。
 
-You can download and install .NET Core directly with one of the following links:
+您可以使用下列其中一個連結直接下載並安裝 .NET Core：
 
-- [.NET Core 3.1 Preview 3 downloads](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [.NET Core 3.0 downloads](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- [.NET Core 2.2 downloads](https://dotnet.microsoft.com/download/dotnet-core/2.2)
-- [.NET Core 2.1 downloads](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+- [.NET Core 3.1 Preview 3 下載](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET Core 3.0 下載](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [.NET Core 2.2 下載](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [.NET Core 2.1 下載](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 
-You can also install .NET Core as part of an integrated development environment (IDE), detailed in the sections below.
+您也可以將 .NET Core 安裝為整合式開發環境（IDE）的一部分，如下節所述。
 
-## <a name="install-with-an-installer"></a>Install with an installer
+## <a name="install-with-an-installer"></a>使用安裝程式安裝
 
-Both Windows and macOS have standalone installers that can be used to install the .NET Core 3.0 SDK.
+Windows 和 macOS 都有獨立的安裝程式，可以用來安裝 .NET Core 3.0 SDK。
 
-- Windows [x64 CPUs](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x64-installer) | [x32 CPUs](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x86-installer)
-- macOS [x64 CPUs](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-macos-x64-installer)
+- Windows [X64 cpu](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x64-installer) | [x32 cpu](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x86-installer)
+- macOS [X64 cpu](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-macos-x64-installer)
 
 ::: zone pivot="os-linux"
 
-## <a name="install-with-a-package-manager"></a>Install with a package manager
+## <a name="install-with-a-package-manager"></a>使用套件管理員進行安裝
 
-You can install the .NET Core SDK with many of the common Linux package managers. For more information, see [Linux Package Manager - Install .NET Core](linux-package-manager-rhel7.md).
+您可以使用許多常見的 Linux 套件管理員來安裝 .NET Core SDK。 如需詳細資訊，請參閱[Linux 套件管理員-安裝 .Net Core](linux-package-manager-rhel7.md)。
 
 ::: zone-end
 
 ::: zone pivot="os-windows"
 
-## <a name="install-with-visual-studio"></a>Install with Visual Studio
+## <a name="install-with-visual-studio"></a>使用 Visual Studio 安裝
 
-If you're using Visual Studio to develop .NET Core apps, the following table describes the minimum required version of Visual Studio based on the target .NET Core SDK version.
+如果您使用 Visual Studio 開發 .NET Core 應用程式，下表將根據目標 .NET Core SDK 版本描述 Visual Studio 的最低必要版本。
 
-| .NET Core SDK version | Visual Studio 版本                      |
+| .NET Core SDK 版本 | Visual Studio 版本                      |
 | --------------------- | ------------------------------------------ |
-| 3.0                   | Visual Studio 2019 version 16.3 or higher. |
-| 2.2                   | Visual Studio 2017 version 15.9 or higher. |
-| 2.1                   | Visual Studio 2017 version 15.7 or higher. |
+| 3.0                   | Visual Studio 2019 16.3 或更高版本。 |
+| 2.2                   | Visual Studio 2017 15.9 或更高版本。 |
+| 2.1                   | Visual Studio 2017 15.7 或更高版本。 |
 
-If you already have Visual Studio installed, you can check your version with the following steps.
+如果您已安裝 Visual Studio，您可以使用下列步驟來檢查您的版本。
 
 01. 開啟 Visual Studio。
-01. Select **Help** > **About Microsoft Visual Studio**.
-01. Read the version number from the **About** dialog.
+01. 選取 **[** 說明] > **關於 Microsoft Visual Studio**。
+01. 閱讀 [**關於**] 對話方塊中的版本號碼。
 
-Visual Studio can install the latest .NET Core SDK and runtime.
+Visual Studio 可以安裝最新的 .NET Core SDK 和執行時間。
 
-- [Download Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
+- [下載 Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)。
 
-### <a name="select-a-workload"></a>Select a workload
+### <a name="select-a-workload"></a>選取工作負載
 
-When installing or modifying Visual Studio, select one of the following workloads, depending on the kind of application you're building:
+安裝或修改 Visual Studio 時，請根據您所建立的應用程式類型，選取下列其中一個工作負載：
 
-- The **.NET Core cross-platform development** workload in the **Other Toolsets** section.
-- The **ASP.NET and web development** workload in the **Web & Cloud** section.
-- The **Azure development** workload in the **Web & Cloud** section.
-- The **.NET desktop development** workload in the **Desktop & Mobile** section.
+- [**其他工具**組] 區段中的 [ **.net Core 跨平臺開發**] 工作負載。
+- **Web & 雲端**一節中的**ASP.NET 和 網頁程式開發**工作負載。
+- **Web & 雲端**一節中的**Azure 開發**工作負載。
+- **桌上型電腦 & Mobile**一節中的 **.net 桌面開發**工作負載。
 
-[![Windows Visual Studio 2019 with .NET Core workload](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)
+[使用 .NET Core 工作負載 ![Windows Visual Studio 2019](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)
 
 ::: zone-end
 
 ::: zone pivot="os-macos"
 
-## <a name="install-with-visual-studio-for-mac"></a>Install with Visual Studio for Mac
+## <a name="install-with-visual-studio-for-mac"></a>使用 Visual Studio for Mac 安裝
 
-Visual Studio for Mac installs the .NET Core SDK when the **.NET Core** workload is selected. To get started with .NET Core development on macOS, see [Install Visual Studio 2019 for Mac](/visualstudio/mac/installation).
+Visual Studio for Mac 在選取 [ **.Net Core** ] 工作負載時安裝 .NET Core SDK。 若要開始在 macOS 上使用 .NET Core 開發，請參閱[安裝適用于 Mac 的 Visual Studio 2019](/visualstudio/mac/installation)。
 
-[![macOS Visual Studio 2019 for Mac with .NET Core workload feature](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)
+[使用 .NET Core 工作負載功能 ![macOS Visual Studio 2019 for Mac](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)
 
 ::: zone-end
 
-## <a name="install-from-visual-studio-code"></a>Install from Visual Studio Code
+## <a name="install-from-visual-studio-code"></a>從 Visual Studio Code 安裝
 
-Visual Studio Code is a powerful and lightweight source code editor that runs on your desktop. Visual Studio Code is available for Windows, macOS, and Linux.
+Visual Studio Code 是一種功能強大且輕量的原始程式碼編輯器，可在您的桌面上執行。 Visual Studio Code 適用于 Windows、macOS 和 Linux。
 
-While Visual Studio Code doesn't come with .NET Core support, adding .NET Core support is simple.
+雖然 Visual Studio Code 不隨附 .NET Core 支援，但新增 .NET Core 支援很簡單。
 
-01. [Download and install Visual Studio Code](https://code.visualstudio.com/Download).
-01. [Download and install the .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0).
-01. [Install the C# extension from the Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp).
+01. [下載並安裝 Visual Studio Code](https://code.visualstudio.com/Download)。
+01. [下載並安裝 .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)。
+01. [從 Visual Studio Code C# marketplace 安裝延伸](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)模組。
 
 ::: zone pivot="os-windows"
 
-## <a name="install-with-powershell-automation"></a>Install with PowerShell automation
+## <a name="install-with-powershell-automation"></a>使用 PowerShell 自動化進行安裝
 
-The [dotnet-install scripts](../tools/dotnet-install-script.md) are used for automation and non-admin installs of the SDK. You can download the script from the [dotnet-install script reference page](../tools/dotnet-install-script.md).
+[Dotnet-安裝腳本](../tools/dotnet-install-script.md)會用於 SDK 的自動化和非系統管理員安裝。 您可以從 [ [dotnet-安裝腳本參考] 頁面](../tools/dotnet-install-script.md)下載此腳本。
 
-The script defaults to installing the latest [long term support (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) version, which is .NET Core 2.1. To install the current release of .NET Core, run the script with the following switch.
+腳本預設為安裝最新的[長期支援（LTS）](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)版本，也就是 .net Core 2.1。 若要安裝目前版本的 .NET Core，請使用下列參數執行腳本。
 
 ```powershell
 dotnet-install.ps1 -Channel Current
@@ -112,11 +112,11 @@ dotnet-install.ps1 -Channel Current
 
 ::: zone pivot="os-linux,os-macos"
 
-## <a name="install-with-bash-automation"></a>Install with bash automation
+## <a name="install-with-bash-automation"></a>使用 bash automation 進行安裝
 
-The [dotnet-install scripts](../tools/dotnet-install-script.md) are used for automation and non-admin installs of the SDK. You can download the script from the [dotnet-install script reference page](../tools/dotnet-install-script.md).
+[Dotnet-安裝腳本](../tools/dotnet-install-script.md)會用於 SDK 的自動化和非系統管理員安裝。 您可以從 [ [dotnet-安裝腳本參考] 頁面](../tools/dotnet-install-script.md)下載此腳本。
 
-The script defaults to installing the latest [long term support (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) version, which is .NET Core 2.1. To install the current release of .NET Core, run the script with the following switch.
+腳本預設為安裝最新的[長期支援（LTS）](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)版本，也就是 .net Core 2.1。 若要安裝目前版本的 .NET Core，請使用下列參數執行腳本。
 
 ```bash
 ./dotnet-install.sh -c Current
@@ -126,29 +126,29 @@ The script defaults to installing the latest [long term support (LTS)](https://d
 
 ## <a name="docker"></a>Docker
 
-Containers provide a lightweight way to isolate your application from the rest of the host system. Containers on the same machine share just the kernel and use resources given to your application.
+容器提供輕量的方式，將您的應用程式與主機系統的其餘部分隔離。 相同電腦上的容器只會共用核心，並使用提供給您應用程式的資源。
 
-.NET Core can run in a Docker container. 官方 .NET Core Docker 映像會發佈至 Microsoft 容器登錄 (MCR)，並且可在 [Microsoft.NET Core Docker Hub 存放庫](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\) 中找到。 每個存放庫都包含您可以使用的 .NET (SDK 或執行階段) 與作業系統不同組合的映像。
+.NET Core 可以在 Docker 容器中執行。 官方 .NET Core Docker 映像會發佈至 Microsoft 容器登錄 (MCR)，並且可在 [Microsoft.NET Core Docker Hub 存放庫](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\) 中找到。 每個存放庫都包含您可以使用的 .NET (SDK 或執行階段) 與作業系統不同組合的映像。
 
 Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET Core 存放庫](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) \(英文\) 可提供為了在生產環境中執行 ASP.NET Core 應用程式而建置的映像。
 
-For more information about using .NET Core in a Docker container, see [Introduction to .NET and Docker](../docker/introduction.md) and [Samples](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md).
+如需在 Docker 容器中使用 .NET Core 的詳細資訊，請參閱[.net 和 Docker 簡介](../docker/introduction.md)和[範例](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md)。
 
 ## <a name="next-steps"></a>後續步驟
 
 ::: zone pivot="os-windows"
 
-- [Tutorial: C# Hello World tutorial](../tutorials/with-visual-studio.md).
-- [Tutorial: Visual Basic Hello World tutorial](../tutorials/vb-with-visual-studio.md).
-- [Tutorial: Create a new app with Visual Studio Code](https://code.visualstudio.com/docs/languages/dotnet).
-- [Tutorial: Containerize a .NET Core app](../docker/build-container.md).
+- [教學課程C# ： Hello World 教學](../tutorials/with-visual-studio.md)課程。
+- [教學課程： Visual Basic Hello World 教學](../tutorials/vb-with-visual-studio.md)課程。
+- [教學課程：使用 Visual Studio Code 建立新的應用程式](https://code.visualstudio.com/docs/languages/dotnet)。
+- [教學課程：容器化 .Net Core 應用程式](../docker/build-container.md)。
 
 ::: zone-end
 
 ::: zone pivot="os-macos"
 
-- [Tutorial: Get started on macOS](../tutorials/using-on-mac-vs.md).
-- [Tutorial: Create a new app with Visual Studio Code](https://code.visualstudio.com/docs/languages/dotnet).
-- [Tutorial: Containerize a .NET Core app](../docker/build-container.md).
+- [教學課程：開始使用 macOS](../tutorials/using-on-mac-vs.md)。
+- [教學課程：使用 Visual Studio Code 建立新的應用程式](https://code.visualstudio.com/docs/languages/dotnet)。
+- [教學課程：容器化 .Net Core 應用程式](../docker/build-container.md)。
 
 ::: zone-end

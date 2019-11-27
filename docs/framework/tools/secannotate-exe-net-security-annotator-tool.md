@@ -17,7 +17,7 @@ ms.locfileid: "74447317"
   
  Visual Studio 延伸模組 ([Security Annotator](https://marketplace.visualstudio.com/items?itemName=sheldonb.SecurityAnnotator)) 提供 SecAnnotate.exe 的圖形化使用者介面，讓您能夠從 Visual Studio 執行該工具。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下鍵入以下內容，*parameters* 會在下一節中說明，而 *assemblies* 則包含以空格分隔的一或多個組件名稱：  
   
@@ -41,7 +41,7 @@ SecAnnotate.exe [parameters] [assemblies]
 |`/r:` *assembly*<br /><br /> 或<br /><br /> `/referenceassembly:` *assembly*|註釋期間解析相依組件時包含指定的組件。 參考組件的優先順序高於參考路徑中的組件。|  
 |`/s:` *rulename*<br /><br /> 或<br /><br /> `/suppressrule:` *rulename*|隱藏執行輸入組件上的指定透明度規則。|  
 |`/t`<br /><br /> 或<br /><br /> `/forcetransparent`|強制 Annotator 工具將所有不具透明度註釋的組件視為完全透明。|  
-|`/t`:*assembly*<br /><br /> 或<br /><br /> `/forcetransparent`:*assembly*|強制指定的組件呈現透明，無論目前組件層級註釋為何。|  
+|`/t`:*組件*<br /><br /> 或<br /><br /> `/forcetransparent`:*組件*|強制指定的組件呈現透明，無論目前組件層級註釋為何。|  
 |||  
 |`/v`<br /><br /> 或<br /><br /> `/verify`|只用於驗證組件的註釋是否正確，如果組件並未驗證，請勿為了找出所有必要的註釋而嘗試多次傳遞。|  
 |`/x`<br /><br /> 或<br /><br /> `/verbose`|指定標註提供詳細輸出。|  

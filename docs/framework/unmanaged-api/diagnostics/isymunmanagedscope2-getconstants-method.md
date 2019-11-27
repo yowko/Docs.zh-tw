@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446244"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants 方法
-Gets the local constants defined within this scope.  
+取得在此範圍內定義的本機常數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,20 +38,20 @@ HRESULT GetConstants(
   
 ## <a name="parameters"></a>參數  
  `cConstants`  
- [in] The length of the buffer that the `pcConstants` parameter points to.  
+ 在`pcConstants` 參數所指向的緩衝區長度。  
   
  `pcConstants`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.  
+ 脫銷`ULONG32` 的指標，接收包含常數所需的緩衝區大小（以字元為單位）。  
   
  `constants`  
- [out] The buffer that stores the constants.  
+ 脫銷儲存常數的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedScope2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)

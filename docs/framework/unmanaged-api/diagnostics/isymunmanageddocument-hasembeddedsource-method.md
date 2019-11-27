@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449118"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>ISymUnmanagedDocument::HasEmbeddedSource 方法
-Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.  
+如果檔具有內嵌在偵錯工具符號中的來源，則傳回 `true`。否則，會傳回 `false`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,11 +34,11 @@ HRESULT HasEmbeddedSource(
   
 ## <a name="parameters"></a>參數  
  `pRetVal`  
- [out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.  
+ 脫銷變數的指標，指出檔是否有內嵌在偵錯工具符號中的來源。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds.  
+ 如果方法成功，則 S_OK。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

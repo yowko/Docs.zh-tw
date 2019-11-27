@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449040"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables 方法
-Gets the local variables.  
+取得本機變數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,23 +38,23 @@ HRESULT GetLocalVariables(
   
 ## <a name="parameters"></a>參數  
  `mdMethodToken`  
- [in] The metadata token of the method.  
+ 在方法的元資料標記。  
   
  `cLocals`  
- [in] A `ULONG` that indicates the size of the `rgLocals` parameter.  
+ 在指出 `rgLocals` 參數大小的 `ULONG`。  
   
  `rgLocals`  
- [out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.  
+ 脫銷[ISymUnmanagedVariable](isymunmanagedvariable-interface.md)實例的傳回陣列。  
   
  `pceltFetched`  
- [out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.  
+ 脫銷`ULONG` 的指標，接收包含區域變數所需的 `rgLocals` 緩衝區大小。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedENCUpdate 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

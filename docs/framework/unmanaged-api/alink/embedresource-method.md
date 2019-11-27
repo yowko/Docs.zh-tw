@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446532"
 ---
 # <a name="embedresource-method"></a>EmbedResource 方法
-Declares an embedded resource. This method does not actually embed the resource.  
+宣告內嵌資源。 這個方法不會實際內嵌資源。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,27 +39,27 @@ HRESULT EmbedResource(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- ID of the assembly.  
+ 元件的識別碼。  
   
  `FileToken`  
- File token or assembly ID of file that contains the resource.  
+ 包含資源之檔案的檔案 token 或元件識別碼。  
   
  `pszResourceName`  
  資源的名稱。  
   
  `dwOffset`  
- Offset of resource from RVA.  
+ 來自 RVA 的資源位移。  
   
  `dwFlags`  
- Accessibility flags such as `mrPublic` and `mrPrivate`. These flags may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ 協助工具旗標，例如 `mrPublic` 和 `mrPrivate`。 這些旗標可能會傳遞至[DefineExportedType 方法](../metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h.  
+ 需要 alink. h。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

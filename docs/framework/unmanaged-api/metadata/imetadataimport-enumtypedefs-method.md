@@ -38,37 +38,37 @@ HRESULT EnumTypeDefs (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [out] A pointer to the new enumerator. This must be NULL for the first call of this method.  
+ 脫銷新枚舉器的指標。 第一次呼叫此方法時，此值必須為 Null。  
   
  `rTypeDefs`  
- [in] The array used to store the TypeDef tokens.  
+ 在用來儲存 TypeDef 標記的陣列。  
   
  `cMax`  
  [in] `rTypeDefs` 陣列的大小上限。  
   
  `pcTypeDefs`  
- [out] The number of TypeDef tokens returned in `rTypeDefs`.  
+ 脫銷`rTypeDefs`中傳回的 TypeDef 標記數目。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeDefs` is zero.|  
+|`S_OK`|已成功傳回 `EnumTypeDefs`。|  
+|`S_FALSE`|沒有要列舉的權杖。 在此情況下，`pcTypeDefs` 為零。|  
   
 ## <a name="remarks"></a>備註  
- The TypeDef token represents a type such as a class or an interface, as well as any type added via an extensibility mechanism.  
+ TypeDef token 代表類別或介面等類型，以及透過擴充性機制新增的任何類型。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447200"
 ---
 # <a name="getscope-method"></a>GetScope 方法
-Gets an import scope.  
+取得匯入範圍。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,24 +37,24 @@ HRESULT GetScope(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- Unique ID of assembly to import to.  
+ 要匯入之元件的唯一識別碼。  
   
  `FileToken`  
- Unique ID of the file to import from.  
+ 要匯入之檔案的唯一識別碼。  
   
  `dwScope`  
- Zero-based scope to import.  
+ 要匯入之以零為基底的範圍。  
   
  `ppImportScope`  
- Receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface for the scope.  
+ 接收範圍的[IMetaDataImport 介面](../metadata/imetadataimport-interface.md)介面。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h  
+ 需要 alink. h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

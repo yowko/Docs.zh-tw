@@ -51,7 +51,7 @@ DLR 也可協助您建立支援動態作業的程式庫。 比方說，如果您
 
 - IronPython。 在 [GitHub](https://github.com/IronLanguages/ironpython2) 網站上以開放原始碼軟體形式提供。
 
-- IronRuby。 Available as open-source software from the [IronRuby](http://ironruby.net/) website.
+- IronRuby。 以開放原始碼軟體的形式提供[IronRuby](http://ironruby.net/)網站。
 
 ## <a name="primary-dlr-advantages"></a>主要的 DLR 優點
  DLR 提供下列優點。
@@ -74,7 +74,7 @@ DLR 也可協助您建立支援動態作業的程式庫。 比方說，如果您
 ## <a name="dlr-architecture"></a>DLR 架構
  下圖顯示動態語言執行階段的架構。
 
- ![Dynamic Language Runtime Architecture Overview](./media/dlr-archoverview.png "DLR_ArchOverview") DLR architecture
+ ![動態語言執行時間架構總覽](./media/dlr-archoverview.png "DLR_ArchOverview")DLR 架構
 
  DLR 新增一組服務給 CLR，以便更妥善支援動態語言。 這些服務包括下列各項：
 
@@ -89,11 +89,11 @@ DLR 使用呼叫站台中的繫結器來進行通訊，不只是與 .NET Framewo
 ## <a name="dlr-documentation"></a>DLR 文件
  如需如何使用 DLR 開放原始碼版本將動態行為新增至語言的詳細資訊，或如何搭配使用動態語言與 .NET Framework 的詳細資訊，請參閱 GitHub 的 [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) 存放庫上的文件。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
 - [通用語言執行平台](../../standard/clr.md)
-- [運算式樹狀結構 (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [運算式樹狀架構 (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
 - [運算式樹狀結構 (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [逐步解說：建立和使用動態物件](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

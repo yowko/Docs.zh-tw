@@ -1,5 +1,5 @@
 ---
-title: RtcState Class (System.Net)
+title: RtcState 類別（System.Net）
 ms.date: 11/01/2019
 ms.technology: dotnet-networking
 topic_type:
@@ -20,9 +20,9 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451182"
 ---
-# <a name="rtcstate-class"></a>RtcState Class
+# <a name="rtcstate-class"></a>RtcState 類別
 
-The `RtcState` class represents state data for a real-time communication (RTC) request.
+`RtcState` 類別代表即時通訊（RTC）要求的狀態資料。
 
 ## <a name="syntax"></a>語法
   
@@ -31,14 +31,14 @@ internal class RtcState
 ```
 
 > [!WARNING]
-> The `RtcState` class is internal and is not meant to be used directly in your code.
+> `RtcState` 類別是內部的，而且不適合直接在程式碼中使用。
 > 
-> Microsoft does not support the use of this class in a production application under any circumstance.
+> 在任何情況下，Microsoft 不支援在生產應用程式中使用此類別。
 
 ## <a name="requirements"></a>需求
 
 **命名空間︰** <xref:System.Net>
 
-**Assembly:** System (in System.dll)
+**元件：** 系統（在 System .dll 中）
 
-**.NET Framework versions:** Available since 4.5.
+**.NET Framework 版本：** 自4.5 開始提供。

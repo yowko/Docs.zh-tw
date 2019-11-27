@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446467"
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes 方法
-Retrieves assembly-level custom attributes.  
+抓取元件層級的自訂屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,27 +39,27 @@ HRESULT EnumCustomAttributes(
   
 ## <a name="parameters"></a>參數  
  `hEnum`  
- Handle of enumerator.  
+ 列舉值的控制碼。  
   
  `tkType`  
- Type of attributes to be enumerated. Use `mdTokenNill` for all attributes.  
+ 要列舉的屬性類型。 針對所有屬性使用 `mdTokenNill`。  
   
  `rCustomValues`  
- Receives custom attributes tokens.  
+ 接收自訂屬性標記。  
   
  `cMax`  
- Specifies size of `rCustomValues` array.  
+ 指定 `rCustomValues` 陣列的大小。  
   
  `pcCustomValues`  
- Optionally receives count of token values.  
+ 選擇性地接收權杖值的計數。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h  
+ 需要 alink. h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

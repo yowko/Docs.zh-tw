@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449055"
 ---
 # <a name="isymunmanagedencupdategetlocalvariablecount-method"></a>ISymUnmanagedENCUpdate::GetLocalVariableCount 方法
-Gets the number of local variables.  
+取得本機變數的數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,17 +35,17 @@ HRESULT GetLocalVariableCount(
   
 ## <a name="parameters"></a>參數  
  `mdMethodToken`  
- [in] The metadata token of methods.  
+ 在方法的元資料標記。  
   
  `pcLocals`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the number of local variables.  
+ 脫銷`ULONG32` 的指標，接收包含本機變數數目所需的緩衝區大小（以字元為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedENCUpdate 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

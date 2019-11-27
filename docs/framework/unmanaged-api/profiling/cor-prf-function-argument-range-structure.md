@@ -37,18 +37,18 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
 |Members|描述|  
 |-------------|-----------------|  
-|`startAddress`|The starting address of the block.|  
-|`length`|The length of the contiguous block.|  
+|`startAddress`|區塊的起始位址。|  
+|`length`|連續區塊的長度。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorProf.idl  
+ **標頭：** Corprof.idl .idl  
   
  **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [分析結構](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

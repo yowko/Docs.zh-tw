@@ -18,9 +18,9 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449832"
 ---
-# <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10::IsFrozenObject Method
+# <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10：： IsFrozenObject 方法
 
-Given an ObjectID, determines whether the object is in a read-only segment.
+給定 ObjectID，判斷物件是否在唯讀區段中。
 
 ## <a name="syntax"></a>語法
 
@@ -32,21 +32,21 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 #### <a name="parameters"></a>參數
 
 `objectId` \
-[in] The object to examine.
+在要檢查的物件。
 
 `pbFrozen` \
-[out] A `BOOL` indicating if the object is in a read-only segment.
+脫銷`BOOL`，指出物件是否在唯讀區段中。
 
 ## <a name="requirements"></a>需求
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**平臺：** 請參閱[.Net Core 支援的作業系統](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)。
 
 **標頭：** CorProf.idl、CorProf.h
 
 **程式庫：** CorGuids.lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.Net 版本：** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

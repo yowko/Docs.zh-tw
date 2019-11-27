@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446934"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>ICorProfilerCallback::ThreadCreated 方法
-Notifies the profiler that a thread has been created.  
+通知分析工具已建立執行緒。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,10 +34,10 @@ HRESULT ThreadCreated(
   
 ## <a name="parameters"></a>參數  
  `threadId`  
- [in] The ID of the thread that has been created.  
+ 在已建立之執行緒的識別碼。  
   
 ## <a name="remarks"></a>備註  
- The `threadId` value is immediately valid.  
+ `threadId` 值會立即生效。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -48,7 +48,7 @@ HRESULT ThreadCreated(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ThreadDestroyed 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)

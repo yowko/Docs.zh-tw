@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449286"
 ---
 # <a name="isymunmanagedconstantgetname-method"></a>ISymUnmanagedConstant::GetName 方法
-Gets the name of the constant.  
+取得常數的名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,21 +37,21 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>參數  
  `cchName`  
- [in] The length of the buffer that the `szName` parameter points to.  
+ 在`szName` 參數所指向的緩衝區長度。  
   
  `pcchName`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.  
+ 脫銷`ULONG32` 的指標，接收包含名稱所需的緩衝區大小（以字元為單位），包括 null 終止。  
   
  `szName`  
- [out] The buffer that stores the name.  
+ 脫銷儲存名稱的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedConstant 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
 - [GetSignature 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)

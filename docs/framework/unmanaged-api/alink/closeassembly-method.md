@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446574"
 ---
 # <a name="closeassembly-method"></a>CloseAssembly 方法
-Finalizes assembly operations. Call this method before beginning a new assembly or unbound module.  
+完成元件作業。 在開始新元件或解除系結模組之前，請先呼叫這個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,15 +35,15 @@ HRESULT CloseAssembly(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- ID of the assembly.  
+ 元件的識別碼。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h.  
+ 需要 alink. h。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

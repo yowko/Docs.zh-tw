@@ -1,5 +1,5 @@
 ---
-title: AssemblyAttributesGoHere Class (System.Runtime.CompilerServices)
+title: AssemblyAttributesGoHere 類別（CompilerServices）
 ms.date: 03/30/2017
 api_name:
 - System.Runtime.CompilerServices.AssemblyAttributesGoHere
@@ -22,7 +22,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446648"
 ---
-# <a name="assemblyattributesgohere-class"></a>AssemblyAttributesGoHere Class
+# <a name="assemblyattributesgohere-class"></a>AssemblyAttributesGoHere 類別
 
 供 ALink 用來做為儲存自訂屬性相關資訊的預留位置。
 
@@ -38,13 +38,13 @@ internal sealed class AssemblyAttributesGoHere
 
 這個類型的參考會指出與安全性無關且不是多用途的自訂屬性。
 
-These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
+這些類型在 .NET Framework 內標記為「內部」，而且位於 <xref:System.Runtime.CompilerServices> 命名空間中。
 
 ## <a name="requirements"></a>需求
 
 mscorlib.dll
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [AssemblyAttributesGoHereM](assemblyattributesgoherem.md)
 - [AssemblyAttributesGoHereS](assemblyattributesgoheres.md)

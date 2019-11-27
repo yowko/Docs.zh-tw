@@ -38,37 +38,37 @@ HRESULT EnumTypeRefs (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [in、out]列舉值的指標。 第一次呼叫此方法時，此值必須為 Null。  
   
  `rTypeRefs`  
- [out] The array used to store the TypeRef tokens.  
+ 脫銷用來儲存 TypeRef 標記的陣列。  
   
  `cMax`  
  [in] `rTypeRefs` 陣列的大小上限。  
   
  `pcTypeRefs`  
- [out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.  
+ 脫銷`rTypeRefs`中傳回之 TypeRef token 數目的指標。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeRefs` is zero.|  
+|`S_OK`|已成功傳回 `EnumTypeRefs`。|  
+|`S_FALSE`|沒有要列舉的權杖。 在此情況下，`pcTypeRefs` 為零。|  
   
 ## <a name="remarks"></a>備註  
- A TypeRef token represents a reference to a type.  
+ TypeRef 標記代表類型的參考。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -26,7 +26,7 @@ ms.locfileid: "74353705"
  如需有關如何針對特定錯誤進行疑難排解的詳細資訊，請參閱[Visual Basic 程式設計人員的其他資源](../../../visual-basic/getting-started/additional-resources.md)。  
   
 ## <a name="run-time-errors"></a>執行階段錯誤  
- If a Visual Basic application tries to perform an action that the system can't execute, a run-time error occurs, and Visual Basic throws an `Exception` object. Visual Basic can generate custom errors of any data type, including `Exception` objects, by using the `Throw` statement. 應用程式可以透過顯示已攔截例外狀況的錯誤碼和訊息來識別錯誤。 如果未攔截到錯誤，應用程式便會結束。  
+ 如果 Visual Basic 應用程式嘗試執行系統無法執行的動作，就會發生執行階段錯誤，而 Visual Basic 會擲回 `Exception` 物件。 Visual Basic 可以使用 `Throw` 語句，產生任何資料類型（包括 `Exception` 物件）的自訂錯誤。 應用程式可以透過顯示已攔截例外狀況的錯誤碼和訊息來識別錯誤。 如果未攔截到錯誤，應用程式便會結束。  
   
  程式碼可以攔截並檢查執行階段錯誤。 如果您將產生錯誤的程式碼包含在 `Try` 區塊中，您可以攔截相對應 `Catch` 區塊內的所有擲回錯誤。 如需有關如何在程式碼中於執行階段攔截錯誤並加以回應的詳細資訊，請參閱 [Try...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
   
