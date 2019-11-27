@@ -21,10 +21,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436509"
 ---
-# <a name="cornativetype-enumeration"></a><span data-ttu-id="921b7-102">CorNativeType 列舉</span><span class="sxs-lookup"><span data-stu-id="921b7-102">CorNativeType Enumeration</span></span>
-<span data-ttu-id="921b7-103">包含值，這些值描述原生 Unmanaged 類型。</span><span class="sxs-lookup"><span data-stu-id="921b7-103">Contains values that describe native unmanaged types.</span></span>  
+# <a name="cornativetype-enumeration"></a><span data-ttu-id="1d9b0-102">CorNativeType 列舉</span><span class="sxs-lookup"><span data-stu-id="1d9b0-102">CorNativeType Enumeration</span></span>
+<span data-ttu-id="1d9b0-103">包含值，這些值描述原生 Unmanaged 類型。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-103">Contains values that describe native unmanaged types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="921b7-104">語法</span><span class="sxs-lookup"><span data-stu-id="921b7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1d9b0-104">語法</span><span class="sxs-lookup"><span data-stu-id="1d9b0-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorNativeType {  
@@ -85,66 +85,66 @@ typedef enum CorNativeType {
 } CorNativeType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="921b7-105">Members</span><span class="sxs-lookup"><span data-stu-id="921b7-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="1d9b0-105">Members</span><span class="sxs-lookup"><span data-stu-id="1d9b0-105">Members</span></span>  
   
-|<span data-ttu-id="921b7-106">成員</span><span class="sxs-lookup"><span data-stu-id="921b7-106">Member</span></span>|<span data-ttu-id="921b7-107">描述</span><span class="sxs-lookup"><span data-stu-id="921b7-107">Description</span></span>|  
+|<span data-ttu-id="1d9b0-106">成員</span><span class="sxs-lookup"><span data-stu-id="1d9b0-106">Member</span></span>|<span data-ttu-id="1d9b0-107">描述</span><span class="sxs-lookup"><span data-stu-id="1d9b0-107">Description</span></span>|  
 |------------|-----------------|  
-|`NATIVE_TYPE_END`|<span data-ttu-id="921b7-108">已過時。</span><span class="sxs-lookup"><span data-stu-id="921b7-108">Obsolete.</span></span>|  
-|`NATIVE_TYPE_VOID`|<span data-ttu-id="921b7-109">已過時。</span><span class="sxs-lookup"><span data-stu-id="921b7-109">Obsolete.</span></span>|  
-|`NATIVE_TYPE_BOOLEAN`|<span data-ttu-id="921b7-110">A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.</span><span class="sxs-lookup"><span data-stu-id="921b7-110">A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.</span></span>|  
-|`NATIVE_TYPE_I1`|<span data-ttu-id="921b7-111">A signed 8-bit integer value.</span><span class="sxs-lookup"><span data-stu-id="921b7-111">A signed 8-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U1`|<span data-ttu-id="921b7-112">An unsigned 8-bit integer value.</span><span class="sxs-lookup"><span data-stu-id="921b7-112">An unsigned 8-bit integer value.</span></span>|  
-|`NATIVE_TYPE_I2`|<span data-ttu-id="921b7-113">A signed 16-bit integer value.</span><span class="sxs-lookup"><span data-stu-id="921b7-113">A signed 16-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U2`|<span data-ttu-id="921b7-114">An unsigned 16-bit integer value.</span><span class="sxs-lookup"><span data-stu-id="921b7-114">An unsigned 16-bit integer value.</span></span>|  
-|`NATIVE_TYPE_I4`|<span data-ttu-id="921b7-115">帶正負號的 32 位元整數值。</span><span class="sxs-lookup"><span data-stu-id="921b7-115">A signed 32-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U4`|<span data-ttu-id="921b7-116">32 位元不帶正負號的整數值。</span><span class="sxs-lookup"><span data-stu-id="921b7-116">An unsigned 32-bit integer value.</span></span>|  
-|`NATIVE_TYPE_I8`|<span data-ttu-id="921b7-117">A signed 64-bit integer value.</span><span class="sxs-lookup"><span data-stu-id="921b7-117">A signed 64-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U8`|<span data-ttu-id="921b7-118">An unsigned 64-bit integer value.</span><span class="sxs-lookup"><span data-stu-id="921b7-118">An unsigned 64-bit integer value.</span></span>|  
-|`NATIVE_TYPE_R4`|<span data-ttu-id="921b7-119">A 4-byte floating-point numeric value.</span><span class="sxs-lookup"><span data-stu-id="921b7-119">A 4-byte floating-point numeric value.</span></span>|  
-|`NATIVE_TYPE_R8`|<span data-ttu-id="921b7-120">An 8-byte floating-point numeric value.</span><span class="sxs-lookup"><span data-stu-id="921b7-120">An 8-byte floating-point numeric value.</span></span>|  
-|`NATIVE_TYPE_SYSCHAR`|<span data-ttu-id="921b7-121">已過時。</span><span class="sxs-lookup"><span data-stu-id="921b7-121">Obsolete.</span></span>|  
-|`NATIVE_TYPE_VARIANT`|<span data-ttu-id="921b7-122">已過時。</span><span class="sxs-lookup"><span data-stu-id="921b7-122">Obsolete.</span></span>|  
-|`NATIVE_TYPE_CURRENCY`|<span data-ttu-id="921b7-123">A numeric COM type that corresponds to the managed <xref:System.Decimal> type.</span><span class="sxs-lookup"><span data-stu-id="921b7-123">A numeric COM type that corresponds to the managed <xref:System.Decimal> type.</span></span>|  
-|`NATIVE_TYPE_PTR`|<span data-ttu-id="921b7-124">已過時。</span><span class="sxs-lookup"><span data-stu-id="921b7-124">Obsolete.</span></span>|  
-|`NATIVE_TYPE_DECIMAL`|<span data-ttu-id="921b7-125">已過時。</span><span class="sxs-lookup"><span data-stu-id="921b7-125">Obsolete.</span></span>|  
-|`NATIVE_TYPE_DATE`|<span data-ttu-id="921b7-126">已過時。</span><span class="sxs-lookup"><span data-stu-id="921b7-126">Obsolete.</span></span>|  
-|`NATIVE_TYPE_BSTR`|<span data-ttu-id="921b7-127">COM Interop.</span><span class="sxs-lookup"><span data-stu-id="921b7-127">COM Interop.</span></span>|  
-|`NATIVE_TYPE_LPSTR`|<span data-ttu-id="921b7-128">An LPSTR string value.</span><span class="sxs-lookup"><span data-stu-id="921b7-128">An LPSTR string value.</span></span>|  
-|`NATIVE_TYPE_LPWSTR`|<span data-ttu-id="921b7-129">An LPWSTR string value.</span><span class="sxs-lookup"><span data-stu-id="921b7-129">An LPWSTR string value.</span></span>|  
-|`NATIVE_TYPE_LPTSTR`|<span data-ttu-id="921b7-130">An LPTSTR string value.</span><span class="sxs-lookup"><span data-stu-id="921b7-130">An LPTSTR string value.</span></span>|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|<span data-ttu-id="921b7-131">A fixed, system-defined string value.</span><span class="sxs-lookup"><span data-stu-id="921b7-131">A fixed, system-defined string value.</span></span>|  
-|`NATIVE_TYPE_OBJECTREF`|<span data-ttu-id="921b7-132">已過時。</span><span class="sxs-lookup"><span data-stu-id="921b7-132">Obsolete.</span></span>|  
-|`NATIVE_TYPE_IUNKNOWN`|<span data-ttu-id="921b7-133">COM Interop.</span><span class="sxs-lookup"><span data-stu-id="921b7-133">COM Interop.</span></span>|  
-|`NATIVE_TYPE_IDISPATCH`|<span data-ttu-id="921b7-134">COM Interop.</span><span class="sxs-lookup"><span data-stu-id="921b7-134">COM Interop.</span></span>|  
-|`NATIVE_TYPE_STRUCT`|<span data-ttu-id="921b7-135">A native structure value.</span><span class="sxs-lookup"><span data-stu-id="921b7-135">A native structure value.</span></span>|  
-|`NATIVE_TYPE_INTF`|<span data-ttu-id="921b7-136">COM Interop.</span><span class="sxs-lookup"><span data-stu-id="921b7-136">COM Interop.</span></span>|  
-|`NATIVE_TYPE_SAFEARRAY`|<span data-ttu-id="921b7-137">COM Interop.</span><span class="sxs-lookup"><span data-stu-id="921b7-137">COM Interop.</span></span>|  
-|`NATIVE_TYPE_FIXEDARRAY`|<span data-ttu-id="921b7-138">A fixed-length array value.</span><span class="sxs-lookup"><span data-stu-id="921b7-138">A fixed-length array value.</span></span>|  
-|`NATIVE_TYPE_INT`|<span data-ttu-id="921b7-139">A native 16-bit signed integer value.</span><span class="sxs-lookup"><span data-stu-id="921b7-139">A native 16-bit signed integer value.</span></span>|  
-|`NATIVE_TYPE_UINT`|<span data-ttu-id="921b7-140">A native 16-bit unsigned integer value.</span><span class="sxs-lookup"><span data-stu-id="921b7-140">A native 16-bit unsigned integer value.</span></span>|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|<span data-ttu-id="921b7-141">已過時。</span><span class="sxs-lookup"><span data-stu-id="921b7-141">Obsolete.</span></span><br /><br /> <span data-ttu-id="921b7-142">Use NATIVE_TYPE_STRUCT.</span><span class="sxs-lookup"><span data-stu-id="921b7-142">Use NATIVE_TYPE_STRUCT.</span></span>|  
-|`NATIVE_TYPE_BYVALSTR`|<span data-ttu-id="921b7-143">COM Interop.</span><span class="sxs-lookup"><span data-stu-id="921b7-143">COM Interop.</span></span>|  
-|`NATIVE_TYPE_ANSIBSTR`|<span data-ttu-id="921b7-144">COM Interop.</span><span class="sxs-lookup"><span data-stu-id="921b7-144">COM Interop.</span></span>|  
-|`NATIVE_TYPE_TBSTR`|<span data-ttu-id="921b7-145">COM Interop.</span><span class="sxs-lookup"><span data-stu-id="921b7-145">COM Interop.</span></span><br /><br /> <span data-ttu-id="921b7-146">Select BSTR or ANSIBSTR depending on the platform.</span><span class="sxs-lookup"><span data-stu-id="921b7-146">Select BSTR or ANSIBSTR depending on the platform.</span></span>|  
-|`NATIVE_TYPE_VARIANTBOOL`|<span data-ttu-id="921b7-147">A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.</span><span class="sxs-lookup"><span data-stu-id="921b7-147">A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.</span></span>|  
-|`NATIVE_TYPE_FUNC`|<span data-ttu-id="921b7-148">函式指標。</span><span class="sxs-lookup"><span data-stu-id="921b7-148">A function pointer.</span></span>|  
-|`NATIVE_TYPE_ASANY`|<span data-ttu-id="921b7-149">A reference to any native type.</span><span class="sxs-lookup"><span data-stu-id="921b7-149">A reference to any native type.</span></span>|  
-|`NATIVE_TYPE_ARRAY`|<span data-ttu-id="921b7-150">A reference to an array with members of an unspecified type.</span><span class="sxs-lookup"><span data-stu-id="921b7-150">A reference to an array with members of an unspecified type.</span></span>|  
-|`NATIVE_TYPE_LPSTRUCT`|<span data-ttu-id="921b7-151">A 32-bit integer pointer to a structure.</span><span class="sxs-lookup"><span data-stu-id="921b7-151">A 32-bit integer pointer to a structure.</span></span>|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|<span data-ttu-id="921b7-152">A custom marshaler native type.</span><span class="sxs-lookup"><span data-stu-id="921b7-152">A custom marshaler native type.</span></span><br /><br /> <span data-ttu-id="921b7-153">This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"</span><span class="sxs-lookup"><span data-stu-id="921b7-153">This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"</span></span>|  
-|`NATIVE_TYPE_ERROR`|<span data-ttu-id="921b7-154">COM Interop.</span><span class="sxs-lookup"><span data-stu-id="921b7-154">COM Interop.</span></span><br /><br /> <span data-ttu-id="921b7-155">With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.</span><span class="sxs-lookup"><span data-stu-id="921b7-155">With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.</span></span>|  
-|`NATIVE_TYPE_IINSPECTABLE`|<span data-ttu-id="921b7-156">A native `IInspectable` type.</span><span class="sxs-lookup"><span data-stu-id="921b7-156">A native `IInspectable` type.</span></span>|  
-|`NATIVE_TYPE_HSTRING`|<span data-ttu-id="921b7-157">A native `HString`.</span><span class="sxs-lookup"><span data-stu-id="921b7-157">A native `HString`.</span></span>|  
-|`NATIVE_TYPE_MAX`|<span data-ttu-id="921b7-158">An invalid value.</span><span class="sxs-lookup"><span data-stu-id="921b7-158">An invalid value.</span></span>|  
+|`NATIVE_TYPE_END`|<span data-ttu-id="1d9b0-108">已過時。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-108">Obsolete.</span></span>|  
+|`NATIVE_TYPE_VOID`|<span data-ttu-id="1d9b0-109">已過時。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-109">Obsolete.</span></span>|  
+|`NATIVE_TYPE_BOOLEAN`|<span data-ttu-id="1d9b0-110">4位元組的布林值，其中 TRUE 為非零，而 FALSE 為零。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-110">A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.</span></span>|  
+|`NATIVE_TYPE_I1`|<span data-ttu-id="1d9b0-111">帶正負號的8位整數值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-111">A signed 8-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U1`|<span data-ttu-id="1d9b0-112">不帶正負號的8位整數值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-112">An unsigned 8-bit integer value.</span></span>|  
+|`NATIVE_TYPE_I2`|<span data-ttu-id="1d9b0-113">帶正負號的16位整數值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-113">A signed 16-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U2`|<span data-ttu-id="1d9b0-114">不帶正負號的16位整數值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-114">An unsigned 16-bit integer value.</span></span>|  
+|`NATIVE_TYPE_I4`|<span data-ttu-id="1d9b0-115">帶正負號的 32 位元整數值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-115">A signed 32-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U4`|<span data-ttu-id="1d9b0-116">32 位元不帶正負號的整數值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-116">An unsigned 32-bit integer value.</span></span>|  
+|`NATIVE_TYPE_I8`|<span data-ttu-id="1d9b0-117">帶正負號的64位整數值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-117">A signed 64-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U8`|<span data-ttu-id="1d9b0-118">不帶正負號的64位整數值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-118">An unsigned 64-bit integer value.</span></span>|  
+|`NATIVE_TYPE_R4`|<span data-ttu-id="1d9b0-119">4位元組浮點數值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-119">A 4-byte floating-point numeric value.</span></span>|  
+|`NATIVE_TYPE_R8`|<span data-ttu-id="1d9b0-120">8位元組浮點數值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-120">An 8-byte floating-point numeric value.</span></span>|  
+|`NATIVE_TYPE_SYSCHAR`|<span data-ttu-id="1d9b0-121">已過時。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-121">Obsolete.</span></span>|  
+|`NATIVE_TYPE_VARIANT`|<span data-ttu-id="1d9b0-122">已過時。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-122">Obsolete.</span></span>|  
+|`NATIVE_TYPE_CURRENCY`|<span data-ttu-id="1d9b0-123">對應至 managed <xref:System.Decimal> 類型的數值 COM 類型。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-123">A numeric COM type that corresponds to the managed <xref:System.Decimal> type.</span></span>|  
+|`NATIVE_TYPE_PTR`|<span data-ttu-id="1d9b0-124">已過時。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-124">Obsolete.</span></span>|  
+|`NATIVE_TYPE_DECIMAL`|<span data-ttu-id="1d9b0-125">已過時。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-125">Obsolete.</span></span>|  
+|`NATIVE_TYPE_DATE`|<span data-ttu-id="1d9b0-126">已過時。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-126">Obsolete.</span></span>|  
+|`NATIVE_TYPE_BSTR`|<span data-ttu-id="1d9b0-127">COM Interop。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-127">COM Interop.</span></span>|  
+|`NATIVE_TYPE_LPSTR`|<span data-ttu-id="1d9b0-128">LPSTR 字串值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-128">An LPSTR string value.</span></span>|  
+|`NATIVE_TYPE_LPWSTR`|<span data-ttu-id="1d9b0-129">LPWSTR 字串值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-129">An LPWSTR string value.</span></span>|  
+|`NATIVE_TYPE_LPTSTR`|<span data-ttu-id="1d9b0-130">LPTSTR 字串值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-130">An LPTSTR string value.</span></span>|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|<span data-ttu-id="1d9b0-131">固定的系統定義字串值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-131">A fixed, system-defined string value.</span></span>|  
+|`NATIVE_TYPE_OBJECTREF`|<span data-ttu-id="1d9b0-132">已過時。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-132">Obsolete.</span></span>|  
+|`NATIVE_TYPE_IUNKNOWN`|<span data-ttu-id="1d9b0-133">COM Interop。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-133">COM Interop.</span></span>|  
+|`NATIVE_TYPE_IDISPATCH`|<span data-ttu-id="1d9b0-134">COM Interop。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-134">COM Interop.</span></span>|  
+|`NATIVE_TYPE_STRUCT`|<span data-ttu-id="1d9b0-135">原生結構值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-135">A native structure value.</span></span>|  
+|`NATIVE_TYPE_INTF`|<span data-ttu-id="1d9b0-136">COM Interop。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-136">COM Interop.</span></span>|  
+|`NATIVE_TYPE_SAFEARRAY`|<span data-ttu-id="1d9b0-137">COM Interop。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-137">COM Interop.</span></span>|  
+|`NATIVE_TYPE_FIXEDARRAY`|<span data-ttu-id="1d9b0-138">固定長度的陣列值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-138">A fixed-length array value.</span></span>|  
+|`NATIVE_TYPE_INT`|<span data-ttu-id="1d9b0-139">原生16位帶正負號的整數值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-139">A native 16-bit signed integer value.</span></span>|  
+|`NATIVE_TYPE_UINT`|<span data-ttu-id="1d9b0-140">原生16位不帶正負號整數值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-140">A native 16-bit unsigned integer value.</span></span>|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|<span data-ttu-id="1d9b0-141">已過時。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-141">Obsolete.</span></span><br /><br /> <span data-ttu-id="1d9b0-142">使用 NATIVE_TYPE_STRUCT。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-142">Use NATIVE_TYPE_STRUCT.</span></span>|  
+|`NATIVE_TYPE_BYVALSTR`|<span data-ttu-id="1d9b0-143">COM Interop。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-143">COM Interop.</span></span>|  
+|`NATIVE_TYPE_ANSIBSTR`|<span data-ttu-id="1d9b0-144">COM Interop。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-144">COM Interop.</span></span>|  
+|`NATIVE_TYPE_TBSTR`|<span data-ttu-id="1d9b0-145">COM Interop。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-145">COM Interop.</span></span><br /><br /> <span data-ttu-id="1d9b0-146">選取 [BSTR] 或 [ANSIBSTR] （視平臺而定）。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-146">Select BSTR or ANSIBSTR depending on the platform.</span></span>|  
+|`NATIVE_TYPE_VARIANTBOOL`|<span data-ttu-id="1d9b0-147">2個位元組的布林值，其中 TRUE 為-1，而 FALSE 為零。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-147">A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.</span></span>|  
+|`NATIVE_TYPE_FUNC`|<span data-ttu-id="1d9b0-148">函式指標。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-148">A function pointer.</span></span>|  
+|`NATIVE_TYPE_ASANY`|<span data-ttu-id="1d9b0-149">任何原生類型的參考。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-149">A reference to any native type.</span></span>|  
+|`NATIVE_TYPE_ARRAY`|<span data-ttu-id="1d9b0-150">具有未指定類型成員之陣列的參考。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-150">A reference to an array with members of an unspecified type.</span></span>|  
+|`NATIVE_TYPE_LPSTRUCT`|<span data-ttu-id="1d9b0-151">結構的32位整數指標。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-151">A 32-bit integer pointer to a structure.</span></span>|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|<span data-ttu-id="1d9b0-152">自訂封送處理器原生類型。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-152">A custom marshaler native type.</span></span><br /><br /> <span data-ttu-id="1d9b0-153">後面必須接下列格式的字串： "Native type name/0Custom 封送處理器類型 name/0Optional cookie/0" 或 "{Native type GUID}/0Custom 封送處理器類型名稱/0Optional cookie/0"</span><span class="sxs-lookup"><span data-stu-id="1d9b0-153">This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"</span></span>|  
+|`NATIVE_TYPE_ERROR`|<span data-ttu-id="1d9b0-154">COM Interop。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-154">COM Interop.</span></span><br /><br /> <span data-ttu-id="1d9b0-155">在 ELEMENT_TYPE_I4，此類型會對應到 VT_HRESULT。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-155">With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.</span></span>|  
+|`NATIVE_TYPE_IINSPECTABLE`|<span data-ttu-id="1d9b0-156">原生 `IInspectable` 類型。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-156">A native `IInspectable` type.</span></span>|  
+|`NATIVE_TYPE_HSTRING`|<span data-ttu-id="1d9b0-157">原生 `HString`。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-157">A native `HString`.</span></span>|  
+|`NATIVE_TYPE_MAX`|<span data-ttu-id="1d9b0-158">不正確值。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-158">An invalid value.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="921b7-159">需求</span><span class="sxs-lookup"><span data-stu-id="921b7-159">Requirements</span></span>  
- <span data-ttu-id="921b7-160">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="921b7-160">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1d9b0-159">需求</span><span class="sxs-lookup"><span data-stu-id="1d9b0-159">Requirements</span></span>  
+ <span data-ttu-id="1d9b0-160">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1d9b0-160">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="921b7-161">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="921b7-161">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="1d9b0-161">**標頭：** Corhdr.h。h</span><span class="sxs-lookup"><span data-stu-id="1d9b0-161">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="921b7-162">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="921b7-162">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1d9b0-162">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1d9b0-162">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="921b7-163">請參閱</span><span class="sxs-lookup"><span data-stu-id="921b7-163">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1d9b0-163">請參閱</span><span class="sxs-lookup"><span data-stu-id="1d9b0-163">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.UnmanagedType>
-- [<span data-ttu-id="921b7-164">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="921b7-164">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="1d9b0-164">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="1d9b0-164">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

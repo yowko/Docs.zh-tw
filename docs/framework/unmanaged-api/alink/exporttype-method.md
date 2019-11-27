@@ -21,10 +21,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438564"
 ---
-# <a name="exporttype-method"></a><span data-ttu-id="5b682-102">ExportType 方法</span><span class="sxs-lookup"><span data-stu-id="5b682-102">ExportType Method</span></span>
-<span data-ttu-id="5b682-103">Specifies that a type is exportable.</span><span class="sxs-lookup"><span data-stu-id="5b682-103">Specifies that a type is exportable.</span></span>  
+# <a name="exporttype-method"></a><span data-ttu-id="852b3-102">ExportType 方法</span><span class="sxs-lookup"><span data-stu-id="852b3-102">ExportType Method</span></span>
+<span data-ttu-id="852b3-103">指定類型為可匯出。</span><span class="sxs-lookup"><span data-stu-id="852b3-103">Specifies that a type is exportable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5b682-104">語法</span><span class="sxs-lookup"><span data-stu-id="5b682-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="852b3-104">語法</span><span class="sxs-lookup"><span data-stu-id="852b3-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExportType(  
@@ -37,33 +37,33 @@ HRESULT ExportType(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5b682-105">參數</span><span class="sxs-lookup"><span data-stu-id="5b682-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="852b3-105">參數</span><span class="sxs-lookup"><span data-stu-id="852b3-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="5b682-106">ID of the assembly to export from.</span><span class="sxs-lookup"><span data-stu-id="5b682-106">ID of the assembly to export from.</span></span>  
+ <span data-ttu-id="852b3-106">要匯出之元件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="852b3-106">ID of the assembly to export from.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="5b682-107">File token or assembly ID of file that defines the exportable type.</span><span class="sxs-lookup"><span data-stu-id="5b682-107">File token or assembly ID of file that defines the exportable type.</span></span>  
+ <span data-ttu-id="852b3-107">檔案的檔案標記或元件識別碼，其定義可匯出的類型。</span><span class="sxs-lookup"><span data-stu-id="852b3-107">File token or assembly ID of file that defines the exportable type.</span></span>  
   
  `TypeToken`  
- <span data-ttu-id="5b682-108">Token of type to be made exportable.</span><span class="sxs-lookup"><span data-stu-id="5b682-108">Token of type to be made exportable.</span></span>  
+ <span data-ttu-id="852b3-108">要成為可匯出之類型的 Token。</span><span class="sxs-lookup"><span data-stu-id="852b3-108">Token of type to be made exportable.</span></span>  
   
  `pszTypename`  
- <span data-ttu-id="5b682-109">Fully qualified type name to be made exportable.</span><span class="sxs-lookup"><span data-stu-id="5b682-109">Fully qualified type name to be made exportable.</span></span>  
+ <span data-ttu-id="852b3-109">要成為可匯出的完整型別名稱。</span><span class="sxs-lookup"><span data-stu-id="852b3-109">Fully qualified type name to be made exportable.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="5b682-110">`ComType` flags such as `tdPublic` or `tdNested`.</span><span class="sxs-lookup"><span data-stu-id="5b682-110">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="5b682-111">This parameter may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span><span class="sxs-lookup"><span data-stu-id="5b682-111">This parameter may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
+ <span data-ttu-id="852b3-110">`ComType` 旗標，例如 `tdPublic` 或 `tdNested`。</span><span class="sxs-lookup"><span data-stu-id="852b3-110">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="852b3-111">這個參數可以傳遞至[DefineExportedType 方法](../metadata/imetadataassemblyemit-defineexportedtype-method.md)。</span><span class="sxs-lookup"><span data-stu-id="852b3-111">This parameter may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
   
  `pType`  
- <span data-ttu-id="5b682-112">Receives token for exported type.</span><span class="sxs-lookup"><span data-stu-id="5b682-112">Receives token for exported type.</span></span>  
+ <span data-ttu-id="852b3-112">接收匯出類型的 token。</span><span class="sxs-lookup"><span data-stu-id="852b3-112">Receives token for exported type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5b682-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="5b682-113">Return Value</span></span>  
- <span data-ttu-id="5b682-114">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="5b682-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="852b3-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="852b3-113">Return Value</span></span>  
+ <span data-ttu-id="852b3-114">如果方法成功，則傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="852b3-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5b682-115">需求</span><span class="sxs-lookup"><span data-stu-id="5b682-115">Requirements</span></span>  
- <span data-ttu-id="5b682-116">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="5b682-116">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="852b3-115">需求</span><span class="sxs-lookup"><span data-stu-id="852b3-115">Requirements</span></span>  
+ <span data-ttu-id="852b3-116">需要 alink. h</span><span class="sxs-lookup"><span data-stu-id="852b3-116">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b682-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="5b682-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="852b3-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="852b3-117">See also</span></span>
 
-- [<span data-ttu-id="5b682-118">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="5b682-118">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="5b682-119">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="5b682-119">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="5b682-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="5b682-120">ALink API</span></span>](index.md)
+- [<span data-ttu-id="852b3-118">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="852b3-118">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="852b3-119">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="852b3-119">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="852b3-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="852b3-120">ALink API</span></span>](index.md)

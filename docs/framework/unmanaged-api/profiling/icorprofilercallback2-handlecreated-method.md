@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439768"
 ---
-# <a name="icorprofilercallback2handlecreated-method"></a><span data-ttu-id="8de7b-102">ICorProfilerCallback2::HandleCreated 方法</span><span class="sxs-lookup"><span data-stu-id="8de7b-102">ICorProfilerCallback2::HandleCreated Method</span></span>
-<span data-ttu-id="8de7b-103">Notifies the code profiler that a garbage collection handle has been created.</span><span class="sxs-lookup"><span data-stu-id="8de7b-103">Notifies the code profiler that a garbage collection handle has been created.</span></span>  
+# <a name="icorprofilercallback2handlecreated-method"></a><span data-ttu-id="56cdf-102">ICorProfilerCallback2::HandleCreated 方法</span><span class="sxs-lookup"><span data-stu-id="56cdf-102">ICorProfilerCallback2::HandleCreated Method</span></span>
+<span data-ttu-id="56cdf-103">通知程式碼分析工具，已建立垃圾收集控制碼。</span><span class="sxs-lookup"><span data-stu-id="56cdf-103">Notifies the code profiler that a garbage collection handle has been created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8de7b-104">語法</span><span class="sxs-lookup"><span data-stu-id="8de7b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="56cdf-104">語法</span><span class="sxs-lookup"><span data-stu-id="56cdf-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT HandleCreated(  
@@ -33,23 +33,23 @@ HRESULT HandleCreated(
     [in] ObjectID initialObjectId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8de7b-105">參數</span><span class="sxs-lookup"><span data-stu-id="8de7b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="56cdf-105">參數</span><span class="sxs-lookup"><span data-stu-id="56cdf-105">Parameters</span></span>  
  `handleId`  
- <span data-ttu-id="8de7b-106">[in] The ID of the handle for the garbage collection.</span><span class="sxs-lookup"><span data-stu-id="8de7b-106">[in] The ID of the handle for the garbage collection.</span></span>  
+ <span data-ttu-id="56cdf-106">在垃圾收集的控制碼識別碼。</span><span class="sxs-lookup"><span data-stu-id="56cdf-106">[in] The ID of the handle for the garbage collection.</span></span>  
   
  `initialObjectId`  
- <span data-ttu-id="8de7b-107">[in] The ID of the object for which the garbage collection handle was created.</span><span class="sxs-lookup"><span data-stu-id="8de7b-107">[in] The ID of the object for which the garbage collection handle was created.</span></span>  
+ <span data-ttu-id="56cdf-107">在已建立垃圾收集控制碼之物件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="56cdf-107">[in] The ID of the object for which the garbage collection handle was created.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8de7b-108">需求</span><span class="sxs-lookup"><span data-stu-id="8de7b-108">Requirements</span></span>  
- <span data-ttu-id="8de7b-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8de7b-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="56cdf-108">需求</span><span class="sxs-lookup"><span data-stu-id="56cdf-108">Requirements</span></span>  
+ <span data-ttu-id="56cdf-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="56cdf-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8de7b-110">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8de7b-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="56cdf-110">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="56cdf-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="8de7b-111">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8de7b-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="56cdf-111">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="56cdf-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8de7b-112">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8de7b-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="56cdf-112">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56cdf-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8de7b-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="8de7b-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="56cdf-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="56cdf-113">See also</span></span>
 
-- [<span data-ttu-id="8de7b-114">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="8de7b-114">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="8de7b-115">ICorProfilerCallback2 介面</span><span class="sxs-lookup"><span data-stu-id="8de7b-115">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [<span data-ttu-id="56cdf-114">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="56cdf-114">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="56cdf-115">ICorProfilerCallback2 介面</span><span class="sxs-lookup"><span data-stu-id="56cdf-115">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

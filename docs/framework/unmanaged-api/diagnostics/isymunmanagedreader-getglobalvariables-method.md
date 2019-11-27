@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448325"
 ---
-# <a name="isymunmanagedreadergetglobalvariables-method"></a><span data-ttu-id="9379c-102">ISymUnmanagedReader::GetGlobalVariables 方法</span><span class="sxs-lookup"><span data-stu-id="9379c-102">ISymUnmanagedReader::GetGlobalVariables Method</span></span>
-<span data-ttu-id="9379c-103">Returns all global variables.</span><span class="sxs-lookup"><span data-stu-id="9379c-103">Returns all global variables.</span></span>  
+# <a name="isymunmanagedreadergetglobalvariables-method"></a><span data-ttu-id="ffdc5-102">ISymUnmanagedReader::GetGlobalVariables 方法</span><span class="sxs-lookup"><span data-stu-id="ffdc5-102">ISymUnmanagedReader::GetGlobalVariables Method</span></span>
+<span data-ttu-id="ffdc5-103">傳回所有全域變數。</span><span class="sxs-lookup"><span data-stu-id="ffdc5-103">Returns all global variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9379c-104">語法</span><span class="sxs-lookup"><span data-stu-id="9379c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ffdc5-104">語法</span><span class="sxs-lookup"><span data-stu-id="ffdc5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetGlobalVariables(  
@@ -35,22 +35,22 @@ HRESULT GetGlobalVariables(
         length_is(*pcVars)] ISymUnmanagedVariable *pVars[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9379c-105">參數</span><span class="sxs-lookup"><span data-stu-id="9379c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ffdc5-105">參數</span><span class="sxs-lookup"><span data-stu-id="ffdc5-105">Parameters</span></span>  
  `cVars`  
- <span data-ttu-id="9379c-106">[in] The length of the buffer pointed to by `pcVars`.</span><span class="sxs-lookup"><span data-stu-id="9379c-106">[in] The length of the buffer pointed to by `pcVars`.</span></span>  
+ <span data-ttu-id="ffdc5-106">在`pcVars`所指向之緩衝區的長度。</span><span class="sxs-lookup"><span data-stu-id="ffdc5-106">[in] The length of the buffer pointed to by `pcVars`.</span></span>  
   
  `pcVars`  
- <span data-ttu-id="9379c-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the variables.</span><span class="sxs-lookup"><span data-stu-id="9379c-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the variables.</span></span>  
+ <span data-ttu-id="ffdc5-107">脫銷`ULONG32` 的指標，接收包含變數所需的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="ffdc5-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the variables.</span></span>  
   
  `pVars`  
- <span data-ttu-id="9379c-108">[out] A buffer that contains the variables.</span><span class="sxs-lookup"><span data-stu-id="9379c-108">[out] A buffer that contains the variables.</span></span>  
+ <span data-ttu-id="ffdc5-108">脫銷包含變數的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="ffdc5-108">[out] A buffer that contains the variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9379c-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="9379c-109">Return Value</span></span>  
- <span data-ttu-id="9379c-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="9379c-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ffdc5-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="ffdc5-109">Return Value</span></span>  
+ <span data-ttu-id="ffdc5-110">如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="ffdc5-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9379c-111">需求</span><span class="sxs-lookup"><span data-stu-id="9379c-111">Requirements</span></span>  
- <span data-ttu-id="9379c-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9379c-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ffdc5-111">需求</span><span class="sxs-lookup"><span data-stu-id="ffdc5-111">Requirements</span></span>  
+ <span data-ttu-id="ffdc5-112">**標頭：** CorSym .idl，CorSym。h</span><span class="sxs-lookup"><span data-stu-id="ffdc5-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9379c-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="9379c-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ffdc5-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="ffdc5-113">See also</span></span>
 
-- [<span data-ttu-id="9379c-114">ISymUnmanagedReader 介面</span><span class="sxs-lookup"><span data-stu-id="9379c-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="ffdc5-114">ISymUnmanagedReader 介面</span><span class="sxs-lookup"><span data-stu-id="ffdc5-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

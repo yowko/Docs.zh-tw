@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433197"
 ---
-# <a name="icorprofilerinfo2getcontextstaticaddress-method"></a><span data-ttu-id="7f13e-102">ICorProfilerInfo2::GetContextStaticAddress 方法</span><span class="sxs-lookup"><span data-stu-id="7f13e-102">ICorProfilerInfo2::GetContextStaticAddress Method</span></span>
-<span data-ttu-id="7f13e-103">Gets the address for the specified context-static field that is in the scope of the specified context.</span><span class="sxs-lookup"><span data-stu-id="7f13e-103">Gets the address for the specified context-static field that is in the scope of the specified context.</span></span>  
+# <a name="icorprofilerinfo2getcontextstaticaddress-method"></a><span data-ttu-id="ea694-102">ICorProfilerInfo2::GetContextStaticAddress 方法</span><span class="sxs-lookup"><span data-stu-id="ea694-102">ICorProfilerInfo2::GetContextStaticAddress Method</span></span>
+<span data-ttu-id="ea694-103">取得位於指定內容約制內指定內容靜態欄位的位址。</span><span class="sxs-lookup"><span data-stu-id="ea694-103">Gets the address for the specified context-static field that is in the scope of the specified context.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7f13e-104">語法</span><span class="sxs-lookup"><span data-stu-id="7f13e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ea694-104">語法</span><span class="sxs-lookup"><span data-stu-id="ea694-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetContextStaticAddress(  
@@ -35,38 +35,38 @@ HRESULT GetContextStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7f13e-105">參數</span><span class="sxs-lookup"><span data-stu-id="7f13e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ea694-105">參數</span><span class="sxs-lookup"><span data-stu-id="ea694-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="7f13e-106">[in] The ID of the class that contains the requested context-static field.</span><span class="sxs-lookup"><span data-stu-id="7f13e-106">[in] The ID of the class that contains the requested context-static field.</span></span>  
+ <span data-ttu-id="ea694-106">在包含所要求內容靜態欄位之類別的識別碼。</span><span class="sxs-lookup"><span data-stu-id="ea694-106">[in] The ID of the class that contains the requested context-static field.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="7f13e-107">[in] The metadata token for the requested context-static field.</span><span class="sxs-lookup"><span data-stu-id="7f13e-107">[in] The metadata token for the requested context-static field.</span></span>  
+ <span data-ttu-id="ea694-107">在所要求內容靜態欄位的元資料標記。</span><span class="sxs-lookup"><span data-stu-id="ea694-107">[in] The metadata token for the requested context-static field.</span></span>  
   
  `contextId`  
- <span data-ttu-id="7f13e-108">[in] The ID of the context that is the scope for the requested context-static field.</span><span class="sxs-lookup"><span data-stu-id="7f13e-108">[in] The ID of the context that is the scope for the requested context-static field.</span></span>  
+ <span data-ttu-id="ea694-108">在內容的識別碼，這是所要求內容靜態欄位的範圍。</span><span class="sxs-lookup"><span data-stu-id="ea694-108">[in] The ID of the context that is the scope for the requested context-static field.</span></span>  
   
  `ppAddress`  
- <span data-ttu-id="7f13e-109">[out] A pointer to the address of the static field that is within the specified context.</span><span class="sxs-lookup"><span data-stu-id="7f13e-109">[out] A pointer to the address of the static field that is within the specified context.</span></span>  
+ <span data-ttu-id="ea694-109">脫銷位於指定內容內之靜態欄位位址的指標。</span><span class="sxs-lookup"><span data-stu-id="ea694-109">[out] A pointer to the address of the static field that is within the specified context.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7f13e-110">備註</span><span class="sxs-lookup"><span data-stu-id="7f13e-110">Remarks</span></span>  
- <span data-ttu-id="7f13e-111">The `GetContextStaticAddress` method may return one of the following:</span><span class="sxs-lookup"><span data-stu-id="7f13e-111">The `GetContextStaticAddress` method may return one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ea694-110">備註</span><span class="sxs-lookup"><span data-stu-id="ea694-110">Remarks</span></span>  
+ <span data-ttu-id="ea694-111">`GetContextStaticAddress` 方法可能會傳回下列其中一項：</span><span class="sxs-lookup"><span data-stu-id="ea694-111">The `GetContextStaticAddress` method may return one of the following:</span></span>  
   
-- <span data-ttu-id="7f13e-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span><span class="sxs-lookup"><span data-stu-id="7f13e-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
+- <span data-ttu-id="ea694-112">如果未在指定的內容中指派位址給給定的靜態欄位，CORPROF_E_DATAINCOMPLETE HRESULT。</span><span class="sxs-lookup"><span data-stu-id="ea694-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
   
-- <span data-ttu-id="7f13e-113">The addresses of objects that may be in the garbage collection heap.</span><span class="sxs-lookup"><span data-stu-id="7f13e-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="7f13e-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span><span class="sxs-lookup"><span data-stu-id="7f13e-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
+- <span data-ttu-id="ea694-113">可能位於垃圾收集堆積中之物件的位址。</span><span class="sxs-lookup"><span data-stu-id="ea694-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="ea694-114">這些位址在垃圾收集後可能會變成無效，因此在垃圾收集之後，分析工具不應假設它們是有效的。</span><span class="sxs-lookup"><span data-stu-id="ea694-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
   
- <span data-ttu-id="7f13e-115">Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span><span class="sxs-lookup"><span data-stu-id="7f13e-115">Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
+ <span data-ttu-id="ea694-115">在類別的類別的函式完成之前，`GetContextStaticAddress` 將會傳回其所有靜態欄位的 CORPROF_E_DATAINCOMPLETE，雖然某些靜態欄位可能已經初始化，並且會對垃圾收集物件進行根。</span><span class="sxs-lookup"><span data-stu-id="ea694-115">Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7f13e-116">需求</span><span class="sxs-lookup"><span data-stu-id="7f13e-116">Requirements</span></span>  
- <span data-ttu-id="7f13e-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7f13e-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ea694-116">需求</span><span class="sxs-lookup"><span data-stu-id="ea694-116">Requirements</span></span>  
+ <span data-ttu-id="ea694-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ea694-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7f13e-118">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7f13e-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ea694-118">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ea694-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="7f13e-119">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7f13e-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ea694-119">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ea694-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7f13e-120">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7f13e-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ea694-120">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ea694-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7f13e-121">請參閱</span><span class="sxs-lookup"><span data-stu-id="7f13e-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ea694-121">請參閱</span><span class="sxs-lookup"><span data-stu-id="ea694-121">See also</span></span>
 
-- [<span data-ttu-id="7f13e-122">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="7f13e-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="7f13e-123">ICorProfilerInfo2 介面</span><span class="sxs-lookup"><span data-stu-id="7f13e-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="ea694-122">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="ea694-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="ea694-123">ICorProfilerInfo2 介面</span><span class="sxs-lookup"><span data-stu-id="ea694-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

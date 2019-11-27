@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435884"
 ---
-# <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a><span data-ttu-id="cf54c-102">ICorProfilerInfo2::GetAppDomainStaticAddress 方法</span><span class="sxs-lookup"><span data-stu-id="cf54c-102">ICorProfilerInfo2::GetAppDomainStaticAddress Method</span></span>
-<span data-ttu-id="cf54c-103">Gets the address of the specified application domain-static field that is in the scope of the specified application domain.</span><span class="sxs-lookup"><span data-stu-id="cf54c-103">Gets the address of the specified application domain-static field that is in the scope of the specified application domain.</span></span>  
+# <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a><span data-ttu-id="a36a3-102">ICorProfilerInfo2::GetAppDomainStaticAddress 方法</span><span class="sxs-lookup"><span data-stu-id="a36a3-102">ICorProfilerInfo2::GetAppDomainStaticAddress Method</span></span>
+<span data-ttu-id="a36a3-103">取得指定的應用程式域靜態欄位的位址，該欄位位於指定的應用程式域範圍內。</span><span class="sxs-lookup"><span data-stu-id="a36a3-103">Gets the address of the specified application domain-static field that is in the scope of the specified application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cf54c-104">語法</span><span class="sxs-lookup"><span data-stu-id="cf54c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a36a3-104">語法</span><span class="sxs-lookup"><span data-stu-id="a36a3-104">Syntax</span></span>  
   
 ```cpp  
 RESULT GetAppDomainStaticAddress(  
@@ -35,38 +35,38 @@ RESULT GetAppDomainStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cf54c-105">參數</span><span class="sxs-lookup"><span data-stu-id="cf54c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a36a3-105">參數</span><span class="sxs-lookup"><span data-stu-id="a36a3-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="cf54c-106">[in] The class ID of the class that contains the requested application domain-static field.</span><span class="sxs-lookup"><span data-stu-id="cf54c-106">[in] The class ID of the class that contains the requested application domain-static field.</span></span>  
+ <span data-ttu-id="a36a3-106">在包含所要求應用程式域靜態欄位之類別的類別 ID。</span><span class="sxs-lookup"><span data-stu-id="a36a3-106">[in] The class ID of the class that contains the requested application domain-static field.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="cf54c-107">[in] The metadata token for the requested application domain-static field.</span><span class="sxs-lookup"><span data-stu-id="cf54c-107">[in] The metadata token for the requested application domain-static field.</span></span>  
+ <span data-ttu-id="a36a3-107">在所要求之應用程式域靜態欄位的元資料標記。</span><span class="sxs-lookup"><span data-stu-id="a36a3-107">[in] The metadata token for the requested application domain-static field.</span></span>  
   
  `appDomainId`  
- <span data-ttu-id="cf54c-108">[in] The ID of the application domain that is the scope for the requested static field.</span><span class="sxs-lookup"><span data-stu-id="cf54c-108">[in] The ID of the application domain that is the scope for the requested static field.</span></span>  
+ <span data-ttu-id="a36a3-108">在應用程式域的識別碼，這是要求的靜態欄位範圍。</span><span class="sxs-lookup"><span data-stu-id="a36a3-108">[in] The ID of the application domain that is the scope for the requested static field.</span></span>  
   
  `ppAddress`  
- <span data-ttu-id="cf54c-109">[out] A pointer to the address of the static field that is within the specified application domain.</span><span class="sxs-lookup"><span data-stu-id="cf54c-109">[out] A pointer to the address of the static field that is within the specified application domain.</span></span>  
+ <span data-ttu-id="a36a3-109">脫銷指定之應用程式域內靜態欄位位址的指標。</span><span class="sxs-lookup"><span data-stu-id="a36a3-109">[out] A pointer to the address of the static field that is within the specified application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cf54c-110">備註</span><span class="sxs-lookup"><span data-stu-id="cf54c-110">Remarks</span></span>  
- <span data-ttu-id="cf54c-111">The `GetAppDomainStaticAddress` method may return one of the following:</span><span class="sxs-lookup"><span data-stu-id="cf54c-111">The `GetAppDomainStaticAddress` method may return one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a36a3-110">備註</span><span class="sxs-lookup"><span data-stu-id="a36a3-110">Remarks</span></span>  
+ <span data-ttu-id="a36a3-111">`GetAppDomainStaticAddress` 方法可能會傳回下列其中一項：</span><span class="sxs-lookup"><span data-stu-id="a36a3-111">The `GetAppDomainStaticAddress` method may return one of the following:</span></span>  
   
-- <span data-ttu-id="cf54c-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span><span class="sxs-lookup"><span data-stu-id="cf54c-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
+- <span data-ttu-id="a36a3-112">如果未在指定的內容中指派位址給給定的靜態欄位，CORPROF_E_DATAINCOMPLETE HRESULT。</span><span class="sxs-lookup"><span data-stu-id="a36a3-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
   
-- <span data-ttu-id="cf54c-113">The addresses of objects that may be in the garbage collection heap.</span><span class="sxs-lookup"><span data-stu-id="cf54c-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="cf54c-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span><span class="sxs-lookup"><span data-stu-id="cf54c-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
+- <span data-ttu-id="a36a3-113">可能位於垃圾收集堆積中之物件的位址。</span><span class="sxs-lookup"><span data-stu-id="a36a3-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="a36a3-114">這些位址在垃圾收集後可能會變成無效，因此在垃圾收集之後，分析工具不應假設它們是有效的。</span><span class="sxs-lookup"><span data-stu-id="a36a3-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
   
- <span data-ttu-id="cf54c-115">Before a class’s class constructor is completed, `GetAppDomainStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span><span class="sxs-lookup"><span data-stu-id="cf54c-115">Before a class’s class constructor is completed, `GetAppDomainStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
+ <span data-ttu-id="a36a3-115">在類別的類別的函式完成之前，`GetAppDomainStaticAddress` 將會傳回其所有靜態欄位的 CORPROF_E_DATAINCOMPLETE，雖然某些靜態欄位可能已經初始化，並且會對垃圾收集物件進行根。</span><span class="sxs-lookup"><span data-stu-id="a36a3-115">Before a class’s class constructor is completed, `GetAppDomainStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cf54c-116">需求</span><span class="sxs-lookup"><span data-stu-id="cf54c-116">Requirements</span></span>  
- <span data-ttu-id="cf54c-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cf54c-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a36a3-116">需求</span><span class="sxs-lookup"><span data-stu-id="a36a3-116">Requirements</span></span>  
+ <span data-ttu-id="a36a3-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a36a3-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cf54c-118">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cf54c-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a36a3-118">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a36a3-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="cf54c-119">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cf54c-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a36a3-119">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a36a3-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cf54c-120">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cf54c-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a36a3-120">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a36a3-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cf54c-121">請參閱</span><span class="sxs-lookup"><span data-stu-id="cf54c-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a36a3-121">請參閱</span><span class="sxs-lookup"><span data-stu-id="a36a3-121">See also</span></span>
 
-- [<span data-ttu-id="cf54c-122">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="cf54c-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="cf54c-123">ICorProfilerInfo2 介面</span><span class="sxs-lookup"><span data-stu-id="cf54c-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="a36a3-122">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="a36a3-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="a36a3-123">ICorProfilerInfo2 介面</span><span class="sxs-lookup"><span data-stu-id="a36a3-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
