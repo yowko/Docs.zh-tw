@@ -37,9 +37,9 @@ ms.locfileid: "74283040"
 |實體集|-移除實體集|-加入衍生類型<br />-變更基底類型<br />-新增實體集|
 |摘要自訂|-變更實體屬性對應||
 
- <sup>1</sup> 這可能取決於用戶端應用程式依賴接收特定錯誤碼的嚴格程度。
+ <sup>1</sup>這可能取決於用戶端應用程式依賴接收特定錯誤碼的嚴格程度。
 
- <sup>2</sup> 您可以將 <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> 屬性設定為 `true`，讓用戶端忽略用戶端上未定義之資料服務所傳送的任何新屬性。 不過，進行插入時，用戶端沒有包含在 POST 要求中的屬性會設為其預設值。 若是更新，屬性中用戶端未知的任何現有資料都可能會以預設值覆寫。 在此情況下，您應該將更新當做 MERGE 要求傳送，這是預設值。 如需詳細資訊，請參閱[管理資料服務內容](managing-the-data-service-context-wcf-data-services.md)。
+ <sup>2</sup>您可以將 [<xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A>] 屬性設定為 [`true`]，讓用戶端忽略用戶端上未定義的任何資料服務所傳送的新屬性。 不過，進行插入時，用戶端沒有包含在 POST 要求中的屬性會設為其預設值。 若是更新，屬性中用戶端未知的任何現有資料都可能會以預設值覆寫。 在此情況下，您應該將更新當做 MERGE 要求傳送，這是預設值。 如需詳細資訊，請參閱[管理資料服務內容](managing-the-data-service-context-wcf-data-services.md)。
 
 ### <a name="how-to-version-a-data-service"></a>如何進行資料服務的版本控制
  必要時，您可以使用更新的服務合約或資料模型建立新的服務執行個體，藉以定義新的資料服務版本。 接著，您要使用新的 URI 端點公開這個新服務，以區別舊版本。 例如：
@@ -65,7 +65,7 @@ ms.locfileid: "74283040"
 |OData 通訊協定版本|下列版本引入的支援|
 |-----------------------------------------------------------------------------------|----------------------------|
 |第 1 版|-.NET Framework 3.5 Service Pack 1 （SP1）<br />-Silverlight 第3版|
-|第 2 版|-.NET Framework 4<br />-.NET Framework 3.5 SP1 的更新。 您可以從[Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=158125)下載並安裝更新。<br />-Silverlight 第4版|
+|第 2 版|-.NET Framework 4<br />-.NET Framework 3.5 SP1 的更新。 您可以從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=158125)下載及安裝。<br />-Silverlight 第4版|
 |第 3 版|-您可以從[Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=203885)下載並安裝支援 OData 第3版的發行前版本。|
 
 ### <a name="metadata-versions"></a>中繼資料版本
@@ -73,7 +73,7 @@ ms.locfileid: "74283040"
 
  傳回之中繼資料的 `DataServices` 項目還包含 `DataServiceVersion` 屬性，該值與回應訊息中 `DataServiceVersion` 標頭的值相同。 用戶端應用程式（例如 Visual Studio 中的 [**加入服務參考**] 對話方塊）會使用這項資訊來產生用戶端資料服務類別，以便與裝載資料服務的 WCF Data Services 版本正確搭配運作。 如需詳細資訊，請參閱[OData：通訊協定版本](https://go.microsoft.com/fwlink/?LinkId=186071)設定。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [資料服務提供者](data-services-providers-wcf-data-services.md)
 - [定義 WCF Data Services](defining-wcf-data-services.md)

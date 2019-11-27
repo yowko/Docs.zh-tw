@@ -21,11 +21,11 @@ ms.locfileid: "74349231"
 
 下表列出存取應用程式所參考之 Web 服務的可能方式。
 
-|若要|請參閱|
+|進行|請參閱|
 |---|---|
 |呼叫 Web 服務|[My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)|
 |以非同步方式呼叫 Web 服務並於完成時處理事件|[操作說明：非同步呼叫 Web 服務](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)

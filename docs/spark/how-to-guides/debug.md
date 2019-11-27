@@ -56,7 +56,7 @@ spark-submit \
 
 ## <a name="next-steps"></a>後續步驟
 
-* [開始使用 .NET for Apache Spark](../tutorials/get-started.md)
-* [將 .NET for Apache Spark 應用程式部署到 Azure HDInsight](../tutorials/hdinsight-deployment.md)
-* [將 .NET for Apache Spark 應用程式部署到 Databricks](../tutorials/databricks-deployment.md)
-* [將 .NET for Apache Spark 應用程式部署到 Amazon EMR Spark](../tutorials/amazon-emr-spark-deployment.md)
+* [開始使用適用於 Apache Spark 的 .NET](../tutorials/get-started.md)
+* [將適用於 Apache Spark 的 .NET 應用程式部署到 Azure HDInsight](../tutorials/hdinsight-deployment.md)
+* [將適用於 Apache Spark 的 .NET 應用程式部署到 Databricks](../tutorials/databricks-deployment.md)
+* [將適用於 Apache Spark 的 .NET 應用程式部署到 Amazon EMR Spark](../tutorials/amazon-emr-spark-deployment.md)

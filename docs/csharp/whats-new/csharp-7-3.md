@@ -121,7 +121,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 ### <a name="more-types-support-the-fixed-statement"></a>更多型別支援 `fixed` 陳述式
 
-`fixed` 陳述式支援一組有限的型別。 從 C# 7.3 開始，包含傳回 `ref T` 或 `ref readonly T` 之 `GetPinnableReference()` 方法的任何型別都可能是 `fixed`。 新增此功能表示 `fixed` 可以與 <xref:System.Span%601?displayProperty=nameWithType> 和相關型別一起使用。
+`fixed` 陳述式支援一組有限的型別。 從 C# 7.3 開始，包含傳回 `GetPinnableReference()` 或 `ref T` 之 `ref readonly T` 方法的任何型別都可能是 `fixed`。 新增此功能表示 `fixed` 可以與 <xref:System.Span%601?displayProperty=nameWithType> 和相關型別一起使用。
 
 如需詳細資訊，請參閱語言參考中的 [`fixed` 陳述式](../language-reference/keywords/fixed-statement.md)一文。
 
@@ -129,7 +129,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 您現在可以指定型別 <xref:System.Enum?displayProperty=nameWithType> 或 <xref:System.Delegate?displayProperty=nameWithType> 作為型別參數的基底類別限制式。
 
-You can also use the new `unmanaged` constraint, to specify that a type parameter must be a non-nullable [unmanaged type](../language-reference/builtin-types/unmanaged-types.md).
+您也可以使用新的 `unmanaged` 條件約束，以指定類型參數必須是不可為 null 的[非受控型](../language-reference/builtin-types/unmanaged-types.md)別。
 
 如需詳細資訊，請參閱有關 [`where` 泛型限制式](../language-reference/keywords/where-generic-type-constraint.md)和[型別參數的限制式](../programming-guide/generics/constraints-on-type-parameters.md)的文章。
 
@@ -141,7 +141,7 @@ You can also use the new `unmanaged` constraint, to specify that a type paramete
 
 ### <a name="tuples-support--and-"></a>Tuple 支援 `==` 和 `!=`
 
-C# Tuple 型別現在支援 `==` 和 `!=`。 如需詳細資訊，請參閱 [Tuple](../tuples.md) 文章中涵蓋[相等](../tuples.md#equality-and-tuples)的一節。
+C# Tuple 型別現在支援 `==` 和 `!=`。 如需詳細資訊，請參閱 [Tuple](../tuples.md#equality-and-tuples) 文章中涵蓋[相等](../tuples.md)的一節。
 
 ### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>將屬性附加至自動實作屬性的支援欄位
 

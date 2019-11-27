@@ -23,73 +23,73 @@ ms.locfileid: "74348673"
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic 中的存取層級
 
-The *access level* of a declared element is the extent of the ability to access it, that is, what code has permission to read it or write to it. This is determined not only by how you declare the element itself, but also by the access level of the element's container. Code that cannot access a containing element cannot access any of its contained elements, even those declared as `Public`. For example, a `Public` variable in a `Private` structure can be accessed from inside the class that contains the structure, but not from outside that class.
+已宣告專案的*存取層級*是存取它的能力範圍，也就是有哪些程式碼有權讀取或寫入它。 這不只是由您宣告專案本身的方式所決定，也是由專案之容器的存取層級所決定。 無法存取包含專案的程式碼無法存取其包含的任何專案，即使是宣告為 `Public`的專案也一樣。 例如，您可以從包含結構的類別內部存取 `Private` 結構中的 `Public` 變數，而不是從該類別的外部進行存取。
 
-## <a name="public"></a>Public
+## <a name="public"></a>公用
 
-The [Public](../../../language-reference/modifiers/public.md) keyword in the declaration statement specifies that the element can be accessed from code anywhere in the same project, from other projects that reference the project, and from any assembly built from the project. The following code shows a sample `Public` declaration:
+宣告語句中的[Public](../../../language-reference/modifiers/public.md)關鍵字會指定元素可以從相同專案中的程式碼、從參考專案的其他專案，以及從專案建立的任何元件中存取。 下列程式碼顯示範例 `Public` 宣告：
 
 ```vb
 Public Class ClassForEverybody
 ```
 
-You can use `Public` only at module, interface, or namespace level. This means you can declare a public element at the level of a source file or namespace, or inside an interface, module, class, or structure, but not in a procedure.
+您只能在模組、介面或命名空間層級使用 `Public`。 這表示您可以在來源檔案或命名空間層級，或在介面、模組、類別或結構中宣告公用元素，但不能在程式中宣告。
   
-## <a name="protected"></a>Protected
+## <a name="protected"></a>受保護的
 
-The [Protected](../../../language-reference/modifiers/protected.md) keyword in the declaration statement specifies that the element can be accessed only from within the same class, or from a class derived from this class. The following code shows a sample `Protected` declaration:
+在宣告語句中， [Protected](../../../language-reference/modifiers/protected.md)關鍵字會指定只能從相同類別內或從這個類別衍生的類別來存取元素。 下列程式碼顯示範例 `Protected` 宣告：
 
 ```vb
 Protected Class ClassForMyHeirs
 ```
 
-You can use `Protected` only at class level, and only when you declare a member of a class. This means you can declare a protected element in a class, but not at the level of a source file or namespace, or inside an interface, module, structure, or procedure.
+只有當您宣告類別的成員時，才可以在類別層級使用 `Protected`。 這表示您可以在類別中宣告受保護的專案，但不能在來源檔案或命名空間的層級，或是在介面、模組、結構或程式內宣告。
 
 ## <a name="friend"></a>Friend
 
-The [Friend](../../../language-reference/modifiers/friend.md) keyword in the declaration statement specifies that the element can be accessed from within the same assembly, but not from outside the assembly. The following code shows a sample `Friend` declaration:
+在宣告語句中， [Friend](../../../language-reference/modifiers/friend.md)關鍵字會指定專案可以從相同的元件中存取，但不能從元件外部存取。 下列程式碼顯示範例 `Friend` 宣告：
 
 ```vb
 Friend stringForThisProject As String
 ```
 
-You can use `Friend` only at module, interface, or namespace level. This means you can declare a friend element at the level of a source file or namespace, or inside an interface, module, class, or structure, but not in a procedure.
+您只能在模組、介面或命名空間層級使用 `Friend`。 這表示您可以在來源檔案或命名空間層級，或在介面、模組、類別或結構中宣告 friend 元素，但不能在程式中宣告。
 
 ## <a name="protected-friend"></a>Protected Friend
 
-The [Protected Friend](../../../language-reference/modifiers/protected-friend.md) keyword combination in the declaration statement specifies that the element can be accessed either from derived classes or from within the same assembly, or both. The following code shows a sample `Protected Friend` declaration:
+在宣告語句中，[受保護的 Friend](../../../language-reference/modifiers/protected-friend.md)關鍵字組合指定可以從衍生類別或從相同元件或兩者中存取專案。 下列程式碼顯示範例 `Protected Friend` 宣告：
 
 ```vb
 Protected Friend stringForProjectAndHeirs As String
 ```
 
-You can use `Protected Friend` only at class level, and only when you declare a member of a class. This means you can declare a protected friend element in a class, but not at the level of a source file or namespace, or inside an interface, module, structure, or procedure.
+只有當您宣告類別的成員時，才可以在類別層級使用 `Protected Friend`。 這表示您可以在類別中宣告受保護的 friend 元素，但不能在來源檔案或命名空間的層級，或是在介面、模組、結構或程式內宣告。
 
-## <a name="private"></a>Private
+## <a name="private"></a>私人
 
-The [Private](../../../language-reference/modifiers/private.md) keyword in the declaration statement specifies that the element can be accessed only from within the same module, class, or structure. The following code shows a sample `Private` declaration:
+宣告語句中的[Private](../../../language-reference/modifiers/private.md)關鍵字會指定只能從相同的模組、類別或結構記憶體取元素。 下列程式碼顯示範例 `Private` 宣告：
 
 ```vb
 Private _numberForMeOnly As Integer
 ```
 
-您只能在模組層級使用 `Private`。 This means you can declare a private element inside a module, class, or structure, but not at the level of a source file or namespace, inside an interface, or in a procedure.
+您只能在模組層級使用 `Private`。 這表示您可以在模組、類別或結構中宣告私用專案，但不能在來源檔案或命名空間的層級、介面內或程式中宣告該元素。
 
-At the module level, the `Dim` statement without any access level keywords is equivalent to a `Private` declaration. However, you might want to use the `Private` keyword to make your code easier to read and interpret.
+在模組層級，不含任何存取層級關鍵字的 `Dim` 語句就相當於 `Private` 宣告。 不過，您可能會想要使用 `Private` 關鍵字，讓您的程式碼更容易閱讀和解讀。
 
 ## <a name="private-protected"></a>Private Protected
 
-The [Private Protected](../../../language-reference/modifiers/private-protected.md) keyword combination in the declaration statement specifies that the element can be accessed only from within the same class, as well as from derived classes found in the same assembly as the containing class. The `Private Protected` access modifier is supported starting with Visual Basic 15.5.
+宣告語句中的[私用受保護](../../../language-reference/modifiers/private-protected.md)關鍵字組合，會指定元素只能從相同的類別中存取，也可以從與包含類別相同的元件中找到的衍生類別進行存取。 從 Visual Basic 15.5 開始支援 `Private Protected` 存取修飾詞。
 
-The following example shows a `Private Protected` declaration:
+下列範例顯示 `Private Protected` 宣告：
 
 ```vb
 Private Protected internalValue As Integer
 ```
 
-You can declare a `Private Protected` element only inside of a class. You cannot declare it within an interface or structure, nor can you declare it at the level of a source file or namespace, inside an interface or a structure, or in a procedure.
+您只可以在類別內宣告 `Private Protected` 元素。 您不能在介面或結構內宣告它，也不能在來源檔案或命名空間層級（在介面或結構內）或程式中宣告它。
 
-The `Private Protected` access modifier is supported by Visual Basic 15.5 and later. To use it, you add the following element to your Visual Basic project ( *\*.vbproj*) file. As long as Visual Basic 15.5 or later is installed on your system, it lets you take advantage of all the language features supported by the latest version of the Visual Basic compiler:
+Visual Basic 15.5 和更新版本支援 `Private Protected` 存取修飾詞。 若要使用它，請將下列專案新增至您的 Visual Basic 專案（ *\*. vbproj*）檔案。 只要您的系統上已安裝 Visual Basic 15.5 或更新版本，它就可讓您利用最新版本的 Visual Basic 編譯器所支援的所有語言功能：
 
 ```xml
 <PropertyGroup>
@@ -97,7 +97,7 @@ The `Private Protected` access modifier is supported by Visual Basic 15.5 and la
 </PropertyGroup>
 ```
 
-To use the `Private Protected` access modifier, you must add the following element to your Visual Basic project ( *\*.vbproj*) file:
+若要使用 `Private Protected` 的存取修飾詞，您必須將下列專案加入至您的 Visual Basic 專案（ *\*. vbproj*）檔案：
 
 ```xml
 <PropertyGroup>
@@ -105,30 +105,30 @@ To use the `Private Protected` access modifier, you must add the following eleme
 </PropertyGroup>
 ```
 
-For more information see [setting the Visual Basic language version](../../../language-reference/configure-language-version.md).
+如需詳細資訊，請參閱[設定 Visual Basic 語言版本](../../../language-reference/configure-language-version.md)。
 
 ## <a name="access-modifiers"></a>存取修飾詞
 
-The keywords that specify access level are called *access modifiers*. The following table compares the access modifiers:
+指定存取層級的關鍵字稱為*存取*修飾詞。 下表比較存取修飾詞：
 
-|Access modifier|Access level granted|Elements you can declare with this access level|Declaration context within which you can use this modifier|
+|存取修飾詞|授與的存取層級|您可以使用此存取層級宣告的元素|宣告內容，您可以在其中使用此修飾詞|
 |---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|
-|`Public`|Unrestricted:<br /><br /> Any code that can see a public element can access it|介面<br /><br /> 模組<br /><br /> 類別<br /><br /> 結構<br /><br /> Structure members<br /><br /> 程序<br /><br /> 內容<br /><br /> Member variables<br /><br /> 常數<br /><br /> 列舉<br /><br /> 「事件」<br /><br /> External declarations<br /><br /> 委派|Source file<br /><br /> 命名空間<br /><br /> 介面<br /><br /> Module<br /><br /> 執行個體<br /><br /> 結構|
-|`Protected`|Derivational:<br /><br /> Code in the class that declares a protected element, or a class derived from it, can access the element|介面<br /><br /> 類別<br /><br /> 結構<br /><br /> 程序<br /><br /> 內容<br /><br /> Member variables<br /><br /> 常數<br /><br /> 列舉<br /><br /> 「事件」<br /><br /> External declarations<br /><br /> 委派|執行個體|
-|`Friend`|組件︰<br /><br /> Code in the assembly that declares a friend element can access it|介面<br /><br /> 模組<br /><br /> 類別<br /><br /> 結構<br /><br /> Structure members<br /><br /> 程序<br /><br /> 內容<br /><br /> Member variables<br /><br /> 常數<br /><br /> 列舉<br /><br /> 「事件」<br /><br /> External declarations<br /><br /> 委派|Source file<br /><br /> 命名空間<br /><br /> 介面<br /><br /> Module<br /><br /> 執行個體<br /><br /> 結構|
-|`Protected` `Friend`|Union of `Protected` and `Friend`:<br /><br /> Code in the same class or the same assembly as a protected friend element, or within any class derived from the element's class, can access it|介面<br /><br /> 類別<br /><br /> 結構<br /><br /> 程序<br /><br /> 內容<br /><br /> Member variables<br /><br /> 常數<br /><br /> 列舉<br /><br /> 「事件」<br /><br /> External declarations<br /><br /> 委派|執行個體|
-|`Private`|Declaration context:<br /><br /> Code in the type that declares a private element, including code within contained types, can access the element|介面<br /><br /> 類別<br /><br /> 結構<br /><br /> Structure members<br /><br /> 程序<br /><br /> 內容<br /><br /> Member variables<br /><br /> 常數<br /><br /> 列舉<br /><br /> 「事件」<br /><br /> External declarations<br /><br /> 委派|Module<br /><br /> 執行個體<br /><br /> 結構|
-|`Private Protected`|Code in the class that declares a private protected element, or code in a derived class found in the same assembly as the bas class.|介面<br /><br /> 類別<br /><br /> 結構<br /><br /> 程序<br /><br /> 內容<br /><br /> Member variables<br /><br /> 常數<br /><br /> 列舉<br /><br /> 「事件」<br /><br /> External declarations<br /><br /> 委派|執行個體|
+|`Public`|L<br /><br /> 任何可以看到公用專案的程式碼都可以存取它|介面<br /><br /> 模組<br /><br /> 類別<br /><br /> 結構<br /><br /> 結構成員<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|來源檔案<br /><br /> 命名空間<br /><br /> 介面<br /><br /> 模組<br /><br /> 執行個體<br /><br /> 結構|
+|`Protected`|Derivational:<br /><br /> 類別中宣告受保護專案的程式碼，或從中衍生的類別，可以存取元素|介面<br /><br /> 類別<br /><br /> 結構<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|執行個體|
+|`Friend`|組件：<br /><br /> 宣告 friend 元素的元件中的程式碼可以存取它|介面<br /><br /> 模組<br /><br /> 類別<br /><br /> 結構<br /><br /> 結構成員<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|來源檔案<br /><br /> 命名空間<br /><br /> 介面<br /><br /> 模組<br /><br /> 執行個體<br /><br /> 結構|
+|`Protected` `Friend`|`Protected` 和 `Friend`的聯集：<br /><br /> 相同類別或相同元件中的程式碼與受保護的 friend 元素相同，或在任何從專案類別衍生的類別中，都可以存取它|介面<br /><br /> 類別<br /><br /> 結構<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|執行個體|
+|`Private`|宣告內容：<br /><br /> 宣告私用專案之類型中的程式碼（包括包含的類型內的程式碼）可以存取元素|介面<br /><br /> 類別<br /><br /> 結構<br /><br /> 結構成員<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|模組<br /><br /> 執行個體<br /><br /> 結構|
+|`Private Protected`|在類別中宣告私用受保護專案的程式碼，或在與 bas 類別相同的元件中找到的衍生類別中的程式碼。|介面<br /><br /> 類別<br /><br /> 結構<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|執行個體|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Dim 陳述式](../../../language-reference/statements/dim-statement.md)
 - [Static](../../../language-reference/modifiers/static.md)
 - [宣告項目名稱](declared-element-names.md)
 - [對已宣告項目的參考](references-to-declared-elements.md)
 - [宣告項目特性](declared-element-characteristics.md)
-- [Lifetime in Visual Basic](lifetime.md)
-- [Scope in Visual Basic](scope.md)
+- [Visual Basic 中的存留期](lifetime.md)
+- [Visual Basic 中的範圍](scope.md)
 - [如何：控制變數的可用性](how-to-control-the-availability-of-a-variable.md)
 - [變數](../variables/index.md)
 - [變數宣告](../variables/variable-declaration.md)

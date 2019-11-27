@@ -14,20 +14,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345135"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>如何：宣告自訂事件以節省記憶體 (Visual Basic)
-There are several circumstances when it is important that an application keep its memory usage low. Custom events allow the application to use memory only for the events that it handles.  
+在幾種情況下，應用程式將其記憶體使用量保持在較低的情況是很重要的。 自訂事件可讓應用程式僅針對它所處理的事件使用記憶體。  
   
- By default, when a class declares an event, the compiler allocates memory for a field to store the event information. If a class has many unused events, they needlessly take up memory.  
+ 根據預設，當類別宣告事件時，編譯器會為欄位配置記憶體來儲存事件資訊。 如果類別有許多未使用的事件，它們就會不必要地佔用記憶體。  
   
- Instead of using the default implementation of events that Visual Basic provides, you can use custom events to manage the memory usage more carefully.  
+ 您可以使用自訂事件，更仔細地管理記憶體使用量，而不是使用 Visual Basic 所提供的預設事件執行。  
   
 ## <a name="example"></a>範例  
- In this example, the class uses one instance of the <xref:System.ComponentModel.EventHandlerList> class, stored in the `Events` field, to store information about the events in use. The <xref:System.ComponentModel.EventHandlerList> class is an optimized list class designed to hold delegates.  
+ 在此範例中，類別會使用儲存在 [`Events`] 欄位中 <xref:System.ComponentModel.EventHandlerList> 類別的一個實例，來儲存所使用之事件的相關資訊。 <xref:System.ComponentModel.EventHandlerList> 類別是設計用來保存委派的優化清單類別。  
   
- All events in the class use the `Events` field to keep track of what methods are handling each event.  
+ 類別中的所有事件都會使用 [`Events`] 欄位，來追蹤哪些方法正在處理每個事件。  
   
  [!code-vb[VbVbalrEvents#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#22)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ComponentModel.EventHandlerList>
 - [事件](../../../../visual-basic/programming-guide/language-features/events/index.md)

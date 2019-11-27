@@ -15,28 +15,28 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350846"
 ---
-# <a name="sample-compilation-command-lines-visual-basic"></a>Sample compilation command lines (Visual Basic)
+# <a name="sample-compilation-command-lines-visual-basic"></a>範例編譯命令列（Visual Basic）
 
-As an alternative to compiling Visual Basic programs from within Visual Studio, you can compile from the command line to produce executable (.exe) files or dynamic-link library (.dll) files.
+除了從 Visual Studio 內編譯 Visual Basic 程式以外，您還可以從命令列進行編譯，以產生可執行檔（.exe）或動態連結程式庫（.dll）檔案。
 
-The Visual Basic command-line compiler supports a complete set of options that control input and output files, assemblies, and debug and preprocessor options. Each option is available in two interchangeable forms: `-option` and `/option`. This documentation shows only the `-option` form.
+Visual Basic 命令列編譯器支援一組完整的選項，可控制輸入和輸出檔案、元件和 debug 和預處理器選項。 每個選項都有兩種可交換的形式： `-option` 和 `/option`。 本檔只會顯示 `-option` 表單。
 
-The following table lists some sample command lines you can modify for your own use.
+下表列出您可以修改以供自己使用的一些範例命令列。
 
-|若要|請使用|
+|進行|用法|
 |--------|---------|
-|Compile File.vb and create File.exe|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|
-|Compile File.vb and create File.dll|`vbc -target:library File.vb`|
-|Compile File.vb and create My.exe|`vbc -out:My.exe File.vb`|
-|Compile File.vb and create both a library and a reference assembly named File.dll|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
-|Compile all Visual Basic files in the current directory, with optimizations on and the `DEBUG` symbol defined, producing File2.exe|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|
-|Compile all Visual Basic files in the current directory, producing a debug version of File2.dll without displaying the logo or warnings|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|
-|Compile all Visual Basic files in the current directory to Something.dll|`vbc -target:library -out:Something.dll *.vb`|
+|編譯 .vb 和 create File .exe|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|
+|編譯 .vb 和 create File .dll|`vbc -target:library File.vb`|
+|編譯 .vb 並建立 My .exe|`vbc -out:My.exe File.vb`|
+|編譯 .vb 並建立名為 File .dll 的程式庫和參考元件|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
+|編譯目前目錄中的所有 Visual Basic 檔案，並已定義優化和 `DEBUG` 符號，產生 File2 .exe|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|
+|編譯目前目錄中的所有 Visual Basic 檔案，產生 File2 的 debug 版本，而不顯示標誌或警告|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|
+|將目前目錄中的所有 Visual Basic 檔案編譯為 .dll|`vbc -target:library -out:Something.dll *.vb`|
 
 > [!TIP]
-> When you build a project by using the Visual Studio IDE, you can display information about the associated **vbc** command with its compiler options in the output window. To display this information, open the [Options Dialog Box,  Projects and Solutions, Build and Run](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), and then set the **MSBuild project build output verbosity** to **Normal** or a higher level of verbosity.
+> 當您使用 Visual Studio IDE 來建立專案時，您可以在 [輸出] 視窗中，使用編譯器選項來顯示相關聯的**vbc**命令資訊。 若要顯示這項資訊，請開啟 [[選項] 對話方塊、[專案和方案]、[建立並執行]](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)，然後將 [ **MSBuild 專案組建輸出詳細**資訊] 設定為 [**一般**] 或更高層級的詳細資訊。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

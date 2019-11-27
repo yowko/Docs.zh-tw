@@ -28,7 +28,7 @@ ms.locfileid: "73740247"
 應用程式是由您自己的服務加上額外的程式庫 (相依性) 所組成。 以下是組建 Docker 應用程式時通常會採用的基本步驟，如圖 5-1 所示。
 
 :::image type="complex" source="./media/docker-app-development-workflow/life-cycle-containerized-apps-docker-cli.png" alt-text="此圖顯示建立容器化應用程式所需的7個步驟。":::
-Docker 應用程式的開發程式： 1-撰寫應用程式的程式碼，2-寫入 Dockerfile/s，3-建立在 Dockerfile/s 定義的映射，4-（選擇性）在 docker-compose.dev.debug.yml yml 檔案中撰寫服務，5-執行容器或 Docker 組成應用程式，6-測試您的應用程式或微服務，7-推送至存放庫並重複。
+Docker 應用程式的開發程式： 1-撰寫應用程式的程式碼，2-Write Dockerfile/s，3-建立在 Dockerfile/s 定義的映射，4-（選擇性）在 docker-compose.dev.debug.yml yml 檔案中撰寫服務，5-執行容器或 Docker 組成應用程式，6-測試您的應用程式或微服務，7-推送至存放庫並重複執行。
 :::image-end:::
 
 **圖 5-1。** 開發 Docker 容器化應用程式的逐步工作流程
@@ -543,7 +543,7 @@ docker-compose up 和 docker run 命令 (在 Visual Studio 中執行和偵錯容
 實際上，使用 Visual Studio 時的工作流程時遠比您使用編輯器/CLI 方法更簡單。 Visual Studio 會隱藏或簡化與 Dockerfile 和 docker-compose.yml 檔案有關，為 Docker 所需的大部分步驟，如圖 5-15 所示。
 
 :::image type="complex" source="./media/docker-app-development-workflow/simplified-life-cycle-containerized-apps-docker-cli.png" alt-text="此圖顯示建立應用程式所需的五個簡化步驟。":::
-Docker 應用程式的開發程式： 1-撰寫應用程式的程式碼，2-寫入 Dockerfile/s，3-建立在 Dockerfile/s 定義的映射，4-（選擇性）在 docker-compose.dev.debug.yml yml 檔案中撰寫服務，5-執行容器或 Docker 組成應用程式，6-測試您的應用程式或微服務，7-推送至存放庫並重複。
+Docker 應用程式的開發程式： 1-撰寫應用程式的程式碼，2-Write Dockerfile/s，3-建立在 Dockerfile/s 定義的映射，4-（選擇性）在 docker-compose.dev.debug.yml yml 檔案中撰寫服務，5-執行容器或 Docker 組成應用程式，6-測試您的應用程式或微服務，7-推送至存放庫並重複執行。
 :::image-end:::
 
 **圖 5-15**。 使用 Visual Studio 開發時的簡化工作流程

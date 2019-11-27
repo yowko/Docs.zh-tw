@@ -1,5 +1,5 @@
 ---
-title: Attributes overview
+title: 屬性總覽
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 ms.openlocfilehash: 97a2a13102718b6ee8829fca678b2b49df21e5d1
@@ -112,9 +112,9 @@ Module: CLSCompliant(True)>
 
 下列清單包含一些程式碼中常見的屬性用法：
 
-- 在 Web 服務中使用 `WebMethod` 屬性標示方法，以表示此方法應該可以透過 SOAP 通訊協定來呼叫。 如需詳細資訊，請參閱<xref:System.Web.Services.WebMethodAttribute>。
+- 在 Web 服務中使用 `WebMethod` 屬性標示方法，以表示此方法應該可以透過 SOAP 通訊協定來呼叫。 如需詳細資訊，請參閱 <xref:System.Web.Services.WebMethodAttribute>。
 
-- 描述在與原生程式碼交互作用時，如何封送處理方法參數。 如需詳細資訊，請參閱<xref:System.Runtime.InteropServices.MarshalAsAttribute>。
+- 描述在與原生程式碼交互作用時，如何封送處理方法參數。 如需詳細資訊，請參閱 <xref:System.Runtime.InteropServices.MarshalAsAttribute>。
 
 - 描述適用於類別、方法和介面的 COM 屬性。
 
@@ -136,7 +136,7 @@ Module: CLSCompliant(True)>
 
 ## <a name="related-sections"></a>相關章節
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱：
 
 - [建立自訂屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
 
@@ -148,7 +148,7 @@ Module: CLSCompliant(True)>
 
 - [呼叫端資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 程式設計指南](../../../../visual-basic/programming-guide/index.md)
 - [反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)

@@ -16,18 +16,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336755"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>使用 ShouldSerialize 和 Reset 方法定義預設值
-`ShouldSerialize` and `Reset` are optional methods that you can provide for a property, if the property does not a have simple default value. If the property has a simple default value, you should apply the <xref:System.ComponentModel.DefaultValueAttribute> and supply the default value to the attribute class constructor instead. Either of these mechanisms enables the following features in the designer:
+如果屬性不具有簡單的預設值，`ShouldSerialize` 和 `Reset` 就是您可以為屬性提供的選擇性方法。 如果屬性具有簡單的預設值，您應該套用 <xref:System.ComponentModel.DefaultValueAttribute>，並改為將預設值提供給屬性類別的函式。 其中一種機制會在設計工具中啟用下列功能：
 
-- The property provides visual indication in the property browser if it has been modified from its default value.
+- 屬性會在屬性瀏覽器中提供視覺指示（如果它已從其預設值修改）。
 
-- The user can right-click on the property and choose **Reset** to restore the property to its default value.
+- 使用者可以在屬性上按一下滑鼠右鍵，然後選擇 [**重設**]，將屬性還原為預設值。
 
-- The designer generates more efficient code.
+- 設計工具會產生更有效率的程式碼。
 
     > [!NOTE]
-    > Either apply the <xref:System.ComponentModel.DefaultValueAttribute> or provide `Reset`*PropertyName* and `ShouldSerialize`*PropertyName* methods. Do not use both.
+    > 請套用 <xref:System.ComponentModel.DefaultValueAttribute> 或提供 `Reset`*propertyname*和 `ShouldSerialize`*propertyname*方法。 請勿同時使用兩者。
 
- The `Reset`*PropertyName* method sets a property to its default value, as shown in the following code fragment.
+ `Reset`*PropertyName*方法會將屬性設定為其預設值，如下列程式碼片段所示。
 
 ```vb
 Public Sub ResetMyFont()
@@ -42,9 +42,9 @@ public void ResetMyFont() {
 ```
 
 > [!NOTE]
-> If a property does not have a `Reset` method, is not marked with a <xref:System.ComponentModel.DefaultValueAttribute>, and does not have a default value supplied in its declaration, the `Reset` option for that property is disabled in the shortcut menu of the **Properties** window of the Windows Forms Designer in Visual Studio.
+> 如果屬性沒有 `Reset` 方法、未以 <xref:System.ComponentModel.DefaultValueAttribute>標記，而且沒有在其宣告中提供預設值，則會在 Visual Studio 之 Windows Form 設計工具的 [**屬性**] 視窗的快捷方式功能表中，停用該屬性的 `Reset` 選項。
 
- Designers such as Visual Studio use the `ShouldSerialize`*PropertyName* method to check whether a property has changed from its default value and write code into the form only if a property is changed, thus allowing for more efficient code generation. 例如:
+ Visual Studio 的設計工具會使用 `ShouldSerialize`*PropertyName*方法來檢查屬性是否已從其預設值變更，並只有在屬性已變更時才將程式碼寫入表單，因而允許更有效率的程式碼產生。 例如：
 
 ```vb
 'Returns true if the font has changed; otherwise, returns false.
@@ -62,7 +62,7 @@ public bool ShouldSerializeMyFont() {
 }
 ```
 
- A complete code example follows.
+ 完整的程式碼範例如下。
 
 ```vb
 Option Explicit
@@ -140,9 +140,9 @@ public class MyControl : Control {
 }
 ```
 
- In this case, even when the value of the private variable accessed by the `MyFont` property is `null`, the property browser does not display `null`; instead, it displays the <xref:System.Windows.Forms.Control.Font%2A> property of the parent, if it is not `null`, or the default <xref:System.Windows.Forms.Control.Font%2A> value defined in <xref:System.Windows.Forms.Control>. Thus the default value for `MyFont` cannot be simply set, and a <xref:System.ComponentModel.DefaultValueAttribute> cannot be applied to this property. Instead, the `ShouldSerialize` and `Reset` methods must be implemented for the `MyFont` property.
+ 在此情況下，即使 `MyFont` 屬性所存取之私用變數的值是 `null`，屬性瀏覽器也不會顯示 `null`;相反地，它會顯示父系的 <xref:System.Windows.Forms.Control.Font%2A> 屬性（如果不是 `null`），或 <xref:System.Windows.Forms.Control>中定義的預設 <xref:System.Windows.Forms.Control.Font%2A> 值。 因此，`MyFont` 的預設值不能只是設定，而且無法將 <xref:System.ComponentModel.DefaultValueAttribute> 套用至這個屬性。 相反地，`ShouldSerialize` 和 `Reset` 方法必須針對 `MyFont` 屬性來執行。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 控制項中的屬性](properties-in-windows-forms-controls.md)
 - [定義屬性](defining-a-property-in-windows-forms-controls.md)

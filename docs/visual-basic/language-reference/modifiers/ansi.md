@@ -16,23 +16,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344745"
 ---
 # <a name="ansi-visual-basic"></a>Ansi (Visual Basic)
-Specifies that Visual Basic should marshal all strings to American National Standards Institute (ANSI) values regardless of the name of the external procedure being declared.  
+指定 Visual Basic 應該將所有字串封送處理成美國國家標準局（ANSI）值，而不論所宣告的外部程式名稱為何。  
   
- When you call a procedure defined outside your project, the Visual Basic compiler does not have access to the information it needs to call the procedure correctly. This information includes where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) creates a reference to an external procedure and supplies this necessary information.  
+ 當您呼叫在專案外部定義的程式時，Visual Basic 編譯器無法存取正確呼叫程式所需的資訊。 此資訊包括程式所在位置、識別方式、其呼叫順序和傳回類型，以及它所使用的字串字元集。 [Declare 語句](../../../visual-basic/language-reference/statements/declare-statement.md)會建立外部程式的參考，並提供此必要資訊。  
   
- The `charsetmodifier` part in the `Declare` statement supplies the character set information for marshaling strings during a call to the external procedure. It also affects how Visual Basic searches the external file for the external procedure name. The `Ansi` modifier specifies that Visual Basic should marshal all strings to ANSI values and should look up the procedure without modifying its name during the search.  
+ `Declare` 語句中的 `charsetmodifier` 部分會在呼叫外部程式期間提供封送處理字串的字元集資訊。 它也會影響 Visual Basic 在外部檔案中搜尋外部程式名稱的方式。 `Ansi` 修飾詞指定 Visual Basic 應該將所有字串封送處理為 ANSI 值，而且在搜尋過程中，不需要修改其名稱，就應該查閱程式。  
   
- If no character set modifier is specified, `Ansi` is the default.  
+ 如果未指定任何字元集修飾詞，`Ansi` 為預設值。  
   
 ## <a name="remarks"></a>備註  
- The `Ansi` modifier can be used in this context:  
+ `Ansi` 修飾詞可以在此內容中使用：  
   
  [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## <a name="smart-device-developer-notes"></a>Smart Device Developer Notes  
- This keyword is not supported.  
+## <a name="smart-device-developer-notes"></a>智慧型裝置開發人員注意事項  
+ 不支援這個關鍵字。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
 - [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)

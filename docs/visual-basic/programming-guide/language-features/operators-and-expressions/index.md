@@ -23,7 +23,7 @@ ms.locfileid: "74343603"
  「運算式」是一系列與運算子合併的值項目，可產生新的值。 運算子透過執行計算、比較或其他作業來當成值項目。  
   
 ## <a name="types-of-operators"></a>運算子類型  
- Visual Basic provides the following types of operators:  
+ Visual Basic 提供下列類型的運算子：  
   
 - [算術運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)可對數值執行類似的計算，包括移位其位元模式。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "74343603"
   
  [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
- In the preceding example, Visual Basic performs the operations in the expression on the right side of the assignment operator (`=`), then assigns the resulting value to the variable `x` on the left. 可合併到運算式的運算子數目沒有實際限制，但需要了解 [Visual Basic 中的運算子優先順序](../../../../visual-basic/language-reference/operators/operator-precedence.md)，才能確保您取得所要的結果。  
+ 在上述範例中，Visual Basic 會在指派運算子（`=`）右側的運算式中執行作業，然後將產生的值指派給左邊的變數 `x`。 可合併到運算式的運算子數目沒有實際限制，但需要了解 [Visual Basic 中的運算子優先順序](../../../../visual-basic/language-reference/operators/operator-precedence.md)，才能確保您取得所要的結果。  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [運算子](../../../../visual-basic/language-reference/operators/index.md)
 - [有效的運算子組合](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

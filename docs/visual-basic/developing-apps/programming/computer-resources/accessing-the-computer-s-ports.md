@@ -16,7 +16,7 @@ ms.locfileid: "74329601"
 
 `My.Computer.Ports` 物件提供屬性和方法來存取電腦的序列連接埠。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
  [如何：顯示可用的序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
  示範如何顯示可用的序列埠。  
@@ -33,7 +33,7 @@ ms.locfileid: "74329601"
  [.NET Framework 中的連接埠作業](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
  描述如何在執行連接埠作業時使用 .NET Framework。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
 
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  描述 `My.Computer.Ports` 物件和其成員。  

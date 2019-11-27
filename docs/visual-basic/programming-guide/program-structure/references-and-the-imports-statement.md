@@ -17,41 +17,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347269"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>參考和 Imports 陳述式 (Visual Basic)
-You can make external objects available to your project by choosing the **Add Reference** command on the **Project** menu. References in Visual Basic can point to assemblies, which are like type libraries but contain more information.  
+您可以選擇 [**專案**] 功能表上的 [**加入參考**] 命令，讓外部物件可供專案使用。 Visual Basic 中的參考可以指向類似類型程式庫的元件，但會包含詳細資訊。  
   
-## <a name="the-imports-statement"></a>The Imports Statement  
- Assemblies include one or more namespaces. When you add a reference to an assembly, you can also add an `Imports` statement to a module that controls the visibility of that assembly's namespaces within the module. The `Imports` statement provides a scoping context that lets you use only the portion of the namespace necessary to supply a unique reference.  
+## <a name="the-imports-statement"></a>Imports 語句  
+ 元件包含一或多個命名空間。 當您加入元件的參考時，您也可以將 `Imports` 語句加入模組中，以控制該元件在模組內的可見度。 `Imports` 語句提供範圍內容，可讓您只使用提供唯一參考所需的命名空間部分。  
   
- The `Imports` statement has the following syntax:  
+ `Imports` 語句具有下列語法：  
   
  `Imports [Aliasname =] Namespace`  
   
- `Aliasname` refers to a short name you can use within code to refer to an imported namespace. `Namespace` is a namespace available through either a project reference, through a definition within the project, or through a previous `Imports` statement.  
+ `Aliasname` 是指您可以在程式碼內用來參考已匯入之命名空間的簡短名稱。 `Namespace` 是透過專案參考、專案內的定義，或透過上一個 `Imports` 語句提供的命名空間。  
   
- A module may contain any number of `Imports` statements. They must appear after any `Option` statements, if present, but before any other code.  
+ 模組可以包含任意數目的 `Imports` 語句。 它們必須出現在任何 `Option` 語句之後（如果有的話），但在任何其他程式碼之前。  
   
 > [!NOTE]
-> Do not confuse project references with the `Imports` statement or the `Declare` statement. Project references make external objects, such as objects in assemblies, available to Visual Basic projects. The `Imports` statement is used to simplify access to project references, but does not provide access to these objects. The `Declare` statement is used to declare a reference to an external procedure in a dynamic-link library (DLL).  
+> 請勿混淆專案參考與 `Imports` 語句或 `Declare` 語句。 專案參考會使外部物件（例如元件中的物件）可用於 Visual Basic 專案。 `Imports` 語句是用來簡化對專案參考的存取，但不提供這些物件的存取權。 `Declare` 語句是用來在動態連結程式庫（DLL）中宣告外部程式的參考。  
   
-## <a name="using-aliases-with-the-imports-statement"></a>Using Aliases with the Imports Statement  
- The `Imports` statement makes it easier to access methods of classes by eliminating the need to explicitly type the fully qualified names of references. Aliases let you assign a friendlier name to just one part of a namespace. For example, the carriage return/line feed sequence that causes a single piece of text to be displayed on multiple lines is part of the <xref:Microsoft.VisualBasic.ControlChars> module in the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace. To use this constant in a program without an alias, you would need to type the following code:  
+## <a name="using-aliases-with-the-imports-statement"></a>搭配 Imports 語句使用別名  
+ `Imports` 語句可讓您藉由排除明確輸入參考完整名稱的需求，更輕鬆地存取類別的方法。 別名可讓您將易記名稱指派給命名空間的一個部分。 例如，導致在多行上顯示單一文字片段的線路傳回/換行字元順序，是 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 命名空間中 <xref:Microsoft.VisualBasic.ControlChars> 模組的一部分。 若要在沒有別名的程式中使用此常數，您必須輸入下列程式碼：  
   
  [!code-vb[VbVbalrApplication#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#3)]  
   
- `Imports` statements must always be the first lines immediately following any `Option` statements in a module. The following code fragment shows how to import and assign an alias to the <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType> module:  
+ `Imports` 語句必須一律是緊接在模組中任何 `Option` 語句後面的第一行。 下列程式碼片段顯示如何匯入並指派別名給 <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType> 模組：  
   
  [!code-vb[VbVbalrApplication#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#4)]  
   
- Future references to this namespace can be considerably shorter:  
+ 未來對此命名空間的參考可能會變得很短：  
   
  [!code-vb[VbVbalrApplication#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#5)]  
   
- If an `Imports` statement does not include an alias name, elements defined within the imported namespace can be used in the module without qualification. If the alias name is specified, it must be used as a qualifier for names contained within that namespace.  
+ 如果 `Imports` 語句不包含別名名稱，則在匯入的命名空間內定義的專案可以在模組中使用，而不需要限定。 如果指定別名名稱，則必須將它當做包含在該命名空間內之名稱的限定詞使用。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.ControlChars>
 - <xref:Microsoft.VisualBasic>
-- [Namespaces in Visual Basic](namespaces.md)
+- [Visual Basic 中的命名空間](namespaces.md)
 - [.NET 中的組件](../../../standard/assembly/index.md)
 - [Imports 陳述式 (.NET 命名空間和類型)](../../language-reference/statements/imports-statement-net-namespace-and-type.md)

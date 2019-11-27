@@ -56,7 +56,7 @@ ms.locfileid: "74283929"
 
 此外，您可以瀏覽 [.NET API 參考](/dotnet/api)。
 
-## <a name="videos"></a>視訊
+## <a name="videos"></a>Videos
 
 探索 web、行動裝置、桌上型電腦、 C#機器學習服務、容器/Docker、資料存取等的影片：
 
@@ -72,7 +72,7 @@ ms.locfileid: "74283929"
 - [.NET Core CLI](https://github.com/dotnet/cli)
 - [Roslyn (C# and Visual Basic) Compiler Platform and IDE Tools](https://github.com/dotnet/roslyn) (Roslyn (C# 和 Visual Basic) 編譯器平台和 IDE 工具)
 - [F# Compiler and IDE Tools](https://github.com/microsoft/visualfsharp) (F# 編譯器和 IDE 工具)
-- [Windows Form](https://github.com/dotnet/winforms)
+- [Windows Forms](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 
 您可以加入已活躍於 [.NET 社群 (英文)](https://dotnet.microsoft.com/platform/community) 的其他人，了解最新消息或尋求協助。

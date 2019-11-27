@@ -119,7 +119,7 @@ ms.locfileid: "74283250"
 [!code-csharp[C_CustomUsernameAndPasswordValidator#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_customusernameandpasswordvalidator/cs/service.cs#2)]
 [!code-vb[C_CustomUsernameAndPasswordValidator#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#2)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
 - [如何：使用 ASP.NET 成員資格提供者](how-to-use-the-aspnet-membership-provider.md)

@@ -33,57 +33,57 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351003"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>多載化程序的考慮因素 (Visual Basic)
-When you overload a procedure, you must use a different *signature* for each overloaded version. This usually means each version must specify a different parameter list. For more information, see "Different Signature" in [Procedure Overloading](./procedure-overloading.md).  
+當您多載程式時，您必須針對每個多載版本使用*不同的簽*章。 這通常表示每個版本都必須指定不同的參數清單。 如需詳細資訊，請參閱程式多載[中的「不同的簽](./procedure-overloading.md)章」。  
   
- You can overload a `Function` procedure with a `Sub` procedure, and vice versa, provided they have different signatures. Two overloads cannot differ only in that one has a return value and the other does not.  
+ 您可以使用 `Sub` 程式來多載 `Function` 程式，反之亦然，前提是它們有不同的簽章。 兩個多載不能有不同的差異，只有其中一個具有傳回值，另一個則沒有。  
   
- You can overload a property the same way you overload a procedure, and with the same restrictions. However, you cannot overload a procedure with a property, or vice versa.  
+ 您可以使用與多載程式相同的方式來多載屬性，而且具有相同的限制。 但是，您無法使用屬性來多載程式，反之亦然。  
   
-## <a name="alternatives-to-overloaded-versions"></a>Alternatives to Overloaded Versions  
- You sometimes have alternatives to overloaded versions, particularly when the presence of arguments is optional or their number is variable.  
+## <a name="alternatives-to-overloaded-versions"></a>多載版本的替代專案  
+ 有時候，您會有多載版本的替代專案，特別是當引數的存在是選擇性或其數位為變數時。  
   
- Keep in mind that optional arguments are not necessarily supported by all languages, and parameter arrays are limited to Visual Basic. If you are writing a procedure that is likely to be called from code written in any of several different languages, overloaded versions offer the greatest flexibility.  
+ 請記住，所有語言都不一定支援選擇性引數，而且參數陣列僅限於 Visual Basic。 如果您撰寫的程式可能會從以多種不同語言撰寫的程式碼中呼叫，則多載版本提供最大的彈性。  
   
-### <a name="overloads-and-optional-arguments"></a>Overloads and Optional Arguments  
- When the calling code can optionally supply or omit one or more arguments, you can define multiple overloaded versions or use optional parameters.  
+### <a name="overloads-and-optional-arguments"></a>多載和選擇性引數  
+ 當呼叫程式碼可以選擇性地提供或省略一或多個引數時，您可以定義多個多載版本或使用選擇性參數。  
   
-#### <a name="when-to-use-overloaded-versions"></a>When to Use Overloaded Versions  
- You can consider defining a series of overloaded versions in the following cases:  
+#### <a name="when-to-use-overloaded-versions"></a>使用多載版本的時機  
+ 在下列情況下，您可以考慮定義一連串的多載版本：  
   
-- The logic in the procedure code is significantly different depending on whether the calling code supplies an optional argument or not.  
+- 程式碼中的邏輯會根據呼叫程式碼是否提供選擇性引數而有很大的差異。  
   
-- The procedure code cannot reliably test whether the calling code has supplied an optional argument. This is the case, for example, if there is no possible candidate for a default value that the calling code could not be expected to supply.  
+- 程式碼無法可靠地測試呼叫程式碼是否已提供選擇性引數。 例如，如果沒有可供呼叫程式碼無法提供的預設值，就會發生這種情況。  
   
-#### <a name="when-to-use-optional-parameters"></a>When to Use Optional Parameters  
- You might prefer one or more optional parameters in the following cases:  
+#### <a name="when-to-use-optional-parameters"></a>使用選擇性參數的時機  
+ 在下列情況中，您可能會偏好使用一或多個選擇性參數：  
   
-- The only required action when the calling code does not supply an optional argument is to set the parameter to a default value. In such a case, the procedure code can be less complicated if you define a single version with one or more `Optional` parameters.  
+- 當呼叫程式碼未提供選擇性引數時，唯一必要的動作是將參數設定為預設值。 在這種情況下，如果您定義具有一或多個 `Optional` 參數的單一版本，程式碼可能會比較不復雜。  
   
- For more information, see [Optional Parameters](./optional-parameters.md).  
+ 如需詳細資訊，請參閱[選擇性參數](./optional-parameters.md)。  
   
-### <a name="overloads-and-paramarrays"></a>Overloads and ParamArrays  
- When the calling code can pass a variable number of arguments, you can define multiple overloaded versions or use a parameter array.  
+### <a name="overloads-and-paramarrays"></a>多載和 ParamArrays  
+ 當呼叫程式碼可以傳遞可變數目的引數時，您可以定義多個多載版本，或使用參數陣列。  
   
-#### <a name="when-to-use-overloaded-versions"></a>When to Use Overloaded Versions  
- You can consider defining a series of overloaded versions in the following cases:  
+#### <a name="when-to-use-overloaded-versions"></a>使用多載版本的時機  
+ 在下列情況下，您可以考慮定義一連串的多載版本：  
   
-- You know that the calling code never passes more than a small number of values to the parameter array.  
+- 您知道呼叫程式碼絕對不會將一個以上的值傳遞給參數陣列。  
   
-- The logic in the procedure code is significantly different depending on how many values the calling code passes.  
+- 程式碼中的邏輯會明顯不同，這取決於呼叫程式碼傳遞多少個值。  
   
-- The calling code can pass values of different data types.  
+- 呼叫程式碼可以傳遞不同資料類型的值。  
   
-#### <a name="when-to-use-a-parameter-array"></a>When to Use a Parameter Array  
- You are better served by a `ParamArray` parameter in the following cases:  
+#### <a name="when-to-use-a-parameter-array"></a>使用參數陣列的時機  
+ 在下列情況下，`ParamArray` 參數會提供較佳的服務：  
   
-- You are not able to predict how many values the calling code can pass to the parameter array, and it could be a large number.  
+- 您無法預測呼叫程式碼可以傳遞給參數陣列的值數目，而且可能是很大的數位。  
   
-- The procedure logic lends itself to iterating through all the values the calling code passes, performing essentially the same operations on every value.  
+- 程式邏輯可自行逐一查看呼叫程式碼所通過的所有值，對每個值基本上執行相同的作業。  
   
- For more information, see [Parameter Arrays](./parameter-arrays.md).  
+ 如需詳細資訊，請參閱[參數陣列](./parameter-arrays.md)。  
   
-## <a name="implicit-overloads-for-optional-parameters"></a>Implicit Overloads for Optional Parameters  
- A procedure with an [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) parameter is equivalent to two overloaded procedures, one with the optional parameter and one without it. You cannot overload such a procedure with a parameter list corresponding to either of these. The following declarations illustrate this.  
+## <a name="implicit-overloads-for-optional-parameters"></a>選擇性參數的隱含多載  
+ 具有[選擇性](../../../../visual-basic/language-reference/modifiers/optional.md)參數的程式相當於兩個多載的程式，一個包含選擇性參數，另一個則沒有。 您無法使用對應于其中任一項的參數清單來多載這類程式。 下列宣告說明這種情況。  
   
  [!code-vb[VbVbcnProcedures#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#58)]  
   
@@ -91,37 +91,37 @@ When you overload a procedure, you must use a different *signature* for each ove
   
  [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
- For a procedure with more than one optional parameter, there is a set of implicit overloads, arrived at by logic similar to that in the preceding example.  
+ 針對具有多個選擇性參數的程式，會有一組隱含的多載，並以類似上述範例中的邏輯抵達。  
   
-## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Implicit Overloads for a ParamArray Parameter  
- The compiler considers a procedure with a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter to have an infinite number of overloads, differing from each other in what the calling code passes to the parameter array, as follows:  
+## <a name="implicit-overloads-for-a-paramarray-parameter"></a>ParamArray 參數的隱含多載  
+ 編譯器會將具有[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)參數的程式視為具有無限數量的多載，並在呼叫程式碼傳遞給參數陣列的內容中彼此不同，如下所示：  
   
-- One overload for when the calling code does not supply an argument to the `ParamArray`  
+- 呼叫程式碼未提供引數給 `ParamArray` 時的一個多載  
   
-- One overload for when the calling code supplies a one-dimensional array of the `ParamArray` element type  
+- 當呼叫程式碼提供 `ParamArray` 專案類型的一維陣列時，一個多載  
   
-- For every positive integer, one overload for when the calling code supplies that number of arguments, each of the `ParamArray` element type  
+- 針對每個正整數，當呼叫程式碼提供該數目的引數時，一個多載，其中每個都是 `ParamArray` 的元素類型  
   
- The following declarations illustrate these implicit overloads.  
+ 下列宣告說明這些隱含多載。  
   
  [!code-vb[VbVbcnProcedures#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#68)]  
   
  [!code-vb[VbVbcnProcedures#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#70)]  
   
- You cannot overload such a procedure with a parameter list that takes a one-dimensional array for the parameter array. However, you can use the signatures of the other implicit overloads. The following declarations illustrate this.  
+ 您無法使用參數清單來多載這類程式，其中會採用一維陣列做為參數陣列。 不過，您可以使用其他隱含多載的簽章。 下列宣告說明這種情況。  
   
  [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
-## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Typeless Programming as an Alternative to Overloading  
- If you want to allow the calling code to pass different data types to a parameter, an alternative approach is typeless programming. You can set the type checking switch to `Off` with either the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) or the [-optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) compiler option. Then you do not have to declare the parameter's data type. However, this approach has the following disadvantages compared to overloading:  
+## <a name="typeless-programming-as-an-alternative-to-overloading"></a>無程式設計是多載的替代方法  
+ 如果您想要允許呼叫程式碼將不同的資料類型傳遞給參數，另一個替代方法是無類型的程式設計。 您可以使用[Option Strict 語句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)或[-optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md)編譯器選項，將類型檢查參數設定為 `Off`。 然後您就不需要宣告參數的資料類型。 不過，相較于多載，此方法具有下列缺點：  
   
-- Typeless programming produces less efficient execution code.  
+- 無語言程式設計會產生較不有效率的執行程式碼。  
   
-- The procedure must test for every data type it anticipates being passed.  
+- 此程式必須針對預期傳遞的每個資料類型進行測試。  
   
-- The compiler cannot signal an error if the calling code passes a data type that the procedure does not support.  
+- 如果呼叫程式碼傳遞程式不支援的資料類型，編譯器就無法通知錯誤。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [程序](./index.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)

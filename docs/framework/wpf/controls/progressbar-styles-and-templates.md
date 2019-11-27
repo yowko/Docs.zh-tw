@@ -22,7 +22,7 @@ ms.locfileid: "74283445"
 ## <a name="progressbar-parts"></a>ProgressBar 元件  
  下表列出 <xref:System.Windows.Controls.ProgressBar> 控制項的已命名元件。  
   
-|組件|輸入|描述|  
+|組件|類型|描述|  
 |-|-|-|  
 |PART_Indicator|<xref:System.Windows.FrameworkElement>|表示進度的物件。|  
 |PART_Track|<xref:System.Windows.FrameworkElement>|定義進度指標路徑的物件。|  
@@ -35,7 +35,7 @@ ms.locfileid: "74283445"
 |----------------------|---------------------------|-----------------|  
 |確定|CommonStates|<xref:System.Windows.Controls.ProgressBar> 會根據 <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> 屬性來報告進度。|  
 |處於|CommonStates|<xref:System.Windows.Controls.ProgressBar> 會以重複模式來報告一般進度。|  
-|驗證|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，而 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性則 `false`。|  
+|有效|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，而 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性則 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是控制項具有焦點 `true`。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是 `true` 控制項沒有焦點。|  
   
@@ -50,7 +50,7 @@ ms.locfileid: "74283445"
   
  如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>

@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349391"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML 註解常值 (Visual Basic)
-A literal representing an <xref:System.Xml.Linq.XComment> object.  
+表示 <xref:System.Xml.Linq.XComment> 物件的常值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,33 +29,33 @@ A literal representing an <xref:System.Xml.Linq.XComment> object.
   
 |詞彙|定義|  
 |---|---|  
-|`<!--`|必要項。 Denotes the start of the XML comment.|  
-|`content`|必要項。 Text to appear in the XML comment. Cannot contain a series of two hyphens (--) or end with a hyphen adjacent to the closing tag.|  
-|`-->`|必要項。 Denotes the end of the XML comment.|  
+|`<!--`|必要。 表示 XML 批註的開頭。|  
+|`content`|必要。 要出現在 XML 批註中的文字。 不能包含一系列的兩個連字號（--），也不能以連字號連續的結束記號結束。|  
+|`-->`|必要。 表示 XML 批註的結尾。|  
   
 ## <a name="return-value"></a>傳回值  
  <xref:System.Xml.Linq.XComment> 物件。  
   
 ## <a name="remarks"></a>備註  
- XML comment literals do not contain document content; they contain information about the document. The XML comment section ends with the sequence "-->". This implies the following points:  
+ XML 批註常值不包含檔內容;其中包含檔的相關資訊。 XML 批註區段的結尾是「-->」序列。 這表示下列幾點：  
   
-- You cannot use an embedded expression in an XML comment literal because the embedded expression delimiters are valid XML comment content.  
+- 您不能在 XML 批註常值中使用內嵌運算式，因為內嵌的運算式分隔符號是有效的 XML 批註內容。  
   
-- XML comment sections cannot be nested, because `content` cannot contain the value "-->".  
+- XML 批註區段無法嵌套，因為 `content` 不能包含值 "-->"。  
   
- You can assign an XML comment literal to a variable, or you can include it in an XML element literal.  
+ 您可以將 XML 批註常值指派給變數，也可以將它包含在 XML 元素常值中。  
   
 > [!NOTE]
-> An XML literal can span multiple lines without using line continuation characters. This feature enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+> XML 常值可以跨越多行，而不需要使用行接續字元。 這項功能可讓您從 XML 檔案複製內容，並將它直接貼到 Visual Basic 程式中。  
   
- The Visual Basic compiler converts the XML comment literal to a call to the <xref:System.Xml.Linq.XComment.%23ctor%2A> constructor.  
+ Visual Basic 編譯器會將 XML 批註常值轉換為呼叫 <xref:System.Xml.Linq.XComment.%23ctor%2A> 的函式。  
   
 ## <a name="example"></a>範例  
- The following example creates an XML comment that contains the text "This is a comment".  
+ 下列範例會建立包含文字 "This is a comment" 的 XML 批註。  
   
  [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Linq.XComment>
 - [XML 項目常值](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

@@ -39,7 +39,7 @@ tlbimp Loanlib.tlb
 tlbimp LoanLib.tlb /out: LOANLib.dll  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [匯入類型程式庫做為組件](importing-a-type-library-as-an-assembly.md)
 - [將 COM 元件公開給 .NET Framework](exposing-com-components.md)

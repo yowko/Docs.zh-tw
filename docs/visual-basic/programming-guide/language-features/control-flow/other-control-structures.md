@@ -13,15 +13,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348138"
 ---
 # <a name="other-control-structures-visual-basic"></a>其他控制結構 (Visual Basic)
-Visual Basic provides control structures that help you dispose of a resource or reduce the number of times you have to repeat an object reference.  
+Visual Basic 提供控制結構，協助您處置資源，或減少必須重複物件參考的次數。  
   
-## <a name="usingend-using-construction"></a>Using...End Using Construction  
- The `Using...End Using` construction establishes a statement block within which you make use of a resource such as a SQL connection. You can optionally acquire the resource with the `Using` statement. When you exit the `Using` block, Visual Basic automatically disposes of the resource so that it is available for other code to use. The resource must be local and disposable. 如需詳細資訊，請參閱 [Using 陳述式](../../../../visual-basic/language-reference/statements/using-statement.md)。  
+## <a name="usingend-using-construction"></a>使用 .。。使用結構結束  
+ `Using...End Using` 結構會建立語句區塊，您可以在其中使用 SQL 連接之類的資源。 您可以選擇性地使用 `Using` 語句來取得資源。 當您結束 `Using` 區塊時，Visual Basic 會自動處置資源，使其可供其他程式碼使用。 資源必須是本機且可處置的。 如需詳細資訊，請參閱 [Using 陳述式](../../../../visual-basic/language-reference/statements/using-statement.md)。  
   
-## <a name="withend-with-construction"></a>With...End With Construction  
- The `With...End With` construction lets you specify an object reference once and then run a series of statements that access its members. This can simplify your code and improve performance because Visual Basic does not have to re-establish the reference for each statement that accesses it. For more information, see [With...End With Statement](../../../../visual-basic/language-reference/statements/with-end-with-statement.md).  
+## <a name="withend-with-construction"></a>使用 .。。以結構結束  
+ `With...End With` 結構可讓您指定一次物件參考，然後執行一系列存取其成員的語句。 這可簡化您的程式碼並改善效能，因為 Visual Basic 不需要為存取它的每個語句重新建立參考。 如需詳細資訊，請參閱[With .。。結尾為語句](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [控制流程](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [決策結構](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)

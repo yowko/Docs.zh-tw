@@ -1,5 +1,5 @@
 ---
-title: '&amp;= Operator'
+title: '&amp;= 運算子'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.&=
@@ -17,8 +17,8 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350270"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp;= Operator (Visual Basic)
-Concatenates a `String` expression to a `String` variable or property and assigns the result to the variable or property.  
+# <a name="amp-operator-visual-basic"></a>&amp;= 運算子（Visual Basic）
+將 `String` 運算式串連至 `String` 變數或屬性，並將結果指派給變數或屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -28,23 +28,23 @@ variableorproperty &= expression
   
 ## <a name="parts"></a>組件  
  `variableorproperty`  
- 必要項。 Any `String` variable or property.  
+ 必要。 任何 `String` 變數或屬性。  
   
  `expression`  
- 必要項。 任何 `String` 運算式。  
+ 必要。 任何 `String` 運算式。  
   
 ## <a name="remarks"></a>備註  
- The element on the left side of the `&=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). The `&=` operator concatenates the `String` expression on its right to the `String` variable or property on its left, and assigns the result to the variable or property on its left.  
+ `&=` 運算子左邊的元素可以是簡單的純量變數、屬性或陣列的元素。 變數或屬性不可為[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。 `&=` 運算子會將其右邊的 `String` 運算式串連至其左邊的 `String` 變數或屬性，並將結果指派給其左邊的變數或屬性。  
   
 ## <a name="overloading"></a>多載化  
- The [& Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `&` operator affects the behavior of the `&=` operator. If your code uses `&=` on a class or structure that overloads `&`, be sure you understand its redefined behavior. 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ [& 運算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)可以多載 *，這*表示當運算元具有該類別或結構的類型時，類別或結構可以重新定義其行為。 多載 `&` 運算子會影響 `&=` 運算子的行為。 如果您的程式碼在多載 `&`的類別或結構上使用 `&=`，請務必瞭解其已重新定義的行為。 如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>範例  
- The following example uses the `&=` operator to concatenate two `String` variables and assign the result to the first variable.  
+ 下列範例會使用 `&=` 運算子來串連兩個 `String` 變數，並將結果指派給第一個變數。  
   
  [!code-vb[VbVbalrOperators#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#3)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [& 運算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)
 - [+= 運算子](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)

@@ -15,29 +15,29 @@ ms.locfileid: "74347447"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>使用 XML 在程式碼中加入文件 (Visual Basic)
 
-In Visual Basic, you can document your code using XML
+在 Visual Basic 中，您可以使用 XML 記錄您的程式碼
 
 ## <a name="xml-documentation-comments"></a>XML 文件註解
 
-Visual Basic provides an easy way to automatically create XML documentation for projects. You can automatically generate an XML skeleton for your types and members, and then provide summaries, descriptive documentation for each parameter, and other remarks. With the appropriate setup, the XML documentation is automatically emitted into an XML file with the same name as your project and the .xml extension. 如需詳細資訊，請參閱 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)。
+Visual Basic 提供簡單的方式來自動建立專案的 XML 檔。 您可以自動產生類型和成員的 XML 基本架構，然後提供摘要、每個參數的描述性檔，以及其他備註。 使用適當的設定時，XML 檔會自動發出至與您的專案同名的 XML 檔案和 .xml 副檔名。 如需詳細資訊，請參閱 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)。
 
-The XML file can be consumed or otherwise manipulated as XML. This file is located in the same directory as the output .exe or .dll file of your project.
+您可以使用 xml 檔案，或以 XML 的方式操作。 這個檔案位於與專案的輸出 .exe 或 .dll 檔案相同的目錄中。
 
-XML documentation starts with `'''`. 這些註解在處理時有一些限制：
+XML 檔的開頭為 `'''`。 這些註解在處理時有一些限制：
 
-- 文件必須是語式正確的 XML。 If the XML is not well formed, a warning is generated and the documentation file contains a comment saying that an error was encountered.
+- 文件必須是語式正確的 XML。 如果 XML 的格式不正確，則會產生警告，而且檔檔案會包含批註，指出發生錯誤。
 
-- 開發人員可以自由建立自己的標記集合。 There is a recommended set of tags (see "Related Sections" in this topic). 其中一些建議的標記具有特殊意義：
+- 開發人員可以自由建立自己的標記集合。 有一組建議的標記（請參閱本主題中的「相關章節」）。 其中一些建議的標記具有特殊意義：
 
-  - \<param> 標記是用來描述參數。 如果使用，編譯器會驗證參數存在，而且所有參數在文件中都有描述。 If the verification fails, the compiler issues a warning.
+  - \<param> 標記是用來描述參數。 如果使用，編譯器會驗證參數存在，而且所有參數在文件中都有描述。 如果驗證失敗，編譯器會發出警告。
 
-  - `cref` 屬性可以附加至任何標記，以提供程式碼項目的參考。 編譯器會驗證此程式碼項目存在。 If the verification fails, the compiler issues a warning. The compiler also respects any `Imports` statements when looking for a type described in the `cref` attribute.
+  - `cref` 屬性可以附加至任何標記，以提供程式碼項目的參考。 編譯器會驗證此程式碼項目存在。 如果驗證失敗，編譯器會發出警告。 在尋找 `cref` 屬性中所描述的類型時，編譯器也會遵循任何 `Imports` 語句。
 
-  - The \<summary> tag is used by IntelliSense in Visual Studio to display additional information about a type or member.
+  - \<summary > 標記是由 IntelliSense 在 Visual Studio 中用來顯示類型或成員的其他資訊。
 
 ## <a name="related-sections"></a>相關章節
 
-For details on creating an XML file with documentation comments, see the following topics:
+如需有關建立含有檔批註之 XML 檔案的詳細資訊，請參閱下列主題：
 
 - [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 
@@ -49,7 +49,7 @@ For details on creating an XML file with documentation comments, see the followi
 
 - [Visual Studio 中的 XML 工具](/visualstudio/xml-tools/xml-tools-in-visual-studio)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 Visual Basic 開發應用程式](../../../visual-basic/developing-apps/index.md)
 - [Visual Basic 程式設計指南](../../../visual-basic/programming-guide/index.md)

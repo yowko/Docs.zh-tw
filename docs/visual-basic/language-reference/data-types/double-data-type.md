@@ -28,36 +28,36 @@ ms.locfileid: "74344007"
 ---
 # <a name="double-data-type-visual-basic"></a>Double 資料類型 (Visual Basic)
 
-Holds signed IEEE 64-bit (8-byte) double-precision floating-point numbers that range in value from -1.79769313486231570E+308 through -4.94065645841246544E-324 for negative values and from 4.94065645841246544E-324 through 1.79769313486231570E+308 for positive values. Double-precision numbers store an approximation of a real number.
+保存已簽署的 IEEE 64 位（8位元組）雙精確度浮點數，範圍介於-1.79769313486231570 E + 308 到-4.94065645841246544 E-324 中的負值，以及從 4.94065645841246544 E-324 到 1.79769313486231570 E + 308 的值正數值。 雙精度浮點數會儲存實數的近似值。
 
 ## <a name="remarks"></a>備註
 
-The `Double` data type provides the largest and smallest possible magnitudes for a number.
+`Double` 資料類型提供數位的最大和最小可能巨量。
 
 `Double` 的預設值為 0。
 
 ## <a name="programming-tips"></a>程式設計提示
 
-- **Precision.** When you work with floating-point numbers, remember that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+- **精密.** 當您使用浮點數時，請記住它們不一定會在記憶體中有精確的標記法。 這可能會導致某些作業產生非預期的結果，例如值比較和 `Mod` 運算子。 如需詳細資訊，請參閱針對[資料類型進行疑難排解](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。
 
-- **Trailing Zeros.** The floating-point data types do not have any internal representation of trailing zero characters. For example, they do not distinguish between 4.2000 and 4.2. Consequently, trailing zero characters do not appear when you display or print floating-point values.
+- **尾端零。** 浮點資料類型沒有尾端零字元的任何內部表示。 例如，它們不會區分4.2000 和4.2。 因此，當您顯示或列印浮點值時，不會出現尾端的零字元。
 
-- **Type Characters.** 將常值類型字元 `R` 附加到常值，會強制其成為 `Double` 資料類型。 For example, if an integer value is followed by `R`, the value is changed to a `Double`.
+- **輸入字元。** 將常值類型字元 `R` 附加到常值，會強制其成為 `Double` 資料類型。 例如，如果整數值後面加上 `R`，則此值會變更為 `Double`。
 
   ```vb
   ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:
   Dim dub As Double = 4.0R
   ```
 
-  將識別項類型字元 `#` 附加到任何識別項，會強制其成為 `Double`。 In the following example, the variable `num` is typed as a `Double`:
+  將識別項類型字元 `#` 附加到任何識別項，會強制其成為 `Double`。 在下列範例中，變數 `num` 會輸入為 `Double`：
 
   ```vb
   Dim num# = 3
   ```
 
-- **Framework Type.** 在 .NET Framework 中對應的類型為 <xref:System.Double?displayProperty=nameWithType> 結構。
+- **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.Double?displayProperty=nameWithType> 結構。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Double?displayProperty=nameWithType>
 - [資料類型](../../../visual-basic/language-reference/data-types/index.md)

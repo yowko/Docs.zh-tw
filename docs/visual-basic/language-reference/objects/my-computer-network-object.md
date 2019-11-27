@@ -12,20 +12,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332281"
 ---
 # <a name="mycomputernetwork-object"></a>My.Computer.Network 物件
-Provides a property, event, and methods for interacting with the network to which the computer is connected.  
+提供屬性、事件和方法，以便與電腦連線的網路進行互動。  
   
 ## <a name="remarks"></a>備註  
  如需方法和 `My.Computer.Network` 物件屬性的資訊，請參閱 <xref:Microsoft.VisualBasic.Devices.Network>。  
   
- For more information, see [Performing Network Operations](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md).  
+ 如需詳細資訊，請參閱[執行網路作業](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md)。  
   
 ## <a name="requirements"></a>需求  
  **命名空間︰** <xref:Microsoft.VisualBasic.Devices?displayProperty=nameWithType>  
   
  **類別︰** <xref:Microsoft.VisualBasic.Devices.Network>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **元件：** Visual Basic 執行時間程式庫（在 Microsoft 中）  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [My.Computer 物件](../../../visual-basic/language-reference/objects/my-computer-object.md)

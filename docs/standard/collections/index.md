@@ -22,7 +22,7 @@ ms.locfileid: "74204763"
 # <a name="collections-and-data-structures"></a>集合和資料結構
 使用集合進行儲存與管理時，通常可以更有效率地處理類似的資料。 您可以使用 <xref:System.Array?displayProperty=nameWithType> 類別或 <xref:System.Collections>、<xref:System.Collections.Generic>、<xref:System.Collections.Concurrent> 和 System.Collections.Immutable 命名空間中的類別，來新增、移除和修改集合中的個別項目或某個範圍項目。  
   
- 有兩種主要的集合類型；泛型集合和非泛型集合。 泛型集合已加入.NET Framework 2.0 中，且會在編譯階段提供類型安全的集合。 因此，泛型集合通常會有較佳的效能。 建構泛型集合後，泛型集合可接受類型參數，且當您加入或移除集合中的項目時，不需要轉換成 <xref:System.Object> 類型或從該類型進行轉換。  In addition, most generic collections are supported in Windows Store apps. Non-generic collections store items as <xref:System.Object>, require casting, and most are not supported for Windows Store app development. 但您可能會在較舊的程式碼中看到非泛型集合。  
+ 有兩種主要的集合類型；泛型集合和非泛型集合。 泛型集合已加入.NET Framework 2.0 中，且會在編譯階段提供類型安全的集合。 因此，泛型集合通常會有較佳的效能。 建構泛型集合後，泛型集合可接受類型參數，且當您加入或移除集合中的項目時，不需要轉換成 <xref:System.Object> 類型或從該類型進行轉換。  此外，Windows Store 應用程式也支援大部分的泛型集合。 非泛型集合會將專案儲存為 <xref:System.Object>、需要轉型，而且大部分都不支援 Windows Store 應用程式開發。 但您可能會在較舊的程式碼中看到非泛型集合。  
   
  從 .NET Framework 4 開始，<xref:System.Collections.Concurrent> 命名空間中的集合提供了有效率的安全執行緒作業，可從多個執行緒存取集合項目。 System.Collections.Immutable 命名空間 ([NuGet 套件](https://www.nuget.org/packages/System.Collections.Immutable)) 中不可變的集合類別，原本就是安全執行緒，因為作業會在原始集合的複本上執行，且不能修改原始集合。  
 
@@ -50,7 +50,7 @@ ms.locfileid: "74204763"
   
 - **一致的下限**  
   
-     集合的下限是其第一個元素的索引。 <xref:System.Collections> 命名空間中的所有索引集合下限皆為零，表示它們為 0 索引。 根據預設，<xref:System.Array> 下限為零，但使用 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 建立 **Array** 類別的執行個體時，可以定義其他下限。  
+     集合的下限是其第一個元素的索引。 <xref:System.Collections> 命名空間中的所有索引集合下限皆為零，表示它們為 0 索引。 根據預設，<xref:System.Array> 下限為零，但使用 **建立**Array<xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 類別的執行個體時，可以定義其他下限。  
   
 - **從多個執行緒存取的同步處理** (僅限 <xref:System.Collections> 類別)。  
   
@@ -78,15 +78,15 @@ ms.locfileid: "74204763"
 |-----------|-----------------|  
 |[選取集合類別](../../../docs/standard/collections/selecting-a-collection-class.md)|說明不同的集合，並協助您選取用於您案例的集合。|  
 |[常用的集合類型](../../../docs/standard/collections/commonly-used-collection-types.md)|說明常用的泛型與非泛型集合類型，例如 <xref:System.Array?displayProperty=nameWithType>、<xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>。|  
-|[何時使用泛型集合](../../../docs/standard/collections/when-to-use-generic-collections.md)|說明泛型集合類型的用法。|  
+|[使用泛型集合的時機](../../../docs/standard/collections/when-to-use-generic-collections.md)|說明泛型集合類型的用法。|  
 |[在集合內比較和排序](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|討論在集合中使用相等比較和排序比較。|  
-|[排序集合類型](../../../docs/standard/collections/sorted-collection-types.md)|說明經過排序之集合的效能與特性|  
+|[排序的集合類型](../../../docs/standard/collections/sorted-collection-types.md)|說明經過排序之集合的效能與特性|  
 |[Hashtable 和 Dictionary 集合類型](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|說明泛型和非泛型雜湊字典類型的功能。|  
 |[安全執行緒集合](../../../docs/standard/collections/thread-safe/index.md)|說明如 <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> 和 <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> 這類集合類型，這類類型支援從多個執行緒進行安全有效率的並行存取。|  
 |System.Collections.Immutable|介紹不可變的集合並提供集合類型的連結。|  
   
 <a name="BKMK_Reference"></a>   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Array?displayProperty=nameWithType>  
  <xref:System.Collections?displayProperty=nameWithType>  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  

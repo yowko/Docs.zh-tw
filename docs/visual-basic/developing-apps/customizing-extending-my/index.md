@@ -15,32 +15,32 @@ ms.locfileid: "74330332"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>使用 Visual Basic 自訂專案和擴充 My 物件
 
-You can customize project templates to provide additional `My` objects. This makes it easy for other developers to find and use your objects.
+您可以自訂專案範本，以提供額外的 `My` 物件。 這可讓其他開發人員輕鬆地尋找和使用您的物件。
 
 ## <a name="in-this-section"></a>本節內容
 
 - [擴充 Visual Basic 中的 My 命名空間](extending-the-my-namespace.md)  
- Describes how to add custom members and values to the `My` namespace in Visual Basic.
+ 描述如何將自訂成員和值新增至 Visual Basic 中的 `My` 命名空間。
 - [封裝和部署自訂的 My 擴充](packaging-and-deploying-custom-my-extensions.md)  
- Describes how to publish custom `My` namespace extensions by using Visual Studio templates.
+ 描述如何使用 Visual Studio 範本發行自訂 `My` 命名空間延伸模組。
 - [擴充 Visual Basic 應用程式模型](extending-the-visual-basic-application-model.md)  
- Describes how to specify your own extensions to the application model by overriding members of the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> class.
+ 描述如何藉由覆寫 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 類別的成員，來指定您自己的應用程式模型延伸模組。
 - [自訂 My 中可用的物件](customizing-which-objects-are-available-in-my.md)  
- Describes how to control which `My` objects are enabled by setting your project's \_MYTYPE conditional-compilation constant.
+ 描述如何設定專案的 \_MYTYPE 條件式編譯常數，以控制要啟用哪些 `My` 物件。
 
 ## <a name="related-sections"></a>相關章節
 
 - [使用 My 進行開發](../development-with-my/index.md)  
- Describes which `My` objects are available in different project types by default.
+ 描述預設會在不同的專案類型中提供哪些 `My` 物件。
 - [Visual Basic 應用程式模型概觀](../development-with-my/overview-of-the-visual-basic-application-model.md)  
- Describes Visual Basic's model for controlling the behavior of Windows Forms applications.
+ 描述 Visual Basic 的模型，以控制 Windows Forms 應用程式的行為。
 - [My 如何相依於專案類型](../development-with-my/how-my-depends-on-project-type.md)  
- Describes which `My` objects are available in different project types by default.
+ 描述預設會在不同的專案類型中提供哪些 `My` 物件。
 - [條件式編譯](../../programming-guide/program-structure/conditional-compilation.md)  
- Discusses how the compiler uses conditional-compilation to select particular sections of code to compile and exclude other sections.
+ 討論編譯器如何使用條件式編譯來選取特定的程式碼區段，以編譯和排除其他區段。
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- Describes the `My` object that provides properties, methods, and events related to the current application.
+ 描述提供與目前應用程式相關之屬性、方法和事件的 `My` 物件。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 Visual Basic 開發應用程式](../index.md)

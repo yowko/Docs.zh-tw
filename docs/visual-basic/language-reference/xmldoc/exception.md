@@ -12,8 +12,8 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346965"
 ---
-# <a name="exception-visual-basic"></a>\<exception> (Visual Basic)
-Specifies which exceptions can be thrown.  
+# <a name="exception-visual-basic"></a>\<例外狀況 > （Visual Basic）
+指定可以擲回的例外狀況。  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,15 +29,15 @@ Specifies which exceptions can be thrown.
  描述。  
   
 ## <a name="remarks"></a>備註  
- Use the `<exception>` tag to specify which exceptions can be thrown. 此標記會套用到方法定義。  
+ 使用 `<exception>` 標記來指定可以擲回的例外狀況。 此標記會套用到方法定義。  
   
  使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 編譯可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
- This example uses the `<exception>` tag to describe an exception that the `IntDivide` function can throw.  
+ 這個範例會使用 `<exception>` 標記來描述 `IntDivide` 函數可以擲回的例外狀況。  
   
  [!code-vb[VbVbcnXmlDocComments#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#3)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)

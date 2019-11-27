@@ -17,7 +17,7 @@ ms.locfileid: "74344127"
 ## <a name="remarks"></a>備註  
  如需方法和 `My.Application.Log` 物件屬性的資訊，請參閱 <xref:Microsoft.VisualBasic.Logging.Log>。  
   
- For more information, see [Logging Information from the Application](../../../visual-basic/developing-apps/programming/log-info/index.md).  
+ 如需詳細資訊，請參閱[記錄來自應用程式的資訊](../../../visual-basic/developing-apps/programming/log-info/index.md)。  
   
 > [!NOTE]
 > 您也可以使用 .NET Framework 中的類別，以記錄應用程式中的資訊。 如需詳細資訊，請參閱 [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md)。  
@@ -27,8 +27,8 @@ ms.locfileid: "74344127"
   
  **類別︰** <xref:Microsoft.VisualBasic.Logging.Log>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **元件：** Visual Basic 執行時間程式庫（在 Microsoft 中）  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [My.Application 物件](../../../visual-basic/language-reference/objects/my-application-object.md)

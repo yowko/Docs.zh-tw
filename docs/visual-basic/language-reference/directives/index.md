@@ -17,17 +17,17 @@ ms.locfileid: "74343810"
 
 本節中的主題記錄 Visual Basic 原始程式碼編譯器指示詞。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
- [#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md) -- Define a compiler constant  
+ [#Const](../../../visual-basic/language-reference/directives/const-directive.md)指示詞--定義編譯器常數  
   
- [#ExternalSource Directive](../../../visual-basic/language-reference/directives/externalsource-directive.md) -- Indicate a mapping between source lines and text external to the source  
+ [#ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md)指示詞--表示來源行與來源外部文字之間的對應  
   
- [#If...Then...#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md) -- Compile selected blocks of code  
+ [#If .。。Then ... #Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)指示詞--編譯選取的程式碼區塊  
   
- [#Region Directive](../../../visual-basic/language-reference/directives/region-directive.md) -- Collapse and hide sections of code in the Visual Studio editor  
+ [#Region](../../../visual-basic/language-reference/directives/region-directive.md)指示詞--在 Visual Studio 編輯器中折迭和隱藏程式碼區段  
   
- **#Disable, #Enable** -- Disable and enable specific warnings for regions of code.  
+ **#Disable，#Enable** --停用和啟用程式碼區域的特定警告。  
   
 ```vb  
 #Disable Warning BC42356 ' suppress warning about no awaits in this method  

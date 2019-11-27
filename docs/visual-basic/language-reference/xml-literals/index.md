@@ -17,9 +17,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349409"
 ---
 # <a name="xml-literals-visual-basic"></a>XML 常值 (Visual Basic)
-The topics in this section document the syntax of XML literals in Visual Basic. XML 常值語法可讓您直接在您的程式碼中加入 XML。  
+本節中的主題記載 Visual Basic 中 XML 常值的語法。 XML 常值語法可讓您直接在您的程式碼中加入 XML。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 |主題|描述|  
 |-----------|-----------------|  
@@ -29,6 +29,6 @@ The topics in this section document the syntax of XML literals in Visual Basic. 
 |[XML 註解常值](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|描述代表 <xref:System.Xml.Linq.XComment> 物件之常值的語法。|  
 |[XML 處理指示常值](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|描述代表 <xref:System.Xml.Linq.XProcessingInstruction> 物件之常值的語法。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

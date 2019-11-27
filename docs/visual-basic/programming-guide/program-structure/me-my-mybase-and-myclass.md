@@ -29,12 +29,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347342"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic 中的 Me、My、MyBase 和 MyClass
-`Me`, `My`, `MyBase`, and `MyClass` in Visual Basic have similar names, but different purposes. This topic describes each of these entities in order to distinguish them.  
+Visual Basic 中的 `Me`、`My`、`MyBase`和 `MyClass` 具有類似的名稱，但有不同的用途。 本主題將說明每個實體，以便加以區別。  
   
 ## <a name="me"></a>Me  
- The `Me` keyword provides a way to refer to the specific instance of a class or structure in which the code is currently executing. `Me` behaves like either an object variable or a structure variable referring to the current instance. Using `Me` is particularly useful for passing information about the currently executing instance of a class or structure to a procedure in another class, structure, or module.  
+ `Me` 關鍵字提供了一種方法，可參考程式碼目前執行所在之類別或結構的特定實例。 `Me` 的行為就像是參考目前實例的物件變數或結構變數。 使用 `Me` 特別適合用來將目前正在執行之類別或結構實例的相關資訊傳遞至另一個類別、結構或模組中的程式。  
   
- For example, suppose you have the following procedure in a module.  
+ 例如，假設您在模組中有下列程式。  
   
 ```vb  
 Sub ChangeFormColor(FormName As Form)  
@@ -43,21 +43,21 @@ Sub ChangeFormColor(FormName As Form)
 End Sub  
 ```  
   
- You can call this procedure and pass the current instance of the <xref:System.Windows.Forms.Form> class as an argument by using the following statement.  
+ 您可以呼叫此程式，並使用下列語句，將 <xref:System.Windows.Forms.Form> 類別的目前實例當做引數傳遞。  
   
 ```vb  
 ChangeFormColor(Me)  
 ```  
   
 ## <a name="my"></a>My  
- The `My` feature provides easy and intuitive access to a number of .NET Framework classes, enabling the Visual Basic user to interact with the computer, application, settings, resources, and so on.  
+ `My` 功能可讓您輕鬆且直覺地存取許多 .NET Framework 類別，讓 Visual Basic 的使用者能夠與電腦、應用程式、設定、資源等進行互動。  
   
 ## <a name="mybase"></a>MyBase  
- The `MyBase` keyword behaves like an object variable referring to the base class of the current instance of a class. `MyBase` is commonly used to access base class members that are overridden or shadowed in a derived class. `MyBase.New` is used to explicitly call a base class constructor from a derived class constructor.  
+ `MyBase` 關鍵字的行為就像是參考類別目前實例之基類的物件變數。 `MyBase` 通常用來存取在衍生類別中覆寫或遮蔽的基類成員。 `MyBase.New` 是用來從衍生類別的函式明確呼叫基類的「自類別」（class）。  
   
 ## <a name="myclass"></a>MyClass  
- The `MyClass` keyword behaves like an object variable referring to the current instance of a class as originally implemented. `MyClass` is similar to `Me`, but all method calls on it are treated as if the method were `NotOverridable`.  
+ `MyClass` 關鍵字的行為就像是物件變數，其參考原本實作為之類別的目前實例。 `MyClass` 類似 `Me`，但會將其上的所有方法呼叫視為已 `NotOverridable`方法。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

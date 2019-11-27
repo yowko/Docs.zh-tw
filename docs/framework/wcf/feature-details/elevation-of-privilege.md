@@ -72,7 +72,7 @@ ms.locfileid: "74283237"
 ## <a name="the-service-uses-a-different-certificate-than-the-client-intended"></a>服務使用的憑證不同於用戶端原先想要的憑證  
  在特定情況下，用戶端可以使用 X.509 憑證來數位簽署訊息，並讓服務擷取與原先不同的憑證。  
   
- 在下列狀況下可能會發生這種情形：  
+ 這可能發生在下列情況下：  
   
 - 用戶端使用 X.509 憑證來數位簽署訊息，而且未將 X.509 憑證附加至訊息，只有使用其主體金鑰識別碼來參照憑證。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "74283237"
   
  若要緩解這個情況，請以另一種方式來參照 X.509 憑證，例如使用 <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)

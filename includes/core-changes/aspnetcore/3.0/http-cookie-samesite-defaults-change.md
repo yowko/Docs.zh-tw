@@ -30,7 +30,7 @@ ms.locfileid: "74282509"
 
 發出 cookie 的每個元件都必須決定 `SameSite` 是否適用于其案例。 檢查受影響 Api 的使用方式，並視需要重新設定 `SameSite`。
 
-#### <a name="category"></a>類別
+#### <a name="category"></a>分類
 
 ASP.NET Core
 

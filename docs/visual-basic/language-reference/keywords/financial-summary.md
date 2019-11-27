@@ -13,19 +13,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349815"
 ---
 # <a name="financial-summary-visual-basic"></a>財務摘要 (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Visual Basic 語言關鍵字和執行時間程式庫成員是依用途和使用來組織。  
   
 |動作|語言項目|  
 |------------|----------------------|  
-|Calculate depreciation.|<xref:Microsoft.VisualBasic.Financial.DDB%2A>、<xref:Microsoft.VisualBasic.Financial.SLN%2A>、<xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
-|Calculate future value.|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  
-|Calculate interest rate.|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|  
-|Calculate internal rate of return.|<xref:Microsoft.VisualBasic.Financial.IRR%2A>、 <xref:Microsoft.VisualBasic.Financial.MIRR%2A>|  
-|Calculate number of periods.|<xref:Microsoft.VisualBasic.Financial.NPer%2A>|  
-|Calculate payments.|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>、<xref:Microsoft.VisualBasic.Financial.Pmt%2A>、<xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
-|Calculate present value.|<xref:Microsoft.VisualBasic.Financial.NPV%2A>、 <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
+|計算折舊。|<xref:Microsoft.VisualBasic.Financial.DDB%2A>, <xref:Microsoft.VisualBasic.Financial.SLN%2A>, <xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
+|計算未來的值。|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  
+|計算利率。|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|  
+|計算傳回的內部速率。|<xref:Microsoft.VisualBasic.Financial.IRR%2A>, <xref:Microsoft.VisualBasic.Financial.MIRR%2A>|  
+|計算期間數。|<xref:Microsoft.VisualBasic.Financial.NPer%2A>|  
+|計算付款。|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>, <xref:Microsoft.VisualBasic.Financial.Pmt%2A>, <xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
+|計算目前的值。|<xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 執行階段程式庫成員](../../../visual-basic/language-reference/runtime-library-members.md)

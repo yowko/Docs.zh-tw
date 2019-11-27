@@ -14,24 +14,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351528"
 ---
 # <a name="iterator-visual-basic"></a>Iterator (Visual Basic)
-Specifies that a function or `Get` accessor is an iterator.  
+指定函數或 `Get` 存取子是反覆運算器。  
   
 ## <a name="remarks"></a>備註  
- An *iterator* performs a custom iteration over a collection. An iterator uses the [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) statement to return each element in the collection one at a time. When a `Yield` statement is reached, the current location in code is retained. 下一次呼叫 Iterator 函式時，便會從這個位置重新開始執行。  
+ *反覆運算器*會在集合上執行自訂反復專案。 反覆運算器會使用[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)語句，一次傳回集合中的每個元素。 當到達 `Yield` 語句時，會保留程式碼中的目前位置。 下一次呼叫 Iterator 函式時，便會從這個位置重新開始執行。  
   
- An iterator can be implemented as a function or as a `Get` accessor of a property definition. The `Iterator` modifier appears in the declaration of the iterator function or `Get` accessor.  
+ 反覆運算器可以實作為函數，或當做屬性定義的 `Get` 存取子來執行。 `Iterator` 修飾詞會出現在 iterator 函數或 `Get` 存取子的宣告中。  
   
- You call an iterator from client code by using a [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+ 您可以從用戶端程式代碼呼叫反覆運算器，方法是使用[For Each 。下一個語句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  
   
- The return type of an iterator function or `Get` accessor can be <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, or <xref:System.Collections.Generic.IEnumerator%601>.  
+ Iterator 函數或 `Get` 存取子的傳回類型可以是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator>或 <xref:System.Collections.Generic.IEnumerator%601>。  
   
- An iterator cannot have any `ByRef` parameters.  
+ 反覆運算器不能有任何 `ByRef` 參數。  
   
  迭代器不能出現在事件、執行個體建構函式、靜態建構函式或靜態解構函式中。  
   
- An iterator can be an anonymous function. 如需詳細資訊，請參閱[迭代器](../../programming-guide/concepts/iterators.md)。  
+ Iterator 可以是匿名函式。 如需詳細資訊，請參閱[迭代器](../../programming-guide/concepts/iterators.md)。  
   
-## <a name="usage"></a>使用量  
+## <a name="usage"></a>使用方式  
  `Iterator` 修飾詞可用於以下內容：  
   
 - [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)  
@@ -39,18 +39,18 @@ Specifies that a function or `Get` accessor is an iterator.
 - [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="example"></a>範例  
- The following example demonstrates an iterator function. The iterator function has a `Yield` statement that is inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. Each iteration of the [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement body in `Main` creates a call to the `Power` iterator function. 每次呼叫 Iterator 函式都會執行下一個 `Yield` 陳述式，這會在 `For…Next` 迴圈的下一個反覆項目期間發生。  
+ 下列範例示範反覆運算器函數。 Iterator 函數的 `Yield` 語句位於[For 。下一個](../../../visual-basic/language-reference/statements/for-next-statement.md)迴圈。 `Main` 中[每](../../../visual-basic/language-reference/statements/for-each-next-statement.md)個語句主體的每個反復專案都會建立對 `Power` iterator 函數的呼叫。 每次呼叫 Iterator 函式都會執行下一個 `Yield` 陳述式，這會在 `For…Next` 迴圈的下一個反覆項目期間發生。  
   
  [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   
 ## <a name="example"></a>範例  
- 下列範例將示範本身為迭代器的 `Get` 存取子。 The `Iterator` modifier is in the property declaration.  
+ 下列範例將示範本身為迭代器的 `Get` 存取子。 `Iterator` 修飾詞位於屬性宣告中。  
   
  [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  
   
- For additional examples, see [Iterators](../../programming-guide/concepts/iterators.md).  
+ 如需其他範例，請參閱[反覆運算](../../programming-guide/concepts/iterators.md)器。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>
 - [迭代器](../../programming-guide/concepts/iterators.md)

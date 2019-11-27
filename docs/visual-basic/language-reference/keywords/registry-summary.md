@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351676"
 ---
 # <a name="registry-summary-visual-basic"></a>登錄摘要 (Visual Basic)
-Visual Studio language keywords and run-time library members are organized by purpose and use.  
+Visual Studio 語言關鍵字和執行時間程式庫成員是依用途和使用來組織。  
   
- Using the `My` feature provides you with greater productivity and performance in registry operations than these elements. 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>。  
+ 使用 `My` 功能可讓您在登錄作業中擁有比這些元素更高的生產力和效能。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>。  
   
 |**動作**|**語言項目**|  
 |----------------|--------------------------|  
-|Delete program settings.|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
-|Read program settings.|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>、 <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A>|  
-|Save program settings.|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
+|刪除程式設定。|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
+|讀取程式設定。|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A>|  
+|儲存程式設定。|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 執行階段程式庫成員](../../../visual-basic/language-reference/runtime-library-members.md)

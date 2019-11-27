@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Detect anomalies in product sales'
+title: 教學課程：偵測產品銷售中的異常
 description: 了解如何建置產品銷售資料的異常偵測應用程式。 此教學課程會示範如何在 Visual Studio 2019 中使用 C# 建立 .NET Core 主控台應用程式。
 ms.date: 11/15/2019
 ms.topic: tutorial
@@ -11,7 +11,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204933"
 ---
-# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Tutorial: Detect anomalies in product sales with ML.NET
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>教學課程：使用 ML.NET 偵測產品銷售額中的異常
 
 了解如何建置產品銷售資料的異常偵測應用程式。 此教學課程會示範如何在 Visual Studio 中使用 C# 建立 .NET Core 主控台應用程式。
 
@@ -26,9 +26,9 @@ ms.locfileid: "74204933"
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection) 存放庫中找到本教學課程的原始程式碼。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-* [Visual Studio 2017 version 15.6 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) with the ".NET Core cross-platform development" workload installed.
+* 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)版本。
 
 * [product-sales.csv 資料集](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
 
@@ -40,13 +40,13 @@ ms.locfileid: "74204933"
 
 1. 建立稱為 "ProductSalesAnomalyDetection" 的 **.NET Core 主控台應用程式**。
 
-2. 在專案中建立一個名為 *Data* 的目錄以儲存資料集檔案。
+2. 在您專案中建立名為 *Data* 的目錄以儲存資料集檔案。
 
 3. 安裝「Microsoft.ML NuGet 套件」：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.ML** and select the **Install** button. 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。 Repeat these steps for **Microsoft.ML.TimeSeries**.
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 [nuget.org] 作為 [套件來源]，選取 [流覽] 索引標籤，搜尋**Microsoft.ML** ，然後選取 [**安裝**] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。 針對**時間序列**重複這些步驟。
 
-4. 在您的 *Program.cs* 檔案最上方新增下列 `using` 陳述式：
+4. 在您的 `using`Program.cs*檔案最上方新增下列* 陳述式：
 
     [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddUsings "Add necessary usings")]
 
@@ -62,7 +62,7 @@ ms.locfileid: "74204933"
 
 下表是 \*.csv 檔案的資料預覽：
 
-|月份  |ProductSales |
+|月  |ProductSales |
 |-------|-------------|
 |1 月 1 日  |    271      |
 |1 月 2 日  |    150.9    |
@@ -107,7 +107,7 @@ ms.locfileid: "74204933"
 
 ### <a name="initialize-variables-in-main"></a>在 Main 中初始化變數
 
-1. 將 `Main` 方法中的 `Console.WriteLine("Hello World!")` 程式碼替換成下列程式碼，宣告並初始化 `mlContext` 變數：
+1. 將 `Console.WriteLine("Hello World!")` 方法中的 `Main` 程式碼替換成下列程式碼，宣告並初始化 `mlContext` 變數：
 
     [!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CreateMLContext "Create the ML Context")]
 
@@ -127,14 +127,14 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 異常偵測會標記未預期或不尋常的事件或行為。 它可提供尋找問題的線索，協助您回答「這奇不奇怪？」的問題。
 
-![Example of the "Is this weird" anomaly detection.](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
+![「這是奇怪的異常偵測」的範例。](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
 
 異常偵測是偵測時間序列資料極端值的程序，它們是指定輸入時間序列中非預期或「奇怪」行為的資料點。
 
-異常偵測適用於許多方面。 若是執行個體：
+異常偵測適用於許多方面。 例如：
 
-If you have a car, you might want to know: Is this oil gauge reading normal, or do I have a leak?
-If you're monitoring power consumption, you’d want to know: Is there an outage?
+如果您有車輛，您可能會想知道：此石油量測計是否正常閱讀，或是否有流失？
+如果您要監視電源耗用量，您會想知道：是否有中斷？
 
 可偵測到的時間序列異常有兩種：
 
@@ -152,7 +152,7 @@ If you're monitoring power consumption, you’d want to know: Is there an outage
 
 尖峰偵測目標是找出明顯有別於大部分時間序列資料值的突然卻短暫暴增。 請務必及時偵測這些可疑的罕見項目、事件或觀測，將影響降至最低。 下列方法可用來偵測各種異常，例如：中斷、網路攻擊或病毒式 Web 內容。 下圖是時間序列資料集的尖峰範例：
 
-![Screenshot that shows two spike detections.](./media/sales-anomaly-detection/two-spike-detections.png)
+![顯示兩個尖峰偵測的螢幕擷取畫面。](./media/sales-anomaly-detection/two-spike-detections.png)
 
 ### <a name="add-the-createemptydataview-method"></a>新增 CreateEmptyDataView() 方法
 
@@ -170,7 +170,7 @@ If you're monitoring power consumption, you’d want to know: Is there an outage
 * 根據歷史銷售資料偵測尖峰。
 * 顯示結果。
 
-1. 請使用下列程式碼，在緊接著 `Main()` 方法之後，建立 `DetectSpike()` 方法：
+1. 請使用下列程式碼，在緊接著 `DetectSpike()` 方法之後，建立 `Main()` 方法：
 
     ```csharp
     static void DetectSpike(MLContext mlContext, int docSize, IDataView productSales)
@@ -211,7 +211,7 @@ If you're monitoring power consumption, you’d want to know: Is there an outage
 
     [!code-csharp[DisplayResults1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayResults1)]
 
-1. 在 `Main()` 方法中新增 `DetectSpike()` 方法的呼叫：
+1. 在 `DetectSpike()` 方法中新增 `Main()` 方法的呼叫：
 
     [!code-csharp[CallDetectSpike](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CallDetectSpike)]
 
@@ -266,7 +266,7 @@ Alert   Score   P-Value
 
 `Change points` 是值之時間序列事件資料流分佈的持續變更，例如層級變更和趨勢。 這些持續變更延續的時間比 `spikes` 長，可能表示災難性事件。 `Change points` 通常無法為肉眼所見，但可以使用下列方法，在您的資料中偵測到。  下圖是變更點偵測的範例：
 
-![Screenshot that shows a change point detection.](./media/sales-anomaly-detection/change-point-detection.png)
+![顯示變更點偵測的螢幕擷取畫面。](./media/sales-anomaly-detection/change-point-detection.png)
 
 ### <a name="create-the-detectchangepoint-method"></a>建立 DetectChangepoint() 方法
 
@@ -276,7 +276,7 @@ Alert   Score   P-Value
 * 根據歷史銷售資料偵測變更點。
 * 顯示結果。
 
-1. 請使用下列程式碼，在緊接著 `Main()` 方法之後，建立 `DetectChangepoint()` 方法：
+1. 請使用下列程式碼，在緊接著 `DetectChangepoint()` 方法之後，建立 `Main()` 方法：
 
     ```csharp
     static void DetectChangepoint(MLContext mlContext, int docSize, IDataView productSales)
@@ -285,7 +285,7 @@ Alert   Score   P-Value
     }
     ```
 
-1. 使用下列程式碼在 `DetectChangepoint()` 方法中建立 [iidChangePointEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidChangePointEstimator)：
+1. 使用下列程式碼在 [ 方法中建立 ](xref:Microsoft.ML.Transforms.TimeSeries.IidChangePointEstimator)iidChangePointEstimator`DetectChangepoint()`：
 
     [!code-csharp[AddChangepointTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddChangepointTrainer)]
 
@@ -293,7 +293,7 @@ Alert   Score   P-Value
 
     [!code-csharp[TrainModel2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel2)]
 
-1. 將下列程式碼新增至 `DetectChangePoint()`，以使用 `Transform()` 方法來轉換資料：
+1. 將下列程式碼新增至 `Transform()`，以使用 `DetectChangePoint()` 方法來轉換資料：
 
     [!code-csharp[TransformData2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TransformData2)]
 
@@ -316,7 +316,7 @@ Alert   Score   P-Value
 
     [!code-csharp[DisplayResults2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayResults2)]
 
-1. 在 `Main()` 方法中新增 `DetectChangepoint()` 方法的下列呼叫：
+1. 在 `DetectChangepoint()` 方法中新增 `Main()` 方法的下列呼叫：
 
     [!code-csharp[CallDetectChangepoint](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CallDetectChangepoint)]
 

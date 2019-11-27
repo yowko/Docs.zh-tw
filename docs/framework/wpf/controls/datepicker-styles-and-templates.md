@@ -22,7 +22,7 @@ ms.locfileid: "74283778"
 ## <a name="datepicker-parts"></a>DatePicker 元件  
  下表列出 <xref:System.Windows.Controls.DatePicker> 控制項的已命名元件。  
   
-|組件|輸入|描述|  
+|組件|類型|描述|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.Controls.Grid>|控制項的根。|  
 |PART_Button|<xref:System.Windows.Controls.Button>|開啟和關閉 <xref:System.Windows.Controls.Calendar>的按鈕。|  
@@ -36,14 +36,14 @@ ms.locfileid: "74283778"
 |-|-|-|  
 |一般|CommonStates|預設狀態。|  
 |已停用|CommonStates|<xref:System.Windows.Controls.DatePicker> 已停用。|  
-|驗證|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，而 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性則 `false`。|  
+|有效|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，而 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性則 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是控制項具有焦點 `true`。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是 `true` 控制項沒有焦點。|  
   
 ## <a name="datepickertextbox-parts"></a>DatePickerTextBox 元件  
  下表列出 <xref:System.Windows.Controls.Primitives.DatePickerTextBox> 控制項的已命名元件。  
   
-|組件|輸入|描述|  
+|組件|類型|描述|  
 |-|-|-|  
 |PART_Watermark|<xref:System.Windows.Controls.ContentControl>|元素，其中包含 <xref:System.Windows.Controls.DatePicker>中的初始文字。|  
 |PART_ContentElement|<xref:System.Windows.FrameworkElement>|可以包含 <xref:System.Windows.FrameworkElement>的視覺元素。 <xref:System.Windows.Controls.TextBox> 的文字會顯示在此元素中。|  
@@ -61,7 +61,7 @@ ms.locfileid: "74283778"
 |未取得焦點|FocusStates|控制項未取得焦點。|  
 |浮水印|WatermarkStates|控制項會顯示其初始文字。  當使用者未輸入文字或選取日期時，<xref:System.Windows.Controls.Primitives.DatePickerTextBox> 處於狀態。|  
 |Unwatermarked|WatermarkStates|使用者已在 <xref:System.Windows.Controls.Primitives.DatePickerTextBox> 中輸入文字，或在 <xref:System.Windows.Controls.DatePicker>中選取日期。|  
-|驗證|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，而 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性則 `false`。|  
+|有效|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，而 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性則 `false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性 `true`，且控制項具有焦點。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性 `true`，而且控制項沒有焦點。|  
   
@@ -76,7 +76,7 @@ ms.locfileid: "74283778"
   
  如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>

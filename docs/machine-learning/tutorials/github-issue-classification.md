@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Categorize support issues - multiclass classification'
+title: 教學課程：分類支援問題-多元分類
 description: 了解如何在多類別分類案例中使用 ML.NET 來分類 GitHub 問題，以將它們指派至特定區域。
 ms.date: 11/15/2019
 ms.topic: tutorial
@@ -11,7 +11,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74205044"
 ---
-# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Tutorial: Categorize support issues using multiclass classification with ML .NET
+# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>教學課程：使用多元分類搭配 ML .NET 來分類支援問題
 
 此範例教學課程會示範使用 ML.NET，透過使用 Visual Studio 中 C# 的 .NET Core 主控台應用程式，建立 GitHub 問題分類器，來定型分類及預測 GitHub 問題 Area 標籤的模型。
 
@@ -27,9 +27,9 @@ ms.locfileid: "74205044"
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) 存放庫中找到本教學課程的原始程式碼。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-* [Visual Studio 2017 version 15.6 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) with the ".NET Core cross-platform development" workload installed.
+* 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)版本。
 
 * [Github issues tab separated file (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) (Github 問題定位字元分隔檔案 (issues_train.tsv))。
 * [Github issues test tab separated file (issues_test.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) (Github 問題測試定位字元分隔檔案 (issues_test.tsv))。
@@ -50,7 +50,7 @@ ms.locfileid: "74205044"
 
 4. 安裝「Microsoft.ML NuGet 套件」：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.ML** and select the **Install** button. 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 [nuget.org] 作為 [套件來源]，選取 [流覽] 索引標籤，搜尋**Microsoft.ML** ，然後選取 [**安裝**] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
 
 ### <a name="prepare-your-data"></a>準備您的資料
 
@@ -60,7 +60,7 @@ ms.locfileid: "74205044"
 
 ### <a name="create-classes-and-define-paths"></a>建立類別及定義路徑
 
-在 *Program.cs* 檔案頂端新增下列額外的 `using` 陳述式：
+在 `using`Program.cs*檔案頂端新增下列額外的* 陳述式：
 
 [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddUsings)]
 
@@ -99,22 +99,22 @@ ms.locfileid: "74205044"
 
 * 第一個資料行 `ID`(GitHub 問題識別碼)
 * 第二個資料行 `Area`(用於定型的預測)
-* 第三個資料行 `Title` (GitHub 問題標題) 是第一個用來預測 `Area` 的 `feature`
-* 第四個資料行 `Description` 是第二個用來預測 `Area` 的 `feature`
+* 第三個資料行 `Title` (GitHub 問題標題) 是第一個用來預測 `feature` 的 `Area`
+* 第四個資料行 `Description` 是第二個用來預測 `feature` 的 `Area`
 
 `IssuePrediction` 是在模型定型後，用來進行預測的類別。 它包含單一布林值 `string` (`Area`) 和 `PredictedLabel` `ColumnName` 屬性。  `PredictedLabel` 的使用時機是在進行預測和評估的期間。 就評估而言，會使用含有定型資料、預設值及模型的輸入。
 
-所有 ML.NET 作業都是從 [MLContext](xref:Microsoft.ML.MLContext) 類別開始。 將 `mlContext` 初始化會建立新的 ML.NET 環境，可在模型建立工作流程物件間共用。 就概念而言，它與 `Entity Framework` 中的 `DBContext` 相似。
+所有 ML.NET 作業都是從 [MLContext](xref:Microsoft.ML.MLContext) 類別開始。 初始化 `mlContext` 會建立新的 ML.NET 環境，可在模型建立工作流程物件間共用。 就概念而言，它與 `DBContext` 中的 `Entity Framework` 相似。
 
 ### <a name="initialize-variables-in-main"></a>在 Main 中初始化變數
 
-將具有包含隨機種子 (`seed: 0`) 之新 `MLContext` 執行個體的 `_mlContext` 全域變數初始化，以讓多個定型間的結果可重複/具有確定性。  在 `Main` 方法中，以下列程式碼取代 `Console.WriteLine("Hello World!")`：
+將具有包含隨機種子 (`_mlContext`) 之新 `MLContext` 執行個體的 `seed: 0` 全域變數初始化，以讓多個定型間的結果可重複/具有確定性。  在 `Console.WriteLine("Hello World!")` 方法中，以下列程式碼取代 `Main`：
 
 [!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreateMLContext)]
 
 ## <a name="load-the-data"></a>載入資料
 
-ML.NET 使用 [IDataView 類別](xref:Microsoft.ML.IDataView)作為描述數字或文字表格式資料彈性且有效率的方式。 `IDataView` 可載入文字檔案或即時資料 (例如 SQL 資料庫或記錄檔)。
+ML.NET 使用 [IDataView 類別](xref:Microsoft.ML.IDataView)作為描述數字或文字表格式資料彈性且有效率的方式。 `IDataView` 可載入文字檔案或即時進行 (例如 SQL 資料庫或記錄檔)。
 
 若要初始化並載入 `_trainingDataView` 全域變數以將其用於管線，請在 `mlContext` 初始化後，新增下列程式碼：
 
@@ -131,7 +131,7 @@ ML.NET 使用 [IDataView 類別](xref:Microsoft.ML.IDataView)作為描述數字�
 * 擷取並轉換資料。
 * 傳回處理管線。
 
-請使用下列程式碼，在緊接著 `Main` 方法之後，建立 `ProcessData` 方法：
+請使用下列程式碼，在緊接著 `ProcessData` 方法之後，建立 `Main` 方法：
 
 ```csharp
 public static IEstimator<ITransformer> ProcessData()
@@ -146,11 +146,11 @@ public static IEstimator<ITransformer> ProcessData()
 
 [!code-csharp[MapValueToKey](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#MapValueToKey)]
 
-接下來，請呼叫 `mlContext.Transforms.Text.FeaturizeText`，針對每個呼叫的 `TitleFeaturized` 和 `DescriptionFeaturized`，將文字 (`Title` 和 `Description`) 資料行轉換成數值向量。 將這兩個資料行的特徵轉換附加至管線，使用的程式碼如下：
+接下來，請呼叫 `mlContext.Transforms.Text.FeaturizeText`，針對每個呼叫的 `Title` 和 `Description`，將文字 (`TitleFeaturized` 和 `DescriptionFeaturized`) 資料行轉換成數值向量。 將這兩個資料行的特徵轉換附加至管線，使用的程式碼如下：
 
 [!code-csharp[FeaturizeText](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#FeaturizeText)]
 
-資料準備的最後一個步驟是使用 [Concatenate()](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) 方法，將所有特徵資料行合併到 **Features** (特徵) 資料行。 根據預設，學習演算法只會處理來自 **Features** 資料行的特徵。 將這此轉換附加至管線，使用的程式碼如下：
+資料準備的最後一個步驟是使用 **Concatenate()** 方法，將所有特徵資料行合併到 [Features](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) (特徵) 資料行。 根據預設，學習演算法只會處理來自 **Features** 資料行的特徵。 將這此轉換附加至管線，使用的程式碼如下：
 
 [!code-csharp[Concatenate](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Concatenate)]
 
@@ -180,7 +180,7 @@ public static IEstimator<ITransformer> ProcessData()
 * 根據定型資料預測區域。
 * 傳回模型。
 
-請使用下列程式碼，在緊接著 `Main` 方法之後，建立 `BuildAndTrainModel` 方法：
+請使用下列程式碼，在緊接著 `BuildAndTrainModel` 方法之後，建立 `Main` 方法：
 
 ```csharp
 public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingDataView, IEstimator<ITransformer> pipeline)
@@ -206,7 +206,7 @@ public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingData
 
 ### <a name="train-the-model"></a>將模型定型
 
-將下列內容新增為 `BuildAndTrainModel()` 方法中的下一行程式碼，調整模型為合適於 `splitTrainSet` 資料並傳回已定型模型：
+將下列內容新增為 `splitTrainSet` 方法中的下一行程式碼，調整模型為合適於 `BuildAndTrainModel()` 資料並傳回已定型模型：
 
 [!code-csharp[TrainModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#TrainModel)]
 
@@ -218,7 +218,7 @@ public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingData
 
 ### <a name="predict-with-the-trained-model"></a>使用訓練過的模型預測
 
-透過建立 `GitHubIssue` 的執行個體，在 `Predict` 方法中新增 GitHub 問題，以測試所定型模型的預測：
+透過建立 `Predict` 的執行個體，在 `GitHubIssue` 方法中新增 GitHub 問題，以測試所定型模型的預測：
 
 [!code-csharp[CreateTestIssue1](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreateTestIssue1)]
 
@@ -240,7 +240,7 @@ public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingData
 
 ## <a name="evaluate-the-model"></a>評估模型
 
-建立並定型模型之後，現在必須使用不同的資料集來評估它，以確保和驗證品質。 在 `Evaluate` 方法中，會傳入在 `BuildAndTrainModel` 中建立的模型以供評估。 在緊接著 `BuildAndTrainModel` 之後，建立 `Evaluate` 方法，如以下程式碼所示：
+建立並定型模型之後，現在必須使用不同的資料集來評估它，以確保和驗證品質。 在 `Evaluate` 方法中，會傳入在 `BuildAndTrainModel` 中建立的模型以供評估。 在緊接著 `Evaluate` 之後，建立 `BuildAndTrainModel` 方法，如以下程式碼所示：
 
 ```csharp
 public static void Evaluate(DataViewSchema trainingDataViewSchema)
@@ -256,7 +256,7 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 * 評估模型並建立計量。
 * 顯示計量。
 
-請使用下列程式碼，在緊接著 `BuildAndTrainModel` 方法呼叫底下，從 `Main` 方法新增對新方法的呼叫：
+請使用下列程式碼，在緊接著 `Main` 方法呼叫底下，從 `BuildAndTrainModel` 方法新增對新方法的呼叫：
 
 [!code-csharp[CallEvaluate](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CallEvaluate)]
 
@@ -266,19 +266,19 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 
 [Evaluate()](xref:Microsoft.ML.MulticlassClassificationCatalog.Evaluate%2A) 方法會使用指定的資料集，計算模型的品質計量。 它傳回的 <xref:Microsoft.ML.Data.MulticlassClassificationMetrics> 物件包含多類別分類評估工具所計算的整體計量。
 若要顯示計量以判斷模型的品質，您必須先取得計量。
-請注意我們在此處使用機器學習服務 `_trainedModel` 全域變數 (一個 [ITransformer](xref:Microsoft.ML.ITransformer)) 的 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 方法來輸入特徵並傳回預測。 將下列程式碼加入 `Evaluate` 方法中作為的下一行：
+請注意我們在此處使用機器學習服務 [ 全域變數 (一個 ](xref:Microsoft.ML.ITransformer.Transform%2A)ITransformer`_trainedModel`) 的 [Transform()](xref:Microsoft.ML.ITransformer) 方法來輸入特徵並傳回預測。 將下列程式碼加入為 `Evaluate` 方法中的下一行：
 
 [!code-csharp[Evaluate](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Evaluate)]
 
 針對多類別分類評估的計量如下：
 
-* 微精確度 - 每個範例類別組同樣都會對精確度計量提出貢獻。  You want Micro Accuracy to be as close to one as possible.
+* 微精確度 - 每個範例類別組同樣都會對精確度計量提出貢獻。  您希望微精確度盡可能接近一。
 
-* 大精確度 - 每個類別同樣都會對精確度計量提出貢獻。 少數類別會加上與較大類別相同的權重。 You want Macro Accuracy to be as close to one as possible.
+* 大精確度 - 每個類別同樣都會對精確度計量提出貢獻。 少數類別會加上與較大類別相同的權重。 您想要讓宏精確度盡可能接近一個。
 
 * 記錄檔遺失 - 請參閱[記錄檔遺失](../resources/glossary.md#log-loss)。 建議讓記錄檔遺失盡量接近零。
 
-* Log-loss reduction - Ranges from [-inf, 1.00], where 1.00 is perfect predictions and 0 indicates mean predictions. You want Log-loss reduction to be as close to one as possible.
+* 記錄檔遺失減少-範圍從 [-inf，1.00]，其中1.00 是完美的預測，而0則表示平均值的預測。 您想要儘量減少記錄檔遺失，使其盡可能接近一。
 
 ### <a name="displaying-the-metrics-for-model-validation"></a>顯示模型驗證的計量
 
@@ -292,7 +292,7 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 
 [!code-csharp[SnippetCallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetCallSaveModel)]
 
-在您的 `Evaluate`方法下方建立 `SaveModelAsFile` 方法。
+在您的 `SaveModelAsFile`方法下方建立 `Evaluate` 方法。
 
 ```csharp
 private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingDataViewSchema, ITransformer model)
@@ -307,11 +307,11 @@ private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingD
 
 ## <a name="deploy-and-predict-with-a-model"></a>部署及使用模型進行預測
 
-請使用下列程式碼，在緊接著 `Evaluate` 方法呼叫底下，從 `Main` 方法新增對新方法的呼叫：
+請使用下列程式碼，在緊接著 `Main` 方法呼叫底下，從 `Evaluate` 方法新增對新方法的呼叫：
 
 [!code-csharp[CallPredictIssue](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CallPredictIssue)]
 
-請使用下列程式碼，緊接在 `Evaluate` 方法之後 (並緊接在 `SaveModelAsFile` 方法之前)，建立 `PredictIssue` 方法：
+請使用下列程式碼，緊接在 `PredictIssue` 方法之後 (並緊接在 `Evaluate` 方法之前)，建立 `SaveModelAsFile` 方法：
 
 ```csharp
 private static void PredictIssue()
@@ -332,7 +332,7 @@ private static void PredictIssue()
 
 [!code-csharp[SnippetLoadModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetLoadModel)]
 
-透過建立 `GitHubIssue` 的執行個體，在 `Predict` 方法中新增 GitHub 問題，以測試所定型模型的預測：
+透過建立 `Predict` 的執行個體，在 `GitHubIssue` 方法中新增 GitHub 問題，以測試所定型模型的預測：
 
 [!code-csharp[AddTestIssue](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddTestIssue)]
 
@@ -340,7 +340,7 @@ private static void PredictIssue()
 
 [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine)]
 
-The [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) is a convenience API, which allows you to perform a prediction on a single instance of data. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全執行緒。 It's acceptable to use in single-threaded or prototype environments. For improved performance and thread safety in production environments, use the `PredictionEnginePool` service, which creates an [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) of [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) objects for use throughout your application. See this guide on how to [use `PredictionEnginePool` in an ASP.NET Core Web API](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API，可讓您在單一資料實例上執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全執行緒。 可接受在單一執行緒或原型環境中使用。 為了改善生產環境中的效能和執行緒安全，請使用 `PredictionEnginePool` 服務，這會建立[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)物件的[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) ，以便在整個應用程式中使用。 請參閱本指南以瞭解如何[在 ASP.NET Core WEB API 中使用 `PredictionEnginePool`](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)
 
 > [!NOTE]
 > `PredictionEnginePool` 服務延伸模組目前處於預覽狀態。

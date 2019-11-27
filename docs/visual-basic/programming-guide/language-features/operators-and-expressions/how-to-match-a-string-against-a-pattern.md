@@ -22,65 +22,65 @@ ms.locfileid: "74343631"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>如何：比對字串和模式 (Visual Basic)
 
-If you want to find out if an expression of the [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisfies a pattern, then you can use the [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).
+如果您想要找出[字串資料類型](../../../../visual-basic/language-reference/data-types/string-data-type.md)的運算式是否滿足模式，則可以使用[Like 運算子](../../../../visual-basic/language-reference/operators/like-operator.md)。
 
-`Like` takes two operands. The left operand is a string expression, and the right operand is a string containing the pattern to be used for matching. `Like` returns a `Boolean` value indicating whether the string expression satisfies the pattern.
+`Like` 接受兩個運算元。 左運算元是字串運算式，右運算元是字串，其中包含要用於比對的模式。 `Like` 會傳回 `Boolean` 值，指出字串運算式是否符合模式。
 
-You can match each character in the string expression against a specific character, a wildcard character, a character list, or a character range. The positions of the specifications in the pattern string correspond to the positions of the characters to be matched in the string expression.
+您可以比對字串運算式中的每個字元與特定字元、萬用字元、字元清單或字元範圍。 模式字串中規格的位置會對應到要在字串運算式中比對的字元位置。
 
-## <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>To match a character in the string expression against a specific character
+## <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>若要比對字串運算式中的字元與特定字元
 
-Put the specific character directly in the pattern string. Certain special characters must be enclosed in brackets (`[ ]`). For more information, see [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).
+將特定字元直接放在模式字串中。 某些特殊字元必須以方括弧（`[ ]`）括住。 如需詳細資訊，請參閱[Like 運算子](../../../../visual-basic/language-reference/operators/like-operator.md)。
 
-The following example tests whether `myString` consists exactly of the single character `H`.
+下列範例會測試 `myString` 是否完全由單一字元 `H`組成。
 
 [!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]
 
-## <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>To match a character in the string expression against a wildcard character
+## <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>符合字串運算式中的字元與萬用字元
 
-Put a question mark (`?`) in the pattern string. Any valid character in this position makes a successful match.
+將問號（`?`）放在模式字串中。 這個位置中的任何有效字元都會成功符合。
 
-The following example tests whether `myString` consists of the single character `W` followed by exactly two characters of any values.
+下列範例會測試 `myString` 是否包含單一字元 `W` 後面緊接著任何值的兩個字元。
 
 [!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]
 
-## <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>To match a character in the string expression against a list of characters
+## <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>符合字串運算式中的字元與字元清單
 
-Put brackets (`[ ]`) in the pattern string, and inside the brackets put the list of characters. Do not separate the characters with commas or any other separator. Any single character in the list makes a successful match.
+在模式字串中加上方括弧（`[ ]`），並在括弧內放入字元清單。 請勿使用逗號或任何其他分隔符號來分隔字元。 清單中的任何單一字元都會成功符合。
 
-The following example tests whether `myString` consists of any valid character followed by exactly one of the characters `A`, `C`, or `E`.
+下列範例會測試 `myString` 是否包含任何有效的字元，且後面緊接著其中一個字元 `A`、`C`或 `E`。
 
 [!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]
 
-Note that this match is case-sensitive.
+請注意，這項比對會區分大小寫。
 
-## <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>To match a character in the string expression against a range of characters
+## <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>比對字串運算式中的字元與字元範圍
 
-Put brackets (`[ ]`) in the pattern string, and inside the brackets put the lowest and highest characters in the range, separated by a hyphen (`–`). Any single character within the range makes a successful match.
+在模式字串中加上方括弧（`[ ]`），並在括弧內放入範圍中的最低和最高字元，並以連字號（`–`）分隔。 範圍內的任何單一字元都會成功符合。
 
-The following example tests whether `myString` consists of the characters `num` followed by exactly one of the characters `i`, `j`, `k`, `l`, `m`, or `n`.
+下列範例會測試 `myString` 是否包含 `i`、`j`、`k`、`l`、`m`或 `n`其中一個字元 `num` 後面的字元。
 
 [!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]
 
-Note that this match is case-sensitive.
+請注意，這項比對會區分大小寫。
 
-## <a name="matching-empty-strings"></a>Matching Empty Strings
+## <a name="matching-empty-strings"></a>符合空字串
 
-`Like` treats the sequence `[]` as a zero-length string (`""`). You can use `[]` to test whether the entire string expression is empty, but you cannot use it to test if a particular position in the string expression is empty. If an empty position is one of the options you need to test for, you can use `Like` more than once.
+`Like` 會將序列 `[]` 視為長度為零的字串（`""`）。 您可以使用 `[]` 來測試整個字串運算式是否是空的，但是您無法使用它來測試字串運算式中的特定位置是否為空白。 如果空白位置是您需要測試的其中一個選項，您可以使用 `Like` 超過一次。
 
-### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>To match a character in the string expression against a list of characters or no character
+### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>比對字串運算式中的字元與字元清單或無字元
 
-1. Call the `Like` operator twice on the same string expression, and connect the two calls with either the [Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md) or the [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).
+1. 在相同的字串運算式上呼叫 `Like` 運算子兩次，然後使用[Or 運算子](../../../../visual-basic/language-reference/operators/or-operator.md)或[OrElse 運算子](../../../../visual-basic/language-reference/operators/orelse-operator.md)來連接兩個呼叫。
 
-2. In the pattern string for the first `Like` clause, include the character list, enclosed in brackets (`[ ]`).
+2. 在第一個 `Like` 子句的模式字串中，包含字元清單，並以方括弧（`[ ]`）括住。
 
-3. In the pattern string for the second `Like` clause, do not put any character at the position in question.
+3. 在第二個 `Like` 子句的模式字串中，請勿將任何字元放在有問題的位置。
 
-    The following example tests the seven-digit telephone number `phoneNum` for exactly three numeric digits, followed by a space, a hyphen (`–`), a period (`.`), or no character at all, followed by exactly four numeric digits.
+    下列範例會測試七位數的電話號碼，`phoneNum` 只需三個數字，後面接著空格、連字號（`–`）、句號（`.`），或完全沒有字元，然後再加上四個數字。
 
     [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [比較運算子](../../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [運算子和運算式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

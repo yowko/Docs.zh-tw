@@ -1,6 +1,6 @@
 ---
-title: Language Walkthroughs
-description: Step-by-step instructions for common scenarios in Visual Basic development
+title: 語言逐步解說
+description: Visual Basic 開發的常見案例逐步指示
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, walkthroughs

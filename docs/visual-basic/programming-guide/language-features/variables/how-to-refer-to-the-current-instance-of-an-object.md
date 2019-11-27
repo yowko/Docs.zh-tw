@@ -16,22 +16,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346887"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>如何：參考物件目前的執行個體 (Visual Basic)
-The *current instance* of an object is the instance in which the code is currently executing.  
+目前物件的*實例*是程式碼執行所在的實例。  
   
- You use the `Me` keyword to refer to the current instance.  
+ 您可以使用 `Me` 關鍵字來參考目前的實例。  
   
-### <a name="to-refer-to-the-current-instance"></a>To refer to the current instance  
+### <a name="to-refer-to-the-current-instance"></a>若要參考目前的實例  
   
-- Use the `Me` keyword where you would normally use the name of an object variable.  
+- 使用 `Me` 關鍵字，您通常會使用物件變數的名稱。  
   
     ```vb  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     Although `Me` behaves like an object variable, you cannot declare it or assign anything to it. `Me` always refers to the current instance.  
+     雖然 `Me` 的行為類似物件變數，但是您不能宣告它或將任何專案指派給它。 `Me` 一律會參考目前的實例。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [物件變數指派](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)

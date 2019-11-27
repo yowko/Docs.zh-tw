@@ -12,22 +12,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350780"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>此陣列為固定長度或暫時鎖定 (Visual Basic)
-This error has the following possible causes:  
+此錯誤的可能原因如下：  
   
-- Using `ReDim` to change the number of elements of a fixed-size array.  
+- 使用 `ReDim` 變更固定大小陣列的元素數目。  
   
-- Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure. If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.  
+- Redimensioning 模組層級動態陣列，其中一個元素已當做引數傳遞至程式。 如果傳遞了元素，陣列就會鎖定，以避免在程式內解除配置參考參數的記憶體。  
   
-- Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.  
+- 嘗試將值指派給包含陣列的 `Variant` 變數，但 `Variant` 目前已鎖定。  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a>若要改正這項錯誤  
   
-1. Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.  
+1. 將原始陣列設為動態，而不是修正，方法是使用 `ReDim` （如果陣列是在程式內宣告），或是宣告它而不指定專案數（如果陣列是在模組層級宣告）。  
   
-2. Determine whether you really need to pass the element, since it is visible within all procedures in the module.  
+2. 判斷您是否真的需要傳遞專案，因為它在模組的所有程式中都是可見的。  
   
-3. Determine what is locking the `Variant` and remedy it.  
+3. 判斷哪些鎖定 `Variant` 並加以修正。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)

@@ -19,17 +19,17 @@ ms.locfileid: "74343957"
 ---
 # <a name="object-data-type"></a>Object Data Type
 
-Holds addresses that refer to objects. You can assign any reference type (string, array, class, or interface) to an `Object` variable. An `Object` variable can also refer to data of any value type (numeric, `Boolean`, `Char`, `Date`, structure, or enumeration).
+保留參考物件的位址。 您可以將任何參考型別（字串、陣列、類別或介面）指派給 `Object` 變數。 `Object` 變數也可以參考任何實數值型別（數值、`Boolean`、`Char`、`Date`、結構或列舉）的資料。
 
 ## <a name="remarks"></a>備註
 
-The `Object` data type can point to data of any data type, including any object instance your application recognizes. Use `Object` when you do not know at compile time what data type the variable might point to.
+`Object` 資料類型可指向任何資料類型的資料，包括應用程式可辨識的任何物件實例。 當您在編譯時期不知道變數可能指向哪種資料類型時，請使用 `Object`。
 
-The default value of `Object` is `Nothing` (a null reference).
+`Object` 的預設值為 `Nothing` （null 參考）。
 
 ## <a name="data-types"></a>資料類型
 
-You can assign a variable, constant, or expression of any data type to an `Object` variable. To determine the data type an `Object` variable currently refers to, you can use the <xref:System.Type.GetTypeCode%2A> method of the <xref:System.Type?displayProperty=nameWithType> class. 下列範例將說明這點。
+您可以將任何資料類型的變數、常數或運算式指派給 `Object` 變數。 若要判斷 `Object` 變數目前所參考的資料類型，您可以使用 <xref:System.Type?displayProperty=nameWithType> 類別的 <xref:System.Type.GetTypeCode%2A> 方法。 說明如下例。
 
 ```vb
 Dim myObject As Object
@@ -38,31 +38,31 @@ Dim datTyp As Integer
 datTyp = Type.GetTypeCode(myObject.GetType())
 ```
 
-The `Object` data type is a reference type. However, Visual Basic treats an `Object` variable as a value type when it refers to data of a value type.
+`Object` 資料類型是參考型別。 不過，當參考實數值型別的資料時，Visual Basic 會將 `Object` 變數視為實數值型別。
 
 ## <a name="storage"></a>存放裝置
 
-Whatever data type it refers to, an `Object` variable does not contain the data value itself, but rather a pointer to the value. It always uses four bytes in computer memory, but this does not include the storage for the data representing the value of the variable. Because of the code that uses the pointer to locate the data, `Object` variables holding value types are slightly slower to access than explicitly typed variables.
+不論它所參考的資料類型為何，`Object` 變數不會包含資料值本身，而是值的指標。 它一律會在電腦記憶體中使用四個位元組，但這不會包含代表變數值之資料的儲存體。 由於使用指標來尋找資料的程式碼，因此，存取數值型別 `Object` 變數會比明確類型的變數稍微慢一點。
 
 ## <a name="programming-tips"></a>程式設計提示
 
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that pointer types in other environments are not compatible with the Visual Basic `Object` type.
+- **Interop 考慮。** 如果您要使用的元件不是針對 .NET Framework 所撰寫（例如 Automation 或 COM 物件），請記住，其他環境中的指標類型與 Visual Basic `Object` 類型並不相容。
 
-- **效能。** A variable you declare with the `Object` type is flexible enough to contain a reference to any object. However, when you invoke a method or property on such a variable, you always incur *late binding* (at run time). To force *early binding* (at compile time) and better performance, declare the variable with a specific class name, or cast it to the specific data type.
+- **效能。** 您以 `Object` 類型宣告的變數具有足夠的彈性，可包含任何物件的參考。 不過，當您在這類變數上叫用方法或屬性時，一律會產生*晚期繫結*（在執行時間）。 若要強制*早期繫結*（在編譯時期）和更好的效能，請使用特定類別名稱宣告變數，或將它轉換成特定的資料類型。
 
-  When you declare an object variable, try to use a specific class type, for example <xref:System.OperatingSystem>, instead of the generalized `Object` type. You should also use the most specific class available, such as <xref:System.Windows.Forms.TextBox> instead of <xref:System.Windows.Forms.Control>, so that you can access its properties and methods. You can usually use the **Classes** list in the **Object Browser** to find available class names.
+  當您宣告物件變數時，請嘗試使用特定的類別類型，例如 <xref:System.OperatingSystem>，而不是一般化的 `Object` 類型。 您也應該使用最特定的可用類別，例如 <xref:System.Windows.Forms.TextBox>，而不是 <xref:System.Windows.Forms.Control>，以便存取其屬性和方法。 您通常可以使用 **物件瀏覽器**中的 **類別** 清單來尋找可用的類別名稱。
 
-- **Widening.** All data types and all reference types widen to the `Object` data type. This means you can convert any type to `Object` without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
+- **加寬.** 所有的資料類型和所有參考類型都會擴大為 `Object` 資料類型。 這表示您可以將任何類型轉換成 `Object`，而不會遇到 <xref:System.OverflowException?displayProperty=nameWithType> 錯誤。
 
-  However, if you convert between value types and `Object`, Visual Basic performs operations called *boxing* and *unboxing*, which make execution slower.
+  不過，如果您在實數值型別和 `Object`之間進行轉換，Visual Basic 會執行稱為「*裝箱*和*取消裝箱*」的作業，使執行速度變慢。
 
-- **Type Characters.** `Object` has no literal type character or identifier type character.
+- **輸入字元。** `Object` 沒有常數值型別字元或識別項型別字元。
 
-- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Object?displayProperty=nameWithType> class.
+- **架構類型。** .NET Framework 中的對應類型是 <xref:System.Object?displayProperty=nameWithType> 類別。
 
 ## <a name="example"></a>範例
 
-The following example illustrates an `Object` variable pointing to an object instance.
+下列範例說明指向物件實例的 `Object` 變數。
 
 ```vb
 Dim objDb As Object
@@ -71,7 +71,7 @@ Dim myCollection As New Collection()
 objDb = myCollection.Item(1)
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Object>
 - [資料類型](../../../visual-basic/language-reference/data-types/index.md)

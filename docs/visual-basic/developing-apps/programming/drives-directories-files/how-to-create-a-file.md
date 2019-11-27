@@ -14,7 +14,7 @@ ms.locfileid: "74348802"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>如何：在 Visual Basic 中建立檔案
 
-這個範例會在 <xref:System.IO.File> 類別中使用 <xref:System.IO.File.Create%2A> 方法，以在指定的路徑中建立空白文字檔。  
+這個範例會在 <xref:System.IO.File.Create%2A> 類別中使用 <xref:System.IO.File> 方法，以在指定的路徑中建立空白文字檔。  
   
 ## <a name="example"></a>範例  
 
@@ -24,7 +24,7 @@ ms.locfileid: "74348802"
 
  使用 `file` 變數，以寫入檔案。  
   
-## <a name="robust-programming"></a>穩固程式設計  
+## <a name="robust-programming"></a>最佳化程式設計  
 
  如果檔案已存在，則會予以取代。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "74348802"
   
  如果使用者無權建立檔案，則會擲回 <xref:System.UnauthorizedAccessException>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO>
 - <xref:System.IO.File.Create%2A>

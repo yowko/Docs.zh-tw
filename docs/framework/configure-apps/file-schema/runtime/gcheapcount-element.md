@@ -44,7 +44,7 @@ ms.locfileid: "74283076"
 
 ### <a name="child-elements"></a>子元素
 
-無。
+None。
 
 ### <a name="parent-elements"></a>父元素
 
@@ -93,7 +93,7 @@ ms.locfileid: "74283076"
 </configuration>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [GCNoAffinitize 元素](gcnoaffinitize-element.md)

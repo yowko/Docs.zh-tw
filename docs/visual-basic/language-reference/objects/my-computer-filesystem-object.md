@@ -25,19 +25,19 @@ ms.locfileid: "74347230"
 ## <a name="remarks"></a>備註  
  如需方法和 `My.Computer.FileSystem` 物件屬性的資訊，請參閱 <xref:Microsoft.VisualBasic.FileIO.FileSystem>。  
   
- For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
+ 如需詳細資訊，請參閱[使用 Visual Basic 的檔案存取](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)。  
   
 > [!NOTE]
-> You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.  
+> 您也可以使用 <xref:System.IO?displayProperty=nameWithType> 命名空間中的類別來處理磁片磁碟機、檔案和目錄。  
   
 ## <a name="requirements"></a>需求  
  **命名空間︰** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
+ **類別：** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> （提供 <xref:Microsoft.VisualBasic.FileIO.FileSystem>的存取權）  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **元件：** Visual Basic 執行時間程式庫（在 Microsoft 中）  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [My.Computer.FileSystem.SpecialDirectories 物件](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)
 - [My.Computer 物件](../../../visual-basic/language-reference/objects/my-computer-object.md)

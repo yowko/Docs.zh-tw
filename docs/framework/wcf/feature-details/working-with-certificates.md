@@ -72,7 +72,7 @@ ms.locfileid: "74283277"
 
 在建立新服務時，您可能使用並非由信任的根憑證所發行的憑證，或者發行的憑證本身並非位於 [受信任的根憑證授權單位] 存放區中。 如果只是做為開發用途，您可以暫時停用檢查憑證之信任鏈結的機制。 若要這麼做，請將 `CertificateValidationMode` 屬性 (Property) 設為 `PeerTrust` 或 `PeerOrChainTrust`。 每種模式都會將憑證指定為自動發行 (對等信任) 或是信任鏈結的一部分。 您可以在下列任何一個類別中設定屬性。
 
-|類別|屬性|
+|執行個體|屬性|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -141,7 +141,7 @@ PowerShell SelfSignedCertificate 指令碼會建立 x.509 憑證和私密金鑰/
 
 在 WCF 中，您必須經常指定服務或用戶端用來驗證、加密或數位簽署訊息的憑證或憑證集。 您也可以使用代表 X.509 憑證之各種類別的 `SetCertificate` 方法，以程式設計方式來執行這項工作。 下列類別會使用 `SetCertificate` 方法來指定憑證。
 
-|類別|方法|
+|執行個體|方法|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|
@@ -188,7 +188,7 @@ IIS 與 Active Directory 的其中一項功能，就是能夠將憑證對應至 
 
 在第一版的 WCF 中，您不需要諮詢網域原則便可進行對應。 因此，當啟用對應功能且 X.509 憑證無法滿足網域原則要求時，以往在第一版中能夠順利執行的舊版應用程式可能會無法執行。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>

@@ -13,11 +13,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352887"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>如何：讓物件變數不參考執行個體 (Visual Basic)
-You can disassociate an object variable from any object instance by setting it to [Nothing](../../../../visual-basic/language-reference/nothing.md).  
+您可以藉由將物件變數設定為 [[無](../../../../visual-basic/language-reference/nothing.md)]，將它與任何物件實例取消關聯。  
   
-### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>To disassociate an object variable from any object instance  
+### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>取消物件變數與任何物件實例的關聯  
   
-- Set the variable to `Nothing` in an assignment statement.  
+- 將變數設定為指派語句中的 `Nothing`。  
   
     ```vb  
     ' Assume account is a defined class  
@@ -25,13 +25,13 @@ You can disassociate an object variable from any object instance by setting it t
     currentAccount = Nothing  
     ```  
   
-## <a name="robust-programming"></a>穩固程式設計  
- If your code tries to access a member of an object variable that has been set to `Nothing`, a <xref:System.NullReferenceException> occurs. If you set an object variable to `Nothing` frequently, or if it is possible the variable is not initialized, it is a good idea to enclose member accesses in a `Try...Catch...Finally` block.  
+## <a name="robust-programming"></a>最佳化程式設計  
+ 如果您的程式碼嘗試存取已設定為 `Nothing`之物件變數的成員，就會發生 <xref:System.NullReferenceException>。 如果您將物件變數設定為經常 `Nothing`，或是變數尚未初始化，最好將成員存取放在 `Try...Catch...Finally` 區塊中。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- If you use an object variable for objects that contain confidential or sensitive data, you can set the variable to `Nothing` when you are not actively dealing with one of those objects. This reduces the chance of malicious code gaining access to the data.  
+ 如果您針對包含機密或敏感性資料的物件使用物件變數，您可以將變數設定為在不積極處理其中一個物件時 `Nothing`。 這可減少惡意程式碼取得資料存取權的機會。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.NullReferenceException>
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

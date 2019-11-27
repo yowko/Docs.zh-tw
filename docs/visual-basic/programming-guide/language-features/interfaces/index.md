@@ -40,13 +40,13 @@ ms.locfileid: "74345046"
  [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>實作介面  
- The Visual Basic reserved word `Implements` is used in two ways. `Implements` 陳述式表示類別或結構實作介面。 `Implements` 關鍵字表示類別成員或結構成員實作特定介面成員。  
+ Visual Basic 保留字 `Implements` 會以兩種方式使用。 `Implements` 陳述式表示類別或結構實作介面。 `Implements` 關鍵字表示類別成員或結構成員實作特定介面成員。  
   
 ### <a name="implements-statement"></a>Implements 陳述式  
- 如果類別或結構實作一或多個介面，它在 `Class` 或 `Structure` 陳述式後面必須緊接著 `Implements` 陳述式。 `Implements` 陳述式需要由類別實作的介面清單 (以逗號分隔)。 類別或結構必須使用 `Implements` 關鍵字實作所有介面成員。  
+ 如果類別或結構實作一或多個介面，它在 `Implements` 或 `Class` 陳述式後面必須緊接著 `Structure` 陳述式。 `Implements` 陳述式需要由類別實作的介面清單 (以逗號分隔)。 類別或結構必須使用 `Implements` 關鍵字實作所有介面成員。  
   
 ### <a name="implements-keyword"></a>Implements 關鍵字  
- `Implements` 關鍵字需要實作介面成員之逗號分隔清單。 一般而言，只會指定單一介面成員，但您可以指定多個成員。 介面成員的規格包含介面名稱 (必須在類別內的實作陳述式中指定)、句號，以及要實作的成員函式、屬性或事件的名稱。 The name of a member that implements an interface member can use any legal identifier, and it is not limited to the `InterfaceName_MethodName` convention used in earlier versions of Visual Basic.  
+ `Implements` 關鍵字需要實作介面成員之逗號分隔清單。 一般而言，只會指定單一介面成員，但您可以指定多個成員。 介面成員的規格包含介面名稱 (必須在類別內的實作陳述式中指定)、句號，以及要實作的成員函式、屬性或事件的名稱。 執行介面成員的成員名稱可以使用任何合法的識別碼，而且不限於舊版 Visual Basic 中使用的 `InterfaceName_MethodName` 慣例。  
   
  例如，下列程式碼顯示如何宣告實作介面的方法、且名為 `Sub1` 的副程式：  
   
