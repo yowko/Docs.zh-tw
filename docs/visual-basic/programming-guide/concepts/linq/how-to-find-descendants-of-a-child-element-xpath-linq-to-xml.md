@@ -9,15 +9,15 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344677"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="2b0b1-102">How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2b0b1-102">How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="2b0b1-103">本主題顯示如何利用特定名稱取得子項目的子代項目。</span><span class="sxs-lookup"><span data-stu-id="2b0b1-103">This topic shows how to get the descendant elements of a child element with a particular name.</span></span>  
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="f056d-102">如何：尋找子專案的子代（XPath-LINQ to XML）（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="f056d-102">How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="f056d-103">本主題顯示如何利用特定名稱取得子項目的子代項目。</span><span class="sxs-lookup"><span data-stu-id="f056d-103">This topic shows how to get the descendant elements of a child element with a particular name.</span></span>  
   
- <span data-ttu-id="2b0b1-104">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="2b0b1-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="f056d-104">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="f056d-104">The XPath expression is:</span></span>  
   
  `./Paragraph//Text/text()`  
   
-## <a name="example"></a><span data-ttu-id="2b0b1-105">範例</span><span class="sxs-lookup"><span data-stu-id="2b0b1-105">Example</span></span>  
- <span data-ttu-id="2b0b1-106">此範例模擬從字組處理文件的 XML 表示擷取文字的問題。</span><span class="sxs-lookup"><span data-stu-id="2b0b1-106">This example simulates the problems of extracting text from an XML representation of a word processing document.</span></span> <span data-ttu-id="2b0b1-107">它會先選取所有 `Paragraph` 項目，然後它會選取每個 `Text` 項目的所有 `Paragraph` 子代項目。</span><span class="sxs-lookup"><span data-stu-id="2b0b1-107">It first selects all `Paragraph` elements, and then it selects all `Text` descendant elements of each `Paragraph` element.</span></span> <span data-ttu-id="2b0b1-108">這不會選取 `Text` 項目的子代 `Comment` 項目。</span><span class="sxs-lookup"><span data-stu-id="2b0b1-108">This doesn't select the descendant `Text` elements of the `Comment` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="f056d-105">範例</span><span class="sxs-lookup"><span data-stu-id="f056d-105">Example</span></span>  
+ <span data-ttu-id="f056d-106">此範例模擬從字組處理文件的 XML 表示擷取文字的問題。</span><span class="sxs-lookup"><span data-stu-id="f056d-106">This example simulates the problems of extracting text from an XML representation of a word processing document.</span></span> <span data-ttu-id="f056d-107">它會先選取所有 `Paragraph` 項目，然後它會選取每個 `Text` 項目的所有 `Paragraph` 子代項目。</span><span class="sxs-lookup"><span data-stu-id="f056d-107">It first selects all `Paragraph` elements, and then it selects all `Text` descendant elements of each `Paragraph` element.</span></span> <span data-ttu-id="f056d-108">這不會選取 `Text` 項目的子代 `Comment` 項目。</span><span class="sxs-lookup"><span data-stu-id="f056d-108">This doesn't select the descendant `Text` elements of the `Comment` element.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -62,13 +62,13 @@ End If
 Console.WriteLine(str2)  
 ```  
   
- <span data-ttu-id="2b0b1-109">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="2b0b1-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="f056d-109">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="f056d-109">This example produces the following output:</span></span>  
   
 ```console  
 Results are identical  
 This is the start of a sentence.  This is a second sentence.  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2b0b1-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="2b0b1-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f056d-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="f056d-110">See also</span></span>
 
-- [<span data-ttu-id="2b0b1-111">LINQ to XML for XPath Users (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2b0b1-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="f056d-111">XPath 使用者的 LINQ to XML （Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="f056d-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

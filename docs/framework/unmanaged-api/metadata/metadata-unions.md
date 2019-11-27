@@ -13,18 +13,18 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430683"
 ---
-# <a name="metadata-unions"></a><span data-ttu-id="7a2b9-102">中繼資料等位</span><span class="sxs-lookup"><span data-stu-id="7a2b9-102">Metadata Unions</span></span>
-<span data-ttu-id="7a2b9-103">本節說明中繼資料應用程式開發介面所使用的 Unmanaged 等位。</span><span class="sxs-lookup"><span data-stu-id="7a2b9-103">This section describes the unmanaged unions that the metadata API uses.</span></span>  
+# <a name="metadata-unions"></a><span data-ttu-id="8d3fd-102">中繼資料等位</span><span class="sxs-lookup"><span data-stu-id="8d3fd-102">Metadata Unions</span></span>
+<span data-ttu-id="8d3fd-103">本節說明中繼資料應用程式開發介面所使用的 Unmanaged 等位。</span><span class="sxs-lookup"><span data-stu-id="8d3fd-103">This section describes the unmanaged unions that the metadata API uses.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7a2b9-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="7a2b9-104">In This Section</span></span>  
- [<span data-ttu-id="7a2b9-105">CeeSectionRelocExtra 等位</span><span class="sxs-lookup"><span data-stu-id="7a2b9-105">CeeSectionRelocExtra Union</span></span>](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
- <span data-ttu-id="7a2b9-106">Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section</span><span class="sxs-lookup"><span data-stu-id="7a2b9-106">Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="8d3fd-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="8d3fd-104">In This Section</span></span>  
+ [<span data-ttu-id="8d3fd-105">CeeSectionRelocExtra 等位</span><span class="sxs-lookup"><span data-stu-id="8d3fd-105">CeeSectionRelocExtra Union</span></span>](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
+ <span data-ttu-id="8d3fd-106">表示[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)介面用來重新放置區段的位址位移。</span><span class="sxs-lookup"><span data-stu-id="8d3fd-106">Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="7a2b9-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="7a2b9-107">Related Sections</span></span>  
- [<span data-ttu-id="7a2b9-108">中繼資料介面</span><span class="sxs-lookup"><span data-stu-id="7a2b9-108">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
+## <a name="related-sections"></a><span data-ttu-id="8d3fd-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="8d3fd-107">Related Sections</span></span>  
+ [<span data-ttu-id="8d3fd-108">中繼資料介面</span><span class="sxs-lookup"><span data-stu-id="8d3fd-108">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
   
- [<span data-ttu-id="7a2b9-109">中繼資料全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="7a2b9-109">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
+ [<span data-ttu-id="8d3fd-109">中繼資料全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="8d3fd-109">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
   
- [<span data-ttu-id="7a2b9-110">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="7a2b9-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
+ [<span data-ttu-id="8d3fd-110">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="8d3fd-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
   
- [<span data-ttu-id="7a2b9-111">中繼資料結構</span><span class="sxs-lookup"><span data-stu-id="7a2b9-111">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+ [<span data-ttu-id="8d3fd-111">中繼資料結構</span><span class="sxs-lookup"><span data-stu-id="8d3fd-111">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)

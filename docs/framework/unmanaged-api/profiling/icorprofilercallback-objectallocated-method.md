@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445846"
 ---
-# <a name="icorprofilercallbackobjectallocated-method"></a><span data-ttu-id="339b5-102">ICorProfilerCallback::ObjectAllocated 方法</span><span class="sxs-lookup"><span data-stu-id="339b5-102">ICorProfilerCallback::ObjectAllocated Method</span></span>
-<span data-ttu-id="339b5-103">Notifies the profiler that memory within the heap has been allocated for an object.</span><span class="sxs-lookup"><span data-stu-id="339b5-103">Notifies the profiler that memory within the heap has been allocated for an object.</span></span>  
+# <a name="icorprofilercallbackobjectallocated-method"></a><span data-ttu-id="12f1f-102">ICorProfilerCallback::ObjectAllocated 方法</span><span class="sxs-lookup"><span data-stu-id="12f1f-102">ICorProfilerCallback::ObjectAllocated Method</span></span>
+<span data-ttu-id="12f1f-103">通知分析工具，堆積內的記憶體已配置給物件。</span><span class="sxs-lookup"><span data-stu-id="12f1f-103">Notifies the profiler that memory within the heap has been allocated for an object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="339b5-104">語法</span><span class="sxs-lookup"><span data-stu-id="339b5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="12f1f-104">語法</span><span class="sxs-lookup"><span data-stu-id="12f1f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ObjectAllocated(  
@@ -33,27 +33,27 @@ HRESULT ObjectAllocated(
     [in] ClassID classId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="339b5-105">參數</span><span class="sxs-lookup"><span data-stu-id="339b5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="12f1f-105">參數</span><span class="sxs-lookup"><span data-stu-id="12f1f-105">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="339b5-106">[in] The ID of the object for which memory was allocated.</span><span class="sxs-lookup"><span data-stu-id="339b5-106">[in] The ID of the object for which memory was allocated.</span></span>  
+ <span data-ttu-id="12f1f-106">在配置記憶體之物件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="12f1f-106">[in] The ID of the object for which memory was allocated.</span></span>  
   
  `classId`  
- <span data-ttu-id="339b5-107">[in] The ID of the class of which the object is an instance.</span><span class="sxs-lookup"><span data-stu-id="339b5-107">[in] The ID of the class of which the object is an instance.</span></span>  
+ <span data-ttu-id="12f1f-107">在物件為實例之類別的識別碼。</span><span class="sxs-lookup"><span data-stu-id="12f1f-107">[in] The ID of the class of which the object is an instance.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="339b5-108">備註</span><span class="sxs-lookup"><span data-stu-id="339b5-108">Remarks</span></span>  
- <span data-ttu-id="339b5-109">The `ObjectedAllocated` method is not called for allocations from either the stack or unmanaged memory.</span><span class="sxs-lookup"><span data-stu-id="339b5-109">The `ObjectedAllocated` method is not called for allocations from either the stack or unmanaged memory.</span></span> <span data-ttu-id="339b5-110">The `classId` parameter can refer to a class in managed code that has not been loaded yet.</span><span class="sxs-lookup"><span data-stu-id="339b5-110">The `classId` parameter can refer to a class in managed code that has not been loaded yet.</span></span> <span data-ttu-id="339b5-111">The profiler will receive a class load callback for that class immediately after the `ObjectAllocated` callback.</span><span class="sxs-lookup"><span data-stu-id="339b5-111">The profiler will receive a class load callback for that class immediately after the `ObjectAllocated` callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="12f1f-108">備註</span><span class="sxs-lookup"><span data-stu-id="12f1f-108">Remarks</span></span>  
+ <span data-ttu-id="12f1f-109">不會針對來自堆疊或非受控記憶體的配置呼叫 `ObjectedAllocated` 方法。</span><span class="sxs-lookup"><span data-stu-id="12f1f-109">The `ObjectedAllocated` method is not called for allocations from either the stack or unmanaged memory.</span></span> <span data-ttu-id="12f1f-110">`classId` 參數可以參考尚未載入之 managed 程式碼中的類別。</span><span class="sxs-lookup"><span data-stu-id="12f1f-110">The `classId` parameter can refer to a class in managed code that has not been loaded yet.</span></span> <span data-ttu-id="12f1f-111">分析工具會在 `ObjectAllocated` 回呼之後，立即收到該類別的類別載入回呼。</span><span class="sxs-lookup"><span data-stu-id="12f1f-111">The profiler will receive a class load callback for that class immediately after the `ObjectAllocated` callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="339b5-112">需求</span><span class="sxs-lookup"><span data-stu-id="339b5-112">Requirements</span></span>  
- <span data-ttu-id="339b5-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="339b5-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="12f1f-112">需求</span><span class="sxs-lookup"><span data-stu-id="12f1f-112">Requirements</span></span>  
+ <span data-ttu-id="12f1f-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="12f1f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="339b5-114">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="339b5-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="12f1f-114">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="12f1f-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="339b5-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="339b5-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="12f1f-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="12f1f-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="339b5-116">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="339b5-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="12f1f-116">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="12f1f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="339b5-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="339b5-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="12f1f-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="12f1f-117">See also</span></span>
 
-- [<span data-ttu-id="339b5-118">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="339b5-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="339b5-119">ClassLoadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="339b5-119">ClassLoadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
-- [<span data-ttu-id="339b5-120">ClassLoadFinished 方法</span><span class="sxs-lookup"><span data-stu-id="339b5-120">ClassLoadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)
+- [<span data-ttu-id="12f1f-118">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="12f1f-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="12f1f-119">ClassLoadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="12f1f-119">ClassLoadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
+- [<span data-ttu-id="12f1f-120">ClassLoadFinished 方法</span><span class="sxs-lookup"><span data-stu-id="12f1f-120">ClassLoadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)

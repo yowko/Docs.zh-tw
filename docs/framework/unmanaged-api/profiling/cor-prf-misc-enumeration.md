@@ -21,10 +21,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432271"
 ---
-# <a name="cor_prf_misc-enumeration"></a><span data-ttu-id="6d934-102">COR_PRF_MISC 列舉</span><span class="sxs-lookup"><span data-stu-id="6d934-102">COR_PRF_MISC Enumeration</span></span>
-<span data-ttu-id="6d934-103">包含指定特定識別項的常數值。</span><span class="sxs-lookup"><span data-stu-id="6d934-103">Contains constant values that specify special identifiers.</span></span>  
+# <a name="cor_prf_misc-enumeration"></a><span data-ttu-id="f4e13-102">COR_PRF_MISC 列舉</span><span class="sxs-lookup"><span data-stu-id="f4e13-102">COR_PRF_MISC Enumeration</span></span>
+<span data-ttu-id="f4e13-103">包含指定特定識別項的常數值。</span><span class="sxs-lookup"><span data-stu-id="f4e13-103">Contains constant values that specify special identifiers.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6d934-104">語法</span><span class="sxs-lookup"><span data-stu-id="6d934-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f4e13-104">語法</span><span class="sxs-lookup"><span data-stu-id="f4e13-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -34,23 +34,23 @@ typedef enum {
 } COR_PRF_MISC;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="6d934-105">Members</span><span class="sxs-lookup"><span data-stu-id="6d934-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f4e13-105">Members</span><span class="sxs-lookup"><span data-stu-id="f4e13-105">Members</span></span>  
   
-|<span data-ttu-id="6d934-106">成員</span><span class="sxs-lookup"><span data-stu-id="6d934-106">Member</span></span>|<span data-ttu-id="6d934-107">描述</span><span class="sxs-lookup"><span data-stu-id="6d934-107">Description</span></span>|  
+|<span data-ttu-id="f4e13-106">成員</span><span class="sxs-lookup"><span data-stu-id="f4e13-106">Member</span></span>|<span data-ttu-id="f4e13-107">描述</span><span class="sxs-lookup"><span data-stu-id="f4e13-107">Description</span></span>|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|<span data-ttu-id="6d934-108">The default identifier used by [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) for a module that has not yet been attached to an assembly.</span><span class="sxs-lookup"><span data-stu-id="6d934-108">The default identifier used by [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) for a module that has not yet been attached to an assembly.</span></span>|  
-|`PROFILER_GLOBAL_CLASS`|<span data-ttu-id="6d934-109">The default class identifier for global constants that do not belong to a class.</span><span class="sxs-lookup"><span data-stu-id="6d934-109">The default class identifier for global constants that do not belong to a class.</span></span>|  
-|`PROFILER_GLOBAL_MODULE`|<span data-ttu-id="6d934-110">The default module identifier for global objects that do not belong to a module.</span><span class="sxs-lookup"><span data-stu-id="6d934-110">The default module identifier for global objects that do not belong to a module.</span></span>|  
+|`PROFILER_PARENT_UNKNOWN`|<span data-ttu-id="f4e13-108">尚未附加至元件之模組的[ICorProfilerInfo：： GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md)所使用的預設識別碼。</span><span class="sxs-lookup"><span data-stu-id="f4e13-108">The default identifier used by [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) for a module that has not yet been attached to an assembly.</span></span>|  
+|`PROFILER_GLOBAL_CLASS`|<span data-ttu-id="f4e13-109">不屬於類別之全域常數的預設類別識別碼。</span><span class="sxs-lookup"><span data-stu-id="f4e13-109">The default class identifier for global constants that do not belong to a class.</span></span>|  
+|`PROFILER_GLOBAL_MODULE`|<span data-ttu-id="f4e13-110">不屬於模組之全域物件的預設模組識別碼。</span><span class="sxs-lookup"><span data-stu-id="f4e13-110">The default module identifier for global objects that do not belong to a module.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="6d934-111">需求</span><span class="sxs-lookup"><span data-stu-id="6d934-111">Requirements</span></span>  
- <span data-ttu-id="6d934-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6d934-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f4e13-111">需求</span><span class="sxs-lookup"><span data-stu-id="f4e13-111">Requirements</span></span>  
+ <span data-ttu-id="f4e13-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f4e13-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6d934-113">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6d934-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f4e13-113">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f4e13-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6d934-114">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6d934-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f4e13-114">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f4e13-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6d934-115">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d934-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f4e13-115">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f4e13-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6d934-116">請參閱</span><span class="sxs-lookup"><span data-stu-id="6d934-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f4e13-116">請參閱</span><span class="sxs-lookup"><span data-stu-id="f4e13-116">See also</span></span>
 
-- [<span data-ttu-id="6d934-117">分析列舉</span><span class="sxs-lookup"><span data-stu-id="6d934-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="f4e13-117">分析列舉</span><span class="sxs-lookup"><span data-stu-id="f4e13-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

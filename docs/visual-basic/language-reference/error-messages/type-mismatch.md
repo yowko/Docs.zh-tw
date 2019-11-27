@@ -11,17 +11,17 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346662"
 ---
-# <a name="type-mismatch-visual-basic"></a><span data-ttu-id="9caa1-102">類型不符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9caa1-102">Type mismatch (Visual Basic)</span></span>
-<span data-ttu-id="9caa1-103">You attempted to convert a value to another type in a way that is not valid.</span><span class="sxs-lookup"><span data-stu-id="9caa1-103">You attempted to convert a value to another type in a way that is not valid.</span></span>  
+# <a name="type-mismatch-visual-basic"></a><span data-ttu-id="d5bdd-102">類型不符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d5bdd-102">Type mismatch (Visual Basic)</span></span>
+<span data-ttu-id="d5bdd-103">您嘗試以不正確方式，將值轉換成另一種類型。</span><span class="sxs-lookup"><span data-stu-id="d5bdd-103">You attempted to convert a value to another type in a way that is not valid.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="9caa1-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="9caa1-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d5bdd-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="d5bdd-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="9caa1-105">Check the assignment to make sure it is valid.</span><span class="sxs-lookup"><span data-stu-id="9caa1-105">Check the assignment to make sure it is valid.</span></span>  
+1. <span data-ttu-id="d5bdd-105">請檢查指派以確定它是有效的。</span><span class="sxs-lookup"><span data-stu-id="d5bdd-105">Check the assignment to make sure it is valid.</span></span>  
   
-2. <span data-ttu-id="9caa1-106">Make sure you did not pass an object to a procedure that expects a single property or value.</span><span class="sxs-lookup"><span data-stu-id="9caa1-106">Make sure you did not pass an object to a procedure that expects a single property or value.</span></span>  
+2. <span data-ttu-id="d5bdd-106">請確定您未將物件傳遞給需要單一屬性或值的程式。</span><span class="sxs-lookup"><span data-stu-id="d5bdd-106">Make sure you did not pass an object to a procedure that expects a single property or value.</span></span>  
   
-3. <span data-ttu-id="9caa1-107">Make sure you did not use a module or project name where an expression was expected.</span><span class="sxs-lookup"><span data-stu-id="9caa1-107">Make sure you did not use a module or project name where an expression was expected.</span></span>  
+3. <span data-ttu-id="d5bdd-107">請確定您未使用預期運算式的模組或專案名稱。</span><span class="sxs-lookup"><span data-stu-id="d5bdd-107">Make sure you did not use a module or project name where an expression was expected.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9caa1-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="9caa1-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d5bdd-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="d5bdd-108">See also</span></span>
 
-- [<span data-ttu-id="9caa1-109">錯誤類型</span><span class="sxs-lookup"><span data-stu-id="9caa1-109">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="d5bdd-109">錯誤類型</span><span class="sxs-lookup"><span data-stu-id="d5bdd-109">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)

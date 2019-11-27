@@ -8,12 +8,12 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349596"
 ---
-# <a name="special-characters-visual-basic-reference"></a><span data-ttu-id="a41a0-102">Special Characters (Visual Basic Reference)</span><span class="sxs-lookup"><span data-stu-id="a41a0-102">Special Characters (Visual Basic Reference)</span></span>
+# <a name="special-characters-visual-basic-reference"></a><span data-ttu-id="53164-102">特殊字元（Visual Basic 參考）</span><span class="sxs-lookup"><span data-stu-id="53164-102">Special Characters (Visual Basic Reference)</span></span>
 
-<span data-ttu-id="a41a0-103">Special characters are predefined, contextual characters that modifies the program element to which they are prepended.</span><span class="sxs-lookup"><span data-stu-id="a41a0-103">Special characters are predefined, contextual characters that modifies the program element to which they are prepended.</span></span> <span data-ttu-id="a41a0-104">Visual Basic supports the following special character:</span><span class="sxs-lookup"><span data-stu-id="a41a0-104">Visual Basic supports the following special character:</span></span>
+<span data-ttu-id="53164-103">特殊字元是預先定義的內容字元，可修改前面加上的程式元素。</span><span class="sxs-lookup"><span data-stu-id="53164-103">Special characters are predefined, contextual characters that modifies the program element to which they are prepended.</span></span> <span data-ttu-id="53164-104">Visual Basic 支援下列特殊字元：</span><span class="sxs-lookup"><span data-stu-id="53164-104">Visual Basic supports the following special character:</span></span>
 
-- <span data-ttu-id="a41a0-105">[$](interpolated.md)，內插字串字元。</span><span class="sxs-lookup"><span data-stu-id="a41a0-105">[$](interpolated.md), the interpolated string character.</span></span>
+- <span data-ttu-id="53164-105">[$](interpolated.md)，內插字串字元。</span><span class="sxs-lookup"><span data-stu-id="53164-105">[$](interpolated.md), the interpolated string character.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a41a0-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="a41a0-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="53164-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="53164-106">See also</span></span>
 
-- [<span data-ttu-id="a41a0-107">Visual Basic 參考</span><span class="sxs-lookup"><span data-stu-id="a41a0-107">Visual Basic Reference</span></span>](../../../visual-basic/language-reference/index.md)
+- [<span data-ttu-id="53164-107">Visual Basic 參考</span><span class="sxs-lookup"><span data-stu-id="53164-107">Visual Basic Reference</span></span>](../../../visual-basic/language-reference/index.md)

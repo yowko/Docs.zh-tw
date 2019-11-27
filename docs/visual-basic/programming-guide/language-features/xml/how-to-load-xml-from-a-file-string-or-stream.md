@@ -12,43 +12,43 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74330965"
 ---
-# <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a><span data-ttu-id="0b219-102">如何：從檔案、字串或資料流載入 XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0b219-102">How to: Load XML from a File, String, or Stream (Visual Basic)</span></span>
+# <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a><span data-ttu-id="9f167-102">如何：從檔案、字串或資料流載入 XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9f167-102">How to: Load XML from a File, String, or Stream (Visual Basic)</span></span>
 
-<span data-ttu-id="0b219-103">You can create [XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md) and populate them with the contents from an external source such as a file, a string, or a stream by using several methods.</span><span class="sxs-lookup"><span data-stu-id="0b219-103">You can create [XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md) and populate them with the contents from an external source such as a file, a string, or a stream by using several methods.</span></span> <span data-ttu-id="0b219-104">These methods are shown in the following examples.</span><span class="sxs-lookup"><span data-stu-id="0b219-104">These methods are shown in the following examples.</span></span>
+<span data-ttu-id="9f167-103">您可以使用數種方法來建立[XML 常](../../../../visual-basic/language-reference/xml-literals/index.md)值，並以外部來源（例如檔案、字串或資料流程）的內容填入。</span><span class="sxs-lookup"><span data-stu-id="9f167-103">You can create [XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md) and populate them with the contents from an external source such as a file, a string, or a stream by using several methods.</span></span> <span data-ttu-id="9f167-104">下列範例會顯示這些方法。</span><span class="sxs-lookup"><span data-stu-id="9f167-104">These methods are shown in the following examples.</span></span>
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-load-xml-from-a-file"></a><span data-ttu-id="0b219-105">To load XML from a file</span><span class="sxs-lookup"><span data-stu-id="0b219-105">To load XML from a file</span></span>
+## <a name="to-load-xml-from-a-file"></a><span data-ttu-id="9f167-105">從檔案載入 XML</span><span class="sxs-lookup"><span data-stu-id="9f167-105">To load XML from a file</span></span>
 
-<span data-ttu-id="0b219-106">To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a file, use the `Load` method.</span><span class="sxs-lookup"><span data-stu-id="0b219-106">To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a file, use the `Load` method.</span></span> <span data-ttu-id="0b219-107">This method can take a file path, text stream, or XML stream as input.</span><span class="sxs-lookup"><span data-stu-id="0b219-107">This method can take a file path, text stream, or XML stream as input.</span></span>
+<span data-ttu-id="9f167-106">若要從檔案填入 XML 常值（例如 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument> 物件），請使用 `Load` 方法。</span><span class="sxs-lookup"><span data-stu-id="9f167-106">To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a file, use the `Load` method.</span></span> <span data-ttu-id="9f167-107">這個方法可以接受檔案路徑、文字資料流程或 XML 資料流程做為輸入。</span><span class="sxs-lookup"><span data-stu-id="9f167-107">This method can take a file path, text stream, or XML stream as input.</span></span>
 
-<span data-ttu-id="0b219-108">The following code example shows the use of the <xref:System.Xml.Linq.XDocument.Load%28System.String%29> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from a text file.</span><span class="sxs-lookup"><span data-stu-id="0b219-108">The following code example shows the use of the <xref:System.Xml.Linq.XDocument.Load%28System.String%29> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from a text file.</span></span>
+<span data-ttu-id="9f167-108">下列程式碼範例示範如何使用 <xref:System.Xml.Linq.XDocument.Load%28System.String%29> 方法，將文字檔中的 XML 填入 <xref:System.Xml.Linq.XDocument> 物件。</span><span class="sxs-lookup"><span data-stu-id="9f167-108">The following code example shows the use of the <xref:System.Xml.Linq.XDocument.Load%28System.String%29> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from a text file.</span></span>
 
 [!code-vb[VbXMLSamples#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#43)]
 
-## <a name="to-load-xml-from-a-string"></a><span data-ttu-id="0b219-109">To load XML from a string</span><span class="sxs-lookup"><span data-stu-id="0b219-109">To load XML from a string</span></span>
+## <a name="to-load-xml-from-a-string"></a><span data-ttu-id="9f167-109">從字串載入 XML</span><span class="sxs-lookup"><span data-stu-id="9f167-109">To load XML from a string</span></span>
 
-<span data-ttu-id="0b219-110">To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a string, you can use the `Parse` method.</span><span class="sxs-lookup"><span data-stu-id="0b219-110">To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a string, you can use the `Parse` method.</span></span>
+<span data-ttu-id="9f167-110">若要將字串中的 XML 常值（例如 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument> 物件）填入，您可以使用 `Parse` 方法。</span><span class="sxs-lookup"><span data-stu-id="9f167-110">To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a string, you can use the `Parse` method.</span></span>
 
-<span data-ttu-id="0b219-111">The following code example shows the use of the <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from a string.</span><span class="sxs-lookup"><span data-stu-id="0b219-111">The following code example shows the use of the <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from a string.</span></span>
+<span data-ttu-id="9f167-111">下列程式碼範例示範如何使用 <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType> 方法，將字串中的 XML 填入 <xref:System.Xml.Linq.XDocument> 物件。</span><span class="sxs-lookup"><span data-stu-id="9f167-111">The following code example shows the use of the <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from a string.</span></span>
 
 [!code-vb[VbXMLSamples#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#47)]
 
-## <a name="to-load-xml-from-a-stream"></a><span data-ttu-id="0b219-112">To load XML from a stream</span><span class="sxs-lookup"><span data-stu-id="0b219-112">To load XML from a stream</span></span>
+## <a name="to-load-xml-from-a-stream"></a><span data-ttu-id="9f167-112">從資料流程載入 XML</span><span class="sxs-lookup"><span data-stu-id="9f167-112">To load XML from a stream</span></span>
 
-<span data-ttu-id="0b219-113">To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a stream, you can use the `Load` method or the <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType> method.</span><span class="sxs-lookup"><span data-stu-id="0b219-113">To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a stream, you can use the `Load` method or the <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType> method.</span></span>
+<span data-ttu-id="9f167-113">若要從資料流程填入 XML 常值（例如 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument> 物件），您可以使用 `Load` 方法或 <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="9f167-113">To populate an XML literal such as an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object from a stream, you can use the `Load` method or the <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType> method.</span></span>
 
-<span data-ttu-id="0b219-114">The following code example shows the use of the <xref:System.Xml.Linq.XNode.ReadFrom%2A> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from an XML stream.</span><span class="sxs-lookup"><span data-stu-id="0b219-114">The following code example shows the use of the <xref:System.Xml.Linq.XNode.ReadFrom%2A> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from an XML stream.</span></span>
+<span data-ttu-id="9f167-114">下列程式碼範例示範如何使用 <xref:System.Xml.Linq.XNode.ReadFrom%2A> 方法，以 xml 資料流程的 XML 填入 <xref:System.Xml.Linq.XDocument> 物件。</span><span class="sxs-lookup"><span data-stu-id="9f167-114">The following code example shows the use of the <xref:System.Xml.Linq.XNode.ReadFrom%2A> method to populate an <xref:System.Xml.Linq.XDocument> object with XML from an XML stream.</span></span>
 
 [!code-vb[VbXMLSamples#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#46)]
 
-## <a name="see-also"></a><span data-ttu-id="0b219-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="0b219-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9f167-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="9f167-115">See also</span></span>
 
 - <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="0b219-116">XML 常值</span><span class="sxs-lookup"><span data-stu-id="0b219-116">XML Literals</span></span>](../../../../visual-basic/language-reference/xml-literals/index.md)
-- [<span data-ttu-id="0b219-117">XML</span><span class="sxs-lookup"><span data-stu-id="0b219-117">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [<span data-ttu-id="0b219-118">在 Visual Basic 中管理 XML</span><span class="sxs-lookup"><span data-stu-id="0b219-118">Manipulating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
+- [<span data-ttu-id="9f167-116">XML 常值</span><span class="sxs-lookup"><span data-stu-id="9f167-116">XML Literals</span></span>](../../../../visual-basic/language-reference/xml-literals/index.md)
+- [<span data-ttu-id="9f167-117">XML</span><span class="sxs-lookup"><span data-stu-id="9f167-117">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [<span data-ttu-id="9f167-118">在 Visual Basic 中管理 XML</span><span class="sxs-lookup"><span data-stu-id="9f167-118">Manipulating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
