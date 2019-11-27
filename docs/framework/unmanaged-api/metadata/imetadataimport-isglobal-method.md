@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434723"
 ---
-# <a name="imetadataimportisglobal-method"></a><span data-ttu-id="f7aa9-102">IMetaDataImport::IsGlobal 方法</span><span class="sxs-lookup"><span data-stu-id="f7aa9-102">IMetaDataImport::IsGlobal Method</span></span>
-<span data-ttu-id="f7aa9-103">取得一個值，用來表示指定中繼資料語彙基元所代表的欄位、方法或類型值是否具有全域範圍。</span><span class="sxs-lookup"><span data-stu-id="f7aa9-103">Gets a value indicating whether the field, method, or type represented by the specified metadata token has global scope.</span></span>  
+# <a name="imetadataimportisglobal-method"></a><span data-ttu-id="7c73c-102">IMetaDataImport::IsGlobal 方法</span><span class="sxs-lookup"><span data-stu-id="7c73c-102">IMetaDataImport::IsGlobal Method</span></span>
+<span data-ttu-id="7c73c-103">取得一個值，用來表示指定中繼資料語彙基元所代表的欄位、方法或類型值是否具有全域範圍。</span><span class="sxs-lookup"><span data-stu-id="7c73c-103">Gets a value indicating whether the field, method, or type represented by the specified metadata token has global scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f7aa9-104">語法</span><span class="sxs-lookup"><span data-stu-id="f7aa9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7c73c-104">語法</span><span class="sxs-lookup"><span data-stu-id="7c73c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsGlobal (  
@@ -34,23 +34,23 @@ HRESULT IsGlobal (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f7aa9-105">參數</span><span class="sxs-lookup"><span data-stu-id="f7aa9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7c73c-105">參數</span><span class="sxs-lookup"><span data-stu-id="7c73c-105">Parameters</span></span>  
  `pd`  
- <span data-ttu-id="f7aa9-106">[in] A metadata token that represents a type, field, or method.</span><span class="sxs-lookup"><span data-stu-id="f7aa9-106">[in] A metadata token that represents a type, field, or method.</span></span>  
+ <span data-ttu-id="7c73c-106">在代表類型、欄位或方法的元資料標記。</span><span class="sxs-lookup"><span data-stu-id="7c73c-106">[in] A metadata token that represents a type, field, or method.</span></span>  
   
  `pbGlobal`  
- <span data-ttu-id="f7aa9-107">[out] 1 if the object has global scope; otherwise, 0 (zero).</span><span class="sxs-lookup"><span data-stu-id="f7aa9-107">[out] 1 if the object has global scope; otherwise, 0 (zero).</span></span>  
+ <span data-ttu-id="7c73c-107">[out] 1，如果物件具有全域範圍，則為，否則為0（零）。</span><span class="sxs-lookup"><span data-stu-id="7c73c-107">[out] 1 if the object has global scope; otherwise, 0 (zero).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f7aa9-108">需求</span><span class="sxs-lookup"><span data-stu-id="f7aa9-108">Requirements</span></span>  
- <span data-ttu-id="f7aa9-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f7aa9-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7c73c-108">需求</span><span class="sxs-lookup"><span data-stu-id="7c73c-108">Requirements</span></span>  
+ <span data-ttu-id="7c73c-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7c73c-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f7aa9-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f7aa9-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7c73c-110">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="7c73c-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f7aa9-111">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f7aa9-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7c73c-111">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="7c73c-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f7aa9-112">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f7aa9-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7c73c-112">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7c73c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f7aa9-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="f7aa9-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7c73c-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7c73c-113">See also</span></span>
 
-- [<span data-ttu-id="f7aa9-114">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="f7aa9-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="f7aa9-115">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="f7aa9-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="7c73c-114">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="7c73c-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="7c73c-115">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="7c73c-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

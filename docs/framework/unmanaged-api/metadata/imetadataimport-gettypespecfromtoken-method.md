@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436700"
 ---
-# <a name="imetadataimportgettypespecfromtoken-method"></a><span data-ttu-id="c8898-102">IMetaDataImport::GetTypeSpecFromToken 方法</span><span class="sxs-lookup"><span data-stu-id="c8898-102">IMetaDataImport::GetTypeSpecFromToken Method</span></span>
-<span data-ttu-id="c8898-103">取得指定語彙基元所代表類型規格的二進位中繼資料簽章。</span><span class="sxs-lookup"><span data-stu-id="c8898-103">Gets the binary metadata signature of the type specification represented by the specified token.</span></span>  
+# <a name="imetadataimportgettypespecfromtoken-method"></a><span data-ttu-id="89766-102">IMetaDataImport::GetTypeSpecFromToken 方法</span><span class="sxs-lookup"><span data-stu-id="89766-102">IMetaDataImport::GetTypeSpecFromToken Method</span></span>
+<span data-ttu-id="89766-103">取得指定語彙基元所代表類型規格的二進位中繼資料簽章。</span><span class="sxs-lookup"><span data-stu-id="89766-103">Gets the binary metadata signature of the type specification represented by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c8898-104">語法</span><span class="sxs-lookup"><span data-stu-id="c8898-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="89766-104">語法</span><span class="sxs-lookup"><span data-stu-id="89766-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTypeSpecFromToken (   
@@ -35,29 +35,29 @@ HRESULT GetTypeSpecFromToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c8898-105">參數</span><span class="sxs-lookup"><span data-stu-id="c8898-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="89766-105">參數</span><span class="sxs-lookup"><span data-stu-id="89766-105">Parameters</span></span>  
  `typespec`  
- <span data-ttu-id="c8898-106">[in] The TypeSpec token associated with the requested metadata signature.</span><span class="sxs-lookup"><span data-stu-id="c8898-106">[in] The TypeSpec token associated with the requested metadata signature.</span></span>  
+ <span data-ttu-id="89766-106">在與所要求之中繼資料簽章相關聯的 TypeSpec token。</span><span class="sxs-lookup"><span data-stu-id="89766-106">[in] The TypeSpec token associated with the requested metadata signature.</span></span>  
   
  `ppvSig`  
- <span data-ttu-id="c8898-107">[out] A pointer to the binary metadata signature.</span><span class="sxs-lookup"><span data-stu-id="c8898-107">[out] A pointer to the binary metadata signature.</span></span>  
+ <span data-ttu-id="89766-107">脫銷二進位中繼資料簽章的指標。</span><span class="sxs-lookup"><span data-stu-id="89766-107">[out] A pointer to the binary metadata signature.</span></span>  
   
  `pcbSig`  
- <span data-ttu-id="c8898-108">[out] The size, in bytes, of the metadata signature.</span><span class="sxs-lookup"><span data-stu-id="c8898-108">[out] The size, in bytes, of the metadata signature.</span></span>  
+ <span data-ttu-id="89766-108">脫銷中繼資料簽章的大小（以位元組為單位）。</span><span class="sxs-lookup"><span data-stu-id="89766-108">[out] The size, in bytes, of the metadata signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c8898-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="c8898-109">Return Value</span></span>  
- <span data-ttu-id="c8898-110">An HRESULT that indicates success or failure.</span><span class="sxs-lookup"><span data-stu-id="c8898-110">An HRESULT that indicates success or failure.</span></span> <span data-ttu-id="c8898-111">Failures can be tested with the FAILED macro.</span><span class="sxs-lookup"><span data-stu-id="c8898-111">Failures can be tested with the FAILED macro.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="89766-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="89766-109">Return Value</span></span>  
+ <span data-ttu-id="89766-110">表示成功或失敗的 HRESULT。</span><span class="sxs-lookup"><span data-stu-id="89766-110">An HRESULT that indicates success or failure.</span></span> <span data-ttu-id="89766-111">您可以使用 FAILED 宏來測試失敗。</span><span class="sxs-lookup"><span data-stu-id="89766-111">Failures can be tested with the FAILED macro.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c8898-112">需求</span><span class="sxs-lookup"><span data-stu-id="c8898-112">Requirements</span></span>  
- <span data-ttu-id="c8898-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c8898-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="89766-112">需求</span><span class="sxs-lookup"><span data-stu-id="89766-112">Requirements</span></span>  
+ <span data-ttu-id="89766-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="89766-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c8898-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c8898-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="89766-114">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="89766-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c8898-115">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c8898-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="89766-115">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="89766-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c8898-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8898-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="89766-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89766-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c8898-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="c8898-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="89766-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="89766-117">See also</span></span>
 
-- [<span data-ttu-id="c8898-118">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="c8898-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="c8898-119">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="c8898-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="89766-118">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="89766-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="89766-119">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="89766-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426644"
 ---
-# <a name="imetadatatablesgetuserstringheapsize-method"></a><span data-ttu-id="caa52-102">IMetaDataTables::GetUserStringHeapSize 方法</span><span class="sxs-lookup"><span data-stu-id="caa52-102">IMetaDataTables::GetUserStringHeapSize Method</span></span>
-<span data-ttu-id="caa52-103">Gets the size, in bytes, of the user string heap.</span><span class="sxs-lookup"><span data-stu-id="caa52-103">Gets the size, in bytes, of the user string heap.</span></span>  
+# <a name="imetadatatablesgetuserstringheapsize-method"></a><span data-ttu-id="a511c-102">IMetaDataTables::GetUserStringHeapSize 方法</span><span class="sxs-lookup"><span data-stu-id="a511c-102">IMetaDataTables::GetUserStringHeapSize Method</span></span>
+<span data-ttu-id="a511c-103">取得使用者字串堆積的大小（以位元組為單位）。</span><span class="sxs-lookup"><span data-stu-id="a511c-103">Gets the size, in bytes, of the user string heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="caa52-104">語法</span><span class="sxs-lookup"><span data-stu-id="caa52-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a511c-104">語法</span><span class="sxs-lookup"><span data-stu-id="a511c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetUserStringHeapSize (  
@@ -33,20 +33,20 @@ HRESULT GetUserStringHeapSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="caa52-105">參數</span><span class="sxs-lookup"><span data-stu-id="caa52-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a511c-105">參數</span><span class="sxs-lookup"><span data-stu-id="a511c-105">Parameters</span></span>  
  `pcbBlobs`  
- <span data-ttu-id="caa52-106">[out] A pointer to the size, in bytes, of the user string heap.</span><span class="sxs-lookup"><span data-stu-id="caa52-106">[out] A pointer to the size, in bytes, of the user string heap.</span></span>  
+ <span data-ttu-id="a511c-106">脫銷使用者字串堆積大小的指標，以位元組為單位。</span><span class="sxs-lookup"><span data-stu-id="a511c-106">[out] A pointer to the size, in bytes, of the user string heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="caa52-107">需求</span><span class="sxs-lookup"><span data-stu-id="caa52-107">Requirements</span></span>  
- <span data-ttu-id="caa52-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="caa52-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a511c-107">需求</span><span class="sxs-lookup"><span data-stu-id="a511c-107">Requirements</span></span>  
+ <span data-ttu-id="a511c-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a511c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="caa52-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="caa52-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a511c-109">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="a511c-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="caa52-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="caa52-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a511c-110">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="a511c-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="caa52-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="caa52-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a511c-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a511c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="caa52-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="caa52-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a511c-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a511c-112">See also</span></span>
 
-- [<span data-ttu-id="caa52-113">IMetaDataTables 介面</span><span class="sxs-lookup"><span data-stu-id="caa52-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="caa52-114">IMetaDataTables2 介面</span><span class="sxs-lookup"><span data-stu-id="caa52-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="a511c-113">IMetaDataTables 介面</span><span class="sxs-lookup"><span data-stu-id="a511c-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="a511c-114">IMetaDataTables2 介面</span><span class="sxs-lookup"><span data-stu-id="a511c-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

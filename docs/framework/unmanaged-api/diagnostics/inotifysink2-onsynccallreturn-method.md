@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435963"
 ---
-# <a name="inotifysink2onsynccallreturn-method"></a><span data-ttu-id="5fa61-102">INotifySink2::OnSyncCallReturn 方法</span><span class="sxs-lookup"><span data-stu-id="5fa61-102">INotifySink2::OnSyncCallReturn Method</span></span>
-<span data-ttu-id="5fa61-103">Gets invoked when a call returns.</span><span class="sxs-lookup"><span data-stu-id="5fa61-103">Gets invoked when a call returns.</span></span>  
+# <a name="inotifysink2onsynccallreturn-method"></a><span data-ttu-id="7b781-102">INotifySink2::OnSyncCallReturn 方法</span><span class="sxs-lookup"><span data-stu-id="7b781-102">INotifySink2::OnSyncCallReturn Method</span></span>
+<span data-ttu-id="7b781-103">當呼叫傳回時，就會叫用。</span><span class="sxs-lookup"><span data-stu-id="7b781-103">Gets invoked when a call returns.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5fa61-104">語法</span><span class="sxs-lookup"><span data-stu-id="5fa61-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7b781-104">語法</span><span class="sxs-lookup"><span data-stu-id="7b781-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT OnSyncCallReturn  
@@ -36,24 +36,24 @@ HRESULT OnSyncCallReturn
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5fa61-105">參數</span><span class="sxs-lookup"><span data-stu-id="5fa61-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7b781-105">參數</span><span class="sxs-lookup"><span data-stu-id="7b781-105">Parameters</span></span>  
  `in_CallID`  
- <span data-ttu-id="5fa61-106">[in] ID of the call being returned from.</span><span class="sxs-lookup"><span data-stu-id="5fa61-106">[in] ID of the call being returned from.</span></span> <span data-ttu-id="5fa61-107">See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span><span class="sxs-lookup"><span data-stu-id="5fa61-107">See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span></span>  
+ <span data-ttu-id="7b781-106">在從傳回的呼叫識別碼。</span><span class="sxs-lookup"><span data-stu-id="7b781-106">[in] ID of the call being returned from.</span></span> <span data-ttu-id="7b781-107">請參閱[CALL_ID 結構](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)。</span><span class="sxs-lookup"><span data-stu-id="7b781-107">See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span></span>  
   
  `in_pBuffer`  
- <span data-ttu-id="5fa61-108">[in] Call buffer.</span><span class="sxs-lookup"><span data-stu-id="5fa61-108">[in] Call buffer.</span></span>  
+ <span data-ttu-id="7b781-108">在呼叫緩衝區。</span><span class="sxs-lookup"><span data-stu-id="7b781-108">[in] Call buffer.</span></span>  
   
  `in_BufferSize`  
- <span data-ttu-id="5fa61-109">[in] Size of the call buffer, in bytes.</span><span class="sxs-lookup"><span data-stu-id="5fa61-109">[in] Size of the call buffer, in bytes.</span></span>  
+ <span data-ttu-id="7b781-109">在呼叫緩衝區的大小，以位元組為單位。</span><span class="sxs-lookup"><span data-stu-id="7b781-109">[in] Size of the call buffer, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5fa61-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="5fa61-110">Return Value</span></span>  
- <span data-ttu-id="5fa61-111">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="5fa61-111">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7b781-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="7b781-110">Return Value</span></span>  
+ <span data-ttu-id="7b781-111">如果方法成功，則 S_OK。</span><span class="sxs-lookup"><span data-stu-id="7b781-111">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5fa61-112">需求</span><span class="sxs-lookup"><span data-stu-id="5fa61-112">Requirements</span></span>  
- <span data-ttu-id="5fa61-113">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="5fa61-113">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7b781-112">需求</span><span class="sxs-lookup"><span data-stu-id="7b781-112">Requirements</span></span>  
+ <span data-ttu-id="7b781-113">**標頭：** ProtocolNotify2 .idl</span><span class="sxs-lookup"><span data-stu-id="7b781-113">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5fa61-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="5fa61-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7b781-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7b781-114">See also</span></span>
 
-- [<span data-ttu-id="5fa61-115">INotifySink2 介面</span><span class="sxs-lookup"><span data-stu-id="5fa61-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="5fa61-116">INotifySource2 介面</span><span class="sxs-lookup"><span data-stu-id="5fa61-116">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="5fa61-117">INotifyConnection2 介面</span><span class="sxs-lookup"><span data-stu-id="5fa61-117">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="7b781-115">INotifySink2 介面</span><span class="sxs-lookup"><span data-stu-id="7b781-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="7b781-116">INotifySource2 介面</span><span class="sxs-lookup"><span data-stu-id="7b781-116">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="7b781-117">INotifyConnection2 介面</span><span class="sxs-lookup"><span data-stu-id="7b781-117">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

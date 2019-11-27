@@ -22,21 +22,21 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430710"
 ---
-# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="e1083-102">ISymUnmanagedDispose::Destroy 方法</span><span class="sxs-lookup"><span data-stu-id="e1083-102">ISymUnmanagedDispose::Destroy Method</span></span>
-<span data-ttu-id="e1083-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span><span class="sxs-lookup"><span data-stu-id="e1083-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
+# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="04084-102">ISymUnmanagedDispose::Destroy 方法</span><span class="sxs-lookup"><span data-stu-id="04084-102">ISymUnmanagedDispose::Destroy Method</span></span>
+<span data-ttu-id="04084-103">導致基礎物件釋放所有內部參考，並在任何後續的方法呼叫時傳回失敗。</span><span class="sxs-lookup"><span data-stu-id="04084-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e1083-104">語法</span><span class="sxs-lookup"><span data-stu-id="e1083-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="04084-104">語法</span><span class="sxs-lookup"><span data-stu-id="04084-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Destroy();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="e1083-105">傳回值</span><span class="sxs-lookup"><span data-stu-id="e1083-105">Return Value</span></span>  
- <span data-ttu-id="e1083-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="e1083-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="04084-105">傳回值</span><span class="sxs-lookup"><span data-stu-id="04084-105">Return Value</span></span>  
+ <span data-ttu-id="04084-106">如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="04084-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e1083-107">需求</span><span class="sxs-lookup"><span data-stu-id="e1083-107">Requirements</span></span>  
- <span data-ttu-id="e1083-108">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e1083-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="04084-107">需求</span><span class="sxs-lookup"><span data-stu-id="04084-107">Requirements</span></span>  
+ <span data-ttu-id="04084-108">**標頭：** CorSym .idl，CorSym。h</span><span class="sxs-lookup"><span data-stu-id="04084-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e1083-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="e1083-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="04084-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="04084-109">See also</span></span>
 
-- [<span data-ttu-id="e1083-110">ISymUnmanagedDispose 介面</span><span class="sxs-lookup"><span data-stu-id="e1083-110">ISymUnmanagedDispose Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)
+- [<span data-ttu-id="04084-110">ISymUnmanagedDispose 介面</span><span class="sxs-lookup"><span data-stu-id="04084-110">ISymUnmanagedDispose Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)

@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436257"
 ---
-# <a name="imetadataconvertergettypelibfrommetadata-method"></a><span data-ttu-id="38039-102">IMetaDataConverter::GetTypeLibFromMetaData 方法</span><span class="sxs-lookup"><span data-stu-id="38039-102">IMetaDataConverter::GetTypeLibFromMetaData Method</span></span>
-<span data-ttu-id="38039-103">Gets a pointer to an `ITypeLib` instance that represents the type library that has the specified library and module names.</span><span class="sxs-lookup"><span data-stu-id="38039-103">Gets a pointer to an `ITypeLib` instance that represents the type library that has the specified library and module names.</span></span>  
+# <a name="imetadataconvertergettypelibfrommetadata-method"></a><span data-ttu-id="c1d46-102">IMetaDataConverter::GetTypeLibFromMetaData 方法</span><span class="sxs-lookup"><span data-stu-id="c1d46-102">IMetaDataConverter::GetTypeLibFromMetaData Method</span></span>
+<span data-ttu-id="c1d46-103">取得 `ITypeLib` 實例的指標，表示具有指定之程式庫和模組名稱的類型程式庫。</span><span class="sxs-lookup"><span data-stu-id="c1d46-103">Gets a pointer to an `ITypeLib` instance that represents the type library that has the specified library and module names.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38039-104">語法</span><span class="sxs-lookup"><span data-stu-id="38039-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c1d46-104">語法</span><span class="sxs-lookup"><span data-stu-id="c1d46-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTypeLibFromMetaData (  
@@ -35,25 +35,25 @@ HRESULT GetTypeLibFromMetaData (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="38039-105">參數</span><span class="sxs-lookup"><span data-stu-id="38039-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c1d46-105">參數</span><span class="sxs-lookup"><span data-stu-id="c1d46-105">Parameters</span></span>  
  `strModule`  
- <span data-ttu-id="38039-106">[in] The name of the type library's module.</span><span class="sxs-lookup"><span data-stu-id="38039-106">[in] The name of the type library's module.</span></span>  
+ <span data-ttu-id="c1d46-106">在型別程式庫模組的名稱。</span><span class="sxs-lookup"><span data-stu-id="c1d46-106">[in] The name of the type library's module.</span></span>  
   
  `strTlbName`  
- <span data-ttu-id="38039-107">[in] The name of the type library.</span><span class="sxs-lookup"><span data-stu-id="38039-107">[in] The name of the type library.</span></span>  
+ <span data-ttu-id="c1d46-107">在類型程式庫的名稱。</span><span class="sxs-lookup"><span data-stu-id="c1d46-107">[in] The name of the type library.</span></span>  
   
  `ppITL`  
- <span data-ttu-id="38039-108">[out] A pointer to a location that receives the address of the `ITypeLib` instance that represents the type library.</span><span class="sxs-lookup"><span data-stu-id="38039-108">[out] A pointer to a location that receives the address of the `ITypeLib` instance that represents the type library.</span></span>  
+ <span data-ttu-id="c1d46-108">脫銷位置的指標，接收代表類型程式庫之 `ITypeLib` 實例的位址。</span><span class="sxs-lookup"><span data-stu-id="c1d46-108">[out] A pointer to a location that receives the address of the `ITypeLib` instance that represents the type library.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="38039-109">需求</span><span class="sxs-lookup"><span data-stu-id="38039-109">Requirements</span></span>  
- <span data-ttu-id="38039-110">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="38039-110">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c1d46-109">需求</span><span class="sxs-lookup"><span data-stu-id="c1d46-109">Requirements</span></span>  
+ <span data-ttu-id="c1d46-110">**平臺：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c1d46-110">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="38039-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="38039-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c1d46-111">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="c1d46-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="38039-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="38039-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c1d46-112">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="c1d46-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="38039-113">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38039-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c1d46-113">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c1d46-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38039-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="38039-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c1d46-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c1d46-114">See also</span></span>
 
-- [<span data-ttu-id="38039-115">IMetaDataConverter 介面</span><span class="sxs-lookup"><span data-stu-id="38039-115">IMetaDataConverter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)
+- [<span data-ttu-id="c1d46-115">IMetaDataConverter 介面</span><span class="sxs-lookup"><span data-stu-id="c1d46-115">IMetaDataConverter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)

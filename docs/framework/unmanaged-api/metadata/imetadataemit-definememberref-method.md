@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431827"
 ---
-# <a name="imetadataemitdefinememberref-method"></a><span data-ttu-id="605ed-102">IMetaDataEmit::DefineMemberRef 方法</span><span class="sxs-lookup"><span data-stu-id="605ed-102">IMetaDataEmit::DefineMemberRef Method</span></span>
-<span data-ttu-id="605ed-103">Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.</span><span class="sxs-lookup"><span data-stu-id="605ed-103">Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.</span></span>  
+# <a name="imetadataemitdefinememberref-method"></a><span data-ttu-id="ab324-102">IMetaDataEmit::DefineMemberRef 方法</span><span class="sxs-lookup"><span data-stu-id="ab324-102">IMetaDataEmit::DefineMemberRef Method</span></span>
+<span data-ttu-id="ab324-103">定義對目前範圍外之模組成員的參考，並取得該參考定義的 token。</span><span class="sxs-lookup"><span data-stu-id="ab324-103">Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="605ed-104">語法</span><span class="sxs-lookup"><span data-stu-id="605ed-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab324-104">語法</span><span class="sxs-lookup"><span data-stu-id="ab324-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineMemberRef (   
@@ -37,32 +37,32 @@ HRESULT DefineMemberRef (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="605ed-105">參數</span><span class="sxs-lookup"><span data-stu-id="605ed-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ab324-105">參數</span><span class="sxs-lookup"><span data-stu-id="ab324-105">Parameters</span></span>  
  `tkImport`  
- <span data-ttu-id="605ed-106">[in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.</span><span class="sxs-lookup"><span data-stu-id="605ed-106">[in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.</span></span>  
+ <span data-ttu-id="ab324-106">在如果成員不是全域，則為目標成員的類別或介面的 Token;如果成員為全域，則為該其他檔案的 `mdModuleRef` token。</span><span class="sxs-lookup"><span data-stu-id="ab324-106">[in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.</span></span>  
   
  `szName`  
- <span data-ttu-id="605ed-107">[in] The name of the target member.</span><span class="sxs-lookup"><span data-stu-id="605ed-107">[in] The name of the target member.</span></span>  
+ <span data-ttu-id="ab324-107">在目標成員的名稱。</span><span class="sxs-lookup"><span data-stu-id="ab324-107">[in] The name of the target member.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="605ed-108">[in] The signature of the target member.</span><span class="sxs-lookup"><span data-stu-id="605ed-108">[in] The signature of the target member.</span></span>  
+ <span data-ttu-id="ab324-108">在目標成員的簽章。</span><span class="sxs-lookup"><span data-stu-id="ab324-108">[in] The signature of the target member.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="605ed-109">[in] The count of bytes in `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="605ed-109">[in] The count of bytes in `pvSigBlob`.</span></span>  
+ <span data-ttu-id="ab324-109">在`pvSigBlob`中的位元組計數。</span><span class="sxs-lookup"><span data-stu-id="ab324-109">[in] The count of bytes in `pvSigBlob`.</span></span>  
   
  `pmr`  
- <span data-ttu-id="605ed-110">[out] The `mdMemberRef` token assigned.</span><span class="sxs-lookup"><span data-stu-id="605ed-110">[out] The `mdMemberRef` token assigned.</span></span>  
+ <span data-ttu-id="ab324-110">脫銷指派的 `mdMemberRef` token。</span><span class="sxs-lookup"><span data-stu-id="ab324-110">[out] The `mdMemberRef` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="605ed-111">需求</span><span class="sxs-lookup"><span data-stu-id="605ed-111">Requirements</span></span>  
- <span data-ttu-id="605ed-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="605ed-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ab324-111">需求</span><span class="sxs-lookup"><span data-stu-id="ab324-111">Requirements</span></span>  
+ <span data-ttu-id="ab324-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ab324-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="605ed-113">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="605ed-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ab324-113">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="ab324-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="605ed-114">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="605ed-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ab324-114">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="ab324-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="605ed-115">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="605ed-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ab324-115">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab324-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="605ed-116">請參閱</span><span class="sxs-lookup"><span data-stu-id="605ed-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab324-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ab324-116">See also</span></span>
 
-- [<span data-ttu-id="605ed-117">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="605ed-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="605ed-118">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="605ed-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="ab324-117">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="ab324-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="ab324-118">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="ab324-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -11,19 +11,19 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344088"
 ---
-# <a name="mycomputerclock-object"></a><span data-ttu-id="19be5-102">My.Computer.Clock 物件</span><span class="sxs-lookup"><span data-stu-id="19be5-102">My.Computer.Clock Object</span></span>
-<span data-ttu-id="19be5-103">提供屬性，以從系統時鐘存取目前當地時間與國際標準時間 (相當於格林威治標準時間)。</span><span class="sxs-lookup"><span data-stu-id="19be5-103">Provides properties for accessing the current local time and Universal Coordinated Time (equivalent to Greenwich Mean Time) from the system clock.</span></span>  
+# <a name="mycomputerclock-object"></a><span data-ttu-id="37ca4-102">My.Computer.Clock 物件</span><span class="sxs-lookup"><span data-stu-id="37ca4-102">My.Computer.Clock Object</span></span>
+<span data-ttu-id="37ca4-103">提供屬性，以從系統時鐘存取目前當地時間與國際標準時間 (相當於格林威治標準時間)。</span><span class="sxs-lookup"><span data-stu-id="37ca4-103">Provides properties for accessing the current local time and Universal Coordinated Time (equivalent to Greenwich Mean Time) from the system clock.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="19be5-104">備註</span><span class="sxs-lookup"><span data-stu-id="19be5-104">Remarks</span></span>  
- <span data-ttu-id="19be5-105">如需方法和 `My.Computer.Clock` 物件屬性的資訊，請參閱 <xref:Microsoft.VisualBasic.Devices.Clock>。</span><span class="sxs-lookup"><span data-stu-id="19be5-105">For information about the methods and properties of the `My.Computer.Clock` object, see <xref:Microsoft.VisualBasic.Devices.Clock>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="37ca4-104">備註</span><span class="sxs-lookup"><span data-stu-id="37ca4-104">Remarks</span></span>  
+ <span data-ttu-id="37ca4-105">如需方法和 `My.Computer.Clock` 物件屬性的資訊，請參閱 <xref:Microsoft.VisualBasic.Devices.Clock>。</span><span class="sxs-lookup"><span data-stu-id="37ca4-105">For information about the methods and properties of the `My.Computer.Clock` object, see <xref:Microsoft.VisualBasic.Devices.Clock>.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="19be5-106">需求</span><span class="sxs-lookup"><span data-stu-id="19be5-106">Requirements</span></span>  
- <span data-ttu-id="19be5-107">**命名空間︰** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="19be5-107">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="37ca4-106">需求</span><span class="sxs-lookup"><span data-stu-id="37ca4-106">Requirements</span></span>  
+ <span data-ttu-id="37ca4-107">**命名空間︰** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="37ca4-107">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
   
- <span data-ttu-id="19be5-108">**類別︰** <xref:Microsoft.VisualBasic.Devices.Clock></span><span class="sxs-lookup"><span data-stu-id="19be5-108">**Class:** <xref:Microsoft.VisualBasic.Devices.Clock></span></span>  
+ <span data-ttu-id="37ca4-108">**類別︰** <xref:Microsoft.VisualBasic.Devices.Clock></span><span class="sxs-lookup"><span data-stu-id="37ca4-108">**Class:** <xref:Microsoft.VisualBasic.Devices.Clock></span></span>  
   
- <span data-ttu-id="19be5-109">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="19be5-109">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="37ca4-109">**元件：** Visual Basic 執行時間程式庫（在 Microsoft 中）</span><span class="sxs-lookup"><span data-stu-id="37ca4-109">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="19be5-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="19be5-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="37ca4-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="37ca4-110">See also</span></span>
 
-- [<span data-ttu-id="19be5-111">My.Computer 物件</span><span class="sxs-lookup"><span data-stu-id="19be5-111">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+- [<span data-ttu-id="37ca4-111">My.Computer 物件</span><span class="sxs-lookup"><span data-stu-id="37ca4-111">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

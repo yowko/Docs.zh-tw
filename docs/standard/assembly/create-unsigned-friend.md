@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create unsigned friend assemblies'
+title: 如何：建立未簽署的 friend 元件
 ms.date: 08/19/2019
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
 dev_langs:
@@ -12,15 +12,15 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352441"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies"></a><span data-ttu-id="e2f98-102">How to: Create unsigned friend assemblies</span><span class="sxs-lookup"><span data-stu-id="e2f98-102">How to: Create unsigned friend assemblies</span></span>
+# <a name="how-to-create-unsigned-friend-assemblies"></a><span data-ttu-id="4f019-102">如何：建立未簽署的 friend 元件</span><span class="sxs-lookup"><span data-stu-id="4f019-102">How to: Create unsigned friend assemblies</span></span>
 
-<span data-ttu-id="e2f98-103">此範例示範如何搭配未簽署的組件使用 friend 組件。</span><span class="sxs-lookup"><span data-stu-id="e2f98-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>
+<span data-ttu-id="4f019-103">此範例示範如何搭配未簽署的組件使用 friend 組件。</span><span class="sxs-lookup"><span data-stu-id="4f019-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>
 
-## <a name="create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="e2f98-104">Create an assembly and a friend assembly</span><span class="sxs-lookup"><span data-stu-id="e2f98-104">Create an assembly and a friend assembly</span></span>
+## <a name="create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="4f019-104">建立元件和 friend 元件</span><span class="sxs-lookup"><span data-stu-id="4f019-104">Create an assembly and a friend assembly</span></span>
 
-1. <span data-ttu-id="e2f98-105">開啟命令提示字元。</span><span class="sxs-lookup"><span data-stu-id="e2f98-105">Open a command prompt.</span></span>
+1. <span data-ttu-id="4f019-105">開啟命令提示字元。</span><span class="sxs-lookup"><span data-stu-id="4f019-105">Open a command prompt.</span></span>
 
-2. <span data-ttu-id="e2f98-106">Create a C# or Visual Basic file named *friend_unsigned_A* that contains the following code.</span><span class="sxs-lookup"><span data-stu-id="e2f98-106">Create a C# or Visual Basic file named *friend_unsigned_A* that contains the following code.</span></span> <span data-ttu-id="e2f98-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare *friend_unsigned_B* as a friend assembly.</span><span class="sxs-lookup"><span data-stu-id="e2f98-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare *friend_unsigned_B* as a friend assembly.</span></span>
+2. <span data-ttu-id="4f019-106">建立名C#為*friend_unsigned_A*的或 Visual Basic 檔案，其中包含下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="4f019-106">Create a C# or Visual Basic file named *friend_unsigned_A* that contains the following code.</span></span> <span data-ttu-id="4f019-107">程式碼會使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性，將*friend_unsigned_B*宣告為 friend 元件。</span><span class="sxs-lookup"><span data-stu-id="4f019-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare *friend_unsigned_B* as a friend assembly.</span></span>
 
    ```csharp
    // friend_unsigned_A.cs
@@ -73,7 +73,7 @@ ms.locfileid: "74352441"
    End Class
    ```
 
-3. <span data-ttu-id="e2f98-108">Compile and sign *friend_unsigned_A* by using the following command:</span><span class="sxs-lookup"><span data-stu-id="e2f98-108">Compile and sign *friend_unsigned_A* by using the following command:</span></span>
+3. <span data-ttu-id="4f019-108">使用下列命令來編譯和簽署*friend_unsigned_A* ：</span><span class="sxs-lookup"><span data-stu-id="4f019-108">Compile and sign *friend_unsigned_A* by using the following command:</span></span>
 
    ```csharp
    csc /target:library friend_unsigned_A.cs
@@ -83,7 +83,7 @@ ms.locfileid: "74352441"
    vbc -target:library friend_unsigned_A.vb
    ```
 
-4. <span data-ttu-id="e2f98-109">Create a C# or Visual Basic file named *friend_unsigned_B* that contains the following code.</span><span class="sxs-lookup"><span data-stu-id="e2f98-109">Create a C# or Visual Basic file named *friend_unsigned_B* that contains the following code.</span></span> <span data-ttu-id="e2f98-110">Because *friend_unsigned_A* specifies *friend_unsigned_B* as a friend assembly, the code in *friend_unsigned_B* can access `internal` (C#) or `Friend` (Visual Basic) types and members from *friend_unsigned_A*.</span><span class="sxs-lookup"><span data-stu-id="e2f98-110">Because *friend_unsigned_A* specifies *friend_unsigned_B* as a friend assembly, the code in *friend_unsigned_B* can access `internal` (C#) or `Friend` (Visual Basic) types and members from *friend_unsigned_A*.</span></span>
+4. <span data-ttu-id="4f019-109">建立名C#為*friend_unsigned_B*的或 Visual Basic 檔案，其中包含下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="4f019-109">Create a C# or Visual Basic file named *friend_unsigned_B* that contains the following code.</span></span> <span data-ttu-id="4f019-110">由於*friend_unsigned_A*會將*friend_unsigned_B*指定為 friend 元件，因此*friend_unsigned_B*中的程式碼可以C#從 *`Friend`* 存取 `internal` （）或 Visual Basic （friend_unsigned_A）類型和成員。</span><span class="sxs-lookup"><span data-stu-id="4f019-110">Because *friend_unsigned_A* specifies *friend_unsigned_B* as a friend assembly, the code in *friend_unsigned_B* can access `internal` (C#) or `Friend` (Visual Basic) types and members from *friend_unsigned_A*.</span></span>
 
    ```csharp
    // friend_unsigned_B.cs
@@ -125,7 +125,7 @@ ms.locfileid: "74352441"
    End Module
    ```
 
-5. <span data-ttu-id="e2f98-111">Compile *friend_unsigned_B* by using the following command.</span><span class="sxs-lookup"><span data-stu-id="e2f98-111">Compile *friend_unsigned_B* by using the following command.</span></span>
+5. <span data-ttu-id="4f019-111">使用下列命令來編譯*friend_unsigned_B* 。</span><span class="sxs-lookup"><span data-stu-id="4f019-111">Compile *friend_unsigned_B* by using the following command.</span></span>
 
    ```csharp
    csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs
@@ -135,21 +135,21 @@ ms.locfileid: "74352441"
    vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb
    ```
 
-   <span data-ttu-id="e2f98-112">編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。</span><span class="sxs-lookup"><span data-stu-id="e2f98-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="e2f98-113">You must explicitly specify the name of the output assembly ( *.exe* or *.dll*) by using the `-out` compiler option.</span><span class="sxs-lookup"><span data-stu-id="e2f98-113">You must explicitly specify the name of the output assembly (*.exe* or *.dll*) by using the `-out` compiler option.</span></span> <span data-ttu-id="e2f98-114">For more information, see [-out (C# compiler options)](../../csharp/language-reference/compiler-options/out-compiler-option.md) or [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)..</span><span class="sxs-lookup"><span data-stu-id="e2f98-114">For more information, see [-out (C# compiler options)](../../csharp/language-reference/compiler-options/out-compiler-option.md) or [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)..</span></span>
+   <span data-ttu-id="4f019-112">編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。</span><span class="sxs-lookup"><span data-stu-id="4f019-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="4f019-113">您必須使用 `-out` 編譯器選項，明確指定輸出元件（ *.exe*或 *.dll*）的名稱。</span><span class="sxs-lookup"><span data-stu-id="4f019-113">You must explicitly specify the name of the output assembly (*.exe* or *.dll*) by using the `-out` compiler option.</span></span> <span data-ttu-id="4f019-114">如需詳細資訊，請參閱[-C# out （編譯器選項）](../../csharp/language-reference/compiler-options/out-compiler-option.md)或[-out （Visual Basic）](../../visual-basic/reference/command-line-compiler/out.md)。</span><span class="sxs-lookup"><span data-stu-id="4f019-114">For more information, see [-out (C# compiler options)](../../csharp/language-reference/compiler-options/out-compiler-option.md) or [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)..</span></span>
 
-6. <span data-ttu-id="e2f98-115">Run the *friend_unsigned_B.exe* file.</span><span class="sxs-lookup"><span data-stu-id="e2f98-115">Run the *friend_unsigned_B.exe* file.</span></span>
+6. <span data-ttu-id="4f019-115">執行*friend_unsigned_B .exe*檔案。</span><span class="sxs-lookup"><span data-stu-id="4f019-115">Run the *friend_unsigned_B.exe* file.</span></span>
 
-   <span data-ttu-id="e2f98-116">The program outputs two strings: **Class1.Test** and **Class2.Test**.</span><span class="sxs-lookup"><span data-stu-id="e2f98-116">The program outputs two strings: **Class1.Test** and **Class2.Test**.</span></span>
+   <span data-ttu-id="4f019-116">程式會輸出兩個字串： **Class1. test**和**Class2**。</span><span class="sxs-lookup"><span data-stu-id="4f019-116">The program outputs two strings: **Class1.Test** and **Class2.Test**.</span></span>
 
-## <a name="net-security"></a><span data-ttu-id="e2f98-117">.NET 安全性</span><span class="sxs-lookup"><span data-stu-id="e2f98-117">.NET security</span></span>
+## <a name="net-security"></a><span data-ttu-id="4f019-117">.NET 安全性</span><span class="sxs-lookup"><span data-stu-id="4f019-117">.NET security</span></span>
 
-<span data-ttu-id="e2f98-118"><xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。</span><span class="sxs-lookup"><span data-stu-id="e2f98-118">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="e2f98-119">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal`  or `Friend` (Visual Basic) types and members.</span><span class="sxs-lookup"><span data-stu-id="e2f98-119">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal`  or `Friend` (Visual Basic) types and members.</span></span>
+<span data-ttu-id="4f019-118"><xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。</span><span class="sxs-lookup"><span data-stu-id="4f019-118">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="4f019-119">主要差異在於 <xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全性許可權來執行特定的程式碼區段，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性則控制 `internal` 或 `Friend` （Visual Basic）類型和成員的可見度。</span><span class="sxs-lookup"><span data-stu-id="4f019-119">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal`  or `Friend` (Visual Basic) types and members.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e2f98-120">請參閱</span><span class="sxs-lookup"><span data-stu-id="e2f98-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4f019-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4f019-120">See also</span></span>
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [<span data-ttu-id="e2f98-121">.NET 中的組件</span><span class="sxs-lookup"><span data-stu-id="e2f98-121">Assemblies in .NET</span></span>](index.md)
-- [<span data-ttu-id="e2f98-122">Friend assemblies</span><span class="sxs-lookup"><span data-stu-id="e2f98-122">Friend assemblies</span></span>](friend.md)
-- [<span data-ttu-id="e2f98-123">How to: Create signed friend assemblies</span><span class="sxs-lookup"><span data-stu-id="e2f98-123">How to: Create signed friend assemblies</span></span>](create-signed-friend.md)
-- [<span data-ttu-id="e2f98-124">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="e2f98-124">C# programming guide</span></span>](../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="e2f98-125">Programming concepts (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2f98-125">Programming concepts (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/index.md)
+- [<span data-ttu-id="4f019-121">.NET 中的組件</span><span class="sxs-lookup"><span data-stu-id="4f019-121">Assemblies in .NET</span></span>](index.md)
+- [<span data-ttu-id="4f019-122">Friend 元件</span><span class="sxs-lookup"><span data-stu-id="4f019-122">Friend assemblies</span></span>](friend.md)
+- [<span data-ttu-id="4f019-123">如何：建立已簽署的 friend 元件</span><span class="sxs-lookup"><span data-stu-id="4f019-123">How to: Create signed friend assemblies</span></span>](create-signed-friend.md)
+- [<span data-ttu-id="4f019-124">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="4f019-124">C# programming guide</span></span>](../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="4f019-125">程式設計概念（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="4f019-125">Programming concepts (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/index.md)

@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437582"
 ---
-# <a name="imetadataimportgeteventprops-method"></a><span data-ttu-id="0374a-102">IMetaDataImport::GetEventProps 方法</span><span class="sxs-lookup"><span data-stu-id="0374a-102">IMetaDataImport::GetEventProps Method</span></span>
-<span data-ttu-id="0374a-103">Gets metadata information for the event represented by the specified event token, including the declaring type, the add and remove methods for delegates, and any flags and other associated data.</span><span class="sxs-lookup"><span data-stu-id="0374a-103">Gets metadata information for the event represented by the specified event token, including the declaring type, the add and remove methods for delegates, and any flags and other associated data.</span></span>  
+# <a name="imetadataimportgeteventprops-method"></a><span data-ttu-id="bf570-102">IMetaDataImport::GetEventProps 方法</span><span class="sxs-lookup"><span data-stu-id="bf570-102">IMetaDataImport::GetEventProps Method</span></span>
+<span data-ttu-id="bf570-103">取得指定的事件 token 所代表之事件的中繼資料資訊，包括宣告類型、委派的加入和移除方法，以及任何旗標和其他相關聯的資料。</span><span class="sxs-lookup"><span data-stu-id="bf570-103">Gets metadata information for the event represented by the specified event token, including the declaring type, the add and remove methods for delegates, and any flags and other associated data.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0374a-104">語法</span><span class="sxs-lookup"><span data-stu-id="0374a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bf570-104">語法</span><span class="sxs-lookup"><span data-stu-id="bf570-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetEventProps (  
@@ -45,53 +45,53 @@ HRESULT GetEventProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0374a-105">參數</span><span class="sxs-lookup"><span data-stu-id="0374a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bf570-105">參數</span><span class="sxs-lookup"><span data-stu-id="bf570-105">Parameters</span></span>  
  `ev`  
- <span data-ttu-id="0374a-106">[in] The event metadata token representing the event to get metadata for.</span><span class="sxs-lookup"><span data-stu-id="0374a-106">[in] The event metadata token representing the event to get metadata for.</span></span>  
+ <span data-ttu-id="bf570-106">在事件元資料標記，代表要取得中繼資料的事件。</span><span class="sxs-lookup"><span data-stu-id="bf570-106">[in] The event metadata token representing the event to get metadata for.</span></span>  
   
  `pClass`  
- <span data-ttu-id="0374a-107">[out] A pointer to the TypeDef token representing the class that declares the event.</span><span class="sxs-lookup"><span data-stu-id="0374a-107">[out] A pointer to the TypeDef token representing the class that declares the event.</span></span>  
+ <span data-ttu-id="bf570-107">脫銷TypeDef token 的指標，代表宣告事件的類別。</span><span class="sxs-lookup"><span data-stu-id="bf570-107">[out] A pointer to the TypeDef token representing the class that declares the event.</span></span>  
   
  `szEvent`  
- <span data-ttu-id="0374a-108">[out] The name of the event referenced by `ev`.</span><span class="sxs-lookup"><span data-stu-id="0374a-108">[out] The name of the event referenced by `ev`.</span></span>  
+ <span data-ttu-id="bf570-108">脫銷`ev`所參考的事件名稱。</span><span class="sxs-lookup"><span data-stu-id="bf570-108">[out] The name of the event referenced by `ev`.</span></span>  
   
  `pchEvent`  
- <span data-ttu-id="0374a-109">[in] The requested length in wide characters of `szEvent`.</span><span class="sxs-lookup"><span data-stu-id="0374a-109">[in] The requested length in wide characters of `szEvent`.</span></span>  
+ <span data-ttu-id="bf570-109">在要求的 `szEvent`長度（以寬字元為單位）。</span><span class="sxs-lookup"><span data-stu-id="bf570-109">[in] The requested length in wide characters of `szEvent`.</span></span>  
   
  `pdwEventFlags`  
- <span data-ttu-id="0374a-110">[out] The returned length in wide characters of `szEvent`.</span><span class="sxs-lookup"><span data-stu-id="0374a-110">[out] The returned length in wide characters of `szEvent`.</span></span>  
+ <span data-ttu-id="bf570-110">脫銷以 `szEvent`的寬字元傳回的長度。</span><span class="sxs-lookup"><span data-stu-id="bf570-110">[out] The returned length in wide characters of `szEvent`.</span></span>  
   
  `ptkEventType`  
- <span data-ttu-id="0374a-111">[out] A pointer to a TypeRef or TypeDef metadata token representing the <xref:System.Delegate> type of the event.</span><span class="sxs-lookup"><span data-stu-id="0374a-111">[out] A pointer to a TypeRef or TypeDef metadata token representing the <xref:System.Delegate> type of the event.</span></span>  
+ <span data-ttu-id="bf570-111">脫銷表示事件之 <xref:System.Delegate> 類型的 TypeRef 或 TypeDef 元資料標記的指標。</span><span class="sxs-lookup"><span data-stu-id="bf570-111">[out] A pointer to a TypeRef or TypeDef metadata token representing the <xref:System.Delegate> type of the event.</span></span>  
   
  `pmdAddOn`  
- <span data-ttu-id="0374a-112">[out] A pointer to the metadata token representing the method that adds handlers for the event.</span><span class="sxs-lookup"><span data-stu-id="0374a-112">[out] A pointer to the metadata token representing the method that adds handlers for the event.</span></span>  
+ <span data-ttu-id="bf570-112">脫銷元資料標記的指標，表示新增事件處理常式的方法。</span><span class="sxs-lookup"><span data-stu-id="bf570-112">[out] A pointer to the metadata token representing the method that adds handlers for the event.</span></span>  
   
  `pmdRemoveOn`  
- <span data-ttu-id="0374a-113">[out] A pointer to the metadata token representing the method that removes handlers for the event.</span><span class="sxs-lookup"><span data-stu-id="0374a-113">[out] A pointer to the metadata token representing the method that removes handlers for the event.</span></span>  
+ <span data-ttu-id="bf570-113">脫銷元資料標記的指標，表示移除事件處理常式的方法。</span><span class="sxs-lookup"><span data-stu-id="bf570-113">[out] A pointer to the metadata token representing the method that removes handlers for the event.</span></span>  
   
  `pmdFire`  
- <span data-ttu-id="0374a-114">[out] A pointer to the metadata token representing the method that raises the event.</span><span class="sxs-lookup"><span data-stu-id="0374a-114">[out] A pointer to the metadata token representing the method that raises the event.</span></span>  
+ <span data-ttu-id="bf570-114">脫銷元資料標記的指標，表示引發事件的方法。</span><span class="sxs-lookup"><span data-stu-id="bf570-114">[out] A pointer to the metadata token representing the method that raises the event.</span></span>  
   
  `rmdOtherMethod`  
- <span data-ttu-id="0374a-115">[out] An array of token pointers to other methods associated with the event.</span><span class="sxs-lookup"><span data-stu-id="0374a-115">[out] An array of token pointers to other methods associated with the event.</span></span>  
+ <span data-ttu-id="bf570-115">脫銷與事件相關聯之其他方法的 token 指標陣列。</span><span class="sxs-lookup"><span data-stu-id="bf570-115">[out] An array of token pointers to other methods associated with the event.</span></span>  
   
  `cMax`  
- <span data-ttu-id="0374a-116">[in] `rmdOtherMethod` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="0374a-116">[in] The maximum size of the `rmdOtherMethod` array.</span></span>  
+ <span data-ttu-id="bf570-116">[in] `rmdOtherMethod` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="bf570-116">[in] The maximum size of the `rmdOtherMethod` array.</span></span>  
   
  `pcOtherMethod`  
- <span data-ttu-id="0374a-117">[out] The number of tokens returned in `rmdOtherMethod`.</span><span class="sxs-lookup"><span data-stu-id="0374a-117">[out] The number of tokens returned in `rmdOtherMethod`.</span></span>  
+ <span data-ttu-id="bf570-117">脫銷`rmdOtherMethod`中傳回的權杖數目。</span><span class="sxs-lookup"><span data-stu-id="bf570-117">[out] The number of tokens returned in `rmdOtherMethod`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0374a-118">需求</span><span class="sxs-lookup"><span data-stu-id="0374a-118">Requirements</span></span>  
- <span data-ttu-id="0374a-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0374a-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bf570-118">需求</span><span class="sxs-lookup"><span data-stu-id="bf570-118">Requirements</span></span>  
+ <span data-ttu-id="bf570-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bf570-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0374a-120">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0374a-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="bf570-120">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="bf570-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="0374a-121">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0374a-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="bf570-121">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="bf570-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="0374a-122">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0374a-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="bf570-122">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bf570-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0374a-123">請參閱</span><span class="sxs-lookup"><span data-stu-id="0374a-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bf570-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bf570-123">See also</span></span>
 
-- [<span data-ttu-id="0374a-124">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="0374a-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="0374a-125">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="0374a-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="bf570-124">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="bf570-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="bf570-125">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="bf570-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

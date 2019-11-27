@@ -9,16 +9,16 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344490"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a><span data-ttu-id="997c3-102">How to: Parse a String (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="997c3-102">How to: Parse a String (Visual Basic)</span></span>
-<span data-ttu-id="997c3-103">This topic shows how to create an XML tree in C#.</span><span class="sxs-lookup"><span data-stu-id="997c3-103">This topic shows how to create an XML tree in C#.</span></span>  
+# <a name="how-to-parse-a-string-visual-basic"></a><span data-ttu-id="5b6c0-102">如何：剖析字串（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="5b6c0-102">How to: Parse a String (Visual Basic)</span></span>
+<span data-ttu-id="5b6c0-103">本主題說明如何在中C#建立 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="5b6c0-103">This topic shows how to create an XML tree in C#.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="997c3-104">範例</span><span class="sxs-lookup"><span data-stu-id="997c3-104">Example</span></span>  
- <span data-ttu-id="997c3-105">You can parse a string in Visual Basic by using the `XElement.Parse` method.</span><span class="sxs-lookup"><span data-stu-id="997c3-105">You can parse a string in Visual Basic by using the `XElement.Parse` method.</span></span> <span data-ttu-id="997c3-106">However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.</span><span class="sxs-lookup"><span data-stu-id="997c3-106">However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.</span></span>  
+## <a name="example"></a><span data-ttu-id="5b6c0-104">範例</span><span class="sxs-lookup"><span data-stu-id="5b6c0-104">Example</span></span>  
+ <span data-ttu-id="5b6c0-105">您可以使用 `XElement.Parse` 方法來剖析 Visual Basic 中的字串。</span><span class="sxs-lookup"><span data-stu-id="5b6c0-105">You can parse a string in Visual Basic by using the `XElement.Parse` method.</span></span> <span data-ttu-id="5b6c0-106">不過，使用 XML 常值會更有效率（如下列程式碼所示），因為 XML 常值在從字串剖析 XML 時，不會受到相同的效能損失。</span><span class="sxs-lookup"><span data-stu-id="5b6c0-106">However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.</span></span>  
   
- <span data-ttu-id="997c3-107">By using XML literals, you can just copy and paste your XML into your Visual Basic program.</span><span class="sxs-lookup"><span data-stu-id="997c3-107">By using XML literals, you can just copy and paste your XML into your Visual Basic program.</span></span>  
+ <span data-ttu-id="5b6c0-107">藉由使用 XML 常值，您可以直接將 XML 複製並貼到 Visual Basic 程式中。</span><span class="sxs-lookup"><span data-stu-id="5b6c0-107">By using XML literals, you can just copy and paste your XML into your Visual Basic program.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="997c3-108">從文字檔剖析文字或載入 XML 文件比功能結構沒有效率。</span><span class="sxs-lookup"><span data-stu-id="997c3-108">Parsing text or loading an XML document from a text file is less efficient than functional construction.</span></span> <span data-ttu-id="997c3-109">如果您要從程式碼初始化 XML 樹狀，使用功能結構比剖析文字所花的處理器時間少。</span><span class="sxs-lookup"><span data-stu-id="997c3-109">If you are initializing an XML tree from code, it takes less processor time to use functional construction than to parse text.</span></span>  
+> <span data-ttu-id="5b6c0-108">從文字檔剖析文字或載入 XML 文件比功能結構沒有效率。</span><span class="sxs-lookup"><span data-stu-id="5b6c0-108">Parsing text or loading an XML document from a text file is less efficient than functional construction.</span></span> <span data-ttu-id="5b6c0-109">如果您要從程式碼初始化 XML 樹狀，使用功能結構比剖析文字所花的處理器時間少。</span><span class="sxs-lookup"><span data-stu-id="5b6c0-109">If you are initializing an XML tree from code, it takes less processor time to use functional construction than to parse text.</span></span>  
   
 ```vb  
 Dim contacts as XElement = _  
@@ -49,6 +49,6 @@ Dim contacts as XElement = _
     </Contacts>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="997c3-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="997c3-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5b6c0-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5b6c0-110">See also</span></span>
 
-- [<span data-ttu-id="997c3-111">Parsing XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="997c3-111">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [<span data-ttu-id="5b6c0-111">剖析 XML （Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="5b6c0-111">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

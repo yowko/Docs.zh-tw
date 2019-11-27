@@ -22,12 +22,12 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436353"
 ---
-# <a name="iceegengenerateceememoryimage-method"></a><span data-ttu-id="a64e6-102">ICeeGen::GenerateCeeMemoryImage 方法</span><span class="sxs-lookup"><span data-stu-id="a64e6-102">ICeeGen::GenerateCeeMemoryImage Method</span></span>
-<span data-ttu-id="a64e6-103">Generates an image in memory for the code base.</span><span class="sxs-lookup"><span data-stu-id="a64e6-103">Generates an image in memory for the code base.</span></span>  
+# <a name="iceegengenerateceememoryimage-method"></a><span data-ttu-id="da5be-102">ICeeGen::GenerateCeeMemoryImage 方法</span><span class="sxs-lookup"><span data-stu-id="da5be-102">ICeeGen::GenerateCeeMemoryImage Method</span></span>
+<span data-ttu-id="da5be-103">在記憶體中產生程式碼基底的影像。</span><span class="sxs-lookup"><span data-stu-id="da5be-103">Generates an image in memory for the code base.</span></span>  
   
- <span data-ttu-id="a64e6-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="a64e6-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="da5be-104">這個方法已過時，不應使用。</span><span class="sxs-lookup"><span data-stu-id="da5be-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a64e6-105">語法</span><span class="sxs-lookup"><span data-stu-id="a64e6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="da5be-105">語法</span><span class="sxs-lookup"><span data-stu-id="da5be-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GenerateCeeMemoryImage (  
@@ -35,19 +35,19 @@ HRESULT GenerateCeeMemoryImage (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a64e6-106">參數</span><span class="sxs-lookup"><span data-stu-id="a64e6-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="da5be-106">參數</span><span class="sxs-lookup"><span data-stu-id="da5be-106">Parameters</span></span>  
  `ppImage`  
- <span data-ttu-id="a64e6-107">[out] A pointer to the generated image.</span><span class="sxs-lookup"><span data-stu-id="a64e6-107">[out] A pointer to the generated image.</span></span>  
+ <span data-ttu-id="da5be-107">脫銷產生之影像的指標。</span><span class="sxs-lookup"><span data-stu-id="da5be-107">[out] A pointer to the generated image.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a64e6-108">需求</span><span class="sxs-lookup"><span data-stu-id="a64e6-108">Requirements</span></span>  
- <span data-ttu-id="a64e6-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a64e6-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="da5be-108">需求</span><span class="sxs-lookup"><span data-stu-id="da5be-108">Requirements</span></span>  
+ <span data-ttu-id="da5be-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="da5be-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a64e6-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a64e6-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="da5be-110">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="da5be-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a64e6-111">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a64e6-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="da5be-111">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="da5be-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a64e6-112">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a64e6-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="da5be-112">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="da5be-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a64e6-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="a64e6-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="da5be-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="da5be-113">See also</span></span>
 
-- [<span data-ttu-id="a64e6-114">ICeeGen 介面</span><span class="sxs-lookup"><span data-stu-id="a64e6-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="da5be-114">ICeeGen 介面</span><span class="sxs-lookup"><span data-stu-id="da5be-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

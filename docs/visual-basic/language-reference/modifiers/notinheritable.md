@@ -22,18 +22,18 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351456"
 ---
-# <a name="notinheritable-visual-basic"></a><span data-ttu-id="0be65-102">NotInheritable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0be65-102">NotInheritable (Visual Basic)</span></span>
-<span data-ttu-id="0be65-103">Specifies that a class cannot be used as a base class.</span><span class="sxs-lookup"><span data-stu-id="0be65-103">Specifies that a class cannot be used as a base class.</span></span>  
+# <a name="notinheritable-visual-basic"></a><span data-ttu-id="9ba9d-102">NotInheritable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9ba9d-102">NotInheritable (Visual Basic)</span></span>
+<span data-ttu-id="9ba9d-103">指定類別不能當做基類使用。</span><span class="sxs-lookup"><span data-stu-id="9ba9d-103">Specifies that a class cannot be used as a base class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0be65-104">備註</span><span class="sxs-lookup"><span data-stu-id="0be65-104">Remarks</span></span>  
- <span data-ttu-id="0be65-105">**Alternate Terms**.</span><span class="sxs-lookup"><span data-stu-id="0be65-105">**Alternate Terms**.</span></span> <span data-ttu-id="0be65-106">A class that cannot be inherited is sometimes called a *sealed* class.</span><span class="sxs-lookup"><span data-stu-id="0be65-106">A class that cannot be inherited is sometimes called a *sealed* class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9ba9d-104">備註</span><span class="sxs-lookup"><span data-stu-id="9ba9d-104">Remarks</span></span>  
+ <span data-ttu-id="9ba9d-105">**替代詞彙**。</span><span class="sxs-lookup"><span data-stu-id="9ba9d-105">**Alternate Terms**.</span></span> <span data-ttu-id="9ba9d-106">無法繼承的類別有時稱為*密封*的類別。</span><span class="sxs-lookup"><span data-stu-id="9ba9d-106">A class that cannot be inherited is sometimes called a *sealed* class.</span></span>  
   
- <span data-ttu-id="0be65-107">The `NotInheritable` modifier can be used in this context:</span><span class="sxs-lookup"><span data-stu-id="0be65-107">The `NotInheritable` modifier can be used in this context:</span></span>  
+ <span data-ttu-id="9ba9d-107">`NotInheritable` 修飾詞可以在此內容中使用：</span><span class="sxs-lookup"><span data-stu-id="9ba9d-107">The `NotInheritable` modifier can be used in this context:</span></span>  
   
- [<span data-ttu-id="0be65-108">Class 陳述式</span><span class="sxs-lookup"><span data-stu-id="0be65-108">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="9ba9d-108">Class 陳述式</span><span class="sxs-lookup"><span data-stu-id="9ba9d-108">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="0be65-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="0be65-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9ba9d-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9ba9d-109">See also</span></span>
 
-- [<span data-ttu-id="0be65-110">Inherits 陳述式</span><span class="sxs-lookup"><span data-stu-id="0be65-110">Inherits Statement</span></span>](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [<span data-ttu-id="0be65-111">MustInherit</span><span class="sxs-lookup"><span data-stu-id="0be65-111">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)
-- [<span data-ttu-id="0be65-112">關鍵字</span><span class="sxs-lookup"><span data-stu-id="0be65-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="9ba9d-110">Inherits 陳述式</span><span class="sxs-lookup"><span data-stu-id="9ba9d-110">Inherits Statement</span></span>](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [<span data-ttu-id="9ba9d-111">MustInherit</span><span class="sxs-lookup"><span data-stu-id="9ba9d-111">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [<span data-ttu-id="9ba9d-112">關鍵字</span><span class="sxs-lookup"><span data-stu-id="9ba9d-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
