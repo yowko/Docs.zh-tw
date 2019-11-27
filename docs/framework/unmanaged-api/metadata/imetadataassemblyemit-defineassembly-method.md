@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432116"
 ---
-# <a name="imetadataassemblyemitdefineassembly-method"></a><span data-ttu-id="20915-102">IMetaDataAssemblyEmit::DefineAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="20915-102">IMetaDataAssemblyEmit::DefineAssembly Method</span></span>
-<span data-ttu-id="20915-103">Creates an `Assembly` structure containing metadata for the specified assembly and returns the associated metadata token.</span><span class="sxs-lookup"><span data-stu-id="20915-103">Creates an `Assembly` structure containing metadata for the specified assembly and returns the associated metadata token.</span></span>  
+# <a name="imetadataassemblyemitdefineassembly-method"></a><span data-ttu-id="c316f-102">IMetaDataAssemblyEmit::DefineAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="c316f-102">IMetaDataAssemblyEmit::DefineAssembly Method</span></span>
+<span data-ttu-id="c316f-103">建立 `Assembly` 結構，其中包含指定元件的中繼資料，並傳回相關聯的元資料標記。</span><span class="sxs-lookup"><span data-stu-id="c316f-103">Creates an `Assembly` structure containing metadata for the specified assembly and returns the associated metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="20915-104">語法</span><span class="sxs-lookup"><span data-stu-id="20915-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c316f-104">語法</span><span class="sxs-lookup"><span data-stu-id="c316f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineAssembly (  
@@ -39,40 +39,40 @@ HRESULT DefineAssembly (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="20915-105">參數</span><span class="sxs-lookup"><span data-stu-id="20915-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c316f-105">參數</span><span class="sxs-lookup"><span data-stu-id="c316f-105">Parameters</span></span>  
  `pbPublicKey`  
- <span data-ttu-id="20915-106">[in] The public key that identifies the publisher of the assembly, or NULL if the assembly is not strongly named.</span><span class="sxs-lookup"><span data-stu-id="20915-106">[in] The public key that identifies the publisher of the assembly, or NULL if the assembly is not strongly named.</span></span>  
+ <span data-ttu-id="c316f-106">在識別元件發行者的公開金鑰; 如果元件不是強式名稱，則為 Null。</span><span class="sxs-lookup"><span data-stu-id="c316f-106">[in] The public key that identifies the publisher of the assembly, or NULL if the assembly is not strongly named.</span></span>  
   
  `cbPublicKey`  
- <span data-ttu-id="20915-107">[in] The size in bytes of `pbPublicKey`.</span><span class="sxs-lookup"><span data-stu-id="20915-107">[in] The size in bytes of `pbPublicKey`.</span></span>  
+ <span data-ttu-id="c316f-107">在`pbPublicKey`的大小（以位元組為單位）。</span><span class="sxs-lookup"><span data-stu-id="c316f-107">[in] The size in bytes of `pbPublicKey`.</span></span>  
   
  `uHashAlgId`  
- <span data-ttu-id="20915-108">[in] The identifier of the hashing algorithm to use to encrypt the files in the assembly, or NULL to specify the SHA-1 algorithm.</span><span class="sxs-lookup"><span data-stu-id="20915-108">[in] The identifier of the hashing algorithm to use to encrypt the files in the assembly, or NULL to specify the SHA-1 algorithm.</span></span>  
+ <span data-ttu-id="c316f-108">在要用來加密元件中之檔案的雜湊演算法識別碼，或為 Null 以指定 SHA-1 演算法。</span><span class="sxs-lookup"><span data-stu-id="c316f-108">[in] The identifier of the hashing algorithm to use to encrypt the files in the assembly, or NULL to specify the SHA-1 algorithm.</span></span>  
   
  `szName`  
- <span data-ttu-id="20915-109">[in] The human-readable text name of the assembly.</span><span class="sxs-lookup"><span data-stu-id="20915-109">[in] The human-readable text name of the assembly.</span></span> <span data-ttu-id="20915-110">This value must not exceed 1024 characters.</span><span class="sxs-lookup"><span data-stu-id="20915-110">This value must not exceed 1024 characters.</span></span>  
+ <span data-ttu-id="c316f-109">在元件的人類看得懂的文字名稱。</span><span class="sxs-lookup"><span data-stu-id="c316f-109">[in] The human-readable text name of the assembly.</span></span> <span data-ttu-id="c316f-110">此值不得超過1024個字元。</span><span class="sxs-lookup"><span data-stu-id="c316f-110">This value must not exceed 1024 characters.</span></span>  
   
  `pMetaData`  
- <span data-ttu-id="20915-111">[in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.</span><span class="sxs-lookup"><span data-stu-id="20915-111">[in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.</span></span>  
+ <span data-ttu-id="c316f-111">在ASSEMBLYMETADATA 實例的指標，其中包含元件的版本、平臺和地區設定資訊。</span><span class="sxs-lookup"><span data-stu-id="c316f-111">[in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.</span></span>  
   
  `dwAssemblyFlags`  
- <span data-ttu-id="20915-112">[in] A combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that describe features of the assembly.</span><span class="sxs-lookup"><span data-stu-id="20915-112">[in] A combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that describe features of the assembly.</span></span>  
+ <span data-ttu-id="c316f-112">在描述元件功能的[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)值組合。</span><span class="sxs-lookup"><span data-stu-id="c316f-112">[in] A combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that describe features of the assembly.</span></span>  
   
  `pmda`  
- <span data-ttu-id="20915-113">[out] A pointer to the metadata token.</span><span class="sxs-lookup"><span data-stu-id="20915-113">[out] A pointer to the metadata token.</span></span>  
+ <span data-ttu-id="c316f-113">脫銷元資料標記的指標。</span><span class="sxs-lookup"><span data-stu-id="c316f-113">[out] A pointer to the metadata token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="20915-114">備註</span><span class="sxs-lookup"><span data-stu-id="20915-114">Remarks</span></span>  
- <span data-ttu-id="20915-115">Only one `Assembly` metadata structure can be defined within a manifest.</span><span class="sxs-lookup"><span data-stu-id="20915-115">Only one `Assembly` metadata structure can be defined within a manifest.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c316f-114">備註</span><span class="sxs-lookup"><span data-stu-id="c316f-114">Remarks</span></span>  
+ <span data-ttu-id="c316f-115">資訊清單中只能定義一個 `Assembly` 元資料結構。</span><span class="sxs-lookup"><span data-stu-id="c316f-115">Only one `Assembly` metadata structure can be defined within a manifest.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="20915-116">需求</span><span class="sxs-lookup"><span data-stu-id="20915-116">Requirements</span></span>  
- <span data-ttu-id="20915-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="20915-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c316f-116">需求</span><span class="sxs-lookup"><span data-stu-id="c316f-116">Requirements</span></span>  
+ <span data-ttu-id="c316f-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c316f-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="20915-118">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="20915-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c316f-118">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="c316f-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="20915-119">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="20915-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c316f-119">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="c316f-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="20915-120">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20915-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c316f-120">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c316f-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="20915-121">請參閱</span><span class="sxs-lookup"><span data-stu-id="20915-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c316f-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c316f-121">See also</span></span>
 
-- [<span data-ttu-id="20915-122">IMetaDataAssemblyEmit 介面</span><span class="sxs-lookup"><span data-stu-id="20915-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="c316f-122">IMetaDataAssemblyEmit 介面</span><span class="sxs-lookup"><span data-stu-id="c316f-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

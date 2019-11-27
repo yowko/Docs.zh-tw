@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432448"
 ---
-# <a name="imetadataemitsetparent-method"></a><span data-ttu-id="b3db1-102">IMetaDataEmit::SetParent 方法</span><span class="sxs-lookup"><span data-stu-id="b3db1-102">IMetaDataEmit::SetParent Method</span></span>
-<span data-ttu-id="b3db1-103">Establishes that the specified member, as defined by a prior call to [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), is a member of the specified type, as defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span><span class="sxs-lookup"><span data-stu-id="b3db1-103">Establishes that the specified member, as defined by a prior call to [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), is a member of the specified type, as defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
+# <a name="imetadataemitsetparent-method"></a><span data-ttu-id="dd639-102">IMetaDataEmit::SetParent 方法</span><span class="sxs-lookup"><span data-stu-id="dd639-102">IMetaDataEmit::SetParent Method</span></span>
+<span data-ttu-id="dd639-103">建立指定的成員（如先前呼叫[IMetaDataEmit：:D efinememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)所定義）是指定類型的成員，如先前的[IMetaDataEmit：:D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)呼叫所定義。</span><span class="sxs-lookup"><span data-stu-id="dd639-103">Establishes that the specified member, as defined by a prior call to [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), is a member of the specified type, as defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b3db1-104">語法</span><span class="sxs-lookup"><span data-stu-id="b3db1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dd639-104">語法</span><span class="sxs-lookup"><span data-stu-id="dd639-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetParent (   
@@ -34,23 +34,23 @@ HRESULT SetParent (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b3db1-105">參數</span><span class="sxs-lookup"><span data-stu-id="b3db1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dd639-105">參數</span><span class="sxs-lookup"><span data-stu-id="dd639-105">Parameters</span></span>  
  `mr`  
- <span data-ttu-id="b3db1-106">[in] The `mdMemberRef` token to receive a new parent.</span><span class="sxs-lookup"><span data-stu-id="b3db1-106">[in] The `mdMemberRef` token to receive a new parent.</span></span>  
+ <span data-ttu-id="dd639-106">在要接收新父系的 `mdMemberRef` token。</span><span class="sxs-lookup"><span data-stu-id="dd639-106">[in] The `mdMemberRef` token to receive a new parent.</span></span>  
   
  `tk`  
- <span data-ttu-id="b3db1-107">[in] The `mdToken` for the new parent.</span><span class="sxs-lookup"><span data-stu-id="b3db1-107">[in] The `mdToken` for the new parent.</span></span>  
+ <span data-ttu-id="dd639-107">在新父系的 `mdToken`。</span><span class="sxs-lookup"><span data-stu-id="dd639-107">[in] The `mdToken` for the new parent.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b3db1-108">需求</span><span class="sxs-lookup"><span data-stu-id="b3db1-108">Requirements</span></span>  
- <span data-ttu-id="b3db1-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b3db1-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dd639-108">需求</span><span class="sxs-lookup"><span data-stu-id="dd639-108">Requirements</span></span>  
+ <span data-ttu-id="dd639-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dd639-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b3db1-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b3db1-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="dd639-110">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="dd639-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b3db1-111">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b3db1-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="dd639-111">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="dd639-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b3db1-112">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b3db1-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="dd639-112">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dd639-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b3db1-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="b3db1-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dd639-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dd639-113">See also</span></span>
 
-- [<span data-ttu-id="b3db1-114">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="b3db1-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="b3db1-115">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="b3db1-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="dd639-114">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="dd639-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="dd639-115">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="dd639-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

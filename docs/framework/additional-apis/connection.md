@@ -1,5 +1,5 @@
 ---
-title: Connection Class (System.Net)
+title: Connection 類別（System.Net）
 ms.date: 05/01/2017
 ms.technology: dotnet-networking
 topic_type:
@@ -20,25 +20,25 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429356"
 ---
-# <a name="connection-class"></a><span data-ttu-id="9ca9e-102">Connection 類別</span><span class="sxs-lookup"><span data-stu-id="9ca9e-102">Connection Class</span></span>
+# <a name="connection-class"></a><span data-ttu-id="fccde-102">Connection 類別</span><span class="sxs-lookup"><span data-stu-id="fccde-102">Connection Class</span></span>
 
-<span data-ttu-id="9ca9e-103">The `Connection` class parses server responses, queue requests, and pipeline requests.</span><span class="sxs-lookup"><span data-stu-id="9ca9e-103">The `Connection` class parses server responses, queue requests, and pipeline requests.</span></span>
+<span data-ttu-id="fccde-103">`Connection` 類別會剖析伺服器回應、佇列要求和管線要求。</span><span class="sxs-lookup"><span data-stu-id="fccde-103">The `Connection` class parses server responses, queue requests, and pipeline requests.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="9ca9e-104">語法</span><span class="sxs-lookup"><span data-stu-id="9ca9e-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="fccde-104">語法</span><span class="sxs-lookup"><span data-stu-id="fccde-104">Syntax</span></span>
   
 ```csharp  
 internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> <span data-ttu-id="9ca9e-105">The `Connection` class is internal and is not meant to be used directly in your code.</span><span class="sxs-lookup"><span data-stu-id="9ca9e-105">The `Connection` class is internal and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="fccde-105">`Connection` 類別是內部的，而且不適合直接在程式碼中使用。</span><span class="sxs-lookup"><span data-stu-id="fccde-105">The `Connection` class is internal and is not meant to be used directly in your code.</span></span>
 > 
-> <span data-ttu-id="9ca9e-106">Microsoft does not support the use of this class in a production application under any circumstance.</span><span class="sxs-lookup"><span data-stu-id="9ca9e-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
+> <span data-ttu-id="fccde-106">在任何情況下，Microsoft 不支援在生產應用程式中使用此類別。</span><span class="sxs-lookup"><span data-stu-id="fccde-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="9ca9e-107">需求</span><span class="sxs-lookup"><span data-stu-id="9ca9e-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="fccde-107">需求</span><span class="sxs-lookup"><span data-stu-id="fccde-107">Requirements</span></span>
 
-<span data-ttu-id="9ca9e-108">**命名空間︰** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="9ca9e-108">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="fccde-108">**命名空間︰** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="fccde-108">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="9ca9e-109">**Assembly:** System (in System.dll)</span><span class="sxs-lookup"><span data-stu-id="9ca9e-109">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="fccde-109">**元件：** 系統（在 System .dll 中）</span><span class="sxs-lookup"><span data-stu-id="fccde-109">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="9ca9e-110">**.NET Framework versions:** Available since 2.0.</span><span class="sxs-lookup"><span data-stu-id="9ca9e-110">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="fccde-110">**.NET Framework 版本：** 自2.0 開始提供。</span><span class="sxs-lookup"><span data-stu-id="fccde-110">**.NET Framework versions:** Available since 2.0.</span></span>
