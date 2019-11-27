@@ -22,32 +22,32 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448025"
 ---
-# <a name="icorprofilercallbackfunctionunloadstarted-method"></a><span data-ttu-id="e9a6e-102">ICorProfilerCallback::FunctionUnloadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="e9a6e-102">ICorProfilerCallback::FunctionUnloadStarted Method</span></span>
-<span data-ttu-id="e9a6e-103">Notifies the profiler that the runtime has started to unload a function.</span><span class="sxs-lookup"><span data-stu-id="e9a6e-103">Notifies the profiler that the runtime has started to unload a function.</span></span>  
+# <a name="icorprofilercallbackfunctionunloadstarted-method"></a><span data-ttu-id="b1d07-102">ICorProfilerCallback::FunctionUnloadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="b1d07-102">ICorProfilerCallback::FunctionUnloadStarted Method</span></span>
+<span data-ttu-id="b1d07-103">通知分析工具，執行時間已開始卸載函數。</span><span class="sxs-lookup"><span data-stu-id="b1d07-103">Notifies the profiler that the runtime has started to unload a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e9a6e-104">語法</span><span class="sxs-lookup"><span data-stu-id="e9a6e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b1d07-104">語法</span><span class="sxs-lookup"><span data-stu-id="b1d07-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT FunctionUnloadStarted(  
     [in] FunctionID functionId);   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e9a6e-105">參數</span><span class="sxs-lookup"><span data-stu-id="e9a6e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b1d07-105">參數</span><span class="sxs-lookup"><span data-stu-id="b1d07-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="e9a6e-106">[in] The ID of the function that is being unloaded.</span><span class="sxs-lookup"><span data-stu-id="e9a6e-106">[in] The ID of the function that is being unloaded.</span></span>  
+ <span data-ttu-id="b1d07-106">在要卸載之函式的識別碼。</span><span class="sxs-lookup"><span data-stu-id="b1d07-106">[in] The ID of the function that is being unloaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e9a6e-107">備註</span><span class="sxs-lookup"><span data-stu-id="e9a6e-107">Remarks</span></span>  
- <span data-ttu-id="e9a6e-108">The value of the `functionId` parameter is no longer valid after this method returns to the caller.</span><span class="sxs-lookup"><span data-stu-id="e9a6e-108">The value of the `functionId` parameter is no longer valid after this method returns to the caller.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b1d07-107">備註</span><span class="sxs-lookup"><span data-stu-id="b1d07-107">Remarks</span></span>  
+ <span data-ttu-id="b1d07-108">這個方法傳回給呼叫端之後，`functionId` 參數的值已不再有效。</span><span class="sxs-lookup"><span data-stu-id="b1d07-108">The value of the `functionId` parameter is no longer valid after this method returns to the caller.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e9a6e-109">需求</span><span class="sxs-lookup"><span data-stu-id="e9a6e-109">Requirements</span></span>  
- <span data-ttu-id="e9a6e-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e9a6e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b1d07-109">需求</span><span class="sxs-lookup"><span data-stu-id="b1d07-109">Requirements</span></span>  
+ <span data-ttu-id="b1d07-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b1d07-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e9a6e-111">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e9a6e-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b1d07-111">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b1d07-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e9a6e-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e9a6e-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b1d07-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b1d07-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e9a6e-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e9a6e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b1d07-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b1d07-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9a6e-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="e9a6e-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1d07-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b1d07-114">See also</span></span>
 
-- [<span data-ttu-id="e9a6e-115">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="e9a6e-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="b1d07-115">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="b1d07-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

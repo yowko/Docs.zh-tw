@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449041"
 ---
-# <a name="isymunmanageddocumentwritersetchecksum-method"></a><span data-ttu-id="795c4-102">ISymUnmanagedDocumentWriter::SetCheckSum 方法</span><span class="sxs-lookup"><span data-stu-id="795c4-102">ISymUnmanagedDocumentWriter::SetCheckSum Method</span></span>
-<span data-ttu-id="795c4-103">設定總和檢查碼資訊。</span><span class="sxs-lookup"><span data-stu-id="795c4-103">Sets checksum information.</span></span>  
+# <a name="isymunmanageddocumentwritersetchecksum-method"></a><span data-ttu-id="49f39-102">ISymUnmanagedDocumentWriter::SetCheckSum 方法</span><span class="sxs-lookup"><span data-stu-id="49f39-102">ISymUnmanagedDocumentWriter::SetCheckSum Method</span></span>
+<span data-ttu-id="49f39-103">設定總和檢查碼資訊。</span><span class="sxs-lookup"><span data-stu-id="49f39-103">Sets checksum information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="795c4-104">語法</span><span class="sxs-lookup"><span data-stu-id="795c4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="49f39-104">語法</span><span class="sxs-lookup"><span data-stu-id="49f39-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetCheckSum(  
@@ -34,22 +34,22 @@ HRESULT SetCheckSum(
     [in, size_is(checkSumSize)]  BYTE checkSum[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="795c4-105">參數</span><span class="sxs-lookup"><span data-stu-id="795c4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="49f39-105">參數</span><span class="sxs-lookup"><span data-stu-id="49f39-105">Parameters</span></span>  
  `algorithmId`  
- <span data-ttu-id="795c4-106">[in] The GUID that represents the algorithm identifier.</span><span class="sxs-lookup"><span data-stu-id="795c4-106">[in] The GUID that represents the algorithm identifier.</span></span>  
+ <span data-ttu-id="49f39-106">在表示演算法識別碼的 GUID。</span><span class="sxs-lookup"><span data-stu-id="49f39-106">[in] The GUID that represents the algorithm identifier.</span></span>  
   
  `checkSumSize`  
- <span data-ttu-id="795c4-107">[in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.</span><span class="sxs-lookup"><span data-stu-id="795c4-107">[in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.</span></span>  
+ <span data-ttu-id="49f39-107">在`ULONG32`，表示 `checkSum` 緩衝區的大小（以位元組為單位）。</span><span class="sxs-lookup"><span data-stu-id="49f39-107">[in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.</span></span>  
   
  `checkSum`  
- <span data-ttu-id="795c4-108">[in] The buffer that stores the checksum information.</span><span class="sxs-lookup"><span data-stu-id="795c4-108">[in] The buffer that stores the checksum information.</span></span>  
+ <span data-ttu-id="49f39-108">在儲存總和檢查碼資訊的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="49f39-108">[in] The buffer that stores the checksum information.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="795c4-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="795c4-109">Return Value</span></span>  
- <span data-ttu-id="795c4-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="795c4-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="49f39-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="49f39-109">Return Value</span></span>  
+ <span data-ttu-id="49f39-110">如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="49f39-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="795c4-111">需求</span><span class="sxs-lookup"><span data-stu-id="795c4-111">Requirements</span></span>  
- <span data-ttu-id="795c4-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="795c4-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="49f39-111">需求</span><span class="sxs-lookup"><span data-stu-id="49f39-111">Requirements</span></span>  
+ <span data-ttu-id="49f39-112">**標頭：** CorSym .idl，CorSym。h</span><span class="sxs-lookup"><span data-stu-id="49f39-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="795c4-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="795c4-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="49f39-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="49f39-113">See also</span></span>
 
-- [<span data-ttu-id="795c4-114">ISymUnmanagedDocumentWriter 介面</span><span class="sxs-lookup"><span data-stu-id="795c4-114">ISymUnmanagedDocumentWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+- [<span data-ttu-id="49f39-114">ISymUnmanagedDocumentWriter 介面</span><span class="sxs-lookup"><span data-stu-id="49f39-114">ISymUnmanagedDocumentWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

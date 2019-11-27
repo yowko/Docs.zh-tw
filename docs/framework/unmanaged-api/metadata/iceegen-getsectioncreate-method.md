@@ -22,12 +22,12 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448103"
 ---
-# <a name="iceegengetsectioncreate-method"></a><span data-ttu-id="f5143-102">ICeeGen::GetSectionCreate 方法</span><span class="sxs-lookup"><span data-stu-id="f5143-102">ICeeGen::GetSectionCreate Method</span></span>
-<span data-ttu-id="f5143-103">Generates and gets a code section using the specified name and flag values.</span><span class="sxs-lookup"><span data-stu-id="f5143-103">Generates and gets a code section using the specified name and flag values.</span></span>  
+# <a name="iceegengetsectioncreate-method"></a><span data-ttu-id="96e6b-102">ICeeGen::GetSectionCreate 方法</span><span class="sxs-lookup"><span data-stu-id="96e6b-102">ICeeGen::GetSectionCreate Method</span></span>
+<span data-ttu-id="96e6b-103">使用指定的名稱和旗標值，產生並取得程式碼區段。</span><span class="sxs-lookup"><span data-stu-id="96e6b-103">Generates and gets a code section using the specified name and flag values.</span></span>  
   
- <span data-ttu-id="f5143-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="f5143-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="96e6b-104">這個方法已過時，不應使用。</span><span class="sxs-lookup"><span data-stu-id="96e6b-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f5143-105">語法</span><span class="sxs-lookup"><span data-stu-id="f5143-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="96e6b-105">語法</span><span class="sxs-lookup"><span data-stu-id="96e6b-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSectionCreate (  
@@ -37,28 +37,28 @@ HRESULT GetSectionCreate (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f5143-106">參數</span><span class="sxs-lookup"><span data-stu-id="f5143-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="96e6b-106">參數</span><span class="sxs-lookup"><span data-stu-id="96e6b-106">Parameters</span></span>  
  `name`  
- <span data-ttu-id="f5143-107">[in] A pointer to a string that specifies the name of the section to be created.</span><span class="sxs-lookup"><span data-stu-id="f5143-107">[in] A pointer to a string that specifies the name of the section to be created.</span></span>  
+ <span data-ttu-id="96e6b-107">在字串的指標，指定要建立之區段的名稱。</span><span class="sxs-lookup"><span data-stu-id="96e6b-107">[in] A pointer to a string that specifies the name of the section to be created.</span></span>  
   
  `flags`  
- <span data-ttu-id="f5143-108">[in] Flags that specify options.</span><span class="sxs-lookup"><span data-stu-id="f5143-108">[in] Flags that specify options.</span></span>  
+ <span data-ttu-id="96e6b-108">在指定選項的旗標。</span><span class="sxs-lookup"><span data-stu-id="96e6b-108">[in] Flags that specify options.</span></span>  
   
  `section`  
- <span data-ttu-id="f5143-109">[out] A pointer to the newly created code section.</span><span class="sxs-lookup"><span data-stu-id="f5143-109">[out] A pointer to the newly created code section.</span></span>  
+ <span data-ttu-id="96e6b-109">脫銷新建立之程式碼區段的指標。</span><span class="sxs-lookup"><span data-stu-id="96e6b-109">[out] A pointer to the newly created code section.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f5143-110">備註</span><span class="sxs-lookup"><span data-stu-id="f5143-110">Remarks</span></span>  
- <span data-ttu-id="f5143-111">Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.</span><span class="sxs-lookup"><span data-stu-id="f5143-111">Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="96e6b-110">備註</span><span class="sxs-lookup"><span data-stu-id="96e6b-110">Remarks</span></span>  
+ <span data-ttu-id="96e6b-111">只有在您有其他方法未處理的特殊區段需求時，才呼叫 `GetSectionCreate`。</span><span class="sxs-lookup"><span data-stu-id="96e6b-111">Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f5143-112">需求</span><span class="sxs-lookup"><span data-stu-id="f5143-112">Requirements</span></span>  
- <span data-ttu-id="f5143-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f5143-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="96e6b-112">需求</span><span class="sxs-lookup"><span data-stu-id="96e6b-112">Requirements</span></span>  
+ <span data-ttu-id="96e6b-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="96e6b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f5143-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f5143-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="96e6b-114">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="96e6b-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f5143-115">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f5143-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="96e6b-115">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="96e6b-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f5143-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f5143-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="96e6b-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="96e6b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f5143-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="f5143-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96e6b-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="96e6b-117">See also</span></span>
 
-- [<span data-ttu-id="f5143-118">ICeeGen 介面</span><span class="sxs-lookup"><span data-stu-id="f5143-118">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="96e6b-118">ICeeGen 介面</span><span class="sxs-lookup"><span data-stu-id="96e6b-118">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

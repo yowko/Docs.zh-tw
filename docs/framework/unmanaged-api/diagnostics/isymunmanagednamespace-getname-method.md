@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433970"
 ---
-# <a name="isymunmanagednamespacegetname-method"></a><span data-ttu-id="37acd-102">ISymUnmanagedNamespace::GetName 方法</span><span class="sxs-lookup"><span data-stu-id="37acd-102">ISymUnmanagedNamespace::GetName Method</span></span>
-<span data-ttu-id="37acd-103">Gets the name of this namespace.</span><span class="sxs-lookup"><span data-stu-id="37acd-103">Gets the name of this namespace.</span></span>  
+# <a name="isymunmanagednamespacegetname-method"></a><span data-ttu-id="150b5-102">ISymUnmanagedNamespace::GetName 方法</span><span class="sxs-lookup"><span data-stu-id="150b5-102">ISymUnmanagedNamespace::GetName Method</span></span>
+<span data-ttu-id="150b5-103">取得這個命名空間的名稱。</span><span class="sxs-lookup"><span data-stu-id="150b5-103">Gets the name of this namespace.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37acd-104">語法</span><span class="sxs-lookup"><span data-stu-id="37acd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="150b5-104">語法</span><span class="sxs-lookup"><span data-stu-id="150b5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetName(  
@@ -35,22 +35,22 @@ HRESULT GetName(
         length_is(*pcchName)] WCHAR szName[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="37acd-105">參數</span><span class="sxs-lookup"><span data-stu-id="37acd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="150b5-105">參數</span><span class="sxs-lookup"><span data-stu-id="150b5-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="37acd-106">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span><span class="sxs-lookup"><span data-stu-id="37acd-106">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
+ <span data-ttu-id="150b5-106">在指出 `szName` 緩衝區大小的 `ULONG32`。</span><span class="sxs-lookup"><span data-stu-id="150b5-106">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="37acd-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespace name, including the null termination.</span><span class="sxs-lookup"><span data-stu-id="37acd-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespace name, including the null termination.</span></span>  
+ <span data-ttu-id="150b5-107">脫銷`ULONG32` 的指標，接收包含命名空間名稱所需的緩衝區大小（以字元為單位），包括 null 終止。</span><span class="sxs-lookup"><span data-stu-id="150b5-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespace name, including the null termination.</span></span>  
   
  `szName`  
- <span data-ttu-id="37acd-108">[out] A pointer to a buffer that contains the namespace name.</span><span class="sxs-lookup"><span data-stu-id="37acd-108">[out] A pointer to a buffer that contains the namespace name.</span></span>  
+ <span data-ttu-id="150b5-108">脫銷包含命名空間名稱之緩衝區的指標。</span><span class="sxs-lookup"><span data-stu-id="150b5-108">[out] A pointer to a buffer that contains the namespace name.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="37acd-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="37acd-109">Return Value</span></span>  
- <span data-ttu-id="37acd-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="37acd-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="150b5-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="150b5-109">Return Value</span></span>  
+ <span data-ttu-id="150b5-110">如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="150b5-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="37acd-111">需求</span><span class="sxs-lookup"><span data-stu-id="37acd-111">Requirements</span></span>  
- <span data-ttu-id="37acd-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="37acd-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="150b5-111">需求</span><span class="sxs-lookup"><span data-stu-id="150b5-111">Requirements</span></span>  
+ <span data-ttu-id="150b5-112">**標頭：** CorSym .idl，CorSym。h</span><span class="sxs-lookup"><span data-stu-id="150b5-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37acd-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="37acd-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="150b5-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="150b5-113">See also</span></span>
 
-- [<span data-ttu-id="37acd-114">ISymUnmanagedNamespace 介面</span><span class="sxs-lookup"><span data-stu-id="37acd-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [<span data-ttu-id="150b5-114">ISymUnmanagedNamespace 介面</span><span class="sxs-lookup"><span data-stu-id="150b5-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

@@ -21,10 +21,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444370"
 ---
-# <a name="corargtype-enumeration"></a><span data-ttu-id="5832d-102">CorArgType 列舉</span><span class="sxs-lookup"><span data-stu-id="5832d-102">CorArgType Enumeration</span></span>
-<span data-ttu-id="5832d-103">包含值，這些值描述執行階段控制代碼的原生類型。</span><span class="sxs-lookup"><span data-stu-id="5832d-103">Contains values that describe the native type of a runtime handle.</span></span>  
+# <a name="corargtype-enumeration"></a><span data-ttu-id="cec9a-102">CorArgType 列舉</span><span class="sxs-lookup"><span data-stu-id="cec9a-102">CorArgType Enumeration</span></span>
+<span data-ttu-id="cec9a-103">包含值，這些值描述執行階段控制代碼的原生類型。</span><span class="sxs-lookup"><span data-stu-id="cec9a-103">Contains values that describe the native type of a runtime handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5832d-104">語法</span><span class="sxs-lookup"><span data-stu-id="5832d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cec9a-104">語法</span><span class="sxs-lookup"><span data-stu-id="cec9a-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorArgType {  
@@ -44,13 +44,13 @@ typedef enum CorArgType {
 } CorArgType;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="5832d-105">需求</span><span class="sxs-lookup"><span data-stu-id="5832d-105">Requirements</span></span>  
- <span data-ttu-id="5832d-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5832d-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cec9a-105">需求</span><span class="sxs-lookup"><span data-stu-id="cec9a-105">Requirements</span></span>  
+ <span data-ttu-id="cec9a-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cec9a-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5832d-107">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="5832d-107">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="cec9a-107">**標頭：** Corhdr.h。h</span><span class="sxs-lookup"><span data-stu-id="cec9a-107">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="5832d-108">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5832d-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="cec9a-108">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cec9a-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5832d-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="5832d-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cec9a-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cec9a-109">See also</span></span>
 
-- [<span data-ttu-id="5832d-110">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="5832d-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="cec9a-110">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="cec9a-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

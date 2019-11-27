@@ -17,10 +17,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348032"
 ---
-# <a name="mid-statement"></a><span data-ttu-id="8c4a9-102">Mid 陳述式</span><span class="sxs-lookup"><span data-stu-id="8c4a9-102">Mid Statement</span></span>
-<span data-ttu-id="8c4a9-103">Replaces a specified number of characters in a `String` variable with characters from another string.</span><span class="sxs-lookup"><span data-stu-id="8c4a9-103">Replaces a specified number of characters in a `String` variable with characters from another string.</span></span>  
+# <a name="mid-statement"></a><span data-ttu-id="64650-102">Mid 陳述式</span><span class="sxs-lookup"><span data-stu-id="64650-102">Mid Statement</span></span>
+<span data-ttu-id="64650-103">以另一個字串中的字元取代 `String` 變數中指定的字元數。</span><span class="sxs-lookup"><span data-stu-id="64650-103">Replaces a specified number of characters in a `String` variable with characters from another string.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8c4a9-104">語法</span><span class="sxs-lookup"><span data-stu-id="8c4a9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="64650-104">語法</span><span class="sxs-lookup"><span data-stu-id="64650-104">Syntax</span></span>  
   
 ```vb  
 Mid( _  
@@ -30,47 +30,47 @@ Mid( _
 ) = StringExpression  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="8c4a9-105">組件</span><span class="sxs-lookup"><span data-stu-id="8c4a9-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="64650-105">組件</span><span class="sxs-lookup"><span data-stu-id="64650-105">Parts</span></span>  
  `Target`  
- <span data-ttu-id="8c4a9-106">必要項。</span><span class="sxs-lookup"><span data-stu-id="8c4a9-106">Required.</span></span> <span data-ttu-id="8c4a9-107">Name of the `String` variable to modify.</span><span class="sxs-lookup"><span data-stu-id="8c4a9-107">Name of the `String` variable to modify.</span></span>  
+ <span data-ttu-id="64650-106">必要。</span><span class="sxs-lookup"><span data-stu-id="64650-106">Required.</span></span> <span data-ttu-id="64650-107">要修改之 `String` 變數的名稱。</span><span class="sxs-lookup"><span data-stu-id="64650-107">Name of the `String` variable to modify.</span></span>  
   
  `Start`  
- <span data-ttu-id="8c4a9-108">必要項。</span><span class="sxs-lookup"><span data-stu-id="8c4a9-108">Required.</span></span> <span data-ttu-id="8c4a9-109">`Integer` expression.</span><span class="sxs-lookup"><span data-stu-id="8c4a9-109">`Integer` expression.</span></span> <span data-ttu-id="8c4a9-110">Character position in `Target` where the replacement of text begins.</span><span class="sxs-lookup"><span data-stu-id="8c4a9-110">Character position in `Target` where the replacement of text begins.</span></span> <span data-ttu-id="8c4a9-111">`Start` uses a one-based index.</span><span class="sxs-lookup"><span data-stu-id="8c4a9-111">`Start` uses a one-based index.</span></span>  
+ <span data-ttu-id="64650-108">必要。</span><span class="sxs-lookup"><span data-stu-id="64650-108">Required.</span></span> <span data-ttu-id="64650-109">`Integer` 運算式。</span><span class="sxs-lookup"><span data-stu-id="64650-109">`Integer` expression.</span></span> <span data-ttu-id="64650-110">`Target` 中的字元位置會開始取代文字。</span><span class="sxs-lookup"><span data-stu-id="64650-110">Character position in `Target` where the replacement of text begins.</span></span> <span data-ttu-id="64650-111">`Start` 使用以一為基礎的索引。</span><span class="sxs-lookup"><span data-stu-id="64650-111">`Start` uses a one-based index.</span></span>  
   
  `Length`  
- <span data-ttu-id="8c4a9-112">選擇項。</span><span class="sxs-lookup"><span data-stu-id="8c4a9-112">Optional.</span></span> <span data-ttu-id="8c4a9-113">`Integer` expression.</span><span class="sxs-lookup"><span data-stu-id="8c4a9-113">`Integer` expression.</span></span> <span data-ttu-id="8c4a9-114">Number of characters to replace.</span><span class="sxs-lookup"><span data-stu-id="8c4a9-114">Number of characters to replace.</span></span> <span data-ttu-id="8c4a9-115">If omitted, all of `String` is used.</span><span class="sxs-lookup"><span data-stu-id="8c4a9-115">If omitted, all of `String` is used.</span></span>  
+ <span data-ttu-id="64650-112">選擇性。</span><span class="sxs-lookup"><span data-stu-id="64650-112">Optional.</span></span> <span data-ttu-id="64650-113">`Integer` 運算式。</span><span class="sxs-lookup"><span data-stu-id="64650-113">`Integer` expression.</span></span> <span data-ttu-id="64650-114">要取代的字元數。</span><span class="sxs-lookup"><span data-stu-id="64650-114">Number of characters to replace.</span></span> <span data-ttu-id="64650-115">如果省略，則會使用所有的 `String`。</span><span class="sxs-lookup"><span data-stu-id="64650-115">If omitted, all of `String` is used.</span></span>  
   
  `StringExpression`  
- <span data-ttu-id="8c4a9-116">必要項。</span><span class="sxs-lookup"><span data-stu-id="8c4a9-116">Required.</span></span> <span data-ttu-id="8c4a9-117">`String` expression that replaces part of `Target`.</span><span class="sxs-lookup"><span data-stu-id="8c4a9-117">`String` expression that replaces part of `Target`.</span></span>  
+ <span data-ttu-id="64650-116">必要。</span><span class="sxs-lookup"><span data-stu-id="64650-116">Required.</span></span> <span data-ttu-id="64650-117">取代 `Target`部分的 `String` 運算式。</span><span class="sxs-lookup"><span data-stu-id="64650-117">`String` expression that replaces part of `Target`.</span></span>  
   
-## <a name="exceptions"></a><span data-ttu-id="8c4a9-118">例外狀況</span><span class="sxs-lookup"><span data-stu-id="8c4a9-118">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="64650-118">例外狀況</span><span class="sxs-lookup"><span data-stu-id="64650-118">Exceptions</span></span>  
   
-|<span data-ttu-id="8c4a9-119">例外狀況類型</span><span class="sxs-lookup"><span data-stu-id="8c4a9-119">Exception type</span></span>|<span data-ttu-id="8c4a9-120">條件</span><span class="sxs-lookup"><span data-stu-id="8c4a9-120">Condition</span></span>|  
+|<span data-ttu-id="64650-119">例外狀況類型</span><span class="sxs-lookup"><span data-stu-id="64650-119">Exception type</span></span>|<span data-ttu-id="64650-120">條件</span><span class="sxs-lookup"><span data-stu-id="64650-120">Condition</span></span>|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|<span data-ttu-id="8c4a9-121">`Start` <= 0 or `Length` < 0.</span><span class="sxs-lookup"><span data-stu-id="8c4a9-121">`Start` <= 0 or `Length` < 0.</span></span>|  
+|<xref:System.ArgumentException>|<span data-ttu-id="64650-121">`Start` < = 0 或 `Length` < 0。</span><span class="sxs-lookup"><span data-stu-id="64650-121">`Start` <= 0 or `Length` < 0.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8c4a9-122">備註</span><span class="sxs-lookup"><span data-stu-id="8c4a9-122">Remarks</span></span>  
- <span data-ttu-id="8c4a9-123">The number of characters replaced is always less than or equal to the number of characters in `Target`.</span><span class="sxs-lookup"><span data-stu-id="8c4a9-123">The number of characters replaced is always less than or equal to the number of characters in `Target`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="64650-122">備註</span><span class="sxs-lookup"><span data-stu-id="64650-122">Remarks</span></span>  
+ <span data-ttu-id="64650-123">已取代的字元數一律小於或等於 `Target`中的字元數。</span><span class="sxs-lookup"><span data-stu-id="64650-123">The number of characters replaced is always less than or equal to the number of characters in `Target`.</span></span>  
   
- <span data-ttu-id="8c4a9-124">Visual Basic has a <xref:Microsoft.VisualBasic.Strings.Mid%2A> function and a `Mid` statement.</span><span class="sxs-lookup"><span data-stu-id="8c4a9-124">Visual Basic has a <xref:Microsoft.VisualBasic.Strings.Mid%2A> function and a `Mid` statement.</span></span> <span data-ttu-id="8c4a9-125">These elements both operate on a specified number of characters in a string, but the `Mid` function returns the characters while the `Mid` statement replaces the characters.</span><span class="sxs-lookup"><span data-stu-id="8c4a9-125">These elements both operate on a specified number of characters in a string, but the `Mid` function returns the characters while the `Mid` statement replaces the characters.</span></span> <span data-ttu-id="8c4a9-126">如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Strings.Mid%2A>。</span><span class="sxs-lookup"><span data-stu-id="8c4a9-126">For more information, see <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</span></span>  
+ <span data-ttu-id="64650-124">Visual Basic 具有 <xref:Microsoft.VisualBasic.Strings.Mid%2A> 函數和 `Mid` 語句。</span><span class="sxs-lookup"><span data-stu-id="64650-124">Visual Basic has a <xref:Microsoft.VisualBasic.Strings.Mid%2A> function and a `Mid` statement.</span></span> <span data-ttu-id="64650-125">這些專案都是在字串中以指定的字元數來運作，但是 `Mid` 函式會傳回字元，而 `Mid` 語句則會取代這些字元。</span><span class="sxs-lookup"><span data-stu-id="64650-125">These elements both operate on a specified number of characters in a string, but the `Mid` function returns the characters while the `Mid` statement replaces the characters.</span></span> <span data-ttu-id="64650-126">如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Strings.Mid%2A>。</span><span class="sxs-lookup"><span data-stu-id="64650-126">For more information, see <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="8c4a9-127">The `MidB` statement of earlier versions of Visual Basic replaces a substring in bytes, rather than characters.</span><span class="sxs-lookup"><span data-stu-id="8c4a9-127">The `MidB` statement of earlier versions of Visual Basic replaces a substring in bytes, rather than characters.</span></span> <span data-ttu-id="8c4a9-128">It is used primarily for converting strings in double-byte character set (DBCS) applications.</span><span class="sxs-lookup"><span data-stu-id="8c4a9-128">It is used primarily for converting strings in double-byte character set (DBCS) applications.</span></span> <span data-ttu-id="8c4a9-129">All Visual Basic strings are in Unicode, and `MidB` is no longer supported.</span><span class="sxs-lookup"><span data-stu-id="8c4a9-129">All Visual Basic strings are in Unicode, and `MidB` is no longer supported.</span></span>  
+> <span data-ttu-id="64650-127">舊版 Visual Basic 的 `MidB` 語句會取代子字串（以位元組為單位），而不是字元。</span><span class="sxs-lookup"><span data-stu-id="64650-127">The `MidB` statement of earlier versions of Visual Basic replaces a substring in bytes, rather than characters.</span></span> <span data-ttu-id="64650-128">它主要是用來在雙位元組字集（DBCS）應用程式中轉換字串。</span><span class="sxs-lookup"><span data-stu-id="64650-128">It is used primarily for converting strings in double-byte character set (DBCS) applications.</span></span> <span data-ttu-id="64650-129">所有 Visual Basic 字串都是 Unicode，而且不再支援 `MidB`。</span><span class="sxs-lookup"><span data-stu-id="64650-129">All Visual Basic strings are in Unicode, and `MidB` is no longer supported.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8c4a9-130">範例</span><span class="sxs-lookup"><span data-stu-id="8c4a9-130">Example</span></span>  
- <span data-ttu-id="8c4a9-131">This example uses the `Mid` statement to replace a specified number of characters in a string variable with characters from another string.</span><span class="sxs-lookup"><span data-stu-id="8c4a9-131">This example uses the `Mid` statement to replace a specified number of characters in a string variable with characters from another string.</span></span>  
+## <a name="example"></a><span data-ttu-id="64650-130">範例</span><span class="sxs-lookup"><span data-stu-id="64650-130">Example</span></span>  
+ <span data-ttu-id="64650-131">這個範例會使用 `Mid` 語句，將字串變數中指定數目的字元取代為另一個字串中的字元。</span><span class="sxs-lookup"><span data-stu-id="64650-131">This example uses the `Mid` statement to replace a specified number of characters in a string variable with characters from another string.</span></span>  
   
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
-## <a name="requirements"></a><span data-ttu-id="8c4a9-132">需求</span><span class="sxs-lookup"><span data-stu-id="8c4a9-132">Requirements</span></span>  
- <span data-ttu-id="8c4a9-133">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="8c4a9-133">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
+## <a name="requirements"></a><span data-ttu-id="64650-132">需求</span><span class="sxs-lookup"><span data-stu-id="64650-132">Requirements</span></span>  
+ <span data-ttu-id="64650-133">**命名空間：** [Microsoft.](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="64650-133">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
   
- <span data-ttu-id="8c4a9-134">**Module:** `Strings`</span><span class="sxs-lookup"><span data-stu-id="8c4a9-134">**Module:** `Strings`</span></span>  
+ <span data-ttu-id="64650-134">**模組：** `Strings`</span><span class="sxs-lookup"><span data-stu-id="64650-134">**Module:** `Strings`</span></span>  
   
- <span data-ttu-id="8c4a9-135">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="8c4a9-135">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="64650-135">**元件：** Visual Basic 執行時間程式庫（在 Microsoft 中）</span><span class="sxs-lookup"><span data-stu-id="64650-135">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8c4a9-136">請參閱</span><span class="sxs-lookup"><span data-stu-id="8c4a9-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="64650-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="64650-136">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Strings.Mid%2A>
-- [<span data-ttu-id="8c4a9-137">字串</span><span class="sxs-lookup"><span data-stu-id="8c4a9-137">Strings</span></span>](../../../visual-basic/programming-guide/language-features/strings/index.md)
-- [<span data-ttu-id="8c4a9-138">Visual Basic 中的字串簡介</span><span class="sxs-lookup"><span data-stu-id="8c4a9-138">Introduction to Strings in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [<span data-ttu-id="64650-137">字串</span><span class="sxs-lookup"><span data-stu-id="64650-137">Strings</span></span>](../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [<span data-ttu-id="64650-138">Visual Basic 中的字串簡介</span><span class="sxs-lookup"><span data-stu-id="64650-138">Introduction to Strings in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

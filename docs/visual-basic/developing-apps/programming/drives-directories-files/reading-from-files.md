@@ -15,57 +15,57 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333815"
 ---
-# <a name="reading-from-files-in-visual-basic"></a><span data-ttu-id="7af67-102">在 Visual Basic 中讀取檔案</span><span class="sxs-lookup"><span data-stu-id="7af67-102">Reading from Files in Visual Basic</span></span>
+# <a name="reading-from-files-in-visual-basic"></a><span data-ttu-id="47a39-102">在 Visual Basic 中讀取檔案</span><span class="sxs-lookup"><span data-stu-id="47a39-102">Reading from Files in Visual Basic</span></span>
 
-<span data-ttu-id="7af67-103">本節說明如何執行與讀取檔案建立關聯的工作。</span><span class="sxs-lookup"><span data-stu-id="7af67-103">This section explains how to perform tasks that are associated with reading from files.</span></span>  
+<span data-ttu-id="47a39-103">本節說明如何執行與讀取檔案建立關聯的工作。</span><span class="sxs-lookup"><span data-stu-id="47a39-103">This section explains how to perform tasks that are associated with reading from files.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7af67-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="7af67-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="47a39-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="47a39-104">In This Section</span></span>  
 
- [<span data-ttu-id="7af67-105">如何：從文字檔讀取</span><span class="sxs-lookup"><span data-stu-id="7af67-105">How to: Read from Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
- <span data-ttu-id="7af67-106">示範如何從文字檔讀取。</span><span class="sxs-lookup"><span data-stu-id="7af67-106">Demonstrates how to read from a text file.</span></span>  
+ [<span data-ttu-id="47a39-105">如何：從文字檔讀取</span><span class="sxs-lookup"><span data-stu-id="47a39-105">How to: Read from Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
+ <span data-ttu-id="47a39-106">示範如何從文字檔讀取。</span><span class="sxs-lookup"><span data-stu-id="47a39-106">Demonstrates how to read from a text file.</span></span>  
   
- [<span data-ttu-id="7af67-107">如何：從逗號分隔文字檔讀取</span><span class="sxs-lookup"><span data-stu-id="7af67-107">How to: Read From Comma-Delimited Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
- <span data-ttu-id="7af67-108">示範如何從分隔文字檔讀取。</span><span class="sxs-lookup"><span data-stu-id="7af67-108">Demonstrates how to read from a delimited text file.</span></span>  
+ [<span data-ttu-id="47a39-107">如何：從逗號分隔文字檔讀取</span><span class="sxs-lookup"><span data-stu-id="47a39-107">How to: Read From Comma-Delimited Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ <span data-ttu-id="47a39-108">示範如何從分隔文字檔讀取。</span><span class="sxs-lookup"><span data-stu-id="47a39-108">Demonstrates how to read from a delimited text file.</span></span>  
   
- [<span data-ttu-id="7af67-109">如何：從固定寬度的文字檔讀取</span><span class="sxs-lookup"><span data-stu-id="7af67-109">How to: Read From Fixed-width Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
- <span data-ttu-id="7af67-110">示範如何從固定寬度的文字檔讀取。</span><span class="sxs-lookup"><span data-stu-id="7af67-110">Demonstrates how to read from a fixed-width text file.</span></span>  
+ [<span data-ttu-id="47a39-109">如何：從固定寬度的文字檔讀取</span><span class="sxs-lookup"><span data-stu-id="47a39-109">How to: Read From Fixed-width Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
+ <span data-ttu-id="47a39-110">示範如何從固定寬度的文字檔讀取。</span><span class="sxs-lookup"><span data-stu-id="47a39-110">Demonstrates how to read from a fixed-width text file.</span></span>  
   
- [<span data-ttu-id="7af67-111">如何：以多種格式從文字檔讀取</span><span class="sxs-lookup"><span data-stu-id="7af67-111">How to: Read From Text Files with Multiple Formats</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
- <span data-ttu-id="7af67-112">示範如何從具有多種格式的文字檔讀取。</span><span class="sxs-lookup"><span data-stu-id="7af67-112">Demonstrates how to read from a text file with multiple formats.</span></span>  
+ [<span data-ttu-id="47a39-111">如何：以多種格式從文字檔讀取</span><span class="sxs-lookup"><span data-stu-id="47a39-111">How to: Read From Text Files with Multiple Formats</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+ <span data-ttu-id="47a39-112">示範如何從具有多種格式的文字檔讀取。</span><span class="sxs-lookup"><span data-stu-id="47a39-112">Demonstrates how to read from a text file with multiple formats.</span></span>  
   
- [<span data-ttu-id="7af67-113">如何：讀取二進位檔案</span><span class="sxs-lookup"><span data-stu-id="7af67-113">How to: Read From Binary Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
- <span data-ttu-id="7af67-114">示範如何從二進位檔案讀取。</span><span class="sxs-lookup"><span data-stu-id="7af67-114">Demonstrates how to read from a binary file.</span></span>  
+ [<span data-ttu-id="47a39-113">如何：讀取二進位檔案</span><span class="sxs-lookup"><span data-stu-id="47a39-113">How to: Read From Binary Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
+ <span data-ttu-id="47a39-114">示範如何從二進位檔案讀取。</span><span class="sxs-lookup"><span data-stu-id="47a39-114">Demonstrates how to read from a binary file.</span></span>  
   
- [<span data-ttu-id="7af67-115">如何：以 StreamReader 從檔案讀取文字</span><span class="sxs-lookup"><span data-stu-id="7af67-115">How to: Read Text from Files with a StreamReader</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
- <span data-ttu-id="7af67-116">示範如何使用 <xref:System.IO.StreamReader> 以從檔案讀取。</span><span class="sxs-lookup"><span data-stu-id="7af67-116">Demonstrates how to use a <xref:System.IO.StreamReader> to read from a file.</span></span>  
+ [<span data-ttu-id="47a39-115">如何：以 StreamReader 從檔案讀取文字</span><span class="sxs-lookup"><span data-stu-id="47a39-115">How to: Read Text from Files with a StreamReader</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
+ <span data-ttu-id="47a39-116">示範如何使用 <xref:System.IO.StreamReader> 以從檔案讀取。</span><span class="sxs-lookup"><span data-stu-id="47a39-116">Demonstrates how to use a <xref:System.IO.StreamReader> to read from a file.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="7af67-117">參考資料</span><span class="sxs-lookup"><span data-stu-id="7af67-117">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="47a39-117">參考</span><span class="sxs-lookup"><span data-stu-id="47a39-117">Reference</span></span>  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <span data-ttu-id="7af67-118">描述 `My.Computer.FileSystem` 物件和其成員。</span><span class="sxs-lookup"><span data-stu-id="7af67-118">Describes the `My.Computer.FileSystem` object and its members.</span></span>  
+ <span data-ttu-id="47a39-118">描述 `My.Computer.FileSystem` 物件和其成員。</span><span class="sxs-lookup"><span data-stu-id="47a39-118">Describes the `My.Computer.FileSystem` object and its members.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>  
- <span data-ttu-id="7af67-119">描述 `ReadAllText` 方法。</span><span class="sxs-lookup"><span data-stu-id="7af67-119">Describes the `ReadAllText` method.</span></span>  
+ <span data-ttu-id="47a39-119">描述 `ReadAllText` 方法。</span><span class="sxs-lookup"><span data-stu-id="47a39-119">Describes the `ReadAllText` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>  
- <span data-ttu-id="7af67-120">描述 `ReadAllBytes` 方法。</span><span class="sxs-lookup"><span data-stu-id="7af67-120">Describes the `ReadAllBytes` method.</span></span>  
+ <span data-ttu-id="47a39-120">描述 `ReadAllBytes` 方法。</span><span class="sxs-lookup"><span data-stu-id="47a39-120">Describes the `ReadAllBytes` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A>  
- <span data-ttu-id="7af67-121">描述 `OpenTextFieldParser` 方法。</span><span class="sxs-lookup"><span data-stu-id="7af67-121">Describes the `OpenTextFieldParser` method.</span></span>  
+ <span data-ttu-id="47a39-121">描述 `OpenTextFieldParser` 方法。</span><span class="sxs-lookup"><span data-stu-id="47a39-121">Describes the `OpenTextFieldParser` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>  
- <span data-ttu-id="7af67-122">描述 `OpenTextFileReader` 方法。</span><span class="sxs-lookup"><span data-stu-id="7af67-122">Describes the `OpenTextFileReader` method.</span></span>  
+ <span data-ttu-id="47a39-122">描述 `OpenTextFileReader` 方法。</span><span class="sxs-lookup"><span data-stu-id="47a39-122">Describes the `OpenTextFileReader` method.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="7af67-123">相關章節</span><span class="sxs-lookup"><span data-stu-id="7af67-123">Related Sections</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="47a39-123">相關章節</span><span class="sxs-lookup"><span data-stu-id="47a39-123">Related Sections</span></span>  
 
- [<span data-ttu-id="7af67-124">在剪貼簿儲存和讀取資料</span><span class="sxs-lookup"><span data-stu-id="7af67-124">Storing Data to and Reading from the Clipboard</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
- <span data-ttu-id="7af67-125">說明如何執行與 `My.Computer.Clipboard` 建立關聯的工作，例如從剪貼簿讀取資料或將資料寫入其中。</span><span class="sxs-lookup"><span data-stu-id="7af67-125">Explains how to perform tasks that are associated with `My.Computer.Clipboard`, such as reading data from or writing data to the Clipboard.</span></span>  
+ [<span data-ttu-id="47a39-124">在剪貼簿儲存和讀取資料</span><span class="sxs-lookup"><span data-stu-id="47a39-124">Storing Data to and Reading from the Clipboard</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
+ <span data-ttu-id="47a39-125">說明如何執行與 `My.Computer.Clipboard` 建立關聯的工作，例如從剪貼簿讀取資料或將資料寫入其中。</span><span class="sxs-lookup"><span data-stu-id="47a39-125">Explains how to perform tasks that are associated with `My.Computer.Clipboard`, such as reading data from or writing data to the Clipboard.</span></span>  
   
- [<span data-ttu-id="7af67-126">使用 TextFieldParser 物件剖析文字檔</span><span class="sxs-lookup"><span data-stu-id="7af67-126">Parsing Text Files with the TextFieldParser Object</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
- <span data-ttu-id="7af67-127">概述如何使用 `TextFieldParser` 物件來讀取文字檔。</span><span class="sxs-lookup"><span data-stu-id="7af67-127">Provides an overview of reading text files with the `TextFieldParser` object.</span></span>  
+ [<span data-ttu-id="47a39-126">使用 TextFieldParser 物件剖析文字檔</span><span class="sxs-lookup"><span data-stu-id="47a39-126">Parsing Text Files with the TextFieldParser Object</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
+ <span data-ttu-id="47a39-127">概述如何使用 `TextFieldParser` 物件來讀取文字檔。</span><span class="sxs-lookup"><span data-stu-id="47a39-127">Provides an overview of reading text files with the `TextFieldParser` object.</span></span>  
   
- [<span data-ttu-id="7af67-128">逐步解說：在 Visual Basic 中管理檔案和目錄</span><span class="sxs-lookup"><span data-stu-id="7af67-128">Walkthrough: Manipulating Files and Directories in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- <span data-ttu-id="7af67-129">示範如何搭配使用 `My` 功能與檔案和目錄。</span><span class="sxs-lookup"><span data-stu-id="7af67-129">Demonstrates how to use the `My` feature with files and directories.</span></span>  
+ [<span data-ttu-id="47a39-128">逐步解說：在 Visual Basic 中管理檔案和目錄</span><span class="sxs-lookup"><span data-stu-id="47a39-128">Walkthrough: Manipulating Files and Directories in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ <span data-ttu-id="47a39-129">示範如何搭配使用 `My` 功能與檔案和目錄。</span><span class="sxs-lookup"><span data-stu-id="47a39-129">Demonstrates how to use the `My` feature with files and directories.</span></span>  
   
- [<span data-ttu-id="7af67-130">逐步解說：使用 .NET Framework 方法管理檔案</span><span class="sxs-lookup"><span data-stu-id="7af67-130">Walkthrough: Manipulating Files by Using .NET Framework Methods</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- <span data-ttu-id="7af67-131">示範如何使用 .NET Framework 方法來操作檔案和目錄。</span><span class="sxs-lookup"><span data-stu-id="7af67-131">Demonstrates how to use .NET Framework methods with files and directories.</span></span>
+ [<span data-ttu-id="47a39-130">逐步解說：使用 .NET Framework 方法管理檔案</span><span class="sxs-lookup"><span data-stu-id="47a39-130">Walkthrough: Manipulating Files by Using .NET Framework Methods</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ <span data-ttu-id="47a39-131">示範如何使用 .NET Framework 方法來操作檔案和目錄。</span><span class="sxs-lookup"><span data-stu-id="47a39-131">Demonstrates how to use .NET Framework methods with files and directories.</span></span>

@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446569"
 ---
-# <a name="closeenum-method"></a><span data-ttu-id="9bf55-102">CloseEnum 方法</span><span class="sxs-lookup"><span data-stu-id="9bf55-102">CloseEnum Method</span></span>
-<span data-ttu-id="9bf55-103">Closes the indicated enumeration and frees associated resources.</span><span class="sxs-lookup"><span data-stu-id="9bf55-103">Closes the indicated enumeration and frees associated resources.</span></span>  
+# <a name="closeenum-method"></a><span data-ttu-id="8afff-102">CloseEnum 方法</span><span class="sxs-lookup"><span data-stu-id="8afff-102">CloseEnum Method</span></span>
+<span data-ttu-id="8afff-103">關閉指示的列舉，並釋出相關聯的資源。</span><span class="sxs-lookup"><span data-stu-id="8afff-103">Closes the indicated enumeration and frees associated resources.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9bf55-104">語法</span><span class="sxs-lookup"><span data-stu-id="9bf55-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8afff-104">語法</span><span class="sxs-lookup"><span data-stu-id="8afff-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CloseEnum(  
@@ -33,18 +33,18 @@ HRESULT CloseEnum(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9bf55-105">參數</span><span class="sxs-lookup"><span data-stu-id="9bf55-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8afff-105">參數</span><span class="sxs-lookup"><span data-stu-id="8afff-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="9bf55-106">Handle of enumeration to be closed.</span><span class="sxs-lookup"><span data-stu-id="9bf55-106">Handle of enumeration to be closed.</span></span>  
+ <span data-ttu-id="8afff-106">要關閉之列舉的控制碼。</span><span class="sxs-lookup"><span data-stu-id="8afff-106">Handle of enumeration to be closed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9bf55-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="9bf55-107">Return Value</span></span>  
- <span data-ttu-id="9bf55-108">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="9bf55-108">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8afff-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="8afff-107">Return Value</span></span>  
+ <span data-ttu-id="8afff-108">如果方法成功，則傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="8afff-108">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9bf55-109">需求</span><span class="sxs-lookup"><span data-stu-id="9bf55-109">Requirements</span></span>  
- <span data-ttu-id="9bf55-110">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="9bf55-110">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8afff-109">需求</span><span class="sxs-lookup"><span data-stu-id="8afff-109">Requirements</span></span>  
+ <span data-ttu-id="8afff-110">需要 alink. h</span><span class="sxs-lookup"><span data-stu-id="8afff-110">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9bf55-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="9bf55-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8afff-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8afff-111">See also</span></span>
 
-- [<span data-ttu-id="9bf55-112">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="9bf55-112">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="9bf55-113">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="9bf55-113">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="9bf55-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="9bf55-114">ALink API</span></span>](index.md)
+- [<span data-ttu-id="8afff-112">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="8afff-112">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="8afff-113">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="8afff-113">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="8afff-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="8afff-114">ALink API</span></span>](index.md)

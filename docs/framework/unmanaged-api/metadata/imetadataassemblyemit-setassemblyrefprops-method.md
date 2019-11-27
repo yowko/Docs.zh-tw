@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440558"
 ---
-# <a name="imetadataassemblyemitsetassemblyrefprops-method"></a><span data-ttu-id="5041c-102">IMetaDataAssemblyEmit::SetAssemblyRefProps 方法</span><span class="sxs-lookup"><span data-stu-id="5041c-102">IMetaDataAssemblyEmit::SetAssemblyRefProps Method</span></span>
-<span data-ttu-id="5041c-103">修改指定的 `AssemblyRef` 中繼資料結構。</span><span class="sxs-lookup"><span data-stu-id="5041c-103">Modifies the specified `AssemblyRef` metadata structure.</span></span>  
+# <a name="imetadataassemblyemitsetassemblyrefprops-method"></a><span data-ttu-id="9ff13-102">IMetaDataAssemblyEmit::SetAssemblyRefProps 方法</span><span class="sxs-lookup"><span data-stu-id="9ff13-102">IMetaDataAssemblyEmit::SetAssemblyRefProps Method</span></span>
+<span data-ttu-id="9ff13-103">修改指定的 `AssemblyRef` 中繼資料結構。</span><span class="sxs-lookup"><span data-stu-id="9ff13-103">Modifies the specified `AssemblyRef` metadata structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5041c-104">語法</span><span class="sxs-lookup"><span data-stu-id="5041c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9ff13-104">語法</span><span class="sxs-lookup"><span data-stu-id="9ff13-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetAssemblyRefProps (  
@@ -40,43 +40,43 @@ HRESULT SetAssemblyRefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5041c-105">參數</span><span class="sxs-lookup"><span data-stu-id="5041c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9ff13-105">參數</span><span class="sxs-lookup"><span data-stu-id="9ff13-105">Parameters</span></span>  
  `ar`  
- <span data-ttu-id="5041c-106">[in] The metadata token that specifies the `AssemblyRef` metadata structure to be modified.</span><span class="sxs-lookup"><span data-stu-id="5041c-106">[in] The metadata token that specifies the `AssemblyRef` metadata structure to be modified.</span></span>  
+ <span data-ttu-id="9ff13-106">在元資料標記，指定要修改的 `AssemblyRef` 元資料結構。</span><span class="sxs-lookup"><span data-stu-id="9ff13-106">[in] The metadata token that specifies the `AssemblyRef` metadata structure to be modified.</span></span>  
   
  `pbPublicKeyOrToken`  
- <span data-ttu-id="5041c-107">[in] The public key of the publisher of the referenced assembly.</span><span class="sxs-lookup"><span data-stu-id="5041c-107">[in] The public key of the publisher of the referenced assembly.</span></span>  
+ <span data-ttu-id="9ff13-107">在所參考元件之發行者的公開金鑰。</span><span class="sxs-lookup"><span data-stu-id="9ff13-107">[in] The public key of the publisher of the referenced assembly.</span></span>  
   
  `cbPublicKeyOrToken`  
- <span data-ttu-id="5041c-108">[in] The size in bytes of `pbPublicKeyOrToken`.</span><span class="sxs-lookup"><span data-stu-id="5041c-108">[in] The size in bytes of `pbPublicKeyOrToken`.</span></span>  
+ <span data-ttu-id="9ff13-108">在`pbPublicKeyOrToken`的大小（以位元組為單位）。</span><span class="sxs-lookup"><span data-stu-id="9ff13-108">[in] The size in bytes of `pbPublicKeyOrToken`.</span></span>  
   
  `szName`  
- <span data-ttu-id="5041c-109">[in] The human-readable text name of the assembly.</span><span class="sxs-lookup"><span data-stu-id="5041c-109">[in] The human-readable text name of the assembly.</span></span>  
+ <span data-ttu-id="9ff13-109">在元件的人類看得懂的文字名稱。</span><span class="sxs-lookup"><span data-stu-id="9ff13-109">[in] The human-readable text name of the assembly.</span></span>  
   
  `pMetaData`  
- <span data-ttu-id="5041c-110">[in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.</span><span class="sxs-lookup"><span data-stu-id="5041c-110">[in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.</span></span>  
+ <span data-ttu-id="9ff13-110">在ASSEMBLYMETADATA 實例的指標，其中包含元件的版本、平臺和地區設定資訊。</span><span class="sxs-lookup"><span data-stu-id="9ff13-110">[in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.</span></span>  
   
  `pbHashValue`  
- <span data-ttu-id="5041c-111">[in] A pointer to the hash data associated with the assembly.</span><span class="sxs-lookup"><span data-stu-id="5041c-111">[in] A pointer to the hash data associated with the assembly.</span></span>  
+ <span data-ttu-id="9ff13-111">在與元件相關聯之雜湊資料的指標。</span><span class="sxs-lookup"><span data-stu-id="9ff13-111">[in] A pointer to the hash data associated with the assembly.</span></span>  
   
  `cbHashValue`  
- <span data-ttu-id="5041c-112">[in] The size in bytes of `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="5041c-112">[in] The size in bytes of `pbHashValue`.</span></span>  
+ <span data-ttu-id="9ff13-112">在`pbHashValue`的大小（以位元組為單位）。</span><span class="sxs-lookup"><span data-stu-id="9ff13-112">[in] The size in bytes of `pbHashValue`.</span></span>  
   
  `dwAssemblyRefFlags`  
- <span data-ttu-id="5041c-113">[in] A bitwise combination of [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) values that specify attributes of the referenced assembly.</span><span class="sxs-lookup"><span data-stu-id="5041c-113">[in] A bitwise combination of [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) values that specify attributes of the referenced assembly.</span></span>  
+ <span data-ttu-id="9ff13-113">在[AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)值的位元組合，這個組合會指定參考元件的屬性。</span><span class="sxs-lookup"><span data-stu-id="9ff13-113">[in] A bitwise combination of [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) values that specify attributes of the referenced assembly.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5041c-114">備註</span><span class="sxs-lookup"><span data-stu-id="5041c-114">Remarks</span></span>  
- <span data-ttu-id="5041c-115">To create an `AssemblyRef` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="5041c-115">To create an `AssemblyRef` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9ff13-114">備註</span><span class="sxs-lookup"><span data-stu-id="9ff13-114">Remarks</span></span>  
+ <span data-ttu-id="9ff13-115">若要建立 `AssemblyRef` 元資料結構，請使用[IMetaDataAssemblyEmit：:D efineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="9ff13-115">To create an `AssemblyRef` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5041c-116">需求</span><span class="sxs-lookup"><span data-stu-id="5041c-116">Requirements</span></span>  
- <span data-ttu-id="5041c-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5041c-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9ff13-116">需求</span><span class="sxs-lookup"><span data-stu-id="9ff13-116">Requirements</span></span>  
+ <span data-ttu-id="9ff13-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9ff13-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5041c-118">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5041c-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9ff13-118">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="9ff13-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5041c-119">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5041c-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9ff13-119">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="9ff13-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5041c-120">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5041c-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9ff13-120">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ff13-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5041c-121">請參閱</span><span class="sxs-lookup"><span data-stu-id="5041c-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9ff13-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9ff13-121">See also</span></span>
 
-- [<span data-ttu-id="5041c-122">IMetaDataAssemblyEmit 介面</span><span class="sxs-lookup"><span data-stu-id="5041c-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="9ff13-122">IMetaDataAssemblyEmit 介面</span><span class="sxs-lookup"><span data-stu-id="9ff13-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

@@ -19,11 +19,11 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343836"
 ---
-# <a name="externalsource-directive"></a><span data-ttu-id="a38fe-102">#ExternalSource 指示詞</span><span class="sxs-lookup"><span data-stu-id="a38fe-102">#ExternalSource Directive</span></span>
+# <a name="externalsource-directive"></a><span data-ttu-id="3bbc6-102">#ExternalSource 指示詞</span><span class="sxs-lookup"><span data-stu-id="3bbc6-102">#ExternalSource Directive</span></span>
 
-<span data-ttu-id="a38fe-103">Indicates a mapping between specific lines of source code and text external to the source.</span><span class="sxs-lookup"><span data-stu-id="a38fe-103">Indicates a mapping between specific lines of source code and text external to the source.</span></span>  
+<span data-ttu-id="3bbc6-103">表示原始程式程式碼與來源外部文字之間的對應。</span><span class="sxs-lookup"><span data-stu-id="3bbc6-103">Indicates a mapping between specific lines of source code and text external to the source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a38fe-104">語法</span><span class="sxs-lookup"><span data-stu-id="a38fe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3bbc6-104">語法</span><span class="sxs-lookup"><span data-stu-id="3bbc6-104">Syntax</span></span>  
   
 ```vb  
 #ExternalSource( StringLiteral , IntLiteral )  
@@ -31,28 +31,28 @@ ms.locfileid: "74343836"
 #End ExternalSource  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="a38fe-105">組件</span><span class="sxs-lookup"><span data-stu-id="a38fe-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="3bbc6-105">組件</span><span class="sxs-lookup"><span data-stu-id="3bbc6-105">Parts</span></span>  
 
  `StringLiteral`  
- <span data-ttu-id="a38fe-106">The path to the external source.</span><span class="sxs-lookup"><span data-stu-id="a38fe-106">The path to the external source.</span></span>  
+ <span data-ttu-id="3bbc6-106">外部來源的路徑。</span><span class="sxs-lookup"><span data-stu-id="3bbc6-106">The path to the external source.</span></span>  
   
  `IntLiteral`  
- <span data-ttu-id="a38fe-107">The line number of the first line of the external source.</span><span class="sxs-lookup"><span data-stu-id="a38fe-107">The line number of the first line of the external source.</span></span>  
+ <span data-ttu-id="3bbc6-107">外部來源第一行的行號。</span><span class="sxs-lookup"><span data-stu-id="3bbc6-107">The line number of the first line of the external source.</span></span>  
   
  `LogicalLine`  
- <span data-ttu-id="a38fe-108">The line where the error occurs in the external source.</span><span class="sxs-lookup"><span data-stu-id="a38fe-108">The line where the error occurs in the external source.</span></span>  
+ <span data-ttu-id="3bbc6-108">外部來源中發生錯誤的行。</span><span class="sxs-lookup"><span data-stu-id="3bbc6-108">The line where the error occurs in the external source.</span></span>  
   
  `#End ExternalSource`  
- <span data-ttu-id="a38fe-109">終止 `#ExternalSource` 區塊。</span><span class="sxs-lookup"><span data-stu-id="a38fe-109">Terminates the `#ExternalSource` block.</span></span>  
+ <span data-ttu-id="3bbc6-109">終止 `#ExternalSource` 區塊。</span><span class="sxs-lookup"><span data-stu-id="3bbc6-109">Terminates the `#ExternalSource` block.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a38fe-110">備註</span><span class="sxs-lookup"><span data-stu-id="a38fe-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3bbc6-110">備註</span><span class="sxs-lookup"><span data-stu-id="3bbc6-110">Remarks</span></span>  
 
- <span data-ttu-id="a38fe-111">This directive is used only by the compiler and the debugger.</span><span class="sxs-lookup"><span data-stu-id="a38fe-111">This directive is used only by the compiler and the debugger.</span></span>  
+ <span data-ttu-id="3bbc6-111">這個指示詞僅供編譯器和偵錯工具使用。</span><span class="sxs-lookup"><span data-stu-id="3bbc6-111">This directive is used only by the compiler and the debugger.</span></span>  
   
- <span data-ttu-id="a38fe-112">A source file may include external source directives, which indicate a mapping between specific lines of code in the source file and text external to the source, such as an .aspx file.</span><span class="sxs-lookup"><span data-stu-id="a38fe-112">A source file may include external source directives, which indicate a mapping between specific lines of code in the source file and text external to the source, such as an .aspx file.</span></span> <span data-ttu-id="a38fe-113">If errors are encountered in the designated source code during compilation, they are identified as coming from the external source.</span><span class="sxs-lookup"><span data-stu-id="a38fe-113">If errors are encountered in the designated source code during compilation, they are identified as coming from the external source.</span></span>  
+ <span data-ttu-id="3bbc6-112">原始程式檔可能包含外部來源指示詞，這表示原始程式檔中的特定程式程式碼與來源外部的文字之間的對應，例如 .aspx 檔案。</span><span class="sxs-lookup"><span data-stu-id="3bbc6-112">A source file may include external source directives, which indicate a mapping between specific lines of code in the source file and text external to the source, such as an .aspx file.</span></span> <span data-ttu-id="3bbc6-113">如果在編譯期間于指定的原始程式碼中遇到錯誤，則會將它們識別為來自外部來源。</span><span class="sxs-lookup"><span data-stu-id="3bbc6-113">If errors are encountered in the designated source code during compilation, they are identified as coming from the external source.</span></span>  
   
- <span data-ttu-id="a38fe-114">External source directives have no effect on compilation and cannot be nested.</span><span class="sxs-lookup"><span data-stu-id="a38fe-114">External source directives have no effect on compilation and cannot be nested.</span></span> <span data-ttu-id="a38fe-115">They are intended for internal use by the application only.</span><span class="sxs-lookup"><span data-stu-id="a38fe-115">They are intended for internal use by the application only.</span></span>  
+ <span data-ttu-id="3bbc6-114">外部來源指示詞不會影響編譯，而且無法加以嵌套。</span><span class="sxs-lookup"><span data-stu-id="3bbc6-114">External source directives have no effect on compilation and cannot be nested.</span></span> <span data-ttu-id="3bbc6-115">它們僅供應用程式內部使用。</span><span class="sxs-lookup"><span data-stu-id="3bbc6-115">They are intended for internal use by the application only.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a38fe-116">請參閱</span><span class="sxs-lookup"><span data-stu-id="a38fe-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3bbc6-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3bbc6-116">See also</span></span>
 
-- [<span data-ttu-id="a38fe-117">條件式編譯</span><span class="sxs-lookup"><span data-stu-id="a38fe-117">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [<span data-ttu-id="3bbc6-117">條件式編譯</span><span class="sxs-lookup"><span data-stu-id="3bbc6-117">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

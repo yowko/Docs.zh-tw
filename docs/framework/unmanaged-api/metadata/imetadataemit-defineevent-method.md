@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432561"
 ---
-# <a name="imetadataemitdefineevent-method"></a><span data-ttu-id="5de77-102">IMetaDataEmit::DefineEvent 方法</span><span class="sxs-lookup"><span data-stu-id="5de77-102">IMetaDataEmit::DefineEvent Method</span></span>
-<span data-ttu-id="5de77-103">Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.</span><span class="sxs-lookup"><span data-stu-id="5de77-103">Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.</span></span>  
+# <a name="imetadataemitdefineevent-method"></a><span data-ttu-id="98b7c-102">IMetaDataEmit::DefineEvent 方法</span><span class="sxs-lookup"><span data-stu-id="98b7c-102">IMetaDataEmit::DefineEvent Method</span></span>
+<span data-ttu-id="98b7c-103">使用指定的中繼資料簽章建立事件的定義，並取得該事件定義的 token。</span><span class="sxs-lookup"><span data-stu-id="98b7c-103">Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5de77-104">語法</span><span class="sxs-lookup"><span data-stu-id="5de77-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="98b7c-104">語法</span><span class="sxs-lookup"><span data-stu-id="98b7c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineEvent (   
@@ -41,44 +41,44 @@ HRESULT DefineEvent (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5de77-105">參數</span><span class="sxs-lookup"><span data-stu-id="5de77-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="98b7c-105">參數</span><span class="sxs-lookup"><span data-stu-id="98b7c-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="5de77-106">[in] The token for the target class or interface.</span><span class="sxs-lookup"><span data-stu-id="5de77-106">[in] The token for the target class or interface.</span></span> <span data-ttu-id="5de77-107">This is either a `mdTypeDef` or `mdTypeDefNil` token.</span><span class="sxs-lookup"><span data-stu-id="5de77-107">This is either a `mdTypeDef` or `mdTypeDefNil` token.</span></span>  
+ <span data-ttu-id="98b7c-106">在目標類別或介面的 token。</span><span class="sxs-lookup"><span data-stu-id="98b7c-106">[in] The token for the target class or interface.</span></span> <span data-ttu-id="98b7c-107">這可以是 `mdTypeDef` 或 `mdTypeDefNil` token。</span><span class="sxs-lookup"><span data-stu-id="98b7c-107">This is either a `mdTypeDef` or `mdTypeDefNil` token.</span></span>  
   
  `szEvent`  
- <span data-ttu-id="5de77-108">[in] The name of the event.</span><span class="sxs-lookup"><span data-stu-id="5de77-108">[in] The name of the event.</span></span>  
+ <span data-ttu-id="98b7c-108">在事件的名稱。</span><span class="sxs-lookup"><span data-stu-id="98b7c-108">[in] The name of the event.</span></span>  
   
  `dwEventFlags`  
- <span data-ttu-id="5de77-109">[in] Event flags.</span><span class="sxs-lookup"><span data-stu-id="5de77-109">[in] Event flags.</span></span>  
+ <span data-ttu-id="98b7c-109">在事件旗標。</span><span class="sxs-lookup"><span data-stu-id="98b7c-109">[in] Event flags.</span></span>  
   
  `tkEventType`  
- <span data-ttu-id="5de77-110">[in] The token for the event class.</span><span class="sxs-lookup"><span data-stu-id="5de77-110">[in] The token for the event class.</span></span> <span data-ttu-id="5de77-111">This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.</span><span class="sxs-lookup"><span data-stu-id="5de77-111">This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.</span></span>  
+ <span data-ttu-id="98b7c-110">在事件類別的 token。</span><span class="sxs-lookup"><span data-stu-id="98b7c-110">[in] The token for the event class.</span></span> <span data-ttu-id="98b7c-111">這是 `mdTypeDef`、`mdTypeRef`或 `mdTokenNil` token。</span><span class="sxs-lookup"><span data-stu-id="98b7c-111">This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.</span></span>  
   
  `mdAddOn`  
- <span data-ttu-id="5de77-112">[in] The method used to subscribe to the event, or null.</span><span class="sxs-lookup"><span data-stu-id="5de77-112">[in] The method used to subscribe to the event, or null.</span></span>  
+ <span data-ttu-id="98b7c-112">在用來訂閱事件的方法，或 null。</span><span class="sxs-lookup"><span data-stu-id="98b7c-112">[in] The method used to subscribe to the event, or null.</span></span>  
   
  `mdRemoveOn`  
- <span data-ttu-id="5de77-113">[in] The method used to unsubscribe to the event, or null.</span><span class="sxs-lookup"><span data-stu-id="5de77-113">[in] The method used to unsubscribe to the event, or null.</span></span>  
+ <span data-ttu-id="98b7c-113">在用來取消訂閱事件的方法，或 null。</span><span class="sxs-lookup"><span data-stu-id="98b7c-113">[in] The method used to unsubscribe to the event, or null.</span></span>  
   
  `mdFire`  
- <span data-ttu-id="5de77-114">[in] The method used (by a derived class) to raise the event.</span><span class="sxs-lookup"><span data-stu-id="5de77-114">[in] The method used (by a derived class) to raise the event.</span></span>  
+ <span data-ttu-id="98b7c-114">在用來引發事件的方法（由衍生類別）。</span><span class="sxs-lookup"><span data-stu-id="98b7c-114">[in] The method used (by a derived class) to raise the event.</span></span>  
   
  `rmdOtherMethods[]`  
- <span data-ttu-id="5de77-115">[in] An array of tokens for other methods associated with the event.</span><span class="sxs-lookup"><span data-stu-id="5de77-115">[in] An array of tokens for other methods associated with the event.</span></span> <span data-ttu-id="5de77-116">The array is terminated with a `mdMethodDefNil` token.</span><span class="sxs-lookup"><span data-stu-id="5de77-116">The array is terminated with a `mdMethodDefNil` token.</span></span>  
+ <span data-ttu-id="98b7c-115">在與事件相關聯之其他方法的權杖陣列。</span><span class="sxs-lookup"><span data-stu-id="98b7c-115">[in] An array of tokens for other methods associated with the event.</span></span> <span data-ttu-id="98b7c-116">陣列會以 `mdMethodDefNil` token 終止。</span><span class="sxs-lookup"><span data-stu-id="98b7c-116">The array is terminated with a `mdMethodDefNil` token.</span></span>  
   
  `pmdEvent`  
- <span data-ttu-id="5de77-117">[out] The metadata token assigned to the event.</span><span class="sxs-lookup"><span data-stu-id="5de77-117">[out] The metadata token assigned to the event.</span></span>  
+ <span data-ttu-id="98b7c-117">脫銷指派給事件的元資料標記。</span><span class="sxs-lookup"><span data-stu-id="98b7c-117">[out] The metadata token assigned to the event.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5de77-118">需求</span><span class="sxs-lookup"><span data-stu-id="5de77-118">Requirements</span></span>  
- <span data-ttu-id="5de77-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5de77-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="98b7c-118">需求</span><span class="sxs-lookup"><span data-stu-id="98b7c-118">Requirements</span></span>  
+ <span data-ttu-id="98b7c-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="98b7c-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5de77-120">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5de77-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="98b7c-120">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="98b7c-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5de77-121">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5de77-121">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="98b7c-121">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="98b7c-121">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5de77-122">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5de77-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="98b7c-122">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="98b7c-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5de77-123">請參閱</span><span class="sxs-lookup"><span data-stu-id="5de77-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="98b7c-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="98b7c-123">See also</span></span>
 
-- [<span data-ttu-id="5de77-124">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="5de77-124">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="5de77-125">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="5de77-125">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="98b7c-124">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="98b7c-124">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="98b7c-125">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="98b7c-125">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

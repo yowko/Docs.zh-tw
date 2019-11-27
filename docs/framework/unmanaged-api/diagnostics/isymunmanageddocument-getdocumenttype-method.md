@@ -22,23 +22,23 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449186"
 ---
-# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="921d4-102">ISymUnmanagedDocument::GetDocumentType 方法</span><span class="sxs-lookup"><span data-stu-id="921d4-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
-<span data-ttu-id="921d4-103">Gets the document type of this document.</span><span class="sxs-lookup"><span data-stu-id="921d4-103">Gets the document type of this document.</span></span>  
+# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="3a008-102">ISymUnmanagedDocument::GetDocumentType 方法</span><span class="sxs-lookup"><span data-stu-id="3a008-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
+<span data-ttu-id="3a008-103">取得此檔的檔案類型。</span><span class="sxs-lookup"><span data-stu-id="3a008-103">Gets the document type of this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="921d4-104">語法</span><span class="sxs-lookup"><span data-stu-id="921d4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a008-104">語法</span><span class="sxs-lookup"><span data-stu-id="3a008-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDocumentType(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="921d4-105">參數</span><span class="sxs-lookup"><span data-stu-id="921d4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3a008-105">參數</span><span class="sxs-lookup"><span data-stu-id="3a008-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="921d4-106">[out] Pointer to a variable that receives the document type.</span><span class="sxs-lookup"><span data-stu-id="921d4-106">[out] Pointer to a variable that receives the document type.</span></span>  
+ <span data-ttu-id="3a008-106">脫銷接收檔案類型之變數的指標。</span><span class="sxs-lookup"><span data-stu-id="3a008-106">[out] Pointer to a variable that receives the document type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="921d4-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="921d4-107">Return Value</span></span>  
- <span data-ttu-id="921d4-108">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="921d4-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3a008-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="3a008-107">Return Value</span></span>  
+ <span data-ttu-id="3a008-108">如果方法成功，則 S_OK。</span><span class="sxs-lookup"><span data-stu-id="3a008-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="921d4-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="921d4-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3a008-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3a008-109">See also</span></span>
 
-- [<span data-ttu-id="921d4-110">ISymUnmanagedDocument 介面</span><span class="sxs-lookup"><span data-stu-id="921d4-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="3a008-110">ISymUnmanagedDocument 介面</span><span class="sxs-lookup"><span data-stu-id="3a008-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

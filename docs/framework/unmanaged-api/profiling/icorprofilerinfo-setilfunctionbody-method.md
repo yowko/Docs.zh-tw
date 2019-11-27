@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449878"
 ---
-# <a name="icorprofilerinfosetilfunctionbody-method"></a><span data-ttu-id="a506c-102">ICorProfilerInfo::SetILFunctionBody 方法</span><span class="sxs-lookup"><span data-stu-id="a506c-102">ICorProfilerInfo::SetILFunctionBody Method</span></span>
-<span data-ttu-id="a506c-103">Replaces the body of the specified function in the specified module.</span><span class="sxs-lookup"><span data-stu-id="a506c-103">Replaces the body of the specified function in the specified module.</span></span>  
+# <a name="icorprofilerinfosetilfunctionbody-method"></a><span data-ttu-id="d19f2-102">ICorProfilerInfo::SetILFunctionBody 方法</span><span class="sxs-lookup"><span data-stu-id="d19f2-102">ICorProfilerInfo::SetILFunctionBody Method</span></span>
+<span data-ttu-id="d19f2-103">取代指定模組中所指定函式的主體。</span><span class="sxs-lookup"><span data-stu-id="d19f2-103">Replaces the body of the specified function in the specified module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a506c-104">語法</span><span class="sxs-lookup"><span data-stu-id="a506c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d19f2-104">語法</span><span class="sxs-lookup"><span data-stu-id="d19f2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetILFunctionBody(  
@@ -34,32 +34,32 @@ HRESULT SetILFunctionBody(
     [in] LPCBYTE     pbNewILMethodHeader);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a506c-105">參數</span><span class="sxs-lookup"><span data-stu-id="a506c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d19f2-105">參數</span><span class="sxs-lookup"><span data-stu-id="d19f2-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="a506c-106">[in] The ID of the module in which the function resides.</span><span class="sxs-lookup"><span data-stu-id="a506c-106">[in] The ID of the module in which the function resides.</span></span>  
+ <span data-ttu-id="d19f2-106">在函數所在模組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d19f2-106">[in] The ID of the module in which the function resides.</span></span>  
   
  `methodid`  
- <span data-ttu-id="a506c-107">[in] The token of the function for which to replace the body.</span><span class="sxs-lookup"><span data-stu-id="a506c-107">[in] The token of the function for which to replace the body.</span></span>  
+ <span data-ttu-id="d19f2-107">在要取代主體之函式的 token。</span><span class="sxs-lookup"><span data-stu-id="d19f2-107">[in] The token of the function for which to replace the body.</span></span>  
   
  `pbNewILMethodHeader`  
- <span data-ttu-id="a506c-108">[in] The new header for the function.</span><span class="sxs-lookup"><span data-stu-id="a506c-108">[in] The new header for the function.</span></span>  
+ <span data-ttu-id="d19f2-108">在函數的新標頭。</span><span class="sxs-lookup"><span data-stu-id="d19f2-108">[in] The new header for the function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a506c-109">備註</span><span class="sxs-lookup"><span data-stu-id="a506c-109">Remarks</span></span>  
- <span data-ttu-id="a506c-110">The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.</span><span class="sxs-lookup"><span data-stu-id="a506c-110">The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d19f2-109">備註</span><span class="sxs-lookup"><span data-stu-id="d19f2-109">Remarks</span></span>  
+ <span data-ttu-id="d19f2-110">`SetILFunctionBody` 方法會取代中繼資料中函數的相對虛擬位址，使其指向新的函式主體，並視需要調整任何內部資料結構。</span><span class="sxs-lookup"><span data-stu-id="d19f2-110">The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.</span></span>  
   
- <span data-ttu-id="a506c-111">The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.</span><span class="sxs-lookup"><span data-stu-id="a506c-111">The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.</span></span>  
+ <span data-ttu-id="d19f2-111">只有從未由即時（JIT）編譯器編譯的函式，才能呼叫 `SetILFunctionBody` 方法。</span><span class="sxs-lookup"><span data-stu-id="d19f2-111">The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.</span></span>  
   
- <span data-ttu-id="a506c-112">Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.</span><span class="sxs-lookup"><span data-stu-id="a506c-112">Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.</span></span>  
+ <span data-ttu-id="d19f2-112">使用[ICorProfilerInfo：： GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md)方法來配置新方法的空間，以確保緩衝區相容。</span><span class="sxs-lookup"><span data-stu-id="d19f2-112">Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a506c-113">需求</span><span class="sxs-lookup"><span data-stu-id="a506c-113">Requirements</span></span>  
- <span data-ttu-id="a506c-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a506c-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d19f2-113">需求</span><span class="sxs-lookup"><span data-stu-id="d19f2-113">Requirements</span></span>  
+ <span data-ttu-id="d19f2-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d19f2-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a506c-115">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a506c-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d19f2-115">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d19f2-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="a506c-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a506c-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d19f2-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d19f2-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a506c-117">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a506c-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d19f2-117">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d19f2-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a506c-118">請參閱</span><span class="sxs-lookup"><span data-stu-id="a506c-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d19f2-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d19f2-118">See also</span></span>
 
-- [<span data-ttu-id="a506c-119">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="a506c-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="d19f2-119">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="d19f2-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
