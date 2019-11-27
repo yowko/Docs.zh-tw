@@ -36,17 +36,17 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>參數  
  `cData`  
- [in] The length of the buffer provided by the `data` parameter  
+ 在`data` 參數所提供的緩衝區長度  
   
  `pcData`  
- [out] The size and length of the checksum, in bytes.  
+ 脫銷總和檢查碼的大小和長度（以位元組為單位）。  
   
  `data`  
- [out] The buffer that receives the checksum.  
+ 脫銷接收總和檢查碼的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, an error code.  
+ 如果方法成功，則 S_OK;否則，錯誤碼為。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

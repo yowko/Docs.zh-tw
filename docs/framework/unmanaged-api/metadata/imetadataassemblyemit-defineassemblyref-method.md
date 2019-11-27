@@ -42,43 +42,43 @@ HRESULT DefineAssemblyRef (
   
 ## <a name="parameters"></a>參數  
  `pbPublicKeyOrToken`  
- [in] The public key of the publisher of the referenced assembly. The helper function [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) can be used to get the hash of the public key to pass as this parameter.  
+ 在所參考元件之發行者的公開金鑰。 協助程式函式[StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md)可以用來取得要當做這個參數傳遞的公開金鑰雜湊。  
   
  `cbPublicKeyOrToken`  
- [in] The size in bytes of `pbPublicKeyOrToken`.  
+ 在`pbPublicKeyOrToken`的大小（以位元組為單位）。  
   
  `szName`  
- [in] The human-readable text name of the assembly. This value must not exceed 1024 characters.  
+ 在元件的人類看得懂的文字名稱。 此值不得超過1024個字元。  
   
  `pMetaData`  
- [in] An ASSEMBLYMETADATA instance that contains the version, platform and locale information of the referenced assembly.  
+ 在ASSEMBLYMETADATA 實例，其中包含所參考元件的版本、平臺和地區設定資訊。  
   
  `pbHashValue`  
- [in] The hash data associated with the referenced assembly. 選擇項。  
+ 在與參考元件相關聯的雜湊資料。 選擇性。  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ 在`pbHashValue`的大小（以位元組為單位）。  
   
  `dwAssemblyRefFlags`  
- [in] A bitwise combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that influence the behavior of the execution engine.  
+ 在[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)值的位元組合，會影響執行引擎的行為。  
   
  `pmdar`  
- [out] A pointer to the returned `AssemblyRef` metadata token.  
+ 脫銷傳回之 `AssemblyRef` 元資料標記的指標。  
   
 ## <a name="remarks"></a>備註  
- One `AssemblyRef` metadata structure must be defined for each assembly that this assembly references.  
+ 您必須針對這個元件所參考的每個元件，定義一個 `AssemblyRef` 元資料結構。  
   
- At run time, the details of a referenced assembly are passed to the assembly resolver with an indication that they represent the "as built" information. The assembly resolver then applies policy.  
+ 在執行時間，參考元件的詳細資料會傳遞至元件解析程式，並指出它們代表「為內建」資訊。 然後，元件解析程式會套用原則。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

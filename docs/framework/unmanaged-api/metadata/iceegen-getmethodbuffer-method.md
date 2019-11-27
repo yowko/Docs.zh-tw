@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436336"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>ICeeGen::GetMethodBuffer 方法
-Gets a buffer of the appropriate size for the method at the specified relative virtual address.  
+取得在指定的相對虛擬位址上，方法之適當大小的緩衝區。  
   
- This method is obsolete and should not be used.  
+ 這個方法已過時，不應使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,20 +38,20 @@ HRESULT GetMethodBuffer (
   
 ## <a name="parameters"></a>參數  
  `RVA`  
- [in] The relative virtual address of the method for which to return a buffer.  
+ 在要傳回緩衝區之方法的相對虛擬位址。  
   
  `lpBuffer`  
- [out] A pointer to the returned buffer.  
+ 脫銷傳回之緩衝區的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

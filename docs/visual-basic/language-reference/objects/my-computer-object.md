@@ -15,16 +15,16 @@ ms.locfileid: "74332119"
 提供的屬性，以操作電腦元件，例如音訊、時鐘、鍵盤、檔案系統等等。  
   
 ## <a name="remarks"></a>備註  
- 如需方法和 `My.Computer` 物件屬性的資訊，請參閱 <xref:Microsoft.VisualBasic.Devices.Computer>。 The base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects.  
+ 如需方法和 `My.Computer` 物件屬性的資訊，請參閱 <xref:Microsoft.VisualBasic.Devices.Computer>。 基底類別 <xref:Microsoft.VisualBasic.Devices.ServerComputer> 提供所有專案中可用的成員。  
   
 ## <a name="requirements"></a>需求  
  **命名空間︰** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Computer> (the base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects).  
+ **類別：** <xref:Microsoft.VisualBasic.Devices.Computer> （基類 <xref:Microsoft.VisualBasic.Devices.ServerComputer> 提供所有專案中可用的成員）。  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **元件：** Visual Basic 執行時間程式庫（在 Microsoft 中）  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [My.Computer.Audio 物件](../../../visual-basic/language-reference/objects/my-computer-audio-object.md)
 - [My.Computer.Clipboard 物件](../../../visual-basic/language-reference/objects/my-computer-clipboard-object.md)

@@ -23,7 +23,7 @@ ms.locfileid: "74443623"
 ---
 # <a name="corelementtype-enumeration"></a>CorElementType 列舉
 
-Specifies a common language runtime <xref:System.Type>, a type modifier, or information about a type in a metadata type signature.
+指定 common language runtime <xref:System.Type>、類型修飾詞，或元資料類型簽章中類型的相關資訊。
 
 ## <a name="syntax"></a>語法
 
@@ -79,73 +79,73 @@ typedef enum CorElementType {
 
 |成員|描述|
 |------------|-----------------|
-|`ELEMENT_TYPE_END`|Used internally.|
-|`ELEMENT_TYPE_VOID`|A void type.|
-|`ELEMENT_TYPE_BOOLEAN`|A Boolean type|
+|`ELEMENT_TYPE_END`|在內部使用。|
+|`ELEMENT_TYPE_VOID`|Void 類型。|
+|`ELEMENT_TYPE_BOOLEAN`|布林值類型|
 |`ELEMENT_TYPE_CHAR`|字元類型。|
-|`ELEMENT_TYPE_I1`|A signed 1-byte integer.|
+|`ELEMENT_TYPE_I1`|帶正負號的1位元組整數。|
 |`ELEMENT_TYPE_U1`|不帶正負號的 1 位元整數。|
-|`ELEMENT_TYPE_I2`|A signed 2-byte integer.|
-|`ELEMENT_TYPE_U2`|An unsigned 2-byte integer.|
-|`ELEMENT_TYPE_I4`|A signed 4-byte integer.|
-|`ELEMENT_TYPE_U4`|An unsigned 4-byte integer.|
-|`ELEMENT_TYPE_I8`|A signed 8-byte integer.|
-|`ELEMENT_TYPE_U8`|An unsigned 8-byte integer.|
-|`ELEMENT_TYPE_R4`|A 4-byte floating point.|
-|`ELEMENT_TYPE_R8`|An 8-byte floating point.|
-|`ELEMENT_TYPE_STRING`|A System.String type.|
-|`ELEMENT_TYPE_PTR`|A pointer type modifier.|
-|`ELEMENT_TYPE_BYREF`|A reference type modifier.|
-|`ELEMENT_TYPE_VALUETYPE`|A value type modifier.|
-|`ELEMENT_TYPE_CLASS`|A class type modifier.|
-|`ELEMENT_TYPE_VAR`|A class variable type modifier.|
-|`ELEMENT_TYPE_ARRAY`|A multi-dimensional array type modifier.|
-|`ELEMENT_TYPE_GENERICINST`|A type modifier for generic types.|
+|`ELEMENT_TYPE_I2`|帶正負號的2位元組整數。|
+|`ELEMENT_TYPE_U2`|不帶正負號的2位元組整數。|
+|`ELEMENT_TYPE_I4`|帶正負號的4位元組整數。|
+|`ELEMENT_TYPE_U4`|不帶正負號的4位元組整數。|
+|`ELEMENT_TYPE_I8`|帶正負號的8位元組整數。|
+|`ELEMENT_TYPE_U8`|不帶正負號的8位元組整數。|
+|`ELEMENT_TYPE_R4`|4位元組浮點數。|
+|`ELEMENT_TYPE_R8`|8位元組浮點數。|
+|`ELEMENT_TYPE_STRING`|System.string 類型。|
+|`ELEMENT_TYPE_PTR`|指標類型修飾詞。|
+|`ELEMENT_TYPE_BYREF`|參考型別修飾詞。|
+|`ELEMENT_TYPE_VALUETYPE`|實值型別修飾詞。|
+|`ELEMENT_TYPE_CLASS`|類別類型修飾詞。|
+|`ELEMENT_TYPE_VAR`|類別變數類型修飾詞。|
+|`ELEMENT_TYPE_ARRAY`|多維度陣列型別修飾詞。|
+|`ELEMENT_TYPE_GENERICINST`|泛型型別的類型修飾詞。|
 |`ELEMENT_TYPE_TYPEDBYREF`|具型別參考。|
-|`ELEMENT_TYPE_I`|Size of a native integer.|
-|`ELEMENT_TYPE_U`|Size of an unsigned native integer.|
-|`ELEMENT_TYPE_FNPTR`|A pointer to a function.|
-|`ELEMENT_TYPE_OBJECT`|A System.Object type.|
-|`ELEMENT_TYPE_SZARRAY`|A single-dimensional, zero lower-bound array type modifier.|
-|`ELEMENT_TYPE_MVAR`|A method variable type modifier.|
-|`ELEMENT_TYPE_CMOD_REQD`|A C language required modifier.|
-|`ELEMENT_TYPE_CMOD_OPT`|A C language optional modifier.|
-|`ELEMENT_TYPE_INTERNAL`|Used internally.|
+|`ELEMENT_TYPE_I`|原生整數的大小。|
+|`ELEMENT_TYPE_U`|不帶正負號的原生整數大小。|
+|`ELEMENT_TYPE_FNPTR`|函式的指標。|
+|`ELEMENT_TYPE_OBJECT`|System.object 類型。|
+|`ELEMENT_TYPE_SZARRAY`|一維、零下限陣列類型修飾詞。|
+|`ELEMENT_TYPE_MVAR`|方法變數類型修飾詞。|
+|`ELEMENT_TYPE_CMOD_REQD`|C 語言所需的修飾詞。|
+|`ELEMENT_TYPE_CMOD_OPT`|C 語言選用修飾詞。|
+|`ELEMENT_TYPE_INTERNAL`|在內部使用。|
 |`ELEMENT_TYPE_MAX`|類型無效。|
-|`ELEMENT_TYPE_MODIFIER`|Used internally.|
-|`ELEMENT_TYPE_SENTINEL`|A type modifier that is a sentinel for a list of a variable number of parameters.|
-|`ELEMENT_TYPE_PINNED`|Used internally.|
+|`ELEMENT_TYPE_MODIFIER`|在內部使用。|
+|`ELEMENT_TYPE_SENTINEL`|類型修飾詞，這是可變數數目之參數清單的 sentinel。|
+|`ELEMENT_TYPE_PINNED`|在內部使用。|
 
 ## <a name="remarks"></a>備註
 
-The type modifiers form the basis for representing more complex types. A `CorElementType` type modifier value is applied to the value that immediately follows it in the type signature. The value that follows the `CorElementType` type modifier value can be a `CorElementType` simple type value, a metadata token, or other value, as specified in the following table.
+類型修飾詞會形成代表更複雜類型的基礎。 `CorElementType` 型別修飾詞值會套用至緊接在型別簽章中的值後面。 在 `CorElementType` 的類型修飾詞值之後的值可以是 `CorElementType` 的簡單類型值、元資料標記或其他值，如下表所指定。
 
 > [!NOTE]
-> All numbers (*number*, *argument Count*, *metadata token*, *rank*, *count*, and *bound*) are stored as compressed integers. See [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) on the ECMA Web site for details.
+> 所有數位（*數位*、*引數計數*、*元資料標記*、順*位*、*計數*和系*結）都會*儲存為壓縮整數。 如需詳細資訊，請參閱 ECMA 網站上的[標準 ECMA-335-通用語言基礎結構（CLI）](https://go.microsoft.com/fwlink/?LinkID=116487) 。
 
-|Type modifier|格式|
+|類型修飾詞|格式|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<a `CorElementType` value>|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<a `CorElementType` value>|
-|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<an `mdTypeDef` metadata token>|
-|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<an `mdTypeDef` metadata token>|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<number>|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN>|
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<an `mdTypeDef` metadata token> \<argument Count> \<arg1> ... \<argN>|
-|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<complete signature for the function, including calling convention>|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<a `CorElementType` value>|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<number>|
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<a `mdTypeRef` or `mdTypeDef` metadata token>|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<a `mdTypeRef` or `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<`CorElementType` 值 >|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<`CorElementType` 值 >|
+|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<`mdTypeDef` 元資料標記 >|
+|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<`mdTypeDef` 元資料標記 >|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<號碼 >|
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<`CorElementType` 值 > \<排名 > \<count1 > \<bound1 > ... \<countN > \<boundN >|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<`mdTypeDef` 元資料標記 > \<引數計數 > \<arg1 > ... \<...Argn >|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<函式的完整簽章，包括呼叫慣例 >|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<`CorElementType` 值 >|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<號碼 >|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<`mdTypeRef` 或 `mdTypeDef` 元資料標記 >|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<`mdTypeRef` 或 `mdTypeDef` 元資料標記 >|
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**Header:** CorHdr.h
+**標頭：** Corhdr.h。h
 
 **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

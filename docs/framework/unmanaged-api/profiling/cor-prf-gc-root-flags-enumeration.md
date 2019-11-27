@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449466"
 ---
 # <a name="cor_prf_gc_root_flags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS 列舉
-Indicates a property of a garbage collection root.  
+表示垃圾收集根目錄的屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,13 +39,13 @@ typedef enum {
   
 |成員|描述|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_PINNING`|The root prevents a garbage collection from moving the object.|  
-|`COR_PRF_GC_ROOT_WEAKREF`|The root does not prevent garbage collection.|  
-|`COR_PRF_GC_ROOT_INTERIOR`|The root refers to a field of the object rather than the object itself.|  
-|`COR_PRF_GC_ROOT_REFCOUNTED`|The root prevents garbage collection if the reference count of the object is a certain value.|  
+|`COR_PRF_GC_ROOT_PINNING`|根會防止垃圾收集移動物件。|  
+|`COR_PRF_GC_ROOT_WEAKREF`|根不會防止垃圾收集。|  
+|`COR_PRF_GC_ROOT_INTERIOR`|根是指物件的欄位，而不是物件本身。|  
+|`COR_PRF_GC_ROOT_REFCOUNTED`|如果物件的參考計數是特定值，則根目錄會防止垃圾收集。|  
   
 ## <a name="remarks"></a>備註  
- `COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots. However, not all roots are special. For example, some roots are not weak references, interior pointers, pinned, or reference-counted. For such roots, there are no flags to convey. Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.  
+ `COR_PRF_GC_ROOT_FLAGS` 是一個位元遮罩，可提供特殊根的其他相關資訊。 不過，並非所有的根都是特殊的。 例如，某些根不是弱式參考、內部指標、固定或參考計數。 對於這類根，沒有可傳達的旗標。 因此，使用這個列舉的方法（例如[ICorProfilerCallback2：： RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)方法）會傳送0做為旗標位元遮罩，表示所有旗標都已關閉。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -56,6 +56,6 @@ typedef enum {
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

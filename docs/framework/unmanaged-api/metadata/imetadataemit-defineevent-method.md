@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432561"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent 方法
-Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.  
+使用指定的中繼資料簽章建立事件的定義，並取得該事件定義的 token。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,42 +43,42 @@ HRESULT DefineEvent (
   
 ## <a name="parameters"></a>參數  
  `td`  
- [in] The token for the target class or interface. This is either a `mdTypeDef` or `mdTypeDefNil` token.  
+ 在目標類別或介面的 token。 這可以是 `mdTypeDef` 或 `mdTypeDefNil` token。  
   
  `szEvent`  
- [in] The name of the event.  
+ 在事件的名稱。  
   
  `dwEventFlags`  
- [in] Event flags.  
+ 在事件旗標。  
   
  `tkEventType`  
- [in] The token for the event class. This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.  
+ 在事件類別的 token。 這是 `mdTypeDef`、`mdTypeRef`或 `mdTokenNil` token。  
   
  `mdAddOn`  
- [in] The method used to subscribe to the event, or null.  
+ 在用來訂閱事件的方法，或 null。  
   
  `mdRemoveOn`  
- [in] The method used to unsubscribe to the event, or null.  
+ 在用來取消訂閱事件的方法，或 null。  
   
  `mdFire`  
- [in] The method used (by a derived class) to raise the event.  
+ 在用來引發事件的方法（由衍生類別）。  
   
  `rmdOtherMethods[]`  
- [in] An array of tokens for other methods associated with the event. The array is terminated with a `mdMethodDefNil` token.  
+ 在與事件相關聯之其他方法的權杖陣列。 陣列會以 `mdMethodDefNil` token 終止。  
   
  `pmdEvent`  
- [out] The metadata token assigned to the event.  
+ 脫銷指派給事件的元資料標記。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

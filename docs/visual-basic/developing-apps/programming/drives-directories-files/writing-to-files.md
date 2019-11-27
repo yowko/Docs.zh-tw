@@ -19,7 +19,7 @@ ms.locfileid: "74352143"
 
 本節說明如何執行涉及寫入檔案的工作。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
  [如何：將文字寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
  示範如何寫入文字檔。  
@@ -36,7 +36,7 @@ ms.locfileid: "74352143"
  [如何：以 StreamWriter 將文字寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
  示範如何使用 <xref:System.IO.StreamWriter?displayProperty=nameWithType> 物件寫入檔案。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  描述 `My.Computer.FileSystem` 物件及其方法和屬性。  

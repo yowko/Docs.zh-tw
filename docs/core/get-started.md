@@ -21,7 +21,7 @@ ms.locfileid: "74428877"
 
 首先，在您的電腦上下載並安裝 [.NET Core SDK](https://dotnet.microsoft.com/download)。
 
-接下來，開啟終端機，例如 **PowerShell**、**命令提示字元**或 **bash**。 Type the following `dotnet` commands to create and run a C# application:
+接下來，開啟終端機，例如 **PowerShell**、**命令提示字元**或 **bash**。 輸入下列 `dotnet` 命令來建立和執行C#應用程式：
 
 ```dotnetcli
 dotnet new console --output sample1
@@ -52,20 +52,20 @@ Hello World!
 - 觀看影片以了解[如何安裝及使用 Visual Studio 2017 和 .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/)。
 - [使用命令列開始使用 .NET Core。](tutorials/using-with-xplat-cli.md)
 
-See the [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-windows) article for a list of the supported Windows versions.
+如需支援的 Windows 版本清單，請參閱[.Net Core 相依性和需求](install/dependencies.md?tabs=netcore30&pivots=os-windows)一文。
 
 # <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
-You can get started developing .NET Core application by following these step-by-step tutorials:
+依照下列逐步教學課程，您可以開始開發 .NET Core 應用程式：
 
 - [使用命令列開始使用 .NET Core。](tutorials/using-with-xplat-cli.md)
 - 觀看影片以了解[使用 C# 和 .NET Core 在 Ubuntu 上開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)。
 
-See the [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-linux) article for a list of the supported Linux distros and versions.
+如需支援的 Linux 散發版本和版本清單，請參閱[.Net Core 相依性和需求](install/dependencies.md?tabs=netcore30&pivots=os-linux)一文。
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-You can get started developing .NET Core application by following these step-by-step tutorials:
+依照下列逐步教學課程，您可以開始開發 .NET Core 應用程式：
 
 - 觀看影片以了解[使用 C# 和 .NET Core 在 macOS 上開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)。
 - [使用 Visual Studio Code 在 macOS 上開始使用 .NET Core。](tutorials/using-on-macos.md)
@@ -73,6 +73,6 @@ You can get started developing .NET Core application by following these step-by-
 - [使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core。](tutorials/using-on-mac-vs.md)
 - [使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 方案。](tutorials/using-on-mac-vs-full-solution.md)
 
-See the [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-macos) article for a list of the supported OS X / macOS versions.
+如需支援的 OS X/macOS 版本清單，請參閱[.Net Core 相依性和需求](install/dependencies.md?tabs=netcore30&pivots=os-macos)一文。
 
 ---

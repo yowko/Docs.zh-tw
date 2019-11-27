@@ -23,13 +23,13 @@ ms.locfileid: "74349234"
 
  下表列出用來示範如何存取應用程式表單的範例。  
   
-|若要|請參閱|  
+|進行|請參閱|  
 |---|---|  
 |從應用程式的表單存取另一個表單。|[My.Forms 物件](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
 |顯示應用程式所有開啟表單的標題。|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
 |當應用程式啟動時，使用狀態資訊更新啟動顯示畫面。|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>

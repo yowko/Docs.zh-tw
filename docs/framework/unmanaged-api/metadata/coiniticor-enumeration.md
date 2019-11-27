@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444273"
 ---
 # <a name="coiniticor-enumeration"></a>COINITICOR 列舉
-Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.  
+指定在初始化 common language runtime 時， [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)所使用的常數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,17 +37,17 @@ typedef enum tagCOINITCOR
   
 |成員|描述|  
 |------------|-----------------|  
-|`COINITCOR`|Indicates the default initialization mode.|  
+|`COINITCOR`|表示預設初始化模式。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

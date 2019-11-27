@@ -23,7 +23,7 @@ ms.locfileid: "74345631"
   
 1. 判斷要將數據機連接至哪一個序列埠。 此範例假設數據機是在 COM1。  
   
-2. 請使用 `My.Computer.Ports.OpenSerialPort` 方法取得連接埠的參考。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>。  
+2. 請使用 `My.Computer.Ports.OpenSerialPort` 方法取得連接埠的參考。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>。  
   
      `Using` 區塊允許應用程式即使產生例外狀況，也可關閉序列埠。 所有管理序列埠的程式碼都應該出現在此區塊或 `Try...Catch...Finally` 區塊內。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "74345631"
 
  此範例需要 <xref:System?displayProperty=nameWithType> 命名空間的參考。  
   
-## <a name="robust-programming"></a>穩固程式設計  
+## <a name="robust-programming"></a>最佳化程式設計  
 
  此範例假設數據機已連接至 COM1。 建議您的程式碼允許使用者從可用序列埠清單中選取想要的序列埠。 如需詳細資訊，請參閱[如何：顯示可用的序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "74345631"
   
  在此範例中，應用程式會在撥接數據機之後中斷與序列埠的連接。 實際上，您會想要將資料傳輸至數據機，或從中傳輸出。 如需詳細資訊，請參閱[如何：接收來自序列埠的字串](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>

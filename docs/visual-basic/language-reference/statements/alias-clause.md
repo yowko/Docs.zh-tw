@@ -14,17 +14,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349152"
 ---
 # <a name="alias-clause-visual-basic"></a>Alias 子句 (Visual Basic)
-Indicates that an external procedure has another name in its DLL.  
+表示外部程式在其 DLL 中有另一個名稱。  
   
 ## <a name="remarks"></a>備註  
- The `Alias` keyword can be used in this context:  
+ `Alias` 關鍵字可以在此內容中使用：  
   
  [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- In the following example, the `Alias` keyword is used to provide the name of the function in advapi32.dll, `GetUserNameA`, that `getUserName` is used in place of in this example. Function `getUserName` is called in sub `getUser`, which displays the name of the current user.  
+ 在下列範例中，`Alias` 關鍵字是用來在 advapi32.dll 中提供函式的名稱，`GetUserNameA`，在此範例中會使用 `getUserName` 來取代。 函式 `getUserName` 是在子 `getUser`中呼叫，它會顯示目前使用者的名稱。  
   
  [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

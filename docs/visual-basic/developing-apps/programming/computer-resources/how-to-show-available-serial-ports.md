@@ -38,16 +38,16 @@ ms.locfileid: "74345566"
   
 - <xref:System.Windows.Forms> 命名空間成員的存取權。 新增 `Imports` 陳述式 (如果未在程式碼中完整限定成員名稱)。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
-- 您的表單會有名為 `ListBox1` 的 <xref:System.Windows.Forms.ListBox> 控制項。  
+- 您的表單會有名為 <xref:System.Windows.Forms.ListBox> 的 `ListBox1` 控制項。  
   
-## <a name="robust-programming"></a>穩固程式設計  
+## <a name="robust-programming"></a>最佳化程式設計  
 
  您不一定要使用 <xref:System.Windows.Forms.ListBox> 控制項來顯示可用的序列埠名稱。 相反地，您可以使用 <xref:System.Windows.Forms.ComboBox> 或其他控制項。 如果應用程式不需要使用者的回應，您還可以使用 <xref:System.Windows.Forms.TextBox> 控制項來顯示資訊。  
   
 > [!NOTE]
 > 在 Windows 98 上執行時，`My.Computer.Ports.SerialPortNames` 所傳回的序列埠名稱可能不正確。 為了避免應用程式錯誤，請在使用序列埠名稱開啟序列埠時，使用例外狀況處理，例如 `Try...Catch...Finally` 陳述式或 `Using` 陳述式。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - [如何：撥接與序列埠連接的數據機](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)

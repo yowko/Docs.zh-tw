@@ -16,45 +16,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351753"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>在 Visual Basic 中存取 XML
-Visual Basic provides XML axis properties for accessing and navigating [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] structures. These properties use a special syntax to enable you to access elements and attributes by specifying the XML names.  
+Visual Basic 提供 XML 軸屬性來存取和流覽 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 結構。 這些屬性會使用特殊語法，讓您藉由指定 XML 名稱來存取元素和屬性。  
   
- The following table lists the language features that enable you to access XML elements and attributes in Visual Basic.  
+ 下表列出的語言功能可讓您存取 Visual Basic 中的 XML 元素和屬性。  
   
 ### <a name="xml-axis-properties"></a>XML 軸屬性  
   
-|Property description|範例|描述|  
+|屬性描述|範例|描述|  
 |--------------------------|-------------|-----------------|  
-|*child axis*|`contact.<phone>`|Gets all `phone` elements that are child elements of the `contact` element.|  
-|*attribute axis*|`phone.@type`|Gets all `type` attributes of the `phone` element.|  
-|*descendant axis*|`contacts...<name>`|Gets all `name` elements of the `contacts` element, regardless of how deep in the hierarchy they occur.|  
-|*extension indexer*|`contacts...<name>(0)`|Gets the first `name` element from the sequence.|  
-|*值*|`contacts...<name>.Value`|Gets the string representation of the first object in the sequence, or `Nothing` if the sequence is empty.|  
+|*子軸*|`contact.<phone>`|取得屬於 `contact` 元素之子專案的所有 `phone` 專案。|  
+|*屬性軸*|`phone.@type`|取得 `phone` 元素的所有 `type` 屬性。|  
+|*子代軸*|`contacts...<name>`|取得 `contacts` 專案的所有 `name` 專案，不論其發生的階層深度為何。|  
+|*延伸模組索引子*|`contacts...<name>(0)`|從序列中取得第一個 `name` 元素。|  
+|*值*|`contacts...<name>.Value`|取得序列中第一個物件的字串表示，如果序列是空的，則為 `Nothing`。|  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [如何：存取 XML 子系項目](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
- Shows how to use a descendant axis property to access all XML elements that have a specified name and that are contained under a specified XML element.  
+ 示範如何使用子代軸屬性來存取所有具有指定名稱且包含在指定之 XML 專案底下的 XML 元素。  
   
  [如何：存取 XML 子項目](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-child-elements.md)  
- Shows how to use a child axis property to access all XML child elements that have a specified name in an XML element.  
+ 示範如何使用子軸屬性來存取 XML 元素中所有具有指定名稱的 XML 子專案。  
   
  [如何：存取 XML 屬性](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-attributes.md)  
- Shows how to use an attribute axis property to access all XML attributes that have a specified name in an XML element.  
+ 示範如何使用屬性軸屬性來存取 XML 元素中所有具有指定名稱的 XML 屬性。  
   
  [如何：宣告和使用 XML 命名空間前置詞](../../../../visual-basic/programming-guide/language-features/xml/how-to-declare-and-use-xml-namespace-prefixes.md)  
- Shows how to declare an XML namespace prefix and use it to create and access XML elements.  
+ 示範如何宣告 XML 命名空間前置詞，並使用它來建立和存取 XML 元素。  
   
 ## <a name="related-sections"></a>相關章節  
  [XML 軸屬性](../../../../visual-basic/language-reference/xml-axis/index.md)  
- Provides links to sections describing the various XML access properties.  
+ 提供描述各種 XML 存取屬性之區段的連結。  
   
  [Visual Basic 中的 LINQ to XML 概觀](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Provides an introduction to using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
+ 提供在 Visual Basic 中使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的簡介。  
   
  [在 Visual Basic 中建立 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- Provides an introduction to using XML literals in Visual Basic.  
+ 提供在 Visual Basic 中使用 XML 常值的簡介。  
   
  [在 Visual Basic 中管理 XML](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
- Provides links to sections about loading and modifying XML in Visual Basic.  
+ 提供有關在 Visual Basic 中載入和修改 XML 的章節連結。  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Provides links to sections describing how to use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.
+ 提供章節的連結，說明如何在 Visual Basic 中使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。

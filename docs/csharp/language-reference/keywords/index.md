@@ -26,7 +26,7 @@ ms.locfileid: "74428478"
 |---|---|---|---|  
 |[abstract](abstract.md)|[as](../operators/type-testing-and-cast.md#as-operator)|[base](base.md)|[bool](bool.md)|  
 |[break](break.md)|[byte](../builtin-types/integral-numeric-types.md)|[case](switch.md)|[catch](try-catch.md)|  
-|[char](../builtin-types/char.md)|[checked](checked.md)|[class](class.md)|[const](const.md)|  
+|[char](../builtin-types/char.md)|[checked](checked.md)|[Class - 類別](class.md)|[const](const.md)|  
 |[continue](continue.md)|[decimal](../builtin-types/floating-point-numeric-types.md)|[default](default.md)|[delegate](../builtin-types/reference-types.md)|  
 |[do](do.md)|[double](../builtin-types/floating-point-numeric-types.md)|[else](if-else.md)|[enum](enum.md)|  
 |[event](event.md)|[explicit](../operators/user-defined-conversion-operators.md)|[extern](extern.md)|[false](false-literal.md)|  
@@ -41,7 +41,7 @@ ms.locfileid: "74428478"
 [sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[string](../builtin-types/reference-types.md)|
 |[struct](struct.md)|[switch](switch.md)|[this](this.md)|[throw](throw.md)|
 |[true](true-literal.md)|[try](try-catch.md)|[typeof](../operators/type-testing-and-cast.md#typeof-operator)|[uint](../builtin-types/integral-numeric-types.md)|
-|[ulong](../builtin-types/integral-numeric-types.md)|[unchecked](unchecked.md)|[unsafe](unsafe.md)|[ushort](../builtin-types/integral-numeric-types.md)|
+|[ulong](../builtin-types/integral-numeric-types.md)|[unchecked](unchecked.md)|[Unsafe.DangerousAPI](unsafe.md)|[ushort](../builtin-types/integral-numeric-types.md)|
 |[using](using.md)|[using static](using-static.md)|[virtual](virtual.md)|[void](void.md)|
 |[volatile](volatile.md)|[while](while.md)|
 
@@ -59,10 +59,10 @@ ms.locfileid: "74428478"
 |[let](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
 |[orderby](orderby-clause.md)|[partial (型別)](partial-type.md)|[partial (方法)](partial-method.md)|
 |[remove](remove.md)|[select](select-clause.md)|[set](set.md)|
-|[unmanaged (generic type constraint)](where-generic-type-constraint.md)|[值](value.md)|[var](var.md)|
+|[非受控（泛型型別條件約束）](where-generic-type-constraint.md)|[值](value.md)|[var](var.md)|
 |[when (篩選條件)](when.md)|[where (泛型型別條件約束)](where-generic-type-constraint.md)|[where (查詢子句)](where-clause.md)|
 |[yield](yield.md)| | |
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)

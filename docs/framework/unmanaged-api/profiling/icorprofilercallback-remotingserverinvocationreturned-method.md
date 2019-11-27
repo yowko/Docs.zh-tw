@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445779"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationreturned-method"></a>ICorProfilerCallback::RemotingServerInvocationReturned 方法
-Notifies the profiler that the process has finished invoking a method in response to a remote method invocation request.  
+通知分析工具，進程已完成叫用方法以回應遠端方法調用要求。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,6 +40,6 @@ HRESULT RemotingServerInvocationReturned();
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

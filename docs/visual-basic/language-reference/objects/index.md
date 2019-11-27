@@ -45,7 +45,7 @@ ms.locfileid: "74344160"
 |[My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)|提供屬性，以建立和存取目前專案所參考之每個 Web 服務的單一執行個體。|  
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|提供用於剖析結構化文字檔的方法和屬性。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)
 - [Visual Basic](../../../visual-basic/index.md)

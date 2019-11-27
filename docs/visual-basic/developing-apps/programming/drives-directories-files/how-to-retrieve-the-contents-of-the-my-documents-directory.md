@@ -21,7 +21,7 @@ ms.locfileid: "74334541"
   
      [!code-vb[VbVbcnMyFileSystem#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#15)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>

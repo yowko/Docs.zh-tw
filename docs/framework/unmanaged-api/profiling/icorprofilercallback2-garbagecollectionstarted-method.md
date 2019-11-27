@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439823"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>ICorProfilerCallback2::GarbageCollectionStarted 方法
-Notifies the code profiler that garbage collection has started.  
+通知程式碼分析工具已開始垃圾收集。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,20 +36,20 @@ HRESULT GarbageCollectionStarted(
   
 ## <a name="parameters"></a>參數  
  `cGenerations`  
- [in] The total number of entries in the `generationCollected` array.  
+ 在`generationCollected` 陣列中的專案總數。  
   
  `generationCollected`  
- [in] An array of Boolean values, which are `true` if the generation that corresponds to the array index is being collected by this garbage collection; otherwise, `false`.  
+ 在布林值的陣列，如果對應至陣列索引的產生是由此垃圾收集所收集，則為 `true`。否則，`false`。  
   
- The array is indexed by a value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration, which indicates the generation.  
+ 陣列是以[COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md)列舉的值來編制索引，這表示產生。  
   
  `reason`  
- [in] A value of the [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) enumeration that indicates the reason the garbage collection was induced.  
+ 在[COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md)列舉的值，表示垃圾收集引發的原因。  
   
 ## <a name="remarks"></a>備註  
- All callbacks that pertain to this garbage collection will occur between the `GarbageCollectionStarted` callback and the corresponding [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback. These callbacks need not occur on the same thread.  
+ 與此垃圾收集相關的所有回呼都會在 `GarbageCollectionStarted` 回呼與對應的[ICorProfilerCallback2：： GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)回呼之間發生。 這些回呼不需要在相同的執行緒上發生。  
   
- It is safe for the profiler to inspect objects in their original locations during the `GarbageCollectionStarted` callback. The garbage collector will begin moving objects after the return from `GarbageCollectionStarted`. After the profiler has returned from this callback, the profiler should consider all object IDs to be invalid until it receives a `ICorProfilerCallback2::GarbageCollectionFinished` callback.  
+ 在 `GarbageCollectionStarted` 回呼期間，分析工具可以安全地檢查其原始位置中的物件。 垃圾收集行程會在從 `GarbageCollectionStarted`返回後開始移動物件。 在分析工具從此回呼傳回之後，分析工具應該將所有的物件識別碼視為無效，直到收到 `ICorProfilerCallback2::GarbageCollectionFinished` 回呼為止。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -60,7 +60,7 @@ HRESULT GarbageCollectionStarted(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

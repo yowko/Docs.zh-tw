@@ -16,21 +16,21 @@ ms.locfileid: "74448800"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>Managed 程式碼的 UI 自動化用戶端
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本章節包含概觀和使用說明主題，可協助您開發使用者介面自動化用戶端。  
   
-## <a name="in-this-section"></a>本章節內容  
- [UI 自動化和畫面縮放比例](ui-automation-and-screen-scaling.md)  
- [標準控制項的 UI 自動化支援](ui-automation-support-for-standard-controls.md)  
- [用戶端的 UI 自動化事件](ui-automation-events-for-clients.md)  
- [UI 自動化用戶端中的快取](caching-in-ui-automation-clients.md)  
- [用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)  
- [UI 自動化用戶端的控制項模式對應](control-pattern-mapping-for-ui-automation-clients.md)  
- [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)  
- [取得 UI 自動化項目](obtaining-ui-automation-elements.md)  
- [UI 自動化執行緒問題](ui-automation-threading-issues.md)  
- [「如何」主題](ui-automation-clients-for-managed-code-how-to-topics.md)  
+## <a name="in-this-section"></a>本節內容  
+ [UI Automation and Screen Scaling](ui-automation-and-screen-scaling.md)  
+ [UI Automation Support for Standard Controls](ui-automation-support-for-standard-controls.md)  
+ [UI Automation Events for Clients](ui-automation-events-for-clients.md)  
+ [Caching in UI Automation Clients](caching-in-ui-automation-clients.md)  
+ [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)  
+ [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)  
+ [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)  
+ [Obtaining UI Automation Elements](obtaining-ui-automation-elements.md)  
+ [UI Automation Threading Issues](ui-automation-threading-issues.md)  
+ [HOW-TO 主題](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Automation>

@@ -18,7 +18,7 @@ ms.locfileid: "74348083"
 > [!NOTE]
 > 您也可以建立並呼叫函式。 如需詳細資訊，請參閱 [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)和[如何：建立傳回值的程序](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [轉換函式](../../../visual-basic/language-reference/functions/conversion-functions.md)  
   
  [數學函式](../../../visual-basic/language-reference/functions/math-functions.md)  

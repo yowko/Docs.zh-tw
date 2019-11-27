@@ -24,7 +24,7 @@ ms.locfileid: "74428902"
 - 自封式部署
 - 有協力廠商相依性的自封式部署
 
-For information on using Visual Studio to develop .NET Core applications, see [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
+如需使用 Visual Studio 開發 .NET Core 應用程式的相關資訊，請參閱[.Net core 相依性和需求](../install/dependencies.md?tabs=netcore30&pivots=os-windows)。
 
 ## <a name="framework-dependent-deployment"></a>與 Framework 相依的部署
 
@@ -53,17 +53,17 @@ For information on using Visual Studio to develop .NET Core applications, see [.
 
       1. 以滑鼠右鍵按一下方案總管中的專案 (而非方案)，然後選取 [發行]。
 
-      1. 在 [發行]索引標籤中，選取 [發行]。 Visual Studio 會將構成應用程式的檔案寫入至本機檔案系統。
+      1. 在 [發行] 索引標籤中，選取 [發行]。 Visual Studio 會將構成應用程式的檔案寫入至本機檔案系統。
 
       1. [發行] 索引標籤現在會顯示單一設定檔 **FolderProfile**。 設定檔的組態設定顯示在索引標籤的 [摘要] 區段中。
 
    產生的檔案會放在 Windows 系統上名為 `Publish` 的目錄，以及 Unix 系統上名為 `publish` 的目錄中，而該目錄位於您專案之 *.\bin\release\netcoreapp2.1* 子目錄的子目錄中。
 
-隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其保存。
+隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其儲存。
 
 以任何您想要的方式，部署整組應用程式檔案。 例如，您可以使用簡單的 `copy` 命令將它們封裝在 ZIP 檔案中，或與您選擇的任何安裝套件一起部署。 安裝之後，使用者可以使用 `dotnet` 命令並提供應用程式的檔名 (例如，`dotnet fdd.dll`)，來執行您的應用程式。
 
-除了應用程式二進位檔之外，安裝程式也應該配套共用的 Framework 安裝程式，或勾選為必要條件當成應用程式安裝的一部分。  共用 Framework 安裝需要系統管理員/根目錄存取權，因為它要通行全機器。
+除了應用程式二進位檔之外，安裝程式也應該配套共用的 Framework 安裝程式，，或勾選為必要條件當成應用程式安裝的一部分。  共用 Framework 安裝需要系統管理員/根目錄存取權，因為它要通行全機器。
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>有協力廠商相依性的 Framework 相依部署
 
@@ -71,7 +71,7 @@ For information on using Visual Studio to develop .NET Core applications, see [.
 
 1. 使用 [NuGet 套件管理員]，將 NuGet 套件的參考新增至您的專案；如果您的系統上還沒有該套件，請安裝它。 若要開啟套件管理員，請選取 [工具]  >  [NuGet 套件管理員]  >  [管理方案的 NuGet 套件]。
 
-1. Confirm that your third-party dependencies (for example, `Newtonsoft.Json`) are installed on your system and, if they aren't, install them. [已安裝] 索引標籤會列出您系統上已安裝的 NuGet 套件。 如果 `Newtonsoft.Json` 未列於該處，請選取 [瀏覽] 索引標籤，然後在 [搜尋] 方塊中輸入 "Newtonsoft.Json"。 選取 `Newtonsoft.Json`，並先在右窗格中選取您的專案，然後選取 [安裝]。
+1. 確認您的協力廠商相依性（例如 `Newtonsoft.Json`）已安裝在您的系統上，如果不存在，請安裝它們。 [已安裝] 索引標籤會列出您系統上已安裝的 NuGet 套件。 如果 `Newtonsoft.Json` 未列於該處，請選取 [瀏覽] 索引標籤，然後在 [搜尋] 方塊中輸入 "Newtonsoft.Json"。 選取 `Newtonsoft.Json`，並先在右窗格中選取您的專案，然後選取 [安裝]。
 
 1. 如果 `Newtonsoft.Json` 已安裝在您的系統上，請在 [管理方案的封裝] 索引標籤的右窗格中選取您的專案，以將它新增至您的專案。
 
@@ -87,7 +87,7 @@ For information on using Visual Studio to develop .NET Core applications, see [.
 
 1. 新增應用程式的原始程式碼。
 
-   Open the *Program.cs* or *Program.vb* file in your editor, and replace the auto-generated code with the following code. 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
+   在您的編輯器中開啟*Program.cs*或*Program .vb*檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
@@ -120,7 +120,7 @@ For information on using Visual Studio to develop .NET Core applications, see [.
 
    1. 以滑鼠右鍵按一下 [方案總管] 中的專案 (而非解決方案)，然後選取 [編輯 SCD.csproj]。
 
-   1. 在定義應用程式目標平台之 *csproj* 檔案的 `<PropertyGroup>` 區段中建立 `<RuntimeIdentifiers>` 標記，並指定每個目標平台的執行階段識別碼 (RID)。 請注意，您也必須加上分號來分隔 RID。 如需執行階段識別碼清單，請參閱 [.NET Core RID 類別目錄](../rid-catalog.md)。
+   1. 在定義應用程式目標平台之 `<RuntimeIdentifiers>`csproj`<PropertyGroup>` 檔案的 *區段中建立* 標記，並指定每個目標平台的執行階段識別碼 (RID)。 請注意，您也必須加上分號來分隔 RID。 如需執行階段識別碼清單，請參閱 [Runtime IDentifier catalog](../rid-catalog.md)。
 
    例如，下列範例指出應用程式在 64 位元 Windows 10 作業系統和 64 位元 OS X 版本 10.11 作業系統上執行。
 
@@ -130,7 +130,7 @@ For information on using Visual Studio to develop .NET Core applications, see [.
    </PropertyGroup>
    ```
 
-   請注意，`<RuntimeIdentifiers>` 項目可以移至您 *csproj* 檔案中的任何 `<PropertyGroup>`。 本節稍後會提供完整的 *csproj* 檔案範例。
+   請注意，`<RuntimeIdentifiers>` 項目可以移至您 `<PropertyGroup>`csproj*檔案中的任何*。 本節稍後會提供完整的 *csproj* 檔案範例。
 
 1. 發行您的應用程式。
 
@@ -142,15 +142,15 @@ For information on using Visual Studio to develop .NET Core applications, see [.
 
       1. 以滑鼠右鍵按一下方案總管中的專案 (而非方案)，然後選取 [發行]。
 
-      1. 在 [發行]索引標籤中，選取 [發行]。 Visual Studio 會將構成應用程式的檔案寫入至本機檔案系統。
+      1. 在 [發行] 索引標籤中，選取 [發行]。 Visual Studio 會將構成應用程式的檔案寫入至本機檔案系統。
 
-      1. [發行] 索引標籤現在會顯示單一設定檔 **FolderProfile**。 The profile's configuration settings are shown in the **Summary** section of the tab. **Target Runtime** identifies which runtime has been published, and **Target Location** identifies where the files for the self-contained deployment were written.
+      1. [發行] 索引標籤現在會顯示單一設定檔 **FolderProfile**。 設定檔的設定會顯示在索引標籤的 [**摘要**] 區段中。**目標運行**時間會識別已發行的執行時間，而 [**目標位置**] 則會識別要將獨立部署的檔案寫入哪個位置。
 
       1. Visual Studio 預設會將所有發行的檔案寫入到單一目錄。 為了方便起見，最好是建立每個目標執行階段的個別設定檔，並將已發行的檔案放在特定平台目錄中。 這牽涉到建立每個目標平台的個別發行設定檔。 因此，現在請執行下列作業來重建每個平台的應用程式：
 
          1. 選取 [建立新設定檔] 中的 [發行] 對話方塊。
 
-         1. 在 [挑選發行目標] 對話方塊中，將 [選擇資料夾] 位置變更為 *bin\Release\PublishOutput\win10 x64*。 選取 [確定]。
+         1. 在 [挑選發行目標] 對話方塊中，將 [選擇資料夾] 位置變更為 *bin\Release\PublishOutput\win10 x64*。 選取 **[確定]** 。
 
          1. 選取設定檔清單中的新設定檔 (**FolderProfile1**)，並確定 [目標執行階段] 是 `win10-x64`。 如果不是，請選取 [設定]。 在 [設定檔設定] 對話方塊中，將 [目標執行階段] 變更為 `win10-x64`，然後選取 [儲存]。 否則，請選取 [取消]。
 
@@ -160,7 +160,7 @@ For information on using Visual Studio to develop .NET Core applications, see [.
 
       請注意，每個目標位置都包含啟動應用程式所需的一組完整檔案 (應用程式檔案和所有的 .NET Core 檔案)。
 
-隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其保存。
+隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其儲存。
 
 請使用任何您想要的方式，部署已發行的檔案。 例如，您可以使用簡單的 `copy` 命令將它們封裝在 ZIP 檔案中，或與您選擇的任何安裝套件一起部署。
 
@@ -192,7 +192,7 @@ For information on using Visual Studio to develop .NET Core applications, see [.
   
 1. 選取 Visual Studio 發行您應用程式的位置。
 
-   If you're only publishing to a single platform, you can accept the default value in the **Choose a folder** text box; this publishes the framework dependent deployment of your application to the *\<project-directory>\bin\Release\netcoreapp2.1\publish* directory.
+   如果您只是要發行到單一平臺，可以接受 [**選擇資料夾**] 文字方塊中的預設值;這會將應用程式的架構相依部署發佈至 *\<專案目錄 > \bin\Release\netcoreapp2.1\publish*目錄。
 
    如果您要發行到多個平台，請附加識別目標平台的字串。 例如，如果您將字串 "linux" 附加至檔案路徑，Visual Studio 會將您應用程式的 Framework 相依部署發行至 *\<project-directory>\bin\Release\netcoreapp2.1\publish\linux* 目錄。
 
@@ -224,7 +224,7 @@ For information on using Visual Studio to develop .NET Core applications, see [.
 
    請注意，每個目標位置 (在此範例中為 bin\release\netcoreapp2.1\publish\\*profile-name*) 都包含啟動應用程式所需的一組完整檔案 (應用程式檔案和所有的 .NET Core 檔案)。
 
-隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其保存。
+隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其儲存。
 
 請使用任何您想要的方式，部署已發行的檔案。 例如，您可以使用簡單的 `copy` 命令將它們封裝在 ZIP 檔案中，或與您選擇的任何安裝套件一起部署。
 
@@ -268,7 +268,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 1. 使用 [NuGet 套件管理員]，將 NuGet 套件的參考新增至您的專案；如果您的系統上還沒有該套件，請安裝它。 若要開啟套件管理員，請選取 [工具]  >  [NuGet 套件管理員]  >  [管理方案的 NuGet 套件]。
 
-1. Confirm that your third-party dependencies (for example, `Newtonsoft.Json`) are installed on your system and, if they aren't, install them. [已安裝] 索引標籤會列出您系統上已安裝的 NuGet 套件。 如果 `Newtonsoft.Json` 未列於該處，請選取 [瀏覽] 索引標籤，然後在 [搜尋] 方塊中輸入 "Newtonsoft.Json"。 選取 `Newtonsoft.Json`，並先在右窗格中選取您的專案，然後選取 [安裝]。
+1. 確認您的協力廠商相依性（例如 `Newtonsoft.Json`）已安裝在您的系統上，如果不存在，請安裝它們。 [已安裝] 索引標籤會列出您系統上已安裝的 NuGet 套件。 如果 `Newtonsoft.Json` 未列於該處，請選取 [瀏覽] 索引標籤，然後在 [搜尋] 方塊中輸入 "Newtonsoft.Json"。 選取 `Newtonsoft.Json`，並先在右窗格中選取您的專案，然後選取 [安裝]。
 
 1. 如果 `Newtonsoft.Json` 已安裝在您的系統上，請在 [管理方案的封裝] 索引標籤的右窗格中選取您的專案，以將它新增至您的專案。
 
@@ -309,7 +309,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 請注意，您只能將具有協力廠商程式庫的自封式部署，部署到該程式庫支援的平台上。 這類似於在與 Framework 相依的部署中擁有仰賴原生相依性的協力廠商相依性；在其中，原生相依性不會存在於目標平台上，除非先前已在該處安裝這些相依性。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Core 應用程式部署](index.md)
 - [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)

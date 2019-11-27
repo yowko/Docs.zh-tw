@@ -19,7 +19,7 @@ ms.locfileid: "74352077"
 
 ### <a name="to-add-and-configure-the-file-log-listener"></a>新增和設定檔案記錄檔接聽程式
 
-1. 在 方案總管 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。
+1. 在 **方案總管** 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。
 
      \-或-
 
@@ -41,7 +41,7 @@ ms.locfileid: "74352077"
     <add name="FileLogListener" />
     ```
 
-4. 找出巢狀於最上層 `<configuration>` 區段中 `<system.diagnostics>` 區段的 `<sharedListeners>` 區段。
+4. 找出巢狀於最上層 `<sharedListeners>` 區段中 `<system.diagnostics>` 區段的 `<configuration>` 區段。
 
 5. 將此項目加入至該 `<sharedListeners>` 區段︰
 
@@ -66,7 +66,7 @@ ms.locfileid: "74352077"
 
 設定組件的檔案記錄檔接聽程式之後，接聽程式會接收 `My.Application.Log` 從該組件寫入的所有訊息。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>

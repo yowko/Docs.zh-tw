@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448335"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>ISymUnmanagedReader::GetDocuments 方法
-Returns an array of all the documents defined in the symbol store.  
+傳回符號存放區中定義之所有檔的陣列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,17 +40,17 @@ HRESULT GetDocuments (
  [in] `pDocs` 陣列的大小。  
   
  `pcDocs`  
- [out] A pointer to a variable that receives the array length.  
+ 脫銷接收陣列長度之變數的指標。  
   
  `pDocs`  
- [out] A pointer to a variable that receives the document array.  
+ 脫銷接收檔陣列之變數的指標。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

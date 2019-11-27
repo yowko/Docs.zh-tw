@@ -1,5 +1,5 @@
 ---
-title: Variable uses an Automation type not supported
+title: 變數使用不支援的 Automation 類型
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID458
@@ -13,16 +13,16 @@ ms.locfileid: "74344834"
 ---
 # <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>變數使用在 Visual Basic 中不支援的 Automation 類型
 
-You tried to use a variable defined in a type library or object library that has a data type not supported by Visual Basic.
+您嘗試使用類型程式庫或物件程式庫中所定義的變數，但其具有 Visual Basic 不支援的資料類型。
 
-## <a name="to-correct-this-error"></a>更正這個錯誤
+## <a name="to-correct-this-error"></a>若要改正這項錯誤
 
-- Use a variable of a type recognized by Visual Basic.
+- 使用 Visual Basic 所識別之類型的變數。
 
      -或-
 
-- If you encounter this error while using `FileGet` or `FileGetObject`, make sure the file you are trying to use was written to with `FilePut` or `FilePutObject`.
+- 如果您在使用 `FileGet` 或 `FileGetObject`時遇到此錯誤，請確定您嘗試使用的檔案已寫入 `FilePut` 或 `FilePutObject`。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [資料類型](../../../visual-basic/language-reference/data-types/index.md)

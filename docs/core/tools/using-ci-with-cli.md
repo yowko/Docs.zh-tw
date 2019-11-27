@@ -34,7 +34,7 @@ macOS 使用者應使用 PKG 安裝程式。 在 Linux 上，您可以選擇使�
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> 使用安裝程式指令碼時，不會自動安裝原生相依性。 如果作業系統沒有原生相依性，您必須加以安裝。 For more information, see [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-linux).
+> 使用安裝程式指令碼時，不會自動安裝原生相依性。 如果作業系統沒有原生相依性，您必須加以安裝。 如需詳細資訊，請參閱[.Net Core 相依性和需求](../install/dependencies.md?tabs=netcore30&pivots=os-linux)。
 
 ## <a name="ci-setup-examples"></a>CI 設定範例
 
@@ -175,6 +175,6 @@ install:
 
 使用 .NET Core 工具建立 .NET Core 程式碼建置程序的結構時，可以採取兩種方法：直接使用 MSBuild，或使用 .NET Core 命令列命令。 您可以視自己對特定方法的熟悉程度並權衡其複雜度，來選擇要使用的方法。 MSBuild 可讓您以工作和目標的形式表示建置程序，但使用此方法必須額外學習 MSBuild 專案檔語法。 使用 .NET Core 命令列工具或許比較簡單，但您必須使用如 `bash` 或 PowerShell 之類的指令碼語言撰寫協調流程邏輯。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET 下載 - Linux](https://dotnet.microsoft.com/download?initial-os=linux) \(英文\)

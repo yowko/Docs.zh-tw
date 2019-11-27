@@ -1,5 +1,5 @@
 ---
-title: Disk full
+title: 磁片已滿
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID61
@@ -14,10 +14,10 @@ ms.locfileid: "74351116"
 # <a name="disk-full-visual-basic"></a>磁碟已滿 (Visual Basic)
 磁碟上的空間不足，無法完成 `Print`、 `Write`或 `FileClose` 作業，或建立必要的檔案。  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a>若要改正這項錯誤  
   
 - 將一些檔案移至另一個磁碟，或刪除一些檔案，以在磁碟上建立更多的空間。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [錯誤類型](../../visual-basic/programming-guide/language-features/error-types.md)

@@ -16,15 +16,15 @@ ms.locfileid: "74336726"
 
 您可以使用 `My.Application.Log` 和 `My.Log` 物件來記錄應用程式中發生之事件的相關資訊。 本逐步解說示範如何覆寫預設設定，而且使 `Log` 物件寫入至其他記錄檔接聽程式。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-`Log` 物件可以將資訊寫入數個記錄檔接聽程式。 在變更設定前，您需要判斷目前的記錄檔接聽程式設定。 如需詳細資訊，請參閱[逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。
+`Log` 物件可以將資訊寫入數個記錄檔接聽程式。 在變更設定前，您需要判斷目前的記錄檔接聽程式設定。 如需詳細資訊，請參閱 [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。
 
 您也可以檢閱[如何：將事件資訊寫入至文字檔](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)，或[如何：寫入應用程式事件記錄檔](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)。
 
 ### <a name="to-add-listeners"></a>加入接聽程式
 
-1. 在 方案總管 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。
+1. 在 **方案總管** 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。
 
      \-或-
 
@@ -157,9 +157,9 @@ ms.locfileid: "74336726"
 
     - 寫入檔案記錄檔的 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 接聽程式。
 
-    - 將資訊寫入由 `initializeData` 參數指定之電腦事件記錄檔的 <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 接聽程式。
+    - 將資訊寫入由 <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 參數指定之電腦事件記錄檔的 `initializeData` 接聽程式。
 
-    - 寫入由 `initializeData` 參數中指定之檔案的 <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 接聽程式。
+    - 寫入由 <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 參數中指定之檔案的 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 和 `initializeData` 接聽程式。
 
     - 寫入命令列主控台的 <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> 接聽程式。
 
@@ -183,7 +183,7 @@ ms.locfileid: "74336726"
 
      `Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:System.Diagnostics.TraceListener>

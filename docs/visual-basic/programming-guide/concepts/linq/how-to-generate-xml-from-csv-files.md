@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344599"
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>How to: Generate XML from CSV Files (Visual Basic)
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>如何：從 CSV 檔案產生 XML （Visual Basic）
 此範例顯示如何使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，從以逗號分隔的 (CSV) 檔案產生 XML 檔案。  
   
 ## <a name="example"></a>範例  
@@ -107,6 +107,6 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [投影和轉換（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

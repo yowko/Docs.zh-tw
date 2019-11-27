@@ -34,7 +34,7 @@ ms.locfileid: "74345338"
   
 - [Declare 陳述式](../../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-- [Operator 陳述式](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)  
   
 - [Property 陳述式](../../../../visual-basic/language-reference/statements/property-statement.md)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "74345338"
   
 - [Delegate 陳述式](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
  描述如何為項目命名與使用字母大小寫。  
   

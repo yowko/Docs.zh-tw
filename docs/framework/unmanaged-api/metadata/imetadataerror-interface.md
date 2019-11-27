@@ -22,26 +22,26 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441627"
 ---
 # <a name="imetadataerror-interface"></a>IMetaDataError 介面
-Provides a callback mechanism for reporting errors during the metadata merge.  
+提供回呼機制，用於報告中繼資料合併期間的錯誤。  
   
 > [!NOTE]
-> The `IMetaDataError` interface must be implemented by the client.  
+> `IMetaDataError` 介面必須由用戶端執行。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[OnError 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Provides notification of errors that occur during the metadata merge.|  
+|[OnError 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|提供中繼資料合併期間發生之錯誤的通知。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

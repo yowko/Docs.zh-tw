@@ -54,23 +54,23 @@ typedef enum CorOpenFlags
 |`ofWrite`|指出應將檔案開啟為可供寫入。<br /><br /> 若您在開啟 .winmd 檔案時使用 `ofWrite` 旗標，也應該傳遞 `ofNoTransform` 旗標。|  
 |`ofReadWriteMask`|讀取及寫入的遮罩。|  
 |`ofCopyMemory`|指出應將檔案讀取至記憶體。 中繼資料應保留其自己的複本。|  
-|`ofCacheImage`|已過時。 會忽略此旗標。|  
-|`ofManifestMetadata`|已過時。 會忽略此旗標。|  
-|`ofReadOnly`|Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.|  
-|`ofTakeOwnership`|Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.|  
-|`ofNoTypeLib`|已過時。 會忽略此旗標。|  
-|`ofNoTransform`|指出應停用 .winmd 檔案的自動轉換。 換言之，應停用 Windows 執行階段類型對 .NET Framework 類型的投影。 For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
-|`ofReserved1`|保留供內部使用。|  
-|`ofReserved2`|保留供內部使用。|  
-|`ofReserved`|保留供內部使用。|  
+|`ofCacheImage`|已經過時： 會忽略此旗標。|  
+|`ofManifestMetadata`|已經過時： 會忽略此旗標。|  
+|`ofReadOnly`|指出應該開啟檔案進行讀取，而且無法呼叫[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)的 `QueryInterface`。|  
+|`ofTakeOwnership`|表示已使用[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)的呼叫來配置記憶體，並將由中繼資料釋放。|  
+|`ofNoTypeLib`|已經過時： 會忽略此旗標。|  
+|`ofNoTransform`|指出應停用 .winmd 檔案的自動轉換。 換言之，應停用 Windows 執行階段類型對 .NET Framework 類型的投影。 如需詳細資訊，請參閱[.net 和 Windows 執行階段背後的 Windows 執行階段和 CLR](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime)。|  
+|`ofReserved1`|保留為內部使用。|  
+|`ofReserved2`|保留為內部使用。|  
+|`ofReserved`|保留為內部使用。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

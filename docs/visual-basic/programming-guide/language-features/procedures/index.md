@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345985"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic 中的程序
-A *procedure* is a block of Visual Basic statements enclosed by a declaration statement (`Function`, `Sub`, `Operator`, `Get`, `Set`) and a matching `End` declaration. All executable statements in Visual Basic must be within some procedure.  
+程式*是以*宣告語句（`Function`、`Sub`、`Operator`、`Get`、`Set`）和相符的 `End` 宣告括住的 Visual Basic 語句區塊。 Visual Basic 中的所有可執行語句都必須在某個程式內。  
   
 ## <a name="calling-a-procedure"></a>呼叫程序  
  您可以從程式碼中的其他位置叫用程序。 這稱為「程序呼叫」。 當程序完成執行時，會將控制權交還給叫用程序的程式碼，稱為「呼叫程式碼」。 呼叫程式碼是陳述式或陳述式內的運算式，可依名稱指定程序，並將控制權轉移給它。  
@@ -34,7 +34,7 @@ A *procedure* is a block of Visual Basic statements enclosed by a declaration st
  在大部分情況下，程序會在每次呼叫時針對不同的資料執行。 您可以將這項資訊當作程序呼叫的一部分傳遞給程序。 程序會定義零或多個「參數」，每個參數代表預期會收到的值。 程序定義中的每個參數會對應至程序呼叫中的「引數」。 引數代表您傳遞給指定程序呼叫中對應參數的值。  
   
 ## <a name="types-of-procedures"></a>程序類型  
- Visual Basic uses several types of procedures:  
+ Visual Basic 使用數種類型的程式：  
   
 - [Sub 程序](./sub-procedures.md)會執行動作，但不會傳回值給呼叫程式碼。  
   
@@ -61,7 +61,7 @@ A *procedure* is a block of Visual Basic statements enclosed by a declaration st
   
 - 開發用於一個平台的程序之後，您可以在其他程式中使用這些程序，通常只需要微幅修改或完全不需要修改。 這可協助您避免程式碼重複。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [如何：建立程序](./how-to-create-a-procedure.md)
 - [Sub 程序](./sub-procedures.md)

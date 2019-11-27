@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449878"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>ICorProfilerInfo::SetILFunctionBody 方法
-Replaces the body of the specified function in the specified module.  
+取代指定模組中所指定函式的主體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,20 +36,20 @@ HRESULT SetILFunctionBody(
   
 ## <a name="parameters"></a>參數  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ 在函數所在模組的識別碼。  
   
  `methodid`  
- [in] The token of the function for which to replace the body.  
+ 在要取代主體之函式的 token。  
   
  `pbNewILMethodHeader`  
- [in] The new header for the function.  
+ 在函數的新標頭。  
   
 ## <a name="remarks"></a>備註  
- The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.  
+ `SetILFunctionBody` 方法會取代中繼資料中函數的相對虛擬位址，使其指向新的函式主體，並視需要調整任何內部資料結構。  
   
- The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.  
+ 只有從未由即時（JIT）編譯器編譯的函式，才能呼叫 `SetILFunctionBody` 方法。  
   
- Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.  
+ 使用[ICorProfilerInfo：： GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md)方法來配置新方法的空間，以確保緩衝區相容。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -60,6 +60,6 @@ HRESULT SetILFunctionBody(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

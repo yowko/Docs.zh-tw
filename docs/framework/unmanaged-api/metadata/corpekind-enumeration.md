@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436480"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind 列舉
-Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
+包含值，描述從[IMetaDataImport2：： GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)的呼叫傳回的可移植執行檔（PE）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,23 +43,23 @@ typedef enum CorPEKind {
   
 |成員|描述|  
 |------------|-----------------|  
-|`peNot`|Indicates that this is not a PE file.|  
-|`peILOnly`|Indicates that this PE file contains only managed code.|  
-|`pe32BitRequired`|Indicates that this PE file makes Win32 calls.|  
-|`pe32Plus`|Indicates that this PE file runs on a 64-bit platform.|  
-|`pe32Unmanaged`|Indicates that this PE file is native code.|  
-|pe32BitPreferred|Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.|  
+|`peNot`|表示這不是 PE 檔案。|  
+|`peILOnly`|指出這個 PE 檔案僅包含 managed 程式碼。|  
+|`pe32BitRequired`|指出這個 PE 檔案會進行 Win32 呼叫。|  
+|`pe32Plus`|指出這個 PE 檔案是在64位平臺上執行。|  
+|`pe32Unmanaged`|指出這個 PE 檔案是機器碼。|  
+|pe32BitPreferred|指出此 PE 檔案為平臺中性，並偏好在32位環境中載入。|  
   
 ## <a name="remarks"></a>備註  
- These values can be used in bitwise combinations.  
+ 這些值可用於位組合。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

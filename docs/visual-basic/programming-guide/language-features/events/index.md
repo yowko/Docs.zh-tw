@@ -1,5 +1,5 @@
 ---
-title: 「事件」
+title: 事件
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [Visual Basic], about events
@@ -13,12 +13,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345112"
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
-While you might visualize a Visual Studio project as a series of procedures that execute in a sequence, in reality, most programs are event driven—meaning the flow of execution is determined by external occurrences called *events*.  
+雖然您可能會將 Visual Studio 專案視覺化成一系列以序列方式執行的程式，但實際上，大部分的程式都是事件驅動的，這表示執行流程是由稱為*事件*的外部出現專案所決定。  
   
  事件是通知應用程式發生重要事件的信號。 例如，當使用者按一下表單上的控制項時，表單可以引發 `Click` 事件，並呼叫處理事件的程序。 事件也允許個別工作進行通訊。 例如，假設您的應用程式與主應用程式個別執行排序工作。 如果使用者取消排序，則您的應用程式可以傳送取消事件，以指示排序處理序停止。  
   
 ## <a name="event-terms-and-concepts"></a>事件詞彙和概念  
- This section describes the terms and concepts used with events in Visual Basic.  
+ 本節說明 Visual Basic 中的事件所使用的詞彙和概念。  
   
 ### <a name="declaring-events"></a>宣告事件  
  您可以在類別、結構、模組和介面內，使用 `Event` 關鍵字宣告事件，如下列範例所示：  
@@ -26,7 +26,7 @@ While you might visualize a Visual Studio project as a series of procedures that
  [!code-vb[VbVbalrEvents#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#24)]  
   
 ### <a name="raising-events"></a>引發事件  
- 事件就像是訊息，會告知發生了重要事件。 廣播訊息的動作稱為「引發」事件。 In Visual Basic, you raise events with the `RaiseEvent` statement, as in the following example:  
+ 事件就像是訊息，會告知發生了重要事件。 廣播訊息的動作稱為「引發」事件。 在 Visual Basic 中，您會使用 `RaiseEvent` 語句引發事件，如下列範例所示：  
   
  [!code-vb[VbVbalrEvents#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#25)]  
   
@@ -38,7 +38,7 @@ While you might visualize a Visual Studio project as a series of procedures that
 ### <a name="event-handlers"></a>事件處理常式  
  「事件處理常式」是在發生相對應事件時所呼叫的程序。 您可以使用具有相符簽章的任何有效副程式，做為事件處理常式。 不過，您無法使用函式做為事件處理常式，因為它無法將值傳回事件來源。  
   
- Visual Basic uses a standard naming convention for event handlers that combines the name of the event sender, an underscore, and the name of the event. 例如，將名為 `button1` 的按鈕 `Click` 事件命名為 `Sub button1_Click`。  
+ Visual Basic 針對事件處理常式（結合事件傳送者的名稱、底線和事件名稱）使用標準命名慣例。 例如，將名為 `Click` 的按鈕 `button1` 事件命名為 `Sub button1_Click`。  
   
 > [!NOTE]
 > 我們建議您在為自己的事件定義事件處理常式時，使用此命名慣例，但這並非必要；您可以使用任何有效的副程式名稱。  
@@ -55,7 +55,7 @@ While you might visualize a Visual Studio project as a series of procedures that
   
 - 您不能使用 `WithEvents` 變數做為物件變數。 也就是說，您無法將它宣告為 `Object` - 當您宣告變數時，必須指定類別名稱。  
   
-- Because shared events are not tied to class instances, you cannot use `WithEvents` to declaratively handle shared events. 同樣地，您不能使用 `WithEvents` 或 `Handles`，處理來自 `Structure` 的事件。 在這兩種情況下，您可以使用 `AddHandler` 陳述式來處理這些事件。  
+- 由於共用事件不會系結至類別實例，因此您無法使用 `WithEvents` 以宣告方式處理共用事件。 同樣地，您不能使用 `WithEvents` 或 `Handles`，處理來自 `Structure` 的事件。 在這兩種情況下，您可以使用 `AddHandler` 陳述式來處理這些事件。  
   
 - 您無法建立 `WithEvents` 變數的陣列。  
   
@@ -63,18 +63,18 @@ While you might visualize a Visual Studio project as a series of procedures that
   
  雖然 `Handles` 子句是建立事件與事件處理常式之關聯的標準方式，但它只能在編譯時期建立事件與事件處理常式的關聯。  
   
- In some cases, such as with events associated with forms or controls, Visual Basic automatically stubs out an empty event handler and associates it with an event. For example, when you double-click a command button on a form in design mode, Visual Basic creates an empty event handler and a `WithEvents` variable for the command button, as in the following code:  
+ 在某些情況下，例如使用與表單或控制項相關聯的事件，Visual Basic 會自動將空的事件處理常式存根，並將其與事件產生關聯。 例如，當您在設計模式中按兩下表單上的命令按鈕時，Visual Basic 會建立空的事件處理常式和 [命令] 按鈕的 `WithEvents` 變數，如下列程式碼所示：  
   
  [!code-vb[VbVbalrEvents#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#26)]  
   
 ### <a name="addhandler-and-removehandler"></a>AddHandler 和 RemoveHandler  
- `AddHandler` 陳述式類似 `Handles` 子句，這兩者都能讓您指定事件處理常式。 不過，與 `RemoveHandler` 搭配使用的 `AddHandler` 所提供的彈性比 `Handles` 子句更大，可讓您以動態方式加入、移除及變更與事件相關聯的事件處理常式。 如果您想要處理共用的事件或來自結構的事件，就必須使用 `AddHandler`。  
+ `AddHandler` 陳述式類似 `Handles` 子句，這兩者都能讓您指定事件處理常式。 不過，與 `AddHandler` 搭配使用的 `RemoveHandler` 所提供的彈性比 `Handles` 子句更大，可讓您以動態方式加入、移除及變更與事件相關聯的事件處理常式。 如果您想要處理共用的事件或來自結構的事件，就必須使用 `AddHandler`。  
   
  `AddHandler` 會採用兩個引數︰來自事件傳送者的事件名稱 (例如控制項)，以及評估委派的運算式。 使用 `AddHandler` 時，您不需明確指定委派類別，因為 `AddressOf` 陳述式一律會傳回對委派的參考。 下列範例會建立事件處理常式與物件所引發之事件的關聯：  
   
  [!code-vb[VbVbalrEvents#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#28)]  
   
- `RemoveHandler` (其會中斷事件與事件處理常式的關聯) 會使用與 `AddHandler` 相同的語法。 例如:  
+ `RemoveHandler` (其會中斷事件與事件處理常式的關聯) 會使用與 `AddHandler` 相同的語法。 例如：  
   
  [!code-vb[VbVbalrEvents#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#29)]  
   
@@ -91,7 +91,7 @@ While you might visualize a Visual Studio project as a series of procedures that
   
 ### <a name="to-handle-events-from-a-base-class"></a>處理來自基底類別的事件  
   
-- 在衍生類別中宣告事件處理常式，方法是將 `Handles MyBase.`*eventname* 陳述式加入至事件處理常式程序的宣告行中，其中 *eventname* 為您要處理之基底類別中的事件名稱。 例如:  
+- 在衍生類別中宣告事件處理常式，方法是將 `Handles MyBase.`*eventname* 陳述式加入至事件處理常式程序的宣告行中，其中 *eventname* 為您要處理之基底類別中的事件名稱。 例如：  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   

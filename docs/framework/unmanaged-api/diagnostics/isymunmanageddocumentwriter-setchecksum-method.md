@@ -36,20 +36,20 @@ HRESULT SetCheckSum(
   
 ## <a name="parameters"></a>參數  
  `algorithmId`  
- [in] The GUID that represents the algorithm identifier.  
+ 在表示演算法識別碼的 GUID。  
   
  `checkSumSize`  
- [in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.  
+ 在`ULONG32`，表示 `checkSum` 緩衝區的大小（以位元組為單位）。  
   
  `checkSum`  
- [in] The buffer that stores the checksum information.  
+ 在儲存總和檢查碼資訊的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedDocumentWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

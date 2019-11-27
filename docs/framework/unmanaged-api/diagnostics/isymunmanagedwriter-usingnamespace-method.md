@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427464"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace 方法
-Specifies that the given fully qualified namespace name is being used within the currently open lexical scope. The namespace will be used within all scopes that inherit from the currently open scope. Closing the current scope will also stop the use of the namespace.  
+指定在目前開啟的詞法範圍內使用指定的完整命名空間名稱。 命名空間將會用於繼承自目前開啟範圍的所有範圍內。 關閉目前的範圍也會停止使用命名空間。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,14 +34,14 @@ HRESULT UsingNamespace(
   
 ## <a name="parameters"></a>參數  
  `fullName`  
- [in] A pointer to the fully qualified name of the namespace.  
+ 在命名空間之完整名稱的指標。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

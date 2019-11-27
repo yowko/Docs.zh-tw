@@ -59,14 +59,14 @@ End Class
 ' Historically, the world of data and the world of objects have not been well integrated
 ```
 
-查詢的運作方式是先將文字分割成句子，然後將句子分割成包含每個字的字串陣列。 對於每個陣列，<xref:System.Linq.Enumerable.Distinct%2A> 方法會移除所有重複的字組，接著查詢會對字組陣列和 `wordsToMatch` 陣列執行 <xref:System.Linq.Enumerable.Intersect%2A> 作業。 如果交集的計數與 `wordsToMatch` 陣列的計數相同，則所有字都可以在字組中找到，因而傳回原始句子。
+查詢的運作方式是先將文字分割成句子，然後將句子分割成包含每個字的字串陣列。 對於每個陣列，<xref:System.Linq.Enumerable.Distinct%2A> 方法會移除所有重複的字組，接著查詢會對字組陣列和 <xref:System.Linq.Enumerable.Intersect%2A> 陣列執行 `wordsToMatch` 作業。 如果交集的計數與 `wordsToMatch` 陣列的計數相同，則所有字都可以在字組中找到，因而傳回原始句子。
 
 在 <xref:System.String.Split%2A> 呼叫中，標點符號會當成分隔符號，以便從字串中移除。 如果您不這麼做，則您的字串 "Historically," 與 `wordsToMatch` 陣列中的 "Historically" 不符。 根據來源文字中找到的標點符號類型，您可能必須使用其他分隔符號。
 
 ## <a name="compiling-the-code"></a>編譯程式碼
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+建立 VB.NET 主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 和字串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352360"
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>How to: Serialize Using XmlSerializer (Visual Basic)
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>如何：使用 XmlSerializer 進行序列化（Visual Basic）
 本主題顯示的範例會使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化與還原序列化。  
   
 ## <a name="example"></a>範例  
@@ -80,6 +80,6 @@ Testing for type: XElementContainer
   Deserialized type: XElementContainer  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Serializing Object Graphs that Contain XElement Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [序列化包含 System.xml.linq.xelement> 物件的物件圖形（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

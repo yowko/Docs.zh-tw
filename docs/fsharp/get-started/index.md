@@ -1,6 +1,6 @@
 ---
-title: Get started with F#
-description: Find out how to get started with the F# programming language.
+title: 開始使用F#
+description: 瞭解如何開始使用程式F#設計語言。
 ms.date: 12/08/2018
 ms.openlocfilehash: 2b4baa5c948800389c171a5d9f9cd157a903063e
 ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
@@ -9,25 +9,25 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204893"
 ---
-# <a name="get-started-with-f"></a>Get Started with F\#
+# <a name="get-started-with-f"></a>開始使用 F\#
 
-You can get started with F# on your machine or online.
+您可以在您的F#電腦上或在線上開始使用。
 
-## <a name="get-started-on-your-machine"></a>Get started on your machine
+## <a name="get-started-on-your-machine"></a>開始使用您的電腦
 
-There are multiple guides on how to install and use F# for the first time on your machine.  You can use the following table to help in making a decision:
+第一次在您的電腦上安裝和F#使用的指南有多個。  您可以使用下表來協助進行決策：
 
-| OS | Prefer Visual Studio | Prefer Visual Studio Code | Prefer command line |
+| OS | 偏好 Visual Studio | 偏好 Visual Studio Code | 偏好命令列 |
 | -- |------------------------|--------------------------|-----------------------------|-------------------------|
-| Windows | [Get started with Visual Studio](get-started-visual-studio.md) | [開始使用 Visual Studio Code](get-started-vscode.md) | [Get started with the .NET Core CLI](get-started-command-line.md) |
-| macOS | [Get started with VS for Mac](get-started-with-visual-studio-for-mac.md) | [開始使用 Visual Studio Code](get-started-vscode.md) | [Get started with the .NET Core CLI](get-started-command-line.md) |
-| Linux | N/A | [開始使用 Visual Studio Code](get-started-vscode.md) | [Get started with the .NET Core CLI](get-started-command-line.md) |
+| Windows | [開始使用 Visual Studio](get-started-visual-studio.md) | [開始使用 Visual Studio Code](get-started-vscode.md) | [開始使用 .NET Core CLI](get-started-command-line.md) |
+| macOS | [開始使用 VS for Mac](get-started-with-visual-studio-for-mac.md) | [開始使用 Visual Studio Code](get-started-vscode.md) | [開始使用 .NET Core CLI](get-started-command-line.md) |
+| Linux | N/A | [開始使用 Visual Studio Code](get-started-vscode.md) | [開始使用 .NET Core CLI](get-started-command-line.md) |
 
-In general, there is no specific that is better than the rest. We recommend trying all ways to use F# on your machine to see what you like the best!
+一般來說，沒有特定的會比其餘部分好。 我們建議您在電腦上嘗試F#使用所有方法，以查看您最喜歡的方式！
 
-## <a name="get-started-online"></a>Get started online
+## <a name="get-started-online"></a>線上開始使用
 
-If you'd rather not install F# and .NET on your machine, you can also get started with F# in the browser:
+如果您不想在電腦F#上安裝和 .net，您也可以在瀏覽器中F#開始使用：
 
-* [Introduction to F# on Binder](https://mybinder.org/v2/gh/dotnet/try/master?urlpath=lab) is a [Jupyter notebook](https://jupyter.org/) on hosted via the free [Binder](https://mybinder.org/) service. No sign-up needed!
-* [The Fable REPL](https://fable.io/repl/) is an interactive, in-browser REPL that uses [Fable](https://fable.io/) to translate F# code into JavaScript. Check out the numerous samples that range from F# basics to a fully fledged video game all executing in your browser!
+* [關於F# ](https://mybinder.org/v2/gh/dotnet/try/master?urlpath=lab)系結程式的簡介是[透過免費的](https://mybinder.org/)系結器服務託管的[Jupyter 筆記本](https://jupyter.org/)。 不需要註冊！
+* [Fable](https://fable.io/repl/)複寫是互動式的瀏覽器內複寫，使用[Fable](https://fable.io/)將程式碼轉譯F#成 JavaScript。 查看各種從F#基本概念到全完備的影片遊戲，全都在您的瀏覽器中執行的範例！

@@ -20,7 +20,7 @@ ms.locfileid: "74349193"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>如何：在 Visual Basic 中建立登錄機碼並設定其值
 
-`My.Computer.Registry` 物件的 `CreateSubKey` 方法可以用來建立登錄機碼。
+`CreateSubKey` 物件的 `My.Computer.Registry` 方法可以用來建立登錄機碼。
 
 ## <a name="procedure"></a>程序
 
@@ -46,7 +46,7 @@ ms.locfileid: "74349193"
 
 [!code-vb[VbResourceTasks#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#15)]
 
-## <a name="robust-programming"></a>穩固程式設計
+## <a name="robust-programming"></a>最佳化程式設計
 
 檢查登錄結構以找出適合索引鍵的位置。 例如，您可能想要開啟目前使用者的 HKEY_CURRENT_USER\Software 機碼，並以貴公司的名稱來建立機碼。 請將登錄值新增至貴公司的索引鍵。
 
@@ -72,9 +72,9 @@ ms.locfileid: "74349193"
 
 ## <a name="net-framework-security"></a>.NET Framework 安全性
 
-若要執行此程序，您的組件需要由 <xref:System.Security.Permissions.RegistryPermission> 類別授與的權限層級。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 同樣地，使用者必須有正確的 ACL，才能建立或寫入設定。 例如，具有程式碼存取安全性權限的本機應用程式，可能不具有作業系統權限。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](../../../../framework/misc/code-access-security-basics.md)。
+若要執行此程序，您的組件需要由 <xref:System.Security.Permissions.RegistryPermission> 類別授與的權限層級。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 同樣地，使用者必須有正確的 ACL，才能建立或寫入設定。 例如，具有程式碼存取安全性權限的本機應用程式，可能不具有作業系統權限。 如需詳細資訊，請參閱 [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>

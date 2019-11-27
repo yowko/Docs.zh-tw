@@ -1,5 +1,5 @@
 ---
-title: 'Troubleshooting: reading from and writing to text files'
+title: 疑難排解：讀取和寫入文字檔
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting file I/O
@@ -36,7 +36,7 @@ ms.locfileid: "74333791"
 
  剖析檔案路徑時，特別是相對路徑，很容易就會提供錯誤資料。 確認您所提供的路徑正確，即可更正許多問題。 如需詳細資訊，請參閱[如何：剖析檔案路徑](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)

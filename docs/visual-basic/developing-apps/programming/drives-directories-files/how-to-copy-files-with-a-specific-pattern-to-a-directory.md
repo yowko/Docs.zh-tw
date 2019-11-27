@@ -60,7 +60,7 @@ ms.locfileid: "74348844"
   
 - 使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。 使用者缺乏必要的權限 (<xref:System.UnauthorizedAccessException>)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>

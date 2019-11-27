@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427853"
 ---
 # <a name="isymunmanagedwritersetscoperange-method"></a>ISymUnmanagedWriter::SetScopeRange 方法
-定義指定語彙範圍的位移範圍。 The scope becomes the new current scope and is pushed onto a stack of scopes. Scopes must form a hierarchy. Siblings are not allowed to overlap.  
+定義指定語彙範圍的位移範圍。 範圍會變成新的目前範圍，並推送至範圍的堆疊。 範圍必須形成階層。 同級不允許重迭。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,23 +36,23 @@ HRESULT OpenScope(
   
 ## <a name="parameters"></a>參數  
  `scopeId`  
- [in] The scope identifier for the scope.  
+ 在範圍的範圍識別碼。  
   
  `startOffset`  
- [in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.  
+ 在在方法開頭的詞法範圍中，第一個指令的位移（以位元組為單位）。  
   
  `endOffset`  
- [in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.  
+ 在從方法開頭的詞法範圍中，最後一個指令的位移（以位元組為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="remarks"></a>備註  
- [ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time. In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored. Scope identifiers are only valid in the current method.  
+ [ISymUnmanagedWriter：： OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md)會傳回不透明的範圍識別碼，可與 `ISymUnmanagedWriter::SetScopeRange` 搭配使用，以便在稍後定義範圍的開始和結束位移。 在此情況下，傳遞給 `ISymUnmanagedWriter::OpenScope` 和[ISymUnmanagedWriter：： CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md)的位移會被忽略。 範圍識別碼只在目前的方法中有效。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

@@ -77,47 +77,47 @@ typedef enum CorTypeAttr {
   
 |成員|描述|  
 |------------|-----------------|  
-|`tdVisibilityMask`|Used for type visibility information.|  
-|`tdNotPublic`|Specifies that the type is not in public scope.|  
-|`tdPublic`|Specifies that the type is in public scope.|  
-|`tdNestedPublic`|Specifies that the type is nested with public visibility.|  
-|`tdNestedPrivate`|Specifies that the type is nested with private visibility.|  
-|`tdNestedFamily`|Specifies that the type is nested with family visibility.|  
-|`tdNestedAssembly`|Specifies that the type is nested with assembly visibility.|  
-|`tdNestedFamANDAssem`|Specifies that the type is nested with family and assembly visibility.|  
-|`tdNestedFamORAssem`|Specifies that the type is nested with family or assembly visibility.|  
-|`tdLayoutMask`|Gets layout information for the type.|  
-|`tdAutoLayout`|Specifies that the fields of this type are laid out automatically.|  
-|`tdSequentialLayout`|Specifies that the fields of this type are laid out sequentially.|  
-|`tdExplicitLayout`|Specifies that field layout is supplied explicitly.|  
-|`tdClassSemanticsMask`|Gets semantic information about the type.|  
+|`tdVisibilityMask`|用於類型可見度資訊。|  
+|`tdNotPublic`|指定類型不在公用範圍中。|  
+|`tdPublic`|指定類型在公用範圍中。|  
+|`tdNestedPublic`|指定類型是以公用可見度來加以嵌套。|  
+|`tdNestedPrivate`|指定類型是以私用可見度來加以嵌套。|  
+|`tdNestedFamily`|指定類型是以家族可見度進行內嵌。|  
+|`tdNestedAssembly`|指定類型是以元件可見度來加以嵌套。|  
+|`tdNestedFamANDAssem`|指定類型是以系列和元件可見度來加以嵌套。|  
+|`tdNestedFamORAssem`|指定類型是以家族或元件可見度來加以嵌套。|  
+|`tdLayoutMask`|取得類型的版面配置資訊。|  
+|`tdAutoLayout`|指定此類型的欄位會自動設定。|  
+|`tdSequentialLayout`|指定以順序排列此類型的欄位。|  
+|`tdExplicitLayout`|指定明確提供欄位版面配置。|  
+|`tdClassSemanticsMask`|取得類型的相關語義資訊。|  
 |`tdClass`|指定此類型為類別。|  
 |`tdInterface`|指定此類型為介面。|  
 |`tdAbstract`|指定此類型為抽象。|  
-|`tdSealed`|Specifies that the type cannot be extended.|  
-|`tdSpecialName`|Specifies that the class name is special. Its name describes how.|  
-|`tdImport`|Specifies that the type is imported.|  
-|`tdSerializable`|Specifies that the type is serializable.|  
-|`tdWindowsRuntime`|Specifies that this type is a Windows Runtime type.|  
-|`tdStringFormatMask`|Gets information about how strings are encoded and formatted.|  
-|`tdAnsiClass`|Specifies that this type interprets an LPTSTR as ANSI.|  
-|`tdUnicodeClass`|Specifies that this type interprets an LPTSTR as Unicode.|  
-|`tdAutoClass`|Specifies that this type interprets an LPTSTR automatically.|  
-|`tdCustomFormatClass`|Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.|  
-|`tdCustomFormatMask`|Use this mask to get non-standard encoding information for native interop. The meaning of the values of these two bits is unspecified.|  
-|`tdBeforeFieldInit`|Specifies that the type must be initialized before the first attempt to access a static field.|  
-|`tdForwarder`|Specifies that the type is exported, and a type forwarder.|  
-|`tdReservedMask`|This flag and the flags below are used internally by the common language runtime.|  
-|`tdRTSpecialName`|Specifies that the common language runtime should check the name encoding.|  
-|`tdHasSecurity`|Specifies that the type has security associated with it.|  
+|`tdSealed`|指定無法擴充類型。|  
+|`tdSpecialName`|指定類別名稱是特殊的。 其名稱說明如何。|  
+|`tdImport`|指定要匯入的類型。|  
+|`tdSerializable`|指定類型為可序列化。|  
+|`tdWindowsRuntime`|指定這個類型是 Windows 執行階段類型。|  
+|`tdStringFormatMask`|取得如何編碼和格式化字串的相關資訊。|  
+|`tdAnsiClass`|指定此類型會將 LPTSTR 解讀為 ANSI。|  
+|`tdUnicodeClass`|指定此類型會將 LPTSTR 解讀為 Unicode。|  
+|`tdAutoClass`|指定此型別會自動解讀 LPTSTR。|  
+|`tdCustomFormatClass`|指定類型具有非標準編碼，如 `CustomFormatMask`所指定。|  
+|`tdCustomFormatMask`|使用此遮罩來取得原生 interop 的非標準編碼資訊。 未指定這兩個位值的意義。|  
+|`tdBeforeFieldInit`|指定在第一次嘗試存取靜態欄位之前，必須先初始化型別。|  
+|`tdForwarder`|指定匯出類型和類型轉寄站。|  
+|`tdReservedMask`|通用語言執行時間會在內部使用此旗標和下列旗標。|  
+|`tdRTSpecialName`|指定通用語言執行時間應該檢查名稱編碼。|  
+|`tdHasSecurity`|指定類型具有相關聯的安全性。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

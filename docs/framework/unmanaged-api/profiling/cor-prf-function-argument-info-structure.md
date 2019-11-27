@@ -38,26 +38,26 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 |成員|描述|  
 |------------|-----------------|  
-|`numRanges`|The number of blocks of arguments. That is, this value is the number of [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures in the `ranges` array.|  
-|`totalArgumentSize`|The total size of all arguments. In other words, this value is the sum of the argument lengths.|  
-|`ranges`|An array of `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which represents one block of function arguments.|  
+|`numRanges`|引數的區塊數目。 也就是說，此值是 `ranges` 陣列中[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)結構的數目。|  
+|`totalArgumentSize`|所有引數的總大小。 換句話說，此值是引數長度的總和。|  
+|`ranges`|`COR_PRF_FUNCTION_ARGUMENT_RANGE` 結構的陣列，其中每一個都代表一個函式引數的區塊。|  
   
 ## <a name="remarks"></a>備註  
- A function may have many arguments. Those arguments might not be stored contiguously in memory. You might have a block of three arguments in one place, a block of two arguments in another place, and a final block of one argument in a different place. These arguments are all for the same function; they're just stored in different places.  
+ 函數可能有許多引數。 這些引數可能不會連續儲存于記憶體中。 在一個位置中，您可能會有三個引數的區塊、另一個位置的兩個引數區塊，以及在不同位置的一個引數的最後一個區塊。 這些引數全都適用于相同的函式;它們只會儲存在不同的位置。  
   
- The `COR_PRF_FUNCTION_ARGUMENT_INFO` structure represents all the arguments of a single function. It uses an array to reference all the blocks of function arguments. So, for a single function, you have a single `COR_PRF_FUNCTION_ARGUMENT_INFO` structure, which references multiple `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which points to one or more function arguments.  
+ `COR_PRF_FUNCTION_ARGUMENT_INFO` 結構代表單一函式的所有引數。 它會使用陣列來參考函數引數的所有區塊。 因此，在單一函式中，您會有一個參考多個 `COR_PRF_FUNCTION_ARGUMENT_RANGE` 結構的單一 `COR_PRF_FUNCTION_ARGUMENT_INFO` 結構，每一個都指向一個或多個函式引數。  
   
- Arguments that are stored in registers are spilled into memory to build the structures.  
+ 儲存在暫存器中的引數會溢出到記憶體中，以建立結構。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorProf.idl  
+ **標頭：** Corprof.idl .idl  
   
  **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [分析結構](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

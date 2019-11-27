@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440544"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps 方法
-Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+針對先前呼叫[DefineProperty 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)所定義的屬性，設定儲存在中繼資料中的功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,39 +42,39 @@ HRESULT SetPropertyProps (
   
 ## <a name="parameters"></a>參數  
  `pr`  
- [in] The token for the property to be changed  
+ 在要變更之屬性的標記  
   
  `dwPropFlags`  
- [in] Property flags.  
+ 在屬性旗標。  
   
  `dwCPlusTypeFlag`  
- [in] The type of the property's default value.  
+ 在屬性的預設值類型。  
   
  `pValue`  
- [in] The default value for the property.  
+ 在屬性的預設值。  
   
  `cchValue`  
- [in] The count of (Unicode) characters in `pValue`.  
+ 在`pValue`中的（Unicode）字元計數。  
   
  `mdSetter`  
- [in] The method that sets the property value.  
+ 在設定屬性值的方法。  
   
  `mdGetter`  
- [in] The method that gets the property value.  
+ 在取得屬性值的方法。  
   
  `rmdOtherMethods[]`  
- [in] An array of other methods associated with the property. Terminate this array with an `mdTokenNil` token.  
+ 在與屬性相關聯之其他方法的陣列。 使用 `mdTokenNil` token 終止此陣列。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

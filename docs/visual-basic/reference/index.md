@@ -1,5 +1,5 @@
 ---
-title: 參考資料
+title: 參考
 ms.date: 07/20/2015
 helpviewer_keywords:
 - language reference
@@ -13,27 +13,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352884"
 ---
 # <a name="reference-visual-basic"></a>參考 (Visual Basic)
-This section provides links to reference information about various aspects of Visual Basic programming.  
+本節提供有關 Visual Basic 程式設計之各種層面的參考資訊連結。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Visual Basic 語言參考](../../visual-basic/language-reference/index.md)  
- Provides reference information for various aspects of the Visual Basic language.  
+ 提供 Visual Basic 語言各個層面的參考資訊。  
   
  [Visual Basic 命令列編譯器](../../visual-basic/reference/command-line-compiler/index.md)  
  提供命令列編譯器相關資訊的連結，該編譯器可提供從 Visual Studio IDE 編譯程式的替代方法。  
   
  [.NET Framework 參考資訊](../../visual-basic/reference/net-framework-reference-information.md)  
- Provides links to information on working with the .NET Framework class library.  
+ 提供有關使用 .NET Framework Class Library 之資訊的連結。  
   
  [Visual Basic 語言規格](../../visual-basic/reference/language-specification/index.md)  
- Provides links to the complete Visual Basic language specification, which contains detailed information on all aspects of the language.  
+ 提供完整 Visual Basic 語言規格的連結，其中包含語言所有層面的詳細資訊。  
   
 ## <a name="related-sections"></a>相關章節  
  [一般使用者介面項目 (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- Contains topics for dialog boxes and windows used in Visual Studio.  
+ 包含在 Visual Studio 中使用之對話方塊和視窗的主題。  
   
  [Visual Studio 中的 XML 工具](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- Provides links to topics on various XML tools available in Visual Studio.  
+ 提供 Visual Studio 中可用之各種 XML 工具的主題連結。  
   
  [Automation 與擴充性參考](/visualstudio/extensibility/extensibility-in-visual-studio?view=vs-2015)  
- Provides links to topics covering automation and extensibility in Visual Studio, for both shared and language-specific components.
+ 針對共用和語言特定元件，提供涵蓋 Visual Studio 中自動化和擴充性的主題連結。

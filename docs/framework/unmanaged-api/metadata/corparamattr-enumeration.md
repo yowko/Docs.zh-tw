@@ -46,21 +46,21 @@ typedef enum CorParamAttr {
   
 |成員|描述|  
 |------------|-----------------|  
-|`pdIn`|Specifies that the parameter is passed into the method call.|  
-|`pdOut`|Specifies that the parameter is passed from the method return.|  
-|`pdOptional`|Specifies that the parameter is optional.|  
-|`pdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`pdHasDefault`|Specifies that the parameter has a default value.|  
-|`pdHasFieldMarshal`|Specifies that the parameter has marshaling information.|  
+|`pdIn`|指定參數會傳遞至方法呼叫中。|  
+|`pdOut`|指定從方法傳回傳遞參數。|  
+|`pdOptional`|指定參數為選擇性。|  
+|`pdReservedMask`|保留供 common language runtime 內部使用。|  
+|`pdHasDefault`|指定參數具有預設值。|  
+|`pdHasFieldMarshal`|指定參數具有封送處理資訊。|  
 |`pdUnused`|未使用。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

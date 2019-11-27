@@ -62,7 +62,7 @@ ms.locfileid: "74349947"
  [運算子](../../visual-basic/language-reference/operators/index.md)  
  記錄 Visual Basic 中可用的運算子。  
   
- [屬性](../../visual-basic/language-reference/properties.md)  
+ [內容](../../visual-basic/language-reference/properties.md)  
  記錄 Visual Basic 中可用的屬性。  
   
  [查詢](../../visual-basic/language-reference/queries/index.md)  

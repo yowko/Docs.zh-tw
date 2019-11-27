@@ -15,13 +15,13 @@ ms.locfileid: "74334490"
 ---
 # <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>如何：在 Visual Basic 中以 StreamWriter 將文字寫入檔案
 
-此範例使用 `My.Computer.FileSystem.OpenTextFileWriter` 方法開啟 <xref:System.IO.StreamWriter> 物件，然後使用該物件搭配 <xref:System.IO.StreamWriter> 類別的 <xref:System.IO.TextWriter.WriteLine%2A> 方法，將字串寫入文字檔。  
+此範例使用 <xref:System.IO.StreamWriter> 方法開啟 `My.Computer.FileSystem.OpenTextFileWriter` 物件，然後使用該物件搭配 <xref:System.IO.TextWriter.WriteLine%2A> 類別的 <xref:System.IO.StreamWriter> 方法，將字串寫入文字檔。  
   
 ## <a name="example"></a>範例  
 
  [!code-vb[VbFileIOWrite#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#5)]  
   
-## <a name="robust-programming"></a>穩固程式設計  
+## <a name="robust-programming"></a>最佳化程式設計  
 
  以下條件可能會造成例外狀況：  
   
@@ -35,7 +35,7 @@ ms.locfileid: "74334490"
 
  如果檔案不存在，此範例就會建立新的檔案。 如果應用程式需要建立檔案，該應用程式就需要資料夾的 `Create` 權限。 如果檔案已經存在，則應用程式只需要 `Write` 權限，這是較小的權限。 若有可能，更為安全的做法是在部署期間建立檔案，並且只授與單一檔案的 `Read` 權限，而不授與資料夾的 `Create` 權限。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.StreamWriter>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>

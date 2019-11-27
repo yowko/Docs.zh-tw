@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446596"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions 列舉
-Enumerates the assembly options.  
+列舉元件選項。  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,32 +56,32 @@ typedef enum _AssemblyOptions {
   
 |欄位|描述|  
 |-----------|-----------------|  
-|optAssemTitle|String - Represents the assembly title.|  
-|optAssemDescription|String - Contains the assembly description.|  
-|optAssemConfig|String - Contains the assembly configuration.|  
-|optAssemOS|String - Encoded as: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
+|optAssemTitle|String-表示元件標題。|  
+|optAssemDescription|String-包含元件描述。|  
+|optAssemConfig|String-包含元件設定。|  
+|optAssemOS|字串編碼為： "dwOSPlatformId. dwOSMajorVersion. dwOSMinorVersion"。|  
 |optAssemProcessor|ULONG|  
-|optAssemLocale|String - Contains the assembly locale.|  
-|optAssemVersion|String - Encoded as: "Major.Minor.Build.Revision".|  
-|optAssemCompany|String - Contains the company.|  
-|optAssemProduct|String - Contains the product name.|  
-|optAssemProductVersion|String (also known as InformationalVersion).|  
-|optAssemCopyright|String - Contains the copyright information.|  
-|optAssemTrademark|String - Contains the trademark information.|  
-|optAssemKeyFile|String (file name).|  
-|optAssemKeyName|String (The key name).|  
+|optAssemLocale|String-包含元件地區設定。|  
+|optAssemVersion|字串編碼為：「主要. 次要. 組建. 修訂」。|  
+|optAssemCompany|String-包含公司。|  
+|optAssemProduct|String-包含產品名稱。|  
+|optAssemProductVersion|String （也稱為 InformationalVersion）。|  
+|optAssemCopyright|String-包含著作權資訊。|  
+|optAssemTrademark|String-包含商標資訊。|  
+|optAssemKeyFile|字串（檔案名）。|  
+|optAssemKeyName|字串（索引鍵名稱）。|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
-|optAssemHalfSign|Bool (Also known as DelaySign).|  
-|optAssemFileVersion|String - Encoded as "Major.Minor.Build.Revision"--same as ProductVersion.|  
-|optAssemSatelliteVer|String - Encoded as "Major.Minor.Build.Revision".|  
-|optLastAssemOption|A counter of the number of elements.|  
+|optAssemHalfSign|Bool （也稱為 DelaySign）。|  
+|optAssemFileVersion|字串編碼為「主要. 次要. 組建修訂版」--與 ProductVersion 相同。|  
+|optAssemSatelliteVer|字串編碼為「主要. 次要. 組建. 修訂」。|  
+|optLastAssemOption|元素數目的計數器。|  
   
 ## <a name="requirements"></a>需求  
- **Header:** alink.h  
+ **標頭：** alink。h  
   
- **Library**: alink.dll  
+ 連結**庫**： alink .dll  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Al.exe (組件連結器)](../../tools/al-exe-assembly-linker.md)

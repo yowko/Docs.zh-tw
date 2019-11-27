@@ -1,5 +1,5 @@
 ---
-title: 'How to: Read From Text Files'
+title: 如何：從文字檔讀取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extended characters [Visual Basic], reading
@@ -36,7 +36,7 @@ ms.locfileid: "74334582"
 
 [!code-vb[VbFileIORead#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#3)]
 
-## <a name="robust-programming"></a>穩固程式設計
+## <a name="robust-programming"></a>最佳化程式設計
 
 以下條件可能會造成例外狀況：
 
@@ -60,7 +60,7 @@ ms.locfileid: "74334582"
 
 在應用程式中使用這些資料之前，請先驗證所有輸入值。 檔案內容可能與預期不同，並從檔案讀取資料的方法會失敗。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>

@@ -38,29 +38,29 @@ HRESULT SetManifestResourceProps (
   
 ## <a name="parameters"></a>參數  
  `mr`  
- [in] The token that specifies the `ManifestResource` metadata structure to be modified.  
+ 在Token，指定要修改的 `ManifestResource` 元資料結構。  
   
  `tkImplementation`  
- [in] The token, of type `File` or `AssemblyRef`, that maps to the resource provider.  
+ 在對應至資源提供者之 `File` 或 `AssemblyRef`類型的 token。  
   
  `dwOffset`  
- [in] The offset to the beginning of the resource within the file.  
+ 在檔案內資源開頭的位移。  
   
  `dwResourceFlags`  
- [in] A bitwise combination of flag values that specify the attributes of the resource.  
+ 在旗標值的位元組合，指定資源的屬性。  
   
 ## <a name="remarks"></a>備註  
- To create a `ManifestResource` metadata structure, use the [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) method.  
+ 若要建立 `ManifestResource` 元資料結構，請使用[IMetaDataAssemblyEmit：:D efinemanifestresource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

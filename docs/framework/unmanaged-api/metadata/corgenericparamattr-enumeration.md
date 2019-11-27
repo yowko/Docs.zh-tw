@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450288"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr 列舉
-Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
+包含值，描述泛型型別的 <xref:System.Type> 參數，如[IMetaDataEmit2：:D efinegenericparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)的呼叫中所使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,23 +47,23 @@ typedef enum CorGenericParamAttr {
   
 |成員|描述|  
 |------------|-----------------|  
-|`gpVarianceMask`|Parameter variance applies only to generic parameters for interfaces and delegates.|  
-|`gpNonVariant`|Indicates the absence of variance.|  
-|`gpCovariant`|Indicates covariance.|  
-|`gpContravariant`|Indicates contravariance.|  
-|`gpSpecialConstraintMask`|Special constraints can apply to any <xref:System.Type> parameter.|  
-|`gpNoSpecialConstraint`|Indicates that no constraint applies to the <xref:System.Type> parameter.|  
-|`gpReferenceTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a reference type.|  
-|`gpNotNullableValueTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.|  
-|`gpDefaultConstructorConstraint`|Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.|  
+|`gpVarianceMask`|參數變異數僅適用于介面和委派的泛型參數。|  
+|`gpNonVariant`|表示缺少變異數。|  
+|`gpCovariant`|表示共變數。|  
+|`gpContravariant`|表示逆變性。|  
+|`gpSpecialConstraintMask`|特殊條件約束可以套用至任何 <xref:System.Type> 參數。|  
+|`gpNoSpecialConstraint`|表示不會對 <xref:System.Type> 參數套用任何條件約束。|  
+|`gpReferenceTypeConstraint`|表示 <xref:System.Type> 參數必須是參考型別。|  
+|`gpNotNullableValueTypeConstraint`|表示 <xref:System.Type> 參數必須是不能為 null 值的實值型別。|  
+|`gpDefaultConstructorConstraint`|表示 <xref:System.Type> 參數必須具有不採用任何參數的預設公用函式。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

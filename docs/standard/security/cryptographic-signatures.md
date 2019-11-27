@@ -39,7 +39,7 @@ ms.locfileid: "74350462"
 
 數位簽章通常適用於代表較大資料的雜湊值。 下列範例會將數位簽章套用到雜湊值。 首先，會建立 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 類別的新執行個體，來產生公開/私密金鑰組。 接著， <xref:System.Security.Cryptography.RSACryptoServiceProvider> 會傳遞至 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 類別的新執行個體。 如此會將私密金鑰轉移給 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>，它會實際執行數位簽署。 在您可以簽署雜湊碼之前，必須先指定要使用的雜湊演算法。 此範例使用 SHA1 演算法。 最後，會呼叫 <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> 方法來執行簽章。
 
-Due to collision problems with SHA1, Microsoft recommends SHA256 or better.
+由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256 或更好的方式。
 
 ```vb
 Imports System.Security.Cryptography
@@ -104,7 +104,7 @@ class Class1
 
 .NET Framework 會提供 <xref:System.Security.Cryptography.Xml> 命名空間，可讓您簽署 XML。 當您想要確認 XML 是來自特定來源時，簽署 XML 是很重要的。 例如，如果您使用會利用 XML 的股票報價服務，如果 XML 的來源已簽署，您便可以驗證它。
 
-The classes in this namespace follow the [XML-Signature Syntax and Processing recommendation](https://www.w3.org/TR/xmldsig-core/) from the World Wide Web Consortium.
+這個命名空間中的類別會遵循來自全球資訊網協會的[XML 簽章語法和處理建議](https://www.w3.org/TR/xmldsig-core/)。
 
 ## <a name="verifying-signatures"></a>驗證簽章
 
@@ -118,7 +118,7 @@ The classes in this namespace follow the [XML-Signature Syntax and Processing re
 
 - 簽署人使用的雜湊演算法。
 
-若要驗證 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 類別所簽署的簽章，請使用 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 類別。 必須提供 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 類別簽署者的公開金鑰。 您將需要模數和指數的值以指定公開金鑰。 (The party that generated the public/private key pair should provide these values.) First create an <xref:System.Security.Cryptography.RSACryptoServiceProvider> object to hold the public key that will verify the signature, and then initialize an <xref:System.Security.Cryptography.RSAParameters> structure to the modulus and exponent values that specify the public key.
+若要驗證 <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> 類別所簽署的簽章，請使用 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 類別。 必須提供 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 類別簽署者的公開金鑰。 您將需要模數和指數的值以指定公開金鑰。 （產生公開/私密金鑰組的合作物件應該提供這些值）。首先，建立一個 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 物件來保存會驗證簽章的公開金鑰，然後將 <xref:System.Security.Cryptography.RSAParameters> 結構初始化為指定公開金鑰的模數和指數值。
 
 下列程式碼顯示如何建立 <xref:System.Security.Cryptography.RSAParameters> 結構。 `Modulus` 屬性設定為 `modulusData` 位元組陣列的值，而 `Exponent` 屬性設定為 `exponentData`位元組陣列的值。
 
@@ -136,7 +136,7 @@ rsaKeyInfo.Exponent = exponentData;
 
 建立 <xref:System.Security.Cryptography.RSAParameters> 物件之後，您可以針對 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 類別的新執行個體，初始化至 <xref:System.Security.Cryptography.RSAParameters>中指定的值。 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 會接著傳遞給 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> 的建構函式以傳送金鑰。
 
-下列範例將說明此程序。 在此範例中， `hashValue` 和 `signedHashValue` 是遠端合作對象所提供的位元組陣列。 遠端合作對象已使用 SHA1 演算法簽署 `hashValue` ，產生數位簽章 `signedHashValue`。 The <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> method verifies that the digital signature is valid and was used to sign the `hashValue`.
+下列範例將說明此程序。 在此範例中， `hashValue` 和 `signedHashValue` 是遠端合作對象所提供的位元組陣列。 遠端合作對象已使用 SHA1 演算法簽署 `hashValue` ，產生數位簽章 `signedHashValue`。 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> 方法會驗證數位簽章是否有效，並已用來簽署 `hashValue`。
 
 ```vb
 Dim rsa As New RSACryptoServiceProvider()
@@ -167,6 +167,6 @@ else
 
 如果簽章有效，此程式碼片段會顯示 "`The signature is valid`"，否則顯示 "`The signature is not valid`"。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [密碼編譯服務](../../../docs/standard/security/cryptographic-services.md)

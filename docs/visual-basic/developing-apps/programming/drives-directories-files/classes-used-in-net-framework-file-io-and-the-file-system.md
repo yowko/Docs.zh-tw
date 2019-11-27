@@ -30,7 +30,7 @@ ms.locfileid: "74348921"
 |<xref:System.IO.FileAccess?displayProperty=nameWithType>|定義檔案讀取、寫入或讀取/寫入存取的常數。|  
 |<xref:System.IO.FileAttributes?displayProperty=nameWithType>|提供檔案和目錄的屬性，例如 `Archive`、`Hidden` 和 `ReadOnly`。|  
 |<xref:System.IO.FileInfo?displayProperty=nameWithType>|提供建立、複製、刪除、移動和開啟檔案的靜態方法，並協助建立 `FileStream`。|  
-|<xref:System.IO.FileMode?displayProperty=nameWithType>|控制檔案的開啟方式。 這個參數於針對 `FileStream` 和 `IsolatedStorageFileStream`，以及針對 <xref:System.IO.File> 和 <xref:System.IO.FileInfo> 之 `Open` 方法的許多建構函式中指定。|  
+|<xref:System.IO.FileMode?displayProperty=nameWithType>|控制檔案的開啟方式。 這個參數於針對 `FileStream` 和 `IsolatedStorageFileStream`，以及針對 `Open` 和 <xref:System.IO.File> 之 <xref:System.IO.FileInfo> 方法的許多建構函式中指定。|  
 |<xref:System.IO.FileShare?displayProperty=nameWithType>|定義常數，用來控制其他檔案資料流對相同檔案可以擁有的存取類型。|  
 |<xref:System.IO.Path?displayProperty=nameWithType>|提供處理目錄字串的方法和屬性。|  
 |<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|透過定義 <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>、<xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>、<xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A>，以及 <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> 權限，來控制檔案和資料夾的存取。|  
@@ -60,9 +60,9 @@ ms.locfileid: "74348921"
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|從 `String` 讀取字元。 輸出可以是任何編碼的資料流或 `String`。|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|將字元寫入至 `String`。 輸出可以是任何編碼的資料流或 `String`。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [撰寫資料流](../../../../standard/io/composing-streams.md)
 - [檔案和資料流 I/O](../../../../standard/io/index.md)
-- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [非同步檔案 I/O](../../../../standard/io/asynchronous-file-i-o.md)
 - [.NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

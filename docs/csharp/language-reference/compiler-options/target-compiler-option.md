@@ -20,7 +20,7 @@ ms.locfileid: "74204521"
 您可以使用四種形式之一來指定 **-target** 編譯器選項︰  
   
  [-target:appcontainerexe](./target-appcontainerexe-compiler-option.md)  
- To create an .exe file for Windows 8.x Store apps.  
+ 建立 Windows 8.x 存放區應用程式的 .exe 檔案。  
   
  [-target:exe](./target-exe-compiler-option.md)  
  建立 .exe 檔案。  
@@ -37,7 +37,7 @@ ms.locfileid: "74204521"
  [-target:winmdobj](./target-winmdobj-compiler-option.md)  
  建立中繼 .winmdobj 檔案。  
   
- 除非您指定 **-target:module**，否則 **-target** 會將 .NET Framework 組件資訊清單放入輸出檔案中。 For more information, see [Assemblies in .NET](../../../standard/assembly/index.md) and [Common Attributes](../../programming-guide/concepts/attributes/common-attributes.md).  
+ 除非您指定 **-target:module**，否則 **-target** 會將 .NET Framework 組件資訊清單放入輸出檔案中。 如需詳細資訊，請參閱[.net 中的元件](../../../standard/assembly/index.md)和[通用屬性](../../programming-guide/concepts/attributes/common-attributes.md)。  
   
  編譯時，組件資訊清單會放在第一個 .exe 輸出檔，如果沒有 .exe 輸出檔，則會放在第一個 DLL 中。 例如，在下列命令列中，資訊清單會放在 `1.exe` 中：  
   
@@ -62,7 +62,7 @@ public class TestClass
   
  如需以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

@@ -13,9 +13,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347997"
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
-元件物件模型 (COM) 可讓物件向其他元件公開其功能以及主控應用程式。 大部分的現今軟體都會包括 COM 物件。 雖然 .NET 組件是新應用程式的最佳選擇，但您有時可能需要採用 COM 物件。 This section covers some of the issues associated with creating and using COM objects with Visual Basic.  
+元件物件模型 (COM) 可讓物件向其他元件公開其功能以及主控應用程式。 大部分的現今軟體都會包括 COM 物件。 雖然 .NET 組件是新應用程式的最佳選擇，但您有時可能需要採用 COM 物件。 本節涵蓋一些與透過 Visual Basic 建立和使用 COM 物件相關聯的問題。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [COM Interop 簡介](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  提供 COM 互通性的概觀。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "74347997"
  涵蓋如何將參考新增至具有型別程式庫的 COM 物件。  
   
  [操作說明：使用 ActiveX 控制項](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Demonstrates how to use existing ActiveX controls to add features to the Visual Studio Toolbox.  
+ 示範如何使用現有的 ActiveX 控制項，將功能加入至 Visual Studio 工具箱。  
   
  [逐步解說：呼叫 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  逐步解說如何呼叫屬於 Windows 作業系統之 API 的程序。  

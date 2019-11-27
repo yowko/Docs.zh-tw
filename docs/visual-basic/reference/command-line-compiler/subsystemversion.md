@@ -13,7 +13,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348541"
 ---
-# <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
+# <a name="-subsystemversion-visual-basic"></a>-subsystemversion （Visual Basic）
 
 指定產生的可執行檔可在其上執行的最小子系統版本，進而決定可執行檔可在其上執行的 Windows 版本。 大多數情況下，此選項可確保可執行檔可以利用舊版 Windows 未提供的特定安全性功能。
 
@@ -66,9 +66,9 @@ ms.locfileid: "74348541"
 
 ## <a name="setting-this-option"></a>設定這個選項
 
-To set the **-subsystemversion** compiler option in Visual Studio, you must open the .vbproj file and specify a value for the `SubsystemVersion` property in the MSBuild XML. 您不能在 Visual Studio IDE 中設定此選項。 如需詳細資訊，請參閱本主題稍早的＜預設值＞或[通用的 MSBuild 專案屬性](/visualstudio/msbuild/common-msbuild-project-properties)。
+若要在 Visual Studio 中設定 **-subsystemversion**編譯器選項，您必須開啟 vbproj 檔案，並在 MSBuild XML 中指定 `SubsystemVersion` 屬性的值。 您不能在 Visual Studio IDE 中設定此選項。 如需詳細資訊，請參閱本主題稍早的＜預設值＞或[通用的 MSBuild 專案屬性](/visualstudio/msbuild/common-msbuild-project-properties)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 

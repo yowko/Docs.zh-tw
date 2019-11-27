@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446551"
 ---
 # <a name="createalink-function"></a>CreateALink 函式
-Creates an instance of the Assembly Linker and sets a pointer to the specified interface.  
+建立元件連結器的實例，並設定指定介面的指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,12 +38,12 @@ HRESULT CreateALink (
   
 |參數|描述|  
 |---------------|-----------------|  
-|`riid`|The physical name of one of the Assembly Linker interfaces.|  
-|`ppInterface`|The location that on successful completion contains a pointer to the `riid` interface.|  
+|`riid`|其中一個元件連結器介面的機構名稱。|  
+|`ppInterface`|成功完成時的位置包含 `riid` 介面的指標。|  
   
 ## <a name="requirements"></a>需求  
- **Library**: alink.dll  
+ 連結**庫**： alink .dll  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Al.exe (組件連結器)](../../tools/al-exe-assembly-linker.md)

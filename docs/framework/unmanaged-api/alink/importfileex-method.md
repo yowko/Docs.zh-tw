@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446959"
 ---
 # <a name="importfileex-method"></a>ImportFileEx 方法
-Imports indicated assembly or unbound module.  
+匯入指定的元件或解除系結模組。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,33 +40,33 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>參數  
  `pszFilename`  
- Fully qualified name of file from which to import.  
+ 要匯入之檔案的完整名稱。  
   
  `pszTargetName`  
- Optional name of target file.  
+ 目的檔案名的選擇性名稱。  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ 若為 TRUE，則會使用 ImportTypes，否則必須手動執行匯入。  
   
  `dwOpenFlags`  
- Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
+ 要傳遞至[OpenScope 方法](../metadata/imetadatadispenser-openscope-method.md)的旗標。  
   
  `pImportToken`  
- Receives ID of the file being imported.  
+ 接收正在匯入之檔案的識別碼。  
   
  `ppAssemblyScope`  
- Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
+ 接收元件匯入範圍[IMetaDataAssemblyImport 介面](../metadata/imetadataassemblyimport-interface.md)介面。 如果檔案不是元件，則會設定為 Null。  
   
  `pdwCountOfScopes`  
- Receives count of imported files and/or scopes.  
+ 接收匯入的檔案和/或範圍的計數。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h.  
+ 需要 alink. h。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink2 介面](ialink2-interface.md)
 - [IALink 介面](ialink-interface.md)

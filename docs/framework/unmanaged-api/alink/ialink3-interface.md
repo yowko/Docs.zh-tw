@@ -14,18 +14,18 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441787"
 ---
 # <a name="ialink3-interface"></a>IALink3 介面
-Provides a single method, `SetManifestFile`, which enables you to specify or reset the manifest file the linker will use when it creates an assembly.  
+提供單一方法 `SetManifestFile`，這可讓您指定或重設連結器在建立元件時將使用的資訊清單檔。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [SetManifestFile 方法](setmanifestfile-method.md)  
- Enables you to specify or reset the manifest file that the linker will use when it creates the assembly.  
+ 可讓您指定或重設連結器在建立元件時將使用的資訊清單檔。  
   
 ## <a name="related-sections"></a>相關章節  
  [ALink API](index.md)  
  支援建立 .NET Framework 組件和未繫結的模組。  
   
  [IALink 介面](ialink-interface.md)  
- Helps in constructing .NET Framework assemblies.  
+ 有助於 .NET Framework 元件的建立。  
   
  [Al.exe (組件連結器)](../../tools/al-exe-assembly-linker.md)  
- Generates a file that has an assembly manifest from one or more files that are either modules or resource files.
+ 從一個或多個模組或資源檔的檔案產生具有組件資訊清單的檔案。

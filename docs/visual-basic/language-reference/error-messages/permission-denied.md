@@ -12,16 +12,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347008"
 ---
 # <a name="permission-denied-visual-basic"></a>使用權限遭拒 (Visual Basic)
-An attempt was made to write to a write-protected disk or to access a locked file.  
+嘗試寫入受寫入保護的磁片，或存取已鎖定的檔案。  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a>若要改正這項錯誤  
   
-1. To open a write-protected file, change the write-protection attribute of the file.  
+1. 若要開啟受寫入保護的檔案，請變更檔案的寫入保護屬性。  
   
-2. Make sure that another process has not locked the file, and wait to open the file until the other process releases it.  
+2. 請確定另一個進程尚未鎖定檔案，然後等候開啟檔案，直到其他進程釋放該檔案為止。  
   
-3. To access the registry, check that your user permissions include this type of registry access.  
+3. 若要存取登錄，請檢查您的使用者權限是否包含這種類型的登錄存取權。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [錯誤類型](../../../visual-basic/programming-guide/language-features/error-types.md)

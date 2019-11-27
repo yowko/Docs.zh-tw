@@ -15,19 +15,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350650"
 ---
 # <a name="myresponse-object"></a>My.Response 物件
-Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>. 此物件可讓您將 HTTP 回應資料傳送給用戶端，並包含該回應的相關資訊。  
+取得與 <xref:System.Web.UI.Page>相關聯的 <xref:System.Web.HttpResponse> 物件。 此物件可讓您將 HTTP 回應資料傳送給用戶端，並包含該回應的相關資訊。  
   
 ## <a name="remarks"></a>備註  
- The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.  
+ `My.Response` 物件包含與頁面相關聯的目前 <xref:System.Web.HttpResponse> 物件。  
   
- The `My.Response` object is only available for ASP.NET applications.  
+ `My.Response` 物件僅適用于 ASP.NET 應用程式。  
   
 ## <a name="example"></a>範例  
- The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.  
+ 下列範例會從 `My.Request` 物件取得標頭集合，並使用 `My.Response` 物件將其寫入 ASP.NET 網頁。  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Web.HttpResponse>
 - [My.Request 物件](../../../visual-basic/language-reference/objects/my-request-object.md)

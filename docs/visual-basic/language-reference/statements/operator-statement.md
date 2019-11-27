@@ -1,5 +1,5 @@
 ---
-title: Operator Statement
+title: Operator 陳述式
 ms.date: 07/20/2015
 f1_keywords:
 - vb.operator
@@ -24,9 +24,9 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353799"
 ---
-# <a name="operator-statement"></a>Operator Statement
+# <a name="operator-statement"></a>Operator 陳述式
 
-Declares the operator symbol, operands, and code that define an operator procedure on a class or structure.
+宣告運算子符號、運算元，以及在類別或結構上定義運算子程式的程式碼。
 
 ## <a name="syntax"></a>語法
 
@@ -43,80 +43,80 @@ End Operator
 ## <a name="parts"></a>組件
 
 `attrlist`  
-選擇項。 See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).
+選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。
 
 `Public`  
-必要項。 Indicates that this operator procedure has [Public](../../../visual-basic/language-reference/modifiers/public.md) access.
+必要。 指出此運算子程式具有[公用](../../../visual-basic/language-reference/modifiers/public.md)存取權。
 
 `Overloads`  
-選擇項。 See [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md).
+選擇性。 請[參閱](../../../visual-basic/language-reference/modifiers/overloads.md)多載。
 
 `Shared`  
-必要項。 Indicates that this operator procedure is a [Shared](../../../visual-basic/language-reference/modifiers/shared.md) procedure.
+必要。 表示此運算子程式是[共用](../../../visual-basic/language-reference/modifiers/shared.md)程式。
 
 `Shadows`  
-選擇項。 See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+選擇性。 請參閱[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。
 
 `Widening`  
-Required for a conversion operator unless you specify `Narrowing`. Indicates that this operator procedure defines a [Widening](../../../visual-basic/language-reference/modifiers/widening.md) conversion. See "Widening and Narrowing Conversions" on this Help page.
+轉換運算子的必要參數，除非您指定 `Narrowing`。 表示此運算子程式會定義[擴展](../../../visual-basic/language-reference/modifiers/widening.md)轉換。 請參閱此說明頁面上的「擴展和縮小轉換」。
 
 `Narrowing`  
-Required for a conversion operator unless you specify `Widening`. Indicates that this operator procedure defines a [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md) conversion. See "Widening and Narrowing Conversions" on this Help page.
+轉換運算子的必要參數，除非您指定 `Widening`。 表示此運算子程式會定義[縮小](../../../visual-basic/language-reference/modifiers/narrowing.md)轉換。 請參閱此說明頁面上的「擴展和縮小轉換」。
 
 `operatorsymbol`  
-必要項。 The symbol or identifier of the operator that this operator procedure defines.
+必要。 這個運算子程式所定義之運算子的符號或識別碼。
 
 `operand1`  
-必要項。 The name and type of the single operand of a unary operator (including a conversion operator) or the left operand of a binary operator.
+必要。 一元運算子之單一運算元的名稱和類型（包括轉換運算子）或二元運算子的左運算元。
 
 `operand2`  
-Required for binary operators. The name and type of the right operand of a binary operator.
+二元運算子的必要參數。 二元運算子右運算元的名稱和類型。
 
-`operand1` and `operand2` have the following syntax and parts:
+`operand1` 和 `operand2` 具有下列語法和部分：
 
 `[ ByVal ] operandname [ As operandtype ]`
 
 |組件|描述|
 |----------|-----------------|
-|`ByVal`|Optional, but the passing mechanism must be [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).|
-|`operandname`|必要項。 Name of the variable representing this operand. 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|
-|`operandtype`|Optional unless `Option Strict` is `On`. Data type of this operand.|
+|`ByVal`|選擇性，但傳遞機制必須是[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)。|
+|`operandname`|必要。 代表這個運算元之變數的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|
+|`operandtype`|除非 `On``Option Strict`，否則為選擇性。 這個運算元的資料類型。|
 
 `type`  
-Optional unless `Option Strict` is `On`. Data type of the value the operator procedure returns.
+除非 `On``Option Strict`，否則為選擇性。 運算子程式傳回值的資料類型。
 
 `statements`  
-選擇項。 Block of statements that the operator procedure runs.
+選擇性。 運算子程式執行的語句區塊。
 
 `returnvalue`  
-必要項。 The value that the operator procedure returns to the calling code.
+必要。 運算子程式傳回給呼叫程式碼的值。
 
 `End` `Operator`  
-必要項。 Terminates the definition of this operator procedure.
+必要。 終止此運算子程式的定義。
 
 ## <a name="remarks"></a>備註
 
-You can use `Operator` only in a class or structure. This means the *declaration context* for an operator cannot be a source file, namespace, module, interface, procedure, or block. 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。
+您只能在類別或結構中使用 `Operator`。 這表示運算子的宣告*內容*不能是原始程式檔、命名空間、模組、介面、程式或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。
 
-All operators must be `Public Shared`. You cannot specify `ByRef`, `Optional`, or `ParamArray` for either operand.
+所有的運算子都必須 `Public Shared`。 您不能為任一運算元指定 `ByRef`、`Optional`或 `ParamArray`。
 
-You cannot use the operator symbol or identifier to hold a return value. You must use the `Return` statement, and it must specify a value. Any number of `Return` statements can appear anywhere in the procedure.
+您不能使用運算子符號或識別碼來保存傳回值。 您必須使用 `Return` 語句，而且必須指定值。 任何數目的 `Return` 語句都可以出現在程式中的任何位置。
 
-Defining an operator in this way is called *operator overloading*, whether or not you use the `Overloads` keyword. 下表列出您可以定義的運算子清單。
+不論您是否使用 `Overloads` 關鍵字，以這種方式定義運算子稱為「*運算子*多載」。 下表列出您可以定義的運算子清單。
 
-|輸入|運算子|
+|類型|運算子|
 |----------|---------------|
-|一元|`+`、 `-`、 `IsFalse`、 `IsTrue`、 `Not`|
-|二元|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|
+|一元|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|
+|Binary|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|
 |轉換 (一元)|`CType`|
 
-Note that the `=` operator in the binary list is the comparison operator, not the assignment operator.
+請注意，二進位清單中的 `=` 運算子是比較運算子，而不是指派運算子。
 
-When you define `CType`, you must specify either `Widening` or `Narrowing`.
+當您定義 `CType`時，您必須指定 [`Widening`] 或 [`Narrowing`]。
 
-## <a name="matched-pairs"></a>Matched Pairs
+## <a name="matched-pairs"></a>相符的配對
 
-You must define certain operators as matched pairs. If you define either operator of such a pair, you must define the other as well. The matched pairs are the following:
+您必須將某些運算子定義為相符的配對。 如果您定義這類配對的任一個運算子，則也必須定義另一個。 相符的配對如下所示：
 
 - `=` 和 `<>`
 
@@ -126,59 +126,59 @@ You must define certain operators as matched pairs. If you define either operato
 
 - `IsTrue` 和 `IsFalse`
 
-## <a name="data-type-restrictions"></a>Data Type Restrictions
+## <a name="data-type-restrictions"></a>資料類型限制
 
-Every operator you define must involve the class or structure on which you define it. This means that the class or structure must appear as the data type of the following:
+您定義的每個運算子都必須包含您定義它所在的類別或結構。 這表示類別或結構必須以下列資料類型的形式出現：
 
-- The operand of a unary operator.
+- 一元運算子的運算元。
 
-- At least one of the operands of a binary operator.
+- 二元運算子的至少一個運算元。
 
-- Either the operand or the return type of a conversion operator.
+- 轉換運算子的運算元或傳回型別。
 
- Certain operators have additional data type restrictions, as follows:
+ 某些運算子具有額外的資料類型限制，如下所示：
 
-- If you define the `IsTrue` and `IsFalse` operators, they must both return the `Boolean` type.
+- 如果您定義 `IsTrue` 和 `IsFalse` 運算子，則兩者都必須傳回 `Boolean` 類型。
 
-- If you define the `<<` and `>>` operators, they must both specify the `Integer` type for the `operandtype` of `operand2`.
+- 如果您定義 `<<` 和 `>>` 運算子，它們必須同時為 `operand2`的 `operandtype` 指定 `Integer` 類型。
 
-The return type does not have to correspond to the type of either operand. For example, a comparison operator such as `=` or `<>` can return `Boolean` even if neither operand is `Boolean`.
+傳回型別不一定要對應至任一運算元的型別。 例如，即使兩個運算元都不 `Boolean`，比較運算子（例如 `=` 或 `<>` 也可以傳回 `Boolean`。
 
 ## <a name="logical-and-bitwise-operators"></a>邏輯運算子和位元運算子
 
-The `And`, `Or`, `Not`, and `Xor` operators can perform either logical or bitwise operations in Visual Basic. However, if you define one of these operators on a class or structure, you can define only its bitwise operation.
+`And`、`Or`、`Not`和 `Xor` 運算子可以在 Visual Basic 中執行邏輯 or 位運算。 不過，如果您在類別或結構上定義其中一個運算子，則只能定義其位運算。
 
-You cannot define the `AndAlso` operator directly with an `Operator` statement. However, you can use `AndAlso` if you have fulfilled the following conditions:
+您不能直接使用 `Operator` 語句來定義 `AndAlso` 運算子。 不過，如果您已完成下列條件，您可以使用 `AndAlso`：
 
-- You have defined `And` on the same operand types you want to use for `AndAlso`.
+- 您已在要用於 `AndAlso`的相同運算元類型上定義 `And`。
 
-- Your definition of `And` returns the same type as the class or structure on which you have defined it.
+- 您的 `And` 定義會傳回與您已定義的類別或結構相同的類型。
 
-- You have defined the `IsFalse` operator on the class or structure on which you have defined `And`.
+- 您已在定義 `And`的類別或結構上定義 `IsFalse` 運算子。
 
-Similarly, you can use `OrElse` if you have defined `Or` on the same operands, with the return type of the class or structure, and you have defined `IsTrue` on the class or structure.
+同樣地，如果您已在相同的運算元上定義 `Or`、使用類別或結構的傳回型別，而且您已在類別或結構上定義 `IsTrue`，則可以使用 `OrElse`。
 
 ## <a name="widening-and-narrowing-conversions"></a>Widening and Narrowing Conversions
 
-A *widening conversion* always succeeds at run time, while a *narrowing conversion* can fail at run time. 如需詳細資訊，請參閱 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。
+*擴輾轉換*一律會在執行時間成功，而*縮小轉換*可能會在執行時間失敗。 如需詳細資訊，請參閱 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。
 
-If you declare a conversion procedure to be `Widening`, your procedure code must not generate any failures. 這表示：
+如果您宣告要 `Widening`的轉換過程，程式碼就不能產生任何失敗。 這表示：
 
-- It must always return a valid value of type `type`.
+- 它必須一律傳回 `type`類型的有效值。
 
-- It must handle all possible exceptions and other error conditions.
+- 它必須處理所有可能的例外狀況和其他錯誤情況。
 
-- It must handle any error returns from any procedures it calls.
+- 它必須處理從它所呼叫的任何程式傳回的任何錯誤。
 
-If there is any possibility that a conversion procedure might not succeed, or that it might cause an unhandled exception, you must declare it to be `Narrowing`.
+如果轉換程式可能不會成功，或可能造成未處理的例外狀況，您必須將它宣告為 `Narrowing`。
 
 ## <a name="example"></a>範例
 
-The following code example uses the `Operator` statement to define the outline of a structure that includes operator procedures for the `And`, `Or`, `IsFalse`, and `IsTrue` operators. `And` and `Or` each take two operands of type `abc` and return type `abc`. `IsFalse` and `IsTrue` each take a single operand of type `abc` and return `Boolean`. These definitions allow the calling code to use `And`, `AndAlso`, `Or`, and `OrElse` with operands of type `abc`.
+下列程式碼範例會使用 `Operator` 語句來定義結構的外框，其中包含 `And`、`Or`、`IsFalse`和 `IsTrue` 運算子的運算子程式。 `And` 和 `Or` 都會採用類型 `abc` 的兩個運算元，並 `abc`傳回型別。 `IsFalse` 和 `IsTrue` 都會採用類型 `abc` 的單一運算元，並傳回 `Boolean`。 這些定義可讓呼叫程式碼使用 `And`、`AndAlso`、`Or`和 `OrElse`，並搭配 `abc`類型的運算元。
 
 [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IsFalse 運算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)
 - [IsTrue 運算子](../../../visual-basic/language-reference/operators/istrue-operator.md)

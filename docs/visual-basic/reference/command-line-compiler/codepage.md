@@ -13,7 +13,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343551"
 ---
-# <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
+# <a name="-codepage-visual-basic"></a>-字碼頁（Visual Basic）
 指定編譯過程中所有原始程式碼檔使用的字碼頁。  
   
 ## <a name="syntax"></a>語法  
@@ -26,16 +26,16 @@ ms.locfileid: "74343551"
   
 |詞彙|定義|  
 |---|---|  
-|`id`|必要項。 The compiler uses the code page specified by `id` to interpret the encoding of the source files.|  
+|`id`|必要。 編譯器會使用 `id` 所指定的字碼頁來解讀來源檔案的編碼方式。|  
   
 ## <a name="remarks"></a>備註  
- To compile source code saved with a specific encoding, you can use `-codepage` to specify which code page should be used. The `-codepage` option applies to all source-code files in your compilation. For more information, see [Character Encoding in the .NET Framework](../../../standard/base-types/character-encoding.md).  
+ 若要編譯以特定編碼方式儲存的原始程式碼，您可以使用 `-codepage` 來指定應該使用的字碼頁。 `-codepage` 選項會套用至編譯中的所有原始程式碼檔。 如需詳細資訊，請參閱[.NET Framework 中的字元編碼](../../../standard/base-types/character-encoding.md)。  
   
- The `-codepage` option is not needed if the source-code files were saved using the current ANSI code page, Unicode, or UTF-8 with a signature. Visual Studio saves all source-code files with the current ANSI code page by default, unless the user specifies another encoding in the **Encoding** dialog box. Visual Studio uses the **Encoding** dialog box to open source-code files saved with a different code page.  
+ 如果原始程式碼檔案是使用目前的 ANSI 字碼頁、Unicode 或 UTF-8 （含簽章）儲存，則不需要 `-codepage` 選項。 Visual Studio 預設會儲存目前 ANSI 字碼頁的所有原始程式碼檔，除非使用者在 [**編碼**] 對話方塊中指定另一種編碼方式。 Visual Studio 使用 [**編碼**] 對話方塊來開啟以不同字碼頁儲存的原始程式碼檔案。  
   
 > [!NOTE]
-> The `-codepage` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> Visual Studio 開發環境中無法使用 [`-codepage`] 選項;只有在從命令列編譯時，才可以使用它。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)

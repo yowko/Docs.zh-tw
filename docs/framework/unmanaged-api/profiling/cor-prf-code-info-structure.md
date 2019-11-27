@@ -37,18 +37,18 @@ typedef struct _COR_PRF_CODE_INFO {
   
 |成員|描述|  
 |------------|-----------------|  
-|`startAddress`|The starting address of the contiguous block of code.|  
-|`size`|The size of the block.|  
+|`startAddress`|連續程式碼區塊的起始位址。|  
+|`size`|區塊的大小。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorProf.idl  
+ **標頭：** Corprof.idl .idl  
   
  **程式庫：** CorGuids.lib  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [分析結構](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

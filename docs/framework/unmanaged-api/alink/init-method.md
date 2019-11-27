@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445635"
 ---
 # <a name="init-method"></a>Init 方法
-Prepares objects implementing the [IALink Interface](ialink-interface.md) for use.  
+準備物件，以執行[IALink 介面](ialink-interface.md)以供使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,18 +35,18 @@ HRESULT Init(
   
 ## <a name="parameters"></a>參數  
  `pDispenser`  
- [IMetaDataDispenserEx Interface](../metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.  
+ 中繼資料分配器的[IMetaDataDispenserEx 介面](../metadata/imetadatadispenserex-interface.md)指標。  
   
  `pErrorHandler`  
- [IMetaDataError Interface](../metadata/imetadataerror-interface.md) pointer to an optional error handling interface.  
+ 選擇性錯誤處理介面的[IMetaDataError 介面](../metadata/imetadataerror-interface.md)指標。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h  
+ 需要 alink. h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

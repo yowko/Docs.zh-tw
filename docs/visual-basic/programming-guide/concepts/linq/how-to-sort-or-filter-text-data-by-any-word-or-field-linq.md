@@ -15,7 +15,7 @@ ms.locfileid: "74341521"
 
 ### <a name="to-create-a-file-that-contains-data"></a>建立內含資料的檔案
 
-Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.
+從[如何：從不同的檔案聯結內容（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)主題複製分數 .csv 資料，並將它儲存至您的方案資料夾。
 
 ## <a name="example"></a>範例
 
@@ -70,12 +70,12 @@ End Class
 ' 115, 35, 72, 91, 70
 ```
 
-This example also demonstrates how to return a query variable from a Function.
+這個範例也會示範如何從函式傳回查詢變數。
 
 ## <a name="compiling-the-code"></a>編譯程式碼
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+建立 VB.NET 主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 和字串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

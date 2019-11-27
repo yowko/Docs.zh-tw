@@ -37,8 +37,8 @@ typedef enum {
   
 |成員|描述|  
 |------------|-----------------|  
-|`COR_PRF_GC_INDUCED`|The garbage collection was induced by a <xref:System.GC.Collect%2A> method.|  
-|`COR_PRF_GC_OTHER`|The reason is unspecified.|  
+|`COR_PRF_GC_INDUCED`|垃圾收集是由 <xref:System.GC.Collect%2A> 方法所引發。|  
+|`COR_PRF_GC_OTHER`|這是未指定的原因。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -49,6 +49,6 @@ typedef enum {
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

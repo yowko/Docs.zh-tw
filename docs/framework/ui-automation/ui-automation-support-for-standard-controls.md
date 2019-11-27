@@ -14,7 +14,7 @@ ms.locfileid: "74441219"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>標準控制項的 UI 自動化支援
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主題將說明針對 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]和 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]架構所開發的應用程式中，其標準控制項的 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 支援。  
   
@@ -41,11 +41,11 @@ ms.locfileid: "74441219"
 |按鈕|核取方塊|  
 |ComboBoxEx32|ComboBox|  
 |ComboBox|ComboBox|  
-|Edit|文件|  
-|Edit|Edit|  
+|編輯|文件|  
+|編輯|編輯|  
 |SysLink|超連結|  
-|Static|Text|  
-|Static|Image|  
+|靜態|Text|  
+|靜態|影像|  
 |SysIPAddress32|自訂|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
@@ -54,8 +54,8 @@ ms.locfileid: "74441219"
 |ListBox|ListItem|  
 |#32768|功能表|  
 |#32768|MenuItem|  
-|msctls_progress32|進度列|  
-|RichEdit|Document. 請參閱「注意」。|  
+|msctls_progress32|ProgressBar|  
+|RichEdit|文件。 請參閱「注意」。|  
 |RichEdit20A|文件|  
 |RichEdit20W|文件|  
 |RichEdit50W|文件|  
@@ -70,33 +70,33 @@ ms.locfileid: "74441219"
 |ToolbarWindow32|按鈕|  
 |ToolbarWindow32|核取方塊|  
 |ToolbarWindow32|RadioButton|  
-|ToolbarWindow32|Separator|  
+|ToolbarWindow32|分隔符號|  
 |tooltips_class32|ToolTip|  
 |#32774|ToolTip|  
 |ReBarWindow32|ToolBar|  
 |SysTreeView32|樹狀結構|  
 |SysTreeView32|TreeItem|  
   
- **Note** The RichEdit control is supported only for versions shipped with Windows Vista (in RichEd20.dll version 3.1 and later, and MsftEdit.dll version 4.1 and later).  
+ **注意**RichEdit 控制項僅支援 Windows Vista 隨附的版本（在 Riched20.dll 版本3.1 和更新版本中，以及 4.1 Msftedit.dll 和更新版本）。  
   
  不支援的控制項如下。  
   
 |類別名稱|控制項類型|  
 |----------------|------------------|  
-|SysAnimate32|Image|  
+|SysAnimate32|影像|  
 |SysPager|Spinner|  
 |SysDateTimePick32|自訂|  
 |SysMonthCal32|行事曆|  
-|MS_WINNOTE|ToolTip|  
-|VBBubble|ToolTip|  
+|MS_WINNOTE|工具提示|  
+|VBBubble|工具提示|  
 |ScrollBar (當做獨立控制項使用時)|滑桿|  
 |SuperGrid|自訂|  
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Windows Form 控制項  
- Windows Forms controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] through client-side providers in UIAutomationClientsideProviders.dll. 此組件會自動註冊為用於使用者介面自動化用戶端應用程式。  
+ Windows Forms 控制項會透過 Uiautomationclientsideproviders.dll 中的用戶端提供者公開給 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]。 此組件會自動註冊為用於使用者介面自動化用戶端應用程式。  
   
- Typically, Windows Forms controls that are managed wrappers for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] common controls are supported by [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. 支援的控制項如下。  
+ 一般來說，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支援 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 通用控制項的 managed 包裝函式 Windows Forms 控制項。 支援的控制項如下。  
   
 |類別名稱|  
 |----------------|  
@@ -110,7 +110,7 @@ ms.locfileid: "74441219"
 |GroupBox|  
 |HscrollBar|  
 |ImageList|  
-|ThisAddIn|  
+|標籤|  
 |ListBox|  
 |ListView|  
 |MainMenu/ContextMenu|  
@@ -119,7 +119,7 @@ ms.locfileid: "74441219"
 |OpenFileDialog|  
 |PageSetupDialog|  
 |PrintDialog|  
-|進度列|  
+|ProgressBar|  
 |RadioButton|  
 |RichTextBox|  
 |SaveFileDialog|  
@@ -136,7 +136,7 @@ ms.locfileid: "74441219"
 |VscrollBar|  
 |Web 瀏覽器|  
   
- The following controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] only through their support for Microsoft Active Accessibility. 部分功能可能無法使用。  
+ 下列控制項只會透過 Microsoft Active Accessibility 的支援來公開 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]。 部分功能可能無法使用。  
   
 |控制項名稱|  
 |------------------|  
@@ -163,10 +163,10 @@ ms.locfileid: "74441219"
 |ToolStrip|  
 |TableLayoutPanel|  
 |SplitContainer/SplitterPanel|  
-|Splitter|  
+|分隔器|  
 |RaftingContainer|  
 |StatusStrip|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [UI 自動化控制項類型](ui-automation-control-types.md)
+- [UI Automation Control Types](ui-automation-control-types.md)

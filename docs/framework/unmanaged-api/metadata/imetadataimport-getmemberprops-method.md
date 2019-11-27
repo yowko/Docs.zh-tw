@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437513"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps 方法
-Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token. This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called. See these other methods for details. 
+針對指定的元資料標記所參考的 <xref:System.Type> 成員，取得儲存在中繼資料中的特定成員定義的資訊，包括名稱、二進位簽章和相對虛擬位址。 這是簡單的 helper 方法：如果*mb*是 MethodDef，則會呼叫**GetMethodProps** ;如果*mb*是 FieldDef，則會呼叫**GetFieldProps** 。 如需詳細資訊，請參閱這些其他方法。 
   
 ## <a name="syntax"></a>語法  
   
@@ -47,54 +47,54 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>參數  
  `mb`  
- [in] The token that references the member to get the associated metadata for.  
+ 在參考要取得相關聯中繼資料之成員的 token。  
   
  `pClass`  
- [out] A pointer to the metadata token that represents the class of the member.  
+ 脫銷元資料標記的指標，表示成員的類別。  
   
  `szMember`  
- [out] The name of the member.  
+ 脫銷成員的名稱。  
   
  `cchMember`  
- [in] The size in wide characters of the `szMember` buffer.  
+ 在`szMember` 緩衝區的大小（以寬字元為單位）。  
   
  `pchMember`  
- [out] The size in wide characters of the returned name.  
+ 脫銷傳回名稱的大小（以寬字元為單位）。  
   
  `pdwAttr`  
- [out] Any flag values applied to the member.  
+ 脫銷套用至成員的任何旗標值。  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the member.  
+ 脫銷成員的二進位中繼資料簽章的指標。  
   
  `pcbSigBlob`  
- [out] The size in bytes of `ppvSigBlob`.  
+ 脫銷`ppvSigBlob`的大小（以位元組為單位）。  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the member.  
+ 脫銷成員之相對虛擬位址的指標。  
   
  `pdwImplFlags`  
- [out] Any method implementation flags associated with the member.  
+ 脫銷與成員相關聯的任何方法執行旗標。  
   
  `pdwCPlusTypeFlag`  
- [out] A flag that marks a <xref:System.ValueType>. It is one of the `ELEMENT_TYPE_*` values.
+ 脫銷標記 <xref:System.ValueType>的旗標。 這是其中一個 `ELEMENT_TYPE_*` 值。
   
  `ppValue`  
- [out] A constant string value returned by this member.  
+ 脫銷這個成員傳回的常數位串值。  
   
  `pcchValue`  
- [out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.  
+ 脫銷`ppValue`的大小（以字元為單位），如果 `ppValue` 不包含字串，則為零。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

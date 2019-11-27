@@ -17,12 +17,12 @@ ms.locfileid: "74441479"
 ---
 # <a name="ui-automation-providers-for-managed-code"></a>使用 Managed 程式碼的 UI 自動化提供者
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- This section contains overviews and how-to topics that describe how to write [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for custom [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.  
+ 本節包含描述如何為自訂 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 元素撰寫 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 提供者的總覽和 how to 主題。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [伺服器端 UI 自動化提供者實作](server-side-ui-automation-provider-implementation.md)  
  [UI 自動化提供者概觀](ui-automation-providers-overview.md)  
  [用戶端 UI 自動化提供者實作](client-side-ui-automation-provider-implementation.md)  
- [「如何」主題](ui-automation-providers-for-managed-code-how-to-topics.md)
+ [HOW-TO 主題](ui-automation-providers-for-managed-code-how-to-topics.md)

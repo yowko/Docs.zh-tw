@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445686"
 ---
 # <a name="importtypes-method"></a>ImportTypes 方法
-Initiates the importing of types from each scope imported via [ImportFile Method](importfile-method.md).  
+從透過[ImportFile 方法](importfile-method.md)匯入的每個範圍，起始匯入類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,30 +39,30 @@ HRESULT ImportTypes(
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- ID of the assembly to import to.  
+ 要匯入之元件的識別碼。  
   
  `FileToken`  
- ID of the file to import from.  
+ 要匯入之檔案的識別碼。  
   
  `dwScope`  
- Zero-based scope to import.  
+ 要匯入之以零為基底的範圍。  
   
  `phEnum`  
- Receives enumerator handle for the types in this scope.  
+ 接收此範圍內之類型的列舉值控制碼。  
   
  `ppImportScope`  
- Optionally receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface.  
+ 選擇性地接收[IMetaDataImport 介面](../metadata/imetadataimport-interface.md)介面。  
   
  `pdwCountOfTypes`  
- Optionally receives count of types in the indicated scope.  
+ 選擇性地接收指定範圍內的類型計數。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h  
+ 需要 alink. h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

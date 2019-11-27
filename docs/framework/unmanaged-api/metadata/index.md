@@ -16,7 +16,7 @@ ms.locfileid: "74443294"
 # <a name="metadata-unmanaged-api-reference"></a>中繼資料 (Unmanaged API 參考)
 中繼資料應用程式開發介面可讓編譯器之類的用戶端無需由 Common Language Runtime (CLR) 載入類型，即可產生或存取元件的中繼資料。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
  描述 Unmanaged 介面，這會提供您由 .NET Framework 類型、方法、欄位等所公開之中繼資料的存取權。  
   

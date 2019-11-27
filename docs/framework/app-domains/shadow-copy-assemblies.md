@@ -18,7 +18,7 @@ ms.locfileid: "74204564"
 陰影複製可讓應用程式定義域中使用的組件更新，而不需卸載應用程式定義域。 這對必須連續運作的應用程式特別有用，例如 ASP.NET 網站。
 
 > [!IMPORTANT]
-> Shadow copying is not supported in Windows 8.x Store apps.
+> Windows 8.x 存放區應用程式不支援陰影複製。
 
 Common Language Runtime 在載入組件時會鎖定組件檔案，因此在卸載組件之前無法更新檔案。 若要從應用程式定義域卸載組件，唯一的方式為卸載應用程式定義域，如此在正常情況下，就無法在磁碟上更新組件，直到使用組件的所有應用程式定義域已卸載為止。
 
@@ -82,7 +82,7 @@ Common Language Runtime 在載入組件時會鎖定組件檔案，因此在卸�
 
 <xref:System.AppDomain> 類別有幾種方法，例如 <xref:System.AppDomain.SetShadowCopyFiles%2A> 和 <xref:System.AppDomain.ClearShadowCopyPath%2A>，可用來控制應用程式定義域上的陰影複製，但這些已經在 .NET Framework 2.0 版中標記為已淘汰。 建議使用 <xref:System.AppDomainSetup> 類別的屬性來設定用於陰影複製的應用程式定義域。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>

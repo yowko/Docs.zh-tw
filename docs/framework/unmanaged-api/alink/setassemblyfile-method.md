@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445600"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile 方法
-Assigns the name of the assembly to be built. Not for use when producing unbound modules.  
+指派要建立之元件的名稱。 未在產生未系結模組時使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,24 +37,24 @@ HRESULT SetAssemblyFile(
   
 ## <a name="parameters"></a>參數  
  `pszFilename`  
- Fully qualified name of the manifest file.  
+ 資訊清單檔的完整名稱。  
   
  `pEmitter`  
- Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.  
+ [IMetaDataEmit 介面](../metadata/imetadataemit-interface.md)介面的指標。  
   
  `afFlags`  
- Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).  
+ [AssemblyFlags 列舉](../metadata/assemblyflags-enumeration.md)中定義的旗標。  
   
  `pAssemblyID`  
- Pointer to ID of resulting assembly.  
+ 產生之元件的識別碼指標。  
   
 ## <a name="return-value"></a>傳回值  
- Returns S_OK if the method succeeds.  
+ 如果方法成功，則傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
- Requires alink.h.  
+ 需要 alink. h。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IALink 介面](ialink-interface.md)
 - [IALink2 介面](ialink2-interface.md)

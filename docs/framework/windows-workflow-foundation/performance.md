@@ -21,7 +21,7 @@ ms.locfileid: "74283227"
 
  Windows Communication Foundation （WCF）是 Microsoft 的統一程式設計模型，用來建立服務導向的應用程式。 第一次將它與 WF3 一起引進為 .NET 3.0 的一部分，現在是 .NET Framework 的主要元件之一。
 
- Windows Server AppFabric 是一組整合式技術，可讓您更輕鬆地建置、調整及管理 IIS 上執行的 Web 與複合應用程式。 它提供了監視及管理服務和工作流程的工具。 如需詳細資訊，請參閱[Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))。
+ Windows Server AppFabric 是一組整合技術，可用來輕鬆建置、調整和管理在 IIS 上執行的 Web 及複合應用程式。 它提供了監視及管理服務和工作流程的工具。 如需詳細資訊，請參閱[Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))。
 
 ## <a name="goals"></a>目標
  本主題的目標在於說明 WF4 的效能特性，其中包含的資料會針對不同的案例加以計算。 此外也會提供 WF4 與 WF3 之間的詳細比較，藉此說明這個新修訂中所做的優越改良。 本文的案例和資料會將 WF4 和 WF3 各層面的基礎成本加以量化。 這項資料除了能讓您充分了解 WF4 的效能特性之外，同時有助於規劃從 WF3 移轉至 WF4 的作業，或是在應用程式開發的過程中使用 WF4。 不過，應用本文資料得出的結論時，務必謹慎考慮。 複合工作流程應用程式的效能主要取決於工作流程的實作方式以及不同元件的整合方式。 因此必須謹慎評估每一個應用程式，才能判斷出該應用程式的效能特性。
@@ -201,7 +201,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  在 WCF 工作流程服務應用程式中，啟動新工作流程或載入現有工作流程的延遲很重要，因為它可能會被封鎖。  這項測試案例會評估一般案例中的 WF3 XOML 主機與 WF4 XAMLX 主機。
 
 ##### <a name="environment-setup"></a>環境設定
- ![延遲和輸送量測試的環境設定](./media/performance/latency-throughput-environment-setup.gif)
+ ![為延遲及輸送量測試而設定的環境](./media/performance/latency-throughput-environment-setup.gif)
 
 ##### <a name="test-setup"></a>測試設定
  在此案例中，用戶端電腦會使用以內容為基礎的相互關聯來聯絡 WCF 工作流程服務。  內容相互關聯需要特殊的內容繫結，並使用內容標頭或 Cookie 將訊息與正確的工作流程產生關聯。  這樣做有益於效能，因為相互關聯 ID 位於訊息標頭中，因此訊息本文不需要進行剖析。
@@ -218,7 +218,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  ![直條圖，顯示使用 WF3 和 WF4 之 WCF 工作流程服務的冷和暖延遲](./media/performance/latency-results-graph.gif)
 
- 在上圖中，「冷」指的是指定的工作流程沒有現有 <xref:System.ServiceModel.WorkflowServiceHost> 的情況。  換句話說，冷延遲意謂第一次使用此工作流程，XOML 或 XAML 需要進行編譯。  暖延遲則意謂所建立的新工作流程執行個體，其工作流程類型已完成編譯。  工作流程的複雜度在 WF4 案例中只有相當些微的差異，但是在 WF3 案例中則呈現直線進展。
+ 在上圖中，「冷」指的是指定的工作流程沒有現有 <xref:System.ServiceModel.WorkflowServiceHost> 的情況。  換句話說，冷延遲指的是第一次使用工作流程，而需要編譯 XOML 或 XAML 的時間。  暖延遲是指在已經編譯工作流程類型時建立新工作流程執行個體的時間。  工作流程的複雜度在 WF4 案例中只有相當些微的差異，但是在 WF3 案例中則呈現直線進展。
 
 #### <a name="correlation-throughput"></a>相互關聯輸送量
  WF4 採用新的內容架構相互關聯 (Content-Based Correlation) 功能。  WF3 僅提供以內容為主的相互關聯 (Context-Based Correlation)。  以內容為基礎的相互關聯只能透過特定的 WCF 通道系結來完成。  使用這些繫結時，工作流程 ID 會插入至訊息標頭。  WF3 執行時間只能依其識別碼來識別工作流程。 使用以內容為基礎的相互關聯，工作流程作者可以從相關的資料片段（例如帳戶號碼或客戶識別碼）建立相互關聯索引鍵。
@@ -255,7 +255,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  指定之測試中活動的數目取決於深度和每個序列的活動數目。  下列方程式會計算 WF4 測試中的活動數目：
 
- ![用來計算活動數的方程式](./media/performance/number-activities-equation.gif)
+ ![計算活動數目的方程式](./media/performance/number-activities-equation.gif)
 
  由於有額外的序列，WF3 測試的活動計數可以藉由稍為不同的方程式計算：
 
@@ -397,7 +397,7 @@ public class Workflow1 : Activity
 
 - SQLServer:Latches\Latch Waits/sec
 
-### <a name="tracking"></a>追蹤
+### <a name="tracking"></a>Tracking
  工作流程追蹤可以用來追蹤工作流程的進度。  追蹤事件中包含的資訊是由追蹤設定檔所決定。  追蹤設定檔越複雜，追蹤所耗用的資源就愈多。
 
  WF3 隨附 SQL 架構追蹤服務。  這項服務可以在批次和非批次模式下運作。  在非批次模式中，追蹤事件會直接寫入資料庫。  在批次模式中，追蹤事件會收集到與工作流程執行個體狀態相同的批次中。  針對最廣泛的工作流程設計，批次模式可提供最佳效能。  不過，如果工作流程執行許多活動而未保存，而且這些活動都會加以追蹤，則批次處理可能對效能產生負面影響。  這種情況常發生在迴圈中，而避免這種情況發生的最佳方式，就是設計大型迴圈來包含保存點。  在迴圈中導入保存點同樣可能對效能造成負面影響，因此務必計算各項的成本並找出平衡。

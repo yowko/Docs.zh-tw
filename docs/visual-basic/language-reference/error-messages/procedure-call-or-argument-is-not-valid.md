@@ -12,12 +12,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346986"
 ---
 # <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a>無效的程序呼叫或引數 (Visual Basic)
-Some part of the call cannot be completed.  
+無法完成呼叫的某些部分。  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a>若要改正這項錯誤  
   
-- Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.  
+- 檢查允許的引數範圍，以確定沒有任何排列超出允許的值。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [錯誤類型](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -14,7 +14,7 @@ ms.locfileid: "74334545"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>如何：在 Visual Basic 中重新命名檔案
 
-您可以使用 `My.Computer.FileSystem` 物件的 `RenameFile` 方法，藉由提供目前的位置、檔案名稱和新的檔案名稱，來重新命名檔案。 這個方法無法用來移動檔案，請使用 `MoveFile` 方法來移動並重新命名檔案。  
+您可以使用 `RenameFile` 物件的 `My.Computer.FileSystem` 方法，藉由提供目前的位置、檔案名稱和新的檔案名稱，來重新命名檔案。 這個方法無法用來移動檔案，請使用 `MoveFile` 方法來移動並重新命名檔案。  
   
 ### <a name="to-rename-a-file"></a>重新命名檔案  
   
@@ -24,7 +24,7 @@ ms.locfileid: "74334545"
   
  這個程式碼範例也可用為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，該程式碼片段會位於 [檔案系統 - 處理磁碟、資料夾和檔案] 中。 如需詳細資訊，請參閱 [Code Snippets](/visualstudio/ide/code-snippets)。  
   
-## <a name="robust-programming"></a>穩固程式設計  
+## <a name="robust-programming"></a>最佳化程式設計  
 
  以下條件可能會造成例外狀況：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "74334545"
   
 - 使用者沒有必要的權限 (<xref:System.UnauthorizedAccessException>)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>
 - [如何：移動檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)

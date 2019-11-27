@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449698"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>ICorProfilerInfo3::GetFunctionTailcall3Info 方法
-Provides the stack frame of the function that is being reported to the profiler by the [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) function. 只能在 `FunctionTailcall3WithInfo` 回呼期間呼叫這個方法。  
+提供[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)函式向分析工具報告之函式的堆疊框架。 只能在 `FunctionTailcall3WithInfo` 回呼期間呼叫這個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,13 +36,13 @@ HRESULT GetFunctionTailcall3Info(
   
 ## <a name="parameters"></a>參數  
  `functionId`  
- [in] The `FunctionID` of the function that is returning.  
+ 在傳回之函數的 `FunctionID`。  
   
  `eltInfo`  
- [in] 代表特定堆疊框架之資訊的不透明控制代碼。 The profiler should provide the same `eltInfo` that was given to the profiler by the `FunctionTailcall3WithInfo` function.  
+ [in] 代表特定堆疊框架之資訊的不透明控制代碼。 分析工具應該提供由 `FunctionTailcall3WithInfo` 函式指定給 profiler 的相同 `eltInfo`。  
   
  `pFrameInfo`  
- [out] 代表特定堆疊框架之泛型資訊的不透明控制代碼。 此控制代碼只有在程式碼剖析工具呼叫 `GetFunctionTailcall3Info` 方法的 `FunctionTailcall3WithInfo` 回呼中有效。  
+ [out] 代表特定堆疊框架之泛型資訊的不透明控制代碼。 此控制代碼只有在程式碼剖析工具呼叫 `FunctionTailcall3WithInfo` 方法的 `GetFunctionTailcall3Info` 回呼中有效。  
   
 ## <a name="remarks"></a>備註  
   
@@ -55,7 +55,7 @@ HRESULT GetFunctionTailcall3Info(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
 - [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)

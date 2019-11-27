@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446298"
 ---
 # <a name="isymunmanagedscopegetnamespaces-method"></a>ISymUnmanagedScope::GetNamespaces 方法
-Gets the namespaces that are being used within this scope.  
+取得在此範圍內使用的命名空間。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,17 +41,17 @@ HRESULT GetNamespaces(
  [in] `namespaces` 陣列的大小。  
   
  `pcNameSpaces`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.  
+ 脫銷`ULONG32` 的指標，接收包含命名空間所需的緩衝區大小。  
   
  `namespaces`  
- [out] The array that receives the namespaces.  
+ 脫銷接收命名空間的陣列。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedScope 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

@@ -18,18 +18,18 @@ ms.locfileid: "74332015"
 ## <a name="remarks"></a>備註  
  如需方法和 `My.Computer.Ports` 物件屬性的資訊，請參閱 <xref:Microsoft.VisualBasic.Devices.Ports>。  
   
- For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
+ 如需詳細資訊，請參閱[存取電腦的埠](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)。  
   
 > [!NOTE]
-> You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.  
+> 您也可以使用 <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> 類別的屬性和方法來存取電腦的序列埠。  
   
 ## <a name="requirements"></a>需求  
  **命名空間︰** <xref:Microsoft.VisualBasic.Devices>  
   
  **類別︰** <xref:Microsoft.VisualBasic.Devices.Ports>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **元件：** Visual Basic 執行時間程式庫（在 Microsoft 中）  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [My.Computer 物件](../../../visual-basic/language-reference/objects/my-computer-object.md)

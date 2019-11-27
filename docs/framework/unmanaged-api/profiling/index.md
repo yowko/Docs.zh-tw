@@ -17,7 +17,7 @@ ms.locfileid: "74447545"
 
 分析 API 可讓分析工具透過通用語言執行平台 (CLR) 監視程式的執行。
 
-## <a name="in-this-section"></a>本章節內容
+## <a name="in-this-section"></a>本節內容
 
  [分析概觀](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md) 說明 CLR 提供來支援在 .NET Framework 環境中進行分析的服務與介面。
 

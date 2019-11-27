@@ -16,7 +16,7 @@ ms.locfileid: "74431583"
 # <a name="metadata-interfaces"></a>中繼資料介面
 本節描述 Unmanaged 介面，這會提供您由 .NET Framework 類型、方法、欄位等所公開之中繼資料的存取權。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)  
  提供動態程式碼編譯的方法。  
   

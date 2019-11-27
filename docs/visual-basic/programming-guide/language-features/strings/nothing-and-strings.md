@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344300"
 ---
 # <a name="nothing-and-strings-in-visual-basic"></a>Visual Basic 中的 Nothing 和字串
-The Visual Basic runtime and the .NET Framework evaluate `Nothing` differently when it comes to strings.  
+Visual Basic 執行時間和 .NET Framework 會在對字串進行不同的評估 `Nothing`。  
   
-## <a name="visual-basic-runtime-and-the-net-framework"></a>Visual Basic Runtime and the .NET Framework  
+## <a name="visual-basic-runtime-and-the-net-framework"></a>Visual Basic 執行時間和 .NET Framework  
  參考下列範例：  
   
  [!code-vb[VbVbalrStrings#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#47)]  
   
- The Visual Basic runtime usually evaluates `Nothing` as an empty string (""). The .NET Framework does not, however, and throws an exception whenever an attempt is made to perform a string operation on `Nothing`.  
+ Visual Basic 執行時間通常會將 `Nothing` 評估為空字串（""）。 不過，.NET Framework 在嘗試對 `Nothing`執行字串作業時，並不會擲回例外狀況。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 中的字串簡介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

@@ -17,7 +17,7 @@ ms.locfileid: "74204687"
 # <a name="network-programming-in-the-net-framework"></a>以 .NET Framework 進行網路程式設計
 Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Managed 實作，可以迅速而簡易地整合到您的應用程式。 您的網路應用程式可以建置在可外掛式通訊協定上，以便自動利用新的網際網路通訊協定，或者也可以使用 Windows Socket 介面的 Managed 實作，以便搭配使用通訊端層級上的網路。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
  [可插式通訊協定簡介](introducing-pluggable-protocols.md)  
  說明如何存取網際網路資源而不用考慮需要的存取通訊協定。  
@@ -80,12 +80,12 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
  說明 <xref:System.Net?displayProperty=nameWithType>、 <xref:System.Net.NetworkInformation?displayProperty=nameWithType>和 <xref:System.Net.Sockets?displayProperty=nameWithType> 命名空間所新增的增強功能，以支援使用 IPv6 和 Teredo 進行 NAT 周遊。  
   
  [Windows 市集應用程式的網路隔離](network-isolation-for-windows-store-apps.md)  
- Describes the impact of network isolation when classes in the <xref:System.Net>, <xref:System.Net.Http>, and <xref:System.Net.Http.Headers> namespaces are used in Windows 8.x Store apps.  
+ 說明在 Windows 8.x 存放區應用程式中使用 <xref:System.Net>、<xref:System.Net.Http>和 <xref:System.Net.Http.Headers> 命名空間中的類別時，網路隔離的影響。  
   
  [網路程式設計範例](network-programming-samples.md)  
  可供下載的網路程式設計範例的連結，這些範例會使用 <xref:System.Net>、 <xref:System.Net.Cache>、 <xref:System.Net.Configuration>、 <xref:System.Net.Mail>、 <xref:System.Net.Mime>、 <xref:System.Net.NetworkInformation>、 <xref:System.Net.PeerToPeer>、 <xref:System.Net.Security>以及 <xref:System.Net.Sockets> 命名空間中的類別。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Net?displayProperty=nameWithType>  
  提供一個簡單的程式設計介面，讓現今網路所用的許多通訊協定使用。 此命名空間中的 <xref:System.Net.WebRequest?displayProperty=nameWithType> 和 <xref:System.Net.WebResponse?displayProperty=nameWithType> 類別是可外掛式通訊協定的基礎。  
   
@@ -134,7 +134,7 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
  <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=nameWithType>  
  為應用程式提供使用延伸保護設定驗證組態的支援。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 的傳輸層安全性 (TLS) 最佳做法](tls.md)
 - [網路程式設計「如何」主題](network-programming-how-to-topics.md)

@@ -43,20 +43,20 @@ typedef enum CorMethodSemanticsAttr {
   
 |成員|描述|  
 |------------|-----------------|  
-|`msSetter`|Specifies that the method is a `set` accessor for a property.|  
-|`msGetter`|Specifies that the method is a `get` accessor for a property.|  
-|`msOther`|Specifies that the method has a relationship to a property or an event other than those defined here.|  
-|`msAddOn`|Specifies that the method adds handler methods for an event.|  
-|`msRemoveOn`|Specifies that the method removes handler methods for an event.|  
-|`msFire`|Specifies that the method raises an event.|  
+|`msSetter`|指定方法是屬性的 `set` 存取子。|  
+|`msGetter`|指定方法是屬性的 `get` 存取子。|  
+|`msOther`|指定方法與屬性或事件（而非此處定義的）具有關聯性。|  
+|`msAddOn`|指定方法加入事件的處理常式方法。|  
+|`msRemoveOn`|指定方法會移除事件的處理常式方法。|  
+|`msFire`|指定方法會引發事件。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

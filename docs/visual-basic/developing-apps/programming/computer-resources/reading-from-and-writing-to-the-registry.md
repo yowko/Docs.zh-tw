@@ -19,16 +19,16 @@ ms.locfileid: "74349755"
   
  在 Visual Basic 中進行程式設計時，您可以選擇透過 Visual Basic 所提供的函式或是 .NET Framework 的登錄類別來存取登錄。 登錄會裝載作業系統的資訊，以及電腦所裝載的應用程式的資訊。 如果允許不適當地存取系統資源或受保護資訊，則使用登錄可能會危及安全性。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
  [如何：建立登錄機碼並設定其值](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
- 描述如何使用 `My.Computer.Registry` 物件的 `CreateSubKey` 和 `SetValue` 方法來建立登錄機碼，並設定其值。  
+ 描述如何使用 `CreateSubKey` 物件的 `SetValue` 和 `My.Computer.Registry` 方法來建立登錄機碼，並設定其值。  
   
  [如何：讀取登錄機碼的值](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)  
- 描述如何使用 `My.Computer.Registry` 物件的 `GetValue` 方法來讀取登錄機碼中的值。  
+ 描述如何使用 `GetValue` 物件的 `My.Computer.Registry` 方法來讀取登錄機碼中的值。  
   
  [如何：刪除登錄機碼](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
- 描述如何使用 `My.Computer.Registry.CurrentUser` 屬性的 `DeleteSubKey` 方法來刪除登錄機碼。  
+ 描述如何使用 `DeleteSubKey` 屬性的 `My.Computer.Registry.CurrentUser` 方法來刪除登錄機碼。  
   
  [使用 Microsoft.Win32 命名空間讀取和寫入登錄](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
  描述如何使用 .NET Framework 的 `Registry` 和 `RegistryKey` 類別來存取登錄。  

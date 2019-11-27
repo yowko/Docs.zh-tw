@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445756"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage 方法
-Notifies the profiler that the process has received a remote method invocation or activation request.  
+通知分析工具，進程已收到遠端方法調用或啟用要求。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,21 +35,21 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>參數  
  `pCookie`  
- [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) under these conditions:  
+ 在在下列情況下，將會對應至[ICorProfilerCallback：： RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)中所提供之值的值：  
   
-- Remoting GUID cookies are active.  
+- 遠端 GUID cookie 為作用中。  
   
-- The channel succeeds in transmitting the message.  
+- 通道會成功傳輸訊息。  
   
-- GUID cookies are active on the client-side process.  
+- GUID cookie 會在用戶端進程上作用。  
   
- This allows easy pairing of remoting calls and the creation of a logical call stack.  
+ 這可讓您輕鬆地配對遠端呼叫和邏輯呼叫堆疊的建立。  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ 在如果呼叫是非同步，則為 `true` 的值;否則，`false`。  
   
 ## <a name="remarks"></a>備註  
- If the message request is asynchronous, the request can be serviced by any arbitrary thread.  
+ 如果訊息要求是非同步，則要求可由任何任意執行緒服務。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -60,6 +60,6 @@ HRESULT RemotingClientSendingMessage(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

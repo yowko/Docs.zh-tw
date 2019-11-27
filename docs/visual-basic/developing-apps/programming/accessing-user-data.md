@@ -26,12 +26,12 @@ ms.locfileid: "74349208"
   
 ## <a name="tasks"></a>工作  
   
-|若要|請參閱|  
+|進行|請參閱|  
 |--------|---------|  
 |取得使用者的登入名稱|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
 |如果應用程式使用 Windows 驗證即可取得使用者的網域名稱|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
 |判斷使用者的角色|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>

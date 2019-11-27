@@ -70,7 +70,7 @@ ms.locfileid: "74281788"
 
 2. 在功能表列上，選擇 [專案]  >  [加入參考]。
 
-     [**參考管理員**] 對話方塊隨即顯示。
+     **[參考管理員]** 對話方塊隨即顯示。
 
 3. 在對話方塊上方，請確認專案的目標是 .NET Framework 4.5 或更新版本。
 
@@ -688,7 +688,7 @@ namespace AsyncExampleWPF
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [(非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hh300224(v=vs.110))
 - [async](../../../language-reference/keywords/async.md)

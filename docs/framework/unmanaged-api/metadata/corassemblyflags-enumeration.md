@@ -57,32 +57,32 @@ typedef enum CorAssemblyFlags {
   
 |成員|描述|  
 |------------|-----------------|  
-|`afPublicKey`|Indicates that the assembly reference holds the full, unhashed public key.|  
-|`afPA_None`|Indicates that the processor architecture is unspecified.|  
-|`afPA_MSIL`|Indicates that the processor architecture is neutral (PE32).|  
-|`afPA_x86`|Indicates that the processor architecture is x86 (PE32).|  
-|`afPA_IA64`|Indicates that the processor architecture is Itanium (PE32+).|  
-|`afPA_AMD64`|Indicates that the processor architecture is AMD X64 (PE32+).|  
-|`afPA_ARM`|Indicates that the processor architecture is ARM (PE32).|  
-|`afPA_NoPlatform`|Indicates that the assembly is a reference assembly; that is, it applies to any architecture but cannot run on any architecture. Thus, the flag is the same as `afPA_Mask`.|  
-|`afPA_Specified`|Indicates that the processor architecture flags should be propagated to the `AssemblyRef` record.|  
-|`afPA_Mask`|A mask that describes the processor architecture.|  
-|`afPA_FullMask`|Specifies that the processor architecture description is included.|  
-|`afPA_Shift`|Indicates a shift count in the processor architecture flags to and from the index.|  
-|`afEnableJITcompileTracking`|Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afDisableJITcompileOptimizer`|Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afRetargetable`|Indicates that the assembly can be retargeted at run time to an assembly from a different publisher.|  
-|`afContentType_Mask`|A mask that describes the content type.|  
-|`afContentType_Default`|Indicates the default content type.|  
-|`afContentType_WindowsRuntime`|Indicates the Windows Runtime content type.|  
+|`afPublicKey`|表示元件參考包含完整、未經過雜湊的公開金鑰。|  
+|`afPA_None`|表示未指定處理器架構。|  
+|`afPA_MSIL`|表示處理器架構為中性（PE32）。|  
+|`afPA_x86`|指出處理器架構為 x86 （PE32）。|  
+|`afPA_IA64`|指出處理器架構為 Itanium （PE32 +）。|  
+|`afPA_AMD64`|指出處理器架構是 AMD X64 （PE32 +）。|  
+|`afPA_ARM`|指出處理器架構為 ARM （PE32）。|  
+|`afPA_NoPlatform`|表示元件是參考元件;也就是說，它會套用至任何架構，但無法在任何架構上執行。 因此，旗標與 `afPA_Mask`相同。|  
+|`afPA_Specified`|指出處理器架構旗標應該傳播至 `AssemblyRef` 記錄。|  
+|`afPA_Mask`|描述處理器架構的遮罩。|  
+|`afPA_FullMask`|指定包含處理器架構的描述。|  
+|`afPA_Shift`|表示在處理器架構旗標中與索引之間的位移計數。|  
+|`afEnableJITcompileTracking`|表示來自 <xref:System.Diagnostics.DebuggableAttribute>之 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> 的對應值。|  
+|`afDisableJITcompileOptimizer`|表示來自 <xref:System.Diagnostics.DebuggableAttribute>之 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> 的對應值。|  
+|`afRetargetable`|表示元件可以在執行時間重定目標，使其成為來自不同發行者的元件。|  
+|`afContentType_Mask`|描述內容類型的遮罩。|  
+|`afContentType_Default`|表示預設內容類型。|  
+|`afContentType_WindowsRuntime`|表示 Windows 執行階段內容類型。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

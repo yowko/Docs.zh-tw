@@ -37,16 +37,16 @@ typedef enum CorLinkerOptions {
   
 |成員|描述|  
 |------------|-----------------|  
-|`MDAssembly`|The private types and global functions are not preserved.|  
-|`MDNetModule`|The private types and global functions are preserved.|  
+|`MDAssembly`|不會保留私用類型和全域函式。|  
+|`MDNetModule`|會保留私用類型和全域函式。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

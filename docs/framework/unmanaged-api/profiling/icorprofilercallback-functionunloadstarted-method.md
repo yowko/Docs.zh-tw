@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448025"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted 方法
-Notifies the profiler that the runtime has started to unload a function.  
+通知分析工具，執行時間已開始卸載函數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,10 +34,10 @@ HRESULT FunctionUnloadStarted(
   
 ## <a name="parameters"></a>參數  
  `functionId`  
- [in] The ID of the function that is being unloaded.  
+ 在要卸載之函式的識別碼。  
   
 ## <a name="remarks"></a>備註  
- The value of the `functionId` parameter is no longer valid after this method returns to the caller.  
+ 這個方法傳回給呼叫端之後，`functionId` 參數的值已不再有效。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -48,6 +48,6 @@ HRESULT FunctionUnloadStarted(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

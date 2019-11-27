@@ -33,7 +33,7 @@ ms.locfileid: "74344819"
 - [Visual Basic 程式設計人員的其他資源](additional-resources.md)\
 提供網站和新聞群組清單，協助您找到常見問題的解答。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [取得 Visual Basic](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)  
 提供含有 Visual Basic 支援的 Visual Studio 版本下載連結 (包括免費版本)。
@@ -47,7 +47,7 @@ ms.locfileid: "74344819"
 - [逐步解說](../../visual-basic/walkthroughs.md)\
 提供示範 Visual Basic 語言相關方面的 [說明] 頁清單。
 
-- [Feedback options for Visual Studio](/visualstudio/ide/feedback-options)\
+- [Visual Studio\ 的意見反應選項](/visualstudio/ide/feedback-options)
 說明如何接受支援和提供意見。
 
 - [Visual Studio](/visualstudio/)\

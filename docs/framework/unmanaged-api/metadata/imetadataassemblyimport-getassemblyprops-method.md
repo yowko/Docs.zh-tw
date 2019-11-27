@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449438"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps 方法
-Gets the set of properties for the assembly with the specified metadata signature.  
+取得具有指定之中繼資料簽章之元件的屬性集。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,41 +43,41 @@ HRESULT GetAssemblyProps (
   
 ## <a name="parameters"></a>參數  
  `mda`  
- [in]. The `mdAssembly` metadata token that represents the assembly for which to get the properties.  
+ [in]。 `mdAssembly` 元資料標記，代表要取得屬性的元件。  
   
  `ppbPublicKey`  
- [out] A pointer to the public key or the metadata token.  
+ 脫銷公用金鑰或元資料標記的指標。  
   
  `pcbPublicKey`  
- [out] The number of bytes in the returned public key.  
+ 脫銷傳回的公開金鑰中的位元組數目。  
   
  `pulHashAlgId`  
- [out] A pointer to the algorithm used to hash the files in the assembly.  
+ 脫銷用來雜湊元件中之檔案的演算法指標。  
   
  `szName`  
- [out] The simple name of the assembly.  
+ 脫銷元件的簡單名稱。  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ 在`szName`的大小（以寬字元為單位）。  
   
  `pchName`  
- [out] The number of wide chars actually returned in `szName`.  
+ 脫銷`szName`中實際傳回的寬字元數。  
   
  `pMetaData`  
- [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
+ 脫銷包含元件中繼資料之 ASSEMBLYMETADATA 結構的指標。  
   
  `pdwAssemblyFlags`  
- [out] Flags that describe the metadata applied to an assembly. This value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
+ 脫銷描述套用至元件之中繼資料的旗標。 這個值是一個或多個[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)值的組合。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

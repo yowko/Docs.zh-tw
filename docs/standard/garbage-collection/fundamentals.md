@@ -20,9 +20,9 @@ ms.locfileid: "74330422"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>記憶體回收的基本概念
 
-In the common language runtime (CLR), the garbage collector (GC) serves as an automatic memory manager. 它提供了下列優點：
+在 common language runtime （CLR）中，垃圾收集行程（GC）可作為自動記憶體管理員。 它提供了下列優點：
 
-- Enables you to develop your application without having to manually free memory.
+- 可讓您開發應用程式，而不需要手動釋放記憶體。
 
 - 有效率地在 Managed 堆積上配置物件。
 
@@ -30,43 +30,43 @@ In the common language runtime (CLR), the garbage collector (GC) serves as an au
 
 - 確保某個物件無法使用另一個物件的內容，藉以提供記憶體安全性。
 
-This article describes the core concepts of garbage collection.
+本文描述垃圾收集的核心概念。
 
 ## <a name="fundamentals-of-memory"></a>記憶體的基本概念
 
 下列清單摘要說明重要的 CLR 記憶體概念。
 
-- 每個處理序都有各自獨立的虛擬位址空間。 All processes on the same computer share the same physical memory and the page file, if there is one.
+- 每個處理序都有各自獨立的虛擬位址空間。 相同電腦上的所有處理常式都會共用相同的實體記憶體和分頁檔（如果有的話）。
 
 - 根據預設，在 32 位元電腦上，每個處理序都有 2 GB 使用者模式虛擬位址空間。
 
 - 身為應用程式開發人員，您只會處理虛擬位址空間，絕不會直接操作實體記憶體。 記憶體回收行程會在 Managed 堆積上自動配置和釋出虛擬記憶體。
 
-  If you are writing native code, you use Windows functions to work with the virtual address space. 這些函式會在原生堆積上自動配置和釋出虛擬記憶體。
+  如果您要撰寫機器碼，請使用 Windows 函數來處理虛擬位址空間。 這些函式會在原生堆積上自動配置和釋出虛擬記憶體。
 
 - 虛擬記憶體可以有三種狀態：
 
   - 可用。 記憶體區塊沒有任何參考，可進行配置。
 
-  - 保留的。 記憶體區塊可供您使用，但是無法用於任何其他配置要求。 不過，在此記憶體區塊認可之前，您無法將資料儲存到其中。
+  - 保留。 記憶體區塊可供您使用，但是無法用於任何其他配置要求。 不過，在此記憶體區塊認可之前，您無法將資料儲存到其中。
 
   - 已認可。 記憶體區塊會指派給實體儲存區。
 
 - 虛擬位址空間可能會分成片段。 這表示，位址空間中有可用的區塊，也稱為可用的洞 (Hole)。 要求虛擬記憶體配置時，虛擬記憶體管理程式必須找到大小可滿足配置要求的單一可用區塊。 即使您擁有 2GB 可用空間，要求 2GB 的配置仍然不會成功，除非該可用空間全都在單一位址區塊中。
 
-- You can run out of memory if there isn't enough virtual address space to reserve or physical space to commit.
+- 如果沒有足夠的虛擬位址空間可供保留或實體空間認可，您可以用完記憶體。
 
-  The page file is used even if physical memory pressure (that is, demand for physical memory) is low. The first time physical memory pressure is high, the operating system must make room in physical memory to store data, and it backs up some of the data that is in physical memory to the page file. That data is not paged until it's needed, so it's possible to encounter paging in situations where the physical memory pressure is low.
+  即使實體記憶體壓力（也就是實體記憶體的需求）偏低，也會使用分頁檔案。 第一次實體記憶體壓力很高時，作業系統必須在實體記憶體中騰出空間來儲存資料，而且它會將實體記憶體中的一些資料備份至分頁檔案。 該資料在需要之前不會分頁，因此可能會在實體記憶體不足壓力的情況下遇到分頁。
 
 ## <a name="conditions-for-a-garbage-collection"></a>記憶體回收的條件
 
 當下列其中一個條件成立時，就會進行記憶體回收：
 
-- 系統的實體記憶體不足。 This is detected by either the low memory notification from the OS or low memory as indicated by the host.
+- 系統的實體記憶體不足。 這是由作業系統的低記憶體通知或主機所指示的記憶體不足所偵測到。
 
 - 由 Managed 堆積上之已配置物件所使用的記憶體超過可接受的臨界值。 這個臨界值會在處理序執行時持續調整。
 
-- 已呼叫 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法。 在大多數的情況下，您不需要呼叫這個方法，因為記憶體回收行程會持續執行。 這個方法主要用於獨特的情況和測試。
+- 呼叫 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法。 在大多數的情況下，您不需要呼叫這個方法，因為記憶體回收行程會持續執行。 這個方法主要用於獨特的情況和測試。
 
 ## <a name="the-managed-heap"></a>Managed 堆積
 
@@ -74,7 +74,7 @@ CLR 初始化記憶體回收行程之後，記憶體回收行程就會配置用�
 
 每個 Managed 處理序都有一個 Managed 堆積。 處理序中的所有執行緒都會對相同堆積上的物件配置記憶體。
 
-To reserve memory, the garbage collector calls the Windows [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) function and reserves one segment of memory at a time for managed applications. The garbage collector also reserves segments, as needed, and releases segments back to the operating system (after clearing them of any objects) by calling the Windows [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) function.
+為了保留記憶體，垃圾收集行程會呼叫 Windows [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)函式，並針對 managed 應用程式一次保留一個記憶體區段。 垃圾收集行程也會視需要保留區段，並藉由呼叫 Windows [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree)函數，將區段釋放回作業系統（在清除任何物件之後）。
 
 > [!IMPORTANT]
 > 記憶體回收行程所配置的區段大小是依實作而定，有可能在任何時間，包括在定期更新時做變更。 您的應用程式永遠都不應該對相關或根據特定區段的大小做出假設，也不應嘗試設定區段配置的可用記憶體數量。
@@ -90,7 +90,7 @@ To reserve memory, the garbage collector calls the Windows [VirtualAlloc](/windo
 [大型物件堆積](large-object-heap.md)包含 85,000 個位元組以上的超大型物件。 大型物件堆積上的物件通常是陣列。 超大型的執行個體物件非常罕見。
 
 > [!TIP]
-> You can [configure the threshold size](../../core/run-time-config/garbage-collector.md#large-object-heap-threshold) for objects to go on the large object heap.
+> 您可以設定物件在大型物件堆積上[的臨界值大小](../../core/run-time-config/garbage-collector.md#large-object-heap-threshold)。
 
 ## <a name="generations"></a>層代
 
@@ -98,21 +98,21 @@ To reserve memory, the garbage collector calls the Windows [VirtualAlloc](/windo
 
 - **層代 0**。 這是最新的層代而且包含存留較短的物件。 存留較短的物件範例是暫存變數。 記憶體回收最常在這個層代中進行。
 
-  Newly allocated objects form a new generation of objects and are implicitly generation 0 collections. However, if they are large objects, they go on the large object heap in a generation 2 collection.
+  新配置的物件會形成新一代的物件，而且是隱含的層代0集合。 不過，如果它們是大型物件，則會在層代2回收中的大型物件堆積上。
 
   大部分物件都會在層代 0 的記憶體回收中回收，而且不會存留至下一個層代。
 
 - **層代 1**。 這個層代包含存留較短的物件，而且當做存留較短物件與存留較長物件之間的緩衝區。
 
-- **層代 2**。 這個層代包含存留較長的物件。 An example of a long-lived object is an object in a server application that contains static data that's live for the duration of the process.
+- **層代 2**。 這個層代包含存留較長的物件。 長時間存留物件的範例是伺服器應用程式中的物件，其中包含在進程期間即時的靜態資料。
 
 當條件許可時，記憶體回收會針對特定層代進行。 回收層代是指回收該層代中的物件及其所有較新的層代。 層代 2 記憶體回收也稱為完整記憶體回收，因為它會回收所有層代中的所有物件 (亦即，Managed 堆積中的所有物件)。
 
 ### <a name="survival-and-promotions"></a>未回收和提升
 
-Objects that are not reclaimed in a garbage collection are known as survivors and are promoted to the next generation. 在層代 0 記憶體回收中未被回收的物件會提升至層代 1、在層代 1 記憶體回收中未被回收的物件會提升至層代 2，而在層代 2 記憶體回收中未被回收的物件則保留在層代 2 中。
+未在垃圾收集中回收的物件稱為「survivors」，並會升級為下一代。 在層代 0 記憶體回收中未被回收的物件會提升至層代 1、在層代 1 記憶體回收中未被回收的物件會提升至層代 2，而在層代 2 記憶體回收中未被回收的物件則保留在層代 2 中。
 
-When the garbage collector detects that the survival rate is high in a generation, it increases the threshold of allocations for that generation. The next collection gets a substantial size of reclaimed memory. The CLR continually balances two priorities: not letting an application's working set get too large by delaying garbage collection and not letting the garbage collection run too frequently.
+當垃圾收集行程偵測到產生中的生存率很高時，它會增加該世代的配置臨界值。 下一個集合會取得大量回收的記憶體大小。 CLR 會持續平衡兩個優先順序：不讓應用程式的工作集變得太大，因為會延遲垃圾收集，而不會讓垃圾收集的執行頻率太高。
 
 ### <a name="ephemeral-generations-and-segments"></a>暫時層代和區段
 
@@ -120,7 +120,7 @@ When the garbage collector detects that the survival rate is high in a generatio
 
 暫時層代必須配置於稱為暫時區段的記憶體區段中。 記憶體回收行程所取得的每個新區段都會成為新的暫時區段，而且包含在層代 0 記憶體回收中未被回收的物件。 舊的暫時區段會成為新的層代 2 區段。
 
-The size of the ephemeral segment varies depending on whether a system is 32-bit or 64-bit, and on the type of garbage collector it is running. 下表顯示預設值。
+暫時區段的大小會根據系統是32位還是64位，以及它正在執行的垃圾收集行程類型而有所不同。 下表顯示預設值。
 
 ||32 位元|64 位元|
 |-|-------------|-------------|
@@ -145,14 +145,14 @@ The size of the ephemeral segment varies depending on whether a system is 32-bit
 
   因為層代 2 回收可能會佔據多個區段，所以提升至層代 2 的物件可能會移至較舊區段。 層代 1 和層代 2 的未回收物件都可能會移至不同的區段，因為它們都會被提升至層代 2。
 
-  Ordinarily, the large object heap (LOH) is not compacted, because copying large objects imposes a performance penalty. However, in .NET Core and in .NET Framework 4.5.1 and later, you can use the <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> property to compact the large object heap on demand. In addition, the LOH is automatically compacted when a hard limit is set by specifying either:
+  一般來說，大型物件堆積（LOH）不會壓縮，因為複製大型物件會造成效能上的負面影響。 不過，在 .NET Core 和 .NET Framework 4.5.1 和更新版本中，您可以使用 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 屬性，視需要壓縮大型物件堆積。 此外，藉由指定下列任一項來設定固定限制時，會自動壓縮 LOH：
 
-  - a memory limit on a container, or
-  - the [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitcomplus_gcheaphardlimit) or [GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) run-time configuration options
+  - 容器上的記憶體限制，或
+  - [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitcomplus_gcheaphardlimit)或[GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent)執行時間設定選項
 
 記憶體回收行程會使用下列資訊來判斷物件是否使用中：
 
-- **堆疊根目錄**。 Just-in-Time (JIT) 編譯器和堆疊查核器所提供的堆疊變數。 JIT optimizations can lengthen or shorten regions of code within which stack variables are reported to the garbage collector.
+- **堆疊根目錄**。 Just-in-Time (JIT) 編譯器和堆疊查核器所提供的堆疊變數。 JIT 優化可以延長或縮短在其中向垃圾收集行程報告堆疊變數的程式碼區域。
 
 - **記憶體回收控制代碼**。 會指向 Managed 物件，而且可由使用者程式碼或 Common Language Runtime 配置的控制代碼。
 
@@ -164,41 +164,41 @@ The size of the ephemeral segment varies depending on whether a system is 32-bit
 
 ![當執行緒觸發記憶體回收時](./media/gc-triggered.png)
 
-## <a name="manipulate-unmanaged-resources"></a>Manipulate unmanaged resources
+## <a name="manipulate-unmanaged-resources"></a>操作非受控資源
 
-If managed objects reference unmanaged objects by using their native file handles, you have to explicitly free the unmanaged objects, because the garbage collector only tracks memory on the managed heap.
+如果 managed 物件使用其原生檔案控制代碼來參考非受控物件，您就必須明確釋放非受控物件，因為垃圾收集行程只會追蹤 managed 堆積上的記憶體。
 
-Users of the managed object may not dispose the native resources used by the object. To perform the cleanup, you can make the managed object finalizable. Finalization consists of cleanup actions that execute when the object is no longer in use. When the managed object dies, it performs cleanup actions that are specified in its finalizer method.
+受管理物件的使用者可能不會處置物件所使用的原生資源。 若要執行清除，您可以讓 managed 物件成為可終結的。 「完成」是由不再使用物件時執行的清除動作所組成。 當 managed 物件當時，它會執行其完成項方法中所指定的清除動作。
 
 當系統發現某個可最終處理物件無作用時，該物件的完成項就會放入佇列中，以便執行其清除動作，但是物件本身會提升至下一個層代。 因此，您必須等候直到在該層代上進行的下一次記憶體回收 (不一定是下一次記憶體回收)，以便判斷此物件是否已經回收。
 
-For more information about finalization, see <xref:System.Object.Finalize?displayProperty=nameWithType>.
+如需最終結束的詳細資訊，請參閱 <xref:System.Object.Finalize?displayProperty=nameWithType>。
 
 ## <a name="workstation-and-server-garbage-collection"></a>工作站和伺服器記憶體回收
 
-記憶體回收行程會自行調整而且可在各種案例中運作。 You can use a [configuration file setting](../../core/run-time-config/garbage-collector.md#flavors-of-garbage-collection) to set the type of garbage collection based on the characteristics of the workload. CLR 會提供下列記憶體回收類型：
+記憶體回收行程會自行調整而且可在各種案例中運作。 您可以使用[設定檔設定](../../core/run-time-config/garbage-collector.md#flavors-of-garbage-collection)，根據工作負載的特性來設定垃圾收集的類型。 CLR 會提供下列記憶體回收類型：
 
-- Workstation garbage collection (GC) is designed for client apps. It is the default GC flavor for standalone apps. For hosted apps, for example, those hosted by ASP.NET, the host determines the default GC flavor.
+- 工作站垃圾收集（GC）是針對用戶端應用程式所設計。 這是獨立應用程式的預設 GC 類別。 例如，針對裝載的應用程式（由 ASP.NET 所主控），主機會決定預設的 GC 類別。
 
-  工作站記憶體回收可能是並行或非並行的。 並行記憶體回收可讓 Managed 執行緒在記憶體回收期間繼續運作。 [Background garbage collection](#background-workstation-garbage-collection) replaces [concurrent garbage collection](#concurrent-garbage-collection) in .NET Framework 4 and later versions.
+  工作站記憶體回收可能是並行或非並行的。 並行記憶體回收可讓 Managed 執行緒在記憶體回收期間繼續運作。 [背景垃圾收集](#background-workstation-garbage-collection)會取代 .NET Framework 4 和更新版本中的[並行垃圾收集](#concurrent-garbage-collection)。
 
 - 伺服器記憶體回收，適用於需要高輸送量和延展性的伺服器應用程式。
 
-  - In .NET Core, server garbage collection can be non-concurrent or background.
+  - 在 .NET Core 中，伺服器垃圾收集可以是非並行或背景。
 
-  - In .NET Framework 4.5 and later versions, server garbage collection can be non-concurrent or background (background garbage collection replaces concurrent garbage collection). In .NET Framework 4 and previous versions, server garbage collection is non-concurrent.
+  - 在 .NET Framework 4.5 和更新版本中，伺服器垃圾收集可以是非並行或背景（背景垃圾收集會取代並行垃圾收集）。 在 .NET Framework 4 和舊版中，伺服器垃圾收集為非並行的。
 
-The following illustration shows the dedicated threads that perform the garbage collection on a server:
+下圖顯示在伺服器上執行垃圾收集的專用線程：
 
 ![伺服器記憶體回收執行緒](./media/gc-server.png)
 
-### <a name="compare-workstation-and-server-garbage-collection"></a>Compare workstation and server garbage collection
+### <a name="compare-workstation-and-server-garbage-collection"></a>比較工作站和伺服器垃圾收集
 
 以下是工作站記憶體回收的執行緒和效能考量：
 
-- 此回收會針對觸發記憶體回收的使用者執行緒進行，而且維持相同的優先權。 因為使用者執行緒通常會以一般優先權執行，所以記憶體回收行程 (在一般優先權執行緒上執行) 必須與其他執行緒爭用 CPU 時間。 (Threads that run native code are not suspended on either server or workstation garbage collection.)
+- 此回收會針對觸發記憶體回收的使用者執行緒進行，而且維持相同的優先權。 因為使用者執行緒通常會以一般優先權執行，所以記憶體回收行程 (在一般優先權執行緒上執行) 必須與其他執行緒爭用 CPU 時間。 （執行機器碼的執行緒在伺服器或工作站垃圾收集上不會暫停）。
 
-- Workstation garbage collection is always used on a computer that has only one processor, regardless of the [configuration setting](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
+- 工作站垃圾收集一律會在只有一個處理器的電腦上使用，不論[設定](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver)為何。
 
 以下是伺服器記憶體回收的執行緒和效能考量：
 
@@ -208,26 +208,26 @@ The following illustration shows the dedicated threads that perform the garbage 
 
 - 因為多個記憶體回收執行緒會一起運作，所以就相同大小堆積而言，伺服器記憶體回收的速度比工作站記憶體回收的速度要快。
 
-- 伺服器記憶體回收通常具有較大的區段。 However, this is only a generalization: segment size is implementation-specific and is subject to change. Don't make assumptions about the size of segments allocated by the garbage collector when tuning your app.
+- 伺服器記憶體回收通常具有較大的區段。 不過，這只是一般化：區段大小是特定執行，而且可能會變更。 請不要在調整應用程式時，假設垃圾收集行程所配置的區段大小。
 
-- 伺服器記憶體回收可能會耗用大量資源。 For example, imagine that there are 12 processes that use server GC running on a computer that has 4 processors. If all the processes happen to collect garbage at the same time, they would interfere with each other, as there would be 12 threads scheduled on the same processor. If the processes are active, it's not a good idea to have them all use server GC.
+- 伺服器記憶體回收可能會耗用大量資源。 例如，假設有12個處理常式在具有4個處理器的電腦上執行伺服器 GC。 如果所有處理常式都是同時收集垃圾，它們會互相干擾，因為同一個處理器上有12個執行緒排程。 如果處理常式是作用中的，最好不要讓它們全部使用伺服器 GC。
 
-If you're running hundreds of instances of an application, consider using workstation garbage collection with concurrent garbage collection disabled. 這樣會產生較少的內容切換，因此可能會改善效能。
+如果您執行的是數百個應用程式實例，請考慮使用已停用並行垃圾收集的工作站垃圾收集。 這樣會產生較少的內容切換，因此可能會改善效能。
 
 ## <a name="background-workstation-garbage-collection"></a>背景工作站記憶體回收
 
-In background workstation garbage collection, ephemeral generations (0 and 1) are collected as needed while the collection of generation 2 is in progress. Background workstation garbage collection is performed on a dedicated thread and applies only to generation 2 collections.
+在背景工作站垃圾收集中，當層代2的收集正在進行時，會視需要收集暫時層代（0和1）。 背景工作站垃圾收集是在專用的執行緒上執行，而且只適用于層代2回收。
 
-Background garbage collection is enabled by default and can be enabled or disabled with the [gcConcurrent](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) configuration setting in .NET Framework apps or the [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) setting in .NET Core apps.
+背景垃圾收集預設為啟用，而且可以在 .NET Core 應用程式的 [.NET Framework apps][或 [system.string](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) ] 設定中，使用 [ [gcConcurrent](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) ] 設定來啟用或停用。
 
 > [!NOTE]
-> Background garbage collection replaces [concurrent garbage collection](#concurrent-garbage-collection) and is available in .NET Framework 4 and later versions. In .NET Framework 4, it's supported only for workstation garbage collection. Starting with .NET Framework 4.5, background garbage collection is available for both workstation and server garbage collection.
+> 背景垃圾收集會取代[並行垃圾收集](#concurrent-garbage-collection)，並在 .NET Framework 4 和更新版本中提供。 在 .NET Framework 4 中，只有工作站垃圾收集才支援此功能。 從 .NET Framework 4.5 開始，背景垃圾收集適用于工作站和伺服器垃圾收集。
 
 背景記憶體回收期間，暫時層代的回收稱為前景記憶體回收。 進行前景記憶體回收時，所有 Managed 執行緒都會暫停。
 
-When background garbage collection is in progress and you've allocated enough objects in generation 0, the CLR performs a generation 0 or generation 1 foreground garbage collection. 專屬的背景記憶體回收執行緒會在經常安全點檢查，以便判斷是否存在前景記憶體回收的要求。 如果有，背景回收就會自行暫停，讓前景記憶體回收能夠進行。 在前景記憶體回收完成之後，專屬的背景記憶體回收執行緒和使用者執行緒就會繼續進行。
+當背景垃圾收集正在進行中，而且您已在層代0中配置足夠的物件時，CLR 會執行層代0或第1代的前景垃圾收集。 專屬的背景記憶體回收執行緒會在經常安全點檢查，以便判斷是否存在前景記憶體回收的要求。 如果有，背景回收就會自行暫停，讓前景記憶體回收能夠進行。 在前景記憶體回收完成之後，專屬的背景記憶體回收執行緒和使用者執行緒就會繼續進行。
 
-背景記憶體回收會移除並行記憶體回收所加諸的配置限制，因為暫時記憶體回收可能會在背景記憶體回收期間進行。 Background garbage collection can remove dead objects in ephemeral generations. It can also expand the heap if needed during a generation 1 garbage collection.
+背景記憶體回收會移除並行記憶體回收所加諸的配置限制，因為暫時記憶體回收可能會在背景記憶體回收期間進行。 背景垃圾收集可以移除暫時層代中的無作用物件。 它也可以在層代1垃圾收集期間視需要擴充堆積。
 
 下圖顯示在工作站上另一個專用執行緒上執行的背景記憶體回收：
 
@@ -235,11 +235,11 @@ When background garbage collection is in progress and you've allocated enough ob
 
 ### <a name="background-server-garbage-collection"></a>背景伺服器記憶體回收
 
-Starting with .NET Framework 4.5, background server garbage collection is the default mode for server garbage collection.
+從 .NET Framework 4.5 開始，背景伺服器垃圾收集是伺服器垃圾收集的預設模式。
 
-Background server garbage collection functions similarly to background workstation garbage collection, described in the previous section, but there are a few differences:
+背景伺服器垃圾收集的功能類似于背景工作站垃圾收集（如上一節所述），但有幾項差異：
 
-- Background workstation garbage collection uses one dedicated background garbage collection thread, whereas background server garbage collection uses multiple threads. Typically, there's a dedicated thread for each logical processor.
+- 背景工作站垃圾收集使用一個專用的背景垃圾收集執行緒，而背景伺服器垃圾收集則使用多個執行緒。 一般來說，每個邏輯處理器都有專用的執行緒。
 
 - 與工作站背景記憶體回收執行緒不同的是，這些執行緒不會逾時。
 
@@ -250,14 +250,14 @@ Background server garbage collection functions similarly to background workstati
 ## <a name="concurrent-garbage-collection"></a>並行的記憶體回收
 
 > [!TIP]
-> This section applies to:
+> 本節適用于：
 >
-> - .NET Framework 3.5 and earlier for workstation garbage collection
-> - .NET Framework 4 and earlier for server garbage collection
+> - 適用于工作站垃圾收集的 .NET Framework 3.5 和更早版本
+> - .NET Framework 4 和更早版本進行伺服器垃圾收集
 >
-> Concurrent garbage is replaced by [background garbage collection](#background-workstation-garbage-collection) in later versions.
+> 在較新版本中，會以[背景垃圾收集](#background-workstation-garbage-collection)取代並行的垃圾收集。
 
-In workstation or server garbage collection, you can [enable concurrent garbage collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md), which enables threads to run concurrently with a dedicated thread that performs the garbage collection for most of the duration of the collection. 這個選項只會影響層代 2 中的記憶體回收。層代 0 和 1 一律為非並行，因為它們的完成速度非常快。
+在 [工作站] 或 [伺服器垃圾收集] 中，您可以[啟用並行垃圾收集](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)，讓執行緒可以與在集合大部分持續時間內執行垃圾收集的專用線程並存執行。 這個選項只會影響層代 2 中的記憶體回收。層代 0 和 1 一律為非並行，因為它們的完成速度非常快。
 
 並行記憶體回收會將回收期間的暫停降到最低，藉以加快互動式應用程式的回應速度。 當並行記憶體回收執行緒正在執行時，Managed 執行緒幾乎可以繼續執行。 這會在記憶體回收進行時縮短暫停時間。
 
@@ -267,7 +267,7 @@ In workstation or server garbage collection, you can [enable concurrent garbage 
 
 ![並行記憶體回收執行緒](./media/gc-concurrent.png)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Configuration options for GC](../../core/run-time-config/garbage-collector.md)
+- [GC 的設定選項](../../core/run-time-config/garbage-collector.md)
 - [記憶體回收](index.md)

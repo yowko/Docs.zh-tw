@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448557"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag 列舉
-Indicates whether a variable is compiler-generated.  
+指出變數是否由編譯器產生。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,11 +37,11 @@ typedef enum CorSymVarFlag
   
 |成員|描述|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|Indicates that the given variable is compiler-generated.|  
+|`VAR_IS_COMP_GEN`|表示指定的變數是編譯器產生的。|  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [診斷符號存放區列舉](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

@@ -45,7 +45,7 @@ Mage [commands] [commandOptions]
 
 下表顯示 `-New` 和 `-Update` 命令支援的選項：
 
-|選項|預設值|適用於|描述|
+|選項|預設值|套用至|描述|
 |-------------|-------------------|----------------|-----------------|
 |**-a, -Algorithm**|sha1RSA|應用程式資訊清單。<br /><br /> 部署資訊清單。|指定產生相依性摘要的演算法。 值必須是 "sha256RSA" 或 "sha1RSA"。<br /><br /> 搭配 "-Update" 選項一起使用。 這個選項在使用 "-Sign" 選項時會被忽略。|
 |**-appc, -AppCodeBase** `manifestReference`||部署資訊清單。|插入應用程式資訊清單檔案的 URL 或檔案路徑參考。 這個值必須是應用程式資訊清單的完整路徑。|
@@ -53,7 +53,7 @@ Mage [commands] [commandOptions]
 |**-cf, -CertFile** `filePath`||所有檔案類型。|指定用來簽署資訊清單或授權檔案之 X509 數位憑證的位置。 如果憑證需要適用於個人資訊交換 (PFX) 檔案的密碼，這個選項就可以與 **-Password** 選項搭配使用。 從 .NET Framework 4.7 開始，如果檔案不包含私用金鑰，則需要 **-CryptoProvider** 和 **-KeyContainer** 選項的組合。<br/><br/>從 .NET Framework 4.6.2 開始，*Mage.exe* 會使用 CNG 以及 CAPI 憑證來簽署資訊清單。|
 |**-ch, -CertHash** `hashSignature`||所有檔案類型。|數位憑證的雜湊儲存在用戶端電腦的個人憑證存放區內。 它對應到數位憑證的指模字串，此字串可以從 Windows 憑證主控台檢視。<br /><br /> `hashSignature` 大小寫都可，提供的格式可以是單一字串，或是將整個指模以引號括起來 (指模中每八個位元組以空格隔開)。|
 |**-csp, -CryptoProvider** `provider-name`||所有檔案類型。|指定包含私密金鑰容器的密碼編譯服務提供者 (CSP) 名稱。 這個選項需要 **-KeyContainer** 選項。<br/><br/>從 .NET Framework 4.7 開始提供此選項。|
-|**-fd, -FromDirectory** `directoryPath`||應用程式資訊清單。|將 `directoryPath`中找到的所有組件和檔案的描述，填入應用程式資訊清單中，包括所有的子目錄，其中 `directoryPath` 是您想部署應用程式所在的目錄。 *Mage.exe* 會判斷目錄中的每個檔案是組件還是靜態檔。 如果是組件，它會在應用程式中加入 `<dependency>` 標記和 `installFrom` 屬性，以及這個組件的名稱、程式碼基底和版本。 如果是靜態檔案，它會加入 `<file>` 標記。 *Mage.exe* 也會使用一組簡單的啟發學習法來偵測應用程式的主要可執行檔，並在資訊清單中將它標示為 ClickOnce 應用程式的進入點。<br /><br /> *Mage.exe* 不會自動將檔案標示為「資料」檔。 您必須手動標示。 如需詳細資訊，請參閱 [如何：在 ClickOnce 應用程式中包含資料檔案](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)。<br /><br /> *Mage.exe* 也會依據每個檔案的大小來產生雜湊。 ClickOnce 使用這些雜湊來確保自從建立資訊清單後，沒有遭他人修改過這個部署的檔案。 如果部署中的任何檔案有所變更，您可以搭配使用 **-Update** 命令和 **-FromDirectory** 選項來執行 *Mage.exe*，以更新所有參考檔案的雜湊和組件版本。<br /><br /> **-FromDirectory** 會包含 `directoryPath`內所有子目錄的全部檔案。<br /><br /> 如果您搭配 **-FromDirectory** 使用 *-Update* 命令，**Mage.exe** 會從應用程式資訊清單中移除已不在目錄中的檔案。|
+|**-fd, -FromDirectory** `directoryPath`||應用程式資訊清單。|將 `directoryPath`中找到的所有組件和檔案的描述，填入應用程式資訊清單中，包括所有的子目錄，其中 `directoryPath` 是您想部署應用程式所在的目錄。 *Mage.exe* 會判斷目錄中的每個檔案是組件還是靜態檔。 如果是組件，它會在應用程式中加入 `<dependency>` 標記和 `installFrom` 屬性，以及這個組件的名稱、程式碼基底和版本。 如果是靜態檔案，它會加入 `<file>` 標記。 *Mage.exe* 也會使用一組簡單的啟發學習法來偵測應用程式的主要可執行檔，並在資訊清單中將它標示為 ClickOnce 應用程式的進入點。<br /><br /> *Mage.exe* 不會自動將檔案標示為「資料」檔。 您必須手動標示。 如需詳細資訊，請參閱 [How to: Include a Data File in a ClickOnce Application](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)。<br /><br /> *Mage.exe* 也會依據每個檔案的大小來產生雜湊。 ClickOnce 使用這些雜湊來確保自從建立資訊清單後，沒有遭他人修改過這個部署的檔案。 如果部署中的任何檔案有所變更，您可以搭配使用 *-Update* 命令和 **-FromDirectory** 選項來執行 **Mage.exe**，以更新所有參考檔案的雜湊和組件版本。<br /><br /> **-FromDirectory** 會包含 `directoryPath`內所有子目錄的全部檔案。<br /><br /> 如果您搭配 **-FromDirectory** 使用 **-Update** 命令，*Mage.exe* 會從應用程式資訊清單中移除已不在目錄中的檔案。|
 |**-if, -IconFile**  `filePath`||應用程式資訊清單。|指定 .ICO 圖示檔的完整路徑。 這個圖示會出現在 [開始] 功能表中您的應用程式名稱旁，以及 [新增或移除程式] 項目中。 如果沒有提供圖示，就會使用預設圖示。|
 |**-ip, -IncludeProviderURL**  `url`|true|部署資訊清單。|指出部署資訊清單是否包括由 **-ProviderURL**設定的更新位置值。|
 |**-i, -Install** `willInstall`|true|部署資訊清單。|指出 ClickOnce 應用程式是否要安裝到本機電腦上，或者它是否要從 Web 執行安裝。 應用程式在安裝後會出現在 Windows [ **開始** ] 功能表中。 有效值為 "true" (或 "t") 和 "false" (或 "f")。<br /><br /> 如果您指定 **-MinVersion** 選項，但使用者擁有的版本低於所安裝的 **-MinVersion** ，這時會強制應用程式進行安裝，不管您傳遞至 **-Install**的值為何。<br /><br /> 這個選項無法與 **-BrowserHosted** 選項搭配使用。 嘗試在相同的資訊清單同時指定這兩個選項會導致錯誤。|
@@ -70,7 +70,7 @@ Mage [commands] [commandOptions]
 |**-tr, -TrustLevel** `level`|以應用程式 URL 所在區域為基礎。|應用程式資訊清單。|要授與用戶端電腦上應用程式的信任層級。 可用的值包括 "Internet"、"Intranet" 和 "FullTrust"。|
 |**-um, -UseManifestForTrust** `willUseForTrust`|False|應用程式資訊清單。|指定當應用程式在用戶端上執行時，是否會使用應用程式資訊清單的數位簽章進行信任決策。 指定 "true" 或 "t" 表示信任決策會使用應用程式資訊清單。 指定 "false" 或 "f" 則表示會使用部署資訊清單的簽章。|
 |**-v, -Version** `versionNumber`|1.0.0.0|應用程式資訊清單。<br /><br /> 部署資訊清單。|部署的版本。 引數必須是格式為 "*N.N.N.N*" 的有效版本字串，其中 "*N*" 是不帶正負號的 32 位元整數。|
-|**-wpf, -WPFBrowserApp**  `isWPFApp`|False|應用程式資訊清單。<br /><br /> 部署資訊清單。|只有在應用程式是裝載在 Internet Explorer 內的 Windows Presentation Foundation (WPF) 應用程式，且不是獨立的可執行檔時，才使用這個旗標。 有效值為 "true" (或 "t") 和 "false" (或 "f")。<br /><br /> 若為應用程式資訊清單，會在應用程式資訊清單的 `hostInBrowser` 項目底下插入 `entryPoint` 屬性。<br /><br /> 若為部署資訊清單，會將 `install` 項目上的 `deployment` 屬性設為 false，並將部署資訊清單儲存成副檔名為 .xbap 的檔案。 這個引數與 **-Install** 引數一起指定時會產生錯誤，因為瀏覽器裝載的應用程式不能是已安裝的離線應用程式。|
+|**-wpf, -WPFBrowserApp**  `isWPFApp`|false|應用程式資訊清單。<br /><br /> 部署資訊清單。|只有在應用程式是裝載在 Internet Explorer 內的 Windows Presentation Foundation (WPF) 應用程式，且不是獨立的可執行檔時，才使用這個旗標。 有效值為 "true" (或 "t") 和 "false" (或 "f")。<br /><br /> 若為應用程式資訊清單，會在應用程式資訊清單的 `hostInBrowser` 項目底下插入 `entryPoint` 屬性。<br /><br /> 若為部署資訊清單，會將 `install` 項目上的 `deployment` 屬性設為 false，並將部署資訊清單儲存成副檔名為 .xbap 的檔案。 這個引數與 **-Install** 引數一起指定時會產生錯誤，因為瀏覽器裝載的應用程式不能是已安裝的離線應用程式。|
 
 ## <a name="sign-command-options"></a>Sign 命令選項
 
@@ -119,13 +119,13 @@ Visual Studio 2017 包含 *Mage.exe* 的 4.6.1 版。 使用此版本的 *Mage.e
 |----------------------|---------------|---------------|---------------|
 |以 .NET Framework 2.0 或 3.x 為目標之應用程式的資訊清單|開啟|確定|確定|
 ||關閉|確定|確定|
-||Save|確定|確定|
+||儲存|確定|確定|
 ||重新簽署|確定|確定|
 ||新增|確定|不支援|
 ||更新 (請參閱下方)|確定|確定|
 |以 .NET Framework 第 4 版為目標之應用程式的資訊清單|開啟|確定|確定|
 ||關閉|確定|確定|
-||Save|確定|確定|
+||儲存|確定|確定|
 ||重新簽署|確定|確定|
 ||新增|不支援|確定|
 ||更新 (請參閱下方)|不支援|確定|
@@ -133,15 +133,15 @@ Visual Studio 2017 包含 *Mage.exe* 的 4.6.1 版。 使用此版本的 *Mage.e
 |資訊清單版本|更新作業詳細資料|Mage v2.0|Mage v4.0|
 |----------------------|------------------------------|---------------|---------------|
 |以 .NET Framework 2.0 或 3.x 為目標之應用程式的資訊清單|修改組件|確定|確定|
-||加入組件|確定|確定|
+||新增組件|確定|確定|
 ||移除組件|確定|確定|
 |以 .NET Framework 第 4 版為目標之應用程式的資訊清單|修改組件|不支援|確定|
-||加入組件|不支援|確定|
+||新增組件|不支援|確定|
 ||移除組件|不支援|確定|
 
  Mage.exe 會建立以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]為目標的新資訊清單。 以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標的 ClickOnce 應用程式可以在 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 和完整版的 .NET Framework 4 上執行。 如果您的應用程式以完整版的 .NET Framework 4 為目標，而且無法在 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 上執行，請使用文字編輯器移除用戶端 `<framework>` 元素，並且重新簽署資訊清單。
 
-下列是以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標的範例 `<framework>` 元素：
+下列是以 `<framework>` 為目標的範例 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 元素：
 
 ```xml
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />
@@ -217,10 +217,10 @@ mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
 mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enhanced Cryptographic Provider v1.0"
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)
 - [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)
-- [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [MageUI.exe (資訊清單產生和編輯工具、圖形用戶端)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
 - [命令提示字元](developer-command-prompt-for-vs.md)

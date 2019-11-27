@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448378"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod 方法
-Gets the documents that this method has lines in.  
+取得此方法在中具有行的檔。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,20 +36,20 @@ HRESULT GetDocumentsForMethod(
   
 ## <a name="parameters"></a>參數  
  `cDocs`  
- [in] The length of the buffer pointed to by `pcDocs`.  
+ 在`pcDocs`所指向之緩衝區的長度。  
   
  `pcDocs`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.  
+ 脫銷`ULONG32` 的指標，接收包含檔所需的緩衝區大小（以字元為單位）。  
   
  `documents`  
- [in] The buffer that contains the documents.  
+ 在包含檔的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, an error code.  
+ 如果方法成功，則 S_OK;否則，錯誤碼為。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymENCUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

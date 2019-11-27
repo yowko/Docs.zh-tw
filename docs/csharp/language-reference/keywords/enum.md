@@ -35,7 +35,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 在這個列舉中，項目的順序會強制從 `1` 開始，而不是 `0`。 不過，建議加入值為 0 的常數。 如需詳細資訊，請參閱[列舉類型](../../programming-guide/enumeration-types.md)。
 
-每個列舉型別都具有基礎型別，它可以是任何[整數數字型別](../builtin-types/integral-numeric-types.md)。 [Char](../builtin-types/char.md) 型別不能是列舉的基礎型別。 The default underlying type of enumeration elements is [int](../builtin-types/integral-numeric-types.md). To declare an enum of another integral type, such as [byte](../builtin-types/integral-numeric-types.md), use a colon after the identifier followed by the type, as shown in the following example.
+每個列舉型別都具有基礎型別，它可以是任何[整數數字型別](../builtin-types/integral-numeric-types.md)。 [Char](../builtin-types/char.md) 型別不能是列舉的基礎型別。 列舉元素的預設基礎類型為[int](../builtin-types/integral-numeric-types.md)。若要宣告另一個整數類型的列舉，例如[byte](../builtin-types/integral-numeric-types.md)，請在識別碼之後使用冒號，後面接著類型，如下列範例所示。
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
@@ -94,7 +94,7 @@ int x = (int)Day.Sun;
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [列舉型別](../../programming-guide/enumeration-types.md)

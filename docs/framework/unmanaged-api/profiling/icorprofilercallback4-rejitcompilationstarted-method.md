@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430202"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>ICorProfilerCallback4::ReJITCompilationStarted 方法
-Notifies the profiler that the just-in-time (JIT) compiler has started to recompile a function.  
+通知 profiler，及時（JIT）編譯器已開始重新編譯函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,18 +36,18 @@ HRESULT ReJITCompilationStarted(
   
 ## <a name="parameters"></a>參數  
  `functionId`  
- [in] The ID of the function that the JIT compiler has started to recompile.  
+ 在JIT 編譯程式已開始重新編譯之函式的識別碼。  
   
  `rejitId`  
- [in] The recompilation ID of the new version of the function.  
+ 在新版本函數的重新編譯識別碼。  
   
  `fIsSafeToBlock`  
- [in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime. A value of `true` does not harm the runtime, but can affect the profiling results.  
+ [in] `true`，表示封鎖可能會導致執行時間等候呼叫執行緒從這個回呼傳回;`false`，表示封鎖作業不會影響執行時間的作業。 `true` 的值不會傷害執行時間，但可能會影響分析結果。  
   
 ## <a name="remarks"></a>備註  
- It is possible to receive more than one pair of `ReJITCompilationStarted` and [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) method calls for each function because of the way the runtime handles class constructors. For example, the runtime starts to recompile method A, but the class constructor for class B needs to be run. Therefore, the runtime recompiles the constructor for class B and runs it. While the constructor is running, it makes a call to method A, which causes method A to be recompiled again. In this scenario, the first recompilation of method A is halted. However, both attempts to recompile method A are reported with JIT recompilation events.  
+ 您可以針對每個函式接收一對以上的 `ReJITCompilationStarted` 和[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)方法呼叫，因為執行時間會處理類別的方法。 例如，執行時間會開始重新編譯方法 A，但類別 B 的類別函式必須執行。 因此，執行時間會重新編譯類別 B 的函式，並加以執行。 當此函式正在執行時，它會呼叫方法 A，這會導致再次重新編譯方法 A。 在此案例中，第一次重新編譯方法 A 會停止。 不過，這兩次嘗試重新編譯方法 A 都會使用 JIT 重新編譯事件來回報。  
   
- Profilers must support the sequence of JIT recompilation callbacks in cases where two threads are simultaneously making callbacks. For example, thread A calls `ReJITCompilationStarted`; however, before thread A calls [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md), thread B calls [ICorProfilerCallback::ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) with the function ID from the `ReJITCompilationStarted` callback for thread A. It might appear that the function ID should not yet be valid because a call to [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) had not yet been received by the profiler. However, in this case, the function ID is valid.  
+ 分析工具在兩個執行緒同時進行回呼的情況下，必須支援 JIT 重新編譯回呼的順序。 例如，執行緒 A 會呼叫 `ReJITCompilationStarted`;不過，線上程 A 呼叫[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)之前，執行緒 B 會呼叫[ICorProfilerCallback：： ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) ，並從執行緒 a 的 `ReJITCompilationStarted` 回呼中取得函數識別碼。可能會出現函式識別碼尚未生效的情況，因為分析工具尚未收到[ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)的呼叫。 不過，在此情況下，函數識別碼是有效的。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -58,7 +58,7 @@ HRESULT ReJITCompilationStarted(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerCallback4 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

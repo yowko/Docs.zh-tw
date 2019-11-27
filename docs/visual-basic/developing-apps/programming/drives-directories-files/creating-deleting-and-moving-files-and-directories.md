@@ -33,7 +33,7 @@ ms.locfileid: "74348915"
 
 本節會列出在 Visual Basic 中與建立、刪除、移動和重新命名檔案及目錄建立關聯的工作。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
  [如何：將具有特定模式的檔案複製到目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
  示範如何將有特定檔名模式的檔案，例如僅 .txt 檔案，複製到目錄。  
@@ -77,7 +77,7 @@ ms.locfileid: "74348915"
  [如何：剖析檔案路徑](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
  示範如何使用 `My` 方法來合併檔案路徑。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  描述 `My.Computer.FileSystem` 物件和其成員。  

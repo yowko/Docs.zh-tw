@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346422"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Creating the Source Office Open XML Document (Visual Basic)
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>建立來源 Office Open XML 檔（Visual Basic）
 這個主題顯示如何建立此教學課程中其他範例所使用的 Office Open XML WordprocessingML 文件。 如果您按照這些指示進行，您的輸出將會符合每個範例中提供的輸出。  
   
  不過，本教學課程中的範例將會使用任何有效的 WordprocessingML 文件。  
@@ -44,7 +44,7 @@ ms.locfileid: "74346422"
   
 3. 將第一行的格式設定為「標題 1」樣式。  
   
-4. Select the lines that contain the Visual Basic code. 第一行開頭為 `Imports` 關鍵字。 The last line is "End Class". 利用 Courier 字型設定這幾行的格式。 以新樣式設定格式，然後將新樣式命名為 "Code"。  
+4. 選取包含 Visual Basic 程式碼的行。 第一行開頭為 `Imports` 關鍵字。 最後一行是「結束類別」。 利用 Courier 字型設定這幾行的格式。 以新樣式設定格式，然後將新樣式命名為 "Code"。  
   
 5. 最後，選取包含輸出的整行，然後使用 `Code` 樣式設定其格式。  
   
@@ -53,6 +53,6 @@ ms.locfileid: "74346422"
     > [!NOTE]
     > 如果您要使用 Microsoft Word 2003，在 [存檔類型] 下拉式清單中選取 [Word 2007 文件]。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [教學課程：操作 WordprocessingML 檔中的內容（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

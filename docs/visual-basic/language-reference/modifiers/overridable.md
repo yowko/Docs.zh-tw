@@ -1,5 +1,5 @@
 ---
-title: Overrides
+title: Overridable
 ms.date: 07/20/2015
 f1_keywords:
 - Overridable
@@ -24,27 +24,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351393"
 ---
 # <a name="overridable-visual-basic"></a>Overridable (Visual Basic)
-Specifies that a property or procedure can be overridden by an identically named property or procedure in a derived class.  
+指定屬性或程式可由衍生類別中名稱相同的屬性或程式覆寫。  
   
 ## <a name="remarks"></a>備註  
- The `Overridable` modifier allows a property or method in a class to be overridden in a derived class. The [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) modifier prevents a property or method from being overridden in a derived class.  如需詳細資訊，請參閱[繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。  
+ `Overridable` 修飾詞允許在衍生類別中覆寫類別中的屬性或方法。 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)修飾詞可防止在衍生類別中覆寫屬性或方法。  如需詳細資訊，請參閱[繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。  
   
- If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method. If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.  
+ 如果未指定 `Overridable` 或 `NotOverridable` 修飾詞，則預設值取決於屬性或方法是否會覆寫基類屬性或方法。 如果屬性或方法會覆寫基類屬性或方法，則預設設定為 `Overridable`。否則，它會 `NotOverridable`。  
   
- You can shadow or override to redefine an inherited element, but there are significant differences between the two approaches. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ 您可以遮蔽或覆寫以重新定義繼承的元素，但這兩種方法之間有顯著的差異。 如需詳細資訊，請參閱[Visual Basic 中的陰影](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
   
- An element that can be overridden is sometimes referred to as a *virtual* element. If it can be overridden, but does not have to be, it is sometimes also called a *concrete* element.  
+ 可以覆寫的專案有時稱為*虛擬*元素。 如果可以覆寫它，但不一定要這麼做，有時也稱為*具體*元素。  
   
- You can use `Overridable` only in a property or procedure declaration statement.  
+ 您只能在屬性或程式宣告語句中使用 `Overridable`。  
   
-## <a name="combined-modifiers"></a>Combined Modifiers  
- You cannot specify `Overridable` or `NotOverridable` for a `Private` method.  
+## <a name="combined-modifiers"></a>合併的修飾詞  
+ 您不能為 `Private` 方法指定 `Overridable` 或 `NotOverridable`。  
   
- You cannot specify `Overridable` together with `MustOverride`, `NotOverridable`, or `Shared` in the same declaration.  
+ 您不能在相同的宣告中同時指定 `Overridable` 與 `MustOverride`、`NotOverridable`或 `Shared`。  
   
  因為覆寫項目可隱含覆寫，您無法結合 `Overridable` 與 `Overrides`。  
   
-## <a name="usage"></a>使用量  
+## <a name="usage"></a>使用方式  
  `Overridable` 修飾詞可用於以下內容：  
   
  [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)  
@@ -53,12 +53,12 @@ Specifies that a property or procedure can be overridden by an identically named
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [修飾詞](../../../visual-basic/language-reference/modifiers/index.md)
 - [繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
-- [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic 中的陰影](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

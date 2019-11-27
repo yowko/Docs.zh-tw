@@ -25,7 +25,7 @@ ms.locfileid: "74348876"
   
      [!code-vb[VbFileIOWrite#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#6)]  
   
-## <a name="robust-programming"></a>穩固程式設計  
+## <a name="robust-programming"></a>最佳化程式設計  
 
  以下條件可能會造成例外狀況：  
   
@@ -43,7 +43,7 @@ ms.locfileid: "74348876"
   
 - 使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

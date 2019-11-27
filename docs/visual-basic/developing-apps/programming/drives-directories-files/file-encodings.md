@@ -30,7 +30,7 @@ ms.locfileid: "74348884"
 
 <xref:System.Text.Encoding> 類別表示字元編碼方式。 此表列出可用的編碼方式類型，並描述每個編碼方式。
 
-|[屬性]|描述|
+|名稱|描述|
 |---|---|
 |<xref:System.Text.ASCIIEncoding>|代表 Unicode 字元的 ASCII 字元編碼方式。|
 |<xref:System.Text.UnicodeEncoding>|代表 Unicode 字元的 UTF-16 編碼方式。|
@@ -38,7 +38,7 @@ ms.locfileid: "74348884"
 |<xref:System.Text.UTF7Encoding>|代表 Unicode 字元的 UTF-7 編碼方式。|
 |<xref:System.Text.UTF8Encoding>|代表 Unicode 字元的 UTF-8 編碼方式。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
 - [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

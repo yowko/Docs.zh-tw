@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352805"
 ---
 # <a name="then-statement"></a>Then 陳述式
-Introduces a statement block to be compiled or executed if a tested condition is true.  
+導入了當測試的條件為 true 時，所要編譯或執行的語句區塊。  
   
 ## <a name="remarks"></a>備註  
  `Then` 關鍵字可用於以下內容：  
   
- [#If...Then...#Else Directive](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If .。。Then ... #Else 指示詞](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
  [If...Then...Else 陳述式](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

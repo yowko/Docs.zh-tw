@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434875"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock 方法
-Gets a section block of the code base.  
+取得程式碼基底的區段區塊。  
   
- This method is obsolete and should not be used.  
+ 這個方法已過時，不應使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,29 +40,29 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>參數  
  `section`  
- [in] The section from which to retrieve a block of the code base.  
+ 在要從中取得程式碼基底區塊的區段。  
   
  `len`  
- [in] The length of the block to be retrieved.  
+ 在要抓取的區塊長度。  
   
  `align`  
- [in] The byte, relative to the beginning of the section, with which to align the first byte of the block. This is the position of the block within the section.  
+ 在相對於區段開頭的位元組，用來對齊區塊的第一個位元組。 這是區段內區塊的位置。  
   
  `ppBytes`  
- [out] A pointer to a location that receives the address of the retrieved block.  
+ 脫銷接收所抓取區塊位址之位置的指標。  
   
 ## <a name="remarks"></a>備註  
- Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.  
+ 只有在您有其他方法未處理的特殊區段需求時，才呼叫 `GetSectionBlock`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448067"
 ---
 # <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a>ICorProfilerCallback::ModuleAttachedToAssembly 方法
-Notifies the profiler that a module is being attached to its parent assembly.  
+通知 profiler，模組已附加至其父元件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,13 +35,13 @@ HRESULT ModuleAttachedToAssembly(
   
 ## <a name="parameters"></a>參數  
  `moduleId`  
- [in] The ID of the module that is being attached.  
+ 在所附加之模組的識別碼。  
   
  `AssemblyId`  
- [in] The ID of the parent assembly to which the module is attached.  
+ 在模組所附加之父元件的識別碼。  
   
 ## <a name="remarks"></a>備註  
- A module can be loaded through an import address table (IAT), through a call to `LoadLibrary`, or through a metadata reference. As a result, the common language runtime (CLR) loader has multiple code paths for determining the assembly in which a module lives. Therefore, it is possible that after [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) is called, the module does not know what assembly it is in and getting the parent assembly ID is not possible. The `ModuleAttachedToAssembly` method is called when the module is attached to its parent assembly and its parent assembly ID can be obtained.  
+ 模組可以透過匯入位址表（IAT）、透過呼叫 `LoadLibrary`，或透過中繼資料參考來載入。 因此，common language runtime （CLR）載入器有多個程式碼路徑可用於判斷模組所在的元件。 因此，在呼叫[ICorProfilerCallback：： ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)之後，模組不知道它所在的元件，而且無法取得父元件識別碼。 當模組附加至其父元件，而且可以取得其父元件識別碼時，會呼叫 `ModuleAttachedToAssembly` 方法。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -52,6 +52,6 @@ HRESULT ModuleAttachedToAssembly(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

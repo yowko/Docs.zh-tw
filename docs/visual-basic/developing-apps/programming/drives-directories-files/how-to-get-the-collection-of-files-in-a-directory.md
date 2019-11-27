@@ -28,7 +28,7 @@ ms.locfileid: "74335341"
   
      [!code-vb[VbVbcnMyFileSystem#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#32)]  
   
-## <a name="robust-programming"></a>穩固程式設計  
+## <a name="robust-programming"></a>最佳化程式設計  
 
  以下條件可能會造成例外狀況：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "74335341"
   
 - 使用者缺乏必要的權限 (<xref:System.UnauthorizedAccessException>)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A>
 - [如何：尋找具有特定模式的檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)

@@ -19,7 +19,7 @@ ms.locfileid: "74338784"
 ---
 # <a name="keywords-visual-basic"></a>關鍵字 (Visual Basic)
 
-The following tables list all Visual Basic language keywords.
+下表列出所有 Visual Basic 語言關鍵字。
 
 ## <a name="reserved-keywords"></a>保留關鍵字
 
@@ -32,14 +32,14 @@ The following tables list all Visual Basic language keywords.
 |---|---|---|---|
 |[AddHandler](../statements/addhandler-statement.md)|[AddressOf](../operators/addressof-operator.md)|[Alias](../statements/alias-clause.md)|[And](../operators/and-operator.md)|  
 |[AndAlso](../operators/andalso-operator.md)|[As](../statements/as-clause.md)|[布林值](../data-types/boolean-data-type.md)|[ByRef](../modifiers/byref.md)|  
-|[Byte](../data-types/byte-data-type.md)|[ByVal](../modifiers/byval.md)|[Call](../statements/call-statement.md)|[Case](../statements/select-case-statement.md)|  
+|[Byte](../data-types/byte-data-type.md)|[ParamArray](../modifiers/byval.md)|[Call](../statements/call-statement.md)|[Case](../statements/select-case-statement.md)|  
 |[Catch](../statements/try-catch-finally-statement.md)|[CBool](../functions/type-conversion-functions.md)|[CByte](../functions/type-conversion-functions.md)|[CChar](../functions/type-conversion-functions.md)|  
 |[CDate](../functions/type-conversion-functions.md)|[CDbl](../functions/type-conversion-functions.md)|[CDec](../functions/type-conversion-functions.md)|[Char](../data-types/char-data-type.md)|  
 |[CInt](../functions/type-conversion-functions.md)|[類別條件約束](../statements/type-list.md)|[Class 陳述式](../statements/class-statement.md)|[CLng](../functions/type-conversion-functions.md)|  
 |[CObj](../functions/type-conversion-functions.md)|[Const](../statements/const-statement.md)|[Continue](../statements/continue-statement.md)|[CSByte](../functions/type-conversion-functions.md)|  
 |[CShort](../functions/type-conversion-functions.md)|[CSng](../functions/type-conversion-functions.md)|[CStr](../functions/type-conversion-functions.md)|[CType](../functions/type-conversion-functions.md)|  
 |[CUInt](../functions/type-conversion-functions.md)|[CULng](../functions/type-conversion-functions.md)|[CUShort](../functions/type-conversion-functions.md)|[Date](../data-types/date-data-type.md)|  
-|[Decimal](../data-types/decimal-data-type.md)|[Declare](../statements/declare-statement.md)|[Default](../modifiers/default.md)|[Delegate](../statements/delegate-statement.md)|  
+|[Decimal](../data-types/decimal-data-type.md)|[Declare](../statements/declare-statement.md)|[預設值](../modifiers/default.md)|[Delegate](../statements/delegate-statement.md)|  
 |[Dim](../statements/dim-statement.md)|[DirectCast](../operators/directcast-operator.md)|[Do](../statements/do-loop-statement.md)|[Double](../data-types/double-data-type.md)|  
 |[Each](../statements/for-each-next-statement.md)|[Else](../statements/else-statement.md)|[ElseIf](../statements/if-then-else-statement.md)|[End 陳述式](../statements/end-statement.md)|  
 |[End \<關鍵字>](../statements/end-keyword-statement.md)|`EndIf`|[Enum](../statements/enum-statement.md)|[Erase](../statements/erase-statement.md)|  
@@ -52,18 +52,18 @@ The following tables list all Visual Basic language keywords.
 |[Inherits](../statements/inherits-statement.md)|[Integer](../data-types/integer-data-type.md)|[Interface](../statements/interface-statement.md)|[Is](../operators/is-operator.md)|  
 |[IsNot](../operators/isnot-operator.md)|[Let](../queries/let-clause.md)|[Lib](../statements/declare-statement.md)|[Like](../operators/like-operator.md)|  
 |[Long](../data-types/long-data-type.md)|[Loop](../statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../operators/mod-operator.md)|  
-|[模組](../modifiers/module-keyword.md)|[Module 陳述式](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[New](../modifiers/mustoverride.md)|  
+|[模組](../modifiers/module-keyword.md)|[Module 陳述式](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[MustOverride](../modifiers/mustoverride.md)|  
 |[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[NameOf](../operators/nameof.md)|[Namespace](../statements/namespace-statement.md)|
-|[Narrowing](../modifiers/narrowing.md)|[New 條件約束](../statements/type-list.md)|[New 運算子](../operators/new-operator.md)|[下一步](../statements/for-next-statement.md)|
+|[Narrowing](../modifiers/narrowing.md)|[New 條件約束](../statements/type-list.md)|[New 運算子](../operators/new-operator.md)|[下一個](../statements/for-next-statement.md)|
 |[Next (在 Resume 中)](../statements/resume-statement.md)|[Not](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|
 |[NotOverridable](../modifiers/notoverridable.md)|[物件](../data-types/object-data-type.md)|[Of](../statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|
 |[Operator](../statements/operator-statement.md)|[選項](../statements/option-keyword-statement.md)|[Optional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|
-|[OrElse](../operators/orelse-operator.md)|[Out (泛型修飾詞)](../modifiers/out-generic-modifier.md)|[多載](../modifiers/overloads.md)|[Overridable](../modifiers/overridable.md)|
+|[OrElse](../operators/orelse-operator.md)|[Out (泛型修飾詞)](../modifiers/out-generic-modifier.md)|[多載](../modifiers/overloads.md)|[Overrides](../modifiers/overridable.md)|
 |[Overrides](../modifiers/overrides.md)|[ParamArray](../modifiers/paramarray.md)|[Partial](../modifiers/partial.md)|[Private](../modifiers/private.md)|
 |[Property](../statements/property-statement.md)|[Protected](../modifiers/protected.md)|[Public](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|
 |[ReadOnly](../modifiers/readonly.md)|[ReDim](../statements/redim-statement.md)|[REM](../statements/rem-statement.md)|[RemoveHandler](../statements/removehandler-statement.md)|
 |[Resume](../statements/resume-statement.md)|[Return](../statements/return-statement.md)|[SByte](../data-types/sbyte-data-type.md)|[選取](../statements/select-case-statement.md)|
-[Set](../statements/set-statement.md)|[Shadows](../modifiers/shadows.md)|[Shared](../modifiers/shared.md)|[Short](../data-types/short-data-type.md)|
+[Set](../statements/set-statement.md)|[Shadows](../modifiers/shadows.md)|[共用](../modifiers/shared.md)|[Short](../data-types/short-data-type.md)|
 |[Single](../data-types/single-data-type.md)|[Static](../modifiers/static.md)|[Step](../statements/for-next-statement.md)|[Stop](../statements/stop-statement.md)|
 |[String](../data-types/string-data-type.md)|[結構條件約束](../statements/type-list.md)|[Structure 陳述式](../statements/structure-statement.md)|[Sub](../statements/sub-statement.md)|
 |[SyncLock](../statements/synclock-statement.md)|[Then](../statements/then-statement.md)|[Throw](../statements/throw-statement.md)|[若要](../statements/for-next-statement.md)|
@@ -80,7 +80,7 @@ The following tables list all Visual Basic language keywords.
 |[<\<=](../operators/left-shift-assignment-operator.md)|
 
 > [!NOTE]
-> `EndIf`, `GoSub`, `Variant`, and `Wend` are retained as reserved keywords, although they are no longer used in Visual Basic. `Let` 關鍵字的意義已變更。 `Let` 現在用於 LINQ 查詢中。 如需詳細資訊，請參閱 [Let 子句](../queries/let-clause.md)。
+> `EndIf`、`GoSub`、`Variant`和 `Wend` 會保留為保留的關鍵字，但不會再用於 Visual Basic 中。 `Let` 關鍵字的意義已變更。 `Let` 現在用於 LINQ 查詢中。 如需詳細資訊，請參閱 [Let 子句](../queries/let-clause.md)。
 
 ## <a name="unreserved-keywords"></a>未保留關鍵字
 
@@ -88,14 +88,14 @@ The following tables list all Visual Basic language keywords.
 
 |||||  
 |---|---|---|---|  
-|[Aggregate](../queries/aggregate-clause.md)|[Ansi](../modifiers/ansi.md)|[Assembly](../modifiers/assembly.md)|[Async](../modifiers/async.md)|  
+|[Aggregate](../queries/aggregate-clause.md)|[Ansi](../modifiers/ansi.md)|[組件](../modifiers/assembly.md)|[Async](../modifiers/async.md)|  
 |[Auto](../modifiers/auto.md)|[Await](../operators/await-operator.md)|[Binary](../statements/option-compare-statement.md)|[Compare](../statements/option-compare-statement.md)|  
-|[自訂](../statements/event-statement.md)|[Distinct](../queries/distinct-clause.md)|[Equals](../queries/equals-clause.md)|[Explicit](../statements/option-explicit-statement.md)|  
+|[自訂](../statements/event-statement.md)|[Distinct](../queries/distinct-clause.md)|[等於](../queries/equals-clause.md)|[Explicit](../statements/option-explicit-statement.md)|  
 |[From](../queries/from-clause.md)|[Group By](../queries/group-by-clause.md)|[Group Join](../queries/group-join-clause.md)|[Into](../statements/into-clause.md)|  
 |[IsFalse](../operators/isfalse-operator.md)|[IsTrue](../operators/istrue-operator.md)|[Iterator](../modifiers/iterator.md)|[Join](../queries/join-clause.md)|  
 |[Key](../modifiers/key.md)|[Mid](../statements/mid-statement.md)|[Off](../../../visual-basic/misc/off.md)|[Order By](../queries/order-by-clause.md)|  
 |[Preserve](../statements/redim-statement.md)|[Skip](../queries/skip-clause.md)|[Skip While](../queries/skip-while-clause.md)|[Strict](../statements/option-strict-statement.md)|  
-|[Take](../queries/take-clause.md)|[Take While](../queries/take-while-clause.md)|[Text](../statements/option-compare-statement.md)|[Unicode](../modifiers/unicode.md)|  
+|[Take](../queries/take-clause.md)|[Take While](../queries/take-while-clause.md)|[文字](../statements/option-compare-statement.md)|[Unicode](../modifiers/unicode.md)|  
 |[Until](../statements/do-loop-statement.md)|[Where](../queries/where-clause.md)|[Yield](../statements/yield-statement.md)|[#ExternalSource](../directives/externalsource-directive.md)|  
 |[#Region](../directives/region-directive.md)||||  
   
@@ -107,7 +107,7 @@ The following tables list all Visual Basic language keywords.
 |[集合物件摘要](collection-object-summary.md)|列出用於集合的語言項目。|  
 |[控制流程摘要](control-flow-summary.md)|列出陳述式，以用於迴圈和控制程序流程。|  
 |[轉換摘要](conversion-summary.md)|列出函式，可用來轉換數字、日期、時間和字串。|  
-|[資料類型摘要](data-types-summary.md)|列出資料類型。 也會列出函式，可用來轉換不同資料類型與確認資料類型。|  
+|[Data Types Summary](data-types-summary.md)|列出資料類型。 也會列出函式，可用來轉換不同資料類型與確認資料類型。|  
 |[日期和時間摘要](dates-and-times-summary.md)|列出語言項目，以用於日期和時間。|  
 |[宣告和常數摘要](declarations-and-constants-summary.md)|列出陳述式，可用來宣告變數、常數、類別、模組和其他程式設計項目。 也會列出語言項目，可用來取得物件資訊、處理事件，以及實作繼承。|  
 |[目錄和檔案摘要](directories-and-files-summary.md)|列出函式，可用來控制檔案系統以及處理檔案。|  
@@ -121,6 +121,6 @@ The following tables list all Visual Basic language keywords.
 |[登錄摘要](registry-summary.md)|列出函式，可用來讀取、儲存和刪除程式設定。|  
 |[字串操作摘要](string-manipulation-summary.md)|列出用來操作字串的函式。|  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 執行階段程式庫成員](../runtime-library-members.md)

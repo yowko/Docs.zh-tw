@@ -13,14 +13,14 @@ ms.locfileid: "74353905"
 ---
 # <a name="argument-not-optional-visual-basic"></a>引數不是選擇性的 (Visual Basic)
 
-The number and types of arguments must match those expected. Either there is an incorrect number of arguments, or an omitted argument is not optional. An argument can only be omitted from a call to a user-defined procedure if it was declared `Optional` in the procedure definition.  
+引數的數目和類型必須符合預期。 可能是引數數目不正確，或省略的引數不是選擇性的。 如果引數是在程序定義中 `Optional` 宣告，則只能從呼叫使用者定義的程式中省略。  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a>若要改正這項錯誤  
   
-1. Supply all necessary arguments.  
+1. 提供所有必要的引數。  
   
-2. Make sure omitted arguments are optional. If they are not, either supply the argument in the call, or declare the parameter `Optional` in the definition.  
+2. 請確定省略的引數是選擇性的。 如果不是，請在呼叫中提供引數，或在定義中宣告參數 `Optional`。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [錯誤類型](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Persist User Settings'
+title: 如何：保存使用者設定
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], persisting user settings
@@ -30,9 +30,9 @@ ms.locfileid: "74329633"
   
  [!code-vb[VbVbalrMyResources#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#5)]  
   
- 為了確保此範例正常運作，您的應用程式必須具有 `Date` 類型的 `LastChanged` 使用者設定。 如需詳細資訊，請參閱[管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。  
+ 為了確保此範例正常運作，您的應用程式必須具有 `LastChanged` 類型的 `Date` 使用者設定。 如需詳細資訊，請參閱[管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [如何：在 Visual Basic 中讀取應用程式設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)

@@ -36,24 +36,24 @@ HRESULT GetNameFromToken (
   
 ## <a name="parameters"></a>參數  
  `tk`  
- [in] The token representing the object to return the name for.  
+ 在Token，代表要傳回名稱的物件。  
   
  `pszUtf8NamePtr`  
- [out] A pointer to the UTF-8 object name in the heap.  
+ 脫銷堆積中 UTF-8 物件名稱的指標。  
   
 ## <a name="remarks"></a>備註  
- `GetNameFromToken` 已經過時。 As an alternative, call a method to get the properties of the particular type of token required, such as `GetFieldProps` for a field or `GetMethodProps` for a method.  
+ `GetNameFromToken` 已經過時。 或者，呼叫方法來取得所需之特定權杖類型的屬性，例如欄位的 `GetFieldProps`，或方法的 `GetMethodProps`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET Framework Versions:** 1.0  
+ **.NET Framework 版本：** 1。0  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

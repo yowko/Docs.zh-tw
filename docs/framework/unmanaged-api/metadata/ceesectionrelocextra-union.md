@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444173"
 ---
 # <a name="ceesectionrelocextra-union"></a>CeeSectionRelocExtra 等位
-Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section.  
+表示[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)介面用來重新放置區段的位址位移。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,17 +36,17 @@ typedef union  {
   
 |成員|描述|  
 |------------|-----------------|  
-|`highAdj`|The upper address adjustment for the section.|  
+|`highAdj`|區段的上方位址調整。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料等位](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)

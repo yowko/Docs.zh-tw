@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446280"
 ---
 # <a name="isymunmanagedscopegetstartoffset-method"></a>ISymUnmanagedScope::GetStartOffset 方法
-Gets the start offset for this scope.  
+取得此範圍的開始位移。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,15 +34,15 @@ HRESULT GetStartOffset(
   
 ## <a name="parameters"></a>參數  
  `pRetVal`  
- [out] A pointer to a `ULONG32` that contains the starting offset.  
+ 脫銷包含起始位移之 `ULONG32` 的指標。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedScope 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
 - [GetEndOffset 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getendoffset-method.md)

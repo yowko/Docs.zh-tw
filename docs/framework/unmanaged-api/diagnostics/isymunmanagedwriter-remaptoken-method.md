@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427880"
 ---
 # <a name="isymunmanagedwriterremaptoken-method"></a>ISymUnmanagedWriter::RemapToken 方法
-Notifies the symbol writer that a metadata token has been remapped as the metadata was emitted. If the symbol writer has stored the old token within the symbol store, it must either update the stored token with the new value, or it must save the map for the corresponding symbol reader to remap during the read phase.  
+通知符號寫入器，元資料標記在發出中繼資料時已重新對應。 如果符號寫入器已在符號存放區中儲存舊的 token，則必須使用新的值來更新儲存的 token，或在讀取階段期間，必須儲存對應符號讀取器的對應。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,17 +35,17 @@ HRESULT RemapToken(
   
 ## <a name="parameters"></a>參數  
  `oldToken`  
- [in] The metadata token that was remapped.  
+ 在重新對應的元資料標記。  
   
  `newToken`  
- [in] The new metadata token to which `oldToken` was remapped.  
+ 在`oldToken` 重新對應的新元資料標記。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

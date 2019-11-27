@@ -27,7 +27,7 @@ ms.locfileid: "74445751"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>擷取桌面應用程式中的資源
 
-當您在 .NET Framework 傳統型應用程式中使用當地語系化資源時，最好使用主要組件封裝預設或中性文化特性的資源，並針對應用程式支援的每個語言或文化特性，建立個別的附屬組件。 然後您可以使用下一節中所述的 <xref:System.Resources.ResourceManager> 類別，來存取具名資源。 如果您選擇不要將資源嵌入主要組件和附屬組件，您也可以直接存取二進位 .resources 檔，如本文稍後的 [從 .resources 檔擷取資源](#from_file) 一節中所述。  To retrieve resources in Windows 8.x Store apps, see [Creating and retrieving resources in Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)).  
+當您在 .NET Framework 傳統型應用程式中使用當地語系化資源時，最好使用主要組件封裝預設或中性文化特性的資源，並針對應用程式支援的每個語言或文化特性，建立個別的附屬組件。 然後您可以使用下一節中所述的 <xref:System.Resources.ResourceManager> 類別，來存取具名資源。 如果您選擇不要將資源嵌入主要組件和附屬組件，您也可以直接存取二進位 .resources 檔，如本文稍後的[從 .resources 檔擷取資源](#from_file)一節中所述。  若要取出 Windows 8.x 存放區應用程式中的資源，請參閱[在 Windows store 應用程式中建立和抓取資源](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))。  
   
 <a name="from_assembly"></a>   
 ## <a name="retrieving-resources-from-assemblies"></a>從組件擷取資源  
@@ -37,7 +37,7 @@ ms.locfileid: "74445751"
   
 - 具有兩個參數的多載︰一個包含資源名稱的字串，以及一個代表所擷取資源之文化特性的 <xref:System.Globalization.CultureInfo> 物件。 如果找不到為該文化特性設定的資源，資源管理員會使用後援規則來擷取適當的資源。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法。  
   
- 資源管理員使用資源後援處理序，來控制應用程式如何擷取文化特性專屬資源。 如需詳細資訊，請參閱 [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md)中的＜Resource Fallback Process＞一節。 如需具現化 <xref:System.Resources.ResourceManager> 物件的資訊，請參閱 <xref:System.Resources.ResourceManager> 類別主題中的＜Instantiating a ResourceManager Object＞(具現化 ResourceManager 物件) 一節。  
+ 資源管理員使用資源後援處理序，來控制應用程式如何擷取文化特性專屬資源。 如需詳細資訊，請參閱[封裝和部署資源](packaging-and-deploying-resources-in-desktop-apps.md)中的＜資源後援處理序＞一節。 如需具現化 <xref:System.Resources.ResourceManager> 物件的資訊，請參閱 <xref:System.Resources.ResourceManager> 類別主題中的＜Instantiating a ResourceManager Object＞(具現化 ResourceManager 物件) 一節。  
   
 ### <a name="retrieving-string-data-an-example"></a>擷取字串資料︰範例  
  下列範例會呼叫 <xref:System.Resources.ResourceManager.GetString%28System.String%29> 方法來擷取目前 UI 文化特性的字串資源。 其中包含英文 (美國) 文化特性的中性字串資源，以及法文 (法國) 和俄文 (俄羅斯) 文化特性的當地語系化資源。 下列英文 (美國) 資源是在名為 Strings.txt 的檔案中：  
@@ -158,7 +158,7 @@ GetObject.exe
  建立資源並放在適當目錄之後，您可以呼叫 <xref:System.Resources.ResourceManager> 方法，建立 <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> 物件來使用資源。 第一個參數指定應用程式預設 .resources 檔的根目錄名稱 (這會是上一節範例中的 "strings")。 第二個參數指定資源的位置 (上一個範例中的 "Resources")。 第三個參數指定要使用的 <xref:System.Resources.ResourceSet> 實作。 如果第三個參數是 `null`，則會使用預設執行階段 <xref:System.Resources.ResourceSet> 。  
   
 > [!NOTE]
-> 請勿使用獨立 .resources 檔部署 ASP.NET 應用程式。 這會造成鎖定問題並中斷 XCOPY 部署。 建議您部署附屬組件中的 ASP.NET 資源。 如需詳細資訊，請參閱 [ASP.NET Web Page Resources Overview](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100))。  
+> 請勿使用獨立 .resources 檔部署 ASP.NET 應用程式。 這會造成鎖定問題並中斷 XCOPY 部署。 建議您部署附屬組件中的 ASP.NET 資源。 如需詳細資訊，請參閱 [ASP.NET 網頁資源概觀](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100))。  
   
  具現化 <xref:System.Resources.ResourceManager> 物件之後，您可以使用稍早所述的 <xref:System.Resources.ResourceManager.GetString%2A>、 <xref:System.Resources.ResourceManager.GetObject%2A>和 <xref:System.Resources.ResourceManager.GetStream%2A> 方法來擷取資源。 不過，直接從 .resources 檔擷取資源，與從組件擷取內嵌資源不同。 當您從 .resources 檔擷取資源時， <xref:System.Resources.ResourceManager.GetString%28System.String%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法一律會擷取預設文化特性的資源，而不論目前的文化特性為何。 若要擷取應用程式之目前文化特性或特定文化特性的資源，您必須呼叫 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>或 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法，並指定所要擷取之資源的文化特性。 若要擷取目前文化特性的資源，請將 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 屬性的值指定為 `culture` 引數。 如果資源管理員無法擷取 `culture` 的資源，則會使用標準資源後援規則來擷取適當的資源。  
   
@@ -200,7 +200,7 @@ Resgen Strings.ru-RU.txt Resources\Strings.ru-RU.resources
 csc Example.cs  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Resources.ResourceManager>
 - [桌面應用程式中的資源](index.md)

@@ -22,7 +22,7 @@ ms.locfileid: "74329544"
 
  此表列出與 `My.Computer.Keyboard` 物件建立關聯的工作，並指向示範各項工作執行方法的主題。  
   
-|若要|請參閱|  
+|進行|請參閱|  
 |--------|---------|  
 |判斷 CAPS LOCK 是否開啟|<xref:Microsoft.VisualBasic.Devices.Keyboard.CapsLock%2A>|  
 |判斷 SHIFT 鍵是否關閉|<xref:Microsoft.VisualBasic.Devices.Keyboard.ShiftKeyDown%2A>|  
@@ -32,7 +32,7 @@ ms.locfileid: "74329544"
 |判斷 SCROLL LOCK 是否開啟|<xref:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock%2A>|  
 |啟動應用程式並且將按鍵輸入傳送至該應用程式|[如何：啟動應用程式並且將按鍵輸入傳送至該應用程式 (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.Devices.Keyboard>
 - <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>

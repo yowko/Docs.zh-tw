@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431230"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError 方法
-Provides notification of errors that occur during the metadata merge.  
+提供中繼資料合併期間發生之錯誤的通知。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,20 +36,20 @@ HRESULT OnError (
   
 ## <a name="parameters"></a>參數  
  `hrError`  
- [in] The HRESULT error value returned to the calling method.  
+ 在傳回給呼叫方法的 HRESULT 錯誤值。  
   
  `token`  
- [in] The metadata token of the code object that was being merged when the error occurred.  
+ 在發生錯誤時，所合併之程式碼物件的元資料標記。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataError 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)

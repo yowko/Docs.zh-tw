@@ -83,7 +83,7 @@ ms.locfileid: "74281824"
 | [.NET Core 文件](../../core/index.md) | 提供適用於 .NET Core 的概念性及 API 參考文件。 |
 | [.NET Standard](../../standard/net-standard.md) | 討論 .NET Standard，這是個別 .NET 實作支援的版本化規格，以保證在多個平台上都能使用一組一致的 API。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 指南](../index.md)
 - [新功能](../whats-new/index.md)

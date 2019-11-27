@@ -16,7 +16,7 @@ ms.locfileid: "74349256"
 
 本章節內容涵蓋 Visual Basic 語言的概念文件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
  [Visual Basic 中的程式設計](../../visual-basic/developing-apps/programming/index.md)  
  內容涵蓋多種程式設計物件。  

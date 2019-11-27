@@ -10,7 +10,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350988"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>處理全域命名空間 (Visual Basic) (LINQ to XML)
-One of the key features of XML literals in Visual Basic is the capability to declare XML namespaces by using the `Imports` statement. 利用這個功能，您可以宣告使用前置詞的 XML 命名空間，或者，您可以宣告預設的 XML 命名空間。  
+Visual Basic 中 XML 常值的其中一個重要功能，就是使用 `Imports` 語句來宣告 XML 命名空間的功能。 利用這個功能，您可以宣告使用前置詞的 XML 命名空間，或者，您可以宣告預設的 XML 命名空間。  
   
  這項功能在兩種情況下很有用。 第一，在 XML 常值中宣告的命名空間不會延續到內嵌的運算式中。 宣告全域命名空間會減少您必須做的工作量，以便搭配命名空間使用內嵌的運算式。 第二，您必須宣告全域命名空間，才能搭配 XML 使用命名空間。  
   
@@ -197,6 +197,6 @@ End Module
 http://www.adventure-works.com  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [命名空間總覽（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)

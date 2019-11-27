@@ -1,5 +1,5 @@
 ---
-title: Value types table - C# reference
+title: 實數值型別資料表C# -參考
 ms.custom: seodec18
 ms.date: 11/06/2019
 helpviewer_keywords:
@@ -13,13 +13,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428472"
 ---
-# <a name="value-types-table-c-reference"></a>Value types table (C# reference)
+# <a name="value-types-table-c-reference"></a>實數值型別資料表C# （參考）
 
 下表顯示 C# 實值型別：
 
-|值類型|Category|
+|值類型|分類|
 |----------------|--------------|
-|[bool](bool.md)|Boolean|
+|[bool](bool.md)|布林值|
 |`byte`|不帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)|
 |[char](../builtin-types/char.md)|不帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)|
 |`decimal`|數值、[浮點數](../builtin-types/floating-point-numeric-types.md)|
@@ -35,7 +35,7 @@ ms.locfileid: "74428472"
 |`ulong`|不帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)|
 |`ushort`|不帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [預設值表](default-values-table.md)

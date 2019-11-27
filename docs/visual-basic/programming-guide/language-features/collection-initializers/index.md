@@ -19,7 +19,7 @@ ms.locfileid: "74346787"
 
 如需集合的詳細資訊，請參閱[集合](../../../../visual-basic/programming-guide/concepts/collections.md)。
 
-您可以使用後面接著大括弧 (`{}`) 的 `From` 關鍵字，來識別集合初始設定式。 這類似[陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)中所述的陣列常值語法。 下列範例顯示使用集合初始設定式建立集合的各種方式。
+您可以使用後面接著大括弧 (`From`) 的 `{}` 關鍵字，來識別集合初始設定式。 這類似[陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)中所述的陣列常值語法。 下列範例顯示使用集合初始設定式建立集合的各種方式。
 
 [!code-vb[VbVbalrCollectionInitializers#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#1)]
 
@@ -39,7 +39,7 @@ ms.locfileid: "74346787"
 > [!NOTE]
 > 您無法合併使用集合初始設定式與物件初始設定式來初始化相同的集合物件。 您可以使用物件初始設定式來初始化集合初始設定式中的物件。
 
-## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Creating a Collection by Using a Collection Initializer
+## <a name="creating-a-collection-by-using-a-collection-initializer"></a>使用集合初始化運算式建立集合
 
 當您使用集合初始設定式建立集合時，集合初始設定式中所提供的每個值都會傳遞給集合的適當 `Add` 方法。 例如，如果您使用集合初始設定式建立 <xref:System.Collections.Generic.List%601>，則會將集合初始設定式中的每個字串值傳遞給 <xref:System.Collections.Generic.List%601.Add%2A> 方法。 如果您想要使用集合初始設定式建立集合，則指定的類型必須是有效的集合類型。 有效集合類型的範例包括可實作 <xref:System.Collections.Generic.IEnumerable%601> 介面或繼承 <xref:System.Collections.CollectionBase> 類別的類別。 指定的類型也必須公開符合下列準則的 `Add` 方法。
 
@@ -63,7 +63,7 @@ ms.locfileid: "74346787"
 
 您可以將值巢狀在集合初始設定式內，以識別所建立集合之 `Add` 方法的特定多載。 傳遞給 `Add` 方法的值必須以逗號區隔，並用大括弧 (`{}`) 括住，就像在陣列常值或集合初始設定式中一樣。
 
-當您使用巢狀值來建立集合時，巢狀值清單的每個項目都會傳遞為符合項目類型之 `Add` 方法的引數。 例如，下列程式碼範例會建立 <xref:System.Collections.Generic.Dictionary%602>其中，索引鍵的類型為 `Integer`，而值的類型為 `String`。 每個巢狀值清單都會對應到 `Dictionary` 的 <xref:System.Collections.Generic.Dictionary%602.Add%2A> 方法。
+當您使用巢狀值來建立集合時，巢狀值清單的每個項目都會傳遞為符合項目類型之 `Add` 方法的引數。 例如，下列程式碼範例會建立 <xref:System.Collections.Generic.Dictionary%602>其中，索引鍵的類型為 `Integer`，而值的類型為 `String`。 每個巢狀值清單都會對應到 <xref:System.Collections.Generic.Dictionary%602.Add%2A> 的 `Dictionary` 方法。
 
 [!code-vb[VbVbalrCollectionInitializers#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#5)]
 
@@ -80,7 +80,7 @@ ms.locfileid: "74346787"
 |[如何：建立集合初始設定式所使用的 Add 擴充方法](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|示範如何建立稱為 `Add` 的擴充方法，以用來將集合初始設定式中的值填入集合。|
 |[如何：建立集合初始設定式所使用的集合](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|示範如何將 `Add` 方法包括在可實作 `IEnumerable` 的集合類別中，以啟用集合初始設定式。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [集合](../../../../visual-basic/programming-guide/concepts/collections.md)
 - [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

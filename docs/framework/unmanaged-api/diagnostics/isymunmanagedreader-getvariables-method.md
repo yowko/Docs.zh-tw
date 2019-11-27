@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429753"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>ISymUnmanagedReader::GetVariables 方法
-Returns a non-local variable, given its parent and name.  
+傳回非區域變數，並指定其父系和名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,23 +38,23 @@ HRESULT GetVariables (
   
 ## <a name="parameters"></a>參數  
  `parent`  
- [in] The parent of the variable.  
+ 在變數的父系。  
   
  `cVars`  
  [in] `pVars` 陣列的大小。  
   
  `pcVars`  
- [out] A pointer to the variable that receives the number of variables returned in `pVars`.  
+ 脫銷變數的指標，可接收 `pVars`中傳回的變數數目。  
   
  `pVars`  
- [out] A pointer to the variable that receives the variables.  
+ 脫銷接收變數之變數的指標。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

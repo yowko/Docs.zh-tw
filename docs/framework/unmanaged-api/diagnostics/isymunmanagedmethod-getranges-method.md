@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448934"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges 方法
-Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method. The array is an array of integers and has the format [start, end, start, end]. The number of range pairs is the length of the array divided by 2.  
+指定檔中的位置時，會傳回開始和結束位移組的陣列，其對應于此方法內的位置所涵蓋的 Microsoft 中繼語言（MSIL）範圍。 陣列是整數的陣列，其格式為 [開始]、[結束]、[開始]、[結束]。 範圍配對的數目是陣列的長度除以2。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,29 +40,29 @@ HRESULT GetRanges(
   
 ## <a name="parameters"></a>參數  
  `document`  
- [in] The document for which the offset is requested.  
+ 在要求位移的檔。  
   
  `line`  
- [in] The document line corresponding to the ranges.  
+ 在對應到範圍的檔行。  
   
  `column`  
- [in] The document column corresponding to the ranges.  
+ 在對應到範圍的檔資料行。  
   
  `cRanges`  
  [in] `ranges` 陣列的大小。  
   
  `pcRanges`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.  
+ 脫銷`ULONG32` 的指標，接收包含範圍所需的緩衝區大小。  
   
  `ranges`  
- [out] A pointer to the buffer that receives the ranges.  
+ 脫銷接收範圍之緩衝區的指標。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

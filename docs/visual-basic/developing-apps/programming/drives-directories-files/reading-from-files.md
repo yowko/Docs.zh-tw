@@ -19,7 +19,7 @@ ms.locfileid: "74333815"
 
 本節說明如何執行與讀取檔案建立關聯的工作。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
  [如何：從文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
  示範如何從文字檔讀取。  
@@ -39,7 +39,7 @@ ms.locfileid: "74333815"
  [如何：以 StreamReader 從檔案讀取文字](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
  示範如何使用 <xref:System.IO.StreamReader> 以從檔案讀取。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  描述 `My.Computer.FileSystem` 物件和其成員。  

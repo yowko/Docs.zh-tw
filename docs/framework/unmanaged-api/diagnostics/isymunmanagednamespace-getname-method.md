@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433970"
 ---
 # <a name="isymunmanagednamespacegetname-method"></a>ISymUnmanagedNamespace::GetName 方法
-Gets the name of this namespace.  
+取得這個命名空間的名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,20 +37,20 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>參數  
  `cchName`  
- [in] A `ULONG32` that indicates the size of the `szName` buffer.  
+ 在指出 `szName` 緩衝區大小的 `ULONG32`。  
   
  `pcchName`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespace name, including the null termination.  
+ 脫銷`ULONG32` 的指標，接收包含命名空間名稱所需的緩衝區大小（以字元為單位），包括 null 終止。  
   
  `szName`  
- [out] A pointer to a buffer that contains the namespace name.  
+ 脫銷包含命名空間名稱之緩衝區的指標。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **Header:** CorSym.idl, CorSym.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedNamespace 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

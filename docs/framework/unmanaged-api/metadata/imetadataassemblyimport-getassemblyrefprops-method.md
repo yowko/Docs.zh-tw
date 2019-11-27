@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448233"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps 方法
-Gets the set of properties for the assembly reference with the specified metadata signature.  
+取得具有指定的中繼資料簽章之元件參考的屬性集。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,47 +44,47 @@ HRESULT GetAssemblyRefProps (
   
 ## <a name="parameters"></a>參數  
  `mdar`  
- [in] The `mdAssemblyRef` metadata token that represents the assembly reference for which to get the properties.  
+ 在`mdAssemblyRef` 元資料標記，代表要取得其屬性的元件參考。  
   
  `ppbPublicKeyOrToken`  
- [out] A pointer to the public key or the metadata token.  
+ 脫銷公用金鑰或元資料標記的指標。  
   
  `pcbPublicKeyOrToken`  
- [out] The number of bytes in the returned public key or token.  
+ 脫銷傳回的公開金鑰或 token 中的位元組數目。  
   
  `szName`  
- [out] The simple name of the assembly.  
+ 脫銷元件的簡單名稱。  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ 在`szName`的大小（以寬字元為單位）。  
   
  `pchName`  
- [out] A pointer to the number of wide chars actually returned in `szName`.  
+ 脫銷`szName`中實際傳回的寬字元數指標。  
   
  `pMetaData`  
- [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
+ 脫銷包含元件中繼資料之 ASSEMBLYMETADATA 結構的指標。  
   
  `ppbHashValue`  
- [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the `PublicKey` property of the assembly being referenced, unless the arfFullOriginator flag of the [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeration is set.  
+ 脫銷雜湊值的指標。 這是要參考之元件的 `PublicKey` 屬性的雜湊（使用 SHA-1 演算法），除非已設定[AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)列舉的 arfFullOriginator 旗標。  
   
  `pcbHashValue`  
- [out] The number of wide chars in the returned hash value.  
+ 脫銷傳回的雜湊值中的寬字元數。  
   
  `pdwAssemblyRefFlags`  
- [out] A pointer to flags that describe the metadata applied to an assembly. The flags value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
+ 脫銷旗標的指標，描述套用至元件的中繼資料。 旗標值是一個或多個[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)值的組合。  
   
 ## <a name="return-value"></a>傳回值  
- This method returns S_OK if it succeeds; otherwise, it returns one of the error codes defined in the Winerror.h header file.  
+ 如果成功，這個方法會傳回 S_OK;否則，它會傳回 Winerror.h 標頭檔中所定義的其中一個錯誤碼。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

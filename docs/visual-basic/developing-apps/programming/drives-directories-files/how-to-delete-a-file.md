@@ -16,7 +16,7 @@ ms.locfileid: "74348786"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>如何：在 Visual Basic 中刪除檔案
 
-`My.Computer.FileSystem` 物件的 `DeleteFile` 方法可讓您刪除檔案。 提供的選項包括︰是否要將已刪除的檔案傳送至 [資源回收筒]、是否要求使用者確認應該刪除檔案，以及使用者取消該作業時該怎麼辦。  
+`DeleteFile` 物件的 `My.Computer.FileSystem` 方法可讓您刪除檔案。 提供的選項包括︰是否要將已刪除的檔案傳送至 [資源回收筒]、是否要求使用者確認應該刪除檔案，以及使用者取消該作業時該怎麼辦。  
   
 ### <a name="to-delete-a-text-file"></a>刪除文字檔  
   
@@ -32,11 +32,11 @@ ms.locfileid: "74348786"
   
 ### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a>刪除文字檔並將它傳送至資源回收筒  
   
-- 使用 `DeleteFile` 方法來刪除檔案，並指定 `recycle` 參數的 `SendToRecycleBin`。 下列程式碼示範如何刪除名為 `test.txt` 的檔案，並將它傳送至 [資源回收筒]。  
+- 使用 `DeleteFile` 方法來刪除檔案，並指定 `SendToRecycleBin` 參數的 `recycle`。 下列程式碼示範如何刪除名為 `test.txt` 的檔案，並將它傳送至 [資源回收筒]。  
   
      [!code-vb[VbFileIOMisc#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#10)]  
   
-## <a name="robust-programming"></a>穩固程式設計  
+## <a name="robust-programming"></a>最佳化程式設計  
 
  以下條件可能會造成例外狀況：  
   
@@ -60,7 +60,7 @@ ms.locfileid: "74348786"
   
 - 使用者已取消作業，而且 `onUserCancel` 設定為 `ThrowException` (<xref:System.OperationCanceledException>)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

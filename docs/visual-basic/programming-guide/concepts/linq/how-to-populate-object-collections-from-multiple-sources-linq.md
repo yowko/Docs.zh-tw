@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346971"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>如何：從多個來源填入物件集合（LINQ）（Visual Basic）
 
 此範例示範如何將不同來源的資料合併成新的類型。
 
@@ -18,7 +18,7 @@ ms.locfileid: "74346971"
 
 ## <a name="to-create-the-data-file"></a>建立資料檔
 
-- Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+- 如[如何：從不同的檔案聯結內容（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)中所述，將名稱 .csv 和分數 .csv 檔案複製到您的專案資料夾中。
 
 ## <a name="example"></a>範例
 
@@ -100,7 +100,7 @@ End Class
 ' The average score of Michael Tucker is 92
 ```
 
-In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.
+在[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)子句中，物件初始化運算式是用來具現化每個新的 `Student` 物件，方法是使用兩個來源中的資料。
 
 如果您不需要儲存查詢的結果，則匿名型別會比具名類型更方便使用。 如果要在執行查詢的方法外傳遞查詢結果，則必須使用具名類型。 下列範例會執行與上述範例相同的工作，但使用匿名型別而不是具名類型：
 
@@ -128,6 +128,6 @@ For Each s In queryNamesScores2
 Next
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 和字串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

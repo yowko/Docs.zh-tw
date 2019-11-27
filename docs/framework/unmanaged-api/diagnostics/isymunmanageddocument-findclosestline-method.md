@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449210"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>ISymUnmanagedDocument::FindClosestLine 方法
-Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.  
+如果本檔中的行不一定是序列點，則傳回最接近序列點的行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,14 +35,14 @@ HRESULT FindClosestLine(
   
 ## <a name="parameters"></a>參數  
  `line`  
- [in] A line in this document.  
+ 在本檔中的一行。  
   
  `pRetVal`  
- [out] A pointer to a variable that receives the line.  
+ 脫銷接收該行之變數的指標。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK if the method succeeds; otherwise, an error code.  
+ 如果方法成功，則 S_OK;否則，錯誤碼為。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

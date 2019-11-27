@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448590"
 ---
 # <a name="call_id-structure"></a>CALL_ID 結構
-Provides information to a debugger about a function that is being called. See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.  
+提供有關所呼叫函式之偵錯工具的資訊。 如需詳細資訊，請參閱[INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)介面。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,17 +42,17 @@ typedef struct tagCALL_ID
   
 |成員|描述|  
 |------------|-----------------|  
-|`szMachine`|Identifies the machine that is making the call.|  
-|`dwPid`|Identifies the machine processor.|  
-|`pUserThread`|Identifies the thread that is executing the call.|  
-|`addrStackPointer`|Specifies the address of the call stack.|  
-|`szEntryPoint`|Specifies the address of the call.|  
-|`szDestinationMachine`|Identifies the machine that will execute the call.|  
+|`szMachine`|識別正在進行呼叫的電腦。|  
+|`dwPid`|識別機器處理器。|  
+|`pUserThread`|識別正在執行呼叫的執行緒。|  
+|`addrStackPointer`|指定呼叫堆疊的位址。|  
+|`szEntryPoint`|指定呼叫的位址。|  
+|`szDestinationMachine`|識別將執行呼叫的電腦。|  
   
 ## <a name="requirements"></a>需求  
- **Header:** ProtocolNotify2.idl  
+ **標頭：** ProtocolNotify2 .idl  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [INotifySink2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [診斷符號存放區結構](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431482"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap 方法
-Sets features of the PInvoke signature of the method referenced by the specified token.  
+設定指定之標記所參考之方法的 PInvoke 簽章功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,27 +38,27 @@ HRESULT DefinePinvokeMap (
   
 ## <a name="parameters"></a>參數  
  `tk`  
- [in] The token for the target method.  
+ 在目標方法的 token。  
   
  `dwMappingFlags`  
- [in] Flags used by PInvoke to do the mapping.  
+ 在PInvoke 用來執行對應的旗標。  
   
  `szImportName`  
- [in] The name of the target export method in an unmanaged DLL.  
+ 在非受控 DLL 中的目標匯出方法名稱。  
   
  `mrImportDLL`  
- [in] The token for the target native DLL.  
+ 在目標原生 DLL 的 token。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

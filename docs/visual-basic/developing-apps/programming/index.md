@@ -1,5 +1,5 @@
 ---
-title: Programming
+title: 編制
 ms.date: 07/20/2015
 helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
@@ -33,13 +33,13 @@ ms.locfileid: "74352112"
  [存取應用程式 Web 服務](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  包含的文件說明如何使用 `My.WebServices` 物件來存取應用程式所參考的 Web 服務。  
   
- [存取應用程式設定](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
+ [Accessing Application Settings](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  包含的文件說明如何使用 `My.Settings` 物件來存取應用程式的設定。  
   
  [處理磁碟機、目錄和檔案](drives-directories-files/index.md)  
  包含的文件說明如何使用 `My.Computer.FileSystem` 物件來存取檔案系統。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 語言功能](../../../visual-basic/programming-guide/language-features/index.md)
 - [程式設計概念](../../../visual-basic/programming-guide/concepts/index.md)

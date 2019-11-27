@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450381"
 ---
 # <a name="icorprofilerinfogetcurrentthreadid-method"></a>ICorProfilerInfo::GetCurrentThreadID 方法
-Gets the ID of the current thread, if it is a managed thread.  
+取得目前線程的識別碼（如果它是 managed 執行緒）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,10 +34,10 @@ HRESULT GetCurrentThreadID(
   
 ## <a name="parameters"></a>參數  
  `pThreadId`  
- [out] A pointer to the returned ID of the managed thread.  
+ 脫銷Managed 執行緒之傳回識別碼的指標。  
   
 ## <a name="remarks"></a>備註  
- If the current thread is an internal runtime thread or other unmanaged thread, `GetCurrentThreadID` returns CORPROF_E_NOT_MANAGED_THREAD as the HRESULT, and the returned value of the `pThreadId` parameter will be null.  
+ 如果目前的執行緒是內部運行時間表程或其他非受控執行緒，`GetCurrentThreadID` 會傳回 CORPROF_E_NOT_MANAGED_THREAD 做為 HRESULT，而 `pThreadId` 參數的傳回值將會是 null。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -48,6 +48,6 @@ HRESULT GetCurrentThreadID(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

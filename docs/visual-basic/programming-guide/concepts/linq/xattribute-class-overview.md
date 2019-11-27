@@ -9,10 +9,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349332"
 ---
-# <a name="xattribute-class-overview-visual-basic"></a>XAttribute Class Overview (Visual Basic)
+# <a name="xattribute-class-overview-visual-basic"></a>System.xml.linq.xattribute> 類別總覽（Visual Basic）
 屬性是與項目相關聯的成對名稱/值。 <xref:System.Xml.Linq.XAttribute> 類別表示 XML 屬性。  
   
-## <a name="overview"></a>總覽  
+## <a name="overview"></a>概觀  
  在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中使用屬性的方式類似於使用項目。 其建構函式類似。 您用來擷取其集合的方法也類似。 屬性集合的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式看起來非常類似項目集合的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式。  
   
  系統會保留將屬性加入到項目的順序。 也就是說，當您逐一查看屬性時，您會看到加入這些屬性的相同順序。  
@@ -25,7 +25,7 @@ ms.locfileid: "74349332"
 |`XAttribute(XName name, object content)`|建立 <xref:System.Xml.Linq.XAttribute> 物件。 `name` 引數會指定屬性的名稱；`content` 會指定屬性的內容。|  
   
 ### <a name="creating-an-element-with-an-attribute"></a>建立具有屬性的項目  
- The following code shows an element that contains an attribute using XML literals in Visual Basic:  
+ 下列程式碼顯示一個專案，其中包含在 Visual Basic 中使用 XML 常值的屬性：  
   
 ```vb  
 Dim phone As XElement = <Phone Type="Home">555-555-5555</Phone>  
@@ -74,6 +74,6 @@ Console.WriteLine(c)
   
  這個區別只有對於撰寫可在節點層級使用 XML 樹狀結構之程式碼的開發人員特別重要。 這個區別與許多開發人員都無關。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML 程式設計總覽（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

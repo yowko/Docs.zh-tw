@@ -39,17 +39,17 @@ typedef enum CorLocalRefPreservation
   
 |成員|描述|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|Preserve no local references.|  
-|`MDPreserveLocalTypeRef`|Preserve local type references.|  
-|`MDPreserveLocalMemberRef`|Preserve local member references.|  
+|`MDPreserveLocalRefsNone`|不保留本機參考。|  
+|`MDPreserveLocalTypeRef`|保留區欄位型別參考。|  
+|`MDPreserveLocalMemberRef`|保留區域成員參考。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorHdr.h  
+ **標頭：** Corhdr.h。h  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

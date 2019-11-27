@@ -19,6 +19,6 @@ ms.locfileid: "74428201"
   
  在 PeerToPeer 應用程式之間傳遞的訊息仍然是透過基礎架構進行處理，例如 PeerChannel 和 WCF [大型資料與資料流](../wcf/feature-details/large-data-and-streaming.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.PeerToPeer>

@@ -23,17 +23,17 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 > - 在 Visual Studio for Mac 中，從功能表選取 [說明] > [回報問題]，或從歡迎畫面選取 [回報問題]，這會開啟用來提出錯誤報告的視窗。 您可在[開發人員社群](https://developercommunity.visualstudio.com/spaces/41/index.html)入口網站追蹤您的意見反應。
 > - 若要提出建議，請從功能表選取 [說明] > [提供建議]，或從歡迎畫面選取 [提供建議]，這會帶您前往 [Visual Studio for Mac 開發人員社群網頁](https://developercommunity.visualstudio.com/content/idea/post.html?space=41) \(英文\)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-- OpenSSL (if running .NET Core 1.1): See the [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-macos) topic.
+- OpenSSL （如果執行 .NET Core 1.1）：請參閱[.Net core 相依性和需求](../install/dependencies.md?tabs=netcore30&pivots=os-macos)主題。
 - [.NET Core SDK 1.1 或更新版本](https://dotnet.microsoft.com/download)
 - [Visual Studio 2017 for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
-For more information on prerequisites, see the [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-macos). 如需 Visual Studio 2017 for Mac 的完整系統需求，請參閱 [Visual Studio 2017 for Mac 產品系列系統需求](/visualstudio/productinfo/vs2017-system-requirements-mac)。
+如需必要條件的詳細資訊，請參閱[.Net Core 相依性和需求](../install/dependencies.md?tabs=netcore30&pivots=os-macos)。 如需 Visual Studio 2017 for Mac 的完整系統需求，請參閱 [Visual Studio 2017 for Mac 產品系列系統需求](/visualstudio/productinfo/vs2017-system-requirements-mac)。
 
 ## <a name="building-a-library"></a>建置程式庫
 
-1. 選取歡迎畫面上的 [新增專案]。 在 [新增專案] 對話方塊中的 [.NET Core] 節點下，選取 [.NET Standard 程式庫] 範本。 這樣會建立 .NET Standard 程式庫，它會以 .NET Core 和支援 [.NET Standard](../../standard/net-standard.md) 2.0 版的任何其他 .NET 實作為目標。 選取 [下一步]。
+1. 選取歡迎畫面上的 [新增專案]。 在 [新增專案] 對話方塊中的 [.NET Core] 節點下，選取 [.NET Standard 程式庫] 範本。 這樣會建立 .NET Standard 程式庫，它會以 .NET Core 和支援 [.NET Standard](../../standard/net-standard.md) 2.0 版的任何其他 .NET 實作為目標。 選取 **[下一步]** 。
 
    ![Visual Studio for Mac [新增專案] 對話方塊](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project.png)
 
@@ -75,7 +75,7 @@ For more information on prerequisites, see the [.NET Core dependencies and requi
 
 1. 為了讓測試程式庫能搭配 `WordCount` 類別使用，請將參考加入 `TextUtils` 專案。 在 [解決方案] 提要欄位中，以滑鼠右鍵按一下 [TestLibrary] 底下的 [相依性]。 從操作功能表選取 [編輯參考]。
 
-1. In the **Edit References** dialog, select the **TextUtils** project on the **Projects** tab. Select **OK**.
+1. 在 [**編輯參考**] 對話方塊中，選取 [**專案**] 索引標籤上的 [ **TextUtils** ] 專案。選取 **[確定]** 。
 
    ![Visual Studio Mac [編輯參考] 對話方塊](./media/using-on-mac-vs-full-solution/visual-studio-mac-edit-references.png)
 
@@ -123,9 +123,9 @@ For more information on prerequisites, see the [.NET Core dependencies and requi
 
    ![Visual Studio for Mac 測試失敗顯示畫面](./media/using-on-mac-vs-full-solution/visual-studio-for-mac-unit-test-failure.png)
 
-1. 將 `Assert.NotEqual` 變更為 `Assert.Equal` 來修改 `IgnoreCasing` 測試方法。 使用鍵盤快速鍵 <kbd>&#8984;</kbd>+<kbd>s</kbd>、功能表的 [檔案] > [儲存]，或是以滑鼠右鍵按一下檔案的索引標籤，並從操作功能表選取 [儲存] 來儲存檔案。
+1. 將 `IgnoreCasing` 變更為 `Assert.NotEqual` 來修改 `Assert.Equal` 測試方法。 使用鍵盤快速鍵 <kbd>&#8984;</kbd>+<kbd>s</kbd>、功能表的 [檔案] > [儲存]，或是以滑鼠右鍵按一下檔案的索引標籤，並從操作功能表選取 [儲存] 來儲存檔案。
 
-   藉由將 `inputString` "Jack jack" 傳入 `GetWordCount`，您預期 `searchWord` "Jack" 會傳回兩個實例。 按一下螢幕底部 [單元測試] 面板中的 [執行測試] 按鈕或 [測試結果] 面板中的 [重新執行測試] 按鈕來重新執行測試。 測試就會成功。 字串 "Jack jack" 中有兩個 "Jack" 實例 (忽略大小寫)，且測試判斷提示為 `true`。
+   藉由將 `searchWord` "Jack jack" 傳入 `inputString`，您預期 `GetWordCount` "Jack" 會傳回兩個實例。 按一下螢幕底部 [單元測試] 面板中的 [執行測試] 按鈕或 [測試結果] 面板中的 [重新執行測試] 按鈕來重新執行測試。 測試就會成功。 字串 "Jack jack" 中有兩個 "Jack" 實例 (忽略大小寫)，且測試判斷提示為 `true`。
 
    ![Visual Studio for Mac 測試成功顯示畫面](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-pass.png)
 
@@ -145,19 +145,19 @@ For more information on prerequisites, see the [.NET Core dependencies and requi
    }
    ```
 
-   `CountInstancesCorrectly` 會檢查 `GetWordCount` 方法是否能正確計數。 `InlineData` 提供要檢查的計數、搜尋文字，以及輸入字串。 測試方法會針對每一行資料各執行一次。 請注意，即使您知道資料中的計數是正確的，且值符合 `GetWordCount` 方法所傳回的計數，仍然要再次先使用 `Assert.NotEqual` 來判斷提示出錯誤。 執行刻意讓測試失敗的步驟，起初看起來似乎有點浪費時間，但是先透過讓測試失敗以檢查測試的邏輯，是一項對測試邏輯很重要的檢查。 當您遇到預期會失敗卻成功的測試方法時，代表測試邏輯中有錯誤。 每次當您建立測試方法時，都值得採取此步驟。
+   `CountInstancesCorrectly` 會檢查 `GetWordCount` 方法是否能正確計數。 `InlineData` 提供要檢查的計數、搜尋文字，以及輸入字串。 測試方法會針對每一行資料各執行一次。 請注意，即使您知道資料中的計數是正確的，且值符合 `Assert.NotEqual` 方法所傳回的計數，仍然要再次先使用 `GetWordCount` 來判斷提示出錯誤。 執行刻意讓測試失敗的步驟，起初看起來似乎有點浪費時間，但是先透過讓測試失敗以檢查測試的邏輯，是一項對測試邏輯很重要的檢查。 當您遇到預期會失敗卻成功的測試方法時，代表測試邏輯中有錯誤。 每次當您建立測試方法時，都值得採取此步驟。
 
 1. 儲存檔案，然後再次執行測試。 大小寫的測試會通過，但是三個計數測試會失敗。 這正是您預期會發生的情況。
 
    ![Visual Studio for Mac 預期的測試失敗](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-failure.png)
 
-1. 將 `Assert.NotEqual` 變更為 `Assert.Equal` 來修改 `CountInstancesCorrectly` 測試方法。 儲存檔案。 再次執行測試。 所有測試皆通過。
+1. 將 `CountInstancesCorrectly` 變更為 `Assert.NotEqual` 來修改 `Assert.Equal` 測試方法。 儲存檔案。 再次執行測試。 所有測試皆通過。
 
    ![Visual Studio for Mac 預期的測試成功](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-pass.png)
 
 ## <a name="adding-a-console-app"></a>新增主控台應用程式
 
-1. 在 [解決方案] 提要欄位中，以滑鼠右鍵按一下 `WordCounter` 解決方案。 從 [.NET Core] > [應用程式] 範本中選取範本，來新增 [主控台應用程式] 專案。 選取 [下一步]。 將專案命名為 **WordCounterApp**。 選取 [建立] 以在解決方案中建立專案。
+1. 在 [解決方案] 提要欄位中，以滑鼠右鍵按一下 `WordCounter` 解決方案。 從 [.NET Core] **[應用程式]**  >  範本中選取範本，來新增 [主控台應用程式] 專案。 選取 **[下一步]** 。 將專案命名為 **WordCounterApp**。 選取 [建立] 以在解決方案中建立專案。
 
 1. 在 [解決方案] 提要欄位中，以滑鼠右鍵按一下新的 [WordCounterApp] 專案的 [相依性] 節點。 在 [編輯參考] 對話方塊中，選取 [TextUtils] 並選取 [確定]。
 
@@ -191,6 +191,6 @@ For more information on prerequisites, see the [.NET Core dependencies and requi
 
    ![Visual Studio for Mac 主控台視窗輸出](./media/using-on-mac-vs-full-solution/visual-studio-mac-output.png)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Studio 2017 for Mac 版本資訊](/visualstudio/releasenotes/vs2017-mac-relnotes)

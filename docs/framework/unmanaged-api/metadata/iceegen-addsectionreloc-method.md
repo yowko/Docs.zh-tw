@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436417"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc 方法
-Adds a .reloc instruction to the code base.  
+將 reloc 指令新增至程式碼基底。  
   
- This method is obsolete and should not be used.  
+ 這個方法已過時，不應使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,26 +40,26 @@ HRESULT AddSectionReloc (
   
 ## <a name="parameters"></a>參數  
  `section`  
- [in] The section of in-memory code to which to add a .reloc instruction.  
+ 在要加入 reloc 指令的記憶體內部程式碼區段。  
   
  `offset`  
- [in] The offset of the section.  
+ 在區段的位移。  
   
  `relativeTo`  
- [in] The section to which `offset` refers.  
+ 在`offset` 所參考的區段。  
   
  `relocType`  
- [in] One of the [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) values, indicating the kind of .reloc instruction to add.  
+ 在其中一個[CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md)值，表示要新增的 reloc 指令類型。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** Cor.h  
+ **標頭：** Cor。h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -16,13 +16,13 @@ ms.locfileid: "74353617"
 
 本逐步解說示範如何建立自訂記錄檔接聽程式，並將它設定為接聽 `My.Application.Log` 物件的輸出。
 
-## <a name="getting-started"></a>快速入門
+## <a name="getting-started"></a>使用者入門
 
 記錄檔接聽程式必須繼承自 <xref:System.Diagnostics.TraceListener> 類別。
 
 #### <a name="to-create-the-listener"></a>若要建立接聽程式
 
-- 在應用程式中，建立一個繼承自 <xref:System.Diagnostics.TraceListener>，且命名為 `SimpleListener` 的類別。
+- 在應用程式中，建立一個繼承自 `SimpleListener`，且命名為 <xref:System.Diagnostics.TraceListener> 的類別。
 
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]
 
@@ -43,9 +43,9 @@ ms.locfileid: "74353617"
 
 2. 按一下 [簽署]索引標籤。
 
-3. 選取 [簽署組件] 方塊。
+3. 選取 [簽署組件]方塊。
 
-4. 在 [選擇強式名稱金鑰檔]下拉式清單中，選取 [\<新增…>]。
+4. 在 [選擇強式名稱金鑰檔]下拉式清單中，選取 [**新增…>]。\<**
 
      隨即開啟 [建立強式名稱金鑰]對話方塊。
 
@@ -107,7 +107,7 @@ ms.locfileid: "74353617"
 
      將 `SimpleLogStrongName` 的值變更為接聽程式的強式名稱。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
