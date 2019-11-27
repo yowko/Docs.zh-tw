@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447880"
 ---
-# <a name="imetadataemit2savedeltatostream-method"></a><span data-ttu-id="c22b0-102">IMetaDataEmit2::SaveDeltaToStream 方法</span><span class="sxs-lookup"><span data-stu-id="c22b0-102">IMetaDataEmit2::SaveDeltaToStream Method</span></span>
-<span data-ttu-id="c22b0-103">Saves changes from the current edit-and-continue session to the specified stream.</span><span class="sxs-lookup"><span data-stu-id="c22b0-103">Saves changes from the current edit-and-continue session to the specified stream.</span></span>  
+# <a name="imetadataemit2savedeltatostream-method"></a><span data-ttu-id="81990-102">IMetaDataEmit2::SaveDeltaToStream 方法</span><span class="sxs-lookup"><span data-stu-id="81990-102">IMetaDataEmit2::SaveDeltaToStream Method</span></span>
+<span data-ttu-id="81990-103">將目前的「編輯後繼續」會話的變更儲存至指定的資料流程。</span><span class="sxs-lookup"><span data-stu-id="81990-103">Saves changes from the current edit-and-continue session to the specified stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c22b0-104">語法</span><span class="sxs-lookup"><span data-stu-id="c22b0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="81990-104">語法</span><span class="sxs-lookup"><span data-stu-id="81990-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SaveDeltaToStream (  
@@ -34,23 +34,23 @@ HRESULT SaveDeltaToStream (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c22b0-105">參數</span><span class="sxs-lookup"><span data-stu-id="c22b0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="81990-105">參數</span><span class="sxs-lookup"><span data-stu-id="81990-105">Parameters</span></span>  
  `pIStream`  
- <span data-ttu-id="c22b0-106">[in] An interface pointer to the writable stream to which to save changes.</span><span class="sxs-lookup"><span data-stu-id="c22b0-106">[in] An interface pointer to the writable stream to which to save changes.</span></span>  
+ <span data-ttu-id="81990-106">在要儲存變更之可寫入資料流程的介面指標。</span><span class="sxs-lookup"><span data-stu-id="81990-106">[in] An interface pointer to the writable stream to which to save changes.</span></span>  
   
  `dwSaveFlags`  
- <span data-ttu-id="c22b0-107">[in] 保留。</span><span class="sxs-lookup"><span data-stu-id="c22b0-107">[in] Reserved.</span></span> <span data-ttu-id="c22b0-108">This value must be zero.</span><span class="sxs-lookup"><span data-stu-id="c22b0-108">This value must be zero.</span></span>  
+ <span data-ttu-id="81990-107">[in] 保留。</span><span class="sxs-lookup"><span data-stu-id="81990-107">[in] Reserved.</span></span> <span data-ttu-id="81990-108">這個值必須是零。</span><span class="sxs-lookup"><span data-stu-id="81990-108">This value must be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c22b0-109">需求</span><span class="sxs-lookup"><span data-stu-id="c22b0-109">Requirements</span></span>  
- <span data-ttu-id="c22b0-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c22b0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="81990-109">需求</span><span class="sxs-lookup"><span data-stu-id="81990-109">Requirements</span></span>  
+ <span data-ttu-id="81990-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="81990-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c22b0-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c22b0-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="81990-111">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="81990-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c22b0-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c22b0-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="81990-112">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="81990-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c22b0-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c22b0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="81990-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81990-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c22b0-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="c22b0-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81990-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="81990-114">See also</span></span>
 
-- [<span data-ttu-id="c22b0-115">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="c22b0-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="c22b0-116">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="c22b0-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="81990-115">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="81990-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="81990-116">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="81990-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

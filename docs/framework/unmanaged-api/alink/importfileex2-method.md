@@ -21,10 +21,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445697"
 ---
-# <a name="importfileex2-method"></a><span data-ttu-id="99fb0-102">ImportFileEx2 方法</span><span class="sxs-lookup"><span data-stu-id="99fb0-102">ImportFileEx2 Method</span></span>
-<span data-ttu-id="99fb0-103">Imports assemblies and unbound modules.</span><span class="sxs-lookup"><span data-stu-id="99fb0-103">Imports assemblies and unbound modules.</span></span> <span data-ttu-id="99fb0-104">This method is like [ImportFile Method](importfile-method.md), but works even if the file being imported does not exist on disk.</span><span class="sxs-lookup"><span data-stu-id="99fb0-104">This method is like [ImportFile Method](importfile-method.md), but works even if the file being imported does not exist on disk.</span></span>  
+# <a name="importfileex2-method"></a><span data-ttu-id="70083-102">ImportFileEx2 方法</span><span class="sxs-lookup"><span data-stu-id="70083-102">ImportFileEx2 Method</span></span>
+<span data-ttu-id="70083-103">匯入元件和解除系結模組。</span><span class="sxs-lookup"><span data-stu-id="70083-103">Imports assemblies and unbound modules.</span></span> <span data-ttu-id="70083-104">這個方法就像[ImportFile 方法](importfile-method.md)，但即使匯入的檔案不存在於磁片上，也會運作。</span><span class="sxs-lookup"><span data-stu-id="70083-104">This method is like [ImportFile Method](importfile-method.md), but works even if the file being imported does not exist on disk.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="99fb0-105">語法</span><span class="sxs-lookup"><span data-stu-id="99fb0-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="70083-105">語法</span><span class="sxs-lookup"><span data-stu-id="70083-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ImportFileEx2(  
@@ -39,39 +39,39 @@ HRESULT ImportFileEx2(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="99fb0-106">參數</span><span class="sxs-lookup"><span data-stu-id="99fb0-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="70083-106">參數</span><span class="sxs-lookup"><span data-stu-id="70083-106">Parameters</span></span>  
  `pszFilename`  
- <span data-ttu-id="99fb0-107">Name of file to be imported.</span><span class="sxs-lookup"><span data-stu-id="99fb0-107">Name of file to be imported.</span></span>  
+ <span data-ttu-id="70083-107">要匯入之檔案的名稱。</span><span class="sxs-lookup"><span data-stu-id="70083-107">Name of file to be imported.</span></span>  
   
  `pszTargetName`  
- <span data-ttu-id="99fb0-108">Optional name of target file.</span><span class="sxs-lookup"><span data-stu-id="99fb0-108">Optional name of target file.</span></span>  
+ <span data-ttu-id="70083-108">目的檔案名的選擇性名稱。</span><span class="sxs-lookup"><span data-stu-id="70083-108">Optional name of target file.</span></span>  
   
  `pAssemblyScopeIn`  
- <span data-ttu-id="99fb0-109">Optional import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="99fb0-109">Optional import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.</span></span>  
+ <span data-ttu-id="70083-109">選擇性的匯入範圍[IMetaDataAssemblyImport 介面](../metadata/imetadataassemblyimport-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="70083-109">Optional import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.</span></span>  
   
  `fSmartImport`  
- <span data-ttu-id="99fb0-110">If TRUE, ImportTypes is used, otherwise importing must be performed manually.</span><span class="sxs-lookup"><span data-stu-id="99fb0-110">If TRUE, ImportTypes is used, otherwise importing must be performed manually.</span></span>  
+ <span data-ttu-id="70083-110">若為 TRUE，則會使用 ImportTypes，否則必須手動執行匯入。</span><span class="sxs-lookup"><span data-stu-id="70083-110">If TRUE, ImportTypes is used, otherwise importing must be performed manually.</span></span>  
   
  `dwOpenFlags`  
- <span data-ttu-id="99fb0-111">Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).</span><span class="sxs-lookup"><span data-stu-id="99fb0-111">Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).</span></span>  
+ <span data-ttu-id="70083-111">要傳遞至[OpenScope 方法](../metadata/imetadatadispenser-openscope-method.md)的旗標。</span><span class="sxs-lookup"><span data-stu-id="70083-111">Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).</span></span>  
   
  `pImportToken`  
- <span data-ttu-id="99fb0-112">Receives unique ID for the assembly or file.</span><span class="sxs-lookup"><span data-stu-id="99fb0-112">Receives unique ID for the assembly or file.</span></span>  
+ <span data-ttu-id="70083-112">接收元件或檔案的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="70083-112">Receives unique ID for the assembly or file.</span></span>  
   
  `ppAssemblyScope`  
- <span data-ttu-id="99fb0-113">Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="99fb0-113">Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.</span></span> <span data-ttu-id="99fb0-114">Can be NULL if the file is not an assembly.</span><span class="sxs-lookup"><span data-stu-id="99fb0-114">Can be NULL if the file is not an assembly.</span></span>  
+ <span data-ttu-id="70083-113">接收元件匯入範圍[IMetaDataAssemblyImport 介面](../metadata/imetadataassemblyimport-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="70083-113">Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.</span></span> <span data-ttu-id="70083-114">如果檔案不是元件，則可以是 Null。</span><span class="sxs-lookup"><span data-stu-id="70083-114">Can be NULL if the file is not an assembly.</span></span>  
   
  `pdwCountOfScopes`  
- <span data-ttu-id="99fb0-115">Receives the number of files and/or scopes imported.</span><span class="sxs-lookup"><span data-stu-id="99fb0-115">Receives the number of files and/or scopes imported.</span></span>  
+ <span data-ttu-id="70083-115">接收匯入的檔案和/或範圍數目。</span><span class="sxs-lookup"><span data-stu-id="70083-115">Receives the number of files and/or scopes imported.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="99fb0-116">傳回值</span><span class="sxs-lookup"><span data-stu-id="99fb0-116">Return Value</span></span>  
- <span data-ttu-id="99fb0-117">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="99fb0-117">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="70083-116">傳回值</span><span class="sxs-lookup"><span data-stu-id="70083-116">Return Value</span></span>  
+ <span data-ttu-id="70083-117">如果方法成功，則傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="70083-117">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="99fb0-118">需求</span><span class="sxs-lookup"><span data-stu-id="99fb0-118">Requirements</span></span>  
- <span data-ttu-id="99fb0-119">Requires alink.h.</span><span class="sxs-lookup"><span data-stu-id="99fb0-119">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="70083-118">需求</span><span class="sxs-lookup"><span data-stu-id="70083-118">Requirements</span></span>  
+ <span data-ttu-id="70083-119">需要 alink. h。</span><span class="sxs-lookup"><span data-stu-id="70083-119">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="99fb0-120">請參閱</span><span class="sxs-lookup"><span data-stu-id="99fb0-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="70083-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="70083-120">See also</span></span>
 
-- [<span data-ttu-id="99fb0-121">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="99fb0-121">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="99fb0-122">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="99fb0-122">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="99fb0-123">ALink API</span><span class="sxs-lookup"><span data-stu-id="99fb0-123">ALink API</span></span>](index.md)
+- [<span data-ttu-id="70083-121">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="70083-121">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="70083-122">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="70083-122">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="70083-123">ALink API</span><span class="sxs-lookup"><span data-stu-id="70083-123">ALink API</span></span>](index.md)

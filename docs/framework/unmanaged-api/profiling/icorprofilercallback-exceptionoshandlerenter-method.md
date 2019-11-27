@@ -22,25 +22,25 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444908"
 ---
-# <a name="icorprofilercallbackexceptionoshandlerenter-method"></a><span data-ttu-id="61dee-102">ICorProfilerCallback::ExceptionOSHandlerEnter 方法</span><span class="sxs-lookup"><span data-stu-id="61dee-102">ICorProfilerCallback::ExceptionOSHandlerEnter Method</span></span>
-<span data-ttu-id="61dee-103">未實作。</span><span class="sxs-lookup"><span data-stu-id="61dee-103">Not implemented.</span></span> <span data-ttu-id="61dee-104">A profiler that needs unmanaged exception information must obtain this information through other means.</span><span class="sxs-lookup"><span data-stu-id="61dee-104">A profiler that needs unmanaged exception information must obtain this information through other means.</span></span>  
+# <a name="icorprofilercallbackexceptionoshandlerenter-method"></a><span data-ttu-id="8ae71-102">ICorProfilerCallback::ExceptionOSHandlerEnter 方法</span><span class="sxs-lookup"><span data-stu-id="8ae71-102">ICorProfilerCallback::ExceptionOSHandlerEnter Method</span></span>
+<span data-ttu-id="8ae71-103">未實作。</span><span class="sxs-lookup"><span data-stu-id="8ae71-103">Not implemented.</span></span> <span data-ttu-id="8ae71-104">需要非受控例外狀況資訊的 profiler 必須透過其他方式取得此資訊。</span><span class="sxs-lookup"><span data-stu-id="8ae71-104">A profiler that needs unmanaged exception information must obtain this information through other means.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="61dee-105">語法</span><span class="sxs-lookup"><span data-stu-id="61dee-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8ae71-105">語法</span><span class="sxs-lookup"><span data-stu-id="8ae71-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExceptionOSHandlerEnter(  
     [in] UINT_PTR __unused);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="61dee-106">需求</span><span class="sxs-lookup"><span data-stu-id="61dee-106">Requirements</span></span>  
- <span data-ttu-id="61dee-107">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="61dee-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8ae71-106">需求</span><span class="sxs-lookup"><span data-stu-id="8ae71-106">Requirements</span></span>  
+ <span data-ttu-id="8ae71-107">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8ae71-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="61dee-108">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="61dee-108">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8ae71-108">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8ae71-108">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="61dee-109">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="61dee-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8ae71-109">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8ae71-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="61dee-110">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="61dee-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8ae71-110">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8ae71-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="61dee-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="61dee-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8ae71-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8ae71-111">See also</span></span>
 
-- [<span data-ttu-id="61dee-112">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="61dee-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="8ae71-112">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="8ae71-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

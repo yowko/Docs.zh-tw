@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439110"
 ---
-# <a name="icorprofilerinfogetfunctioninfo-method"></a><span data-ttu-id="887a8-102">ICorProfilerInfo::GetFunctionInfo 方法</span><span class="sxs-lookup"><span data-stu-id="887a8-102">ICorProfilerInfo::GetFunctionInfo Method</span></span>
-<span data-ttu-id="887a8-103">Gets the parent class and metadata token for the specified function.</span><span class="sxs-lookup"><span data-stu-id="887a8-103">Gets the parent class and metadata token for the specified function.</span></span>  
+# <a name="icorprofilerinfogetfunctioninfo-method"></a><span data-ttu-id="088ef-102">ICorProfilerInfo::GetFunctionInfo 方法</span><span class="sxs-lookup"><span data-stu-id="088ef-102">ICorProfilerInfo::GetFunctionInfo Method</span></span>
+<span data-ttu-id="088ef-103">取得所指定函式的父類別和元資料標記。</span><span class="sxs-lookup"><span data-stu-id="088ef-103">Gets the parent class and metadata token for the specified function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="887a8-104">語法</span><span class="sxs-lookup"><span data-stu-id="887a8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="088ef-104">語法</span><span class="sxs-lookup"><span data-stu-id="088ef-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunctionInfo(  
@@ -35,33 +35,33 @@ HRESULT GetFunctionInfo(
     [out] mdToken    *pToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="887a8-105">參數</span><span class="sxs-lookup"><span data-stu-id="887a8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="088ef-105">參數</span><span class="sxs-lookup"><span data-stu-id="088ef-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="887a8-106">[in] The ID of the function for which to get the parent class and metadata token.</span><span class="sxs-lookup"><span data-stu-id="887a8-106">[in] The ID of the function for which to get the parent class and metadata token.</span></span>  
+ <span data-ttu-id="088ef-106">在要取得其父類別和元資料標記的函式識別碼。</span><span class="sxs-lookup"><span data-stu-id="088ef-106">[in] The ID of the function for which to get the parent class and metadata token.</span></span>  
   
  `pClassId`  
- <span data-ttu-id="887a8-107">[out] 函式父類別的指標。</span><span class="sxs-lookup"><span data-stu-id="887a8-107">[out] A pointer to the parent class of the function.</span></span>  
+ <span data-ttu-id="088ef-107">[out] 函式父類別的指標。</span><span class="sxs-lookup"><span data-stu-id="088ef-107">[out] A pointer to the parent class of the function.</span></span>  
   
  `pModuleId`  
- <span data-ttu-id="887a8-108">[out] 定義函式父類別的模組指標。</span><span class="sxs-lookup"><span data-stu-id="887a8-108">[out] A pointer to the module in which the function's parent class is defined.</span></span>  
+ <span data-ttu-id="088ef-108">[out] 定義函式父類別的模組指標。</span><span class="sxs-lookup"><span data-stu-id="088ef-108">[out] A pointer to the module in which the function's parent class is defined.</span></span>  
   
  `pToken`  
- <span data-ttu-id="887a8-109">[out] 此函式中繼資料語彙基元的指標。</span><span class="sxs-lookup"><span data-stu-id="887a8-109">[out] A pointer to the metadata token for the function.</span></span>  
+ <span data-ttu-id="088ef-109">[out] 此函式中繼資料語彙基元的指標。</span><span class="sxs-lookup"><span data-stu-id="088ef-109">[out] A pointer to the metadata token for the function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="887a8-110">備註</span><span class="sxs-lookup"><span data-stu-id="887a8-110">Remarks</span></span>  
- <span data-ttu-id="887a8-111">The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a metadata interface for a given module.</span><span class="sxs-lookup"><span data-stu-id="887a8-111">The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a metadata interface for a given module.</span></span> <span data-ttu-id="887a8-112">然後，傳回至 `pToken` 所參考位置的中繼資料語彙基元可以用來存取此函式的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="887a8-112">The metadata token that is returned to the location referenced by `pToken` can then be used to access the metadata for the function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="088ef-110">備註</span><span class="sxs-lookup"><span data-stu-id="088ef-110">Remarks</span></span>  
+ <span data-ttu-id="088ef-111">分析工具程式碼可以呼叫[ICorProfilerInfo：： GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md)來取得給定模組的中繼資料介面。</span><span class="sxs-lookup"><span data-stu-id="088ef-111">The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a metadata interface for a given module.</span></span> <span data-ttu-id="088ef-112">然後，傳回至 `pToken` 所參考位置的中繼資料語彙基元可以用來存取此函式的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="088ef-112">The metadata token that is returned to the location referenced by `pToken` can then be used to access the metadata for the function.</span></span>  
   
- <span data-ttu-id="887a8-113">The `ClassID` of a function on a generic class might not be obtainable without more contextual information about the use of the function.</span><span class="sxs-lookup"><span data-stu-id="887a8-113">The `ClassID` of a function on a generic class might not be obtainable without more contextual information about the use of the function.</span></span> <span data-ttu-id="887a8-114">In this case, `pClassId` will be 0.</span><span class="sxs-lookup"><span data-stu-id="887a8-114">In this case, `pClassId` will be 0.</span></span> <span data-ttu-id="887a8-115">Profiler code should use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) with a COR_PRF_FRAME_INFO value to provide more context.</span><span class="sxs-lookup"><span data-stu-id="887a8-115">Profiler code should use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) with a COR_PRF_FRAME_INFO value to provide more context.</span></span>  
+ <span data-ttu-id="088ef-113">如需使用函式的詳細資訊，可能無法在泛型類別上取得函數的 `ClassID`。</span><span class="sxs-lookup"><span data-stu-id="088ef-113">The `ClassID` of a function on a generic class might not be obtainable without more contextual information about the use of the function.</span></span> <span data-ttu-id="088ef-114">在此情況下，`pClassId` 將會是0。</span><span class="sxs-lookup"><span data-stu-id="088ef-114">In this case, `pClassId` will be 0.</span></span> <span data-ttu-id="088ef-115">Profiler 程式碼應該使用[ICorProfilerInfo2：： GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)搭配 COR_PRF_FRAME_INFO 值，以提供更多內容。</span><span class="sxs-lookup"><span data-stu-id="088ef-115">Profiler code should use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) with a COR_PRF_FRAME_INFO value to provide more context.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="887a8-116">需求</span><span class="sxs-lookup"><span data-stu-id="887a8-116">Requirements</span></span>  
- <span data-ttu-id="887a8-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="887a8-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="088ef-116">需求</span><span class="sxs-lookup"><span data-stu-id="088ef-116">Requirements</span></span>  
+ <span data-ttu-id="088ef-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="088ef-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="887a8-118">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="887a8-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="088ef-118">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="088ef-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="887a8-119">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="887a8-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="088ef-119">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="088ef-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="887a8-120">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="887a8-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="088ef-120">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="088ef-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="887a8-121">請參閱</span><span class="sxs-lookup"><span data-stu-id="887a8-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="088ef-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="088ef-121">See also</span></span>
 
-- [<span data-ttu-id="887a8-122">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="887a8-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="088ef-122">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="088ef-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

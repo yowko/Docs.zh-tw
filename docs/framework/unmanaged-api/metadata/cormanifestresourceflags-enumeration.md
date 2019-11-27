@@ -21,10 +21,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450254"
 ---
-# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="c0988-102">CorManifestResourceFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="c0988-102">CorManifestResourceFlags Enumeration</span></span>
-<span data-ttu-id="c0988-103">Indicates the visibility of resources encoded in an assembly manifest.</span><span class="sxs-lookup"><span data-stu-id="c0988-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
+# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="01014-102">CorManifestResourceFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="01014-102">CorManifestResourceFlags Enumeration</span></span>
+<span data-ttu-id="01014-103">表示在組件資訊清單中編碼的資源可見度。</span><span class="sxs-lookup"><span data-stu-id="01014-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c0988-104">語法</span><span class="sxs-lookup"><span data-stu-id="c0988-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01014-104">語法</span><span class="sxs-lookup"><span data-stu-id="01014-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorManifestResourceFlags {  
@@ -36,21 +36,21 @@ typedef enum CorManifestResourceFlags {
 } CorManifestResourceFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c0988-105">Members</span><span class="sxs-lookup"><span data-stu-id="c0988-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="01014-105">Members</span><span class="sxs-lookup"><span data-stu-id="01014-105">Members</span></span>  
   
-|<span data-ttu-id="c0988-106">成員</span><span class="sxs-lookup"><span data-stu-id="c0988-106">Member</span></span>|<span data-ttu-id="c0988-107">描述</span><span class="sxs-lookup"><span data-stu-id="c0988-107">Description</span></span>|  
+|<span data-ttu-id="01014-106">成員</span><span class="sxs-lookup"><span data-stu-id="01014-106">Member</span></span>|<span data-ttu-id="01014-107">描述</span><span class="sxs-lookup"><span data-stu-id="01014-107">Description</span></span>|  
 |------------|-----------------|  
-|`mrVisibilityMask`|<span data-ttu-id="c0988-108">保留的。</span><span class="sxs-lookup"><span data-stu-id="c0988-108">Reserved.</span></span>|  
-|`mrPublic`|<span data-ttu-id="c0988-109">The resources are public.</span><span class="sxs-lookup"><span data-stu-id="c0988-109">The resources are public.</span></span>|  
-|`mrPrivate`|<span data-ttu-id="c0988-110">The resources are private.</span><span class="sxs-lookup"><span data-stu-id="c0988-110">The resources are private.</span></span>|  
+|`mrVisibilityMask`|<span data-ttu-id="01014-108">保留。</span><span class="sxs-lookup"><span data-stu-id="01014-108">Reserved.</span></span>|  
+|`mrPublic`|<span data-ttu-id="01014-109">資源是公用的。</span><span class="sxs-lookup"><span data-stu-id="01014-109">The resources are public.</span></span>|  
+|`mrPrivate`|<span data-ttu-id="01014-110">資源是私用的。</span><span class="sxs-lookup"><span data-stu-id="01014-110">The resources are private.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c0988-111">需求</span><span class="sxs-lookup"><span data-stu-id="c0988-111">Requirements</span></span>  
- <span data-ttu-id="c0988-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c0988-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="01014-111">需求</span><span class="sxs-lookup"><span data-stu-id="01014-111">Requirements</span></span>  
+ <span data-ttu-id="01014-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="01014-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c0988-113">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="c0988-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="01014-113">**標頭：** Corhdr.h。h</span><span class="sxs-lookup"><span data-stu-id="01014-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="c0988-114">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c0988-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="01014-114">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01014-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c0988-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="c0988-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="01014-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="01014-115">See also</span></span>
 
-- [<span data-ttu-id="c0988-116">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="c0988-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="01014-116">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="01014-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

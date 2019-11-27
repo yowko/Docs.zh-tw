@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436885"
 ---
-# <a name="imetadataimportgetscopeprops-method"></a><span data-ttu-id="72afb-102">IMetaDataImport::GetScopeProps 方法</span><span class="sxs-lookup"><span data-stu-id="72afb-102">IMetaDataImport::GetScopeProps Method</span></span>
-<span data-ttu-id="72afb-103">取得目前中繼資料範圍內組件或模組的名稱以及選擇性地取得其版本識別項。</span><span class="sxs-lookup"><span data-stu-id="72afb-103">Gets the name and optionally the version identifier of the assembly or module in the current metadata scope.</span></span>  
+# <a name="imetadataimportgetscopeprops-method"></a><span data-ttu-id="e0c08-102">IMetaDataImport::GetScopeProps 方法</span><span class="sxs-lookup"><span data-stu-id="e0c08-102">IMetaDataImport::GetScopeProps Method</span></span>
+<span data-ttu-id="e0c08-103">取得目前中繼資料範圍內組件或模組的名稱以及選擇性地取得其版本識別項。</span><span class="sxs-lookup"><span data-stu-id="e0c08-103">Gets the name and optionally the version identifier of the assembly or module in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="72afb-104">語法</span><span class="sxs-lookup"><span data-stu-id="72afb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e0c08-104">語法</span><span class="sxs-lookup"><span data-stu-id="e0c08-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetScopeProps (  
@@ -36,32 +36,32 @@ HRESULT GetScopeProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="72afb-105">參數</span><span class="sxs-lookup"><span data-stu-id="72afb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e0c08-105">參數</span><span class="sxs-lookup"><span data-stu-id="e0c08-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="72afb-106">[out] A buffer for the assembly or module name.</span><span class="sxs-lookup"><span data-stu-id="72afb-106">[out] A buffer for the assembly or module name.</span></span>  
+ <span data-ttu-id="e0c08-106">脫銷元件或模組名稱的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="e0c08-106">[out] A buffer for the assembly or module name.</span></span>  
   
  `cchName`  
- <span data-ttu-id="72afb-107">[in] The size in wide characters of `szName`.</span><span class="sxs-lookup"><span data-stu-id="72afb-107">[in] The size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="e0c08-107">在`szName`的寬字元大小。</span><span class="sxs-lookup"><span data-stu-id="e0c08-107">[in] The size in wide characters of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="72afb-108">[out] The number of wide characters returned in `szName`.</span><span class="sxs-lookup"><span data-stu-id="72afb-108">[out] The number of wide characters returned in `szName`.</span></span>  
+ <span data-ttu-id="e0c08-108">脫銷`szName`中傳回的寬字元數。</span><span class="sxs-lookup"><span data-stu-id="e0c08-108">[out] The number of wide characters returned in `szName`.</span></span>  
   
  `pmvid`  
- <span data-ttu-id="72afb-109">[out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.</span><span class="sxs-lookup"><span data-stu-id="72afb-109">[out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.</span></span>  
+ <span data-ttu-id="e0c08-109">[out，optional]GUID 的指標，可唯一識別元件或模組的版本。</span><span class="sxs-lookup"><span data-stu-id="e0c08-109">[out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="72afb-110">備註</span><span class="sxs-lookup"><span data-stu-id="72afb-110">Remarks</span></span>  
- <span data-ttu-id="72afb-111">The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.</span><span class="sxs-lookup"><span data-stu-id="72afb-111">The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e0c08-110">備註</span><span class="sxs-lookup"><span data-stu-id="e0c08-110">Remarks</span></span>  
+ <span data-ttu-id="e0c08-111">[IMetaDataEmit：： SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)方法是用來設定這些屬性。</span><span class="sxs-lookup"><span data-stu-id="e0c08-111">The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="72afb-112">需求</span><span class="sxs-lookup"><span data-stu-id="72afb-112">Requirements</span></span>  
- <span data-ttu-id="72afb-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="72afb-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e0c08-112">需求</span><span class="sxs-lookup"><span data-stu-id="e0c08-112">Requirements</span></span>  
+ <span data-ttu-id="e0c08-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e0c08-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="72afb-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="72afb-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e0c08-114">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="e0c08-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="72afb-115">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="72afb-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e0c08-115">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="e0c08-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="72afb-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="72afb-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e0c08-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0c08-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="72afb-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="72afb-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e0c08-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e0c08-117">See also</span></span>
 
-- [<span data-ttu-id="72afb-118">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="72afb-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="72afb-119">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="72afb-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="e0c08-118">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="e0c08-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="e0c08-119">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="e0c08-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448105"
 ---
-# <a name="icorprofilerinfogetclassfromtoken-method"></a><span data-ttu-id="02df5-102">ICorProfilerInfo::GetClassFromToken 方法</span><span class="sxs-lookup"><span data-stu-id="02df5-102">ICorProfilerInfo::GetClassFromToken Method</span></span>
-<span data-ttu-id="02df5-103">Gets the ID of the class, given the metadata token.</span><span class="sxs-lookup"><span data-stu-id="02df5-103">Gets the ID of the class, given the metadata token.</span></span> <span data-ttu-id="02df5-104">This method is obsolete in the .NET Framework version 2.0.</span><span class="sxs-lookup"><span data-stu-id="02df5-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="02df5-105">Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.</span><span class="sxs-lookup"><span data-stu-id="02df5-105">Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.</span></span>  
+# <a name="icorprofilerinfogetclassfromtoken-method"></a><span data-ttu-id="e3ee7-102">ICorProfilerInfo::GetClassFromToken 方法</span><span class="sxs-lookup"><span data-stu-id="e3ee7-102">ICorProfilerInfo::GetClassFromToken Method</span></span>
+<span data-ttu-id="e3ee7-103">取得指定元資料標記之類別的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e3ee7-103">Gets the ID of the class, given the metadata token.</span></span> <span data-ttu-id="e3ee7-104">這個方法在 .NET Framework 版本2.0 中已過時。</span><span class="sxs-lookup"><span data-stu-id="e3ee7-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="e3ee7-105">請改用[ICorProfilerInfo2：： GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) 。</span><span class="sxs-lookup"><span data-stu-id="e3ee7-105">Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="02df5-106">語法</span><span class="sxs-lookup"><span data-stu-id="02df5-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e3ee7-106">語法</span><span class="sxs-lookup"><span data-stu-id="e3ee7-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetClassFromToken(  
@@ -34,28 +34,28 @@ HRESULT GetClassFromToken(
     [out] ClassID   *pClassId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="02df5-107">參數</span><span class="sxs-lookup"><span data-stu-id="02df5-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e3ee7-107">參數</span><span class="sxs-lookup"><span data-stu-id="e3ee7-107">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="02df5-108">[in] The ID of the module that contains the class.</span><span class="sxs-lookup"><span data-stu-id="02df5-108">[in] The ID of the module that contains the class.</span></span>  
+ <span data-ttu-id="e3ee7-108">在包含類別之模組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="e3ee7-108">[in] The ID of the module that contains the class.</span></span>  
   
  `typeDef`  
- <span data-ttu-id="02df5-109">[in] An `mdTypeDef` metadata token that references the class.</span><span class="sxs-lookup"><span data-stu-id="02df5-109">[in] An `mdTypeDef` metadata token that references the class.</span></span>  
+ <span data-ttu-id="e3ee7-109">在參考類別的 `mdTypeDef` 中繼資料 token。</span><span class="sxs-lookup"><span data-stu-id="e3ee7-109">[in] An `mdTypeDef` metadata token that references the class.</span></span>  
   
  `cTypeArgs`  
- <span data-ttu-id="02df5-110">[out] A pointer to the class ID.</span><span class="sxs-lookup"><span data-stu-id="02df5-110">[out] A pointer to the class ID.</span></span>  
+ <span data-ttu-id="e3ee7-110">脫銷類別識別碼的指標。</span><span class="sxs-lookup"><span data-stu-id="e3ee7-110">[out] A pointer to the class ID.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="02df5-111">備註</span><span class="sxs-lookup"><span data-stu-id="02df5-111">Remarks</span></span>  
- <span data-ttu-id="02df5-112">This method is obsolete; instead, use `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` for all types.</span><span class="sxs-lookup"><span data-stu-id="02df5-112">This method is obsolete; instead, use `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` for all types.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e3ee7-111">備註</span><span class="sxs-lookup"><span data-stu-id="e3ee7-111">Remarks</span></span>  
+ <span data-ttu-id="e3ee7-112">這個方法已過時;請改用適用于所有類型的 `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs`。</span><span class="sxs-lookup"><span data-stu-id="e3ee7-112">This method is obsolete; instead, use `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` for all types.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="02df5-113">需求</span><span class="sxs-lookup"><span data-stu-id="02df5-113">Requirements</span></span>  
- <span data-ttu-id="02df5-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="02df5-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e3ee7-113">需求</span><span class="sxs-lookup"><span data-stu-id="e3ee7-113">Requirements</span></span>  
+ <span data-ttu-id="e3ee7-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e3ee7-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="02df5-115">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="02df5-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e3ee7-115">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e3ee7-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="02df5-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="02df5-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e3ee7-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e3ee7-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="02df5-117">**.NET Framework Versions:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="02df5-117">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="e3ee7-117">**.NET Framework 版本：** 1.0、1。1</span><span class="sxs-lookup"><span data-stu-id="e3ee7-117">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="02df5-118">請參閱</span><span class="sxs-lookup"><span data-stu-id="02df5-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e3ee7-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e3ee7-118">See also</span></span>
 
-- [<span data-ttu-id="02df5-119">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="02df5-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="e3ee7-119">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="e3ee7-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
