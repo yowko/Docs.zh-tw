@@ -10,7 +10,7 @@ ms.locfileid: "74378195"
 >
 > - [ASP.NET Core](~/docs/core/compatibility/aspnetcore.md)
 > - [CoreFx](~/docs/core/compatibility/corefx.md)
-> - [密碼編譯](~/docs/core/compatibility/cryptography.md)
+> - [加密](~/docs/core/compatibility/cryptography.md)
 > - [EF Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)
 > - [全球化](~/docs/core/compatibility/globalization.md)
 > - [網路](~/docs/core/compatibility/networking.md)

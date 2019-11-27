@@ -9,13 +9,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347589"
 ---
-# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a><span data-ttu-id="2a08f-102">How to: Retrieve a Collection of Elements (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2a08f-102">How to: Retrieve a Collection of Elements (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="2a08f-103">這個主題會示範 <xref:System.Xml.Linq.XContainer.Elements%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="2a08f-103">This topic demonstrates the <xref:System.Xml.Linq.XContainer.Elements%2A> method.</span></span> <span data-ttu-id="2a08f-104">此方法會擷取項目之子項目的集合。</span><span class="sxs-lookup"><span data-stu-id="2a08f-104">This method retrieves a collection of the child elements of an element.</span></span>  
+# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a><span data-ttu-id="f4e24-102">如何：取出元素的集合（LINQ to XML）（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="f4e24-102">How to: Retrieve a Collection of Elements (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="f4e24-103">這個主題會示範 <xref:System.Xml.Linq.XContainer.Elements%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="f4e24-103">This topic demonstrates the <xref:System.Xml.Linq.XContainer.Elements%2A> method.</span></span> <span data-ttu-id="f4e24-104">此方法會擷取項目之子項目的集合。</span><span class="sxs-lookup"><span data-stu-id="f4e24-104">This method retrieves a collection of the child elements of an element.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2a08f-105">範例</span><span class="sxs-lookup"><span data-stu-id="2a08f-105">Example</span></span>  
- <span data-ttu-id="2a08f-106">此範例會逐一查看 `purchaseOrder` 項目的子項目。</span><span class="sxs-lookup"><span data-stu-id="2a08f-106">This example iterates through the child elements of the `purchaseOrder` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="f4e24-105">範例</span><span class="sxs-lookup"><span data-stu-id="f4e24-105">Example</span></span>  
+ <span data-ttu-id="f4e24-106">此範例會逐一查看 `purchaseOrder` 項目的子項目。</span><span class="sxs-lookup"><span data-stu-id="f4e24-106">This example iterates through the child elements of the `purchaseOrder` element.</span></span>  
   
- <span data-ttu-id="2a08f-107">此範例使用下列 XML 文件︰[範例 XML 檔：典型採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="2a08f-107">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="f4e24-107">此範例使用下列 XML 文件︰[範例 XML 檔：典型採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="f4e24-107">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -28,7 +28,7 @@ For Each el As XElement In childElements
 Next  
 ```  
   
- <span data-ttu-id="2a08f-108">此範例會產生下列輸出。</span><span class="sxs-lookup"><span data-stu-id="2a08f-108">This example produces the following output.</span></span>  
+ <span data-ttu-id="f4e24-108">此範例會產生下列輸出。</span><span class="sxs-lookup"><span data-stu-id="f4e24-108">This example produces the following output.</span></span>  
   
 ```console  
 Name: Address  
@@ -37,6 +37,6 @@ Name: DeliveryNotes
 Name: Items  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2a08f-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="2a08f-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f4e24-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f4e24-109">See also</span></span>
 
-- [<span data-ttu-id="2a08f-110">LINQ to XML 軸 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2a08f-110">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [<span data-ttu-id="f4e24-110">LINQ to XML 軸 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f4e24-110">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
