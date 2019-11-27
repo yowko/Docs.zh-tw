@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431937"
 ---
-# <a name="imetadataassemblyemitsetexportedtypeprops-method"></a><span data-ttu-id="a13f1-102">IMetaDataAssemblyEmit::SetExportedTypeProps 方法</span><span class="sxs-lookup"><span data-stu-id="a13f1-102">IMetaDataAssemblyEmit::SetExportedTypeProps Method</span></span>
-<span data-ttu-id="a13f1-103">修改指定的 `ExportedType` 中繼資料結構。</span><span class="sxs-lookup"><span data-stu-id="a13f1-103">Modifies the specified `ExportedType` metadata structure.</span></span>  
+# <a name="imetadataassemblyemitsetexportedtypeprops-method"></a><span data-ttu-id="c825e-102">IMetaDataAssemblyEmit::SetExportedTypeProps 方法</span><span class="sxs-lookup"><span data-stu-id="c825e-102">IMetaDataAssemblyEmit::SetExportedTypeProps Method</span></span>
+<span data-ttu-id="c825e-103">修改指定的 `ExportedType` 中繼資料結構。</span><span class="sxs-lookup"><span data-stu-id="c825e-103">Modifies the specified `ExportedType` metadata structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a13f1-104">語法</span><span class="sxs-lookup"><span data-stu-id="a13f1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c825e-104">語法</span><span class="sxs-lookup"><span data-stu-id="c825e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetExportedTypeProps (  
@@ -36,31 +36,31 @@ HRESULT SetExportedTypeProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a13f1-105">參數</span><span class="sxs-lookup"><span data-stu-id="a13f1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c825e-105">參數</span><span class="sxs-lookup"><span data-stu-id="c825e-105">Parameters</span></span>  
  `ct`  
- <span data-ttu-id="a13f1-106">[in] The metadata token that specifies the `ExportedType` metadata structure to be modified.</span><span class="sxs-lookup"><span data-stu-id="a13f1-106">[in] The metadata token that specifies the `ExportedType` metadata structure to be modified.</span></span>  
+ <span data-ttu-id="c825e-106">在元資料標記，指定要修改的 `ExportedType` 元資料結構。</span><span class="sxs-lookup"><span data-stu-id="c825e-106">[in] The metadata token that specifies the `ExportedType` metadata structure to be modified.</span></span>  
   
  `tkImplementation`  
- <span data-ttu-id="a13f1-107">[in] The token, of type `File`, `AssemblyRef`, or `ExportedType`, that specifies how this type is implemented.</span><span class="sxs-lookup"><span data-stu-id="a13f1-107">[in] The token, of type `File`, `AssemblyRef`, or `ExportedType`, that specifies how this type is implemented.</span></span>  
+ <span data-ttu-id="c825e-107">在類型 `File`、`AssemblyRef`或 `ExportedType`的標記，指定此類型的實作為方式。</span><span class="sxs-lookup"><span data-stu-id="c825e-107">[in] The token, of type `File`, `AssemblyRef`, or `ExportedType`, that specifies how this type is implemented.</span></span>  
   
  `tkTypeDef`  
- <span data-ttu-id="a13f1-108">[in] The `TypeDef` token referenced in the code file.</span><span class="sxs-lookup"><span data-stu-id="a13f1-108">[in] The `TypeDef` token referenced in the code file.</span></span>  
+ <span data-ttu-id="c825e-108">在程式碼檔案中參考的 `TypeDef` token。</span><span class="sxs-lookup"><span data-stu-id="c825e-108">[in] The `TypeDef` token referenced in the code file.</span></span>  
   
  `dwExportedTypeFlags`  
- <span data-ttu-id="a13f1-109">[in] A bitwise combination of values that specify attributes of the type.</span><span class="sxs-lookup"><span data-stu-id="a13f1-109">[in] A bitwise combination of values that specify attributes of the type.</span></span>  
+ <span data-ttu-id="c825e-109">在值的位元組合，這個組合會指定類型的屬性。</span><span class="sxs-lookup"><span data-stu-id="c825e-109">[in] A bitwise combination of values that specify attributes of the type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a13f1-110">備註</span><span class="sxs-lookup"><span data-stu-id="a13f1-110">Remarks</span></span>  
- <span data-ttu-id="a13f1-111">To create an `ExportedType` metadata structure, use the [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="a13f1-111">To create an `ExportedType` metadata structure, use the [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c825e-110">備註</span><span class="sxs-lookup"><span data-stu-id="c825e-110">Remarks</span></span>  
+ <span data-ttu-id="c825e-111">若要建立 `ExportedType` 元資料結構，請使用[IMetaDataAssemblyEmit：:D efineexportedtype](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="c825e-111">To create an `ExportedType` metadata structure, use the [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a13f1-112">需求</span><span class="sxs-lookup"><span data-stu-id="a13f1-112">Requirements</span></span>  
- <span data-ttu-id="a13f1-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a13f1-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c825e-112">需求</span><span class="sxs-lookup"><span data-stu-id="c825e-112">Requirements</span></span>  
+ <span data-ttu-id="c825e-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c825e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a13f1-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a13f1-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c825e-114">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="c825e-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a13f1-115">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a13f1-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c825e-115">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="c825e-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a13f1-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a13f1-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c825e-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c825e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a13f1-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="a13f1-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c825e-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c825e-117">See also</span></span>
 
-- [<span data-ttu-id="a13f1-118">IMetaDataAssemblyEmit 介面</span><span class="sxs-lookup"><span data-stu-id="a13f1-118">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="c825e-118">IMetaDataAssemblyEmit 介面</span><span class="sxs-lookup"><span data-stu-id="c825e-118">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

@@ -22,26 +22,26 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446101"
 ---
-# <a name="isymunmanagedvariablegetaddresskind-method"></a><span data-ttu-id="0e52a-102">ISymUnmanagedVariable::GetAddressKind 方法</span><span class="sxs-lookup"><span data-stu-id="0e52a-102">ISymUnmanagedVariable::GetAddressKind Method</span></span>
-<span data-ttu-id="0e52a-103">Gets the kind of address of this variable.</span><span class="sxs-lookup"><span data-stu-id="0e52a-103">Gets the kind of address of this variable.</span></span>  
+# <a name="isymunmanagedvariablegetaddresskind-method"></a><span data-ttu-id="b61ef-102">ISymUnmanagedVariable::GetAddressKind 方法</span><span class="sxs-lookup"><span data-stu-id="b61ef-102">ISymUnmanagedVariable::GetAddressKind Method</span></span>
+<span data-ttu-id="b61ef-103">取得此變數的網址類別型。</span><span class="sxs-lookup"><span data-stu-id="b61ef-103">Gets the kind of address of this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0e52a-104">語法</span><span class="sxs-lookup"><span data-stu-id="0e52a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b61ef-104">語法</span><span class="sxs-lookup"><span data-stu-id="b61ef-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAddressKind(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0e52a-105">參數</span><span class="sxs-lookup"><span data-stu-id="0e52a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b61ef-105">參數</span><span class="sxs-lookup"><span data-stu-id="b61ef-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="0e52a-106">[out] A pointer to a `ULONG32` that receives the value.</span><span class="sxs-lookup"><span data-stu-id="0e52a-106">[out] A pointer to a `ULONG32` that receives the value.</span></span> <span data-ttu-id="0e52a-107">The possible values are defined in the [CorSymAddrKind](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md) enumeration.</span><span class="sxs-lookup"><span data-stu-id="0e52a-107">The possible values are defined in the [CorSymAddrKind](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="b61ef-106">脫銷接收值之 `ULONG32` 的指標。</span><span class="sxs-lookup"><span data-stu-id="b61ef-106">[out] A pointer to a `ULONG32` that receives the value.</span></span> <span data-ttu-id="b61ef-107">可能的值會在[CorSymAddrKind](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)列舉中定義。</span><span class="sxs-lookup"><span data-stu-id="b61ef-107">The possible values are defined in the [CorSymAddrKind](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md) enumeration.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0e52a-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="0e52a-108">Return Value</span></span>  
- <span data-ttu-id="0e52a-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="0e52a-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b61ef-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="b61ef-108">Return Value</span></span>  
+ <span data-ttu-id="b61ef-109">如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="b61ef-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0e52a-110">需求</span><span class="sxs-lookup"><span data-stu-id="0e52a-110">Requirements</span></span>  
- <span data-ttu-id="0e52a-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0e52a-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b61ef-110">需求</span><span class="sxs-lookup"><span data-stu-id="b61ef-110">Requirements</span></span>  
+ <span data-ttu-id="b61ef-111">**標頭：** CorSym .idl，CorSym。h</span><span class="sxs-lookup"><span data-stu-id="b61ef-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0e52a-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="0e52a-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b61ef-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b61ef-112">See also</span></span>
 
-- [<span data-ttu-id="0e52a-113">ISymUnmanagedVariable 介面</span><span class="sxs-lookup"><span data-stu-id="0e52a-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="b61ef-113">ISymUnmanagedVariable 介面</span><span class="sxs-lookup"><span data-stu-id="b61ef-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

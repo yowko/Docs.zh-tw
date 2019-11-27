@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448884"
 ---
-# <a name="isymunmanagedmethodgetsequencepoints-method"></a><span data-ttu-id="11d0b-102">ISymUnmanagedMethod::GetSequencePoints 方法</span><span class="sxs-lookup"><span data-stu-id="11d0b-102">ISymUnmanagedMethod::GetSequencePoints Method</span></span>
-<span data-ttu-id="11d0b-103">Gets all the sequence points within this method.</span><span class="sxs-lookup"><span data-stu-id="11d0b-103">Gets all the sequence points within this method.</span></span>  
+# <a name="isymunmanagedmethodgetsequencepoints-method"></a><span data-ttu-id="1607a-102">ISymUnmanagedMethod::GetSequencePoints 方法</span><span class="sxs-lookup"><span data-stu-id="1607a-102">ISymUnmanagedMethod::GetSequencePoints Method</span></span>
+<span data-ttu-id="1607a-103">取得這個方法內的所有序列點。</span><span class="sxs-lookup"><span data-stu-id="1607a-103">Gets all the sequence points within this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="11d0b-104">語法</span><span class="sxs-lookup"><span data-stu-id="11d0b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1607a-104">語法</span><span class="sxs-lookup"><span data-stu-id="1607a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSequencePoints(  
@@ -39,37 +39,37 @@ HRESULT GetSequencePoints(
     [in, size_is(cPoints)] ULONG32  endColumns[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="11d0b-105">參數</span><span class="sxs-lookup"><span data-stu-id="11d0b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1607a-105">參數</span><span class="sxs-lookup"><span data-stu-id="1607a-105">Parameters</span></span>  
  `cPoints`  
- <span data-ttu-id="11d0b-106">[in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.</span><span class="sxs-lookup"><span data-stu-id="11d0b-106">[in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.</span></span>  
+ <span data-ttu-id="1607a-106">在`ULONG32`，會接收 `offsets`、`documents`、`lines`、`columns`、`endLines`和 `endColumns` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="1607a-106">[in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.</span></span>  
   
  `pcPoints`  
- <span data-ttu-id="11d0b-107">[out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.</span><span class="sxs-lookup"><span data-stu-id="11d0b-107">[out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.</span></span>  
+ <span data-ttu-id="1607a-107">脫銷`ULONG32` 的指標，接收包含序列點所需的緩衝區長度。</span><span class="sxs-lookup"><span data-stu-id="1607a-107">[out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.</span></span>  
   
  `offsets`  
- <span data-ttu-id="11d0b-108">[in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.</span><span class="sxs-lookup"><span data-stu-id="11d0b-108">[in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.</span></span>  
+ <span data-ttu-id="1607a-108">在要在其中儲存序列點的方法開頭之 Microsoft 中繼語言（MSIL）位移的陣列。</span><span class="sxs-lookup"><span data-stu-id="1607a-108">[in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.</span></span>  
   
  `documents`  
- <span data-ttu-id="11d0b-109">[in] An array in which to store the documents in which the sequence points are located.</span><span class="sxs-lookup"><span data-stu-id="11d0b-109">[in] An array in which to store the documents in which the sequence points are located.</span></span>  
+ <span data-ttu-id="1607a-109">在要在其中儲存序列點所在檔的陣列。</span><span class="sxs-lookup"><span data-stu-id="1607a-109">[in] An array in which to store the documents in which the sequence points are located.</span></span>  
   
  `lines`  
- <span data-ttu-id="11d0b-110">[in] An array in which to store the lines in the documents at which the sequence points are located.</span><span class="sxs-lookup"><span data-stu-id="11d0b-110">[in] An array in which to store the lines in the documents at which the sequence points are located.</span></span>  
+ <span data-ttu-id="1607a-110">在要在其中儲存序列點所在檔中之行的陣列。</span><span class="sxs-lookup"><span data-stu-id="1607a-110">[in] An array in which to store the lines in the documents at which the sequence points are located.</span></span>  
   
  `columns`  
- <span data-ttu-id="11d0b-111">[in] An array in which to store the columns in the documents at which the sequence points are located.</span><span class="sxs-lookup"><span data-stu-id="11d0b-111">[in] An array in which to store the columns in the documents at which the sequence points are located.</span></span>  
+ <span data-ttu-id="1607a-111">在要在其中儲存序列點所在檔中之資料行的陣列。</span><span class="sxs-lookup"><span data-stu-id="1607a-111">[in] An array in which to store the columns in the documents at which the sequence points are located.</span></span>  
   
  `endLines`  
- <span data-ttu-id="11d0b-112">[in] The array of lines in the documents at which the sequence points end.</span><span class="sxs-lookup"><span data-stu-id="11d0b-112">[in] The array of lines in the documents at which the sequence points end.</span></span>  
+ <span data-ttu-id="1607a-112">在序列點結尾之檔中的行陣列。</span><span class="sxs-lookup"><span data-stu-id="1607a-112">[in] The array of lines in the documents at which the sequence points end.</span></span>  
   
  `endColumns`  
- <span data-ttu-id="11d0b-113">[in] The array of columns in the documents at which the sequence points end.</span><span class="sxs-lookup"><span data-stu-id="11d0b-113">[in] The array of columns in the documents at which the sequence points end.</span></span>  
+ <span data-ttu-id="1607a-113">在序列點結尾之檔中的資料行陣列。</span><span class="sxs-lookup"><span data-stu-id="1607a-113">[in] The array of columns in the documents at which the sequence points end.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="11d0b-114">傳回值</span><span class="sxs-lookup"><span data-stu-id="11d0b-114">Return Value</span></span>  
- <span data-ttu-id="11d0b-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="11d0b-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1607a-114">傳回值</span><span class="sxs-lookup"><span data-stu-id="1607a-114">Return Value</span></span>  
+ <span data-ttu-id="1607a-115">如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="1607a-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="11d0b-116">需求</span><span class="sxs-lookup"><span data-stu-id="11d0b-116">Requirements</span></span>  
- <span data-ttu-id="11d0b-117">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="11d0b-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1607a-116">需求</span><span class="sxs-lookup"><span data-stu-id="1607a-116">Requirements</span></span>  
+ <span data-ttu-id="1607a-117">**標頭：** CorSym .idl，CorSym。h</span><span class="sxs-lookup"><span data-stu-id="1607a-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="11d0b-118">請參閱</span><span class="sxs-lookup"><span data-stu-id="11d0b-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1607a-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1607a-118">See also</span></span>
 
-- [<span data-ttu-id="11d0b-119">ISymUnmanagedMethod 介面</span><span class="sxs-lookup"><span data-stu-id="11d0b-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="1607a-119">ISymUnmanagedMethod 介面</span><span class="sxs-lookup"><span data-stu-id="1607a-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

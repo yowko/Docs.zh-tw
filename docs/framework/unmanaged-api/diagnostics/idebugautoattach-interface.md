@@ -21,18 +21,18 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445515"
 ---
-# <a name="idebugautoattach-interface"></a><span data-ttu-id="f157f-102">IDebugAutoAttach 介面</span><span class="sxs-lookup"><span data-stu-id="f157f-102">IDebugAutoAttach Interface</span></span>
-<span data-ttu-id="f157f-103">Defines the interface for server-invoked debugger auto attach.</span><span class="sxs-lookup"><span data-stu-id="f157f-103">Defines the interface for server-invoked debugger auto attach.</span></span>  
+# <a name="idebugautoattach-interface"></a><span data-ttu-id="9fc41-102">IDebugAutoAttach 介面</span><span class="sxs-lookup"><span data-stu-id="9fc41-102">IDebugAutoAttach Interface</span></span>
+<span data-ttu-id="9fc41-103">定義伺服器叫用偵錯工具自動附加的介面。</span><span class="sxs-lookup"><span data-stu-id="9fc41-103">Defines the interface for server-invoked debugger auto attach.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="f157f-104">方法</span><span class="sxs-lookup"><span data-stu-id="f157f-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="9fc41-104">方法</span><span class="sxs-lookup"><span data-stu-id="9fc41-104">Methods</span></span>  
   
-|<span data-ttu-id="f157f-105">方法</span><span class="sxs-lookup"><span data-stu-id="f157f-105">Method</span></span>|<span data-ttu-id="f157f-106">描述</span><span class="sxs-lookup"><span data-stu-id="f157f-106">Description</span></span>|  
+|<span data-ttu-id="9fc41-105">方法</span><span class="sxs-lookup"><span data-stu-id="9fc41-105">Method</span></span>|<span data-ttu-id="9fc41-106">描述</span><span class="sxs-lookup"><span data-stu-id="9fc41-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="f157f-107">AutoAttach 方法</span><span class="sxs-lookup"><span data-stu-id="f157f-107">AutoAttach Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|<span data-ttu-id="f157f-108">Performs server-invoked debugger auto attach.</span><span class="sxs-lookup"><span data-stu-id="f157f-108">Performs server-invoked debugger auto attach.</span></span>|  
+|[<span data-ttu-id="9fc41-107">AutoAttach 方法</span><span class="sxs-lookup"><span data-stu-id="9fc41-107">AutoAttach Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|<span data-ttu-id="9fc41-108">執行伺服器叫用的偵錯工具自動附加。</span><span class="sxs-lookup"><span data-stu-id="9fc41-108">Performs server-invoked debugger auto attach.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f157f-109">需求</span><span class="sxs-lookup"><span data-stu-id="f157f-109">Requirements</span></span>  
- <span data-ttu-id="f157f-110">**Header:** DbgAutoAttach.idl</span><span class="sxs-lookup"><span data-stu-id="f157f-110">**Header:** DbgAutoAttach.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9fc41-109">需求</span><span class="sxs-lookup"><span data-stu-id="9fc41-109">Requirements</span></span>  
+ <span data-ttu-id="9fc41-110">**標頭：** DbgAutoAttach .idl</span><span class="sxs-lookup"><span data-stu-id="9fc41-110">**Header:** DbgAutoAttach.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f157f-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="f157f-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9fc41-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9fc41-111">See also</span></span>
 
-- [<span data-ttu-id="f157f-112">診斷符號存放區介面</span><span class="sxs-lookup"><span data-stu-id="f157f-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="9fc41-112">診斷符號存放區介面</span><span class="sxs-lookup"><span data-stu-id="9fc41-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

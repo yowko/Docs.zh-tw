@@ -22,32 +22,32 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445190"
 ---
-# <a name="icorprofilercallbackappdomainshutdownstarted-method"></a><span data-ttu-id="f1f25-102">ICorProfilerCallback::AppDomainShutdownStarted 方法</span><span class="sxs-lookup"><span data-stu-id="f1f25-102">ICorProfilerCallback::AppDomainShutdownStarted Method</span></span>
-<span data-ttu-id="f1f25-103">Notifies the profiler that an application domain is being unloaded from a process.</span><span class="sxs-lookup"><span data-stu-id="f1f25-103">Notifies the profiler that an application domain is being unloaded from a process.</span></span>  
+# <a name="icorprofilercallbackappdomainshutdownstarted-method"></a><span data-ttu-id="04e0b-102">ICorProfilerCallback::AppDomainShutdownStarted 方法</span><span class="sxs-lookup"><span data-stu-id="04e0b-102">ICorProfilerCallback::AppDomainShutdownStarted Method</span></span>
+<span data-ttu-id="04e0b-103">通知分析工具，應用程式域正在從進程中卸載。</span><span class="sxs-lookup"><span data-stu-id="04e0b-103">Notifies the profiler that an application domain is being unloaded from a process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f1f25-104">語法</span><span class="sxs-lookup"><span data-stu-id="f1f25-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="04e0b-104">語法</span><span class="sxs-lookup"><span data-stu-id="04e0b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT AppDomainShutdownStarted(  
     [in] AppDomainID appDomainId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f1f25-105">參數</span><span class="sxs-lookup"><span data-stu-id="f1f25-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="04e0b-105">參數</span><span class="sxs-lookup"><span data-stu-id="04e0b-105">Parameters</span></span>  
  `appDomainId`  
- <span data-ttu-id="f1f25-106">[in] Identifies the domain in which the application's assemblies are stored.</span><span class="sxs-lookup"><span data-stu-id="f1f25-106">[in] Identifies the domain in which the application's assemblies are stored.</span></span>  
+ <span data-ttu-id="04e0b-106">在識別用來儲存應用程式元件的網域。</span><span class="sxs-lookup"><span data-stu-id="04e0b-106">[in] Identifies the domain in which the application's assemblies are stored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f1f25-107">備註</span><span class="sxs-lookup"><span data-stu-id="f1f25-107">Remarks</span></span>  
- <span data-ttu-id="f1f25-108">The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.</span><span class="sxs-lookup"><span data-stu-id="f1f25-108">The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="04e0b-107">備註</span><span class="sxs-lookup"><span data-stu-id="04e0b-107">Remarks</span></span>  
+ <span data-ttu-id="04e0b-108">`AppDomainShutdownStarted` 方法傳回之後，`appDomainId` 的值對任何資訊要求而言都是不正確，這是分析工具的最後機會取得此應用程式域的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="04e0b-108">The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f1f25-109">需求</span><span class="sxs-lookup"><span data-stu-id="f1f25-109">Requirements</span></span>  
- <span data-ttu-id="f1f25-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f1f25-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="04e0b-109">需求</span><span class="sxs-lookup"><span data-stu-id="04e0b-109">Requirements</span></span>  
+ <span data-ttu-id="04e0b-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="04e0b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f1f25-111">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f1f25-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="04e0b-111">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="04e0b-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f1f25-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f1f25-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="04e0b-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="04e0b-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f1f25-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f1f25-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="04e0b-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="04e0b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f1f25-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="f1f25-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="04e0b-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="04e0b-114">See also</span></span>
 
-- [<span data-ttu-id="f1f25-115">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="f1f25-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="04e0b-115">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="04e0b-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
