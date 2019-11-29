@@ -6,16 +6,16 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 780c63e5a8f3f0d82559565b3319fe54507e3d21
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f65ed3b362080d7a8afe89e22bd132d1fc190b06
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036131"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552454"
 ---
 # <a name="true-and-false-operators-c-reference"></a>true 和 false 運算子 (C# 參考)
 
-`true` 運算子會傳回[bool](../keywords/bool.md)值 `true` 以指出其運算元確實為 true。 `false` 運算子會傳回 `true` 的 `bool` 值，以指出其運算元絕對為 false。 `true` 和 `false` 運算子並不保證會彼此互補。 也就是說，`true` 和 `false` 運算子可能會針對相同的運算元傳回 `bool` 值 `false`。 如果某個型別會定義這兩個運算子之一，它也必須定義另一個運算子。
+`true` 運算子會傳回[bool](../builtin-types/bool.md)值 `true` 以指出其運算元確實為 true。 `false` 運算子會傳回 `true` 的 `bool` 值，以指出其運算元絕對為 false。 `true` 和 `false` 運算子並不保證會彼此互補。 也就是說，`true` 和 `false` 運算子可能會針對相同的運算元傳回 `bool` 值 `false`。 如果某個型別會定義這兩個運算子之一，它也必須定義另一個運算子。
 
 > [!TIP]
 > 如果您需要支援三值邏輯（例如，當您使用支援三值布林值類型的資料庫時），請使用 `bool?` 類型。 C# 能提供搭配 `bool?` 運算元來支援三值邏輯的 `&` 和 `|` 運算子。 如需詳細資訊，請參閱[布林值邏輯運算子](boolean-logical-operators.md)一文的[可為 Null 的布林值邏輯運算子](boolean-logical-operators.md#nullable-boolean-logical-operators)一節。
@@ -45,5 +45,3 @@ Wait!
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)
-- [true 常值](../keywords/true-literal.md)
-- [false 常值](../keywords/false-literal.md)

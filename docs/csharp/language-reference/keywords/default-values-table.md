@@ -6,12 +6,12 @@ ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 2f1ad5cc029b93261153e46d854cd8bf3e31ce92
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 48aa294fa9e37e2e138444e493faa5474011097e
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428532"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551815"
 ---
 # <a name="default-values-table-c-reference"></a>預設值表 (C# 參考)
 
@@ -22,7 +22,7 @@ ms.locfileid: "74428532"
 |任何參考類型|`null`|
 |任何[內建整數數值型別](../builtin-types/integral-numeric-types.md)|0 (零)|
 |任何[內建浮點數值型別](../builtin-types/floating-point-numeric-types.md)|0 (零)|
-|[bool](bool.md)|`false`|
+|[bool](../builtin-types/bool.md)|`false`|
 |[char](../builtin-types/char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|這個值是由運算式 `(E)0` 所產生，其中 `E` 是列舉識別碼。|
 |[struct](struct.md)|這個值是藉由將所有實值型別欄位設定為其預設值，並將所有參考型別欄位設定為 `null` 所產生。|
@@ -54,7 +54,7 @@ Console.WriteLine(n);  // output: (0, 0)
 - [預設值](~/_csharplang/spec/variables.md#default-values)
 - [預設建構函式](~/_csharplang/spec/types.md#default-constructors)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 關鍵字](index.md)

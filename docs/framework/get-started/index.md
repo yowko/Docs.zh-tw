@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: ca2a4e6c44a26889a2fffa5cc5fa2cbba3eab782
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 563416f1ca9ddb9cb9bb7e78b9e13406983bdf9f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281824"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552795"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 使用者入門
 
@@ -65,7 +65,7 @@ ms.locfileid: "74281824"
 
 1. 如果未在作業系統上預先安裝，請安裝要當成應用程式目標的 .NET Framework 版本。 最近的生產版本是 .NET Framework 4.8。 它已預先安裝在 Windows 10 May 2019 Update 上，在舊版 Windows 作業系統上則必須自行下載。 如需 .NET Framework 系統需求，請參閱[系統需求](system-requirements.md)。 如需安裝其他 .NET Framework 版本的資訊，請參閱[安裝指南](../install/guide-for-developers.md)。 其他.NET Framework 套件會在頻外發行，也就是在任何定期或排程發行週期以外輪流發行。 如需這些套件的資訊，請參閱 [.NET Framework 和不定期發行](the-net-framework-and-out-of-band-releases.md)。
 
-2. 選取您要用來開發應用程式且 .NET Framework 也支援的語言。 有多種語言可供選擇，包括 Microsoft 的 [Visual Basic](../../visual-basic/index.md)[C#](../../csharp/index.yml)、[F#](../../fsharp/index.md) 及 [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp)。 (可讓您開發 .NET Framework 應用程式的程式設計語言會遵循[通用語言基礎結構 (CLI) 規格](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/))。
+2. 選取您要用來開發應用程式且 .NET Framework 也支援的語言。 有多種語言可供選擇，包括 Microsoft 的 [Visual Basic](../../visual-basic/index.md)[C#](../../csharp/index.yml)、[F#](../../fsharp/index.yml) 及 [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp)。 (可讓您開發 .NET Framework 應用程式的程式設計語言會遵循[通用語言基礎結構 (CLI) 規格](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/))。
 
 3. 選取並安裝要用來建立應用程式，且支援所選程式設計語言的開發環境。 適用於 .NET Framework 應用程式的 Microsoft 整合式開發環境 (IDE) 為 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 並有多個版本可供使用。
 
@@ -83,7 +83,7 @@ ms.locfileid: "74281824"
 | [.NET Core 文件](../../core/index.md) | 提供適用於 .NET Core 的概念性及 API 參考文件。 |
 | [.NET Standard](../../standard/net-standard.md) | 討論 .NET Standard，這是個別 .NET 實作支援的版本化規格，以保證在多個平台上都能使用一組一致的 API。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Framework 指南](../index.md)
 - [新功能](../whats-new/index.md)

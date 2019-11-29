@@ -6,20 +6,20 @@ helpviewer_keywords:
 - value types [C#], table
 - types [C#], value types
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: c470bbdff6cb08732f063afb9b325e44d9ca4d6b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2f2d81d90f6d68f1bada40c81f0f28febd51bd1f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428472"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552354"
 ---
 # <a name="value-types-table-c-reference"></a>實數值型別資料表C# （參考）
 
 下表顯示 C# 實值型別：
 
-|值類型|分類|
+|值類型|Category|
 |----------------|--------------|
-|[bool](bool.md)|布林值|
+|[bool](../builtin-types/bool.md)|Boolean|
 |`byte`|不帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)|
 |[char](../builtin-types/char.md)|不帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)|
 |`decimal`|數值、[浮點數](../builtin-types/floating-point-numeric-types.md)|
@@ -35,7 +35,7 @@ ms.locfileid: "74428472"
 |`ulong`|不帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)|
 |`ushort`|不帶正負號、數值、[整數](../builtin-types/integral-numeric-types.md)|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [預設值表](default-values-table.md)

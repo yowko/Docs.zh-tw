@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF]
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-ms.openlocfilehash: 34c6cb8cbe815e33658f38ee0e6aff581ea0ff74
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 836913dd35d127d181c753341a7c39c453242a8f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961160"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552677"
 ---
 # <a name="develop-service-oriented-applications-with-wcf"></a>使用 WCF 開發服務導向的應用程式
 
@@ -71,9 +71,6 @@ ms.locfileid: "72961160"
 
  [一般參考](general-reference.md)\
  本節說明用於設定 Windows Communication Foundation 用戶端和服務的元素。
-
- [意見反應和社區](feedback-and-community.md)\
- 有關如何對 Windows Communication Foundation 提供意見反應的資訊
 
  [隱私權資訊](privacy-information.md)\
  有關 WCF 和隱私的資訊

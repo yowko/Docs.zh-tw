@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: d0ea5aefa62dd4029610ab8a7f7ce9ed52a59600
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ccff6256b56daccdf8105fd5ad31e81bb892c2a8
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283929"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552955"
 ---
 # <a name="welcome-to-net"></a>歡迎使用 .NET
 
@@ -40,7 +40,7 @@ ms.locfileid: "74283929"
 - [C# 的新功能](csharp/whats-new/index.md)
 - [Visual Basic 的新功能](visual-basic/getting-started/whats-new.md)
 
-## <a name="documentation"></a>文件
+## <a name="documentation"></a>Documentation
 
 這份文件涵蓋各種平台和語言的 .NET 範圍。 您可以在下列任何各節中開始使用 .NET 和其語言：
 
@@ -48,7 +48,7 @@ ms.locfileid: "74283929"
 - [.NET Core 指南](core/index.md)
 - [.NET Framework 指南](framework/index.md)
 - [C# 指南](csharp/index.yml)
-- [F# 指南](fsharp/index.md)
+- [F# 指南](fsharp/index.yml)
 - [Visual Basic 指南](visual-basic/index.md)
 - [ML.NET 指南](machine-learning/index.yml)
 - [.NET for Apache Spark](spark/index.yml)

@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 6ce570460984d975b19fd2a696b668bc41e9054e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1af17be16061aedab9226bf2b4a0419b0a8d63b7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283846"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552831"
 ---
 # <a name="net-guide"></a>.NET 指南
 
@@ -58,7 +58,7 @@ ms.locfileid: "74283846"
 此外，請參閱各語言指南以了解主要的三種 .NET 語言：
 
 * [C# 指南](../csharp/index.yml)
-* [F# 指南](../fsharp/index.md)
+* [F# 指南](../fsharp/index.yml)
 * [Visual Basic 指南](../visual-basic/index.md)
 
 ## <a name="api-reference"></a>應用程式開發介面參考

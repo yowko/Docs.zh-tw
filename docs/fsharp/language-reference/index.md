@@ -2,12 +2,12 @@
 title: F# 語言參考
 description: 從F#這個參考中尋找語言標記、概念、類型、運算式和編譯器支援的結構主題的語言功能資訊。
 ms.date: 05/16/2016
-ms.openlocfilehash: ac7e268b28d6bb654e4443d04695cb15fe756e9f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bd9894176fa736b9eed939d72972e676e2bd2671
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424994"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552898"
 ---
 # <a name="f-language-reference"></a>F# 語言參考
 
@@ -110,7 +110,3 @@ ms.locfileid: "73424994"
 |[編譯器選項](compiler-options.md)|描述 F# 編譯器的命令列選項。|
 |[編譯器指示詞](compiler-directives.md)|描述處理器指示詞和編譯器指示詞。|
 |[原始碼程式行、檔案與路徑識別項](source-line-file-path-identifiers.md)|描述識別項 `__LINE__`、`__SOURCE_DIRECTORY__` 和 `__SOURCE_FILE__`，這些內建值可讓您存取原始程式碼中的行號、目錄和檔案名稱。|
-
-## <a name="see-also"></a>請參閱
-
-- [Visual F#](../index.md)

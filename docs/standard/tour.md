@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: e0e35562e2351f9b985c74b60d8769577c3e3f56
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 274fea83c474d4b67aab919b604eda893d8204d7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283887"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552857"
 ---
 # <a name="tour-of-net"></a>.NET 教學課程
 
@@ -31,7 +31,7 @@ Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic 
 
 * C# 既簡單、強大、型別安全且為物件導向，同時保留 C 樣式語言的易讀性與簡潔性。 熟悉 C 和類似語言的任何人在適應 C# 方面很少有問題。 若要深入了解 C#，請參閱 [C# 指南](../csharp/index.yml)。
 
-* F# 是跨平台、功能優先的程式語言，也支援傳統物件導向和命令式程式設計。 若要深入了解 F#，請參閱 [F# 指南](../fsharp/index.md)。
+* F# 是跨平台、功能優先的程式語言，也支援傳統物件導向和命令式程式設計。 若要深入了解 F#，請參閱 [F# 指南](../fsharp/index.yml)。
 
 * Visual Basic 是容易學習的語言，您可以使用該語言建置 .NET 上所執行的各種應用程式。 在所有的 .NET 語言中，VB 的語法最接近一般人類語言，因此通常可讓新手更輕鬆地開發軟體。
 
@@ -71,7 +71,7 @@ Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic 
 
 物件是特定類型的執行個體。 指定物件所允許的唯一作業會是其類型所允許的作業。 `Dog` 類型可能會有 `Jump` 和 `WagTail` 方法，但沒有 `SumTotal` 方法。 程式只能呼叫屬於指定類型的方法。 所有其他呼叫會導致編譯時期錯誤，或執行階段例外狀況 (如果使用動態功能或 `object`)。
 
-.NET 語言是物件導向，具有基底和衍生類別的階層架構。 .NET 執行階段只允許符合物件階層架構的的物件轉換和呼叫。 請記住，以任何 .NET 語言所定義的每種類型都是衍生自基底 <xref:System.Object> 類型。
+.NET 語言是物件導向，具有基底和衍生類別的階層架構。 .NET 執行階段只允許符合物件階層架構的的物件轉換和呼叫。 請記住，以任何 .NET 語言所定義的每種類型都是衍生自基底 <xref:System.Object> 型別。
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
 
@@ -131,7 +131,7 @@ Mono (以及 Xamarin) 對 Java 和 Objective-C 的互通性支援大致上很類
 
 CLR 可讓您根據語言支援透過 `unsafe` 程式碼存取原生記憶體及執行指標算術。 特定演算法和系統互通性需要這些作業。 Unsafe 程式碼雖然功能強大，但除非是必須與系統 API 互通，或必須實作最有效率的演算法，否則不建議使用。 Unsafe 程式碼在不同的環境中執行時可能不盡相同，而且也會失去記憶體回收行程和型別安全的好處。 建議您盡可能限制和集中使用 Unsafe 程式碼，並徹底測試該程式碼。
 
-下列範例是 `ToString()` 類別的 `StringBuilder` 方法修改後的版本。 它說明如何使用 `unsafe` 程式碼直接四處移動記憶體區塊，以有效率地實作演算法：
+下列範例是 `StringBuilder` 類別的 `ToString()` 方法修改後的版本。 它說明如何使用 `unsafe` 程式碼直接四處移動記憶體區塊，以有效率地實作演算法：
 
 [!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]
 

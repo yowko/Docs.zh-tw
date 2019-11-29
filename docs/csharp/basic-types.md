@@ -4,12 +4,12 @@ description: 了解所有 C# 程式中的核心類型 (數字、字串和物件)
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 7a75ad5080cd2646070447cbc3dcc46b8c73dd65
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e1cb5b103459ff691bf6ed8f8ebc1fa3fd8487c3
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420704"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552322"
 ---
 # <a name="types-variables-and-values"></a>類型、變數和值
 
@@ -29,12 +29,12 @@ C# 是強型別語言。 每個變數和常數都有型別，如同每個會評�
   
 - 允許的作業類型。  
   
-編譯器會使用型別資訊，來確認在您的程式碼中執行的全部都是「型別安全」的作業。 例如，如果您宣告型別 [int](language-reference/builtin-types/integral-numeric-types.md) 的變數，編譯器會允許您使用這個變數去做加減運算。 如果您嘗試針對型別 [bool](language-reference/keywords/bool.md) 的變數執行相同作業，編譯器會產生錯誤，如下列範例所示︰  
+編譯器會使用型別資訊，來確認在您的程式碼中執行的全部都是「型別安全」的作業。 例如，如果您宣告型別 [int](language-reference/builtin-types/integral-numeric-types.md) 的變數，編譯器會允許您使用這個變數去做加減運算。 如果您嘗試針對型別 [bool](language-reference/builtin-types/bool.md) 的變數執行相同作業，編譯器會產生錯誤，如下列範例所示︰  
   
 [!code-csharp[Type Safety](../../samples/snippets/csharp/concepts/basic-types/type-safety.cs)]  
   
 > [!NOTE]  
-> C 和 C++ 開發人員要注意在 C# 中，[bool](language-reference/keywords/bool.md) 不能轉換為 [int](language-reference/builtin-types/integral-numeric-types.md)。  
+> C 和 C++ 開發人員要注意在 C# 中，[bool](language-reference/builtin-types/bool.md) 不能轉換為 [int](language-reference/builtin-types/integral-numeric-types.md)。  
   
 編譯器會將型別資訊視為中繼資料內嵌至可執行檔。 通用語言執行平台 (CLR) 會在執行階段使用該中繼資料，以在它配置和回收記憶體時，進一步保證型別安全。  
 
@@ -48,7 +48,7 @@ C# 是強型別語言。 每個變數和常數都有型別，如同每個會評�
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-宣告變數之後，不能以新型別重新宣告它，也無法將與所宣告型別不相容的值指派給它。 例如，您無法宣告 [int](language-reference/builtin-types/integral-numeric-types.md) 並將為 [true](language-reference/keywords/true-literal.md) 的布林值指派給它。 不過，可以將值轉換為其他型別，例如，指派給新的變數，或做為方法引數傳遞時。 編譯器會自動執行不會造成資料遺失的「型別轉換」作業。 而可能導致資料遺失的轉換在原始程式碼中需要有 *cast*。
+宣告變數之後，不能以新型別重新宣告它，也無法將與所宣告型別不相容的值指派給它。 例如，您無法宣告[int](language-reference/builtin-types/integral-numeric-types.md) ，然後為它指派 `true`的布林值。 不過，可以將值轉換為其他型別，例如，指派給新的變數，或做為方法引數傳遞時。 編譯器會自動執行不會造成資料遺失的「型別轉換」作業。 而可能導致資料遺失的轉換在原始程式碼中需要有 *cast*。
 
 如需詳細資訊，請參閱[轉換和類型轉換](programming-guide/types/casting-and-type-conversions.md)。
 

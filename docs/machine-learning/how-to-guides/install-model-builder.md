@@ -3,14 +3,14 @@ title: 如何安裝模型建立器
 description: 了解如何安裝 ML.NET 模型建立器工具
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/21/2019
+ms.date: 11/21/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: a1034d294012b8df5ec778fc40602fe52223961d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b87f712ad7a8b2229c1d42db4bad1fe511475ac7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774573"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552947"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>了解如何安裝 ML.NET 模型建立器
 
@@ -19,10 +19,13 @@ ms.locfileid: "72774573"
 > [!NOTE]
 > 模型產生器目前為預覽版。
 
-## <a name="pre-requisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
 
 - Visual Studio 2017 15.9.12 版或更新版本/Visual Studio 2019
-- .NET Core 2.1 或更新版本的 SDK
+- .NET Core 2.1 SDK 或更新版本。
+
+> [!NOTE]
+> 目前不支援 .NET Core 3.0 SDK。
 
 ## <a name="limitations"></a>限制
 

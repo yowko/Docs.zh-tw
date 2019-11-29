@@ -7,20 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 3b2eec4f0e17aa329fe3865fb3ef453ee030c6a7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ab49b8cbddac2569d6063a5f312105bef3033e84
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74451161"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552306"
 ---
 # <a name="char-c-reference"></a>char （C#參考）
 
 `char` 類型關鍵字是代表 Unicode UTF-16 字元之 .NET <xref:System.Char?displayProperty=nameWithType> 結構類型的別名。
 
-|類型|範圍|大小|.NET 型別|
+|類型|Range|大小|.NET 型別|
 |----------|-----------|----------|-------------------------|
 |`char`|U+0000 到 U+FFFF|16位|<xref:System.Char?displayProperty=nameWithType>|
+
+`char` 類型的預設值為 `\0`，也就是 U + 0000。
 
 [字串](reference-types.md#the-string-type)類型以 `char` 值序列的形式來表示文字。
 
@@ -51,7 +53,7 @@ ms.locfileid: "74451161"
 
 如需詳細資訊，請參閱[ C#語言規格](~/_csharplang/spec/introduction.md)的[整數類資料類型](~/_csharplang/spec/types.md#integral-types)一節。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [內建型別表](../keywords/built-in-types-table.md)

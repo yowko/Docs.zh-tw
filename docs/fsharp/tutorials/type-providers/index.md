@@ -1,44 +1,43 @@
 ---
 title: 型別提供者
-description: 了解如何F#型別提供者是提供型別、 屬性和方法，以供您在程式中的元件。
+description: 瞭解F#型別提供者如何提供類型、屬性和方法，以便在您的程式中使用。
 ms.date: 04/02/2018
-ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7fa0ff6b5f2b0bc978df2988f22b2042acc22320
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645171"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552909"
 ---
 # <a name="type-providers"></a>型別提供者
 
-F# 型別提供者是一個元件，該元件會提供類型、屬性和方法讓您在程式中使用。 型別提供者會產生所謂**提供的型別**，產生的F#編譯器並根據外部資料來源。
+F# 型別提供者是一個元件，該元件會提供類型、屬性和方法讓您在程式中使用。 型別提供者會產生所謂的「**提供類型**」，這是F#由編譯器所產生，而且是以外部資料源為基礎。
 
-例如， F# SQL 的型別提供者可以產生代表資料表和關聯式資料庫中的資料行的類型。 事實上，這是什麼[SQLProvider](https://fsprojects.github.io/SQLProvider/)型別提供者。
+例如，適用于F# SQL 的類型提供者可以產生類型，代表關係資料庫中的資料表和資料行。 事實上，這就是[SQLProvider](https://fsprojects.github.io/SQLProvider/)型別提供者的功能。
 
-提供類型取決於型別提供者的輸入參數。 這類的輸入可以是範例資料來源 （例如 JSON 結構描述檔案），直接指向外部服務或資料來源的連接字串的 URL。 型別提供者也可以確保只會視情況下，展開類型的群組也就是說，它們會展開如果實際上您的程式所參考的型別。 這樣就能以強類型的方式視需要直接整合大型的資訊空間，例如線上資料市場。
+提供的類型取決於型別提供者的輸入參數。 這類輸入可以是範例資料來源（例如 JSON 架構檔案）、直接指向外部服務的 URL，或是資料來源的連接字串。 型別提供者也可以確保類型的群組只視需要展開;也就是說，如果您的程式實際參考型別，它們就會展開。 這樣就能以強類型的方式視需要直接整合大型的資訊空間，例如線上資料市場。
 
-## <a name="generative-and-erased-type-providers"></a>富有生產力和它們的型別提供者
+## <a name="generative-and-erased-type-providers"></a>有生產力和已清除的類型提供者
 
-型別提供者有兩種形式：富有生產力和清除。
+型別提供者有兩種形式：有生產力和清除。
 
-富有生產力的型別提供者會產生可以寫成.NET 類型，會產生這些組件的類型。 這可讓他們從其他組件中的程式碼取用。 這表示資料來源的型別的表示通常必須是另一個則是可行的方法是使用.NET 型別代表。
+有生產力類型提供者會產生可當做 .NET 類型寫入至產生它們之元件中的類型。 這可讓它們從其他元件中的程式碼使用。 這表示，資料來源的具類型標記法通常必須是可以用 .NET 類型來表示的一種。
 
-清除的型別提供者產生僅供在組件或專案，從產生的類型。 型別都是暫時的;也就是說，它們不會寫入至組件，而且不能使用的其他組件中的程式碼。 它們可以包含*延遲*成員，可讓您將使用提供的型別可能是無限的資訊空間中。 它們可用於使用大型且相互連結的資料來源的一小部分。
+清除類型提供者會產生只能在其產生來源的元件或專案中使用的類型。 這些類型是暫時的;也就是說，它們不會寫入元件中，而且無法由其他元件中的程式碼使用。 它們可以包含*延遲*的成員，讓您可以從可能的無限資訊空間使用提供的類型。 它們對於使用大型且相互連接之資料來源的小型子集很有用。
 
-## <a name="commonly-used-type-providers"></a>常用的型別提供者
+## <a name="commonly-used-type-providers"></a>常用的類型提供者
 
-下列的廣泛使用程式庫包含型別提供者針對不同的使用者：
+下列廣泛使用的程式庫包含不同用途的類型提供者：
 
-- [FSharp.Data](https://fsharp.github.io/FSharp.Data/)的 JSON、 XML、 CSV 及 HTML 文件格式和資源，包含型別提供者。
-- [根據 SQLProvider](https://fsprojects.github.io/SQLProvider/)提供強型別物件的對應關聯性資料庫的存取和F#針對這些資料來源的 LINQ 查詢。
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)編譯時期的型別提供者的一組簽入內嵌 T-SQL 中的F#。
-- [Azure 儲存體類型提供者](https://fsprojects.github.io/AzureStorageTypeProvider/)提供 Azure Blob、 資料表和佇列，可讓您存取這些資源，而不需要指定為字串，在整個程式的資源名稱的類型。
-- [FSharp.Data.GraphQL](https://fsprojects.github.io/FSharp.Data.GraphQL/index.html)包含**GraphQLProvider**，可由 URL 指定 GraphQL server 為基礎的類型。
+- [Fsharp.core：資料](https://fsharp.github.io/FSharp.Data/)報括 JSON、XML、CSV 和 HTML 檔案格式和資源的類型提供者。
+- [SQLProvider](https://fsprojects.github.io/SQLProvider/)透過物件對應和針對這些資料來源的 LINQ 查詢， F#提供關聯資料庫的強型別存取。
+- [SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)具有一組類型提供者，適用于編譯時期已核取的 t-sql F#。
+- [Azure 儲存體類型提供者](https://fsprojects.github.io/AzureStorageTypeProvider/)提供適用于 Azure Blob、資料表和佇列的類型，可讓您存取這些資源，而不需要在整個程式中將資源名稱指定為字串。
+- [GraphQL](https://fsprojects.github.io/FSharp.Data.GraphQL/index.html)包含**GraphQLProvider**，它會根據 URL 所指定的 GraphQL 伺服器提供類型。
 
-必要時，您可以[建立您自己的自訂型別提供者](creating-a-type-provider.md)，或參考已由其他人建立的型別提供者。 例如，假設您的組織的資料服務提供大量且不斷增加的具名資料集，各資料集都有自己的穩定資料結構描述。 您可能選擇建立一個類型提供者，以強類型方式讀取結構描述並對程式設計人員呈現最新的可用資料集。
+必要時，您可以[建立自己的自訂類型提供者](creating-a-type-provider.md)，或已由其他人建立的參考型別提供者。 例如，假設您的組織的資料服務提供大量且不斷增加的具名資料集，各資料集都有自己的穩定資料結構描述。 您可能選擇建立一個類型提供者，以強類型方式讀取結構描述並對程式設計人員呈現最新的可用資料集。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [教學課程：建立型別提供者](creating-a-type-provider.md)
+- [教學課程：建立類型提供者](creating-a-type-provider.md)
 - [F# 語言參考](../../language-reference/index.md)
-- [Visual F#](../../index.md)

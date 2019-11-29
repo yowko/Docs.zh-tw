@@ -2,12 +2,12 @@
 title: 關於 .NET Core
 description: 了解 .NET Core。
 ms.date: 09/17/2019
-ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4fe16475e18eb88e88fb33d30508f9ef5c9f2cd5
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416737"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552234"
 ---
 # <a name="about-net-core"></a>關於 .NET Core
 
@@ -21,7 +21,7 @@ ms.locfileid: "73416737"
 - **開放原始碼︰** NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
 - **受 Microsoft 支援：** .NET Core 根據 [.NET Core 支援](https://dotnet.microsoft.com/platform/support/policy)受 Microsoft 支援。
 
-## <a name="languages"></a>語言
+## <a name="languages"></a>程式語言
 
 C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式庫。 這些語言可用於您慣用的文字編輯器或整合式開發環境（IDE），包括：
 
@@ -29,14 +29,14 @@ C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式�
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 - Sublime 文字
 - Vim
- 
+
 這是由[OmniSharp](https://www.omnisharp.net/)和[Ionide](http://ionide.io)專案的參與者所提供的整合。
 
-## <a name="apis"></a>API
+## <a name="apis"></a>APIs
 
 .NET Core 公開許多案例的 API，以下是其中幾個：
 
-- 基本類型，例如 [bool](../csharp/language-reference/keywords/bool.md) 與 [int](../csharp/language-reference/builtin-types/integral-numeric-types.md)。
+- 基本類型，例如 <xref:System.Boolean?displayProperty=nameWithType> 和 <xref:System.Int32?displayProperty=nameWithType>。
 - 集合，例如 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 及 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>。
 - 公用程式類型，例如 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 及 <xref:System.IO.FileStream?displayProperty=nameWithType>。
 - 資料類型，例如 <xref:System.Data.DataSet?displayProperty=nameWithType> 與 [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/) \(英文\)。
@@ -52,7 +52,7 @@ C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式�
 - [Windows 10 通用 Windows 平台 (UWP)](https://developer.microsoft.com/windows)
 - [Tizen](https://developer.tizen.org/development/training/.net-application)
 
-## <a name="composition"></a>組合
+## <a name="composition"></a>Composition (組合)
 
 .NET Core 由下列部分組成：
 

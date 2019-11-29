@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 561a628c60888a8d4f3c50c8413784e1ed210599
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e467a890e971e6c6f2c681ee503d7c7ead19a1e4
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035997"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552449"
 ---
 # <a name="if-c-reference"></a>#if (C# 參考)
 
-當 C# 編譯器遇到 `#if` 指示詞，且其後接著 [#endif](preprocessor-endif.md) 指示詞時，只有在定義了指定的符號時，它才會編譯指示詞之間的程式碼。 不同於 C 和 C++，您無法將數值指派給符號。 C# 中的 #if 陳述式是布林值，且只測試是否已經定義符號。 例如:
+當 C# 編譯器遇到 `#if` 指示詞，且其後接著 [#endif](preprocessor-endif.md) 指示詞時，只有在定義了指定的符號時，它才會編譯指示詞之間的程式碼。 不同於 C 和 C++，您無法將數值指派給符號。 C# 中的 #if 陳述式是布林值，且只測試是否已經定義符號。 例如：
 
 ```csharp
 #if DEBUG
@@ -24,7 +24,7 @@ ms.locfileid: "73035997"
 #endif
 ```
 
-您只能使用運算子 [==](../operators/equality-operators.md#equality-operator-) (相等) 和 [!=](../operators/equality-operators.md#inequality-operator-) (不等) 來測試 [true](../keywords/true-literal.md) 或 [false](../keywords/false-literal.md)。 True 表示已定義符號。 `#if DEBUG` 陳述式的意義與 `#if (DEBUG == true)` 一樣。 您可以使用運算子 [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (且)、[&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (或) 及 [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (非)，來評估是否已定義多個符號。 您也可以使用括弧來將符號和運算子分組。
+您只能使用運算子[==](../operators/equality-operators.md#equality-operator-) （相等）和[！ =](../operators/equality-operators.md#inequality-operator-) （不等）來測試 `true` 或 `false`的[bool](../builtin-types/bool.md)值。 True 表示已定義符號。 `#if DEBUG` 陳述式的意義與 `#if (DEBUG == true)` 一樣。 您可以使用運算子 [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (且)、[&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (或) 及 [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (非)，來評估是否已定義多個符號。 您也可以使用括弧來將符號和運算子分組。
 
 ## <a name="remarks"></a>備註
 

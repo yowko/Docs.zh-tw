@@ -3,15 +3,15 @@ title: 教學課程：使用模型產生器的回歸預測價格
 description: 本教學課程會特別示範如何使用 ML.NET 模型產生器來建置迴歸模型以預測紐約市的計程車費用。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ed2afe307492b6d38e7e2f9d8ae02dafbb5ae1f4
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977348"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552933"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>教學課程：使用模型產生器的回歸預測價格
 
@@ -38,7 +38,7 @@ ms.locfileid: "73977348"
 
 ## <a name="create-a-console-application"></a>建立主控台應用程式
 
-1. 建立稱為 "TaxiFarePrediction" 的 **.NET Core 主控台應用程式**。
+1. 建立名為 "TaxiFarePrediction" 的 **C# .net Core 主控台應用程式**。 請確定未**核**取 **[將方案和專案放在相同的目錄** **（vs** 2019）] 或 [**為方案建立目錄**] （vs 2017）。
 
 ## <a name="prepare-and-understand-the-data"></a>準備並了解資料
 

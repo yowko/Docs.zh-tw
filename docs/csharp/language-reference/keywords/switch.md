@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 012fa5b4d5f39b4dfa4d1c77bc3d6fbe181e78a6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6f0a2cfd5a6de9c8c05bc3daea1e242183ebf03e
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428499"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552345"
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
 
@@ -45,7 +45,7 @@ ms.locfileid: "74428499"
 
 - [char](../builtin-types/char.md)。
 - [string](../builtin-types/reference-types.md)。
-- [bool](bool.md)。
+- [bool](../builtin-types/bool.md)。
 - [整數](../builtin-types/integral-numeric-types.md)值，例如 `int` 或 `long`。
 - [enum](enum.md) 值。
 
@@ -82,7 +82,7 @@ switch (caseSwitch)
 
 ## <a name="case-labels"></a>case 標籤
 
-每個 case 標籤都會指定要與比對運算式比較的模式 (先前範例中的 `caseSwitch` 變數)。 如果相符，控制權會轉移至 **「第一個」** 相符 case 標籤的參數區段。 若無任何狀況標籤模式符合比對運算式，會將控制權轉移到具有 `default` 狀況標籤的區段 (如有此區段)。 如果沒有 `default` 狀況，則不會執行任何參數區段中的陳述式，而且控制權會轉移到 `switch` 陳述式外部。
+每個 case 標籤都會指定要與比對運算式比較的模式 (先前範例中的 `caseSwitch` 變數)。 如果相符，控制權會轉移至包含「第一個」相符 case 標籤的參數區段。 若無任何狀況標籤模式符合比對運算式，會將控制權轉移到具有 `default` 狀況標籤的區段 (如有此區段)。 如果沒有 `default` 狀況，則不會執行任何參數區段中的陳述式，而且控制權會轉移到 `switch` 陳述式外部。
 
 如需 `switch` 陳述式和模式比對的資訊，請參閱[模式比對與 `switch` 陳述式](#pattern)一節。
 
@@ -98,15 +98,15 @@ switch (caseSwitch)
 
 - 變更參數區段的順序。
 
-- 在 [ 標籤中使用 ](#when)when 子句`case`。
+- 在 `case` 標籤中使用 [when 子句](#when)。
 
 ## <a name="the-default-case"></a>`default` case
 
-如果比對運算式不符合任何其他 `default` 標籤，則 `case` 狀況會指定要執行的參數區段。 如果 `default` 狀況不存在，而且比對運算式不符合任何其他 `case` 標籤，則程式流程會落到 `switch` 陳述式。
+如果比對運算式不符合任何其他 `case` 標籤，則 `default` 狀況會指定要執行的參數區段。 如果 `default` 狀況不存在，而且比對運算式不符合任何其他 `case` 標籤，則程式流程會落到 `switch` 陳述式。
 
 `default` case 可以依任何順序出現在 `switch` 陳述式中。 不論它在原始程式碼中的順序為何，一律都會在評估過所有 `case` 標籤之後最後才進行評估。
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a>使用 <a name="pattern" /> 陳述式進行的 `switch` 模式比對
+## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a>使用 `switch` 陳述式進行的 <a name="pattern" /> 模式比對
 
 每個 `case` 陳述式都會定義一個模式，並在模式符合比對運算式時，執行其包含參數區段。 所有版本的 C# 都支援常數模式。 從 C# 7.0 開始，支援其餘的模式。
 
@@ -120,7 +120,7 @@ switch (caseSwitch)
 
 其中，*constant* 是用來測試的值。 *constant* 可以是下列任何常數運算式：
 
-- [bool](bool.md) 常值：`true` 或 `false`。
+- [Bool](../builtin-types/bool.md)常值： `true` 或 `false`。
 - 任何[整數](../builtin-types/integral-numeric-types.md)常數，例如 `int`、`long`或 `byte`。
 - 所宣告之 `const` 變數的名稱。
 - 列舉常數。
@@ -133,7 +133,7 @@ switch (caseSwitch)
 
 - 否則，會呼叫靜態 [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) 方法來判斷運算式的值。
 
-下列範例使用常數模式，來判斷特定日期是週末、工作週的第一天、工作週的最後一天，還是工作週的中間一天。 其會依據 <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> 列舉的成員，評估當日的 <xref:System.DayOfWeek> 屬性。
+下列範例使用常數模式，來判斷特定日期是週末、工作週的第一天、工作週的最後一天，還是工作週的中間一天。 其會依據 <xref:System.DayOfWeek> 列舉的成員，評估當日的 <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> 屬性。
 
 [!code-csharp[switch#7](~/samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
@@ -151,7 +151,7 @@ switch (caseSwitch)
 
 其中，如果比對成功，則 *type* 是 *expr* 的結果要轉換的目標類型名稱，而 *varname* 是 *expr* 的結果所轉換的目標物件。 從 C# 7.1 開始，編譯時間類型的 *expr* 可以是泛型類型參數。
 
-如果下列任一項為真，`case` 運算式為`true`：
+如果符合下列任一項，則 `case` 運算式為`true`：
 
 - *expr* 是其類型與 *type* 相同的執行個體。
 
@@ -187,17 +187,17 @@ case null:
 
 從 C# 7.0 開始，因為 case 陳述式不需要互斥，所以您可以新增 `when` 子句來指定其他條件，您必須滿足這些條件，case 陳述式才會評估為 true。 `when` 子句可以是任何傳回布林值的運算式。
 
-下面範例定義基底 `Shape` 類別、衍生自 `Rectangle` 的 `Shape` 類別，以及衍生自 `Square` 的 `Rectangle` 類別。 它會使用 `when` 子句，確保 `ShowShapeInfo` 將已指派相等長度和寬度的 `Rectangle` 物件視為 `Square`，即使尚未具現化為 `Square` 物件也是一樣。 此方法不會嘗試顯示為 `null` 的物件或區域為零之組織結構的相關資訊。
+下面範例定義基底 `Shape` 類別、衍生自 `Shape` 的 `Rectangle` 類別，以及衍生自 `Rectangle` 的 `Square` 類別。 它會使用 `when` 子句，確保 `ShowShapeInfo` 將已指派相等長度和寬度的 `Rectangle` 物件視為 `Square`，即使尚未具現化為 `Square` 物件也是一樣。 此方法不會嘗試顯示為 `null` 的物件或區域為零之組織結構的相關資訊。
 
 [!code-csharp[when-clause#1](~/samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
 
-請注意，不會執行範例中嘗試測試 `when` 物件是否為 `Shape` 的 `null` 子句。 要測試是否為 `null` 的正確類型模式是 `case null:`。
+請注意，不會執行範例中嘗試測試 `Shape` 物件是否為 `null` 的 `when` 子句。 要測試是否為 `null` 的正確類型模式是 `case null:`。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/statements.md#the-switch-statement)中的 [switch 陳述式](/dotnet/csharp/language-reference/language-specification/introduction)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)中的 [switch 陳述式](~/_csharplang/spec/statements.md#the-switch-statement)。 語言規格是 C# 語法及用法的限定來源。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

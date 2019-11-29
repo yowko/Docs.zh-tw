@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: b264be5d2589455562a19ef55b5ddf1a4e74ce15
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c797b1e9a80030ce6a97fccb14da2c51d753a1dc
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428448"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552325"
 ---
 # <a name="value-types-c-reference"></a>實值型別 (C# 參考)
 
@@ -42,7 +42,7 @@ ms.locfileid: "74428448"
 
 - [整數型別](../builtin-types/integral-numeric-types.md)：整數數字型別和 [char](../builtin-types/char.md) 型別
 - [浮點類型](../builtin-types/floating-point-numeric-types.md)
-- [bool](bool.md)
+- [bool](../builtin-types/bool.md)
 
 透過關鍵字即可識別簡單型別，但這些關鍵字只是 <xref:System> 命名空間中預先定義之結構型別的別名。 例如，[int](../builtin-types/integral-numeric-types.md) 是 <xref:System.Int32?displayProperty=nameWithType> 的別名。 如需完整的別名清單，請參閱[內建型別表](built-in-types-table.md)。
 
@@ -54,7 +54,7 @@ ms.locfileid: "74428448"
 
 - 常數運算式如果運算元全都是簡單型別常數，就會在編譯階段進行評估。
 
-如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/types.md#simple-types)的[簡單型別](/dotnet/csharp/language-reference/language-specification/introduction)一節。
+如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的[簡單型別](~/_csharplang/spec/types.md#simple-types)一節。
 
 ## <a name="initializing-value-types"></a>將實值型別初始化
 
@@ -102,7 +102,7 @@ var p = new Point(); // Invoke parameterless constructor for the struct.
 
 如需有關將數字型別輸出格式化的資訊，請參閱[格式化數值結果表](formatting-numeric-results-table.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 關鍵字](index.md)

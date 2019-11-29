@@ -1,17 +1,17 @@
 ---
 title: 教學課程：分析情感-二進位分類
 description: 本教學課程會示範如何建立 Razor Pages 應用程式，以將情感從網站批註中分類，並採取適當的動作。 二元情感分類器會在 Visual Studio 中使用模型產生器。
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 5e5b60a53db70b33ed798bcf33497b74911ba727
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e919341130c6778207f324dd9eb3b3f54c8a9c68
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974801"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551852"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>教學課程：使用 ML.NET 模型產生器來分析 web 應用程式中的網站批註情感
 
@@ -48,7 +48,7 @@ ms.locfileid: "73974801"
     1. 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [Web] 節點。
     1. 然後，選取 [ASP.NET Core Web 應用程式] 專案範本。
     1. 在 [**名稱**] 文字方塊中，輸入 "SentimentRazor"。
-    1. 預設應該會核取 [**為方案建立目錄**] 核取方塊。 如果不是這種情況，請檢查它。
+    1. 請確定未**核**取 **[將方案和專案放在相同的目錄** **（vs** 2019）] 或 [**為方案建立目錄**] （vs 2017）。
     1. 選取 [確定] 按鈕。
     1. 在顯示不同類型 ASP.NET Core 專案的視窗中，選擇 [ **Web 應用程式**]，然後選取 [**確定]** 按鈕。
 

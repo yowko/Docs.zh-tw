@@ -9,16 +9,16 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 78233b9a18f4369ebb086f2016af3f945b6a654a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039020"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552469"
 ---
 # <a name="c-operators-c-reference"></a>C# 運算子 (C# 參考)
 
-C# 提供許多由內建類型支援的運算子。 舉例來說，以數值運算元執行算術運算的[算術運算子](arithmetic-operators.md)，以及以[布林](../keywords/bool.md)運算元執行邏輯運算的[布林值邏輯運算子](boolean-logical-operators.md)。 部分運算子可以[多載](operator-overloading.md)。 進行運算子多載時，您可以為使用者定義類型指定運算元的運算子行為。
+C# 提供許多由內建類型支援的運算子。 舉例來說，以數值運算元執行算術運算的[算術運算子](arithmetic-operators.md)，以及以[布林](../builtin-types/bool.md)運算元執行邏輯運算的[布林值邏輯運算子](boolean-logical-operators.md)。 部分運算子可以[多載](operator-overloading.md)。 進行運算子多載時，您可以為使用者定義類型指定運算元的運算子行為。
 
 再[運算式](../../programming-guide/statements-expressions-operators/expressions.md)中，運算子優先順序和關聯性會決定作業的執行順序。 您可以使用括弧來變更由運算子優先順序和關聯性強制執行的評估順序。
 

@@ -3,15 +3,15 @@ title: 教學課程：使用模型產生器分類健全狀況違規
 description: 本教學課程說明如何使用 ML.NET 模型產生器來建立多元分類模型，以分類三藩市中的餐廳健康情況違規嚴重性。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/30/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: cbe20183d317ac6fe39a937e1cfa8a5e3df81b74
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 07729e1667f8aa3aba74576943d79eaa3bcd14d8
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977214"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552889"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>教學課程：使用模型產生器分類餐廳健康情況違規的嚴重性
 
@@ -29,9 +29,9 @@ ms.locfileid: "73977214"
 > - 使用模型來進行預測
 
 > [!NOTE]
-> 模型建立器目前為預覽版。
+> 模型產生器目前為預覽版。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
 
 如需必要條件和安裝指示的清單，請造訪[模型產生器安裝指南](../how-to-guides/install-model-builder.md)。
 
@@ -41,7 +41,7 @@ ms.locfileid: "73977214"
 
 ## <a name="create-a-console-application"></a>建立主控台應用程式
 
-1. 建立名為 "RestaurantViolations" 的 **C# .net Core 主控台應用程式**。
+1. 建立名為 "RestaurantViolations" 的 **C# .net Core 主控台應用程式**。 請確定未**核**取 **[將方案和專案放在相同的目錄** **（vs** 2019）] 或 [**為方案建立目錄**] （vs 2017）。
 
 ## <a name="prepare-and-understand-the-data"></a>準備並了解資料
 
