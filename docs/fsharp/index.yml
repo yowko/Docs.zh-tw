@@ -1,0 +1,69 @@
+### YamlMime:Landing
+title: F#附帶
+summary: 瞭解如何在 .NET 上使用程式F#設計語言撰寫任何應用程式。
+metadata:
+  title: F#檔-開始使用、教學課程、參考。
+  description: 學習F#程式設計-適用于新F#的開發人員F# ，以及經驗豐富的 .net 開發人員
+  ms.topic: landing-page
+  author: cartermp
+  ms.author: phcart
+  ms.date: 11/25/2019
+  ms.openlocfilehash: 7aef8012a5ef58c1c0a142dce8baf7ccb73f50fa
+  ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/27/2019
+  ms.locfileid: "74553048"
+landingContent:
+- title: 學習程式F#
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: 什麼是F#？
+      url: what-is-fsharp.md
+    - text: 安裝 F#
+      url: get-started/install-fsharp.md
+    - text: 開始使用F# Visual Studio
+      url: get-started/get-started-visual-studio.md
+    - text: 開始使用F# Visual Studio Code
+      url: get-started/get-started-vscode.md
+  - linkListType: download
+    links:
+    - text: 下載 .NET Core SDK
+      url: https://dotnet.microsoft.com/download
+- title: F#説明中心
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: F# 的教學課程
+      url: tour.md
+    - text: F# 函式程式設計簡介
+      url: introduction-to-functional-programming/index.md
+    - text: 一級函式
+      url: introduction-to-functional-programming/first-class-functions.md
+  - linkListType: concept
+    links:
+    - text: F# 樣式指南
+      url: style-guide/index.md
+    - text: F# 程式碼格式方針
+      url: style-guide/formatting.md
+    - text: F# 編碼慣例
+      url: style-guide/conventions.md
+  - linkListType: tutorial
+    links:
+    - text: 中的非同步程式設計F#
+      url: tutorials/asynchronous-and-concurrent-programming/async.md
+- title: F#語言參考
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: 語言參考
+      url: language-reference/index.md
+    - text: 關鍵字參考
+      url: language-reference/keyword-reference.md
+    - text: 符號和運算子參考
+      url: language-reference/symbol-and-operator-reference/index.md
+    - text: 功能
+      url: language-reference/functions/index.md
+    - text: F#各種
+      url: language-reference/fsharp-types.md
