@@ -2,12 +2,12 @@
 title: 使用作為容器執行的資料庫伺服器
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 使用作為容器執行的資料庫伺服器？只適用於開發！ 了解原因。
 ms.date: 10/02/2018
-ms.openlocfilehash: a508ba734525b24e2f3f00408e2c59c8c00f1898
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 371d622dc39681edb0b52e723faccbf611b7797c
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291302"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568423"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>使用作為容器執行的資料庫伺服器
 
@@ -162,7 +162,7 @@ public class Startup
 
 Redis 提供使用 Redis 的 Docker 映像。 該映像可從位於此 URL 的 Docker Hub 取得：
 
-<https://hub.docker.com/\_/redis/>
+<https://hub.docker.com/_/redis/>
 
 您可以在命令提示字元中執行下列 Docker CLI 命令，直接執行 Docker Redis 容器：
 

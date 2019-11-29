@@ -2,12 +2,12 @@
 title: 雲端原生應用程式的 IdentityServer
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: 3797214685d20109b2c5dc4440ae5fc64dfddce6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e96395766d1a4b63815c10c2c90e35a8f7f9159d
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087259"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568473"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>雲端原生應用程式的 IdentityServer
 
@@ -41,7 +41,7 @@ IdentityServer 提供在 ASP.NET Core 應用程式中執行的中介軟體，並
 - 撤銷（權杖撤銷）
 - 結束會話（在所有應用程式中觸發單一登出）
 
-## <a name="getting-started"></a>使用者入門
+## <a name="getting-started"></a>入門
 
 IdentityServer4 是開放原始碼且可免費使用。 您可以使用 NuGet 套件，將它新增至您的應用程式。 主要套件是已下載超過4000000次的[IdentityServer4](https://www.nuget.org/packages/IdentityServer4/) 。 基底套件不包含任何使用者介面程式碼，而且只支援記憶體設定。 若要將它與資料庫搭配使用，您也會想要使用 Entity Framework Core 來儲存 IdentityServer 之設定和運算元據的資料提供者，例如[IdentityServer4. EntityFramework](https://www.nuget.org/packages/IdentityServer4.EntityFramework) 。 針對使用者介面，您可以將[檔案從快速入門 UI 存放庫](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI)複製到 ASP.NET Core MVC 應用程式中，以新增使用 IdentityServer 中介軟體進行登入和登出的支援。
 
@@ -65,7 +65,7 @@ public class Startup
                 options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
 
                 options.ClientId = "<insert here>";
-                options.ClientSecret = "<inser here>";
+                options.ClientSecret = "<insert here>";
             })
             .AddOpenIdConnect("demoidsrv", "IdentityServer", options =>
             {
