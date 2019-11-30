@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: da575c65902ec8751c12482d0c8d0abd523623e4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975126"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568812"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>資料流處理提供者 (WCF Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "73975126"
 
 - 媒體連結項目 - 具有相關媒體資源資料流之參考的實體。
 
-透過 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以實作資料流處理資料提供者來定義二進位資源資料流。 資料流程處理提供者執行會提供資料服務，其中包含與特定實體相關聯的媒體資源串流做為 <xref:System.IO.Stream> 物件。 這個實作可讓資料服務透過 HTTP 接受並傳回媒體資源當做指定之 MIME 類型的二進位資料流。
+使用 WCF Data Services，您可以藉由執行串流處理資料提供者來定義二進位資源串流。 資料流程處理提供者執行會提供資料服務，其中包含與特定實體相關聯的媒體資源串流做為 <xref:System.IO.Stream> 物件。 這個實作可讓資料服務透過 HTTP 接受並傳回媒體資源當做指定之 MIME 類型的二進位資料流。
 
 設定資料服務來支援二進位資料的資料流處理需要進行以下步驟：
 
@@ -79,7 +79,7 @@ ms.locfileid: "73975126"
 
 ## <a name="creating-the-streaming-data-service"></a>建立資料流處理資料服務
 
-若要為 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 執行階段提供 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 實作的存取權，您所建立的資料服務也必須實作 <xref:System.IServiceProvider> 介面。 下列範例將示範如何實作 <xref:System.IServiceProvider.GetService%2A> 方法來傳回實作 `PhotoServiceStreamProvider` 之 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 類別的執行個體。
+若要提供 WCF Data Services 執行時間具有 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 實作為的存取權，您所建立的資料服務也必須執行 <xref:System.IServiceProvider> 介面。 下列範例將示範如何實作 <xref:System.IServiceProvider.GetService%2A> 方法來傳回實作 `PhotoServiceStreamProvider` 之 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 類別的執行個體。
 
 [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
 [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]
@@ -99,7 +99,7 @@ ms.locfileid: "73975126"
 
 ## <a name="using-data-streams-in-a-client-application"></a>在用戶端應用程式中使用資料流
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫可讓您將這些公開的資源當做用戶端的二進位資料流來擷取及更新。 如需詳細資訊，請參閱[使用二進位資料](working-with-binary-data-wcf-data-services.md)。
+WCF Data Services 用戶端程式庫可讓您在用戶端上以二進位資料流程的形式，抓取和更新這些公開的資源。 如需詳細資訊，請參閱[使用二進位資料](working-with-binary-data-wcf-data-services.md)。
 
 ## <a name="considerations-for-working-with-a-streaming-provider"></a>使用資料流處理提供者的考量
 

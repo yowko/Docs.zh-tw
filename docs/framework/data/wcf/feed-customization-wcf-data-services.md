@@ -10,22 +10,22 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 56c91fd1e9ea4a2e35bacbebab0f489e337cfec5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 08df16be9df6d55ab9f1426e205e56d9609ce72e
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975292"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569228"
 ---
 # <a name="feed-customization-wcf-data-services"></a>自訂摘要 (WCF 資料服務)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用開放式資料通訊協定（OData）將資料公開為摘要。 OData 同時支援資料摘要的 Atom 和 JavaScript 物件標記法（JSON）格式。 當您使用 Atom 摘要時，OData 會提供標準的方法，將資料（例如實體和關聯性）序列化為 XML 格式，可包含在 HTTP 訊息的主體中。 OData 定義實體和 Atom 元素中所包含之資料之間的預設實體屬性對應。 如需詳細資訊，請參閱[OData： Atom 格式](https://go.microsoft.com/fwlink/?LinkID=185794)。  
+WCF Data Services 使用開放式資料通訊協定（OData）將資料公開為摘要。 OData 同時支援資料摘要的 Atom 和 JavaScript 物件標記法（JSON）格式。 當您使用 Atom 摘要時，OData 會提供標準的方法，將資料（例如實體和關聯性）序列化為 XML 格式，可包含在 HTTP 訊息的主體中。 OData 定義實體和 Atom 元素中所包含之資料之間的預設實體屬性對應。 如需詳細資訊，請參閱[OData： Atom 格式](https://go.microsoft.com/fwlink/?LinkID=185794)。  
   
  您可能有一個應用程式案例，該案例要求資料服務所傳回的屬性資料是以自訂行為序列化，而不是以標準摘要格式序列化。 使用 OData，您可以自訂資料摘要中的序列化，讓實體的屬性可以對應至專案的未使用元素和屬性，或饋送中專案的自訂元素。  
   
 > [!NOTE]
 > 僅支援 Atom 摘要的摘要自訂。 當傳回的摘要需要 JSON 格式時，不會傳回自訂摘要。  
   
- 透過 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以手動將屬性套用至資料模型中的實體類型，藉以定義 Atom 裝載的替代實體屬性對應。 資料服務的資料來源提供者會判斷您應如何套用這些屬性。  
+ 使用 WCF Data Services，您可以手動將屬性套用至資料模型中的實體類型，以定義 Atom 承載的替代實體屬性對應。 資料服務的資料來源提供者會判斷您應如何套用這些屬性。  
   
 > [!IMPORTANT]
 > 當您定義自訂摘要時，您必須確保所有已定義自訂對應的實體屬性都包含在投影中。 若投影中未包含對應的實體屬性，則可能會發生資料遺失。 如需詳細資訊，請參閱[查詢投影](query-projections-wcf-data-services.md)。  
@@ -50,7 +50,7 @@ ms.locfileid: "73975292"
 |屬性名稱|描述|  
 |--------------------|-----------------|  
 |`FC_ContentKind`|指示內容的類型。 以下關鍵字可定義新聞訂閱方式內容類型。<br /><br /> `text:` 屬性值在摘要中會顯示為文字。<br /><br /> `html:` 屬性值在摘要中會顯示為 HTML。<br /><br /> `xhtml:` 屬性值在摘要中會顯示為 XML 格式的 HTML。<br /><br /> 這些關鍵字相當於搭配反映提供者所使用之 <xref:System.Data.Services.Common.SyndicationTextContentKind> 列舉的值。<br /><br /> 使用 `FC_NsPrefix` 和 `FC_NsUri` 屬性時，將不支援此屬性。<br /><br /> 在您指定 `xhtml` 屬性的`FC_ContentKind` 值時，必須先確保屬性值會包含格式正確的 XML。 資料服務會傳回未執行任何轉換的值。 您還必須確保傳回之 XML 中的任何 XML 項目前置詞具備命名空間 URI 以及對應之摘要中所定義的前置詞。|  
-|`FC_KeepInContent`|指出參考的屬性值應包含在摘要的內容區段以及所對應的位置中。 有效值為 `true` 和 `false`。 若要讓產生的摘要與舊版的 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]回溯相容，請指定 `true` 的值，以確定此值包含在摘要的內容區段中。|  
+|`FC_KeepInContent`|指出參考的屬性值應包含在摘要的內容區段以及所對應的位置中。 有效值為 `true` 和 `false`。 若要讓產生的摘要與舊版的 WCF Data Services 回溯相容，請指定 `true` 的值，以確定此值包含在摘要的內容區段中。|  
 |`FC_NsPrefix`|非新聞訂閱方式對應中 XML 項目的命名空間前置詞。 這個屬性必須搭配 `FC_NsUri` 屬性使用，不能搭配 `FC_ContentKind` 屬性使用。|  
 |`FC_NsUri`|非新聞訂閱方式對應中 XML 項目的命名空間 URI。 這個屬性必須搭配 `FC_NsPrefix` 屬性使用，不能搭配 `FC_ContentKind` 屬性使用。|  
 |`FC_SourcePath`|此摘要對應規則套用的實體屬性路徑。 僅支援用於 `EntityType` 項目中的屬性。<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> 屬性不能直接參考複雜型別。 針對複雜型別，您必須使用路徑運算式，其中的屬性名稱以反斜線 (`/`) 字元隔開。 例如，`Person` 具有整數屬性 `Age` 和複雜屬性的實體類型時，允許下列值<br /><br /> `Address`:<br /><br /> `Age`<br /><br /> `Address/Street`<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> 屬性不能設為包含空格或其他字元的值，這些在屬性名稱中不是有效字元。|  
@@ -83,7 +83,7 @@ ms.locfileid: "73975292"
 ## <a name="feed-customization-considerations"></a>摘要自訂考量  
  定義自訂摘要對應時，您應該考慮下列事項。  
   
-- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端只包含空白字元時，會將摘要中的對應元素視為空白。 因此，只包含空白字元的對應元素不會在具有相同空白字元的用戶端上具體化。 若要保留用戶端上的這個空白字元，您必須將 `KeepInContext` 的值設定為摘要對應屬性中的 `true`。  
+- WCF Data Services 用戶端只包含空白字元時，會將摘要中的對應元素視為空白。 因此，只包含空白字元的對應元素不會在具有相同空白字元的用戶端上具體化。 若要保留用戶端上的這個空白字元，您必須將 `KeepInContext` 的值設定為摘要對應屬性中的 `true`。  
   
 ## <a name="versioning-requirements"></a>版本控制需求  
  摘要自訂具有下列 OData 通訊協定版本控制需求：  

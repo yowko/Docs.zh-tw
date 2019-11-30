@@ -10,12 +10,12 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 17475cccf461371a909660bfe3f8db29bf1fa2fe
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 03fa40a895d322a8b5ad543f75424ef5b379672b
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975179"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568891"
 ---
 # <a name="query-projections-wcf-data-services"></a>查詢投影 (WCF 資料服務)
 
@@ -112,7 +112,7 @@ ms.locfileid: "73975179"
 
 - 當投影包含導覽屬性時，相關物件會以隱含方式載入，不必呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 方法。 不支援將 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 方法用於投影查詢中。
 
-- 查詢用戶端上的投影查詢會轉譯為在要求 URI 中使用 `$select` 查詢選項。 若針對舊版 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 執行使用投影的查詢 (該版本不支援 `$select` 查詢選項)，會傳回錯誤。 在將資料服務之 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 的 <xref:System.Data.Services.DataServiceBehavior> 設定為 <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> 值時也會發生這種情況。 如需詳細資訊，請參閱[資料服務版本](data-service-versioning-wcf-data-services.md)設定。
+- 查詢用戶端上的投影查詢會轉譯為在要求 URI 中使用 `$select` 查詢選項。 針對不支援 `$select` 查詢選項的舊版 WCF Data Services 執行具有投射的查詢時，會傳回錯誤。 在將資料服務之 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 的 <xref:System.Data.Services.DataServiceBehavior> 設定為 <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> 值時也會發生這種情況。 如需詳細資訊，請參閱[資料服務版本](data-service-versioning-wcf-data-services.md)設定。
 
 如需詳細資訊，請參閱[如何：投影查詢結果](how-to-project-query-results-wcf-data-services.md)。
 

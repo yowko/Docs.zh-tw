@@ -1,5 +1,5 @@
 ---
-title: 作法：載入相關實體（WCF Data Services）
+title: 如何：載入相關實體 (WCF 資料服務)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
-ms.openlocfilehash: 14b0ba988c96c270610208a4f944083bb333eac5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 84c2448f317e813a95688feaaac1c97436de1b16
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780022"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569008"
 ---
-# <a name="how-to-load-related-entities-wcf-data-services"></a>作法：載入相關實體（WCF Data Services）
-當您需要在 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 中載入相關的實體時，可以在 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 類別上使用 <xref:System.Data.Services.Client.DataServiceContext> 方法。 您也可以<xref:System.Data.Services.Client.DataServiceQuery%601>在上<xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>使用方法，要求將相關實體立即載入相同的查詢回應中。  
+# <a name="how-to-load-related-entities-wcf-data-services"></a>如何：載入相關實體 (WCF 資料服務)
+當您需要在 WCF Data Services 中載入相關聯的實體時，您可以在 <xref:System.Data.Services.Client.DataServiceContext> 類別上使用 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 方法。 您也可以在 <xref:System.Data.Services.Client.DataServiceQuery%601> 上使用 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 方法，以要求將相關實體立即載入相同的查詢回應中。  
   
  本主題中的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成[WCF Data Services 快速入門](quickstart-wcf-data-services.md)時，會建立此服務和用戶端資料類別。  
   
@@ -32,6 +32,6 @@ ms.locfileid: "70780022"
  [!code-csharp[Astoria Northwind Client#ExpandOrderDetails](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetails)]
  [!code-vb[Astoria Northwind Client#ExpandOrderDetails](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetails)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [查詢資料服務](querying-the-data-service-wcf-data-services.md)

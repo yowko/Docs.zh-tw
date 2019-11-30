@@ -1,5 +1,5 @@
 ---
-title: HOW TO：啟用資料服務結果分頁（WCF Data Services）
+title: 如何：為資料服務結果啟用分頁功能 (WCF 資料服務)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - paging output [WCF Data Services]
 ms.assetid: 9a316cbd-9612-4482-a541-a10bc78b2635
-ms.openlocfilehash: 82b4d0fd3531778ab494d6526a56b092edf9481a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6b7cea2475a5c11091a04ef3044bbc958e55fc5d
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780048"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569097"
 ---
-# <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>作法：啟用資料服務結果分頁（WCF Data Services）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可讓您限制資料服務查詢所傳回的實體數目。 當服務已初始化且可針對每個實體集分別設定服務時，分頁限制會定義於所呼叫的方法中。  
+# <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>如何：為資料服務結果啟用分頁功能 (WCF 資料服務)
+WCF Data Services 可讓您限制資料服務查詢所傳回的實體數目。 當服務已初始化且可針對每個實體集分別設定服務時，分頁限制會定義於所呼叫的方法中。  
   
  啟用分頁時，摘要中的最後一個項目會包含下一頁資料的連結。 如需詳細資訊，請參閱設定[資料服務](configuring-the-data-service-wcf-data-services.md)。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "70780048"
      [!code-csharp[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind.svc.cs#dataserviceconfigpaging)]
      [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind.svc.vb#dataserviceconfigpaging)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [載入延後內容](loading-deferred-content-wcf-data-services.md)
 - [如何：載入已分頁的結果](how-to-load-paged-results-wcf-data-services.md)

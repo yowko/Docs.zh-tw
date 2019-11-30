@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: 68b04ac59d1b73d6e66a5a7836ce1bfe30d9c681
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7a2b201e5690c4304e663e9429c54f377e05f556
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975183"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568912"
 ---
 # <a name="object-materialization-wcf-data-services"></a>物件具體化 (WCF 資料服務)
 
 當您使用 [**加入服務參考**] 對話方塊，在以 .NET Framework 為基礎的用戶端應用程式中取用開放式資料通訊協定（OData）摘要時，會針對摘要所公開的資料模型中的每個實體類型產生對應的資料類別。 如需詳細資訊，請參閱[產生資料服務用戶端程式庫](generating-the-data-service-client-library-wcf-data-services.md)。 查詢所傳回之實體資料會具體化為其中一個產生之用戶端資料服務類別的執行個體。 如需追蹤物件之合併選項和識別解析的相關資訊，請參閱[管理資料服務內容](managing-the-data-service-context-wcf-data-services.md)。
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 還能讓您定義自己的用戶端資料服務類別，而不必使用工具產生的資料類別。 這可讓您使用自己的資料類別，也就是「單純的 CLR 物件」(POCO) 資料類別。 使用這些類型的自訂資料類別時，您應該使用 <xref:System.Data.Services.Common.DataServiceKeyAttribute> 或 <xref:System.Data.Services.Common.DataServiceEntityAttribute> 來建立資料類別的屬性，並確保用戶端上的型別名稱符合資料服務之資料模型中的型別名稱。
+WCF Data Services 也可讓您定義自己的用戶端資料服務類別，而不是使用工具產生的資料類別。 這可讓您使用自己的資料類別，也就是「單純的 CLR 物件」(POCO) 資料類別。 使用這些類型的自訂資料類別時，您應該使用 <xref:System.Data.Services.Common.DataServiceKeyAttribute> 或 <xref:System.Data.Services.Common.DataServiceEntityAttribute> 來建立資料類別的屬性，並確保用戶端上的型別名稱符合資料服務之資料模型中的型別名稱。
 
 當程式庫收到查詢回應訊息之後，它會將從 OData 摘要傳回的資料具體化成查詢類型之用戶端資料服務類別的實例。 具體化這些物件的一般程序如下所示：
 

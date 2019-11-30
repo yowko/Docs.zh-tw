@@ -1,5 +1,5 @@
 ---
-title: HOW TO：執行資料服務查詢（WCF Data Services）
+title: 如何：執行資料服務查詢 (WCF 資料服務)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-ms.openlocfilehash: 984bba9f31ddaee68c6997ba6da09a511e42b4ce
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b06a21a45dcf6e67c41287c4cd59cdda4aa7b447
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780072"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569073"
 ---
-# <a name="how-to-execute-data-service-queries-wcf-data-services"></a>HOW TO：執行資料服務查詢（WCF Data Services）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可讓您使用所產生的用戶端資料服務類別，從以 .NET Framework 為基礎的用戶端應用程式查詢資料服務。 您可以使用下列其中一種方法執行查詢：  
+# <a name="how-to-execute-data-service-queries-wcf-data-services"></a>如何：執行資料服務查詢 (WCF 資料服務)
+WCF Data Services 可讓您使用所產生的用戶端資料服務類別，從以 .NET Framework 為基礎的用戶端應用程式查詢資料服務。 您可以使用下列其中一種方法執行查詢：  
   
 - 針對您從 <xref:System.Data.Services.Client.DataServiceQuery%601> 工具所產生之 <xref:System.Data.Services.Client.DataServiceContext> 取得的具名 `Add Data Service Reference` 執行 LINQ 查詢。  
   
@@ -47,6 +47,6 @@ ms.locfileid: "70780072"
  [!code-csharp[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomersexplicit)]
  [!code-vb[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomersexplicit)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [如何：將查詢選項加入至資料服務查詢](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [如何：將查詢選項新增至資料服務查詢](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)

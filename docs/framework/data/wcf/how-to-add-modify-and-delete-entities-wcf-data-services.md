@@ -1,5 +1,5 @@
 ---
-title: 作法：新增、修改和刪除實體（WCF Data Services）
+title: 如何：新增、修改和刪除實體 (WCF 資料服務)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
-ms.openlocfilehash: 13c59bee9fc58dbe8c5b8c768fe9ff8b31d72e76
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 501bec59a61b51ec4bece4b0ce2f941189b35ed0
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780253"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569191"
 ---
-# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>HOW TO：新增、修改和刪除實體（WCF Data Services）
-透過用戶端程式庫，您可以在中的<xref:System.Data.Services.Client.DataServiceContext>物件上執行對等的動作，以建立、更新和刪除資料服務中的實體資料。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 如需詳細資訊，請參閱[更新資料服務](updating-the-data-service-wcf-data-services.md)。  
+# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>如何：新增、修改和刪除實體 (WCF 資料服務)
+透過 WCF Data Services 用戶端程式庫，您可以在 <xref:System.Data.Services.Client.DataServiceContext>中的物件上執行對等動作，以建立、更新和刪除資料服務中的實體資料。 如需詳細資訊，請參閱[更新資料服務](updating-the-data-service-wcf-data-services.md)。  
   
  本主題中的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成[WCF Data Services 快速入門](quickstart-wcf-data-services.md)時，會建立此服務和用戶端資料類別。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "70780253"
  [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderAuto](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addorderdetailtoorderauto)]
  [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderAuto](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addorderdetailtoorderauto)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)
-- [如何：將現有的實體附加至 DataServiceCoNtext](attach-an-existing-entity-to-dc-wcf-data.md)
+- [如何：將現有實體附加至 DataServiceContext](attach-an-existing-entity-to-dc-wcf-data.md)
 - [如何：定義實體關聯性](how-to-define-entity-relationships-wcf-data-services.md)
 - [批次處理作業](batching-operations-wcf-data-services.md)

@@ -2,16 +2,24 @@
 title: 中斷性變更類別 - .NET Core
 description: 了解 .NET Core 如何分類中斷性變更。
 ms.date: 06/10/2019
-ms.openlocfilehash: 68bc51b6662de070ef901b73fb75ff3aced95726
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739359"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567917"
 ---
 # <a name="breaking-change-categories"></a>中斷性變更類別
 
-*相容性*是指在實作之 .NET 版本上編譯或執行程式碼的能力，而該版本與原先開發程式碼時所使用的 .NET 版本不同。 特定變更可能會造成六種不同的相容性影響。 在[評估相容性時考慮的個別變更種類](index.md)屬於前五類。
+*相容性*是指在實作之 .NET 版本上編譯或執行程式碼的能力，而該版本與原先開發程式碼時所使用的 .NET 版本不同。 特定變更可能會造成六種不同的相容性影響。 評估相容性時所考慮的[個別變更種類](index.md)分為下列類別：
+
+- [行為變更](#behavioral-change)
+- [二進位相容性](#binary-compatibility)
+- [來源相容性](#source-compatibility)
+- [設計階段相容性](#design-time-compatibility)
+- [回溯相容性](#backwards-compatibility)
+
+[向前相容性](#forward-compatibility)不是 .net Core 的目標。
 
 ## <a name="behavioral-change"></a>行為變更
 

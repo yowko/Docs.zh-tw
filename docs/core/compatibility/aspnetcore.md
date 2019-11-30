@@ -4,16 +4,20 @@ description: 列出 ASP.NET Core 中的重大變更。
 ms.date: 11/25/2019
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: ba8d17d4a3d44f9ebac1592afa1d987cfb23c5e7
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
-ms.translationtype: HT
+ms.openlocfilehash: 130a89f45c3f80975c56ea3a4845ee560921286e
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552160"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568372"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 的重大變更
 
 以下是 ASP.NET Core 版本的 ASP.NET Core 重大變更清單。 ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
+
+## <a name="aspnet-core-31"></a>ASP.NET Core 3。1
+
+[!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]
 
 ## <a name="aspnet-core-30"></a>ASP.NET Core 3。0
 
@@ -202,7 +206,3 @@ ms.locfileid: "74552160"
 ***
 
 [!INCLUDE[Target framework: .NET Framework not supported](~/includes/core-changes/aspnetcore/3.0/targetfx-netfx-tfm-support.md)]
-
-## <a name="aspnet-core-31"></a>ASP.NET Core 3。1
-
-[!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]

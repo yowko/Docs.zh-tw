@@ -2,23 +2,23 @@
 title: 管理資料服務內容 (WCF Data Services)
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
-ms.openlocfilehash: 621887f2814127c7c6800fecc9ade1e161db46e0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 104b87a9fdfc1e461b708acf7a75c8327ad182af
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975202"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568931"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>管理資料服務內容 (WCF Data Services)
 <xref:System.Data.Services.Client.DataServiceContext> 類別會封裝針對特定資料服務支援的作業。 雖然 OData 服務是無狀態的，但內容並不是。 因此，您可以使用 <xref:System.Data.Services.Client.DataServiceContext> 類別來維護與資料服務互動之間的狀態，以便支援變更管理之類的功能。 這個類別也可以管理識別及追蹤變更。  
   
 ## <a name="merge-options-and-identity-resolution"></a>合併選項和識別解析  
- 當執行 <xref:System.Data.Services.Client.DataServiceQuery%601> 時，回應摘要中的實體會具體化成為物件。 如需詳細資訊，請參閱[物件具體化](object-materialization-wcf-data-services.md)。 回應訊息中的項目具體化成為物件的方式是根據識別解析來執行，而且會取決於執行查詢時所使用的合併選項。 如果在單一 <xref:System.Data.Services.Client.DataServiceContext> 的範圍中執行多個查詢或載入要求，則 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端只會追蹤具有特定索引鍵值之物件的單一執行個體。 用來執行識別解析的這個索引鍵會唯一識別實體。  
+ 當執行 <xref:System.Data.Services.Client.DataServiceQuery%601> 時，回應摘要中的實體會具體化成為物件。 如需詳細資訊，請參閱[物件具體化](object-materialization-wcf-data-services.md)。 回應訊息中的項目具體化成為物件的方式是根據識別解析來執行，而且會取決於執行查詢時所使用的合併選項。 在單一 <xref:System.Data.Services.Client.DataServiceContext>的範圍中執行多個查詢或載入要求時，WCF Data Services 用戶端只會追蹤具有特定索引鍵值之物件的單一實例。 用來執行識別解析的這個索引鍵會唯一識別實體。  
   
  根據預設，用戶端只會將回應摘要中的項目具體化成為實體的物件，而這些實體尚未被 <xref:System.Data.Services.Client.DataServiceContext> 所追蹤。 這表示，已經在快取中之物件的變更不會遭到覆寫。 這個行為的控制方式，是針對查詢和載入作業指定 <xref:System.Data.Services.Client.MergeOption> 值。 這個選項的指定方式是在 <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A> 上設定 <xref:System.Data.Services.Client.DataServiceContext> 屬性。 預設的合併選項值是 <xref:System.Data.Services.Client.MergeOption.AppendOnly>。 這樣只會具體化尚未被追蹤之實體的物件，這表示現有的物件不會遭到覆寫。 有另一個方式可避免用戶端的物件變更遭到資料服務中的更新所覆寫，就是指定 <xref:System.Data.Services.Client.MergeOption.PreserveChanges>。 當您指定 <xref:System.Data.Services.Client.MergeOption.OverwriteChanges> 時，將會使用回應摘要中項目的最新值來取代用戶端的物件值，即使這些物件已有變更亦然。 當使用 <xref:System.Data.Services.Client.MergeOption.NoTracking> 合併選項時，<xref:System.Data.Services.Client.DataServiceContext> 無法將用戶端物件所做的變更傳送給資料服務。 使用這個選項時，一定會使用資料服務中的值來覆寫變更。  
   
 ## <a name="managing-concurrency"></a>管理並行存取  
- OData 支援開放式平行存取，可讓資料服務偵測到更新衝突。 可以透過一種方式來設定資料服務提供者，讓資料服務使用並行語彙基元來檢查實體的變更。 這個語彙基元包含實體類型的一個或多個屬性，資料服務會驗證這些屬性以判斷資源是否已變更。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端會為您管理並行標記（包含在與資料服務之要求和回應的 eTag 標頭中）。 如需詳細資訊，請參閱[更新資料服務](updating-the-data-service-wcf-data-services.md)。  
+ OData 支援開放式平行存取，可讓資料服務偵測到更新衝突。 可以透過一種方式來設定資料服務提供者，讓資料服務使用並行語彙基元來檢查實體的變更。 這個語彙基元包含實體類型的一個或多個屬性，資料服務會驗證這些屬性以判斷資源是否已變更。 WCF Data Services 用戶端會為您管理並行標記（包含在與資料服務之要求和回應的 eTag 標頭中）。 如需詳細資訊，請參閱[更新資料服務](updating-the-data-service-wcf-data-services.md)。  
   
  <xref:System.Data.Services.Client.DataServiceContext> 會追蹤使用 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 或是 <xref:System.Data.Services.Client.DataServiceCollection%601> 所手動提報的物件變更。 當呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，用戶端會將變更傳回資料服務。 當用戶端的資料變更與資料服務的變更衝突時，<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 會失敗。 當發生這個狀況時，您必須再次查詢實體資源，以接收更新資料。 若要覆寫資料服務中的變更，請使用 <xref:System.Data.Services.Client.MergeOption.PreserveChanges> 合併選項執行查詢。 當您再次呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 時，用戶端所保留的變更會保存到資料服務，前提是尚未針對資料服務中的資源進行其他變更。  
   

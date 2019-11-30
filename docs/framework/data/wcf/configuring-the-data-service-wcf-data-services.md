@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 4db0cd1b954b2beb6cc9eb32280fe06845a7385b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 80878c18143eaa603e624c8be63f11af91cfcfb6
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974819"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569294"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>設定資料服務 (WCF 資料服務)
-有了 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您就可以建立公開開放式資料通訊協定（OData）摘要的資料服務。 這些摘要中的資料可以來自各種不同的資料來源。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會使用資料提供者，將此資料公開為 OData 摘要。 這些提供者包含 Entity Framework 提供者、反映提供者，以及一組自訂資料服務提供者介面。 提供者實作會針對此服務定義資料模型。 如需詳細資訊，請參閱[資料服務提供者](data-services-providers-wcf-data-services.md)。  
+有了 WCF Data Services，您就可以建立公開開放式資料通訊協定（OData）摘要的資料服務。 這些摘要中的資料可以來自各種不同的資料來源。 WCF Data Services 會使用資料提供者，將此資料公開為 OData 摘要。 這些提供者包含 Entity Framework 提供者、反映提供者，以及一組自訂資料服務提供者介面。 提供者實作會針對此服務定義資料模型。 如需詳細資訊，請參閱[資料服務提供者](data-services-providers-wcf-data-services.md)。  
   
- 在 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 中，資料服務是繼承自 <xref:System.Data.Services.DataService%601> 類別的一種類別，其中資料服務的類型即為資料模型的實體容器。 此實體容器具有一個或多個可傳回 <xref:System.Linq.IQueryable%601> (用於存取資料模型中的資料集) 的屬性。  
+ 在 WCF Data Services 中，資料服務是繼承自 <xref:System.Data.Services.DataService%601> 類別的類別，其中資料服務的類型為資料模型的實體容器。 此實體容器具有一個或多個可傳回 <xref:System.Linq.IQueryable%601> (用於存取資料模型中的資料集) 的屬性。  
   
  資料服務的行為由 <xref:System.Data.Services.DataServiceConfiguration> 類別的成員及 <xref:System.Data.Services.DataServiceBehavior> 類別的成員定義，可從 <xref:System.Data.Services.DataServiceConfiguration.DataServiceBehavior%2A> 類別的 <xref:System.Data.Services.DataServiceConfiguration> 屬性存取。 <xref:System.Data.Services.DataServiceConfiguration> 類別會提供給資料服務所實作的 `InitializeService` 方法，如下列 Northwind 資料服務實作所示：  
   
@@ -39,7 +39,7 @@ ms.locfileid: "73974819"
 |<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|可讓您使用 `$expand` 查詢運算子限制包含在單一要求中的相關實體數目，進而限制回應的大小。 如需詳細資訊，請參閱[OData： URI 慣例](https://go.microsoft.com/fwlink/?LinkId=185564)和[載入延](loading-deferred-content-wcf-data-services.md)後的內容。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|可讓您使用 `$expand` 查詢運算子限制包含在單一要求中的相關實體圖形深度，進而限制回應的大小。 如需詳細資訊，請參閱[OData： URI 慣例](https://go.microsoft.com/fwlink/?LinkId=185564)和[載入延](loading-deferred-content-wcf-data-services.md)後的內容。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert%2A>|可讓您限制單一 POST 要求中可包含及插入的實體數目。|  
-|<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|定義資料服務所使用的 Atom 通訊協定版本。 當 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 的值設定為小於 <xref:System.Data.Services.Common.DataServiceProtocolVersion> 的最大值時，存取資料服務的用戶端就無法使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的最新功能。 如需詳細資訊，請參閱[資料服務版本](data-service-versioning-wcf-data-services.md)設定。|  
+|<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|定義資料服務所使用的 Atom 通訊協定版本。 當 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 的值設定為小於 <xref:System.Data.Services.Common.DataServiceProtocolVersion>的最大值時，存取資料服務的用戶端就無法使用 WCF Data Services 的最新功能。 如需詳細資訊，請參閱[資料服務版本](data-service-versioning-wcf-data-services.md)設定。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection%2A>|可讓您限制以資料摘要傳回之每個實體集中的實體數目來限制回應的大小。|  
 |<xref:System.Data.Services.DataServiceConfiguration.RegisterKnownType%2A>|將資料型別加入至按資料服務辨識的型別清單。|  
 |<xref:System.Data.Services.DataServiceConfiguration.SetEntitySetAccessRule%2A>|設定資料服務中可用之實體集資源的存取權限。 可提供星號 (`*`) 值給名稱參數，將所有剩餘實體集的存取權限設為相同層級。 建議您設定實體集的存取權，以提供最少權限來存取用戶端應用程式所需的資料服務資源。 如需詳細資訊，請參閱 [Securing WCF Data Services](securing-wcf-data-services.md)。 如需給定 URI 和 HTTP 動作所需之最小存取權的範例，請參閱[最小資源存取需求](configuring-the-data-service-wcf-data-services.md#accessRequirements)一節中的表格。|  

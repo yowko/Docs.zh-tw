@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-ms.openlocfilehash: fd76f456665da76138b927d85a53924e8169c30a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c5f6bd001a5198f14bf05c0730f3988d54142eae
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975365"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569253"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>自訂資料服務提供者 (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包含一組提供者，可讓您根據晚期繫結的資料型別定義資料模型。  
+WCF Data Services 包含一組提供者，可讓您根據晚期繫結的資料類型來定義資料模型。  
   
 |Provider|描述|  
 |--------------|-----------------|  

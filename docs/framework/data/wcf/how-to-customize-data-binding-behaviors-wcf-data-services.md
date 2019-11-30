@@ -1,5 +1,5 @@
 ---
-title: HOW TO：自訂資料系結行為（WCF Data Services）
+title: 如何：自訂資料繫結行為 (WCF 資料服務)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
-ms.openlocfilehash: c878096cba7d31e0b48727213ee1bb8239b8f690
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 453562dd1b86756bf9fc1684dc649dba1c24c578
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790758"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569168"
 ---
-# <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>作法：自訂資料系結行為（WCF Data Services）
-使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，在從繫結集合新增或移除物件，或偵測到屬性變更時，您可以提供由 <xref:System.Data.Services.Client.DataServiceCollection%601> 呼叫的自訂邏輯。 這個自訂邏輯會當做方法（ <xref:System.Func%602>稱為委派）提供， `false`當自訂方法完成時仍應執行預設行為，以及`true`後續處理下列情況時，會傳回的值：事件應停止。  
+# <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>如何：自訂資料繫結行為 (WCF 資料服務)
+使用 WCF Data Services 時，您可以提供自訂邏輯，當從系結集合中加入或移除物件時，或在偵測到屬性變更時，<xref:System.Data.Services.Client.DataServiceCollection%601> 就會呼叫它。 這個自訂邏輯會當做做為 <xref:System.Func%602> 委派的方法來提供，而當自訂方法完成時，仍應執行預設行為，`true` 並在事件的後續處理應停止時，會傳回 `false` 的值。  
   
  本主題中的範例同時向 `entityChanged` 的 `entityCollectionChanged` 和 <xref:System.Data.Services.Client.DataServiceCollection%601> 參數提供自訂方法。 本主題的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成[WCF Data Services 快速入門](quickstart-wcf-data-services.md)時，會建立此服務和用戶端資料類別。  
   
@@ -32,6 +32,6 @@ ms.locfileid: "70790758"
   
  [!code-xaml[Astoria Northwind Client#WpfDataBindingCustomXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom.xaml#wpfdatabindingcustomxaml)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)

@@ -1,5 +1,5 @@
 ---
-title: 作法：定義服務作業（WCF Data Services）
+title: 如何：定義服務作業 (WCF 資料服務)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: 3154fadeda400440f68a184b430b7ff15a02203d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e9d15698c1e020f5b4179efb3e8492f3754ff02f
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780082"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569134"
 ---
-# <a name="how-to-define-a-service-operation-wcf-data-services"></a>作法：定義服務作業（WCF Data Services）
+# <a name="how-to-define-a-service-operation-wcf-data-services"></a>如何：定義服務作業 (WCF 資料服務)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會將伺服器上定義的方法公開為服務作業。 服務作業可讓資料服務透過 URI 提供對伺服器上定義之方法的存取權。 若要定義服務作業，請將 [`WebGet]`或`[WebInvoke]`屬性套用至方法。 若要支援查詢運算子，服務作業必須<xref:System.Linq.IQueryable%601>傳回實例。 服務作業可以透過 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 上的 <xref:System.Data.Services.DataService%601> 屬性存取基礎資料資源。 如需詳細資訊，請參閱[服務作業](service-operations-wcf-data-services.md)。
+WCF Data Services 會將伺服器上定義的方法公開為服務作業。 服務作業可讓資料服務透過 URI 提供對伺服器上定義之方法的存取權。 若要定義服務作業，請將 [`WebGet]` 或 `[WebInvoke]` 屬性套用至方法。 為了支援查詢運算子，服務作業必須傳回 <xref:System.Linq.IQueryable%601> 實例。 服務作業可以透過 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 上的 <xref:System.Data.Services.DataService%601> 屬性存取基礎資料資源。 如需詳細資訊，請參閱[服務作業](service-operations-wcf-data-services.md)。
 
 本主題的範例定義名為 `GetOrdersByCity` 的服務作業，此服務作業會針對 <xref:System.Linq.IQueryable%601> 執行個體傳回篩選過的 `Orders`，以及相關的 `Order_Details` 物件。 此範例存取的 <xref:System.Data.Objects.ObjectContext> 執行個體為 Northwind 範例資料服務的資料來源。 此服務會在您完成[WCF Data Services 快速入門](quickstart-wcf-data-services.md)時建立。
 
@@ -55,6 +55,6 @@ ms.locfileid: "70780082"
 [!code-csharp[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperation)]
 [!code-vb[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperation)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [定義 WCF Data Services](defining-wcf-data-services.md)

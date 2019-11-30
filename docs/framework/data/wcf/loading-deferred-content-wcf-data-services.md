@@ -9,27 +9,27 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-ms.openlocfilehash: 7c53ad18e029dbe1f882035c1bffc8f4bfbaa2f9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 811118755c4688bd0ea8cb9ba37b2101ab6c52cf
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790419"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568947"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>載入延後內容 (WCF 資料服務)
-根據預設，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會限制查詢傳回的資料量。 不過，您可以在需要時，從資料服務明確載入其他資料，包括相關實體、分頁回應資料以及二進位資料流。 本主題描述如何將這些延後的內容載入至應用程式。  
+根據預設，WCF Data Services 會限制查詢傳回的資料量。 不過，您可以在需要時，從資料服務明確載入其他資料，包括相關實體、分頁回應資料以及二進位資料流。 本主題描述如何將這些延後的內容載入至應用程式。  
   
 ## <a name="related-entities"></a>相關實體  
  執行查詢時，只會傳回已定址之實體集中的實體。 例如，針對 Northwind 資料服務的查詢傳回 `Customers` 實體時，即使 `Orders` 和 `Customers` 之間有關聯性，預設仍不會傳回相關的 `Orders` 實體。 另外，在資料服務中啟用分頁時，您必須從服務明確載入後續資料頁面。 有兩種方式可以載入相關實體：  
   
-- **積極式載入**：您可以使用`$expand`查詢選項來要求查詢傳回與查詢所要求之實體集關聯的實體。 請在 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 上使用 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法，將 `$expand` 選項加入至傳送給資料服務的查詢。 您可以要求多個相關的實體集，並以逗號分隔這些實體集，如下列範例所示。 查詢要求的所有實體會以單一回應傳回。 下列範例會一併傳回 `Order_Details` 和 `Customers`，以及 `Orders` 實體集：  
+- **積極式載入**：您可以使用 `$expand` 查詢選項來要求查詢傳回與查詢所要求之實體集關聯的實體。 請在 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 上使用 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法，將 `$expand` 選項加入至傳送給資料服務的查詢。 您可以要求多個相關的實體集，並以逗號分隔這些實體集，如下列範例所示。 查詢要求的所有實體會以單一回應傳回。 下列範例會一併傳回 `Order_Details` 和 `Customers`，以及 `Orders` 實體集：  
   
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetailsspecific)]  
   
-     [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會使用 `$expand` 查詢選項限制為可包含在單一查詢中的 12 個實體集數目。  
+     WCF Data Services 限制為12個可以使用 `$expand` 查詢選項包含在單一查詢中的實體集數目。  
   
-- **明確載入**：您可以<xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> <xref:System.Data.Services.Client.DataServiceContext>在實例上呼叫方法，以明確載入相關實體。 每次呼叫 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 方法，都會對資料服務建立一個獨立的查詢。 下列範例會明確載入 `Order_Details` 實體的 `Orders`：  
+- **明確載入**：您可以在 <xref:System.Data.Services.Client.DataServiceContext> 實例上呼叫 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 方法，以明確載入相關實體。 每次呼叫 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 方法，都會對資料服務建立一個獨立的查詢。 下列範例會明確載入 `Order_Details` 實體的 `Orders`：  
   
      [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadrelatedorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadrelatedorderdetailsspecific)]  
@@ -52,12 +52,12 @@ ms.locfileid: "70790419"
  [!code-csharp[Astoria Northwind Client#LoadNextOrdersLink](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadnextorderslink)]
  [!code-vb[Astoria Northwind Client#LoadNextOrdersLink](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadnextorderslink)]  
   
- 如需詳細資訊，請參閱[如何：載入已分頁](how-to-load-paged-results-wcf-data-services.md)的結果。  
+ 如需詳細資訊，請參閱[如何：載入分頁的結果](how-to-load-paged-results-wcf-data-services.md)。  
   
 ## <a name="binary-data-streams"></a>二進位資料流  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可讓您存取二進位大型物件 (BLOB) 資料，做為資料流。 資料流會延後二進位資料的載入，直到需要為止，因此用戶端可以更有效地處理這些資料。 為了利用這個功能，資料服務必須實作 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 提供者。 如需詳細資訊，請參閱[串流處理提供者](streaming-provider-wcf-data-services.md)。 啟用資料流時，將會傳回沒有相關二進位資料的實體類型。 在此情況下，您必須使用<xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> <xref:System.Data.Services.Client.DataServiceContext>類別的方法，從服務存取二進位資料的資料流程。 同樣地，使用 <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> 方法，可加入或變更實體的二進位資料，作為資料流。 如需詳細資訊，請參閱[使用二進位資料](working-with-binary-data-wcf-data-services.md)。  
+ WCF Data Services 可讓您以資料流程的形式存取二進位大型物件（BLOB）資料。 資料流會延後二進位資料的載入，直到需要為止，因此用戶端可以更有效地處理這些資料。 為了利用這個功能，資料服務必須實作 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 提供者。 如需詳細資訊，請參閱[串流處理提供者](streaming-provider-wcf-data-services.md)。 啟用資料流時，將會傳回沒有相關二進位資料的實體類型。 在此情況下，您必須使用 <xref:System.Data.Services.Client.DataServiceContext> 類別的 <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> 方法，從服務存取二進位資料的資料流程。 同樣地，使用 <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> 方法，可加入或變更實體的二進位資料，作為資料流。 如需詳細資訊，請參閱[使用二進位資料](working-with-binary-data-wcf-data-services.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)
 - [查詢資料服務](querying-the-data-service-wcf-data-services.md)

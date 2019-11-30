@@ -9,15 +9,15 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 4792850221da69be79b064313792dcd7ad226788
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 41f1d1f0ca04dff0faa9eb070882f845ef4827d2
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975220"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568968"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ 考量 (WCF Data Services)
-本主題提供當您使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端時，撰寫和執行 LINQ 查詢的方式的相關資訊，以及使用 LINQ 來查詢可實作為開放式資料通訊協定（OData）之資料服務的限制。 如需針對以 OData 為基礎的資料服務撰寫和執行查詢的詳細資訊，請參閱[查詢資料服務](querying-the-data-service-wcf-data-services.md)。  
+本主題提供當您使用 WCF Data Services 用戶端時，撰寫和執行 LINQ 查詢的方式的相關資訊，以及使用 LINQ 來查詢可實作為開放式資料通訊協定（OData）之資料服務的限制。 如需針對以 OData 為基礎的資料服務撰寫和執行查詢的詳細資訊，請參閱[查詢資料服務](querying-the-data-service-wcf-data-services.md)。  
   
 ## <a name="composing-linq-queries"></a>撰寫 LINQ 查詢  
  LINQ 可讓您針對實作 <xref:System.Collections.Generic.IEnumerable%601> 之物件的集合，撰寫查詢。 Visual Studio 和 DataSvcUtil 工具中的 [**加入服務參考**] 對話方塊都是用來產生 OData 服務的標記法，做為繼承自 <xref:System.Data.Services.Client.DataServiceContext>的實體容器類別，以及代表摘要中傳回之實體的物件。 這些工具也會針對服務公開為摘要的集合，產生實體容器類別的屬性。 封裝資料服務之類別的這些每個屬性都會傳回 <xref:System.Data.Services.Client.DataServiceQuery%601>。 <xref:System.Data.Services.Client.DataServiceQuery%601> 類別會實作 LINQ 所定義的 <xref:System.Linq.IQueryable%601> 介面，因此，您可以針對資料服務所公開的摘要，撰寫 LINQ 查詢，用戶端程式庫會將這些摘要轉譯為執行時傳送至資料服務的查詢要求 URI。  
@@ -43,7 +43,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqexpressionspecific)]      
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqexpressionspecific)]    
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端可以將這兩種撰寫查詢轉譯成查詢 URI，而且您可以藉由將查詢方法附加到查詢運算式，來擴充 LINQ 查詢。 當您藉由將方法語法附加到查詢運算式或 <xref:System.Data.Services.Client.DataServiceQuery%601> 來撰寫 LINQ 查詢時，會以呼叫方法的順序，將運算加入至查詢 URI。 這相當於呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法，將每個查詢選項加入至查詢 URI。  
+ WCF Data Services 用戶端可以將這兩種組成的查詢轉譯成查詢 URI，而且您可以藉由將查詢方法附加至查詢運算式來擴充 LINQ 查詢。 當您藉由將方法語法附加到查詢運算式或 <xref:System.Data.Services.Client.DataServiceQuery%601> 來撰寫 LINQ 查詢時，會以呼叫方法的順序，將運算加入至查詢 URI。 這相當於呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法，將每個查詢選項加入至查詢 URI。  
   
 ## <a name="executing-linq-queries"></a>執行 LINQ 查詢  
  當 <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> 或 <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> 之類的特定 LINQ 查詢方法附加至查詢時，會執行該查詢。 以隱含的方式列舉結果時 (例如在 `foreach` 執行迴圈期間)，或將查詢指派到 `List` 集合時，也會執行查詢。 如需詳細資訊，請參閱[查詢資料服務](querying-the-data-service-wcf-data-services.md)。  

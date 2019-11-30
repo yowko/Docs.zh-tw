@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: cf6877dd67ad9e17a43be5eafb84a2ecf21d7190
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7eea23ba3dc5e9cc327d9cdfba10c72af7525c30
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975438"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569409"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>存取資料服務資源 (WCF 資料服務)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支援開放式資料通訊協定（OData）將您的資料公開為摘要，其中包含可由 Uri 定址的資源。 這些資源會根據[實體資料模型](../adonet/entity-data-model.md)的實體關聯性慣例來表示。 在此模型中，實體代表資料運算單位 (這些資料在應用程式定義域中為資料型別)，例如客戶、訂單、項目及產品。 使用具像狀態傳輸 (REST) 的語意即可存取及變更實體資料，尤其是標準 HTTP 動作，例如 GET、PUT、POST 和 DELETE。  
+WCF Data Services 支援開放式資料通訊協定（OData）將您的資料公開為摘要，其中包含可由 Uri 定址的資源。 這些資源會根據[實體資料模型](../adonet/entity-data-model.md)的實體關聯性慣例來表示。 在此模型中，實體代表資料運算單位 (這些資料在應用程式定義域中為資料型別)，例如客戶、訂單、項目及產品。 使用具像狀態傳輸 (REST) 的語意即可存取及變更實體資料，尤其是標準 HTTP 動作，例如 GET、PUT、POST 和 DELETE。  
   
 ## <a name="addressing-resources"></a>設定資源存取位址  
  在 OData 中，您可以使用 URI 來處理資料模型所公開的任何資料。 例如，下列 URI 會傳回 Customers 實體集的摘要，其中包含 Customer 實體類型之所有實例的專案：  
@@ -56,7 +56,7 @@ ms.locfileid: "73975438"
   
  傳回之摘要中的項目也會依據訂單之 ShipCity 屬性的值來排序。  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支援下列 OData 系統查詢選項：  
+ WCF Data Services 支援下列 OData 系統查詢選項：  
   
 |查詢選項|描述|  
 |------------------|-----------------|  

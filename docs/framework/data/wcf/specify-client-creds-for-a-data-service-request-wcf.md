@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: bb25319e3a4b1f8c7a3586c546ce1d589b48e438
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: bb6447c39c3de9605f6f7bc280da2778be2b3070
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975145"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568858"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>HOW TO：指定資料服務要求的用戶端認證 (WCF Data Services)
-根據預設，用戶端程式庫在將要求傳送至 OData 服務時，不會提供認證。 不過，您可以透過為 <xref:System.Net.NetworkCredential> 的 <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> 屬性提供 <xref:System.Data.Services.Client.DataServiceContext>，藉以指定要傳送的認證來驗證要求。 如需詳細資訊，請參閱 [Securing WCF Data Services](securing-wcf-data-services.md)。 本主題中的範例會示範如何在從資料服務要求資料時，明確地提供 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端所使用的認證。  
+根據預設，用戶端程式庫在將要求傳送至 OData 服務時，不會提供認證。 不過，您可以透過為 <xref:System.Net.NetworkCredential> 的 <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> 屬性提供 <xref:System.Data.Services.Client.DataServiceContext>，藉以指定要傳送的認證來驗證要求。 如需詳細資訊，請參閱 [Securing WCF Data Services](securing-wcf-data-services.md)。 本主題中的範例將示範如何在向資料服務要求資料時，明確提供 WCF Data Services 用戶端所使用的認證。  
   
  本主題中的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 當您完成[WCF Data Services 快速入門](quickstart-wcf-data-services.md)時，會建立此服務和用戶端資料類別。 您也可以使用在 OData 網站上發行的[Northwind 範例資料服務](https://go.microsoft.com/fwlink/?LinkId=187426);這個範例資料服務是唯讀的，而且嘗試儲存變更時，會傳回錯誤。 OData 網站上的範例資料服務允許匿名驗證。  
   

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: e37a1654bdc62937bbb27c293a110293c9928645
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 99fe377e8fff193c4f8bb566946b95c61c1b3693
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975158"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568886"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>查詢資料服務 (WCF 資料服務)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫可讓您使用熟悉的 .NET Framework 程式設計模式針對資料服務執行查詢，包括使用 Language Integrated Query (LINQ)。 用戶端程式庫會將查詢轉譯為 HTTP GET 要求訊息，該查詢在用戶端上已定義為 <xref:System.Data.Services.Client.DataServiceQuery%601> 類別的執行個體。 程式庫會接收回應訊息，並將它轉譯為用戶端資料服務類別的實例。 這些類別會由 <xref:System.Data.Services.Client.DataServiceContext> 所屬的 <xref:System.Data.Services.Client.DataServiceQuery%601> 追蹤。
+WCF Data Services 用戶端程式庫可讓您使用熟悉的 .NET Framework 程式設計模式（包括使用語言整合式查詢（LINQ））對資料服務執行查詢。 用戶端程式庫會將查詢轉譯為 HTTP GET 要求訊息，該查詢在用戶端上已定義為 <xref:System.Data.Services.Client.DataServiceQuery%601> 類別的執行個體。 程式庫會接收回應訊息，並將它轉譯為用戶端資料服務類別的實例。 這些類別會由 <xref:System.Data.Services.Client.DataServiceContext> 所屬的 <xref:System.Data.Services.Client.DataServiceQuery%601> 追蹤。
 
 ## <a name="data-service-queries"></a>資料服務查詢
 
@@ -45,11 +45,11 @@ ms.locfileid: "73975158"
 
 如需詳細資訊，請參閱[如何：執行資料服務查詢](how-to-execute-data-service-queries-wcf-data-services.md)。
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端支援晚期繫結物件的查詢，例如當您在中C#使用*動態*類型時。 不過，基於效能因素，您應該一律針對資料服務撰寫強型別的查詢。 用戶端不支援 <xref:System.Tuple> 型別和動態物件。
+WCF Data Services 用戶端支援晚期繫結物件的查詢，例如當您在中C#使用*動態*類型時。 不過，基於效能因素，您應該一律針對資料服務撰寫強型別的查詢。 用戶端不支援 <xref:System.Tuple> 型別和動態物件。
 
 ## <a name="linq-queries"></a>LINQ 查詢
 
-由於 <xref:System.Data.Services.Client.DataServiceQuery%601> 類別會執行 LINQ 所定義的 <xref:System.Linq.IQueryable%601> 介面，因此 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫可以將實體集資料的 LINQ 查詢轉換為 URI，以代表針對資料服務資源評估的查詢運算式。 下列範例是 LINQ 查詢，其相當於以前的 <xref:System.Data.Services.Client.DataServiceQuery%601>，它會傳回運費成本超過 $30 的 `Orders`，並依運費成本排序結果：
+由於 <xref:System.Data.Services.Client.DataServiceQuery%601> 類別會執行 LINQ 所定義的 <xref:System.Linq.IQueryable%601> 介面，因此 WCF Data Services 用戶端程式庫可以將實體集資料的 LINQ 查詢轉換為 URI，以代表針對資料服務資源評估的查詢運算式。 下列範例是 LINQ 查詢，其相當於以前的 <xref:System.Data.Services.Client.DataServiceQuery%601>，它會傳回運費成本超過 $30 的 `Orders`，並依運費成本排序結果：
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
@@ -67,7 +67,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 ## <a name="adding-query-options"></a>加入查詢選項
 
-資料服務查詢支援 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 提供的所有查詢選項。 您可以呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法，將查詢選項附加至 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體。 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 會傳回新的 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體，其相當於原始的查詢，但使用新的查詢選項集。 下列查詢在執行時會傳回 `Orders`，其係經由 `Freight` 值進行篩選並依 `OrderID` 遞減順序排序：
+資料服務查詢支援 WCF 資料服務提供的所有查詢選項。 您可以呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法，將查詢選項附加至 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體。 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 會傳回新的 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體，其相當於原始的查詢，但使用新的查詢選項集。 下列查詢在執行時會傳回 `Orders`，其係經由 `Freight` 值進行篩選並依 `OrderID` 遞減順序排序：
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionsspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionsspecific)]
@@ -118,7 +118,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 - <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> - 傳回包含下一頁結果之 URI 的 <xref:System.Data.Services.Client.DataServiceQueryContinuation> 物件。
 
-根據預設，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 只會傳回查詢 URI 所明確選取的資料。 它還提供選項可讓您於必要時，從資料服務明確載入其他資料。 每次您從資料服務明確載入資料時，就會傳送一個要求至資料服務。 可以明確載入的資料包括相關實體、分頁的回應資料，以及二進位資料流。
+根據預設，WCF Data Services 只會傳回查詢 URI 所明確選取的資料。 它還提供選項可讓您於必要時，從資料服務明確載入其他資料。 每次您從資料服務明確載入資料時，就會傳送一個要求至資料服務。 可以明確載入的資料包括相關實體、分頁的回應資料，以及二進位資料流。
 
 > [!NOTE]
 > 因為資料服務可能傳回分頁的回應，我們建議您的應用程式使用程式設計模式來處理分頁的資料服務回應。 如需詳細資訊，請參閱[載入延](loading-deferred-content-wcf-data-services.md)後的內容。

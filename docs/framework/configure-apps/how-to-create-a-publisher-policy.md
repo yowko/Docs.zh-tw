@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 313af6046fda8dd8905e8bda4e8c4aec187ef8bf
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040195"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568409"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>如何：建立發行者原則
 
@@ -74,7 +74,7 @@ al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFi
   > [!NOTE]
   > 從 .NET Framework 2.0 開始，可以取得以特定處理器架構為目標的功能。
 
-從 .NET Framework 2.0 開始，可以取得以特定處理器架構為目標的功能。 下列命令會從名為 `pub.config`的發行者原則檔案建立名為 `policy.1.0.myAssembly` 的發行者原則元件，並使用 `sgKey.snk` 檔案中的金鑰組，將強式名稱指派給元件，並指定元件以 x86 處理器為目標結構.
+從 .NET Framework 2.0 開始，可以取得以特定處理器架構為目標的功能。 下列命令會從名為 `pub.config`的發行者原則檔案建立名為 `policy.1.0.myAssembly` 的發行者原則元件，並使用 `sgKey.snk` 檔案中的金鑰組，將強式名稱指派給元件，並指定元件以 x86 處理器架構為目標。
 
 ```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
@@ -105,7 +105,7 @@ gacutil /i policy.1.0.myAssembly.dll
 ```
 
 > [!IMPORTANT]
-> 發行者原則元件無法加入至全域組件快取，除非原始發行者原則檔位於與元件相同的目錄中。
+> 發行者原則元件無法加入全域組件快取中，除非 `/link` 引數中指定的原始發行者原則檔與元件位於相同的目錄中。
 
 ## <a name="see-also"></a>請參閱
 

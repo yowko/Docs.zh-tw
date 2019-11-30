@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 605ff7a9acaaa217f0e482579968757dd451aed9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ab75380738064a001b12e79d1481d053622077ef
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974839"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569329"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>將資料繫結至控制項 (WCF 資料服務)
-有了 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以將類似 `ComboBox` 和 `ListView` 的控制項繫結至 <xref:System.Data.Services.Client.DataServiceCollection%601> 類別的執行個體。 這個集合繼承自 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別，其中包含來自開放式資料通訊協定（OData）摘要的資料。 此類別表示動態資料集合會在加入或移除項目時提供通知。 當您使用 <xref:System.Data.Services.Client.DataServiceCollection%601> 的實例進行資料系結時，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫會處理這些事件，以確保 <xref:System.Data.Services.Client.DataServiceContext> 追蹤的物件會與系結 UI 專案中的資料保持同步。  
+使用 WCF Data Services，您可以將控制項（例如 `ComboBox` 和 `ListView` 控制項）系結至 <xref:System.Data.Services.Client.DataServiceCollection%601> 類別的實例。 這個集合繼承自 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別，其中包含來自開放式資料通訊協定（OData）摘要的資料。 此類別表示動態資料集合會在加入或移除項目時提供通知。 當您使用 <xref:System.Data.Services.Client.DataServiceCollection%601> 的實例進行資料系結時，WCF Data Services 用戶端程式庫會處理這些事件，以確保 <xref:System.Data.Services.Client.DataServiceContext> 追蹤的物件會與系結 UI 專案中的資料保持同步。  
   
  在集合中加入或移除物件時，<xref:System.Data.Services.Client.DataServiceCollection%601> 類別會 (間接) 實作 <xref:System.Collections.Specialized.INotifyCollectionChanged> 介面以警示內容。 與 <xref:System.Data.Services.Client.DataServiceCollection%601> 搭配使用的資料服務類型物件也必須實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面，以便在繫結集合中的物件屬性發生變更時警示 <xref:System.Data.Services.Client.DataServiceCollection%601>。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "73974839"
 - `entityCollectionChanged`：在繫結集合中加入或移除物件時會呼叫此方法。 此 <xref:System.Func%602> 委派接受 <xref:System.Data.Services.Client.EntityCollectionChangedParams> 物件並傳回布林值，指出是否仍應發生預設行為 (呼叫 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 動作的 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add>，或在 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 呼叫 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> 動作的 <xref:System.Data.Services.Client.DataServiceContext>)。  
   
 > [!NOTE]
-> [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 不會針對您在這些委派中實作的自訂行為執行驗證。  
+> WCF Data Services 不會驗證您在這些委派中執行的自訂行為。  
   
  下列範例會自訂 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> 動作以呼叫 <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 方法來移除屬於已刪除之 `Orders_Details` 實體的 `Orders` 方法。 由於刪除父實體時不會自動刪除相依實體，因此會執行這個自訂行為。  
   

@@ -6,25 +6,16 @@ ms.author: adegeo
 ms.date: 11/06/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 6e9af6c84c81b1244e10fa7d5955ab67d34b1f0a
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
-ms.translationtype: HT
+ms.openlocfilehash: 54819b409422e8bda9efe25478aa3424683a380b
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552200"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567472"
 ---
 # <a name="install-the-net-core-sdk"></a>安裝 .NET Core SDK
 
 在本文中，您將瞭解如何安裝 .NET Core SDK。 .NET Core SDK 可用來建立 .NET Core 應用程式和程式庫。 .NET Core 執行時間一律會與 SDK 一起安裝。
-
-您可以使用下列其中一個連結直接下載並安裝 .NET Core：
-
-- [.NET Core 3.1 Preview 3 下載](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [.NET Core 3.0 下載](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- [.NET Core 2.2 下載](https://dotnet.microsoft.com/download/dotnet-core/2.2)
-- [.NET Core 2.1 下載](https://dotnet.microsoft.com/download/dotnet-core/2.1)
-
-您也可以將 .NET Core 安裝為整合式開發環境（IDE）的一部分，如下節所述。
 
 ::: zone pivot="os-windows,os-macos"
 
@@ -32,8 +23,8 @@ ms.locfileid: "74552200"
 
 Windows 和 macOS 都有獨立的安裝程式，可以用來安裝 .NET Core 3.0 SDK。
 
-- Windows [X64 cpu](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x64-installer) | [x32 cpu](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x86-installer)
-- macOS [X64 cpu](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-macos-x64-installer)
+- Windows [x64 （64位） cpu](https://dotnet.microsoft.com/download/dotnet-core/3.0) | [x86 （32位） cpu](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- macOS [x64 （64位） cpu](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 
 ::: zone-end
 
@@ -41,7 +32,30 @@ Windows 和 macOS 都有獨立的安裝程式，可以用來安裝 .NET Core 3.0
 
 ## <a name="install-with-a-package-manager"></a>使用套件管理員進行安裝
 
-您可以使用許多常見的 Linux 套件管理員來安裝 .NET Core SDK。 如需詳細資訊，請參閱[Linux 套件管理員-安裝 .Net Core](linux-package-manager-rhel7.md)。
+您可以使用許多常見的 Linux 套件管理員來安裝 .NET Core SDK。 如需詳細資訊，請參閱[Linux 套件管理員-安裝 .Net Core](linux-package-managers.md)。
+
+## <a name="download-and-manually-install"></a>下載並手動安裝
+
+若要解壓縮 SDK，並在終端機上提供命令，請先[下載](#all-net-core-downloads).net Core 二進位版本。 然後，開啟終端機並執行下列命令。
+
+```bash
+mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.0.101-linux-musl-x64.tar.gz -C $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
+
+> [!TIP]
+> 上述命令只會將 .NET SDK 命令提供給其執行所在的終端機會話。
+>
+> 您可以編輯您的 shell 設定檔，以永久新增命令。 有許多不同的 shell 可供 Linux 使用，而且每個都有不同的設定檔。 例如：
+>
+> - **Bash Shell**： *~/. bash_profile*， *~/.bashrc*
+> - **Korn Shell**： *~/.kshrc*或 *. profile*
+> - **Z Shell**： *~/.zshrc*或 *. zprofile*
+> 
+> 為您的 shell 編輯適當的原始程式檔，並將 `:$HOME/dotnet` 新增至現有 `PATH` 語句的結尾。 如果未包含任何 `PATH` 語句，請加入具有 `export PATH=$PATH:$HOME/dotnet`的新行。
+>
+> 此外，將 `export DOTNET_ROOT=$HOME/dotnet` 新增至檔案結尾。
 
 ::: zone-end
 
@@ -53,6 +67,7 @@ Windows 和 macOS 都有獨立的安裝程式，可以用來安裝 .NET Core 3.0
 
 | .NET Core SDK 版本 | Visual Studio 版本                      |
 | --------------------- | ------------------------------------------ |
+| 3.1 預覽           | Visual Studio 2019 16.4 preview 或更高版本。 |
 | 3.0                   | Visual Studio 2019 16.3 或更高版本。 |
 | 2.2                   | Visual Studio 2017 15.9 或更高版本。 |
 | 2.1                   | Visual Studio 2017 15.7 或更高版本。 |
@@ -90,14 +105,14 @@ Visual Studio for Mac 在選取 [ **.Net Core** ] 工作負載時安裝 .NET Cor
 
 ::: zone-end
 
-## <a name="install-from-visual-studio-code"></a>從 Visual Studio Code 安裝
+## <a name="install-alongside-visual-studio-code"></a>與 Visual Studio Code 一起安裝
 
 Visual Studio Code 是一種功能強大且輕量的原始程式碼編輯器，可在您的桌面上執行。 Visual Studio Code 適用于 Windows、macOS 和 Linux。
 
-雖然 Visual Studio Code 不隨附 .NET Core 支援，但新增 .NET Core 支援很簡單。
+雖然 Visual Studio Code 不會隨附像 Visual Studio 這樣的自動化 .NET Core 安裝程式，但新增 .NET Core 支援十分簡單。
 
 01. [下載並安裝 Visual Studio Code](https://code.visualstudio.com/Download)。
-01. [下載並安裝 .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)。
+01. [下載並安裝 .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core)。
 01. [從 Visual Studio Code C# marketplace 安裝延伸](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)模組。
 
 ::: zone pivot="os-windows"
@@ -127,6 +142,15 @@ dotnet-install.ps1 -Channel Current
 ```
 
 ::: zone-end
+
+## <a name="all-net-core-downloads"></a>所有 .NET Core 下載
+
+您可以使用下列其中一個連結直接下載並安裝 .NET Core：
+
+- [.NET Core 3.1 Preview 下載](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET Core 3.0 下載](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [.NET Core 2.2 下載](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [.NET Core 2.1 下載](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 
 ## <a name="docker"></a>Docker
 

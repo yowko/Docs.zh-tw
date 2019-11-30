@@ -5,16 +5,16 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 50e481dd67a56233fcbb3714c86d71dd7e5307e8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 38bba2e9f63ab6cce0ede1a82658b6a21f5d4a4b
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975422"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569387"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>應用程式案例 (WCF 資料服務)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支援一組核心案例，以開放式資料通訊協定（OData）摘要的形式公開和使用資料。 本主題會為您指出與這些案例有關的主題。
+WCF Data Services 支援一組核心案例，以開放式資料通訊協定（OData）摘要的形式公開和使用資料。 本主題會為您指出與這些案例有關的主題。
 
 將資料庫中的關聯式資料公開為 OData 摘要。
 

@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: a64a09195101cd4b1ec3c6f990dd09d54466aea0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: bc2338191bbf6922f56c833ebf115c5b21d92b00
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975405"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569319"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>呼叫服務作業 (WCF Data Services)
-開放式資料通訊協定（OData）會定義資料服務的服務作業。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可讓您在資料服務上定義像方法那樣的作業。 就像其他資料服務資源，這些服務作業會使用 URI 來定址。 服務作業可以傳回實體類型集合、單一實體類型執行個體以及整數和字串等基本類型。 服務作業還可以傳回 `null` (在 Visual Basic 中為 `Nothing`)。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫可以用來存取支援 HTTP GET 要求的服務作業。 這些服務作業類型是定義為已套用 <xref:System.ServiceModel.Web.WebGetAttribute> 的方法。 如需詳細資訊，請參閱[服務作業](service-operations-wcf-data-services.md)。  
+開放式資料通訊協定（OData）會定義資料服務的服務作業。 WCF Data Services 可讓您將這類作業定義為數據服務上的方法。 就像其他資料服務資源，這些服務作業會使用 URI 來定址。 服務作業可以傳回實體類型集合、單一實體類型執行個體以及整數和字串等基本類型。 服務作業還可以傳回 `null` (在 Visual Basic 中為 `Nothing`)。 WCF Data Services 用戶端程式庫可以用來存取支援 HTTP GET 要求的服務作業。 這些服務作業類型是定義為已套用 <xref:System.ServiceModel.Web.WebGetAttribute> 的方法。 如需詳細資訊，請參閱[服務作業](service-operations-wcf-data-services.md)。  
   
- 服務作業會在執行 OData 的資料服務所傳回的中繼資料中公開。 在中繼資料中，服務作業會以 `FunctionImport` 元素來表示。 產生強型別 <xref:System.Data.Services.Client.DataServiceContext> 時，[加入服務參考] 和 DataSvcUtil.exe 工具會忽略此元素。 因此，您在內容上找不到可用來直接呼叫服務作業的方法。 但是，您仍然可以使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端，透過下列兩種方式呼叫服務作業：  
+ 服務作業會在執行 OData 的資料服務所傳回的中繼資料中公開。 在中繼資料中，服務作業會以 `FunctionImport` 元素來表示。 產生強型別 <xref:System.Data.Services.Client.DataServiceContext> 時，[加入服務參考] 和 DataSvcUtil.exe 工具會忽略此元素。 因此，您在內容上找不到可用來直接呼叫服務作業的方法。 不過，您仍然可以使用 WCF Data Services 用戶端，以下列兩種方式的其中一種來呼叫服務作業：  
   
 - 提供服務作業的 URI 並搭配任何參數，以呼叫 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 上的 <xref:System.Data.Services.Client.DataServiceContext> 方法。 此方法用於呼叫任何 GET 服務作業。  
   
 - 在 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 上使用 <xref:System.Data.Services.Client.DataServiceContext> 方法，以建立 <xref:System.Data.Services.Client.DataServiceQuery%601> 物件。 呼叫 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 時，要將服務作業的名稱提供給 `entitySetName` 參數。 列舉時或呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法時，此方法會傳回呼叫服務作業的 <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A> 物件。 此方法用於呼叫傳回集合的 GET 服務作業。 可以使用 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法提供單一參數。 此方法傳回的 <xref:System.Data.Services.Client.DataServiceQuery%601> 物件就像任何查詢物件一樣，可以進一步加以撰寫。 如需詳細資訊，請參閱[查詢資料服務](querying-the-data-service-wcf-data-services.md)。  
   
 ## <a name="considerations-for-calling-service-operations"></a>呼叫服務作業的考量  
- 使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端呼叫服務作業時，適用下列考量。  
+ 使用 WCF Data Services 用戶端來呼叫服務作業時，適用下列考慮。  
   
 - 以非同步方式存取資料服務時，您必須在 <xref:System.Data.Services.Client.DataServiceContext> 上使用對等的非同步 <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A>/<xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> 方法，或 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A>上 /<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> <xref:System.Data.Services.Client.DataServiceQuery%601>方法。  
   
-- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫無法具體化傳回單一基本類型集合之服務作業的結果。  
+- WCF Data Services 用戶端程式庫無法從傳回基本型別集合的服務作業中具體化結果。  
   
-- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫不支援呼叫 POST 服務作業。 HTTP POST 呼叫的服務作業是使用 <xref:System.ServiceModel.Web.WebInvokeAttribute> 搭配 `Method="POST"` 參數所定義。 若要使用 HTTP POST 要求呼叫服務作業，您必須改用 <xref:System.Net.HttpWebRequest>。  
+- WCF Data Services 用戶端程式庫不支援呼叫 POST 服務作業。 HTTP POST 呼叫的服務作業是使用 <xref:System.ServiceModel.Web.WebInvokeAttribute> 搭配 `Method="POST"` 參數所定義。 若要使用 HTTP POST 要求呼叫服務作業，您必須改用 <xref:System.Net.HttpWebRequest>。  
   
 - 您不能使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 來呼叫傳回實體或基本類型單一結果或需要多個輸入參數的 GET 服務作業。 您必須改為呼叫 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73975405"
 - 當您使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 來呼叫服務作業時，用戶端程式庫會藉由執行保留字元的百分比編碼（例如連字號（&），以及字串中的單引號的轉義），自動將提供給 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 的字元進行轉義。 不過，當您呼叫其中一個*Execute*方法來呼叫服務作業時，您必須記得對任何使用者提供的字串值執行這項轉義。 URI 中的單引號是以一對單引號的形式來逸出。  
   
 ## <a name="examples-of-calling-service-operations"></a>呼叫服務作業的範例  
- 本節包含下列範例，說明如何使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫呼叫服務作業：  
+ 本節包含下列範例，說明如何使用 WCF Data Services 用戶端程式庫來呼叫服務作業：  
   
 - [呼叫 Execute&lt;T&gt; 以傳回實體集合](calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
   

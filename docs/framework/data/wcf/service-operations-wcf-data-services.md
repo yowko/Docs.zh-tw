@@ -8,16 +8,16 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 4f36081ef1a3eec84f3cc2ced3c629109acd6a38
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: c254a7362c7bc28f4b38fc0189ae0ea763bc90cc
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894278"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568839"
 ---
 # <a name="service-operations-wcf-data-services"></a>服務作業 (WCF 資料服務)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以讓您定義資料服務上的服務作業，以公開伺服器上的方法。 如同其他資料服務資源，服務作業依 URI 定址。 服務作業可讓您公開資料服務中的業務邏輯，例如實作驗證邏輯、套用以角色為基礎的安全性，或公開特殊的查詢功能。 服務作業是加入至資料服務類別的方法，衍生自 <xref:System.Data.Services.DataService%601>。 如同所有其他資料服務資源，您可以將參數提供給服務作業方法。 例如，下列服務作業 URI （以[快速入門](quickstart-wcf-data-services.md)資料服務為基礎）會將值`London`傳遞給`city`參數：
+WCF Data Services 可讓您定義資料服務上的服務作業，以公開伺服器上的方法。 如同其他資料服務資源，服務作業依 URI 定址。 服務作業可讓您公開資料服務中的業務邏輯，例如實作驗證邏輯、套用以角色為基礎的安全性，或公開特殊的查詢功能。 服務作業是加入至資料服務類別的方法，衍生自 <xref:System.Data.Services.DataService%601>。 如同所有其他資料服務資源，您可以將參數提供給服務作業方法。 例如，下列服務作業 URI （以[快速入門](quickstart-wcf-data-services.md)資料服務為基礎）會將值 `London` 傳遞給 `city` 參數：
 
 ```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
@@ -109,6 +109,6 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 [!code-csharp[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#handleexceptions)]
 [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#handleexceptions)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [攔截器](interceptors-wcf-data-services.md)

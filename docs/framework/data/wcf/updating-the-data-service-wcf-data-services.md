@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 02bcb8f12cd7f230d60c3b3c58174a54405ff955
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 060cdab4f486782e6ad60511fadad95a41255dec
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975117"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568815"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>更新資料服務 (WCF 資料服務)
-當您使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫來取用開放式資料通訊協定（OData）摘要時，此程式庫會將摘要中的專案轉譯成用戶端資料服務類別的實例。 這些資料服務類別會使用 <xref:System.Data.Services.Client.DataServiceContext> 所屬的 <xref:System.Data.Services.Client.DataServiceQuery%601> 來追蹤。 用戶端會追蹤您使用 <xref:System.Data.Services.Client.DataServiceContext> 上的方法所報告之實體的變更。 這些方法會讓用戶端追蹤所新增及刪除的實體，以及您對屬性值所做的變更或是您對實體執行個體之間的關聯性所做的變更。 當您呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，這些追蹤的變更會當做 REST 型作業傳回資料服務。  
+當您使用 WCF Data Services 用戶端程式庫來取用開放式資料通訊協定（OData）摘要時，此程式庫會將摘要中的專案轉譯成用戶端資料服務類別的實例。 這些資料服務類別會使用 <xref:System.Data.Services.Client.DataServiceContext> 所屬的 <xref:System.Data.Services.Client.DataServiceQuery%601> 來追蹤。 用戶端會追蹤您使用 <xref:System.Data.Services.Client.DataServiceContext> 上的方法所報告之實體的變更。 這些方法會讓用戶端追蹤所新增及刪除的實體，以及您對屬性值所做的變更或是您對實體執行個體之間的關聯性所做的變更。 當您呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，這些追蹤的變更會當做 REST 型作業傳回資料服務。  
   
 > [!NOTE]
 > 當您使用 <xref:System.Data.Services.Client.DataServiceCollection%601> 的執行個體將資料繫結至控制項時，對繫結控制項內的資料所做的變更會自動提報給 <xref:System.Data.Services.Client.DataServiceContext>。 如需詳細資訊，請參閱[將資料系結至控制項](binding-data-to-controls-wcf-data-services.md)。  
@@ -67,7 +67,7 @@ ms.locfileid: "73975117"
 ## <a name="creating-and-modifying-relationship-links"></a>建立和修改關聯性連結  
  當您使用 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 方法或**加入服務參考**對話方塊所產生之 <xref:System.Data.Services.Client.DataServiceContext> 類別的適當*AddTo*方法來加入新實體時，不會自動定義新實體與相關實體之間的任何關聯性。  
   
- 您可以建立和變更實體執行個體之間的關聯性，而且可以讓用戶端程式庫在資料服務中反映這些變更。 實體之間的關聯性會定義為模型中的關聯，而且 <xref:System.Data.Services.Client.DataServiceContext> 會追蹤每一個關聯性，如同內容中的連結物件。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 在 <xref:System.Data.Services.Client.DataServiceContext> 類別上提供下列方法，以建立、修改和刪除這些連結：  
+ 您可以建立和變更實體執行個體之間的關聯性，而且可以讓用戶端程式庫在資料服務中反映這些變更。 實體之間的關聯性會定義為模型中的關聯，而且 <xref:System.Data.Services.Client.DataServiceContext> 會追蹤每一個關聯性，如同內容中的連結物件。 WCF Data Services 在 <xref:System.Data.Services.Client.DataServiceContext> 類別上提供下列方法，以建立、修改和刪除這些連結：  
   
 |方法|描述|  
 |------------|-----------------|  

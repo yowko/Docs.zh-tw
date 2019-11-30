@@ -2,17 +2,17 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 24b7a11d031502b9a6b825f49d97214f68f92176
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 130265070e82245de4bdd49599df9fa9f435f5ed
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783817"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569415"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取服務一組類別 (Class)。 ADO.NET 提供一組豐富的元件，用於建立分散式資料共用應用程式。 其為 .NET Framework 的一個完整的部分，提供關聯式、XML 及應用程式資料的存取。 ADO.NET 支援各種開發需要，包括建立應用程式、工具、語言或網際網路瀏覽器使用的前端資料庫用戶端及中介層商務物件。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [ADO.NET 的新功能](whats-new.md)  
  簡介 ADO.NET 的新功能。  
   
@@ -51,7 +51,7 @@ ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取�
  提供使用 Visual Basic 的 LINQ 主題和範例的連結。  
   
  [WCF Data Services 4.5](../wcf/index.md)  
- 說明如何使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，在 Web 或內部網路上部署實作 Open Data Protocol (OData) 的資料服務。  
+ 描述如何使用 WCF Data Services 在 Web 或內部網路上部署資料服務，以執行開放式資料通訊協定（OData）。  
   
  [.NET Framework 開發指南](../../development-guide.md)  
  提供 .NET Framework 中標準開發工作之相關資訊的連結。  
@@ -59,7 +59,7 @@ ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取�
  [範例與教學課程](../../../samples-and-tutorials/index.md)  
  提供 .NET 範例和教學課程的清單。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [ADO.NET 概觀](ado-net-overview.md)

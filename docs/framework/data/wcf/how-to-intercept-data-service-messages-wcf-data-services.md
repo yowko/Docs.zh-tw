@@ -1,5 +1,5 @@
 ---
-title: 作法：攔截資料服務訊息（WCF Data Services）
+title: 如何：攔截資料服務訊息 (WCF 資料服務)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: cecfdd74779e3ab1c908957afac3c9fccf79f383
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f2d6cf34c820c60181d5287298898af5eb8d038
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780031"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569035"
 ---
-# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>HOW TO：攔截資料服務訊息（WCF Data Services）
-使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以攔截要求訊息，因此您可以將自訂邏輯加入至作業。 若要攔截訊息，請在資料服務中使用特別的屬性化方法。 如需詳細資訊，請參閱[攔截](interceptors-wcf-data-services.md)器。  
+# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>如何：攔截資料服務訊息 (WCF 資料服務)
+使用 WCF Data Services，您可以攔截要求訊息，讓您可以將自訂邏輯加入至作業。 若要攔截訊息，請在資料服務中使用特別的屬性化方法。 如需詳細資訊，請參閱[攔截](interceptors-wcf-data-services.md)器。  
   
  本主題中的範例使用 Northwind 範例資料服務。 此服務會在您完成[WCF Data Services 快速入門](quickstart-wcf-data-services.md)時建立。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "70780031"
  [!code-csharp[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#changeinterceptor)]
  [!code-vb[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#changeinterceptor)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [如何：定義服務作業](how-to-define-a-service-operation-wcf-data-services.md)
 - [定義 WCF Data Services](defining-wcf-data-services.md)

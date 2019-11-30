@@ -2,12 +2,12 @@
 title: 移轉考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: e3e4caf79c1e75708e266e625a4271bc0c90747b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 168aec6ef369f446cfac22ee5c4361fa06aaf16d
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854416"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569446"
 ---
 # <a name="migration-considerations-entity-framework"></a>移轉考量 (Entity Framework)
 ADO.NET Entity Framework 為現有的應用程式提供數個優點。 其中一項最重要的優勢，就是使用概念模型將應用程式所使用的資料結構從資料來源中的結構描述分隔。 這樣能方便您以後對儲存體模型或資料來源本身進行變更，而不必對應用程式進行補償變更。 如需使用 Entity Framework 之優點的詳細資訊，請參閱[Entity Framework 總覽](overview.md)和[實體資料模型](../entity-data-model.md)。  
@@ -39,7 +39,7 @@ ADO.NET Entity Framework 為現有的應用程式提供數個優點。 其中一
   
      模型和對應檔案定義概念模型中的實體、資料來源中的結構 (例如資料表、預存程序和檢視表)，以及實體與資料來源結構間的對應。 如需詳細資訊，請參閱[如何：手動定義模型和對應](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100))檔。  
   
-     儲存體模型中定義的類型必須與資料來源中物件的名稱相符。 如果現有應用程式將資料公開 (Expose) 為物件，您必須確保概念模型中定義的實體和屬性與這些現有資料類別和屬性的名稱相符。 如需詳細資訊，請參閱[如何：自訂模型和對應檔，以使用自](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738625(v=vs.100))定義物件。  
+     儲存體模型中定義的類型必須與資料來源中物件的名稱相符。 如果現有應用程式將資料公開 (Expose) 為物件，您必須確保概念模型中定義的實體和屬性與這些現有資料類別和屬性的名稱相符。 如需詳細資訊，請參閱[如何：自訂模型和對應檔以使用自訂物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738625(v=vs.100))。  
   
     > [!NOTE]
     > Entity Data Model Designer 可以用來重新命名概念模型中的實體，使其與現有物件相符。 如需詳細資訊，請參閱[實體資料模型設計](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))工具。  
@@ -60,7 +60,7 @@ ADO.NET Entity Framework 為現有的應用程式提供數個優點。 其中一
   
 - 使用資料讀取器 (Reader) 顯示表格式資料。  
 
-  您可以考慮使用 EntityClient [!INCLUDE[esql](../../../../../includes/esql-md.md)]提供者執行查詢，並透過傳回<xref:System.Data.EntityClient.EntityDataReader>的物件進行列舉。 只有當您的應用程式使用資料讀取器顯示表格式資料，而且不需要 Entity Framework 提供的功能將資料具體化為物件、追蹤變更，以及進行更新時，才執行這項操作。 您可以繼續使用對資料來源進行更新的現有資料存取程式碼，不過您可以使用從 <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 屬性存取的現有連接。 如需詳細資訊，請參閱[Entity Framework 的 EntityClient 提供者](entityclient-provider-for-the-entity-framework.md)。  
+  您可以考慮使用 EntityClient 提供者來執行 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢，並透過傳回的 <xref:System.Data.EntityClient.EntityDataReader> 物件進行列舉。 只有當您的應用程式使用資料讀取器顯示表格式資料，而且不需要 Entity Framework 提供的功能將資料具體化為物件、追蹤變更，以及進行更新時，才執行這項操作。 您可以繼續使用對資料來源進行更新的現有資料存取程式碼，不過您可以使用從 <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 屬性存取的現有連接。 如需詳細資訊，請參閱[Entity Framework 的 EntityClient 提供者](entityclient-provider-for-the-entity-framework.md)。  
   
 - 使用資料集。  
 
@@ -73,7 +73,7 @@ ADO.NET Entity Framework 為現有的應用程式提供數個優點。 其中一
   
 - 將資料繫結至控制項。  
 
-  當您查詢概念模型時，Entity Framework 會傳回資料做為實體類型實例的物件。 這些物件可以直接系結至控制項，而且此系結支援更新。 這表示在呼叫<xref:System.Windows.Forms.DataGridView> <xref:System.Data.Objects.ObjectContext.SaveChanges%2A>方法時，會自動將控制項中的資料變更（例如中的資料列）儲存至資料庫。  
+  當您查詢概念模型時，Entity Framework 會傳回資料做為實體類型實例的物件。 這些物件可以直接系結至控制項，而且此系結支援更新。 這表示在呼叫 <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> 方法時，會自動將控制項中的資料變更（例如 <xref:System.Windows.Forms.DataGridView>中的資料列）儲存至資料庫。  
   
   如果應用程式列舉查詢的結果，以在 <xref:System.Windows.Forms.DataGridView> 或其他支援資料繫結程序的控制項類型中顯示資料，您則可以把應用程式修改為將控制項繫結程序至 <xref:System.Data.Objects.ObjectQuery%601> 的結果。  
   
@@ -92,7 +92,7 @@ ADO.NET Entity Framework 為現有的應用程式提供數個優點。 其中一
   
 - 使用 XML 資料的應用程式。  
 
-  物件序列化可讓您建立 Entity Framework 資料服務。 這些服務為使用 XML 資料的應用程式提供資料，例如以 AJAX 為基礎的網際網路應用程式。 在這些情況下，請考慮使用 [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]。 這些資料服務是以實體資料模型為基礎，並使用標準具像狀態傳輸（REST） HTTP 動作（例如 GET、PUT 和 POST）提供實體資料的動態存取。 如需詳細資訊，請參閱 [WCF Data Services 4.5](../../wcf/index.md)。  
+  物件序列化可讓您建立 Entity Framework 資料服務。 這些服務為使用 XML 資料的應用程式提供資料，例如以 AJAX 為基礎的網際網路應用程式。 在這些情況下，請考慮使用 WCF Data Services。 這些資料服務是以實體資料模型為基礎，並使用標準具像狀態傳輸（REST） HTTP 動作（例如 GET、PUT 和 POST）提供實體資料的動態存取。 如需詳細資訊，請參閱 [WCF Data Services 4.5](../../wcf/index.md)。  
   
   Entity Framework 不支援原生 XML 資料類型。 亦即將實體對應至具有 XML 資料行的資料表時，XML 資料行的對等實體屬性會是字串。 您可以中斷物件的連接，而且將其序列化為 XML。 如需詳細資訊，請參閱序列化[物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))。  
   
@@ -100,9 +100,9 @@ ADO.NET Entity Framework 為現有的應用程式提供數個優點。 其中一
   
 - 維護狀態的應用程式。  
 
-  ASP.NET Web 應用程式必須經常維護網頁或使用者會話的狀態。 <xref:System.Data.Objects.ObjectContext>實例中的物件可以儲存在用戶端檢視狀態或伺服器上的會話狀態中，並于稍後抓取並重新附加至新的物件內容。 如需詳細資訊，請參閱[附加和卸離物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100))。  
+  ASP.NET Web 應用程式必須經常維護網頁或使用者會話的狀態。 <xref:System.Data.Objects.ObjectContext> 實例中的物件可以儲存在用戶端檢視狀態或伺服器上的會話狀態中，並于稍後抓取並重新附加至新的物件內容。 如需詳細資訊，請參閱[附加和卸離物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100))。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [部署考量](deployment-considerations.md)
 - [Entity Framework 詞彙](terminology.md)

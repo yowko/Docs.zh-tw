@@ -1,15 +1,15 @@
 ---
-title: 評估中斷性變更 - .NET Core
-description: 深入了解 .NET Core 嘗試針對跨 .NET 版本開發人員維護相容性的方式。
+title: 中斷性變更的類型-.NET Core
+description: 瞭解 .NET Core 如何嘗試維護跨 .NET 版本開發人員的相容性，以及將哪種變更視為重大變更。
 ms.date: 06/10/2019
-ms.openlocfilehash: 3ad3cbe36ee09d371e26dc7da36a31207a6c1b25
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 5624a35a0d71224faf9adc5df2b02a529e650314
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973654"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567710"
 ---
-# <a name="evaluate-breaking-changes-in-net-core"></a>評估 .NET Core 中的中斷性變更
+# <a name="changes-that-affect-compatibility"></a>影響相容性的變更
 
 縱觀其歷程記錄，.NET 一直嘗試維護 .NET 各版本之間以及各種變體之間的相容性。 在 .NET Core 中仍是如此。 雖然 .NET Core 可以視為是獨立於 .NET Framework 之外的新技術，但是有兩個主要因素限制了 .NET Core 從 .NET Framework 分離的能力：
 
@@ -19,19 +19,19 @@ ms.locfileid: "73973654"
 
 除了 .NET 實作之間的相容性之外，開發人員還希望 .NET Core 版本之間具有高層級相容性。 特別是，針對較早版本的 .NET Core 所撰寫的程式碼應該在新版的 .NET Core 上順暢地執行。 實際上，許多開發人員預期在新發行的 .NET Core 版本中找到的新 API，也應該與引入那些 API 的發行前版本相容。
 
-此文章概述相容性變更 (或中斷性變更) 的類別，以及 .NET 小組評估每個類別中的變更的方式。 了解 .NET 小組如何處理可能的中斷性變更，對於在 [dotnet/corefx](https://github.com/dotnet/corefx) GitHub 存放庫中建立提取要求以修改現有 API 行為的開發人員特別有幫助。
+此文章概述相容性變更 (或中斷性變更) 的類別，以及 .NET 小組評估每個類別中的變更的方式。 瞭解 .NET 小組如何解決可能的重大變更，對於在修改現有 Api 行為的[dotnet/corefx](https://github.com/dotnet/corefx) GitHub 存放庫中開啟提取要求的開發人員而言特別有用。
 
 > [!NOTE]
 > 如需相容性類別的定義，例如二進位檔案相容性和回溯相容性，請參閱[中斷性變更類別](categories.md)。
 
-以下各節說明對 .NET Core API 所做的變更類別，以及其對應用程式相容性的影響。 ✔️圖示表示允許特定類型的變更，❌ 表示不允許，而❓則表示不允許或可能會發生變更。 最後一個分類中的變更需要判斷並評估先前行為的可預測性、明顯性與一致性。
+以下各節說明對 .NET Core API 所做的變更類別，以及其對應用程式相容性的影響。 ✔️圖示表示允許特定類型的變更，❌ 表示不允許，而❓則表示不允許或可能會發生變更。 此最後一類的變更需要 judgement，以及評估先前行為的可預測、明顯和一致。
 
 > [!NOTE]
 > 除了作為如何評估 .NET Core 程式庫變更的指南之外，程式庫開發人員也可以使用這些準則來評估其程式庫 (以多個 .NET 實作和版本為目標) 的變更。
 
 ## <a name="modifications-to-the-public-contract"></a>公用合約的修改
 
-此類別中的變更會修改某個類型的公用介面區。 此類別中的大多數變更都是不允許的，因為它們違反了回溯相容性 (可讓使用舊版 API 開發的應用程式能夠在更新版本上執行而不必重新編譯的能力)。
+此類別目錄中的變更會修改類型的公用介面區。 此類別中的大多數變更都是不允許的，因為它們違反了回溯相容性 (可讓使用舊版 API 開發的應用程式能夠在更新版本上執行而不必重新編譯的能力)。
 
 ### <a name="types"></a>型別
 
