@@ -4,18 +4,22 @@ description: 列出 ASP.NET Core 中的重大變更。
 ms.date: 11/25/2019
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: ba8d17d4a3d44f9ebac1592afa1d987cfb23c5e7
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
-ms.translationtype: HT
+ms.openlocfilehash: 130a89f45c3f80975c56ea3a4845ee560921286e
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552160"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568372"
 ---
-# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="d062f-103">ASP.NET Core 的重大變更</span><span class="sxs-lookup"><span data-stu-id="d062f-103">ASP.NET Core breaking changes</span></span>
+# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="382b2-103">ASP.NET Core 的重大變更</span><span class="sxs-lookup"><span data-stu-id="382b2-103">ASP.NET Core breaking changes</span></span>
 
-<span data-ttu-id="d062f-104">以下是 ASP.NET Core 版本的 ASP.NET Core 重大變更清單。</span><span class="sxs-lookup"><span data-stu-id="d062f-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="d062f-105">ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。</span><span class="sxs-lookup"><span data-stu-id="d062f-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
+<span data-ttu-id="382b2-104">以下是 ASP.NET Core 版本的 ASP.NET Core 重大變更清單。</span><span class="sxs-lookup"><span data-stu-id="382b2-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="382b2-105">ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。</span><span class="sxs-lookup"><span data-stu-id="382b2-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
 
-## <a name="aspnet-core-30"></a><span data-ttu-id="d062f-106">ASP.NET Core 3。0</span><span class="sxs-lookup"><span data-stu-id="d062f-106">ASP.NET Core 3.0</span></span>
+## <a name="aspnet-core-31"></a><span data-ttu-id="382b2-106">ASP.NET Core 3。1</span><span class="sxs-lookup"><span data-stu-id="382b2-106">ASP.NET Core 3.1</span></span>
+
+[!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]
+
+## <a name="aspnet-core-30"></a><span data-ttu-id="382b2-107">ASP.NET Core 3。0</span><span class="sxs-lookup"><span data-stu-id="382b2-107">ASP.NET Core 3.0</span></span>
 
 [!INCLUDE[obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 
@@ -202,7 +206,3 @@ ms.locfileid: "74552160"
 ***
 
 [!INCLUDE[Target framework: .NET Framework not supported](~/includes/core-changes/aspnetcore/3.0/targetfx-netfx-tfm-support.md)]
-
-## <a name="aspnet-core-31"></a><span data-ttu-id="d062f-107">ASP.NET Core 3。1</span><span class="sxs-lookup"><span data-stu-id="d062f-107">ASP.NET Core 3.1</span></span>
-
-[!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]
