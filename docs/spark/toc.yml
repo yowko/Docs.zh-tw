@@ -21,6 +21,8 @@
   items:
     - name: 為您的應用程式偵錯
       href: how-to-guides/debug.md
+    - name: 將作業提交至 HDInsight
+      href: how-to-guides/hdinsight-deploy-methods.md
 - name: 參考資料
   items:
     - name: 應用程式開發介面參考
