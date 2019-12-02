@@ -73,7 +73,8 @@
       href: whats-new/dotnet-core-2-1.md
     - name: .NET Core 2.0 的新功能
       href: whats-new/dotnet-core-2-0.md
-- name: 應用程式相容性
+- name: 重大變更
+  displayName: app compatibility
   href: compatibility/
 - name: 教學課程
   href: tutorials/index.md
@@ -330,14 +331,18 @@
       href: porting/third-party-deps.md
     - name: 移植程式庫
       href: porting/libraries.md
-    - name: 為 .NET Core 組織專案
+    - name: 整理專案在 .NET Core 中使用
       href: porting/project-structure.md
-    - name: 協助移植到 .NET Core 的工具
+    - name: 工具
       href: porting/tools.md
     - name: 使用 Windows 相容性套件
       href: porting/windows-compat-pack.md
     - name: 移植 Windows Form 專案
-      href: porting/winforms.md
+      items:
+        - name: 如何移植專案
+          href: porting/winforms.md
+        - name: 重大變更
+          href: porting/winforms-breaking-changes.md
     - name: 移植 WPF 專案
       href: porting/wpf.md
 - name: 相依性載入
