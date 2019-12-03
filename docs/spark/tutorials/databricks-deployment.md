@@ -4,12 +4,12 @@ description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署�
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c1c1a57fb2b79826218f8ed94d568b37d4689560
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e79b4c5bf38416cf45776488559bd0b2d5582361
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454271"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716471"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>教學課程：將適用于 Apache Spark 應用程式的 .NET 部署至 Databricks
 
@@ -24,7 +24,7 @@ ms.locfileid: "73454271"
 > - 建立 Spark 作業和 Spark 叢集。
 > - 在 Spark 叢集上執行您的應用程式。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 開始之前，請執行下列工作：
 
@@ -50,7 +50,7 @@ ms.locfileid: "73454271"
     |---------|---------|
     |**工作區名稱**     | 為您的 Databricks 工作區提供名稱。        |
     |**訂用帳戶**     | 從下拉式選單中，選取您的 Azure 訂用帳戶。        |
-    |**資源群組**     | 指定您要建立新的資源群組，還是使用現有的。 資源群組是保存 Azure 解決方案相關資源的容器。 如需詳細資訊，請參閱[Azure 資源群組總覽](/azure/azure-databricks/azure-resource-manager/resource-group-overview)。 |
+    |**資源群組**     | 指定您要建立新的資源群組，還是使用現有的。 資源群組是保存 Azure 解決方案相關資源的容器。 如需詳細資訊，請參閱[Azure 資源群組總覽](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)。 |
     |**位置**     | 選取您慣用的區域。 如需可用區域的詳細資訊，請參閱[依區域提供的 Azure 服務](https://azure.microsoft.com/regions/services/)。        |
     |**定價層**     |  選擇 [**標準**]、[ **Premium**] 或 [**試用**]。 如需這些層級的詳細資訊，請參閱[Databricks 定價頁面](https://azure.microsoft.com/pricing/details/databricks/)。       |
     |**虛擬網路**     |   否       |
