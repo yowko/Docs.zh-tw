@@ -2,12 +2,12 @@
 title: 實作微服務之間的事件通訊 (整合事件)
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解整合事件以實作微服務之間的事件通訊。
 ms.date: 10/02/2018
-ms.openlocfilehash: 70566745dc084ba9016a850ad749fefb958e89ec
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a355ba9ede4e3390edd858d173dd88548e876202
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737143"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711216"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>實作微服務之間的事件通訊 (整合事件)
 
@@ -126,6 +126,19 @@ public interface IEventBus
 `Publish` 方法很直接明瞭。 事件匯流排會將傳遞給它的整合事件，廣播到任何微服務或甚至是訂閱該事件的外部應用程式。 這個方法由發行事件的微服務所使用。
 
 `Subscribe` 方法 (您可以有根據引數而定的數種實作) 是由想要收到事件的微服務所使用。 這個方法有兩個引數。 第一個是要訂閱的整合事件 (`IntegrationEvent`)。 第二個引數是整合事件處理常式 (或回呼方法)，名為 `IIntegrationEventHandler<T>`，且將在接收者微服務取得該整合事件訊息時執行。
+
+## <a name="additional-resources"></a>其他資源
+
+一些已準備好用於生產環境的訊息解決方案：
+
+- **Azure 服務匯流排** \
+  <https://docs.microsoft.com/azure/service-bus-messaging/>
+  
+- **NServiceBus** \
+  <https://particular.net/nservicebus>
+  
+- **MassTransit** \
+  <https://masstransit-project.com/>
 
 > [!div class="step-by-step"]
 > [上一頁](database-server-container.md)

@@ -2,12 +2,12 @@
 title: 針對開發或測試環境使用 RabbitMQ 實作事件匯流排
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對開發或測試環境使用 RabbitMQ 實作整合事件的事件匯流排傳訊。
 ms.date: 10/02/2018
-ms.openlocfilehash: 211348caec3c101435fcdd99bd96fd8e17a6456b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ba1cea9384893955ae0743ac8d6a34c350224cd5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739500"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711191"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>針對開發或測試環境使用 RabbitMQ 實作事件匯流排
 
@@ -108,6 +108,20 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 Subscribe 方法接受 IIntegrationEventHandler 物件，就像是目前微服務及其相關 IntegrationEvent 物件中的回呼方法。 此程式碼接著會將該事件處理常式新增至事件處理常式清單，每個整合事件類型可根據每個用戶端微服務擁有這些事件處理常式。 如果用戶端程式碼尚未訂閱事件，程式碼會建立事件類型的通道，以便在從任何其他服務發行該事件時，可從 RabbitMQ 接收推送樣式的事件。
 
+如先前所述，在 eShopOnContainers 中實作用的事件匯流排只會處理主要案例，而不會準備好用於生產環境。
+
+針對生產案例，請檢查下列其他資源（特定于 RabbitMQ）和[微服務區段之間的執行事件型通訊](./integration-event-based-microservice-communications.md#additional-resources)。
+
+## <a name="additional-resources"></a>其他資源
+
+支援 RabbitMQ 的生產環境就緒解決方案。
+
+- **EasyNetQ** -開放原始碼 .net API Client for RabbitMQ \
+  <http://easynetq.com/>
+
+- **MassTransit** \
+  <https://masstransit-project.com/>
+  
 >[!div class="step-by-step"]
 >[上一頁](integration-event-based-microservice-communications.md)
 >[下一頁](subscribe-events.md)

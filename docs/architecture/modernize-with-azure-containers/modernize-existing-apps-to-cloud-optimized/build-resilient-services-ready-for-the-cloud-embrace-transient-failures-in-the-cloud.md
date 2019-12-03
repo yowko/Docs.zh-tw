@@ -2,12 +2,12 @@
 title: 為雲端打造可復原的服務。 接受雲端中的暫時性失敗
 description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |為雲端打造可復原的服務。 接受雲端中的暫時性失敗
 ms.date: 04/30/2018
-ms.openlocfilehash: e6fae8140b55cb0308dca9f4b77e961501b41f8f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e516dc675ceb8def25c6d676bced0ea7f253b2d5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73739386"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711253"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>為雲端打造可復原的服務：在雲端中採用暫時性失敗
 
@@ -27,7 +27,7 @@ ms.locfileid: "73739386"
 
 如圖4-9 所示，彈性應用程式應該執行像是「使用指數輪詢重試」之類的技術，讓應用程式有機會處理資源中的暫時性失敗。 您也應該在應用程式中使用「斷路器」。 當應用程式實際上是長期失敗時，斷路器會停止嘗試存取資源。 藉由使用斷路器，應用程式可避免誘發本身的拒絕服務。
 
-![以指數輪詢重試所處理部分失敗的圖表。](./media/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud/retry-partial-failures.png)
+![以指數輪詢重試所處理部分失敗的圖表。](./media/retry-partial-failures.png)
 
 **圖4-9。** 以指數輪詢的重試處理部分失敗
 

@@ -2,12 +2,12 @@
 title: 服務網格-適用于 WCF 開發人員的 gRPC
 description: 使用服務網格來路由傳送要求，並將其與 Kubernetes 叢集中的 gRPC 服務進行平衡。
 ms.date: 09/02/2019
-ms.openlocfilehash: d20275082973f30bddbb342da90454401d4f019b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: cc4855b1ed27e29076e4f13f5c5d3dffa63a6554
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966974"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711268"
 ---
 # <a name="service-meshes"></a>服務網格
 
@@ -16,12 +16,12 @@ ms.locfileid: "73966974"
 - 服務探索
 - 負載平衡
 - 容錯
-- 加密
+- [加密]
 - 監視
 
 Kubernetes 服務網格的工作是將額外的容器（稱為*側車 proxy*）新增至網格中包含的每個 pod。 Proxy 會接管處理所有的輸入和輸出網路要求，讓網路的設定和管理與應用程式容器保持分開，而且在許多情況下，不需要對應用程式程式碼進行任何變更。
 
-請使用[上一章的範例](kubernetes.md#testing-the-application)，其中 web 應用程式的 gRPC 要求全都路由傳送至 gRPC 服務的單一實例。 發生這種情況是因為服務的主機名稱解析為 IP 位址，而該 IP 位址會在 `HttpClientHandler` 實例的存留期內快取。 您可以藉由手動處理 DNS 查閱或建立多個用戶端來解決此情況，但這會大幅增加應用程式的程式碼，而不需要新增任何商業或客戶價值。
+請使用[上一章的範例](kubernetes.md#test-the-application)，其中 web 應用程式的 gRPC 要求全都路由傳送至 gRPC 服務的單一實例。 發生這種情況是因為服務的主機名稱解析為 IP 位址，而該 IP 位址會在 `HttpClientHandler` 實例的存留期內快取。 您可以藉由手動處理 DNS 查閱或建立多個用戶端來解決此情況，但這會大幅增加應用程式的程式碼，而不需要新增任何商業或客戶價值。
 
 使用服務網格時，會將來自應用程式容器的要求傳送至側車 proxy，以智慧方式在其他服務的所有實例之間散發。 網格也可以：
 
