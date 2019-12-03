@@ -1,72 +1,72 @@
 ---
 title: 為 WCF 開發人員建立新的 ASP.NET Core gRPC 專案 gRPC
-description: 瞭解如何使用 Visual Studio 或從命令列建立 gRPC 專案。
+description: 瞭解如何使用 Visual Studio 或命令列來建立 gRPC 專案。
 ms.date: 09/02/2019
-ms.openlocfilehash: 992c3f57be25ae2517d41437170dc287f58934b6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ea6d7658404f61fedb25d7de7ddedb7c51437383
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967886"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711440"
 ---
-# <a name="create-a-new-aspnet-core-grpc-project"></a><span data-ttu-id="51437-103">建立新的 ASP.NET Core gRPC 專案</span><span class="sxs-lookup"><span data-stu-id="51437-103">Create a new ASP.NET Core gRPC project</span></span>
+# <a name="create-a-new-aspnet-core-grpc-project"></a><span data-ttu-id="07789-103">建立新的 ASP.NET Core gRPC 專案</span><span class="sxs-lookup"><span data-stu-id="07789-103">Create a new ASP.NET Core gRPC project</span></span>
 
-<span data-ttu-id="51437-104">.NET Core 隨附功能強大的 CLI 工具，`dotnet`，可讓您從命令列建立和管理專案和解決方案。</span><span class="sxs-lookup"><span data-stu-id="51437-104">.NET Core comes with a powerful CLI tool, `dotnet`, which enables you to create and manage projects and solutions from the command line.</span></span> <span data-ttu-id="51437-105">此工具與 Visual Studio 緊密整合，因此您也可以透過熟悉的 GUI 介面取得所有專案。</span><span class="sxs-lookup"><span data-stu-id="51437-105">The tool is closely integrated with Visual Studio, so everything is also available through the familiar GUI interface.</span></span> <span data-ttu-id="51437-106">本章將示範兩種建立新 ASP.NET Core gRPC 專案的方式：先使用 Visual Studio，然後再加上 .NET Core CLI。</span><span class="sxs-lookup"><span data-stu-id="51437-106">This chapter will show both ways to create a new ASP.NET Core gRPC project: first with Visual Studio, then with the .NET Core CLI.</span></span>
+<span data-ttu-id="07789-104">.NET Core SDK 隨附功能強大的 CLI 工具，`dotnet`，可讓您從命令列建立和管理專案和解決方案。</span><span class="sxs-lookup"><span data-stu-id="07789-104">The .NET Core SDK comes with a powerful CLI tool, `dotnet`, which enables you to create and manage projects and solutions from the command line.</span></span> <span data-ttu-id="07789-105">SDK 與 Visual Studio 緊密整合，因此您也可以透過熟悉的圖形化使用者介面取得所有專案。</span><span class="sxs-lookup"><span data-stu-id="07789-105">The SDK is closely integrated with Visual Studio, so everything is also available through the familiar graphical user interface.</span></span> <span data-ttu-id="07789-106">本章說明建立新 ASP.NET Core gRPC 專案的兩種方式。</span><span class="sxs-lookup"><span data-stu-id="07789-106">This chapter shows both ways to create a new ASP.NET Core gRPC project.</span></span>
 
-## <a name="create-the-project-using-visual-studio"></a><span data-ttu-id="51437-107">使用 Visual Studio 建立專案</span><span class="sxs-lookup"><span data-stu-id="51437-107">Create the project using Visual Studio</span></span>
+## <a name="create-the-project-by-using-visual-studio"></a><span data-ttu-id="07789-107">使用 Visual Studio 建立專案</span><span class="sxs-lookup"><span data-stu-id="07789-107">Create the project by using Visual Studio</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="51437-108">若要開發任何 ASP.NET Core 3.0 應用程式，您需要已安裝**ASP.NET 和 網頁程式開發**工作負載的 Visual Studio 2019.3 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="51437-108">To develop any ASP.NET Core 3.0 app, you need Visual Studio 2019.3 or later with the **ASP.NET and web development** workload installed.</span></span>
+> <span data-ttu-id="07789-108">若要開發任何 ASP.NET Core 3.0 應用程式，您需要有已安裝**ASP.NET 和 網頁程式開發**工作負載的 Visual Studio 2019 16.3 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="07789-108">To develop any ASP.NET Core 3.0 app, you need Visual Studio 2019 16.3 or later, with the **ASP.NET and web development** workload installed.</span></span>
 
-<span data-ttu-id="51437-109">從*空白解決方案*範本建立名為**TraderSys**的空白解決方案。</span><span class="sxs-lookup"><span data-stu-id="51437-109">Create an empty solution called **TraderSys** from the *Blank Solution* template.</span></span> <span data-ttu-id="51437-110">新增名為 `src`的方案資料夾，然後以滑鼠右鍵按一下該資料夾，然後從內容功能表選擇 [**加入** > **新增專案**]。</span><span class="sxs-lookup"><span data-stu-id="51437-110">Add a Solution Folder called `src`, then right-click on the folder and choose **Add** > **New Project** from the context menu.</span></span> <span data-ttu-id="51437-111">在 [範本搜尋] 方塊中輸入 `grpc`，您應該會看到名為 `gRPC Service`的專案範本。</span><span class="sxs-lookup"><span data-stu-id="51437-111">Enter `grpc` in the template search box and you should see a project template called `gRPC Service`.</span></span>
+<span data-ttu-id="07789-109">從*空白解決方案*範本建立名為**TraderSys**的空白解決方案。</span><span class="sxs-lookup"><span data-stu-id="07789-109">Create an empty solution called **TraderSys** from the *Blank Solution* template.</span></span> <span data-ttu-id="07789-110">新增名為 `src`的方案資料夾。</span><span class="sxs-lookup"><span data-stu-id="07789-110">Add a solution folder called `src`.</span></span> <span data-ttu-id="07789-111">然後，在資料夾上按一下滑鼠右鍵，然後選擇 [**加入**] > [**新增專案**]。</span><span class="sxs-lookup"><span data-stu-id="07789-111">Then, right-click on the folder and choose **Add** > **New Project**.</span></span> <span data-ttu-id="07789-112">在 [範本搜尋] 方塊中輸入 `grpc`，您應該會看到名為 `gRPC Service`的專案範本。</span><span class="sxs-lookup"><span data-stu-id="07789-112">Enter `grpc` in the template search box, and you should see a project template called `gRPC Service`.</span></span>
 
-![顯示 gRPC 服務專案範本的 [新增專案] 對話方塊](media/create-project/new-grpc-project.png)
+![[新增專案] 對話方塊的螢幕擷取畫面](media/create-project/new-grpc-project.png)
 
-<span data-ttu-id="51437-113">按 **[下一步**] 以繼續前往 [**設定專案**] 對話方塊，並將專案命名為 `TraderSys.Portfolios`，並將 `src` 子目錄新增至該**位置**。</span><span class="sxs-lookup"><span data-stu-id="51437-113">Click **Next** to continue to the **Configure project** dialog and name the project `TraderSys.Portfolios`, and add an `src` subdirectory to the **Location**.</span></span>
+<span data-ttu-id="07789-114">選取 **[下一步**] 以繼續前往 [**設定您的新專案**] 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="07789-114">Select **Next** to continue to the **Configure your new project** dialog box.</span></span> <span data-ttu-id="07789-115">將專案命名為 `TraderSys.Portfolios`，並將 `src` 子目錄新增至該**位置**。</span><span class="sxs-lookup"><span data-stu-id="07789-115">Name the project `TraderSys.Portfolios`, and add an `src` subdirectory to the **Location**.</span></span>
 
-![[設定專案] 對話方塊](media/create-project/configure-project.png)
+![[設定您的新專案] 對話方塊的螢幕擷取畫面](media/create-project/configure-project.png)
 
-<span data-ttu-id="51437-115">按 **[下一步**] 以繼續前往 [**新增 gRPC 專案**] 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="51437-115">Click **Next** to continue to the **New gRPC project** dialog.</span></span>
+<span data-ttu-id="07789-117">選取 **[下一步**] 以繼續前往 [**建立新的 gRPC 服務**] 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="07789-117">Select **Next** to continue to the **Create a new gRPC service** dialog box.</span></span>
 
-![[新增 gRPC 專案] 對話方塊](media/create-project/create-new-grpc-service.png)
+![[建立新的 gRPC 服務] 對話方塊的螢幕擷取畫面](media/create-project/create-new-grpc-service.png)
 
-<span data-ttu-id="51437-117">目前，服務建立有一些有限的選項。</span><span class="sxs-lookup"><span data-stu-id="51437-117">At present, there are limited options for the service creation.</span></span> <span data-ttu-id="51437-118">Docker 稍後會在本書中引進，因此請不要勾選該核取方塊，只要按一下 [**建立**] 即可。</span><span class="sxs-lookup"><span data-stu-id="51437-118">Docker will be introduced later in the book, so leave that checkbox unchecked for now and just click **Create**.</span></span> <span data-ttu-id="51437-119">系統會產生您的第一個 ASP.NET Core 3.0 gRPC 專案，並將其新增至方案。</span><span class="sxs-lookup"><span data-stu-id="51437-119">Your first ASP.NET Core 3.0 gRPC project is generated and added to the solution.</span></span> <span data-ttu-id="51437-120">如果您不想知道如何使用 `dotnet CLI`，請跳至[清除範例程式碼](#clean-up-the-example-code)一節。</span><span class="sxs-lookup"><span data-stu-id="51437-120">If you don't want to know about working with the `dotnet CLI`, skip to the [Clean up the example code](#clean-up-the-example-code) section.</span></span>
+<span data-ttu-id="07789-119">目前，您的服務建立選項有限。</span><span class="sxs-lookup"><span data-stu-id="07789-119">At present, you have limited options for the service creation.</span></span> <span data-ttu-id="07789-120">Docker 將會在稍後引進，因此現在請不要選取這個選項。</span><span class="sxs-lookup"><span data-stu-id="07789-120">Docker will be introduced later, so for now, leave that option unselected.</span></span> <span data-ttu-id="07789-121">只需選取 [**建立**]。</span><span class="sxs-lookup"><span data-stu-id="07789-121">Just select **Create**.</span></span> <span data-ttu-id="07789-122">系統會產生您的第一個 ASP.NET Core 3.0 gRPC 專案，並將其新增至方案。</span><span class="sxs-lookup"><span data-stu-id="07789-122">Your first ASP.NET Core 3.0 gRPC project is generated and added to the solution.</span></span> <span data-ttu-id="07789-123">如果您不想知道如何使用 `dotnet CLI`，請跳至[清除範例程式碼](#clean-up-the-example-code)一節。</span><span class="sxs-lookup"><span data-stu-id="07789-123">If you don't want to know about working with the `dotnet CLI`, skip to the [Clean up the example code](#clean-up-the-example-code) section.</span></span>
 
-## <a name="create-the-project-using-the-net-core-cli"></a><span data-ttu-id="51437-121">使用 .NET Core CLI 建立專案</span><span class="sxs-lookup"><span data-stu-id="51437-121">Create the project using the .NET Core CLI</span></span>
+## <a name="create-the-project-by-using-the-net-core-cli"></a><span data-ttu-id="07789-124">使用 .NET Core CLI 建立專案</span><span class="sxs-lookup"><span data-stu-id="07789-124">Create the project by using the .NET Core CLI</span></span>
 
-<span data-ttu-id="51437-122">本節說明如何從命令列建立解決方案和專案。</span><span class="sxs-lookup"><span data-stu-id="51437-122">This section covers the creation of solutions and projects from the command line.</span></span>
+<span data-ttu-id="07789-125">本節說明如何從命令列建立解決方案和專案。</span><span class="sxs-lookup"><span data-stu-id="07789-125">This section covers the creation of solutions and projects from the command line.</span></span>
 
-<span data-ttu-id="51437-123">建立解決方案，如下所示。</span><span class="sxs-lookup"><span data-stu-id="51437-123">Create the solution as shown below.</span></span> <span data-ttu-id="51437-124">`-o` （或 `--output`）旗標會指定輸出目錄，如果它不存在，則會在目前的目錄中建立。</span><span class="sxs-lookup"><span data-stu-id="51437-124">The `-o` (or `--output`) flag specifies the output directory, which will be created in the current directory if it does not exist.</span></span> <span data-ttu-id="51437-125">方案的名稱會與目錄相同，亦即 `TraderSys.sln`。您可以使用 `-n` （或 `--name`）旗標來提供不同的名稱。</span><span class="sxs-lookup"><span data-stu-id="51437-125">The solution will be given the same name as the directory, i.e. `TraderSys.sln`. You can provide a different name using the `-n` (or `--name`) flag.</span></span>
+<span data-ttu-id="07789-126">建立解決方案，如下列命令所示。</span><span class="sxs-lookup"><span data-stu-id="07789-126">Create the solution as shown in the following command.</span></span> <span data-ttu-id="07789-127">`-o` （或 `--output`）旗標會指定在目前目錄中建立的輸出目錄（如果尚未存在的話）。</span><span class="sxs-lookup"><span data-stu-id="07789-127">The `-o` (or `--output`) flag specifies the output directory, which is created in the current directory if it doesn't already exist.</span></span> <span data-ttu-id="07789-128">此方案的名稱與目錄相同： `TraderSys.sln`。</span><span class="sxs-lookup"><span data-stu-id="07789-128">The solution has the same name as the directory: `TraderSys.sln`.</span></span> <span data-ttu-id="07789-129">您可以使用 `-n` （或 `--name`）旗標來提供不同的名稱。</span><span class="sxs-lookup"><span data-stu-id="07789-129">You can provide a different name by using the `-n` (or `--name`) flag.</span></span>
 
 ```dotnetcli
 dotnet new sln -o TraderSys
 cd TraderSys
 ```
 
-<span data-ttu-id="51437-126">ASP.NET Core 3.0 隨附 gRPC services 的 CLI 範本。</span><span class="sxs-lookup"><span data-stu-id="51437-126">ASP.NET Core 3.0 comes with a CLI template for gRPC services.</span></span> <span data-ttu-id="51437-127">使用此範本建立新的專案，並將其放入 `src` 子目錄中，如同 ASP.NET Core 專案的慣例。</span><span class="sxs-lookup"><span data-stu-id="51437-127">Create the new project using this template, putting it into an `src` subdirectory as is the convention for ASP.NET Core projects.</span></span> <span data-ttu-id="51437-128">除非您使用 `-n` 旗標指定不同的名稱，否則專案會以目錄（亦即 `TraderSys.Portfolios.csproj`）命名。</span><span class="sxs-lookup"><span data-stu-id="51437-128">The project will be named after the directory (i.e. `TraderSys.Portfolios.csproj`) unless you specify a different name with the `-n` flag.</span></span>
+<span data-ttu-id="07789-130">ASP.NET Core 3.0 隨附 gRPC services 的 CLI 範本。</span><span class="sxs-lookup"><span data-stu-id="07789-130">ASP.NET Core 3.0 comes with a CLI template for gRPC services.</span></span> <span data-ttu-id="07789-131">使用此範本建立新的專案，並將其放入 `src` 子目錄中，如同傳統的 ASP.NET Core 專案。</span><span class="sxs-lookup"><span data-stu-id="07789-131">Create the new project by using this template, putting it into an `src` subdirectory as is conventional for ASP.NET Core projects.</span></span> <span data-ttu-id="07789-132">除非您使用 `-n` 旗標指定不同的名稱，否則專案會以目錄（`TraderSys.Portfolios.csproj`）命名。</span><span class="sxs-lookup"><span data-stu-id="07789-132">The project is named after the directory (`TraderSys.Portfolios.csproj`), unless you specify a different name with the `-n` flag.</span></span>
 
 ```dotnetcli
 dotnet new grpc -o src/TraderSys.Portfolios
 ```
 
-<span data-ttu-id="51437-129">最後，使用 `dotnet sln` 命令，將專案新增至方案。</span><span class="sxs-lookup"><span data-stu-id="51437-129">Finally, add the project to the solution using the `dotnet sln` command.</span></span>
+<span data-ttu-id="07789-133">最後，使用 `dotnet sln` 命令，將專案新增至方案：</span><span class="sxs-lookup"><span data-stu-id="07789-133">Finally, add the project to the solution by using the `dotnet sln` command:</span></span>
 
 ```dotnetcli
 dotnet sln add src/TraderSys.Portfolios
 ```
 
 > [!TIP]
-> <span data-ttu-id="51437-130">由於指定的目錄只包含單一 `.csproj` 檔案，因此您可以只指定目錄來儲存輸入。</span><span class="sxs-lookup"><span data-stu-id="51437-130">Since the given directory only contains a single `.csproj` file, you can get away with specifying just the directory to save typing.</span></span>
+> <span data-ttu-id="07789-134">因為特定目錄只包含單一 `.csproj` 檔案，所以您可以只指定目錄，以儲存輸入。</span><span class="sxs-lookup"><span data-stu-id="07789-134">Because the particular directory only contains a single `.csproj` file, you can specify just the directory, to save typing.</span></span>
 
-<span data-ttu-id="51437-131">您現在可以在 Visual Studio 2019、Visual Studio Code 或任何您偏好的編輯器中開啟此方案。</span><span class="sxs-lookup"><span data-stu-id="51437-131">You can now open this solution in Visual Studio 2019, Visual Studio Code, or whatever editor you prefer.</span></span>
+<span data-ttu-id="07789-135">您現在可以在 Visual Studio 2019、Visual Studio Code 或任何您偏好的編輯器中開啟此方案。</span><span class="sxs-lookup"><span data-stu-id="07789-135">You can now open this solution in Visual Studio 2019, Visual Studio Code, or whatever editor you prefer.</span></span>
 
-## <a name="clean-up-the-example-code"></a><span data-ttu-id="51437-132">清除範例程式碼</span><span class="sxs-lookup"><span data-stu-id="51437-132">Clean up the example code</span></span>
+## <a name="clean-up-the-example-code"></a><span data-ttu-id="07789-136">清除範例程式碼</span><span class="sxs-lookup"><span data-stu-id="07789-136">Clean up the example code</span></span>
 
-<span data-ttu-id="51437-133">您現在已使用 gRPC 範本建立了範例服務，先前已在本書中進行檢查。</span><span class="sxs-lookup"><span data-stu-id="51437-133">You've now created an example service using the gRPC template, which was reviewed earlier in the book.</span></span> <span data-ttu-id="51437-134">這在我們的股票交易內容中並不實用，因此我們將編輯第一個專案的事項。</span><span class="sxs-lookup"><span data-stu-id="51437-134">This isn't useful in our stock trading context, so we'll edit things for our first project.</span></span>
+<span data-ttu-id="07789-137">您現在已使用 gRPC 範本建立了範例服務，先前已在本書中進行檢查。</span><span class="sxs-lookup"><span data-stu-id="07789-137">You've now created an example service by using the gRPC template, which was reviewed earlier in the book.</span></span> <span data-ttu-id="07789-138">這在我們的股票交易內容中並不實用，因此我們將編輯第一個專案的事項。</span><span class="sxs-lookup"><span data-stu-id="07789-138">This isn't useful in our stock trading context, so we'll edit things for our first project.</span></span>
 
-### <a name="rename-and-edit-the-proto-file"></a><span data-ttu-id="51437-135">重新命名和編輯 proto 檔案</span><span class="sxs-lookup"><span data-stu-id="51437-135">Rename and edit the proto file</span></span>
+### <a name="rename-and-edit-the-proto-file"></a><span data-ttu-id="07789-139">重新命名和編輯 proto 檔案</span><span class="sxs-lookup"><span data-stu-id="07789-139">Rename and edit the proto file</span></span>
 
-<span data-ttu-id="51437-136">繼續進行，並將 `Protos/greet.proto` 檔案重新命名為 `Protos/portfolios.proto`，然後在您的編輯器中開啟它。</span><span class="sxs-lookup"><span data-stu-id="51437-136">Go ahead and rename the `Protos/greet.proto` file to `Protos/portfolios.proto` and open it in your editor.</span></span> <span data-ttu-id="51437-137">刪除 `package` 行之後的所有內容，然後變更 `option csharp_namespace`、`package` 和 `service` 名稱，並移除預設的 `SayHello` 服務，讓程式碼看起來像這樣。</span><span class="sxs-lookup"><span data-stu-id="51437-137">Delete everything after the `package` line, then change the `option csharp_namespace`, `package` and `service` names, and remove the default `SayHello` service, so the code looks like this.</span></span>
+<span data-ttu-id="07789-140">繼續進行，並將 `Protos/greet.proto` 檔案重新命名為 `Protos/portfolios.proto`，然後在您的編輯器中開啟它。</span><span class="sxs-lookup"><span data-stu-id="07789-140">Go ahead and rename the `Protos/greet.proto` file to `Protos/portfolios.proto`, and open it in your editor.</span></span> <span data-ttu-id="07789-141">刪除 `package` 行之後的所有內容。</span><span class="sxs-lookup"><span data-stu-id="07789-141">Delete everything after the `package` line.</span></span> <span data-ttu-id="07789-142">然後，變更 `option csharp_namespace`、`package` 和 `service` 名稱，並移除預設的 `SayHello` 服務。</span><span class="sxs-lookup"><span data-stu-id="07789-142">Then change the `option csharp_namespace`, `package` and `service` names, and remove the default `SayHello` service.</span></span> <span data-ttu-id="07789-143">程式碼現在看起來如下所示：</span><span class="sxs-lookup"><span data-stu-id="07789-143">The code now looks like the following:</span></span>
 
 ```protobuf
 syntax = "proto3";
@@ -81,11 +81,11 @@ service Portfolios {
 ```
 
 > [!TIP]
-> <span data-ttu-id="51437-138">範本預設不會新增 `Protos` 的命名空間部分，但新增它可讓您更輕鬆地將 gRPC 產生的類別和您自己的類別明確分隔在程式碼中。</span><span class="sxs-lookup"><span data-stu-id="51437-138">The template doesn't add the `Protos` namespace part by default, but adding it makes it easier to keep gRPC-generated classes and your own classes clearly separated in your code.</span></span>
+> <span data-ttu-id="07789-144">範本預設不會新增 `Protos` 的命名空間部分，但新增它可讓您更輕鬆地將 gRPC 產生的類別和您自己的類別明確分隔在程式碼中。</span><span class="sxs-lookup"><span data-stu-id="07789-144">The template doesn't add the `Protos` namespace part by default, but adding it makes it easier to keep gRPC-generated classes and your own classes clearly separated in your code.</span></span>
 
-<span data-ttu-id="51437-139">如果您在類似 Visual Studio 的整合式開發環境（IDE）中重新命名 `greet.proto` 檔案，則會在 `.csproj` 檔案中自動更新此檔案的參考。</span><span class="sxs-lookup"><span data-stu-id="51437-139">If you rename the `greet.proto` file in an integrated development environment (IDE) like Visual Studio, a reference to this file is automatically updated in the `.csproj` file.</span></span> <span data-ttu-id="51437-140">但是在某些其他編輯器（例如 Visual Studio Code）中，此參考不會自動更新，因此您必須手動編輯專案檔。</span><span class="sxs-lookup"><span data-stu-id="51437-140">But in some other editor, such as Visual Studio Code, this reference isn't updated automatically, so you need to edit the project file manually.</span></span>
+<span data-ttu-id="07789-145">如果您在類似 Visual Studio 的整合式開發環境（IDE）中重新命名 `greet.proto` 檔案，則會在 `.csproj` 檔案中自動更新此檔案的參考。</span><span class="sxs-lookup"><span data-stu-id="07789-145">If you rename the `greet.proto` file in an integrated development environment (IDE) like Visual Studio, a reference to this file is automatically updated in the `.csproj` file.</span></span> <span data-ttu-id="07789-146">但是在某些其他編輯器（例如 Visual Studio Code）中，此參考不會自動更新，因此您必須手動編輯專案檔。</span><span class="sxs-lookup"><span data-stu-id="07789-146">But in some other editor, such as Visual Studio Code, this reference isn't updated automatically, so you need to edit the project file manually.</span></span>
 
-<span data-ttu-id="51437-141">在 gRPC 組建目標中，有一個 `Protobuf` item 專案，可讓您指定應該編譯哪些 `.proto` 檔，以及需要產生哪一種程式碼（也就是「伺服器」或「用戶端」）。</span><span class="sxs-lookup"><span data-stu-id="51437-141">In the gRPC build targets, there's a `Protobuf` item element that lets you specify which `.proto` files should be compiled and which form of code generation is required (that is, "Server" or "Client").</span></span>
+<span data-ttu-id="07789-147">在 gRPC 組建目標中，有一個 `Protobuf` 專案元素，可讓您指定應該編譯的 `.proto` 檔，以及需要產生的程式碼形式（也就是「伺服器」或「用戶端」）。</span><span class="sxs-lookup"><span data-stu-id="07789-147">In the gRPC build targets, there's a `Protobuf` item element that lets you specify which `.proto` files should be compiled, and which form of code generation is required (that is, "Server" or "Client").</span></span>
 
 ```xml
 <ItemGroup>
@@ -93,9 +93,9 @@ service Portfolios {
 </ItemGroup>
 ```
 
-### <a name="rename-the-greeterservice-class"></a><span data-ttu-id="51437-142">重新命名 GreeterService 類別</span><span class="sxs-lookup"><span data-stu-id="51437-142">Rename the GreeterService class</span></span>
+### <a name="rename-the-greeterservice-class"></a><span data-ttu-id="07789-148">重新命名 `GreeterService` 類別</span><span class="sxs-lookup"><span data-stu-id="07789-148">Rename the `GreeterService` class</span></span>
 
-<span data-ttu-id="51437-143">`GreeterService` 類別位於 `Services` 資料夾中，並繼承自 `Greeter.GreeterBase`。</span><span class="sxs-lookup"><span data-stu-id="51437-143">The `GreeterService` class is in the `Services` folder and inherits from `Greeter.GreeterBase`.</span></span> <span data-ttu-id="51437-144">將它重新命名為 `PortfolioService`，並將基類變更為 `Portfolios.PortfoliosBase`。</span><span class="sxs-lookup"><span data-stu-id="51437-144">Rename it to `PortfolioService` and change the base class to `Portfolios.PortfoliosBase`.</span></span> <span data-ttu-id="51437-145">刪除 `override` 方法。</span><span class="sxs-lookup"><span data-stu-id="51437-145">Delete the `override` methods.</span></span>
+<span data-ttu-id="07789-149">`GreeterService` 類別位於 `Services` 資料夾中，並繼承自 `Greeter.GreeterBase`。</span><span class="sxs-lookup"><span data-stu-id="07789-149">The `GreeterService` class is in the `Services` folder and inherits from `Greeter.GreeterBase`.</span></span> <span data-ttu-id="07789-150">將它重新命名為 `PortfolioService`，然後將基類變更為 `Portfolios.PortfoliosBase`。</span><span class="sxs-lookup"><span data-stu-id="07789-150">Rename it to `PortfolioService`, and change the base class to `Portfolios.PortfoliosBase`.</span></span> <span data-ttu-id="07789-151">刪除 `override` 方法。</span><span class="sxs-lookup"><span data-stu-id="07789-151">Delete the `override` methods.</span></span>
 
 ```csharp
 public class PortfolioService : Portfolios.PortfoliosBase
@@ -103,7 +103,7 @@ public class PortfolioService : Portfolios.PortfoliosBase
 }
 ```
 
-<span data-ttu-id="51437-146">在 `Startup` 類別的 `Configure` 方法中，有 `GreeterService` 類別的參考。</span><span class="sxs-lookup"><span data-stu-id="51437-146">There was a reference to the `GreeterService` class in the `Configure` method in the `Startup` class.</span></span> <span data-ttu-id="51437-147">如果您使用重構來重新命名類別，此參考應該已自動更新。</span><span class="sxs-lookup"><span data-stu-id="51437-147">If you used refactoring to rename the class, this reference should have been updated automatically.</span></span> <span data-ttu-id="51437-148">不過，如果您沒有這麼做，則需要手動編輯它。</span><span class="sxs-lookup"><span data-stu-id="51437-148">However, if you didn't, you need to edit it manually.</span></span>
+<span data-ttu-id="07789-152">在 `Startup` 類別的 `Configure` 方法中，有 `GreeterService` 類別的參考。</span><span class="sxs-lookup"><span data-stu-id="07789-152">There was a reference to the `GreeterService` class in the `Configure` method in the `Startup` class.</span></span> <span data-ttu-id="07789-153">如果您使用重構來重新命名類別，此參考應該已自動更新。</span><span class="sxs-lookup"><span data-stu-id="07789-153">If you used refactoring to rename the class, this reference should have been updated automatically.</span></span> <span data-ttu-id="07789-154">不過，如果您沒有這麼做，則需要手動編輯它。</span><span class="sxs-lookup"><span data-stu-id="07789-154">However, if you didn't, you need to edit it manually.</span></span>
 
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -122,9 +122,9 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-<span data-ttu-id="51437-149">在下一節中，我們會新增新服務的功能。</span><span class="sxs-lookup"><span data-stu-id="51437-149">In the next section, we'll add functionality to this new service.</span></span>
+<span data-ttu-id="07789-155">在下一節中，我們會新增新服務的功能。</span><span class="sxs-lookup"><span data-stu-id="07789-155">In the next section, we'll add functionality to this new service.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="51437-150">[上一頁](migrate-wcf-to-grpc.md)
->[下一頁](migrate-request-reply.md)</span><span class="sxs-lookup"><span data-stu-id="51437-150">[Previous](migrate-wcf-to-grpc.md)
+><span data-ttu-id="07789-156">[上一頁](migrate-wcf-to-grpc.md)
+>[下一頁](migrate-request-reply.md)</span><span class="sxs-lookup"><span data-stu-id="07789-156">[Previous](migrate-wcf-to-grpc.md)
 [Next](migrate-request-reply.md)</span></span>
