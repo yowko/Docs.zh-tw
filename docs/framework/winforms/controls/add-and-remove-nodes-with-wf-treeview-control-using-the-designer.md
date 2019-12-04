@@ -24,7 +24,7 @@ ms.locfileid: "69040069"
 
 1. 選取 <xref:System.Windows.Forms.TreeView> 控制項。
 
-2. 在 [**屬性**] 視窗中<xref:System.Windows.Forms.TreeView.Nodes%2A> ，按一下屬性![旁邊的**省略號**（[Visual Studio](./media/visual-studio-ellipsis-button.png)的屬性視窗中的省略號按鈕（...）] 按鈕。
+2. 在 **屬性** 視窗中<xref:System.Windows.Forms.TreeView.Nodes%2A> ，按一下屬性 (![旁邊的**省略號**Visual Studio](./media/visual-studio-ellipsis-button.png)) 的屬性視窗中的省略號按鈕（...） 按鈕。
 
      [ **TreeNode 編輯器**] 隨即出現。
 
