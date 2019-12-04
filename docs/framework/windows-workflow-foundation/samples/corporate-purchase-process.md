@@ -2,23 +2,23 @@
 title: 公司購買程序
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: d019c1915e691fcba00fa8f1b0884a898ce02fab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 95fa421ed44cf2d930fb4b80979d1b8bd9fda5ed
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951517"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715215"
 ---
 # <a name="corporate-purchase-process"></a>公司購買程序
 這個範例示範如何建立一個具有自動最佳提案選取、非常基本的提案徵求書 (RFP) 架構採購程序。 它結合 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601> 和 <xref:System.Activities.Statements.ForEach%601>，以及自訂活動，建立代表此程序的工作流程。
 
- 這個範例包含 ASP.NET 用戶端應用程式, 可讓您以不同的參與者 (如原始要求者或特定廠商) 與進程互動。
+ 這個範例包含 ASP.NET 用戶端應用程式，可讓您以不同的參與者（如原始要求者或特定廠商）與進程互動。
 
 ## <a name="requirements"></a>需求
 
 - Visual Studio 2012。
 
-- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。
 
 ## <a name="demonstrates"></a>示範
 
@@ -34,21 +34,21 @@ ms.locfileid: "69951517"
 
 - 追蹤。
 
-- 追查。
+- 追蹤。
 
-- 裝載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]于不同的用戶端 (ASP.NET Web 應用程式和 WinForms 應用程式)。
+- 將 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 裝載于不同的用戶端（ASP.NET Web 應用程式和 WinForms 應用程式）。
 
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>程序說明  
- 這個範例會示範如何執行 Windows Workflow Foundation (WF) 程式, 以收集來自一般公司廠商的提案。  
+ 這個範例會示範如何執行 Windows Workflow Foundation （WF）程式，以收集來自一般公司廠商的提案。  
   
 1. X 公司的員工建立提案徵求書 (RFP)。  
   
@@ -78,17 +78,17 @@ ms.locfileid: "69951517"
 ## <a name="projects-in-this-sample"></a>這個範例中的專案  
  這個範例包含下列專案。  
   
-|專案|說明|  
+|專案|描述|  
 |-------------|-----------------|  
 |通用|程序中使用的實體物件 (Request for Proposal、Vendor 和 Vendor Proposal)。|  
 |WfDefinition|用戶端應用程式用來建立及使用採購程序工作流程執行個體之程序 ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 程式) 和主機 (`PurchaseProcessHost`) 的定義。|  
-|WebClient|ASP.NET 用戶端應用程式, 可讓使用者建立及參與購買程式的實例。 它使用自訂建立的主機，以便與工作流程引擎互動。|  
+|WebClient|ASP.NET 用戶端應用程式，可讓使用者建立及參與購買程式的實例。 它使用自訂建立的主機，以便與工作流程引擎互動。|  
 |WinFormsClient|Windows Form 用戶端應用程式，讓使用者建立及參與採購程序的執行個體。 它使用自訂建立的主機，以便與工作流程引擎互動。|  
   
 ### <a name="wfdefinition"></a>WfDefinition  
  下表包含 WfDefinition 專案中最重要檔案的描述。  
   
-|檔案|描述|  
+|File|描述|  
 |----------|-----------------|  
 |IPurchaseProcessHost.cs|工作流程主機的介面。|  
 |PurchaseProcessHost.cs|工作流程主機的實作。 此主機摘要工作流程執行階段的詳細資料，在所有用戶端應用程式中用來載入、執行 `PurchaseProcess` 工作流程執行個體，並與之互動。|  
@@ -102,9 +102,9 @@ ms.locfileid: "69951517"
 ### <a name="common"></a>通用  
  下表包含通用專案中最重要類別的描述。  
   
-|類別|說明|  
+|類別|描述|  
 |-----------|-----------------|  
-|Vendor|在提案徵求書中提交提案的供應商。|  
+|廠商|在提案徵求書中提交提案的供應商。|  
 |RequestForProposal|提案徵求書 (RFP) 是希望供應商對特定商品或服務提交提案的邀請。|  
 |VendorProposal|供應商提交到具象 RFP 的提案。|  
 |VendorRepository|供應商的儲存機制。 這個實作包含供應商執行個體的記憶體中集合以及公開這些執行個體的方法。|  
@@ -114,7 +114,7 @@ ms.locfileid: "69951517"
 ### <a name="web-client"></a>網頁用戶端  
  下表包含 Web 用戶端專案中最重要網頁的描述。  
   
-|檔案|說明|  
+|File|描述|  
 |-|-|  
 |CreateRfp.aspx|建立及提交新的提案徵求書。|  
 |Default.aspx|顯示所有作用中和已完成的提案徵求書。|  
@@ -127,14 +127,14 @@ ms.locfileid: "69951517"
 |表單|描述|  
 |-|-|  
 |NewRfp|建立及提交新的提案徵求書。|  
-|ShowProposals|顯示所有作用中和已完成的提案徵求書。 **注意：** 您可能需要按一下 UI 中的 [重新整理] 按鈕, 才能在建立或修改提案的要求之後, 看到該畫面中的變更。|  
+|ShowProposals|顯示所有作用中和已完成的提案徵求書。 **注意：** 您可能需要按一下 UI 中**的 [重新**整理] 按鈕，才能在建立或修改提案的要求之後，看到該畫面中的變更。|  
 |SubmitProposal|在具象提案徵求書中取得供應商的提案。 此視窗僅由供應商使用。|  
 |ViewRfp|顯示提案徵求書的所有相關資訊 (收到的提案、日期、值和其他資訊)。 此視窗僅由提案徵求書建立者使用。|  
   
 ### <a name="persistence-files"></a>持續性檔案  
  下表顯示持續性提供者 (`XmlPersistenceProvider`) 所產生的檔案，這些檔案位於目前系統的暫存資料夾路徑 (使用 <xref:System.IO.Path.GetTempPath%2A>)。 追蹤檔案是在目前執行路徑中建立的。  
   
-|檔案名稱|描述|`Path`|  
+|檔案名稱|描述|{2&gt;路徑&lt;2}|  
 |-|-|-|  
 |rfps.xml|具有所有作用中和已完成之提案徵求書的 XML 檔案。|<xref:System.IO.Path.GetTempPath%2A>|  
 |[instanceid]|這個檔案包含工作流程執行個體的所有相關資訊。<br /><br /> 這個檔案是由結構描述化的持續性實作 (XmlPersistenceProvider 中的 PersistenceParticipant) 所產生的。|<xref:System.IO.Path.GetTempPath%2A>|  
@@ -143,11 +143,11 @@ ms.locfileid: "69951517"
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
-1. 使用 Visual Studio 2010, 開啟 [PurchaseProcess] 方案檔。  
+1. 使用 Visual Studio 2010，開啟 [PurchaseProcess] 方案檔。  
   
-2. 若要執行 Web 用戶端專案, 請開啟**方案總管**, 然後以滑鼠右鍵按一下**Web 用戶端**專案。 選取 [**設定為啟始專案**]。  
+2. 若要執行 Web 用戶端專案，請開啟**方案總管**，然後以滑鼠右鍵按一下**Web 用戶端**專案。 選取 [**設定為啟始專案**]。  
   
-3. 若要執行 WinForms 用戶端專案, 請開啟**方案總管**, 然後以滑鼠右鍵按一下**WinForms 用戶端**專案。 選取 [**設定為啟始專案**]。  
+3. 若要執行 WinForms 用戶端專案，請開啟**方案總管**，然後以滑鼠右鍵按一下**WinForms 用戶端**專案。 選取 [**設定為啟始專案**]。  
   
 4. 若要建置此方案，請按 CTRL+SHIFT+B。  
   
@@ -155,20 +155,20 @@ ms.locfileid: "69951517"
   
 ### <a name="web-client-options"></a>Web 用戶端選項  
   
-- **建立新的 RFP**:建立新的提案要求 (RFP) 並啟動採購程式工作流程。  
+- **建立新的 RFP**：建立新的提案要求（RFP）並啟動採購程式工作流程。  
   
-- 重新整理:在主視窗中重新整理作用中和已完成 Rfp 的清單。  
+- 重新**整理：在**主視窗中重新整理作用中和已完成的 rfp 清單。  
   
-- **檢視**：顯示現有 RFP 的內容。 供應商可以提交提案 (如果受邀或 RFP 未完成)。  
+- **View**：顯示現有 RFP 的內容。 供應商可以提交提案 (如果受邀或 RFP 未完成)。  
   
-- View As:使用者可以使用不同的身分識別來存取 RFP, 方法是在作用中 Rfp 方格的 [ **View as** ] 下拉式方塊中選取想要的參與者。  
+- View As：使用者可以使用不同的身分識別來存取 RFP，方法是在現用 Rfp 方格的 [ **View As** ] 下拉式方塊中選取所需的參與者。  
   
 ### <a name="winforms-client-options"></a>WinForms 用戶端選項  
   
-- **建立 RFP**:建立新的提案要求 (RFP) 並啟動採購程式工作流程。  
+- **建立 RFP**：建立新的提案要求（RFP）並啟動採購程式工作流程。  
   
-- 重新整理:在主視窗中重新整理作用中和已完成 Rfp 的清單。  
+- 重新**整理：在**主視窗中重新整理作用中和已完成的 rfp 清單。  
   
-- **查看 RFP**:顯示現有 RFP 的內容。 供應商可以提交提案 (如果受邀或 RFP 未完成)。  
+- **VIEW RFP**：顯示現有 RFP 的內容。 供應商可以提交提案 (如果受邀或 RFP 未完成)。  
   
-- **連接**身分:使用者可以使用不同的身分識別來存取 RFP, 方法是在作用中 Rfp 方格的 [ **View as** ] 下拉式方塊中選取想要的參與者。
+- **連接**身分：使用者可以使用不同的身分識別來存取 RFP，方法是在作用中 rfp 方格的 [ **View As** ] 下拉式方塊中選取想要的參與者。

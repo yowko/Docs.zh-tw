@@ -2,19 +2,19 @@
 title: 路由服務的 Hello World
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 1ab3da97bc94f864bbd28ca072f4df8f7d854ea1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7a41a1b552e220dcb6367ae59876da4570bab909
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044930"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716922"
 ---
 # <a name="hello-world-with-the-routing-service"></a>路由服務的 Hello World
-這個範例會示範 Windows Communication Foundation (WCF) 路由服務。 路由服務是一個 WCF 元件, 可讓您輕鬆地在應用程式中包含以內容為基礎的路由器。 這個範例會調整標準 WCF 計算機範例, 以便使用路由服務進行通訊。 在此範例中，計算機用戶端設定為傳送訊息到路由器所公開的端點。 路由服務會設定為接受傳送給它的所有訊息，並將其轉送到對應於計算機服務的端點。 因此，傳送自用戶端的訊息會由路由器接收，然後再重新路由至實際的計算機服務。 來自計算機服務的訊息會傳送回路由器，接著再將其傳遞回計算機用戶端。
+這個範例會示範 Windows Communication Foundation （WCF）路由服務。 路由服務是一個 WCF 元件，可讓您輕鬆地在應用程式中包含以內容為基礎的路由器。 這個範例會調整標準 WCF 計算機範例，以便使用路由服務進行通訊。 在此範例中，計算機用戶端設定為傳送訊息到路由器所公開的端點。 路由服務會設定為接受傳送給它的所有訊息，並將其轉送到對應於計算機服務的端點。 因此，傳送自用戶端的訊息會由路由器接收，然後再重新路由至實際的計算機服務。 來自計算機服務的訊息會傳送回路由器，接著再將其傳遞回計算機用戶端。
 
 ### <a name="to-use-this-sample"></a>若要使用這個範例
 
-1. 使用 Visual Studio 2012, 開啟 HelloRoutingService。
+1. 使用 Visual Studio 2012，開啟 HelloRoutingService。
 
 2. 按下 F5 或 CTRL+SHIFT+B。
 
@@ -42,7 +42,7 @@ ms.locfileid: "70044930"
 ## <a name="configurable-via-code-or-appconfig"></a>可透過程式碼或 App.Config 設定
  此範例預設為使用 App.config 檔案定義路由器的行為。 您也可以將 App.config 檔案的名稱變更為其他任何名稱，讓其無法辨識，而且可以取消註解對 ConfigureRouterViaCode() 的方法呼叫。 任一種方法都會在路由器中導致相同的行為。
 
-### <a name="scenario"></a>狀況
+### <a name="scenario"></a>情節
  此範例示範當做基本訊息幫浦的路由器。 路由服務會當做傳輸 Proxy 節點，而此節點設定為將訊息直接傳遞到一組預先設定的目的地端點。
 
 ### <a name="real-world-scenario"></a>真實情節
@@ -53,10 +53,10 @@ ms.locfileid: "70044930"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [AppFabric 裝載和持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)

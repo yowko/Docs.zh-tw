@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 445cf4178b90719f923b66a7778f60c1bc846766
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 87e756445255f1bd2417a06dfa611eba23208575
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204979"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716749"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>搭配 Model-View-View 模型使用可攜式類別庫
 您可以使用 .NET Framework 的[可移植類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)來執行模型視圖視圖模型（MVVM）模式，並跨多個平臺共用元件。
@@ -30,7 +30,7 @@ ms.locfileid: "74204979"
  本主題不提供 MVVM 模式的一般資訊。 它只提供如何使用可移植類別庫來執行 MVVM 的相關資訊。 如需 MVVM 的詳細資訊，請參閱[使用適用于 WPF 的 Prism 程式庫5.0 的 MVVM 快速入門](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))。
 
 ## <a name="classes-that-support-mvvm"></a>支援 MVVM 的類別
- 當您的可移植類別庫專案以 .NET Framework 4.5、[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]、Silverlight 或 Windows Phone 7.5 為目標時，可以使用下列類別來執行 MVVM 模式：
+ 當您以 .NET Framework 4.5、適用于 Windows 8.x 的 .NET 儲存應用程式、Silverlight 或 Windows Phone 7.5 作為可移植類別庫專案的目標時，可以使用下列類別來執行 MVVM 模式：
 
 - <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> 類別
 
@@ -59,7 +59,7 @@ ms.locfileid: "74204979"
 
  在您編譯模型和視圖模型專案之後，您會參考應用程式中包含此視圖的元件。 如果此視圖只與視圖模型互動，您只需要參考包含視圖模型的元件。
 
-### <a name="model"></a>模型
+### <a name="model"></a>型號
  下列範例顯示可能位於可移植類別庫專案中的簡化模型類別。
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
@@ -91,6 +91,6 @@ ms.locfileid: "74204979"
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

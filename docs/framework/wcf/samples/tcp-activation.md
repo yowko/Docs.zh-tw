@@ -1,17 +1,17 @@
 ---
-title: TCP 啟用
+title: TCP 啟動
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: e3bfbe9d7e7a6efafc8bf1e281e1f7a99c9c5fbe
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: c1a2c0de5fbb666ec3b68ec3da31cc27f8234cbd
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487522"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716601"
 ---
-# <a name="tcp-activation"></a>TCP 啟用
+# <a name="tcp-activation"></a>TCP 啟動
 
-這個範例會示範裝載使用 Windows Process Activation Service (WAS) 的服務，以便啟用透過 net.tcp 通訊協定進行通訊的服務。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。
+這個範例會示範裝載使用 Windows Process Activation Service (WAS) 的服務，以便啟用透過 net.tcp 通訊協定進行通訊的服務。 這個範例是以[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。
 
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
@@ -21,7 +21,7 @@ ms.locfileid: "67487522"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`
 
@@ -141,19 +141,19 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 確定已安裝 IIS 7.0。 WAS 啟動需要 IIS 7.0。
+1. 請確定已安裝 IIS 7.0。 WAS 啟用需要 IIS 7.0。
 
-2. 確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-    此外，您必須安裝 WCF 非 HTTP 啟動元件：
+    此外，您必須安裝 WCF 非 HTTP 啟用元件：
 
-    1. 在 [開始]  功能表內選擇 [控制台]  。
+    1. 在 [開始] 功能表內選擇 [控制台]。
 
-    2. 選取 **程式和功能**。
+    2. 選取 [**程式和功能**]。
 
-    3. 按一下 **開啟或關閉 Windows 元件**。
+    3. 按一下 [**開啟或關閉 Windows 元件**]。
 
-    4. 依序展開**Microsoft.NET Framework 3.0**節點，並檢查**Windows Communication Foundation 非 HTTP 啟動**功能。
+    4. 展開 [ **Microsoft .NET Framework 3.0** ] 節點，並檢查 [ **Windows Communication Foundation 非 HTTP 啟用**] 功能。
 
 3. 設定 WAS 成支援 TCP 啟動。
 
@@ -176,11 +176,11 @@ Press <ENTER> to terminate client.
         ```
 
         > [!NOTE]
-        > 這個命令是單行文字。 此命令會啟用 /servicemodelsamples 應用程式使用兩者來存取`http://localhost/servicemodelsamples`和`net.tcp://localhost/servicemodelsamples`。
+        > 這個命令是單行文字。 此命令可讓您使用 `http://localhost/servicemodelsamples` 和 `net.tcp://localhost/servicemodelsamples`來存取/servicemodelsamples 應用程式。
 
 4. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 
-5. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+5. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
     移除您為此範例新增的 net.tcp 網站繫結。
 
@@ -206,6 +206,6 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         > 這個命令必須輸入為單行文字。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [AppFabric 主控與持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric 裝載和持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)

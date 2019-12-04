@@ -2,12 +2,12 @@
 title: 物件導向程式設計 (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 121d2e43f6896179756067e661be6d7960a1ee64
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1de150f6eb4be893ca1afce6bd16afde5752c986
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418039"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711825"
 ---
 # <a name="object-oriented-programming-c"></a>物件導向程式設計 (C#)
 
@@ -77,7 +77,7 @@ struct SampleStruct
 }
 ```
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱＜＞。
 
 - [class](../../language-reference/keywords/class.md)
 
@@ -131,7 +131,7 @@ class SampleClass
 
 大部分屬性都具有方法或程序，可以設定及取得屬性值。 但是您可以建立唯讀或唯寫屬性來限制不得修改或讀取。 在 C# 中，則可以省略 `get` 或 `set` 屬性方法。 不過，自動實作的屬性不可以是唯讀或唯寫。
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱＜＞。
 
 - [get](../../language-reference/keywords/get.md)
 
@@ -158,13 +158,13 @@ class SampleClass
 若要多載方法：
 
 ```csharp
-public int sampleMethod(string sampleParam) {};
+public int sampleMethod(string sampleParam) {}
 public int sampleMethod(int sampleParam) {}
 ```
 
 在多數情況下，您是在類別定義中宣告方法。 不過， C# 也支援「擴充方法」，允許您在現有類別的實際定義之外將方法新增至類別。
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱＜＞。
 
 - [方法](../classes-and-structs/methods.md)
 
@@ -186,9 +186,7 @@ public class SampleClass
 }
 ```
 
-如需詳細資訊，請參閱:
-
-[建構函式](../classes-and-structs/constructors.md)。
+如需詳細資訊，請參閱[建構函式](../classes-and-structs/constructors.md)。
 
 #### <a name="Finalizers"></a> 完成項
 
@@ -268,7 +266,7 @@ SampleClass sampleObject = new SampleClass
     { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱＜＞。
 
 - [new 運算子](../../language-reference/operators/new-operator.md)
 
@@ -338,7 +336,7 @@ public sealed class A { }
 public abstract class B { }
 ```
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱＜＞。
 
 - [sealed](../../language-reference/keywords/sealed.md)
 
@@ -382,7 +380,7 @@ class SampleClass : ISampleInterface
 }
 ```
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱＜＞。
 
 [介面](../interfaces/index.md)
 
@@ -408,7 +406,7 @@ SampleGeneric<string> sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱＜＞。
 
 - [泛型](../../../standard/generics/index.md)
 
@@ -446,7 +444,7 @@ class SampleClass
 }
 ```
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱＜＞。
 
 - [委派](../delegates/index.md)
 

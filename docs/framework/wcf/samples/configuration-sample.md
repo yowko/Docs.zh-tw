@@ -2,12 +2,12 @@
 title: 組態範例
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 87afeb0c562254e0f4cf6a85946a765a740c79ec
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 78108dc9b28657f0479e9e39ad134f03cf6c877b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990073"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714947"
 ---
 # <a name="configuration-sample"></a>組態範例
 此範例示範如何使用組態檔讓服務變成可搜尋的。  
@@ -20,7 +20,7 @@ ms.locfileid: "70990073"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
@@ -154,7 +154,7 @@ ms.locfileid: "70990073"
 </configuration>  
 ```  
   
-## <a name="client-configuration"></a>用戶端組態  
+## <a name="client-configuration"></a>用戶端設定  
  在用戶端的應用程式組態檔中，`standardEndpoint` 型別的 `dynamicEndpoint` 會用來使用探索，如下列組態程式碼片段所示。  
   
 ```xml  

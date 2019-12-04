@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: f2dee85f3d84d840b33d81277419ab22e88e8556
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dc417300eb6f62b89a1c07a4f2291b7366e410b1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928584"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716554"
 ---
 # <a name="default-nettcpbinding"></a>預設 NetTcpBinding
 此範例示範如何使用 <xref:System.ServiceModel.NetTcpBinding> 繫結。 這個範例是以執行計算機服務的[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。 在此範例中，服務會自我裝載。 用戶端和服務都是主控台應用程式。  
@@ -22,11 +22,11 @@ ms.locfileid: "70928584"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- 用戶端和服務的組態檔中會指定繫結。 系結類型是在`binding` [ \<端點 >](../../configure-apps/file-schema/wcf/endpoint-element.md)元素的屬性中指定，如下列範例設定所示。  
+ 用戶端和服務的組態檔中會指定繫結。 系結類型是在[\<端點 >](../../configure-apps/file-schema/wcf/endpoint-element.md)元素的 `binding` 屬性中指定，如下列範例設定所示。  
   
 ```xml  
 <endpoint address=""  
@@ -104,7 +104,7 @@ Press ENTER to terminate client.
   
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-4. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
     > [!NOTE]
     > 由於伺服器會自我裝載，因此您必須在用戶端的 App.config 檔案中指定身分識別，以便在跨電腦組態中執行範例。  

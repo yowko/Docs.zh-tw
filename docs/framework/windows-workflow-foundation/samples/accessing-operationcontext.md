@@ -2,15 +2,15 @@
 title: 存取 OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: dea990e275125dc1cd2255b88e506d363c3ac78e
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: b8a09aff7b5a30b5267fbdbd7bd6391996f359c7
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989382"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715094"
 ---
 # <a name="accessing-operationcontext"></a>存取 OperationContext
-這個範例示範訊息活動（<xref:System.ServiceModel.Activities.Receive>和<xref:System.ServiceModel.Activities.Send>）如何與自訂範圍活動搭配使用，以存取<xref:System.ServiceModel.OperationContext.Current%2A>和附加或抓取傳出或傳入訊息中的自訂訊息標頭。  
+這個範例示範訊息活動（<xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.Send>）如何與自訂範圍活動搭配使用，以存取 <xref:System.ServiceModel.OperationContext.Current%2A> 並在傳出或傳入的訊息內附加或抓取自訂訊息標頭。  
   
 ## <a name="demonstrates"></a>示範  
  訊息活動、<xref:System.ServiceModel.Activities.ISendMessageCallback>、<xref:System.ServiceModel.Activities.IReceiveMessageCallback>。  
@@ -41,6 +41,6 @@ ms.locfileid: "70989382"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\Accessing Operation Context`

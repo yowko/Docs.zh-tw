@@ -2,24 +2,24 @@
 title: 在 Windows 事件追蹤中追蹤事件
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 2a8e93604654d20c210015896e02d76b4b8bd36e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: fe50476eedef505258c2e6818e75a32c06ed6fa6
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037909"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715934"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>在 Windows 事件追蹤中追蹤事件
 
-這個範例會示範如何在工作流程服務上啟用 Windows Workflow Foundation (WF) 追蹤, 並在 Windows 事件追蹤 (ETW) 中發出追蹤事件。 為了將工作流程追蹤記錄發出到 ETW，此範例會使用 ETW 追蹤參與者 (<xref:System.Activities.Tracking.EtwTrackingParticipant>)。
+這個範例會示範如何在工作流程服務上啟用 Windows Workflow Foundation （WF）追蹤，並在 Windows 事件追蹤（ETW）中發出追蹤事件。 為了將工作流程追蹤記錄發出到 ETW，此範例會使用 ETW 追蹤參與者 (<xref:System.Activities.Tracking.EtwTrackingParticipant>)。
 
 範例中的工作流程會接收要求、將對等的輸入資料指派給輸入變數，並將對等項目傳回用戶端。 當輸入資料為 0 時，將會發生除以零的例外狀況而無法處理，所以導致工作流程中止。 當啟用追蹤時，錯誤追蹤記錄會發出到 ETW，有助於之後的疑難排解。 ETW 追蹤參與者會設定追蹤設定檔來訂閱追蹤記錄。 追蹤設定檔會定義於 Web.config 檔案中，並當做組態參數提供給 ETW 追蹤參與者。 ETW 追蹤參與者會在工作流程服務的 Web.config 檔案中設定，而且會當做服務行為套用到此服務。 在這個範例中，您會使用事件檢視器檢視事件記錄檔中的追蹤事件。
 
 ## <a name="workflow-tracking-details"></a>工作流程追蹤詳細資料
 
-Windows Workflow Foundation 提供追蹤基礎結構, 以追蹤工作流程實例的執行。 追蹤執行階段會建立工作流程執行個體，以發出與工作流程開發週期相關的事件、來自工作流程活動的事件和自訂事件。 下表詳細說明追蹤基礎結構的主要元件。
+Windows Workflow Foundation 提供追蹤基礎結構，以追蹤工作流程實例的執行。 追蹤執行階段會建立工作流程執行個體，以發出與工作流程開發週期相關的事件、來自工作流程活動的事件和自訂事件。 下表詳細說明追蹤基礎結構的主要元件。
 
-|元件|說明|
+|元件|描述|
 |---------------|-----------------|
 |追蹤執行階段|提供基礎結構以發出追蹤記錄。|
 |追蹤參與者|存取追蹤記錄。 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 隨附追蹤參與者，可將追蹤記錄當做 Windows 事件追蹤 (ETW) 事件撰寫。|
@@ -27,7 +27,7 @@ Windows Workflow Foundation 提供追蹤基礎結構, 以追蹤工作流程實�
 
 下表詳細說明工作流程執行階段發出的追蹤記錄。
 
-|追蹤記錄|說明|
+|追蹤記錄|描述|
 |---------------------|-----------------|
 |工作流程執行個體追蹤記錄。|描述工作流程執行個體的開發週期。 例如，當工作流程開始或完成時，就會發出執行個體記錄。|
 |活動狀態追蹤記錄。|活動執行詳細資訊。 這些記錄會指出工作流程活動的狀態，例如活動排程時間、活動完成時間，或是擲回錯誤的時間。|
@@ -41,43 +41,43 @@ Windows Workflow Foundation 提供追蹤基礎結構, 以追蹤工作流程實�
 
 #### <a name="to-use-this-sample"></a>若要使用這個範例
 
-1. 使用 Visual Studio 2010, 開啟 [EtwTrackingParticipantSample] 方案檔。
+1. 使用 Visual Studio 2010，開啟 [EtwTrackingParticipantSample] 方案檔。
 
 2. 若要建置此方案，請按 CTRL+SHIFT+B。
 
 3. 若要執行此方案，請按 F5。
 
-    根據預設, 服務會接聽埠 53797 (http://localhost:53797/SampleWorkflowService.xamlx) 。
+    根據預設，服務會接聽埠53797（ http://localhost:53797/SampleWorkflowService.xamlx) 。
 
 4. 使用 [檔案瀏覽器] 開啟 WCF 測試用戶端。
 
-    WCF 測試用戶端 (WcfTestClient) 位於\<Visual Studio 2010 安裝資料夾 > \Common7\IDE\ 資料夾中。
+    WCF 測試用戶端（WcfTestClient）位於 \<Visual Studio 2010 安裝資料夾 > \Common7\IDE\ 資料夾中。
 
     預設 Visual Studio 2010 安裝資料夾為 C:\Program Files\Microsoft Visual Studio 10.0。
 
-5. 在 WCF 測試用戶端中, 從 [檔案 ] 功能表選取 [**新增服務**]。
+5. 在 WCF 測試用戶端**中，從 [檔案**] 功能表選取 [**新增服務**]。
 
     在輸入方塊中加入端點位址。 預設為 `http://localhost:53797/SampleWorkflowService.xamlx`。
 
 6. 開啟 [事件檢視器] 應用程式。
 
-    叫用服務之前, 請先從 [**開始**] 功能表啟動事件檢視器, 選取 [ `eventvwr.exe`執行], 然後輸入。 確認事件記錄檔正在接聽從工作流程服務發出的追蹤事件。
+    叫用服務之前，請先從 [**開始**] 功能表啟動事件檢視器，選取 [**執行**]，然後輸入 `eventvwr.exe`。 確認事件記錄檔正在接聽從工作流程服務發出的追蹤事件。
 
-7. 在事件檢視器的樹狀檢視中, 流覽至 [**事件檢視器**]、[**應用程式及服務記錄**檔] 和 [ **Microsoft**]。 以滑鼠右鍵按一下 [ **Microsoft** ], 然後選取 [ **View** ], 再**顯示分析和 debug 記錄**, 以啟用分析和調試記錄
+7. 在事件檢視器的樹狀檢視中，流覽至 [**事件檢視器**]、[**應用程式及服務記錄**檔] 和 [ **Microsoft**]。 以滑鼠右鍵按一下 [ **Microsoft** ]，然後選取 [ **View** ]，再**顯示分析和 debug 記錄**，以啟用分析和調試記錄
 
     確定已核取 [**顯示分析和偵錯工具記錄**檔] 選項。
 
-8. 在事件檢視器的樹狀檢視中, 流覽至 [**事件檢視器**]、[**應用程式及服務記錄**檔]、[ **Microsoft**、 **Windows**、**應用程式伺服器-應用程式**]。 以滑鼠右鍵按一下 [**分析**], 然後選取 [**啟用記錄**] 以啟用**分析**記錄檔。
+8. 在事件檢視器的樹狀檢視中，流覽至 [**事件檢視器**]、[**應用程式及服務記錄**檔]、[ **Microsoft**、 **Windows**、**應用程式伺服器-應用程式**]。 以滑鼠右鍵按一下 [**分析**]，然後選取 [**啟用記錄**] 以啟用**分析**記錄檔。
 
 9. 若要使用 WCF 測試用戶端測試此服務，請按兩下 `GetData`。
 
     這樣會開啟 `GetData` 方法。 此要求會接受一個參數，並確定值為 0 (預設值)。
 
-     按一下[叫用]。
+     按一下 **[** 叫用]。
 
 10. 請查看工作流程所發出的事件。
 
-    切換回事件檢視器並流覽至 [**事件檢視器**]、[**應用程式及服務記錄**檔]、[ **Microsoft**]、[ **Windows**]、[**應用程式伺服器**]。 以滑鼠右鍵按一下 [**分析**], 然後選取 [重新整理]。
+    切換回事件檢視器並流覽至 [**事件檢視器**]、[**應用程式及服務記錄**檔]、[ **Microsoft**]、[ **Windows**]、[**應用程式伺服器**]。 以滑鼠右鍵按一下 [**分析**]，**然後選取 [** 重新整理]。
 
     工作流程事件會顯示在事件檢視器中。 請注意，將會顯示工作流程執行事件，而且其中一個是未處理的例外狀況且對應到工作流程中的錯誤。 此外，也會從工作流程活動發出警告事件，指出活動正在擲回錯誤。
 
@@ -127,9 +127,9 @@ Windows Workflow Foundation 提供追蹤基礎結構, 以追蹤工作流程實�
 
 1. 開啟 [事件檢視器]。
 
-2. 流覽至**事件檢視器**、**應用程式和服務記錄**檔、 **Microsoft**、 **Windows**、**應用程式伺服器-應用程式**。 以滑鼠右鍵按一下 [**分析**], 然後選取 [**停用記錄**]。
+2. 流覽至**事件檢視器**、**應用程式和服務記錄**檔、 **Microsoft**、 **Windows**、**應用程式伺服器-應用程式**。 以滑鼠右鍵按一下 [**分析**]，然後選取 [**停用記錄**]。
 
-3. 流覽至**事件檢視器**、**應用程式和服務記錄**檔、 **Microsoft**、 **Windows**、**應用程式伺服器-應用程式**。 以滑鼠右鍵按一下 [**分析**], 然後選取 [**清除記錄**]。
+3. 流覽至**事件檢視器**、**應用程式和服務記錄**檔、 **Microsoft**、 **Windows**、**應用程式伺服器-應用程式**。 以滑鼠右鍵按一下 [**分析**]，然後選取 [**清除記錄**]。
 
 4. 選擇 [**清除**] 選項以清除事件。
 
@@ -138,7 +138,7 @@ Windows Workflow Foundation 提供追蹤基礎結構, 以追蹤工作流程實�
 > [!NOTE]
 > 在 [事件檢視器] 中有一個可能無法為 ETW 事件解碼的已知問題。 您可能會看到類似下面的錯誤訊息。
 >
-> 找不到來源 Microsoft \<-Windows-應用程式伺服器-應用程式中的事件識別碼識別碼 > 的描述。 本機電腦可能並未安裝引發此事件的元件，或安裝已損毀。 您可以在本機電腦上安裝或修復該元件。
+> 找不到來源 Microsoft-Windows-應用程式伺服器-應用程式中的事件識別碼 \<識別碼 > 的描述。 本機電腦可能並未安裝引發此事件的元件，或安裝已損毀。 您可以在本機電腦上安裝或修復該元件。
 >
 > 如果您遇到這個錯誤，請按一下執行窗格中的 [重新整理]。 現在，此事件應該就會正確解碼。
 
@@ -147,10 +147,10 @@ Windows Workflow Foundation 提供追蹤基礎結構, 以追蹤工作流程實�
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [AppFabric 監視範例](https://go.microsoft.com/fwlink/?LinkId=193959)

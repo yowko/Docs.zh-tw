@@ -2,12 +2,12 @@
 title: 使用標準端點
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: a2af1ae793166d1ed3742782b911ded30d0b9d35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2b210bfe683669aeebf54a1701f07d492e6abdb4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662401"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715337"
 ---
 # <a name="usage-of-standard-endpoints"></a>使用標準端點
 
@@ -139,34 +139,34 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>若要使用這個範例
 
-1. 使用 Visual Studio 2012，請開啟 [standardendpoints.sln] 檔案。
+1. 使用 Visual Studio 2012，開啟 [StandardEndpoints] 檔案。
 
 2. 讓多個專案啟動。
 
-    1. 在 **方案總管**，以滑鼠右鍵按一下 標準端點 方案，然後選取**屬性**。
+    1. 在**方案總管**中，以滑鼠右鍵按一下 [標準端點] 解決方案，然後選取 [**屬性**]。
 
-    2. 在 **通用屬性**，選取**啟始專案**，然後按一下**多個啟始專案**。
+    2. 在 [**通用屬性**] 中，選取 [**啟始專案**]，然後按一下 [**多個啟始專案**]。
 
-    3. 移至清單中，開頭的服務專案，具有**動作**設為**開始**。
+    3. 將 [服務] 專案移至清單的開頭，並將 [**動作**] 設定為 [**啟動**]。
 
-    4. 用戶端專案在之後移動服務專案中，也與**動作**設為**開始**。
+    4. 將用戶端專案移至服務專案之後，同時將**動作**設定為 [**啟動**]。
 
          這樣會指定 [用戶端] 專案在 [服務] 專案之後執行。
 
 3. 若要執行此方案，請按 F5。
 
 > [!NOTE]
-> 如果這些步驟沒有作用，請確定，您的環境已正確設定，使用下列步驟：
+> 如果這些步驟沒有作用，請使用下列步驟，確定您的環境已正確設定：
 >
-> 1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](one-time-setup-procedure-for-the-wcf-samples.md)。
-> 2. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](building-the-samples.md)。
-> 3. 若要執行單一或多個電腦組態中的範例，請遵循中的指示[執行 Windows Communication Foundation 範例](running-the-samples.md)。
+> 1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
+> 2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。
+> 3. 若要在單一或多個電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。
 
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\StandardEndpoints`

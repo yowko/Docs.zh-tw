@@ -1,27 +1,27 @@
 ---
-title: Windows Communication Foundation (WCF) 範例
+title: Windows Communication Foundation （WCF）範例
 ms.date: 09/24/2018
 ms.assetid: 89d4efce-7832-4dd5-82a8-0e574b3302f9
-ms.openlocfilehash: 408b0df9d6e3691d7c9b7e7c1934846880bd38cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d11db7bfaa473a7c4fd27e91b95a965dcf9bee7
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954652"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715774"
 ---
-# <a name="windows-communication-foundation-wcf-samples"></a>Windows Communication Foundation (WCF) 範例
+# <a name="windows-communication-foundation-wcf-samples"></a>Windows Communication Foundation （WCF）範例
 
-您可以下載[.NET Framework 4 的 Windows Communication Foundation (WCF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)。 這些範例會提供有關各個層面的 Windows Communication Foundation (WCF) 的指示。
+您可以下載[.NET Framework 4 的 Windows Communication Foundation （WCF）範例](https://www.microsoft.com/download/details.aspx?id=21459)。 這些範例會提供 Windows Communication Foundation （WCF）各個層面的指示。
   
 > [!TIP]
-> 在本節中的文章會說明部分的範例中所下載的封裝。 涵蓋所有的範例是完整的文件集，檢查[WCF 範例的.NET Framework 4 文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd483346(v%3dvs.100))。
+> 本節中的文章說明下載套件中的一些範例。 如需涵蓋所有範例的完整檔集，請參閱[WCF 範例的 .NET Framework 4 檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd483346(v%3dvs.100))。
 
-Windows Workflow Foundation (WF)[應用程式](../../windows-workflow-foundation/samples/application.md)範例也會示範數個 WCF 功能。
+Windows Workflow Foundation （WF）[應用程式](../../windows-workflow-foundation/samples/application.md)範例也會示範數個 WCF 功能。
   
 ## <a name="in-this-section"></a>本節內容  
 
-[基本](basic.md)-示範基本的 WCF 功能的範例。  
+說明基本 WCF 功能的[基本](basic.md)範例。  
 
-[擴充性](extensibility.md)-與探索功能相關的範例。  
+擴充性-與探索功能[相關的範例](extensibility.md)。  
 
 [案例](scenario.md)-示範 WCF 案例。

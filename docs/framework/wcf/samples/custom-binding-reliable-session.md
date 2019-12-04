@@ -2,12 +2,12 @@
 title: 自訂繫結可靠工作階段
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: b2679ad4c6e8595a7b6d6bc9818880da56781e38
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: c39dc9c57332800628012e88e1b274296556e756
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989999"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710951"
 ---
 # <a name="custom-binding-reliable-session"></a>自訂繫結可靠工作階段
 
@@ -18,7 +18,7 @@ ms.locfileid: "70989999"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSession`
 
@@ -113,10 +113,10 @@ Press <ENTER> to terminate client.
 
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 
-4. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
+4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
     > [!IMPORTANT]
-    > 在跨電腦設定中執行用戶端時，請務必將`address` [ \<端點 >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)專案的屬性和`clientBaseAddress` [ \<compositeDuplex 的屬性中的 "localhost" 取代為](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)以適當電腦的名稱 >，如下列範例所示。
+    > 在跨電腦設定中執行用戶端時，請務必以適當電腦的名稱取代[\<端點 >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)專案的 `address` 屬性中的 "localhost"，以及[\<compositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)的 `clientBaseAddress` 屬性，如下列範例所示。
 
     ```xml
     <endpoint name = ""

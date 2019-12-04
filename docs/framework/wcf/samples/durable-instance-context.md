@@ -2,12 +2,12 @@
 title: 永久性執行個體內容
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 4c2e39aa257d4b4b9b3bd28e0cd469f09cae0766
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 3ff4cbcf7a6007339d98820384f5e2d4164d1b0b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351629"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711932"
 ---
 # <a name="durable-instance-context"></a>永久性執行個體內容
 
@@ -49,7 +49,7 @@ class DurableInstanceContextChannelBase
 }
 ```
 
-這兩個方法會使用 `IContextManager` 實作，以在訊息之間寫入和讀取內容識別碼 (`IContextManager` 是一種自訂介面，可用來定義所有內容管理員的合約)。通道可以在自訂 SOAP 標頭或 HTTP Cookie 標頭中加入內容識別碼。 每個內容管理員實作都繼承自 `ContextManagerBase` 類別，而這個類別則包含用於所有內容管理員的一般功能。 您可以使用此類別中的 `GetContextId` 方法，從用戶端產生內容識別碼。 第一次產生內容識別碼時，方法會將此內容識別碼儲存至文字檔，而這個文字檔的名稱則是由遠端端點位址 (將使用 @ 字元取代典型 URI 中無效的檔案名稱字元) 所建構。
+這兩個方法會使用 `IContextManager` 實作，以在訊息之間寫入和讀取內容識別碼 （`IContextManager` 是用來定義所有內容管理員合約的自訂介面）。通道可以在自訂 SOAP 標頭或 HTTP cookie 標頭中包含內容識別碼。 每個內容管理員實作都繼承自 `ContextManagerBase` 類別，而這個類別則包含用於所有內容管理員的一般功能。 您可以使用此類別中的 `GetContextId` 方法，從用戶端產生內容識別碼。 第一次產生內容識別碼時，方法會將此內容識別碼儲存至文字檔，而這個文字檔的名稱則是由遠端端點位址 (將使用 @ 字元取代典型 URI 中無效的檔案名稱字元) 所建構。
 
 之後相同的遠端端點需要此內容識別碼時，就會檢查是否有適當的檔案。 如果有，就會讀取內容識別碼並傳回。 否則會傳回新產生的內容識別碼，並儲存至檔案。 使用預設組態時，這些檔案會放置在 ContextStore 目錄中，而這個目錄則是在目前使用者的暫存目錄中。 不過，您可以使用繫結項目來設定這個位置。
 
@@ -122,7 +122,7 @@ if (isFirstMessage)
 }
 ```
 
-然後， `DurableInstanceContextBindingElement`類別和`DurableInstanceContextBindingElementSection`類別會適當地將這些通道實現新增至 WCF 通道執行時間。 如需繫結項目和繫結項目區段的詳細資訊，請參閱[HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)通道範例檔。
+然後，`DurableInstanceContextBindingElement` 類別並適當地 `DurableInstanceContextBindingElementSection` 類別，將這些通道實作為新增至 WCF 通道執行時間。 如需繫結項目和繫結項目區段的詳細資訊，請參閱[HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)通道範例檔。
 
 ## <a name="service-model-layer-extensions"></a>服務模型層延伸項目
 
@@ -234,7 +234,7 @@ else
 
 此處理序的第一個步驟為儲存內容識別碼，而這個內容識別碼會從通道層周遊至目前的 InstanceContext。 InstanceCoNtext 是一個執行時間元件，可做為 WCF 發送器與服務實例之間的連結。 可以用於對服務執行個體提供額外的狀態和行為。 而這是很重要的一點，因為在工作階段通訊中，只有第一個訊息會一起傳送內容識別碼。
 
-WCF 允許擴充其 InstanceCoNtext 執行時間元件，方法是使用其可延伸物件模式來新增新的狀態和行為。 可延伸物件模式用於 WCF 中，以新功能來擴充現有執行時間類別，或將新的狀態功能加入至物件。 可擴充物件模式中有三個介面-iextensibleobject<t>\<t >、IExtension\<t > 和 IExtensionCollection\<t >：
+WCF 允許擴充其 InstanceCoNtext 執行時間元件，方法是使用其可延伸物件模式來新增新的狀態和行為。 可延伸物件模式用於 WCF 中，以新功能來擴充現有執行時間類別，或將新的狀態功能加入至物件。 可延伸物件模式中有三個介面-Iextensibleobject<t>\<T >、IExtension\<T > 和 IExtensionCollection\<T >：
 
 - Iextensibleobject<t>\<T > 介面是由允許自訂其功能之延伸模組的物件所執行。
 
@@ -351,7 +351,7 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
 
 不會變得是將服務執行個體儲存至持續性儲存體。 如前所述，已提供必要的功能讓您在 `IStorageManager` 實作中儲存狀態。 我們現在必須將此與 WCF 執行時間進行整合。 也需要適用於服務實作類別方法的其他屬性。 而這個屬性應該會套用至變更服務執行個體狀態的方法。
 
-`SaveStateAttribute` 類別會實作此功能。 它也`IOperationBehavior`會執行類別，以修改每個作業的 WCF 執行時間。 當使用這個屬性來標記方法時，WCF 運行`ApplyBehavior`時間會在結構化適當`DispatchOperation`的時叫用方法。 在這個方法實作中，程式碼只需要一行：
+`SaveStateAttribute` 類別會實作此功能。 它也會執行 `IOperationBehavior` 類別，以修改每項作業的 WCF 執行時間。 當方法以這個屬性標記時，WCF 執行時間會在結構化適當的 `DispatchOperation` 時，叫用 `ApplyBehavior` 方法。 在這個方法實作中，程式碼只需要一行：
 
 ```csharp
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);
@@ -447,7 +447,7 @@ Press ENTER to shut down client
 
 2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。
 
-3. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
+3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
 > [!NOTE]
 > 您必須執行 SQL Server 2005 或 SQL Express 2005，才能執行此範例。 如果正在執行 SQL Server 2005，則必須修改服務之連線字串的組態。 在多台電腦中執行時，只有伺服器電腦上需要 SQL Server。
@@ -457,6 +457,6 @@ Press ENTER to shut down client
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`

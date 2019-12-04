@@ -4,12 +4,12 @@ description: 了解如何使用 XML 文件註解記錄您的程式碼，並在�
 ms.date: 02/14/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: c858a92309710a0ac6b68e9194f2d7ef4c9577a0
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 92a64a8f7a652f8b957013fc05f426e6b983655d
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140661"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710982"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 註解記錄您的程式碼
 
@@ -37,13 +37,13 @@ XML 文件註解具特殊性，因為編譯器可以處理它們以在編譯時�
 
 - 如果您要從命令列編譯 .NET Framework 應用程式，請在編譯時新增[-doc 編譯器選項](language-reference/compiler-options/doc-compiler-option.md)。  
 
-XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 例如:
+XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 例如：
 
 [!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 
 ## <a name="walkthrough"></a>逐步解說
 
-讓我們逐步記錄極基本的數學庫，讓新的開發人員輕鬆了解/參與以及讓協力廠商開發人員使用。
+讓我們逐步解說記錄非常基本的數學程式庫，讓新的開發人員可以輕鬆地瞭解/參與，並讓協力廠商開發人員使用。
 
 以下是簡單數學程式庫的程式碼︰
 
@@ -51,7 +51,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 範例程式庫支援 `int` 和 `double` 資料型別上的四個主要算術運算 `add`、`subtract`、`multiply` 和 `divide`。
 
-現在，您想要可以針對使用您的程式庫但無法存取原始程式碼的協力廠商開發人員，從您的程式碼建立 API 參考文件。
+現在您想要能夠使用您的程式庫但無法存取原始程式碼的協力廠商開發人員，從您的程式碼建立 API 參考檔。
 如先前所述，XML 文件標籤可以用來達到此目的。 現在將向您介紹 C# 編譯器支援的標準 XML 標籤。
 
 ## <a name="summary"></a>\<summary>
@@ -59,7 +59,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 `<summary>` 標記會新增類型或成員的簡短資訊。
 我會將它新增至 `Math` 類別定義和第一個 `Add` 方法來示範其使用方式。 請自由套用至您程式碼的其餘部分。
 
-[!code-csharp[Summary Tag](../../samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
+[!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
 `<summary>` 標記十分重要，因為它的內容是 IntelliSense 或 API 參考文件中類型或成員資訊的主要來源，所以建議您包含它。
 
@@ -67,28 +67,28 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 `<remarks>` 標記會補充 `<summary>` 標記所提供的類型或成員的相關資訊。 在此範例中，您只會將它新增至類別。
 
-[!code-csharp[Remarks Tag](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
+[!code-csharp[Remarks Tag](~/samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
 ## <a name="returns"></a>\<returns>
 
 `<returns>` 標記描述方法宣告的傳回值。
 如前所示，下列範例說明第一個 `Add` 方法的 `<returns>` 標記。 您可以對其他方法執行相同作業。
 
-[!code-csharp[Returns Tag](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
+[!code-csharp[Returns Tag](~/samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
 ## <a name="value"></a>\<值>
 
 `<value>` 標記類似於 `<returns>` 標記，但將它用作屬性除外。
 假設 `Math` 程式庫的靜態屬性稱為 `PI`，以下是使用這個標記的方式：
 
-[!code-csharp[Value Tag](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
+[!code-csharp[Value Tag](~/samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
 ## <a name="example"></a>\<example>
 
 您可以使用 `<example>` 標記，以在 XML 文件中包括範例。
 這包含如何使用子 `<code>` 標記。
 
-[!code-csharp[Example Tag](../../samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
+[!code-csharp[Example Tag](~/samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
 
 `code` 標記會保留分行符號以及較長範例的縮排。
 
@@ -97,7 +97,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 您可以使用 `<para>` 標記來格式化其父標記內的內容。 `<para>` 通常用於標記內 (例如 `<remarks>` 或 `<returns>`)，以將文字分成數個段落。
 您可以格式化類別定義的 `<remarks>` 標記內容。
 
-[!code-csharp[Para Tag](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
+[!code-csharp[Para Tag](~/samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
 ## <a name="c"></a>\<c>
 
@@ -105,14 +105,14 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 它就像 `<code>` 標記，只是會內嵌。 這適用於您想要將快速程式碼範例顯示為標記內容的一部分時。
 請更新 `Math` 類別的文件。
 
-[!code-csharp[C Tag](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
+[!code-csharp[C Tag](~/samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
 ## <a name="exception"></a>\<exception>
 
 使用 `<exception>` 標記，讓您的開發人員知道方法可以擲回特定例外狀況。
 查看 `Math` 程式庫，即可看到兩個 `Add` 方法在符合特定條件時擲回例外狀況。 雖然不明顯，但如果 `b` 參數為零，則也會擲回整數 `Divide` 方法。 現在將例外狀況文件新增至這個方法。
 
-[!code-csharp[Exception Tag](../../samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
+[!code-csharp[Exception Tag](~/samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
 
 `cref` 屬性代表可從目前編譯環境取得之例外狀況的參考。
 這可以是專案或已參考組件中所定義的任何類型。 如果無法解析其值，編譯器會發出警告。
@@ -121,7 +121,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 `<see>` 標記可讓您建立另一個程式碼項目之文件頁面的可按式連結。 在下一個範例中，我們將在兩個 `Add` 方法之間建立可按式連結。
 
-[!code-csharp[See Tag](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
+[!code-csharp[See Tag](~/samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
 
 `cref` 為**必要**屬性，代表可從目前編譯環境取得的類型或其成員的參考。
 這可以是專案或已參考組件中所定義的任何類型。
@@ -130,7 +130,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 `<seealso>` 標記的使用方式與 `<see>` 標記的使用方式相同。 唯一的差異在於它的內容一般會放在＜另請參閱＞一節中。 在這裡，我們將在整數 `Add` 方法上新增 `seealso` 標記，以參考類別中接受整數參數的其他方法：
 
-[!code-csharp[Seealso Tag](../../samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
+[!code-csharp[Seealso Tag](~/samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
 
 `cref` 屬性代表可從目前編譯環境取得的類型或其成員的參考。
 這可以是專案或已參考組件中所定義的任何類型。
@@ -139,42 +139,42 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 您可以使用 `<param>` 標記來描述方法的參數。 以下是雙 `Add` 方法的範例：標記所描述的屬性指定於**必要的** `name` 屬性中。
 
-[!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
+[!code-csharp[Param Tag](~/samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
 ## <a name="typeparam"></a>\<typeparam>
 
 您可以就像使用 `<param>` 標記一樣地使用 `<typeparam>` 標記，但針對泛型型別或方法宣告來描述泛型參數。
 請將快速泛型方法新增至 `Math` 類別，以檢查其中一個數量是否大於另一個數量。
 
-[!code-csharp[Typeparam Tag](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
+[!code-csharp[Typeparam Tag](~/samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
 ## <a name="paramref"></a>\<paramref>
 
 您有時可能正在描述方法在 `<summary>` 標記中所執行的作業，而且您可能會想要參考參數。 則 `<paramref>` 標記最適合這麼做。 讓我們更新雙 `Add` 方法的摘要。 與 `<param>` 標記類似，參數名稱指定於**必要的** `name` 屬性中。
 
-[!code-csharp[Paramref Tag](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
+[!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
 ## <a name="typeparamref"></a>\<typeparamref>
 
 您可以就像使用 `<paramref>` 標記一樣地使用 `<typeparamref>` 標記，但針對泛型型別或方法宣告來描述泛型參數。
 您可以使用先前建立的相同泛型方法。
 
-[!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
+[!code-csharp[Typeparamref Tag](~/samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
 ## <a name="list"></a>\<list>
 
 您可以使用 `<list>` 標記，將文件資訊格式化為已排序清單、未排序清單或資料表。
 建立 `Math` 程式庫所支援的未排序數學運算清單。
 
-[!code-csharp[List Tag](../../samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
+[!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
 您可以分別將 `type` 屬性變更為 `number` 或 `table`，以建立排序過的清單或表格。
 
-### <a name="putting-it-all-together"></a>整體回顧
+### <a name="putting-it-all-together"></a>全部整合
 
 如已遵循本教學課程，並已在必要時將標記套用至程式碼，則程式碼現在看起來應該如下︰
 
-[!code-csharp[Tagged Library](../../samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
+[!code-csharp[Tagged Library](~/samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
 
 從程式碼中，您可以產生使用可按式交互參照完成的詳細文件網站。 但您會面臨另一個問題︰您的程式碼變得難以閱讀。
 因為有太多資訊需要仔細檢查，這會是想要參與這個程式碼之開發人員的夢魘。
@@ -186,12 +186,12 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 您現在要將所有 XML 標記移至名為 `docs.xml` 的個別 XML 檔案。 請放心以您想要的名稱來命名檔案。
 
-[!code-xml[Sample XML](../../samples/snippets/csharp/concepts/codedoc/include.xml)]
+[!code-xml[Sample XML](~/samples/snippets/csharp/concepts/codedoc/include.xml)]
 
 在上述 XML 中，每個成員的文件註解都會直接顯示在執行動作之後所命名的標記內。 您可以選擇自己的策略。
 現在，您的 XML 註解位於在不同的檔案中，請查看如何使用 `<include>` 標記讓您的程式碼更容易閱讀：
 
-[!code-csharp[Include Tag](../../samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
+[!code-csharp[Include Tag](~/samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
 
 目前您已經準備好了：我們的程式碼又再次為可讀，而且未遺失文件資訊。
 

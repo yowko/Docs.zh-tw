@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15d6262fb5e7dfb99759f0f85c9a197157713300
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 4629139a7c89c0808e97bbe64b7d02441aec1dea
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204947"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714480"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援
 
@@ -32,7 +32,7 @@ ms.locfileid: "74204947"
 
 ## <a name="the-basics"></a>基本知識
 
-.NET Framework 藉由提供 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，以及支援 Windows 執行階段本身，來支援先前所列的三種開發案例。
+.NET Framework 藉由提供適用于 Windows 8.x 存放區應用程式的 .NET，以及支援 Windows 執行階段本身，來支援先前所列的三種開發案例。
 
 - [.NET Framework 和 Windows 執行階段命名空間](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces)提供 .NET Framework 類別庫的精簡觀點，而且只包含您可以用來建立 Windows 8.X 存放區應用程式和 Windows 執行階段元件的類型和成員。
 
@@ -42,7 +42,7 @@ ms.locfileid: "74204947"
 
   - 簡單地包裝作業系統 API 的功能也會移除，因為 Windows 執行階段很容易就能從 managed 程式碼呼叫。
 
-  若要深入瞭解 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，請參閱[適用于 Windows Store 應用程式的 .net 總覽](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))。 若要閱讀 API 選取程式的相關資訊，請參閱 .NET blog 中的[適用于 Metro 樣式應用程式的 .net](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/)專案。
+  若要深入瞭解適用于 Windows 8.x Store 應用程式的 .NET，請參閱[適用于 Windows store 應用程式的 .net 總覽](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))。 若要閱讀 API 選取程式的相關資訊，請參閱 .NET blog 中的[適用于 Metro 樣式應用程式的 .net](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/)專案。
 
 - [Windows 執行階段](/uwp/api/)提供用來建立 Windows 8.X 存放區應用程式的使用者介面元素，並提供作業系統功能的存取權。 如同 .NET Framework，Windows 執行階段的中繼資料可讓C#和 Visual Basic 編譯器使用 .NET Framework 類別庫的 Windows 執行階段方式。 .NET Framework 藉由隱藏一些差異，讓您更輕鬆地使用 Windows 執行階段：
 
@@ -88,7 +88,7 @@ Windows 執行階段和 .NET Framework 檔集是分開的。 如果您按下 F1 
 
 在 Windows 執行階段中，`IMap<K, V>` 和 `IMapView<K, V>` 會使用 `IKeyValuePair`進行反覆運算。 當您將其傳遞至 Managed 程式碼時，它們會顯示成 `IDictionary<TKey, TValue>` 與 `IReadOnlyDictionary<TKey, TValue>`，以便您使用 `System.Collections.Generic.KeyValuePair<TKey, TValue>` 加以列舉。
 
-介面在 Managed 程式碼中的顯示方式，會影響到實作這些介面之類型的顯示方式。 例如　`PropertySet` 類別會實作 `IMap<K, V>`，而這在 Managed 程式碼中會顯示為 `IDictionary<TKey, TValue>`。 `PropertySet` 看起來就像是實 `IDictionary<TKey, TValue>` 而不是 `IMap<K, V>`，因此在 managed 程式碼中，它看起來會有 `Add` 方法，其行為類似 `Add` 字典上的 .NET Framework 方法。 它看起來並沒有 `Insert` 方法。
+介面在 Managed 程式碼中的顯示方式，會影響到實作這些介面之類型的顯示方式。 例如　`PropertySet` 類別會實作 `IMap<K, V>`，而這在 Managed 程式碼中會顯示為 `IDictionary<TKey, TValue>`。 `PropertySet` 會以實作了 `IDictionary<TKey, TValue>` (而不是 `IMap<K, V>`) 的形態出現，因此在 Managed 程式碼中，其看似具有 `Add` 方法 (此方法的行為類似於 .NET Framework 字典上的 `Add` 方法。 它看起來並沒有 `Insert` 方法。
 
 如需使用 .NET Framework 建立 Windows 執行階段元件的詳細資訊，以及示範如何搭配使用這類元件與 JavaScript 的逐步解說，請參閱[在和 Visual Basic 中C#建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)。
 

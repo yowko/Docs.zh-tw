@@ -2,15 +2,15 @@
 title: 自訂複合設計工具 - 工作流程項目展示器
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 239f7ccd81d5bb60eed32298220df215b09e3e47
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 31dfae70a8b95bdfd457efe7a20ce44c2ba9c61f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038365"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715190"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>自訂複合設計工具 - 工作流程項目展示器
-<xref:System.Activities.Presentation.WorkflowItemPresenter>是 WF 設計工具程式設計模型中的金鑰類型, 可讓您建立可以放置任意活動的「卸載區」。 這個範例示範如何建立一個顯示「卸載區」的活動設計工具。
+<xref:System.Activities.Presentation.WorkflowItemPresenter> 是 WF 設計工具程式設計模型中的金鑰類型，可讓您建立可以放置任意活動的「卸載區」。 這個範例示範如何建立一個顯示「卸載區」的活動設計工具。
 
  這個範例會示範下列情況：
 
@@ -63,7 +63,7 @@ ms.locfileid: "70038365"
 </sap:ActivityDesigner>
 ```
 
- 請注意繫結至 `ModelItem.Body` 的 WPF 資料繫結用法。 `ModelItem`是上<xref:System.Activities.Presentation.ActivityDesigner>的屬性, 其參考設計工具所使用的基礎物件, 在此案例中為**命名為 simplenativeactivity**。
+ 請注意繫結至 `ModelItem.Body` 的 WPF 資料繫結用法。 `ModelItem` 是 <xref:System.Activities.Presentation.ActivityDesigner> 上的屬性，其參考設計工具所使用的基礎物件，在此案例中為**命名為 simplenativeactivity**。
 
 #### <a name="to-setup-build-and-run-the-sample"></a>若要設定、建置及執行範例
 
@@ -76,11 +76,11 @@ ms.locfileid: "70038365"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Activities.Presentation.WorkflowItemPresenter>
 - [使用工作流程設計工具開發應用程式](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

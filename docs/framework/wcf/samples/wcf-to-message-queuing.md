@@ -2,15 +2,15 @@
 title: Windows Communication Foundation 至訊息佇列
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 34ac2dd8b6e01e2d7ae6f7978e1b09af174b71dd
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1cbc1251a8e4eaaaf4b47357851dd681ae326f25
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038633"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715053"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation 至訊息佇列
-這個範例會示範 Windows Communication Foundation (WCF) 應用程式如何將訊息傳送至訊息佇列 (MSMQ) 應用程式。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 服務與用戶端不需要在相同時間執行。
+這個範例會示範 Windows Communication Foundation （WCF）應用程式如何將訊息傳送至訊息佇列（MSMQ）應用程式。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 服務與用戶端不需要在相同時間執行。
 
  服務會接收佇列訊息，然後處理訂單。 服務會建立交易式佇列，然後設定已接收訊息的訊息處理常式，如下列範例程式碼所示。
 
@@ -96,9 +96,9 @@ Console.WriteLine("Order has been submitted:{0}", po);
 client.Close();
 ```
 
- 用戶端會依序使用自訂用戶端，將 MSMQ 訊息傳送至佇列。 因為接收和處理訊息的應用程式是 MSMQ 應用程式, 而不是 WCF 應用程式, 所以這兩個應用程式之間不會有隱含的服務合約。 因此，我們無法在這個案例中使用 Svcutil.exe 工具來建立 Proxy。
+ 用戶端會依序使用自訂用戶端，將 MSMQ 訊息傳送至佇列。 因為接收和處理訊息的應用程式是 MSMQ 應用程式，而不是 WCF 應用程式，所以這兩個應用程式之間不會有隱含的服務合約。 因此，我們無法在這個案例中使用 Svcutil.exe 工具來建立 Proxy。
 
- 針對使用`MsmqIntegration`系結來傳送訊息的所有 WCF 應用程式, 自訂用戶端基本上都相同。 與其他用戶端不同的是，它並不包含服務作業的範圍， 而只是一項送出訊息的作業。
+ 所有使用 `MsmqIntegration` 系結來傳送訊息的 WCF 應用程式，自訂用戶端基本上都相同。 與其他用戶端不同的是，它並不包含服務作業的範圍， 而只是一項送出訊息的作業。
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -130,7 +130,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
  當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以查看來自用戶端的服務接收訊息。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。 請注意，因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。 例如，您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。
 
 > [!NOTE]
-> 這個範例需要安裝訊息佇列。 請參閱[訊息佇列](https://go.microsoft.com/fwlink/?LinkId=94968)中的安裝指示。  
+> 這個範例需要安裝訊息佇列 (本頁面可能為英文)。 請參閱[訊息佇列](https://go.microsoft.com/fwlink/?LinkId=94968)中的安裝指示。  
   
 ### <a name="to-setup-build-and-run-the-sample"></a>若要設定、建置及執行範例  
   
@@ -142,15 +142,15 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
     2. 展開 [**功能**] 索引標籤。  
   
-    3. 以滑鼠右鍵按一下 [**私人訊息佇列**], 然後選取 [**新增**]、[**私用佇列**]。  
+    3. 以滑鼠右鍵按一下 [**私人訊息佇列**]，然後選取 [**新增**]、[**私用佇列**]。  
   
     4. 選取 [**交易**式] 方塊。  
   
-    5. 輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。  
+    5. 輸入 `ServiceModelSamplesTransacted` 做為新佇列的名稱。  
   
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-4. 若要在單一電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+4. 若要在單一電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
 ### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
@@ -169,11 +169,11 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [如何：與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [訊息佇列](https://go.microsoft.com/fwlink/?LinkId=94968)

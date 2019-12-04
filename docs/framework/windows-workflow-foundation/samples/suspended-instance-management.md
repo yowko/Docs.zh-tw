@@ -2,12 +2,12 @@
 title: 暫停的執行個體管理
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: 7a2f36ac2c127376eea56601f54aa5e571d66a55
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3f1f4f8edcbe0e05067d3ca739ef3d5f4fe4d798
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037884"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715936"
 ---
 # <a name="suspended-instance-management"></a>暫停的執行個體管理
 這個範例會示範如何管理已暫止的工作流程執行個體。  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 的預設動作為 `AbandonAndSuspend`。 這表示根據預設，從裝載於 <xref:System.ServiceModel.WorkflowServiceHost> 中之工作流程執行個體所擲回的未處理例外狀況將會造成此執行個體從記憶體中處置 (放棄)，而且此執行個體的永久性/持續版本將會標示為已暫停。 暫停的工作流程執行個體要等到取消暫停之後才能夠執行。
@@ -15,7 +15,7 @@ ms.locfileid: "70037884"
  此範例會示範如何實作命令列公用程式來查詢暫停的執行個體，以及如何提供使用者繼續或終止執行個體的選擇。 在這個範例中，工作流程服務會故意擲回例外狀況，使得它遭到暫停。 然後可以使用此命令列公用程式來查詢執行個體，之後再繼續或終止執行個體。
 
 ## <a name="demonstrates"></a>示範
- <xref:System.ServiceModel.WorkflowServiceHost>Windows Workflow Foundation <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> ( <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> WF) 中的和。
+ Windows Workflow Foundation （WF）中的 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 和 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> <xref:System.ServiceModel.WorkflowServiceHost>。
 
 ## <a name="discussion"></a>討論
  這個範例中所實作的命令列公用程式是 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 隨附之 SQL 執行個體存放區實作所特有。 如果您擁有執行個體存放區的自訂實作，您可以改寫此公用程式，其方式是使用您的執行個體存放區所特有的實作來取代範例中的 `WorkflowInstanceCommand` 實作。
@@ -32,7 +32,7 @@ ms.locfileid: "70037884"
 
 2. 設定 SQL Server 資料庫。
 
-    1. 從 Visual Studio 2010 命令提示字元中, 執行 SuspendedInstanceManagement 範例目錄中的 "cmd.exe", 其會執行下列動作:
+    1. 從 Visual Studio 2010 命令提示字元中，執行 SuspendedInstanceManagement 範例目錄中的 "cmd.exe"，其會執行下列動作：
 
         1. 使用 SQL Server Express 建立持續性資料庫。 如果持續性資料庫已經存在，請將它卸除然後重新建立。
 
@@ -42,7 +42,7 @@ ms.locfileid: "70037884"
 
 3. 設定服務佇列。
 
-    1. 在 Visual Studio 2010 中, 以滑鼠右鍵按一下**SampleWorkflowApp**專案, 然後按一下 [**設定為啟始專案**]。
+    1. 在 Visual Studio 2010 中，以滑鼠右鍵按一下**SampleWorkflowApp**專案，然後按一下 [**設定為啟始專案**]。
 
     2. 按**F5**來編譯並執行 SampleWorkflowApp。 這樣會建立所需的佇列。
 
@@ -52,13 +52,13 @@ ms.locfileid: "70037884"
 
     5. 展開 [**服務和應用程式**]、[**訊息佇列**]、[**私用佇列**]。
 
-    6. 以滑鼠右鍵按一下  **receivetx**  佇列, 然後選取 **屬性**。
+    6. 以滑鼠右鍵按一下  **receivetx**  佇列，然後選取 **屬性**。
 
-    7. 選取 [**安全性**] 索引標籤, 並允許**每個人**都擁有**接收訊息**、**查看訊息**和**傳送訊息**的許可權。
+    7. 選取 [**安全性**] 索引標籤，並允許**每個人**都擁有**接收訊息**、**查看訊息**和**傳送訊息**的許可權。
 
 4. 現在，請執行範例。
 
-    1. 在 Visual Studio 2010 中, 按下**Ctrl + F5**再次執行 SampleWorkflowApp 專案, 而不進行任何偵錯工具。 兩個端點位址將會列印到主控台視窗：一個適用於應用程式端點，另一個來自 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>。 然後會建立工作流程執行個體，該執行個體的追蹤記錄將會出現在主控台視窗。 工作流程執行個體將會擲回例外狀況，造成執行個體被暫停及中止。
+    1. 在 Visual Studio 2010 中，按下**Ctrl + F5**再次執行 SampleWorkflowApp 專案，而不進行任何偵錯工具。 兩個端點位址將會列印到主控台視窗：一個適用於應用程式端點，另一個來自 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>。 然後會建立工作流程執行個體，該執行個體的追蹤記錄將會出現在主控台視窗。 工作流程執行個體將會擲回例外狀況，造成執行個體被暫停及中止。
 
     2. 然後可以使用此命令列公用程式來針對任何執行個體採取進一步的動作。 命令列引數的語法如下：
 
@@ -81,6 +81,6 @@ ms.locfileid: "70037884"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\SuspendedInstanceManagement`

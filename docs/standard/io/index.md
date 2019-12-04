@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 889271ca41fb84b44757adfffc61ffbfbc0a03a8
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: d59ff7f66076fc56ebb27841105fad07a7c7fee1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204790"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716260"
 ---
 # <a name="file-and-stream-io"></a>檔案和資料流 I/O
 
@@ -33,15 +33,15 @@ ms.locfileid: "74204790"
 
 以下是常用的檔案和目錄類別：
 
-- <xref:System.IO.File>-提供建立、複製、刪除、移動和開啟檔案的靜態方法，並協助建立 <xref:System.IO.FileStream> 物件。
+- <xref:System.IO.File> - 提供建立、複製、刪除、移動和開啟檔案的靜態方法，並協助建立 <xref:System.IO.FileStream> 物件。
 
-- <xref:System.IO.FileInfo>-提供建立、複製、刪除、移動和開啟檔案的實例方法，並協助建立 <xref:System.IO.FileStream> 物件。
+- <xref:System.IO.FileInfo> - 提供建立、複製、刪除、移動和開啟檔案的執行個體方法，並協助建立 <xref:System.IO.FileStream> 物件。
 
-- <xref:System.IO.Directory>-提供建立、移動和列舉目錄和子目錄的靜態方法。
+- <xref:System.IO.Directory> - 提供建立、移動和列舉目錄和子目錄的靜態方法。
 
-- <xref:System.IO.DirectoryInfo>-提供建立、移動和列舉目錄和子目錄的實例方法。
+- <xref:System.IO.DirectoryInfo> - 提供建立、移動和列舉目錄和子目錄的執行個體方法。
 
-- <xref:System.IO.Path>-提供以跨平臺方式處理目錄字串的方法和屬性。
+- <xref:System.IO.Path> - 提供以跨平台方式處理目錄字串的方法和屬性。
 
 您應該在呼叫檔案系統方法時，一律提供強固的例外狀況處理。 如需詳細資訊，請參閱[處理 I/O 錯誤](handling-io-errors.md)。
 
@@ -65,19 +65,19 @@ ms.locfileid: "74204790"
 
 以下是部分常用的資料流類別：
 
-- <xref:System.IO.FileStream> –用於讀取和寫入檔案。
+- <xref:System.IO.FileStream> – 用於讀取和寫入檔案。
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> –用於讀取和寫入隔離儲存區中的檔案。
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – 用於讀取和寫入位於隔離儲存區中的檔案。
 
-- <xref:System.IO.MemoryStream> –用於讀取和寫入記憶體做為備份存放區。
+- <xref:System.IO.MemoryStream> – 用於讀取和寫入做為備份存放區的記憶體。
 
-- <xref:System.IO.BufferedStream> –用來改善讀取和寫入作業的效能。
+- <xref:System.IO.BufferedStream> – 用於改善讀取和寫入作業的效能。
 
-- <xref:System.Net.Sockets.NetworkStream> –用於透過網路通訊端進行讀取和寫入。
+- <xref:System.Net.Sockets.NetworkStream> – 用於透過網路通訊端讀取和寫入。
 
-- <xref:System.IO.Pipes.PipeStream> –用於透過匿名和具名管道進行讀取和寫入。
+- <xref:System.IO.Pipes.PipeStream> – 用於透過匿名和具名管道讀取和寫入。
 
-- <xref:System.Security.Cryptography.CryptoStream> –用於將資料流程連結至密碼編譯轉換。
+- <xref:System.Security.Cryptography.CryptoStream> – 用於將資料流連結至密碼編譯的轉換作業。
 
 以非同步方式處理資料流的範例，請參閱[非同步檔案 I/O](asynchronous-file-i-o.md)。
 
@@ -87,13 +87,13 @@ ms.locfileid: "74204790"
 
 以下是常用的讀取器和寫入器類別：
 
-- <xref:System.IO.BinaryReader> 和 <xref:System.IO.BinaryWriter> –用於讀取和寫入基本資料類型做為二進位值。
+- <xref:System.IO.BinaryReader> 和 <xref:System.IO.BinaryWriter> – 用於將基本資料類型當做二進位值讀取和寫入。
 
-- <xref:System.IO.StreamReader> 和 <xref:System.IO.StreamWriter> –使用編碼值來讀取和寫入字元，以將字元轉換成位元組。
+- <xref:System.IO.StreamReader> 和 <xref:System.IO.StreamWriter> – 使用編碼值在字元與位元組之間進行轉換的方式讀取和寫入字元。
 
-- <xref:System.IO.StringReader> 和 <xref:System.IO.StringWriter> –用於讀取和寫入字串的字元。
+- <xref:System.IO.StringReader> 和 <xref:System.IO.StringWriter> – 從字串讀取字元以及將字元寫入字串。
 
-- <xref:System.IO.TextReader> 和 <xref:System.IO.TextWriter>-做為其他讀取和寫入字元和字串，但不是二進位資料的讀取器和寫入器的抽象基類。
+- <xref:System.IO.TextReader> 和 <xref:System.IO.TextWriter> – 做為其他讀取和寫入二進位資料以外的字元與字串之讀取器和寫入器的抽象基底類別。
 
 請參閱[如何：從檔案讀取文字](how-to-read-text-from-a-file.md)、[如何：將文字寫入檔案](how-to-write-text-to-a-file.md)、[如何：從字串讀取字元](how-to-read-characters-from-a-string.md)，以及[如何：將字元寫入字串](how-to-write-characters-to-a-string.md)。
 
@@ -111,17 +111,17 @@ ms.locfileid: "74204790"
 
 以下是壓縮和解壓縮檔案和資料流時經常使用的類別：
 
-- <xref:System.IO.Compression.ZipArchive> –用於建立和抓取 zip 封存中的專案。
+- <xref:System.IO.Compression.ZipArchive> – 用於建立和擷取 zip 封存中的項目。
 
-- <xref:System.IO.Compression.ZipArchiveEntry> –代表壓縮檔案。
+- <xref:System.IO.Compression.ZipArchiveEntry> – 用於表示壓縮檔。
 
-- <xref:System.IO.Compression.ZipFile> –用於建立、解壓縮及開啟壓縮的封裝。
+- <xref:System.IO.Compression.ZipFile> – 用於建立、擷取和開啟壓縮的封裝。
 
-- <xref:System.IO.Compression.ZipFileExtensions> –用於建立和解壓縮壓縮封裝中的專案。
+- <xref:System.IO.Compression.ZipFileExtensions> – 用於建立和擷取壓縮封裝中的項目。
 
-- <xref:System.IO.Compression.DeflateStream> –使用 Deflate 演算法來壓縮和解壓縮資料流程。
+- <xref:System.IO.Compression.DeflateStream> – 使用 Deflate 演算法壓縮及解壓縮資料流。
 
-- <xref:System.IO.Compression.GZipStream> –用於以 gzip 資料格式壓縮和解壓縮資料流程。
+- <xref:System.IO.Compression.GZipStream> – 以 gzip 資料格式壓縮和解壓縮資料流。
 
 請參閱[如何：壓縮與解壓縮檔案](how-to-compress-and-extract-files.md)。
 
@@ -133,21 +133,21 @@ Windows 8.x 存放區應用程式無法使用隔離儲存區;相反地，請使�
 
 以下是實作隔離儲存區時經常使用的類別：
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorage> –提供隔離儲存區的基礎類別。
+- <xref:System.IO.IsolatedStorage.IsolatedStorage> – 提供隔離儲存區實作所使用的基底類別。
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile> –提供包含檔案和目錄的隔離儲存區。
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile> – 提供包含檔案和目錄的隔離存放區域。
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>-公開隔離儲存區中的檔案。
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> - 公開隔離儲存區內的檔案。
 
 請參閱[隔離儲存區](isolated-storage.md)。
 
 ## <a name="io-operations-in-windows-store-apps"></a>在 Windows 市集應用程式中的 I/O 作業
 
-[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 包含許多用於讀取和寫入資料流的類型，不過這個集合並未包含所有 .NET Framework I/O 類型。
+適用于 Windows 8.x 存放區應用程式的 .NET 包含許多用來讀取和寫入資料流程的類型;不過，此集合不包含所有的 .NET Framework i/o 類型。
 
 在 Windows 8.x Store 應用程式中使用 i/o 作業時，需要注意的一些重要差異：
 
-- <xref:System.IO.File> 中未包含與檔案作業特別相關的類型，例如 <xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> 和 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]。 您應該改為使用 Windows 執行階段之 <xref:Windows.Storage?displayProperty=nameWithType> 命名空間中的型別，例如 <xref:Windows.Storage.StorageFile> 與 <xref:Windows.Storage.StorageFolder>。
+- 與檔案作業特別相關的類型，例如 <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory> 和 <xref:System.IO.DirectoryInfo>，不會包含在適用于 Windows 8.x 存放區應用程式的 .NET 中。 您應該改為使用 Windows 執行階段之 <xref:Windows.Storage?displayProperty=nameWithType> 命名空間中的型別，例如 <xref:Windows.Storage.StorageFile> 與 <xref:Windows.Storage.StorageFolder>。
 
 - 無法使用隔離儲存區，請改用[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。
 

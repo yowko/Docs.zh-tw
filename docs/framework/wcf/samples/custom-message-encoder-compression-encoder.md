@@ -2,12 +2,12 @@
 title: 自訂訊息編碼器：壓縮編碼器
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 4fc6cd4b28d35971e5e2da2559d258055adf9252
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 80dd29569897be501d76024a081f38ec5add4ff7
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928740"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716853"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>自訂訊息編碼器：壓縮編碼器
 
@@ -18,7 +18,7 @@ ms.locfileid: "70928740"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`
 
@@ -224,7 +224,7 @@ binding.Namespace = "http://tempuri.org/bindings";
 
 雖然這樣做對大多數使用者案例來說已足夠，但在 Web 裝載服務的情況下，支援檔案組態仍然相當重要。 若要支援 Web 裝載的案例，您必須開發自訂組態處理常式，讓自訂繫結項目可在檔案中進行設定。
 
-您可以在設定系統上建立繫結項目的設定處理常式。 繫結項目的組態處理常式必須衍生自 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 類別。 會<xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType>通知設定系統要為此區段建立的繫結項目類型。 `BindingElement` 中可以設定的所有項目，都應該公開為 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 衍生類別中的屬性。 如果<xref:System.Configuration.ConfigurationPropertyAttribute>遺漏屬性，則有助於將設定元素屬性對應至屬性，並設定預設值。 載入來自組態的值並將這些值套用至屬性時，就會呼叫 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> 方法，而這個方法會將屬性轉換為繫結項目的具象執行個體。 方法是用來將<xref:System.ServiceModel.Configuration.BindingElementExtensionElement>衍生類別上的屬性轉換成要在新建立的繫結項目上設定的值。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType>
+您可以在設定系統上建立繫結項目的設定處理常式。 繫結項目的組態處理常式必須衍生自 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 類別。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> 會通知設定系統要為此區段建立的繫結項目類型。 `BindingElement` 中可以設定的所有項目，都應該公開為 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 衍生類別中的屬性。 <xref:System.Configuration.ConfigurationPropertyAttribute> 有助於將 configuration 專案屬性對應至屬性，並在遺漏屬性時設定預設值。 載入來自組態的值並將這些值套用至屬性時，就會呼叫 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> 方法，而這個方法會將屬性轉換為繫結項目的具象執行個體。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType> 方法是用來將 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 衍生類別上的屬性，轉換成要在新建立的繫結項目上設定的值。
 
 下列範例程式碼會顯示 `GZipMessageEncodingElement` 實作。
 
@@ -295,7 +295,7 @@ public class GZipMessageEncodingElement : BindingElementExtensionElement
 <gzipMessageEncoding innerMessageEncoding="textMessageEncoding" />
 ```
 
-若要使用此設定處理常式，必須在[ \<system.servicemodel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素內註冊，如下列範例設定所示。
+若要使用此設定處理常式，必須在[\<system.servicemodel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素內註冊，如下列範例設定所示。
 
 ```xml
 <extensions>
@@ -346,13 +346,13 @@ Press <ENTER> to terminate client.
 
 3. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。
 
-4. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
+4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`

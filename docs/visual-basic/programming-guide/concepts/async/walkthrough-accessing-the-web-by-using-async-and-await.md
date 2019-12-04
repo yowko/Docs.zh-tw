@@ -2,12 +2,12 @@
 title: 逐步解說：使用 Async 和 Await 存取 Web
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: c13e592eb155d14c2e7cb2388a96925a7f1fa413
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7f649f1f16da545c4587f0ed76b8f1a443ee8744
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349100"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715845"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>逐步解說：使用 Async 和 Await 存取 Web (Visual Basic)
 
@@ -37,7 +37,7 @@ ms.locfileid: "74349100"
 
 如需完整的非同步範例，請參閱[範例](#example)一節。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件：
 
 您的電腦上必須安裝 Visual Studio 2012 或更新版本。 如需詳細資訊，請參閱 Visual Studio[下載](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)頁面。
 
@@ -45,7 +45,7 @@ ms.locfileid: "74349100"
 
 1. 啟動 Visual Studio。
 
-2. 在功能表列上，依序選擇 檔案、新增和 專案。
+2. 在功能表列上，選擇 [ **檔案**]、[ **新增**]、[ **專案**]。
 
     [ **新增專案** ] 對話方塊隨即開啟。
 
@@ -53,7 +53,7 @@ ms.locfileid: "74349100"
 
 4. 在 [名稱] 文字方塊中，輸入 `AsyncExampleWPF`，然後選擇 [確定] 按鈕。
 
-    新的專案隨即會出現在**方案總管**中。
+    新的專案隨即出現在方案總管中。
 
 ## <a name="design-a-simple-wpf-mainwindow"></a>設計簡單的 WPF MainWindow
 
@@ -362,7 +362,7 @@ ms.locfileid: "74349100"
 
 2. 因為 `SumPageSizesAsync` 是非同步方法，在事件處理常式中變更程式碼以等候結果。
 
-    對 `SumPageSizesAsync` 的呼叫會鏡射 `CopyToAsync` 中對 `GetURLContentsAsync` 的呼叫。 呼叫會傳回 `Task`，而不是 `Task(T)`。
+    對 `SumPageSizesAsync` 的呼叫會鏡射 `GetURLContentsAsync` 中對 `CopyToAsync` 的呼叫。 呼叫會傳回 `Task`，而不是 `Task(T)`。
 
     如同先前的程序，您可以使用一個陳述式或兩個陳述式轉換呼叫。 下列程式碼會顯示這些變更。
 
@@ -661,10 +661,10 @@ End Class
 ## <a name="see-also"></a>請參閱
 
 - [(非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
-- [Await 運算子](../../../../visual-basic/language-reference/operators/await-operator.md)
-- [Async](../../../../visual-basic/language-reference/modifiers/async.md)
-- [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [非同步方法的傳回型別 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [Task-based Asynchronous Programming (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847) (以工作為基礎的非同步程式設計 (TAP))
-- [如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [如何：使用 Async 和 Await，同時發出多個 Web 要求 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [Await 運算子](../../../language-reference/operators/await-operator.md)
+- [Async](../../../language-reference/modifiers/async.md)
+- [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](index.md)
+- [非同步方法的傳回型別 (Visual Basic)](async-return-types.md)
+- [Task-based Asynchronous Programming (TAP)](https://www.microsoft.com/download/details.aspx?id=19957) (以工作為基礎的非同步程式設計 (TAP))
+- [如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (Visual Basic)](how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [如何：使用 Async 和 Await，同時發出多個 Web 要求 (Visual Basic)](how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

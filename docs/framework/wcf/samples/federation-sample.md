@@ -2,18 +2,18 @@
 title: 聯合範例
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: d3a326f08e78edb79908485361f161c1b6da6625
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 271790e08476533fc1d83e22c5a0daf2f1eaa42a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044980"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716931"
 ---
 # <a name="federation-sample"></a>聯合範例
 這個範例將示範聯合安全性。  
   
 ## <a name="sample-details"></a>範例詳細資料  
- Windows Communication Foundation (WCF) 提供透過`wsFederationHttpBinding`部署同盟安全性架構的支援。 `wsFederationHttpBinding` 提供安全、可靠以及可互通的繫結，其中包括使用 HTTP 做為要求/回覆通訊的基礎傳輸機制，以及採用文字/XML 做為編碼的 Wire 格式。 如需 WCF 中同盟的詳細資訊, 請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
+ Windows Communication Foundation （WCF）提供透過 `wsFederationHttpBinding`部署同盟安全性架構的支援。 `wsFederationHttpBinding` 提供安全、可靠以及可互通的繫結，其中包括使用 HTTP 做為要求/回覆通訊的基礎傳輸機制，以及採用文字/XML 做為編碼的 Wire 格式。 如需 WCF 中同盟的詳細資訊，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
  本案例由 4 個部分組成：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "70044980"
  請參閱下列指示，以了解如何安裝和執行這個範例。  
   
 > [!NOTE]
-> 您必須具有**wwwroot**目錄的寫入權限, 才能執行此範例。  
+> 您必須具有**wwwroot**目錄的寫入權限，才能執行此範例。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
@@ -91,13 +91,13 @@ ms.locfileid: "70044980"
     > [!NOTE]
     > Setup.bat 批次檔是設計用來從 Windows SDK 命令提示字元執行。 它要求 MSSDK 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Windows SDK 命令提示字元中設定。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，您必須確定已安裝 IIS 6.0 管理相容性，因為安裝會使用 IIS 系統管理員指令碼。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上執行安裝指令碼時，需要系統管理員權限。  
   
-2. 在 Visual Studio 中開啟 FederationSample, 然後從 [**建立**] 功能表中選取 [**建立方案**]。 這會建置通用專案檔、Bookstore 服務、Bookstore STS、HomeRealm STS，然後將它們部署在 IIS 中。 還會建置 Bookstore 用戶端應用程式，並將可執行檔 BookStoreClient.exe 放置在 FederationSample\BookStoreClient\bin\Debug 資料夾中。  
+2. 在 Visual Studio 中開啟 FederationSample，然後從 [**建立**] 功能表中選取 [**建立方案**]。 這會建置通用專案檔、Bookstore 服務、Bookstore STS、HomeRealm STS，然後將它們部署在 IIS 中。 還會建置 Bookstore 用戶端應用程式，並將可執行檔 BookStoreClient.exe 放置在 FederationSample\BookStoreClient\bin\Debug 資料夾中。  
   
 3. 按兩下 BookStoreClient.exe。 BookStoreClient 視窗隨即顯示。  
   
-4. 您可以按一下 **[流覽書籍**], 流覽書店中提供的書籍。  
+4. 您可以按一下 **[流覽書籍**]，流覽書店中提供的書籍。  
   
-5. 若要購買特定書籍, 請在清單中選取該書籍, 然後按一下 [**購買書籍**]。 應用程式隨即啟動，然後會使用 Windows 驗證向 HomeRealm 安全性權杖服務進行驗證。  
+5. 若要購買特定書籍，請在清單中選取該書籍，然後按一下 [**購買書籍**]。 應用程式隨即啟動，然後會使用 Windows 驗證向 HomeRealm 安全性權杖服務進行驗證。  
   
      此範例已設定為允許使用者購買價值在 $15 (含) 以下的書籍。 嘗試購買價值超過 15 美元的書籍，會導致用戶端從「書店服務」(Book Store Service) 收到「拒絕存取」訊息。  
   
@@ -113,6 +113,6 @@ ms.locfileid: "70044980"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  

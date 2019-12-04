@@ -2,16 +2,16 @@
 title: MSMQ 啟用
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 038f4d7e3d713cfe4134ea98f7858ef71f29bab4
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: be33e3d9377c30058c7a2ee06543c11f10251ebd
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895247"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714765"
 ---
 # <a name="msmq-activation"></a>MSMQ 啟用
 
-這個範例示範如何在 Windows Process Activation Service (WAS) 中裝載可從訊息佇列讀取的應用程式。 這個範例會使用`netMsmqBinding` ，而且是以[雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)範例為基礎。 本例中的服務是 Web 裝載的應用程式，而用戶端則會自我裝載並輸出至主控台，以便觀察所送出採購單的狀態。
+這個範例示範如何在 Windows Process Activation Service (WAS) 中裝載可從訊息佇列讀取的應用程式。 這個範例會使用 `netMsmqBinding`，而且是以[雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)範例為基礎。 本例中的服務是 Web 裝載的應用程式，而用戶端則會自我裝載並輸出至主控台，以便觀察所送出採購單的狀態。
 
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
@@ -19,11 +19,11 @@ ms.locfileid: "70895247"
 > [!NOTE]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。
 >
-> \<InstallDrive>:\WF_WCF_Samples
+> \<InstallDrive >： \ WF_WCF_Samples
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （WCF）和 Windows Workflow Foundation （WF）範例](https://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （WCF）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WCF 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
-> \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
+> \<InstallDrive >： \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation。
 
 Windows Process Activation Service (WAS) 是 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上全新的處理序啟用機制，可以為使用非 HTTP 通訊協定的應用程式提供類似 IIS 的功能，而這些功能原先只有 HTTP 應用程式才能使用。 Windows Communication Foundation （WCF）會使用接聽程式介面卡介面，來傳達透過 WCF 支援的非 HTTP 通訊協定（例如 TCP、具名管道和 MSMQ）接收的啟用要求。 SMSvcHost.exe 中執行的 Managed Windows 服務會裝載可透過非 HTTP 通訊協定接收要求的功能。
 
@@ -232,7 +232,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
 5. 根據預設，MSMQ 啟動服務會以網路服務的身分執行。 因此，用來啟動應用程式的佇列必須讓「網路服務」擁有接收和查看其中訊息的權限。 您可以使用訊息佇列 MMC 來新增此權限：
 
-    1. 在 [**開始**] 功能表中，按一下 [執行`Compmgmt.msc` ]，然後輸入，再按 enter 鍵。
+    1. 在 [**開始**] 功能表中，按一下 [**執行**]，然後輸入 `Compmgmt.msc` 然後按 enter。
 
     2. 在 [**服務和應用程式**] 底下，展開 [**訊息佇列**]。
 
@@ -267,9 +267,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         > 這個命令是單行文字。
 
-        此命令可讓您使用`http://localhost/servicemodelsamples`和`net.msmq://localhost/servicemodelsamples`來存取/servicemodelsamples 應用程式。
+        此命令可讓您使用 `http://localhost/servicemodelsamples` 和 `net.msmq://localhost/servicemodelsamples`來存取/servicemodelsamples 應用程式。
 
-7. 如果您之前未曾這麼做，請確定 MSMQ 啟動服務已啟用。 在 [**開始**] 功能表中，按一下 [執行`Services.msc`]，然後輸入。 搜尋 [Net.tcp 接聽程式**介面卡]** 的服務清單。 以滑鼠右鍵按一下並選取 [**屬性**]。 將 [**啟動類型**] 設定為 [**自動**]，按一下 [套用] **，然後按一下**[**開始**] 按鈕。 這個步驟只需要在第一次使用 Net.Msmq 接聽程式配接器服務之前執行一次。
+7. 如果您之前未曾這麼做，請確定 MSMQ 啟動服務已啟用。 在 [**開始**] 功能表中，按一下 [**執行**]，然後輸入 `Services.msc`。 搜尋 [Net.tcp 接聽程式**介面卡]** 的服務清單。 以滑鼠右鍵按一下並選取 [**屬性**]。 將 [**啟動類型**] 設定為 [**自動**]，按一下 [套用] **，然後按一下**[**開始**] 按鈕。 這個步驟只需要在第一次使用 Net.Msmq 接聽程式配接器服務之前執行一次。
 
 8. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。 此外，還要在發送採購單的用戶端上變更程式碼，以便在送出採購單時將電腦名稱反映於佇列的 URI。 請使用下列程式碼：
 
@@ -302,7 +302,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     > [!WARNING]
     > 執行批次檔會將 DefaultAppPool 重設為使用 .NET Framework 2.0 版執行。
 
-根據預設，安全性會透過 `netMsmqBinding` 繫結傳輸啟用。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 這兩個屬性會共同決定傳輸安全性的類型。 根據預設，驗證模式會設定為 `Windows`，保護層級則會設定為 `Sign`。 若要 MSMQ 提供驗證和簽署功能，則 MSMQ 必須是網域的一部分。 如果您在不屬於網域的電腦上執行此範例，則會收到下列錯誤：「使用者的內部訊息佇列憑證不存在」。
+根據預設，安全性會透過 `netMsmqBinding` 繫結傳輸啟用。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 這兩個屬性會共同決定傳輸安全性的類型。 根據預設，驗證模式會設定為 `Windows`，保護層級則會設定為 `Sign`。 若要 MSMQ 提供驗證和簽署功能，則 MSMQ 必須是網域的一部分。 如果您在不屬於網域的電腦上執行這個範例，就會收到下列錯誤：「使用者的內部訊息佇列憑證不存在」。
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>若要在加入至工作群組的電腦上執行範例
 
@@ -347,6 +347,6 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     sc sidtype netmsmqactivator unrestricted
     ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [AppFabric 裝載和持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)
