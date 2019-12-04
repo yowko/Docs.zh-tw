@@ -5,46 +5,46 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: b28981196490e249d053ecd1704f6ba978585520
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 542440d6bf9d6809abee1ec37c85c44ce72fd132
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662859"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715163"
 ---
-# <a name="custom-composite-designers---workflow-items-presenter"></a><span data-ttu-id="04399-102">自訂複合設計工具 - 工作流程項目展示器</span><span class="sxs-lookup"><span data-stu-id="04399-102">Custom Composite Designers - Workflow Items Presenter</span></span>
+# <a name="custom-composite-designers---workflow-items-presenter"></a><span data-ttu-id="f6658-102">自訂複合設計工具 - 工作流程項目展示器</span><span class="sxs-lookup"><span data-stu-id="f6658-102">Custom Composite Designers - Workflow Items Presenter</span></span>
 
-<span data-ttu-id="04399-103"><xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 是 WF 設計工具程式撰寫模型中的關鍵類型，允許編輯包含的項目集合。</span><span class="sxs-lookup"><span data-stu-id="04399-103">The <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> is a key type in the WF designer programming model that allows for the editing of a collection of contained elements.</span></span> <span data-ttu-id="04399-104">這個範例示範如何建置會呈現這類可編輯集合的活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="04399-104">This sample shows how to build an activity designer that surfaces such an editable collection.</span></span>
+<span data-ttu-id="f6658-103"><xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 是 WF 設計工具程式撰寫模型中的關鍵類型，允許編輯包含的項目集合。</span><span class="sxs-lookup"><span data-stu-id="f6658-103">The <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> is a key type in the WF designer programming model that allows for the editing of a collection of contained elements.</span></span> <span data-ttu-id="f6658-104">這個範例示範如何建置會呈現這類可編輯集合的活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="f6658-104">This sample shows how to build an activity designer that surfaces such an editable collection.</span></span>
 
-<span data-ttu-id="04399-105">這個範例會示範下列情況：</span><span class="sxs-lookup"><span data-stu-id="04399-105">This sample demonstrates:</span></span>
+<span data-ttu-id="f6658-105">這個範例會示範下列情況：</span><span class="sxs-lookup"><span data-stu-id="f6658-105">This sample demonstrates:</span></span>
 
-- <span data-ttu-id="04399-106">建立具有 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 的自訂活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="04399-106">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span></span>
+- <span data-ttu-id="f6658-106">建立具有 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 的自訂活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="f6658-106">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span></span>
 
-- <span data-ttu-id="04399-107">使用 「 摺疊 」 和 「 展開 」 檢視中建立活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="04399-107">Creating an activity designer with a "collapsed" and "expanded" view.</span></span>
+- <span data-ttu-id="f6658-107">建立具有「折迭」和「展開」視圖的活動設計工具。</span><span class="sxs-lookup"><span data-stu-id="f6658-107">Creating an activity designer with a "collapsed" and "expanded" view.</span></span>
 
-- <span data-ttu-id="04399-108">覆寫重新裝載應用程式中的預設設計工具。</span><span class="sxs-lookup"><span data-stu-id="04399-108">Overriding a default designer in a rehosted application.</span></span>
+- <span data-ttu-id="f6658-108">覆寫重新裝載應用程式中的預設設計工具。</span><span class="sxs-lookup"><span data-stu-id="f6658-108">Overriding a default designer in a rehosted application.</span></span>
 
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="04399-109">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="04399-109">To set up, build, and run the sample</span></span>
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="f6658-109">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="f6658-109">To set up, build, and run the sample</span></span>
 
-1. <span data-ttu-id="04399-110">開啟**UsingWorkflowItemsPresenter.sln**適用於 C# 或 Visual Studio 2010 中的 VB 範例方案。</span><span class="sxs-lookup"><span data-stu-id="04399-110">Open the **UsingWorkflowItemsPresenter.sln** sample solution for C# or for VB in Visual Studio 2010.</span></span>
+1. <span data-ttu-id="f6658-110">在 Visual Studio 2010 中開啟C#或適用于 VB 的 usingworkflowitemspresenter.sln 範例解決方案。</span><span class="sxs-lookup"><span data-stu-id="f6658-110">Open the **UsingWorkflowItemsPresenter.sln** sample solution for C# or for VB in Visual Studio 2010.</span></span>
 
-2. <span data-ttu-id="04399-111">建置並執行方案。</span><span class="sxs-lookup"><span data-stu-id="04399-111">Build and run the solution.</span></span> <span data-ttu-id="04399-112">重新裝載的工作流程設計工具應用程式應該會開啟，您可以將活動拖曳至畫布上。</span><span class="sxs-lookup"><span data-stu-id="04399-112">A rehosted workflow designer application should open, and you can drag activities onto the canvas.</span></span>
+2. <span data-ttu-id="f6658-111">建置並執行方案。</span><span class="sxs-lookup"><span data-stu-id="f6658-111">Build and run the solution.</span></span> <span data-ttu-id="f6658-112">重新裝載的工作流程設計工具應用程式應該會開啟，您可以將活動拖曳至畫布上。</span><span class="sxs-lookup"><span data-stu-id="f6658-112">A rehosted workflow designer application should open, and you can drag activities onto the canvas.</span></span>
 
-## <a name="sample-highlights"></a><span data-ttu-id="04399-113">範例重點</span><span class="sxs-lookup"><span data-stu-id="04399-113">Sample Highlights</span></span>
+## <a name="sample-highlights"></a><span data-ttu-id="f6658-113">範例重點</span><span class="sxs-lookup"><span data-stu-id="f6658-113">Sample Highlights</span></span>
 
-<span data-ttu-id="04399-114">這個範例的程式碼示範下列操作：</span><span class="sxs-lookup"><span data-stu-id="04399-114">The code for this sample shows the following:</span></span>
+<span data-ttu-id="f6658-114">這個範例的程式碼示範下列操作：</span><span class="sxs-lookup"><span data-stu-id="f6658-114">The code for this sample shows the following:</span></span>
 
-- <span data-ttu-id="04399-115">設計工具建置的目標活動：`Parallel`</span><span class="sxs-lookup"><span data-stu-id="04399-115">The activity a designer is built for:  `Parallel`</span></span>
+- <span data-ttu-id="f6658-115">設計工具建置的目標活動：`Parallel`</span><span class="sxs-lookup"><span data-stu-id="f6658-115">The activity a designer is built for:  `Parallel`</span></span>
 
-- <span data-ttu-id="04399-116">建立具有 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 的自訂活動設計工具</span><span class="sxs-lookup"><span data-stu-id="04399-116">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span></span> <span data-ttu-id="04399-117">請注意下列幾點事項：</span><span class="sxs-lookup"><span data-stu-id="04399-117">A few things to point out:</span></span>
+- <span data-ttu-id="f6658-116">建立具有 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 的自訂活動設計工具</span><span class="sxs-lookup"><span data-stu-id="f6658-116">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span></span> <span data-ttu-id="f6658-117">請注意下列幾點事項：</span><span class="sxs-lookup"><span data-stu-id="f6658-117">A few things to point out:</span></span>
 
-  - <span data-ttu-id="04399-118">請注意繫結至 `ModelItem.Branches` 的 WPF 資料繫結用法。</span><span class="sxs-lookup"><span data-stu-id="04399-118">Note the use of WPF data binding to bind to `ModelItem.Branches`.</span></span> <span data-ttu-id="04399-119">`ModelItem` 是 `WorkflowElementDesigner` 上的屬性，它會參考設計工具的目標基礎物件，在這個範例中為 `Parallel`。</span><span class="sxs-lookup"><span data-stu-id="04399-119">`ModelItem` is the property on `WorkflowElementDesigner` that refers to the underlying object the designer is being used for, in this case, our `Parallel`.</span></span>
+  - <span data-ttu-id="f6658-118">請注意繫結至 `ModelItem.Branches` 的 WPF 資料繫結用法。</span><span class="sxs-lookup"><span data-stu-id="f6658-118">Note the use of WPF data binding to bind to `ModelItem.Branches`.</span></span> <span data-ttu-id="f6658-119">`ModelItem` 是 `WorkflowElementDesigner` 上的屬性，它會參考設計工具的目標基礎物件，在這個範例中為 `Parallel`。</span><span class="sxs-lookup"><span data-stu-id="f6658-119">`ModelItem` is the property on `WorkflowElementDesigner` that refers to the underlying object the designer is being used for, in this case, our `Parallel`.</span></span>
 
-  - <span data-ttu-id="04399-120"><xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> 可用來放置視覺效果，在集合中的個別項目之間顯示。</span><span class="sxs-lookup"><span data-stu-id="04399-120">The <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> can be used to put a visual to display between the individual items in the collection.</span></span>
+  - <span data-ttu-id="f6658-120"><xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> 可用來放置視覺效果，在集合中的個別項目之間顯示。</span><span class="sxs-lookup"><span data-stu-id="f6658-120">The <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> can be used to put a visual to display between the individual items in the collection.</span></span>
 
-  - <span data-ttu-id="04399-121"><xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> 是範本，可供判斷集合中的項目配置。</span><span class="sxs-lookup"><span data-stu-id="04399-121"><xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> is a template that can be provided to determine the layout of the items in the collection.</span></span> <span data-ttu-id="04399-122">在這個範例中，會使用水平堆疊面板。</span><span class="sxs-lookup"><span data-stu-id="04399-122">In this case, a horizontal stack panel is used.</span></span>
+  - <span data-ttu-id="f6658-121"><xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> 是範本，可供判斷集合中的項目配置。</span><span class="sxs-lookup"><span data-stu-id="f6658-121"><xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> is a template that can be provided to determine the layout of the items in the collection.</span></span> <span data-ttu-id="f6658-122">在這個範例中，會使用水平堆疊面板。</span><span class="sxs-lookup"><span data-stu-id="f6658-122">In this case, a horizontal stack panel is used.</span></span>
 
-  <span data-ttu-id="04399-123">下列範例程式碼會示範這點。</span><span class="sxs-lookup"><span data-stu-id="04399-123">This following example code shows this.</span></span>
+  <span data-ttu-id="f6658-123">下列範例程式碼會示範這點。</span><span class="sxs-lookup"><span data-stu-id="f6658-123">This following example code shows this.</span></span>
 
   ```xaml
   <sad:WorkflowItemsPresenter HintText="Drop Activities Here"
@@ -62,11 +62,11 @@ ms.locfileid: "67662859"
     </sad:WorkflowItemsPresenter>
   ```
 
-- <span data-ttu-id="04399-124">執行 `DesignerAttribute` 與 `Parallel` 類型的關聯，然後輸出回報的屬性。</span><span class="sxs-lookup"><span data-stu-id="04399-124">Perform an association of the `DesignerAttribute` to the `Parallel` type and then output the attributes reported.</span></span>
+- <span data-ttu-id="f6658-124">執行 `DesignerAttribute` 與 `Parallel` 類型的關聯，然後輸出回報的屬性。</span><span class="sxs-lookup"><span data-stu-id="f6658-124">Perform an association of the `DesignerAttribute` to the `Parallel` type and then output the attributes reported.</span></span>
 
-  - <span data-ttu-id="04399-125">首先，註冊所有預設設計工具。</span><span class="sxs-lookup"><span data-stu-id="04399-125">First, register all of the default designers.</span></span>
+  - <span data-ttu-id="f6658-125">首先，註冊所有預設設計工具。</span><span class="sxs-lookup"><span data-stu-id="f6658-125">First, register all of the default designers.</span></span>
 
-    <span data-ttu-id="04399-126">以下是程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="04399-126">The following is the code example.</span></span>
+    <span data-ttu-id="f6658-126">以下是程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="f6658-126">The following is the code example.</span></span>
 
     ```csharp
     // register metadata
@@ -82,9 +82,9 @@ ms.locfileid: "67662859"
     RegisterCustomMetadata()
     ```
 
-  - <span data-ttu-id="04399-127">接著覆寫 `RegisterCustomMetadata` 方法中的 parallel。</span><span class="sxs-lookup"><span data-stu-id="04399-127">Then, override the parallel in `RegisterCustomMetadata` method.</span></span>
+  - <span data-ttu-id="f6658-127">接著覆寫 `RegisterCustomMetadata` 方法中的 parallel。</span><span class="sxs-lookup"><span data-stu-id="f6658-127">Then, override the parallel in `RegisterCustomMetadata` method.</span></span>
 
-    <span data-ttu-id="04399-128">下列 C# 和 Visual Basic 程式碼會示範這點。</span><span class="sxs-lookup"><span data-stu-id="04399-128">The following code shows this in C# and Visual Basic.</span></span>
+    <span data-ttu-id="f6658-128">下列 C# 和 Visual Basic 程式碼會示範這點。</span><span class="sxs-lookup"><span data-stu-id="f6658-128">The following code shows this in C# and Visual Basic.</span></span>
 
     ```csharp
     void RegisterCustomMetadata()
@@ -103,9 +103,9 @@ ms.locfileid: "67662859"
     End Sub
     ```
 
-- <span data-ttu-id="04399-129">最後，請注意不同資料範本和觸發程序根據 `IsRootDesigner` 屬性來選取適當範本的用法。</span><span class="sxs-lookup"><span data-stu-id="04399-129">Finally, note the use of differing data templates and triggers to select the appropriate template based on the `IsRootDesigner` property.</span></span>
+- <span data-ttu-id="f6658-129">最後，請注意不同資料範本和觸發程序根據 `IsRootDesigner` 屬性來選取適當範本的用法。</span><span class="sxs-lookup"><span data-stu-id="f6658-129">Finally, note the use of differing data templates and triggers to select the appropriate template based on the `IsRootDesigner` property.</span></span>
 
-  <span data-ttu-id="04399-130">以下是程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="04399-130">The following is the code example.</span></span>
+  <span data-ttu-id="f6658-130">以下是程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="f6658-130">The following is the code example.</span></span>
 
   ```xaml
   <sad:ActivityDesigner x:Class="Microsoft.Samples.CustomParallelDesigner"
@@ -151,15 +151,15 @@ ms.locfileid: "67662859"
   ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="04399-131">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="04399-131">The samples may already be installed on your machine.</span></span> <span data-ttu-id="04399-132">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="04399-132">Check for the following (default) directory before continuing.</span></span>
+> <span data-ttu-id="f6658-131">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="f6658-131">The samples may already be installed on your machine.</span></span> <span data-ttu-id="f6658-132">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="f6658-132">Check for the following (default) directory before continuing.</span></span>
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> <span data-ttu-id="04399-133">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="04399-133">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="04399-134">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="04399-134">This sample is located in the following directory.</span></span>
+> <span data-ttu-id="f6658-133">如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="f6658-133">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="f6658-134">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="f6658-134">This sample is located in the following directory.</span></span>
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`
 
-## <a name="see-also"></a><span data-ttu-id="04399-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="04399-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f6658-135">請參閱</span><span class="sxs-lookup"><span data-stu-id="f6658-135">See also</span></span>
 
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
-- [<span data-ttu-id="04399-136">使用工作流程設計工具開發應用程式</span><span class="sxs-lookup"><span data-stu-id="04399-136">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+- [<span data-ttu-id="f6658-136">使用工作流程設計工具開發應用程式</span><span class="sxs-lookup"><span data-stu-id="f6658-136">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
