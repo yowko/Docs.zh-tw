@@ -2,12 +2,12 @@
 title: 與 ASMX Web 服務交互操作
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: 2ef4e34de76c046ba21dd7a3c50ea6ba782d459e
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 6d8be3fe6daa19a842dcaa92d05ec89ebef9fa5f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989805"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715740"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>與 ASMX Web 服務交互操作
 這個範例會示範如何整合 Windows Communication Foundation （WCF）用戶端應用程式與現有的 .ASMX Web 服務。  
@@ -46,7 +46,7 @@ public class CalculatorService : System.Web.Services.WebService
     }  
 ```  
   
- 如已設定，服務可由同一部`http://localhost/servicemodelsamples/service.asmx`電腦上的用戶端存取。 若要讓遠端電腦上的用戶端存取服務，就必須指定完整的網域名稱，而不是 localhost。  
+ 如已設定，服務可在同一部電腦上的用戶端 `http://localhost/servicemodelsamples/service.asmx` 存取。 若要讓遠端電腦上的用戶端存取服務，就必須指定完整的網域名稱，而不是 localhost。  
   
  通訊是透過[System.servicemodel 中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)所產生的用戶端來完成。 用戶端會包含在 generatedClient.cs 檔案中。 ASMX 服務必須可供使用才能產生 Proxy 程式碼，因為它可用於擷取更新的中繼資料。 請從用戶端目錄中的命令提示字元執行下列命令，以產生具有型別的 Proxy。  
   
@@ -120,13 +120,13 @@ Press <ENTER> to terminate client.
   
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3. 若要在單一或跨電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  

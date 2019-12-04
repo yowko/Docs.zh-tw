@@ -2,12 +2,12 @@
 title: SQL 追蹤
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: a72ac326108a1d202231a684f21d5b70017dc6cc
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c1bb4492695df3ff803dff893de24453d7c03dfb
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774263"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715558"
 ---
 # <a name="sql-tracking"></a>SQL 追蹤
 這個範例會示範如何撰寫自訂的 SQL 追蹤參與者，將追蹤記錄寫入至 SQL 資料庫。 Windows Workflow Foundation （WF）提供工作流程追蹤，以深入瞭解工作流程實例的執行。 追蹤執行階段會在工作流程執行期間發出工作流程追蹤記錄。 如需工作流程追蹤的詳細資訊，請參閱[工作流程追蹤和追蹤](../workflow-tracking-and-tracing.md)。
@@ -33,7 +33,7 @@ ms.locfileid: "72774263"
 
 7. 瀏覽器隨即顯示 StockPriceService 頁面，其中包含本機服務 WSDL 位址。 複製此位址。
 
-     @No__t_0 本機服務 WSDL 位址的範例。
+     `http://localhost:65193/StockPriceService.xamlx?wsdl`本機服務 WSDL 位址的範例。
 
 8. 使用 [檔案瀏覽器] 執行 WCF 測試用戶端（WcfTestClient .exe）。 它是位於 Microsoft Visual Studio 10.0\Common7\IDE 目錄中。
 
@@ -55,7 +55,7 @@ ms.locfileid: "72774263"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`
 

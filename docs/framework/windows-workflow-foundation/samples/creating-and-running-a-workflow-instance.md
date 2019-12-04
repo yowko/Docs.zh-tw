@@ -2,12 +2,12 @@
 title: 建立與執行工作流程執行個體
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
-ms.openlocfilehash: fe00ebec8d81e77ff982a36419f1b0a988fcd4ab
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: d895cfa9e924ecf4d1571cf67f1c1e7069e25da5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016053"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715196"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>建立與執行工作流程執行個體
 
@@ -28,10 +28,10 @@ ms.locfileid: "70016053"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\CreatingWorkflowInstances`
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用 WorkflowInvoker 與 WorkflowApplication](../using-workflowinvoker-and-workflowapplication.md)

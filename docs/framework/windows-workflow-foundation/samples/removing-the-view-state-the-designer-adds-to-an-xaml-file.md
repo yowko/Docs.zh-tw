@@ -1,23 +1,23 @@
 ---
-title: 移除檢視狀態，設計工具會新增至 XAML 檔案-WF
+title: 移除設計工具加入至 XAML 檔案的檢視狀態-WF
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-ms.openlocfilehash: af57f838ea12d7199268988bf01baa0b61447650
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f431275140e821aa5ec4d2235322f06be87d5ee2
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637851"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715614"
 ---
-# <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>移除檢視狀態，設計工具會新增至 XAML 檔案
+# <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>移除設計工具加入至 XAML 檔案的檢視狀態
 
-此範例示範如何建立衍生自 <xref:System.Xaml.XamlWriter> 的類別，以及從 XAML 檔案移除檢視狀態。 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 會將資訊寫入到 XAML 文件中，也就是檢視狀態。 檢視狀態是指設計階段必要的資訊，例如執行階段不需要的版面配置定位。 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 會在編輯時將這項資訊插入到 XAML 文件中。 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 會將檢視狀態寫入到含 `mc:Ignorable` 屬性的 XAML 檔案中，所以當執行階段載入 XAML 檔案時並不會載入這項資訊。 這個範例示範如何在處理 XAML 節點時建立可移除檢視狀態資訊的類別。
+此範例示範如何建立衍生自 <xref:System.Xaml.XamlWriter> 的類別，以及從 XAML 檔案移除檢視狀態。 Windows 工作流程設計工具會將資訊寫入 XAML 檔，這稱為「檢視狀態」。 檢視狀態是指設計階段必要的資訊，例如執行階段不需要的版面配置定位。 工作流程設計工具在編輯 XAML 檔時，將此資訊插入其中。 工作流程設計工具會將檢視狀態寫入具有 `mc:Ignorable` 屬性的 XAML 檔案中，因此當執行時間載入 XAML 檔案時，不會載入此資訊。 這個範例示範如何在處理 XAML 節點時建立可移除檢視狀態資訊的類別。
 
 ## <a name="discussion"></a>討論
 
 這個範例示範如何建立自訂寫入器。
 
-若要建置自訂的 XAML 寫入器，請建立繼承自 <xref:System.Xaml.XamlWriter> 的類別。 因為 XAML 寫入器通常巢狀的通常會以追蹤 「 內部 」 XAML 寫入器。 這些 「 內部 ' 寫入器可以想像成其餘 XAML 寫入器，可讓您有多個進入點執行工作，然後委派至堆疊的其餘部分的處理堆疊的參考。
+若要建置自訂的 XAML 寫入器，請建立繼承自 <xref:System.Xaml.XamlWriter> 的類別。 由於 XAML 寫入器通常是嵌套的，因此通常會追蹤「內部」 XAML 撰寫程式。 這些「內部」寫入器可視為 XAML 寫入器其餘堆疊的參考，可讓您擁有多個進入點來執行工作，然後將處理委派給堆疊的其餘部分。
 
 在這個範例中有數個值得注意的項目。 一個是正在寫入的項目是否來自設計工具命名空間的檢查。 請注意，這同時也會將工作流程中設計工具命名空間的其他類型用法刪除。
 
@@ -87,7 +87,7 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 
 ## <a name="to-use-this-sample"></a>若要使用這個範例
 
-1. 使用 Visual Studio 2010 開啟 ViewStateCleaningWriter.sln 方案檔案。
+1. 使用 Visual Studio 2010，開啟 [Viewstatecleaningwriter.exe] 方案檔。
 
 2. 開啟命令提示字元，然後巡覽到建置 ViewStageCleaningWriter.exe 的目錄。
 
@@ -99,7 +99,7 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
    ViewStateCleaningWriter.exe [input file] [output file]
    ```
 
-   這會輸出至 XAML 檔案\[outfile]，其中包含所有其檢視狀態資訊已移除。
+   這會將 XAML 檔案輸出至 \[outfile]，並移除其所有檢視狀態資訊。
 
 > [!NOTE]
 > <xref:System.Activities.Statements.Sequence> 工作流程的數個虛擬化提示會被移除。 這樣會導致設計工具下次載入時重新計算配置。 對 <xref:System.Activities.Statements.Flowchart> 使用這個範例時，所有定位和線條路由資訊都會被移除，在設計工具後續載入時，所有活動都會堆疊在畫面左側。
@@ -121,6 +121,6 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

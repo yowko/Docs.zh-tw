@@ -2,15 +2,15 @@
 title: 訊息佇列至 Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: aa2034ceece92c0f873b5a20860df36999b114b3
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 4daa3694287f93aa42a139ed701578e26433bc44
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044879"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714841"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>訊息佇列至 Windows Communication Foundation
-這個範例會示範訊息佇列 (MSMQ) 應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation (WCF) 服務。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
+這個範例會示範訊息佇列（MSMQ）應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation （WCF）服務。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
   
  服務合約為 `IOrderProcessor`，這會定義適合與佇列搭配使用的單向服務。 MSMQ 訊息沒有 Action 標頭，所以不可能自動將不同 MSMQ 訊息對應到作業合約。 因此，這時只能有一個作業合約。 如果您想要為服務定義一個以上的作業合約，應用程式就必須提供資訊，說明 MSMQ 訊息中的哪個標頭 (例如，標籤或 correlationID) 可以用來決定分派哪個作業合約。
   
@@ -60,7 +60,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
  MSMQ 佇列名稱是指定在組態檔的 appSettings 區段中，如下面的範例組態所示。
 
 > [!NOTE]
-> 佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 WCF 端點位址會指定 msmq.formatname 配置, 並使用 localhost 作為本機電腦。 每個 MSMQ 格式名稱定址方針的佇列位址會遵循 msmq.formatname 配置。
+> 佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 WCF 端點位址會指定 msmq.formatname 配置，並使用 localhost 作為本機電腦。 每個 MSMQ 格式名稱定址方針的佇列位址會遵循 msmq.formatname 配置。
 
 ```xml
 <appSettings>
@@ -122,15 +122,15 @@ Console.ReadLine();
 
     2. 展開 [**功能**] 索引標籤。
 
-    3. 以滑鼠右鍵按一下 [**私人訊息佇列**], 然後選取 [**新增**]、[**私用佇列**]。
+    3. 以滑鼠右鍵按一下 [**私人訊息佇列**]，然後選取 [**新增**]、[**私用佇列**]。
 
     4. 選取 [**交易**式] 方塊。
 
-    5. 輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。
+    5. 輸入 `ServiceModelSamplesTransacted` 做為新佇列的名稱。
 
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 
-4. 若要在單一電腦設定中執行範例, 請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
+4. 若要在單一電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
 ### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例
 
@@ -149,11 +149,11 @@ Console.ReadLine();
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
 - [如何：與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)

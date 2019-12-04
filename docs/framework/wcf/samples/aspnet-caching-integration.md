@@ -2,12 +2,12 @@
 title: ASP.NET 快取整合
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 56f686b83deb576f1245a9d4b9df2df433ea1e2f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 23c10e56dba7daec2d1027de92e8252c8fe69055
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045783"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716170"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 快取整合
 
@@ -22,27 +22,27 @@ ms.locfileid: "70045783"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`
 
 ## <a name="discussion"></a>討論
 
-此範例會使用<xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>來利用 ASP.NET 輸出快取搭配 Windows Communication Foundation (WCF) 服務。 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 會套用至服務作業，並提供應套用至所指作業之回應的組態檔中快取設定檔的名稱。
+此範例會使用 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>，利用 Windows Communication Foundation （WCF）服務的 ASP.NET 輸出快取。 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 會套用至服務作業，並提供應套用至所指作業之回應的組態檔中快取設定檔的名稱。
 
-在範例服務專案的 Service.cs 檔案中, `GetCustomer`和`GetCustomers` <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>作業都以標示, 這會提供快取設定檔名稱 "CacheFor60Seconds"。 在服務專案的 web.config 檔案中, 快取設定檔 "CacheFor60Seconds" 是在 <`caching` `system.web`> 的 < > 元素底下提供。 此快取設定檔的`duration`屬性值為 "60", 因此與此設定檔相關聯的回應會在 ASP.NET 輸出快取中快取60秒。 此外, 此快取設定檔的`varmByParam`屬性設定為 "format", 因此`format`查詢字串參數具有不同值的要求會分別快取其回應。 最後, 快取設定檔`varyByHeader`的屬性會設定為「接受」, 因此具有不同 Accept 標頭值的要求會分別快取其回應。
+在範例服務專案的 Service.cs 檔案中，`GetCustomer` 和 `GetCustomers` 作業都會以 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>標示，這會提供快取設定檔名稱 "CacheFor60Seconds"。 在服務專案的 web.config 檔案中，快取設定檔 "CacheFor60Seconds" 是在 <`system.web`> 的 <`caching`> 元素底下提供。 針對此快取設定檔，`duration` 屬性的值為 "60"，因此與此設定檔相關聯的回應會在 ASP.NET 輸出快取中快取60秒。 此外，在此快取設定檔中，`varmByParam` 屬性會設定為 "format"，因此 `format` 查詢字串參數具有不同值的要求會分別快取其回應。 最後，快取設定檔的 `varyByHeader` 屬性會設定為「接受」，因此具有不同 Accept 標頭值的要求會分別快取其回應。
 
-用戶端專案中的 Program.cs 會示範如何使用 <xref:System.Net.HttpWebRequest> 編寫這種用戶端。 請注意，這只是存取 WCF 服務的其中一種方式。 您也可以使用其他 .NET Framework 類別 (例如 WCF 通道處理站和<xref:System.Net.WebClient>) 來存取服務。 SDK 中的其他範例 (例如[基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)範例) 說明如何使用這些類別與 WCF 服務進行通訊。
+用戶端專案中的 Program.cs 會示範如何使用 <xref:System.Net.HttpWebRequest> 編寫這種用戶端。 請注意，這只是存取 WCF 服務的其中一種方式。 您也可以使用其他 .NET Framework 類別（例如 WCF 通道處理站和 <xref:System.Net.WebClient>）來存取服務。 SDK 中的其他範例（例如[基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)範例）說明如何使用這些類別與 WCF 服務進行通訊。
 
 ## <a name="to-run-the-sample"></a>若要執行範例
 
 此範例包含三個專案：
 
-- **服務**：Web 應用程式專案, 其中包含裝載于 ASP.NET 中的 WCF HTTP 服務。
+- **服務**：包含裝載于 ASP.NET 之 WCF HTTP 服務的 Web 應用程式專案。
 
-- **用戶端**:呼叫服務的主控台應用程式專案。
+- **用戶端**：會呼叫服務的主控台應用程式專案。
 
-- **常見**:共用程式庫, 其中包含用戶端和服務所使用的客戶類型。
+- **通用**：包含用戶端和服務所使用之客戶類型的共用程式庫。
 
 當用戶端主控台應用程式執行時，用戶端會對服務發出要求，然後將相關的資訊從回應寫入至主控台視窗。
 
@@ -52,11 +52,11 @@ ms.locfileid: "70045783"
 
 2. 按下 CTRL+SHIFT+B 以建置方案。
 
-3. 如果 [**方案總管**] 視窗尚未開啟, 請按 CTRL + W + S。
+3. 如果 [**方案總管**] 視窗尚未開啟，請按 CTRL + W + S。
 
-4. 從 [**方案總管**] 視窗中, 以滑鼠右鍵按一下**服務**專案, 然後選取 [**開始新實例**]。 這樣會啟動裝載服務的 ASP.NET 程式開發伺服器。
+4. 從 [**方案總管**] 視窗中，以滑鼠右鍵按一下**服務**專案，然後選取 [**開始新實例**]。 這樣會啟動裝載服務的 ASP.NET 程式開發伺服器。
 
-5. 從 [**方案總管**] 視窗中, 以滑鼠右鍵按一下**用戶端**專案, 然後選取 [**開始新實例**]。
+5. 從 [**方案總管**] 視窗中，以滑鼠右鍵按一下**用戶端**專案，然後選取 [**開始新實例**]。
 
 6. 用戶端主控台視窗隨即出現，並提供執行中服務的 URI，以及執行中服務之 HTML 說明頁的 URI。 您可以隨時在瀏覽器中輸入說明頁的 URI 來檢視 HTML 說明頁。
 
@@ -66,4 +66,4 @@ ms.locfileid: "70045783"
 
 9. 按 SHIFT+F5 停止對服務偵錯。
 
-10. 在 Windows 通知區域中, 以滑鼠右鍵按一下 ASP.NET 開發伺服器圖示, 然後選取 [**停止**]。
+10. 在 Windows 通知區域中，以滑鼠右鍵按一下 ASP.NET 開發伺服器圖示，然後選取 [**停止**]。

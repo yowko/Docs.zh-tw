@@ -2,16 +2,16 @@
 title: 工作 3：建立工具箱與 PropertyGrid 窗格
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 402a25c1cb82c245afa94f58cefc180515622ea9
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 29e50b24135cd3d6a02052d846e1781b0d9fa325
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275857"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716223"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>工作 3：建立工具箱與 PropertyGrid 窗格
 
-在這項工作中，您將建立 [**工具箱**] 和 [ **PropertyGrid** ] 窗格，並將其新增至 [重新裝載] [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]。
+在這項工作中，您將建立 [**工具箱**] 和 [ **PropertyGrid** ] 窗格，並將其新增至重新裝載 Windows 工作流程設計工具。
 
 如需參考，在完成重新裝載中的三個工作之後，應該在 MainWindow.xaml.cs 檔案中的程式碼，本主題的結尾會提供[工作流程設計工具](rehosting-the-workflow-designer.md)的主題系列。
 
@@ -214,7 +214,7 @@ namespace HostingApplication
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [重新裝載工作流程設計工具](rehosting-the-workflow-designer.md)
 - [工作 1：建立新的 Windows Presentation Foundation 應用程式](task-1-create-a-new-wpf-app.md)

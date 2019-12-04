@@ -2,15 +2,15 @@
 title: 自訂安全中繼資料端點
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: 32e6e0238637f9c2ef6814ace35ccb0b78110b60
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 92fa468caf331fadcd6cab0ab57b34858053c1b5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928687"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715441"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>自訂安全中繼資料端點
-這個範例會示範如何使用使用其中一個非中繼資料交換系結的安全中繼資料端點來執行服務，以及如何設定[System.servicemodel 中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)或用戶端，以從這類的取得中繼資料中繼資料端點。 有兩個系統提供的繫結可用來公開中繼資料端點：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 可用來以不安全的方式，透過 HTTP 公開中繼資料端點。 mexHttpsBinding 可用來以安全的方式，透過 HTTPS 公開中繼資料端點。 此範例說明如何使用 <xref:System.ServiceModel.WSHttpBinding> 公開安全的中繼資料端點。 當您要變更繫結上的安全性設定時，您會想要這麼做，但是您不想使用 HTTPS。 如果使用 mexHttpsBinding，您的中繼資料端點將是安全的，但是沒有方法可以修改繫結設定。  
+這個範例會示範如何使用使用其中一個非中繼資料交換系結的安全中繼資料端點來執行服務，以及如何設定[System.servicemodel 中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)或用戶端，以從這類中繼資料端點提取中繼資料。 有兩個系統提供的繫結可用來公開中繼資料端點：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 可用來以不安全的方式，透過 HTTP 公開中繼資料端點。 mexHttpsBinding 可用來以安全的方式，透過 HTTPS 公開中繼資料端點。 此範例說明如何使用 <xref:System.ServiceModel.WSHttpBinding> 公開安全的中繼資料端點。 當您要變更繫結上的安全性設定時，您會想要這麼做，但是您不想使用 HTTPS。 如果使用 mexHttpsBinding，您的中繼資料端點將是安全的，但是沒有方法可以修改繫結設定。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -89,7 +89,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
 .\svcutil.exe http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- 前置的「。\\「確定會執行此目錄中的 Svcutil 複本（具有對應的 Svcutil 的副本）。  
+ 前置的「。\\"可確保會執行此目錄中的 Svcutil 複本（具有對應的 Svcutil）。  
   
 ## <a name="metadataresolver-client"></a>MetadataResolver 用戶端  
  如果用戶端知道合約以及如何在設計階段與中繼資料互動，用戶端就可以使用 `MetadataResolver`，動態找出繫結和應用程式端點的位址。 這個範例用戶端會示範如何藉由建立和設定 `MetadataResolver`，進而設定 `MetadataExchangeClient` 所使用的繫結和認證。  
@@ -148,13 +148,13 @@ ChannelFactory<ICalculator> cf = new ChannelFactory<ICalculator>(endpoint.Bindin
   
 #### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   
-1. 在伺服器上執行 `setup.bat service`。 `setup.bat` 使用引數執行時，會建立具有電腦完整功能變數名稱的服務憑證，並將服務憑證匯出至名`service`為 .cer 的檔案。  
+1. 在伺服器上執行 `setup.bat service`。 使用 `service` 引數執行 `setup.bat`，會建立具有電腦完整功能變數名稱的服務憑證，並將服務憑證匯出至名為 .cer 的檔案。  
   
-2. 在伺服器上編輯 Web.config，以反映新的憑證名稱。 也就是，將`findValue` [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)元素中的屬性變更為電腦的完整功能變數名稱。  
+2. 在伺服器上編輯 Web.config，以反映新的憑證名稱。 也就是，將[\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)元素中的 `findValue` 屬性變更為電腦的完整功能變數名稱。  
   
 3. 從服務目錄中將 Service.cer 檔案複製至用戶端機器上的用戶端目錄。  
   
-4. 在用戶端上執行 `setup.bat client`。 `setup.bat` 使用引數執行會建立名為Client.com的用戶端憑證，並將用戶端憑證匯出至名為`client` client .cer 的檔案。  
+4. 在用戶端上執行 `setup.bat client`。 使用 `client` 引數執行 `setup.bat`，會建立名為 Client.com 的用戶端憑證，並將用戶端憑證匯出至名為 Client .cer 的檔案。  
   
 5. 在用戶端機器上之 `MetadataResolverClient` 的 App.config 檔案中，變更 MEX 端點的位址值以符合服務的新位址。 您可以藉由使用伺服器的完整網域名稱取代 localhost，完成這個動作。 也請將 metadataResolverClient.cs 檔案中的其他 "localhost" 變更為新的服務憑證名稱 (伺服器的完整網域名稱)。 對 SvcutilClient 專案的 App.config 執行相同的動作。  
   
@@ -182,6 +182,6 @@ ChannelFactory<ICalculator> cf = new ChannelFactory<ICalculator>(endpoint.Bindin
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\CustomMexEndpoint`  

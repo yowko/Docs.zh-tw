@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: c2389ff0c94afc2156e594f5d93535d1ed0107a8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e0c617ce32f80bdde1bcfda31da40ae610e07452
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336270"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712355"
 ---
 # <a name="await-operator-visual-basic"></a>Await 運算子 (Visual Basic)
 
@@ -23,7 +23,7 @@ ms.locfileid: "74336270"
 > [!NOTE]
 > `Async` 和 `Await` 關鍵字是在 Visual Studio 2012 中引入。 如需非同步程式設計的簡介，請參閱[使用 async 和 Await 進行非同步程式設計](../../../visual-basic/programming-guide/concepts/async/index.md)。
 
-一般來說，您套用 `Await` 運算子的工作，就是呼叫方法的傳回值，該方法會執行以工作為[基礎的非同步模式](https://go.microsoft.com/fwlink/?LinkId=204847)，也就是 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。
+一般來說，您套用 `Await` 運算子的工作，就是呼叫方法的傳回值，該方法會執行以工作為[基礎的非同步模式](https://www.microsoft.com/download/details.aspx?id=19957)，也就是 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。
 
 在下列程式碼中，<xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 會傳回 `getContentsTask`，也就是 `Task(Of Byte())`。 這個工作可保證作業完成時，一定會產生實際位元組陣列。 `Await` 運算子會套用至 `getContentsTask` 以暫停在 `SumPageSizesAsync` 中執行，直到 `getContentsTask` 完成。 同時，控制權會返回 `SumPageSizesAsync` 的呼叫端。 當 `getContentsTask` 完成之後，`Await` 運算式會評估為位元組陣列。
 
@@ -74,7 +74,7 @@ Await AsyncMethodThatReturnsTask()
 
 ## <a name="example"></a>範例
 
-下列 Windows Form 範例說明如何在非同步方法 `Await` 中使用 `WaitAsynchronouslyAsync`。 請對照該方法的行為與 `WaitSynchronously` 的行為。 若沒有 `Await` 運算子，儘管在定義中使用 `WaitSynchronously` 修飾詞並在主體中呼叫 `Async`，<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> 仍會以同步方式執行。
+下列 Windows Form 範例說明如何在非同步方法 `WaitAsynchronouslyAsync` 中使用 `Await`。 請對照該方法的行為與 `WaitSynchronously` 的行為。 若沒有 `Await` 運算子，儘管在定義中使用 `WaitSynchronously` 修飾詞並在主體中呼叫 `Async`，<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> 仍會以同步方式執行。
 
 ```vb
 Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

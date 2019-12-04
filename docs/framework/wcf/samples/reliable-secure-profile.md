@@ -2,22 +2,22 @@
 title: 可靠的安全設定檔
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: d7cfc028c5cf1ba5cfba009cd29c89f07c64fd9c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ee94dc5be2c50f9e383a42d435996b2fd35df4a4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044808"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716496"
 ---
 # <a name="reliable-secure-profile"></a>可靠的安全設定檔
-這個範例會示範如何撰寫 WCF 和[可靠的安全設定檔](https://go.microsoft.com/fwlink/?LinkId=178140)(.rsp)。 這個範例會示範如何執行「[建立連接](https://go.microsoft.com/fwlink/?LinkId=178141)通道」, 它可以與可靠的訊息結合在一起, 並選擇性地建立安全的通道, 以根據 RSP 規格建立可靠的安全系結。  
+這個範例會示範如何撰寫 WCF 和[可靠的安全設定檔](https://go.microsoft.com/fwlink/?LinkId=178140)（.rsp）。 這個範例會示範如何執行「[建立連接](https://go.microsoft.com/fwlink/?LinkId=178141)通道」，它可以與可靠的訊息結合在一起，並選擇性地建立安全的通道，以根據 RSP 規格建立可靠的安全系結。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
@@ -28,9 +28,9 @@ ms.locfileid: "70044808"
   
 1. 開啟**ReliableSecureProfile**方案。  
   
-2. 以滑鼠右鍵按一下**方案總管**中的**服務**專案, 並從內容功能表中選取 [ **Debug**]、[**啟動新實例**]。 這會啟動服務主機。  
+2. 以滑鼠右鍵按一下**方案總管**中的**服務**專案，並從內容功能表中選取 [ **Debug**]、[**啟動新實例**]。 這會啟動服務主機。  
   
-3. 以滑鼠右鍵按一下**方案總管**中的**用戶端**專案, 並從內容功能表中選取 [ **Debug**]、[**啟動新實例**]。 這會啟動用戶端。  
+3. 以滑鼠右鍵按一下**方案總管**中的**用戶端**專案，並從內容功能表中選取 [ **Debug**]、[**啟動新實例**]。 這會啟動用戶端。  
   
 4. 在用戶端主控台視窗的提示中輸入任何字串，然後按一下 ENTER。這會將輸入字串傳送到服務，然後計算此字串的雜湊。  
   

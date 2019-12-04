@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: f0082bd99b154f87ab90bee7a89afdb8405f6623
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 922d91466731b331cc409cc362c4ada2c287916a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920310"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715894"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>逐步解說：在 WPF 應用程式中快取應用程式資料
 快取可讓您將資料儲存在記憶體中，以進行快速存取。 重新存取資料時，應用程式可以從快取中取得資料，而不是從原始來源進行擷取。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。
@@ -40,7 +40,7 @@ ms.locfileid: "72920310"
 
 - 監視快取檔案的路徑，並通知快取實例有關受監視專案的變更。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
  若要完成這個逐步解說，您將需要：
 
 - Visual Studio 2010。
@@ -78,7 +78,7 @@ ms.locfileid: "72920310"
      WPF 設計工具會在**設計**視圖中開啟，並顯示 mainwindow.xaml。 Visual Studio 會建立 [**我的專案**] 資料夾、應用程式 .xaml 檔案和 mainwindow.xaml。
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>以 .NET Framework 為目標並加入快取元件的參考
- 根據預設，WPF 應用程式會以 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]為目標。 若要在 WPF 應用程式中使用 <xref:System.Runtime.Caching> 命名空間，應用程式必須以 .NET Framework 4 （而非 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]）為目標，而且必須包含命名空間的參考。
+ 根據預設，WPF 應用程式會以 .NET Framework 4 用戶端設定檔為目標。 若要在 WPF 應用程式中使用 <xref:System.Runtime.Caching> 命名空間，應用程式必須將目標設為 .NET Framework 4 （而不是 .NET Framework 4 用戶端設定檔），而且必須包含命名空間的參考。
 
  因此，下一個步驟是變更 .NET Framework 目標，並加入 <xref:System.Runtime.Caching> 命名空間的參考。
 
@@ -97,7 +97,7 @@ ms.locfileid: "72920310"
 
      [ **Advanced 編譯器設定**] 對話方塊隨即顯示。
 
-4. 在 [**目標 framework （所有設定）** ] 清單中，選取 [.NET Framework 4]。 （請勿選取 [[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]]）。
+4. 在 [**目標 framework （所有設定）** ] 清單中，選取 [.NET Framework 4]。 （請勿選取 [.NET Framework 4 用戶端設定檔]）。
 
 5. 按一下 [確定]。
 
@@ -284,7 +284,7 @@ ms.locfileid: "72920310"
 12. 在 [**建立**] 功能表中，按一下 [**建立 WPFCaching** ] 來建立您的專案。
 
 ## <a name="testing-caching-in-the-wpf-application"></a>在 WPF 應用程式中測試快取
- 您現在可以測試應用程式。
+ ：您現在可以測試應用程式。
 
 #### <a name="to-test-caching-in-the-wpf-application"></a>若要在 WPF 應用程式中測試快取
 

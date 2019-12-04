@@ -2,12 +2,12 @@
 title: 延伸保護原則
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: c7c2e85872c158facb2de91a7413ac5a04491d7f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1cb6d44e8f6ee8f54f776453e5a1783ab0cfa4f0
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044990"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716428"
 ---
 # <a name="extended-protection-policy"></a>延伸保護原則
 延伸保護是防止攔截式攻擊的一項安全性方案。 MITM 攻擊是一項安全性威脅，其方式為 MITM 取得用戶端的認證並將它轉送至伺服器。  
@@ -30,23 +30,23 @@ ms.locfileid: "70044990"
   
 2. 在**Windows 功能**、 **Internet Information Services**、 **World Wide Web 服務**、**安全性**和**Windows 驗證**中安裝**windows 驗證**。  
   
-3. 在**Windows 功能**、 **Microsoft .NET Framework 3.5.1**中安裝**Windows Communication Foundation HTTP 啟用**, 並**Windows Communication Foundation HTTP 啟用**。  
+3. 在**Windows 功能**、 **Microsoft .NET Framework 3.5.1**中安裝**Windows Communication Foundation HTTP 啟用**，並**Windows Communication Foundation HTTP 啟用**。  
   
 4. 這個範例需由用戶端建立與伺服器之間的安全通道，所以必須有可從 Internet Information Services (IIS) 管理員進行安裝的伺服器憑證。  
   
-    1. 開啟 [IIS Manager]。 開啟 [**伺服器憑證**], 這會在選取根節點 (電腦名稱稱) 時出現在 [**功能視圖**] 索引標籤中。  
+    1. 開啟 [IIS 管理員]。 開啟 [**伺服器憑證**]，這會在選取根節點（電腦名稱稱）時出現在 [**功能視圖**] 索引標籤中。  
   
     2. 若要測試這個範例，請建立自我簽署憑證。 如果您不希望 Internet Explorer 出現憑證可能不安全的提示，請將此憑證安裝到 [受信任的根憑證授權單位] 存放區。  
   
-5. 開啟 [預設的網站] 的 [**動作**] 窗格。 按一下 [**編輯網站**, 系結]。 加入 HTTPS 做為類型 (如果尚未存在)，並且使用連接埠號碼 443。 指派上一個步驟中建立的 SSL 憑證。  
+5. 開啟 [預設的網站] 的 [**動作**] 窗格。 按一下 [**編輯網站** **，系**結]。 加入 HTTPS 做為類型 (如果尚未存在)，並且使用連接埠號碼 443。 指派上一個步驟中建立的 SSL 憑證。  
   
 6. 建置服務。 這樣會在 IIS 中建立一個虛擬目錄，並且視需要複製 Web 主控服務的 .dll、.svc 和 .config 檔案。  
   
-7. 開啟 [IIS Manager]。 以滑鼠右鍵按一下在上一個步驟中建立的虛擬目錄 (**ExtendedProtection**)。 選取 [**轉換成應用程式**]。  
+7. 開啟 [IIS 管理員]。 以滑鼠右鍵按一下在上一個步驟中建立的虛擬目錄（**ExtendedProtection**）。 選取 [**轉換成應用程式**]。  
   
-8. 在 IIS 管理員中開啟此虛擬目錄的**驗證**模組, 並啟用**Windows 驗證**。  
+8. 在 IIS 管理員中開啟此虛擬目錄的**驗證**模組，並啟用**Windows 驗證**。  
   
-9. 在 [ **Windows 驗證**] 下開啟此虛擬目錄的 [ **Advanced Settings** ], 並將它設定為 [**必要**]。  
+9. 在 [ **Windows 驗證**] 下開啟此虛擬目錄的 [ **Advanced Settings** ]，並將它設定為 [**必要**]。  
   
 10. 您可以從瀏覽器視窗存取 HTTPS URL 來測試服務 (提供完整網域名稱)。 如果您想要從遠端電腦存取此 URL，請確定防火牆已開放所有傳入的 HTTP 和 HTTPS 連線。  
   
@@ -59,6 +59,6 @@ ms.locfileid: "70044990"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Security\ExtendedProtection`

@@ -2,12 +2,12 @@
 title: 資料流摘要範例
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: ede1dbb4f5c682b8182dda4888a9cbd373b95dd8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 9d40a07b81474a283a8edbeb7aca1aa7ab3993b2
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976367"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716642"
 ---
 # <a name="streaming-feeds-sample"></a>資料流摘要範例
 這個範例會示範如何管理含有大量項目的新聞訂閱摘要。 在伺服器上，此範例會示範如何在項目即將寫入網路資料流的之前立即延遲建立摘要中個別的 <xref:System.ServiceModel.Syndication.SyndicationItem> 物件。  
@@ -67,7 +67,7 @@ public Atom10FeedFormatter StreamedFeed()
   
  這樣一來，項目資料流就永遠不會經過記憶體緩衝處理了。 您可以在 `ItemGenerator.GenerateItems()` 方法內的 `yield return` 語句上設定中斷點，並注意在服務傳回 `StreamedFeed()` 方法的結果之後，第一次遇到此中斷點，即可觀察這個行為。  
   
-## <a name="client"></a>用戶端  
+## <a name="client"></a>Client  
  這個範例中的用戶端會使用自訂 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 實作，這個實作會延遲具體化摘要中的個別項目，而不是經過記憶體來緩衝處理它們。 下列為自訂 `StreamedAtom10FeedFormatter` 執行個體的使用方式。  
   
 ```csharp  
@@ -114,7 +114,7 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   
