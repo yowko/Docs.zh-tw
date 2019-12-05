@@ -16,7 +16,7 @@
   href: visual-basic/
 - name: ML.NET 指南
   href: machine-learning/index.yml
-- name: .NET for Apache Spark 指南
+- name: 適用於 Apache Spark 的 .NET 指南
   href: spark/index.yml
 - name: .NET 應用程式架構指南
   href: architecture/index.yml

@@ -13,7 +13,7 @@
           tocHref: /dotnet/architecture/
           topicHref: /dotnet/architecture/index
           items:
-            - name: 將 ASP.NET Web 應用程式現代化電子書
+            - name: 新式 ASP.NET Web 應用程式電子書
               tocHref: /dotnet/architecture/modern-web-apps-azure/
               topicHref: /dotnet/architecture/modern-web-apps-azure/index
             - name: .NET 微服務 - 架構電子書
@@ -63,7 +63,7 @@
                 - name: 安全執行緒集合
                   tocHref: /dotnet/standard/collections/thread-safe/
                   topicHref: /dotnet/standard/collections/thread-safe/index
-            - name: 利用 .NET 進行多重平台開發
+            - name: 使用 .NET 進行多重平台開發
               tocHref: /dotnet/standard/cross-platform/
               topicHref: /dotnet/standard/cross-platform/index
             - name: XML 文件和資料
@@ -108,25 +108,64 @@
             - name: .NET 的序列化
               tocHref: /dotnet/standard/serialization/
               topicHref: /dotnet/standard/serialization/index
-            - name: Managed 執行緒處理
+            - name: 受控執行緒
               tocHref: /dotnet/standard/threading/
               topicHref: /dotnet/standard/threading/index
         - name: .NET Core 指南
           tocHref: /dotnet/core/
           topicHref: /dotnet/core/index
           items:
-            - name: 重大變更
-              tocHref: /dotnet/core/compatibility/
-              topicHref: /dotnet/core/compatibility/index
-            - name: 執行階段設定
-              tocHref: /dotnet/core/run-time-config/
-              topicHref: /dotnet/core/run-time-config/index
-            - name: 工具
-              tocHref: /dotnet/core/tools/
-              topicHref: /dotnet/core/tools/index
             - name: 安裝指南
               tocHref: /dotnet/core/install/
               topicHref: /dotnet/core/install/index
+            - name: 新功能
+              tocHref: /dotnet/core/whats-new/
+              topicHref: /dotnet/core/whats-new/dotnet-core-3-0
+            - name: 重大變更
+              tocHref: /dotnet/core/compatibility/
+              topicHref: /dotnet/core/compatibility/index
+            - name: 教學課程
+              tocHref: /dotnet/core/tutorials/
+              topicHref: /dotnet/core/tutorials/index
+            - name: 執行階段設定
+              tocHref: /dotnet/core/run-time-config/
+              topicHref: /dotnet/core/run-time-config/index
+            - name: 原生互通性
+              tocHref: /dotnet/core/native-interop/
+              topicHref: /dotnet/core/native-interop/expose-components-to-com
+            - name: 移轉
+              tocHref: /dotnet/core/migration/
+              topicHref: /dotnet/core/migration/index
+            - name: 部署
+              tocHref: /dotnet/core/deploying/
+              topicHref: /dotnet/core/deploying/index
+            - name: Docker
+              tocHref: /dotnet/core/docker/
+              topicHref: /dotnet/core/docker/introduction
+            - name: 診斷工具
+              tocHref: /dotnet/core/diagnostics/
+              topicHref: /dotnet/core/diagnostics/index
+            - name: 單元測試
+              tocHref: /dotnet/core/testing/
+              topicHref: /dotnet/core/testing/index
+            - name: 版本控制
+              tocHref: /dotnet/core/versions/
+              topicHref: /dotnet/core/versions/index
+            - name: 工具
+              tocHref: /dotnet/core/tools/
+              topicHref: /dotnet/core/tools/index
+            - name: 其他工具
+              tocHref: /dotnet/core/additional-tools/
+              topicHref: /dotnet/core/additional-tools/index
+            - name: 移植
+              tocHref: /dotnet/core/porting/
+              topicHref: /dotnet/core/porting/index
+            - name: 相依性載入
+              tocHref: /dotnet/core/dependency-loading/
+              topicHref: /dotnet/core/dependency-loading/overview
+            - name: 建置 .NET Core
+              tocHref: /dotnet/core/build/
+              topicHref: /dotnet/core/build/index
         - name: .NET Framework
           tocHref: /dotnet/framework/
           topicHref: /dotnet/framework/index
@@ -181,7 +220,7 @@
                     - name: Windows Workflow Foundation 組態結構描述
                       tocHref: /dotnet/framework/configure-apps/file-schema/windows-workflow-foundation
                       topicHref: /dotnet/framework/configure-apps/file-schema/windows-workflow-foundation/index
-                    - name: Windows Form 組態區段
+                    - name: Windows Forms 組態區段
                       tocHref: /dotnet/framework/configure-apps/file-schema/winforms/
                       topicHref: /dotnet/framework/configure-apps/file-schema/winforms/index
             - name: .NET Framework 中的資料與模型化
@@ -215,7 +254,7 @@
                 - name: WCF 資料服務
                   tocHref: /dotnet/framework/data/wcf/
                   topicHref: /dotnet/framework/data/wcf/index
-            - name: 偵錯、追蹤和程式碼剖析
+            - name: 偵錯、追蹤和分析
               tocHref: /dotnet/framework/debug-trace-profile/
               topicHref: /dotnet/framework/debug-trace-profile/index
             - name: 部署 .NET Framework
@@ -230,19 +269,19 @@
             - name: 安裝指南
               tocHref: /dotnet/framework/install/
               topicHref: /dotnet/framework/install/index
-            - name: 與 Unmanaged 程式碼互通
+            - name: 與非受控的程式碼交互操作
               tocHref: /dotnet/framework/interop/
               topicHref: /dotnet/framework/interop/index
             - name: Managed Extensibility Framework (MEF)
               tocHref: /dotnet/framework/mef/
               topicHref: /dotnet/framework/mef/index
-            - name: 移轉手冊
+            - name: 移轉指南
               tocHref: /dotnet/framework/migration-guide/
               topicHref: /dotnet/framework/migration-guide/index
             - name: 使用 .NET Native 編譯應用程式
               tocHref: /dotnet/framework/net-native/
               topicHref: /dotnet/framework/net-native/index
-            - name: 以 .NET Framework 進行網路程式設計
+            - name: 在 .NET Framework 進行網路程式設計
               tocHref: /dotnet/framework/network-programming/
               topicHref: /dotnet/framework/network-programming/index
             - name: .NET Framework 效能
@@ -254,47 +293,44 @@
             - name: 桌面應用程式中的資源
               tocHref: /dotnet/framework/resources/
               topicHref: /dotnet/framework/resources/index
-            - name: .NET Framework 中的安全性
-              tocHref: /dotnet/framework/security/
-              topicHref: /dotnet/framework/security/index
             - name: .NET Framework 工具
               tocHref: /dotnet/framework/tools/
               topicHref: /dotnet/framework/tools/index
             - name: UI 自動化基礎觀念
               tocHref: /dotnet/framework/ui-automation/
               topicHref: /dotnet/framework/ui-automation/index
-            - name: Unmanaged API 參考
+            - name: 非受控 API 參考
               tocHref: /dotnet/framework/unmanaged-api/
               topicHref: /dotnet/framework/unmanaged-api/index
               items:
-                - name: ALink API (Unmanaged API 參考)
+                - name: ALink API (非受控 API 參考)
                   tocHref: /dotnet/framework/unmanaged-api/alink/
                   topicHref: /dotnet/framework/unmanaged-api/alink/index
-                - name: Authenticode (Unmanaged API 參考)
+                - name: Authenticode (非受控 API 參考)
                   tocHref: /dotnet/framework/unmanaged-api/authenticode/
                   topicHref: /dotnet/framework/unmanaged-api/authenticode/index
-                - name: 偵錯 (Unmanaged API 參考)
+                - name: 偵錯 (非受控 API 參考)
                   tocHref: /dotnet/framework/unmanaged-api/debugging/
                   topicHref: /dotnet/framework/unmanaged-api/debugging/index
-                - name: 診斷符號存放區 (Unmanaged API 參考)
+                - name: 診斷符號存放區 (非受控 API 參考)
                   tocHref: /dotnet/framework/unmanaged-api/diagnostics/
                   topicHref: /dotnet/framework/unmanaged-api/diagnostics/index
-                - name: 融合 (Unmanaged API 參考)
+                - name: 融合 (非受控 API 參考)
                   tocHref: /dotnet/framework/unmanaged-api/fusion/
                   topicHref: /dotnet/framework/unmanaged-api/fusion/index
-                - name: 裝載 (Unmanaged API 參考)
+                - name: 裝載 (非受控 API 參考)
                   tocHref: /dotnet/framework/unmanaged-api/hosting/
                   topicHref: /dotnet/framework/unmanaged-api/hosting/index
-                - name: 中繼資料 (Unmanaged API 參考)
+                - name: 中繼資料 (非受控 API 參考)
                   tocHref: /dotnet/framework/unmanaged-api/metadata/
                   topicHref: /dotnet/framework/unmanaged-api/metadata/index
-                - name: 分析 (Unmanaged API 參考)
+                - name: 分析 (非受控 API 參考)
                   tocHref: /dotnet/framework/unmanaged-api/profiling/
                   topicHref: /dotnet/framework/unmanaged-api/profiling/index
-                - name: 強式命名 (Unmanaged API 參考)
+                - name: 強式命名 (非受控 API 參考)
                   tocHref: /dotnet/framework/unmanaged-api/strong-naming/
                   topicHref: /dotnet/framework/unmanaged-api/strong-naming/index
-                - name: Tlbexp Helper 函式 (Unmanaged API 參考)
+                - name: Tlbexp Helper 函式 (非受控 API 參考)
                   tocHref: /dotnet/framework/unmanaged-api/tlbexp/
                   topicHref: /dotnet/framework/unmanaged-api/tlbexp/index
             - name: Windows Communication Foundation
@@ -323,7 +359,7 @@
                     - name: 使用 Windows Management Instrumentation 進行診斷
                       tocHref: /dotnet/framework/wcf/diagnostics/wmi/
                       topicHref: /dotnet/framework/wcf/diagnostics/wmi/index
-                - name: 延伸 WCF
+                - name: 擴充 WCF
                   tocHref: /dotnet/framework/wcf/extending/
                   topicHref: /dotnet/framework/wcf/extending/index
                 - name: WCF 功能詳細資料
@@ -332,7 +368,7 @@
                 - name: Windows Communication Foundation (WCF) 範例
                   tocHref: /dotnet/framework/wcf/samples/
                   topicHref: /dotnet/framework/wcf/samples/index
-            - name: .NET Framework 的新功能
+            - name: .NET Framework 中的新功能
               tocHref: /dotnet/framework/whats-new/
               topicHref: /dotnet/framework/whats-new/index
             - name: 開發 Windows 服務應用程式
@@ -352,17 +388,17 @@
                 - name: 增強 Windows Forms 應用程式
                   tocHref: /dotnet/framework/winforms/advanced/
                   topicHref: /dotnet/framework/winforms/advanced/index
-                - name: Windows Form 控制項
+                - name: Windows Forms 控制項
                   tocHref: /dotnet/framework/winforms/controls/
                   topicHref: /dotnet/framework/winforms/controls/index
             - name: Windows Presentation Foundation
               tocHref: /dotnet/framework/wpf/
               topicHref: /dotnet/framework/wpf/index
               items:
-                - name: 進階 (Windows Presentation Foundation)
+                - name: 進階
                   tocHref: /dotnet/framework/wpf/advanced/
                   topicHref: /dotnet/framework/wpf/advanced/index
-                - name: 應用程式開發
+                - name: XBOX Video Application Development
                   tocHref: /dotnet/framework/wpf/app-development/
                   topicHref: /dotnet/framework/wpf/app-development/index
                 - name: 控制項
@@ -371,10 +407,10 @@
                 - name: 資料
                   tocHref: /dotnet/framework/wpf/data/
                   topicHref: /dotnet/framework/wpf/data/index
-                - name: 使用者入門 (WPF)
+                - name: 開始使用 (WPF)
                   tocHref: /dotnet/framework/wpf/getting-started/
                   topicHref: /dotnet/framework/wpf/getting-started/index
-                - name: 圖形和多媒體
+                - name: 圖形與多媒體
                   tocHref: /dotnet/framework/wpf/graphics-multimedia/
                   topicHref: /dotnet/framework/wpf/graphics-multimedia/index
             - name: XAML 服務
@@ -384,7 +420,7 @@
           tocHref: /dotnet/desktop-wpf/
           topicHref: /dotnet/desktop-wpf/index
           items:
-            - name: 使用者入門
+            - name: 開始使用
               tocHref: /visualstudio/get-started/csharp/tutorial-wpf
               topicHref: /dotnet/desktop-wpf/getting-started/index
             - name: 移轉
@@ -400,7 +436,7 @@
             - name: 'C# 簡介'
               tocHref: /dotnet/csharp/tutorials/intro-to-csharp/
               topicHref: /dotnet/csharp/tutorials/intro-to-csharp/index
-            - name: 使用者入門
+            - name: 開始使用
               tocHref: /dotnet/csharp/getting-started/
               topicHref: /dotnet/csharp/getting-started/index
             - name: 教學課程
@@ -662,6 +698,6 @@
             - name: 教學課程
               tocHref: /dotnet/machine-learning/tutorials/
               topicHref: /dotnet/machine-learning/tutorials/index
-        - name: .NET for Apache Spark 指南
+        - name: 適用於 Apache Spark 的 .NET 指南
           tocHref: /dotnet/spark/
           topicHref: /dotnet/spark/index
