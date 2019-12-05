@@ -4,12 +4,12 @@ description: 協助想要同時針對 .NET Framework 及 .NET Core 編譯解決�
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 701aa64be8d6c712ef635411ad6c226a3c3ab8ed
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 789f50ffb61b80f590a24bc45693df895b3424f7
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522978"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801935"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>組織專案以同時支援 .NET Framework 及 .NET Core
 
@@ -24,12 +24,12 @@ ms.locfileid: "72522978"
   - 讓您使用編譯器指示詞，在程式庫中針對特定的 .NET Framework 版本撰寫程式碼。
 
   *不支援的情節：*
-  - 需要開發人員使用 Visual Studio 2017 開啟現有的專案。 若要支援舊版的 Visual Studio，[將專案檔放在不同的資料夾](#support-vs)是較好的選擇。
+  - 需要開發人員使用 Visual Studio 2017 或更新版本來開啟現有的專案。 若要支援舊版的 Visual Studio，[將專案檔放在不同的資料夾](#support-vs)是較好的選擇。
 
 - <a name="support-vs"></a>[**將現有的專案和新的 .NET Core 專案分開**](#keep-existing-projects-and-create-a-net-core-project)
 
   *適用於︰*
-  - 繼續支援現有專案的開發，但不必升級可能沒有 Visual Studio 2017 的開發人員/參與者。
+  - 針對可能沒有 Visual Studio 2017 或更新版本的開發人員和參與者，支援現有專案的開發。
   - 減少現有專案中製造新Bug 的可能性，因為這些專案不需要任何程式碼變換。
 
 ## <a name="example"></a>範例

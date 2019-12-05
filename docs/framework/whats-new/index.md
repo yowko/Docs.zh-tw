@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: c651f5c02bd49acc593c585395bc52e9ee64f870
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 82a2c1780c6e0e1d94a206b9b959d8e1944fd0a9
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714500"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802317"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
 
@@ -800,7 +800,7 @@ WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中
 
 - [偵錯改進](#Debug462)
 
-如需 .NET Framework 4.6.2 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 API 變更](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md) \(英文\)。 如需 .NET Framework 4.6.2 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 變更清單](https://go.microsoft.com/fwlink/?LinkId=708778) \(英文\)。  如需詳細資訊，請參閱 .NET 部落格中的[宣告 .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/)。
+如需 .NET Framework 4.6.2 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 API 變更](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md) \(英文\)。 如需 .NET Framework 4.6.2 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 變更清單](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-changes.md) \(英文\)。 如需詳細資訊，請參閱 .NET 部落格中的[宣告 .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/)。
 
 <a name="ASPNET462" />
 
@@ -1196,7 +1196,7 @@ WCF 有新的應用程式設定，可以在用戶端應用程式上設定，以�
 
 **Re-hosted WF 設計工具中的 C# 運算式和 IntelliSense 支援**
 
-從 .NET Framework 4.5 開始，WF 在 Visual Studio 設計工具和程式碼工作流程中都支援 C# 運算式。 Re-hosted 工作流程設計工具是 WF 的重要功能，可讓工作流程設計工具位於 Visual Studio 以外的應用程式中 (例如 WPF 中)。  Windows Workflow Foundation 提供在 Re-hosted 工作流程設計工具中支援 C# 運算式與 IntelliSense 的功能。 如需詳細資訊，請參閱 [Windows Workflow Foundation 部落格](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409)。
+從 .NET Framework 4.5 開始，WF 在 Visual Studio 設計工具和程式碼工作流程中都支援 C# 運算式。 Re-hosted 工作流程設計工具是 WF 的重要功能，可讓工作流程設計工具位於 Visual Studio 以外的應用程式中 (例如 WPF 中)。  Windows Workflow Foundation 提供在 Re-hosted 工作流程設計工具中支援 C# 運算式與 IntelliSense 的功能。 如需詳細資訊，請參閱 [Windows Workflow Foundation 部落格](https://blogs.msdn.microsoft.com/workflowteam/2016/07/20/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer/)。
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` 在 .NET Framework 4.6.2 之前的 .NET Framework 版本中，當客戶從 Visual Studio 重建工作流程專案時，WF 設計工具 IntelliSense 會中斷。 雖然專案建置成功，但在設計工具中找不到工作流程類型，來自 IntelliSense 的遺漏工作流程類型警告也會出現在 [錯誤清單] 視窗中。 .NET Framework 4.6.2 解決這個問題，並提供 IntelliSense。
 
@@ -1262,11 +1262,11 @@ Windows 現在提供將現有 Windows 傳統型應用程式 (包括 WPF 和 Wind
 
 如需 .NET Framework 4.6.1 的詳細資訊，請參閱下列主題：
 
-- [.NET Framework 4.6.1 變更清單](https://go.microsoft.com/fwlink/?LinkId=622964)
+- [.NET Framework 4.6.1 變更清單](https://github.com/Microsoft/dotnet/blob/master/releases/net461/dotnet461-changes.md)
 
 - [4.6.1 中的應用程式相容性](../migration-guide/application-compatibility.md)
 
-- [.NET Framework API diff](https://go.microsoft.com/fwlink/?LinkId=622989) (在 GitHub 上)
+- [.NET Framework API diff](https://github.com/Microsoft/dotnet/blob/master/releases/net461/dotnet461-api-changes.md) (在 GitHub 上)
 
 <a name="Crypto" />
 
@@ -1324,7 +1324,7 @@ Windows 8.1 和更新版本已更新了 WPF 的拼字檢查程式，運用作業
 
 - 目前的執行緒文化特性。
 
-如需 WPF 語言支援的其他資訊，請參閱[討論 .NET Framework 4.6.1 功能的 WPF 部落格文章 (英文)](https://go.microsoft.com/fwlink/?LinkID=691819)。
+如需 WPF 語言支援的其他資訊，請參閱[討論 .NET Framework 4.6.1 功能的 WPF 部落格文章 (英文)](https://devblogs.microsoft.com/wpf/wpf-in-net-4-6-1/)。
 
 **每個使用者自訂字典的額外支援**
 
@@ -1349,7 +1349,7 @@ Windows 8.1 和更新版本已更新了 WPF 的拼字檢查程式，運用作業
 
 **DirectX 延伸模組**
 
-WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提供新的 <xref:System.Windows.Interop.D3DImage> 實作，讓您輕鬆地與 DX10 和 Dx11 內容相互作用。 這個套件的程式碼為開放原始碼，並可於 [GitHub](https://github.com/Microsoft/WPFDXInterop) 取得。
+WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.DirectX-x86/)，提供新的 <xref:System.Windows.Interop.D3DImage> 實作，讓您輕鬆地與 DX10 和 Dx11 內容相互作用。 這個套件的程式碼為開放原始碼，並可於 [GitHub](https://github.com/Microsoft/WPFDXInterop) 取得。
 
 <a name="WWF461" />
 
@@ -1755,7 +1755,7 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
 - **開放原始碼 .NET Framework 套件**
 
-  .NET Core 套件 (例如不可變的集合)、[SIMD API](https://go.microsoft.com/fwlink/?LinkID=518639) 及網路功能 API (例如在 <xref:System.Net.Http> 命名空間中找到的 API) 現在都在 [GitHub](https://github.com/) 上以開放原始碼套件的形式提供。 若要存取這些程式碼，請參閱 [GitHub 上的 CoreFx](https://github.com/dotnet/corefx)。 如需詳細資訊以及如何參與這些套件的建立，請前往 [itHub 上的 .NET 首頁](https://github.com/dotnet/home)，並參閱 [.NET Core 和開放原始碼](../get-started/net-core-and-open-source.md)。
+  .NET Core 套件 (例如不可變的集合)、[SIMD API](https://www.nuget.org/packages/Microsoft.Bcl.Simd) 及網路功能 API (例如在 <xref:System.Net.Http> 命名空間中找到的 API) 現在都在 [GitHub](https://github.com/) 上以開放原始碼套件的形式提供。 若要存取這些程式碼，請參閱 [GitHub 上的 CoreFx](https://github.com/dotnet/corefx)。 如需詳細資訊以及如何參與這些套件的建立，請前往 [itHub 上的 .NET 首頁](https://github.com/dotnet/home)，並參閱 [.NET Core 和開放原始碼](../get-started/net-core-and-open-source.md)。
 
 <a name="v452" />
 
@@ -1892,7 +1892,7 @@ Windows Forms 的增強功能包括：
 
 - 非同步感知偵錯。 為了在 Visual Studio 2013 中更容易對非同步應用程式進行偵錯，呼叫堆疊會隱藏編譯器提供的基礎結構程式碼來支援非同步程式設計，以及提供邏輯父框架中的鏈結，讓您可以更清楚地了解邏輯程式執行的方式。 [工作] 視窗會取代 [平行工作] 視窗，並顯示與特定中斷點相關的工作，同時也會顯示應用程式中目前為作用中或已排程的任何其他工作。 您可以在 [.NET Framework 4.5.1 公告 (英文)](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)的＜Async-aware debugging＞ (非同步感知偵錯) 一節中，閱讀此功能的相關資訊。
 
-- 對 Windows 執行階段元件提供更佳的例外狀況支援。 在 [!INCLUDE[win81](../../../includes/win81-md.md)] 中，Windows 市集應用程式所引發的例外狀況會保留造成例外狀況之錯誤的資訊，甚至跨語言界限。 您可以在 [.NET Framework 4.5.1 公告](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)的＜Windows 市集應用程式開發＞一節中，閱讀這項功能的相關資訊。
+- 對 Windows 執行階段元件提供更佳的例外狀況支援。 在 Windows 8.1 中，Windows 市集應用程式所引發的例外狀況會保留造成例外狀況之錯誤的資訊，甚至跨語言界限。 您可以在 [.NET Framework 4.5.1 公告](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)的＜Windows 市集應用程式開發＞一節中，閱讀這項功能的相關資訊。
 
 從 Visual Studio 2013 開始，您可以使用 [Managed 特性指引最佳化工具 (Mpgo.exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md)，針對 Windows 8.x 市集應用程式和傳統型應用程式進行最佳化。
 
@@ -1926,9 +1926,9 @@ Windows Forms 的增強功能包括：
 
 - 可透過 <xref:System.Reflection.Context.CustomReflectionContext> 類別自訂反映內容以覆寫預設反映行為的功能。
 
-- 在 <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> 上使用 [!INCLUDE[win8](../../../includes/win8-md.md)] 類別時，支援 2008 版的應用程式國際化網域名稱 (Internationalized Domain Names in Applications，IDNA) 標準。
+- 在 Windows 8 上使用 <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> 類別時，支援應用程式（IDNA）標準中的2008版國際化功能變數名稱。
 
-- 對作業系統委派字串比較，該字串比較會在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上使用 .NET Framework 時實作 Unicode 6.0。 在其他平台上執行時，.NET Framework 會包含自己的字串比較資料 (該資料會實作 Unicode 5.x)。 請參閱 <xref:System.String> 類別以及 <xref:System.Globalization.SortVersion> 類別的＜備註＞一節。
+- 將字串比較作業委派給作業系統，該字串比較會在 Windows 8 上使用 .NET Framework 時實作 Unicode 6.0。 在其他平台上執行時，.NET Framework 會包含自己的字串比較資料 (該資料會實作 Unicode 5.x)。 請參閱 <xref:System.String> 類別以及 <xref:System.Globalization.SortVersion> 類別的＜備註＞一節。
 
 - 可用每個應用程式定義域做為基準，計算字串之雜湊碼的功能。 請參閱 [\<UseRandomizedStringHashAlgorithm> 元素](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)。
 
@@ -1944,7 +1944,7 @@ Windows Forms 的增強功能包括：
 
 - 多個範圍。
 
-- 可以在建立 Windows 8.x 市集應用程式時使用的 MEF 子集。 您可透過 NuGet Gallery 取得這個子集的[可下載套件](https://go.microsoft.com/fwlink/?LinkId=256238)。 若要安裝套件，請在 Visual Studio 中開啟您的專案，從 [專案] 功能表中選擇 [管理 NuGet 套件]，並於線上搜尋 `Microsoft.Composition` 套件。
+- 可以在建立 Windows 8.x 市集應用程式時使用的 MEF 子集。 您可透過 NuGet Gallery 取得這個子集的[可下載套件](https://www.nuget.org/packages/Microsoft.Composition)。 若要安裝套件，請在 Visual Studio 中開啟您的專案，從 [專案] 功能表中選擇 [管理 NuGet 套件]，並於線上搜尋 `Microsoft.Composition` 套件。
 
 如需詳細資訊，請參閱 [Managed Extensibility Framework (MEF)](../mef/index.md)。
 
@@ -1964,7 +1964,7 @@ Managed 特性指引最佳化 (Mpgo.exe) 可讓您藉由最佳化原生映像組
 
 ### <a name="parallel-computing"></a>平行運算
 
-.NET Framework 4.5 針對平行計算提供許多新功能和改進功能。 這些功能包括提升效能、增強控制、改善非同步程式設計的支援、全新的資料流程程式庫，以及改善平行偵錯與效能分析的支援。 請參閱「.NET 平行程式設計」部落格中的[.NET 4.5 中的平行處理原則新增功能 (英文)](https://go.microsoft.com/fwlink/?LinkId=235061)。
+.NET Framework 4.5 針對平行計算提供許多新功能和改進功能。 這些功能包括提升效能、增強控制、改善非同步程式設計的支援、全新的資料流程程式庫，以及改善平行偵錯與效能分析的支援。 請參閱「.NET 平行程式設計」部落格中的[.NET 4.5 中的平行處理原則新增功能 (英文)](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/)。
 
 <a name="web" />
 
@@ -2058,7 +2058,7 @@ ASP.NET 4.5 和 4.5.1 加入了 Web Forms、WebSocket 支援、非同步處理�
 
 - 支援使用國際化網域名稱 (IDN) 的 WCF 服務。
 
-如需詳細資訊，請參閱 [Windows Communication Foundation 中的新增功能](https://go.microsoft.com/fwlink/?LinkId=228173)。
+如需詳細資訊，請參閱 [Windows Communication Foundation 中的新增功能](../wcf/whats-new.md)。
 
 <a name="windows_workflow_foundation" />
 
@@ -2066,7 +2066,7 @@ ASP.NET 4.5 和 4.5.1 加入了 Web Forms、WebSocket 支援、非同步處理�
 
 在 .NET Framework 4.5 中，Windows Workflow Foundation (WF) 已加入數個新功能，包括：
 
-- 狀態機器工作流程，最初是在 .NET Framework 4.0.1 中引進 ([.NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092))。 這項更新包括數個可讓開發人員建立狀態機器工作流程的新類別和活動。 這些類別和活動已針對 .NET Framework 4.5 進行更新，包含：
+- 狀態機器工作流程，最初是在 .NET Framework 4.0.1 中引進 ([.NET Framework 4 Platform Update 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/))。 這項更新包括數個可讓開發人員建立狀態機器工作流程的新類別和活動。 這些類別和活動已針對 .NET Framework 4.5 進行更新，包含：
 
   - 可設定狀態中斷點的功能。
 
@@ -2112,13 +2112,13 @@ ASP.NET 4.5 和 4.5.1 加入了 Web Forms、WebSocket 支援、非同步處理�
 
 - 開發合約優先 (Contract-first) 工作流程服務，可提供自動配合現有服務合約產生活動的支援。
 
-如需詳細資訊，請參閱 [Windows Workflow Foundation 的新功能](https://go.microsoft.com/fwlink/?LinkId=228176)。
+如需詳細資訊，請參閱 [Windows Workflow Foundation 的新功能](../windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)。
 
 <a name="tailored" />
 
 ### <a name="net-for-windows-8x-store-apps"></a>適用於 Windows8.x 市集應用程式的 .NET
 
-Windows 8.x 市集應用程式是專為特定版型規格所設計，而且會利用 Windows 作業系統的強大功能。 .NET Framework 4.5 或 4.5.1 的子集可用於使用 C# 或 Visual Basic 建置適用於 Windows 的 Windows 8.x 市集應用程式。 這個子集稱為「適用於 Windows 8.x 市集應用程式的 .NET」，在 Windows 開發人員中心的[概觀](https://go.microsoft.com/fwlink/?LinkId=228491)中有相關說明。
+Windows 8.x 市集應用程式是專為特定版型規格所設計，而且會利用 Windows 作業系統的強大功能。 .NET Framework 4.5 或 4.5.1 的子集可用於使用 C# 或 Visual Basic 建置適用於 Windows 的 Windows 8.x 市集應用程式。 這個子集稱為 .NET，適用于 Windows 8.x Store 應用程式，並在[總覽](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))中討論。
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>可攜式類別庫<a name="portable" />
 
@@ -2129,5 +2129,6 @@ Windows 8.x 市集應用程式是專為特定版型規格所設計，而且會�
 - [.NET Framework 和不定期發行](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [.NET Framework 協助工具的新功能](whats-new-in-accessibility.md)
 - [Visual Studio 2017 的新功能](/visualstudio/ide/whats-new-visual-studio-2017)
+- [2019 Visual Studio 的新功能](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Visual Studio 中 C++ 的新功能](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

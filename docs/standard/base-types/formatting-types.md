@@ -25,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: e362ad75fd9989cc87751286f83918d340a58820
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 20aa7ecd354ef1a8982ae75eda87275c80cdaaf6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141493"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802462"
 ---
 # <a name="format-types-in-net"></a>.NET 中的格式類型
 
@@ -85,7 +85,7 @@ ms.locfileid: "73141493"
 [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]
 
 > [!WARNING]
-> 自 [!INCLUDE[win81](../../../includes/win81-md.md)] 起，Windows 執行階段即包含了 <xref:Windows.Foundation.IStringable> 介面。此介面只有一個方法 [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A)，可提供預設的格式化支援。 不過，不建議 Managed 類型實作 `IStringable` 介面。 如需詳細資訊，請參閱 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 參考頁面中的＜Windows 執行階段與 `IStringable` 介面>＞一節。
+> 從 Windows 8.1 開始，Windows 執行階段包含具有單一方法[IStringable](xref:Windows.Foundation.IStringable.ToString%2A)的 <xref:Windows.Foundation.IStringable> 介面，它會提供預設的格式支援。 不過，不建議 Managed 類型實作 `IStringable` 介面。 如需詳細資訊，請參閱 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 參考頁面中的＜Windows 執行階段與 `IStringable` 介面>＞一節。
 
 因為除介面以外的所有其他類型都會衍生自 <xref:System.Object>，所以您的自訂類別或結構會自動被賦予此功能。 不過，預設的 `ToString` 方法提供的功能有限：它雖然可以識別類型，但無法提供類型執行個體的任何資訊。 若要提供物件的字串表示來表達該物件的相關資訊，您必須覆寫 `ToString` 方法。
 
@@ -101,7 +101,7 @@ ms.locfileid: "73141493"
 
 在 .NET 中，已覆寫每個基本實值類型的 `ToString` 方法來顯示物件的值，而非物件的名稱。 下表顯示各基本類型如何覆寫 ToString 方法。 請注意，大部分經過覆寫的方法都會呼叫 `ToString` 方法的另一個多載，並且將 "G" 格式規範 (此規範定義此類型的一般格式) 和 <xref:System.IFormatProvider> 物件 (此物件表示目前文化特性) 傳遞至這個多載。
 
-|輸入|ToString 覆寫|
+|類型|ToString 覆寫|
 |----------|-----------------------|
 |<xref:System.Boolean>|傳回 <xref:System.Boolean.TrueString?displayProperty=nameWithType> 或 <xref:System.Boolean.FalseString?displayProperty=nameWithType>。|
 |<xref:System.Byte>|呼叫 `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` ，以根據目前的文化特性來格式化 <xref:System.Byte> 值。|
@@ -251,7 +251,7 @@ ms.locfileid: "73141493"
 
 - <xref:System.Globalization.NumberFormatInfo>，這個類別提供特定文化特性的數值格式設定資訊。 它的 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 實作會傳回它自己的執行個體。
 
-- <xref:System.Globalization.CultureInfo> 它的 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 實作可以傳回 <xref:System.Globalization.NumberFormatInfo> 物件來提供數值格式設定資訊，或傳回 <xref:System.Globalization.DateTimeFormatInfo> 物件來提供日期和時間值的格式設定資訊。
+- <xref:System.Globalization.CultureInfo>。 它的 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 實作可以傳回 <xref:System.Globalization.NumberFormatInfo> 物件來提供數值格式設定資訊，或傳回 <xref:System.Globalization.DateTimeFormatInfo> 物件來提供日期和時間值的格式設定資訊。
 
 您也可以實作自己的格式提供者來取代上述任何一個類別。 不過，您實作的 <xref:System.IFormatProvider.GetFormat%2A> 方法如果必須提供格式設定資訊給 `ToString` 方法，則必須傳回上表所列之類型的物件。
 

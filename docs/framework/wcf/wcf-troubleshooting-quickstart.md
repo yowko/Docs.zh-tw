@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 86aab2b39aaa9c7d7d92f7d5738482723cf6852f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: dfbf5a9b437d0acea16a75236fd3d2861c0f2e06
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320187"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802363"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑難排解快速入門
 本主題列出客戶在開發 WCF 用戶端和服務時會碰到的幾個已知問題。 如果您遇到的問題不在此清單中，建議您為您的服務設定追蹤。 這會產生一個追蹤檔案，您可以使用追蹤檔案檢視器檢視這個檔案，並取得服務中可能會發生之例外狀況的詳細資訊。 如需設定追蹤的詳細資訊，請參閱： [Configuring Tracing](./diagnostics/tracing/configuring-tracing.md)。 如需追蹤檔案檢視器的詳細資訊，請參閱： [Service Trace Viewer Tool (SvcTraceViewer.exe)](service-trace-viewer-tool-svctraceviewer-exe.md)。  
@@ -27,7 +27,7 @@ ms.locfileid: "72320187"
   
 5. [我的服務和用戶端很棒，但當用戶端在另一部電腦上時，無法讓他們進行工作嗎？發生了什麼事情？](#BKMK_q4)  
   
-6. [當我擲回 FaultException \<Exception >，其中類型是例外狀況時，我一律會在用戶端上收到一般的 FaultException 類型，而不是在泛型型別上。發生了什麼事情？](#BKMK_q5)  
+6. [當我擲回 FaultException\<例外狀況 >，其中類型是例外狀況時，我一律會在用戶端上收到一般的 FaultException 類型，而不是在泛型型別上。發生了什麼事情？](#BKMK_q5)  
   
 7. [當回復未包含任何資料時，單向和要求-回復作業似乎會以大約相同的速度傳回。發生了什麼事情？](#BKMK_q6)  
   
@@ -95,7 +95,7 @@ public class MyServiceHost : ServiceHost
 ```  
   
 <a name="BKMK_q4"></a>   
-## <a name="my-service-and-client-work-great-but-i-cant-get-them-to-work-when-the-client-is-on-another-computer-whats-happening"></a>我的服務和用戶端運作良好，但是當用戶端在另一台電腦上時，它們就無法運作。 發生什麼事？  
+## <a name="my-service-and-client-work-great-but-i-cant-get-them-to-work-when-the-client-is-on-another-computer-whats-happening"></a>我的服務和用戶端運作良好，但是當用戶端在另一台電腦上時，它們就無法運作。 這是為什麼？  
  根據例外狀況，可能有幾個問題：  
   
 - 您可能需要將用戶端端點位址變更為主機名稱而非 "localhost"。  
@@ -136,12 +136,12 @@ public class MyServiceHost : ServiceHost
   
 - [偵錯 Windows 驗證錯誤](./feature-details/debugging-windows-authentication-errors.md)  
   
-- [使用 Http.sys 登錄 Kerberos 服務主要名稱](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [使用 Http.sys 登錄 Kerberos 服務主要名稱](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms178119(v=sql.105))  
   
-- [Kerberos 說明](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Kerberos 說明](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v%3dtechnet.10))  
   
 <a name="BKMK_q5"></a>   
-## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>當我擲回 FaultException \<Exception >，其中類型是例外狀況時，我一律會在用戶端上收到一般的 FaultException 類型，而不是在泛型型別上。 發生什麼事？  
+## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>當我擲回 FaultException\<例外狀況 >，其中類型是例外狀況時，我一律會在用戶端上收到一般的 FaultException 類型，而不是在泛型型別上。 這是為什麼？  
  強烈建議您建議自己的自訂錯誤資料型別，並宣告為您的錯誤合約中的詳細型別。 原因是使用系統提供的例外狀況類型：  
   
 - 建立類型依存性，移除服務導向應用程式的其中一個最大的強度。  
@@ -157,7 +157,7 @@ public class MyServiceHost : ServiceHost
  將作業指定為單向只是表示作業合約接受輸入訊息，而沒有傳回輸出訊息。 在 WCF 中，當輸出資料已寫入網路或擲回例外狀況時，所有用戶端調用都會傳回。 單向作業的運作方式相同，如果找不到服務可以擲回，或如果服務尚未準備好從網路接受資料便會封鎖。 通常在 WCF 中，這會導致單向呼叫傳回用戶端的速度比要求-回復更快;但是，透過網路來傳送輸出資料速度變慢的任何狀況，都會減緩單向作業以及要求-回復作業。 如需詳細資訊，請參閱[單向服務](./feature-details/one-way-services.md)和[使用 WCF 用戶端存取服務](./feature-details/accessing-services-using-a-client.md)。  
   
 <a name="BKMK_q77"></a>   
-## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>我使用 X.509 憑證搭配我的服務，然後得到 System.Security.Cryptography.CryptographicException。 發生什麼事？  
+## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>我使用 X.509 憑證搭配我的服務，然後得到 System.Security.Cryptography.CryptographicException。 這是為什麼？  
  這常常發生在變更用來執行 IIS 背景工作處理序的使用者帳戶之後。 例如，在 [!INCLUDE[wxp](../../../includes/wxp-md.md)]中，如果您將用於執行 Aspnet_wp.exe 的預設使用者帳戶從 ASPNET 變更為自訂使用者帳戶，您可能會看到這個錯誤。 如果使用私密金鑰，使用它的處理序將會需要有權限才能存取儲存該金鑰的檔案。  
   
  如果是這種情況，您必須提供存取權限給處理序的帳戶，檔案才能包含私密金鑰。 例如，如果 IIS 背景工作處理序正在 Bob 帳戶下執行，則您會需要為 Bob 提供含有私密金鑰的檔案的讀取權。  
@@ -169,8 +169,8 @@ public class MyServiceHost : ServiceHost
  作業簽章中參數名稱的值是合約的一部分，而且必須區分大小寫。 當您需要區分本機參數名稱和描述用戶端應用程式的作業的中繼資料時，請使用 <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType> 屬性。  
   
 <a name="BKMK_q99"></a>   
-## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>我正在使用我的其中一種追蹤工具，而我得到 EndpointNotFoundException。 發生什麼事？  
- 如果您使用的追蹤工具不是系統提供的 WCF 追蹤機制，而且您收到的 <xref:System.ServiceModel.EndpointNotFoundException> 指出有位址篩選不相符的情況，您就必須使用 <xref:System.ServiceModel.Description.ClientViaBehavior> 類別，將訊息導向追蹤公用程式，並讓 utility 將這些訊息重新導向至服務位址。 <xref:System.ServiceModel.Description.ClientViaBehavior> 類別會變更 `Via` 位址標頭，以指定與最終接收者不同的下一個網路位址，由 `To` 位址標頭指示。 然而，執行這項操作時，請勿變更端點位址，它是用於建立 `To` 值的。  
+## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>我正在使用我的其中一種追蹤工具，而我得到 EndpointNotFoundException。 這是為什麼？  
+ 如果您使用的追蹤工具不是系統提供的 WCF 追蹤機制，而且您收到的 <xref:System.ServiceModel.EndpointNotFoundException> 指出有位址篩選不相符的情況，您就必須使用 <xref:System.ServiceModel.Description.ClientViaBehavior> 類別，將訊息導向追蹤公用程式，並讓公用程式將這些訊息重新導向至服務位址。 <xref:System.ServiceModel.Description.ClientViaBehavior> 類別會變更 `Via` 位址標頭，以指定與最終接收者不同的下一個網路位址，由 `To` 位址標頭指示。 然而，執行這項操作時，請勿變更端點位址，它是用於建立 `To` 值的。  
   
  下列程式碼範例顯示用戶端組態檔範例。  
   
@@ -224,7 +224,7 @@ public class MyServiceHost : ServiceHost
 </bindings>  
 ```  
   
- 您會看到類似下面的錯誤：未處理的例外狀況： System.servicemodel.addressalreadyinuseexception： IP 端點0.0.0.0：9000上已經有接聽程式，您可以藉由指定具有不同埠的完整 URL 來解決此錯誤MEX 端點，如下列設定程式碼片段所示：  
+ 您將看見類似下面的錯誤：未處理的例外狀況: System.ServiceModel.AddressAlreadyInUseException: IP 端點 0.0.0.0:9000 已有接聽項。您可以使用 MEX 端點的不同通訊埠來指定完整 URL，藉以解決這個錯誤，如下列組態片段所示：  
   
 ```xml
 <services>  
@@ -237,7 +237,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>從 WCF SOAP 應用程式呼叫 WCF Web HTTP 應用程式時，服務傳回下列錯誤：405 不允許的方法。  
- 從 WCF 服務呼叫 WCF Web HTTP 應用程式（使用 <xref:System.ServiceModel.WebHttpBinding> 和 <xref:System.ServiceModel.Description.WebHttpBehavior> 的服務）可能會產生下列例外狀況： `Unhandled Exception: System.ServiceModel.FaultException`1 [ExceptionDetail]：遠端伺服器傳回未預期的回應：（405）方法允許。 ' 發生這個例外狀況是因為 WCF 以傳入的 <xref:System.ServiceModel.OperationContext> 覆寫傳出的 <xref:System.ServiceModel.OperationContext>。 若要解決這個問題，請在 WCF Web HTTP 服務作業中建立 <xref:System.ServiceModel.OperationContextScope> 。 例如:  
+ 從 WCF 服務呼叫 WCF Web HTTP 應用程式（使用 <xref:System.ServiceModel.WebHttpBinding> 和 <xref:System.ServiceModel.Description.WebHttpBehavior>的服務）可能會產生下列例外狀況： `Unhandled Exception: System.ServiceModel.FaultException`1 [ExceptionDetail]：遠端伺服器傳回非預期的回應：（405）不允許的方法。 ' 此例外狀況是因為 WCF 以傳入 <xref:System.ServiceModel.OperationContext>覆寫傳出的 <xref:System.ServiceModel.OperationContext>。 若要解決這個問題，請在 WCF Web HTTP 服務作業中建立 <xref:System.ServiceModel.OperationContextScope> 。 例如：  
   
 ```csharp
 public string Echo(string input)  

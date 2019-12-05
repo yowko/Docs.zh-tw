@@ -2,18 +2,18 @@
 title: HOW TO：啟用工作流程與工作流程服務的 SQL 持續性
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 4dc5648d748372828c5b9a36441bfb02eef045e1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: bef95dbeaaa96678a66ba94494a0207c7314c326
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460858"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802579"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>HOW TO：啟用工作流程與工作流程服務的 SQL 持續性
 
 本主題描述如何設定 SQL 工作流程執行個體存放區功能，以程式設計方式或使用組態檔來啟用工作流程與工作流程服務的持續性。
 
-Windows Server App Fabric 會簡化設定持續性的程序。 如需詳細資訊，請參閱[App Fabric 持續](https://go.microsoft.com/fwlink/?LinkId=201204)性設定。
+Windows Server App Fabric 會簡化設定持續性的程序。 如需詳細資訊，請參閱[App Fabric 持續](https://docs.microsoft.com/previous-versions/appfabric/ee790848(v=azure.10))性設定。
 
 使用 SQL 工作流程執行個體存放區功能之前，請建立一個讓此功能用於保存工作流程執行個體的資料庫。 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 安裝程式會將與 SQL 工作流程執行個體存放區功能相關聯的 SQL 指令碼檔複製至 %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN 資料夾。 針對 SQL Server 2005 或 SQL Server 2008 資料庫執行這些指令碼檔，且這個資料庫可供 SQL 工作流程執行個體存放區用來保存工作流程執行個體。 先執行 SqlWorkflowInstanceStoreSchema.sql 檔，然後再執行 SqlWorkflowInstanceStoreLogic.sql 檔。
 
@@ -152,7 +152,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> 建議您不要將敏感資訊 (例如，使用者名稱和密碼) 儲存在 Web.config 檔案中。 如果要將敏感資訊儲存在 Web.config 檔案中，則應使用檔案系統存取控制清單 (ACL) 來保護存取 Web.config 檔的安全性。 此外，您也可以在設定檔中保護設定值，如[使用受保護](https://go.microsoft.com/fwlink/?LinkId=178419)的設定來加密設定資訊中所述。
+> 建議您不要將敏感資訊 (例如，使用者名稱和密碼) 儲存在 Web.config 檔案中。 如果要將敏感資訊儲存在 Web.config 檔案中，則應使用檔案系統存取控制清單 (ACL) 來保護存取 Web.config 檔的安全性。 此外，您也可以在設定檔中保護設定值，如[使用受保護](https://docs.microsoft.com/en-us/previous-versions/aspnet/53tyfkaw(v=vs.100))的設定來加密設定資訊中所述。
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>與 SQL 工作流程執行個體存放區功能相關的 Machine.config 項目
 

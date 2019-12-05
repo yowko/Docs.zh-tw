@@ -9,16 +9,16 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 5ce98a7908470a402779436db43333d46f5101fc
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: b43c3f6fd8ca56aaa99fffd40317920ee7600a2c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180148"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802709"
 ---
 # <a name="json-serialization-in-net---overview"></a>.NET 中的 JSON 序列化-總覽
 
-@No__t 0 命名空間提供從 JavaScript 物件標記法（JSON）序列化及還原序列化的功能。
+`System.Text.Json` 命名空間提供從 JavaScript 物件標記法（JSON）序列化及還原序列化的功能。
 
 程式庫設計強調廣泛功能集的高效能和低記憶體配置。 內建的 UTF-8 支援將讀取和寫入 JSON 文字編碼為 UTF-8 的程式優化，這對網路上的資料和磁片上的檔案而言是最普遍的編碼方式。
 
@@ -35,10 +35,10 @@ ms.locfileid: "72180148"
 ## <a name="additional-resources"></a>其他資源
 
 * [如何使用程式庫](system-text-json-how-to.md)
-* [原始程式碼 (英文)](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json)
+* [原始程式碼 (英文)](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Text.Json)
 * [API 參考](xref:System.Text.Json)
-* [藍圖](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/roadmap/README.md)
+* [藍圖](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Text.Json/roadmap/README.md)
 * Dotnet/corefx 存放庫中的 GitHub 問題
-  * [有關如何開發 System.web 的討論](https://github.com/dotnet/corefx/issues/33115)
-  * [所有的 System.object 問題](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
-  * [已標記 json 的 system.object 問題-功能-doc](https://github.com/dotnet/corefx/labels/json-functionality-doc)
+  * [有關如何開發 System.web 的討論](https://github.com/dotnet/corefx/issues/33115) <!-- TODO: Issues are still not moved to the new repo-->
+  * [所有的 System.object 問題](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
+  * [已標記 json 的 system.object 問題-功能-doc](https://github.com/dotnet/runtime/labels/json-functionality-doc)

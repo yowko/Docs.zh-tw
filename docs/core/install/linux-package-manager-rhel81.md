@@ -3,19 +3,22 @@ title: 在 Linux RHEL 8.1 套件管理員上安裝 .NET Core （.NET Core）
 description: 使用套件管理員，在 RHEL 8.1 上安裝 .NET Core SDK 和執行時間。
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
-ms.openlocfilehash: 5b658fe4c56b945210534872fe3cc502eb31a763
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/03/2019
+ms.openlocfilehash: 20fb3e9e517858b9cc5d6e9c1bd97bf949558843
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450972"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800738"
 ---
 # <a name="rhel-81-package-manager---install-net-core"></a>RHEL 8.1 套件管理員-安裝 .NET Core
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
 本文說明如何使用套件管理員在 RHEL 8.1 上安裝 .NET Core。
+
+> [!NOTE]
+> RHEL 8.0 不包含 .NET Core 3.0。 使用命令 `yum upgrade` 來更新至 RHEL 8.1。
 
 ## <a name="register-your-red-hat-subscription"></a>註冊您的 Red Hat 訂用帳戶
 
@@ -48,3 +51,7 @@ scl enable aspnetcore-runtime-3.0 bash
 sudo dnf install dotnet-runtime-3.0
 scl enable dotnet-runtime-3.0 bash
 ```
+
+## <a name="see-also"></a>請參閱
+
+- [在 Red Hat Enterprise Linux 8 上使用 .NET Core 3。0](https://access.redhat.com/documentation/en-us/net_core/3.0/html/getting_started_guide_for_rhel_8/gs_install_dotnet)

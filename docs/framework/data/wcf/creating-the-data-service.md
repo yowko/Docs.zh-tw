@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: d30b2e30639837730ecb185a2c0f659a63955004
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72e3b35465968674a20aa48262d3425a2190ff74
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975402"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802274"
 ---
 # <a name="create-the-data-service"></a>建立資料服務
 
@@ -26,7 +26,7 @@ ms.locfileid: "73975402"
 
 ## <a name="create-the-aspnet-web-app"></a>建立 ASP.NET web 應用程式
 
-1. **在 Visual Studio 的 [檔案**] 功能表上，選取 [**新增** > **專案**]。
+1. 在 Visual Studio 中，於 [檔案] 功能表上選取 [新增] > [專案]。
 
 1. 在 [**新增專案**] 對話方塊的 [Visual Basic] 或 [ C#視覺效果] 底下，選取 [ **web** ] 類別，然後選取 [ **ASP.NET web 應用程式**]。
 
@@ -71,7 +71,7 @@ ms.locfileid: "73975402"
    ![Visual Studio 2015 中的 WCF 資料服務專案範本](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > **WCF 資料服務**範本可在 Visual Studio 2015 中取得，但 Visual Studio 2017 則不提供。
+   > **WCF 資料服務**範本可在 Visual Studio 2015 中取得，但無法在 Visual Studio 2017 或更新版本中使用。
 
 3. 在 [服務名稱] 中，輸入 `Northwind`。
 

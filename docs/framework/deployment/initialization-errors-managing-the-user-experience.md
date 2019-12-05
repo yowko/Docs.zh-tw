@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3cd881044d45a276ec361d24097b59b8ce76b7e4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: cadcb5c2e85f046b5c1c561c17663b7c94829f4f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975691"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802251"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 初始化錯誤：管理使用者體驗
 
@@ -80,14 +80,14 @@ CLR 會針對各種情況包括一組主機，而且這些主機只要在載入�
 
 ## <a name="windows-8-behavior-and-ui"></a>Windows 8 行為和 UI
 
-CLR 啟用系統在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上提供的行為和 UI 與其他 Windows 作業系統版本相同，但載入 CLR 2.0 時發生問題時除外。 [!INCLUDE[win8](../../../includes/win8-md.md)] 包含使用 CLR 4.5 的 .NET Framework 4.5。 不過，[!INCLUDE[win8](../../../includes/win8-md.md)] 不會包括全都使用 CLR 2.0 的 .NET Framework 2.0、3.0 或 3.5。 因此，相依於 CLR 2.0 的應用程式預設不會在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上執行。 相反地，它們會顯示下列對話方塊，讓使用者可以安裝 .NET Framework 3.5。 使用者也可以在控制台中啟用 .NET Framework 3.5。 [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../install/dotnet-35-windows-10.md) 文章討論這兩個選項。
+CLR 啟用系統在 Windows 8 上提供的行為和 UI 與其他版本的 Windows 作業系統相同，但在載入 CLR 2.0 時發生問題除外。 Windows 8 包括使用 CLR 4.5 的 .NET Framework 4.5。 不過，Windows 8 不包含 .NET Framework 2.0、3.0 或3.5，全都使用 CLR 2.0。 因此，依賴 CLR 2.0 的應用程式預設不會在 Windows 8 上執行。 相反地，它們會顯示下列對話方塊，讓使用者可以安裝 .NET Framework 3.5。 使用者也可以在控制台中啟用 .NET Framework 3.5。 [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../install/dotnet-35-windows-10.md) 文章討論這兩個選項。
 
 ![在 Windows 8 安裝 3.5 時顯示的對話方塊](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "視需要提示安裝 .NET Framework 3.5")
 
 > [!NOTE]
-> .NET Framework 4.5 會取代使用者電腦上的 .NET Framework 4 (CLR 4)。 因此，.NET Framework 4 應用程式會在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上平順地執行，而不會顯示此對話方塊。
+> .NET Framework 4.5 會取代使用者電腦上的 .NET Framework 4 (CLR 4)。 因此，.NET Framework 4 應用程式會順暢地執行，而不會在 Windows 8 上顯示此對話方塊。
 
-安裝 .NET Framework 3.5 時，使用者可以在其 [!INCLUDE[win8](../../../includes/win8-md.md)] 電腦上執行相依於 .NET Framework 2.0、3.0 或 3.5 的應用程式。 他們也可以執行 .NET Framework 1.0 和 1.1 應用程式，但前提是這些應用程式未明確地設定成只在 .NET Framework 1.0 或 1.1 上執行。 請參閱[從 .NET Framework 1.1 移轉](../migration-guide/migrating-from-the-net-framework-1-1.md)。
+安裝 .NET Framework 3.5 時，使用者可以在其 Windows 8 電腦上執行相依于 .NET Framework 2.0、3.0 或3.5 的應用程式。 他們也可以執行 .NET Framework 1.0 和 1.1 應用程式，但前提是這些應用程式未明確地設定成只在 .NET Framework 1.0 或 1.1 上執行。 請參閱[從 .NET Framework 1.1 移轉](../migration-guide/migrating-from-the-net-framework-1-1.md)。
 
 從 .NET Framework 4.5 開始，已改善 CLR 啟用記錄，其中包含初始化錯誤訊息顯示時間和原因的記錄項目。 如需詳細資訊，請參閱[如何：偵錯 CLR 啟用問題](how-to-debug-clr-activation-issues.md)。
 

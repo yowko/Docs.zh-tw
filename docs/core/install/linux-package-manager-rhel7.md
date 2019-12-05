@@ -3,13 +3,13 @@ title: 在 Linux RHEL 7 套件管理員上安裝 .NET Core-.NET Core
 description: 使用套件管理員，在 RHEL 7 上安裝 .NET Core SDK 和執行時間。
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
-ms.openlocfilehash: 4893271ebd32036d8ec09e6b718c12b11acb8d59
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/03/2019
+ms.openlocfilehash: cc7865727927eda1406da26e64b89325fd5665a4
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450979"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801965"
 ---
 # <a name="rhel-7-package-manager---install-net-core"></a>RHEL 7 套件管理員-安裝 .NET Core
 
@@ -38,7 +38,7 @@ scl enable rh-dotnet30 bash
 <!-- TODO: is this the correct value? Taken from the webpage but it doesn't have aspnet in the name -->
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-yum install rh-dotnet30-dotnet-runtime-3.0 -y
+yum install rh-dotnet30-aspnetcore-runtime-3.0 -y
 scl enable rh-dotnet30 bash
 ```
 
@@ -51,3 +51,7 @@ subscription-manager repos --enable=rhel-7-server-dotnet-rpms
 yum install rh-dotnet30-dotnet-runtime-3.0 -y
 scl enable rh-dotnet30 bash
 ```
+
+## <a name="see-also"></a>請參閱
+
+- [在 Red Hat Enterprise Linux 7 上使用 .NET Core 3。0](https://access.redhat.com/documentation/en-us/net_core/3.0/html/getting_started_guide/gs_install_dotnet)

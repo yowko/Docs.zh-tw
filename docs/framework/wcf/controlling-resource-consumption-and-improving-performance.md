@@ -2,12 +2,12 @@
 title: 控制資源使用並改善效能
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: 976eb1e4a507d3c09bbc6e030985cbc3143b5946
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 16d6f29235455ff30e115b7aff3425412bc7ba6a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320610"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802252"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>控制資源使用並改善效能
 本主題描述 Windows Communication Foundation （WCF）架構的不同區域中，用來控制資源耗用量並影響效能計量的各種屬性。
@@ -44,7 +44,8 @@ ms.locfileid: "72320610"
  [System.servicemodel 中繼資料公用程式工具（Svcutil）](servicemodel-metadata-utility-tool-svcutil-exe.md)可以從應用程式的已編譯元件產生必要的序列化程式碼，以改善這些應用程式的啟動效能。 如需詳細資訊，請參閱[如何：使用 XmlSerializer 改善 WCF 用戶端應用程式的啟動時間](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)。
 
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>在 ASP.NET 下裝載 WCF 服務時的效能問題
- 在 IIS 和 ASP.NET 下裝載 WCF 服務時，IIS 和 ASP.NET 的組態設定可能會影響 WCF 服務的處理量和記憶體使用量。  如需 ASP.NET 效能的詳細資訊，請參閱[改善 ASP.NET 效能](https://go.microsoft.com/fwlink/?LinkId=186462)。  一個可能會造成意外結果的設定是 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 的屬性 <xref:System.Web.Configuration.ProcessModelSection>。 如果您的應用程式有固定或少量的用戶端，將 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 設定為 2 可能會讓 CPU 使用率接近 100% 的多處理器電腦提高處理量。 但提高效能有其代價：這也會造成記憶體使用量增加，因而減少延展性。
+
+在 IIS 和 ASP.NET 下裝載 WCF 服務時，IIS 和 ASP.NET 的組態設定可能會影響 WCF 服務的處理量和記憶體使用量。  如需 ASP.NET 效能的詳細資訊，請參閱[改善 ASP.NET 效能](https://docs.microsoft.com/previous-versions/msp-n-p/ff647787(v=pandp.10))。 一個可能會造成意外結果的設定是 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 的屬性 <xref:System.Web.Configuration.ProcessModelSection>。 如果您的應用程式有固定或少量的用戶端，將 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 設定為 2 可能會讓 CPU 使用率接近 100% 的多處理器電腦提高處理量。 但提高效能有其代價：這也會造成記憶體使用量增加，因而減少延展性。
 
 ## <a name="see-also"></a>請參閱
 

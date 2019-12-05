@@ -1,5 +1,5 @@
 ---
-title: 作法：開發在 IIS 上執行的 WCF 資料服務
+title: HOW TO：開發在 IIS 上執行的 WCF Data Service
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 89be7aa8339a4edf6d6ab9c0c243e4320d2fdfa8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 684361dbb97e70296a3061f71102662023f88d9a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052979"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800507"
 ---
-# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>作法：開發在 IIS 上執行的 WCF 資料服務
+# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>如何：開發在 IIS 上執行的 WCF 資料服務
 
 本主題將示範如何使用 WCF Data Services 來建立以 Northwind 範例資料庫為基礎的資料服務，該資料庫是由在 Internet Information Services （IIS）上執行的 ASP.NET Web 應用程式所裝載。 如需如何建立與 ASP.NET 程式開發伺服器上執行的 ASP.NET Web 應用程式相同的 Northwind 資料服務的範例，請參閱[WCF Data Services 快速入門](quickstart-wcf-data-services.md)。
 
@@ -25,17 +25,17 @@ ms.locfileid: "71052979"
 
 本主題示範如何使用 Entity Framework 提供者建立資料服務。 有其他資料服務提供者可以使用。 如需詳細資訊，請參閱[資料服務提供者](data-services-providers-wcf-data-services.md)。
 
-當您建立服務之後，您必須明確提供資料服務資源的存取權。 如需詳細資訊，請參閱[如何：啟用資料服務](how-to-enable-access-to-the-data-service-wcf-data-services.md)的存取權。
+當您建立服務之後，您必須明確提供資料服務資源的存取權。 如需詳細資訊，請參閱[如何：啟用資料服務的存取](how-to-enable-access-to-the-data-service-wcf-data-services.md)。
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>建立在 IIS 上執行的 ASP.NET web 應用程式
 
-1. **在 Visual Studio 的 [檔案**] 功能表上，選取 [**新增** > **專案**]。
+1. 在 Visual Studio 中，於 [檔案] 功能表上選取 [新增] > [專案]。
 
 2. 在 [**新增專案**] 對話方塊中，選取 [**已安裝**的 > [**視覺效果C#** 或**Visual Basic**] > **Web**類別]。
 
-3. 選取 [ **ASP.NET Web 應用程式**] 範本。
+3. 選取 [ **ASP.NET Web 應用程式** ] 範本。
 
-4. 輸入`NorthwindService`作為專案的名稱。
+4. 輸入 `NorthwindService` 做為專案的名稱。
 
 5. 按一下 [確定]。
 
@@ -81,9 +81,9 @@ ms.locfileid: "71052979"
 
     1. 開啟 [IIS 管理員] 並流覽至 [**預設網站**] 底下的 [PhotoService] 應用程式。
 
-    2. 在 [**功能視圖**] 中，按兩下 [**驗證**]。
+    2. 在[功能檢視] 中，按兩下[驗證]。
 
-    3. 在 [**驗證**] 頁面上，選取 [**匿名驗證**]。
+    3. 在 [驗證] 頁面上，選取 [匿名驗證]。
 
     4. 在 [**動作**] 窗格中，按一下 [**編輯**]，設定匿名使用者用來連線到網站的安全性主體。
 
@@ -126,13 +126,13 @@ ms.locfileid: "71052979"
 
 2. 在 [**加入新專案**] 對話方塊中，選取 [ **ADO.NET 實體資料模型**]。
 
-3. 針對資料模型的名稱，輸入`Northwind.edmx`。
+3. 針對資料模型的名稱，輸入 `Northwind.edmx`。
 
 4. 在 [實體資料模型 Wizard] 中，選取 [**從資料庫產生**]，然後按 **[下一步]** 。
 
 5. 執行下列其中一個步驟，將資料模型連接至資料庫，然後按 **[下一步]** ：
 
-    - 如果您尚未設定資料庫連接，請按一下 [**新增連接**]，然後建立新的連接。 如需詳細資訊，請參閱[如何：建立 SQL Server 資料庫](https://go.microsoft.com/fwlink/?LinkId=123631)的連接。 此 SQL Server 執行個體必須已附加 Northwind 範例資料庫。
+    - 如果您尚未設定資料庫連接，請按一下 [**新增連接**]，然後建立新的連接。 如需詳細資訊，請參閱 [How to: Create Connections to SQL Server Databases](https://go.microsoft.com/fwlink/?LinkId=123631)。 此 SQL Server 執行個體必須已附加 Northwind 範例資料庫。
 
          \-或-
 
@@ -144,16 +144,16 @@ ms.locfileid: "71052979"
 
 ## <a name="create-the-data-service"></a>建立資料服務
 
-1. 在**方案總管**中，以滑鼠右鍵按一下 ASP.NET 專案的名稱，然後按一下 [**加入** > **新專案**]。
+1. 在**方案總管**中，以滑鼠**按右鍵 ASP.NET**專案的名稱，然後按一下 [新增 > **新專案**]。
 
 2. 在 [**加入新專案**] 對話方塊中，選取 [ **WCF 資料服務**]。
 
    ![Visual Studio 2015 中的 WCF 資料服務專案範本](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > **WCF 資料服務**範本可在 Visual Studio 2015 中取得，但 Visual Studio 2017 則不提供。
+   > **WCF 資料服務**範本可在 Visual Studio 2015 中取得，但無法在 Visual Studio 2017 或更新版本中使用。
 
-3. 針對服務的名稱，輸入`Northwind`。
+3. 在 [服務名稱] 中，輸入 `Northwind`。
 
      Visual Studio 會針對新的服務建立 XML 標記和程式碼檔案。 根據預設，程式碼編輯器視窗隨即開啟。 在**方案總管**中，服務的名稱為、Northwind 和 svc.cs 或 .svc。
 
@@ -162,6 +162,6 @@ ms.locfileid: "71052979"
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
      [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [將資料當作服務公開](exposing-your-data-as-a-service-wcf-data-services.md)

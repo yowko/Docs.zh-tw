@@ -2,12 +2,12 @@
 title: 設定工作流程的追蹤
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 97b25873e9f20d5d390b7a59531b3a5af32296df
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458895"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802670"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>設定工作流程的追蹤
 
@@ -134,7 +134,7 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> 如需追蹤設定檔的詳細資訊，請參閱[追蹤設定檔](https://go.microsoft.com/fwlink/?LinkId=201310)。
+> 如需追蹤設定檔的詳細資訊，請參閱[追蹤設定檔](tracking-profiles.md)。
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>使用 WorkflowInvoker 設定追蹤
 
@@ -196,7 +196,7 @@ WF 4 提供將追蹤記錄寫入至 ETW (Windows 事件追蹤) 工作階段的�
     </system.serviceModel>
     ```
 
-2. 將資訊清單檔案從%windir%\Microsoft.NET\Framework\\\<最新版本的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.windows.applicationserver.applications.man 複製複製到暫存位置，然後將它重新命名為ApplicationServer. Applications_Provider1 man
+2. 將資訊清單檔案從%windir%\Microsoft.NET\Framework\\\<最新版本的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.windows.applicationserver.applications.man 複製複製到暫存位置，然後將它重新命名為 ApplicationServer。 Applications_Provider1
 
 3. 將資訊清單檔中的 GUID 變更為新的 GUID。
 
@@ -222,7 +222,7 @@ WF 4 提供將追蹤記錄寫入至 ETW (Windows 事件追蹤) 工作階段的�
 
 6. 遵循下列步驟產生資源 DLL。
 
-    1. 安裝 Windows SDK。 Windows SDK 包括訊息編譯器（[mc](https://go.microsoft.com/fwlink/?LinkId=184606)）和資源編譯器（[rc](https://go.microsoft.com/fwlink/?LinkId=184605)）。
+    1. 安裝 Windows SDK。 Windows SDK 包括訊息編譯器（[mc](/windows/win32/wes/message-compiler--mc-exe-)）和資源編譯器（[rc](/windows/win32/menurc/using-rc-the-rc-command-line-)）。
 
     2. 在 Windows SDK 命令提示字元中，對新的資訊清單檔執行 mc.exe。
 
@@ -250,7 +250,7 @@ WF 4 提供將追蹤記錄寫入至 ETW (Windows 事件追蹤) 工作階段的�
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">
         ```
 
-    7. 使用[wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608)來註冊資訊清單。
+    7. 使用[wevtutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732848(v=ws.10))來註冊資訊清單。
 
         ```console
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
@@ -258,5 +258,5 @@ WF 4 提供將追蹤記錄寫入至 ETW (Windows 事件追蹤) 工作階段的�
 
 ## <a name="see-also"></a>請參閱
 
-- [Windows Server App Fabric 監視](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [使用 App Fabric 監視應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Windows Server App Fabric 監視](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [使用 App Fabric 監視應用程式](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

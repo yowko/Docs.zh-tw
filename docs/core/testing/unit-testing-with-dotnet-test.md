@@ -5,109 +5,135 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.custom: seodec18
-ms.openlocfilehash: d85e3e69721d8933565b1c80fb7ed21b2291e60e
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: eee8ab675ecc66b842a1447e3f2de1b6b9765c4d
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117290"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801912"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 與 xUnit 為 .NET Core 中的 C# 進行單元測試
 
-本教學課程會引導您逐步進行建置範例方案的互動式體驗，以了解單元測試概念。 如果您想要使用預先建置的方案進行教學課程，請在開始之前[檢視或下載範例程式碼](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+本教學課程說明如何建立包含單元測試專案和原始程式碼專案的方案。 若要依照教學課程使用預先建立的解決方案，請[參閱或下載範例程式碼](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-[!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
+## <a name="create-the-solution"></a>建立方案
 
-## <a name="creating-the-source-project"></a>建立來源專案
-
-開啟 Shell 視窗。 建立名稱為 *unit-testing-using-dotnet-test* 的目錄來放置方案。
-在這個新目錄中，執行 [`dotnet new sln`](../tools/dotnet-new.md) 以建立新方案。 具備解決方案可讓您更輕鬆地同時管理類別庫與單元測試專案。
-在方案目錄中，建立 *PrimeService* 目錄。 到目前為止，目錄與檔案結構應如下所示：
+在本節中，會建立包含來源和測試專案的方案。 完成的解決方案具有下列目錄結構：
 
 ```
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService
-```
-
-將 *PrimeService* 設為目前的目錄，然後執行 [`dotnet new classlib`](../tools/dotnet-new.md) 以建立來源專案。 將 *Class1.cs* 重新命名為 *PrimeService.cs*。 先建立會失敗的 `PrimeService` 類別實作：
-
-```csharp
-using System;
-
-namespace Prime.Services
-{
-    public class PrimeService
-    {
-        public bool IsPrime(int candidate)
-        {
-            throw new NotImplementedException("Please create a test first.");
-        }
-    }
-}
-```
-
-將目錄變更回 *unit-testing-using-dotnet-test* 目錄。
-
-執行 [dotnet sln](../tools/dotnet-sln.md) 命令，將類別庫專案新增至解決方案：
-
-```dotnetcli
-dotnet sln add ./PrimeService/PrimeService.csproj
-```
-
-## <a name="creating-the-test-project"></a>建立測試專案
-
-接著，建立 *PrimeService.Tests* 目錄。 下列大綱顯示目錄結構：
-
-```
-/unit-testing-using-dotnet-test
-    unit-testing-using-dotnet-test.sln
-    /PrimeService
-        Source Files
+        PrimeService.cs
         PrimeService.csproj
     /PrimeService.Tests
-```
-
-將 *PrimeService.Tests* 目錄設為目前的目錄，然後使用 [`dotnet new xunit`](../tools/dotnet-new.md) 建立新的專案。 此命令會建立將 [xUnit](https://xunit.github.io/) 作為測試程式庫使用的測試專案。 產生的範本會在 *PrimeServiceTests.csproj* 檔案中設定測試執行器，類似如下程式碼：
-
-```xml
-<ItemGroup>
-  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0" />
-  <PackageReference Include="xunit" Version="2.2.0" />
-  <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
-</ItemGroup>
-```
-
-測試專案需要其他套件來建立和執行單元測試。 上一個步驟中的 `dotnet new` 已新增 xUnit 和 xUnit 執行器。 現在，將 `PrimeService` 類別庫新增為專案的另一個相依性。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
-
-```dotnetcli
-dotnet add reference ../PrimeService/PrimeService.csproj
-```
-
-您可以在 GitHub 的[範例存放庫](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService.Tests.csproj)中看到完整檔案。
-
-下面顯示最終方案配置：
-
-```
-/unit-testing-using-dotnet-test
-    unit-testing-using-dotnet-test.sln
-    /PrimeService
-        Source Files
-        PrimeService.csproj
-    /PrimeService.Tests
-        Test Source Files
+        PrimeService_IsPrimeShould.cs
         PrimeServiceTests.csproj
 ```
 
-若要將測試專案新增至解決方案，請在 *unit-testing-using-dotnet-test* 目錄中執行 [dotnet sln](../tools/dotnet-sln.md) 命令：
+下列指示提供建立測試解決方案的步驟。 如需在一個步驟中建立測試解決方案的指示，請參閱[建立測試方案的命令](#create-test-cmd)。
+
+* 開啟 Shell 視窗。
+* 執行下列命令：
+
+  ```dotnetcli
+  dotnet new sln -o unit-testing-using-dotnet-test
+  ```
+
+  [`dotnet new sln`](../tools/dotnet-new.md)命令會在*單元測試-使用-dotnet-測試*目錄中建立新的解決方案。
+* 將目錄變更為*單元測試-使用-dotnet-test*資料夾。
+* 執行下列命令：
+
+  ```dotnetcli
+  dotnet new classlib -o PrimeService
+  ```
+
+   [`dotnet new classlib`](../tools/dotnet-new.md)命令會在*PrimeService*資料夾中建立新的類別庫專案。 新的類別庫將包含要測試的程式碼。
+* 將 *Class1.cs* 重新命名為 *PrimeService.cs*。
+* 將*PrimeService.cs*中的程式碼取代為下列程式碼：
+  
+  ```csharp
+    using System;
+
+    namespace Prime.Services
+    {
+        public class PrimeService
+        {
+            public bool IsPrime(int candidate)
+            {
+                throw new NotImplementedException("Not implemented.");
+            }
+        }
+    }
+  ```
+
+* 上述程式碼：
+  * 擲回具有訊息的 <xref:System.NotImplementedException>，指出未執行。
+  * 稍後會在本教學課程中更新。
+
+<!-- preceding code shows an english bias. Message makes no sense outside english -->
+
+* 在 [*單元測試-使用-dotnet-測試*目錄] 中，執行下列命令以將類別庫專案新增至方案：
+
+  ```dotnetcli
+  dotnet sln add ./PrimeService/PrimeService.csproj
+  ```
+
+* 執行下列命令來建立*PrimeService*專案：
+
+  ```dotnetcli
+  dotnet new xunit -o PrimeService.Tests
+  ```
+
+* 上述命令會：
+  * 在*PrimeService. 測試*目錄中建立*PrimeService*專案。 測試專案使用[xUnit](https://xunit.github.io/)做為測試程式庫。
+  * 藉由將下列 `<PackageReference />`元素新增至專案檔，來設定測試執行器：
+    * 「Microsoft .NET. Test Sdk」
+    * xunit
+    * "xunit. visualstudio"
+
+* 執行下列命令，將測試專案新增至方案檔：
+
+  ```dotnetcli
+  dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
+  ```
+
+* 將 `PrimeService` 類別庫新增為*PrimeService*專案的相依性：
+
+  ```dotnetcli
+  dotnet add ./PrimeService.Tests/PrimeService.Tests.csproj reference ./PrimeService/PrimeService.csproj  
+  ```
+
+<a name="create-test-cmd"></a>
+
+### <a name="commands-to-create-the-solution"></a>用來建立解決方案的命令
+
+本節將摘要上一節中的所有命令。 如果您已完成上一節中的步驟，請略過本節。
+
+下列命令會在 windows 電腦上建立測試方案。 針對 macOS 和 Unix，請將 `ren` 命令更新為 `ren` 的 OS 版本，以重新命名檔案：
 
 ```dotnetcli
+dotnet new sln -o unit-testing-using-dotnet-test
+cd unit-testing-using-dotnet-test
+dotnet new classlib -o PrimeService
+ren .\PrimeService\Class1.cs PrimeService.cs
+dotnet sln add ./PrimeService/PrimeService.csproj
+dotnet new xunit -o PrimeService.Tests
+dotnet add ./PrimeService.Tests/PrimeService.Tests.csproj reference ./PrimeService/PrimeService.csproj
 dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 
-## <a name="creating-the-first-test"></a>建立第一個測試
+請遵循上一節中「使用下列程式碼取代*PrimeService.cs*中的程式碼」的指示。
 
-撰寫一個會失敗的測試，再使其通過，然後重複這個過程。 將 *UnitTest1.cs* 從 *PrimeService.Tests* 目錄移除，並建立名為 *PrimeService_IsPrimeShould.cs* 的新 C# 檔案。 加入下列程式碼：
+## <a name="create-a-test"></a>建立測試
+
+測試導向開發（TDD）中常見的方法是在執行目的程式代碼之前撰寫測試。 本教學課程使用 TDD 方法。 `IsPrime` 方法是可呼叫的，但未實作為。 `IsPrime` 的測試呼叫失敗。 使用 TDD 時，會寫入已知失敗的測試。 更新目的程式代碼以進行測試。 您可以繼續重複此方法，撰寫失敗的測試，然後更新要傳遞的目的程式代碼。
+
+更新*PrimeService*專案：
+
+* 刪除*PrimeService/unittest1.cpp .cs*。
+* 建立*PrimeService 測試/PrimeService_IsPrimeShould .cs*檔案。
+* 使用下列程式碼取代*PrimeService_IsPrimeShould .cs*中的程式碼：
 
 ```csharp
 using Xunit;
@@ -135,9 +161,9 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-`[Fact]` 屬性指出由測試執行器執行的測試方法。 從 *PrimeService.Tests* 資料夾執行 [`dotnet test`](../tools/dotnet-test.md)，建置測試及類別庫，然後執行測試。 xUnit 測試執行器包含執行測試的程式進入點。 `dotnet test` 會使用您建立的單元測試專案來開始測試執行器。
+`[Fact]` 屬性會宣告測試執行器所執行的測試方法。 從 [ *PrimeService* ] 資料夾中，執行 `dotnet test`。 [Dotnet test](../tools/dotnet-test.md)命令會建立這兩個專案，並執行測試。 XUnit 測試執行器包含執行測試的程式進入點。 `dotnet test` 使用單元測試專案啟動測試執行器。
 
-您的測試失敗。 您尚未建立實作。 在可運作的 `PrimeService` 類別中撰寫最簡單的程式碼，讓此測試成功。 並使用下列程式碼取代現有的 `IsPrime` 方法實作：
+測試失敗，因為尚未執行 `IsPrime`。 使用 TDD 方法，只撰寫足夠的程式碼，讓此測試通過。 使用下列程式碼更新 `IsPrime`：
 
 ```csharp
 public bool IsPrime(int candidate)
@@ -146,33 +172,65 @@ public bool IsPrime(int candidate)
     {
         return false;
     }
-    throw new NotImplementedException("Please create a test first.");
+    throw new NotImplementedException("Not fully implemented.");
 }
 ```
 
-在 *PrimeService.Tests* 目錄中，重新執行 `dotnet test`。 `dotnet test` 命令會依序執行 `PrimeService` 專案和 `PrimeService.Tests` 專案的建置。 建置這兩個專案之後，它將會執行此單一測試。 測試通過。
+執行 `dotnet test`。 測試就會成功。
 
-## <a name="adding-more-features"></a>新增更多功能
+### <a name="add-more-tests"></a>新增更多測試
 
-現在，您已經讓一個測試順利通過，您可以撰寫更多測試。 還有一些其他適用於下列質數的簡單案例：0、-1。 您可以使用 `[Fact]` 屬性將那些案例新增為新測試，但很快就會單調乏味。 另有其他 xUnit 屬性可供您撰寫類似測試的套件：
+為0和-1 加入質數測試。 您可以複製上述測試，並將下列程式碼變更為使用0和-1：
+
+```csharp
+var result = _primeService.IsPrime(1);
+
+Assert.False(result, "1 should not be prime");
+```
+
+只有在參數變更時複製測試程式碼，會導致程式碼重複和測試膨脹。 下列 xUnit 屬性可讓您撰寫類似測試的套件：
 
 - `[Theory]` 代表執行相同程式碼但具有不同輸入引數的測試套件。
 
 - `[InlineData]` 屬性會指定這些輸入的值。
 
-您無須建立新的測試，只要套用這兩個屬性 (`[Theory]` 和 `[InlineData]`)，即可在 *PrimeService_IsPrimeShould.cs* 檔案中建立單一理論。 該理論是一種方法，這種方法會測試數個低於二 (最小的質數) 的值：
+不需要建立新的測試，而是套用上述的 xUnit 屬性來建立單一的理論。 將下列程式碼：
+
+```csharp
+[Fact]
+public void IsPrime_InputIs1_ReturnFalse()
+{
+    var result = _primeService.IsPrime(1);
+
+    Assert.False(result, "1 should not be prime");
+}
+```
+
+取代為下列程式碼：
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-再次執行 `dotnet test`，這些測試的其中兩個應該會失敗。 若要讓所有測試都能通過，請變更 *PrimeService.cs* 檔案中 `IsPrime` 方法開頭處的 `if` 子句：
+在上述程式碼中，`[Theory]` 和 `[InlineData]` 可讓測試數個小於二的值。 兩個是最小的質數。
+
+執行 `dotnet test`，兩個測試失敗。 若要讓所有測試都通過，請使用下列程式碼更新 `IsPrime` 方法：
 
 ```csharp
-if (candidate < 2)
+public bool IsPrime(int candidate)
+{
+    if (candidate < 2)
+    {
+        return false;
+    }
+    throw new NotImplementedException("Not fully implemented.");
+}
 ```
 
-繼續在主要程式庫中新增更多測試、更多理論和更多程式碼，以反覆執行。 您有[測試的完成版](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs)和[程式庫的完整實作](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs)。
+遵循 TDD 方法，新增更多失敗的測試，然後更新目的程式代碼。 請參閱[測試的完成版本](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs)和[完整的程式庫執行](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs)。
+
+完成的 `IsPrime` 方法不是用來測試 primality 的有效演算法。
 
 ### <a name="additional-resources"></a>其他資源
 
 - [xUnit.net 官方網站](https://xunit.github.io)
 - [測試 ASP.NET Core 中的控制器邏輯](/aspnet/core/mvc/controllers/testing)
+- [`dotnet add reference`](../tools/dotnet-add-reference.md)

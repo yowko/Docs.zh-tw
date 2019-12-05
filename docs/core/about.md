@@ -2,12 +2,12 @@
 title: 關於 .NET Core
 description: 了解 .NET Core。
 ms.date: 09/17/2019
-ms.openlocfilehash: b3cdc8d4aeaf85765b51543069a5f279e84f8623
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711211"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801956"
 ---
 # <a name="about-net-core"></a>關於 .NET Core
 
@@ -36,7 +36,7 @@ C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式�
 
 .NET Core 公開許多案例的 API，以下是其中幾個：
 
-- 基本類型，例如 <xref:System.Boolean?displayProperty=nameWithType> 和 <xref:System.Int32?displayProperty=nameWithType>。
+- 基本型別，例如 <xref:System.Boolean?displayProperty=nameWithType> 和 <xref:System.Int32?displayProperty=nameWithType>。
 - 集合，例如 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 及 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>。
 - 公用程式類型，例如 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 及 <xref:System.IO.FileStream?displayProperty=nameWithType>。
 - 資料類型，例如 <xref:System.Data.DataSet?displayProperty=nameWithType> 與 [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/) \(英文\)。
@@ -56,7 +56,7 @@ C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式�
 
 .NET Core 由下列部分組成：
 
-- [.Net Core 運行](https://github.com/dotnet/coreclr)時間，提供類型系統、元件載入、垃圾收集行程、原生 interop 及其他基本服務。 [.Net Core framework 程式庫](https://github.com/dotnet/corefx)提供基本資料類型、應用程式組合類型，以及基礎公用程式。
+- [.Net Core 運行](https://github.com/dotnet/runtime/tree/master/src/coreclr)時間，提供類型系統、元件載入、垃圾收集行程、原生 interop 及其他基本服務。 [.Net Core framework 程式庫](https://github.com/dotnet/runtime/tree/master/src/libraries)提供基本資料類型、應用程式組合類型，以及基礎公用程式。
 - [ASP.NET 運行](https://github.com/aspnet/home)時間可提供架構，以建立新式雲端式網際網路連線應用程式，例如 web Apps、IoT app 和 mobile 後端。
 - [.NET Core CLI 工具](https://github.com/dotnet/cli)及語言編譯器 ([Roslyn](https://github.com/dotnet/roslyn) 和 [F#](https://github.com/microsoft/visualfsharp)) 可提供 .NET Core 開發人員體驗。
 - [dotnet 工具](https://github.com/dotnet/core-setup)用於啟動 .NET Core 應用程式和 CLI 工具。 它會選取執行時間並裝載執行時間、提供元件載入原則，以及啟動應用程式和工具。
@@ -79,17 +79,17 @@ C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式�
 
 人們常問如何實作 .NET Core 以支援多個作業系統。 他們通常會問是否有不同的實作，或是否使用[條件式編譯](https://en.wikipedia.org/wiki/Conditional_compilation)。 都有，是強式偏差趨向條件式編譯。
 
-如以下圖表所示，[CoreFX](https://github.com/dotnet/corefx) \(英文\) 絕大部分是跨所有平台共用的非平台相關程式碼。 非平台相關程式碼可以實作為單一的可攜式組件，用在所有平台上。
+您可以在下圖中看到大部分的[.Net Core 程式庫](https://github.com/dotnet/runtime/tree/master/src/libraries)都是跨所有平臺共用的平臺中立程式碼。 非平台相關程式碼可以實作為單一的可攜式組件，用在所有平台上。
 
 ![CoreFX︰每個平台各有程式碼行](../images/corefx-platforms-loc.png)
 
-Windows 與 Unix 實作大小相近。 Windows 有更大的執行，因為 CoreFX 會執行一些僅限 Windows 的功能，例如[Microsoft Win32](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry) ，但尚未實行許多僅限 Unix 的概念。 您也會看到大部分的 Linux 和 macOS 的執行都是跨 Unix 的方式共用，而 Linux 和 macOS 特定的則是大小大致相似的。
+Windows 與 Unix 實作大小相近。 Windows 有更大的執行，因為 .NET Core 程式庫會執行一些僅限 Windows 的功能，例如[Microsoft Win32](https://github.com/dotnet/runtime/tree/master/src/libraries/Microsoft.Win32.Registry) ，但尚未實行許多僅限 Unix 的概念。 您也會看到大部分的 Linux 和 macOS 的執行都是跨 Unix 的方式共用，而 Linux 和 macOS 特定的則是大小大致相似的。
 
 .NET Core 中混合了平臺特定和平臺中立的程式庫。 您可以在幾個範例中看到模式︰
 
-- [CoreCLR](https://github.com/dotnet/coreclr) 是特定平台型的。 它建置於 OS 子系統上，像是記憶體管理員和執行緒排程器。
-- [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) 及 [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) 會具有平台專屬性，每個 OS 上的儲存體和加密 API 都不一樣。
-- [System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) 和 [System.Linq](https://github.com/dotnet/corefx/tree/master/src/System.Linq) 是非關平台型，設它們在資料結構上建立與操作。
+- [CoreCLR](https://github.com/dotnet/runtime/tree/master/src/coreclr) 是特定平台型的。 它建置於 OS 子系統上，像是記憶體管理員和執行緒排程器。
+- [System.IO](https://github.com/dotnet/runtime/tree/master/src/libraries/System.IO) 及 [System.Security.Cryptography.Algorithms](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Security.Cryptography.Algorithms) 會具有平台專屬性，每個 OS 上的儲存體和加密 API 都不一樣。
+- [System.Collections](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Collections) 和 [System.Linq](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Linq) 是非關平台型，設它們在資料結構上建立與操作。
 
 ## <a name="comparisons-to-other-net-implementations"></a>與其他 .NET 實作的比較
 

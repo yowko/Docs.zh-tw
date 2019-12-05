@@ -2,12 +2,12 @@
 title: WCF 簡化功能
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: 85c50e5939a5e63202d57bca08393b9b79308f57
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: dd944ad2963e29fd3aa9254f3a37f2c2b98ce70d
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321222"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802384"
 ---
 # <a name="wcf-simplification-features"></a>WCF 簡化功能
 
@@ -82,19 +82,19 @@ WCF 現可支援合約優先開發。 Svcutil 工具具有/serviceContract 參�
 
 ## <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 相容模式預設值已變更
 
-WCF 會在寫入 WCF 服務時提供 ASP.NET 相容模式，將 ASP.NET HTTP 管線功能的完整存取權限授與開發人員。 若要使用此模式，您必須在 web.config 的[\<serviceHostingEnvironment >](../configure-apps/file-schema/wcf/servicehostingenvironment.md)區段中，將 `aspNetCompatibilityEnabled` 屬性設定為 true。此外，此 appDomain 中的任何服務都必須在其 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 設定為 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> 的 `RequirementsMode` 屬性。 根據預設 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 現在會設定為 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>，而預設 WCF 服務應用程式範本會將 `aspNetCompatibilityEnabled` 屬性設定為 `true`。 如需詳細資訊，請參閱 Windows Communication Foundation 4.5 和[WCF 服務和 ASP.NET](./feature-details/wcf-services-and-aspnet.md)[的新功能](whats-new.md)。
+WCF 會在寫入 WCF 服務時提供 ASP.NET 相容模式，將 ASP.NET HTTP 管線功能的完整存取權限授與開發人員。 若要使用此模式，您必須在 web.config 的[\<serviceHostingEnvironment >](../configure-apps/file-schema/wcf/servicehostingenvironment.md)區段中，將 `aspNetCompatibilityEnabled` 屬性設定為 true。此外，此 appDomain 中的任何服務都必須在其 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 設定為 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>的 `RequirementsMode` 屬性。 根據預設 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 現在會設定為 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>，而預設 WCF 服務應用程式範本會將 `aspNetCompatibilityEnabled` 屬性設定為 `true`。 如需詳細資訊，請參閱 Windows Communication Foundation 4.5 和[WCF 服務和 ASP.NET](./feature-details/wcf-services-and-aspnet.md)[的新功能](whats-new.md)。
 
 ## <a name="streaming-improvements"></a>資料流的改進
 
 - WCF 已新增對非同步資料流的支援。 若要啟用非同步資料流，請將 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> 端點行為加入至服務主機，並將其 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> 屬性設定為 `true`。 當服務將已進行資料流處理的訊息傳送到多個用戶端，而這些用戶端的讀取速度緩慢時，這個做法可以提高延展性。 WCF 不再針對個別用戶端封鎖執行緒，並且會釋放執行緒以服務另一個用戶端。
 
-- 已移除訊息緩衝在服務由 IIS 裝載時的限制。 在舊版 WCF 中，當收到使用資料流訊息傳輸之 IIS 裝載服務的訊息時，ASP.NET 在傳送訊息到 WCF 之前會緩衝整個訊息。 這將導致大量記憶體消耗。 這種緩衝處理已在 .NET 4.5 中移除，現在 IIS 裝載的 WCF 服務可以在接收到整個訊息之前處理傳入資料流，藉此啟用真實的資料流處理。 這允許 WCF 立即對訊息做出回應，並使效能有所提升。 此外，您不再需要指定 `maxRequestLength` (ASP.NET 對傳入要求的大小限制) 的值。 如果設定這個屬性，則會將其忽略。 如需 `maxRequestLength` 的詳細資訊，請參閱[\<HTTPRuntime > configuration 元素](https://go.microsoft.com/fwlink/?LinkId=223344)。 您仍然需要設定 maxAllowedContentLength，如需詳細資訊，請參閱[IIS 要求限制](https://go.microsoft.com/fwlink/?LinkId=225908)。
+- 已移除訊息緩衝在服務由 IIS 裝載時的限制。 在舊版 WCF 中，當收到使用資料流訊息傳輸之 IIS 裝載服務的訊息時，ASP.NET 在傳送訊息到 WCF 之前會緩衝整個訊息。 這將導致大量記憶體消耗。 這種緩衝處理已在 .NET 4.5 中移除，現在 IIS 裝載的 WCF 服務可以在接收到整個訊息之前處理傳入資料流，藉此啟用真實的資料流處理。 這允許 WCF 立即對訊息做出回應，並使效能有所提升。 此外，您不再需要指定 `maxRequestLength` (ASP.NET 對傳入要求的大小限制) 的值。 如果設定這個屬性，則會將其忽略。 如需 `maxRequestLength` 的詳細資訊，請參閱[\<HTTPRuntime > configuration 元素](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71))。 您仍然需要設定 maxAllowedContentLength，如需詳細資訊，請參閱[IIS 要求限制](https://docs.microsoft.com/previous-versions/iis/settings-schema/ms689462(v=vs.90))。
 
 ## <a name="new-transport-default-values"></a>新的傳輸預設值
 
 下列資料表說明已變更的設定以及可找到其他資訊的位置。
 
-|屬性|開啟|新的預設值|更多資訊|
+|屬性|On|新的預設值|更多資訊|
 |--------------|--------|-----------------|----------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|這個屬性會決定 TCP 連線使用 .NET 框架通訊協定進行自我驗證所需的時間長度。 用戶端必須先傳送一些初始資料，讓伺服器有足夠的資訊來執行驗證。 逾時會故意設定為小於 ReceiveTimeout (10 分鐘)，使未經驗證的惡意用戶端無法長時間保持與伺服器的連接。 預設值為 30 秒。 如需 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A> 的詳細資訊|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * 處理器數目|此為通訊端層級的屬性，用來說明要排入佇列之「擱置接受」要求的數目。 如果接聽待辦項目佇列已滿，將會拒絕新的通訊端要求。 如需 <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A> 的詳細資訊|

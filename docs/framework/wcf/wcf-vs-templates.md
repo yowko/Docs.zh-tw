@@ -2,12 +2,12 @@
 title: WCF Visual Studio 範本
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 1b4a600e4ed19b967bcaeb6d880ea181b7c2d61f
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: ec73036921632bc855e79239f1fc578587de7ca3
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197187"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802354"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 範本
 Windows Communication Foundation （WCF） Visual Studio 範本是預先定義的專案和專案範本，您可以在 Visual Studio 中用來快速建立 WCF 服務和周圍的應用程式。  
@@ -72,7 +72,7 @@ Windows Communication Foundation （WCF） Visual Studio 範本是預先定義�
  如果您變更摘要的位址，您也必須變更 [**調試**程式] 索引標籤中的位址。如果您沒有這麼做，Internet Explorer 會嘗試開啟預設位址的摘要，然後失敗。  
   
 ### <a name="ajax-enabled-wcf-service-item-template"></a>具備 AJAX 能力的 WCF 服務項目範本  
- 此範本會公開 AJAX 控制項做為 WCF 服務。 如需 AJAX 控制項的詳細資訊，請參閱[ajax 控制項檔](https://go.microsoft.com/fwlink/?LinkId=96717)。  
+ 此範本會公開 AJAX 控制項做為 WCF 服務。 如需 AJAX 控制項的詳細資訊，請參閱[ajax 控制項檔](https://docs.microsoft.com/aspnet/ajax/)。  
   
 ### <a name="silverlight-enabled-wcf-service-item-template"></a>啟用 Silverlight 的 WCF 服務項目範本  
  這個範本會建立提供資料給 Silverlight 用戶端或前端的 Web 服務。 範本可以加入至網站或 Web 應用程式專案，以建立 WCF 服務，其中包括支援與 Silverlight 用戶端進行通訊的服務程式代碼和設定。 接著，您可以使用**加入服務參考**將服務的用戶端 proxy 新增至用戶端，並在 silverlight 用戶端與啟用 SILVERLIGHT 的 WCF 服務之間交換資料。  

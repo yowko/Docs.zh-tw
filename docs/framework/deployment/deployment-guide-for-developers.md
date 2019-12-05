@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 3e87ba8c9442c4bba24e4e569cd20bdbdc76f6ec
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 62777356dae6e2dce9753b832f08ab2fa2cb5881
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457988"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801882"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
 開發人員若要讓自己的應用程式一起安裝從 .NET Framework 4.5 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的任何 .NET Framework 版本，可參考本主題提供的資訊。
@@ -51,7 +51,7 @@ ms.locfileid: "73457988"
 
 - 您必須具有系統管理員權限才能安裝 .NET Framework 4.5 及其小數點版本。
 
-- .NET Framework 4.5 隨附於 [!INCLUDE[win8](../../../includes/win8-md.md)] 和 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 中，因此在這些作業系統上不需要隨您的應用程式再次部署它。 同樣地，.NET Framework 4.5.1 會隨附於 [!INCLUDE[win81](../../../includes/win81-md.md)] 和 Windows Server 2012 R2 中。 所有作業系統中都不包含 .NET Framework 4.5.2。 .NET Framework 4.6 隨附於 Windows 10 中，.NET Framework 4.6.1 隨附於 Windows 10 年 11 月更新中，而 .NET Framework 4.6.2 則隨附於 Windows 10 年度更新版中。  .NET Framework 4.7 隨附於 Windows 10 Creators Update 中，.NET Framework 4.7.1 隨附於 Windows 10 Fall Creators Update 中，.NET Framework 4.7.2 則隨附於 Windows 10 2018 年 10 月更新與 Windows 10 2018 年 4 月更新中。 .NET Framework 4.8 已隨附於 Windows 10 2019 年 5 月更新中。 如需硬體和軟體需求的完整清單，請參閱[系統需求](../get-started/system-requirements.md)。
+- .NET Framework 4.5 隨附于 Windows 8 和 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]，因此您不需要在這些作業系統上使用應用程式部署它。 同樣地，.NET Framework 4.5.1 包含在 Windows 8.1 和 Windows Server 2012 R2 中。 所有作業系統中都不包含 .NET Framework 4.5.2。 .NET Framework 4.6 隨附於 Windows 10 中，.NET Framework 4.6.1 隨附於 Windows 10 年 11 月更新中，而 .NET Framework 4.6.2 則隨附於 Windows 10 年度更新版中。  .NET Framework 4.7 隨附於 Windows 10 Creators Update 中，.NET Framework 4.7.1 隨附於 Windows 10 Fall Creators Update 中，.NET Framework 4.7.2 則隨附於 Windows 10 2018 年 10 月更新與 Windows 10 2018 年 4 月更新中。 .NET Framework 4.8 已隨附於 Windows 10 2019 年 5 月更新中。 如需硬體和軟體需求的完整清單，請參閱[系統需求](../get-started/system-requirements.md)。
 
 - 從 .NET Framework 4.5 開始，您的使用者可以在安裝過程中檢視執行中的 .NET Framework 應用程式清單，並輕鬆地將它們關閉。 這有助於避免系統因安裝 .NET Framework 而重新啟動。 請參閱 [減少系統重新啟動](reducing-system-restarts.md)。
 
@@ -78,7 +78,7 @@ ms.locfileid: "73457988"
 ||Web 安裝程式|離線安裝程式|
 |-|-------------------|-----------------------|
 |下載檔案|.NET Framework 4.8： <br/>[ndp48-web.exe](https://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>.NET Framework 4.7.2： <br/>[NDP472-KB4054531-Web.exe](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>.NET Framework 4.7.1： <br/>[NDP471-KB4033344-Web.exe](https://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7： <br />[NDP47-KB3186500-Web.exe](https://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />.NET Framework 4.6.2： <br />[NDP462-KB3151802-Web.exe](https://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> .NET Framework 4.6.1：<br />[NDP461-KB3102438-Web.exe](https://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> .NET Framework 4.6：<br />[NDP46-KB3045560-Web.exe](https://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901954-Web.exe](https://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> .NET Framework 4.5.1： <br />[NDP451-KB2859818-Web.exe](https://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> .NET Framework 4.5： <br />[dotNetFx45_Full_setup.exe](https://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.8： <br/>[NDP48-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?linkid=2088631)<br/><br/>.NET Framework 4.7.2： <br/>[NDP472-KB4054530-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=863265)<br/><br/>.NET Framework 4.7.1： <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7： <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />.NET Framework 4.6.2： <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> .NET Framework 4.6.1： <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> .NET Framework 4.6： <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> .NET Framework 4.5.1： <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> .NET Framework 4.5： <br />[dotNetFx45_Full_x86_x64.exe](https://go.microsoft.com/fwlink/?LinkId=225702)|
-|是否需要網際網路連線？|[是]|否|
+|是否需要網際網路連線？|是|否|
 |下載大小|較小 (僅包含目標平台的安裝程式)*|較大*|
 |語言套件|包含**|除非您使用以所有作業系統為目標的套件，否則必須 [單獨安裝](#chain_langpack)。|
 |部署方法|支援所有方法：<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|支援所有方法：<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|
@@ -204,7 +204,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso`
 
-您可以使用其他命令列選項自訂安裝。 例如:
+您可以使用其他命令列選項自訂安裝。 例如：
 
 - 若要提供一種方法讓使用者關閉執行中的 .NET Framework 應用程式，以減少系統重新啟動的次數，可設定被動模式並使用 `/showrmui` 選項，如下所示：
 
@@ -259,7 +259,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
-|版本|Release DWORD 的值|
+|{2&gt;版本&lt;2}|Release DWORD 的值|
 |-------------|--------------------------------|
 |安裝在 Windows 10 2019 年 5 月更新上的 .NET Framework 4.8|528040|
 |安裝在 Windows 10 2019 年 5 月更新以外的所有 OS 版本上的 .NET Framework 4.8|528049|
@@ -276,8 +276,8 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 |安裝在 Windows 10 上的 .NET Framework 4.6|393295|
 |安裝在 Windows 10 以外的所有 OS 版本上的 .NET Framework 4.6|393297|
 |.NET Framework 4.5.2|379893|
-|隨 [!INCLUDE[win81](../../../includes/win81-md.md)] 或 Windows Server 2012 R2 安裝的 .NET Framework 4.5.1|378675|
-|安裝在 [!INCLUDE[win8](../../../includes/win8-md.md)]、Windows 7 上的 .NET Framework 4.5.1|378758|
+|隨 Windows 8.1 或 Windows Server 2012 R2 安裝的 .NET Framework 4.5.1|378675|
+|在 Windows 8、Windows 7 上安裝 .NET Framework 4.5。1|378758|
 |.NET Framework 4.5|378389|
 
 ### <a name="detecting-the-language-packs"></a>刪除語言套件
@@ -288,9 +288,9 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 | | |
 |-|-|
-| 機碼 | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| [屬性] | 版本 |
-| 輸入 | DWORD |
+| 索引鍵 | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| Name | Release |
+| 類型 | DWORD |
 
 若要判斷是否已針對 .NET Framework 從 4.5 到 4.7.2 的特定版本安裝語言套件的最終發行版本，請檢查 RELEASE 機碼 DWORD 的值，如前一節[偵測 .NET Framework](#detect_net) 中所述。
 
@@ -368,7 +368,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 ## <a name="uninstalling-the-net-framework"></a>解除安裝 .NET Framework
 
-從 [!INCLUDE[win8](../../../includes/win8-md.md)] 開始，您可以使用 [控制台] 中的 [開啟或關閉 Windows 功能]，將 .NET Framework 4.5 或其小數點版本解除安裝。 在舊版 Windows 中，您可以使用 [控制台] 中的 [新增或移除程式]，將 .NET Framework 4.5 或其小數點版本解除安裝。
+從 Windows 8 開始，您可以使用 [控制台] 中的 [開啟**或關閉 Windows 功能**]，將 .NET Framework 4.5 或其中一個點發行版卸載。 在舊版 Windows 中，您可以使用 [控制台] 中的 [新增或移除程式]，將 .NET Framework 4.5 或其小數點版本解除安裝。
 
 > [!IMPORTANT]
 > 針對 Windows 7 和舊版作業系統，解除安裝 .NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2, 或 4.8 不會還原 .NET Framework 4.5 檔案，而解除安裝 .NET Framework 4.5 不會還原 .NET Framework 4 檔案。 如果您想要還原為舊版，則必須重新安裝舊版及其所有更新。
@@ -401,7 +401,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 下表列出可供 .NET Framework 4.5 及其小數點版本使用的 .NET Framework 語言套件。
 
-|LCID|語言 – 國家/地區|culture|
+|LCID|語言 – 國家/地區|Culture|
 |----------|--------------------------------|-------------|
 |1025|阿拉伯文 - 沙烏地阿拉伯|ar|
 |1028|中文 – 繁體|zh-Hant|

@@ -2,18 +2,18 @@
 title: 在 Visual Studio 中建立 LINQ to DataSet 專案
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-ms.openlocfilehash: 8b905c65575c3c567459d843b2a5d1606bc63228
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 91032766248b11e51b90aa788b1c64c140347c25
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783772"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802022"
 ---
-# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>HOW TO：在 Visual Studio 中建立 LINQ to DataSet 專案
+# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>如何：在 Visual Studio 中建立 LINQ to DataSet 專案
 
-不同類型的 LINQ 專案需要特定的元件參考和匯入的命名空間（  Visual Basic）或C#[使用](../../../csharp/language-reference/keywords/using-directive.md)指示詞（）。 LINQ 的最低需求是的*system.object*參考和的`using` <xref:System.Linq>指示詞。
+不同類型的 LINQ 專案需要特定的元件參考和匯入的命名空間（  Visual Basic）或C#[使用](../../../csharp/language-reference/keywords/using-directive.md)指示詞（）。 LINQ 的最低需求是對 system.string 的參考 *，以及 <xref:System.Linq>* 的 `using` 指示詞。
 
-如果您在 Visual Studio 2017 中建立新C#的主控台應用程式專案，則預設會提供這些需求。 如果您要從舊版的 Visual Studio 升級專案，您可能必須手動提供這些 LINQ 相關的參考。
+如果您在 Visual Studio 2017 或更新版本中建立新C#的主控台應用程式專案，則預設會提供這些需求。 如果您要從舊版的 Visual Studio 升級專案，您可能必須手動提供這些 LINQ 相關的參考。
 
 LINQ to DataSet 需要*system.data.datasetextensions.dll*的兩個額外參考 *，才能進行*。
 
@@ -35,8 +35,8 @@ LINQ to DataSet 需要*system.data.datasetextensions.dll*的兩個額外參考 *
    using System.Linq;
    ```
 
-1. （選擇性）針對`using` [ **SqlClient**] `Imports`加入指示詞（或語句），視您連接到資料庫的方式而**定。**
+1. （選擇性）加入**SqlClient**的 `using` 指示詞（或 `Imports` 語句），視您連接到資料庫的方式而**定。**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [開始使用 LINQ to DataSet](getting-started-linq-to-dataset.md)

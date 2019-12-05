@@ -1,14 +1,14 @@
 ---
 title: 垃圾收集行程 config 設定
-description: 瞭解用來設定垃圾收集行程如何管理記憶體的執行時間設定。
+description: 瞭解用來設定垃圾收集行程如何管理 .NET Core 應用程式記憶體的執行時間設定。
 ms.date: 11/13/2019
 ms.topic: reference
-ms.openlocfilehash: 220b94e92f61fd44d2ab13291e41b8007a287cc7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e7f6877a3cbc7f28776a93b9126f4b64026487fa
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428707"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800624"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>用於垃圾收集的執行時間設定選項
 
@@ -38,7 +38,7 @@ ms.locfileid: "74428707"
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
 | **.runtimeconfig.json json** | `System.GC.Server` | `false`-工作站<br/>`true`-伺服器 | .NET Core 1.0 |
-| **環境變數** | `COMPlus_gcServer` | 0-工作站<br/>1-伺服器 | .NET Core 1.0 |
+| **環境變數** | `COMPlus_gcServer` | `0`-工作站<br/>`1`-伺服器 | .NET Core 1.0 |
 | **.NET Framework 的 app.config** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false`-工作站<br/>`true`-伺服器 |  |
 
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.web/COMPlus_gcConcurrent
@@ -110,13 +110,13 @@ ms.locfileid: "74428707"
   當64位 Windows 電腦具有多個 CPU 群組（也就是，有超過64個處理器）時，啟用這個元素會延伸所有 CPU 群組的垃圾收集。 垃圾收集行程會使用所有核心來建立和平衡堆積。
 
 - 僅適用于64位 Windows 作業系統上的伺服器垃圾收集（GC）。
-- 預設：停用（0）。
+- 預設：停用（`0`）。
 - 如需詳細資訊，請參閱 Maoni Stephens 的 blog 上的[針對具有 > 64 cpu 的電腦，讓 CPU 設定更好用於 GC](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) 。
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
 | **.runtimeconfig.json json** | N/A | N/A | N/A |
-| **環境變數** | `COMPlus_GCCpuGroup` | 0-已停用<br/>1-已啟用 | .NET Core 1.0 |
+| **環境變數** | `COMPlus_GCCpuGroup` | `0`-已停用<br/>已啟用 `1` | .NET Core 1.0 |
 | **.NET Framework 的 app.config** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false`-已停用<br/>已啟用 `true` |  |
 
 > [!NOTE]
@@ -131,7 +131,7 @@ ms.locfileid: "74428707"
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
 | **.runtimeconfig.json json** | `System.GC.NoAffinitize` | `false`-將相似化為<br/>`true`-不將相似化為 | .NET Core 3.0 |
-| **環境變數** | `COMPlus_GCNoAffinitize` | 0-將相似化為<br/>1-不將相似化為 | .NET Core 3.0 |
+| **環境變數** | `COMPlus_GCNoAffinitize` | `0`-將相似化為<br/>`1`-不將相似化為 | .NET Core 3.0 |
 | **.NET Framework 的 app.config** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false`-將相似化為<br/>`true`-不將相似化為 | 4.6.2 |
 
 ### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>HeapHardLimit/COMPlus_GCHeapHardLimit
@@ -166,34 +166,34 @@ ms.locfileid: "74428707"
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
 | **.runtimeconfig.json json** | `System.GC.RetainVM` | `false`-發行至 OS<br/>`true`-put 待命| .NET Core 1.0 |
-| **環境變數** | `COMPlus_GCRetainVM` | 0-發行至 OS<br/>1-put 待命 | .NET Core 1.0 |
+| **環境變數** | `COMPlus_GCRetainVM` | `0`-發行至 OS<br/>`1`-put 待命 | .NET Core 1.0 |
 
 ## <a name="large-pages"></a>大型頁面
 
 ### <a name="complus_gclargepages"></a>COMPlus_GCLargePages
 
 - 指定在設定堆積固定限制時是否應該使用大型分頁。
-- 預設：停用（0）。
+- 預設：停用（`0`）。
 - 這是實驗性設定。
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
 | **.runtimeconfig.json json** | N/A | N/A | N/A |
-| **環境變數** | `COMPlus_GCLargePages` | 0-已停用<br/>1-已啟用 | .NET Core 3.0 |
+| **環境變數** | `COMPlus_GCLargePages` | `0`-已停用<br/>已啟用 `1` | .NET Core 3.0 |
 
 ## <a name="large-objects"></a>大型物件
 
 ### <a name="complus_gcallowverylargeobjects"></a>COMPlus_gcAllowVeryLargeObjects
 
 - 針對大小總計大於 2 gb 的陣列，設定64位平臺上的垃圾收集行程支援。
-- 預設：啟用（1）。
+- 預設：啟用（`1`）。
 - 在未來的 .NET 版本中，此選項可能會過時。
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
 | **.runtimeconfig.json json** | N/A | N/A | N/A |
-| **環境變數** | `COMPlus_gcAllowVeryLargeObjects` | 1-已啟用<br/> 0-已停用 | .NET Core 1.0 |
-| **.NET Framework 的 app.config** | [Gcallowverylargeobjects>](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | 1-已啟用<br/> 0-已停用 | .NET Framework 4.5 |
+| **環境變數** | `COMPlus_gcAllowVeryLargeObjects` | 已啟用 `1`<br/> `0`-已停用 | .NET Core 1.0 |
+| **.NET Framework 的 app.config** | [Gcallowverylargeobjects>](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | 已啟用 `1`<br/> `0`-已停用 | .NET Framework 4.5 |
 
 ## <a name="large-object-heap-threshold"></a>大型物件堆積閾值
 

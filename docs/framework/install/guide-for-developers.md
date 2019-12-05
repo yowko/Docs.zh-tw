@@ -8,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 8c4b328cdecb468af57fe699283584e901772175
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6098c2b855e692eef198e388ba9b29a4e8cc8de1
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092001"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802220"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安裝適用於開發人員的 .NET Framework
 
@@ -43,8 +43,8 @@ ms.locfileid: "73092001"
 |**4.6.1**|[.NET Framework 4.6.1 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=690706)|[4.6.1 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [4.6.1 離線安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=671744)|**您可以安裝於：**<br /><br/> Windows 10 <br /> Windows 8.1 (含) 以前版本<br /> Windows Server 2012 R2 (含) 以前版本<br /> (如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))|
 |**4.6**|隨附於 Visual Studio 2015。<br /><br /> [Microsoft .NET Framework 4.6 目標套件](https://go.microsoft.com/fwlink/?LinkId=528261)|[4.6 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [4.6 離線安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=528233)|**包含在：** <br/><br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **您也可以安裝於：**<br /><br/> Windows 8.1 (含) 以前版本<br /> Windows Server 2012 R2 (含) 以前版本<br /> (如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))|
 |**4.5.2**|[Microsoft .NET Framework 4.5.2 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> 適用於 Visual Studio 2013、Visual Studio 2012 或其他 IDE|[4.5.2 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [4.5.2 離線安裝程式的下載頁面](https://go.microsoft.com/fwlink/p/?LinkId=397706)|**您可以安裝於：**<br /><br/> Windows 8.1 (含) 以前版本<br /> Windows Server 2012 R2 (含) 以前版本<br /> (如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))|
-|**4.5.1**|[Microsoft .NET Framework 4.5.1 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> 適用於 Visual Studio 2013、Visual Studio 2012 或其他 IDE|[4.5.1 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [4.5.1 離線安裝程式的下載頁面](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**包含在：**<br /> <br/>[!INCLUDE[win81](../../../includes/win81-md.md)]<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **您也可以安裝於：**<br /><br/> [!INCLUDE[win8](../../../includes/win8-md.md)] (含) 以前版本<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] (含) 以前版本<br />(如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))|
-|**4.5**|隨附於 Visual Studio 2012<br /><br /> 同時也隨附於 Windows 8 SDK|[4.5 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**包含在：** <br/><br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **您也可以安裝於：**<br/><br /> Windows 7 (含) 以前版本<br /> Windows Server 2008 SP2 (含) 以前版本<br />(如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))|
+|**4.5.1**|[Microsoft .NET Framework 4.5.1 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> 適用於 Visual Studio 2013、Visual Studio 2012 或其他 IDE|[4.5.1 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [4.5.1 離線安裝程式的下載頁面](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**包含在：**<br /> <br/>Windows 8.1<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **您也可以安裝於：**<br /><br/> Windows 8 和更早版本<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] (含) 以前版本<br />(如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))|
+|**4.5**|隨附於 Visual Studio 2012<br /><br /> 同時也隨附於 Windows 8 SDK|[4.5 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**包含在：** <br/><br /> Windows 8<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **您也可以安裝於：**<br/><br /> Windows 7 (含) 以前版本<br /> Windows Server 2008 SP2 (含) 以前版本<br />(如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))|
 
 您可以在所有支援的平台上，安裝特定 .NET Framework 版本的**開發人員套件** (如果有的話)。
 
@@ -159,7 +159,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 - .NET Framework 4.5 可轉散發套件已於 2012 年 10 月 9 日更新，更正了與數位憑證時間戳記錯誤相關的問題，這個問題會造成 Microsoft 所產生和簽署之檔案中的數位簽章提前過期。 如果您先前安裝了日期為 2012 年 8 月 16 日的 .NET Framework 4.5 可轉散發套件，我們建議您使用 [Microsoft 下載中心](https://go.microsoft.com/fwlink/p/?LinkId=245484)最新的可轉散發套件進行更新。 如需這個問題的詳細資訊，請參閱 [Microsoft 資訊安全諮詢 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) 和[知識庫文章 2770445](https://support.microsoft.com/kb/2770445)。
 
-## <a name="to-install-language-packs"></a>若要安裝語言套件
+## <a name="to-install-language-packs"></a>安裝語言套件
 
 語言套件是包含所支援語言之當地語系化資源的可執行檔 (例如，翻譯的錯誤訊息和 UI 文字)。 如果您未安裝語言套件，則會以英文顯示 .NET Framework 錯誤訊息及其他文字。  請注意，Web 安裝程式會自動安裝符合您作業系統的語言套件，但是您可以將其他語言套件下載至您的電腦。 離線安裝程式並未包含任何語言套件。
 
@@ -194,7 +194,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 下表列出支援的語言。
 
-| 語言              | culture |
+| 語言              | Culture |
 | --------------------- | :-----: |
 | 阿拉伯文                | ar      |
 | 捷克文                 | cs      |

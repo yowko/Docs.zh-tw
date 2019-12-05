@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 39a7db3fb7dc3651f2cf6c850e7ebb5525e24963
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 143cc0f4566d86f1d42ebd11063f9af3c1ec331f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281637"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802436"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和非同步作業
 本主題討論實作和呼叫非同步服務作業。  
@@ -107,7 +107,7 @@ public class AsyncExample
 }  
 ```  
   
- 如需事件架構非同步模式的詳細資訊，請參閱[事件架構非同步模式](https://go.microsoft.com/fwlink/?LinkId=232515)。  
+ 如需事件架構非同步模式的詳細資訊，請參閱[事件架構非同步模式](../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)。  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>IAsyncResult 非同步模式  
  服務作業可以使用 .NET Framework 非同步程式設計模式來以非同步方式執行，並將 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 屬性設定為 `true`來標記 `<Begin>` 的方法。 在此情況下，會使用和同步作業相同的形式，在中繼資料中公開非同步作業：非同步作業會公開為具有要求訊息和相關聯之回應訊息的單一作業。 用戶端程式設計模型接著就會做出選擇。 只要在叫用服務時發生要求/回應訊息交換，這些程式設計模型就會將此模式表示為同步作業或非同步作業。  
@@ -166,7 +166,7 @@ Function EndDoWork(ByRef inout As String, ByRef outonly As String, ByVal result 
 await simpleServiceClient.SampleMethodTaskAsync("hello, world");  
 ```  
   
- 使用事件架構非同步模式時，只需要加入事件處理常式以接收回應的通知 -- 結果事件會自動在使用者介面執行緒上引發。 若要使用此方法，請使用 **ServiceModel 中繼資料公用程式工具 (Svcutil.exe)** 同時指定 **/async** 和 [/tcv:Version35](servicemodel-metadata-utility-tool-svcutil-exe.md) 命令選項，如下列範例所示。  
+ 使用事件架構非同步模式時，只需要加入事件處理常式以接收回應的通知 -- 結果事件會自動在使用者介面執行緒上引發。 若要使用此方法，請使用 [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 同時指定 **/async** 和 **/tcv:Version35** 命令選項，如下列範例所示。  
   
 ```console  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
@@ -174,7 +174,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
   
  當完成時，Svcutil.exe 會產生 WCF 用戶端類別，其中的事件基礎結構能夠呼叫應用程式去實作與指派事件處理常式，以接收回應並採取適當的動作。 如需完整範例，請參閱[如何：以非同步方式呼叫服務作業](./feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
- 不過，事件架構非同步模型僅適用于 .NET Framework 3.5。 此外，在使用 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>建立 WCF 用戶端通道時，即使在 .NET Framework 3.5 中也不支援。 透過 WCF 用戶端通道物件，您必須使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 物件以非同步方式叫用您的作業。 若要使用此方法，請使用 **ServiceModel 中繼資料公用程式工具 (Svcutil.exe)** 指定 [/async](servicemodel-metadata-utility-tool-svcutil-exe.md) 命令選項，如下列範例所示。  
+ 不過，事件架構非同步模型僅適用于 .NET Framework 3.5。 此外，在使用 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>建立 WCF 用戶端通道時，即使在 .NET Framework 3.5 中也不支援。 透過 WCF 用戶端通道物件，您必須使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 物件以非同步方式叫用您的作業。 若要使用此方法，請使用 [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 指定 **/async** 命令選項，如下列範例所示。  
   
 ```console  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   

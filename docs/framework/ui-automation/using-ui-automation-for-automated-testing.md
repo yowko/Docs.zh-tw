@@ -6,16 +6,16 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: a22474d943212e35310a0e8bcf6643c4a99c0389
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2da0f994e809ff0ea9cd3165cd788ac467a87aef
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039406"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800792"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>使用 UI 自動化進行自動化測試
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本概觀說明 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 在自動化測試案例中做為程式設計存取的架構有何幫助。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73039406"
 > 藉由其他協助工具模式，開發人員必須直接從個別按鈕、功能或其他控制項收集資訊。 可惜的是，每種控制項類型都有許多次要變化。 換句話說，即使按鈕的十個變化全都以相同方式運作，並執行相同功能，仍必須全都視為唯一的控制項。 無法得知這些控制項是否功能對等。 開發控制項模式的目的就是為了呈現這些常見的控制項行為。 如需詳細資訊，請參閱 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。  
   
 ### <a name="implementing-ui-automation"></a>實作使用者介面自動化  
- 如上所述，如果沒有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]所提供的一致模型，測試工具和開發人員就必須知道架構特定的資訊，才能公開該架構中控制項的屬性和行為。 由於 Windows 作業系統中的任何一次可能會有數個不同的 UI 架構，包括 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]、[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]和 Windows Presentation Foundation （WPF），因此使用控制項測試多個應用程式會是一項艱巨的工作，看起來像這樣。 例如，下表列出擷取與按鈕控制項相關名稱 (或文字) 時所需的架構特定屬性名稱，並顯示單一對等的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性。  
+ 如上所述，如果沒有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]所提供的一致模型，測試工具和開發人員就必須知道架構特定的資訊，才能公開該架構中控制項的屬性和行為。 由於 Windows 作業系統中的任何單一時間可能會有數個不同的 UI 架構，包括 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]、[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]和 Windows Presentation Foundation （WPF），因此使用看起來類似的控制項來測試多個應用程式可能是一項艱巨的工作。 例如，下表列出擷取與按鈕控制項相關名稱 (或文字) 時所需的架構特定屬性名稱，並顯示單一對等的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性。  
   
 |使用者介面自動化控制項類型|使用者介面架構|架構特定的屬性|使用者介面自動化屬性|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  

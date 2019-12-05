@@ -7,12 +7,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: 2231552f9c3353890963a4ad5388194036fa27bf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 063d7b5cfddace89efa636327c71a214ee01fdd0
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134093"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802722"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework 中過時的成員
 
@@ -94,7 +94,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-mscorlibdll"></a>組件：mscorlib.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:Microsoft.Win32.Registry?displayProperty=nameWithType>|<xref:Microsoft.Win32.Registry.DynData>|<xref:Microsoft.Win32.Registry.DynData> 登錄機碼僅適用於 Win9x，不再受到 CLR 的支援。 在 NT 架構的作業系統上，請改用 <xref:Microsoft.Win32.Registry.PerformanceData?displayProperty=nameWithType> 登錄機碼或 <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.PerformanceData%2A?displayProperty=nameWithType> 登錄 Proxy。|
 |<xref:System.Activator?displayProperty=nameWithType>|<xref:System.Activator.CreateInstance%28System.AppDomain%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用 <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> 參數的                                          <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 多載。|
@@ -180,10 +180,10 @@ ms.locfileid: "73134093"
 |<xref:System.Reflection.AssemblyFlagsAttribute?displayProperty=nameWithType>|<xref:System.Reflection.AssemblyFlagsAttribute.Flags%2A>|這個屬性已被取代。 請改用 <xref:System.Reflection.AssemblyFlagsAttribute.AssemblyFlags%2A?displayProperty=nameWithType> 。|
 |<xref:System.Reflection.Emit.ConstructorBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ConstructorBuilder.ReturnType%2A>|這個屬性已被取代。|
 |<xref:System.Reflection.Emit.FieldBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FieldBuilder.SetMarshal%2A>|有替代的 API 可用：請改為發出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自訂屬性。|
-|<xref:System.Reflection.Emit.FlowControl?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FlowControl.Phi>|這個 API 已被取代。|
+|<xref:System.Reflection.Emit.FlowControl?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FlowControl.Phi>|此 API 已經被取代。|
 |<xref:System.Reflection.Emit.MethodBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.MethodBuilder.SetMarshal%2A>|有替代的 API 可用：請改為發出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自訂屬性。|
-|<xref:System.Reflection.Emit.OpCodeType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OpCodeType.Annotation>|這個 API 已被取代。|
-|<xref:System.Reflection.Emit.OperandType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OperandType.InlinePhi>|這個 API 已被取代。|
+|<xref:System.Reflection.Emit.OpCodeType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OpCodeType.Annotation>|此 API 已經被取代。|
+|<xref:System.Reflection.Emit.OperandType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OperandType.InlinePhi>|此 API 已經被取代。|
 |<xref:System.Reflection.Emit.ParameterBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ParameterBuilder.SetMarshal%2A>|有替代的 API 可用：請改為發出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自訂屬性。|
 |<xref:System.Resources.ResourceManager?displayProperty=nameWithType>|<xref:System.Resources.ResourceManager.ResourceSets>|請改為呼叫 <xref:System.Resources.ResourceManager.InternalGetResourceSet%28System.Globalization.CultureInfo%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType>。|
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A>|<xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A> 方法已被取代，將在未來的版本中移除。|
@@ -224,10 +224,10 @@ ms.locfileid: "73134093"
 |<xref:System.Security.Cryptography.X509Certificates.X509Certificate?displayProperty=nameWithType>|<xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetName%2A>|這個方法已被取代。 請改用 <xref:System.Security.Cryptography.X509Certificates.X509Certificate.Subject%2A?displayProperty=nameWithType> 屬性。|
 |<xref:System.Security.Permissions.FileIOPermissionAttribute?displayProperty=nameWithType>|<xref:System.Security.Permissions.FileIOPermissionAttribute.All%2A>|請改用 <xref:System.Security.Permissions.FileIOPermissionAttribute.ViewAndModify%2A?displayProperty=nameWithType> 屬性。|
 |<xref:System.Security.Permissions.ReflectionPermissionAttribute?displayProperty=nameWithType>|<xref:System.Security.Permissions.ReflectionPermissionAttribute.ReflectionEmit%2A>|CLR 已不再使用這個權限。|
-|<xref:System.Security.Permissions.ReflectionPermissionAttribute?displayProperty=nameWithType>|<xref:System.Security.Permissions.ReflectionPermissionAttribute.TypeInformation%2A>|這個 API 已被取代。|
+|<xref:System.Security.Permissions.ReflectionPermissionAttribute?displayProperty=nameWithType>|<xref:System.Security.Permissions.ReflectionPermissionAttribute.TypeInformation%2A>|此 API 已經被取代。|
 |<xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType>|<xref:System.Security.Permissions.ReflectionPermissionFlag.AllFlags>|這個權限已被取代。 <xref:System.Security.Permissions.ReflectionPermissionFlag.AllFlags> 列舉成員不包含 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>。 請使用 <xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType> 來取得完整存取權。|
 |<xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType>|<xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>|CLR 已不再使用這個權限。|
-|<xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType>|<xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation>|這個 API 已被取代。|
+|<xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType>|<xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation>|此 API 已經被取代。|
 |<xref:System.Security.Permissions.RegistryPermissionAttribute?displayProperty=nameWithType>|<xref:System.Security.Permissions.RegistryPermissionAttribute.All%2A>|請改用 <xref:System.Security.Permissions.RegistryPermissionAttribute.ViewAndModify%2A?displayProperty=nameWithType> 屬性。|
 |<xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType>|<xref:System.Security.Permissions.SecurityAction.Deny>|<xref:System.Security.Permissions.SecurityAction.Deny> 已經過時，將在未來的 .NET Framework 版本中移除。|
 |<xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType>|<xref:System.Security.Permissions.SecurityAction.RequestMinimum>|組件層級宣告式安全性已過期，CLR 預設不再強制使用。|
@@ -261,7 +261,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-presentationcoredll"></a>組件：PresentationCore.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Windows.UIElement?displayProperty=nameWithType>|<xref:System.Windows.UIElement.BitmapEffect%2A>|點陣圖效果已被取代而不再有效。 請考慮在適當時改用 <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType>。|
 |<xref:System.Windows.UIElement?displayProperty=nameWithType>|<xref:System.Windows.UIElement.BitmapEffectInput%2A>|點陣圖效果已被取代而不再有效。 請考慮在適當時改用 <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType>。|
@@ -301,7 +301,7 @@ ms.locfileid: "73134093"
 <a name="PresFW"></a>
 ### <a name="assembly-presentationframeworkdll"></a>組件：PresentationFramework.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Windows.Data.BindingListCollectionView?displayProperty=nameWithType>|<xref:System.Windows.Data.CollectionView.OnBeginChangeLogging%2A>|取代成 <xref:System.Windows.Data.CollectionView.OnAllowsCrossThreadChangesChanged%2A?displayProperty=nameWithType>。|
 |<xref:System.Windows.Data.CollectionView?displayProperty=nameWithType>|<xref:System.Windows.Data.CollectionView.ClearChangeLog%2A>|取代成 <xref:System.Windows.Data.CollectionView.ClearPendingChanges%2A?displayProperty=nameWithType>。|
@@ -312,7 +312,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemactivitiesdll"></a>組件：System.Activities.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=nameWithType>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.Xaml.IXamlLineInfo%2CSystem.IO.TextReader%29>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 請勿使用這個建構函式。 請改用 <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29?displayProperty=nameWithType> 或 <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29?displayProperty=nameWithType>。|
 |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=nameWithType>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.IO.TextReader%29?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 請勿使用這個建構函式。 請改用 <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29?displayProperty=nameWithType> 或 <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29?displayProperty=nameWithType>。|
@@ -321,7 +321,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemactivitiespresentationdll"></a>組件：System.Activities.Presentation.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Activities.Presentation.DragDropHelper?displayProperty=nameWithType>|<xref:System.Activities.Presentation.DragDropHelper.DoDragMove%28System.Activities.Presentation.WorkflowViewElement%2CSystem.Windows.Point%29>|這個方法不支援拖曳多個項目。|
 |<xref:System.Activities.Presentation.DragDropHelper?displayProperty=nameWithType>|<xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Windows.DragEventArgs%29>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個方法不支援拖曳多個項目。 請改用 <xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Activities.Presentation.WorkflowViewElement%29> 。|
@@ -337,7 +337,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemcoredll"></a>組件：System.Core.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords?displayProperty=nameWithType>|<xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords.CorrelationHint>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 不正確的值；請改用 <xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords.CorrelationHint2>。|
 |<xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>|<xref:System.Linq.ParallelEnumerable.Concat%60%601%28System.Linq.ParallelQuery%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%600%7D%29>|二元運算子的第二個資料來源必須是 <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType> 類型，而不是 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>。 若要修正這個問題，請使用 <xref:System.Linq.ParallelEnumerable.AsParallel%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> 擴充方法將右邊資料來源轉換成 <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType>。|
@@ -381,7 +381,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemdatadll"></a>組件：System.Data.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute.%23ctor%2A>|<xref:System.Data.DataSysDescriptionAttribute> 已被取代。|
 |<xref:System.Data.Common.DataAdapter?displayProperty=nameWithType>|<xref:System.Data.Common.DataAdapter.CloneInternals%2A>|<xref:System.Data.Common.DataAdapter.CloneInternals%2A> 已被取代。 請使用 <xref:System.Data.Common.DataAdapter.%23ctor%28System.Data.Common.DataAdapter%29> 建構函式。|
@@ -404,7 +404,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemdataentitydll"></a>組件：System.Data.Entity.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Data.Metadata.Edm.AssociationSetEnd?displayProperty=nameWithType>|<xref:System.Data.Metadata.Edm.AssociationSetEnd.Role%2A>|這個屬性即將消失，請改用 <xref:System.Data.Metadata.Edm.AssociationSetEnd.Name%2A?displayProperty=nameWithType> 屬性。|
 |<xref:System.Data.Metadata.Edm.MetadataWorkspace?displayProperty=nameWithType>|<xref:System.Data.Metadata.Edm.MetadataWorkspace.GetRequiredOriginalValueMembers%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 請改用 <xref:System.Data.Metadata.Edm.MetadataWorkspace.GetRelevantMembersForUpdate%2A?displayProperty=nameWithType> 。|
@@ -415,7 +415,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemdataoracleclientdll"></a>組件：System.Data.OracleClient.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Data.OracleClient.OracleParameter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameter.Precision%2A>|<xref:System.Data.OracleClient.OracleParameter.Precision%2A> 已被取代。 請使用 <xref:System.Math?displayProperty=nameWithType> 類別來明確設定小數的有效位數。|
 |<xref:System.Data.OracleClient.OracleParameter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameter.Scale%2A>|<xref:System.Data.OracleClient.OracleParameter.Scale%2A> 已被取代。 請使用 <xref:System.Math?displayProperty=nameWithType> 類別來明確設定小數的小數位數。|
@@ -425,7 +425,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemdesigndll"></a>組件：System.Design.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.ComponentModel.Design.ComponentDesigner?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ComponentDesigner.InitializeNonDefault%2A>|這個方法已被取代。 請改用 <xref:System.ComponentModel.Design.ComponentDesigner.InitializeExistingComponent%2A?displayProperty=nameWithType> 。|
 |<xref:System.ComponentModel.Design.ComponentDesigner?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ComponentDesigner.OnSetComponentDefaults%2A>|這個方法已被取代。 請改用 <xref:System.ComponentModel.Design.ComponentDesigner.InitializeNewComponent%2A?displayProperty=nameWithType> 。|
@@ -479,7 +479,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemdll"></a>組件：System.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=nameWithType>|<xref:Microsoft.CSharp.CSharpCodeProvider.CreateCompiler%2A>|呼叫端不應該使用 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> 介面，而是改為直接在 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 類別上使用方法。|
 |<xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=nameWithType>|<xref:Microsoft.CSharp.CSharpCodeProvider.CreateGenerator%2A>|呼叫端不應該使用 <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=nameWithType> 介面，而是改為直接在 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 類別上使用方法。|
@@ -592,7 +592,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemdrawingdll"></a>組件：System.Drawing.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Drawing.FontFamily?displayProperty=nameWithType>|<xref:System.Drawing.FontFamily.GetFamilies%2A>|請勿使用 <xref:System.Drawing.FontFamily.GetFamilies%2A> 方法，改為使用 <xref:System.Drawing.FontFamily.Families%2A?displayProperty=nameWithType> 屬性。|
 |<xref:System.Drawing.Imaging.EncoderParameter?displayProperty=nameWithType>|<xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個建構函式已被取代。 使用 <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Drawing.Imaging.EncoderParameterValueType%2CSystem.IntPtr%29>。|
@@ -601,7 +601,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemmessagingdll"></a>組件：System.Messaging.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Messaging.MessageQueue?displayProperty=nameWithType>|<xref:System.Messaging.MessageQueue.GetEnumerator%2A>|這個方法會傳回不正確實作 <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=nameWithType> 系列方法的 <xref:System.Messaging.MessageEnumerator?displayProperty=nameWithType>。 請改用 <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=nameWithType> 。|
 |<xref:System.Messaging.MessageQueue?displayProperty=nameWithType>|<xref:System.Messaging.MessageQueue.GetMessageEnumerator%2A>|這個方法會傳回不正確實作 <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=nameWithType> 系列方法的 <xref:System.Messaging.MessageEnumerator?displayProperty=nameWithType>。 請改用 <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=nameWithType> 。|
@@ -610,7 +610,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemservicemodeldll"></a>組件：System.ServiceModel.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個屬性已經過時。 若要啟用 HTTP <xref:System.Net.CookieContainer>，請改用 <xref:System.ServiceModel.HttpBindingBase.AllowCookies%2A?displayProperty=nameWithType> 屬性。|
 |<xref:System.ServiceModel.Configuration.BindingsSection?displayProperty=nameWithType>|<xref:System.ServiceModel.Configuration.BindingsSection.NetPeerTcpBinding%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 對等通道功能已經過時，未來將會移除。|
@@ -623,7 +623,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemservicemodeldiscoverydll"></a>組件：System.ServiceModel.Discovery.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint?displayProperty=nameWithType>|<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.TransportSettings%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.TransportSettings%2A> 屬性已經過時。 請考慮使用 <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=nameWithType> 來設定傳輸屬性。|
 |<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint?displayProperty=nameWithType>|<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A> 屬性已經過時。 請考慮使用 <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=nameWithType> 來設定傳輸屬性。|
@@ -632,7 +632,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemwebdatavisualizationdll"></a>組件：System.Web.DataVisualization.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Web.UI.DataVisualization.Charting.Chart?displayProperty=nameWithType>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A> 已被取代。 請改為查看 <xref:System.Web.UI.Control.ViewState%2A?displayProperty=nameWithType>。|
 
@@ -640,14 +640,14 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemwebdll"></a>組件：System.Web.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetAppConfig%2A>|建議的替代做法是 System.Web.dll 中的 <xref:System.Web.Configuration.WebConfigurationManager.GetWebApplicationSection%2A?displayProperty=nameWithType>。|
 |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetConfig%2A>|建議的替代做法是 System.Web.dll 中的 <xref:System.Web.HttpContext.GetSection%2A?displayProperty=nameWithType>。|
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicode%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個方法會產生非標準相容的輸出，而且會出現互通性問題。 慣用的替代做法是 <xref:System.Web.HttpUtility.UrlEncode%28System.String%29>。|
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicodeToBytes%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個方法會產生非標準相容的輸出，而且會出現互通性問題。 慣用的替代做法是 <xref:System.Web.HttpUtility.UrlEncodeToBytes%28System.String%29>。|
-|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|這個欄位已經過時。 已不再支援 Passport 驗證產品，並且以 [Microsoft 帳戶](https://go.microsoft.com/fwlink/?LinkId=733413)取代該產品。|
-|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|這個屬性已經過時。 已不再支援 Passport 驗證產品，並且以 [Microsoft 帳戶](https://go.microsoft.com/fwlink/?LinkId=733413)取代該產品。|
+|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|這個欄位已經過時。 已不再支援 Passport 驗證產品，並且以 [Microsoft 帳戶](https://account.microsoft.com/account/Account?destrt=home-index)取代該產品。|
+|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|這個屬性已經過時。 已不再支援 Passport 驗證產品，並且以 [Microsoft 帳戶](https://account.microsoft.com/account/Account?destrt=home-index)取代該產品。|
 |<xref:System.Web.Configuration.HttpCapabilitiesBase?displayProperty=nameWithType>|<xref:System.Web.Configuration.HttpCapabilitiesBase.JavaScript%2A>|建議的替代做法是 <xref:System.Web.Configuration.HttpCapabilitiesBase.EcmaScriptVersion%2A?displayProperty=nameWithType> 屬性。 <xref:System.Version.Major%2A?displayProperty=nameWithType> 版本值大於或等於 1，表示支援 JavaScript。|
 |<xref:System.Web.Configuration.SystemWebSectionGroup?displayProperty=nameWithType>|<xref:System.Web.Configuration.SystemWebSectionGroup.MobileControls%2A>|System.Web.Mobile.dll 已經過時。|
 |<xref:System.Web.Routing.UrlRoutingModule?displayProperty=nameWithType>|<xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A>|這個方法已過時。 請覆寫 <xref:System.Web.Routing.UrlRoutingModule.Init%2A> 方法以使用 <xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A> 事件。|
@@ -676,7 +676,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemwebdynamicdatadll"></a>組件：System.Web.DynamicData.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Web.DynamicData.DynamicDataExtensions?displayProperty=nameWithType>|<xref:System.Web.DynamicData.DynamicDataExtensions.EnablePersistedSelection%2A>|請使用資料繫結控制項 (例如 <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> 或 <xref:System.Web.UI.WebControls.ListView?displayProperty=nameWithType>) 上的 `EnablePersistedSelection` 屬性。|
 
@@ -684,7 +684,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemwebextensionsdll"></a>組件：System.Web.Extensions.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Web.UI.CompositeScriptReference?displayProperty=nameWithType>|<xref:System.Web.UI.CompositeScriptReference.IsFromSystemWebExtensions%2A>|使用 <xref:System.Web.UI.CompositeScriptReference.IsAjaxFrameworkScript%2A?displayProperty=nameWithType>。|
 |<xref:System.Web.UI.ScriptManager?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptManager.ScriptPath%2A>|這個屬性已經過時。 請改為設定每個個別 <xref:System.Web.UI.ScriptReference?displayProperty=nameWithType> 的 [`System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A) 屬性。|
@@ -699,7 +699,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemwebservicesdll"></a>組件：System.Web.Services.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Web.Services.Discovery.DiscoveryClientProtocol?displayProperty=nameWithType>|<xref:System.Web.Services.Discovery.DiscoveryClientProtocol.LoadExternals%2A>|這個方法將從未來的版本中移除。 資源探索已不再需要這個方法呼叫。|
 |<xref:System.Web.Services.Protocols.SoapHeaderAttribute?displayProperty=nameWithType>|<xref:System.Web.Services.Protocols.SoapHeaderAttribute.Required%2A>|這個屬性將從未來的版本中移除。 不再強制要求 SOAP 訊息中一定要有特定標頭。|
@@ -708,7 +708,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemwindowsformsdll"></a>組件：System.Windows.Forms.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Windows.Forms.AccessibleStates?displayProperty=nameWithType>|<xref:System.Windows.Forms.AccessibleStates.Valid>|這個列舉值已被取代。 沒有任何取代。|
 |<xref:System.Windows.Forms.ComboBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ComboBox.AddItemsCore%2A>|這個方法已被取代。 沒有任何取代。|
@@ -726,7 +726,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemxamldll"></a>組件：System.Xaml.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.ExpressionType%2A>|XAML 剖析器已不使用這個項目。 請參閱<xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>.|
 |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%2CSystem.Type%29>|XAML 剖析器不再使用 `expressionType` 引數。 若要指定預期的傳回類型，請使用 <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%29?displayProperty=nameWithType>。 若要指定運算式類型的自訂處理方式，請使用 <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>。|
@@ -735,7 +735,7 @@ ms.locfileid: "73134093"
 
 ### <a name="assembly-systemxmldll"></a>組件：System.Xml.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Xml.ValidationType?displayProperty=nameWithType>|<xref:System.Xml.ValidationType.Auto>|驗證類型應該指定為 <xref:System.Xml.ValidationType.DTD?displayProperty=nameWithType> 或 <xref:System.Xml.ValidationType.Schema?displayProperty=nameWithType>。|
 |<xref:System.Xml.ValidationType?displayProperty=nameWithType>|<xref:System.Xml.ValidationType.XDR>|透過 <xref:System.Xml.XmlValidatingReader?displayProperty=nameWithType> 進行 XDR 驗證已經過時。|
@@ -770,7 +770,7 @@ IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有�
 
 ### <a name="assembly-isymwrapperdll"></a>組件：ISymWrapper.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=nameWithType>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|建議的替代做法是 <xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType>。 <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=nameWithType> 會接受匯入工具介面指標當做 <xref:System.IntPtr?displayProperty=nameWithType> 而不是 <xref:System.Int32?displayProperty=nameWithType>，因此可同時在 32 位元和 64 位元架構上運作。|
 
@@ -778,7 +778,7 @@ IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有�
 
 ### <a name="assembly-microsoftbuildconversionv40dll"></a>組件：Microsoft.Build.Conversion.v4.0.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=nameWithType>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%28Microsoft.Build.BuildEngine.ProjectLoadSettings%29>|請改用無參數的 <xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert> 多載。|
 |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=nameWithType>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%28System.String%29>|請改用無參數的 <xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert> 多載。|
@@ -789,7 +789,7 @@ IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有�
 
 ### <a name="assembly-microsoftbuildenginedll"></a>組件：Microsoft.Build.Engine.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>|請避免設定 <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>。 如果您只要傳入 .NET Framework 位置當做 <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>，就不需要採取任何其他動作。 否則，請改為在登錄或組態檔中定義工具組，或將項目加入引擎的 <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType>，以使用自訂 <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>。|
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28System.String%29>|如果您只要傳入 .NET Framework 位置當做 <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>，只要變更為無參數的 <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=nameWithType> 建構函式即可。 否則，您可以在登錄或組態檔中定義自訂工具組，或將項目加入引擎的 <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType>。 然後，請改用 <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=nameWithType> 或 <xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28Microsoft.Build.BuildEngine.ToolsetDefinitionLocations%29?displayProperty=nameWithType> 建構函式。|
@@ -798,7 +798,7 @@ IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有�
 
 ### <a name="assembly-microsoftbuildframeworkdll"></a>組件：Microsoft.Build.Framework.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:Microsoft.Build.Framework.XamlTypes.ContentType?displayProperty=nameWithType>|<xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 使用這個成員會產生編譯器錯誤。<br /><br /> 請改用 <xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemType%2A?displayProperty=nameWithType> 屬性。|
 
@@ -806,7 +806,7 @@ IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有�
 
 ### <a name="assembly-microsoftbuildutilitiesv40dll"></a>組件：Microsoft.Build.Utilities.v4.0.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:Microsoft.Build.Utilities.ToolTask?displayProperty=nameWithType>|<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride%2A>|請使用 <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A?displayProperty=nameWithType> 屬性。|
 
@@ -814,7 +814,7 @@ IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有�
 
 ### <a name="assembly-microsoftdataentitybuildtasksdll"></a>組件：Microsoft.Data.Entity.Build.Tasks.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |`Microsoft.Data.Entity.Build.Tasks.EntityDeploy`|`EntityDataModelEmbeddedResources`|在 .NET Framework 4.5 中首先被取代。<br /><br /> 僅用於 3.5 版回溯相容性。|
 
@@ -822,7 +822,7 @@ IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有�
 
 ### <a name="assembly-microsoftvisualbasicdll"></a>組件：Microsoft.VisualBasic.dll
 
-|輸入|成員|訊息|
+|類型|成員|訊息|
 |----------|------------|-------------|
 |<xref:Microsoft.VisualBasic.FileSystem?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.FileSystem.FilePut%28System.Object%2CSystem.Object%2CSystem.Object%29>|這個成員已被取代。 請使用 <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A?displayProperty=nameWithType> 來寫入 <xref:System.Object> 類型，或將 `FileNumber` 和 `RecordNumber` 強制轉型成 <xref:System.Int32>，以便寫入非物件類型。|
 |<xref:Microsoft.VisualBasic.CompilerServices.Conversions?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.CompilerServices.Conversions.FallbackUserDefinedConversion%2A>|使用這個成員會產生編譯器錯誤。<br /><br /> 請勿使用這個方法。|

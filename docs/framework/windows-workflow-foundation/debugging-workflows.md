@@ -2,16 +2,16 @@
 title: 偵錯工作流程
 ms.date: 03/30/2017
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
-ms.openlocfilehash: 3947e61161b0e2108fa48fbc7e33fb7601645a1b
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 2bfc50215697636f1771d6bb35510fbf9e0b435d
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291484"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802631"
 ---
 # <a name="debugging-workflows"></a>偵錯工作流程
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 提供了數個選項，可讓您從開發環境中執行工作流程的偵錯工具。 可在設計工具、XAML 與程式碼中將工作流程偵錯。
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]提供一些從開發環境進行偵錯工作流程的選項。 可在設計工具、XAML 與程式碼中將工作流程偵錯。
 
 ## <a name="debugging-in-the-workflow-designer"></a>在工作流程設計工具中偵錯
 
@@ -29,9 +29,9 @@ ms.locfileid: "72291484"
 
 工作流程偵錯也支援使用 Visual Studio 的基礎結構來附加至處理序。 這可讓工作流程的作者在不同的主機環境中 (例如 Internet Information Services (IIS) 7.0) 執行時偵錯工作流程。
 
-## <a name="remote-debugging"></a>遠端偵錯
+## <a name="remote-debugging"></a>Remote Debugging
 
-Windows Workflow Foundation （WF）遠端偵錯程式與其他 Visual Studio 元件的遠端偵錯功能相同。 如需使用遠端偵錯程式的詳細資訊，請參閱[如何：啟用遠端偵錯](https://go.microsoft.com/fwlink/?LinkId=196257)。
+Windows Workflow Foundation （WF）遠端偵錯程式與其他 Visual Studio 元件的遠端偵錯功能相同。 如需使用遠端偵錯程式的詳細資訊，請參閱[如何：啟用遠端偵錯](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100))。
 
 > [!NOTE]
 > 如果工作流應用程式的目標為 x86 架構，並裝載在執行64位作業系統的電腦上，則除非遠端電腦上已安裝 Visual Studio，或工作流程應用程式的目標變更為 [**任何 CPU**]，否則遠端偵錯程式將無法運作。

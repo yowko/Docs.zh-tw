@@ -2,12 +2,12 @@
 title: 執行時間設定
 description: 瞭解如何使用執行時間設定設定來設定 .NET Core 應用程式。
 ms.date: 11/13/2019
-ms.openlocfilehash: e3922f6df81198b5e122f16d5cfc4b6d15cbb4ae
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 2665026347e94d26026821beb2bfcf8441f755f6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567383"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801925"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core 執行時間設定
 
@@ -26,11 +26,11 @@ ms.locfileid: "74567383"
 
 - [環境變數](#environment-variables)
 
-檔集的這一節中的文章包含依類別目錄進行組織，例如，「偵測」和「垃圾收集」。 *.Runtimeconfig.json*會顯示可用的設定選項： [僅限 .net Core）]、[app.config （僅限 .NET Framework）]*和 [環境*變數]。
+檔集的這一節中的文章包含依類別目錄進行組織，例如，「偵測」和「垃圾收集」。 適用時，會顯示 *.runtimeconfig.json*的設定選項（僅限 .net Core）、 *app.config* （僅限 .NET Framework）和環境變數。
 
 ## <a name="runtimeconfigjson"></a>.runtimeconfig.json json
 
-在 *.runtimeconfig.json*檔案的**configProperties**區段中，指定執行時間設定選項。 本節的格式如下：
+在應用程式的 *.runtimeconfig.json*檔案的**configProperties**區段中，指定執行時間設定選項。 本節的格式如下：
 
 ```json
 {

@@ -2,12 +2,12 @@
 title: 在具有 Interop 活動的 .NET Framework 4 中使用 .NET Framework 3.0 WF 活動
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: de0a0474f0a996ce8c781064f56c03b483ca1bb9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fb9536d5ee7a31039d77deffc3c0b0c7a6263b66
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283186"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802566"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>在具有 Interop 活動的 .NET Framework 4 中使用 .NET Framework 3.0 WF 活動
 <xref:System.Activities.Statements.Interop> 活動是 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] （WF 4.5）活動，可在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程中包裝 .NET Framework 3.5 （WF 3.5）活動。 WF 3 活動可以是單一分葉活動，也可以是完整的活動樹狀。 執行（包括取消和例外狀況處理）以及 .NET Framework 3.5 活動的持續性會在執行之 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程實例的內容中發生。  
@@ -24,7 +24,7 @@ ms.locfileid: "74283186"
   
 - WF 3 活動必須有公用無參數的函式。  
   
-- 由於 <xref:System.Activities.Statements.Interop> 活動可支援的介面型別有限，所以無法直接使用<xref:System.Workflow.Activities.HandleExternalEventActivity> 與 <xref:System.Workflow.Activities.CallExternalMethodActivity>，但可使用以 [工作流程通訊活動] 工具 (WCA.exe) 所建立的衍生活動。 如需詳細資訊，請參閱[Windows Workflow Foundation 工具](https://go.microsoft.com/fwlink/?LinkId=178889)。  
+- 由於 <xref:System.Activities.Statements.Interop> 活動可支援的介面型別有限，所以無法直接使用<xref:System.Workflow.Activities.HandleExternalEventActivity> 與 <xref:System.Workflow.Activities.CallExternalMethodActivity>，但可使用以 [工作流程通訊活動] 工具 (WCA.exe) 所建立的衍生活動。 如需詳細資訊，請參閱[Windows Workflow Foundation 工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734408(v=vs.90))。  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>設定 Interop 活動內的 WF3 活動  
  為了設定資料並跨互通性界限在 WF3 活動內外傳遞該資料，WF 3 活動的屬性和中繼資料屬性會由 <xref:System.Activities.Statements.Interop> 活動公開。 WF 3 活動的中繼資料屬性 (例如 <xref:System.Workflow.ComponentModel.Activity.Name%2A>) 會透過 <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A> 集合公開。 這是名稱/值組的集合，用於定義 WF3 活動之中繼資料屬性的值。 中繼資料屬性是相依性屬性 (已設定其 <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata> 旗標) 所支援的屬性。  
@@ -34,13 +34,13 @@ ms.locfileid: "74283186"
 ## <a name="limitations-of-using-a-wf-3-activity-within-an-interop-activity"></a>在 Interop 活動內使用 WF3 活動的限制  
  WF 3 系統提供的活動不可直接包裝在 <xref:System.Activities.Statements.Interop> 活動中。 對部分 WF 3 活動 (例如 <xref:System.Workflow.Activities.DelayActivity>) 而言，這是因為已有類似的 WF 4.5 活動。 對其他活動而言，則是因為不支援該活動的功能。 許多 WF 3 系統提供的活動均可在由 <xref:System.Activities.Statements.Interop> 活動包裝的工作流程中使用，但必須遵守下列限制：  
   
-1. <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 無法用於 <xref:System.Activities.Statements.Interop> 活動中。  
+1. <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 不可用於 <xref:System.Activities.Statements.Interop> 活動。  
   
-2. <xref:System.Workflow.Activities.WebServiceInputActivity>、<xref:System.Workflow.Activities.WebServiceOutputActivity>和 <xref:System.Workflow.Activities.WebServiceFaultActivity> 無法用於 <xref:System.Activities.Statements.Interop> 活動中。  
+2. <xref:System.Workflow.Activities.WebServiceInputActivity>、<xref:System.Workflow.Activities.WebServiceOutputActivity> 和 <xref:System.Workflow.Activities.WebServiceFaultActivity> 不可用於 <xref:System.Activities.Statements.Interop> 活動。  
   
-3. <xref:System.Workflow.Activities.InvokeWorkflowActivity> 不能用在 <xref:System.Activities.Statements.Interop> 活動中。  
+3. <xref:System.Workflow.Activities.InvokeWorkflowActivity> 不可用於 <xref:System.Activities.Statements.Interop> 活動。  
   
-4. <xref:System.Workflow.ComponentModel.SuspendActivity> 不能用在 <xref:System.Activities.Statements.Interop> 活動中。  
+4. <xref:System.Workflow.ComponentModel.SuspendActivity> 不可用於 <xref:System.Activities.Statements.Interop> 活動。  
   
 5. 與補償相關的活動不可用於 <xref:System.Activities.Statements.Interop> 活動。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "74283186"
   
 2. WF 4.5 執行階段不會在異動開始時針對工作流程執行個體狀態執行檢查點，無論該異動的開始點為何 (在 <xref:System.Activities.Statements.Interop> 活動以內或以外)。  
   
-3. 會將 <xref:System.Activities.Statements.Interop> 活動內的活動 WF 3 追蹤記錄當成 <xref:System.Activities.Tracking.InteropTrackingRecord> 物件提供給 WF 4.5 追蹤參與者。 <xref:System.Activities.Tracking.InteropTrackingRecord> 是 <xref:System.Activities.Tracking.CustomTrackingRecord>的衍生。  
+3. 會將 <xref:System.Activities.Statements.Interop> 活動內的活動 WF 3 追蹤記錄當成 <xref:System.Activities.Tracking.InteropTrackingRecord> 物件提供給 WF 4.5 追蹤參與者。 <xref:System.Activities.Tracking.InteropTrackingRecord> 是 <xref:System.Activities.Tracking.CustomTrackingRecord> 的衍生物。  
   
 4. WF 3 自訂活動可以使用互通環境內的工作流程佇列存取資料，方式就和在 WF3 工作流程執行階段中完全相同。 不需要變更任何自訂活動程式碼。 在主機上，資料會透過繼續 <xref:System.Activities.Bookmark> 而加入 WF3 工作流程佇列。 書籤的名稱是 <xref:System.IComparable> 工作流程佇列名稱的字串形式。

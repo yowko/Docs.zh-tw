@@ -13,14 +13,14 @@ helpviewer_keywords:
 - international applications [.NET], calendars
 - culture, calendars
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
-ms.openlocfilehash: 7795fa8d348a3053e6d999d007a558b418cafbd3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: de8e5a03c769a22f3320c7785706555898bf8c1c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132522"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802735"
 ---
-# <a name="working-with-calendars"></a>使用日曆
+# <a name="work-with-calendars"></a>使用行事曆
 
 雖然日期和時間值代表一個時間點，但是其字串表示區分文化特性，而且同時取決於用於顯示特定文化特性之日期和時間值的慣例，以及該文化特性所使用的曆法。 本主題將探討在 .NET 中行事曆的支援，並討論行事曆類別在處理日期值時的使用方式。
 
@@ -92,7 +92,7 @@ ms.locfileid: "73132522"
 [!code-csharp[Conceptual.Calendars#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/datesandcalendars2.cs#3)]
 [!code-vb[Conceptual.Calendars#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/datesandcalendars2.vb#3)]
 
-### <a name="instantiating-dates-based-on-a-calendar"></a>根據行事歷來具現化日期
+### <a name="instantiate-dates-based-on-a-calendar"></a>根據行事曆具現化日期
 
 由於 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值是以西曆為主，因此，如果您想要使用不同曆法的日、月或年值，則必須呼叫包含 <xref:System.Globalization.Calendar> 類型之參數的多載建構函式來具現化日期值。 您也可以呼叫特定曆法之 <xref:System.Globalization.Calendar.ToDateTime%2A?displayProperty=nameWithType> 方法的其中一個多載，依據特殊曆法的值具現化 <xref:System.DateTime> 物件。
 
@@ -101,7 +101,7 @@ ms.locfileid: "73132522"
 [!code-csharp[Conceptual.Calendars#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatehcdate1.cs#4)]
 [!code-vb[Conceptual.Calendars#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatehcdate1.vb#4)]
 
-### <a name="representing-dates-in-the-current-calendar"></a>代表目前行事曆中的日期
+### <a name="represent-dates-in-the-current-calendar"></a>代表目前行事曆中的日期
 
 日期和時間格式化方法會固定使用現行曆法將日期轉換為字串。 這表示年、月和月份日期的字串表示會反映現行曆法，而且不一定會反映西曆。
 
@@ -110,7 +110,7 @@ ms.locfileid: "73132522"
 [!code-csharp[Conceptual.Calendars#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/currentcalendar1.cs#5)]
 [!code-vb[Conceptual.Calendars#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/currentcalendar1.vb#5)]
 
-### <a name="representing-dates-in-a-non-current-calendar"></a>在非目前的行事曆中代表日期
+### <a name="represent-dates-in-a-non-current-calendar"></a>代表非目前行事曆中的日期
 
 若要使用不是特定文化特性的現行曆法來表示日期，您必須呼叫該 <xref:System.Globalization.Calendar> 物件的方法。 例如，<xref:System.Globalization.Calendar.GetYear%2A?displayProperty=nameWithType>、<xref:System.Globalization.Calendar.GetMonth%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.Calendar.GetDayOfMonth%2A?displayProperty=nameWithType> 方法會將年、月和日轉換成反映特定曆法的值。
 
@@ -131,7 +131,7 @@ ms.locfileid: "73132522"
 [!code-csharp[Conceptual.Calendars#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/minsupporteddatetime1.cs#11)]
 [!code-vb[Conceptual.Calendars#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/minsupporteddatetime1.vb#11)]
 
-## <a name="working-with-eras"></a>使用紀元
+## <a name="work-with-eras"></a>使用紀元
 
 曆法通常會將日期細分成紀元。 不過，.NET 中的 <xref:System.Globalization.Calendar> 類別並不支援行事曆所定義的每個紀元，而且大部分的 <xref:System.Globalization.Calendar> 類別僅支援單一紀元。 只有 <xref:System.Globalization.JapaneseCalendar> 和 <xref:System.Globalization.JapaneseLunisolarCalendar> 類別支援多個紀元。
 
@@ -140,7 +140,7 @@ ms.locfileid: "73132522"
 >
 > - 在[.net 的日文日曆中處理新的紀元](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/)，其中記載了新增至 .net 的功能，以支援多個紀元的行事曆，並討論處理多項行事歷時所使用的最佳作法。
 > - [準備您的應用程式以進行日本時代變更](/windows/uwp/design/globalizing/japanese-era-change)，這會提供在 Windows 上測試應用程式的相關資訊，以確保其適用于紀元的變更。
-> - [.NET Framework 的新日文紀元更新摘要](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework)，其中列出與新的日本日曆時代相關之個別 Windows 版本的 .NET Framework 更新、提供多項支援的新 .NET Framework 功能，以及尋找測試您的應用程式。
+> - [.NET Framework 的新日文紀元更新的摘要](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework)，其中列出與新的日本日曆時代相關的個別 Windows 版本 .NET Framework 更新、提供多個新的 .NET Framework 功能，以支援多重時代，並包含在測試應用程式時所要尋找的專案。
 
 大部分行事曆中的紀元代表非常長的時間週期。 例如，在西曆中，目前的紀元橫跨兩個以上的千年來。 對於 <xref:System.Globalization.JapaneseCalendar> 和 <xref:System.Globalization.JapaneseLunisolarCalendar>，支援多個紀元的兩個行事曆不是如此。 紀元會對應至天皇的統治期間。 支援多個紀元，特別是當目前紀元的上限不明時，會造成特殊挑戰。
 
@@ -169,7 +169,7 @@ ms.locfileid: "73132522"
 
 此外，"g" 自訂日期和時間格式字串包括曆法的紀元名稱，該名稱為日期和時間的字串表示。 如需詳細資訊，請參閱[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。
 
-### <a name="instantiating-a-date-with-an-era"></a>使用紀元具現化日期
+### <a name="instantiatie-a-date-with-an-era"></a>Instantiatie 具有紀元的日期
 
 針對支援多個紀元的兩個 <xref:System.Globalization.Calendar> 類別，包含特定年份、月份和月份日期值的日期可能會是不明確的。 例如，<xref:System.Globalization.JapaneseCalendar> 支援的所有紀元都有年份，其數目為1。 一般而言，如果未指定紀元，日期和時間及曆法方法都會假設這些值屬於目前紀元。 這適用于 <xref:System.DateTime.%23ctor%2A> 和 <xref:System.DateTimeOffset.%23ctor%2A> 的函式，其中包含 <xref:System.Globalization.Calendar>類型的參數，以及[JapaneseCalendar. ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32))和[JapaneseLunisolarCalendar. ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32))方法。 下列範例會具現化代表未指定紀元之第二年1月1日的日期。 如果您在 Reiwa 紀元為目前紀元時執行此範例，則會將日期解釋為 Reiwa 紀元的第二年。 紀元（令和）會在 <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> 方法所傳回之字串中的年份之前，並對應至西曆的2020年1月1日。 （Reiwa 紀元會從西曆2019年開始）。
 
@@ -183,11 +183,11 @@ ms.locfileid: "73132522"
   [!code-csharp[Insantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/cs/program.cs)]
   [!code-vb[Instantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/vb/program.vb)]
 
-- 呼叫明確指定紀元的日期和時間方法。 這包括下列方法：
+- 呼叫明確指定紀元的日期和時間方法。 這包括下列方法︰
 
   - <xref:System.Globalization.JapaneseCalendar> 或 <xref:System.Globalization.JapaneseLunisolarCalendar> 類別的 <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> 方法。
 
-  - <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 剖析方法（例如 <xref:System.DateTime.Parse%2A>、<xref:System.DateTime.TryParse%2A>、<xref:System.DateTime.ParseExact%2A>或 <xref:System.DateTime.TryParseExact%2A>），其中包含要剖析的字串，以及如果目前的文化特性是日文-日本（"ja-jp"），則為選擇性的 <xref:System.Globalization.DateTimeStyles> 引數，而該文化特性的行事曆為 <xref:System.Globalization.JapaneseCalendar>. 要剖析的字串必須包含紀元。
+  - <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 剖析方法（例如 <xref:System.DateTime.Parse%2A>、<xref:System.DateTime.TryParse%2A>、<xref:System.DateTime.ParseExact%2A>或 <xref:System.DateTime.TryParseExact%2A>），其中包含要剖析的字串，以及如果目前的文化特性是日文-日本（"ja-jp"），則為選擇性的 <xref:System.Globalization.DateTimeStyles> 引數，而且該文化特性的行事曆是 <xref:System.Globalization.JapaneseCalendar>。 要剖析的字串必須包含紀元。
 
   - <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 剖析方法，其中包含 <xref:System.IFormatProvider>類型的 `provider` 參數。 `provider` 必須是代表日本日本（"ja-jp"）文化特性的 <xref:System.Globalization.CultureInfo> 物件，其目前的行事曆為 <xref:System.Globalization.JapaneseCalendar> 或 <xref:System.Globalization.DateTimeFormatInfo.Calendar> 屬性 <xref:System.Globalization.JapaneseCalendar>的 <xref:System.Globalization.DateTimeFormatInfo> 物件。 要剖析的字串必須包含紀元。
 
@@ -216,7 +216,7 @@ ms.locfileid: "73132522"
 
 如果不想要寬鬆的範圍檢查，您可以透過數種方式來還原嚴格的範圍檢查，端視應用程式執行所在的 .NET 版本而定：
 
-- **.Net Core：** 您可以將下列內容新增至*netcore*中的 json 設定檔案：
+- **.Net Core：** 將下列內容新增至*netcore*中的 json 設定檔案：
 
   ```json
   "runtimeOptions": {
@@ -226,7 +226,7 @@ ms.locfileid: "73132522"
   }
   ```
 
-- **.NET Framework 4.6 或更新版本：** 您可以設定下列 AppCoNtext 參數：
+- **.NET Framework 4.6 或更新版本：** 在*app.config*檔案中設定下列 AppCoNtext 參數：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -237,14 +237,14 @@ ms.locfileid: "73132522"
   </configuration>
   ```
 
-- **.NET Framework 4.5.2 或更早版本：** 您可以設定下列登錄值：
+- **.NET Framework 4.5.2 或更早版本：** 設定下列登錄值：
 
    |  |  |
    |--|--|
-   |機碼 | HKEY_LOCAL_MACHINE\Software\Microsoft\.NETFramework\AppCoNtext |
-   |[屬性] | EnforceJapaneseEraYearRanges。 |
-   |輸入 | REG_SZ |
-   |值 | true |
+   | **Key** | **HKEY_LOCAL_MACHINE \Software\Microsoft\\。NETFramework\AppCoNtext** |
+   | **名稱** | EnforceJapaneseEraYearRanges。 |
+   | **Type** | REG_SZ |
+   | **值** | true |
 
 啟用 strict 範圍檢查之後，先前的範例會擲回 <xref:System.ArgumentOutOfRangeException> 並顯示下列輸出：
 
@@ -256,7 +256,7 @@ Parameter name: year
    at Example.Main()
 ```
 
-### <a name="representing-dates-in-calendars-with-multiple-eras"></a>以多個紀元代表行事曆中的日期
+### <a name="represent-dates-in-calendars-with-multiple-eras"></a>代表具有多個紀元之行事曆中的日期
 
 如果 <xref:System.Globalization.Calendar> 物件支援紀元而且是 <xref:System.Globalization.CultureInfo> 物件的現行曆法，則紀元會包含在完整日期和時間模式、完整日期模式及簡短日期模式之日期和時間值的字串表示中。 下列範例顯示目前文化特性為日本 (日文) 且現行曆法為日本曆法時的這些日期模式。
 
@@ -276,7 +276,7 @@ Parameter name: year
 [!code-csharp[Conceptual.Calendars#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/formatstrings3.cs#10)]
 [!code-vb[Conceptual.Calendars#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings3.vb#10)]
 
-在日文行事曆中，紀元的第一年稱為 Gannen （元年）。 例如，Heisei 紀元的第一年可以描述為 Heisei Gannen，而不是 Heisei 1。 .NET 採用這種慣例來格式化使用下列標準或自訂日期和時間格式字串格式的作業，並搭配使用代表日本-日本（"ja-jp"）文化特性的 <xref:System.Globalization.CultureInfo> 物件與 <xref:System.Globalization.JapaneseCalendar>課堂
+在日文行事曆中，紀元的第一年稱為 Gannen （元年）。 例如，Heisei 紀元的第一年可以描述為 Heisei Gannen，而不是 Heisei 1。 當 <xref:System.Globalization.CultureInfo> 使用下列標準或自訂日期和時間格式字串來搭配使用 <xref:System.Globalization.JapaneseCalendar> 類別的日本-日本（"ja-jp"）文化特性時，.NET 會採用這種慣例來格式化日期和時間的格式作業：
 
 - [完整日期模式](../base-types/standard-date-and-time-format-strings.md#LongDate)，以 "D" 標準日期和時間格式字串表示。
 - [完整日期完整時間模式](../base-types/standard-date-and-time-format-strings.md#FullDateLongTime)，以 "F" 標準日期和時間格式字串表示。
@@ -284,14 +284,14 @@ Parameter name: year
 - [年份/月份模式](../base-types/standard-date-and-time-format-strings.md#YearMonth)，以 Y "或" y "標準日期和時間格式字串表示。
 - [Ggy ' 年 ' "或" ggy年 "[自訂日期和時間格式字串](../base-types/custom-date-and-time-format-strings.md)。
 
-例如，下列範例會在 <xref:System.Globalization.JapaneseCalendar> 中顯示 Heisei 紀元的第一年的日期。
+例如，下列範例會在 <xref:System.Globalization.JapaneseCalendar>中顯示 Heisei 紀元的第一年的日期。
 
   [!code-csharp[gannen](~/samples/snippets/standard/datetime/calendars/gannen/cs/program.cs)]
   [!code-vb[gannen](~/samples/snippets/standard/datetime/calendars/gannen/vb/gannen-fmt.vb)]
 
 如果在格式化作業中不需要此行為，您可以執行下列動作來還原先前的行為，這一律會將紀元的第一年表示為 "1" 而不是 "Gannen"，視 .NET 的版本而定：
 
-- **.Net Core：** 您可以將下列內容新增至*netcore*中的 json 設定檔案：
+- **.Net Core：** 將下列內容新增至*netcore*中的 json 設定檔案：
 
   ```json
   "runtimeOptions": {
@@ -301,7 +301,7 @@ Parameter name: year
   }
   ```
 
-- **.NET Framework 4.6 或更新版本：** 您可以設定下列 AppCoNtext 參數：
+- **.NET Framework 4.6 或更新版本：** 在*app.config*檔案中設定下列 AppCoNtext 參數：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -312,14 +312,14 @@ Parameter name: year
   </configuration>
   ```
 
-- **.NET Framework 4.5.2 或更早版本：** 您可以設定下列登錄值：
+- **.NET Framework 4.5.2 或更早版本：** 設定下列登錄值：
 
    |  |  |
    |--|--|
-   |機碼 | HKEY_LOCAL_MACHINE\Software\Microsoft\.NETFramework\AppCoNtext |
-   |[屬性] | FormatJapaneseFirstYearAsANumber。 |
-   |輸入 | REG_SZ |
-   |值 | true |
+   | **Key** | **HKEY_LOCAL_MACHINE \Software\Microsoft\\。NETFramework\AppCoNtext** |
+   | **名稱** | FormatJapaneseFirstYearAsANumber。 |
+   | **Type** | REG_SZ |
+   | **值** | true |
 
 在停用格式化作業的 gannen 支援之後，上一個範例會顯示下列輸出：
 
@@ -329,7 +329,7 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 
 .NET 也已更新，讓日期和時間剖析作業支援包含年份表示為 "1" 或 Gannen 的字串。 雖然您應該不需要這麼做，但您可以還原先前的行為，只將 "1" 視為紀元的第一年。 視 .NET 版本而定，您可以如下所示執行此動作：
 
-- **.Net Core：** 您可以將下列內容新增至*netcore*中的 json 設定檔案：
+- **.Net Core：** 將下列內容新增至*netcore*中的 json 設定檔案：
 
   ```json
   "runtimeOptions": {
@@ -339,7 +339,7 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
   }
   ```
 
-- **.NET Framework 4.6 或更新版本：** 您可以設定下列 AppCoNtext 參數：
+- **.NET Framework 4.6 或更新版本：** 在*app.config*檔案中設定下列 AppCoNtext 參數：
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -350,14 +350,14 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
   </configuration>
   ```
 
-- **.NET Framework 4.5.2 或更早版本：** 您可以設定下列登錄值：
+- **.NET Framework 4.5.2 或更早版本：** 設定下列登錄值：
 
    |  |  |
-   |--|--|  
-   |機碼 | HKEY_LOCAL_MACHINE\Software\Microsoft\.NETFramework\AppCoNtext |
-   |[屬性] | EnforceLegacyJapaneseDateParsing。 |
-   |輸入 | REG_SZ |
-   |值 | true | 
+   |--|--|
+   | **Key** | **HKEY_LOCAL_MACHINE \Software\Microsoft\\。NETFramework\AppCoNtext** |
+   | **名稱** | EnforceLegacyJapaneseDateParsing。 |
+   | **Type** | REG_SZ |
+   | **值** | true |
 
 ## <a name="see-also"></a>請參閱
 

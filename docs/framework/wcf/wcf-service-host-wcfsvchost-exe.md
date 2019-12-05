@@ -2,12 +2,12 @@
 title: WCF 服務主機 (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: a4efa0d5a46eb0d8e6eef08fd17c38f7db3e7e9e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c855fe7cc804fac14348990b7a6f5f84a0956b0c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423829"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802397"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 服務主機 (WcfSvcHost.exe)
 
@@ -33,7 +33,7 @@ WCF 服務主機可以裝載下列 WCF 服務程式庫專案類型： WCF 服務
 
 ## <a name="scenarios-for-using-wcf-service-host-inside-visual-studio"></a>在 Visual Studio 內使用 WCF 服務主機的案例
 
-下表列出 [**命令列引數**] 對話方塊中的所有參數，您可以在 [**方案瀏覽器**] Visual Studio 中以滑鼠右鍵按一下專案，然後選取 [**屬性**]，然後選取 [ **Debug]** 索引標籤，然後按一下 [**起始專案**]。 這些參數在設定 WCF 服務主機時很有用。
+下表列出 [**命令列引數**] 對話方塊中的所有參數，您可以在 [**方案瀏覽器**] Visual Studio 中的專案上按一下滑鼠右鍵，選取 [**屬性**]，然後選取 [**調試**程式] 索引標籤，再按一下 [**起始專案**]，即可找到此對話方塊。 這些參數在設定 WCF 服務主機時很有用。
 
 |參數|意義|
 |---------------|-------------|
@@ -45,13 +45,13 @@ WCF 服務主機可以裝載下列 WCF 服務程式庫專案類型： WCF 服務
 
 在您建立新的 WCF 服務專案並按下 F5 啟動偵錯工具後，WCF 服務主機會開始裝載它在您專案中找到的所有服務。 WCF 測試用戶端會自動開啟，並顯示在設定檔案中定義的服務端點清單。 您可以從主視窗中測試參數並叫用服務。
 
-若要確定已使用 WCF 測試用戶端，請在 [**方案瀏覽器**] 中的專案上按一下滑鼠右鍵 Visual Studio，選取 [**屬性**]，然後選取 [**調試**程式] 索引標籤。按一下 [**啟動專案**]，並確定下列專案出現在 **[命令列引數**] 對話方塊。
+若要確定已使用 WCF 測試用戶端，請在 [**方案 Explorer** ] 中的專案上按一下滑鼠右鍵 Visual Studio，選取 [**屬性**]，然後選取 [**調試**程式] 索引標籤。按一下 [**起始專案**]，並確定下列專案出現在 [**命令列引數**] 對話方塊中。
 
 `/client:WcfTestClient.exe`
 
 #### <a name="using-a-custom-client"></a>使用自訂用戶端
 
-若要使用自訂用戶端，請在 [**方案 Explorer** ] 中的專案上按一下滑鼠右鍵 Visual Studio，選取 [**屬性**]，然後選取 [**調試**程式] 索引標籤。按一下 [**開始專案**]，然後在**命令列引數中 `/client` 編輯**指向您自訂用戶端的對話方塊，如下列範例所示。
+若要使用自訂用戶端，請在 [**方案 Explorer** ] 中的專案上按一下滑鼠右鍵，Visual Studio，選取 [**屬性**]，然後選取 [**調試**程式] 索引標籤。按一下 [**開始專案**]，然後在 [**命令列引數**] 對話方塊中編輯 `/client` 參數，以指向您的自訂用戶端，如下列範例
 
 `/client:"path/CustomClient.exe"`
 
@@ -67,7 +67,7 @@ WCF 服務主機可以裝載下列 WCF 服務程式庫專案類型： WCF 服務
 
 #### <a name="specifying-no-client"></a>不指定任何用戶端
 
-若要指定 WCF 服務裝載後不會使用任何用戶端，請在 [**方案瀏覽器**] 中以滑鼠右鍵按一下專案 Visual Studio，選取 [**屬性**]，然後選取 [**調試**程式] 索引標籤。按一下 [**開始專案**]，然後保留**命令行引數**對話方塊空白。
+若要指定 WCF 服務裝載後不會使用任何用戶端，請以滑鼠右鍵按一下 [**方案瀏覽器**] 中的專案 Visual Studio，選取 [**屬性**]，然後選取 [**調試**程式] 索引標籤。按一下 [**起始專案**]，並將 [**命令列引數**] 對話方塊保留空白。
 
 #### <a name="using-a-custom-host"></a>使用自訂主機
 
@@ -119,7 +119,7 @@ WCF 服務主機可以裝載下列 WCF 服務程式庫專案類型： WCF 服務
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ```
 
-如需有關 netsh 的詳細資訊，請參閱「[如何使用 Netsh 工具和命令列參數](https://go.microsoft.com/fwlink/?LinkId=97877)」。
+如需有關 netsh 的詳細資訊，請參閱「[如何使用 Netsh 工具和命令列參數](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))」。
 
 ## <a name="see-also"></a>請參閱
 

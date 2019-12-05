@@ -2,12 +2,12 @@
 title: .NET Core 2.0 的新功能
 description: 了解 .NET Core 所提供的新功能。
 ms.date: 08/13/2017
-ms.openlocfilehash: fcac4255e7370f31ea6c26771fdd7d341bafe38b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100846"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801887"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 的新功能
 
@@ -136,7 +136,7 @@ Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能
 
 每當您修改程式碼時，Live Unit Testing 會在背景自動執行任何受影響的單元測試，並會在 Visual Studio 環境中呈現即時的結果和程式碼涵蓋範圍。 .NET Core 2.0 現已支援 Live Unit Testing。 先前 Live Unit Testing 僅針對 .NET Framework 應用程式提供。
 
-如需詳細資訊，請參閱 [Visual Studio 2017 的 Live Unit Testing](/visualstudio/test/live-unit-testing) 及 [Live Unit Testing 常見問題集](/visualstudio/test/live-unit-testing-faq)。
+如需詳細資訊，請參閱[Visual Studio 的 Live Unit Testing](/visualstudio/test/live-unit-testing)和[Live Unit Testing 常見問題](/visualstudio/test/live-unit-testing-faq)。
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>更佳的多目標 Framework 支援
 

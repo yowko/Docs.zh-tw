@@ -6,22 +6,22 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: de260e1a6b58fdbac1a2f0f40c7ec2e50b13644e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1348ba73eb87a140b42e3565b4388a70f1f47ca1
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975091"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802009"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF 資料服務用戶端公用程式 (DataSvcUtil.exe)
 
 DataSvcUtil 是 WCF Data Services 所提供的命令列工具，它會使用開放式資料通訊協定（OData）摘要，並產生從 .NET Framework 用戶端應用程式存取資料服務所需的用戶端資料服務類別。 此公用程式可以透過使用下列中繼資料來源產生資料類別：
 
-- 資料服務的根 URI。 此公用程式會要求服務中繼資料文件，以描述資料服務所公開的資料模型。 如需詳細資訊，請參閱[OData：服務元資料檔案](https://go.microsoft.com/fwlink/?LinkId=186070)。
+- 資料服務的根 URI。 此公用程式會要求服務中繼資料文件，以描述資料服務所公開的資料模型。 如需詳細資訊，請參閱[AtomPub （rfc5023 會）](https://tools.ietf.org/html/rfc5023#section-8)。
 
-- 使用概念結構定義語言（CSDL）定義的資料模型檔案（csdl），如[\[MC-csdl\]：概念結構定義檔案格式](https://go.microsoft.com/fwlink/?LinkID=159072)規格中所定義。
+- 使用概念結構定義語言（CSDL）定義的資料模型檔案（csdl），如[\[MC-csdl\]：概念結構定義檔案格式](https://docs.microsoft.com/openspecs/windows_protocols/mc-csdl/c03ad8c3-e8b7-4306-af96-a9e52bb3df12)規格中所定義。
 
-- 使用 Entity Framework 提供之實體資料模型所建立的 .edmx 檔案。 如需詳細資訊，請參閱[\[MC-EDMX\]：實體資料模型以取得資料服務封裝格式](https://go.microsoft.com/fwlink/?LinkID=178833)規格。
+- 使用 Entity Framework 提供之實體資料模型所建立的 .edmx 檔案。 如需詳細資訊，請參閱[\[MC-EDMX\]：實體資料模型以取得資料服務封裝格式](https://docs.microsoft.com/openspecs/windows_protocols/mc-edmx/5dff5e25-56a1-408b-9d44-bff6634c7d16)規格。
 
 如需詳細資訊，請參閱[如何：手動產生用戶端資料服務類別](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)。
 

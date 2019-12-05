@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc4a48c79fc39b12f8231bd913b4ca8970c0f46f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 117e0838f78d43bf9ffa555947bf8749830c9840
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052359"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802004"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance MDA
 
-當 CLR 偵測到平台叫用呼叫之後的堆疊深度不符合預期的堆疊深度時，就會啟動<xref:System.Runtime.InteropServices.DllImportAttribute> managed偵錯工具（MDA），前提是屬性中指定的呼叫慣例和`PInvokeStackImbalance`managed 簽章中的參數宣告。
+當 CLR 偵測到平台叫用呼叫之後的堆疊深度不符合預期的堆疊深度時，就會啟動 `PInvokeStackImbalance` managed 偵錯工具（MDA），前提是在 <xref:System.Runtime.InteropServices.DllImportAttribute> 屬性中指定的呼叫慣例和 managed 簽章中的參數宣告。
 
 `PInvokeStackImbalance` MDA 只會在 32 位元 x86 平台上實作。
 
 > [!NOTE]
-> 預設會停用MDA。`PInvokeStackImbalance` 在 Visual Studio 2017 中， `PInvokeStackImbalance` MDA 會出現在 [**例外狀況設定**] 對話方塊的 [**受管理的調試助理**] 清單中（當您選取 [ **Debug**  >  **Windows**  >  **] 時，會顯示此方塊）例外狀況設定**）。 不過，選取或清除 [擲回**時中斷**] 核取方塊並不會啟用或停用 MDA。它只會控制 Visual Studio 在啟動 MDA 時是否擲回例外狀況。
+> `PInvokeStackImbalance` MDA 預設為停用。 在 Visual Studio 2017 和更新版本中，`PInvokeStackImbalance` MDA 會出現在 [**例外狀況設定**] 對話方塊的 [**受管理的調試助理**] 清單中（當您選取 [ **Debug** ] > **Windows** > [**例外狀況設定**]）時，就會顯示。 不過，選取或清除 [擲回**時中斷**] 核取方塊並不會啟用或停用 MDA。它只會控制 Visual Studio 在啟動 MDA 時是否擲回例外狀況。
 
 ## <a name="symptoms"></a>徵兆
 
@@ -60,7 +60,7 @@ MDA 訊息會提供使堆疊失去平衡之平台叫用方法呼叫的名稱。 
 </mdaConfig>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)

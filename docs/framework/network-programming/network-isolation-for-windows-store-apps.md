@@ -2,18 +2,20 @@
 title: Windows 市集應用程式的網路隔離
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-ms.openlocfilehash: 34b8865781079f45a68d3dd1aab7fbd66c703d50
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 390a0281f03b08322cc1bee469b601fd5a1547c4
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447428"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802172"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Windows 市集應用程式的網路隔離
-<xref:System.Net>、<xref:System.Net.Http> 和 <xref:System.Net.Http.Headers> 命名空間中的類別可以用來開發 Windows 市集應用程式或傳統型應用程式。 在 Windows 市集應用程式中使用時，這些命名空間中的類別受到網路隔離的影響，而網路隔離是 [!INCLUDE[win8](../../../includes/win8-md.md)] 所使用應用程式安全性模型的一部分。 必須在 Windows 市集應用程式的應用程式資訊清單中啟用適當的網路功能，讓系統允許網路存取。  
+
+<xref:System.Net>、<xref:System.Net.Http>和 <xref:System.Net.Http.Headers> 命名空間中的類別，可以用來開發 Windows Store 應用程式或桌面應用程式。 在 Windows Store 應用程式中使用時，這些命名空間中的類別會受到網路隔離的影響，也就是 Windows 8 所使用的應用程式安全性模型的一部分。 必須在 Windows 市集應用程式的應用程式資訊清單中啟用適當的網路功能，讓系統允許網路存取。  
   
 ## <a name="checklist-for-network-isolation"></a>網路隔離的檢查清單  
- 使用此檢查清單，確定已設定 Windows 市集應用程式的網路隔離。  
+
+使用此檢查清單，確定已設定 Windows 市集應用程式的網路隔離。  
   
 1. 決定應用程式所需的網路存取要求方向。 這可以是輸出用戶端起始的要求或輸入未經要求的要求，或是這兩種網路要求類型的組合。  
   
@@ -23,7 +25,7 @@ ms.locfileid: "74447428"
   
 4. 部署和執行應用程式，以使用針對疑難排解所提供的網路隔離工具對其進行測試。  
   
- 如需有關如何設定用於疑難排解網路隔離的網路功能和隔離工具的詳細資訊，請參閱如何在 Windows 8.x 存放區開發人員檔中[設定網路隔離功能](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))。
+如需有關如何設定用於疑難排解網路隔離的網路功能和隔離工具的詳細資訊，請參閱如何在 Windows 8.x 存放區開發人員檔中[設定網路隔離功能](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))。
   
 ## <a name="see-also"></a>請參閱
 

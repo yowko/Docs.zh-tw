@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4629139a7c89c0808e97bbe64b7d02441aec1dea
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: dd7e045bf54b09fe2a229efefc0218eb3f2f731a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714480"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802748"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援
 
@@ -112,7 +112,7 @@ Windows 執行階段和 .NET Framework 檔集是分開的。 如果您按下 F1 
 
 ### <a name="other-differences"></a>其他差異
 
-在少數情況下，.NET Framework 類型會出現在您的程式碼中，而不是 Windows 執行階段類型需要您採取動作。 例如，<xref:Windows.Foundation.Uri?displayProperty=nameWithType> 類別在 .NET Framework 程式碼中會顯示為 <xref:System.Uri?displayProperty=nameWithType>。 <xref:System.Uri?displayProperty=nameWithType> 允許相對 URI，但 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 需要絕對 URI。 因此，當您將 URI 傳遞至 Windows 執行階段方法時，您必須確定它是絕對的。 請參閱將[URI 傳遞給 Windows 執行階段](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)。
+在少數情況下，.NET Framework 類型會出現在您的程式碼中，而不是 Windows 執行階段類型需要您採取動作。 例如，<xref:Windows.Foundation.Uri?displayProperty=nameWithType> 類別在 .NET Framework 程式碼中會顯示為 <xref:System.Uri?displayProperty=nameWithType>。 <xref:System.Uri?displayProperty=nameWithType> 允許相對 URI，但 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 需要絕對 URI。 因此，當您將 URI 傳遞至 Windows 執行階段方法時，您必須確定它是絕對的。 請參閱[將 URI 傳送到 Windows 執行階段](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)。
 
 <a name="WindowsRuntimeComponents"></a>
 
@@ -137,7 +137,7 @@ Windows 執行階段和 .NET Framework 檔集是分開的。 如果您按下 F1 
 - 元件中的類型可以衍生自 Windows 執行階段類型。 控制項可以衍生自 <xref:Windows.UI.Xaml.Controls.Primitives> 命名空間中的基本控制項類型，或從更多完成的控制項（例如 <xref:Windows.UI.Xaml.Controls.Button>）。
 
   > [!IMPORTANT]
-  > 從 [!INCLUDE[win8](../../../includes/win8-md.md)] 和 .NET Framework 4.5 開始，managed Windows 執行階段元件中的所有公用類型都必須是密封的。 另一個 Windows 執行階段元件中的類型無法衍生自它們。 如果您想要在元件中提供多型行為，您可以建立介面並在多型類型中加以實作。
+  > 從 Windows 8 和 .NET Framework 4.5 開始，managed Windows 執行階段元件中的所有公用類型都必須密封。 另一個 Windows 執行階段元件中的類型無法衍生自它們。 如果您想要在元件中提供多型行為，您可以建立介面並在多型類型中加以實作。
 
 - 元件中公用類型上的所有參數和傳回類型，都必須是 Windows 執行階段類型（包括元件所定義的 Windows 執行階段類型）。
 

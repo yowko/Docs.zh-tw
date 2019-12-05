@@ -8,12 +8,12 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: f0979d2e0caeb0b22b90572aef0ad53235020f1d
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: afee69eb894518b1c88483e34a1d64d452019244
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697831"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802122"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<requestCaching> 項目 (網路設定)
 控制網路要求的快取機制。  
@@ -29,14 +29,14 @@ ms.locfileid: "71697831"
   isPrivateCache ="true|false"  
   disableAllCaching="true|false"  
   defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
-  unspecifiedMaximumAge= "d.hh.mm.ss">  
+  unspecifiedMaximumAge= "d.hh:mm:ss">  
     <defaultHttpCachePolicy>...</defaultHttpCachePolicy>  
     <defaultFtpCachePolicy>...</defaultFtpCachePolicy>  
 </requestCaching>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和元素  
- 下列章節說明屬性、子元素和父元素。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71697831"
   
 ## <a name="policylevel-attribute"></a>policyLevel 屬性  
   
-|值|描述|  
+|{2&gt;值&lt;2}|描述|  
 |-----------|-----------------|  
 |`Default`|如果資源是最新的，則會傳回快取的資源、內容長度是正確的，而且會顯示到期、修改和內容長度屬性。|  
 |`BypassCache`|傳回伺服器的資源。|  
@@ -60,7 +60,7 @@ ms.locfileid: "71697831"
 |`NoCacheNoStore`|如果快取的資源已存在，則會予以刪除。 資源會從伺服器下載，並傳回給呼叫端。|  
 |`Revalidate`|如果時間戳記與伺服器上資源的時間戳記相同，請使用資源的快取複本來滿足要求;否則，資源會從伺服器下載、呈現給呼叫端，並儲存在快取中。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -86,7 +86,7 @@ ms.locfileid: "71697831"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Net.Cache?displayProperty=nameWithType>
 - [網路設定結構描述](index.md)

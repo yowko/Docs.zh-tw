@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: a88159085e48d69550320ffabe3035f549c78653
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 939c9c6b8a8a8822174f08d5c0b50ef051264ee1
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975600"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802090"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a>開發 Windows Presentation Foundation （WPF）獨立和瀏覽器裝載的應用程式時，您必須考慮安全性模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 獨立應用程式會以不受限制的許可權（CAS**FullTrust**許可權集合）執行，無論是使用 Windows Installer （.msi）、XCopy 或 ClickOnce 部署。 不支援使用 ClickOnce 部署部分信任的獨立 WPF 應用程式。 不過，完全信任的主應用程式可以使用 .NET Framework 增益集模型，建立部分信任的 <xref:System.AppDomain>。 如需詳細資訊，請參閱[WPF 增益集總覽](./app-development/wpf-add-ins-overview.md)。  
@@ -77,7 +77,7 @@ ms.locfileid: "73975600"
 ### <a name="browser-navigation-security"></a>瀏覽器巡覽安全性  
  只有在下列情況下，才會將瀏覽器巡覽視為安全：  
   
-- **使用者巡覽**。 使用者可以按一下主要 <xref:System.Windows.Navigation.NavigationWindow> 內的 <xref:System.Windows.Documents.Hyperlink> 專案來流覽，而不是在嵌套的 <xref:System.Windows.Controls.Frame> 中。  
+- **使用者巡覽**。 使用者可以按一下主要 <xref:System.Windows.Navigation.NavigationWindow>內的 <xref:System.Windows.Documents.Hyperlink> 專案來流覽，而不是在嵌套的 <xref:System.Windows.Controls.Frame>中。  
   
 - **區域**。 所要巡覽的內容位在網際網路或近端內部網路。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "73975600"
   
  以這種方式受到保護的功能集合，是針對網際網路、**內部** **網路**、**信任的網站**和**受限制的網站**區域，以每個區域為基礎進行設定。 下列步驟描述如何設定安全性設定：  
   
-1. 開啟 [**控制台**]。  
+1. 開啟 [控制台]。  
   
 2. 按一下 [**網路和網際網路**]，然後按一下 [**網際網路選項**]。  
   
@@ -209,7 +209,7 @@ ms.locfileid: "73975600"
   
  如果您在 Windows Internet Explorer 中執行包含 WPF <xref:System.Windows.Controls.WebBrowser> 控制項的部分信任 XAML 瀏覽器應用程式（XBAP），WPF 會在 Internet Explorer 進程的位址空間中裝載 WebBrowser ActiveX 控制項。 由於 WebBrowser ActiveX 控制項裝載于 Internet Explorer 進程中，因此 Internet Explorer 的所有功能控制也會針對 WebBrowser ActiveX 控制項啟用。  
   
- 與一般獨立應用程式相較之下，在 Internet Explorer 中執行的 XBAP 也會取得額外層級的安全性。 這項額外的安全性是因為 Internet Explorer 和 WebBrowser ActiveX 控制項預設會在 Windows Vista 和 [!INCLUDE[win7](../../../includes/win7-md.md)]上以受保護模式執行。 如需受保護模式的詳細資訊，請參閱[瞭解及使用受保護模式的 Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393)。  
+ 與一般獨立應用程式相較之下，在 Internet Explorer 中執行的 XBAP 也會取得額外層級的安全性。 這項額外的安全性是因為 Internet Explorer 和 WebBrowser ActiveX 控制項預設會在 Windows Vista 和 Windows 7 上以受保護模式執行。 如需受保護模式的詳細資訊，請參閱[瞭解及使用受保護模式的 Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393)。  
   
 > [!NOTE]
 > 如果您嘗試在 Firefox 中執行包含 WPF <xref:System.Windows.Controls.WebBrowser> 控制項的 XBAP，而在網際網路區域中，則會擲回 <xref:System.Security.SecurityException>。 這是因為 WPF 安全性原則。  
@@ -249,7 +249,7 @@ ms.locfileid: "73975600"
   
  不過，從獨立應用程式中的 <xref:System.Windows.Navigation.NavigationWindow> 或 <xref:System.Windows.Controls.Frame> 流覽到鬆散的 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 檔案時，安全性行為會有所不同。  
   
- 在這兩種情況下，流覽至的鬆散 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 檔案會繼承其主應用程式的許可權。 不過，這種行為可能會因為安全性的觀點而不需要，特別是如果鬆散的 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 檔案是由不受信任或未知的實體所產生的。 這種類型的內容稱為*外部內容*，而且 <xref:System.Windows.Controls.Frame> 和 <xref:System.Windows.Navigation.NavigationWindow> 都可以設定為在流覽至時加以隔離。 藉由將**SandboxExternalContent**屬性設定為 true 來達成隔離，如下列 <xref:System.Windows.Controls.Frame> 和 <xref:System.Windows.Navigation.NavigationWindow> 範例所示：  
+ 在這兩種情況下，流覽至的鬆散 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 檔案會繼承其主應用程式的許可權。 不過，這種行為可能會因為安全性的觀點而不需要，特別是如果鬆散的 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 檔案是由不受信任或未知的實體所產生的。 這種類型的內容稱為*外部內容*，而且 <xref:System.Windows.Controls.Frame> 和 <xref:System.Windows.Navigation.NavigationWindow> 都可以設定為在流覽至時加以隔離。 藉由將**SandboxExternalContent**屬性設定為 true 來達成隔離，如下列 <xref:System.Windows.Controls.Frame> 和 <xref:System.Windows.Navigation.NavigationWindow>範例所示：  
   
  [!code-xaml[SecurityOverviewSnippets#FrameMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
   
@@ -258,7 +258,7 @@ ms.locfileid: "73975600"
  使用此設定，會將外部內容載入與裝載應用程式的程序不同的程序。 此程序僅限於預設網際網路區域權限集，可有效地隔離它與裝載應用程式和用戶端電腦。  
   
 > [!NOTE]
-> 即使在獨立應用程式中從 <xref:System.Windows.Navigation.NavigationWindow> 或 <xref:System.Windows.Controls.Frame> 流覽到鬆散 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 的檔案，也會根據 WPF 瀏覽器裝載基礎結構（涉及 Presentationhost.exe 程式）來執行，安全性層級比直接在 Windows Vista 上的 Internet Explorer 和 [!INCLUDE[win7](../../../includes/win7-md.md)] （仍然是透過 Presentationhost.exe）載入內容時稍微小一點。 這是因為使用 Web 瀏覽器的獨立 WPF 應用程式不會提供 Internet Explorer 的額外受保護模式安全性功能。  
+> 即使在獨立應用程式中，從 <xref:System.Windows.Navigation.NavigationWindow> 或 <xref:System.Windows.Controls.Frame> 流覽到鬆散 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 的檔案，都是根據 WPF 瀏覽器裝載基礎結構（涉及 Presentationhost.exe 程式）來執行，安全性層級會稍微小於直接在 Windows Vista 和 Windows 7 上的 Internet Explorer 中載入內容的時間（這仍然是透過 Presentationhost.exe）。 這是因為使用 Web 瀏覽器的獨立 WPF 應用程式不會提供 Internet Explorer 的額外受保護模式安全性功能。  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>用於開發可提高安全性的 WPF 應用程式的資源  

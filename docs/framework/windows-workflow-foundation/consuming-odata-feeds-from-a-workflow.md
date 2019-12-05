@@ -2,12 +2,12 @@
 title: 使用工作流程的 OData 摘要-WF
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: e7cfa138a01719988586f9dce0a9009bea643076
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: c9780200d9b7c7bc89797b3c16b22bc38440fccc
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989761"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802657"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>使用工作流程中的 OData 摘要
 
@@ -15,7 +15,7 @@ WCF Data Services 是 .NET Framework 的元件，可讓您建立使用開放式�
 
 ## <a name="using-the-sample-northwind-odata-service"></a>使用範例 Northwind OData 服務
 
-本主題中的範例使用位於<https://services.odata.org/Northwind/Northwind.svc/>的範例 Northwind 資料服務。 這項服務是 [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248) 的一部分，而且會提供範例 Northwind 資料庫的唯讀存取。 如果需要寫入存取或者需要本機 WCF 資料服務，您可以遵循 [WCF 資料服務快速入門](https://go.microsoft.com/fwlink/?LinkID=131076) 的步驟，建立本機 OData 服務來提供 Northwind 資料庫的存取。 如果您遵循快速入門的步驟，請使用本機 URI 來替代本主題的範例程式碼所提供的 URI。
+本主題中的範例使用位於 <https://services.odata.org/Northwind/Northwind.svc/>的範例 Northwind 資料服務。 這項服務是 [OData SDK](https://www.odata.org/wp-content/uploads/sites/21/odatasdkcodesamples.zip) 的一部分，而且會提供範例 Northwind 資料庫的唯讀存取。 如果需要寫入存取或者需要本機 WCF 資料服務，您可以遵循 [WCF 資料服務快速入門](../data/wcf/quickstart-wcf-data-services.md) 的步驟，建立本機 OData 服務來提供 Northwind 資料庫的存取。 如果您遵循快速入門的步驟，請使用本機 URI 來替代本主題的範例程式碼所提供的 URI。
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>使用用戶端程式庫取用 OData 摘要
 
@@ -34,7 +34,7 @@ WCF Data Services 包含用戶端程式庫，可讓您更輕鬆地從 .NET Frame
 
 ### <a name="using-asynchronous-methods"></a>使用非同步方法
 
-為了對付透過 Web 存取資源時可能發生的延遲問題，我們建議您以非同步方式存取 WCF 資料服務。 WCF Data Services 用戶端程式庫包含用來叫用查詢的非同步方法，而 Windows Workflow Foundation （ <xref:System.Activities.AsyncCodeActivity> WF）提供了用來撰寫非同步活動的類別。 <xref:System.Activities.AsyncCodeActivity>您可以撰寫衍生的活動，以利用具有非同步方法的 .NET Framework 類別，或是以非同步方式執行的程式碼可以放入方法中，並使用委派來叫用。 本章節提供 <xref:System.Activities.AsyncCodeActivity> 衍生活動的兩個範例，一個範例會使用 WCF 資料服務用戶端程式庫的非同步方法，另一個範例則使用委派。
+為了對付透過 Web 存取資源時可能發生的延遲問題，我們建議您以非同步方式存取 WCF 資料服務。 WCF Data Services 用戶端程式庫包含用來叫用查詢的非同步方法，而 Windows Workflow Foundation （WF）提供了用於撰寫非同步活動的 <xref:System.Activities.AsyncCodeActivity> 類別。 您可以撰寫 <xref:System.Activities.AsyncCodeActivity> 衍生的活動，以利用具有非同步方法的 .NET Framework 類別，或是以非同步方式執行的程式碼可以放入方法中，並使用委派來叫用。 本章節提供 <xref:System.Activities.AsyncCodeActivity> 衍生活動的兩個範例，一個範例會使用 WCF 資料服務用戶端程式庫的非同步方法，另一個範例則使用委派。
 
 > [!NOTE]
 > 如需詳細資訊，請參閱[非同步作業（WCF Data Services）](../data/wcf/asynchronous-operations-wcf-data-services.md)和[建立異步活動](creating-asynchronous-activities-in-wf.md)。
@@ -66,18 +66,18 @@ Calling WCF Data Service...
 > [!NOTE]
 > 如果無法建立與 OData 伺服器之間的連接，您將會得到類似以下的例外狀況：
 >
-> 未處理的例外狀況：System.InvalidOperationException：處理此要求時發生錯誤。 ---> 系統 .Net. WebException：無法連接到遠端伺服器---> SocketException：連線嘗試失敗，因為連接的合作物件在一段時間內沒有正確回應，或建立的連線失敗，因為連接的主機無法回應。
+> 未處理的例外狀況: System.InvalidOperationException: 處理這個要求時發生錯誤。 ---> System.Net.WebException: 無法連接至遠端伺服器 ---> System.Net.Sockets.SocketException: 連線嘗試失敗，因為連線對象有一段時間未正確回應，或是已建立的連線失敗，因為已連線的主機未回應。
 
 如果需要額外處理此查詢所傳回的資料，則可以在活動的 <xref:System.Activities.AsyncCodeActivity%601.EndExecute%2A> 覆寫中完成。 <xref:System.Activities.AsyncCodeActivity%601.BeginExecute%2A> 和 <xref:System.Activities.AsyncCodeActivity%601.EndExecute%2A> 都是使用工作流程執行緒來叫用，而且這些覆寫中的任何程式碼都不會以非同步方式執行。 如果額外處理的工作過於密集或執行時間很長，或者查詢結果需分頁處理，您應該考慮使用下一節所討論的方法，該方法會使用委派來執行查詢，並以非同步方式執行額外處理工作。
 
 ### <a name="using-a-delegate"></a>使用委派
 
-除了叫用 .NET Framework 類別的非同步方法，以為<xref:System.Activities.AsyncCodeActivity>基礎的活動也可以在其中一個方法中定義非同步邏輯。 這個方法的指定方式是使用活動之 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 覆寫中的委派。 當此方法傳回時，執行階段會叫用此活動的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 覆寫。 從工作流程呼叫 OData 服務時，這個方法可用來查詢此服務，並提供任何額外的處理工作。
+除了叫用 .NET Framework 類別的非同步方法，以 <xref:System.Activities.AsyncCodeActivity>為基礎的活動也可以在其中一個方法中定義非同步邏輯。 這個方法的指定方式是使用活動之 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 覆寫中的委派。 當此方法傳回時，執行階段會叫用此活動的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 覆寫。 從工作流程呼叫 OData 服務時，這個方法可用來查詢此服務，並提供任何額外的處理工作。
 
 在下列範例中，會定義 `ListCustomers` 活動。 這個活動會查詢範例 Northwind 資料服務，並傳回 `List<Customer>` ，其中包含了 Northwind 資料庫中的所有客戶。 非同步工作是由 `GetCustomers` 方法所執行。 這個方法會查詢此服務中的所有客戶，然後將這些客戶複製到 `List<Customer>`。 接著它會檢查結果是否分頁。 如果是的話，它會查詢此服務中的下一頁結果、將這些結果加入至清單中，並繼續進行，直到擷取所有客戶資料為止。
 
 > [!NOTE]
-> 如需 WCF Data Services 中分頁的詳細資訊， [請參閱如何：載入分頁結果（WCF Data Services）](../data/wcf/how-to-load-paged-results-wcf-data-services.md)。
+> 如需 WCF Data Services 中分頁的詳細資訊，請參閱[如何：載入分頁的結果（WCF Data Services）](../data/wcf/how-to-load-paged-results-wcf-data-services.md)。
 
 一旦加入所有客戶之後，就會傳回清單。 `GetCustomers` 方法會指定於活動的 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 覆寫中。 因為此方法具有傳回值，所以會建立 `Func<string, List<Customer>>` 來指定此方法。
 
@@ -154,4 +154,4 @@ xmlns="http://www.w3.org/2005/Atom">
 ...
 ```
 
-此範例提供一種方法，可讓工作流程應用程式作者耗用從 OData 服務傳回的原始資料。 如需使用 uri 存取 WCF Data Services 的詳細資訊，請參閱[存取資料服務資源（WCF Data Services）](../data/wcf/accessing-data-service-resources-wcf-data-services.md)和[OData：URI 慣例](https://go.microsoft.com/fwlink/?LinkId=185564)。
+此範例提供一種方法，可讓工作流程應用程式作者耗用從 OData 服務傳回的原始資料。 如需使用 Uri 存取 WCF Data Services 的詳細資訊，請參閱[存取資料服務資源（WCF Data Services）](../data/wcf/accessing-data-service-resources-wcf-data-services.md)和[OData： URI 慣例](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)。

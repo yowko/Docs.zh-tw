@@ -7,22 +7,22 @@ helpviewer_keywords:
 ms.assetid: fb14e195-fea5-4561-b9a8-60a67283edb9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aae87b60e207ebe406e863f123e1dc3e56aeb4f7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 442864cf520d86a819b2dda1b9f24bdb6357fa8e
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051928"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802188"
 ---
 # <a name="run-net-framework-11-apps-on-windows-8-windows-81-or-windows-10"></a>在 Windows 8、Windows 8.1 或 Windows 10 上執行 .NET Framework 1.1 應用程式
 
-[!INCLUDE[win8](../../../includes/win8-md.md)]、[!INCLUDE[win81](../../../includes/win81-md.md)]、[!INCLUDE[winserver8](../../../includes/winserver8-md.md)]、[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] 或 Windows 10 作業系統不支援 .NET Framework 1.1。 在某些情況下，會將 .NET Framework 1.1 明確視為執行應用程式所需的必要項。 在這些情況下，您應該連絡您的獨立軟體廠商 (ISV) 將應用程式升級，以便在 .NET Framework 3.5 SP1 或更新版本上執行。 如需其他資訊，請參閱[從 .NET Framework 1.1 移轉](../migration-guide/migrating-from-the-net-framework-1-1.md)。
+Windows 8、Windows 8.1、[!INCLUDE[winserver8](../../../includes/winserver8-md.md)]、[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)]或 Windows 10 作業系統不支援 .NET Framework 1.1。 在某些情況下，會將 .NET Framework 1.1 明確視為執行應用程式所需的必要項。 在這些情況下，您應該連絡您的獨立軟體廠商 (ISV) 將應用程式升級，以便在 .NET Framework 3.5 SP1 或更新版本上執行。 如需其他資訊，請參閱[從 .NET Framework 1.1 移轉](../migration-guide/migrating-from-the-net-framework-1-1.md)。
 
 ## <a name="install-the-net-framework-11-from-a-cd-or-download-center"></a>從光碟或下載中心安裝 .NET Framework 1.1
 
-在 [!INCLUDE[win8](../../../includes/win8-md.md)]、[!INCLUDE[win81](../../../includes/win81-md.md)]、[!INCLUDE[winserver8](../../../includes/winserver8-md.md)]、[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] 或 Windows 10 上無法手動安裝 .NET Framework 1.1。 它不再受支援。 如果您嘗試安裝該套件，即會顯示下面錯誤訊息：「安裝程式無法繼續，因為這個 .NET Framework 版本與之前安裝的版本不相容」。 若要解決這個問題，請安裝 [.NET Framework 3.5 SP1](https://www.microsoft.com/download/details.aspx?id=22)。 此版本包含 .NET Framework 2.0 (.NET Framework 1.1 的下一版)，[!INCLUDE[win8](../../../includes/win8-md.md)]、[!INCLUDE[win81](../../../includes/win81-md.md)] 及 Windows 10 全都支援此版本。 您一定要先嘗試安裝應用程式，判斷它是否會自動更新為較新版本的 .NET Framework。 如果沒有，請連絡您的 ISV 以取得應用程式更新。
+您無法在 Windows 8、Windows 8.1、[!INCLUDE[winserver8](../../../includes/winserver8-md.md)]、[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)]或 Windows 10 上手動安裝 .NET Framework 1.1。 它不再受支援。 如果您嘗試安裝該套件，便會顯示下面錯誤訊息：「安裝程式無法繼續，因為這個 .NET Framework 版本與之前安裝的版本不相容」。 若要解決這個問題，請安裝 [.NET Framework 3.5 SP1](https://www.microsoft.com/download/details.aspx?id=22)。 此版本包含 Windows 8、Windows 8.1 和 Windows 10 上支援的 .NET Framework 2.0 （.NET Framework 1.1 之後的版本）。 您一定要先嘗試安裝應用程式，判斷它是否會自動更新為較新版本的 .NET Framework。 如果沒有，請連絡您的 ISV 以取得應用程式更新。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [從 .NET Framework 1.1 移轉](../migration-guide/migrating-from-the-net-framework-1-1.md)
 - [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](dotnet-35-windows-10.md)

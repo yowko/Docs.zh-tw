@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94d435d8f50683c24e7ca28100fbf5abf0fdcc19
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 33583f430e5af2f3fa7027233febd9ec61f85a3f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204784"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802449"
 ---
 # <a name="isolated-storage"></a>隔離儲存區
 <a name="top"></a> 對於傳統型應用程式而言，隔離儲存區為資料儲存機制，藉著定義標準化方式，將程式碼與儲存的資料產生關聯，以提供隔離和安全。 標準化也提供其他利益。 系統管理員可以使用設計來操作隔離儲存區的工具，設定檔案存放空間、設定安全性原則，和刪除未使用的資料。 有了隔離儲存區，您的程式碼不再需要唯一路徑去指定檔案系統中的安全位置，並且資料也被保護以免受到只擁有隔離儲存區存取權的其他應用程式的影響。 指示應用程式之存放區域所在位置的硬式編碼資訊是沒有必要的。
 
 > [!IMPORTANT]
-> Windows 8.x 存放區應用程式無法使用隔離儲存區。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的 [應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) 。
+> Windows 8.x 存放區應用程式無法使用隔離儲存區。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。
 
-本主題包含下列各節：
+此主題包括下列章節：
 
 - [資料區間和存放區](#data_compartments_and_stores)
 
@@ -101,9 +101,9 @@ ms.locfileid: "74204784"
 |-------------------|---------------------|---------------------|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.None>|不允許使用隔離儲存區。|沒有安全性影響。|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>|依據使用者、定義域和組件的隔離。 各個組件在定義域中具有分別的子存放區。 電腦也會隱含隔離使用這項權限的存放區。|這個使用權限等級開放資源給未經授權的過度使用，即使強制的配額對此增加了一些難度。 這被稱為拒絕服務的攻擊。|
-|<xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByRoamingUser>|與 `DomainIsolationByUser` 相同，但存放區儲存至將漫遊的位置，如果啟用漫遊使用者設定檔而未限制配額的話。|因為配額必須停用，儲存資源將更容易受到拒絕服務的攻擊傷害。|
+|<xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByRoamingUser>|與 `DomainIsolationByUser`相同，但存放區儲存至將漫遊的位置，如果啟用漫遊使用者設定檔而未限制配額的話。|因為配額必須停用，儲存資源將更容易受到拒絕服務的攻擊傷害。|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByUser>|依據使用者和組件的隔離。 電腦也會隱含隔離使用這項權限的存放區。|配額被強制在這個等級，幫助防止拒絕服務的攻擊。 另一個定義域中的相同組件可以存取這個存放區，開啟資訊可在應用程式之間洩漏的可能性。|
-|<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser>|與 `AssemblyIsolationByUser` 相同，但存放區儲存至將漫遊的位置，如果啟用漫遊使用者設定檔而未限制配額的話。|與 `AssemblyIsolationByUser` 中相同，但沒有配額，遭到拒絕服務攻擊的風險增加。|
+|<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser>|與 `AssemblyIsolationByUser`相同，但存放區儲存至將漫遊的位置，如果啟用漫遊使用者設定檔而未限制配額的話。|與 `AssemblyIsolationByUser`中相同，但沒有配額，遭到拒絕服務攻擊的風險增加。|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser>|依據使用者的隔離。 基本上，只有管理的或偵錯的工具使用這個等級的使用權限。|這個使用權限的存取允許程式碼檢視或刪除使用者的任何隔離儲存區檔案或目錄 (不管組件隔離)。 風險包括資訊洩漏和資料遺失 (但不僅限於此)。|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.UnrestrictedIsolatedStorage>|依據所有使用者、定義域和組件的隔離。 基本上，只有管理的或偵錯的工具使用這個等級的使用權限。|這個使用權限將產生完全洩露所有使用者的全部隔離存放區的可能性。|
 
@@ -118,7 +118,7 @@ ms.locfileid: "74204784"
 |Windows 2000、Windows XP、Windows Server 2003 (從 Windows NT 4.0 升級)|啟用漫遊的存放區 =<br /><br /> \<SYSTEMROOT>\Profiles\\<user\>\Application Data<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMROOT>\Profiles\\<user\>\Local Settings\Application Data|
 |Windows 2000 - 全新安裝 (以及從 Windows 98 和 Windows NT 3.51 升級)|啟用漫遊的存放區 =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Application Data<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Local Settings\Application Data|
 |Windows XP、Windows Server 2003 - 全新安裝 (以及從 Windows 2000 和 Windows 98 升級)|啟用漫遊的存放區 =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Application Data<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Local Settings\Application Data|
-|[!INCLUDE[win8](../../../includes/win8-md.md)]、Windows 7、Windows Server 2008、Windows Vista|啟用漫遊的存放區 =<br /><br /> \<SYSTEMDRIVE>\Users\\<user\>\AppData\Roaming<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMDRIVE>\Users\\<user\>\AppData\Local|
+|Windows 8、Windows 7、Windows Server 2008、Windows Vista|啟用漫遊的存放區 =<br /><br /> \<SYSTEMDRIVE>\Users\\<user\>\AppData\Roaming<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMDRIVE>\Users\\<user\>\AppData\Local|
 
 <a name="isolated_storage_tasks"></a>
 
@@ -179,7 +179,7 @@ ms.locfileid: "74204784"
 
 <a name="reference"></a>
 
-## <a name="reference"></a>參考
+## <a name="reference"></a>參考資料
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType>
 

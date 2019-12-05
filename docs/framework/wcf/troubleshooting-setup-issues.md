@@ -1,15 +1,15 @@
 ---
-title: 疑難排解安裝程式問題
+title: 疑難排解安裝問題
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 586defea0f761f8b6dea691b778d221cff62c7cf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: becf2576528dc0011a77597b3665d77f6907a3cc
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281601"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802423"
 ---
-# <a name="troubleshooting-setup-issues"></a>疑難排解安裝程式問題
+# <a name="troubleshooting-setup-issues"></a>疑難排解安裝問題
 本主題描述如何針對 Windows Communication Foundation （WCF）設定問題進行疑難排解。  
   
 ## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>有些 Windows Communication Foundation 登錄機碼 (Registry Key) 無法藉由在 .NET Framework 3.0 上執行 MSI 修復作業來加以修復。  
@@ -52,7 +52,7 @@ ms.locfileid: "74281601"
   
  您必須遵循下列步驟才能解決上述問題。  
   
-1. 執行[2.0 版的 WMI Diagnosis Utility，](https://go.microsoft.com/fwlink/?LinkId=94685)以修復 WMI 服務。 如需使用此工具的詳細資訊，請參閱[WMI Diagnosis Utility](https://go.microsoft.com/fwlink/?LinkId=94686)主題。  
+1. 執行[2.0 版的 WMI Diagnosis Utility，](https://go.microsoft.com/fwlink/?LinkId=94685)以修復 WMI 服務。 如需使用此工具的詳細資訊，請參閱[WMI Diagnosis Utility](https://docs.microsoft.com/previous-versions/tn-archive/ff404265(v%3dmsdn.10))一文。  
   
  使用位於 [**控制台**] 中的 [**新增/移除程式**] applet，或卸載/重新安裝 .NET Framework 3.0，以修復 .NET Framework 3.0 安裝。  
   
@@ -73,6 +73,6 @@ ms.locfileid: "74281601"
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [設定指示](./samples/set-up-instructions.md)
