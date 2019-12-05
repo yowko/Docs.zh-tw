@@ -11,9 +11,9 @@
 - name: 'C# 指南'
   href: csharp/index.yml
 - name: 'F# 指南'
-  href: fsharp/
+  href: fsharp/index.yml
 - name: Visual Basic 指南
-  href: visual-basic/
+  href: visual-basic/index.yml
 - name: ML.NET 指南
   href: machine-learning/index.yml
 - name: 適用於 Apache Spark 的 .NET 指南

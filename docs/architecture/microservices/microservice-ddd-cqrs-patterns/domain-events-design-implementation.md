@@ -2,12 +2,12 @@
 title: 領域事件： 設計和實作
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 深入了解領域事件，這是用來在彙總之間建立通訊的重要概念。
 ms.date: 10/08/2018
-ms.openlocfilehash: f0dbd6b0e70d825122d319611a327438df065588
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: f427ed5216af11b90c5a8cede15806a11aedc76d
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739923"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74835542"
 ---
 # <a name="domain-events-design-and-implementation"></a>領域事件：設計和實作
 
@@ -63,7 +63,7 @@ ms.locfileid: "73739923"
 
 重點是不要限制領域事件出現時所要執行的動作數目。 領域和應用程式中的動作和規則最終都會成長。 發生某件事時的副作用動作複雜度或數目會成長，但如果您的程式碼與「黏附」功能結合 (亦即，使用 `new` 建立特定物件)，則每次您需要新增動作時，也需要變更可運作及經測試的程式碼。
 
-這項變更可能會導致新的 Bug，而此方法也會違反 [SOLID](https://en.wikipedia.org/wiki/Open/closed_principle) 的 [Open–closed principl](https://en.wikipedia.org/wiki/SOLID) (開啟/關閉準則)。 不僅如此，協調作業的原始類別會不斷成長，這違背[單一功能原則 (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle)。
+這項變更可能會導致新的 Bug，而此方法也會違反 [SOLID](https://en.wikipedia.org/wiki/SOLID) 的 [Open–closed principl](https://en.wikipedia.org/wiki/Open/closed_principle) (開啟/關閉準則)。 不僅如此，協調作業的原始類別會不斷成長，這違背[單一功能原則 (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle)。
 
 相反地，如果您使用領域事件，就可以透過此方法分離職責，來建立更細緻且低耦合的實作：
 
@@ -71,7 +71,7 @@ ms.locfileid: "73739923"
 2. 接收命令處理常式中的命令。
    - 執行單一彙總的交易。
    - (選擇性) 引發副作用的領域事件 (例如 OrderStartedDomainEvent)。
-3. 處理領域事件 (在目前的處理序中)，這些事件會在多個彙總或應用程式動作中執行不限數目的副作用。 例如，
+3. 處理領域事件 (在目前的處理序中)，這些事件會在多個彙總或應用程式動作中執行不限數目的副作用。 例如：
    - 確認或建立購買者和付款方式。
    - 建立相關的整合事件並傳送至事件匯流排，以在微服務之間傳播狀態，或觸發外部動作，例如將電子郵件傳送給購買者。
    - 處理其他副作用。
@@ -341,6 +341,8 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 ## <a name="conclusions-on-domain-events"></a>領域事件結論
 
 如前所述，使用領域事件可明確實作您領域中變更的副作用。 以 DDD 術語來說，使用領域事件可在一或多個彙總之間明確實作副作用。 此外，為了提高延展性並降低資料庫鎖定的影響，請在相同領域中的多個彙總之間使用最終一致性。
+
+參考應用程式會使用[MediatR](https://github.com/jbogard/MediatR) ，在單一交易中傳播跨匯總 synchonously 的領域事件。 不過，您也可以使用一些 AMQP 的執行（例如[RabbitMQ](https://www.rabbitmq.com/)或[Azure 服務匯流排](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)）以非同步方式傳播網域事件、使用最終一致性，但如上所述，您必須考慮在發生失敗時補償動作的需求。
 
 ## <a name="additional-resources"></a>其他資源
 
