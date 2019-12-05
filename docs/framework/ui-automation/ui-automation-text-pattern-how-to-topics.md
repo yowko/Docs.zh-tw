@@ -8,23 +8,23 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: ca6ac045-7b21-4487-9379-59aa20909670
-ms.openlocfilehash: 450a3f3a4969287181aa031ab581b85447bfde56
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7675a75f5390701b5f023b0c360a4e7a5169767b
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040431"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800938"
 ---
-# <a name="ui-automation-text-pattern-how-to-topics"></a><span data-ttu-id="b3d08-102">UI 自動化文字模式 HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="b3d08-102">UI Automation Text Pattern-How-to Topics</span></span>
+# <a name="ui-automation-text-pattern-how-to-topics"></a><span data-ttu-id="3c743-102">UI 自動化文字模式 HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="3c743-102">UI Automation Text Pattern-How-to Topics</span></span>
 > [!NOTE]
-> <span data-ttu-id="b3d08-103">這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="b3d08-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="b3d08-104">如需的最新[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]資訊, [請參閱 Windows Automation API:使用者介面](https://go.microsoft.com/fwlink/?LinkID=156746)自動化。</span><span class="sxs-lookup"><span data-stu-id="b3d08-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+> <span data-ttu-id="3c743-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="3c743-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="3c743-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。</span><span class="sxs-lookup"><span data-stu-id="3c743-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
   
- <span data-ttu-id="b3d08-105">本節包含的主題說明如何使用 UI 自動化文字模式。</span><span class="sxs-lookup"><span data-stu-id="b3d08-105">This section includes topics that explain how to use UI Automation text pattern.</span></span>  
+ <span data-ttu-id="3c743-105">本節包含的主題說明如何使用 UI 自動化文字模式。</span><span class="sxs-lookup"><span data-stu-id="3c743-105">This section includes topics that explain how to use UI Automation text pattern.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b3d08-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="b3d08-106">In This Section</span></span>  
- [<span data-ttu-id="b3d08-107">使用 UI 自動化將內容新增至文字方塊</span><span class="sxs-lookup"><span data-stu-id="b3d08-107">Add Content to a Text Box Using UI Automation</span></span>](add-content-to-a-text-box-using-ui-automation.md)  
- [<span data-ttu-id="b3d08-108">使用 UI 自動化尋找和反白顯示文字</span><span class="sxs-lookup"><span data-stu-id="b3d08-108">Find and Highlight Text Using UI Automation</span></span>](find-and-highlight-text-using-ui-automation.md)  
- [<span data-ttu-id="b3d08-109">使用 UI 自動化取得文字屬性</span><span class="sxs-lookup"><span data-stu-id="b3d08-109">Obtain Text Attributes Using UI Automation</span></span>](obtain-text-attributes-using-ui-automation.md)  
- [<span data-ttu-id="b3d08-110">使用 UI 自動化取得混合文字屬性詳細資料</span><span class="sxs-lookup"><span data-stu-id="b3d08-110">Obtain Mixed Text Attribute Details Using UI Automation</span></span>](obtain-mixed-text-attribute-details-using-ui-automation.md)  
- [<span data-ttu-id="b3d08-111">使用 UI 自動化周遊文字</span><span class="sxs-lookup"><span data-stu-id="b3d08-111">Traverse Text Using UI Automation</span></span>](traverse-text-using-ui-automation.md)  
- [<span data-ttu-id="b3d08-112">使用 UI 自動化存取內嵌物件</span><span class="sxs-lookup"><span data-stu-id="b3d08-112">Access Embedded Objects Using UI Automation</span></span>](access-embedded-objects-using-ui-automation.md)
+## <a name="in-this-section"></a><span data-ttu-id="3c743-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="3c743-106">In This Section</span></span>  
+ [<span data-ttu-id="3c743-107">使用 UI 自動化將內容新增至文字方塊</span><span class="sxs-lookup"><span data-stu-id="3c743-107">Add Content to a Text Box Using UI Automation</span></span>](add-content-to-a-text-box-using-ui-automation.md)  
+ [<span data-ttu-id="3c743-108">使用 UI 自動化尋找和反白顯示文字</span><span class="sxs-lookup"><span data-stu-id="3c743-108">Find and Highlight Text Using UI Automation</span></span>](find-and-highlight-text-using-ui-automation.md)  
+ [<span data-ttu-id="3c743-109">使用 UI 自動化取得文字屬性</span><span class="sxs-lookup"><span data-stu-id="3c743-109">Obtain Text Attributes Using UI Automation</span></span>](obtain-text-attributes-using-ui-automation.md)  
+ [<span data-ttu-id="3c743-110">使用 UI 自動化取得混合文字屬性詳細資料</span><span class="sxs-lookup"><span data-stu-id="3c743-110">Obtain Mixed Text Attribute Details Using UI Automation</span></span>](obtain-mixed-text-attribute-details-using-ui-automation.md)  
+ [<span data-ttu-id="3c743-111">使用 UI 自動化周遊文字</span><span class="sxs-lookup"><span data-stu-id="3c743-111">Traverse Text Using UI Automation</span></span>](traverse-text-using-ui-automation.md)  
+ [<span data-ttu-id="3c743-112">使用 UI 自動化存取內嵌物件</span><span class="sxs-lookup"><span data-stu-id="3c743-112">Access Embedded Objects Using UI Automation</span></span>](access-embedded-objects-using-ui-automation.md)
