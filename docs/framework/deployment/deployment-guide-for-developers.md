@@ -277,7 +277,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 |安裝在 Windows 10 以外的所有 OS 版本上的 .NET Framework 4.6|393297|
 |.NET Framework 4.5.2|379893|
 |隨 Windows 8.1 或 Windows Server 2012 R2 安裝的 .NET Framework 4.5.1|378675|
-|在 Windows 8、Windows 7 上安裝 .NET Framework 4.5。1|378758|
+|在 Windows 8、Windows 7 上安裝 .NET Framework 4.5.1|378758|
 |.NET Framework 4.5|378389|
 
 ### <a name="detecting-the-language-packs"></a>刪除語言套件

@@ -13,7 +13,7 @@ ms.locfileid: "74205063"
 ---
 # <a name="net-core-federal-information-processing-standard-fips-compliance"></a>.NET Core 聯邦資訊處理標準（FIPS）合規性
 
-聯邦資訊處理標準（FIPS）發行集140-2 是美國政府標準，定義資訊技術產品中密碼編譯模組的最低安全性需求，如資訊第5131節所定義。1996的技術管理改革動作。
+聯邦資訊處理標準（FIPS）發行集140-2 是美國政府標準，定義資訊技術產品中密碼編譯模組的最低安全性需求，如資訊第5131節所定義.1996的技術管理改革動作。
 
 .NET Core：
 

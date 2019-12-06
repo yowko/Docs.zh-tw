@@ -6,7 +6,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/28/2019
 ms.locfileid: "74567741"
 ---
-### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>HttpRequestMessage 的預設值。版本已變更為1。1
+### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>HttpRequestMessage 的預設值。版本已變更為1.1
 
 <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> 屬性的預設值已從2.0 變更為1.1。
 

@@ -53,7 +53,7 @@ HRESULT EnumDomains (
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET Framework 版本：** 1.0、1。1  
+ **.NET Framework 版本：** 1.0、1.1  
   
 ## <a name="see-also"></a>請參閱
 

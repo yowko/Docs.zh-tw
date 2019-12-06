@@ -57,4 +57,4 @@ scl enable dotnet-runtime-3.0 bash
 
 ## <a name="see-also"></a>請參閱
 
-- [在 Red Hat Enterprise Linux 8 上使用 .NET Core 3。0](https://access.redhat.com/documentation/en-us/net_core/3.0/html/getting_started_guide_for_rhel_8/gs_install_dotnet)
+- [在 Red Hat Enterprise Linux 8 上使用 .NET Core 3.0](https://access.redhat.com/documentation/en-us/net_core/3.0/html/getting_started_guide_for_rhel_8/gs_install_dotnet)

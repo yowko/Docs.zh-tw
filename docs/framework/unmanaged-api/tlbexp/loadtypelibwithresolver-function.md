@@ -89,7 +89,7 @@ HRESULT LoadTypeLibWithResolver(
   
  連結**庫：** TlbRef .lib  
   
- **.NET Framework 版本：** 3.5、3.0、2。0  
+ **.NET Framework 版本：** 3.5、3.0、2.0  
   
 ## <a name="see-also"></a>請參閱
 

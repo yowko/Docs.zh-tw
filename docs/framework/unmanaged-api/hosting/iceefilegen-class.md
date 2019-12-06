@@ -239,7 +239,7 @@ public:
   
  **標頭：** ICeeFileGen。h  
   
- **.NET Framework 版本：** 1。0  
+ **.NET Framework 版本：** 1.0  
   
 ## <a name="see-also"></a>請參閱
 

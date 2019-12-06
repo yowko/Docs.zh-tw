@@ -54,4 +54,4 @@ scl enable rh-dotnet30 bash
 
 ## <a name="see-also"></a>請參閱
 
-- [在 Red Hat Enterprise Linux 7 上使用 .NET Core 3。0](https://access.redhat.com/documentation/en-us/net_core/3.0/html/getting_started_guide/gs_install_dotnet)
+- [在 Red Hat Enterprise Linux 7 上使用 .NET Core 3.0](https://access.redhat.com/documentation/en-us/net_core/3.0/html/getting_started_guide/gs_install_dotnet)

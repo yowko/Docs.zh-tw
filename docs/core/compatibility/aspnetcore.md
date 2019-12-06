@@ -15,11 +15,11 @@ ms.locfileid: "74568372"
 
 以下是 ASP.NET Core 版本的 ASP.NET Core 重大變更清單。 ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 
-## <a name="aspnet-core-31"></a>ASP.NET Core 3。1
+## <a name="aspnet-core-31"></a>ASP.NET Core 3.1
 
 [!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]
 
-## <a name="aspnet-core-30"></a>ASP.NET Core 3。0
+## <a name="aspnet-core-30"></a>ASP.NET Core 3.0
 
 [!INCLUDE[obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 

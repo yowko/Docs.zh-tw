@@ -52,7 +52,7 @@ Google 的更換 Api 會使用不同的資料來源和格式。 以下提供的�
 
 2\.1 年2月和2.2 修補程式併入了先前的重新設定，做為新的預設值。 因為已達到[生命週期的結尾](https://dotnet.microsoft.com/platform/support-policy)，所以未規劃 ASP.NET Core 2.0 的修補程式。
 
-##### <a name="aspnet-core-30"></a>ASP.NET Core 3。0
+##### <a name="aspnet-core-30"></a>ASP.NET Core 3.0
 
 針對 ASP.NET Core 2.x 所提供的緩和也可以用於 ASP.NET Core 3.0。 在未來的3.0 預覽中，可能會移除 `Microsoft.AspNetCore.Authentication.Google` 套件。 使用者會改為導向至 `Microsoft.AspNetCore.Authentication.OpenIdConnect`。 下列程式碼示範如何在 `Startup.ConfigureServices` 中以 `AddOpenIdConnect` 取代 `AddGoogle`。 這種取代可以搭配 ASP.NET Core 2.0 和更新版本使用，而且可以視需要針對 ASP.NET Core 1.x 進行調整。
 

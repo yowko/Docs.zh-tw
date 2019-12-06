@@ -113,30 +113,30 @@ SDK 版本使用相同的 `[major].[minor]`，且具有獨立的 `[patch]`，其
 
 - `dotnet-sdk-[major].[minor]`-安裝特定執行時間的最新 sdk
   - **版本：** \<執行階段版本 >
-  - **範例：** dotnet-sdk-2。1
+  - **範例：** dotnet-sdk-2.1
   - **包含：** （3）、（4）
   - 相依性 **：** `dotnet-runtime-[major].[minor]`、`aspnetcore-runtime-[major].[minor]`、`dotnet-targeting-pack-[major].[minor]`、`aspnetcore-targeting-pack-[major].[minor]`、`netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`、`dotnet-apphost-pack-[major].[minor]`、`dotnet-templates-[major].[minor]`
 
 - `aspnetcore-runtime-[major].[minor]`-安裝特定的 ASP.NET Core 執行時間
   - **版本：** \<aspnetcore 執行階段版本 >
-  - **範例：** aspnetcore-runtime-2。1
+  - **範例：** aspnetcore-runtime-2.1
   - **包含：** （6）
   - 相依性 **：** `dotnet-runtime-[major].[minor]`
 
 - `dotnet-runtime-deps-[major].[minor]` _（選用）_ -安裝執行獨立應用程式的相依性
   - **版本：** \<執行階段版本 >
-  - **範例：** dotnet-runtime-.deps.json-2。1
+  - **範例：** dotnet-runtime-.deps.json-2.1
   - 相依性 **：** _散發版本特定_的相依性
 
 - `dotnet-runtime-[major].[minor]`-安裝特定執行時間
   - **版本：** \<執行階段版本 >
-  - **範例：** dotnet-runtime-2。1
+  - **範例：** dotnet-runtime-2.1
   - **包含：** （5）
   - 相依性 **：** `dotnet-hostfxr-[major].[minor]`、`dotnet-runtime-deps-[major].[minor]`
 
 - `dotnet-hostfxr-[major].[minor]`-相依性
   - **版本：** \<執行階段版本 >
-  - **範例：** dotnet-用 hostfxr-3。0
+  - **範例：** dotnet-用 hostfxr-3.0
   - **包含：** （2）
   - 相依性 **：** `dotnet-host`
 

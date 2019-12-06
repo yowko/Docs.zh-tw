@@ -132,8 +132,8 @@ public void Configure(IApplicationBuilder app)
 
 即將推出的相關 `SameSite` 修補程式如下：
 
-* ASP.NET Core 2.1、2.2 和3。0
-* `Microsoft.Owin` 4。1
+* ASP.NET Core 2.1、2.2 和3.0
+* `Microsoft.Owin` 4.1
 * `System.Web` （適用于 .NET Framework 4.7.2 和更新版本）
 
 #### <a name="category"></a>Category

@@ -23,7 +23,7 @@ Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件資料類型�
   
 ### <a name="to-export-metadata-for-compiled-service-contracts"></a>若要匯出編譯服務合約的中繼資料  
   
-1. 將您的服務合約實作編譯成一個或多個類別程式庫。1  
+1. 將您的服務合約實作編譯成一個或多個類別程式庫.1  
   
 2. 執行 Svcutil.exe 處理編譯組件。  
   
