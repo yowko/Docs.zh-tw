@@ -14,14 +14,14 @@ helpviewer_keywords:
 - BeginMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: a27787052757098d4edb2d8516e22d8a03b7009a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: be1e86e0b760ab403cf42ac19da03f84769a85cf
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138795"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884419"
 ---
-# <a name="beginenumeration-function"></a>BeginEnumeration 函式
+# <a name="beginmethodenumeration-function"></a>BeginMethodEnumeration 函式
 開始可供物件使用之方法的列舉。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -47,7 +47,7 @@ HRESULT BeginMethodEnumeration (
 `lEnumFlags`  
 在所有方法都是零（0），或指定列舉範圍的旗標。 下列旗標定義于*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數：
 
-常數  |值  |描述  |
+常數  |{2&gt;值&lt;2}  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 將列舉限制為類別本身中定義的方法。 |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 將列舉限制為繼承自基類的屬性。 |
@@ -56,7 +56,7 @@ HRESULT BeginMethodEnumeration (
 
 這個函式所傳回的下列值會定義在*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數：
 
-|常數  |值  |描述  |
+|常數  |{2&gt;值&lt;2}  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` 為非零，而且不是其中一個指定的旗標。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |

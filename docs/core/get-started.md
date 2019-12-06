@@ -4,12 +4,12 @@ description: 尋找資源以了解如何在 Windows、Linux 和 macOS 上建置 
 author: thraka
 ms.author: adegeo
 ms.date: 09/19/2019
-ms.openlocfilehash: 78066f2904f6a874b71165e4fe1769b6b778ae41
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 89db6d79336c01315983133d9041904d88cba301
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428877"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884250"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 使用者入門
 
@@ -50,7 +50,7 @@ Hello World!
 - [在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫。](./tutorials/vb-library-with-visual-studio.md)  
 - 觀看影片以了解[如何安裝及使用 Visual Studio Code 和 .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/)。
 - 觀看影片以了解[如何安裝及使用 Visual Studio 2017 和 .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/)。
-- [使用命令列開始使用 .NET Core。](tutorials/using-with-xplat-cli.md)
+- [使用命令列開始使用 .NET Core。](tutorials/cli-create-console-app.md)
 
 如需支援的 Windows 版本清單，請參閱[.Net Core 相依性和需求](install/dependencies.md?tabs=netcore30&pivots=os-windows)一文。
 
@@ -58,7 +58,7 @@ Hello World!
 
 依照下列逐步教學課程，您可以開始開發 .NET Core 應用程式：
 
-- [使用命令列開始使用 .NET Core。](tutorials/using-with-xplat-cli.md)
+- [使用命令列開始使用 .NET Core。](tutorials/cli-create-console-app.md)
 - 觀看影片以了解[使用 C# 和 .NET Core 在 Ubuntu 上開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)。
 
 如需支援的 Linux 散發版本和版本清單，請參閱[.Net Core 相依性和需求](install/dependencies.md?tabs=netcore30&pivots=os-linux)一文。
@@ -69,7 +69,7 @@ Hello World!
 
 - 觀看影片以了解[使用 C# 和 .NET Core 在 macOS 上開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)。
 - [使用 Visual Studio Code 在 macOS 上開始使用 .NET Core。](tutorials/using-on-macos.md)
-- [使用命令列開始使用 .NET Core。](tutorials/using-with-xplat-cli.md)
+- [使用命令列開始使用 .NET Core。](tutorials/cli-create-console-app.md)
 - [使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core。](tutorials/using-on-mac-vs.md)
 - [使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 方案。](tutorials/using-on-mac-vs-full-solution.md)
 

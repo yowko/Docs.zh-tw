@@ -4,12 +4,12 @@ description: 針對 .NET Core、ASP.NET Core 及 C# 語言的範例和教學課�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5132415a6be03787111aaed8d027d436bb6820fe
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423564"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884432"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 範例與教學課程
 
@@ -25,7 +25,7 @@ ms.locfileid: "73423564"
 
 ### <a name="tutorials"></a>教學課程
 
-**[使用 CLI 工具撰寫 .NET Core 主控台應用程式︰逐步指南](../core/tutorials/using-with-xplat-cli.md)**
+**[使用 CLI 工具撰寫 .NET Core 主控台應用程式︰逐步指南](../core/tutorials/cli-create-console-app.md)**
 
 此指南說明如何使用 .NET Core CLI 工具，來建置跨平台的主控台應用程式。 它會從基本的主控台應用程式開始，最終會跨越多個專案 (包括測試)。 您會逐步新增各種功能，並同時增加您的知識。 [完整範例](https://github.com/dotnet/samples/tree/master/core/console-apps) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 

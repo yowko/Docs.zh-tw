@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 1be04f98a4dec1317c485c7e482568cfe48ea9bf
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 13d1eda178a4c2580af67ef5a7198e7f0884a7d6
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588878"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884393"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 傳回值 (C# 程式設計手冊)
 
@@ -26,7 +26,7 @@ ms.locfileid: "69588878"
 
 ## <a name="example"></a>範例
 
-此範例使用 [.NET Core](../../../core/index.md) 命令列工具。 如果您不熟悉 .NET Core 命令列工具，您可以在此[開始使用主題](../../../core/tutorials/using-with-xplat-cli.md)中了解這些工具。
+此範例使用 [.NET Core](../../../core/index.md) 命令列工具。 如果您不熟悉 .NET Core 命令列工具，您可以在此[開始使用主題](../../../core/tutorials/cli-create-console-app.md)中了解這些工具。
 
 修改 *program.cs* 中的 `Main` 方法，如下所示：
 
@@ -93,7 +93,7 @@ private static async Task<int> AsyncConsoleWork()
 > [!NOTE]
 >如果這些範例在 `Main` 方法上使用 `async` 修飾詞，編譯器會產生相同的程式碼。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [C# 參考](../index.md)

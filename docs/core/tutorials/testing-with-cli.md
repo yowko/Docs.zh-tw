@@ -4,16 +4,16 @@ description: 本教學課程說明如何從命令列組織和測試 .NET Core �
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: d93ba5f41f1e7b5818790d0853bd219466b317ee
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 38017a788a8e43601f49a98230cb4d96e0390061
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117382"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884211"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>使用 .NET Core 命令列組織和測試專案
 
-此教學課程遵循[使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core](using-with-xplat-cli.md)，讓您超越建立簡單主控台應用程式來開發進階且井然有序的應用程式。 此教學課程在示範如何使用資料夾來組織您的程式碼之後，會示範如何使用 [xUnit](https://xunit.github.io/) 測試架構來擴充主控台應用程式。
+此教學課程遵循[使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core](cli-create-console-app.md)，讓您超越建立簡單主控台應用程式來開發進階且井然有序的應用程式。 此教學課程在示範如何使用資料夾來組織您的程式碼之後，會示範如何使用 [xUnit](https://xunit.github.io/) 測試架構來擴充主控台應用程式。
 
 ## <a name="using-folders-to-organize-code"></a>使用資料夾來組織程式碼
 
@@ -97,13 +97,13 @@ Woof!
 Meow!
 ```
 
-選擇性練習：您可以擴充此專案，以新增 `Bird` 這類寵物類型。 讓小鳥的 `TalkToOwner` 方法提供 `Tweet!` 給擁有者。 重新執行應用程式。 輸出會包含 `Tweet!`
+選擇性練習︰您可以擴充此專案，以新增 `Bird` 這類寵物類型。 讓小鳥的 `TalkToOwner` 方法提供 `Tweet!` 給擁有者。 重新執行應用程式。 輸出會包含 `Tweet!`
 
 ### <a name="testing-the-sample"></a>測試範例
 
 `NewTypes` 專案已經就緒，而且組織方式是將寵物相關類型保留在資料夾中。 接下來，建立測試專案，並開始撰寫具有 [xUnit](https://xunit.github.io/) 測試架構的測試。 單元測試可讓您自動檢查寵物類型的行為以確認它們正常運作。
 
-巡覽回到 *src* 資料夾，並建立內含 *NewTypesTests* 資料夾的 *test* 資料夾。 在命令提示字元中，從 *NewTypesTests* 資料夾執行 `dotnet new xunit`。 這會產生兩個檔案：*NewTypesTests.csproj* 及 *UnitTest1.cs*。
+巡覽回到 *src* 資料夾，並建立內含 *NewTypesTests* 資料夾的 *test* 資料夾。 在命令提示字元中，從 *NewTypesTests* 資料夾執行 `dotnet new xunit`。 這會產生兩個檔案︰*NewTypesTests.csproj* 及 *UnitTest1.cs*。
 
 測試專案目前無法測試 `NewTypes` 中的類型，並且需要 `NewTypes` 專案的專案參考。 若要新增專案參考，請使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令︰
 
@@ -159,7 +159,7 @@ public class PetTests
 }
 ```
 
-選擇性練習：如果您稍早已將產生 `Tweet!` 的 `Bird` 類型新增至擁有者，請將測試方法新增至 *PetTests.cs* 檔案 `BirdTalkToOwnerReturnsTweet`，確認 `TalkToOwner` 方法正確作用於 `Bird` 類型。
+選擇性練習︰如果您稍早已將產生 `Tweet!` 的 `Bird` 類型新增至擁有者，請將測試方法新增至 PetTests.cs 檔案，並新增 `BirdTalkToOwnerReturnsTweet` 以確認 `TalkToOwner` 方法正確作用於 `Bird` 類型。
 
 > [!NOTE]
 > 雖然您預期 `expected` 與 `actual` 值相等，但是具有 `Assert.NotEqual` 檢查的初始判斷提示指定這些值「不相等」。 一開始一律會讓測試失敗，以檢查測試邏輯。 在您確認測試失敗之後，調整判斷提示以允許測試通過。
