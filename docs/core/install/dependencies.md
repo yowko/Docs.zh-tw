@@ -23,7 +23,7 @@ ms.locfileid: "74837000"
 <!-- markdownlint-disable MD025 -->
 <!-- markdownlint-disable MD024 -->
 
-# <a name="net-core-31tabnetcore31"></a>[.NET Core 3。1](#tab/netcore31)
+# <a name="net-core-31tabnetcore31"></a>[.NET Core 3.1](#tab/netcore31)
 
 .NET Core 3.1 支援下列 Windows 版本：
 
@@ -32,7 +32,7 @@ ms.locfileid: "74837000"
 
 | OS                            | {2&gt;版本&lt;2}                        | 架構   |
 | ----------------------------- | ------------------------------ | --------------- |
-| Windows 用戶端                | 7 SP1 +、8。1                    | x64、x86        |
+| Windows 用戶端                | 7 SP1 +、8.1                    | x64、x86        |
 | Windows 10 用戶端             | 版本 1607 +                  | x64、x86        |
 | Windows Server                | 2012 R2 +                       | x64、x86        |
 | Nano 伺服器                   | 版本 1803 +                  | x64、ARM32      |
@@ -48,7 +48,7 @@ ms.locfileid: "74837000"
 
 | OS                            | {2&gt;版本&lt;2}                        | 架構   |
 | ----------------------------- | ------------------------------ | --------------- |
-| Windows 用戶端                | 7 SP1 +、8。1                    | x64、x86        |
+| Windows 用戶端                | 7 SP1 +、8.1                    | x64、x86        |
 | Windows 10 用戶端             | 版本 1607 +                  | x64、x86        |
 | Windows Server                | 2012 R2 +                       | x64、x86        |
 | Nano 伺服器                   | 版本 1803 +                  | x64、ARM32      |
@@ -64,7 +64,7 @@ ms.locfileid: "74837000"
 
 | OS                            | {2&gt;版本&lt;2}                        | 架構   |
 | ----------------------------- | ------------------------------ | --------------- |
-| Windows 用戶端                | 7 SP1 +、8。1                    | x64、x86        |
+| Windows 用戶端                | 7 SP1 +、8.1                    | x64、x86        |
 | Windows 10 用戶端             | 版本 1607 +                  | x64、x86        |
 | Windows Server                | 2008 R2 SP1 +                   | x64、x86        |
 | Nano 伺服器                   | 版本 1803 +                   | x64、ARM32      |
@@ -80,7 +80,7 @@ ms.locfileid: "74837000"
 
 | OS                            | {2&gt;版本&lt;2}                        | 架構   |
 | ----------------------------- | ------------------------------ | --------------- |
-| Windows 用戶端                | 7 SP1 +、8。1                    | x64、x86        |
+| Windows 用戶端                | 7 SP1 +、8.1                    | x64、x86        |
 | Windows 10 用戶端             | 版本 1607 +                  | x64、x86        |
 | Windows Server                | 2008 R2 SP1 +                   | x64、x86        |
 | Nano 伺服器                   | 版本 1803 +                  | x64            |
@@ -118,7 +118,7 @@ ms.locfileid: "74837000"
 
 ::: zone pivot="os-linux"
 
-# <a name="net-core-31tabnetcore31"></a>[.NET Core 3。1](#tab/netcore31)
+# <a name="net-core-31tabnetcore31"></a>[.NET Core 3.1](#tab/netcore31)
 
 .NET Core 3.1 將 Linux 視為單一作業系統。 針對支援的 Linux 發行版本，有單一 Linux 組建（每個晶片架構）。
 

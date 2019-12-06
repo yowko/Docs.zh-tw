@@ -13,7 +13,7 @@ ms.locfileid: "74567345"
 
 版本3.0 中的 .NET Core 已加入 Windows Forms 支援。 這篇文章列出其引進的 .NET Core 版本 Windows Forms 的重大變更。 如果您要從舊版 .NET Core （3.0 或更新版本）升級 Windows Forms 應用程式，本文適用于您。 如果您要將 Windows Forms 應用程式從 .NET Framework 遷移至 .NET Core，請參閱[Windows Forms 的重大變更（.NET Framework 至 .Net core）](../porting/winforms-breaking-changes.md)。
 
-## <a name="net-core-31"></a>.NET Core 3。1
+## <a name="net-core-31"></a>.NET Core 3.1
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 

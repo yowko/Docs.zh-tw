@@ -25,7 +25,7 @@ ms.locfileid: "74837008"
 
 若您要尋找另一個 .NET Core 版本，所有 .NET Core 版本都可以在 [.NET Core 下載 ](https://dotnet.microsoft.com/download/dotnet-core)找到。
 
-## <a name="net-core-31"></a>.NET Core 3。1
+## <a name="net-core-31"></a>.NET Core 3.1
 
 最新版本是 .NET Core 3.1。 其中包括比 .NET Core 3.0 更小的改善。 不過，.NET Core 3.1 是長期支援的版本。 如需 .NET Core 3.1 版本的詳細資訊，請參閱[.Net core 3.1 的新功能](./whats-new/dotnet-core-3-1.md)。
 

@@ -62,7 +62,7 @@ Visual Basic/Visual Studio .NET 2003 \
 Visual Basic/Visual Studio .NET 2002 \
 第一版的 Visual Basic .NET
 
-## <a name="visual-basic-160"></a>Visual Basic 16。0
+## <a name="visual-basic-160"></a>Visual Basic 16.0
 
 Visual Basic 16.0 著重于為 .NET Core 提供 Visual Basic 執行時間（microsoft）的更多功能，而且是著重于 .NET Core Visual Basic 的第一個版本。 Visual Basic 執行時間的許多部分都取決於 WinForms，而這些會在較新版本的 Visual Basic 中新增。
 

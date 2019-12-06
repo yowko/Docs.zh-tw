@@ -54,7 +54,7 @@ HRESULT GetClassFromToken(
   
  **程式庫：** CorGuids.lib  
   
- **.NET Framework 版本：** 1.0、1。1  
+ **.NET Framework 版本：** 1.0、1.1  
   
 ## <a name="see-also"></a>另請參閱
 

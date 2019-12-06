@@ -30,7 +30,7 @@ ms.locfileid: "74802709"
 * 若是其他目標 framework，請安裝[System.web](https://www.nuget.org/packages/System.Text.Json) NuGet 封裝。 封裝支援：
   * .NET Standard 2.0 和更新版本
   * .NET Framework 4.6.1 和更新版本
-  * .NET Core 2.0、2.1 和2。2
+  * .NET Core 2.0、2.1 和2.2
 
 ## <a name="additional-resources"></a>其他資源
 

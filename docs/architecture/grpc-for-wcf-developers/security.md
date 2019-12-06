@@ -32,7 +32,7 @@ GRPC 的 ASP.NET Core 實作為使用大部分標準 ASP.NET Core 機制來支�
   - Azure Active Directory
   - IdentityServer
   - JWT 持有人權杖
-  - OAuth 2。0
+  - OAuth 2.0
   - OpenID Connect
   - WS-Federation
 - 通道驗證

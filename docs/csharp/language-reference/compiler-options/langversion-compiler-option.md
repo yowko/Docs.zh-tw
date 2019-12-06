@@ -91,7 +91,7 @@ C# 應用程式所參考的中繼資料不限於 **-langversion** 編譯器選�
 |C# 4| Microsoft Visual Studio/Build Tools 2010 或配套的 .NET Framework 4.0 編譯器 |
 |C#第| Microsoft Visual Studio/Build Tools 2008 或配套的 .NET Framework 3.5 編譯器 |
 |C#2| Microsoft Visual Studio/Build Tools 2005 或配套的 .NET Framework 2.0 編譯器 |
-|C#1.0/1。2 | Microsoft Visual Studio/Build Tools .NET 2002 或配套的 .NET Framework 1.0 編譯器 |
+|C#1.0/1.2 | Microsoft Visual Studio/Build Tools .NET 2002 或配套的 .NET Framework 1.0 編譯器 |
 
 ## <a name="see-also"></a>請參閱
 

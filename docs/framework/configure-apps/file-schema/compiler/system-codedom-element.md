@@ -50,7 +50,7 @@ ms.locfileid: "70168909"
   
 ## <a name="remarks"></a>備註  
   
-## <a name="net-framework-version-20"></a>.NET Framework 版本2。0  
+## <a name="net-framework-version-20"></a>.NET Framework 版本2.0  
  System codedom > 專案包含電腦上所安裝之語言提供者的編譯器設定<xref:Microsoft.CSharp.CSharpCodeProvider> , 以及隨 .NET Framework 安裝的預設提供者, 例如和[ \< ](system-codedom-element.md)<xref:Microsoft.VisualBasic.VBCodeProvider>. 編譯器 > 元素包含零或多個[ \<編譯器 >](compiler-element.md)元素。 [ \< ](compilers-element.md) 每個[ \<編譯器 >](compiler-element.md)元素都會指定特定語言提供者的編譯器設定屬性。  
   
  開發人員和編譯器廠商可以針對新<xref:System.CodeDom.Compiler.CodeDomProvider>的執行, 將設定值新增至電腦設定檔 (machine.config)。 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>使用方法, 以程式設計方式列舉電腦上的編譯器設定所識別的預設語言提供者和語言提供者。  
@@ -58,7 +58,7 @@ ms.locfileid: "70168909"
 > [!NOTE]
 > 在 .NET Framework 版本1.0 和1.1 中, .NET Framework 所提供的預設語言提供者會在[ \<編譯器 >](compilers-element.md)元素中識別出來。 在 .NET Framework 版本2.0 中, [ \<編譯器 >](compilers-element.md)元素中不會識別預設語言提供者, 但可以使用<xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A>方法來列舉。  
   
-## <a name="net-framework-versions-10-and-11"></a>.NET Framework 版本1.0 和1。1  
+## <a name="net-framework-versions-10-and-11"></a>.NET Framework 版本1.0 和1.1  
  System.web > 元素包含電腦上語言提供者的編譯器設定。 [ \< ](system-codedom-element.md) 編譯器 > 元素包含零或多個[ \<編譯器 >](compiler-element.md)元素。 [ \< ](compilers-element.md) 每個[ \<編譯器 >](compiler-element.md)元素都會指定特定語言提供者的編譯器設定屬性。  
   
  .NET Framework 會在電腦組態檔 (Machine.config) 中定義初始編譯器設定。 開發人員和編譯器廠商可以為新的 <xref:System.CodeDom.Compiler.CodeDomProvider> 實作新增組態設定。 使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 方法，以程式設計方式列舉電腦上的語言提供者和編譯器組態設定。  

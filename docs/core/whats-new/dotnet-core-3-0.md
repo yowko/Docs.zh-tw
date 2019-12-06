@@ -25,7 +25,7 @@ ms.locfileid: "74567327"
 
 .NET Core RC1 被視為 Microsoft 準備好的生產環境，並受到完整支援。 如果您使用的是預覽版本，您必須移至 RTM 版本以繼續支援。
 
-## <a name="language-improvements-c-80"></a>語言改進C# 8。0
+## <a name="language-improvements-c-80"></a>語言改進C# 8.0
 
 C#8.0 也是此版本的一部分，其中包括[可為 null 的參考型別](../../csharp/tutorials/nullable-reference-types.md)功能、[非同步資料流程](../../csharp/tutorials/generate-consume-asynchronous-stream.md)和[其他模式](../../csharp/tutorials/pattern-matching.md)。 如需 C# 8.0 功能的詳細資訊，請參閱 [C# 8.0 的新功能](../../csharp/whats-new/csharp-8.md)。
 

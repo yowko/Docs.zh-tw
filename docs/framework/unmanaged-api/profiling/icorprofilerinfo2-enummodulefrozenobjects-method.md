@@ -47,7 +47,7 @@ HRESULT EnumModuleFrozenObjects(
   
  **程式庫：** CorGuids.lib  
   
- **.NET Framework 版本：** 3.5、3.0 SP1、3.0、2.0 SP1、2。0  
+ **.NET Framework 版本：** 3.5、3.0 SP1、3.0、2.0 SP1、2.0  
   
 ## <a name="see-also"></a>另請參閱
 

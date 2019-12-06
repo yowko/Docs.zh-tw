@@ -15,7 +15,7 @@ WPF 和 Windows Forms 支援已新增至3.0 版中的 .NET Core。 如果您要�
 
 重大變更會依引進的 .NET Core 版本分組。
 
-## <a name="net-core-31"></a>.NET Core 3。1
+## <a name="net-core-31"></a>.NET Core 3.1
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 

@@ -104,7 +104,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 | 2.0       | 最高到 2.0     |
 | 2.1       | 最高到 2.0     |
 | 2.2       | 最高到 2.0     |
-| 3.0       | 最多2。1     |
+| 3.0       | 最多2.1     |
 
 ## <a name="see-also"></a>另請參閱
 
