@@ -8,20 +8,20 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: a39d25f03583ab9020878b7a659bc99489231ff9
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a1e7a5a03db4a24ed4d13d62899754cfe9e76b56
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458894"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837151"
 ---
-# <a name="xamlname-grammar"></a><span data-ttu-id="64159-102">XamlName 文法</span><span class="sxs-lookup"><span data-stu-id="64159-102">XamlName Grammar</span></span>
-<span data-ttu-id="64159-103">XamlName 文法是以 XAML 語言規格 [MS-XAML] 定義的特定文法，為了方便起見，會在這裡重現。</span><span class="sxs-lookup"><span data-stu-id="64159-103">XamlName Grammar is a specific grammar that is defined in the XAML language specification [MS-XAML], which is reproduced here for convenience.</span></span>  
+# <a name="xamlname-grammar"></a><span data-ttu-id="5962d-102">XamlName 文法</span><span class="sxs-lookup"><span data-stu-id="5962d-102">XamlName Grammar</span></span>
+<span data-ttu-id="5962d-103">XamlName 文法是以 XAML 語言規格 [MS-XAML] 定義的特定文法，為了方便起見，會在這裡重現。</span><span class="sxs-lookup"><span data-stu-id="5962d-103">XamlName Grammar is a specific grammar that is defined in the XAML language specification [MS-XAML], which is reproduced here for convenience.</span></span>  
   
-## <a name="from-the-xaml-specification"></a><span data-ttu-id="64159-104">從 XAML 規格</span><span class="sxs-lookup"><span data-stu-id="64159-104">From the XAML Specification</span></span>  
- <span data-ttu-id="64159-105">[MS-XAML] 規格會定義文法 XamlName，以識別用於類型和屬性的一組合法符號識別碼。</span><span class="sxs-lookup"><span data-stu-id="64159-105">The [MS-XAML] specification defines the grammar XamlName to identify the set of legal symbolic identifiers used for types and properties.</span></span>  
+## <a name="from-the-xaml-specification"></a><span data-ttu-id="5962d-104">從 XAML 規格</span><span class="sxs-lookup"><span data-stu-id="5962d-104">From the XAML Specification</span></span>  
+ <span data-ttu-id="5962d-105">[MS-XAML] 規格會定義文法 XamlName，以識別用於類型和屬性的一組合法符號識別碼。</span><span class="sxs-lookup"><span data-stu-id="5962d-105">The [MS-XAML] specification defines the grammar XamlName to identify the set of legal symbolic identifiers used for types and properties.</span></span>  
   
- <span data-ttu-id="64159-106">XamlName 類型的字串值必須符合下列文法：</span><span class="sxs-lookup"><span data-stu-id="64159-106">String values that are of type XamlName must conform to the following grammar:</span></span>  
+ <span data-ttu-id="5962d-106">XamlName 類型的字串值必須符合下列文法：</span><span class="sxs-lookup"><span data-stu-id="5962d-106">String values that are of type XamlName must conform to the following grammar:</span></span>  
   
 ```xaml  
 XamlName ::= NameStartChar ( NameChar )*   
@@ -32,27 +32,27 @@ DecimalDigit ::= UnicodeNd
 CombiningCharacter ::= UnicodeMn | UnicodeMc  
 ```  
   
- <span data-ttu-id="64159-107">這會假設 Unicode 字元資料庫中所定義的下列一般分類值</span><span class="sxs-lookup"><span data-stu-id="64159-107">Which assumes the following general category values as defined in the Unicode Character Database</span></span>  
+ <span data-ttu-id="5962d-107">這會假設 Unicode 字元資料庫中所定義的下列一般分類值</span><span class="sxs-lookup"><span data-stu-id="5962d-107">Which assumes the following general category values as defined in the Unicode Character Database</span></span>  
 
-| <span data-ttu-id="64159-108">Unicode 分類</span><span class="sxs-lookup"><span data-stu-id="64159-108">Unicode category</span></span>   | <span data-ttu-id="64159-109">描述</span><span class="sxs-lookup"><span data-stu-id="64159-109">Description</span></span>                   |
+| <span data-ttu-id="5962d-108">Unicode 分類</span><span class="sxs-lookup"><span data-stu-id="5962d-108">Unicode category</span></span>   | <span data-ttu-id="5962d-109">描述</span><span class="sxs-lookup"><span data-stu-id="5962d-109">Description</span></span>                   |
 |--------------------|-------------------------------|
-| <span data-ttu-id="64159-110">Lu</span><span class="sxs-lookup"><span data-stu-id="64159-110">Lu</span></span>                 | <span data-ttu-id="64159-111">字母、大寫</span><span class="sxs-lookup"><span data-stu-id="64159-111">Letter, Uppercase</span></span>             |
-| <span data-ttu-id="64159-112">Ll</span><span class="sxs-lookup"><span data-stu-id="64159-112">Ll</span></span>                 | <span data-ttu-id="64159-113">字母、小寫</span><span class="sxs-lookup"><span data-stu-id="64159-113">Letter, Lowercase</span></span>             |
-| <span data-ttu-id="64159-114">Lt</span><span class="sxs-lookup"><span data-stu-id="64159-114">Lt</span></span>                 | <span data-ttu-id="64159-115">字母、字首大寫</span><span class="sxs-lookup"><span data-stu-id="64159-115">Letter, Titlecase</span></span>             |
-| <span data-ttu-id="64159-116">Lm</span><span class="sxs-lookup"><span data-stu-id="64159-116">Lm</span></span>                 | <span data-ttu-id="64159-117">字母、修飾詞</span><span class="sxs-lookup"><span data-stu-id="64159-117">Letter, Modifier</span></span>              |
-| <span data-ttu-id="64159-118">Lo</span><span class="sxs-lookup"><span data-stu-id="64159-118">Lo</span></span>                 | <span data-ttu-id="64159-119">字母、其他</span><span class="sxs-lookup"><span data-stu-id="64159-119">Letter, Other</span></span>                 |
-| <span data-ttu-id="64159-120">Mn</span><span class="sxs-lookup"><span data-stu-id="64159-120">Mn</span></span>                 | <span data-ttu-id="64159-121">標記、非間距</span><span class="sxs-lookup"><span data-stu-id="64159-121">Mark, Non-Spacing</span></span>             |
-| <span data-ttu-id="64159-122">Mc</span><span class="sxs-lookup"><span data-stu-id="64159-122">Mc</span></span>                 | <span data-ttu-id="64159-123">記號，間距組合</span><span class="sxs-lookup"><span data-stu-id="64159-123">Mark, Spacing Combining</span></span>       |
-| <span data-ttu-id="64159-124">Nd</span><span class="sxs-lookup"><span data-stu-id="64159-124">Nd</span></span>                 | <span data-ttu-id="64159-125">數位、十進位</span><span class="sxs-lookup"><span data-stu-id="64159-125">Number, Decimal</span></span>               |
-| <span data-ttu-id="64159-126">Nl</span><span class="sxs-lookup"><span data-stu-id="64159-126">Nl</span></span>                 | <span data-ttu-id="64159-127">數字，字母</span><span class="sxs-lookup"><span data-stu-id="64159-127">Number, Letter</span></span>                |
+| <span data-ttu-id="5962d-110">Lu</span><span class="sxs-lookup"><span data-stu-id="5962d-110">Lu</span></span>                 | <span data-ttu-id="5962d-111">字母、大寫</span><span class="sxs-lookup"><span data-stu-id="5962d-111">Letter, Uppercase</span></span>             |
+| <span data-ttu-id="5962d-112">Ll</span><span class="sxs-lookup"><span data-stu-id="5962d-112">Ll</span></span>                 | <span data-ttu-id="5962d-113">字母、小寫</span><span class="sxs-lookup"><span data-stu-id="5962d-113">Letter, Lowercase</span></span>             |
+| <span data-ttu-id="5962d-114">Lt</span><span class="sxs-lookup"><span data-stu-id="5962d-114">Lt</span></span>                 | <span data-ttu-id="5962d-115">字母、字首大寫</span><span class="sxs-lookup"><span data-stu-id="5962d-115">Letter, Titlecase</span></span>             |
+| <span data-ttu-id="5962d-116">Lm</span><span class="sxs-lookup"><span data-stu-id="5962d-116">Lm</span></span>                 | <span data-ttu-id="5962d-117">字母、修飾詞</span><span class="sxs-lookup"><span data-stu-id="5962d-117">Letter, Modifier</span></span>              |
+| <span data-ttu-id="5962d-118">Lo</span><span class="sxs-lookup"><span data-stu-id="5962d-118">Lo</span></span>                 | <span data-ttu-id="5962d-119">字母、其他</span><span class="sxs-lookup"><span data-stu-id="5962d-119">Letter, Other</span></span>                 |
+| <span data-ttu-id="5962d-120">Mn</span><span class="sxs-lookup"><span data-stu-id="5962d-120">Mn</span></span>                 | <span data-ttu-id="5962d-121">標記、非間距</span><span class="sxs-lookup"><span data-stu-id="5962d-121">Mark, Non-Spacing</span></span>             |
+| <span data-ttu-id="5962d-122">Mc</span><span class="sxs-lookup"><span data-stu-id="5962d-122">Mc</span></span>                 | <span data-ttu-id="5962d-123">記號，間距組合</span><span class="sxs-lookup"><span data-stu-id="5962d-123">Mark, Spacing Combining</span></span>       |
+| <span data-ttu-id="5962d-124">Nd</span><span class="sxs-lookup"><span data-stu-id="5962d-124">Nd</span></span>                 | <span data-ttu-id="5962d-125">數位、十進位</span><span class="sxs-lookup"><span data-stu-id="5962d-125">Number, Decimal</span></span>               |
+| <span data-ttu-id="5962d-126">Nl</span><span class="sxs-lookup"><span data-stu-id="5962d-126">Nl</span></span>                 | <span data-ttu-id="5962d-127">數字，字母</span><span class="sxs-lookup"><span data-stu-id="5962d-127">Number, Letter</span></span>                |
  
- <span data-ttu-id="64159-128">XAML 會定義第二個文法 DottedXamlName，用於屬性和事件限定的參考，也會用於附加的成員。</span><span class="sxs-lookup"><span data-stu-id="64159-128">XAML defines a second grammar, DottedXamlName, that is used for property and event qualified references, and also for attached members.</span></span> <span data-ttu-id="64159-129">如需詳細資訊，請參閱 <xref:System.Windows.DependencyProperty> 和[XAML 總覽（WPF）](../../desktop-wpf/fundamentals/xaml.md)。</span><span class="sxs-lookup"><span data-stu-id="64159-129">For more information, see <xref:System.Windows.DependencyProperty> and [XAML Overview (WPF)](../../desktop-wpf/fundamentals/xaml.md).</span></span>  
+ <span data-ttu-id="5962d-128">XAML 會定義第二個文法 DottedXamlName，用於屬性和事件限定的參考，也會用於附加的成員。</span><span class="sxs-lookup"><span data-stu-id="5962d-128">XAML defines a second grammar, DottedXamlName, that is used for property and event qualified references, and also for attached members.</span></span> <span data-ttu-id="5962d-129">如需詳細資訊，請參閱 <xref:System.Windows.DependencyProperty> 和[XAML 總覽（WPF）](../../desktop-wpf/fundamentals/xaml.md)。</span><span class="sxs-lookup"><span data-stu-id="5962d-129">For more information, see <xref:System.Windows.DependencyProperty> and [XAML Overview (WPF)](../../desktop-wpf/fundamentals/xaml.md).</span></span>  
   
- <span data-ttu-id="64159-130">DottedXamlName 類型的字串值必須符合下列文法：</span><span class="sxs-lookup"><span data-stu-id="64159-130">String values that are of type DottedXamlName must conform to the following grammar:</span></span>  
+ <span data-ttu-id="5962d-130">DottedXamlName 類型的字串值必須符合下列文法：</span><span class="sxs-lookup"><span data-stu-id="5962d-130">String values that are of type DottedXamlName must conform to the following grammar:</span></span>  
   
 ```xaml  
 DottedXamlName ::= XamlName '.' XamlName  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="64159-131">備註</span><span class="sxs-lookup"><span data-stu-id="64159-131">Remarks</span></span>  
- <span data-ttu-id="64159-132">如需完整的規格，請參閱[\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)。</span><span class="sxs-lookup"><span data-stu-id="64159-132">For the complete specification, see [\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525).</span></span>
+## <a name="remarks"></a><span data-ttu-id="5962d-131">備註</span><span class="sxs-lookup"><span data-stu-id="5962d-131">Remarks</span></span>  
+ <span data-ttu-id="5962d-132">如需完整的規格，請參閱[\[MS-XAML\]](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))。</span><span class="sxs-lookup"><span data-stu-id="5962d-132">For the complete specification, see [\[MS-XAML\]](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).</span></span>
