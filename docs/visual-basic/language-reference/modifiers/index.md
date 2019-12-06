@@ -2,20 +2,20 @@
 title: 修飾詞
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 0379a0d0571a66bda4df06f5c2d3282d80034cae
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2056cdc69c7d89b78e9b269fc919a0e0f6b76bf4
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351534"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838282"
 ---
 # <a name="modifiers-visual-basic"></a>修飾詞 (Visual Basic)
 本節中的主題將說明 Visual Basic 執行階段修飾詞。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
   
- [組件](../../../visual-basic/language-reference/modifiers/assembly.md)  
+ [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
   
  [Async](../../../visual-basic/language-reference/modifiers/async.md)  
   
@@ -23,9 +23,9 @@ ms.locfileid: "74351534"
   
  [ByRef](../../../visual-basic/language-reference/modifiers/byref.md)  
   
- [ParamArray](../../../visual-basic/language-reference/modifiers/byval.md)  
+ [ByVal](../../../visual-basic/language-reference/modifiers/byval.md)  
   
- [預設值](../../../visual-basic/language-reference/modifiers/default.md)  
+ [Default](../../../visual-basic/language-reference/modifiers/default.md)  
   
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74351534"
   
  [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
   
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
   
  [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74351534"
   
  [多載](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
- [Overrides](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
   
  [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "74351534"
   
  [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
   
- [共用](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
   
  [Static](../../../visual-basic/language-reference/modifiers/static.md)  
   
@@ -89,5 +89,3 @@ ms.locfileid: "74351534"
   
 ## <a name="related-sections"></a>相關章節  
  [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)  
-  
- [Visual Basic](../../../visual-basic/index.md)

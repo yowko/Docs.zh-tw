@@ -3,25 +3,41 @@ title: .NET Core SDK 和執行時間相依性-.NET Core
 description: 詳細說明在 Windows、Linux 和 macOS 上安裝 .NET Core SDK 和執行時間的作業系統和 CPU 架構必要條件。
 author: leecow
 ms.author: leecow
-ms.date: 11/06/2019
+ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: b79ec6a9723cbd44717d5f187213278556c0b6ca
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a535048fc8756b55068098ad61fdc37fc8c1f04e
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74451098"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837000"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core 相依性和需求
 
 本文詳細說明 .NET Core 支援哪些作業系統和 CPU 架構。
 
-## <a name="supported-operating-systems"></a>支援的作業系統
+## <a name="supported-operating-systems"></a>Supported operating systems
 
 ::: zone pivot="os-windows"
 
 <!-- markdownlint-disable MD025 -->
 <!-- markdownlint-disable MD024 -->
+
+# <a name="net-core-31tabnetcore31"></a>[.NET Core 3。1](#tab/netcore31)
+
+.NET Core 3.1 支援下列 Windows 版本：
+
+> [!NOTE]
+> `+` 符號代表最小版本。
+
+| OS                            | {2&gt;版本&lt;2}                        | 架構   |
+| ----------------------------- | ------------------------------ | --------------- |
+| Windows 用戶端                | 7 SP1 +、8。1                    | x64、x86        |
+| Windows 10 用戶端             | 版本 1607 +                  | x64、x86        |
+| Windows Server                | 2012 R2 +                       | x64、x86        |
+| Nano 伺服器                   | 版本 1803 +                  | x64、ARM32      |
+
+如需 .NET Core 3.1 支援的作業系統、發行版本和生命週期原則的詳細資訊，請參閱[.Net core 3.1 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)。
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
@@ -30,7 +46,7 @@ ms.locfileid: "74451098"
 > [!NOTE]
 > `+` 符號代表最小版本。
 
-| OS                            | 版本                        | 架構   |
+| OS                            | {2&gt;版本&lt;2}                        | 架構   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows 用戶端                | 7 SP1 +、8。1                    | x64、x86        |
 | Windows 10 用戶端             | 版本 1607 +                  | x64、x86        |
@@ -46,7 +62,7 @@ ms.locfileid: "74451098"
 > [!NOTE]
 > `+` 符號代表最小版本。
 
-| OS                            | 版本                        | 架構   |
+| OS                            | {2&gt;版本&lt;2}                        | 架構   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows 用戶端                | 7 SP1 +、8。1                    | x64、x86        |
 | Windows 10 用戶端             | 版本 1607 +                  | x64、x86        |
@@ -62,7 +78,7 @@ ms.locfileid: "74451098"
 > [!NOTE]
 > `+` 符號代表最小版本。
 
-| OS                            | 版本                        | 架構   |
+| OS                            | {2&gt;版本&lt;2}                        | 架構   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows 用戶端                | 7 SP1 +、8。1                    | x64、x86        |
 | Windows 10 用戶端             | 版本 1607 +                  | x64、x86        |
@@ -102,6 +118,35 @@ ms.locfileid: "74451098"
 
 ::: zone pivot="os-linux"
 
+# <a name="net-core-31tabnetcore31"></a>[.NET Core 3。1](#tab/netcore31)
+
+.NET Core 3.1 將 Linux 視為單一作業系統。 針對支援的 Linux 發行版本，有單一 Linux 組建（每個晶片架構）。
+
+下列 Linux 發行版本/版本支援 .NET Core 3.1：
+
+> [!NOTE]
+> `+` 符號代表最小版本。
+
+| OS                             | {2&gt;版本&lt;2}               | 架構    |
+| ------------------------------ | --------------------- | ---------------- |
+| Red Hat Enterprise Linux       | 6、7、8               | x64 |
+| CentOS                         | 7+                    | x64 |
+| Oracle Linux                   | 7+                    | x64 |
+| Fedora                         | 29 +                   | x64 |
+| Debian                         | 9+                    | x64、ARM32、ARM64 |
+| Ubuntu                         | 16.04+                | x64、ARM32、ARM64 |
+| Linux Mint                     | 18 +                   | x64 |
+| openSUSE                       | 15 +                   | x64 |
+| SUSE Enterprise Linux (SLES)   | 12 SP2+               | x64 |
+| Alpine Linux                   | 3.10 +                 | x64、ARM64 |
+
+如需 .NET Core 3.1 支援的作業系統、發行版本和生命週期原則的詳細資訊，請參閱[.Net core 3.1 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)。
+
+如需有關如何在 ARM64 上安裝 .NET Core 3.1 （核心 4.14 +）的詳細資訊，請參閱[在 Linux 上安裝 .Net core 3.0 ARM64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213)。
+
+> [!IMPORTANT]
+> ARM64 支援需要 Linux 核心4.14 或更高版本。 有些 linux 散發套件符合此需求，而有些則不需要。 例如，支援 Ubuntu 18.04，但 Ubuntu 16.04 則否。
+
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
 .NET Core 3.0 將 Linux 視為單一作業系統。 針對支援的 Linux 發行版本，有單一 Linux 組建（每個晶片架構）。
@@ -111,17 +156,17 @@ ms.locfileid: "74451098"
 > [!NOTE]
 > `+` 符號代表最小版本。
 
-| OS                             | 版本               | 架構    |
+| OS                             | {2&gt;版本&lt;2}               | 架構    |
 | ------------------------------ | --------------------- | ---------------- |
-| Red Hat Enterprise Linux       | 6、7、8               | X64 |
-| CentOS                         | 7 +                    | X64 |
-| Oracle Linux                   | 7 +                    | X64 |
-| Fedora                         | 29 +                   | X64 |
+| Red Hat Enterprise Linux       | 6、7、8               | x64 |
+| CentOS                         | 7+                    | x64 |
+| Oracle Linux                   | 7+                    | x64 |
+| Fedora                         | 29 +                   | x64 |
 | Debian                         | 9+                    | x64、ARM32、ARM64 |
 | Ubuntu                         | 16.04+                | x64、ARM32、ARM64 |
-| Linux Mint                     | 18 +                   | X64 |
-| openSUSE                       | 15 +                   | X64 |
-| SUSE Enterprise Linux (SLES)   | 12 SP2+               | X64 |
+| Linux Mint                     | 18 +                   | x64 |
+| openSUSE                       | 15 +                   | x64 |
+| SUSE Enterprise Linux (SLES)   | 12 SP2+               | x64 |
 | Alpine Linux                   | 3.8+                  | x64、ARM64 |
 
 如需 .NET Core 3.0 支援的作業系統、發行版本和生命週期原則的詳細資訊，請參閱[.Net core 3.0 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)。
@@ -137,18 +182,18 @@ ms.locfileid: "74451098"
 > [!NOTE]
 > `+` 符號代表最小版本。
 
-| OS                             |  版本                |  架構   |
+| OS                             |  {2&gt;版本&lt;2}                |  架構   |
 | ------------------------------ | ----------------------- | ---------------- |
-| Red Hat Enterprise Linux       |  6、7                   | X64 |
-| CentOS                         |  7                      | X64 |
-| Oracle Linux                   |  7                      | X64 |
-| Fedora                         |  29、30                 | X64 |
+| Red Hat Enterprise Linux       |  6、7                   | x64 |
+| CentOS                         |  7                      | x64 |
+| Oracle Linux                   |  7                      | x64 |
+| Fedora                         |  29、30                 | x64 |
 | Debian                         |  9                      | x64、ARM32 |
 | Ubuntu                         |  16.04、18.04、18.10、19.04    | x64、ARM32 |
-| Linux Mint                     |  17、18                 | X64 |
-| openSUSE                       |  15 +                    | X64 |
-| SUSE Enterprise Linux (SLES)   |  12 SP2+                | X64 |
-| Alpine Linux                   |  3.8+                   | X64 |
+| Linux Mint                     |  17、18                 | x64 |
+| openSUSE                       |  15 +                    | x64 |
+| SUSE Enterprise Linux (SLES)   |  12 SP2+                | x64 |
+| Alpine Linux                   |  3.8+                   | x64 |
 
 如需 .NET Core 2.2 支援的作業系統、發行版本和生命週期原則的詳細資訊，請參閱[.Net core 2.2 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)。
 
@@ -161,18 +206,18 @@ ms.locfileid: "74451098"
 > [!NOTE]
 > `+` 符號代表最小版本。
 
-| OS                             |  版本                |  架構   |
+| OS                             |  {2&gt;版本&lt;2}                |  架構   |
 | ------------------------------ | ----------------------- | ---------------- |
-| Red Hat Enterprise Linux       |  6、7、8                | X64 |
-| CentOS                         |  7 +                     | X64 |
-| Oracle Linux                   |  7 +                     | X64 |
-| Fedora                         |  29 +                    | X64 |
+| Red Hat Enterprise Linux       |  6、7、8                | x64 |
+| CentOS                         |  7+                     | x64 |
+| Oracle Linux                   |  7+                     | x64 |
+| Fedora                         |  29 +                    | x64 |
 | Debian                         |  9                      | x64、ARM32 |
 | Ubuntu                         |  16.04、18.04、19.04、19.10    | x64、ARM32 |
-| Linux Mint                     |  17 +                    | X64 |
-| openSUSE                       |  15 +                    | X64 |
-| SUSE Enterprise Linux (SLES)   |  12 SP2+                | X64 |
-| Alpine Linux                   |  3.8+                   | X64 |
+| Linux Mint                     |  17 +                    | x64 |
+| openSUSE                       |  15 +                    | x64 |
+| SUSE Enterprise Linux (SLES)   |  12 SP2+                | x64 |
+| Alpine Linux                   |  3.8+                   | x64 |
 
 如需 .NET Core 2.1 支援的作業系統、發行版本和生命週期原則的詳細資訊，請參閱[.Net core 2.1 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)。
 
@@ -205,7 +250,7 @@ Ubuntu 發行版本需要安裝下列程式庫：
 - libgdiplus （6.0.1 版或更新版本）
 
 > [!WARNING]
-> 最新版的 Ubuntu 包含舊版的 libgdiplus。 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 libgdiplus。 如需詳細資訊，請參閱 <https://www.mono-project.com/download/stable/>。
+> 最新版的 Ubuntu 包含舊版的 libgdiplus。 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 libgdiplus。 如需詳細資訊，請參閱<https://www.mono-project.com/download/stable/>。
 
 ### <a name="centos-and-fedora"></a>CentOS 與 Fedora
 
@@ -232,7 +277,7 @@ Fedora 使用者：如果您的 OpenSSL 版本 > = 1.1，您必須安裝相容�
 - libgdiplus （6.0.1 版或更新版本）
 
 > [!WARNING]
-> 大部分的 CentOS 和 Fedora 版本都包含舊版的 libgdiplus。 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 libgdiplus。 如需詳細資訊，請參閱 <https://www.mono-project.com/download/stable/>。
+> 大部分的 CentOS 和 Fedora 版本都包含舊版的 libgdiplus。 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 libgdiplus。 如需詳細資訊，請參閱<https://www.mono-project.com/download/stable/>。
 
 ::: zone-end
 
@@ -245,9 +290,10 @@ Fedora 使用者：如果您的 OpenSSL 版本 > = 1.1，您必須安裝相容�
 
 | .NET Core 版本 | macOS                 | 架構 |     |
 | ----------------- | --------------------- | --------------| --- |
-| 3.0               | 高塞拉里昂（10.13 +）  | X64 | [詳細資訊](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
-| 2.2               | 塞拉里昂（10.12 +）       | X64 | [詳細資訊](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
-| 2.1               | 塞拉里昂（10.12 +）       | X64 | [詳細資訊](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+| 3.1               | 高塞拉里昂（10.13 +）  | x64 | [詳細資訊](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
+| 3.0               | 高塞拉里昂（10.13 +）  | x64 | [詳細資訊](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
+| 2.2               | 塞拉里昂（10.12 +）       | x64 | [詳細資訊](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
+| 2.1               | 塞拉里昂（10.12 +）       | x64 | [詳細資訊](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
 
 ## <a name="libgdiplus"></a>libgdiplus
 

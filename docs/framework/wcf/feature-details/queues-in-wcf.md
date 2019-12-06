@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: 6990d2b08f0ff729f0c0138c091c728a5ba59605
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e921084ed28cb4e846cb269e57e58a194e9437a5
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643546"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837333"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation 中的佇列
-在本節中的主題將討論 Windows Communication Foundation (WCF) 支援佇列。 WCF 會提供支援藉由利用 Microsoft Message Queuing （先前稱為 MSMQ） 做為傳輸佇列，並適用於下列案例：  
+本節中的主題將討論佇列的 Windows Communication Foundation （WCF）支援。 WCF 藉由利用 Microsoft Message Queuing （先前稱為 MSMQ）做為傳輸來提供佇列的支援，並啟用下列案例：  
   
 - 鬆散結合的應用程式。 傳送應用程式可以傳送訊息至佇列，不需要知道接收應用程式是否可以處理訊息。 佇列以不依靠接收應用程式可以多快處理訊息的速率，提供允許傳送應用程式傳送訊息至佇列的獨立處理。 傳送訊息至未與訊息處理緊密結合的佇列時，整體系統可用性會增加。  
   
@@ -22,20 +22,20 @@ ms.locfileid: "64643546"
   
 - 中斷操作。 當透過高延遲網路或可用性有限的網路進行通訊時 (例如使用行動裝置)，傳送、接收和處理操作可能中斷。 佇列能夠使這些操作繼續進行，即使已經與端點中斷連線也是一樣。 重新建立連線後，佇列會將訊息轉送至接收應用程式。  
   
- 若要使用的佇列功能的 WCF 應用程式中，您可以使用其中一個標準繫結，或如果其中一個標準繫結無法滿足您的需求，您可以建立自訂繫結。 如需相關標準繫結，以及如何選擇其中一個的詳細資訊，請參閱[How to:與 WCF 端點交換訊息和訊息佇列應用程式](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。 如需建立自訂繫結的詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ 若要使用 WCF 應用程式中的佇列功能，您可以使用其中一個標準系結，或者如果其中一個標準系結無法滿足您的需求，您可以建立自訂系結。 如需相關標準系結和如何選擇的詳細資訊，請參閱[如何：使用 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。 如需建立自訂繫結的詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
  訊息佇列概念的概觀。  
   
  [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- WCF 佇列支援的概觀。  
+ WCF 佇列支援的總覽。  
   
  [如何：與 WCF 端點交換佇列訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- 說明如何使用<xref:System.ServiceModel.NetMsmqBinding>WCF 用戶端和 WCF 服務之間進行通訊的類別。  
+ 說明如何使用 <xref:System.ServiceModel.NetMsmqBinding> 類別，在 WCF 用戶端和 WCF 服務之間進行通訊。  
   
- [如何：Exchange 與 WCF 端點的訊息和訊息佇列應用程式](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- 說明如何使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>WCF 和訊息佇列應用程式之間進行通訊。  
+ [如何：與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ 說明如何使用 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 在 WCF 和訊息佇列應用程式之間進行通訊。  
   
  [在工作階段中群組佇列訊息](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
  說明如何將佇列中的訊息分組，以協助單一接收應用程式處理相關訊息。  
@@ -50,7 +50,7 @@ ms.locfileid: "64643546"
  說明如何處理有害訊息 (超過傳送到接收應用程式的最大嘗試傳遞次數的訊息)。  
   
  [Windows Vista、Windows Server 2003 和 Windows XP 之間的佇列功能差異](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- 摘要說明在 WCF 佇列功能之間的差異[!INCLUDE[wv](../../../../includes/wv-md.md)]， [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，和[!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
+ 摘要說明 Windows Vista、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]之間 WCF 佇列功能的差異。  
   
  [使用傳輸安全性來保護訊息的安全](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  描述如何使用傳輸安全性來保護佇列訊息的安全。  
@@ -62,4 +62,4 @@ ms.locfileid: "64643546"
  說明如何疑難排解常見的佇列問題。  
   
  [佇列通訊的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
- 說明使用 WCF 的最佳做法佇列通訊。  
+ 說明使用 WCF 佇列通訊的最佳做法。  

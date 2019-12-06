@@ -4,28 +4,28 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 70eab39e4bb24dfd1cdd6abc5216e50126ef1f4c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 0a7be97ec157638db3eb2d656fe263b37b8d676c
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972186"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837411"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>HOW TO：安裝和設定 WCF 啟用元件
 
-本主題說明在上[!INCLUDE[wv](../../../../includes/wv-md.md)]設定 Windows 進程啟用服務（也稱為 WAS）至不透過 HTTP 網路通訊協定進行通訊的主機 Windows Communication Foundation （WCF）服務時，所需執行的步驟。 下列各節將概述此組態的各項步驟：
+本主題說明在 Windows Vista 上設定 Windows 進程啟用服務（也稱為 WAS）來裝載無法透過 HTTP 網路通訊協定進行通訊的 Windows Communication Foundation （WCF）服務時，所需執行的步驟。 下列各節將概述此組態的各項步驟：
 
 - 安裝（或確認安裝） WCF 啟用元件。
 
-- 設定 WAS 支援非 HTTP 通訊協定。 下列程序將設定 [!INCLUDE[wv](../../../../includes/wv-md.md)] 以啟動 TCP。
+- 設定 WAS 支援非 HTTP 通訊協定。 下列程式會設定 Windows Vista 以進行 TCP 啟用。
 
-安裝和設定 WAS 之後，請[參閱如何：在 WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)中裝載 wcf 服務的程式，可讓您建立 wcf 服務，以公開採用 WAS 的非 HTTP 端點。
+安裝和設定 WAS 之後，請參閱[如何：在 WAS 中裝載 Wcf 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)，以取得建立 wcf 服務的程式，以公開採用 WAS 的非 HTTP 端點。
 
 ## <a name="to-install-the-wcf-non-http-activation-components"></a>若要安裝 WCF 非 HTTP 啟動元件
 
 1. 按一下 [**開始**] 按鈕，然後按一下 [**控制台**]。
 
-2. 按一下 [**程式**]，然後按一下 [**程式和功能**]。
+2. 按一下 [程式集]，然後按一下 [程式和功能]。
 
 3. **在 [工作**] 功能表上，按一下 [**開啟或關閉 Windows 功能**]。
 
@@ -52,7 +52,7 @@ ms.locfileid: "70972186"
     ```
 
     > [!NOTE]
-    > 這個命令是單行文字。 此命令可讓/\< *WCF 應用程式*> 應用程式使用`http://localhost/<WCF Application>`和`net.tcp://localhost/<WCF Application>`存取。
+    > 這個命令是單行文字。 此命令可讓/\<*WCF 應用程式*> 應用程式同時使用 `http://localhost/<WCF Application>` 和 `net.tcp://localhost/<WCF Application>`來存取。
 
      移除您為此範例新增的 net.tcp 網站繫結。
 
@@ -101,7 +101,7 @@ ms.locfileid: "70972186"
     > [!NOTE]
     > 這個命令是單行文字。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [TCP 啟用](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [MSMQ 啟用](../../../../docs/framework/wcf/samples/msmq-activation.md)

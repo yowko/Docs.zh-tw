@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Visual Basic code, directives
 - directives
 ms.assetid: 20d5fe65-490a-4c23-88c2-ee4f490ed762
-ms.openlocfilehash: d76e10ad5ce8ad3accdc84f97146e0816048d8f3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b5e857198351b30c0d7a38dce1a9e6d1209b5258
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343810"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838139"
 ---
 # <a name="directives-visual-basic"></a>指示詞 (Visual Basic)
 
 本節中的主題記錄 Visual Basic 原始程式碼編譯器指示詞。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
 
  [#Const](../../../visual-basic/language-reference/directives/const-directive.md)指示詞--定義編譯器常數  
   
@@ -43,4 +43,3 @@ ms.locfileid: "74343810"
 
  [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)  
   
- [Visual Basic](../../../visual-basic/index.md)

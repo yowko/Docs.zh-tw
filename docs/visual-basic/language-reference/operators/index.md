@@ -4,12 +4,12 @@ ms.date: 10/17/2018
 helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: 3d3421df-fcc5-4888-9249-d78f16774ce6
-ms.openlocfilehash: 1398b58c1e95bfb172c9b314e562262003632713
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d980621ed493bbe5f243062238f4b87e1e44003b
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330982"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838165"
 ---
 # <a name="operators-visual-basic"></a>運算子 (Visual Basic)
 
@@ -21,7 +21,7 @@ ms.locfileid: "74330982"
 - [DirectCast 運算子](directcast-operator.md)
 - [TryCast 運算子](trycast-operator.md)
 - [NameOf 運算子](nameof.md)
-- [New 運算子](new-operator.md)
+- [新增操作員](new-operator.md)
 - [Null 條件運算子](null-conditional-operators.md)
 - [算術運算子](arithmetic-operators.md)
 - [指派運算子](assignment-operators.md)
@@ -34,4 +34,3 @@ ms.locfileid: "74330982"
 ## <a name="related-sections"></a>相關章節
 
 - [Visual Basic 語言參考](../index.md)
-- [Visual Basic](../../index.md)

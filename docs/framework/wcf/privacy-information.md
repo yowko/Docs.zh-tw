@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 0b277728d2f2c224d5e45e3990ab2fd588bc81d3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c5500b8fd8b35081e83e2e9279dc4f236ef3c7b0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318700"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837931"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隱私權資訊
 Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Communication Foundation （WCF）3.0 版來建立應用程式時，您的應用程式可能會影響使用者的隱私權。 例如，應用程式可能會明確收集使用者的連絡資訊，或者透過網際網路向您的網站要求資訊或傳送資訊至網站。 如果您在應用程式中內嵌 Microsoft 技術，則該技術可能帶有會影響隱私權的行為。 WCF 不會從您的應用程式將任何資訊傳送至 Microsoft，除非您或使用者選擇將它傳送給我們。  
@@ -28,7 +28,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  WCF 訊息層不會將任何個人資訊寫入本機電腦。 不過，如果服務開發人員建立了會公開這類資訊的服務 (例如，在端點名稱中使用某個人的名稱，或者在端點的 Web 服務描述語言中加入個人資訊，可是沒有要求用戶端使用 https 來存取 WSDL)，則該訊息層可能在網路層級中傳播個人資訊。 此外，如果開發人員針對公開個人資訊的端點執行[System.servicemodel 中繼資料公用程式工具（Svcutil）](servicemodel-metadata-utility-tool-svcutil-exe.md)工具，則工具的輸出可能會包含該資訊，而輸出檔案則會寫入至本機硬碟。  
   
-## <a name="hosting"></a>架設  
+## <a name="hosting"></a>主控  
  WCF 中的裝載功能可讓應用程式視需要啟動，或在多個應用程式之間啟用埠共用。 WCF 應用程式可以裝載在 Internet Information Services （IIS）中，類似于 ASP.NET。  
   
  裝載時並不會在網路上公開任何特定資訊，而且也不會保存電腦上的資料。  
@@ -44,7 +44,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  執行驗證之後，會在進行通訊的端點之間建立安全工作階段。 這個工作階段是由會在安全性工作階段的存留期間持續活動的 GUID 所識別。 下表會顯示所保留的項目的位置。  
   
-|資料|存放裝置|  
+|Data|儲存體|  
 |----------|-------------|  
 |展示認證，例如使用者名稱、X.509 憑證、Kerberos 語彙基元和認證的各種參照。|標準 Windows 認證管理機制，例如 Windows 憑證存放庫。|  
 |使用者成員資格資訊，例如使用者名稱和密碼。|ASP.NET 成員資格提供者。|  
@@ -54,7 +54,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
 ## <a name="auditing"></a>稽核  
  稽核會記錄驗證和授權事件的成功與失敗。 稽核記錄中則包含下列資料：服務 URI、動作 URI 和呼叫端的識別。  
   
- 稽核也會記錄系統管理員修改訊息記錄組態 (開啟或關閉) 的時間，這是因為訊息記錄可能會在標頭和本文中記錄應用程式特定的資料。 若為 [!INCLUDE[wxp](../../../includes/wxp-md.md)]，則會在應用程式事件日誌中記載一筆記錄。 若為 [!INCLUDE[wv](../../../includes/wv-md.md)] 和 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]，則會在安全性事件日誌中記載一筆記錄。  
+ 稽核也會記錄系統管理員修改訊息記錄組態 (開啟或關閉) 的時間，這是因為訊息記錄可能會在標頭和本文中記錄應用程式特定的資料。 若為 [!INCLUDE[wxp](../../../includes/wxp-md.md)]，則會在應用程式事件日誌中記載一筆記錄。 對於 Windows Vista 和 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]，記錄會記錄在安全性事件記錄檔中。  
   
 ## <a name="transactions"></a>異動  
  交易功能可為 WCF 應用程式提供交易服務。  
@@ -149,7 +149,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  \- For xmlns： saml = "urn： oasis： names： tc： SAML：1.0：判斷提示」會移除以粗體顯示的專案（如下所示）：  
   
- \<Assertion  
+ \<判斷提示  
   
  MajorVersion="1"  
   
@@ -163,41 +163,41 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  >  
   
- \<Conditions NotBefore = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
+ \<條件 NotBefore = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
   
  \<AudienceRestrictionCondition >  
   
- \<Audience > [uri] \</Audience > +  
+ \<物件 > [uri]\</Audience > +  
   
  \</AudienceRestrictionCondition > *  
   
- \<DoNotCacheCondition/> *  
+ \<Donotcachecondition>/> *  
   
- < \!--抽象基底類型  
+ <\!--抽象基底類型  
   
- \<Condition/> *  
+ \<條件/> *  
   
  -->  
   
  \</Conditions >？  
   
- \<Advice >  
+ \<建議 >  
   
- \<AssertionIDReference > [識別碼] \</AssertionIDReference > *  
+ \<AssertionIDReference > [ID]\</AssertionIDReference > *  
   
- \<Assertion > [判斷提示] \</Assertion > *  
+ \<判斷提示 > [判斷提示]\</Assertion > *  
   
  [any]*  
   
  \</Advice >？  
   
- < \!--抽象基底類型  
+ <\!--抽象基底類型  
   
- \<Statement/> *  
+ \<語句/> *  
   
  \<SubjectStatement >  
   
- \<Subject >  
+ \<主體 >  
   
  `<NameIdentifier`  
   
@@ -213,11 +213,11 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  \<SubjectConfirmation >  
   
- \<ConfirmationMethod > [anyUri] \</ConfirmationMethod > +  
+ \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
   
- \<SubjectConfirmationData > [any] \</SubjectConfirmationData >？  
+ \<SubjectConfirmationData > [any]\</SubjectConfirmationData >？  
   
- \<ds： KeyInfo > ... \</ds： KeyInfo >？  
+ \<ds： KeyInfo > ...\</ds： KeyInfo >？  
   
  \</SubjectConfirmation >？  
   
@@ -261,7 +261,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  [主旨]  
   
- \<Attribute  
+ \<屬性  
   
  AttributeName="[string]"  
   
@@ -285,13 +285,13 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  [主旨]  
   
- \<Action 命名空間 = "[uri]" > [string] \</Action > +  
+ \<動作命名空間 = "[uri]" > [string]\</Action > +  
   
- \<Evidence >  
+ \<辨識項 >  
   
- \<AssertionIDReference > [識別碼] \</AssertionIDReference > +  
+ \<AssertionIDReference > [ID]\</AssertionIDReference > +  
   
- \<Assertion > [判斷提示] \</Assertion > +  
+ \<判斷提示 > [判斷提示]\</Assertion > +  
   
  \</Evidence >？  
   

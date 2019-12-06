@@ -2,12 +2,12 @@
 title: WCF 服務主機 (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: c855fe7cc804fac14348990b7a6f5f84a0956b0c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b8fb32111a80178f5eb92411eb4990decb645bb6
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802397"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837736"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 服務主機 (WcfSvcHost.exe)
 
@@ -113,7 +113,7 @@ WCF 服務主機可以裝載下列 WCF 服務程式庫專案類型： WCF 服務
 
 若要讓沒有系統管理員許可權的使用者開發 WCF 服務，在安裝 Visual Studio 期間，會為命名空間 "http://+:8731/Design_Time_Addresses" 建立 ACL （存取控制清單）。 ACL 會設定為 (UI)，其中包含已登入電腦的所有互動使用者。 系統管理員可以在此 ACL 中新增或移除使用者，或開啟其他埠。此 ACL 可讓使用者在不授與系統管理員許可權的情況下，使用 WCF 服務自動裝載（wcfSvcHost .exe）。
 
-您可以在有更高權限的系統管理員帳戶下，使用 [!INCLUDE[wv](../../../includes/wv-md.md)] 中的 netsh.exe 工具來修改存取權。 下列是使用 netsh.exe 的範例。
+在 Windows Vista 中，您可以使用以提升許可權的系統管理員帳戶來修改存取權。 下列是使用 netsh.exe 的範例。
 
 ```console
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>

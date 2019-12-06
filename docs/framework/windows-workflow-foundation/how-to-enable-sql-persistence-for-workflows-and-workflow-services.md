@@ -2,12 +2,12 @@
 title: HOW TO：啟用工作流程與工作流程服務的 SQL 持續性
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: bef95dbeaaa96678a66ba94494a0207c7314c326
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: bbbd2e6a5eb3babeb1a4d06976fdefd621581766
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802579"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837684"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>HOW TO：啟用工作流程與工作流程服務的 SQL 持續性
 
@@ -152,7 +152,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> 建議您不要將敏感資訊 (例如，使用者名稱和密碼) 儲存在 Web.config 檔案中。 如果要將敏感資訊儲存在 Web.config 檔案中，則應使用檔案系統存取控制清單 (ACL) 來保護存取 Web.config 檔的安全性。 此外，您也可以在設定檔中保護設定值，如[使用受保護](https://docs.microsoft.com/en-us/previous-versions/aspnet/53tyfkaw(v=vs.100))的設定來加密設定資訊中所述。
+> 建議您不要將敏感資訊 (例如，使用者名稱和密碼) 儲存在 Web.config 檔案中。 如果要將敏感資訊儲存在 Web.config 檔案中，則應使用檔案系統存取控制清單 (ACL) 來保護存取 Web.config 檔的安全性。 此外，您也可以在設定檔中保護設定值，如[使用受保護](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))的設定來加密設定資訊中所述。
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>與 SQL 工作流程執行個體存放區功能相關的 Machine.config 項目
 

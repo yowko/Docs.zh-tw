@@ -2,12 +2,12 @@
 title: 追蹤參與者
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 45a92c3ab710fc9bc86fbf269a4672f1d34737cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a033b65125a562307c6247eeda93dcacb31f5382
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963678"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837645"
 ---
 # <a name="tracking-participants"></a>追蹤參與者
 追蹤參與者是可讓工作流程開發人員存取 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 物件並加以處理的擴充點。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含寫入追蹤記錄以做為 Windows 事件追蹤 (ETW) 事件的標準追蹤參與者。 如果不符合需求，您也可以寫入自訂的追蹤參與者。  
@@ -15,7 +15,7 @@ ms.locfileid: "69963678"
 ## <a name="tracking-participants"></a>追蹤參與者  
  追蹤基礎結構可讓應用程式篩選外送的追蹤記錄，讓參與者可訂閱記錄的子集。 此機制會透過追蹤設定檔來套用篩選。  
   
- 中[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]的 Windows Workflow Foundation (WF) 提供追蹤參與者, 可將追蹤記錄寫入至 ETW 會話。 透過在設定檔中加入特定追蹤的行為，您可以設定工作流程服務上的參與者。 啟用 ETW 追蹤參與者可在事件檢視器中檢視追蹤記錄。 ETW 式追蹤的 SDK 範例是熟悉使用 ETW 式追蹤參與者之 WF 追蹤的理想方式。  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中的 Windows Workflow Foundation （WF）提供追蹤參與者，可將追蹤記錄寫入至 ETW 會話。 透過在設定檔中加入特定追蹤的行為，您可以設定工作流程服務上的參與者。 啟用 ETW 追蹤參與者可在事件檢視器中檢視追蹤記錄。 ETW 式追蹤的 SDK 範例是熟悉使用 ETW 式追蹤參與者之 WF 追蹤的理想方式。  
   
 ## <a name="etw-tracking-participant"></a>ETW 追蹤參與者  
  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 包含將追蹤記錄寫入至 ETW 工作階段的 ETW 追蹤參與者。 這是非常有效率的方式，對應用程式效能或伺服器輸送量所造成的衝擊最小。 使用標準 ETW 追蹤參與者的優點在於，可在 Windows 事件檢視器中使用其他應用程式和系統記錄來檢視它所收到的追蹤記錄。  
@@ -63,11 +63,11 @@ ms.locfileid: "69963678"
  ![透過 ETW 追蹤提供者追蹤資料的流程。](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
   
 ## <a name="tracking-participant-event-data"></a>追蹤參與者事件資料  
- 追蹤參與者會以每個追蹤記錄包含一個事件的形式，將已追蹤的事件資料序列化至 ETW 工作階段。  事件會使用從 100 到 199 範圍的 ID 來識別。 如需追蹤參與者所發出之追蹤事件記錄的定義, 請參閱[追蹤事件參考](tracking-events-reference.md)主題。  
+ 追蹤參與者會以每個追蹤記錄包含一個事件的形式，將已追蹤的事件資料序列化至 ETW 工作階段。  事件會使用從 100 到 199 範圍的 ID 來識別。 如需追蹤參與者所發出之追蹤事件記錄的定義，請參閱[追蹤事件參考](tracking-events-reference.md)主題。  
   
  ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制，兩者的值都較小。 如果事件大小超過這裡任一種 ETW 限制，則會截斷事件，並任意移除其內容。 變數、引數、附註和自訂資料都不可選擇性移除。 發生截斷情形時，不論造成事件大小超出 ETW 限制的值大小為何，這些元素全都會遭到截斷。  已移除的資料會以 `<item>..<item>` 來取代。  
   
- 變數、引數和自訂資料項目中的複雜類型會使用[NetDataContractSerializer 類別](https://go.microsoft.com/fwlink/?LinkId=177537)序列化為 ETW 事件記錄。 此類別包含序列化 XML 資料流中的 CLR 型別資訊。  
+ 變數、引數和自訂資料項目中的複雜類型會使用 <xref:System.Runtime.Serialization.NetDataContractSerializer> 類別序列化為 ETW 事件記錄。 此類別包含序列化 XML 資料流中的 CLR 型別資訊。  
   
  因 ETW 限制而截斷承載資料，可能會造成將追蹤記錄傳送到 ETW 工作階段。 如果有一個以上的工作階段正在接聽事件，且工作階段有不同的事件承載限制時，就可能會發生這種情況。  
   
@@ -85,9 +85,9 @@ ms.locfileid: "69963678"
   
 2. 選取**事件檢視器、應用程式和服務記錄檔、Microsoft、Windows、應用程式伺服器-應用程式**。  
   
-3. 以滑鼠右鍵按一下, 並確認已選取 [**顯示分析] 和 [偵錯工具記錄**]。 如果未選取該選項，請加以選取，使其旁邊出現核取記號。 這會顯示**分析**、效能和**Debug**記錄。  
+3. 以滑鼠右鍵按一下，並確認已選取 [**顯示分析] 和 [偵錯工具記錄**]。 如果未選取該選項，請加以選取，使其旁邊出現核取記號。 這會顯示**分析**、**效能和** **Debug**記錄。  
   
-4. 以滑鼠右鍵按一下**分析**記錄, 然後選取 [**啟用記錄**]。 記錄檔將位於 %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl 檔案。  
+4. 以滑鼠右鍵按一下**分析**記錄，然後選取 [**啟用記錄**]。 記錄檔將位於 %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl 檔案。  
   
 ## <a name="custom-tracking-participant"></a>自訂追蹤參與者  
  追蹤參與者 API 允許以使用者提供的追蹤者來擴充追蹤執行階段，可包含自訂邏輯以處理工作流程執行階段發出的追蹤記錄。 若要寫入自訂追蹤參與者，開發人員必須實作 `Track` 類別上的 <xref:System.Activities.Tracking.TrackingParticipant> 方法。 當工作流程執行階段發出追蹤記錄時，會呼叫此方法。  
@@ -140,7 +140,7 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
             Console.ReadLine();  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [Windows Server App Fabric 監視](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [使用 App Fabric 監視應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Windows Server App Fabric 監視](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [使用 App Fabric 監視應用程式](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

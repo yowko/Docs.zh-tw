@@ -3,28 +3,38 @@ title: 在 Windows、Linux 和 macOS 上安裝 .NET Core 執行時間-.NET Core
 description: 瞭解如何在 Windows、Linux 和 macOS 上安裝 .NET Core。 探索執行 .NET Core 應用程式所需的相依性。
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
+ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: fbe9b9e12dc53d9ab6570299e03f2b0a8868fb53
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8f4a895ad66dea3063a32f785e4c521196266978
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567266"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74835725"
 ---
 # <a name="install-the-net-core-runtime"></a>安裝 .NET Core 執行時間
 
 在本文中，您將瞭解如何下載並安裝 .NET Core 執行時間。 .NET Core 執行時間是用來執行使用 .NET Core 所建立的應用程式。
 
-::: zone pivot="os-windows,os-macos"
+::: zone pivot="os-windows"
 
 ## <a name="install-with-an-installer"></a>使用安裝程式安裝
 
-Windows 和 macOS 都有獨立的安裝程式，可以用來安裝 .NET Core 3.0 執行時間。
+Windows 有獨立的安裝程式，可用於安裝 .NET Core 3.1 執行時間：
 
-- Windows [x64 （64位） cpu](https://dotnet.microsoft.com/download/dotnet-core/3.0) | [x86 （32位） cpu](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- macOS [x64 （64位） cpu](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [x64 （64位） Cpu](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [x86 （32位） Cpu](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+::: zone-end
+
+::: zone pivot="os-macos"
+
+## <a name="install-with-an-installer"></a>使用安裝程式安裝
+
+macOS 具有可用於安裝 .NET Core 3.1 執行時間的獨立安裝程式：
+
+- [x64 （64位） Cpu](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ::: zone-end
 
@@ -42,11 +52,14 @@ Windows 和 macOS 都有獨立的安裝程式，可以用來安裝 .NET Core 3.0
 
 [Dotnet-install 腳本](../tools/dotnet-install-script.md)是用於執行時間的自動化和非系統管理員安裝。 您可以從 [ [dotnet-安裝腳本參考] 頁面](../tools/dotnet-install-script.md)下載此腳本。
 
-腳本預設為安裝最新的[長期支援（LTS）](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)版本，也就是 .net Core 2.1。 若要安裝目前版本的 .NET Core （3.0），請使用下列參數執行腳本：
+腳本預設為安裝最新的[長期支援（LTS）](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)版本，也就是 .net Core 3.1。 您可以藉由指定 `Channel` 參數來選擇特定版本。 包含 `Runtime` 參數，以安裝執行時間。 否則，腳本會安裝[SDK](sdk.md)。
 
 ```powershell
-dotnet-install.ps1 -Channel 3.0
+dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
 ```
+
+> [!NOTE]
+> 上述命令會安裝 ASP.NET Core 執行時間，以達到最大相容性。 ASP.NET Core 執行時間也包含標準的 .NET Core 執行時間。
 
 ::: zone-end
 
@@ -56,11 +69,14 @@ dotnet-install.ps1 -Channel 3.0
 
 [Dotnet-install 腳本](../tools/dotnet-install-script.md)是用於執行時間的自動化和非系統管理員安裝。 您可以從 [ [dotnet-安裝腳本參考] 頁面](../tools/dotnet-install-script.md)下載此腳本。
 
-腳本預設為安裝最新的[長期支援（LTS）](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)版本，也就是 .net Core 2.1。 若要安裝目前版本的 .NET Core （3.0），請使用下列參數執行腳本：
+腳本預設為安裝最新的[長期支援（LTS）](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)版本，也就是 .net Core 3.1。 您可以藉由指定 `current` 參數來選擇特定版本。 包含 `runtime` 參數，以安裝執行時間。 否則，腳本會安裝[SDK](sdk.md)。
 
 ```bash
-./dotnet-install.sh -c Current
+./dotnet-install.sh --current 3.1 --runtime aspnetcore
 ```
+
+> [!NOTE]
+> 上述命令會安裝 ASP.NET Core 執行時間，以達到最大相容性。 ASP.NET Core 執行時間也包含標準的 .NET Core 執行時間。
 
 ::: zone-end
 
@@ -68,7 +84,7 @@ dotnet-install.ps1 -Channel 3.0
 
 您可以使用下列其中一個連結直接下載並安裝 .NET Core：
 
-- [.NET Core 3.1 Preview 下載](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET Core 3.1 下載](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 - [.NET Core 3.0 下載](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 - [.NET Core 2.2 下載](https://dotnet.microsoft.com/download/dotnet-core/2.2)
 - [.NET Core 2.1 下載](https://dotnet.microsoft.com/download/dotnet-core/2.1)

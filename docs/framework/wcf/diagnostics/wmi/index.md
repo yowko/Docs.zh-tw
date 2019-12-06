@@ -2,12 +2,12 @@
 title: 使用 Windows Management Instrumentation 進行診斷
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 0b67f06b9a99d7e9001c8415d0e94adef8436a3d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 26758c8a4f537f9522d5ab650ae6b3cd8f044db2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855812"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837437"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 進行診斷
 Windows Communication Foundation （WCF）會透過 WCF Windows Management Instrumentation （WMI）提供者，在執行時間公開服務的檢查資料。  
@@ -17,7 +17,7 @@ Windows Communication Foundation （WCF）會透過 WCF Windows Management Instr
   
  WMI 提供者是一個元件，可透過 WBEM 相容介面，在執行階段公開測試設備。 它是由一組含有屬性/值配對的 WMI 物件所組成。 配對可以是數個簡單型別。 管理工具可以在執行階段，透過介面連接到服務。 WCF 會公開服務的屬性，例如位址、系結、行為和接聽程式。  
   
- 內建的 WMI 提供者可以在應用程式的組態檔中啟動。 這項作業是透過`wmiProviderEnabled` [ \<system.servicemodel >](../../../configure-apps/file-schema/wcf/system-servicemodel.md)區段中的 [ [ \<診斷 >](../../../configure-apps/file-schema/wcf/diagnostics.md) ] 屬性來完成，如下列範例設定所示。  
+ 內建的 WMI 提供者可以在應用程式的組態檔中啟動。 這會透過[\<system.servicemodel >](../../../configure-apps/file-schema/wcf/system-servicemodel.md)一節中[\<diagnostics >](../../../configure-apps/file-schema/wcf/diagnostics.md)的 `wmiProviderEnabled` 屬性來完成，如下列範例設定所示。  
   
 ```xml  
 <system.serviceModel>  
@@ -35,22 +35,22 @@ Windows Communication Foundation （WCF）會透過 WCF Windows Management Instr
 > [!CAUTION]
 > 如果您使用 .NET Framework 提供的方法，以程式設計方式存取 WMI 資料，您要注意，當連線建立時，這類方法可能會擲回例外狀況。 連線不是在建構 <xref:System.Management.ManagementObject> 執行個體期間建立的，而是在第一次要求實際資料交換時建立。 因此，您應該使用 `try..catch` 區塊攔截可能的例外狀況。  
   
- 您可以在 WMI 中變更 `System.ServiceModel` 追蹤來源的追蹤和訊息記錄層級，以及訊息記錄選項。 這可以藉由存取[AppDomainInfo](appdomaininfo.md)實例來完成，這會公開下列布林值`LogMessagesAtServiceLevel`屬性`LogMessagesAtTransportLevel`： `LogMalformedMessages`、、 `TraceLevel`和。 因此，如果您為訊息記錄設定一個追蹤接聽項，但在組態中將這些選項設定為 `false`，那麼您可以在稍後應用程式執行時，將選項變更為 `true`。 這將會在執行階段有效地啟用訊息記錄。 同樣地，如果您在組態檔中啟用訊息記錄，則您可以在執行階段使用 WMI 來停用訊息記錄。  
+ 您可以在 WMI 中變更 `System.ServiceModel` 追蹤來源的追蹤和訊息記錄層級，以及訊息記錄選項。 這可以藉由存取[AppDomainInfo](appdomaininfo.md)實例來完成，這會公開下列布林值屬性： `LogMessagesAtServiceLevel`、`LogMessagesAtTransportLevel`、`LogMalformedMessages`和 `TraceLevel`。 因此，如果您為訊息記錄設定一個追蹤接聽項，但在組態中將這些選項設定為 `false`，那麼您可以在稍後應用程式執行時，將選項變更為 `true`。 這將會在執行階段有效地啟用訊息記錄。 同樣地，如果您在組態檔中啟用訊息記錄，則您可以在執行階段使用 WMI 來停用訊息記錄。  
   
  您要注意，如果沒有為訊息記錄設定訊息記錄追蹤接聽項，或者組態檔中沒有指定 `System.ServiceModel` 追蹤接聽項來進行追蹤，則您所做的變更不會有任何作用，即使 WMI 接受這些變更也一樣。 如需正確設定個別接聽程式的詳細資訊，請參閱設定[訊息記錄](../configuring-message-logging.md)和設定[追蹤](../tracing/configuring-tracing.md)。 組態所指定之所有其他追蹤來源的追蹤層級，會在應用程式啟動時生效，並且無法變更。  
   
- WCF 會公開`GetOperationCounterInstanceName`用來撰寫腳本的方法。 如果您提供了一個作業名稱，這個方法就會傳回一個效能計數器執行個體名稱。 不過，它不會驗證您的輸入。 因此，如果您提供的作業名稱不正確，就會傳回錯誤的計數器名稱。  
+ WCF 會公開腳本的 `GetOperationCounterInstanceName` 方法。 如果您提供了一個作業名稱，這個方法就會傳回一個效能計數器執行個體名稱。 不過，它不會驗證您的輸入。 因此，如果您提供的作業名稱不正確，就會傳回錯誤的計數器名稱。  
   
- 如果`OutgoingChannel`未在`Service`方法`Service`內建立 WCF 用戶端至目的地服務，實例的屬性不會計算服務所開啟的通道以連接至另一個服務。  
+ 如果未在 `Service` 方法內建立目的地服務的 WCF 用戶端，則 `Service` 實例的 `OutgoingChannel` 屬性不會計算服務開啟以連接至另一個服務的通道。  
   
- **注意**WMI 僅支援最<xref:System.TimeSpan>多3個小數點的值。 例如，如果您的服務將其中一個屬性設定為 <xref:System.TimeSpan.MaxValue>，則透過 WMI 檢視時，小數點後三位之後的值將被截斷。  
+ **注意**WMI 僅支援最多3個小數點的 <xref:System.TimeSpan> 值。 例如，如果您的服務將其中一個屬性設定為 <xref:System.TimeSpan.MaxValue>，則透過 WMI 檢視時，小數點後三位之後的值將被截斷。  
   
 ## <a name="security"></a>安全性  
  因為 WCF WMI 提供者允許探索環境中的服務，所以您應該特別注意授與它的存取權。 如果您將預設僅供系統管理員存取的限制放寬，可能導致信賴度較低的一方存取環境中的敏感性資料。 特別是，如果您放寬遠端 WMI 存取的權限，可能導致氾濫攻擊。 如果某個處理序湧入了大量 WMI 要求，可能會使它的效能降低。  
   
  此外，如果您放寬了 MOF 檔案的存取權限，信賴度較低的一方就可以操控 WMI 的行為，並改變 WMI 結構描述中載入的物件。 例如，欄位可能會遭到移除，導致管理員無法看見重要資料，或是原本不會填入或造成例外狀況的欄位會加入至檔案。  
   
- 根據預設，WCF WMI 提供者會授與系統管理員「執行方法」、「提供者寫入」和「啟用帳戶」許可權，以及 ASP.NET、本機服務和網路服務的「啟用帳戶」許可權。 特別是，在非 [!INCLUDE[wv](../../../../../includes/wv-md.md)] 平台上，ASP.NET 帳戶具有 WMI ServiceModel 命名空間的讀取權限。 如果您不想將這些權限授與特定使用者群組，則應該停用 WMI 提供者 (預設為停用) 或停用特定使用者群組的存取。  
+ 根據預設，WCF WMI 提供者會授與系統管理員「執行方法」、「提供者寫入」和「啟用帳戶」許可權，以及 ASP.NET、本機服務和網路服務的「啟用帳戶」許可權。 特別是在非 Windows Vista 平臺上，ASP.NET 帳戶具有 WMI System.servicemodel 命名空間的讀取權限。 如果您不想將這些權限授與特定使用者群組，則應該停用 WMI 提供者 (預設為停用) 或停用特定使用者群組的存取。  
   
  此外，當您嘗試透過組態啟用 WMI 時，可能因為使用者權限不足，而無法啟用 WMI。 不過，事件記錄內不會寫入任何事件以記錄這項失敗。  
   
@@ -166,7 +166,7 @@ Whoami /user
   
 1. 按一下視窗右上角的 [**連接]** 按鈕。  
   
-2. 在新視窗中，針對 [**命名空間**] 欄位輸入**root\ServiceModel** ，然後針對 [**驗證等級**] 選取 [封**包隱私權**]。 按一下 **[連接]** 。  
+2. 在新視窗中，針對 [**命名空間**] 欄位輸入**root\ServiceModel** ，然後針對 [**驗證等級**] 選取 [封**包隱私權**]。 按一下 **[Connect]** (連線)。  
   
 ### <a name="using-managed-code"></a>使用 Managed 程式碼  
  您也可以使用 <xref:System.Management> 命名空間提供的類別，以程式設計方式存取遠端 WMI 執行個體。 下列程式碼範例示範如何執行這項操作。  

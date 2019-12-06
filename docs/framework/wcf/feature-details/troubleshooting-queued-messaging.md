@@ -2,12 +2,12 @@
 title: 佇列訊息的疑難排解
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: dcff128a7718245fa765c57d3af80665699f4891
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2999d1ab4129c72c231b6dc80480d8bfef5186fa
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976044"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837307"
 ---
 # <a name="troubleshooting-queued-messaging"></a>佇列訊息的疑難排解
 
@@ -25,7 +25,7 @@ ms.locfileid: "73976044"
 
 **問：** 我必須升級 MSMQ 才能使用 <xref:System.ServiceModel.NetMsmqBinding> 和 `MsmqIntegration` 系結嗎？
 
-**答：** 否。 兩種繫結都可以配合 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 上的 MSMQ 3.0 使用。 這些繫結中的特定功能要等到您使用 [!INCLUDE[wv](../../../../includes/wv-md.md)] 升級至 MSMQ 4.0 時才可使用。
+**答：** 否。 兩種繫結都可以配合 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 上的 MSMQ 3.0 使用。 當您升級至 Windows Vista 中的 MSMQ 4.0 時，系結的某些功能就會變成可用。
 
 **問：** <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 系結的哪些功能可在 MSMQ 4.0 中使用，但不在 MSMQ 3.0 中？
 
@@ -134,9 +134,9 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 **答：** 當您使用 MSMQ 整合系結時，您必須使用 msmq.formatname 配置。 例如，msmq.formatname:DIRECT=OS:.\private$\OrdersQueue。 不過當指定自訂的寄不出的信件佇列時，您必須使用 net.msmq 配置。
 
-**問：** 當我使用公用或私用格式名稱，並在 [!INCLUDE[wv](../../../../includes/wv-md.md)]上開啟服務主機時，會收到錯誤。 為什麼？
+**問：** 當我使用公用或私用格式名稱，並在 Windows Vista 上開啟服務主機時，會收到錯誤。 為什麼？
 
-**答：** [!INCLUDE[wv](../../../../includes/wv-md.md)] 上的 WCF 整合通道會檢查是否可以開啟主要應用程式佇列的子佇列來處理有害訊息。 子佇列的名稱衍生自傳遞至接聽項的 msmq.formatname URI。 但是 MSMQ 中的子佇列名稱只能是直接格式名稱。 所以您會看到錯誤。 請將佇列 URI 變更為直接格式名稱。
+**答：** Windows Vista 上的 WCF 整合通道會檢查是否可以開啟主要應用程式佇列的子佇列來處理有害訊息。 子佇列的名稱衍生自傳遞至接聽項的 msmq.formatname URI。 但是 MSMQ 中的子佇列名稱只能是直接格式名稱。 所以您會看到錯誤。 請將佇列 URI 變更為直接格式名稱。
 
 **問：** 從 MSMQ 應用程式接收訊息時，訊息位於佇列中，而且不會由接收 WCF 應用程式讀取。 為什麼？
 
@@ -154,11 +154,11 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 而另外一種解決方法是搭配 Active Directory 整合來安裝 MSMQ。
 
-**問：** 當我在 Active Directory 佇列中傳送具有預設系結（傳輸安全性）的訊息時，會收到「找不到內部憑證」訊息。 我要如何修正此問題？
+**問：** 當我在 Active Directory 佇列中傳送具有預設系結（傳輸安全性）的訊息時，會收到「找不到內部憑證」訊息。 如何修正這個問題？
 
 **答：** 這表示必須更新寄件者 Active Directory 中的憑證。 若要這麼做，請開啟 **控制台**、系統**管理工具**、**電腦管理**、以滑鼠右鍵按一下  **MSMQ**，**然後選取** 選取 [**使用者憑證**] 索引標籤，然後按一下 [**更新**] 按鈕。
 
-**問：** 當我使用 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 傳送訊息，並指定要使用的憑證時，我收到「不正確憑證」訊息。 我要如何修正此問題？
+**問：** 當我使用 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 傳送訊息，並指定要使用的憑證時，我收到「不正確憑證」訊息。 如何修正這個問題？
 
 **答：** 您不能使用具有憑證模式的本機電腦憑證存放區。 您必須使用憑證嵌入式管理單元，將憑證從電腦憑證存放區複製到目前使用者存放區。 若要取得憑證嵌入式管理單元：
 
@@ -174,19 +174,19 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 6. 接下來，使用先前的步驟新增第二個憑證嵌入式管理單元，但這次請選取 [**電腦帳戶**]，然後按 **[下一步]** 。
 
-7. 選取 [**本機電腦**]，然後按一下 **[完成]** 。 現在，您可以從電腦憑證存放區將憑證拖放到目前使用者存放區。
+7. 選取 [本機電腦]，再按一下 [完成]。 現在，您可以從電腦憑證存放區將憑證拖放到目前使用者存放區。
 
 **問：** 當我的服務在工作組模式中從另一部電腦上的佇列讀取時，出現「拒絕存取」例外狀況。
 
 **答：** 在工作組模式中，若要讓遠端應用程式取得佇列的存取權，應用程式必須具有存取佇列的許可權。 將「匿名登入」新增至佇列的存取控制清單（ACL），並授與讀取權限。
 
-**問：** 當網路服務用戶端（或任何不含網域帳戶的用戶端）傳送佇列訊息時，傳送會因為憑證無效而失敗。 我要如何修正此問題？
+**問：** 當網路服務用戶端（或任何不含網域帳戶的用戶端）傳送佇列訊息時，傳送會因為憑證無效而失敗。 如何修正這個問題？
 
 **答：** 檢查系結設定。 預設繫結會開啟 MSMQ 傳輸安全性以簽署訊息。 請關閉此選項。
 
 ### <a name="remote-transacted-receives"></a>遠端交易接收
 
-**問：** 當我在電腦 A 上有佇列，而 WCF 服務從電腦 B 上的佇列讀取訊息時（遠端交易接收案例），則不會從佇列讀取訊息。 追蹤資訊表示接收失敗，訊息為「無法匯入交易」。 我可以做什麼來修正這個問題？
+**問：** 當我在電腦 A 上有佇列，而 WCF 服務從電腦 B 上的佇列讀取訊息時（遠端交易接收案例），則不會從佇列讀取訊息。 追蹤資訊表示接收失敗，訊息為「無法匯入交易」。 可以做什麼來修正這個問題？
 
 **答：** 有三個可能的原因：
 
@@ -200,7 +200,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 - 請確定 MSDTC 位於**網際網路連線防火牆**設定的例外清單中。
 
-- 確定您是使用 [!INCLUDE[wv](../../../../includes/wv-md.md)]。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上的 MSMQ 支援遠端交易讀取。 在舊版 Window 中的 MSMQ 並不支援遠端交易讀取。
+- 請確定您使用的是 Windows Vista。 Windows Vista 上的 MSMQ 支援遠端交易讀取。 在舊版 Window 中的 MSMQ 並不支援遠端交易讀取。
 
 **問：** 當從佇列讀取的服務是網路服務（例如，在 Web 主機中）時，為何會在讀取佇列時引發拒絕存取的例外狀況？
 

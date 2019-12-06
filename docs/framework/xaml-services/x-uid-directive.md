@@ -7,15 +7,15 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: c8f0580c987b87193b5b6a38559043e50fc7cb89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32cfd9ab0cf6037c731b619e81a7504ac92d5fb9
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938836"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837177"
 ---
 # <a name="xuid-directive"></a>x:Uid 指示詞
-提供標記項目的唯一識別碼。 在許多情況下，這個唯一識別碼使用 XAML 的當地語系化程序和工具。  
+提供標記元素的唯一識別碼。 在許多情況下，XAML 當地語系化進程和工具會使用這個唯一識別碼。  
   
 ## <a name="xaml-attribute-usage"></a>XAML Attribute Usage  
   
@@ -27,21 +27,21 @@ ms.locfileid: "61938836"
   
 |||  
 |-|-|  
-|`identifier`|手動建立或自動產生的字串應該是唯一的檔案中時則會解譯由`x:Uid`取用者。|  
+|`identifier`|手動建立或自動產生的字串，在由 `x:Uid` 取用者解讀時，它在檔案中應該是唯一的。|  
   
 ## <a name="remarks"></a>備註  
- 在 [MS-XAML]`x:Uid`定義為指示詞。 如需詳細資訊，請參閱 < [ \[MS XAML\]一節 5.3.6](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ 在 [MS-XAML] 中，`x:Uid` 會定義為指示詞。 如需詳細資訊，請參閱[\[MS-XAML\] 區段 5.3.6](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))。  
   
- `x:Uid` 是從離散`x:Name`同時因為指定的 XAML 當地語系化案例使用於當地語系化的識別項的程式設計模型含意上沒有任何相依性`x:Name`。 此外，`x:Name`受到的 XAML 名稱範圍; 不過，`x:Uid`不會受到唯一性強制執行的任何 XAML 定義的語言概念。 廣泛了 （不屬於當地語系化程序的處理器） 中的 XAML 處理器不會強制執行唯一性`x:Uid`值。 該責任在概念上是在值的建立者。 唯一性的期望值`x:Uid`單一 XAML 來源內的值是相當合理的值，例如專用的全球化處理流程或工具的取用者。 典型的唯一性的模型是`x:Uid`值是唯一的 XML 編碼表示 XAML 檔案中。  
+ `x:Uid` 與 `x:Name` 的不同之處在于，這兩者都是因為所述的 XAML 當地語系化案例，因此用於當地語系化的識別碼與 `x:Name`的程式設計模型含意沒有相依性。 此外，`x:Name` 是由 XAML 名稱範圍所控制;不過，`x:Uid` 不受任何 XAML 語言定義的唯一性強制概念所規範。 XAML 處理器的廣泛意義（不屬於當地語系化進程的處理器）不應該強制執行 `x:Uid` 值的唯一性。 這項責任在概念上是在值的建立者上。 在單一 XAML 來源中，`x:Uid` 值的唯一性，對於值的取用者而言是合理的，例如專用的全球化處理常式或工具。 一般的唯一性模型是，在代表 XAML 的 XML 編碼檔案中，`x:Uid` 值是唯一的。  
   
- 有了特定的 XAML 結構描述的工具可以選擇將套用`x:Uid`僅適用於為 true，則可當地語系化的字串，而不是文字字串值，在標記中遇到的所有案例。  
+ 對於特定 XAML 架構具有重要知識的工具，可以選擇僅針對真正可當地語系化的字串套用 `x:Uid`，而不是針對在標記中遇到文字字串值的所有情況。  
   
- 架構可以為的別名，其物件模型中指定特定的屬性`x:Uid`藉由將屬性套用<xref:System.Windows.Markup.UidPropertyAttribute>成定義的型別。 如果一種架構指定特定的屬性，它無效，無法同時指定`x:Uid`和別名化成員相同的物件。 如果兩個`x:Uid`並指定別名化成員，.NET Framework XAML 服務 API 通常會擲回<xref:System.Xaml.XamlDuplicateMemberException>在此情況下。  
+ 架構可以將屬性 <xref:System.Windows.Markup.UidPropertyAttribute> 套用至定義類型，藉此指定物件模型中的特定屬性，使其成為 `x:Uid` 的別名。 如果架構指定特定屬性，則在相同物件上同時指定 `x:Uid` 和別名成員是不正確。 如果同時指定 `x:Uid` 和別名成員，則 .NET Framework XAML 服務 API 通常會在此情況下擲回 <xref:System.Xaml.XamlDuplicateMemberException>。  
   
 ## <a name="wpf-usage-notes"></a>WPF 使用注意事項  
- 如需有關所扮演的角色`x:Uid`在 WPF 當地語系化程序和 BAML 形式的 XAML，請參閱[WPF 的全球化](../wpf/advanced/globalization-for-wpf.md)或 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+ 如需 WPF 當地語系化程式中的 `x:Uid` 角色和 BAML 形式 XAML 的詳細資訊，請參閱 WPF 或 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 的[全球化](../wpf/advanced/globalization-for-wpf.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
 - <xref:Microsoft.Build.Tasks.Windows.UidManager>

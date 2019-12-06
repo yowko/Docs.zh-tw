@@ -2,14 +2,14 @@
 title: .NET Core 指南
 description: .NET Core 是 .NET 的模組化、高效能實作，可用於建立 Windows、Linux 和 Mac 應用程式。 了解 .NET Core 以開始使用。
 author: richlander
-ms.date: 09/23/2019
+ms.date: 12/04/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 95f18ca09852ce139a4b99ed7aef4802d4883e13
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: b2622dba53d64c9dcf58e852d57de117fe79eb2e
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216214"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837008"
 ---
 # <a name="net-core-guide"></a>.NET Core 指南
 
@@ -25,13 +25,13 @@ ms.locfileid: "71216214"
 
 若您要尋找另一個 .NET Core 版本，所有 .NET Core 版本都可以在 [.NET Core 下載 ](https://dotnet.microsoft.com/download/dotnet-core)找到。
 
-## <a name="net-core-30"></a>.NET Core 3.0
+## <a name="net-core-31"></a>.NET Core 3。1
 
-最新版本是 .NET Core 3.0。 新功能包括具有 Windows Presentation Foundation (WPF) 與 Windows Forms 的 Windows 桌面支援、使用 Blazor 的完整堆疊 C# Web 開發、SignalR 與 Azure SignalR Service 的新增強功能、C# 8 的新 C# 語言功能等。 如需 .NET Core 3.0 中新功能的完整清單，請參閱 [.Net Core 3.0 的新功能](./whats-new/dotnet-core-3-0.md)。
+最新版本是 .NET Core 3.1。 其中包括比 .NET Core 3.0 更小的改善。 不過，.NET Core 3.1 是長期支援的版本。 如需 .NET Core 3.1 版本的詳細資訊，請參閱[.Net core 3.1 的新功能](./whats-new/dotnet-core-3-1.md)。
 
 ## <a name="create-your-first-application"></a>建立您的第一個應用程式
 
-安裝 .NET Core SDK 之後，請開啟命令提示字元。 輸入下列`dotnet`命令來建立並執行C#應用程式：
+安裝 .NET Core SDK 之後，請開啟命令提示字元。 輸入下列 `dotnet` 命令來建立和執行C#應用程式：
 
 ```dotnetcli
 dotnet new console

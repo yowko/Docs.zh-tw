@@ -1,13 +1,13 @@
 ---
 title: 值的選項
 description: 瞭解F#值選項類型，這是選項類型的結構版本。
-ms.date: 02/06/2019
-ms.openlocfilehash: 4dc3f7217943345b7aaf1165fd648ab2e01bd727
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 12/04/2019
+ms.openlocfilehash: 0e9882ab4acdf2757705ef6022516d3572d87ef2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424011"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837112"
 ---
 # <a name="value-options"></a>值的選項
 
@@ -63,15 +63,13 @@ match (result1, result2) with
 
 ## <a name="value-option-functions"></a>值選項函數
 
-目前有一個模組系結函數適用于值選項，`defaultValueArg`：
+Fsharp.core 中的 `ValueOption` 模組包含 `Option` 模組的對等功能。 名稱有一些差異，例如 `defaultValueArg`：
 
 ```fsharp
 val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T
 ```
 
-如同 `defaultArg` 函式，`defaultValueArg` 會傳回指定值選項的基礎值（如果有的話）。否則，它會傳回指定的預設值。
-
-目前沒有適用于值選項的其他模組系結函數。
+其作用就像 `Option` 模組中的 `defaultArg`，但會改為操作值選項。
 
 ## <a name="see-also"></a>請參閱
 

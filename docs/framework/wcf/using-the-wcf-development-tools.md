@@ -2,12 +2,12 @@
 title: 使用 WCF 開發工具
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: 59913f4c00c32699d788e2a0244798fc652361be
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 8253a9136b2310deeb7c6d162a9f190c13ba02da
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802402"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837723"
 ---
 # <a name="using-the-wcf-development-tools"></a>使用 WCF 開發工具
 本節說明可協助您開發 Wcfservice.myclass 的 Visual Studio 開發工具。  
@@ -37,7 +37,7 @@ ms.locfileid: "74802402"
 ## <a name="using-the-tools-without-administrator-privilege"></a>在沒有系統管理員權限的情況下使用工具  
  若要讓沒有系統管理員許可權的使用者開發 WCF 服務，在安裝 Visual Studio 期間，會為命名空間 "http://+:8731/Design_Time_Addresses" 建立 ACL （存取控制清單）。 ACL 會設定為 (UI)，其中包含已登入電腦的所有互動使用者。 系統管理員可以在這個 ACL 中新增或移除使用者，或是開啟其他連接埠。這個 ACL 可讓 WCF 或 WF 範本傳送及接收其預設組態中的資料。 此外，它也可讓使用者在不授與系統管理員許可權的情況下，使用 WCF 服務自動裝載（wcfSvcHost .exe）。  
   
- 您可以更高權限的系統管理員帳戶身分，使用 [!INCLUDE[wv](../../../includes/wv-md.md)] 中的 Netsh.exe 工具來修改存取權。 下列是使用 Netsh.exe 的範例。  
+ 在 Windows Vista 中，您可以使用以提升許可權的系統管理員帳戶來修改存取權。 下列是使用 Netsh.exe 的範例。  
   
 ```console  
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  

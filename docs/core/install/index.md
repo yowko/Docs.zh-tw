@@ -3,13 +3,13 @@ title: 在 Windows、Linux 和 macOS 上安裝 .NET Core-.NET Core
 description: 瞭解在 Windows、Linux 和 macOS 版本上針對 .NET Core 安裝的位置和內容。 探索開發、部署和執行 .NET Core 應用程式所需的相依性。
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
-ms.openlocfilehash: d4c2e8507b022d03eed482f827407db5cff8ebfe
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/04/2019
+ms.openlocfilehash: 4a133393db28ac5c7fd2384c4b842483c7c30d6f
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74451084"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74836988"
 ---
 # <a name="download-and-install-net-core"></a>下載並安裝 .NET Core
 

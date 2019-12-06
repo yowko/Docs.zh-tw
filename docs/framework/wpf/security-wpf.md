@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 939c9c6b8a8a8822174f08d5c0b50ef051264ee1
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 75e6c7b4886bd490c462e9128eca7ec13f233824
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802090"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837294"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a>開發 Windows Presentation Foundation （WPF）獨立和瀏覽器裝載的應用程式時，您必須考慮安全性模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 獨立應用程式會以不受限制的許可權（CAS**FullTrust**許可權集合）執行，無論是使用 Windows Installer （.msi）、XCopy 或 ClickOnce 部署。 不支援使用 ClickOnce 部署部分信任的獨立 WPF 應用程式。 不過，完全信任的主應用程式可以使用 .NET Framework 增益集模型，建立部分信任的 <xref:System.AppDomain>。 如需詳細資訊，請參閱[WPF 增益集總覽](./app-development/wpf-add-ins-overview.md)。  
@@ -87,7 +87,7 @@ ms.locfileid: "74802090"
   
 <a name="InternetExplorerSecuritySettings"></a>   
 ## <a name="web-browsing-software-security-settings"></a>Web 瀏覽軟體安全性設定  
- 電腦上的安全性設定決定授與任何 Web 瀏覽軟體的存取權。 Web 流覽套裝軟體含任何使用[WinINet](https://go.microsoft.com/fwlink/?LinkId=179379)或[urlmon.dll](https://go.microsoft.com/fwlink/?LinkId=179383) Api （包括 Internet Explorer 和 presentationhost.exe）的應用程式或元件。  
+ 電腦上的安全性設定決定授與任何 Web 瀏覽軟體的存取權。 Web 流覽套裝軟體含任何使用[WinINet](/windows/win32/wininet/portal)或[urlmon.dll](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767916(v=vs.85)) Api （包括 Internet Explorer 和 presentationhost.exe）的應用程式或元件。  
   
  Internet Explorer 提供一種機制，可讓您設定允許或從 Internet Explorer 執行的功能，包括下列各項：  
   
@@ -148,14 +148,14 @@ ms.locfileid: "74802090"
   
 <a name="webbrowser_control_and_feature_controls"></a>   
 ## <a name="webbrowser-control-and-feature-controls"></a>WebBrowser 控制項和功能控制項  
- WPF <xref:System.Windows.Controls.WebBrowser> 控制項可以用來裝載 Web 內容。 WPF <xref:System.Windows.Controls.WebBrowser> 控制項會包裝基礎 WebBrowser ActiveX 控制項。 當您使用 WPF <xref:System.Windows.Controls.WebBrowser> 控制項來裝載不受信任的 Web 內容時，WPF 會提供一些保護應用程式的支援。 不過，某些安全性功能必須由使用 <xref:System.Windows.Controls.WebBrowser> 控制項的應用程式直接套用。 如需 WebBrowser ActiveX 控制項的詳細資訊，請參閱[Webbrowser 控制項總覽和教學](https://go.microsoft.com/fwlink/?LinkId=179388)課程。  
+ WPF <xref:System.Windows.Controls.WebBrowser> 控制項可以用來裝載 Web 內容。 WPF <xref:System.Windows.Controls.WebBrowser> 控制項會包裝基礎 WebBrowser ActiveX 控制項。 當您使用 WPF <xref:System.Windows.Controls.WebBrowser> 控制項來裝載不受信任的 Web 內容時，WPF 會提供一些保護應用程式的支援。 不過，某些安全性功能必須由使用 <xref:System.Windows.Controls.WebBrowser> 控制項的應用程式直接套用。 如需 WebBrowser ActiveX 控制項的詳細資訊，請參閱[Webbrowser 控制項總覽和教學](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752041(v=vs.85))課程。  
   
 > [!NOTE]
 > 本節也適用于 <xref:System.Windows.Controls.Frame> 控制項，因為它會使用 <xref:System.Windows.Controls.WebBrowser> 流覽至 HTML 內容。  
   
  如果 WPF <xref:System.Windows.Controls.WebBrowser> 控制項用來裝載不受信任的 Web 內容，您的應用程式應該使用部分信任的 <xref:System.AppDomain>，以協助將您的應用程式程式碼與可能惡意的 HTML 腳本隔離。 尤其是當您的應用程式使用 <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> 方法和 <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> 屬性與裝載的腳本互動時，更是如此。 如需詳細資訊，請參閱[WPF 增益集總覽](./app-development/wpf-add-ins-overview.md)。  
   
- 如果您的應用程式使用 WPF <xref:System.Windows.Controls.WebBrowser> 控制項，另一個增加安全性和緩和攻擊的方法，就是啟用 Internet Explorer 功能控制項。 功能控制項是 Internet Explorer 的新增專案，可讓系統管理員和開發人員設定 Internet Explorer 的功能，以及裝載 WebBrowser ActiveX 控制項的應用程式，WPF <xref:System.Windows.Controls.WebBrowser> 控制項將會包裝這些專案。 您可以使用[CoInternetSetFeatureEnabled](https://go.microsoft.com/fwlink/?LinkId=179394)函數或變更登錄中的值，來設定功能控制項。 如需功能控制項的詳細資訊，請參閱[功能控制項簡介](https://go.microsoft.com/fwlink/?LinkId=179390)和[網際網路功能控制項](https://go.microsoft.com/fwlink/?LinkId=179392)。  
+ 如果您的應用程式使用 WPF <xref:System.Windows.Controls.WebBrowser> 控制項，另一個增加安全性和緩和攻擊的方法，就是啟用 Internet Explorer 功能控制項。 功能控制項是 Internet Explorer 的新增專案，可讓系統管理員和開發人員設定 Internet Explorer 的功能，以及裝載 WebBrowser ActiveX 控制項的應用程式，WPF <xref:System.Windows.Controls.WebBrowser> 控制項將會包裝這些專案。 您可以使用[CoInternetSetFeatureEnabled](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537168(v=vs.85))函數或變更登錄中的值，來設定功能控制項。 如需功能控制項的詳細資訊，請參閱[功能控制項簡介](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537184(v=vs.85))和[網際網路功能控制項](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/general-info/ee330720(v=vs.85))。  
   
  如果您要開發使用 WPF <xref:System.Windows.Controls.WebBrowser> 控制項的獨立 WPF 應用程式，WPF 會自動為您的應用程式啟用下列功能控制項。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "74802090"
  功能控制項是由具現化 WebBrowser ActiveX 物件的進程所套用。 因此，如果您要建立的獨立應用程式會巡覽到不受信任的內容，則應該認真考慮啟用其他功能控制項。  
   
 > [!NOTE]
-> 這項建議根據 MSHTML 和 SHDOCVW 主機安全性的一般建議。 如需詳細資訊，請參閱[MSHTML 主機安全性常見問題：第 I 部](https://go.microsoft.com/fwlink/?LinkId=179396)和[MSHTML 主機安全性常見問題： II 的第二部分](https://go.microsoft.com/fwlink/?LinkId=179415)。  
+> 這項建議根據 MSHTML 和 SHDOCVW 主機安全性的一般建議。 如需詳細資訊，請參閱[MSHTML 主機安全性常見問題：第 I 部](https://msrc-blog.microsoft.com/archive/2009/04/02/the-mshtml-host-security-faq.aspx)和[MSHTML 主機安全性常見問題： II 的第二部分](https://msrc-blog.microsoft.com/archive/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii.aspx)。  
   
  針對可執行檔，請考慮將登錄值設定為 1 來啟用下列功能控制項。  
   
@@ -209,7 +209,7 @@ ms.locfileid: "74802090"
   
  如果您在 Windows Internet Explorer 中執行包含 WPF <xref:System.Windows.Controls.WebBrowser> 控制項的部分信任 XAML 瀏覽器應用程式（XBAP），WPF 會在 Internet Explorer 進程的位址空間中裝載 WebBrowser ActiveX 控制項。 由於 WebBrowser ActiveX 控制項裝載于 Internet Explorer 進程中，因此 Internet Explorer 的所有功能控制也會針對 WebBrowser ActiveX 控制項啟用。  
   
- 與一般獨立應用程式相較之下，在 Internet Explorer 中執行的 XBAP 也會取得額外層級的安全性。 這項額外的安全性是因為 Internet Explorer 和 WebBrowser ActiveX 控制項預設會在 Windows Vista 和 Windows 7 上以受保護模式執行。 如需受保護模式的詳細資訊，請參閱[瞭解及使用受保護模式的 Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393)。  
+ 與一般獨立應用程式相較之下，在 Internet Explorer 中執行的 XBAP 也會取得額外層級的安全性。 這項額外的安全性是因為 Internet Explorer 和 WebBrowser ActiveX 控制項預設會在 Windows Vista 和 Windows 7 上以受保護模式執行。 如需受保護模式的詳細資訊，請參閱[瞭解及使用受保護模式的 Internet Explorer](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/)。  
   
 > [!NOTE]
 > 如果您嘗試在 Firefox 中執行包含 WPF <xref:System.Windows.Controls.WebBrowser> 控制項的 XBAP，而在網際網路區域中，則會擲回 <xref:System.Security.SecurityException>。 這是因為 WPF 安全性原則。  
@@ -266,7 +266,7 @@ ms.locfileid: "74802090"
   
 |區域圖|資源|  
 |----------|--------------|  
-|Managed 程式碼|[Patterns and Practices Security Guidance for Applications](https://go.microsoft.com/fwlink/?LinkId=117426) (應用程式的模式和實務安全性指南)|  
+|Managed 程式碼|[Patterns and Practices Security Guidance for Applications](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)) (應用程式的模式和實務安全性指南)|  
 |CAS|[程式碼存取安全性](../misc/code-access-security.md)|  
 |ClickOnce|[ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 部分信任安全性](wpf-partial-trust-security.md)|  
@@ -276,7 +276,7 @@ ms.locfileid: "74802090"
 - [WPF 部分信任安全性](wpf-partial-trust-security.md)
 - [WPF 安全性策略 – 平台安全性](wpf-security-strategy-platform-security.md)
 - [WPF 安全性策略 – 安全性工程](wpf-security-strategy-security-engineering.md)
-- [Patterns and Practices Security Guidance for Applications](https://go.microsoft.com/fwlink/?LinkId=117426) (應用程式的模式和實務安全性指南)
+- [Patterns and Practices Security Guidance for Applications](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)) (應用程式的模式和實務安全性指南)
 - [程式碼存取安全性](../misc/code-access-security.md)
 - [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)
 - [XAML 概觀 (WPF)](../../desktop-wpf/fundamentals/xaml.md)

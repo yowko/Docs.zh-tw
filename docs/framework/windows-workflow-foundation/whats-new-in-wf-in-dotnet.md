@@ -2,12 +2,12 @@
 title: .NET 4.5 中 Windows Workflow Foundation 的新功能
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: 0244457a051740f37c11c48f41d98bdb2d741aec
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 80919dd7a726cbac5fa13680e0c79292745a7bca
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142030"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837580"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 中 Windows Workflow Foundation 的新功能
 
@@ -76,7 +76,7 @@ ms.locfileid: "74142030"
 
 5. 型別將不會使用 <xref:System.Runtime.Serialization.ISerializable> 或 <xref:System.SerializableAttribute> 進行序列化，要序列化的型別必須支援 <xref:System.Runtime.Serialization.DataContractSerializer>。
 
-6. 使用 <xref:System.Activities.Expressions.LambdaValue%601> 的運算式需要 <xref:System.Security.Permissions.ReflectionPermissionAttribute.RestrictedMemberAccess%2A>，因此不能在部分信任下運作。 使用 <xref:System.Activities.Expressions.LambdaValue%601> 的工作流程應將這些運算式改為從 <xref:System.Activities.CodeActivity%601> 衍生而來的活動。 執行個體時提供 SQL Server 登入。
+6. 使用 <xref:System.Activities.Expressions.LambdaValue%601> 的運算式需要 <xref:System.Security.Permissions.ReflectionPermissionAttribute.RestrictedMemberAccess%2A>，因此不能在部分信任下運作。 使用 <xref:System.Activities.Expressions.LambdaValue%601> 的工作流程應將這些運算式改為從 <xref:System.Activities.CodeActivity%601> 衍生而來的活動。 。
 
 7. 在部分信任下不能使用 <xref:System.Activities.XamlIntegration.TextExpressionCompiler> 或裝載 Visual Basic 的編譯器來編譯運算式，但可以執行先前編譯的運算式。
 
@@ -102,7 +102,7 @@ ms.locfileid: "74142030"
 
 - 變數
 
-- 引數
+- Arguments
 
 - 運算式
 
@@ -220,7 +220,7 @@ C# 運算式會在設計階段進行驗證。 C# 運算式中的錯誤會用紅�
 
 ### <a name="BKMK_StateMachine"></a>狀態機器工作流程
 
-狀態機器工作流程是在[Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092)的 .NET Framework 4 版本4.0.1 中引進。 此更新包括若干新類別和活動，可讓開發人員建立狀態機器工作流程。 這些類別和活動已針對 .NET Framework 4.5 進行更新。 更新包括：
+狀態機器工作流程是在[Microsoft .NET Framework 4 Platform Update 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)的 .NET Framework 4 版本4.0.1 中引進。 此更新包括若干新類別和活動，可讓開發人員建立狀態機器工作流程。 這些類別和活動已針對 .NET Framework 4.5 進行更新。 更新包括：
 
 1. 可設定狀態中斷點的功能
 

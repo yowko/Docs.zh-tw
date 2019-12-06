@@ -2,12 +2,12 @@
 title: 中的非同步程式設計F#
 description: 瞭解如何F#根據衍生自核心函式程式設計概念的語言層級程式設計模型，提供非同步全新支援。
 ms.date: 12/17/2018
-ms.openlocfilehash: 1ede4a5c1e26df271ac94f9b2c216ac84fb38f59
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 583b0f5154e6ad8875b21503cfb78f70a069ff7b
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395795"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837099"
 ---
 # <a name="async-programming-in-f"></a>F\# 中的非同步程式設計
 
@@ -127,6 +127,7 @@ let main argv =
     argv
     |> Array.map printTotalFileBytes
     |> Async.Sequential
+    |> Async.Ignore
     |> Async.RunSynchronously
     |> ignore
 ```
@@ -143,7 +144,7 @@ let main argv =
 
 在非同步計算中啟動子計算。 這可讓多個非同步計算同時執行。 子計算會與父計算共用解除標記。 如果父計算已取消，子計算也會一併取消。
 
-簽章
+簽章：
 
 ```fsharp
 computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
@@ -161,9 +162,9 @@ computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
 
 ### <a name="asyncstartimmediate"></a>StartImmediate
 
-執行非同步計算，並在目前的作業系統執行緒上立即啟動。 如果您需要在計算期間更新呼叫執行緒上的某個專案，這會很有説明。 例如，如果非同步計算必須更新 UI （例如更新進度列），則應該使用 `Async.StartImmediate`。
+直接從目前的作業系統執行緒開始，傳回非同步計算。 如果您需要在計算期間更新呼叫執行緒上的某個專案，這會很有説明。 例如，如果非同步計算必須更新 UI （例如更新進度列），則應該使用 `Async.StartImmediate`。
 
-簽章
+簽章：
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
@@ -179,9 +180,9 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 
 ### <a name="asyncstartastask"></a>Async.startastask
 
-執行執行緒集區中的計算。 傳回在計算終止（產生結果、擲回例外狀況或取消）時，將在對應狀態下完成的 <xref:System.Threading.Tasks.Task%601>。 如果未提供解除標記，則會使用預設的解除標記。
+在執行緒集區中執行計算。 傳回在計算終止（產生結果、擲回例外狀況或取消）時，將在對應狀態下完成的 <xref:System.Threading.Tasks.Task%601>。 如果未提供解除標記，則會使用預設的解除標記。
 
-簽章
+簽章：
 
 ```fsharp
 computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
@@ -199,7 +200,7 @@ computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellatio
 
 排定要平行執行的一系列非同步計算。 藉由指定 `maxDegreesOfParallelism` 參數，可以選擇性地調整/節流處理平行處理原則的程度。
 
-簽章
+簽章：
 
 ```fsharp
 computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
@@ -219,7 +220,7 @@ computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
 
 排程要依行程順序執行的一系列非同步計算。 第一次計算將會執行，接下來是下一個，依此類推。 不會平行執行計算。
 
-簽章
+簽章：
 
 ```fsharp
 computations: seq<Async<'T>> -> Async<'T[]>
@@ -238,7 +239,7 @@ computations: seq<Async<'T>> -> Async<'T[]>
 
 傳回非同步計算，等候指定的 <xref:System.Threading.Tasks.Task%601> 完成，並將其結果傳回為 `Async<'T>`
 
-簽章
+簽章：
 
 ```fsharp
 task: Task<'T>  -> Async<'T>
@@ -256,7 +257,7 @@ task: Task<'T>  -> Async<'T>
 
 建立異步計算，以執行指定的 `Async<'T>`，並傳回 `Async<Choice<'T, exn>>`。 如果指定的 `Async<'T>` 成功完成，則會傳回包含結果值的 `Choice1Of2`。 如果在完成之前擲回例外狀況，則會傳回具有引發例外狀況的 `Choice2of2`。 如果它用於本身由許多計算組成的非同步計算，而其中一個計算擲回例外狀況，則會完全停止內含的計算。
 
-簽章
+簽章：
 
 ```fsharp
 computation: Async<'T> -> Async<Choice<'T, exn>>
@@ -272,9 +273,9 @@ computation: Async<'T> -> Async<Choice<'T, exn>>
 
 ### <a name="asyncignore"></a>Async。忽略
 
-建立異步計算來執行指定的計算，並忽略其結果。
+建立會執行所指定計算並忽略其結果的非同步計算。
 
-簽章
+簽章：
 
 ```fsharp
 computation: Async<'T> -> Async<unit>
@@ -292,7 +293,7 @@ computation: Async<'T> -> Async<unit>
 
 執行非同步計算，並在呼叫執行緒上等候其結果。 此呼叫正在封鎖。
 
-簽章
+簽章：
 
 ```fsharp
 computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
@@ -311,7 +312,7 @@ computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -
 
 線上程集區中啟動會傳回 `unit`的非同步計算。 不等候其結果。 以 `Async.Start` 開始的嵌套計算會與呼叫它們的父系計算完全獨立地啟動。 其存留期不會系結至任何父系計算。 如果父代計算已取消，則不會取消任何子計算。
 
-簽章
+簽章：
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
@@ -381,7 +382,7 @@ module Async =
 
 雖然F#提供在目前線程上啟動非同步計算的一些功能（或明確地不在目前線程上），但非同步通常不會與特定的執行緒策略相關聯。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [F#非同步程式設計模型](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
 - [Jet .com 的F#非同步指南](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)

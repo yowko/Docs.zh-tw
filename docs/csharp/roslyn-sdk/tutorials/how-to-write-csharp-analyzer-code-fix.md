@@ -3,12 +3,12 @@ title: 教學課程：撰寫您的第一個分析器和程式碼修正
 description: 本教學課程提供 使用 .NET Compiler SDK (Roslyn API) 來建置分析器和程式碼修正的逐步指示。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: d6645a2a6e83f68c1959c255756393c9251dc1ba
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 7bd0fda9fb717a48c09aafde47f9b7f4f360c357
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105763"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837047"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教學課程：撰寫您的第一個分析器和程式碼修正
 
@@ -16,18 +16,18 @@ ms.locfileid: "70105763"
 
 在本教學課程中，您將探索如何使用 Roslyn API 建立**分析器**和隨附的**程式碼修正**。 分析器是執行原始程式碼分析並向使用者報告問題的方式之一。 分析器也可以選擇性地提供程式碼修正，以顯示對使用者的原始程式碼所做的修改。 本教學課程所建立的分析器會尋找可使用 `const` 修飾詞來宣告、但並未這麼做的區域變數宣告。 隨附的程式碼修正會修改這些宣告，而新增 `const` 修飾詞。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
 
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
-您必須透過 Visual Studio 安裝程式來安裝 **.NET Compiler Platform SDK**：
+您必須透過 Visual Studio 安裝程式安裝 **.NET COMPILER PLATFORM SDK** ：
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 建立和驗證您的分析器時須執行幾個步驟：
 
-1. 建立解決方案。
+1. 建立方案。
 1. 註冊的分析器名稱和描述。
 1. 報告分析器警告和建議。
 1. 實作接受建議的程式碼修正。
@@ -51,8 +51,8 @@ Console.WriteLine(x);
 
 其中涉及用以判斷變數是否可設為常數的分析，這需要進行語法分析、初始設定式運算式的常數分析，和資料流程分析，以確保一律不會寫入變數。 .NET Compiler Platform 所提供的 API 可讓您更輕鬆地執行這項分析。 第一個步驟是建立新的 C# **具有程式碼修正的分析器**專案。
 
-- 在 Visual Studio 中選擇 [檔案] > [新增] > [專案...]  ，以顯示 [新增專案] 對話方塊。
-- 在 [Visual C# > 擴充性]  下方，選擇 [具有程式碼修正的分析器 (.NET Standard)]  。
+- 在 Visual Studio 中選擇 [檔案] > [新增] > [專案...]，以顯示 [新增專案] 對話方塊。
+- 在 [Visual C# > 擴充性] 下方，選擇 [具有程式碼修正的分析器 (.NET Standard)]。
 - 將您的專案命名為 "**MakeConst**"，然後按一下 [確定]。
 
 具有程式碼修正範本的分析器會建立三個專案：一個包含分析器和程式碼修正，第二個是單元測試專案，第三個則是 VSIX 專案。 預設啟始專案為 VSIX 專案。 按 **F5** 以啟動 VSIX 專案。 這會啟動已載入新分析器的第二個 Visual Studio 執行個體。
@@ -60,7 +60,7 @@ Console.WriteLine(x);
 > [!TIP]
 > 當您執行分析器時，您會啟動 Visual Studio 的第二個複本。 此複本會使用不同的登錄區來儲存設定。 這可讓您區分兩個 Visual Studio 複本中的的視覺化設定。 您可以挑選不同的佈景主題，用於 Visual Studio 的實驗性執行。 此外，請勿使用 Visual Studio 的實驗性執行漫遊您的設定或登入 Visual Studio 帳戶。 設定會因此而不同。
 
-在您剛剛起始的第二個 Visual Studio 執行個體中，建立新的 C# 主控台應用程式專案 (.NET Core 或 .NET Framework 專案都可以，分析器會在來源層級運作)。將游標置於有波浪底線的權杖上方，即會出現分析器所提供的警告文字。
+在您剛啟動的第二個 Visual Studio 實例中，建立C#新的主控台應用程式專案（.net Core 或 .NET Framework 專案可正常執行--分析器會在來源層級工作）。將滑鼠停留在具有波浪底線的標記上方，分析器所提供的警告文字隨即出現。
 
 範本會建立分析器，以針對每個在類型名稱中包含小寫字母的類型宣告回報警告，如下圖所示：
 
@@ -93,7 +93,7 @@ Console.WriteLine(x);
 - 將 `AnalyzerMessageFormat` 變更為「可設為常數」。
 - 將 `AnalyzerDescription` 變更為「設為常數」。
 
-此外，請將 [存取修飾詞]  下拉式清單變更為 `public`。 這可以讓這些常數在單元測試中更易於使用。 完成作業後，資源編輯器應會如下圖所示：
+此外，請將 [存取修飾詞] 下拉式清單變更為 `public`。 這可以讓這些常數在單元測試中更易於使用。 完成作業後，資源編輯器應會如下圖所示：
 
 ![更新字串資源](media/how-to-write-csharp-analyzer-code-fix/update-string-resources.png)
 
@@ -310,7 +310,7 @@ public void WhenDiagnosticIsRaisedFixUpdatesCode(
 
 [!code-csharp[string constants for fix test](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-執行這兩項測試，並確定可通過測試。 在 Visual Studio 中選取 [測試]   > [視窗]   > [測試總管]  ，以開啟 [測試總管]  。  按 [全部執行]  連結。
+執行這兩項測試，並確定可通過測試。 在 Visual Studio 中選取 [測試] > [視窗] > [測試總管]，以開啟 [測試總管]。  按 [全部執行] 連結。
 
 ## <a name="create-tests-for-valid-declarations"></a>建立有效宣告的測試
 
@@ -427,7 +427,7 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 [!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
-此外，參考類型未正確處理。 參考類型唯一允許的常數值為 `null`；此案例中的例外為 <xref:System.String?displayProperty=nameWIthType>，它可允許字串常值。 換句話說，`const string s = "abc"` 是合法的，`const object s = "abc"` 則否。 下列程式碼片段會驗證該條件：
+此外，參考類型未正確處理。 參考類型唯一允許的常數值為 `null`；此案例中的例外為 <xref:System.String?displayProperty=nameWithType>，它可允許字串常值。 換句話說，`const string s = "abc"` 是合法的，`const object s = "abc"` 則否。 下列程式碼片段會驗證該條件：
 
 [!code-csharp[Reference types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 

@@ -3,15 +3,15 @@ title: 在 Windows、Linux 和 macOS 上安裝 .NET Core SDK-.NET Core
 description: 瞭解如何在 Windows、Linux 和 macOS 上安裝 .NET Core。 探索開發 .NET Core 應用程式所需的相依性。
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
+ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 290bdfb05b328bb311e6ff5ef493048b05985899
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 5ac2d7897ee4c6707669e4f9104317aeb2e1f473
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801945"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74835679"
 ---
 # <a name="install-the-net-core-sdk"></a>安裝 .NET Core SDK
 
@@ -21,10 +21,10 @@ ms.locfileid: "74801945"
 
 ## <a name="install-with-an-installer"></a>使用安裝程式安裝
 
-Windows 有獨立的安裝程式，可用於安裝 .NET Core 3.0 SDK：
+Windows 有獨立的安裝程式，可用於安裝 .NET Core 3.1 SDK：
 
-- [x64 （64位） Cpu](https://dotnet.microsoft.com/download/dotnet-core/3.0) 
-- [x86 （32位） Cpu](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [x64 （64位） Cpu](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [x86 （32位） Cpu](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ::: zone-end
 
@@ -32,9 +32,9 @@ Windows 有獨立的安裝程式，可用於安裝 .NET Core 3.0 SDK：
 
 ## <a name="install-with-an-installer"></a>使用安裝程式安裝
 
-macOS 具有可用於安裝 .NET Core 3.0 SDK 的獨立安裝程式：
+macOS 具有可用於安裝 .NET Core 3.1 SDK 的獨立安裝程式：
 
-- [x64 （64位） Cpu](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [x64 （64位） Cpu](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ::: zone-end
 
@@ -49,7 +49,7 @@ macOS 具有可用於安裝 .NET Core 3.0 SDK 的獨立安裝程式：
 若要解壓縮 SDK，並在終端機上提供命令，請先[下載](#all-net-core-downloads).net Core 二進位版本。 然後，開啟終端機並執行下列命令。
 
 ```bash
-mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.0.101-linux-musl-x64.tar.gz -C $HOME/dotnet
+mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.101-linux-musl-x64.tar.gz -C $HOME/dotnet
 export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
 ```
@@ -77,7 +77,7 @@ export PATH=$PATH:$HOME/dotnet
 
 | .NET Core SDK 版本 | Visual Studio 版本                      |
 | --------------------- | ------------------------------------------ |
-| 3.1 預覽           | Visual Studio 2019 16.4 preview 或更高版本。 |
+| 3.1                   | Visual Studio 2019 16.4 或更高版本。 |
 | 3.0                   | Visual Studio 2019 16.3 或更高版本。 |
 | 2.2                   | Visual Studio 2017 15.9 或更高版本。 |
 | 2.1                   | Visual Studio 2017 15.7 或更高版本。 |
@@ -109,7 +109,7 @@ Visual Studio 可以安裝最新的 .NET Core SDK 和執行時間。
 
 ## <a name="install-with-visual-studio-for-mac"></a>使用 Visual Studio for Mac 安裝
 
-Visual Studio for Mac 在選取 [ **.Net Core** ] 工作負載時安裝 .NET Core SDK。 若要開始在 macOS 上使用 .NET Core 開發，請參閱[安裝適用于 Mac 的 Visual Studio 2019](/visualstudio/mac/installation)。
+Visual Studio for Mac 在選取 [ **.Net Core** ] 工作負載時安裝 .NET Core SDK。 若要開始在 macOS 上使用 .NET Core 開發，請參閱[安裝適用于 Mac 的 Visual Studio 2019](/visualstudio/mac/installation)。 針對最新版本 .NET Core 3.1，您必須使用 Visual Studio for Mac 8.4 Preview。
 
 [使用 .NET Core 工作負載功能 ![macOS Visual Studio 2019 for Mac](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)
 
@@ -178,7 +178,7 @@ Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET 
 
 - [教學課程C# ： Hello World 教學](../tutorials/with-visual-studio.md)課程。
 - [教學課程： Visual Basic Hello World 教學](../tutorials/vb-with-visual-studio.md)課程。
-- [教學課程：使用 Visual Studio Code 建立新的應用程式](https://code.visualstudio.com/docs/languages/dotnet)。
+- [教學課程：使用 Visual Studio Code 建立新的應用程式](../tutorials/with-visual-studio-code.md)。
 - [教學課程：容器化 .Net Core 應用程式](../docker/build-container.md)。
 
 ::: zone-end
@@ -186,7 +186,14 @@ Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET 
 ::: zone pivot="os-macos"
 
 - [教學課程：開始使用 macOS](../tutorials/using-on-mac-vs.md)。
-- [教學課程：使用 Visual Studio Code 建立新的應用程式](https://code.visualstudio.com/docs/languages/dotnet)。
+- [教學課程：使用 Visual Studio Code 建立新的應用程式](../tutorials/with-visual-studio-code.md)。
+- [教學課程：容器化 .Net Core 應用程式](../docker/build-container.md)。
+
+::: zone-end
+
+::: zone pivot="os-linux"
+
+- [教學課程：使用 Visual Studio Code 建立新的應用程式](../tutorials/with-visual-studio-code.md)。
 - [教學課程：容器化 .Net Core 應用程式](../docker/build-container.md)。
 
 ::: zone-end

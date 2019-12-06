@@ -1,20 +1,20 @@
 ---
-title: 作法：以受限的保留項目取代 WCF URL 保留項目
+title: HOW TO：若要以受限的保留項目取代 WCF URL URL 保留項目
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 981c4890b11130b937e176da78f378340c0d3894
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 900b258a1119b069e5ef0a6ff66078281bb06f1b
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991655"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837385"
 ---
-# <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>HOW TO：以受限的保留項目取代 WCF URL 保留項目
+# <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>HOW TO：若要以受限的保留項目取代 WCF URL URL 保留項目
 URL 保留項目可讓您限制誰可以接收來自某個 URL 或一組 URL 的訊息。 保留項目是由一個 URL 範本、一個存取控制清單 (ACL)，以及一組旗標所組成。 URL 範本會定義保留項目所影響的 URL。 如需如何處理 URL 範本的詳細資訊，請參閱[路由傳入要求](https://go.microsoft.com/fwlink/?LinkId=136764)。 ACL 會控制允許從指定之 URL 接收訊息的使用者或使用者群組。 旗標會指出保留項目是要提供使用者或群組直接在 URL 上接聽的權限，還是要委派接聽其他特定處理序的權限。  
   
  作為預設作業系統設定的一部分，Windows Communication Foundation （WCF）會為埠80建立可全域存取的保留專案，讓所有使用者執行使用雙重 HTTP 系結進行雙工通訊的應用程式。 此保留項目的 ACL 是攻所有人使用，因此，系統管理員無法明確地允許或不允許在一個 URL 或一組 URL 上接聽的權限。 本主題說明如何刪除此保留項目，以及如何使用受限的 ACL 重新建立保留項目。  
   
- 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上，您可以從更高權限的命令提示字元輸入 `netsh http show urlacl`，以檢視所有 HTTP URL 保留項目。  下列範例會顯示 WCF URL 保留專案的外觀。  
+ 在 Windows Vista 或 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上，您可以輸入 `netsh http show urlacl`，從提升許可權的命令提示字元中，查看所有的 HTTP URL 保留專案。  下列範例會顯示 WCF URL 保留專案的外觀。  
 
 ```
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  
@@ -30,7 +30,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. 按一下 [**開始**]，指向 [**所有程式**]，按一下 [**附屬**應用程式]，以滑鼠右鍵按一下**命令提示**字元，然後在出現的內容功能表上按一下 [以**系統管理員身分執行**] 在可能會要求許可權繼續的 [使用者帳戶控制（UAC）] 視窗上，按一下 [**繼續**]。  
   
-2. 在 [命令提示字元] 視窗中輸入**netsh HTTP delete urlacl http://+:80/Temporary_Listen_Addresses/ url =** 。  
+2. 在 [命令提示字元] 視窗中輸入**netsh HTTP delete urlacl url =http://+:80/Temporary_Listen_Addresses/** 。  
   
 3. 如果成功刪除保留項目，就會顯示下列訊息。 **已成功刪除 URL 保留專案**  
   
@@ -41,7 +41,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. 按一下 [**開始**]，指向 [**所有程式**]，按一下 [**附屬**應用程式]，以滑鼠右鍵按一下**命令提示**字元，然後在出現的內容功能表上按一下 [以**系統管理員身分執行**] 在可能會要求許可權繼續的 [使用者帳戶控制（UAC）] 視窗上，按一下 [**繼續**]。  
   
-2. 輸入 **net localgroup"\<安全性群組名稱 >"/ 註解:"\<安全性群組描述 >"/add** 在命令提示字元。 以您想要建立的安全性群組名稱取代 **\<安全性群組名稱 >** ，並 **\<** 以安全性群組的適當描述來取代安全性群組描述 >。  
+2. 在命令提示字元中，輸入**net localgroup "\<安全性群組名稱 >"/comment： "\<安全性群組描述 >"/add** 。 以您想要建立的安全性群組名稱取代 **\<安全性群組名稱 >** ，並 **\<安全性群組描述 >** 適當的安全性群組描述。  
   
 3. 如果成功建立安全性群組，就會顯示下列訊息。 **命令已順利完成。**  
   
@@ -55,6 +55,6 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. 按一下 [**開始**]，指向 [**所有程式**]，按一下 [**附屬**應用程式]，以滑鼠右鍵按一下**命令提示**字元，然後在出現的內容功能表上按一下 [以**系統管理員身分執行**] 在可能會要求許可權繼續的 [使用者帳戶控制（UAC）] 視窗上，按一下 [**繼續**]。  
   
-2. 在中輸入 **netsh http add urlacl =http://+:80/Temporary_Listen_Addresses/ 使用者 ="\< 電腦名稱 >\\ < 安全性群組名稱\>** 在命令提示字元。 以您先前建立的安全性群組名稱取代 **\<電腦名稱稱 >** 和群組必須建立的電腦名稱稱，以及 **\<安全性群組名稱 >** 。  
+2. 在命令提示字元中，于**netsh HTTP add urlacl url =http://+:80/Temporary_Listen_Addresses/ user = "\< 電腦名稱稱 >\\ < 安全性群組名稱\>** 中輸入。 以您先前建立之安全性群組的名稱取代 **\<電腦名稱稱 >** ，並將其與群組建立所在的電腦名稱稱，以及 **\<安全性群組名 >** 。  
   
 3. 如果成功建立保留項目，就會顯示下列訊息。 **已成功新增 URL 保留**專案。

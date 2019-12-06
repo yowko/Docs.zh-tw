@@ -2,12 +2,12 @@
 title: 聯合範例
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 271790e08476533fc1d83e22c5a0daf2f1eaa42a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c143ad9315df94a2d836a2c2c742ffa9a7728511
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716931"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837879"
 ---
 # <a name="federation-sample"></a>聯合範例
 這個範例將示範聯合安全性。  
@@ -89,7 +89,7 @@ ms.locfileid: "74716931"
 1. 開啟 SDK 命令視窗。 在範例的路徑中，執行 Setup.bat。 這會建立範例所需的虛擬目錄，並安裝具有適當權限的必要憑證。  
   
     > [!NOTE]
-    > Setup.bat 批次檔是設計用來從 Windows SDK 命令提示字元執行。 它要求 MSSDK 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Windows SDK 命令提示字元中設定。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，您必須確定已安裝 IIS 6.0 管理相容性，因為安裝會使用 IIS 系統管理員指令碼。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上執行安裝指令碼時，需要系統管理員權限。  
+    > Setup.bat 批次檔是設計用來從 Windows SDK 命令提示字元執行。 它要求 MSSDK 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Windows SDK 命令提示字元中設定。 在 Windows Vista 上，您必須確定已安裝 IIS 6.0 管理相容性，因為設定會使用 IIS 系統管理員腳本。 在 Windows Vista 上執行安裝腳本需要系統管理員許可權。  
   
 2. 在 Visual Studio 中開啟 FederationSample，然後從 [**建立**] 功能表中選取 [**建立方案**]。 這會建置通用專案檔、Bookstore 服務、Bookstore STS、HomeRealm STS，然後將它們部署在 IIS 中。 還會建置 Bookstore 用戶端應用程式，並將可執行檔 BookStoreClient.exe 放置在 FederationSample\BookStoreClient\bin\Debug 資料夾中。  
   

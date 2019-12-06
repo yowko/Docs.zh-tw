@@ -2,16 +2,16 @@
 title: NamedPipe 啟用
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 78073ca222cab07bbc9cee5c1976cf7a6ee46295
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: a562ec51d35af08f49e89b652670e9a57b0f00c2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714699"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837853"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 啟用
 
-此範例示範裝載服務，該服務使用 Windows Process Activation Service (WAS) 啟用透過名稱管道通訊的服務。 這個範例是以[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎，而且需要 [!INCLUDE[wv](../../../../includes/wv-md.md)] 才能執行。
+此範例示範裝載服務，該服務使用 Windows Process Activation Service (WAS) 啟用透過名稱管道通訊的服務。 這個範例是以[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎，而且需要 Windows Vista 才能執行。
 
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。

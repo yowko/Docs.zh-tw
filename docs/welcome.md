@@ -3,14 +3,14 @@ title: 歡迎使用 .NET
 description: 開始使用 .NET 系列的技術。
 author: mairaw
 ms.author: mairaw
-ms.date: 09/23/2019
+ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: ccff6256b56daccdf8105fd5ad31e81bb892c2a8
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 15daaafed02ab1132a3c82c12efa6fad0e0a6db2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552955"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838126"
 ---
 # <a name="welcome-to-net"></a>歡迎使用 .NET
 
@@ -29,9 +29,9 @@ ms.locfileid: "74552955"
 
 此外，也請追蹤最新的 .NET 活動：
 
+- [Microsoft Ignite](https://www.microsoft.com/ignite)
 - [Microsoft Build](https://www.microsoft.com/build)
 - [.NET Conf](https://www.dotnetconf.net/)
-- [Microsoft Connect()](https://www.microsoft.com/connectevent)
 
 如需新增至 .NET 實作的最新功能與支援語言的相關資訊，請參閱以下文章：
 
@@ -49,7 +49,7 @@ ms.locfileid: "74552955"
 - [.NET Framework 指南](framework/index.md)
 - [C# 指南](csharp/index.yml)
 - [F# 指南](fsharp/index.yml)
-- [Visual Basic 指南](visual-basic/index.md)
+- [Visual Basic 指南](visual-basic/index.yml)
 - [ML.NET 指南](machine-learning/index.yml)
 - [.NET for Apache Spark](spark/index.yml)
 - [.NET 應用程式架構](architecture/index.yml)
@@ -67,11 +67,10 @@ ms.locfileid: "74552955"
 這份文件是完全[開放原始檔](https://github.com/dotnet/docs)。 您可以透過任何想要的方式參與，包括建立文件撰寫問題。 此外，.NET 的大多部分本身也是開放原始碼。 下列清單顯示主要的 .NET GitHub 存放庫：
 
 - [.NET Core Home](https://github.com/dotnet/core) (.NET Core 首頁)
-- [.NET Libraries](https://github.com/dotnet/corefx) (.NET 程式庫)
-- [.NET Core Runtime](https://github.com/dotnet/coreclr) (.NET Core 執行階段)
-- [.NET Core CLI](https://github.com/dotnet/cli)
+- [.NET Core 執行時間](https://github.com/dotnet/runtime)
+- [.NET Core SDK](https://github.com/dotnet/sdk)
 - [Roslyn (C# and Visual Basic) Compiler Platform and IDE Tools](https://github.com/dotnet/roslyn) (Roslyn (C# 和 Visual Basic) 編譯器平台和 IDE 工具)
-- [F# Compiler and IDE Tools](https://github.com/microsoft/visualfsharp) (F# 編譯器和 IDE 工具)
+- [F# Compiler and IDE Tools](https://github.com/dotnet/fsharp) (F# 編譯器和 IDE 工具)
 - [Windows Forms](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 

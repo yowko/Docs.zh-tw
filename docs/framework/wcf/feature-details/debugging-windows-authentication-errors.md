@@ -8,26 +8,26 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 20ca8f049298f75412da4c8a7e58975954f67741
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 52e968706ef4ca703a26e613e681cff3c30ba181
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968864"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838022"
 ---
 # <a name="debugging-windows-authentication-errors"></a>偵錯 Windows 驗證錯誤
-當使用 Windows 驗證做為安全性機制時，安全性支援提供者介面 (SSPI) 便會處理安全性程序。 當 SSPI 層發生安全性錯誤時, 它們會由 Windows Communication Foundation (WCF) 來呈現。 本主題會提供可協助診斷這些錯誤的架構與問題集。  
+當使用 Windows 驗證做為安全性機制時，安全性支援提供者介面 (SSPI) 便會處理安全性程序。 當 SSPI 層發生安全性錯誤時，它們會由 Windows Communication Foundation （WCF）來呈現。 本主題會提供可協助診斷這些錯誤的架構與問題集。  
   
- 如需 Kerberos 通訊協定的總覽, 請參閱[Kerberos 說明](https://go.microsoft.com/fwlink/?LinkID=86946);如需 SSPI 的總覽, 請參閱[sspi](https://go.microsoft.com/fwlink/?LinkId=88941)。  
+ 如需 Kerberos 通訊協定的總覽，請參閱[Kerberos 說明](https://go.microsoft.com/fwlink/?LinkID=86946);如需 SSPI 的總覽，請參閱[sspi](https://go.microsoft.com/fwlink/?LinkId=88941)。  
   
- 對於 Windows 驗證, WCF 通常會使用*Negotiate*安全性支援提供者 (SSP), 這會在用戶端和服務之間執行 Kerberos 相互驗證。 如果 Kerberos 通訊協定無法使用, 依預設, WCF 會回到 NT LAN Manager (NTLM)。 不過, 您可以將 WCF 設定為僅使用 Kerberos 通訊協定 (並在無法使用 Kerberos 的情況下擲回例外狀況)。 您也可以設定 WCF 使用 Kerberos 通訊協定的受限形式。  
+ 對於 Windows 驗證，WCF 通常會使用*Negotiate*安全性支援提供者（SSP），這會在用戶端和服務之間執行 Kerberos 相互驗證。 如果 Kerberos 通訊協定無法使用，依預設，WCF 會回到 NT LAN Manager （NTLM）。 不過，您可以將 WCF 設定為僅使用 Kerberos 通訊協定（並在無法使用 Kerberos 的情況下擲回例外狀況）。 您也可以設定 WCF 使用 Kerberos 通訊協定的受限形式。  
   
 ## <a name="debugging-methodology"></a>偵錯方法  
  下面列出基本的方法：  
   
 1. 判斷您是否在使用 Windows 驗證。 如果您是使用其他任何配置，這個主題就不適用。  
   
-2. 如果您確定使用的是 Windows 驗證, 請判斷您的 WCF 設定是否使用 Kerberos direct 或 Negotiate。  
+2. 如果您確定使用的是 Windows 驗證，請判斷您的 WCF 設定是否使用 Kerberos direct 或 Negotiate。  
   
 3. 判斷出您的組態是使用 Kerberos 通訊協定或 NTLM 之後，您就能夠了解在正確環境中的錯誤訊息。  
   
@@ -36,22 +36,22 @@ ms.locfileid: "69968864"
   
  表格標頭會顯示伺服器可能使用的帳戶類型。 左欄則顯示用戶端可能使用的帳戶類型。  
   
-||本機使用者|本機系統|網域使用者|網域電腦|  
+||本機使用者|Local System (本機系統)|網域使用者|網域電腦|  
 |-|----------------|------------------|-----------------|--------------------|  
 |本機使用者|NTLM|NTLM|NTLM|NTLM|  
-|本機系統|匿名 NTLM|匿名 NTLM|匿名 NTLM|匿名 NTLM|  
+|Local System (本機系統)|匿名 NTLM|匿名 NTLM|匿名 NTLM|匿名 NTLM|  
 |網域使用者|NTLM|NTLM|Kerberos|Kerberos|  
 |網域電腦|NTLM|NTLM|Kerberos|Kerberos|  
   
  具體而言，這四種帳戶類型包括：  
   
-- 本機使用者:僅限電腦的使用者設定檔。 例如：`MachineName\Administrator` 或 `MachineName\ProfileName`。  
+- 本機使用者：僅限電腦的使用者設定檔。 例如：`MachineName\Administrator` 或 `MachineName\ProfileName`。  
   
-- 本機系統:未加入網域之電腦上的內建帳戶系統。  
+- 本機系統：未加入網域之電腦上的內建帳戶 SYSTEM。  
   
-- 網域使用者:Windows 網域上的使用者帳戶。 例如：`DomainName\ProfileName`。  
+- 網域使用者：Windows 網域上的使用者帳戶。 例如：`DomainName\ProfileName`。  
   
-- 網域電腦:在加入 Windows 網域的電腦上執行電腦身分識別的進程。 例如：`MachineName\Network Service`。  
+- 網域電腦：處理序，其具有執行於已加入 Windows 網域之電腦的電腦身分識別。 例如：`MachineName\Network Service`。  
   
 > [!NOTE]
 > 當呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 類別的 <xref:System.ServiceModel.ServiceHost> 方法時，便會擷取服務認證。 每當用戶端傳送訊息時就會讀取此用戶端認證。  
@@ -62,11 +62,11 @@ ms.locfileid: "69968864"
 ### <a name="kerberos-protocol"></a>Kerberos 通訊協定  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Kerberos 通訊協定的 SPN/UPN 問題  
- 當使用 Windows 驗證，而且 SSPI 有使用或交涉 Kerberos 通訊協定時，用戶端端點所使用的 URL 就必須包含在服務 URL 內之服務主機的完整網域名稱。 這假設用來執行服務的帳戶具有電腦 (預設) 服務主體名稱 (SPN) 金鑰的存取權, 這是在電腦新增至 Active Directory 網域時所建立的, 最常見的作法是在Network Service 帳戶。 如果服務無法存取電腦 SPN 金鑰，您就必須在用戶端端點身分識別中，提供用來執行服務之帳戶的正確 SPN 或使用者主要名稱 (UPN)。 如需 WCF 如何與 SPN 和 UPN 搭配運作的詳細資訊, 請參閱[服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 當使用 Windows 驗證，而且 SSPI 有使用或交涉 Kerberos 通訊協定時，用戶端端點所使用的 URL 就必須包含在服務 URL 內之服務主機的完整網域名稱。 這假設用來執行服務的帳戶具有電腦（預設）服務主體名稱（SPN）金鑰的存取權，這是在電腦新增至 Active Directory 網域時所建立的，最常見的作法是在Network Service 帳戶。 如果服務無法存取電腦 SPN 金鑰，您就必須在用戶端端點身分識別中，提供用來執行服務之帳戶的正確 SPN 或使用者主要名稱 (UPN)。 如需 WCF 如何與 SPN 和 UPN 搭配運作的詳細資訊，請參閱[服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
  在負載平衡的使用案例 (例如 Web 伺服陣列與 Web 處理序區) 中，常見的作法是為每一個應用程式定義一個唯一的帳戶、指派一個 SPN 給該帳戶，並且確保應用程式的所有服務都以該帳戶執行。  
   
- 如果您要取得服務帳戶的 SPN，您必須是 Active Directory 網域的管理員。 如需詳細資訊, 請參閱[Windows 的 Kerberos 技術補充](https://go.microsoft.com/fwlink/?LinkID=88330)。  
+ 如果您要取得服務帳戶的 SPN，您必須是 Active Directory 網域的管理員。 如需詳細資訊，請參閱[Windows 的 Kerberos 技術補充](https://go.microsoft.com/fwlink/?LinkID=88330)。  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Kerberos 通訊協定 Direct 要求使用網域電腦帳戶來執行服務。  
  當 `ClientCredentialType` 屬性設定為 `Windows`，而且 <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 屬性設定為 `false` 時，便會發生這種情況，如下列程式碼所示。  
@@ -93,12 +93,12 @@ ms.locfileid: "69968864"
   
     1. 在程式碼中使用下列陳述式來做到這點：`ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
-    2. 或者，您可以將組態檔中的 `allowNtlm` 屬性設定為 `false` 來做到這點。 這個屬性包含在[ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)中。  
+    2. 或者，您可以將組態檔中的 `allowNtlm` 屬性設定為 `false` 來做到這點。 這個屬性包含在\<的[windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)中。  
   
 ### <a name="ntlm-protocol"></a>NTLM 通訊協定  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>交涉 SSP 退而使用 NTLM，但是 NTLM 已停用  
- 屬性會設定為`false`, 讓 Windows Communication Foundation (WCF) 在使用 NTLM 時, 盡力擲回例外狀況。 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 請注意，將此屬性設為 `false`，不一定能夠禁止 NTLM 認證透過網路傳送。  
+ [<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>] 屬性會設定為 [`false`]，這會導致 Windows Communication Foundation （WCF）在使用 NTLM 時，盡力擲回例外狀況。 請注意，將此屬性設為 `false`，不一定能夠禁止 NTLM 認證透過網路傳送。  
   
  下列程式碼示範如何停用退回使用 NTLM。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "69968864"
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- 如需模擬的詳細資訊, 請參閱[委派和](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)模擬。  
+ 如需模擬的詳細資訊，請參閱[委派和](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)模擬。  
   
  或者，用戶端會使用內建帳戶 SYSTEM 來執行為 Windows 服務。  
   
@@ -139,12 +139,12 @@ ms.locfileid: "69968864"
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>無法使用 SSPI  
- 下列作業系統不支援做為伺服器使用的 Windows 驗證:[!INCLUDE[wxp](../../../../includes/wxp-md.md)]家用版、 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center edition 和[!INCLUDE[wv](../../../../includes/wv-md.md)]home edition。  
+ 下列作業系統不支援做為伺服器使用的 Windows 驗證： [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition、[!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition 和 Windows Vista Home edition。  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>以不同的身分進行開發及部署  
  如果您在某一台電腦上開發應用程式，然後又在另一台電腦上進行部署，而且在每一台電腦上都使用不同的帳戶類型進行驗證，您可能會產生不同的行為。 例如，假設您是使用 `SSPI Negotiated`驗證模式，在 Windows XP Pro 機器上開發應用程式。 您又使用本機使用者帳戶進行身分驗證，然後又使用了 NTLM 通訊協定。 應用程式開發完成後，您以網域帳戶先在 Windows Server 2003 機器上部署服務而後執行。 此時，用戶端將無法驗證該服務，因為用戶端使用的是 Kerberos 及網域控制站。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>

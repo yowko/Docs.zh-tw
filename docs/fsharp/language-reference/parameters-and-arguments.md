@@ -1,13 +1,13 @@
 ---
 title: 參數和引數
 description: 瞭解定義F#參數的語言支援，以及將引數傳遞至函式、方法和屬性的功能。
-ms.date: 05/16/2016
-ms.openlocfilehash: e8094ffbc55870b5de75acb740aa2736ec6590a5
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.date: 12/04/2019
+ms.openlocfilehash: b234ef939128e7cf09d35f9580d4d5010d7dc639
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216833"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837125"
 ---
 # <a name="parameters-and-arguments"></a>參數和引數
 
@@ -25,7 +25,7 @@ ms.locfileid: "71216833"
 
 方法通常會使用傳遞引數的元組形式。 這可從其他 .NET 語言的觀點來得到更清楚的結果，因為元組表單符合在 .NET 方法中傳遞引數的方式。
 
-使用系結所建立`let`的函式最常使用「擴充表單」。
+「擴充」表單最常用於使用 `let` 系結所建立的函式。
 
 下列虛擬代碼顯示元組和擴充引數的範例。
 
@@ -42,7 +42,7 @@ let function1 param1 param2 = ...
 let function2 param1 (param2a, param2b) param3 = ...
 ```
 
-其他模式也可以在參數清單中使用，但如果參數模式不符合所有可能的輸入，則在執行時間可能會有不完整的相符項。 當自`MatchFailureException`變數的值不符合參數清單中指定的模式時，就會產生例外狀況。 當參數模式允許不完整的相符專案時，編譯器會發出警告。 至少另一個模式通常適用于參數清單，而這是萬用字元模式。 當您只想要忽略所提供的任何引數時，您可以在參數清單中使用萬用字元模式。 下列程式碼說明如何在引數清單中使用萬用字元模式。
+其他模式也可以在參數清單中使用，但如果參數模式不符合所有可能的輸入，則在執行時間可能會有不完整的相符項。 當引數的值不符合參數清單中指定的模式時，就會產生例外狀況 `MatchFailureException`。 當參數模式允許不完整的相符專案時，編譯器會發出警告。 至少另一個模式通常適用于參數清單，而這是萬用字元模式。 當您只想要忽略所提供的任何引數時，您可以在參數清單中使用萬用字元模式。 下列程式碼說明如何在引數清單中使用萬用字元模式。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3801.fs)]
 
@@ -50,7 +50,7 @@ let function2 param1 (param2a, param2b) param3 = ...
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3802.fs)]
 
-有時在引數中使用的`as`其他模式是模式，以及與不同等位和作用中模式相關聯的識別碼模式。 您可以使用單一案例的區分聯集模式，如下所示。
+有時在引數中使用的其他模式是 `as` 模式，以及與不同等位和作用中模式相關聯的識別碼模式。 您可以使用單一案例的區分聯集模式，如下所示。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3803.fs)]
 
@@ -73,7 +73,7 @@ let radius (Polar(r, _)) = r
 let angle (Polar(_, theta)) = theta
 ```
 
-您可以使用`as`模式來儲存符合的值做為區域值，如下列程式程式碼所示。
+您可以使用 `as` 模式來儲存符合的值做為區域值，如下列程式程式碼所示。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3805.fs)]
 
@@ -81,7 +81,7 @@ let angle (Polar(_, theta)) = theta
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3804.fs)]
 
-這段程式碼會定義一個採用泛型清單的函`true`式，並在清單是空`false`的時傳回，否則會傳回。 使用這類技術可能會使程式碼更容易閱讀。
+此程式碼會定義採用泛型清單的函式，如果清單是空的，則會傳回 `true`，否則 `false`。 使用這類技術可能會使程式碼更容易閱讀。
 
 有時候，包含不完整相符專案的模式很有用，例如，如果您知道程式中的清單只有三個元素，您可以在參數清單中使用類似下列的模式。
 
@@ -95,7 +95,7 @@ let angle (Polar(_, theta)) = theta
 
 具名引數可讓程式碼更容易閱讀，並更適應 API 中特定類型的變更，例如方法參數的重新排列。
 
-具名引數僅適用于方法，不允許用於`let`系結函式、函數值或 lambda 運算式。
+具名引數只允許用於方法，不能用於 `let`系結函式、函數值或 lambda 運算式。
 
 下列程式碼範例示範如何使用具名引數。
 
@@ -109,11 +109,11 @@ let angle (Polar(_, theta)) = theta
 
 ## <a name="optional-parameters"></a>選擇性參數
 
-您可以使用參數名稱前面的問號來指定方法的選擇性參數。 選擇性參數會被F#視為選項類型，因此您可以使用`match`運算式`Some`搭配和`None`，以一般方式查詢選項類型。 選擇性參數只能用於成員，而不允許使用`let`系結所建立的函式。
+您可以使用參數名稱前面的問號來指定方法的選擇性參數。 選擇性參數會被視為F#選項類型，因此，您可以使用具有 `Some` 和 `None`的 `match` 運算式，依照查詢選項類型的一般方式來查詢它們。 選擇性參數只能用於成員，而不允許使用 `let` 系結所建立的函式。
 
-您可以使用參數名稱（例如`?arg=None`或`?arg=Some(3)`或`?arg=arg`），將現有的選擇性值傳遞給方法。 建立將選擇性引數傳遞至另一個方法的方法時，這會很有用。
+您可以使用參數名稱（例如 `?arg=None` 或 `?arg=Some(3)` 或 `?arg=arg`，將現有的選擇性值傳遞給方法。 建立將選擇性引數傳遞至另一個方法的方法時，這會很有用。
 
-您也可以使用函數`defaultArg`來設定選擇性引數的預設值。 `defaultArg`函式會接受選擇性參數作為第一個引數，並使用預設值做為第二個。
+您也可以使用函數 `defaultArg`，這會設定選擇性引數的預設值。 `defaultArg` 函式會接受選擇性參數作為第一個引數，並將預設值當做第二個。
 
 下列範例說明選擇性參數的用法。
 
@@ -130,7 +130,7 @@ Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 ```
 
-為了讓C#和 Visual Basic interop，您可以使用中`[<Optional; DefaultParameterValue<(...)>]` F#的屬性，讓呼叫端將引數視為選擇性。 這相當於在中將引數定義為C#選擇性`MyMethod(int i = 3)`的。
+為了讓C#和 Visual Basic interop，您可以使用中F#`[<Optional; DefaultParameterValue<(...)>]` 的屬性，讓呼叫端將引數視為選擇性。 這相當於在 `MyMethod(int i = 3)`中，將引數C#定義為選擇性。
 
 ```fsharp
 open System
@@ -140,7 +140,7 @@ type C =
         printfn "%s" message
 ```
 
-您也可以指定新的物件做為預設參數值。 例如， `Foo`成員可能會有選擇性`CancellationToken`的作為輸入，而不是：
+您也可以指定新的物件做為預設參數值。 例如，`Foo` 成員可能會有選擇性的 `CancellationToken` 做為輸入，而不是：
 
 ```fsharp
 open System.Threading
@@ -150,22 +150,22 @@ type C =
         printfn "%A" ct
 ```
 
-指定為引數`DefaultParameterValue`的值必須符合參數的類型。 例如，不允許下列情況：
+提供給 `DefaultParameterValue` 之引數的值必須符合參數的類型。 例如，不允許下列情況：
 
 ```fsharp
 type C =
     static member Wrong([<Optional; DefaultParameterValue("string")>] i:int) = ()
 ```
 
-在此情況下，編譯器會產生警告，並同時忽略這兩個屬性。 請注意，預設值`null`必須以類型標注，否則編譯器會推斷錯誤的類型， `[<Optional; DefaultParameterValue(null:obj)>] o:obj`亦即。
+在此情況下，編譯器會產生警告，並同時忽略這兩個屬性。 請注意，`null` 的預設值必須是以類型標注，否則編譯器會推斷錯誤的類型，亦即 `[<Optional; DefaultParameterValue(null:obj)>] o:obj`。
 
 ## <a name="passing-by-reference"></a>以傳址方式傳遞
 
 以傳F#址方式傳遞值牽涉到[byref](byrefs.md)，也就是 managed 指標類型。 要使用何種類型的指導方針如下：
 
-- 如果`inref<'T>`您只需要讀取指標，請使用。
-- 如果`outref<'T>`您只需要寫入指標，請使用。
-- 如果`byref<'T>`您需要讀取和寫入指標，請使用。
+- 如果您只需要讀取指標，請使用 `inref<'T>`。
+- 如果您只需要寫入指標，請使用 `outref<'T>`。
+- 如果您需要讀取和寫入指標，請使用 `byref<'T>`。
 
 ```fsharp
 let example1 (x: inref<int>) = printfn "It's %d" x
@@ -176,29 +176,30 @@ let example3 (x: byref<int>) =
     printfn "It'd %d" x
     x <- x + 1
 
-// No need to make it mutable, since it's read-only
-let x = 1
-example1 &x
+let test () =
+    // No need to make it mutable, since it's read-only
+    let x = 1
+    example1 &x
 
-// Needs to be mutable, since we write to it
-let mutable y = 2
-example2 &y
-example3 &y // Now 'y' is 3
+    // Needs to be mutable, since we write to it
+    let mutable y = 2
+    example2 &y
+    example3 &y // Now 'y' is 3
 ```
 
 由於參數是指標，而值是可變動的，因此在函式執行之後，對值所做的任何變更都會保留。
 
-您可以使用元組做為傳回值，以將`out`任何參數儲存在 .net 程式庫方法中。 或者，您可以將`out`參數`byref`視為參數。 下列程式碼範例說明這兩種方式。
+您可以使用元組做為傳回值，以將任何 `out` 參數儲存在 .NET 程式庫方法中。 或者，您可以將 `out` 參數視為 `byref` 參數。 下列程式碼範例說明這兩種方式。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
 
 ## <a name="parameter-arrays"></a>參數陣列
 
-有時候，您必須定義一個函式，以接受異類類型的任意數目參數。 建立所有可能的多載方法，以考慮所有可使用的類型，並不可行。 .NET 部署透過參數陣列功能提供這類方法的支援。 在其簽章中採用參數陣列的方法，可以使用任意數目的參數來提供。 參數會放入陣列中。 陣列元素的類型會決定可以傳遞至函數的參數類型。 如果您將參數陣列`System.Object`定義為做為元素類型，則用戶端程式代碼可以傳遞任何類型的值。
+有時候，您必須定義一個函式，以接受異類類型的任意數目參數。 建立所有可能的多載方法，以考慮所有可使用的類型，並不可行。 .NET 部署透過參數陣列功能提供這類方法的支援。 在其簽章中採用參數陣列的方法，可以使用任意數目的參數來提供。 參數會放入陣列中。 陣列元素的類型會決定可以傳遞至函數的參數類型。 如果您使用 `System.Object` 做為元素類型來定義參數陣列，則用戶端程式代碼可以傳遞任何類型的值。
 
 在F#中，只能在方法中定義參數陣列。 它們不能用於獨立函數或模組中定義的函式。
 
-您可以使用`ParamArray`屬性來定義參數陣列。 `ParamArray`屬性只能套用至最後一個參數。
+您可以使用 `ParamArray` 屬性來定義參數陣列。 `ParamArray` 屬性只能套用至最後一個參數。
 
 下列程式碼說明如何呼叫採用參數陣列的 .NET 方法，以及中F#具有接受參數陣列之方法的類型定義。
 
@@ -216,6 +217,6 @@ a 1 10 Hello world 1 True
 true
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [成員](./members/index.md)

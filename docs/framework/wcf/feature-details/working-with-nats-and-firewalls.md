@@ -5,17 +5,17 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: 5415fc173be10834f73b5959481951407bcee0b1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7e907f234afd0fc5e81d586ed456279f684c29de
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637332"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837944"
 ---
 # <a name="working-with-nats-and-firewalls"></a>使用 NAT 與防火牆
 網路連線的用戶端與伺服器經常無法擁有直接且開放的通訊路徑。 網路上的端點電腦與中繼電腦都會針對封包進行篩選、路由、分析與轉換。 網路位址轉譯 (NAT) 與防火牆都是能夠參與網路通訊的常見中繼應用程式範例。  
   
- Windows Communication Foundation (WCF) 傳輸和訊息交換模式 (Mep) 有不同的反應 Nat 與防火牆存在。 本主題將描述 NAT 與防火牆在常見網路拓撲中的運作方式。 WCF 傳輸與 Mep 的特定組合的建議會提供可協助讓您的應用程式更穩固 Nat 與防火牆在網路上的。  
+ Windows Communication Foundation （WCF）傳輸和訊息交換模式（Mep）會因 Nat 和防火牆的存在而有不同的回應。 本主題將描述 NAT 與防火牆在常見網路拓撲中的運作方式。 針對特定的 WCF 傳輸和 Mep 組合提供建議，有助於讓您的應用程式在網路上的 Nat 和防火牆更健全。  
   
 ## <a name="how-nats-affect-communication"></a>NAT 如何影響通訊  
  NAT 的建立目的，就是讓好幾部電腦共用一個外部 IP 位址。 負責連接埠重新對應的 NAT 會將某個連線的內部 IP 位址與連接埠對應至包含新連接埠號碼的外部 IP 位址。 新的連接埠號碼可讓 NAT 將返回流量與原始通訊進行關聯。 許多家庭使用者現在都有一個 IP 位址，但它只能進行內部路由，而且需倚賴 NAT 來提供全域封包路由功能。  
@@ -25,14 +25,14 @@ ms.locfileid: "64637332"
  某些 NAT 支援轉送規則的組態，讓外部電腦得以連接至特定的內部電腦。 不同的 NAT 在設定轉送規則上有不同的指示，我們不建議要求一般使用者對大部分的應用程式更改自己的 NAT 組態。 許多終端使用者無法或不想更改特定應用程式的 NAT 組態。  
   
 ## <a name="how-firewalls-affect-communication"></a>防火牆如何影響通訊  
- A*防火牆*是軟體或硬體裝置，會套用至通過決定是否要允許或拒絕流量的規則。 您可以設定防火牆來檢查傳入與/或傳出的流量資料流。 防火牆會在網路邊緣或端點主機上為網路提供安全性界限。 商務使用者通常會將伺服器放在防火牆後面來預防惡意的攻擊行為。 自從 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 引進了個人防火牆之後，將電腦置於防火牆後面的家庭使用者數量便開始大幅增加。 這樣一來，連線的任一端或兩端都可能具備檢查封包的防火牆功能。  
+ *防火牆*是一種軟體或硬體裝置，可將規則套用到通過的流量，以決定是要允許或拒絕傳送。 您可以設定防火牆來檢查傳入與/或傳出的流量資料流。 防火牆會在網路邊緣或端點主機上為網路提供安全性界限。 商務使用者通常會將伺服器放在防火牆後面來預防惡意的攻擊行為。 自從 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 引進了個人防火牆之後，將電腦置於防火牆後面的家庭使用者數量便開始大幅增加。 這樣一來，連線的任一端或兩端都可能具備檢查封包的防火牆功能。  
   
  不同的防火牆在複雜性與檢查封包的功能等方面的差異很大。 簡易的防火牆會依據封包中的來源與目的地位址與連接埠來套用規則。 智慧型防火牆則可以同時檢查封包內容來做出決定。 這些防火牆在組態上大不相同，而且通常適用特定的應用程式。  
   
  家庭使用者防火牆的常見組態是禁止傳入的連線 (除非先前已對該電腦進行傳出的連線)。 商務使用者防火牆的常見組態是禁止所有連接埠上的傳入連線 (除了特別指定的群組之外)。 範例：會禁止所有連接埠 (連接埠 80 與 443 除外) 上的連線以提供 HTTP 和 HTTPS 服務的防火牆。 家庭與商務使用者同時透過管理防火牆，允許電腦上受信任的使用者或處理序變更防火牆組態。 對於不具備企業原則來控管網路使用的家庭使用者而言，管理防火牆是常見的選擇。  
   
 ## <a name="using-teredo"></a>使用 Teredo  
- Teredo 是一種 IPv6 轉換技術，可讓 NAT 後面的電腦具備直接可定址性。 Teredo 仰賴可公開且全域路由的伺服器，通告潛在的連線。 Teredo 伺服器會提供應用程式用戶端與伺服器一個共同的會議點，讓彼此交換連線資訊。 接著這些機器會要求暫時的 Teredo 位址，並透過現有的網路通道來傳送封包。 在 WCF 中的 teredo 支援需要啟用 IPv6 和 Teredo 的支援作業系統中。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] (含) 以後版本的作業系統都支援 Teredo。 [!INCLUDE[wv](../../../../includes/wv-md.md)] (含) 以後版本的作業系統預設支援 IPv6，而且使用者只需要啟用 Teredo 即可。 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 都需要使用者同時啟用 IPv6 與 Teredo。 如需詳細資訊，請參閱 < [Teredo 概觀](https://go.microsoft.com/fwlink/?LinkId=87571)。  
+ Teredo 是一種 IPv6 轉換技術，可讓 NAT 後面的電腦具備直接可定址性。 Teredo 仰賴可公開且全域路由的伺服器，通告潛在的連線。 Teredo 伺服器會提供應用程式用戶端與伺服器一個共同的會議點，讓彼此交換連線資訊。 接著這些機器會要求暫時的 Teredo 位址，並透過現有的網路通道來傳送封包。 WCF 中的 teredo 支援需要在作業系統中啟用 IPv6 和 Teredo 支援。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] (含) 以後版本的作業系統都支援 Teredo。 根據預設，Windows Vista 和更新版本的作業系統支援 IPv6，而且只需要使用者啟用 Teredo。 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 都需要使用者同時啟用 IPv6 與 Teredo。 如需詳細資訊，請參閱[Teredo 總覽](https://go.microsoft.com/fwlink/?LinkId=87571)。  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>選擇傳輸與訊息交換模式  
  選取傳輸與 MEP 需經過三個步驟的處理序：  
@@ -51,14 +51,14 @@ ms.locfileid: "64637332"
   
 - 針對註冊端點或轉送流量使用可連接的服務。 使用全域可連接的連線服務，例如 Teredo 伺服器，會在網路拓撲有所限制或不明的情況下，大幅增加成功連線的機會。  
   
- 下表將檢查單向、 要求-回覆和雙工 Mep 和標準 TCP，也就是使用 Teredo 的 TCP 和標準和雙重 HTTP 傳輸 WCF 中。  
+ 下表會檢查單向、要求-回復和雙工 Mep，以及標準 TCP、具有 Teredo 的 TCP，以及 WCF 中的標準和雙重 HTTP 傳輸。  
   
 |可定址性|直接伺服器|使用 NAT 周遊功能的直接伺服器|伺服器 NAT|使用 NAT 周遊功能的伺服器 NAT|  
 |--------------------|-------------------|--------------------------------------|----------------|-----------------------------------|  
 |直接用戶端|任何傳輸和 MEP|任何傳輸和 MEP|不支援。|不支援。|  
-|使用 NAT 周遊功能的直接用戶端|任何傳輸和 MEP。|任何傳輸和 MEP。|不支援。|包含 Teredo 的 TCP 與任何 MEP。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 具有整部機器的組態選項以支援包含 Teredo 的 HTTP。|  
+|使用 NAT 周遊功能的直接用戶端|任何傳輸和 MEP。|任何傳輸和 MEP。|不支援。|包含 Teredo 的 TCP 與任何 MEP。 Windows Vista 具有全電腦的設定選項，可支援使用 Teredo 的 HTTP。|  
 |用戶端 NAT|任何非雙重傳輸和 MEP。 雙工 MEP 需要 TCP 傳輸。|任何非雙重傳輸和 MEP。 雙工 MEP 需要 TCP 傳輸。|不支援。|不支援。|  
-|使用 NAT 周遊功能的用戶端 NAT|任何非雙重傳輸和 MEP。 雙工 MEP 需要 TCP 傳輸。|除了雙重 HTTP 與任何 MEP 以外。 雙工 MEP 需要 TCP 傳輸。 雙重 TCP 傳輸需要 Teredo。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 具有整部機器的組態選項以支援包含 Teredo 的 HTTP。|不支援。|包含 Teredo 的 TCP 與任何 MEP。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 具有整部機器的組態選項以支援包含 Teredo 的 HTTP。|  
+|使用 NAT 周遊功能的用戶端 NAT|任何非雙重傳輸和 MEP。 雙工 MEP 需要 TCP 傳輸。|除了雙重 HTTP 與任何 MEP 以外。 雙工 MEP 需要 TCP 傳輸。 雙重 TCP 傳輸需要 Teredo。 Windows Vista 具有全電腦的設定選項，可支援使用 Teredo 的 HTTP。|不支援。|包含 Teredo 的 TCP 與任何 MEP。 Windows Vista 具有全電腦的設定選項，可支援使用 Teredo 的 HTTP。|  
   
 |防火牆限制|開放性伺服器|使用管理防火牆的伺服器|使用僅限 HTTP 防火牆的伺服器|使用僅限傳出流量防火牆的伺服器|  
 |---------------------------|-----------------|----------------------------------|-------------------------------------|-----------------------------------------|  

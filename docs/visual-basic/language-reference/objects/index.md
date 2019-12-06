@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: 8956d8dd8f46b4235d71802ccc743dfebcb051be
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2108e36956ada98e48e6ab05cec56dbf2a12b3dd
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344160"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838256"
 ---
 # <a name="objects-visual-basic"></a>物件 (Visual Basic)
 本主題提供其他主題的連結，而這些主題記錄 Visual Basic 執行階段物件，並包含其成員程序、屬性和事件的表格。  
@@ -45,7 +45,6 @@ ms.locfileid: "74344160"
 |[My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)|提供屬性，以建立和存取目前專案所參考之每個 Web 服務的單一執行個體。|  
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|提供用於剖析結構化文字檔的方法和屬性。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)
-- [Visual Basic](../../../visual-basic/index.md)

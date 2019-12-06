@@ -5,15 +5,13 @@ metadata:
   title: C#檔-開始使用、教學課程、參考。
   description: 學習C#程式設計-適用于初學者開發人員、 C#熟悉的開發C#人員，以及經驗豐富的 .net 開發人員
   ms.topic: landing-page
-  author: billwagner
-  ms.author: wiwagn
   ms.date: 11/19/2019
-  ms.openlocfilehash: 5af88b8a75ecd3cfca7c93b08cb262f161498903
-  ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+  ms.openlocfilehash: fa778c4610dbfe8320d488098b5bfd39de8e4705
+  ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/21/2019
-  ms.locfileid: "74284014"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74835468"
 landingContent:
 - title: 學習程式C#
   linkLists:
@@ -63,7 +61,7 @@ landingContent:
       url: tutorials/working-with-linq.md
     - text: 使用字串內插補點格式化文字
       url: tutorials/string-interpolation.md
-    - text: 流覽所有教學課程
+    - text: 瀏覽所有教學課程
       url: tutorials/index.md
 - title: 8.0 中的C#新功能
   linkLists:

@@ -2,13 +2,13 @@
 title: dotnet nuget push 命令
 description: dotnet nuget push 命令會將套件推送至伺服器並發行。
 author: karann-msft
-ms.date: 06/26/2019
-ms.openlocfilehash: 3299f79ec62aebdcdbef38f1e8b09a2dc5529ec4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 12/04/2019
+ms.openlocfilehash: 5e80295a570adc30a06d86b6735cb0387e39d5a3
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117500"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74835515"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -18,7 +18,7 @@ ms.locfileid: "71117500"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>名稱
+## <a name="name"></a>Name
 
 `dotnet nuget push` - 將套件推送至伺服器並發行。
 
@@ -26,7 +26,7 @@ ms.locfileid: "71117500"
 
 ```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
-    [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+    [--no-service-endpoint] [-s|--source] [--skip-duplicate] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
 
@@ -34,7 +34,7 @@ dotnet nuget push [-h|--help]
 
 `dotnet nuget push` 命令會將套件推送至伺服器並發行。 推送命令會使用在系統 NuGet 組態檔案或組態檔案鏈中找到的伺服器及認證詳細資料。 如需組態檔的詳細資訊，請參閱[設定 NuGet 行為](/nuget/consume-packages/configuring-nuget-behavior)。 NuGet 預設組態的取得方式如下：載入 *%AppData%\NuGet\NuGet.config* (Windows) 或 *$HOME/.local/share* (Linux/macOS)，接著從磁碟機根目錄開始直到目前目錄，載入其中的任何 *nuget.config* 或 *.nuget\nuget.config*。
 
-## <a name="arguments"></a>引數
+## <a name="arguments"></a>Arguments
 
 * **`ROOT`**
 
@@ -52,7 +52,7 @@ dotnet nuget push [-h|--help]
 
 * **`-h|--help`**
 
-印出命令的簡短說明。
+  印出命令的簡短說明。
 
 * **`--interactive`**
 
@@ -74,6 +74,10 @@ dotnet nuget push [-h|--help]
 
   指定伺服器 URL。 除非在 NuGet 組態檔中設定 `DefaultPushSource` 設定值，否則此選項為必要。
 
+* **`--skip-duplicate`**
+
+  將多個封裝推送至 HTTP （S）伺服器時，會將任何409衝突回應視為警告，讓推送可以繼續進行。 自 .NET Core 3.1 SDK 起提供。
+                                 
 * **`-sk|--symbol-api-key <API_KEY>`**
 
   符號伺服器的 API 金鑰。
@@ -127,3 +131,9 @@ dotnet nuget push [-h|--help]
   > [!NOTE]
   > 如果此命令無法運作，可能是舊版 SDK (.NET Core 2.1 SDK 及更舊版本) 中有 Bug 所致。
   > 若要修正此問題，請升級您的 SDK 版本，或改為執行下列命令：`dotnet nuget push **/*.nupkg`
+  
+* 會推送所有*的 nupkg*檔案，即使 HTTP （S）伺服器傳回409衝突回應也一樣：
+
+  ```dotnetcli
+  dotnet nuget push *.nupkg --skip-duplicate
+  ```

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Name attribute
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
-ms.openlocfilehash: 8a790ea964ffe399136a82ea298e1c7600f48366
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d17d977384962980839fbe2b2c0a4708412d403d
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459973"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837216"
 ---
 # <a name="xname-directive"></a>x:Name 指示詞
 唯一識別 XAML 名稱範圍中的 XAML 定義元素。 當架構提供 Api 或實行為以在執行時間存取 XAML 建立的物件圖形時，XAML 名稱範圍和其唯一性模型可以套用至具現化的物件。  
@@ -39,16 +39,16 @@ ms.locfileid: "73459973"
   
  一般來說，`x:Name` 不應套用至也使用 `x:Key`的情況。 特定現有架構的 XAML 執行已引進 `x:Key` 和 `x:Name`之間的替代概念，但這不是建議的作法。 .NET Framework XAML 服務在處理名稱/金鑰資訊（例如 <xref:System.Windows.Markup.INameScope> 或 <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>）時，不支援這類替代概念。  
   
- `x:Name` 的 permittance 和名稱唯一性強制的規則，可能是由特定的執行架構所定義。 不過，若要與 .NET Framework XAML 服務搭配使用，XAML 名稱範圍唯一性的架構定義應該與本檔中 <xref:System.Windows.Markup.INameScope> 資訊的定義一致，而且應該使用與資訊相關的相同規則。已套用。 例如，[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 的執行會將各種標記專案分割成不同的 <xref:System.Windows.NameScope> 範圍，例如資源字典、頁面層級 XAML 所建立的邏輯樹狀結構、範本和其他延遲的內容，然後強制 XAML 名稱每個 XAML 名稱範圍內的唯一性。  
+ `x:Name` 的 permittance 和名稱唯一性強制的規則，可能是由特定的執行架構所定義。 不過，若要與 .NET Framework XAML 服務搭配使用，XAML 名稱範圍唯一性的架構定義應該與本檔中 <xref:System.Windows.Markup.INameScope> 資訊的定義一致，而且應該使用與資訊套用所在的相同規則。 例如，[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 的執行會將各種標記專案分割成不同的 <xref:System.Windows.NameScope> 範圍，例如資源字典、頁面層級 XAML 所建立的邏輯樹狀結構、範本和其他延遲的內容，然後在每個 XAML 名稱範圍內強制執行 XAML 名稱唯一性。  
   
  針對使用 .NET Framework XAML 服務 XAML 物件寫入器的自訂類型，可以建立或變更對應至類型上 `x:Name` 的屬性。 您可以藉由參考屬性的名稱，在類型定義程式碼中與 <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> 對應，藉此定義此行為。  <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> 是類型層級屬性。  
   
  Using.NET Framework XAML 服務，XAML 名稱範圍支援的支援邏輯可以藉由執行 <xref:System.Windows.Markup.INameScope> 介面，以架構中立的方式來定義。  
   
 ## <a name="wpf-usage-notes"></a>WPF 使用注意事項  
- 在使用 XAML、部分類別和程式碼後置之 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 應用程式的標準組建設定底下，指定的 `x:Name` 會成為標記編譯組建處理 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 時，在基礎程式碼中建立的欄位名稱工作，而且該欄位會保存物件的參考。 根據預設，建立的欄位為 internal。 您可以藉由指定[x:FieldModifier 屬性](x-fieldmodifier-directive.md)來變更欄位存取權。 在 WPF 和 Silverlight 中，標記編譯會定義並命名部分類別中的欄位，但此值一開始是空的。 然後，會從類別的函式中呼叫名為 `InitializeComponent` 的產生方法。 `InitializeComponent` 包含使用部分類別之 XAML 定義部分中存在的每個 `x:Name` 值做為輸入字串的 `FindName` 呼叫。 傳回值接著會指派給 like 命名的欄位參考，以使用從 XAML 剖析所建立的物件來填入域值。 執行 `InitializeComponent` 可以直接使用 `x:Name`/功能變數名稱來參考執行時間物件圖形，而不必在需要 XAML 定義物件的參考時，明確地呼叫 `FindName`。  
+ 在使用 XAML、部分類別和程式碼後置之 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 應用程式的標準組建設定底下，指定的 `x:Name` 會成為標記編譯組建工作處理 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 時，在基礎程式碼中建立的功能變數名稱，而且該欄位會保存物件的參考。 根據預設，建立的欄位為 internal。 您可以藉由指定[x:FieldModifier 屬性](x-fieldmodifier-directive.md)來變更欄位存取權。 在 WPF 和 Silverlight 中，標記編譯會定義並命名部分類別中的欄位，但此值一開始是空的。 然後，會從類別的函式中呼叫名為 `InitializeComponent` 的產生方法。 `InitializeComponent` 包含使用部分類別之 XAML 定義部分中存在的每個 `x:Name` 值做為輸入字串的 `FindName` 呼叫。 傳回值接著會指派給 like 命名的欄位參考，以使用從 XAML 剖析所建立的物件來填入域值。 執行 `InitializeComponent` 可以直接使用 `x:Name`/功能變數名稱來參考執行時間物件圖形，而不必在需要 XAML 定義物件的參考時，明確地呼叫 `FindName`。  
   
- 針對使用 Microsoft Visual Basic 目標並包含具有 `Page` 組建動作之 XAML 檔案的 WPF 應用程式，在編譯期間會建立個別的參考屬性，將 `WithEvents` 關鍵字新增至具有 `x:Name`的所有元素，以支援 @no事件處理常式委派的 __t_3_ 語法。 這個屬性一律是公用的。 如需詳細資訊，請參閱 [Visual Basic 和 WPF 事件處理](../wpf/advanced/visual-basic-and-wpf-event-handling.md)。  
+ 針對使用 Microsoft Visual Basic 目標並包含具有 `Page` 組建動作之 XAML 檔案的 WPF 應用程式，在編譯期間會建立個別的參考屬性，將 `WithEvents` 關鍵字加入具有 `x:Name`的所有元素，以支援事件處理常式委派的 `Handles` 語法。 這個屬性一律是公用的。 如需詳細資訊，請參閱 [Visual Basic 和 WPF 事件處理](../wpf/advanced/visual-basic-and-wpf-event-handling.md)。  
   
  WPF XAML 處理器會使用 `x:Name`，在載入時將名稱註冊到 XAML 名稱範圍中，即使頁面不是由組建動作（例如，資源字典的鬆散 XAML）所編譯的情況也是如此。 這種行為的其中一個原因是，<xref:System.Windows.Data.Binding.ElementName%2A> 系結可能需要 `x:Name`。 如需詳細資訊，請參閱資料系結[總覽](../../desktop-wpf/data/data-binding-overview.md)。  
   
@@ -63,8 +63,8 @@ ms.locfileid: "73459973"
   
  <xref:System.Windows.FrameworkElement.Name%2A> 也可以使用具有內部文字的屬性專案語法來設定，但這種情況並不常見。 相反地，您無法在 XAML 屬性專案語法中，或使用 <xref:System.Windows.DependencyObject.SetValue%2A>的程式碼中設定 `x:Name`;它只能在物件上使用屬性語法來設定，因為它是指示詞。  
   
-## <a name="silverlight-usage-notes"></a>Silverlight 使用注意事項  
- Silverlight 的 `x:Name` 會分別記載。 如需詳細資訊，請參閱[XAML 命名空間（x：）語言功能（Silverlight）](https://go.microsoft.com/fwlink/?LinkId=199081)。  
+## <a name="silverlight-usage-notes"></a>Silverlight 使用方式備註  
+ Silverlight 的 `x:Name` 會在其他篇幅中做說明。 如需詳細資訊，請參閱[XAML 命名空間（x：）語言功能（Silverlight）](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc188995(v=vs.95))。  
   
 ## <a name="see-also"></a>請參閱
 

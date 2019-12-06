@@ -2,12 +2,12 @@
 title: 寄不出的信件佇列
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 70007289e457588e94128a573ced4b28e238acf4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 244920eb9a0cdb33f4d5d83b939fe1166f4f5fcd
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710880"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837905"
 ---
 # <a name="dead-letter-queues"></a>寄不出的信件佇列
 這個範例示範如何處理已傳遞失敗的訊息。 它是以交易式[MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)系結範例為基礎。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
@@ -16,7 +16,7 @@ ms.locfileid: "74710880"
 > 此範例的安裝程序與建置指示位於本主題的結尾。
 
 > [!NOTE]
-> 這個範例會示範每個應用程式的「寄不出的信件」佇列，而此佇列只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中使用。 您可以修改此範例，以便在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上使用 MSMQ 3.0 的預設全系統佇列。
+> 這個範例會示範每個僅適用于 Windows Vista 的應用程式無效信件佇列。 您可以修改此範例，以便在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上使用 MSMQ 3.0 的預設全系統佇列。
 
  在佇列通訊中，用戶端會使用佇列與服務通訊。 更精確地說，用戶端會傳送訊息至佇列。 服務會接收來自佇列的訊息。 因此，服務與用戶端不需同時執行，就能使用佇列通訊。
 
@@ -30,9 +30,9 @@ ms.locfileid: "74710880"
 
 - `System`：系統之寄不出的信件佇列，用來存放無法傳遞的訊息。 電腦上執行的所有應用程式會共用系統之寄不出的信件佇列。
 
-- `Custom`：使用 <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 屬性所指定的自訂寄不出的信件佇列，用來存放無法傳遞的訊息。 這項功能只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。 當應用程式必須使用自己的寄不出的信件佇列，而不與執行於同一台電腦的其他應用程式共用時，會使用這項功能。
+- `Custom`：使用 <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 屬性所指定的自訂寄不出的信件佇列，用來存放無法傳遞的訊息。 這項功能僅適用于 Windows Vista。 當應用程式必須使用自己的寄不出的信件佇列，而不與執行於同一台電腦的其他應用程式共用時，會使用這項功能。
 
-- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 屬性，用來表示要當做寄不出的信件佇列使用的特定佇列。 這只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 屬性，用來表示要當做寄不出的信件佇列使用的特定佇列。 這僅適用于 Windows Vista。
 
  在這個範例中，用戶端會從異動範圍內傳送一批訊息至服務，並隨意為這些訊息指定很低的「存留時間」值 (約 2 秒)。 用戶端還會指定要使用的自訂寄不出的信件佇列，以便將過期的訊息加入。
 

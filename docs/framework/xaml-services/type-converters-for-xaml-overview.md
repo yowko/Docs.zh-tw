@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: b54731cc1aba1a47ed6b11f2bff5c596a53fd4b5
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 65210d8224b145ab23c7bc9ed76997c0892a5f59
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458515"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837255"
 ---
 # <a name="type-converters-for-xaml-overview"></a>XAML 類型轉換子概觀
 物件寫入器的類型轉換器供應邏輯，可將 XAML 標記中的字串轉換為物件圖形中的特定物件。 在 .NET Framework XAML 服務中，類型轉換器必須是衍生自 <xref:System.ComponentModel.TypeConverter>的類別。 有些轉換器也支援 XAML 儲存路徑，而且可用來將序列化標記中的物件序列化成字串格式。 本主題描述如何以及何時叫用 XAML 中的類型轉換器，並提供 <xref:System.ComponentModel.TypeConverter>之方法覆寫的實作建議。  
@@ -60,7 +60,7 @@ ms.locfileid: "73458515"
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 和 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 是服務查詢 <xref:System.ComponentModel.TypeConverter> 實作之功能時所使用的支援方法。 您必須實作這些方法來傳回轉換器對等轉換方法所支援類型特有案例的 `true` 。 基於 XAML，這通常表示 <xref:System.String> 類型。  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>XAML 的文化特性資訊和類型轉換器  
- 每個 <xref:System.ComponentModel.TypeConverter> 實作都可以唯一解譯轉換的有效字串，也可以使用或忽略傳遞為參數的類型描述。 文化特性和 XAML 類型轉換的重要考量如下：雖然 XAML 支援使用可當地語系化字串做為屬性值，但是您無法使用這些可當地語系化字串做為具有特定文化特性需求的類型轉換器輸入。 這項限制是因為 XAML 屬性值的類型轉換器包含使用 `en-US` 文化特性的必要固定語言 XAML 處理行為。 如需這種限制之設計原因的詳細資訊，請參閱 XAML 語言規格（[\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)）或[WPF 全球化和當地語系化總覽](../wpf/advanced/wpf-globalization-and-localization-overview.md)。  
+ 每個 <xref:System.ComponentModel.TypeConverter> 實作都可以唯一解譯轉換的有效字串，也可以使用或忽略傳遞為參數的類型描述。 文化特性和 XAML 類型轉換的重要考量如下：雖然 XAML 支援使用可當地語系化字串做為屬性值，但是您無法使用這些可當地語系化字串做為具有特定文化特性需求的類型轉換器輸入。 這項限制是因為 XAML 屬性值的類型轉換器包含使用 `en-US` 文化特性的必要固定語言 XAML 處理行為。 如需這種限制之設計原因的詳細資訊，請參閱 XAML 語言規格（[\[MS-XAML\]](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))）或[WPF 全球化和當地語系化總覽](../wpf/advanced/wpf-globalization-and-localization-overview.md)。  
   
  在文化特性可能是問題的範例中，某些文化特性會使用逗號 (而非句號) 做為字串形式中數字的小數點分隔符號。 這項使用與許多現有類型轉換器的行為衝突，後者是使用逗號做為分隔符號。 在周圍 XAML 中透過 `xml:lang` 傳遞文化特性並不能解決問題。  
   

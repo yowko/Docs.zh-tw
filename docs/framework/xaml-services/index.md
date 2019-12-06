@@ -6,18 +6,18 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: a99b9f3cb8c008f72eaac7ee1b8790d63c547a8d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8e1e8dc9a1410d05c19e4dd1bccb30c65d7c5e66
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453963"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837281"
 ---
 # <a name="xaml-services"></a>XAML 服務
 本主題描述技術集的功能，稱為 .NET Framework XAML 服務。 所描述的大部分服務和 Api 都位於元件 system.string 中，這是以 .NET core 元件 .NET Framework 4 組引進的元件。 服務包括讀取器和寫入器、架構類別和架構支援、factory、類別的特性、XAML 語言內建支援，以及其他 XAML 語言功能。  
   
 ## <a name="about-this-documentation"></a>關於本檔  
- .NET Framework XAML 服務的概念檔假設您先前已具備 XAML 語言的經驗，以及如何將它套用到特定架構（例如 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 或 Windows Workflow Foundation，或特定的技術功能區）。例如，<xref:Microsoft.Build.Framework.XamlTypes>中的組建自訂功能。 本檔不會嘗試以標記語言、XAML 語法術語或其他簡介材料來說明 XAML 的基本概念。 相反地，本檔著重于特別使用在 System.object 元件庫中啟用的 .NET Framework XAML 服務。 這些 Api 大多適用于 XAML 語言整合和擴充性的案例。 這可能包括下列任何一項：  
+ .NET Framework XAML 服務的概念檔假設您先前已具備 XAML 語言的經驗，以及如何將它套用至特定架構（例如 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 或 Windows Workflow Foundation）或特定的技術功能區域（例如 <xref:Microsoft.Build.Framework.XamlTypes>中的組建自訂功能）。 本檔不會嘗試以標記語言、XAML 語法術語或其他簡介材料來說明 XAML 的基本概念。 相反地，本檔著重于特別使用在 System.object 元件庫中啟用的 .NET Framework XAML 服務。 這些 Api 大多適用于 XAML 語言整合和擴充性的案例。 這可能包括下列任何一項：  
   
 - 延伸基底 XAML 讀取器或 XAML 撰寫者的功能（直接處理 XAML 節點資料流程; 衍生您自己的 XAML 讀取器或 XAML 寫入器）。  
   
@@ -27,16 +27,16 @@ ms.locfileid: "73453963"
   
 - 撰寫 XAML 值轉換器（標記延伸; 自訂類型的類型轉換器）。  
   
-- 定義自訂 XAML 架構內容（針對支援類型來源使用替代元件載入技術; 使用已知型別查閱技術，而不是一律反映元件; 使用未使用 CLR `AppDomain` 的載入元件概念及其相關聯的安全性模型）。  
+- 定義自訂的 XAML 架構內容（使用支援類型來源的替代元件載入技術）; 使用已知型別查閱技術，而不是一律反映元件; 使用未使用 CLR `AppDomain` 和其相關聯安全性模型的載入元件概念。  
   
 - 延伸基底 XAML 型別系統。  
   
 - 使用 `Lookup` 或 `Invoker` 技術來影響 XAML 型別系統，以及如何評估型別 backings。  
   
- 如果您是以語言尋找 XAML 的簡介材料，您可能會嘗試[Xaml 總覽（WPF）](../../desktop-wpf/fundamentals/xaml.md)。 該主題討論 XAML 的物件，這兩者都是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 的，同時也使用 XAML 標記和 XAML 語言功能。 另一個有用的檔是[XAML 語言規格](https://go.microsoft.com/fwlink/?LinkId=114525)中的簡介材料。  
+ 如果您是以語言尋找 XAML 的簡介材料，您可能會嘗試[Xaml 總覽（WPF）](../../desktop-wpf/fundamentals/xaml.md)。 該主題討論 XAML 的物件，這兩者都是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 的，同時也使用 XAML 標記和 XAML 語言功能。 另一個有用的檔是[XAML 語言規格](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))中的簡介材料。  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>在 .NET 架構中 .NET Framework XAML 服務和 .Xaml  
- 在舊版的 Microsoft .NET Framework 中，XAML 語言功能的支援是由建基於 Microsoft .NET Framework （[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Windows Workflow Foundation 和 Windows Communication Foundation （WCF））的架構所實現，因此視您使用的特定架構而定，其行為和所使用的 API 會有所不同。 這包括 XAML 剖析器及其物件圖形建立機制、XAML 語言內建函式、序列化支援等等。  
+ 在舊版的 Microsoft .NET Framework 中，XAML 語言功能的支援是由建基於 Microsoft .NET Framework （[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Windows Workflow Foundation 和 Windows Communication Foundation （WCF））的架構所實，因此會根據您所使用的特定架構而有不同的行為和使用的 API。 這包括 XAML 剖析器及其物件圖形建立機制、XAML 語言內建函式、序列化支援等等。  
   
  在 .NET Framework 4 中，.NET Framework XAML 服務和 System.object 元件會定義支援 XAML 語言功能所需的大部分內容。 這包括 XAML 讀取器和 XAML 寫入器的基類。 新增至不在任何架構特定 XAML 執行中 .NET Framework XAML 服務的最重要功能，就是 XAML 的類型系統標記法。 型別系統表示以物件導向的方式呈現 XAML，而不需要依賴架構的特定功能。  
   

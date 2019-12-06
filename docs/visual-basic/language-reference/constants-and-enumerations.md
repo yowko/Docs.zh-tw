@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: de03ce61535d4695a00d0c4b8998ef4b81583425
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e47fd1c606f7d4cd0cf2fa6398beaa183ed95076
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347873"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838152"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>常數和列舉類型 (Visual Basic)
 
@@ -49,7 +49,7 @@ Visual Basic 為開發人員提供許多預先定義的常數和列舉。 常數
 |`vbFormFeed`|未在 Microsoft Windows 中使用。|  
 |`vbVerticalTab`|不適用於 Microsoft Windows。|  
   
-## <a name="enumerations"></a>列舉  
+## <a name="enumerations"></a>列舉型別  
 
  下表列出並描述 Visual Basic 所提供的列舉。  
   
@@ -84,6 +84,5 @@ Visual Basic 為開發人員提供許多預先定義的常數和列舉。 常數
 ## <a name="see-also"></a>請參閱
 
 - [Visual Basic 語言參考](../../visual-basic/language-reference/index.md)
-- [Visual Basic](../../visual-basic/index.md)
 - [常數的概觀](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [列舉的概觀](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)

@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 1af17be16061aedab9226bf2b4a0419b0a8d63b7
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 8a989ed4ff0d670296fc255733d01ddd5b5a8f1e
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552831"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838100"
 ---
 # <a name="net-guide"></a>.NET 指南
 
@@ -59,7 +59,7 @@ ms.locfileid: "74552831"
 
 * [C# 指南](../csharp/index.yml)
 * [F# 指南](../fsharp/index.yml)
-* [Visual Basic 指南](../visual-basic/index.md)
+* [Visual Basic 指南](../visual-basic/index.yml)
 
 ## <a name="api-reference"></a>應用程式開發介面參考
 

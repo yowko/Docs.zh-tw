@@ -2,12 +2,12 @@
 title: 利用 COM 用戶端使用 WCF Moniker
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: faaf8e80402ddaef85dcf8d7bfe9b1da202227c9
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: bcac9e344e2d981f9f165480cb84ac37c99fa5b0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715293"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837775"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>利用 COM 用戶端使用 WCF Moniker
 這個範例會示範如何使用 Windows Communication Foundation （WCF）服務名字，將 Web 服務整合至 COM 開發環境，例如 Microsoft Office Visual Basic for Applications （Office VBA）或 Visual Basic 6.0。 這個範例由 Windows Script Host 用戶端 (.vbs)、支援的用戶端程式庫 (.dll) 和網際網路資訊服務 (IIS) 裝載的服務程式庫 (.dll) 所組成。 服務為計算機服務，而 COM 用戶端會呼叫服務上的數學作業：加法、減法、乘法和除法。 您可以在訊息方塊視窗中看到用戶端活動。  
@@ -191,7 +191,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
 3. 從 Visual Studio 的開發人員命令提示字元中，開啟 [語言特定] 資料夾下的 [\client\bin] 資料夾。  
   
     > [!NOTE]
-    > 如果您是使用 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[lserver](../../../../includes/lserver-md.md)]、Windows 7 或 Windows Server 2008 R2，請務必使用系統管理員權限來執行命令提示字元。  
+    > 如果您使用的是 Windows Vista、[!INCLUDE[lserver](../../../../includes/lserver-md.md)]、Windows 7 或 Windows Server 2008 R2，請確定您是以系統管理員許可權執行命令提示字元。  
   
 4. 輸入 `tlbexp.exe client.dll /out:CalcProxy.tlb`，將 dll 匯出至 tlb 檔案。 預期會出現「型別程式庫匯出工具警告」，但這不是很重要，因為不需要使用泛型型別。  
   
@@ -221,7 +221,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 6. 將語言特定資料夾下 \client\bin 資料夾的 Client.dll 程式庫，複製到用戶端電腦上的目錄。  
   
-7. 從命令提示字元巡覽至用戶端電腦上的目的目錄。 如果使用 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，請務必使用系統管理員身分執行命令提示字元。  
+7. 從命令提示字元巡覽至用戶端電腦上的目的目錄。 如果使用 Windows Vista 或 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，請務必以系統管理員身分執行命令提示字元。  
   
 8. 輸入 `tlbexp.exe client.dll /out:CalcProxy.tlb`，將 dll 匯出至 tlb 檔案。 預期會出現「型別程式庫匯出工具警告」，但這不是很重要，因為不需要使用泛型型別。  
   
