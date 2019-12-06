@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: b376f8b38749f242f4e78a10808532989e0ac834
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6a4e971c1cb19a12710ad7893378a49758b4016e
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972137"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884237"
 ---
 # <a name="common-web-application-architectures"></a>一般 Web 應用程式架構
 
@@ -169,7 +169,7 @@ ASP.NET Core MVC 應用程式中的使用者介面層是應用程式的進入點
 
 ### <a name="ui-layer-types"></a>UI 層類型
 
-- Controllers
+- 控制器
 - 篩選器。
 - 檢視
 - ViewModels
@@ -260,7 +260,7 @@ networks:
       name: nat
 ```
 
-`docker-compose.yml` 檔案參考了 `Dockerfile` 專案中的 `Web`。 `Dockerfile` 是用來指定將使用的基底容器，以及如何在其上設定應用程式。 `Web` 的 `Dockerfile`：
+`docker-compose.yml` 檔案參考了 `Web` 專案中的 `Dockerfile`。 `Dockerfile` 是用來指定將使用的基底容器，以及如何在其上設定應用程式。 `Web` 的 `Dockerfile`：
 
 ```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
@@ -302,6 +302,8 @@ ENTRYPOINT ["dotnet", "Web.dll"]
   <https://github.com/ardalis/cleanarchitecture>
 - **架構微服務電子書**  
   <https://aka.ms/MicroservicesEbook>
+- **DDD （領域驅動設計）**  
+  <https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/>
 
 >[!div class="step-by-step"]
 >[上一頁](architectural-principles.md)
