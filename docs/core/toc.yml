@@ -109,8 +109,18 @@
   items:
     - name: 設定
       href: run-time-config/index.md
+    - name: 編譯設定
+      href: run-time-config/compilation.md
+    - name: 偵錯與分析設定
+      href: run-time-config/debugging-profiling.md
     - name: 記憶體回收行程設定
       href: run-time-config/garbage-collector.md
+    - name: 全球化設定
+      href: run-time-config/globalization.md
+    - name: 網路設定
+      href: run-time-config/networking.md
+    - name: 執行緒設定
+      href: run-time-config/threading.md
 - name: 原生互通性
   items:
     - name: 將 .NET Core 元件公開給 COM
