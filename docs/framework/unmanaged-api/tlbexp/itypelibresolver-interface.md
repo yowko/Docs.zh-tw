@@ -21,25 +21,25 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73104104"
 ---
-# <a name="itypelibresolver-interface"></a><span data-ttu-id="00885-102">ITypeLibResolver 介面</span><span class="sxs-lookup"><span data-stu-id="00885-102">ITypeLibResolver Interface</span></span>
-<span data-ttu-id="00885-103">提供[ResolveTypeLib 方法](resolvetypelib-method.md)，它會解析型別程式庫的檔案路徑。</span><span class="sxs-lookup"><span data-stu-id="00885-103">Provides the [ResolveTypeLib method](resolvetypelib-method.md), which resolves the file path of a type library.</span></span>  
+# <a name="itypelibresolver-interface"></a><span data-ttu-id="9184a-102">ITypeLibResolver 介面</span><span class="sxs-lookup"><span data-stu-id="9184a-102">ITypeLibResolver Interface</span></span>
+<span data-ttu-id="9184a-103">提供[ResolveTypeLib 方法](resolvetypelib-method.md)，它會解析型別程式庫的檔案路徑。</span><span class="sxs-lookup"><span data-stu-id="9184a-103">Provides the [ResolveTypeLib method](resolvetypelib-method.md), which resolves the file path of a type library.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="00885-104">方法</span><span class="sxs-lookup"><span data-stu-id="00885-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="9184a-104">方法</span><span class="sxs-lookup"><span data-stu-id="9184a-104">Methods</span></span>  
   
-|<span data-ttu-id="00885-105">方法</span><span class="sxs-lookup"><span data-stu-id="00885-105">Method</span></span>|<span data-ttu-id="00885-106">描述</span><span class="sxs-lookup"><span data-stu-id="00885-106">Description</span></span>|  
+|<span data-ttu-id="9184a-105">方法</span><span class="sxs-lookup"><span data-stu-id="9184a-105">Method</span></span>|<span data-ttu-id="9184a-106">描述</span><span class="sxs-lookup"><span data-stu-id="9184a-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="00885-107">ResolveTypeLib 方法</span><span class="sxs-lookup"><span data-stu-id="00885-107">ResolveTypeLib Method</span></span>](resolvetypelib-method.md)|<span data-ttu-id="00885-108">藉由傳回完整的路徑，解析類型程式庫的簡單名稱。</span><span class="sxs-lookup"><span data-stu-id="00885-108">Resolves the simple name of a type library by returning its fully qualified path.</span></span>|  
+|[<span data-ttu-id="9184a-107">ResolveTypeLib 方法</span><span class="sxs-lookup"><span data-stu-id="9184a-107">ResolveTypeLib Method</span></span>](resolvetypelib-method.md)|<span data-ttu-id="9184a-108">藉由傳回完整的路徑，解析類型程式庫的簡單名稱。</span><span class="sxs-lookup"><span data-stu-id="9184a-108">Resolves the simple name of a type library by returning its fully qualified path.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="00885-109">需求</span><span class="sxs-lookup"><span data-stu-id="00885-109">Requirements</span></span>  
- <span data-ttu-id="00885-110">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="00885-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9184a-109">需求</span><span class="sxs-lookup"><span data-stu-id="9184a-109">Requirements</span></span>  
+ <span data-ttu-id="9184a-110">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9184a-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="00885-111">**標頭：** TlbRef .idl，TlbRef。h</span><span class="sxs-lookup"><span data-stu-id="00885-111">**Header:** TlbRef.idl, TlbRef.h</span></span>  
+ <span data-ttu-id="9184a-111">**標頭：** TlbRef .idl，TlbRef。h</span><span class="sxs-lookup"><span data-stu-id="9184a-111">**Header:** TlbRef.idl, TlbRef.h</span></span>  
   
- <span data-ttu-id="00885-112">連結**庫：** TlbRef .lib</span><span class="sxs-lookup"><span data-stu-id="00885-112">**Library:** TlbRef.lib</span></span>  
+ <span data-ttu-id="9184a-112">連結**庫：** TlbRef .lib</span><span class="sxs-lookup"><span data-stu-id="9184a-112">**Library:** TlbRef.lib</span></span>  
   
- <span data-ttu-id="00885-113">**.NET Framework 版本：** 4、3.5、3.0、2。0</span><span class="sxs-lookup"><span data-stu-id="00885-113">**.NET Framework Version:** 4, 3.5, 3.0, 2.0</span></span>  
+ <span data-ttu-id="9184a-113">**.NET Framework 版本：** 4、3.5、3.0、2.0</span><span class="sxs-lookup"><span data-stu-id="9184a-113">**.NET Framework Version:** 4, 3.5, 3.0, 2.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="00885-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="00885-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9184a-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="9184a-114">See also</span></span>
 
-- [<span data-ttu-id="00885-115">Tlbexp Helper 函式</span><span class="sxs-lookup"><span data-stu-id="00885-115">Tlbexp Helper Functions</span></span>](index.md)
-- [<span data-ttu-id="00885-116">LoadTypeLibEx 函式</span><span class="sxs-lookup"><span data-stu-id="00885-116">LoadTypeLibEx function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [<span data-ttu-id="9184a-115">Tlbexp Helper 函式</span><span class="sxs-lookup"><span data-stu-id="9184a-115">Tlbexp Helper Functions</span></span>](index.md)
+- [<span data-ttu-id="9184a-116">LoadTypeLibEx 函式</span><span class="sxs-lookup"><span data-stu-id="9184a-116">LoadTypeLibEx function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

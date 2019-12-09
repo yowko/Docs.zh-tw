@@ -21,15 +21,15 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73126811"
 ---
-# <a name="iceefilegen-class"></a><span data-ttu-id="15087-102">ICeeFileGen 類別</span><span class="sxs-lookup"><span data-stu-id="15087-102">ICeeFileGen Class</span></span>
-<span data-ttu-id="15087-103">提供建立原生可移植執行檔（PE）檔案的功能。</span><span class="sxs-lookup"><span data-stu-id="15087-103">Provides functionality for creating a native portable executable (PE) file.</span></span> <span data-ttu-id="15087-104">編譯器通常會使用此介面來產生其已編譯的輸出可執行檔。</span><span class="sxs-lookup"><span data-stu-id="15087-104">The interface will typically be used by compilers to generate their compiled output executable.</span></span>  
+# <a name="iceefilegen-class"></a><span data-ttu-id="694ee-102">ICeeFileGen 類別</span><span class="sxs-lookup"><span data-stu-id="694ee-102">ICeeFileGen Class</span></span>
+<span data-ttu-id="694ee-103">提供建立原生可移植執行檔（PE）檔案的功能。</span><span class="sxs-lookup"><span data-stu-id="694ee-103">Provides functionality for creating a native portable executable (PE) file.</span></span> <span data-ttu-id="694ee-104">編譯器通常會使用此介面來產生其已編譯的輸出可執行檔。</span><span class="sxs-lookup"><span data-stu-id="694ee-104">The interface will typically be used by compilers to generate their compiled output executable.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="15087-105">`ICeeFileGen` 支援 .NET Framework 基礎結構，但不適合直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="15087-105">`ICeeFileGen` supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+> <span data-ttu-id="694ee-105">`ICeeFileGen` 支援 .NET Framework 基礎結構，但不適合直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="694ee-105">`ICeeFileGen` supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="15087-106">這個介面已被取代，將在未來的版本中移除。</span><span class="sxs-lookup"><span data-stu-id="15087-106">This interface has been deprecated and will be removed in a future release.</span></span>  
+ <span data-ttu-id="694ee-106">這個介面已被取代，將在未來的版本中移除。</span><span class="sxs-lookup"><span data-stu-id="694ee-106">This interface has been deprecated and will be removed in a future release.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15087-107">語法</span><span class="sxs-lookup"><span data-stu-id="15087-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="694ee-107">語法</span><span class="sxs-lookup"><span data-stu-id="694ee-107">Syntax</span></span>  
   
 ```cpp  
 class ICeeFileGen {  
@@ -234,13 +234,13 @@ public:
 };  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="15087-108">需求</span><span class="sxs-lookup"><span data-stu-id="15087-108">Requirements</span></span>  
- <span data-ttu-id="15087-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="15087-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="694ee-108">需求</span><span class="sxs-lookup"><span data-stu-id="694ee-108">Requirements</span></span>  
+ <span data-ttu-id="694ee-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="694ee-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="15087-110">**標頭：** ICeeFileGen。h</span><span class="sxs-lookup"><span data-stu-id="15087-110">**Header:** ICeeFileGen.h</span></span>  
+ <span data-ttu-id="694ee-110">**標頭：** ICeeFileGen。h</span><span class="sxs-lookup"><span data-stu-id="694ee-110">**Header:** ICeeFileGen.h</span></span>  
   
- <span data-ttu-id="15087-111">**.NET Framework 版本：** 1。0</span><span class="sxs-lookup"><span data-stu-id="15087-111">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="694ee-111">**.NET Framework 版本：** 1.0</span><span class="sxs-lookup"><span data-stu-id="694ee-111">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15087-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="15087-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="694ee-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="694ee-112">See also</span></span>
 
-- [<span data-ttu-id="15087-113">裝載介面</span><span class="sxs-lookup"><span data-stu-id="15087-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="694ee-113">裝載介面</span><span class="sxs-lookup"><span data-stu-id="694ee-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

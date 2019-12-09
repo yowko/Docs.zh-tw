@@ -16,29 +16,29 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/17/2019
 ms.locfileid: "72524922"
 ---
-# <a name="xpsdocumentwriterraise__writingprintticketrequired-method"></a><span data-ttu-id="efe3c-102">System.windows.xps.xpsdocumentwriter> \_WritingPrintTicketRequired 方法 \_ 引發</span><span class="sxs-lookup"><span data-stu-id="efe3c-102">XpsDocumentWriter.raise\_\_WritingPrintTicketRequired Method</span></span>
+# <a name="xpsdocumentwriterraise__writingprintticketrequired-method"></a><span data-ttu-id="3aea6-102">System.windows.xps.xpsdocumentwriter> \_WritingPrintTicketRequired 方法 \_ 引發</span><span class="sxs-lookup"><span data-stu-id="3aea6-102">XpsDocumentWriter.raise\_\_WritingPrintTicketRequired Method</span></span>
 
-<span data-ttu-id="efe3c-103">引發 <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired> 事件。</span><span class="sxs-lookup"><span data-stu-id="efe3c-103">Raises the <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired> event.</span></span>
+<span data-ttu-id="3aea6-103">引發 <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired> 事件。</span><span class="sxs-lookup"><span data-stu-id="3aea6-103">Raises the <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired> event.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="efe3c-104">語法</span><span class="sxs-lookup"><span data-stu-id="efe3c-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="3aea6-104">語法</span><span class="sxs-lookup"><span data-stu-id="3aea6-104">Syntax</span></span>
 
 ```csharp
 public void raise__WritingPrintTicketRequired (object value0, 
   System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs value1);
 ```
 
-## <a name="parameters"></a><span data-ttu-id="efe3c-105">參數</span><span class="sxs-lookup"><span data-stu-id="efe3c-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="3aea6-105">參數</span><span class="sxs-lookup"><span data-stu-id="3aea6-105">Parameters</span></span>
 
-- <span data-ttu-id="efe3c-106">`value0` <xref:System.Object></span><span class="sxs-lookup"><span data-stu-id="efe3c-106">`value0` <xref:System.Object></span></span>  
-  <span data-ttu-id="efe3c-107">事件的來源。</span><span class="sxs-lookup"><span data-stu-id="efe3c-107">The source of the event.</span></span>
+- <span data-ttu-id="3aea6-106">`value0` <xref:System.Object></span><span class="sxs-lookup"><span data-stu-id="3aea6-106">`value0` <xref:System.Object></span></span>  
+  <span data-ttu-id="3aea6-107">事件的來源。</span><span class="sxs-lookup"><span data-stu-id="3aea6-107">The source of the event.</span></span>
 
-- <span data-ttu-id="efe3c-108">`value1`  <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs></span><span class="sxs-lookup"><span data-stu-id="efe3c-108">`value1`  <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs></span></span>  
-  <span data-ttu-id="efe3c-109">事件資料。</span><span class="sxs-lookup"><span data-stu-id="efe3c-109">The event data.</span></span>
+- <span data-ttu-id="3aea6-108">`value1`  <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs></span><span class="sxs-lookup"><span data-stu-id="3aea6-108">`value1`  <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs></span></span>  
+  <span data-ttu-id="3aea6-109">事件資料。</span><span class="sxs-lookup"><span data-stu-id="3aea6-109">The event data.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="efe3c-110">需求</span><span class="sxs-lookup"><span data-stu-id="efe3c-110">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="3aea6-110">需求</span><span class="sxs-lookup"><span data-stu-id="3aea6-110">Requirements</span></span>
 
-<span data-ttu-id="efe3c-111">**命名空間︰** <xref:System.Windows.Xps></span><span class="sxs-lookup"><span data-stu-id="efe3c-111">**Namespace:** <xref:System.Windows.Xps></span></span>
+<span data-ttu-id="3aea6-111">**命名空間︰** <xref:System.Windows.Xps></span><span class="sxs-lookup"><span data-stu-id="3aea6-111">**Namespace:** <xref:System.Windows.Xps></span></span>
 
-<span data-ttu-id="efe3c-112">**元件：** System. 列印（在 system.web 中）</span><span class="sxs-lookup"><span data-stu-id="efe3c-112">**Assembly:** System.Printing (in system.printing.dll)</span></span>
+<span data-ttu-id="3aea6-112">**元件：** System. 列印（在 system.web 中）</span><span class="sxs-lookup"><span data-stu-id="3aea6-112">**Assembly:** System.Printing (in system.printing.dll)</span></span>
 
-<span data-ttu-id="efe3c-113">**.NET Framework 版本：** 3。0</span><span class="sxs-lookup"><span data-stu-id="efe3c-113">**.NET Framework versions:** 3.0</span></span>
+<span data-ttu-id="3aea6-113">**.NET Framework 版本：** 3.0</span><span class="sxs-lookup"><span data-stu-id="3aea6-113">**.NET Framework versions:** 3.0</span></span>
