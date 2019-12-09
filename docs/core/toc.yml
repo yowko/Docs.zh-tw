@@ -65,6 +65,8 @@
       href: tutorials/consuming-library-with-visual-studio.md
 - name: .NET Core 的新功能
   items:
+    - name: .NET Core 3.1 的新功能
+      href: whats-new/dotnet-core-3-1.md
     - name: .NET Core 3.0 的新功能
       href: whats-new/dotnet-core-3-0.md
     - name: .NET Core 2.2 的新功能
@@ -94,7 +96,7 @@
     - name: 在 macOS 上建置完整的 .NET Core 解決方案
       href: tutorials/using-on-mac-vs-full-solution.md
     - name: 使用 CLI 工具開始使用 .NET Core
-      href: tutorials/using-with-xplat-cli.md
+      href: tutorials/cli-create-console-app.md
     - name: 使用 .NET Core CLI 組織和測試專案
       href: tutorials/testing-with-cli.md
     - name: 使用跨平台工具開發程式庫
