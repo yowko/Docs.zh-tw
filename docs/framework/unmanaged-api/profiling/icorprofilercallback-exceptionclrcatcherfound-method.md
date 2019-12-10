@@ -22,25 +22,25 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435836"
 ---
-# <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a><span data-ttu-id="bec61-102">ICorProfilerCallback::ExceptionCLRCatcherFound 方法</span><span class="sxs-lookup"><span data-stu-id="bec61-102">ICorProfilerCallback::ExceptionCLRCatcherFound Method</span></span>
-<span data-ttu-id="bec61-103">在 common language runtime （CLR）本身內找到例外狀況的 `catch` 區塊時呼叫。</span><span class="sxs-lookup"><span data-stu-id="bec61-103">Called when a `catch` block for an exception is found inside the common language runtime (CLR) itself.</span></span> <span data-ttu-id="bec61-104">這個方法在 .NET Framework 版本2.0 中已過時。</span><span class="sxs-lookup"><span data-stu-id="bec61-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
+# <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a><span data-ttu-id="02b61-102">ICorProfilerCallback::ExceptionCLRCatcherFound 方法</span><span class="sxs-lookup"><span data-stu-id="02b61-102">ICorProfilerCallback::ExceptionCLRCatcherFound Method</span></span>
+<span data-ttu-id="02b61-103">在 common language runtime （CLR）本身內找到例外狀況的 `catch` 區塊時呼叫。</span><span class="sxs-lookup"><span data-stu-id="02b61-103">Called when a `catch` block for an exception is found inside the common language runtime (CLR) itself.</span></span> <span data-ttu-id="02b61-104">這個方法在 .NET Framework 版本2.0 中已過時。</span><span class="sxs-lookup"><span data-stu-id="02b61-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bec61-105">語法</span><span class="sxs-lookup"><span data-stu-id="bec61-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="02b61-105">語法</span><span class="sxs-lookup"><span data-stu-id="02b61-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExceptionCLRCatcherFound();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="bec61-106">需求</span><span class="sxs-lookup"><span data-stu-id="bec61-106">Requirements</span></span>  
- <span data-ttu-id="bec61-107">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bec61-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="02b61-106">需求</span><span class="sxs-lookup"><span data-stu-id="02b61-106">Requirements</span></span>  
+ <span data-ttu-id="02b61-107">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="02b61-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bec61-108">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="bec61-108">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="02b61-108">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="02b61-108">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="bec61-109">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bec61-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="02b61-109">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="02b61-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bec61-110">**.NET Framework 版本：** 1。0</span><span class="sxs-lookup"><span data-stu-id="bec61-110">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="02b61-110">**.NET Framework 版本：** 1.0</span><span class="sxs-lookup"><span data-stu-id="02b61-110">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bec61-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bec61-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="02b61-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="02b61-111">See also</span></span>
 
-- [<span data-ttu-id="bec61-112">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="bec61-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="bec61-113">ExceptionCLRCatcherExecute 方法</span><span class="sxs-lookup"><span data-stu-id="bec61-113">ExceptionCLRCatcherExecute Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)
+- [<span data-ttu-id="02b61-112">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="02b61-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="02b61-113">ExceptionCLRCatcherExecute 方法</span><span class="sxs-lookup"><span data-stu-id="02b61-113">ExceptionCLRCatcherExecute Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)
