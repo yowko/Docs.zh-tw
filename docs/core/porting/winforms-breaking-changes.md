@@ -9,13 +9,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/28/2019
 ms.locfileid: "74643974"
 ---
-# <a name="breaking-changes-in-windows-forms-net-framework-to-net-core"></a><span data-ttu-id="e7eff-103">Windows Forms 中的重大變更（.NET Framework 至 .NET Core）</span><span class="sxs-lookup"><span data-stu-id="e7eff-103">Breaking changes in Windows Forms (.NET Framework to .NET Core)</span></span>
+# <a name="breaking-changes-in-windows-forms-net-framework-to-net-core"></a><span data-ttu-id="2d2dd-103">Windows Forms 中的重大變更（.NET Framework 至 .NET Core）</span><span class="sxs-lookup"><span data-stu-id="2d2dd-103">Breaking changes in Windows Forms (.NET Framework to .NET Core)</span></span>
 
-<span data-ttu-id="e7eff-104">WPF 和 Windows Forms 支援已新增至3.0 版中的 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="e7eff-104">WPF and Windows Forms support were added to .NET Core in version 3.0.</span></span> <span data-ttu-id="e7eff-105">如果您要將 Windows Forms 或 Windows Presentation Foundation 應用程式從 .NET Framework 遷移至 .NET Core，本文中所列的重大變更可能會影響您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="e7eff-105">If you're migrating a Windows Forms or Windows Presentation Foundation app from .NET Framework to .NET Core, the breaking changes listed in this article may affect your app.</span></span>
+<span data-ttu-id="2d2dd-104">WPF 和 Windows Forms 支援已新增至3.0 版中的 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="2d2dd-104">WPF and Windows Forms support were added to .NET Core in version 3.0.</span></span> <span data-ttu-id="2d2dd-105">如果您要將 Windows Forms 或 Windows Presentation Foundation 應用程式從 .NET Framework 遷移至 .NET Core，本文中所列的重大變更可能會影響您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="2d2dd-105">If you're migrating a Windows Forms or Windows Presentation Foundation app from .NET Framework to .NET Core, the breaking changes listed in this article may affect your app.</span></span>
 
-<span data-ttu-id="e7eff-106">重大變更會依引進的 .NET Core 版本分組。</span><span class="sxs-lookup"><span data-stu-id="e7eff-106">Breaking changes are grouped by the .NET Core version in which they were introduced.</span></span>
+<span data-ttu-id="2d2dd-106">重大變更會依引進的 .NET Core 版本分組。</span><span class="sxs-lookup"><span data-stu-id="2d2dd-106">Breaking changes are grouped by the .NET Core version in which they were introduced.</span></span>
 
-## <a name="net-core-31"></a><span data-ttu-id="e7eff-107">.NET Core 3。1</span><span class="sxs-lookup"><span data-stu-id="e7eff-107">.NET Core 3.1</span></span>
+## <a name="net-core-31"></a><span data-ttu-id="2d2dd-107">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="2d2dd-107">.NET Core 3.1</span></span>
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 
@@ -23,7 +23,7 @@ ms.locfileid: "74643974"
 
 [!INCLUDE[CellFormatting event](~/includes/core-changes/windowsforms/3.1/cellformatting-event-not-raised.md)]
 
-## <a name="net-core-30"></a><span data-ttu-id="e7eff-108">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="e7eff-108">.NET Core 3.0</span></span>
+## <a name="net-core-30"></a><span data-ttu-id="2d2dd-108">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="2d2dd-108">.NET Core 3.0</span></span>
 
 [!INCLUDE[Control.DefaultFont changed to Segoe UI 9pt](~/includes/core-changes/windowsforms/3.0/control-defaultfont-changed.md)]
 
@@ -75,7 +75,7 @@ ms.locfileid: "74643974"
 
 [!INCLUDE[Duplicated APIs removed from Windows Forms](~/includes/core-changes/windowsforms/3.0/remove-duplicated-apis.md)]
 
-## <a name="see-also"></a><span data-ttu-id="e7eff-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="e7eff-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2d2dd-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="2d2dd-109">See also</span></span>
 
-- [<span data-ttu-id="e7eff-110">評估 .NET Core 中的中斷性變更</span><span class="sxs-lookup"><span data-stu-id="e7eff-110">Evaluate breaking changes in .NET Core</span></span>](../compatibility/index.md)
-- [<span data-ttu-id="e7eff-111">Windows Forms 中的重大變更（.NET Core 到 .NET Core）</span><span class="sxs-lookup"><span data-stu-id="e7eff-111">Breaking changes in Windows Forms (.NET Core to .NET Core)</span></span>](../compatibility/winforms.md)
+- [<span data-ttu-id="2d2dd-110">評估 .NET Core 中的中斷性變更</span><span class="sxs-lookup"><span data-stu-id="2d2dd-110">Evaluate breaking changes in .NET Core</span></span>](../compatibility/index.md)
+- [<span data-ttu-id="2d2dd-111">Windows Forms 中的重大變更（.NET Core 到 .NET Core）</span><span class="sxs-lookup"><span data-stu-id="2d2dd-111">Breaking changes in Windows Forms (.NET Core to .NET Core)</span></span>](../compatibility/winforms.md)

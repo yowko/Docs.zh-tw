@@ -11,15 +11,15 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/28/2019
 ms.locfileid: "74568372"
 ---
-# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="382b2-103">ASP.NET Core 的重大變更</span><span class="sxs-lookup"><span data-stu-id="382b2-103">ASP.NET Core breaking changes</span></span>
+# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="3373d-103">ASP.NET Core 的重大變更</span><span class="sxs-lookup"><span data-stu-id="3373d-103">ASP.NET Core breaking changes</span></span>
 
-<span data-ttu-id="382b2-104">以下是 ASP.NET Core 版本的 ASP.NET Core 重大變更清單。</span><span class="sxs-lookup"><span data-stu-id="382b2-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="382b2-105">ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。</span><span class="sxs-lookup"><span data-stu-id="382b2-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
+<span data-ttu-id="3373d-104">以下是 ASP.NET Core 版本的 ASP.NET Core 重大變更清單。</span><span class="sxs-lookup"><span data-stu-id="3373d-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="3373d-105">ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。</span><span class="sxs-lookup"><span data-stu-id="3373d-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
 
-## <a name="aspnet-core-31"></a><span data-ttu-id="382b2-106">ASP.NET Core 3。1</span><span class="sxs-lookup"><span data-stu-id="382b2-106">ASP.NET Core 3.1</span></span>
+## <a name="aspnet-core-31"></a><span data-ttu-id="3373d-106">ASP.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="3373d-106">ASP.NET Core 3.1</span></span>
 
 [!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]
 
-## <a name="aspnet-core-30"></a><span data-ttu-id="382b2-107">ASP.NET Core 3。0</span><span class="sxs-lookup"><span data-stu-id="382b2-107">ASP.NET Core 3.0</span></span>
+## <a name="aspnet-core-30"></a><span data-ttu-id="3373d-107">ASP.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="3373d-107">ASP.NET Core 3.0</span></span>
 
 [!INCLUDE[obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 
