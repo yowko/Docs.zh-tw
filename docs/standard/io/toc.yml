@@ -10,13 +10,13 @@
           href: how-to-copy-directories.md
         - name: 作法：列舉目錄和檔案
           href: how-to-enumerate-directories-and-files.md
-        - name: HOW TO：讀取和寫入新建立的資料檔案
+        - name: 作法：讀取和寫入新建立的資料檔案
           href: how-to-read-and-write-to-a-newly-created-data-file.md
-        - name: HOW TO：開啟並附加至記錄檔
+        - name: 作法：開啟並附加至記錄檔
           href: how-to-open-and-append-to-a-log-file.md
         - name: 作法：將文字寫入檔案
           href: how-to-write-text-to-a-file.md
-        - name: HOW TO：讀取檔案中的文字
+        - name: 作法：讀取檔案中的文字
           href: how-to-read-text-from-a-file.md
         - name: 作法：讀取字串中的字元
           href: how-to-read-characters-from-a-string.md
@@ -24,7 +24,7 @@
           href: how-to-write-characters-to-a-string.md
         - name: 作法：新增或移除存取控制清單項目
           href: how-to-add-or-remove-access-control-list-entries.md
-        - name: HOW TO：壓縮與解壓縮檔案
+        - name: 作法：壓縮與解壓縮檔案
           href: how-to-compress-and-extract-files.md
         - name: 撰寫資料流
           href: composing-streams.md
@@ -47,7 +47,7 @@
           href: how-to-delete-stores-in-isolated-storage.md
         - name: 作法：預期隔離儲存區發生空間不足的情況
           href: how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
-        - name: HOW TO：在隔離儲存區中建立檔案和目錄
+        - name: 作法：在隔離儲存區中建立檔案和目錄
           href: how-to-create-files-and-directories-in-isolated-storage.md
         - name: 作法：尋找隔離儲存區中的現有檔案和目錄
           href: how-to-find-existing-files-and-directories-in-isolated-storage.md
@@ -64,5 +64,7 @@
           href: how-to-use-named-pipes-for-network-interprocess-communication.md
     - name: 管線
       href: pipelines.md
+    - name: 使用緩衝區
+      href: buffers.md
     - name: 記憶體對應檔案
       href: memory-mapped-files.md
