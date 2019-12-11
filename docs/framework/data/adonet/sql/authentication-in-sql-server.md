@@ -2,12 +2,12 @@
 title: 在 SQL Server 中進行驗證
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 09f7825fd6b4f852b24142ea297c078bd8a1e221
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 0fb92f9e854e2a7a800335390d0195243a749b33
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040274"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959965"
 ---
 # <a name="authentication-in-sql-server"></a>在 SQL Server 中進行驗證
 SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。  
@@ -17,9 +17,9 @@ SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。
 - 混合模式支援 Windows 和 SQL Server 提供的驗證。 使用者名稱和密碼組會在 SQL Server 內進行維護。  
   
 > [!IMPORTANT]
-> 建議盡量使用「Windows 驗證」。 Windows 驗證會使用一系列的加密訊息在 SQL Server 中驗證使用者。 使用 SQL Server 登入時，系統會在網路上傳遞 SQL Server 登入名稱和加密的密碼，使其較不安全。  
+> 建議盡量使用「Windows 驗證」。 Windows 驗證會使用一系列的加密訊息在 SQL Server 中驗證使用者。 使用 SQL Server 登入時，SQL Server 登入名稱及加密密碼會透過網路傳遞，因而降低其安全性。  
   
- 使用 Windows 驗證的好處是因為使用者已登入 Windows，所以不必再另行登入 SQL Server。 下列 `SqlConnection.ConnectionString` 指定 Windows 驗證，而不需要使用者提供使用者名稱或密碼。  
+ 使用 Windows 驗證的好處是因為使用者已登入 Windows，所以不必再另行登入 SQL Server。 下列 `SqlConnection.ConnectionString` 可指定 Windows 驗證，且不需要使用者提供使用者名稱或密碼。  
   
 ```csharp  
 "Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;"
@@ -35,7 +35,7 @@ SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。
   
 - 應用程式和資料庫位於相同的電腦。  
   
-- 您使用的是 SQL Server Express 或 LocalDB 的實例。  
+- 您使用的是 SQL Server Express 或 LocalDB 執行個體。  
   
  SQL Server 登入通常用於以下狀況：  
   
@@ -58,7 +58,7 @@ SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。
 - SQL Server 登入。 SQL Server 會將使用者名稱和密碼雜湊儲存在 master 資料庫，並使用內部驗證方法確認登入作業。  
   
 > [!NOTE]
-> SQL Server 提供從憑證建立的登入，或僅用於程式碼簽署的非對稱金鑰。 而不會用來連接至 SQL Server。  
+> SQL Server 提供從憑證建立的登入或非對稱金鑰，這些項目只能用於程式碼簽署。 而不會用來連接至 SQL Server。  
   
 ## <a name="mixed-mode-authentication"></a>混合模式驗證  
  如果您必須使用混合模式驗證，則必須建立儲存在 SQL Server 中的 SQL Server 登入。 然後在執行階段時還需要提供 SQL Server 使用者名稱和密碼。  
@@ -66,7 +66,7 @@ SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。
 > [!IMPORTANT]
 > SQL Server 會使用名為 `sa` (「系統管理員」的縮寫) 的 SQL Server 登入來進行安裝。 請指派強式密碼給 `sa` 登入，且不要在應用程式中使用 `sa` 登入。 `sa` 登入對應的是 `sysadmin` 固定伺服器角色，對於整個伺服器具有不可變更之管理權限。 如果攻擊者取得系統管理員的存取權，就可以大肆破壞而毫不受限。 Windows `BUILTIN\Administrators` 群組 (本機系統管理員群組) 的所有成員，都會預設為 `sysadmin` 角色的成員，但可以從該角色移除。  
   
- SQL Server 在 [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] 或更新版本上執行時，會為 SQL Server 登入提供 Windows 密碼原則機制。 密碼複雜性原則是為了阻止暴力攻擊而設計，方法是盡可能地增加密碼數目。 SQL Server 可以將 [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] 中使用的相同複雜性和到期原則套用至 SQL Server 內部使用的密碼。  
+ SQL Server 提供 SQL Server 登入的 Windows 密碼原則機制。 密碼複雜性原則是為了阻止暴力攻擊而設計，方法是盡可能地增加密碼數目。 SQL Server 可以將相同的複雜性和到期原則套用至 SQL Server 內使用的密碼。  
   
 > [!IMPORTANT]
 > 串連來自使用者輸入的連接字串，可能會使您易遭受連接字串插入式攻擊。 請使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 在執行階段建立語法有效的連接字串。 如需詳細資訊，請參閱[連接字串建置器](../connection-string-builders.md)。  
@@ -76,7 +76,7 @@ SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。
   
 |資源|描述|  
 |--------------|-----------------|  
-|[原理](/sql/relational-databases/security/authentication-access/principals-database-engine)|描述 SQL Server 中的登入和其他安全性主體。|  
+|[主體](/sql/relational-databases/security/authentication-access/principals-database-engine)|說明 SQL Server 中的登入及其他安全性主體。|  
   
 ## <a name="see-also"></a>請參閱
 

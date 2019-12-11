@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 9fac74aacf6b902a25438151db247a1a4aee1f4c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 52f89df8d7f28f0e00c3becd9005b46e52b5532c
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802475"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960211"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>如何：以程式碼模擬滑鼠和鍵盤事件
 
@@ -72,7 +72,7 @@ Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選�
 1. 啟動會接收按鍵動作的應用程式視窗，然後呼叫 <xref:System.Windows.Forms.SendKeys.Send%2A> 或 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 方法。 由於沒有可啟動另一個應用程式的 Managed 方法，因此您必須使用原生 Windows 方法強制將焦點放在其他應用程式上。 下列程式碼範例使用平台叫用呼叫 `FindWindow` 和 `SetForegroundWindow` 方法，以啟動 [小算盤] 應用程式視窗，然後再呼叫 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 對 [小算盤] 應用程式發出一連串計算。
 
     > [!NOTE]
-    > 用於尋找 [小算盤] 應用程式之 `FindWindow` 呼叫的正確參數會隨您的 Windows 版本而異。  下列程式碼會在 Windows 7 上尋找計算機應用程式。 在 [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]上，將第一個參數變更為 "SciCalc"。 您可以使用 Visual Studio 隨附的 Spy++ 工具來判斷正確的參數。
+    > 用於尋找 [小算盤] 應用程式之 `FindWindow` 呼叫的正確參數會隨您的 Windows 版本而異。  下列程式碼會在 Windows 7 上尋找計算機應用程式。 在 Windows Vista 上，將第一個參數變更為 "SciCalc"。 您可以使用 Visual Studio 隨附的 Spy++ 工具來判斷正確的參數。
 
     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]

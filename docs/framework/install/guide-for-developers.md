@@ -8,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 6098c2b855e692eef198e388ba9b29a4e8cc8de1
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 407c9a3fd5057a8e1d68707c9e475d76b3f266e2
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802220"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960053"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安裝適用於開發人員的 .NET Framework
 
@@ -43,8 +43,8 @@ ms.locfileid: "74802220"
 |**4.6.1**|[.NET Framework 4.6.1 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=690706)|[4.6.1 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [4.6.1 離線安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=671744)|**您可以安裝於：**<br /><br/> Windows 10 <br /> Windows 8.1 (含) 以前版本<br /> Windows Server 2012 R2 (含) 以前版本<br /> (如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))|
 |**4.6**|隨附於 Visual Studio 2015。<br /><br /> [Microsoft .NET Framework 4.6 目標套件](https://go.microsoft.com/fwlink/?LinkId=528261)|[4.6 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [4.6 離線安裝程式的下載頁面](https://go.microsoft.com/fwlink/?LinkId=528233)|**包含在：** <br/><br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **您也可以安裝於：**<br /><br/> Windows 8.1 (含) 以前版本<br /> Windows Server 2012 R2 (含) 以前版本<br /> (如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))|
 |**4.5.2**|[Microsoft .NET Framework 4.5.2 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> 適用於 Visual Studio 2013、Visual Studio 2012 或其他 IDE|[4.5.2 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [4.5.2 離線安裝程式的下載頁面](https://go.microsoft.com/fwlink/p/?LinkId=397706)|**您可以安裝於：**<br /><br/> Windows 8.1 (含) 以前版本<br /> Windows Server 2012 R2 (含) 以前版本<br /> (如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))|
-|**4.5.1**|[Microsoft .NET Framework 4.5.1 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> 適用於 Visual Studio 2013、Visual Studio 2012 或其他 IDE|[4.5.1 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [4.5.1 離線安裝程式的下載頁面](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**包含在：**<br /> <br/>Windows 8.1<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **您也可以安裝於：**<br /><br/> Windows 8 和更早版本<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] (含) 以前版本<br />(如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))|
-|**4.5**|隨附於 Visual Studio 2012<br /><br /> 同時也隨附於 Windows 8 SDK|[4.5 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**包含在：** <br/><br /> Windows 8<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **您也可以安裝於：**<br/><br /> Windows 7 (含) 以前版本<br /> Windows Server 2008 SP2 (含) 以前版本<br />(如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))|
+|**4.5.1**|[Microsoft .NET Framework 4.5.1 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> 適用於 Visual Studio 2013、Visual Studio 2012 或其他 IDE|[4.5.1 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [4.5.1 離線安裝程式的下載頁面](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**包含在：**<br /> <br/>Windows 8.1<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **您也可以安裝於：**<br /><br/> Windows 8 和更早版本<br /> Windows Server 2012 和更早版本<br />(如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))|
+|**4.5**|隨附於 Visual Studio 2012<br /><br /> 同時也隨附於 Windows 8 SDK|[4.5 Web 安裝程式的下載頁面](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**包含在：** <br/><br /> Windows 8<br /> Windows Server 2012<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **您也可以安裝於：**<br/><br /> Windows 7 (含) 以前版本<br /> Windows Server 2008 SP2 (含) 以前版本<br />(如需完整清單，請參閱[系統需求](../get-started/system-requirements.md))|
 
 您可以在所有支援的平台上，安裝特定 .NET Framework 版本的**開發人員套件** (如果有的話)。
 

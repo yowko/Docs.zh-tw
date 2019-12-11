@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 5ac2d7897ee4c6707669e4f9104317aeb2e1f473
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 1f7efaedaa1a0be90f7b619f954bdf78eecafa07
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835679"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959833"
 ---
 # <a name="install-the-net-core-sdk"></a>安裝 .NET Core SDK
 
@@ -49,7 +49,7 @@ macOS 具有可用於安裝 .NET Core 3.1 SDK 的獨立安裝程式：
 若要解壓縮 SDK，並在終端機上提供命令，請先[下載](#all-net-core-downloads).net Core 二進位版本。 然後，開啟終端機並執行下列命令。
 
 ```bash
-mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.101-linux-musl-x64.tar.gz -C $HOME/dotnet
+mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.100-linux-x64.tar.gz -C $HOME/dotnet
 export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
 ```
@@ -157,7 +157,7 @@ dotnet-install.ps1 -Channel Current
 
 您可以使用下列其中一個連結直接下載並安裝 .NET Core：
 
-- [.NET Core 3.1 Preview 下載](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET Core 3.1 下載](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 - [.NET Core 3.0 下載](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 - [.NET Core 2.2 下載](https://dotnet.microsoft.com/download/dotnet-core/2.2)
 - [.NET Core 2.1 下載](https://dotnet.microsoft.com/download/dotnet-core/2.1)

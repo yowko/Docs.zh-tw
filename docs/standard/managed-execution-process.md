@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 5ead3d1ac37b3c7ee50f18a81530720205678de2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121998"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960381"
 ---
 # <a name="managed-execution-process"></a>Managed 執行程序
 <a name="introduction"></a> Managed 執行處理序包含下列步驟，將於本主題中稍後詳細討論：  
@@ -95,7 +95,7 @@ ms.locfileid: "73121998"
   
  在執行期間，Managed 程式碼會接收服務，例如記憶體回收、安全性、與 Unmanaged 程式碼的互通性、跨語言偵錯支援，以及增強的部署和版本控制支援。  
   
- 在 Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] 和 [!INCLUDE[windowsver](../../includes/windowsver-md.md)]中，作業系統載入器會查看 COFF 標頭中的位元，檢查 Managed 模組。 所設定的位元代表 Managed 模組。 如果載入器偵測到 Managed 模組，則會載入 mscoree.dll，而當載入和卸載 Managed 模組映像時， `_CorValidateImage` 和 `_CorImageUnloading` 會通知載入器。 `_CorValidateImage` 會執行下列動作：  
+ 在 Microsoft Windows Vista 中，作業系統載入器會藉由檢查 COFF 標頭中的位來檢查受控模組。 所設定的位元代表 Managed 模組。 如果載入器偵測到 Managed 模組，則會載入 mscoree.dll，而當載入和卸載 Managed 模組映像時， `_CorValidateImage` 和 `_CorImageUnloading` 會通知載入器。 `_CorValidateImage` 會執行下列動作：  
   
 1. 確定程式碼是有效的 Managed 程式碼。  
   

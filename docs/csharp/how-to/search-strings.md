@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 4a1eb818dfd8fb48b003ca184dd533f73d342662
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 15ea77d13a93d88bd996a22b6fe1aaad81df572d
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973112"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959698"
 ---
 # <a name="how-to-search-strings"></a>如何搜尋字串
 
@@ -52,7 +52,7 @@ ms.locfileid: "73973112"
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
   
 > [!TIP]
-> 當您搜尋完全相符的字串時，`string` 方法通常是較好的選擇。 當您搜尋某個模式或來源字串時，規則運算式是較好的選擇。
+> 當您搜尋完全相符的字串時，`string` 方法通常是較好的選擇。 當您在來源字串中搜尋某個模式時，正則運算式會更好。
 
 ## <a name="does-a-string-follow-a-pattern"></a>字串遵循模式嗎？
 

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: c59352f908c5f4a1fd2ca6dd631d26bb5d69f09a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 314526c1164f70e6b261df1a6f11ddce2b5fa240
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441219"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960075"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>標準控制項的 UI 自動化支援
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主題將說明針對 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]和 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]架構所開發的應用程式中，其標準控制項的 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 支援。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "74441219"
 ## <a name="win32-controls"></a>Win32 控制項  
  大多數 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控制項都是透過 UIAutomationClientsideProviders.dll 中的用戶端提供者公開至 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 。 此組件會自動註冊為用於使用者介面自動化用戶端應用程式。  
   
- 完整支援只提供給 ComCtrl32.dll 第 6 版 (隨附於 [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)] (含) 以後的版本) 以後的控制項。  
+ 僅針對第6版*ComCtrl32*的控制項提供完整支援。  
   
  支援的控制項如下。  
   
@@ -41,11 +41,11 @@ ms.locfileid: "74441219"
 |按鈕|核取方塊|  
 |ComboBoxEx32|ComboBox|  
 |ComboBox|ComboBox|  
-|編輯|文件|  
-|編輯|編輯|  
+|Edit|文件|  
+|Edit|Edit|  
 |SysLink|超連結|  
-|靜態|Text|  
-|靜態|影像|  
+|Static|Text|  
+|Static|Image|  
 |SysIPAddress32|自訂|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
@@ -70,7 +70,7 @@ ms.locfileid: "74441219"
 |ToolbarWindow32|按鈕|  
 |ToolbarWindow32|核取方塊|  
 |ToolbarWindow32|RadioButton|  
-|ToolbarWindow32|分隔符號|  
+|ToolbarWindow32|Separator|  
 |tooltips_class32|ToolTip|  
 |#32774|ToolTip|  
 |ReBarWindow32|ToolBar|  
@@ -83,12 +83,12 @@ ms.locfileid: "74441219"
   
 |類別名稱|控制項類型|  
 |----------------|------------------|  
-|SysAnimate32|影像|  
+|SysAnimate32|Image|  
 |SysPager|Spinner|  
 |SysDateTimePick32|自訂|  
 |SysMonthCal32|行事曆|  
-|MS_WINNOTE|工具提示|  
-|VBBubble|工具提示|  
+|MS_WINNOTE|ToolTip|  
+|VBBubble|ToolTip|  
 |ScrollBar (當做獨立控制項使用時)|滑桿|  
 |SuperGrid|自訂|  
   
@@ -110,7 +110,7 @@ ms.locfileid: "74441219"
 |GroupBox|  
 |HscrollBar|  
 |ImageList|  
-|標籤|  
+|ThisAddIn|  
 |ListBox|  
 |ListView|  
 |MainMenu/ContextMenu|  
@@ -167,6 +167,6 @@ ms.locfileid: "74441219"
 |RaftingContainer|  
 |StatusStrip|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [UI Automation Control Types](ui-automation-control-types.md)
+- [UI 自動化控制項類型](ui-automation-control-types.md)

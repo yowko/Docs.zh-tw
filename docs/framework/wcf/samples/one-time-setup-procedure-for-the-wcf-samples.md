@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 範例的單次安裝程序
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: cfe50cb2bb017292b69f578bfff2bf84bf6ba8f0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 95bba89546e6667cc36fa06a0090aa8e9570fc7e
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837827"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960145"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 範例的單次安裝程序
 
@@ -16,7 +16,7 @@ ms.locfileid: "74837827"
 **ServiceModelSamples**虛擬目錄是用來建立及執行所有使用裝載于 IIS 之服務的範例。 這是執行範例時唯一必要的虛擬目錄。 建立範例將會取代此虛擬目錄中所有先前部署的服務；此虛擬目錄中只會部屬並提供最近建立的範例。
 
 > [!NOTE]
-> 您必須在本機系統管理員帳戶下執行所有的命令。 如果您是使用 Windows 7、[!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] 或 Windows Server 2008 R2，也必須使用更高的權限來執行命令提示字元。 若要這麼做，請以滑鼠右鍵按一下命令提示字元圖示，然後按一下 [以**系統管理員身分執行**]。 本主題中的所有命令都必須在擁有適當路徑設定的命令提示字元下執行。  最簡單的確保方式就是使用 Visual Studio 命令提示字元。 若要開啟此提示，請依序按一下 **開始**、**所有程式**、 **Visual Studio 2010**、 **Visual Studio Tools**、以滑鼠右鍵按一下**Visual Studio 命令提示字元（2010）** ，然後按一下 以**系統管理員身分執行**。 如果您已經安裝其中一個 Visual Studio Express Edition，就無法使用這個命令提示字元，而且您必須將 "C:\Windows\Microsoft.Net\Framework\v4.0" 加入至系統路徑中。
+> 您必須在本機系統管理員帳戶下執行所有的命令。 如果您使用的是 Windows 7、Windows Vista 或 Windows Server 2008 R2，也必須以較高的許可權來執行命令提示字元。 若要這麼做，請以滑鼠右鍵按一下命令提示字元圖示，然後按一下 [以**系統管理員身分執行**]。 本主題中的所有命令都必須在擁有適當路徑設定的命令提示字元下執行。  最簡單的確保方式就是使用 Visual Studio 命令提示字元。 若要開啟此提示，請依序按一下 **開始**、**所有程式**、 **Visual Studio 2010**、 **Visual Studio Tools**、以滑鼠右鍵按一下**Visual Studio 命令提示字元（2010）** ，然後按一下 以**系統管理員身分執行**。 如果您已經安裝其中一個 Visual Studio Express Edition，就無法使用這個命令提示字元，而且您必須將 "C:\Windows\Microsoft.Net\Framework\v4.0" 加入至系統路徑中。
 
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF 範例的單次安裝程序
 

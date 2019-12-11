@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: f3cddcd6cd90e7e43ea6af67725e709673f7650f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 46d8f00f9328e9c0a4df596b709195ae42d651bf
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978344"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960125"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>混合應用程式疑難排解
 <a name="introduction"></a> 本主題列出一些會在撰寫混合式應用程式時發生的常見問題，這類應用程式同時使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 技術。  
@@ -50,7 +50,7 @@ ms.locfileid: "73978344"
  資料驗證也會受到焦點影響。 驗證可在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 專案中運作，但當您在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素或兩個不同的 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素之間進行 tab 鍵時，無法運作。  
   
 <a name="property_mapping"></a>   
-## <a name="property-mapping"></a>屬性對應  
+## <a name="property-mapping"></a>內容對應  
  某些屬性對應需要大量解譯，以橋接 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 技術之間的不同實作。 屬性對應可讓您的程式碼回應字型、色彩和其他屬性的變更。 通常，屬性對應是透過接聽 *Property*Changed 事件或 On*Property*Changed 呼叫，並在子控制項或其介面卡上設定適當的屬性來運作。 如需詳細資訊，請參閱 [Windows Form 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)。  
   
 <a name="layoutrelated_properties_on_hosted_content"></a>   
@@ -86,7 +86,7 @@ ms.locfileid: "73978344"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>啟用視覺化樣式  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項上的 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 視覺化樣式可能不會啟用。 在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式的範本中，會呼叫 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 方法。 雖然預設不會呼叫這個方法，但如果您使用 Visual Studio 來建立專案，則會取得控制項的 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 視覺化樣式（如果有6.0 版的 Comctl32.dll 可用）。 線上程上建立控制碼之前，您必須先呼叫 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法。 如需詳細資訊，請參閱[如何：在混合應用程式中啟用視覺化樣式](how-to-enable-visual-styles-in-a-hybrid-application.md)。  
+ 可能不會啟用 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項上的 Microsoft Windows XP 視覺化樣式。 在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式的範本中，會呼叫 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 方法。 雖然預設不會呼叫這個方法，但如果您使用 Visual Studio 來建立專案，則會取得適用于控制項的 Microsoft Windows XP 視覺化樣式（如果有6.0 版的 Comctl32.dll 可用）。 線上程上建立控制碼之前，您必須先呼叫 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法。 如需詳細資訊，請參閱[如何：在混合應用程式中啟用視覺化樣式](how-to-enable-visual-styles-in-a-hybrid-application.md)。  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>授權的控制項  

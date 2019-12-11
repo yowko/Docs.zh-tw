@@ -4,12 +4,12 @@ description: 使用套件管理員在 Ubuntu 16.04 上安裝 .NET Core SDK 和�
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: caca6154c8e5d4670df1688eb9f4dd445eff21fa
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 77033e327349e7543148dab27f7229c69de4aa1c
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74836903"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959736"
 ---
 # <a name="ubuntu-1604-package-manager---install-net-core"></a>Ubuntu 16.04 套件管理員-安裝 .NET Core
 
@@ -94,7 +94,7 @@ sudo apt-get install {the .NET Core package}
 
 ```bash
 sudo apt-get install -y gpg
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor microsoft.asc.gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
 wget -q https://packages.microsoft.com/config/ubuntu/16.04/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 92671001733f525188ba3c7bcf3ed3c55615e301
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 887698bdaebf7bc5ddac8997167589d9fbd3dd4d
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283794"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960372"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox 樣式和範本
 本主題描述 <xref:System.Windows.Controls.ComboBox> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)。  
@@ -22,7 +22,7 @@ ms.locfileid: "74283794"
 ## <a name="combobox-parts"></a>ComboBox 元件  
  下表列出 <xref:System.Windows.Controls.ComboBox> 控制項的已命名元件。  
   
-|組件|輸入|描述|  
+|組件|類型|描述|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|包含 <xref:System.Windows.Controls.ComboBox>的文字。|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|下拉式方塊中包含專案的下拉式方塊。|  
@@ -35,7 +35,7 @@ ms.locfileid: "74283794"
 |VisualState 名稱|VisualStateGroup 名稱|描述|  
 |-|-|-|  
 |一般|CommonStates|預設狀態。|  
-|已停用|CommonStates|已停用控制項。|  
+|Disabled|CommonStates|已停用控制項。|  
 |MouseOver|CommonStates|滑鼠指標位於 <xref:System.Windows.Controls.ComboBox> 控制項上。|  
 |已取得焦點|FocusStates|控制項已取得焦點。|  
 |未取得焦點|FocusStates|控制項未取得焦點。|  
@@ -55,11 +55,11 @@ ms.locfileid: "74283794"
 |VisualState 名稱|VisualStateGroup 名稱|描述|  
 |-|-|-|  
 |一般|CommonStates|預設狀態。|  
-|已停用|CommonStates|已停用控制項。|  
-|MouseOver|CommonStates|滑鼠指標位於 <xref:System.Windows.Controls.ComboBox> 控制項上。|  
+|Disabled|CommonStates|已停用控制項。|  
+|MouseOver|CommonStates|滑鼠指標位於 <xref:System.Windows.Controls.ComboBoxItem> 控制項上。|  
 |已取得焦點|FocusStates|控制項已取得焦點。|  
 |未取得焦點|FocusStates|控制項未取得焦點。|  
-|已選取|SelectionStates|目前已選取專案。|  
+|Selected|SelectionStates|目前已選取專案。|  
 |未選取|SelectionStates|項目未獲選取。|  
 |SelectedUnfocused|SelectionStates|項目已獲選取，但未取得焦點。|  
 |驗證|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，而 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性則 `false`。|  

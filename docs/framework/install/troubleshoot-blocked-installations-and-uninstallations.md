@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
-ms.openlocfilehash: d0f3d857a90aca763121595151a2193125b47c6c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: df7eaf971f3a54057758dc7d974ae00cd4797ad7
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975633"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960020"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>針對 .NET Framework 安裝和解除安裝遭封鎖的問題進行疑難排解
 
@@ -36,7 +36,7 @@ ms.locfileid: "73975633"
 |無法解除安裝 .NET Framework 4.5.x/4.6.x/4.7.x/4.8。 電腦上的其他應用程式依存於這個程式。|一般而言，您不應該解除安裝電腦上的任何 .NET Framework 版本，因為您使用的應用程式可能相依於特定的 .NET Framework 版本。 如需詳細資訊，請參閱*使用者入門*指南中的[適用於使用者的 .NET Framework](../get-started/index.md#ForUsers)。|  
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8 可轉散發套件不適用於這個作業系統。 請從 Microsoft 下載中心下載適用於作業系統的 .NET Framework 4.5.x/4.6.x/4.7.x/4.8。|您可能嘗試在不支援的平台上安裝 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8，或您選擇的安裝套件未包含所支援的全部作業系統所需的元件。 請使用離線安裝程式 ([4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=309493)、[4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)、[4.6](https://go.microsoft.com/fwlink/p/?LinkId=528233)、[4.6.1](https://go.microsoft.com/fwlink/p/?LinkId=671744)、[4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604)、[4.7](https://go.microsoft.com/fwlink/p/?LinkId=825306)、[4.7.1](https://go.microsoft.com/fwlink/p/?LinkId=852090) 或 [4.7.2](https://go.microsoft.com/fwlink/p/?LinkId=863265) 或 [4.8](https://go.microsoft.com/fwlink/?linkid=2088631)) 來重新執行安裝。 如需詳細資訊，請參閱[安裝指南](guide-for-developers.md)和[系統需求](../get-started/system-requirements.md)以了解支援的作業系統。|  
 |您必須先安裝對應至 KB\<號碼> 的更新，才能安裝此產品。|.NET Framework 的安裝需要先安裝 KB 更新，才能安裝 .NET Framework。 請安裝更新，再重新開始 .NET Framework 安裝。<br /><br /> 例如，若要在 Windows 8.1、Windows RT 8.1 和 Windows Server 2012 R2 上安裝 .NET Framework 的更新版本，需要安裝對應至 [KB 2919355](https://support.microsoft.com/kb/2919355) 的更新。|  
-|您的電腦目前執行的是 Windows Server 2008 作業系統的 Server Core 安裝。 .NET Framework 4.5.x 需要較新版本的作業系統。 請安裝 Windows Server 2008 R2 SP1 或更新版本並重新執行 .NET Framework 4.5.x 安裝程式。|Windows Server 2008 R2 SP1 (含) 以後版本的 Server Core 角色才支援 .NET Framework 4.5.1 和 4.5.2。 請參閱[系統需求](../get-started/system-requirements.md)。|  
+|您的電腦目前執行的是 Windows Server 2008 作業系統的 Server Core 安裝。 .NET Framework 4.5.x 需要較新版本的作業系統。 請安裝 Windows Server 2008 R2 SP1 (含) 以上版本並重新執行 .NET Framework 4.5.x 安裝程式。|Windows Server 2008 R2 SP1 (含) 以後版本的 Server Core 角色才支援 .NET Framework 4.5.1 和 4.5.2。 請參閱[系統需求](../get-started/system-requirements.md)。|  
 |您沒有足夠權限為此電腦的所有使用者完成這項作業。 請以系統管理員身分登入，然後重新執行**安裝程式**。|您必須是此電腦的系統管理員，才能安裝 .NET Framework。|  
 |安裝程式無法繼續，因為前一個安裝要求您的電腦必須重新啟動。 請重新啟動您的電腦，然後再重新執行安裝程式。|有時需要重新開機才能完成安裝。 請遵循指示重新啟動您的電腦，然後再重新執行安裝程式。<br /><br /> 在罕見的情況下，如果 Windows 偵測到一些遺失更新，並將重新啟動以安裝佇列中的下一個更新，系統可能會要求您多次重新啟動系統。|  
 |.NET Framework 安裝程式無法在程式相容性模式中執行。|請參閱本文稍後的[程式相容性問題](#compat)一節。|  
@@ -48,7 +48,7 @@ ms.locfileid: "73975633"
 |.NET Framework 4.5..x/4.6.x/4.7.x/4.8 已經包含在此作業系統中。 您不需要安裝 .NET Framework 4.5.x/4.6.x/4.7.x/4.8 可轉散發套件。|不需執行任何動作。<br /><br /> 若要判斷系統上所安裝之 .NET Framework 的版本，請參閱[如何：判斷所安裝的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。 如需支援的作業系統，請參閱[系統需求](../get-started/system-requirements.md)。|  
 |這個作業系統不支援 .NET Framework 4.5.x/4.6.x/4.7.x/4.8。|如需支援的作業系統，請參閱[系統需求](../get-started/system-requirements.md)。<br /><br /> 若是 .NET framework 在 Windows 7 上安裝失敗，此訊息通常表示未安裝 Windows 7 SP1。 在 Windows 7 系統中，.NET Framework 需要 Windows 7 SP1。 若您使用 Windows 7 而尚未安裝 Service Pack 1，就必須先加以安裝，才能安裝 .NET Framework。 如需安裝 Windows 7 SP1 的資訊，請參閱[了解如何安裝 Windows 7 Service Pack 1 (SP1)](https://windows.microsoft.com/windows7/install-windows-7-service-pack-1)。|  
 |您的電腦目前執行的是 Windows Server 2008 作業系統的 Server Core 安裝。 .NET Framework 4.5.x 需要完整版的作業系統或 Server Core 2008 R2 SP1。 請安裝 Windows Server 2008 SP2 或 Windows Server 2008 R2 SP1 或 Server Core 2008 R2 SP1 的完整版本，並重新執行 .NET Framework 4.5.x 安裝程式。|Windows Server 2008 R2 SP1 (含) 以後版本的 Server Core 角色才有支援 .NET Framework。 請參閱[系統需求](../get-started/system-requirements.md)。|  
-|.NET Framework 4.5.x 已是這個作業系統的一部分，但目前處於關閉狀態 (僅限 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)])。| 使用 [**控制台**] 中的 [開啟**或關閉 Windows 功能**] 開啟 .NET Framework 4.5. x。 |  
+|.NET Framework 4.5. x 已是這個作業系統的一部分，但目前處於關閉狀態（僅限 Windows Server 2012）。| 使用 [**控制台**] 中的 [開啟**或關閉 Windows 功能**] 開啟 .NET Framework 4.5. x。 |  
 |這個安裝程式需要 x86 電腦， 無法安裝在 x64 或 IA64 電腦上。|請參閱[系統需求](../get-started/system-requirements.md)。|  
 |這個安裝程式需要 x64 或 x86 電腦， 無法安裝在 IA64 電腦上。|請參閱[系統需求](../get-started/system-requirements.md)。|  
 
