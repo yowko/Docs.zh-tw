@@ -69,7 +69,7 @@ gRPC 適用于下列案例：
 
 請注意，上圖中的前端流量會以 HTTP 叫用，而後端微服務至微服務會使用 gRPC。
 
-期待 gRPC，在 dethroning 雲端原生系統的 REST 支配方面，可能扮演著重要的角色。 效能優勢和開發的便利性也太好了。 不過，請不要犯任何錯誤，其餘部分仍會持續一段時間。 它仍然是針對公開公開的 Api 擅長，基於回溯相容性的理由。
+期待 gRPC，在 dethroning 雲端原生系統的 REST 支配方面，可能扮演著重要的角色。 效能優勢和開發的便利性也太好了。 不過，請不要誤會，因為在開放 API 與向後相容的傑出特性， REST 仍會存在很長一段時間。
 
 >[!div class="step-by-step"]
 >[上一頁](service-to-service-communication.md)
