@@ -15,7 +15,7 @@ ms.locfileid: "73739844"
 
 <span data-ttu-id="a9056-105">本節著重於當您需要解決複雜的子系統時所實作的更進階微服務，或是衍生自領域專家對不斷改變之商務規則知識的微服務。</span><span class="sxs-lookup"><span data-stu-id="a9056-105">This section focuses on more advanced microservices that you implement when you need to tackle complex subsystems, or microservices derived from the knowledge of domain experts with ever-changing business rules.</span></span> <span data-ttu-id="a9056-106">此節中所使用的架構模式是以領域驅動設計 (Domain-Driven Design，DDD) 以及命令和查詢職責分離 (Command and Query Responsibility Segregation，CQRS) 方法為基礎，如圖 7-1 所示。</span><span class="sxs-lookup"><span data-stu-id="a9056-106">The architecture patterns used in this section are based on domain-driven design (DDD) and Command and Query Responsibility Segregation (CQRS) approaches, as illustrated in Figure 7-1.</span></span>
 
-<span data-ttu-id="a9056-107">:::image type="complex" source="./media/index/internal-versus-external-architecture.png" alt-text="比較外部和內部架構模式的圖表。":::</span><span class="sxs-lookup"><span data-stu-id="a9056-107">:::image type="complex" source="./media/index/internal-versus-external-architecture.png" alt-text="Diagram comparing external and internal architecture patterns.":::</span></span>
+:::image type="complex" source="./media/index/internal-versus-external-architecture.png" alt-text="比較外部和內部架構模式的圖表。":::
 <span data-ttu-id="a9056-108">外部架構的差異：微服務模式、API 閘道、彈性通訊、pub/sub 等：內部架構：資料 動/CRUD、DDD 模式、相依性插入、多程式庫等。</span><span class="sxs-lookup"><span data-stu-id="a9056-108">Difference between external architecture: microservice patterns, API gateways, resilient communications, pub/sub, etc., and internal architecture: data driven/CRUD, DDD patterns, dependency injection, multiple libraries, etc.</span></span>
 :::image-end:::
 
