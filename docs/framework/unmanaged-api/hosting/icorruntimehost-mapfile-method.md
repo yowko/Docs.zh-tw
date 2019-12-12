@@ -22,10 +22,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73139517"
 ---
-# <a name="icorruntimehostmapfile-method"></a><span data-ttu-id="b3e1e-102">ICorRuntimeHost::MapFile 方法</span><span class="sxs-lookup"><span data-stu-id="b3e1e-102">ICorRuntimeHost::MapFile Method</span></span>
-<span data-ttu-id="b3e1e-103">將指定的檔案對應到記憶體中。</span><span class="sxs-lookup"><span data-stu-id="b3e1e-103">Maps the specified file into memory.</span></span> <span data-ttu-id="b3e1e-104">這個方法已過時。</span><span class="sxs-lookup"><span data-stu-id="b3e1e-104">This method is obsolete.</span></span>  
+# <a name="icorruntimehostmapfile-method"></a><span data-ttu-id="bbc64-102">ICorRuntimeHost::MapFile 方法</span><span class="sxs-lookup"><span data-stu-id="bbc64-102">ICorRuntimeHost::MapFile Method</span></span>
+<span data-ttu-id="bbc64-103">將指定的檔案對應到記憶體中。</span><span class="sxs-lookup"><span data-stu-id="bbc64-103">Maps the specified file into memory.</span></span> <span data-ttu-id="bbc64-104">這個方法已過時。</span><span class="sxs-lookup"><span data-stu-id="bbc64-104">This method is obsolete.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b3e1e-105">語法</span><span class="sxs-lookup"><span data-stu-id="b3e1e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bbc64-105">語法</span><span class="sxs-lookup"><span data-stu-id="bbc64-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT MapFile(  
@@ -34,22 +34,22 @@ HRESULT MapFile(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b3e1e-106">參數</span><span class="sxs-lookup"><span data-stu-id="b3e1e-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bbc64-106">參數</span><span class="sxs-lookup"><span data-stu-id="bbc64-106">Parameters</span></span>  
  `hFile`  
- <span data-ttu-id="b3e1e-107">在要對應之檔案的控制碼。</span><span class="sxs-lookup"><span data-stu-id="b3e1e-107">[in] The handle of the file to be mapped.</span></span>  
+ <span data-ttu-id="bbc64-107">在要對應之檔案的控制碼。</span><span class="sxs-lookup"><span data-stu-id="bbc64-107">[in] The handle of the file to be mapped.</span></span>  
   
  `hMapAddress`  
- <span data-ttu-id="b3e1e-108">脫銷要開始對應檔案的起始記憶體位址。</span><span class="sxs-lookup"><span data-stu-id="b3e1e-108">[out] The starting memory address at which to begin mapping the file.</span></span>  
+ <span data-ttu-id="bbc64-108">脫銷要開始對應檔案的起始記憶體位址。</span><span class="sxs-lookup"><span data-stu-id="bbc64-108">[out] The starting memory address at which to begin mapping the file.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b3e1e-109">需求</span><span class="sxs-lookup"><span data-stu-id="b3e1e-109">Requirements</span></span>  
- <span data-ttu-id="b3e1e-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b3e1e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bbc64-109">需求</span><span class="sxs-lookup"><span data-stu-id="bbc64-109">Requirements</span></span>  
+ <span data-ttu-id="bbc64-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bbc64-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b3e1e-111">**標頭：** Mscoree.dll. h</span><span class="sxs-lookup"><span data-stu-id="b3e1e-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="bbc64-111">**標頭：** Mscoree.dll. h</span><span class="sxs-lookup"><span data-stu-id="bbc64-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="b3e1e-112">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="b3e1e-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bbc64-112">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="bbc64-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b3e1e-113">**.NET Framework 版本：** 1.0、1。1</span><span class="sxs-lookup"><span data-stu-id="b3e1e-113">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="bbc64-113">**.NET Framework 版本：** 1.0、1。1</span><span class="sxs-lookup"><span data-stu-id="bbc64-113">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b3e1e-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="b3e1e-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bbc64-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="bbc64-114">See also</span></span>
 
-- [<span data-ttu-id="b3e1e-115">ICorRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="b3e1e-115">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="bbc64-115">ICorRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="bbc64-115">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

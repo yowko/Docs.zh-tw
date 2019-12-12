@@ -22,32 +22,32 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438905"
 ---
-# <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a><span data-ttu-id="f25e0-102">ICorProfilerInfo::GetInprocInspectionIThisThread 方法</span><span class="sxs-lookup"><span data-stu-id="f25e0-102">ICorProfilerInfo::GetInprocInspectionIThisThread Method</span></span>
-<span data-ttu-id="f25e0-103">取得可針對 ICorDebugThread 介面查詢的物件。</span><span class="sxs-lookup"><span data-stu-id="f25e0-103">Gets an object that can be queried for the ICorDebugThread interface.</span></span> <span data-ttu-id="f25e0-104">這個方法在 .NET Framework 版本2.0 中已過時。</span><span class="sxs-lookup"><span data-stu-id="f25e0-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
+# <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a><span data-ttu-id="c5e48-102">ICorProfilerInfo::GetInprocInspectionIThisThread 方法</span><span class="sxs-lookup"><span data-stu-id="c5e48-102">ICorProfilerInfo::GetInprocInspectionIThisThread Method</span></span>
+<span data-ttu-id="c5e48-103">取得可針對 ICorDebugThread 介面查詢的物件。</span><span class="sxs-lookup"><span data-stu-id="c5e48-103">Gets an object that can be queried for the ICorDebugThread interface.</span></span> <span data-ttu-id="c5e48-104">這個方法在 .NET Framework 版本2.0 中已過時。</span><span class="sxs-lookup"><span data-stu-id="c5e48-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f25e0-105">語法</span><span class="sxs-lookup"><span data-stu-id="f25e0-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5e48-105">語法</span><span class="sxs-lookup"><span data-stu-id="c5e48-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetInprocInspectionIThisThread(  
     [out] IUnknown **ppicd);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f25e0-106">參數</span><span class="sxs-lookup"><span data-stu-id="f25e0-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c5e48-106">參數</span><span class="sxs-lookup"><span data-stu-id="c5e48-106">Parameters</span></span>  
  `ppicd`  
- <span data-ttu-id="f25e0-107">[out](/cpp/atl/iunknown)物件，可查詢 `ICorDebugThread` 介面。</span><span class="sxs-lookup"><span data-stu-id="f25e0-107">[out](/cpp/atl/iunknown) object that can be queried for the `ICorDebugThread` interface.</span></span>  
+ <span data-ttu-id="c5e48-107">[out](/cpp/atl/iunknown)物件，可查詢 `ICorDebugThread` 介面。</span><span class="sxs-lookup"><span data-stu-id="c5e48-107">[out](/cpp/atl/iunknown) object that can be queried for the `ICorDebugThread` interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f25e0-108">備註</span><span class="sxs-lookup"><span data-stu-id="f25e0-108">Remarks</span></span>  
- <span data-ttu-id="f25e0-109">Common language runtime （CLR）偵錯工具在 .NET Framework 版本1.0 中支援有限的同進程偵錯工具。</span><span class="sxs-lookup"><span data-stu-id="f25e0-109">The common language runtime (CLR) debugging services supported limited in-process debugging in the .NET Framework version 1.0.</span></span> <span data-ttu-id="f25e0-110">同進程的偵錯工具已啟用分析工具，以使用偵錯工具開發介面的檢查部分。</span><span class="sxs-lookup"><span data-stu-id="f25e0-110">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="f25e0-111">由於客戶意見反應的結果，已從版本2.0 中的 .NET Framework 中移除同進程的偵錯工具，並以一組與分析 API 更符合的功能來取代。</span><span class="sxs-lookup"><span data-stu-id="f25e0-111">As a result of customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c5e48-108">備註</span><span class="sxs-lookup"><span data-stu-id="c5e48-108">Remarks</span></span>  
+ <span data-ttu-id="c5e48-109">Common language runtime （CLR）偵錯工具在 .NET Framework 版本1.0 中支援有限的同進程偵錯工具。</span><span class="sxs-lookup"><span data-stu-id="c5e48-109">The common language runtime (CLR) debugging services supported limited in-process debugging in the .NET Framework version 1.0.</span></span> <span data-ttu-id="c5e48-110">同進程的偵錯工具已啟用分析工具，以使用偵錯工具開發介面的檢查部分。</span><span class="sxs-lookup"><span data-stu-id="c5e48-110">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="c5e48-111">由於客戶意見反應的結果，已從版本2.0 中的 .NET Framework 中移除同進程的偵錯工具，並以一組與分析 API 更符合的功能來取代。</span><span class="sxs-lookup"><span data-stu-id="c5e48-111">As a result of customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f25e0-112">需求</span><span class="sxs-lookup"><span data-stu-id="f25e0-112">Requirements</span></span>  
- <span data-ttu-id="f25e0-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f25e0-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c5e48-112">需求</span><span class="sxs-lookup"><span data-stu-id="c5e48-112">Requirements</span></span>  
+ <span data-ttu-id="c5e48-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c5e48-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f25e0-114">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f25e0-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c5e48-114">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c5e48-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f25e0-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f25e0-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c5e48-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c5e48-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f25e0-116">**.NET Framework 版本：** 1。0</span><span class="sxs-lookup"><span data-stu-id="f25e0-116">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="c5e48-116">**.NET Framework 版本：** 1.0</span><span class="sxs-lookup"><span data-stu-id="c5e48-116">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f25e0-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f25e0-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c5e48-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c5e48-117">See also</span></span>
 
-- [<span data-ttu-id="f25e0-118">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="f25e0-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="c5e48-118">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="c5e48-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
