@@ -1,5 +1,5 @@
 ---
-title: Storing data to and reading from the Clipboard
+title: 在剪貼簿儲存和讀取資料
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)
@@ -26,7 +26,7 @@ ms.locfileid: "74349738"
   
  [!code-vb[VbVbcnMyClipboard#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#4)]  
   
- 這個程式碼範例也可用為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，它位於 [Windows Forms 應用程式] > [剪貼簿] 中。 如需詳細資訊，請參閱 [Code Snippets](/visualstudio/ide/code-snippets)。  
+ 這個程式碼範例也可用為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，它位於 [Windows Forms 應用程式] > [剪貼簿] 中。 如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。  
   
  使用 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A> 方法來擷取剪貼簿中的影像。 這個範例會先確認剪貼簿上是否有影像，再擷取它，並將它指派給 `PictureBox1`。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "74349738"
 > [!IMPORTANT]
 > 因為其他使用者可以存取剪貼簿，所以請不要使用它來儲存機密資訊，例如密碼或機密資料。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>
 - <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>

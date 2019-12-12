@@ -81,7 +81,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 1. 請考慮您在部署應用程式之後，會想要在現場接收哪些追蹤輸出。  
   
-2. 建立一組參數。 如需詳細資訊，請參閱[如何：設定追蹤參數](how-to-create-initialize-and-configure-trace-switches.md)。  
+2. 建立一組參數。 如需詳細資訊，請參閱[如何：](how-to-create-initialize-and-configure-trace-switches.md)設定追蹤參數。  
   
 3. 將追蹤陳述式加入應用程式程式碼  
   
@@ -111,7 +111,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  利用追蹤陳述式，您可以避免掉一些困難的工作，例如，檢查原始來源程式碼、加以修改、重新編譯，以及嘗試在偵錯環境內產生執行階段錯誤。 請記住，檢測應用程式不但可以顯示錯誤，還能監視效能。  
   
 ## <a name="strategic-placement-of-trace-statements"></a>追蹤陳述式的策略位置  
- 在放置追蹤陳述式，以在執行階段使用時，您必須特別小心。 您必須考量，在所部署的應用程式中，可能會需要哪些追蹤資訊，以充分涵蓋所有可能的追蹤案例。 使用追蹤的應用程式差異甚大，但是並沒有追蹤策略位置的一般方針。 如需有關放置追蹤陳述式的詳細資訊，請參閱[如何：將追蹤陳述式新增到應用程式程式碼](how-to-add-trace-statements-to-application-code.md)。  
+ 在放置追蹤陳述式，以在執行階段使用時，您必須特別小心。 您必須考量，在所部署的應用程式中，可能會需要哪些追蹤資訊，以充分涵蓋所有可能的追蹤案例。 使用追蹤的應用程式差異甚大，但是並沒有追蹤策略位置的一般方針。 如需有關放置追蹤語句的詳細資訊，請參閱 [如何：將追蹤語句新增至應用程式程式碼](how-to-add-trace-statements-to-application-code.md)。  
   
 ## <a name="output-from-tracing"></a>追蹤的輸出  
  追蹤輸出是由稱為「接聽項」的物件來收集。 接聽程式是會接收追蹤輸出，並將其寫入輸出裝置 (通常是視窗、記錄檔或文字檔) 的物件。 建立追蹤接聽程式時，通常會將它加入至 <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> 集合，讓接聽程式能夠接收所有的追蹤輸出。  
@@ -133,21 +133,21 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  您可以實作自己的接聽程式來產生自訂結果。 比方說，自訂追蹤接聽程式可能會將訊息顯示在訊息方塊，或連接至資料庫，以將訊息加入資料表。 所有自訂接聽程式應該都會支援上述六種方法。 如需有關如何建立開發人員定義之接聽程式的詳細資訊，請參閱 .NET Framework 參考中的 <xref:System.Diagnostics.TraceListener>。  
   
- **Write** 和 **WriteLine** 方法一律會寫入您指定的文字。 **Assert**、**WriteIf** 和 **WriteLineIf** 需要 Boolean 引數，以控制是否要寫入指定的文字；只有當運算式為 **true** (針對 **WriteIf** 和 **WriteLineIf**) 或 **false** (針對 **Assert**) 時，才會寫入指定的文字。 **Fail** 方法一律會寫入指定的文字。 如需詳細資訊，請參閱[如何：將追蹤陳述式新增到應用程式程式碼](how-to-add-trace-statements-to-application-code.md)和 .NET Framework 參考。  
+ **Write** 和 **WriteLine** 方法一律會寫入您指定的文字。 **Assert**、**WriteIf** 和 **WriteLineIf** 需要 Boolean 引數，以控制是否要寫入指定的文字；只有當運算式為 **true** (針對 **WriteIf** 和 **WriteLineIf**) 或 **false** (針對 **Assert**) 時，才會寫入指定的文字。 **Fail** 方法一律會寫入指定的文字。 如需詳細資訊，請參閱[如何：將追蹤語句新增至應用程式程式碼](how-to-add-trace-statements-to-application-code.md) 和 .NET Framework 參考。  
   
 ## <a name="security-concerns"></a>安全性考量  
- 如果您在部署 ASP.NET 應用程式之前，沒有先停用追蹤和偵錯，您的應用程式可能會顯示其本身會遭惡意程式利用的相關資訊。 如需詳細資訊，請參閱[如何：使用追蹤和偵錯進行條件式編譯](how-to-compile-conditionally-with-trace-and-debug.md)、[編譯和建置](/visualstudio/ide/compiling-and-building-in-visual-studio)，以及[如何：建立、初始化和設定追蹤參數](how-to-create-initialize-and-configure-trace-switches.md)。 偵錯也可以透過 Internet Information Services (IIS) 來設定。  
+ 如果您在部署 ASP.NET 應用程式之前，沒有先停用追蹤和偵錯，您的應用程式可能會顯示其本身會遭惡意程式利用的相關資訊。 如需詳細資訊，請參閱[如何：使用追蹤和 Debug 條件地編譯](how-to-compile-conditionally-with-trace-and-debug.md)、[編譯和建立](/visualstudio/ide/compiling-and-building-in-visual-studio)，以及 [如何：建立、初始化和設定追蹤參數](how-to-create-initialize-and-configure-trace-switches.md)。 偵錯也可以透過 Internet Information Services (IIS) 來設定。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - [程式碼合約](code-contracts.md)
 - [C#、F# 和 Visual Basic 專案類型](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
-- [如何：將追蹤陳述式新增至應用程式碼](how-to-add-trace-statements-to-application-code.md)
+- [如何：將追蹤語句新增至應用程式程式碼](how-to-add-trace-statements-to-application-code.md)
 - [如何：使用追蹤和偵錯進行條件式編譯](how-to-compile-conditionally-with-trace-and-debug.md)
 - [如何：建立、初始化和設定追蹤參數](how-to-create-initialize-and-configure-trace-switches.md)
 - [如何：建立和初始化追蹤來源](how-to-create-and-initialize-trace-sources.md)
-- [如何：使用 TraceSource 和含有追蹤接聽項的篩選](how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [如何：搭配追蹤接聽項使用 TraceSource 和篩選](how-to-use-tracesource-and-filters-with-trace-listeners.md)
 - [追蹤接聽項](trace-listeners.md)
 - [追蹤參數](trace-switches.md)

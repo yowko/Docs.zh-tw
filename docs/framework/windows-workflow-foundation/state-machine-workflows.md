@@ -21,7 +21,7 @@ ms.locfileid: "74710915"
   
 - <xref:System.Activities.Statements.Transition>  
   
- 若要建立狀態機器工作流程，必須將狀態加入至 <xref:System.Activities.Statements.StateMachine> 活動，並使用轉換來控制狀態之間的流向。 下列螢幕擷取畫面，從[消費者入門教學](getting-started-tutorial.md)課程步驟 how [To：建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)中，會顯示狀態機器工作流程，其中包含三個狀態和三個轉換。 [**初始化目標**] 是初始狀態，代表工作流程中的第一個狀態。 這是由從**開始**節點導向到它的那一行所指定。 工作流程中的最終狀態名為**FinalState**，代表工作流程的完成點。  
+ 若要建立狀態機器工作流程，必須將狀態加入至 <xref:System.Activities.Statements.StateMachine> 活動，並使用轉換來控制狀態之間的流向。 下列螢幕擷取畫面，來自[消費者入門教學](getting-started-tutorial.md)課程步驟 [如何：建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)，顯示具有三個狀態和三個轉換的狀態機器工作流程。 [**初始化目標**] 是初始狀態，代表工作流程中的第一個狀態。 這是由從**開始**節點導向到它的那一行所指定。 工作流程中的最終狀態名為**FinalState**，代表工作流程的完成點。  
   
  ![顯示已完成狀態機器工作流程的圖例。](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "74710915"
 > [!NOTE]
 > 請注意，如果轉換的 <xref:System.Activities.Statements.Transition.Condition%2A> 值評估為 `False` (或所有共用觸發轉換的條件皆評估為 `False`)，則不會發生轉換，且會重新排程該狀態之所有轉換的所有觸發。  
   
- 如需建立狀態機器工作流程的詳細資訊，請參閱[如何：建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)、 [StateMachine 活動設計](/visualstudio/workflow-designer/statemachine-activity-designer)工具、[狀態活動設計](/visualstudio/workflow-designer/state-activity-designer)工具、 [FinalState 活動設計](/visualstudio/workflow-designer/finalstate-activity-designer)工具和[轉換活動設計](/visualstudio/workflow-designer/transition-activity-designer)工具。  
+ 如需建立狀態機器工作流程的詳細資訊，請參閱 [如何：建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)、[ [StateMachine] 活動設計](/visualstudio/workflow-designer/statemachine-activity-designer)工具、[[狀態] 活動設計](/visualstudio/workflow-designer/state-activity-designer)工具、[ [FinalState] 活動設計](/visualstudio/workflow-designer/finalstate-activity-designer)工具和 [[轉換] 活動設計](/visualstudio/workflow-designer/transition-activity-designer)工具。  
   
 ## <a name="state-machine-terminology"></a>狀態機器術語  
  本節定義在本主題中使用的狀態機器詞彙。  
@@ -94,13 +94,13 @@ ms.locfileid: "74710915"
  自行轉換  
  從某狀態轉換成該狀態本身的轉換。  
   
- 初始狀態  
+ 起始狀態  
  代表狀態機器起點的狀態。  
   
  最終狀態  
  代表狀態機器完成的狀態。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [如何：建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)
 - [StateMachine 活動設計工具](/visualstudio/workflow-designer/statemachine-activity-designer)

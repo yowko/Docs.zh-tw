@@ -65,4 +65,4 @@ HRESULT NewArray (
   
  **程式庫：** CorGuids.lib  
   
- **.NET Framework 版本：** 1.1、1.0
+ **.NET Framework 版本：** 1.1、1。0

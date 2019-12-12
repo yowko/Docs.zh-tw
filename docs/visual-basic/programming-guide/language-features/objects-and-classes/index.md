@@ -16,13 +16,13 @@ ms.locfileid: "74346708"
 
 「物件」是可視為一個單位的程式碼和資料組合。 物件可以是應用程式的一部分，例如控制項或表單。 整個應用程式也可以是一個物件。
 
-When you create an application in Visual Basic, you constantly work with objects. You can use objects provided by Visual Basic, such as controls, forms, and data access objects. You can also use objects from other applications within your Visual Basic application. 您甚至可以建立自己的物件，並為其定義其他屬性和方法。 物件的作用類似針對程式預製的建置組塊 - 它們可讓您撰寫一段程式碼一次，然後不斷地重複使用。
+當您在 Visual Basic 中建立應用程式時，您會經常使用物件。 您可以使用 Visual Basic 所提供的物件，例如控制項、表單和資料存取物件。 您也可以使用來自 Visual Basic 應用程式中其他應用程式的物件。 您甚至可以建立自己的物件，並為其定義其他屬性和方法。 物件的作用類似針對程式預製的建置組塊 - 它們可讓您撰寫一段程式碼一次，然後不斷地重複使用。
 
 本主題會詳細討論物件。
 
 ## <a name="objects-and-classes"></a>物件和類別
 
-Each object in Visual Basic is defined by a *class*. 類別會描述物件的變數、屬性、程序及事件。 物件是類別的執行個體；當您定義類別之後，就能視需要建立最多的物件。
+Visual Basic 中的每個物件都是由*類別*所定義。 類別會描述物件的變數、屬性、程序及事件。 物件是類別的執行個體；當您定義類別之後，就能視需要建立最多的物件。
 
 若要了解物件和其類別之間的關聯性，請想像餅乾壓模與餅乾。 餅乾壓模是類別。 它會定義每塊餅乾的特性，例如大小和形狀。 類別可用來建立物件。 物件則是餅乾。
 
@@ -121,7 +121,7 @@ safetyTimer.Start()
 
 如需詳細資訊，請參閱[程序](../../../../visual-basic/programming-guide/language-features/procedures/index.md)。
 
-### <a name="events"></a>「事件」
+### <a name="events"></a>Events
 
 事件是物件所識別的動作 (例如按一下滑鼠按鈕或按下按鍵)，而您可以撰寫程式碼來回應。 事件可能因使用者動作或程式碼而發生，或由系統所導致。 您可以將對事件發出訊號的程式碼視為「引發」事件，而將回應事件的程式碼視為「處理」它。
 
@@ -176,7 +176,7 @@ safetyTimer.Start()
 
 物件可讓您宣告變數和程序一次，接著就能在需要時重複使用它們。 例如，如果您想要在應用程式中加入拼字檢查程式，您可以定義所有變數和支援函式來提供拼字檢查功能。 如果您以類別形式建立拼字檢查程式，接著就能藉由加入對已編譯組件的參考，在其他應用程式中重複使用它。 更棒的是，您或許能夠使用其他人已經開發的拼字檢查程式類別來簡化您的一些工作。
 
-The .NET Framework provides many examples of components that are available for use. 下列範例使用 <xref:System> 命名空間中的 <xref:System.TimeZone> 類別。 <xref:System.TimeZone> 提供可讓您擷取目前電腦系統時區相關資訊的成員。
+.NET Framework 提供許多可供使用的元件範例。 下列範例使用 <xref:System> 命名空間中的 <xref:System.TimeZone> 類別。 <xref:System.TimeZone> 提供可讓您擷取目前電腦系統時區相關資訊的成員。
 
 ```vb
 Public Sub examineTimeZone()
@@ -249,27 +249,27 @@ End Sub
 
 #### <a name="collections"></a>集合
 
-物件內含項目的一個特定型別是由「集合」來代表。 集合是一組可列舉的相似物件。 Visual Basic supports a specific syntax in the [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) that allows you to iterate through the items of a collection. 此外，集合通常可讓您使用 <xref:Microsoft.VisualBasic.Collection.Item%2A>，依其索引來擷取項目，或者將它們關聯至唯一字串來擷取項目。 比起陣列，集合更容易使用，因為它們讓您不需使用索引，就能新增或移除項目。 由於集合易於使用，因此，通常會用來儲存表單和控制項。
+物件內含項目的一個特定型別是由「集合」來代表。 集合是一組可列舉的相似物件。 Visual Basic 在 For Each 中支援特定的語法 ... [下一個語句](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)，可讓您逐一查看集合的專案。 此外，集合通常可讓您使用 <xref:Microsoft.VisualBasic.Collection.Item%2A>，依其索引來擷取項目，或者將它們關聯至唯一字串來擷取項目。 比起陣列，集合更容易使用，因為它們讓您不需使用索引，就能新增或移除項目。 由於集合易於使用，因此，通常會用來儲存表單和控制項。
 
 ## <a name="related-topics"></a>相關主題
 
-[Walkthrough: Defining Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
+[逐步解說：定義類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
 提供如何建立類別的逐步說明。
 
-[Overloaded Properties and Methods](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
+多載[屬性和方法](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
 多載屬性和方法
 
 [繼承的基本概念](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)\
 涵蓋繼承修飾詞，覆寫方法和屬性、MyClass 及 MyBase。
 
-[物件存留期：物件的建立和終結](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)\
+[物件存留期：如何建立和終結物件](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)\
 討論類別執行個體的建立與處置。
 
 [匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)\
 描述如何建立和使用匿名型別，讓您不需撰寫資料型別的類別定義，就能建立物件。
 
-[物件初始設定式：具名和匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\
+[物件初始化運算式：](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\ 命名和匿名型別
 討論物件初始設定式，它們可用於透過使用單一運算式來建立具名和匿名型別的執行個體。
 
-[How to: Infer Property Names and Types in Anonymous Type Declarations](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
+[如何：在匿名型別宣告中推斷屬性名稱和類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
 說明如何在匿名型別宣告中推斷屬性名稱和型別。 提供成功和失敗的推斷範例。
