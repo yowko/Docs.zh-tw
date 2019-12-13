@@ -2,18 +2,18 @@
 title: 作法：建立自訂活動範本
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-ms.openlocfilehash: 4ec84658dbe3039a4d7d714f8da183e6a5eb6ca4
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f910d1367c941dbc319421d402cae8f4194872e5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989717"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715246"
 ---
-# <a name="how-to-create-a-custom-activity-template"></a>HOW TO：建立自訂活動範本
+# <a name="how-to-create-a-custom-activity-template"></a>作法：建立自訂活動範本
 
-自訂活動範本是用來自訂活動的組態，包括自訂複合活動，因此使用者不需要個別建立每個活動以及手動設定其所有屬性和其他設定。 這些自訂範本可以在的 [**工具箱**] 中[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]或從重新裝載設計工具中取得，使用者可以從中將其拖曳至預先設定的設計介面。 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]附有這類範本的良好範例： [Sendandreceivereply 範本設計](/visualstudio/workflow-designer/sendandreceivereply-template-designer)工具和 [訊息活動設計](/visualstudio/workflow-designer/messaging-activity-designers)工具 分類中的 [receiveandsendreply 範本設計](/visualstudio/workflow-designer/receiveandsendreply-template-designer)工具。
+自訂活動範本是用來自訂活動的組態，包括自訂複合活動，因此使用者不需要個別建立每個活動以及手動設定其所有屬性和其他設定。 這些自訂範本可在 Windows 工作流程設計工具的 [工具箱] 或從重新裝載設計**工具**中取得，使用者可以從中將其拖曳至預先設定的設計介面。 工作流程設計工具隨附此類範本的良好範例： [[訊息活動設計](/visualstudio/workflow-designer/messaging-activity-designers)工具] 分類中的 [ [sendandreceivereply 範本設計](/visualstudio/workflow-designer/sendandreceivereply-template-designer)工具] 和 [ [receiveandsendreply 範本設計](/visualstudio/workflow-designer/receiveandsendreply-template-designer)工具]。
 
- 本主題中的第一個程式描述如何建立**延遲**活動的自訂活動範本，而第二個程式會簡要說明如何讓它在中[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]使用，以驗證自訂範本是否正常運作。
+ 本主題中的第一個程式描述如何建立**Delay**活動的自訂活動範本，而第二個程式說明如何讓它在工作流程設計工具中提供，以驗證自訂範本是否正常運作。
 
  自訂活動範本必須實作 <xref:System.Activities.Presentation.IActivityTemplateFactory>。 此介面有單一 <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A> 方法，您可以用它來建立及設定範本中所用的活動執行個體。
 
@@ -29,7 +29,7 @@ ms.locfileid: "70989717"
 
 4. 在 [**範本**] 窗格中，選取 [**活動程式庫**]。
 
-5. 在 [**名稱**] 方塊中`DelayActivityTemplate`，輸入。
+5. 在 [**名稱**] 方塊中，輸入 `DelayActivityTemplate`。
 
 6. 接受 [**位置**] 和 [**方案名稱**] 文字方塊中的預設值，然後按一下 **[確定]** 。
 
@@ -76,7 +76,7 @@ ms.locfileid: "70989717"
 
 1. 以滑鼠右鍵按一下**方案總管**中的 [DelayActivityTemplate] 方案，然後依序選擇 [**加入**] 和 [**新增專案**]，開啟 [**加入新的專案**] 對話方塊。
 
-2. 選取 [**工作流程主控台應用程式**] 範本`CustomActivityTemplateApp`，將它命名為，然後按一下 **[確定]** 。
+2. 選取 **工作流程主控台應用程式** 範本，將它命名為 `CustomActivityTemplateApp`，然後按一下**確定**。
 
 3. 在**方案總管**中，以滑鼠右鍵按一下 CustomActivityTemplateApp 專案的 [參考] 目錄，然後選擇 [**加入參考**] 以開啟 [**加入參考**] 對話方塊。
 
@@ -90,7 +90,7 @@ ms.locfileid: "70989717"
 
 8. 開啟 [Workflow1.xaml] 檔案，然後開啟 [**工具箱**]。
 
-9. 在 [ **DelayActivityTemplate** ] 類別中找出 [ **MyDelayActivity** ] 範本。 將它拖曳至設計介面。 在 [**屬性**] 視窗`Duration`中確認屬性已設定為10秒。
+9. 在 [ **DelayActivityTemplate** ] 類別中找出 [ **MyDelayActivity** ] 範本。 將它拖曳至設計介面。 在 [**屬性**] 視窗中確認 `Duration` 屬性已設定為10秒。
 
 ## <a name="example"></a>範例
  MyDelayActivity.cs 檔案應該會包含下列程式碼。
