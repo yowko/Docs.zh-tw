@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 5f5418da63b2bc5fc9b20f5c262890b7a06ce5dd
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 59f9edf67c03fb7d8670058eca8ea672a6f64c02
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989915"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837866"
 ---
 # <a name="getting-started-sample"></a>使用者入門範例
 
@@ -26,7 +26,7 @@ ms.locfileid: "70989915"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在, 請移至[.NET Framework 4 的 Windows Communication Foundation (wcf) 和 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780), 以下載所有 Windows Communication Foundation (wcf) [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted`
 
@@ -34,7 +34,7 @@ ms.locfileid: "70989915"
 
 用戶端包含服務合約的定義，以及用來存取服務的 Proxy 類別。 使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，從服務中繼資料產生 proxy 程式碼。
 
-在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，服務會裝載在 Windows Activation Service (WAS) 中。 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)][!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]和 上，服務會由網際網路資訊服務 (IIS) 與 ASP.NET 加以裝載。 使用 IIS 或 WAS 裝載服務，便可以讓服務在第一次存取時就自動啟動。
+在 Windows Vista 上，服務裝載于 Windows 啟用服務（WAS）中。 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)][!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]和 上，服務會由網際網路資訊服務 (IIS) 與 ASP.NET 加以裝載。 使用 IIS 或 WAS 裝載服務，便可以讓服務在第一次存取時就自動啟動。
 
 > [!NOTE]
 > 如果您想要開始使用在主控台應用程式（而不是 IIS）中裝載服務的範例，請參閱[自我裝載](../../../../docs/framework/wcf/samples/self-host.md)範例。
@@ -142,9 +142,9 @@ public class CalculatorService : ICalculator
 
 服務會公開位在 IIS 或 WAS 主機提供之基底位址上的端點。 繫結會設定為標準 <xref:System.ServiceModel.WSHttpBinding>，此繫結會提供用於定址和安全性的 HTTP 通訊與標準 Web 服務通訊協定。 此合約是服務實作的 `ICalculator`。
 
-在設定，可以存取的服務在 `http://localhost/servicemodelsamples/service.svc` 在同一部電腦上的用戶端。 為了讓遠端電腦上的用戶端存取服務，這時必須指定完整網域名稱，而不要指定 localhost。
+如已設定，服務可在同一部電腦上的用戶端 `http://localhost/servicemodelsamples/service.svc` 存取。 為了讓遠端電腦上的用戶端存取服務，這時必須指定完整網域名稱，而不要指定 localhost。
 
-根據預設，此架構不會公開任何中繼資料。 因此，服務會開啟<xref:System.ServiceModel.Description.ServiceMetadataBehavior>並公開在中繼資料交換 (MEX) 端點 `http://localhost/servicemodelsamples/service.svc/mex` 。 下列組態會示範這個作業。
+根據預設，此架構不會公開任何中繼資料。 因此，服務會開啟 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>，並在 `http://localhost/servicemodelsamples/service.svc/mex`公開中繼資料交換（MEX）端點。 下列組態會示範這個作業。
 
 ```xaml
 <system.serviceModel>
