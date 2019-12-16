@@ -51,7 +51,7 @@ ms.locfileid: "72799123"
 
 第一個步驟是建立專案並設定表單。
 
-#### <a name="to-create-the-project"></a>建立專案
+#### <a name="to-create-the-project"></a>若要建立專案
 
 1. 建立名為 "TableLayoutPanelExample" 的 Windows 應用程式專案。 如需詳細資訊，請參閱[如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)。
 
@@ -97,7 +97,7 @@ ms.locfileid: "72799123"
 
 1. 選取**Windows Form 設計工具**中的 [<xref:System.Windows.Forms.TableLayoutPanel>] 控制項。
 
-2. 在 [**屬性**] 視窗中，按一下 [資料**行**] 專案旁邊的省略號（![[](./media/visual-studio-ellipsis-button.png)Visual Studio 中的屬性視窗中的省略號按鈕（...）] 按鈕，開啟 [<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>] 集合。
+2. 在 [**屬性**] 視窗中，按一下 [資料**行**] 專案旁邊的省略號（![](./media/visual-studio-ellipsis-button.png)Visual Studio 中的屬性視窗中的省略號按鈕（...） 按鈕，開啟 [<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>] 集合。
 
 3. 選取第一個資料行，並將其 [<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>] 屬性的值變更為 [<xref:System.Windows.Forms.SizeType.AutoSize>]。 按一下 **[確定]** 以接受變更。 請注意，第一個資料行的寬度會縮小，以符合 <xref:System.Windows.Forms.Button> 控制項。 另請注意，資料行的寬度無法調整大小。
 
@@ -187,7 +187,7 @@ ms.locfileid: "72799123"
 
 - 將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項停駐在父表單。 調整表單的大小，並注意配置的效果。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
