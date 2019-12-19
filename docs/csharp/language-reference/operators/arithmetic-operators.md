@@ -27,21 +27,21 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 9760be0fcfe29d2c11cbb1f4d4d81c5a79261a0d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ca2513a0f865fd7da728f7d3247bdb7b50a2f48a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771727"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036432"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術運算子 (C# 參考)
 
-下列運算子會使用數字型別執行算術運算：
+下列運算子會使用數數值型別的運算元來執行算數運算：
 
 - 一元 [`++` (遞增)](#increment-operator-)、[`--` (遞減)](#decrement-operator---)、[`+` (加號)](#unary-plus-and-minus-operators) 和 [`-` (減號)](#unary-plus-and-minus-operators) 運算子
 - 二元 [`*` (乘法)](#multiplication-operator-)、[`/` (除法)](#division-operator-)、[`%` (餘數)](#remainder-operator-)、[`+` (加法)](#addition-operator-) 和 [`-` (減法)](#subtraction-operator--) 運算子
 
-這些運算子可支援所有[整數](../builtin-types/integral-numeric-types.md)和[浮點](../builtin-types/floating-point-numeric-types.md)數字型別。
+所有[整數](../builtin-types/integral-numeric-types.md)和[浮點](../builtin-types/floating-point-numeric-types.md)數數值型別都支援這些運算子。
 
 ## <a name="increment-operator-"></a>遞增運算子 ++
 
@@ -51,13 +51,13 @@ ms.locfileid: "72771727"
 
 ### <a name="postfix-increment-operator"></a>後置遞增運算子
 
-`x++` 的結果為運算「之前」的 `x` 值，如下列範例所示：
+`x++` 的結果為運算「之前」`x`*的*  值，如下列範例所示：
 
 [!code-csharp-interactive[postfix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixIncrement)]
 
 ### <a name="prefix-increment-operator"></a>前置遞增運算子
 
-`++x` 的結果為運算「之後」的 `x` 值，如下列範例所示：
+`++x` 的結果為運算「之後」`x`*的*  值，如下列範例所示：
 
 [!code-csharp-interactive[prefix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixIncrement)]
 
@@ -69,13 +69,13 @@ ms.locfileid: "72771727"
 
 ### <a name="postfix-decrement-operator"></a>後置遞減運算子
 
-`x--` 的結果為運算「之前」的 `x` 值，如下列範例所示：
+`x--` 的結果為運算「之前」`x`*的*  值，如下列範例所示：
 
 [!code-csharp-interactive[postfix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixDecrement)]
 
 ### <a name="prefix-decrement-operator"></a>前置遞減運算子
 
-`--x` 的結果為運算「之後」的 `x` 值，如下列範例所示：
+`--x` 的結果為運算「之後」`x`*的*  值，如下列範例所示：
 
 [!code-csharp-interactive[prefix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixDecrement)]
 
@@ -85,7 +85,7 @@ ms.locfileid: "72771727"
 
 [!code-csharp-interactive[unary plus and minus](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#UnaryPlusAndMinus)]
 
-一元 `-` 運算子不支援 [ulong](../builtin-types/integral-numeric-types.md) 型別。
+[Ulong](../builtin-types/integral-numeric-types.md)類型不支援一元 `-` 運算子。
 
 ## <a name="multiplication-operator-"></a>乘法運算子 *
 
@@ -122,7 +122,7 @@ ms.locfileid: "72771727"
 餘數運算子 `%` 會計算其左邊運算元除以右邊運算元之後的餘數。
 
 ### <a name="integer-remainder"></a>整數餘數
-  
+
 對整數型別的運算元來說，`a % b` 的結果是 `a - (a / b) * b` 所產生的值。 非零餘數的正負號與左邊運算元的正負號相同，如下列範例所示：
 
 [!code-csharp-interactive[integer remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerRemainder)]
@@ -131,17 +131,17 @@ ms.locfileid: "72771727"
 
 ### <a name="floating-point-remainder"></a>浮點數餘數
 
-對於 `float` 和 `double` 運算元，有限 `x` 和 `y` 的 `x % y` 結果是 `z` 值，像是
+對於 `float` 和 `double` 運算元，有限 `x % y` 和 `x` 的 `y` 結果是 `z` 值，像是
 
 - 若 `z` 不是零，其正負號與 `x` 的正負號相同。
 - `z` 的絕對值是由 `|x| - n * |y|` 產生的值，其中 `n` 為最大可能整數，小於或等於 `|x| / |y|`，而 `|x|`和 `|y|`則分別是 `x` 和 `y` 的絕對值。
 
 > [!NOTE]
-> 這項計算餘數的方法和用於整數運算元的方法類似，但不同於 IEEE 754。 如需符合 IEEE 754 的餘數運算，請使用 <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> 方法。
+> 這種計算餘數的方法類似于用於整數運算元的，但與 IEEE 754 規格不同。 如果您需要符合 IEEE 754 規格的餘數運算，請使用 <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> 方法。
 
-如需在非有限運算元情況中 `%` 運算子的行為，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[餘數運算子](~/_csharplang/spec/expressions.md#remainder-operator)小節。
+如需在非有限運算元情況中 `%` 運算子的行為，請參閱 [C# 語言規格](~/_csharplang/spec/expressions.md#remainder-operator)的[餘數運算子](~/_csharplang/spec/introduction.md)小節。
 
-針對 `decimal` 運算元，餘數運算子 `%` 相當於 <xref:System.Decimal?displayProperty=nameWithType> 型別的[餘數運算子](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>)。
+針對 `decimal` 運算元，餘數運算子 `%` 相當於 [ 型別的](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>)餘數運算子<xref:System.Decimal?displayProperty=nameWithType>。
 
 下列範例示範具有浮點運算元的餘數運算子行為：
 
@@ -161,7 +161,7 @@ ms.locfileid: "72771727"
 
 [!code-csharp-interactive[subtraction operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Subtraction)]
 
-您也可以使用 `-` 運算子進行委派移除。 如需詳細資訊，請參閱 [`-` 運算子](subtraction-operator.md)一文。
+您也可以使用 `-` 運算子進行委派移除。 如需詳細資訊，請參閱 [`-` 和 `-=` 運算子](subtraction-operator.md)一文。
 
 ## <a name="compound-assignment"></a>複合指派
 
@@ -183,11 +183,11 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
 
-由於[數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)的緣故，`op` 作業的結果可能不會隱含轉換成 `x` 的 `T` 類型。 在此情況下，如果 `op` 是預先定義的運算子，且作業結果可以明確轉換成 `x` 的 `T` 型別，則形式 `x op= y` 的複合指派運算式相等於 `x = (T)(x op y)`，唯一的不同在於 `x` 只會評估一次。 下列範例示範了該行為：
+由於[數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)的緣故，`op` 作業結果可能無法隱含轉換成 `T` 的 `x` 型別。 在此情況下，如果 `op` 是預先定義的運算子，且作業結果可以明確轉換成 `T` 的 `x` 型別，則形式 `x op= y` 的複合指派運算式相等於 `x = (T)(x op y)`，唯一的不同在於 `x` 只會評估一次。 下列範例示範了該行為：
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
-您也可以使用 `+=` 和 `-=` 運算子訂閱及取消訂閱[事件](../keywords/event.md)。 如需詳細資訊，請參閱[如何：訂閱及取消訂閱事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
+您也可以使用 `+=` 和 `-=` 運算子，分別訂閱及取消訂閱[事件](../keywords/event.md)。 如需詳細資訊，請參閱[如何：訂閱及取消訂閱事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 
 ## <a name="operator-precedence-and-associativity"></a>運算子優先順序和關聯性
 
@@ -204,7 +204,7 @@ x = x op y
 
 [!code-csharp-interactive[precedence and associativity](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
 
-如需按優先順序層級排序的 C# 運算子完整清單，請參閱 [C# 運算子](index.md)。
+如需依優先順序層C#級排序的完整運算子清單，請參閱[ C#運算子](index.md)一文的[運算子優先順序](index.md#operator-precedence)一節。
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>算術溢位和除數為零
 
@@ -235,11 +235,11 @@ x = x op y
 
 ## <a name="round-off-errors"></a>四捨五入錯誤
 
-由於實數和浮點算術的浮點數表示法的一般限制，使用浮點型別計算時可能會發生四捨五入錯誤。 亦即，運算式產生的結果可能不同於預期的數學結果。 下列範例將示範幾個這類案例：
+由於實數和浮點算術的浮點標記法有一般限制，因此在具有浮點類型的計算中可能會發生四捨五入錯誤。 亦即，運算式產生的結果可能不同於預期的數學結果。 下列範例將示範幾個這類案例：
 
 [!code-csharp-interactive[round-off errors](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#RoundOffErrors)]
 
-如需詳細資訊，請參閱 [System.Double](/dotnet/api/system.double#remarks)、[System.Single](/dotnet/api/system.single#remarks) 或 [System.Decimal](/dotnet/api/system.decimal#remarks) 參考頁面的備註。
+如需詳細資訊，請參閱[System.Double](/dotnet/api/system.double#remarks)、[、System.Single](/dotnet/api/system.single#remarks) 或 [System.Decimal](/dotnet/api/system.decimal#remarks) 參考頁面上的備註。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 

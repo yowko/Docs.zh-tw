@@ -17,13 +17,13 @@ ms.locfileid: "74281780"
 
 根據 [Creative Commons Attribution 授權](https://creativecommons.org/licenses/by/4.0/)，所收集的資料為匿名，且將會以彙總形式發佈。 
 
-## <a name="scope"></a>`Scope`
+## <a name="scope"></a>範圍
 
-`dotnet` 有兩個功能：執行應用程式，以及執行 CLI 命令。 使用 `dotnet` 啟動應用程式時 (格式如下)，「不會收集」遙測：
+`dotnet` 有兩個功能：執行應用程式，以及執行 CLI 命令。 使用  *啟動應用程式時 (格式如下)，「不會收集」* `dotnet`遙測：
 
 - `dotnet [path-to-app].dll`
 
-使用以下任何 [.NET Core CLI 命令](index.md) 時，則「會收集」遙測：
+使用以下任何 *[.NET Core CLI 命令](index.md)* 時，則「會收集」遙測：
 
 - `dotnet build`
 - `dotnet pack`
@@ -55,7 +55,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 遙測功能會收集下列資料：
 
-| SDK 版本 | 資料 |
+| SDK 版本 | Data |
 |--------------|------|
 | 全部          | 叫用的時間戳記。 |
 | 全部          | 叫用的命令 (例如 "build")，從 2.1 開始已雜湊。 |
