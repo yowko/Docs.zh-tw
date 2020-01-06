@@ -2,12 +2,12 @@
 title: Azure 中的資料儲存體
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |Azure 中的資料儲存體
 ms.date: 06/30/2019
-ms.openlocfilehash: 1a86cecf005c6dbdfda5cf4cacfafaad4711c076
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5ba05f53faf65334f6269af8ae2c54d81e6b0779
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087761"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337461"
 ---
 # <a name="data-storage-in-azure"></a>Azure 中的資料儲存體
 
@@ -63,7 +63,7 @@ Azure SQL Database 包含[內建的監視和智慧型調整](https://docs.micros
 
 - 在幾秒內視需要進行[調整](https://docs.microsoft.com/azure/mysql/concepts-high-availability)。
 
-- 安全地保護待用和移動中的敏感性資料。
+- 受到保護，可保護機密的靜止資料和移動中資料。
 
 - 最多35天的[自動備份](https://docs.microsoft.com/azure/mysql/concepts-backup)和[時間點還原](https://docs.microsoft.com/azure/mysql/concepts-backup)。
 
@@ -131,9 +131,9 @@ Cosmos DB 中的[多](https://docs.microsoft.com/azure/cosmos-db/how-to-multi-ma
 
 - 無限制的彈性寫入和讀取擴充性。
 
-- 99.999% 全球各地的讀取和寫入可用性。
+- 在世界各地具有 99.999% 的讀取和寫入可用性。
 
-- 保證在第99個百分位數小於10毫秒提供服務的讀取和寫入。
+- 保證讀取和寫入會以第 99 百分位數且小於 10 毫秒的方式提供服務。
 
 就內部而言，Cosmos DB 會處理具有一致性層級保證之區域之間的資料複寫，以及財務支援的服務等級協定。
 
@@ -141,7 +141,7 @@ Cosmos DB 中的[多](https://docs.microsoft.com/azure/cosmos-db/how-to-multi-ma
 
 ### <a name="multi-model-support"></a>多模型支援
 
-Cosmos DB 是*多模型資料平臺*，可讓您使用數個支援的 NoSQL 模型與資料互動，包括檔、索引鍵/值組、寬資料行和圖形標記法。 就內部而言，資料是以基本資料類型組成的簡單[結構](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs)格式儲存，包括字串、布林和數位。 資料庫引擎會針對每個要求，將資料轉譯成您所選取的模型標記法。 您可以從專屬 Cosmos DB 以 SQL 為基礎的 API 或任何如圖5-14 所示的[相容性 api](https://www.wikiwand.com/en/Cosmos_DB)中選擇。
+Cosmos DB 是*多模型資料平臺*，可讓您使用數個支援的 NoSQL 模型與資料互動，包括檔、索引鍵/值組、寬資料行和圖形標記法。 就內部而言，資料是以基本資料類型所組成的簡單[結構](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs)格式儲存，包括字串、布林值和數位。 資料庫引擎會針對每個要求，將資料轉譯成您所選取的模型標記法。 您可以從專屬 Cosmos DB 以 SQL 為基礎的 API 或任何如圖5-14 所示的[相容性 api](https://www.wikiwand.com/en/Cosmos_DB)中選擇。
 
 ![Cosmos DB 提供者](./media/cosmos-db-providers.png)
 
@@ -191,7 +191,7 @@ Azure Cosmos DB 會使用自動[分割](https://docs.microsoft.com/azure/cosmos-
 
 就內部而言，Cosmos DB 會自動管理[實體](https://docs.microsoft.com/azure/cosmos-db/partition-data)分割區上[邏輯](https://docs.microsoft.com/azure/cosmos-db/partition-data)分割區的位置，以有效率地滿足容器的擴充性和效能需求。 隨著應用程式的輸送量和儲存體需求增加，Azure Cosmos DB 會移動邏輯分割區，以將負載分散到更多的伺服器上。 這些轉散發作業是由 Cosmos DB 管理，而且會在沒有任何中斷或停機的情況下執行。
 
-## <a name="azure-redis-cache"></a>Azure Redis 快取
+## <a name="azure-redis-cache"></a>Azure Redis Cache
 
 瞭解快取以改善效能和擴充性的優點很容易理解。
 

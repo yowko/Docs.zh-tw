@@ -4,12 +4,12 @@ description: 瞭解如何將現有的 ASP.NET Web Forms 應用程式遷移至 Bl
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: b6604e000eaf79bcd8da15d72a3d85713c620851
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 52f463c66c2980d59a93f3210b3cfd825bec33da
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191934"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337443"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>從 ASP.NET Web Forms 遷移至 Blazor
 
@@ -252,7 +252,7 @@ public class Startup
 
 ## <a name="migrate-http-modules-and-handlers-to-middleware"></a>將 HTTP 模組和處理常式遷移至中介軟體
 
-HTTP 模組和處理常式是 Web Forms 中用來控制 HTTP 要求管線的常見模式。 執行 `IHttpModule` 或 `IHttpHandler` 的類別可能會註冊並處理傳入的要求。 Web Forms 會*在 web.config 檔案*中設定模組和處理常式。 Web form 也是以應用程式生命週期事件處理為基礎。 ASP.NET Core 會改為使用中介軟體。 中介軟體是在 `Startup` 類別的 `Configure` 方法中註冊。 中介軟體執行順序取決於註冊順序。
+HTTP 模組和處理常式是 Web Forms 中用來控制 HTTP 要求管線的常見模式。 執行 `IHttpModule` 或 `IHttpHandler` 的類別可能會註冊並處理傳入的要求。 Web Forms 會*在 web.config 檔案*中設定模組和處理常式。 Web form 也是以應用程式生命週期事件處理為基礎。 ASP.NET Core 會改為使用中介軟體。 中介軟體會在 `Startup` 類別的 `Configure` 方法中註冊。 中介軟體執行順序取決於註冊順序。
 
 在[啟用啟動](#enable-startup-process)程式一節中，Web form 引發的生命週期事件會當做 `Application_BeginRequest` 方法。 ASP.NET Core 不提供此事件。 達成此行為的其中一種方式是執行中介軟體，如*Startup.cs*檔案範例中所示。 此中介軟體會執行相同的邏輯，然後將控制權轉移至中介軟體管線中的下一個處理常式。
 
@@ -277,7 +277,7 @@ EShop 專案可讓您進行基本的靜態檔案存取。 有許多自訂可用�
 
 ## <a name="migrate-runtime-bundling-and-minification-setup"></a>遷移執行時間組合和縮制設定
 
-配套和縮制是一種效能優化技術，可減少伺服器要求的數目和大小，以取得特定檔案類型。 JavaScript 和 CSS 通常會在傳送至用戶端之前，先進行某種形式的捆綁或縮制。 在 ASP.NET Web Forms 中，這些優化會在執行時間處理。 優化慣例會定義*App_Start/bundleconfig.json*檔案。 在 ASP.NET Core 中，採用了更具宣告性的方法。 檔案會列出要縮減的檔案，以及特定的縮制設定。
+配套和縮制是一種效能優化技術，可減少伺服器要求的數目和大小，以取得特定檔案類型。 JavaScript 和 CSS 通常會在傳送至用戶端之前，先進行某種形式的捆綁或縮制。 在 ASP.NET Web Forms 中，這些優化會在執行時間處理。 優化慣例會定義*App_Start/bundleconfig.cs*檔案。 在 ASP.NET Core 中，採用了更具宣告性的方法。 檔案會列出要縮減的檔案，以及特定的縮制設定。
 
 如需有關配套和縮制的詳細資訊，請參閱[ASP.NET Core 中的組合和縮小靜態資產](/aspnet/core/client-side/bundling-and-minification)。
 
@@ -565,7 +565,7 @@ namespace eShopLegacyWebForms.Catalog
 
 ## <a name="migrate-configuration"></a>遷移設定
 
-在 Web form 專案中，設定資料最常儲存*在 web.config 檔案*中。 設定資料是以 `ConfigurationManager` 存取。 服務通常需要用來剖析物件。 透過 .NET Framework 4.7.2，複合性已透過 `ConfigurationBuilders` 新增至設定。 這些產生器可讓開發人員新增設定的各種來源，然後在執行時間撰寫以取得必要的值。
+在 Web form 專案中，設定資料最常儲存*在 web.config 檔案*中。 設定資料是以 `ConfigurationManager`存取。 服務通常需要用來剖析物件。 透過 .NET Framework 4.7.2，複合性已透過 `ConfigurationBuilders`新增至設定。 這些產生器可讓開發人員新增設定的各種來源，然後在執行時間撰寫以取得必要的值。
 
 ASP.NET Core 引進了彈性的設定系統，可讓您定義應用程式和部署所使用的設定來源或來源。 您在 Web Forms 應用程式中使用的 `ConfigurationBuilder` 基礎結構，是在 ASP.NET Core 設定系統中所使用的概念之後進行模型化。
 
@@ -642,15 +642,15 @@ EShop 需要下列與 EF 相關的變更：
 
 ASP.NET Core 是 ASP.NET 的重新發想版本，而且有一些可能不會在一開始就很明顯的變更。 主要變更如下：
 
-- 沒有同步處理內容，這表示沒有 `HttpContext.Current`、`Thread.CurrentPrincipal` 或其他靜態存取子
+- 沒有同步處理內容，這表示沒有 `HttpContext.Current`、`Thread.CurrentPrincipal`或其他靜態存取子
 - 無陰影複製
 - 沒有要求佇列
 
-ASP.NET Core 中的許多作業都是非同步，這可讓您更輕鬆地關閉 i/o 系結工作的載入作業。 請務必不要使用 `Task.Wait()` 或 `Task.GetResult()` 來封鎖，這可能會快速耗盡執行緒集區資源。
+ASP.NET Core 中的許多作業都是非同步，這可讓您更輕鬆地關閉 i/o 系結工作的載入作業。 請務必不要使用 `Task.Wait()` 或 `Task.GetResult()`來封鎖，這可能會快速耗盡執行緒集區資源。
 
 ## <a name="migration-conclusion"></a>遷移結論
 
 此時，您已瞭解將 Web form 專案移至 Blazor 所需的許多範例。 如需完整範例，請參閱[eShopOnBlazor](https://github.com/dotnet-architecture/eShopOnBlazor)專案。
 
 >[!div class="step-by-step"]
->[上一篇](security-authentication-authorization.md)
+>[上一步](security-authentication-authorization.md)

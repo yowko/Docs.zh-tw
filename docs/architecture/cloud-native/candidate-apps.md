@@ -3,12 +3,12 @@ title: 適用于雲端原生的候選應用程式
 description: 瞭解哪些類型的應用程式可從雲端原生方法獲益
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 328af4081d830cf1a7959a37c2155090ec4da3ff
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2087ef0c327a82419be95552293d1b56742b73c7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968288"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337441"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>適用于雲端原生的候選應用程式
 
@@ -40,7 +40,7 @@ ms.locfileid: "73968288"
 
 **圖 1-10**。 遷移舊版工作負載的策略
 
-非關鍵的整合型應用程式，主要受益于快速隨即轉移（[雲端基礎結構就緒](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)）的遷移。 在這裡，內部部署工作負載會重新裝載至雲端式 VM，而不會變更。 此方法使用[IaaS （基礎結構即服務）模型](https://azure.microsoft.com/overview/what-is-iaas/)。 Azure 包含數個工具，例如（[Azure Migrate](https://aka.ms/azuremigrate)、 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)和[Azure 資料庫移轉服務](https://azure.microsoft.com/campaigns/database-migration/)），讓這類移動變得更容易。 雖然此策略可以節省一些成本，但這類應用程式通常無法解除鎖定並運用雲端運算的優點。
+非關鍵的整合型應用程式，主要受益于快速隨即轉移（[雲端基礎結構就緒](../modernize-with-azure-containers/lift-and-shift-existing-apps-azure-iaas.md)）的遷移。 在這裡，內部部署工作負載會重新裝載至雲端式 VM，而不會變更。 此方法使用[IaaS （基礎結構即服務）模型](https://azure.microsoft.com/overview/what-is-iaas/)。 Azure 包含數個工具，例如（[Azure Migrate](https://aka.ms/azuremigrate)、 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)和[Azure 資料庫移轉服務](https://azure.microsoft.com/campaigns/database-migration/)），讓這類移動變得更容易。 雖然此策略可以節省一些成本，但這類應用程式通常無法解除鎖定並運用雲端運算的優點。
 
 對企業而言至關重要的整合型應用程式，往往受益于增強的隨即轉移（*雲端優化*）遷移。 此方法包含可啟用重要雲端服務的部署優化，而不需變更應用程式的核心架構。 例如，您可能會[容器化](https://docs.microsoft.com/virtualization/windowscontainers/about/)應用程式，並將它部署到容器協調器（例如[Azure Kubernetes Services](https://azure.microsoft.com/services/kubernetes-service/)），這本書稍後會討論到。 一旦進入雲端，應用程式可能會耗用其他雲端服務，例如資料庫、訊息佇列、監視和分散式快取。
 
@@ -64,7 +64,7 @@ ms.locfileid: "73968288"
 
 適當的遷移策略取決於組織優先順序和您的目標系統。 對許多人而言，將整合型應用程式優化，或將粗略服務新增至多層式應用程式，可能會更符合成本效益。 在這些情況下，您仍然可以充分利用雲端 PaaS 功能，例如 Azure App Service 所提供的功能。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>總結
 
 在本章中，我們引進了雲端原生運算。 我們提供了一種定義，以及驅動雲端原生應用程式的主要功能。 我們探討了可能會證明這項投資和投入時間的應用程式類型。
 
