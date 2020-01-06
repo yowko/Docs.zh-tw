@@ -5,8 +5,6 @@
 - name: 開始使用
   href: getting-started/index.md
   items:
-    - name: Visual Studio 中 Visual Basic 的重大變更
-      href: getting-started/breaking-changes-in-visual-studio.md
     - name: Visual Basic 程式設計人員的其他資源
       href: getting-started/additional-resources.md
 - name: 開發應用程式
@@ -401,7 +399,7 @@
           href: language-reference/modifiers/notinheritable.md
         - name: NotOverridable
           href: language-reference/modifiers/notoverridable.md
-        - name: Optional
+        - name: 選擇性
           href: language-reference/modifiers/optional.md
         - name: In (泛型修飾詞)
           href: language-reference/modifiers/out-generic-modifier.md
