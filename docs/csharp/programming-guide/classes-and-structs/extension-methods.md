@@ -7,17 +7,17 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 5cce8eb3ad36208c3d376bc8c94da484e9f9181e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: 66c8dee059d65f6628bf38edecf2f5abec320eea
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971058"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635830"
 ---
 # <a name="extension-methods-c-programming-guide"></a>擴充方法 (C# 程式設計手冊)
 擴充方法可讓您在現有類型中「加入」方法，而不需要建立新的衍生類型、重新編譯，或是修改原始類型。 擴充方法是一種特殊的靜態方法，但是會將它們當成擴充類型上的執行個體方法來呼叫。 對於以 C#、F# 和 Visual Basic 撰寫的用戶端程式碼，呼叫擴充方法或是在類型中實際定義的方法，兩者之間並沒有明顯的差別。  
   
- 最常見的擴充方法是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 標準查詢運算子，這些運算子會將查詢功能新增至現有的 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 類型。 若要使用標準查詢運算子，請先使用 `using System.Linq` 指示詞將它們帶入範圍內。 接著，任何實作 <xref:System.Collections.Generic.IEnumerable%601> 的類型都會具有執行個體方法，如 <xref:System.Linq.Enumerable.GroupBy%2A>、<xref:System.Linq.Enumerable.OrderBy%2A>、<xref:System.Linq.Enumerable.Average%2A> 等。 如果在 <xref:System.Collections.Generic.IEnumerable%601> 類型 (如 <xref:System.Collections.Generic.List%601> 或 <xref:System.Array>) 的執行個體後面輸入「點」，就可以在 IntelliSense 陳述式完成時看到這些額外的方法。  
+ 最常見的擴充方法是 LINQ 標準查詢運算子，可將查詢功能加入至現有的 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 類型。 若要使用標準查詢運算子，請先使用 `using System.Linq` 指示詞將它們帶入範圍內。 接著，任何實作 <xref:System.Collections.Generic.IEnumerable%601> 的類型都會具有執行個體方法，如 <xref:System.Linq.Enumerable.GroupBy%2A>、<xref:System.Linq.Enumerable.OrderBy%2A>、<xref:System.Linq.Enumerable.Average%2A> 等。 如果在 <xref:System.Collections.Generic.IEnumerable%601> 類型 (如 <xref:System.Collections.Generic.List%601> 或 <xref:System.Array>) 的執行個體後面輸入「點」，就可以在 IntelliSense 陳述式完成時看到這些額外的方法。  
   
  下列範例將示範如何在整數陣列上呼叫標準查詢運算子 `OrderBy` 方法。 括號括住的運算式就是 Lambda 運算式。 許多標準查詢運算子會將 Lambda 運算式當成參數，但是擴充方法不會強制這樣做。 如需詳細資訊，請參閱 [Lambda 運算式](../statements-expressions-operators/lambda-expressions.md)。  
   

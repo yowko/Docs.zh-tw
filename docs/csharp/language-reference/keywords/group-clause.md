@@ -9,16 +9,16 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: dd14a4baf9967f41690e7978b8b6cf57c9275e36
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 59bffc3df7155780fab90f9959ed99a21bda8eba
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428512"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635921"
 ---
 # <a name="group-clause-c-reference"></a>group 子句 (C# 參考)
 
-`group` 子句會傳回一系列的 <xref:System.Linq.IGrouping%602> 物件，而這些物件包含符合群組之索引鍵值的零或多個項目。 例如，您可以根據每個字串中的第一個字母來分組一序列的字串。 在此情況下，第一個字母是索引鍵、具有類型 [char](../builtin-types/char.md)，並儲存在每個 `Key` 物件的 <xref:System.Linq.IGrouping%602> 屬性中。 編譯器會推斷索引鍵類型。
+`group` 子句會傳回一系列的 <xref:System.Linq.IGrouping%602> 物件，而這些物件包含符合群組之索引鍵值的零或多個項目。 例如，您可以根據每個字串中的第一個字母來分組一序列的字串。 在此情況下，第一個字母是索引鍵、具有類型 [char](../builtin-types/char.md)，並儲存在每個 <xref:System.Linq.IGrouping%602> 物件的 `Key` 屬性中。 編譯器會推斷索引鍵類型。
 
 您可以使用 `group` 子句結束查詢運算式，如下列範例所示︰
 
@@ -28,11 +28,11 @@ ms.locfileid: "74428512"
 
 [!code-csharp[cscsrefQueryKeywords#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#11)]
 
-本文的＜範例＞一節中提供使用或未使用 `group` 之 `into` 的更完整範例。
+本文的＜範例＞一節中提供使用或未使用 `into` 之 `group` 的更完整範例。
 
 ## <a name="enumerating-the-results-of-a-group-query"></a>列舉群組查詢結果
 
-因為 <xref:System.Linq.IGrouping%602> 查詢所產生的 `group` 物件基本上是清單的清單，所以您必須使用巢狀 [foreach](foreach-in.md) 迴圈來存取每個群組中的項目。 外部迴圈會逐一查看群組索引鍵，內部迴圈則會逐一查看群組本身中的每個項目。 群組可能具有索引鍵，但沒有項目。 下列 `foreach` 迴圈會執行先前程式碼範例中的查詢︰
+因為 `group` 查詢所產生的 <xref:System.Linq.IGrouping%602> 物件基本上是清單的清單，所以您必須使用巢狀 [foreach](foreach-in.md) 迴圈來存取每個群組中的項目。 外部迴圈會逐一查看群組索引鍵，內部迴圈則會逐一查看群組本身中的每個項目。 群組可能具有索引鍵，但沒有項目。 下列 `foreach` 迴圈會執行先前程式碼範例中的查詢︰
 
 [!code-csharp[cscsrefQueryKeywords#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#12)]
 
@@ -54,7 +54,7 @@ ms.locfileid: "74428512"
 
 ### <a name="grouping-by-numeric-range"></a>依數字範圍群組
 
-下一個範例使用運算式來建立代表百分位數範圍的數字群組索引鍵。 請注意會使用 [let](let-clause.md) 作為儲存方法呼叫結果的方便位置，因此不需要在 `group` 子句中呼叫方法兩次。 如需如何在查詢運算式中安全地使用方法的詳細資訊，請參閱[如何：處理查詢運算式中的例外狀況](../../linq/handle-exceptions-in-query-expressions.md)。
+下一個範例使用運算式來建立代表百分位數範圍的數字群組索引鍵。 請注意會使用 [let](let-clause.md) 作為儲存方法呼叫結果的方便位置，因此不需要在 `group` 子句中呼叫方法兩次。 如需如何在查詢運算式中安全地使用方法的詳細資訊，請參閱[處理查詢運算式中的例外](../../linq/handle-exceptions-in-query-expressions.md)狀況。
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -66,11 +66,11 @@ ms.locfileid: "74428512"
 group person by new {name = person.surname, city = person.city};
 ```
 
-如果您必須將查詢變數傳遞給另一種方法，請使用具名類型。 請使用索引鍵的自動實作屬性建立特殊類別，然後覆寫 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法。 您也可以使用結構，在此情況下，您絕對不需要覆寫這些方法。 如需詳細資訊，請參閱[如何使用自動執行的屬性來執行輕量類別](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)和[如何：查詢目錄樹狀結構中的重複檔案](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)。 第二篇文章的程式碼範例示範如何使用含有具名類型的複合索引鍵。
+如果您必須將查詢變數傳遞給另一種方法，請使用具名類型。 請使用索引鍵的自動實作屬性建立特殊類別，然後覆寫 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法。 您也可以使用結構，在此情況下，您絕對不需要覆寫這些方法。 如需詳細資訊，請參閱[如何使用自動執行的屬性來執行輕量類別](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)和[如何查詢樹狀目錄中的重複](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)檔案。 第二篇文章的程式碼範例示範如何使用含有具名類型的複合索引鍵。
 
 ## <a name="example"></a>範例
 
-下列範例示範未將任何其他查詢邏輯套用到群組時，將來源資料排序成群組的標準模式。 這稱為無接續群組。 字串陣列中的項目是根據其第一個字母進行分組。 查詢的結果是包含 <xref:System.Linq.IGrouping%602> 類型之公用 `Key` 屬性的 `char` 類型，以及包含群組中各個項目的 <xref:System.Collections.Generic.IEnumerable%601> 集合。
+下列範例示範未將任何其他查詢邏輯套用到群組時，將來源資料排序成群組的標準模式。 這稱為無接續群組。 字串陣列中的項目是根據其第一個字母進行分組。 查詢的結果是包含 `char` 類型之公用 `Key` 屬性的 <xref:System.Linq.IGrouping%602> 類型，以及包含群組中各個項目的 <xref:System.Collections.Generic.IEnumerable%601> 集合。
 
 `group` 子句的結果是一連串的序列。 因此，若要存取每個所傳回群組內的個別項目，請在重複執行群組索引鍵的迴圈內使用巢狀 `foreach` 迴圈，如下列範例所示。
 
@@ -86,7 +86,7 @@ group person by new {name = person.surname, city = person.city};
 
 在編譯時期，`group` 子句會轉譯成 <xref:System.Linq.Enumerable.GroupBy%2A> 方法的呼叫。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Linq.IGrouping%602>
 - <xref:System.Linq.Enumerable.GroupBy%2A>

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: d2fe9a73f79408db08ef48d380940fcf6bb831c0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: d56da60f174933af789a6abd7d8aa90f3f29d9c1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837996"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344620"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>HOW TO：使用 SSL 憑證設定連接埠
 使用傳輸安全性的 <xref:System.ServiceModel.WSHttpBinding> 類別建立自我裝載的 Windows Communication Foundation （WCF）服務時，您也必須使用 x.509 憑證設定埠。 如果您沒有建立自我裝載的服務，可以將您的服務裝載在 Internet Information Services (IIS) 上。 如需詳細資訊，請參閱[HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
   
  若要設定連接埠，使用的工具取決於電腦上執行的作業系統。  
   
- 如果您是執行 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，請使用 HttpCfg.exe 工具。 這個工具會隨 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 進行安裝。 有了 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，您可以在[WINDOWS XP Service Pack 2 支援工具](https://go.microsoft.com/fwlink/?LinkId=88606)下載此工具。 如需詳細資訊，請參閱[Httpcfg.exe 總覽](https://go.microsoft.com/fwlink/?LinkId=88605)。 [Windows 支援工具檔](https://go.microsoft.com/fwlink/?LinkId=94840)會說明 HTTPcfg.exe 工具的語法。  
+ 如果您執行的是 Windows Server 2003 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，請使用 Httpcfg.exe 工具。 使用 Windows Server 2003 時，會安裝此工具。 有了 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，您可以在[WINDOWS XP Service Pack 2 支援工具](https://go.microsoft.com/fwlink/?LinkId=88606)下載此工具。 如需詳細資訊，請參閱[Httpcfg.exe 總覽](https://go.microsoft.com/fwlink/?LinkId=88605)。 [Windows 支援工具檔](https://go.microsoft.com/fwlink/?LinkId=94840)會說明 HTTPcfg.exe 工具的語法。  
   
  如果您執行的是 Windows Vista，請使用已安裝的 dism.exe 工具。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "74837996"
   
 ### <a name="to-determine-how-ports-are-configured"></a>決定如何設定連接埠  
   
-1. 在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，使用 Httpcfg.exe 工具來查看目前的埠設定，其方式是使用**查詢**和**ssl**參數，如下列範例所示。  
+1. 在 Windows Server 2003 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，使用 Httpcfg.exe 工具來查看目前的埠設定，其方式是使用**查詢**和**ssl**參數，如下列範例所示。  
   
     ```console
     httpcfg query ssl  
@@ -65,7 +65,7 @@ ms.locfileid: "74837996"
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number"></a>繫結 SSL 憑證與連接埠號碼  
   
-1. 在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中，在 Secure Sockets Layer (SSL) 存放區上的 "set" 模式中使用 HttpCfg.exe 工具，將憑證繫結至連接埠號碼。 此工具是使用指紋來識別憑證，如下列範例所示。  
+1. 在 Windows Server 2003 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，請在安全通訊端層（SSL）存放區的 [設定] 模式中使用 Httpcfg.exe，將憑證系結至埠號碼。 此工具是使用指紋來識別憑證，如下列範例所示。  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -89,7 +89,7 @@ ms.locfileid: "74837996"
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>繫結 SSL 憑證與連接埠號碼並支援用戶端憑證  
   
-1. 在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中，若要支援在傳輸層使用 X.509 憑證驗證的用戶端，請依照前述程序執行，但將額外的命令列參數傳遞至 HttpCfg.exe，如下列範例所示。  
+1. 在 Windows Server 2003 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，若要支援在傳輸層使用 x.509 憑證進行驗證的用戶端，請遵循先前的程式，但將其他命令列參數傳遞至 Httpcfg.exe，如下列範例所示。  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
@@ -111,7 +111,7 @@ ms.locfileid: "74837996"
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. 在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，使用 Httpcfg.exe 工具搭配**delete**和**ssl**關鍵字。 使用 **-i**參數指定 `IP`：`port` 號碼，而 **-h**參數用來指定指紋。  
+2. 在 Windows Server 2003 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，使用 Httpcfg.exe 工具搭配**delete**和**ssl**關鍵字。 使用 **-i**參數指定 `IP`：`port` 號碼，而 **-h**參數用來指定指紋。  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  

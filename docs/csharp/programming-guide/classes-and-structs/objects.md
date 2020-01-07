@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 1b3ceb2671a4c21f1df89599c9b8c0bc107a7435
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 25e7051f0ceaa035c58af541f0b32e5d24dd0323
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419261"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635778"
 ---
 # <a name="objects-c-programming-guide"></a>物件 (C# 程式設計手冊)
 類別或結構定義就像是指定型別可以做什麼的藍圖。 物件基本上是根據藍圖配置和設定的記憶體區塊。 程式可建立許多同類別的物件。 物件也稱為執行個體，可儲存在具名變數或陣列或集合中。 用戶端程式碼是使用這些變數呼叫方法，並存取物件公用屬性的程式碼。 在 C# 之類的物件導向語言中，一般程式包含多個動態互動的物件。  
@@ -46,10 +46,10 @@ ms.locfileid: "73419261"
   
  由於 `Equals` 的 <xref:System.ValueType?displayProperty=nameWithType> 實作必須能夠判斷結構中有哪些欄位，因此會使用反映。 建立您自己的結構時，請覆寫 `Equals` 方法以提供型別專屬的有效相等演算法。  
   
-- 若要判斷兩個類別執行個體中的欄位值是否相等，您或許可以使用 <xref:System.Object.Equals%2A> 方法或 [== 運算子](../../language-reference/operators/equality-operators.md#equality-operator-)。 但請只有當類別覆寫或多載它們，以提供「相等」表示的型別物件的自訂定義時，才使用它們。 此類別可能也會實作 <xref:System.IEquatable%601> 介面或 <xref:System.Collections.Generic.IEqualityComparer%601> 介面。 這兩個介面都會提供可用以測試值相等的方法。 若要設計自己的類別以覆寫 `Equals`，請務必遵循[如何：定義類型的實值相等](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md)和 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 所述的指導方針。  
+- 若要判斷兩個類別執行個體中的欄位值是否相等，您或許可以使用 <xref:System.Object.Equals%2A> 方法或 [== 運算子](../../language-reference/operators/equality-operators.md#equality-operator-)。 但請只有當類別覆寫或多載它們，以提供「相等」表示的型別物件的自訂定義時，才使用它們。 此類別可能也會實作 <xref:System.IEquatable%601> 介面或 <xref:System.Collections.Generic.IEqualityComparer%601> 介面。 這兩個介面都會提供可用以測試值相等的方法。 在設計您自己的類別以覆寫 `Equals`時，請務必遵循[如何定義類型的實值相等](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md)和 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>中所述的指導方針。
   
 ## <a name="related-sections"></a>相關章節  
- 如需詳細資訊：  
+ 如需詳細資訊，請參閱：＜ ＞  
   
 - [類別](./classes.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73419261"
 - [C# 程式設計指南](../index.md)
 - [object](../../language-reference/builtin-types/reference-types.md)
 - [繼承](./inheritance.md)
-- [class](../../language-reference/keywords/class.md)
+- [Class - 類別](../../language-reference/keywords/class.md)
 - [struct](../../language-reference/keywords/struct.md)
 - [new 運算子](../../language-reference/operators/new-operator.md)
 - [一般類型系統](../../../standard/base-types/common-type-system.md)

@@ -3,12 +3,12 @@ title: 查詢運算式基本概念 (C# 中的 LINQ)
 description: 介紹查詢運算式的相關概念
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 96ef75fe702e60eaa38acef77a73a5ea7f2076f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 5ebe2163df47c60c677d7ac911ce0f65529835eb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709113"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635856"
 ---
 # <a name="query-expression-basics"></a>查詢運算式基本概念
 
@@ -150,7 +150,7 @@ ms.locfileid: "54709113"
 
 #### <a name="join-clause"></a>join 子句
 
-使用 `join` 子句，會根據每個項目中所指定索引鍵之間的相等比較來建立某個資料來源中的項目與另一個資料來源中的項目的關聯和 (或) 將它們合併。 在 LINQ 中，會對項目為不同類型的物件序列執行聯結作業。 聯結兩個序列之後，必須使用 `select` 或 `group` 陳述式來指定要儲存在輸出序列中的項目。 您也可以使用匿名類型，將每個相關聯項目集的屬性合併到輸出序列的新類型。 下列範例會關聯 `prod` 物件，而其 `Category` 屬性符合 `categories` 字串陣列中的其中一個分類。 會篩選掉 `Category` 不符合 `categories` 中任何字串的產品。`select` 陳述式會投影其屬性取自 `cat` 和 `prod` 的新類型。
+使用 `join` 子句，會根據每個項目中所指定索引鍵之間的相等比較來建立某個資料來源中的項目與另一個資料來源中的項目的關聯和 (或) 將它們合併。 在 LINQ 中，會對項目為不同類型的物件序列執行聯結作業。 聯結兩個序列之後，必須使用 `select` 或 `group` 陳述式來指定要儲存在輸出序列中的項目。 您也可以使用匿名類型，將每個相關聯項目集的屬性合併到輸出序列的新類型。 下列範例會關聯 `prod` 物件，而其 `Category` 屬性符合 `categories` 字串陣列中的其中一個分類。 其 `Category` 不符合 `categories` 中任何字串的產品會被篩選掉。`select` 語句會投射新的類型，其屬性會從 `cat` 和 `prod`中取得。
 
 [!code-csharp[csrefQueryExpBasics#61](~/samples/snippets/csharp/concepts/linq/query-expression-basics_17.cs)]
 
@@ -170,9 +170,9 @@ ms.locfileid: "54709113"
 
 [!code-csharp[csrefQueryExpBasics#63](~/samples/snippets/csharp/concepts/linq/query-expression-basics_19.cs)]
 
-如需詳細資訊，請參閱[如何：在分組作業上執行子查詢](perform-a-subquery-on-a-grouping-operation.md)。
+如需詳細資訊，請參閱[在群組作業上執行子查詢](perform-a-subquery-on-a-grouping-operation.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../programming-guide/index.md)
 - [Language-Integrated Query (LINQ)](index.md)

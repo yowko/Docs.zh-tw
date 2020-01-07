@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3d1658b47d2cda344e2ec1fe7b48c929005563b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 32695d3bc29693ab4cf1e2f9d721d35598ecfb86
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912055"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344711"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>使用 \<msxsl:script> 加入 XSLT 樣式表指令碼
 <xref:System.Xml.Xsl.XslTransform> 類別支援使用 `script` 項目的內嵌指令碼。  
@@ -31,7 +31,7 @@ ms.locfileid: "69912055"
   
  其中 `msxsl` 是繫結至命名空間 `urn:schemas-microsoft-com:xslt` 的前置詞。  
   
- `language` 屬性並非必要項目，但若指定，則其值必須為下列其中一個值：C#、VB、JScript、JavaScript、VisualBasic 或 CSharp。 如果沒有指定的話，語言預設為 JScript。 `language-name` 不區分大小寫，因此 'JavaScript' 和 'javascript' 是一樣的。  
+ `language` 屬性不是強制性的，但若指定，其值必須為下列其中之一： `C#`、`VB`、`JScript`、`JavaScript`、`VisualBasic`或 `CSharp`。 如果沒有指定的話，語言預設為 JScript。 `language-name` 不區分大小寫，因此 'JavaScript' 和 'javascript' 是一樣的。  
   
  `implements-prefix` 屬性是必要的。 這個屬性用來宣告命名空間，並把它與指令碼區塊產生關聯。 這個屬性的值是表示命名空間的前置詞。 這個命名空間可以被定義在樣式表內的某處。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "69912055"
   
  函式可在 `msxsl:script` 項目內進行宣告。 下表顯示根據預設所支援的命名空間。 您可以使用所列之命名空間以外的類別。 不過這些類別必須是完整限定。  
   
-|預設的命名空間|說明|  
+|預設的命名空間|描述|  
 |------------------------|-----------------|  
-|系統|系統類別。|  
+|System|系統類別。|  
 |System.Collection|集合類別。|  
 |System.Text|文字類別。|  
 |System.Text.RegularExpressions|規則運算式類別。|  
@@ -66,9 +66,9 @@ ms.locfileid: "69912055"
   
 |類型|對等的 .NET Framework 類別 (型別)|XPath 型別或 XSLT 型別|  
 |----------|----------------------------------------------|-----------------------------|  
-|String|System.String|XPath|  
+|字串|System.String|XPath|  
 |Boolean|System.Boolean|XPath|  
-|number|System.Double|XPath|  
+|Number|System.Double|XPath|  
 |Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
@@ -216,7 +216,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  
@@ -231,6 +231,6 @@ public class Sample
 </circles>    
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XslTransform 類別實作 XSLT 處理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

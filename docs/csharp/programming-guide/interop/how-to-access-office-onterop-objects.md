@@ -1,5 +1,5 @@
 ---
-title: 如何：使用視覺C#功能存取 Office Interop 物件-程式C#設計指南
+title: 如何存取 Office interop 物件-程式C#設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: b6e45858b64ea1bf87ca0e73001a5cf07ddfd58b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 63a3bf422e19bbfb644b809aa9f4573bfdbd42bd
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417710"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635219"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>如何：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)
+# <a name="how-to-access-office-interop-objects-c-programming-guide"></a>如何存取 Office interop 物件（C#程式設計手冊）
 
-Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名引數和選擇性引數、稱為 `dynamic` 的新類型，以及傳遞引數以像是實值參數的形式，參考 COM 方法中參數的能力。
+C#具有可簡化 Office API 物件存取的功能。 新功能包括具名引數和選擇性引數、稱為 `dynamic` 的新類型，以及傳遞引數以像是實值參數的形式，參考 COM 方法中參數的能力。
 
 在本主題中，您將使用新的功能撰寫可建立及顯示 Microsoft Office Excel 工作表的程式碼。 接著，您將要撰寫可加入 Office Word 文件的程式碼，而該文件包含連結至 Excel 工作表的圖示。
 
@@ -41,9 +41,9 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
 
 6. 在 [名稱] 欄位中鍵入專案的名稱。
 
-7. 按一下 [確定]。
+7. 按一下 [ **確定**]。
 
-     新的專案隨即出現在方案總管中。
+     新的專案隨即會出現在方案總管中。
 
 ## <a name="to-add-references"></a>加入參考
 
@@ -51,7 +51,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
 
 2. 在 [組件] 頁面的 [元件名稱] 清單中，選取 [Microsoft.Office.Interop.Word]，然後按住 CTRL 鍵並選取 [Microsoft.Office.Interop.Excel]。  如果您看不到元件，則可能需要確定它們已安裝並顯示。 請參閱[如何：安裝 Office 主要 Interop 元件](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)。
 
-3. 按一下 [確定]。
+3. 按一下 [ **確定**]。
 
 ## <a name="to-add-necessary-using-directives"></a>加入必要的 using 指示詞
 
@@ -103,7 +103,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
 
      [!code-csharp[csProgGuideOfficeHowTo#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#8)]
 
-2. 按下 CTRL+F5。
+2. 按下 CTRL+F5 鍵。
 
      隨即會出現內含兩個帳戶資料的 Excel 工作表。
 
@@ -131,7 +131,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
 
      [!code-csharp[csProgGuideOfficeHowTo#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#12)]
 
-4. 按下 CTRL+F5。
+4. 按下 CTRL+F5 鍵。
 
      隨即會出現含有圖示的 Word 文件。 按兩下圖示，即可將該工作表帶到前景。
 
@@ -179,4 +179,4 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
 - [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [使用動態型別](../types/using-type-dynamic.md)
 - [具名和選擇性引數](../classes-and-structs/named-and-optional-arguments.md)
-- [如何：在 Office 程式設計中使用具名和選擇性引數](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [如何在 Office 程式設計中使用命名和選擇性引數](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

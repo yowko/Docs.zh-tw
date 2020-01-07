@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: b60f2871062a12d3bee91a9c6d9883222b3034f4
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a4151ff610c67ac762f0096c6a136f4475317782
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733574"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636636"
 ---
 # <a name="imaging-overview"></a>影像處理概觀
 本主題提供 Microsoft Windows Presentation Foundation 映射元件的簡介。 WPF 影像處理可讓開發人員顯示、轉換和格式化影像。  
@@ -48,7 +48,7 @@ ms.locfileid: "73733574"
   
 - 支援檔案內、專屬中繼資料。  
   
-- Managed 元件會利用 Unmanaged 基礎結構來提供影像與其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 功能 (例如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、動畫和圖形) 的緊密整合。 Managed 元件也受益于 Windows Presentation Foundation （WPF）影像處理編解碼器擴充性模型，可讓您在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式中自動識別新的影像格式。  
+- 受控元件會利用非受控的基礎結構，提供影像與其他 WPF 功能的緊密整合，例如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、動畫和圖形。 Managed 元件也受益于 Windows Presentation Foundation （WPF）影像處理編解碼器擴充性模型，可讓您在 WPF 應用程式中自動識別新的影像格式。  
   
  大部分的 managed WPF 影像處理 API 都位於 <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> 命名空間中，不過有幾個重要的類型（例如 <xref:System.Windows.Media.ImageBrush> 和 <xref:System.Windows.Media.ImageDrawing> 位於 <xref:System.Windows.Media?displayProperty=nameWithType> 命名空間中，而 <xref:System.Windows.Controls.Image> 位於 <xref:System.Windows.Controls?displayProperty=nameWithType> 命名空間中。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "73733574"
 
  轉碼器可以用來將特定媒體格式解碼或編碼。 WPF 影像處理包含 BMP、JPEG、PNG、TIFF、Windows Media 相片、GIF 和圖示影像格式的編解碼器。 每個轉碼器都可以讓應用程式解碼和編碼各自的影像格式 (但 ICON 在編碼部分是例外)。  
   
- <xref:System.Windows.Media.Imaging.BitmapSource> 是用於解碼和編碼影像的重要類別。 這是 WPF 影像處理管線的基本建立區塊，代表特定大小和解析度的一組固定圖元。 <xref:System.Windows.Media.Imaging.BitmapSource> 可以是多個框架影像的個別框架，也可以是在 <xref:System.Windows.Media.Imaging.BitmapSource>上執行之轉換的結果。 這是許多主要類別的父系，用於 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 影像處理，例如 <xref:System.Windows.Media.Imaging.BitmapFrame>。  
+ <xref:System.Windows.Media.Imaging.BitmapSource> 是用於解碼和編碼影像的重要類別。 這是 WPF 影像處理管線的基本建立區塊，代表特定大小和解析度的一組固定圖元。 <xref:System.Windows.Media.Imaging.BitmapSource> 可以是多個框架影像的個別框架，也可以是在 <xref:System.Windows.Media.Imaging.BitmapSource>上執行之轉換的結果。 這是 WPF 影像中所用的許多主要類別的父系，例如 <xref:System.Windows.Media.Imaging.BitmapFrame>。  
   
  <xref:System.Windows.Media.Imaging.BitmapFrame> 可用來儲存影像格式的實際點陣圖資料。 許多影像格式僅支援單一 <xref:System.Windows.Media.Imaging.BitmapFrame>，雖然 GIF 和 TIFF 之類的格式支援每個影像有多個畫面格。 畫面格會由解碼器作為輸入資料並傳遞至編碼器以建立影像檔。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73733574"
  [!code-vb[BitmapFrameExample#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#10)]  
   
 ### <a name="image-format-decoding"></a>影像格式解碼  
- 影像解碼是指將影像格式變成系統可用之影像資料的轉譯作業。 接著可使用影像資料來顯示、處理，或編碼成不同格式。 選取的解碼器是根據影像格式而定。 除非指定特定的解碼器，否則會自動選取轉碼器。 [在 WPF 中顯示影像](#_displayingimages)一節中的範例示範自動解碼。 使用未受管理的 WPF 映射介面開發並向系統註冊的自訂格式解碼器，會自動參與解碼器選取專案。 這可讓自訂格式自動在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式中顯示。  
+ 影像解碼是指將影像格式變成系統可用之影像資料的轉譯作業。 接著可使用影像資料來顯示、處理，或編碼成不同格式。 選取的解碼器是根據影像格式而定。 除非指定特定的解碼器，否則會自動選取轉碼器。 [在 WPF 中顯示影像](#_displayingimages)一節中的範例示範自動解碼。 使用未受管理的 WPF 映射介面開發並向系統註冊的自訂格式解碼器，會自動參與解碼器選取專案。 這可讓您在 WPF 應用程式中自動顯示自訂格式。  
   
  下列範例示範如何使用點陣圖解碼器來解碼 BMP 格式影像。  
   
@@ -91,13 +91,13 @@ ms.locfileid: "73733574"
  有數種方式可以在 Windows Presentation Foundation （WPF）應用程式中顯示影像。 影像可以使用 <xref:System.Windows.Controls.Image> 控制項來顯示、使用 <xref:System.Windows.Media.ImageBrush>繪製在視覺效果上，或是使用 <xref:System.Windows.Media.ImageDrawing>繪製。  
   
 ### <a name="using-the-image-control"></a>使用影像控制項  
- <xref:System.Windows.Controls.Image> 是一個架構元素，以及在應用程式中顯示影像的主要方式。 在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中，可以透過兩種方式來使用 <xref:System.Windows.Controls.Image>：屬性語法或屬性語法。 下列範例顯示如何使用屬性 (Attribute) 語法和屬性 (Property) 標記語法呈現 200 像素寬的影像。 如需屬性 (Attribute) 語法和屬性 (Property) 語法的詳細資訊，請參閱[相依性屬性概觀](../advanced/dependency-properties-overview.md)。  
+ <xref:System.Windows.Controls.Image> 是一個架構元素，以及在應用程式中顯示影像的主要方式。 在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中，可以透過兩種方式來使用 <xref:System.Windows.Controls.Image>：屬性語法或屬性語法。 下列範例顯示如何使用屬性 (Attribute) 語法和屬性 (Property) 標記語法呈現 200 像素寬的影像。 如需有關屬性 (Attribute) 語法和屬性 (Property) 語法的詳細資訊，請參閱[相依性屬性概觀](../advanced/dependency-properties-overview.md)。  
   
  [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
  許多範例都使用 <xref:System.Windows.Media.Imaging.BitmapImage> 物件來參考影像檔案。 <xref:System.Windows.Media.Imaging.BitmapImage> 是專為 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 載入而優化的特製化 <xref:System.Windows.Media.Imaging.BitmapSource>，這是將影像顯示為 <xref:System.Windows.Controls.Image> 控制項 <xref:System.Windows.Controls.Image.Source%2A> 的簡單方式。  
   
- 下列範例示範如何使用程式碼呈現 200 像素寬的影像。  
+ 下列範例示範如何使用程式碼來轉譯寬度為 200 像素的影像。  
   
 > [!NOTE]
 > <xref:System.Windows.Media.Imaging.BitmapImage> 會執行 <xref:System.ComponentModel.ISupportInitialize> 介面，以優化多個屬性的初始化。 只有在物件初始化期間，才會發生屬性變更。 呼叫 <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> 以通知初始化已開始，並 <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> 以表示初始化已完成。 初始化之後，所做的屬性變更都會被忽略。  
@@ -106,7 +106,7 @@ ms.locfileid: "73733574"
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 #### <a name="rotating-converting-and-cropping-images"></a>旋轉、轉換和裁剪影像  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 可讓使用者使用 <xref:System.Windows.Media.Imaging.BitmapImage> 的屬性，或使用 <xref:System.Windows.Media.Imaging.CroppedBitmap> 或 <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>之類的其他 <xref:System.Windows.Media.Imaging.BitmapSource> 物件來轉換影像。 這些影像轉換作業可以縮放或旋轉影像、變更影像的像素格式，或裁剪影像。  
+ WPF 可讓使用者使用 <xref:System.Windows.Media.Imaging.BitmapImage> 的屬性，或使用其他 <xref:System.Windows.Media.Imaging.BitmapSource> 物件（例如 <xref:System.Windows.Media.Imaging.CroppedBitmap> 或 <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>）來轉換影像。 這些影像轉換作業可以縮放或旋轉影像、變更影像的像素格式，或裁剪影像。  
   
  影像旋轉是使用 <xref:System.Windows.Media.Imaging.BitmapImage>的 <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> 屬性來執行。 只能以 90 度遞增的角度旋轉。 在下列範例中，影像會旋轉 90 度。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "73733574"
   
 <a name="_extensibility"></a>   
 ## <a name="codec-extensibility"></a>轉碼器擴充性  
- WPF 影像處理的核心功能是新影像編解碼器的擴充性模型。 這些 Unmanaged 介面可讓轉碼器開發人員整合轉碼器與 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，以便 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式可以自動使用新的影像格式。  
+ WPF 影像處理的核心功能是新影像編解碼器的擴充性模型。 這些未受管理的介面可讓編解碼器開發人員整合編解碼器與 WPF，讓 WPF 應用程式可以自動使用新的影像格式。  
   
  如需擴充性 API 的範例，請參閱[Win32 範例編解碼器](https://go.microsoft.com/fwlink/?LinkID=160052)。 此範例示範如何針對自訂影像格式建立解碼器和編碼器。  
   

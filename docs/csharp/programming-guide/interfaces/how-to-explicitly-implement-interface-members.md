@@ -1,24 +1,24 @@
 ---
-title: 作法：明確實作介面成員 - C# 程式設計指南
+title: 如何明確執行介面成員-程式C#設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: 5ef8b42fe5ca07548d52b88720ea4845d2408bb1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 4efc325b3587ee790cce739727506a28c3a1f524
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589202"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635401"
 ---
-# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>作法：明確實作介面成員 (C# 程式設計指南)
+# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>如何明確執行介面成員（C#程式設計手冊）
 這個範例會宣告[介面](../../language-reference/keywords/interface.md) (`IDimensions`) 和類別 (`Box`)，它會明確實作介面成員 `getLength` 和 `getWidth`。 成員是透過介面執行個體 `dimensions` 存取。  
   
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideInheritance#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#8)]  
   
-## <a name="robust-programming"></a>穩固程式設計  
+## <a name="robust-programming"></a>最佳化程式設計  
   
 - 請注意，在 `Main` 方法中，下列各行因為會產生編譯錯誤所以都已註解。 從[類別](../../language-reference/keywords/class.md)執行個體無法存取已明確實作的介面成員：  
   
@@ -28,9 +28,9 @@ ms.locfileid: "69589202"
   
      [!code-csharp[csProgGuideInheritance#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#46)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](../classes-and-structs/index.md)
 - [介面](./index.md)
-- [如何：明確實作兩個介面的成員](./how-to-explicitly-implement-members-of-two-interfaces.md)
+- [如何明確地執行兩個介面的成員](./how-to-explicitly-implement-members-of-two-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: 撰寫查詢
+title: 寫入查詢
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
@@ -7,18 +7,18 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6a9f229697ce3d6328c6fb09d18d4cc2627eab10
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6d2e472cc996c42aa091ed95c6954d0879c98372
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351021"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636753"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>逐步解說：在 Visual Basic 中撰寫查詢
 
-本逐步解說會示範如何使用 Visual Basic 語言功能來撰寫 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 查詢運算式。 本逐步解說示範如何在學生物件清單上建立查詢、如何執行查詢，以及如何加以修改。 這些查詢會併入數個功能，包括物件初始化運算式、區欄位型別推斷和匿名型別。
+本逐步解說會示範如何使用 Visual Basic 語言功能來撰寫語言整合式查詢（LINQ）查詢運算式。 本逐步解說示範如何在學生物件清單上建立查詢、如何執行查詢，以及如何加以修改。 這些查詢會併入數個功能，包括物件初始化運算式、區欄位型別推斷和匿名型別。
 
-完成本逐步解說之後，您就可以開始移至您感興趣之特定 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者的範例和檔。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者包括 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]、LINQ to DataSet 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。
+完成本逐步解說之後，您就可以開始移至您感興趣之特定 LINQ 提供者的範例和檔。 LINQ 提供者包括 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]、LINQ to DataSet 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。
 
 ## <a name="create-a-project"></a>建立專案
 
@@ -133,13 +133,13 @@ ms.locfileid: "74351021"
 
 ## <a name="additional-examples"></a>其他範例
 
-既然您已瞭解基本概念，下列清單列出的其他範例可說明 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的彈性和能力。 每個範例的前面都會加上其作用的簡短描述。 將滑鼠指標停留在每個查詢的查詢結果變數上，以查看推斷的類型。 使用 `For Each` 迴圈來產生結果。
+既然您已瞭解基本概念，以下是說明 LINQ 查詢彈性和能力的其他範例清單。 每個範例的前面都會加上其作用的簡短描述。 將滑鼠指標停留在每個查詢的查詢結果變數上，以查看推斷的類型。 使用 `For Each` 迴圈來產生結果。
 
 [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]
 
 ## <a name="additional-information"></a>其他資訊
 
-在您熟悉使用查詢的基本概念之後，您就可以開始閱讀您感興趣之特定 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者類型的檔和範例：
+在您熟悉使用查詢的基本概念之後，您就可以開始閱讀您感興趣之特定 LINQ 提供者類型的檔和範例：
 
 - [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 

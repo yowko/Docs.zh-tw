@@ -9,34 +9,34 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: 2c120c6d71cb22bc38909f980b2f6faf2b5c3663
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: d509de02cd1b3f645ee439c0b0eb33fd1ddbdb07
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395223"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636103"
 ---
 # <a name="advanced-text-formatting"></a>進階文字格式化
-Windows Presentation Foundation （WPF）提供一組健全的 Api，以便在您的應用程式中包含文字。 版面配置和 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]Api （例如 <xref:System.Windows.Controls.TextBlock>）提供最常見且一般的使用專案來呈現文字。 繪製 Api （例如 <xref:System.Windows.Media.GlyphRunDrawing> 和 <xref:System.Windows.Media.FormattedText>）提供了在繪圖中包含格式化文字的方法。 在最先進的層級中，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供可擴充的文字格式設定引擎來控制文字呈現的每個層面，例如文字存放區管理、文字執行格式管理和内嵌物件管理。  
+Windows Presentation Foundation （WPF）提供一組健全的 Api，以便在您的應用程式中包含文字。 版面配置和 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Api （例如 <xref:System.Windows.Controls.TextBlock>）提供最常見且常用的文字呈現方式元素。 繪製 Api （例如 <xref:System.Windows.Media.GlyphRunDrawing> 和 <xref:System.Windows.Media.FormattedText>）提供了在繪圖中包含格式化文字的方法。 WPF 在最先進的層級提供可擴充的文字格式設定引擎，以控制文字呈現的每個層面，例如文字存放區管理、文字執行格式管理和内嵌物件管理。  
   
- 本主題提供 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 文字格式的簡介。 它著重于用戶端的執行及使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 文字格式設定引擎。  
+ 本主題提供 WPF 文字格式的簡介。 它著重于用戶端的執行和使用 WPF 文字格式設定引擎。  
   
 > [!NOTE]
 > 本檔中的所有程式碼範例都可以在「[先進文字格式」範例](https://go.microsoft.com/fwlink/?LinkID=159965)中找到。  
 
 <a name="prereq"></a>   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>必要條件：  
  本主題假設您熟悉用於文字呈現的較高層級 Api。 大部分的使用者案例都不需要本主題中討論的先進文字格式 Api。 如需不同文字 Api 的簡介，請參閱[WPF 中的檔](documents-in-wpf.md)。  
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>進階文字格式化  
- 中的文字版面配置和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 控制項 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供格式化屬性，可讓您輕鬆地在應用程式中包含格式化的文字。 這些控制項會公開一些屬性來處理文字的呈現方式，包括其字體、大小和色彩。 在一般情況下，這些控制項可以處理您應用程式中大部分的文字呈現。 不過，某些進階的情節需要控制文字儲存以及文字呈現。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 針對這個用途提供可延伸的文字格式設定引擎。  
+ WPF 中的文字版面配置和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 控制項提供格式化屬性，可讓您輕鬆地在應用程式中包含格式化的文字。 這些控制項會公開一些屬性來處理文字的呈現方式，包括其字體、大小和色彩。 在一般情況下，這些控制項可以處理您應用程式中大部分的文字呈現。 不過，某些進階的情節需要控制文字儲存以及文字呈現。 WPF 會針對此用途提供可擴充的文字格式設定引擎。  
   
- 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中找到的先進文字格式功能是由文字格式設定引擎、文字存放區、文字執行和格式化屬性所組成。 文字格式設定引擎（<xref:System.Windows.Media.TextFormatting.TextFormatter>）會建立要用於簡報的文字行。 這是藉由起始行格式化程式並呼叫文字格式器的 <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>來達成。 文字格式子會藉由呼叫存放區的 <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> 方法，從您的文字存放區抓取文字執行。 然後，<xref:System.Windows.Media.TextFormatting.TextRun> 物件會由文字格式器形成 <xref:System.Windows.Media.TextFormatting.TextLine> 物件，並提供給您的應用程式進行檢查或顯示。  
+ WPF 中的先進文字格式設定功能包含文字格式設定引擎、文字存放區、文字執行和格式屬性。 文字格式設定引擎（<xref:System.Windows.Media.TextFormatting.TextFormatter>）會建立要用於簡報的文字行。 這是藉由起始行格式化程式並呼叫文字格式器的 <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>來達成。 文字格式子會藉由呼叫存放區的 <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> 方法，從您的文字存放區抓取文字執行。 然後，<xref:System.Windows.Media.TextFormatting.TextRun> 物件會由文字格式器形成 <xref:System.Windows.Media.TextFormatting.TextLine> 物件，並提供給您的應用程式進行檢查或顯示。  
   
 <a name="section2"></a>   
 ## <a name="using-the-text-formatter"></a>使用文字格式子  
- <xref:System.Windows.Media.TextFormatting.TextFormatter> 是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 文字格式設定引擎，並提供格式化和斷線文字的服務。 文字格式子可處理不同的文字字元格式和段落樣式，且包含國際文字版面配置的支援。  
+ <xref:System.Windows.Media.TextFormatting.TextFormatter> 是 WPF 文字格式設定引擎，並提供用於格式化和中斷文字線條的服務。 文字格式子可處理不同的文字字元格式和段落樣式，且包含國際文字版面配置的支援。  
   
  不同于傳統文字 API，<xref:System.Windows.Media.TextFormatting.TextFormatter> 會透過一組回呼方法與文字佈局用戶端互動。 它要求用戶端在 <xref:System.Windows.Media.TextFormatting.TextSource> 類別的執行中提供這些方法。 下圖說明用戶端應用程式和 <xref:System.Windows.Media.TextFormatting.TextFormatter>之間的文字版面配置互動。  
   
@@ -67,7 +67,7 @@ Windows Presentation Foundation （WPF）提供一組健全的 Api，以便在�
   
  下表顯示一些預先定義的 <xref:System.Windows.Media.TextFormatting.TextRun> 物件。  
   
-|TextRun 類型|使用方式|  
+|TextRun 類型|使用|  
 |------------------|-----------|  
 |<xref:System.Windows.Media.TextFormatting.TextCharacters>|用來將字元圖像 (glyph) 的表示法傳回文字格式子的特殊文字執行。|  
 |<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|用來提供內容的特殊文字執行，在這些內容中會整體進行測量、點擊測試和繪製，例如文字內的按鈕或影像。|  
@@ -91,7 +91,7 @@ Windows Presentation Foundation （WPF）提供一組健全的 Api，以便在�
 ## <a name="specifying-formatting-properties"></a>指定格式設定屬性  
  <xref:System.Windows.Media.TextFormatting.TextRun> 物件是使用文字存放區所提供的屬性來格式化。 這些屬性有兩種類型： <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> 和 <xref:System.Windows.Media.TextFormatting.TextRunProperties>。 <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> 處理段落內含屬性，例如 <xref:System.Windows.TextAlignment> 和 <xref:System.Windows.FlowDirection>。 <xref:System.Windows.Media.TextFormatting.TextRunProperties> 是段落內每個文字執行的不同屬性，例如前景筆刷、<xref:System.Windows.Media.Typeface>和字型大小。 若要執行自訂段落和自訂文字執行屬性類型，您的應用程式必須分別建立衍生自 <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> 和 <xref:System.Windows.Media.TextFormatting.TextRunProperties> 的類別。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WPF 中的印刷樣式](typography-in-wpf.md)
 - [WPF 中的文件](documents-in-wpf.md)

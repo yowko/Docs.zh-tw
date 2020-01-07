@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 1a5320f47b880c2d84132d70e1d0be19d6de486b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
-ms.translationtype: MT
+ms.openlocfilehash: 3be4ec01137a96a9b38869cbbb81fb0e89b7d700
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116206"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559496"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>使用 dotnet test 與 NUnit 為 .NET Core 中的 F# 程式庫進行單元測試
 
@@ -19,7 +19,7 @@ ms.locfileid: "71116206"
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
 
 - [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更新版本。
 - 您選擇的文字編輯器或程式碼編輯器。
@@ -44,7 +44,7 @@ dotnet new sln
 將 *MathService* 設為目前的目錄，然後執行下列命令以建立來源專案：
 
 ```dotnetcli
-dotnet new classlib -lang F#
+dotnet new classlib -lang "F#"
 ```
 
 您建立數學服務的失敗實作：
@@ -76,7 +76,7 @@ dotnet sln add .\MathService\MathService.fsproj
 將 *MathService.Tests* 目錄設為目前的目錄，然後使用下列命令建立新的專案：
 
 ```dotnetcli
-dotnet new nunit -lang F#
+dotnet new nunit -lang "F#"
 ```
 
 如此會建立將 NUnit 用作為測試架構的測試專案。 產生的範本會在 *MathServiceTests.fsproj* 中設定測試執行器：
@@ -89,7 +89,7 @@ dotnet new nunit -lang F#
 </ItemGroup>
 ```
 
-測試專案需要其他套件來建立和執行單元測試。 上一個步驟中的 `dotnet new` 新增了 NUnit 與 NUnit 測試配接器。 現在，將 `MathService` 類別庫新增為專案的另一個相依性。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
+測試專案需要其他套件來建立和執行單元測試。 上一個步驟中的 `dotnet new` 新增了 NUnit 與 NUnit 測試配接器。 現在，將 `MathService` 類別庫新增為專案的另一個相依性。 使用 `dotnet add reference` 命令：
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
@@ -118,7 +118,7 @@ dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
 
 ## <a name="creating-the-first-test"></a>建立第一個測試
 
-您會撰寫一個失敗測試，讓它通過，然後重複此程序。 開啟 *UnitTest1.fs* 並新增下列程式碼：
+撰寫一個會失敗的測試，再使其通過，然後重複這個過程。 開啟 *UnitTest1.fs* 並新增下列程式碼：
 
 ```fsharp
 namespace MathService.Tests
@@ -138,7 +138,7 @@ type TestClass () =
      member this.FailEveryTime() = Assert.True(false)
 ```
 
-`[<TestFixture>]` 屬性表示包含測試的類別。 `[<Test>]` 屬性表示由測試執行器執行的測試方法。 從 *unit-testing-with-fsharp* 目錄，執行 [`dotnet test`](../tools/dotnet-test.md) 來建置測試和類別庫，然後執行測試。 NUnit 測試執行器包含執行測試的程式進入點。 `dotnet test` 會使用您建立的單元測試專案來開始測試執行器。
+`[<TestFixture>]` 屬性表示包含測試的類別。 `[<Test>]` 屬性表示由測試執行器執行的測試方法。 從*單元測試-fsharp.core*目錄中，執行 `dotnet test` 來建立測試和類別庫，然後執行測試。 NUnit 測試執行器包含執行測試的程式進入點。 `dotnet test` 會使用您建立的單元測試專案來開始測試執行器。
 
 這兩個測試會顯示最基本的成功和失敗測試。 `My test` 成功，而 `Fail every time` 失敗。 現在，針對 `squaresOfOdds` 方法建立測試。 `squaresOfOdds` 方法會傳回屬於輸入序列一部分的所有奇數整數值平方序列。 您能以反覆方式建立會驗證功能的測試，而不需要嘗試一次撰寫所有那些函式。 將每個測試設定為通過表示為方法建立必要功能。
 
@@ -210,3 +210,8 @@ let squaresOfOdds xs =
 ```
 
 您已建置好小型的程式庫和該程式庫的一組單元測試， 您已建立方案結構，因此加入新套件與測試是一般工作流程的一部分。 您已集中大部分的時間與精力以解決應用程式目標。
+
+## <a name="see-also"></a>請參閱
+
+- [dotnet add reference](../tools/dotnet-add-reference.md)
+- [dotnet test](../tools/dotnet-test.md)

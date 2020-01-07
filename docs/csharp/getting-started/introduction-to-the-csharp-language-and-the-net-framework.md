@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: cf9c0ad345ce8762e700bb46b431804dccb79409
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.openlocfilehash: a9dddb4a3e7af2ca76bb5d3f953cc36c6142623a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283055"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635999"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 語言和 .NET Framework 簡介
 
@@ -22,7 +22,7 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
 ## <a name="c-language"></a>C# 語言
 
- C# 語法的表達能力相當高，同時也很簡單且易於了解。 熟悉 C、C++ 或 Java 的任何人都能立即辨識出 C# 的大括號語法。 了解上述任何一種語言的開發人員一般都能在極短時間內開始用 C# 有效率地工作。 C# 語法可大幅簡化 C++ 的複雜性，並提供強大的功能，例如可為 Null 的實值型別、列舉、委派、lambda 運算式，還有 Java 中所沒有的直接記憶體存取。 C# 支援泛型方法和型別，提供更高的型別安全和效能。C# 也支援迭代器，讓集合類別的實作者定義自訂的反覆項目表現方式，使得用戶端程式碼可以容易地使用。 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 運算式可讓強型別查詢成為優先使用的語言建構。  
+ C# 語法的表達能力相當高，同時也很簡單且易於了解。 熟悉 C、C++ 或 Java 的任何人都能立即辨識出 C# 的大括號語法。 了解上述任何一種語言的開發人員一般都能在極短時間內開始用 C# 有效率地工作。 C# 語法可大幅簡化 C++ 的複雜性，並提供強大的功能，例如可為 Null 的實值型別、列舉、委派、lambda 運算式，還有 Java 中所沒有的直接記憶體存取。 C# 支援泛型方法和型別，提供更高的型別安全和效能。C# 也支援迭代器，讓集合類別的實作者定義自訂的反覆項目表現方式，使得用戶端程式碼可以容易地使用。 語言整合式查詢（LINQ）運算式會將強型別查詢設為第一類語言結構。  
   
  C# 為物件導向語言，支援封裝、繼承和多型的概念。 包括應用程式的進入點 `Main` 方法在內，所有變數和方法都會封裝在類別定義內。 類別可直接繼承自一個父類別，但可以實作數目不拘的介面。 覆寫父類別中虛擬方法的方法需要利用 `override` 關鍵字，避免意外重複定義。 在 C# 中，結構就像輕量型的類別。它是堆疊配置型別，可以實作介面，但不支援繼承。  
   
@@ -36,7 +36,7 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
 - 內嵌 XML 文件註解。  
   
-- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 可跨各種資料來源提供內建查詢功能。  
+- 語言整合式查詢（LINQ），可在各種不同的資料來源中提供內建的查詢功能。  
   
  如果您必須與 COM 物件或原生 Win32 DLL 等其他 Windows 軟體互動，您可以在 C# 中透過稱為 "Interop" 的處理序來達到此目的。 Interop 幾乎可讓 C# 程式執行大部分原生 C++ 應用程式的功能。 對於直接記憶體存取是絕對必要的情況，C# 甚至支援指標和「不安全」的程式碼概念。  
   
@@ -48,7 +48,7 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
 - 如需有關 C# 語言特定層面的詳細資訊，請參閱 [C# 參考](../language-reference/index.md)。  
   
-- 如需 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 的詳細資訊，請參閱 [LINQ (Language-Integrated Query)](../programming-guide/concepts/linq/index.md)。  
+- 如需 LINQ 的詳細資訊，請參閱[linq （語言整合式查詢）](../programming-guide/concepts/linq/index.md)。  
 
 ## <a name="net-framework-platform-architecture"></a>.NET Framework 平台架構
 
@@ -66,6 +66,6 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
  如需 .NET Framework 的詳細資訊，請參閱 [Microsoft.NET Framework 概觀 (英文)](../../framework/get-started/overview.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用視覺效果消費者入門C#](/visualstudio/ide/quickstart-csharp-console)

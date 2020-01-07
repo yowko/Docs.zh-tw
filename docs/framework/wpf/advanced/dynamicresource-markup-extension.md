@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: a04e1569f77fed73a480fda3d63cabf6dbc30664
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f8b05f314be84e6104f1a9c7fe2edfdf826e51da
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460516"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559444"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource 標記延伸
 藉由延後該值為所定義資源的參考，為任何 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 屬性屬性提供值。 該資源的查閱行為類似于執行時間查閱。  
@@ -38,7 +38,7 @@ ms.locfileid: "73460516"
   
 |||  
 |-|-|  
-|`key`|要求資源的金鑰。 如果資源是在標記中建立，則此索引鍵一開始是由[x：Key](../../xaml-services/x-key-directive.md)指示詞所指派，或在呼叫 <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> （如果資源是在程式碼中建立）時，以 `key` 參數的形式提供。|  
+|`key`|要求資源的金鑰。 如果資源是在標記中建立，則此索引鍵一開始是由[x：Key](../../../desktop-wpf/xaml-services/xkey-directive.md)指示詞所指派，或在呼叫 <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> （如果資源是在程式碼中建立）時，以 `key` 參數的形式提供。|  
   
 ## <a name="remarks"></a>備註  
  `DynamicResource` 會在初始編譯期間建立暫存運算式，因此會延遲資源查閱，直到實際需要要求的資源值才能建立物件為止。 這可能會在載入 [[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]] 頁面之後。 系統會根據從目前頁面範圍開始的所有作用中資源字典的索引鍵搜尋，找到資源值，並將其取代為來自編譯的預留位置運算式。  
@@ -48,9 +48,9 @@ ms.locfileid: "73460516"
   
  某些資源存取案例特別適用于 `DynamicResource`，而不是[StaticResource 標記延伸](staticresource-markup-extension.md)。 如需 `DynamicResource` 和 `StaticResource`的相對優勢和效能含意的討論，請參閱[XAML 資源](xaml-resources.md)。  
   
- 指定的 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 應該對應至您頁面、應用程式、可用的控制項主題和外部資源或系統資源中某個層級的[x：Key](../../xaml-services/x-key-directive.md)指示詞所決定的現有資源，而且資源查閱將會發生在該順序。 如需靜態和動態資源之資源查閱的詳細資訊，請參閱[XAML 資源](xaml-resources.md)。  
+ 指定的 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 應該對應至您頁面、應用程式、可用的控制項主題和外部資源或系統資源中某個層級的[x：Key](../../../desktop-wpf/xaml-services/xkey-directive.md)指示詞所決定的現有資源，而資源查閱會依照該順序發生。 如需靜態和動態資源之資源查閱的詳細資訊，請參閱[XAML 資源](xaml-resources.md)。  
   
- 資源索引鍵可以是[XamlName 文法](../../xaml-services/xamlname-grammar.md)中定義的任何字串。 資源索引鍵也可能是其他物件類型，例如 <xref:System.Type>。 <xref:System.Type> 鍵是控制項如何透過主題來設計樣式的基礎。 如需詳細資訊，請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)。  
+ 資源索引鍵可以是[XamlName 文法](../../../desktop-wpf/xaml-services/xamlname-grammar.md)中定義的任何字串。 資源索引鍵也可能是其他物件類型，例如 <xref:System.Type>。 <xref:System.Type> 鍵是控制項如何透過主題來設計樣式的基礎。 如需詳細資訊，請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)。  
   
  用於查閱資源值（例如 <xref:System.Windows.FrameworkElement.FindResource%2A>）的 Api 會遵循 `DynamicResource`所使用的相同資源查閱邏輯。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "73460516"
 
 - [XAML 資源](xaml-resources.md)
 - [資源和程式碼](resources-and-code.md)
-- [x:Key 指示詞](../../xaml-services/x-key-directive.md)
+- [x:Key 指示詞](../../../desktop-wpf/xaml-services/xkey-directive.md)
 - [XAML 概觀 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [StaticResource 標記延伸](staticresource-markup-extension.md)

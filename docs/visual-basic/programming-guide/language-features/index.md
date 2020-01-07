@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 8cb0b017410e991628bad59a6986ba37426c913f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0c8496d4e452da92e0ae994f0b246cc16723c06e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345059"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636571"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 語言功能
 下列主題會介紹和討論 Visual Basic 的基本元件，這是物件導向程式設計語言。 使用表單和控制項建立應用程式的使用者介面之後，您必須撰寫程式碼來定義應用程式的行為。 如同任何現代化的程式設計語言，Visual Basic 支援許多常見的程式設計結構和語言元素。  
@@ -19,7 +19,7 @@ ms.locfileid: "74345059"
   
  如果您是程式設計的新手，可將本節的內容當做用來撰寫程式碼的基本建置組塊簡介。 瞭解基本概念之後，您可以使用 Visual Basic 建立功能強大的應用程式。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  討論如何宣告和使用陣列來保留多個相關聯的值，藉以讓您的程式碼更精簡且功能更強大。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "74345059"
  說明何謂介面，以及如何在應用程式中使用它們。  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- 提供主題連結來介紹 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 功能和程式設計。  
+ 提供引進語言整合式查詢（LINQ）功能和程式設計的主題連結。  
   
  [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
  提供物件和類別的概觀、它們的使用方式、其彼此間的關聯性，以及它們所公開的屬性、方法和事件。  

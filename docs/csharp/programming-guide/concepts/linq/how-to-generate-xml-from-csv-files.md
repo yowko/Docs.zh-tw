@@ -1,19 +1,19 @@
 ---
-title: 作法：從 CSV 檔案產生 XML (C#)
+title: 如何從 CSV 檔案產生 XML （C#）
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-ms.openlocfilehash: bcae061bd5899f4ae5cbb89f8e05079bc9222312
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486779"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635804"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a>作法：從 CSV 檔案產生 XML (C#)
-此範例顯示如何使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，從以逗號分隔的 (CSV) 檔案產生 XML 檔案。  
+# <a name="how-to-generate-xml-from-csv-files-c"></a>如何從 CSV 檔案產生 XML （C#）
+這個範例示範如何使用語言整合式查詢（LINQ）和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，從逗號分隔值（CSV）檔案產生 XML 檔案。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會在字串的陣列上執行 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢。  
+ 下列程式碼會在字串陣列上執行 LINQ 查詢。  
   
  此查詢使用 `let` 子句，將每個字串分割為欄位的陣列。  
   

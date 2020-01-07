@@ -17,16 +17,16 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: c699ed68606293b1a49a540e00636cf7f56bdf2f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ec06edc16829c6d4caf8c760922aac1471e365c2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972098"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346621"
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 格式字串
 
-標準 <xref:System.TimeSpan> 格式的字串，使用單一格式規範來定義起因於格式化作業的 <xref:System.TimeSpan> 值之文字表示。 任何包含一個以上字元 (包含空格) 的格式字串，都會解譯為自訂 <xref:System.TimeSpan> 格式字串。 如需詳細資訊，請參閱[自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)。  
+標準 <xref:System.TimeSpan> 格式字串會使用單一格式規範來定義格式作業所產生之 <xref:System.TimeSpan> 值的文字表示。 任何包含一個以上字元 (包含空格) 的格式字串，都會解譯為自訂 <xref:System.TimeSpan> 格式字串。 如需詳細資訊，請參閱[自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)。  
   
  <xref:System.TimeSpan> 值的字串表示，藉由呼叫 <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType> 方法的多載而產生，同時也可藉由支援複合格式化的方法所產生，例如 <xref:System.String.Format%2A?displayProperty=nameWithType>。 如需詳細資訊，請參閱[格式化類型](../../../docs/standard/base-types/formatting-types.md)和[複合格式設定](../../../docs/standard/base-types/composite-formatting.md)。 下列範例說明格式化作業中的標準格式字串用法。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "73972098"
   
 下表列出標準時間間隔格式規範。  
   
-|格式規範|[屬性]|描述|範例|  
+|格式規範|Name|描述|範例|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|常數 (非變異) 格式|這個規範不區分文化特性。 它採用 `[-][d'.']hh':'mm':'ss['.'fffffff]` 格式<br /><br /> \ ("t" 與 "T" 格式字串會產生相同的結果)。<br /><br /> 詳細資訊：[常數 ("c") 格式規範](#the-constant-c-format-specifier)。|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|一般短格式|這個規範只會輸出需要的內容。 它會區分文化特性，並採用 `[-][d':']h':'mm':'ss[.FFFFFFF]` 格式。<br /><br /> 詳細資訊：[一般短 ("g") 格式規範](#the-general-short-g-format-specifier)。|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:500.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:500.599 (fr-FR)|  
@@ -124,4 +124,4 @@ ms.locfileid: "73972098"
 
 - [格式化類型](../../../docs/standard/base-types/formatting-types.md)
 - [自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [剖析字串](../../../docs/standard/base-types/parsing-strings.md)
+- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)

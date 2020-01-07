@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 1f4e73287fca650b20ed5617c8dfd80e0bd8363c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 64b029f87135c3424d01a6833619f0aec3833883
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318273"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340358"
 ---
 # <a name="tutorial-create-a-project-template"></a>教學課程：建立專案範本
 
@@ -26,16 +26,16 @@ ms.locfileid: "72318273"
 > * 測試項目範本
 > * 將項目範本解除安裝
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 * 完成此教學課程系列的[第 1 部分](cli-templates-create-item-template.md)。
-* 開啟終端機並瀏覽至 _working\templates\\_ 資料夾。
+* 開啟終端機，並流覽至_working\templates_資料夾。
 
 ## <a name="create-a-project-template"></a>建立專案範本
 
 專案範本能產生可立即執行的專案，讓使用者能以一組已可運作的程式碼來輕鬆開始。 .NET Core 包含幾個專案範本，例如主控台應用程式或類別庫。 在此範例中，您將會建立新的主控台專案，其能啟用 C# 8.0 並產生 `async main` 進入點。
 
-在您的終端機中，瀏覽至 _working\templates\\_ 資料夾，並建立名為 _consoleasync_ 的新子資料夾。 進入該子資料夾，然後執行 `dotnet new console` 以產生標準主控台應用程式。 您將會編輯由此範本所產生的檔案來建立新的範本。
+在您的終端機中，流覽至 [ _working\templates_ ] 資料夾，然後建立名為_consoleasync_的新子資料夾。 進入該子資料夾，然後執行 `dotnet new console` 以產生標準主控台應用程式。 您將會編輯由此範本所產生的檔案來建立新的範本。
 
 ```console
 working
@@ -98,7 +98,7 @@ Hello World with C# 8.0!
 
 ## <a name="create-the-template-config"></a>建立範本設定
 
-.NET Core 會將範本辨識為存在於範本根目錄中的特殊資料夾及設定檔。 在此教學課程中，您的範本資料夾是位於 _working\templates\consoleasync\\_ 。
+.NET Core 會將範本辨識為存在於範本根目錄中的特殊資料夾及設定檔。 在本教學課程中，您的範本資料夾位於_working\templates\consoleasync_。
 
 當您建立範本時，範本資料夾中的所有檔案和資料夾都會包含為範本的一部分，除了特殊設定資料夾之外。 此設定資料夾名為 _.template.config_。
 

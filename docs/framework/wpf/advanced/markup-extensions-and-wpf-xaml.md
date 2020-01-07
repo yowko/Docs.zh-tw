@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: 7ba2beae4ef8176764a5caaff609c365f283e285
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a9e0657aa9f9dd4de0ff3f8788c686bf1535b1ad
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459822"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559790"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>標記延伸和 WPF XAML
 本主題介紹 XAML 標記延伸模組概念，包括其語法規則、用途，以及其根據的類別物件模型。 標記延伸模組是 XAML 語言的一般功能，以及 XAML 服務之 .NET 實作的一般功能。 本主題會具體詳述 WPF XAML 中所使用的標記延伸模組。  
@@ -41,13 +41,13 @@ ms.locfileid: "73459822"
 ## <a name="xaml-defined-markup-extensions"></a>已定義 XAML 的標記延伸  
  數個標記延伸模組不是 XAML 的 WPF 實作所特有，而是作為語言之 XAML 的內建功能或功能實作。 這些標記延伸模組在 System.Xaml 組件中實作為一般 .NET Framework XAML 服務的一部分，並且位在 XAML 語言 XAML 命名空間內。 根據常見標記用法，這些標記延伸模組通常可以透過用法中的 `x:` 前置詞進行識別。 <xref:System.Windows.Markup.MarkupExtension> 的基類（也定義于 system.string）提供了所有標記延伸應使用的模式，以便在 XAML 讀取器和 XAML 寫入器中受到支援，包括在 WPF XAML 中。  
   
-- `x:Type` 提供具名類型的 <xref:System.Type> 物件。 這項工具最常用於樣式和範本。 如需詳細資訊，請參閱 [x:Type 標記延伸模組](../../xaml-services/x-type-markup-extension.md)。  
+- `x:Type` 提供具名類型的 <xref:System.Type> 物件。 這項工具最常用於樣式和範本。 如需詳細資訊，請參閱 [x:Type 標記延伸模組](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)。  
   
-- `x:Static` 會產生靜態值。 值來自實值類型程式碼實體，而此實體不是直接為目標屬性值類型，但可以評估為該類型。 如需詳細資訊，請參閱 [x:Static 標記延伸模組](../../xaml-services/x-static-markup-extension.md)。  
+- `x:Static` 會產生靜態值。 值來自實值類型程式碼實體，而此實體不是直接為目標屬性值類型，但可以評估為該類型。 如需詳細資訊，請參閱 [x:Static 標記延伸模組](../../../desktop-wpf/xaml-services/xstatic-markup-extension.md)。  
   
-- `x:Null` 指定 `null` 作為屬性的值，而且可以用於屬性 (attribute) 或屬性 (property) 項目值。 如需詳細資訊，請參閱 [x:Null 標記延伸模組](../../xaml-services/x-null-markup-extension.md)。  
+- `x:Null` 指定 `null` 作為屬性的值，而且可以用於屬性 (attribute) 或屬性 (property) 項目值。 如需詳細資訊，請參閱 [x:Null 標記延伸模組](../../../desktop-wpf/xaml-services/xnull-markup-extension.md)。  
   
-- 如果故意不使用 WPF 基底項目和控制項模型所提供的集合支援，則 `x:Array` 支援使用 XAML 語法來建立一般陣列。 如需詳細資訊，請參閱 [x:Array 標記延伸模組](../../xaml-services/x-array-markup-extension.md)。  
+- 如果故意不使用 WPF 基底項目和控制項模型所提供的集合支援，則 `x:Array` 支援使用 XAML 語法來建立一般陣列。 如需詳細資訊，請參閱 [x:Array 標記延伸模組](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)。  
   
 > [!NOTE]
 > `x:` 前置詞用於 XAML 檔案或生產的根項目中 XAML 語言內建功能的一般 XAML 命名空間對應。 例如，WPF 應用程式的 Visual Studio 範本會使用這個 `x:` 對應來起始 XAML 檔案。 您可以選擇專屬 XAML 命名空間對應中的不同前置詞語彙基元，但是這份文件將假設使用預設 `x:` 對應來識別這些是 XAML 語言 XAML 命名空間之已定義部分的實體，而非與特定架構無關的 WPF 預設命名空間或其他 XML 命名空間。  
@@ -74,7 +74,7 @@ ms.locfileid: "73459822"
 ## <a name="extension-classes"></a>\*擴充類別  
  針對一般 XAML 語言和 WPF 特定的標記延伸，會透過衍生自 <xref:System.Windows.Markup.MarkupExtension>的 `*Extension` 類別，將每個標記延伸的行為識別為 XAML 處理器，並提供 <xref:System.Windows.Markup.StaticExtension.ProvideValue%2A> 方法的執行。 每個延伸模組上的這個方法提供在評估標記延伸模組時所傳回的物件。 所傳回的物件一般是根據傳遞至標記延伸模組的各種字串語彙基元所評估。  
   
- 例如，<xref:System.Windows.StaticResourceExtension> 類別提供實際資源查閱的介面執行，使其 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> 的實值傳回所要求的物件，而該特定實作為的輸入是用來查閱的字串。依其 `x:Key`的資源。 如果您要使用現有的標記延伸模組，則此實作詳細資料大部分不重要。  
+ 例如，<xref:System.Windows.StaticResourceExtension> 類別提供實際資源查閱的介面執行，使其 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> 的實值傳回要求的物件，而該特定實作為的輸入是用來依其 `x:Key`查閱資源的字串。 如果您要使用現有的標記延伸模組，則此實作詳細資料大部分不重要。  
   
  某些標記延伸模組未使用字串語彙基元引數。 這是因為它們會傳回靜態或一致值，或利用透過 `serviceProvider` 參數所傳遞的其中一個服務可以取得應該傳回值的內容。  
   
@@ -92,13 +92,13 @@ ms.locfileid: "73459822"
   
 - 如果個別的分隔標記包含等號，則 XAML 處理器會先呼叫標記延伸的無參數的函式。 則每個「名稱=值」配對都會解譯為標記延伸模組上的屬性名稱，以及要指派給該屬性的值。  
   
-- 如果建構函式行為與標記延伸模組中的屬性設定行為之間有平行結果，則所使用的行為就不重要。 如果只因為可讓您的標記更具意圖，而且您較不可能意外轉置建構函式參數，則較常見用法是使用有多個可設定屬性之標記延伸模組的「屬性」`=`「值」 （當您指定屬性 = 值組時，這些屬性可能會以任何順序排列）。此外，不保證標記延伸會提供設定每一個可設定屬性的「函數」參數。 例如，<xref:System.Windows.Data.Binding> 是一個標記延伸，其中包含許多可透過*屬性*中的延伸模組來設定的屬性`=`*值*形式，但 <xref:System.Windows.Data.Binding> 只支援兩個函式：無參數的處理常式，另一個則是設定初始路徑。  
+- 如果建構函式行為與標記延伸模組中的屬性設定行為之間有平行結果，則所使用的行為就不重要。 如果只因為可讓您的標記更具意圖，而且您較不可能意外轉置建構函式參數，則較常見用法是使用有多個可設定屬性之標記延伸模組的「屬性」`=`「值」 （當您指定屬性 = 值組時，這些屬性可能會以任何順序排列）。此外，不保證標記延伸會提供設定每一個可設定屬性的「函數」參數。 例如，<xref:System.Windows.Data.Binding> 是一個標記延伸，其中包含許多可透過*屬性*中的延伸模組來設定的屬性`=`*值*形式，但 <xref:System.Windows.Data.Binding> 只支援兩個函式：無參數的處理常式，以及設定初始路徑的一個。  
   
 - 必須逸出，才能將常值逗號傳遞給標記延伸模組。  
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>逸出序列和標記延伸模組  
- XAML 處理器中的屬性處理使用大括號作為標記延伸模組序列的指標。 此外，必要時，也可能產生常值大括號字元屬性值，方法是使用後接常值大括號的空大括號配對來輸入逸出序列。 請參閱[{} Escape Sequence-標記延伸](../../xaml-services/escape-sequence-markup-extension.md)。  
+ XAML 處理器中的屬性處理使用大括號作為標記延伸模組序列的指標。 此外，必要時，也可能產生常值大括號字元屬性值，方法是使用後接常值大括號的空大括號配對來輸入逸出序列。 請參閱[{} Escape Sequence-標記延伸](../../../desktop-wpf/xaml-services/escape-sequence-markup-extension.md)。  
   
 <a name="Nesting"></a>   
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>XAML 用法中的巢狀標記延伸模組  
@@ -114,14 +114,14 @@ ms.locfileid: "73459822"
 ## <a name="markup-extensions-and-property-element-syntax"></a>標記延伸模組和屬性項目語法  
  用作填入屬性項目值的物件項目時，無法從可在 XAML 中使用的一般類型支援物件項目來透過視覺方式區別標記延伸模組類別。 一般物件項目與標記延伸模組的實際差異，在於標記延伸模組會評估為類型值或延後為運算式。 因此，標記延伸模組之屬性值的任何可能類型錯誤的機制會不同，就像其他程式設計模型中處理晚期繫結屬性的方式一樣。 將會針對剖析 XAML 時所設定的目標屬性，評估一般物件項目的類型是否相符。  
   
- 用於物件項目語法以填入屬性項目時，大部分標記延伸模組內不會有內容或任何進一步屬性項目語法。 因此，您可以關閉物件項目標記，且不提供任何子項目。 只要 XAML 處理器遇到任何物件項目時，就會呼叫該類別的建構函式，以具現化從剖析的項目所建立的物件。 標記延伸類別是不一樣的：如果您想要在物件專案語法中使用標記延伸模組，則必須提供無參數的函式。 某些現有標記延伸模組有至少一個必要屬性值，而且必須指定一個必要屬性值才能進行有效初始化。 如果是這樣，該屬性值一般會指定為物件項目上屬性 (property) 的屬性 (attribute)。 在 [XAML 命名空間 (x:) 語言功能](../../xaml-services/xaml-namespace-x-language-features.md)和 [WPF XAML 延伸功能](wpf-xaml-extensions.md)參考頁面中，將會標註具有必要屬性 (和必要屬性的名稱) 的延伸模組。 參考頁面也會標註是否不允許特定標記延伸模組的物件項目語法或屬性語法。 值得注意的案例是 [x:Array 標記延伸模組](../../xaml-services/x-array-markup-extension.md)，這無法支援屬性語法，因為必須在標記內將該陣列的內容指定為內容。 陣列內容會當成一般物件處理；因此，沒有屬性的預設類型轉換子是可行的。 此外，[x:Array 標記延伸模組](../../xaml-services/x-array-markup-extension.md)需要 `type` 參數。  
+ 用於物件項目語法以填入屬性項目時，大部分標記延伸模組內不會有內容或任何進一步屬性項目語法。 因此，您可以關閉物件項目標記，且不提供任何子項目。 只要 XAML 處理器遇到任何物件項目時，就會呼叫該類別的建構函式，以具現化從剖析的項目所建立的物件。 標記延伸類別是不一樣的：如果您想要在物件專案語法中使用標記延伸模組，則必須提供無參數的函式。 某些現有標記延伸模組有至少一個必要屬性值，而且必須指定一個必要屬性值才能進行有效初始化。 如果是這樣，該屬性值一般會指定為物件項目上屬性 (property) 的屬性 (attribute)。 在 [XAML 命名空間 (x:) 語言功能](../../../desktop-wpf/xaml-services/namespace-language-features.md)和 [WPF XAML 延伸功能](wpf-xaml-extensions.md)參考頁面中，將會標註具有必要屬性 (和必要屬性的名稱) 的延伸模組。 參考頁面也會標註是否不允許特定標記延伸模組的物件項目語法或屬性語法。 值得注意的案例是 [x:Array 標記延伸模組](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)，這無法支援屬性語法，因為必須在標記內將該陣列的內容指定為內容。 陣列內容會當成一般物件處理；因此，沒有屬性的預設類型轉換子是可行的。 此外，[x:Array 標記延伸模組](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)需要 `type` 參數。  
   
 ## <a name="see-also"></a>請參閱
 
 - [XAML 概觀 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [XAML 命名空間 (x:) 語言功能](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML 命名空間 (x:) 語言功能](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [WPF XAML 延伸](wpf-xaml-extensions.md)
 - [StaticResource 標記延伸](staticresource-markup-extension.md)
 - [Binding 標記延伸](binding-markup-extension.md)
 - [DynamicResource 標記延伸](dynamicresource-markup-extension.md)
-- [x:Type 標記延伸模組](../../xaml-services/x-type-markup-extension.md)
+- [x:Type 標記延伸模組](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)

@@ -2,12 +2,12 @@
 title: LINQ to XML 軸概觀
 ms.date: 07/20/2015
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
-ms.openlocfilehash: 47e95fcca251212475c925a24d382ba2dceedd62
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0cf3c20266d0ca9d861eec963afda8f2e71a55a3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352030"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636480"
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>LINQ to XML 軸概觀 (Visual Basic)
 建立 XML 樹狀結構，或將 XML 文件載入到 XML 樹狀結構後，您可以進行查詢以尋找項目和屬性並擷取其值。 您可以透過「座標軸方法」擷取集合，也稱為「座標軸」。 有些座標軸是 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 類別中，傳回 <xref:System.Collections.Generic.IEnumerable%601> 集合的方法。 有些座標軸是 <xref:System.Xml.Linq.Extensions> 類別中的擴充方法。 當做擴充方法實作的座標軸會在集合上運算，然後傳回集合。  
@@ -16,7 +16,7 @@ ms.locfileid: "74352030"
   
  除了會傳回集合的座標軸方法之外，還有其他兩個常用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的方法。 <xref:System.Xml.Linq.XContainer.Element%2A> 方法會傳回單一的 <xref:System.Xml.Linq.XElement>。 <xref:System.Xml.Linq.XElement.Attribute%2A> 方法會傳回單一的 <xref:System.Xml.Linq.XAttribute>。  
   
- 就許多用途而言，[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢會提供最強大的方式來檢查樹狀結構、從其中擷取資料並加以轉換。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢會在實作 <xref:System.Collections.Generic.IEnumerable%601> 的物件上運作，而 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 軸會傳回 <xref:System.Collections.Generic.IEnumerable%601> 集合的 <xref:System.Xml.Linq.XElement> 以及 <xref:System.Collections.Generic.IEnumerable%601> 集合的 <xref:System.Xml.Linq.XAttribute>。 您需要這些集合，才能執行您的查詢。  
+ 就許多用途而言，LINQ 查詢提供最強大的方式來檢查樹狀結構、將資料從其解壓縮，然後加以轉換。 LINQ 查詢會在執行 <xref:System.Collections.Generic.IEnumerable%601>的物件上運作，而 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 軸則會傳回 <xref:System.Xml.Linq.XElement> 集合的 <xref:System.Collections.Generic.IEnumerable%601>，以及 <xref:System.Collections.Generic.IEnumerable%601> 集合的 <xref:System.Xml.Linq.XAttribute>。 您需要這些集合，才能執行您的查詢。  
   
  除了擷取項目和屬性之集合的座標軸方法之外，還有其他座標軸方法可讓您仔細逐一查看樹狀結構。 例如，您可以使用樹狀結構的節點，而不是處理項目和屬性。 這些節點是比項目和屬性還要細微的位移單位等級。 使用節點時，您可以檢查 XML 註解、文字節點、處理指示等等。 這個功能對於撰寫字組處理器與想要將文件另存為 XML 之類的人而言，相當重要。 不過，多數的 XML 程式設計人員關心的都是項目、屬性及其值。  
   

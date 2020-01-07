@@ -1,21 +1,21 @@
 ---
-title: 作法：連接到資料庫
+title: 如何：連接至資料庫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
-ms.openlocfilehash: 48ff4af2c881104d5699910e20ef86eea0466d2a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 837919b1cfcdf46026ccfb37cbbec951c0ae41b8
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793856"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634673"
 ---
-# <a name="how-to-connect-to-a-database"></a>HOW TO：連接到資料庫
-<xref:System.Data.Linq.DataContext> 是主要管道，您可以透過該管道連接至資料庫、擷取資料庫中的物件，以及將變更送回給資料庫。 您可以使用<xref:System.Data.Linq.DataContext> ，就像使用 ADO.NET <xref:System.Data.SqlClient.SqlConnection>一樣。 事實上，<xref:System.Data.Linq.DataContext> 是使用您所提供的連接或連接字串 (Connection String) 來初始化。 如需詳細資訊，請參閱[DataCoNtext 方法（O/R 設計工具）](/visualstudio/data-tools/datacontext-methods-o-r-designer)。  
+# <a name="how-to-connect-to-a-database"></a>如何：連接至資料庫
+<xref:System.Data.Linq.DataContext> 是主要管道，您可以透過該管道連接至資料庫、擷取資料庫中的物件，以及將變更送回給資料庫。 您可以使用 <xref:System.Data.Linq.DataContext>，就像使用 ADO.NET <xref:System.Data.SqlClient.SqlConnection>一樣。 事實上，<xref:System.Data.Linq.DataContext> 是使用您所提供的連接或連接字串 (Connection String) 來初始化。 如需詳細資訊，請參閱[DataCoNtext 方法（O/R 設計工具）](/visualstudio/data-tools/datacontext-methods-o-r-designer)。  
   
- <xref:System.Data.Linq.DataContext> 的用途是將物件的要求轉譯為針對資料庫進行的 SQL 查詢，然後再從結果中組合物件。 <xref:System.Data.Linq.DataContext> 會實作與標準查詢運算子 (如 [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] 和 `Where`) 相同的運算子模式，來啟用 `Select`。  
+ <xref:System.Data.Linq.DataContext> 的用途是將物件的要求轉譯為針對資料庫進行的 SQL 查詢，然後再從結果中組合物件。 <xref:System.Data.Linq.DataContext> 藉由實作為標準查詢運算子（例如 `Where` 和 `Select`）的相同運算子模式，來啟用語言整合式查詢（LINQ）。  
   
 > [!IMPORTANT]
 > 維護安全的連接是最重要的事。 如需詳細資訊，請參閱[LINQ to SQL 中的安全性](security-in-linq-to-sql.md)。  
@@ -39,6 +39,6 @@ ms.locfileid: "70793856"
  [!code-csharp[DLinqCommunicatingWithDatabase#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#5)]
  [!code-vb[DLinqCommunicatingWithDatabase#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#5)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [與資料庫通訊](communicating-with-the-database.md)

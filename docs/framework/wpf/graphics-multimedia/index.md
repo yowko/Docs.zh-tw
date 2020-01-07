@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 150b742c2195c07abf2b2823871627b0ba827580
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: f9d27ce50376c3a494a546a23cd5d7409b4c475a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919985"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636615"
 ---
 # <a name="graphics-and-multimedia"></a>圖形和多媒體
 
@@ -59,11 +59,11 @@ WPF 可支援高品質的 2D 圖形。 這些功能包括筆刷、幾何、影�
 
 ### <a name="2-d-shapes"></a>2D 圖案
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供常用的向量繪製2D 圖形的程式庫，例如矩形和橢圓形，如下圖所示。
+WPF 提供常用、向量繪製之2D 圖形的程式庫，例如矩形和橢圓形，如下圖所示。
 
 ![顯示橢圓形和矩形的圖表。](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
-這些內建 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 圖形不只是圖形︰它們也是可程式化元素，能實作許多最常見控制項的功能，包括鍵盤和滑鼠輸入。 下列範例顯示如何處理按一下 <xref:System.Windows.Shapes.Ellipse> 元素所引發的 <xref:System.Windows.UIElement.MouseUp> 事件。
+這些內部 WPF 圖形不只是圖形：它們是可程式化的專案，這些專案會實作為大部分通用控制項（包括鍵盤和滑鼠輸入）所預期的許多功能。 下列範例顯示如何處理按一下 <xref:System.Windows.Shapes.Ellipse> 元素所引發的 <xref:System.Windows.UIElement.MouseUp> 事件。
 
 ```xaml
 <Window
@@ -101,7 +101,7 @@ End Class
 
 ### <a name="2-d-geometries"></a>2D 幾何
 
-當 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供的2D 圖形不足時，您可以使用幾何和路徑的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支援來建立自己的。 下圖示範如何使用幾何來建立圖形，當做繪圖筆刷並裁剪其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 元素。
+當 WPF 提供的2D 圖形不夠時，您可以使用 WPF 支援來建立您自己的幾何和路徑。 下圖顯示如何使用幾何來建立圖形、繪製筆刷，以及裁剪其他 WPF 元素。
 
 ![螢幕擷取畫面：顯示如何使用幾何來建立圖形。](./media/index/use-geometries-create-shapes.png)
 
@@ -109,7 +109,7 @@ End Class
 
 ### <a name="2-d-effects"></a>2D 效果
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供2D 類別的程式庫，可讓您用來建立各種效果。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的2D 轉譯功能提供繪製具有漸層、點陣圖、繪圖和影片之 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素的能力;並使用旋轉、縮放和扭曲來操作這些專案。 下圖提供您可以使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 筆刷達到許多效果的範例。
+WPF 提供2D 類別庫，可讓您用來建立各種效果。 WPF 的2D 轉譯功能提供繪製具有漸層、點陣圖、繪圖和影片之 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素的功能;並使用旋轉、縮放和扭曲來操作這些專案。 下圖提供使用 WPF 筆刷可以達成的許多效果範例。
 
 ![此圖顯示不同的 WPF 筆刷和油漆元素。](./media/index/brushes-paint-elements.png)
 
@@ -119,7 +119,7 @@ End Class
 
 ## <a name="3-d-rendering"></a>3D 轉譯
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供一組3D 轉譯功能，可與 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的2D 圖形支援整合，以建立更吸引人的版面配置、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]和資料視覺效果。 在頻譜的一端，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 可讓您將2D 影像轉譯到立體圖形的表面，如下圖所示。
+WPF 提供一組3D 轉譯功能，可與 WPF 中的2D 圖形支援整合，讓您建立更棒的版面配置、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]和資料視覺效果。 在範圍的一端，WPF 可讓您將2D 影像轉譯到立體圖形的表面上，如下圖所示。
 
 ![顯示具有不同材質之3D 圖形的範例螢幕擷取畫面。](./media/index/visual-three-dimensional-shape.png)
 
@@ -129,7 +129,7 @@ End Class
 
 ## <a name="animation"></a>動畫
 
-使用動畫讓控制項和元素放大、搖晃、旋轉和淡出，以及建立有趣的網頁切換及執行其他工作。 因為 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 可讓您以動畫顯示大部分屬性，您不只可以動畫顯示大部分 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 物件，也可以使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 以動畫顯示您所建立的自訂物件。
+使用動畫讓控制項和元素放大、搖晃、旋轉和淡出，以及建立有趣的網頁切換及執行其他工作。 因為 WPF 可讓您以動畫顯示大部分的屬性，您不僅可以建立大部分 WPF 物件的動畫，也可以使用 WPF 以動畫顯示您所建立的自訂物件。
 
 ![動畫 cube 的螢幕擷取畫面。](./media/index/animate-custom-objects.png)
 
@@ -141,9 +141,9 @@ End Class
 
 影像、視訊和音訊都是以媒體功能豐富的方式傳達資訊和使用者體驗。
 
-### <a name="images"></a>映像
+### <a name="images"></a>影像
 
-包括圖示、背景，甚至動畫組件的影像，是大部分應用程式的核心組件。 因為您經常需要使用影像，所以 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 公開能以各種不同方式處理的功能。 下圖顯示眾多方式的其中之一。
+包括圖示、背景，甚至動畫組件的影像，是大部分應用程式的核心組件。 因為您經常需要使用影像，所以 WPF 會以各種不同的方式來公開使用它們。 下圖顯示眾多方式的其中之一。
 
 ![樣式設定範例螢幕擷取畫面](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
 
@@ -151,7 +151,7 @@ End Class
 
 ### <a name="video-and-audio"></a>視訊和音訊
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 圖形功能的核心功能就是提供原生支援，以用於處理多媒體，包括視訊和音訊。 下列範例示範如何將媒體播放程式插入至應用程式。
+WPF 圖形功能的核心功能是提供使用多媒體的原生支援，包括影片和音訊。 下列範例示範如何將媒體播放程式插入至應用程式。
 
 ```xaml
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />
@@ -161,7 +161,7 @@ End Class
 
 如需詳細資訊，請參閱[多媒體概觀](multimedia-overview.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Media>
 - <xref:System.Windows.Media.Animation>

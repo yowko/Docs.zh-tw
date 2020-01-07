@@ -1,14 +1,14 @@
 ---
 title: 如何使用 ML.NET 自動化的 ML API
 description: ML.NET 自動化的 ML API 會自動化模型建置程序，並產生隨時可供部署的模型。 了解您可用來設定自動化機器學習工作的選項。
-ms.date: 11/7/2019
+ms.date: 12/18/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c1c18decc48bc1499aa55210becff305cdec4a53
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977122"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636558"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>如何使用 ML.NET 自動化的機器學習 API
 
@@ -38,6 +38,7 @@ using Microsoft.ML.AutoML;
 * 二元分類
 * 多元分類
 * 回復
+* 建議
 
 ## <a name="create-experiment-settings"></a>建立實驗設定
 
@@ -59,6 +60,12 @@ using Microsoft.ML.AutoML;
 
   ```csharp
   var experimentSettings = new RegressionExperimentSettings();
+  ```
+
+* 建議
+
+  ```csharp
+  var experimentSettings = new RecommendationExperimentSettings();
   ```
 
 ## <a name="configure-experiment-settings"></a>設定實驗設定
@@ -110,12 +117,13 @@ using Microsoft.ML.AutoML;
 * [支援的二元分類演算法](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
 * [支援的多元分類演算法](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
 * [支援的迴歸演算法](xref:Microsoft.ML.AutoML.RegressionTrainer)
+* [支援的建議演算法](xref:Microsoft.ML.AutoML.RecommendationTrainer)
 
 ## <a name="optimizing-metric"></a>最佳化計量
 
 最佳化度量，如上例所示，決定要在模型定型期間最佳化的計量。 您可以選取的最佳化計量由您所選工作類型決定。 以下為可用計量的清單。
 
-|[二元分類](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [多元分類](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[迴歸](xref:Microsoft.ML.AutoML.RegressionMetric)
+|[二元分類](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [多元分類](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[回歸 & 建議](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
 |準確率| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
@@ -129,7 +137,7 @@ using Microsoft.ML.AutoML;
 ## <a name="data-pre-processing-and-featurization"></a>資料前置處理與特徵化
 
 > [!NOTE]
-> [功能] 資料行僅支援 <xref:System.Boolean>、<xref:System.Single> 和 <xref:System.String> 的類型。
+> [功能] 資料行僅支援 <xref:System.Boolean>、<xref:System.Single>和 <xref:System.String>的類型。
 
 根據預設，資料予以前置處理，並為您自動執行下列步驟：
 
@@ -219,7 +227,7 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 
 * [二元分類計量](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [多元分類計量](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
-* [迴歸計量](xref:Microsoft.ML.AutoML.RegressionMetric)
+* [回歸 & 建議計量](xref:Microsoft.ML.AutoML.RegressionMetric)
 
 ## <a name="see-also"></a>請參閱
 

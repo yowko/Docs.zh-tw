@@ -5,16 +5,16 @@ author: pkulikov
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: a7199ce2e5217eaadfa10893eb1fbb3417e9be20
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
-ms.translationtype: MT
+ms.openlocfilehash: 77c077df27c856855322b27d6101218d59d29173
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204828"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336668"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>教學課程：使用 k 來分類鳶尾花的花卉-表示使用 ML.NET 的叢集
 
-本教學課程說明如何使用 ML.NET 為[鳶尾花資料集](../resources/tasks.md#clustering)建立一個[群集模型](https://en.wikipedia.org/wiki/Iris_flower_data_set)。
+本教學課程說明如何使用 ML.NET 為[鳶尾花資料集](https://en.wikipedia.org/wiki/Iris_flower_data_set)建立一個[群集模型](../resources/tasks.md#clustering)。
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
@@ -27,7 +27,7 @@ ms.locfileid: "74204828"
 > - 將模型定型
 > - 使用模型來進行預測
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
 
 - 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)版本。
 
@@ -41,7 +41,7 @@ ms.locfileid: "74204828"
 
 ## <a name="create-a-console-application"></a>建立主控台應用程式
 
-1. 開啟 Visual Studio。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [.NET Core] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，鍵入 "IrisFlowerClustering"，然後選取 [確定] 按鈕。
+1. 開啟 Visual Studio。 從功能表列中選取 [檔案] >  [新增] >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [.NET Core] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，鍵入 "IrisFlowerClustering"，然後選取 [確定] 按鈕。
 
 1. 在您的專案中建立一個名為 *Data* 的目錄以儲存資料集和模型檔案：
 
@@ -102,25 +102,25 @@ ms.locfileid: "74204828"
 
 [!code-csharp[Initialize paths](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#Paths)]
 
-若要將上述的程式碼進行編譯，請在 `using`Program.cs*檔案頂端加入下列* 指示詞：
+若要將上述的程式碼進行編譯，請在 *Program.cs* 檔案頂端加入下列 `using` 指示詞：
 
 [!code-csharp[Add usings for paths](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#UsingsForPaths)]
 
 ## <a name="create-ml-context"></a>建立 ML 內容
 
-在 `using`Program.cs*檔案頂端加入下列額外的* 指示詞：
+在 *Program.cs* 檔案頂端加入下列額外的 `using` 指示詞：
 
 [!code-csharp[Add Microsoft.ML usings](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#MLUsings)]
 
-在 `Main` 方法中，以下列程式碼取代 `Console.WriteLine("Hello World!");` 行：
+在 `Console.WriteLine("Hello World!");` 方法中，以下列程式碼取代 `Main` 行：
 
 [!code-csharp[Create ML context](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateContext)]
 
 <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> 類別表示機器學習環境，並為資料載入、模型定型、預測和其他工作提供記錄機制和進入點。 這在概念上類似於在 Entity Framework 中使用 `DbContext`。
 
-## <a name="setup-data-loading"></a>設定資料載入
+## <a name="set-up-data-loading"></a>設定資料載入
 
-將下列程式碼新增至 `Main` 方法，以設定資料載入方式：
+將下列程式碼新增至 `Main` 方法，以設定載入資料的方式：
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 

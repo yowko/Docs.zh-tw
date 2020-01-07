@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: bc3a139db80066c9cad5199c7734fe66a8639400
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8fea61c463928ee69ef5dd0dfbf107f89c5384ff
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460038"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544462"
 ---
 # <a name="binding-declarations-overview"></a>繫結宣告概觀
 
@@ -25,7 +25,7 @@ ms.locfileid: "73460038"
 
 <a name="Prereq"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 在閱讀本主題之前，請務必先熟悉標記延伸的概念和使用方式。 如需標記延伸的詳細資訊，請參閱[標記延伸和 WPF XAML](../advanced/markup-extensions-and-wpf-xaml.md)。
 
@@ -110,13 +110,13 @@ ms.locfileid: "73460038"
 
 - 如果您在 XAML 中設定 <xref:System.Windows.Data.Binding.Path%2A>，則也需要對 XML 語言定義的特殊字元進行 escape （使用 XML 實體）：
 
-  - 使用 `&` 逸出 "&" 字元。
+  - 使用 `&amp;` 逸出 "&" 字元。
 
-  - 使用 `>` 逸出 ">" 結束標記。
+  - 使用 `&gt;` 逸出 ">" 結束標記。
 
 - 此外，如果您使用標記延伸語法在屬性中描述完整的繫結，您必須逸出 (使用反斜線 \\) [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 標記延伸剖析器特有的字元：
 
-  - 反斜線 (\\) 本身就是逸出字元。
+  - 反斜線 (\\) 本身是逸出字元。
 
   - 等號 (=) 會分隔屬性名稱和屬性值。
 

@@ -1,19 +1,19 @@
 ---
-title: 作法：一次一行讀取文字檔 (Visual C#)
+title: 如何一次讀取文字檔的一行程式C#設計指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ReadLine method [C#]
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 75274d93ee29feb5f79dfc29c24109f25fd98a5c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: a6af48cdacd836465d776a3fd4e1d17aa0298b77
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589957"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635336"
 ---
-# <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>作法：一次一行讀取文字檔 (Visual C#)
+# <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a>如何一次一行讀取文字檔（C#程式設計手冊）
 此範例會使用 `StreamReader` 類別的 `ReadLine` 方法，將文字檔的內容一次一行讀入字串中。 每個文字行都會儲存到字串 `line` 中並顯示在畫面上。  
   
 ## <a name="example"></a>範例  
@@ -42,7 +42,7 @@ System.Console.ReadLine();
   
  以實際檔案名稱取代 `"c:\test.txt"`。  
   
-## <a name="robust-programming"></a>穩固程式設計  
+## <a name="robust-programming"></a>最佳化程式設計  
  以下條件可能會造成例外狀況：  
   
 - 檔案可能不存在。  
@@ -50,8 +50,8 @@ System.Console.ReadLine();
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  請勿根據檔案名稱來判斷檔案內容。 例如，`myFile.cs` 檔案可能不是 C# 原始程式檔。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C# 程式設計指南](../index.md)
-- [檔案系統和登錄 (C# 程式設計指南)](./index.md)
+- [檔案系統和登錄 (C# 程式設計手冊)](./index.md)

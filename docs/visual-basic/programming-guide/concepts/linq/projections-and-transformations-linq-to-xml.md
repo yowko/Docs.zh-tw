@@ -2,17 +2,17 @@
 title: 投影和轉換 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 297de224-b625-44cf-8c00-186b6189aa0e
-ms.openlocfilehash: 3bcef46b690ab57b8d718773c34c2d70f4f14929
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c912ba8bb908016ae32d171208e8224f60152254
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346617"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636776"
 ---
 # <a name="projections-and-transformations-linq-to-xml-visual-basic"></a>投影和轉換（LINQ to XML）（Visual Basic）
 本節提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 投影和轉換的範例。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
   
 |主題|描述|  
 |-----------|-----------------|  
@@ -23,8 +23,8 @@ ms.locfileid: "74346617"
 |[如何：投影物件圖形（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-project-an-object-graph.md)|顯示如何從 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢規劃更複雜的物件圖形。|  
 |[如何：投影匿名型別（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-project-an-anonymous-type.md)|顯示如何從 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢規劃匿名物件的集合。|  
 |[如何：從 XML 產生文字檔（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-text-files-from-xml.md)|顯示如何將 XML 檔案轉換為非 XML 的文字檔。|  
-|[如何：從 CSV 檔案產生 XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)|顯示如何使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 剖析 CSV 檔案並從其中產生 XML。|  
+|[如何：從 CSV 檔案產生 XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)|示範如何使用 LINQ 剖析 CSV 檔案，並從它產生 XML。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [查詢 XML 樹狀結構（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

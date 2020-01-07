@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 13d1eda178a4c2580af67ef5a7198e7f0884a7d6
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
-ms.translationtype: MT
+ms.openlocfilehash: aa3d3032f083682f94c75c400710640b9408e973
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884393"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635362"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 傳回值 (C# 程式設計手冊)
 
@@ -34,7 +34,7 @@ ms.locfileid: "74884393"
 
 在 Windows 中執行程式時，任何從 `Main` 函式傳回的值，皆會儲存在環境變數中。 您可以從批次檔使用 `ERRORLEVEL` 或從 PowerShell 使用 `$LastExitCode` 來擷取此環境變數。
 
-您可以使用 [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build` 命令來建置應用程式。
+您可以使用[DOTNET CLI](../../../core/tools/dotnet.md) `dotnet build` 命令來建立應用程式。
 
 接下來，建立 PowerShell 指令碼以執行此應用程式，並顯示結果。 將下列程式碼貼入文字檔，將它儲存為 `test.ps1`，並放到包含專案的資料夾中。 在 PowerShell 命令提示字元中鍵入 `test.ps1`，以執行 PowerShell 指令碼。
 
@@ -98,4 +98,4 @@ private static async Task<int> AsyncConsoleWork()
 - [C# 程式設計指南](../index.md)
 - [C# 參考](../index.md)
 - [Main() 和命令列引數](index.md)
-- [如何：顯示命令列引數](./how-to-display-command-line-arguments.md)
+- [如何顯示命令列引數](./how-to-display-command-line-arguments.md)

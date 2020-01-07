@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 15df6339cec9eabadf5aa4c184d7504c4e065032
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: f145811da2a90dd544b0590ad75af92b281884bc
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421936"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635882"
 ---
 # <a name="where-clause-c-reference"></a>where 子句 (C# 參考)
 
@@ -41,7 +41,7 @@ ms.locfileid: "73421936"
 
 `where` 子句是篩選機制。 它幾乎可以放在查詢運算式中的任何位置，但不能是第一個或最後一個子句。 `where` 子句可能出現在 [group](group-clause.md) 子句之前或之後，取決於必須在分組來源項目之前還是之後進行篩選。
 
-如果指定的述詞不適用於資料來源中的項目，則會產生編譯時期錯誤。 這是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 所提供的強類型檢查的其中一個優點。
+如果指定的述詞不適用於資料來源中的項目，則會產生編譯時期錯誤。 這是 LINQ 提供的強型別檢查的其中一個優點。
 
 在編譯時間，`where` 關鍵字會轉換為 <xref:System.Linq.Enumerable.Where%2A> 標準查詢運算子方法呼叫。
 

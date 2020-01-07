@@ -3,15 +3,15 @@ title: 教學課程：搭配 ONNX 和 ML.NET 使用深度學習來偵測物件
 description: 本教學課程會示範如何使用 ML.NET 中預先定型的 ONNX 深度學習模型來偵測影像中物件。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 08/27/2019
+ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1364b6a1cf6d424975828185a50175b2763c6516
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 04d7dedf9f882d9f0e0396949c71e4941c207fe3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420043"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345031"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教學課程：在 ML.NET 中使用 ONNX 偵測物件
 
@@ -64,7 +64,7 @@ ms.locfileid: "73420043"
 
 ### <a name="understand-the-model"></a>了解模型
 
-物件偵測是一種影像處理工作。 因此，大多數定型並用來解決此問題的深度學習模型都是 CNN。 本教學課程中使用的模型是微小的 YOLOv2 模型、更精簡的 YOLOv2 模型版本，如 Redmon 和 Fadhari 所述：「 [YOLO9000：更快、更快速、更強](https://arxiv.org/pdf/1612.08242.pdf)」。 Tiny YOLOv2 是使用 Pascal VOC 資料集所定型，由 15 個層組成，可預測 20 種不同的物件類別。 因為 Tiny YOLOv2 是一種原始 YOLOv2 模型的壓縮版本，所以它在速度和正確性間進行了取捨。 組成模型的不同層可使用如 Netron 等工具進行視覺化。 檢查模型之後，您可以觀察到所有組成神經網路層之間的連線對應，其中每個層將包含層名稱及個別輸入/輸出的維度。 用來描述模型輸入和輸出的資料結構則稱為 Tensor。 您可以把 Tensor 想成是將資料儲存在 N 個維度中的容器。 以 Tiny YOLOv2 為例，輸入層的名稱為 `image`，且它會預期維度為 `3 x 416 x 416` 的 Tensor。 輸出層的名稱則為 `grid`，它會產生維度為 `125 x 13 x 13` 的輸出 Tensor。
+物件偵測是一項影像處理工作。 因此，大多數定型並用來解決此問題的深度學習模型都是 CNN。 本教學課程中使用的模型是微小的 YOLOv2 模型、更精簡的 YOLOv2 模型版本，如 Redmon 和 Fadhari 所述：「 [YOLO9000：更快、更快速、更強](https://arxiv.org/pdf/1612.08242.pdf)」。 Tiny YOLOv2 是使用 Pascal VOC 資料集所定型，由 15 個層組成，可預測 20 種不同的物件類別。 因為 Tiny YOLOv2 是一種原始 YOLOv2 模型的壓縮版本，所以它在速度和正確性間進行了取捨。 組成模型的不同層可使用如 Netron 等工具進行視覺化。 檢查模型之後，您可以觀察到所有組成神經網路層之間的連線對應，其中每個層將包含層名稱及個別輸入/輸出的維度。 用來描述模型輸入和輸出的資料結構則稱為 Tensor。 您可以把 Tensor 想成是將資料儲存在 N 個維度中的容器。 以 Tiny YOLOv2 為例，輸入層的名稱為 `image`，且它會預期維度為 `3 x 416 x 416` 的 Tensor。 輸出層的名稱則為 `grid`，它會產生維度為 `125 x 13 x 13` 的輸出 Tensor。
 
 ![將輸入層分割成隱藏層，然後輸出層](./media/object-detection-onnx/netron-model-map-layers.png)
 
@@ -74,7 +74,7 @@ YOLO 模型接受 `3(RGB) x 416px x 416px` 的影像。 模型會接受此輸入
 
 Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 ONNX 支援架構間的互通性。 這表示您可以在其中一個熱門的機器學習架構 (例如 PyTorch) 中定型模型、將它轉換成 ONNX 格式，然後在 ML.NET 等不同的架構中取用 ONNX 模型。 若要深入了解，請前往 [ONNX 網站](https://onnx.ai/)。
 
-![所使用之 ONNX 支援格式的圖表。](./media/object-detection-onnx/onyx-supported-formats.png)
+![所使用之 ONNX 支援格式的圖表。](./media/object-detection-onnx/onnx-supported-formats.png)
 
 預先定型的 Tiny YOLOv2 模型是以 ONNX 格式儲存，它是一種層的序列化表示和從這些層中所學習到模式。 在 ML.NET 中，與 ONNX 的互通性是透過 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 和 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet 套件來達成。 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 套件包含一系列的轉換，這些轉換會接受影像，並將影像編碼成可用來作為輸入以進行預測或定型管線的數值。 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) 套件會利用 ONNX 執行階段載入 ONNX 模型，並用它來根據所提供的輸入進行預測。
 
@@ -152,7 +152,7 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
     - `ImagePath` 包含儲存影像的路徑。
     - `Label` 包含檔案的名稱。
 
-    此外，`ImageNetData` 還包含 `ReadFromFile` 方法，此方法會載入所指定 `imageFolder` 路徑中儲存的多個影像檔案，並將它們作為 `ImageNetData` 物件的集合傳回。
+    此外，`ImageNetData` 包含方法 `ReadFromFile`，它會載入儲存在指定 `imageFolder` 路徑中的多個影像檔案，並將它們當做 `ImageNetData` 物件的集合傳回。
 
 在 *DataStructures* 目錄中建立您的預測類別。
 
@@ -169,7 +169,7 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
     `ImageNetPrediction` 是預測資料類別，並具有下列 `float[]` 欄位：
 
-    - `PredictedLabel` 包含影像中所偵測到每個週框方塊的維度、物件性分數及類別機率。
+    - `PredictedLabel` 包含影像中所偵測到的每個周框方塊的維度、objectness 分數和課程機率。
 
 ### <a name="initialize-variables-in-main"></a>在 Main 中初始化變數
 
@@ -229,7 +229,7 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
     [!code-csharp [YoloBoundingBoxUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L1)]
 
-    在現有類別定義的上方，新增稱為 `BoundingBoxDimensions` 的新類別定義，並繼承 `DimensionsBase` 類別以包含個別週框方塊的維度。
+    在現有類別定義的正上方，加入名為 `BoundingBoxDimensions` 的新類別定義，而繼承自 `DimensionsBase` 類別，以包含個別周框方塊的維度。
 
     [!code-csharp [BoundingBoxDimClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L5)]
 
@@ -256,7 +256,7 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
     [!code-csharp [YoloParserUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L1-L4)]
 
-    在現有的 `YoloOutputParser` 類別定義中，新增包含影像中每個儲存格維度的巢狀類別。 將下列 `CellDimensions` 類別的程式碼新增到 `YoloOutputParser` 類別定義頂端，並繼承 `DimensionsBase` 類別。
+    在現有的 `YoloOutputParser` 類別定義中，新增包含影像中每個儲存格維度的巢狀類別。 針對繼承自 `YoloOutputParser` 類別定義頂端 `DimensionsBase` 類別的 `CellDimensions` 類別，加入下列程式碼。
 
     [!code-csharp [YoloParserUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L10)]
 
@@ -274,15 +274,15 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
     - `CELL_HEIGHT` 是影像格線中單一儲存格的高度。
     - `channelStride` 是格線中目前儲存格的開始位置。
 
-    當模型進行預測 (也稱為評分) 時，它會將 `416px x 416px` 輸入影像分成大小為 `13 x 13` 的儲存格格線。 每個儲存格都包含 `32px x 32px`。 在每個儲存格中都有 5 個週框方塊，每個週框方塊都包含了 5 個特徵 (X、Y、高度、寬度、信賴度)。 此外，每個週框方塊都包含每個類別的機率 (在此案例中為 20)。 因此，每個儲存格都包含 125 個資訊 (5 個特徵 + 20 個類別機率)。
+    當模型進行預測 (也稱為評分) 時，它會將 `416px x 416px` 輸入影像分成大小為 `13 x 13` 的儲存格格線。 每個儲存格都包含 `32px x 32px`。 在每個儲存格中都有 5 個週框方塊，每個週框方塊都包含了 5 個特徵 (X、Y、高度、寬度、信賴度)。 此外，每個周框方塊都包含每個類別的機率，在此案例中為20。 因此，每個儲存格都包含 125 個資訊 (5 個特徵 + 20 個類別機率)。
 
 在 `channelStride` 的下方為 5 個週框方塊建立錨點清單：
 
 [!code-csharp [ParserAnchors](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L23-L26)]
 
-錨點是週框方塊的預先定義高度及寬度比例。 模型所偵測到的大多數物件或類別都具有類似比例。 這在建立週框方塊時會非常實用。 相較於預測週框方塊，預先定義維度的位移會藉由計算取得，因此可減少預測週框方塊時所需的計算。 通常這些錨點比例都會根據所使用的資料集進行計算。 在此案例中，因為資料集已知且值都已經預先進行計算，因此我們可以針對錨點直接進行硬式編碼。
+錨點是週框方塊的預先定義高度及寬度比例。 模型所偵測到的大多數物件或類別都具有類似比例。 這在建立週框方塊時會非常實用。 相較於預測週框方塊，預先定義維度的位移會藉由計算取得，因此可減少預測週框方塊時所需的計算。 通常這些錨點比例都會根據所使用的資料集進行計算。 在此情況下，因為資料集是已知的，而且值已預先計算，所以錨點可以硬式編碼。
 
-接下來，請定義模型將預測的標籤或類別。 此模型會預測 20 個類別，這 20 個類別是原始 YOLOv2 模型所預測類別總數的子集。
+接下來，請定義模型將預測的標籤或類別。 此模型會預測20個類別，這是原始 YOLOv2 模型所預測之類別總數的子集。
 
 請在 `anchors` 下方新增標籤清單。
 
@@ -302,7 +302,7 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 - `Softmax` 會將輸入向量正常化為機率分佈。
 - `GetOffset` 會將單一維度模型輸出中項目對應到 `125 x 13 x 13` Tensor 中相對應的位置。
 - `ExtractBoundingBoxes` 會使用模型輸出的 `GetOffset` 方法擷取週框方塊維度。
-- `GetConfidence` 會擷取信賴度值，其指出模型針對所偵測到物件的確信度，並使用 `Sigmoid` 函式將它轉換成百分比。
+- `GetConfidence` 會解壓縮信賴值，以陳述如何確保模型偵測到物件，並使用 `Sigmoid` 函數將它轉換成百分比。
 - `MapBoundingBoxToCell` 會使用週框方塊維度，並將它們對應到影像內的個別儲存格。
 - `ExtractClasses` 會使用 `GetOffset` 方法從模型輸出擷取週框方塊的類別預測，並使用 `Softmax` 方法將它們轉換成機率分佈。
 - `GetTopResult` 會從預測類別清單選取機率最高的類別。
@@ -423,7 +423,7 @@ if (isActiveBoxes[i])
 }
 ```
 
-若可以進行處理，請將週框方塊新增到結果清單。 若結果超過指定的擷取方塊數限制，請中斷迴圈。 在 if 陳述式中新增下列程式碼。
+若可以進行處理，請將週框方塊新增到結果清單。 如果結果超過要解壓縮的指定方塊限制，請中斷迴圈。 在 if 陳述式中新增下列程式碼。
 
 [!code-csharp [AddFirstBBoxToResults](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L219-L223)]
 
@@ -436,7 +436,7 @@ for (var j = i + 1; j < boxes.Count; j++)
 }
 ```
 
-與第一個方塊相似，若相鄰的方塊已為使用中或是準備好進行處理，請使用 `IntersectionOverUnion` 方法來檢查第一個方塊和第二個方塊是否超過指定的閾值。 將下列程式碼新增到您最內層的 for 迴圈。
+與第一個方塊相似，若相鄰的方塊已為使用中或是準備好進行處理，請使用 `IntersectionOverUnion` 方法來檢查第一個方塊和第二個方塊是否超過指定的閾值。 將下列程式碼新增至最內層的 for 迴圈。
 
 [!code-csharp [IOUBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L227-L239)]
 
@@ -448,7 +448,7 @@ for (var j = i + 1; j < boxes.Count; j++)
 
 [!code-csharp [ReturnFilteredBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L246)]
 
-非常! 現在是時候搭配模型使用此程式碼來進行評分了。
+太好了！ 現在是時候搭配模型使用此程式碼來進行評分了。
 
 ## <a name="use-the-model-for-scoring"></a>使用模型進行評分
 
@@ -473,7 +473,7 @@ for (var j = i + 1; j < boxes.Count; j++)
 
     [!code-csharp [ImageNetSettingStruct](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L26-L30)]
 
-    之後，請建立另一個稱為 `TinyYoloModelSettings` 的結構，其包含模型輸入和輸出層的名稱。 若要視覺化模型輸入和輸出層的名稱，您可以使用 [Netron](https://github.com/lutzroeder/netron) 等工具。
+    之後，建立另一個名為 `TinyYoloModelSettings` 的結構，其中包含模型的輸入和輸出層的名稱。 若要視覺化模型輸入和輸出層的名稱，您可以使用 [Netron](https://github.com/lutzroeder/netron) 等工具。
 
     [!code-csharp [YoloSettingsStruct](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L32-L43)]
 
@@ -703,7 +703,7 @@ person and its Confidence score: 0.5551759
 
 若要查看包含週框方塊的影像，請巡覽至 `assets/images/output/` 目錄。 以下是其中一個經處理影像的範例。
 
-![Dinning 室的範例已處理影像](./media/object-detection-onnx/dinning-room-table-chairs.png)
+![餐費室的範例處理影像](./media/object-detection-onnx/dinning-room-table-chairs.png)
 
 恭喜您！ 您已透過在 ML.NET 中重複使用已預先定型的 `ONNX` 模型，成功建置出可用來偵測物件的機器學習模型。
 

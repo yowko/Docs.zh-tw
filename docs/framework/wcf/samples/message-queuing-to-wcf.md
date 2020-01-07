@@ -2,21 +2,22 @@
 title: 訊息佇列至 Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: 4daa3694287f93aa42a139ed701578e26433bc44
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 08ab6468ed638b4e9f1ca2fdbac1c55076eafe99
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714841"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337612"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>訊息佇列至 Windows Communication Foundation
-這個範例會示範訊息佇列（MSMQ）應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation （WCF）服務。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
-  
+
+這個範例會示範訊息佇列（MSMQ）應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation （WCF）服務。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
+
  服務合約為 `IOrderProcessor`，這會定義適合與佇列搭配使用的單向服務。 MSMQ 訊息沒有 Action 標頭，所以不可能自動將不同 MSMQ 訊息對應到作業合約。 因此，這時只能有一個作業合約。 如果您想要為服務定義一個以上的作業合約，應用程式就必須提供資訊，說明 MSMQ 訊息中的哪個標頭 (例如，標籤或 correlationID) 可以用來決定分派哪個作業合約。
-  
- MSMQ 訊息不會包含有關作業合約的不同參數各自對應到哪個標頭的資訊。 參數的型別是 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`)，其中包含基礎 MSMQ 訊息。 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) 類別中的型別 "T" 代表已序列化為 MSMQ 訊息本文的資料。 在這個範例中，`PurchaseOrder` 型別會序列化為 MSMQ 訊息本文。  
-  
- 下列範例程式碼會示範訂單處理服務的服務合約。  
+
+ MSMQ 訊息不會包含有關作業合約的不同參數各自對應到哪個標頭的資訊。 參數的型別是 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`)，其中包含基礎 MSMQ 訊息。 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) 類別中的型別 "T" 代表已序列化為 MSMQ 訊息本文的資料。 在這個範例中，`PurchaseOrder` 型別會序列化為 MSMQ 訊息本文。
+
+ 下列範例程式碼會示範訂單處理服務的服務合約。
 
 ```csharp
 // Define a service contract.
@@ -112,7 +113,7 @@ Console.ReadLine();
 
  當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以查看來自用戶端的服務接收訊息。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。 請注意，因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。 例如，您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。
 
-### <a name="to-setup-build-and-run-the-sample"></a>若要設定、建置及執行範例
+## <a name="set-up-build-and-run-the-sample"></a>設定、建立和執行範例
 
 1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
@@ -132,7 +133,7 @@ Console.ReadLine();
 
 4. 若要在單一電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
-### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例
+## <a name="run-the-sample-across-computers"></a>跨電腦執行範例
 
 1. 將語言特定資料夾下 \service\bin\ 資料夾中的服務程式檔複製到服務電腦中。
 
@@ -145,14 +146,14 @@ Console.ReadLine();
 5. 在用戶端電腦上，從命令提示字元啟動 Client.exe。
 
 > [!IMPORTANT]
-> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
-> `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
-> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`  
-  
+> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`
+
 ## <a name="see-also"></a>請參閱
 
 - [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

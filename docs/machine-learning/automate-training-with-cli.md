@@ -1,34 +1,35 @@
 ---
 title: 使用 ML.NET CLI 自動化模型定型
 description: 探索如何使用 ML.NET CLI 工具，從命令列自動定型最佳模型。
-author: CESARDELATORRE
-ms.date: 04/17/2019
+author: natke
+ms.author: nakersha
+ms.date: 12/17/2019
 ms.custom: how-to
-ms.openlocfilehash: c147464ff59563d336363eed73fc6337bdb12e85
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: c7ad80d627e69df329ffe6b53de60520188347d8
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275845"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636597"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>使用 ML.NET CLI 自動化模型定型
 
-ML.NET CLI 在學習 ML.NET 時，向 .NET 開發人員「推廣」ML.NET。
+ML.NET CLI 會自動產生適用于 .NET 開發人員的模型。
 
 若要使用 ML.NET API 本身 (不利用 ML.NET AutoML CLI)，您需要選擇定型器 (實作特定工作的機器學習演算法) 以及要套用至資料的一組資料轉換 (特徵工程)。 每個資料集的最佳管道各有不同，而從所有的選項中選取最佳演算法會增加複雜性。 更進一步，每個演算法都有一組要微調的超參數。 因此，您可以花費數週或數月來最佳化機器學習模型，嘗試尋找特徵工程、學習演算法和超參數的最佳組合。
 
-此程序可使用 ML.NET CLI 自動化，這會實作 ML.NET AutoML 的智慧引擎。
+ML.NET CLI 會使用自動化機器學習（AutoML）來簡化此程式。 
 
 > [!NOTE]
 > 本主題參考 ML.NET **CLI** 和 ML.NET **AutoML**，它們目前為公開預覽版，因此内容可能會有變更。
 
 ## <a name="what-is-the-mlnet-command-line-interface-cli"></a>什麼是 ML.NET 命令列介面 (CLI)？
 
-您可以在任何命令提示字元 (Windows、Mac 或 Linux) 中執行 ML.NET CLI，根據您的定型資料集產生高品質的 ML.NET 模型和原始程式碼。
+ML.NET CLI 是 dotnet 的通用工具。 安裝之後，您會提供機器學習工作和訓練資料集，並產生 ML.NET 模型，以及要在您的應用C#程式中使用模型所執行的程式碼。
 
 如下圖所示，產生高品質的 ML.NET 模型 (序列化模型 .zip 檔案) 加上執行/評分數模型的範例 C# 程式碼很容易。 此外，也產生建立/定型模型的 C# 程式碼，以便您可以研究並重覆所產生「最佳模型」使用的演算法和設定。
 
-![圖](media/automate-training-with-cli/cli-high-level-process.png "在 ML.NET CLI 內工作的 AutoML 引擎")
+![影像](media/automate-training-with-cli/cli-high-level-process.png "在 ML.NET CLI 內運作的 AutoML 引擎")
 
 您可以從自己的資料集產生這些資產，不用自行撰寫程式碼，因此即使您已熟悉 ML.NET，也能提升生產力。
 
@@ -45,7 +46,7 @@ ML.NET CLI 目前支援的 ML 工作如下：
 mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
 ```
 
-![image](media/automate-training-with-cli/cli-model-generation.gif)
+![影像](media/automate-training-with-cli/cli-model-generation.gif)
 
 您可以用在 *Windows PowerShell*、*macOS/Linux bash 或 *Windows CMD* 執行的方式執行它。 不過，表格式自動完成 (參數建議) 不適用於 *Windows CMD*。
 
@@ -73,33 +74,33 @@ CLI `auto-train` 命令會在輸出資料夾中產生下列資產：
 
 下列顯示 CLI 找到之前五個模型的二元分類 ML 工作計量清單：
 
-![image](media/automate-training-with-cli/cli-binary-classification-metrics.png)
+![影像](media/automate-training-with-cli/cli-binary-classification-metrics.png)
 
 精確度是分類問題的最熱門計量，但如以下參考所述，精確度不一定一律是選取最佳模型的最佳計量。 在某些情況下，您需要評估模型品質和其他計量。
 
-若要探索及了解 CLI 輸出的計量，請參閱[二元分類計量](resources/metrics.md#metrics-for-binary-classification)。
+若要探索及瞭解 CLI 所輸出的計量，請參閱[二元分類的評估度量](resources/metrics.md#evaluation-metrics-for-binary-classification)。
 
 ### <a name="metrics-for-multi-class-classification-models"></a>多元分類模型的計量
 
 下列顯示 CLI 找到之前五個模型的多元分類 ML 工作計量清單：
 
-![image](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
+![影像](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
-若要探索及了解 CLI 輸出的計量，請參閱[多元分類計量](resources/metrics.md#metrics-for-multi-class-classification)。
+若要探索及瞭解 CLI 所輸出的計量，請參閱[多元分類的評估度量](resources/metrics.md#evaluation-metrics-for-multi-class-classification)。
 
-### <a name="metrics-for-regression-models"></a>迴歸模型的計量
+### <a name="metrics-for-regression-and-recommendation-models"></a>回歸和建議模型的計量
 
 如果觀察到的值和模型預測值之間差異很小且非偏誤，則迴歸模型非常適合這種資料。 可以使用特定計量評估迴歸。
 
 您會看到類似最佳 CLI 找到之前五個品質最佳模型的計量清單。 在這個特例中與迴歸 ML 工作相關：
 
-![image](media/automate-training-with-cli/cli-regression-metrics.png)
+![影像](media/automate-training-with-cli/cli-regression-metrics.png)
 
-若要探索及了解 CLI 輸出的計量，請參閱[廻歸計量](resources/metrics.md#metrics-for-regression)。
+若要探索及瞭解 CLI 所輸出的計量，請參閱[回歸的評估計量](resources/metrics.md#evaluation-metrics-for-regression-and-recommendation)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [如何安裝 ML.NET CLI 工具](how-to-guides/install-ml-net-cli.md)
-- [教學課程：使用 ML.NET CLI 自動產生二元分類器](tutorials/mlnet-cli.md)
+- [教學課程：使用 ML.NET CLI 來分析情感](tutorials/sentiment-analysis-cli.md)
 - [ML.NET CLI 命令參考](reference/ml-net-cli-reference.md)
 - [ML.NET CLI 中的遙測](resources/ml-net-cli-telemetry.md)

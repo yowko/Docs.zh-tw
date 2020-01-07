@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 85e6862d59284df1b51bf5ea7fbba786fe0492d7
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ccc4f3154996a4e442a4092833f5c9ed9c8938a
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458964"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559457"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 標記延伸
 定義和參考從外部元件載入之資源的索引鍵。 這可讓資源查閱指定元件中的目標型別，而不是元件或類別上的明確資源字典。  
@@ -47,7 +47,7 @@ ms.locfileid: "73458964"
 |||  
 |-|-|  
 |`targetTypeName`|在資源元件中定義的公用 common language runtime （CLR）類型名稱。|  
-|`targetID`|資源的索引鍵。 查閱資源時，`targetID` 會類似于資源的[x：Key](../../xaml-services/x-key-directive.md)指示詞。|  
+|`targetID`|資源的索引鍵。 查閱資源時，`targetID` 會類似于資源的[x：Key](../../../desktop-wpf/xaml-services/xkey-directive.md)指示詞。|  
   
 ## <a name="remarks"></a>備註  
  如上述使用方式所示，在兩個地方找到 {`ComponentResourceKey`} 標記延伸用法：  
@@ -66,7 +66,7 @@ ms.locfileid: "73458964"
   
  所顯示的精簡語法會依賴標記延伸的 <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> 的函式簽章和位置參數使用方式。 `targetTypeName` 和 `targetID` 的指定順序很重要。 Verbose 語法會依賴 <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> 無參數的函式，然後以類似物件元素上 true 屬性語法的方式來設定 <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> 和 <xref:System.Windows.ComponentResourceKey.ResourceId%2A>。 在 verbose 語法中，屬性的設定順序並不重要。 這兩種替代方案的關聯性和機制（compact 和 verbose）在主題[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)中有更詳細的說明。  
   
- 就技術上而言，`targetID` 的值可以是任何物件，而不一定是字串。 不過，WPF 中最常見的用法是將 `targetID` 的值與字串的形式對齊，這類字串在[XamlName 文法](../../xaml-services/xamlname-grammar.md)中是有效的。  
+ 就技術上而言，`targetID` 的值可以是任何物件，而不一定是字串。 不過，WPF 中最常見的用法是將 `targetID` 的值與字串的形式對齊，這類字串在[XamlName 文法](../../../desktop-wpf/xaml-services/xamlname-grammar.md)中是有效的。  
   
  `ComponentResourceKey` 可以在物件專案語法中使用。 在此情況下，必須同時指定 <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> 和 <xref:System.Windows.ComponentResourceKey.ResourceId%2A> 屬性的值，才能正確地初始化延伸模組。  
   

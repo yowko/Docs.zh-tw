@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 92942066b5f08ada0154781ae54b5d8494944ca1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4abcf20b851f349a2b5df78c1fe1d15f729a5462
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963468"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344996"
 ---
 # <a name="events-overview-windows-forms"></a>事件概觀 (Windows Form)
 事件是您可以透過程式碼加以回應或「處理」的動作。 使用者動作 (例如按一下滑鼠按鈕或按下按鍵)、程式碼或系統都可以產生事件。
@@ -26,14 +26,14 @@ ms.locfileid: "69963468"
 > [!NOTE]
 > 許多事件會與其他事件連帶發生。 例如在發生 <xref:System.Windows.Forms.Control.DoubleClick> 的過程中，<xref:System.Windows.Forms.Control.MouseDown>、<xref:System.Windows.Forms.Control.MouseUp> 及 <xref:System.Windows.Forms.Control.Click> 事件會連帶發生。
 
- 如需有關如何引發和取用事件的詳細資訊, 請參閱[事件](../../standard/events/index.md)。
+ 如需有關如何引發和取用事件的詳細資訊，請參閱[事件](../../standard/events/index.md)。
 
 ## <a name="delegates-and-their-role"></a>委派及其角色
- 委派是常用於 .NET Framework 內的類別, 用來建立事件處理機制。 委派大致等同于函式指標, 通常用於視覺C++效果和其他物件導向的語言。 不同之處在於委派為物件導向、類型安全，安全性也較好。 除此之外，函式指標只包含特定函式的參考，而委派不僅包含了物件參考，還包含了物件中一或多個方法的參考。
+ 委派是常用於 .NET Framework 內的類別，用來建立事件處理機制。 委派大致等同于函式指標，通常用於視覺C++效果和其他物件導向的語言。 不同之處在於委派為物件導向、類型安全，安全性也較好。 除此之外，函式指標只包含特定函式的參考，而委派不僅包含了物件參考，還包含了物件中一或多個方法的參考。
 
- 此事件模型會使用*委派*, 將事件系結至用來處理它們的方法。 委派允許透過指定處理常式方法的方式，為事件通知登錄其他類別。 當事件發生時，委派即會呼叫所繫結的方法。 如需如何定義委派的詳細資訊, 請參閱[事件](../../standard/events/index.md)。
+ 此事件模型會使用*委派*，將事件系結至用來處理它們的方法。 委派允許透過指定處理常式方法的方式，為事件通知登錄其他類別。 當事件發生時，委派即會呼叫所繫結的方法。 如需如何定義委派的詳細資訊，請參閱[事件](../../standard/events/index.md)。
 
- 委派可以繫結到單一方法或多個方法，稱為「多點傳送」。 建立事件的委派時, 您 (或 Windows) 通常會建立多播事件。 唯一例外是由邏輯上不會在每一事件中重複多次之特定程序 (例如顯示對話方塊) 所產生的事件，但此情況極為罕見。 如需如何建立多播委派的相關資訊, 請[參閱如何:合併委派 (多播委派)](../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)。
+委派可以繫結到單一方法或多個方法，稱為「多點傳送」。 建立事件的委派時，您（或 Windows）通常會建立多播事件。 唯一例外是由邏輯上不會在每一事件中重複多次之特定程序 (例如顯示對話方塊) 所產生的事件，但此情況極為罕見。 如需有關如何建立多播委派的詳細資訊，請參閱[如何結合委派（多播委派）](../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)。
 
  多點傳送委派會維護其所繫結之方法的叫用清單。 多點傳送委派可以讓 <xref:System.Delegate.Combine%2A> 方法新增方法到叫用清單，並支援 <xref:System.Delegate.Remove%2A> 方法來移除此方法。
 
@@ -43,7 +43,7 @@ ms.locfileid: "69963468"
 
  委派會隨機使用繫結機制，其可能在執行時繫結到任何簽章符合事件處理程式簽章的方法。 您可以利用此功能視條件設定或變更繫結方法，以及隨機將事件處理常式連結至控制項。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
 - [事件處理常式概觀](event-handlers-overview-windows-forms.md)

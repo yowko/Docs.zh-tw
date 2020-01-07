@@ -2,12 +2,12 @@
 title: C# 教學課程
 description: 探索這些 C# 教學課程以了解如何建置 C# 程式，並了解 C# 語言功能。
 ms.date: 10/25/2018
-ms.openlocfilehash: 3f3ca31c0fdeb5d7c60b25c4b45399569cc919b4
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8adbec3311c7a0e88475734312ecc3621042c3f3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417104"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346790"
 ---
 # <a name="c-tutorials"></a>C# 教學課程
 

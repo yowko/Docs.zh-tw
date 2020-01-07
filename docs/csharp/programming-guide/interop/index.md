@@ -8,12 +8,12 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: 560218361f470266654734971a12de7862722a46
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 64fac0245dcf5976786b51e0d96b795b8b1e5d68
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423174"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635193"
 ---
 # <a name="interoperability-c-programming-guide"></a>互通性 (C# 程式設計手冊)
 互通性可讓您保留並充分利用目前在 Unmanaged 程式碼上的投資。 在 Common Language Runtime (CLR) 控制下執行的程式碼稱為「Managed 程式碼」，而在 CLR 外部執行的程式碼稱為「Unmanaged 程式碼」。 COM、COM+、C++ 元件、ActiveX 元件及 Microsoft Windows API 都是 Unmanaged 程式碼的範例。  
@@ -24,13 +24,13 @@ ms.locfileid: "73423174"
  [互通性概觀](./interoperability-overview.md)  
  說明要在 C# Managed 程式碼和 Unmanaged 程式碼之間相互操作的方法。  
   
- [如何：使用 Visual C# 功能存取 Office Interop 物件](./how-to-access-office-onterop-objects.md)  
+ [如何使用C#功能存取 Office interop 物件](./how-to-access-office-onterop-objects.md)  
  說明在 Visual C# 中引進以利 Office 程式設計的功能。  
   
- [如何：在 COM Interop 程式設計中使用已編製索引的屬性](./how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+ [如何在 COM Interop 程式設計中使用已編制索引的屬性](./how-to-use-indexed-properties-in-com-interop-rogramming.md)  
  說明如何使用已索引的屬性來存取具有參數的 COM 屬性。  
   
- [如何：使用平台叫用播放 WAV 檔](./how-to-use-platform-invoke-to-play-a-wave-file.md)  
+ [如何使用平台叫用來播放 WAV 檔案](./how-to-use-platform-invoke-to-play-a-wave-file.md)  
  說明如何在 Windows 作業系統上使用平台叫用服務來播放 .wav 音效檔。  
   
  [逐步解說：Office 程式設計](./walkthrough-office-programming.md)  

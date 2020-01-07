@@ -1,15 +1,15 @@
 ---
-title: 如何：尋找兩個清單之間的集合差異 (LINQ) (C#)
+title: 如何尋找兩個清單之間的集合差異（LINQ）（C#）
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 9e2a42a466a71d4e351df89398be197197a54042
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 227405428a1b418cbe6ceb3d0e3274595307e5ef
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140996"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345944"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>如何：尋找兩個清單之間的集合差異 (LINQ) (C#)
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>如何尋找兩個清單之間的集合差異（LINQ）（C#）
 此範例示範如何使用 LINQ 比較兩份字串清單，然後輸出在 names1.txt 但不在 names2.txt 中的字串行。  
   
 ### <a name="to-create-the-data-files"></a>建立資料檔  

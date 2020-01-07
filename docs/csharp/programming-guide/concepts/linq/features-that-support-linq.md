@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: af7bf487ff4ed250025b946f0948c269fcc5bf09
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9fc8adaa49d02f8b69c2db6e94a28b9fab36b3b0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418566"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635791"
 ---
 # <a name="c-features-that-support-linq"></a>支援 LINQ 的 C# 功能
 
-下節將介紹 C# 3.0 中引進的新語言建構。 雖然這些新功能或多或少都會用於 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢，但不限於 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，還可用於任何您認為實用的內容中。
+下節將介紹 C# 3.0 中引進的新語言建構。 雖然這些新功能全都適用于 LINQ 查詢的程度，但它們並不限於 LINQ，而且可以在任何您覺得有用的內容中使用。
 
 ## <a name="query-expressions"></a>查詢運算式
 
-查詢運算式使用類似 SQL 或 XQuery 的宣告式語法來查詢 IEnumerable 集合。 在編譯時期，查詢語法會轉換成對 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者實作的標準查詢運算子擴充方法進行的方法呼叫。 應用程式使用 `using` 指示詞來指定適當的命名空間，藉此控制範圍內的標準查詢運算子。 下列查詢運算式會擷取字串的陣列，然後根據字串的第一個字元分組字串，再排序這些群組。
+查詢運算式使用類似 SQL 或 XQuery 的宣告式語法來查詢 IEnumerable 集合。 在編譯時期，查詢語法會轉換成 LINQ 提供者的標準查詢運算子擴充方法的實作為方法呼叫。 應用程式使用 `using` 指示詞來指定適當的命名空間，藉此控制範圍內的標準查詢運算子。 下列查詢運算式會擷取字串的陣列，然後根據字串的第一個字元分組字串，再排序這些群組。
 
 ```csharp
 var query = from str in stringArray
@@ -66,7 +66,7 @@ var newLargeOrderCustomers = from o in IncomingOrders
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
 ```
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱＜＞。
 
 - [物件和集合初始設定式](../../classes-and-structs/object-and-collection-initializers.md)
 
@@ -84,15 +84,15 @@ select new {name = cust.Name, phone = cust.Phone};
 
 ## <a name="extension-methods"></a>擴充方法
 
-擴充方法是一種可以與類型相關聯的靜態方法，因此可以像呼叫類型上的執行個體方法一樣呼叫它。 這項功能實際上可讓您「新增」方法至現有的類型，而不需要實際修改這些類型。 標準查詢運算子是一組擴充方法，可為實作 <xref:System.Collections.Generic.IEnumerable%601> 的任何類型提供 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢功能。
+擴充方法是一種可以與類型相關聯的靜態方法，因此可以像呼叫類型上的執行個體方法一樣呼叫它。 這項功能實際上可讓您「新增」方法至現有的類型，而不需要實際修改這些類型。 標準查詢運算子是一組擴充方法，可為任何可執行 <xref:System.Collections.Generic.IEnumerable%601>的型別提供 LINQ 查詢功能。
 
 如需詳細資訊，請參閱[擴充方法](../../classes-and-structs/extension-methods.md)。
 
 ## <a name="lambda-expressions"></a>Lambda 運算式
 
-Lambda 運算式是一種內嵌函式，其使用 => 運算子分隔輸入參數與函式主體，而且可以在編譯期間轉換成委派或運算式樹狀架構。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 程式設計中，當您直接對標準查詢運算子進行方法呼叫時，就會遇到 Lambda 運算式。
+Lambda 運算式是一種內嵌函式，其使用 => 運算子分隔輸入參數與函式主體，而且可以在編譯期間轉換成委派或運算式樹狀架構。 在 LINQ 程式設計中，當您對標準查詢運算子進行直接方法呼叫時，將會遇到 lambda 運算式。
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱＜＞。
 
 - [匿名函式](../../statements-expressions-operators/anonymous-functions.md)
 

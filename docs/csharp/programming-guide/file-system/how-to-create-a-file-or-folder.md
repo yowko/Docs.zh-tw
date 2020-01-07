@@ -1,5 +1,5 @@
 ---
-title: 作法：建立檔案或資料夾 - C# 程式設計手冊
+title: 如何建立檔案或資料夾-程式C#設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: c29d0638e2429119020fee5317d40a95b00e40ef
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 97231a2e4818be3b99c796a407ae4b167e27f669
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590099"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635700"
 ---
-# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>作法：建立檔案或資料夾 (C# 程式設計手冊)
+# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>如何建立檔案或資料夾（C#程式設計手冊）
 您可以程式設計的方式在電腦上建立資料夾、建立子資料夾、在子資料夾中建立檔案，以及將資料寫入檔案。  
   
 ## <a name="example"></a>範例  
  [!code-csharp[csFilesandFolders#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#10)]  
   
- 若資料夾已經存在，<xref:System.IO.Directory.CreateDirectory%2A> 不會採取任何動作，也不會擲回任何例外狀況。 但 <xref:System.IO.File.Create%2A?displayProperty=nameWithType> 會以新的檔案取代現有的檔案。 此例使用 `if` - `else` 陳述式防止現有的檔案被取代。  
+ 若資料夾已經存在，<xref:System.IO.Directory.CreateDirectory%2A> 不會採取任何動作，也不會擲回任何例外狀況。 但 <xref:System.IO.File.Create%2A?displayProperty=nameWithType> 會以新的檔案取代現有的檔案。 此例使用 `if`-`else` 陳述式防止現有的檔案被取代。  
   
  透過在範例中進行下列變更，您可以根據是否已有具特定名稱的檔案來指定不同的結果。 如果沒有這類檔案，程式碼會建立一個。 如果有這類檔案，程式碼會將資料附加至該檔案。  
   
@@ -68,8 +68,8 @@ ms.locfileid: "69590099"
   
  若您沒有權限可建立資料夾，則範例會擲回 <xref:System.UnauthorizedAccessException> 類別的執行個體。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C# 程式設計指南](../index.md)
-- [檔案系統和登錄 (C# 程式設計指南)](./index.md)
+- [檔案系統和登錄 (C# 程式設計手冊)](./index.md)
