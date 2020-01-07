@@ -60,7 +60,7 @@ sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> 如果您收到類似 [**找不到封裝 aspnetcore-執行時間-3.1**] 的錯誤訊息，請參閱[疑難排解封裝管理員](#troubleshoot-the-package-manager)一節。
+> 如果您收到類似 [**找不到封裝 aspnetcore-runtime-3.1**] 的錯誤訊息，請參閱[疑難排解封裝管理員](#troubleshoot-the-package-manager)一節。
 
 ## <a name="install-the-net-core-runtime"></a>安裝 .NET Core 執行時間
 
@@ -74,7 +74,7 @@ sudo apt-get install dotnet-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> 如果您收到類似 [**找不到封裝 dotnet-執行時間-3.1**] 的錯誤訊息，請參閱[疑難排解封裝管理員](#troubleshoot-the-package-manager)一節。
+> 如果您收到類似 [**找不到封裝 dotnet-runtime-3.1**] 的錯誤訊息，請參閱[疑難排解封裝管理員](#troubleshoot-the-package-manager)一節。
 
 ## <a name="how-to-install-other-versions"></a>如何安裝其他版本
 
