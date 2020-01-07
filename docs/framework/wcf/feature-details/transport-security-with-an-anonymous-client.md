@@ -1,32 +1,32 @@
 ---
-title: 使用匿名用戶端-WCF 傳輸安全性
+title: 匿名用戶端的傳輸安全性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: aac3b2ac6cfcca137bddaefafd290e744ee991eb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c3e44c87dfa70ac3a7acc5a83ac596efc22b6155
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637443"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344749"
 ---
-# <a name="transport-security-with-an-anonymous-client"></a>匿名用戶端使用的傳輸安全性
+# <a name="transport-security-with-an-anonymous-client"></a>匿名用戶端的傳輸安全性
 
-此 Windows Communication Foundation (WCF) 案例使用傳輸安全性 (HTTPS) 來確保機密性和完整性。 伺服器必須使用安全通訊端層 (SSL) 憑證進行驗證，而且用戶端必須信任該伺服器的憑證。 此用戶端不會透過任何機制進行驗證，因此屬於匿名。
+此 Windows Communication Foundation （WCF）案例會使用傳輸安全性（HTTPS）來確保機密性和完整性。 伺服器必須使用安全通訊端層 (SSL) 憑證進行驗證，而且用戶端必須信任該伺服器的憑證。 此用戶端不會透過任何機制進行驗證，因此屬於匿名。
 
-範例應用程式，請參閱[WS 傳輸安全性](../samples/ws-transport-security.md)。 如需有關傳輸安全性的詳細資訊，請參閱[傳輸安全性概觀](transport-security-overview.md)。
+如需範例應用程式，請參閱[WS Transport Security](../samples/ws-transport-security.md)。 如需有關傳輸安全性的詳細資訊，請參閱[傳輸安全性總覽](transport-security-overview.md)。
 
-如需服務中使用憑證的詳細資訊，請參閱[Working with Certificates](working-with-certificates.md)和[How to:使用 SSL 憑證設定連接埠](how-to-configure-a-port-with-an-ssl-certificate.md)。
+如需搭配服務使用憑證的詳細資訊，請參閱使用[憑證](working-with-certificates.md)和[如何：使用 SSL 憑證設定埠](how-to-configure-a-port-with-an-ssl-certificate.md)。
 
-![搭配匿名用戶端使用傳輸安全性](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
+![使用匿名用戶端的傳輸安全性](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
 
 |特性|描述|
 |--------------------|-----------------|
 |安全性模式|Transport|
 |互通性|與現有的 Web 服務和用戶端|
-|驗證 (伺服器)<br /><br /> 驗證 (用戶端)|是<br /><br /> 應用程式層級 （沒有 WCF 支援）|
+|驗證 (伺服器)<br /><br /> 驗證 (用戶端)|是<br /><br /> 應用層級（沒有 WCF 支援）|
 |完整性|是|
 |機密性|是|
 |Transport|HTTPS|
@@ -34,7 +34,7 @@ ms.locfileid: "65637443"
 
 ## <a name="service"></a>服務
 
-下列程式碼和組態要獨立執行。 執行下列任一步驟：
+下列程式碼和組態要獨立執行。 請執行下列其中一項動作：
 
 - 使用不含組態的程式碼建立獨立服務。
 
@@ -78,13 +78,13 @@ ms.locfileid: "65637443"
 </configuration>
 ```
 
-## <a name="client"></a>用戶端
+## <a name="client"></a>Client
 
-下列程式碼和組態要獨立執行。 執行下列任一步驟：
+下列程式碼和組態要獨立執行。 請執行下列其中一項動作：
 
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。
 
-- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如: 
+- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如：
 
      [!code-csharp[C_SecurityScenarios#0](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
@@ -121,7 +121,7 @@ ms.locfileid: "65637443"
 </configuration>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安全性概觀](security-overview.md)
 - [WS 傳輸安全性](../samples/ws-transport-security.md)

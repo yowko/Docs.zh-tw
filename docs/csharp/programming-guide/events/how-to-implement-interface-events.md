@@ -1,19 +1,19 @@
 ---
-title: 作法：實作介面事件 - C# 程式設計手冊
+title: 如何執行介面事件-程式C#設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 574ea9927a22c24c356d84652fd29692c519247b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: cd2192d6146a431559f5cd9dd1a80da577695d66
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590512"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346343"
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a>作法：實作介面事件 (C# 程式設計手冊)
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>如何執行介面事件（C#程式設計手冊）
 [介面](../../language-reference/keywords/interface.md)可以宣告[事件](../../language-reference/keywords/event.md)。 下列範例示範如何在類別中實作介面事件。 基本上，規則與您在實作任何介面方法或屬性時相同。  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>在類別中實作介面事件  
@@ -58,10 +58,10 @@ namespace ImplementInterfaceEvents
   
  [!code-csharp[csProgGuideEvents#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#10)]
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [事件](./index.md)
 - [委派](../delegates/index.md)
 - [明確介面實作](../interfaces/explicit-interface-implementation.md)
-- [如何：在衍生類別中引發基底類別事件](./how-to-raise-base-class-events-in-derived-classes.md)
+- [如何在衍生類別中引發基類事件](./how-to-raise-base-class-events-in-derived-classes.md)

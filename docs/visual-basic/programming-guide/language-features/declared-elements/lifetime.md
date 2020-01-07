@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 05a39388e8aa9681af60cf86a3df8346d744b69e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 293537ad33c8e751d49d820fc57ea525e68bc203
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345318"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347769"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic 中的存留期
 已宣告專案的*存留*期是可供使用的時間週期。 變數是唯一具有存留期的元素。 基於此目的，編譯器會將程式參數和函數傳回視為變數的特殊情況。 變數的存留期代表它可以保存值的時間週期。 其值可能會在其存留期內變更，但一定會保留一些值。  
@@ -65,7 +65,7 @@ ms.locfileid: "74345318"
   
  如果在未使用 `Static`的情況下宣告 `applesSold`，則不會在對 `runningTotal`的呼叫之間保留先前的累積值。 下次呼叫 `runningTotal` 時，`applesSold` 會重新建立並初始化為0，而 `runningTotal` 只會傳回與它所呼叫的相同值。  
   
-### <a name="compiling-the-code"></a>編譯程式碼  
+### <a name="compile-the-code"></a>編譯程式碼  
  您可以初始化靜態區域變數的值，做為其宣告的一部分。 如果您宣告要 `Static`的陣列，您可以初始化它的 rank （維度數目）、每個維度的長度，以及個別元素的值。  
   
 ### <a name="security"></a>安全性  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: a0c5592f2f4cca8173f9b777f2c3f14fe468feac
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: ca660e6485c492ea7883503be4a98e1b7000427a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423310"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346373"
 ---
 # <a name="delegates-c-programming-guide"></a>委派 (C# 程式設計手冊)
 [委派](../../language-reference/builtin-types/reference-types.md)是一種類型，代表具有特定參數清單及傳回型別的方法參考。 當您具現化委派時，可以將其執行個體與任何具有相容簽章和傳回型別的方法產生關聯。 您可以透過委派執行個體叫用 (或呼叫) 方法。  
@@ -52,9 +52,9 @@ ms.locfileid: "73423310"
   
 - [在委派中使用變異數](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
-- [如何：組合委派 (多點傳送委派)](./how-to-combine-delegates-multicast-delegates.md)  
+- [如何合併委派（多播委派）](./how-to-combine-delegates-multicast-delegates.md)  
   
-- [如何：宣告和使用委派及將其具現化](./how-to-declare-instantiate-and-use-a-delegate.md)  
+- [如何宣告、具現化和使用委派](./how-to-declare-instantiate-and-use-a-delegate.md)
 
 ## <a name="c-language-specification"></a>C# 語言規格  
 
@@ -63,7 +63,7 @@ ms.locfileid: "73423310"
 ## <a name="featured-book-chapters"></a>精選書籍章節  
  [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29) (C# 3.0 Cookbook 第三版：250 個以上 C# 3.0 程式設計人員適用的方案) 中的 [Delegates, Events, and Lambda Expressions](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) (委派、事件和 Lambda 運算式)  
   
- [Learning C# 3.0: Master the fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29) (C# 3.0 Cookbook 第三版：250 個以上 C# 3.0 程式設計人員適用的方案) 中的 [Delegates and Events](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)  
+ [Delegates and Events](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29) in [Learning C# 3.0: Master the fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)  
   
 ## <a name="see-also"></a>請參閱
 

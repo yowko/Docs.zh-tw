@@ -1,15 +1,15 @@
 ---
-title: 作法：依副檔名分組檔案 (LINQ) (C#)
+title: 如何依副檔名將檔案分組（LINQ）（C#）
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: aa3e428a4655bfcc0707e111da3ca6206a2b9596
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: d12b40c7dba7bd3e10f30ddfd394b25c36794428
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593251"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345905"
 ---
-# <a name="how-to-group-files-by-extension-linq-c"></a>作法：依副檔名分組檔案 (LINQ) (C#)
+# <a name="how-to-group-files-by-extension-linq-c"></a>如何依副檔名將檔案分組（LINQ）（C#）
 此範例示範如何使用 LINQ，對檔案或資料庫清單執行進階群組和排序作業。 它也示範如何使用 <xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Take%2A> 方法在主控台視窗中分頁輸出。  
   
 ## <a name="example"></a>範例  
@@ -107,7 +107,7 @@ class GroupByExtension
 ## <a name="compiling-the-code"></a>編譯程式碼  
  建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
 - [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)

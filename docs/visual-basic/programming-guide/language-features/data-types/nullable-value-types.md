@@ -1,5 +1,5 @@
 ---
-title: 可為 null 的實數值型別-Visual Basic
+title: 可以為 null 的實值型別
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Nullable
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 1fb8f8d1657b8eab6b15858c2a6607cbde82e542
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0d259e11a969f4eb7e64626a4adf498db06ece06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732931"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347830"
 ---
 # <a name="nullable-value-types-visual-basic"></a>可為 Null 的實值類型 (Visual Basic)
 
@@ -66,7 +66,7 @@ Null 值適用于表示未定義或未知的值。 如果 `numberOfChildren` 已
 
 當可為 null 的 `Boolean` 變數用於布林運算式時，結果可以是 `True`、`False`或 `Nothing`。 以下是 `And` 和 `Or`的事實資料表。 因為 `b1` 和 `b2` 現在有三個可能的值，所以有九個組合可供評估。
 
-|B1|b2|b1 和 b2|b1 或 b2|
+|b1|b2|b1 和 b2|b1 或 b2|
 |--------|--------|---------------|--------------|
 |`Nothing`|`Nothing`|`Nothing`|`Nothing`|
 |`Nothing`|`True`|`Nothing`|`True`|
@@ -110,7 +110,7 @@ Null 值適用于表示未定義或未知的值。 如果 `numberOfChildren` 已
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
 - [資料類型](index.md)
-- [值類型和參考類型](value-types-and-reference-types.md)
+- [Value Types and Reference Types](value-types-and-reference-types.md)
 - [資料類型的疑難排解](troubleshooting-data-types.md)
 - [使用 TableAdapter 填入資料集](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
 - [If 運算子](../../../language-reference/operators/if-operator.md)

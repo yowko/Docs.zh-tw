@@ -2,12 +2,12 @@
 title: LINQ to XML 概觀 (C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 313abae6e8a82414ead90d5a4fdab7406492784f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d8b606e1d3287f13a2112b75d5239fd1ac7dd7dc
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785243"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635505"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML 概觀 (C#)
 
@@ -15,7 +15,7 @@ LINQ to XML 提供運用 .NET Language-Integrated Query (LINQ) Framework 的記�
  
 XML 已被廣泛採用為格式化許多內容之資料的方式。 例如，您可以在 Web、組態檔、Microsoft Office Word 檔案與資料庫中發現 XML。
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 是經過重新設計，用以進行 XML 程式設計的最新方法。 它提供文件物件模型 (DOM) 的記憶體中文件修改能力，而且支援 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式。 雖然這些查詢運算式在語法上與 XPath 不同，但是它們會提供類似的功能。
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 是經過重新設計，用以進行 XML 程式設計的最新方法。 它提供檔物件模型（DOM）的記憶體中檔修改功能，並支援 LINQ 查詢運算式。 雖然這些查詢運算式在語法上與 XPath 不同，但是它們會提供類似的功能。
 
 ## <a name="linq-to-xml-developers"></a>LINQ to XML 開發人員
 
@@ -27,13 +27,13 @@ XML 已被廣泛採用為格式化許多內容之資料的方式。 例如，您
 
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 是一個啟用 LINQ 的記憶體內部 XML 程式設計介面，可讓您從 .NET Framework 程式設計語言內使用 XML。
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 如同文件物件模型 (DOM)，它會將 XML 文件帶到記憶體中。 您可以查詢與修改文件，並在修改後儲存到檔案，或將其序列化並透過網際網路傳送。 不過，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 與 DOM 不同：它所提供的新物件模型較為輕量且較容易使用，且會利用 C# 中的語言功能。
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 如同文件物件模型 (DOM)，它會將 XML 文件帶到記憶體中。 您可以查詢與修改文件，並在修改後儲存到檔案，或將其序列化並透過網際網路傳送。 不過，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 與 DOM 不同：它所提供的新物件模型較為輕量且更容易使用，而且會利用 C# 的語言功能。
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 最重要的優點為其與 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 的整合能力。 這種整合可讓您在記憶體中 XML 文件上撰寫查詢以擷取項目和屬性的集合。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的查詢功能相當於 (雖然語法上不同) XPath 和 Xquery 的功能。 整合 C# 中的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 時，可提供更強的型別、編譯時間檢查功能，以及改善的偵錯工具支援。
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 最重要的優點，就是它與語言整合式查詢（LINQ）的整合。 這種整合可讓您在記憶體中 XML 文件上撰寫查詢以擷取項目和屬性的集合。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的查詢功能相當於 (雖然語法上不同) XPath 和 Xquery 的功能。 中C#的 LINQ 整合提供更強的類型、編譯時間檢查，以及改善的偵錯工具支援。
 
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的另一項優點是將查詢結果當做 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 物件建構函式參數的功能，可提供建立 XML 樹狀結構的強大方法。 此方法稱為「功能建構」，可讓開發人員輕鬆將 XML 樹狀結構從某種圖形轉換為另一種圖形。
 
-例如，您可能有一個典型的 XML 訂購單，如以下連結所述：[XML 範例檔：典型訂購單 (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml-1.md)。 您可以使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 執行下列查詢，以便在採購訂單中取得每個項目的零件編號屬行值：
+例如，您可能具有[ XML 檔範例：典型訂購單 (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml-1.md) 中所述的典型 XML 訂購單。 您可以使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 執行下列查詢，以便在採購訂單中取得每個項目的零件編號屬行值：
 
 ```csharp
 // Load the XML file from our project directory containing the purchase orders
@@ -77,7 +77,7 @@ IEnumerable<XElement> pricesByPartNos = purchaseOrder.Descendants("Item")
                                         .OrderBy(order => order.Element("PartNumber"));
 ```
 
-除了這些 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 功能以外，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 還提供了改善的 XML 程式設計介面。 利用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，您可以：
+除了這些 LINQ 功能，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供改良的 XML 程式設計介面。 利用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，您可以：
 
 - 從[檔案](how-to-load-xml-from-a-file.md)或[資料流](how-to-stream-xml-fragments-from-an-xmlreader.md)載入 XML。
 
@@ -118,9 +118,9 @@ new XElement("Contacts",
 
 如需詳細資訊，請參閱[建立 XML 樹狀結構 (C#)](./creating-xml-trees-linq-to-xml-2.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [參考 (LINQ to XML)](./reference-linq-to-xml.md)
-- [LINQ to XML 與DOM 的比較 (C#)](./linq-to-xml-vs-dom.md)
+- [LINQ to XML 與 DOM （C#）的比較](./linq-to-xml-vs-dom.md)
 - [LINQ to XML 與其他 XML 技術的比較](./linq-to-xml-vs-other-xml-technologies.md)
 - <xref:System.Xml.Linq>

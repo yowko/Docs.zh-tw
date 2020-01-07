@@ -2,12 +2,12 @@
 title: 關於 .NET Core
 description: 了解 .NET Core。
 ms.date: 09/17/2019
-ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ed153e817746a88277c191dfb14c465ff2d8bfa1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801956"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344913"
 ---
 # <a name="about-net-core"></a>關於 .NET Core
 
@@ -18,7 +18,7 @@ ms.locfileid: "74801956"
 - **命令列工具：** 包含易用的命令列工具，可用於本機開發及持續整合案例。
 - **彈性的部署：** 可以包含在您的應用程式中，或並存安裝（全使用者或全系統安裝）。 可搭配 [Docker 容器](docker/introduction.md)使用。
 - **相容：** .net Core 可透過[.NET Standard](../standard/net-standard.md)與 .NET Framework、Xamarin 和 Mono 相容。
-- **開放原始碼︰** NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
+- **開放原始碼︰** .NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
 - **受 Microsoft 支援：** .NET Core 根據 [.NET Core 支援](https://dotnet.microsoft.com/platform/support/policy)受 Microsoft 支援。
 
 ## <a name="languages"></a>程式語言
@@ -36,7 +36,7 @@ C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式�
 
 .NET Core 公開許多案例的 API，以下是其中幾個：
 
-- 基本型別，例如 <xref:System.Boolean?displayProperty=nameWithType> 和 <xref:System.Int32?displayProperty=nameWithType>。
+- 基本類型，例如 <xref:System.Boolean?displayProperty=nameWithType> 和 <xref:System.Int32?displayProperty=nameWithType>。
 - 集合，例如 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 及 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>。
 - 公用程式類型，例如 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 及 <xref:System.IO.FileStream?displayProperty=nameWithType>。
 - 資料類型，例如 <xref:System.Data.DataSet?displayProperty=nameWithType> 與 [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/) \(英文\)。
@@ -58,7 +58,7 @@ C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式�
 
 - [.Net Core 運行](https://github.com/dotnet/runtime/tree/master/src/coreclr)時間，提供類型系統、元件載入、垃圾收集行程、原生 interop 及其他基本服務。 [.Net Core framework 程式庫](https://github.com/dotnet/runtime/tree/master/src/libraries)提供基本資料類型、應用程式組合類型，以及基礎公用程式。
 - [ASP.NET 運行](https://github.com/aspnet/home)時間可提供架構，以建立新式雲端式網際網路連線應用程式，例如 web Apps、IoT app 和 mobile 後端。
-- [.NET Core CLI 工具](https://github.com/dotnet/cli)及語言編譯器 ([Roslyn](https://github.com/dotnet/roslyn) 和 [F#](https://github.com/microsoft/visualfsharp)) 可提供 .NET Core 開發人員體驗。
+- [.NET Core CLI 工具](https://github.com/dotnet/sdk)及語言編譯器 ([Roslyn](https://github.com/dotnet/roslyn) 和 [F#](https://github.com/microsoft/visualfsharp)) 可提供 .NET Core 開發人員體驗。
 - [dotnet 工具](https://github.com/dotnet/core-setup)用於啟動 .NET Core 應用程式和 CLI 工具。 它會選取執行時間並裝載執行時間、提供元件載入原則，以及啟動應用程式和工具。
 
 這些元件的散發方式如下：

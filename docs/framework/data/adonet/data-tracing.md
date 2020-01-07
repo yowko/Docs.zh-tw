@@ -2,12 +2,12 @@
 title: ADO.NET 中的資料追蹤
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: e27f1f30ab8626b21421d6d4a7808f8ffef5c26f
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: be82500920ce9d5f8bc7ee979cf8ec5006f4f12b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088781"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347793"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET 中的資料追蹤
 
@@ -31,15 +31,15 @@ ADO.NET 功能內建資料追蹤功能，適用于 SQL Server、Oracle、OLE DB 
 
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>存取擴充事件記錄中的診斷資訊
 
-在 SQL Server 的 .NET Framework Data Provider 中，資料存取追蹤（[資料存取追蹤](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))）已更新，可讓您更輕鬆地將用戶端事件與伺服器連線性信號緩衝區中的診斷資訊（例如連接失敗）和擴充事件記錄檔中的應用程式效能資訊相互關聯。 如需讀取擴充事件記錄檔的詳細資訊，請參閱[查看事件會話資料](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110))。
+在 SQL Server 的 .NET Framework Data Provider 中，資料存取追蹤（[資料存取追蹤](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))）已更新，可讓您更輕鬆地將用戶端事件與伺服器連線性信號緩衝區中的診斷資訊（例如連接失敗）和擴充事件記錄檔中的應用程式效能資訊相互關聯。 如需讀取擴充事件記錄檔的資訊，請參閱[檢視事件工作階段資料](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110))。
 
-ADO.NET 會傳送用戶端連接 ID 以進行連接作業。 如果連線失敗，您可以存取連線性信號緩衝區（連線性信號緩衝區的[SQL Server 2008 中的連線能力疑難排解](https://go.microsoft.com/fwlink/?LinkId=207752)）並尋找 [`ClientConnectionID`] 欄位，並取得有關連線失敗的診斷資訊。 只有在發生錯誤時，用戶端連接 ID 才會記錄在信號緩衝區中 （如果連接在傳送預先登入封包之前失敗，將不會產生用戶端連線識別碼）。用戶端連接識別碼是16位元組的 GUID。 如果在擴充事件工作階段中將 `client_connection_id` 動作加入到事件中，您還可以在擴充事件目標輸出中尋找用戶端連接 ID。 如需進一步的用戶端驅動程式診斷協助，您可以啟用資料存取追蹤並傳回連接命令，同時觀察資料存取追蹤當中的 `ClientConnectionID` 欄位。
+ADO.NET 會傳送用戶端連接 ID 以進行連接作業。 如果連線失敗，您可以存取連線性信號緩衝區（連線性信號緩衝區的[SQL Server 2008 中的連線能力疑難排解](https://blogs.msdn.microsoft.com/sql_protocols/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer/)）並尋找 [`ClientConnectionID`] 欄位，並取得有關連線失敗的診斷資訊。 只有在發生錯誤時，用戶端連接 ID 才會記錄在信號緩衝區中 （如果連接在傳送預先登入封包之前失敗，將不會產生用戶端連線識別碼）。用戶端連接識別碼是16位元組的 GUID。 如果在擴充事件工作階段中將 `client_connection_id` 動作加入到事件中，您還可以在擴充事件目標輸出中尋找用戶端連接 ID。 如需進一步的用戶端驅動程式診斷協助，您可以啟用資料存取追蹤並傳回連接命令，同時觀察資料存取追蹤當中的 `ClientConnectionID` 欄位。
 
 您可以使用 `SqlConnection.ClientConnectionID` 屬性，以程式設計方式取得用戶端連接 ID。
 
 成功建立連接的 `ClientConnectionID` 物件可取得 <xref:System.Data.SqlClient.SqlConnection>。 如果連接嘗試失敗，可能可以透過 `ClientConnectionID` 取得 `SqlException.ToString`。
 
-ADO.NET 也會傳送特定執行緒活動 ID。 如果會話是在啟用 TRACK_CAUSALITY 選項的情況下啟動，則會在「擴充事件」會話中捕捉活動識別碼。 若要解決與使用中連接相關的效能問題，您可以從用戶端的資料存取追蹤 (`ActivityID`欄位) 取得活動 ID，然後在擴充事件記錄中找到活動 ID。 擴充事件記錄中的活動 ID 是 16 個位元組的 GUID (和用戶端連接 ID 的 GUID 不同)，並且附加一個四位元組的序號。 序列號代表要求在執行緒中的順序，並且表示該執行緒的批次和 RPC 陳述式的相對順序。 啟用資料存取追蹤功能，而且開啟資料存取追蹤組態字詞中的第 18 個位元時，目前會選擇性地傳送 SQL 批次陳述式和 RPC 要求的 `ActivityID`。
+ADO.NET 也會傳送特定執行緒活動 ID。 如果會話是在啟用 TRACK_CAUSALITY 選項的情況下啟動，則會在「擴充事件」會話中捕捉活動識別碼。 若要解決與使用中連接相關的效能問題，您可以從用戶端的資料存取追蹤 (`ActivityID`欄位) 取得活動 ID，然後在擴充事件記錄中找到活動 ID。 擴充事件中的活動識別碼是附加了四位元組序號的 16 位元組 GUID (與用戶端連接識別碼的 GUID 不同)。 序列號代表要求在執行緒中的順序，並且表示該執行緒的批次和 RPC 陳述式的相對順序。 啟用資料存取追蹤功能，而且開啟資料存取追蹤組態字詞中的第 18 個位元時，目前會選擇性地傳送 SQL 批次陳述式和 RPC 要求的 `ActivityID`。
 
 以下範例會使用 Transact-sql 來啟動將儲存在信號緩衝區中的擴充事件會話，並記錄從 RPC 和批次作業的用戶端傳送的活動識別碼。
 

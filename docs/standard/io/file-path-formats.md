@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 808c92e906a0bf6f8fdc368396d6d240573de501
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 258cf59fb8383fe131f4a0e78dac6189e1d9c91e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120780"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337665"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
 
@@ -30,7 +30,7 @@ ms.locfileid: "73120780"
 
 如果三個元件全都存在，則是絕對路徑。 如果未指定任何磁碟區或磁碟機代號，且目錄名稱開頭為[目錄分隔符號字元](<xref:System.IO.Path.DirectorySeparatorChar>)，則路徑是相對於目前磁碟機的根目錄。 否則，路徑是相對於目前的目錄。 下表顯示一些可能的目錄和檔案路徑。
 
-|路徑  |描述  |
+|{2&gt;路徑&lt;2}  |描述  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | 從磁碟機 C: 根目錄開始的絕對檔案路徑 |
 | `\Program Files\Custom Utilities\StringFinder.exe` | 從目前磁碟機根目錄開始的絕對路徑。 |
@@ -44,7 +44,7 @@ ms.locfileid: "73120780"
 
 您可以呼叫 <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType> 方法來判斷檔案路徑是否完整 (也就是路徑獨立於目前的目錄，目前目錄變更時它不會變更)。 請注意，這類路徑可以包含相對目錄區段 (`.` 和 `..`)，而且如果解析的路徑永遠指向相同位置便仍然完整。
 
-下例會說明絕對和相對路徑之間的差異。 它假設目錄 D:\FY2018\ 存在，且在執行此範例之前，您還沒有從命令提示字元設定 D:\ 的任何目前目錄。
+下例會說明絕對和相對路徑之間的差異。 它假設目錄 D:\FY2018\ 存在，而且您尚未設定任何目前目錄來進行 D:\在執行範例之前，從命令提示字元。
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
@@ -60,7 +60,7 @@ ms.locfileid: "73120780"
 
 以下是 UNC 路徑的一些範例：
 
-|路徑  |描述  |
+|{2&gt;路徑&lt;2}  |描述  |
 | -- | -- |
 | `\\system07\C$\` | `system07` 上磁碟機 C: 的根目錄。 |
 | `\\Server2\Share\Test\Foo.txt` | \\\\Server2\\Share 磁碟區 Test 目錄中的 Foo.txt 檔案。|
@@ -71,7 +71,7 @@ UNC 路徑必須一律完整。 它們可以包含相對目錄區段 (`.` 和 `.
 
 Windows 作業系統有指向包括檔案在內所有資源的　統一物件模型。 這些物件路徑可從 [主控台] 視窗存取，並已透過舊版 DOS 和 UNC 路徑對應到的符號連結特殊資料夾，公開至 Win32 圖層。 這個特殊資料夾是透過 DOS 裝置路徑語法來存取，這是其中一個：
 
-`\\.\C:\Test\Foo.txt`  
+`\\.\C:\Test\Foo.txt`
 `\\?\C:\Test\Foo.txt`
 
 除了透過磁碟機代號識別磁碟機之外，也可以使用磁碟區 GUID 來識別磁碟區。 它的格式如下：
@@ -93,12 +93,12 @@ DOS 裝置路徑由以下元件組成：
 
    裝置路徑規範識別磁碟區或磁碟機之後，DOS 裝置路徑的第一個區段。 (例如，`\\?\C:\` 和 `\\.\BootPartition\`。)
 
-   對於呼叫的 UNC 有一個特定連結，不用多說，就是 `UNC`。 例如:
+   對於呼叫的 UNC 有一個特定連結，不用多說，就是 `UNC`。 例如：
 
-  `\\.\UNC\Server\Share\Test\Foo.txt`  
+  `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    針對裝置 UNC，「伺服器/共用」部分會形成磁碟區。 例如，在 `\\?\server1\e:\utilities\\filecomparer\`，「伺服器/共用」部分是 server1\utilities。 這一點在呼叫具有相對目錄區段的方法 (例如 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType>) 時很重要；無法瀏覽過磁碟區。 
+    針對裝置 UNC，「伺服器/共用」部分會形成磁碟區。 例如，在 `\\?\server1\e:\utilities\\filecomparer\`，「伺服器/共用」部分是 server1\utilities。 這一點在呼叫具有相對目錄區段的方法 (例如 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType>) 時很重要；無法瀏覽過磁碟區。
 
 根據定義，DOS 裝置路徑是完整的。 不允許相對目錄區段 (`.` 和 `..`)。 目前目錄絕對不會進入其使用方式。
 
@@ -126,7 +126,7 @@ DOS 裝置路徑由以下元件組成：
 路徑正規化的第一步就是識別路徑的類型。 路徑會落在一些分類的其中之一：
 
 - 它們是裝置路徑，亦即它們開頭為兩個分隔符號和一個問號或句點 (`\\?` 或 `\\.`)。
-- 它們是 UNC 路徑，亦即它們開頭為兩個分隔符號，且沒有問號或句點。 
+- 它們是 UNC 路徑，亦即它們開頭為兩個分隔符號，且沒有問號或句點。
 - 它們是完整的 DOS 路徑，亦即它們開頭為磁碟機代號、磁碟區分隔符號和元件分隔符號 (`C:\`)。
 - 它們指定舊版裝置 (`CON`、`LPT1`)。
 - 它們相對於目前磁碟機的根目錄，亦即它們開頭單一元件分隔符號 (`\`)。
@@ -137,7 +137,7 @@ DOS 裝置路徑由以下元件組成：
 
 ### <a name="handling-legacy-devices"></a>處理舊版裝置
 
-如果路徑是舊版 DOS 裝置，例如 `CON`、`COM1` 或 `LPT1`，會在它前面加上 `\\.\` 轉換為裝置路徑然後傳回。 
+如果路徑是舊版 DOS 裝置，例如 `CON`、`COM1` 或 `LPT1`，會在它前面加上 `\\.\` 轉換為裝置路徑然後傳回。
 
 開頭為舊版裝置名稱的路徑，一律會被 <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType> 方法解譯成舊版裝置。 例如，`CON.TXT` 的 DOS 裝置路徑是 `\\.\CON`，而 `COM1.TXT\file1.txt` 的 DOS 裝置路徑是 `\\.\COM1`。
 
@@ -152,7 +152,7 @@ DOS 裝置路徑由以下元件組成：
 如果路徑開頭為分隔符號以外的項目，則會套用目前磁碟機和目前目錄。 例如，如果路徑是 `filecompare`，而目前目錄是 `C:\utilities\`，則結果是 `C:\utilities\filecompare\`。
 
 > [!IMPORTANT]
-> 相對路徑在多執行緒應用程式 (也就是大部分應用程式) 中是危險的，因為目前目錄是以每個處理序為基準的一項設定。 任何執行緒都可以隨時變更目前目錄。 從 .NET Core 2.1 開始，您可以呼叫 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> 方法，從相對路徑以及您想要解析針對的基底路徑 (目前的目錄)，取得絕對路徑。 
+> 相對路徑在多執行緒應用程式 (也就是大部分應用程式) 中是危險的，因為目前目錄是以每個處理序為基準的一項設定。 任何執行緒都可以隨時變更目前目錄。 從 .NET Core 2.1 開始，您可以呼叫 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> 方法，從相對路徑以及您想要解析針對的基底路徑 (目前的目錄)，取得絕對路徑。
 
 ### <a name="canonicalizing-separators"></a>規範化分隔符號
 
@@ -160,7 +160,7 @@ DOS 裝置路徑由以下元件組成：
 
 ### <a name="evaluating-relative-components"></a>評估相對元件
 
-處理路徑時，會評估由單一或雙句點 (`.` 或 `..`) 所組成的任何元件或區段： 
+處理路徑時，會評估由單一或雙句點 (`.` 或 `..`) 所組成的任何元件或區段：
 
 - 若為單一句點，會移除目前的區段，因為它是指目前目錄。
 
@@ -174,9 +174,9 @@ DOS 裝置路徑由以下元件組成：
 
 - 如果區段結尾為單一句點，會移除該句點。 (單句點或雙句點的區段在上一個步驟中正規化。 三個以上句點的區段不會正規化，且實際上是有效的檔案/目錄名稱。)
 
-- 如果路徑結尾不是分隔符號，所有尾端句號和空格 (U+0020) 都會移除。 如果最後一個區段只是單句點或雙句點，它會屬於上述相對元件規則。 
+- 如果路徑結尾不是分隔符號，所有尾端句號和空格 (U+0020) 都會移除。 如果最後一個區段只是單句點或雙句點，它會屬於上述相對元件規則。
 
-   此規則表示您可以建立具有尾端空格的目錄名稱，方法是在空格之後新增尾端分隔符號。  
+   此規則表示您可以建立具有尾端空格的目錄名稱，方法是在空格之後新增尾端分隔符號。
 
    > [!IMPORTANT]
    > 您應該**絕不**建立具有尾端空格的目錄或檔案名稱。 尾端空格可能會導致難以存取目錄或是不可能存取目錄，而應用程式在嘗試處理名稱包含尾端空格的目錄或檔案時，通常會失敗。
@@ -187,7 +187,7 @@ DOS 裝置路徑由以下元件組成：
 
 為何會想要略過正規化？ 有三個主要的原因：
 
-1. 存取通常無法使用，但是合法的路徑。 例如，稱為 `hidden.` 的檔案或目錄便無法以任何其他方式存取。 
+1. 存取通常無法使用，但是合法的路徑。 例如，稱為 `hidden.` 的檔案或目錄便無法以任何其他方式存取。
 
 1. 如果已經正規化，藉由略過正規化以改善效能。
 
@@ -200,7 +200,7 @@ DOS 裝置路徑由以下元件組成：
 
 開頭為 `\\?\` 的路徑，在您明確地將其傳遞給 [GetFullPathName 函式](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)時，仍會正規化。
 
-請注意，您可以將多於 `MAX_PATH` 個字元的路徑傳遞給 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 而不需要 `\\?\`。 它支援最長可達 Windows 可處理字串大小上限的任意長度路徑。
+您可以將超過 `MAX_PATH` 個字元的路徑傳遞給[GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) ，而不 `\\?\`。 它支援最長可達 Windows 可處理字串大小上限的任意長度路徑。
 
 ## <a name="case-and-the-windows-file-system"></a>大小寫與 Windows 檔案系統
 

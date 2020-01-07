@@ -2,12 +2,12 @@
 title: 函式建構 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
-ms.openlocfilehash: 6366c7781372d34e15d62f81a5ceae8ff4ccda2e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a51360d6c8d44770c462afb728a1fb78d3e2cd42
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353457"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636844"
 ---
 # <a name="functional-construction-linq-to-xml-visual-basic"></a>功能結構（LINQ to XML）（Visual Basic）
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供一種強大的方式來建立 XML 元素，稱為「函數式建構」。 功能結構是在單一陳述式中建立 XML 樹狀結構的能力。  
@@ -18,11 +18,11 @@ ms.locfileid: "74353457"
   
 - <xref:System.Xml.Linq.XElement> 建構函式會採用 `params` 類型的 <xref:System.Object> 陣列，讓您可以將任何數目的物件傳遞到建構函式。 這可讓您建立包含複雜內容的項目。  
   
-- 如果物件實作 <xref:System.Collections.Generic.IEnumerable%601>，系統列舉物件中的集合，並加入集合中的所有項目。 如果集合包含 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 物件，系統會個別加入集合中的每個項目。 這是非常重要的，因為這可讓您將 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的結果傳遞到建構函式中。  
+- 如果物件實作 <xref:System.Collections.Generic.IEnumerable%601>，系統列舉物件中的集合，並加入集合中的所有項目。 如果集合包含 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 物件，系統會個別加入集合中的每個項目。 這很重要，因為它可讓您將 LINQ 查詢的結果傳遞給此函式。  
   
  下列為範例：  
   
- 這些功能可讓您使用 XML 常值來撰寫程式碼，以建立 XML 樹狀結構，以及撰寫在建立 XML 樹狀結構時，使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢結果的程式碼：  
+ 這些功能可讓您使用 XML 常值來撰寫程式碼，以建立 XML 樹狀結構，以及撰寫在建立 XML 樹狀結構時使用 LINQ 查詢結果的程式碼：  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -56,6 +56,6 @@ Console.WriteLine(xmlTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [建立 XML 樹狀結構（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
