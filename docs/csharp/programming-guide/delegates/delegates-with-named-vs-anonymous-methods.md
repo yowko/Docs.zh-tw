@@ -6,40 +6,40 @@ helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 50df0e9c42d366c9c79dde3b0d34f85b8e552a45
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 310d0abd8fd2ceac5f8dfaa2647cb6ac26513a0f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418036"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346412"
 ---
-# <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a><span data-ttu-id="ce87d-102">使用具名和匿名方法委派的比較 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="ce87d-102">Delegates with Named vs. Anonymous Methods (C# Programming Guide)</span></span>
-<span data-ttu-id="ce87d-103">[delegate](../../language-reference/builtin-types/reference-types.md) 可以與具名方法產生關聯。</span><span class="sxs-lookup"><span data-stu-id="ce87d-103">A [delegate](../../language-reference/builtin-types/reference-types.md) can be associated with a named method.</span></span> <span data-ttu-id="ce87d-104">當您使用具名方法具現化委派時，方法會當做參數傳遞，例如：</span><span class="sxs-lookup"><span data-stu-id="ce87d-104">When you instantiate a delegate by using a named method, the method is passed as a parameter, for example:</span></span>  
+# <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a><span data-ttu-id="89c14-102">使用具名和匿名方法委派的比較 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="89c14-102">Delegates with Named vs. Anonymous Methods (C# Programming Guide)</span></span>
+<span data-ttu-id="89c14-103">[delegate](../../language-reference/builtin-types/reference-types.md) 可以與具名方法產生關聯。</span><span class="sxs-lookup"><span data-stu-id="89c14-103">A [delegate](../../language-reference/builtin-types/reference-types.md) can be associated with a named method.</span></span> <span data-ttu-id="89c14-104">當您使用具名方法具現化委派時，方法會當做參數傳遞，例如：</span><span class="sxs-lookup"><span data-stu-id="89c14-104">When you instantiate a delegate by using a named method, the method is passed as a parameter, for example:</span></span>  
   
  [!code-csharp[csProgGuideDelegates#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#1)]  
   
- <span data-ttu-id="ce87d-105">這會使用具名方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="ce87d-105">This is called using a named method.</span></span> <span data-ttu-id="ce87d-106">使用具名方法建構的委派可封裝[靜態](../../language-reference/keywords/static.md)方法或執行個體方法。</span><span class="sxs-lookup"><span data-stu-id="ce87d-106">Delegates constructed with a named method can encapsulate either a [static](../../language-reference/keywords/static.md) method or an instance method.</span></span> <span data-ttu-id="ce87d-107">在舊版 C# 中，要具現化委派只能使用具名方法。</span><span class="sxs-lookup"><span data-stu-id="ce87d-107">Named methods are the only way to instantiate a delegate in earlier versions of C#.</span></span> <span data-ttu-id="ce87d-108">不過，如果建立新方法會產生額外不必要的負荷，C# 可讓您具現化委派，並立即指定呼叫委派時會處理的程式碼區塊。</span><span class="sxs-lookup"><span data-stu-id="ce87d-108">However, in a situation where creating a new method is unwanted overhead, C# enables you to instantiate a delegate and immediately specify a code block that the delegate will process when it is called.</span></span> <span data-ttu-id="ce87d-109">區塊可以包含 Lambda 運算式或匿名方法。</span><span class="sxs-lookup"><span data-stu-id="ce87d-109">The block can contain either a lambda expression or an anonymous method.</span></span> <span data-ttu-id="ce87d-110">如需詳細資訊，請參閱[匿名函式](../statements-expressions-operators/anonymous-functions.md)。</span><span class="sxs-lookup"><span data-stu-id="ce87d-110">For more information, see [Anonymous Functions](../statements-expressions-operators/anonymous-functions.md).</span></span>  
+ <span data-ttu-id="89c14-105">這會使用具名方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="89c14-105">This is called using a named method.</span></span> <span data-ttu-id="89c14-106">使用具名方法建構的委派可封裝[靜態](../../language-reference/keywords/static.md)方法或執行個體方法。</span><span class="sxs-lookup"><span data-stu-id="89c14-106">Delegates constructed with a named method can encapsulate either a [static](../../language-reference/keywords/static.md) method or an instance method.</span></span> <span data-ttu-id="89c14-107">在舊版 C# 中，要具現化委派只能使用具名方法。</span><span class="sxs-lookup"><span data-stu-id="89c14-107">Named methods are the only way to instantiate a delegate in earlier versions of C#.</span></span> <span data-ttu-id="89c14-108">不過，如果建立新方法會產生額外不必要的負荷，C# 可讓您具現化委派，並立即指定呼叫委派時會處理的程式碼區塊。</span><span class="sxs-lookup"><span data-stu-id="89c14-108">However, in a situation where creating a new method is unwanted overhead, C# enables you to instantiate a delegate and immediately specify a code block that the delegate will process when it is called.</span></span> <span data-ttu-id="89c14-109">區塊可以包含 Lambda 運算式或匿名方法。</span><span class="sxs-lookup"><span data-stu-id="89c14-109">The block can contain either a lambda expression or an anonymous method.</span></span> <span data-ttu-id="89c14-110">如需詳細資訊，請參閱[匿名函式](../statements-expressions-operators/anonymous-functions.md)。</span><span class="sxs-lookup"><span data-stu-id="89c14-110">For more information, see [Anonymous Functions](../statements-expressions-operators/anonymous-functions.md).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ce87d-111">備註</span><span class="sxs-lookup"><span data-stu-id="ce87d-111">Remarks</span></span>  
- <span data-ttu-id="ce87d-112">當做委派參數傳遞的方法必須擁有與委派宣告相同的簽章。</span><span class="sxs-lookup"><span data-stu-id="ce87d-112">The method that you pass as a delegate parameter must have the same signature as the delegate declaration.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="89c14-111">備註</span><span class="sxs-lookup"><span data-stu-id="89c14-111">Remarks</span></span>  
+ <span data-ttu-id="89c14-112">當做委派參數傳遞的方法必須擁有與委派宣告相同的簽章。</span><span class="sxs-lookup"><span data-stu-id="89c14-112">The method that you pass as a delegate parameter must have the same signature as the delegate declaration.</span></span>  
   
- <span data-ttu-id="ce87d-113">委派執行個體可封裝靜態或執行個體方法。</span><span class="sxs-lookup"><span data-stu-id="ce87d-113">A delegate instance may encapsulate either static or instance method.</span></span>  
+ <span data-ttu-id="89c14-113">委派執行個體可封裝靜態或執行個體方法。</span><span class="sxs-lookup"><span data-stu-id="89c14-113">A delegate instance may encapsulate either static or instance method.</span></span>  
   
- <span data-ttu-id="ce87d-114">即使委派可使用 [out](../../language-reference/keywords/out-parameter-modifier.md) 參數，但仍不建議您用於多點傳送事件委派，因為無從得知將呼叫哪一個委派。</span><span class="sxs-lookup"><span data-stu-id="ce87d-114">Although the delegate can use an [out](../../language-reference/keywords/out-parameter-modifier.md) parameter, we do not recommend its use with multicast event delegates because you cannot know which delegate will be called.</span></span>  
+ <span data-ttu-id="89c14-114">即使委派可使用 [out](../../language-reference/keywords/out-parameter-modifier.md) 參數，但仍不建議您用於多點傳送事件委派，因為無從得知將呼叫哪一個委派。</span><span class="sxs-lookup"><span data-stu-id="89c14-114">Although the delegate can use an [out](../../language-reference/keywords/out-parameter-modifier.md) parameter, we do not recommend its use with multicast event delegates because you cannot know which delegate will be called.</span></span>  
   
-## <a name="example-1"></a><span data-ttu-id="ce87d-115">範例 1</span><span class="sxs-lookup"><span data-stu-id="ce87d-115">Example 1</span></span>  
- <span data-ttu-id="ce87d-116">以下是宣告和使用委派的簡單範例。</span><span class="sxs-lookup"><span data-stu-id="ce87d-116">The following is a simple example of declaring and using a delegate.</span></span> <span data-ttu-id="ce87d-117">請注意，委派 `Del` 和相關聯的方法 `MultiplyNumbers` 必須擁有相同的簽章</span><span class="sxs-lookup"><span data-stu-id="ce87d-117">Notice that both the delegate, `Del`, and the associated method, `MultiplyNumbers`, have the same signature</span></span>  
+## <a name="example-1"></a><span data-ttu-id="89c14-115">範例 1</span><span class="sxs-lookup"><span data-stu-id="89c14-115">Example 1</span></span>  
+ <span data-ttu-id="89c14-116">以下是宣告和使用委派的簡單範例。</span><span class="sxs-lookup"><span data-stu-id="89c14-116">The following is a simple example of declaring and using a delegate.</span></span> <span data-ttu-id="89c14-117">請注意，委派 `Del` 和相關聯的方法 `MultiplyNumbers` 必須擁有相同的簽章</span><span class="sxs-lookup"><span data-stu-id="89c14-117">Notice that both the delegate, `Del`, and the associated method, `MultiplyNumbers`, have the same signature</span></span>  
   
  [!code-csharp[csProgGuideDelegates#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#2)]  
   
-## <a name="example-2"></a><span data-ttu-id="ce87d-118">範例 2</span><span class="sxs-lookup"><span data-stu-id="ce87d-118">Example 2</span></span>  
- <span data-ttu-id="ce87d-119">在下列範例中，一個委派會同時對應到靜態和執行個體方法，並傳回每個方法的特定資訊。</span><span class="sxs-lookup"><span data-stu-id="ce87d-119">In the following example, one delegate is mapped to both static and instance methods and returns specific information from each.</span></span>  
+## <a name="example-2"></a><span data-ttu-id="89c14-118">範例 2</span><span class="sxs-lookup"><span data-stu-id="89c14-118">Example 2</span></span>  
+ <span data-ttu-id="89c14-119">在下列範例中，一個委派會同時對應到靜態和執行個體方法，並傳回每個方法的特定資訊。</span><span class="sxs-lookup"><span data-stu-id="89c14-119">In the following example, one delegate is mapped to both static and instance methods and returns specific information from each.</span></span>  
   
  [!code-csharp[csProgGuideDelegates#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="ce87d-120">請參閱</span><span class="sxs-lookup"><span data-stu-id="ce87d-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="89c14-120">請參閱</span><span class="sxs-lookup"><span data-stu-id="89c14-120">See also</span></span>
 
-- [<span data-ttu-id="ce87d-121">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="ce87d-121">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="ce87d-122">委派</span><span class="sxs-lookup"><span data-stu-id="ce87d-122">Delegates</span></span>](./index.md)
-- [<span data-ttu-id="ce87d-123">如何：組合委派 (多點傳送委派)</span><span class="sxs-lookup"><span data-stu-id="ce87d-123">How to: Combine Delegates (Multicast Delegates)</span></span>](./how-to-combine-delegates-multicast-delegates.md)
-- [<span data-ttu-id="ce87d-124">事件</span><span class="sxs-lookup"><span data-stu-id="ce87d-124">Events</span></span>](../events/index.md)
+- [<span data-ttu-id="89c14-121">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="89c14-121">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="89c14-122">委派</span><span class="sxs-lookup"><span data-stu-id="89c14-122">Delegates</span></span>](./index.md)
+- [<span data-ttu-id="89c14-123">如何合併委派（多播委派）</span><span class="sxs-lookup"><span data-stu-id="89c14-123">How to combine delegates (Multicast Delegates)</span></span>](./how-to-combine-delegates-multicast-delegates.md)
+- [<span data-ttu-id="89c14-124">事件</span><span class="sxs-lookup"><span data-stu-id="89c14-124">Events</span></span>](../events/index.md)
