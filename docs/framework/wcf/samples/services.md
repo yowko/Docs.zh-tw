@@ -1,22 +1,22 @@
 ---
-title: 服務範例-WCF
+title: 服務範例
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: 9c4c6c0083a685f2f85b01ed3a5bed377708dd13
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: afc4d20034730421d0b72659be62a64048a4c77e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425457"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345113"
 ---
 # <a name="services"></a>服務
 
-本節包含示範 Windows Communication Foundation (WCF) 服務的範例。
+本節包含示範 Windows Communication Foundation （WCF）服務的範例。
 
 ## <a name="in-this-section"></a>本節內容
 
 - [裝載](../../../../docs/framework/wcf/feature-details/hosting.md)\
-示範裝載 WCF 服務。
+示範如何裝載 WCF 服務。
 
 - [服務互通性](service-interoperability.md)\
 示範 WCF 與其他服務技術之間的互動。
@@ -27,19 +27,19 @@ ms.locfileid: "67425457"
 - [服務安全性](service-security.md)\
 示範 WCF 服務安全性。
 
-- [WCF 服務的簡化的組態](simplified-configuration-for-wcf-services.md)\
-示範如何實作與設定一般服務和用戶端使用 WCF。
+- [簡化 WCF 服務\ 的](simplified-configuration-for-wcf-services.md)設定
+示範如何使用 WCF 來執行和設定一般服務和用戶端。
 
 - [使用標準端點](usage-of-standard-endpoints.md)\
 示範如何在服務組態檔中使用標準端點。
 
-- [延伸的保護原則](extended-protection-policy.md)\
+- [擴充保護原則](extended-protection-policy.md)\
 示範延伸保護，這是防止中間人 (MITM) 攻擊的一項安全性方案。
 
-- [組態通道處理站](configuration-channel-factory.md)\
+- 設定[通道](configuration-channel-factory.md)處理站\
 示範 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 的使用方式。
 
-- [定址](addressing.md)\
+- [解決](addressing.md)\
 示範端點位址的各方面與功能。
 
 - [命令式](imperative.md)\
@@ -51,14 +51,14 @@ ms.locfileid: "67425457"
 - [多個端點](multiple-endpoints.md)\
 示範如何在服務上設定多個端點，以及如何從用戶端與每個端點進行通訊。
 
-- [單一 listenuri 的多個端點](multiple-endpoints-at-a-single-listenuri.md)\
+- [單一 ListenUri 的多個端點](multiple-endpoints-at-a-single-listenuri.md)\
 示範在單一 `ListenUri` 裝載多個端點的服務。
 
-- [OperationContextScope](operationcontextscope.md)\
-示範如何傳送上使用標頭的 WCF 呼叫的額外資訊。
+- [OperationCoNtextScope](operationcontextscope.md)\
+示範如何使用標頭在 WCF 呼叫上傳送額外的資訊。
 
 - [服務描述](service-description.md)\
 示範服務如何在執行階段擷取其服務描述資訊。
 
-- [ConcurrencyMode.Reentrant](concurrencymode-reentrant.md)\
+- [ConcurrencyMode](concurrencymode-reentrant.md)\
 示範如何在服務實作上使用可重新進入的並行模式。

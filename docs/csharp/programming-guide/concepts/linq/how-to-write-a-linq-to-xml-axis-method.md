@@ -1,21 +1,21 @@
 ---
-title: HOW TO：撰寫 LINQ to XML 座標軸方法 (C#)
+title: 如何撰寫 LINQ to XML 軸方法（C#）
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 74105ff9d08479a4fc702b02e6929130272b237b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: fc602f91dc6da16c4a019bb42ff178ae3de4ea03
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253227"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348362"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>作法：撰寫 LINQ to XML 座標軸方法 (C#)
+# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>如何撰寫 LINQ to XML 軸方法（C#）
 您可以撰寫自己的座標軸方法來擷取 XML 樹狀結構中的集合。 其中一個最好的方式是，撰寫可傳回項目或屬性集合的擴充方法。 您可以根據您應用程式的需求，撰寫您的擴充方法來傳回項目或屬性的特定子集。  
   
 ## <a name="example"></a>範例  
  下列範例使用兩種擴充方法。 第一個擴充方法 `GetXPath` 會在 <xref:System.Xml.Linq.XObject> 上運算，並在接受評估時，傳回將傳回節點或屬性的 XPath 運算式。 第二個擴充方法 `Find` 會在 <xref:System.Xml.Linq.XElement> 上運算。 該擴充方法會傳回包含某些指定之文字的 <xref:System.Xml.Linq.XAttribute> 物件集合和 <xref:System.Xml.Linq.XElement> 物件集合。  
   
- 此範例使用下列 XML 文件：[XML 範例檔：多個訂購單 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：多份採購單 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```csharp  
 public static class MyExtensions  

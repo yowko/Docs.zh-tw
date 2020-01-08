@@ -2,12 +2,12 @@
 title: 安全存取資料
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: c08f41be67f5d87635021e86ba5a5b33af9304cd
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ede8b1a2e840b56d6e7f45e6d26e09fa5e8bcc25
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735274"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337529"
 ---
 # <a name="secure-data-access"></a>安全存取資料
 若要撰寫安全的 ADO.NET 程式碼，您必須了解基礎資料存放區或資料庫中可用的安全性機制。 您也需要考量您的應用程式所可能包含的其他功能或元件的安全性隱含。  
@@ -65,9 +65,8 @@ ms.locfileid: "73735274"
   
 |資源|描述|  
 |--------------|-----------------|  
-|[Access 2007 的安全性考慮和指引](https://go.microsoft.com/fwlink/?LinkId=98354)|說明 Access 2007 的安全性技巧，例如加密檔案、管理密碼、將資料庫轉換為新的 ACCDB 和 ACCDE 格式，以及使用其他的安全性選項。|  
-|[瞭解存取安全性中工作組資訊檔案的角色](https://support.microsoft.com/kb/305542)|說明 Access 2003 安全性中的工作群組資訊檔的角色和關係。|  
-|[Microsoft Access 版本2.0 到2000的 Microsoft Access Security 常見問題](https://go.microsoft.com/fwlink/?LinkId=47698)|可下載版本的 Microsoft Access 安全性常見問題集。|  
+|[Access 2007 的安全性考慮和指引](https://docs.microsoft.com/previous-versions/office/developer/office-2007/bb421308(v=office.12))|說明 Access 2007 的安全性技巧，例如加密檔案、管理密碼、將資料庫轉換為新的 ACCDB 和 ACCDE 格式，以及使用其他的安全性選項。|  
+|[Access 2010 安全性簡介](https://support.office.com/article/Introduction-to-Access-2010-security-CAE6D764-0318-4622-955F-68D9F186D6CA)|提供存取2010所提供的安全性功能的總覽。|  
 ## <a name="enterprise-services"></a>企業服務  
  COM+ 本身包含根據 Windows NT 帳戶和處理序/執行緒模擬而定的安全性模型。 <xref:System.EnterpriseServices> 命名空間提供包裝函式，這些包裝函式允許 .NET 應用程式透過 <xref:System.EnterpriseServices.ServicedComponent> 類別來整合 Managed 程式碼與 COM+ 安全性服務。  
   

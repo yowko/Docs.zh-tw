@@ -1,5 +1,5 @@
 ---
-title: 已安裝的 .NET Framework 安全性更新和修補程式
+title: 請參閱已安裝的 .NET Framework 安全性更新和修補程式
 description: 了解如何判斷電腦上所安裝的 .NET Framework 安全性更新與 Hotfix。
 ms.date: 11/27/2017
 dev_langs:
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aad202e7c9df01c2893e74a39744f2c32783f1f0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
-ms.translationtype: MT
+ms.openlocfilehash: 498462b2dc5f0e63562cb52699460e0d37fd4a60
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735195"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342290"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>如何判斷已安裝的 .NET Framework 安全性更新和修補程式
 

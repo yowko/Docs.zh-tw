@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 5d8093c77799a55f4bc13e82c06c856dbb8d85cd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7d15c49ade4cd32389f7c86440b3a66aec8e4ea8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976731"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345191"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什麼是 ML.NET，它如何運作？
 
@@ -107,7 +107,7 @@ ML.NET 會使用 .NET Core，或使用 .NET Framework 在 windows、Linux 和 ma
 
 ML.NET 模型是一個物件，包含要對輸入資料執行的轉換，以達成預測的輸出。
 
-### <a name="basic"></a>基本
+### <a name="basic"></a>Basic
 
 最基本的模型是二維線性迴歸，其中一個持續數量和另一個成正比，如上述的房價範例所示。
 
@@ -127,11 +127,11 @@ ML.NET 模型是一個物件，包含要對輸入資料執行的轉換，以達�
 
 ## <a name="data-preparation"></a>資料準備
 
-在大部分的情況下，您所用的資料不適合直接用來定型機器學習模型。 未經處理資料需要經過準備或前置處理，才能用來尋找您模型的參數。 您的資料可能需要從字串值轉換成數值表示。 您的輸入資料中可能有多餘資訊。 您可能需要縮小或擴充您輸入資料的維度。 您的資料可能需要標準化或調整。
+在大部分的情況下，您所用的資料不適合直接用來定型機器學習模型。 原始資料必須先備妥或預先處理，然後才能用來尋找模型的參數。 您的資料可能需要從字串值轉換成數值表示。 您的輸入資料中可能有多餘資訊。 您可能需要縮小或擴充您輸入資料的維度。 您的資料可能需要標準化或調整。
 
 [ML.NET 教學課程](./tutorials/index.md)會教導您用於特定機器學習工作之文字、影像、數值和時間序列資料的不同資料處理管線。
 
-[如何準備您的資料](./how-to-guides/prepare-data-ml-net.md)會示範如何更全面地套用資料準備。
+[如何準備您的資料](./how-to-guides/prepare-data-ml-net.md)會示範如何更廣泛地套用資料準備。
 
 您可以在＜資源＞一節中找到所有[可用轉換](./resources/transforms.md)的附錄。
 
@@ -180,7 +180,7 @@ ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一�
 ||多元分類|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||異常偵測|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
 ||群集|<xref:Microsoft.ML.ClusteringCatalog>||
-||針對|<xref:Microsoft.ML.ForecastingCatalog>||
+||正在預測|<xref:Microsoft.ML.ForecastingCatalog>||
 ||排名|<xref:Microsoft.ML.RankingCatalog>||
 ||回復|<xref:Microsoft.ML.RegressionCatalog>||
 ||建議|<xref:Microsoft.ML.RecommendationCatalog>|新增 `Microsoft.ML.Recommender` NuGet 套件|
@@ -212,7 +212,7 @@ ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一�
     var model = pipeline.Fit(trainingData);
 ```
 
-呼叫 `Fit()` 會使用輸入定型資料來評估模型的參數。 這就是定型模型。 請記住，上述的線性迴歸模型有兩個模型參數：**偏差**和**權數**。 呼叫 `Fit()` 之後，即已知參數值。 大部分模型的參數都比這個模型多。
+呼叫 `Fit()` 會使用輸入定型資料來評估模型的參數。 這就是所謂的「定型」(Training) 模型。 請記住，上述的線性迴歸模型有兩個模型參數：**偏差**和**權數**。 呼叫 `Fit()` 之後，即已知參數值。 大部分模型的參數都比這個模型多。
 
 您可以在[如何定型模型](./how-to-guides/train-machine-learning-model-ml-net.md)中深入了解模型定型
 
@@ -242,7 +242,7 @@ ML.NET 機器學習管線的核心是 [DataView](xref:Microsoft.ML.IDataView) �
 
 如果管線中來自轉換之輸出結構描述不符合下一個轉換的輸入結構描述，則 ML.NET 會擲回例外狀況。
 
-資料檢視物件具有資料行和資料列。 每個資料行都有名稱和類型以及長度。 例如：房價範例的輸入資料行為**大小**和**價格**。 它們都是類型，其數量為純量而非向量。
+資料檢視物件具有資料行和資料列。 每個資料行都有名稱和類型以及長度。 例如，房屋價格範例中的輸入資料行是**大小**和**價格**。 兩者都是型別，而且都是純量數量，而不是向量。
 
    ![具有房價預測資料的 ML.NET 資料檢視範例](./media/ml-net-dataview.png)
 

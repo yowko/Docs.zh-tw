@@ -2,12 +2,12 @@
 title: 傳輸：WSE 3.0 TCP 互通性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 6541ddf322a2084601daf2f1271ac5c888073f8f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8166e1c378bc745eb8c9f37d6982642e754813cb
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423879"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544618"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>傳輸：WSE 3.0 TCP 互通性
 WSE 3.0 TCP 互通性傳輸範例示範如何將 TCP 雙工會話實作為自訂 Windows Communication Foundation （WCF）傳輸。 也會示範如何使用通道層的擴充性，透過網路與現有的已部署系統相連結。 下列步驟示範如何建立此自訂 WCF 傳輸：  
@@ -175,7 +175,7 @@ Symbols:
 1. 如果要執行這個範例，您必須已安裝 WSE 3.0 和 WSE `TcpSyncStockService` 範例。 您可以[從 MSDN 下載 WSE 3.0](https://go.microsoft.com/fwlink/?LinkId=95000)。  
   
 > [!NOTE]
-> 由於 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上不支援 WSE 3.0，因此您無法在該作業系統上安裝或執行 `TcpSyncStockService` 範例。  
+> 因為 Windows Server 2008 不支援 WSE 3.0，所以您無法在該作業系統上安裝或執行 `TcpSyncStockService` 的範例。  
   
 1. 在安裝 `TcpSyncStockService` 範例之後，請執行下列步驟：  
   

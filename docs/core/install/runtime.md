@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 8f4a895ad66dea3063a32f785e4c521196266978
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: a45cb570ccf572a699359598319fd3867fb5e5dd
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835725"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340964"
 ---
 # <a name="install-the-net-core-runtime"></a>安裝 .NET Core 執行時間
 
@@ -42,7 +42,32 @@ macOS 具有可用於安裝 .NET Core 3.1 執行時間的獨立安裝程式：
 
 ## <a name="install-with-a-package-manager"></a>使用套件管理員進行安裝
 
-您可以使用許多常見的 Linux 封裝管理員來安裝 .NET Core 執行時間。 如需詳細資訊，請參閱[Linux 套件管理員-安裝 .Net Core](linux-package-manager-rhel7.md)。
+您可以使用許多常見的 Linux 封裝管理員來安裝 .NET Core 執行時間。 如需詳細資訊，請參閱[Linux 套件管理員-安裝 .Net Core](linux-package-managers.md)。
+
+只有在 x64 架構上才支援使用套件管理員進行安裝。 如果您要使用不同的架構（例如 ARM）來安裝 .NET Core 執行時間，請遵循[下載並手動安裝](#download-and-manually-install)一節中的指示。 如需有關支援哪些架構的詳細資訊，請參閱[.Net Core 相依性和需求](dependencies.md)。
+
+## <a name="download-and-manually-install"></a>下載並手動安裝
+
+若要將執行時間解壓縮，並在終端機上提供 .NET Core CLI 命令，請先[下載](#all-net-core-downloads).net Core 二進位版本。 然後，開啟終端機並執行下列命令。
+
+```bash
+mkdir -p $HOME/dotnet && tar zxf aspnetcore-runtime-3.1.0-linux-x64.tar.gz -C $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
+
+> [!TIP]
+> 上述 `export` 命令只會將 .NET Core CLI 命令提供給執行它的終端機會話。
+>
+> 您可以編輯您的 shell 設定檔，以永久新增命令。 有許多不同的 shell 可供 Linux 使用，而且每個都有不同的設定檔。 例如：
+>
+> - **Bash Shell**： *~/. bash_profile*， *~/.bashrc*
+> - **Korn Shell**： *~/.kshrc*或 *. profile*
+> - **Z Shell**： *~/.zshrc*或 *. zprofile*
+> 
+> 為您的 shell 編輯適當的原始程式檔，並將 `:$HOME/dotnet` 新增至現有 `PATH` 語句的結尾。 如果未包含任何 `PATH` 語句，請加入具有 `export PATH=$PATH:$HOME/dotnet`的新行。
+>
+> 此外，將 `export DOTNET_ROOT=$HOME/dotnet` 新增至檔案結尾。
 
 ::: zone-end
 

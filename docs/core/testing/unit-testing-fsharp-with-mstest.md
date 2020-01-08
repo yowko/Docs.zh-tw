@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 68878073b031d155c9ff67f24ed950570e666523
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
-ms.translationtype: MT
+ms.openlocfilehash: 46cbf00bbf1578e35d25d5b4deaecfed03a47fd0
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117001"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559509"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>使用 dotnet test 與 MSTest 為 .NET Core 中的 F# 程式庫進行單元測試
 
@@ -21,7 +21,7 @@ ms.locfileid: "71117001"
 ## <a name="creating-the-source-project"></a>建立來源專案
 
 開啟 Shell 視窗。 建立名為 *unit-testing-with-fsharp* 的目錄來放置方案。
-在這個新目錄中，執行 [`dotnet new sln`](../tools/dotnet-new.md) 以建立新方案。 這樣可讓您更輕鬆地管理類別庫與單元測試專案。
+在這個新目錄中，執行 `dotnet new sln` 以建立新的解決方案。 這樣可讓您更輕鬆地管理類別庫與單元測試專案。
 在方案目錄中，建立 *MathService* 目錄。 到目前為止，目錄與檔案結構如下所示：
 
 ```
@@ -30,14 +30,14 @@ ms.locfileid: "71117001"
     /MathService
 ```
 
-將 *MathService* 設定為目前的目錄，然後執行 [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) 以建立來源專案。  您建立會失敗的數學服務實作：
+將*MathService*設為目前的目錄，並執行 `dotnet new classlib -lang "F#"` 以建立來源專案。  您建立會失敗的數學服務實作：
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-將目錄變更回 *unit-testing-with-fsharp* 目錄。 執行 [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) 以將類別庫專案加入方案中。
+將目錄變更回 *unit-testing-with-fsharp* 目錄。 執行 `dotnet sln add .\MathService\MathService.fsproj`，將類別庫專案加入至方案。
 
 ## <a name="creating-the-test-project"></a>建立測試專案
 
@@ -52,7 +52,7 @@ module MyMath =
     /MathService.Tests
 ```
 
-將 *MathService.Tests* 目錄設定為目前的目錄，然後使用 [`dotnet new mstest -lang F#`](../tools/dotnet-new.md) 建立新專案。 這會建立將 MStest 作為測試架構使用的測試專案。 產生的範本會在 *MathServiceTests.fsproj* 中設定測試執行器：
+將*MathService*設為目錄，然後使用 `dotnet new mstest -lang "F#"`建立新的專案。 這會建立將 MStest 作為測試架構使用的測試專案。 產生的範本會在 *MathServiceTests.fsproj* 中設定測試執行器：
 
 ```xml
 <ItemGroup>
@@ -62,7 +62,7 @@ module MyMath =
 </ItemGroup>
 ```
 
-測試專案需要其他套件來建立和執行單元測試。 上一個步驟中的 `dotnet new` 已新增 MSTest 和 MSTest 執行器。 現在，將 `MathService` 類別庫新增為專案的另一個相依性。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
+測試專案需要其他套件來建立和執行單元測試。 上一個步驟中的 `dotnet new` 已新增 MSTest 和 MSTest 執行器。 現在，將 `MathService` 類別庫新增為專案的另一個相依性。 使用 `dotnet add reference` 命令：
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
@@ -83,11 +83,11 @@ dotnet add reference ../MathService/MathService.fsproj
         MathServiceTests.fsproj
 ```
 
-執行 *unit-testing-with-fsharp* 目錄中的 [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md)。
+在 fsharp.core 目錄的*單元測試*中執行 `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`。
 
 ## <a name="creating-the-first-test"></a>建立第一個測試
 
-您會撰寫一個失敗測試，讓它通過，然後重複此程序。 開啟 *Tests.fs* 並加入下列程式碼：
+撰寫一個會失敗的測試，再使其通過，然後重複這個過程。 開啟 *Tests.fs* 並加入下列程式碼：
 
 ```fsharp
 namespace MathService.Tests
@@ -107,7 +107,7 @@ type TestClass () =
      member this.FailEveryTime() = Assert.IsTrue(false)
 ```
 
-`[<TestClass>]` 屬性表示包含測試的類別。 `[<TestMethod>]` 屬性表示由測試執行器執行的測試方法。 從 *unit-testing-with-fsharp* 目錄，執行 [`dotnet test`](../tools/dotnet-test.md) 來建置測試和類別庫，然後執行測試。 MSTest 測試執行器包含執行測試的程式進入點。 `dotnet test` 會使用您建立的單元測試專案來開始測試執行器。
+`[<TestClass>]` 屬性表示包含測試的類別。 `[<TestMethod>]` 屬性表示由測試執行器執行的測試方法。 從*單元測試-fsharp.core*目錄中，執行 `dotnet test` 來建立測試和類別庫，然後執行測試。 MSTest 測試執行器包含執行測試的程式進入點。 `dotnet test` 會使用您建立的單元測試專案來開始測試執行器。
 
 這兩個測試會顯示最基本的成功和失敗測試。 `My test` 成功，而 `Fail every time` 失敗。 現在，針對 `squaresOfOdds` 方法建立測試。 `squaresOfOdds` 方法會傳回屬於輸入序列一部分的所有奇數整數值平方清單。 您能以反覆方式建立會驗證功能的測試，而不需要嘗試一次撰寫所有那些函式。 將每個測試設定為通過表示為方法建立必要功能。
 
@@ -180,3 +180,10 @@ let squaresOfOdds xs =
 ```
 
 您已建置好小型的程式庫和該程式庫的一組單元測試， 您已建立方案結構，因此加入新套件與測試是一般工作流程的一部分。 您已集中大部分的時間與精力以解決應用程式目標。
+
+## <a name="see-also"></a>請參閱
+
+- [dotnet new](../tools/dotnet-new.md)
+- [dotnet sln](../tools/dotnet-sln.md)
+- [dotnet add reference](../tools/dotnet-add-reference.md)
+- [dotnet test](../tools/dotnet-test.md)

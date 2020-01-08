@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 12666ca5ad8f223f2fba4a63a7cc7525601367a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ae0ba0bf15b6a02df5130d34d277322897826697
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091563"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338518"
 ---
 # <a name="composite-formatting"></a>複合格式
 
@@ -43,7 +43,7 @@ ms.locfileid: "73091563"
 - <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法，將告知性方法寫入至追蹤接聽項。  
   
 ## <a name="composite-format-string"></a>複合格式字串  
- 複合格式字串和物件清單會當做支援複合格式功能之方法的引數來使用。 複合格式字串是由零個或更多段與一個或多個格式項目混合的固定文字所組成， 固定文字是您選擇的任何文字，而每個格式項目都會對應到清單內的一個物件或 boxed 結構。 複合格式功能將會傳回新的結果字串，其中每一個格式項目都會由清單內對應物件的字串表示來取代。  
+ 複合格式字串和物件清單會當做支援複合格式功能之方法的引數來使用。 複合格式字串是由固定文字混合一或多個格式項目的零或多個執行組成。 固定文字是您選擇的任何文字，而每個格式項目都會對應到清單內的一個物件或 boxed 結構。 複合格式功能將會傳回新的結果字串，其中每一個格式項目都會由清單內對應物件的字串表示來取代。  
   
  請考量下列 <xref:System.String.Format%2A> 程式碼片段。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73091563"
 ## <a name="format-item-syntax"></a>格式項目語法  
  每個格式項目都會使用下列格式，並由下列元件所組成：  
   
- `{` *index*[`,`*alignment*][`:`*formatString*]`}`  
+ `{`*索引*[`,`*對齊*] [`:`*格式字串*]`}`  
   
  成對的大括號 ("{" 和 "}") 是必要的。  
   
@@ -65,12 +65,12 @@ ms.locfileid: "73091563"
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- 多個格式項目可以藉由指定相同參數規範來參考物件清單中的相同項目。 例如，您可以指定複合格式字串 (例如："0x{0:X} {0:E} {0:N}") 來將同一個數值設定成十六進位、科學記號和數字格式，如下列範例所示。  
+ 多個格式項目可以藉由指定相同參數規範來參考物件清單中的相同項目。 例如，您可以指定複合格式字串（例如： "0x{0:X} {0:E} {0:N}"）來格式化十六進位、科學和數位格式的相同數值，如下列範例所示。  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
   
- 每個格式項目皆可參考清單內的任何物件。 例如，如果有三個物件，您可以指定複合格式字串 (如："{1} {0} {2}") 來格式化第二個、第一個和第三個物件。 不是格式項目所參考的物件會被忽略。 如果參數規範指定超出物件清單範圍的項目，則會在執行階段擲回 <xref:System.FormatException>。  
+ 每個格式項目皆可參考清單內的任何物件。 例如，如果有三個物件，您可以指定複合格式字串來格式化第二個、第一個和第三個物件，如下所示： "{1} {0} {2}"。 不是格式項目所參考的物件會被忽略。 如果參數規範指定超出物件清單範圍的項目，則會在執行階段擲回 <xref:System.FormatException>。  
   
 ### <a name="alignment-component"></a>對齊元件  
  選擇性 *alignment* 元件為帶正負號的整數，表示慣用的格式化欄位寬度。 如果 *alignment* 的值小於格式化字串的長度，則會忽略 *alignment* 並使用格式化字串的長度當做欄位寬度。 如果 *alignment* 為正數，欄位中的格式化資料會靠右對齊；如果 *alignment* 為負數，則會靠左對齊。 如果填補有必要，則會使用泛空白字元 (White Space)。 如果指定了 *alignment*，則需要逗號。  
@@ -85,11 +85,11 @@ ms.locfileid: "73091563"
   
  下表列出 .NET Framework 類別庫中支援預先定義之格式字串的類型或類型分類，並提供列出支援之格式字串的主題連結。 請注意，字串格式是一種可延伸機制，可讓為所有現有類型定義新的格式字串，以及定義一組應用程式定義類型所支援的格式字串。 如需詳細資訊，請參閱 <xref:System.IFormattable> 和 <xref:System.ICustomFormatter> 介面主題。  
   
-|類型或類型分類|請參閱|  
+|類型或類型分類|請參閱 。|  
 |---------------------------|---------|  
 |日期和時間類型 (<xref:System.DateTime>、<xref:System.DateTimeOffset>)|[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
 |列舉類型 (衍生自 <xref:System.Enum?displayProperty=nameWithType> 的所有類型)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|數字類型 (<xref:System.Numerics.BigInteger>、<xref:System.Byte>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>)|[標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|數字類型 (<xref:System.Numerics.BigInteger>、<xref:System.Byte>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
@@ -164,8 +164,8 @@ ms.locfileid: "73091563"
 - [字串內插補點 (C#)](../../csharp/language-reference/tokens/interpolated.md)
 - [字串內插補點 (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
 - [格式化類型](../../../docs/standard/base-types/formatting-types.md)
-- [標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
 - [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)

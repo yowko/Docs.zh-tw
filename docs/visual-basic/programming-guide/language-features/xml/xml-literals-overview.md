@@ -7,17 +7,17 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: e5d2465d145f4059600121c6cef30bb2c74a8c1c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4eaa9399ca0038e3142886abf2161266f8c77782
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346193"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636077"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML 常值概觀 (Visual Basic)
 *Xml 常*值可讓您將 xml 直接併入 Visual Basic 的程式碼中。 XML 常值語法代表 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 物件，而且類似于 XML 1.0 語法。 這可讓您更輕鬆地以程式設計方式建立 XML 元素和檔，因為您的程式碼與最終 XML 的結構相同。  
   
- Visual Basic 會將 XML 常值編譯成 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 物件。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供一個簡單的物件模型來建立和管理 XML，而這個模型與 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]緊密整合。 如需詳細資訊，請參閱 <xref:System.Xml.Linq.XElement>。  
+ Visual Basic 會將 XML 常值編譯成 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 物件。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供簡單的物件模型來建立和管理 XML，而此模型與語言整合式查詢（LINQ）緊密整合。 如需詳細資訊，請參閱<xref:System.Xml.Linq.XElement>。  
   
  您可以將 Visual Basic 運算式內嵌在 XML 常值中。 在執行時間，您的應用程式會為每個常值建立 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 物件，並併入內嵌運算式的值。 這可讓您指定 XML 常值內的動態內容。 如需詳細資訊，請參閱[XML 中的內嵌運算式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "74346193"
   
  [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Linq.XElement>
 - [在 Visual Basic 中建立 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

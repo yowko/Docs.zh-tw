@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 10bd924664a469be26174fadf3892ee56aa33856
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 2c6a8662236b614545e7fb8545b7b60e1b08b6bd
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740648"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559829"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 語法詳細資料
 本主題定義用來描述 XAML 語法元素的詞彙。 本檔的其餘部分會經常使用這些詞彙，這兩者都是針對 WPF 檔，特別是針對使用 XAML 的其他架構，或是在 .xaml 層級由 XAML 語言支援啟用的基本 XAML 概念。 本主題將針對[XAML 總覽（WPF）](../../../desktop-wpf/fundamentals/xaml.md)主題中引進的基本術語進行擴充。  
@@ -86,7 +86,7 @@ ms.locfileid: "73740648"
  屬性語法是 XAML 標記語法，會藉由宣告現有物件專案上的屬性來設定屬性的值。 屬性名稱必須符合可支援相關物件專案之類別的屬性（property）的 CLR 成員名稱。 屬性名稱後面接著指派運算子（=）。 屬性值必須是括在引號內的字串。  
   
 > [!NOTE]
-> 您可以使用替代引號將常值引號放在屬性中。 例如，您可以使用單引號來宣告字串，其中包含其中的雙引號字元。 無論您使用單引號或雙引號，都應該使用相符的配對來開啟和關閉屬性值字串。 還有其他可用來處理任何特定 XAML 語法所加上之字元限制的逸出序列或其他技術。 請參閱[XML 字元實體和 XAML](../../xaml-services/xml-character-entities-and-xaml.md)。  
+> 您可以使用替代引號將常值引號放在屬性中。 例如，您可以使用單引號來宣告字串，其中包含其中的雙引號字元。 無論您使用單引號或雙引號，都應該使用相符的配對來開啟和關閉屬性值字串。 還有其他可用來處理任何特定 XAML 語法所加上之字元限制的逸出序列或其他技術。 請參閱[XML 字元實體和 XAML](../../../desktop-wpf/xaml-services/xml-character-entities.md)。  
   
  若要透過屬性語法設定，屬性必須是公用的，而且必須是可寫入的。 支援型別系統中的屬性值必須是實值型別，或必須是參考型別，而且在存取相關的支援型別時，XAML 處理器可以加以具現化或參照。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "73740648"
   
 1. 如果 XAML 處理器遇到大括弧，或衍生自 <xref:System.Windows.Markup.MarkupExtension>的 object 專案，則會先評估參考的標記延伸，而不是將值當做字串來處理，而標記延伸所傳回的物件會當做值使用。 在許多情況下，標記延伸所傳回的物件將會是現有物件的參考，或是延遲評估到執行時間的運算式，而且不是新具現化的物件。  
   
-2. 如果屬性是以屬性化 <xref:System.ComponentModel.TypeConverter>宣告，或該屬性的實值型別是以屬性化 <xref:System.ComponentModel.TypeConverter>宣告，則會將屬性的字串值提交至類型轉換器做為轉換輸入，而轉換器會傳回新的物件。示例.  
+2. 如果屬性是使用屬性化 <xref:System.ComponentModel.TypeConverter>來宣告，或該屬性的實值型別是以屬性化 <xref:System.ComponentModel.TypeConverter>宣告，則會將屬性的字串值提交至型別轉換器做為轉換輸入，而轉換器會傳回新的物件實例。  
   
 3. 如果沒有 <xref:System.ComponentModel.TypeConverter>，會嘗試直接轉換為屬性類型。 這個最終層級是 XAML 語言基本型別之間的剖析器原生值直接轉換，或在列舉中檢查已命名常數的名稱（剖析器接著會存取相符的值）。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "73740648"
   
  [!code-xaml[XAMLOvwSupport#ContextMenu](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#contextmenu)]  
   
- 如果指定的屬性型別是基本型別（例如 <xref:System.String>）或指定名稱的列舉型別，則 property 專案中的值也可以指定為內部文字。 這兩種用法並不常見，因為每個案例也都可以使用較簡單的屬性語法。 以字串填滿屬性專案的其中一個案例是針對不是 XAML 內容屬性，但仍用於表示 UI 文字的屬性，而特定的空白字元（例如，分行符號）必須出現在該 UI 文字中。 屬性語法無法保留分行符號，但屬性專案語法可以，只要有效的空白字元保留作用（如需詳細資料，請參閱[XAML 中的空白字元處理](../../xaml-services/whitespace-processing-in-xaml.md)）。 另一個情況是，可以將[x：Uid](../../xaml-services/x-uid-directive.md)指示詞套用至 property 專案，因此會將中的值標示為應該在 WPF 輸出 BAML 或其他技術中當地語系化的值。  
+ 如果指定的屬性型別是基本型別（例如 <xref:System.String>）或指定名稱的列舉型別，則 property 專案中的值也可以指定為內部文字。 這兩種用法並不常見，因為每個案例也都可以使用較簡單的屬性語法。 以字串填滿屬性專案的其中一個案例是針對不是 XAML 內容屬性，但仍用於表示 UI 文字的屬性，而特定的空白字元（例如，分行符號）必須出現在該 UI 文字中。 屬性語法無法保留分行符號，但屬性專案語法可以，只要有效的空白字元保留作用（如需詳細資料，請參閱[XAML 中的空白字元處理](../../../desktop-wpf/xaml-services/white-space-processing.md)）。 另一個情況是，可以將[x：Uid](../../../desktop-wpf/xaml-services/xuid-directive.md)指示詞套用至 property 專案，因此會將中的值標示為應該在 WPF 輸出 BAML 或其他技術中當地語系化的值。  
   
  屬性元素不會在 WPF 邏輯樹狀結構中表示。 Property 元素只是用來設定屬性的特定語法，而且不是具有實例或物件支援的元素。 （如需邏輯樹狀概念的詳細資訊，請參閱[WPF 中](trees-in-wpf.md)的樹狀結構）。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "73740648"
   
 - 類型 implements <xref:System.Collections.IDictionary>。  
   
-- 類型衍生自 <xref:System.Array> （如需 XAML 中陣列的詳細資訊，請參閱[X:Array 標記延伸](../../xaml-services/x-array-markup-extension.md)）。  
+- 類型衍生自 <xref:System.Array> （如需 XAML 中陣列的詳細資訊，請參閱[X:Array 標記延伸](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)）。  
   
  如果屬性的類型是集合，則不需要在標記中將推斷的集合類型指定為 object 元素。 相反地，要做為集合中專案的元素會指定為 property 元素的一或多個子項目。 每個這類專案會在載入時評估為物件，並藉由呼叫隱含集合的 `Add` 方法來新增至集合。 例如，<xref:System.Windows.Style> 的 <xref:System.Windows.Style.Triggers%2A> 屬性會採用特殊化的集合型別 <xref:System.Windows.TriggerCollection>，它會執行 <xref:System.Collections.IList>。 不需要在標記中具現化 <xref:System.Windows.TriggerCollection> 物件元素。 相反地，您會將一或多個 <xref:System.Windows.Trigger> 專案指定為 `Style.Triggers` property 元素中的元素，其中 <xref:System.Windows.Trigger> （或衍生類別）是預期為強型別和隱含 <xref:System.Windows.TriggerCollection>之專案類型的類型。  
   
@@ -242,7 +242,7 @@ ms.locfileid: "73740648"
   
 <a name="xaml_namespaces"></a>   
 ## <a name="xaml-namespaces"></a>XAML 命名空間  
- 上述語法範例都不會指定預設 XAML 命名空間以外的 XAML 命名空間。 在一般 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式中，預設的 XAML 命名空間會指定為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 命名空間。 除了預設的 XAML 命名空間以外，您還可以指定 XAML 命名空間，而且仍然會使用類似的語法。 但是，在預設的 XAML 命名空間中無法存取名為的類別的任何地方，該類別名稱前面必須加上 XAML 命名空間的前置詞，以便對應至對應的 CLR 命名空間。 例如，`<custom:Example/>` 是物件專案語法，用來具現化 `Example` 類別的實例，其中包含該類別的 CLR 命名空間（可能是包含支援類型的外部元件資訊）先前已對應至 `custom`前置詞.  
+ 上述語法範例都不會指定預設 XAML 命名空間以外的 XAML 命名空間。 在一般 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式中，預設的 XAML 命名空間會指定為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 命名空間。 除了預設的 XAML 命名空間以外，您還可以指定 XAML 命名空間，而且仍然會使用類似的語法。 但是，在預設的 XAML 命名空間中無法存取名為的類別的任何地方，該類別名稱前面必須加上 XAML 命名空間的前置詞，以便對應至對應的 CLR 命名空間。 例如，`<custom:Example/>` 是物件專案語法，用來具現化 `Example` 類別的實例，其中包含該類別的 CLR 命名空間（可能是包含支援類型的外部元件資訊）先前已對應至 `custom` 前置詞。  
   
  如需 XAML 命名空間的詳細資訊，請參閱[WPF xaml 的 Xaml 命名空間和命名空間對應](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
@@ -254,9 +254,9 @@ ms.locfileid: "73740648"
   
  `<Button Style="{StaticResource MyStyle}">My button</Button>`  
   
- 在這裡，`StaticResource` 識別提供標記延伸實作為的 <xref:System.Windows.StaticResourceExtension> 類別。 下一個字串 `MyStyle` 是做為非預設 <xref:System.Windows.StaticResourceExtension> 的函式的輸入，其中從延伸模組字串取得的參數會宣告要求的 <xref:System.Windows.ResourceKey>。 `MyStyle` 應該是定義為資源之 <xref:System.Windows.Style> 的[x：Key](../../xaml-services/x-key-directive.md)值。 [StaticResource 標記延伸](staticresource-markup-extension.md)使用方式會要求資源透過靜態資源查閱邏輯，在載入時用來提供 <xref:System.Windows.Style> 屬性值。  
+ 在這裡，`StaticResource` 識別提供標記延伸實作為的 <xref:System.Windows.StaticResourceExtension> 類別。 下一個字串 `MyStyle` 是做為非預設 <xref:System.Windows.StaticResourceExtension> 的函式的輸入，其中從延伸模組字串取得的參數會宣告要求的 <xref:System.Windows.ResourceKey>。 `MyStyle` 應該是定義為資源之 <xref:System.Windows.Style> 的[x：Key](../../../desktop-wpf/xaml-services/xkey-directive.md)值。 [StaticResource 標記延伸](staticresource-markup-extension.md)使用方式會要求資源透過靜態資源查閱邏輯，在載入時用來提供 <xref:System.Windows.Style> 屬性值。  
   
- 如需標記延伸的詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。 如需在一般 .NET XAML 執行中啟用的標記延伸和其他 XAML 程式設計功能的參考，請參閱[XAML 命名空間（x：）語言功能](../../xaml-services/xaml-namespace-x-language-features.md)。 如需 WPF 特定的標記延伸，請參閱[WPF XAML 延伸](wpf-xaml-extensions.md)模組。  
+ 如需標記延伸的詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。 如需在一般 .NET XAML 執行中啟用的標記延伸和其他 XAML 程式設計功能的參考，請參閱[XAML 命名空間（x：）語言功能](../../../desktop-wpf/xaml-services/namespace-language-features.md)。 如需 WPF 特定的標記延伸，請參閱[WPF XAML 延伸](wpf-xaml-extensions.md)模組。  
   
 <a name="attached_properties"></a>   
 ## <a name="attached-properties"></a>附加屬性  
@@ -289,7 +289,7 @@ ms.locfileid: "73740648"
  下列各節描述 XAML 處理器在技術上支援的 XAML 用法，但會產生詳細資訊或其他美觀問題，當您開發包含 XAML 來源的應用程式時，會干擾 XAML 檔案的其餘部分。  
   
 ### <a name="optional-property-element-usages"></a>選擇性的屬性元素使用方式  
- 選擇性的屬性專案用法包括明確地寫出 XAML 處理器視為隱含的元素內容屬性。 例如，當您宣告 <xref:System.Windows.Controls.Menu>的內容時，您可以選擇將 <xref:System.Windows.Controls.Menu> 的 <xref:System.Windows.Controls.ItemsControl.Items%2A> 集合明確宣告為 `<Menu.Items>` 屬性專案標記，並將每個 <xref:System.Windows.Controls.MenuItem> 放在 `<Menu.Items>`，而不是使用隱含的 XAML 處理器行為，<xref:System.Windows.Controls.Menu> 的所有子項目都必須是 <xref:System.Windows.Controls.MenuItem>，而且會放在 <xref:System.Windows.Controls.ItemsControl.Items%2A> 集合中。 有時候選擇性的用法有助於以視覺化方式澄清標記中所表示的物件結構。 或有時明確的屬性專案使用方式可以避免在技術上功能上的標記，但在視覺上令人困惑，例如屬性值內的嵌套標記延伸。  
+ 選擇性的屬性專案用法包括明確地寫出 XAML 處理器視為隱含的元素內容屬性。 例如，當您宣告 <xref:System.Windows.Controls.Menu>的內容時，您可以選擇將 <xref:System.Windows.Controls.Menu> 的 <xref:System.Windows.Controls.ItemsControl.Items%2A> 集合明確宣告為 `<Menu.Items>` 屬性專案標記，並將每個 <xref:System.Windows.Controls.MenuItem> 放在 `<Menu.Items>`內，而不是使用隱含的 XAML 處理器行為，而 <xref:System.Windows.Controls.Menu> 的所有子專案都必須是 <xref:System.Windows.Controls.MenuItem> 並放在 <xref:System.Windows.Controls.ItemsControl.Items%2A> 集合中。 有時候選擇性的用法有助於以視覺化方式澄清標記中所表示的物件結構。 或有時明確的屬性專案使用方式可以避免在技術上功能上的標記，但在視覺上令人困惑，例如屬性值內的嵌套標記延伸。  
   
 ### <a name="full-typenamemembername-qualified-attributes"></a>完整 typeName。成員資格限定屬性  
  *TypeName*。屬性的*成員名稱*格式實際上比路由事件案例的運作方式更為普遍。 但在其他情況下，表單是多餘的，而且您應該避免這種情況，因為這是因為標記樣式和可讀性的原因。 在下列範例中，<xref:System.Windows.Controls.Control.Background%2A> 屬性的三個參考都完全相同：  
@@ -316,7 +316,7 @@ ms.locfileid: "73740648"
 ## <a name="see-also"></a>請參閱
 
 - [XAML 概觀 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [XAML 命名空間 (x:) 語言功能](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML 命名空間 (x:) 語言功能](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [WPF XAML 延伸](wpf-xaml-extensions.md)
 - [相依性屬性概觀](dependency-properties-overview.md)
 - [TypeConverter 和 XAML](typeconverters-and-xaml.md)

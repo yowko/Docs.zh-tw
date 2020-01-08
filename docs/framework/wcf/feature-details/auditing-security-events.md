@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: fec23439236fccb23964c0feb22691a973c787b1
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 62b218a7259d824930a2eb2c7f810b480034e2b6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838087"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338023"
 ---
 # <a name="auditing-security-events"></a>稽核安全性事件
 使用 Windows Communication Foundation （WCF）建立的應用程式可以使用「審核功能」來記錄安全性事件（不論是成功、失敗或兩者）。 事件會寫入至 Windows 系統事件記錄檔，並且可以使用 [事件檢視器] 加以檢查。  
@@ -73,7 +73,7 @@ ms.locfileid: "74838087"
 </configuration>  
 ```  
   
- 如果已啟用稽核，但未指定 `auditLogLocation`，則支援寫入至安全性記錄檔的平台會使用的預設記錄名稱為「安全性」記錄檔，否則便是「應用程式」記錄檔。 只有 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 Windows Vista 作業系統支援寫入安全性記錄檔。 如需詳細資訊，請參閱本主題稍後的「作業系統」一節。  
+ 如果已啟用稽核，但未指定 `auditLogLocation`，則支援寫入至安全性記錄檔的平台會使用的預設記錄名稱為「安全性」記錄檔，否則便是「應用程式」記錄檔。 只有 Windows Server 2003 和 Windows Vista 作業系統支援寫入安全性記錄檔。 如需詳細資訊，請參閱本主題稍後的「作業系統」一節。  
   
 ## <a name="security-considerations"></a>安全性考量  
  如果惡意使用者得知已啟用稽核，攻擊者就可以傳送無效的訊息，而造成寫入稽核項目。 如果是因為這個方法而填滿稽核記錄檔，稽核系統就會失敗。 若要減輕這個威脅，請將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，並使用 [事件檢視器] 的屬性來控制稽核行為。 如需詳細資訊，請參閱有關使用 Windows XP 中的事件檢視器來查看和管理事件記錄檔的 Microsoft 支援服務文章，網址為[如何在 WINDOWS xp 的事件檢視器中查看和管理事件記錄](https://go.microsoft.com/fwlink/?LinkId=89150)檔。  
@@ -88,7 +88,7 @@ ms.locfileid: "74838087"
 |System|應用程式記錄檔|安全性記錄檔|  
 |------------|---------------------|------------------|  
 |[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] (含) 以後版本|已支援|不支援|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] 和 Windows Vista|已支援|執行緒內容必須擁有 `SeAuditPrivilege`|  
+|Windows Server 2003 SP1 和 Windows Vista|已支援|執行緒內容必須擁有 `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>其他因素  
  除了作業系統之外，下表描述其他控制記錄啟用的設定。  

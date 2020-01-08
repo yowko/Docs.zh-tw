@@ -5,12 +5,12 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 47a339de60301e01b52a4b8a3a85945624daf940
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: f11fbedad766753ee462c5f597b823493cdaf7cf
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733196"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338548"
 ---
 # <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>逐步解說：從 Visual Studio 中的 managed 元件內嵌類型
 
@@ -22,7 +22,7 @@ ms.locfileid: "73733196"
 
 如果您建立新版本的強式名稱執行時間元件，則不需要重新編譯用戶端程式。 用戶端程式會繼續使用任何版本的執行時間元件，並使用公用介面的內嵌類型資訊。
 
-在本逐步解說中，您會：
+在本逐步解說中，您將：
 
 1. 建立具有公用介面的強式名稱元件，其中包含可內嵌的類型資訊。
 1. 建立強式名稱的執行時間元件，以執行公用介面。
@@ -53,7 +53,7 @@ ms.locfileid: "73733196"
 
 1. 在 Visual Studio 中，選取 [檔案] > [新增] > [專案]。
 
-1. 在 [**建立新專案**] 對話方塊的 [**搜尋範本**] 方塊中，輸入*類別庫*。 從清單中C#選取或 VB**類別庫（.NET Framework）** 範本，然後選取 **[下一步]** 。
+1. 在 [**建立新專案**] 對話方塊的 [**搜尋範本**] 方塊中，輸入*類別庫*。 從清單中C#選取或 Visual Basic**類別庫（.NET Framework）**  範本，然後選取**下一步**。
 
 1. 在 [**設定您的新專案**] 對話方塊的 [**專案名稱**] 下，輸入*TypeEquivalenceInterface*，然後選取 [**建立**]。 隨即會建立新專案。
 
@@ -110,7 +110,7 @@ ms.locfileid: "73733196"
    <Assembly: ImportedFromTypeLib("")>
    ```
 
-1. 選取 **[** 檔案]  >  [**全部儲存**]，或按**Ctrl** +**Shift** + S 以儲存**盤**案和專案。
+1. 選取 **[** 檔案] > [**全部儲存**]，或按**Ctrl**+**Shift**+S 以儲存**盤**案和專案。
 
 1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceInterface**專案，然後選取 [**建立**]。 類別庫 DLL 檔案會經過編譯並儲存到指定的組建輸出路徑，例如*C:\TypeEquivalenceSample*。
 
@@ -120,7 +120,7 @@ ms.locfileid: "73733196"
 
 1. 在 Visual Studio 中，選取 [檔案] > [新增] > [專案]。
 
-1. 在 [**建立新專案**] 對話方塊的 [**搜尋範本**] 方塊中，輸入*類別庫*。 從清單中C#選取或 VB**類別庫（.NET Framework）** 範本，然後選取 **[下一步]** 。
+1. 在 [**建立新專案**] 對話方塊的 [**搜尋範本**] 方塊中，輸入*類別庫*。 從清單中C#選取或 Visual Basic**類別庫（.NET Framework）**  範本，然後選取**下一步**。
 
 1. 在 [**設定您的新專案**] 對話方塊的 [**專案名稱**] 下，輸入*TypeEquivalenceRuntime*，然後選取 [**建立**]。 隨即會建立新專案。
 
@@ -182,7 +182,7 @@ ms.locfileid: "73733196"
    End Class
    ```
 
-1. 選取 **[** 檔案]  >  [**全部儲存**]，或按**Ctrl** +**Shift** + S 以儲存**盤**案和專案。
+1. 選取 **[** 檔案] > [**全部儲存**]，或按**Ctrl**+**Shift**+S 以儲存**盤**案和專案。
 
 1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceRuntime**專案，然後選取 [**建立**]。 類別庫 DLL 檔案會經過編譯並儲存到指定的組建輸出路徑。
 
@@ -192,7 +192,7 @@ ms.locfileid: "73733196"
 
 1. 在 Visual Studio 中，選取 [檔案] > [新增] > [專案]。
 
-1. 在 [**建立新專案**] 對話方塊的 [**搜尋範本**] 方塊中，輸入*console* 。 從清單中C#選取 [或 VB**主控台應用程式（.NET Framework）** ] 範本，然後選取 **[下一步]** 。
+1. 在 [**建立新專案**] 對話方塊的 [**搜尋範本**] 方塊中，輸入*console* 。 從清單中C#選取或 Visual Basic**主控台應用程式（.NET Framework）**  範本，然後選取**下一步**。
 
 1. 在 [**設定您的新專案**] 對話方塊的 [**專案名稱**] 下，輸入*TypeEquivalenceClient*，然後選取 [**建立**]。 隨即會建立新專案。
 
@@ -250,15 +250,15 @@ ms.locfileid: "73733196"
    End Module
    ```
 
-1. 選取 **[** 檔案]  >  [**全部儲存**]，或按**Ctrl** +**Shift** + S 以儲存**盤**案和專案。
+1. 選取 **[** 檔案] > [**全部儲存**]，或按**Ctrl**+**Shift**+S 以儲存**盤**案和專案。
 
-1. 按**Ctrl** +**F5**以建立並執行程式。 請注意，主控台輸出會傳回元件版本**1.0.0.0**。
+1. 按**Ctrl**+**F5**以建立並執行程式。 請注意，主控台輸出會傳回元件版本**1.0.0.0**。
 
 ## <a name="modify-the-interface"></a>修改介面
 
 現在，修改介面元件，並變更其版本。
 
-1. 在 Visual Studio 中，**選取** 檔案  > **開啟** > **專案/方案**，然後開啟  **TypeEquivalenceInterface**  專案。
+1. 在 Visual Studio 中，**選取** 檔案 > **開啟** > **專案/方案**，然後開啟  **TypeEquivalenceInterface**  專案。
 
 1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceInterface**專案，然後選取 [**屬性**]。
 
@@ -276,7 +276,7 @@ ms.locfileid: "73733196"
    Function GetDate() As Date
    ```
 
-1. 選取 **[** 檔案]  >  [**全部儲存**]，或按**Ctrl** +**Shift** + S 以儲存**盤**案和專案。
+1. 選取 **[** 檔案] > [**全部儲存**]，或按**Ctrl**+**Shift**+S 以儲存**盤**案和專案。
 
 1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceInterface**專案，然後選取 [**建立**]。 類別庫 DLL 檔案的新版本會進行編譯，並儲存至組建輸出路徑。
 
@@ -284,7 +284,7 @@ ms.locfileid: "73733196"
 
 同時修改執行時間類別並更新其版本。
 
-1. 在 Visual Studio 中，**選取** 檔案  > **開啟** > **專案/方案**，然後開啟  **TypeEquivalenceRuntime**  專案。
+1. 在 Visual Studio 中，**選取** 檔案 > **開啟** > **專案/方案**，然後開啟  **TypeEquivalenceRuntime**  專案。
 
 1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceRuntime**專案，然後選取 [**屬性**]。
 
@@ -307,7 +307,7 @@ ms.locfileid: "73733196"
    End Function
    ```
 
-1. 選取 **[** 檔案]  >  [**全部儲存**]，或按**Ctrl** +**Shift** + S 以儲存**盤**案和專案。
+1. 選取 **[** 檔案] > [**全部儲存**]，或按**Ctrl**+**Shift**+S 以儲存**盤**案和專案。
 
 1. 在**方案總管**中，以滑鼠右鍵按一下**TypeEquivalenceRuntime**專案，然後選取 [**建立**]。 類別庫 DLL 檔案的新版本會進行編譯，並儲存至組建輸出路徑。
 

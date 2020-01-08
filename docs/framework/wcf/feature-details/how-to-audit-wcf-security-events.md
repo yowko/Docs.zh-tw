@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: b96c68c06099db2f396d16772cfaa8aee37390fe
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7071aaf88346ee217226632501ebd6c82cfc1cb8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838009"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346763"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>HOW TO：稽核 Windows Communication Foundation 安全性事件
 Windows Communication Foundation （WCF）可讓您將安全性事件記錄到 Windows 事件記錄檔，您可以使用 Windows 事件檢視器來加以查看。 這個主題會說明如何將應用程式設定為會記錄安全性事件。 如需 WCF 審核的詳細資訊，請參閱「[審核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)」。  
@@ -24,7 +24,7 @@ Windows Communication Foundation （WCF）可讓您將安全性事件記錄到 W
      [!code-csharp[AuditingSecurityEvents#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#2)]
      [!code-vb[AuditingSecurityEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#2)]  
   
-     <xref:System.ServiceModel.AuditLogLocation> 列舉有三個值： `Application`、`Security`或 `Default`。 該值會指定可在事件檢視器中看見安全性記錄檔或應用程式記錄檔。 如果使用 `Default` 值，實際的記錄檔將會取決於正在執行應用程式的作業系統。 如果已啟用稽核，但未指定記錄檔位置，則支援寫入至安全性記錄檔的平台會預設使用 `Security` 記錄檔，不支援這個動作的平台則會寫入至 `Application` 記錄檔。 根據預設，只有 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 Windows Vista 支援寫入安全性記錄檔。  
+     <xref:System.ServiceModel.AuditLogLocation> 列舉有三個值： `Application`、`Security`或 `Default`。 該值會指定可在事件檢視器中看見安全性記錄檔或應用程式記錄檔。 如果使用 `Default` 值，實際的記錄檔將會取決於正在執行應用程式的作業系統。 如果已啟用稽核，但未指定記錄檔位置，則支援寫入至安全性記錄檔的平台會預設使用 `Security` 記錄檔，不支援這個動作的平台則會寫入至 `Application` 記錄檔。 根據預設，只有 Windows Server 2003 和 Windows Vista 支援寫入安全性記錄檔。  
   
 2. 設定要稽核的事件類型。 您可以同時稽核服務層級事件或訊息層級的授權事件。 若要這樣做，請將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> 屬性或 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> 屬性設定為其中一個 <xref:System.ServiceModel.AuditLevel> 列舉值，如下列程式碼所示。  
   

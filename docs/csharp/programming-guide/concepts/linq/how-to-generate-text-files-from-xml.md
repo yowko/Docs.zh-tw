@@ -1,15 +1,15 @@
 ---
-title: 如何：從 XML 產生文字檔 (C#)
+title: 如何從 XML 產生文字檔（C#）
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 8e36bbda60bea207707dcf869afc059e645ec8ad
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9ca76cf955e07bdcc8e095b30f6fadc74edba739
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418309"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345922"
 ---
-# <a name="how-to-generate-text-files-from-xml-c"></a>如何：從 XML 產生文字檔 (C#)
+# <a name="how-to-generate-text-files-from-xml-c"></a>如何從 XML 產生文字檔（C#）
 此範例顯示如何從 XML 檔案產生以逗號分隔的 (CSV) 檔案。  
   
 ## <a name="example"></a>範例  

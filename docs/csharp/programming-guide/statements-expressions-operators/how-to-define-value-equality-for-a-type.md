@@ -1,5 +1,5 @@
 ---
-title: 如何：定義類型的實值相等 - C# 程式設計指南
+title: 如何定義型別程式C#設計指南的實值相等
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 0e1c736c7a2826c1218cb078a6e9f874b3b72c3c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebcdda2661c8e4c7f3424f280247f0f771d9cb02
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755016"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635141"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>如何：定義類型的實值相等 (C# 程式設計指南)
+# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>如何定義類型的實值相等（C#程式設計手冊）
 
 當您定義類別或結構時，需判斷是否有必要為類型建立實值相等 (或等價) 的自訂定義。 通常，當該類型的物件必須新增至某種集合，或物件的主要目的是為了儲存一組欄位或屬性時，就會實作實值相等。 您可以根據對該類型中所有欄位和屬性的比較來定義實值相等，也可以根據子集來進行定義。 不論使用哪種方法，在類別和結構中，您的實作都必須遵循下列五項等價保證：  
   
@@ -34,15 +34,15 @@ ms.locfileid: "64755016"
   
  對類別和結構而言，實值相等的實作細節並不同。 不過，類別和結構都需要相同的基本步驟來實作相等：  
   
-1. 覆寫[虛擬](../../language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法。 在大部分情況下，實作 `bool Equals( object obj )` 應該只會呼叫特定類型的 `Equals` 方法，這是 <xref:System.IEquatable%601?displayProperty=nameWithType> 介面的實作。 (請參閱步驟 2)。  
+1. 覆寫[虛擬](../../language-reference/keywords/virtual.md)<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法。 在大部分情況下，實作 `bool Equals( object obj )` 應該只會呼叫特定類型的 `Equals` 方法，這是 <xref:System.IEquatable%601?displayProperty=nameWithType> 介面的實作。 (請參閱步驟 2)。  
   
 2. 透過提供類型專屬的 `Equals` 方法實作 <xref:System.IEquatable%601?displayProperty=nameWithType> 介面。 實際的等價比較是在這裡執行。 例如，您可能決定只比較類型中的一個或兩個欄位，以定義相等。 不會從 `Equals` 擲回例外狀況。 僅適用於類別：此方法只會檢查在類別中宣告的欄位。 它應該呼叫 `base.Equals` 以檢查基底類別中的欄位 (如果類型直接繼承自 <xref:System.Object>，請不要這樣做，因為 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 的 <xref:System.Object> 實作會執行參考相等檢查。)  
   
-3. 選擇性但建議使用：將 [==](../../language-reference/operators/equality-operators.md#equality-operator-) 和 [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 運算子多載。  
+3. 選用但為建議動作︰多載 [==](../../language-reference/operators/equality-operators.md#equality-operator-) 和 [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 運算子。  
   
 4. 覆寫 <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>，以便有實值相等的兩個物件產生相同的雜湊碼。  
   
-5. 選擇項：若要支援「大於」或「小於」的定義，請為類型實作 <xref:System.IComparable%601> 介面，並同時多載 [<=](../../language-reference/operators/comparison-operators.md#less-than-or-equal-operator-) 和 [>=](../../language-reference/operators/comparison-operators.md#greater-than-or-equal-operator-) 運算子。  
+5. 選用︰若要支援「大於」或「小於」的定義，請為類型實作 <xref:System.IComparable%601> 介面，並同時多載 [<=](../../language-reference/operators/comparison-operators.md#less-than-or-equal-operator-) 和 [>=](../../language-reference/operators/comparison-operators.md#greater-than-or-equal-operator-) 運算子。  
   
  接下來的第一個範例示範類別實作。 第二個範例示範結構實作。  
 
@@ -66,7 +66,7 @@ ms.locfileid: "64755016"
   
  除非結構明確多載 [==](../../language-reference/operators/equality-operators.md#equality-operator-) 和 [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 運算子，否則這些運算子無法用於結構。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [相等比較](equality-comparisons.md)
 - [C# 程式設計指南](../index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: 837be04208d438f15b4cc7c7124a47ef6c038cb2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: MT
+ms.openlocfilehash: ac04bf3e6d683caa330643820a89c6cc4f62c780
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455449"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635986"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>物件和集合初始設定式 (C# 程式設計手冊)
 
@@ -58,13 +58,13 @@ public string this[char c, int i] {  set { ... }; }
 
 ## <a name="object-initializers-with-anonymous-types"></a>具有匿名類型的物件初始設定式
 
-雖然物件初始設定式可以用於任何內容，但是在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式中特別有用。 查詢運算式經常使用[匿名型別](./anonymous-types.md)，此型別只能使用物件初始設定式初始化，如下列宣告所示。  
+雖然物件初始化運算式可以用於任何內容中，但它們在 LINQ 查詢運算式中特別有用。 查詢運算式經常使用[匿名型別](./anonymous-types.md)，此型別只能使用物件初始設定式初始化，如下列宣告所示。  
 
 ```csharp
 var pet = new { Age = 10, Name = "Fluffy" };  
 ```
 
-匿名型別可讓 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式中的 `select` 子句將原始序列的物件轉換為其值和圖形可能與原始物件不同的物件。 如果您只要儲存序列中每個物件的部分資訊，這就會很實用。 在下列範例中，假設產品物件 (`p`) 包含許多欄位和方法，而您只想要建立包含產品名稱和單價的物件序列。  
+匿名型別可讓 LINQ 查詢運算式中的 `select` 子句將原始序列的物件轉換成物件，其值和圖形可能與原始的不同。 如果您只要儲存序列中每個物件的部分資訊，這就會很實用。 在下列範例中，假設產品物件 (`p`) 包含許多欄位和方法，而您只想要建立包含產品名稱和單價的物件序列。  
   
 [!code-csharp[ObjectInitializer3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#AnonymousUse)]  
 

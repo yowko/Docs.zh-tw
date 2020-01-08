@@ -2,12 +2,12 @@
 title: WorkFlow 服務登錄工具 (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: cf5ea345c900dec0e4859d81fcb272c1ba3d3df6
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 182bef75bff1785905d77d3bc497e0701e297912
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837749"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346582"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>WorkFlow 服務登錄工具 (WFServicesReg.exe)
 Workflow 服務登錄工具 (WFServicesReg.exe) 是一個獨立工具，可用於新增、移除或修復 Windows Workflow Foundation (WF) 服務的組態項目。  
@@ -56,7 +56,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  工具也會在 IIS Metabase 中註冊 .xoml 和 .rules Scriptmap 與處理常式。  
   
- 在 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 電腦（IIS 5.1 和 IIS 6.0）上，會註冊一組 xoml 和. 規則腳本。  
+ 在 Windows Server 2003 和 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 機（IIS 5.1 和 IIS 6.0）上，會註冊一組 xoml 和. 規則腳本。  
   
  在 64 位元電腦上，如果已啟用 `Enable32BitAppOnWin64` 參數，此工具就會註冊 WOW 模式 Scriptmap，如果已停用 `Enable32BitAppOnWin64` 參數，則會註冊原生 64 位元 Scriptmap。  
   
@@ -70,17 +70,17 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="usage-scenarios"></a>使用案例  
   
 ### <a name="installing-iis-after-net-framework-35-is-installed"></a>在安裝 .NET Framework 3.5 之後安裝 IIS  
- 在 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 機上，.NET Framework 3.5 會在 IIS 安裝之前安裝。 由於 IIS 元資料庫無法用，因此 .NET Framework 3.5 的安裝會成功，而不需要安裝 xoml 和. 規則腳本。  
+ 在 Windows Server 2003 電腦上，.NET Framework 3.5 會在 IIS 安裝之前安裝。 由於 IIS 元資料庫無法用，因此 .NET Framework 3.5 的安裝會成功，而不需要安裝 xoml 和. 規則腳本。  
   
  安裝 IIS 之後，您可以使用 WFServicesReg.exe 工具搭配 `/c` 參數來安裝這些特定 Scriptmap。  
   
 ### <a name="repairing-the-scriptmaps"></a>修復 Scriptmap  
   
 #### <a name="scriptmap-deleted-under-web-sites-node"></a>在網站節點下刪除的 Scriptmap  
- 在 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 電腦上，從 [網站] 節點意外刪除了 .xoml 或 .rules。 您可以使用 `/c` 參數執行 WFServicesReg.exe 工具修復這種情況。  
+ 在 Windows Server 2003 電腦上，xoml 或。不小心從 [網站] 節點刪除規則。 您可以使用 `/c` 參數執行 WFServicesReg.exe 工具修復這種情況。  
   
 #### <a name="scriptmap-deleted-under-a-particular-web-site"></a>在特定網站下刪除的 Scriptmap  
- 在 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 電腦上，從特定網站 (例如 [預設的網站]，而不是從 [網站] 節點) 意外刪除了 .xoml 或 .rules。  
+ 在 Windows Server 2003 電腦上，xoml 或。不會意外地從特定網站（例如，預設網站）刪除規則，而不是從 [網站] 節點。  
   
  若要修復特定網站的已刪除處理常式，您應該執行 "Wfservicesreg.exe/r" 以從所有網站移除處理常式，然後執行 "Wfservicesreg.exe" 來為所有網站建立適當的處理常式。  
   

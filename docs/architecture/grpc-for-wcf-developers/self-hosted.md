@@ -2,12 +2,12 @@
 title: 自我裝載的 gRPC 應用程式-適用于 WCF 開發人員的 gRPC
 description: 將 ASP.NET Core gRPC 應用程式部署為自我裝載的服務。
 ms.date: 09/02/2019
-ms.openlocfilehash: 59f6275dbf85442bca3a98a1521597ef40e9675b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 00b4ad50eae629b5b36a890d1eecf7119386c74c
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967218"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545061"
 ---
 # <a name="self-hosted-grpc-applications"></a>自我裝載的 gRPC 應用程式
 
@@ -34,7 +34,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 現在從 Visual Studio 發行應用程式，方法是以滑鼠右鍵按一下專案，然後從操作功能表中選擇 [*發佈*]，或從 [.NET Core CLI]。
 
-當您發行 .NET Core 應用程式時，您可以選擇建立與*framework 相依*的部署或*獨立*的部署。 架構相依部署需要在執行的主機上安裝 .NET Core 共用執行時間。 獨立式部署是透過 .NET Core 執行時間和架構的完整複本發佈，而且可以在任何主機上執行。 如需詳細資訊，包括每種方法的優缺點，請參閱[.Net Core 應用程式部署](https://docs.microsoft.com/dotnet/core/deploying/)檔。
+當您發行 .NET Core 應用程式時，您可以選擇建立與*framework 相依*的部署或*獨立*的部署。 架構相依部署需要在執行的主機上安裝 .NET Core 共用執行時間。 獨立式部署是透過 .NET Core 執行時間和架構的完整複本發佈，而且可以在任何主機上執行。 如需詳細資訊，包括每種方法的優缺點，請參閱[.Net Core 應用程式部署](../../core/deploying/index.md)檔。
 
 若要發行不需要在主機上安裝 .NET Core 3.0 執行時間之應用程式的獨立組建，請使用 `-r` （或 `--runtime`）旗標，指定要包含在應用程式中的執行時間。
 
@@ -56,7 +56,7 @@ sc create MyService binPath=C:\MyService\MyService.exe
 
 ### <a name="log-to-windows-event-log"></a>記錄到 Windows 事件記錄檔
 
-方法會自動新增`UseWindowsService`記錄[提供者，將記錄訊息寫入 Windows 事件記錄檔。](https://docs.microsoft.com/aspnet/core/fundamentals/logging/?view=aspnetcore-3.0) 您可以藉由將 `EventLog` 專案新增至 `appsettings.json` 或其他設定來源的 `Logging` 區段，來設定此提供者的記錄。 事件記錄檔中使用的來源名稱可以藉由在這些設定中設定 `SourceName` 屬性來覆寫;如果您未指定名稱，則會使用預設的應用程式名稱（通常是可執行檔元件名稱）。
+方法會自動新增[記錄](https://docs.microsoft.com/aspnet/core/fundamentals/logging/?view=aspnetcore-3.0)提供者，將記錄訊息寫入 Windows 事件記錄檔。`UseWindowsService` 您可以藉由將 `EventLog` 專案新增至 `appsettings.json` 或其他設定來源的 `Logging` 區段，來設定此提供者的記錄。 事件記錄檔中使用的來源名稱可以藉由在這些設定中設定 `SourceName` 屬性來覆寫;如果您未指定名稱，則會使用預設的應用程式名稱（通常是可執行檔元件名稱）。
 
 如需有關記錄的詳細資訊，請到本章的結尾。
 
@@ -77,7 +77,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 > [!NOTE]
 > 如果應用程式不是以 Linux 服務的身分執行，`UseSystemd` 方法就不會進行任何動作。
 
-現在，您可以從 Visual Studio 以滑鼠右鍵按一下專案，然後從操作功能表中選擇 [*發佈*]，.NET Core CLI 或使用下列命令，發佈您的應用程式（與 framework 相依，或獨立的 Linux 執行時間（例如 `linux-x64`）。
+現在，您可以從 Visual Studio 以滑鼠右鍵按一下專案，然後從操作功能表中選擇 [*發佈*]，.NET Core CLI 或使用下列命令，發佈您的應用程式（與架構相關，或獨立的 Linux 執行時間，例如，`linux-x64`）。
 
 ```console
 dotnet publish -c Release -r linux-x64 -o ./publish
@@ -150,7 +150,7 @@ sudo journalctl -u myapp
 
 在生產環境中執行 gRPC 應用程式時，您應該使用來自受信任憑證授權單位單位（CA）的 TLS 憑證。 此 CA 可以是公用 CA，也可以是您組織的內部帳戶。
 
-在 Windows 主機上，您可以使用[system.security.cryptography.x509certificates.x509store 類別](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.0)，從安全的[憑證存放區](https://docs.microsoft.com/windows/win32/seccrypto/managing-certificates-with-certificate-stores)載入憑證。 `X509Store` 類別也可以與某些 Linux 主機上的 OpenSSL 金鑰存放區搭配使用。
+在 Windows 主機上，您可以使用 <xref:System.Security.Cryptography.X509Certificates.X509Store> 類別，從安全的[憑證存放區](/windows/win32/seccrypto/managing-certificates-with-certificate-stores)載入憑證。 `X509Store` 類別也可以與某些 Linux 主機上的 OpenSSL 金鑰存放區搭配使用。
 
 您也可以使用其中一個[X509Certificate2](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0)的處理常式來建立憑證，不論是從檔案（例如`.pfx`，受強式密碼保護的檔案），或是從從安全儲存體服務（例如 [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)）取得的二進位資料。
 

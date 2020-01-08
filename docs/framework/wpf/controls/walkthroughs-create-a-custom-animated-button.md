@@ -6,12 +6,12 @@ helpviewer_keywords:
 - buttons [WPF]
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-ms.openlocfilehash: a3990a7dc446c264e0865e15dadcdaf3ba0a0ff6
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 0f881c19516eb42a71e6cd91d612caf8f5cf7b5e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460058"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636181"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>逐步解說：建立自訂動畫按鈕
 正如其名，Windows Presentation Foundation （WPF）非常適合為客戶提供豐富的呈現體驗。 這些逐步解說示範如何自訂按鈕的外觀和行為（包括動畫）。 這項自訂作業是使用樣式和範本來完成，因此您可以輕鬆地將此自訂按鈕套用至應用程式中的任何按鈕。 下圖顯示您將建立的自訂按鈕。
@@ -28,8 +28,8 @@ ms.locfileid: "73460058"
 ## <a name="related-sections"></a>相關章節
  [樣式設定和範本化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)描述如何使用樣式和範本來決定控制項的外觀和行為。
 
- [動畫總覽](../graphics-multimedia/animation-overview.md)描述如何使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 動畫和計時系統來製作物件的動畫。
+ [動畫總覽](../graphics-multimedia/animation-overview.md)描述如何使用 WPF 動畫和計時系統來製作物件的動畫。
 
  [使用純色和漸層繪製的色彩總覽](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)描述如何使用筆刷物件，以純色、線性漸層和放射狀漸層繪製。
 
- [點陣圖效果總覽](../graphics-multimedia/bitmap-effects-overview.md)描述 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支援的點陣圖效果，並說明如何套用它們。
+ [點陣圖效果總覽](../graphics-multimedia/bitmap-effects-overview.md)描述 WPF 支援的點陣圖效果，並說明如何套用它們。

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: ba2a8cd4995b9baab2071d3fb3c7980e45565692
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e69cc5a9634f0b5232562782557645894f94ce2e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039004"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345295"
 ---
 # <a name="member-access-operators-c-reference"></a>成員存取運算子 (C# 參考)
 
@@ -109,7 +109,13 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Null 條件運算子 ?. 和 ?[]
 
-適用於 C# 6 和更新版本，Null 條件運算子只有在其運算元評估為非 Null 時，才會將成員存取 `?.` 或項目存取 `?[]` 作業套用至該運算元。 如果運算元評估為 `null`，則套用運算子的結果會是 `null`。 Null 條件成員存取運算子 `?.` 也被稱為 Elvis 運算子。
+在 6 C#和更新版本中提供，如果運算元評估為非 null，則 null 條件運算子只會將[成員存取](#member-access-operator-)、`?.`或專案[存取](#indexer-operator-)、`?[]`、作業套用至其運算元;否則，它會傳回 `null`。 那是
+
+- 如果 `a` 評估為 `null`，`a?.x` 或 `a?[x]` 的結果就會 `null`。
+- 如果 `a` 評估為非 null，`a?.x` 或 `a?[x]` 的結果會分別與 `a.x` 或 `a[x]`的結果相同。
+
+  > [!NOTE]
+  > 如果 `a.x` 或 `a[x]` 擲回例外狀況，則 `a?.x` 或 `a?[x]` 會針對非 null `a`擲回相同的例外狀況。 例如，如果 `a` 是非 null 陣列實例，而 `x` 超出 `a`的範圍，`a?[x]` 會擲回 <xref:System.IndexOutOfRangeException>。
 
 Null 條件運算子會執行最少運算。 換句話說，如果條件式成員或項目存取作業鏈結中的一個作業傳回 `null`，則鏈結的其餘部分不會執行。 在下列範例中，如果 `A` 評估為 `null`，則不會評估 `B`；如果 `A` 或 `B` 評估為 `null`，則不會評估 `C`：
 
@@ -123,6 +129,8 @@ A?.B?[C];
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
 上述範例也會使用[null 聯合運算子 `??`](null-coalescing-operator.md)來指定要評估的替代運算式，以防 null 條件運算的結果 `null`。
+
+Null 條件成員存取運算子 `?.` 也被稱為 Elvis 運算子。
 
 ### <a name="thread-safe-delegate-invocation"></a>安全執行緒委派引動流程
 
@@ -160,7 +168,7 @@ if (handler != null)
 
 ## <a name="index-from-end-operator-"></a>來自 end 運算子 ^ 的索引
 
-在 8.0 C#和更新版本中提供，`^`運算子表示從序列結尾的元素位置。 針對長度 `length`的序列，`^n` 指向具有從序列開頭開始 `length - n` 位移的元素。 例如，`^1` 指向序列的最後一個專案，而 `^length` 指向序列的第一個元素。
+在 8.0 C#和更新版本中提供，`^` 運算子表示從序列結尾的元素位置。 針對長度 `length`的序列，`^n` 指向具有從序列開頭開始 `length - n` 位移的元素。 例如，`^1` 指向序列的最後一個專案，而 `^length` 指向序列的第一個元素。
 
 [!code-csharp[index from end](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
 
@@ -170,7 +178,7 @@ if (handler != null)
 
 ## <a name="range-operator-"></a>範圍運算子.。
 
-可在C# 8.0 和更新版本中使用，`..`運算子會將索引範圍的開始和結束指定為其運算元。 左側運算元是範圍的*內含*開頭。 右運算元是範圍的*獨佔*結束。 其中一個運算元可以是從序列開頭或結尾的索引，如下列範例所示：
+可在C# 8.0 和更新版本中使用，`..` 運算子會將索引範圍的開始和結束指定為其運算元。 左側運算元是範圍的*內含*開頭。 右運算元是範圍的*獨佔*結束。 其中一個運算元可以是從序列開頭或結尾的索引，如下列範例所示：
 
 [!code-csharp[range examples](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
 

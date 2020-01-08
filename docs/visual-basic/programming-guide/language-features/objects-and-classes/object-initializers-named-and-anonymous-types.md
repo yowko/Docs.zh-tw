@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 20e46d7ecc206abb28240075d9ec5f764ab78d01
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e6ffc649d7eb841c2d009b0ec1237975f46e2d2d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346125"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636805"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>物件初始設定式：具名和匿名類型 (Visual Basic)
 物件初始化運算式可讓您使用單一運算式來指定複雜物件的屬性。 它們可以用來建立命名類型和匿名型別的實例。  
@@ -105,7 +105,7 @@ ms.locfileid: "74346125"
   
  因為類型的名稱無法使用，所以您無法使用 `As` 子句來宣告 `cust13`。 必須推斷其型別。 如果沒有使用晚期繫結，這會限制使用匿名型別來做為本機變數。  
   
- 匿名型別提供 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的關鍵支援。 如需在查詢中使用匿名型別的詳細資訊，請參閱[匿名](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)型別和 Visual Basic 中的[LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)。  
+ 匿名型別提供 LINQ 查詢的關鍵支援。 如需在查詢中使用匿名型別的詳細資訊，請參閱[匿名](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)型別和 Visual Basic 中的[LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)。  
   
 ### <a name="remarks-about-anonymous-types"></a>匿名型別的相關備註  
   

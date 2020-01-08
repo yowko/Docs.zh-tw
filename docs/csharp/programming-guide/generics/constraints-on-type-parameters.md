@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: d05307735506db0f0e4abab067334e4f0466ee6a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
-ms.translationtype: MT
+ms.openlocfilehash: 19bf511ee7252bc305dbb4b6f32636955eba0ab8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204644"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337262"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型別參數的條件約束 (C# 程式設計手冊)
 
@@ -25,8 +25,8 @@ ms.locfileid: "74204644"
 |`where T : notnull`|型別引數必須是不可為 null 的型別。 引數可以是8.0 或更新版本中C#不可為 null 的參考型別，或不可為 null 的實數值型別。 此條件約束也適用於任何類別、介面、委派或陣列型別。|
 |`where T : unmanaged`|型別引數必須是不可為 null 的[非受控型](../../language-reference/builtin-types/unmanaged-types.md)別。 `unmanaged` 條件約束意指 `struct` 條件約束，而且不能與 `struct` 或 `new()` 條件約束結合。|
 |`where T : new()`|型別引數必須有公用無參數建構函式。 與其他條件約束搭配使用時，`new()` 條件約束必須是最後一個指定的。 `new()` 條件約束無法與 `struct` 和 `unmanaged` 條件約束結合。|
-|`where T :` *\<基底類別名稱>*|型別引數必須是或衍生自指定的基底類別。|
-|`where T :` *\<介面名稱>*|型別引數必須是或實作指定的介面。 您可以指定多個介面條件約束。 條件約束介面也是泛型。|
+|`where T :` *\<基類名稱 >*|型別引數必須是或衍生自指定的基底類別。|
+|`where T :` *\<介面名稱 >*|型別引數必須是或實作指定的介面。 您可以指定多個介面條件約束。 條件約束介面也是泛型。|
 |`where T : U`|針對 T 提供的型別引數必須是或衍生自針對 U 所提供的引數。|
 
 ## <a name="why-use-constraints"></a>為什麼使用條件約束
@@ -107,17 +107,17 @@ ms.locfileid: "74204644"
 
 從 C# 7.3 開始，您也可以指定 <xref:System.Enum?displayProperty=nameWithType> 型別作為基底類別條件約束。 CLR 一律允許這個條件約束，但 C# 語言不允許它。 使用 `System.Enum` 的泛型提供型別安全程式設計，以快取在 `System.Enum` 中使用靜態方法的結果。 下列範例會尋找列舉型別的所有有效值，然後建置將這些值對應至其字串表示法的字典。
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
+[!code-csharp[using the enum constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
 
-使用的方法會利用反映，而這會影響效能。 您可以呼叫這個方法來建置可快取和重複使用的集合，而不是重複需要反映的呼叫。
+用來使用反映的方法，它會影響效能。 您可以呼叫這個方法來建置可快取和重複使用的集合，而不是重複需要反映的呼叫。
 
 您可以如下列範例所示使用它來建立列舉，並建置其值和名稱的字典：
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
+[!code-csharp[enum definition](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
+[!code-csharp[using the enum constrained method](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.Generic>
 - [C# 程式設計指南](../index.md)

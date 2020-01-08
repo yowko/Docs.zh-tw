@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 1d6430ba5969d8a05db47baf9521d2409e596c23
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 769afe4d301a7b0fafd26018255f98b6faa29887
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740861"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559431"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主題將介紹在為全球市場撰寫 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式時，您應該注意的問題。 全球化程式設計項目會在 .NET 的 <xref:System.Globalization> 命名空間中定義。
@@ -36,7 +36,7 @@ ms.locfileid: "73740861"
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>編碼
+### <a name="encoding"></a>Encoding
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 支援的編碼為 ASCII、Unicode UTF-16 和 UTF-8。 編碼語句位於 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔的開頭。 如果沒有任何編碼屬性，而且沒有位元組順序，則剖析器預設為 UTF-8。 UTF-8 和 UTF-16 是慣用的編碼。 不支援 UTF-7。 下列範例示範如何在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案中指定 UTF-8 編碼。
 
 ```xaml
@@ -45,7 +45,7 @@ ms.locfileid: "73740861"
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>語言屬性
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 使用[xml： lang](../../xaml-services/xml-lang-handling-in-xaml.md)來代表元素的 language 屬性。  若要利用 <xref:System.Globalization.CultureInfo> 類別，語言屬性值必須是 <xref:System.Globalization.CultureInfo>預先定義的其中一個文化特性名稱。 [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) 在項目樹狀結構中為可繼承 (依 XML 規則，不一定是因為相依性屬性繼承)，如未明確指派，其預設值為空字串。
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 使用[xml： lang](../../../desktop-wpf/xaml-services/xml-language-handling.md)來代表元素的 language 屬性。  若要利用 <xref:System.Globalization.CultureInfo> 類別，語言屬性值必須是 <xref:System.Globalization.CultureInfo>預先定義的其中一個文化特性名稱。 [xml:lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) 在項目樹狀結構中為可繼承 (依 XML 規則，不一定是因為相依性屬性繼承)，如未明確指派，其預設值為空字串。
 
  語言屬性在指定方言方面非常有用。 例如，法國、魁北克、比利時和瑞士的法文拼字、字彙和發音不同。 中文、日文和韓文也會以 Unicode 共用程式碼點，但表意形狀不同，而且會使用完全不同的字型。
 
@@ -121,7 +121,7 @@ ms.locfileid: "73740861"
 
 - 緬甸文
 
-- 僧伽羅文
+- 錫蘭文
 
  所有的書寫系統引擎都支援 OpenType 字型。 OpenType 字型可以包含 OpenType 版面配置資料表，讓字型建立者能夠設計更好的國際和高階印刷樣式。 OpenType 字型版面配置表包含圖像替換、圖像定位、對齊和基準定位的相關資訊，可讓文字處理應用程式改善文字版面配置。
 
@@ -163,7 +163,7 @@ ms.locfileid: "73740861"
 <EmbeddedResource Include="data\stringtable.en-US.restext"/>
 ```
 
- 若要在您的應用程式中使用資源，請具現化 <xref:System.Resources.ResourceManager>，並載入您想要使用的資源。 下列範例示範如何進行這項操作。
+ 若要在您的應用程式中使用資源，請具現化 <xref:System.Resources.ResourceManager> 並載入您想要使用的資源。 下列範例示範如何進行這項操作。
 
  [!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
 
@@ -171,7 +171,7 @@ ms.locfileid: "73740861"
 ## <a name="using-clickonce-with-localized-applications"></a>使用 ClickOnce 與當地語系化的應用程式
  ClickOnce 是一種新的 Windows Forms 部署技術，會 Visual Studio 2005 發行。 它能讓應用程式安裝及升級 Web 應用程式。 當地語系化使用 ClickOnce 部署的應用程式時，只能在已當地語系化的文化特性中檢視它。 例如，如果已部署的應用程式已當地語系化為日文，則只能在日文 Microsoft Windows 上查看，而不是在英文版的 Windows 上。 這會造成問題，因為這是日文使用者執行英文版 Windows 的常見案例。
 
- 此問題的解決方案是設定中性的語言後援屬性。 應用程式開發人員可以選擇性地從主要組件中移除資源，指定可在附屬組件中找到的資源對應至特定的文化特性。 若要控制此進程，請使用 <xref:System.Resources.NeutralResourcesLanguageAttribute>。 <xref:System.Resources.NeutralResourcesLanguageAttribute> 類別的函式有兩個簽章，其中一個會採用 <xref:System.Resources.UltimateResourceFallbackLocation> 參數來指定 <xref:System.Resources.ResourceManager> 應將 fallback 資源解壓縮的位置：主要元件或附屬元件。 下列範例顯示如何使用這個屬性。 針對最終的回溯位置，程式碼會讓 <xref:System.Resources.ResourceManager> 在目前執行之元件的目錄 "de" 子目錄中尋找資源。
+ 此問題的解決方案是設定中性的語言後援屬性。 應用程式開發人員可以選擇性地從主要組件中移除資源，指定可在附屬組件中找到的資源對應至特定的文化特性。 若要控制此進程，請使用 <xref:System.Resources.NeutralResourcesLanguageAttribute>。 <xref:System.Resources.NeutralResourcesLanguageAttribute> 類別的函式有兩個簽章，其中一個會採用 <xref:System.Resources.UltimateResourceFallbackLocation> 參數來指定 <xref:System.Resources.ResourceManager> 應將 fallback 資源解壓縮的位置：主要元件或附屬元件。 下列範例顯示如何使用這個屬性。 對於最終的回溯位置，程式碼會讓 <xref:System.Resources.ResourceManager> 在目前執行之元件的目錄 "de" 子目錄中尋找資源。
 
 ```csharp
 [assembly: NeutralResourcesLanguageAttribute(

@@ -2,12 +2,12 @@
 title: 什麼是 Docker？
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 什麼是 Docker？
 ms.date: 08/31/2018
-ms.openlocfilehash: 215d756c631440c99a3a8ad8128ec61fef3bc26d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a53845d3bbcf24f3eaeb98b9e08b6f35a023c30e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740123"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337711"
 ---
 # <a name="what-is-docker"></a>什麼是 Docker？
 
@@ -19,7 +19,7 @@ ms.locfileid: "73740123"
 
 Docker 容器可以在任何位置執行，例如客戶資料中心的內部部署、外部服務提供者或雲端 (在 Azure 上)。 Docker 映像容器可以原生方式在 Linux 及 Windows 上執行。 不過，Windows 映像只能在 Windows 主機上執行，而 Linux 映像可以在 Linux 主機和 Windows 主機上執行 (目前是使用 Hyper-V Linux VM)，其中主機是指伺服器或 VM。
 
-開發人員可以使用 Windows、Linux 或 macOS 上的開發環境。 在開發電腦上，開發人員執行的 Docker 主機是 Docker 映像部署所在，包括應用程式及其相依性。 在 Linux 或 Mac 上工作的開發人員會使用 Linux 型的 Docker 主機，他們只能建立適用於 Linux 容器的映像。 （在 Mac 上工作的開發人員可以編輯程式碼，或從 macOS 執行 Docker CLI，但在撰寫本文時，容器不會直接在 macOS 上執行）。在 Windows 上工作的開發人員可以建立 Linux 或 Windows 容器的映射。
+開發人員可以使用 Windows、Linux 或 macOS 上的開發環境。 在開發電腦上，開發人員執行的 Docker 主機是 Docker 映像部署所在，包括應用程式及其相依性。 在 Linux 或 macOS 上工作的開發人員會使用以 Linux 為基礎的 Docker 主機，並且只能為 Linux 容器建立映射。 （使用 macOS 的開發人員可以編輯程式碼，或從 macOS 執行 Docker CLI，但在撰寫本文時，容器不會直接在 macOS 上執行）。在 Windows 上工作的開發人員可以建立 Linux 或 Windows 容器的映射。
 
 為了在開發環境中裝載容器並且提供其他開發人員工具，Docker 提供適用於 Windows 或 macOS 的 [Docker Community Edition (CE)](https://www.docker.com/community-edition)。 這些產品都會安裝必要的 VM (Docker 主機) 以裝載容器。 Docker 也提供 [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition)，這是專為企業開發所設計的，由在生產環境中建置、交付及執行大型商務關鍵性應用程式的 IT 小組來使用。
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 38bba2e9f63ab6cce0ede1a82658b6a21f5d4a4b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8eb1e6e2a9338230520ebf3aec1c9ba50aa15ed9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569387"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346203"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>應用程式案例 (WCF 資料服務)
 
@@ -52,9 +52,9 @@ WCF Data Services 支援一組核心案例，以開放式資料通訊協定（OD
 
 - [在用戶端應用程式中使用資料服務](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
-- [OData： URI 慣例](https://go.microsoft.com/fwlink/?LinkId=185564)
+- [OData： URI 慣例](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)
 
-- [OData： JavaScript 物件標記法（JSON）格式](https://go.microsoft.com/fwlink/?LinkId=185790)
+- [OData： JavaScript 物件標記法（JSON）格式](https://www.odata.org/developers/protocols/json-format/)
 
 建立端對端資料解決方案，以使用 OData 在用戶端和伺服器之間傳輸資料。
 

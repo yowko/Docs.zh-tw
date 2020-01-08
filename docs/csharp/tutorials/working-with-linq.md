@@ -4,34 +4,34 @@ description: 本教學課程會教導您如何使用 LINQ 產生序列、撰寫�
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: b25cd1763511f460537bccaf6011a3d23390ea72
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039164"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345615"
 ---
-# <a name="working-with-linq"></a>處理 LINQ
+# <a name="work-with-language-integrated-query-linq"></a>使用語言整合式查詢（LINQ）
 
 ## <a name="introduction"></a>簡介
 
-此教學課程會教導您 .NET Core 和 C# 語言中的功能。 您將了解：
+此教學課程會教導您 .NET Core 和 C# 語言中的功能。 您將習得以下方法：
 
-- 如何使用 LINQ 產生序列。
-- 如何撰寫可輕鬆用於 LINQ 查詢的方法。
-- 如何區分立即和延遲評估。
+- 使用 LINQ 產生序列。
+- 撰寫可在 LINQ 查詢中輕鬆使用的方法。
+- 區分積極式和延遲評估。
 
 您將建置一個應用程式來學習這些技術，其中將示範任何魔術師都會的基礎技巧：[完美洗牌 (英文)](https://en.wikipedia.org/wiki/Faro_shuffle)。 簡單地說，完美洗牌是將牌組確實分成兩半，然後互相交錯每一張紙牌來重建原始牌堆的技術。
 
 魔術師使用這項技術的原因，是因為在每次洗牌後，每張紙牌都會在已知的位置，其順序會遵循重複性的模式。
 
-基於您的目的，這是以較輕鬆的方式來了解對資料序列的操作。 您將建置的應用程式會建構牌堆，然後執行一連串的洗牌，每次洗牌都會寫出序列。 您也會比較原始的順序與更新過的順序。
+基於您的目的，這是以較輕鬆的方式來了解對資料序列的操作。 您將建立的應用程式會建造一個紙牌牌，然後執行一連串的洗牌，每次都會寫出序列。 您也會比較原始的順序與更新過的順序。
 
 本教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以在 dotnet/samples GitHub 存放機制中查看[完整範例](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
-您必須設定電腦以執行 .NET Core。 您可以在[.Net Core 下載](https://dotnet.microsoft.com/download)頁面上找到安裝指示。 您可以在 Windows、Ubuntu Linux、OS X 或是 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
+您將必須設定電腦以執行 .NET Core。 您可以在[.Net Core 下載](https://dotnet.microsoft.com/download)頁面上找到安裝指示。 您可以在 Windows、Ubuntu Linux 或 OS X 上，或在 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 下列說明使用[Visual Studio Code](https://code.visualstudio.com/) ，這是一個開放原始碼的跨平臺編輯器。 不過，您可以使用您熟悉的任何工具。
 
 ## <a name="create-the-application"></a>建立應用程式
 
@@ -39,7 +39,7 @@ ms.locfileid: "73039164"
 
 如果您從未使用過 C#，[此教學課程](console-teleprompter.md)會說明 C# 程式的結構。 您可以閱讀該教學課程，然後再回到這裡以深入了解 LINQ。
 
-## <a name="creating-the-data-set"></a>建立資料集
+## <a name="create-the-data-set"></a>建立資料集
 
 開始之前，請確定下列程式碼行位於 `dotnet new console` 所產生的`Program.cs` 檔案最上方：
 
@@ -118,7 +118,7 @@ var startingDeck = Suits().SelectMany(suit => Ranks().Select(rank => new { Suit 
 
 ![主控台視窗顯示寫出 52 張紙牌的應用程式。](./media/working-with-linq/console-52-card-application.png)
 
-## <a name="manipulating-the-order"></a>操作順序
+## <a name="manipulate-the-order"></a>操作順序
 
 接著，專注於您將如何在這副牌中洗牌。 所有好好洗牌步驟中的第一個步驟是將這副牌一分為二。 包含於 LINQ API 的<xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 方法可為您提供該功能。 將它們放在 `foreach` 迴圈下方：
 
@@ -351,8 +351,8 @@ public static void Main(string[] args)
 如需有關 LINQ 的詳細資訊，請參閱：
 
 - [Language-Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
-  - [LINQ 簡介](../programming-guide/concepts/linq/index.md)
-  - [基本 LINQ 查詢作業 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-  - [使用 LINQ 轉換資料 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-  - [LINQ 中的查詢語法及方法語法 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-  - [支援 LINQ 的 C# 功能](../programming-guide/concepts/linq/features-that-support-linq.md)
+- [LINQ 簡介](../programming-guide/concepts/linq/index.md)
+- [基本 LINQ 查詢作業 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+- [使用 LINQ 轉換資料 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+- [LINQ 中的查詢語法及方法語法 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+- [支援 LINQ 的 C# 功能](../programming-guide/concepts/linq/features-that-support-linq.md)

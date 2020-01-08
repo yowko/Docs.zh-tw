@@ -7,17 +7,17 @@ helpviewer_keywords:
 - localization [WPF], features
 - globalization [WPF], features
 ms.assetid: c4b484fb-bc90-4186-a08d-f081e7109cad
-ms.openlocfilehash: a2ab04f40a3299bc0cd5a17c0f31e4f4ee0433ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98368a54fad095337038236d7bfdc2123edb6be2
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010289"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559405"
 ---
 # <a name="globalization-and-localization-how-to-topics"></a>全球化和當地語系化 HOW TO 主題
-在本節中的主題描述如何開發世界性的應用程式。  
+本節中的主題說明如何開發可供全球運用的應用程式。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [將應用程式當地語系化](how-to-localize-an-application.md)  
  [使用自動版面配置建立按鈕](how-to-use-automatic-layout-to-create-a-button.md)  
  [針對自動版面配置使用方格](how-to-use-a-grid-for-automatic-layout.md)  
@@ -31,6 +31,6 @@ ms.locfileid: "62010289"
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [XAML 中的 xml:lang 處理](../../xaml-services/xml-lang-handling-in-xaml.md)  
+ [XAML 中的 xml:lang 處理](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
 ## <a name="related-sections"></a>相關章節

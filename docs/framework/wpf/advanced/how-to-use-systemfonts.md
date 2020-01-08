@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 63ba7a6fb1c8776cc35c0e6f07a6b78f5b3d93d0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 157565ceb9057049aef8b2bf274847d58c6b8dc8
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459517"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559959"
 ---
 # <a name="how-to-use-systemfonts"></a>如何：使用 SystemFonts
 這個範例示範如何使用 <xref:System.Windows.SystemFonts> 類別的靜態資源，以樣式或自訂按鈕。  
@@ -43,6 +43,6 @@ ms.locfileid: "73459517"
 - [使用 SystemParameters](how-to-use-systemparameters.md)
 - [使用系統字型索引鍵](how-to-use-system-fonts-keys.md)
 - [「如何」主題](resources-how-to-topics.md)
-- [x:Static 標記延伸](../../xaml-services/x-static-markup-extension.md)
+- [x:Static 標記延伸](../../../desktop-wpf/xaml-services/xstatic-markup-extension.md)
 - [XAML 資源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [DynamicResource 標記延伸](dynamicresource-markup-extension.md)

@@ -2,12 +2,12 @@
 title: 如何：依任何字或欄位排序或篩選文字資料 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: 15e7666a5fcb5a16628216354c18599f87c7d905
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f0eeda77a721d482ec7a2b8562c0a71f34c5a3ae
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341521"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348038"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>如何：依任何字或欄位排序或篩選文字資料 (LINQ) (Visual Basic)
 
@@ -72,10 +72,10 @@ End Class
 
 這個範例也會示範如何從函式傳回查詢變數。
 
-## <a name="compiling-the-code"></a>編譯程式碼
+## <a name="compile-the-code"></a>編譯程式碼
 
-建立 VB.NET 主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
+建立 Visual Basic 的主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ 和字串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

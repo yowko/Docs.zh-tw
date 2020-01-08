@@ -9,18 +9,18 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 5d9b09085ed8057f53cae9f9177682b01e698f6d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5679bac06b87b3c4e50cbc4a238d7daf3e33a564
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580713"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636272"
 ---
 # <a name="navigation-topologies-overview"></a>巡覽拓撲概觀
-<a name="introduction"></a>本總覽提供 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的導覽拓撲簡介。 並接著說明三種常見的巡覽拓撲及其範例。  
+<a name="introduction"></a>本總覽提供 WPF 中的導覽拓撲簡介。 並接著說明三種常見的巡覽拓撲及其範例。  
   
 > [!NOTE]
-> 閱讀本主題之前，您應該先熟悉使用頁面函式 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中結構化導覽的概念。 如需這兩個主題的詳細資訊，請參閱[結構化導覽總覽](structured-navigation-overview.md)。  
+> 閱讀本主題之前，您應該先熟悉使用頁面函式之 WPF 中結構化導覽的概念。 如需這兩個主題的詳細資訊，請參閱[結構化導覽總覽](structured-navigation-overview.md)。  
   
  此主題包括下列章節：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "72580713"
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>巡覽拓撲  
- 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中，導覽通常是由頁面（<xref:System.Windows.Controls.Page>）所組成，而超連結（<xref:System.Windows.Documents.Hyperlink>）會在按一下時流覽至其他頁面。 流覽至的頁面是由統一資源識別項（Uri）所識別（請參閱[WPF 中的 Pack uri](pack-uris-in-wpf.md)）。 請考慮下列會顯示頁面、超連結和統一資源識別項（Uri）的簡單範例：  
+ 在 WPF 中，流覽通常是由頁面（<xref:System.Windows.Controls.Page>）所組成，這些超連結（<xref:System.Windows.Documents.Hyperlink>）會在按一下時流覽至其他頁面。 流覽至的頁面是由統一資源識別項（Uri）所識別（請參閱[WPF 中的 Pack uri](pack-uris-in-wpf.md)）。 請考慮下列會顯示頁面、超連結和統一資源識別項（Uri）的簡單範例：  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   
@@ -66,7 +66,7 @@ ms.locfileid: "72580713"
   
  透過固定線性拓撲進行巡覽的一般行為包括以下：  
   
-- 從呼叫頁面巡覽至啟動器頁面，其可初始化精靈，並巡覽至精靈的第一頁。 因為呼叫的頁面可以直接呼叫第一個 wizard 頁面，所以不需要啟動程式頁面（[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 不 <xref:System.Windows.Navigation.PageFunction%601>）。 不過，如果精靈的初始化作業特別複雜，則可以使用啟動程式頁面來簡化這項作業。  
+- 從呼叫頁面巡覽至啟動器頁面，其可初始化精靈，並巡覽至精靈的第一頁。 因為呼叫的頁面可以直接呼叫第一個 wizard 頁面，所以不需要啟動程式頁面（[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]不 <xref:System.Windows.Navigation.PageFunction%601>）。 不過，如果精靈的初始化作業特別複雜，則可以使用啟動程式頁面來簡化這項作業。  
   
 - 使用者可以利用 [向後] 和 [向前] 按鈕 (或超連結)，在頁面之間巡覽。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72580713"
   
  雖然固定階層式結構中的頁面巡覽順序是在執行階段決定，但使用者體驗仍和固定線性拓撲的使用者體驗相同：  
   
-- 從呼叫頁面巡覽至啟動器頁面，其可初始化精靈，並巡覽至精靈的第一頁。 因為呼叫的頁面可以直接呼叫第一個 wizard 頁面，所以不需要啟動程式頁面（[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 不 <xref:System.Windows.Navigation.PageFunction%601>）。 不過，如果精靈的初始化作業特別複雜，則可以使用啟動程式頁面來簡化這項作業。  
+- 從呼叫頁面巡覽至啟動器頁面，其可初始化精靈，並巡覽至精靈的第一頁。 因為呼叫的頁面可以直接呼叫第一個 wizard 頁面，所以不需要啟動程式頁面（[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]不 <xref:System.Windows.Navigation.PageFunction%601>）。 不過，如果精靈的初始化作業特別複雜，則可以使用啟動程式頁面來簡化這項作業。  
   
 - 使用者可以利用 [向後] 和 [向前] 按鈕 (或超連結)，在頁面之間巡覽。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "72580713"
   
  巡覽順序也稱為動態產生的拓撲。 對使用者來說，即使使用另一種巡覽拓撲，其使用者體驗和上一個拓撲是一樣的：  
   
-- 從呼叫頁面巡覽至啟動器頁面，其可初始化精靈，並巡覽至精靈的第一頁。 因為呼叫的頁面可以直接呼叫第一個 wizard 頁面，所以不需要啟動程式頁面（[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 不 <xref:System.Windows.Navigation.PageFunction%601>）。 不過，如果精靈的初始化作業特別複雜，則可以使用啟動程式頁面來簡化這項作業。  
+- 從呼叫頁面巡覽至啟動器頁面，其可初始化精靈，並巡覽至精靈的第一頁。 因為呼叫的頁面可以直接呼叫第一個 wizard 頁面，所以不需要啟動程式頁面（[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]不 <xref:System.Windows.Navigation.PageFunction%601>）。 不過，如果精靈的初始化作業特別複雜，則可以使用啟動程式頁面來簡化這項作業。  
   
 - 使用者可以利用 [向後] 和 [向前] 按鈕 (或超連結)，在頁面之間巡覽。  
   

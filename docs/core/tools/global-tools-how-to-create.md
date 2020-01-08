@@ -4,12 +4,12 @@ description: 描述如何建立通用工具。 通用工具是透過 .NET Core C
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 5c2b1e459f0308f5f96eb041c10f4d7a7ae0ca20
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 1daecf7234f02a5fe0dcf25cf7edbb0af327b8c1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117440"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343514"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>使用 .NET Core CLI 建立 .NET Core 通用工具
 
@@ -115,7 +115,7 @@ static void ShowBot(string message)
 
 ### <a name="test-the-tool"></a>測試工具
 
-執行專案，並查看輸出結果。 請嘗試這些命令列變化，以查看不同的結果：
+執行專案，並查看輸出結果。 請在命令列嘗試這些變化，以查看不同的結果：
 
 ```dotnetcli
 dotnet run
@@ -125,7 +125,7 @@ dotnet run -- hello from the bot
 
 `--` 分隔符號之後的所有引數會傳遞至您的應用程式。
 
-## <a name="setup-the-global-tool"></a>安裝通用工具
+## <a name="set-up-the-global-tool"></a>設定全域工具
 
 在您可以將應用程式封裝及散佈為通用工具之前，您應該修改專案檔案。 開啟 `botsay.csproj` 檔案，然後將三個新 XML 節點新增至 `<Project><PropertyGroup>` 節點：
 
@@ -162,7 +162,7 @@ dotnet run -- hello from the bot
 dotnet pack
 ```
 
-`botsay.1.0.0.nupkg` 檔案是在資料夾 (由 `botsay.csproj` 檔案中的 `<PackageOutputPath>` XML 值識別) 中建立的，在此範例中是 `./nupkg` 資料夾。 這可讓您輕鬆地安裝和測試。 當您想要公開發行工具時，請將它上傳至 <https://www.nuget.org>。 在工具於 NuGet 上可供使用之後，開發人員便可使用 [dotnet tool install](dotnet-tool-install.md) 命令的 `--global` 選項來為所有使用者安裝該工具。
+`botsay.1.0.0.nupkg` 檔案是在資料夾 (由 `botsay.csproj` 檔案中的 `<PackageOutputPath>` XML 值識別) 中建立的，在此範例中是 `./nupkg` 資料夾。 這可讓您輕鬆地安裝和測試。 當您想要公開發行工具時，請將它上傳至 <https://www.nuget.org>。 當此工具可在 NuGet 上使用之後，開發人員就可以使用[dotnet tool install](dotnet-tool-install.md)命令的 `--global` 選項來執行整個使用者的工具安裝。
 
 既然您已經有了套件，請從該套件安裝工具：
 

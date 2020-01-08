@@ -2,12 +2,12 @@
 title: 如何：計算 CSV 文字檔案中的資料行值 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 9ce6ec4c8d109fa06e672e967ac36c615a8fb38e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 230bb26d04a85decc401abaa6c7fd7fc8a6b4806
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348388"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338508"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>如何：計算 CSV 文字檔中的資料行值（LINQ）（Visual Basic）
 
@@ -143,9 +143,9 @@ End Class
 
 查詢的運作方式是使用 <xref:System.String.Split%2A> 方法，將每一行文字轉換成陣列。 每個陣列項目表示一個資料行。 最後，每個資料行中的文字都會轉換成其數值表示法。 如果您的檔案是以定位鍵分隔的檔案，只需要將 `Split` 方法中的引數更新成 `\t` 即可。
 
-## <a name="compiling-the-code"></a>編譯程式碼
+## <a name="compile-the-code"></a>編譯程式碼
 
-建立 VB.NET 主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
+建立 Visual Basic 的主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
 
 ## <a name="see-also"></a>請參閱
 

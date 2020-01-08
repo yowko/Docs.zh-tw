@@ -3,10 +3,10 @@ title: 使用 .NET Core 實作微服務領域模型
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 進入 DDD 導向領域模型的實作詳細資料。
 ms.date: 10/08/2018
 ms.openlocfilehash: bff9cbda08e519038056268151a1721427f0ac01
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 12/25/2019
 ms.locfileid: "73972049"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 實作微服務領域模型

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 11d2161004af5199d9e501f8ab1e3c0382e6bfe7
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: ecbb90dab8ccbd9148461c1372e21c523f3835e3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039028"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345319"
 ---
 # <a name="equality-operators-c-reference"></a>等號比較運算子 (C# 參考)
 
@@ -39,7 +39,7 @@ ms.locfileid: "73039028"
 > [!NOTE]
 > 針對 `==`、[`<`、`>`、`<=` 和 `>=`](comparison-operators.md) 運算子，如果任何運算元不是數字 (<xref:System.Double.NaN?displayProperty=nameWithType> 或 <xref:System.Single.NaN?displayProperty=nameWithType>)，則作業的結果是 `false`。 這代表 `NaN` 的值皆不會大於、小於或等於任何其他 `double` (或 `float`) 的值，包括 `NaN`。 如需詳細資訊和範例，請參閱 <xref:System.Double.NaN?displayProperty=nameWithType> 或 <xref:System.Single.NaN?displayProperty=nameWithType> 參考文章。
 
-若基礎整數型別的對應值相等時，相同[列舉](../keywords/enum.md)類型的兩個運算元就會相等。
+若基礎整數型別的對應值相等時，相同[列舉](../builtin-types/enum.md)類型的兩個運算元就會相等。
 
 使用者定義[結構](../keywords/struct.md)型別預設不支援 `==` 運算子。 若要支援 `==` 運算子，使用者定義結構必須[多載](operator-overloading.md)它。
 
@@ -83,7 +83,7 @@ ms.locfileid: "73039028"
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-使用者定義類型可以[多載](operator-overloading.md) `==` 和 `!=` 運算子。 如果某個型別多載這兩個運算子之一，它也必須多載另一個運算子。
+使用者定義類型可以[多載](operator-overloading.md)`==` 和 `!=` 運算子。 如果某個型別多載這兩個運算子之一，它也必須多載另一個運算子。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

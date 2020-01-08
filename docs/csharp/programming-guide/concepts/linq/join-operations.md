@@ -2,12 +2,12 @@
 title: 聯結作業 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: 456894dd07f512d7e694ad0056b1e861dc3012c5
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 86d85c7de16887fbe3001dc548d940d9c114e634
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423386"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635596"
 ---
 # <a name="join-operations-c"></a>聯結作業 (C#)
 兩個資料來源的「聯結」，就是某個資料來源中的物件，和另一個資料來源中共用通用屬性的物件的關聯。  
@@ -34,11 +34,11 @@ ms.locfileid: "73423386"
 - [匿名類型](../../classes-and-structs/anonymous-types.md)
 - [制定聯結和交叉乘積查詢](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
 - [join 子句](../../../language-reference/keywords/join-clause.md)
-- [如何：使用複合索引鍵執行聯結](../../../linq/join-by-using-composite-keys.md)
-- [如何：從不同的檔案聯結內容 (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
-- [如何：排序 Join 子句的結果](../../../linq/order-the-results-of-a-join-clause.md)
-- [如何：執行自訂聯結作業](../../../linq/perform-custom-join-operations.md)
-- [如何：執行群組聯結](../../../linq/perform-grouped-joins.md)
-- [如何：執行內部聯結](../../../linq/perform-inner-joins.md)
-- [如何：執行左方外部聯結](../../../linq/perform-left-outer-joins.md)
-- [如何：從多個來源填入物件集合 (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [使用複合索引鍵執行聯結](../../../linq/join-by-using-composite-keys.md)
+- [如何從不同的檔案聯結內容（LINQ）（C#）](./how-to-join-content-from-dissimilar-files-linq.md)
+- [排序 Join 子句的結果](../../../linq/order-the-results-of-a-join-clause.md)
+- [執行自訂聯結作業](../../../linq/perform-custom-join-operations.md)
+- [執行群組聯結](../../../linq/perform-grouped-joins.md)
+- [執行內部聯結](../../../linq/perform-inner-joins.md)
+- [執行左方外部聯結](../../../linq/perform-left-outer-joins.md)
+- [如何從多個來源填入物件集合（LINQ）（C#）](./how-to-populate-object-collections-from-multiple-sources-linq.md)

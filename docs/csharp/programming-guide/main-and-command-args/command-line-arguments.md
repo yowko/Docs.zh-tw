@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: f74f374f13aef5135b81d59f94bc2c6913766763
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
-ms.translationtype: MT
+ms.openlocfilehash: 88f30376f9c7684e64dd593becfa0ff8711a08ec
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039309"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635258"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令列引數 (C# 程式設計手冊)
 
@@ -45,7 +45,7 @@ long num = long.Parse(args[0]);
 long num = Convert.ToInt64(s);
 ```
 
-如需詳細資訊，請參閱 <xref:System.Int64.Parse%2A> 與 <xref:System.Convert>。
+如需詳細資訊，請參閱<xref:System.Int64.Parse%2A>和<xref:System.Convert>。
 
 ## <a name="example"></a>範例
 
@@ -79,6 +79,6 @@ long num = Convert.ToInt64(s);
 - <xref:System.Environment?displayProperty=nameWithType>
 - [C# 程式設計指南](../index.md)
 - [Main() 和命令列引數](index.md)
-- [如何：顯示命令列引數](how-to-display-command-line-arguments.md)
+- [如何 dsplay 命令列引數](how-to-display-command-line-arguments.md)
 - [Main() 傳回值](main-return-values.md)
 - [類別](../classes-and-structs/classes.md)

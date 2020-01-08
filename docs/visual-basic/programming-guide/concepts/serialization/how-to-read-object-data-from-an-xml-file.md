@@ -2,12 +2,12 @@
 title: 如何：從 XML 檔案讀取物件資料
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: c997af4729a24a6b5bd5b22d0153860cff3282d7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: efd5fb72487c92bcccf1fc797106f93c0d2a39fc
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346428"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345985"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>如何：從 XML 檔案讀取物件資料（Visual Basic）
 此範例會讀取先前使用 <xref:System.Xml.Serialization.XmlSerializer> 類別來寫入 XML 檔案的物件資料。  
@@ -29,14 +29,14 @@ Public Sub ReadXML()
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
+## <a name="compile-the-code"></a>編譯程式碼  
  以內含序列化資料之檔案的名稱取代檔案名稱 "c:\temp\SerializationOverview.xml"。 如需序列化資料的詳細資訊，請參閱[如何：將物件資料寫入 XML 檔案（Visual Basic）](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)。  
   
  此類別必須有不具參數的公用建構函式。  
   
  只會還原序列化公用屬性和欄位。  
   
-## <a name="robust-programming"></a>穩固程式設計  
+## <a name="robust-programming"></a>最佳化程式設計  
  以下條件可能會造成例外狀況：  
   
 - 正在序列化的類別沒有公用的無參數建構函式。  

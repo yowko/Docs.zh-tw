@@ -16,12 +16,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: c654ff2856891331f5680c673ac52f64ee2be141
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04ac99c6b5100c3749eefc219e51b4d0084bef06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121761"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346635"
 ---
 # <a name="standard-numeric-format-strings"></a>標準數值格式字串
 
@@ -51,14 +51,14 @@ ms.locfileid: "73121761"
 
 <a name="table"></a>下表描述標準數值格式規範，並顯示每個格式範例所產生的範例輸出。 如需使用標準數值格式字串的詳細資訊，請參閱[備註](#NotesStandardFormatting)一節，如需其用法的完整解說，請參閱[範例](#example)一節。
 
-|格式規範|[屬性]|描述|範例|
+|格式規範|Name|描述|範例|
 |----------------------|----------|-----------------|--------------|
 |"C" 或 "c"|貨幣|結果：貨幣值。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 有效位數規範：小數位數的數目。<br /><br /> 預設有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[貨幣 ("C") 格式規範](#CFormatString)。|123.456 （"C"，en-us）-> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 （"C3"，en-us）-> （\\$123.456）<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
 |"D" 或 "d"|Decimal|結果：帶選擇性負號的整數位數。<br /><br /> 支援的類型：只有整數類型。<br /><br /> 精確度規範：最少位數。<br /><br /> 預設精確度規範：必要的最少位數。<br /><br /> 詳細資訊：[十進位 ("D") 格式規範](#DFormatString)。|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
 |"E" 或 "e"|指數 (科學記號)|結果：指數標記法。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 有效位數規範：小數位數的數目。<br /><br /> 預設精確度規範：6。<br /><br /> 詳細資訊：[指數 ("E") 格式規範](#EFormatString)。|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|
 |"F" 或 "f"|固定點|結果：帶選擇性負號的整數和小數位數。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 有效位數規範：小數位數的數目。<br /><br /> 預設有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[固定點 ("F") 格式規範](#FFormatString)。|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|
 |"G" 或 "g"|一般|結果：固定點和科學標記法兩者中更精簡的一個。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 精確度規範：有效位數。<br /><br /> 預設精確度規範：因數字類型而異。<br /><br /> 詳細資訊：[一般 ("G") 格式規範](#GFormatString)。|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|
-|"N" 或 "n"|number|結果：帶選擇性負號的整數和小數位數、群組分隔符號，以及小數分隔符號。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 精確度規範：想要的小數位數。<br /><br /> 預設有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[數值 ("N") 格式規範](#NFormatString)。|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|
+|"N" 或 "n"|Number|結果：帶選擇性負號的整數和小數位數、群組分隔符號，以及小數分隔符號。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 精確度規範：想要的小數位數。<br /><br /> 預設有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[數值 ("N") 格式規範](#NFormatString)。|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|
 |"P" 或 "p"|百分比|結果：乘以 100 並加上百分比符號來顯示的數字。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 精確度規範：想要的小數位數。<br /><br /> 預設的有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[百分比 ("P") 格式規範](#PFormatString)。|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|
 |"R" 或 "r"|來回|結果：可以來回轉換為相同數字的字串。<br /><br /> 支援的類型：<xref:System.Single>、<xref:System.Double> 和 <xref:System.Numerics.BigInteger>。<br /><br /> 注意：建議僅用於 <xref:System.Numerics.BigInteger> 類型。 針對 <xref:System.Double> 類型，使用 "G17"；針對 <xref:System.Single> 類型，使用 "G9"。 <br> 精確度規範：忽略。<br /><br /> 詳細資訊：[來回 ("R") 格式規範](#RFormatString)。|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|
 |"X" 或 "x"|十六進位|結果：十六進位字串。<br /><br /> 支援的類型：只有整數類型。<br /><br /> 精確度規範：結果字串中的位數。<br /><br /> 詳細資訊：[十六進位 ("X") 格式規範](#XFormatString)。|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|
@@ -349,9 +349,9 @@ ms.locfileid: "73121761"
 
 <a name="NotesStandardFormatting"></a>
 
-## <a name="notes"></a>備註
+## <a name="notes"></a>注意事項
 
-### <a name="control-panel-settings"></a>控制台設定值
+### <a name="control-panel-settings"></a>Control Panel Settings
 
 [控制台] 中 [ **地區及語言選項]** 項目的設定會影響格式化作業所產生的結果字串。 這些設定是用來初始化與目前執行緒文化特性相關的 <xref:System.Globalization.NumberFormatInfo> 物件，該物件會提供用來管理格式的值。 使用不同設定的電腦會產生不同的結果字串。
 
@@ -384,9 +384,9 @@ ms.locfileid: "73121761"
 ## <a name="see-also"></a>請參閱
 
 - <xref:System.Globalization.NumberFormatInfo>
-- [自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
 - [格式化類型](../../../docs/standard/base-types/formatting-types.md)
 - [操作說明：以前置字元為零來填補數字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
-- [複合格式設定](../../../docs/standard/base-types/composite-formatting.md)
+- [複合格式](../../../docs/standard/base-types/composite-formatting.md)
 - [Sample: .NET Core WinForms Formatting Utility (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) (範例：.NET Core WinForms 格式化公用程式 (C#))
 - [Sample: .NET Core WinForms Formatting Utility (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb) (範例：.NET Core WinForms 格式化公用程式 (Visual Basic))

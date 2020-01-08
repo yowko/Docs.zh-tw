@@ -1,19 +1,19 @@
 ---
-title: 作法：在登錄中建立機碼 (Visual C#)
+title: 如何在登錄程式C#設計指南中建立金鑰
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: e67a80fa8f9a088f0eefe2dd2eeaa983e0a5a2c3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 16974db950a3a460416cfb917147439707e1d007
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590035"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635440"
 ---
-# <a name="how-to-create-a-key-in-the-registry-visual-c"></a>作法：在登錄中建立機碼 (Visual C#)
+# <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>如何在登錄中建立機碼（C#程式設計手冊）
 本範例會將 "Name" 和 "Isabella" 的值組新增至目前使用者之登錄的 "Names" 索引鍵下。  
   
 ## <a name="example"></a>範例  
@@ -27,13 +27,13 @@ key.Close();
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
-- 將程式碼複製並貼入主控台應用程式的 `Main` 方法中。  
+- 將程式碼複製並貼到主控台應用程式的 `Main` 方法中。  
   
 - 以直接位在登錄的 HKEY_CURRENT_USER 節點下的索引鍵名稱取代 `Names` 參數。  
   
 - 以直接位在 Names 節點下的值名稱取代 `Name` 參數。  
   
-## <a name="robust-programming"></a>穩固程式設計  
+## <a name="robust-programming"></a>最佳化程式設計  
  檢查登錄結構以找出適合索引鍵的位置。 例如，您可能想要開啟目前使用者的軟體金鑰，並以貴公司的名稱建立金鑰。 請將登錄值新增至貴公司的索引鍵。  
   
  以下條件可能會造成例外狀況：  
@@ -55,9 +55,9 @@ key.Close();
   
  即使使用存取控制清單 (ACL) 來保護登錄機碼，將密碼等機密資料以純文字儲存在登錄中也不安全。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C# 程式設計指南](../index.md)
-- [檔案系統和登錄 (C# 程式設計指南)](./index.md)
+- [檔案系統和登錄 (C# 程式設計手冊)](./index.md)
 - [使用 C# 從登錄進行讀取、寫入和刪除](https://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)

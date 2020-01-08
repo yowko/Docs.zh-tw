@@ -3,12 +3,12 @@ title: REST 和 gRPC
 description: 瞭解 gRPC、其在雲端原生應用程式中的角色，以及它與 HTTP REST 的差異
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: 80960a9042b1514fb78e7a8c993a1854067407e8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c77343e7a594d34cbd2c00ce11281bd6bf4000c1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417129"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337078"
 ---
 # <a name="rest-and-grpc"></a>REST 和 gRPC
 
@@ -26,7 +26,7 @@ gRPC 是現代化的 RPC 架構，它既輕量又高效能。 它會使用 HTTP/
 - 雖然 HTTP 1.1 限制為一次處理一個往返的要求/回應，但 HTTP/2 支援多工傳送，或透過相同連線的多個平行要求。
 - HTTP/2 支援全雙工或雙向通訊，其中用戶端和伺服器都可以同時進行通訊。 用戶端可以在伺服器送迴響應資料時，同時上傳要求資料。
 - 串流內建于 HTTP/2，這表示要求和回應都可以非同步地串流處理大型資料集。
-- 結合 gRPC 和 HTTP/2，效能會大幅增加。 在[Windows Communication Foundation （WCF）](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf)用語中中，gRPC 效能符合並超過[NetTCP](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)系結的速度和效率。 不過，不同于 NetTCP，gRPC 不受限於 Microsoft 語言， C#例如或 VB.NET。
+- 結合 gRPC 和 HTTP/2，效能會大幅增加。 在[Windows Communication Foundation （WCF）](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf)用語中中，gRPC 效能符合並超過[NetTCP](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)系結的速度和效率。 不過，不同于 NetTCP，gRPC 不受限於 Microsoft 語言， C#例如或 Visual Basic。
 
 所有熱門平臺（包括 JAVA、 C#、Golang 和 NodeJS）都支援 gRPC。
 
@@ -69,7 +69,7 @@ gRPC 適用于下列案例：
 
 請注意，上圖中的前端流量會以 HTTP 叫用，而後端微服務至微服務會使用 gRPC。
 
-期待 gRPC，在 dethroning 雲端原生系統的 REST 支配方面，可能扮演著重要的角色。 效能優勢和開發的便利性也太好了。 不過，請不要誤會，因為在開放 API 與向後相容的傑出特性， REST 仍會存在很長一段時間。
+期待 gRPC，在 dethroning 雲端原生系統的 REST 支配方面，可能扮演著重要的角色。 效能優勢和開發的便利性也太好了。 不過，請不要犯任何錯誤，其餘部分仍會持續一段時間。 它仍然是針對公開公開的 Api 擅長，基於回溯相容性的理由。
 
 >[!div class="step-by-step"]
 >[上一頁](service-to-service-communication.md)

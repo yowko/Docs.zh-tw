@@ -2,12 +2,12 @@
 title: 有害訊息處理
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 3eba16097648bee1ea80cf62ab3bca900ddf6280
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ff1eaec99308b06250722b290b7005ac21731570
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837346"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337638"
 ---
 # <a name="poison-message-handling"></a>有害訊息處理
 *有害訊息*是已超過應用程式傳遞嘗試次數上限的訊息。 這種情形可能會在佇列架構的應用程式因為錯誤而無法處理訊息時發生。 為了符合可靠性的需求，佇列的應用程式會在交易中接收訊息。 若中止了接收佇列訊息的異動，則會讓訊息留在佇列中，而訊息將會在新的異動中重試。 如果造成異動中止的問題未予以更正，則接收的應用程式可能會卡在接收及中止相同訊息的迴圈中，直到超過傳遞嘗試次數的上限為止，因而形成有害訊息。  
@@ -21,7 +21,7 @@ ms.locfileid: "74837346"
   
 - `ReceiveRetryCount`。 整數值，表示從應用程式佇列傳遞至應用程式的訊息重試次數上限。 預設值為 5。 這個值對於立即重試即可修正問題的情況來說就已足夠，例如資料庫上發生暫時死結時。  
   
-- `MaxRetryCycles`。 整數值，表示重試週期的上限。 重試週期包含從應用程式佇列將訊息傳輸至重試子佇列，然後在經過一段可設定的延遲之後，再從重試子佇列傳回應用程式佇列，重新嘗試傳遞。 預設值為 2。 在 Windows Vista 上，訊息最多會嘗試（`ReceiveRetryCount` + 1） * （`MaxRetryCycles` + 1）次。 在 `MaxRetryCycles` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 上則會忽略 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
+- `MaxRetryCycles`。 整數值，表示重試週期的上限。 重試週期包含從應用程式佇列將訊息傳輸至重試子佇列，然後在經過一段可設定的延遲之後，再從重試子佇列傳回應用程式佇列，重新嘗試傳遞。 預設值為 2。 在 Windows Vista 上，訊息最多會嘗試（`ReceiveRetryCount` + 1） * （`MaxRetryCycles` + 1）次。 Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]會忽略 `MaxRetryCycles`。  
   
 - `RetryCycleDelay`。 重試週期之間的時間延遲。 預設值為 30 分鐘。 `MaxRetryCycles` 和 `RetryCycleDelay` 會一起提供解決問題的機制，透過定期延遲之後的重試，進行問題的修正。 例如，這個機制會處理 SQL Server 中所設定等待異動認可的鎖定資料列。  
   
@@ -39,12 +39,12 @@ ms.locfileid: "74837346"
   
 - （（ReceiveRetryCount + 1） * （MaxRetryCycles + 1））在 Windows Vista 上。  
   
-- 在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上為 (ReceiveRetryCount + 1)。  
+- （ReceiveRetryCount + 1）在 Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上。  
   
 > [!NOTE]
 > 成功傳遞的訊息不會有任何重試次數。  
   
- 為了追蹤嘗試讀取訊息的次數，Windows Vista 維護了長期的訊息屬性來計算中止次數，以及計算訊息在應用程式佇列與子佇列之間移動的次數的「移動計數」屬性。 WCF 通道會使用這些來計算接收重試計數和重試迴圈計數。 在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上，中止計數會由 WCF 通道保留在記憶體中，如果應用程式失敗，則會重設。 此外，WCF 通道可以隨時在記憶體中保留最多256個訊息的中止計數。 如果讀取第 257 個訊息，那麼最舊訊息的中止計數就會重設。  
+ 為了追蹤嘗試讀取訊息的次數，Windows Vista 維護了長期的訊息屬性來計算中止次數，以及計算訊息在應用程式佇列與子佇列之間移動的次數的「移動計數」屬性。 WCF 通道會使用這些來計算接收重試計數和重試迴圈計數。 在 Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上，WCF 通道會在記憶體中維護中止計數，如果應用程式失敗，則會重設。 此外，WCF 通道可以隨時在記憶體中保留最多256個訊息的中止計數。 如果讀取第 257 個訊息，那麼最舊訊息的中止計數就會重設。  
   
  中止計數和移動計數屬性可透過作業內容提供給服務作業。 以下程式碼範例將說明如何存取這兩個屬性。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "74837346"
   
  應用程式可能需要以某種自動處理的方式將有害訊息移至有害訊息序列，讓服務能夠存取佇列中其餘的訊息。 唯一會使用錯誤處理常式機制接聽有害訊息例外狀況的情況，是在 <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> 設定設為 <xref:System.ServiceModel.ReceiveErrorHandling.Fault> 的時候。 Message Queuing 3.0 的有害訊息範例會示範這種行為。 以下將說明處理有害訊息時所採取的步驟，包括最佳做法：  
   
-1. 請確認您的有害設定能反映您應用程式的需求。 使用設定時，請確定您瞭解 Windows Vista、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上訊息佇列功能之間的差異。  
+1. 請確認您的有害設定能反映您應用程式的需求。 使用設定時，請確定您瞭解 Windows Vista、Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上訊息佇列功能之間的差異。  
   
 2. 如有需要，請實作 `IErrorHandler` 來處理有害訊息錯誤。 由於將 `ReceiveErrorHandling` 設為 `Fault` 時需要使用手動機制將有害訊息從佇列中移出，或更正外部相關的問題，因此通常的使用方式是在 `IErrorHandler` 設為 `ReceiveErrorHandling` 時實作 `Fault`，如下列程式碼中所示。  
   
@@ -95,13 +95,13 @@ ms.locfileid: "74837346"
  當訊息放入有害訊息佇列時，有害訊息處理就不會結束。 有害訊息佇列中的訊息必須繼續讀取和處理。 您可以在最終有害子佇列中讀取訊息時，使用有害訊息處理設定的子集。 適當的設定為 `ReceiveRetryCount` 和 `ReceiveErrorHandling`。 您可以將 `ReceiveErrorHandling` 設定為 Drop、Reject 或 Fault。 如果 `MaxRetryCycles` 設為 Move，則會忽略 `ReceiveErrorHandling` 並且擲回例外狀況。  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista、Windows Server 2003 及 Windows XP 的差異  
- 如之前所述，並非所有有害訊息處理設定都適用於 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、[!INCLUDE[wxp](../../../../includes/wxp-md.md)]和 Windows Vista 上訊息佇列的下列主要差異，與有害訊息處理有關：  
+ 如先前所述，並非所有的有害訊息處理設定都適用于 Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。 Windows Server 2003、[!INCLUDE[wxp](../../../../includes/wxp-md.md)]和 Windows Vista 上訊息佇列的下列主要差異，與有害訊息處理有關：  
   
-- Windows Vista 中的訊息佇列支援子佇列，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 不支援子佇列。 子佇列是在有害訊息處理中使用。 重試佇列和有害佇列都是應用程式佇列的子佇列，應用程式佇列是根據有害訊息處理設定而建立的。 `MaxRetryCycles` 會指示要建立多少重試子佇列。 因此，當在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上執行時，會略過 `MaxRetryCycles` 並且不允許 `ReceiveErrorHandling.Move`。  
+- Windows Vista 中的訊息佇列支援子佇列，而 Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 則不支援子佇列。 子佇列是在有害訊息處理中使用。 重試佇列和有害佇列都是應用程式佇列的子佇列，應用程式佇列是根據有害訊息處理設定而建立的。 `MaxRetryCycles` 會指示要建立多少重試子佇列。 因此，在 Windows Server 2003 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上執行時，`MaxRetryCycles` 會被忽略，而且不允許 `ReceiveErrorHandling.Move`。  
   
-- Windows Vista 中的訊息佇列支援負面認可，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 則否。 來自接收佇列管理員的負認可會造成傳送佇列管理員將拒絕的訊息放在寄不出的信件佇列中。 因此，`ReceiveErrorHandling.Reject` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 不可使用 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
+- Windows Vista 中的訊息佇列支援負面認可，而 Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 則否。 來自接收佇列管理員的負認可會造成傳送佇列管理員將拒絕的訊息放在寄不出的信件佇列中。 因此，Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]不允許 `ReceiveErrorHandling.Reject`。  
   
-- Windows Vista 中的訊息佇列支援訊息屬性，它會保留嘗試傳遞訊息的次數計數。 這個中止計數屬性無法在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上使用。 WCF 會在記憶體中維護中止計數，因此當伺服陣列中的多個 WCF 服務讀取相同的訊息時，這個屬性可能不會包含正確的值。  
+- Windows Vista 中的訊息佇列支援訊息屬性，它會保留嘗試傳遞訊息的次數計數。 Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]無法使用此 [中止計數] 屬性。 WCF 會在記憶體中維護中止計數，因此當伺服陣列中的多個 WCF 服務讀取相同的訊息時，這個屬性可能不會包含正確的值。  
   
 ## <a name="see-also"></a>請參閱
 

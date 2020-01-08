@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
-ms.openlocfilehash: 0b75e9645f05e5e83ff76cc138ee37e90600769a
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b6d49f20f72282ac2ce51c26fc4eb941b7ef6734
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569257"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346088"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Entity Framework 提供者 (WCF 資料服務)
-如同 WCF Data Services，ADO.NET Entity Framework 是以實體資料模型為基礎，這是一種實體關聯性模型。 Entity Framework 會根據對資料來源的對等作業，將作業轉譯為其實體資料模型（稱為*概念模型*）的執行。 這讓 Entity Framework 是以關聯式資料為基礎之資料服務的理想提供者，而任何具有支援該 Entity Framework 之資料提供者的資料庫，都可以與 WCF Data Services 搭配使用。 如需目前支援 Entity Framework 的資料來源清單，請參閱 Entity Framework 的[協力廠商提供者](https://go.microsoft.com/fwlink/?LinkId=143699)。  
+如同 WCF Data Services，ADO.NET Entity Framework 是以實體資料模型為基礎，這是一種實體關聯性模型。 Entity Framework 會根據對資料來源的對等作業，將作業轉譯為其實體資料模型（稱為*概念模型*）的執行。 這讓 Entity Framework 是以關聯式資料為基礎之資料服務的理想提供者，而任何具有支援該 Entity Framework 之資料提供者的資料庫，都可以與 WCF Data Services 搭配使用。 如需目前支援 Entity Framework 的資料來源清單，請參閱[Entity Framework 提供者](/ef/ef6/fundamentals/providers/)。
   
  在概念模型中，實體容器是服務的根。 您必須先在 Entity Framework 中定義概念模型，資料服務才能公開資料。 如需詳細資訊，請參閱[如何：使用 ADO.NET 建立資料服務 Entity Framework 資料來源](create-a-data-service-using-an-adonet-ef-data-wcf.md)。  
   

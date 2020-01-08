@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: d14d7c9bc701b5e06c51202c07c3b79832aba7cc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 454c4e3d926640934a8edc4fcb16e4308a89dd50
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331072"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632333"
 ---
 # <a name="function-expression-visual-basic"></a>函式運算式 (Visual Basic)
 宣告定義函式 lambda 運算式的參數和程式碼。  
@@ -30,9 +30,9 @@ End Function
   
 |詞彙|定義|  
 |---|---|  
-|`parameterlist`|選擇性。 本機變數名稱的清單，代表此程式的參數。 即使清單是空的，括弧也必須存在。 請參閱[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
-|`expression`|必要。 單一運算式。 運算式的類型是函式的傳回型別。|  
-|`statements`|必要。 使用 `Return` 語句來傳回值的語句清單。 （請參閱[Return 語句](../../../visual-basic/language-reference/statements/return-statement.md)）。傳回值的類型是函式的傳回型別。|  
+|`parameterlist`|選擇項。 本機變數名稱的清單，代表此程式的參數。 即使清單是空的，括弧也必須存在。 請參閱[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
+|`expression`|必要項。 單一運算式。 運算式的類型是函式的傳回型別。|  
+|`statements`|必要項。 使用 `Return` 語句來傳回值的語句清單。 （請參閱[Return 語句](../../../visual-basic/language-reference/statements/return-statement.md)）。傳回值的類型是函式的傳回型別。|  
   
 ## <a name="remarks"></a>備註  
  *Lambda 運算式*是沒有名稱的函式，會計算並傳回值。 除了 `RemoveHandler`的引數以外，您可以在任何可使用委派類型的位置使用 lambda 運算式。 如需委派的詳細資訊，以及搭配使用 lambda 運算式和委派的用法，請參閱[委派語句](../../../visual-basic/language-reference/statements/delegate-statement.md)和[寬鬆委派轉換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。  
@@ -72,7 +72,7 @@ End Function
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>範例  
- Lambda 運算式會在 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]中的許多查詢運算子，而且可以在以方法為基礎的查詢中明確地使用。 下列範例顯示一般 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢，然後將查詢轉譯成方法格式。  
+ Lambda 運算式採用語言整合式查詢（LINQ）中的許多查詢運算子，而且可以在以方法為基礎的查詢中明確地使用。 下列範例顯示一般的 LINQ 查詢，然後將查詢轉譯成方法格式。  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  

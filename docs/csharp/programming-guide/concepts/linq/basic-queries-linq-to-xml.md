@@ -2,12 +2,12 @@
 title: 基本查詢 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
-ms.openlocfilehash: ea2c4e76471d4cb438dd7c00c1e2e2110031cc51
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 4cfc29041ab9758bdef04bd7afe3fb2af3d886ff
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141553"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346607"
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>基本查詢 (LINQ to XML) (C#)
 本節提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 基本查詢的範例。  
@@ -21,13 +21,13 @@ ms.locfileid: "74141553"
 |[查詢 XDocument 與查詢 System.xml.linq.xelement> （C#）](./querying-an-xdocument-vs-querying-an-xelement.md)|說明在根目錄為 <xref:System.Xml.Linq.XElement> 之 XML 樹狀結構上撰寫查詢與在根目錄為 <xref:System.Xml.Linq.XDocument> 之 XML 樹狀結構上撰寫查詢的差異。|  
 |[如何尋找具有特定專案名稱的子系（C#）](./how-to-find-descendants-with-a-specific-element-name.md)|顯示如何尋找具有特定名稱之項目的所有子代。 此範例使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸。|
 |[如何使用子代方法尋找單一子系（C#）](./how-to-find-a-single-descendant-using-the-descendants-method.md)|顯示如何使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸方法來尋找唯一具名的單一項目。|
-|[如何：撰寫具有複雜篩選功能的查詢 (C#)](./how-to-write-queries-with-complex-filtering.md)|顯示如何使用更複雜的篩選條件撰寫查詢。|  
+|[如何撰寫具有複雜篩選的查詢（C#）](./how-to-write-queries-with-complex-filtering.md)|顯示如何使用更複雜的篩選條件撰寫查詢。|  
 |[如何篩選選擇性元素（C#）](./how-to-filter-on-an-optional-element.md)|顯示如何在不規則組織的樹狀中尋找節點。|
 |[如何尋找命名空間中的所有節點（C#）](./how-to-find-all-nodes-in-a-namespace.md)|顯示如何尋找特定命名空間中的所有節點。|
-|[如何：排序項目 (C#)](./how-to-sort-elements.md)|顯示如何撰寫排序其結果的查詢。|  
-|[如何：根據多個索引鍵排序項目 (C#)](./how-to-sort-elements-on-multiple-keys.md)|顯示如何在多個索引鍵上排序。|  
+|[如何排序元素（C#）](./how-to-sort-elements.md)|顯示如何撰寫排序其結果的查詢。|  
+|[如何排序多個索引鍵上的C#元素（）](./how-to-sort-elements-on-multiple-keys.md)|顯示如何在多個索引鍵上排序。|  
 |[如何計算中繼值（C#）](./how-to-calculate-intermediate-values.md)|顯示如何使用 `Let` 子句來計算 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢中的中繼值。|  
-|[如何：撰寫可根據內容尋找項目的查詢 (C#)](./how-to-write-a-query-that-finds-elements-based-on-context.md)|顯示如何根據樹狀中的其他項目選取項目。|  
+|[如何撰寫查詢以根據內容（C#）尋找元素](./how-to-write-a-query-that-finds-elements-based-on-context.md)|顯示如何根據樹狀中的其他項目選取項目。|  
 |[如何調試空的查詢結果集（C#）](./how-to-debug-empty-query-results-sets.md)|針對預設命名空間中的 XML 偵錯查詢時，顯示適當的修正。|  
   
 ## <a name="see-also"></a>請參閱

@@ -1,17 +1,17 @@
 ---
-title: 配量F#（）
+title: 配量
 description: 瞭解如何將配量用於現有F#的資料類型，以及如何為其他資料類型定義您自己的配量。
-ms.date: 01/22/2019
-ms.openlocfilehash: 2f7b87cda87aad1fdac05b4e14b16f454f8c0461
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 12/23/2019
+ms.openlocfilehash: 3911139c7ce656043817eb23d30f3686555b6efe
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733370"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545109"
 ---
 # <a name="slices"></a>配量
 
-在F#中，配量是資料類型的子集。 若要能夠從資料類型接受配量，資料類型必須定義 `GetSlice` 方法或範圍內的[類型延伸](type-extensions.md)。 本文說明如何從現有F#的型別，以及如何定義您自己的配量。
+在F#中，配量是任何資料類型的子集，在其定義或範圍內的[類型延伸](type-extensions.md)中具有 `GetSlice` 方法。 它最常用於F#陣列和清單。 本文說明如何從現有F#的型別拍照，以及如何定義您自己的配量。
 
 配量類似于[索引子](./members/indexed-properties.md)，但不會從基礎資料結構產生單一值，而是會產生多個分割區。
 
@@ -89,7 +89,7 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-F#核心程式庫不會定義3d 陣列的`GetSlice`。 如果您想要配量其他維度或其他陣列，您必須自行定義 `GetSlice` 成員。
+F#核心程式庫目前不會定義3d 陣列的 `GetSlice`。 如果您想要配量3D 陣列或其他更多維度的陣列，請自行定義 `GetSlice` 成員。
 
 ## <a name="defining-slices-for-other-data-structures"></a>定義其他資料結構的配量
 
@@ -140,6 +140,17 @@ printSpan sp.[0..] // [|1; 2; 3; 4; 5|]
 printSpan sp.[..5] // [|1; 2; 3; 4; 5|]
 printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..2] // |2; 3|]
+```
+
+## <a name="built-in-f-slices-are-end-inclusive"></a>內F#建配量是結尾包含的
+
+中的所有內F#建配量都是結尾包含的;也就是說，上限會包含在配量中。 對於啟動索引 `x` 和結束索引 `y`的給定配量，產生的配量會包含*yth*值。
+
+```fsharp
+// Define a new list
+let xs = [1 .. 10]
+
+printfn "%A" xs.[2..5] // Includes the 5th index
 ```
 
 ## <a name="see-also"></a>請參閱

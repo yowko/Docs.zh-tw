@@ -1,15 +1,15 @@
 ---
-title: 在持續整合 (CI) 中使用 .NET Core SDK 和工具
-description: 如何在組建伺服器上使用 .NET Core SDK 和其工具的相關資訊。
+title: 使用 .NET Core SDK 和工具的持續整合（CI）
+description: 瞭解如何透過持續整合，在組建伺服器上使用 .NET Core SDK 和其工具。
 author: mairaw
 ms.date: 05/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 481d54904192ee82da1f9d34bbf62fa8ffe1cd3b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 0f6049d1f2868ff330fd59c4f40e6c02231c6f71
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428603"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343530"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持續整合 (CI) 中使用 .NET Core SDK 和工具
 
@@ -175,6 +175,6 @@ install:
 
 使用 .NET Core 工具建立 .NET Core 程式碼建置程序的結構時，可以採取兩種方法：直接使用 MSBuild，或使用 .NET Core 命令列命令。 您可以視自己對特定方法的熟悉程度並權衡其複雜度，來選擇要使用的方法。 MSBuild 可讓您以工作和目標的形式表示建置程序，但使用此方法必須額外學習 MSBuild 專案檔語法。 使用 .NET Core 命令列工具或許比較簡單，但您必須使用如 `bash` 或 PowerShell 之類的指令碼語言撰寫協調流程邏輯。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 下載 - Linux](https://dotnet.microsoft.com/download?initial-os=linux) \(英文\)

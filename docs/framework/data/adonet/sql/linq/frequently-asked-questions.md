@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: ed9149eb5b88d648c02863e0fb0101e5503e1c73
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3cc879e97438138554f1d39cf588e01bfbba28a6
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782151"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634695"
 ---
 # <a name="frequently-asked-questions"></a>常見問題集
 
-下列各節將解答實作 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 時可能會遇到的一些常見問題。
+下列各節會回答您在執行 LINQ 時可能會遇到的一些常見問題。
 
 [疑難排解](troubleshooting.md)中有其他問題可解決。
 
-## <a name="cannot-connect"></a>無法連接
+## <a name="cannot-connect"></a>無法連線
 
 問： 我無法連接到資料庫。
 
@@ -30,7 +30,7 @@ ms.locfileid: "70782151"
 
 答： 請確定您呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 來儲存結果到資料庫。
 
-## <a name="database-connection-open-how-long"></a>資料庫連接：要開啟多久？
+## <a name="database-connection-open-how-long"></a>資料庫連接：會開啟多久？
 
 問： 我的資料庫連接會維持開啟的狀態多久？
 
@@ -114,7 +114,7 @@ end
 
 ## <a name="serialization-errors"></a>序列化錯誤
 
-問： 當我嘗試序列化時，收到下列錯誤："ChangeTracker + 別 standardchangetracker" 的 "Type...未標示為可序列化。」
+問： 當我嘗試序列化時，收到下列錯誤： "Type ' ChangeTracker + 別 standardchangetracker ' .。。未標示為可序列化。」
 
 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的程式碼產生支援 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化。 但不支援 <xref:System.Xml.Serialization.XmlSerializer> 或 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>。 如需詳細資訊，請參閱[序列化](serialization.md)。
 
@@ -128,13 +128,13 @@ end
 
 問： 我的資料庫資料表有個 `DateCreated` 資料行，它預設為 SQL `Getdate()`。 當我嘗試使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 插入新的資料錄時，值會設成 `NULL`。 但我本來預期它會設成資料庫預設值。
 
-答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會自動針對識別 (自動遞增)、rowguidcol (資料庫產生的 GUID) 和時間戳記資料行處理這種情況。 在其他情況下，您應該手動<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>設定<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = `true` =和<xref:System.Data.Linq.Mapping.AutoSync.Always> / 屬性。/ <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>
+答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會自動針對識別 (自動遞增)、rowguidcol (資料庫產生的 GUID) 和時間戳記資料行處理這種情況。 在其他情況下，您應該手動設定 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>=`true` 和 <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>=<xref:System.Data.Linq.Mapping.AutoSync.Always>/<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>/屬性。
 
 ## <a name="multiple-dataloadoptions"></a>多個 DataLoadOptions
 
 問： 我可以指定其他載入選項，而不覆寫第一個載入選項嗎？
 
-答： 是的。 如下列範例所示，第一個選項不會被覆寫：
+答： 是， 如下列範例所示，第一個選項不會被覆寫：
 
 ```vb
 Dim dlo As New DataLoadOptions()
@@ -152,7 +152,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 
 問： 當我將資料表從 SQL Server Compact 3.5 資料庫拖曳出來時，出現錯誤。
 
-答： 雖然[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]執行時間會執行，但物件關聯式設計工具不支援 SQL Server Compact 3.5。 在此情況下，您必須建立自己的實體類別，然後加入適當的屬性。
+答： 物件關聯式設計工具不支援 SQL Server Compact 3.5，但 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 執行時間會執行此工作。 在此情況下，您必須建立自己的實體類別，然後加入適當的屬性。
 
 ## <a name="errors-in-inheritance-relationships"></a>繼承關係發生錯誤
 
@@ -164,7 +164,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 
 問： 是否有公用提供者模型可供使用？
 
-答： 沒有公用提供者模型可以使用。 目前僅[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支援 SQL Server 和 SQL Server Compact 3.5。
+答： 沒有公用提供者模型可以使用。 目前，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 只支援 SQL Server 和 SQL Server Compact 3.5。
 
 ## <a name="sql-injection-attacks"></a>SQL 插入攻擊
 
@@ -191,9 +191,9 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 
 問： System.Data.Linq 是否標示為供部分信任的程式碼使用？
 
-答： 是，system.object 元件是以<xref:System.Security.AllowPartiallyTrustedCallersAttribute>屬性標記的 .NET Framework 元件中。 若沒有這個標記，.NET Framework 中的元件僅供完全信任的程式碼使用。
+答： 是，System.object 元件是以 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 屬性標記的 .NET Framework 元件中。 若沒有這個標記，.NET Framework 中的元件僅供完全信任的程式碼使用。
 
-中[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]允許部分信任的呼叫端的主要案例，是為了[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]讓該元件能夠從 Web 應用程式存取，其中的*信任*設定為「中」。
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中允許部分信任的呼叫端的主要案例，是要讓 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 元件能夠從 Web 應用程式存取，其中*信任*設定為「中」。
 
 ## <a name="mapping-data-from-multiple-tables"></a>對應多個資料表的資料
 
@@ -202,7 +202,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 答： 您可以在資料庫中建立檢視，然後將實體對應到該檢視。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會針對檢視產生與資料表相同的 SQL。
 
 > [!NOTE]
-> 在這種情況下使用檢視會有限制。 此方式在基礎檢視支援 <xref:System.Data.Linq.Table%601> 上所執行的作業時最安全。 只有您才知道會執行哪些作業。 例如，大部分的應用程式都是唯讀的，而另一個相當大`Create`號碼只會針對 views 使用預存程式來執行/ / `Update` `Delete`作業。
+> 在這種情況下使用檢視會有限制。 此方式在基礎檢視支援 <xref:System.Data.Linq.Table%601> 上所執行的作業時最安全。 只有您才知道會執行哪些作業。 例如，大部分的應用程式都是唯讀的，而另一個相當大號碼只會針對 views 使用預存程式來執行 `Create`/`Update`/`Delete` 作業。
 
 ## <a name="connection-pooling"></a>連接共用
 
@@ -226,7 +226,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 
 答： 內容在唯讀模式下無法追蹤變更。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [參考資料](reference.md)
 - [疑難排解](troubleshooting.md)

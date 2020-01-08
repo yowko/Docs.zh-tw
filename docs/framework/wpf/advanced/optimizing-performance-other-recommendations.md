@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 6b4a5379145ebdffde0d5b76d8c7b9ab57261007
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b6d99d90a3da232e1873ebe8433e01ceb2977de6
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975781"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636428"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>最佳化效能：其他建議
 <a name="introduction"></a> 本主題提供[最佳化 WPF 應用程式效能](optimizing-wpf-application-performance.md)一節中主題所涵蓋內容以外的效能建議。  
@@ -64,13 +64,13 @@ ms.locfileid: "73975781"
   
 <a name="Avoid_Using_ScrollBarVisibility"></a>   
 ## <a name="avoid-using-scrollbarvisibilityauto"></a>避免使用 ScrollBarVisibility = Auto  
- 請盡可能避免使用 `HorizontalScrollBarVisibility` 和 `VerticalScrollBarVisibility` 屬性的 <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> 值。 這些屬性是針對 <xref:System.Windows.Controls.RichTextBox>、<xref:System.Windows.Controls.ScrollViewer> 和 <xref:System.Windows.Controls.TextBox> 物件，以及 <xref:System.Windows.Controls.ListBox> 物件的附加屬性所定義。 相反地，請將 <xref:System.Windows.Controls.ScrollBarVisibility> 設定為 <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>、<xref:System.Windows.Controls.ScrollBarVisibility.Hidden> 或 <xref:System.Windows.Controls.ScrollBarVisibility.Visible>。  
+ 請盡可能避免使用 `HorizontalScrollBarVisibility` 和 `VerticalScrollBarVisibility` 屬性的 <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> 值。 這些屬性是針對 <xref:System.Windows.Controls.RichTextBox>、<xref:System.Windows.Controls.ScrollViewer>和 <xref:System.Windows.Controls.TextBox> 物件，以及 <xref:System.Windows.Controls.ListBox> 物件的附加屬性所定義。 相反地，請將 <xref:System.Windows.Controls.ScrollBarVisibility> 設定為 <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>、<xref:System.Windows.Controls.ScrollBarVisibility.Hidden>或 <xref:System.Windows.Controls.ScrollBarVisibility.Visible>。  
   
  <xref:System.Windows.Controls.ScrollBarVisibility.Auto> 值適用于空間受限的情況，捲軸應該只在必要時才顯示。 例如，使用此 <xref:System.Windows.Controls.ScrollBarVisibility> 值搭配 <xref:System.Windows.Controls.ListBox> 30 個專案，而非具有數百行文字的 <xref:System.Windows.Controls.TextBox>，可能會很有用。  
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>設定字型快取服務以縮短啟動時間  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 字型快取服務可在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式之間共用字型資料。 您所執行的第一個 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式會啟動此服務 (若尚未執行)。 如果您使用的是 Windows Vista，可以將 "Windows Presentation Foundation （WPF） Font-size Cache 3.0.0.0" 服務從 "Manual" （預設值）設定為 [自動（延遲開始）]，以減少 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式的初始啟動時間。  
+ WPF 字型快取服務會在 WPF 應用程式之間共用字型資料。 您所執行的第一個 WPF 應用程式會啟動此服務（如果服務尚未執行）。 如果您使用的是 Windows Vista，可以將 "Windows Presentation Foundation （WPF） Font-size Cache 3.0.0.0" 服務從 "Manual" （預設值）設定為 [自動（延遲開始）]，以減少 WPF 應用程式的初始啟動時間。  
   
 ## <a name="see-also"></a>請參閱
 
@@ -80,6 +80,6 @@ ms.locfileid: "73975781"
 - [2D 圖形和影像處理](optimizing-performance-2d-graphics-and-imaging.md)
 - [物件行為](optimizing-performance-object-behavior.md)
 - [應用程式資源](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [文字](optimizing-performance-text.md)
 - [資料繫結](optimizing-performance-data-binding.md)
 - [動畫祕訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)

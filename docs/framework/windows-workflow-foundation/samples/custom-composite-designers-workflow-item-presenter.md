@@ -2,19 +2,18 @@
 title: 自訂複合設計工具 - 工作流程項目展示器
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 31dfae70a8b95bdfd457efe7a20ce44c2ba9c61f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: d1047b8be35545e83eaa8788b53751b6b0056984
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715190"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338046"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>自訂複合設計工具 - 工作流程項目展示器
+
 <xref:System.Activities.Presentation.WorkflowItemPresenter> 是 WF 設計工具程式設計模型中的金鑰類型，可讓您建立可以放置任意活動的「卸載區」。 這個範例示範如何建立一個顯示「卸載區」的活動設計工具。
 
- 這個範例會示範下列情況：
-
-## <a name="demonstrates"></a>示範
+這個範例會示範下列情況：
 
 - 建立具有 <xref:System.Activities.Presentation.WorkflowItemPresenter> 的自訂活動設計工具。
 
@@ -23,7 +22,8 @@ ms.locfileid: "74715190"
 - 以宣告和強制方式設計重新裝載之工具箱的程式。
 
 ## <a name="sample-details"></a>範例詳細資料
- 這個範例的程式碼會示範：
+
+這個範例的程式碼會示範：
 
 - 針對 `SimpleNativeActivity` 類別建置自訂活動設計工具。
 
@@ -65,21 +65,21 @@ ms.locfileid: "74715190"
 
  請注意繫結至 `ModelItem.Body` 的 WPF 資料繫結用法。 `ModelItem` 是 <xref:System.Activities.Presentation.ActivityDesigner> 上的屬性，其參考設計工具所使用的基礎物件，在此案例中為**命名為 simplenativeactivity**。
 
-#### <a name="to-setup-build-and-run-the-sample"></a>若要設定、建置及執行範例
+## <a name="set-up-build-and-run-the-sample"></a>設定、建立和執行範例
 
-1. 在 Visual Studio 2010 中開啟解決方案。
+1. 在 Visual Studio 中開啟方案。
 
-2. 按 F5 編譯和執行應用程式。
+2. 按**F5**以編譯並執行應用程式。
 
 > [!IMPORTANT]
-> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
-> `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
-> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
-  
+> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
+>
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`
+
 ## <a name="see-also"></a>請參閱
 
 - <xref:System.Activities.Presentation.WorkflowItemPresenter>

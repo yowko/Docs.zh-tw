@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 功能內容
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 869d6108edaa7f32101b6fe8d077e4eba7eef6b5
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c534575fcf70035bc728642dbb65b05db1fd4686
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802592"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345111"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能內容
 
@@ -189,7 +189,7 @@ WCF 設定架構很複雜，可讓使用者有許多難以找到的功能。 在
 
 ## <a name="procedural-activities-sequence-if-foreach-switch-assign-dowhile-while"></a>程序性活動 (Sequence、If、ForEach、Switch、Assign、DoWhile 和 While)
 
-程序性活動會使用程式設計人員所熟悉的概念來提供模型循序控制流程的機制。 這些活動會啟用傳統結構的程式語言建構，並且在適當的情況下，提供一般程序性語言 (例如 C#/VB) 的語言同位項目。
+程序性活動會使用程式設計人員所熟悉的概念來提供模型循序控制流程的機制。 這些活動會啟用傳統結構化的程式設計語言結構，並在適當的情況下，提供與C#一般程式語言（如和 Visual Basic）的語言同位。
 
 ### <a name="getting-started"></a>使用者入門
 
@@ -231,7 +231,7 @@ WCF 設定架構很複雜，可讓使用者有許多難以找到的功能。 在
 
 ## <a name="error-handling-activities"></a>錯誤處理活動
 
-<xref:System.Activities.Statements.TryCatch> 活動會提供一項機制來攔截一組包含活動執行時發生的例外狀況 (與在 C#/VB 中建構的 Try/Catch 很相似)。 <xref:System.Activities.Statements.TryCatch> 提供工作流程層級的例外狀況處理。 當系統擲回未處理的例外狀況時，就會中止工作流程，而且不會執行 Finally 區塊。 這種行為與 C# 一致。
+<xref:System.Activities.Statements.TryCatch> 活動提供一種機制，可攔截執行一組包含的活動期間發生的例外狀況（類似于和 Visual Basic 中C#的 Try/Catch 結構）。 <xref:System.Activities.Statements.TryCatch> 提供工作流程層級的例外狀況處理。 當系統擲回未處理的例外狀況時，就會中止工作流程，而且不會執行 Finally 區塊。 這種行為與 C# 一致。
 
 ### <a name="getting-started"></a>使用者入門
 

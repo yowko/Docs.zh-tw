@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: adb4848e844ff091c45ec9a8a2e6d36f01c3cf91
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 53f25be3bc38d88aa7723f6a0858317ee5ce6143
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960159"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559647"
 ---
 # <a name="graphics-rendering-registry-settings"></a>圖形轉譯登錄設定
 本主題會概略說明會影響 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 圖形轉譯登錄設定。  
@@ -24,7 +24,7 @@ ms.locfileid: "74960159"
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>什麼是 XPDM 和 WDDM？  
- 一些圖形轉譯登錄設定有不同的預設值，取決於您的視訊卡使用 XPDM 或 WDDM 驅動程式。 XPDM 是 Microsoft Windows XP 顯示驅動程式模型，而 WDDM 則是 Windows 顯示驅動程式模型。 WDDM 可在執行 Windows Vista 和 Windows 7 的電腦上使用。 在執行 Windows Vista、Microsoft Windows XP 和 [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]的電腦上，可以使用 XPDM。 如需 WDDM 的詳細資訊，請參閱 [Windows Vista 顯示驅動程式模型設計指南](https://go.microsoft.com/fwlink/?LinkId=178394)。  
+ 一些圖形轉譯登錄設定有不同的預設值，取決於您的視訊卡使用 XPDM 或 WDDM 驅動程式。 XPDM 是 Microsoft Windows XP 顯示驅動程式模型，而 WDDM 則是 Windows 顯示驅動程式模型。 WDDM 可在執行 Windows Vista 和 Windows 7 的電腦上使用。 在執行 Windows Vista、Microsoft Windows XP 和 Microsoft Windows Server 2003 的電腦上，可以使用 XPDM。 如需 WDDM 的詳細資訊，請參閱 [Windows Vista 顯示驅動程式模型設計指南](https://go.microsoft.com/fwlink/?LinkId=178394)。  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>登錄設定  
@@ -68,7 +68,7 @@ ms.locfileid: "74960159"
   
 |登錄機碼|值類型|  
 |------------------|----------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|String|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|字串|  
   
  在2004年11月，Microsoft 發行了新版本的驅動程式測試指導方針;在此日期之後撰寫的驅動程式提供較佳的穩定性。 對於這些驅動程式，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 預設會使用硬體加速管線，並回到此日期之前發行的 XPDM 驅動程式軟體轉譯方式。  
   

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: a997cc62b03a0d92d5ef76173981f5a9e287b13a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 11a58ddf246c77cf4372e940b184413054b10778
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204596"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634920"
 ---
 # <a name="c-walkthroughs"></a>C# 逐步解說
 逐步解說提供常見情節的逐步指示，使其成為開始學習產品或特定功能區域的最佳去處。  
   
  本節包含 C# 程式設計逐步解說連結。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
 
  [使用 Async 和 Await 存取 Web](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  說明如何使用 [async](./language-reference/keywords/async.md) 和 [await](./language-reference/operators/await.md) 建立非同步解決方案。  
@@ -48,7 +48,7 @@ ms.locfileid: "74204596"
  示範一些經常執行的工作，例如，在 `TabControl` 上加入或移除索引標籤、將控制項固定到其父系，以及變更 `SplitContainer` 控制項的方向。  
   
  [在 C# 中撰寫查詢 (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- 示範用以撰寫 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式的 C# 語言功能。  
+ 示範用C#來撰寫 LINQ 查詢運算式的語言功能。  
   
  [處理資料 (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
  說明 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 情節，以加入、修改及刪除資料庫中的資料。  
@@ -69,7 +69,7 @@ ms.locfileid: "74204596"
  [部署範例和逐步解說](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  提供通用部署情節的逐步範例。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](./programming-guide/index.md)
 - [Visual Studio 範例](/visualstudio/ide/visual-studio-ide)

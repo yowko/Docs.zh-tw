@@ -1,18 +1,18 @@
 ---
-title: 作法：顯示命令列引數 - C# 程式設計指南
+title: 如何顯示命令列引數- C#程式設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: ba732930d08c74433d6ea7b38e7dc3a9fddf594c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3ae2f65696c6661ab4f732b604267116996162b2
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923856"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635167"
 ---
-# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>作法：顯示命令列引數 (C# 程式設計指南)
+# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>如何顯示命令列引數（C#程式設計手冊）
 提供給命令列上可執行檔的引數，可以透過 `Main` 的選擇性參數來存取。 引數是以字串陣列的形式提供。 陣列的每個項目都包含一個引數。 引數之間的空白字元會被移除。 例如，請考慮這些虛擬可執行檔的命令列引動過程：  
   
 |命令列上的輸入|傳遞至 Main 的字串陣列|  
@@ -29,7 +29,7 @@ ms.locfileid: "69923856"
   
  [!code-csharp[csProgGuideMain#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#9)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [使用 csc.exe 建置命令列](../../language-reference/compiler-options/command-line-building-with-csc-exe.md)

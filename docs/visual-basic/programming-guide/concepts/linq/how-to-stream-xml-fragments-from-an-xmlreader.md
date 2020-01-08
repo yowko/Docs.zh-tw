@@ -2,12 +2,12 @@
 title: 如何：從 XmlReader 資料流處理 XML 片段
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
-ms.openlocfilehash: abefc8c6e75ae41c47135a2e89cdb3be6a8e5cd6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 42d3edb390035d20f506388974000aa204312109
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346217"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636792"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>如何：從 XmlReader 串流 XML 片段（Visual Basic）
 當您必須處理大型 XML 檔案時，可能無法將整個 XML 樹狀載入記憶體中。 這個主題顯示如何使用 <xref:System.Xml.XmlReader> 串流片段。  
@@ -23,7 +23,7 @@ ms.locfileid: "74346217"
  [如何：執行大型 XML 檔的資料流程轉換（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md)主題包含使用 LINQ to XML 轉換非常大的 xml 檔，同時維持小型記憶體使用量的範例。  
   
 ## <a name="example"></a>範例  
- 這個範例會建立自訂座標軸方法。 您可以使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢進行查詢。 自訂座標軸方法  `StreamRootChildDoc` 是一種方法，特別針對讀取具有重複 `Child` 項目的文件而設計。  
+ 這個範例會建立自訂座標軸方法。 您可以使用 LINQ 查詢來查詢它。 自訂座標軸方法  `StreamRootChildDoc` 是一種方法，特別針對讀取具有重複 `Child` 項目的文件而設計。  
   
 ```vb  
 Module Module1  

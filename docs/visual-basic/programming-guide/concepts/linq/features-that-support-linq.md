@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: e81d0434aa60e0c7b316b72fb78ebfe2a3782cbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 57c0566f9a76715e48b20f2e6493aa1a506c64be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353521"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636857"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>支援 LINQ 的 Visual Basic 功能
-[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 的名稱是指 Visual Basic 中支援直接以語言進行查詢語法和其他語言結構的技術。 有了 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，您就不需要學習新的語言來查詢外部資料源。 您可以使用 Visual Basic 來查詢關係資料庫、XML 存放區或物件中的資料。 將查詢功能整合到語言中，可讓編譯時間檢查語法錯誤和型別安全。 這項整合也可確保您已經知道在 Visual Basic 中撰寫豐富、多樣化查詢所需知道的大部分知識。  
+「語言整合式查詢」（LINQ）是指支援直接在語言中查詢語法和其他語言結構的 Visual Basic 技術。 有了 LINQ，您就不需要學習新的語言來查詢外部資料源。 您可以使用 Visual Basic 來查詢關係資料庫、XML 存放區或物件中的資料。 將查詢功能整合到語言中，可讓編譯時間檢查語法錯誤和型別安全。 這項整合也可確保您已經知道在 Visual Basic 中撰寫豐富、多樣化查詢所需知道的大部分知識。  
   
  下列各節將說明支援 LINQ 的語言結構，以提供足夠的詳細資料，讓您能夠開始閱讀簡介檔、程式碼範例和範例應用程式。 您也可以按一下連結，尋找如何將語言功能結合在一起，以啟用語言整合式查詢的詳細說明。 一個不錯的起點是[逐步解說：在 Visual Basic 中撰寫查詢](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74353521"
  如需詳細資訊，請參閱[匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
   
 ## <a name="extension-methods"></a>擴充方法  
- 擴充方法可讓您將方法加入至定義以外的資料類型或介面。 這項功能可讓您將新方法加入至現有的類型，而不需要實際修改類型。 標準查詢運算子本身是一組擴充方法，可為任何可執行 <xref:System.Collections.Generic.IEnumerable%601>的類型提供 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢功能。 <xref:System.Collections.Generic.IEnumerable%601> 的其他延伸模組包括 <xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.Union%2A>和 <xref:System.Linq.Enumerable.Intersect%2A>。  
+ 擴充方法可讓您將方法加入至定義以外的資料類型或介面。 這項功能可讓您將新方法加入至現有的類型，而不需要實際修改類型。 標準查詢運算子本身是一組擴充方法，可為任何可執行 <xref:System.Collections.Generic.IEnumerable%601>的型別提供 LINQ 查詢功能。 <xref:System.Collections.Generic.IEnumerable%601> 的其他延伸模組包括 <xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.Union%2A>和 <xref:System.Linq.Enumerable.Intersect%2A>。  
   
  下列擴充方法會將 print 方法加入至 <xref:System.String> 類別。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "74353521"
   
  [!code-vb[VbLINQVbFeatures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#12)]  
   
- 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]中，lambda 運算式的基礎是許多標準查詢運算子。 編譯器會建立 lambda 運算式來捕捉基本查詢方法（例如 `Where`、`Select`、`Order By`、`Take While`和其他專案）中定義的計算。  
+ 在 LINQ 中，lambda 運算式的基礎是許多標準查詢運算子。 編譯器會建立 lambda 運算式來捕捉基本查詢方法（例如 `Where`、`Select`、`Order By`、`Take While`和其他專案）中定義的計算。  
   
  例如，下列程式碼會定義一個查詢，以傳回一份學生清單中的所有資深學生。  
   

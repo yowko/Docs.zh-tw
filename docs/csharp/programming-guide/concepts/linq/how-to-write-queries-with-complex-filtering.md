@@ -1,21 +1,21 @@
 ---
-title: HOW TO：撰寫具有複雜篩選功能的查詢 (C#)
+title: 如何撰寫具有複雜篩選的查詢（C#）
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: 7759a02c1b9ef0ae0c1af4bfb2600543b21cdf0f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a4918631fed21967b402c5c56cfb8a211d44c139
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253203"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337352"
 ---
-# <a name="how-to-write-queries-with-complex-filtering-c"></a>作法：撰寫具有複雜篩選功能的查詢 (C#)
+# <a name="how-to-write-queries-with-complex-filtering-c"></a>如何撰寫具有複雜篩選的查詢（C#）
 有時候您會想要利用複雜篩選撰寫 LINQ to XML 查詢。 例如，您可能必須尋找其子項目包含特定名稱和值的所有項目。 本主題提供利用複雜篩選撰寫查詢的範例。  
   
 ## <a name="example"></a>範例  
  這個範例顯示如何尋找其 `PurchaseOrder` 子項目的 `Address` 屬性等於 "Shipping"，而 `Type` 子項目等於 "NY" 的所有 `State` 項目。 它會在 `Where` 子句中使用巢狀查詢，而且如果集合在其中有任何項目，`Any` 運算子會傳回 `true`。 如需使用以方法為基礎之查詢語法的資訊，請參閱 [LINQ 中的查詢語法及方法語法](./query-syntax-and-method-syntax-in-linq.md)。  
   
- 此範例使用下列 XML 文件：[XML 範例檔：多個訂購單 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：多份採購單 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
  如需 `Any` 運算子的詳細資訊，請參閱[數量詞作業 (C#)](./quantifier-operations.md)。  
   
@@ -44,7 +44,7 @@ foreach (XElement el in purchaseOrders)
 ## <a name="example"></a>範例  
  下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[命名空間概觀 (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。  
   
- 此範例使用下列 XML 文件：[XML 範例檔：命名空間中的多個訂購單](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：命名空間中的多份採購單](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrdersInNamespace.xml");  
@@ -69,7 +69,7 @@ foreach (XElement el in purchaseOrders)
 99505  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>

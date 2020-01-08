@@ -2,12 +2,12 @@
 title: 佇列訊息的疑難排解
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 2999d1ab4129c72c231b6dc80480d8bfef5186fa
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ed114cc9a37fff549e8bfc874765252fd18893a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837307"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345583"
 ---
 # <a name="troubleshooting-queued-messaging"></a>佇列訊息的疑難排解
 
@@ -25,7 +25,7 @@ ms.locfileid: "74837307"
 
 **問：** 我必須升級 MSMQ 才能使用 <xref:System.ServiceModel.NetMsmqBinding> 和 `MsmqIntegration` 系結嗎？
 
-**答：** 否。 兩種繫結都可以配合 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 上的 MSMQ 3.0 使用。 當您升級至 Windows Vista 中的 MSMQ 4.0 時，系結的某些功能就會變成可用。
+**答：** 否。 這兩個系結都適用于 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 Windows Server 2003 上的 MSMQ 3.0。 當您升級至 Windows Vista 中的 MSMQ 4.0 時，系結的某些功能就會變成可用。
 
 **問：** <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 系結的哪些功能可在 MSMQ 4.0 中使用，但不在 MSMQ 3.0 中？
 

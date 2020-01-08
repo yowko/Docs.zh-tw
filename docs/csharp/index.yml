@@ -6,12 +6,12 @@ metadata:
   description: 學習C#程式設計-適用于初學者開發人員、 C#熟悉的開發C#人員，以及經驗豐富的 .net 開發人員
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: fa778c4610dbfe8320d488098b5bfd39de8e4705
-  ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+  ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
+  ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74835468"
+  ms.lasthandoff: 12/25/2019
+  ms.locfileid: "75339163"
 landingContent:
 - title: 學習程式C#
   linkLists:
@@ -95,6 +95,10 @@ landingContent:
       url: tutorials/mixins-with-default-interface-methods.md
     - text: 使用範圍和索引來處理子集
       url: tutorials/ranges-indexes.md
+  - linkListType: reference
+    links:
+    - text: 編譯器中的C#重大變更
+      url: whats-new/breaking-changes.md
 - title: C# 語言參考
   linkLists:
   - linkListType: reference

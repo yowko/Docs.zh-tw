@@ -11,23 +11,23 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: 0d01f7536c120f51372961d944804cfe0063fb9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80e0bf641c46eb1461769f5a85950982258c78f5
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010276"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559418"
 ---
 # <a name="globalization-and-localization"></a>全球化和當地語系化
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 開發世界性的應用程式提供廣泛的支援。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 為全球化的應用程式開發提供廣泛的支援。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [WPF 全球化和當地語系化概觀](wpf-globalization-and-localization-overview.md)  
  [WPF 的全球化](globalization-for-wpf.md)  
  [使用自動配置概觀](use-automatic-layout-overview.md)  
  [當地語系化屬性和註解](localization-attributes-and-comments.md)  
  [WPF 中的雙向功能概觀](bidirectional-features-in-wpf-overview.md)  
- [HOW-TO 主題](globalization-and-localization-how-to-topics.md)  
+ [「如何」主題](globalization-and-localization-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Globalization>  
@@ -36,6 +36,6 @@ ms.locfileid: "62010276"
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [XAML 中的 xml:lang 處理](../../xaml-services/xml-lang-handling-in-xaml.md)  
+ [XAML 中的 xml:lang 處理](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
 ## <a name="related-sections"></a>相關章節

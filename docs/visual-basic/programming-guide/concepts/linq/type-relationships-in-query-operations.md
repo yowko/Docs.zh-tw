@@ -11,29 +11,29 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 8c201abef924766d52b1adb084970a24ebea2b50
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e839271ac254a5e96f8c99f59397016fb99540aa
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350559"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636909"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>查詢作業中的類型關聯性 (Visual Basic)
 
-用於 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 查詢作業中的變數是強型別，而且必須彼此相容。 強型別會用於資料來源、查詢本身和查詢執行中。 下圖識別用來描述 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的詞彙。 如需查詢各部分的詳細資訊，請參閱[基本查詢作業（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。
+用於語言整合式查詢（LINQ）查詢作業的變數是強型別，而且必須彼此相容。 強型別會用於資料來源、查詢本身和查詢執行中。 下圖識別用來描述 LINQ 查詢的詞彙。 如需查詢各部分的詳細資訊，請參閱[基本查詢作業（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。
 
 ![顯示反白顯示專案之虛擬代碼查詢的螢幕擷取畫面。](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
 
 查詢中的範圍變數類型必須與資料來源中的元素類型相容。 查詢變數的類型必須與 `Select` 子句中定義的 sequence 元素相容。 最後，順序元素的類型也必須與執行查詢的 `For Each` 語句中使用的迴圈控制變數類型相容。 這種強型別有助於在編譯時期識別類型錯誤。
 
-Visual Basic 藉由實作為區欄位型別推斷（也稱為*隱含*類型），讓強型別變得方便。 上述範例中會使用該功能，您會在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 的範例和檔中看到其使用方式。 在 Visual Basic 中，只有在沒有 `As` 子句的情況下，才會使用 `Dim` 語句來完成區欄位型別推斷。 在下列範例中，`city` 強型別為字串。
+Visual Basic 藉由實作為區欄位型別推斷（也稱為*隱含*類型），讓強型別變得方便。 上述範例中會使用該功能，您會在整個 LINQ 範例和檔中看到其使用方式。 在 Visual Basic 中，只有在沒有 `As` 子句的情況下，才會使用 `Dim` 語句來完成區欄位型別推斷。 在下列範例中，`city` 強型別為字串。
 
 [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]
 
 > [!NOTE]
 > 區欄位型別推斷只有在 `Option Infer` 設定為 `On`時才會運作。 如需詳細資訊，請參閱[Option 推斷語句](../../../../visual-basic/language-reference/statements/option-infer-statement.md)。
 
-不過，即使您在查詢中使用區欄位型別推斷，資料來源中的變數、查詢變數和查詢執行迴圈中都會出現相同的類型關聯性。 當您撰寫 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢，或使用檔中的範例和程式碼範例時，對這些型別關聯性有基本瞭解非常有用。
+不過，即使您在查詢中使用區欄位型別推斷，資料來源中的變數、查詢變數和查詢執行迴圈中都會出現相同的類型關聯性。 當您撰寫 LINQ 查詢，或使用檔中的範例和程式碼範例時，對這些型別關聯性有基本瞭解非常有用。
 
 針對不符合從資料來源傳回之類型的範圍變數，您可能需要指定明確的類型。 您可以使用 `As` 子句來指定範圍變數的類型。 不過，如果轉換是[縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)，而且 `Option Strict` 設定為 `On`，這會導致錯誤。 因此，我們建議您在從資料來源抓取的值上執行轉換。 您可以使用 <xref:System.Linq.Enumerable.Cast%2A> 方法，將資料來源中的值轉換成明確範圍變數類型。 您也可以將 `Select` 子句中選取的值，轉換成與範圍變數類型不同的明確類型。 下列程式碼說明這些點。
 
@@ -41,7 +41,7 @@ Visual Basic 藉由實作為區欄位型別推斷（也稱為*隱含*類型）�
 
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>傳回來源資料之整個元素的查詢
 
-下列範例顯示的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢作業會傳回從來源資料選取的一系列元素。 來源（`names`）包含字串陣列，而查詢輸出則是包含以字母 M 開頭之字串的序列。
+下列範例顯示的 LINQ 查詢作業會傳回從來源資料選取的一系列元素。 來源（`names`）包含字串陣列，而查詢輸出則是包含以字母 M 開頭之字串的序列。
 
 [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]
 

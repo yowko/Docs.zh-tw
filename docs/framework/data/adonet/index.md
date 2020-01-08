@@ -2,12 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 130265070e82245de4bdd49599df9fa9f435f5ed
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 5b7246350478bbc8907bb9f52e425821402f8806
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569415"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346220"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取服務一組類別 (Class)。 ADO.NET 提供一組豐富的元件，用於建立分散式資料共用應用程式。 其為 .NET Framework 的一個完整的部分，提供關聯式、XML 及應用程式資料的存取。 ADO.NET 支援各種開發需要，包括建立應用程式、工具、語言或網際網路瀏覽器使用的前端資料庫用戶端及中介層商務物件。  
@@ -19,7 +19,7 @@ ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取�
  [ADO.NET 概觀](ado-net-overview.md)  
  提供 ADO.NET 的設計和元件的簡介。  
   
- [Entity Framework](https://go.microsoft.com/fwlink/?LinkID=213876)  
+ [Entity Framework](/ef/ef6/index)  
  說明如何使用 Entity Framework 來建立應用程式。  
   
  [設定 ADO.NET 應用程式的安全性](securing-ado-net-applications.md)  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: b914d5d9f578c5ce13dfc1c520f1b26f8af1fa76
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: b7e66d1e682ac3e85c24121f4769ebe95f1fc11d
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837918"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544694"
 ---
 # <a name="hosting-services"></a>裝載服務
 
@@ -30,12 +30,12 @@ WCF 提供統一的程式設計模型，用來建立服務導向的應用程式�
  這個裝載選項包含將 WCF 服務裝載為 managed Windows 服務（之前稱為 NT 服務）的應用程式域（AppDomain），以便服務的進程存留期是由的服務控制管理員（SCM）控制Windows 服務。 就像自我裝載選項一樣，此類型的裝載環境要求將某些裝載程式碼撰寫成應用程式的一部分。 服務會同時實作為 Windows 服務和 WCF 服務，方法是讓它繼承自 <xref:System.ServiceProcess.ServiceBase> 類別以及 WCF 服務合約介面。 <xref:System.ServiceModel.ServiceHost> 接著會透過覆寫的 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 方法來建立並開啟，並透過覆寫的 <xref:System.ServiceProcess.ServiceBase.OnStop> 方法加以關閉。 繼承自 <xref:System.Configuration.Install.Installer> 的安裝程式類別必須同時實作，以允許藉由 Installutil.exe 工具將程式安裝為 Windows 服務。 如需詳細資訊，請參閱[如何：在 Managed Windows 服務中裝載 WCF 服務](./feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)。 Managed Windows 服務裝載選項所啟用的案例，就是在非訊息啟動的安全環境中，由 IIS 外部主控的長時間執行 WCF 服務。 服務的存留期會改由作業系統來控制。 所有 Windows 版本都提供這個裝載選項。
 
 ### <a name="internet-information-services-iis"></a>Internet Information Services (IIS)
- IIS 裝載選項會與 ASP.NET 整合，並使用這些技術所提供的功能，例如進程回收、閒置關機、進程健康狀態監控，以及訊息型啟用。 在 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 作業系統中，建議您採用這個解決方案來裝載必須具備高度可用性與高度擴充性的 Web 服務應用程式。 IIS 同時提供整合式管理功能，而這也是客戶希望從企業級伺服器產品中所得到的功能。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 如需如何設定 WCF 服務之 IIS 裝載的詳細資訊，請參閱[如何：在 iis 中裝載 Wcf 服務](./feature-details/how-to-host-a-wcf-service-in-iis.md)。
+ IIS 裝載選項會與 ASP.NET 整合，並使用這些技術所提供的功能，例如進程回收、閒置關機、進程健康狀態監控，以及訊息型啟用。 在 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 和 Windows Server 2003 作業系統上，這是裝載 Web 服務應用程式的慣用解決方案，必須具備高可用性且可高度擴充性。 IIS 同時提供整合式管理功能，而這也是客戶希望從企業級伺服器產品中所得到的功能。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 如需如何設定 WCF 服務之 IIS 裝載的詳細資訊，請參閱[如何：在 iis 中裝載 Wcf 服務](./feature-details/how-to-host-a-wcf-service-in-iis.md)。
 
- 請注意，IIS 裝載的服務只能使用 HTTP 傳輸。 它在 IIS 5.1 版的實作方式已經為 [!INCLUDE[wxp](../../../includes/wxp-md.md)]帶來一些限制。 IIS 5.1 針對 WCF 服務所提供的訊息型啟用 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 會封鎖同一部電腦上任何其他自我裝載的 WCF 服務，使其無法使用埠80進行通訊。 當 IIS 6.0 在 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]上主控時，WCF 服務可以在與其他應用程式相同的 AppDomain/應用程式集區/背景工作進程中執行。 但因為 WCF 和 IIS 6.0 都使用核心模式 HTTP 堆疊（HTTP.SYS），所以 IIS 6.0 可以與在同一部電腦上執行的其他自我裝載 WCF 服務共用埠80，而不像 IIS 5.1。
+ 請注意，IIS 裝載的服務只能使用 HTTP 傳輸。 它在 IIS 5.1 版的實作方式已經為 [!INCLUDE[wxp](../../../includes/wxp-md.md)]帶來一些限制。 IIS 5.1 針對 WCF 服務所提供的訊息型啟用 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 會封鎖同一部電腦上任何其他自我裝載的 WCF 服務，使其無法使用埠80進行通訊。 WCF 服務可以在與其他應用程式相同的 AppDomain/應用程式集區/背景工作進程中執行，在 Windows Server 2003 上由 IIS 6.0 裝載。 但因為 WCF 和 IIS 6.0 都使用核心模式 HTTP 堆疊（HTTP.SYS），所以 IIS 6.0 可以與在同一部電腦上執行的其他自我裝載 WCF 服務共用埠80，而不像 IIS 5.1。
 
 ### <a name="windows-process-activation-service-was"></a>Windows Process Activation Service (WAS)
- Windows 進程啟用服務（WAS）是 Windows Vista 上也提供的 [!INCLUDE[lserver](../../../includes/lserver-md.md)] 的新進程啟用機制。 它會保留熟悉的 IIS 6.0 進程模型（應用程式集區和訊息型進程啟用）和裝載功能（例如快速失敗保護、健康情況監視及回收），但它會從啟用中移除對 HTTP 的相依性。結構. IIS 7.0 使用 WAS，透過 HTTP 完成以訊息為基礎的啟用。 其他 WCF 元件也會插入 WAS，以透過 WCF 支援的其他通訊協定（例如 TCP、MSMQ 和具名管道）來提供以訊息為基礎的啟用。 如此便可讓使用通訊協定的應用程式使用 IIS 功能，例如處理序回收、快速故障防護，以及只提供給以 HTTP 為基礎的應用程式使用的常見組態系統等。
+ Windows 進程啟用服務（WAS）是 windows Server 2008 的新進程啟用機制，也可以在 Windows Vista 上使用。 它會保留熟悉的 IIS 6.0 進程模型（應用程式集區和訊息型進程啟用）和裝載功能（例如快速失敗保護、健康情況監視及回收），但它會從啟用中移除對 HTTP 的相依性。結構. IIS 7.0 使用 WAS，透過 HTTP 完成以訊息為基礎的啟用。 其他 WCF 元件也會插入 WAS，以透過 WCF 支援的其他通訊協定（例如 TCP、MSMQ 和具名管道）來提供以訊息為基礎的啟用。 如此便可讓使用通訊協定的應用程式使用 IIS 功能，例如處理序回收、快速故障防護，以及只提供給以 HTTP 為基礎的應用程式使用的常見組態系統等。
 
  這個裝載選項要求必須正確設定 WAS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 如需如何設定 WAS 裝載的詳細資訊，請參閱[如何：在 was 中裝載 WCF 服務](./feature-details/how-to-host-a-wcf-service-in-was.md)。
 
@@ -54,11 +54,11 @@ WCF 提供統一的程式設計模型，用來建立服務導向的應用程式�
 
 |裝載環境|平台可用性|支援的傳輸|處理序和 AppDomain 回收|
 |-------------------------|---------------------------|--------------------------|-------------------------------------|
-|Managed 應用程式 (「自我裝載」)|[!INCLUDE[wxp](../../../includes/wxp-md.md)]、[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]、Windows Vista、<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|否|
-|Windows 服務 (之前稱為 NT 服務)|[!INCLUDE[wxp](../../../includes/wxp-md.md)]、[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]、Windows Vista、<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|否|
+|Managed 應用程式 (「自我裝載」)|[!INCLUDE[wxp](../../../includes/wxp-md.md)]、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|否|
+|Windows 服務 (之前稱為 NT 服務)|[!INCLUDE[wxp](../../../includes/wxp-md.md)]、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|否|
 |IIS 5.1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|是|
-|IIS 6.0|[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]|HTTP|是|
-|Windows Process Activation Service (WAS)|Windows Vista，[!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|是|
+|IIS 6.0|Windows Server 2003|HTTP|是|
+|Windows Process Activation Service (WAS)|Windows Vista、Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|是|
 
  從未受信任的主機執行服務或任何延伸項目都會破壞安全性，這點請您務必注意。 同時，請注意當您開啟模擬下的 <xref:System.ServiceModel.ServiceHost> 時，應用程式必須確定使用者尚未登出，例如，藉由快取使用者的 <xref:System.Security.Principal.WindowsIdentity> 來判斷。
 

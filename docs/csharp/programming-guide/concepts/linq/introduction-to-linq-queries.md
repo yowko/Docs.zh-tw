@@ -7,18 +7,18 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: e3439d2e0e0fb8f3126770ec7922f5ae180f781b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 74a6f2e1e9296551f4faf73a905b49d3e2e3687e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418255"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635713"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ 查詢簡介 (C#)
-「查詢」是指從資料來源中擷取資料的運算式。 查詢通常以特定的查詢語言來表示。 針對各種資料來源類型開發不同的語言已有一段時間，例如用於關聯式資料庫的 SQL，以及用於 XML 的 XQuery。 因此，開發人員在過去必須針對所需支援的每種資料來源類型或資料格式，學習新的查詢語言。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供一致的模型來處理各種資料來源和格式的資料，從而簡化此情況。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢中，您所處理的一定是物件。 您可以使用相同基本程式碼編寫模式來查詢和轉換 XML 文件、SQL 資料庫、ADO.NET 資料集、.NET 集合和任何其他提供 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者格式中的資料。  
+「查詢」是指從資料來源中擷取資料的運算式。 查詢通常以特定的查詢語言來表示。 針對各種資料來源類型開發不同的語言已有一段時間，例如用於關聯式資料庫的 SQL，以及用於 XML 的 XQuery。 因此，開發人員在過去必須針對所需支援的每種資料來源類型或資料格式，學習新的查詢語言。 LINQ 藉由提供一致的模型來處理各種資料來源和格式的資料，來簡化這種情況。 在 LINQ 查詢中，您一律會使用物件。 您可以使用相同的基本編碼模式來查詢和轉換 XML 檔、SQL 資料庫、ADO.NET 資料集、.NET 集合，以及可使用 LINQ 提供者的任何其他格式的資料。  
   
 ## <a name="three-parts-of-a-query-operation"></a>查詢作業的三個部分  
- 所有的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢作業都包含三個不同的動作：  
+ 所有的 LINQ 查詢作業都包含三個不同的動作：  
   
 1. 取得資料來源。  
   
@@ -30,14 +30,14 @@ ms.locfileid: "73418255"
   
  [!code-csharp[CsLINQGettingStarted#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#1)]  
   
- 下圖顯示完整的查詢作業。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中，查詢的執行與查詢本身不同；也就是說，只建立查詢變數並不能擷取任何資料。  
+ 下圖顯示完整的查詢作業。 在 LINQ 中，查詢的執行與查詢本身不同。 換句話說，您只要建立查詢變數，就不會取出任何資料。  
   
  ![完整 LINQ 查詢作業的圖表。](./media/introduction-to-linq-queries/linq-query-complete-operation.png)  
   
 ## <a name="the-data-source"></a>資料來源  
- 在上述範例中，因為資料來源來自陣列，意味著其也支援泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面。 這表示它可以使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 進行查詢。 查詢會在 `foreach` 陳述式中執行，而 `foreach` 則需要<xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>。 支援 <xref:System.Collections.Generic.IEnumerable%601> 或衍生介面的類型，例如泛型 <xref:System.Linq.IQueryable%601> 稱為*可查詢的類型*。  
+ 在上述範例中，因為資料來源來自陣列，意味著其也支援泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面。 這表示它可以使用 LINQ 進行查詢。 查詢會在 `foreach` 陳述式中執行，而 `foreach` 則需要<xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>。 支援 <xref:System.Collections.Generic.IEnumerable%601> 或衍生介面的類型，例如泛型 <xref:System.Linq.IQueryable%601> 稱為*可查詢的類型*。  
   
- 可查詢型別不需要進行修改或特殊處理，就可以當成 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 資料來源。 如果來源資料還不是記憶體中的可查詢型別，[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者必須將它表示為可查詢型別。 例如 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會將 XML 文件載入可查詢的 <xref:System.Xml.Linq.XElement> 類型：  
+ 可查詢的類型不需要修改或特殊處理，就能做為 LINQ 資料來源。 如果來源資料還不是記憶體中的可查詢型別，LINQ 提供者就必須將其表示為。 例如 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會將 XML 文件載入可查詢的 <xref:System.Xml.Linq.XElement> 類型：  
   
  [!code-csharp[CsLINQGettingStarted#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#2)]  
   
@@ -53,15 +53,15 @@ IQueryable<Customer> custQuery =
     select cust;  
 ```  
   
- 如需如何建立特定資料來源類型的詳細資訊，請參閱各種 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者的文件。 但基本的規則十分清楚：任何能夠支援泛型 <xref:System.Collections.Generic.IEnumerable%601>介面，或由其繼承而來之介面的物件，都可以是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 資料來源。  
+ 如需有關如何建立特定資料來源類型的詳細資訊，請參閱各種 LINQ 提供者的檔。 不過，基本規則非常簡單： LINQ 資料來源是支援泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面的任何物件，或繼承自它的介面。  
   
 > [!NOTE]
-> 這些類型 (例如 <xref:System.Collections.ArrayList>) 若支援非泛型 <xref:System.Collections.IEnumerable> 介面，也可用為 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 資料來源。 如需詳細資訊，請參閱[如何：使用 LINQ 查詢 ArrayList (C#)](./how-to-query-an-arraylist-with-linq.md)。  
+> 支援非泛型 <xref:System.Collections.IEnumerable> 介面的類型（例如 <xref:System.Collections.ArrayList>）也可以當做 LINQ 資料來源使用。 如需詳細資訊，請參閱[如何使用 LINQ 查詢 ArrayList （C#）](./how-to-query-an-arraylist-with-linq.md)。  
   
 ## <a name="query"></a> 查詢  
  查詢可指定要從一或多個資料來源擷取的資訊。 查詢也可選擇性地指定該項資訊傳回之前應該如何排序、分組和成形。 查詢是儲存在查詢變數中，並以查詢運算式初始化。 為了簡化撰寫查詢的作業，C# 已引進新的查詢語法。  
   
- 上述範例中的查詢會傳回整數陣列中的所有偶數。 此查詢運算式包含三個子句︰`from`、`where` 和 `select` （如果您熟悉 SQL，您會注意到，子句的順序會從 SQL 中的順序反轉）。`from` 子句會指定資料來源、`where` 子句會套用篩選準則，而 `select` 子句會指定傳回的元素類型。 [LINQ 查詢運算式](../../../linq/index.md)一節中將詳細討論這些查詢子句和其他查詢子句。 但目前的重點是在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中，查詢變數本身不會採取任何動作，而且不會傳回任何資料。 它只會儲存稍後執行查詢以產生結果時所需要的資訊。 如需如何在幕後建構查詢的詳細資訊，請參閱[標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)。  
+ 上述範例中的查詢會傳回整數陣列中的所有偶數。 此查詢運算式包含三個子句︰`from`、`where` 和 `select` （如果您熟悉 SQL，您會注意到，子句的順序會從 SQL 中的順序反轉）。`from` 子句會指定資料來源、`where` 子句會套用篩選準則，而 `select` 子句會指定傳回的元素類型。 [LINQ 查詢運算式](../../../linq/index.md)一節中將詳細討論這些查詢子句和其他查詢子句。 現在，重點在於，在 LINQ 中，查詢變數本身不會採取任何動作，也不會傳回任何資料。 它只會儲存稍後執行查詢以產生結果時所需要的資訊。 如需如何在幕後建構查詢的詳細資訊，請參閱[標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)。  
   
 > [!NOTE]
 > 查詢也可以使用方法語法來表示。 如需詳細資訊，請參閱 [LINQ 中的查詢語法及方法語法](./query-syntax-and-method-syntax-in-linq.md)。  

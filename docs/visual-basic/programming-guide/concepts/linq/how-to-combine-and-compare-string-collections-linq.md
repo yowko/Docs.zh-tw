@@ -2,18 +2,18 @@
 title: 如何：合併和比較字串集合 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: e9bc8a5f88585bd8625633c54796a1c658c7a7af
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2df5db16e51e8f9de8a8e3506eb1f7b737065a14
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348430"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337563"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>如何：合併和比較字串集合（LINQ）（Visual Basic）
 
 本例示範如何合併包含文字行的檔案，然後排序結果。 具體來說，它會示範如何在兩組文字行上執行簡單的串連、等位和交集。
 
-### <a name="to-set-up-the-project-and-the-text-files"></a>設定專案和文字檔案
+## <a name="set-up-the-project-and-the-text-files"></a>設定專案和文字檔
 
 1. 將下列名稱複製到名為 names1.txt 的文字檔，並將它儲至專案資料夾：
 
@@ -163,9 +163,9 @@ End Class
 ' 2 total names in list
 ```
 
-## <a name="compiling-the-code"></a>編譯程式碼
+## <a name="compile-the-code"></a>編譯程式碼
 
-建立 VB.NET 主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
+建立 Visual Basic 主控台應用程式專案。 加入 System. Linq 命名空間的 `Imports` 語句。
 
 ## <a name="see-also"></a>請參閱
 

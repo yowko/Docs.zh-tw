@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: f6ffed3d9f0bf5e3dc5698d51276eb1db276993c
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: f1a24e34375e98d4bfb48c1e2fd84290e08f6eea
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837489"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544757"
 ---
 # <a name="analytic-tracing-overview"></a>分析追蹤的概觀
 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] 中的分析追蹤是一項高效能、低詳細等級的追蹤功能，設定於 Windows 事件追蹤 (ETW) 之上。 ETW 是在核心層級執行，可大幅降低追蹤作業的負荷。 它能有效率地緩衝使用者和核心模式的事件，並且允許動態啟用記錄，而不需重新啟動服務。 事件發出和接收之後，即可在事件記錄檔中使用追蹤資料。  
   
  如需 ETW 的詳細資訊，請參閱[使用 Etw 改善偵錯工具和效能微調](https://go.microsoft.com/fwlink/?LinkId=164781)。  
   
- 除了使用 Windows 系統、安全性和應用程式事件記錄檔來分析應用程式之外，Windows Vista 和 [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] 也會在 [應用程式和服務記錄檔] 最上層節點下引進額外的記錄檔。 這些新記錄檔的目的在於儲存特定應用程式或特定元件的事件，而非影響整個系統的全域事件 (例如安全性事件記錄檔可能會記錄的事件類型)。 [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 會將 WCF 追蹤事件、WCF 訊息記錄，以及 [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] 追蹤記錄的記錄，統一併相互關聯至應用程式和服務記錄檔。  
+ 除了使用 Windows 系統、安全性和應用程式事件記錄檔來分析應用程式之外，Windows Vista 和 Windows Server 2008 也會在 [應用程式和服務記錄檔最上層] 節點底下引進額外的記錄檔。 這些新記錄檔的目的在於儲存特定應用程式或特定元件的事件，而非影響整個系統的全域事件 (例如安全性事件記錄檔可能會記錄的事件類型)。 [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 會將 WCF 追蹤事件、WCF 訊息記錄，以及 [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] 追蹤記錄的記錄，統一併相互關聯至應用程式和服務記錄檔。  
   
 ## <a name="concepts-and-capabilities"></a>概念和功能  
  下列概念和功能適用于 WCF 分析追蹤。  

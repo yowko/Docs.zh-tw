@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005701"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636207"
 ---
 # <a name="controls-by-category"></a>按分類區隔控制項
 Windows Presentation Foundation （WPF）控制項可以邏輯方式分組成數個類別。 從這些分類可看出哪些控制項有類似的使用模式或功能，方便您視情況選擇適合的控制項。  
@@ -78,7 +78,7 @@ Windows Presentation Foundation （WPF）控制項可以邏輯方式分組成數
   
 - <xref:System.Windows.Controls.DatePicker>  
   
-## <a name="menus"></a>功能表  
+## <a name="menus"></a>Menus  
  功能表可用來將相關動作分組或提供內容協助。  
   
 - <xref:System.Windows.Controls.ContextMenu>  
@@ -100,7 +100,7 @@ Windows Presentation Foundation （WPF）控制項可以邏輯方式分組成數
   
 - <xref:System.Windows.Controls.Slider>  
   
-## <a name="navigation"></a>巡覽  
+## <a name="navigation"></a>瀏覽  
  瀏覽控制項可藉由建立目標框架或索引標籤式應用程式外觀，加強或延伸應用程式瀏覽操作。  
   
 - <xref:System.Windows.Controls.Frame>  
@@ -140,7 +140,7 @@ Windows Presentation Foundation （WPF）控制項可以邏輯方式分組成數
 - <xref:System.Windows.Controls.ToolTip>  
   
 ## <a name="documents"></a>文件  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 包含幾個專用於檢視文件的控制項。 這些控制項會根據目標使用者的情況，提供最佳的閱讀體驗。  
+ WPF 包含數個用來查看檔的特製化控制項。 這些控制項會根據目標使用者的情況，提供最佳的閱讀體驗。  
   
 - <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -152,7 +152,7 @@ Windows Presentation Foundation （WPF）控制項可以邏輯方式分組成數
   
 - <xref:System.Windows.Controls.StickyNoteControl>  
   
-## <a name="input"></a>Input  
+## <a name="input"></a>輸入  
  輸入控制項可讓使用者輸入文字和其他內容。  
   
 - <xref:System.Windows.Controls.TextBox>  
@@ -162,7 +162,7 @@ Windows Presentation Foundation （WPF）控制項可以邏輯方式分組成數
 - <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="media"></a>媒體  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 包含裝載音訊和視訊內容的整合支援，以及大多數常見影像格式的「轉碼器」。  
+ WPF 包含同時裝載音訊和影片內容的整合支援，以及適用于最常用影像格式的 [編解碼器]。  
   
 - <xref:System.Windows.Controls.Image>  
   
@@ -177,6 +177,6 @@ Windows Presentation Foundation （WPF）控制項可以邏輯方式分組成數
   
 - <xref:System.Windows.Controls.InkPresenter>  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [控制項程式庫](control-library.md)

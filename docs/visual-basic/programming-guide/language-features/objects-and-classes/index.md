@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: d45aca8b137f56cf058b63b9286504259c0005eb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 589b0b362cc25fd10e2780fd541cf9f7cfb546a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346708"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344644"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic 中的物件和類別
 
@@ -121,7 +121,7 @@ safetyTimer.Start()
 
 如需詳細資訊，請參閱[程序](../../../../visual-basic/programming-guide/language-features/procedures/index.md)。
 
-### <a name="events"></a>Events
+### <a name="events"></a>「事件」
 
 事件是物件所識別的動作 (例如按一下滑鼠按鈕或按下按鍵)，而您可以撰寫程式碼來回應。 事件可能因使用者動作或程式碼而發生，或由系統所導致。 您可以將對事件發出訊號的程式碼視為「引發」事件，而將回應事件的程式碼視為「處理」它。
 
@@ -239,7 +239,7 @@ End Sub
 
 衍生的類別會繼承來自其基礎類別的成員，可讓您在類別階層中進行時增加複雜度。 如需詳細資訊，請參閱[繼承的基本概念](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)。
 
-### <a name="compiling-the-code"></a>編譯程式碼
+### <a name="compile-the-code"></a>編譯程式碼
 
 確定編譯器可以存取您想要從中衍生新類別的類別。 這可能表示要提供它的完整名稱，如同在上述範例中，或在 [Imports 陳述式 (.NET 命名空間和型別)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)中識別它的命名空間。 如果類別位於不同專案，則您可能需要加入對該專案的參考。 如需詳細資訊，請參閱[管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)。
 
@@ -262,13 +262,13 @@ End Sub
 [繼承的基本概念](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)\
 涵蓋繼承修飾詞，覆寫方法和屬性、MyClass 及 MyBase。
 
-[物件存留期：如何建立和終結物件](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)\
+[物件存留期：物件的建立和終結](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)\
 討論類別執行個體的建立與處置。
 
 [匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)\
 描述如何建立和使用匿名型別，讓您不需撰寫資料型別的類別定義，就能建立物件。
 
-[物件初始化運算式：](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\ 命名和匿名型別
+[物件初始設定式：具名和匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\
 討論物件初始設定式，它們可用於透過使用單一運算式來建立具名和匿名型別的執行個體。
 
 [如何：在匿名型別宣告中推斷屬性名稱和類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\

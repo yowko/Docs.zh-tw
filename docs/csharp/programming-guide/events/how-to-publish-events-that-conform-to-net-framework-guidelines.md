@@ -1,18 +1,18 @@
 ---
-title: 作法：發行符合 .NET Framework 方針的事件 - C# 程式設計手冊
+title: 如何發行符合 .NET Framework 方針的事件-程式C#設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 8cf0f57caad41da0a29b935029731260154a2dc7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fe8334d4a6aadc8e2d1f1f5d60c96d4e8689b67f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924028"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346326"
 ---
-# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>作法：發行符合 .NET Framework 方針的事件 (C# 程式設計手冊)
+# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>如何發行符合 .NET Framework 方針的事件（C#程式設計手冊）
 下列程序示範如何將遵循標準 .NET Framework 模式的事件，新增至您的類別和結構。 .NET Framework 類別庫中的所有事件都是以 <xref:System.EventHandler> 委派為基礎，其定義如下：  
   
 ```csharp  
@@ -26,7 +26,7 @@ public delegate void EventHandler(object sender, EventArgs e);
   
 ### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>發行以 EventHandler 模式為基礎的事件  
   
-1. (如果您不需要傳送事件的自訂資料，請跳過此步驟，並前往步驟 3a。)以發行者和訂閱者類別可見的範圍，宣告自訂資料的類別。 然後新增必要的成員來保存自訂事件資料。 在此範例中，會傳回一個簡單的字串。  
+1. （如果您不需要隨事件傳送自訂資料，請略過此步驟並移至步驟3a）。針對您的「發行者」和「訂閱者」類別顯示的範圍，宣告自訂資料的類別。 然後新增必要的成員來保存自訂事件資料。 在此範例中，會傳回一個簡單的字串。  
   
     ```csharp  
     public class CustomEventArgs : EventArgs  
@@ -43,7 +43,7 @@ public delegate void EventHandler(object sender, EventArgs e);
     }  
     ```  
   
-2. (如果您要使用 <xref:System.EventHandler%601> 的泛型版本，請跳過此步驟。)在發行類別中宣告委派。 指定名稱並以 *EventHandler* 作為結尾。 第二個參數指定自訂 EventArgs 類型。  
+2. （如果您使用的是泛型版本的 <xref:System.EventHandler%601>，請略過此步驟）。在發行類別中宣告委派。 指定名稱並以 *EventHandler* 作為結尾。 第二個參數指定自訂 EventArgs 類型。  
   
     ```csharp  
     public delegate void CustomEventHandler(object sender, CustomEventArgs a);  
@@ -74,7 +74,7 @@ public delegate void EventHandler(object sender, EventArgs e);
   
  [!code-csharp[csProgGuideEvents#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#2)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Delegate>
 - [C# 程式設計指南](../index.md)

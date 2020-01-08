@@ -2,12 +2,12 @@
 title: 如何：使用運算式樹狀架構建置動態查詢
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: bf15880c1988ac5639dd80ba56d330372dc3803b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 616aa3eba1e07a92983bb5d2048a9dbae936e77c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344708"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346057"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>如何：使用運算式樹狀架構建立動態查詢（Visual Basic）
 
@@ -23,7 +23,7 @@ ms.locfileid: "74344708"
 
 `companies.Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16).OrderBy(Function(company) company)`
 
-<xref:System.Linq.Expressions> 命名空間中的 Factory 方法可用於建立運算式樹狀架構，來代表組成整體查詢的運算式。 代表標準查詢運算子方法呼叫的運算式會參考這些方法的 <xref:System.Linq.Queryable> 實作。 最後一個運算式樹狀結構會傳遞至 <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 資料來源之提供者的 `IQueryable` 實作，以建立類型為 `IQueryable` 的可執行查詢。 藉由列舉查詢變數可取得結果。
+<xref:System.Linq.Expressions> 命名空間中的 Factory 方法可用於建立運算式樹狀架構，來代表組成整體查詢的運算式。 代表標準查詢運算子方法呼叫的運算式會參考這些方法的 <xref:System.Linq.Queryable> 實作。 最後一個運算式樹狀結構會傳遞至 `IQueryable` 資料來源之提供者的 <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 實作，以建立類型為 `IQueryable` 的可執行查詢。 藉由列舉查詢變數可取得結果。
 
 ```vb
 ' Add an Imports statement for System.Linq.Expressions.
@@ -101,7 +101,7 @@ Next
 
 此程式碼在傳遞至 `Queryable.Where` 方法的述詞中，使用固定數目的運算式。 不過，您可以撰寫一個應用程式，以根據使用者輸入合併可變數目的述詞運算式。 您也可以根據使用者輸入，更改查詢中所呼叫的標準查詢運算子。
 
-## <a name="compiling-the-code"></a>編譯程式碼
+## <a name="compile-the-code"></a>編譯程式碼
 
 - 建立新的**主控台應用程式**專案。
 
@@ -109,7 +109,7 @@ Next
 
 - 複製範例中的程式碼，並將它貼入 `Main` `Sub` 程式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [運算式樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [如何：執行運算式樹狀架構（Visual Basic）](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)

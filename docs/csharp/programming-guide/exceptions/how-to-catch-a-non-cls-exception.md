@@ -1,18 +1,18 @@
 ---
-title: 作法：攔截非 CLS 例外狀況
+title: 如何攔截非 CLS 例外狀況
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-ms.openlocfilehash: d0ba212610372a89c2a3b4c6a249c6d8a02fa507
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 635cf0a9142f56dea4b2722fbf3f3eda505d85ee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590292"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346281"
 ---
-# <a name="how-to-catch-a-non-cls-exception"></a>作法：攔截非 CLS 例外狀況
-包括 C++/CLI 在內的某些 .NET 語言，允許物件擲回非衍生自 <xref:System.Exception> 的例外狀況。 這類例外狀況稱之為「非 CLS 例外狀況」  或「非例外狀況」  。 在 C# 中無法擲回非 CLS 例外狀況，但有兩種方式可以攔截它們︰  
+# <a name="how-to-catch-a-non-cls-exception"></a>如何攔截非 CLS 例外狀況
+包括 C++/CLI 在內的某些 .NET 語言，允許物件擲回非衍生自 <xref:System.Exception> 的例外狀況。 這類例外狀況稱之為「非 CLS 例外狀況」或「非例外狀況」。 在 C# 中無法擲回非 CLS 例外狀況，但有兩種方式可以攔截它們︰  
   
 - 在 `catch (RuntimeWrappedException e)` 區塊內。
   
@@ -49,7 +49,7 @@ catch (RuntimeWrappedException e)
 }
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Runtime.CompilerServices.RuntimeWrappedException>
 - [例外狀況和例外狀況處理](./index.md)

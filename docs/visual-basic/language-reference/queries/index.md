@@ -5,17 +5,17 @@ helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: a4a926d089a8bec1abaa47404f6c9112687e6df2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d23e18527fadce031f56bed3ae4c5a5c17b12e18
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350446"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636727"
 ---
 # <a name="queries-visual-basic"></a>查詢 (Visual Basic)
-Visual Basic 可讓您在程式碼中建立 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 運算式。  
+Visual Basic 可讓您在程式碼中建立語言整合式查詢（LINQ）運算式。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
  描述 `Aggregate` 子句，它會將一個或多個彙總函式套用至集合。  
   
@@ -58,7 +58,7 @@ Visual Basic 可讓您在程式碼中建立 [!INCLUDE[vbteclinqext](~/includes/v
  [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)  
  描述 `Where` 子句，它會指定查詢的篩選準則。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

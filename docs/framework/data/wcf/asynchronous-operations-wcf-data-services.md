@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: 3e8d3ec46362751ea8bbfe5120e35a050d0e7a6c
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 5191f3d03facaafc64f6df494ff90cd0ce1c1988
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569367"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346188"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>非同步作業 (WCF 資料服務)
 相較於在內部網路中執行的應用程式，Web 應用程式必須可容納用戶端與伺服器之間更高的延遲。 若要優化應用程式的效能和使用者體驗，建議您在透過 Web 存取 WCF Data Services 伺服器時，使用 <xref:System.Data.Services.Client.DataServiceContext> 和 <xref:System.Data.Services.Client.DataServiceQuery%601> 類別的非同步方法。  
@@ -21,7 +21,7 @@ ms.locfileid: "74569367"
  您可以在 <xref:System.Data.Services.Client.DataServiceContext> 上使用一對方法，並分別以*Begin*和*End*開頭的 <xref:System.Data.Services.Client.DataServiceQuery%601> 類別來執行非同步作業。 *Begin*方法會註冊服務在作業完成時所呼叫的委派。 應該在註冊的委派中呼叫*End*方法，以處理已完成之作業的回呼。 當您呼叫*End*方法來完成非同步作業時，您必須從用來開始作業的相同 <xref:System.Data.Services.Client.DataServiceQuery%601> 或 <xref:System.Data.Services.Client.DataServiceContext> 實例執行此作業。 每個*Begin*方法都會採用可將狀態物件傳遞至回呼的 `state` 參數。 此狀態物件會從回呼提供的 <xref:System.IAsyncResult> 中抓取，並用於呼叫對應的*結束*方法以完成非同步作業。 例如，如果您在執行個體上呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法，提供 `state` 執行個體做為 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 參數時，<xref:System.Data.Services.Client.DataServiceQuery%601> 會傳回同一個 <xref:System.IAsyncResult> 執行個體。 接著會使用這個 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 方法，以完成查詢作業。 如需詳細資訊，請參閱[如何：執行非同步資料服務查詢](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)。  
   
 > [!NOTE]
-> .NET Framework for Silverlight 中提供的用戶端程式庫只支援非同步作業。 如需詳細資訊，請參閱[WCF Data Services （Silverlight）](https://go.microsoft.com/fwlink/?LinkID=143149)。  
+> .NET Framework for Silverlight 中提供的用戶端程式庫只支援非同步作業。 如需詳細資訊，請參閱[WCF Data Services （Silverlight）](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))。  
   
  .NET Framework 用戶端程式庫支援下列非同步作業：  
   

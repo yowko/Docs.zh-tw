@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 30475b637202d3b614ac968897e467956bc78646
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: 7bfaed94c055a6c5f3b1de747be66c49dd9eb915
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970513"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635869"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>具名和選擇性引數 (C# 程式設計手冊)
 C# 4 引進具名和選擇性引數。 「具名引數」可讓您使用參數的名稱而非使用參數清單中的參數位置來關聯引數，指定特定參數的引數。 「選擇性引數」可讓您省略某些參數的引數。 這兩種技巧都可以搭配方法、索引子、建構函式和委派使用。  
@@ -70,7 +70,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」可讓您使用參數�
   
 - 常數運算式；  
   
-- `new ValType()` 形式的運算式，其中 `ValType` 是實值型別，例如 [enum](../../language-reference/keywords/enum.md) 或 [struct](./structs.md)；  
+- `new ValType()` 形式的運算式，其中 `ValType` 是實值型別，例如 [enum](../../language-reference/builtin-types/enum.md) 或 [struct](structs.md)；  
   
 - [default(ValType)](../../language-reference/operators/default.md) 形式的運算式，其中 `ValType` 是實值型別。  
   
@@ -113,7 +113,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」可讓您使用參數�
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- 如需詳細資訊和範例，請參閱[如何在 Office 程式設計中使用命名和選擇性引數](./how-to-use-named-and-optional-arguments-in-office-programming.md)和[如何：使用視覺C#功能存取 office Interop 物件](../interop/how-to-access-office-onterop-objects.md)。  
+ 如需詳細資訊和範例，請參閱[如何在 Office 程式設計中使用命名和選擇性引數](./how-to-use-named-and-optional-arguments-in-office-programming.md)和[如何使用C#功能存取 Office interop 物件](../interop/how-to-access-office-onterop-objects.md)。  
   
 ## <a name="overload-resolution"></a>Overload Resolution  
  使用具名和選擇性引數會以下列方式影響多載解析︰  
@@ -129,7 +129,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」可讓您使用參數�
   
 ## <a name="see-also"></a>請參閱
 
-- [如何：在 Office 程式設計中使用已命名和選擇性的引數](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [如何在 Office 程式設計中使用命名和選擇性引數](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [使用動態型別](../types/using-type-dynamic.md)
 - [使用建構函式](./using-constructors.md)
 - [使用索引子](../indexers/using-indexers.md)

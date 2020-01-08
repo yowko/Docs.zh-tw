@@ -11,12 +11,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: 9ec4b4c07910100dd02cc86e882b44aa7dbd2ced
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 455c839702b90738ec5aea37c1b09d72eba42ff4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346043"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347883"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>如何：使用定義運算子的類別 (Visual Basic)
 如果您使用的類別或結構定義自己的運算子，您可以從 Visual Basic 存取這些運算子。  
@@ -32,7 +32,7 @@ ms.locfileid: "74346043"
   
  <xref:System.Data.SqlTypes.SqlString> 結構定義從 `String` 到 <xref:System.Data.SqlTypes.SqlString> 的轉換運算子（[CType 函數](../../../../visual-basic/language-reference/functions/ctype-function.md)），另一個則是從 <xref:System.Data.SqlTypes.SqlString> 到 `String`。 將 `title` 指派給 `jobTitle` 的語句會使用第一個運算子，而 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 函式呼叫會使用第二個運算子。  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
+## <a name="compile-the-code"></a>編譯程式碼  
  請確定您所使用的類別或結構會定義您想要使用的運算子。 請勿假設類別或結構已定義每個可用於多載的運算子。 如需可用的運算子清單，請參閱[Operator 語句](../../../../visual-basic/language-reference/statements/operator-statement.md)。  
   
  在原始程式檔的開頭包含 SQL 字串的適當 `Imports` 語句（在此案例中為 <xref:System.Data.SqlTypes>）。  

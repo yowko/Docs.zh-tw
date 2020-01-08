@@ -3,15 +3,15 @@ title: 使用 ML.NET CLI 分析情感
 description: 從範例資料集自動產生 ML 模型和相關的 C# 程式碼
 author: cesardl
 ms.author: cesardl
-ms.date: 04/24/2019
+ms.date: 12/23/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: bea5cd1b42773e62601edbc113b2155ff78cf884
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: cc063eccfafa915908e66815b5b7535c66636716
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977403"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636934"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>使用 ML.NET CLI 分析情感
 
@@ -48,14 +48,14 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 1. 下載 [UCI 情感標記句子資料集 ZIP 檔案 (請參閱下列注意中的引文)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)，然後將它解壓縮到您選擇的任何資料夾。
 
     > [!NOTE]
-    > 此教學課程所使用的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人， KDD 2015，並裝載于 UCI Machine Learning 存放庫-Dua、d. 和 Karra Taniskidou，E. （2017）。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml ]。 Irvine，CA：加州大學，學校資訊與電腦科學。
+    > 此教學課程所使用的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人， KDD 2015，並裝載于 UCI Machine Learning 存放庫-Dua、d. 和 Karra Taniskidou，E. （2017）。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml ]。 Irvine, CA: University of California, School of Information and Computer Science.
 
 2. 將 `yelp_labelled.txt` 檔案複製到您先前建立的任何資料夾 (例如 `/cli-test`)。
 
-3. 開啟您慣用的命令提示字元，然後移至您複製資料集檔案的目標資料夾。 例如:
+3. 開啟您慣用的命令提示字元，然後移至您複製資料集檔案的目標資料夾。 例如：
 
     ```console
-    > cd /cli-test
+    cd /cli-test
     ```
 
     您可以使用 Visual Studio Code 之類的任何文字編輯器，來開啟並探索 `yelp_labelled.txt` 資料集檔案。 您會看到結構如下：
@@ -66,7 +66,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
         | 文字 (資料行索引 0) | 標籤 (資料行索引 1)|
         |--------------------------|-------|
-        | Wow .。。就愛了。 | 1 |
+        | 哇... 愛這地方。 | 1 |
         | 不夠酥脆。 | 0 |
         | 不好吃且口感很糟。 | 0 |
         | ...更多文字資料列... | ...(1 或 0)... |
@@ -83,7 +83,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 1. 執行下列 ML.NET CLI 命令：
 
     ```console
-    > mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
+    mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
     ```
 
     此命令會執行 **`mlnet auto-train` 命令**：
@@ -205,10 +205,10 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
     從命令提示字元鍵入下列命令來執行主控台應用程式：
 
      ```bash
-     > cd SampleBinaryClassification
-     > cd SampleBinaryClassification.ConsoleApp
+     cd SampleBinaryClassification
+     cd SampleBinaryClassification.ConsoleApp
 
-     > dotnet run
+     dotnet run
      ```
 
     ![PowerShell 中的 ML.NET CLI auto-train](./media/mlnet-cli/sample-cli-prediction-execution-bash.png))
@@ -248,17 +248,6 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
 值得將教學課程中所選擇演算法和管線設定與 CLI 工具產生的程式碼進行比較。 根據您花在逐一查看和搜尋更佳模型的時間，所選擇的演算法及其特定超參數和管線設定可能會不同。
 
-## <a name="see-also"></a>請參閱
-
-- [使用 ML.NET CLI 自動化模型定型](../automate-training-with-cli.md)
-- [教學課程：在可調整的 ASP.NET Core web 應用程式和 WebAPIs 上執行 ML.NET 模型](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
-- [範例： ASP.NET Core WebAPI 上可調整的 ML.NET 模型](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
-- [ML.NET CLI auto-train 命令參考指南](../reference/ml-net-cli-reference.md)
-- [如何安裝 ML.NET 命令列介面 (CLI) 工具](../how-to-guides/install-ml-net-cli.md)
-- [ML.NET CLI 中的遙測](../resources/ml-net-cli-telemetry.md)
-
-## <a name="next-steps"></a>後續步驟
-
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
 >
@@ -268,5 +257,10 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 > - 了解為了執行模型所產生的 C# 程式碼 (用於終端使用者應用程式的程式碼)
 > - 探索為了用來定型「最佳品質」模型所產生的 C# 程式碼 (適用於學習目的)
 
-> [!div class="nextstepaction"]
-> [使用 ML.NET CLI 自動化模型定型](../automate-training-with-cli.md)
+## <a name="see-also"></a>請參閱
+
+- [使用 ML.NET CLI 自動化模型定型](../automate-training-with-cli.md)
+- [教學課程：在可調整的 ASP.NET Core web 應用程式和 WebAPIs 上執行 ML.NET 模型](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
+- [範例： ASP.NET Core WebAPI 上可調整的 ML.NET 模型](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
+- [ML.NET CLI auto-train 命令參考指南](../reference/ml-net-cli-reference.md)
+- [ML.NET CLI 中的遙測](../resources/ml-net-cli-telemetry.md)

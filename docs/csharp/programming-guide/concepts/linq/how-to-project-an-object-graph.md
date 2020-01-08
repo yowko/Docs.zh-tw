@@ -1,19 +1,19 @@
 ---
-title: 作法：投影物件圖形 (C#)
+title: 如何投影物件圖形（C#）
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: b00e350dd5bf00a5939547b3ed1651b2a6645197
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 93fabe26fd3d9ff0b61d8b8dfc33425715452c88
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253487"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635687"
 ---
-# <a name="how-to-project-an-object-graph-c"></a>作法：投影物件圖形 (C#)
+# <a name="how-to-project-an-object-graph-c"></a>如何投影物件圖形（C#）
 本主題說明如何從 XML 規劃或填入物件圖形。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會填入具有 `Address`、`PurchaseOrder` 和 `PurchaseOrderItem` 類別的物件圖形，這些類別來自[XML 範例檔：典型訂購單 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML 文件。  
+ 下列程式碼會填入具有 `Address`、`PurchaseOrder` 及來自[範例 XML 檔：典型採購訂單 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML 文件之 `PurchaseOrderItem` 類別的物件圖形。  
   
 ```csharp  
 class Address  
@@ -214,7 +214,7 @@ class Program {
 }  
 ```  
   
- 在此範例中，[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的結果會當作 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 傳回。 `PurchaseOrder` 類別中的項目是 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 類型。 程式碼使用 <xref:System.Linq.Enumerable.ToList%2A> 擴充方法以從查詢結果建立 <xref:System.Collections.Generic.List%601> 集合。  
+ 在此範例中，LINQ 查詢的結果會以 `PurchaseOrderItem`的 <xref:System.Collections.Generic.IEnumerable%601> 傳回。 `PurchaseOrder` 類別中的項目是 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 類型。 程式碼使用 <xref:System.Linq.Enumerable.ToList%2A> 擴充方法以從查詢結果建立 <xref:System.Collections.Generic.List%601> 集合。  
   
  這個範例會產生下列輸出：  
   
@@ -255,7 +255,7 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>

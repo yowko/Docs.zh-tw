@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: bf673195f06475daf8341fd17cd701b84a970b39
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 48536d8fba3f86c2883e48cd4e5cf9a3a8752fcd
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740674"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636311"
 ---
 # <a name="building-a-wpf-application-wpf"></a>建置 WPF 應用程式 (WPF)
 
-Windows Presentation Foundation （WPF）應用程式可以建立為 .NET Framework 可執行檔（.exe）、程式庫（.dll），或這兩種元件類型的組合。 本主題介紹如何建置 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式，並說明建置流程中的主要步驟。
+Windows Presentation Foundation （WPF）應用程式可以建立為 .NET Framework 可執行檔（.exe）、程式庫（.dll），或這兩種元件類型的組合。 本主題將介紹如何建立 WPF 應用程式，並說明組建流程中的主要步驟。
 
 <a name="Building_a_WPF_Application_using_Command_Line"></a>
 
@@ -28,13 +28,13 @@ WPF 應用程式可透過下列方式編譯：
 
 - Microsoft Build Engine (MSBuild)。 除了程式碼和 XAML 檔案，應用程式還必須包含 MSBuild 專案檔。 如需詳細資訊，請參閱＜MSBuild＞。
 
-- Visual Studio。 Visual Studio 是整合式開發環境，可使用 MSBuild 編譯 WPF 應用程式，並包含用於建立 UI 的視覺化設計工具。 如需詳細資訊，請參閱[在 Visual Studio 中](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)使用 Visual Studio 和設計 XAML 來[撰寫和管理程式碼](/visualstudio/ide/index-writing-code)。
+- Visual Studio. Visual Studio 是整合式開發環境，可使用 MSBuild 編譯 WPF 應用程式，並包含用於建立 UI 的視覺化設計工具。 如需詳細資訊，請參閱[在 Visual Studio 中](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)使用 Visual Studio 和設計 XAML 來[撰寫和管理程式碼](/visualstudio/ide/index-writing-code)。
 
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>
 
 ## <a name="wpf-build-pipeline"></a>WPF 組建管線
 
-建置 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 專案時，會叫用特定語言和特定 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 之目標的組合。 執行這些目標的程序稱為組建管線，下圖說明主要步驟。
+建立 WPF 專案時，會叫用語言特定和 WPF 特定目標的組合。 執行這些目標的程序稱為組建管線，下圖說明主要步驟。
 
 ![WPF 組建進程](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")
 
@@ -48,7 +48,7 @@ WPF 應用程式可透過下列方式編譯：
 
 - Windows SDK 目錄。
 
-- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 參考組件的位置。
+- WPF 參考元件的位置。
 
 - 組件搜尋路徑的屬性。
 
@@ -58,7 +58,7 @@ MSBuild 搜尋元件的第一個位置是參考元件目錄（%ProgramFiles%\Ref
 
 ### <a name="resolving-references"></a>解析參考
 
-建置流程會找出並繫結建置應用程式專案所需的組件。 此邏輯包含在 `ResolveAssemblyReference` 工作中。 在專案檔中宣告為 `Reference` 的所有組件會連同有關系統上已安裝組件之搜尋路徑和中繼資料的資訊，一起提供給工作。 此工作會尋找組件，然後使用已安裝組件的中繼資料，篩選出不需要顯示在輸出資訊清單中的核心 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 組件。 這樣做是為了避免在 ClickOnce 資訊清單中出現多餘的資訊。 例如，因為 PresentationFramework 可以被視為代表建置於上的應用程式和 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，而且所有 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 元件都存在於已安裝 .NET Framework 之每部電腦上的相同位置，所以會有不需要在資訊清單中包含所有 .NET Framework 參考元件的所有資訊。
+建置流程會找出並繫結建置應用程式專案所需的組件。 此邏輯包含在 `ResolveAssemblyReference` 工作中。 在專案檔中宣告為 `Reference` 的所有組件會連同有關系統上已安裝組件之搜尋路徑和中繼資料的資訊，一起提供給工作。 此工作會查詢元件，並使用已安裝元件的中繼資料，篩選出不需要在輸出資訊清單中顯示的核心 WPF 元件。 這樣做是為了避免在 ClickOnce 資訊清單中出現多餘的資訊。 例如，由於 PresentationFramework 可視為建立在上的應用程式和 WPF 的代表，而且所有的 WPF 元件都存在於安裝 .NET Framework 的每部電腦上的相同位置，因此不需要全部包含資訊清單中所有 .NET Framework 參考元件的資訊。
 
 <a name="Markup_Compilation___Pass_1"></a>
 
@@ -142,13 +142,13 @@ End Sub
 
 這些資訊清單檔案一律會針對 Xbap 建立。 若是已安裝的應用程式，除非將專案檔中的 `GenerateManifests` 屬性指定為 `true` 值，否則不會建立這些檔案。
 
-Xbap 會在指派給一般網際網路區域應用程式的許可權之外，取得兩個額外的許可權： <xref:System.Security.Permissions.WebBrowserPermission> 和 <xref:System.Security.Permissions.MediaPermission>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 建置系統會在應用程式資訊清單中宣告這些權限。
+Xbap 會在指派給一般網際網路區域應用程式的許可權之外，取得兩個額外的許可權： <xref:System.Security.Permissions.WebBrowserPermission> 和 <xref:System.Security.Permissions.MediaPermission>。 WPF 組建系統會在應用程式資訊清單中宣告這些許可權。
 
 <a name="Incremental_Build_Support"></a>
 
 ## <a name="incremental-build-support"></a>累加建置支援
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 建置系統提供累加建置支援。 該系統對於偵測標記或程式碼中所做的變更相當明確，而且只會編譯受變更影響的成品。 累加建置機制使用下列檔案：
+WPF 組建系統提供累加式組建的支援。 該系統對於偵測標記或程式碼中所做的變更相當明確，而且只會編譯受變更影響的成品。 累加建置機制使用下列檔案：
 
 - $(*組件名稱*)_MarkupCompiler.Cache 檔案，用於維護目前的編譯器狀態。
 

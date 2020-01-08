@@ -135,6 +135,8 @@
   href: attributes/
 - name: Framework 設計方針
   href: design-guidelines/
+- name: Microsoft.Data.Sqlite
+  href: data/sqlite/
 - name: XML 文件和資料
   href: data/xml/
 - name: 安全性

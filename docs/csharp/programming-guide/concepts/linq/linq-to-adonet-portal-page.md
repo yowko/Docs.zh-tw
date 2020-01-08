@@ -2,20 +2,20 @@
 title: LINQ to ADO.NET (入口網站頁面)
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: 3bea3dffb98f0745947e4a672f70df5010bc2824
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 84412e43a9d6b1e256e4ac8306a94126a3eaaaf4
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924268"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635544"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (入口網站頁面)
-LINQ to ADO.NET 可讓您使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 程式設計模型來查詢 ADO.NET 中所有可列舉的物件。  
+LINQ to ADO.NET 可讓您使用語言整合式查詢（LINQ）程式設計模型，在 ADO.NET 中查詢任何可列舉物件。  
   
 > [!NOTE]
-> LINQ to ADO.NET 文件位於 .NET Framework SDK 的 ADO.NET 章節︰[LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)。  
+> LINQ to ADO.NET 檔位於 .NET Framework SDK 的 ADO.NET 區段： [LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)。  
   
- 有三種不同的 ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 技術：LINQ to DataSet、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 和 LINQ to Entities。 LINQ to DataSet 可提供更豐富且最佳化的 <xref:System.Data.DataSet> 查詢，[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 可讓您直接查詢 SQL Server 資料庫結構描述，而 LINQ to Entities 可讓您查詢實體資料模型。  
+ 有三種不同的 ADO.NET 語言整合式查詢（LINQ）技術： LINQ to DataSet、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]和 LINQ to Entities。 LINQ to DataSet 可提供更豐富且最佳化的 <xref:System.Data.DataSet> 查詢，[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 可讓您直接查詢 SQL Server 資料庫結構描述，而 LINQ to Entities 可讓您查詢實體資料模型。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  <xref:System.Data.DataSet> 是 ADO.NET 中最廣為使用的元件之一，也是中斷連線程式設計模型 (ADO.NET 建置於其上) 的重要元素。 雖然 <xref:System.Data.DataSet> 具有上述優點，但是它的查詢功能仍然有限。  
@@ -32,9 +32,9 @@ LINQ to ADO.NET 可讓您使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-
  如需詳細資訊，請參閱 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)。  
   
 ## <a name="linq-to-entities"></a>LINQ to Entities  
- 透過實體資料模型，關聯式資料會公開為 .NET 環境內的物件。 如此一來，物件層就成為理想的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 支援目標，讓程式開發人員可以根據用於建置商務邏輯的語言，針對資料庫編寫查詢。 這項功能稱為 LINQ to Entities。 如需詳細資訊，請參閱 [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)。  
+ 透過實體資料模型，關聯式資料會公開為 .NET 環境內的物件。 這讓物件層成為 LINQ 支援的理想目標，讓開發人員能夠根據用來建立商務邏輯的語言，為資料庫制訂查詢。 這項功能稱為 LINQ to Entities。 如需詳細資訊，請參閱 [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)
 - [Language-Integrated Query (LINQ) (C#)](./index.md)

@@ -41,16 +41,17 @@
           href: how-to-define-a-generic-method-with-reflection-emit.md
         - name: 動態類型產生的可回收組件
           href: collectible-assemblies.md
-    - name: Dynamic Language Runtime 概觀
+    - name: 動態語言執行階段概觀
       href: dynamic-language-runtime-overview.md
-    - name: 動態原始程式碼的產生和編譯
-      href: dynamic-source-code-generation-and-compilation.md
+    - name: 產生及編譯動態原始程式碼
       items:
+        - name: 總覽
+          href: dynamic-source-code-generation-and-compilation.md
         - name: 使用 CodeDOM
           href: using-the-codedom.md
-        - name: 從 CodeDOM 圖表產生和編譯原始程式碼
+        - name: 從 CodeDOM 圖表產生及編譯原始程式碼
           href: generating-and-compiling-source-code-from-a-codedom-graph.md
-        - name: 作法：使用 CodeDOM 建立 XML 文件檔案
+        - name: 使用 CodeDOM 建立 XML 文件檔案
           href: how-to-create-an-xml-documentation-file-using-codedom.md
-        - name: 作法：使用 CodeDOM 建立類別
+        - name: 使用 CodeDOM 建立類別
           href: how-to-create-a-class-using-codedom.md

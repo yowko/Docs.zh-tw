@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 3506406a441cb2028c00d5b8ed87b57cc6dff38b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 9229c1524a400112a1b48bc40866d6dd1b7cf21b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423260"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346231"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>例外狀況和例外處理 (C# 程式設計手冊)
 
@@ -47,9 +47,9 @@ C# 語言的例外狀況處理功能可協助您處理在程式執行時發生�
 - [例外狀況處理](exception-handling.md)
 - [建立和擲回例外狀況](creating-and-throwing-exceptions.md)
 - [編譯器所產生的例外狀況](compiler-generated-exceptions.md)
-- [如何：使用 try/catch 處理例外狀況 (C# 程式設計指南)](how-to-handle-an-exception-using-try-catch.md)
-- [如何：使用 finally 執行清除程式碼](how-to-execute-cleanup-code-using-finally.md)
-- [如何：攔截非 CLS 例外狀況](how-to-catch-a-non-cls-exception.md)
+- [如何使用 try/catch 處理例外狀況（C#程式設計手冊）](how-to-handle-an-exception-using-try-catch.md)
+- [如何使用 finally 執行清除程式碼](how-to-execute-cleanup-code-using-finally.md)
+- [如何攔截非 CLS 例外狀況](how-to-catch-a-non-cls-exception.md)
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

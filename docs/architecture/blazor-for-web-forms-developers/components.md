@@ -4,12 +4,12 @@ description: 瞭解如何使用 Blazor 建立可重複使用的 UI 元件，以�
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 79919b183a4eb759f0b27c97500ee71c9378770b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088097"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337391"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>使用 Blazor 建立可重複使用的 UI 元件
 
@@ -79,13 +79,13 @@ Razor 指示詞是以 `@` 字元開頭，通常用於檔案開頭的新行開頭
 
 |Directive    |描述|範例|Web Forms 對等|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |將類別層級屬性加入至元件|`@attribute [Authorize]`|無|
+|`@attribute` |將類別層級屬性加入至元件|`@attribute [Authorize]`|None|
 |`@code`      |將類別成員加入至元件|`@code { ... }`|`<script runat="server">...</script>`|
 |`@implements`|執行指定的介面|`@implements IDisposable`|使用程式碼後置|
 |`@inherits`  |繼承自指定的基類|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |將服務插入元件|`@inject IJSRuntime JS`|無|
+|`@inject`    |將服務插入元件|`@inject IJSRuntime JS`|None|
 |`@layout`    |指定元件的版面配置元件|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |設定元件的命名空間|`@namespace MyNamespace`|無|
+|`@namespace` |設定元件的命名空間|`@namespace MyNamespace`|None|
 |`@page`      |指定元件的路由|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |指定元件的泛型型別參數|`@typeparam TItem`|使用程式碼後置|
 |`@using`     |指定要帶入範圍的命名空間|`@using MyComponentNamespace`|*在 web.config*中新增命名空間|
@@ -110,7 +110,7 @@ Blazor （`@onclick`、`@bind`、`@ref`等所使用的各種指示詞屬性會�
 
 *.Aspx*和 *.ascx*檔案中使用的許多語法都具有 Razor 中的平行語法。 以下是 ASP.NET Web Forms 和 Razor 語法的簡單比較。
 
-|功能                      |Web Form           |語法               |Razor         |語法 |
+|特殊功能                      |Web Form           |語法               |Razor         |語法 |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |指示詞                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |程式碼區塊                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
@@ -131,7 +131,7 @@ Blazor （`@onclick`、`@bind`、`@ref`等所使用的各種指示詞屬性會�
 }
 ```
 
-因為 Razor 是以C# C#為基礎，所以必須從專案（ *.csproj*）中進行編譯。 您無法從 VB 專案（ *. vbproj*）編譯*razor*檔案。 您仍然可以從 Blazor 專案參考 VB 專案。 相反的情況也是如此。
+因為 Razor 是以C# C#為基礎，所以必須從專案（ *.csproj*）中進行編譯。 您無法從 Visual Basic 專案（ *. vbproj*）編譯*razor*檔案。 您仍然可以參考 Blazor 專案中 Visual Basic 專案。 相反的情況也是如此。
 
 如需完整的 Razor 語法參考，請參閱[ASP.NET Core 的 Razor 語法參考](/aspnet/core/mvc/views/razor)。
 

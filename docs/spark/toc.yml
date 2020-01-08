@@ -3,7 +3,7 @@
 - name: 總覽
   expanded: true
   items:
-    - name: 什麼是 Apache Spark？
+    - name: Apache Spark 是什麼？
       href: what-is-spark.md
     - name: 什麼是 .NET for Apache Spark？
       href: what-is-apache-spark-dotnet.md
@@ -17,11 +17,13 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: 部署至 Databricks
       href: tutorials/databricks-deployment.md
+    - name: 批次處理
+      href: tutorials/batch-processing.md
     - name: 結構化串流
       href: tutorials/streaming.md
 - name: 作法指南
   items:
-    - name: 為您的應用程式偵錯
+    - name: 偵錯應用程式
       href: how-to-guides/debug.md
     - name: 將作業提交至 HDInsight
       href: how-to-guides/hdinsight-deploy-methods.md

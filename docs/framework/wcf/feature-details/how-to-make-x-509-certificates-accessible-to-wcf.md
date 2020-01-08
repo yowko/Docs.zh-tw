@@ -9,12 +9,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: abd074701ca667abe4590f4f17a044b34325e874
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7f24966f06730e62ea7a8967c3930f05ca78f50e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837398"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347088"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>HOW TO：讓 WCF 能夠存取 X.509 憑證
 若要讓 Windows Communication Foundation （WCF）可以存取 x.509 憑證，應用程式代碼必須指定憑證存放區名稱和位置。 在某些狀況下，處理序身分識別必須能夠存取包含與 X.509 憑證相關聯之私密金鑰的檔案。 若要取得與憑證存放區中的 x.509 憑證相關聯的私密金鑰，WCF 必須擁有執行這項操作的許可權。 根據預設，只有擁有人和系統帳戶能夠存取憑證的私密金鑰。  
@@ -59,7 +59,7 @@ ms.locfileid: "74837398"
         |--------------|----------------------|  
         |用戶端 (主控台或 WinForms 應用程式)。|目前登入的使用者。|  
         |自我裝載的服務。|目前登入的使用者。|  
-        |裝載于 IIS 6.0 （[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]）或 IIS 7.0 （Windows Vista）中的服務。|網路服務|  
+        |裝載于 IIS 6.0 （Windows Server 2003）或 IIS 7.0 （Windows Vista）中的服務。|網路服務|  
         |裝載於 IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]) 中的服務。|由 Machine.config 檔中的 `<processModel>` 項目控制。 預設帳戶是 ASPNET。|  
   
     5. 使用像是 icacls 的工具，將包含私密金鑰之檔案的讀取權限授與執行 WCF 的帳戶。  

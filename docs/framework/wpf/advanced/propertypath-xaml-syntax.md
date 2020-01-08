@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 17c8982a66960626a5d049fa2da90f5f2d995d14
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740790"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559764"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 語法
 
@@ -143,7 +143,7 @@ ms.locfileid: "73740790"
 
 - 您必須將專屬於用來處理標記延伸之 WPF XAML 剖析器行為的字元逸出 (使用反斜線 `\`)。
 
-  - 反斜線 (`\`) 本身就是逸出字元。
+  - 反斜線 (`\`) 本身是逸出字元。
 
   - 等號 (`=`) 會分隔屬性名稱和屬性值。
 
@@ -192,7 +192,7 @@ ms.locfileid: "73740790"
 
 `propertyName2` 必須是存在於值為 `propertyName` 之物件上的相依性屬性名稱。 換句話說，`propertyName2` 必須以相依性屬性的形式存在於 `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>的類型上。
 
-由於已套用樣式和範本，因此需要間接設定動畫的目標。 若要以動畫為目標，您需要一個目標物件上的 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>，而該名稱是由[x：Name](../../xaml-services/x-name-directive.md)或 <xref:System.Windows.FrameworkElement.Name%2A>所建立。 雖然範本和樣式元素也可以有名稱，但那些名稱只在樣式和範本的名稱範圍內有效 (如果範本和樣式會與應用程式標記共用名稱範圍，則名稱不能是唯一的。 樣式和範本實際上會在實例之間共用，而且會永久保存重複的名稱）。因此，如果您可能想要製作動畫之專案的個別屬性來自樣式或範本，您必須從不是來自樣式範本的命名專案實例開始，然後以樣式或樣板視覺化樹狀結構的目標來到達屬性您想要以動畫顯示。
+由於已套用樣式和範本，因此需要間接設定動畫的目標。 若要以動畫為目標，您需要一個目標物件上的 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>，而該名稱是由[x：Name](../../../desktop-wpf/xaml-services/xname-directive.md)或 <xref:System.Windows.FrameworkElement.Name%2A>所建立。 雖然範本和樣式元素也可以有名稱，但那些名稱只在樣式和範本的名稱範圍內有效 (如果範本和樣式會與應用程式標記共用名稱範圍，則名稱不能是唯一的。 樣式和範本實際上會在實例之間共用，而且會永久保存重複的名稱）。因此，如果您可能想要製作動畫之專案的個別屬性來自樣式或範本，您必須從不是來自樣式範本的命名專案實例開始，然後以樣式或樣板視覺化樹狀結構的目標來到達屬性您想要以動畫顯示。
 
 比方說，<xref:System.Windows.Controls.Panel> 的 <xref:System.Windows.Controls.Panel.Background%2A> 屬性是來自主題範本的完整 <xref:System.Windows.Media.Brush> （實際上是 <xref:System.Windows.Media.SolidColorBrush>）。 若要完全以動畫顯示 <xref:System.Windows.Media.Brush>，必須是 BrushAnimation （每個 <xref:System.Windows.Media.Brush> 類型可能有一個），而且沒有這種類型。 若要建立筆刷的動畫，請改為建立特定 <xref:System.Windows.Media.Brush> 類型的屬性動畫。 您必須從 <xref:System.Windows.Media.SolidColorBrush> 取得其 <xref:System.Windows.Media.SolidColorBrush.Color%2A>，才能在該處套用 <xref:System.Windows.Media.Animation.ColorAnimation>。 此範例的屬性路徑就是 `Background.Color`。
 

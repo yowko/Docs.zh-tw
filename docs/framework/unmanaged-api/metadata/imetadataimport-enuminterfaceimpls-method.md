@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: 4c819bff50e6644a733374e9863d670d3323ee68
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ef7057ad19fd34750bd15d358e9c1ebb1289cd44
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449531"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338056"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls 方法
 列舉指定之 `TypeDef`所實作為的所有介面。 
@@ -48,7 +48,7 @@ HRESULT EnumInterfaceImpls (
  脫銷用來儲存 MethodDef 標記的陣列。  
   
  `cMax`  
- [in] `rImpls` 陣列的大小上限。  
+ 在`rImpls` 陣列的最大長度。  
   
  `pcImpls`  
  脫銷`rImpls`中傳回的實際權杖數目。  
@@ -73,7 +73,7 @@ HRESULT EnumInterfaceImpls (
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

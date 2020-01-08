@@ -2,12 +2,12 @@
 title: 如何：查詢一組資料夾中的位元組總數 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-ms.openlocfilehash: b926a3e0ed973f449718ca5883aeabc0bfcf7b91
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c32985d7b1d87a45107159726d6ee24aea0b59b7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347640"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346031"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>如何：查詢一組資料夾中的總位元組數（LINQ）（Visual Basic）
 此範例示範如何擷取所指定資料夾及其所有子資料夾中之所有檔案使用的位元組總數。  
@@ -69,10 +69,10 @@ End Module
   
  如果您只需要計算所指定樹狀目錄中的位元組數，則可以用更有效率的方式進行這項作業，而不需要建立 LINQ 查詢，原因是這種查詢需要多花時間來建立清單集合作為資料來源。 當查詢越複雜，或需要對相同資料來源執行多個查詢時，LINQ 方式就越有用。  
   
- 查詢會呼叫外面另一個方法來取得檔案長度。 這麼做是要解決可能會因下列狀況引發的例外狀況：自呼叫 <xref:System.IO.FileInfo> 而建立 `GetFiles` 物件後，有另一個執行緒刪除了檔案。 即使已建立 <xref:System.IO.FileInfo> 物件，還是可能會發生這個例外狀況，原因是 <xref:System.IO.FileInfo> 物件會在它的 <xref:System.IO.FileInfo.Length%2A> 屬性第一次受到存取時，嘗試用目前最新的長度來重新整理這個屬性。 讓這個作業進入查詢外部的 try-catch 區塊，程式碼就會遵循規則，以避免查詢中會造成副作業的作業。 一般而言，處理例外狀況時需要十分小心，以確定應用程式不是處於未知狀態。  
+ 查詢會呼叫外面另一個方法來取得檔案長度。 這麼做是要解決可能會因下列狀況引發的例外狀況：自呼叫 `GetFiles` 而建立 <xref:System.IO.FileInfo> 物件後，有另一個執行緒刪除了檔案。 即使已建立 <xref:System.IO.FileInfo> 物件，還是可能會發生這個例外狀況，原因是 <xref:System.IO.FileInfo> 物件會在它的 <xref:System.IO.FileInfo.Length%2A> 屬性第一次受到存取時，嘗試用目前最新的長度來重新整理這個屬性。 讓這個作業進入查詢外部的 try-catch 區塊，程式碼就會遵循規則，以避免查詢中會造成副作業的作業。 一般而言，處理例外狀況時需要十分小心，以確定應用程式不是處於未知狀態。  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
-建立 VB.NET 主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
+## <a name="compile-the-code"></a>編譯程式碼  
+建立 Visual Basic 的主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
   
 ## <a name="see-also"></a>請參閱
 

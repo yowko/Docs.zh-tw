@@ -2,12 +2,12 @@
 title: 防火牆指示
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 3c94f0edbb244b6c378cc32f05c34fd029d253ff
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: e2c4dd8e784599a5e110e7454d9d0e709cbc5776
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837840"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544785"
 ---
 # <a name="firewall-instructions"></a>防火牆指示
 您必須在防火牆中啟用數個通訊埠或程式，讓 Windows Communication Foundation （WCF）範例可以運作。 許多範例都使用範圍 8000-8003 中的連接埠以及連接埠 9000 進行通訊。 防火牆預設為開啟狀態，可防止對這些連接埠的存取。 若要為範例啟用防火牆，請視您的需求和安全性環境，完成下列其中一個程序：  
@@ -36,7 +36,7 @@ ms.locfileid: "74837840"
   
     - 在 Windows 7 或 Windows Server 2008 r2 上，按一下 [**允許程式或功能通過 Windows 防火牆**]。 按一下 [**變更設定**]、[允許**其他程式**]。  
   
-    - 在 Windows Vista 或 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]上，按一下 [**允許程式通過 Windows 防火牆**]。  
+    - 在 Windows Vista 或 Windows Server 2008 上，按一下 [**允許程式通過 Windows 防火牆**]。  
   
 4. 在 [**例外**] 索引標籤上，按一下 [**新增程式**]。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "74837840"
   
     10. 按一下 [**輸出規則**]，然後重複步驟 c 到 h。  
   
-3. 在 Windows Vista 或 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]上，請遵循下列步驟。  
+3. 在 Windows Vista 或 Windows Server 2008 上，請遵循下列步驟。  
   
     1. 按一下 [**允許程式通過 Windows 防火牆**]。  
   

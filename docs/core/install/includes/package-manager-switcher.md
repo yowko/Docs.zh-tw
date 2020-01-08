@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cadb17d9d273d4b204efc93ef527857f30c28cf7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 42c97278b1a1f488396b158f84c169d050d33e0a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450867"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341178"
 ---
 
 > [!div class="op_single_selector"]
@@ -22,3 +22,5 @@ ms.locfileid: "74450867"
 > - [OpenSUSE 15-x64](../linux-package-manager-opensuse15.md)
 > - [SLES 12-x64](../linux-package-manager-sles12.md)
 > - [SLES 15-x64](../linux-package-manager-sles15.md)
+
+_只有**x64**架構支援套件管理員安裝_。 其他架構（例如**ARM**）必須[手動安裝 .NET Core SDK](../sdk.md?pivots=os-linux#download-and-manually-install)或[手動安裝 .net Core 運行](../runtime.md?pivots=os-linux#download-and-manually-install)時間。 如需詳細資訊，請參閱[.Net Core 相依性和需求](../dependencies.md)。

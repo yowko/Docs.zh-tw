@@ -1,15 +1,15 @@
 ---
-title: 作法：使用 XPath 查詢 LINQ to XML (C#)
+title: 如何使用 XPath （C#）查詢 LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: ee5af263-4ab1-45e5-b792-33a3221b426d
-ms.openlocfilehash: 639d9ba8af9ae663bc245028cf4bf57f318d397d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: 61878febd9b4880872b7bc58e4de04b37cff96f8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485176"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344801"
 ---
-# <a name="how-to-query-linq-to-xml-using-xpath-c"></a>作法：使用 XPath 查詢 LINQ to XML (C#)
+# <a name="how-to-query-linq-to-xml-using-xpath-c"></a>如何使用 XPath （C#）查詢 LINQ to XML
 本主題說明可讓您使用 XPath 查詢 XML 樹狀結構的擴充方法。 如需有關使用這些擴充方法的詳細資訊，請參閱 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>。  
   
  除非您已經有非常特定的理由要使用 XPath 查詢 (例如，廣泛使用舊版程式碼)，否則，不建議搭配 LINQ to XML 使用 XPath。 XPath 查詢將不會與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢一起執行。  

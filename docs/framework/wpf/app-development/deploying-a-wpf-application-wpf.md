@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: a1441f0cc3a7ac715a173be12e68c055ce36ff00
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d67919ba38c2e306672966ddc2f62140ef92b638
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460141"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636298"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>部署 WPF 應用程式 (WPF)
-建立 Windows Presentation Foundation （WPF）應用程式之後，就必須部署它們。 Windows 和 .NET Framework 包含數種部署技術。 用來部署 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式的部署技術會視應用程式類型而定。 本主題提供每項部署技術的簡短概觀，並說明這些技術如何配合每種 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式類型的部署需求來使用。  
+建立 Windows Presentation Foundation （WPF）應用程式之後，就必須部署它們。 Windows 和 .NET Framework 包含數種部署技術。 用來部署 WPF 應用程式的部署技術取決於應用程式類型。 本主題提供每個部署技術的簡要總覽，以及如何與每個 WPF 應用程式類型的部署需求搭配使用。  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>部署技術  
@@ -63,7 +63,7 @@ ms.locfileid: "73460141"
   
 <a name="Deploying_WPF_Applications"></a>   
 ## <a name="deploying-wpf-applications"></a>部署 WPF 應用程式  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式的部署選項會視應用程式類型而定。 從部署觀點來看，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 有三個重要的應用程式類型：  
+ WPF 應用程式的部署選項取決於應用程式的類型。 從部署的觀點來看，WPF 有三個重要的應用程式類型：  
   
 - 獨立應用程式。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73460141"
 ### <a name="deploying-markup-only-xaml-applications"></a>部署全標記 XAML 應用程式  
  僅限標記的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面通常會發行至網頁伺服器（例如 HTML 網頁），並可使用 Internet Explorer 來進行查看。 全標記 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面會在部分信任的安全性沙箱內執行，其限制是由網際網路區域權限集合所定義。 這會提供對等的安全性沙箱給 HTML Web 應用程式。  
   
- 如需 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式之安全性的詳細資訊，請參閱[安全性](../security-wpf.md)。  
+ 如需 WPF 應用程式安全性的詳細資訊，請參閱[安全性](../security-wpf.md)。  
   
  僅限標記的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面可以使用 XCopy 或 Windows Installer 安裝到本機檔案系統。 您可以使用 Internet Explorer 或 Windows Explorer 來查看這些頁面。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "73460141"
 > [!NOTE]
 > 如需部署和應用程式資訊清單的詳細資訊，請參閱[建置 WPF 應用程式](building-a-wpf-application-wpf.md)。  
   
- 建立 XBAP 時，會產生這些檔案。 如需更多詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用程式專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))。 如同僅限標記的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面，Xbap 通常會發行至 Web 服務器，並使用 Internet Explorer 來查看。  
+ 建立 XBAP 時，會產生這些檔案。 如需詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用程式專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))。 如同僅限標記的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面，Xbap 通常會發行至 Web 服務器，並使用 Internet Explorer 來查看。  
   
  Xbap 可以使用任何部署技術部署到用戶端。 不過，建議使用 ClickOnce，因為它提供下列功能：  
   
@@ -111,8 +111,8 @@ ms.locfileid: "73460141"
  如需部署 XAML 瀏覽器應用程式（Xbap）的詳細資訊，請參閱[WPF XAML 瀏覽器應用程式總覽](wpf-xaml-browser-applications-overview.md)。  
   
 <a name="Installing__NET_Framework_3_0"></a>   
-## <a name="installing-the-net-framework"></a>安裝.NET Framework  
- 若要執行 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式，必須在用戶端上安裝 Microsoft .NET Framework。 當 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 瀏覽器裝載的應用程式被查看時，Internet Explorer 會自動偵測用戶端是否已安裝 .NET Framework。 如果未安裝 .NET Framework，Internet Explorer 會提示使用者安裝它。  
+## <a name="installing-the-net-framework"></a>安裝 .NET Framework  
+ 若要執行 WPF 應用程式，必須在用戶端上安裝 Microsoft .NET Framework。 當您看到 WPF 瀏覽器裝載的應用程式時，Internet Explorer 會自動偵測用戶端是否隨 .NET Framework 安裝。 如果未安裝 .NET Framework，Internet Explorer 會提示使用者安裝它。  
   
  為了偵測是否已安裝 .NET Framework，Internet Explorer 包含一個啟動載入器應用程式，它會註冊為具有下列副檔名之內容檔案的回溯多用途網際網路郵件延伸（MIME）處理常式： .xaml、.xps、xbap、和. 應用程式。 如果您流覽至這些檔案類型，而且用戶端上未安裝 .NET Framework，啟動載入器應用程式會要求安裝它的許可權。 如果未提供許可權，就不會安裝 .NET Framework 或應用程式。  
   

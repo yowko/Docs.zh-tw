@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-ms.openlocfilehash: b15e2c0bac5610c6f1b10a640254236987c0bcf5
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: aa7f69e8871295006c3c5a9c7d0a70d0ecbd6d7e
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458731"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559816"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource 標記延伸
-藉由查閱已定義資源的參考，為任何 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 屬性屬性提供值。 該資源的查閱行為類似于載入時間查閱，它會尋找先前從目前 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面的標記載入的資源，以及其他應用程式來源，並將該資源值產生為屬性執行時間物件中的值。  
+藉由查閱已定義資源的參考，為任何 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 屬性屬性提供值。 該資源的查閱行為類似于載入時間查閱，它會尋找先前從目前 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面的標記載入的資源，以及其他應用程式來源，並將該資源值產生為執行時間物件中的屬性值。  
   
 ## <a name="xaml-attribute-usage"></a>XAML Attribute Usage  
   
@@ -38,16 +38,16 @@ ms.locfileid: "73458731"
   
 |||  
 |-|-|  
-|`key`|要求資源的金鑰。 如果資源是在標記中建立，則此索引鍵一開始是由[x：Key](../../xaml-services/x-key-directive.md)指示詞所指派，或在呼叫 <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> （如果資源是在程式碼中建立）時，以 `key` 參數的形式提供。|  
+|`key`|要求資源的金鑰。 如果資源是在標記中建立，則此索引鍵一開始是由[x：Key](../../../desktop-wpf/xaml-services/xkey-directive.md)指示詞所指派，或在呼叫 <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> （如果資源是在程式碼中建立）時，以 `key` 參數的形式提供。|  
   
 ## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]
 > `StaticResource` 不能嘗試對 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案中進一步定義的資源進行向前參考。 不支援嘗試這麼做，而且即使這類參考不會失敗，當搜尋代表 <xref:System.Windows.ResourceDictionary> 的內部雜湊表時，嘗試向前參考也會造成載入時間效能的負面影響。 為了獲得最佳結果，請調整資源字典的組合，讓向前參考可以避免。 如果您無法避免正向參考，請改用[DynamicResource 標記延伸](dynamicresource-markup-extension.md)。  
   
- 指定的 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> 應對應至現有的資源，並在頁面、應用程式、可用的控制項主題和外部資源或系統資源的某個層級以[x：Key](../../xaml-services/x-key-directive.md)指示詞識別。 資源查閱會依照該順序發生。 如需靜態和動態資源的資源查閱行為詳細資訊，請參閱[XAML 資源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)。  
+ 指定的 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> 應對應至現有的資源，並在頁面、應用程式、可用的控制項主題和外部資源或系統資源的某個層級以[x：Key](../../../desktop-wpf/xaml-services/xkey-directive.md)指示詞識別。 資源查閱會依照該順序發生。 如需靜態和動態資源的資源查閱行為詳細資訊，請參閱[XAML 資源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)。  
   
- 資源索引鍵可以是[XamlName 文法](../../xaml-services/xamlname-grammar.md)中定義的任何字串。 資源金鑰也可以是其他物件類型，例如 <xref:System.Type>。 <xref:System.Type> 鍵是如何透過隱含樣式索引鍵，以主題為控制項樣式的基礎。 如需詳細資訊，請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)。  
+ 資源索引鍵可以是[XamlName 文法](../../../desktop-wpf/xaml-services/xamlname-grammar.md)中定義的任何字串。 資源金鑰也可以是其他物件類型，例如 <xref:System.Type>。 <xref:System.Type> 鍵是如何透過隱含樣式索引鍵，以主題為控制項樣式的基礎。 如需詳細資訊，請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)。  
   
  參考資源的替代宣告式方法是[DynamicResource 標記延伸](dynamicresource-markup-extension.md)。  
   

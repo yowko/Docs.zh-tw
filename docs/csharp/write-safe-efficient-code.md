@@ -4,12 +4,12 @@ description: 最近對 C# 語言的增強功能，可讓您撰寫可驗證的安
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 3dc3213cf24f4cdd8f0f1b7752263b4a609b2fa2
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f590a338d35966e2cd3a507164057a49b8a5f6f8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039634"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346711"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>撰寫安全且有效率的 C# 程式碼
 
@@ -72,42 +72,42 @@ readonly public struct ReadonlyPoint3D
 
 ## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>當結構不能為不可變時，宣告 readonly 成員
 
-在C# 8.0 和更新版本中，當結構類型可變動時，您應該宣告不會導致`readonly`變動的成員。 例如，下列是3D 點結構的可變變化：
+在C# 8.0 和更新版本中，當結構類型可變動時，您應該宣告不會導致 `readonly`變動的成員。 例如，下列是3D 點結構的可變變化：
 
 ```csharp
 public struct Point3D
 {
     public Point3D(double x, double y, double z)
     {
-        this.X = x;
-        this.Y = y;
-        this.Z = z;
+        _x = x;
+        _y = y;
+        _z = z;
     }
 
     private double _x;
-    public double X 
-    { 
-        readonly get { return _x;}; 
-        set { _x = value; }
+    public double X
+    {
+        readonly get => _x;
+        set => _x = value;
     }
-    
+
     private double _y;
-    public double Y 
-    { 
-        readonly get { return _y;}; 
-        set { _y = value; }
+    public double Y
+    {
+        readonly get => _y;
+        set => _y = value;
     }
 
     private double _z;
-    public double Z 
-    { 
-        readonly get { return _z;}; 
-        set { _z = value; }
+    public double Z
+    {
+        readonly get => _z;
+        set => _z = value;
     }
 
     public readonly double Distance => Math.Sqrt(X * X + Y * Y + Z * Z);
 
-    public readonly override string ToString() => $"{X, Y, Z }";
+    public readonly override string ToString() => $"{X}, {Y}, {Z}";
 }
 ```
 
@@ -137,7 +137,7 @@ public struct Point3D
 }
 ```
 
-您不希望呼叫者修改原點，因此您應以 `readonly ref` 的方式傳回值：
+您不希望呼叫者修改原點，因此您應以 `ref readonly` 的方式傳回值：
 
 ```csharp
 public struct Point3D
@@ -152,7 +152,7 @@ public struct Point3D
 
 傳回 `ref readonly` 可讓您避免複製較大的結構，並保留您內部資料成員的不變性。
 
-在呼叫位置，呼叫者會選擇使用 `Origin` 屬性作為 `readonly ref` 或作為值：
+在呼叫位置，呼叫者會選擇使用 `Origin` 屬性作為 `ref readonly` 或作為值：
 
 [!code-csharp[AssignRefReadonly](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
 

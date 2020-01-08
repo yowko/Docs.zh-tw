@@ -4,24 +4,24 @@ description: 瞭解如何處理具有模組、處理常式和中介軟體的 HTT
 author: danroth27
 ms.author: daroth
 ms.date: 10/11/2019
-ms.openlocfilehash: b0be6109b9226bddbb9cbe4cebf114fd2b2a6114
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 3ecc109c54f88b5b06a1474f7c6e262d426a78a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291160"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337481"
 ---
 # <a name="modules-handlers-and-middleware"></a>模組、處理常式和中介軟體
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-ASP.NET Core 應用程式是以一系列中介軟體為基礎所建立。 中介軟體是處理常式，會排列成管線來處理要求和回應。 在 Web Forms 應用程式中，HTTP 處理常式和模組會解決類似的問題。 在 ASP.NET Core 中，模組、處理常式、 *Global.asax.cs*和應用程式生命週期都會取代為中介軟體。 在本章中，您將瞭解 Blazor 應用程式內容中的中介軟體。
+ASP.NET Core 應用程式是以一系列*中介軟體*為基礎所建立。 中介軟體是排列成管線以處理要求和回應的處理常式。 在 Web Forms 應用程式中，HTTP 處理常式和模組會解決類似的問題。 在 ASP.NET Core 中，模組、處理常式、 *Global.asax.cs*和應用程式生命週期都會取代為中介軟體。 在本章中，您將瞭解 Blazor 應用程式內容中的中介軟體。
 
 ## <a name="overview"></a>概觀
 
 ASP.NET Core 要求管線由要求委派序列組成，並會一個接著一個呼叫。 下圖說明此概念。 執行緒遵循黑色箭號執行。
 
-![管線](media/middleware/request-delegate-pipeline.png)
+![pipeline (管線)](media/middleware/request-delegate-pipeline.png)
 
 上圖缺少生命週期事件的概念。 這個概念是如何處理 ASP.NET Web Forms 要求的基礎。 此系統可讓您更輕鬆地瞭解發生了哪個進程，並允許在任何時間點插入中介軟體。 中介軟體會依照其新增至要求管線的循序執行。 它們也會新增至程式碼，而不是設定檔中，通常是在*Startup.cs*中。
 
@@ -35,11 +35,11 @@ ASP.NET 4.x 包含許多模組。 以類似的方式，ASP.NET Core 也有許多
 
 下表列出 ASP.NET Core 中的取代中介軟體和元件。
 
-|模組                 |ASP.NET 4.x 模組           |ASP.NET Core 選項|
+|Module                 |ASP.NET 4.x 模組           |ASP.NET Core 選項|
 |-----------------------|-----------------------------|-------------------|
 |HTTP 錯誤            |`CustomErrorModule`          |[狀態碼頁面中介軟體](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
-|預設檔       |`DefaultDocumentModule`      |[預設檔案中介軟體](/aspnet/core/fundamentals/static-files#serve-a-default-document)|
-|流覽目錄     |`DirectoryListingModule`     |[目錄瀏覽中介軟體](/aspnet/core/fundamentals/static-files#enable-directory-browsing)|
+|預設文件       |`DefaultDocumentModule`      |[預設檔案中介軟體](/aspnet/core/fundamentals/static-files#serve-a-default-document)|
+|瀏覽目錄     |`DirectoryListingModule`     |[目錄瀏覽中介軟體](/aspnet/core/fundamentals/static-files#enable-directory-browsing)|
 |動態壓縮    |`DynamicCompressionModule`   |[回應壓縮中介軟體](/aspnet/core/performance/response-compression)|
 |失敗的要求追蹤|`FailedRequestsTracingModule`|[ASP.NET Core 記錄](/aspnet/core/fundamentals/logging/index#tracesource-provider)|
 |檔案快取           |`FileCacheModule`            |[回應快取中介軟體](/aspnet/core/performance/caching/middleware)|

@@ -3,12 +3,12 @@ title: 可為 Null 的參考型別
 description: 本文提供可為 null 的參考型別總覽，已C#在8.0 中新增。 您會了解此功能如何為新及現有的專案，針對 Null 參考例外狀況提供安全。
 ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: ded7234ecb746ba03ba59505b7189272886f1cbf
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: bb4c2b6951a38eeb705c7de50ef5d9645350e336
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737832"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559621"
 ---
 # <a name="nullable-reference-types"></a>可為 Null 的參考型別
 
@@ -23,7 +23,7 @@ C# 8.0 引進**可為 Null 的參考型別**及**不可為 Null 的參考型別*
 
 相較於先前版本 C# 中處理參考變數的方式，這項新功能提供極大的好處，因為先前版本中無法從變數宣告判斷設計意圖。 編譯器不針對參考型別的 Null 參考例外狀況提供安全：
 
-- **參考可為 Null**。 不會在參考型別初始化為 Null，或是稍後指派為 Null 時發出任何警告。
+- **參考可為 Null**。 當參考型別初始化為 null 時，不會發出任何警告，或稍後將 null 指派給它。
 - **參考已假設為並非 Null**。 編譯器不會在對參考型別進行取值 (Dereference) 時發出任何警告。 (使用可為 Null 參考，編譯器會在您對可能為 Null 的變數進行取值 (Dereference) 時發出警告)。
 
 透過新增的可為 Null 參考型別，您可以更清楚地宣告您的意圖。 `null` 值是表示變數並非指向某個值的正確方式。 請不要使用這項功能來從您的程式碼中移除所有 `null` 值。 相反地，您應該對編譯器及其他閱讀您程式碼之開發人員宣告您的意圖。 藉由宣告您的意圖，編譯器會在您撰寫的程式碼與該意圖不一致時通知您。
@@ -57,7 +57,7 @@ name!.Length;
 
 可為 Null 內容可讓您對編譯器解譯參考型別變數的方式進行細部控制。 任何指定之來源行的**可為 null 注釋內容**為已啟用或已停用。 您可以將C# 8.0 之前的編譯器視為在停用的可為 null 內容中編譯所有程式碼：任何參考型別都可以是 null。 可**為 null 警告內容**可能也會啟用或停用。 可為 Null 警告內容會指定編譯器使用其流程分析所產生的警告。
 
-您可以使用 *.csproj*檔案中的 `Nullable` 元素，為專案設定可為 null 的注釋內容和可為 null 的警告內容。 此項目會設定編譯器解譯型別可 NULL 性的方式及所產生警告。 有效的設定如下：
+您可以使用 *.csproj*檔案中的 `Nullable` 元素，為專案設定可為 null 的注釋內容和可為 null 的警告內容。 此項目會設定編譯器解譯型別可 NULL 性的方式及所產生警告。 有效的設定包括：
 
 - `enable`：可為 null 注釋內容已**啟用**。 可為 Null 警告內容為**啟用**。
   - 參考型別變數 (例如 `string`) 不可為 Null。  啟用所有可 NULL 性警告。
@@ -93,7 +93,7 @@ name!.Length;
 編譯器會在停用的可為 Null 註釋內容中使用下列規則：
 
 - 您無法在停用的內容中宣告可為 Null 參考。
-- 所有參考變數都可指派為 Null。
+- 可能會為所有參考變數指派 null 值。
 - 當對參考型別的變數進行取值 (Dereference) 時，不會產生任何警告。
 - Null 容許運算子不可用於停用內容中。
 

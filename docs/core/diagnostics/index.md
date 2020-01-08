@@ -3,14 +3,14 @@ title: 診斷工具概觀 - .NET Core
 description: 可用來診斷 .NET Core 應用程式之工具與技術的概觀。
 author: sdmaclea
 ms.author: stmaclea
-ms.date: 10/14/2019
+ms.date: 12/17/2019
 ms.topic: overview
-ms.openlocfilehash: c0a45a1bfe866ad42890db576b5dd5098b1dbc3d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
-ms.translationtype: MT
+ms.openlocfilehash: 20374c53769bf19901b042e0909175718665b523
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318342"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341484"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 中有哪些診斷工具可供使用？
 
@@ -43,3 +43,9 @@ ms.locfileid: "72318342"
 ### <a name="dotnet-trace"></a>dotnet-trace
 
 .NET Core 包含所謂的 `EventPipe`，用來公開診斷資料。 [Dotnet 追蹤](dotnet-trace.md)工具可讓您從應用程式取用有趣的分析資料，以在需要執行速度緩慢的根本原因應用程式時提供協助。
+
+## <a name="net-core-diagnostics-tutorials"></a>.NET Core 診斷教學課程
+
+### <a name="debug-a-memory-leak"></a>調試記憶體流失
+
+[教學課程：偵測記憶體](debug-memory-leak.md)流失會逐步解說找出記憶體流失的情況。 [Dotnet 計數器](dotnet-counters.md)工具是用來確認流失，而[dotnet](dotnet-dump.md)傾印工具是用來診斷遺漏的問題。

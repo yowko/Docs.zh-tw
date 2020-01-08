@@ -1,6 +1,6 @@
 ---
 title: -nostdlib (C# 編譯器選項)
-ms.date: 07/20/2015
+ms.date: 12/20/2019
 f1_keywords:
 - /nostdlib
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: 486539d7abdc3e65847a0bc0e228b1b20a2b2c37
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: ad8a2b5fc87dd7beee86d96331cf3961315be533
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602683"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345083"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib (C# 編譯器選項)
 
@@ -34,20 +34,20 @@ ms.locfileid: "69602683"
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>在 Visual Studio 中設定這個編譯器選項
 
 > [!NOTE]
-> 下列指示僅適用於 Visual Studio 2015 (及更早版本)。 [不要參考 mscorlib.dl]  建置屬性在 Visual Studio 2017 中不存在。
+> 下列指示僅適用於 Visual Studio 2015 (及更早版本)。 較新版本的 Visual Studio 中不存在 [**不要參考 mscorlib.dll** ] 組建屬性。
 
-1. 開啟專案的 [屬性]  頁面。
+1. 開啟專案的 [屬性] 頁面。
 
-2. 按一下 [建置]  屬性頁面。
+2. 按一下 [建置] 屬性頁面。
 
 3. 按一下 [ **進階** ] 按鈕。
 
-4. 修改 [不要參考 mscorlib.dll]  屬性。
+4. 修改 [不要參考 mscorlib.dll] 屬性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>。
+如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 編譯器選項](./index.md)

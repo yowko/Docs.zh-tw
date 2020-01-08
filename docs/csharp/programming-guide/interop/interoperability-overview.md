@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 1342711ca17b0d2bf5122f4c749514e3b96c9ad7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2e1b31817873324fd320a9dcbabaf5ef26fa7b74
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921823"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635180"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互通性概觀 (C# 程式設計手冊)
 本主題說明可在 C# Managed 程式碼和 Unmanaged 程式碼之間啟用互通性的方法。  
@@ -22,7 +22,7 @@ ms.locfileid: "69921823"
 ## <a name="platform-invoke"></a>平台叫用  
  *平台叫用*服務，可讓 Managed 程式碼呼叫 Unmanaged 函式在動態連結程式庫 (DLL) 中實作，例如 Microsoft Windows API 中。 它會找出並叫用匯出的函式，並且在需要的時候於交互操作界限之間封送處理其引數 (整數、 字串、 陣列、 結構和其他) 。  
   
- 如需詳細資訊，請參閱[使用非受控 DLL 函式](../../../framework/interop/consuming-unmanaged-dll-functions.md)和[如何：使用平台叫用播放 WAV 檔](./how-to-use-platform-invoke-to-play-a-wave-file.md)。  
+如需詳細資訊，請參閱使用[非受控 DLL](../../../framework/interop/consuming-unmanaged-dll-functions.md)函式和[如何使用平台叫用來播放 WAV](./how-to-use-platform-invoke-to-play-a-wave-file.md)檔案。
   
 > [!NOTE]
 > [Common Language Runtime](../../../standard/clr.md) (CLR) 管理對系統資源的存取。 在 CLR 外部呼叫 Unmanaged 程式碼會略過此安全性機制，因而造成安全性風險。 例如，Unmanaged 程式碼可能會直接呼叫 Unmanaged 程式碼中的資源，並略過 CLR 安全性機制。 如需詳細資訊，請參閱 [.NET 的安全性](../../../standard/security/index.md)。  
@@ -31,7 +31,7 @@ ms.locfileid: "69921823"
  您可以使用 C++ Interop (也稱為 It Just Works (IJW)) 包裝原生 C++ 類別，以供使用 C# 或其他 .NET Framework 語言撰寫的程式碼取用。 若要這樣做，您可以撰寫 C++ 程式碼來包裝原生 DLL 或 COM 元件。 不同於其他 .NET Framework 語言，Visual C++ 能提供互通性支援，因此可將 Managed 和 Unmanaged 程式碼放置在相同的應用程式，甚至是相同的檔案中。 您接著可使用 **/clr** 編譯器參數建立 C++ 程式碼，以產生 Managed 組件。 最後，您可以在 C# 專案中新增組件的參考，並使用包裝的物件，就像是使用其他 Managed 類別一樣。  
   
 ## <a name="exposing-com-components-to-c"></a>將 COM 元件公開給 C\#
- 您可以從 C# 專案取用 COM 元件。 一般步驟如下所示：  
+ 您可以從 C# 專案取用 COM 元件。 一般步驟如下：  
   
 1. 找出並註冊所要使用的 COM 元件。 使用 regsvr32.exe 註冊或取消註冊 COM DLL。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "69921823"
   
  如需詳細資訊，請參閱[將 .NET Framework 元件公開給 COM](../../../framework/interop/exposing-dotnet-components-to-com.md) 和[範例 COM 類別](./example-com-class.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Improving Interop Performance](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29) (提升 Interop 效能)
 - [COM 和.NET 之間的互通性簡介](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net) \(機器翻譯\)

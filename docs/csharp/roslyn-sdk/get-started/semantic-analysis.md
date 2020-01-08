@@ -3,12 +3,12 @@ title: 開始使用語意分析
 description: 本教學課程概述如何使用 .NET Compiler SDK 來處理語意分析。
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 80a814054ab95a5b6585289e8580a725b18ca44e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7bf2f40ea0bc059d9c517780016ca5deb805ceb6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252940"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346972"
 ---
 # <a name="get-started-with-semantic-analysis"></a>開始使用語意分析
 
@@ -22,7 +22,7 @@ ms.locfileid: "70252940"
 
 ## <a name="understanding-compilations-and-symbols"></a>了解編譯和符號
 
-更深入處理 .NET Compiler SDK 時，就會熟悉 Syntax API 與 Semantic API 之間的差異。 **Syntax API** 可讓您查看程式的「結構」。 不過，您通常需要程式的更豐富語意資訊或「意義」。 雖然可單獨透過語法方式分析 VB 或 C# 程式碼的鬆散程式碼檔或程式碼片段，但在隔離的環境中不會詢問 "what's the type of this variable" 這類問題。 類型名稱的意義可能依存於組件參考、命名空間匯入或其他程式碼檔。 這些問題是使用 **Semantic API** 來回答，具體來說是 <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> 類別。
+更深入處理 .NET Compiler SDK 時，就會熟悉 Syntax API 與 Semantic API 之間的差異。 **Syntax API** 可讓您查看程式的「結構」。 不過，您通常需要程式的更豐富語意資訊或「意義」。 雖然 Visual Basic 或C#程式碼的鬆散程式碼檔案或片段可以獨立地進行語法分析，但是在清理的情況下，詢問「此變數的類型」之類的問題並不具意義。 類型名稱的意義可能依存於組件參考、命名空間匯入或其他程式碼檔。 這些問題是使用 **Semantic API** 來回答，具體來說是 <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> 類別。
 
 <xref:Microsoft.CodeAnalysis.Compilation> 執行個體類似編譯器所看到的單一專案，並且代表編譯 Visual Basic 或 C# 程式所需的所有項目。 **編譯**包含要編譯的一組來源檔案、組件參考及編譯器選項。 您可以使用此內容中的所有其他資訊來理解程式碼的意義。 <xref:Microsoft.CodeAnalysis.Compilation> 可讓您尋找**符號** - 實體，例如名稱和其他運算式所參照的類型、命名空間、成員和變數。 將名稱與具有**符號**的運算式建立關聯的程序稱為**繫結**。
 

@@ -4,12 +4,12 @@ description: 此進階教學課程將教導您使用索引和範圍探索資料�
 ms.date: 09/20/2019
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: bbf3f257db9079c4f69f25c9ea08e7711b5ea04b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3d4c022ff8d6e7f260632e34d6f28277014c85c8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039677"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345624"
 ---
 # <a name="indices-and-ranges"></a>索引和範圍
 
@@ -78,9 +78,11 @@ string[] words = new string[]
 
 ## <a name="type-support-for-indices-and-ranges"></a>索引和範圍的類型支援
 
-如果型別提供具有 <xref:System.Index> 或 <xref:System.Range> 參數的[索引子](../programming-guide/indexers/index.md)，它會分別明確支援索引或範圍。
+索引和範圍提供明確、簡潔的語法來存取單一專案或序列中專案的子範圍。 索引運算式通常會傳回序列元素的類型。 範圍運算式通常會傳回與來源序列相同的序列類型。
 
-如果類型具有名為 `Length` 的屬性，或具有可存取 getter 的 `Count` 和 `int`的傳回型別，則該型別為**計算**。 未明確支援索引或範圍的計算類型可能會為其提供隱含支援。 如需詳細資訊，請參閱[功能提案注意事項](~/_csharplang/proposals/csharp-8.0/ranges.md)的[隱含索引支援](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support)和[隱含範圍支援](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support)章節。
+如果型別提供具有 <xref:System.Index> 或 <xref:System.Range> 參數的[索引子](../programming-guide/indexers/index.md)，它會分別明確支援索引或範圍。 當類型提供採用單一 <xref:System.Range> 參數的索引子時，它可能會選擇傳回不同的序列類型，例如 <xref:System.Span%601?displayProperty=nameWithType>。
+
+如果類型具有名為 `Length` 的屬性，或具有可存取 getter 的 `Count` 和 `int`的傳回型別，則該型別為**計算**。 未明確支援索引或範圍的計算類型可能會為其提供隱含支援。 如需詳細資訊，請參閱[功能提案注意事項](~/_csharplang/proposals/csharp-8.0/ranges.md)的[隱含索引支援](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support)和[隱含範圍支援](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support)章節。 使用隱含範圍支援的範圍會傳回與來源序列相同的序列類型。
 
 例如，下列 .NET 類型支援索引和範圍： <xref:System.Array>、<xref:System.String>、<xref:System.Span%601>和 <xref:System.ReadOnlySpan%601>。 <xref:System.Collections.Generic.List%601> 支援索引，但不支援範圍。
 

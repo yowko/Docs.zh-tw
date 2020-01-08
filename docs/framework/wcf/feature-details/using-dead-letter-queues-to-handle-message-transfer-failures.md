@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: 268f14bc7294a4cbe6f7253dc7f3c71d89985133
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 0be22fa1e81c85d82494bc4b93468a18f05d6423
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837957"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345563"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>使用寄不出的信件佇列來處理訊息傳輸失敗
 佇列訊息可能會傳遞失敗。 這些失敗的訊息都會記錄在寄不出的信件佇列中。 造成傳遞失敗的原因可能是網路失敗、佇列已刪除、佇列已滿、驗證失敗，或是未能準時傳遞。  
@@ -23,7 +23,7 @@ ms.locfileid: "74837957"
   
  自訂的寄不出的信件佇列會隔離共用相同 MSMQ 服務以傳送訊息的用戶端。  
   
- 在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上，Windows Communication Foundation （WCF）會針對所有佇列的用戶端應用程式提供整個系統的寄不出的信件佇列。 在 Windows Vista 上，WCF 會針對每個佇列的用戶端應用程式提供寄不出的信件佇列。  
+ 在 Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上，Windows Communication Foundation （WCF）會針對所有佇列的用戶端應用程式提供全系統的無效信件佇列。 在 Windows Vista 上，WCF 會針對每個佇列的用戶端應用程式提供寄不出的信件佇列。  
   
 ## <a name="specifying-use-of-the-dead-letter-queue"></a>指定寄不出的信件佇列的使用方式  
  寄不出的信件佇列是位於傳送應用程式的佇列管理員中。 它會儲存已過期的訊息或是無法傳輸或傳遞的訊息。  

@@ -1,5 +1,5 @@
 ---
-title: 在 .NET 中將類型格式化
+title: 在 .NET 中格式化類型
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: 20aa7ecd354ef1a8982ae75eda87275c80cdaaf6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: a1f4d9107427140bcfa6b49bc8a850432fb204f7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802462"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348257"
 ---
 # <a name="format-types-in-net"></a>.NET 中的格式類型
 
@@ -51,7 +51,7 @@ ms.locfileid: "74802462"
 
 ## <a name="formatting-in-net"></a>.NET 中的格式化​​
 
-格式化機制的基礎在於 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法的預設實作，這將於本主題稍後的[使用 ToString 方法的預設格式](#default-formatting-using-the-tostring-method)一節中討論。 不過，.NET 提供幾種方式來修改和擴充其預設格式化支援。 這些需求包括下列各項：
+格式化機制的基礎在於 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法的預設實作，這將於本主題稍後的[使用 ToString 方法的預設格式](#default-formatting-using-the-tostring-method)一節中討論。 不過，.NET 提供幾種方式來修改和擴充其預設格式化支援。 包含以下各項：
 
 - 覆寫 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法來自訂物件值的字串表示。 如需詳細資訊，請參閱本主題稍後的覆[寫 ToString 方法](#override-the-tostring-method)一節。
 
@@ -106,7 +106,7 @@ ms.locfileid: "74802462"
 |<xref:System.Boolean>|傳回 <xref:System.Boolean.TrueString?displayProperty=nameWithType> 或 <xref:System.Boolean.FalseString?displayProperty=nameWithType>。|
 |<xref:System.Byte>|呼叫 `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` ，以根據目前的文化特性來格式化 <xref:System.Byte> 值。|
 |<xref:System.Char>|以字串形式傳回字元。|
-|<xref:System.DateTime>|呼叫 `DateTime.ToString("G", DatetimeFormatInfo.CurrentInfo)`，以根據對目前的文化特性來格式化日期和時間值。|
+|<xref:System.DateTime>|呼叫 `DateTime.ToString("G", DatetimeFormatInfo.CurrentInfo)` ，以根據對目前的文化特性來格式化日期和時間值。|
 |<xref:System.Decimal>|呼叫 `Decimal.ToString("G", NumberFormatInfo.CurrentInfo)` ，以根據目前的文化特性來格式化 <xref:System.Decimal> 值。|
 |<xref:System.Double>|呼叫 `Double.ToString("G", NumberFormatInfo.CurrentInfo)` ，以根據目前的文化特性來格式化 <xref:System.Double> 值。|
 |<xref:System.Int16>|呼叫 `Int16.ToString("G", NumberFormatInfo.CurrentInfo)` ，以根據目前的文化特性來格式化 <xref:System.Int16> 值。|
@@ -181,7 +181,7 @@ ms.locfileid: "74802462"
 
 - 支援等於 null 參考 (在 Visual Basic 中為`Nothing` ) 的格式規範。 等於 null 參考的格式規範應該要視為相當於 "G" 格式規範。
 
-例如，`Temperature` 類別可以在內部以攝氏儲存溫度，並透過格式規範以攝氏、華氏和開氏溫度來表示 `Temperature` 物件的值。 下列範例提供一個實例。
+例如， `Temperature` 類別可以在內部以攝氏儲存溫度，並透過格式規範以攝氏、華氏和開氏溫度來表示 `Temperature` 物件的值。 下列範例提供一個實例。
 
 [!code-csharp[Conceptual.Formatting.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/appstandard1.cs#7)]
 [!code-vb[Conceptual.Formatting.Overview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/appstandard1.vb#7)]
@@ -213,8 +213,8 @@ ms.locfileid: "74802462"
 
 |標題|定義|
 |-----------|----------------|
-|[標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)|說明建立數值常用之字串表示的標準格式字串。|
-|[自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)|說明建立應用程式專屬數值格式的自訂格式字串。|
+|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|說明建立數值常用之字串表示的標準格式字串。|
+|[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|說明建立應用程式專屬數值格式的自訂格式字串。|
 |[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|說明建立 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值之常用字串表示的標準格式字串。|
 |[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|說明建立應用程式專屬 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值格式的自訂格式字串。|
 |[標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)|說明建立時間間隔之常用字串表示的標準格式字串。|
@@ -237,8 +237,8 @@ ms.locfileid: "74802462"
 
 |方法|`formatType` 參數的類型|
 |------------|------------------------------------|
-|數字類型的 `ToString` 方法|<xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>|
-|日期和時間類型的 `ToString` 方法|<xref:System.Globalization.DateTimeFormatInfo?displayProperty=nameWithType>|
+|數字類型的`ToString` 方法|<xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>|
+|日期和時間類型的`ToString` 方法|<xref:System.Globalization.DateTimeFormatInfo?displayProperty=nameWithType>|
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|
 
@@ -313,7 +313,7 @@ ms.locfileid: "74802462"
 
 ## <a name="composite-formatting"></a>複合格式
 
-某些方法 (例如 <xref:System.String.Format%2A?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>) 支援複合格式。 複合格式字串是一種範本，可傳回由零個、一個或更多物件的字串表示所組成的單一字串。 複合格式字串中的每個物件都以有索引的格式項目來表示。 格式項目的索引對應至其所表示的物件在方法的參數清單中的位置。 索引以零為起始。 例如，在下列對 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法的呼叫中，第一個格式項目 `{0:D}` 由 `thatDate` 的字串表示所取代、第二個格式項目 `{1}` 由 `item1` 的字串表示所取代，而第三個格式項目 `{2:C2}` 由 `item1.Value` 的字串表示所取代。
+某些方法 (例如 <xref:System.String.Format%2A?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>) 支援複合格式。 複合格式字串是一種範本，可傳回由零個、一個或更多物件的字串表示所組成的單一字串。 複合格式字串中的每個物件都以有索引的格式項目來表示。 格式項目的索引對應至其所表示的物件在方法的參數清單中的位置。 索引以零為起始。 例如，在下列對 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法的呼叫中，第一個格式項目 `{0:D}`由 `thatDate`的字串表示所取代、第二個格式項目 `{1}`由 `item1`的字串表示所取代，而第三個格式項目 `{2:C2}`由 `item1.Value`的字串表示所取代。
 
 [!code-csharp[Conceptual.Formatting.Overview#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/composite1.cs#14)]
 [!code-vb[Conceptual.Formatting.Overview#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/composite1.vb#14)]
@@ -327,7 +327,7 @@ ms.locfileid: "74802462"
      [!code-csharp[Conceptual.Formatting.Overview#22](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/composite2.cs#22)]
      [!code-vb[Conceptual.Formatting.Overview#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/composite2.vb#22)]
 
-     請注意如果對齊字串元件和格式字串元件都存在，則前者優先於後者 (例如，`{0,-20:g}`)。
+     請注意如果對齊字串元件和格式字串元件都存在，則前者優先於後者 (例如， `{0,-20:g}`)。
 
 如需複合格式的詳細資訊，請參閱 [Composite Formatting](../../../docs/standard/base-types/composite-formatting.md)。
 
@@ -351,16 +351,16 @@ ms.locfileid: "74802462"
 
 |標題|定義|
 |-----------|----------------|
-|[標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)|說明建立數值常用之字串表示的標準格式字串。|
-|[自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)|說明建立應用程式專屬數值格式的自訂格式字串。|
+|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|說明建立數值常用之字串表示的標準格式字串。|
+|[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|說明建立應用程式專屬數值格式的自訂格式字串。|
 |[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|說明建立 <xref:System.DateTime> 值之常用字串表示的標準格式字串。|
 |[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|說明建立應用程式專屬 <xref:System.DateTime> 值格式的自訂格式字串。|
 |[標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)|說明建立時間間隔之常用字串表示的標準格式字串。|
 |[自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)|說明建立應用程式專屬數值格式的自訂格式字串。|
 |[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|說明用來建立列舉值之字串表示的標準格式字串。|
-|[複合格式設定](../../../docs/standard/base-types/composite-formatting.md)|描述如何將一個或更多的格式化值嵌入字串。 字串可以隨後顯示在主控台 (Console) 或寫入資料流。|
+|[複合格式](../../../docs/standard/base-types/composite-formatting.md)|描述如何將一個或更多的格式化值嵌入字串。 字串可以隨後顯示在主控台 (Console) 或寫入資料流。|
 |[執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)|列出各主題，提供執行特定格式設定作業的逐步指示。|
-|[剖析字串](../../../docs/standard/base-types/parsing-strings.md)|說明如何將物件初始化為這些物件的字串表示所描述的值。 剖析是格式化的反向作業。|
+|[Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)|說明如何將物件初始化為這些物件的字串表示所描述的值。 剖析是格式化的反向作業。|
 
 ## <a name="reference"></a>參考資料
 

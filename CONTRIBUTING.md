@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 25615dd43f1ae4f56c7bced7f79a0612093a21fb
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 469be53e14c42775f21ef1ef815becd5cad03a97
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191690"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336715"
 ---
 # <a name="contributing"></a>貢獻
 
@@ -22,14 +22,11 @@ ms.locfileid: "73191690"
 
 此存放庫包含 .NET 的概念文件。 .NET 文件網站除了此存放庫之外，還使用多個存放庫作為建置基礎：
 
-- [程式碼範例及程式碼片段](https://github.com/dotnet/samples)  
-    此存放庫的問題和工作會在[dotnet/檔/問題](https://github.com/dotnet/docs/issues)中進行追蹤。
-- [.NET API 參考](https://github.com/dotnet/dotnet-api-docs)  
-    此存放庫的問題和工作會在[dotnet/dotnet-api-檔/問題](https://github.com/dotnet/dotnet-api-docs/issues)中進行追蹤。
-- [.NET Compiler Platform SDK 參考](https://github.com/dotnet/roslyn-api-docs)  
-    此存放庫的問題和變成會在[dotnet/檔/問題](https://github.com/dotnet/docs/issues)中進行追蹤。
+- 程式[代碼範例和程式碼片段](https://github.com/dotnet/samples)此存放庫的問題和工作會在[dotnet/檔/問題](https://github.com/dotnet/docs/issues)中進行追蹤。
+- [.NET API 參考](https://github.com/dotnet/dotnet-api-docs)此存放庫的問題和工作會在[dotnet/dotnet-api-檔/問題](https://github.com/dotnet/dotnet-api-docs/issues)中進行追蹤。
+- [.NET COMPILER PLATFORM SDK 參考](https://github.com/dotnet/roslyn-api-docs)此存放庫的問題和工作會在[dotnet/檔/問題](https://github.com/dotnet/docs/issues)中進行追蹤。
 
-## <a name="dos-and-donts"></a>可進行及不可進行的事項
+## <a name="dos-and-donts"></a>可進行及避免進行的事項
 
 下列清單顯示您參與 .NET 文件時，應謹記在心的一些指導規則：
 
@@ -37,7 +34,7 @@ ms.locfileid: "73191690"
 - **請**查看目前[的抓取](https://github.com/dotnet/docs/labels/up-for-grabs)問題，以取得有關工作的建議。
 - **請**為每個工作建立一個 PR。 包含多個不相關變更的 Pr 比較難審視。 這會延遲評論和合併 Pr。 這項指導方針也適用于評論：我們不會在評論中建議不相關的變更。我們要求社區評論遵守此指導方針。
 - **請**提供您 PR 中工作的清楚描述。 請告訴我們變更的內容和原因。 「更新 article.md」的預設描述對審核者而言並不實用。
-- 請**不要**提交 pr 進行僅限樣式的變更，而不需要事先討論。 這些 Pr 需要花更多時間來審查準確度，而合併它們通常會造成與其他重要更新的合併衝突。 我們正努力遵循一致的風格，但我們正在進行平衡以處理其他工作。 當我們因其他原因而進行重大更新時，會將文章納入樣式一致性。 
+- 請**不要**提交 pr 進行僅限樣式的變更，而不需要事先討論。 這些 Pr 需要花更多時間來審查準確度，而合併它們通常會造成與其他重要更新的合併衝突。 我們正努力遵循一致的風格，但我們正在進行平衡以處理其他工作。 當我們因其他原因而進行重大更新時，會將文章納入樣式一致性。
 - **請務必**閱讀[樣式指南](./styleguide/template.md)與[語態和語氣](./styleguide/voice-tone.md)指導方針。 新的新增專案應遵循這些指導方針。
 - **請務必**在對文章進行作業之前，先在分叉上建立您自己的分支。
 - **請務必**遵循 [GitHub 流程的工作流程](https://guides.github.com/introduction/flow/)。
@@ -64,7 +61,7 @@ ms.locfileid: "73191690"
 
 - **新內容撰寫**。 如果您有興趣撰寫自己的主題，這些問題列出了我們所知想要新增到文件集的主題。 不過，在您開始進行某個主題之前，請先讓我們知道。 如果您有興趣撰寫這裡未列出的主題，請開立問題。
 
-您也可以查看我們的[待處理問題](https://github.com/dotnet/docs/issues) \(英文\) 清單，然後自願處理您有興趣的問題。 我們使用 [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) \(開放取用\) 標籤來標記開放參與的問題。 
+您也可以查看我們的[待處理問題](https://github.com/dotnet/docs/issues) \(英文\) 清單，然後自願處理您有興趣的問題。 我們使用 [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) \(開放取用\) 標籤來標記開放參與的問題。
 
 **步驟 2：** 視需要將 `dotnet/docs`、`dotnet/samples` 或 `dotnet/dotnet-api-docs` 存放庫分叉，然後為您的變更建立分支。
 
@@ -95,7 +92,7 @@ docs
             portability_report.png
 ```
 
-**步驟4：** 從您的分支提交提取要求（PR）至 `dotnet/docs/master`、`dotnet/dotnet-api-docs/master` 或 `dotnet/samples/master`。
+**步驟4：** 從您的分支提交提取要求（PR）至 `dotnet/docs/master`、`dotnet/dotnet-api-docs/master`或 `dotnet/samples/master`。
 
 您的 PR 應*一律*以存放庫的預設分支為目標（除非您正在使用發行分支）。 針對 dotnet/檔，主要分支是預設分支。 針對當地語系化的存放庫，live branch 是預設值。 您*絕對不*應該開啟以 dotnet/檔上的 live 分支為目標的 PR。
 
@@ -138,7 +135,7 @@ docs
 
 ## <a name="the-c-interactive-experience"></a>C# 互動式體驗
 
-以 C# 撰寫的簡短程式碼範例可以使用 `csharp-interactive` 語言標記來指定在瀏覽器中執行的 C# 範例。 （內嵌程式碼範例會使用 `csharp-interactive` 標記，針對來源所包含的程式碼片段，請使用 `code-csharp-interactive` 標記）。這些程式碼範例會在文章中顯示程式碼視窗和 [輸出] 視窗。 在使用者執行範例之後，輸出視窗會顯示來自執行互動式程式碼的所有輸出。 
+以 C# 撰寫的簡短程式碼範例可以使用 `csharp-interactive` 語言標記來指定在瀏覽器中執行的 C# 範例。 （內嵌程式碼範例會使用 `csharp-interactive` 標記，針對來源所包含的程式碼片段，請使用 `code-csharp-interactive` 標記）。這些程式碼範例會在文章中顯示程式碼視窗和 [輸出] 視窗。 在使用者執行範例之後，輸出視窗會顯示來自執行互動式程式碼的所有輸出。
 
 C# 互動式體驗改變了我們使用範例的方式。 訪客可以執行範例來查看結果。 有一些因素可協助判斷範例或相對應的文字是否應該包含輸出的相關資訊。
 
@@ -149,7 +146,7 @@ C# 互動式體驗改變了我們使用範例的方式。 訪客可以執行範�
 - 當範例和預期的輸出都很簡短時，請考慮顯示輸出。 這樣可節省一些時間。
 - 文章如果是說明目前文化特性 (Culture) 或不因文化特性而異會如何影響輸出，就應該說明預期的輸出。 互動式 REPL (「讀取、求值、輸出」迴圈) 會在 Linux 型主機上執行。 預設文化特性 (Culture) 和不因文化特性而異會在不同的作業系統與機器上，產生不同的輸出。 文章應該說明 Windows、Linux 及 Mac 系統中的輸出。
 
-### <a name="when-to-exclude-expected-output-from-the-sample"></a>何時該從範例中排除預期的輸出 
+### <a name="when-to-exclude-expected-output-from-the-sample"></a>何時該從範例中排除預期的輸出
 
 - 文章的範例如果會產生較大型的輸出，註解中就不應該包含該輸出。 一旦執行範例，它便會遮蔽程式碼。
 - 當文章的範例會示範某個主題，但輸出並非理解該主題的必要部分時。 例如，執行 LINQ 查詢來說明查詢語法後再於輸出集合中顯示每個項目的程式碼。

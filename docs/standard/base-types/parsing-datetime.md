@@ -14,12 +14,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 9957c38ad625a27395a3bcc3ddd9ce0b4797b93d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 16daa0ef3133b6cd04dc48b7f79fd365098e4bdf
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127609"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348076"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>在 .NET 中剖析日期和時間字串
 
@@ -48,7 +48,7 @@ ms.locfileid: "73127609"
   
 格式提供者也可以用來解譯不明確的數值日期。 "02/03/04" 字串並未明確表示代表月份、日期和年份的日期元件。 元件會根據格式提供者中的相似日期格式順序來解譯。
 
-## <a name="parse"></a>剖析
+## <a name="parse"></a>Parse
 
 下面的範例會示範如何使用 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 方法將 `string` 轉換成 <xref:System.DateTime>。 本範例會使用與目前執行緒相關聯的文化特性。 如果與目前文化特性相關聯的 <xref:System.Globalization.CultureInfo> 無法剖析輸入字串，則會擲回 <xref:System.FormatException>。
 
@@ -56,7 +56,7 @@ ms.locfileid: "73127609"
 > 本文中所有的 C# 範例皆可在您的瀏覽器中執行。 按 [執行] 按鈕以查看輸出。 您也可以編輯它們以進行實驗。
 
 > [!NOTE]
-> 這些範例可在 [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) 和 [VB](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions) 兩者的 GitHub 文件存放庫中取得。 或者，您可以為 [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) 或 [VB](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip)將專案下載為 ZIP 檔案。
+> 這些範例可在適用于[C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions)和[Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions)的 GitHub 檔存放庫中取得。 或者，您可以將專案下載為的 zip 檔案， [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip)或[Visual Basic](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip)。
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
@@ -86,7 +86,7 @@ ms.locfileid: "73127609"
 
 ## <a name="see-also"></a>請參閱
 
-- [剖析字串](parsing-strings.md)
+- [Parsing Strings](parsing-strings.md)
 - [格式化類型](formatting-types.md)
 - [.NET 中的類型轉換](type-conversion.md)
 - [標準日期和時間格式](standard-date-and-time-format-strings.md)

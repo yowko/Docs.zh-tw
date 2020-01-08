@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 542440d6bf9d6809abee1ec37c85c44ce72fd132
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 081dce85946fab85cff474508c46770c762b9e76
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715163"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338729"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>自訂複合設計工具 - 工作流程項目展示器
 
@@ -24,11 +24,13 @@ ms.locfileid: "74715163"
 
 - 覆寫重新裝載應用程式中的預設設計工具。
 
-### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
+## <a name="set-up-build-and-run-the-sample"></a>設定、建立和執行範例
 
-1. 在 Visual Studio 2010 中開啟C#或適用于 VB 的 usingworkflowitemspresenter.sln 範例解決方案。
+1. 開啟C#或的**usingworkflowitemspresenter.sln**範例方案，Visual Studio 2010 中的 Visual Basic。
 
-2. 建置並執行方案。 重新裝載的工作流程設計工具應用程式應該會開啟，您可以將活動拖曳至畫布上。
+2. 建置並執行方案。
+
+   重新裝載工作流程設計工具應用程式隨即開啟，您可以將活動拖曳到畫布上。
 
 ## <a name="sample-highlights"></a>範例重點
 

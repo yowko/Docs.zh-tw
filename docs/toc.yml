@@ -1,5 +1,7 @@
 - name: 歡迎畫面
   href: welcome.md
+- name: .NET 文件中的新功能
+  href: whats-new/index.yml
 - name: .NET 指南
   href: standard/
 - name: .NET Core 指南

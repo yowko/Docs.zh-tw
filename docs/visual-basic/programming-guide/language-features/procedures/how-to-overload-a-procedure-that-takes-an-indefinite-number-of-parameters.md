@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 047d566c13f03803d2e5c3bc6cce0db56df4a3f0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 94f12b4cc6cb35864fefbb3b5bb1378bec5e974c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345842"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347557"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>如何：多載使用不定數目參數的程序 (Visual Basic)
 如果程式具有[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)參數，您就無法為參數陣列定義接受一維陣列的多載版本。 如需詳細資訊，請參閱多載[程式的考慮](./considerations-in-overloading-procedures.md)中的「ParamArray 參數的隱含多載」。  
@@ -47,7 +47,7 @@ ms.locfileid: "74345842"
   
  多載版本中的程式碼不需要測試呼叫程式碼是否為 `ParamArray` 參數提供了一或多個值，如果有的話，也不需這麼做。 Visual Basic 會將控制權傳遞至符合呼叫引數清單的版本。  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
+## <a name="compile-the-code"></a>編譯程式碼  
  因為具有 `ParamArray` 參數的程式相當於一組多載版本，所以您無法使用對應至這些隱含多載的參數清單來多載這類程式。 如需詳細資訊，請參閱多載[程式的考慮](./considerations-in-overloading-procedures.md)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  

@@ -3,12 +3,12 @@ title: 開始使用語法分析 (Roslyn API)
 description: 周遊、查詢和查核語法樹狀結構的簡介。
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: e377fe10e094e958627c3503fc39b7e2d02b3d7a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
-ms.translationtype: HT
+ms.openlocfilehash: d4163e8aadf577a5a5cbed225b26a0ec8390277e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931755"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347006"
 ---
 # <a name="get-started-with-syntax-analysis"></a>開始使用語法分析
 
@@ -51,7 +51,7 @@ Syntax API 會建立根代表編譯單位的樹狀結構。 樹狀結構中的�
 
 語法樹狀結構的四個主要建置組塊是：
 
-* <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> 類別，代表整個剖析樹狀結構的執行個體。 <xref:Microsoft.CodeAnalysis.SyntaxTree> 是具有語言特定衍生的抽象類別。 您使用 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) 類別的剖析方法來剖析 C# 或 VB 中的文字。
+* <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> 類別，代表整個剖析樹狀結構的執行個體。 <xref:Microsoft.CodeAnalysis.SyntaxTree> 是具有語言特定衍生的抽象類別。 您可以使用 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> （或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>）類別的 parse 方法來剖析或 Visual Basic 中C#的文字。
 * <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> 類別，代表語法建構 (例如宣告、陳述式、子句和運算式) 的執行個體。
 * <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType> 結構，代表個別關鍵字、識別碼、運算子或標點符號。
 * 最後是 <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> 結構，代表語法無意義的資訊位元，例如權杖、前置處理指示詞與註解之間的空白字元。
@@ -78,7 +78,7 @@ Syntax API 會建立根代表編譯單位的樹狀結構。 樹狀結構中的�
 建立新的 C# **獨立程式碼分析工具**專案：
 
 * 在 Visual Studio 中，選擇 [檔案] > [新增] > [專案] 來顯示 [新增專案] 對話方塊。
-* 在 **Visual C#** > **擴充性**下，選擇 [獨立程式碼分析工具]。
+* 在 **Visual C#**  > **擴充性**下，選擇 [獨立程式碼分析工具]。
 * 將專案命名為 "**SyntaxTreeManualTraversal**"，然後按一下 [確定]。
 
 您要分析先前顯示的基本 "Hello World!" 程式。

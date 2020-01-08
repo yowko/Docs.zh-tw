@@ -2,26 +2,26 @@
 title: 操作說明文章 (C# 指南)
 description: 集結了快速提示與簡要的程式碼範例
 ms.date: 12/20/2017
-ms.openlocfilehash: 855ea90d22174c2b7c0b53a526c47a5edbe5496d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736883"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75339211"
 ---
 # <a name="how-to-c"></a>操作說明 (C#)
 
-在 C# 指南的＜操作說明＞一節中，您可以找到常見問題的快速解答。 在某些形況下，文章可能會列在多個章節內。 這是因為我們希望使用者能從多個搜尋管道輕鬆找到這些文章。
+在本C#指南的 how to 區段中，您可以找到常見問題的快速解答。 在某些形況下，文章可能會列在多個章節內。 這是因為我們希望使用者能從多個搜尋管道輕鬆找到這些文章。
 
 ## <a name="general-c-concepts"></a>一般 C# 概念
 
-以下有幾個提示和訣竅是常見的 C# 開發人員做法。
+有幾個秘訣和訣竅是常見C#的開發人員作法：
 
 - [使用物件初始設定式將物件初始化](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md)。
 - [了解向方法傳遞結構及類別的不同](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)。
 - [使用運算子多載](../language-reference/operators/operator-overloading.md)。
 - [實作和呼叫自訂擴充方法](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。
-- 連 C# 程式設計人員都可能想要[從 VB 使用`My` 命名空間](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
+- 甚至C#程式設計人員可能會想要[使用來自 Visual Basic 的 `My` 命名空間](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
 - [使用擴充方法建立 `enum` 類型的新方法](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
 
 ### <a name="class-and-struct-members"></a>類別和結構成員

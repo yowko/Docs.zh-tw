@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 274fea83c474d4b67aab919b604eda893d8204d7
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 0154910b91df0b2f72daebe802e4c75bbca964bb
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552857"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337584"
 ---
 # <a name="tour-of-net"></a>.NET 教學課程
 
@@ -27,13 +27,13 @@ ms.locfileid: "74552857"
 
 .NET 支援多種程式設計語言。 .NET 實作會實作[通用語言基礎結構 (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)，它的其中一個功能是指定與語言無關的執行階段和語言互通性。 這表示您可以選擇任何 .NET 語言，在 .NET 上建置應用程式與服務。
 
-Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic (VB)。 
+Microsoft 積極地開發並支援三種 .net C#語言F#：、和 Visual Basic。 
 
 * C# 既簡單、強大、型別安全且為物件導向，同時保留 C 樣式語言的易讀性與簡潔性。 熟悉 C 和類似語言的任何人在適應 C# 方面很少有問題。 若要深入了解 C#，請參閱 [C# 指南](../csharp/index.yml)。
 
 * F# 是跨平台、功能優先的程式語言，也支援傳統物件導向和命令式程式設計。 若要深入了解 F#，請參閱 [F# 指南](../fsharp/index.yml)。
 
-* Visual Basic 是容易學習的語言，您可以使用該語言建置 .NET 上所執行的各種應用程式。 在所有的 .NET 語言中，VB 的語法最接近一般人類語言，因此通常可讓新手更輕鬆地開發軟體。
+* Visual Basic 是容易學習的語言，您可以使用該語言建置 .NET 上所執行的各種應用程式。 在 .NET 語言中，Visual Basic 的語法最接近一般的人類語言，通常可讓使用者更輕鬆地開發軟體。
 
 ## <a name="automatic-memory-management"></a>自動記憶體管理
 
@@ -47,7 +47,7 @@ Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic 
 
 記憶體回收行程是服務之一，可確保*記憶體安全*。 如果程式只存取已配置的記憶體，就是記憶體安全。 例如，執行階段可確保應用程式不會存取陣列界限外已取消配置的記憶體。
 
-在下列範例中，執行階段會擲回 `InvalidIndexException` 例外狀況來確保記憶體安全：
+在下列範例中，執行階段會擲回 <xref:System.IndexOutOfRangeException> 例外狀況來確保記憶體安全：
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
@@ -65,13 +65,13 @@ Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic 
 
 * 若是 C#，請參閱 [using 陳述式 (C# 參考)](../csharp/language-reference/keywords/using-statement.md) 主題。
 * 若是 F#，請參閱[資源管理：use 關鍵字](../fsharp/language-reference/resource-management-the-use-keyword.md)。
-* 若是 VB，請參閱 [Using 陳述式 (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) 主題。
+* 如 Visual Basic，請參閱[Using 語句（Visual Basic）](../visual-basic/language-reference/statements/using-statement.md)主題。
 
 ## <a name="type-safety"></a>型別安全
 
 物件是特定類型的執行個體。 指定物件所允許的唯一作業會是其類型所允許的作業。 `Dog` 類型可能會有 `Jump` 和 `WagTail` 方法，但沒有 `SumTotal` 方法。 程式只能呼叫屬於指定類型的方法。 所有其他呼叫會導致編譯時期錯誤，或執行階段例外狀況 (如果使用動態功能或 `object`)。
 
-.NET 語言是物件導向，具有基底和衍生類別的階層架構。 .NET 執行階段只允許符合物件階層架構的的物件轉換和呼叫。 請記住，以任何 .NET 語言所定義的每種類型都是衍生自基底 <xref:System.Object> 型別。
+.NET 語言是物件導向，具有基底和衍生類別的階層架構。 .NET 執行階段只允許符合物件階層架構的的物件轉換和呼叫。 請記住，以任何 .NET 語言所定義的每種類型都是衍生自基底 <xref:System.Object> 類型。
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
 
@@ -79,11 +79,11 @@ Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic 
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#、VB 與 F# 支援本機「型別推斷」。 型別推斷表示編譯器會從右邊的運算式推算左邊的運算式類型。 這並不會破壞或規避型別安全。 產生的類型確實具有強型別，其中包含其所指的所有項目。 上述範例中的 `dog` 已重寫並引入型別推斷，範例的其餘部分則保持不變：
+C#、Visual Basic 與 F# 支援本機*型別推斷*。 型別推斷表示編譯器會從右邊的運算式推算左邊的運算式類型。 這並不會破壞或規避型別安全。 產生的類型確實具有強型別，其中包含其所指的所有項目。 上述範例中的 `dog` 已重寫並引入型別推斷，範例的其餘部分則保持不變：
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
-F# 提供比 C# 和 VB 中的方法區域型別推斷更進步的型別推斷功能。 如需詳細資訊，請參閱[型別推斷](../fsharp/language-reference/type-inference.md)。
+F#除了在和 Visual Basic 中C#找到的方法區域型別推斷，還有更進一步的型別推斷功能。 如需詳細資訊，請參閱[型別推斷](../fsharp/language-reference/type-inference.md)。
 
 ## <a name="delegates-and-lambdas"></a>委派和 Lambda
 
@@ -97,7 +97,7 @@ F# 提供比 C# 和 VB 中的方法區域型別推斷更進步的型別推斷功
 
 泛型可讓程式設計師在設計其類別時引入「型別參數」，如此即可讓用戶端程式碼 (類型的使用者) 指定正確類型來取代型別參數。
 
-新增泛型功能是為了協助程式設計師實作泛型資料結構。 在此功能之前，若要讓 `List` 等類型成為泛型，您必須使用 `object` 類型的項目。 這樣做會有各種效能及語意問題，更別提可能會有難以解決的執行階段錯誤。 後者最糟的情況是當資料結構同時包含整數與字串時，而且會在使用清單的成員時擲回 `InvalidCastException`。
+新增泛型功能是為了協助程式設計師實作泛型資料結構。 在抵達之前，為了讓 `List` 類型之類的類型成為泛型，必須使用 `object`類型的元素。 這有各種效能和語義問題，以及可能的細微執行階段錯誤。 當資料結構同時包含整數和字串，而且在處理清單的成員時擲回 <xref:System.InvalidCastException> 時，就會發生常見的執行階段錯誤。
 
 下列範例顯示使用 <xref:System.Collections.Generic.List%601> 類型執行個體的基本程式正在執行：
 
@@ -113,7 +113,7 @@ F# 提供比 C# 和 VB 中的方法區域型別推斷更進步的型別推斷功
 
 ## <a name="language-integrated-query-linq"></a>Language Integrated Query (LINQ)
 
-LINQ 是一組強大的 C# 和 VB 功能，可讓您撰寫簡單的宣告式程式碼來操作資料。 資料可以是許多形式 (例如記憶體內部物件、SQL 資料庫或 XML 文件)，但您撰寫的 LINQ 程式碼在資料來源方面通常大同小異。
+LINQ 是一組強大的功能， C#適用于和 Visual Basic，可讓您撰寫簡單、宣告式的程式碼來運算元據。 資料可以是許多形式 (例如記憶體內部物件、SQL 資料庫或 XML 文件)，但您撰寫的 LINQ 程式碼在資料來源方面通常大同小異。
 
 若要深入了解及查看一些範例，請參閱 [LINQ (Language Integrated Query)](using-linq.md) 主題。
 

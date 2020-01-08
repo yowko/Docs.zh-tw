@@ -2,22 +2,22 @@
 title: WS-AtomicTransaction 組態 MMC 嵌入式管理單元
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 04380a2a30aba85efb98ee8f9e24d0a6223a18a3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 04f9a014c3cb3ffd127ccc82fdda731e20136c52
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320332"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544641"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction 組態 MMC 嵌入式管理單元
 WS-AtomicTransaction 組態 MMC 嵌入式管理單元用於設定本機電腦和遠端電腦上的部分 WS-AtomicTransaction 設定。  
   
 ## <a name="remarks"></a>備註  
- 如果您執行 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 或 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]，流覽至 [控制台]/[系統**管理工具]/[元件服務/** ]，以滑鼠右鍵按一下**我的電腦**，**然後選取 [** 內容]，即可找到 MMC 嵌入式管理單元。 這個位置與您設定 MSDTC 的位置相同。 適用于設定的選項會群組在 [ **ws-at** ] 索引標籤底下。  
+ 如果您執行 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 或 Windows Server 2003，請流覽至 [控制台]/[系統**管理工具]/[元件服務/** ]，以滑鼠右鍵按一下 [**我的電腦**]，**然後選取 [** 內容]，即可找到 MMC 嵌入式管理單元。 這個位置與您設定 MSDTC 的位置相同。 適用于設定的選項會群組在 [ **ws-at** ] 索引標籤底下。  
   
- 如果您執行的是 Windows Vista 或 [!INCLUDE[lserver](../../../includes/lserver-md.md)]，按一下 [**開始**] 按鈕，然後在 [**搜尋**] 方塊中鍵入 `dcomcnfg.exe`，即可找到 MMC 嵌入式管理單元。 開啟 MMC 時，流覽至**My 電腦 \ 分散式 Transaction COORDINATOR\LOCAL DTC**節點，按一下滑鼠右鍵並選取 [**屬性**]。 適用于設定的選項會群組在 [ **ws-at** ] 索引標籤底下。  
+ 如果您執行的是 Windows Vista 或 Windows Server 2008，請按一下 [**開始**] 按鈕，然後在 [**搜尋**] 方塊中輸入 `dcomcnfg.exe`，即可找到 MMC 嵌入式管理單元。 開啟 MMC 時，流覽至**My 電腦 \ 分散式 Transaction COORDINATOR\LOCAL DTC**節點，按一下滑鼠右鍵並選取 [**屬性**]。 適用于設定的選項會群組在 [ **ws-at** ] 索引標籤底下。  
   
- 上述的步驟用於啟動設定本機電腦的嵌入式管理單元。 如果您想要設定遠端電腦，您應該在 [**控制台/系統管理工具/元件服務/** ] 中找出遠端電腦的名稱，然後執行 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 或 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 的類似步驟。 如果您執行的是 Windows Vista 或 [!INCLUDE[lserver](../../../includes/lserver-md.md)]，請遵循 Vista 和 [!INCLUDE[lserver](../../../includes/lserver-md.md)] 先前的步驟，但在遠端電腦的節點下，使用 [ **Distributed Transaction COORDINATOR\LOCAL DTC** ] 節點。  
+ 上述的步驟用於啟動設定本機電腦的嵌入式管理單元。 如果您想要設定遠端電腦，您應該在 [**控制台/系統管理工具/元件服務/** ] 中找出遠端電腦的名稱，然後執行 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 或 Windows Server 2003 中的類似步驟。 如果您執行的是 Windows Vista 或 Windows Server 2008，請遵循 Vista 和 Windows Server 2008 先前的步驟，但使用遠端電腦節點下的**Distributed Transaction COORDINATOR\LOCAL DTC**節點。  
   
  若要使用此工具提供的使用者介面，您必須註冊 WsatUI.dll 檔，此檔位於以下路徑，  
   
@@ -63,7 +63,7 @@ regasm.exe /codebase WsatUI.dll
   
  **授權的帳戶**  
   
- 按一下 [**選取**] 按鈕可叫用 [Windows 存取控制清單編輯器]，您可以在其中藉由核取 [**參與**] 中的 [**允許**] 或 [**拒絕**] 方塊，來指定可參與 ws-trust 非原子交易的使用者或群組許可權群組。  
+ 按一下 [**選取**] 按鈕可叫用 [Windows 存取控制清單編輯器]，您可以在其中藉由核取 [**加入**] 許可權群組中的 [**允許**] 或 [**拒絕**] 方塊，來指定可參與 ws-trust 非原子交易的使用者或群組。  
   
  **授權的憑證**  
   

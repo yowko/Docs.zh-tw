@@ -2,12 +2,12 @@
 title: 如何：查詢字串中的字元 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: 9da6d5abd6155a7af5ec59e17693e8acae7e7b73
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2f306a488610aaa5775210eba3d7312b092545a7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347713"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345516"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>如何：查詢字串中的字元（LINQ）（Visual Basic）
 
@@ -56,9 +56,9 @@ End Class
 ' ABCDE99F
 ```
 
-## <a name="compiling-the-code"></a>編譯程式碼
+## <a name="compile-the-code"></a>編譯程式碼
 
-建立 VB.NET 主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
+建立 Visual Basic 的主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
 
 ## <a name="see-also"></a>請參閱
 

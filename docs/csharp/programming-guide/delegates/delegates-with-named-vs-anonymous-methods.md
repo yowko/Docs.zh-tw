@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 50df0e9c42d366c9c79dde3b0d34f85b8e552a45
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 310d0abd8fd2ceac5f8dfaa2647cb6ac26513a0f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418036"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346412"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>使用具名和匿名方法委派的比較 (C# 程式設計手冊)
 [delegate](../../language-reference/builtin-types/reference-types.md) 可以與具名方法產生關聯。 當您使用具名方法具現化委派時，方法會當做參數傳遞，例如：  
@@ -41,5 +41,5 @@ ms.locfileid: "73418036"
 
 - [C# 程式設計指南](../index.md)
 - [委派](./index.md)
-- [如何：組合委派 (多點傳送委派)](./how-to-combine-delegates-multicast-delegates.md)
+- [如何合併委派（多播委派）](./how-to-combine-delegates-multicast-delegates.md)
 - [事件](../events/index.md)

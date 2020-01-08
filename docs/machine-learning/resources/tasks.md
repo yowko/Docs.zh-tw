@@ -2,18 +2,22 @@
 title: 機器學習工作
 description: 探索 ML.NET 中支援的各種不同機器學習工作與相關的工作。
 ms.custom: seodec18
-ms.date: 04/23/2019
+ms.date: 12/23/2019
 author: natke
-ms.openlocfilehash: d0634ce8a0559ab3cdb5bf27fc5406ab02af8df6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: cde4af720fe1ede80cb1bdc6b70f6586293920a4
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977248"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636441"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 中的機器學習工作
 
-建置機器學習模型時，您必須先定義希望利用資料來達成的目標。 這可讓您挑選適合您情況的機器學習工作。 以下清單描述可供您選擇的各種不同機器學習工作，以及一些常見的使用案例。 如需選擇適用于您的案例之工作的詳細資訊，請參閱[演算法](../how-to-choose-an-ml-net-algorithm.md)。
+機器學習工作是根據所詢問的問題或問題，以及可用的資料，進行預測或推斷的類型。 例如，分類工作會將資料指派給類別目錄，而叢集工作會根據相似性將資料分組。
+
+機器學習工作會依賴資料中的模式，而不是明確地進行設計。
+
+本文說明您可以在 ML.NET 中選擇的不同機器學習工作，以及一些常見的使用案例。
 
 一旦您決定哪一個工作適用於您的案例，您就必須選擇最佳演算法來訓練模型。 每個工作的區段中列出了可用的演算法。
 
@@ -91,7 +95,7 @@ ms.locfileid: "73977248"
 
 訓練工具輸出下列內容：
 
-| 輸出名稱 | 輸入 | 描述|
+| 輸出名稱 | 類型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> 的向量 | 所有類別的分數。 較高值表示落入相關聯類別的機率較高。 若第 i 個項目具有最大值，則預測標籤索引將會是 i。 請注意，i 是以零為基礎的索引。 |
 | `PredictedLabel` | [key](xref:Microsoft.ML.Data.KeyDataViewType) 類型 | 預測標籤的索引。 若其值是 i，則實際標籤可能會是索引鍵/值輸入標籤類型中的第 i 個類別。 |
@@ -124,7 +128,7 @@ ms.locfileid: "73977248"
 
 這項工作的訓練工具會輸出下列內容：
 
-| 輸出名稱 | 輸入 | 描述|
+| 輸出名稱 | 類型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 由模型預測的原始分數 |
 
@@ -148,7 +152,7 @@ ms.locfileid: "73977248"
 
 訓練工具輸出下列內容：
 
-| 輸出名稱 | 輸入 | 描述|
+| 輸出名稱 | 類型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> 的向量 | 指定資料點到所有叢集幾何中心的距離 |
 | `PredictedLabel` | [key](xref:Microsoft.ML.Data.KeyDataViewType) 類型 | 由模型所預測最接近的叢集索引。 |
@@ -180,9 +184,10 @@ PCA 是以機器學習所建立的技術，經常用於探索資料分析，因�
 
 訓練工具輸出下列內容：
 
-| 輸出名稱 | 輸入 | 描述|
+| 輸出名稱 | 類型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 由異常偵測模型所計算之非負數且沒有限制的分數 |
+| `PredictedLabel` | <xref:System.Boolean> | True/false 值，表示輸入是否為異常（PredictedLabel = true）或不是（PredictedLabel = false） |
 
 ## <a name="ranking"></a>排名
 
@@ -203,7 +208,7 @@ PCA 是以機器學習所建立的技術，經常用於探索資料分析，因�
 
 訓練工具輸出下列內容：
 
-| 輸出名稱 | 輸入 | 描述|
+| 輸出名稱 | 類型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 由模型計算的無限制分數，用來判斷預測 |
 

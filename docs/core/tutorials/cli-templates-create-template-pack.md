@@ -2,15 +2,15 @@
 title: 建立適用於 dotnet new 的範本套件
 description: 了解如何建立將會針對 dotnet new 命令建置範本套件的 csproj 檔案。
 author: thraka
-ms.date: 06/25/2019
+ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 520af5022e061236c0cfe80379679d9c7b5896b2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117408"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340162"
 ---
 # <a name="tutorial-create-a-template-pack"></a>教學課程：建立範本套件
 
@@ -20,18 +20,18 @@ ms.locfileid: "71117408"
 
 > [!div class="checklist"]
 >
-> * \*建立 .csproj 專案以建立範本套件
+> * 建立 \*.csproj 專案以建立範本套件
 > * 設定專案檔以用於封裝
 > * 從 NuGet 套件檔案安裝範本
 > * 依套件識別碼將範本解除安裝
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
 
 * 完成此教學課程系列的[第 1 部分](cli-templates-create-item-template.md)和[第 2 部分](cli-templates-create-project-template.md)。
 
-  此教學課程會使用在此教學課程系列的前兩個部分中所建立的兩個範本。 您可以使用不同的範本，前提是您必須將該範本以資料夾的形式複製到 _working\templates\\_ 資料夾中。
+  此教學課程會使用在此教學課程系列的前兩個部分中所建立的兩個範本。 只要您將範本當做資料夾複製到_working\templates\\_ 資料夾中，就可以使用不同的範本。
 
-* 開啟終端機並瀏覽至 _working\templates\\_ 資料夾。
+* 開啟終端機，並流覽至 [_工作\\_ ] 資料夾。
 
 ## <a name="create-a-template-pack-project"></a>建立範本套件專案
 

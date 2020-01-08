@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e919341130c6778207f324dd9eb3b3f54c8a9c68
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 670c4dd1ac9da496f59d12d2e880cf269d64f309
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74551852"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344959"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>教學課程：使用 ML.NET 模型產生器來分析 web 應用程式中的網站批註情感
 
@@ -60,9 +60,9 @@ ms.locfileid: "74551852"
 
 | 情感 | SentimentText |
 | :---: | :---: |
-1 | = = 「強制」 = = Dude，您可以將 carl 的上傳放回，或其他。
-1 | = = OK！ = = IM 即將 VANDALIZE 萬用字元 WIKI 然後!!!
-0 | 我希望這有説明。
+1 | ==沒禮貌== 哥們，把那張卡爾的相片上傳回來之類的真是太沒禮貌了。
+1 | = = OK！ == 沒問題! == 嗯，我會把狂野 WIKI 弄壞!!!
+0 | 我希望這有幫助。
 
 ## <a name="choose-a-scenario"></a>選擇案例
 
@@ -304,4 +304,4 @@ ms.locfileid: "74551852"
 
 - [模型建立器案例](../automate-training-with-model-builder.md#scenarios)
 - [二元分類](../resources/glossary.md#binary-classification)
-- [二元分類模型計量](../resources/metrics.md#metrics-for-binary-classification)
+- [二元分類模型計量](../resources/metrics.md#evaluation-metrics-for-binary-classification)

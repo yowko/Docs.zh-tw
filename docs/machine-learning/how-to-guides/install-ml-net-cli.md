@@ -1,18 +1,21 @@
 ---
 title: 如何安裝 ML.NET 命令列介面 (CLI) 工具
-description: ML.NET 命令列介面 (CLI) 工具的概觀與安裝。
-ms.date: 04/16/2019
-ms.custom: ''
-ms.openlocfilehash: feeb4832b5bbd39f28ac2c6f6caa40d60b4f3aa9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+description: 瞭解如何安裝、升級、降級和卸載 ML.NET 命令列介面（CLI）工具。
+ms.date: 12/18/2019
+ms.author: nakersha
+author: natke
+ms.openlocfilehash: 07b6e924ed9c6b0c278a86539ebe7d750f9ced37
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977087"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636584"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>如何安裝 ML.NET 命令列介面 (CLI) 工具
 
-ML.NET CLI (命令列介面) 是您可以在任何命令提示字元 (Windows、Mac 或 Linux) 中執行的工具，根據您提供的定型資料集產生高品質 ML.NET 模型和原始程式碼。
+瞭解如何在 Windows、Mac 或 Linux 上安裝 ML.NET CLI （命令列介面）。
+
+ML.NET CLI 會使用自動化機器學習（AutoML）和訓練資料集，產生良好品質的 ML.NET 模型和原始程式碼。
 
 > [!NOTE]
 > 本主題參考 ML.NET CLI 和 ML.NET AutoML，它們目前為公開預覽版，因此内容可能會有變更。
@@ -23,7 +26,7 @@ ML.NET CLI (命令列介面) 是您可以在任何命令提示字元 (Windows、
 
 - (選擇性) [Visual Studio 2017 或 2019](https://visualstudio.microsoft.com/vs/)
 
-您可以使用 Visual Studio F5 或 `dotnet run` (.NET Core CLI) 執行已產生的 C# 程式碼專案。
+您可以按下 `F5` C#鍵或使用 `dotnet run` （.NET Core CLI），以 Visual Studio 執行產生的程式碼專案。
 
 注意：如果安裝[.Net Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2)之後，`dotnet tool` 命令無法運作，請登出 Windows 並重新登入。
 
@@ -120,7 +123,7 @@ dotnet tool update -g mlnet
 
 ML.NET CLI 可以安裝在預設目錄或特定位置。 預設目錄如下：
 
-| OS          | 路徑                          |
+| 作業系統          | {2&gt;路徑&lt;2}                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -134,7 +137,7 @@ ML.NET CLI 可以安裝在預設目錄或特定位置。 預設目錄如下：
 
 ## <a name="see-also"></a>請參閱
 
-- [＜ML.NET CLI 工具使用者入門＞的教學課程](../tutorials/mlnet-cli.md)
-- [如何使用 ML.NET CLI 工具自動定型模型](../automate-training-with-cli.md)
+- [ML.NET CLI 總覽](../automate-training-with-cli.md)
+- [教學課程：使用 ML.NET CLI 來分析情感](../tutorials/sentiment-analysis-cli.md)
 - [ML.NET CLI auto-train 命令參考指南](../reference/ml-net-cli-reference.md)
 - [ML.NET CLI 中的遙測](../resources/ml-net-cli-telemetry.md)

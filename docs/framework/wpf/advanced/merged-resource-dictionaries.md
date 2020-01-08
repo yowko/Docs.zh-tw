@@ -5,12 +5,12 @@ helpviewer_keywords:
 - merged resource dictionaries [WPF]
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
-ms.openlocfilehash: 6647e52ef8477221dd5849a19809a34fb06189a6
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 899955a9f3302e67de4efa0ce0cb6baf6bf0ec5d
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455414"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559777"
 ---
 # <a name="merged-resource-dictionaries"></a>合併的資源字典
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資源支援合併的資源字典功能。 這項功能提供一種方法，定義已編譯之 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 應用程式之外的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的資源部分。 然後，資源可在應用程式間共用，也更方便隔離進行當地語系化。  
@@ -20,7 +20,7 @@ ms.locfileid: "73455414"
   
  [!code-xaml[ResourceMergeDictionary#MergedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]  
   
- 請注意，<xref:System.Windows.ResourceDictionary> 元素並沒有[x：Key](../../xaml-services/x-key-directive.md)指示詞，資源集合中的所有專案通常都需要此指示詞。 但是，<xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> 集合內的另一個 <xref:System.Windows.ResourceDictionary> 參考是特殊案例，保留給這個合併的資源字典案例。 引進合併資源字典的 <xref:System.Windows.ResourceDictionary> 不能有[x：Key](../../xaml-services/x-key-directive.md)指示詞。 一般來說，<xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> 集合中的每個 <xref:System.Windows.ResourceDictionary> 都會指定一個 <xref:System.Windows.ResourceDictionary.Source%2A> 屬性。 <xref:System.Windows.ResourceDictionary.Source%2A> 的值應該是統一資源識別元（URI），它會解析為要合併之資源檔的位置。 該 URI 的目的地必須是另一個 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案，並以 <xref:System.Windows.ResourceDictionary> 作為其根項目。  
+ 請注意，<xref:System.Windows.ResourceDictionary> 元素並沒有[x：Key](../../../desktop-wpf/xaml-services/xkey-directive.md)指示詞，資源集合中的所有專案通常都需要此指示詞。 但是，<xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> 集合內的另一個 <xref:System.Windows.ResourceDictionary> 參考是特殊案例，保留給這個合併的資源字典案例。 引進合併資源字典的 <xref:System.Windows.ResourceDictionary> 不能有[x：Key](../../../desktop-wpf/xaml-services/xkey-directive.md)指示詞。 一般來說，<xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> 集合中的每個 <xref:System.Windows.ResourceDictionary> 都會指定一個 <xref:System.Windows.ResourceDictionary.Source%2A> 屬性。 <xref:System.Windows.ResourceDictionary.Source%2A> 的值應該是統一資源識別元（URI），它會解析為要合併之資源檔的位置。 該 URI 的目的地必須是另一個 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案，並以 <xref:System.Windows.ResourceDictionary> 作為其根項目。  
   
 > [!NOTE]
 > 在指定為合併字典的 <xref:System.Windows.ResourceDictionary> 中定義資源是合法的，這可以做為指定 <xref:System.Windows.ResourceDictionary.Source%2A>的替代方法，或是除了指定的來源所包含的任何資源之外。 不過，這不是常見的案例。合併字典的主要案例是合併來自外部檔案位置的資源。 如果您想要在頁面的標記內指定資源，通常應該在主要 <xref:System.Windows.ResourceDictionary> 中定義，而不是在合併的字典中。  

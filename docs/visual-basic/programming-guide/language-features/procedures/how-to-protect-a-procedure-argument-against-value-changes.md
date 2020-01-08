@@ -14,12 +14,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: 36092eb597b5b20e1da42cd9d15ab8633636cfb1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 75c718c83f36e2f0b2c4cfb5504c2d740eaa3520
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344851"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347906"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>如何：防止程序引數的值變更 (Visual Basic)
 如果程式將參數宣告為[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 會提供程式碼直接參考呼叫程式碼中引數的基礎程式設計項目。 這允許程式變更呼叫程式碼中引數的基礎值。 在某些情況下，呼叫程式碼可能會想要防止這類變更。  
@@ -39,7 +39,7 @@ ms.locfileid: "74344851"
   
  第二個 `MsgBox` 呼叫會顯示「取代後（n）：11，21，31，41」。 因為 `ByVal`傳遞 `n`，所以 `replace` 無法藉由指派新的陣列來修改呼叫程式碼中 `n` 的變數。 當 `replace` 建立新的陣列實例 `k`，並將它指派給本機變數 `a`時，就會失去呼叫程式碼所傳入之 `n` 的參考。 當它變更 `a`的成員時，只有本機陣列 `k` 會受到影響。 因此，`replace` 不會在呼叫程式碼中增加陣列 `n` 的值。  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
+## <a name="compile-the-code"></a>編譯程式碼  
  Visual Basic 中的預設值是以傳值方式傳遞引數。 不過，在每個宣告的參數中包含[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)關鍵字是很好的程式設計作法。 這可讓您的程式碼更容易閱讀。  
   
 ## <a name="see-also"></a>請參閱
@@ -53,4 +53,4 @@ ms.locfileid: "74344851"
 - [如何：變更程序引數的值](./how-to-change-the-value-of-a-procedure-argument.md)
 - [如何：強制以傳值方式傳遞引數](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [依位置和名稱傳遞引數](./passing-arguments-by-position-and-by-name.md)
-- [值類型和參考類型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

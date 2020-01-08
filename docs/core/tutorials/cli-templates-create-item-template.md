@@ -5,14 +5,14 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 5183781d6a131aa395cf7c1fd8a09e05ed0bd71d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926157"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340374"
 ---
-# <a name="tutorial-create-an-item-template"></a>教學課程：建立項目範本
+# <a name="tutorial-create-an-item-template"></a>教學課程：建立專案範本
 
 透過 .NET Core，您可以建立及部署能產生專案、檔案，甚至是資源的範本。 此教學課程是指導您如何建立、安裝及解除安裝能搭配 `dotnet new` 命令使用之範的本系列文章第一部分。
 
@@ -26,14 +26,14 @@ ms.locfileid: "70926157"
 > * 測試項目範本
 > * 將項目範本解除安裝
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
 
 * [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download) 或更新版本。
 * 請參閱參考文章 [dotnet new 的自訂範本](../tools/custom-templates.md)。
 
   該參考文章會說明範本的基本概念及構成方式。 那些資訊有一部分會在此重述。
 
-* 開啟終端機並瀏覽至 _working\templates\\_ 資料夾。
+* 開啟終端機，並流覽至_working\templates_資料夾。
 
 ## <a name="create-the-required-folders"></a>建立必要的資料夾
 
@@ -54,7 +54,7 @@ parent_folder
 
 項目範本是特定類型的範本，其會包含一或多個檔案。 這些範本類型很適合在您想要產生設定、程式碼或方案檔之類的項目時使用。 在此範例中，您將會建立能將擴充方法加入字串類型的類別。
 
-在您的終端機中，瀏覽至 _working\templates\\_ 資料夾，並建立名為 _extensions_ 的新子資料夾。 進入該資料夾。
+在終端機中，流覽至 [ _working\templates_ ] 資料夾，然後建立名為 [_擴充_功能] 的新子資料夾。 進入該資料夾。
 
 ```console
 working
@@ -85,7 +85,7 @@ namespace System
 
 ## <a name="create-the-template-config"></a>建立範本設定
 
-.NET Core 會將範本辨識為存在於範本根目錄中的特殊資料夾及設定檔。 在此教學課程中，您的範本資料夾是位於 _working\templates\extensions\\_ 。
+.NET Core 會將範本辨識為存在於範本根目錄中的特殊資料夾及設定檔。 在本教學課程中，您的範本資料夾位於_working\templates\extensions_。
 
 當您建立範本時，範本資料夾中的所有檔案和資料夾都會包含為範本的一部分，除了特殊設定資料夾之外。 此設定資料夾名為 _.template.config_。
 

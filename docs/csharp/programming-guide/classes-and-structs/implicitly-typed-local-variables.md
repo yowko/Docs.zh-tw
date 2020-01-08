@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: dab708bfbc33458bc2664c0d04757f0badcc2575
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
-ms.translationtype: MT
+ms.openlocfilehash: 2d791e233ea869381de3a1c29f79d81d549904e0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141598"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635817"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隱含類型區域變數 (C# 程式設計手冊)
 
@@ -49,7 +49,7 @@ ms.locfileid: "74141598"
 
 ## <a name="var-and-anonymous-types"></a>var 和匿名型別
 
-在許多情況下，使用 `var` 是選擇性的，只是為了在語法上便於使用。 不過，當變數以匿名型別初始化時，如果您稍後需要存取物件的屬性，則必須宣告該變數為 `var`。 這是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式中的常見案例。 如需詳細資訊，請參閱[匿名型別](anonymous-types.md)。
+在許多情況下，使用 `var` 是選擇性的，只是為了在語法上便於使用。 不過，當變數以匿名型別初始化時，如果您稍後需要存取物件的屬性，則必須宣告該變數為 `var`。 這是 LINQ 查詢運算式中的常見案例。 如需詳細資訊，請參閱[匿名型別](anonymous-types.md)。
 
 從原始程式碼的觀點來看，匿名型別沒有名稱。 因此，如果已使用 `var` 初始化查詢變數，則存取傳回的物件序列中屬性的唯一方法，就是使用 `var` 作為 `foreach` 陳述式中反覆運算變數的類型。
 

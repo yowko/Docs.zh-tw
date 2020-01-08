@@ -2,12 +2,12 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: dd3dd026749ccc299cd922b79dcae8ccbcc722d8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3c7da8d5a473b801da8c48d1cb1504b95cc6c769
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968833"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342123"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 將用來產生服務主機的處理站，與要裝載的服務和存取或編譯 .svc 檔案中提供的程式碼所需的其他程式設計方面加以關聯。  
@@ -30,13 +30,13 @@ CodeBehind = "CodeBehind"
  所裝載之服務的 CLR 型別名稱。 這應該是實作一個以上的服務合約之型別的限定名稱。  
   
 #### <a name="factory"></a>Factory  
- 用來具現化服務主機的服務主機處理站之 CLR 型別名稱。 這是一個選擇性的屬性。 如果沒有指定，則使用預設的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，它會傳回 <xref:System.ServiceModel.ServiceHost> 的執行個體。  
+ 用來具現化服務主機的服務主機處理站之 CLR 型別名稱。 此屬性是選擇性的。 如果沒有指定，則使用預設的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，它會傳回 <xref:System.ServiceModel.ServiceHost> 的執行個體。  
   
 #### <a name="debug"></a>偵錯  
  指出是否應該使用 debug 符號來編譯 Windows Communication Foundation （WCF）服務。 如果應該使用 debug 符號來編譯 WCF 服務，`true`。否則，`false`。  
   
 #### <a name="language"></a>語言  
- 指定編譯檔案內 (.svc) 所有內嵌程式碼時使用的語言。 這些值可以表示任何 .NET 支援的語言，包括 C#、VB 和 JS (分別指 C#、Visual Basic .NET 和 JScript .NET)。 這是一個選擇性的屬性。  
+ 指定編譯檔案內 (.svc) 所有內嵌程式碼時使用的語言。 值可以代表任何。NET 支援的語言，包括 `C#`、`VB`和 `JS`，分別參考C#、Visual Basic 和 JScript .net。 此屬性是選擇性的。  
   
 #### <a name="codebehind"></a>CodeBehind  
  當實作 XML Web Service 的類別不是存放在相同的檔案中，且尚未編譯為組件並置於 \Bin 目錄內的時候，請指定實作 XML Web Service 的原始程式檔。  

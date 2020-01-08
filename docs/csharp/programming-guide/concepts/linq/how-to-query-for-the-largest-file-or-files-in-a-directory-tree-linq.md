@@ -1,15 +1,15 @@
 ---
-title: 作法：查詢樹狀目錄中的最大檔案 (LINQ) (C#)
+title: 如何查詢樹狀目錄中的最大檔案（LINQ）（C#）
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: 966138795dca53db99a0752b9bb7b85cc4601ee3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: dee501dc8d0cabd718307b45c99ca049ae4250aa
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592763"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344557"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>作法：查詢樹狀目錄中的最大檔案 (LINQ) (C#)
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>如何查詢樹狀目錄中的最大檔案（LINQ）（C#）
 此範例顯示五個與檔案位元組大小相關的查詢：  
   
 - 如何擷取最大檔案的位元組大小。  
@@ -145,7 +145,7 @@ class QueryBySize
 ## <a name="compiling-the-code"></a>編譯程式碼  
 建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。
  
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
 - [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)

@@ -2,12 +2,12 @@
 title: 中斷性變更類別 - .NET Core
 description: 了解 .NET Core 如何分類中斷性變更。
 ms.date: 06/10/2019
-ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 32cf55dc3ba0b16bae8cfe6179211150b2c90e2c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567917"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343604"
 ---
 # <a name="breaking-change-categories"></a>中斷性變更類別
 
@@ -18,8 +18,7 @@ ms.locfileid: "74567917"
 - [來源相容性](#source-compatibility)
 - [設計階段相容性](#design-time-compatibility)
 - [回溯相容性](#backwards-compatibility)
-
-[向前相容性](#forward-compatibility)不是 .net Core 的目標。
+- [向前相容性](#forward-compatibility)（不是 .net Core 的目標）
 
 ## <a name="behavioral-change"></a>行為變更
 
@@ -43,7 +42,7 @@ ms.locfileid: "74567917"
 
 回溯相容性是指現有 API 消費者對新版執行時，仍能保有相同行為的能力。 行為變更與二進位相容性變更都會影響回溯相容性。 若消費者無法對新版執行，或對新版執行時，無法保有相同的行為，此 API 便是*回溯不相容*。
 
-強烈建議不要進行會對回溯相容性造成影響的變更，因為開發人員一般預期新版 API 具備回溯相容性的能力。
+不鼓勵影響回溯相容性的變更，因為開發人員希望在較新版本的 API 中提供回溯相容性。
 
 ## <a name="forward-compatibility"></a>往後相容性
 

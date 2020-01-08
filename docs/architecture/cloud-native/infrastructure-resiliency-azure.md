@@ -2,12 +2,12 @@
 title: Azure 平臺復原
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |使用 Azure 的雲端基礎結構復原
 ms.date: 06/30/2019
-ms.openlocfilehash: 02d661952c860da25442b0fa9fed0d5f93abe023
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 8b33c1cec1633c9fb25ae2b02e51f8be01c22941
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520768"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337381"
 ---
 # <a name="azure-platform-resiliency"></a>Azure 平臺復原
 
@@ -26,11 +26,11 @@ ms.locfileid: "72520768"
 
 失敗的影響範圍會有所不同。 硬體失敗（例如失敗的磁片）可能會影響叢集中的單一節點。 失敗的網路交換器可能會影響整個伺服器機架。 較不常見的失敗（例如斷電）可能會中斷整個資料中心。 整個區域很少會變得無法使用。
 
-[冗余](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy)是提供應用程式恢復功能的一種方式。 所需的確切冗余層級取決於您的業務需求，並會影響系統的成本和複雜度。 例如，多區域部署比單一區域部署更耗費資源，而且管理起來更複雜。 您將需要操作程式來管理容錯移轉和容錯回復。 在某些商務案例中，可能會有額外的成本和複雜度，而不是其他部分。
+[冗余](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy)是提供應用程式恢復功能的一種方式。 所需的確切冗余層級取決於您的業務需求，並會影響系統的成本和複雜度。 例如，多區域部署比單一區域部署更耗費資源，而且管理起來更複雜。 您將需要操作程式來管理容錯移轉和容錯回復。 額外的成本和複雜度對一些商務情節可能合理，但對其他情節則不適用。
 
 若要架構的冗余，您需要識別應用程式中的關鍵路徑，然後判斷路徑中的每個點是否有多餘的複本？ 如果子系統應該失敗，應用程式會故障切換到其他專案嗎？ 最後，您需要清楚瞭解 Azure 雲端平臺內建的功能，讓您可以利用它來滿足您的冗余需求。 以下是架構冗余的建議：
 
-- *部署多個服務實例。* 如果您的應用程式相依于服務的單一實例，它會建立單一失敗點。 布建多個實例可改善復原和擴充性。 在 Azure Kubernetes Service 中裝載時，您可以在 Kubernetes 資訊清單檔中以宣告方式設定多餘的實例（複本集）。 您可以在入口網站中或透過自動調整功能（稍後會討論），以程式設計方式管理複本計數值。
+- *部署多個服務執行個體。* 如果您的應用程式相依於服務的單一執行個體，它會建立單一失敗點。 佈建多個執行個體，可改善復原能力和延展性。 在 Azure Kubernetes Service 中裝載時，您可以在 Kubernetes 資訊清單檔中以宣告方式設定多餘的實例（複本集）。 您可以在入口網站中或透過自動調整功能（稍後會討論），以程式設計方式管理複本計數值。
 
 - *利用負載平衡器。* 負載平衡會將應用程式的要求散發到狀況良好的服務實例，並自動從迴圈中移除狀況不良的實例。 部署至 Kubernetes 時，可以在 [服務] 區段的 Kubernetes 資訊清單檔中指定負載平衡。
 
@@ -48,7 +48,7 @@ ms.locfileid: "72520768"
 
 **圖 6-7**。 AKS 和 Azure 流量管理員
 
-## <a name="design-for-scalability"></a>擴充性設計
+## <a name="design-for-scalability"></a>延展性設計
 
 調整規模的雲端計畫才能生生不息。 增加/減少系統資源以解決增加/減少系統負載的能力，是 Azure 雲端的關鍵原則。 但是，若要有效地調整應用程式，您必須瞭解您在應用程式中包含的每個 Azure 服務的調整功能。  以下是在您的系統中有效執行調整的建議。
 
@@ -78,7 +78,7 @@ ms.locfileid: "72520768"
 
 - *Azure Redis 快取。* Redis Stackexchange.redis 用戶端會使用連線管理員類別，其中包含嘗試失敗時的重試。 重試次數、特定的重試原則和等候時間都可設定。
 
-- *Azure 服務匯流排。* 服務匯流排用戶端會公開一個[RetryPolicy 類別](xref:Microsoft.ServiceBus.RetryPolicy)，可使用 [輪詢間隔]、[重試計數] 和 [<xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer>] 來設定，以指定作業可以採取的最長時間。 預設原則是在每次嘗試之間有30秒的輪詢週期，這是九次重試次數上限。
+- *Azure 服務匯流排。* 服務匯流排用戶端會公開一個[RetryPolicy 類別](xref:Microsoft.ServiceBus.RetryPolicy)，可使用 [輪詢間隔]、[重試計數] 和 [<xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer%2A>] 來設定，以指定作業可以採取的最長時間。 預設原則是在每次嘗試之間有30秒的輪詢週期，這是九次重試次數上限。
 
 - *Azure SQL Database。* 使用[Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)程式庫時，會提供重試支援。
 

@@ -1,6 +1,6 @@
 ---
 title: 在 Ubuntu 16.04 套件管理員上安裝 .NET Core-.NET Core
-description: 使用套件管理員在 Ubuntu 16.04 上安裝 .NET Core SDK 和執行平台。
+description: 使用套件管理員在 Ubuntu 16.04 上安裝 .NET Core SDK 和執行階段。
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
@@ -15,7 +15,7 @@ ms.locfileid: "74959736"
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-本文說明如何使用套件管理員在 Ubuntu 16.04 上安裝 .NET Core。 如果您僅要安裝執行平台，我們建議您安裝[ASP.NET Core runtime](#install-the-aspnet-core-runtime)，因為它同時包含 .net Core 和 ASP.NET Core 執行平台。
+本文說明如何使用套件管理員在 Ubuntu 16.04 上安裝 .NET Core。 如果您僅要安裝執行階段，我們建議您安裝 [ASP.NET Core runtime](#install-the-aspnet-core-runtime)，因為它同時包含 .NET Core 和 ASP.NET Core 執行階段。
 
 ## <a name="register-microsoft-key-and-feed"></a>註冊 Microsoft 金鑰和摘要
 
@@ -48,9 +48,9 @@ sudo apt-get install dotnet-sdk-3.1
 > [!IMPORTANT]
 > 如果您收到類似 [**找不到封裝 dotnet-sdk-3.1**] 的錯誤訊息，請參閱[疑難排解套件管理員](#troubleshoot-the-package-manager)一節。
 
-## <a name="install-the-aspnet-core-runtime"></a>安裝 ASP.NET Core 執行平台
+## <a name="install-the-aspnet-core-runtime"></a>安裝 ASP.NET Core 執行階段
 
-更新可供安裝的產品，然後安裝 ASP.NET Core 執行平台。 在您的終端機中，執行下列命令。
+更新可供安裝的產品，然後安裝 ASP.NET Core 執行階段。 在您的終端機中，執行下列命令。
 
 ```bash
 sudo apt-get update
@@ -62,9 +62,9 @@ sudo apt-get install aspnetcore-runtime-3.1
 > [!IMPORTANT]
 > 如果您收到類似 [**找不到封裝 aspnetcore-runtime-3.1**] 的錯誤訊息，請參閱[疑難排解封裝管理員](#troubleshoot-the-package-manager)一節。
 
-## <a name="install-the-net-core-runtime"></a>安裝 .NET Core 執行平台
+## <a name="install-the-net-core-runtime"></a>安裝 .NET Core 執行階段
 
-更新可供安裝的產品，然後安裝 .NET Core 執行平台。 在您的終端機中，執行下列命令。
+更新可供安裝的產品，然後安裝 .NET Core 執行階段。 在您的終端機中，執行下列命令。
 
 ```bash
 sudo apt-get update

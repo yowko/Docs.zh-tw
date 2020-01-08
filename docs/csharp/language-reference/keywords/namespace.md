@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: d1e30162cbce65193783d2fb0607900f209cc648
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 04595e96f6f14b8806a2d89625151910cac9e0d2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422679"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345412"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# 參考)
 
@@ -28,15 +28,15 @@ ms.locfileid: "73422679"
 
 - 另一個命名空間
 
-- [class](class.md)
+- [Class - 類別](class.md)
 
 - [interface](interface.md)
 
 - [struct](struct.md)
 
-- [enum](enum.md)
+- [enum](../builtin-types/enum.md)
 
-- [delegate](../builtin-types/reference-types.md)
+- [delegate](../builtin-types/reference-types.md#the-delegate-type)
 
 無論是否在 C# 來源檔案中明確宣告命名空間，編譯器都會加入預設的命名空間。 這個未命名的命名空間，有時候是指全域命名空間，會出現在每個檔案中。 全域命名空間中的任何識別項都可用於具名命名空間中。
 

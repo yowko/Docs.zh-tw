@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 8dd57a43f814d7e41ec74af3eeb6d797fef41c9c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 393e3bd24c4bc8b89064e01e1048b24254f5f83b
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418624"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635947"
 ---
 # <a name="data-transformations-with-linq-c"></a>使用 LINQ 轉換資料 (C#)
-[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 不只是關於擷取資料。 它也是功能強大的資料轉換工具。 使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢，您可以使用來源序列作為輸入，並在許多方面修改它，以建立新的輸出序列。 藉由排序及群組，您可以修改序列本身，而不修改項目本身。 但或許 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 最強大的功能查詢就是能夠建立新的類型。 這是在 [select](../../../language-reference/keywords/select-clause.md) 子句中完成。 例如，您可以進行下列工作：  
+語言整合式查詢（LINQ）不只是用來抓取資料。 它也是功能強大的資料轉換工具。 藉由使用 LINQ 查詢，您可以使用來源序列做為輸入，並以許多方式加以修改以建立新的輸出序列。 藉由排序及群組，您可以修改序列本身，而不修改項目本身。 但是 LINQ 查詢最強大的功能就是建立新類型的能力。 這是在 [select](../../../language-reference/keywords/select-clause.md) 子句中完成。 例如，您可以進行下列工作：  
   
 - 將多個輸入序列合併為具有新類型的單一輸出序列。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "73418624"
  這些只是一些範例。 當然，這些轉換可以用各種方式結合在相同的查詢中。 此外，一個查詢的輸出序列也可用作新查詢的輸入序列。  
   
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>將多個輸入聯結成一個輸出序列  
- 您可以使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢來建立輸出序列，其中包含來自多個輸入序列的項目。 下列範例示範如何結合兩個記憶體中的資料結構，但相同的原則可以套用以合併 XML 或 SQL 或資料集來源的資料。 假設下列兩個類別類型︰  
+ 您可以使用 LINQ 查詢來建立輸出序列，其中包含來自多個輸入序列的元素。 下列範例示範如何結合兩個記憶體中的資料結構，但相同的原則可以套用以合併 XML 或 SQL 或資料集來源的資料。 假設下列兩個類別類型︰  
   
  [!code-csharp[CsLINQGettingStarted#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#7)]  
   
@@ -61,7 +61,7 @@ ms.locfileid: "73418624"
  如需詳細資訊，請參閱[物件和集合初始設定式](../../classes-and-structs/object-and-collection-initializers.md)和[匿名型別](../../classes-and-structs/anonymous-types.md)。  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>將記憶體中的物件轉換成 XML  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢讓您輕鬆地將資料在記憶體內部資料結構、SQL 資料庫、ADO.NET 資料集和 XML 資料流或文件之間轉換。 下列範例會將記憶體中資料結構的物件轉換成 XML 項目。  
+ LINQ 查詢可讓您輕鬆地在記憶體中的資料結構、SQL 資料庫、ADO.NET 資料集和 XML 資料流程或檔之間轉換資料。 下列範例會將記憶體中資料結構的物件轉換成 XML 項目。  
   
  [!code-csharp[CsLINQGettingStarted#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#9)]  
   

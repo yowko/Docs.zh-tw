@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: b8777e1402bef1708136a5f81a641beb8c761905
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: c2b78b990969fb5bc9814ebda8ffcf38efa458b1
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740704"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559920"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和當地語系化概觀
 
@@ -42,7 +42,7 @@ ms.locfileid: "73740704"
 
 - 啟用 <xref:System.Windows.Controls.TextBlock> 上的 <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> 以避免裁剪。
 
-- 設定 `xml:lang` 屬性。 此屬性描述特定專案及其子專案的文化特性。 這個屬性的值會變更 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中數項功能的行為。 例如，它會變更斷字、拼字檢查、數字替代、複雜指令碼形成和字型遞補的行為。 如需[在 XAML 中設定 xml： Lang 處理](../../xaml-services/xml-lang-handling-in-xaml.md)的詳細資訊，請參閱[WPF 的全球化](globalization-for-wpf.md)。
+- 設定 `xml:lang` 屬性。 此屬性描述特定專案及其子專案的文化特性。 這個屬性的值會變更 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中數項功能的行為。 例如，它會變更斷字、拼字檢查、數字替代、複雜指令碼形成和字型遞補的行為。 如需[在 XAML 中設定 xml： Lang 處理](../../../desktop-wpf/xaml-services/xml-language-handling.md)的詳細資訊，請參閱[WPF 的全球化](globalization-for-wpf.md)。
 
 - 建立自訂的複合字型，以取得針對不同語言使用之字型的更佳控制。 根據預設，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 會在您的 Windows\Fonts 目錄中使用 GlobalUserInterface 複合字型。
 
@@ -148,7 +148,7 @@ ms.locfileid: "73740704"
 
 `xml:lang="en-US"`
 
-請注意， [XAML 中的 xml： Lang 處理](../../xaml-services/xml-lang-handling-in-xaml.md)會放在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的根項目中。 此屬性描述所指定項目的文化特性和其子項目。 這個值是由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的數個功能所使用，而且應該在當地語系化期間適當地變更。 此值可變更使用何種語言字典來進行斷字和拼字檢查。 它也會影響顯示的位數，以及字型遞補系統如何選取要使用的字型。 最後，此屬性會影響數字顯示方式，以及使用複雜指令碼所撰寫之文字的形成方式。 預設值是 "en-US"。
+請注意， [XAML 中的 xml： Lang 處理](../../../desktop-wpf/xaml-services/xml-language-handling.md)會放在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的根項目中。 此屬性描述所指定項目的文化特性和其子項目。 這個值是由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的數個功能所使用，而且應該在當地語系化期間適當地變更。 此值可變更使用何種語言字典來進行斷字和拼字檢查。 它也會影響顯示的位數，以及字型遞補系統如何選取要使用的字型。 最後，此屬性會影響數字顯示方式，以及使用複雜指令碼所撰寫之文字的形成方式。 預設值是 "en-US"。
 
 **建置附屬資源組件**
 
@@ -178,26 +178,26 @@ ms.locfileid: "73740704"
 
 使用支援 Unicode 的慣用 CSV 編輯器，才能編輯這個檔案。 篩選出當地語系化分類為 "None" 的所有項目。 您應該會看到下列項目：
 
-|資源索引鍵|當地語系化分類|值|
+|資源索引鍵|當地語系化分類|{2&gt;值&lt;2}|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|按鈕|確定|
 |Button_2:System.Windows.Controls.Button.$Content|按鈕|取消|
 |Button_3:System.Windows.Controls.Button.$Content|按鈕|瀏覽...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|輸入程式、資料夾、文件或網際網路資源的名稱，Windows 會自動開啟。|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|開啟：|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|文字|輸入程式、資料夾、文件或網際網路資源的名稱，Windows 會自動開啟。|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|文字|開啟：|
 |Window_1:System.Windows.Window.Title|標題|執行|
 
 將應用程式當地語系化為德文需要下列翻譯︰
 
-|資源索引鍵|當地語系化分類|值|
+|資源索引鍵|當地語系化分類|{2&gt;值&lt;2}|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|按鈕|確定|
 |Button_2:System.Windows.Controls.Button.$Content|按鈕|Abbrechen|
 |Button_3:System.Windows.Controls.Button.$Content|按鈕|Durchsuchen…|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|開啟|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|文字|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|文字|開啟：|
 |Window_1:System.Windows.Window.Title|標題|執行|
 
 **產生**
@@ -267,9 +267,9 @@ ms.locfileid: "73740704"
 
 此批註會與 TextBlock_1 的內容相關聯，而且在 LocBaml 工具的情況下（請參閱[當地語系化應用程式](how-to-localize-an-application.md)），它可以在輸出 .csv 檔案中 TextBlock_1 資料列的第6個數據行中看到：
 
-|資源索引鍵|Category|可讀取|可修改|註解|值|
+|資源索引鍵|分類|可讀取|可修改|註解|{2&gt;值&lt;2}|
 |-|-|-|-|-|-|
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|true|true|此字元是當成裝飾規則使用。|&#124;|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|文字|true|true|此字元是當成裝飾規則使用。|&#124;|
 
 使用下列語法，可以放入任何項目之內容或屬性的註解︰
 
@@ -285,7 +285,7 @@ ms.locfileid: "73740704"
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的預設當地語系化屬性也可以透過程式碼覆寫，因此您可以正確地為自訂控制項設定正確的預設值。 例如:
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的預設當地語系化屬性也可以透過程式碼覆寫，因此您可以正確地為自訂控制項設定正確的預設值。 例如：
 
 ```csharp
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]

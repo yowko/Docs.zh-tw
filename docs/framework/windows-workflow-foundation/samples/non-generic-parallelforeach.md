@@ -2,12 +2,12 @@
 title: 非泛型 ParallelForEach
 ms.date: 03/30/2017
 ms.assetid: de17e7a2-257b-48b3-91a1-860e2e9bf6e6
-ms.openlocfilehash: 33e0c8ef8c04b7d58815760ae1152f63891fdfd5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ea7f57b8812dca3dfcb4908730dd788182d50c5c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715636"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347610"
 ---
 # <a name="non-generic-parallelforeach"></a>非泛型 ParallelForEach
 
@@ -19,7 +19,7 @@ ms.locfileid: "74715636"
 
 ## <a name="parallelforeach-activity"></a>ParallelForEach 活動
 
-C#/VB `foreach` 陳述式會列舉集合項目，並針對集合的每個項目執行內嵌陳述式。 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 對應活動為 <xref:System.Activities.Statements.ForEach%601> 和 <xref:System.Activities.Statements.ParallelForEach%601>。 <xref:System.Activities.Statements.ForEach%601> 活動包含值清單和主體。 在執行階段，會列舉此清單，並針對清單中的每個值執行主體。
+C#/Visual Basic `foreach` 語句會列舉集合的元素，並針對集合的每個元素執行內嵌語句。 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 對應活動為 <xref:System.Activities.Statements.ForEach%601> 和 <xref:System.Activities.Statements.ParallelForEach%601>。 <xref:System.Activities.Statements.ForEach%601> 活動包含值清單和主體。 在執行階段，會列舉此清單，並針對清單中的每個值執行主體。
 
 <xref:System.Activities.Statements.ParallelForEach%601> 具有 <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>，所以如果 <xref:System.Activities.Statements.ParallelForEach%601> 的評估傳回 <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>，`true` 活動就可以早一點完成。 在每次反覆運算完成之後，都會評估 <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>。
 

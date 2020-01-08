@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: 47544cf74b4fa09fd8ee868ea940ef24a453840e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 50f2444764ddb212513550ff0a62fcfecab2c45a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834639"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347987"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>指定服務合約中的資料傳輸
 Windows Communication Foundation （WCF）可視為訊息基礎結構。 服務作業可以接收訊息、處理訊息，並傳送訊息。 訊息會透過作業合約來加以描述。 例如，請參考下列合約。  
@@ -87,7 +87,7 @@ Public Interface IAirfareQuoteService
 End Interface  
 ```  
   
- 有時候，`DataContractSerializer` 並不足以序列化您的型別。 WCF 支援替代的序列化引擎（也就是 <xref:System.Xml.Serialization.XmlSerializer>），您也可以用它來序列化參數。 <xref:System.Xml.Serialization.XmlSerializer> 可讓您透過諸如 `XmlAttributeAttribute` 的屬性，針對最後的 XML 格式進行更複雜的控制。 若要切換為針對特定作業或整個服務使用 <xref:System.Xml.Serialization.XmlSerializer>，請將 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 屬性套用到作業或服務。 例如，  
+ 有時候，`DataContractSerializer` 並不足以序列化您的型別。 WCF 支援替代的序列化引擎（也就是 <xref:System.Xml.Serialization.XmlSerializer>），您也可以用它來序列化參數。 <xref:System.Xml.Serialization.XmlSerializer> 可讓您透過諸如 `XmlAttributeAttribute` 的屬性，針對最後的 XML 格式進行更複雜的控制。 若要切換為針對特定作業或整個服務使用 <xref:System.Xml.Serialization.XmlSerializer>，請將 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 屬性套用到作業或服務。 例如：  
   
 ```csharp  
 [ServiceContract]  
@@ -141,13 +141,13 @@ public float GetAirfare(
 ```  
   
 ## <a name="describing-empty-messages"></a>描述空的訊息  
- 您可以不要填入輸入或參考參數，來描述空的要求訊息。 例如，在 C# 中：  
+ 您可以不要填入輸入或參考參數，來描述空的要求訊息。 例如，在中C#：  
   
  `[OperationContract]`  
   
  `public int GetCurrentTemperature();`  
   
- 例如，在 VB 中：  
+ 例如，在 Visual Basic：  
   
  `<OperationContract()>`  
   
@@ -432,7 +432,7 @@ End Class
 ## <a name="specifying-the-use-and-style"></a>指定使用方式與樣式  
  在使用 Web 服務描述語言 (WSDL) 來描述服務時，最常用到的兩種樣式就是文件與遠端程序呼叫 (RPC)。 在文件樣式中，整個訊息本文會透過結構描述來描述，而 WSDL 則是藉由參照結構描述中的項目來描述不同的訊息本文部分。 在 RPC 樣式中，WSDL 會參照每個訊息部分的結構描述型別 (而不是項目)。 在某些情況下，您必須手動選取其中一種樣式。 您可以套用 <xref:System.ServiceModel.DataContractFormatAttribute> 屬性，並設定 `Style` 屬性 (當 <xref:System.Runtime.Serialization.DataContractSerializer> 正在使用時)，或是在 `Style` 屬性上設定 <xref:System.ServiceModel.XmlSerializerFormatAttribute> (當使用 <xref:System.Xml.Serialization.XmlSerializer> 時)，來完成。  
   
- 另外，<xref:System.Xml.Serialization.XmlSerializer> 支援兩種格式的序列化 XML：`Literal` 和 `Encoded`。 `Literal` 是最常接受的形式，而且是 <xref:System.Runtime.Serialization.DataContractSerializer> 唯一支援的形式。 `Encoded` 是 SOAP 規格第5節中所述的舊版格式，不建議用於新的服務。 若要切換至 `Encoded` 模式，請將 `Use` 屬性 (Attribute) 上的 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 屬性 (Property) 設為 `Encoded`。  
+ 另外，<xref:System.Xml.Serialization.XmlSerializer> 支援兩種格式的序列化 XML：`Literal` 和 `Encoded`。 `Literal` 是最普遍接受的格式，也是 <xref:System.Runtime.Serialization.DataContractSerializer> 唯一支援的格式。 `Encoded` 是 SOAP 規範第 5 節所描述的舊版格式，不建議在新的服務上使用。 若要切換至 `Encoded` 模式，請將 `Use` 屬性 (Attribute) 上的 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 屬性 (Property) 設為 `Encoded`。  
   
  在大部分情況下，您不應該變更 `Style` 和 `Use` 屬性的預設設定。  
   
@@ -574,7 +574,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
  如需有關 advanced 序列化概念的詳細資訊，請參閱[序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用 XmlSerializer 類別](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)
 - [如何：啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

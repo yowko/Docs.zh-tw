@@ -2,25 +2,25 @@
 title: XAttribute 類別概觀 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: 79ef00aa79be0c743423cfba1a911b238ff9a7ca
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 7a806314664c6319fc45cff0dddedbe38027059d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590922"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635661"
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute 類別概觀 (C#)
 屬性是與項目相關聯的成對名稱/值。 <xref:System.Xml.Linq.XAttribute> 類別表示 XML 屬性。  
   
-## <a name="overview"></a>總覽  
- 在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中使用屬性的方式類似於使用項目。 其建構函式類似。 您用來擷取其集合的方法也類似。 屬性集合的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式看起來非常類似項目集合的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式。  
+## <a name="overview"></a>概觀  
+ 在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中使用屬性的方式類似於使用項目。 其建構函式類似。 您用來擷取其集合的方法也類似。 屬性集合的 LINQ 查詢運算式看起來非常類似于元素集合的 LINQ 查詢運算式。  
   
  系統會保留將屬性加入到項目的順序。 也就是說，當您逐一查看屬性時，您會看到加入這些屬性的相同順序。  
   
 ## <a name="the-xattribute-constructor"></a>XAttribute 建構函式  
  下列 <xref:System.Xml.Linq.XAttribute> 類別的建構函式就是您常用的建構函式：  
   
-|建構函式|說明|  
+|建構函式|描述|  
 |-----------------|-----------------|  
 |`XAttribute(XName name, object content)`|建立 <xref:System.Xml.Linq.XAttribute> 物件。 `name` 引數會指定屬性的名稱；`content` 會指定屬性的內容。|  
   
@@ -79,6 +79,6 @@ Console.WriteLine(c);
   
  這個區別只有對於撰寫可在節點層級使用 XML 樹狀結構之程式碼的開發人員特別重要。 這個區別與許多開發人員都無關。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ to XML 程式設計概觀 (C#)](./linq-to-xml-overview.md)

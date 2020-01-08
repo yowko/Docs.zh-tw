@@ -3,12 +3,12 @@ title: 使用 .NET Compiler Platform SDK 語法模型
 description: 此概觀說明您使用的類型，以了解與管理語法節點。
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 940d2756ef7735ee96d38d0286f99fadf7b81dc6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 2cfd3c8bc8f47421c7992f7fea28c7b156450147
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774093"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346921"
 ---
 # <a name="work-with-syntax"></a>使用語法
 
@@ -35,7 +35,7 @@ ms.locfileid: "72774093"
 
 所有語法節點都是語法樹中的非結尾節點，這表示它們一律有其他子系節點和權杖。 身為另一個節點的子系，每個節點都有父節點，可透過 <xref:Microsoft.CodeAnalysis.SyntaxNode.Parent?displayProperty=nameWithType> 屬性存取。 因為節點和樹狀結構不可變，所以節點的父代永遠不會變更。 樹狀結構的根有 null 父代。
 
-每個節點都有 <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType> 方法，根據子節點在原始程式文字中的位置，傳回它們的循序清單。 本清單不包含權杖。 每個節點也有可檢查子系的方法，例如 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>、<xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A> 或 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A>-代表存在於該節點根樹中的所有節點、權杖或邏輯的清單。
+每個節點都有 <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType> 方法，根據子節點在原始程式文字中的位置，傳回它們的循序清單。 本清單不包含權杖。 每個節點也有可檢查子系的方法，例如 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>、<xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A>或 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A>-代表存在於該節點根樹中的所有節點、權杖或邏輯的清單。
 
 此外，每個語法節點的子類別會透過強型別屬性公開所有相同的子系。 例如，<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> 節點類別有三個針對二元運算子的額外屬性：<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 和 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>。 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left> 和 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> 的類型是 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax>，<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 的類型是 <xref:Microsoft.CodeAnalysis.SyntaxToken>。
 
@@ -71,7 +71,7 @@ ms.locfileid: "72774093"
 
 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> 屬性是包含節點正常範圍的文字範圍，加上任何開頭或尾端邏輯的範圍。
 
-例如:
+例如：
 
 ``` csharp
       if (x > 3)
@@ -85,7 +85,7 @@ ms.locfileid: "72774093"
 
 ## <a name="kinds"></a>種類
 
-每個節點、權杖或邏輯都有 <xref:System.Int32?displayProperty=nameWithType> 類型的 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 屬性，可識別所代表的確切語法項目。 這個值可以轉換成特定語言的列舉。每種語言，C# 或 VB，都有單一 `SyntaxKind` 列舉 (分別是 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 和 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>)，會列出文法中所有可能的節點、權杖和邏輯項目。 可透過存取 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> 或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> 擴充方法來自動完成這項轉換。
+每個節點、權杖或邏輯都有 <xref:System.Int32?displayProperty=nameWithType> 類型的 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 屬性，可識別所代表的確切語法項目。 這個值可以轉換成語言特定的列舉型別。 每個語言C# （或 Visual Basic）都有單一 `SyntaxKind` 列舉（分別為<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 和 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>），其中會列出文法中所有可能的節點、權杖和邏輯元素。 可透過存取 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> 或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> 擴充方法來自動完成這項轉換。
 
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> 屬性允許共用相同節點類別的語法節點類型簡單去除混淆。 對權杖和邏輯而言，這個屬性是區別某項目類型的唯一方式。
 
