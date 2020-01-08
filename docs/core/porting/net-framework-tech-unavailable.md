@@ -3,22 +3,22 @@ title: .NET Core 上無法使用的 .NET Framework 技術
 description: 了解無法在 .NET Core 上使用的 .NET Framework 技術
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: 47f93268c44682afeba87cde17fe9c39811b37bf
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 6c457812f04b8e6503e5162b9f1f6497e7ef83b1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739708"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343561"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core 上無法使用的 .NET Framework 技術
 
-.NET Framework 程式庫可用的數種技術無法與 .NET Core 搭配使用，例如 Appdomain、遠端、代碼啟用安全性（CAS）、安全性透明度和 System.enterpriseservices。 如果您的程式庫會依賴一或多個這些技術，請考慮使用下述的替代方法。 如需有關 API 相容性的詳細資訊，請參閱[.Net Core 重大變更](../compatibility/breaking-changes.md)文章。
+.NET Framework 程式庫可用的數種技術無法與 .NET Core 搭配使用，例如 Appdomain、遠端、代碼啟用安全性（CAS）、安全性透明度和 System.enterpriseservices。 如果您的程式庫會依賴一或多個這些技術，請考慮使用下述的替代方法。 如需有關 API 相容性的詳細資訊，請參閱[.Net Core 重大變更](../compatibility/breaking-changes.md)。
 
-目前未實作的 API或技術，並不代表我們是刻意不支援它。 您應先搜尋 .NET Core 的 GitHub 存放庫，確認所發生的某項問題是否為設計原理所致，但若無法證明，請在 GitHub 的 [dotnet/corefx repository issues](https://github.com/dotnet/corefx/issues) (dotnet/corefx 存放庫問題) 中提問，尋求特定的 API 和技術。 [移植要求的相關問題](https://github.com/dotnet/corefx/labels/port-to-core) \(英文\) 會以 `port-to-core` 標籤標記。
+目前未實作的 API或技術，並不代表我們是刻意不支援它。 您應該先搜尋適用于 .NET Core 的 GitHub 存放庫，以查看您所遇到的特定問題是否已設計。 如果您找不到這類指標，請在 GitHub 的[dotnet/corefx 存放庫問題](https://github.com/dotnet/corefx/issues)中提出問題，以詢問特定的 api 和技術。 [移植要求的相關問題](https://github.com/dotnet/corefx/labels/port-to-core) \(英文\) 會以 `port-to-core` 標籤標記。
 
 ## <a name="appdomains"></a>AppDomain
 
-應用程式定義域 (AppDomain) 可將應用程式互相隔離。 AppDomain 需要執行階段支援，且通常具有較高的成本。 目前不支援建立其他應用程式定義域。 我們並未計畫於未來加入此功能。 若要隔離程式碼，建議使用不同的處理序或使用容器作為替代方法。 若要以動態方式載入組件，建議使用新的 <xref:System.Runtime.Loader.AssemblyLoadContext> 類別。
+應用程式定義域 (AppDomain) 可將應用程式互相隔離。 AppDomain 需要執行階段支援，且通常具有較高的成本。 不支援建立額外的應用程式域，而且未來不會有新增這項功能的計畫。 針對程式碼隔離，請使用個別的進程或容器作為替代方案。 如需動態載入元件，請使用 <xref:System.Runtime.Loader.AssemblyLoadContext> 類別。
 
 為了讓從 .NET Framework 移轉程式碼更加輕鬆，.NET Core 會公開部分 <xref:System.AppDomain> API 介面。 某些 API 會正常運作 (例如 <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>)，某些成員不會執行任何動作 (例如 <xref:System.AppDomain.SetCachePath%2A>)，而其中某些會擲回 <xref:System.PlatformNotSupportedException> (例如 <xref:System.AppDomain.CreateDomain%2A>)。 檢查您在 [dotnet/corefx GitHub repository](https://github.com/dotnet/corefx) (dotnet/corefx GitHub 存放庫) 中，對 [`System.AppDomain` reference source](https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/System/AppDomain.cs) (`System.AppDomain` 參考來源) 使用的類型，確定選取符合您實作版本的分支。
 
@@ -26,9 +26,9 @@ ms.locfileid: "73739708"
 
 .NET 遠端處理已被識別為有問題的架構。 該功能是用於目前已不支援的跨 AppDomain 通訊。 此外，遠端處理需要執行階段支援，因此維護成本相當高昂。 基於這些原因，.NET Core 上並不支援 .NET 遠端處理，且我們也未計畫於未來支援該功能。
 
-如需進行跨處理序通訊，請考慮使用處理序間通訊 (IPC) 機制來代替遠端處理，例如 <xref:System.IO.Pipes> 或 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> 類別。
+對於跨進程的通訊，請考慮使用處理序間通訊（IPC）機制做為遠端處理的替代方法，例如 <xref:System.IO.Pipes> 類別或 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> 類別。
 
-針對跨機器通訊，請使用以網路為基礎的替代方案。 最好是使用額外負荷較低的純文字通訊協定，例如 HTTP。 [Kestrel Web 伺服器](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel) \(英文\) 是 ASP.NET Core 所使用的 Web 伺服器，也是此情況下可考慮使用的選項。 針對以網路基礎的跨機器案例，也可以考慮使用 <xref:System.Net.Sockets>。 如需更多選項，請參閱 [.NET 開放原始碼開發人員專案：傳訊](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging) \(英文\)。
+針對跨機器通訊，請使用以網路為基礎的替代方案。 最好是使用額外負荷較低的純文字通訊協定，例如 HTTP。 [Kestrel Web 伺服器](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel) \(英文\) 是 ASP.NET Core 所使用的 Web 伺服器，也是此情況下可考慮使用的選項。 此外，請考慮針對網路型、跨電腦案例使用 <xref:System.Net.Sockets>。 如需更多選項，請參閱 [.NET 開放原始碼開發人員專案：傳訊](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging) \(英文\)。
 
 ## <a name="code-access-security-cas"></a>程式碼存取安全性 (CAS)
 
@@ -38,7 +38,7 @@ ms.locfileid: "73739708"
 
 ## <a name="security-transparency"></a>安全性透明度
 
-與 CAS 類似，安全性透明度會以宣告方式區隔沙箱化程式碼和安全性關鍵程式碼，但已[不再支援作為安全性界限](../../framework/misc/security-transparent-code.md)。 Silverlight 會大量使用這項功能。 
+與 CAS 類似，安全性透明度會以宣告方式區隔沙箱化程式碼和安全性關鍵程式碼，但已[不再支援作為安全性界限](../../framework/misc/security-transparent-code.md)。 Silverlight 會大量使用這項功能。
 
 使用由作業系統提供的安全性界線 (例如虛擬化、容器或使用者帳戶) 來以最少的權限集合執行處理序。
 

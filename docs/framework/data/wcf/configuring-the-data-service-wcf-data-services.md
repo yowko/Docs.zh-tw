@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 80878c18143eaa603e624c8be63f11af91cfcfb6
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 6d6ce6ace41894672d285ff8f0733c1b9d52562c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569294"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346143"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>設定資料服務 (WCF 資料服務)
 有了 WCF Data Services，您就可以建立公開開放式資料通訊協定（OData）摘要的資料服務。 這些摘要中的資料可以來自各種不同的資料來源。 WCF Data Services 會使用資料提供者，將此資料公開為 OData 摘要。 這些提供者包含 Entity Framework 提供者、反映提供者，以及一組自訂資料服務提供者介面。 提供者實作會針對此服務定義資料模型。 如需詳細資訊，請參閱[資料服務提供者](data-services-providers-wcf-data-services.md)。  
@@ -29,15 +29,15 @@ ms.locfileid: "74569294"
   
 |成員|行為|  
 |------------|--------------|  
-|<xref:System.Data.Services.DataServiceBehavior.AcceptCountRequests%2A>|可讓您使用 `$count` 路徑區段和 `$inlinecount` 查詢選項，停用送出至資料服務的計數要求。 如需詳細資訊，請參閱[OData： URI 慣例](https://go.microsoft.com/fwlink/?LinkId=185564)。|  
-|<xref:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests%2A>|可讓您使用 `$select` 查詢選項，在提交至資料服務的要求中停用資料保護的支援。 如需詳細資訊，請參閱[OData： URI 慣例](https://go.microsoft.com/fwlink/?LinkId=185564)。|  
+|<xref:System.Data.Services.DataServiceBehavior.AcceptCountRequests%2A>|可讓您使用 `$count` 路徑區段和 `$inlinecount` 查詢選項，停用送出至資料服務的計數要求。 如需詳細資訊，請參閱[OData： URI 慣例](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)。|  
+|<xref:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests%2A>|可讓您使用 `$select` 查詢選項，在提交至資料服務的要求中停用資料保護的支援。 如需詳細資訊，請參閱[OData： URI 慣例](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)。|  
 |<xref:System.Data.Services.DataServiceConfiguration.EnableTypeAccess%2A>|可讓您在中繼資料中公開使用 <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> 介面定義之動態中繼資料提供者的資料類型。|  
 |<xref:System.Data.Services.DataServiceConfiguration.EnableTypeConversion%2A>|可讓您指定資料服務執行階段是否應將包含在承載中的類型，轉換成要求所指定的實際屬性類型。|  
 |<xref:System.Data.Services.DataServiceBehavior.InvokeInterceptorsOnLinkDelete%2A>|可讓您指定是否要在刪除兩個實體間的關聯性時，叫用註冊的變更攔截器。|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|可讓您限制單一批次中允許的變更集與查詢作業數目。 如需詳細資訊，請參閱[OData：批次](https://go.microsoft.com/fwlink/?LinkId=185602)和[批次處理作業](batching-operations-wcf-data-services.md)。|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|可讓您限制單一批次中允許的變更集與查詢作業數目。 如需詳細資訊，請參閱[OData：批次](https://www.odata.org/documentation/odata-version-2-0/batch-processing/)和[批次處理作業](batching-operations-wcf-data-services.md)。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxChangesetCount%2A>|可讓您限制單一變更集中包含的變更次數。 如需詳細資訊，請參閱[如何：啟用資料服務結果的分頁](how-to-enable-paging-of-data-service-results-wcf-data-services.md)。|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|可讓您使用 `$expand` 查詢運算子限制包含在單一要求中的相關實體數目，進而限制回應的大小。 如需詳細資訊，請參閱[OData： URI 慣例](https://go.microsoft.com/fwlink/?LinkId=185564)和[載入延](loading-deferred-content-wcf-data-services.md)後的內容。|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|可讓您使用 `$expand` 查詢運算子限制包含在單一要求中的相關實體圖形深度，進而限制回應的大小。 如需詳細資訊，請參閱[OData： URI 慣例](https://go.microsoft.com/fwlink/?LinkId=185564)和[載入延](loading-deferred-content-wcf-data-services.md)後的內容。|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|可讓您使用 `$expand` 查詢運算子限制包含在單一要求中的相關實體數目，進而限制回應的大小。 如需詳細資訊，請參閱[OData： URI 慣例](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)和[載入延](loading-deferred-content-wcf-data-services.md)後的內容。|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|可讓您使用 `$expand` 查詢運算子限制包含在單一要求中的相關實體圖形深度，進而限制回應的大小。 如需詳細資訊，請參閱[OData： URI 慣例](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)和[載入延](loading-deferred-content-wcf-data-services.md)後的內容。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert%2A>|可讓您限制單一 POST 要求中可包含及插入的實體數目。|  
 |<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|定義資料服務所使用的 Atom 通訊協定版本。 當 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 的值設定為小於 <xref:System.Data.Services.Common.DataServiceProtocolVersion>的最大值時，存取資料服務的用戶端就無法使用 WCF Data Services 的最新功能。 如需詳細資訊，請參閱[資料服務版本](data-service-versioning-wcf-data-services.md)設定。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection%2A>|可讓您限制以資料摘要傳回之每個實體集中的實體數目來限制回應的大小。|  

@@ -2,21 +2,22 @@
 title: 訊息相互關聯
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 0f5124b8172a7a4d553d19e08309affb48e7468c
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: adabf02cb8ec232a887bd4720ea9552a7d870fe3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714857"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348336"
 ---
 # <a name="message-correlation"></a>訊息相互關聯
-這個範例會示範訊息佇列（MSMQ）應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation （WCF）服務，以及如何在要求/回應案例中，將訊息相互關聯至寄件者和接收者應用程式。 這個範例會使用 msmqIntegrationBinding 繫結。 本實例中的服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 k  
-  
- 這個服務會處理從傳送者接收的訊息，再將回應訊息傳回給傳送者。 傳送者會將收到的回應與它原先傳送的要求相互關聯。 訊息的 `MessageID` 和 `CorrelationID` 屬性是用來使要求與回應訊息產生相互關聯。  
-  
- `IOrderProcessor` 服務合約會定義適合與佇列一起使用的單向服務作業。 MSMQ 訊息沒有 Action 標頭，所以不可能自動將不同 MSMQ 訊息對應到作業合約。 因此，這種情況下只能有一個作業合約。 如果您想要在服務中定義更多的作業合約，應用程式就必須提供資訊，說明 MSMQ 訊息中的哪個標頭 (例如，標籤或 correlationID) 可以用來決定分派哪個作業合約。 
-  
- MSMQ 訊息也不會包含有關作業合約的不同參數各自對應到哪個標頭的資訊。 因此，在作業合約中只能有一個參數。 參數的類型為 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>，其中包含基礎 MSMQ 訊息。 `MsmqMessage<T>` 類別中的型別 "T" 代表已序列化為 MSMQ 訊息本文的資料。 在這個範例中，`PurchaseOrder` 型別會序列化為 MSMQ 訊息本文。  
+
+這個範例會示範訊息佇列（MSMQ）應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation （WCF）服務，以及如何在要求/回應案例中，將訊息相互關聯至寄件者和接收者應用程式。 這個範例會使用 msmqIntegrationBinding 繫結。 本實例中的服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 k
+
+ 這個服務會處理從傳送者接收的訊息，再將回應訊息傳回給傳送者。 傳送者會將收到的回應與它原先傳送的要求相互關聯。 訊息的 `MessageID` 和 `CorrelationID` 屬性是用來使要求與回應訊息產生相互關聯。
+
+ `IOrderProcessor` 服務合約會定義適合與佇列一起使用的單向服務作業。 MSMQ 訊息沒有 Action 標頭，所以不可能自動將不同 MSMQ 訊息對應到作業合約。 因此，這種情況下只能有一個作業合約。 如果您想要在服務中定義更多的作業合約，應用程式就必須提供資訊，說明 MSMQ 訊息中的哪個標頭 (例如，標籤或 correlationID) 可以用來決定分派哪個作業合約。
+
+ MSMQ 訊息也不會包含有關作業合約的不同參數各自對應到哪個標頭的資訊。 因此，在作業合約中只能有一個參數。 參數的類型為 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>，其中包含基礎 MSMQ 訊息。 `MsmqMessage<T>` 類別中的型別 "T" 代表已序列化為 MSMQ 訊息本文的資料。 在這個範例中，`PurchaseOrder` 型別會序列化為 MSMQ 訊息本文。
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -269,7 +270,7 @@ static void DisplayOrderStatus()
 > [!NOTE]
 > 這個範例需要安裝訊息佇列 (MSMQ)。 請參閱「請參閱」一節中的 MSMQ 安裝指示。
 
-### <a name="to-setup-build-and-run-the-sample"></a>若要設定、建置及執行範例
+## <a name="set-up-build-and-run-the-sample"></a>設定、建立和執行範例
 
 1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
@@ -289,7 +290,7 @@ static void DisplayOrderStatus()
 
 4. 若要在單一電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
-### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例
+## <a name="run-the-sample-across-computers"></a>跨電腦執行範例
 
 1. 將語言特定資料夾下 \service\bin\ 資料夾中的服務程式檔複製到服務電腦中。
 
@@ -304,14 +305,14 @@ static void DisplayOrderStatus()
 6. 在用戶端電腦上，從命令提示字元啟動 Client.exe。
 
 > [!IMPORTANT]
-> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
-> `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
-> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
-  
+> 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`
+
 ## <a name="see-also"></a>請參閱
 
 - [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

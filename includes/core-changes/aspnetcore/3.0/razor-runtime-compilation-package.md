@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8479168b64153d3c729f8814a2649df8d46f2135
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cd13e7560ee98e0c862c5e2293521c6aaa273455
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393964"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344287"
 ---
 ### <a name="razor-runtime-compilation-moved-to-a-package"></a>Razor：將執行時間編譯移至封裝
 
@@ -20,12 +20,12 @@ Razor views 和 Razor Pages 的執行時間編譯支援已移至不同的封裝�
 
 #### <a name="new-behavior"></a>新的行為
 
-此功能已移至 `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation` 套件。
+此功能已移至 AspNetCore。 [microsoft.aspnetcore.mvc.razor.runtimecompilation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/)套件。
 
-下列 Api 先前已在 `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions` 中提供，以支援執行時間編譯。 現在可透過 `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.MvcRazorRuntimeCompilationOptions` 取得 Api。
+以下是先前在 `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions` 中提供的 Api，可支援執行時間編譯。 現在可透過 `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.MvcRazorRuntimeCompilationOptions`取得 Api。
 
-- `RazorViewEngineOptions.FileProviders` -> `MvcRazorRuntimeCompilationOptions.FileProviders`
-- `RazorViewEngineOptions.AdditionalCompilationReferences` -> `MvcRazorRuntimeCompilationOptions.AdditionalReferencePaths`
+- `RazorViewEngineOptions.FileProviders` 現在為 `MvcRazorRuntimeCompilationOptions.FileProviders`
+- `RazorViewEngineOptions.AdditionalCompilationReferences` 現在為 `MvcRazorRuntimeCompilationOptions.AdditionalReferencePaths`
 
 此外，`Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions.AllowRecompilingViewsOnFileChange` 已移除。 預設會藉由參考 `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation` 封裝來啟用檔案變更的重新編譯。
 
@@ -37,12 +37,12 @@ Razor views 和 Razor Pages 的執行時間編譯支援已移至不同的封裝�
 
 需要執行時間編譯或重新編譯 Razor 檔案的應用程式應該採取下列步驟：
 
-1. 新增對 `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation` 套件的參考。
-1. 更新專案的 `Startup.ConfigureServices` 方法，以包含 `AddMvcRazorRuntimeCompilation` 的呼叫。 例如，在 `Startup.ConfigureServices`：
+1. 新增 `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation` 封裝的參考。
+1. 更新專案的 `Startup.ConfigureServices` 方法，以包含對 `AddRazorRuntimeCompilation`的呼叫。 例如：
 
     ```csharp
     services.AddMvc()
-        .AddMvcRazorRuntimeCompilation();
+        .AddRazorRuntimeCompilation();
     ```
 
 #### <a name="category"></a>分類

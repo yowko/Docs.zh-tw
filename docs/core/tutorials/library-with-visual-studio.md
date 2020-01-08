@@ -1,51 +1,58 @@
 ---
-title: 使用 Visual Studio 2017 來建置 C# .NET Standard 程式庫
-description: 了解如何使用 Visual Studio 2017 建立以 C# 撰寫的 .NET Standard 類別庫。
-author: BillWagner
-ms.author: wiwagn
-ms.date: 08/07/2017
+title: 在 Visual Studio 中建立 .NET Standard 類別庫
+description: 瞭解如何使用 Visual Studio 來建立以C#或 Visual Basic 撰寫的 .NET Standard 類別庫
+ms.date: 12/09/2019
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 440ef2ed398b22262923422efd7f1259e3ee9b74
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 160993a4dd40356cde541616a1f15f87712e8ae2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633697"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343132"
 ---
-# <a name="build-a-net-standard-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 C# 和 .NET Core SDK 來建置 .NET Standard 程式庫
+# <a name="build-a-net-standard-library-in-visual-studio"></a>在 Visual Studio 中建立 .NET Standard 程式庫
 
-「類別庫」會定義應用程式所呼叫的類型和方法。 以 .NET Standard 2.0 為目標的類別庫，允許支援該 .NET Standard 版本的任何 .NET 實作呼叫您的類別庫。 當您完成類別庫時，您可以決定要將它散發為協力廠商元件，還是要將它併入作為一或多個應用程式隨附的元件。
+「類別庫」會定義應用程式所呼叫的類型和方法。 以 .NET Standard 2.0 為目標的類別庫，可讓任何支援該版本 .NET Standard 的 .NET 部署呼叫您的程式庫。 當您完成類別庫時，您可以決定要將它散發為協力廠商元件，還是要將它併入作為一或多個應用程式隨附的元件。
 
 > [!NOTE]
-> 如需 .NET 標準版本與所支援平台的清單，請參閱 [.NET 標準](../../standard/net-standard.md)。
+> 如需所支援的 .NET Standard 版本和平臺清單，請參閱[.NET Standard](../../standard/net-standard.md)。
 
 在本主題中，您將建立含有單一字串處理方法的簡單公用程式類別庫。 您將它實作為[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)，以便可以如同 <xref:System.String> 類別的成員一般來進行呼叫。
 
-## <a name="creating-a-class-library-solution"></a>建立類別庫方案
+## <a name="create-a-visual-studio-solution"></a>建立 Visual Studio 解決方案
 
-請開始建立類別庫專案和其相關專案的方案。 Visual Studio 方案只能做為一個或多個專案的容器。 建立方案：
+一開始先建立一個空白的方案，將類別庫專案放入中。 Visual Studio 方案會當做一個或多個專案的容器。 如果您繼續進行教學課程系列，您會將其他的相關專案新增至相同的方案。
 
-1. 在 Visual Studio 功能表列上，選擇 [檔案]  >  [新增]   >  [專案]。
+若要建立空白解決方案：
 
-1. 在 **[新增專案]** 對話方塊中，展開 **[其他專案類型]** 節點，並選取 **[Visual Studio 方案]**。 將方案命名為 "ClassLibraryProjects"，然後選取 **[確定]** 按鈕。
+1. 開啟 Visual Studio。
 
-   ![[新增專案] 對話方塊，其中醒目提示新的空白方案](./media/library-with-visual-studio/new-project-dialog.png)
+2. 在開始視窗中，選擇 [建立新專案]。
 
-## <a name="creating-the-class-library-project"></a>建立類別庫專案
+3. 在 [**建立新專案**] 頁面的 [搜尋] 方塊中，輸入 [**方案**]。 選擇 [**空白解決方案**] 範本，然後選擇 [**下一步]** 。
 
-建立您的類別庫專案：
+   ![Visual Studio 中的空白方案範本](media/library-with-visual-studio/blank-solution.png)
 
-1. 在方案總管  中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案檔，然後從內容功能表中，選取 [新增]  >  [新增專案]。
+4. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**ClassLibraryProjects** 。 接著，選擇 [建立]。
 
-1. 在 **[新增專案]** 對話方塊中，展開 **[Visual C#]** 節點，然後選取後面跟著 **[類別庫 (.NET Standard)]** 專案範本的 **[.NET Standard]** 節點。 在 **[名稱]** 文字方塊中，輸入 "StringLibrary" 作為專案名稱。 選取 [確定] 以建立類別庫專案。
+> [!TIP]
+> 您也可以略過此步驟，並在下一個步驟中建立專案時，讓 Visual Studio 為您建立解決方案。 在 [**設定您的新專案**] 頁面上尋找解決方案選項。
 
-   ![新增程式庫專案對話方塊](./media/library-with-visual-studio/add-new-library-project.png)
+## <a name="create-a-class-library-project"></a>建立類別庫專案
 
-   然後在 Visual Studio 開發環境中開啟程式碼視窗。
+<!-- markdownlint-disable MD025 -->
 
-   ![Visual Studio 應用程式視窗顯示預設的類別庫範本程式碼](./media/library-with-visual-studio/string-library-project.png)
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
 
-1. 請檢查以確定程式庫以正確的 .NET Standard 版本為目標。 在**方案總管**視窗中，以滑鼠右鍵按一下程式庫專案，然後選取 [屬性]。 [目標 Framework] 文字方塊顯示我們的目標是 .NET Standard 2.0。
+1. 將名為C# "StringLibrary" 的新 .NET Standard 類別庫專案加入至方案。
+
+   1. 以滑鼠右鍵按一下**方案總管**中的方案，然後選取 [**加入** > **新增專案**]。
+
+   1. 在 [**加入新專案**] 頁面的 [搜尋] 方塊中，輸入 [連結**庫**]。 從**C#** [語言] 清單中選擇，然後從 [平臺] 清單中選擇 [**所有平臺**]。 選擇 [**類別庫（.NET Standard）** ] 範本，然後選擇 **[下一步]** 。
+
+   1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**StringLibrary** 。 接著，選擇 [建立]。
+
+1. 請檢查並確定程式庫的目標是正確的 .NET Standard 版本。 以滑鼠右鍵按一下**方案總管**中的 [程式庫] 專案，然後選取 [**屬性**]。 [**目標 Framework** ] 文字方塊會顯示專案的目標為 .NET Standard 2.0。
 
    ![類別庫的專案屬性](./media/library-with-visual-studio/library-project-properties.png)
 
@@ -53,12 +60,41 @@ ms.locfileid: "65633697"
 
    [!CODE-csharp[ClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/classlib.cs)]
 
-   類別庫 `UtilityLibraries.StringLibrary` 包含一個名為 `StartsWithUpper` 的方法，它會傳回 <xref:System.Boolean> 值，指出目前的字串執行個體是否以大寫字元開頭。 Unicode 標準會區別大寫和小寫字元。 如果是大寫字元，<xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> 方法會傳回 `true`。
+   類別庫（`UtilityLibraries.StringLibrary`）包含名為 `StartsWithUpper`的方法。 這個方法會傳回 <xref:System.Boolean> 值，指出目前的字串實例是否以大寫字元開頭。 Unicode 標準會區別大寫和小寫字元。 如果是大寫字元，<xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> 方法會傳回 `true`。
 
-1. 在功能表列中，選取 [組建]  >  [組建方案]。 專案應該會編譯而不會發生錯誤。
+1. 在功能表列中，選取 [組建] >  [組建方案]。
 
-   ![輸出窗格顯示組建成功](./media/library-with-visual-studio/output-pane-successful-build.png)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
-## <a name="next-step"></a>後續步驟
+1. 將名為 "StringLibrary" 的新 Visual Basic .NET Standard 類別庫專案加入至方案。
 
-您已成功組建類別庫。 因為您尚未呼叫它的任何方法，所以它能否正常運作還不得而知。 開發程式庫的下一個步驟是使用[單元測試專案](testing-library-with-visual-studio.md)來測試它。
+   1. 以滑鼠右鍵按一下**方案總管**中的方案，然後選取 [**加入** > **新增專案**]。
+
+   1. 在 [**加入新專案**] 頁面的 [搜尋] 方塊中，輸入 [連結**庫**]。 從 [語言] 清單中選擇 [ **Visual Basic** ]，然後從 [平臺] 清單中選擇 [**所有平臺**]。 選擇 [**類別庫（.NET Standard）** ] 範本，然後選擇 **[下一步]** 。
+
+   1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**StringLibrary** 。 接著，選擇 [建立]。
+
+1. 請檢查並確定程式庫的目標是正確的 .NET Standard 版本。 以滑鼠右鍵按一下**方案總管**中的 [程式庫] 專案，然後選取 [**屬性**]。 [**目標 Framework** ] 文字方塊會顯示專案的目標為 .NET Standard 2.0。
+
+   ![類別庫的專案屬性](./media/library-with-visual-studio/vb/library-project-properties.png)
+
+1. 在 [**屬性**] 對話方塊中，清除 [**根命名空間**] 文字方塊中的文字。 針對每個專案，Visual Basic 會自動建立對應至專案名稱的命名空間。 在本教學課程中，您會使用程式碼檔案中的[`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md)關鍵字來定義最上層命名空間。
+
+1. 以下列程式碼取代程式碼視窗中的程式碼，並儲存檔案：
+
+   [!CODE-vb[ClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/stringlibrary.vb)]
+
+   類別庫（`UtilityLibraries.StringLibrary`）包含名為 `StartsWithUpper`的方法。 這個方法會傳回 <xref:System.Boolean> 值，指出目前的字串實例是否以大寫字元開頭。 Unicode 標準會區別大寫和小寫字元。 如果是大寫字元，<xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> 方法會傳回 `true`。
+
+1. 在功能表列中，選取 [組建] >  [組建方案]。
+
+---
+
+   專案應該會編譯而不會發生錯誤。
+
+## <a name="next-steps"></a>後續步驟
+
+您已成功組建類別庫。 因為您尚未呼叫它的任何方法，所以它能否正常運作還不得而知。 開發程式庫的下一個步驟是測試它。
+
+> [!div class="nextstepaction"]
+> [建立單元測試專案](testing-library-with-visual-studio.md)

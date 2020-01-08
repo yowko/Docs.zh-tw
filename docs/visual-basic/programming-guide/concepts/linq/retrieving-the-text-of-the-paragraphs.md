@@ -2,12 +2,12 @@
 title: 擷取段落的文字
 ms.date: 07/20/2015
 ms.assetid: 095fa0d9-7b1b-4cbb-9c13-e2c9d8923d31
-ms.openlocfilehash: 596a6548f45d82c7ae260f9b010d2f139eb1c1fa
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0f53eec44e0b11a6c23c7afb4892e4d5d876d6d6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347520"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341594"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>正在抓取段落的文字（Visual Basic）
 這個範例是以先前的範例為基礎，[並抓取段落和其樣式（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)。 這個新的範例會將每個段落的文字當做字串擷取。  
@@ -31,7 +31,7 @@ ms.locfileid: "74347520"
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
   
 Module Module1  
-    ' Following function is required because VB does not support short circuit evaluation  
+    ' Following function is required because Visual Basic does not support short circuit evaluation  
     Private Function GetStyleOfParagraph(ByVal styleNode As XElement, _  
                                          ByVal defaultStyle As String) As String  
         If (styleNode Is Nothing) Then  

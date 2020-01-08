@@ -6,22 +6,20 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: 82fc1649bac66c0e934db13c50390b977432c34c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
-ms.translationtype: MT
+ms.openlocfilehash: 4f3ba6594eb16cf16db6a1de78fe05509c5f4d7d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036135"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345277"
 ---
 # <a name="stackalloc-operator-c-reference"></a>stackalloc 運算子 (C# 參考)
 
 `stackalloc` 運算子會在堆疊上配置記憶體區塊。 在方法執行期間建立的堆疊配置的記憶體區塊，會在該方法傳回時自動被捨棄。 您無法明確釋放搭配 `stackalloc` 運算子配置的記憶體。 堆疊配置的記憶體區塊不受[垃圾收集](../../../standard/garbage-collection/index.md)，也不需要使用[`fixed` 語句](../keywords/fixed-statement.md)來釘選。
 
-在運算式 `stackalloc T[E]` 中，`T` 必須是 [ unmanaged 型別](../builtin-types/unmanaged-types.md)，且 `E` 必須是 `int` 型別的運算式。
-
 您可以將 `stackalloc` 運算子的結果指派至下列其中一個類型的變數：
 
-- 從C# 7.2 開始，<xref:System.Span%601?displayProperty=nameWithType>或<xref:System.ReadOnlySpan%601?displayProperty=nameWithType>，如下列範例所示：
+- 從C# 7.2 開始，<xref:System.Span%601?displayProperty=nameWithType> 或 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>，如下列範例所示：
 
   [!code-csharp[stackalloc span](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToSpan)]
 
@@ -31,7 +29,7 @@ ms.locfileid: "73036135"
 
   [!code-csharp[stackalloc expression](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
 
-  從C# 8.0 開始，只要允許<xref:System.Span%601>或<xref:System.ReadOnlySpan%601>變數，您就可以在其他運算式內使用`stackalloc`運算式，如下列範例所示：
+  從C# 8.0 開始，只要允許 <xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601> 變數，您就可以在其他運算式內使用 `stackalloc` 運算式，如下列範例所示：
 
   [!code-csharp[stackalloc in nested expressions](~/samples/csharp/language-reference/operators/StackallocOperator.cs#Nested)]
 
@@ -50,13 +48,15 @@ ms.locfileid: "73036135"
 
 [!code-csharp[stackalloc initialization](~/samples/csharp/language-reference/operators/StackallocOperator.cs#StackallocInit)]
 
+在 expression `stackalloc T[E]`中，`T` 必須是[非受控型](../builtin-types/unmanaged-types.md)別，而且 `E` 必須是[int](../builtin-types/integral-numeric-types.md)類型的運算式。
+
 ## <a name="security"></a>安全性
 
 使用 `stackalloc` 會自動啟用 Common Language Runtime (CLR) 中的緩衝區滿溢偵測功能。 如果偵測到緩衝區滿溢，會盡快終止處理序，將執行惡意程式碼的機會降到最低。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[堆疊配置](~/_csharplang/spec/unsafe-code.md#stack-allocation)一節。
+如需詳細資訊，請參閱[ C#語言規格](~/_csharplang/spec/introduction.md)的[堆疊配置](~/_csharplang/spec/unsafe-code.md#stack-allocation)一節和嵌套內容功能建議事項[中的允許 `stackalloc`](~/_csharplang/proposals/csharp-8.0/nested-stackalloc.md) 。
 
 ## <a name="see-also"></a>請參閱
 

@@ -1,14 +1,14 @@
 ---
 title: 教學課程：使用 Visual Studio Code 在 macOS 中建立 .NET Core 解決方案
 description: 本文件提供使用 Visual Studio Code 建立 .NET Core 方案的步驟及工作流程。
-ms.date: 03/23/2017
+ms.date: 12/19/2019
 ms.custom: seodec18
-ms.openlocfilehash: 5df43ae235b9fd901a65f7f8898bec67e24de682
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
-ms.translationtype: MT
+ms.openlocfilehash: 825665264d4db902ba4c6cbcce7a7add11ec003d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117369"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75339607"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 在 macOS 中建立 .NET Core 解決方案
 
@@ -17,21 +17,21 @@ ms.locfileid: "71117369"
 > [!NOTE]
 > 這篇文章會在 macOS 上使用 [Visual Studio Code](https://code.visualstudio.com)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
 
 安裝 [.NET Core SDK (英文)](https://dotnet.microsoft.com/download)。 .NET Core SDK 包含 .NET Core 架構和執行階段的最新版本。
 
 安裝 [Visual Studio Code (英文)](https://code.visualstudio.com)。 在這篇文章的過程中，您也將安裝能改善 .NET Core 開發體驗的 Visual Studio Code 延伸模組。
 
-請開啟 Visual Studio Code，並按下 <kbd>F1</kbd> 來開啟 Visual Studio Code 調色盤，以安裝 Visual Studio Code C# 延伸模組。 鍵入 **ext install** 來查看延伸模組的清單。 選取 C# 延伸模組。 重新啟動 Visual Studio Code 以啟動延伸模組。 如需詳細資訊，請參閱 [Visual Studio Code C# 延伸模組文件](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
+開啟 Visual Studio Code 並C#按<kbd>Fn</kbd>+<kbd>F1</kbd>來開啟 [Visual Studio Code] 調色板，以安裝 Visual Studio Code 擴充功能。 鍵入 **ext install** 來查看延伸模組的清單。 選取 C# 延伸模組。 重新啟動 Visual Studio Code 以啟動延伸模組。 如需詳細資訊，請參閱 [Visual Studio Code C# 延伸模組文件](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
 
 ## <a name="get-started"></a>開始使用
 
-在本教學課程中，您會建立三個專案︰程式庫專案、該程式庫專案的測試，以及利用程式庫的主控台應用程式。 您可以在 GitHub 的 dotnet/samples 存放庫[檢視或下載來源](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+在本教學課程中，您會建立三個專案︰程式庫專案、該程式庫專案的測試，以及利用程式庫的主控台應用程式。 您可以在 GitHub 上的 dotnet/samples 存放庫中，[查看或下載](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)本文的來源。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-啟動 Visual Studio Code。 按下 <kbd>Ctrl</kbd>+<kbd>\`</kbd> (倒引號字元)，或從功能表中選取 [檢視] > [整合式終端機]，以使用 Visual Studio Code 開啟內嵌終端機。 如果您想要在 Visual Studio Code 外部工作，則仍然可以使用總管 [在命令提示字元中開啟] 命令 (Mac 或 Linux 上的 [在終端機中開啟]) 來開啟外部殼層。
+啟動 Visual Studio Code。 按<kbd>Ctrl</kbd>+<kbd>\`</kbd> （倒或倒引號字元），或從功能表中選取 [ **View > Terminal** ]，以在 Visual Studio Code 中開啟內嵌的終端機。 如果您想要在 Visual Studio Code 外部工作，則仍然可以使用總管 [在命令提示字元中開啟] 命令 (Mac 或 Linux 上的 [在終端機中開啟]) 來開啟外部殼層。
 
-請從建立方案檔開始，而方案檔是作為一或多個 .NET Core 專案的容器。 在終端機中，執行[`dotnet new`](../tools/dotnet-new.md)命令以在名為*黃金*的新資料夾內建立新的方案 *。*
+請從建立方案檔開始，而方案檔是作為一或多個 .NET Core 專案的容器。 在終端機中，執行[`dotnet new`](../tools/dotnet-new.md)命令，以在名為*黃金*的新資料夾內建立新的方案*黃金*：
 
 ```dotnetcli
 dotnet new sln -o golden
@@ -210,13 +210,13 @@ dotnet run -p app/app.csproj
 
 ## <a name="debug-the-application"></a>進行應用程式偵錯
 
-在 `Main` 方法中的 `WriteLine` 陳述式設定中斷點。 做法是在游標位於 `WriteLine` 行上方時按下 <kbd>F9</kbd> 鍵，或在您要設定中斷點之行的左邊界按一下滑鼠。 紅色圓圈會出現在程式碼行旁邊的邊界。 到達中斷點時，會在執行中斷點行「之前」停止執行程式碼。
+在 `Main` 方法中的 `WriteLine` 陳述式設定中斷點。 若要這麼做，請在游標停留在 `WriteLine` 行上時按下<kbd>Fn</kbd>+<kbd>F9</kbd>鍵，或在您要設定中斷點的那一行的左邊界按一下滑鼠。 紅色圓圈會出現在程式碼行旁邊的邊界。 到達中斷點時，會在執行中斷點行「之前」停止執行程式碼。
 
-開啟偵錯工具索引標籤，方法是選取 Visual Studio Code 工具列中的偵錯圖示、選取功能表列中的 [檢視] > [偵錯]，或使用鍵盤快速鍵 <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>：
+開啟 [偵錯工具] 索引標籤，方法是選取 [Visual Studio Code] 工具列中的 [Debug] 圖示，從功能表列選取 [ **View > debug** ]，或使用鍵盤快速鍵<kbd>命令</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>：
 
 ![Visual Studio Code 偵錯工具](./media/using-on-macos/visual-studio-code-debugger.png)
 
-按下 [播放] 按鈕，在偵錯工具中啟動應用程式。 應用程式會開始執行，並執行至中斷點，然後停止。 逐步執行 `Get` 方法，並確定您已傳入正確的引數。 確認答案是 42。
+按下 [播放] 按鈕，在偵錯工具中啟動應用程式。 您已在此專案中建立測試專案和應用程式。 偵錯工具會詢問您想要啟動的專案。 選取 [應用程式] 專案。 應用程式會開始執行，並執行至中斷點，然後停止。 逐步執行 `Get` 方法，並確定您已傳入正確的引數。 確認答案是 42。
 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

@@ -1,6 +1,6 @@
 ---
-title: 如何設定 Visual Studio 命令列的環境變數
-ms.date: 09/29/2017
+title: 如何為 Visual Studio 命令列設定環境變數
+ms.date: 12/20/2019
 f1_keywords:
 - cs.build.commandline
 helpviewer_keywords:
@@ -15,27 +15,27 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 3b69a92d28663bbbd34245435a69aea80d20fdc9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 99e2a837877494dd4c7e0106047bce3cc39a9282
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972834"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342357"
 ---
-# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>如何設定 Visual Studio 命令列的環境變數
+# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>如何為 Visual Studio 命令列設定環境變數
 
 VsDevCmd.bat 檔案可設定適當的環境變數，以啟用命令列組建。
 
 > [!NOTE]
-> VsDevCmd.bat 檔是隨附於 Visual Studio 2017 的新檔案。 Visual Studio 2015 及更早的版本則使用 VSVARS32.bat 作為相同用途。 此檔案的儲存位置為 \Program Files\Microsoft Visual Studio\\*Version*\Common7\Tools or Program Files (x86)\Microsoft Visual Studio\\*Version*\Common7\Tools。
+> Visual Studio 2015 和舊版使用 VSVARS32.BAT，而非 Vsdevcmd.bat，用於相同的用途。 此檔案的儲存位置為 \Program Files\Microsoft Visual Studio\\*Version*\Common7\Tools or Program Files (x86)\Microsoft Visual Studio\\*Version*\Common7\Tools。
 
 如果安裝最新版 Visual Studio 的電腦上也有安裝舊版 Visual Studio，請勿於相同的命令提示字元視窗中，執行不同版本的 VsDevCmd.bat 及 VSVARS32.BAT。 而是應改為在各版本本身的視窗中執行命令。
 
 ### <a name="to-run-vsdevcmdbat"></a>執行 VsDevCmd.BAT
 
-1. 從 [開始] 功能表中，開啟 [適用於 VS 2017 的開發人員命令提示字元]。  位置在 **Visual Studio 2017** 資料夾中。
+1. 在 [**開始**] 功能表中，開啟**VS 2019**的 [開發人員命令提示字元]。  它位於**Visual Studio 2019**資料夾中。
 
-2. 根據您的安裝變更到 \Program Files\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools 或是 \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools 子目錄。  (目前的*版本*為 *2017*。 *供應項目*為 *Enterprise*、*Professional* 或 *Community* 中的其中一個。)
+2. 根據您的安裝變更到 \Program Files\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools 或是 \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools 子目錄。  （目前版本的*版本*是*2019* 。 *供應項目*為 *Enterprise*、*Professional* 或 *Community* 中的其中一個。)
 
 3. 鍵入 **VsDevCmd**以執行 VsDevCmd.bat。
 

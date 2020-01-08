@@ -6,16 +6,16 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: e1fdc3ef51e8658e07bc555238229bed9116e165
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 10d049288cf560dadedf7bc5e624deb7c42aae81
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460102"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636168"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>逐步解說：使用 Microsoft Expression Blend 建立按鈕
 
-本逐步解說會逐步引導您使用 Microsoft Expression Blend 建立 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 自訂按鈕。
+本逐步解說會逐步引導您使用 Microsoft Expression Blend 建立 WPF 自訂按鈕。
 
 > [!IMPORTANT]
 > Microsoft Expression Blend 的運作方式是產生 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，然後進行編譯以進行可執行檔程式。 如果您想要直接使用 XAML，還有另一個逐步解說，會使用 XAML 搭配 Visual Studio 而不是 Blend 來建立與此應用程式相同的應用程式。 如需詳細資訊，請參閱[使用 XAML 建立按鈕](walkthrough-create-a-button-by-using-xaml.md)。
@@ -40,7 +40,7 @@ ms.locfileid: "73460102"
 
 5. 將專案命名為 `CustomButton`，然後按 **[確定]** 。
 
-此時，您會有一個空白的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 專案。 您可以按 F5 執行應用程式。 如您所預期，應用程式只會包含一個空白視窗。 接下來，您要建立一個圓角矩形，並將它轉換成一個按鈕。
+此時，您會有一個空白的 WPF 專案。 您可以按 F5 執行應用程式。 如您所預期，應用程式只會包含一個空白視窗。 接下來，您要建立一個圓角矩形，並將它轉換成一個按鈕。
 
 ### <a name="to-convert-a-rectangle-to-a-button"></a>將矩形轉換成按鈕
 
@@ -224,7 +224,7 @@ ms.locfileid: "73460102"
 
         ![建立旋轉轉換的方式](./media/custom-button-blend-rotatetransform.gif)
 
-    5. 按 F5 執行應用程式。 按一下按鈕。 請注意，玻璃層會旋轉。
+    5. 按 F5 執行應用程式。 按一下按鈕 。 請注意，玻璃層會旋轉。
 
 ## <a name="conclusion"></a>結論
 

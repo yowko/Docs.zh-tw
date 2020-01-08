@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 47e11ff2bc5b1c3eca152ba1fa429b5785c2f01b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a73f6333a91cd8018fe8e0c34d44db87938b8058
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976130"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347101"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>HOW TO：註冊和設定服務 Moniker
 在具有具型別合約的 COM 應用程式中使用 Windows Communication Foundation （WCF）服務標記之前，您必須使用 COM 註冊必要的屬性化型別，並以必要的系結設定 COM 應用程式和名字標記配置.  
@@ -87,7 +87,7 @@ ms.locfileid: "73976130"
     > [!NOTE]
     > ：如果 Moniker 的格式錯誤或服務無法使用，則呼叫 `GetObject` 時將會傳回「無效的語法」錯誤。 如果您收到這個錯誤，請確定您所使用的 Moniker 正確無誤，而且此服務為可用狀態。  
   
-     雖然本主題著重於從 VB 6.0 程式碼中使用服務 Moniker，但您也可以使用其他語言中的服務 Moniker。 從 C++ 程式碼中使用 Moniker 時，應該以 "no_namespace named_guids raw_interfaces_only" 這個名稱匯入 Svcutil.exe 產生的組件，如下列程式碼所示。  
+     雖然本主題著重于從 Visual Basic 6.0 程式碼使用服務名字標記，但您可以使用其他語言的服務標記。 從 C++ 程式碼中使用 Moniker 時，應該以 "no_namespace named_guids raw_interfaces_only" 這個名稱匯入 Svcutil.exe 產生的組件，如下列程式碼所示。  
   
     ```cpp
     #import "ComTestProxy.tlb" no_namespace named_guids  

@@ -2,12 +2,12 @@
 title: 字串插補 - C# 教學課程
 description: 此教學課程示範如何使用 C# 字串插補功能，在較大字串中包含格式化運算式結果。
 ms.date: 10/23/2018
-ms.openlocfilehash: 53b9afa4c5ccdcb1f18d2947981aee6571b73134
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120111"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346785"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>使用字串插補來建構格式化的字串
 
@@ -46,7 +46,7 @@ Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 
 在上節中，您使用字串插補將某個字串插入至另一個字串內部。 不過，插入運算式的結果可以是任意資料類型。 請包含插入字串中各種資料類型的值。
 
-在下列範例中，我們先定義具有 `Name` [屬性](../../properties.md)與 `ToString` [方法](../../methods.md)的[類別](../../programming-guide/classes-and-structs/classes.md)資料類型 `Vegetable`，它會[覆寫](../../language-reference/keywords/override.md) <xref:System.Object.ToString?displayProperty=nameWithType> 方法的行為。 [`public` 存取修飾詞](../../language-reference/keywords/public.md)會使該方法可用於取得任何用戶端程式碼，以取得 `Vegetable` 執行個體的字串表示。 在此範例中，`Vegetable.ToString` 方法會傳回 `Name` 屬性的值，此屬性會在 `Vegetable` [建構函式](../../programming-guide/classes-and-structs/constructors.md)中初始化：
+在下列範例中，我們會先定義具有 `Name`[屬性](../../properties.md)的[類別](../../programming-guide/classes-and-structs/classes.md)資料類型 `Vegetable`，和 `ToString`[方法](../../methods.md)，這會[覆寫](../../language-reference/keywords/override.md)<xref:System.Object.ToString?displayProperty=nameWithType> 方法的行為。 [`public` 存取修飾詞](../../language-reference/keywords/public.md)會使該方法可用於取得任何用戶端程式碼，以取得 `Vegetable` 執行個體的字串表示。 在範例中，`Vegetable.ToString` 方法會傳回[在 `Vegetable` 的](../../programming-guide/classes-and-structs/constructors.md)函式中初始化 `Name` 屬性的值：
 
 ```csharp
 public Vegetable(string name) => Name = name;
@@ -58,7 +58,7 @@ public Vegetable(string name) => Name = name;
 var item = new Vegetable("eggplant");
 ```
 
-最後，我們將 `item` 變數併入插入字串，而此插入字串也包含 <xref:System.DateTime> 值、<xref:System.Decimal> 值和 `Unit` [enumeration](../../programming-guide/enumeration-types.md) 值。 將編輯器中的所有 C# 程式碼都取代為下列程式碼，然後使用 `dotnet run` 命令來執行此程式碼：
+最後，我們將 `item` 變數包含在插入字串中，其中也包含 <xref:System.DateTime> 值、<xref:System.Decimal> 值和 `Unit`[列舉](../../language-reference/builtin-types/enum.md)值。 將編輯器中的所有 C# 程式碼都取代為下列程式碼，然後使用 `dotnet run` 命令來執行此程式碼：
 
 ```csharp
 using System;

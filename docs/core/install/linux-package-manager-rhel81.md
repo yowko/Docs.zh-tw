@@ -4,21 +4,18 @@ description: 使用套件管理員，在 RHEL 8.1 上安裝 .NET Core SDK 和執
 author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
-ms.openlocfilehash: 3ef639d5b76e81856ec8370d10e098c455ca8b3d
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
-ms.translationtype: MT
+ms.openlocfilehash: 8674b5d9d0f0ee384ca6798a7ea699bad67c5e5e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74836924"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341199"
 ---
 # <a name="rhel-81-package-manager---install-net-core"></a>RHEL 8.1 套件管理員-安裝 .NET Core
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
 本文說明如何使用套件管理員在 RHEL 8.1 上安裝 .NET Core。 RHEL 8.1 尚無法使用 .NET Core 3.1。
-
-> [!NOTE]
-> RHEL 8.0 不包含 .NET Core 3.0。 使用命令 `yum upgrade` 來更新至 RHEL 8.1。
 
 > [!NOTE]
 > RHEL 8.0 不包含 .NET Core 3.0。 使用命令 `yum upgrade` 來更新至 RHEL 8.1。

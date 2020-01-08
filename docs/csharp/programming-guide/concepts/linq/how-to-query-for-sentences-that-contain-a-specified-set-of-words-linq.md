@@ -1,15 +1,15 @@
 ---
-title: 作法：查詢包含指定字組的句子 (LINQ) (C#)
+title: 如何查詢包含指定字組的句子（LINQ）（C#）
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: e478364f07c08a334692ba54ae1a95880b95519e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: efb0eb60a9695c19e16b507d29ef6994e904cff9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592774"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347688"
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>作法：查詢包含指定字組的句子 (LINQ) (C#)
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>如何查詢包含指定字組的句子（LINQ）（C#）
 此範例示範如何在文字檔中尋找含有每個指定字組之相符項目的句子。 雖然此範例硬式編碼了搜尋字詞的陣列，但也可以在執行階段將它動態填入。 在此範例中，查詢會傳回包含 "Historically"、"data" 和 "integrated" 等字的句子。  
   
 ## <a name="example"></a>範例  
@@ -69,6 +69,6 @@ Historically, the world of data and the world of objects have not been well inte
 ## <a name="compiling-the-code"></a>編譯程式碼  
 建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ 和字串 (C#)](./linq-and-strings.md)

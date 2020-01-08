@@ -1,15 +1,15 @@
 ---
-title: 作法：撰寫依內容尋找項目的查詢 (C#)
+title: 如何撰寫查詢以根據內容（C#）尋找元素
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: e3ac8fc965132521b85cce6391908634cdb17127
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3fc131fdeb8dbf8871bfa455bc54eab0eeca7022
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253208"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348371"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>作法：撰寫依內容尋找項目的查詢 (C#)
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>如何撰寫查詢以根據內容（C#）尋找元素
 有時候您可能必須撰寫會依其內容選取項目的查詢。 您可能想要依據前面或後面的同層級項目進行篩選。 您可能想要依據子系或祖系項目進行篩選。  
   
  您僅能撰寫查詢並使用 `where` 子句中的查詢結果來達到這個目的。 如果您必須先依據 Null 進行測試，然後再測試值，在 `let` 子句中進行查詢，然後使用 `where` 子句中的結果會比較方便。  
@@ -98,7 +98,7 @@ id = 3
 id = 6  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Linq.XElement.Parse%2A>
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>

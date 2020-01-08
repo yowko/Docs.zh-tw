@@ -3,12 +3,12 @@ title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
-ms.translationtype: MT
+ms.openlocfilehash: 21b2b0fb606333ace05b6525c9f461e6ee1709d1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929072"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338526"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -22,7 +22,7 @@ ms.locfileid: "70929072"
 
 請參閱 [CoreRT](#corert) 及 [.NET Native](#net-native)。
 
-## <a name="aspnet"></a>ASP.NET 
+## <a name="aspnet"></a>[ASP.NET] 
 
 隨附於 .NET Framework 的原始 ASP.NET 實作。
 
@@ -36,7 +36,7 @@ ms.locfileid: "70929072"
 
 請參閱 [ASP.NET Core 文件](/aspnet/#pivot=core)。
 
-## <a name="assembly"></a>組件 (assembly)
+## <a name="assembly"></a>assembly
 
 可以包含可由應用程式或其他組件呼叫之 API 集合的 *.dll*/ *.exe* 檔案。
 
@@ -72,7 +72,7 @@ Common Language Runtime。
 
 能夠開發和執行可在多個不同的作業系統 (例如 Linux、Windows 和 iOS) 上使用的應用程式，而無需特別針對每個作業系統重新撰寫。 這樣可讓程式碼在不同平台的應用程式之間重複使用並維持一致性。
 
-## <a name="ecosystem"></a>生態系統
+## <a name="ecosystem"></a>ecosystem (生態系統)
 
 用來建置及執行適用於指定技術之應用程式的所有執行階段軟體、開發工具和社群資源。
 
@@ -116,9 +116,9 @@ Just-in-Time 編譯器。
 
 .NET 實作包括：
 
-- 一或多個執行階段。 例如：CLR、CoreCLR、CoreRT。
+- 一或多個執行階段。 範例：CLR、CoreCLR、CoreRT。
 - 實作 .NET Standard 版本並可能包含其他 API 的類別庫。 範例：.NET Framework 基底類別庫、.NET Core 基底類別庫。
-- (選擇性) 一或多個應用程式架構。 例如：ASP.NET、Windows Forms 和 WPF 會包含在 .NET Framework 中。
+- (選擇性) 一或多個應用程式架構。 範例：ASP.NET、Windows Forms 和 WPF 會包含在 .NET Framework 中。
 - (選擇性) 開發工具。 某些開發工具可在多個實作之間共用。
 
 .NET 實作的範例：
@@ -191,7 +191,7 @@ UWP 是 .NET Native 第一個支援的應用程式架構。 現在，我們支�
 
 請參閱 [Intro to .NET Native and CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md) (.NET Native 和 CoreRT 簡介)
 
-## <a name="net-standard"></a>.NET Standard
+## <a name="net-standard"></a>.NET 標準
 
 可用於每個 .NET 實作之 .NET API 的型式規格。
 
@@ -211,7 +211,7 @@ NuGet 套件 (簡稱套件) 是 *.zip* 檔案，其中包含一或多個同名�
 
 *.zip* 檔案包含一個 *.nupkg* 延伸模組和許多特定資產 (例如 *.dll* 檔案和 *.xml* 檔案)，可搭配多個架構和版本使用。 安裝於應用程式或程式庫時，會根據應用程式或程式庫所指定的目標 Framework 來選取適當的資產。 定義介面的資產位於 *ref* 資料夾中，而定義實作的資產則位於 *lib* 資料夾中。
 
-## <a name="platform"></a>platform
+## <a name="platform"></a>{2&gt;platform&lt;2}
 
 作業系統及其執行所在的硬體，例如 Windows、macOS、Linux、iOS 和 Android。
 
@@ -222,7 +222,7 @@ NuGet 套件 (簡稱套件) 是 *.zip* 檔案，其中包含一或多個同名�
 
 .NET 文件經常使用「.NET 平台」來表示 .NET 實作或包含所有實作的 .NET 堆疊。 這兩種用法通常會與主要 (OS/硬體) 意義混淆，因此我們計劃從文件中排除這些用法。
 
-## <a name="runtime"></a>執行階段
+## <a name="runtime"></a>執行階段 ( runtime)
 
 受管理程式的執行環境。
 
@@ -269,9 +269,9 @@ OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分�
 
 通用 Windows 平台。
 
-用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用程式和軟體的 .NET 實作。 其設計目的是為了整合您可能想要設為目標的不同裝置類型，包括電腦、平板電腦、平板手機、手機，甚至是 Xbox。 UWP 提供許多服務 (例如集中式應用程式存放區)、一個執行環境 (AppContainer)，以及用來取代 Win32 (WinRT) 的一組 Windows API。 您可以使用 C++、C#、VB.NET 和 JavaScript 來撰寫應用程式。 使用 C# 和 VB.NET 時，.NET API 是由 .NET Core 所提供。
+用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用程式和軟體的 .NET 實作。 其設計目的是為了整合您可能想要設為目標的不同裝置類型，包括電腦、平板電腦、平板手機、手機，甚至是 Xbox。 UWP 提供許多服務 (例如集中式應用程式存放區)、一個執行環境 (AppContainer)，以及用來取代 Win32 (WinRT) 的一組 Windows API。 應用程式可以用C++、 C#、Visual Basic 和 JavaScript 撰寫。 當使用C#和 Visual Basic 時，.net api 是由 .net Core 提供。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 指南](index.md)
 - [.NET Framework 指南](../framework/index.md)

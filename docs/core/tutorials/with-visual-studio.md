@@ -1,88 +1,142 @@
 ---
-title: 在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式
-description: 了解如何使用 Visual Studio 2017 以 C# 建置簡單的 .NET Core 主控台應用程式。
+title: 在 Visual Studio 中使用 .NET Core 建立 Hello World 應用程式
+description: 瞭解如何使用 Visual Studio，以建立您的第一個C# .net Core 主控台應用程式，或 Visual Basic。
 author: BillWagner
 ms.author: wiwagn
-ms.date: 09/13/2017
+ms.date: 12/09/2019
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: cc7d78006998b79fe9d522e71883ce1af817c051
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 427c4bddc8a3e5c05e6d25cfd72a5a93bfc09a9b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428556"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75339507"
 ---
-# <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core SDK 來建置 C# Hello World 應用程式
+# <a name="tutorial-create-your-first-net-core-console-application-in-visual-studio-2019"></a>教學課程：在 Visual Studio 2019 中建立您的第一個 .NET Core 主控台應用程式
 
-本文提供在 Visual Studio 2017 中使用C#來建立、偵測和發行簡單 .net Core 主控台應用程式的逐步介紹。 Visual Studio 2017 提供功能完整的開發環境來建置 .NET Core 應用程式。 只要應用程式沒有平台特定的相依性，應用程式就可以在 .NET Core 的任何目標平台，以及安裝 .NET Core 的任何系統上執行。
+本文提供在 Visual Studio 2019 中建立和執行 Hello World .NET Core 主控台應用程式的逐步介紹。 Hello World 的應用程式傳統上是用來向初學者介紹新的程式設計語言。 此程式只會顯示 "Hello World！" 這個片語 。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
 
-已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 您可以使用 .NET Core 2.1 或更新版本來開發您的應用程式。
+- 已安裝 **.Net Core 跨平臺開發**工作負載的[Visual Studio 2019 16.4 版或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 當您選取此工作負載時，會自動安裝 .NET Core 3.1 SDK。
 
-如需詳細資訊，請參閱[.Net Core 相依性和需求](../install/sdk.md?tabs=netcore30&pivots=os-windows#install-with-visual-studio)一文。
+如需詳細資訊，請參閱[安裝 .NET Core SDK](../install/sdk.md?pivots=os-windows)一文中的[install with Visual Studio](../install/sdk.md?pivots=os-windows#install-with-visual-studio)一節。
 
-## <a name="a-simple-hello-world-application"></a>簡單的 Hello World 應用程式
+## <a name="create-the-app"></a>建立應用程式
 
-請開始建立簡單的 "Hello World" 主控台應用程式。 請遵循下列步驟：
+下列指示會建立簡單的 Hello World 主控台應用程式：
 
-1. 啟動 Visual Studio。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [.NET Core] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，鍵入 "HelloWorld"。 選取 [確定] 按鈕。
+<!-- markdownlint-disable MD025 -->
 
-   ![已選取 [主控台應用程式] 的 [新增專案] 對話方塊](./media/with-visual-studio/visual-studio-new-project.png)
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
 
-1. Visual Studio 使用範本建立專案。 .NET Core 的 C# 主控台應用程式範本會自動定義一個 `Program` 類別，該類別具有採用 `Main` 陣列為引數的單一 <xref:System.String> 方法。 `Main` 是應用程式進入點，是執行階段在啟動應用程式時會自動呼叫的方法。 在應用程式啟動時所提供的所有命令列引數，都會在 *args* 陣列中提供。
+1. 開啟 Visual Studio 2019。
+
+1. 建立名為C# "HelloWorld" 的新 .net Core 主控台應用程式專案。
+
+   1. 在開始視窗中，選擇 [建立新專案]。
+
+      ![在 [Visual Studio 開始] 視窗上選取 [建立新專案] 按鈕](./media/with-visual-studio/start-window.png)
+
+   1. 在 [**建立新專案**] 頁面的 [搜尋] 方塊中，輸入**主控台**。 接下來， **C#** 從 [語言] 清單中選擇，然後從 [平臺] 清單中選擇 [**所有平臺**]。 選擇 [**主控台應用程式（.Net Core）** ] 範本，然後選擇 [**下一步]** 。
+
+      ![建立已選取篩選的新專案視窗](./media/with-visual-studio/create-new-project.png)
+
+      > [!TIP]
+      > 如果您看不到 .NET Core 範本，可能是您已安裝必要的工作負載。 在 [**找不到您要尋找的內容嗎？** ] 訊息底下，選擇 [**安裝更多工具和功能**] 連結。 Visual Studio 安裝程式隨即開啟。 請確定您已安裝 **.Net Core 跨平臺開發**工作負載。
+
+   1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**HelloWorld** 。 接著，選擇 [建立]。
+
+      ![以 [專案名稱]、[位置] 和 [方案名稱] 欄位設定新的專案視窗](./media/with-visual-studio/configure-new-project.png)
+
+   .NET Core 的 C# 主控台應用程式範本會自動定義一個 `Program` 類別，該類別具有採用 <xref:System.String> 陣列為引數的單一 `Main` 方法。 `Main` 是應用程式進入點，是執行階段在啟動應用程式時會自動呼叫的方法。 在應用程式啟動時所提供的所有命令列引數，都會在 *args* 陣列中提供。
 
    ![Visual Studio 和新的 HelloWorld 專案](./media/with-visual-studio/visual-studio-main-window.png)
 
-   此範本會建立簡單的 "Hello World" 應用程式。 它會呼叫 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 方法，以在主控台視窗中顯示常值字串 "Hello World!" 訊息。 透過使用工具列上的綠色箭頭選取 **HelloWorld** 按鈕，您可以 [偵錯] 模式執行程式。 不過，如果您這樣做，主控台視窗將會在簡短顯示之後關閉。 這是因為在 `Main` 方法中的單一陳述式執行完畢之後，`Main` 方法會立即終止，而應用程式會立即結束。
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
-1. 若要使應用程式在關閉主控台視窗之前先暫停，請在 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 方法呼叫之後立即新增下列程式碼：
+1. 開啟 Visual Studio 2019。
 
-   ```csharp
-   Console.Write("Press any key to continue...");
-   Console.ReadKey(true);
-   ```
+1. 建立名為 "HelloWorld" 的新 Visual Basic .NET Core 主控台應用程式專案。
 
-   此程式碼會提示使用者按下任意鍵，並暫停程式直到按下按鍵為止。
+   1. 在開始視窗中，選擇 [建立新專案]。
 
-1. 在功能表列中，選取 [組建]  >  [組建方案]。 這會將您的程式編譯成中繼語言 (IL)，而該語言是由 Just-In-Time (JIT) 編譯器轉換為二進位程式碼。
+      ![在 [Visual Studio 開始] 視窗上選取 [建立新專案] 按鈕](./media/with-visual-studio/start-window.png)
 
-1. 透過使用工具列上的綠色箭頭選取 **HelloWorld** 按鈕來執行程式。
+   1. 在 [**建立新專案**] 頁面的 [搜尋] 方塊中，輸入**主控台**。 接下來，從 [語言] 清單中選擇 [ **Visual Basic** ]，然後從 [平臺] 清單中選擇 [**所有平臺**]。 選擇 [**主控台應用程式（.Net Core）** ] 範本，然後選擇 [**下一步]** 。
+
+      ![選擇主控台應用程式 (.NET Framework) 的 Visual Basic 專案範本](./media/with-visual-studio/vb/create-new-project.png)
+
+      > [!TIP]
+      > 如果您看不到 .NET Core 範本，可能是您已安裝必要的工作負載。 在 [**找不到您要尋找的內容嗎？** ] 訊息底下，選擇 [**安裝更多工具和功能**] 連結。 Visual Studio 安裝程式隨即開啟。 請確定您已安裝 **.Net Core 跨平臺開發**工作負載。
+
+   1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**HelloWorld** 。 接著，選擇 [建立]。
+
+   適用于 .NET Core 的主控台應用程式範本會自動定義具有單一方法的類別 `Program`，`Main`，接受 <xref:System.String> 陣列做為引數。 `Main` 是應用程式進入點，是執行階段在啟動應用程式時會自動呼叫的方法。 啟動應用程式時所提供的任何命令列引數都可在 `args` 參數中取得。
+
+   ![Visual Studio 和新的 HelloWorld 專案](./media/with-visual-studio/vb/visual-studio-main-window.png)
+
+---
+
+   此範本會建立簡單的 "Hello World" 應用程式。 它會呼叫 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 方法，以在主控台視窗中顯示常值字串 "Hello World!" 。
+
+## <a name="run-the-app"></a>執行應用程式
+
+1. 若要執行程式，請選擇工具列上的 [ **HelloWorld** ]，或按**F5**。
+
+   ![已選取 [HelloWorld 執行] 按鈕的 Visual Studio 工具列](./media/with-visual-studio/run-program.png)
+
+   主控台視窗隨即開啟，並出現 "Hello World！" 文字 列印在畫面上，而部分 Visual Studio 的調試資訊。
 
    ![主控台視窗顯示 Hello World，請按任意鍵以繼續](./media/with-visual-studio/hello-world-console.png)
 
 1. 按任意鍵以關閉主控台視窗。
 
-## <a name="enhancing-the-hello-world-application"></a>增強 Hello World 應用程式
+## <a name="enhance-the-app"></a>增強應用程式
 
-增強您的應用程式以提示使用者輸入其名稱，並將其與日期和時間一起顯示。 若要修改並測試程式，請執行下列動作︰
+增強您的應用程式以提示使用者輸入其名稱，並將其與日期和時間一起顯示。 下列指示會再次修改並執行應用程式：
 
-1. 在 [程式C#代碼] 視窗中，于 `static void Main(string[] args)` 行之後和第一個右大括弧前面的左括弧後方輸入下列程式碼：
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
+1. 以下列程式碼取代 `Main` 方法的內容，這目前只是呼叫 `Console.WriteLine`的那一行：
 
    [!code-csharp[GettingStarted#1](~/samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
-   此程式碼會取代 `Main` 方法的內容。
-
-   ![含有已更新之 Main 方法的 Visual Studio 程式 c-sharp 檔案](./media/with-visual-studio/visual-csharp-code-window.png)
-
    此程式碼會在主控台中顯示「What is your name?」， 然後等待使用者輸入字串並按 Enter 鍵。 它會將此字串儲存至名為 `name` 的變數。 此程式碼也會擷取 <xref:System.DateTime.Now?displayProperty=nameWithType> 屬性的值，其中包含目前的當地時間，並將它指派至名稱為 `date` 的變數。 最後，使用[字串插值](../../csharp/language-reference/tokens/interpolated.md)在主控台視窗中顯示這些值。
 
-1. 選擇 [建置]  >  [建置方案] 來編譯程式。
+1. 選擇 [建置] >  [建置方案] 來編譯程式。
 
-1. 在 Visual Studio 中以 [偵錯] 模式執行程式，方法為選取工具列上的綠色箭頭，按 F5，或是選擇 [偵錯]  >  [開始偵錯] 功能表項目。 輸入名稱並按 Enter 鍵來回應提示。
+1. 若要執行程式，請選擇工具列上的 [ **HelloWorld** ]，或按**F5**。
+
+1. 輸入名稱並按**enter**鍵，以回應提示。
 
    ![含有已修改程式輸出的主控台視窗](./media/with-visual-studio/hello-world-update.png)
 
 1. 按任意鍵以關閉主控台視窗。
 
-您已建立並執行應用程式。 若要開發專業的應用程式，請執行一些其他步驟，來針對發行準備應用程式：
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
-- 如需對應用程式進行偵錯的資訊，請參閱[使用 Visual Studio 2017 針對 .NET Core Hello World 應用程式進行偵錯](debugging-with-visual-studio.md)。
+1. 以下列程式碼取代 `Main` 方法的內容，這目前只是呼叫 `Console.WriteLine`的那一行：
 
-- 如需開發和發行應用程式可散發版本的資訊，請參閱[使用 Visual Studio 2017 發行 .NET Core Hello World 應用程式](publishing-with-visual-studio.md)。
+   [!code-vb[GettingStarted#1](~/samples/snippets/core/tutorials/vb-with-visual-studio/helloworld.vb#1)]
 
-## <a name="related-articles"></a>相關文章
+   此程式碼會在主控台中顯示「What is your name?」， 然後等待使用者輸入字串並按 Enter 鍵。 它會將此字串儲存至名為 `name` 的變數。 此程式碼也會擷取 <xref:System.DateTime.Now?displayProperty=nameWithType> 屬性的值，其中包含目前的當地時間，並將它指派至名稱為 `date` 的變數。 最後，使用[字串插值](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)在主控台視窗中顯示這些值。
 
-除了主控台應用程式之外，您也可以使用 .NET Core 和 Visual Studio 2017 建置類別庫。 如需逐步介紹，請參閱[在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](library-with-visual-studio.md)。
+1. 選擇 [建置] >  [建置方案] 來編譯程式。
 
-您也可以使用 [Visual Studio Code](https://code.visualstudio.com/) (可免費下載的程式碼編輯器)，在 Mac、Linux 和 Windows 上開發 .NET Core 主控台應用程式。 如需逐步教學課程，請參閱[開始使用 Visual Studio Code](with-visual-studio-code.md)。
+1. 若要執行程式，請選擇工具列上的 [ **HelloWorld** ]，或按**F5**。
+
+1. 輸入名稱並按**enter**鍵，以回應提示。
+
+   ![含有已修改程式輸出的主控台視窗](./media/with-visual-studio/hello-world-update.png)
+
+1. 按任意鍵以關閉主控台視窗。
+
+---
+
+## <a name="next-steps"></a>後續步驟
+
+在本文中，您已建立並執行您的第一個 .NET Core 應用程式。 在下一個步驟中，您會對應用程式進行 debug。
+
+> [!div class="nextstepaction"]
+> [在 Visual Studio 中，對 .NET Core Hello World 應用程式進行 Debug](debugging-with-visual-studio.md)

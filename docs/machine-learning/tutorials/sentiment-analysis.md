@@ -4,12 +4,12 @@ description: 本教學課程示範如何建立 .NET Core 主控台應用程式�
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 1b5a3f6c7d70c95916b99d386924347642e6d7e3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: 4fec19c6d7a83ba4e5b2bd0cd6e196ee19c49ce8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974767"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344952"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>教學課程：使用 ML.NET 中的二進位分類來分析網站批註的情感
 
@@ -28,7 +28,7 @@ ms.locfileid: "73974767"
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 存放庫中找到本教學課程的原始程式碼。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 - 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)版本
 
@@ -47,7 +47,7 @@ ms.locfileid: "73974767"
 ## <a name="prepare-your-data"></a>準備您的資料
 
 > [!NOTE]
-> 此教學課程的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人 al， KDD 2015，並裝載于 UCI Machine Learning 存放庫-Dua、d. 和 Karra Taniskidou，E. （2017）。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml ]。 Irvine，CA：加州大學，學校資訊與電腦科學。
+> 此教學課程的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人 al， KDD 2015，並裝載于 UCI Machine Learning 存放庫-Dua、d. 和 Karra Taniskidou，E. （2017）。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml ]。 Irvine, CA: University of California, School of Information and Computer Science.
 
 1. 下載並解壓縮 [UCI 情感標記句子資料集 ZIP 檔案](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)。
 
@@ -87,7 +87,7 @@ ms.locfileid: "73974767"
 |--------------------------------------|----------|
 |女服務生的服務速度有點慢。|    0     |
 |不夠酥脆。                    |    0     |
-|Wow .。。就愛了。              |    1     |
+|哇... 愛這地方。              |    1     |
 |服務很迅速。              |    1     |
 
 `SentimentPrediction` 是在模型定型後所使用的預測類別。 它繼承自 `SentimentData`，以便輸入 `SentimentText` 可以和輸出預測一起顯示。 `Prediction` 布林值是在提供新輸入 `SentimentText` 時，模型預測的值。
@@ -181,7 +181,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
     |--------------------------------------|----------|----------------------|
     |女服務生的服務速度有點慢。|    0     |[0.76, 0.65, 0.44, …] |
     |不夠酥脆。                    |    0     |[0.98, 0.43, 0.54, …] |
-    |Wow .。。就愛了。              |    1     |[0.35, 0.73, 0.46, …] |
+    |哇... 愛這地方。              |    1     |[0.35, 0.73, 0.46, …] |
     |服務很迅速。              |    1     |[0.39, 0, 0.75, …]    |
 
 ### <a name="add-a-learning-algorithm"></a>新增學習演算法
@@ -200,7 +200,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 [!code-csharp[TrainModel](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#TrainModel "Train the model")]
 
-[Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) 方法會透過轉換資料集和套用定型來定型模型。
+[Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) 方法透過轉換資料集和套用定型來定型模型。
 
 ### <a name="return-the-model-trained-to-use-for-evaluation"></a>傳回經訓練以供評估使用的模型
 
@@ -236,7 +236,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
     [!code-csharp[PredictWithTransformer](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#TransformData "Predict using the Transformer")]
 
-    上述程式碼使用 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 方法對多個提供的測試資料集輸入資料列進行預測。
+    之前的程式碼使用 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 方法會對測試資料集多個所提供的輸入資料列進行預測。
 
 4. 將下列內容新增為 `Evaluate()` 方法中的下一行程式碼來評估模型：
 
@@ -269,7 +269,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
     `UseModelWithSingleItem()` 方法會執行下列工作：
 
-    - 建立單一評論的測試資料。
+    - 建立測試資料的單一評論。
     - 根據測試資料預測情感。
     - 合併測試資料和預測來進行報告。
     - 顯示預測的結果。
@@ -376,7 +376,7 @@ Press any key to continue . . .
 
 恭喜您！ 您現在已成功建置可對訊息情感進行分類和預測的機器學習模型。
 
-建立成功的模型是一個需要反覆嘗試的程序。 此模型一開始的品質較低，因為此教學課程是使用小型的資料集來提供快速的模型定型。 如果您對於模型的品質感到不滿意，可以嘗試為它提供較大的定型資料集，或選擇不同的定型演算法，並針對每個演算法搭配不同[超參數](../resources/glossary.md##hyperparameter)來改善它。
+建立成功的模型是一個需要反覆嘗試的程序。 此模型一開始的品質較低，因為此教學課程是使用小型的資料集來提供快速的模型定型。 如果您對於模型的品質感到不滿意，可以嘗試為它提供較大的定型資料集，或選擇不同的定型演算法，並針對每個演算法搭配不同[超參數](../resources/glossary.md#hyperparameter)來改善它。
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 存放庫中找到本教學課程的原始程式碼。
 

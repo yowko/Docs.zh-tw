@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 684361dbb97e70296a3061f71102662023f88d9a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 5c75425783d3468ac42ef7cb32cd9c93e812192a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800507"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338341"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>如何：開發在 IIS 上執行的 WCF 資料服務
 
@@ -37,7 +37,7 @@ ms.locfileid: "74800507"
 
 4. 輸入 `NorthwindService` 做為專案的名稱。
 
-5. 按一下 [確定]。
+5. 按一下 [ **確定**]。
 
 6. 在 [**專案**] 功能表上，選取 [ **NorthwindService 屬性**]。
 
@@ -132,7 +132,7 @@ ms.locfileid: "74800507"
 
 5. 執行下列其中一個步驟，將資料模型連接至資料庫，然後按 **[下一步]** ：
 
-    - 如果您尚未設定資料庫連接，請按一下 [**新增連接**]，然後建立新的連接。 如需詳細資訊，請參閱 [How to: Create Connections to SQL Server Databases](https://go.microsoft.com/fwlink/?LinkId=123631)。 此 SQL Server 執行個體必須已附加 Northwind 範例資料庫。
+    - 如果您尚未設定資料庫連接，請按一下 [**新增連接**]，然後建立新的連接。 如需詳細資訊，請參閱 [How to: Create Connections to SQL Server Databases](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))。 此 SQL Server 執行個體必須已附加 Northwind 範例資料庫。
 
          \-或-
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: e921084ed28cb4e846cb269e57e58a194e9437a5
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: fbe3a546fd431beb5ddf1d71153d38580a19ecc9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837333"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348343"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation 中的佇列
 本節中的主題將討論佇列的 Windows Communication Foundation （WCF）支援。 WCF 藉由利用 Microsoft Message Queuing （先前稱為 MSMQ）做為傳輸來提供佇列的支援，並啟用下列案例：  
@@ -50,7 +50,7 @@ ms.locfileid: "74837333"
  說明如何處理有害訊息 (超過傳送到接收應用程式的最大嘗試傳遞次數的訊息)。  
   
  [Windows Vista、Windows Server 2003 和 Windows XP 之間的佇列功能差異](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- 摘要說明 Windows Vista、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]之間 WCF 佇列功能的差異。  
+ 摘要說明 Windows Vista、Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]之間 WCF 佇列功能的差異。  
   
  [使用傳輸安全性來保護訊息的安全](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  描述如何使用傳輸安全性來保護佇列訊息的安全。  

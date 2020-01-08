@@ -2,12 +2,12 @@
 title: 如何：尋找兩個清單之間的差異 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: cd33c08416cce5afb6cf7507335f753160b8c6ff
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 42c5b5ee8a6af1323cb5eee12694fb94063eb877
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344590"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347516"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>如何：尋找兩個清單之間的集合差異（LINQ）（Visual Basic）
 此範例示範如何使用 LINQ 比較兩份字串清單，然後輸出在 names1.txt 但不在 names2.txt 中的字串行。  
@@ -53,9 +53,9 @@ End Class
   
  Visual Basic 中的某些查詢作業類型（例如 <xref:System.Linq.Enumerable.Except%2A>、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Union%2A>和 <xref:System.Linq.Enumerable.Concat%2A>）只能以以方法為基礎的語法來表示。  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
-建立 VB.NET 主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
+## <a name="compile-the-code"></a>編譯程式碼  
+建立 Visual Basic 的主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ 和字串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

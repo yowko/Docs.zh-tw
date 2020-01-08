@@ -2,12 +2,12 @@
 title: 如何：統計某個字在字串中出現的次數 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-ms.openlocfilehash: 92e0b522a1367566c64d6158fd239534e37ad44f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 07742e7e99291e056e4c91a31b2e588e36a6e177
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353691"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348190"
 ---
 # <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>如何：計算某個單字在字串中出現的次數（LINQ）（Visual Basic）
 
@@ -58,9 +58,9 @@ End Class
 ' 3 occurrence(s) of the search term "data" were found.
 ```
 
-## <a name="compiling-the-code"></a>編譯程式碼
+## <a name="compile-the-code"></a>編譯程式碼
 
-建立 VB.NET 主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
+建立 Visual Basic 的主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
 
 ## <a name="see-also"></a>請參閱
 

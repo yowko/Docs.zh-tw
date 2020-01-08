@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: cf642fcac7233d27f2ed9052829c145038e93419
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
-ms.translationtype: MT
+ms.openlocfilehash: e68ff69147d239d997e0787efe318d2364a16d98
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038878"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345283"
 ---
 # <a name="--and---operators-c-reference"></a>- 及 -= 運算子 (C# 參考)
 
@@ -68,11 +68,11 @@ x = x - y
 
 [!code-csharp-interactive[-= examples](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#SubtractAndAssign)]
 
-當您取消訂閱[事件](../keywords/event.md)時，您也會使用 `-=` 來指定要移除的事件處理常式方法。 如需詳細資訊，請參閱[如何：訂閱及取消訂閱事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
+當您取消訂閱[事件](../keywords/event.md)時，您也會使用 `-=` 來指定要移除的事件處理常式方法。 如需詳細資訊，請參閱[如何訂閱及取消訂閱事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-使用者定義型別可以[多載](operator-overloading.md) `-` 運算子。 多載二元 `-` 運算子時，`-=` 運算子也會隱含地多載。 使用者定義型別無法明確地多載 `-=` 運算子。
+使用者定義型別可以[多載](operator-overloading.md)`-` 運算子。 多載二元 `-` 運算子時，`-=` 運算子也會隱含地多載。 使用者定義型別無法明確地多載 `-=` 運算子。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -84,4 +84,4 @@ x = x - y
 - [C# 運算子](index.md)
 - [事件](../../programming-guide/events/index.md)
 - [算術運算子](arithmetic-operators.md)
-- [ + 及 += 運算子](addition-operator.md)
+- [+ 及 += 運算子](addition-operator.md)

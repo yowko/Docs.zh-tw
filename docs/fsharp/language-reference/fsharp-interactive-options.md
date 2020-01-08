@@ -1,13 +1,13 @@
 ---
-title: F# Interactive 選項
+title: 互動式選項
 description: 瞭解F#互動式 fsi.exe 所支援的命令列選項。
 ms.date: 05/16/2016
-ms.openlocfilehash: e4ce0f3f76a7be803942e4b403e5fa6543a09e54
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: cceb8fb50434f3525ebb2ede16e84720d10d320c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425323"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348228"
 ---
 # <a name="f-interactive-options"></a>F# Interactive 選項
 
@@ -60,7 +60,7 @@ F#指令檔的副檔名為 `.fsx`。
 |**--reference：&lt;filename&gt;**<br /><br />**-r：&lt;filename&gt;**|與**fsc**編譯器選項相同。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--shadowcopyreferences**[ **+** &#124; **-** ]|防止F#互動式進程鎖定參考。|
 |**--simpleresolution**|使用以目錄為基礎的規則來解析元件參考，而不是 MSBuild 解析。|
-|**--tailcalls**[ **+** &#124; **-** ]|啟用或停用 tail IL 指令，這會使堆疊框架重複用於尾遞迴函式。 這個選項預設為啟用。|
+|**--tailcalls**[ **+** &#124; **-** ]|啟用或停用 tail IL 指令，這會使堆疊框架重複用於尾遞迴函式。 此選項預設為啟用。|
 |**--targetprofile：&lt;字串&gt;**|指定這個元件的目標 framework 設定檔。 有效值為 mscorlib、netcore 或 netstandard。  預設值為 mscorlib。|
 |**--使用：&lt;filename&gt;**|指示解譯器在啟動時使用指定的檔案做為初始輸入。|
 |**--utf8output**|與 fsc 編譯器選項相同。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|

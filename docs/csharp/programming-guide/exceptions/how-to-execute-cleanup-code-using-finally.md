@@ -1,5 +1,5 @@
 ---
-title: 作法：使用 finally 執行清除程式碼 - C# 程式設計手冊
+title: 如何使用 finally 執行清除程式碼- C#程式設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: e6adbb864b0450cdd1dbfcc56abdbad2034c5c7a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 00cc7e40220397f4154de5be1e78a894e37374e8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590242"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346265"
 ---
-# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>作法：使用 finally 執行清除程式碼 (C# 程式設計手冊)
+# <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>如何使用 finally 執行清除程式碼（C#程式設計手冊）
 `finally` 陳述式的目的是為了確保在必要時會立即清除物件 (通常是含有外部資源的物件)，即使擲回例外狀況也一樣。 這類清除的一個例子，是在使用後立即呼叫 <xref:System.IO.FileStream> 的 <xref:System.IO.Stream.Close%2A>，而不等候 Common Language Runtime 回收物件的記憶體，如下所示：  
   
  [!code-csharp[csProgGuideExceptions#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#16)]  
@@ -28,7 +28,7 @@ ms.locfileid: "69590242"
   
  在 `finally` 區塊中關閉資料庫連接是另一個不錯的選擇。 因為允許連接至資料庫伺服器的連接數目有時候是有限的，所以您應該盡快關閉資料庫連接。 如果在您可以關閉連接之前就擲回例外狀況，使用 `finally` 區塊會比等候記憶體回收更適合。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [例外狀況和例外狀況處理](./index.md)

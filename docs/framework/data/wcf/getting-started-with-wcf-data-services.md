@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
-ms.openlocfilehash: e85ccece5cccb28827850548f71ec0a8a4faea70
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: d2cf693fb0656a835b3f32306bdbb26e03d371e8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569203"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348077"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF 資料服務使用者入門
 本節中的主題可協助您快速瞭解開放式資料通訊協定（OData），以及如何使用 WCF Data Services 藉由說明基礎技術來公開及取用 OData 摘要。 本節包含概念內容和[快速入門](quickstart-wcf-data-services.md)教學課程。  
@@ -36,10 +36,6 @@ ms.locfileid: "74569203"
  提供 WCF Data Services 和 OData 資源的連結。  
   
 ## <a name="related-sections"></a>相關章節  
- [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149)  
+ [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))  
   
  [使用者入門](../adonet/ef/getting-started.md)  
-  
-## <a name="see-also"></a>請參閱
-
-- [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)

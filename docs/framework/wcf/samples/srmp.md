@@ -2,12 +2,12 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 0ee11b67dcd9c7251df17dc7523dc20765e157c5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 1e0290a4df688d39f84086dc4c1b41712f81076a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716697"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345150"
 ---
 # <a name="srmp"></a>SRMP
 這個範例示範如何使用訊息佇列 (MSMQ)，透過 HTTP 來執行交易佇列通訊。  
@@ -28,7 +28,7 @@ ms.locfileid: "74716697"
   
 5. 如果您想要確定會在通訊時使用 HTTP，則可以讓 MSMQ 在固定模式中執行。 這可以確保任何訊息都無法使用非 HTTP 傳輸進到電腦上裝載的佇列中。  
   
-6. 選好要在固定模式中的 MSMQ 之後，電腦會要求重新啟動 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]。  
+6. 當您選取 MSMQ 在強化模式中執行之後，電腦需要在 Windows Server 2003 上重新開機。  
   
 7. 執行服務。  
   

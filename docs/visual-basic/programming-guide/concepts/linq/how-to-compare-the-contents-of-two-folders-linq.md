@@ -2,12 +2,12 @@
 title: 如何：比較兩個資料夾的內容 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: d11299e3e36f4b6a8b837af59b1c27bb1c7aaf41
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 05031466eeafae2dc63db36e9380034ddf9cbf15
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348403"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337534"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>如何：比較兩個資料夾的內容（LINQ）（Visual Basic）
 
@@ -114,9 +114,9 @@ Module CompareDirs
 End Module
 ```
 
-## <a name="compiling-the-code"></a>編譯程式碼
+## <a name="compile-the-code"></a>編譯程式碼
 
-建立 VB.NET 主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
+建立 Visual Basic 的主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
 
 ## <a name="see-also"></a>請參閱
 

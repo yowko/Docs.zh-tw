@@ -3,19 +3,19 @@ title: Unmanaged 型別 - C# 參考
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 81eef59ceb20bcae6c749dd59578ce35da253826
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 97aa4dd629e385dbe9641d82a7da21a0aaa63e92
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204478"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342584"
 ---
 # <a name="unmanaged-types-c-reference"></a>Unmanaged 型別 (C# 參考)
 
 如果類型為下列任何類型，則其為**非受控類型**：
 
 - `sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float`、`double`、`decimal` 或 `bool`
-- 任何 [enum](../keywords/enum.md) 型別
+- 任何 [enum](enum.md) 型別
 - 任何[指標](../../programming-guide/unsafe-code-pointers/pointer-types.md)型別
 - 只有包含非受控類型欄位和（在7.3 和更早版本中C# ）的任何使用者定義[結構](../keywords/struct.md)類型不是結構化類型（至少包含一個類型引數的類型）
 
@@ -33,7 +33,7 @@ ms.locfileid: "74204478"
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[指標型別](~/_csharplang/spec/unsafe-code.md#pointer-types)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [指標型別](../../programming-guide/unsafe-code-pointers/pointer-types.md)

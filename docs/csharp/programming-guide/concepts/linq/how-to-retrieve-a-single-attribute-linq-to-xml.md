@@ -1,15 +1,15 @@
 ---
-title: 作法：擷取單一屬性 (LINQ to XML) (C#)
+title: 如何取出單一屬性（LINQ to XML）（C#）
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: d8c8d0e3a99f94c4404f0ab23a5edf082be77952
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 31b34bddc9e748b473641235402847991d444c39
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253401"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347497"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>作法：擷取單一屬性 (LINQ to XML) (C#)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>如何取出單一屬性（LINQ to XML）（C#）
 這個主題會說明如何擷取項目的單一屬性 (如果有屬性名稱)。 這在撰寫您要尋找具有特定屬性之項目的查詢運算式時，相當實用。  
   
  <xref:System.Xml.Linq.XElement.Attribute%2A> 類別的 <xref:System.Xml.Linq.XElement> 方法會傳回具有指定之名稱的 <xref:System.Xml.Linq.XAttribute>。  
@@ -97,6 +97,6 @@ home
 work  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ to XML 座標軸 (C#)](./linq-to-xml-axes-overview.md)

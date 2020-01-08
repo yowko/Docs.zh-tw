@@ -1,5 +1,5 @@
 ---
-title: 自訂日期和時間格式字串 - .NET
+title: 自訂日期與時間格式字串
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: ce4aeda8c9fb3c73d133316f985d99e7271411c9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 87436b7d9e2041afb14b146ae0c16201c8593154
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103776"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348285"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自訂日期與時間格式字串
 
@@ -90,7 +90,7 @@ ms.locfileid: "73103776"
 |"zzz"|與 UTC 相差的時數和分鐘數。<br /><br /> 詳細資訊：["zzz" 自訂格式規範](#zzzSpecifier)。|2009-06-15T13:45:30-07:00 -> -07:00|
 |":"|時間分隔符號。<br /><br /> 詳細資訊：[":" 自訂格式規範](#timeSeparator)。|2009-06-15T13:45:30 -> : (en-US)<br /><br /> 2009-06-15T13:45:30 -> . (it-IT)<br /><br /> 2009-06-15T13:45:30 -> : (ja-JP)|
 |"/"|日期分隔符號。<br /><br /> 詳細資訊：["/" 自訂格式規範](#dateSeparator)。|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|
-|"*string*"<br /><br /> '*string*'|常值字串分隔符號。<br /><br /> 詳細資訊︰[字元常值](#Literals)。|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
+|"*字串*"<br /><br /> '*字串*'|常值字串分隔符號。<br /><br /> 詳細資訊︰[字元常值](#Literals)。|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
 |%|將下列字元定義為自訂格式規範。<br /><br /> 詳細資訊：[使用單一自訂格式規範](#UsingSingleSpecifiers)。|2009-06-15T13:45:30 (%h) -> 1|
 |&#92;|逸出字元。<br /><br /> 詳細資訊︰[字元常值](#Literals)和[使用逸出字元](#escape)。|2009-06-15T13:45:30 (h \h) -> 1 h|
 |任意字元|字元會原封不動地複製到結果字串。<br /><br /> 詳細資訊︰[字元常值](#Literals)。|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
@@ -627,9 +627,9 @@ ms.locfileid: "73103776"
 
 ||||||
 |-|-|-|-|-|
-|F|h|K|M|d|
-|f|G|h|m|秒|
-|t|Y|z|%|:|
+|華氏 (F)|H|K|M|d|
+|f|g|h|m|秒|
+|t|Y|z|%|：|
 |/|"|'|&#92;||
 
 所有其他字元一律會解譯為字元常值，並在格式化作業中，原封不動地包含在結果字串中。  在剖析作業中，它們必須完全符合輸入字串中的字元；這項比較會區分大小寫。
@@ -653,7 +653,7 @@ ms.locfileid: "73103776"
 [!code-csharp[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
 [!code-vb[Formatting.DateAndTime.Custom#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
-## <a name="notes"></a>備註
+## <a name="notes"></a>注意事項
 
 ### <a name="UsingSingleSpecifiers"></a>使用單一自訂格式規範
 

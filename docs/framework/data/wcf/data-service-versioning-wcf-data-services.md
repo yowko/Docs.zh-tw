@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: 730a7e4b58d544af9ebc58317cda336be8e946e2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 341cd8e21b84b220236947bca50311e5a1a75c72
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283040"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346117"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>資料服務版本控制 (WCF Data Services)
 開放式資料通訊協定（OData）可讓您建立資料服務，讓用戶端可以使用以資料模型為基礎的 Uri，將資料當做資源來存取。 OData 也支援服務作業的定義。 初始部署並在其存留期期間潛在進行數次之後，可能會因為各種原因而需要變更這些資料服務 (例如變更商務需要、資訊技術需求) 或處理其他問題。 當您針對現有的資料服務進行變更時，必須考慮是否要定義新的資料服務版本，以及如何妥善地將對於現有用戶端應用程式的影響降至最低。 本主題提供建立新資料服務版本時機和方式的指引。 它也會說明 WCF Data Services 如何處理用戶端與資料服務之間的交換，以支援不同版本的 OData 通訊協定。
@@ -53,7 +53,7 @@ ms.locfileid: "74283040"
 ## <a name="odata-protocol-versions"></a>OData 通訊協定版本
  發行新版本的 OData 時，用戶端應用程式可能不會使用資料服務所支援的相同 OData 通訊協定版本。 較舊的用戶端應用程式可能會存取支援較新版本 OData 的資料服務。 用戶端應用程式也可以使用較新版本的 WCF Data Services 用戶端程式庫，其支援的 OData 版本比存取的資料服務還新。
 
- WCF Data Services 利用 OData 提供的支援來處理這類版本控制案例。 此外，當用戶端使用的 OData 版本與資料服務所使用的不同時，也支援產生及使用資料模型中繼資料來建立用戶端資料服務類別。 如需詳細資訊，請參閱[OData：通訊協定版本](https://go.microsoft.com/fwlink/?LinkId=186071)設定。
+ WCF Data Services 利用 OData 提供的支援來處理這類版本控制案例。 此外，當用戶端使用的 OData 版本與資料服務所使用的不同時，也支援產生及使用資料模型中繼資料來建立用戶端資料服務類別。 如需詳細資訊，請參閱[OData：總覽](https://www.odata.org/documentation/odata-version-2-0/overview/)一文中的通訊協定版本設定一節。
 
 ### <a name="version-negotiation"></a>版本交涉
  您可以設定資料服務，以定義服務將使用的最高版本 OData 通訊協定，而不論用戶端要求的版本為何。 若要這麼做，您可以針對資料服務所使用之 <xref:System.Data.Services.DataServiceBehavior> 的 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 屬性指定 <xref:System.Data.Services.Common.DataServiceProtocolVersion> 值。 如需詳細資訊，請參閱設定[資料服務](configuring-the-data-service-wcf-data-services.md)。
@@ -65,15 +65,15 @@ ms.locfileid: "74283040"
 |OData 通訊協定版本|下列版本引入的支援|
 |-----------------------------------------------------------------------------------|----------------------------|
 |第 1 版|-.NET Framework 3.5 Service Pack 1 （SP1）<br />-Silverlight 第3版|
-|第 2 版|-.NET Framework 4<br />-.NET Framework 3.5 SP1 的更新。 您可以從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=158125)下載及安裝。<br />-Silverlight 第4版|
+|第 2 版|-.NET Framework 4<br />-.NET Framework 3.5 SP1 的更新。 您可以從[Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=158125)下載並安裝更新。<br />-Silverlight 第4版|
 |第 3 版|-您可以從[Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=203885)下載並安裝支援 OData 第3版的發行前版本。|
 
 ### <a name="metadata-versions"></a>中繼資料版本
  根據預設，WCF Data Services 會使用1.1 版的 CSDL 來代表資料模型。 這就是以反映提供者或自訂資料服務提供者為基礎之資料模型的情況。 但是，當資料模型使用 Entity Framework 來定義時，傳回的 CSDL 的版本會與 Entity Framework 所使用的版本相同。 CSDL 的版本取決於[Schema 元素（CSDL）](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#schema-element-csdl)的命名空間。
 
- 傳回之中繼資料的 `DataServices` 項目還包含 `DataServiceVersion` 屬性，該值與回應訊息中 `DataServiceVersion` 標頭的值相同。 用戶端應用程式（例如 Visual Studio 中的 [**加入服務參考**] 對話方塊）會使用這項資訊來產生用戶端資料服務類別，以便與裝載資料服務的 WCF Data Services 版本正確搭配運作。 如需詳細資訊，請參閱[OData：通訊協定版本](https://go.microsoft.com/fwlink/?LinkId=186071)設定。
+ 傳回之中繼資料的 `DataServices` 項目還包含 `DataServiceVersion` 屬性，該值與回應訊息中 `DataServiceVersion` 標頭的值相同。 用戶端應用程式（例如 Visual Studio 中的 [**加入服務參考**] 對話方塊）會使用這項資訊來產生用戶端資料服務類別，以便與裝載資料服務的 WCF Data Services 版本正確搭配運作。 如需詳細資訊，請參閱[OData：總覽](https://www.odata.org/documentation/odata-version-2-0/overview/)一文中的通訊協定版本設定一節。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [資料服務提供者](data-services-providers-wcf-data-services.md)
 - [定義 WCF Data Services](defining-wcf-data-services.md)

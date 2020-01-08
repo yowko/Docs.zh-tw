@@ -2,12 +2,12 @@
 title: 使用擴充方法進行重構
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: 1045a649907f877bddd0ec2d8c0e5dfa2a5d0830
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c66fb90f9949ee3e47105498b211c857d5d63804
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346510"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348023"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>使用擴充方法（Visual Basic）進行重構
 這個範例是以先前的範例為基礎，藉由使用實作為擴充方法的純虛擬函式來重構字串的串連，以抓取[段落的文字（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)。  
@@ -135,7 +135,7 @@ Module Module1
         Return sb.ToString()  
     End Function  
   
-    ' Following function is required because VB does not support short circuit evaluation  
+    ' Following function is required because Visual Basic does not support short circuit evaluation  
     Private Function GetStyleOfParagraph(ByVal styleNode As XElement, _  
                                          ByVal defaultStyle As String) As String  
         If (styleNode Is Nothing) Then  
@@ -243,7 +243,7 @@ StyleName:Code >Hello World<
   
 - [使用純虛擬函式進行重構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [教學課程：操作 WordprocessingML 檔中的內容（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [重構為純虛擬函式（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

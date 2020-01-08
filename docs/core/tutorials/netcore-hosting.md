@@ -4,12 +4,12 @@ description: 了解如何從原生程式碼裝載 .NET Core 執行階段，以�
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: ec63e1b87c4161dcd0dd3ab37aadbef53d4b3219
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: MT
+ms.openlocfilehash: b4d36d1ded3af1c6f1181712080e9fcd18a5a468
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970864"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75339729"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>撰寫自訂 .NET Core 主機以從原生程式碼控制 .NET 執行階段
 
@@ -19,14 +19,14 @@ ms.locfileid: "70970864"
 
 本文概述從機器碼啟動 .NET Core 執行階段及在其中執行受控碼的必要步驟。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
 
-由於主機是原生應用程式，因此本教學課程將說明如何建構 C++ 應用程式以裝載 .NET Core。 您將需要 C++ 開發環境 (例如 [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 所提供的環境)。
+因為主機是原生應用程式，所以本教學C++課程涵蓋如何將應用程式建立為裝載 .net Core。 您將需要 C++ 開發環境 (例如 [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 所提供的環境)。
 
 您也需要一個簡單的 .NET Core 應用程式來測試主機，因此您必須安裝 [.NET Core SDK](https://dotnet.microsoft.com/download) 並[建置一個小型的.NET Core 測試應用程式](with-visual-studio.md) (例如 'Hello World' 應用程式)。 由新的 .NET Core 主控台專案範本建立的 'Hello World' 應用程式就已足夠。
 
 ## <a name="hosting-apis"></a>裝載 API
-有三個不同的 API 可用來裝載 .NET Core。 本文件 (及其相關聯的[範例](https://github.com/dotnet/samples/tree/master/core/hosting) \(英文\)) 會涵蓋所有的選項。
+有三個不同的 API 可用來裝載 .NET Core。 本文（及其相關的[範例](https://github.com/dotnet/samples/tree/master/core/hosting)）涵蓋所有選項。
 
 * 在 .NET Core 3.0 及更新版本中裝載 .NET Core 執行階段的建議方式，是使用 `nethost` 和 `hostfxr` 程式庫的 API。 這些進入點能處理尋找及設定初始化執行階段的複雜程度，並允許啟動受控應用程式及呼叫靜態受控方法。
 * 裝載早於 .NET Core 3.0 之 .NET Core 執行階段的建議方式，是使用 [CoreClrHost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h) \(英文\) API。 此 API 會公開函式，以便輕鬆地啟動和停止執行階段，以及叫用受控碼 (無論是透過啟動受控 exe 或藉由呼叫靜態受控方法)。
@@ -45,8 +45,8 @@ dotnet/samples GitHub 存放庫中提供下列示範教學課程所述步驟的[
 
 `nethost` 程式庫會提供用來找出 `hostfxr` 程式庫的 `get_hostfxr_path` 函式。 `hostfxr` 程式庫會公開用來裝載 .NET Core 執行階段的函式。 函式的完整清單可在 [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) \(英文\) 和[原生裝載設計文件](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md) \(英文\) 中找到。 範例和本教課程會使用下列項目：
 
-* `hostfxr_initialize_for_runtime_config`：使用指定的執行階段設定初始化主機內容並針對 .NET Core 執行階段的初始化進行準備。
-* `hostfxr_get_runtime_delegate`：取得執行階段功能的委派。
+* `hostfxr_initialize_for_runtime_config`：使用指定的執行時間設定，初始化主機內容並準備初始化 .NET Core 執行時間。
+* `hostfxr_get_runtime_delegate`：取得執行時間功能的委派。
 * `hostfxr_close`：關閉主機內容。
 
 `hostfxr` 程式庫是使用 `get_hostfxr_path` 來找到。 系統接著會載入它並擷取其匯出。
@@ -89,7 +89,7 @@ public delegate int ComponentEntryPoint(IntPtr args, int sizeBytes);
 
 .NET Core 執行階段 API 是在 *coreclr.dll* 中 (Windows)、在 *libcoreclr.so* 中 (Linux)，或是在 *libcoreclr.dylib* 中 (macOS)。 裝載 .NET Core 的第一個步驟是載入 CoreCLR 程式庫。 某些主機會探查不同的路徑，或使用輸入參數來尋找程式庫，而其他主機知道要從某個路徑 (例如，主機旁邊或從全機器位置) 進行載入。
 
-找到後，便會使用 `LoadLibraryEx` (在 Windows 上) 或 `dlopen` (在 Linux/Mac 上) 載入程式庫。
+找到後，會使用 `LoadLibraryEx` （在 Windows 上）或 `dlopen` （在 Linux/macOS 上）載入程式庫。
 
 [!code-cpp[CoreClrHost#1](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#1)]
 
@@ -97,13 +97,13 @@ public delegate int ComponentEntryPoint(IntPtr args, int sizeBytes);
 
 CoreClrHost 有幾個可用於裝載 .NET Core 的重要方法：
 
-* `coreclr_initialize`：啟動 .NET Core 執行階段，並設定預設的 (且唯一的) AppDomain。
-* `coreclr_execute_assembly`：執行受控組件。
-* `coreclr_create_delegate`：建立受控方法的函式指標。
-* `coreclr_shutdown`：關閉 .NET Core 執行階段。
-* `coreclr_shutdown_2`：如同 `coreclr_shutdown`，但還會擷取受控碼的結束代碼。
+* `coreclr_initialize`：啟動 .NET Core 執行時間，並設定預設的（和唯一的） AppDomain。
+* `coreclr_execute_assembly`：執行 managed 元件。
+* `coreclr_create_delegate`：建立 managed 方法的函式指標。
+* `coreclr_shutdown`：關閉 .NET Core 執行時間。
+* `coreclr_shutdown_2`： Like `coreclr_shutdown`，但也會抓取 managed 程式碼的結束代碼。
 
-載入 CoreCLR 程式庫之後，下一個步驟是使用 `GetProcAddress` (在 Windows 上) 或 `dlsym` (在 Linux/Mac 上) 取得這些函式的參考。
+載入 CoreCLR 程式庫之後，下一個步驟是使用 `GetProcAddress` （在 Windows 上）或 `dlsym` （在 Linux/macOS 上）來取得這些函式的參考。
 
 [!code-cpp[CoreClrHost#2](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#2)]
 
@@ -117,7 +117,7 @@ CoreClrHost 有幾個可用於裝載 .NET Core 的重要方法：
 * `APP_PATHS`：這是在信賴平台組件 (TPA) 清單中找不到組件時，要在其中探查組件的路徑清單。 因為主機可以進一步控制使用 TPA 清單載入哪些組件，所以主機最好確定它們預期載入哪些組件，並明確列出這些組件。 不過，如果需要在執行階段進行探查，此屬性可用於這種情況。
 * `APP_NI_PATHS`：此清單與 APP_PATHS 類似，不同之處在於其用途是作為探查原生映像的路徑。
 * `NATIVE_DLL_SEARCH_DIRECTORIES`：此屬性是想要透過 p/invoke 呼叫原生程式庫時，載入器應探查的路徑清單。
-* `PLATFORM_RESOURCE_ROOTS`：此清單包含要在其中探查資源附屬組件的路徑 (位於文化特性專屬子目錄中)。
+* `PLATFORM_RESOURCE_ROOTS` 此清單包含可在資源附屬元件（特定文化特性的子目錄）中探查的路徑。
 
 在此範例主機中，只需列出目前目錄中的所有程式庫，即可建構 TPA 清單：
 
@@ -171,21 +171,21 @@ CoreCLR 不支援重新初始化或卸載。 請勿再次呼叫 `coreclr_initial
 `ICLRRuntimeHost4` .NET Core 裝載介面定義於 [MSCOREE.IDL](https://github.com/dotnet/coreclr/blob/master/src/inc/MSCOREE.IDL)。 您的主機必須參考此檔案的標頭版本 (mscoree.h)，該檔案會在建置 [.NET Core 執行階段](https://github.com/dotnet/coreclr/)時透過 MIDL 產生。 如果不想建置 .NET Core 執行階段，mscoree.h 也會當作 dotnet/coreclr 存放庫中[預先建立的標頭](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc)使用。 您可以在 GitHub 存放庫中找到[建置 .NET Core 執行階段的指示](https://github.com/dotnet/coreclr#building-the-repository)。
 
 ### <a name="step-1---identify-the-managed-entry-point"></a>步驟 1 - 識別 Managed 進入點
-參考必要的標頭 (例如 [mscoree.h](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc/mscoree.h) 和 stdio.h) 之後，.NET Core 主機必須先找出所要使用的 Managed 進入點。 在我們的範例主機中，只要將第一個命令列引數傳遞至主機作為 Managed 二進位檔 (將執行其 `main` 方法) 的路徑，即可完成此作業。
+參考必要的標頭 (例如 [mscoree.h](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc/mscoree.h) 和 stdio.h) 之後，.NET Core 主機必須先找出所要使用的 Managed 進入點。 在我們的範例主機中，只要將第一個命令列引數帶到主機，做為將會執行 `main` 方法之受控二進位檔的路徑即可。
 
 [!code-cpp[NetCoreHost#1](~/samples/core/hosting/HostWithMscoree/host.cpp#1)]
 
 ### <a name="step-2---find-and-load-coreclr"></a>步驟 2 - 找到並載入 CoreCLR
 .NET Core 執行階段 API 位於 *CoreCLR.dll* (Windows 上)。 若要取得我們的裝載介面 (`ICLRRuntimeHost4`)，您必須找到並載入 *CoreCLR.dll*。 主機會定義尋找 *CoreCLR.dll* 的方式慣例。 某些主機預期此檔案會出現在已知的全機器位置 (例如 *%programfiles%\dotnet\shared\Microsoft.NETCore.App\2.1.6*)。 其他主機則預期會從主機本身或所要裝載之應用程式旁的位置載入 *CoreCLR.dll*。 不過，其他主機還是可以參考環境變數以尋找程式庫。
 
-在 Linux 或 Mac 上，Core 執行階段程式庫分別是 *libcoreclr.so* 或 *libcoreclr.dylib*。
+在 Linux 或 macOS 上，核心執行時間程式庫會分別是*libcoreclr.so*或*libcoreclr.dylib。*
 
-我們的範例主機會在一些常見的位置中探查 *CoreCLR.dll*。 找到後，必須透過 `LoadLibrary` (若是 Linux/Mac 則為 `dlopen`) 載入。
+我們的範例主機會在一些常見的位置中探查 *CoreCLR.dll*。 找到之後，必須透過 `LoadLibrary` （或 Linux/macOS 上的 `dlopen`）來載入它。
 
 [!code-cpp[NetCoreHost#2](~/samples/core/hosting/HostWithMscoree/host.cpp#2)]
 
 ### <a name="step-3---get-an-iclrruntimehost4-instance"></a>步驟 3 - 取得 ICLRRuntimeHost4 執行個體
-若要擷取 `ICLRRuntimeHost4` 裝載介面，請在 `GetCLRRuntimeHost` 上呼叫 `GetProcAddress` (若是 Linux/Mac 則為 `dlsym`)，然後叫用該函式。
+`ICLRRuntimeHost4` 的裝載介面是藉由呼叫 `GetCLRRuntimeHost`上的 `GetProcAddress` （或 Linux/macOS 上的 `dlsym`）來抓取，然後叫用該函式。
 
 [!code-cpp[NetCoreHost#3](~/samples/core/hosting/HostWithMscoree/host.cpp#3)]
 
@@ -211,11 +211,11 @@ AppDomain 旗標會指定與安全性和 Interop 相關的 AppDomain 行為。 �
 
 常見的 AppDomain 屬性包括：
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`：這是 AppDomain 應設定載入優先權並授與完全信任 (即使是部分信任的定義域) 的組件路徑清單 (在 Windows 上會以 `;` 分隔，而在 Linux/Mac 上則以 `:` 分隔)。 此清單可用來包含 'Framework' 組件及其他信任的模組，類似於 .NET Framework 案例中的 GAC。 某些主機會將任何程式庫放在此清單中的 *coreclr.dll* 旁，其他主機則會有針對其用途列出信任組件的硬式編碼資訊清單。
+* `TRUSTED_PLATFORM_ASSEMBLIES` 此清單列出元件路徑（以 Windows 上的 `;` 分隔，以及 Linux/macOS 上的 `:`），其 AppDomain 應設定載入的優先順序，並授與完全信任（即使在部分信任的網域中）。 此清單可用來包含 'Framework' 組件及其他信任的模組，類似於 .NET Framework 案例中的 GAC。 某些主機會將任何程式庫放在此清單中的 *coreclr.dll* 旁，其他主機則會有針對其用途列出信任組件的硬式編碼資訊清單。
 * `APP_PATHS`：這是在信賴平台組件 (TPA) 清單中找不到組件時，要在其中探查組件的路徑清單。 因為主機可以進一步控制使用 TPA 清單載入哪些組件，所以主機最好確定它們預期載入哪些組件，並明確列出這些組件。 不過，如果需要在執行階段進行探查，此屬性可用於這種情況。
 * `APP_NI_PATHS`：此清單與 APP_PATHS 非常類似，不同之處在於其用途是作為探查原生影像的路徑。
 * `NATIVE_DLL_SEARCH_DIRECTORIES`：此屬性是想要透過 p/invoke 呼叫原生 DLL 時，載入器應探查的路徑清單。
-* `PLATFORM_RESOURCE_ROOTS`：此清單包含要在其中探查資源附屬組件的路徑 (位於文化特性專屬子目錄中)。
+* `PLATFORM_RESOURCE_ROOTS` 此清單包含可在資源附屬元件（特定文化特性的子目錄）中探查的路徑。
 
 在我們的[簡單範例主機](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithMscoree)中，這些屬性會設定如下：
 
@@ -255,6 +255,6 @@ CoreCLR 不支援卸載。 請勿卸載 CoreCLR 程式庫。
 ## <a name="conclusion"></a>結論
 建置主機之後，您可以從命令列執行主機，並傳遞主機預期的任何引數 (例如要針對 mscoree 範例主機執行的受控應用程式)，藉以進行測試。 指定主機要執行的 .NET Core 應用程式時，請務必使用 `dotnet build` 所產生的 .dll。 `dotnet publish` 為獨立式應用程式所產生的可執行檔 (.exe 檔案)，其實就是預設 .NET Core 主機 (因此應用程式可在主要情況下從命令列直接啟動)；使用者程式碼會編譯成同名的 DLL。
 
-如果一開始未正常運作，請再確認一次主機預期的位置中有 *coreclr.dll*、所有必要的 Framework 程式庫都在 TPA 清單中，而且 CoreCLR 的位元 (32 或 64 位元) 符合主機的建立方式。
+如果專案最初無法運作，請再次檢查主機所預期的位置中是否有*coreclr* ，所有必要的架構程式庫都在 TPA 清單中，而且該 coreclr 的位（32位或64位）符合主機的建立方式。
 
 裝載 .NET Core 執行階段是進階案例，許多開發人員並不需要，但對於需要從原生處理序啟動 Managed 程式碼的人員，或需要更能掌控 .NET Core 執行階段行為的人員而言，這項作業可能很實用。

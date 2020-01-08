@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: bb28e2adba896ae85b189858283376fbe3250dce
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 86f557d0575b440455fd6363f0d0d6783a9e7acc
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039062"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345322"
 ---
 # <a name="comparison-operators-c-reference"></a>比較運算子 (C#參考)
 
@@ -33,7 +33,7 @@ ms.locfileid: "73039062"
 > [!NOTE]
 > 針對 `==`、`<`、`>`、`<=` 和 `>=` 運算子，如果任何運算元不是數字 (<xref:System.Double.NaN?displayProperty=nameWithType> 或 <xref:System.Single.NaN?displayProperty=nameWithType>)，則作業的結果是 `false`。 這代表 `NaN` 的值皆不會大於、小於或等於任何其他 `double` (或 `float`) 的值，包括 `NaN`。 如需詳細資訊和範例，請參閱 <xref:System.Double.NaN?displayProperty=nameWithType> 或 <xref:System.Single.NaN?displayProperty=nameWithType> 參考文章。
 
-列舉類型也支援比較運算子。 相同[列舉](../keywords/enum.md)類型的運算元會比較基礎整數型別的對應值。
+列舉類型也支援比較運算子。 相同[列舉](../builtin-types/enum.md)類型的運算元會比較基礎整數型別的對應值。
 
 [`==` 和 `!=` 運算子](equality-operators.md) 會檢查其運算元是否相等。
 
@@ -63,7 +63,7 @@ ms.locfileid: "73039062"
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-使用者定義類型可以[多載](operator-overloading.md) `<`、`>`、`<=` 及 `>=` 運算子。
+使用者定義類型可以[多載](operator-overloading.md)`<`、`>`、`<=` 及 `>=` 運算子。
 
 如果類型多載 `<` 或 `>` 運算子之一，則也必須多載 `<` 和 `>`。 如果類型多載 `<=` 或 `>=` 運算子之一，則也必須多載 `<=` 和 `>=`。
 

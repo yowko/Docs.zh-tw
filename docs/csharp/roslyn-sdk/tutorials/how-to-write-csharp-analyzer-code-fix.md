@@ -3,12 +3,12 @@ title: 教學課程：撰寫您的第一個分析器和程式碼修正
 description: 本教學課程提供 使用 .NET Compiler SDK (Roslyn API) 來建置分析器和程式碼修正的逐步指示。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 7bd0fda9fb717a48c09aafde47f9b7f4f360c357
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 99401e74588088d56b3fbd916e050f5d468722a1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837047"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346944"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教學課程：撰寫您的第一個分析器和程式碼修正
 
@@ -520,7 +520,7 @@ int k = i + j;
 
 完成這些變更後，將只有前兩個變數上會有紅色波浪線。 將 `const` 新增至 `i` 和 `j` 後，將會出現新的 `k` 警告，因為它現在已可為 `const`。
 
-恭喜您！ 您已建立第一個 .NET Compiler Platform 延伸模組，可執行即時程式碼分析以偵測問題，並提供快速修正加以更正。 在本文中，您已認識 .NET Compiler Platform SDK (Roslyn API) 所包含的多種程式碼 API。 您可以根據範例 GitHub 存放庫中[已完成的範例](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst)檢查您的工作。 或者，您可以下載[已完成專案的 ZIP 檔案](https://github.com/dotnet/samples/blob/master/csharp/roslyn-sdk/Tutorials/MakeConst.zip)
+恭喜您！ 您已建立第一個 .NET Compiler Platform 延伸模組，可執行即時程式碼分析以偵測問題，並提供快速修正加以更正。 在本文中，您已認識 .NET Compiler Platform SDK (Roslyn API) 所包含的多種程式碼 API。 您可以根據範例 GitHub 存放庫中[已完成的範例](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst)檢查您的工作。
 
 ## <a name="other-resources"></a>其他資源
 

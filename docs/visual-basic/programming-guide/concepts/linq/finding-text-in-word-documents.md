@@ -2,12 +2,12 @@
 title: 尋找 Word 文件中的文字
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-ms.openlocfilehash: a9af050abe13bfd2f0af0a31c102f8a6ab026128
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 83941de815968fce471b7366ed7c5114dae0d63c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353478"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347530"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>尋找 Word 檔中的文字（Visual Basic）
 
@@ -69,7 +69,7 @@ Module Module1
         Return (e.<w:r>.<w:t>).StringConcatenate(Function(element) CStr(element))
     End Function
 
-    ' Following function is required because VB does not support short circuit evaluation
+    ' Following function is required because Visual Basic does not support short circuit evaluation
     Private Function GetStyleOfParagraph(ByVal styleNode As XElement, ByVal defaultStyle As String) As String
         If (styleNode Is Nothing) Then
             Return defaultStyle
@@ -211,7 +211,7 @@ Module Module1
         Return (e.<w:r>.<w:t>).StringConcatenate(Function(element) CStr(element))
     End Function
 
-    ' Following function is required because VB does not support short circuit evaluation
+    ' Following function is required because Visual Basic does not support short circuit evaluation
     Private Function GetStyleOfParagraph(ByVal styleNode As XElement, ByVal defaultStyle As String) As String
         If (styleNode Is Nothing) Then
             Return defaultStyle
@@ -310,7 +310,7 @@ StyleName:Code ><
 
 - [Office Open XML WordprocessingML 檔的詳細資料（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [教學課程：操作 WordprocessingML 檔中的內容（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [使用純虛擬函式進行重構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)

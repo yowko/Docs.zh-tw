@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 2cba5e704787ae6368b2543c985babf2fde3b4dd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 853faf481e546f2980d799d5daf50a14c608c052
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422747"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345464"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>格式化數值結果表 (C# 參考)
 
@@ -21,12 +21,12 @@ ms.locfileid: "73422747"
 
 |格式規範|描述|範例|結果|  
 |----------------------|-----------------|--------------|------------|  
-|C 或 c|貨幣|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
+|C 或 c|貨幣|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|\\$2.50<br /><br /> （\\$2.50）|  
 |D 或 d|Decimal|`string s = $"{25:D5}";`|00025|  
 |E 或 e|指數|`string s = $"{250000:E2}";`|2.50E+005|  
 |F 或 f|固定點|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  
 |G 或 g|一般|`string s = $"{2.5:G}";`|2.5|  
-|N 或 n|數值|`string s = $"{2500000:N}";`|2,500,000.00|  
+|N 或 n|數字|`string s = $"{2500000:N}";`|2,500,000.00|  
 |P 或 p|百分比|`string s = $"{0.25:P}";`|25.00%|  
 |R 或 r|來回|`string s = $"{2.5:R}";`|2.5|  
 |X 或 x|十六進位|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  

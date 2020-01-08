@@ -1,5 +1,5 @@
 ---
-title: 風險降低︰使用 DataContractJsonSerializer 序列化控制字元
+title: 使用 DataContractJsonSerializer 序列化控制字元
 ms.date: 04/07/2017
 helpviewer_keywords:
 - .NET Framework 4.7 retargeting changes
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - DataContractJsonSerializer changes
 - serialization changes
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
-ms.openlocfilehash: faa7a32766a3ea1ef9cddcdb8af8fd0dd5a6f287
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 209f7827e61ef72de1d64fad46dc9f241fa6edef
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457822"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346577"
 ---
-# <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>風險降低︰使用 DataContractJsonSerializer 序列化控制字元
+# <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>緩和：使用 DataContractJsonSerializer 將控制字元序列化
 
 從 .NET Framework 4.7 開始，使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 序列化控制字元的方式已變更為符合 ECMAScript V6 和 V8。 
  

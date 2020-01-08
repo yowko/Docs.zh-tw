@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: a685be7cc3b346b271413e2c29faae5a839313f4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a977b17d4b2c797bbe38d289a57f3d9d31fa64fa
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74340237"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345959"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>如何：呼叫運算子程序 (Visual Basic)
 您可以在運算式中使用運算子符號來呼叫運算子程式。 在轉換運算子的情況下，您可以呼叫[CType](../../../../visual-basic/language-reference/functions/ctype-function.md)函式，將值從一種資料類型轉換成另一種。  
@@ -50,7 +50,7 @@ ms.locfileid: "74340237"
   
  如需呼叫交談運算子程式的範例，請參閱[如何：使用定義運算子的類別](./how-to-use-a-class-that-defines-operators.md)。  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
+## <a name="compile-the-code"></a>編譯程式碼  
  請確定您所使用的類別或結構會定義您想要使用的運算子。  
   
 ## <a name="see-also"></a>請參閱

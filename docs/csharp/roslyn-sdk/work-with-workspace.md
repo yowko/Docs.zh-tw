@@ -3,12 +3,12 @@ title: 使用 .NET Compiler Platform SDK 工作區模型
 description: 此概觀可讓您了解用來查詢與管理程式碼之工作區和專案的類型。
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 7d450b31cbf2c83c79552d1ace3a1ae692bfdd88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a2e69129a869707eaec3516310a72f1fc918ca26
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354799"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346915"
 ---
 # <a name="work-with-a-workspace"></a>使用工作區
 
@@ -40,4 +40,4 @@ IDE 這類主機環境為您提供對應至開啟方案的工作區。 只要載
 
 ## <a name="summary"></a>總結
 
-Roslyn 會公開一組編譯器 API 和工作區 API，以提供您原始程式碼的豐富資訊，並且使用 C# 和 Visual Basic 語言也完全不失真。  .NET Compiler Platform SDK 可大幅降低建立以程式碼為中心之工具和應用程式的入門障礙。 它在多個領域中創造了許多創新的機會，例如中繼程式設計、程式碼產生和轉換、C# 和 VB 語言的交互使用，以及在網域特定語言中內嵌 C# 和 VB。  
+Roslyn 會公開一組編譯器 API 和工作區 API，以提供您原始程式碼的豐富資訊，並且使用 C# 和 Visual Basic 語言也完全不失真。  .NET Compiler Platform SDK 可大幅降低建立以程式碼為中心之工具和應用程式的入門障礙。 它會在諸如中繼程式設計、程式碼產生和轉換、互動式使用C#和 Visual Basic 語言，以及在網域特定語言中內嵌C#和 Visual Basic 等方面，創造許多創新的機會。  

@@ -1,20 +1,20 @@
 ---
-title: 作法：依任何字組或欄位排序或篩選文字資料 (LINQ) (C#)
+title: 如何依任何字或欄位排序或篩選文字資料（LINQ）（C#）
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: e6c0cbf523095122be4227bebee8d7a234eba2d0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: e869d57c413d175c092cdc15a6fe54cab94e04b8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592388"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347354"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>作法：依任何字組或欄位排序或篩選文字資料 (LINQ) (C#)
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>如何依任何字或欄位排序或篩選文字資料（LINQ）（C#）
 下列範例示範如何依行中的任一欄位，來排序多行結構化文字 (例如逗號分隔值)。 此欄位可能會在執行階段以動態方式指定。 假設 scores.csv 中的欄位各代表學生的學號和四個測驗分數。  
   
 ### <a name="to-create-a-file-that-contains-data"></a>建立內含資料的檔案  
   
-1. 從[如何：聯結不同檔案中的內容 (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) 主題複製 scores.csv 資料，並將其儲存至解決方案資料夾。  
+1. 複製[如何從不同的檔案聯結內容（LINQ）（C#）](./how-to-join-content-from-dissimilar-files-linq.md)主題中的分數 .csv 資料，並將它儲存至您的方案資料夾。  
   
 ## <a name="example"></a>範例  
   
@@ -78,6 +78,6 @@ public class SortLines
 
 建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ 和字串 (C#)](./linq-and-strings.md)

@@ -3,15 +3,15 @@ title: 教學課程：使用傳輸學習的自動化視覺效果檢查
 description: 本教學課程說明如何使用「傳輸學習」來定型 ML.NET 中的 TensorFlow 深度學習模型，其方式是使用影像偵測 API，將具體介面的影像分類為破裂或未破解。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 11/14/2019
+ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 443f9e9a83ebf31bb6c62323015af4a554323b67
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 4781e39a0c8827adb6ab0155d5215645242208a5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74205061"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348169"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>教學課程：搭配 ML.NET 影像分類 API 使用傳輸學習的自動化視覺效果檢查
 
@@ -26,7 +26,7 @@ ms.locfileid: "74205061"
 > - 使用傳輸學習來定型自訂 TensorFlow 影像分類模型
 > - 使用自訂模型分類影像
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
 
 - 已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 15.6 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
 

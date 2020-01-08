@@ -2,19 +2,19 @@
 title: HOW TO：若要以受限的保留項目取代 WCF URL URL 保留項目
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 900b258a1119b069e5ef0a6ff66078281bb06f1b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 3d14d76334b15bdb490184a48da11ba48b84deea
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837385"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544644"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>HOW TO：若要以受限的保留項目取代 WCF URL URL 保留項目
 URL 保留項目可讓您限制誰可以接收來自某個 URL 或一組 URL 的訊息。 保留項目是由一個 URL 範本、一個存取控制清單 (ACL)，以及一組旗標所組成。 URL 範本會定義保留項目所影響的 URL。 如需如何處理 URL 範本的詳細資訊，請參閱[路由傳入要求](https://go.microsoft.com/fwlink/?LinkId=136764)。 ACL 會控制允許從指定之 URL 接收訊息的使用者或使用者群組。 旗標會指出保留項目是要提供使用者或群組直接在 URL 上接聽的權限，還是要委派接聽其他特定處理序的權限。  
   
  作為預設作業系統設定的一部分，Windows Communication Foundation （WCF）會為埠80建立可全域存取的保留專案，讓所有使用者執行使用雙重 HTTP 系結進行雙工通訊的應用程式。 此保留項目的 ACL 是攻所有人使用，因此，系統管理員無法明確地允許或不允許在一個 URL 或一組 URL 上接聽的權限。 本主題說明如何刪除此保留項目，以及如何使用受限的 ACL 重新建立保留項目。  
   
- 在 Windows Vista 或 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上，您可以輸入 `netsh http show urlacl`，從提升許可權的命令提示字元中，查看所有的 HTTP URL 保留專案。  下列範例會顯示 WCF URL 保留專案的外觀。  
+在 Windows Vista 或 Windows Server 2008 上，您可以藉由輸入 `netsh http show urlacl`，從提升許可權的命令提示字元中，查看所有的 HTTP URL 保留專案。 下列範例會顯示 WCF URL 保留專案的外觀：
 
 ```
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  

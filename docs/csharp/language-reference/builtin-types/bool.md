@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 1e79de6d9e5cf973ce394bfb06871777c562c8ac
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 577ccd3bb9a20964dcdfc79ef2028854e4a55dc6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74553034"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342703"
 ---
 # <a name="bool-c-reference"></a>bool （C#參考）
 
@@ -29,15 +29,15 @@ ms.locfileid: "74553034"
 
 [!code-csharp-interactive[bool literals](~/samples/csharp/language-reference/builtin-types/BoolType.cs#Literals)]
 
+## <a name="three-valued-boolean-logic"></a>三值布林邏輯
+
+如果您需要支援三值邏輯（例如，當您使用支援三值布林值類型的資料庫時），請使用可為 null 的 `bool?` 類型。 針對 `bool?` 運算元，預先定義的 `&` 和 `|` 運算子支援三值邏輯。 如需詳細資訊，請參閱[布林邏輯運算子](../operators/boolean-logical-operators.md)一文的[可為 Null 的布林邏輯運算子](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)一節。
+
+如需可為 null 的實數值型別的詳細資訊，請參閱[nullable 實數值型別](nullable-value-types.md)。
+
 ## <a name="conversions"></a>轉換
 
 C#只提供兩個牽涉到 `bool` 類型的轉換。 這些是對應的可為 null `bool?` 類型的隱含轉換，以及來自 `bool?` 類型的明確轉換。 不過，.NET 提供了其他方法，可讓您用來轉換成 `bool` 類型或從中轉換。 如需詳細資訊，請參閱 <xref:System.Boolean?displayProperty=nameWithType> API 參考頁面的[轉換成和引數的布林值](/dotnet/api/system.boolean#converting-to-and-from-boolean-values)一節。
-
-## <a name="three-valued-boolean-logic"></a>三值布林邏輯
-
-如果您需要支援三值邏輯（例如，當您使用支援三值布林值類型的資料庫時），請使用可為 null 的 `bool?` 類型。 針對 `bool?` 運算元，預先定義的 `&` 和 `|` 運算子支援三值邏輯。 如需詳細資訊，請參閱[布林值邏輯運算子](../operators/boolean-logical-operators.md)一文的[可為 Null 的布林值邏輯運算子](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)一節。
-
-如需可為 null 的實數值型別的詳細資訊，請參閱[nullable 實數值型別](nullable-value-types.md)。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

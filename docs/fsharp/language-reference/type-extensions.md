@@ -2,12 +2,12 @@
 title: 類型擴充
 description: 瞭解類型F#擴充功能如何讓您將新成員加入至先前定義的物件類型。
 ms.date: 11/04/2019
-ms.openlocfilehash: d26d7b2b507f04e9cb68ade4c0409403643f74ba
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3e2c6971156bd562ed5d5428e6b7ffdc520c4cf5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978252"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341576"
 ---
 # <a name="type-extensions"></a>類型延伸模組
 
@@ -78,7 +78,7 @@ type Variant with
 
 選擇性的類型延伸模組是一種延伸模組，它會出現在要擴充之類型的原始模組、命名空間或元件外部。
 
-選擇性類型延伸模組適用于擴充您尚未自行定義的類型。 例如:
+選擇性類型延伸模組適用于擴充您尚未自行定義的類型。 例如：
 
 ```fsharp
 module Extensions
@@ -98,13 +98,13 @@ type IEnumerable<'T> with
 
 選擇性的延伸模組成員會編譯成靜態成員，其中會以隱含方式將物件實例當做第一個參數傳遞。 不過，它們的行為就像是實例成員或靜態成員（根據它們的宣告方式而定）。
 
-選擇性的擴充成員也不會對C#或 VB 取用者顯示。 它們只能在其他F#程式碼中使用。
+選擇性的擴充成員也看不到C#或 Visual Basic 的取用者。 它們只能在其他F#程式碼中使用。
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>內建和選擇性類型延伸的一般限制
 
 在型別變數受條件約束的泛型型別上，可以宣告型別延伸。 其需求是延伸模組宣告的條件約束符合宣告類型的條件約束。
 
-不過，即使在宣告的型別與型別延伸之間有相符的條件約束，條件約束也可能會受到擴充成員的主體的推斷，而這項要求在型別參數上會有不同的需求，而不是宣告的型別。 例如:
+不過，即使在宣告的型別與型別延伸之間有相符的條件約束，條件約束也可能會受到擴充成員的主體的推斷，而這項要求在型別參數上會有不同的需求，而不是宣告的型別。 例如：
 
 ```fsharp
 open System.Collections.Generic
@@ -128,7 +128,7 @@ type IEnumerable<'T> with
 
 最後，擴充方法（有時稱為「C#樣式延伸成員」）可以在中F#宣告為類別的靜態成員方法。
 
-當您想要在將限制型別變數的泛型型別上定義延伸模組時，擴充方法很有用。 例如:
+當您想要在將限制型別變數的泛型型別上定義延伸模組時，擴充方法很有用。 例如：
 
 ```fsharp
 namespace Extensions
@@ -149,7 +149,7 @@ type IEnumerableExtensions() =
 
 - 可存取的任何類型都可以擴充。
 - 內建和選擇性類型延伸模組可以定義_任何_成員類型，而不只是方法。 例如，也可以提供延伸模組屬性。
-- [語法](type-extensions.md#syntax)中的 `self-identifier` token 代表所叫用之型別的實例，就像一般成員一樣。
+- [語法](type-extensions.md#syntax)`self-identifier`中的標記代表所叫用之類型的實例, 就像一般成員一樣。
 - 擴充成員可以是靜態或實例成員。
 - 類型擴充功能上的類型變數必須符合宣告類型的條件約束。
 

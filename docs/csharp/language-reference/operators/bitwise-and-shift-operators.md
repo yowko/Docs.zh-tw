@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 27f7cf46bd3e344503f74527df34506d38ad4545
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428443"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345334"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>位元與移位運算子 (C# 參考)
 
@@ -44,7 +44,7 @@ ms.locfileid: "74428443"
 - 二元 [`<<` (左移)](#left-shift-operator-) 及 [`>>` (右移)](#right-shift-operator-) 移位運算子
 - 二元 [`&` (邏輯 AND)](#logical-and-operator-)、[`|` (邏輯 OR)](#logical-or-operator-)，以及 [`^` (邏輯互斥 OR)](#logical-exclusive-or-operator-) 運算子
 
-這些運算子已針對 `int`、`uint`、`long` 和 `ulong` 型別進行定義。 當兩個運算元都是其他整數型別 (`sbyte`、`byte`、`short`、`ushort` 或 `char`) 時，它們的值會轉換成 `int` 型別，而這也是作業的結果型別。 當運算元屬於不同的整數型別時，它們的值都會轉換成範圍最接近的整數型別。 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/expressions.md#numeric-promotions)的[數值升階](~/_csharplang/spec/introduction.md)一節。
+這些運算子已針對 `int`、`uint`、`long` 和 `ulong` 型別進行定義。 當兩個運算元都是其他整數型別 (`sbyte`、`byte`、`short`、`ushort` 或 `char`) 時，它們的值會轉換成 `int` 型別，而這也是作業的結果型別。 當運算元屬於不同的整數型別時，它們的值都會轉換成範圍最接近的整數型別。 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)一節。
 
 `&`、`|`和 `^` 運算子也會針對 `bool` 類型的運算元定義。 如需詳細資訊，請參閱[布林邏輯運算子](boolean-logical-operators.md)。
 
@@ -136,7 +136,7 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
 
-由於[數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)的緣故，`op` 作業結果可能無法隱含轉換成 `T` 的 `x` 型別。 在此情況下，如果 `op` 是預先定義的運算子，且作業結果可以明確轉換成 `T` 的 `x` 型別，則形式 `x op= y` 的複合指派運算式相等於 `x = (T)(x op y)`，唯一的不同在於 `x` 只會評估一次。 下列範例示範了該行為：
+由於[數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)的緣故，`op` 作業的結果可能不會隱含轉換成 `x` 的 `T` 類型。 在此情況下，如果 `op` 是預先定義的運算子，且作業結果可以明確轉換成 `x` 的 `T` 型別，則形式 `x op= y` 的複合指派運算式相等於 `x = (T)(x op y)`，唯一的不同在於 `x` 只會評估一次。 下列範例示範了該行為：
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
 
@@ -172,13 +172,13 @@ x = x op y
 
 ## <a name="enumeration-logical-operators"></a>列舉邏輯運算子
 
-任何[列舉](../keywords/enum.md)類型也支援 `~`、`&`、`|`和 `^` 運算子。 對於相同列舉類型的運算元，會在基礎整數類型的對應值上執行邏輯運算。 例如，針對任何基礎型別為 `x` 列舉型別 `y` 的 `T` 和 `U`，`x & y` 運算式會產生與 `(T)((U)x & (U)y)` 運算式相同結果。
+任何[列舉](../builtin-types/enum.md)類型也支援 `~`、`&`、`|`和 `^` 運算子。 對於相同列舉類型的運算元，會在基礎整數類型的對應值上執行邏輯運算。 例如，針對任何基礎型別為 `U` 列舉型別 `T` 的 `x` 和 `y`，`x & y` 運算式會產生與 `(T)((U)x & (U)y)` 運算式相同結果。
 
-您通常會搭配使用 [Flags](xref:System.FlagsAttribute) 屬性定義的列舉型別使用位元邏輯運算子。 如需詳細資訊，請參閱[列舉型別](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags)文章中的[作為位元旗標的列舉型別](../../programming-guide/enumeration-types.md)一節。
+您通常會搭配使用 [Flags](xref:System.FlagsAttribute) 屬性定義的列舉型別使用位元邏輯運算子。 如需詳細資訊，請參閱[列舉型別](../builtin-types/enum.md)文章中的[作為位元旗標的列舉型別](../builtin-types/enum.md#enumeration-types-as-bit-flags)一節。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-使用者定義型別可以[多載](operator-overloading.md) `~`、`<<`、`>>`、`&`、`|` 和 `^` 運算子。 當二元運算子多載時，對應的複合指派運算子也會隱含地多載。 使用者定義型別無法明確地多載複合指派運算子。
+使用者定義型別可以[多載](operator-overloading.md)`~`、`<<`、`>>`、`&`、`|` 和 `^` 運算子。 當二元運算子多載時，對應的複合指派運算子也會隱含地多載。 使用者定義型別無法明確地多載複合指派運算子。
 
 若使用者定義型別 `T` 多載了 `<<` 或 `>>` 運算子，則左邊運算元的型別必須是 `T`，右邊運算元的型別必須是 `int`。
 
@@ -192,7 +192,7 @@ x = x op y
 - [複合指派](~/_csharplang/spec/expressions.md#compound-assignment)
 - [數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)

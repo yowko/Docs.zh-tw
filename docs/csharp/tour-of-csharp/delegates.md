@@ -3,12 +3,12 @@ title: C# 委派 - C# 語言教學課程
 description: 了解使用 C# 委派進行的晚期繫結
 ms.date: 08/10/2016
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
-ms.openlocfilehash: 35a1e212b50e77eb43271a657c8abb21eb6cfb4a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 317d3ee6fb1350824fa9b3b4d0e3e851780ce4d4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634626"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346873"
 ---
 # <a name="delegates"></a>委派
 
@@ -29,5 +29,5 @@ ms.locfileid: "65634626"
 委派有一個有趣且實用的屬性，就是它並不知道或並不在乎所參考方法的類別；唯一重要的是所參考的方法具有與委派相同的參數和傳回型別。
 
 >[!div class="step-by-step"]
->[上一頁](enums.md)
+>[上一頁](interfaces.md)
 >[下一頁](attributes.md)

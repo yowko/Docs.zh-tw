@@ -3,21 +3,21 @@ title: .NET Compiler Platform SDK (Roslyn API)
 description: 了解如何使用.NET 編譯器平台 SDK (亦稱為 Roslyn API) 來了解 .NET 程式碼、找出錯誤，並修正那些錯誤。
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: ea733d4c5c54c18e510a028f3a724f89490db9dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3a202d977237ce716e3f8c0cf906894efd02196d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706542"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346947"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET 編譯器平台 SDK
 
 當編譯器驗證應用程式程式碼的語法和語意時，會同時建置該程式碼的詳細模型。 其使用此模型從原始程式碼建置可執行檔輸出。 .NET 編譯器平台 SDK 提供對此模型的存取權。 目前，我們越來越依賴整合式開發環境 (IDE) 功能來提高我們的生產力，例如 IntelliSense、重構、智慧型重新命名、「尋找所有參考」和「移至定義」。 我們依賴程式碼分析工具來改善程式碼品質，並依賴程式碼產生器來協助建構應用程式。 隨著這些工具變得越來越聰明，當它們處理應用程式程式碼時，需要存取越來越多只有編譯器會建立的模型。 這就是 Roslyn API 的核心任務：開啟黑箱並允許工具和使用者共用編譯器所擁有關於程式碼的豐富資訊。
-使用 Roslyn 時，編譯器會成為平台，而不是不透明的的輸入原始程式碼、輸出物件程式碼程序：您可以為您的工具與應用程式中之程式碼相關工作使用的 API。
+相對於不透明的原始程式碼輸入和目的碼輸出轉譯器，透過 Roslyn，編譯器變成了平台：也就是您可以針對您的工具和應用程式中的程式碼相關工作所使用的 API。
 
 ## <a name="net-compiler-platform-sdk-concepts"></a>.NET 編譯器平台 SDK 概念
 
-.NET 編譯器平台 SDK 可大幅降低建立以程式碼為中心之工具和應用程式的入門障礙。 它在多個領域中創造了許多創新的機會，例如中繼程式設計、程式碼產生和轉換、C# 和 VB 語言的交互使用，以及在網域特定語言中內嵌 C# 和 VB。
+.NET 編譯器平台 SDK 可大幅降低建立以程式碼為中心之工具和應用程式的入門障礙。 它會在諸如中繼程式設計、程式碼產生和轉換、互動式使用C#和 Visual Basic 語言，以及在網域特定語言中內嵌C#和 Visual Basic 等方面，創造許多創新的機會。
 
 .NET 編譯器平台 SDK 可讓您建置「分析器」和「程式碼修正」，以尋找並更正程式碼錯誤。 「分析器」了解程式碼的語法和結構，並會偵測應該修正的做法。 「程式碼修正」提供一或多個建議的修正，以解決分析器所發現的程式碼錯誤。 一般而言，分析器和相關聯的程式碼修正會一起封裝在單一專案中。
 

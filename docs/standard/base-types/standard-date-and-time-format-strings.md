@@ -14,16 +14,16 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: b67b00fdb4a5c484c112cc2f3321ce2268d4dad7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 883902142a91e275ab64ad5d12c197c665bd9b36
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121713"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346654"
 ---
 # <a name="standard-date-and-time-format-strings"></a>標準日期和時間格式字串
 
-標準日期和時間格式字串使用單一格式規範，定義日期和時間值的文字表示。 任何包含一個以上字元 (包括空白字元) 的日期和時間格式字串都會解譯為自訂日期和時間格式字串；如需詳細資訊，請參閱[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。 標準或自訂格式字串有兩種使用方式：
+標準日期和時間格式字串使用單一格式規範，定義日期和時間值的文字表示。 凡包含多個字元 (包括空白字元) 的日期與時間格式字串，都會被解譯為自訂日期與時間格式字串。如需詳細資訊，請參閱[自訂日期與時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。 標準或自訂格式字串有兩種使用方式：
 
 - 定義執行格式化作業後所產生的字串。
 
@@ -434,9 +434,9 @@ ms.locfileid: "73121713"
 
 <a name="Notes"></a>
 
-## <a name="notes"></a>備註
+## <a name="notes"></a>注意事項
 
-### <a name="control-panel-settings"></a>控制台設定值
+### <a name="control-panel-settings"></a>Control Panel Settings
 
 [控制台] 中 [ **地區及語言選項]** 項目的設定會影響格式化作業所產生的結果字串。 這些設定是用來初始化與目前執行緒文化特性相關的 <xref:System.Globalization.DateTimeFormatInfo> 物件，該物件會提供用來管理格式的值。 使用不同設定的電腦會產生不同的結果字串。
 

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1ac2f2a33ce66813c009d475a1f7b2b27937a0c3
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 95d56888085ac7799992638f69ee1227c4c47325
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425167"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345530"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>使用 XmlSchemaSet 驗證 XML 結構描述 (XSD)
 可以根據 <xref:System.Xml.Schema.XmlSchemaSet> 中的 XML 結構描述定義語言 (XSD) 結構描述來驗證 XML 文件。  
@@ -23,7 +23,7 @@ ms.locfileid: "73425167"
  XML 文件是透過 <xref:System.Xml.XmlReader.Create%2A> 類別的 <xref:System.Xml.XmlReader> 方法來驗證的。 若要驗證 XML 文件，請建構 <xref:System.Xml.XmlReaderSettings> 物件，該物件包含可用於驗證 XML 文件的 XML 結構描述定義語言 (XSD) 結構描述。  
   
 > [!NOTE]
-> <xref:System.Xml.Schema> 命名空間包含的擴充方法可在使用 [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) 時，輕鬆地針對 XSD 檔案驗證 XML 樹狀結構。 如需使用 LINQ to XML 來驗證 XML 檔的詳細資訊，請參閱[如何：使用 xsd 進行驗證（C#LINQ to XML）（）](../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)和[如何：使用 xsd 進行驗證（LINQ to XML）（Visual Basic）](../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)。  
+> <xref:System.Xml.Schema> 命名空間包含的擴充方法可在使用 [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) 時，輕鬆地針對 XSD 檔案驗證 XML 樹狀結構。 如需使用 LINQ to XML 來驗證 XML 檔的詳細資訊，請參閱[如何使用 xsd 進行驗證（C#LINQ to XML）（）](../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)和[如何：使用 xsd 進行驗證（LINQ to XML）（Visual Basic）](../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)。
   
  可以將個別結構描述或一組結構描述 (當做 <xref:System.Xml.Schema.XmlSchemaSet>) 加入至 <xref:System.Xml.Schema.XmlSchemaSet>，其方式是將其中一個當做參數傳遞給 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法。 請注意在驗證文件時，此文件的目標命名空間必須符合結構描述集內結構描述的目標命名空間。  
   

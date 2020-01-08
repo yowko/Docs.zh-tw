@@ -2,16 +2,16 @@
 title: 預設值表 - C# 參考
 ms.custom: seodec18
 description: 了解 C# 型別的預設值是什麼。
-ms.date: 07/29/2019
+ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 48aa294fa9e37e2e138444e493faa5474011097e
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
-ms.translationtype: MT
+ms.openlocfilehash: 3604316b75bb3a6a4de39991899a837f64e547d2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74551815"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345491"
 ---
 # <a name="default-values-table-c-reference"></a>預設值表 (C# 參考)
 
@@ -24,7 +24,7 @@ ms.locfileid: "74551815"
 |任何[內建浮點數值型別](../builtin-types/floating-point-numeric-types.md)|0 (零)|
 |[bool](../builtin-types/bool.md)|`false`|
 |[char](../builtin-types/char.md)|`'\0'` (U+0000)|
-|[enum](enum.md)|這個值是由運算式 `(E)0` 所產生，其中 `E` 是列舉識別碼。|
+|[enum](../builtin-types/enum.md)|這個值是由運算式 `(E)0` 所產生，其中 `E` 是列舉識別碼。|
 |[struct](struct.md)|這個值是藉由將所有實值型別欄位設定為其預設值，並將所有參考型別欄位設定為 `null` 所產生。|
 |任何[可為 Null 的值型別](../builtin-types/nullable-value-types.md)|<xref:System.Nullable%601.HasValue%2A> 屬性是 `false` 且未定義 <xref:System.Nullable%601.Value%2A> 屬性的執行個體。 該預設值也稱為可為 null 的實數值型別的*null*值。|
 
@@ -46,6 +46,8 @@ int a = default;
 var n = new System.Numerics.Complex();
 Console.WriteLine(n);  // output: (0, 0)
 ```
+
+在執行時間，如果 <xref:System.Type?displayProperty=nameWithType> 實例代表實值型別，您可以使用 <xref:System.Activator.CreateInstance(System.Type)?displayProperty=nameWithType> 方法來叫用無參數的函式，以取得型別的預設值。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

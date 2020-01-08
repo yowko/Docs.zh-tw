@@ -2,12 +2,12 @@
 title: 設定作業 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 22079b1d41533803f694af210f98bc9fb8a5b322
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 170316b36705eaed51a9a17f8f79333a29e8c315
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711874"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346504"
 ---
 # <a name="set-operations-c"></a>設定作業 (C#)
 LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是根據相同或不同集合 (集) 內是否有對等項目而定。  
@@ -58,4 +58,4 @@ LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是
 - <xref:System.Linq>
 - [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)
 - [如何合併和比較字串集合（LINQ）（C#）](./how-to-combine-and-compare-string-collections-linq.md)
-- [如何：尋找兩個清單之間的集合差異 (LINQ) (C#)](./how-to-find-the-set-difference-between-two-lists-linq.md)
+- [如何尋找兩個清單之間的集合差異（LINQ）（C#）](./how-to-find-the-set-difference-between-two-lists-linq.md)

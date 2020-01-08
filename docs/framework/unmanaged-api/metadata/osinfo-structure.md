@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fac7b480-7adb-4450-a5e9-690fed81ffae
 topic_type:
 - apiref
-ms.openlocfilehash: 89111bf7eb03d20c2010c7a20c4cd055c2a021e3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d66e9bc3a027610d917e15dc9769b92ea1c5fb71
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430727"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345595"
 ---
 # <a name="osinfo-structure"></a>OSINFO 結構
 包含元件或模組之作業系統的詳細資料。  
@@ -38,7 +38,7 @@ typedef struct {
   
 |成員|描述|  
 |------------|-----------------|  
-|`dwOSPlatformId`|Microsoft Windows 平臺函數所定義的其中一個識別碼值 `GetVersionEx`。 支援下列值：<br /><br /> -VER_PLATFORM_WIN32s 或0x0000，以指定 Microsoft Windows 3.1。<br />-VER_PLATFORM_WIN32_WINDOWS 或0x0001，用來指定 Windows 95、Windows 98 或其下的作業系統。<br />-VER_PLATFORM_WIN32_NT 或0x0010，用來指定從它繼承的 Windows NT 或作業系統。|  
+|`dwOSPlatformId`|Microsoft Windows 平臺函數所定義的其中一個識別碼值 `GetVersionEx`。 支援下列值：<br /><br /> -VER_PLATFORM_WIN32s 或0x0000，以指定 Microsoft Windows 3.1。<br />-VER_PLATFORM_WIN32_WINDOWS 或0x0001，用來指定 Windows 95、Windows 98 或其下的作業系統。<br />-VER_PLATFORM_WIN32_NT 或0x0002，用來指定從它繼承的 Windows NT 或作業系統。|  
 |`dwOSMajorVersion`|作業系統主要版本，或表示任何版本的 Null 值。|  
 |`dwOSMinorVersion`|作業系統次要版本，或表示任何版本的 Null 值。|  
   

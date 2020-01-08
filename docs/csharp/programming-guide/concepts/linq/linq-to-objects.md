@@ -2,12 +2,12 @@
 title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: b0cc47604b65a5883643d61b44b1e9878ec4b1bf
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: ae4389aa1ce049edc71bff42c38f66fb328ba034
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140885"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344786"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
 詞彙 "LINQ to Objects" 是指直接搭配使用 LINQ 查詢與任何 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 集合，而不要使用中繼 LINQ 提供者或 API (例如 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) 或 [LINQ to XML](./linq-to-xml-overview.md))。 您可以使用 LINQ 查詢任何可列舉的集合，例如 <xref:System.Collections.Generic.List%601>、<xref:System.Array> 或 <xref:System.Collections.Generic.Dictionary%602>。 這類集合可以是使用者定義，或由 .NET Framework API 所傳回。  
@@ -36,7 +36,7 @@ ms.locfileid: "74140885"
  [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)  
  說明如何使用 LINQ 與檔案系統互動。 此外也包含示範這些概念的主題連結。  
   
- [如何：使用 LINQ 查詢 ArrayList (C#)](./how-to-query-an-arraylist-with-linq.md)  
+ [如何使用 LINQ 查詢 ArrayList （C#）](./how-to-query-an-arraylist-with-linq.md)  
  示範如何以 C# 查詢 ArrayList。  
   
  [如何新增 LINQ 查詢的自訂方法（C#）](./how-to-add-custom-methods-for-linq-queries.md)  

@@ -4,12 +4,12 @@ description: 本教學課程會示範如何使用 ML.NET 建置迴歸模型，�
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: a7a7a246f3153889343589a7b32c183ca30df5a3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: MT
+ms.openlocfilehash: 500eef32f569acfe3a28adbd63b1465c8153d5ba
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459155"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344980"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>教學課程：使用回歸與 ML.NET 預測價格
 
@@ -25,7 +25,7 @@ ms.locfileid: "73459155"
 > * 評估模型
 > * 使用模型來進行預測
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 * 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)版本。
 
@@ -37,7 +37,7 @@ ms.locfileid: "73459155"
 
 1. 安裝 **Microsoft.ML** NuGet 套件：
 
-    在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、從清單中選取該套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。 針對 **Microsoft.ML.FastTree** Nuget 套件執行相同的動作。
+    在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、從清單中選取該套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。 對 **Microsoft.ML.FastTree** NuGet 套件執行相同的動作。
 
 ## <a name="prepare-and-understand-the-data"></a>準備並了解資料
 
@@ -54,7 +54,7 @@ ms.locfileid: "73459155"
 * **vendor_id：** 計程車廠商的識別碼是一項特徵。
 * **rate_code：** 計程車行程的費率類型是一項特徵。
 * **passenger_count：** 行程的乘客數目是一項特徵。
-* **trip_time_in_secs：** 行程所花費的時間長度。 您想要在行程結束之前預測行程的車資。 那時，您並不知道行程需要多長的時間。 因此，行程時間不是一項特徵，您將從模型中排除這個資料行。
+* **trip_time_in_secs：** 行程所花費的時間長度。 您想要在行程結束之前預測行程的車資。 此時，您不知道旅程要花多少時間。 因此，行程時間不是一項特徵，您將從模型中排除這個資料行。
 * **trip_distance：** 行程的距離是一項特徵。
 * **payment_type：** 付款方式 (現金或信用卡) 是一項特徵。
 * **fare_amount：** 計程車車資總計是標籤。
@@ -75,7 +75,7 @@ ms.locfileid: "73459155"
 
 `TaxiTrip` 是輸入資料類別，並含有每個資料集資料行的定義。 使用 <xref:Microsoft.ML.Data.LoadColumnAttribute> 屬性來指定資料集中來源資料行的索引。
 
-`TaxiTripFarePrediction` 類別代表預測的結果。 包含一個套用 `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> 屬性的單一浮點數欄位 `FareAmount`。 如果是迴歸工作，則**分數**資料行包含預測的標籤值。
+`TaxiTripFarePrediction` 類別代表預測的結果。 它有一個已套用 `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> 屬性的單一浮點欄位（`FareAmount`）。 在回歸工作的情況下，[**分數**] 資料行會包含預測的標籤值。
 
 > [!NOTE]
 > 使用 `float` 型別表示輸入和預測資料類別中的浮點值。
@@ -126,11 +126,11 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ## <a name="load-and-transform-data"></a>載入並轉換資料
 
-ML.NET 使用 [IDataView 類別](xref:Microsoft.ML.IDataView)作為描述數字或文字表格式資料彈性且有效率的方式。 `IDataView` 可載入文字檔案或即時資料 (例如 SQL 資料庫或記錄檔)。 將下列程式碼新增為 `Train()` 方法的第一行：
+ML.NET 使用 [IDataView 類別](xref:Microsoft.ML.IDataView)作為描述數字或文字表格式資料彈性且有效率的方式。 `IDataView` 可載入文字檔案或即時進行 (例如 SQL 資料庫或記錄檔)。 將下列程式碼新增為 `Train()` 方法的第一行：
 
 [!code-csharp[LoadTrainData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#6 "loading training dataset")]
 
-因為您希望預測計程車的車資，`FareAmount` 資料行便是您將預測的 `Label` (模型的輸出)。請使用 `CopyColumnsEstimator` 轉換類別複製 `FareAmount`，並新增下列程式碼：
+當您想要預測出租車行程費用時，`FareAmount` 的資料行就是您將預測的 `Label` （模型的輸出）。 使用 `CopyColumnsEstimator` 的轉換類別來複製 `FareAmount`，並新增下列程式碼：
 
 [!code-csharp[CopyColumnsEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Use the CopyColumnsEstimator")]
 
@@ -156,7 +156,7 @@ ML.NET 使用 [IDataView 類別](xref:Microsoft.ML.IDataView)作為描述數字�
 
 [!code-csharp[TrainModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
 
-[Fit()](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) 方法會透過轉換資料集和套用定型來定型模型。
+[Fit()](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) 方法透過轉換資料集和套用定型來定型模型。
 
 使用 `Train()` 方法中的下列程式碼行，傳回定型的模型：
 
@@ -215,7 +215,7 @@ Console.WriteLine($"*------------------------------------------------");
 
 [!code-csharp[DisplayRSquared](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#18 "Display the RSquared metric.")]
 
-[RMS](../resources/glossary.md##root-of-mean-squared-error-rmse) 是迴歸模型的評估計量之一。 此計量值越低，模型就越好。 將下列程式碼新增至 `Evaluate` 方法，以顯示 RMS 值：
+[RMS](../resources/glossary.md#root-of-mean-squared-error-rmse) 是迴歸模型的評估計量之一。 此計量值越低，模型就越好。 將下列程式碼新增至 `Evaluate` 方法，以顯示 RMS 值：
 
 [!code-csharp[DisplayRMS](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#19 "Display the RMS metric.")]
 
@@ -232,7 +232,7 @@ private static void TestSinglePrediction(MLContext mlContext, ITransformer model
 
 `TestSinglePrediction` 方法會執行下列工作：
 
-* 建立單一評論的測試資料。
+* 建立測試資料的單一評論。
 * 根據測試資料預測費用金額。
 * 合併測試資料和預測來進行報告。
 * 顯示預測的結果。

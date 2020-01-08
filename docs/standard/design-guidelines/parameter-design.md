@@ -10,14 +10,15 @@ helpviewer_keywords:
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: KrzysztofCwalina
-ms.openlocfilehash: 28b00f5911bb47536ec44b96f284e47b6c671149
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
-ms.translationtype: MT
+ms.openlocfilehash: 93554594b49b742a6a5e8461b6b16046701ec07c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353738"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347855"
 ---
 # <a name="parameter-design"></a>參數設計
+
 本節提供有關參數設計的廣泛指導方針，包括包含檢查引數之指導方針的章節。 此外，您應該參考[具名引數](../../../docs/standard/design-guidelines/naming-parameters.md)中所述的指導方針。  
   
  **✓ DO**使用最少衍生的參數類型，以提供成員所需的功能。  
@@ -40,7 +41,7 @@ ms.locfileid: "71353738"
   
  這會更有效地傳達方法之間的關聯性。  
   
-### <a name="choosing-between-enum-and-boolean-parameters"></a>選擇列舉和布林值參數  
+### <a name="choose-between-enum-and-boolean-parameters"></a>選擇列舉和布林參數  
  如果成員會有兩個或更多的布林參數， **✓就**會使用 enum。  
   
  **X**不使用布林值，除非您絕對確定不需要兩個以上的值。  
@@ -49,7 +50,7 @@ ms.locfileid: "71353738"
   
  **✓請考慮**使用布林值做為真正兩個狀態值的函式參數，並且只是用來初始化布林屬性。  
   
-### <a name="validating-arguments"></a>驗證引數  
+### <a name="validate-arguments"></a>驗證引數  
  **✓**會驗證傳遞至公用、受保護或明確執行之成員的引數。 如果驗證失敗，則擲回 <xref:System.ArgumentException?displayProperty=nameWithType>或其中一個子類別。  
   
  請注意，實際的驗證不一定要在公用或受保護的成員本身發生。 在某些私用或內部常式的較低層級，可能會發生此問題。 主要的重點是，向使用者公開的整個介面區都會檢查引數。  
@@ -66,10 +67,10 @@ ms.locfileid: "71353738"
   
  如果成員區分安全性，建議您建立複本，然後驗證和處理引數。  
   
-### <a name="parameter-passing"></a>參數傳遞  
+### <a name="pass-parameters"></a>傳遞參數  
  從架構設計工具的觀點來看，有三個主要的參數群組：傳值參數、`ref` 參數和 `out` 參數。  
   
- 透過傳值參數傳遞引數時，成員會收到傳入的實際引數複本。 如果引數是實值型別，則引數的複本會放在堆疊上。 如果引數是參考型別，則會將參考的複本放在堆疊上。 最受歡迎的 CLR 語言， C#例如、VB.NET 和C++，預設為以傳值方式傳遞參數。  
+ 透過傳值參數傳遞引數時，成員會收到傳入的實際引數複本。 如果引數是實值型別，則引數的複本會放在堆疊上。 如果引數是參考型別，則會將參考的複本放在堆疊上。 最受歡迎的 CLR 語言， C#例如、Visual Basic 和C++，預設為以傳值方式傳遞參數。  
   
  透過 `ref` 參數傳遞引數時，成員會收到傳入之實際引數的參考。 如果引數是實值型別，則引數的參考會放在堆疊上。 如果引數是參考型別，參考的參考會放在堆疊上。 `Ref` 參數可以用來允許成員修改呼叫者所傳遞的引數。  
   
@@ -153,9 +154,9 @@ public class String {
   
  *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 *Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition[ 節錄。](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [成員設計方針](../../../docs/standard/design-guidelines/member.md)
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

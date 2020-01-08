@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: ca2513a0f865fd7da728f7d3247bdb7b50a2f48a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8701991542f1e950914d5b4275ae8dcd68ad83a1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036432"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345372"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術運算子 (C# 參考)
 
@@ -51,13 +51,13 @@ ms.locfileid: "73036432"
 
 ### <a name="postfix-increment-operator"></a>後置遞增運算子
 
-`x++` 的結果為運算「之前」`x`*的*  值，如下列範例所示：
+`x++` 的結果是作業*之前*`x` 的值，如下列範例所示：
 
 [!code-csharp-interactive[postfix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixIncrement)]
 
 ### <a name="prefix-increment-operator"></a>前置遞增運算子
 
-`++x` 的結果為運算「之後」`x`*的*  值，如下列範例所示：
+`++x` 的結果是作業*之後*`x` 的值，如下列範例所示：
 
 [!code-csharp-interactive[prefix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixIncrement)]
 
@@ -69,13 +69,13 @@ ms.locfileid: "73036432"
 
 ### <a name="postfix-decrement-operator"></a>後置遞減運算子
 
-`x--` 的結果為運算「之前」`x`*的*  值，如下列範例所示：
+`x--` 的結果是作業*之前*`x` 的值，如下列範例所示：
 
 [!code-csharp-interactive[postfix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixDecrement)]
 
 ### <a name="prefix-decrement-operator"></a>前置遞減運算子
 
-`--x` 的結果為運算「之後」`x`*的*  值，如下列範例所示：
+`--x` 的結果是作業*之後*`x` 的值，如下列範例所示：
 
 [!code-csharp-interactive[prefix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixDecrement)]
 
@@ -131,7 +131,7 @@ ms.locfileid: "73036432"
 
 ### <a name="floating-point-remainder"></a>浮點數餘數
 
-對於 `float` 和 `double` 運算元，有限 `x % y` 和 `x` 的 `y` 結果是 `z` 值，像是
+對於 `float` 和 `double` 運算元，有限 `x` 和 `y` 的 `x % y` 結果是 `z` 值，像是
 
 - 若 `z` 不是零，其正負號與 `x` 的正負號相同。
 - `z` 的絕對值是由 `|x| - n * |y|` 產生的值，其中 `n` 為最大可能整數，小於或等於 `|x| / |y|`，而 `|x|`和 `|y|`則分別是 `x` 和 `y` 的絕對值。
@@ -139,9 +139,9 @@ ms.locfileid: "73036432"
 > [!NOTE]
 > 這種計算餘數的方法類似于用於整數運算元的，但與 IEEE 754 規格不同。 如果您需要符合 IEEE 754 規格的餘數運算，請使用 <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> 方法。
 
-如需在非有限運算元情況中 `%` 運算子的行為，請參閱 [C# 語言規格](~/_csharplang/spec/expressions.md#remainder-operator)的[餘數運算子](~/_csharplang/spec/introduction.md)小節。
+如需在非有限運算元情況中 `%` 運算子的行為，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[餘數運算子](~/_csharplang/spec/expressions.md#remainder-operator)小節。
 
-針對 `decimal` 運算元，餘數運算子 `%` 相當於 [ 型別的](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>)餘數運算子<xref:System.Decimal?displayProperty=nameWithType>。
+針對 `decimal` 運算元，餘數運算子 `%` 相當於 <xref:System.Decimal?displayProperty=nameWithType> 型別的[餘數運算子](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>)。
 
 下列範例示範具有浮點運算元的餘數運算子行為：
 
@@ -183,11 +183,11 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
 
-由於[數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)的緣故，`op` 作業結果可能無法隱含轉換成 `T` 的 `x` 型別。 在此情況下，如果 `op` 是預先定義的運算子，且作業結果可以明確轉換成 `T` 的 `x` 型別，則形式 `x op= y` 的複合指派運算式相等於 `x = (T)(x op y)`，唯一的不同在於 `x` 只會評估一次。 下列範例示範了該行為：
+由於[數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)的緣故，`op` 作業的結果可能不會隱含轉換成 `x` 的 `T` 類型。 在此情況下，如果 `op` 是預先定義的運算子，且作業結果可以明確轉換成 `x` 的 `T` 型別，則形式 `x op= y` 的複合指派運算式相等於 `x = (T)(x op y)`，唯一的不同在於 `x` 只會評估一次。 下列範例示範了該行為：
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
-您也可以使用 `+=` 和 `-=` 運算子，分別訂閱及取消訂閱[事件](../keywords/event.md)。 如需詳細資訊，請參閱[如何：訂閱及取消訂閱事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
+您也可以使用 `+=` 和 `-=` 運算子，分別訂閱及取消訂閱[事件](../keywords/event.md)。 如需詳細資訊，請參閱[如何訂閱及取消訂閱事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 
 ## <a name="operator-precedence-and-associativity"></a>運算子優先順序和關聯性
 

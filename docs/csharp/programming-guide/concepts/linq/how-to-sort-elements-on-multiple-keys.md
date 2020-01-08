@@ -1,15 +1,15 @@
 ---
-title: 作法：排序多個索引鍵的項目 (C#)
+title: 如何排序多個索引鍵上的C#元素（）
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: 13444214efb2d7c4bcfec712d565d114abced204
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ddfeab4bf9b67231296ca90df1244a3b8a441440
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253310"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347387"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-c"></a>HOW TO：排序多個索引鍵的項目 (C#)
+# <a name="how-to-sort-elements-on-multiple-keys-c"></a>如何排序多個索引鍵上的C#元素（）
 
 這個主題顯示如何在多個索引鍵上排序。
 
@@ -17,7 +17,7 @@ ms.locfileid: "70253310"
 
 在這個範例中，會先按照送貨的郵遞區號，然後按照訂單日期排序結果。
 
-此範例使用下列 XML 文件：[XML 範例檔：客戶和訂單 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)。
+此範例使用下列 XML 文件︰[範例 XML 檔：客戶和訂單 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)。
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -67,7 +67,7 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 
 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[命名空間概觀 (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)。
 
-此範例使用下列 XML 文件：[XML 範例檔：命名空間中的客戶和訂單](./sample-xml-file-customers-and-orders-in-a-namespace.md)。
+此範例使用下列 XML 文件︰[範例 XML 檔：命名空間中的客戶和訂單](./sample-xml-file-customers-and-orders-in-a-namespace.md)。
 
 ```csharp
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");

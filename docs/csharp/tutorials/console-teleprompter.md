@@ -4,12 +4,12 @@ description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功�
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 2b9948ce22eb221d9d757fcec4c556d365469fdf
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
-ms.translationtype: MT
+ms.openlocfilehash: 0eb9883373484b72f771e0033936f56d00f9186d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039255"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346803"
 ---
 # <a name="console-application"></a>主控台應用程式
 
@@ -25,7 +25,7 @@ ms.locfileid: "73039255"
 
 本教學課程中有許多功能。 讓我們來逐一建置它們。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 您必須設定電腦以執行 .NET Core。 您可以在[.Net Core 下載](https://dotnet.microsoft.com/download)頁面上找到安裝指示。 您可以在 Windows、Linux、macOS 或是 Docker 容器中執行此應用程式。
 您將必須安裝慣用的程式碼編輯器。
@@ -82,7 +82,8 @@ using System.IO;
 
 <xref:System.Collections.Generic.IEnumerable%601> 介面是在 <xref:System.Collections.Generic> 命名空間中定義。 <xref:System.IO.File> 類別是在 <xref:System.IO> 命名空間中定義。
 
-此方法是 C# 方法的特殊型別，稱為「Iterator 方法」。 列舉程式方法會傳回延遲評估的序列。 這意謂著序列中的每個項目會在取用序列的程式碼要求該項目時產生。 列舉程式方法是包含一或多個 [`yield return`](../language-reference/keywords/yield.md) 陳述式的方法。 `ReadFrom` 方法所傳回的物件包含用來產生序列中每個項目的程式碼。 在此範例中，這牽涉到從原始程式檔讀取下一行文字，並傳回該字串。 每次呼叫程式碼要求序列中的下一個項目時，程式碼都會從檔案讀取下一行文字，並傳回該文字。 完全讀取檔案後，序列會指出已沒有任何其他項目。
+此方法是 C# 方法的特殊型別，稱為「Iterator 方法」。
+列舉程式方法會傳回延遲評估的序列。 這意謂著序列中的每個項目會在取用序列的程式碼要求該項目時產生。 列舉程式方法是包含一或多個 [`yield return`](../language-reference/keywords/yield.md) 陳述式的方法。 `ReadFrom` 方法所傳回的物件包含用來產生序列中每個項目的程式碼。 在此範例中，這牽涉到從原始程式檔讀取下一行文字，並傳回該字串。 每次呼叫程式碼要求序列中的下一個項目時，程式碼都會從檔案讀取下一行文字，並傳回該文字。 完全讀取檔案後，序列會指出已沒有任何其他項目。
 
 有兩個其他 C# 語法元素可能是您不熟悉的。 此方法中的 [`using`](../language-reference/keywords/using-statement.md) 陳述式會管理資源清除。 在 `using` 陳述式中初始化的變數 (在此範例中為 `reader`) 必須實作 <xref:System.IDisposable> 介面。 該介面會定義單一方法 `Dispose`，而在應該釋出資源時應該呼叫此方法。 編譯器會在執行到達 `using` 陳述式的結尾大括號時產生該呼叫。 編譯器產生的程式碼會確保即使 using 陳述式所定義區塊中的程式碼擲回例外狀況，也會釋出資源。
 
@@ -156,7 +157,8 @@ if (lineLength > 70)
 
 ## <a name="async-tasks"></a>非同步工作
 
-在這最後一個步驟中，您將新增程式碼以在一個工作中以非同步方式寫入輸出，同時也執行另一個工作以讀取來自使用者的輸入 (如果他們想要加速或減緩文字顯示，或完全停止文字顯示)。 這包括幾個步驟，而最後，您將會擁有您所需的一切更新。
+在這最後一個步驟中，您將新增程式碼以在一個工作中以非同步方式寫入輸出，同時也執行另一個工作以讀取來自使用者的輸入 (如果他們想要加速或減緩文字顯示，或完全停止文字顯示)。
+這包括幾個步驟，而最後，您將會擁有您所需的一切更新。
 第一個步驟是建立傳回方法的非同步 <xref:System.Threading.Tasks.Task>，該方法代表您到目前為止已建立來讀取和顯示檔案的程式碼。
 
 請將下列方法新增到您的 `Program` 類別 (這是取自您 `Main` 方法的主體)：
@@ -189,7 +191,7 @@ ShowTeleprompter().Wait();
 在這裡，`Main` 中的程式碼會執行同步等候。 您應該儘可能使用 `await` 運算子而不是同步等候。 但是，在主控台應用程式的 `Main` 方法中，您無法使用 `await` 運算子。 那會導致應用程式在所有工作完成之前即結束。
 
 > [!NOTE]
-> 如果您使用 C# 7.1 或更新版本，則可以使用 [`async` `Main` 方法](../whats-new/csharp-7-1.md#async-main)建立主控台應用程式。
+> 如果您使用C# 7.1 或更新版本，您可以使用[`async` `Main` 方法](../whats-new/csharp-7-1.md#async-main)來建立主控台應用程式。
 
 接著，您必須撰寫第二個非同步方法，以從主控台讀取並監視 ‘<’ (小於)、‘>’ (大於) 和 ‘X’ 或 ‘x’ 鍵。 以下是您針對該工作新增的方法：
 
