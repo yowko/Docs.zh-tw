@@ -62,7 +62,7 @@
       href: tutorials/console-webapiclient.md
     - name: 'C# 和 .NET 中的繼承'
       href: tutorials/inheritance.md
-    - name: 處理 LINQ
+    - name: 使用 LINQ
       href: tutorials/working-with-linq.md
     - name: 使用屬性
       href: tutorials/attributes.md
@@ -86,8 +86,6 @@
       href: tour-of-csharp/arrays.md
     - name: 介面
       href: tour-of-csharp/interfaces.md
-    - name: 列舉
-      href: tour-of-csharp/enums.md
     - name: 委派
       href: tour-of-csharp/delegates.md
     - name: 屬性
@@ -106,6 +104,8 @@
       href: whats-new/csharp-7.md
     - name: 'C# 6'
       href: whats-new/csharp-6.md
+    - name: 編譯器的重大變更
+      href: whats-new/breaking-changes.md
     - name: 'C# 的版本歷程記錄'
       href: whats-new/csharp-version-history.md
     - name: 語言與架構的關聯性
@@ -166,7 +166,7 @@
           href: modern-events.md
         - name: 區別委派和事件
           href: distinguish-delegates-events.md
-    - name: Language Integrated Query (LINQ)
+    - name: Language-Integrated Query (LINQ)
       items:
         - name: LINQ 概觀
           href: linq/index.md
@@ -304,7 +304,7 @@
           href: programming-guide/main-and-command-args/index.md
         - name: 命令列引數
           href: programming-guide/main-and-command-args/command-line-arguments.md
-        - name: 作法：顯示命令列引數
+        - name: 如何顯示命令列引數
           href: programming-guide/main-and-command-args/how-to-display-command-line-arguments.md
         - name: Main() 傳回值
           href: programming-guide/main-and-command-args/main-return-values.md
@@ -464,51 +464,51 @@
                   items:
                     - name: 如何計算某個字在字串中出現的次數 (LINQ)
                       href: programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md
-                    - name: 作法：查詢包含指定詞組的句子 (LINQ)
+                    - name: 如何查詢包含指定詞組的句子 (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md
-                    - name: 作法：查詢字串中的字元 (LINQ)
+                    - name: 如何查詢字串中的字元 (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-characters-in-a-string-linq.md
                     - name: 如何合併 LINQ 查詢與規則運算式
                       href: programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md
-                    - name: 作法：尋找兩份清單之間的集合差異 (LINQ)
+                    - name: 如何尋找兩份清單間的集合差異 (LINQ)
                       href: programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md
-                    - name: 作法：依任何字詞或欄位排序或篩選文字資料 (LINQ)
+                    - name: 如何依任何字詞或欄位排序或篩選文字資料 (LINQ)
                       href: programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md
-                    - name: 作法：重新排列分隔檔的欄位 (LINQ)
+                    - name: 如何重新排列有分隔符號的檔案中欄位 (LINQ)
                       href: programming-guide/concepts/linq/how-to-reorder-the-fields-of-a-delimited-file-linq.md
                     - name: 如何合併和比較字串集合 (LINQ)
                       href: programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md
-                    - name: 作法：從多個來源填入物件集合 (LINQ)
+                    - name: 如何從多個來源填入物件集合 (LINQ)
                       href: programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md
-                    - name: 作法：使用群組將一個檔案分割成多個檔案 (LINQ)
+                    - name: 如何使用群組將一份檔案分割成許多檔案 (LINQ)
                       href: programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md
-                    - name: 作法：聯結不同檔案中的內容 (LINQ)
+                    - name: 如何聯結不同檔案的內容 (LINQ)
                       href: programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md
                     - name: 如何計算 CSV 文字檔案中的資料行值 (LINQ)
                       href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
                 - name: LINQ 和反映
                   href: programming-guide/concepts/linq/linq-and-reflection.md
-                - name: 作法：使用反映查詢組件的中繼資料 (LINQ)
+                - name: 如何使用反映查詢組件的中繼資料 (LINQ)
                   href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
                 - name: LINQ 和檔案目錄
                   items:
                     - name: 總覽
                       href: programming-guide/concepts/linq/linq-and-file-directories.md
-                    - name: 作法：查詢具有指定屬性或名稱的檔案
+                    - name: 如何查詢具有指定屬性或名稱的檔案
                       href: programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md
-                    - name: 作法：依副檔名分組檔案 (LINQ)
+                    - name: 如何依副檔名分組檔案 (LINQ)
                       href: programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md
-                    - name: 作法：查詢一組資料夾中的位元組總數 (LINQ)
+                    - name: 如何查詢一組資料夾中的位元組總數 (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md
                     - name: 如何比較兩個資料夾的內容 (LINQ)
                       href: programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md
-                    - name: 作法：查詢樹狀目錄中的最大檔案 (LINQ)
+                    - name: 如何查詢目錄樹狀中的最大檔案 (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md
-                    - name: 作法：查詢樹狀目錄中的重複檔案 (LINQ)
+                    - name: 如何查詢目錄樹狀結構中的重複檔案 (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
-                    - name: 作法：查詢資料夾中的檔案內容 (LINQ)
+                    - name: 如何查詢資料夾中的檔案內容 (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md
-                - name: 作法：使用 LINQ 查詢 ArrayList
+                - name: 如何使用 LINQ 查詢 ArrayList
                   href: programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md
                 - name: 如何新增 LINQ 查詢的自訂方法
                   href: programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md
@@ -544,11 +544,11 @@
                           href: programming-guide/concepts/linq/functional-construction-linq-to-xml.md
                         - name: '在 C# 中建立 XML 樹狀 (LINQ to XML)'
                           href: programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md
-                        - name: 剖析 XML
+                        - name: 正在剖析 XML
                           items:
-                            - name: 作法：剖析字串
+                            - name: 如何剖析字串
                               href: programming-guide/concepts/linq/how-to-parse-a-string.md
-                            - name: 作法：從檔案載入 XML
+                            - name: 如何從檔案載入 XML
                               href: programming-guide/concepts/linq/how-to-load-xml-from-a-file.md
                             - name: 載入或剖析 XML 時保留空白字元
                               href: programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml1.md
@@ -556,11 +556,11 @@
                               href: programming-guide/concepts/linq/how-to-catch-parsing-errors.md
                             - name: 如何從 XmlReader 建立樹狀結構
                               href: programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md
-                            - name: 作法：從 XmlReader 串流 XML 片段
+                            - name: 如何從 XmlReader 串流 XML 片段
                               href: programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md
-                        - name: 作法：使用 XmlWriter 填入 XML 樹狀結構 (LINQ to XML)
+                        - name: 如何使用 XmlWriter 填入 XML 樹狀結構 (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md
-                        - name: 作法：使用 XSD 驗證 (LINQ to XML)
+                        - name: 如何使用 XSD 驗證 (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md
                         - name: XElement 和 XDocument 物件的有效內容
                           href: programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects3.md
@@ -574,7 +574,7 @@
                           href: programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md
                         - name: 'C# 中的預設命名空間範圍'
                           href: programming-guide/concepts/linq/scope-of-default-namespaces.md
-                        - name: 作法：在命名空間中撰寫 XML 的查詢
+                        - name: 如何針對命名空間中的 XML 撰寫查詢
                           href: programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md
                     - name: 序列化 XML 樹狀結構
                       items:
@@ -590,23 +590,23 @@
                       items:
                         - name: LINQ to XML 軸概觀
                           href: programming-guide/concepts/linq/linq-to-xml-axes-overview.md
-                        - name: 作法：擷取項目的集合 (LINQ to XML)
+                        - name: 如何擷取元素集合 (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md
-                        - name: 作法：擷取項目的值 (LINQ to XML)
+                        - name: 如何擷取元素值 (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md
                         - name: 如何篩選項目名稱 (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md
                         - name: 如何鏈結軸方法呼叫 (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md
-                        - name: 作法：擷取單一子項目 (LINQ to XML)
+                        - name: 如何擷取單一子元素 (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md
-                        - name: 作法：擷取屬性的集合 (LINQ to XML)
+                        - name: 如何擷取屬性集合 (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-a-collection-of-attributes-linq-to-xml.md
-                        - name: 作法：擷取單一屬性 (LINQ to XML)
+                        - name: 如何擷取單一屬性 (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-a-single-attribute-linq-to-xml.md
-                        - name: 作法：擷取屬性的值 (LINQ to XML)
+                        - name: 如何擷取屬性值 (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md
-                        - name: 作法：擷取項目的表層值
+                        - name: 如何擷取元素的淺層值
                           href: programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md
                     - name: 查詢 XML 樹狀
                       items:
@@ -622,59 +622,59 @@
                               href: programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md
                             - name: 如何使用 Descendants 方法尋找單一子系
                               href: programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md
-                            - name: 作法：撰寫具有複雜篩選的查詢
+                            - name: 如何撰寫具有複雜篩選功能的查詢
                               href: programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md
                             - name: 如何篩選選擇性項目
                               href: programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md
                             - name: 如何在命名空間中尋找所有節點
                               href: programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md
-                            - name: 作法：排序項目
+                            - name: 如何排序元素
                               href: programming-guide/concepts/linq/how-to-sort-elements.md
-                            - name: 作法：排序多個索引鍵的項目
+                            - name: 如何根據多個索引鍵排序元素
                               href: programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md
                             - name: 如何計算中繼值
                               href: programming-guide/concepts/linq/how-to-calculate-intermediate-values.md
-                            - name: 作法：撰寫依內容尋找項目的查詢
+                            - name: 如何撰寫根據內容尋找元素的查詢
                               href: programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md
                             - name: 如何偵錯空白查詢結果集
                               href: programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md
                         - name: 投影和轉換 (LINQ to XML)
                           items:
-                            - name: 作法：利用 LINQ to XML 使用字典
+                            - name: 如何使用 LINQ to XML 利用字典
                               href: programming-guide/concepts/linq/how-to-work-with-dictionaries-using-linq-to-xml.md
-                            - name: 作法：轉換 XML 樹狀結構的組織結構
+                            - name: 如何轉換 XML 樹狀結構的型態
                               href: programming-guide/concepts/linq/how-to-transform-the-shape-of-an-xml-tree.md
                             - name: 如何控制投影的類型
                               href: programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md
-                            - name: 作法：投影新類型 (LINQ to XML)
+                            - name: 如何投影新類型 (LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-project-a-new-type-linq-to-xml.md
-                            - name: 作法：投影物件圖形
+                            - name: 如何投影物件圖形
                               href: programming-guide/concepts/linq/how-to-project-an-object-graph.md
-                            - name: 作法：投影匿名類型
+                            - name: 如何投影匿名類型
                               href: programming-guide/concepts/linq/how-to-project-an-anonymous-type.md
-                            - name: 作法：從 XML 產生文字檔
+                            - name: 如何從 XML 產生文字檔
                               href: programming-guide/concepts/linq/how-to-generate-text-files-from-xml.md
-                            - name: 作法：從 CSV 檔案產生 XML
+                            - name: 如何從 CSV 檔案產生 XML
                               href: programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md
                         - name: 進階查詢技術 (LINQ to XML)
                           items:
-                            - name: 作法：聯結兩個集合 (LINQ to XML)
+                            - name: 如何聯結兩個集合 (LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md
                             - name: 如何使用群組建立階層
                               href: programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md
-                            - name: 作法：使用 XPath 查詢 LINQ to XML
+                            - name: 如何使用 XPath 查詢 LINQ to XML
                               href: programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md
-                            - name: 作法：撰寫 LINQ to XML 座標軸方法
+                            - name: 如何撰寫 LINQ to XML 軸心方法
                               href: programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md
-                            - name: 作法：執行文字到 XML 的串流轉換
+                            - name: 如何執行資料流轉換，將文字轉換為 XML
                               href: programming-guide/concepts/linq/how-to-perform-streaming-transformations-of-text-to-xml.md
-                            - name: 作法：列出樹狀結構中的所有節點
+                            - name: 如何列出樹狀結構中的所有節點
                               href: programming-guide/concepts/linq/how-to-list-all-nodes-in-a-tree.md
-                            - name: 作法：擷取 Office Open XML 文件的段落
+                            - name: 如何從 Office Open XML 文件中擷取段落
                               href: programming-guide/concepts/linq/how-to-retrieve-paragraphs-from-an-office-open-xml-document.md
-                            - name: 作法：修改 Office Open XML 文件
+                            - name: 如何修改 Office Open XML 文件
                               href: programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md
-                            - name: 作法：從檔案系統填入 XML 樹狀結構
+                            - name: 如何從檔案系統填入 XML 樹狀結構
                               href: programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md
                         - name: XPath 使用者適用的 LINQ to XML
                           items:
@@ -684,7 +684,7 @@
                               href: programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md
                             - name: 如何尋找子項目清單 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md
-                            - name: 作法：尋找根項目 (XPath-LINQ to XML)
+                            - name: 如何尋找根元素 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-the-root-element-xpath-linq-to-xml.md
                             - name: 如何尋找子系項目 (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-descendant-elements-xpath-linq-to-xml.md
@@ -812,21 +812,21 @@
                           href: programming-guide/concepts/linq/programming-with-nodes.md
                         - name: 混合的宣告式程式碼/命令式程式碼 Bug (LINQ to XML)
                           href: programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md
-                        - name: 作法：串流可存取標頭資訊的 XML 片段
+                        - name: 如何串流可存取標頭資訊的 XML 片段
                           href: programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md
-                        - name: 作法：執行大型 XML 文件的串流轉換
+                        - name: 如何執行大型 XML 文件的資料流轉換
                           href: programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md
-                        - name: 作法：讀取和寫入編碼的文件
+                        - name: 如何讀取和寫入編碼文件
                           href: programming-guide/concepts/linq/how-to-read-and-write-an-encoded-document.md
                         - name: 使用 XSLT 轉換 XML 樹狀結構
                           href: programming-guide/concepts/linq/using-xslt-to-transform-an-xml-tree.md
-                        - name: 作法：使用註釋轉換 XSLT 樣式的 LINQ to XML 樹狀結構
+                        - name: 如何使用註釋將 LINQ to XML 樹狀結構轉換為 XSLT 樣式
                           href: programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md
                         - name: 序列化包含 XElement 物件的物件圖形
                           items:
-                            - name: 作法：使用 XmlSerializer 序列化
+                            - name: 如何使用 XmlSerializer 進行序列化
                               href: programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md
-                            - name: 作法：使用 DataContractSerializer 序列化
+                            - name: 如何使用 DataContractSerializer 進行序列化
                               href: programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md
                     - name: LINQ to XML 安全性
                       href: programming-guide/concepts/linq/linq-to-xml-security.md
@@ -874,9 +874,9 @@
           items:
             - name: 總覽
               href: programming-guide/concepts/serialization/index.md
-            - name: 作法：將物件資料寫入 XML 檔案
+            - name: 如何將物件資料寫入 XML 檔案
               href: programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md
-            - name: 作法：從 XML 檔案讀取物件資料
+            - name: 如何從 XML 檔案讀取物件資料
               href: programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md
             - name: 逐步解說：在 Visual Studio 中保存物件
               href: programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md
@@ -896,15 +896,15 @@
               href: programming-guide/statements-expressions-operators/anonymous-functions.md
             - name: Lambda 運算式
               href: programming-guide/statements-expressions-operators/lambda-expressions.md
-            - name: 如何：在查詢中使用 Lambda 運算式
+            - name: 如何在查詢中使用 Lambda 運算式
               href: programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md
         - name: 相等及相等比較
           items:
             - name: 相等比較
               href: programming-guide/statements-expressions-operators/equality-comparisons.md
-            - name: 如何：定義類型的實值相等性
+            - name: 如何定義類型的實值相等性
               href: programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md
-            - name: 如何：參考相等性 (恆等性) 的測試
+            - name: 如何測試參考相等性 (身分識別)
               href: programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md
     - name: 型別
       items:
@@ -914,11 +914,11 @@
           href: programming-guide/types/casting-and-type-conversions.md
         - name: Boxing 和 Unboxing
           href: programming-guide/types/boxing-and-unboxing.md
-        - name: 作法：將位元組陣列轉換為 int
+        - name: 如何將位元組陣列轉換成整數
           href: programming-guide/types/how-to-convert-a-byte-array-to-an-int.md
-        - name: 作法：將字串轉換為數字
+        - name: 如何將字串轉換為數值
           href: programming-guide/types/how-to-convert-a-string-to-a-number.md
-        - name: 作法：在十六進位字串和數字類型間轉換
+        - name: 如何在十六進位字串和數字類型間轉換
           href: programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md
         - name: 使用動態類型
           href: programming-guide/types/using-type-dynamic.md
@@ -1036,7 +1036,7 @@
           href: programming-guide/classes-and-structs/object-and-collection-initializers.md
         - name: 如何使用物件初始設定式初始化物件
           href: programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md
-        - name: 作法：使用集合初始設定式將字典初始化
+        - name: 如何使用集合初始設定式初始化字典
           href: programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md
         - name: 巢狀類型
           href: programming-guide/classes-and-structs/nested-types.md
@@ -1052,12 +1052,10 @@
           href: programming-guide/interfaces/index.md
         - name: 明確介面實作
           href: programming-guide/interfaces/explicit-interface-implementation.md
-        - name: 作法：明確實作介面成員
+        - name: 如何明確實作介面成員
           href: programming-guide/interfaces/how-to-explicitly-implement-interface-members.md
-        - name: 作法：明確實作兩個介面的成員
+        - name: 如何明確實作兩個介面的成員
           href: programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md
-    - name: 列舉類型
-      href: programming-guide/enumeration-types.md
     - name: 委派
       items:
         - name: 總覽
@@ -1066,9 +1064,9 @@
           href: programming-guide/delegates/using-delegates.md
         - name: 具名方法委派與匿名方法
           href: programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md
-        - name: '作法：組合委派 (多點傳送委派) (C# 程式設計指南)'
+        - name: '如何合併委派 (多點傳送委派) (C# 程式設計手冊)'
           href: programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md
-        - name: 作法：宣告、具現化和使用委派
+        - name: 如何宣告、具現化和使用委派
           href: programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md
     - name: 陣列
       items:
@@ -1092,7 +1090,7 @@
       items:
         - name: 使用字串進行程式設計
           href: programming-guide/strings/index.md
-        - name: 作法：判斷字串是否代表數值
+        - name: 如何判斷字串是否表示數值
           href: programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md
     - name: 索引子
       items:
@@ -1108,15 +1106,15 @@
       items:
         - name: 總覽
           href: programming-guide/events/index.md
-        - name: 作法：訂閱及取消訂閱事件
+        - name: 如何訂閱及取消訂閱事件
           href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
-        - name: 作法：發佈符合 .NET Framework 方針的事件
+        - name: 如何發佈符合 .NET Framework 方針的事件
           href: programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md
-        - name: 作法：在衍生類別中引發基底類別事件
+        - name: 如何在衍生類別中引發基底類別事件
           href: programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md
-        - name: 作法：實作介面事件
+        - name: 如何實作介面事件
           href: programming-guide/events/how-to-implement-interface-events.md
-        - name: 作法：實作自訂事件存取子
+        - name: 如何實作自訂事件存取子
           href: programming-guide/events/how-to-implement-custom-event-accessors.md
     - name: 泛型
       items:
@@ -1150,7 +1148,7 @@
           href: programming-guide/namespaces/index.md
         - name: 使用命名空間
           href: programming-guide/namespaces/using-namespaces.md
-        - name: 如何：使用 My 命名空間
+        - name: 如何使用 My 命名空間
           href: programming-guide/namespaces/how-to-use-the-my-namespace.md
     - name: 不安全的程式碼和指標
       items:
@@ -1164,7 +1162,7 @@
               href: programming-guide/unsafe-code-pointers/pointer-types.md
             - name: 指標轉換
               href: programming-guide/unsafe-code-pointers/pointer-conversions.md
-            - name: 如何：使用指標複製位元組陣列
+            - name: 如何使用指標複製位元組陣列
               href: programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md
     - name: XML 文件註解
       items:
@@ -1176,7 +1174,7 @@
           href: programming-guide/xmldoc/processing-the-xml-file.md
         - name: 文件標籤的分隔符號
           href: programming-guide/xmldoc/delimiters-for-documentation-tags.md
-        - name: 作法：使用 XML 文件功能
+        - name: 如何使用 XML 文件功能
           href: programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md
         - name: 文件標籤參考
           items:
@@ -1230,33 +1228,33 @@
           href: programming-guide/exceptions/creating-and-throwing-exceptions.md
         - name: 編譯器所產生的例外狀況
           href: programming-guide/exceptions/compiler-generated-exceptions.md
-        - name: 作法：使用 try-catch 處理例外狀況
+        - name: 如何使用 try-catch 處理例外狀況
           href: programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md
-        - name: 作法：使用 finally 執行清除程式碼
+        - name: 如何使用 finally 執行清除程式碼
           href: programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md
-        - name: 作法：攔截非 CLS 例外狀況
+        - name: 如何攔截非 CLS 例外狀況
           href: programming-guide/exceptions/how-to-catch-a-non-cls-exception.md
     - name: 檔案系統和登錄
       items:
         - name: 總覽
           href: programming-guide/file-system/index.md
-        - name: 作法：逐一查看樹狀目錄
+        - name: 如何逐一查看目錄樹狀結構
           href: programming-guide/file-system/how-to-iterate-through-a-directory-tree.md
-        - name: 作法：取得有關檔案、資料夾和磁碟機的資訊
+        - name: 如何取得有關檔案、資料夾和磁碟機的資訊
           href: programming-guide/file-system/how-to-get-information-about-files-folders-and-drives.md
-        - name: 作法：建立檔案或資料夾
+        - name: 如何建立檔案或資料夾
           href: programming-guide/file-system/how-to-create-a-file-or-folder.md
-        - name: 作法：複製、刪除和移動檔案和資料夾
+        - name: 如何複製、刪除及移動檔案和資料夾
           href: programming-guide/file-system/how-to-copy-delete-and-move-files-and-folders.md
-        - name: 作法：提供檔案作業的進度對話方塊
+        - name: 如何提供檔案作業的進度對話方塊
           href: programming-guide/file-system/how-to-provide-a-progress-dialog-box-for-file-operations.md
-        - name: 作法：寫入文字檔
+        - name: 如何寫入文字檔
           href: programming-guide/file-system/how-to-write-to-a-text-file.md
-        - name: 作法：從文字檔讀取
+        - name: 如何讀取文字檔
           href: programming-guide/file-system/how-to-read-from-a-text-file.md
-        - name: '作法：一次一行讀取文字檔 (Visual C#)'
+        - name: 如何一次一行讀取文字檔
           href: programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md
-        - name: '作法：在登錄中建立機碼 (Visual C#)'
+        - name: 如何在登錄中建立機碼
           href: programming-guide/file-system/how-to-create-a-key-in-the-registry.md
     - name: 互通性
       items:
@@ -1264,11 +1262,11 @@
           href: programming-guide/interop/index.md
         - name: 互通性概觀
           href: programming-guide/interop/interoperability-overview.md
-        - name: '作法：使用 Visual C# 功能存取 Office Interop 物件'
+        - name: '如何使用 C# 功能存取 Office Interop 物件'
           href: programming-guide/interop/how-to-access-office-onterop-objects.md
-        - name: 作法：在 COM Interop 程式設計中使用已編製索引的屬性
+        - name: 如何在 COM Interop 程式設計中使用已編製索引的屬性
           href: programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md
-        - name: 作法：使用平台叫用播放 WAV 檔
+        - name: 如何使用平台叫用播放 WAV 檔
           href: programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md
         - name: '逐步解說：Office 程式設計 (C# 與 Visual Basic)'
           href: programming-guide/interop/walkthrough-office-programming.md
@@ -1304,8 +1302,9 @@
                 - name: char
                   href: language-reference/builtin-types/char.md
                   displayName: 'Unicode, character, UTF-16'
-                - name: enum
-                  href: language-reference/keywords/enum.md
+                - name: 列舉類型
+                  href: language-reference/builtin-types/enum.md
+                  displayName: 'enum, bit flags, bit field'
                 - name: struct
                   href: language-reference/keywords/struct.md
                 - name: 可為 Null 的實值型別
@@ -1580,7 +1579,7 @@
         - name: 使用者定義轉換運算子
           href: language-reference/operators/user-defined-conversion-operators.md
           displayName: 'implicit, explicit'
-        - name: 指標相關運算子
+        - name: 與指標相關的運算子
           href: language-reference/operators/pointer-related-operators.md
           displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
         - name: 指派運算子

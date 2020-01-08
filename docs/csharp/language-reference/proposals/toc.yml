@@ -78,3 +78,5 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
         - name: 唯讀執行個體成員
           href: ../../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md
+        - name: 巢狀 stackalloc
+          href: ../../../../_csharplang/proposals/csharp-8.0/nested-stackalloc.md

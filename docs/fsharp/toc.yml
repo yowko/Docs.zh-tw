@@ -7,13 +7,13 @@
   items:
     - name: '安裝 F#'
       href: get-started/install-fsharp.md
-    - name: '開始使用 Visual Studio 中的 F#'
+    - name: 'Visual Studio 中的 F#'
       href: get-started/get-started-visual-studio.md
-    - name: '開始在 Visual Studio Code 中使用 F#'
+    - name: 'Visual Studio Code 中的 F#'
       href: get-started/get-started-vscode.md
-    - name: '開始使用 .NET Core CLI 中的 F#'
+    - name: '使用 .NET Core CLI 的 F#'
       href: get-started/get-started-command-line.md
-    - name: '開始使用 Visual Studio for Mac 中的 F#'
+    - name: 'Visual Studio for Mac 中的 F#'
       href: get-started/get-started-with-visual-studio-for-mac.md
 - name: 'F# 的教學課程'
   href: tour.md

@@ -46,7 +46,7 @@
         - name: 預測價格 (模型建立器與迴歸)
           href: tutorials/predict-prices-with-model-builder.md
         - name: 使用 ML.NET CLI 分析情感
-          href: tutorials/mlnet-cli.md
+          href: tutorials/sentiment-analysis-cli.md
         - name: 在 Razor Pages 中分析情感 (模型建立器與二元分類)
           href: tutorials/sentiment-analysis-model-builder.md
         - name: 分類健康狀態違規 (模型建立器與多元分類)
@@ -57,13 +57,13 @@
           href: how-to-guides/matchup-app-infer-net.md
 - name: 概念
   items:
-    - name: ML.NET 工作 (模型類型)
+    - name: ML.NET 工作
       href: resources/tasks.md
     - name: 演算法
       href: how-to-choose-an-ml-net-algorithm.md
     - name: 資料轉換
       href: resources/transforms.md
-    - name: 計量
+    - name: 模型評估計量
       href: resources/metrics.md
     - name: 改善模型正確性
       href: resources/improve-machine-learning-model-ml-net.md
