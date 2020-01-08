@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: af7bf487ff4ed250025b946f0948c269fcc5bf09
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9fc8adaa49d02f8b69c2db6e94a28b9fab36b3b0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418566"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635791"
 ---
-# <a name="c-features-that-support-linq"></a><span data-ttu-id="041b1-102">支援 LINQ 的 C# 功能</span><span class="sxs-lookup"><span data-stu-id="041b1-102">C# Features That Support LINQ</span></span>
+# <a name="c-features-that-support-linq"></a><span data-ttu-id="9139e-102">支援 LINQ 的 C# 功能</span><span class="sxs-lookup"><span data-stu-id="9139e-102">C# Features That Support LINQ</span></span>
 
-<span data-ttu-id="041b1-103">下節將介紹 C# 3.0 中引進的新語言建構。</span><span class="sxs-lookup"><span data-stu-id="041b1-103">The following section introduces new language constructs introduced in C# 3.0.</span></span> <span data-ttu-id="041b1-104">雖然這些新功能或多或少都會用於 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢，但不限於 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，還可用於任何您認為實用的內容中。</span><span class="sxs-lookup"><span data-stu-id="041b1-104">Although these new features are all used to a degree with [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries, they are not limited to [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] and can be used in any context where you find them useful.</span></span>
+<span data-ttu-id="9139e-103">下節將介紹 C# 3.0 中引進的新語言建構。</span><span class="sxs-lookup"><span data-stu-id="9139e-103">The following section introduces new language constructs introduced in C# 3.0.</span></span> <span data-ttu-id="9139e-104">雖然這些新功能全都適用于 LINQ 查詢的程度，但它們並不限於 LINQ，而且可以在任何您覺得有用的內容中使用。</span><span class="sxs-lookup"><span data-stu-id="9139e-104">Although these new features are all used to a degree with LINQ queries, they are not limited to LINQ and can be used in any context where you find them useful.</span></span>
 
-## <a name="query-expressions"></a><span data-ttu-id="041b1-105">查詢運算式</span><span class="sxs-lookup"><span data-stu-id="041b1-105">Query Expressions</span></span>
+## <a name="query-expressions"></a><span data-ttu-id="9139e-105">查詢運算式</span><span class="sxs-lookup"><span data-stu-id="9139e-105">Query Expressions</span></span>
 
-<span data-ttu-id="041b1-106">查詢運算式使用類似 SQL 或 XQuery 的宣告式語法來查詢 IEnumerable 集合。</span><span class="sxs-lookup"><span data-stu-id="041b1-106">Query expressions use a declarative syntax similar to SQL or XQuery to query over IEnumerable collections.</span></span> <span data-ttu-id="041b1-107">在編譯時期，查詢語法會轉換成對 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者實作的標準查詢運算子擴充方法進行的方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="041b1-107">At compile time query syntax is converted to method calls to a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider's implementation of the standard query operator extension methods.</span></span> <span data-ttu-id="041b1-108">應用程式使用 `using` 指示詞來指定適當的命名空間，藉此控制範圍內的標準查詢運算子。</span><span class="sxs-lookup"><span data-stu-id="041b1-108">Applications control the standard query operators that are in scope by specifying the appropriate namespace with a `using` directive.</span></span> <span data-ttu-id="041b1-109">下列查詢運算式會擷取字串的陣列，然後根據字串的第一個字元分組字串，再排序這些群組。</span><span class="sxs-lookup"><span data-stu-id="041b1-109">The following query expression takes an array of strings, groups them according to the first character in the string, and orders the groups.</span></span>
+<span data-ttu-id="9139e-106">查詢運算式使用類似 SQL 或 XQuery 的宣告式語法來查詢 IEnumerable 集合。</span><span class="sxs-lookup"><span data-stu-id="9139e-106">Query expressions use a declarative syntax similar to SQL or XQuery to query over IEnumerable collections.</span></span> <span data-ttu-id="9139e-107">在編譯時期，查詢語法會轉換成 LINQ 提供者的標準查詢運算子擴充方法的實作為方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="9139e-107">At compile time query syntax is converted to method calls to a LINQ provider's implementation of the standard query operator extension methods.</span></span> <span data-ttu-id="9139e-108">應用程式使用 `using` 指示詞來指定適當的命名空間，藉此控制範圍內的標準查詢運算子。</span><span class="sxs-lookup"><span data-stu-id="9139e-108">Applications control the standard query operators that are in scope by specifying the appropriate namespace with a `using` directive.</span></span> <span data-ttu-id="9139e-109">下列查詢運算式會擷取字串的陣列，然後根據字串的第一個字元分組字串，再排序這些群組。</span><span class="sxs-lookup"><span data-stu-id="9139e-109">The following query expression takes an array of strings, groups them according to the first character in the string, and orders the groups.</span></span>
 
 ```csharp
 var query = from str in stringArray
@@ -26,11 +26,11 @@ var query = from str in stringArray
             select stringGroup;
 ```
 
-<span data-ttu-id="041b1-110">如需詳細資訊，請參閱 [LINQ 查詢運算式](../../../linq/index.md)。</span><span class="sxs-lookup"><span data-stu-id="041b1-110">For more information, see [LINQ Query Expressions](../../../linq/index.md).</span></span>
+<span data-ttu-id="9139e-110">如需詳細資訊，請參閱 [LINQ 查詢運算式](../../../linq/index.md)。</span><span class="sxs-lookup"><span data-stu-id="9139e-110">For more information, see [LINQ Query Expressions](../../../linq/index.md).</span></span>
 
-## <a name="implicitly-typed-variables-var"></a><span data-ttu-id="041b1-111">隱含型別變數 (var)</span><span class="sxs-lookup"><span data-stu-id="041b1-111">Implicitly Typed Variables (var)</span></span>
+## <a name="implicitly-typed-variables-var"></a><span data-ttu-id="9139e-111">隱含型別變數 (var)</span><span class="sxs-lookup"><span data-stu-id="9139e-111">Implicitly Typed Variables (var)</span></span>
 
-<span data-ttu-id="041b1-112">除了在宣告和初始化變數時明確指定類型，您還可以使用 [var](../../../language-reference/keywords/var.md) 修飾詞，指示編譯器推斷並指派類型，如下所示：</span><span class="sxs-lookup"><span data-stu-id="041b1-112">Instead of explicitly specifying a type when you declare and initialize a variable, you can use the [var](../../../language-reference/keywords/var.md) modifier to instruct the compiler to infer and assign the type, as shown here:</span></span>
+<span data-ttu-id="9139e-112">除了在宣告和初始化變數時明確指定類型，您還可以使用 [var](../../../language-reference/keywords/var.md) 修飾詞，指示編譯器推斷並指派類型，如下所示：</span><span class="sxs-lookup"><span data-stu-id="9139e-112">Instead of explicitly specifying a type when you declare and initialize a variable, you can use the [var](../../../language-reference/keywords/var.md) modifier to instruct the compiler to infer and assign the type, as shown here:</span></span>
 
 ```csharp
 var number = 5;
@@ -40,19 +40,19 @@ var query = from str in stringArray
             select str;
 ```
 
-<span data-ttu-id="041b1-113">宣告為 `var` 的變數和明確指定類型的變數一樣具有強型別。</span><span class="sxs-lookup"><span data-stu-id="041b1-113">Variables declared as `var` are just as strongly-typed as variables whose type you specify explicitly.</span></span> <span data-ttu-id="041b1-114">`var` 可用來建立匿名型別，但僅可用於區域變數。</span><span class="sxs-lookup"><span data-stu-id="041b1-114">The use of `var` makes it possible to create anonymous types, but it can be used only for local variables.</span></span> <span data-ttu-id="041b1-115">陣列也可以使用隱含型別進行宣告。</span><span class="sxs-lookup"><span data-stu-id="041b1-115">Arrays can also be declared with implicit typing.</span></span>
+<span data-ttu-id="9139e-113">宣告為 `var` 的變數和明確指定類型的變數一樣具有強型別。</span><span class="sxs-lookup"><span data-stu-id="9139e-113">Variables declared as `var` are just as strongly-typed as variables whose type you specify explicitly.</span></span> <span data-ttu-id="9139e-114">`var` 可用來建立匿名型別，但僅可用於區域變數。</span><span class="sxs-lookup"><span data-stu-id="9139e-114">The use of `var` makes it possible to create anonymous types, but it can be used only for local variables.</span></span> <span data-ttu-id="9139e-115">陣列也可以使用隱含型別進行宣告。</span><span class="sxs-lookup"><span data-stu-id="9139e-115">Arrays can also be declared with implicit typing.</span></span>
 
-<span data-ttu-id="041b1-116">如需詳細資訊，請參閱[隱含型別區域變數](../../classes-and-structs/implicitly-typed-local-variables.md)。</span><span class="sxs-lookup"><span data-stu-id="041b1-116">For more information, see [Implicitly Typed Local Variables](../../classes-and-structs/implicitly-typed-local-variables.md).</span></span>
+<span data-ttu-id="9139e-116">如需詳細資訊，請參閱[隱含型別區域變數](../../classes-and-structs/implicitly-typed-local-variables.md)。</span><span class="sxs-lookup"><span data-stu-id="9139e-116">For more information, see [Implicitly Typed Local Variables](../../classes-and-structs/implicitly-typed-local-variables.md).</span></span>
 
-## <a name="object-and-collection-initializers"></a><span data-ttu-id="041b1-117">物件和集合初始設定式</span><span class="sxs-lookup"><span data-stu-id="041b1-117">Object and Collection Initializers</span></span>
+## <a name="object-and-collection-initializers"></a><span data-ttu-id="9139e-117">物件和集合初始設定式</span><span class="sxs-lookup"><span data-stu-id="9139e-117">Object and Collection Initializers</span></span>
 
-<span data-ttu-id="041b1-118">物件和集合初始設定式可以初始化物件，而不需要明確呼叫物件的建構函式。</span><span class="sxs-lookup"><span data-stu-id="041b1-118">Object and collection initializers make it possible to initialize objects without explicitly calling a constructor for the object.</span></span> <span data-ttu-id="041b1-119">初始設定式通常會用於將來源資料投影為新資料類型的查詢運算式中。</span><span class="sxs-lookup"><span data-stu-id="041b1-119">Initializers are typically used in query expressions when they project the source data into a new data type.</span></span> <span data-ttu-id="041b1-120">假設有個名為 `Customer` 的類別具有公用的 `Name` 和 `Phone` 屬性，則可如下列程式碼所示使用物件初始設定式：</span><span class="sxs-lookup"><span data-stu-id="041b1-120">Assuming a class named `Customer` with public `Name` and `Phone` properties, the object initializer can be used as in the following code:</span></span>
+<span data-ttu-id="9139e-118">物件和集合初始設定式可以初始化物件，而不需要明確呼叫物件的建構函式。</span><span class="sxs-lookup"><span data-stu-id="9139e-118">Object and collection initializers make it possible to initialize objects without explicitly calling a constructor for the object.</span></span> <span data-ttu-id="9139e-119">初始設定式通常會用於將來源資料投影為新資料類型的查詢運算式中。</span><span class="sxs-lookup"><span data-stu-id="9139e-119">Initializers are typically used in query expressions when they project the source data into a new data type.</span></span> <span data-ttu-id="9139e-120">假設有個名為 `Customer` 的類別具有公用的 `Name` 和 `Phone` 屬性，則可如下列程式碼所示使用物件初始設定式：</span><span class="sxs-lookup"><span data-stu-id="9139e-120">Assuming a class named `Customer` with public `Name` and `Phone` properties, the object initializer can be used as in the following code:</span></span>
 
 ```csharp
 var cust = new Customer { Name = "Mike", Phone = "555-1212" };
 ```
 
-<span data-ttu-id="041b1-121">延續我們的 `Customer` 類別，假設有一個稱為 `IncomingOrders` 的資料來源，而其每個訂單都有大型的 `OrderSize`，我們想要根據該訂單建立新的 `Customer`。</span><span class="sxs-lookup"><span data-stu-id="041b1-121">Continuing with our `Customer` class, assume that there is a data source called `IncomingOrders`, and that for each order with a large `OrderSize`, we would like to create a new `Customer` based off of that order.</span></span> <span data-ttu-id="041b1-122">您可以針對此資料來源執行 LINQ 查詢，並使用物件初始化來填滿集合：</span><span class="sxs-lookup"><span data-stu-id="041b1-122">A LINQ query can be executed on this data source and use object initialization to fill a collection:</span></span>
+<span data-ttu-id="9139e-121">延續我們的 `Customer` 類別，假設有一個稱為 `IncomingOrders` 的資料來源，而其每個訂單都有大型的 `OrderSize`，我們想要根據該訂單建立新的 `Customer`。</span><span class="sxs-lookup"><span data-stu-id="9139e-121">Continuing with our `Customer` class, assume that there is a data source called `IncomingOrders`, and that for each order with a large `OrderSize`, we would like to create a new `Customer` based off of that order.</span></span> <span data-ttu-id="9139e-122">您可以針對此資料來源執行 LINQ 查詢，並使用物件初始化來填滿集合：</span><span class="sxs-lookup"><span data-stu-id="9139e-122">A LINQ query can be executed on this data source and use object initialization to fill a collection:</span></span>
 
 ```csharp
 var newLargeOrderCustomers = from o in IncomingOrders
@@ -60,46 +60,46 @@ var newLargeOrderCustomers = from o in IncomingOrders
                             select new Customer { Name = o.Name, Phone = o.Phone };
 ```
 
-<span data-ttu-id="041b1-123">資料來源底下可能有比 `Customer` 類別更多的屬性 (例如 `OrderSize`)，但使用物件初始化時，從查詢傳回的資料會塑造為我們想要的資料型別；我們選擇與我們的類別相關的資料。</span><span class="sxs-lookup"><span data-stu-id="041b1-123">The data source may have more properties lying under the hood than the `Customer` class such as `OrderSize`, but with object initialization, the data returned from the query is molded into the desired data type; we choose the data that is relevant to our class.</span></span> <span data-ttu-id="041b1-124">因此，我們現在有使用新的 `Customer` 填滿的 `IEnumerable`，這正是我們所需要的。</span><span class="sxs-lookup"><span data-stu-id="041b1-124">As a result, we now have an `IEnumerable` filled with the new `Customer`s we wanted.</span></span> <span data-ttu-id="041b1-125">上述內容也可以使用 LINQ 的方法語法撰寫：</span><span class="sxs-lookup"><span data-stu-id="041b1-125">The above can also be written in LINQ's method syntax:</span></span>
+<span data-ttu-id="9139e-123">資料來源底下可能有比 `Customer` 類別更多的屬性 (例如 `OrderSize`)，但使用物件初始化時，從查詢傳回的資料會塑造為我們想要的資料型別；我們選擇與我們的類別相關的資料。</span><span class="sxs-lookup"><span data-stu-id="9139e-123">The data source may have more properties lying under the hood than the `Customer` class such as `OrderSize`, but with object initialization, the data returned from the query is molded into the desired data type; we choose the data that is relevant to our class.</span></span> <span data-ttu-id="9139e-124">因此，我們現在有使用新的 `Customer` 填滿的 `IEnumerable`，這正是我們所需要的。</span><span class="sxs-lookup"><span data-stu-id="9139e-124">As a result, we now have an `IEnumerable` filled with the new `Customer`s we wanted.</span></span> <span data-ttu-id="9139e-125">上述內容也可以使用 LINQ 的方法語法撰寫：</span><span class="sxs-lookup"><span data-stu-id="9139e-125">The above can also be written in LINQ's method syntax:</span></span>
 
 ```csharp
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
 ```
 
-<span data-ttu-id="041b1-126">如需詳細資訊，請參閱:</span><span class="sxs-lookup"><span data-stu-id="041b1-126">For more information, see:</span></span>
+<span data-ttu-id="9139e-126">如需詳細資訊，請參閱＜＞。</span><span class="sxs-lookup"><span data-stu-id="9139e-126">For more information, see:</span></span>
 
-- [<span data-ttu-id="041b1-127">物件和集合初始設定式</span><span class="sxs-lookup"><span data-stu-id="041b1-127">Object and Collection Initializers</span></span>](../../classes-and-structs/object-and-collection-initializers.md)
+- [<span data-ttu-id="9139e-127">物件和集合初始設定式</span><span class="sxs-lookup"><span data-stu-id="9139e-127">Object and Collection Initializers</span></span>](../../classes-and-structs/object-and-collection-initializers.md)
 
-- [<span data-ttu-id="041b1-128">標準查詢運算子的查詢運算式語法</span><span class="sxs-lookup"><span data-stu-id="041b1-128">Query Expression Syntax for Standard Query Operators</span></span>](./query-expression-syntax-for-standard-query-operators.md)
+- [<span data-ttu-id="9139e-128">標準查詢運算子的查詢運算式語法</span><span class="sxs-lookup"><span data-stu-id="9139e-128">Query Expression Syntax for Standard Query Operators</span></span>](./query-expression-syntax-for-standard-query-operators.md)
 
-## <a name="anonymous-types"></a><span data-ttu-id="041b1-129">匿名類型</span><span class="sxs-lookup"><span data-stu-id="041b1-129">Anonymous Types</span></span>
+## <a name="anonymous-types"></a><span data-ttu-id="9139e-129">匿名類型</span><span class="sxs-lookup"><span data-stu-id="9139e-129">Anonymous Types</span></span>
 
-<span data-ttu-id="041b1-130">匿名型別是由編譯器所建構，只有編譯器才知道類型名稱。</span><span class="sxs-lookup"><span data-stu-id="041b1-130">An anonymous type is constructed by the compiler and the type name is only available to the compiler.</span></span> <span data-ttu-id="041b1-131">匿名型別提供了一個便利的方法，暫時將查詢結果中的一組屬性分組，而不需要另外定義具名類型。</span><span class="sxs-lookup"><span data-stu-id="041b1-131">Anonymous types provide a convenient way to group a set of properties temporarily in a query result without having to define a separate named type.</span></span> <span data-ttu-id="041b1-132">匿名型別是以新的運算式和物件初始設定式進行初始化，如下所示：</span><span class="sxs-lookup"><span data-stu-id="041b1-132">Anonymous types are initialized with a new expression and an object initializer, as shown here:</span></span>
+<span data-ttu-id="9139e-130">匿名型別是由編譯器所建構，只有編譯器才知道類型名稱。</span><span class="sxs-lookup"><span data-stu-id="9139e-130">An anonymous type is constructed by the compiler and the type name is only available to the compiler.</span></span> <span data-ttu-id="9139e-131">匿名型別提供了一個便利的方法，暫時將查詢結果中的一組屬性分組，而不需要另外定義具名類型。</span><span class="sxs-lookup"><span data-stu-id="9139e-131">Anonymous types provide a convenient way to group a set of properties temporarily in a query result without having to define a separate named type.</span></span> <span data-ttu-id="9139e-132">匿名型別是以新的運算式和物件初始設定式進行初始化，如下所示：</span><span class="sxs-lookup"><span data-stu-id="9139e-132">Anonymous types are initialized with a new expression and an object initializer, as shown here:</span></span>
 
 ```csharp
 select new {name = cust.Name, phone = cust.Phone};
 ```
 
-<span data-ttu-id="041b1-133">如需詳細資訊，請參閱[匿名型別](../../classes-and-structs/anonymous-types.md)。</span><span class="sxs-lookup"><span data-stu-id="041b1-133">For more information, see [Anonymous Types](../../classes-and-structs/anonymous-types.md).</span></span>
+<span data-ttu-id="9139e-133">如需詳細資訊，請參閱[匿名型別](../../classes-and-structs/anonymous-types.md)。</span><span class="sxs-lookup"><span data-stu-id="9139e-133">For more information, see [Anonymous Types](../../classes-and-structs/anonymous-types.md).</span></span>
 
-## <a name="extension-methods"></a><span data-ttu-id="041b1-134">擴充方法</span><span class="sxs-lookup"><span data-stu-id="041b1-134">Extension Methods</span></span>
+## <a name="extension-methods"></a><span data-ttu-id="9139e-134">擴充方法</span><span class="sxs-lookup"><span data-stu-id="9139e-134">Extension Methods</span></span>
 
-<span data-ttu-id="041b1-135">擴充方法是一種可以與類型相關聯的靜態方法，因此可以像呼叫類型上的執行個體方法一樣呼叫它。</span><span class="sxs-lookup"><span data-stu-id="041b1-135">An extension method is a static method that can be associated with a type, so that it can be called as if it were an instance method on the type.</span></span> <span data-ttu-id="041b1-136">這項功能實際上可讓您「新增」方法至現有的類型，而不需要實際修改這些類型。</span><span class="sxs-lookup"><span data-stu-id="041b1-136">This feature enables you to, in effect, "add" new methods to existing types without actually modifying them.</span></span> <span data-ttu-id="041b1-137">標準查詢運算子是一組擴充方法，可為實作 <xref:System.Collections.Generic.IEnumerable%601> 的任何類型提供 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢功能。</span><span class="sxs-lookup"><span data-stu-id="041b1-137">The standard query operators are a set of extension methods that provide [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query functionality for any type that implements <xref:System.Collections.Generic.IEnumerable%601>.</span></span>
+<span data-ttu-id="9139e-135">擴充方法是一種可以與類型相關聯的靜態方法，因此可以像呼叫類型上的執行個體方法一樣呼叫它。</span><span class="sxs-lookup"><span data-stu-id="9139e-135">An extension method is a static method that can be associated with a type, so that it can be called as if it were an instance method on the type.</span></span> <span data-ttu-id="9139e-136">這項功能實際上可讓您「新增」方法至現有的類型，而不需要實際修改這些類型。</span><span class="sxs-lookup"><span data-stu-id="9139e-136">This feature enables you to, in effect, "add" new methods to existing types without actually modifying them.</span></span> <span data-ttu-id="9139e-137">標準查詢運算子是一組擴充方法，可為任何可執行 <xref:System.Collections.Generic.IEnumerable%601>的型別提供 LINQ 查詢功能。</span><span class="sxs-lookup"><span data-stu-id="9139e-137">The standard query operators are a set of extension methods that provide LINQ query functionality for any type that implements <xref:System.Collections.Generic.IEnumerable%601>.</span></span>
 
-<span data-ttu-id="041b1-138">如需詳細資訊，請參閱[擴充方法](../../classes-and-structs/extension-methods.md)。</span><span class="sxs-lookup"><span data-stu-id="041b1-138">For more information, see [Extension Methods](../../classes-and-structs/extension-methods.md).</span></span>
+<span data-ttu-id="9139e-138">如需詳細資訊，請參閱[擴充方法](../../classes-and-structs/extension-methods.md)。</span><span class="sxs-lookup"><span data-stu-id="9139e-138">For more information, see [Extension Methods](../../classes-and-structs/extension-methods.md).</span></span>
 
-## <a name="lambda-expressions"></a><span data-ttu-id="041b1-139">Lambda 運算式</span><span class="sxs-lookup"><span data-stu-id="041b1-139">Lambda Expressions</span></span>
+## <a name="lambda-expressions"></a><span data-ttu-id="9139e-139">Lambda 運算式</span><span class="sxs-lookup"><span data-stu-id="9139e-139">Lambda Expressions</span></span>
 
-<span data-ttu-id="041b1-140">Lambda 運算式是一種內嵌函式，其使用 => 運算子分隔輸入參數與函式主體，而且可以在編譯期間轉換成委派或運算式樹狀架構。</span><span class="sxs-lookup"><span data-stu-id="041b1-140">A lambda expression is an inline function that uses the => operator to separate input parameters from the function body and can be converted at compile time to a delegate or an expression tree.</span></span> <span data-ttu-id="041b1-141">在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 程式設計中，當您直接對標準查詢運算子進行方法呼叫時，就會遇到 Lambda 運算式。</span><span class="sxs-lookup"><span data-stu-id="041b1-141">In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] programming, you will encounter lambda expressions when you make direct method calls to the standard query operators.</span></span>
+<span data-ttu-id="9139e-140">Lambda 運算式是一種內嵌函式，其使用 => 運算子分隔輸入參數與函式主體，而且可以在編譯期間轉換成委派或運算式樹狀架構。</span><span class="sxs-lookup"><span data-stu-id="9139e-140">A lambda expression is an inline function that uses the => operator to separate input parameters from the function body and can be converted at compile time to a delegate or an expression tree.</span></span> <span data-ttu-id="9139e-141">在 LINQ 程式設計中，當您對標準查詢運算子進行直接方法呼叫時，將會遇到 lambda 運算式。</span><span class="sxs-lookup"><span data-stu-id="9139e-141">In LINQ programming, you will encounter lambda expressions when you make direct method calls to the standard query operators.</span></span>
 
-<span data-ttu-id="041b1-142">如需詳細資訊，請參閱:</span><span class="sxs-lookup"><span data-stu-id="041b1-142">For more information, see:</span></span>
+<span data-ttu-id="9139e-142">如需詳細資訊，請參閱＜＞。</span><span class="sxs-lookup"><span data-stu-id="9139e-142">For more information, see:</span></span>
 
-- [<span data-ttu-id="041b1-143">匿名函式</span><span class="sxs-lookup"><span data-stu-id="041b1-143">Anonymous Functions</span></span>](../../statements-expressions-operators/anonymous-functions.md)
+- [<span data-ttu-id="9139e-143">匿名函式</span><span class="sxs-lookup"><span data-stu-id="9139e-143">Anonymous Functions</span></span>](../../statements-expressions-operators/anonymous-functions.md)
 
-- [<span data-ttu-id="041b1-144">Lambda 運算式</span><span class="sxs-lookup"><span data-stu-id="041b1-144">Lambda Expressions</span></span>](../../statements-expressions-operators/lambda-expressions.md)
+- [<span data-ttu-id="9139e-144">Lambda 運算式</span><span class="sxs-lookup"><span data-stu-id="9139e-144">Lambda Expressions</span></span>](../../statements-expressions-operators/lambda-expressions.md)
 
-- [<span data-ttu-id="041b1-145">運算式樹狀結構 (C#)</span><span class="sxs-lookup"><span data-stu-id="041b1-145">Expression Trees (C#)</span></span>](../expression-trees/index.md)
+- [<span data-ttu-id="9139e-145">運算式樹狀結構 (C#)</span><span class="sxs-lookup"><span data-stu-id="9139e-145">Expression Trees (C#)</span></span>](../expression-trees/index.md)
 
-## <a name="see-also"></a><span data-ttu-id="041b1-146">請參閱</span><span class="sxs-lookup"><span data-stu-id="041b1-146">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9139e-146">請參閱</span><span class="sxs-lookup"><span data-stu-id="9139e-146">See also</span></span>
 
-- [<span data-ttu-id="041b1-147">Language-Integrated Query (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="041b1-147">Language-Integrated Query (LINQ) (C#)</span></span>](./index.md)
+- [<span data-ttu-id="9139e-147">Language-Integrated Query (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="9139e-147">Language-Integrated Query (LINQ) (C#)</span></span>](./index.md)
