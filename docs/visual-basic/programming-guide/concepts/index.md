@@ -1,13 +1,13 @@
 ---
-title: 程式設計概念-Visual Basic
+title: 程式設計概念
 ms.date: 02/27/2017
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-ms.openlocfilehash: 4c550002e1049fb716d2836737b6c3fa5b9df4f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d94f948e814aba9cb01e3b96939992d938b309a2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966160"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337325"
 ---
 # <a name="programming-concepts-visual-basic"></a>程式設計概念 (Visual Basic)
 
@@ -24,7 +24,7 @@ ms.locfileid: "61966160"
 |[共變數和反變數 (Visual Basic)](../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)|示範如何在介面及委派中啟用泛型型別參數的隱含轉換。|
 |[運算式樹狀結構 (Visual Basic)](../../../visual-basic/programming-guide/concepts/expression-trees/index.md)|說明如何使用運算式樹狀結構來啟用可執行程式碼的動態修改。|
 |[迭代器 (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md)|說明可用來逐步執行集合，並逐一傳回元素的迭代器。|
-|[Language-Integrated Query (LINQ) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/index.md)|討論 Visual Basic 語言語法和查詢關聯式資料庫、 XML 文件、 資料集和記憶體中集合的模型中的強大查詢能力。|
+|[Language-Integrated Query (LINQ) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/index.md)|討論 Visual Basic 語言語法中的強大查詢功能，以及用來查詢關係資料庫、XML 檔、資料集和記憶體內部集合的模型。|
 |[物件導向程式設計 (Visual Basic)](../../../visual-basic/programming-guide/concepts/object-oriented-programming.md)|說明一般的物件導向概念，包括封裝、繼承和多型。|
 |[反映 (Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|說明如何使用反映來動態建立型別的執行個體、將型別繫結至現有的物件，或從現有的物件取得型別，並叫用其方法或存取其欄位及屬性。|
 |[序列化 (Visual Basic)](../../../visual-basic/programming-guide/concepts/serialization/index.md)|說明二進位、XML 及 SOAP 序列化的重要概念。|

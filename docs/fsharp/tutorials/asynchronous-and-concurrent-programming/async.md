@@ -1,13 +1,13 @@
 ---
-title: 中的非同步程式設計F#
+title: 非同步程式設計
 description: 瞭解如何F#根據衍生自核心函式程式設計概念的語言層級程式設計模型，提供非同步全新支援。
 ms.date: 12/17/2018
-ms.openlocfilehash: 583b0f5154e6ad8875b21503cfb78f70a069ff7b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 471566befd69f330fb9254dbd57b19569d9f9ad3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837099"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344665"
 ---
 # <a name="async-programming-in-f"></a>F\# 中的非同步程式設計
 
@@ -16,7 +16,7 @@ ms.locfileid: "74837099"
 - 呈現可提供大量並行連入要求的伺服器進程，同時將所佔用的系統資源降至最低，同時要求處理會等候該進程外部系統或服務的輸入
 - 在同時進行的背景工作時，維護回應式 UI 或主執行緒
 
-雖然背景工作通常會牽涉到多個執行緒的使用率，但請務必考慮非同步和多執行緒的概念。 事實上，它們是不同的考慮，而其中一個則不代表另一個。 這篇文章中的後續步驟將會更詳細地說明這一點。
+雖然背景工作通常會牽涉到多個執行緒的使用率，但請務必考慮非同步和多執行緒的概念。 事實上，它們是不同的考慮，而其中一個則不代表另一個。 本文所述的內容將會更詳細地說明。
 
 ## <a name="asynchrony-defined"></a>非同步已定義
 
@@ -69,13 +69,13 @@ let main argv =
     0
 ```
 
-在此範例中，`printTotalFileBytes` 函數的類型 `string -> Async<unit>`。 呼叫函數並不會實際執行非同步計算。 相反地，它會傳回 `Async<unit>`，做為要以非同步方式執行之工作的 * 規格。 它會在其主體中呼叫 `Async.AwaitTask`，這會在呼叫時將 <xref:System.IO.File.WriteAllBytesAsync%2A> 的結果轉換成適當的類型。
+在此範例中，`printTotalFileBytes` 函數的類型 `string -> Async<unit>`。 呼叫函數並不會實際執行非同步計算。 相反地，它會傳回 `Async<unit>`，作為要以非同步方式執行之工作的*規格*。 它會呼叫其主體中的 `Async.AwaitTask`，將 <xref:System.IO.File.WriteAllBytesAsync%2A> 的結果轉換成適當的類型。
 
 另一個重要的程式程式碼是 `Async.RunSynchronously`的呼叫。 這是非同步模組的其中一個啟動函式，如果您想要實際執行非同步計算，就必須F#呼叫這個函式。
 
-這是 `async` 程式設計的C#/VB 樣式的基本差異。 在F#中，可以將非同步計算視為**冷**工作。 必須明確啟動才能實際執行。 這有一些優點，因為它可讓您更輕鬆地結合和排序非同步工作，而C#不是/VB。
+這是 `async` 程式設計的C#/Visual 基本樣式的基本差異。 在F#中，可以將非同步計算視為**冷**工作。 必須明確啟動才能實際執行。 這有一些優點，因為它可讓您比在或 Visual Basic 中C#更輕鬆地結合和排序非同步工作。
 
-## <a name="combining-asynchronous-computations"></a>結合非同步計算
+## <a name="combine-asynchronous-computations"></a>結合非同步計算
 
 以下是藉由結合計算，以先前的版本為基礎的範例：
 
@@ -110,7 +110,7 @@ let main argv =
 
 當此程式執行時，`printTotalFileBytes` 會針對每個命令列引數以平行方式執行。 因為非同步計算獨立執行程式流程，所以不會列印其資訊並完成執行。 計算會以平行方式排程，但不保證其執行順序。
 
-## <a name="sequencing-asynchronous-computations"></a>排序非同步計算
+## <a name="sequence-asynchronous-computations"></a>順序非同步計算
 
 由於 `Async<'T>` 是工作的規格，而不是已執行的工作，因此您可以輕鬆地執行更複雜的轉換。 以下範例會排序一組非同步計算，讓它們逐一執行。
 
@@ -162,7 +162,7 @@ computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
 
 ### <a name="asyncstartimmediate"></a>StartImmediate
 
-直接從目前的作業系統執行緒開始，傳回非同步計算。 如果您需要在計算期間更新呼叫執行緒上的某個專案，這會很有説明。 例如，如果非同步計算必須更新 UI （例如更新進度列），則應該使用 `Async.StartImmediate`。
+執行非同步計算，並在目前的作業系統執行緒上立即啟動。 如果您需要在計算期間更新呼叫執行緒上的某個專案，這會很有説明。 例如，如果非同步計算必須更新 UI （例如更新進度列），則應該使用 `Async.StartImmediate`。
 
 簽章：
 
@@ -180,7 +180,7 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 
 ### <a name="asyncstartastask"></a>Async.startastask
 
-在執行緒集區中執行計算。 傳回在計算終止（產生結果、擲回例外狀況或取消）時，將在對應狀態下完成的 <xref:System.Threading.Tasks.Task%601>。 如果未提供解除標記，則會使用預設的解除標記。
+執行執行緒集區中的計算。 傳回在計算終止（產生結果、擲回例外狀況或取消）時，將在對應狀態下完成的 <xref:System.Threading.Tasks.Task%601>。 如果未提供解除標記，則會使用預設的解除標記。
 
 簽章：
 
@@ -273,7 +273,7 @@ computation: Async<'T> -> Async<Choice<'T, exn>>
 
 ### <a name="asyncignore"></a>Async。忽略
 
-建立會執行所指定計算並忽略其結果的非同步計算。
+建立異步計算來執行指定的計算，並忽略其結果。
 
 簽章：
 
@@ -330,7 +330,7 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 - 以 `Async.Start` 開頭的計算所引發的例外狀況不會傳播至呼叫者。 將完全展開呼叫堆疊。
 - `Async.Start` 啟動的任何 effectful 工作（例如呼叫 `printfn`）都不會造成此效果在程式執行的主要執行緒上發生。
 
-## <a name="interoperating-with-net"></a>與 .NET 交互操作
+## <a name="interoperate-with-net"></a>與 .NET 交互操作
 
 您可能使用的 .NET 程式庫或C#程式碼基底，會使用非同步[/await](../../../standard/async.md)樣式的非同步程式設計。 因為C#大部分的 .net 程式庫會使用 <xref:System.Threading.Tasks.Task%601> 和 <xref:System.Threading.Tasks.Task> 類型做為其核心抽象概念，而不是 `Async<'T>`，所以您必須在這兩種方法之間，將界限交叉到非同步。
 
@@ -371,7 +371,7 @@ module Async =
 
 已經有可接受 <xref:System.Threading.Tasks.Task> 做為輸入的 `Async.AwaitTask`。 使用此和先前定義的 `startTaskFromAsyncUnit` 函式F# ，您可以從非同步計算啟動和等待 <xref:System.Threading.Tasks.Task> 類型。
 
-## <a name="relationship-to-multithreading"></a>多執行緒的關聯性
+## <a name="relationship-to-multi-threading"></a>多執行緒的關聯性
 
 雖然這篇文章中提到了執行緒，但有兩個重要的事項要記住：
 
