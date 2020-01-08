@@ -2,28 +2,28 @@
 title: 如何比較兩個資料夾的內容（LINQ）（C#）
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: f64c82fcc63085c9479b0a3af91f0bdf5ee9eb95
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 9d46303068f2284415ea50c0514d76c5b2b55780
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141388"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346542"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a><span data-ttu-id="39f87-102">如何比較兩個資料夾的內容（LINQ）（C#）</span><span class="sxs-lookup"><span data-stu-id="39f87-102">How to compare the contents of two folders (LINQ) (C#)</span></span>
-<span data-ttu-id="39f87-103">本例示範三種比較兩個檔案清單的方式︰</span><span class="sxs-lookup"><span data-stu-id="39f87-103">This example demonstrates three ways to compare two file listings:</span></span>  
+# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a><span data-ttu-id="3d9bd-102">如何比較兩個資料夾的內容（LINQ）（C#）</span><span class="sxs-lookup"><span data-stu-id="3d9bd-102">How to compare the contents of two folders (LINQ) (C#)</span></span>
+<span data-ttu-id="3d9bd-103">本例示範三種比較兩個檔案清單的方式︰</span><span class="sxs-lookup"><span data-stu-id="3d9bd-103">This example demonstrates three ways to compare two file listings:</span></span>  
   
-- <span data-ttu-id="39f87-104">查詢指定兩個檔案清單是否完全相同的布林值。</span><span class="sxs-lookup"><span data-stu-id="39f87-104">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>  
+- <span data-ttu-id="3d9bd-104">查詢指定兩個檔案清單是否完全相同的布林值。</span><span class="sxs-lookup"><span data-stu-id="3d9bd-104">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>  
   
-- <span data-ttu-id="39f87-105">查詢交集，以擷取這兩個資料夾都有的檔案。</span><span class="sxs-lookup"><span data-stu-id="39f87-105">By querying for the intersection to retrieve the files that are in both folders.</span></span>  
+- <span data-ttu-id="3d9bd-105">查詢交集，以擷取這兩個資料夾都有的檔案。</span><span class="sxs-lookup"><span data-stu-id="3d9bd-105">By querying for the intersection to retrieve the files that are in both folders.</span></span>  
   
-- <span data-ttu-id="39f87-106">查詢集合差異，以擷取一個資料夾中有而另一個沒有的檔案。</span><span class="sxs-lookup"><span data-stu-id="39f87-106">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>  
+- <span data-ttu-id="3d9bd-106">查詢集合差異，以擷取一個資料夾中有而另一個沒有的檔案。</span><span class="sxs-lookup"><span data-stu-id="3d9bd-106">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>  
   
     > [!NOTE]
-    > <span data-ttu-id="39f87-107">這裡顯示的技巧可用於比較任何類型的物件序列。</span><span class="sxs-lookup"><span data-stu-id="39f87-107">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>  
+    > <span data-ttu-id="3d9bd-107">這裡顯示的技巧可用於比較任何類型的物件序列。</span><span class="sxs-lookup"><span data-stu-id="3d9bd-107">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>  
   
- <span data-ttu-id="39f87-108">這裡顯示的 `FileComparer` 類別會示範如何一起使用自訂比較子類別和標準查詢運算子。</span><span class="sxs-lookup"><span data-stu-id="39f87-108">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="39f87-109">此類別不適用於實際案例。</span><span class="sxs-lookup"><span data-stu-id="39f87-109">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="39f87-110">它僅使用每個檔案以位元組計的名稱和長度，來判斷每個資料夾的內容是否相同。</span><span class="sxs-lookup"><span data-stu-id="39f87-110">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="39f87-111">在實際案例中，您應該修改此比較子以執行更嚴格的相等檢查。</span><span class="sxs-lookup"><span data-stu-id="39f87-111">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>  
+ <span data-ttu-id="3d9bd-108">這裡顯示的 `FileComparer` 類別會示範如何一起使用自訂比較子類別和標準查詢運算子。</span><span class="sxs-lookup"><span data-stu-id="3d9bd-108">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="3d9bd-109">此類別不適用於實際案例。</span><span class="sxs-lookup"><span data-stu-id="3d9bd-109">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="3d9bd-110">它僅使用每個檔案以位元組計的名稱和長度，來判斷每個資料夾的內容是否相同。</span><span class="sxs-lookup"><span data-stu-id="3d9bd-110">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="3d9bd-111">在實際案例中，您應該修改此比較子以執行更嚴格的相等檢查。</span><span class="sxs-lookup"><span data-stu-id="3d9bd-111">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="39f87-112">範例</span><span class="sxs-lookup"><span data-stu-id="39f87-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="3d9bd-112">範例</span><span class="sxs-lookup"><span data-stu-id="3d9bd-112">Example</span></span>  
   
 ```csharp  
 namespace QueryCompareTwoDirs  
@@ -68,7 +68,7 @@ namespace QueryCompareTwoDirs
             // execute until the foreach statement.  
             var queryCommonFiles = list1.Intersect(list2, myFileCompare);  
   
-            if (queryCommonFiles.Count() > 0)  
+            if (queryCommonFiles.Any())  
             {  
                 Console.WriteLine("The following files are in both folders:");  
                 foreach (var v in queryCommonFiles)  
@@ -125,10 +125,10 @@ namespace QueryCompareTwoDirs
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="39f87-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="39f87-113">Compiling the Code</span></span>  
- <span data-ttu-id="39f87-114">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="39f87-114">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="3d9bd-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="3d9bd-113">Compiling the Code</span></span>  
+ <span data-ttu-id="3d9bd-114">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="3d9bd-114">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="39f87-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="39f87-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3d9bd-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="3d9bd-115">See also</span></span>
 
-- [<span data-ttu-id="39f87-116">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="39f87-116">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
-- [<span data-ttu-id="39f87-117">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="39f87-117">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="3d9bd-116">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="3d9bd-116">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
+- [<span data-ttu-id="3d9bd-117">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="3d9bd-117">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)

@@ -1,110 +1,89 @@
 ---
-title: 在 Visual Studio 2017 中取用 .NET Standard 程式庫
-description: 使用 Visual Studio 2017 來建置會呼叫另一個類別庫之成員的 .NET Core 應用程式。
-author: BillWagner
-ms.author: wiwagn
-ms.date: 06/05/2018
+title: 在 Visual Studio 中取用 .NET Standard 程式庫
+description: 建立 .NET Core 應用程式，以使用 Visual Studio 2019 呼叫另一個類別庫的成員。
+ms.date: 12/20/2019
+dev_langs:
+- csharp
+- vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: cfceb7ba384a28a09f172032f6edb6f5e495e9c0
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 9fcfb2e0c664186feda24c2a12daacb38769a68e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420904"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75339972"
 ---
-# <a name="consume-a-net-standard-library-in-visual-studio-2017"></a><span data-ttu-id="5d4a9-103">在 Visual Studio 2017 中取用 .NET Standard 程式庫</span><span class="sxs-lookup"><span data-stu-id="5d4a9-103">Consume a .NET Standard library in Visual Studio 2017</span></span>
+# <a name="consume-a-net-standard-library-in-visual-studio"></a><span data-ttu-id="f0457-103">在 Visual Studio 中取用 .NET Standard 程式庫</span><span class="sxs-lookup"><span data-stu-id="f0457-103">Consume a .NET Standard library in Visual Studio</span></span>
 
-<span data-ttu-id="5d4a9-104">在您遵循[在 Visual Studio 2017 中使用 .NET Core 建置 C# 類別庫](./library-with-visual-studio.md)或[在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic 類別庫](vb-library-with-visual-studio.md)中的步驟建立 .NET Standard 類別庫，並根據[在 Visual Studio 2017 中使用 .NET Core 測試類別庫](testing-library-with-visual-studio.md)中的指示測試該類別庫，然後建置該類別庫的發行版本之後，下一個步驟就是把它提供給呼叫端使用。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-104">Once you've created a .NET Standard class library by following the steps in [Building a C# class library with .NET Core in Visual Studio 2017](./library-with-visual-studio.md) or [Building a Visual Basic class library with .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md), tested it in [Testing a class library with .NET Core in Visual Studio 2017](testing-library-with-visual-studio.md), and built a Release version of the library, the next step is to make it available to callers.</span></span> <span data-ttu-id="5d4a9-105">執行這項作業的方法有兩種：</span><span class="sxs-lookup"><span data-stu-id="5d4a9-105">You can do this in two ways:</span></span>
+<span data-ttu-id="f0457-104">建立 .NET Standard 類別庫、測試它並建立程式庫的發行版本之後，下一步就是將它提供給呼叫者。</span><span class="sxs-lookup"><span data-stu-id="f0457-104">Once you've created a .NET Standard class library, tested it, and built a release version of the library, the next step is to make it available to callers.</span></span> <span data-ttu-id="f0457-105">您可以透過下列兩種方式來執行這項作業：</span><span class="sxs-lookup"><span data-stu-id="f0457-105">You can do this in two ways:</span></span>
 
-* <span data-ttu-id="5d4a9-106">如果該類別庫將供單一方案使用 (例如，如果它是單一大型應用程式中的元件)，您可以直接將它以專案的形式包含在您的方案中。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-106">If the library will be used by a single solution (for example, if it's a component in a single large application), you can include it as a project in your solution.</span></span>
+- <span data-ttu-id="f0457-106">如果該類別庫將供單一方案使用 (例如，如果它是單一大型應用程式中的元件)，您可以直接將它以專案的形式包含在您的方案中。</span><span class="sxs-lookup"><span data-stu-id="f0457-106">If the library will be used by a single solution (for example, if it's a component in a single large application), you can include it as a project in your solution.</span></span>
+- <span data-ttu-id="f0457-107">如果程式庫會公開提供，您可以將它發佈為 NuGet 套件。</span><span class="sxs-lookup"><span data-stu-id="f0457-107">If the library will be publicly available, you can distribute it as a NuGet package.</span></span>
 
-* <span data-ttu-id="5d4a9-107">如果該類別庫將可供一般存取，則可藉由 NuGet 套件的形式來散發它。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-107">If the library will be generally accessible, you can distribute it as a NuGet package.</span></span>
+<span data-ttu-id="f0457-108">在本教學課程中，您將了解如何：</span><span class="sxs-lookup"><span data-stu-id="f0457-108">In this tutorial, you learn how to:</span></span>
+> [!div class="checklist"]
+>
+> - <span data-ttu-id="f0457-109">將主控台應用程式新增至參考 .NET Standard 程式庫專案的方案。</span><span class="sxs-lookup"><span data-stu-id="f0457-109">Add a console app to your solution that references a .NET Standard library project.</span></span>
+> - <span data-ttu-id="f0457-110">建立包含 .NET Standard 程式庫專案的 NuGet 套件。</span><span class="sxs-lookup"><span data-stu-id="f0457-110">Create a NuGet package that contains a .NET Standard library project.</span></span>
 
-## <a name="including-a-library-as-a-project-in-a-solution"></a><span data-ttu-id="5d4a9-108">將類別庫以專案形式包含在方案中</span><span class="sxs-lookup"><span data-stu-id="5d4a9-108">Including a library as a project in a solution</span></span>
+## <a name="add-a-console-app-to-your-solution"></a><span data-ttu-id="f0457-111">將主控台應用程式新增至您的解決方案</span><span class="sxs-lookup"><span data-stu-id="f0457-111">Add a console app to your solution</span></span>
 
-<span data-ttu-id="5d4a9-109">就像您將單元測試包含在與類別庫相同的方案中一樣，您也可以將應用程式包含在該方案中。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-109">Just as you included unit tests in the same solution as your class library, you can include your application as part of that solution.</span></span> <span data-ttu-id="5d4a9-110">例如，您可以在提示使用者輸入字串並回報其第一個字元是否為大寫的主控台應用程式中，使用您的類別庫：</span><span class="sxs-lookup"><span data-stu-id="5d4a9-110">For example, you can use your class library in a console application that prompts the user to enter a string and reports whether its first character is uppercase:</span></span>
+<span data-ttu-id="f0457-112">就像您在[Visual Studio 的測試 .NET Standard 程式庫](testing-library-with-visual-studio.md)中，將單元測試包含在與類別庫相同的方案中，您可以將應用程式納入為該解決方案的一部分。</span><span class="sxs-lookup"><span data-stu-id="f0457-112">Just as you included unit tests in the same solution as your class library in [Test a .NET Standard library in Visual Studio](testing-library-with-visual-studio.md), you can include your application as part of that solution.</span></span> <span data-ttu-id="f0457-113">例如，您可以在提示使用者輸入字串並回報其第一個字元是否為大寫的主控台應用程式中，使用您的類別庫：</span><span class="sxs-lookup"><span data-stu-id="f0457-113">For example, you can use your class library in a console application that prompts the user to enter a string and reports whether its first character is uppercase:</span></span>
 
-<!-- markdownlint-disable MD025 -->
+1. <span data-ttu-id="f0457-114">開啟您在[Visual Studio 中建立 .NET Standard 程式庫一](library-with-visual-studio.md)文中所建立的 `ClassLibraryProjects` 解決方案。</span><span class="sxs-lookup"><span data-stu-id="f0457-114">Open the `ClassLibraryProjects` solution you created in the [Build a .NET Standard library in Visual Studio](library-with-visual-studio.md) article.</span></span>
 
-# <a name="ctabcsharp"></a>[<span data-ttu-id="5d4a9-111">C#</span><span class="sxs-lookup"><span data-stu-id="5d4a9-111">C#</span></span>](#tab/csharp)
+1. <span data-ttu-id="f0457-115">將名為 "展示" 的新 .NET Core 主控台應用程式加入至方案。</span><span class="sxs-lookup"><span data-stu-id="f0457-115">Add a new .NET Core console application named "ShowCase" to the solution.</span></span>
 
-1. <span data-ttu-id="5d4a9-112">開啟您[在 Visual Studio 2017 中使用 .NET Core 組置 C# 類別庫](./library-with-visual-studio.md)主題中建立的 `ClassLibraryProjects` 方案。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-112">Open the `ClassLibraryProjects` solution you created in the [Building a C# Class Library with .NET Core in Visual Studio 2017](./library-with-visual-studio.md) topic.</span></span> <span data-ttu-id="5d4a9-113">在方案總管 中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案，然後從內容功能表中，選取 [新增]  >  [新增專案]。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-113">In **Solution Explorer**, right-click the **ClassLibraryProjects** solution and select **Add** > **New Project** from the context menu.</span></span>
+   1. <span data-ttu-id="f0457-116">以滑鼠右鍵按一下**方案總管**中的方案，然後選取 [**加入** > **新增專案**]。</span><span class="sxs-lookup"><span data-stu-id="f0457-116">Right-click on the solution in **Solution Explorer** and select **Add** > **New project**.</span></span>
 
-1. <span data-ttu-id="5d4a9-114">在 [新增專案] 對話方塊中，展開 [Visual C#] 節點，選取後面跟著 [主控台應用程式 (.NET Core)] 專案範本的 [.NET Core] 節點。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-114">In the **Add New Project** dialog, expand the **Visual C#** node and select the **.NET Core** node followed by the **Console App (.NET Core)** project template.</span></span> <span data-ttu-id="5d4a9-115">在 [名稱] 文字方塊中，輸入 "ShowCase"，然後選取 [確定] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-115">In the **Name** text box, type "ShowCase", and select the **OK** button.</span></span>
+   1. <span data-ttu-id="f0457-117">在 [**加入新專案**] 頁面的 [搜尋] 方塊中，輸入**主控台**。</span><span class="sxs-lookup"><span data-stu-id="f0457-117">On the **Add a new project** page, enter **console** in the search box.</span></span> <span data-ttu-id="f0457-118">從**C#** [語言] 清單中選擇或**Visual Basic** ，然後從 [平臺] 清單中選擇 [**所有平臺**]。</span><span class="sxs-lookup"><span data-stu-id="f0457-118">Choose **C#** or **Visual Basic** from the Language list, and then choose **All platforms** from the Platform list.</span></span> <span data-ttu-id="f0457-119">選擇 [**主控台應用程式（.Net Core）** ] 範本，然後選擇 [**下一步]** 。</span><span class="sxs-lookup"><span data-stu-id="f0457-119">Choose the **Console App (.NET Core)** template, and then choose **Next**.</span></span>
 
-   ![Visual Studio [新增專案] 對話方塊 - C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
+   1. <span data-ttu-id="f0457-120">在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**展示**。</span><span class="sxs-lookup"><span data-stu-id="f0457-120">On the **Configure your new project** page, enter **ShowCase** in the **Project name** box.</span></span> <span data-ttu-id="f0457-121">接著，選擇 [建立]。</span><span class="sxs-lookup"><span data-stu-id="f0457-121">Then, choose **Create**.</span></span>
 
-1. <span data-ttu-id="5d4a9-117">在方案總管 中，以滑鼠右鍵按一下 **ShowCase** 專案，然後在內容功能表中選取 [設定為啟始專案]。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-117">In **Solution Explorer**, right-click the **ShowCase** project and select **Set as StartUp Project** in the context menu.</span></span>
+1. <span data-ttu-id="f0457-122">在方案總管 中，以滑鼠右鍵按一下 **ShowCase** 專案，然後在內容功能表中選取 [設定為啟始專案]。</span><span class="sxs-lookup"><span data-stu-id="f0457-122">In **Solution Explorer**, right-click the **ShowCase** project and select **Set as StartUp Project** in the context menu.</span></span>
 
-   ![Visual Studio 專案的設定啟始專案操作功能表 - C#](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
+   ![Visual Studio 專案操作功能表來設定啟始專案](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
-1. <span data-ttu-id="5d4a9-119">一開始，您的專案並無法存取類別庫。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-119">Initially, your project doesn't have access to your class library.</span></span> <span data-ttu-id="5d4a9-120">若要讓它在您的類別庫中呼叫方法，您可以建立類別庫的參考。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-120">To allow it to call methods in your class library, you create a reference to the class library.</span></span> <span data-ttu-id="5d4a9-121">在方案總管 中，以滑鼠右鍵按一下 `ShowCase` 專案的 [相依性] 節點，然後選取 [新增參考]。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-121">In **Solution Explorer**, right-click the `ShowCase` project's **Dependencies** node and select **Add Reference**.</span></span>
+1. <span data-ttu-id="f0457-124">一開始，您的專案並無法存取類別庫。</span><span class="sxs-lookup"><span data-stu-id="f0457-124">Initially, your project doesn't have access to your class library.</span></span> <span data-ttu-id="f0457-125">若要讓它在您的類別庫中呼叫方法，您可以建立類別庫的參考。</span><span class="sxs-lookup"><span data-stu-id="f0457-125">To allow it to call methods in your class library, you create a reference to the class library.</span></span> <span data-ttu-id="f0457-126">在方案總管 中，以滑鼠右鍵按一下 `ShowCase` 專案的 [相依性] 節點，然後選取 [新增參考]。</span><span class="sxs-lookup"><span data-stu-id="f0457-126">In **Solution Explorer**, right-click the `ShowCase` project's **Dependencies** node and select **Add Reference**.</span></span>
 
-   ![Visual Studio 專案的 [新增參考] 操作功能表 - C#](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
+   ![Visual Studio 中的 [新增參考] 內容功能表](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
-1. <span data-ttu-id="5d4a9-123">在 [參考管理員] 對話方塊中，選取**StringLibrary**、您的類別庫專案，然後選取 [確定] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-123">In the **Reference Manager** dialog, select **StringLibrary**, your class library project, and select the **OK** button.</span></span>
+1. <span data-ttu-id="f0457-128">在 [參考管理員] 對話方塊中，選取**StringLibrary**、您的類別庫專案，然後選取 [確定] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="f0457-128">In the **Reference Manager** dialog, select **StringLibrary**, your class library project, and select the **OK** button.</span></span>
 
-   ![Visual Studio [參考管理員] 對話方塊 - C#](./media/consuming-library-with-visual-studio/manage-project-references.png)
+   ![已選取 StringLibrary 的參考管理員對話方塊](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
-1. <span data-ttu-id="5d4a9-125">在 *Program.cs* 檔案的程式碼視窗中，以下列程式碼取代所有程式碼：</span><span class="sxs-lookup"><span data-stu-id="5d4a9-125">In the code window for the *Program.cs* file, replace all of the code with the following code:</span></span>
+1. <span data-ttu-id="f0457-130">在*Program.cs*或*Program .Vb*檔案的程式碼視窗中，將所有程式碼取代為下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="f0457-130">In the code window for the *Program.cs* or *Program.vb* file, replace all of the code with the following code:</span></span>
 
-   [!CODE-csharp[UsingClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
+   [!code-csharp[UsingClassLib#1](~/samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
+   [!code-vb[UsingClassLib#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
 
-   <span data-ttu-id="5d4a9-126">該程式碼會使用 `row` 變數來維護寫入至主控台視窗的資料列數目計數。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-126">The code uses the `row` variable to maintain a count of the number of rows of data written to the console window.</span></span> <span data-ttu-id="5d4a9-127">當它大於或等於 25 時，程式碼就會清除主控台視窗，並向使用者顯示訊息。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-127">Whenever it is greater than or equal to 25, the code clears the console window and displays a message to the user.</span></span>
+   <span data-ttu-id="f0457-131">該程式碼會使用 `row` 變數來維護寫入至主控台視窗的資料列數目計數。</span><span class="sxs-lookup"><span data-stu-id="f0457-131">The code uses the `row` variable to maintain a count of the number of rows of data written to the console window.</span></span> <span data-ttu-id="f0457-132">當它大於或等於25時，程式碼就會清除主控台視窗，並向使用者顯示訊息。</span><span class="sxs-lookup"><span data-stu-id="f0457-132">Whenever it's greater than or equal to 25, the code clears the console window and displays a message to the user.</span></span>
 
-   <span data-ttu-id="5d4a9-128">此程式會提示使用者輸入字串。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-128">The program prompts the user to enter a string.</span></span> <span data-ttu-id="5d4a9-129">它會指出該字串開頭是否為大寫字元。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-129">It indicates whether the string starts with an uppercase character.</span></span> <span data-ttu-id="5d4a9-130">如果使用者沒有輸入字串就按 Enter 鍵，應用程式就會終止且主控台視窗會關閉。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-130">If the user presses the Enter key without entering a string, the application terminates, and the console window closes.</span></span>
+   <span data-ttu-id="f0457-133">此程式會提示使用者輸入字串。</span><span class="sxs-lookup"><span data-stu-id="f0457-133">The program prompts the user to enter a string.</span></span> <span data-ttu-id="f0457-134">它會指出該字串開頭是否為大寫字元。</span><span class="sxs-lookup"><span data-stu-id="f0457-134">It indicates whether the string starts with an uppercase character.</span></span> <span data-ttu-id="f0457-135">如果使用者在未輸入字串的情況下按 Enter 鍵，應用程式就會結束，而且主控台視窗會關閉。</span><span class="sxs-lookup"><span data-stu-id="f0457-135">If the user presses the Enter key without entering a string, the application ends, and the console window closes.</span></span>
 
-1. <span data-ttu-id="5d4a9-131">必要時，變更工具列以編譯 `ShowCase` 專案的 [偵錯] 版本。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-131">If necessary, change the toolbar to compile the **Debug** release of the `ShowCase` project.</span></span> <span data-ttu-id="5d4a9-132">選取 **ShowCase** 按鈕上的綠色箭號，以編譯並執行程式。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-132">Compile and run the program by selecting the green arrow on the **ShowCase** button.</span></span>
+1. <span data-ttu-id="f0457-136">必要時，變更工具列以編譯 `ShowCase` 專案的 [偵錯] 版本。</span><span class="sxs-lookup"><span data-stu-id="f0457-136">If necessary, change the toolbar to compile the **Debug** release of the `ShowCase` project.</span></span> <span data-ttu-id="f0457-137">選取 **ShowCase** 按鈕上的綠色箭號，以編譯並執行程式。</span><span class="sxs-lookup"><span data-stu-id="f0457-137">Compile and run the program by selecting the green arrow on the **ShowCase** button.</span></span>
 
-   ![顯示 [偵錯] 按鈕的 Visual Studio 專案工具列 - C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+   ![顯示調試按鈕的 Visual Studio 專案工具列](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 
-# <a name="visual-basictabvb"></a>[<span data-ttu-id="5d4a9-134">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5d4a9-134">Visual Basic</span></span>](#tab/vb)
+<span data-ttu-id="f0457-139">您可以遵循[使用 Visual Studio 來處理C#或 Visual Basic .net core Hello World 應用程式](debugging-with-visual-studio.md)中的步驟，並透過[Visual Studio 發行您的 .net core Hello World 應用](publishing-with-visual-studio.md)程式，以使用此程式庫來進行偵錯工具和發行。</span><span class="sxs-lookup"><span data-stu-id="f0457-139">You can debug and publish the application that uses this library by following the steps in [Debug your C# or Visual Basic .NET Core Hello World application using Visual Studio](debugging-with-visual-studio.md) and [Publish your .NET Core Hello World application with Visual Studio](publishing-with-visual-studio.md).</span></span>
 
-1. <span data-ttu-id="5d4a9-135">開啟您[在 Visual Studio 2017 中使用 .NET Core 建置類別庫](vb-library-with-visual-studio.md)主題中建立的 `ClassLibraryProjects` 解決方案。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-135">Open the `ClassLibraryProjects` solution you created in the [Building a class Library with Visual Basic and .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) topic.</span></span> <span data-ttu-id="5d4a9-136">在方案總管 中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案，然後從內容功能表中，選取 [新增]  >  [新增專案]。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-136">In **Solution Explorer**, right-click the **ClassLibraryProjects** solution and select **Add** > **New Project** from the context menu.</span></span>
+## <a name="create-a-nuget-package"></a><span data-ttu-id="f0457-140">建立 NuGet 套件</span><span class="sxs-lookup"><span data-stu-id="f0457-140">Create a NuGet package</span></span>
 
-1. <span data-ttu-id="5d4a9-137">在 [新增專案] 對話方塊中，展開 [Visual Basic] 節點，選取後面跟著 [主控台應用程式 (.NET Core)] 專案範本的 [.NET Core] 節點。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-137">In the **Add New Project** dialog, expand the **Visual Basic** node and select the **.NET Core** node followed by the **Console App (.NET Core)** project template.</span></span> <span data-ttu-id="5d4a9-138">在 [名稱] 文字方塊中，輸入 "ShowCase"，然後選取 [確定] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-138">In the **Name** text box, type "ShowCase", and select the **OK** button.</span></span>
+<span data-ttu-id="f0457-141">您可以藉由 NuGet 套件的形式發行類別庫，讓您的類別庫可供廣泛使用。</span><span class="sxs-lookup"><span data-stu-id="f0457-141">You can make your class library widely available by publishing it as a NuGet package.</span></span> <span data-ttu-id="f0457-142">Visual Studio 不支援建立 NuGet 套件。</span><span class="sxs-lookup"><span data-stu-id="f0457-142">Visual Studio doesn't support the creation of NuGet packages.</span></span> <span data-ttu-id="f0457-143">若要建立一個，您必須使用 .NET Core CLI 的命令：</span><span class="sxs-lookup"><span data-stu-id="f0457-143">To create one, you need to use the .NET Core CLI commands:</span></span>
 
-   ![Visual Studio [新增專案] 對話方塊 - Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
+1. <span data-ttu-id="f0457-144">開啟主控台視窗。</span><span class="sxs-lookup"><span data-stu-id="f0457-144">Open a console window.</span></span>
 
-1. <span data-ttu-id="5d4a9-140">在方案總管 中，以滑鼠右鍵按一下 **ShowCase** 專案，然後在內容功能表中選取 [設定為啟始專案]。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-140">In **Solution Explorer**, right-click the **ShowCase** project and select **Set as StartUp Project** in the context menu.</span></span> 
+   <span data-ttu-id="f0457-145">例如，在 Windows 工作列的 [搜尋] 方塊中輸入 [**命令提示**字元]。</span><span class="sxs-lookup"><span data-stu-id="f0457-145">For example, enter **Command Prompt** in the search box on the Windows task bar.</span></span> <span data-ttu-id="f0457-146">選取 [**命令提示**字元] 桌面應用程式，或按下**enter** （如果已在搜尋結果中選取）。</span><span class="sxs-lookup"><span data-stu-id="f0457-146">Select the **Command Prompt** desktop app or press **Enter** if it's already selected in the search results.</span></span>
 
-   ![Visual Studio 專案的設定啟始專案操作功能表 - Visual Basic](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
+1. <span data-ttu-id="f0457-147">瀏覽至您類別庫的專案目錄。</span><span class="sxs-lookup"><span data-stu-id="f0457-147">Navigate to your library's project directory.</span></span> <span data-ttu-id="f0457-148">此目錄包含您的原始程式碼和專案檔*StringLibrary*或*StringLibrary. vbproj*。</span><span class="sxs-lookup"><span data-stu-id="f0457-148">The directory contains your source code and a project file, *StringLibrary.csproj* or *StringLibrary.vbproj*.</span></span>
 
-1. <span data-ttu-id="5d4a9-142">一開始，您的專案並無法存取類別庫。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-142">Initially, your project doesn't have access to your class library.</span></span> <span data-ttu-id="5d4a9-143">若要讓它在您的類別庫中呼叫方法，您可以建立類別庫的參考。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-143">To allow it to call methods in your class library, you create a reference to the class library.</span></span> <span data-ttu-id="5d4a9-144">在方案總管 中，以滑鼠右鍵按一下 `ShowCase` 專案的 [相依性] 節點，然後選取 [新增參考]。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-144">In **Solution Explorer**, right-click the `ShowCase` project's **Dependencies** node and select **Add Reference**.</span></span>
+1. <span data-ttu-id="f0457-149">執行[dotnet pack](../tools/dotnet-pack.md)命令以產生副檔名為*nupkg*的套件：</span><span class="sxs-lookup"><span data-stu-id="f0457-149">Run the [dotnet pack](../tools/dotnet-pack.md) command to generate a package with a *.nupkg* extension:</span></span>
 
-   ![Visual Studio 專案的 [新增參考] 操作功能表 - Visual Basic](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
-
-1. <span data-ttu-id="5d4a9-146">在 [參考管理員] 對話方塊中，選取**StringLibrary**、您的類別庫專案，然後選取 [確定] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-146">In the **Reference Manager** dialog, select **StringLibrary**, your class library project, and select the **OK** button.</span></span>
-
-   ![Visual Studio [參考管理員] 對話方塊 - Visual Basic](./media/consuming-library-with-visual-studio/manage-project-references.png)
-
-1. <span data-ttu-id="5d4a9-148">在 *Program.vb* 檔案的程式碼視窗中，以下列程式碼取代所有程式碼：</span><span class="sxs-lookup"><span data-stu-id="5d4a9-148">In the code window for the *Program.vb* file, replace all of the code with the following code:</span></span>
-
-    [!CODE-vb[UsingClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
-
-   <span data-ttu-id="5d4a9-149">該程式碼會使用 `row` 變數來維護寫入至主控台視窗的資料列數目計數。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-149">The code uses the `row` variable to maintain a count of the number of rows of data written to the console window.</span></span> <span data-ttu-id="5d4a9-150">當它大於或等於 25 時，程式碼就會清除主控台視窗，並向使用者顯示訊息。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-150">Whenever it is greater than or equal to 25, the code clears the console window and displays a message to the user.</span></span>
-
-   <span data-ttu-id="5d4a9-151">此程式會提示使用者輸入字串。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-151">The program prompts the user to enter a string.</span></span> <span data-ttu-id="5d4a9-152">它會指出該字串開頭是否為大寫字元。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-152">It indicates whether the string starts with an uppercase character.</span></span> <span data-ttu-id="5d4a9-153">如果使用者沒有輸入字串就按 Enter 鍵，應用程式就會終止且主控台視窗會關閉。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-153">If the user presses the Enter key without entering a string, the application terminates, and the console window closes.</span></span>
-
-1. <span data-ttu-id="5d4a9-154">必要時，變更工具列以編譯 `ShowCase` 專案的 [偵錯] 版本。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-154">If necessary, change the toolbar to compile the **Debug** release of the `ShowCase` project.</span></span> <span data-ttu-id="5d4a9-155">選取 **ShowCase** 按鈕上的綠色箭號，以編譯並執行程式。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-155">Compile and run the program by selecting the green arrow on the **ShowCase** button.</span></span>
-
-   ![工具列上的 [偵錯] - Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
-
----
-
-<span data-ttu-id="5d4a9-157">您可以遵循[使用 Visual Studio 2017 針對 Hello World 應用程式進行偵錯](debugging-with-visual-studio.md)和[使用 Visual Studio 2017 發行 Hello World 應用程式](publishing-with-visual-studio.md)中的步驟操作，對使用此類別庫的應用程式進行偵錯並加以發行。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-157">You can debug and publish the application that uses this library by following the steps in [Debugging your Hello World application with Visual Studio 2017](debugging-with-visual-studio.md) and [Publishing your Hello World Application with Visual Studio 2017](publishing-with-visual-studio.md).</span></span>
-
-## <a name="distributing-the-library-in-a-nuget-package"></a><span data-ttu-id="5d4a9-158">以 NuGet 套件散發類別庫</span><span class="sxs-lookup"><span data-stu-id="5d4a9-158">Distributing the library in a NuGet package</span></span>
-
-<span data-ttu-id="5d4a9-159">您可以藉由 NuGet 套件的形式發行類別庫，讓您的類別庫可供廣泛使用。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-159">You can make your class library widely available by publishing it as a NuGet package.</span></span> <span data-ttu-id="5d4a9-160">Visual Studio 不支援建立 NuGet 套件。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-160">Visual Studio does not support the creation of NuGet packages.</span></span> <span data-ttu-id="5d4a9-161">若要建立該套件，您需使用 [`dotnet` 命令列公用程式](../tools/dotnet.md)：</span><span class="sxs-lookup"><span data-stu-id="5d4a9-161">To create one, you use the [`dotnet` command line utility](../tools/dotnet.md):</span></span>
-
-1. <span data-ttu-id="5d4a9-162">開啟主控台視窗。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-162">Open a console window.</span></span> <span data-ttu-id="5d4a9-163">例如，在 Windows 工作列的 [請隨意提出問題] 文字方塊中，輸入`Command Prompt` (或 `cmd` 簡稱)，然後選取 [命令提示字元] 桌面應用程式，或按 Enter 鍵 (如果已在搜尋結果中選取該應用程式) 來開啟主控台視窗。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-163">For example in the **Ask me anything** text box in the Windows taskbar, enter `Command Prompt` (or `cmd` for short), and open a console window by either selecting the **Command Prompt** desktop app or pressing Enter if it's selected in the search results.</span></span>
-
-1. <span data-ttu-id="5d4a9-164">瀏覽至您類別庫的專案目錄。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-164">Navigate to your library's project directory.</span></span> <span data-ttu-id="5d4a9-165">除非您已重新設定一般檔案位置，否則該位置會是 *Documents\Visual Studio 2017\Projects\ClassLibraryProjects\StringLibrary* 目錄。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-165">Unless you've reconfigured the typical file location, it's in the *Documents\Visual Studio 2017\Projects\ClassLibraryProjects\StringLibrary* directory.</span></span> <span data-ttu-id="5d4a9-166">此目錄包含您的原始程式碼和專案檔 *StringLibrary.csproj*。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-166">The directory contains your source code and a project file, *StringLibrary.csproj*.</span></span>
-
-1. <span data-ttu-id="5d4a9-167">發出命令 `dotnet pack --no-build`。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-167">Issue the command `dotnet pack --no-build`.</span></span> <span data-ttu-id="5d4a9-168">`dotnet` 公用程式會產生一個副檔名為 *.nupkg* 的套件。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-168">The `dotnet` utility generates a package with a *.nupkg* extension.</span></span>
+   ```dotnetcli
+   dotnet pack --no-build
+   ```
 
    > [!TIP]
-   > <span data-ttu-id="5d4a9-169">如果包含 *dotnet.exe* 的目錄不在您的 PATH 中，則您可以在主控台視窗中輸入 `where dotnet.exe` 來尋找其位置。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-169">If the directory that contains *dotnet.exe* is not in your PATH, you can find its location by entering `where dotnet.exe` in the console window.</span></span>
+   > <span data-ttu-id="f0457-150">如果包含 *dotnet.exe* 的目錄不在您的 PATH 中，則您可以在主控台視窗中輸入 `where dotnet.exe` 來尋找其位置。</span><span class="sxs-lookup"><span data-stu-id="f0457-150">If the directory that contains *dotnet.exe* is not in your PATH, you can find its location by entering `where dotnet.exe` in the console window.</span></span>
 
-<span data-ttu-id="5d4a9-170">如需有關建立 NuGet 套件的詳細資訊，請參閱[如何使用跨平台工具建立 NuGet 套件](../deploying/creating-nuget-packages.md)。</span><span class="sxs-lookup"><span data-stu-id="5d4a9-170">For more information on creating NuGet packages, see [How to Create a NuGet Package with Cross Platform Tools](../deploying/creating-nuget-packages.md).</span></span>
+<span data-ttu-id="f0457-151">如需有關建立 NuGet 套件的詳細資訊，請參閱[如何使用跨平台工具建立 NuGet 套件](../deploying/creating-nuget-packages.md)。</span><span class="sxs-lookup"><span data-stu-id="f0457-151">For more information on creating NuGet packages, see [How to Create a NuGet Package with Cross Platform Tools](../deploying/creating-nuget-packages.md).</span></span>
