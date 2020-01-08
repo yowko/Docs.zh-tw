@@ -1,15 +1,15 @@
 ---
-title: 如何：查詢字串中的字元 (LINQ) (C#)
+title: 如何查詢字串中的字元（LINQ）（C#）
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: bc72c4370ff408a60f48aa020a16dae7f48f702a
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: d85e488a38a6167505732103b4c540cade6ea9bc
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140968"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345673"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>如何：查詢字串中的字元 (LINQ) (C#)
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>如何查詢字串中的字元（LINQ）（C#）
 因為 <xref:System.String> 類別會實作泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面，所以可以用字元序列的形式查詢任何字串。 不過，這不是常見的 LINQ 用法。 對於複雜的模式比對作業，使用 <xref:System.Text.RegularExpressions.Regex> 類別。  
   
 ## <a name="example"></a>範例  

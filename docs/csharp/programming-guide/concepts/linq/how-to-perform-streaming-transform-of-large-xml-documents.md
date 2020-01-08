@@ -1,25 +1,25 @@
 ---
-title: 作法：執行大型 XML 文件的資料流轉換 (C#)
+title: 如何執行大型 XML 檔的串流轉換（C#）
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-ms.openlocfilehash: 3ddafc0e053a5dc18d024588e9f71081c8d6da14
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 86b74534635dcca7e8c7f94873abcb50ea7c4d2b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593189"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345818"
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>作法：執行大型 XML 文件的資料流轉換 (C#)
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>如何執行大型 XML 檔的串流轉換（C#）
 有時候您必須轉換大型 XML 檔案並撰寫您的應用程式，讓應用程式的記憶體使用量可以預測。 如果您嘗試使用非常大的 XML 檔案填入 XML 樹狀結構，您的記憶體使用量將與檔案大小成正比 (也就是，變成過度)。 因此，您應該改用資料流技術。  
   
  在您僅需要處理一次來源文件的情況下，最適合使用資料流技術，而且您可以用文件的順序處理項目。 特定的標準查詢運算子 (例如，<xref:System.Linq.Enumerable.OrderBy%2A>) 會反覆查看其來源、收集所有資料、排序這些資料，最後產生順序中的第一個項目。 請注意，如果您在產生第一個項目前使用具體化其來源的查詢運算子，您將不會為應用程式保留小的記憶體使用量。  
   
- 即使您使用 [HOW TO：透過存取標頭資訊來串流 XML 片段 (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) 中所描述的技術，如果您嘗試組合包含已轉換文件的 XML 樹狀結構，記憶體使用量將會太大。  
+即使您使用[如何串流 xml 片段並存取標頭資訊（C#）](./how-to-stream-xml-fragments-with-access-to-header-information.md)中所述的技術，如果您嘗試組合包含已轉換之檔的 xml 樹狀結構，記憶體使用量將會太大。
   
  有兩個主要方法。 其中一個方法是使用 <xref:System.Xml.Linq.XStreamingElement> 的延緩處理特性。 另一個方法則是建立 <xref:System.Xml.XmlWriter>，然後使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能，將項目寫入到 <xref:System.Xml.XmlWriter> 中。 這個主題會示範這兩種方法。  
   
 ## <a name="example"></a>範例  
- 下列範例會以下連結中的範例為基礎建置：[如何：透過存取標頭資訊來串流 XML 片段 (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md)。  
+ 下列範例是以[如何串流 XML 片段並存取標頭資訊（C#）](./how-to-stream-xml-fragments-with-access-to-header-information.md)中的範例為基礎。
   
  這個範例會使用 <xref:System.Xml.Linq.XStreamingElement> 的延後執行功能來串流輸出。 此範例可以轉換非常大的文件，同時維護小的記憶體使用量。  
   
@@ -189,7 +189,7 @@ static void Main(string[] args)
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例也會以下連結中的範例為基礎建置：[如何：透過存取標頭資訊來串流 XML 片段 (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md)。  
+下列範例也是以[如何串流 XML 片段並存取標頭資訊（C#）](./how-to-stream-xml-fragments-with-access-to-header-information.md)中的範例為基礎。
   
  此範例會使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能，將項目寫入到 <xref:System.Xml.XmlWriter> 中。 此範例可以轉換非常大的文件，同時維護小的記憶體使用量。  
   

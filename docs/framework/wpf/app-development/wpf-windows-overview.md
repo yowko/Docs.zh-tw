@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 87d5ff67a9e95c5ec5385802d09d667ee8b6e0f9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3bc31391d30b0724a480152aa7f1d0dc93380b8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740686"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636402"
 ---
 # <a name="wpf-windows-overview"></a>WPF 視窗概觀
-使用者透過 Windows 與 Windows Presentation Foundation （WPF）獨立應用程式互動。 視窗的主要用途是裝載內容，以視覺化方式檢視資料，並讓使用者可以與資料互動。 獨立 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式會使用 <xref:System.Windows.Window> 類別來提供自己的視窗。 本主題介紹在獨立應用程式中建立和管理 windows 的基本概念之前的 <xref:System.Windows.Window>。  
+使用者透過 Windows 與 Windows Presentation Foundation （WPF）獨立應用程式互動。 視窗的主要用途是裝載內容，以視覺化方式檢視資料，並讓使用者可以與資料互動。 獨立 WPF 應用程式會使用 <xref:System.Windows.Window> 類別來提供自己的視窗。 本主題介紹在獨立應用程式中建立和管理 windows 的基本概念之前的 <xref:System.Windows.Window>。  
   
 > [!NOTE]
-> 瀏覽器裝載 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式，包括 XAML 瀏覽器應用程式（Xbap）和鬆散 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 頁面，不提供自己的視窗。 相反地，它們是裝載于 Windows Internet Explorer 所提供的 windows 中。 請參閱[WPF XAML 瀏覽器應用程式總覽](wpf-xaml-browser-applications-overview.md)。  
+> 瀏覽器裝載的 WPF 應用程式（包括 XAML 瀏覽器應用程式（Xbap）和鬆散 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 頁面）不會提供自己的視窗。 相反地，它們是裝載于 Windows Internet Explorer 所提供的 windows 中。 請參閱[WPF XAML 瀏覽器應用程式總覽](wpf-xaml-browser-applications-overview.md)。  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Window 類別  
@@ -49,7 +49,7 @@ ms.locfileid: "73740686"
   
  視窗分為兩個區域︰非工作區和工作區。  
   
- 視窗的*非工作區*是由 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 所執行，而且包含大部分視窗通用的視窗部分，包括下列各項：  
+ 視窗的*非工作區*是由 WPF 所執行，而且包含大部分視窗通用的視窗部分，包括下列各項：  
   
 - 框線。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73740686"
   
  視窗的*工作區*是在視窗的非工作區中的區域，開發人員會使用它來新增應用程式特定的內容，例如功能表列、工具列和控制項。  
   
- 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，視窗是由您用來執行下列動作的 <xref:System.Windows.Window> 類別所封裝：  
+ 在 WPF 中，視窗是由您用來執行下列動作的 <xref:System.Windows.Window> 類別所封裝：  
   
 - 顯示視窗。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "73740686"
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>實作視窗  
- 一般視窗的執行包含外觀和行為，其中的*外觀*會定義視窗外觀給使用者的方式，而*行為*會定義視窗功能與使用者互動的方式。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，您可以使用程式碼或 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 標記來執行視窗的外觀和行為。  
+ 一般視窗的執行包含外觀和行為，其中的*外觀*會定義視窗外觀給使用者的方式，而*行為*會定義視窗功能與使用者互動的方式。 在 WPF 中，您可以使用程式碼或 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 標記來執行視窗的外觀和行為。  
   
  不過，一般情況下，視窗的外觀會使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 標記來執行，而且其行為會使用程式碼後置來執行，如下列範例所示。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "73740686"
 </Project>  
 ```  
   
- 如需建立 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式的相關資訊，請參閱[建立 WPF 應用程式](building-a-wpf-application-wpf.md)。  
+ 如需建立 WPF 應用程式的相關資訊，請參閱[建立 Wpf 應用程式](building-a-wpf-application-wpf.md)。  
   
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>視窗存留期  
@@ -262,7 +262,7 @@ ms.locfileid: "73740686"
  如果 <xref:System.Windows.Window.Closing> 未處理，或已處理但未取消，視窗將會關閉。 在視窗實際關閉之前，會引發 <xref:System.Windows.Window.Closed>。 此時無法防止視窗關閉。  
   
 > [!NOTE]
-> 應用程式可以設定為在主應用程式視窗關閉時自動關閉（請參閱 <xref:System.Windows.Application.MainWindow%2A>）或最後一個視窗關閉。 如需詳細資訊，請參閱 <xref:System.Windows.Application.ShutdownMode%2A>。  
+> 應用程式可以設定為在主應用程式視窗關閉時自動關閉（請參閱 <xref:System.Windows.Application.MainWindow%2A>）或最後一個視窗關閉。 如需詳細資訊，請參閱＜<xref:System.Windows.Application.ShutdownMode%2A>＞。  
   
  雖然可以透過非用戶端和用戶端區域中提供的機制明確地關閉視窗，但也可以在應用程式或視窗的其他部分中，以隱含方式關閉視窗，包括下列各項：  
   
@@ -325,13 +325,13 @@ ms.locfileid: "73740686"
   
  如果您想要讓視窗的寬度和高度符合視窗內容的大小，您可以使用 [<xref:System.Windows.Window.SizeToContent%2A>] 屬性，其中包含下列值：  
   
-- <xref:System.Windows.SizeToContent.Manual> 無效果 (預設值)。  
+- <xref:System.Windows.SizeToContent.Manual>。 無效果 (預設值)。  
   
-- <xref:System.Windows.SizeToContent.Width> 符合內容寬度，其效果與將 <xref:System.Windows.FrameworkElement.MinWidth%2A> 和 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 設定為內容的寬度相同。  
+- <xref:System.Windows.SizeToContent.Width>。 符合內容寬度，其效果與將 <xref:System.Windows.FrameworkElement.MinWidth%2A> 和 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 設定為內容的寬度相同。  
   
-- <xref:System.Windows.SizeToContent.Height> 符合內容高度，其效果等同于將 <xref:System.Windows.FrameworkElement.MinHeight%2A> 和 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 設定為內容的高度。  
+- <xref:System.Windows.SizeToContent.Height>。 符合內容高度，其效果等同于將 <xref:System.Windows.FrameworkElement.MinHeight%2A> 和 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 設定為內容的高度。  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight> 符合內容寬度和高度，其效果與將 <xref:System.Windows.FrameworkElement.MinHeight%2A> 和 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 設定為內容的高度相同，並將 <xref:System.Windows.FrameworkElement.MinWidth%2A> 和 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 設定為內容的寬度。  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>。 符合內容寬度和高度，其效果與將 <xref:System.Windows.FrameworkElement.MinHeight%2A> 和 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 設定為內容的高度相同，並將 <xref:System.Windows.FrameworkElement.MinWidth%2A> 和 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 設定為內容的寬度。  
   
  下列範例顯示自動調整垂直和水平大小以符合其內容的視窗，第一次顯示時的樣子。  
   
@@ -401,7 +401,7 @@ ms.locfileid: "73740686"
 
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>調整大小模式  
- 視 <xref:System.Windows.Window.WindowStyle%2A> 屬性而定，您可以控制使用者可以如何調整視窗大小。 視窗樣式的選擇會影響使用者是否可以使用滑鼠拖曳框線來調整視窗大小，而非工作區上是否顯示 [**最小化**]、[**最大化**] 和 [重**設大小**] 按鈕，以及是否出現後.  
+ 視 <xref:System.Windows.Window.WindowStyle%2A> 屬性而定，您可以控制使用者可以如何調整視窗大小。 視窗樣式的選擇會影響使用者是否可以使用滑鼠拖曳框線來調整視窗大小、是否顯示 [**最小化**]、[**最大化**] 和 [重**設大小**] 按鈕是否出現在非工作區上，以及是否已啟用。  
   
  您可以藉由設定其 <xref:System.Windows.Window.ResizeMode%2A> 屬性（它可以是下列其中一個 <xref:System.Windows.ResizeMode> 列舉值）來設定視窗的調整大小：  
   

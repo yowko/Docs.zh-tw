@@ -1,15 +1,15 @@
 ---
-title: 如何：使用 LINQ 查詢 ArrayList (C#)
+title: 如何使用 LINQ 查詢 ArrayList （C#）
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: c22cd6ef22b5ca182266c1e8db10151e07567fc6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b8edb90d33c92324d4f76c7e6977641fe4499d9d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969817"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345698"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-c"></a>如何：使用 LINQ 查詢 ArrayList (C#)
+# <a name="how-to-query-an-arraylist-with-linq-c"></a>如何使用 LINQ 查詢 ArrayList （C#）
 使用 LINQ 查詢非泛型 <xref:System.Collections.IEnumerable> 集合時 (例如 <xref:System.Collections.ArrayList>)，您必須明確宣告範圍變數的類型，以反映集合中特定類型的物件。 例如，如果您有 `Student` 物件的 <xref:System.Collections.ArrayList>，您的 [from 子句](../../../language-reference/keywords/from-clause.md)看起來應該如下：  
   
 ```csharp

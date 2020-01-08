@@ -10,44 +10,53 @@ helpviewer_keywords:
 - source code in multiple languages
 - languages, multiple language support by CodeDOM
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
-ms.openlocfilehash: a7e341bb5bfb5b4648a222409951275169a29b79
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7379bac07de9b78369d3742fa3288f6fea6a573f
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130247"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544994"
 ---
-# <a name="dynamic-source-code-generation-and-compilation"></a>動態原始程式碼的產生和編譯
+# <a name="compile-and-generate-dynamic-source-code"></a>編譯並產生動態原始程式碼
+
 .NET Framework 包含稱為程式碼文件物件模型 (CodeDOM) 的機制，它可讓發出原始程式碼的程式開發人員在執行階段，根據代表要呈現之程式碼的單一模型，產生多種程式語言的原始程式碼。  
   
- 為了代表原始程式碼，CodeDOM 項目會彼此連結，形成稱為 CodeDOM 圖形的資料結構，它會建立一些原始程式碼結構的模型。  
+為了代表原始程式碼，CodeDOM 項目會彼此連結，形成稱為 CodeDOM 圖形的資料結構，它會建立一些原始程式碼結構的模型。  
   
- `System.CodeDom` 命名空間會定義類型，可代表獨立於特定程式設計語言的原始碼邏輯結構。 `System.CodeDom.Compiler` 命名空間會定義類型，以從 CodeDOM 圖表產生原始程式碼，以及管理使用支援語言的原始程式碼編譯。 編譯器廠商或開發人員可以擴充支援的語言集。  
+<xref:System.CodeDom?displayProperty=fullName> 命名空間會定義類型，可代表獨立於特定程式設計語言的原始碼邏輯結構。 <xref:System.CodeDom.Compiler?displayProperty=fullName> 命名空間會定義類型，以從 CodeDOM 圖表產生原始程式碼，以及管理使用支援語言的原始程式碼編譯。 編譯器廠商或開發人員可以擴充支援的語言集。  
   
- 程式需要產生適用於多種語言的程式模型原始程式碼，或是不確定目標語言的原始程式碼時，很適合使用與語言無關的原始程式碼模型。 比方說，某些設計工具使用 CodeDOM 作為語言抽象介面，以正確的程式設計語言產生程式碼，如果該語言支援 CodeDOM 的話。  
+程式需要產生適用於多種語言的程式模型原始程式碼，或是不確定目標語言的原始程式碼時，很適合使用與語言無關的原始程式碼模型。 比方說，某些設計工具使用 CodeDOM 作為語言抽象介面，以正確的程式設計語言產生程式碼，如果該語言支援 CodeDOM 的話。  
   
- .NET Framework 包含 <xref:Microsoft.CSharp.CSharpCodeProvider>、<xref:Microsoft.JScript.JScriptCodeProvider> 和 <xref:Microsoft.VisualBasic.VBCodeProvider> 的程式碼產生器和程式碼編譯器。  
+.NET Framework 包含 <xref:Microsoft.CSharp.CSharpCodeProvider>、<xref:Microsoft.JScript.JScriptCodeProvider> 和 <xref:Microsoft.VisualBasic.VBCodeProvider> 的程式碼產生器和程式碼編譯器。  
   
-## <a name="in-this-section"></a>本章節內容  
- [使用 CodeDOM](using-the-codedom.md)  
- 說明常見的用法，並示範使用 CodeDOM 建置簡單的物件圖形。  
+## <a name="in-this-section"></a>本節內容
+
+- [使用 CodeDOM](using-the-codedom.md)
+
+  說明常見的用法，並示範使用 CodeDOM 建置簡單的物件圖形。  
   
- [從 CodeDOM 圖表產生原始程式碼和編譯程式](generating-and-compiling-source-code-from-a-codedom-graph.md)  
- 描述如何產生原始程式碼，和使用外部編譯器以及 `System.CodeDom.Compiler` 命名空間中定義的類別編譯產生的程式碼。  
+- [從 CodeDOM 圖表產生原始程式碼並編譯器](generating-and-compiling-source-code-from-a-codedom-graph.md)  
+
+  描述如何產生原始程式碼，和使用外部編譯器以及 `System.CodeDom.Compiler` 命名空間中定義的類別編譯產生的程式碼。  
   
- [如何：使用 CodeDOM 建立 XML 文件檔案](how-to-create-an-xml-documentation-file-using-codedom.md)  
- 描述如何使用 CodeDOM 產生程式碼和 XML 文件註解，並編譯產生的程式碼，以建立 XML 文件輸出。  
+- [如何：使用 CodeDOM 建立 XML 文件檔案](how-to-create-an-xml-documentation-file-using-codedom.md)  
+
+  描述如何使用 CodeDOM 產生程式碼和 XML 文件註解，並編譯產生的程式碼，以建立 XML 文件輸出。  
   
- [如何：使用 CodeDOM 建立類別](how-to-create-a-class-using-codedom.md)  
- 描述如何使用 CodeDOM 產生包含欄位、屬性、方法、建構函式和進入點的類別。  
+- [如何：使用 CodeDOM 建立類別](how-to-create-a-class-using-codedom.md)  
+
+  描述如何使用 CodeDOM 產生包含欄位、屬性、方法、建構函式和進入點的類別。  
   
 ## <a name="reference"></a>參考資料  
- <xref:System.CodeDom>  
- 定義元素，代表以 Common Language Runtime 為目標之程式設計語言中的程式碼元素。  
+
+- <xref:System.CodeDom>  
+
+  定義元素，代表以 Common Language Runtime 為目標之程式設計語言中的程式碼元素。  
   
- <xref:System.CodeDom.Compiler>  
- 定義介面以便在執行階段產生和編譯程式碼。  
+- <xref:System.CodeDom.Compiler>  
+
+  定義介面以便在執行階段產生和編譯程式碼。  
   
 ## <a name="related-sections"></a>相關章節  
- [CodeDOM 快速參考](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))  
- 提供快速方法，讓開發人員尋找代表原始程式碼元素的 CodeDOM 元素。
+
+- [Codedom 快速參考](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))提供了一種快速的方法，讓開發人員尋找代表原始程式碼元素的 CodeDOM 元素。

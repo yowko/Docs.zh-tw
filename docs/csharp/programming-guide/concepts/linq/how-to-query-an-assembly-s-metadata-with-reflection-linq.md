@@ -1,15 +1,15 @@
 ---
-title: 作法：使用反映查詢組件的中繼資料 (LINQ) (C#)
+title: 如何使用反映查詢元件的中繼資料（LINQ）（C#）
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: fb0fb118eaabbd9d66c5c4a445b0393a69dd2355
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 65f27ae17d77553bfd7a78c1310febd337a55a6e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592907"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345693"
 ---
-# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>作法：使用反映查詢組件的中繼資料 (LINQ) (C#)
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>如何使用反映查詢元件的中繼資料（LINQ）（C#）
 
 .NET Framework 類別庫的反映 API 可以用來檢查 .NET 組件中的中繼資料，以及建立該組件中之類型、類型成員、參數等項目的集合。 因為這些集合支援泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面，所以可以使用 LINQ 進行查詢。  
   
@@ -53,6 +53,6 @@ class ReflectionHowTO
 
 這個範例會使用 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> 方法，以傳回所指定組件中的類型陣列。 會套用 [where](../../../language-reference/keywords/where-clause.md) 篩選，只傳回公用類型。 對於每一個公用類型，會使用從 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 呼叫傳回的 <xref:System.Reflection.MethodInfo> 陣列來產生子查詢。 這些結果會進行篩選，僅傳回其傳回型別為陣列的方法，或為實作 <xref:System.Collections.Generic.IEnumerable%601> 之類型的方法。 最後，會使用類型名稱作為索引鍵來群組這些結果。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)

@@ -3,12 +3,12 @@ title: 類別和物件 - C# 教學課程簡介
 description: 建立您的第一個 C# 程式並探索物件導向概念
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: e4cf7912de69946289c0594944b8ac3a8c252ac2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 06d1a30abc0d031badcba4ec60f7deb3c670a3ae
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736836"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634946"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>探索使用類別與物件的物件導向程式設計
 
@@ -73,7 +73,7 @@ namespace classes
 
 在繼續之前，讓我們先查看您所建置的內容。  `namespace` 宣告能提供以邏輯方式組織程式碼的方式。 此教學課程的規模相對較小，所以您會將所有程式碼置於一個命名空間。 
 
-`public class BankAccount` 能定義您要建立的類別 (或類型)。 類別宣告後面的 `{` 和 `}` 之內的所有內容，皆定義該類別的行為。 `BankAccount` 類別有五個***成員***。 前三個為***屬性***。 屬性是資料元素，且可以具有強制執行驗證或其他規則的程式碼。 後兩個為***方法***。 方法是執行單一函式的程式碼區塊。 閱讀每個成員的名稱，應該能提供足夠的資訊，以供您或其他開發人員了解該類別的功能。
+`public class BankAccount` 能定義您要建立的類別 (或類型)。 在類別宣告之後，`{` 和 `}` 內的所有專案都會定義類別的狀態和行為。 `BankAccount` 類別有五個***成員***。 前三個為***屬性***。 屬性是資料元素，且可以具有強制執行驗證或其他規則的程式碼。 後兩個為***方法***。 方法是執行單一函式的程式碼區塊。 閱讀每個成員的名稱，應該能提供足夠的資訊，以供您或其他開發人員了解該類別的功能。
 
 ## <a name="open-a-new-account"></a>開啟新帳戶
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-當您使用 [`new`](../../language-reference/operators/new-operator.md) 建立物件時，系統便會呼叫建構函式。 使用下列程式程式碼取代*Program.cs*中的行 `Console.WriteLine("Hello World!");` （以您的名稱取代 `<name>`）：
+當您使用 [`new`](../../language-reference/operators/new-operator.md) 建立物件時，系統便會呼叫建構函式。 使用下列程式碼取代*Program.cs*中的行 `Console.WriteLine("Hello World!");` （以您的名稱取代 `<name>`）：
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -106,7 +106,7 @@ Console.WriteLine($"Account {account.Number} was created for {account.Owner} wit
 private static int accountNumberSeed = 1234567890;
 ```
 
-這是一個資料成員。 它是 `private`，這表示它只能由 `BankAccount` 類別中的程式碼存取。 這是一種將公開責任（如擁有帳戶號碼）與私用實施（產生帳戶號碼的方式）分開的方式。它也 `static`，這表示它是由所有 `BankAccount` 物件共用。 非靜態變數的值對於每個 `BankAccount` 物件的執行個體而言都是唯一的。 將下列兩行新增到建構函式來指派帳戶號碼：
+這是一個資料成員。 它是 `private`，這表示它只能由 `BankAccount` 類別中的程式碼存取。 這是一種將公開責任（如擁有帳戶號碼）與私用實施（產生帳戶號碼的方式）分開的方式。 它也是 `static`，這表示它是由所有 `BankAccount` 物件共用的。 非靜態變數的值對於每個 `BankAccount` 物件的執行個體而言都是唯一的。 將下列兩行新增到建構函式來指派帳戶號碼：
 
 ```csharp
 this.Number = accountNumberSeed.ToString();

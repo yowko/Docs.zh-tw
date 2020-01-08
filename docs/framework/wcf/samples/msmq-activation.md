@@ -2,12 +2,12 @@
 title: MSMQ 啟用
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: be33e3d9377c30058c7a2ee06543c11f10251ebd
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2afcfbee69f8257e4ed0b1c352ef29e4af9ddb84
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714765"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544713"
 ---
 # <a name="msmq-activation"></a>MSMQ 啟用
 
@@ -25,7 +25,7 @@ ms.locfileid: "74714765"
 >
 > \<InstallDrive >： \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation。
 
-Windows Process Activation Service (WAS) 是 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上全新的處理序啟用機制，可以為使用非 HTTP 通訊協定的應用程式提供類似 IIS 的功能，而這些功能原先只有 HTTP 應用程式才能使用。 Windows Communication Foundation （WCF）會使用接聽程式介面卡介面，來傳達透過 WCF 支援的非 HTTP 通訊協定（例如 TCP、具名管道和 MSMQ）接收的啟用要求。 SMSvcHost.exe 中執行的 Managed Windows 服務會裝載可透過非 HTTP 通訊協定接收要求的功能。
+Windows 進程啟用服務（WAS）是適用于 Windows Server 2008 的新進程啟用機制，提供先前僅供 HTTP 應用程式使用非 HTTP 通訊協定之應用程式的類似 IIS 功能。 Windows Communication Foundation （WCF）會使用接聽程式介面卡介面，來傳達透過 WCF 支援的非 HTTP 通訊協定（例如 TCP、具名管道和 MSMQ）接收的啟用要求。 SMSvcHost.exe 中執行的 Managed Windows 服務會裝載可透過非 HTTP 通訊協定接收要求的功能。
 
 Net.Msmq 接聽程式配接器服務 (NetMsmqActivator) 會根據佇列中的訊息啟動佇列應用程式。
 
@@ -269,7 +269,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         此命令可讓您使用 `http://localhost/servicemodelsamples` 和 `net.msmq://localhost/servicemodelsamples`來存取/servicemodelsamples 應用程式。
 
-7. 如果您之前未曾這麼做，請確定 MSMQ 啟動服務已啟用。 在 [**開始**] 功能表中，按一下 [**執行**]，然後輸入 `Services.msc`。 搜尋 [Net.tcp 接聽程式**介面卡]** 的服務清單。 以滑鼠右鍵按一下並選取 [**屬性**]。 將 [**啟動類型**] 設定為 [**自動**]，按一下 [套用] **，然後按一下**[**開始**] 按鈕。 這個步驟只需要在第一次使用 Net.Msmq 接聽程式配接器服務之前執行一次。
+7. 如果您之前未曾這麼做，請確定 MSMQ 啟動服務已啟用。 在 [**開始**] 功能表中，按一下 [**執行**]，然後輸入 `Services.msc`。 搜尋 [Net.tcp 接聽程式**介面卡]** 的服務清單。 按一下滑鼠右鍵並選取 [內容]。 將 [**啟動類型**] 設定為 [**自動**]，按一下 [套用] **，然後按一下**[**開始**] 按鈕。 這個步驟只需要在第一次使用 Net.Msmq 接聽程式配接器服務之前執行一次。
 
 8. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。 此外，還要在發送採購單的用戶端上變更程式碼，以便在送出採購單時將電腦名稱反映於佇列的 URI。 請使用下列程式碼：
 

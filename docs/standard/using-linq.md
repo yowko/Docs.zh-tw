@@ -1,6 +1,6 @@
 ---
 title: LINQ (Language Integrated Query)
-description: 了解 LINQ 如何將語言層級查詢功能和 API 提供給 C# 和 VB，來撰寫易懂的宣告式程式碼。
+description: 瞭解 LINQ 如何提供語言層級查詢功能和 API， C#並 Visual Basic 為撰寫表達性、宣告式程式碼的方式。
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -9,18 +9,18 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 2e4b23b7bf197c9984c53b2f4cc2acaa61731d38
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
-ms.translationtype: HT
+ms.openlocfilehash: 6ec86b7e728eef2cb4937662fd013d7fe951904d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238637"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347278"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
 ## <a name="what-is-it"></a>這是什麼？
 
-LINQ 將語言層級查詢功能和[較高順序的函式](https://en.wikipedia.org/wiki/Higher-order_function) API 提供給 C# 和 VB，來撰寫易懂的宣告式程式碼。
+LINQ 提供語言層級的查詢功能，以及[更高順序](https://en.wikipedia.org/wiki/Higher-order_function)的函C#式 API，並 Visual Basic 為撰寫表達性、宣告式程式碼的方式。
 
 語言層級查詢語法︰
 
@@ -143,7 +143,7 @@ Dim filteredItems = From item In myItems
 
 API 語法只是一個使用查詢語法的更簡潔方法嗎？
 
-否。 查詢語法可讓您使用 **let** 子句，允許您在運算式的範圍內導入及繫結變數，並在運算式的後續片段中使用它。 可以僅使用 API 語法來重新產生相同的程式碼，但很可能會產生難以閱讀的程式碼。
+No。 查詢語法可讓您使用 **let** 子句，允許您在運算式的範圍內導入及繫結變數，並在運算式的後續片段中使用它。 可以僅使用 API 語法來重新產生相同的程式碼，但很可能會產生難以閱讀的程式碼。
 
 而這就帶出了一個問題，**您應該只使用查詢語法嗎？**
 
@@ -395,5 +395,5 @@ Public Shared GetAllFacebookUserLikesMessage(facebookUsers As IEnumerable(Of Fac
 ## <a name="further-resources"></a>其他資源︰
 
 * [101 LINQ 範例](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-* [Linqpad](https://www.linqpad.net/)為 C#/F#/VB 的遊樂場環境和資料庫查詢引擎
+* [Linqpad](https://www.linqpad.net/)，這是適用于C#/F#/Visual Basic 的遊樂場環境和資料庫查詢引擎
 * [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)，為學習 LINQ-to-object 如何實作的電子書

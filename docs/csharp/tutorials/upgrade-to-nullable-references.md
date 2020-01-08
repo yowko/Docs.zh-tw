@@ -1,15 +1,15 @@
 ---
-title: 使用可為 Null 的參考類型進行設計
-description: 本進階教學課程提供可為 Null 的參考類型簡介。 您將了解如何在參考值可能為 Null 時表達您的設計意圖，以及在它們不能為 Null 時強制執行編譯器。
+title: 升級為可為 null 的參考型別
+description: 這個 advanced 教學課程示範如何使用可為 null 的參考型別來遷移現有程式碼。
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 75bc8d278efb66363212e3e000154ffc70f373bf
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969352"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634907"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教學課程：使用可為 null 的參考型別來遷移現有程式碼
 
@@ -24,7 +24,7 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 > - 管理啟用可為 Null 內容及停用可為 Null 內容之間的介面。
 > - 控制可為 Null 的註釋內容。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 您必須設定電腦以執行 .NET Core，包括C# 8.0 編譯器。 從C# [Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.net Core 3.0 SDK](https://dotnet.microsoft.com/download)開始，可以使用8個編譯器。
 
@@ -83,7 +83,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-先前的程式碼區塊中此時又發生了一些事情。 此應用程式使用 [AutoMapper](https://automapper.org/) NuGet 套件來從 `ISyndicationItem` 建構新的項目。 您發現新的故事項目已經建構完成，而屬性也已在單一陳述式中設定。 這表示 `NewsStoryViewModel` 的設計指出這些屬性永遠都不應該具備 `null` 值。 這些屬性應為**不可為 Null 參考型別**。 這種方式最能表達原始的設計意圖。 事實上，任何 `NewsStoryViewModel`「都會」使用非 Null 值正確具現化。 這可讓下列的初始化程式碼成為有效修正：
+先前的程式碼區塊中此時又發生了一些事情。 此應用程式使用 [AutoMapper](https://automapper.org/) NuGet 套件來從 `ISyndicationItem` 建構新的項目。 您發現新的故事項目已經建構完成，而屬性也已在單一陳述式中設定。 這表示 `NewsStoryViewModel` 的設計指出這些屬性永遠都不應該具備 `null` 值。 這些屬性應為**不可為 Null 參考型別**。 這種方式最能表達原始的設計意圖。 事實上，任何 `NewsStoryViewModel` 都會以非 null 值正確具*現*化。 這可讓下列的初始化程式碼成為有效修正：
 
 ```csharp
 public class NewsStoryViewModel

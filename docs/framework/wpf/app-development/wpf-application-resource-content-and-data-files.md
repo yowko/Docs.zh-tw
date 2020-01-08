@@ -17,21 +17,21 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: a31dc2c5431c8201607462e8bdef4b8bae0fb41d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d966116db09c2baef7deabf5d01138e8445098be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460922"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636259"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 應用程式資源、內容和資料檔案
 Microsoft Windows 應用程式通常取決於包含非可執行資料的檔案，例如 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、影像、影片和音訊。 Windows Presentation Foundation （WPF）提供設定、識別和使用這些類型的資料檔案（稱為「應用程式資料檔案」）的特殊支援。 這項支援是以一組特定的應用程式資料檔案類型為中心，包括：  
   
-- **資源檔**：編譯成可執行檔或程式庫 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 元件的資料檔案。  
+- **資源檔**：編譯成可執行檔或程式庫 WPF 元件的資料檔案。  
   
-- **內容**檔案：與可執行檔 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 元件具有明確關聯的獨立資料檔案。  
+- **內容**檔案：與可執行檔 WPF 元件具有明確關聯的獨立資料檔案。  
   
-- **原始網站**檔案：與可執行檔 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 元件沒有關聯的獨立資料檔案。  
+- **來源網站**檔案：與可執行檔 WPF 元件沒有關聯的獨立資料檔案。  
   
  這三種檔案類型之間的其中一個重要區別是資源檔和內容檔是建置階段的已知檔案；組件並明確知道這兩種檔案。 不過，對於原始網站檔案而言，元件可能完全不知道它們，或透過 pack 統一資源識別元（URI）參考進行隱含知識;如果是後者，則不保證來源參考的網站確實存在。  
   
@@ -40,7 +40,7 @@ Microsoft Windows 應用程式通常取決於包含非可執行資料的檔案�
  本主題描述何設定及使用應用程式資料檔案。  
 
 <a name="Resource_Files"></a>   
-## <a name="resource-files"></a>資源檔  
+## <a name="resource-files"></a>資源檔案  
  若應用程式資料檔案必須一律可供應用程式使用，確保可用性的唯一方法是將檔案編譯成應用程式的主要可執行檔組件或是應用程式的其中一個參考組件。 這種類型的應用程式資料檔案稱為「*資源檔*」。  
   
  應該使用資源檔的時機包括：  
@@ -55,7 +55,7 @@ Microsoft Windows 應用程式通常取決於包含非可執行資料的檔案�
 > 本節所述的資源檔與[XAML 資源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)中所述的資源檔不同，而且不同于[管理應用程式資源（.net）](/visualstudio/ide/managing-application-resources-dotnet)中所述的內嵌或連結的資源。  
   
 ### <a name="configuring-resource-files"></a>設定資源檔  
- 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中，資源檔是包含在 Microsoft build engine （MSBuild）專案中做為 `Resource` 專案的檔案。  
+ 在 WPF 中，資源檔是包含在 Microsoft build engine （MSBuild）專案中做為 `Resource` 專案的檔案。  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -80,7 +80,7 @@ Microsoft Windows 應用程式通常取決於包含非可執行資料的檔案�
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
- 呼叫 <xref:System.Windows.Application.GetResourceStream%2A> 可讓您存取 <xref:System.IO.Stream>時，您必須執行其他工作，將它轉換成您將設定它的屬性類型。 相反地，您可以讓 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用程式碼，將資源檔直接載入至類型的屬性，以處理開啟和轉換 <xref:System.IO.Stream>。  
+ 呼叫 <xref:System.Windows.Application.GetResourceStream%2A> 可讓您存取 <xref:System.IO.Stream>時，您必須執行其他工作，將它轉換成您將設定它的屬性類型。 相反地，您可以讓 WPF 使用程式碼，將資源檔直接載入至類型的屬性，以處理開啟和轉換 <xref:System.IO.Stream>。  
   
  下列範例顯示如何使用程式碼，將 <xref:System.Windows.Controls.Page> 直接載入至 <xref:System.Windows.Controls.Frame> （`pageFrame`）。  
   
@@ -92,7 +92,7 @@ Microsoft Windows 應用程式通常取決於包含非可執行資料的檔案�
  [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
   
 ### <a name="application-code-files-as-resource-files"></a>應用程式程式碼檔案作為資源檔  
- 您可以使用套件 Uri 來參考一組特殊的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式程式碼檔案，包括 windows、頁面、非固定格式檔和資源字典。 例如，您可以使用一個 pack URI 來設定 <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> 屬性，該元件會參考您想要在應用程式啟動時載入的視窗或頁面。  
+ 您可以使用套件 Uri 來參考一組特殊的 WPF 應用程式程式碼檔案，包括視窗、頁面、非固定格式檔和資源字典。 例如，您可以使用一個 pack URI 來設定 <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> 屬性，該元件會參考您想要在應用程式啟動時載入的視窗或頁面。  
   
  [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
   
@@ -117,7 +117,7 @@ Microsoft Windows 應用程式通常取決於包含非可執行資料的檔案�
 > 如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案已設定為 `Resource` 專案，而且沒有程式碼後置檔案，則原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 會編譯成元件，而不是原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]的二進位版本。  
   
 <a name="Content_Files"></a>   
-## <a name="content-files"></a>內容檔  
+## <a name="content-files"></a>內容檔案  
  *內容*檔案會與可執行檔元件一起散發為鬆散檔案。 雖然這種檔案並未編譯成組件，但是編譯組件時使用的中繼資料會建立與每個內容檔的關聯。  
   
  如果應用程式需要一組特定的應用程式資料檔案，而您不想在更新這些檔案時重新編譯使用它們的組件，您應該使用內容檔。  
@@ -160,7 +160,7 @@ Microsoft Windows 應用程式通常取決於包含非可執行資料的檔案�
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
- 呼叫 <xref:System.Windows.Application.GetContentStream%2A> 可讓您存取 <xref:System.IO.Stream>時，您必須執行其他工作，將它轉換成您將設定它的屬性類型。 相反地，您可以讓 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用程式碼，將資源檔直接載入至類型的屬性，以處理開啟和轉換 <xref:System.IO.Stream>。  
+ 呼叫 <xref:System.Windows.Application.GetContentStream%2A> 可讓您存取 <xref:System.IO.Stream>時，您必須執行其他工作，將它轉換成您將設定它的屬性類型。 相反地，您可以讓 WPF 使用程式碼，將資源檔直接載入至類型的屬性，以處理開啟和轉換 <xref:System.IO.Stream>。  
   
  下列範例顯示如何使用程式碼，將 <xref:System.Windows.Controls.Page> 直接載入至 <xref:System.Windows.Controls.Frame> （`pageFrame`）。  
   
@@ -173,7 +173,7 @@ Microsoft Windows 應用程式通常取決於包含非可執行資料的檔案�
   
 <a name="Site_of_Origin_Files"></a>   
 ## <a name="site-of-origin-files"></a>來源網站檔  
- 資源檔與一起散發的元件具有明確的關聯性，如 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 所定義。 但是在某些情況下，您可能想在組件和應用程式資料檔案之間建立隱含或不存在的關聯性，這些情況包括：  
+ 資源檔與一起散發的元件具有明確的關聯性，如 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>所定義。 但是在某些情況下，您可能想在組件和應用程式資料檔案之間建立隱含或不存在的關聯性，這些情況包括：  
   
 - 在編譯時期，檔案不存在。  
   
@@ -195,7 +195,7 @@ Microsoft Windows 應用程式通常取決於包含非可執行資料的檔案�
 > 來源網站檔案不會使用用戶端電腦上的 XAML 瀏覽器應用程式（XBAP）進行快取，而內容檔案則是。 因此，只有在特別要求時，才會下載來源網站檔。 如果 XAML 瀏覽器應用程式（XBAP）應用程式有大型媒體檔案，將它們設定為「原始網站」檔案，表示初始應用程式啟動速度會更快，而且只會視需要下載檔案。  
   
 ### <a name="configuring-site-of-origin-files"></a>設定來源網站檔  
- 如果您的原始網站檔案在編譯時期不存在或不明，您需要使用傳統部署機制，以確保在執行時間可使用所需的檔案，包括使用 `XCopy` 命令列程式或 Microsoft Windows安裝程式.  
+ 如果您的原始網站檔案在編譯時期不存在或不明，您需要使用傳統部署機制，以確保在執行時間可使用所需的檔案，包括使用 `XCopy` 命令列程式或 Microsoft Windows Installer。  
   
  如果您在編譯時期知道您想要在來源網站上找到的檔案，但仍想要避免明確的相依性，您可以將這些檔案新增至 MSBuild 專案做為 `None` 專案。 如同內容檔案，您必須設定 MSBuild `CopyToOutputDirectory` 屬性，以指定將來源網站檔案複製到相對於所建立元件的位置，方法是指定 `Always` 值或 `PreserveNewest` 值。  
   
@@ -222,7 +222,7 @@ Microsoft Windows 應用程式通常取決於包含非可執行資料的檔案�
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
- 呼叫 <xref:System.Windows.Application.GetRemoteStream%2A> 可讓您存取 <xref:System.IO.Stream>時，您必須執行其他工作，將它轉換成您將設定它的屬性類型。 相反地，您可以讓 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用程式碼，將資源檔直接載入至類型的屬性，以處理開啟和轉換 <xref:System.IO.Stream>。  
+ 呼叫 <xref:System.Windows.Application.GetRemoteStream%2A> 可讓您存取 <xref:System.IO.Stream>時，您必須執行其他工作，將它轉換成您將設定它的屬性類型。 相反地，您可以讓 WPF 使用程式碼，將資源檔直接載入至類型的屬性，以處理開啟和轉換 <xref:System.IO.Stream>。  
   
  下列範例顯示如何使用程式碼，將 <xref:System.Windows.Controls.Page> 直接載入至 <xref:System.Windows.Controls.Frame> （`pageFrame`）。  
   
