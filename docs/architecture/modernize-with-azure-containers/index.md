@@ -2,12 +2,12 @@
 title: 利用 Azure 雲端服務及 Windows 容器將現有的 .NET 應用程式現代化 (第 2 版)
 description: 了解如何利用這本電子書，將現有的應用程式原形移轉到 Azure 雲端及容器並加以現代化。
 ms.date: 04/28/2018
-ms.openlocfilehash: 67b1c7743697832684e96225e3d365da625ce6a3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: fa20e606c9a1364fbdf8c9a58c8703420d9e65a9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73089760"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714576"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>利用 Azure 雲端服務及 Windows 容器將現有的 .NET 應用程式現代化 (第 2 版)
 
@@ -21,11 +21,11 @@ Redmond, Washington 98052-6399
 
 Copyright © 2018 by Microsoft Corporation  
 
-著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製。
+All rights reserved. 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製。
 
 本書免費提供，為電子書的格式，可以從 Microsoft 的多種不同管道取得，例如 <https://dot.net/architecture>。
 
-若您對本書有相關問題，請傳送電子郵件到 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
+如果您有與本書相關的問題，請在[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)的電子郵件。
 
 本書依照「現況」提供，代表作者的觀點和意見。 本書中所述之觀點、意見與資訊 (包括 URL 及其他網際網路的網站參考) 如有變更，恕不另行通知。
 
@@ -33,7 +33,7 @@ Copyright © 2018 by Microsoft Corporation
 
 Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Microsoft 集團的商標。 所有其他商標皆屬於其各自擁有者的財產。
 
-作者:
+作者：
 > **Cesar de la Torre**，Microsoft Corp. .NET 產品小組資深專案經理
 
 參與者和檢閱者：
@@ -81,7 +81,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 **層級1：雲端基礎結構就緒的**應用程式：在此遷移方法中，您只需將目前的內部部署應用程式遷移或重新裝載至基礎結構即服務（[IaaS](https://azure.microsoft.com/overview/what-is-iaas/)）平臺即可。 您的應用程式結構和以前幾乎相同，但您現已將其部署到雲端中的 VM。
 這種簡單的移轉類型在業界我們稱為「原形移轉」。
 
-**層級2：雲端優化**應用程式：在此層級中，但仍未重新架構或改變大量程式碼，您可以使用容器等新式技術，在雲端中執行您的應用程式，以獲得更多好處。雲端管理的服務。 您可藉由精簡企業開發營運 (DevOps) 程序來增加應用程式的靈活度，加快出貨速度。 您可以使用採用 Docker 引擎的 Windows 容器等技術來達到此目的。 容器免除了在多個階段部署時，因應用程式相依性而引起的衝突。 在此成熟度模型中，您一方面可以在 IaaS 或 PaaS 上部署容器，一方面可以利用更多雲端管的資料庫服務、快取即服務、監視及持續整合/持續部署 (CI/CD) 管線服務等等。
+**層級2：雲端優化**應用程式：在此層級中，但仍未重新架構或改變大量程式碼，您可以使用容器和其他雲端管理服務等現代化技術，在雲端中執行您的應用程式，以獲得更多好處。 您可藉由精簡企業開發營運 (DevOps) 程序來增加應用程式的靈活度，加快出貨速度。 您可以使用採用 Docker 引擎的 Windows 容器等技術來達到此目的。 容器免除了在多個階段部署時，因應用程式相依性而引起的衝突。 在此成熟度模型中，您一方面可以在 IaaS 或 PaaS 上部署容器，一方面可以利用更多雲端管的資料庫服務、快取即服務、監視及持續整合/持續部署 (CI/CD) 管線服務等等。
 
 第三等級的成熟度是雲端的終極目標，但對大多數應用程式而言並非必要，且非本指南的主要重點：
 
@@ -109,9 +109,9 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 圖 1-2 顯示了在三個雲端成熟度等級中，各自使用的主要技術及架構樣式：
 
-![各個成熟度等級將現有 .NET Web 應用程式現代化時使用的主要技術](./media/image1-2.png)
+![將現有 .NET Web 應用程式現代化時，各個成熟度等級使用的主要技術](./media/image1-2.png)
 
-**圖 1-2。** 各個成熟度等級將現有 .NET Web 應用程式現代化時使用的主要技術
+**圖 1-2。** 將現有 .NET Web 應用程式現代化時，各個成熟度等級使用的主要技術
 
 圖 1-2 強調了大多數常見案例，然而在架構方面有可能會出現許多混合變化。 比方說，成熟度模型不僅適用現有 Web 應用程式中的整合型架構，也適用於服務導向、多層式架構 (N-Tier) 及其他架構樣式變化。 依賴其中任何一種架構類型及相關技術的程度高低，決定應用程式的整體成熟度等級。
 
@@ -124,7 +124,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 在第一次現代化期間，您也可以從雲端新增資產，像是使用 [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview) 之類的工具執行監視；CI/CD 管線應用在 [Azure DevOps Services](https://azure.microsoft.com/services/devops/) 的應用程式生命週期；以及 Azure 所提供其他更多的資料資源服務。 比方說，您可以修改原先使用傳統 [ASP.NET Web Forms](https://www.asp.net/web-forms) 或 [ASP.NET MVC](https://www.asp.net/mvc) 開發的整合型 Web 應用程式，而您現在可以使用 Windows 容器進行部署。 當您使用 Windows 容器時，也應該將資料移轉到 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/)中的資料庫，這完全不需要變更您應用程式的核心架構。
 
-- **雲端原生**：如所述，當您以多個獨立開發小組處理的大型複雜應用程式時，您應該考慮架構[雲端原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)應用程式，其可在不同微服務上運作自主開發和部署。 此外還有每項微服務的微調與獨立調整能力。 這些架構方式雖然面臨十分重大的挑戰和複雜度，但可以藉由使用雲端 PaaS 和協調器 (像是 [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) (受控 Kubernetes)) 大幅簡化，以及在無伺服器方法中使用 [Azure Functions](https://azure.microsoft.com/services/functions/)。 這所有的方法 (例如微服務及無伺服器) 通常會需要雲端架構及編寫適用於特定 PaaS 平台的程式碼，或是編寫符合特定架構 (例如微服務) 的程式碼。
+- **雲端原生**：如所述，當您的目標為大型且複雜的應用程式時，您應該考慮架構[雲端原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)應用程式。 此外還有每項微服務的微調與獨立調整能力。 這些架構方式雖然面臨十分重大的挑戰和複雜度，但可以藉由使用雲端 PaaS 和協調器 (像是 [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) (受控 Kubernetes)) 大幅簡化，以及在無伺服器方法中使用 [Azure Functions](https://azure.microsoft.com/services/functions/)。 這所有的方法 (例如微服務及無伺服器) 通常會需要雲端架構及編寫適用於特定 PaaS 平台的程式碼，或是編寫符合特定架構 (例如微服務) 的程式碼。
 
 圖 1-3 顯示了您可在每個成熟度等級使用的內部技術：
 
@@ -185,7 +185,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 如果您是技術決策者，例如企業架構設計師，或是只想大略了解使用 Windows 容器及使用 Microsoft Azure 部署到雲端有何優點的開發部門主管，這篇指南也會很實用。
 
-## <a name="how-to-use-this-guide"></a>如何使用本指南
+## <a name="how-to-use-this-guide"></a>本指南的使用方式
 
 本指南說明了「原因」：吸引您將現有應用程式現代化的誘因，以及將應用程式移往雲端時，使用 Windows 容器所能獲得的具體效益。 本指南前幾個章節中的內容專為想了解概要，但不需要專注在實作及技術性、逐步詳細資料的架構設計師與技術決策者設計而成。
 
