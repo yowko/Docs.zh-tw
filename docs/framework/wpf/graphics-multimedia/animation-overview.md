@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 870fc1d1f02dca7d4488a27385fcfeaec8098ced
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039180"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559712"
 ---
 # <a name="animation-overview"></a>動畫概觀
 
@@ -201,7 +201,7 @@ ms.locfileid: "73039180"
 
 由於動畫會產生屬性值，因此不同的屬性類型有不同的動畫類型。 若要以動畫顯示採用 <xref:System.Double>的屬性（例如元素的 <xref:System.Windows.FrameworkElement.Width%2A> 屬性），請使用會產生 <xref:System.Double> 值的動畫。 若要以動畫顯示接受 <xref:System.Windows.Point>的屬性，請使用會產生 <xref:System.Windows.Point> 值的動畫等等。 由於不同的屬性類型數目，<xref:System.Windows.Media.Animation> 命名空間中有數個動畫類別。 幸運的是，它們會遵循嚴格的命名慣例方便您區分︰
 
-- \<*類型*> 動畫
+- \<*Type*>Animation
 
   稱為 "From/To/By" 或「基本」動畫，這些會以動畫顯示開始值到目的地值，或將位移值新增至其開始值。
 
@@ -213,17 +213,17 @@ ms.locfileid: "73039180"
 
   本概觀中的範例會使用這些動畫，因為最容易使用。 From/to/By 動畫會在 [從]/[至]/[按動畫] 總覽中詳細說明。
 
-- \<*類型*> AnimationUsingKeyFrames
+- \<*Type*>AnimationUsingKeyFrames
 
   主要畫面格動畫比 From/To/By 動畫更強大，因為您可以指定任意數目的目標值，甚至可以控制其插補方法。 某些類型只能使用主要畫面格動畫顯示動畫。 主要畫面格動畫會在[主要畫面格動畫總覽](key-frame-animations-overview.md)中詳細說明。
 
-- \<*類型*> AnimationUsingPath
+- \<*Type*>AnimationUsingPath
 
   路徑動畫可讓您使用幾何路徑以產生動畫的值。
 
-- \<*類型*> AnimationBase
+- \<*Type*>AnimationBase
 
-  抽象類別：當您執行它時，會以動畫方式繪製 \<*類型*> 值。 這個類別可做為 \<*型*別 > 動畫的基類，以及 > AnimationUsingKeyFrames 類別的 \<*型*別。 只有當您想要建立您自己的自訂動畫時，才需要直接處理這些類別。 否則，請使用 \<*類型*> 動畫或主要畫面格\<*類型*> 動畫。
+  當您實作時，以動畫顯示\<*Type*> 值的抽象類別。 此類別可做為 \<*Type*>Animation 和 \<*Type*>AnimationUsingKeyFrames 類別的基底類別。 只有當您想要建立您自己的自訂動畫時，才需要直接處理這些類別。 否則，請使用 \<*Type*>Animation 或 KeyFrame\<*Type*>Animation。
 
 在大部分情況下，您會想要使用 \<*類型*> 動畫類別，例如 <xref:System.Windows.Media.Animation.DoubleAnimation> 和 <xref:System.Windows.Media.Animation.ColorAnimation>。
 
@@ -231,10 +231,10 @@ ms.locfileid: "73039180"
 
 |屬性類型|對應的基本 (From/To/By) 動畫|對應的主要畫面格動畫|對應的路徑動畫|使用範例|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|無|建立 <xref:System.Windows.Media.SolidColorBrush> 或 <xref:System.Windows.Media.GradientStop><xref:System.Windows.Media.SolidColorBrush.Color%2A> 的動畫。|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|建立 <xref:System.Windows.Media.SolidColorBrush> 或 <xref:System.Windows.Media.GradientStop><xref:System.Windows.Media.SolidColorBrush.Color%2A> 的動畫。|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|以動畫顯示 <xref:System.Windows.Controls.DockPanel> 的 <xref:System.Windows.FrameworkElement.Width%2A> 或 <xref:System.Windows.Controls.Button>的 <xref:System.Windows.FrameworkElement.Height%2A>。|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|以動畫顯示 <xref:System.Windows.Media.EllipseGeometry>的 <xref:System.Windows.Media.EllipseGeometry.Center%2A> 位置。|
-|<xref:System.String>|無|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|無|以動畫顯示 <xref:System.Windows.Controls.TextBlock> 的 <xref:System.Windows.Controls.TextBlock.Text%2A> 或 <xref:System.Windows.Controls.Button>的 <xref:System.Windows.Controls.ContentControl.Content%2A>。|
+|<xref:System.String>|None|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|以動畫顯示 <xref:System.Windows.Controls.TextBlock> 的 <xref:System.Windows.Controls.TextBlock.Text%2A> 或 <xref:System.Windows.Controls.Button>的 <xref:System.Windows.Controls.ContentControl.Content%2A>。|
 
 <a name="animationsaretimelines"></a>
 
@@ -254,7 +254,7 @@ ms.locfileid: "73039180"
 
 下列語法顯示 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 屬性的 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 屬性語法的簡化版本。
 
-*hours* `:` *minutes* `:` *seconds*
+*小時*`:`*分鐘*`:`*秒*
 
 下表顯示數個 <xref:System.Windows.Duration> 設定和其產生的值。
 
@@ -292,7 +292,7 @@ ms.locfileid: "73039180"
 
 - 若要讓 <xref:System.Windows.FrameworkElement> 動畫目標，您可以藉由設定其 <xref:System.Windows.FrameworkElement.Name%2A> 屬性來指定名稱。 在程式碼中，您也必須使用 <xref:System.Windows.FrameworkElement.RegisterName%2A> 方法，向它所屬的頁面註冊專案名稱。
 
-- 若要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中將 <xref:System.Windows.Freezable> 物件設為動畫目標，您可以使用[x：Name](../../xaml-services/x-name-directive.md)指示詞為其指派名稱。 在程式碼中，您只需使用 <xref:System.Windows.FrameworkElement.RegisterName%2A> 方法，將物件註冊到它所屬的頁面。
+- 若要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中將 <xref:System.Windows.Freezable> 物件設為動畫目標，您可以使用[x：Name](../../../desktop-wpf/xaml-services/xname-directive.md)指示詞為其指派名稱。 在程式碼中，您只需使用 <xref:System.Windows.FrameworkElement.RegisterName%2A> 方法，將物件註冊到它所屬的頁面。
 
 下列各節提供在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 和程式碼中命名元素的範例。 如需命名和目標的詳細資訊，請參閱分鏡腳本[總覽](storyboards-overview.md)。
 
@@ -380,14 +380,14 @@ ms.locfileid: "73039180"
 |[分鏡腳本概觀](storyboards-overview.md)|描述如何使用有多個時間軸的分鏡腳本建立複雜的動畫。|
 |[計時行為概觀](timing-behaviors-overview.md)|描述動畫中使用的 <xref:System.Windows.Media.Animation.Timeline> 類型和屬性。|
 |[計時事件概觀](timing-events-overview.md)|描述 <xref:System.Windows.Media.Animation.Timeline> 和 <xref:System.Windows.Media.Animation.Clock> 物件上可用的事件，以在時間軸中的點執行程式碼，例如 [開始]、[暫停]、[繼續]、[略過] 或 [停止]。|
-|[HOW-TO 主題](animation-and-timing-how-to-topics.md)|包含在應用程式中使用動畫及時間軸的程式碼範例。|
+|[「如何」主題](animation-and-timing-how-to-topics.md)|包含在應用程式中使用動畫及時間軸的程式碼範例。|
 |[時鐘操作說明主題](clocks-how-to-topics.md)|包含在您的應用程式中使用 <xref:System.Windows.Media.Animation.Clock> 物件的程式碼範例。|
 |[主要畫面格操作說明主題](key-frame-animation-how-to-topics.md)|包含在應用程式中使用主要畫面格動畫的程式碼範例。|
 |[路徑動畫操作說明主題](path-animation-how-to-topics.md)|包含在應用程式中使用路徑動畫的程式碼範例。|
 
 <a name="reference"></a>
 
-## <a name="reference"></a>參考
+## <a name="reference"></a>參考資料
 
 - <xref:System.Windows.Media.Animation.Timeline>
 

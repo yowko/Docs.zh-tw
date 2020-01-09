@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 9f9b89e2fea0bd69cba6d50fa1d1fb9cc3927685
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b3778a170759f685db78e7dcde219138196f9eca
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348609"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344191"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>如何：決定物件變數參考的類型 (Visual Basic)
 
@@ -46,11 +46,11 @@ ms.locfileid: "74348609"
     End If
     ```
 
-    如果物件的執行時間類型與指定的類型相容，則 `TypeOf`...`Is` 運算式會傳回 `True`。
+    `TypeOf`...`Is` 如果物件的執行時間類型與指定的類型相容,`True`則運算式會傳回。
 
     相容性的準則取決於指定的類型是否為類別、結構或介面。 一般而言，如果物件的類型與相同、繼承自或實作為指定的類型，則類型是相容的。 如需詳細資訊，請參閱[TypeOf 運算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)。
 
-## <a name="compiling-the-code"></a>編譯程式碼
+## <a name="compile-the-code"></a>編譯程式碼
 
 請注意，指定的類型不可以是變數或運算式。 它必須是已定義類型的名稱，例如類別、結構或介面。 這包括內部類型，例如 `Integer` 和 `String`。
 
