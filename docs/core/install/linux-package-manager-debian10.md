@@ -4,30 +4,30 @@ description: 使用套件管理員，在 Debian 10 上安裝 .NET Core SDK 和�
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 2c24a02423f5aa8f011cfb4705efb51d97cfaf1e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 2f3f04ef67115b28b1be91909e88c7ae714260db
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74836945"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740718"
 ---
-# <a name="debian-10-package-manager---install-net-core"></a><span data-ttu-id="2829d-103">Debian 10 套件管理員-安裝 .NET Core</span><span class="sxs-lookup"><span data-stu-id="2829d-103">Debian 10 Package Manager - Install .NET Core</span></span>
+# <a name="debian-10-package-manager---install-net-core"></a><span data-ttu-id="c1a84-103">Debian 10 套件管理員-安裝 .NET Core</span><span class="sxs-lookup"><span data-stu-id="c1a84-103">Debian 10 Package Manager - Install .NET Core</span></span>
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-<span data-ttu-id="2829d-104">本文說明如何使用套件管理員，在 Debian 10 上安裝 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="2829d-104">This article describes how to use a package manager to install .NET Core on Debian 10.</span></span> <span data-ttu-id="2829d-105">如果您要安裝執行時間，我們建議您安裝[ASP.NET Core 運行](#install-the-aspnet-core-runtime)時間，因為它同時包含 .net Core 和 ASP.NET Core 執行時間。</span><span class="sxs-lookup"><span data-stu-id="2829d-105">If you're installing the runtime, we suggest you install the [ASP.NET Core runtime](#install-the-aspnet-core-runtime), as it includes both .NET Core and ASP.NET Core runtimes.</span></span>
+<span data-ttu-id="c1a84-104">本文說明如何使用套件管理員，在 Debian 10 上安裝 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="c1a84-104">This article describes how to use a package manager to install .NET Core on Debian 10.</span></span> <span data-ttu-id="c1a84-105">如果您要安裝執行時間，我們建議您安裝[ASP.NET Core 運行](#install-the-aspnet-core-runtime)時間，因為它同時包含 .net Core 和 ASP.NET Core 執行時間。</span><span class="sxs-lookup"><span data-stu-id="c1a84-105">If you're installing the runtime, we suggest you install the [ASP.NET Core runtime](#install-the-aspnet-core-runtime), as it includes both .NET Core and ASP.NET Core runtimes.</span></span>
 
-## <a name="register-microsoft-key-and-feed"></a><span data-ttu-id="2829d-106">註冊 Microsoft 金鑰和摘要</span><span class="sxs-lookup"><span data-stu-id="2829d-106">Register Microsoft key and feed</span></span>
+## <a name="register-microsoft-key-and-feed"></a><span data-ttu-id="c1a84-106">註冊 Microsoft 金鑰和總結</span><span class="sxs-lookup"><span data-stu-id="c1a84-106">Register Microsoft key and feed</span></span>
 
-<span data-ttu-id="2829d-107">安裝 .NET 之前，您必須：</span><span class="sxs-lookup"><span data-stu-id="2829d-107">Before installing .NET, you'll need to:</span></span>
+<span data-ttu-id="c1a84-107">安裝 .NET 之前，您必須：</span><span class="sxs-lookup"><span data-stu-id="c1a84-107">Before installing .NET, you'll need to:</span></span>
 
-- <span data-ttu-id="2829d-108">註冊 Microsoft 金鑰</span><span class="sxs-lookup"><span data-stu-id="2829d-108">Register the Microsoft key</span></span>
-- <span data-ttu-id="2829d-109">註冊產品存放庫</span><span class="sxs-lookup"><span data-stu-id="2829d-109">register the product repository</span></span>
-- <span data-ttu-id="2829d-110">安裝必要的相依性</span><span class="sxs-lookup"><span data-stu-id="2829d-110">Install required dependencies</span></span>
+- <span data-ttu-id="c1a84-108">註冊 Microsoft 金鑰。</span><span class="sxs-lookup"><span data-stu-id="c1a84-108">Register the Microsoft key.</span></span>
+- <span data-ttu-id="c1a84-109">註冊產品存放庫。</span><span class="sxs-lookup"><span data-stu-id="c1a84-109">Register the product repository.</span></span>
+- <span data-ttu-id="c1a84-110">安裝必要的相依性。</span><span class="sxs-lookup"><span data-stu-id="c1a84-110">Install required dependencies.</span></span>
 
-<span data-ttu-id="2829d-111">每部電腦只需要執行這項作業一次。</span><span class="sxs-lookup"><span data-stu-id="2829d-111">This only needs to be done once per machine.</span></span>
+<span data-ttu-id="c1a84-111">每部電腦只需要執行這項作業一次。</span><span class="sxs-lookup"><span data-stu-id="c1a84-111">This only needs to be done once per machine.</span></span>
 
-<span data-ttu-id="2829d-112">開啟終端機並執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="2829d-112">Open a terminal and run the following commands.</span></span>
+<span data-ttu-id="c1a84-112">開啟終端機並執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="c1a84-112">Open a terminal and run the following commands.</span></span>
 
 ```bash
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
@@ -38,9 +38,9 @@ sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 ```
 
-## <a name="install-the-net-core-sdk"></a><span data-ttu-id="2829d-113">安裝 .NET Core SDK</span><span class="sxs-lookup"><span data-stu-id="2829d-113">Install the .NET Core SDK</span></span>
+## <a name="install-the-net-core-sdk"></a><span data-ttu-id="c1a84-113">安裝 .NET Core SDK</span><span class="sxs-lookup"><span data-stu-id="c1a84-113">Install the .NET Core SDK</span></span>
 
-<span data-ttu-id="2829d-114">更新可供安裝的產品，然後安裝 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="2829d-114">Update the products available for installation, then install the .NET Core SDK.</span></span> <span data-ttu-id="2829d-115">在您的終端機中，執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="2829d-115">In your terminal, run the following commands.</span></span>
+<span data-ttu-id="c1a84-114">更新可供安裝的產品，然後安裝 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="c1a84-114">Update the products available for installation, then install the .NET Core SDK.</span></span> <span data-ttu-id="c1a84-115">在您的終端機中，執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="c1a84-115">In your terminal, run the following commands.</span></span>
 
 ```bash
 sudo apt-get update
@@ -49,9 +49,9 @@ sudo apt-get update
 sudo apt-get install dotnet-sdk-3.1
 ```
 
-## <a name="install-the-aspnet-core-runtime"></a><span data-ttu-id="2829d-116">安裝 ASP.NET Core 執行時間</span><span class="sxs-lookup"><span data-stu-id="2829d-116">Install the ASP.NET Core runtime</span></span>
+## <a name="install-the-aspnet-core-runtime"></a><span data-ttu-id="c1a84-116">安裝 ASP.NET Core 執行時間</span><span class="sxs-lookup"><span data-stu-id="c1a84-116">Install the ASP.NET Core runtime</span></span>
 
-<span data-ttu-id="2829d-117">更新可供安裝的產品，然後安裝 ASP.NET 執行時間。</span><span class="sxs-lookup"><span data-stu-id="2829d-117">Update the products available for installation, then install the ASP.NET runtime.</span></span> <span data-ttu-id="2829d-118">在您的終端機中，執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="2829d-118">In your terminal, run the following commands.</span></span>
+<span data-ttu-id="c1a84-117">更新可供安裝的產品，然後安裝 ASP.NET 執行時間。</span><span class="sxs-lookup"><span data-stu-id="c1a84-117">Update the products available for installation, then install the ASP.NET runtime.</span></span> <span data-ttu-id="c1a84-118">在您的終端機中，執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="c1a84-118">In your terminal, run the following commands.</span></span>
 
 ```bash
 sudo apt-get update
@@ -60,9 +60,9 @@ sudo apt-get update
 sudo apt-get install aspnetcore-runtime-3.1
 ```
 
-## <a name="install-the-net-core-runtime"></a><span data-ttu-id="2829d-119">安裝 .NET Core 執行時間</span><span class="sxs-lookup"><span data-stu-id="2829d-119">Install the .NET Core runtime</span></span>
+## <a name="install-the-net-core-runtime"></a><span data-ttu-id="c1a84-119">安裝 .NET Core 執行時間</span><span class="sxs-lookup"><span data-stu-id="c1a84-119">Install the .NET Core runtime</span></span>
 
-<span data-ttu-id="2829d-120">更新可供安裝的產品，然後安裝 .NET Core 執行時間。</span><span class="sxs-lookup"><span data-stu-id="2829d-120">Update the products available for installation, then install the .NET Core runtime.</span></span> <span data-ttu-id="2829d-121">在您的終端機中，執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="2829d-121">In your terminal, run the following commands.</span></span>
+<span data-ttu-id="c1a84-120">更新可供安裝的產品，然後安裝 .NET Core 執行時間。</span><span class="sxs-lookup"><span data-stu-id="c1a84-120">Update the products available for installation, then install the .NET Core runtime.</span></span> <span data-ttu-id="c1a84-121">在您的終端機中，執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="c1a84-121">In your terminal, run the following commands.</span></span>
 
 ```bash
 sudo apt-get update
@@ -71,6 +71,6 @@ sudo apt-get update
 sudo apt-get install dotnet-runtime-3.1
 ```
 
-## <a name="how-to-install-other-versions"></a><span data-ttu-id="2829d-122">如何安裝其他版本</span><span class="sxs-lookup"><span data-stu-id="2829d-122">How to install other versions</span></span>
+## <a name="how-to-install-other-versions"></a><span data-ttu-id="c1a84-122">如何安裝其他版本</span><span class="sxs-lookup"><span data-stu-id="c1a84-122">How to install other versions</span></span>
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
